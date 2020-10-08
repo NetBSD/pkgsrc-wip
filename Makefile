@@ -2323,7 +2323,6 @@ SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necpp-git
 SUBDIR+=	nehe-opengl-tutorials
-SUBDIR+=	neko
 SUBDIR+=	nemo
 SUBDIR+=	neovim
 SUBDIR+=	neovim-git
