@@ -1,5 +1,12 @@
-- Add comments to patch files
+* get patches applied upstream
 
-- File patches upstream
+** add comments to patch files
 
-- Test
+** gdt emailed patches to upstream about 20201006
+
+* resolve ssl being default on, on macos
+
+* resolve kerberos build failures (wait for upstream)
+
+* test
+
