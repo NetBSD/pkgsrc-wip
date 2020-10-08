@@ -1,0 +1,7 @@
+p_tqdm is a wrapper around pathos.multiprocessing and tqdm.
+Unlike Python's default multiprocessing library, pathos provides
+a more flexible parallel map which can apply almost any type of
+function including lambda functions, nested functions, and class
+methods and can easily handle functions with multiple arguments.
+tqdm is applied on top of pathos's parallel map and displays a
+progress bar including an estimated time to completion
