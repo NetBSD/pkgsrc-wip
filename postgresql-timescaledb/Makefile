@@ -1,5 +1,6 @@
 # $NetBSD$
 
+GITHUB_PROJECT=	timescaledb
 DISTNAME=	timescaledb-1.7.4
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
