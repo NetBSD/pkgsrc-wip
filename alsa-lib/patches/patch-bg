@@ -1,0 +1,42 @@
+$NetBSD: patch-bg,v 1.3 2016/04/15 08:47:50 wiz Exp $
+
+--- src/timer/timer_hw.c.orig	2016-03-07 10:09:24.000000000 +0000
++++ src/timer/timer_hw.c
+@@ -66,11 +66,14 @@ static int snd_timer_hw_nonblock(snd_tim
+ 
+ static int snd_timer_hw_async(snd_timer_t *timer, int sig, pid_t pid)
+ {
++#ifndef __sun
+ 	long flags;
++#endif
+ 	int fd;
+ 
+ 	assert(timer);
+ 	fd = timer->poll_fd;
++#ifndef __sun
+ 	if ((flags = fcntl(fd, F_GETFL)) < 0) {
+ 		SYSERR("F_GETFL failed");
+ 		return -errno;
+@@ -83,13 +86,21 @@ static int snd_timer_hw_async(snd_timer_
+ 		SYSERR("F_SETFL for O_ASYNC failed");
+ 		return -errno;
+ 	}
++#endif
+ 	if (sig < 0)
+ 		return 0;
++#ifndef __sun
+ #ifdef F_SETSIG
+ 	if (fcntl(fd, F_SETSIG, (long)sig) < 0) {
+ 		SYSERR("F_SETSIG failed");
+ 		return -errno;
+-	}
++       }
++#else
++       if (fcntl(fd, F_SETFL, O_ASYNC) < 0) {
++               SYSERR("F_SETFL failed");
++               return -errno;
++       }
++#endif
+ #endif
+ 	if (fcntl(fd, F_SETOWN, (long)pid) < 0) {
+ 		SYSERR("F_SETOWN failed");

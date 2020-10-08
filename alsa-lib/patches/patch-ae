@@ -1,0 +1,33 @@
+$NetBSD: patch-ae,v 1.9 2016/06/03 15:45:44 jperkin Exp $
+
+ - Don't assert GNU ld on Solaris, where it might not be true.
+ - Add endian compat.
+
+--- include/local.h.orig	2016-03-31 13:10:39.000000000 +0000
++++ include/local.h
+@@ -43,6 +43,15 @@
+ #ifndef __BIG_ENDIAN
+ #define __BIG_ENDIAN BIG_ENDIAN
+ #endif
++#elif defined(__sun)
++#include <sys/byteorder.h>
++#define __LITTLE_ENDIAN 1234
++#define __BIG_ENDIAN 4321
++#ifdef _BIG_ENDIAN
++#define __BYTE_ORDER __BIG_ENDIAN
++#else
++#define __BYTE_ORDER __LITTLE_ENDIAN
++#endif
+ #else
+ #error Header defining endianness not defined
+ #endif
+@@ -253,7 +262,9 @@ extern snd_lib_error_handler_t snd_err_m
+ 
+ /*
+  */
++#ifndef __sun
+ #define HAVE_GNU_LD
++#endif
+ #define HAVE_ELF
+ #define HAVE_ASM_PREVIOUS_DIRECTIVE
+ 

@@ -1,0 +1,20 @@
+$NetBSD: patch-configure.ac,v 1.2 2017/05/29 12:42:25 wiz Exp $
+
+--- configure.ac.orig	2020-06-29 10:51:08.000000000 +0000
++++ configure.ac
+@@ -732,6 +732,15 @@ AC_OUTPUT(Makefile doc/Makefile doc/pict
+ 	  test/Makefile test/lsb/Makefile \
+ 	  utils/Makefile utils/alsa-lib.spec utils/alsa.pc utils/alsa-topology.pc)
+ 
++case $host_os in
++  netbsd*|freebsd*|dragonfly*)
++    HAVE_LIBDL=yes
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_LIBDL 1
++_ACEOF
++    ;;
++esac
++
+ dnl Create asoundlib.h dynamically according to configure options
+ echo "Creating asoundlib.h..."
+ cp "$srcdir"/include/asoundlib-head.h include/asoundlib.h
