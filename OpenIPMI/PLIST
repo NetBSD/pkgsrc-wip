@@ -93,3 +93,5 @@ man/man7/ipmi_cmdlang.7
 man/man7/openipmi_conparms.7
 share/examples/OpenIPMI/ipmisim1.emu
 share/examples/OpenIPMI/lan.conf
+@pkgdir man/man8
+@pkgdir etc/ipmi
