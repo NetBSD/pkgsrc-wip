@@ -3176,7 +3176,6 @@ SUBDIR+=	py-brian2
 SUBDIR+=	py-bruce
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-bson
-SUBDIR+=	py-bumpversion
 SUBDIR+=	py-bxa
 SUBDIR+=	py-cachelib
 SUBDIR+=	py-calphad
