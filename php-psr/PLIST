@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/php/ext/psr/php_psr.h
+lib/php/20191128/psr.so
+share/examples/php/psr.ini

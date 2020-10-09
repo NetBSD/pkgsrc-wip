@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/03/12 09:12:52 fhajny Exp $
+
+SHA1 (php-psr/psr-1.0.0.tgz) = b2a936d77561b71d9166c0aafcdb4ce949ae1c93
+RMD160 (php-psr/psr-1.0.0.tgz) = 610d47a5f78dc046a5586416ac8812fd98da92cf
+SHA512 (php-psr/psr-1.0.0.tgz) = 762278e922c03102dddb39b7997c70803c2105bffa231db20da8c246e10788803765068bbd859f2b7cad1e4fb64e91d191be55917dc14af49c8cd1211d007649
+Size (php-psr/psr-1.0.0.tgz) = 27096 bytes
