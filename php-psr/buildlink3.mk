@@ -1,14 +1,12 @@
 # $NetBSD$
 
-.include "../../lang/php/phpversion.mk"
+BUILDLINK_TREE+=	php-psr
 
-BUILDLINK_TREE+=	${PHP_PKG_PREFIX}-psr
+.if !defined(PHP_PSR_BUILDLINK3_MK)
+PHP_PSR_BUILDLINK3_MK:=
 
-.if !defined(${PHP_PKG_PREFIX}_PSR_BUILDLINK3_MK)
-${PHP_PKG_PREFIX}_PSR_BUILDLINK3_MK:=
+BUILDLINK_API_DEPENDS.php-psr+=		${PHP_PKG_PREFIX}-psr>=1.0.0
+BUILDLINK_PKGSRCDIR.php-psr?=		../../www/php-psr
+.endif	# PHP_PSR_BUILDLINK3_MK
 
-BUILDLINK_API_DEPENDS.${PHP_PKG_PREFIX}-psr+=	${PHP_PKG_PREFIX}-psr>=1.0.0
-BUILDLINK_PKGSRCDIR.${PHP_PKG_PREFIX}-psr?=		../../www/php-psr
-.endif	# ${PHP_PKG_PREFIX}_PSR_BUILDLINK3_MK
-
-BUILDLINK_TREE+=	-${PHP_PKG_PREFIX}-psr
+BUILDLINK_TREE+=	-php-psr

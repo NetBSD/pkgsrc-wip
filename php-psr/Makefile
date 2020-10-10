@@ -6,13 +6,12 @@ CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pecl.php.net/package/psr
-COMMENT=	This extension provides the accepted PSR interfaces, so they can be used in an extension
+COMMENT=	Provide the accepted PSR interfaces for other extensions
 LICENSE=	2-clause-bsd
 
 PHP_VERSIONS_ACCEPTED=	72 73 74
 
 USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS+=	include/php/ext/psr
 PLIST_SRC+=		PLIST
