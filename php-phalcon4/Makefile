@@ -6,6 +6,7 @@ PECL_VERSION=		4.0.6
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phalcon/}
+EXTRACT_SUFX=		.tar.gz
 
 HOMEPAGE=		https://phalconphp.com/
 COMMENT=		Web framework implemented as a C extension offering high performance
