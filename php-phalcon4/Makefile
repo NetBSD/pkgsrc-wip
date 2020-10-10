@@ -21,12 +21,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
 BUILD_DEPENDS+=		re2c>=0.15.3:../../devel/re2c
-DEPENDS+=		${PHP_PKG_PREFIX}-curl>=5.6.0:../../www/php-curl
-DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.6.0:../../graphics/php-gd
-DEPENDS+=		${PHP_PKG_PREFIX}-json>=5.6.0:../../textproc/php-json
-DEPENDS+=		${PHP_PKG_PREFIX}-mbstring>=5.6.0:../../converters/php-mbstring
-DEPENDS+=		${PHP_PKG_PREFIX}-pdo>=5.6.0:../../databases/php-pdo
-DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql>=5.6.0:../../databases/php-pdo_mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-psr>=1.0.0:../../devel/php-psr
 
 .include "../../lang/php/phpversion.mk"
 
