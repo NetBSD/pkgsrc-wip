@@ -1,4 +1,0 @@
-This doesn't build properly yet:
-
-The programs link, but since lots of *.a files are not installed (even though
-the *.la file references them), packaging fails.
