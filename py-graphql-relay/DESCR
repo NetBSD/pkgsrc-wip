@@ -1,0 +1,5 @@
+GraphQL-relay-py is the Relay library for GraphQL-core.
+It allows the easy creation of Relay-compliant servers using
+GraphQL-core. GraphQL-Relay-Py is a Python port of graphql-relay-js,
+while GraphQL-Core is a Python port of GraphQL.js, the reference
+implementation of GraphQL for JavaScript.
