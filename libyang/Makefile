@@ -1,0 +1,38 @@
+# $NetBSD$
+
+GITHUB_PROJECT=	libyang
+GITHUB_TAG=	v1.0.184
+DISTNAME=	v1.0.184
+PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=CESNET/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
+
+MAINTAINER=	kardel@NetBSD.org
+HOMEPAGE=	https://github.com/CESNET/libyang/
+COMMENT=	YANG data modeling language library
+LICENSE=	cesnet-libyang
+
+WRKSRC=		${WRKDIR}/libyang-1.0.184
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+PKGCONFIG_OVERRIDE+=	libyang.pc.in
+PKGCONFIG_OVERRIDE+=	swig/libyang-cpp.pc.in
+
+CMAKE_ARG_PATH=	..
+CONFIGURE_DIRS=	_build
+
+.include "../../mk/bsd.prefs.mk"
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/_build
+
+CMAKE_ARGS?=	-DCMAKE_BUILD_TYPE:String="Release"
+CMAKE_ARGS+=	-DENABLE_LYD_PRIV=ON
+
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/cmocka/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"
