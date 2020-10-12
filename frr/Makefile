@@ -49,6 +49,12 @@ REPLACE_BASH=	tools/frr.in tools/*.sh.in
 
 REPLACE_PYTHON=	tools/generate_support_bundle.py tools/frr-reload.py
 
+SUBST_CLASSES+=		ids
+SUBST_STAGE.ids=	pre-configure
+SUBST_MESSAGE.ids=	Fixing user/group references.
+SUBST_FILES.ids=	pkgsrc/zebra.sh.in
+SUBST_VARS.ids=		FRR_USER FRR_GROUP
+
 SUBST_CLASSES+=		workdir
 SUBST_STAGE.workdir=	post-configure
 SUBST_MESSAGE.workdir=	Fixing absolute workdir references.
@@ -60,7 +66,6 @@ CONFIGURE_ARGS?=	--sysconfdir=${PREFIX}/etc/${PKG_SYSCONFSUBDIR}
 CONFIGURE_ARGS+=	--enable-user=${FRR_USER}
 CONFIGURE_ARGS+=	--enable-group=${FRR_GROUP}
 CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/${CONFIG_TEMPLATE_PATH}
-# CONFIGURE_ARGS+=	--enable-pkgsrcrcdir=${PREFIX}/share/examples/rc.d
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run/frr
 CONFIGURE_ARGS+=	--enable-multipath=64
 CONFIGURE_ARGS+=	--enable-vty-group=${FRR_VTY_GROUP}
@@ -77,7 +82,7 @@ pre-configure:
 .include "../../wip/libyang/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 
@@ -89,5 +94,3 @@ CONF_FILES?=
 CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C/^${CONFIG_TEMPLATE_PATH}(.*)\.sample/\1/} \
 			${FRR_USER} ${FRR_GROUP} ${FRR_CONF_MODE}
 .endfor
-
-# .include "../../mk/bsd.pkg.mk"
