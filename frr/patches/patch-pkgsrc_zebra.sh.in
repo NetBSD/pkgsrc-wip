@@ -10,7 +10,7 @@ $NetBSD$
  {
      mkdir -p "${socket_dir}"
 -    chown quagga.quagga "${socket_dir}"
-+    chown @FRR_USER@.@FRR_GROUP@ "${socket_dir}"
++    chown @FRR_USER@.@FRR_VTY_GROUP@ "${socket_dir}"
      chmod 750 "${socket_dir}"
      rc_flags="$(
  	set -- $rc_flags

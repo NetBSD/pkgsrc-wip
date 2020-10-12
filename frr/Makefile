@@ -30,7 +30,7 @@ FRR_VTY_GROUP?=	frrvty
 FRR_USER?=		_frr
 FRR_CONF_MODE=		0640
 FRR_LOG_MODE=		0640
-PKG_SYSCONFDIR_PERMS=	${FRR_USER} ${FRR_GROUP} 0750
+PKG_SYSCONFDIR_PERMS=	${FRR_USER} ${FRR_VTY_GROUP} 0750
 PKG_SYSCONFSUBDIR=	frr
 
 PKG_GECOS.${FRR_USER}=	FRRouting User
@@ -58,7 +58,7 @@ SUBST_CLASSES+=		ids
 SUBST_STAGE.ids=	pre-configure
 SUBST_MESSAGE.ids=	Fixing user/group references.
 SUBST_FILES.ids=	pkgsrc/zebra.sh.in
-SUBST_VARS.ids=		FRR_USER FRR_GROUP
+SUBST_VARS.ids=		FRR_USER FRR_VTY_GROUP
 
 SUBST_CLASSES+=		workdir
 SUBST_STAGE.workdir=	post-configure
@@ -96,6 +96,11 @@ CONFIG_TEMPLATES!=	${EGREP} ${CONFIG_TEMPLATE_PATH:Q} PLIST 2>/dev/null
 CONF_FILES?=
 
 .for l in ${CONFIG_TEMPLATES}
-CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C/^${CONFIG_TEMPLATE_PATH}(.*)\.sample/\1/} \
+.if ${l:C,^${CONFIG_TEMPLATE_PATH}/(.*)\.sample,\1,} == "vtysh.conf"
+CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C,^${CONFIG_TEMPLATE_PATH}(/.*)\.sample,\1,} \
+			${FRR_USER} ${FRR_VTY_GROUP} ${FRR_CONF_MODE}
+.else
+CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C,^${CONFIG_TEMPLATE_PATH}(/.*)\.sample,\1,} \
 			${FRR_USER} ${FRR_GROUP} ${FRR_CONF_MODE}
+.endif
 .endfor
