@@ -1,0 +1,4 @@
+In addition to wip/ versions of packages, this package needs:
+
+- patch to math/nlopt to avoid symbol collisions with libc.
+- patch to math/cgal to remove WRKDIR from installed cmake files.
