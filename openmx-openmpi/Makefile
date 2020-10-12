@@ -2,6 +2,7 @@
 
 DISTNAME=	openmx3.7
 PKGNAME=	openmx-openmpi-3.7
+PKGREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	http://www.openmx-square.org/
 

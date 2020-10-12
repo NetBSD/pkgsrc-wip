@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	plasti-1.0.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.geodynamics.org/cig/software/plasti/
 

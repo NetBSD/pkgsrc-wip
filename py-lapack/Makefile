@@ -3,6 +3,7 @@
 VERSION=	0.21
 DISTNAME=	PyLapack
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/L/l/}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://kochanski.org/gpk/misc/
 

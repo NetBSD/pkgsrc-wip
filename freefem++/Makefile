@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	freefem++-3.19-1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.freefem.org/ff++/ftp/
 

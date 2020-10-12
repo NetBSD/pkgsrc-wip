@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.3 2014/06/15 02:02:05 makoto Exp $
 
 DISTNAME=		necpp-git-1
+PKGREVISION=	1
 CATEGORIES=		news
 MASTER_SITES=		https://github.com/tmolteno/necpp/
 

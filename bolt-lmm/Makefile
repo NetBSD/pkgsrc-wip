@@ -7,6 +7,7 @@
 
 PKGNAME=	bolt-lmm-2.3.2
 DISTNAME=	BOLT-LMM_v${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/ \
 		https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/old/

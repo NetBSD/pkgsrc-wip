@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	adept-2.0.5
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.met.reading.ac.uk/clouds/adept/
 

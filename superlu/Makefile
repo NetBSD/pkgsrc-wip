@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.28 2019/08/11 13:17:49 wiz Exp $
 
 DISTNAME=		superlu-5.2.1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=xiaoyeli/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

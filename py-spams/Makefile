@@ -2,6 +2,7 @@
 
 DISTNAME=	spams-python-v2.5-svn2014-07-04
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://spams-devel.gforge.inria.fr/hitcounter2.php?file=33816/
 

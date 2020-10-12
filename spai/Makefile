@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	spai-3.2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.computational.unibas.ch/software/spai/
 EXTRACT_SUFX=	.tar.bz2

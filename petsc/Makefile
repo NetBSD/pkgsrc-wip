@@ -3,6 +3,7 @@
 
 DISTNAME=	petsc-3.1-p2
 PKGNAME=	petsc-3.1p2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/
 

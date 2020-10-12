@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	hpl-2.3
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.netlib.org/benchmark/hpl/
 

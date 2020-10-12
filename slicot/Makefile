@@ -2,6 +2,7 @@
 
 DISTNAME=	slicot_5.0+20101122.orig
 PKGNAME=	slicot-5.0+20101122
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/slicot/}
 

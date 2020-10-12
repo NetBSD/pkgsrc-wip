@@ -2,6 +2,7 @@
 
 DISTNAME=	getdp-2.4.1-source
 PKGNAME=	getdp-2.4.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.geuz.org/getdp/src/
 EXTRACT_SUFX=	.tgz

@@ -3,6 +3,7 @@
 
 DISTNAME=	linbox-1.1.7rc0
 PKGNAME=	linbox-1.1.7
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.linalg.org/
 

@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	bigdft-1.6.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://inac.cea.fr/L_Sim/BigDFT/
 

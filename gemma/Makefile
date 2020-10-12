@@ -6,6 +6,7 @@
 ###########################################################
 
 DISTNAME=	GEMMA-0.98.1
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=genetics-statistics/}
 GITHUB_PROJECT=	GEMMA

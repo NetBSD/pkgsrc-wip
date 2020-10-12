@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	dolfin-${MMVERSION}.0
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://launchpad.net/dolfin/${MMVERSION}.x/${MMVERSION}.0/+download/
 

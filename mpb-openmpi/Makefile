@@ -3,6 +3,7 @@
 
 DISTNAME=	mpb-1.4.2
 PKGNAME=	mpb-openmpi-1.4.2
+PKGREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	http://ab-initio.mit.edu/mpb/
 

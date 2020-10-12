@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.4 2013/01/30 19:25:42 asau Exp $
 
 DISTNAME=	alberta-2.0.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.alberta-fem.de/Downloads/
 

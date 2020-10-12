@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	mclust
 R_PKGVER=	4.0
+PKGREVISION=	1
 
 USE_LANGUAGES=	c fortran
 
