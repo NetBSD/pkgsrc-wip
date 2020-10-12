@@ -22,6 +22,9 @@ GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	frr
 BUILD_DEFS=		VARBASE
 
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
 FRR_GROUP?=	_frr
 FRR_VTY_GROUP?=	frrvty
 
