@@ -50,6 +50,8 @@ bin/gnunet-scrypt
 bin/gnunet-search
 bin/gnunet-secretsharing-profiler
 bin/gnunet-set-profiler
+bin/gnunet-seti-profiler
+bin/gnunet-setu-profiler
 bin/gnunet-statistics
 bin/gnunet-suidfix
 bin/gnunet-testbed-profiler
@@ -150,6 +152,8 @@ include/gnunet/gnunet_scheduler_lib.h
 include/gnunet/gnunet_secretsharing_service.h
 include/gnunet/gnunet_service_lib.h
 include/gnunet/gnunet_set_service.h
+include/gnunet/gnunet_seti_service.h
+include/gnunet/gnunet_setu_service.h
 include/gnunet/gnunet_signal_lib.h
 include/gnunet/gnunet_signatures.h
 include/gnunet/gnunet_socks.h
@@ -170,6 +174,7 @@ include/gnunet/gnunet_transport_monitor_service.h
 include/gnunet/gnunet_transport_plugin.h
 include/gnunet/gnunet_transport_service.h
 include/gnunet/gnunet_tun_lib.h
+include/gnunet/gnunet_uri_lib.h
 include/gnunet/gnunet_util_lib.h
 include/gnunet/gnunet_vpn_service.h
 include/gnunet/platform.h
@@ -267,6 +272,8 @@ lib/gnunet/libexec/gnunet-service-scalarproduct-ecc-alice
 lib/gnunet/libexec/gnunet-service-scalarproduct-ecc-bob
 lib/gnunet/libexec/gnunet-service-secretsharing
 lib/gnunet/libexec/gnunet-service-set
+lib/gnunet/libexec/gnunet-service-seti
+lib/gnunet/libexec/gnunet-service-setu
 lib/gnunet/libexec/gnunet-service-statistics
 lib/gnunet/libexec/gnunet-service-testbed
 lib/gnunet/libexec/gnunet-service-testbed-logger
@@ -284,6 +291,8 @@ lib/gnunet/libgnunet_plugin_block_gns.la
 lib/gnunet/libgnunet_plugin_block_regex.la
 lib/gnunet/libgnunet_plugin_block_revocation.la
 lib/gnunet/libgnunet_plugin_block_set_test.la
+lib/gnunet/libgnunet_plugin_block_seti_test.la
+lib/gnunet/libgnunet_plugin_block_setu_test.la
 lib/gnunet/libgnunet_plugin_block_test.la
 lib/gnunet/libgnunet_plugin_datacache_heap.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_datacache_sqlite.la
@@ -300,8 +309,8 @@ lib/gnunet/libgnunet_plugin_namestore_flat.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_namestore_sqlite.la
 ${PLIST.experimental}lib/gnunet/libgnunet_plugin_peerstore_flat.la
 ${PLIST.sqlite3}lib/gnunet/libgnunet_plugin_peerstore_sqlite.la
-lib/gnunet/libgnunet_plugin_reclaim_attestation_jwt.la
 lib/gnunet/libgnunet_plugin_reclaim_attribute_basic.la
+lib/gnunet/libgnunet_plugin_reclaim_credential_jwt.la
 lib/gnunet/libgnunet_plugin_rest_config.la
 lib/gnunet/libgnunet_plugin_rest_copying.la
 lib/gnunet/libgnunet_plugin_rest_gns.la
@@ -359,6 +368,8 @@ ${PLIST.experimental}lib/libgnunetrps.la
 lib/libgnunetscalarproduct.la
 lib/libgnunetsecretsharing.la
 lib/libgnunetset.la
+lib/libgnunetseti.la
+lib/libgnunetsetu.la
 ${PLIST.conversations}lib/libgnunetspeaker.la
 lib/libgnunetsq.la
 lib/libgnunetstatistics.la
@@ -496,6 +507,8 @@ ${PLIST.experimental}share/gnunet/config.d/rps.conf
 share/gnunet/config.d/scalarproduct.conf
 share/gnunet/config.d/secretsharing.conf
 share/gnunet/config.d/set.conf
+share/gnunet/config.d/seti.conf
+share/gnunet/config.d/setu.conf
 share/gnunet/config.d/statistics.conf
 share/gnunet/config.d/template.conf
 share/gnunet/config.d/testbed-logger.conf
