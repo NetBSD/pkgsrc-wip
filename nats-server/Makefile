@@ -27,8 +27,9 @@ CHECK_SSP_SKIP=		bin/*
 PKG_GROUPS=     ${NATS_GROUP}
 PKG_USERS=      ${NATS_USER}:${NATS_GROUP}
 
-PKG_HOME.${NATS_USER}=        ${NATS_HOMEDIR}
-PKG_GECOS.${NATS_USER}=      nats.io server
+PKG_HOME.${NATS_USER}=		${NATS_HOMEDIR}
+PKG_GECOS.${NATS_USER}=		nats.io server
+PKG_SHELL.${NATS_USER}=		/bin/sh
 
 RCD_SCRIPTS=            nats-server
 SMF_NAME=               nats-server
