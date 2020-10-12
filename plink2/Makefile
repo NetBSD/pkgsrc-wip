@@ -7,6 +7,7 @@
 
 DISTNAME=	plink-ng-${PV}
 PKGNAME=	plink2-${PV}
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
@@ -57,9 +58,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/plink2-test ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${FILESDIR}/plink2-bench ${DESTDIR}${PREFIX}/bin
 
-.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../wip/cblas/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../math/lapack/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -16,7 +16,6 @@ GCC_REQD+=	4.2
 
 
 .include "../../graphics/freeglut/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../parallel/openmpi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

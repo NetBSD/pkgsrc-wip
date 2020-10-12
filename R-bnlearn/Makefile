@@ -18,5 +18,5 @@ BUILDLINK_API_DEPENDS.R+=	R>=2.14.0
 .include "../../math/R/Makefile.extension"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

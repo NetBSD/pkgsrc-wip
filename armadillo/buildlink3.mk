@@ -9,8 +9,7 @@ BUILDLINK_API_DEPENDS.armadillo+=	armadillo>=4.45.2
 BUILDLINK_ABI_DEPENDS.armadillo?=	armadillo>=4.45.2
 BUILDLINK_PKGSRCDIR.armadillo?=		../../wip/armadillo
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif	# ARMADILLO_BUILDLINK3_MK

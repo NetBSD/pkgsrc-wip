@@ -18,7 +18,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plasti_oly ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/meshg_oly ${DESTDIR}${PREFIX}/bin
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../lang/g95/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

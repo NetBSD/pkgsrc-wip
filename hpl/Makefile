@@ -12,6 +12,6 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++ fortran
 
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../parallel/openmpi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

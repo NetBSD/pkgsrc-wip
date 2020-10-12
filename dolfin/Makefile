@@ -93,8 +93,7 @@ MMVERSION=	1.2
 .include "../../wip/py-instant/buildlink3.mk"
 .include "../../wip/py-ufl/buildlink3.mk"
 .include "../../wip/py-viper/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 # cgal requires qt4-libs and qt4-tools, which don't currently build on Linux or Mac
 #.include "../../math/cgal/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

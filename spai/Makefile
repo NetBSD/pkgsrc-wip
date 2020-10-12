@@ -21,7 +21,6 @@ USE_LANGUAGES=	c fortran
 
 CONFIGURE_ARGS+=	--with-mpi=${BUILDLINK_PREFIX.mpi}
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

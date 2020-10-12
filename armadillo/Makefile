@@ -28,7 +28,7 @@ SUBST_STAGE.minor=	post-patch
 SUBST_FILES.minor=	CMakeLists.txt
 SUBST_SED.minor=	-e "s|ARMA_MINOR ${DIST_MINOR}|ARMA_MINOR ${PKG_MINOR}|g"
 
-.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../wip/superlu/buildlink3.mk"
 .include "../../math/arpack-ng/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

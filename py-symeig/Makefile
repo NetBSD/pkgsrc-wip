@@ -19,7 +19,7 @@ do-test:
 	${RUN} cd ${WRKSRC}/test; \
 	${SETENV} ${TEST_ENV} ${PYTHONBIN} test_symeig.py
 
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

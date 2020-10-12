@@ -20,6 +20,6 @@ CONFIGURE_ARGS+=	--with-givaro=${BUILDLINK_PREFIX.givaro}
 CONFIGURE_ARGS+=	--with-blas="-L${BUILDLINK_PREFIX.blas}/lib -lblas"
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../wip/givaro/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

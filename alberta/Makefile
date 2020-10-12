@@ -14,7 +14,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran77
 
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

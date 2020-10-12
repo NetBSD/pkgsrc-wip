@@ -17,8 +17,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	igraph.pc.in
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/glpk/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.dune-geometry?=	../../wip/dune-geometry
 #.include "../../wip/dune-common/buildlink3.mk"
 #.include "../../devel/gmp/buildlink3.mk"
 #.include "../../devel/boost-headers/buildlink3.mk"
-#.include "../../math/blas/buildlink3.mk"
+#.include "../../mk/blas.buildlink3.mk"
 .endif	# DUNE_GEOMETRY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-dune-geometry

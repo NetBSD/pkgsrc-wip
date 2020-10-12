@@ -53,8 +53,7 @@ do-install:
 .endfor
 
 .include "../../wip/openmpi163/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 # Investigate: Any advantage to using fftw-openmpi?
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

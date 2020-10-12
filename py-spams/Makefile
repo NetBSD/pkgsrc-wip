@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/spams-python
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/distutils.mk"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

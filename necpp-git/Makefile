@@ -30,6 +30,6 @@ SUBST_STAGE.test=	pre-configure
 post-patch:
 	cd ${WRKSRC} && make -f Makefile.git
 
-#.include "../../math/lapack/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

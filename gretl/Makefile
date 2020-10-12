@@ -35,8 +35,7 @@ DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 # Skip checks temporarily:
 CHECK_PORTABILITY_SKIP=	osx/script
 
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

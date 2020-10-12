@@ -53,8 +53,7 @@ USE_LANGUAGES+=		fortran
 CONFIGURE_ARGS+=	--with-blas
 CONFIGURE_ARGS+=	--with-blas-libs=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-lapack
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-blas
 CONFIGURE_ARGS+=	--without-lapack

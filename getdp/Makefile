@@ -20,8 +20,7 @@ SUBST_MESSAGE.setup=	Fixing ${PYSETUP}
 SUBST_FILES.setup=	CMakeLists.txt
 SUBST_SED.setup+=	-e 's,share/man/,${PKGMANDIR}/,g'
 
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

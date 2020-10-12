@@ -14,7 +14,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt
 USE_LANGUAGES=	c c++ fortran
 
-.include "../../math/blas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -14,6 +14,5 @@ CONFIGURE_ARGS+=	--with-libxc-libs
 
 .if !empty(PKG_OPTIONS:Mlinalg)
 CONFIGURE_ARGS+=	--with-blas="-L${BUILDLINK_PREFIX.blas}/lib -lblas"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .endif
