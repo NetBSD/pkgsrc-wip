@@ -2300,6 +2300,7 @@ SUBDIR+=	nagios-plugin-mysql_health
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	nary
 SUBDIR+=	natali
+SUBDIR+=	nats-server
 SUBDIR+=	naturaldocs
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-dropbox
