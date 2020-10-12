@@ -164,3 +164,4 @@ SHA1 (nats-server-2.1.8.tar.gz) = d24f3ef4e681dacb553bc2d0f83f12765c4a0267
 RMD160 (nats-server-2.1.8.tar.gz) = a7420c674018189dec8d878d7c9f11b5d538679f
 SHA512 (nats-server-2.1.8.tar.gz) = 2614a1fdb0d34ab8ca557f9282c92ddea5ab5cc53ee25f866b24941c133bb91f81983646c19929f7fdb498feeabab100e43cd65441497fd64eab234d48262706
 Size (nats-server-2.1.8.tar.gz) = 967790 bytes
+SHA1 (patch-server_pse_pse__netbsd.go) = 9f69352a0a6f976e51488d4693bc7701dd551506
