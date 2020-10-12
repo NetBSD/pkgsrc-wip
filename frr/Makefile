@@ -19,7 +19,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl bash pkg-config autoconf automake autoreconf
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		yes
-PKG_SYSCONFSUBDIR=	frr
 BUILD_DEFS=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
@@ -32,6 +31,7 @@ FRR_USER?=		_frr
 FRR_CONF_MODE=		0640
 FRR_LOG_MODE=		0640
 PKG_SYSCONFDIR_PERMS=	${FRR_USER} ${FRR_GROUP} 0750
+PKG_SYSCONFSUBDIR=	frr
 
 PKG_GECOS.${FRR_USER}=	FRRouting User
 PKG_HOME.${FRR_USER}=	/nonexistent
@@ -67,7 +67,7 @@ SUBST_FILES.workdir=	lib/version.h
 SUBST_SED.workdir=	-e "s,${WRKDIR},"'{WRKDIR},g'
 SUBST_VARS.workdir=
 
-CONFIGURE_ARGS?=	--sysconfdir=${PREFIX}/etc/${PKG_SYSCONFSUBDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-user=${FRR_USER}
 CONFIGURE_ARGS+=	--enable-group=${FRR_GROUP}
 CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/${CONFIG_TEMPLATE_PATH}
