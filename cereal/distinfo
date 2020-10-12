@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cereal-1.2.2.tar.gz) = ffddf5fc5313cfbb893e07823ca8c473084eebca
-RMD160 (cereal-1.2.2.tar.gz) = 9ccc6dcc4df8acfccb5bf50417961649601949a6
-SHA512 (cereal-1.2.2.tar.gz) = 9567b2e19add9446b24f8afd122eea09ba6ecd1a090335cf0ab31fdc8f64c6c97daa3d9eaf0801c36a770737488e0eebf81d96d7b7a65deed30da6130f2d47eb
-Size (cereal-1.2.2.tar.gz) = 335759 bytes
+SHA1 (cereal-1.3.0.tar.gz) = e37634e0ee4063ac4694a65f5ae4742d164f5764
+RMD160 (cereal-1.3.0.tar.gz) = 2d5b038481f696f680cbb48246a7c81a74998da3
+SHA512 (cereal-1.3.0.tar.gz) = 2bb640a222d4efe7c624c6ec3e755fecae00ef59e91c4db462e233546c5afe73c065ba1d16d9600f7cd3cc185593109148008b0b2b870208e2f1d6984fd40c72
+Size (cereal-1.3.0.tar.gz) = 374585 bytes
