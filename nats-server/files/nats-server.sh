@@ -34,6 +34,7 @@ command="@PREFIX@/bin/nats-server"
 : ${natsserver_group:="natssrv"}
 
 start_cmd="natssrv_start"
+stop_cmd="natssrv_stop"
 
 natssrv_start()
 {
@@ -41,8 +42,20 @@ natssrv_start()
 	ulimit -n 4096
 	cd @NATS_HOMEDIR@
 	/usr/bin/su ${natsserver_user}:${natsserver_group} \
-	   ${command} -P ${natsserver_pidfile} \
-	   -l ${natsserver_logfile} &
+	   -c "${command} -P ${natsserver_pidfile} \
+	   -l ${natsserver_logfile} &"
+}
+
+natssrv_stop()
+{
+	local pidfile
+
+	pidfile="${natsserver_pidfile}"
+	if [ -r "${pidfile}" ]; then
+		echo "Stopping ${name}."
+		kill `/bin/cat ${pidfile}`
+		/bin/rm "${pidfile}"
+	fi
 }
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
@@ -56,10 +69,7 @@ else
 	pidfile="${natsserver_pidfile}"
 	case "$1" in
 	stop)
-		if [ -r "${pidfile}" ]; then
-			@ECHO@ "Stopping ${name}."
-			kill `@CAT@ ${pidfile}`
-		fi
+		natssrv_stop
 		;;
 	*)
 		eval ${start_cmd}
