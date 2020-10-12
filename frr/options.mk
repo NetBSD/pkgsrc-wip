@@ -17,7 +17,7 @@ PLIST_VARS+=		doc
 USE_TOOLS+=		makeinfo
 CONFIGURE_ARGS+=	--enable-doc-html
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
-DEPENDS+=		${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
 PLIST.doc=		yes
 INFO_FILES=		yes
 .else
