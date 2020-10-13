@@ -15,7 +15,7 @@ DEPENDS+=	p5-Text-Aspell>=0.09:../../textproc/p5-Text-Aspell
 DEPENDS+=	p5-XML-DOM>=1.44:../../textproc/p5-XML-DOM
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.0:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.2:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.2<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04.9:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django

@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-awesome-slugify>=1.6.5:../../wip/py-awesome-slugify
 DEPENDS+=	${PYPKGPREFIX}-cachelib>=0.1:../../wip/py-cachelib
 DEPENDS+=	${PYPKGPREFIX}-chainmap>=1.0.3:../../wip/py-chainmap
 DEPENDS+=	${PYPKGPREFIX}-emoji>=0.5.1:../../converters/py-emoji
-DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.0.5:../../wip/py-filetype
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.10.1:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-assets>=0.12:../../www/py-flask-assets

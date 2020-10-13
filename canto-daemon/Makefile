@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/canto-next-0.9.7
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYDISTUTILSPKG=			YES

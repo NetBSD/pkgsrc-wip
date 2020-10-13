@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/lukasschwab/arxiv.py
 COMMENT=	Python wrapper for the arXiv API
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.24.0:../../devel/py-requests
 TEST_DEPENDS+=	# TODO: pytest>=0
 

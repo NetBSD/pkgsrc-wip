@@ -11,7 +11,7 @@ COMMENT=	Weboob, Web Out Of Browsers
 LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.3:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.3<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.4.4:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-ptable>=0.7.2:../../textproc/py-ptable
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml

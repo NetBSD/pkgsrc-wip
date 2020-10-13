@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=	feedparser openssl
 ### feedparser support
 ###
 .if !empty(PKG_OPTIONS:Mfeedparser)
-DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 .endif
 
 ###
