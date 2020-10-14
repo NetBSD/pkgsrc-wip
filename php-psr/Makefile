@@ -2,7 +2,7 @@
 
 MODNAME=	psr
 PECL_VERSION=	1.0.0
-CATEGORIES=	www
+CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pecl.php.net/package/psr
