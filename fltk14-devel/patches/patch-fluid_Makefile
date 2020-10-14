@@ -4,25 +4,25 @@ Use libtool to link and install fluid.
 
 --- fluid/Makefile.orig	2019-04-07 09:24:20.000000000 +0000
 +++ fluid/Makefile
-@@ -57,7 +57,7 @@ all:	$(FLUID) fluid$(EXEEXT)
+@@ -55,7 +55,7 @@ all:	$(FLUID) fluid$(EXEEXT)
  fluid$(EXEEXT):		$(OBJECTS) $(LIBNAME) $(FLLIBNAME) \
  			$(IMGLIBNAME)
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDLIBS)
-+	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDFLAGS) $(LDLIBS)
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) -o $@ $(OBJECTS) $(LINKFLTKFORMS) $(LINKFLTKIMG) $(LDFLAGS) $(LDLIBS)
  	$(OSX_ONLY) $(RM) -r -f fluid.app/Contents/MacOS
  	$(OSX_ONLY) mkdir fluid.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) fluid fluid.app/Contents/MacOS
-@@ -65,7 +65,7 @@ fluid$(EXEEXT):		$(OBJECTS) $(LIBNAME) $
+@@ -63,7 +63,7 @@ fluid$(EXEEXT):		$(OBJECTS) $(LIBNAME) $
  fluid-shared$(EXEEXT):	$(OBJECTS) ../src/$(DSONAME) ../src/$(FLDSONAME) \
  			../src/$(IMGDSONAME)
  	echo Linking $@...
--	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKSHARED) $(LDLIBS)
-+	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS) $(LINKSHARED) $(LDLIBS)
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) -o $@ $(OBJECTS) $(LINKSHARED) $(LDFLAGS) $(LDLIBS)
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) -o $@ $(OBJECTS) $(LINKSHARED) $(LDFLAGS) $(LDLIBS)
  
  clean:
  	-$(RM) *.o core.* *~ *.bck *.bak
-@@ -85,7 +85,7 @@ include makedepend
+@@ -83,7 +83,7 @@ include makedepend
  install: all
  	echo "Installing FLUID in $(DESTDIR)$(bindir)..."
  	-$(INSTALL_DIR) $(DESTDIR)$(bindir)

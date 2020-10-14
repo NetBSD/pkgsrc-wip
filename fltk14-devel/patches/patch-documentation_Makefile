@@ -4,7 +4,7 @@ Do not install manpages to cat1/cat3 directories.
 
 --- documentation/Makefile.orig	2015-06-16 13:18:28.000000000 +0000
 +++ documentation/Makefile
-@@ -88,11 +88,6 @@ install: $(MANPAGES)
+@@ -86,11 +86,6 @@ install: $(MANPAGES)
  	  $(INSTALL_DATA) fltk.pdf $(DESTDIR)$(docdir); \
  	fi
  	echo "Installing man pages in $(DESTDIR)$(mandir) ..."

@@ -276,6 +276,7 @@ include/FL/fl_show_colormap.H
 ${PLIST.cs}include/FL/fl_show_colormap.h
 include/FL/fl_show_input.H
 ${PLIST.cs}include/FL/fl_show_input.h
+include/FL/fl_string.h
 include/FL/fl_types.h
 include/FL/fl_utf8.h
 include/FL/forms.H

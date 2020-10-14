@@ -4,7 +4,7 @@ Use libtool to link and install binaries.
 
 --- src/Makefile.orig	2019-04-07 09:24:20.000000000 +0000
 +++ src/Makefile
-@@ -353,6 +353,10 @@ $(LIBNAME): $(OBJECTS)
+@@ -352,6 +352,10 @@ $(LIBNAME): $(OBJECTS)
  	$(LIBCOMMAND) $@ $(OBJECTS)
  	$(RANLIB) $@
  
@@ -15,7 +15,7 @@ Use libtool to link and install binaries.
  libfltk.so.$(FL_DSO_VERSION): $(OBJECTS)
  	echo $(DSOCOMMAND) $@ ...
  	$(DSOCOMMAND) $@ $(OBJECTS) $(LDLIBS)
-@@ -389,6 +393,10 @@ $(FLLIBNAME): $(FLOBJECTS)
+@@ -388,6 +392,10 @@ $(FLLIBNAME): $(FLOBJECTS)
  	$(LIBCOMMAND) $@ $(FLOBJECTS)
  	$(RANLIB) $@
  
@@ -26,7 +26,7 @@ Use libtool to link and install binaries.
  libfltk_forms.so.$(FL_DSO_VERSION): $(FLOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
  	$(DSOCOMMAND) $@ $(FLOBJECTS) -L. -lfltk $(LDLIBS)
-@@ -425,6 +433,10 @@ $(GLLIBNAME): $(GLOBJECTS)
+@@ -424,6 +432,10 @@ $(GLLIBNAME): $(GLOBJECTS)
  	$(LIBCOMMAND) $@ $(GLOBJECTS)
  	$(RANLIB) $@
  
@@ -37,7 +37,7 @@ Use libtool to link and install binaries.
  libfltk_gl.so.$(FL_DSO_VERSION): $(GLOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
  	$(DSOCOMMAND) $@ $(GLOBJECTS) -L. -lfltk $(LDLIBS) $(GLDLIBS)
-@@ -461,6 +473,10 @@ $(IMGLIBNAME): $(IMGOBJECTS)
+@@ -460,6 +472,10 @@ $(IMGLIBNAME): $(IMGOBJECTS)
  	$(LIBCOMMAND) $@ $(IMGOBJECTS)
  	$(RANLIB) $@
  
@@ -48,7 +48,7 @@ Use libtool to link and install binaries.
  libfltk_images.so.$(FL_DSO_VERSION): $(IMGOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
  	$(DSOCOMMAND) $@ $(IMGOBJECTS) -L. $(IMAGELIBS) -lfltk $(LDLIBS)
-@@ -749,6 +765,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -759,6 +775,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(INSTALL_LIB) $(GLLIBNAME) $(DESTDIR)$(libdir); \
  		$(RANLIB) $(DESTDIR)$(libdir)/$(GLLIBBASENAME); \
  	fi
@@ -58,7 +58,7 @@ Use libtool to link and install binaries.
  	$(RANLIB) $(DESTDIR)$(libdir)/$(IMGLIBBASENAME)
  	if test x$(DSONAME) = xlibfltk.so.$(FL_DSO_VERSION); then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk.so*;\
-@@ -769,6 +788,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -779,6 +798,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(RM) $(DESTDIR)$(libdir)/libfltk_s.a;\
  		$(INSTALL_LIB) libfltk_s.a $(DESTDIR)$(libdir); \
  	fi
@@ -68,7 +68,7 @@ Use libtool to link and install binaries.
  	if test x$(DSONAME) = xcygfltknox-$(FL_DSO_VERSION).dll; then\
  		$(RM) $(DESTDIR)$(bindir)/$(DSONAME);\
  		$(INSTALL_LIB) $(DSONAME) $(DESTDIR)$(bindir); \
-@@ -786,6 +808,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -796,6 +818,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(INSTALL_LIB) libfltk_forms.so.$(FL_DSO_VERSION) $(DESTDIR)$(libdir); \
  		$(LN) libfltk_forms.so.$(FL_DSO_VERSION) $(DESTDIR)$(libdir)/libfltk_forms.so;\
  	fi
@@ -78,7 +78,7 @@ Use libtool to link and install binaries.
  	if test x$(FLDSONAME) = xlibfltk_forms.sl.$(FL_DSO_VERSION); then\
  		$(RM) $(DESTDIR)$(libdir)/libfltk_forms.sl*;\
  		$(INSTALL_LIB) libfltk_forms.sl.$(FL_DSO_VERSION) $(DESTDIR)$(libdir); \
-@@ -843,6 +868,9 @@ install: $(LIBNAME) $(DSONAME) \
+@@ -853,6 +878,9 @@ install: $(LIBNAME) $(DSONAME) \
  		$(RM) $(DESTDIR)$(libdir)/libfltk_gl.dll.a;\
  		$(INSTALL_LIB) libfltk_gl.dll.a $(DESTDIR)$(libdir); \
  	fi

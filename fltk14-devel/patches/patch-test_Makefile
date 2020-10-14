@@ -5,7 +5,7 @@ Add note that GUI test programs are not executed automatically.
 
 --- test/Makefile.orig	2020-07-16 10:25:51.000000000 +0000
 +++ test/Makefile
-@@ -180,6 +180,10 @@ GLALL = \
+@@ -196,6 +196,10 @@ GLALL = \
  	shape$(EXEEXT)
  
  all:	$(ALL) $(GLDEMOS)
@@ -16,7 +16,7 @@ Add note that GUI test programs are not executed automatically.
  
  gldemos:	$(GLALL)
  
-@@ -332,14 +336,14 @@ buttons$(EXEEXT): buttons.o
+@@ -348,14 +352,14 @@ buttons$(EXEEXT): buttons.o
  
  blocks$(EXEEXT): blocks.o
  	echo Linking $@...
@@ -33,7 +33,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) $(RM) -f -r checkers.app/Contents/MacOS
  	$(OSX_ONLY) mkdir checkers.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) checkers$(EXEEXT) checkers.app/Contents/MacOS
-@@ -352,7 +356,7 @@ clock$(EXEEXT): clock.o
+@@ -368,7 +372,7 @@ clock$(EXEEXT): clock.o
  
  colbrowser$(EXEEXT): colbrowser.o
  	echo Linking $@...
@@ -42,7 +42,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p colbrowser.app/Contents/Resources
  	$(OSX_ONLY) cp -f rgb.txt colbrowser.app/Contents/Resources/
-@@ -365,21 +369,21 @@ curve$(EXEEXT): curve.o
+@@ -381,21 +385,21 @@ curve$(EXEEXT): curve.o
  
  demo$(EXEEXT): demo.o
  	echo Linking $@...
@@ -67,13 +67,15 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) cp -f editor-Info.plist editor.app/Contents/Info.plist
  
-@@ -388,21 +392,21 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
+@@ -404,23 +408,23 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
  
  file_chooser$(EXEEXT): file_chooser.o $(IMGLIBNAME)
  	echo Linking $@...
 -	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) file_chooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
 +	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) file_chooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ fltk-versions$(EXEEXT): fltk-versions.o
  
  fonts$(EXEEXT): fonts.o
  
@@ -92,7 +94,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  	$(OSX_ONLY) mkdir -p help_dialog.app/Contents/Resources
  	$(OSX_ONLY) cp -f help_dialog.html help_dialog.app/Contents/Resources/
-@@ -422,14 +426,14 @@ input_choice$(EXEEXT): input_choice.o
+@@ -440,14 +444,14 @@ input_choice$(EXEEXT): input_choice.o
  
  keyboard$(EXEEXT): keyboard_ui.o keyboard.o
  	echo Linking $@...
@@ -109,7 +111,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  line_style$(EXEEXT): line_style.o
-@@ -438,7 +442,7 @@ list_visuals$(EXEEXT): list_visuals.o
+@@ -456,7 +460,7 @@ list_visuals$(EXEEXT): list_visuals.o
  
  mandelbrot$(EXEEXT): mandelbrot_ui.o mandelbrot.o
  	echo Linking $@...
@@ -118,7 +120,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  mandelbrot_ui.o:	mandelbrot_ui.h
  mandelbrot_ui.cxx:	mandelbrot_ui.fl ../fluid/fluid$(EXEEXT)
-@@ -451,7 +455,7 @@ minimum$(EXEEXT): minimum.o
+@@ -469,7 +473,7 @@ minimum$(EXEEXT): minimum.o
  
  native-filechooser$(EXEEXT): native-filechooser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -127,7 +129,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  navigation$(EXEEXT): navigation.o
-@@ -460,7 +464,7 @@ offscreen$(EXEEXT): offscreen.o
+@@ -478,7 +482,7 @@ offscreen$(EXEEXT): offscreen.o
  
  output$(EXEEXT): output.o $(FLLIBNAME)
  	echo Linking $@...
@@ -136,7 +138,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  overlay$(EXEEXT): overlay.o
-@@ -471,7 +475,7 @@ pixmap$(EXEEXT): pixmap.o
+@@ -489,7 +493,7 @@ pixmap$(EXEEXT): pixmap.o
  
  pixmap_browser$(EXEEXT): pixmap_browser.o $(IMGLIBNAME)
  	echo Linking $@...
@@ -145,7 +147,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) ../fltk-config --post $@
  
  preferences$(EXEEXT):	preferences.o
-@@ -495,7 +499,7 @@ subwindow$(EXEEXT): subwindow.o
+@@ -548,7 +552,7 @@ subwindow$(EXEEXT): subwindow.o
  
  sudoku: sudoku.o
  	echo Linking $@...
@@ -154,7 +156,7 @@ Add note that GUI test programs are not executed automatically.
  	$(OSX_ONLY) $(RM) -r -f sudoku.app/Contents/MacOS
  	$(OSX_ONLY) mkdir sudoku.app/Contents/MacOS
  	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
-@@ -503,7 +507,7 @@ sudoku: sudoku.o
+@@ -556,7 +560,7 @@ sudoku: sudoku.o
  sudoku.exe: sudoku.o sudoku.rc
  	echo Linking $@...
  	$(RC) sudoku.rc sudokures.o
@@ -163,7 +165,7 @@ Add note that GUI test programs are not executed automatically.
  
  symbols$(EXEEXT): symbols.o
  
-@@ -535,7 +539,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
+@@ -588,7 +592,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
  # OpenGL demos...
  CubeView$(EXEEXT): CubeMain.o CubeView.o CubeViewUI.o
  	echo Linking $@...
@@ -172,7 +174,7 @@ Add note that GUI test programs are not executed automatically.
  		CubeMain.o CubeView.o CubeViewUI.o \
  		$(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
  	$(OSX_ONLY) ../fltk-config --post $@
-@@ -546,35 +550,35 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
+@@ -599,35 +603,35 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
  
  cube$(EXEEXT): cube.o
  	echo Linking $@...
