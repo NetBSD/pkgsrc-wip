@@ -2,6 +2,7 @@ $NetBSD$
 
 Use libhidapi from pkgsrc.
 Only use libdl on Linux.
+Allow use of stable track wxWidgets on NetBSD.
 
 --- src/CMakeLists.txt.orig	2020-03-21 10:55:51.000000000 +0000
 +++ src/CMakeLists.txt
@@ -14,6 +15,20 @@ Only use libdl on Linux.
  
      if(WIN32)
          message(STATUS "WXWIN environment set to: $ENV{WXWIN}")
+@@ -37,10 +35,10 @@ if (SLIC3R_GUI)
+         endif()
+     endif()
+ 
+-    if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+-        set (wxWidgets_CONFIG_OPTIONS "--toolkit=gtk${SLIC3R_GTK}")
++    if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++        # set (wxWidgets_CONFIG_OPTIONS "--toolkit=gtk${SLIC3R_GTK}")
+         if (SLIC3R_WX_STABLE)
+-            find_package(wxWidgets 3.0 REQUIRED COMPONENTS base core adv html gl)
++            find_package(wxWidgets 3.0 QUIET COMPONENTS base core adv html gl)
+         else ()
+             find_package(wxWidgets 3.1 QUIET COMPONENTS base core adv html gl)
+ 
 @@ -113,8 +111,10 @@ target_link_libraries(PrusaSlicer libsli
          target_link_libraries(PrusaSlicer ws2_32 uxtheme setupapi)
      elseif (APPLE)

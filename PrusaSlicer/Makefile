@@ -18,8 +18,13 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake gmake
 USE_CMAKE=	yes
-#BUILD_TARGET=	default
-#TEST_TARGET=	test
+
+.if 0
+CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
+.include "../../x11/wxGTK30/buildlink3.mk"
+.else
+.include "../../wip/wxGTK31/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
@@ -34,7 +39,6 @@ USE_CMAKE=	yes
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
-.include "../../wip/wxGTK31/buildlink3.mk"
 .include "../../wip/threadingbuildingblocks/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
