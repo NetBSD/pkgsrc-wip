@@ -2,36 +2,36 @@
 #
 # $NetBSD$
 #
-# PROVIDE: nats-server
+# PROVIDE: nats_server
 # REQUIRE: DAEMON LOGIN mountall
 # KEYWORD: shutdown
 #
 # You will need to set some variables in /etc/rc.conf to start nats-server:
 #
-# natsserver=YES
+# nats_server=YES
 #
 # The following variables are optional:
 #
-# natsserver_pidfile="/path/to/p.pid"	path to nats-server PID file
+# nats_server_pidfile="/path/to/p.pid"	path to nats-server PID file
 #					default:
 #					@NATS_HOMEDIR@/nats-server.pid
-# natsserver_logfile="/path/to/p.log"	path to nats-server log file
+# nats_server_logfile="/path/to/p.log"	path to nats-server log file
 #					default:
 #					@NATS_LOGFILE@
-# natsserver_user="natssrv"		the username for nats-server daemon
-# natsserver_group="natssrv"		the group for nats-server daemon
+# nats_server_user="natssrv"		the username for nats-server daemon
+# nats_server_group="natssrv"		the group for nats-server daemon
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-name="nats-server"
-rcvar="natsserver"
+name="nats_server"
+rcvar="nats_server"
 command="@PREFIX@/bin/nats-server"
-: ${natsserver_pidfile:="@NATS_HOMEDIR@/nats-server.pid"}
-: ${natsserver_logfile:="@NATS_LOGFILE@"}
-: ${natsserver_user:="natssrv"}
-: ${natsserver_group:="natssrv"}
+: ${nats_server_pidfile:="@NATS_HOMEDIR@/nats-server.pid"}
+: ${nats_server_logfile:="@NATS_LOGFILE@"}
+: ${nats_server_user:="natssrv"}
+: ${nats_server_group:="natssrv"}
 
 start_cmd="natssrv_start"
 stop_cmd="natssrv_stop"
@@ -41,16 +41,16 @@ natssrv_start()
 	@ECHO@ "Starting ${name}."
 	ulimit -n 4096
 	cd @NATS_HOMEDIR@
-	/usr/bin/su ${natsserver_user}:${natsserver_group} \
-	   -c "${command} -P ${natsserver_pidfile} \
-	   -l ${natsserver_logfile} &"
+	/usr/bin/su ${nats_server_user}:${nats_server_group} \
+	   -c "${command} -P ${nats_server_pidfile} \
+	   -l ${nats_server_logfile} &"
 }
 
 natssrv_stop()
 {
 	local pidfile
 
-	pidfile="${natsserver_pidfile}"
+	pidfile="${nats_server_pidfile}"
 	if [ -r "${pidfile}" ]; then
 		echo "Stopping ${name}."
 		kill `/bin/cat ${pidfile}`
@@ -60,13 +60,13 @@ natssrv_stop()
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
-	pidfile="${natsserver_pidfile}"
+	pidfile="${nats_server_pidfile}"
 	run_rc_command "$1"
 else
 	if [ -f /etc/rc.conf ]; then
 		. /etc/rc.conf
 	fi
-	pidfile="${natsserver_pidfile}"
+	pidfile="${nats_server_pidfile}"
 	case "$1" in
 	stop)
 		natssrv_stop

@@ -31,9 +31,9 @@ PKG_HOME.${NATS_USER}=		${NATS_HOMEDIR}
 PKG_GECOS.${NATS_USER}=		nats.io server
 PKG_SHELL.${NATS_USER}=		/bin/sh
 
-RCD_SCRIPTS=            nats-server
+RCD_SCRIPTS=            nats_server
 SMF_NAME=               nats-server
-SMF_METHODS=            ${RCD_SCRIPTS}
+SMF_METHODS=            nats-server
 
 FILES_SUBST+=		NATS_USER=${NATS_USER}
 FILES_SUBST+=		NATS_GROUP=${NATS_GROUP}
