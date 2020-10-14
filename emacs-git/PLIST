@@ -1708,6 +1708,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/seq.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/seq.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/shadow.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/shadow.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/shortdoc.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/shortdoc.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/smie.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/smie.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/subr-x.el.gz
