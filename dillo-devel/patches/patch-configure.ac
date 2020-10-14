@@ -1,6 +1,7 @@
 $NetBSD$
 
 Use FLTK 1.4 for glyph substitution on X11 platform.
+Modify detection for OpenSSL 1.1.
 
 --- configure.ac.orig	2015-06-30 14:07:06.000000000 +0000
 +++ configure.ac
@@ -23,3 +24,12 @@ Use FLTK 1.4 for glyph substitution on X11 platform.
           LIBFLTK_CXXFLAGS=`$FLTK_CONFIG --cxxflags`
           LIBFLTK_CFLAGS=`$FLTK_CONFIG --cflags`
           LIBFLTK_LIBS=`$FLTK_CONFIG --ldflags`;;
+@@ -286,7 +286,7 @@ if test "x$enable_ssl" = "xyes"; then
+ 
+   if test "x$ssl_ok" = "xyes"; then
+     old_libs="$LIBS"
+-    AC_CHECK_LIB(ssl, SSL_library_init, ssl_ok=yes, ssl_ok=no, -lcrypto)
++    AC_CHECK_LIB(ssl, OPENSSL_config, ssl_ok=yes, ssl_ok=no, -lcrypto)
+     LIBS="$old_libs"
+   fi
+ 
