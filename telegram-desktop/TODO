@@ -1,4 +1,4 @@
 *make it build on NetBSD
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2020-12474, CVE-2020-17448
+  CVE-2020-12474, CVE-2020-17448, CVE-2020-25824
