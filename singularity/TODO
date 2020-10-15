@@ -1,3 +1,4 @@
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2018-12021, CVE-2019-11328, CVE-2019-19724
   CVE-2020-13845, CVE-2020-13846, CVE-2020-13847
+  CVE-2020-15229
