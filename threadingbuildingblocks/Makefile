@@ -20,6 +20,15 @@ USE_TOOLS+=	gmake pax
 BUILD_TARGET=	default
 TEST_TARGET=	test
 
+# Work around old TBB bug, we'll force using clang++, which appears to
+# have less agressive Dead-Store Elimination (DSE).
+# The makefiles already assume we're using clang, and hence fail to pass
+# "-flifetime-dse=1" to g++.
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=71388
+PKGSRC_COMPILER=	clang
+PKG_CC=			clang
+PKG_CXX=		clang++
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == Linux
