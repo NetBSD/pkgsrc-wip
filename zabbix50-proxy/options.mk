@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=		inet6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=            pgsql
+PLIST_VARS+=		pgsql
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
@@ -53,6 +53,6 @@ ZABBIX_DB_TYPE=		sqlite3
 .endif
 
 .if !empty(PKG_OPTIONS:Mipmi)
-CONFIGURE_ARGS+=	--with-openipmi=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-openipmi=${PREFIX}
 .include "../../devel/OpenIPMI/buildlink3.mk"
 .endif
