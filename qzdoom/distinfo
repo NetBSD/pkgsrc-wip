@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (qzdoom-4.4.2.tar.gz) = 167618be5c2f2fb59fc14139492194a2341e431b
+RMD160 (qzdoom-4.4.2.tar.gz) = 15e4d3982b12732bdd1ba81810803b2ad4327dfa
+SHA512 (qzdoom-4.4.2.tar.gz) = 552b612a84db4dbb181406f633a2d8102f0b23e75fed1ac240ba05ae2953a5bca7c460ffeb52b6d1408171fad74b26260ec4d64745300b6186bbb546bac20fc4
+Size (qzdoom-4.4.2.tar.gz) = 12613887 bytes
+SHA1 (patch-CMakeLists.txt) = f76aeda76718398f10872ecbe1f6f3175111be6b

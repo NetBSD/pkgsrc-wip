@@ -4406,6 +4406,7 @@ SUBDIR+=	quickjs
 SUBDIR+=	quiterss
 SUBDIR+=	qupzilla
 SUBDIR+=	quvi
+SUBDIR+=	qzdoom
 SUBDIR+=	r8s
 SUBDIR+=	radare2-git
 SUBDIR+=	radiotray
