@@ -54,6 +54,9 @@ REPLACE_BASH=	tools/frr.in tools/*.sh.in
 
 REPLACE_PYTHON=	tools/generate_support_bundle.py tools/frr-reload.py
 
+MESSAGE_SUBST+=		FRR_USER=${FRR_USER}
+MESSAGE_SUBST+=		FRR_VTY_GROUP=${FRR_VTY_GROUP}
+
 SUBST_CLASSES+=		ids
 SUBST_STAGE.ids=	pre-configure
 SUBST_MESSAGE.ids=	Fixing user/group references.
