@@ -74,6 +74,7 @@ SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	VASSAL
 SUBDIR+=	WEPCrack
+SUBDIR+=	ZMusic
 SUBDIR+=	ZenNode
 SUBDIR+=	a2ps-sharatype
 SUBDIR+=	accountsservice
