@@ -3,7 +3,7 @@
 DISTNAME=	gerrychain-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	https://files.pythonhosted.org/packages/79/76/0ad276d1eda834f6a9e42f62488cf394548b88a25f44a1b57b386acb6b86/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gerrychain/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://files.pythonhosted.org/packages/79/76/0ad276d1eda834f6a9e42f62488cf394548b88a25f44a1b57b386acb6b86/
