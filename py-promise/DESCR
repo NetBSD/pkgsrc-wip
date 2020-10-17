@@ -1,0 +1,4 @@
+This is a implementation of Promises in Python.
+It is a super set of Promises/A+ designed to have readable,
+performant code and to provide just the extensions that are
+absolutely necessary for using promises in Python

@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/greenery/__init__.py
+${PYSITELIB}/greenery/__init__.pyc
+${PYSITELIB}/greenery/__init__.pyo
+${PYSITELIB}/greenery/_version.py
+${PYSITELIB}/greenery/_version.pyc
+${PYSITELIB}/greenery/_version.pyo
+${PYSITELIB}/greenery/fsm.py
+${PYSITELIB}/greenery/fsm.pyc
+${PYSITELIB}/greenery/fsm.pyo
+${PYSITELIB}/greenery/fsm_test.py
+${PYSITELIB}/greenery/fsm_test.pyc
+${PYSITELIB}/greenery/fsm_test.pyo
+${PYSITELIB}/greenery/lego.py
+${PYSITELIB}/greenery/lego.pyc
+${PYSITELIB}/greenery/lego.pyo
+${PYSITELIB}/greenery/lego_test.py
+${PYSITELIB}/greenery/lego_test.pyc
+${PYSITELIB}/greenery/lego_test.pyo

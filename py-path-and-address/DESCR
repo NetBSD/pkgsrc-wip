@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+Path-and-Address
+================
+
+Functions for command-line server tools used by humans.
+
+
+Description
+-----------
+
+Path-and-address resolves ambiguities for command-line interface applications
+with the following pattern:
+
+```bash
+$ your_app [<path>] [<address>]
+```
+
+The library applies [the principal of least surprise][pols] to command-line
+interfaces.
+
+Some examples:
+...
