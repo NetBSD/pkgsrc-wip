@@ -6,7 +6,6 @@ DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-selenium-base-1.49.25
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seleniumbase/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/seleniumbase/SeleniumBase
@@ -15,7 +14,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	bash
 
-#FORCED REFUSE= PY27!
+#FORCED REFUSED= PY27!
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 #DEPENDENCY FOR Python>=3.7
