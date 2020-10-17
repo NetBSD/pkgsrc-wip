@@ -19,7 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.14.0:../../devel/py-test-asyncio
 
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
