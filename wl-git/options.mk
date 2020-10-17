@@ -9,6 +9,6 @@ PKG_SUPPORTED_OPTIONS=	emacs-w3m-current
 PLIST_VARS+=			emacs-w3m-current
 
 .if !empty(PKG_OPTIONS:Memacs-w3m-current)
-.include "../../wip/emacs-w3m-current/buildlink3.mk"
+.include "../../wip/emacs-w3m-cvs/buildlink3.mk"
 PLIST.emacs-w3m-current=	yes
 .endif

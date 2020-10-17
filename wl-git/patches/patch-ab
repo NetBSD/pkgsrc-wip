@@ -3,16 +3,21 @@ $NetBSD: patch-ab,v 1.3 2015/01/29 07:15:12 jgoamakf Exp $
 Without this patch, user needs to say where the icons installed,
 and the icons won't be displayed such setup.
 
---- wl/wl-vars.el.orig	2015-01-29 15:47:43.000000000 +0900
-+++ wl/wl-vars.el	2015-01-29 15:48:32.000000000 +0900
-@@ -173,8 +173,8 @@
- (defcustom wl-icon-directory (or
-                               (and (fboundp 'locate-data-directory)
-                                    (locate-data-directory "wl"))
--                              (let ((icons (expand-file-name "wl/icons/"
--							      data-directory)))
-+                              (let ((icons (expand-file-name "share/wl"
-+							      "%%PREFIX%%")))
-                                 (if (file-directory-p icons)
-                                     icons))
-                               (if load-file-name
+--- wl/wl-vars.el.orig	2020-10-16 12:33:17.000000000 +0000
++++ wl/wl-vars.el
+@@ -162,9 +162,13 @@ Supersede `wl-user-mail-address-list'."
+   :type 'directory
+   :group 'wl)
+ 
++
+ (defcustom wl-icon-directory
+-  (or (let ((icons (expand-file-name "wl/icons/"
+-				     data-directory)))
++
++								+                                                            
++				    
++  (or (let ((icons (expand-file-name "share/wl"
++                                       "%%PREFIX%%")))
+ 	(if (file-directory-p icons)
+             icons))
+       (if load-file-name

@@ -23,7 +23,7 @@ MAKE_FLAGS+=	PIXMAPDIR=${DESTDIR:Q}${PREFIX:Q}/share/wl
 INFO_FILES=	YES
 
 	# Change default wl-icon-directory for PIXMAP.
-	# Why not just use patch-ab ?  $PREFIX is to be embedded.
+	# Why not just use patch-ab ?  ${PREFIX} is to be embedded.
 
 SUBST_CLASSES+=			icon_directory
 SUBST_STAGE.icon_directory=	pre-configure

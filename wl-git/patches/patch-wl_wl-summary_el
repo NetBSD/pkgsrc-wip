@@ -14,17 +14,17 @@ your setup, for example, in ~/.wl.
 ;(setq wl-summary-line-format "%n%T%P%@%M/%D(%W)%h:%m %t%[%17(%c %f%) %] %#%~%s")
  (setq wl-summary-line-format "%n%T%P%@%M/%D(%W)%h:%m %t%[%17(%c %f%) %] %~%s")
 
---- wl/wl-summary.el.orig	2013-01-25 11:39:09.000000000 +0900
-+++ wl/wl-summary.el	2013-01-25 12:26:38.000000000 +0900
-@@ -38,6 +38,7 @@
+--- wl/wl-summary.el.orig	2020-10-16 12:33:17.000000000 +0000
++++ wl/wl-summary.el
+@@ -39,6 +39,7 @@
+ (require 'timezone nil t)
  (require 'elmo)
- (require 'elmo-multi)
- (eval-when-compile (require 'elmo-filter))
+ (require 'elmo-date)
 +(eval-when-compile (require 'wl-folder))
  (require 'wl-message)
  (require 'wl-vars)
  (require 'wl-highlight)
-@@ -3541,11 +3542,15 @@ Return non-nil if the mark is updated"
+@@ -3535,11 +3536,15 @@ Return non-nil if the mark is updated"
    (let ((content-type (elmo-message-entity-field
  		       wl-message-entity 'content-type))
  	(case-fold-search t))
@@ -45,4 +45,3 @@ your setup, for example, in ~/.wl.
  ;;; For future use.
  ;;;(defun wl-summary-line-cached ()
  ;;;  (if (elmo-message-cached-p wl-summary-buffer-elmo-folder
-
