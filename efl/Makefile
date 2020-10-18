@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 0.3 2018/09/07 20:03:10 andyb Exp $
 
-DISTNAME=	efl-1.25.0
+DISTNAME=	efl-1.25.1
 CATEGORIES=	x11
 #PKGREVISION=	1
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
