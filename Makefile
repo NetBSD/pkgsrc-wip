@@ -4875,6 +4875,7 @@ SUBDIR+=	tcpxtract
 SUBDIR+=	tctool
 SUBDIR+=	tde
 SUBDIR+=	tdlib
+SUBDIR+=	tdlib-purple
 SUBDIR+=	teamspeak
 SUBDIR+=	teco
 SUBDIR+=	telegraf
