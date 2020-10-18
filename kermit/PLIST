@@ -1,4 +1,3 @@
 @comment $NetBSD: PLIST,v 1.9 2011/08/25 14:54:06 hans Exp $
 bin/kermit
 man/man1/kermit.1
-share/doc/kermit/android.txt

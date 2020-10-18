@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.93 2020/04/08 15:22:07 rhialto Exp $
 
-DISTNAME=	ckucku305-alpha02
-PKGNAME=	kermit-9.0.305a2
+DISTNAME=	pre-alpha03
+PKGNAME=	kermit-9.0.305a2bis
 CATEGORIES=	comms
 #MASTER_SITES=	ftp://ftp.kermitproject.org/kermit/archives/
 MASTER_SITES=	http://www.kermitproject.org/ftp/kermit/test/tar/
@@ -34,7 +34,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/kermit
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${DESTDIR}${PREFIX}/bin/kermit
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/share/doc/kermit
 	${INSTALL_MAN} ${WRKSRC}/ckuker.nr \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1
 

@@ -1,20 +1,10 @@
 $NetBSD: distinfo,v 1.28 2020/07/30 03:03:07 gutteridge Exp $
 
-SHA1 (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 90a3cdc9d5112d752a8637b6a76f6aef7da8a00c
-RMD160 (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 4cd3cc02f6f5367b158f2fabc910e3ab7ffcee6a
-SHA512 (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 017c742d53fa847b844554ce46708a32bee76af2efb092c3149b92f9ef50e0aa03ce52ffe99fc46ebfb7eeda1f4660b9f936d92c48625eda92369496070dd3a1
-Size (kermit-9.0.305a2/ckucku305-alpha02.tar.gz) = 2545990 bytes
-SHA1 (patch-ck_ssl.c) = ad074be2191f907ce7d8069e4b128c64c1a3ef1e
-SHA1 (patch-ckcdeb.h) = 62cc9e92f2413a42312d9f6d168ee85664b6aab9
-SHA1 (patch-ckcfns.c) = 5b2098dfd57f8bd4d107acafaabe1a2c9b97d037
-SHA1 (patch-ckcmai.c) = 414f61c19185e4a82a8326121c2d9dacfba48077
-SHA1 (patch-ckuath.c) = 616ad10e65b24a04d24ff2556d6362ef3cc64b78
-SHA1 (patch-ckupty.c) = fd8966627f3642550750ccd42e3add64a36dae09
-SHA1 (patch-ckuus3.c) = 557e938b36931f7948783116d1c5c2224d51bcbb
-SHA1 (patch-ckuus4.c) = 2204f4c95f8266358b66ac0936ac83ab27bec0c9
-SHA1 (patch-ckuus5.c) = 6468e2139639f601de4609db8dff07b8b3a82d82
-SHA1 (patch-ckuus6.c) = cae37680ea5af85f4d2c774fe230f73a1f0be48c
-SHA1 (patch-ckuus7.c) = 983583d79abc4fcee1b7e9bf8ae46f184aa7011d
-SHA1 (patch-ckuusr.c) = 2a09f9f933d3c1e6860983d8138ac61f33306ef7
-SHA1 (patch-ckuusx.c) = 8c5acbfefe7b7d11825cc32c4449582b51f6cad9
+SHA1 (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = 6595ed5c8e525a2ab3ab8311340c05c5bb60d9cd
+RMD160 (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = e9d09fa9a9f532262a6a52b7bbdf9e24f80b15f2
+SHA512 (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = 24dd9f9e63209f4d9dcf3d12f1989b7617af7de2f05256794275f4bc050ad75c8447a96924a951106c8391c1f9c08e8c9a6e9c4a3b08936eb295dca130ff0059
+Size (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = 2278371 bytes
+SHA1 (patch-ckuath.c) = 494e9f5dc9edc2b8738129bb53de2d5affa8cca2
+SHA1 (patch-ckupty.c) = 97cb6cca9b90d4c9a3a2faf9161310cb51fd2a58
+SHA1 (patch-ckuusx.c) = d92471b5f2b1e0444a9498052ec768f5d1bacef7
 SHA1 (patch-makefile) = 67754adea3116a8bab45870adbb8166d8cbac32f
