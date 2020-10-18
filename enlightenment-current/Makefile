@@ -3,7 +3,7 @@
 DISTNAME=	enlightenment-0.24.2
 PKGNAME=	${DISTNAME:S/enlightenment/enlightenment-current/}
 CATEGORIES=	wm
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
