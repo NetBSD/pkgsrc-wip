@@ -2,6 +2,7 @@
 
 DISTNAME=	terminology-1.8.1
 CATEGORIES=	x11
+PKGREVISION=    1
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/terminology/
 EXTRACT_SUFX=	.tar.xz
 
