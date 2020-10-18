@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (tdlib-1.6.0.tar.gz) = 14bbd702c3d6c4d53defee8c43dfa72747f0107a
+RMD160 (tdlib-1.6.0.tar.gz) = e7d37d0fed5d418432cf89ce6c4f086db98360d1
+SHA512 (tdlib-1.6.0.tar.gz) = aee8b3df17e8571ca587cc72092305fd0992fefc4d9f60b2c530c9e6726c6b6371f0e5819ca4d5a4ffbbef1345f2a18156aae979b80e124ffe183423f8f515e0
+Size (tdlib-1.6.0.tar.gz) = 3825444 bytes
+SHA1 (patch-tdutils_CMakeLists.txt) = 9cf8d205e0323116bc4ac602d311a861dc33cdef
+SHA1 (patch-tdutils_td_utils_port_detail_KQueue.cpp) = e72dfad449c956e0c8a4d44947115aaa15b3d519

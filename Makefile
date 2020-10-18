@@ -4874,6 +4874,7 @@ SUBDIR+=	tcptunnel
 SUBDIR+=	tcpxtract
 SUBDIR+=	tctool
 SUBDIR+=	tde
+SUBDIR+=	tdlib
 SUBDIR+=	teamspeak
 SUBDIR+=	teco
 SUBDIR+=	telegraf
