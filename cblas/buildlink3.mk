@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.cblas?=	../../wip/cblas
 # Without this, they can be included in either order.
 # I think pkg Makefiles should include both for clarity rather than have
 # cblas implicitly pull in blas.bl3.
-#.include	"../../wip/mk/blas.buildlink3.mk"
+# .include	"../../mk/blas.buildlink3.mk"
 .endif
 
 BUILDLINK_TREE+=	-cblas

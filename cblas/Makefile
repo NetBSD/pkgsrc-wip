@@ -10,6 +10,6 @@ LAPACK_COMPONENT_CMAKE_ARGS=	\
 	-DCBLAS=ON -DLAPACKE=OFF \
 	-DCMAKE_VERBOSE=ON
 
-.include "../../wip/mk/blas.buildlink3.mk"
-.include "../../wip/lapack/Makefile.common"
+.include "../../mk/blas.buildlink3.mk"
+.include "../../math/lapack/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
