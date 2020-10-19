@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-g/}
 
 # DOOMWADDIR is intentionally shared with other Doom packages
@@ -46,9 +47,12 @@ post-install:
 BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=2.1.4nb1
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../wip/ZMusic/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
