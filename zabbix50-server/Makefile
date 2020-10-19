@@ -4,7 +4,7 @@
 #
 .include "Makefile.common"
 
-PKGNAME=	${DISTNAME:S/-/-server-/}
+PKGNAME=	${DISTNAME:S/-/-server-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
 CONFLICTS+=	zabbix-[0-9]*

@@ -2,7 +2,7 @@
 
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
-PKGNAME=	${DISTNAME:S/-/-proxy-/}
+PKGNAME=	${DISTNAME:S/-/-proxy-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
 CONFLICTS+=	zabbix-[0-9]*
