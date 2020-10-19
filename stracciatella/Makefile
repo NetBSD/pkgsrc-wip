@@ -43,6 +43,8 @@ do-install:
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../lang/rust/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
