@@ -1,2 +1,19 @@
 @comment $NetBSD$
 bin/qzdoom
+share/doc/qzdoom/INSTALL.pkgsrc
+share/doc/qzdoom/console.css
+share/doc/qzdoom/console.html
+share/doc/qzdoom/licenses/README.TXT
+share/doc/qzdoom/licenses/bsd.txt
+share/doc/qzdoom/licenses/bzip2.txt
+share/doc/qzdoom/licenses/dumb.txt
+share/doc/qzdoom/licenses/fxaa.txt
+share/doc/qzdoom/licenses/gdtoa.txt
+share/doc/qzdoom/licenses/gpl.txt
+share/doc/qzdoom/licenses/lgpl.txt
+share/doc/qzdoom/rh-log.txt
+share/doc/qzdoom/skins.txt
+share/doom/qzdoom/brightmaps.pk3
+share/doom/qzdoom/game_support.pk3
+share/doom/qzdoom/gzdoom.pk3
+share/doom/qzdoom/lights.pk3

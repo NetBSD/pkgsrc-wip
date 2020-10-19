@@ -1,1 +1,7 @@
 [X] Package ZMusic dependency
+[ ] The patch for fts_set() is ugly
+[X] Add pkgsrc locations to search paths
+[X] Do not use GZDoom namespace
+[X] Add fluidsynth dependency (loaded at runtime)
+
+Crash with segmentation fault.
