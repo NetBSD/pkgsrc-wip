@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	0.18pre46
+FLNEWS_VERSION=	0.18pre59
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -41,7 +41,7 @@ SUBST_SED.edit-config+=		-e 's,@XDG@,0,g'
 .else
 SUBST_SED.edit-config+=		-e 's,@XDG@,1,g'
 .endif
-# NetBSD 7 reports X/Open XSI extension as not available using the POSIX
+# NetBSD reports X/Open XSI extension as not available using the POSIX
 # sysconf(_SC_XOPEN_VERSION) call, but has a sufficient implementation
 # => Force using it
 .if ${OPSYS} == "NetBSD"
@@ -49,7 +49,7 @@ SUBST_SED.edit-config+=		-e 's,@FORCE_XSI@,1,g'
 .else
 SUBST_SED.edit-config+=		-e 's,@FORCE_XSI@,0,g'
 .endif
-# NetBSD 7 reports IPv6 as not available using the POSIX sysconf(_SC_IPV6)
+# NetBSD reports IPv6 as not available using the POSIX sysconf(_SC_IPV6)
 # call, but has a sufficient implementation
 # => Force using it if inet6 option of pkgsrc package is selected
 .if ${OPSYS} == "NetBSD" && ${FLNEWS_OPT_DISABLE_IP6} == 0
@@ -80,11 +80,7 @@ BUILD_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-# OpenSSL 1.1 API is required for signature algorithm negotiation
-# OpenSSL 1.1 API is required for TLSv1.2 FFDHE group check
-# At least OpenSSL 1.1.1 is required for TLSv1.3
-# OpenSSL 3 API is required for FFDHE group negotiation
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
+# OpenSSL 3 API is required for RFC 7919 FFDHE group negotiation
 .include "../../security/openssl/buildlink3.mk"
 # FLTK must be compiled with multithreading support
 # FLTK version 1.4 is supported (should be compiled with pango support)

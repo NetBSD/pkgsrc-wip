@@ -52,6 +52,17 @@ CFG_TLS_CRLS_DISABLE=0
 # Disable XDG support
 # Set this to 0 to install XDG conformant desktop entries and icon themes
 CFG_XDG_DISABLE=@XDG@
+
+# [For Apple macOS only] FLTK library must be compiled to use Cocoa backend
+# Setting this to 1 moves the menu bar to top of desktop
+CFG_COCOA_SYS_MENUBAR=0
+
+# Allow NNTP AUTHINFO USER/PASS client authentication without TLS
+# The default is 0 and requires TLS encryption for authentication
+# You can set this to 1 to use a local stunnel for the encryption
+# !!! Attention: Setting this to 1 may reveal your login data to the public !!!
+# !!!            An external program must encrypt the network connection !!!
+CFG_NNTP_AUTH_UNENCRYPTED=0
 # ==============================================================================
 
 
