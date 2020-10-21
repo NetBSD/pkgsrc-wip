@@ -1,4 +1,0 @@
-Generate redundant blocks of information such that if some
-of the blocks are lost then the original data can be recovered
-from the remaining blocks. This package includes command-line
-tools, C API, Python API, and Haskell API
