@@ -30,6 +30,7 @@ EGDIR=		share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/zabbix_server.conf ${PKG_SYSCONFDIR}/zabbix_server.conf
 
 RCD_SCRIPTS=	zabbix_server
+SMF_NAME=	zabbix-server
 
 INSTALLATION_DIRS+=	${EGDIR} share/${PKGBASE}
 

@@ -28,6 +28,7 @@ EGDIR=		share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/zabbix_proxy.conf ${PKG_SYSCONFDIR}/zabbix_proxy.conf
 
 RCD_SCRIPTS=	zabbix_proxy
+SMF_NAME=	zabbix-proxy
 
 INSTALLATION_DIRS+=	${EGDIR} share/${PKGBASE}
 
