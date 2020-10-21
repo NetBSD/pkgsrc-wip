@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.2 2016/06/12 19:48:02 kamil Exp $
+
+SHA1 (i3lock-color-2.12.c.5.tar.gz) = 813eafc4daa794045759abf80e8d274ef1b36ce2
+RMD160 (i3lock-color-2.12.c.5.tar.gz) = d50e44560f2d4fc2b12e1054cc74547c3a2a4310
+SHA512 (i3lock-color-2.12.c.5.tar.gz) = b579a9511c9c4220db2b9bc406b76fd9daac5dff27c8e7a646bc2c0feb15edf6a136c26a0945684791e0be554c0ce56fe986d79cc8a9b572c6d584be52f61b89
+Size (i3lock-color-2.12.c.5.tar.gz) = 208461 bytes
+SHA1 (patch-jpg.c) = 2da0ba7d6ac2080991a47dad91e9813133f76a8f
