@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (dps8_R2.0_source.tgz) = c649be9577b5c10b31dea9ce23145e662601cb78
+RMD160 (dps8_R2.0_source.tgz) = 1bab7084e35ce71d7318eadf38778127cc1fc390
+SHA512 (dps8_R2.0_source.tgz) = 88f888192685fe4f82d98a812578fec5e4e66a73831d5977b7ccd6c309404e46bc5eec68656cef5429d2dfdb25daf1e2f015312f9c79682151b4d86513924e1b
+Size (dps8_R2.0_source.tgz) = 2292032 bytes
+SHA1 (patch-src_Makefile.mk) = 3dd1a72fd4636cc3bce7516ed460f7216081e185
+SHA1 (patch-src_dps8_Makefile) = 828e2ff8c7363373ee16c2c1748dd189a124c19f
+SHA1 (patch-src_utils_prt2pdf.c) = 9015f488cf3461129ce8819f1027567d36102ecc
