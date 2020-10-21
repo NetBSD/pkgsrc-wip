@@ -23,6 +23,12 @@ share/examples/gdm/PostSession/Default
 share/examples/gdm/PreSession/Default
 share/examples/gdm/Xsession
 share/examples/gdm/custom.conf
+share/examples/gdm/pam.d/gdm-autologin
+share/examples/gdm/pam.d/gdm-fingerprint
+share/examples/gdm/pam.d/gdm-launch-environment
+share/examples/gdm/pam.d/gdm-password
+share/examples/gdm/pam.d/gdm-pin
+share/examples/gdm/pam.d/gdm-smartcard
 share/examples/pam.d/gdm-launch-environment
 share/gdm/BuiltInSessions/custom.desktop
 share/gdm/gdb-cmd
@@ -192,4 +198,6 @@ share/locale/zh_HK/LC_MESSAGES/gdm.mo
 share/locale/zh_TW/LC_MESSAGES/gdm.mo
 share/locale/zu/LC_MESSAGES/gdm.mo
 share/pixmaps/NetBSD.xpm
-@pkgdir share/examples/gdm/pam.d
+@pkgdir var/run/gdm/greeter
+@pkgdir var/lib/gdm/.local/share/applications
+@pkgdir var/cache/gdm
