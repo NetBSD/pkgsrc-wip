@@ -12,8 +12,8 @@ LICENSE=	modified-bsd
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/rc/-rc/}
 
-# 0.7.0 now requires this rust version:
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.39.0
+# 0.8.0 now requires this rust version:
+RUST_REQ=		1.42.0
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.13.0
 CARGO_CRATE_DEPENDS+=	adler-0.2.3
