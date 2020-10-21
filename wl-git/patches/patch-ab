@@ -5,19 +5,14 @@ and the icons won't be displayed such setup.
 
 --- wl/wl-vars.el.orig	2020-10-16 12:33:17.000000000 +0000
 +++ wl/wl-vars.el
-@@ -162,9 +162,13 @@ Supersede `wl-user-mail-address-list'."
-   :type 'directory
+@@ -163,8 +163,8 @@ Supersede `wl-user-mail-address-list'."
    :group 'wl)
  
-+
  (defcustom wl-icon-directory
 -  (or (let ((icons (expand-file-name "wl/icons/"
 -				     data-directory)))
-+
-+								+                                                            
-+				    
 +  (or (let ((icons (expand-file-name "share/wl"
-+                                       "%%PREFIX%%")))
++				     "@PREFIX@")))
  	(if (file-directory-p icons)
              icons))
        (if load-file-name

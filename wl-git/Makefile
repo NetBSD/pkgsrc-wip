@@ -28,8 +28,8 @@ INFO_FILES=	YES
 SUBST_CLASSES+=			icon_directory
 SUBST_STAGE.icon_directory=	pre-configure
 SUBST_MESSAGE.icon_directory=	Fixing wl-icon-directory default value (defvar)
-SUBST_FILES.icon_directory=	${WRKSRC}/wl/wl-vars.el
-SUBST_SED.icon_directory=	-e 's|%%PREFIX%%|${PREFIX}|'
+SUBST_FILES.icon_directory=	wl/wl-vars.el
+SUBST_VARS.icon_directory+=	PREFIX
 
 DOCDIR=			${PREFIX}/share/doc/wl
 EXAMPLESDIR=		${PREFIX}/share/examples/wl
@@ -39,10 +39,10 @@ INSTALLATION_DIRS=	${DOCDIR}/en ${DOCDIR}/ja \
 
 EMACS_BUILDLINK=	# empty
 
-GIT_REPOSITORIES=       master
-GIT_REPO.master=        git://github.com/wanderlust/wanderlust.git
-GIT_MODULE.master=      wanderlust
-_GIT_FLAGS?=            --depth 1
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	git://github.com/wanderlust/wanderlust.git
+GIT_MODULE.master=	wanderlust
+_GIT_FLAGS?=		--depth 1
 
 
 post-install:
