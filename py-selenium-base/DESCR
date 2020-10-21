@@ -1,4 +1,0 @@
-SeleniumBase is an all-in-one framework for fast & simple browser
-automation, end-to-end testing, reports, presentations, charts,
-and website tours. Tests are run with pytest. Browsers are
-controlled by WebDriver. 
