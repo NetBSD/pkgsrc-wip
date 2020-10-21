@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/01 13:58:39 jihbed Exp $
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cython_gsl/__init__.pxd
 ${PYSITELIB}/cython_gsl/__init__.py
 ${PYSITELIB}/cython_gsl/__init__.pyc
@@ -24,6 +25,7 @@ ${PYSITELIB}/cython_gsl/gsl_elementary.pxd
 ${PYSITELIB}/cython_gsl/gsl_ellint.pxd
 ${PYSITELIB}/cython_gsl/gsl_elljac.pxd
 ${PYSITELIB}/cython_gsl/gsl_erf.pxd
+${PYSITELIB}/cython_gsl/gsl_errno.pxd
 ${PYSITELIB}/cython_gsl/gsl_exp.pxd
 ${PYSITELIB}/cython_gsl/gsl_expint.pxd
 ${PYSITELIB}/cython_gsl/gsl_fermi_dirac.pxd
@@ -46,8 +48,11 @@ ${PYSITELIB}/cython_gsl/gsl_matrix_complex.pxd
 ${PYSITELIB}/cython_gsl/gsl_min.pxd
 ${PYSITELIB}/cython_gsl/gsl_mode.pxd
 ${PYSITELIB}/cython_gsl/gsl_monte.pxd
+${PYSITELIB}/cython_gsl/gsl_multifit_nlin.pxd
+${PYSITELIB}/cython_gsl/gsl_multimin.pxd
 ${PYSITELIB}/cython_gsl/gsl_ntuple.pxd
 ${PYSITELIB}/cython_gsl/gsl_odeiv.pxd
+${PYSITELIB}/cython_gsl/gsl_odeiv2.pxd
 ${PYSITELIB}/cython_gsl/gsl_permutation.pxd
 ${PYSITELIB}/cython_gsl/gsl_poly.pxd
 ${PYSITELIB}/cython_gsl/gsl_pow_int.pxd
@@ -66,3 +71,5 @@ ${PYSITELIB}/cython_gsl/gsl_trig.pxd
 ${PYSITELIB}/cython_gsl/gsl_vector.pxd
 ${PYSITELIB}/cython_gsl/gsl_vector_complex.pxd
 ${PYSITELIB}/cython_gsl/gsl_zeta.pxd
+${PYSITELIB}/cython_gsl/math.pxd
+${PYSITELIB}/cython_gsl/stdio.pxd
