@@ -3,7 +3,7 @@
 DISTNAME=	grimp-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/1a/bb/fb3195afa1a67c2754a007a21ecdc6f04d67e2db377bf5fae2e468e63299/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/grimp/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.org/project/grimp/
