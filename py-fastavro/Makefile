@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	fastavro-1.0.0.post1
+VERS=		1.0.0.post1
+DISTNAME=	fastavro-${VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/bd/bb/be327ed421ec063418ca2e328871f6b28f4efaeeef1bed5e3215c0140110/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/${DISTNAME:S/${VERS}//}/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/fastavro/fastavro
