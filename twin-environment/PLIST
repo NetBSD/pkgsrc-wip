@@ -147,6 +147,7 @@ lib/twin/libhw_display.la
 lib/twin/libhw_gfx.la
 lib/twin/libhw_tty.la
 lib/twin/libhw_twin.la
+lib/twin/libhw_xft.la
 lib/twin/librcparse.la
 lib/twin/libsocket.la
 lib/twin/libterm.la
