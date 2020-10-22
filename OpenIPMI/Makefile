@@ -4,7 +4,7 @@ DISTNAME=	OpenIPMI-2.0.29
 CATEGORIES=	devel
 MASTER_SITES=	https://newcontinuum.dl.sourceforge.net/project/openipmi/OpenIPMI%202.0%20Library/
 
-MAINTAINER=	noahmehl@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openipmi.sourceforge.net/
 COMMENT=	User-level library that provides a higher-level abstraction of IPMI
 LICENSE=	gnu-lgpl-v2
