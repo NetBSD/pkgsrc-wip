@@ -1,0 +1,4 @@
+The fastavro library was written to offer performance
+comparable to the Java library. With regular CPython,
+fastavro uses C extensions which allow it to iterate
+the same 10,000 record file in 1.7 seconds
