@@ -13,6 +13,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake perl pkg-config
 
+LDFLAGS.NetBSD+=		-lexecinfo
+BUILDLINK_TRANSFORM.NetBSD=	rm:-ldl
+
 PKGCONFIG_OVERRIDE+=	OpenIPMI.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIcmdlang.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIglib.pc.in

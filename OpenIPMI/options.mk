@@ -4,11 +4,14 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.OpenIPMI
 PKG_SUPPORTED_OPTIONS=		perl python snmp swig
 PKG_SUGGESTED_OPTIONS=		perl python snmp swig
 
+PLIST_VARS+=			perl python
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mperl)
 CONFIGURE_ARGS+=	--with-perl=${PERl5}
 .include "../../lang/perl5/buildlink3.mk"
+PLIST.perl=		yes
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
@@ -16,6 +19,8 @@ CONFIGURE_ARGS+=	--with-perl=no
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 .include "../../lang/python/pyversion.mk"
+PLIST.python=		yes
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 .else
 CONFIGURE_ARGS+=	--with-python=no
 .endif
