@@ -1,0 +1,6 @@
+Import Linter is a command line tool to check that you
+are following a self-imposed architecture within your
+Python project. It does this by analysing the imports
+between all the modules in one or more Python packages,
+and compares this against a set of rules that you provide
+in a configuration file.
