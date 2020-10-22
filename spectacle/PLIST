@@ -1,0 +1,22 @@
+@comment $NetBSD$
+bin/spectacle
+lib/kconf_update_bin/spectacle-migrate-shortcuts
+share/applications/org.kde.spectacle.desktop
+share/dbus-1/interfaces/org.kde.Spectacle.xml
+share/dbus-1/services/org.kde.Spectacle.service
+share/doc/HTML/en/spectacle/ApplicationPreferences.png
+share/doc/HTML/en/spectacle/MainWindow.png
+share/doc/HTML/en/spectacle/SaveOptions.png
+share/doc/HTML/en/spectacle/index.cache.bz2
+share/doc/HTML/en/spectacle/index.docbook
+share/icons/hicolor/16x16/apps/spectacle.png
+share/icons/hicolor/22x22/apps/spectacle.png
+share/icons/hicolor/32x32/apps/spectacle.png
+share/icons/hicolor/48x48/apps/spectacle.png
+share/icons/hicolor/scalable/apps/spectacle.svgz
+share/kconf_update/spectacle_newConfig.upd
+share/kconf_update/spectacle_shortcuts.upd
+share/kglobalaccel/org.kde.spectacle.desktop
+share/knotifications5/spectacle.notifyrc
+share/metainfo/org.kde.spectacle.appdata.xml
+share/qlogging-categories5/spectacle.categories
