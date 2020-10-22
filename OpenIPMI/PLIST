@@ -81,10 +81,10 @@ lib/pkgconfig/OpenIPMIposix.pc
 lib/pkgconfig/OpenIPMIpthread.pc
 lib/pkgconfig/OpenIPMIui.pc
 lib/pkgconfig/OpenIPMIutils.pc
-${PLIST.py3x}${PYSITELIB}/OpenIPMI.py
-${PLIST.py3x}${PYSITELIB}/_OpenIPMI.la
-${PLIST.py3x}${PYSITELIB}/_OpenIPMI.a
-${PLIST.py3x}${PYSITELIB}/_OpenIPMI.so
+${PLIST.python}${PYSITELIB}/OpenIPMI.py
+${PLIST.python}${PYSITELIB}/_OpenIPMI.la
+${PLIST.python}${PYSITELIB}/_OpenIPMI.a
+${PLIST.python}${PYSITELIB}/_OpenIPMI.so
 man/man1/ipmi_sim.1
 man/man1/ipmi_ui.1
 man/man1/openipmi_eventd.1
