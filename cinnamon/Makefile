@@ -97,6 +97,7 @@ DEPENDS+=	gnome-icon-theme-[0-9]*:../../graphics/gnome-icon-theme
 #DEPENDS+=	gnome-terminal->=3.0.0:../../cinnamon/gnome-terminal
 DEPENDS+=	mate-polkit-[0-9]*:../../security/mate-polkit
 DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
+DEPENDS+=	muffin>=4.6.2:../../wip/muffin
 BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 
 .include "../../lang/python/application.mk"
@@ -130,7 +131,7 @@ BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 .include "../../wip/cinnamon-screensaver/buildlink3.mk"
 .include "../../wip/cinnamon-control-center/buildlink3.mk"
 .include "../../wip/cinnamon-settings-daemon/buildlink3.mk"
-.include "../../wip/muffin/buildlink3.mk"
+#.include "../../wip/muffin/buildlink3.mk"
 .include "../../wip/nemo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
