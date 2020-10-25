@@ -9,9 +9,7 @@ include/parole/parole-provider-plugin.h
 include/parole/parole-stream.h
 include/parole/parole.h
 lib/parole-0/parole-mpris2.la
-${PLIST.notify}lib/parole-0/parole-notify.la
 lib/parole-0/tray-icon.la
-share/appdata/parole.appdata.xml
 share/applications/org.xfce.Parole.desktop
 share/icons/hicolor/128x128/apps/parole.png
 share/icons/hicolor/16x16/apps/parole-extension-symbolic.svg
@@ -42,7 +40,9 @@ share/locale/gl/LC_MESSAGES/parole.mo
 share/locale/he/LC_MESSAGES/parole.mo
 share/locale/hr/LC_MESSAGES/parole.mo
 share/locale/hu/LC_MESSAGES/parole.mo
+share/locale/hy_AM/LC_MESSAGES/parole.mo
 share/locale/id/LC_MESSAGES/parole.mo
+share/locale/ie/LC_MESSAGES/parole.mo
 share/locale/is/LC_MESSAGES/parole.mo
 share/locale/it/LC_MESSAGES/parole.mo
 share/locale/ja/LC_MESSAGES/parole.mo
@@ -71,8 +71,8 @@ share/locale/ug/LC_MESSAGES/parole.mo
 share/locale/uk/LC_MESSAGES/parole.mo
 share/locale/zh_CN/LC_MESSAGES/parole.mo
 share/locale/zh_TW/LC_MESSAGES/parole.mo
+share/metainfo/parole.appdata.xml
 share/parole/parole-plugins-0/mpris2.desktop
-${PLIST.notify}share/parole/parole-plugins-0/notify.desktop
 share/parole/parole-plugins-0/system-tray.desktop
 share/parole/pixmaps/no-cover.png
 share/parole/pixmaps/play.png

@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	yes
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
+REPLACE_PYTHON+=	libxapp/g-codegen.py libxapp/install_generated_header.py makedoc schemas/meson_install_schemas.py
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
