@@ -4,7 +4,7 @@ $NetBSD$
 You'll need to install additional gst-plugins1-* packages to play
 some types of media or to use some hardware devices. These are
 particulary useful:
-	sound/gst-plugins1-oss
+	audio/gst-plugins1-oss
 	x11/gst-plugins1-x11
 	multimedia/gst-plugins1-libav
 ===========================================================================
