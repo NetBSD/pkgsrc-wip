@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2017/07/11 19:41:20 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2020/10/17 22:03:05 mef Exp $
 
-DISTNAME=	klayout-0.25.3
+DISTNAME=	klayout-0.26.8
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -18,7 +18,7 @@ NO_CONFIGURE=	yes
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
-SUBST_STAGE.rpath=	post-patch
+SUBST_STAGE.rpath=	pre-configure
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG PREFIX LDFLAGS
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl

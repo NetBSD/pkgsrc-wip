@@ -1,4 +1,4 @@
-$NetBSD: patch-src_layApplication.cc,v 1.2 2017/02/14 21:33:08 joerg Exp $
+$NetBSD: patch-src_layApplication.cc,v 1.3 2018/07/24 13:00:10 ryoon Exp $
 
 To avoid following message
 error: 'struct sigaction' has no member named 'sa_restorer'
