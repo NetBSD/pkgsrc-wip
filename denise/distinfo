@@ -5,5 +5,5 @@ RMD160 (v1.0.9.tar.bz2) = 8f204e0c3aef864ecd1e5ebad08fc26b5014bf41
 SHA512 (v1.0.9.tar.bz2) = e106db70e37a22c0e861e2860e9fe4c08a91759da401e107b0d00bf0c35c4758367925eaa3b330ed021944ce86d4b4903038dcdb419e401b587293519ab71183
 Size (v1.0.9.tar.bz2) = 5941348 bytes
 SHA1 (patch-Makefile) = ffaa85b5cd947b87fa423e1ecb2bb54a9bd8f46a
-SHA1 (patch-driver_Makefile) = fdf126d30eec635fdc01f9adac5ac330404b4b3a
-SHA1 (patch-driver_video_opengl_opengl.h) = f4a18802efc2d05e7f68ed23e3d12c75541256f9
+SHA1 (patch-driver_Makefile) = cfb336839ccbef29e01e4fb3fe045340592ff90c
+SHA1 (patch-driver_video_opengl_bind.h) = c09521cece8c1dd1ddd88dda7d5f50a3ae9d867c

@@ -23,11 +23,3 @@ Also, GLEW may be the wrong thing but at least it compiles and links.
      drvlink += $(if $(findstring openal,$(drv)),-lopenal)
      ifneq ($(findstring xlib,$(drv)),)
  	drvlink += $(if $(findstring sdl,$(drv)), $(shell $(env)sdl2-config --libs))
-@@ -74,6 +74,6 @@ drvlink += $(if $(findstring iokit,$(drv
- drvlink += $(if $(findstring cgl,$(drv)),-framework OpenGL)
- drvlink += $(if $(findstring coreaudio,$(drv)),-framework CoreAudio -framework AudioToolbox)
- 
--drvlink += $(if $(findstring glx,$(drv)),-lGL)
-+drvlink += $(if $(findstring glx,$(drv)),-lGL -lGLEW)
- drvlink += $(if $(findstring udev,$(drv)),-ludev)
- drvlink += $(if $(findstring pulseaudio,$(drv)),-lpulse)
