@@ -1,0 +1,3 @@
+This package wraps the google/crc32c hardware-based implementation
+of the CRC32C hashing algorithm. Multiple wheels are distributed
+as well as source

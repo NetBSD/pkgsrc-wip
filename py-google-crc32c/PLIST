@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/google_crc32c/__config__.py
+${PYSITELIB}/google_crc32c/__config__.pyc
+${PYSITELIB}/google_crc32c/__config__.pyo
+${PYSITELIB}/google_crc32c/__init__.py
+${PYSITELIB}/google_crc32c/__init__.pyc
+${PYSITELIB}/google_crc32c/__init__.pyo
+${PYSITELIB}/google_crc32c/_checksum.py
+${PYSITELIB}/google_crc32c/_checksum.pyc
+${PYSITELIB}/google_crc32c/_checksum.pyo
+${PYSITELIB}/google_crc32c/cffi.py
+${PYSITELIB}/google_crc32c/cffi.pyc
+${PYSITELIB}/google_crc32c/cffi.pyo
+${PYSITELIB}/google_crc32c/python.py
+${PYSITELIB}/google_crc32c/python.pyc
+${PYSITELIB}/google_crc32c/python.pyo
