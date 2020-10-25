@@ -585,6 +585,7 @@ SUBDIR+=	deforaos-init
 SUBDIR+=	deforaos-probe
 SUBDIR+=	deluge
 SUBDIR+=	delve
+SUBDIR+=	denise
 SUBDIR+=	denyhosts
 SUBDIR+=	depsolver
 SUBDIR+=	deskcribe

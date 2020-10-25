@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/Denise
+share/applications/denise.desktop
+share/denise/data/Basic
+share/denise/data/Char
+share/denise/data/Kernal
+share/denise/data/VC1541-II
+share/denise/fonts/C64_Pro-STYLE121.ttf
+share/denise/fonts/C64_Pro_Mono-STYLE.ttf
+share/denise/fonts/C64_Pro_Mono-STYLE121.ttf
+share/denise/img/startscreen.png
+share/denise/shader/CRT-Lottes.shader/manifest
+share/denise/shader/CRT-Lottes.shader/shadertoy.fs
+share/denise/shader/CRT-Trinitron.shader/crt-trinitron.fs
+share/denise/shader/CRT-Trinitron.shader/manifest.bml
+share/denise/shader/CRT-Trinitron2.shader/crt-trinitron.fs
+share/denise/shader/CRT-Trinitron2.shader/manifest.bml
+share/denise/translation/english.png
+share/denise/translation/english.txt
+share/denise/translation/french.png
+share/denise/translation/french.txt
+share/denise/translation/german.png
+share/denise/translation/german.txt
+share/denise/translation/japanese.png
+share/denise/translation/japanese.txt
+share/icons/denise.png

@@ -1,0 +1,50 @@
+$NetBSD$
+
+Fix installation directories, and use of install command.
+
+--- Makefile.orig	2020-10-25 12:34:43.000000000 +0000
++++ Makefile
+@@ -10,7 +10,7 @@ dataFolder := data
+ fontFolder := fonts
+ shaderFolder := shader
+ imgFolder := img
+-prefix := $(HOME)/.local
++prefix := ${DESTDIR}${PREFIX}
+ target := $(shell g++ --version | grep i686)
+ 
+ include data/Makefile
+@@ -228,20 +228,20 @@ install:
+ 	mkdir -p $(prefix)/bin/
+ 	mkdir -p $(prefix)/share/icons/
+ 	mkdir -p $(prefix)/share/applications/
+-	mkdir -p $(prefix)/$(loname)/$(translationFolder)/
+-	mkdir -p $(prefix)/$(loname)/$(dataFolder)/
+-	mkdir -p $(prefix)/$(loname)/$(fontFolder)/
+-	mkdir -p $(prefix)/$(loname)/$(imgFolder)/
+-	mkdir -p $(prefix)/$(loname)/$(shaderFolder)/
+-
+-	install -D -m 755 out/$(name) $(prefix)/bin/$(name)
+-	install -D -m 644 data/img/$(loname).png $(prefix)/share/icons/$(loname).png
+-	install -D -m 644 data/$(loname).desktop $(prefix)/share/applications/$(loname).desktop
+-	install -D -m 644 data/$(translationFolder)/* $(prefix)/$(loname)/$(translationFolder)
+-	install -D -m 644 data/$(dataFolder)/* $(prefix)/$(loname)/$(dataFolder)
+-	install -D -m 644 data/$(fontFolder)/*.ttf $(prefix)/$(loname)/$(fontFolder)
+-	install -D -m 644 data/$(imgFolder)/bundle/* $(prefix)/$(loname)/$(imgFolder)
+-	cp -r data/$(shaderFolder)/* $(prefix)/$(loname)/$(shaderFolder)/
++	mkdir -p $(prefix)/share/$(loname)/$(translationFolder)/
++	mkdir -p $(prefix)/share/$(loname)/$(dataFolder)/
++	mkdir -p $(prefix)/share/$(loname)/$(fontFolder)/
++	mkdir -p $(prefix)/share/$(loname)/$(imgFolder)/
++	mkdir -p $(prefix)/share/$(loname)/$(shaderFolder)/
++
++	install -m 755 out/$(name) $(prefix)/bin/
++	install -m 644 data/img/$(loname).png $(prefix)/share/icons/$(loname).png
++	install -m 644 data/$(loname).desktop $(prefix)/share/applications/$(loname).desktop
++	install -m 644 data/$(translationFolder)/* $(prefix)/share/$(loname)/$(translationFolder)
++	install -m 644 data/$(dataFolder)/* $(prefix)/share/$(loname)/$(dataFolder)
++	install -m 644 data/$(fontFolder)/*.ttf $(prefix)/share/$(loname)/$(fontFolder)
++	install -m 644 data/$(imgFolder)/bundle/* $(prefix)/share/$(loname)/$(imgFolder)
++	cp -r data/$(shaderFolder)/* $(prefix)/share/$(loname)/$(shaderFolder)/
+     endif
+ 
+ uninstall:
