@@ -62,6 +62,7 @@ Suggested package updates
 	o hitori-0.4.5
 	o hu-go-2.11
 	o icecat-52.0.2
+	o iosevka-slab-ttf-3.7.0
 	o jakarta-struts-2.5.1
 	o jalview-2.4
 	o java-asm-3.2
@@ -92,6 +93,7 @@ Suggested package updates
 	o mythtv-0.28.0
 	o nautilus-open-terminal-0.19
 	o neovim-0.4.0
+	o nuspell-4.0.0
 	o ogmrip-1.0.0
 	o omega-1.2.10
 	o openblas-0.3.9
