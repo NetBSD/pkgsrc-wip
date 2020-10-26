@@ -5288,6 +5288,7 @@ SUBDIR+=	xpi-quick_locale_switcher
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xpipe
 SUBDIR+=	xplore
+SUBDIR+=	xplugd
 SUBDIR+=	xrdp
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp

@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (xplugd-1.4.tar.gz) = 5711543c3eb76b3e79c9d7aa9680f04c969f7994
+RMD160 (xplugd-1.4.tar.gz) = 320ae608600d95df41a2fcd9ef0979ea71d900c6
+SHA512 (xplugd-1.4.tar.gz) = 1e4dcd28f260ba3bc33d6d2f044aceb614bf5298699467dc1f082224b8818c4059a9d8d97eb3b506adf3c77f92b173af4365259b44440c06bc4f0923445b2bbf
+Size (xplugd-1.4.tar.gz) = 18834 bytes
+SHA1 (patch-configure.ac) = fc11705f4458b6403ecea6aa132c65d342c28491
+SHA1 (patch-src_xplugd.c) = ac163552a2d0ab8ec63c6eaee0f8b19f6378ecca
