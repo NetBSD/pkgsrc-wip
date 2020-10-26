@@ -7,3 +7,4 @@ Size (frr-7.4.tar.gz) = 6074854 bytes
 SHA1 (patch-lib_zlog.c) = 206b6c48129d8122bf23d245f3d86284e5057fee
 SHA1 (patch-pkgsrc_zebra.sh.in) = d458e74a1f3319f6e075d3d3a81414bc7d7022f2
 SHA1 (patch-zebra_ioctl.c) = 99b7606564f4dc620df997889156b5c09f7fb396
+SHA1 (patch-zebra_kernel__socket.c) = 9bf24d86923715e3e15cad073df1210bc0608e89
