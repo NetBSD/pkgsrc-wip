@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/path_and_address/__init__.py
+${PYSITELIB}/path_and_address/__init__.pyc
+${PYSITELIB}/path_and_address/__init__.pyo
+${PYSITELIB}/path_and_address/parsing.py
+${PYSITELIB}/path_and_address/parsing.pyc
+${PYSITELIB}/path_and_address/parsing.pyo
+${PYSITELIB}/path_and_address/validation.py
+${PYSITELIB}/path_and_address/validation.pyc
+${PYSITELIB}/path_and_address/validation.pyo
