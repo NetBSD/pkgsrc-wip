@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (aioconsole-0.2.1.tar.gz) = f3755bd84f5ed88f0c082a2ca1330220a4a44ff2
-RMD160 (aioconsole-0.2.1.tar.gz) = 7d6a219c0d86eb7ce8bf5dbb63cf585b6ea9931a
-SHA512 (aioconsole-0.2.1.tar.gz) = 3a351dba57a1a53c1dfa59ae17109f526bca6be6981631a6b60f80666979d5427220819d84553f3498e2d179a8601c6f46a26863154dce5c3081e3c93161a1f7
-Size (aioconsole-0.2.1.tar.gz) = 14336 bytes
+SHA1 (aioconsole-0.3.0.tar.gz) = 046ee04c853fac8cbe7b19e70f314b5f34573e80
+RMD160 (aioconsole-0.3.0.tar.gz) = 47348f0d2474d2541fdd745804cf748bb6a8d1c4
+SHA512 (aioconsole-0.3.0.tar.gz) = 551bb6c831d3903318008a67ec29038f366c30e05b4d1b838689f9dc98eee11bed294b9428c364392236b151c78c2d929ef12fb49d62b884affd2f642ab0e111
+Size (aioconsole-0.3.0.tar.gz) = 14802 bytes

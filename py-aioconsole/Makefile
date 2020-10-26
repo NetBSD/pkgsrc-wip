@@ -1,19 +1,20 @@
 # $NetBSD$
 
-DISTNAME=	aioconsole-0.2.1
+DISTNAME=	aioconsole-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/06/24/d88c186e84457b6a7a2a01c21ccf1e9a1125b5d33157acb28388bfc0a73c/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/aioconsole/}
 
-MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/vxgmichel/aioconsole
 COMMENT=	Asynchronous console and interfaces for asyncio
 LICENSE=	gnu-gpl-v3
 
-TEST_DEPENDS+=	# TODO: pytest>=0
-TEST_DEPENDS+=	# TODO: pytest-asyncio>=0
-TEST_DEPENDS+=	# TODO: pytest-cov>=0
-TEST_DEPENDS+=	# TODO: pytest-repeat>=0
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.1.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=6.1.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-repeat>=0.8.0:../../wip/py-test-repeat
 
 USE_LANGUAGES=	# none
 
