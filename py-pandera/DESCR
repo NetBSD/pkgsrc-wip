@@ -1,0 +1,14 @@
+pandas data structures contain information that pandera
+explicitly validates at runtime. This is useful in
+production-critical or reproducible research settings.
+With pandera, you can:
+
+ Check the types and properties of columns in a DataFrame
+ or values in a Series.
+ Perform more complex statistical validation like hypothesis testing.
+ Seamlessly integrate with existing data analysis/processing
+ pipelines via function decorators.
+
+pandera provides a flexible and expressive API for performing
+data validation on tidy (long-form) and wide data to make
+data processing pipelines more readable and robust
