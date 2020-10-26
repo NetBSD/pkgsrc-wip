@@ -1,0 +1,5 @@
+This package integrates Python with the TeamCity Continuous Integration
+(CI) server. It allows sending service messages from Python code.
+Additionally, it provides integration with the following testing
+frameworks and tools:py.test,nose,Django,unittest (Python standard library)
+Trial (Twisted),Flake8, Behave, PyLint
