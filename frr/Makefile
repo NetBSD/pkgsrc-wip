@@ -99,11 +99,11 @@ CONFIG_TEMPLATES!=	${EGREP} ${CONFIG_TEMPLATE_PATH:Q} PLIST 2>/dev/null
 CONF_FILES?=
 
 .for l in ${CONFIG_TEMPLATES}
-.if ${l:C,^${CONFIG_TEMPLATE_PATH}/(.*)\.sample,\1,} == "vtysh.conf"
+.  if ${l:C,^${CONFIG_TEMPLATE_PATH}/(.*)\.sample,\1,} == "vtysh.conf"
 CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C,^${CONFIG_TEMPLATE_PATH}(/.*)\.sample,\1,} \
 			${FRR_USER} ${FRR_VTY_GROUP} ${FRR_CONF_MODE}
-.else
+.  else
 CONF_FILES_PERMS+=	/dev/null ${PKG_SYSCONFDIR}${l:C,^${CONFIG_TEMPLATE_PATH}(/.*)\.sample,\1,} \
 			${FRR_USER} ${FRR_GROUP} ${FRR_CONF_MODE}
-.endif
+.  endif
 .endfor
