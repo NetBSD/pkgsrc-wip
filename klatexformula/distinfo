@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (klatexformula-4.1.0.tar.gz) = 3e2d20cee375f0346d1436427aa7dd85bc3cc2c7
+RMD160 (klatexformula-4.1.0.tar.gz) = 18eba24ff50ce45b55ce4c4c63ad4fd27e885796
+SHA512 (klatexformula-4.1.0.tar.gz) = a46c0042f66184a7e2fce6e6c124550e464b9f5090551667efb7fc5c5802161eb0719f44a672175879c6c7add86bb9e2078c431beb16ddb5a8b842ae9f901f5a
+Size (klatexformula-4.1.0.tar.gz) = 5167384 bytes
+SHA1 (patch-src_klftools_klfflowlistwidget__p.h) = faf6a98b948a0bd4a1be237525c272bc53007f4e
