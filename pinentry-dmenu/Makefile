@@ -17,6 +17,7 @@ PKG_BUGREPORT=	${TOOLS_PATH.make} -f ${WRKSRC}/config.mk -V BUGREPORT
 PKG_DEPS=	x11 xinerama freetype2 xft gpgme libconfig libassuan
 
 C_FLAGS=	`${TOOLS_PATH.pkg-config} --cflags ${PKG_DEPS}` \
+		-DHAVE_MLOCK -DHAVE_MMAP -DHAVE_GETPAGESIZE \
 		-D_NETBSD_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L \
 		-DVERSION=\"${PKG_VERSION:sh}\" \
 		-DPACKAGE_VERSION=\"${PKG_VERSION:sh}\" \
