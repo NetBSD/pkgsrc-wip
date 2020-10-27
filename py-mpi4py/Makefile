@@ -3,7 +3,7 @@
 DISTNAME=	mpi4py-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/ec/8f/bbd8de5ba566dd77e408d8136e2bab7fdf2b97ce06cab830ba8b50a2f588/
+MASTER_SITES=   ${MASTER_SITE_PYPI:=m/mpi4py}
 
 MAINTAINER=     jihbed.research@gmail.com
 HOMEPAGE=       https://bitbucket.org/mpi4py/mpi4py/
