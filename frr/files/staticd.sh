@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# ripd is part of the quagga routing beast
+# staticd is part of the frr routing beast
 #
-# PROVIDE: ripd
+# PROVIDE: staticd
 # REQUIRE: zebra
 ##
 
-PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/pkg/sbin:/usr/pkg/bin
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:@PREFIX@/sbin:@PREFIX@/bin
 export PATH
 
 if [ -f /etc/rc.subr ]
@@ -16,11 +16,11 @@ fi
 
 name="staticd"
 rcvar=$name
-required_files="/usr/pkg/etc/frr/${name}.conf"
-command="/usr/pkg/sbin/${name}"
+required_files="@PREFIX@/etc/frr/${name}.conf"
+command="@PREFIX@/sbin/${name}"
 command_args="-d"
 
-socket_dir=/var/run/frr
+socket_dir="@VARBASE@/run/frr"
 pidfile="${socket_dir}/${name}.pid"
 
 load_rc_config $name
