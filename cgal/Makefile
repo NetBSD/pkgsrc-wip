@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2017/08/24 20:03:00 adam Exp $
+# $NetBSD$
 
-VERSION=	4.14
-DISTNAME=	CGAL-${VERSION}
+DISTNAME=	CGAL-5.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CGAL/}
-GITHUB_RELEASE=	releases/CGAL-${VERSION}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 EXTRACT_SUFX=	.tar.xz
 
@@ -15,16 +14,21 @@ COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++03
-# CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}  # default, but not effective now
-# CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:STRING=${PKGMANDIR}
-# CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PKGMANDIR}		# neither one work
+USE_LANGUAGES=	c c++14
+CMAKE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
-REPLACE_BASH+=	scripts/cgal_create_CMakeLists
-REPLACE_BASH+=	scripts/cgal_create_cmake_script
+REPLACE_SH+=	scripts/cgal_create_CMakeLists
+REPLACE_SH+=	scripts/cgal_create_cmake_script
 
-pre-install:
-	find ${WRKSRC} -name \*.orig -exec rm {} \;
+# SUBST_CLASSES+=		wrkdir
+# SUBST_FILES.wrkdir+=	src/CGAL/CMakeFiles/Export/lib/cmake/CGAL/*.cmake
+# SUBST_FILES.wrkdir+=	config/CGALConfig.cmake
+# SUBST_MESSAGE.wrkdir=	Removing wrkdir from installed cmake files.
+# SUBST_SED.wrkdir=	-e "s|${WRKDIR}/.buildlink|${PREFIX}|g"
+# SUBST_STAGE.wrkdir=	pre-install
+
+# pre-install:
+#	 find ${WRKSRC} -name \*.orig -exec rm {} \;
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
