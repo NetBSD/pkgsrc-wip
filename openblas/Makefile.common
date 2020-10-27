@@ -10,8 +10,6 @@
 
 DISTNAME=	OpenBLAS-${OPENBLAS_VERSION}
 PKGNAME=	${OPENBLAS_VARIANT}-${OPENBLAS_VERSION}
-# ThOr: I do not like that. Can we rather rename the benchmark files
-# to be unique?
 DIST_SUBDIR=	openblas-${OPENBLAS_VERSION}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/} \
@@ -24,16 +22,16 @@ GITHUB_TAG=	v${OPENBLAS_VERSION}
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/openblas/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
-PLIST_SRC=	${.CURDIR}/../../wip/openblas/PLIST
-PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
 
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
 # Check this
 LICENSE=	modified-bsd
 
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
+.if ${OPENBLAS_VARIANT} != openblas
+# Multicore variants use Linux-specific cpu_set interface
+ONLY_FOR_PLATFORM=	Linux-*-*
+.endif
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
@@ -57,6 +55,11 @@ MAKE_FLAGS+=	FC=${FC:Q}
 BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
 
 .include "../../mk/bsd.prefs.mk"
+
+# Builds with patched gcc 4.8 on CentOS 7, but not base gcc 5 on NetBSD 8
+.if ${OPSYS} == "NetBSD"
+GCC_REQD+=	7
+.endif
 
 # Default checks number of cores of build host.
 # Do we want a pkgsrc-wide default?
@@ -124,12 +127,17 @@ SUBST_SED.pc+=		-e 's+-lopenblas+-l${OPENBLAS_VARIANT}+'
 SUBST_SED.pc+=		-e 's+openblas.pc"+${OPENBLAS_VARIANT}.pc"+'
 SUBST_FILES.pc+=	Makefile.install openblas.pc.in
 
+PLIST_SRC=	${.CURDIR}/../../wip/openblas/PLIST
+PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
+
 post-extract:
 	(cd ${DISTDIR}/${DIST_SUBDIR} && \
 		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC})
 
 # This builds some benchmark programs you can call
 # from ${WRKSRC} afterwards.
+# ThOr: I do not like that. Can we rather rename the benchmark files
+# to be unique?
 .PHONY: benchmark
 benchmark: build
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BENCHMARK_ENV} \
