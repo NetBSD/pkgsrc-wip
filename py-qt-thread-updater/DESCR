@@ -1,0 +1,8 @@
+Python Qt thread updater to update GUI items using
+a separate thread.
+
+This library allows you to efficiently update Qt GUI
+elements from a separate thread. Qt GUI elements are
+not thread safe. Method calls like Label.setText do
+not work in a separate thread. This library solves
+ that problem

@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/qt_thread_updater/__init__.py
+${PYSITELIB}/qt_thread_updater/__init__.pyc
+${PYSITELIB}/qt_thread_updater/__init__.pyo
+${PYSITELIB}/qt_thread_updater/__meta__.py
+${PYSITELIB}/qt_thread_updater/__meta__.pyc
+${PYSITELIB}/qt_thread_updater/__meta__.pyo
+${PYSITELIB}/qt_thread_updater/global_utils.py
+${PYSITELIB}/qt_thread_updater/global_utils.pyc
+${PYSITELIB}/qt_thread_updater/global_utils.pyo
+${PYSITELIB}/qt_thread_updater/thread_updater.py
+${PYSITELIB}/qt_thread_updater/thread_updater.pyc
+${PYSITELIB}/qt_thread_updater/thread_updater.pyo
+${PYSITELIB}/qt_thread_updater/widgets/__init__.py
+${PYSITELIB}/qt_thread_updater/widgets/__init__.pyc
+${PYSITELIB}/qt_thread_updater/widgets/__init__.pyo
+${PYSITELIB}/qt_thread_updater/widgets/quick_text_edit.py
+${PYSITELIB}/qt_thread_updater/widgets/quick_text_edit.pyc
+${PYSITELIB}/qt_thread_updater/widgets/quick_text_edit.pyo
