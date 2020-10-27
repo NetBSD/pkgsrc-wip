@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (pinentry-dmenu/0.2.2.zip) = 0eac07b2990f39dcba079e837efa52f26c278cf5
-RMD160 (pinentry-dmenu/0.2.2.zip) = fc47dd4363e2fb61ae3aae522b579dd629dccd09
-SHA512 (pinentry-dmenu/0.2.2.zip) = 8eb897542fcde9db6c8b2137a80d706801071957ba30f699b97e96a264227943908834859bf4a86fe831358b7f5ace3ce1dfca82bd7851f940d2face3567d24d
-Size (pinentry-dmenu/0.2.2.zip) = 67065 bytes
+SHA1 (pinentry-dmenu-0.2.2.tar.gz) = 137ccf47108ca99e18b99d31462ea86f2e15db2c
+RMD160 (pinentry-dmenu-0.2.2.tar.gz) = fdeac618699c2fae192aad8e934249d1169adfb4
+SHA512 (pinentry-dmenu-0.2.2.tar.gz) = 03b374764f1bb3aa03c497e5a5066c8f99994e7243d02fffd02a658786bcce6d1fe93067152ff6861070be90af86ac292ae322a901b4f18a40f5a482750fd915
+Size (pinentry-dmenu-0.2.2.tar.gz) = 54746 bytes
 SHA1 (patch-pinentry_pinentry.c) = f5817cc4e2bede300e93a1f1d42fb374d4a7c897
