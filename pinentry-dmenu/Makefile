@@ -9,15 +9,25 @@ HOMEPAGE=	https://github.com/ritze/pinentry-dmenu/
 COMMENT=	A pinentry program with the charm of dmenu
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=	${WRKDIR}/pinentry-dmenu-0.2.2
+USE_TOOLS+=	pkg-config
 
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+PKG_VERSION=	\"0.1\"
+PKG_BUGREPORT=	\"https:\/\/github.com\/ritze\/pinentry-dmenu\"
 
-USE_X11=yes
+C_FLAGS=	`pkg-config --cflags x11 xinerama freetype2` \
+		-D_NETBSD_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L \
+		-DVERSION=${PKG_VERSION} \
+		-DPACKAGE_VERSION=${PKG_VERSION} \
+		-DPACKAGE_BUGREPORT=${PKG_BUGREPORT}
+LD_FLAGS=	`pkg-config --libs x11 xinerama freetype2 xft`
 
-#.include "../../x11/libXft/buildlink3.mk"
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	CFLAGS=${C_FLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LD_FLAGS:Q}
+
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../x11/libX11/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
