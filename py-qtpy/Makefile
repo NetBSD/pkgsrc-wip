@@ -7,12 +7,11 @@ MASTER_SITES=	https://files.pythonhosted.org/packages/af/9f/f92125f9ba07830e5dd9
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/spyder-ide/qtpy
-COMMENT=	Provides an abstraction layer on top of the various Qt bindings (PyQt5, PyQt4 and PySide) and additional custom QWidgets
+COMMENT=	Qt bindings PyQt5, PyQt4 and PySide
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-#.include "../../x11/py-qt4/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
