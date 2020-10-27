@@ -20,14 +20,10 @@ USE_TOOLS+=	gmake pax
 BUILD_TARGET=	default
 TEST_TARGET=	test
 
-# Work around old TBB bug, we'll force using clang++, which appears to
-# have less agressive Dead-Store Elimination (DSE).
-# The makefiles already assume we're using clang, and hence fail to pass
-# "-flifetime-dse=1" to g++.
+# NOTE: TBB breaks with newer versions of gcc with aggressive DSE, and must
+# be built with "-flifetime-dse=1". This should happen automatically, but
+# has been found to be somewhat fragile.
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=71388
-PKGSRC_COMPILER=	clang
-PKG_CC=			clang
-PKG_CXX=		clang++
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,9 +40,9 @@ INSTALLATION_DIRS=	include/tbb lib
 #BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 post-extract:
-	${CP}	${WRKSRC}/build/FreeBSD.inc ${WRKSRC}/build/NetBSD.inc; \
-	${CP}	${WRKSRC}/build/FreeBSD.clang.inc ${WRKSRC}/build/NetBSD.clang.inc; \
-	${CP}	${WRKSRC}/build/FreeBSD.gcc.inc ${WRKSRC}/build/NetBSD.gcc.inc;
+	${CP}	${FILESDIR}/NetBSD.inc ${WRKSRC}/build/NetBSD.inc; \
+	${CP}	${FILESDIR}/NetBSD.clang.inc ${WRKSRC}/build/NetBSD.clang.inc; \
+	${CP}	${FILESDIR}/NetBSD.gcc.inc ${WRKSRC}/build/NetBSD.gcc.inc;
 
 do-install:
 	cd ${WRKSRC}; \
