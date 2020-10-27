@@ -11,15 +11,17 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
 
-PKG_VERSION=	\"0.1\"
-PKG_BUGREPORT=	\"https:\/\/github.com\/ritze\/pinentry-dmenu\"
+# Rewrite the config.mk rules.
+PKG_VERSION=	${TOOLS_PATH.make} -f ${WRKSRC}/config.mk -V VERSION
+PKG_BUGREPORT=	${TOOLS_PATH.make} -f ${WRKSRC}/config.mk -V BUGREPORT
+PKG_DEPS=	x11 xinerama freetype2 xft gpgme libconfig libassuan
 
-C_FLAGS=	`pkg-config --cflags x11 xinerama freetype2` \
+C_FLAGS=	`${TOOLS_PATH.pkg-config} --cflags ${PKG_DEPS}` \
 		-D_NETBSD_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L \
-		-DVERSION=${PKG_VERSION} \
-		-DPACKAGE_VERSION=${PKG_VERSION} \
-		-DPACKAGE_BUGREPORT=${PKG_BUGREPORT}
-LD_FLAGS=	`pkg-config --libs x11 xinerama freetype2 xft`
+		-DVERSION=\"${PKG_VERSION:sh}\" \
+		-DPACKAGE_VERSION=\"${PKG_VERSION:sh}\" \
+		-DPACKAGE_BUGREPORT=\"${PKG_BUGREPORT:sh}\"
+LD_FLAGS=	`${TOOLS_PATH.pkg-config} --libs ${PKG_DEPS}`
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
