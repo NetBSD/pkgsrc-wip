@@ -18,6 +18,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
+TOOL_DEPENDS+=	cmocka>=1.1.5:../../devel/cmocka
+
 PKGCONFIG_OVERRIDE+=	libyang.pc.in
 PKGCONFIG_OVERRIDE+=	swig/libyang-cpp.pc.in
 
@@ -33,6 +35,5 @@ CMAKE_ARGS?=	-DCMAKE_BUILD_TYPE:String="Release"
 CMAKE_ARGS+=	-DENABLE_LYD_PRIV=ON
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/cmocka/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
