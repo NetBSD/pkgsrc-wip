@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2020/09/11 13:27:43 leot Exp $
 
-DISTNAME=	xnotify-0.5.0
+DISTNAME=	xnotify-0.7.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/phillbush/xnotify
