@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	wsgi_intercept-0.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-wsgi-intercept-0.4
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wsgi_intercept/}
 EXTRACT_SUFX=	.tar.gz#md5=898dbfc636fef5904aa3ea8bb0722b4b
