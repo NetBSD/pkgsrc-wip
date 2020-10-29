@@ -1,0 +1,3 @@
+A programmable client library that takes advantage
+of the commonalities among lazr.restful web services
+to provide added functionality on top of wadllib
