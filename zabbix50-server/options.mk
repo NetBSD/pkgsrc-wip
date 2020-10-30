@@ -4,7 +4,7 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-server
 PKG_SUPPORTED_OPTIONS+=		inet6 ipmi libssh libssh2 snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	mysql pgsql
-PKG_SUGGESTED_OPTIONS+=		ipmi libssh2 pgsql snmp
+PKG_SUGGESTED_OPTIONS+=		libssh2 pgsql snmp
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=		inet6
