@@ -16,7 +16,13 @@ USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_ACCEPTED=	37
 PYTHON_FOR_BUILD_ONLY=		tool
 
-PYTHON_VERSIONED_DEPENDENCIES+= setuptools:tool
+REPLACE_PYTHON+=	scripts/meson_post_install.py
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing paths.
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix+=	scripts/meson_post_install.py
+SUBST_SED.prefix+=	-e 's,/usr/bin,${PREFIX},g'
 
 INSTALLATION_DIRS=	bin share
 
@@ -34,5 +40,4 @@ INSTALLATION_DIRS=	bin share
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
