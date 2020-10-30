@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/glide
+share/appdata/net.baseart.Glide.appdata.xml
+share/applications/net.baseart.Glide.desktop
+share/icons/hicolor/scalable/apps/net.baseart.Glide.svg
