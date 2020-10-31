@@ -1878,6 +1878,7 @@ SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtkstylus
 SUBDIR+=	libgtop
 SUBDIR+=	libguestfs-appliance
+SUBDIR+=	libgusb
 SUBDIR+=	libgweather
 SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
