@@ -560,6 +560,9 @@ share/zabbix/include/classes/html/CRedirectButton.php
 share/zabbix/include/classes/html/CRow.php
 share/zabbix/include/classes/html/CRowHeader.php
 share/zabbix/include/classes/html/CScriptTag.php
+share/zabbix/include/classes/html/CSelect.php
+share/zabbix/include/classes/html/CSelectOption.php
+share/zabbix/include/classes/html/CSelectOptionGroup.php
 share/zabbix/include/classes/html/CSeverity.php
 share/zabbix/include/classes/html/CSeverityCheckBoxList.php
 share/zabbix/include/classes/html/CSimpleButton.php
@@ -1013,6 +1016,7 @@ share/zabbix/js/class.sidebar.js
 share/zabbix/js/class.template.js
 share/zabbix/js/colorpicker.js
 share/zabbix/js/common.js
+share/zabbix/js/component.z-select.js
 share/zabbix/js/csvggraphwidget.js
 share/zabbix/js/dashboard.grid.js
 share/zabbix/js/flickerfreescreen.js
@@ -1029,6 +1033,7 @@ share/zabbix/js/multiselect.js
 share/zabbix/js/pages/items.js
 share/zabbix/js/pages/popup.condition.common.js
 share/zabbix/js/pages/popup.operation.common.js
+share/zabbix/js/pages/setup.js
 share/zabbix/js/servercheck.js
 share/zabbix/js/textareaflexible.js
 share/zabbix/js/vector/class.svg.canvas.js
