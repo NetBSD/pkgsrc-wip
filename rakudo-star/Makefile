@@ -15,8 +15,6 @@ LICENSE=	artistic-2.0
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
-# to find libmoar.so
-LDFLAGS+=	-L ${PREFIX}/lib ${COMPILER_RPATH_FLAG}=${PREFIX}/lib
 
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
@@ -26,8 +24,7 @@ PLIST_SRC+=	PLIST.shared
 USE_TOOLS+=	gmake
 .endif
 
-#AKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib:${PREFIX}/lib
-#KGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib:${PREFIX}/lib
+# to find libmoar.so
 PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
 
 PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
