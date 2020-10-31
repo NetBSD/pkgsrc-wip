@@ -1,5 +1,1 @@
-This is not completed.
-
-this needs gudev (and udev).
-
-please feel free to work on this.
+This crashes on startup with a SIGTRAP.

@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/05/15 03:39:55 jeremy-c-reed Exp $
 
-SHA1 (simple-scan-3.4.1.tar.gz) = 602be2a3e5ee1c806b1e3f9720f78af0987968b6
-RMD160 (simple-scan-3.4.1.tar.gz) = 18a5ecc62dea0835a631d79e79ecd220947ac980
-SHA512 (simple-scan-3.4.1.tar.gz) = bd649af501b133117bad7f0d756972c71908f14f42fb36e409b478890aee5cfb0ac1dd1c91d57f1518204d6166d74004c8881b8206e49726611ce868650b235c
-Size (simple-scan-3.4.1.tar.gz) = 460429 bytes
+SHA1 (simple-scan-3.38.1.tar.gz) = 8bce9a5ecbb6e7003f0c28cc1b8b1d0d8ede9ea3
+RMD160 (simple-scan-3.38.1.tar.gz) = 25a765e5560ba2a6708609e057d0b77abfdd85b6
+SHA512 (simple-scan-3.38.1.tar.gz) = 42a470f2606cb987e8998007e50312a448fa14b180b5df40a3bbdd60c213c8f9f9ee3bde0920906181448d64b420f4384bc8180dbc0994df5e7b2e86d9820618
+Size (simple-scan-3.38.1.tar.gz) = 1954204 bytes
