@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/10/10 01:57:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2020/08/31 18:09:52 wiz Exp $
 
-DISTNAME=	rakudo-star-2015.11
+DISTNAME=	rakudo-star-2020.10
 CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/star/
 
@@ -9,22 +9,40 @@ HOMEPAGE=	https://rakudo.org/
 COMMENT=	Perl 6 reference implementation
 LICENSE=	artistic-2.0
 
-MAKE_JOBS_SAFE=	no
+#AKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		perl gmake
-PLIST_SRC+=		${PLIST_SRC_DFLT}
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	perl
+# to find libmoar.so
+LDFLAGS+=	-L ${PREFIX}/lib ${COMPILER_RPATH_FLAG}=${PREFIX}/lib
+
+PLIST_SRC+=	${PLIST_SRC_DFLT}
+
 .if (${OPSYS} != "Darwin")
-PLIST_SRC+=		PLIST.shared
+PLIST_SRC+=	PLIST.shared
+.else
+USE_TOOLS+=	gmake
 .endif
 
-HAS_CONFIGURE=		yes
-CONFIG_SHELL=		${PERL5}
-CONFIGURE_SCRIPT=	Configure.pl
-CONFIGURE_ARGS=		--prefix=${PREFIX} --backends=moar
+#AKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib:${PREFIX}/lib
+#KGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib:${PREFIX}/lib
+PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
+
+PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
+PRINT_PLIST_AWK+=	{ gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
+
+do-configure:
+	(cd ${WRKSRC};  ./bin/rstar install)
+
+do-build:
+	(cd ${WRKSRC};  ${MAKE})
+
+do-install:
+	(cd ${WRKSRC};  ${GMAKE} install)
+
 
 .include "../../devel/MoarVM/buildlink3.mk"
-.include "../../wip/nqp/buildlink3.mk"
+.include "../../lang/nqp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

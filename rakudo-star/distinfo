@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/09/13 22:04:07 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:43 agc Exp $
 
-SHA1 (rakudo-star-2015.11.tar.gz) = e56055e11b7dc8a496de5473632390f879eaa9b0
-RMD160 (rakudo-star-2015.11.tar.gz) = 2aa09f8e60a918d9d8952e9169c78548c440a52a
-SHA512 (rakudo-star-2015.11.tar.gz) = bd6537f090dd258a6f843596a813452a5f62bdc96839f78243e93f32cfa9a70bfdc054ddb923aa8823c3fe3cf3e5698ead6d91cabbe0004979e6967d10d1c8bb
-Size (rakudo-star-2015.11.tar.gz) = 12346203 bytes
+SHA1 (rakudo-star-2020.10.tar.gz) = e9caa085894e32581dd2d9fb09ab9e253b758e33
+RMD160 (rakudo-star-2020.10.tar.gz) = 3e85ef6bd2e997126807e32ebc4e68120b360afe
+SHA512 (rakudo-star-2020.10.tar.gz) = f8c7ab9e67018db0422f30232180122f25c20f113dd54e85af67e080e9320bb1499930de65464aa299043204503838085322b26cb705246fd4ee8dd9f52c4f42
+Size (rakudo-star-2020.10.tar.gz) = 17377748 bytes

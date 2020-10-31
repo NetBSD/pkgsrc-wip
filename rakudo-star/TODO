@@ -1,0 +1,21 @@
+- Some part needs bmake and the other part needs gmake
+- ./bin/rstar only accepts install as an argument for 
+  our purpose, and 'install' seems to do
+   configure
+   build
+   install
+
+  (and install part needs gmake)
+
+
+current error messages are:
+
+Found /tmp/wip/rakudo-star/work/rakudo-star-2020.10/bin/moar version 2020.10, which is new enough.
+Cleaning up ...
+You can now use '/usr/pkg/bin/gmake' to build NQP.
+After that, '/usr/pkg/bin/gmake test' will run some tests and
+'/usr/pkg/bin/gmake install' will install NQP.
+make[2]: "/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.uwgf1qCj/Makefile" line 27: Need an operator
+make[2]: "/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.uwgf1qCj/Makefile" line 29: Need an operator
+....
+:
