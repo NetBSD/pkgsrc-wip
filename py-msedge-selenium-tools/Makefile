@@ -3,7 +3,7 @@
 DISTNAME=	msedge-selenium-tools-3.141.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://files.pythonhosted.org/packages/63/a1/c3ddd9b9ee7be2e7bf6cd49238244618f00d72c65f9d35d70f26c362926a/
+MASTER_SITES=   ${MASTER_SITE_PYPI:=m/msedge-selenium-tools/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/microsoft/edge-selenium-tools
