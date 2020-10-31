@@ -14,9 +14,10 @@ COMMENT=	WebRTC compatible video router or SFU
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
-USE_TOOLS=	unzip
-USE_JAVA=	yes
-USE_JAVA2=	9
+USE_TOOLS=	bash:run unzip
+USE_JAVA2=	8
+
+REPLACE_BASH=	jvb/resources/jvb.sh
 
 TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 
@@ -26,6 +27,11 @@ MAVEN_FLAGS+=	-Djavax.net.ssl.trustStorePassword=password
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share
+
+SUBST_CLASSES+=		java
+SUBST_STAGE.java=	post-configure
+SUBST_FILES.java=	jvb/resources/jvb.sh
+SUBST_SED.java=		-e 's,^exec java,exec ${JAVA_BINPREFIX}-java,'
 
 do-configure:
 	#XXX this assumes trusted CA certificates are in /etc/openssl/certs

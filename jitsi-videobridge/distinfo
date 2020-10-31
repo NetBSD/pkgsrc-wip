@@ -4,4 +4,3 @@ SHA1 (jitsi-videobridge/jitsi-meet_5142.tar.gz) = cded7d680d5a99d295336708070973
 RMD160 (jitsi-videobridge/jitsi-meet_5142.tar.gz) = a9fc7cc9da75097ef654c147179c3f1e374d60bc
 SHA512 (jitsi-videobridge/jitsi-meet_5142.tar.gz) = e8a992c7219d535c21c32f7f99a0c230c8bbe3acf9f1992dfc9bc56c534b17d77226b8dc0f28371f3f6c8b6cdf9dee465eef613859db93dd0580b136f1009e44
 Size (jitsi-videobridge/jitsi-meet_5142.tar.gz) = 282832 bytes
-SHA1 (patch-jvb_resources_jvb.sh) = 125c075bb639dcbfec9a5cf745d95799620cf26f
