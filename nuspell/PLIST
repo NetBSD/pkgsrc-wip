@@ -3,13 +3,14 @@ bin/nuspell
 include/nuspell/aff_data.hxx
 include/nuspell/dictionary.hxx
 include/nuspell/finder.hxx
+include/nuspell/nuspell_export.h
 include/nuspell/structures.hxx
 lib/cmake/nuspell/NuspellConfig.cmake
 lib/cmake/nuspell/NuspellConfigVersion.cmake
 lib/cmake/nuspell/NuspellTargets-release.cmake
 lib/cmake/nuspell/NuspellTargets.cmake
 lib/libnuspell.${RUBY_DLEXT}
-lib/libnuspell.so.3
+lib/libnuspell.so.4
 lib/libnuspell.so.${PKGVERSION}
 lib/pkgconfig/nuspell.pc
 man/man1/nuspell.1

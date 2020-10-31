@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nuspell-3.1.2
+DISTNAME=	nuspell-4.0.0
 CATEGORIES=	textproc wip
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nuspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
