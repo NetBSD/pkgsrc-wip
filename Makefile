@@ -1688,6 +1688,7 @@ SUBDIR+=	jgraphx
 SUBDIR+=	jicofo
 SUBDIR+=	jitsi
 SUBDIR+=	jitsi-meet
+SUBDIR+=	jitsi-videobridge
 SUBDIR+=	jlibtool
 SUBDIR+=	jmol
 SUBDIR+=	jmtpfs
