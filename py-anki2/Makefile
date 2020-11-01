@@ -4,6 +4,7 @@ DISTNAME=	anki-2.1.15-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/:C/-source//}
 CATEGORIES=	misc x11
 MASTER_SITES=	https://apps.ankiweb.net/downloads/current/
+MASTER_SITES+=	https://apps.ankiweb.net/downloads/archive/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
