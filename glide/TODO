@@ -1,0 +1,22 @@
+$ glide movie.mp4
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: BoolError { message: "Failed to create element from factory name", filename: "/usr/pkgsrc/wip/glide/work/vendor/gstreamer-0.16.3/src/auto/element_factory.rs", function: "gstreamer::auto::element_factory", line: 184 }', src/channel_player.rs:273:71
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+$ RUST_BACKTRACE=full glide movie.mp4
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: BoolError { message: "Failed to create element from factory name", filename: "/usr/pkgsrc/wip/glide/work/vendor/gstreamer-0.16.3/src/auto/element_factory.rs", function: "gstreamer::auto::element_factory", line: 184 }', src/channel_player.rs:273:71
+stack backtrace:
+   0:         0xad67b453 - <unknown>
+   1:         0xad695a8d - <unknown>
+   2:         0xad677f87 - <unknown>
+   3:         0xad674440 - <unknown>
+   4:         0xad67416a - <unknown>
+   5:         0xad674a64 - <unknown>
+   6:         0xad67464b - <unknown>
+   7:         0xad694d11 - <unknown>
+   8:         0xad694da3 - <unknown>
+   9:         0xad6268cb - <unknown>
+  10:         0xad6235c0 - <unknown>
+  11:         0xad616d73 - <unknown>
+  12:         0xad67ef50 - <unknown>
+  13:         0xad623f72 - <unknown>
+  14:         0xad61198d - <unknown>
+$

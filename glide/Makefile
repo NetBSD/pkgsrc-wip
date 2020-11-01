@@ -27,6 +27,7 @@ SUBST_SED.prefix+=	-e 's,/usr/bin,${PREFIX},g'
 INSTALLATION_DIRS=	bin share
 
 MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib"
+MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib"
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/rust/cargo.mk"
