@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add non-present .so to SUFFIXES.
+
+--- Makefile.orig	2020-11-01 17:49:05.189611428 +0000
++++ Makefile
+@@ -2,6 +2,8 @@
+ # See LICENSE file for copyright and license details.
+ .POSIX:
+ 
++.SUFFIXES: .so
++
+ include config.mk
+ 
+ SRC = surf.c
