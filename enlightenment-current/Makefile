@@ -3,7 +3,7 @@
 DISTNAME=	enlightenment-0.24.2
 PKGNAME=	${DISTNAME:S/enlightenment/enlightenment-current/}
 CATEGORIES=	wm
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
@@ -30,7 +30,6 @@ CONF_FILES+=	${EGDIR}/e-applications.menu \
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
 INSTALLATION_DIRS=	${EGDIR}
-PKG_SYSCONFSUBDIR=	enlightenment
 MAKE_DIRS=		${PKG_SYSCONFDIR}/enlightenment
 MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/menus
 
