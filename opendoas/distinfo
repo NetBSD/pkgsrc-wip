@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (OpenDoas-6.6.1.tar.gz) = 4509c04803c27e8c9940322e51dc4b9184360c4a
+RMD160 (OpenDoas-6.6.1.tar.gz) = b938edf57caf8cf90df3393f0c9c2cf0ee95e851
+SHA512 (OpenDoas-6.6.1.tar.gz) = 390e0e139a2641be22c4493c3ed755d9cb4091f4ab8d590123b7c8c4f2f116cea3b3500926ff191fb98d92192ca9e92118cbcbeb463a7833763e00c65603e678
+Size (OpenDoas-6.6.1.tar.gz) = 30783 bytes
+SHA1 (patch-bsd.prog.mk) = 78db9daba2593e6481c1da29ad96bee4d87785b9
+SHA1 (patch-configure) = e144a8009b96a00da0320cffc477f36c32c1cfc1
+SHA1 (patch-doas.c) = 7c9ac462d1a370286d1299d5eaf666a34fef7ec4
+SHA1 (patch-pam.c) = 35df55b83d0071aba476d61dd80ec3e7081f5d4a

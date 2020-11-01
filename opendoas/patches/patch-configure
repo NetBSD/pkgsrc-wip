@@ -1,0 +1,16 @@
+$NetBSD$
+
+setresuid isn't supported on NetBSD.
+
+--- configure.orig	2020-11-01 11:52:06.488906380 +0000
++++ configure
+@@ -340,7 +340,9 @@ int main(void) {
+ 	setresuid(0, 0, 0);
+ 	return 0;
+ }'
++if [ "$(uname)" != "NetBSD" ]; then
+ check_func "setresuid" "$src" || die "system has no setresuid(2): not supported"
++fi
+ 
+ #
+ # Check for closefrom().
