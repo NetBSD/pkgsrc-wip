@@ -1,12 +1,4 @@
-- currently fails with:
-
-  g++ '-DNODE_GYP_MODULE_NAME=binding' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-DV8_DEPRECATION_WARNINGS' '-DV8_IMMINENT_DEPRECATION_WARNINGS' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/home/khorben/.node-gyp/13.11.0/include/node -I/home/khorben/.node-gyp/13.11.0/src -I/home/khorben/.node-gyp/13.11.0/deps/openssl/config -I/home/khorben/.node-gyp/13.11.0/deps/openssl/openssl/include -I/home/khorben/.node-gyp/13.11.0/deps/uv/include -I/home/khorben/.node-gyp/13.11.0/deps/zlib -I/home/khorben/.node-gyp/13.11.0/deps/v8/include -I../../nan -I../src/libsass/include  -fPIC -O3 -fno-omit-frame-pointer -std=c++0x -MMD -MF ./Release/.deps/Release/obj.target/binding/src/binding.o.d.raw   -c -o Release/obj.target/binding/src/binding.o ../src/binding.cpp
-In file included from ../src/binding.cpp:1:0:
-../../nan/nan.h:24:10: fatal error: node_version.h: No such file or directory
- #include <node_version.h>
-          ^~~~~~~~~~~~~~~~
-compilation terminated.
-gmake[2]: *** [binding.target.mk:109: Release/obj.target/binding/src/binding.o] Error 1
-gmake[2]: Leaving directory '/home/khorben/Projects/EdgeBSD/pkgsrc/work/wip/jitsi-meet/work/jitsi-meet-3858/node_modules/node-sass/build'
-
-- package a more recent version
+- Place configuration files in $SYSCONFDIR/jitsi-meet (config.js,
+  interface_config.js, branding.json...)
+- Provide installation instructions
+- No longer pull data from the network (see www/gitea)
