@@ -15,6 +15,13 @@ pkgbase := efl
 .include "../../devel/libuv/buildlink3.mk"
 .endif
 
+.if ${X11_TYPE} == "modular"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.endif
+
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"

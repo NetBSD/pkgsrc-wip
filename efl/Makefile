@@ -2,7 +2,7 @@
 
 DISTNAME=	efl-1.25.1
 CATEGORIES=	x11
-#PKGREVISION=	1
+PKGREVISION=	1
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -70,6 +70,13 @@ MESON_ARGS+=	-Dopengl=base
 
 .include "options.mk"
 
+.if ${X11_TYPE} == "modular"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.endif
+
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
@@ -79,6 +86,7 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+#.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
@@ -89,7 +97,10 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
+#.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
+#.include "../../x11/libXinerama/buildlink3.mk"
+#.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
