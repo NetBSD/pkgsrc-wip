@@ -2,3 +2,6 @@ This package requires 'gst-plugins1-good' to be build-depending
 on the gtk3, which we currently don't do.
 
 Hence, 'gtkglsink' isn't available.
+
+
+- doesn't actually play video
