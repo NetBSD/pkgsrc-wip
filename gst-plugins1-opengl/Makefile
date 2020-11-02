@@ -4,6 +4,8 @@ GST_PLUGINS1_NAME=	opengl
 GST_PLUGINS1_FLAGS=	egl
 GST_PLUGINS1_DIRS=	ext/gl
 
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib
+
 .include "../../multimedia/gst-plugins1-base/Makefile.common"
 
 .include "../../wip/gst-plugins1-gl/buildlink3.mk"
