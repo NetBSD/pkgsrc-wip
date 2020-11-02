@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	OpenIPMI-2.0.29
-CATEGORIES=	devel
+CATEGORIES=	sysutils
 MASTER_SITES=	https://newcontinuum.dl.sourceforge.net/project/openipmi/OpenIPMI%202.0%20Library/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
