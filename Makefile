@@ -3640,7 +3640,6 @@ SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-librabbitmq
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
-SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-libvirt
 SUBDIR+=	py-lifelines
 SUBDIR+=	py-linearalgebra
