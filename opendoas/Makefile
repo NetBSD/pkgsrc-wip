@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	OpenDoas-6.6.1
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +12,8 @@ COMMENT=	Execute commands as another user
 LICENSE=	isc
 
 CONFLICTS=	doas-[0-9]*
+
+WRKSRC=		${WRKDIR}/OpenDoas-${PKGVERSION_NOREV}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
