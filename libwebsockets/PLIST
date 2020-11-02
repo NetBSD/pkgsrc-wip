@@ -1,9 +1,0 @@
-@comment $NetBSD$
-include/libwebsockets.h
-include/lws_config.h
-lib/cmake/libwebsockets/LibwebsocketsConfig.cmake
-lib/cmake/libwebsockets/LibwebsocketsConfigVersion.cmake
-lib/libwebsockets.a
-lib/libwebsockets.so
-lib/libwebsockets.so.7
-lib/pkgconfig/libwebsockets.pc

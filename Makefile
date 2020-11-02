@@ -1991,7 +1991,6 @@ SUBDIR+=	libvirt
 SUBDIR+=	libvirt-glib
 SUBDIR+=	libvterm
 SUBDIR+=	libwbxml2-patched
-SUBDIR+=	libwebsockets
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
 SUBDIR+=	libxml++3

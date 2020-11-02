@@ -1,8 +1,0 @@
-$NetBSD$
-
-SHA1 (libwebsockets-1.7.2.tar.gz) = aa5df5138ffd1568cd07c22c5e7c84e8458c71d3
-RMD160 (libwebsockets-1.7.2.tar.gz) = 16e89ed29c78c3be14adf99b410592717cb82a3d
-SHA512 (libwebsockets-1.7.2.tar.gz) = 4293b06d5586e1742c247697402a92359a3851caad3bb945644c3ab35399e11a1772249ac7ceaa7da9c5d00e5c2d1b723021300a3057aeeb7747dfe05b3e8630
-Size (libwebsockets-1.7.2.tar.gz) = 2908161 bytes
-SHA1 (patch-lib_libwebsockets.h) = cdde2a026a7ff891753c66d61eba97bc9e699a25
-SHA1 (patch-test-server_fuzxy.c) = 04a280a19f6246624b3c7647b4ed598f282ff932
