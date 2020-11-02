@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (SVT-VP9/v0.3.0.tar.gz) = cb3b9f53dd34231dca9d2583628525a763a7ba84
+RMD160 (SVT-VP9/v0.3.0.tar.gz) = 62f5b0429e86d2c023f1c56186cf2df9ccd4d6f7
+SHA512 (SVT-VP9/v0.3.0.tar.gz) = 2b65d4cc731061c2a07010314f7c306664fd9cf122917f96b94ec87350c8bab1a1118527263eb39347a6f6f572088337e1c5f7ae738b52de30a28ccb54c321c1
+Size (SVT-VP9/v0.3.0.tar.gz) = 1009838 bytes
+SHA1 (patch-Source_Lib_Codec_EbEncHandle.c) = 15560480ea5a63db6cbb1e695e9e5676e7acf904
+SHA1 (patch-Source_Lib_Codec_EbThreads.c) = 277915e2589faa825c40904dc0af0255b52b0ff5
+SHA1 (patch-Source_Lib_Codec_EbUtility.c) = a2edd52ebb3675a653ae7dc5681dd9506ffa3821
