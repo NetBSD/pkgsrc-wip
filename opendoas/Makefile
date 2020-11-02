@@ -4,7 +4,7 @@ DISTNAME=	OpenDoas-6.6.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	84ccfe0b9ac591199d0464ede10a4130c8a3482d
 
 MAINTAINER=	sunil@nimmagadda.net
 HOMEPAGE=	https://github.com/duncaen/opendoas
@@ -13,7 +13,7 @@ LICENSE=	isc
 
 CONFLICTS=	doas-[0-9]*
 
-WRKSRC=		${WRKDIR}/OpenDoas-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/OpenDoas-${GITHUB_TAG}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
@@ -30,7 +30,6 @@ USE_TOOLS=	gmake yacc
 BUILD_TARGET=	default
 
 CFLAGS+=	-D_OPENBSD_SOURCE=1
-CFLAGS+=	-DDOAS_CONF="\"${PKG_SYSCONFDIR}/doas.conf\""
 
 SPECIAL_PERMS+=	bin/doas ${SETUID_ROOT_PERMS}
 
