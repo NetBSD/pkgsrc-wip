@@ -45,7 +45,7 @@ pre-build:
 .include "../../wip/gnome-desktop3/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../wip/gnome-settings-daemon/buildlink3.mk"
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../wip/graphene/buildlink3.mk"

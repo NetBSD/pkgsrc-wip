@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.gnome-desktop3+=	gnome-desktop3>=3.36
 BUILDLINK_PKGSRCDIR.gnome-desktop3?=	../../wip/gnome-desktop3
 
 BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.27.0
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"

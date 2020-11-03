@@ -69,7 +69,7 @@ BUILDLINK_DEPMETHOD.libxslt?=  build
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../wip/gnome-desktop3/buildlink3.mk"
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
