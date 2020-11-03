@@ -21,6 +21,15 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	doas.1 doas.conf.5
 SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 
+# Let SPECIAL_PERMS handle permissions/setuid of the binary while
+# allowing to build as an unprivileged user.
+SUBST_CLASSES+=		install
+SUBST_MESSAGE.install=	Let SPECIAL_PERMS handle permissions.
+SUBST_STAGE.install=	pre-install
+SUBST_FILES.install=	bsd.prog.mk
+SUBST_SED.install=	-e "/chown/d"
+SUBST_SED.install+=	-e "/chmod/d"
+
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
