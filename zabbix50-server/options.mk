@@ -48,5 +48,5 @@ PLIST.pgsql=		yes
 
 .if !empty(PKG_OPTIONS:Mipmi)
 CONFIGURE_ARGS+=	--with-openipmi=${PREFIX}
-.include "../../devel/OpenIPMI/buildlink3.mk"
+.include "../../sysutils/openipmi/buildlink3.mk"
 .endif
