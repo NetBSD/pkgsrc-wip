@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/ipmilan
-bin/openipmi_eventd
-man/man8/ipmilan.8
-@pkgdir man/man8
