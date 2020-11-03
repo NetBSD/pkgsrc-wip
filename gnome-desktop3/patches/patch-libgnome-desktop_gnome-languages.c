@@ -2,7 +2,7 @@ $NetBSD$
 
 Replace usage of uselocale() - not available on NetBSD
 
---- libgnome-desktop/gnome-languages.c.orig	2020-04-29 01:53:29.072934200 +0000
+--- libgnome-desktop/gnome-languages.c.orig	2020-10-05 19:11:19.070822700 +0000
 +++ libgnome-desktop/gnome-languages.c
 @@ -303,16 +303,13 @@ language_name_get_codeset_details (const
                                     gboolean    *is_utf8)
@@ -63,7 +63,7 @@ Replace usage of uselocale() - not available on NetBSD
          if (territory != NULL) {
                  const char *translated_territory;
 -                locale_t loc;
--                locale_t old_locale;
+-                locale_t old_locale = 0;
 +                g_autofree char *old_locale = NULL;
                  g_autofree char *tmp = NULL;
  
@@ -72,8 +72,8 @@ Replace usage of uselocale() - not available on NetBSD
 -                        if (loc == (locale_t) 0)
 -                                return NULL;
 -                        old_locale = uselocale (loc);
-+                        old_locale = g_strdup (setlocale (LC_MESSAGES, NULL));
-+			setlocale (LC_MESSAGES, locale);
++                        old_locale = g_strdup (setlocale(LC_MESSAGES, NULL));
++                        setlocale(LC_MESSAGES, locale);
                  }
  
                  translated_territory = dgettext ("iso_3166", territory);
@@ -87,7 +87,7 @@ Replace usage of uselocale() - not available on NetBSD
                  }
          }
  
-@@ -1355,17 +1343,13 @@ gnome_get_translated_modifier (const cha
+@@ -1358,17 +1346,13 @@ gnome_get_translated_modifier (const cha
  {
          char *retval;
          GHashTable *modifiers_map;
@@ -108,7 +108,7 @@ Replace usage of uselocale() - not available on NetBSD
          }
  
          /* Modifiers as listed in glibc's SUPPORTED file:
-@@ -1405,8 +1389,7 @@ gnome_get_translated_modifier (const cha
+@@ -1408,8 +1392,7 @@ gnome_get_translated_modifier (const cha
          g_hash_table_destroy (modifiers_map);
  
          if (translation != NULL) {
