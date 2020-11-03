@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.12 2020/03/08 16:51:17 wiz Exp $
 
-DISTNAME=	gsettings-desktop-schemas-3.36.1
-PKGREVISION=	1
+DISTNAME=	gsettings-desktop-schemas-3.38.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gsettings-desktop-schemas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
 
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
-REPLACE_PYTHON=   	build-aux/meson/*.py
+REPLACE_PYTHON=		build-aux/meson/*.py
 
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/schemas.mk"
