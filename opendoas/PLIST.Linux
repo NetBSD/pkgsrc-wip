@@ -1,0 +1,2 @@
+@comment $NetBSD$
+etc/pam.d/doas
