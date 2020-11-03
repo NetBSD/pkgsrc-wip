@@ -13,6 +13,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	gmake pod2man
 
+AUTO_MKDIRS=	yes
+
 # generate the man page as in the lemonbar Makefile's `doc' target
 # because `all' does not call it
 post-build:
@@ -22,10 +24,8 @@ post-build:
 		${WRKSRC}/README.pod > ${WRKSRC}/lemonbar.1
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/lemonbar ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/lemonbar.1 ${DESTDIR}${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/lemonbar.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
