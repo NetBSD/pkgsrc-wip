@@ -29,7 +29,8 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 USE_TOOLS=	gmake yacc
 BUILD_TARGET=	default
 
-CFLAGS+=	-D_OPENBSD_SOURCE=1
+# Prefer NetBSD's libc version of reallocarray(3)
+CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE=1
 
 SPECIAL_PERMS+=	bin/doas ${SETUID_ROOT_PERMS}
 
