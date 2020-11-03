@@ -1,0 +1,4 @@
+Invoke offers a multifaceted configuration mechanism
+allowing you to configure both core behavior and that
+of your tasks, via a hierarchy of configuration files,
+environment variables, task namespaces and CLI flags
