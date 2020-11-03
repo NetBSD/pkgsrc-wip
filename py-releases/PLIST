@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/releases/__init__.py
+${PYSITELIB}/releases/__init__.pyc
+${PYSITELIB}/releases/__init__.pyo
+${PYSITELIB}/releases/_version.py
+${PYSITELIB}/releases/_version.pyc
+${PYSITELIB}/releases/_version.pyo
+${PYSITELIB}/releases/line_manager.py
+${PYSITELIB}/releases/line_manager.pyc
+${PYSITELIB}/releases/line_manager.pyo
+${PYSITELIB}/releases/models.py
+${PYSITELIB}/releases/models.pyc
+${PYSITELIB}/releases/models.pyo
+${PYSITELIB}/releases/util.py
+${PYSITELIB}/releases/util.pyc
+${PYSITELIB}/releases/util.pyo
