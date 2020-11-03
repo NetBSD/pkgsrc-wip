@@ -4,7 +4,6 @@ SHA1 (OpenDoas-6.6.1-84ccfe0b9ac591199d0464ede10a4130c8a3482d.tar.gz) = ca667704
 RMD160 (OpenDoas-6.6.1-84ccfe0b9ac591199d0464ede10a4130c8a3482d.tar.gz) = e428e96df32d3d680dc755b80047e64098902476
 SHA512 (OpenDoas-6.6.1-84ccfe0b9ac591199d0464ede10a4130c8a3482d.tar.gz) = 34c3755bebf43c4142e35683e59b2fa12cf4fdc028f3350ed22b1dc95a86e293fa8a1c22a69d956949b4a4c38f080017cacc19bdb0abdf646809e57a057fb3ff
 Size (OpenDoas-6.6.1-84ccfe0b9ac591199d0464ede10a4130c8a3482d.tar.gz) = 30797 bytes
-SHA1 (patch-bsd.prog.mk) = 4faa75c003ffb331a0f4d30661f05634e9f119cc
 SHA1 (patch-configure) = e144a8009b96a00da0320cffc477f36c32c1cfc1
 SHA1 (patch-doas.c) = de7bc8c1312cb186f44fe3f071a34e87dea0f478
 SHA1 (patch-pam.c) = 8bdee3b3dbc48d53a5f7c54ff3e22a1954c1bd2a
