@@ -17,8 +17,9 @@ USE_LANGUAGES=		c
 
 PKGCONFIG_OVERRIDE+=	gsettings-desktop-schemas.pc.in
 REPLACE_PYTHON=		build-aux/meson/*.py
+PYTHON_FOR_BUILD_ONLY=	yes
 
-.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection:=	build
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.31
