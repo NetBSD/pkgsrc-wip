@@ -22,15 +22,14 @@ BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../wip/yelp-tools
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh
 
+.include "options.mk"
+
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
-#.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-#.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
