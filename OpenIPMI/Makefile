@@ -13,9 +13,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake perl pkg-config
 
-LDFLAGS.NetBSD+=		-lexecinfo
-BUILDLINK_TRANSFORM.NetBSD=	rm:-ldl
-
 PKGCONFIG_OVERRIDE+=	OpenIPMI.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIcmdlang.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIglib.pc.in
@@ -32,6 +29,12 @@ EGFILES=		lan.conf ipmisim1.emu
 INSTALLATION_DIRS=	share/examples/OpenIPMI
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+LDFLAGS+=		-lexecinfo
+BUILDLINK_TRANSFORM+=	rm:-ldl
+.endif
+
 post-install:
 .for file in ${EGFILES}
 	${MV} ${DESTDIR}${PREFIX}/etc/ipmi/${file} ${DESTDIR}${EGDIR}/${file}

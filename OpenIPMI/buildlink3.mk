@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	OpenIPMI
 OPENIPMI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.OpenIPMI+=	OpenIPMI>=2.0.24
-BUILDLINK_PKGSRCDIR.OpenIPMI?=		../../devel/OpenIPMI
+BUILDLINK_PKGSRCDIR.OpenIPMI?=		../../sysutils/OpenIPMI
 
 .include "../../devel/popt/buildlink3.mk"
 .endif # OPENIPMI_BUILDLINK3_MK
