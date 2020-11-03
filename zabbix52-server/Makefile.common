@@ -1,0 +1,28 @@
+# $NetBSD$
+# used by sysutils/zabbix52-agent/Makefile
+# used by sysutils/zabbix52-proxy/Makefile
+# used by sysutils/zabbix52-server/Makefile
+# used by sysutils/zabbix52-frontend/Makefile
+# used by sysutils/zabbix52-java/Makefile
+
+DISTNAME=	zabbix-5.2.0
+CATEGORIES=	sysutils
+MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/5.2/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.zabbix.com/
+LICENSE=	gnu-gpl-v2
+
+# Zabbix user, common to all components
+ZABBIX_GROUP?=			zabbix
+ZABBIX_USER?=			zabbix
+ZABBIX_HOMEDIR?=		/var/zabbix
+PKG_GROUPS+=			${ZABBIX_GROUP}
+PKG_USERS+=			${ZABBIX_USER}:${ZABBIX_GROUP}
+PKG_GECOS.${ZABBIX_USER}=	Zabbix user
+PKG_HOME.${ZABBIX_USER}=	${ZABBIX_HOMEDIR}
+
+FILES_SUBST+=			ZABBIX_USER=${ZABBIX_USER}
+FILES_SUBST+=			ZABBIX_GROUP=${ZABBIX_GROUP}
+
+OWN_DIRS_PERMS+=		${ZABBIX_HOMEDIR} ${ZABBIX_USER} ${ZABBIX_GROUP} 0755

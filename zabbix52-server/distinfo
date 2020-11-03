@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (zabbix-5.2.0.tar.gz) = d3a4f4d07c50cc4464e574cf0e31716efd90b562
+RMD160 (zabbix-5.2.0.tar.gz) = f275572961e1a41543d665131d237e1b42c464ca
+SHA512 (zabbix-5.2.0.tar.gz) = e7853c685864c1c38adf5f4e3982d1ca1b9951065f339d457427bc6f1f68d25af92d702b7ce4eab7d83d17ad9cdcc28c45c9463d21725e07593af1ac8ffa4a51
+Size (zabbix-5.2.0.tar.gz) = 19509362 bytes
+SHA1 (patch-m4_ax__lib__mysql.m4) = 9786c6bff3d22334263921c201bf241a207a46bc
+SHA1 (patch-m4_libssh.m4) = 8b4ac3964caf94bb0e4939d265dcefc08a07a0df
+SHA1 (patch-src_libs_zbxsysinfo_netbsd_net.c) = 468f2112a3d65b0a73f371194ae15ce0df0ad71c
+SHA1 (patch-src_zabbix__server_Makefile.am) = d139b4fedf8f443fbe9966256e98374d5e5cdb67
