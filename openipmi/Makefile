@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	OpenIPMI-2.0.29
+DISTNAME=	openipmi-2.0.29
 CATEGORIES=	sysutils
 MASTER_SITES=	https://newcontinuum.dl.sourceforge.net/project/openipmi/OpenIPMI%202.0%20Library/
 
@@ -23,10 +23,10 @@ PKGCONFIG_OVERRIDE+=	OpenIPMItcl.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIui.pc.in
 PKGCONFIG_OVERRIDE+=	OpenIPMIutils.pc.in
 
-EGDIR=			${PREFIX}/share/examples/OpenIPMI
+EGDIR=			${PREFIX}/share/examples/openipmi
 EGFILES=		lan.conf ipmisim1.emu
 
-INSTALLATION_DIRS=	share/examples/OpenIPMI
+INSTALLATION_DIRS=	share/examples/openipmi
 
 .include "../../mk/bsd.prefs.mk"
 

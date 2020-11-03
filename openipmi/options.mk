@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.OpenIPMI
+PKG_OPTIONS_VAR=		PKG_OPTIONS.openipmi
 PKG_SUPPORTED_OPTIONS=		perl python snmp swig
 PKG_SUGGESTED_OPTIONS=		perl python snmp swig
 
