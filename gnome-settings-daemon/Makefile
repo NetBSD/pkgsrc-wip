@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.54 2015/04/25 14:24:52 tnn Exp $
 
-DISTNAME=	gnome-settings-daemon-3.36.1
-PKGREVISION=	2
+DISTNAME=	gnome-settings-daemon-3.38.1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/3.36/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/3.38/}
 EXTRACT_SUFX=	.tar.xz
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
@@ -29,14 +28,6 @@ MESON_ARGS+=		-Dsmartcard=false
 MESON_ARGS+=		-Dwwan=false
 MESON_ARGS+=		-Dalsa=false
 
-GCONF_SCHEMAS+=		gnome-settings-daemon.schemas
-GCONF_SCHEMAS+=		desktop_gnome_font_rendering.schemas
-GCONF_SCHEMAS+=		desktop_gnome_keybindings.schemas
-GCONF_SCHEMAS+=		apps_gnome_settings_daemon_keybindings.schemas
-GCONF_SCHEMAS+=		apps_gnome_settings_daemon_xrandr.schemas
-GCONF_SCHEMAS+=		apps_gnome_settings_daemon_housekeeping.schemas
-GCONF_SCHEMAS+=		desktop_gnome_peripherals_touchpad.schemas
-GCONF_SCHEMAS+=		desktop_gnome_peripherals_smartcard.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
 LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
@@ -45,7 +36,7 @@ LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
 .include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/dconf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../sysutils/dbus-glib/buildlink3.mk"

@@ -1,8 +1,7 @@
 $NetBSD: distinfo,v 1.14 2015/11/04 01:32:15 agc Exp $
 
-SHA1 (gnome-settings-daemon-3.36.1.tar.xz) = 59668ceac43f847f38aad4bac1b55fdf066dea18
-RMD160 (gnome-settings-daemon-3.36.1.tar.xz) = 79f00768a1c410bb643a2d5b97fe2cd5fca05bf6
-SHA512 (gnome-settings-daemon-3.36.1.tar.xz) = f2f43d9b772589b6b4212ee2b0afe8be79d50a2e0473a960c7a7b9d379222bbe84ca548114d0a247810a094b4b3bf41e40ca91173c6cf552517dc63eb3750c88
-Size (gnome-settings-daemon-3.36.1.tar.xz) = 1415080 bytes
-SHA1 (patch-meson.build) = 771bfd9a94c691a4277f6a543b64c2fabf2a63aa
-SHA1 (patch-plugins_meson.build) = 54cc3f9d12ab6fa72e5a1e87b998e5c71db4aae3
+SHA1 (gnome-settings-daemon-3.38.1.tar.xz) = ca9f25f0609192fab5dff73d93fea3256e1ca9d0
+RMD160 (gnome-settings-daemon-3.38.1.tar.xz) = f6135eb43315eeae8c129cc4d5df233817b93d94
+SHA512 (gnome-settings-daemon-3.38.1.tar.xz) = b32c0897d1a5680747bf68e9009ea44cf1a05ef807b772ca6514a278002754d520def7bced929b9004d3aec82a6e82b52637bd2eadd3f6cd54f3d0ac5c8e8cbd
+Size (gnome-settings-daemon-3.38.1.tar.xz) = 1437096 bytes
+SHA1 (patch-plugins_meson.build) = da39a3ee5e6b4b0d3255bfef95601890afd80709
