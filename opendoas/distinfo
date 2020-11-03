@@ -6,4 +6,4 @@ SHA512 (OpenDoas-6.6.1-84ccfe0b9ac591199d0464ede10a4130c8a3482d.tar.gz) = 34c375
 Size (OpenDoas-6.6.1-84ccfe0b9ac591199d0464ede10a4130c8a3482d.tar.gz) = 30797 bytes
 SHA1 (patch-configure) = e144a8009b96a00da0320cffc477f36c32c1cfc1
 SHA1 (patch-doas.c) = de7bc8c1312cb186f44fe3f071a34e87dea0f478
-SHA1 (patch-pam.c) = 35df55b83d0071aba476d61dd80ec3e7081f5d4a
+SHA1 (patch-pam.c) = 8bdee3b3dbc48d53a5f7c54ff3e22a1954c1bd2a

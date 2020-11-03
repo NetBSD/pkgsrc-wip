@@ -1,14 +1,14 @@
 $NetBSD$
 
-HOST_NAME_MAX isn't defined on NetBSD.
+Use _POSIX_HOST_NAME_MAX if HOST_NAME_MAX is unavailable.
 
---- pam.c.orig	2020-02-03 21:41:31.000000000 +0000
+--- pam.c.orig	2020-11-02 13:01:52.000000000 +0000
 +++ pam.c
 @@ -271,6 +271,9 @@ pamauth(const char *user, const char *my
  		if (!interactive)
  			errx(1, "Authorization required");
  
-+#ifdef __netbsd__
++#ifndef HOST_NAME_MAX
 +#define HOST_NAME_MAX _POSIX_HOST_NAME_MAX
 +#endif
  		/* doas style prompt for pam */
