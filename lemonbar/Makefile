@@ -11,14 +11,12 @@ HOMEPAGE=	https://github.com/LemonBoy/bar
 COMMENT=	Featherweight lemon-scented bar
 LICENSE=	mit
 
-# perl is a build dependency because pod2man is needed
-# to generate lemonbar's man page
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake pod2man
 
 # generate the man page as in the lemonbar Makefile's `doc' target
-# because, for some reason, `all' does not call it
+# because `all' does not call it
 post-build:
-	${LOCALBASE}/bin/pod2man --section=1 --name=lemonbar \
+	${TOOLS_PATH.pod2man} --section=1 --name=lemonbar \
 		--center="lemonbar manual" \
 		--release="${PKGVERSION_NOREV}" \
 		${WRKSRC}/README.pod > ${WRKSRC}/lemonbar.1
