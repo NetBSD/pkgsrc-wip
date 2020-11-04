@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gnome-autoar?=	../../wip/gnome-autoar
 #.include "../../devel/gobject-introspection/buildlink3.mk"
 #.include "../../lang/vala/buildlink3.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
-#.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .endif	# GNOME_AUTOAR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnome-autoar
