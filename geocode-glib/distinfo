@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.21 2015/11/04 03:28:30 agc Exp $
-
-SHA1 (geocode-glib-3.18.0.tar.xz) = 2eb395a362c1bf5c95d95fa63a78558fc0c4979f
-RMD160 (geocode-glib-3.18.0.tar.xz) = e914c7fd179f4f34e7b1b6a1efea682d1567b202
-SHA512 (geocode-glib-3.18.0.tar.xz) = fed8eacc3a347f998466faba0f45e99182c1fe1201caff963846db74daa1106360419e46a5b196207de97ffbc7397d751a6109d1d28b32211ddc7ccfe268b2ea
-Size (geocode-glib-3.18.0.tar.xz) = 357560 bytes
