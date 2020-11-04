@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
 
-SHA1 (tracker-1.8.0.tar.xz) = bbd093cc36e8086e70cf005a1e2b2a0f1995abde
-RMD160 (tracker-1.8.0.tar.xz) = 26d6c239b5240fafe8c44a708e44738ec6d98819
-SHA512 (tracker-1.8.0.tar.xz) = c7d0600cfcf5485188167d237e22a00a5777b97b96c8735ba3efcef67288a8d9db9476f05289cf1498c50432981a4bc932973241138ea116a18e421576ed3cdd
-Size (tracker-1.8.0.tar.xz) = 4961488 bytes
+SHA1 (tracker-3.0.1.tar.xz) = 80f167337f899058130b1eed845eb6c55639f358
+RMD160 (tracker-3.0.1.tar.xz) = f83460612da853a63d6d71f82bf8cf8daee3bc3f
+SHA512 (tracker-3.0.1.tar.xz) = d1c82c7189dc29d65a0b349d1918e309b3e0606e7a046e523bd7511bb51fea3e1561416f8c140635263a7ca90d99aa9ec24a5841ffebb2ab2d400287ff04c7d5
+Size (tracker-3.0.1.tar.xz) = 1418944 bytes
