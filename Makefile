@@ -818,7 +818,6 @@ SUBDIR+=	fftw-openmpi
 SUBDIR+=	fftw2-openmpi
 SUBDIR+=	ffxvid
 SUBDIR+=	fiche
-SUBDIR+=	file-roller
 SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
