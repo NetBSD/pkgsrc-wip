@@ -1,0 +1,5 @@
+Python implementations of the Porter, Porter2, Paice-Husk, and Lovins stemming
+algorithms for English. These implementations are straightforward and
+efficient, unlike some Python versions of the same algorithms available on the
+Web. This package is an extraction of the stemming code included in the Whoosh
+search engine.

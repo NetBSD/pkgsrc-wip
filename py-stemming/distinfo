@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (stemming-1.0.1.tar.gz) = 28ced8c84f1f42363da56678549911bef6eb6416
+RMD160 (stemming-1.0.1.tar.gz) = cec14605651c1b5587f938ca14abad39879dba0f
+SHA512 (stemming-1.0.1.tar.gz) = 0c495c796688c97fc24a6e2c34ef4dccdca1c6c12160794fe0ddd965745c92d08922eb9972eca0d5537bcd787e1528a3818a02e2aa4f22ca5ebf32c7bade0057
+Size (stemming-1.0.1.tar.gz) = 10954 bytes
+SHA1 (patch-stemming_porter.py) = 0925bc97e6842c08f06ad71ee5efd44d83feafaa
