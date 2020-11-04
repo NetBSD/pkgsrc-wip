@@ -308,7 +308,6 @@ SUBDIR+=	briskmenu
 SUBDIR+=	brlcad
 SUBDIR+=	brltty
 SUBDIR+=	brogue
-SUBDIR+=	broot
 SUBDIR+=	browserpass-native
 SUBDIR+=	brumbrumrally
 SUBDIR+=	bscript
