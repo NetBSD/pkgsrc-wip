@@ -1,15 +1,24 @@
 $NetBSD$
 
-Add non-present .so to SUFFIXES.
+Move .SUFFIXES definition so the `.so' rule are honored.
 
---- Makefile.orig	2020-11-01 17:49:05.189611428 +0000
+XXX: POSIX make doesn't seem to require such ordering, i.e. also at the end of
+XXX: the Makefile that should work.
+
+--- Makefile.orig	2020-11-04 15:09:31.937492724 +0000
 +++ Makefile
 @@ -2,6 +2,8 @@
  # See LICENSE file for copyright and license details.
  .POSIX:
  
-+.SUFFIXES: .so
++.SUFFIXES: .so .o .c
 +
  include config.mk
  
  SRC = surf.c
+@@ -73,5 +75,4 @@ uninstall:
+ 	done
+ 	- rmdir $(DESTDIR)$(LIBDIR)
+ 
+-.SUFFIXES: .so .o .c
+ .PHONY: all options distclean clean dist install uninstall
