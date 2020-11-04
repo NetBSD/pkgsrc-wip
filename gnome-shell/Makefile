@@ -39,7 +39,7 @@ post-extract:
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../wip/gnome-autoar/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../wip/gnome-desktop3/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../wip/mutter/buildlink3.mk"

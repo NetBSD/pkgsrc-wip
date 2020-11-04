@@ -42,7 +42,7 @@ pre-build:
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../wip/gnome-desktop3/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../wip/gnome-settings-daemon/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
