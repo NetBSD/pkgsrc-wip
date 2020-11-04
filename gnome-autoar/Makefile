@@ -2,11 +2,11 @@
 
 DISTNAME=	gnome-autoar-0.2.4
 CATEGORIES=	archivers gnome
-MASTER_SITES=	http://ftp.gnome.org/pub/gnome/sources/gnome-autoar/0.2/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dan@alt.md
-HOMEPAGE=	http://ftp.gnome.org/pub/gnome/sources/gnome-autoar/0.2/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-autoar
 COMMENT=	GLib wrapper around libarchive
 LICENSE=	gnu-lgpl-v2.1
 
