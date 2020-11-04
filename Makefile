@@ -1140,6 +1140,7 @@ SUBDIR+=	gnome-settings-daemon
 SUBDIR+=	gnome-shell
 SUBDIR+=	gnome-todo
 SUBDIR+=	gnome-tracker
+SUBDIR+=	gnome-tracker-miners
 SUBDIR+=	gnome3
 SUBDIR+=	gnomebaker
 SUBDIR+=	gnomeradio
