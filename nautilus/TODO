@@ -1,7 +1,0 @@
-Package currently fails build with:
-/usr/bin/ld: cannot find -ltracker-data
-/usr/bin/ld: cannot find -ltracker-common
-/usr/bin/ld: cannot find -ltracker-data
-/usr/bin/ld: cannot find -ltracker-common
-
-Updating meta-tracker didn't cut it

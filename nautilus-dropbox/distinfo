@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/05 23:30:09 thomasklausner Exp $
-
-SHA1 (nautilus-dropbox-1.4.0.tar.bz2) = 0b929a0afe8fb24b9f3cee37082572133d860cd6
-RMD160 (nautilus-dropbox-1.4.0.tar.bz2) = 0bdad36dfd4730fe3b96882acbcd7d553a64a221
-Size (nautilus-dropbox-1.4.0.tar.bz2) = 353988 bytes
-SHA1 (patch-Makefile.in) = 089c13786b7af25198148980fb77db54374626af
-SHA1 (patch-configure) = ac08daa4d183011b949b7efbf3666af226b9002c

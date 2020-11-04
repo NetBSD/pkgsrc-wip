@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2011/11/16 20:39:06 noud4 Exp $
-
-SHA1 (nautilus-search-tool-0.3.0.tar.gz) = 4f80fa2eda623f64578a628d4ca8b9630d872aee
-RMD160 (nautilus-search-tool-0.3.0.tar.gz) = 1f62dc3e1994d426d8a93a282c369160576b8444
-Size (nautilus-search-tool-0.3.0.tar.gz) = 344557 bytes
-SHA1 (patch-aa) = d36ee7187387846dd8c303f6d76dd7d01996a2c8
-SHA1 (patch-ac) = bcf2824a642cd914f3bc14d414de3798667c1f8f
