@@ -10,7 +10,7 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-autoar
 COMMENT=	GLib wrapper around libarchive
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	autoconf autoreconf pkg-config gmake
+USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
