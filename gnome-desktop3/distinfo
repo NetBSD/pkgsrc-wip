@@ -6,5 +6,5 @@ SHA512 (gnome-desktop-3.38.1.tar.xz) = b3927f0b8571d2ecb528dbe3e096e816e4e90333c
 Size (gnome-desktop-3.38.1.tar.xz) = 745400 bytes
 SHA1 (patch-libgnome-desktop_gnome-languages.c) = 88878085009e36be056b90cce43019095e6d9ddf
 SHA1 (patch-libgnome-desktop_gnome-wall-clock.c) = fb8da1dcb408a78cbc427c69d510eaf2ca8a2fe7
-SHA1 (patch-tests_wall-clock.c) = 8272a46ddfa26c1b72204e7d465a5907d01fc266
-SHA1 (patch-tests_wallclock-reftest.c) = 0e3c39623718f0f5a18f86545ba8e4823796a4db
+SHA1 (patch-tests_wall-clock.c) = c3f4cd354538ea4f549f87762b333cb00a92d18d
+SHA1 (patch-tests_wallclock-reftest.c) = 53cee07db779808b0d9b31f64529ee48c2252bda
