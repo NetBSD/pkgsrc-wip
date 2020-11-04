@@ -1120,6 +1120,7 @@ SUBDIR+=	gnome-autoar
 SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-builder
+SUBDIR+=	gnome-calendar
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-common
 SUBDIR+=	gnome-control-center
