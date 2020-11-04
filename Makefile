@@ -1048,7 +1048,6 @@ SUBDIR+=	geekcode
 SUBDIR+=	gemma
 SUBDIR+=	geners
 SUBDIR+=	genus2reduction
-SUBDIR+=	geoclue
 SUBDIR+=	geoloc
 SUBDIR+=	gerbera
 SUBDIR+=	gerris
