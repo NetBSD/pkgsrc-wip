@@ -5,11 +5,11 @@
 #              Tue May 19 13:03:08 CDT 2020               #
 ###########################################################
 
-DISTNAME=	biolibc-0.1.0.31
+DISTNAME=	biolibc-0.1.0.33
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_PROJECT=	biolibc
-GITHUB_TAG=	5844a58c1cac0d315c43d4918961bab48a8c1b7d
+GITHUB_TAG=	9b279e6d84e3aec7f7ff09cd8da419652fcec1ca
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcfio
