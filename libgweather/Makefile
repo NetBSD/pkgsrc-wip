@@ -11,8 +11,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Weather information access library
 LICENSE=	gnu-gpl-v2
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake msgfmt
+USE_TOOLS+=	pkg-config msgfmt
 
 GCONF_SCHEMAS+=		gweather.schemas
 PKGCONFIG_OVERRIDE+=	data/gweather-3.0.pc.in

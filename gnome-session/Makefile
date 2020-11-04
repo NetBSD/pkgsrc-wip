@@ -19,9 +19,8 @@ BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 #CONFLICTS+=		gnome-core<1.4.2nb4
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake gettext-tools perl pkg-config
+USE_TOOLS+=		gettext-tools perl pkg-config
 
 MESON_ARGS+=		-Dsystemd=false
 MESON_ARGS+=		-Dsystemd_session=disable

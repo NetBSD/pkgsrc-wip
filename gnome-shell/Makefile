@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 USE_PKGLOCALEDIR=	yes
 
 USE_TOOLS+=	pkg-config perl
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c
 
 MESON_ARGS+=	-Dnetworkmanager=false
 MESON_ARGS+=	-Dsystemd=false

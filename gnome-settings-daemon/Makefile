@@ -14,8 +14,7 @@ BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake msgfmt
+USE_TOOLS+=	pkg-config msgfmt
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
