@@ -1242,7 +1242,6 @@ SUBDIR+=	grpc-java
 SUBDIR+=	grsync
 SUBDIR+=	grub2-current
 SUBDIR+=	gsdpdf
-SUBDIR+=	gsettings-desktop-schemas
 SUBDIR+=	gsmartcontrol
 SUBDIR+=	gst-inspector
 SUBDIR+=	gst-plugins0.10-farsight
