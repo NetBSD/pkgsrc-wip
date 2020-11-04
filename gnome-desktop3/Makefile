@@ -11,8 +11,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME3 desktop-wide documents and libgnome-desktop library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		pkg-config xgettext
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
@@ -24,8 +23,6 @@ MESON_ARGS+=		-Ddate_in_gnome_version=false
 MESON_ARGS+=		-Ddesktop_docs=false
 MESON_ARGS+=		-Dgtk_doc=false
 MESON_ARGS+=		-Ddebug_tools=false
-
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
