@@ -1,0 +1,25 @@
+@comment $NetBSD$
+bin/commisery-verify-github-pullrequest
+bin/commisery-verify-msg
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/commisery/__init__.py
+${PYSITELIB}/commisery/__init__.pyc
+${PYSITELIB}/commisery/__init__.pyo
+${PYSITELIB}/commisery/checking.py
+${PYSITELIB}/commisery/checking.pyc
+${PYSITELIB}/commisery/checking.pyo
+${PYSITELIB}/commisery/commit.py
+${PYSITELIB}/commisery/commit.pyc
+${PYSITELIB}/commisery/commit.pyo
+${PYSITELIB}/commisery/github.py
+${PYSITELIB}/commisery/github.pyc
+${PYSITELIB}/commisery/github.pyo
+${PYSITELIB}/commisery/hopic_template.py
+${PYSITELIB}/commisery/hopic_template.pyc
+${PYSITELIB}/commisery/hopic_template.pyo

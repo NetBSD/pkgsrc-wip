@@ -1,0 +1,3 @@
+Commisery is a package to help check whether given commit messages adhere to
+Conventional Commits. Specifically it checks the syntax and some small aspects
+of the semantics.
