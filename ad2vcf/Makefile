@@ -19,5 +19,6 @@ LICENSE=	2-clause-bsd
 pre-build:
 	(cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend)
 
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
