@@ -97,18 +97,6 @@ GDMGRP=		daemon
 CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 .endif
 
-PLIST_VARS+=		dmx
-.if exists(${X11BASE}/include/X11/extensions/dmxext.h)
-PLIST.dmx=		yes
-.endif
-PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
-
-PLIST_VARS+=		gdmopen
-.if exists(/usr/include/linux/vt.h) || ${OPSYS} == "SunOS"
-PLIST.gdmopen=		yes
-.endif
-PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
-
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${FILESDIR}/NetBSD.xpm ${DESTDIR}${PREFIX}/share/pixmaps
