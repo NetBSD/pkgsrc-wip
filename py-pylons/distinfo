@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:23:37 jihbed Exp $
 
-SHA1 (Pylons-1.0.tar.gz) = a624fc3c4ef3ab382a23f460b030e331c4320ca0
-RMD160 (Pylons-1.0.tar.gz) = 7d33c3656096780839ccb723ea2fb9107a82fd63
-SHA512 (Pylons-1.0.tar.gz) = a7136b48ea31fc03bda3e87b22c768df51add26b123c8476ab3d1b8bf184e2d86b414063f5cc7cb849bf66fddd5900b3e83b195ed0537560f94ff8c529449a5e
-Size (Pylons-1.0.tar.gz) = 237259 bytes
+SHA1 (Pylons-1.0.3.tar.gz) = e60e93a3a79a10d8f606ee0e3dcd4bc8de31fdbd
+RMD160 (Pylons-1.0.3.tar.gz) = 9e9fd5e7e7017f40d2b43a5c1f72524b8557cf53
+SHA512 (Pylons-1.0.3.tar.gz) = 2f774a99203f80226a95afe2240bfbc833fae71a6273df9225938741cf494ada2d676c80a43bba21fb616b9ab53ee15cfd895a394b092b287774f648f8336b84
+Size (Pylons-1.0.3.tar.gz) = 190744 bytes

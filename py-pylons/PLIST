@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/14 13:23:37 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/pylons/controllers/__init__.pyo
 ${PYSITELIB}/pylons/controllers/core.py
 ${PYSITELIB}/pylons/controllers/core.pyc
 ${PYSITELIB}/pylons/controllers/core.pyo
+${PYSITELIB}/pylons/controllers/jsonrpc.py
+${PYSITELIB}/pylons/controllers/jsonrpc.pyc
+${PYSITELIB}/pylons/controllers/jsonrpc.pyo
 ${PYSITELIB}/pylons/controllers/util.py
 ${PYSITELIB}/pylons/controllers/util.pyc
 ${PYSITELIB}/pylons/controllers/util.pyo
@@ -111,7 +114,6 @@ ${PYSITELIB}/pylons/templates/default_project/+package+/websetup.py_tmpl
 ${PYSITELIB}/pylons/templates/default_project/MANIFEST.in_tmpl
 ${PYSITELIB}/pylons/templates/default_project/README.txt_tmpl
 ${PYSITELIB}/pylons/templates/default_project/development.ini_tmpl
-${PYSITELIB}/pylons/templates/default_project/docs/index.txt_tmpl
 ${PYSITELIB}/pylons/templates/default_project/ez_setup.py
 ${PYSITELIB}/pylons/templates/default_project/ez_setup.pyc
 ${PYSITELIB}/pylons/templates/default_project/ez_setup.pyo
@@ -152,9 +154,41 @@ ${PYSITELIB}/pylons/test.pyo
 ${PYSITELIB}/pylons/testutil.py
 ${PYSITELIB}/pylons/testutil.pyc
 ${PYSITELIB}/pylons/testutil.pyo
+${PYSITELIB}/pylons/url.py
+${PYSITELIB}/pylons/url.pyc
+${PYSITELIB}/pylons/url.pyo
 ${PYSITELIB}/pylons/util.py
 ${PYSITELIB}/pylons/util.pyc
 ${PYSITELIB}/pylons/util.pyo
 ${PYSITELIB}/pylons/wsgiapp.py
 ${PYSITELIB}/pylons/wsgiapp.pyc
 ${PYSITELIB}/pylons/wsgiapp.pyo
+${PYSITELIB}/test_files/__init__.py
+${PYSITELIB}/test_files/__init__.pyc
+${PYSITELIB}/test_files/__init__.pyo
+${PYSITELIB}/test_files/event_file.py
+${PYSITELIB}/test_files/event_file.pyc
+${PYSITELIB}/test_files/event_file.pyo
+${PYSITELIB}/test_files/sample_controllers/__init__.py
+${PYSITELIB}/test_files/sample_controllers/__init__.pyc
+${PYSITELIB}/test_files/sample_controllers/__init__.pyo
+${PYSITELIB}/test_files/sample_controllers/controllers/__init__.py
+${PYSITELIB}/test_files/sample_controllers/controllers/__init__.pyc
+${PYSITELIB}/test_files/sample_controllers/controllers/__init__.pyo
+${PYSITELIB}/test_files/sample_controllers/controllers/goodbye.py
+${PYSITELIB}/test_files/sample_controllers/controllers/goodbye.pyc
+${PYSITELIB}/test_files/sample_controllers/controllers/goodbye.pyo
+${PYSITELIB}/test_files/sample_controllers/controllers/hello.py
+${PYSITELIB}/test_files/sample_controllers/controllers/hello.pyc
+${PYSITELIB}/test_files/sample_controllers/controllers/hello.pyo
+${PYSITELIB}/test_files/sample_controllers/controllers/i18nc.py
+${PYSITELIB}/test_files/sample_controllers/controllers/i18nc.pyc
+${PYSITELIB}/test_files/sample_controllers/controllers/i18nc.pyo
+${PYSITELIB}/test_files/sample_controllers/i18n/es/LC_MESSAGES/sample_controllers.mo
+${PYSITELIB}/test_files/sample_controllers/i18n/es/LC_MESSAGES/sample_controllers.po
+${PYSITELIB}/test_files/sample_controllers/i18n/fr/LC_MESSAGES/sample_controllers.mo
+${PYSITELIB}/test_files/sample_controllers/i18n/fr/LC_MESSAGES/sample_controllers.po
+${PYSITELIB}/test_files/sample_controllers/i18n/ja/LC_MESSAGES/sample_controllers.mo
+${PYSITELIB}/test_files/sample_controllers/i18n/ja/LC_MESSAGES/sample_controllers.po
+${PYSITELIB}/test_files/sample_controllers/templates/hello.html
+${PYSITELIB}/test_files/sample_controllers/templates/time.html
