@@ -27,7 +27,9 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	configure.ac
 SUBST_FILES.paths+=	daemon/gdm-session-worker.c
+SUBST_FILES.paths+=	data/Init.in
 SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	VARBASE
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
