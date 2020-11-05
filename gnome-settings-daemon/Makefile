@@ -42,7 +42,6 @@ BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomekbd+=	libgnomekbd>=2.31.2
 .include "../../x11/libgnomekbd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/libxklavier/buildlink3.mk"
@@ -53,9 +52,9 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.1
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../sysutils/upower/buildlink3.mk"
 .include "../../wip/colord/buildlink3.mk"
-.include "../../wip/geoclue/buildlink3.mk"
-.include "../../wip/geocode-glib/buildlink3.mk"
-.include "../../wip/libgweather/buildlink3.mk"
+.include "../../geography/geoclue/buildlink3.mk"
+.include "../../geography/geocode-glib/buildlink3.mk"
+.include "../../devel/libgweather/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
