@@ -14,7 +14,7 @@ USE_LANGUAGES+=			c c++
 USE_TOOLS+=			gmake pkg-config bison gawk flex
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PKGCONFIG_CONFIG=		${PKG_CONFIG:Q}
-DEPENDS+=			py27-mercurial-[0-9]*:../../devel/py-mercurial
+DEPENDS+=			mercurial-[0-9]*:../../devel/mercurial
 
 WRKSRC=			${WRKDIR}/yosys-${GITHUB_TAG}
 
