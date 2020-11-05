@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/_gdxcc.so
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/gdxcc/C/gclgms.c
+${PYSITELIB}/gdxcc/C/gclgms.h
+${PYSITELIB}/gdxcc/C/gdxcc.c
+${PYSITELIB}/gdxcc/C/gdxcc.h
+${PYSITELIB}/gdxcc/C/gdxcc_wrap.c
+${PYSITELIB}/gdxcc/__init__.py
+${PYSITELIB}/gdxcc/__init__.pyc
+${PYSITELIB}/gdxcc/__init__.pyo
+${PYSITELIB}/gdxcc/gdxcc.i
+${PYSITELIB}/gdxcc/gdxcc.py
+${PYSITELIB}/gdxcc/gdxcc.pyc
+${PYSITELIB}/gdxcc/gdxcc.pyo
