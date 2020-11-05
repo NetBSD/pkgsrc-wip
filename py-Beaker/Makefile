@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/07/15 17:54:20 thomasklausner Exp $
 
-DISTNAME=	Beaker-1.7.0
+DISTNAME=	Beaker-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www python

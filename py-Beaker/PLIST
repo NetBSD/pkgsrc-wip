@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/07/15 17:54:20 thomasklausner Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,18 +21,27 @@ ${PYSITELIB}/beaker/container.pyo
 ${PYSITELIB}/beaker/converters.py
 ${PYSITELIB}/beaker/converters.pyc
 ${PYSITELIB}/beaker/converters.pyo
+${PYSITELIB}/beaker/cookie.py
+${PYSITELIB}/beaker/cookie.pyc
+${PYSITELIB}/beaker/cookie.pyo
 ${PYSITELIB}/beaker/crypto/__init__.py
 ${PYSITELIB}/beaker/crypto/__init__.pyc
 ${PYSITELIB}/beaker/crypto/__init__.pyo
 ${PYSITELIB}/beaker/crypto/jcecrypto.py
 ${PYSITELIB}/beaker/crypto/jcecrypto.pyc
 ${PYSITELIB}/beaker/crypto/jcecrypto.pyo
+${PYSITELIB}/beaker/crypto/noencryption.py
+${PYSITELIB}/beaker/crypto/noencryption.pyc
+${PYSITELIB}/beaker/crypto/noencryption.pyo
 ${PYSITELIB}/beaker/crypto/nsscrypto.py
 ${PYSITELIB}/beaker/crypto/nsscrypto.pyc
 ${PYSITELIB}/beaker/crypto/nsscrypto.pyo
 ${PYSITELIB}/beaker/crypto/pbkdf2.py
 ${PYSITELIB}/beaker/crypto/pbkdf2.pyc
 ${PYSITELIB}/beaker/crypto/pbkdf2.pyo
+${PYSITELIB}/beaker/crypto/pyca_cryptography.py
+${PYSITELIB}/beaker/crypto/pyca_cryptography.pyc
+${PYSITELIB}/beaker/crypto/pyca_cryptography.pyo
 ${PYSITELIB}/beaker/crypto/pycrypto.py
 ${PYSITELIB}/beaker/crypto/pycrypto.pyc
 ${PYSITELIB}/beaker/crypto/pycrypto.pyo
@@ -54,6 +63,12 @@ ${PYSITELIB}/beaker/ext/google.pyo
 ${PYSITELIB}/beaker/ext/memcached.py
 ${PYSITELIB}/beaker/ext/memcached.pyc
 ${PYSITELIB}/beaker/ext/memcached.pyo
+${PYSITELIB}/beaker/ext/mongodb.py
+${PYSITELIB}/beaker/ext/mongodb.pyc
+${PYSITELIB}/beaker/ext/mongodb.pyo
+${PYSITELIB}/beaker/ext/redisnm.py
+${PYSITELIB}/beaker/ext/redisnm.pyc
+${PYSITELIB}/beaker/ext/redisnm.pyo
 ${PYSITELIB}/beaker/ext/sqla.py
 ${PYSITELIB}/beaker/ext/sqla.pyc
 ${PYSITELIB}/beaker/ext/sqla.pyo
