@@ -53,21 +53,24 @@ MAKE_FLAGS+=	FC=${FC:Q}
 # Default is detected from build host, which may differ from run host.
 BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
 
+.include "../../mk/bsd.prefs.mk"
+
 # Default checks number of cores of build host.
 # Do we want a pkgsrc-wide default?
 OPENBLAS_THREAD_LIMIT?=	# empty
 .if !empty(OPENBLAS_THREAD_LIMIT)
-MAKE_FLAGS+=	NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
+MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 .endif
 BENCHMARK_MAXTHREADS?=	8
+
 .if ${MACHINE_ARCH:M*64} == ""
-MAKE_FLAGS+=	BINARY32=1
+MAKE_FLAGS+=		BINARY32=1
 .else
-MAKE_FLAGS+=	BINARY64=1
+MAKE_FLAGS+=		BINARY64=1
 .endif
 # Those come in separate BLAS-agnostic packages.
 # ... except we start headaches about ILP64?
-MAKE_FLAGS+=	NO_CBLAS=1 NO_LAPACKE=1
+MAKE_FLAGS+=		NO_CBLAS=1 NO_LAPACKE=1
 
 # Separate headers and cmake stuff.
 MAKE_FLAGS+=	OPENBLAS_INCLUDE_DIR=${PREFIX}/include/${OPENBLAS_VARIANT}

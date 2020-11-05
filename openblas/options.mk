@@ -1,8 +1,7 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openblas
-# Choose dynamic target/processor choice at runtime or
-# fixed build with build host CPU.
+# Auto-detect CPU features at runtime or use static features from build host
 PKG_SUPPORTED_OPTIONS=	dynamic-arch
 PKG_SUGGESTED_OPTIONS=	dynamic-arch
 
@@ -15,6 +14,5 @@ MAKE_FLAGS+=	DYNAMIC_ARCH=1
 MAKE_FLAGS+=	DYNAMIC_ARCH=0
 .endif
 
-# Other options create variants of the library, not
-# configurations of one. Especially INTERFACE64, which
-# changes the API!
+# Other options create variants of the library, not configurations of one.
+# Especially INTERFACE64, which changes the API!
