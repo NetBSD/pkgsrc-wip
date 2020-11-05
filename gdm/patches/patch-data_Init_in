@@ -1,4 +1,7 @@
+$NetBSD$
+
 $OpenBSD: patch-data_Init_in,v 1.7 2015/04/15 14:47:00 ajacoutot Exp $
+
 --- data/Init.in.orig	2015-11-17 17:16:04.000000000 +0000
 +++ data/Init.in
 @@ -6,6 +6,9 @@

@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-configure_ac,v 1.18 2020/05/14 15:25:54 ajacoutot Exp $
 
 REVERT - Linux-PAM

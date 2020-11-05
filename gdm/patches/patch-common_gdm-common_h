@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-common_gdm-common_h,v 1.5 2020/05/14 15:25:54 ajacoutot Exp $
 
 REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)

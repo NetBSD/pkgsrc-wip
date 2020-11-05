@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-daemon_gdm-session-worker_xml,v 1.1 2015/10/18 13:25:54 ajacoutot Exp $
 
 REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)

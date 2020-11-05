@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-daemon_gdm-launch-environment_c,v 1.10 2019/11/02 15:34:07 ajacoutot Exp $
 
 XXX fix+push upstream

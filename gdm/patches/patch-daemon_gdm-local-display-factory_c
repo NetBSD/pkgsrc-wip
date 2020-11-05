@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-daemon_gdm-local-display-factory_c,v 1.13 2019/11/02 15:34:07 ajacoutot Exp $
 
 REVERT - OpenBSD does not have a systemd implementation (we need ConsoleKit)

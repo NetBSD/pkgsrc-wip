@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-data_Makefile_am,v 1.10 2019/11/02 16:34:15 ajacoutot Exp $
 
 Index: data/Makefile.am
