@@ -44,7 +44,7 @@ post-extract:
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../wip/mutter/buildlink3.mk"
-.include "../../wip/gjs/buildlink3.mk"
+.include "../../lang/gjs/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
