@@ -35,6 +35,7 @@ SUBDIR+=	PatternPaint
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	Qweyboard
+SUBDIR+=	Radicale3
 SUBDIR+=	R-BiocGenerics
 SUBDIR+=	R-C50
 SUBDIR+=	R-MySQL

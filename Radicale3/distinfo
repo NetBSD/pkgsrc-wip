@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2017/09/04 10:35:44 prlw1 Exp $
+
+SHA1 (Radicale-3.0.6.tar.gz) = 9c0eedda373cf8ba5abca1cb3d7f16f61c166b09
+RMD160 (Radicale-3.0.6.tar.gz) = d499cd93ff45320c3264ea1628142111a759cf8c
+SHA512 (Radicale-3.0.6.tar.gz) = dfc4e5c0cdb8037e1c04eca7df095f5b4a4a096b8c501d6d1f22eb63c0038f63a9fa6a1c65c92af17ebef4c973472938bac44b7cc3ca0eff7b83be82fe459077
+Size (Radicale-3.0.6.tar.gz) = 102983 bytes

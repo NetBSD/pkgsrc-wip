@@ -1,0 +1,7 @@
+As of 3.0.0, Radicale no longer provides a daemonize function, instead
+relying on the service manager. Currently handling backgrounding the
+process with nohup.
+
+Since all log data is output to stderr, the rc.d script will need to
+manage storing that. Not sure if the best method of handling this is by
+dumping stderr to @VARBASE@/log, or to use something like logger(1).
