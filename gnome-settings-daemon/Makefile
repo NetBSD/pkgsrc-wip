@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config msgfmt
+USE_TOOLS+=	pkg-config msgfmt perl
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
@@ -36,6 +36,7 @@ LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../graphics/colord/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
 .include "../../sysutils/dbus-glib/buildlink3.mk"
@@ -51,12 +52,11 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.1
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../sysutils/upower/buildlink3.mk"
-.include "../../wip/colord/buildlink3.mk"
 .include "../../geography/geoclue/buildlink3.mk"
 .include "../../geography/geocode-glib/buildlink3.mk"
 .include "../../devel/libgweather/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
-.include "../../print/cups-base/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 
