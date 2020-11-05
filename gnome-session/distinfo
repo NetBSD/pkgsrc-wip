@@ -4,5 +4,5 @@ SHA1 (gnome-session-3.36.0.tar.xz) = dcdecdd85a40894408aa36eceb13ea9b256dd208
 RMD160 (gnome-session-3.36.0.tar.xz) = 4c24337f04c812b7edcb3c2cc88f98ff30e20971
 SHA512 (gnome-session-3.36.0.tar.xz) = 234456e8617524a3b95afb505246823ced4eca3ca009d48fc0bde70f8c620814495b04509c134bfb72760619990cc7cb7363ba13f0d90d9f038e8a43eadb6e9d
 Size (gnome-session-3.36.0.tar.xz) = 475492 bytes
-SHA1 (patch-ae) = 31759f8ee3f4415c43feb9ce5e93cba549de06a3
-SHA1 (patch-gnome-session_main.c) = 81283ba5d57bc41842fc267b2d37d43ed24e8fbf
+SHA1 (patch-meson__options.txt) = 6c0c9968c4546f60547cc0cf235e6d546532e85b
+SHA1 (patch-tools_meson.build) = a2ab4b52be4933a86f64fc08d8cf89542f5a15ca

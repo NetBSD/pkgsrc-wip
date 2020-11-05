@@ -22,6 +22,15 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gettext-tools perl pkg-config
 
+.include "../../graphics/MesaLib/features.mk"
+
+PLIST_VARS+=		gles2
+.if ${MESALIB_SUPPORTS_GLESv2} == "no"
+MESON_ARGS+=		-Dgles2=false
+.else
+PLIST.gles2=		yes
+.endif
+
 MESON_ARGS+=		-Dsystemd=false
 MESON_ARGS+=		-Dsystemd_session=disable
 MESON_ARGS+=		-Dsystemd_journal=false

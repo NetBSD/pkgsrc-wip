@@ -6,7 +6,7 @@ bin/gnome-session-quit
 libexec/gnome-session-binary
 libexec/gnome-session-check-accelerated
 libexec/gnome-session-check-accelerated-gl-helper
-libexec/gnome-session-check-accelerated-gles-helper
+${PLIST.gles2}libexec/gnome-session-check-accelerated-gles-helper
 libexec/gnome-session-failed
 man/man1/gnome-session-inhibit.1
 man/man1/gnome-session-quit.1
