@@ -1,3 +1,5 @@
+$NetBSD$
+
 $OpenBSD: patch-js_misc_loginManager_js,v 1.10 2020/05/14 15:28:46 jasper Exp $
 
 Index: js/misc/loginManager.js

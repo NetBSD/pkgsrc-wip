@@ -24,7 +24,7 @@ TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
-MAKE_ENV+=      LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
 REPLACE_PYTHON+=	meson/*.py
 
@@ -37,6 +37,7 @@ post-extract:
 .include "../../lang/python/application.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/gnome-autoar/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
