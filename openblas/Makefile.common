@@ -25,13 +25,12 @@ PATCHDIR=	${.CURDIR}/../../wip/openblas/patches
 
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
-# Check this
 LICENSE=	modified-bsd
 
-.if ${OPENBLAS_VARIANT} != openblas
-# Multicore variants use Linux-specific cpu_set interface
+# Needs source patching and/or GCC_REQD for NetBSD
+# NetBSD gfortran framework needs improvements for this and other packages
+# Untested on other platforms
 ONLY_FOR_PLATFORM=	Linux-*-*
-.endif
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
@@ -51,31 +50,24 @@ MAKE_FLAGS+=	CXX=${CXX:Q}
 MAKE_FLAGS+=	FC=${FC:Q}
 
 # You may override the autodetected thread count limit.
-# Default is detected from build host.
+# Default is detected from build host, which may differ from run host.
 BUILD_DEFS+=	OPENBLAS_THREAD_LIMIT
-
-.include "../../mk/bsd.prefs.mk"
-
-# Builds with patched gcc 4.8 on CentOS 7, but not base gcc 5 on NetBSD 8
-.if ${OPSYS} == "NetBSD"
-GCC_REQD+=	7
-.endif
 
 # Default checks number of cores of build host.
 # Do we want a pkgsrc-wide default?
 OPENBLAS_THREAD_LIMIT?=	# empty
 .if !empty(OPENBLAS_THREAD_LIMIT)
-MAKE_FLAGS+=		NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
+MAKE_FLAGS+=	NUM_THREADS=${OPENBLAS_THREAD_LIMIT:Q}
 .endif
 BENCHMARK_MAXTHREADS?=	8
 .if ${MACHINE_ARCH:M*64} == ""
-MAKE_FLAGS+=		BINARY32=1
+MAKE_FLAGS+=	BINARY32=1
 .else
-MAKE_FLAGS+=		BINARY64=1
+MAKE_FLAGS+=	BINARY64=1
 .endif
 # Those come in separate BLAS-agnostic packages.
 # ... except we start headaches about ILP64?
-MAKE_FLAGS+=		NO_CBLAS=1 NO_LAPACKE=1
+MAKE_FLAGS+=	NO_CBLAS=1 NO_LAPACKE=1
 
 # Separate headers and cmake stuff.
 MAKE_FLAGS+=	OPENBLAS_INCLUDE_DIR=${PREFIX}/include/${OPENBLAS_VARIANT}
@@ -134,16 +126,15 @@ post-extract:
 	(cd ${DISTDIR}/${DIST_SUBDIR} && \
 		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC})
 
-# This builds some benchmark programs you can call
-# from ${WRKSRC} afterwards.
+# This builds some benchmark programs you can call from ${WRKSRC} afterwards.
 # ThOr: I do not like that. Can we rather rename the benchmark files
 # to be unique?
 .PHONY: benchmark
 benchmark: build
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BENCHMARK_ENV} \
-	  ${MAKE_PROGRAM} ${MAKE_FLAGS} hpl)
+		${MAKE_PROGRAM} ${MAKE_FLAGS} hpl)
 	(cd ${WRKSRC}/benchmark && ${SETENV} ${MAKE_ENV} \
-	  ${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
+		${BENCHMARK_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
 
 .include "../../wip/openblas/version.mk"
 
