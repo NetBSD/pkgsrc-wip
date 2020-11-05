@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=debauchee/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	maya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/debauchee/barrier/
 COMMENT=	Let a user share a mouse and keyboard among computers
 LICENSE=	gnu-gpl-v2

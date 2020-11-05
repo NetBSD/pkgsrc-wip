@@ -4,7 +4,7 @@ DISTNAME=	musl-1.1.15
 CATEGORIES=	devel
 MASTER_SITES=	http://www.musl-libc.org/releases/
 
-MAINTAINER=	maya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.musl-libc.org/
 COMMENT=	C standard library
 LICENSE=	mit

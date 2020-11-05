@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/slicot/}
 
-MAINTAINER=	maya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ftp.debian.org/debian/pool/main/s/slicot/
 COMMENT=	Numerical algorithms from systems and control theory
 LICENSE=	gnu-gpl-v2
