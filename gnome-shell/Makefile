@@ -33,12 +33,12 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell
 post-extract:
 	cp ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces/
 
+.include "../../archivers/gnome-autoar/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/gnome-autoar/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
