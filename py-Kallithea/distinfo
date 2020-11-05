@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/07/15 18:54:08 thomasklausner Exp $
 
-SHA1 (Kallithea-0.2.2.zip) = d3c4ae8afeb9889759d9c8717ba02ea6e12c5b4f
-RMD160 (Kallithea-0.2.2.zip) = 41eb791a44fb3895de096139c1fa8bb4e88158bc
-Size (Kallithea-0.2.2.zip) = 5694345 bytes
+SHA1 (Kallithea-0.6.2.tar.gz) = 0a204dc3dc9dbb568f75a68b4646471a3d6efa2e
+RMD160 (Kallithea-0.6.2.tar.gz) = caafc007e60dc26541cb41eae7708dfbffa2b023
+SHA512 (Kallithea-0.6.2.tar.gz) = 1ff508c7c4f5e9bbf78ffd1320ed09777a34ea4b945c33cc92ae505bf38058d7092490d71fe0400aac36fa78d8fc2df8e0038daf2ec09d603d4dab2e165a1d3d
+Size (Kallithea-0.6.2.tar.gz) = 4328315 bytes
