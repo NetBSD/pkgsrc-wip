@@ -1,6 +1,6 @@
 $NetBSD$
 
---- conans/requirements.txt.orig	2020-09-21 08:35:07.000000000 +0000
+--- conans/requirements.txt.orig	2020-10-30 17:11:48.000000000 +0000
 +++ conans/requirements.txt
 @@ -10,7 +10,7 @@ node-semver==0.6.1
  distro>=1.0.2, <=1.5.0
@@ -9,5 +9,5 @@ $NetBSD$
 -deprecation>=2.0, <2.1
 +deprecation>=2.0
  tqdm>=4.28.1, <5
- Jinja2>=2.3, <3
+ Jinja2>=2.9, <3
  python-dateutil>=2.7.0, <3
