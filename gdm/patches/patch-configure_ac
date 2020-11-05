@@ -154,10 +154,10 @@ Index: configure.ac
     X_PATH="/opt/X11R6/bin"
     X_SERVER_PATH="/opt/X11R6/bin"
     X_SERVER="/opt/X11R6/bin/X"
-+elif test -x /usr/pkg/bin/X; then
-+   X_PATH="/usr/pkg/bin"
-+   X_SERVER_PATH="/usr/pkg/bin"
-+   X_SERVER="/usr/pkg/bin/X"
++elif test -x @PREFIX@/bin/X; then
++   X_PATH="@PREFIX@/bin"
++   X_SERVER_PATH="@PREFIX@/bin"
++   X_SERVER="@PREFIX@/bin/X"
  else
     # what to do, what to do, this is wrong, but this just sets the
     # defaults, perhaps this user is cross compiling or some such

@@ -25,9 +25,9 @@ USE_LANGUAGES=		c c++
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	daemon/gdm-session-worker.c
-SUBST_SED.paths=	-e 's,$${LOCALBASE},${PREFIX},g'
-SUUBST_VARS.paths=	PREFIX
+SUBST_FILES.paths+=	configure.ac
+SUBST_FILES.paths+=	daemon/gdm-session-worker.c
+SUBST_VARS.paths=	PREFIX
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

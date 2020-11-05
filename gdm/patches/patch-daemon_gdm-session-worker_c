@@ -56,7 +56,7 @@ Index: daemon/gdm-session-worker.c
  
  #ifndef GDM_SESSION_DEFAULT_PATH
 -#define GDM_SESSION_DEFAULT_PATH "/usr/local/bin:/usr/bin:/bin"
-+#define GDM_SESSION_DEFAULT_PATH "${LOCALBASE}/bin:/usr/bin:/bin"
++#define GDM_SESSION_DEFAULT_PATH "@PREFIX@/bin:/usr/bin:/bin"
  #endif
  
  #ifndef GDM_SESSION_ROOT_UID
