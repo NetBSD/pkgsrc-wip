@@ -47,6 +47,7 @@ DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/${EGDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/rights ${DESTDIR}${PREFIX}/${EGDIR}/rights
 
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
