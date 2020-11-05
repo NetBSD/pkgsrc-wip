@@ -82,7 +82,7 @@ GDMGRP=		daemon
 # The following forces the X server to start on the 5th virtual terminal.
 # This is suboptimal but matches the defaults for the xdm configuration,
 # which should work for most installations.  See the definition of
-# DEFAULTVT in xsrc/xfree/xc/programs/xdm/config/Imakefile.
+# DEFAULTVT in src/external/mit/xorg/bin/xdm/config/Makefile.
 #
 # If we do not do this, we hit a very annoying and obscure problem: during
 # system startup, gdm starts before init spawns gettys.  If the X server
