@@ -14,6 +14,16 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 
+.include "../../graphics/MesaLib/features.mk"
+
+.if ${MESALIB_SUPPORTS_EGL} == "no"
+MESON_ARGS+=		-Degl=false
+.endif
+
+.if ${MESALIB_SUPPORTS_GLESv2} == "no"
+MESON_ARGS+=		-Dgles2=false
+.endif
+
 MESON_ARGS+=		-Dudev=false
 MESON_ARGS+=		-Dnative_backend=false
 MESON_ARGS+=		-Dlibwacom=false
