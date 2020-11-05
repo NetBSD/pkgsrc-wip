@@ -1,2 +1,3 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+Generic jenkins shared pipeline alternative.
+Hopic project only has a minimal CI driver component written in Groovy with the
+rest written in Python.
