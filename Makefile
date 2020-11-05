@@ -1132,6 +1132,7 @@ SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-mount
 SUBDIR+=	gnome-paint
 SUBDIR+=	gnome-panel
+SUBDIR+=	gnome-screenshot
 SUBDIR+=	gnome-session
 SUBDIR+=	gnome-settings-daemon
 SUBDIR+=	gnome-shell
