@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	opendoas
+DISTNAME=	opendoas-6.6.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
 GITHUB_TAG=	84ccfe0b9ac591199d0464ede10a4130c8a3482d
