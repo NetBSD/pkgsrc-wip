@@ -1114,7 +1114,6 @@ SUBDIR+=	gnokii
 SUBDIR+=	gnomad2
 SUBDIR+=	gnome-applets
 SUBDIR+=	gnome-apps
-SUBDIR+=	gnome-autoar
 SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-builder
