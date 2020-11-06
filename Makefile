@@ -225,6 +225,7 @@ SUBDIR+=	avra
 SUBDIR+=	avrdude
 SUBDIR+=	axe
 SUBDIR+=	axel
+SUBDIR+=	axpbox-git
 SUBDIR+=	azureus
 SUBDIR+=	backintime
 SUBDIR+=	backplane

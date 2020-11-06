@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD$
+Run axpbox with run argument from a directory where you have the
+disk image and es40.cfg configuration file your your VM.
+
+Please read the documentation on the project webpage
+https://github.com/lenticularis39/axpbox
+
+===========================================================================
