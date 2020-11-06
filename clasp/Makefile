@@ -1,18 +1,20 @@
 # $NetBSD$
 
-DISTNAME=	clasp-3.3.4-source
+GITHUB_PROJECT=	clasp
+DISTNAME=	clasp-3.3.5-source
 PKGNAME=	${DISTNAME:S/-source//}
-CATEGORIES=	math devel
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=potassco/}
-GITHUB_RELEASE=	v3.3.4
+GITHUB_RELEASE=	v3.3.5
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://potassco.sourceforge.net/
-COMMENT=	Answer set solver for (extended) normal logic programs
+HOMEPAGE=	https://potassco.org/clasp/
+COMMENT=	Answer set solver for normal and disjunctive logic programs
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/clasp-3.3.4
-USE_CMAKE=	yes
+WRKSRC=		${WRKDIR}/clasp-3.3.5
+
 USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"

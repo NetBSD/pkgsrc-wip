@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (clasp-3.3.4-source.tar.gz) = 866d312137a38e4703bfe39c167e784f71574af0
-RMD160 (clasp-3.3.4-source.tar.gz) = a09294bad38cb27eb095d98dc91be93319f701b2
-SHA512 (clasp-3.3.4-source.tar.gz) = 7cfb2c9470ac8f7a57b48038e600b02e8b04cd4e923a6c59b58d75dbe114feb41c577688b4945f97c646e975fcf2c3e23578a12e3c97eec4639f558f5fe8595c
-Size (clasp-3.3.4-source.tar.gz) = 826644 bytes
+SHA1 (clasp-3.3.5-source.tar.gz) = f6eb209a033a67dd2803f9230f0b3f9399163ced
+RMD160 (clasp-3.3.5-source.tar.gz) = e5671f78ddc05e049dbfceaad84547d458286206
+SHA512 (clasp-3.3.5-source.tar.gz) = 2b0a877271a92adbb3c16ce0de6b36b9bd5054098e668cee7beb79c4d8eace24a5ecc20e053ba30d8a6b7b0942e229f685b2a71918fe14699a5e1819033b8d79
+Size (clasp-3.3.5-source.tar.gz) = 831051 bytes
