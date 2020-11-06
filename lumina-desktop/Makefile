@@ -24,7 +24,9 @@ MAKE_ENV+=	LFLAGS=${LDFLAGS:Q}
 do-configure:
 	cd ${WRKSRC} && \
 	${SETENV} ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake PREFIX=${PREFIX} LIBPREFIX=${PREFIX}/lib CONFIG+="configure WITH_I18N" ${EXTRA}
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} LIBPREFIX=${PREFIX}/lib \
+	L_ETCDIR=${PKG_SYSCONFDIR} L_MANDIR=${PREFIX}/${PKGMANDIR} \
+	CONFIG+="configure WITH_I18N" ${EXTRA}
 
 pre-install:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
