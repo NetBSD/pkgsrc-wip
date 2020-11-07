@@ -1,12 +1,12 @@
 $NetBSD$
 
-Work around build error with nested macro.
+Work around build error with nested macro:
 
-  'macro "memcpy" requires 3 arguments, but only 2 given'
+'macro "memcpy" requires 3 arguments, but only 2 given'
 
---- src/sp_utils.c.orig	2019-06-12 14:42:36.000000000 +0000
+--- src/sp_utils.c.orig	2020-08-12 14:16:28.000000000 +0000
 +++ src/sp_utils.c
-@@ -353,7 +353,7 @@ int hook_function(const char* original_n
+@@ -422,7 +422,7 @@ int hook_function(const char* original_n
        return FAILURE;
      }
      memcpy(mb_name, "mb_", sizeof("mb_") - 1);

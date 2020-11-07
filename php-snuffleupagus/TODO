@@ -4,5 +4,3 @@ distfile from upstream.
 Look further into the need for the memcpy patch.
 
 Add an example rules file.
-
-Failing tests expected?

@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.2 2015/11/04 01:18:01 agc Exp $
 
-SHA1 (php-snuffleupagus/snuffleupagus-0.5.1.tgz) = 6befe3e7009419e4dd6b53a909c9a55d4d03cb07
-RMD160 (php-snuffleupagus/snuffleupagus-0.5.1.tgz) = b5e7dcd8e1437867df8b32084d8a733197dbb09d
-SHA512 (php-snuffleupagus/snuffleupagus-0.5.1.tgz) = 439993885453cd840d9be3e56d2e28ffe711a647db266c2848b5d5248017a139ca101b4c447b1c2a5a322ac77ccc15af5010d6d633207163350c26cb0de8ada3
-Size (php-snuffleupagus/snuffleupagus-0.5.1.tgz) = 11945453 bytes
-SHA1 (patch-src_sp__utils.c) = 03f3e1f6b4c08cf4aaad38be89907ac992590a8e
+SHA1 (php-snuffleupagus/snuffleupagus-0.6.0.tgz) = 8c480ac4aba8fb4b3407100992e488bb4677c831
+RMD160 (php-snuffleupagus/snuffleupagus-0.6.0.tgz) = 99ca7c719d64fda61b73ed0910151106b7832129
+SHA512 (php-snuffleupagus/snuffleupagus-0.6.0.tgz) = 57f2bd3513e6171e2f4bc7baeaf001360e98b5103aceb3cf7cd83cd74ae5a44919762da2373073a6bc3a4e5f00f5289367aa5c12f86256b91736ac78ae9e0524
+Size (php-snuffleupagus/snuffleupagus-0.6.0.tgz) = 11944389 bytes
+SHA1 (patch-src_sp__utils.c) = 3c0630966997318e2b9ae2c8223e7f7762860db6
