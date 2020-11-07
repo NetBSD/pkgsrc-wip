@@ -42,7 +42,7 @@
 #
 # Keywords: hg mercurial
 
-BUILD_DEPENDS+=		mercurial>=0.9:../../devel/mercurial
+BUILD_DEPENDS+=		${PYPKGPREFIX}-mercurial>=0.9:../../devel/py-mercurial
 
 # Defaults for package-settable variables
 DISTFILES?=		# empty
