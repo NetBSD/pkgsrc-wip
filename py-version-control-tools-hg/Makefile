@@ -16,7 +16,7 @@ WRKSRC=				${WRKDIR}/version-control-tools/hghooks
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-mercurial
+PYTHON_VERSIONS_ACCEPTED=	27 # mozhghooks/whitelist_*.py
 
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	*/*.py
