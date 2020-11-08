@@ -4,6 +4,7 @@ DISTNAME=	v1.0.9
 PKGNAME=	denise-${DISTNAME:S,^v,,}
 CATEGORIES=	emulators
 MASTER_SITES=	https://bitbucket.org/piciji/denise/get/
+DIST_SUBDIR=    denise
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rhialto@NetBSD.org
