@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.4 2020/11/06 09:11:31 maya Exp $
+
+SHA1 (mozjs78_78.3.0.orig.tar.xz) = 0eb86875a91298d9198d0c7c818c09aeecc569e1
+RMD160 (mozjs78_78.3.0.orig.tar.xz) = f2d9b5d71c9603ec3b2d80b4ef930c0f00948584
+SHA512 (mozjs78_78.3.0.orig.tar.xz) = a28a582eae9d483ba7625236e2226392c9e26d5a10c4f34bee899ce27329dc0e9ba1dca96090597723a62d4f4a14f9dd339effae5db471a27eb32aa2ef2f0e8b
+Size (mozjs78_78.3.0.orig.tar.xz) = 58324248 bytes
+SHA1 (patch-.._.._build_moz.configure_rust.configure) = a40ef515b34781d703e9222e4c88746544556287
+SHA1 (patch-configure.in) = e8dab4a549e5cdf2e97d65b258970f9f6cc9c72c
+SHA1 (patch-jsfriendapi.h) = c6eea8b37d44a4b0f9ca0a325e482d01ef2c6e0f
+SHA1 (patch-vm_ArrayBufferObject.cpp) = 931695e3e02ec1d6ed0f722be1059c48878cd117
+SHA1 (patch-vm_JSONPrinter.cpp) = c2483309516249d23d448e48bc91e20a0b150fba
+SHA1 (patch-vm_JSONPrinter.h) = fd720eba1d4593f70d932029f64284e17396d075
