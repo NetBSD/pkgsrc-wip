@@ -164,3 +164,4 @@ ${PYSITELIB}/radicale/xmlutils.py
 ${PYSITELIB}/radicale/xmlutils.pyc
 ${PYSITELIB}/radicale/xmlutils.pyo
 share/examples/radicale/config
+share/examples/radicale/rights
