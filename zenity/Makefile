@@ -20,7 +20,7 @@ BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
 BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../wip/yelp-tools
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh
+	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 .include "options.mk"
 
@@ -31,5 +31,4 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

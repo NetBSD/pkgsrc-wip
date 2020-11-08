@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/gdialog
 bin/zenity
+man/man1/zenity.1
 share/help/C/zenity/calendar.page
 share/help/C/zenity/color-selection.page
 share/help/C/zenity/entry.page
@@ -919,7 +920,6 @@ share/locale/xh/LC_MESSAGES/zenity.mo
 share/locale/zh_CN/LC_MESSAGES/zenity.mo
 share/locale/zh_HK/LC_MESSAGES/zenity.mo
 share/locale/zh_TW/LC_MESSAGES/zenity.mo
-man/man1/zenity.1
 share/zenity/clothes/gnome-tshirt.png
 share/zenity/clothes/hawaii-shirt.png
 share/zenity/clothes/monk.png
