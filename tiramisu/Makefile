@@ -11,8 +11,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config gmake
 
-INSTALLATION_DIRS+=	bin share/doc/tiramisu
-MAKE_ENV+=              PREFIX=${PREFIX}
+INSTALLATION_DIRS+=	share/doc/tiramisu
+MAKE_ENV+=		PREFIX=${PREFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/tiramisu
