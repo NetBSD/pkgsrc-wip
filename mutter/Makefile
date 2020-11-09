@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	mutter-3.36.4
-PKGREVISION=	1
+DISTNAME=	mutter-3.38.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mutter/3.36/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mutter/3.38/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dan@alt.md
@@ -32,6 +31,8 @@ MESON_ARGS+=		-Dprofiler=false
 MESON_ARGS+=		-Dwayland=false
 MESON_ARGS+=		-Dtests=false #tests require Wayland support
 MESON_ARGS+=		-Dsm=true
+MESON_ARGS+=		-Dverbose=true
+MESON_ARGS+=		-Dopengl_libname=libGL.so.3
 
 PKGCONFIG_OVERRIDE+=	clutter/clutter/mutter-clutter.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl-pango/mutter-cogl-pango.pc.in
@@ -39,11 +40,7 @@ PKGCONFIG_OVERRIDE+=	cogl/cogl-path/mutter-cogl-path.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl/mutter-cogl.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmutter.pc.in
 
-LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-6
-
-# workaround for enums not being generated
-pre-build:
-	cd ${WRKSRC} && ninja -C output/ cogl/cogl-path/cogl-path-enum-types.h
+LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-7
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"

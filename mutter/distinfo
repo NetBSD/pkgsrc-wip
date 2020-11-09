@@ -1,7 +1,9 @@
 $NetBSD$
 
-SHA1 (mutter-3.36.4.tar.xz) = a985279c53d4d95501e2b7074cca2b8e5443ca7b
-RMD160 (mutter-3.36.4.tar.xz) = 98f50048799f8bf973da0478f0edead858a71a68
-SHA512 (mutter-3.36.4.tar.xz) = e7130e59d5539a53ac8a349a38ce1ce757c6eee2ba672fc9eab9330bde32217674a9a206bd977db03195dc42b6c327147467407dd0159c4e8585332d9c1daabb
-Size (mutter-3.36.4.tar.xz) = 2687224 bytes
-SHA1 (patch-src_meson.build) = 3f19c844e0c0f16f3978b1c2a801adea699689a7
+SHA1 (mutter-3.38.1.tar.xz) = 1337658865e93d23baa3378386af244135c1c071
+RMD160 (mutter-3.38.1.tar.xz) = bef92552b0aa566ceb478bc56baa925c263c3260
+SHA512 (mutter-3.38.1.tar.xz) = 55a65d80c886b90da110de69fca8f2c92912b36d6244bd6fcb1e09507469b5d860fa888614a33170b2799574f521ee117fb289a768fa2af5059fe0da51835d31
+Size (mutter-3.38.1.tar.xz) = 2618944 bytes
+SHA1 (patch-clutter_clutter_clutter-stage-view.c) = ebc27754595bce537d37f24c7e57294ad3fd939d
+SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.c) = b9ffe6e24c24f66f3e50866ebef1a6e6c8091d07
+SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.h) = 57511df382e28a2133ca54d011219cb9ff75a959
