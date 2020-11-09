@@ -1,5 +1,7 @@
 $NetBSD$
 
+Disable Linux-only functions
+
 --- clutter/clutter/clutter-stage-view.c.orig	2020-10-05 18:05:31.453278500 +0000
 +++ clutter/clutter/clutter-stage-view.c
 @@ -529,13 +529,13 @@ find_damaged_tiles (ClutterStageView    

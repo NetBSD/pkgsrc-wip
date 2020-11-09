@@ -40,7 +40,7 @@ PKGCONFIG_OVERRIDE+=	cogl/cogl-path/mutter-cogl-path.pc.in
 PKGCONFIG_OVERRIDE+=	cogl/cogl/mutter-cogl.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmutter.pc.in
 
-LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-7
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-7
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"

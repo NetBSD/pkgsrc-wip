@@ -1,5 +1,7 @@
 $NetBSD$
 
+Disable Linux-only functions
+
 --- cogl/cogl/cogl-dma-buf-handle.c.orig	2020-10-05 18:05:31.474278000 +0000
 +++ cogl/cogl/cogl-dma-buf-handle.c
 @@ -36,8 +36,10 @@
