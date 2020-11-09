@@ -3,9 +3,9 @@ $NetBSD$
 $OpenBSD: patch-js_misc_loginManager_js,v 1.10 2020/05/14 15:28:46 jasper Exp $
 
 Index: js/misc/loginManager.js
---- js/misc/loginManager.js.orig
+--- js/misc/loginManager.js.orig	2020-10-05 18:36:07.887838800 +0000
 +++ js/misc/loginManager.js
-@@ -14,6 +14,12 @@ const SystemdLoginManager = Gio.DBusProxy.makeProxyWra
+@@ -14,6 +14,12 @@ const SystemdLoginManager = Gio.DBusProx
  const SystemdLoginSession = Gio.DBusProxy.makeProxyWrapper(SystemdLoginSessionIface);
  const SystemdLoginUser = Gio.DBusProxy.makeProxyWrapper(SystemdLoginUserIface);
  
@@ -27,7 +27,7 @@ Index: js/misc/loginManager.js
      } catch (e) {
          return false;
      }
-@@ -84,7 +90,7 @@ function getLoginManager() {
+@@ -81,7 +87,7 @@ function getLoginManager() {
          if (haveSystemd())
              _loginManager = new LoginManagerSystemd();
          else
@@ -36,11 +36,10 @@ Index: js/misc/loginManager.js
      }
  
      return _loginManager;
-@@ -199,6 +205,82 @@ var LoginManagerSystemd = class {
-     }
+@@ -209,6 +215,82 @@ var LoginManagerSystemd = class {
  };
  Signals.addSignalMethods(LoginManagerSystemd.prototype);
-+
+ 
 +var LoginManagerConsoleKit = class {
 +    constructor () {
 +        this._proxy = new ConsoleKitManager(Gio.DBus.system,
@@ -116,6 +115,7 @@ Index: js/misc/loginManager.js
 +    }
 +}
 +Signals.addSignalMethods(LoginManagerConsoleKit.prototype);
- 
++
  var LoginManagerDummy = class {
      getCurrentSessionProxy(_callback) {
+         // we could return a DummySession object that fakes whatever callers

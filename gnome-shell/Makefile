@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	gnome-shell-3.36.4
-PKGREVISION=	3
+DISTNAME=	gnome-shell-3.38.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-shell/3.36/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-shell/3.38/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dan@alt.md
@@ -38,13 +37,14 @@ post-extract:
 .include "../../lang/python/application.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../wip/mutter/buildlink3.mk"
-.include "../../lang/gjs/buildlink3.mk"
+.include "../../wip/gjs/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"

@@ -1,9 +1,10 @@
 $NetBSD$
 
-SHA1 (gnome-shell-3.36.4.tar.xz) = 8c071d920e928c2986ffcae67dc1ab628b94ffc4
-RMD160 (gnome-shell-3.36.4.tar.xz) = 39eb9e1851bc432dabcded956d4fbe4e590b4ec5
-SHA512 (gnome-shell-3.36.4.tar.xz) = 879b1590d516e7e9e1ad066c870023d59cbaaca13e1e77d8b14de302574b3138451c4b8ab0ba1b43aec3e6e03bd147304e8e0e995359b181522a790afc97d450
-Size (gnome-shell-3.36.4.tar.xz) = 1774584 bytes
+SHA1 (gnome-shell-3.38.1.tar.xz) = 29d70150d37c35abb40e78c1deaedd669dfa9431
+RMD160 (gnome-shell-3.38.1.tar.xz) = e963d1570853308827bfa5d99d425ad0aa63b636
+SHA512 (gnome-shell-3.38.1.tar.xz) = 7ab580f892c4b4dac2fc8625343dfab1bf7a11e148dc01e6e805a5b1ac1d4cb17943b9a3058ec69fc086c270d76ef8073dca494991a5da1dcfa52b42dcc03f01
+Size (gnome-shell-3.38.1.tar.xz) = 1812860 bytes
 SHA1 (patch-data_gnome-shell-dbus-interfaces_gresource_xml) = de2bec04695594c5b1e4b0ecce3284bfd2edfab7
-SHA1 (patch-js_misc_loginManager_js) = 37880845e0db302af6d399076a3647e22c4f3bc1
+SHA1 (patch-js_misc_loginManager_js) = d37d17dd8a121d5ef5497fccafea954cc797286c
+SHA1 (patch-js_ui_endSessionDialog.js) = 6971df6ee8b65fa827131d92404f6ae817acd84c
 SHA1 (patch-src_shell-util.c) = 830dd5dec94775b64aeaed1738da2384f19c6ec7
