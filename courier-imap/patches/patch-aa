@@ -1,0 +1,35 @@
+$NetBSD$
+
+
+--- Makefile.in.orig	2019-03-28 08:34:40.000000000 +0900
++++ Makefile.in	2020-11-09 12:20:23.322706380 +0900
+@@ -432,9 +432,9 @@ man_MANS = couriertcpd.1 deliverquota.8 
+ EXTRA_DIST = README README.cygwin COPYING.GPL NEWS.html $(TEMPLFILES) \
+ 	pgpkeys.txt sysconftool
+ sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
+-	imapd.cnf pop3d.cnf quotawarnmsg.example
++	imapd.cnf pop3d.cnf
+ 
+-libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
++libexec_SCRIPTS = 
+ HTML2TXT = links -dump -no-numbering -no-references
+ 
+ # NOTE: when using a complex directory hierarchy it is only necessary to
+@@ -1454,6 +1454,9 @@ install-exec-local:
+ 	for f in mkimapdcert mkpop3dcert mkdhparams; \
+ 		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
+ 		$(LN_S) $(databindir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
++	for f in imapd-ssl imapd pop3d pop3d-ssl ; \
++		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
++		$(LN_S) $(databindir)/$$f.rc $(DESTDIR)$(sbindir)/$$f ; done
+ 	$(mkinstalldirs) $(DESTDIR)$(localstatedir)
+ 
+ install-exec-hook:
+@@ -1480,7 +1483,6 @@ install-data-local: install-man
+ uninstall-local:
+ 	for f in mkimapdcert mkpop3dcert mkdhparams; \
+ 		do rm -f $(DESTDIR)$(sbindir)/$$f ; done
+-	rm -f $(DESTDIR)$(bindir)/couriertls
+ 
+ INSTALL.txt: INSTALL.html
+ 	$(HTML2TXT) INSTALL.html >INSTALL.txt

@@ -1,0 +1,19 @@
+$NetBSD: patch-ao,v 1.2 2010/11/10 10:00:06 adam Exp $
+
+--- libs/imap/mkpop3dcert.in.orig	2013-11-11 02:56:33.000000000 +0000
++++ libs/imap/mkpop3dcert.in
+@@ -8,7 +8,13 @@
+ # POP3 over SSL.  Normally this script would get called by an automatic
+ # package installation routine.
+ 
+-if test "@ssllib@" = "openssl"
++case "$1" in
++gnutls)		ssllib="gnutls" ;;
++openssl)	ssllib="openssl" ;;
++*)		ssllib="@ssllib@" ;;
++esac
++
++if test "$ssllib" = "openssl"
+ then
+ 	test -x @OPENSSL@ || exit 0
+ else
