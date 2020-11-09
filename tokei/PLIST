@@ -1,3 +1,2 @@
 @comment $NetBSD$
-.crates2.json
 bin/tokei
