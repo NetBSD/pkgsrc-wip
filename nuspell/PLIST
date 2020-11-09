@@ -13,5 +13,4 @@ lib/libnuspell.${RUBY_DLEXT}
 lib/libnuspell.so.4
 lib/libnuspell.so.${PKGVERSION}
 lib/pkgconfig/nuspell.pc
-man/man1/nuspell.1
 share/doc/nuspell/README.md
