@@ -1,6 +1,6 @@
 $NetBSD$
 
-Do not override user's CFLAGS
+Do not override user's CFLAGS and honor LDFLAGS
 
 --- Makefile.orig	2020-09-21 07:05:29.000000000 +0000
 +++ Makefile
