@@ -1,23 +1,19 @@
 # $NetBSD: Makefile,v 1.166 2015/10/10 01:58:22 ryoon Exp $
-#
 
-DISTNAME=		gnome-session-3.36.0
-PKGREVISION=		1
+DISTNAME=		gnome-session-3.38.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/3.36/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} #gnome-splash-2.16.0.png
 
-LICENSE=		gnu-gpl-v2
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.gnome.org/
+HOMEPAGE=		https://gitlab.gnome.org/GNOME/gnome-session
 COMMENT=		GNOME3 session management utilities
+LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gettext-tools perl pkg-config
+USE_TOOLS+=		pkg-config msgfmt xgettext
 
 .include "../../graphics/MesaLib/features.mk"
 
@@ -33,11 +29,6 @@ MESON_ARGS+=		-Dsystemd_session=disable
 MESON_ARGS+=		-Dsystemd_journal=false
 MESON_ARGS+=		-Dconsolekit=true
 
-MAKE_ENV+=		REAL_GCONFTOOL=${GCONFTOOL2:Q}
-
-CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
-CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
-
 .include "../../devel/meson/build.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -45,8 +36,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/gnome-settings-daemon/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libxslt?=  build
+.include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../security/policykit-gnome/buildlink3.mk"
@@ -55,6 +45,7 @@ BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
