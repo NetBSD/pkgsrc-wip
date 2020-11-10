@@ -27,9 +27,10 @@ MESON_ARGS+=		-Dsmartcard=false
 MESON_ARGS+=		-Dwwan=false
 MESON_ARGS+=		-Dalsa=false
 
-PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
-
 LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/gnome-settings-daemon.pc
 
 .include "../../devel/meson/build.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
@@ -54,9 +55,4 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.1
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/libgnomekbd/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
-.include "../../x11/libxklavier/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

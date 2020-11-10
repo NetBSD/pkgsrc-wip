@@ -4,4 +4,3 @@ SHA1 (gnome-settings-daemon-3.38.1.tar.xz) = ca9f25f0609192fab5dff73d93fea3256e1
 RMD160 (gnome-settings-daemon-3.38.1.tar.xz) = f6135eb43315eeae8c129cc4d5df233817b93d94
 SHA512 (gnome-settings-daemon-3.38.1.tar.xz) = b32c0897d1a5680747bf68e9009ea44cf1a05ef807b772ca6514a278002754d520def7bced929b9004d3aec82a6e82b52637bd2eadd3f6cd54f3d0ac5c8e8cbd
 Size (gnome-settings-daemon-3.38.1.tar.xz) = 1437096 bytes
-SHA1 (patch-plugins_meson.build) = da39a3ee5e6b4b0d3255bfef95601890afd80709

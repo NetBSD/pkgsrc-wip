@@ -8,8 +8,6 @@ GNOME_SETTINGS_DAEMON_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gnome-settings-daemon+=	gnome-settings-daemon>=3.16.0
 BUILDLINK_ABI_DEPENDS.gnome-settings-daemon+=	gnome-settings-daemon>=3.16.1nb13
 BUILDLINK_PKGSRCDIR.gnome-settings-daemon?=	../../wip/gnome-settings-daemon
-
-.include "../../sysutils/dbus-glib/buildlink3.mk"
 .endif # GNOME_SETTINGS_DAEMON_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnome-settings-daemon
