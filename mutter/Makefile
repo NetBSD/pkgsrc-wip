@@ -2,11 +2,11 @@
 
 DISTNAME=	mutter-3.38.1
 CATEGORIES=	wm gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mutter/3.38/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dan@alt.md
-HOMEPAGE=	https://download.gnome.org/sources/mutter
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/mutter
 COMMENT=	GNOME Window manager and Wayland compositor
 LICENSE=	gnu-gpl-v2
 
