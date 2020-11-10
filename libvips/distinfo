@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (vips-8.10.1.tar.gz) = fc87f371b63b9e90cc0fb28bc79543ef5f9786e5
-RMD160 (vips-8.10.1.tar.gz) = 41010605bea8cca087fdc00af61c19366e6bff54
-SHA512 (vips-8.10.1.tar.gz) = 203d5d85fd22fd39166b03473a716faf9fce3833cf5deca74a21048b3b6eee7ac6577b5fc8a0ffee394f25d913308be324b93e8678d3541ffeee5df5797bf250
-Size (vips-8.10.1.tar.gz) = 19502268 bytes
+SHA1 (vips-8.10.2.tar.gz) = e5d08c0d2d7bfedd295fbc4a640c79bffecf44b1
+RMD160 (vips-8.10.2.tar.gz) = 3dad13d495727ab9af737c7df9ebee9420c49c3a
+SHA512 (vips-8.10.2.tar.gz) = f766c9dc1364037eaead577a32e41c415a90402a1d96c0ef767f7e694182a7bd86f047df403f90037f896d6d9df512f0c5f361d4f6db9c67c0d4c375965f4c8b
+Size (vips-8.10.2.tar.gz) = 19518825 bytes
