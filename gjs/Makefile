@@ -20,6 +20,8 @@ MESON_ARGS+=	-Dprofiler=disabled
 PKGCONFIG_OVERRIDE+=		output/meson-private/gjs-1.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
+CHECK_PORTABILITY_SKIP+=	tools/run_iwyu.sh
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
