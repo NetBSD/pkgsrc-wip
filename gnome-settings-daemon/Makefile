@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/3.38/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-settings-daemon
 COMMENT=	GNOME settings daemon
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
