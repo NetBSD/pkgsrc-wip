@@ -10,9 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeShell
 COMMENT=	Next generation GNOME shell
 LICENSE=	gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
-
-USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	pkg-config perl msgfmt xgettext
 
 MESON_ARGS+=	-Dnetworkmanager=false
 MESON_ARGS+=	-Dsystemd=false
@@ -25,9 +23,16 @@ TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
-REPLACE_PYTHON+=	meson/*.py
-
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell
+
+.include "../../mk/bsd.prefs.mk"
+
+# msgfmt: unknown option -- desktop
+.if ${OPSYS} == "NetBSD"
+TOOLS_PLATFORM.msgfmt=
+.endif
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 post-extract:
 	cp ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces/
@@ -43,13 +48,14 @@ post-extract:
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../wip/gjs/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
-.include "../../wip/mutter/buildlink3.mk"
+.include "../../wm/mutter/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
