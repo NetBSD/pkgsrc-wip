@@ -38,9 +38,6 @@ MAKE_ENV+=		REAL_GCONFTOOL=${GCONFTOOL2:Q}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
-# XXX unsure what is needed here instead
-GCONF_SCHEMAS=		gnome-session.schemas
-
 .include "../../devel/meson/build.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
