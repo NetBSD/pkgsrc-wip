@@ -458,7 +458,6 @@ SUBDIR+=	collectd-unbound
 SUBDIR+=	colm-devel
 SUBDIR+=	colobot
 SUBDIR+=	colord
-SUBDIR+=	colord-gtk
 SUBDIR+=	colorfull
 SUBDIR+=	colorize
 SUBDIR+=	comblas
