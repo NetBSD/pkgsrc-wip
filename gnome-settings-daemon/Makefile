@@ -4,14 +4,14 @@ DISTNAME=	gnome-settings-daemon-3.38.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/3.38/}
 EXTRACT_SUFX=	.tar.xz
-LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME settings daemon
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config msgfmt perl
@@ -31,33 +31,32 @@ PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
 LDFLAGS+=       ${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
 
-.include "../../textproc/iso-codes/buildlink3.mk"
-.include "../../x11/xkeyboard-config/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../devel/libgweather/buildlink3.mk"
+.include "../../geography/geoclue/buildlink3.mk"
+.include "../../geography/geocode-glib/buildlink3.mk"
 .include "../../graphics/colord/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.15.4
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/upower/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libgnomekbd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=5.0
 .include "../../x11/libxklavier/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.15.4
-.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
-.include "../../x11/gnome-desktop3/buildlink3.mk"
-.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../sysutils/upower/buildlink3.mk"
-.include "../../geography/geoclue/buildlink3.mk"
-.include "../../geography/geocode-glib/buildlink3.mk"
-.include "../../devel/libgweather/buildlink3.mk"
-.include "../../security/polkit/buildlink3.mk"
-.include "../../print/libcups/buildlink3.mk"
-.include "../../textproc/json-glib/buildlink3.mk"
-.include "../../devel/meson/build.mk"
-
+.include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
