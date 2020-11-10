@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2020/11/06 09:11:31 maya Exp $
 
-DISTNAME=	mozjs78_78.3.0.orig
+DISTNAME=	mozjs78_78.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	lang
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/m/mozjs78/
@@ -11,7 +11,7 @@ HOMEPAGE=	https://packages.debian.org/bullseye/libmozjs-78-0
 COMMENT=	SpiderMonkey JavaScript library (78.x branch)
 LICENSE=	mpl-1.1
 
-WRKSRC=		${WRKDIR}/firefox-78.3.0/js/src
+WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}/js/src
 USE_TOOLS+=	autoconf213 gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
