@@ -1125,7 +1125,6 @@ SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnome-mount
 SUBDIR+=	gnome-paint
-SUBDIR+=	gnome-screenshot
 SUBDIR+=	gnome-todo
 SUBDIR+=	gnome3
 SUBDIR+=	gnomebaker
