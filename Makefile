@@ -1114,7 +1114,6 @@ SUBDIR+=	gnochm
 SUBDIR+=	gnokii
 SUBDIR+=	gnomad2
 SUBDIR+=	gnome-apps
-SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-builder
 SUBDIR+=	gnome-clipboard-daemon
