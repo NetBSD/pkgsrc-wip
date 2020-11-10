@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.27 2015/11/04 01:32:15 agc Exp $
-
-SHA1 (gnome-menus-3.10.1.tar.xz) = 29226e7a8ab59984cabb13545cc0ec28cba55398
-RMD160 (gnome-menus-3.10.1.tar.xz) = 7ea8609b6c142469debd5ef55ebf2e6c68753095
-SHA512 (gnome-menus-3.10.1.tar.xz) = e6f0fe223e60f6c33a2ed2cd958035e5560d4063fbe7485263c4ad0eba82e18948d19f7dbe84dd0db5c339e94366759a0f98da533e2798c3ed9cc9a87f73c7e0
-Size (gnome-menus-3.10.1.tar.xz) = 423052 bytes
