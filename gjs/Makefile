@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://live.gnome.org/Gjs
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gjs
 COMMENT=	Javascript binding for GNOME based on Spidermonkey
 LICENSE=	mit
 
@@ -22,10 +22,10 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 CHECK_PORTABILITY_SKIP+=	tools/run_iwyu.sh
 
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/meson/build.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
