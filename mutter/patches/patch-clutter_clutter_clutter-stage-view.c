@@ -9,7 +9,7 @@ Disable Linux-only functions
  
    cogl_framebuffer_finish (COGL_FRAMEBUFFER (priv->shadow.framebuffer));
 -
-+#ifndef __NetBSD__
++#ifdef __linux__
    if (!cogl_dma_buf_handle_sync_read_start (prev_dma_buf_handle, error))
      return NULL;
  
@@ -25,7 +25,7 @@ Disable Linux-only functions
          }
      }
 -
-+#ifndef __NetBSD__
++#ifdef __linux__
    if (!cogl_dma_buf_handle_sync_read_end (prev_dma_buf_handle, error))
      {
        g_warning ("Failed to end DMA buffer read synchronization: %s",
@@ -43,7 +43,7 @@ Disable Linux-only functions
  err_mmap_current:
    cogl_dma_buf_handle_munmap (prev_dma_buf_handle, prev_data, NULL);
 -
-+#ifndef __NetBSD__
++#ifdef __linux__
  err_mmap_prev:
    cogl_dma_buf_handle_sync_read_end (current_dma_buf_handle, NULL);
  

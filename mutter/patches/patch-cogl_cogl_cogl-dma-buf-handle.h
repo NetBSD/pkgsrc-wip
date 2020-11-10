@@ -8,7 +8,7 @@ Disable Linux-only functions
  COGL_EXPORT void
  cogl_dma_buf_handle_free (CoglDmaBufHandle *dmabuf_handle);
  
-+# ifndef __NetBSD__
++# ifdef __linux__
  COGL_EXPORT gboolean
  cogl_dma_buf_handle_sync_read_start (CoglDmaBufHandle  *dmabuf_handle,
                                       GError           **error);

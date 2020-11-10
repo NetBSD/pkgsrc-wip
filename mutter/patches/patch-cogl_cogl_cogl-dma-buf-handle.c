@@ -8,7 +8,7 @@ Disable Linux-only functions
  
  #include <errno.h>
  #include <gio/gio.h>
-+#ifndef __NetBSD__
++#ifdef __linux__
  #include <linux/dma-buf.h>
  #include <sys/ioctl.h>
 +#endif
@@ -20,7 +20,7 @@ Disable Linux-only functions
  }
  
 +
-+#ifndef __NetBSD__
++#ifdef __linux__
  static gboolean
  sync_read (CoglDmaBufHandle  *dmabuf_handle,
             uint64_t           start_or_end,
