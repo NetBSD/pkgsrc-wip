@@ -7,4 +7,5 @@ Size (gnome-shell-3.38.1.tar.xz) = 1812860 bytes
 SHA1 (patch-data_gnome-shell-dbus-interfaces_gresource_xml) = de2bec04695594c5b1e4b0ecce3284bfd2edfab7
 SHA1 (patch-js_misc_loginManager_js) = d37d17dd8a121d5ef5497fccafea954cc797286c
 SHA1 (patch-js_ui_endSessionDialog.js) = 6971df6ee8b65fa827131d92404f6ae817acd84c
-SHA1 (patch-src_shell-util.c) = 830dd5dec94775b64aeaed1738da2384f19c6ec7
+SHA1 (patch-meson.build) = e6d2e514dcc64c744e308b08190d9e2e20190ac7
+SHA1 (patch-src_shell-util.c) = 92fbc695162f7fe735b92eb344215cf0c69e65c6

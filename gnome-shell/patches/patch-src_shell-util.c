@@ -2,20 +2,28 @@ $NetBSD$
 
 Quick ugly fix, breaks time string translation/format
 
---- src/shell-util.c.orig	2020-06-02 23:41:06.254288000 +0000
+--- src/shell-util.c.orig	2020-10-05 18:36:07.971836800 +0000
 +++ src/shell-util.c
-@@ -212,12 +212,12 @@ shell_util_translate_time_string (const 
+@@ -154,18 +154,22 @@ shell_util_translate_time_string (const 
+   locale_t old_loc;
+   locale_t loc = (locale_t) 0;
+ 
++#ifndef __NetBSD__
    if (locale)
      loc = newlocale (LC_MESSAGES_MASK, locale, (locale_t) 0);
  
--  old_loc = uselocale (loc);
-+  //old_loc = uselocale (loc);
+   old_loc = uselocale (loc);
++#endif
  
    sep = strchr (str, '\004');
    res = g_dpgettext (NULL, str, sep ? sep - str + 1 : 0);
  
--  uselocale (old_loc);
-+  //uselocale (old_loc);
++#ifndef __NetBSD__
+   uselocale (old_loc);
  
    if (loc != (locale_t) 0)
      freelocale (loc);
++#endif
+ 
+   return res;
+ }

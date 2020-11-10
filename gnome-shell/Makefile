@@ -25,6 +25,9 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell
 
+CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/gnome-shell-overrides-migration.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/gnome-shell-overrides-migration.desktop
+
 .include "../../mk/bsd.prefs.mk"
 
 # msgfmt: unknown option -- desktop
@@ -47,7 +50,7 @@ post-extract:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
-.include "../../wip/gjs/buildlink3.mk"
+.include "../../lang/gjs/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"

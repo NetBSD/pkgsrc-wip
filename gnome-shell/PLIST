@@ -2,7 +2,6 @@
 bin/gnome-shell
 bin/gnome-shell-extension-prefs
 bin/gnome-shell-perf-tool
-etc/xdg/autostart/gnome-shell-overrides-migration.desktop
 lib/gnome-shell/Gvc-1.0.typelib
 lib/gnome-shell/Shell-0.1.typelib
 lib/gnome-shell/St-1.0.typelib
@@ -32,6 +31,7 @@ share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 share/dbus-1/services/org.gnome.Shell.Extensions.service
 share/dbus-1/services/org.gnome.Shell.HotplugSniffer.service
 share/dbus-1/services/org.gnome.Shell.Notifications.service
+share/examples/xdg/autostart/gnome-shell-overrides-migration.desktop
 share/glib-2.0/schemas/00_org.gnome.shell.gschema.override
 share/glib-2.0/schemas/org.gnome.shell.gschema.xml
 share/gnome-control-center/keybindings/50-gnome-shell-system.xml
