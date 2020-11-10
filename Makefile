@@ -1130,7 +1130,6 @@ SUBDIR+=	gnome-mount
 SUBDIR+=	gnome-paint
 SUBDIR+=	gnome-panel
 SUBDIR+=	gnome-screenshot
-SUBDIR+=	gnome-shell
 SUBDIR+=	gnome-todo
 SUBDIR+=	gnome3
 SUBDIR+=	gnomebaker
