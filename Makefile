@@ -1212,7 +1212,6 @@ SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	grabtitle-git
 SUBDIR+=	grandr
 SUBDIR+=	granite
-SUBDIR+=	graphene
 SUBDIR+=	graphmonkey
 SUBDIR+=	grass
 SUBDIR+=	grass-JockeyRidge
