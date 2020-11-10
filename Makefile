@@ -644,6 +644,7 @@ SUBDIR+=	dosemu2
 SUBDIR+=	dotproject
 SUBDIR+=	double-conversion
 SUBDIR+=	dovecot-antispam
+SUBDIR+=	dovecot2-fts-xapian
 SUBDIR+=	downtimed
 SUBDIR+=	dpic
 SUBDIR+=	dps8m

@@ -1,0 +1,2 @@
+@comment $NetBSD$
+lib/dovecot/lib21_fts_xapian_plugin.la
