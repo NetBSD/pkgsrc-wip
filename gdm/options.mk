@@ -21,9 +21,12 @@ CONFIGURE_ARGS+=	--with-console-kit=yes
 CONFIGURE_ARGS+=	--with-console-kit=no
 .endif
 
+PLIST_VARS+=		pam
+
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
+PLIST.pam=		yes
 .elif exists(/etc/shadow)
 CONFIGURE_ARGS+=	--enable-authentication-scheme=shadow
 .else

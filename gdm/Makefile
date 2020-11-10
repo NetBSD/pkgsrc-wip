@@ -95,7 +95,8 @@ GDMGRP=		daemon
 # will receive key presses.  And on slow machines, X will have lost access
 # to the keyboard.
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD") && \
-    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+     ${MACHINE_ARCH} == "aarch64")
 CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 .endif
 
