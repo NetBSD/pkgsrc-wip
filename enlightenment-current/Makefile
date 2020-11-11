@@ -14,7 +14,6 @@ LICENSE=	2-clause-bsd
 
 CONFLICTS=	enlightenment-[0-9]*
 
-USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/modules/everything/everything.pc.in

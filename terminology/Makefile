@@ -11,8 +11,7 @@ HOMEPAGE=	https://www.enlightenment.org/about-terminology
 COMMENT=	Enlightenment terminal
 LICENSE=	2-clause-bsd
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	pkg-config
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

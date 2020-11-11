@@ -32,7 +32,6 @@ MESON_ARGS+=	-Dbuild-examples=false
 #MESON_ARGS+=	-Dv4l2=false
 MESON_ARGS+=	-Dphysics=true
 
-USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
 ICON_THEMES=		yes
@@ -57,8 +56,10 @@ REPLACE_PYTHON+=	src/bin/exactness/exactness_record.in
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${X11_TYPE} != "modular"
+
 SUBST_CLASSES+=			fix-options
 SUBST_MESSAGE.fix-options=	Fixing meson opengl options
 SUBST_STAGE.fix-options=	pre-configure
@@ -66,15 +67,14 @@ SUBST_FILES.fix-options=	meson_options.txt
 SUBST_SED.fix-options=		-e "s|'es-egl', 'none'|'es-egl', 'base', 'none'|g"
 
 MESON_ARGS+=	-Dopengl=base
-.endif
 
-.include "options.mk"
+.else
 
-.if ${X11_TYPE} == "modular"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
+
 .endif
 
 .include "../../audio/pulseaudio/buildlink3.mk"
@@ -86,7 +86,6 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-#.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
@@ -97,10 +96,7 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
-#.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
-#.include "../../x11/libXinerama/buildlink3.mk"
-#.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
