@@ -27,9 +27,6 @@ pre-configure:
 	set -e; cd ${WRKSRC}; \
         autoreconf -i
 
-post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/lib/dovecot/lib21_fts_xapian_plugin.so
-
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mail/dovecot2/buildlink3.mk"
