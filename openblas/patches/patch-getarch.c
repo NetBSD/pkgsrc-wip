@@ -2,10 +2,10 @@ $NetBSD$
 
 Do not override our parallel make choice.
 
---- getarch.c.orig	2018-12-31 23:09:59.000000000 +0100
-+++ getarch.c	2019-03-22 17:24:40.477260427 +0100
-@@ -1236,19 +1236,6 @@
- #endif
+--- getarch.c.orig	2020-11-11 22:35:05.756907595 +0000
++++ getarch.c
+@@ -1369,19 +1369,6 @@ printf("__BYTE_ORDER__=__ORDER_BIG_ENDIA
+ printf("ELF_VERSION=2\n");
  #endif
  
 -#ifdef MAKE_NB_JOBS

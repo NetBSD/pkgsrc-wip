@@ -92,7 +92,7 @@ MAKE_FLAGS+=	LIBNAMESUFFIX=openmp USE_OPENMP=1 NO_AFFINITY=1
 
 SUBST_CLASSES+=		arch
 SUBST_STAGE.arch=	pre-build
-SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+"
+SUBST_SED.arch+=	-e "s+(ARCH)+(ARCH_)+g"
 SUBST_FILES.arch+=	Makefile.tail
 SUBST_FILES.arch+=	driver/level3/Makefile
 SUBST_FILES.arch+=	driver/others/Makefile
@@ -101,11 +101,6 @@ SUBST_FILES.arch+=	interface/Makefile
 SUBST_FILES.arch+=	kernel/Makefile
 SUBST_FILES.arch+=	kernel/Makefile.L3
 SUBST_FILES.arch+=	lapack/laswp/Makefile
-SUBST_FILES.arch+=	lapack-netlib/SRC/Makefile
-SUBST_FILES.arch+=	lapack-netlib/SRC/VARIANTS/Makefile
-SUBST_FILES.arch+=	lapack-netlib/TESTING/MATGEN/Makefile
-SUBST_FILES.arch+=	lapack-netlib/LAPACKE/src/Makefile
-SUBST_FILES.arch+=	lapack-netlib/LAPACKE/utils/Makefile
 SUBST_FILES.arch+=	reference/Makefile
 SUBST_FILES.arch+=	Makefile.system
 
