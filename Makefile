@@ -4971,7 +4971,6 @@ SUBDIR+=	tinyfugue-beta
 SUBDIR+=	tinylogin
 SUBDIR+=	tinyproxy
 SUBDIR+=	tipp10
-SUBDIR+=	tiramisu
 SUBDIR+=	tk-itk3
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
