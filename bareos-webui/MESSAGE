@@ -1,0 +1,72 @@
+===========================================================================
+$NetBSD: $
+
+To use Bareos Web UI, you will need to perform the following steps.
+
+1. Install nginx httpd server, for example www/nginx.
+
+2. Install PHP-FPM, PHP FastCGI Process Magager from www/php-fpm.
+
+3. Be sure to have the following lines in ${PREFIX}/etc/nginx/nginx.conf
+   to enable PHP script in http://YOUR_SERVER_NAME/ .
+
+user nginx nginx;
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include       /usr/pkg/etc/nginx/mime.types;
+    default_type  application/octet-stream;
+    sendfile      on;
+    keepalive_timeout  65;
+
+    upstream php-handler {
+        server 127.0.0.1:9000;
+    }
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        charset utf-8;
+
+        root ${PREFIX}/share/bareos-webui;
+        index  index.php;
+
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        error_page  404              /404.html;
+        error_page  500 502 503 504  /50x.html;
+
+        location ~ \.php$ {
+            try_files $uri =404;
+            fastcgi_pass php-handler;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+            fastcgi_param APPLICATION_ENV production;
+        }
+    }
+}
+
+4. Adjust newsyslog configuration for nginx and php-fpm
+
+/var/log/nginx/access.log nginx:nginx 640 7 * 24 ZB /var/run/nginx.pid SIGUSR1
+/var/log/nginx/error.log  nginx:nginx 640 7 * 24 ZB /var/run/nginx.pid SIGUSR1
+/var/log/php-fpm.log 640 7 * * BZ /var/run/php-fpm.pid SIGUSR1
+
+5. Start PHP-FPM daemon.
+
+	${RCD_SCRIPTS_DIR}/php_fpm start
+
+6. Start nginx httpd server.
+
+	${RCD_SCRIPTS_DIR}/nginx start
+
+7. Access http://YOUR_SERVER_NAME/
+===========================================================================
