@@ -1118,7 +1118,6 @@ SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-builder
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-common
-SUBDIR+=	gnome-control-center
 SUBDIR+=	gnome-core
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
