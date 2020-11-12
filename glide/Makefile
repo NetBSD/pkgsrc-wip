@@ -4,7 +4,7 @@ DISTNAME=	glide-0.5.8
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=philn/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/philn/glide/
 COMMENT=	Cross-platform media player based on GStreamer and GTK+
 LICENSE=	mit
