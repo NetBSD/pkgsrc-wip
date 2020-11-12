@@ -1,0 +1,18 @@
+$NetBSD$
+
+This enables building both shared and static libs.
+
+--- CMakeLists.txt.orig	2020-06-09 19:05:01.803103294 +0200
++++ CMakeLists.txt	2020-06-09 19:09:46.581054808 +0200
+@@ -234,6 +234,11 @@
+    add_library(scalapack ${blacs} ${tools} ${tools-C} ${extra_lapack} ${pblas} ${pblas-F} ${ptzblas} ${ptools} ${pbblas} ${redist} ${src} ${src-C})
+    target_link_libraries( scalapack ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+    scalapack_install_library(scalapack)
++   if(BUILD_SHARED_LIBS AND BUILD_STATIC_LIBS)
++      add_library(scalapack_static STATIC ${blacs} ${tools} ${tools-C} ${extra_lapack} ${pblas} ${pblas-F} ${ptzblas} ${ptools} ${pbblas} ${redist} ${src} ${src-C})
++      set_target_properties(scalapack_static PROPERTIES OUTPUT_NAME scalapack)
++      scalapack_install_library(scalapack_static)
++   endif()
+ else (UNIX) # Need to separate Fortran and C Code
+    OPTION(BUILD_SHARED_LIBS "Build shared libraries" ON )
+    add_library(scalapack ${blacs} ${tools-C} ${pblas} ${ptools} ${redist} ${src-C})

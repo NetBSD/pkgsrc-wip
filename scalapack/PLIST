@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/cmake/${PKGNAME}/scalapack-config-version.cmake
+lib/cmake/${PKGNAME}/scalapack-config.cmake
+lib/cmake/${PKGNAME}/scalapack-targets-noconfig.cmake
+lib/cmake/${PKGNAME}/scalapack-targets.cmake
+lib/libscalapack.a
+lib/libscalapack.so
+lib/pkgconfig/scalapack.pc

@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (scalapack-2.1.0.tgz) = 9dae1d4d49fe187583eec88e71770edb68e082b7
+RMD160 (scalapack-2.1.0.tgz) = 4eee240e39bcfaad1c2a38657014e1a51b778340
+SHA512 (scalapack-2.1.0.tgz) = 0e77fb535ebcc28e2d97499ef4bd5161f76ca0ba4a3e308c26ce5071cfc4be4f3814262f3fb38f378ce0b5b31c0913432fea00a1e9e3f7717b853d1182bdf5b4
+Size (scalapack-2.1.0.tgz) = 5307441 bytes
+SHA1 (patch-CMakeLists.txt) = a826593cfbc0fe2cfbb87d4dfc2b342c1a45d0d6
+SHA1 (patch-gcc10fixfromgit) = a6ac951efdf93bfde597cf83ef75de8afb615d8c
+SHA1 (patch-scalapack.pc.in) = 53dd2eeba58462e8788e92f4684d943357799361

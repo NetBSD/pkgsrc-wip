@@ -1,0 +1,13 @@
+$NetBSD$
+
+Do not assume fixed names for MPI and BLAS dependency pkg-config
+packages. They can vary. Rather use provided libraries directly.
+
+--- scalapack.pc.in.orig	2020-06-09 07:23:53.989672521 +0200
++++ scalapack.pc.in	2020-06-09 07:24:47.789286720 +0200
+@@ -6,4 +6,4 @@
+ Version: @SCALAPACK_VERSION@
+ URL: http://www.netlib.org/scalapack/
+ Libs: -L${libdir} -lscalapack
+-Requires: mpi lapack blas
++Libs.private: @MPI_LIBRARIES@ @BLAS_LIBRARIES@ @LAPACK_LIBRARIES@
