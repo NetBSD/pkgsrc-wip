@@ -3,7 +3,7 @@
 DISTNAME=	opendoas-6.6.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
-GITHUB_TAG=	b1ae418af40289ea4f40449a819df26ee3bdd399
+GITHUB_TAG=	17629b9ce63dba6aa4146d483cd61448cddb1fa5
 
 MAINTAINER=	sunil@nimmagadda.net
 HOMEPAGE=	https://github.com/duncaen/opendoas
@@ -25,7 +25,7 @@ SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 SUBST_CLASSES+=		install
 SUBST_MESSAGE.install=	Let SPECIAL_PERMS handle permissions.
 SUBST_STAGE.install=	pre-install
-SUBST_FILES.install=	bsd.prog.mk
+SUBST_FILES.install=	GNUmakefile
 SUBST_SED.install=	-e "/chown/d"
 SUBST_SED.install+=	-e "/chmod/d"
 
@@ -35,10 +35,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 USE_TOOLS=	gmake yacc
-BUILD_TARGET=	default
-
-# Prefer NetBSD's libc version of reallocarray(3)
-CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE=1
+MAKE_FILE=	GNUmakefile
 
 SPECIAL_PERMS+=	bin/doas ${SETUID_ROOT_PERMS}
 
