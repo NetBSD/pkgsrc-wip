@@ -46,6 +46,8 @@ CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
 CONFIGURE_ARGS+=	--user=${UNIT_USER}
 CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
 
+PLIST_SUBST+=		UNITEXTDIR="${UNIT_EXTENSION_DIR}"
+
 .include "../../www/unit/options.mk"
 
 INSTALLATION_DIRS+=	sbin
