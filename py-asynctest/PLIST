@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/asynctest/__init__.py
+${PYSITELIB}/asynctest/__init__.pyc
+${PYSITELIB}/asynctest/__init__.pyo
+${PYSITELIB}/asynctest/_fail_on.py
+${PYSITELIB}/asynctest/_fail_on.pyc
+${PYSITELIB}/asynctest/_fail_on.pyo
+${PYSITELIB}/asynctest/case.py
+${PYSITELIB}/asynctest/case.pyc
+${PYSITELIB}/asynctest/case.pyo
+${PYSITELIB}/asynctest/helpers.py
+${PYSITELIB}/asynctest/helpers.pyc
+${PYSITELIB}/asynctest/helpers.pyo
+${PYSITELIB}/asynctest/mock.py
+${PYSITELIB}/asynctest/mock.pyc
+${PYSITELIB}/asynctest/mock.pyo
+${PYSITELIB}/asynctest/selector.py
+${PYSITELIB}/asynctest/selector.pyc
+${PYSITELIB}/asynctest/selector.pyo

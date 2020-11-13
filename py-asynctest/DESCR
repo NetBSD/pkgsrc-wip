@@ -1,0 +1,3 @@
+The package asynctest is built on top of the standard
+unittest module and cuts down boilerplate code when
+testing libraries for asyncio
