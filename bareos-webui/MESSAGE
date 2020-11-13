@@ -33,7 +33,7 @@ http {
 
         charset utf-8;
 
-        root ${PREFIX}/share/bareos-webui;
+        root ${PREFIX}/share/bareos-webui/public
         index  index.php;
 
         location / {
