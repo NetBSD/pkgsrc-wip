@@ -48,8 +48,6 @@ CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
 
 .include "../../www/unit/options.mk"
 
-RCD_SCRIPTS=		unit
-
 INSTALLATION_DIRS+=	sbin
 MAKE_DIRS+=		${UNIT_PIDDIR} ${UNIT_DATADIR} ${UNIT_RUNDIR}
 OWN_DIRS=		${UNIT_LOGDIR} ${UNIT_RUNDIR}

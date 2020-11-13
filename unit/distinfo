@@ -1,8 +1,6 @@
 $NetBSD$
 
-SHA1 (unit-1.19.0.tar.gz) = 2bea0d55b2249ce1990b04afcf745ef57a2eb969
-RMD160 (unit-1.19.0.tar.gz) = 9bd87f1a80636155a6e20b3aaadafc99c70f18eb
-SHA512 (unit-1.19.0.tar.gz) = 42def84da15b17a195df65122e4e419c2042e2acf5d560bb877d578d2d2ab7c2212d1e948e301dd457e4de6a1fbd9d53e020b1af24c0602f1dbf75751611e655
-Size (unit-1.19.0.tar.gz) = 761292 bytes
-SHA1 (patch-auto_sendfile) = 9a5d0caaf9ffb787d5961eaa891bbe680300a8d6
-SHA1 (patch-src_nxt__conn__write.c) = c5a70c2e18ed399bece5efcebe38f0369c7c911d
+SHA1 (unit-1.20.0.tar.gz) = f4a2d2a6b622742acd138a66008407b5f674b08f
+RMD160 (unit-1.20.0.tar.gz) = 8964e056dbe19e659b157a89d1cf39f213ffd952
+SHA512 (unit-1.20.0.tar.gz) = dd68103795acbdcd87a951c92c72f3cb74b5e622eca4e687194508b55a592ac4312de3a8ff7ddb9a5df9750363b24dca9e1b48c7ef42c78aca3a18aca6a51f42
+Size (unit-1.20.0.tar.gz) = 787607 bytes
