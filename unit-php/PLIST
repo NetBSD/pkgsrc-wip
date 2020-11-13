@@ -1,0 +1,2 @@
+@comment $NetBSD$
+libexec/unit/modules/${UNIT_MODNAME}.unit.so

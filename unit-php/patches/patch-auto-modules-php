@@ -1,0 +1,11 @@
+--- auto/modules/php.orig	2020-10-09 11:15:55.011861773 -0400
++++ auto/modules/php	2020-10-09 11:16:18.986144628 -0400
+@@ -112,7 +112,7 @@
+             # "php-config --ldflags" does not contain path to libphp, but
+             # contains usually path to libraries required by extensions.
+             NXT_PHP_LDFLAGS="-L${NXT_PHP_LIB_PATH} \
+-                             -Wl,-rpath ${NXT_PHP_LIB_PATH}"
++                             -Wl,-rpath,${NXT_PHP_LIB_PATH}"
+         fi
+     fi
+ 
