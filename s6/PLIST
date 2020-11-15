@@ -8,19 +8,12 @@ bin/s6-envdir
 bin/s6-envuidgid
 bin/s6-fdholder-daemon
 bin/s6-fdholder-delete
-bin/s6-fdholder-deletec
 bin/s6-fdholder-getdump
-bin/s6-fdholder-getdumpc
 bin/s6-fdholder-list
-bin/s6-fdholder-listc
 bin/s6-fdholder-retrieve
-bin/s6-fdholder-retrievec
 bin/s6-fdholder-setdump
-bin/s6-fdholder-setdumpc
 bin/s6-fdholder-store
-bin/s6-fdholder-storec
 bin/s6-fdholder-transferdump
-bin/s6-fdholder-transferdumpc
 bin/s6-fdholderd
 bin/s6-fghack
 bin/s6-ftrig-listen
@@ -61,6 +54,7 @@ bin/s6-tai64nlocal
 bin/s6lockd
 bin/ucspilogd
 include/s6/accessrules.h
+include/s6/compat.h
 include/s6/config.h
 include/s6/ftrigr.h
 include/s6/ftrigw.h
