@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tdlib-purple-0.7.1
+DISTNAME=	tdlib-purple-0.7.4
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ars3niy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

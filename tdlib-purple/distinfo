@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (tdlib-purple-0.7.1.tar.gz) = 797f6ce1be3c7813b8dc0ddc002bc798edcfd892
-RMD160 (tdlib-purple-0.7.1.tar.gz) = 1edd962a0a723defbbab673dfd6b2c5c68d2acf9
-SHA512 (tdlib-purple-0.7.1.tar.gz) = f39c68c760f0ace5f0e2dd2cdf85b6f84b2cbf4044f292963cb4d29a83660f7d6253497518964a114a3bb628875ab8437f02a221d85d6f174fab0ef0f6d922bf
-Size (tdlib-purple-0.7.1.tar.gz) = 759907 bytes
+SHA1 (tdlib-purple-0.7.4.tar.gz) = e0c39b491cd3dc9ca4f00067f2460bc737d52ca8
+RMD160 (tdlib-purple-0.7.4.tar.gz) = 93684116c7c7a44cae91561d410ef979366d0853
+SHA512 (tdlib-purple-0.7.4.tar.gz) = df6411d53b5fd47dc37d75113854c689c26c60f5c738b305a05d5953975a1e09d84e85e3d6eac159836e7d01279f70d5f3e1af4780e58f7cfa974f0f6ea1e42b
+Size (tdlib-purple-0.7.4.tar.gz) = 768472 bytes
