@@ -12,7 +12,7 @@ LICENSE=        gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.7.6:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.8.0:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-dnspython>=2.0.0:../../wip/py-dnspython
+DEPENDS+=	${PYPKGPREFIX}-dnspython>=2.0.0:../../wip/py-dns
 DEPENDS+=       ${PYPKGPREFIX}-asn1>=0.4.8:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=19.1.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=2.1:../../time/py-tzlocal
