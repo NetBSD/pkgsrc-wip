@@ -20,28 +20,29 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	doas.1 doas.conf.5
 SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 
-# Let SPECIAL_PERMS handle permissions/setuid of the binary while
-# allowing to build as an unprivileged user.
-SUBST_CLASSES+=		install
-SUBST_MESSAGE.install=	Let SPECIAL_PERMS handle permissions.
-SUBST_STAGE.install=	pre-install
-SUBST_FILES.install=	GNUmakefile
-SUBST_SED.install=	-e "/chown/d"
-SUBST_SED.install+=	-e "/chmod/d"
+EGDIR=	share/examples/${PKGBASE}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/${EGDIR}
 
 USE_TOOLS=	gmake yacc
 MAKE_FILE=	GNUmakefile
 
-BUILDLINK_TRANSFORM+=   rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
-SPECIAL_PERMS+=	bin/doas ${SETUID_ROOT_PERMS}
-
+SPECIAL_PERMS+=		bin/doas ${SETUID_ROOT_PERMS}
 NOT_FOR_UNPRIVILEGED=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Darwin"
+CONF_FILES=	${EGDIR}/doas ${PKG_SYSCONFDIR}/pam.d/doas
+.endif
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

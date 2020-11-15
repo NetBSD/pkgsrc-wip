@@ -2,3 +2,4 @@
 bin/doas
 man/man1/doas.1
 man/man5/doas.conf.5
+@pkgdir share/examples/opendoas

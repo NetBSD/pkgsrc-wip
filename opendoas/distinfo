@@ -4,3 +4,4 @@ SHA1 (opendoas-6.6.1-17629b9ce63dba6aa4146d483cd61448cddb1fa5.tar.gz) = 153f4816
 RMD160 (opendoas-6.6.1-17629b9ce63dba6aa4146d483cd61448cddb1fa5.tar.gz) = ee0cf9076220f748599678b49011f35fa390e7e6
 SHA512 (opendoas-6.6.1-17629b9ce63dba6aa4146d483cd61448cddb1fa5.tar.gz) = 2092a5aa3cfaa3af259a7f49e90c2337bfcccb5adc6a2710c56a81d8505ea83de0311edcf01b8bdf2ca6af5b188244a9d0c7a0034d06bfe7d28850b57396c357
 Size (opendoas-6.6.1-17629b9ce63dba6aa4146d483cd61448cddb1fa5.tar.gz) = 32344 bytes
+SHA1 (patch-GNUmakefile) = eadcd4d96f419059d4a26516705001ba70b2e8e0
