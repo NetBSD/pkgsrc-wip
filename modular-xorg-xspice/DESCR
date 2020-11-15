@@ -1,0 +1,3 @@
+The QXL virtual GPU is found in the RedHat Enterprise Virtualisation system,
+and also in the spice project. This package provides the Xspice server script
+and Xorg drivers.

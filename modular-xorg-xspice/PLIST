@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/Xspice
+lib/xorg/modules/drivers/spiceqxl_drv.la
+share/doc/xf86-video-qxl/spiceqxl.xorg.conf.example
+@pkgdir share/doc/xf86-video-qxl
