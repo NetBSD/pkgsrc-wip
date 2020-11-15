@@ -33,6 +33,7 @@ bin/s6-seq
 bin/s6-sleep
 bin/s6-sort
 bin/s6-sync
+bin/s6-tai64ndiff
 bin/s6-tail
 bin/s6-test
 bin/s6-touch

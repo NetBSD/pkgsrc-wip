@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	s6-portable-utils-2.2.1.2
-PKGREVISION=	1
+DISTNAME=	s6-portable-utils-2.2.3.0
 CATEGORIES=	misc
-MASTER_SITES=	http://www.skarnet.org/software/s6-portable-utils/
+MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://www.skarnet.org/software/s6-portable-utils/

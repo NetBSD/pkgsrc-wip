@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (s6-portable-utils-2.2.1.2.tar.gz) = 2789b2a13ed0527bdca50f4033aad38fc1c4a621
-RMD160 (s6-portable-utils-2.2.1.2.tar.gz) = d4a3272977cfad36cf5d9fe2f5474e7d46b7e106
-SHA512 (s6-portable-utils-2.2.1.2.tar.gz) = 697356a1bea6a0d9ca2dc995667fb2c3ab0e0ec72f9cba9f64a3b745e17ff85793be4b9a3bfcb8137938b732195fdabd2ffba5cef26f86f3ad2705907c6a8ab4
-Size (s6-portable-utils-2.2.1.2.tar.gz) = 47446 bytes
+SHA1 (s6-portable-utils-2.2.3.0.tar.gz) = 962a6926bceb9e5dd20e2ff9cb12dca6346a200e
+RMD160 (s6-portable-utils-2.2.3.0.tar.gz) = 1860115bbf00c6d70cf4363693be09c917565cba
+SHA512 (s6-portable-utils-2.2.3.0.tar.gz) = 17cb58a49494bba323f031aa07db134505a0884827745ea48e4e93d1ea70b9d4dd141d065b126abb40d5c7625cbb03ba71090e66fd0adb0c54ab49478e929837
+Size (s6-portable-utils-2.2.3.0.tar.gz) = 49239 bytes
