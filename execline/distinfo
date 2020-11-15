@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (execline-2.5.0.1.tar.gz) = 1ac507bafeba6893f2bfd20c55d4b43709df78ed
-RMD160 (execline-2.5.0.1.tar.gz) = cb38f6f77cab60558d2f008215ab1bfea3a1cb4d
-SHA512 (execline-2.5.0.1.tar.gz) = 9e013a83844fc3f5b28c6aea44b446f550dafe52131facf0d7c0648c9ae62c4a62d895f72cedb010754319c0e298fb4c8396d2c6be019cd6218558934bffaea3
-Size (execline-2.5.0.1.tar.gz) = 81854 bytes
+SHA1 (execline-2.6.1.1.tar.gz) = 589f3b763a5841389c970275801cd7ff9a44cad4
+RMD160 (execline-2.6.1.1.tar.gz) = 420355eadf71d74604331d8bb3170abaf6f7b758
+SHA512 (execline-2.6.1.1.tar.gz) = 5826abb407742ad8a2cd48c09b966827d129dda420db07c893cd7a27e806441d7b117a0c61fdc0222e527aada976da26e4779a4896fc084cdf6efa8294ffac5b
+Size (execline-2.6.1.1.tar.gz) = 92495 bytes
