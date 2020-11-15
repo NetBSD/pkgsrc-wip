@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/s6-dnsip
 bin/s6-dnsip4
 bin/s6-dnsip4-filter
 bin/s6-dnsip6
@@ -16,6 +17,7 @@ bin/s6-dnstxt
 bin/s6-randomip
 bin/skadnsd
 include/s6-dns/config.h
+include/s6-dns/dcache.h
 include/s6-dns/s6dns-analyze.h
 include/s6-dns/s6dns-constants.h
 include/s6-dns/s6dns-debug.h
@@ -28,5 +30,6 @@ include/s6-dns/s6dns-rci.h
 include/s6-dns/s6dns-resolve.h
 include/s6-dns/s6dns.h
 include/s6-dns/skadns.h
+lib/s6-dns/libdcache.a
 lib/s6-dns/libs6dns.a
 lib/s6-dns/libskadns.a
