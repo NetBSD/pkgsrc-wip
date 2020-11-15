@@ -11,7 +11,7 @@ name="bitlbee"
 rcvar=$name
 command="@PREFIX@/sbin/bitlbee"
 pidfile="@VARBASE@/run/${name}/pid"
-command_args="-D"	# run as a daemon
+command_args="-F"	# run as a fork daemon
 start_precmd="bitlbee_precmd"
 
 bitlbee_precmd()
