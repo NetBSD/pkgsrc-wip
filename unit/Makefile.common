@@ -1,7 +1,10 @@
 # $NetBSD$
 #
 # used by www/unit/Makefile
+# used by www/unit-perl/Makefile
 # used by www/unit-php/Makefile
+# used by www/unit-python/Makefile
+# used by www/unit-ruby/Makefile
 
 # Do *not* add any version-specific data here
 

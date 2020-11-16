@@ -10,4 +10,4 @@ ${PLIST.devkit}include/nxt_version.h
 ${PLIST.devkit}include/nxt_websocket_header.h
 ${PLIST.devkit}lib/libunit.a
 sbin/unitd
-@pkgdir libexec/unit
+@pkgdir ${UNITEXTDIR}
