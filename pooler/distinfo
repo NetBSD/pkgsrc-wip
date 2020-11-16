@@ -4,4 +4,5 @@ SHA1 (pooler-1.75.tar.gz) = 1b8c92087d40c664dc6547b58cccaa966d7273a2
 RMD160 (pooler-1.75.tar.gz) = 2f0a7b2388fb20c18e231c3b3f917762f58b2d54
 SHA512 (pooler-1.75.tar.gz) = d72f063455aaf5eb9de30cbbfd649cc069af4192d2f2aaf4d20d5f70973a41a0e92f660842e306d557ab8737de0d95ce0021cfbd247251b2f0f3e255ca13b487
 Size (pooler-1.75.tar.gz) = 125999 bytes
-SHA1 (patch-Makefile) = 97f8c8a673564311be5ff4134eda83dd095252db
+SHA1 (patch-Makefile) = 32f05ccd92c60da7c7683ccbe696062a7c0b79b6
+SHA1 (patch-bit-basics.h) = d9405402333d495020e592bb47b8f35fa060bcf4
