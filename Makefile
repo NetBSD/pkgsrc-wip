@@ -2962,6 +2962,7 @@ SUBDIR+=	polyclipping
 SUBDIR+=	polylib
 SUBDIR+=	polymul
 SUBDIR+=	ponyc
+SUBDIR+=	pooler
 SUBDIR+=	pop3.proxy
 SUBDIR+=	popup-el-current
 SUBDIR+=	portfwd

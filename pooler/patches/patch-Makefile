@@ -1,0 +1,19 @@
+$NetBSD$
+
+# Create install dirs
+
+--- Makefile.orig	2020-11-16 01:19:09.379126643 +0000
++++ Makefile
+@@ -130,6 +130,7 @@ publish-src: test-other
+ # compatibility with bsd.port.mk:
+ all: pooler
+ install: all
++	$(MKDIR) -p $(DESTDIR)/$(PREFIX)/bin $(DESTDIR)/$(PREFIX)/man/man1
+ 	$(INSTALL_PROGRAM) pooler $(DESTDIR)/$(PREFIX)/bin/
+ 	$(INSTALL_MAN) pooler.1 $(DESTDIR)/$(PREFIX)/man/man1/
+ install-strip: install
+@@ -138,3 +139,4 @@ PREFIX          ?= usr/local
+ INSTALL_PROGRAM ?= cp
+ INSTALL_MAN     ?= cp
+ STRIP           ?= strip
++MKDIR		?= mkdir
