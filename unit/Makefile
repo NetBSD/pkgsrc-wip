@@ -1,6 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	unit-1.20.0
+.include "../../www/unit/unitversion.mk"
+
+DISTNAME=	unit-${UNIT_VERSION}
 
 MAINTAINER=	osa@FreeBSD.org
 

@@ -11,10 +11,18 @@
 .if !defined(UNITEXT_MK)
 UNITEXT_MK=	defined
 
-PLIST_SUBST+=	MODNAME=${MODNAME}
-PLIST_SUBST+=	PKGMODNAME=${PKGMODNAME}
+.include "../../www/unit/unitversion.mk"
+
+DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
+PATCHDIR=	${.CURDIR}/../../www/unit/patches
+
+PKGMODNAME?=	${MODNAME}.unit
+
+PLIST_SUBST+=	PKGMODNAME=${MODNAME}.unit
 PLIST_SUBST+=	SHLIB_SUFFIX=${SHLIB_SUFFIX}
-PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=	UNIT_EXTENSION_DIR=${UNIT_EXTENSION_DIR}
+
+PLIST_SRC+=	${.CURDIR}/../../www/unit/PLIST.module
 
 .if ${OBJECT_FMT} == "SOM"
 SHLIB_SUFFIX=		sl
@@ -30,8 +38,10 @@ do-module-build:
 do-install: do-module-install
 
 do-module-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/libexec/unit/modules/
-	${INSTALL_LIB} ${WRKSRC}/build/${MODNAME}.unit.${SHLIB_SUFFIX} \
-		${DESTDIR}${PREFIX}/libexec/unit/modules/
+	${MKDIR} ${DESTDIR}${PREFIX}/${UNIT_EXTENSION_DIR}
+	${INSTALL_LIB} ${WRKSRC}/build/${PKGMODNAME}.${SHLIB_SUFFIX} \
+		${DESTDIR}${PREFIX}/${UNIT_EXTENSION_DIR}
 
-.endif  # PHPEXT_MK
+.endif  # UNITEXT_MK
+
+.include "${.CURDIR}/../../www/unit/common.mk"

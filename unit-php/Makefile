@@ -1,10 +1,10 @@
 # $NetBSD$
 
-PKGNAME=	unit-php${PHP_VERSION:R:S|.||g}-1.20.0
-DISTNAME=	unit-1.20.0
+PKGNAME=	unit-${LANG}${PHP_VERSION:R:S|.||g}-${UNIT_VERSION}
 COMMENT=	PHP module for NGINX Unit
 
-MODNAME=	php${PHP_VERSION}
+LANG=		php
+MODNAME=	${LANG}${PHP_VERSION}
 
 MAINTAINER=	osa@FreeBSD.org
 
@@ -20,7 +20,7 @@ USE_LANGUAGES+=	c
 
 post-configure:
 	cd ${WRKSRC} && \
-	./configure php --lib-path=${PREFIX}/lib \
+	./configure ${LANG} --lib-path=${PREFIX}/lib \
 		--module=${MODNAME}
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"

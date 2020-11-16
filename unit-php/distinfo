@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (unit-1.20.0.tar.gz) = f4a2d2a6b622742acd138a66008407b5f674b08f
-RMD160 (unit-1.20.0.tar.gz) = 8964e056dbe19e659b157a89d1cf39f213ffd952
-SHA512 (unit-1.20.0.tar.gz) = dd68103795acbdcd87a951c92c72f3cb74b5e622eca4e687194508b55a592ac4312de3a8ff7ddb9a5df9750363b24dca9e1b48c7ef42c78aca3a18aca6a51f42
-Size (unit-1.20.0.tar.gz) = 787607 bytes
-SHA1 (patch-auto-modules-php) = 4386e6adaf806d83af88de8da9ad0a9a83eeac8f
