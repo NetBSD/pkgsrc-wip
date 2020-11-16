@@ -31,8 +31,7 @@ do-install: do-module-install
 
 do-module-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/libexec/unit/modules/
-	${INSTALL_LIB} ${WRKSRC}/build/${MODNAME}.unit.so \
+	${INSTALL_LIB} ${WRKSRC}/build/${MODNAME}.unit.${SHLIB_SUFFIX} \
 		${DESTDIR}${PREFIX}/libexec/unit/modules/
-
 
 .endif  # PHPEXT_MK
