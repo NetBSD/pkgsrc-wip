@@ -1,5 +1,3 @@
-Lark is a parser built with a focus on ergonomics, performance and resilience.
-
-Lark can parse all context-free languages. That means it is capable of parsing
-almost any programming language out there, and to some degree most natural
-languages too.
+Lark is a modern general-purpose parsing library for Python.
+With Lark, you can parse any context-free grammar, efficiently,
+with very little code.

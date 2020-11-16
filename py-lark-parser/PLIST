@@ -95,6 +95,9 @@ ${PYSITELIB}/lark/tools/standalone.pyo
 ${PYSITELIB}/lark/tree.py
 ${PYSITELIB}/lark/tree.pyc
 ${PYSITELIB}/lark/tree.pyo
+${PYSITELIB}/lark/tree_matcher.py
+${PYSITELIB}/lark/tree_matcher.pyc
+${PYSITELIB}/lark/tree_matcher.pyo
 ${PYSITELIB}/lark/utils.py
 ${PYSITELIB}/lark/utils.pyc
 ${PYSITELIB}/lark/utils.pyo

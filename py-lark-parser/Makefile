@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	lark-parser-0.9.0
+DISTNAME=	lark-parser-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lang python
-MASTER_SITES=	https://files.pythonhosted.org/packages/8e/ac/c873c508dc2955da6eb85f0425e991a022cf2a4e53933ac057603d0cf890/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lark-parser/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/erezsh/lark
