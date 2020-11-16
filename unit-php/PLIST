@@ -1,2 +1,2 @@
 @comment $NetBSD$
-libexec/unit/modules/${UNIT_MODNAME}.unit.so
+libexec/unit/modules/${MODNAME}.unit.${SHLIB_SUFFIX}
