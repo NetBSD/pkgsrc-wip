@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	opendoas-6.6.1
+DISTNAME=	opendoas-6.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=duncaen/}
-GITHUB_TAG=	17629b9ce63dba6aa4146d483cd61448cddb1fa5
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sunil@nimmagadda.net
 HOMEPAGE=	https://github.com/duncaen/opendoas
@@ -12,7 +12,7 @@ LICENSE=	isc
 
 CONFLICTS=	doas-[0-9]*
 
-WRKSRC=		${WRKDIR}/OpenDoas-${GITHUB_TAG}
+WRKSRC=		${WRKDIR}/OpenDoas-${PKGVERSION_NOREV}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
