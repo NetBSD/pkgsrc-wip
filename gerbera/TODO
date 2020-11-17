@@ -1,2 +1,25 @@
 - fix the installation path of the manual page
 - re-introduce the -d, -u, -g, and -P options (background, username, group, PID file)
+- apply the following patch as well:
+
+diff --git a/mk/defaults/mk.conf b/mk/defaults/mk.conf
+index 362970931a1d..a189ad0467f4 100644
+--- a/mk/defaults/mk.conf
++++ b/mk/defaults/mk.conf
+@@ -1049,6 +1049,16 @@ GAMEOWN?=	${GAMES_USER}
+ # Possible:	any user name
+ # Default:	${GAMES_USER}
+ 
++GERBERA_GROUP?= gerbera
++# System group to run the Gerbera Server as.
++# Possible: any group name
++# Default: gerbera
++
++GERBERA_USER?= gerbera
++# System user to run the Gerbera Server as.
++# Possible: any user name
++# Default: gerbera
++
+ #GRUB_NETWORK_CARDS=
+ # Compile netboot support for the listed network interface cards into GRUB.
+ # Use e.g. "rtl8139" for RealTek 8139 support or "eepro100 epic100" for
