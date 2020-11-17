@@ -13,7 +13,7 @@ USE_TOOLS+=	perl
 
 post-configure:
 	cd ${WRKSRC} && \
-	./configure perl --module=${MODNAME}
+	./configure ${LANG} --module=${MODNAME}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../www/unit/ext.mk"
