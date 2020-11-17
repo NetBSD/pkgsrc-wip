@@ -3150,6 +3150,7 @@ SUBDIR+=	py-bloscpack
 SUBDIR+=	py-bokeh
 SUBDIR+=	py-bolos
 SUBDIR+=	py-booktype
+SUBDIR+=	py-branca
 SUBDIR+=	py-brian
 SUBDIR+=	py-brian2
 SUBDIR+=	py-bruce
