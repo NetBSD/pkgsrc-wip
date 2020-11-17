@@ -3440,6 +3440,7 @@ SUBDIR+=	py-fluiddyn
 SUBDIR+=	py-fluids
 SUBDIR+=	py-fmmlib
 SUBDIR+=	py-fnss
+SUBDIR+=	py-folium
 SUBDIR+=	py-formex
 SUBDIR+=	py-formulaLab
 SUBDIR+=	py-forthon
