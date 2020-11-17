@@ -28,9 +28,9 @@ UNIT_TMPDIR?=		${VARBASE}/tmp
 BUILD_DEFS+=		UNIT_DATADIR UNIT_LOGDIR UNIT_PIDDIR VARBASE
 
 PKG_USERS_VARS+=	UNIT_USER
-PKG_GROUPS_VARS+=       UNIT_GROUP
-PKG_GROUPS=             ${UNIT_GROUP}
-PKG_USERS=              ${UNIT_USER}:${UNIT_GROUP}
+PKG_GROUPS_VARS+=	UNIT_GROUP
+PKG_GROUPS=		${UNIT_GROUP}
+PKG_USERS=		${UNIT_USER}:${UNIT_GROUP}
 
 PKG_GECOS.${UNIT_USER}=	NGINX Unit server user
 PKG_HOME.${UNIT_USER}=	${UNIT_DATADIR}
@@ -41,7 +41,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--ld-opt=-L${PREFIX}/lib
 CONFIGURE_ARGS+=	--log=${UNIT_LOGDIR}/unit.log
-CONFIGURE_ARGS+=	--modules=libexec/unit/modules
+CONFIGURE_ARGS+=	--modules=${UNIT_EXTENSION_DIR}
 CONFIGURE_ARGS+=	--pid=${UNIT_PIDDIR}/unit.pid
 CONFIGURE_ARGS+=	--state=libexec/unit
 CONFIGURE_ARGS+=	--control=unix:${UNIT_RUNDIR}/control.unit.sock
@@ -62,12 +62,10 @@ USE_LANGUAGES=	c
 
 post-build:
 .if !empty(PKG_OPTIONS:Mdevkit)
-	@cd ${WRKSRC} && ${MAKE} build/libunit.a
+	cd ${WRKSRC} && ${MAKE} build/libunit.a
 .endif
 
 post-install:
 .if !empty(PKG_OPTIONS:Mdevkit)
 	${MAKE} -C ${WRKSRC} libunit-install DESTDIR=${DESTDIR}
 .endif
-
-.include "../../mk/bsd.pkg.mk"

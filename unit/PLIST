@@ -1,11 +1,11 @@
 @comment $NetBSD$
+${PLIST.devkit}include/nxt_unit.h
 ${PLIST.devkit}include/nxt_unit_field.h
 ${PLIST.devkit}include/nxt_unit_request.h
 ${PLIST.devkit}include/nxt_unit_response.h
 ${PLIST.devkit}include/nxt_unit_sptr.h
 ${PLIST.devkit}include/nxt_unit_typedefs.h
 ${PLIST.devkit}include/nxt_unit_websocket.h
-${PLIST.devkit}include/nxt_unit.h
 ${PLIST.devkit}include/nxt_version.h
 ${PLIST.devkit}include/nxt_websocket_header.h
 ${PLIST.devkit}lib/libunit.a

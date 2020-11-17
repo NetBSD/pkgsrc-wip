@@ -1,3 +1,7 @@
+$NetBSD$
+
+This patch fixes build of php module.
+
 --- auto/modules/php.orig	2020-10-09 11:15:55.011861773 -0400
 +++ auto/modules/php	2020-10-09 11:16:18.986144628 -0400
 @@ -112,7 +112,7 @@

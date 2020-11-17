@@ -17,7 +17,7 @@ PLIST.devkit=		yes
 .endif
 
 .if empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=--no-ipv6
+CONFIGURE_ARGS+=	--no-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)

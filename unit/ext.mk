@@ -24,21 +24,18 @@ PLIST_SUBST+=	UNIT_EXTENSION_DIR=${UNIT_EXTENSION_DIR}
 
 PLIST_SRC+=	${.CURDIR}/../../www/unit/PLIST.module
 
+INSTALLATION_DIRS+=	${UNIT_EXTENSION_DIR}
+
 .if ${OBJECT_FMT} == "SOM"
 SHLIB_SUFFIX=		sl
 .else
 SHLIB_SUFFIX=		so
 .endif
 
-do-build: do-module-build
-
-do-module-build:
+do-build:
 	cd ${WRKSRC} && ${MAKE} ${MODNAME}
 
-do-install: do-module-install
-
-do-module-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/${UNIT_EXTENSION_DIR}
+do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/${PKGMODNAME}.${SHLIB_SUFFIX} \
 		${DESTDIR}${PREFIX}/${UNIT_EXTENSION_DIR}
 
