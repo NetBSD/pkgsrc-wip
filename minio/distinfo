@@ -2864,3 +2864,4 @@ SHA1 (sigs.k8s.io_yaml_@v_v1.1.0.zip) = 3729b6f15c6f45947224b7b887a1933a07f14181
 RMD160 (sigs.k8s.io_yaml_@v_v1.1.0.zip) = c14d8a1ed4aa81df07cb5281f27a39a9303c140f
 SHA512 (sigs.k8s.io_yaml_@v_v1.1.0.zip) = c6e23fe09971b82d52e14d67e68458d3884b0f1d56a7fa9131fe4dafbfa971dd1f134f2d9eeab2599eae02c96132502036fd6b37eda92cd62f3129de6e04e7c3
 Size (sigs.k8s.io_yaml_@v_v1.1.0.zip) = 18120 bytes
+SHA1 (patch-pkg_sys_stats__bsd.go) = 18fe6cfb73f747aa473a836f275e95d70b5df595
