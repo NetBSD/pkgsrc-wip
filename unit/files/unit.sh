@@ -9,7 +9,7 @@
 
 name="unit"
 rcvar=${name}
-command="@PREFIX@/sbin/${name}"
+command="@PREFIX@/sbin/${name}d"
 pidfile="@VARBASE@/run/${name}.pid"
 start_precmd="ulimit -n 2048"
 
