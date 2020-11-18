@@ -1,0 +1,3 @@
+ - Package and (optionally) use libnbd
+ - Upstream some fix for the bootstrap patch
+ - See if we can use non-bundled Jitter
