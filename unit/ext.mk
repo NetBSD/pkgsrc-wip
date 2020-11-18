@@ -6,7 +6,10 @@
 # add dependencies, and add the appropriate --with-configure-arg, then include
 # bsd.pkg.mk.
 #
-# Original idea comes from lang/php/ext.mk.
+# used by www/unit-perl/Makefile
+# used by www/unit-php/Makefile
+# used by www/unit-python/Makefile
+# used by www/unit-ruby/Makefile
 
 .if !defined(UNITEXT_MK)
 UNITEXT_MK=	defined
@@ -15,6 +18,12 @@ UNITEXT_MK=	defined
 
 DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
 PATCHDIR=	${.CURDIR}/../../www/unit/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !defined(MODNAME)
+PKG_FAIL_REASON+=	"MODNAME should be defined"
+.endif
 
 PKGMODNAME?=	${MODNAME}.unit
 
