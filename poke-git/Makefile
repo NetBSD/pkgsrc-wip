@@ -30,6 +30,8 @@ TOOL_DEPENDS+=	bison>=3.6:../../devel/bison
 
 TOOLS_PLATFORM.bison=
 TOOLS_PLATFORM.bison-yacc=
+TOOLS_PLATFORM.flex=
+TOOLS_PLATFORM.makeinfo=
 
 BOOTSTRAP_FLAGS+=	--skip-po --no-git
 BOOTSTRAP_FLAGS+=	--gnulib-srcdir=${WRKSRC}/gnulib
