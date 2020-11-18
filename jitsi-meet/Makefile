@@ -1,16 +1,8 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	jitsi-meet
-DISTNAME=	4476
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://github.com/jitsi/jitsi-meet/
 COMMENT=	Secure, Simple and Scalable Video Conferences
-LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/jitsi-meet-${DISTNAME}
 USE_TOOLS=	gmake tar
@@ -29,6 +21,7 @@ do-configure:
 post-install:
 	${RUN} ${TAR} -C ${DESTDIR}${PREFIX}/share -xjf ${WRKSRC}/jitsi-meet.tar.bz2
 
+.include "../../wip/jitsi-meet/Makefile.common"
 .include "../../lang/nodejs/buildlink3.mk"
 .include "../../lang/nodejs/nodeversion.mk"
 .include "../../mk/bsd.pkg.mk"

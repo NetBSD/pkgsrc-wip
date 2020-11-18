@@ -1,0 +1,15 @@
+# $NetBSD$
+# used by wip/jitsi-meet/Makefile
+# used by wip/jitsi-meet-prosody/Makefile
+
+GITHUB_PROJECT=	jitsi-meet
+DISTNAME=	4476
+CATEGORIES=	chat
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
+
+MAINTAINER=	khorben@defora.org
+HOMEPAGE=	https://github.com/jitsi/jitsi-meet/
+LICENSE=	apache-2.0
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/jitsi-meet/distinfo

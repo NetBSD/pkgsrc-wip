@@ -1680,6 +1680,7 @@ SUBDIR+=	jgraphx
 SUBDIR+=	jicofo
 SUBDIR+=	jitsi
 SUBDIR+=	jitsi-meet
+SUBDIR+=	jitsi-meet-prosody
 SUBDIR+=	jitsi-videobridge
 SUBDIR+=	jlibtool
 SUBDIR+=	jmol
