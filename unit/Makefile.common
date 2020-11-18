@@ -12,7 +12,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://unit.nginx.org/download/
 
 HOMEPAGE=	https://unit.nginx.org/
-COMMENT=	Dynamic web application server
+COMMENT?=	Dynamic web application server
 LICENSE=	apache-2.0
 
 .include "../../mk/bsd.prefs.mk"

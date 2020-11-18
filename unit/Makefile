@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../www/unit/unitversion.mk"
+.include "../../www/unit/version.mk"
 
 DISTNAME=	unit-${UNIT_VERSION}
 

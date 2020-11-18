@@ -11,7 +11,7 @@
 .if !defined(UNITEXT_MK)
 UNITEXT_MK=	defined
 
-.include "../../www/unit/unitversion.mk"
+.include "../../www/unit/version.mk"
 
 DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
 PATCHDIR=	${.CURDIR}/../../www/unit/patches
