@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/03/21 17:57:56 jihbed Exp $
+$NetBSD$
 
-SHA1 (geopy-0.99.tar.gz) = a13b015079180c9ce3b50412d210f2d5f009b8be
-RMD160 (geopy-0.99.tar.gz) = a67e63b146892d0a4dedb3da0663ebe1da2020e9
-SHA512 (geopy-0.99.tar.gz) = 67809c498c1118d75c5d8fa55354df46e6f7a95c4194f25373ac622b517fdac50bc489b3de8635518fa7b5f41807119b498abb60487314f5fc218b228e1afe22
-Size (geopy-0.99.tar.gz) = 65066 bytes
+SHA1 (geopy-2.0.0.tar.gz) = ea8728548f9fbe7211aaa9862fe1b717b19bb807
+RMD160 (geopy-2.0.0.tar.gz) = 5043fbb228ce27717da7b0a22a97a6ad4e580f03
+SHA512 (geopy-2.0.0.tar.gz) = 99411b42d8878736a1bd1de5b5eca4d037fea4d465bb8a689d9da99fb9f186dae32d59985ee9ae95eed1094edd7fa2af12e8c69cf63c8c6770aa1266f8de975d
+Size (geopy-2.0.0.tar.gz) = 107026 bytes

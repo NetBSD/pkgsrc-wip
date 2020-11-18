@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2014/03/21 17:57:56 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	geopy-0.99
+DISTNAME=	geopy-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	geography python
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geopy/}
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://files.pythonhosted.org/packages/source/g/geopy/
+MAINTAINER=	lntl@disroot.org
+HOMEPAGE=	https://github.com/geopy/geopy
 COMMENT=	Python Geocoding Toolbox
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../security/py-requests-oauthlib
+DEPENDS+=	${PYPKGPREFIX}-geographiclib>=1.50:../../wip/py-geographiclib
 
 USE_LANGUAGES=	# none
 

@@ -1,8 +1,7 @@
-This is a python implementation of the geodesic routines from GeographicLib.
-This contains implementations of the classes
+This implements
+[Algorithms for Geodesics](https://doi.org/10.1007/s00190-012-0578-z)
+(Karney, 2013) for solving the direct and inverse problems for an
+ellipsoid of revolution.
 
-    GeographicLib::Math
-    GeographicLib::Accumulator
-    GeographicLib::Geodesic
-    GeographicLib::GeodesicLine
-    GeographicLib::PolygonArea
+Documentation is available at
+<https://geographiclib.sourceforge.io/1.50/python/>.

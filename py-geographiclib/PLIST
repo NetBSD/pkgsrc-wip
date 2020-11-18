@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/12/05 22:51:19 jihbed Exp $
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/geographiclib/__init__.py
 ${PYSITELIB}/geographiclib/__init__.pyc
 ${PYSITELIB}/geographiclib/__init__.pyo
@@ -23,3 +27,9 @@ ${PYSITELIB}/geographiclib/geomath.pyo
 ${PYSITELIB}/geographiclib/polygonarea.py
 ${PYSITELIB}/geographiclib/polygonarea.pyc
 ${PYSITELIB}/geographiclib/polygonarea.pyo
+${PYSITELIB}/geographiclib/test/__init__.py
+${PYSITELIB}/geographiclib/test/__init__.pyc
+${PYSITELIB}/geographiclib/test/__init__.pyo
+${PYSITELIB}/geographiclib/test/test_geodesic.py
+${PYSITELIB}/geographiclib/test/test_geodesic.pyc
+${PYSITELIB}/geographiclib/test/test_geodesic.pyo

@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 12:49:41 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	geographiclib-1.31
+DISTNAME=	geographiclib-1.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	geography
+CATEGORIES=	python # TODO: add primary category
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geographiclib/}
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://geographiclib.sourceforge.io/
-COMMENT=	Translation of the GeographicLib::Geodesic class to Python
+MAINTAINER=	lntl@disroot.org
+HOMEPAGE=	https://geographiclib.sourceforge.io/1.50/python
+COMMENT=	The geodesic routines from GeographicLib
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/geographiclib-1.31
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
