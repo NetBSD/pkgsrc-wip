@@ -10,8 +10,6 @@ MAINTAINER=	osa@FreeBSD.org
 
 PHP_VERSIONS_ACCEPTED?=	56 72 73 74
 
-USE_LANGUAGES+=	c
-
 .include "../../lang/php/phpversion.mk"
 
 #.if empty(PKG_BUILD_OPTIONS.${PHP_PKG_PREFIX}:Mphp-embed)

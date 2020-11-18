@@ -8,8 +8,6 @@ MODNAME=	${LANG}
 
 MAINTAINER=	osa@FreeBSD.org
 
-USE_LANGUAGES+=	c
-
 post-configure:
 	cd ${WRKSRC} && \
 	./configure ${LANG} --module=${MODNAME} \

@@ -8,7 +8,6 @@ MODNAME=	${LANG}
 
 MAINTAINER=	osa@FreeBSD.org
 
-USE_LANGUAGES+=	c
 USE_TOOLS+=	perl
 
 post-configure:
