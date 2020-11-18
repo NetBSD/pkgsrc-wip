@@ -1,6 +1,7 @@
 $NetBSD$
 
-This patch fixes build of php module.
+This patch fixes build of php module.  The issue has been
+reported to the vendor, https://github.com/nginx/unit/issues/497
 
 --- auto/modules/php.orig	2020-10-09 11:15:55.011861773 -0400
 +++ auto/modules/php	2020-10-09 11:16:18.986144628 -0400
