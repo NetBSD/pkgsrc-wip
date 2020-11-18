@@ -59,19 +59,35 @@ static void *I_Realloc(void *ptr, size_t size)
 
 // [crispy] taken from mbfsrc/P_SETUP.C:547-707, slightly adapted
 /*
- *  [MB] 2020-05-12: Ported from Crispy Doom 5.8.0 (src/doom/p_blockmap.c)
- *  - Change indentation to 4 SPs (matching DooM Legacy style)
- *  - Replace blockmap with blockmapindex (int32_t* => uint32_t*)
- *    Global pointer to header of the blockmap lump
- *  - Replace blockmaplump with blockmaphead (int32_t* => uint32_t*)
- *    Global pointer to beginning of the part containing the offsets
- *  - Added typecasts for unsigned target types
+ * [MB] 2020-05-12: Ported from Crispy Doom 5.8.0 (src/doom/p_blockmap.c)
+ * - Change indentation to 4 SPs (matching DooM Legacy style)
+ * - Replace blockmap with blockmapindex (int32_t* => uint32_t*)
+ *   Global pointer to header of the blockmap lump
+ * - Replace blockmaplump with blockmaphead (int32_t* => uint32_t*)
+ *   Global pointer to beginning of the part containing the offsets
+ * - Added typecasts for unsigned target types
+ *
+ * [MB] 2020-11-18: Added patch from Altazimuth for Eternity Engine
+ * https://github.com/team-eternity/eternity/commit/d89fae15b55e92f3d88c32f401248ecf99624746
+ * - Bugfix for handling of first vertex
+ * - Demo version dependency removed
  */
 void P_CreateBlockMap(void)
 {
     register int i;
     fixed_t minx = INT_MAX, miny = INT_MAX;
     fixed_t maxx = INT_MIN, maxy = INT_MIN;
+
+#if 1
+    // [MB] 2020-11-18: Added patch from Altazimuth for Eternity Engine
+    // This fixes MBF's code, which has a bug where maxx/maxy
+    // are wrong if the 0th node has the largest x or y
+    if (numvertexes)
+    {
+        minx = maxx = vertexes->x >> FRACBITS;
+        miny = maxy = vertexes->y >> FRACBITS;
+    }
+#endif
 
     // First find limits of map
     for (i=0 ; i<numvertexes ; i++)

@@ -70,6 +70,7 @@ SUBST_SED.makeopt+=	-e 's,HAVE_LIBZIP,\# HAVE_LIBZIP,'
 SUBST_SED.makeopt+=	-e 's,HAVE_DLOPEN,\# HAVE_DLOPEN,'
 # Enable debug build
 SUBST_SED.makeopt+=	-e 's,\# DEBUG=1,DEBUG=1,'
+
 INSTALL_UNSTRIPPED=	yes
 
 # Configure defaults for LEGACYWADDIR and DOOMWADDIR
