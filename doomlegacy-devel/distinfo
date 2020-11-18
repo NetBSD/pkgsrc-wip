@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (doomlegacy_1.48.4_common.zip) = 14aed4c0091e8c61f46a2303f9316659ab6c0483
-RMD160 (doomlegacy_1.48.4_common.zip) = cca61af6bdda1003032ee117129e07596c8bbfcf
-SHA512 (doomlegacy_1.48.4_common.zip) = f41830b6d3ba7f30d020e887193fedf502d9b0b260bb53f78e888ce4985dfc2a8b744b5add86813e135c9a0ed65c9be42da64437976b7a85992bcc45bbeeb462
-Size (doomlegacy_1.48.4_common.zip) = 1004978 bytes
+SHA1 (doomlegacy_1.48.6_common.zip) = 24662975b4f4d5fa0e4e09747029014159dcfe81
+RMD160 (doomlegacy_1.48.6_common.zip) = d5c0e8edc763d92e84494766f14c3ff995a60965
+SHA512 (doomlegacy_1.48.6_common.zip) = 92ab453df6c48397f1228e922e04d5426f445c87683265f6ee5543662631eeaf1696d2681c1d3015b2821a644241c1c691d1a6c7ba6abacf07eb4fce050e020f
+Size (doomlegacy_1.48.6_common.zip) = 1007223 bytes
 SHA1 (patch-src_Makefile) = 34c323bdd96787cb6afe0be5dc99b129ab8f1552
 SHA1 (patch-src_am__map.c) = 14b3c8b70c63778ad043827ab2f0b6f4fe07bcde
 SHA1 (patch-src_doomdata.h) = 8c3186dafbf11a8a75262a06755dd9807cb58612

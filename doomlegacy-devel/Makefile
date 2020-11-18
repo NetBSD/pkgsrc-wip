@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERS=		1.48.4
+VERS=		1.48.6
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1552
+SVNVERS=	1558
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 

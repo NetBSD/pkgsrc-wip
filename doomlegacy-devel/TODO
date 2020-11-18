@@ -47,8 +47,10 @@ Part 14: Import final release
 Part 15: Savegame buffer overflow
 =================================
 [X] Created upstream bug report #667
-[ ] Investigate crash with Antaresian Reliquary (Maps 4 and 7)
+[X] Investigate crash with Antaresian Reliquary (Maps 4 and 6)
     https://doomworld.com/idgames/levels/doom2/Ports/a-c/anta_req
+    Fixed in SVN revision 1553
+    => Works as expected
 
 
 EOF
