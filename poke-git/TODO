@@ -8,7 +8,6 @@ Build failures:
  - NetBSD 9
  - OpenBSD (transient)
  - OpenIndiana Hipster (transient)
- - Ubuntu 16.04
  - macOS
 
 Runtime issues:
