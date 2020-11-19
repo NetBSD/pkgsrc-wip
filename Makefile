@@ -4631,7 +4631,6 @@ SUBDIR+=	rygel
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
-SUBDIR+=	s6-portable-utils
 SUBDIR+=	sabnzbd
 SUBDIR+=	sabnzbdplus
 SUBDIR+=	sacc-git
