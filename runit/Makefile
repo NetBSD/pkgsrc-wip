@@ -7,6 +7,7 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	neil@daikokuya.co.uk
 HOMEPAGE=	http://smarden.org/runit/
 COMMENT=	UNIX init scheme with service supervision
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
@@ -15,7 +16,6 @@ PKGEXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 
 USE_TOOLS+=		pax
 BUILD_DEFS+=		VARBASE
-DJB_RESTRICTED=		NO
 DJB_SLASHPACKAGE=	YES
 
 SUBST_CLASSES+=		djberrno

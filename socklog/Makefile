@@ -7,12 +7,12 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	neil@daikokuya.co.uk
 HOMEPAGE=	http://smarden.org/socklog/
 COMMENT=	System and kernel logging services
+LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-DJB_RESTRICTED=		NO
 DJB_SLASHPACKAGE=	YES
 
 SUBST_CLASSES+=		djberrno
