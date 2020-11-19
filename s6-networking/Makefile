@@ -19,7 +19,7 @@ BUILDLINK_API_DEPENDS.skalibs+=skalibs>=2.9.3.0
 .include "../../devel/skalibs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.execline+=execline>=2.6.1.1
 .include "../../lang/execline/buildlink3.mk"
+.include "../../net/s6-dns/buildlink3.mk"
 .include "../../security/bearssl/buildlink3.mk"
 .include "../../sysutils/s6/buildlink3.mk"
-.include "../../wip/s6-dns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
