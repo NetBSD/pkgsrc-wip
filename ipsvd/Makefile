@@ -15,8 +15,6 @@ PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
 DJB_SLASHPACKAGE=	YES
 
-SUBST_CLASSES+=		djberrno
-
 DOCS=		package/CHANGES package/COPYING package/README doc/*.html
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
