@@ -1,3 +1,19 @@
  - Package and (optionally) use libnbd
- - Upstream some fix for the bootstrap patch
+ - Use fix for --no-git bootstrap fix when it lands upstream, and drop
+   the patch
  - See if we can use non-bundled Jitter
+ - Still getting 'bison -y' issues
+
+Build failures:
+ - NetBSD 9
+ - OpenBSD (transient)
+ - OpenIndiana Hipster (transient)
+ - Ubuntu 16.04
+ - macOS
+
+Runtime issues:
+ - Ubuntu 16.04: multi-minute hangs printing welcome message
+    - try CONFIGURE_FLAGS+= --without-hserver
+
+To test:
+ - FreeBSD 12
