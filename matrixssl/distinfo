@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (Crypt-MatrixSSL3-v3.9.3.tar.gz) = 6ee3a8dfb966560728f31de72bf3d7c2833b464c
+RMD160 (Crypt-MatrixSSL3-v3.9.3.tar.gz) = e8c7a2882d6f5f3d645e80901ad73f9870b88605
+SHA512 (Crypt-MatrixSSL3-v3.9.3.tar.gz) = 9a61e63f3f6666c473520deb9d9980561483e4b4461bac8eb627853085235eba1dd7f332e5b7d94b39bdbdc0dbbc11b93a7a782806ca15f568509c14c9b7d0b4
+Size (Crypt-MatrixSSL3-v3.9.3.tar.gz) = 4865841 bytes
+SHA1 (patch-common.mk) = f60a7be562de1076e8d5458c0fbc501b42e99b9a
+SHA1 (patch-core_osdep-types.h) = 201039c3062e80d8a38ad425b9235da3d05a3084
