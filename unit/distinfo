@@ -5,3 +5,6 @@ RMD160 (unit-1.20.0.tar.gz) = 8964e056dbe19e659b157a89d1cf39f213ffd952
 SHA512 (unit-1.20.0.tar.gz) = dd68103795acbdcd87a951c92c72f3cb74b5e622eca4e687194508b55a592ac4312de3a8ff7ddb9a5df9750363b24dca9e1b48c7ef42c78aca3a18aca6a51f42
 Size (unit-1.20.0.tar.gz) = 787607 bytes
 SHA1 (patch-auto-modules-php) = 900cc3381050874e194741ce31554f100ed870a7
+SHA1 (patch-src_nxt__cert.c) = c91e45f148a079b543a0d3cb277388bffb3e2854
+SHA1 (patch-src_nxt__router.c) = 366241f155bccf6a3291e37fef5993eb1c364b99
+SHA1 (patch-src_nxt__websocket__header.h) = 1b50405b187cc8a662372a1c20ab7737278135ae
