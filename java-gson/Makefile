@@ -6,6 +6,7 @@ PKGNAME=	java-${DISTNAME:S/parent-//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 EXTRACT_SUFX=	.zip
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/gson/
