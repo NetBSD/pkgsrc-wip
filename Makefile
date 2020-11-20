@@ -1246,6 +1246,7 @@ SUBDIR+=	gst-plugins1-svt-vp9
 SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
+SUBDIR+=	gstreamer1
 SUBDIR+=	gsview
 SUBDIR+=	gtextutils
 SUBDIR+=	gtg
