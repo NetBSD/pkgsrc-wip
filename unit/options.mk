@@ -1,8 +1,8 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unit
-PKG_SUPPORTED_OPTIONS=	debug devkit inet6 ssl
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_SUPPORTED_OPTIONS=	debug devkit inet6 pcre2 ssl
+PKG_SUGGESTED_OPTIONS=	inet6 pcre2 ssl
 
 PLIST_VARS+=		devkit
 
@@ -18,6 +18,14 @@ PLIST.devkit=		yes
 
 .if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--no-ipv6
+.endif
+
+.if empty(PKG_OPTIONS:Mpcre2)
+CONFIGURE_ARGS+=	--no-regex
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcre2)
+.include "../../devel/pcre2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
