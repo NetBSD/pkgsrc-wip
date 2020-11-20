@@ -222,3 +222,4 @@ share/jitsi-meet/static/settingsToolbarAdditionalContent.html
 share/jitsi-meet/static/welcomePageAdditionalContent.html
 share/jitsi-meet/title.html
 share/jitsi-meet/webpack.config.js
+@pkgdir etc/jitsi/meet

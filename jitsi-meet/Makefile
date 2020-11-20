@@ -12,7 +12,12 @@ BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm
 BUILD_TARGET=	compile
 INSTALL_TARGET=	deploy source-package
 
-INSTALLATION_DIRS+=	share/jitsi-meet
+EGDIR=		share/jitsi-meet
+CONF_FILES=	${EGDIR}/config.js ${PKG_SYSCONFDIR}/jitsi/meet/config.js
+CONF_FILES+=	${EGDIR}/interface_config.js ${PKG_SYSCONFDIR}/jitsi/meet/interface_config.js
+CONF_FILES+=	${EGDIR}/title.html ${PKG_SYSCONFDIR}/jitsi/meet/title.html
+
+INSTALLATION_DIRS=	${EGDIR}
 
 do-configure:
 	cd ${WRKSRC} && \
