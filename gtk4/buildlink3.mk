@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	gtk4
 .if !defined(GTK4_BUILDLINK3_MK)
 GTK4_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gtk4+=	gtk4+>=3.99.0
-BUILDLINK_ABI_DEPENDS.gtk4+=	gtk4+>=3.99.4
+BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=3.99.0
+BUILDLINK_ABI_DEPENDS.gtk4+=	gtk4>=3.99.4
 BUILDLINK_PKGSRCDIR.gtk4?=	../../wip/gtk4
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.gtk4?=	../../wip/gtk4
 pkgbase := gtk4
 .include "../../mk/pkg-build-options.mk"
 
+.include "../../graphics/graphene/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
