@@ -218,7 +218,6 @@ share/jitsi-meet/static/offline.html
 share/jitsi-meet/static/prejoin.html
 share/jitsi-meet/static/pwa/icons/icon192.png
 share/jitsi-meet/static/pwa/icons/icon512.png
-share/jitsi-meet/static/pwa/icons/iconMask.png
 share/jitsi-meet/static/pwa/manifest.json
 share/jitsi-meet/static/pwa/registrator.js
 share/jitsi-meet/static/recommendedBrowsers.html

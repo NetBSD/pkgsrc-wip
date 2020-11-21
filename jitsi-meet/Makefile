@@ -1,10 +1,9 @@
 # $NetBSD$
 
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 
 COMMENT=	Secure, Simple and Scalable Video Conferences
 
-WRKSRC=		${WRKDIR}/jitsi-meet-${DISTNAME}
 USE_TOOLS=	gmake tar
 
 BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm

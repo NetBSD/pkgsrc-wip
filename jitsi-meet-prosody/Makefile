@@ -1,10 +1,9 @@
 # $NetBSD$
 
-PKGNAME=	${GITHUB_PROJECT}-prosody-${DISTNAME}
+PKGNAME=	${GITHUB_PROJECT}-prosody-${JITSI_MEET_VERSION}
 
 COMMENT=	Additional plug-ins for Prosody from Jitsi Meet
 
-WRKSRC=		${WRKDIR}/jitsi-meet-${DISTNAME}
 USE_TOOLS=	gmake tar
 
 DEPENDS+=	prosody-[0-9]*:../../chat/prosody
