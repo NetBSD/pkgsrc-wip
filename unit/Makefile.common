@@ -1,5 +1,6 @@
 # $NetBSD$
 #
+# used by devel/libunit/Makefile
 # used by www/unit/Makefile
 # used by www/unit-perl/Makefile
 # used by www/unit-php/Makefile

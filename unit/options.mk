@@ -1,19 +1,13 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unit
-PKG_SUPPORTED_OPTIONS=	debug devkit inet6 pcre2 ssl
+PKG_SUPPORTED_OPTIONS=	debug inet6 pcre2 ssl
 PKG_SUGGESTED_OPTIONS=	inet6 pcre2 ssl
-
-PLIST_VARS+=		devkit
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--debug
-.endif
-
-.if !empty(PKG_OPTIONS:Mdevkit)
-PLIST.devkit=		yes
 .endif
 
 .if empty(PKG_OPTIONS:Minet6)
