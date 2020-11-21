@@ -1,19 +1,13 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	jitsi-videobridge
-GITHUB_TAG=	stable/jitsi-meet_5142
-DISTNAME=	jitsi-meet_5142
-PKGNAME=	${GITHUB_PROJECT}-2.0.5142
-CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 
-MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/jitsi/jitsi-videobridge/
 COMMENT=	WebRTC compatible video router or SFU
-LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
+DISTINFO_FILE=	${.CURDIR}/../../wip/jitsi-videobridge/distinfo
+
 USE_TOOLS=	bash:run unzip
 USE_JAVA2=	8
 
@@ -55,5 +49,6 @@ do-install:
 	${LN} -s ../share/jitsi-videobridge/jvb.sh \
 		${DESTDIR}${PREFIX}/bin/jvb
 
+.include "../../wip/jitsi-meet/Makefile.common"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
