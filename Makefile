@@ -4366,6 +4366,7 @@ SUBDIR+=	py-voluptuous
 SUBDIR+=	py-voluptuous-serialize
 SUBDIR+=	py-voronoi
 SUBDIR+=	py-voropy
+SUBDIR+=	py-vorta
 SUBDIR+=	py-vprof
 SUBDIR+=	py-vtk
 SUBDIR+=	py-vulture
