@@ -1,18 +1,13 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	jicofo
-DISTNAME=	644
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 
-MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/jitsi/jicofo/
 COMMENT=	Server side focus component used in Jitsi Meet conferences
-LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
+DISTINFO_FILE=	${.CURDIR}/../../wip/jicofo/distinfo
+
 USE_TOOLS=	bash:run unzip
 USE_JAVA2=	8
 
@@ -55,5 +50,6 @@ do-install:
 	${LN} -s ../share/jicofo/jicofo.sh \
 		${DESTDIR}${PREFIX}/bin/jicofo
 
+.include "../../wip/jitsi-meet/Makefile.common"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

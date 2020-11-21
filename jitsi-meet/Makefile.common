@@ -1,4 +1,5 @@
 # $NetBSD$
+# used by wip/jicofo/Makefile
 # used by wip/jitsi-meet/Makefile
 # used by wip/jitsi-meet-prosody/Makefile
 # used by wip/jitsi-videobridge/Makefile
