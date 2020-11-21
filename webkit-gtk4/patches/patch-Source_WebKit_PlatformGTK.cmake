@@ -25,3 +25,39 @@ SunOS ld does not support --version-script.
  if (LIBNOTIFY_FOUND)
      list(APPEND WebKit_PRIVATE_LIBRARIES
          ${LIBNOTIFY_LIBRARIES}
+@@ -660,7 +665,7 @@ if (ENABLE_INTROSPECTION)
+             --namespace=WebKit2
+             --nsversion=${WEBKITGTK_API_VERSION}
+             --include=GObject-2.0
+-            --include=Gtk-3.0
++            --include=Gtk-4.0
+             --include=Soup-2.4
+             --include-uninstalled=${CMAKE_BINARY_DIR}/JavaScriptCore-${WEBKITGTK_API_VERSION}.gir
+             --library=webkit2gtk-${WEBKITGTK_API_VERSION}
+@@ -669,7 +674,7 @@ if (ENABLE_INTROSPECTION)
+             ${INTROSPECTION_ADDITIONAL_LINKER_FLAGS}
+             --no-libtool
+             --pkg=gobject-2.0
+-            --pkg=gtk+-3.0
++            --pkg=gtk4
+             --pkg=libsoup-2.4
+             --pkg-export=webkit2gtk-${WEBKITGTK_API_VERSION}
+             --output=${CMAKE_BINARY_DIR}/WebKit2-${WEBKITGTK_API_VERSION}.gir
+@@ -706,7 +711,7 @@ if (ENABLE_INTROSPECTION)
+             --namespace=WebKit2WebExtension
+             --nsversion=${WEBKITGTK_API_VERSION}
+             --include=GObject-2.0
+-            --include=Gtk-3.0
++            --include=Gtk-4.0
+             --include=Soup-2.4
+             --include-uninstalled=${CMAKE_BINARY_DIR}/JavaScriptCore-${WEBKITGTK_API_VERSION}.gir
+             --library=webkit2gtk-${WEBKITGTK_API_VERSION}
+@@ -716,7 +721,7 @@ if (ENABLE_INTROSPECTION)
+             ${INTROSPECTION_ADDITIONAL_LINKER_FLAGS}
+             --no-libtool
+             --pkg=gobject-2.0
+-            --pkg=gtk+-3.0
++            --pkg=gtk4
+             --pkg=libsoup-2.4
+             --pkg-export=webkit2gtk-web-extension-${WEBKITGTK_API_VERSION}
+             --output=${CMAKE_BINARY_DIR}/WebKit2WebExtension-${WEBKITGTK_API_VERSION}.gir
