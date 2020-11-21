@@ -1,4 +1,8 @@
 @comment $NetBSD$
+share/examples/jitsi-meet/config.js
+share/examples/jitsi-meet/jitsi.example.com
+share/examples/jitsi-meet/nginx.conf
+share/examples/jitsi-meet/prosody.cfg.lua
 share/jitsi-meet/ConferenceEvents.js
 share/jitsi-meet/LICENSE
 share/jitsi-meet/analytics-ga.js
