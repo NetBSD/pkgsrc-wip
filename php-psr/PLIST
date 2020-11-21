@@ -1,3 +1,0 @@
-@comment $NetBSD$
-include/php/ext/psr/php_psr.h
-share/examples/php/psr.ini
