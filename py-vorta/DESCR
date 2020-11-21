@@ -1,0 +1,3 @@
+Vorta is a graphical user interface for Borgbackup. It is based on Qt
+and allows easy creation of backups, both locally and with various
+cloud providers.

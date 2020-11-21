@@ -1,0 +1,2 @@
+- py-secretstorage dependency is missing
+- missing PYPKGPREFIX and alternatives for the main binary
