@@ -1,8 +1,9 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.efl
-PKG_SUPPORTED_OPTIONS=	debug g-mainloop gcc8
-PKG_SUGGESTED_OPTIONS=	g-mainloop
+PKG_OPTIONS_VAR=		PKG_OPTIONS.efl
+PKG_SUPPORTED_OPTIONS=		debug g-mainloop gcc8
+PKG_SUGGESTED_OPTIONS.NetBSD=	g-mainloop
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 

@@ -25,13 +25,6 @@ EFL_LIBRARY_PATH:=	${EFL_LIBRARY_PATH}:${WRKSRC}/output/src/lib/${e}
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${EFL_LIBRARY_PATH}
 
-MESON_ARGS+=	-Dsystemd=false
-MESON_ARGS+=	-Deeze=false
-MESON_ARGS+=	-Dbuild-tests=false
-MESON_ARGS+=	-Dbuild-examples=false
-#MESON_ARGS+=	-Dv4l2=false
-MESON_ARGS+=	-Dphysics=true
-
 USE_LANGUAGES=		c c++
 USE_TOOLS=		pkg-config
 ICON_THEMES=		yes
@@ -57,6 +50,21 @@ BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+PLIST_VARS+=	linux
+
+.if ${OPSYS} != "Linux"
+MESON_ARGS+=	-Dsystemd=false
+.else
+PLIST.linux=	yes
+.endif
+# eeze need libmount and libudev
+# FIXME: pkgsrc not support libmount and libudev
+MESON_ARGS+=	-Deeze=false
+MESON_ARGS+=	-Dbuild-tests=false
+MESON_ARGS+=	-Dbuild-examples=false
+#MESON_ARGS+=	-Dv4l2=false
+MESON_ARGS+=	-Dphysics=true
 
 .if ${X11_TYPE} != "modular"
 
