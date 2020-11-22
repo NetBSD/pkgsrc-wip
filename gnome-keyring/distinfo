@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.44 2015/11/04 01:17:44 agc Exp $
-
-SHA1 (gnome-keyring-3.20.1.tar.xz) = d94f68dfc790363dd508804f88c9c8954d572837
-RMD160 (gnome-keyring-3.20.1.tar.xz) = 70550529ede762f6ce1f0946441293f6a416d272
-SHA512 (gnome-keyring-3.20.1.tar.xz) = a60d8a4b17a9c6d8c581578881abaf7d79de43045a314b401e3bfd3974edb4ab94117dd430203b721058f432b24bf6296e0b7c4fba1e66cccd2c2e9441787177
-Size (gnome-keyring-3.20.1.tar.xz) = 1219800 bytes
-SHA1 (patch-daemon_control_gkd-control-server.c) = 9400ecef7efd148ed6d9512572bd6ac196dcccca
-SHA1 (patch-egg_egg-unix-credentials.c) = 2ed51494ba97476d923ab84d03713cc1d9563bc6
-SHA1 (patch-egg_egg-unix-credentials.h) = a688de09828436cee573ac0b6a944eb8d75e4794

@@ -1,5 +1,0 @@
-Check if this crazy change actually works.
-Otherwise, add local creds as follows:
-https://bugzilla.gnome.org/show_bug.cgi?id=353105
-Removed here:
-https://git.gnome.org/browse/gnome-keyring/commit/?id=da22a40250da283a502ecb35add5e6548c654c6b
