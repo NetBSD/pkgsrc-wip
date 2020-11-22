@@ -1567,6 +1567,7 @@ SUBDIR+=	i3-git
 SUBDIR+=	i3lock-color
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
+SUBDIR+=	ic
 SUBDIR+=	ical2pcal
 SUBDIR+=	icecat
 SUBDIR+=	ices
