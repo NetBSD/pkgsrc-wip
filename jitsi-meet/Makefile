@@ -11,12 +11,13 @@ INSTALL_TARGET=	deploy source-package
 
 EGDIR=		share/jitsi-meet
 CONF_FILES=	${EGDIR}/config.js ${PKG_SYSCONFDIR}/jitsi/meet/config.js
-CONF_FILES+=	${EGDIR}/interface_config.js ${PKG_SYSCONFDIR}/jitsi/meet/interface_config.js
+CONF_FILES+=	${EGDIR}/interface_config.js \
+		${PKG_SYSCONFDIR}/jitsi/meet/interface_config.js
 CONF_FILES+=	${EGDIR}/title.html ${PKG_SYSCONFDIR}/jitsi/meet/title.html
 
 INSTALLATION_DIRS=	${EGDIR} share/examples/jitsi-meet
 
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=		VARBASE
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
