@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/jibri
+share/examples/jibri/asoundrc
+share/examples/jibri/config.json
+share/examples/jibri/logging.properties
+share/examples/jibri/xorg-video-dummy.conf
+share/jibri/jibri.jar
+@pkgdir etc/jitsi/jibri

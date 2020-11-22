@@ -1682,6 +1682,7 @@ SUBDIR+=	jetbrains-mono-ttf
 SUBDIR+=	jfsw-git
 SUBDIR+=	jgloss
 SUBDIR+=	jgraphx
+SUBDIR+=	jibri
 SUBDIR+=	jicofo
 SUBDIR+=	jitsi
 SUBDIR+=	jitsi-meet
