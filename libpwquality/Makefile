@@ -1,41 +1,34 @@
 # $NetBSD$
 
-DISTNAME=	libpwquality-1.3.0
+DISTNAME=	libpwquality-1.4.4
 CATEGORIES=	security
-MASTER_SITES=	https://ftp.osuosl.org/pub/blfs/conglomeration/libpwquality/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libpwquality/}
+GITHUB_RELEASE=	${DISTNAME}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Library for generating random passwords and quality checking
 HOMEPAGE=	https://github.com/libpwquality/libpwquality
+COMMENT=	Library for generating random passwords and quality checking
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		automake autoconf aclocal gmake
-GNU_CONFIGURE=		yes
-
-CONFIG_DIR=		share/examples/pwquality
+USE_TOOLS+=	msgfmt msgmerge xgettext
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--disable-pam
-CONFIGURE_ARGS+=	--with-python-binary=${PYTHONBIN}
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${CONFIG_DIR}
-
-INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/security
+CONFIGURE_ARGS+=	--disable-python-bindings
 
 PKGCONFIG_OVERRIDE=	src/pwquality.pc.in
 
 PY_PATCHPLIST=	yes
 
-CONF_FILES=	${CONFIG_DIR}/security/pwquality.conf \
-			${PKG_SYSCONFDIR}/security/pwquality.conf
+OWN_DIRS+=	${PKG_SYSCONFDIR}/security
 
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal; \
-	autoconf; \
-	automake
+EGDIR=		share/examples/libpwquality
 
-.include "../../wip/py-cracklib/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/pyversion.mk"
-.include "../../lang/python/extension.mk"
+CONF_FILES=	${EGDIR}/security/pwquality.conf \
+		${PKG_SYSCONFDIR}/security/pwquality.conf
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/cracklib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
