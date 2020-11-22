@@ -1936,7 +1936,6 @@ SUBDIR+=	libpatterns
 SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
-SUBDIR+=	libpwquality
 SUBDIR+=	libqd
 SUBDIR+=	libquantum
 SUBDIR+=	libquvi
