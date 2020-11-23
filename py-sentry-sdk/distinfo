@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (sentry-python/sentry-sdk-0.7.7.tar.gz) = ff895330f145b295eda20faeb902f16dee96c9f3
-RMD160 (sentry-python/sentry-sdk-0.7.7.tar.gz) = edadc155c09364f65c47b1d7066fa13c39a208be
-SHA512 (sentry-python/sentry-sdk-0.7.7.tar.gz) = 01a74897036c131581a478fe62d831ee6dd235268108c9c62a26a3513ac7096c02ae3402de2c902ec4e70011b8edbe8a40bb30fc8fe32f579f1e39fd676465a5
-Size (sentry-python/sentry-sdk-0.7.7.tar.gz) = 41938 bytes
+SHA1 (sentry-python/sentry-sdk-0.19.4.tar.gz) = 6eafdefa289b077e65fe2895746b9f1ca8ddf827
+RMD160 (sentry-python/sentry-sdk-0.19.4.tar.gz) = 327d908587003da2b64fe3250d05c5a03269afbb
+SHA512 (sentry-python/sentry-sdk-0.19.4.tar.gz) = fe73e51aa419baabf7b5656ddea9c6448ff081af1a384308ffb7df1cbe8dd5a5562764d53867ab95115f1a050ae420c655e38abdb783417cf333191cbbfde97e
+Size (sentry-python/sentry-sdk-0.19.4.tar.gz) = 97198 bytes
