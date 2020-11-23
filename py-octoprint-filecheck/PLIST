@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/OctoPrint_FileCheck-2020.8.7-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/OctoPrint_FileCheck-2020.8.7-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/OctoPrint_FileCheck-2020.8.7-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/OctoPrint_FileCheck-2020.8.7-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/OctoPrint_FileCheck-2020.8.7-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/OctoPrint_FileCheck-2020.8.7-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/octoprint_file_check/__init__.py
+${PYSITELIB}/octoprint_file_check/__init__.pyc
+${PYSITELIB}/octoprint_file_check/__init__.pyo
+${PYSITELIB}/octoprint_file_check/static/js/file_check.js
+${PYSITELIB}/octoprint_file_check/translations/de/LC_MESSAGES/messages.mo
+${PYSITELIB}/octoprint_file_check/translations/de/LC_MESSAGES/messages.po

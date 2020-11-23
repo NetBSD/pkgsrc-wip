@@ -30,6 +30,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.19:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.10.9:../../net/py-netifaces
+DEPENDS+=	${PYPKGPREFIX}-octoprint-filecheck>=2020.7.6:../../wip/py-octoprint-filecheck
+DEPENDS+=	${PYPKGPREFIX}-octoprint-firmwarecheck>=2020.6.22:../../wip/py-octoprint-firmwarecheck
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.5.0.1:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pylru>=1.2:../../wip/py-pylru
