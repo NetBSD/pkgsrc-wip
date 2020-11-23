@@ -17,7 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-peewee-[0-9]*:../../databases/py-peewee
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-apscheduler-[0-9]*:../../wip/py-apscheduler
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-# py-secretstorage
+DEPENDS+=	${PYPKGPREFIX}-secretstorage-[0-9]*:../../wip/py-secretstorage
+
 
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../lang/python/egg.mk"
