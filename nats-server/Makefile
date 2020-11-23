@@ -42,10 +42,12 @@ FILES_SUBST+=		NATS_LOGDIR=${NATS_LOGDIR}
 FILES_SUBST+=		NATS_LOGFILE=${NATS_LOGFILE}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-EXAMPLESDIR=		${PREFIX}/share/examples/nats-server
-REQD_FILES_PERMS+=	${EXAMPLESDIR}/nats-server.conf \
+EGDIR=			${PREFIX}/share/examples/nats-server
+REQD_FILES_PERMS+=	${EGDIR}/nats-server.conf \
 			${PKG_SYSCONFDIR}/nats-server.conf \
 			${NATS_USER} ${NATS_GROUP} 0600
+
+INSTALLATION_DIRS=	bin ${EGDIR}
 
 OWN_DIRS_PERMS+=                ${NATS_HOMEDIR} ${NATS_USER} ${NATS_GROUP} 0700
 MAKE_DIRS_PERMS+=                ${NATS_LOGDIR} ${NATS_USER} ${NATS_GROUP} 0700
@@ -53,9 +55,7 @@ MAKE_DIRS_PERMS+=                ${NATS_LOGDIR} ${NATS_USER} ${NATS_GROUP} 0700
 .include "../../lang/go/go-module.mk"
 
 post-install:
-	${MKDIR} ${DESTDIR}/${EXAMPLESDIR}
-	${TOUCH} ${DESTDIR}/${EXAMPLESDIR}/nats-server.conf
-	${ECHO} "# Example config, see https://docs.nats.io/nats-server/configuration" >> \
-		${DESTDIR}/${EXAMPLESDIR}/nats-server.conf
+	${ECHO} "# Example config, see https://docs.nats.io/nats-server/configuration" > \
+		${DESTDIR}/${EGDIR}/nats-server.conf
 
 .include "../../mk/bsd.pkg.mk"
