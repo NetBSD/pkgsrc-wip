@@ -12,6 +12,10 @@
 #
 # The following variables are optional:
 #
+# nats_server_config="/path/to/nats-server.conf"
+#					path to nats-server config.file
+#					default:
+#					@PKG_SYSCONFDIR@/nats-server.conf
 # nats_server_pidfile="/path/to/p.pid"	path to nats-server PID file
 #					default:
 #					@NATS_HOMEDIR@/nats-server.pid
@@ -28,6 +32,7 @@ fi
 name="nats_server"
 rcvar="nats_server"
 command="@PREFIX@/bin/nats-server"
+: ${nats_server_config:="@PKG_SYSCONFDIR@/nats-server.conf"}
 : ${nats_server_pidfile:="@NATS_HOMEDIR@/nats-server.pid"}
 : ${nats_server_logfile:="@NATS_LOGFILE@"}
 : ${nats_server_user:="natssrv"}
@@ -39,11 +44,11 @@ stop_cmd="natssrv_stop"
 natssrv_start()
 {
 	@ECHO@ "Starting ${name}."
-	ulimit -n 4096
+	ulimit -n 10240
 	cd @NATS_HOMEDIR@
 	/usr/bin/su ${nats_server_user}:${nats_server_group} \
 	   -c "${command} -P ${nats_server_pidfile} \
-	   -l ${nats_server_logfile} &"
+	   -l ${nats_server_logfile} -c ${nats_server_config} &"
 }
 
 natssrv_stop()

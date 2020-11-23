@@ -1,2 +1,3 @@
 @comment $NetBSD$
 bin/nats-server
+share/examples/nats-server/nats-server.conf

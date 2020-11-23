@@ -9,13 +9,14 @@
 
 PIDFILE="@NATS_HOMEDIR@/nats-server.pid"
 LOGFILE="@NATS_LOGFILE@"
+CONFIGFILE="@PKG_SYSCONFDIR@/nats-server.conf"
 
 ulimit -n 10240
 
 case "$1" in
 start)
    	@PREFIX@/bin/nats-server -P ${PIDFILE} \
-	   -l ${LOGFILE} &
+	   -l ${LOGFILE} -c ${CONFIGFILE} &
 	;;
 stop)
 	[ -f ${PIDFILE} ] && kill `@HEAD@ -1 ${PIDFILE}`

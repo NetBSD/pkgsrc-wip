@@ -10,6 +10,9 @@
     <dependency name='net' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/network/loopback' />
     </dependency>
+    <dependency name='config' grouping='require_all' restart_on='none' type='path'>
+       <service_fmri value='file://@PKG_SYSCONFDIR@/nats-server.conf' />
+    </dependency>
     <method_context working_directory='@VARBASE@/nats-server'>
       <method_credential user='@NATS_USER@' group='@NATS_GROUP@' />
       <method_environment>
