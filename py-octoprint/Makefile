@@ -16,6 +16,7 @@ PYTHON_VERSIONS_ACCEPTED=	37 36
 
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-cachelib>=0.1:../../wip/py-cachelib
+DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-emoji>=0.5.4:../../converters/py-emoji
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1<6.0.0:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.0.7:../../sysutils/py-filetype
