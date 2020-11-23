@@ -4,3 +4,4 @@ SHA1 (OctoPrint-1.4.2.tar.gz) = f12fcb95aa49da665da5878817a7ff04591e0d13
 RMD160 (OctoPrint-1.4.2.tar.gz) = 77793c1d9ede70fc82b1be092dcf2a23718b4fe6
 SHA512 (OctoPrint-1.4.2.tar.gz) = 0af007562b4e6e295730c782cf408fff999a37493d43f533df4cefe25895d843e5fcd54b4f68caba331f11c0e9cf5fde946c8913dd623496a8df605e8cd9a0a5
 Size (OctoPrint-1.4.2.tar.gz) = 4997522 bytes
+SHA1 (patch-setup.py) = 6ad07b5d722cd7cbd63545d4ec9f4907b3cc2c7b
