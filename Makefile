@@ -3439,6 +3439,7 @@ SUBDIR+=	py-firehose
 SUBDIR+=	py-fitsarray
 SUBDIR+=	py-fix-yahoo-finance
 SUBDIR+=	py-fjd
+SUBDIR+=	py-flask-babel
 SUBDIR+=	py-flask-migrate
 SUBDIR+=	py-flask-pwa
 SUBDIR+=	py-flask-simplelogin
