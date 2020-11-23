@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/SecretStorage-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/SecretStorage-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/SecretStorage-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/SecretStorage-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/SecretStorage-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/secretstorage/__init__.py
+${PYSITELIB}/secretstorage/__init__.pyc
+${PYSITELIB}/secretstorage/__init__.pyo
+${PYSITELIB}/secretstorage/collection.py
+${PYSITELIB}/secretstorage/collection.pyc
+${PYSITELIB}/secretstorage/collection.pyo
+${PYSITELIB}/secretstorage/defines.py
+${PYSITELIB}/secretstorage/defines.pyc
+${PYSITELIB}/secretstorage/defines.pyo
+${PYSITELIB}/secretstorage/dhcrypto.py
+${PYSITELIB}/secretstorage/dhcrypto.pyc
+${PYSITELIB}/secretstorage/dhcrypto.pyo
+${PYSITELIB}/secretstorage/exceptions.py
+${PYSITELIB}/secretstorage/exceptions.pyc
+${PYSITELIB}/secretstorage/exceptions.pyo
+${PYSITELIB}/secretstorage/item.py
+${PYSITELIB}/secretstorage/item.pyc
+${PYSITELIB}/secretstorage/item.pyo
+${PYSITELIB}/secretstorage/util.py
+${PYSITELIB}/secretstorage/util.pyc
+${PYSITELIB}/secretstorage/util.pyo
