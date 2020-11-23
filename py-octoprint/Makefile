@@ -45,5 +45,9 @@ DEPENDS+=	${PYPKGPREFIX}-websocket-client>=0.57:../../www/py-websocket-client
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=1.0.1:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/octoprint \
+		${DESTDIR}${PREFIX}/bin/octoprint-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
