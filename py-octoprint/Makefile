@@ -49,6 +49,7 @@ DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.10.2:../../sysutils/py-watchdog
 DEPENDS+=	${PYPKGPREFIX}-websocket-client>=0.57:../../www/py-websocket-client
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=1.0.1:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/octoprint \
