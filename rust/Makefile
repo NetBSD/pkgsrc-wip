@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.197 2020/09/29 16:45:16 gdt Exp $
 
-DISTNAME=	rustc-1.47.0-src
+DISTNAME=	rustc-1.48.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -32,8 +32,9 @@ CONFIGURE_ARGS+=		--prefix=${PREFIX}
 CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--python=${PYTHONBIN}
+# Switch this to "nightly" to build a nightly compiler, required for some software,
+# then update BOOTSTRAP_NAME below.
 CONFIGURE_ARGS+=		--release-channel=stable
-#CONFIGURE_ARGS+=		--enable-local-rust
 CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
 CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
 CONFIGURE_ARGS+=		--enable-rpath
@@ -41,12 +42,6 @@ CONFIGURE_ARGS+=		--disable-codegen-tests
 CONFIGURE_ARGS+=		--disable-dist-src
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
-# XXX: to be enabled in the future
-#CONFIGURE_ARGS+=		--jemalloc-root=${BUILDLINK_PREFIX.jemalloc}/lib
-
-# Use "dist" build target for cross compile of bootstrap
-#BUILD_TARGET=		dist
-BUILD_TARGET=		build
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
@@ -66,8 +61,6 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 UNLIMIT_RESOURCES+=	cputime datasize virtualsize
-
-TEST_TARGET=	check
 
 # bin/* lib/*, but names vary
 CHECK_RELRO_SUPPORTED=	no
@@ -172,14 +165,23 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 pre-build-fix:
 .endif
+#
+# The SunOS target defaults to illumos as that's what the current bootstraps
+# are built on.  If you wish to target Oracle Solaris you'll need to create an
+# x86_64-sun-solaris bootstrap and comment out the overrides.
+#
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.46.0
-RUST_ARCH:=		x86_64-sun-solaris
-#RUST_ARCH:=		x86_64-unknown-illumos
+RUST_STAGE0_VER=	1.48.0
+RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
 RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}
+# Override default "x86_64-sun-solaris" selection
+CONFIGURE_ARGS+=	--set=target.${RUST_ARCH}.llvm-config=${LLVM_CONFIG_PATH}
+CONFIGURE_ARGS+=	--build=${RUST_ARCH}
+CONFIGURE_ARGS+=	--host=${RUST_ARCH}
+CONFIGURE_ARGS+=	--target=${RUST_ARCH}
 pre-build-fix:
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
@@ -281,8 +283,9 @@ TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
 
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
-SUBST_FILES.rpath+=	src/librustc_codegen_ssa/back/linker.rs
+SUBST_FILES.rpath+=	compiler/rustc_codegen_ssa/src/back/linker.rs
 SUBST_FILES.rpath+=	src/bootstrap/builder.rs
+SUBST_FILES.rpath+=	src/bootstrap/compile.rs
 SUBST_VARS.rpath=	PREFIX
 
 #
@@ -292,16 +295,16 @@ SUBST_VARS.rpath=	PREFIX
 # updating and verification.
 #
 CKSUM_CRATES+=	vendor/libc
-CKSUMS+=	9f96e346d87296e2b0b87b9fe375d67fb66cd88ce61ea2905466c8c5891d3108
-CKSUMS+=	ebcb0709586e6ed1e8b4538368201638006e26042d464bbc1151bef9eb158f8c
+CKSUMS+=	a9e46c0eee970cb5b4bd910924141d223fad4aa45380d3df1ce4b25992a13037
+CKSUMS+=	41394431697e352653c37188233bd44776881eb704132203b1a232271d1afd92
 
 CKSUM_CRATES+=	vendor/lzma-sys
 CKSUMS+=	6fd5e9245db34c6f557b8bfcaf03db82fc88c3b06dbfbb5f03b2bcd138983ef9
 CKSUMS+=	5e252578b5d266f6a4c8dc9f71ca7a91536ccb8c5c7d7753b82f12ec886459ef
 
 CKSUM_CRATES+=	vendor/stacker
-CKSUMS+=	37ef9666d048191eeca23d8f7d99cf912b953cc489bf860107aec306b95b2d99
-CKSUMS+=	410f22f5e95860530be1abaaf2e279d2f4226e5c17c2cee302661d8079246b3a
+CKSUMS+=	cee329550bad2ed1182abb71db9c24558a91b12e1eab8d9a48e23b997bb8f04e
+CKSUMS+=	79915b243d02df1dc698f5c2de3a9356c6c296d2dedb06d9035dbcc2f8972cf4
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
@@ -349,18 +352,29 @@ pre-build: pre-build-fix
 	cp ${FILESDIR}/libgcc_s.so.1 ${RUST_BOOTSTRAP_PATH}/lib/.
 .endif
 
+#
+# These are essentially copies of the "all", "test", and "install" Makefile
+# targets, but are duplicated here so that we can specify -j.
+#
 do-build:
-	cd ${WRKSRC} \
-	&& ${_ULIMIT_CMD} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then \
-			unset DESTDIR; \
-		fi; \
-		${PYTHONBIN} ./x.py -v ${BUILD_TARGET} -j ${_MAKE_JOBS_N}"
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v			\
+	    build --stage 2 -j ${_MAKE_JOBS_N} &&			\
+	${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v			\
+	    doc --stage 2 -j ${_MAKE_JOBS_N}
+
+do-test:
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v			\
+	    test -j ${_MAKE_JOBS_N}
 
 do-install:
-	cd ${WRKSRC} \
-	&& ${_ULIMIT_CMD} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PYTHONBIN} ./x.py -v	\
+	    install -j ${_MAKE_JOBS_N}
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
@@ -378,7 +392,11 @@ GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.
 #
-BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME_NOREV}-${RUST_ARCH}
+# Use the alternate BOOTSTRAP_NAME when creating a nightly release.
+#
+#BOOTSTRAP_NAME=	${PKGNAME_NOREV:C/rust/rust-nightly/}-${RUST_ARCH}
+BOOTSTRAP_NAME=		${PKGNAME_NOREV}-${RUST_ARCH}
+BOOTSTRAP_TMPDIR=	${WRKDIR}/${BOOTSTRAP_NAME}
 USE_TOOLS+=		gtar
 
 # The NetBSD part is so far untested, because I could not convince
@@ -452,8 +470,7 @@ stage0-bootstrap: install
 	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/*/*/*.so*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
-	(cd ${WRKDIR}; \
-	 ${GTAR} -zcf ${PKGNAME_NOREV}-${RUST_ARCH}.tar.gz ${PKGNAME_NOREV}-${RUST_ARCH})
+	(cd ${WRKDIR}; ${GTAR} -zcf ${BOOTSTRAP_NAME}.tar.gz ${BOOTSTRAP_NAME})
 .endif
 
 .include "options.mk"

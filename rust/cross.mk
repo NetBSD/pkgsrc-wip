@@ -48,20 +48,3 @@
 
 # May be required when cross-building on NetBSD
 #MAKE_ENV+=		OPENSSL_DIR=/usr
-
-#
-# Cross-compile illumos target.  The host is identical, it's just the target
-# that is renamed from x86_64-sun-solaris to x86_64-unknown-illumos.
-#
-#TARGET=		x86_64-unknown-illumos
-#
-# Use these variables for "cross-compiling" from x86_64-sun-solaris.
-#
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.llvm-config=${LLVM_CONFIG_PATH}
-#CONFIGURE_ARGS+=	--host=${TARGET}
-#CONFIGURE_ARGS+=	--target=${TARGET}
-#
-# Set this variable when using a native x86_64-unknown-illumos bootstrap, as
-# the build still defaults to x86_64-sun-solaris based on uname.
-#
-#CONFIGURE_ARGS+=	--build=${TARGET}
