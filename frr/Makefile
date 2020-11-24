@@ -24,6 +24,11 @@ BUILD_DEFS=		VARBASE
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+# to pick up the atomic implementation on i386
+.if ${MACHINE_ARCH} == "i386"
+CPPFLAGS+=      -march=i586
+.endif
+
 FRR_GROUP?=	_frr
 FRR_VTY_GROUP?=	frrvty
 
