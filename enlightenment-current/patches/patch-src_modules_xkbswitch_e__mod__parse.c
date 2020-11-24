@@ -2,7 +2,7 @@ $NetBSD$
 
 * teach location from pkgsrc
 
---- src/modules/xkbswitch/e_mod_parse.c.orig	2020-05-17 19:40:56.451332600 +0000
+--- src/modules/xkbswitch/e_mod_parse.c.orig	2020-07-26 16:39:12.143980000 +0000
 +++ src/modules/xkbswitch/e_mod_parse.c
 @@ -67,6 +67,9 @@ find_rules(void)
          XKB_BASE "/rules/xorg.lst",

@@ -2,7 +2,7 @@ $NetBSD$
 
 * Install etc files to examples area
 
---- data/etc/meson.build.orig	2020-05-17 19:40:56.324665500 +0000
+--- data/etc/meson.build.orig	2020-11-24 12:08:01.856764864 +0000
 +++ data/etc/meson.build
 @@ -16,19 +16,19 @@ sysactions.set('EJECT'    , EJECT)
  if get_option('install-sysactions')

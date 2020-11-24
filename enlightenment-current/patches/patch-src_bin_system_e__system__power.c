@@ -2,7 +2,7 @@ $NetBSD$
 
 * Add NetBSD support
 
---- src/bin/system/e_system_power.c.orig	2020-05-31 18:22:37.498920400 +0000
+--- src/bin/system/e_system_power.c.orig	2020-07-26 16:39:12.083981300 +0000
 +++ src/bin/system/e_system_power.c
 @@ -32,7 +32,7 @@ _cb_power_hibernate(void *data EINA_UNUS
  static void

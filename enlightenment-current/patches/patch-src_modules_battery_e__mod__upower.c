@@ -3,7 +3,7 @@ $NetBSD$
 * NetBSD's sysctl is different than in other BSD's,
 * use upower backend
 
---- src/modules/battery/e_mod_upower.c.orig	2020-05-31 18:22:37.502253800 +0000
+--- src/modules/battery/e_mod_upower.c.orig	2020-07-26 16:39:12.087314600 +0000
 +++ src/modules/battery/e_mod_upower.c
 @@ -1,7 +1,7 @@
  #include "e.h"

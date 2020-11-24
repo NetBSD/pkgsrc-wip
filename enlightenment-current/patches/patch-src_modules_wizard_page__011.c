@@ -2,7 +2,7 @@ $NetBSD$
 
 * teach location from pkgsrc
 
---- src/modules/wizard/page_011.c.orig	2020-05-17 19:40:56.441332600 +0000
+--- src/modules/wizard/page_011.c.orig	2020-07-26 16:39:12.133980300 +0000
 +++ src/modules/wizard/page_011.c
 @@ -23,6 +23,9 @@ find_rules(void)
        XKB_BASE "/rules/xorg.lst",

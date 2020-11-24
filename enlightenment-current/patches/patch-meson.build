@@ -1,0 +1,16 @@
+$NetBSD$
+
+* Fix build without eeze on linux
+* If eeze disabled, build failed
+
+--- meson.build.orig	2020-07-26 16:39:12.000649500 +0000
++++ meson.build
+@@ -247,7 +247,7 @@ if get_option('systemd') == true
+   endif
+ endif
+ 
+-if host_os.startswith('linux') and cc.has_function('eeze_disk_function', dependencies: dependency('eeze')) == true
++if host_os.startswith('linux') and cc.has_function('eeze_disk_function', dependencies: dependency('eeze', required: false)) == true
+   config_h.set('HAVE_EEZE_MOUNT', '1')
+   eeze_mount = true
+ endif

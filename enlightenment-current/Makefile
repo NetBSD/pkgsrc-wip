@@ -32,12 +32,6 @@ INSTALLATION_DIRS=	${EGDIR}
 MAKE_DIRS=		${PKG_SYSCONFDIR}/enlightenment
 MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/menus
 
-MESON_ARGS+=	-Dsystemd=false
-MESON_ARGS+=	-Ddevice-udev=false
-MESON_ARGS+=	-Dcpufreq=false
-MESON_ARGS+=	-Dsysinfo=false
-MESON_ARGS+=	-Dtemperature=false
-
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fix prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -48,6 +42,28 @@ SUBST_VARS.prefix=	PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=	cpufreq sysinfo temperature
+
+.if ${OPSYS} != "NetBSD"
+PLIST.cpufreq=		yes
+PLIST.sysinfo=		yes
+PLIST.temperature=	yes
+.endif
+
+.if ${OPSYS} == "Linux"
+PLIST_SUBST+=	PLATFORM="linux-gnu"
+.else
+PLIST_SUBST+=	PLATFORM=${LOWER_OPSYS}
+.endif
+
+.if ${OPSYS} == "NetBSD"
+MESON_ARGS+=		-Dcpufreq=false
+MESON_ARGS+=		-Dsysinfo=false
+MESON_ARGS+=		-Dtemperature=false
+.endif
+MESON_ARGS+=		-Ddevice-udev=false
+MESON_ARGS+=		-Dsystemd=false
+
 .if ${X11_TYPE} == "modular"
 CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
 .endif
@@ -55,7 +71,9 @@ CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.if ${OPSYS} == "NetBSD"
 .include "../../sysutils/upower/buildlink3.mk"
+.endif
 .include "../../wip/efl/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -3,7 +3,7 @@ $NetBSD$
 * NetBSD's sysctl is different than in other BSD's,
 * use upower backend
 
---- src/modules/battery/e_mod_sysctl.c.orig	2020-05-31 18:22:37.502253800 +0000
+--- src/modules/battery/e_mod_sysctl.c.orig	2020-07-26 16:39:12.087314600 +0000
 +++ src/modules/battery/e_mod_sysctl.c
 @@ -1,12 +1,12 @@
  #include "e.h"
@@ -56,7 +56,7 @@ $NetBSD$
         charge = 0;
  
         /* last full capacity */
-@@ -313,7 +313,7 @@ _battery_sysctl_battery_update()
+@@ -312,7 +312,7 @@ _battery_sysctl_battery_update()
  
     if (ac)
       {
