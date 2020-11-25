@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/08/05 21:02:58 jihbed Exp $
 
-DISTNAME=	Cartopy-0.13.0
+DISTNAME=	Cartopy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 PKGREVISION=	1
 CATEGORIES=	geography
