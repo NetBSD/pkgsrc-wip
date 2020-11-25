@@ -1,16 +1,25 @@
 # $NetBSD$
 
-DISTNAME=	branca-0.4.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_PYPI:=b/branca/}
+GITHUB_PROJECT=	branca
+GITHUB_TAG=	ac45f1e1fa95d10a2409409cf3c697f700cad314
+DISTNAME=	master
+VERSION=	0.4.1
+PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${VERSION}
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_GITHUB:=python-visualization/}
+EXTRACT_SUFX=	.zip
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cheeseshop.python.org/pypi/branca
-COMMENT=	May become a HTML+JS generation library
+MAINTAINER=	lntl@disroot.org
+HOMEPAGE=	https://github.com/python-visualization/branca/
+COMMENT=	Generate complex HTML+JS pages with Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
+BUILD_DEPENDS+=	py37-setuptools>=50.0:../../devel/py-setuptools
+
+DEPENDS+=	${PYPKGPREFIX}-python37>=0:../../lang/python37
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
+
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
