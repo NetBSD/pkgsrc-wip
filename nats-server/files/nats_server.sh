@@ -13,7 +13,7 @@
 # The following variables are optional:
 #
 # nats_server_config="/path/to/nats-server.conf"
-#					path to nats-server config.file
+#					path to nats-server config file
 #					default:
 #					@PKG_SYSCONFDIR@/nats-server.conf
 # nats_server_pidfile="/path/to/p.pid"	path to nats-server PID file
