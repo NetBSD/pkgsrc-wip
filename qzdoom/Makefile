@@ -15,7 +15,12 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+CMAKE_ARGS+=	-DNO_OPENAL=OFF
+CMAKE_ARGS+=	-DDYN_OPENAL=OFF
+CMAKE_ARGS+=	-DNO_OPENMP=ON
+
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-g/}
 
 # DOOMWADDIR is intentionally shared with other Doom packages
@@ -44,14 +49,13 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/qzdoom
 
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=2.1.4nb1
-.include "../../audio/fluidsynth/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../parallel/openmp/buildlink3.mk"
+#.include "../../parallel/openmp/buildlink3.mk"
 .include "../../wip/ZMusic/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
