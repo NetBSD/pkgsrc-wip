@@ -19,6 +19,7 @@
     => Yes
 [X] OpenSSL API 1.1 is now supported
     => Added comment to Makefile for future updates
+    => Removed comment because OpenSSL 1.1 is now the pkgsrc default
 [X] Check Testsuite errors
     => Fixed the Perl stuff to make tests/docs/pod.t work
 [ ] Check permission problems while installing with nonprivileged account

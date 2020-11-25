@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	inn
 INN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.inn+=	inn>=2.3.4
-BUILDLINK_PKGSRCDIR.inn?=	../../news/inn
+BUILDLINK_PKGSRCDIR.inn?=	../../wip/inn
 .endif # INN_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-inn

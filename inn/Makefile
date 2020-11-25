@@ -6,7 +6,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
 
 # Suggest update to real maintainer for import after it was tested in wip
-MAINTAINER=		micha@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #MAINTAINER=		spz@NetBSD.org
 HOMEPAGE=		https://www.eyrie.org/~eagle/software/inn/
 COMMENT=		The public release of InterNet News (INN)
@@ -188,7 +188,5 @@ post-install:
 	${CHMOD} 644 ${DESTDIR}${PREFIX}/lib/${file}
 .endfor
 
-# OpenSSL API 1.1 is supported too
-# At least OpenSSL 1.1.1 is required for TLSv1.3
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
