@@ -3,7 +3,7 @@
 # $NetBSD$
 #
 # PROVIDE: nats_server
-# REQUIRE: DAEMON LOGIN mountall
+# REQUIRE: DAEMON LOGIN mountall network
 # KEYWORD: shutdown
 #
 # You will need to set some variables in /etc/rc.conf to start nats-server:
