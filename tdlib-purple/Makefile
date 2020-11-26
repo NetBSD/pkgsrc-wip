@@ -15,6 +15,10 @@ USE_TOOLS+=		gettext pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++
 
+# Pass STUFF to avoid possible API_ID_PUBLISHED_FLOOD errors and
+# building the package similarly to upstream binary packages:
+#  https://github.com/ars3niy/tdlib-purple/issues/95
+CMAKE_ARGS+=	-DSTUFF="AFADBDIyvuCrHF@E@GCC@qAvGus@rIArrGGtIvqC"
 CMAKE_ARGS+=	-DNoWebp=TRUE
 CMAKE_ARGS+=	-DNoLottie=TRUE
 CMAKE_ARGS+=	-DNoVoip=TRUE
