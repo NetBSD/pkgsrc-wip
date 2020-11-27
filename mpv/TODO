@@ -1,2 +1,3 @@
 - Check if oss and netbsd audio outputs can be updated/backported
 - Double-check all options if still supported
+- Check if newer Lua-s can be used
