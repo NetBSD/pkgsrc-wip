@@ -58,6 +58,10 @@ REPLACE_PERL+=	scripts/updateCopyright.pl
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/${PREFIX}
 INSTALL_TARGET=		install install_inst_qch_docs
 
+# Has a header called context.h (also in python 3.x) and it includes
+# python headers before its own headers.
+PYTHON_VERSIONS_ACCEPTED=	27
+
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
@@ -66,8 +70,10 @@ do-configure:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
