@@ -1,8 +1,6 @@
 $NetBSD: distinfo,v 1.6 2012/11/26 01:05:10 fwsf Exp $
 
-SHA1 (qt-creator-opensource-src-4.0.1.zip) = 2ab795222850cf9735661c02ac7ee27abcbdb1ef
-RMD160 (qt-creator-opensource-src-4.0.1.zip) = 636d52578f0a7c9f5b32de1e78dfc09fe8a5c400
-SHA512 (qt-creator-opensource-src-4.0.1.zip) = 8685641b225186c121d1ad0e77817a0dd1c018240e9bfd095f66650eadd007711c291e79c01f2d307b65e2dd95a2408c72dd943a2484669d42da006a169b4045
-Size (qt-creator-opensource-src-4.0.1.zip) = 30243285 bytes
-SHA1 (patch-src_plugins_projectexplorer_abi.cpp) = 61f416b01fad576ed880bfbcc98647177462e3b6
-SHA1 (patch-src_shared_qbs_src_lib_corelib_tools_processutils.cpp) = 9a500ceedaf04b697dc8b709ba14bbd890c70923
+SHA1 (qt-creator-opensource-src-4.13.2.zip) = 8665c26a95f4e83b85840abd40dd949163a120fb
+RMD160 (qt-creator-opensource-src-4.13.2.zip) = ecdba94f789ffd1747a0c6edfdff79e0bf509437
+SHA512 (qt-creator-opensource-src-4.13.2.zip) = efbe7f4ee6ccfcd32ecd182e4a7c88023df86790771c1621b732530fa8bb1f125f0e809c92806903e401a6192df9b3876cc87bae4b504c4e4fbf2e5407b0203a
+Size (qt-creator-opensource-src-4.13.2.zip) = 65177262 bytes

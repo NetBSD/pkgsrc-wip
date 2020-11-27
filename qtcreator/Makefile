@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2012/12/15 08:27:24 asau Exp $
 
-DISTNAME=	qt-creator-opensource-src-4.0.1
+DISTNAME=	qt-creator-opensource-src-4.13.2
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
@@ -67,6 +67,7 @@ do-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
