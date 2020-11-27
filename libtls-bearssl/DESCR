@@ -1,0 +1,6 @@
+libtls-bearssl is an implementation of libtls on top of BearSSL.
+
+libtls shares some of the same goals as BearSSL: it is also consistent,
+secure by default, and well documented. However, it is also a
+higher-level API that is designed to be easy to use for many common
+situations.

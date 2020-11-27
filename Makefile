@@ -1970,6 +1970,7 @@ SUBDIR+=	libtermkey
 SUBDIR+=	libtextcat
 SUBDIR+=	libtheorafile
 SUBDIR+=	libtlen2
+SUBDIR+=	libtls-bearssl
 SUBDIR+=	libtogl
 SUBDIR+=	libtxc_dxtn
 SUBDIR+=	libucl

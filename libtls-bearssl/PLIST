@@ -1,0 +1,16 @@
+@comment $NetBSD$
+include/tls.h
+lib/libtls.a
+lib/pkgconfig/libtls.pc
+man/man3/tls_accept_socket.3
+man/man3/tls_client.3
+man/man3/tls_config_ocsp_require_stapling.3
+man/man3/tls_config_set_protocols.3
+man/man3/tls_config_set_session_id.3
+man/man3/tls_config_verify.3
+man/man3/tls_conn_version.3
+man/man3/tls_connect.3
+man/man3/tls_init.3
+man/man3/tls_load_file.3
+man/man3/tls_ocsp_process_response.3
+man/man3/tls_read.3
