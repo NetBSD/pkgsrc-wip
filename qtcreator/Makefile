@@ -76,4 +76,8 @@ do-configure:
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+# XXX libSqlite.so fails to link but silently resumes without this.
+# XXX Unclear why the conditional doesn't work for NetBSD.
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
