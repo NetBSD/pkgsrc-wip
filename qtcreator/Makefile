@@ -4,6 +4,7 @@ DISTNAME=	qt-creator-opensource-src-4.0.1
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
+MASTER_SITES+=	http://download.qt.io/archive/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
