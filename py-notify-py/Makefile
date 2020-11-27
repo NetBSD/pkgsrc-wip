@@ -3,7 +3,7 @@
 DISTNAME=	notify_py-0.2.3
 PKGNAME=        ${PYPKGPREFIX}-notify-py-0.2.3
 CATEGORIES=	sysutils python
-MASTER_SITES=	https://files.pythonhosted.org/packages/dd/e7/d769d2cfd468bc6add04cdd1cc8a15163b3fc2196c5d4b8b6d02cd714751/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/notify_py/}
 
 MAINTAINER=     kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/ms7m/notify-py
