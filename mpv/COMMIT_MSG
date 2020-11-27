@@ -1,0 +1,7 @@
+TODO
+
+pkgsrc changes:
+ - Remove `ass' option: libass is now always needed and enabled 
+
+Changes:
+TODO
