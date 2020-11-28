@@ -63,6 +63,9 @@ ${PYSITELIB}/virtualenv/app_data/base.pyo
 ${PYSITELIB}/virtualenv/app_data/na.py
 ${PYSITELIB}/virtualenv/app_data/na.pyc
 ${PYSITELIB}/virtualenv/app_data/na.pyo
+${PYSITELIB}/virtualenv/app_data/read_only.py
+${PYSITELIB}/virtualenv/app_data/read_only.pyc
+${PYSITELIB}/virtualenv/app_data/read_only.pyo
 ${PYSITELIB}/virtualenv/app_data/via_disk_folder.py
 ${PYSITELIB}/virtualenv/app_data/via_disk_folder.pyc
 ${PYSITELIB}/virtualenv/app_data/via_disk_folder.pyo
