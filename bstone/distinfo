@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.4 2015/09/13 20:07:57 yhardy Exp $
 
-SHA1 (bstone-1.2.8.tar.gz) = 1cbc8e40bfe8db60aefc9595e537391570a5d00f
-RMD160 (bstone-1.2.8.tar.gz) = 3ced22c719eb0dc075339a64dbdbf9bf4c210ef7
-SHA512 (bstone-1.2.8.tar.gz) = 33287dae8f1007d91d9177553ea0f245f81970e7933581e4c53a394cb46ff3d4f782879fbd27fabfcc51009210cadcb1df67c84b8bceb39b9a2bf20e65edda15
-Size (bstone-1.2.8.tar.gz) = 1233521 bytes
+SHA1 (bstone-1.2.9.tar.gz) = d69d2604fec03b3c9fb773febdf6e0567e64528e
+RMD160 (bstone-1.2.9.tar.gz) = 63fbe52ddacf549b5f3a6db1fc353c1e52cfa22a
+SHA512 (bstone-1.2.9.tar.gz) = 679f48caed076088307e30f88f71af8534856bab9cc693990839d8a63a9b08e7947f292dc7a3a90f3c58ce0b637ee889a3941ca3a6a903592ee17b46ddb3ddb6
+Size (bstone-1.2.9.tar.gz) = 1235502 bytes
