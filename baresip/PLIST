@@ -6,6 +6,7 @@ ${PLIST.opencore-amr}lib/baresip/modules/amr.so
 lib/baresip/modules/aubridge.so
 lib/baresip/modules/aufile.so
 lib/baresip/modules/auloop.so
+lib/baresip/modules/ausine.so
 ${PLIST.ffmpeg}lib/baresip/modules/avcodec.so
 ${PLIST.ffmpeg}lib/baresip/modules/avformat.so
 lib/baresip/modules/b2bua.so
@@ -50,7 +51,7 @@ lib/baresip/modules/uuid.so
 ${PLIST.v4l2}lib/baresip/modules/v4l2.so
 ${PLIST.v4l2}lib/baresip/modules/v4l2_codec.so
 lib/baresip/modules/vidbridge.so
-lib/baresip/modules/vidinfo.so
+${PLIST.cairo}lib/baresip/modules/vidinfo.so
 lib/baresip/modules/vidloop.so
 ${PLIST.libvpx}lib/baresip/modules/vp8.so
 ${PLIST.libvpx}lib/baresip/modules/vp9.so
@@ -65,6 +66,18 @@ share/baresip/message.wav
 share/baresip/notfound.wav
 share/baresip/ring.wav
 share/baresip/ringback.wav
+share/baresip/sound0.wav
+share/baresip/sound1.wav
+share/baresip/sound2.wav
+share/baresip/sound3.wav
+share/baresip/sound4.wav
+share/baresip/sound5.wav
+share/baresip/sound6.wav
+share/baresip/sound7.wav
+share/baresip/sound8.wav
+share/baresip/sound9.wav
+share/baresip/soundroute.wav
+share/baresip/soundstar.wav
 share/examples/baresip/accounts
 share/examples/baresip/config
 share/examples/baresip/contacts
