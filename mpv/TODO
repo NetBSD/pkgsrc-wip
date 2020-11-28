@@ -3,5 +3,3 @@
   automatically changing to the next file: this is blocking and
   should be addressed before updating multimedia/mpv!
 - Check if oss and netbsd audio outputs can be updated/backported
-- Double-check all options if still supported
-- Check if newer Lua-s can be used
