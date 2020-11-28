@@ -2,7 +2,7 @@
 
 DISTNAME=	qt-creator-opensource-src-4.13.2
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
-CATEGORIES=	devel
+CATEGORIES=	editors
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://download.qt.io/archive/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.zip
