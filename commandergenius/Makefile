@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/09/06 20:10:45 yhardy Exp $
 
 DISTNAME=	Commander-Genius-v${PKGVERSION_NOREV}
-PKGNAME=	Commander-Genius-2.5.5
+PKGNAME=	Commander-Genius-2.6.3.1
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/Dringgstein/Commander-Genius/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
