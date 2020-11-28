@@ -1,12 +1,14 @@
 # $NetBSD: Makefile,v 1.8 2015/03/15 14:37:03 othyro Exp $
 
-DISTNAME=	re-0.6.1
+DISTNAME=	re-1.1.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://www.creytiv.com/pub/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
+GITHUB_PROJECT=	re
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.creytiv.com/re.html
+HOMEPAGE=	https://github.com/baresip/re
 COMMENT=	Portable library for real-time communications with async IO support
 LICENSE=	modified-bsd
 
