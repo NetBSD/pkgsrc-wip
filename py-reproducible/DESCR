@@ -1,0 +1,6 @@
+Reproducible library, aims to provide an easy way to gather
+and save important information about the context in which a
+result was computed. This includes details about the OS, the
+Python version, the time, the git commit, the command-line
+arguments, hashes of input and output files, and any user
+provided data.
