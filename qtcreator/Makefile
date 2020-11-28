@@ -56,17 +56,27 @@ REPLACE_PERL+=	scripts/test2tasks.pl
 REPLACE_PERL+=	scripts/updateCopyright.pl
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}/${PREFIX}
+BUILD_TARGET=		all qch_docs
 INSTALL_TARGET=		install install_inst_qch_docs
 
 # Has a header called context.h (also in python 3.x) and it includes
 # python headers before its own headers.
 PYTHON_VERSIONS_ACCEPTED=	27
 
+# XXX doesn't seem to get built on netbsd. probably results in
+# PLIST differences when it does.
+CMAKE_ARGS.NetBSD+=	-DBUILD_WITH_PCH=OFF
+
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 do-configure:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_ENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake QMAKE_RPATHDIR+=${QTDIR}/lib QMAKE_RPATHDIR+=${X11BASE}/lib -o Makefile
+	${RUN} cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake \
+		QMAKE_RPATHDIR+=${QTDIR}/lib \
+		QMAKE_RPATHDIR+=${X11BASE}/lib \
+		QMAKE_RPATHDIR+=${LOCALBASE}/lib/qtcreator \
+		QMAKE_RPATHDIR+=${LOCALBASE}/lib/qtcreator/plugins \
+		-o Makefile
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
