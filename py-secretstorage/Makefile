@@ -12,7 +12,7 @@ COMMENT=	Module for securely storing passwords and secrets
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.0:../../security/py-cryptography
-# missing package for py-jeepney
+DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.5.0:../../wip/py-jeepney
 
 USE_LANGUAGES=	# none
 WRKSRC=		${WRKDIR}/${DISTNAME} # Why is this necessary?
