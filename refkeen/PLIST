@@ -1,7 +1,5 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/19 19:21:33 yhardy Exp $
-bin/reflection-cat3d
-bin/reflection-catabyss
-bin/reflection-catapoc
-bin/reflection-catarm
+bin/reflection-catacomb
 bin/reflection-kdreams
+bin/reflection-wolf3d
 share/doc/${PKGNAME}/README.md
