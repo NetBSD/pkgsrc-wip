@@ -4,7 +4,7 @@ Adapt to NetBSD.
 
 --- cutils.h.orig	2019-07-09 17:49:47.000000000 +0000
 +++ cutils.h
-@@ -206,6 +206,7 @@ static inline void put_u8(uint8_t *tab, 
+@@ -207,6 +207,7 @@ static inline void put_u8(uint8_t *tab, 
      *tab = val;
  }
  
@@ -12,7 +12,7 @@ Adapt to NetBSD.
  static inline uint16_t bswap16(uint16_t x)
  {
      return (x >> 8) | (x << 8);
-@@ -228,6 +229,7 @@ static inline uint64_t bswap64(uint64_t 
+@@ -229,6 +230,7 @@ static inline uint64_t bswap64(uint64_t 
          ((v & ((uint64_t)0xff << (1 * 8))) << (5 * 8)) | 
          ((v & ((uint64_t)0xff << (0 * 8))) << (7 * 8));
  }

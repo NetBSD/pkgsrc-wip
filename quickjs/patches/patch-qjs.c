@@ -4,7 +4,7 @@ Adapt to NetBSD.
 
 --- qjs.c.orig	2019-07-09 17:49:47.000000000 +0000
 +++ qjs.c
-@@ -108,6 +108,8 @@ static inline size_t js_trace_malloc_usa
+@@ -150,6 +150,8 @@ static inline size_t js_trace_malloc_usa
      return 0;
  #elif defined(__linux__)
      return malloc_usable_size(ptr);
@@ -13,7 +13,7 @@ Adapt to NetBSD.
  #else
      /* change this to `return 0;` if compilation fails */
      return malloc_usable_size(ptr);
-@@ -224,6 +226,8 @@ static const JSMallocFunctions trace_mf 
+@@ -266,6 +268,8 @@ static const JSMallocFunctions trace_mf 
      NULL,
  #elif defined(__linux__)
      (size_t (*)(const void *))malloc_usable_size,

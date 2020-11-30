@@ -22,14 +22,37 @@ Adapt for NetBSD & pkgsrc.
  # consider warnings as errors (for development)
  #CONFIG_WERROR=y
  # force 32 bit build for some utilities
-@@ -165,8 +172,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
- 
- LIBS=-lm
- ifndef CONFIG_WIN32
-+ifndef CONFIG_NETBSD
- LIBS+=-ldl
+@@ -41,7 +48,7 @@ CONFIG_DEFAULT_AR=y
  endif
+ 
+ # installation directory
+-prefix=/usr/local
++prefix=/usr/pkg
+ 
+ # use the gprof profiler
+ #CONFIG_PROFILE=y
+@@ -174,10 +181,22 @@ QJS_LIB_OBJS+=$(OBJDIR)/libbf.o 
+ QJS_OBJS+=$(OBJDIR)/qjscalc.o
+ endif
+ 
+-HOST_LIBS=-lm -ldl -lpthread
++HOST_LIBS=-lm
++ifndef CONFIG_NETBSD
++HOST_LIBS+=-ldl
++HOST_LIBS+=-lpthread
++else
++HOST_LIBS+=-pthread
 +endif
+ LIBS=-lm
++
+ ifndef CONFIG_WIN32
+-LIBS+=-ldl -lpthread
++ifndef CONFIG_NETBSD
++LIBS+=-ldl
++LIBS+=-lphtread
++else
++LIBS+=-pthread
++endif
+ endif
  
  $(OBJDIR):
- 	mkdir -p $(OBJDIR) $(OBJDIR)/examples $(OBJDIR)/tests

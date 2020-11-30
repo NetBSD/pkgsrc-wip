@@ -1,12 +1,12 @@
 $NetBSD$
 
-SHA1 (quickjs-2019-10-27.tar.xz) = 6d10526eecc6bbbd13f33262f796f30090195974
-RMD160 (quickjs-2019-10-27.tar.xz) = 4cd24d0d6c6c9fd23c2bc66d1e724e7e43985b22
-SHA512 (quickjs-2019-10-27.tar.xz) = 3654c8998b6c99fb42387c785e2be138b46b644025b2da5f26ecc6c1d58f32ef89b274763b0bcc5d25d86bbae217ec52576d13bf4e9cd81c6c2af46b692b73e9
-Size (quickjs-2019-10-27.tar.xz) = 763012 bytes
-SHA1 (patch-Makefile) = 57ddddb7246be7dbe96bcdc8775e7ccbf8bf4b18
-SHA1 (patch-cutils.h) = 9719a77add566ce6443af1ac2ba1d1ea61e5c248
-SHA1 (patch-qjs.c) = d26b8ac0f7bf84bdb17fb4784f637dcb012cbd93
-SHA1 (patch-qjsc.c) = 9a1f46b46807d9ff0393cd7944416a5bb082bbbb
-SHA1 (patch-quickjs-libc.c) = ac56623b0e590d4bc1b4e8fa8a778ebf34f329b4
-SHA1 (patch-quickjs.c) = 930c2549a0244ecfa8e2cccf96b981ffafb8f17c
+SHA1 (quickjs-2020-11-08.tar.xz) = f9aef74b21621be23fdd89b6c26406eb8432b191
+RMD160 (quickjs-2020-11-08.tar.xz) = 2f3d9a51b341db48d6393a0c021e537936ac495e
+SHA512 (quickjs-2020-11-08.tar.xz) = d437813948269bab6046c0219eb20ccea45613073bea1c4eee5b553831fdaaa5e2165b14fcb436e86bf70d488200845f7821864abb6f40b115f0ef7f24971e02
+Size (quickjs-2020-11-08.tar.xz) = 752132 bytes
+SHA1 (patch-Makefile) = 25b040d2409ff28f7b5fc8f0e7b8a0ecb86174fb
+SHA1 (patch-cutils.h) = 3430f86dab2ec04be09bf81230e2e9e5c2f373e4
+SHA1 (patch-qjs.c) = acb1e66454f8c0263363e2e9564a89b86af3c649
+SHA1 (patch-qjsc.c) = 253e65f7d974940e4c1fc7d02f58b0ab3764d80b
+SHA1 (patch-quickjs-libc.c) = 126385954c57cf2cf18e9fedfebd5abbf672c2da
+SHA1 (patch-quickjs.c) = 7b43df0862cf97f87e78a6f3a82757294a19c9b3
