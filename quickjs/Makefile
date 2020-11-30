@@ -13,12 +13,6 @@ LICENSE=	mit
 
 USE_TOOLS=	gmake
 
-SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Adjust hardcoded paths
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
-
 INSTALLATION_DIRS+=	bin lib/quickjs include/quickjs
 
 TEST_TARGET=	test
