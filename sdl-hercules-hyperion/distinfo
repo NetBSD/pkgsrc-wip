@@ -1,19 +1,12 @@
 $NetBSD$
 
-SHA1 (Release_4.2.1.tar.gz) = ca2f9c802c05c4ddd528718c2a3b4df01ae09564
-RMD160 (Release_4.2.1.tar.gz) = cc8fd7e5deb2b2a857215172c13b237f1525858b
-SHA512 (Release_4.2.1.tar.gz) = 8d8e94136b3ffa57fc03f687c3b8662ccffb150a29904e911d2383eadd09ae732e73c1712e00bf9a8350fbdd31936f10c498e64574c4bd4316e82c1fb535ca68
-Size (Release_4.2.1.tar.gz) = 11124925 bytes
-SHA1 (patch-Makefile.am) = 354add1d50bbbc09226e848f6b2e7350ad34f915
-SHA1 (patch-autoconf_hercules.m4) = 2ea0beaa0a0470050f0c41befcaebd9f73dad4d5
-SHA1 (patch-configure.ac) = 5e2a92b3530fa4bd61a4f1e28ff98eab20f7d1b5
-SHA1 (patch-hercifc.c) = 5661ca325cb3575726a44ecadbaeb951fcf2d0fd
+SHA1 (Release_4.3.tar.gz) = 45d756c88b495a932b9aa582868c1c76a2ea0f4f
+RMD160 (Release_4.3.tar.gz) = 2552fbe36d0db1dc630e734ea46dcca0d32bb73a
+SHA512 (Release_4.3.tar.gz) = e2591b16ecc08f952f16c013764a1d6bfd88aafe9620130dca9619a8af47f2cc04af7d7552c08f75ff6000854fe8e698350b344dbb573551701a610df68fd00a
+Size (Release_4.3.tar.gz) = 11609664 bytes
+SHA1 (patch-Makefile.am) = 85b65386cfde0d7c180abaeaab67e05ad7d07385
+SHA1 (patch-configure.ac) = ccec25f9f20ae0263905ccaea9e30a2aff6660fd
 SHA1 (patch-hercules.cnf) = cd0a09d39175e9673dab785703d2f8c1b92c8dc6
-SHA1 (patch-hifr.h) = d364bbd32143cf137aed84eb79f5af9f62f8210b
-SHA1 (patch-hostopts.h) = d464925f82570cbcf368f0b76d1b545a5eebacfd
-SHA1 (patch-hscutl.c) = 72ff77bff284e63bc42e124b56051fe735f74de6
-SHA1 (patch-hthreads.h) = 25004a78c3fd0a803c5f4e0b0de8d05819602ac9
-SHA1 (patch-htypes.h) = 7e057ae370b266758176fbe13964581cac5004f0
+SHA1 (patch-hifr.h) = 8c1164bdc04afb19aa3254f33ef5c6349e1bcf58
 SHA1 (patch-msgenu.h) = 89a1ac7373da138e79e3538aaaf96f85d07ab873
 SHA1 (patch-tuntap.c) = 9fc0be227907ae0eca4bb41c95be8c3540d6def5
-SHA1 (patch-tuntap.h) = 24946aab519beb6185800801f2bb38dccfdfef94

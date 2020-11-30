@@ -1,97 +1,11 @@
 $NetBSD$
 
-- test == is not portable.
-* 9efbcb8e This looks like a typo (variable does not match header file name)
-* e8c20aa1 More careful use of includes when testing for further features.
-* 73498d3c Add configure check for pthread_rwlockattr_setpshared().
 - Avoid -march=xxx because it makes binaries nonportable.
 
 
 --- configure.ac.orig	2019-09-10 18:06:20.000000000 +0000
 +++ configure.ac
-@@ -684,7 +684,7 @@ AC_CHECK_HEADERS( linux/ipv6.h,   [hc_cv
-       #include <sys/socket.h>
-     #endif
- ] )
--AC_CHECK_HEADERS( net/if_var.h,   [hc_cv_have_net_in_var_h=yes],   [hc_cv_have_net_in_var_h=no],
-+AC_CHECK_HEADERS( net/if_var.h,   [hc_cv_have_net_if_var_h=yes],   [hc_cv_have_net_if_var_h=no],
- [
-     #include <sys/types.h>
-     #ifdef HAVE_SYS_SOCKET_H
-@@ -700,8 +700,10 @@ AC_CHECK_HEADERS( netinet/in_var.h,  [hc
-     #ifdef HAVE_SYS_SOCKET_H
-       #include <sys/socket.h>
-     #endif
--    #ifdef HAVE_NET_IF_VAR_H
-+    #ifdef HAVE_NET_IF_H
-       #include <net/if.h>
-+    #endif
-+    #ifdef HAVE_NET_IF_VAR_H
-       #include <net/if_var.h>
-     #endif
-     #ifdef HAVE_NETINET_IN_H
-@@ -714,12 +716,16 @@ AC_CHECK_HEADERS( netinet6/in6_var.h,  [
-     #ifdef HAVE_SYS_SOCKET_H
-       #include <sys/socket.h>
-     #endif
--    #ifdef HAVE_NET_IF_VAR_H
-+    #ifdef HAVE_NET_IF_H
-       #include <net/if.h>
-+    #endif
-+    #ifdef HAVE_NET_IF_VAR_H
-       #include <net/if_var.h>
-     #endif
--    #ifdef HAVE_NETINET_IN_VAR_H
-+    #ifdef HAVE_NETINET_IN_H
-       #include <netinet/in.h>
-+    #endif
-+    #ifdef HAVE_NETINET_IN_VAR_H
-       #include <netinet/in_var.h>
-     #endif
- ] )
-@@ -1054,6 +1060,14 @@ if test "$hc_cv_have_getsetuid" != "yes"
- fi
- 
- 
-+if test "$hc_cv_have_pthread_h" = "yes"; then
-+    save_CFLAGS="$CFLAGS"
-+    CFLAGS="$CFLAGS -pthread"
-+    AC_CHECK_FUNCS( pthread_create ) dnl tester for method of checking...
-+    AC_CHECK_FUNCS( pthread_rwlockattr_setpshared )
-+    CFLAGS="$save_CFLAGS"
-+fi
-+
- #  FIXME: Disabled because some builtin ffs seem to be causing a problem.
- #         (gcc 3.4 barfs on certain 'march=' settings?)
- #AC_CHECK_FUNCS( ffs )
-@@ -1139,10 +1153,16 @@ AC_CHECK_MEMBERS( [struct in6_ifreq.ifr_
-     #ifdef HAVE_LINUX_IPV6_H
-       #include <linux/ipv6.h>
-     #endif
--    #ifdef HAVE_NETINET6_IN6_VAR_H
-+    #ifdef HAVE_NET_IF_H
-       #include <net/if.h>
-+    #endif
-+    #ifdef HAVE_NET_IF_VAR_H
-       #include <net/if_var.h>
-+    #endif
-+    #ifdef HAVE_NETINET_IN_H
-       #include <netinet/in.h>
-+    #endif
-+    #ifdef HAVE_NETINET6_IN6_VAR_H
-       #include <netinet/in_var.h>  // Not the ipv6 file, please
-     #endif
- ] )
-@@ -1202,7 +1222,7 @@ AC_CHECK_SIZEOF(size_t)
- AC_CHECK_SIZEOF(int *)
- AC_CHECK_SIZEOF(off_t)
- 
--if test "$hc_cv_have_pthread_h" == "yes"; then
-+if test "$hc_cv_have_pthread_h" = "yes"; then
-   AC_CHECK_SIZEOF(pthread_t)
- fi
- 
-@@ -2740,7 +2760,8 @@ if test "$hc_cv_auto_optimize" = "yes"; 
+@@ -2828,7 +2828,8 @@ if test "$hc_cv_auto_optimize" = "yes"; 
      if test "$hc_cv_is_intel_x86_arch" = "yes"; then
  
          # Set CPU type
@@ -101,7 +15,7 @@ $NetBSD$
  
          # Dynamically inline small block string operations
          # (subroutine calls still made for large area calls)
-@@ -2943,9 +2964,9 @@ test  "$hc_cv_is_mingw"    =  "yes"  && 
+@@ -3031,9 +3032,9 @@ test  "$hc_cv_is_mingw"    =  "yes"  && 
  #------------------------------------------------------#
  
  if test "$hc_cv_opt_debug" = "yes"; then
@@ -113,7 +27,7 @@ $NetBSD$
  fi
  
  AC_CACHE_SAVE()
-@@ -3141,10 +3162,11 @@ extpkg_ldadd="${crypto_libdir}/${crypto_
+@@ -3229,10 +3231,11 @@ extpkg_ldadd="${crypto_libdir}/${crypto_
  ##----------------------------------------------------------------
  ##                         DEBUGGING
  ##----------------------------------------------------------------

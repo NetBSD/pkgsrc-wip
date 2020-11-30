@@ -1,6 +1,6 @@
 $NetBSD$
 
-NetBSD is totally different. Patch the whole file out for now.
+NetBSD is not Linux. Conditionalize the compilation of Linux stuff.
 
 --- tuntap.c.orig	2019-09-10 18:06:20.000000000 +0000
 +++ tuntap.c

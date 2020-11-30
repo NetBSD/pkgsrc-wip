@@ -58,9 +58,11 @@ lib/hercules/hdt3420.la
 lib/hercules/hdt3505.la
 lib/hercules/hdt3525.la
 lib/hercules/hdt3705.la
+lib/hercules/hdtdummy.la
 lib/hercules/hdteq.la
 lib/hercules/hdtptp.la
 lib/hercules/hdtqeth.la
+lib/hercules/hdttcpnje.la
 lib/hercules/hdtzfcp.la
 lib/libhdt3420_not_mod.la
 lib/libherc.la
@@ -77,6 +79,7 @@ share/hercules/TMOUNT.txt
 share/hercules/awssl-v19g
 share/hercules/awswrite.jcl
 share/hercules/cckddasd.html
+share/hercules/cckddu64.hla
 share/hercules/cckddump.hla
 share/hercules/cckdload.hla
 share/hercules/fishgui.html

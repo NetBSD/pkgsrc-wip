@@ -3,7 +3,7 @@ $NetBSD$
 * Fix build. Use devel/libltdl instead of internal libltdl.
 - Build dynamic modules only dynamic (-shared), not also static.
 
---- Makefile.am.orig	2019-09-10 18:06:20.000000000 +0000
+--- Makefile.am.orig	2020-11-27 18:45:12.000000000 +0000
 +++ Makefile.am
 @@ -11,7 +11,7 @@ extpkg_headers = @EXTPKG_HEADERS@
  extpkg_ldadd   = @EXTPKG_LDADD@
@@ -14,7 +14,7 @@ $NetBSD$
  
  #------------------------------------------------------------------------------
  
-@@ -140,9 +140,9 @@ dyndev_SRC =  \
+@@ -142,9 +142,9 @@ dyndev_SRC =  \
  #                    to Windows DLLs
  #-----------------------------------------------------------------
  
@@ -26,7 +26,7 @@ $NetBSD$
  
  DYNMOD_LD_FLAGS =   \
    -module           \
-@@ -500,7 +500,6 @@ libherc_la_SOURCES = \
+@@ -512,7 +512,6 @@ libherc_la_SOURCES = \
    $(DYNSRC)
  
  EXTRA_libherc_la_SOURCES = \
@@ -34,8 +34,8 @@ $NetBSD$
    memrchr.c          \
    $(dynamic_SRC)     \
    $(dyndev_SRC)      \
-@@ -939,7 +938,6 @@ noinst_HEADERS =          \
-   inline.h                \
+@@ -956,7 +955,6 @@ noinst_HEADERS =          \
+   instfmts.h              \
    linklist.h              \
    logger.h                \
 -  ltdl.h                  \
