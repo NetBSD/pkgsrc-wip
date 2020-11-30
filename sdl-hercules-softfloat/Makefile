@@ -3,8 +3,8 @@
 PKGNAME=	sdl-hercules-softfloat-3.5.0
 CATEGORIES=	emulators
 GIT_REPO=	https://github.com/SDL-Hercules-390/SoftFloat.git
-GIT_REVISION=	4bd642a52f9d631254315cdeb80f49dcc0ad6f7b # Nov 29, 2019
-CHECKOUT_DATE=	2019-11-29
+GIT_REVISION=	1991ebd466f46590d02aa68729f3283fe430bec0 # Nov 13, 2020
+CHECKOUT_DATE=	2020-11-13
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/SoftFloat
@@ -12,7 +12,7 @@ COMMENT=	The SoftDevLabs version of SoftFloat for Hercules 4.x
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	cmake
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c
 
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/SoftFloat64.Release

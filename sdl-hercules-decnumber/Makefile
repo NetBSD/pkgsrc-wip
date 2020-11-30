@@ -3,8 +3,8 @@
 PKGNAME=	sdl-hercules-decnumber-3.68.0
 CATEGORIES=	emulators
 GIT_REPO=	https://github.com/SDL-Hercules-390/decNumber.git
-GIT_REVISION=	963bd1fa94ff52adfe4c9ebc8cd874a641db7679 # Nov 29, 2019
-CHECKOUT_DATE=	2019-11-29
+GIT_REVISION=	e41bb5245dbfdde1dd3d55b2c755230325b2e4be # Nov 13, 2020
+CHECKOUT_DATE=	2020-11-13
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
@@ -12,7 +12,7 @@ COMMENT=	The SoftDevLabs version of decNumber for Hercules 4.x
 LICENSE=	qpl-v1.0
 
 USE_TOOLS+=	cmake
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c
 
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/decNumber64.Release

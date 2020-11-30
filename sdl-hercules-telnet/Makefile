@@ -3,8 +3,8 @@
 PKGNAME=	sdl-hercules-telnet-1.0.0
 CATEGORIES=	emulators
 GIT_REPO=	https://github.com/SDL-Hercules-390/telnet.git
-GIT_REVISION=	650fad2ce96f76bf6d62cd3f8e70ae7e5f214fd3 # Nov 29, 2019
-CHECKOUT_DATE=	2019-11-29
+GIT_REVISION=	4b8acebec532057a29bc5662f8ca80d50aeda05c # Nov 13, 2020
+CHECKOUT_DATE=	2020-11-13
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/telnet
@@ -12,7 +12,7 @@ COMMENT=	The SoftDevLabs version of telnet library for Hercules 4.x
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	cmake
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c
 
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/telnet64.Release

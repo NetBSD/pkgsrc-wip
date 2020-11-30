@@ -3,8 +3,8 @@
 PKGNAME=	sdl-hercules-crypto-1.0.0
 CATEGORIES=	emulators
 GIT_REPO=	https://github.com/SDL-Hercules-390/crypto.git
-GIT_REVISION=	02174c9e2fc7dfeeaf88fbe57172baaf07c650bb # Nov 29, 2019
-CHECKOUT_DATE=	2019-11-29
+GIT_REVISION=	53dda212770e5981974e11437535a586a22d4aae # Nov 13, 2020
+CHECKOUT_DATE=	2020-11-13
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
@@ -12,7 +12,7 @@ COMMENT=	The SoftDevLabs version of crypto for Hercules 4.x
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	cmake
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c
 
 USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/crypto64.Release
