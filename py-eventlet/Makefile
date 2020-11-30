@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.7 2015/01/18 22:09:42 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	eventlet-0.16.1
+DISTNAME=	eventlet-0.29.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eventlet/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://eventlet.net/
-COMMENT=	High performance network library using coroutines
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	http://eventlet.net
+COMMENT=	Highly concurrent networking library
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/eventlet-0.16.1
+PYTHON_VERSIONS_ACCEPTED=	39 38 37 36 
+
+DEPENDS+=	${PYPKGPREFIX}-dns>=1.16.0:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.3:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.1:../../devel/py-greenlet
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
