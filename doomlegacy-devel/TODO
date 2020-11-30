@@ -64,4 +64,12 @@ Part 16: Sky is not rendered correctly
     => Works as expected
 
 
+Part 17: Undefined behaviour
+============================
+GCC 10 produce several warnings while compiling the code.
+[X] Created upstream bug report #671
+    Fixed in SVN revision 1561
+    => Works as expected
+
+
 EOF
