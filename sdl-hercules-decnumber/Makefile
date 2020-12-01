@@ -1,10 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	sdl-hercules-decnumber-3.68.0
+GITHUB_PROJECT=	decNumber
+GITHUB_TAG=	e41bb5245dbfdde1dd3d55b2c755230325b2e4be # Nov 13, 2020
+DISTNAME=	sdl-hercules-decnumber-3.68.0
+PKGREVISION=	20201113
 CATEGORIES=	emulators
-GIT_REPO=	https://github.com/SDL-Hercules-390/decNumber.git
-GIT_REVISION=	e41bb5245dbfdde1dd3d55b2c755230325b2e4be # Nov 13, 2020
-CHECKOUT_DATE=	2020-11-13
+MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
@@ -26,5 +27,4 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libdecNumber64.a libdecNumber_pic.a
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

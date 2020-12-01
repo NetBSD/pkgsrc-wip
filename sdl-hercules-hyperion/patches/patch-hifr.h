@@ -1,5 +1,7 @@
 $NetBSD$
 
+Correct back over-done "or NetBSD" condition.
+
 --- hifr.h.orig	2020-11-30 19:36:38.734299287 +0000
 +++ hifr.h
 @@ -119,7 +119,7 @@ typedef struct hifr hifr;

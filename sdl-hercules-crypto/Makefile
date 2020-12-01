@@ -1,10 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	sdl-hercules-crypto-1.0.0
+GITHUB_PROJECT=	crypto
+GITHUB_TAG=	53dda212770e5981974e11437535a586a22d4aae # Nov 13, 2020
+DISTNAME=	sdl-hercules-crypto-1.0.0
+PKGREVISION=	20201113
 CATEGORIES=	emulators
-GIT_REPO=	https://github.com/SDL-Hercules-390/crypto.git
-GIT_REVISION=	53dda212770e5981974e11437535a586a22d4aae # Nov 13, 2020
-CHECKOUT_DATE=	2020-11-13
+MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
@@ -26,5 +27,4 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libcrypto64.a libcrypto_pic.a
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

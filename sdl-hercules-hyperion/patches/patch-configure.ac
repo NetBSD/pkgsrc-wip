@@ -1,11 +1,11 @@
 $NetBSD$
 
 - Avoid -march=xxx because it makes binaries nonportable.
+- Fix suffix of helper libraries.
 
-
---- configure.ac.orig	2019-09-10 18:06:20.000000000 +0000
+--- configure.ac.orig	2020-11-27 18:45:12.000000000 +0000
 +++ configure.ac
-@@ -2828,7 +2828,8 @@ if test "$hc_cv_auto_optimize" = "yes"; 
+@@ -2826,7 +2826,8 @@ if test "$hc_cv_auto_optimize" = "yes"; 
      if test "$hc_cv_is_intel_x86_arch" = "yes"; then
  
          # Set CPU type
@@ -27,7 +27,7 @@ $NetBSD$
  fi
  
  AC_CACHE_SAVE()
-@@ -3229,10 +3231,11 @@ extpkg_ldadd="${crypto_libdir}/${crypto_
+@@ -3229,10 +3230,11 @@ extpkg_ldadd="${crypto_libdir}/${crypto_
  ##----------------------------------------------------------------
  ##                         DEBUGGING
  ##----------------------------------------------------------------

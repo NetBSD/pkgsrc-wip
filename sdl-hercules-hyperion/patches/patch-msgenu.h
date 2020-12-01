@@ -1,5 +1,7 @@
 $NetBSD$
 
+Introduce 2 message texts as added to tuntap.c.
+
 --- msgenu.h.orig	2019-09-10 18:06:20.000000000 +0000
 +++ msgenu.h
 @@ -322,8 +322,8 @@ LOGM_DLL_IMPORT int  panel_command_captu

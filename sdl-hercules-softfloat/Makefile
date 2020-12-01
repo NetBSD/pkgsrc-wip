@@ -1,10 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	sdl-hercules-softfloat-3.5.0
+GITHUB_PROJECT=	SoftFloat
+GITHUB_TAG=	1991ebd466f46590d02aa68729f3283fe430bec0 # Nov 13, 2020
+DISTNAME=	sdl-hercules-softfloat-3.5.0
+PKGREVISION=	20201113
 CATEGORIES=	emulators
-GIT_REPO=	https://github.com/SDL-Hercules-390/SoftFloat.git
-GIT_REVISION=	1991ebd466f46590d02aa68729f3283fe430bec0 # Nov 13, 2020
-CHECKOUT_DATE=	2020-11-13
+MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/SoftFloat
@@ -26,5 +27,4 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libSoftFloat64.a libSoftFloat_pic.a
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake flex gawk grep gm4 gmake perl gsed
 USE_TOOLS+=	bash
 USE_LIBTOOL=	YES
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c
 PTHREAD_OPTS+=	require
 REPLACE_BASH=	_dynamic_version
 
