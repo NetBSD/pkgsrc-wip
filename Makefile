@@ -4468,7 +4468,6 @@ SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt5-qtwebengine
 SUBDIR+=	qtaccountsservice
-SUBDIR+=	qtcreator
 SUBDIR+=	qtile
 SUBDIR+=	qtnotifydaemon
 SUBDIR+=	qtractor
