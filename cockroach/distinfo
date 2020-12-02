@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (cockroach-v20.2.2.src.tgz) = f26bcda06c9331eedfdf7f6ec4cbbe7f58826cc9
+RMD160 (cockroach-v20.2.2.src.tgz) = 9a0851f06b001ae9bbcacdb145475683a9be453f
+SHA512 (cockroach-v20.2.2.src.tgz) = 48e940108f691bf62d68ce916ade22627c947f1270bcf07a5d383b730039e0fb14788db5ea9c870005b834bc1d2750d400e41afa9ac27dc9cc6687173f0faa89
+Size (cockroach-v20.2.2.src.tgz) = 290416644 bytes
+SHA1 (patch-src_github.com_cockroachdb_cockroach_Makefile) = 6616e8c00215b2aab4e450df377a1edd92836b5c
