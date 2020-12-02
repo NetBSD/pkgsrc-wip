@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD$
-
-You need to add a doas file to your pam configuration directory (usually
-/etc/pam.d). You can file a sample file in:
-	${EGDIR}/pam.d/opendoas
-===========================================================================

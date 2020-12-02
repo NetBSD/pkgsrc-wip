@@ -36,13 +36,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 SPECIAL_PERMS+=		bin/doas ${SETUID_ROOT_PERMS}
 NOT_FOR_UNPRIVILEGED=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux" || ${OPSYS} == "Darwin"
-CONF_FILES=	${EGDIR}/doas ${PKG_SYSCONFDIR}/pam.d/doas
-.endif
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
 
-.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
