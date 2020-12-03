@@ -38,4 +38,5 @@ NOT_FOR_UNPRIVILEGED=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
