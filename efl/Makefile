@@ -2,7 +2,7 @@
 
 DISTNAME=	efl-1.25.1
 CATEGORIES=	x11
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -51,19 +51,10 @@ BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PLIST_VARS+=	linux
-
-.if ${OPSYS} != "Linux"
 MESON_ARGS+=	-Dsystemd=false
-.else
-PLIST.linux=	yes
-.endif
-# eeze need libmount and libudev
-# FIXME: pkgsrc not support libmount and libudev
 MESON_ARGS+=	-Deeze=false
 MESON_ARGS+=	-Dbuild-tests=false
 MESON_ARGS+=	-Dbuild-examples=false
-#MESON_ARGS+=	-Dv4l2=false
 MESON_ARGS+=	-Dphysics=true
 
 .if ${X11_TYPE} != "modular"
