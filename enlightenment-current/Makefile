@@ -3,7 +3,7 @@
 DISTNAME=	enlightenment-0.24.2
 PKGNAME=	${DISTNAME:S/enlightenment/enlightenment-current/}
 CATEGORIES=	wm
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
@@ -68,12 +68,13 @@ MESON_ARGS+=		-Dsystemd=false
 CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
 .endif
 
-.include "../../devel/meson/build.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .if ${OPSYS} == "NetBSD"
 .include "../../sysutils/upower/buildlink3.mk"
 .endif
+
+.include "../../devel/meson/build.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/efl/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,7 @@
 #### Status
-Build on NetBSD 9.0_STABLE amd64, pkgsrc-2020Q2
+Build on:
+- NetBSD 9.1_STABLE amd64, pkgsrc-2020Q3
+- Linux 5.9.8-2-MANJARO x86_64, pkgsrc-2020Q3
 
 3rd party binary repository:
 `# echo "https://sourceforge.net/projects/kikadf/files/NetBSD/amd64/All/" >> /usr/pkg/etc/pkgin/repositories.conf`
