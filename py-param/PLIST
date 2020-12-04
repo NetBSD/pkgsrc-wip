@@ -17,6 +17,9 @@ ${PYSITELIB}/param/ipython.pyo
 ${PYSITELIB}/param/parameterized.py
 ${PYSITELIB}/param/parameterized.pyc
 ${PYSITELIB}/param/parameterized.pyo
+${PYSITELIB}/param/serializer.py
+${PYSITELIB}/param/serializer.pyc
+${PYSITELIB}/param/serializer.pyo
 ${PYSITELIB}/param/version.py
 ${PYSITELIB}/param/version.pyc
 ${PYSITELIB}/param/version.pyo
