@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pytrie.py
+${PYSITELIB}/pytrie.pyc
+${PYSITELIB}/pytrie.pyo
