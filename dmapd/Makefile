@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	dmapd-0.0.50
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net audio
 MASTER_SITES=	http://www.flyn.org/projects/dmapd/
 

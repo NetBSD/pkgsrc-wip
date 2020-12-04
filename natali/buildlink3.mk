@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	natali
 NATALI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.natali+=	natali>=1.25
+BUILDLINK_ABI_DEPENDS.natali?=	natali>=1.25nb2
 BUILDLINK_PKGSRCDIR.natali?=	../../wip/natali
 
 .include "../../net/netatalk22/buildlink3.mk"

@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	kmailtransport
 KMAILTRANSPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kmailtransport+=	kmailtransport>=17.12.1
+BUILDLINK_ABI_DEPENDS.kmailtransport?=	kmailtransport>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.kmailtransport?=	../../wip/kmailtransport
 
 .include "../../wip/akonadi-mime/buildlink3.mk"

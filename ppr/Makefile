@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.13 2014/09/08 21:24:08 thomasklausner Exp $
 
 DISTNAME=		ppr-1.53
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ppr/}\
 			ftp://ppr-dist.trincoll.edu/pub/ppr/

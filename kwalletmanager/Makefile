@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.69 2017/12/08 08:52:58 maya Exp $
 
 DISTNAME=	kwalletmanager-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	security
 
 HOMEPAGE=	https://kde.org/applications/system/kwalletmanager/

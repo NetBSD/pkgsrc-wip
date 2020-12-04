@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	beads-1.1.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	http://pappso.inra.fr//downloads/
 

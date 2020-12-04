@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	akonadi-mime
 AKONADI_MIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-mime+=	akonadi-mime>=17.12.1
+BUILDLINK_ABI_DEPENDS.akonadi-mime?=	akonadi-mime>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.akonadi-mime?=	../../wip/akonadi-mime
 
 .include "../../wip/akonadi/buildlink3.mk"

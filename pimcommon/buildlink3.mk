@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	pimcommon
 PIMCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pimcommon+=	pimcommon>=17.12.1
+BUILDLINK_ABI_DEPENDS.pimcommon?=		pimcommon>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.pimcommon?=		../../wip/pimcommon
 
 .include "../../mail/kimap/buildlink3.mk"

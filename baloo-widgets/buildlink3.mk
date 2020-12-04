@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	baloo-widgets
 BALOO_WIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.baloo-widgets+=	baloo-widgets>=16.04.0
+BUILDLINK_ABI_DEPENDS.baloo-widgets?=	baloo-widgets>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.baloo-widgets?=	../../wip/baloo-widgets
 
 .include "../../sysutils/baloo5/buildlink3.mk"

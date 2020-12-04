@@ -2,6 +2,7 @@
 #
 
 DISTNAME=		courierpassd-1.1.2
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.arda.homeunix.net/store/
 LICENSE=		gnu-gpl-v2

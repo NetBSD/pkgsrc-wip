@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libksysguard
 LIBKSYSGUARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libksysguard+=	libksysguard>=5.6.3
+BUILDLINK_ABI_DEPENDS.libksysguard?=	libksysguard>=5.18.5nb1
 BUILDLINK_PKGSRCDIR.libksysguard?=	../../wip/libksysguard
 
 .include "../../x11/plasma-framework/buildlink3.mk"

@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.11 2014/09/08 12:37:30 thomasklausner Exp $
 
 DISTNAME=	natali-1.25
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ppr/}
 

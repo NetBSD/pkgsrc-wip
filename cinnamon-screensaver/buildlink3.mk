@@ -5,6 +5,7 @@ BUILDLINK_TREE+=	cinnamon-screensaver
 CINNAMON_SCREENSAVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cinnamon-screensaver+=	cinnamon-screensaver>=4.6.0
+BUILDLINK_ABI_DEPENDS.cinnamon-screensaver?=	cinnamon-screensaver>=4.6.0nb1
 BUILDLINK_PKGSRCDIR.cinnamon-screensaver?=	../../wip/cinnamon-screensaver
 
 .include "../../devel/gobject-introspection/buildlink3.mk"

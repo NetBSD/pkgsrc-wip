@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	kronometer-2.2.3
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_KDE:=kronometer/2.2.3/src/}
 EXTRACT_SUFX=	.tar.xz

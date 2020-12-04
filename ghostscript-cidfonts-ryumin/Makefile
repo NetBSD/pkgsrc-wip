@@ -2,7 +2,7 @@
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	fonts
 
 MAINTAINER=	makoto@ki.nu

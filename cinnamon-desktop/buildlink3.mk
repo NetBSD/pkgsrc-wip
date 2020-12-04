@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	cinnamon-desktop
 CINNAMON_DESKTOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cinnamon-desktop+=	cinnamon-desktop>=4.6.4
+BUILDLINK_ABI_DEPENDS.cinnamon-desktop?=	cinnamon-desktop>=4.6.4nb1
 BUILDLINK_PKGSRCDIR.cinnamon-desktop?=	../../wip/cinnamon-desktop
 
 .include "../../audio/pulseaudio/buildlink3.mk"

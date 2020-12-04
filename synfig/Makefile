@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2014/08/11 23:10:14 thomasklausner Exp $
 
 DISTNAME=	synfig-0.62.02
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=synfig/}
 

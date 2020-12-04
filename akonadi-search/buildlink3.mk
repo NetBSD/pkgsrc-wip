@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	akonadi-search
 AKONADI_SEARCH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-search+=	akonadi-search>=17.12.1
+BUILDLINK_ABI_DEPENDS.akonadi-search?=	akonadi-search>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.akonadi-search?=	../../wip/akonadi-search
 
 .include "../../devel/kcmutils/buildlink3.mk"

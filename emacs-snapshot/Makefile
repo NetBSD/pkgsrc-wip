@@ -2,6 +2,7 @@
 
 DISTNAME=	emacs-27.0.50_2019-11-11
 PKGVERSION=	27.0.50
+PKGREVISION=	1
 MASTER_SITES=	https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/
 CATEGORIES=	editors
 

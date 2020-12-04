@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libkdepim
 LIBKDEPIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkdepim+=	libkdepim>=17.12.1
+BUILDLINK_ABI_DEPENDS.libkdepim?=		libkdepim>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.libkdepim?=		../../wip/libkdepim
 
 .include "../../wip/akonadi-contacts/buildlink3.mk"

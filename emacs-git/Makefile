@@ -3,6 +3,7 @@
 .include	"version.mk"
 DISTNAME=	emacs-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 PKGNAME=	emacs28-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
+PKGREVISION=	1
 CATEGORIES=	editors
 GIT_REPO=	git://git.savannah.gnu.org/emacs.git
 

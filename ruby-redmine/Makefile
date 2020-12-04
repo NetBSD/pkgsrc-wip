@@ -3,7 +3,7 @@
 
 DISTNAME=	redmine-2.5.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.redmine.org/releases/
 

@@ -2,6 +2,7 @@
 
 CONFLICTS+=	emacs27-nox11-[0-9]*
 
+PKGREVISION= 1
 .include "../../wip/emacs27/Makefile.common"
 
 

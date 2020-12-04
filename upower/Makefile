@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	upower-0.9.16
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz

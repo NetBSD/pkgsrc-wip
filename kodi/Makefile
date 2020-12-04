@@ -2,6 +2,7 @@
 
 PKGNAME=	kodi-17.3
 DISTNAME=	17.3-Krypton
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.kodi.tv/releases/source/
 

@@ -2,7 +2,7 @@
 
 DISTNAME=	diaspora-0.0.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 # Diaspora is not a gem.  There is no release tarball.  Perhaps one
 # can get it from github via tags, but it is not clear if that is

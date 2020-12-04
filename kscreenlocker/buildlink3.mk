@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	kscreenlocker
 KSCREENLOCKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kscreenlocker+=	kscreenlocker>=5.6.3
+BUILDLINK_ABI_DEPENDS.kscreenlocker?=	kscreenlocker>=5.18.5nb1
 BUILDLINK_PKGSRCDIR.kscreenlocker?=	../../wip/kscreenlocker
 
 .include "../../devel/kdeclarative/buildlink3.mk"

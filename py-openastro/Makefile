@@ -2,7 +2,7 @@
 
 DISTNAME=	openastro-1.1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 # The DISTFILE to download is an HTTP-only attachment.
 # The getsite.sh script uses cURL download the attached file.

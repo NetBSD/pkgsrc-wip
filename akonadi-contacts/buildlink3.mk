@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	akonadi-contacts
 AKONADI_CONTACTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-contacts+=	akonadi-contacts>=17.12.1
+BUILDLINK_ABI_DEPENDS.akonadi-contacts?=		akonadi-contacts>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.akonadi-contacts?=		../../wip/akonadi-contacts
 
 .include "../../wip/akonadi-mime/buildlink3.mk"

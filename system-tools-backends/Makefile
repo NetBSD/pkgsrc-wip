@@ -2,6 +2,7 @@
 #
 
 DISTNAME=		system-tools-backends-2.10.2
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/system-tools-backends/2.10/}
 
