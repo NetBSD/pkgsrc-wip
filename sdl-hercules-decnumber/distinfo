@@ -4,3 +4,4 @@ SHA1 (sdl-hercules-decnumber-3.68.0-e41bb5245dbfdde1dd3d55b2c755230325b2e4be.tar
 RMD160 (sdl-hercules-decnumber-3.68.0-e41bb5245dbfdde1dd3d55b2c755230325b2e4be.tar.gz) = d4c17f1443ce581dc9e54a668a192df04639e889
 SHA512 (sdl-hercules-decnumber-3.68.0-e41bb5245dbfdde1dd3d55b2c755230325b2e4be.tar.gz) = 93c22f278a48f4b121e64947a38da1af82a4c0a580faad13539a253ace1f7f571c143679e9d7b5bd9379a38439a121d61c1616283df160ca449eb4e7baf387f6
 Size (sdl-hercules-decnumber-3.68.0-e41bb5245dbfdde1dd3d55b2c755230325b2e4be.tar.gz) = 785533 bytes
+SHA1 (patch-cflags.txt) = 8e5833c2d43e7973dcf9d6c442976efefac30b26

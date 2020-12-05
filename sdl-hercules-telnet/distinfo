@@ -4,3 +4,4 @@ SHA1 (sdl-hercules-telnet-1.0.0-4b8acebec532057a29bc5662f8ca80d50aeda05c.tar.gz)
 RMD160 (sdl-hercules-telnet-1.0.0-4b8acebec532057a29bc5662f8ca80d50aeda05c.tar.gz) = 8684fc95fc22dc1c61efc52d39ffb183ecdd2fb2
 SHA512 (sdl-hercules-telnet-1.0.0-4b8acebec532057a29bc5662f8ca80d50aeda05c.tar.gz) = ef28f8f833eabe7491183ae60bc6a1be5b117e9f6e9f86b99543262f04a1c78faee0e0313e3647674cc7e314696775334b86d93950ff2b54bdab7ef3c4a32148
 Size (sdl-hercules-telnet-1.0.0-4b8acebec532057a29bc5662f8ca80d50aeda05c.tar.gz) = 67098 bytes
+SHA1 (patch-cflags.txt) = ed18a2aaa1da2a7f63c94e5fc061eb9fc0e0f02f
