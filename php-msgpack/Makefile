@@ -2,7 +2,7 @@
 #
 
 MODNAME=		msgpack
-PECL_VERSION=		2.1.1
+PECL_VERSION=		2.1.2
 CATEGORIES+=		devel
 
 MAINTAINER=		pkgsrc-users@pkgsrc.org
