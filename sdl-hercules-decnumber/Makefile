@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
 COMMENT=	The SoftDevLabs version of decNumber for Hercules 4.x
-LICENSE=	qpl-v1.0
+LICENSE=	icu-1.8.1-or-later
 
 USE_TOOLS+=	cmake
 USE_LANGUAGES+=	c

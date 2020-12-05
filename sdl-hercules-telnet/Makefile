@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/telnet
 COMMENT=	The SoftDevLabs version of telnet library for Hercules 4.x
-LICENSE=	modified-bsd
+LICENSE=	public-domain
 
 USE_TOOLS+=	cmake
 USE_LANGUAGES+=	c
