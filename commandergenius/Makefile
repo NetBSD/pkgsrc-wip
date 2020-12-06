@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/09/06 20:10:45 yhardy Exp $
 
 DISTNAME=	Commander-Genius-v${PKGVERSION_NOREV}
-PKGNAME=	Commander-Genius-2.6.3.1
+PKGNAME=	Commander-Genius-2.7.0
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/Dringgstein/Commander-Genius/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+CMAKE_ARGS+=	-DAPPDIR=${PREFIX}/bin
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=LINUX64
 CMAKE_ARGS+=	-DGAMES_SHAREDIR=${PREFIX}/share
 CMAKE_ARGS+=	-DDOCDIR=${PREFIX}/share/doc/commandergenius
