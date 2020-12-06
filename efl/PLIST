@@ -2050,6 +2050,7 @@ lib/cmake/Evas/EvasConfig.cmake
 lib/cmake/Evas/EvasConfigVersion.cmake
 lib/cmake/EvasCxx/EvasCxxConfig.cmake
 lib/cmake/EvasCxx/EvasCxxConfigVersion.cmake
+${PLIST.linux}lib/ecore/system/systemd/v-1.25/module.so
 lib/ecore/system/upower/v-1.25/module.so
 lib/ecore_con/utils/v-1.25/efl_net_proxy_helper
 lib/ecore_evas/engines/extn/v-1.25/module.so
@@ -2338,6 +2339,7 @@ lib/pkgconfig/ethumb.pc
 lib/pkgconfig/ethumb_client.pc
 lib/pkgconfig/evas-cxx.pc
 lib/pkgconfig/evas.pc
+${PLIST.linux}lib/systemd/user/ethumb.service
 share/applications/elementary_config.desktop
 share/applications/elementary_perf.desktop
 share/applications/elementary_test.desktop
