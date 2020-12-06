@@ -21,6 +21,15 @@ USE_LIBTOOL=	YES
 USE_LANGUAGES+=	c
 PTHREAD_OPTS+=	require
 REPLACE_BASH=	_dynamic_version
+.if ${MACHINE_ARCH} == i386
+CFLAGS+=	-march=i586
+.endif
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Correcting configuration path
+SUBST_FILES.prefix=	hercules.cnf
+SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
 

@@ -6,7 +6,6 @@ SHA512 (Release_4.3.tar.gz) = e2591b16ecc08f952f16c013764a1d6bfd88aafe9620130dca
 Size (Release_4.3.tar.gz) = 11609664 bytes
 SHA1 (patch-Makefile.am) = 85b65386cfde0d7c180abaeaab67e05ad7d07385
 SHA1 (patch-configure.ac) = b7f79b0a12cfe20eab389b59ace08bea427d2b63
-SHA1 (patch-hercules.cnf) = cd0a09d39175e9673dab785703d2f8c1b92c8dc6
 SHA1 (patch-hifr.h) = 6b878b957d1847296882316067281b05872a760c
 SHA1 (patch-msgenu.h) = 947d7ddf4395c6c91d2f6640c9d06e8880c8fdf9
 SHA1 (patch-tuntap.c) = 6067b1be32d2cd3aa4ad57e63a7483aa823fbcf1
