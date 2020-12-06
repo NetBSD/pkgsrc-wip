@@ -391,6 +391,7 @@ lib/enlightenment/utils/enlightenment_thumb
 lib/enlightenment/utils/enlightenment_wallpaper_gen
 lib/pkgconfig/enlightenment.pc
 lib/pkgconfig/everything.pc
+${PLIST.linux}lib/systemd/user/enlightenment.service
 share/applications/emixer.desktop
 share/applications/enlightenment_askpass.desktop
 share/applications/enlightenment_filemanager.desktop

@@ -3,7 +3,7 @@
 DISTNAME=	enlightenment-0.24.2
 PKGNAME=	${DISTNAME:S/enlightenment/enlightenment-current/}
 CATEGORIES=	wm
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
@@ -42,7 +42,7 @@ SUBST_VARS.prefix=	PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	cpufreq sysinfo temperature
+PLIST_VARS+=	cpufreq sysinfo temperature linux
 
 .if ${OPSYS} != "NetBSD"
 PLIST.cpufreq=		yes
@@ -52,6 +52,7 @@ PLIST.temperature=	yes
 
 .if ${OPSYS} == "Linux"
 PLIST_SUBST+=	PLATFORM="linux-gnu"
+PLIST.linux=	yes
 .else
 PLIST_SUBST+=	PLATFORM=${LOWER_OPSYS}
 .endif
@@ -62,7 +63,11 @@ MESON_ARGS+=		-Dsysinfo=false
 MESON_ARGS+=		-Dtemperature=false
 .endif
 MESON_ARGS+=		-Ddevice-udev=false
+.if ${OPSYS} != "Linux"
 MESON_ARGS+=		-Dsystemd=false
+.else
+MESON_ARGS+=		-Dsystemdunitdir=${PREFIX}/lib/systemd/user
+.endif
 
 .if ${X11_TYPE} == "modular"
 CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
