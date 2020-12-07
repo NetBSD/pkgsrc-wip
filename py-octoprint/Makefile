@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-cachelib>=0.1:../../wip/py-cachelib
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-emoji>=0.5.4:../../converters/py-emoji
-DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1<6.0.0:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-feedparser>=6.0.2:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.0.7:../../sysutils/py-filetype
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.2:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-assets>=2.0:../../www/py-flask-assets
@@ -31,8 +31,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.19:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.10.9:../../net/py-netifaces
-DEPENDS+=	${PYPKGPREFIX}-octoprint-filecheck>=2020.7.6:../../wip/py-octoprint-filecheck
-DEPENDS+=	${PYPKGPREFIX}-octoprint-firmwarecheck>=2020.6.22:../../wip/py-octoprint-firmwarecheck
+DEPENDS+=	${PYPKGPREFIX}-octoprint-filecheck>=2020.8.7:../../wip/py-octoprint-filecheck
+DEPENDS+=	${PYPKGPREFIX}-octoprint-firmwarecheck>=2020.9.23:../../wip/py-octoprint-firmwarecheck
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.5.0.1:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pylru>=1.2:../../wip/py-pylru
@@ -50,6 +50,7 @@ DEPENDS+=	${PYPKGPREFIX}-websocket-client>=0.57:../../www/py-websocket-client
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=1.0.1:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-zeroconf>=0.24:../../net/py-zeroconf
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/octoprint \
