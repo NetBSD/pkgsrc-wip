@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/sdnotify/__init__.py
+${PYSITELIB}/sdnotify/__init__.pyc
+${PYSITELIB}/sdnotify/__init__.pyo
