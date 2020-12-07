@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/OctoPrint/OctoPrint/
 COMMENT=	Snappy web interface for 3D printers
 LICENSE=	gnu-agpl-v3
 
+RCD_SCRIPTS=	octoprint
+
 PYTHON_VERSIONS_ACCEPTED=	37 36
 
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
