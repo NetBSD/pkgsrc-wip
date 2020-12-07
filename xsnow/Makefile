@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	xsnow-3.1.7
+DISTNAME=	xsnow-3.1.8
 CATEGORIES=	x11
 MASTER_SITES=	https://ratrabbit.nl/downloads/xsnow/
 

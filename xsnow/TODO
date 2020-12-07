@@ -1,4 +1,4 @@
 [X] Add license to Makefile
 [X] Add new dependecies
-[ ] Update to 3.1.8 (should have NetBSD support)
-[ ] Update PLIST
+[X] Update to 3.1.8 (should have NetBSD support)
+[X] Update PLIST

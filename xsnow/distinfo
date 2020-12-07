@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (xsnow-3.1.7.tar.gz) = e126ce9ccac795a16d404e01c84b0e3dd7fe0611
-RMD160 (xsnow-3.1.7.tar.gz) = c460fdbfd97a77717e806dc9a46a65022f185d45
-SHA512 (xsnow-3.1.7.tar.gz) = 32f4b4c0fd3879bd98e88a1ac560f47224d9f3ddbfd3f7f5e3ecafb47ffd0f6fad9aaca62090cc654bd76cc8dcb74984220024478fbc106a1dfa585761d70735
-Size (xsnow-3.1.7.tar.gz) = 364285 bytes
+SHA1 (xsnow-3.1.8.tar.gz) = c07615f23a95dc48b867b07437ad40ee775a0506
+RMD160 (xsnow-3.1.8.tar.gz) = 0f08c3091d4be1fd85795e83eccdb43f14f10615
+SHA512 (xsnow-3.1.8.tar.gz) = 35fd8c875557c3337f8a0ddfbe931bfad57834d037e4611bfeb63886efb2e786f9357f3451bc8b59cc5bdd4a67f21556a012b90f4d0493921225df47e67f28d0
+Size (xsnow-3.1.8.tar.gz) = 364186 bytes

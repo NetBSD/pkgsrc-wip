@@ -1,3 +1,5 @@
 @comment $NetBSD$
-bin/xsnow
-${IMAKE_MAN_DIR}/xsnow.${IMAKE_MAN_SUFFIX}
+games/xsnow
+man/man6/xsnow.6
+share/applications/xsnow.desktop
+share/pixmaps/xsnow.svg
