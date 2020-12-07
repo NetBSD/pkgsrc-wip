@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/hcl2tojson
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/hcl2/__init__.py
+${PYSITELIB}/hcl2/__init__.pyc
+${PYSITELIB}/hcl2/__init__.pyo
+${PYSITELIB}/hcl2/api.py
+${PYSITELIB}/hcl2/api.pyc
+${PYSITELIB}/hcl2/api.pyo
+${PYSITELIB}/hcl2/hcl2.lark
+${PYSITELIB}/hcl2/lark_parser.py
+${PYSITELIB}/hcl2/lark_parser.pyc
+${PYSITELIB}/hcl2/lark_parser.pyo
+${PYSITELIB}/hcl2/parser.py
+${PYSITELIB}/hcl2/parser.pyc
+${PYSITELIB}/hcl2/parser.pyo
+${PYSITELIB}/hcl2/transformer.py
+${PYSITELIB}/hcl2/transformer.pyc
+${PYSITELIB}/hcl2/transformer.pyo
+${PYSITELIB}/hcl2/version.py
+${PYSITELIB}/hcl2/version.pyc
+${PYSITELIB}/hcl2/version.pyo
