@@ -2,7 +2,7 @@
 
 DISTNAME=	imonc-20010125
 CATEGORIES=	net
-MASTER_SITES=	http://download.fli4l.de/3.10.9/x86/
+MASTER_SITES=	http://download.fli4l.de/3.10.19/x86/
 DISTFILES=	src.tar.gz
 
 MAINTAINER=	schwarz@NetBSD.org
