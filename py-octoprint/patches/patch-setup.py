@@ -22,3 +22,12 @@ Override some version checks
      "blinker>=1.4,<2",  # dependency of flask_principal
  ]
  
+@@ -79,7 +79,7 @@ INSTALL_REQUIRES_PYTHON2 = [
+ ]
+ 
+ # Python 3 specific requirements
+-INSTALL_REQUIRES_PYTHON3 = ["feedparser>=6.0.2,<7", "zeroconf>=0.24,<0.25"]
++INSTALL_REQUIRES_PYTHON3 = ["feedparser>=6.0.2,<7", "zeroconf>=0.24"]
+ 
+ # OSX specific requirements
+ INSTALL_REQUIRES_OSX = [
