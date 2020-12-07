@@ -1,0 +1,4 @@
+Tenacity is simplify the task of adding retry behavior to just about anything.
+It originates from a fork of retrying which is sadly no longer maintained.
+Tenacity isn't api compatible with retrying but adds significant new functionality
+and fixes a number of longstanding bugs
