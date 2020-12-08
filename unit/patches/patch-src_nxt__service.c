@@ -1,5 +1,7 @@
 $NetBSD$
 
+Do not use epoll on SmartOS/illumos, force usage of eventport.
+
 --- src/nxt_service.c.orig	2020-11-19 18:12:30.000000000 +0000
 +++ src/nxt_service.c
 @@ -13,17 +13,17 @@ static const nxt_service_t  nxt_services
