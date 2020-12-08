@@ -1,2 +1,2 @@
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-6497
-https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-6814
+This package has known vulnerabilities, please investigate and fix if possible:
+ CVE-2016-6497, CVE-2016-6814
