@@ -7,7 +7,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_OPTIONS_GROUP.gl=		opengl rpi
 
 # audio outputs
-PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
+PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
 # video outputs
 PKG_SUPPORTED_OPTIONS+=		caca libdrm wayland x11
 # audio/video outputs
@@ -95,6 +95,17 @@ WAF_CONFIGURE_ARGS+=	--enable-jack
 .include "../../audio/jack/buildlink3.mk"
 .else
 WAF_CONFIGURE_ARGS+=	--disable-jack
+.endif
+
+
+###
+### OpenAL support (audio output)
+###
+.if !empty(PKG_OPTIONS:Mopenal)
+WAF_CONFIGURE_ARGS+=	--enable-openal
+.include "../../audio/openal-soft/buildlink3.mk"
+.else
+WAF_CONFIGURE_ARGS+=	--disable-openal
 .endif
 
 ###
