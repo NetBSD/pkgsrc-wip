@@ -5,6 +5,7 @@
 #CONFIGURE_ENV+=		disable_x11=yes
 
 BUILD_TARGET=		world
+TEST_PROGRAM=		ocamltest
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
 
@@ -38,6 +39,7 @@ PLIST.ocaml-stub=	yes
     !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
     (${MACHINE_ARCH} == "x86_64")
 BUILD_TARGET+=		opt opt.opt
+TEST_PROGRAM+=		ocamltest.opt
 PLIST.ocaml-opt=	yes
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
@@ -97,6 +99,7 @@ REPLACE_AWK+=		tools/ocaml-instr-report
 .endif
 
 do-test:
+	cd ${WRKSRC} && ${MAKE_PROGRAM} ${TEST_PROGRAM}
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
 
 .if ${OPSYS} == "Darwin"
