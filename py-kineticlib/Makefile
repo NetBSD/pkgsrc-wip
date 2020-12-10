@@ -16,5 +16,5 @@ USE_LANGUAGES=	# none
 
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
