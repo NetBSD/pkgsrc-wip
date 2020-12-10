@@ -1,5 +1,5 @@
 @comment $NetBSD: PLIST,v 1.2 2015/05/03 13:20:13 thomasklausner Exp $
-lib/python3.8/site-packages/sipvicious-0.3.0-py3.8.egg
+${PYSITELIB}/site-packages/sipvicious-0.3.0-py3.8.egg
 bin/sipvicious_svcrack
 bin/sipvicious_svcrash
 bin/sipvicious_svmap
