@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_console/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://jupyter.org
+HOMEPAGE=	https://jupyter.org/
 COMMENT=	Jupyter terminal console
 LICENSE=	modified-bsd
 
@@ -17,6 +17,12 @@ DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=1.0.15:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
+
+post-install:
+.for name in console
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} jupyter-${name} jupyter-${name}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
