@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/02/11 23:01:30 jihbed Exp $
 
-SHA1 (kineticlib-0.3.1.tar.gz) = 15064200f4e5d0e3c7c1b75380ec11f1ac8d2cc5
-RMD160 (kineticlib-0.3.1.tar.gz) = b4297311daad7e030ba134510bbae30e4c84508a
-SHA512 (kineticlib-0.3.1.tar.gz) = 9bd15908790431eb9a2d01b17c8b82006a124778c1097358d7ca23b6d75476395560a041d58a39f7d885131a4a8f77d6d942f583c589bffc82ba26363a10977c
-Size (kineticlib-0.3.1.tar.gz) = 20091 bytes
+SHA1 (kineticlib-1.6.tar.gz) = 0621cbd941c2b96d1a685647fad9537c111de9ed
+RMD160 (kineticlib-1.6.tar.gz) = b117e9b55f601169e7a11fd69c53241573464e73
+SHA512 (kineticlib-1.6.tar.gz) = ea4134b74f73fcc8a56aa36f0366657c48ec2ff934683906bd9ef9414ae2b0c5e95b8fc0c50e1e995185b0dfc6add5392d72f7bc22856e286271a140bf2d3866
+Size (kineticlib-1.6.tar.gz) = 36956 bytes

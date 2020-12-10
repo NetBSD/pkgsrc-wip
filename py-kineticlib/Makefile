@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2014/06/01 12:49:42 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	kineticlib-0.3.1
+DISTNAME=	kineticlib-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kineticlib/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/Kunstmord/kineticlib
 COMMENT=	Library for kinetic theory calculations in the multi-temperature
-LICENSE=	gnu-gpl-v2
+LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
+#DEPENDS+=	${PYPKGPREFIX}-scipy>=1.2.3:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG=	yes
-
-.include "../../lang/python/extension.mk"
+BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
