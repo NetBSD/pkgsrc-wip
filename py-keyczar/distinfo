@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.2 2014/01/04 17:34:09 jihbed Exp $
 
-SHA1 (keyczar-python-0.71d-09062013.tar.gz) = 3126647aa712f2a15c20244947a1c13395f12020
-RMD160 (keyczar-python-0.71d-09062013.tar.gz) = 28d85b3ac9bde82b05a3141dcb9d27c38138aabe
-Size (keyczar-python-0.71d-09062013.tar.gz) = 241405 bytes
+SHA1 (python3-keyczar-0.71rc0.tar.gz) = 4da82b8a9735f8b9c0b396f5fb51f179afbd141c
+RMD160 (python3-keyczar-0.71rc0.tar.gz) = bd4c749c4e7b51437f2d97ded445248062c12aeb
+SHA512 (python3-keyczar-0.71rc0.tar.gz) = 003dce3348f6eac4b43f241eb8f1be583663d44c0b1e3e05acd1aeb212013f316819772abcd86f7aa2609468b1285552d9479d57095deed440cedd13027d251e
+Size (python3-keyczar-0.71rc0.tar.gz) = 221928 bytes
