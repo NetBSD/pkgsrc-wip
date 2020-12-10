@@ -1,9 +1,10 @@
 @comment $NetBSD: PLIST,v 1.2 2015/05/03 13:20:13 thomasklausner Exp $
-bin/svcrack.py
-bin/svcrash.py
-bin/svmap.py
-bin/svreport.py
-bin/svwar.py
+lib/python3.8/site-packages/sipvicious-0.3.0-py3.8.egg
+bin/sipvicious_svcrack
+bin/sipvicious_svcrash
+bin/sipvicious_svmap
+bin/sipvicious_svreport
+bin/sipvicious_svwar
 man/man1/svcrack.1
 man/man1/svcrash.1
 man/man1/svmap.1

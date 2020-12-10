@@ -1,29 +1,27 @@
 # $NetBSD: Makefile,v 1.2 2015/05/03 13:20:34 thomasklausner Exp $
 
-DISTNAME=	sipvicious-0.2.8
+DISTNAME=	v0.3.0
+PKGNAME=	${DISTNAME:S/v/sipvicious-/}
 CATEGORIES=	security
-MASTER_SITES=	http://sipvicious.googlecode.com/files/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	https://github.com/EnableSecurity/sipvicious/archive/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.sipvicious.org/
 COMMENT=	SIPVicious is a SIP security tool suite
 LICENSE=	gnu-gpl-v2
 
-PYTHON_SCRIPTS=	svcrack.py svcrash.py svmap.py svreport.py svwar.py
+#DEPENDS+=	python>=3.0:../../lang/python
 
-USE_LANGUAGES=		#perl scripts only
-NO_BUILD=		YES
-REPLACE_PYTHON+=	${PYTHON_SCRIPTS}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_LANGUAGES=		# python scripts only
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+do-build:
+	cd ${WRKSRC} && ${PYTHONBIN} ./setup.py build
+
 do-install:
-.for script in ${PYTHON_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/${script} ${DESTDIR}${PREFIX}/bin
-.endfor
-.for man in ${PYTHON_SCRIPTS:S/.py/.1/g}
-	${INSTALL_DATA} ${WRKSRC}/man1/${man} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.endfor
+	cd ${WRKSRC} && ${PYTHONBIN} ./setup.py install
+	cd ${WRKSRC}/man1 && ${INSTALL_DATA} *.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

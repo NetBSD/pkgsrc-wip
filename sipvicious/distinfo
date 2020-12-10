@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/05/01 18:05:31 gschwarz Exp $
 
-SHA1 (sipvicious-0.2.8.zip) = dae625bcb2d10b4f042e9f92cbdb496c9fd4aae1
-RMD160 (sipvicious-0.2.8.zip) = 705ff83dfe3132f718ce43a10f8561d1738f1e0c
-Size (sipvicious-0.2.8.zip) = 122734 bytes
+SHA1 (v0.3.0.tar.gz) = 6a759e12234630b3257fd5048eb959fac8ab6724
+RMD160 (v0.3.0.tar.gz) = 46907f7a8ad654d0e13f5ef3afbc5ab13b1bd75b
+SHA512 (v0.3.0.tar.gz) = 35aa3ea7d3cfd6f84716cd95a263357881196eaa180375d1f0a392a1478292ba9a8bf6cd53888448523f7faa447c82cc43fb1ef6c105a0e93e6c7854a51da172
+Size (v0.3.0.tar.gz) = 43097 bytes
