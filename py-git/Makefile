@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/gitpython-developers/GitPython
 COMMENT=	Python library used to interact with Git repositories
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-gitdb-[0-9]*:../../wip/py-gitdb
+DEPENDS+=	${PYPKGPREFIX}-gitdb-[0-9]*:../../devel/py-gitdb
 DEPENDS+=	git-base>=1.7.0:../../devel/git-base
 
 # tests are not intended to be run from pypi distfile,
