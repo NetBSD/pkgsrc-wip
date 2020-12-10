@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Kunstmord/kineticlib
 COMMENT=	Library for kinetic theory calculations in the multi-temperature
 LICENSE=	mit
 
-#DEPENDS+=	${PYPKGPREFIX}-scipy>=1.2.3:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.2.3:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
