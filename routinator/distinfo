@@ -796,3 +796,4 @@ SHA1 (ws2_32-sys-0.2.1.crate) = dae41c117c3746c05852b6ce72f17954e6d6dd8b
 RMD160 (ws2_32-sys-0.2.1.crate) = 883038c3ec6db615e0c96f0788f1a24892a855b2
 SHA512 (ws2_32-sys-0.2.1.crate) = 18356861fc595efe7d0180afb8ce7649da35a4f9ba456271d2068679ab258a861af32a2e016e241fbfbf5f6ef0eb33127b26eabfc11428af39506538faa4821f
 Size (ws2_32-sys-0.2.1.crate) = 4697 bytes
+SHA1 (patch-vendor_net2-0.2.36_src_ext.rs) = 7eac1cd01be00bcd63ea95e959a26d3f912fa97a
