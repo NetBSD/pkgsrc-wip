@@ -3645,7 +3645,6 @@ SUBDIR+=	py-keras
 SUBDIR+=	py-keyczar
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kineticlib
-SUBDIR+=	py-kitchen
 SUBDIR+=	py-kivy
 SUBDIR+=	py-klepto
 SUBDIR+=	py-knnimpute
