@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	attrs_strict-0.2.0
-PKGNAME=	${PYPKGPREFIX}-attrs_strict-0.2.0
+PKGNAME=	${PYPKGPREFIX}-attrs-strict-0.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/attrs_strict/}
 
