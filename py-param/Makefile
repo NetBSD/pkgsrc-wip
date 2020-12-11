@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/param/}
 
-MAINTAINER=	Ikamelderouiche@yahoo.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://param.holoviz.org/
 COMMENT=	Declarative Python programming using Parameters
 LICENSE=	modified-bsd
