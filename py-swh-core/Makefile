@@ -3,7 +3,7 @@
 DISTNAME=	swh.core-0.10.0
 PKGNAME=	${PYPKGPREFIX}-swh-core-0.10.0
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=s/swh.model/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/swh.core/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://forge.softwareheritage.org/diffusion/DCORE/
