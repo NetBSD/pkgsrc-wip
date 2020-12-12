@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (carla-2.2.0.tar.gz) = a28307f2b482048ce075d9bdb9d3d978ba3c87e4
+RMD160 (carla-2.2.0.tar.gz) = a529c5bc99e7c816b691ccaa68acf72d2d13ae24
+SHA512 (carla-2.2.0.tar.gz) = afb2beab979f801817a7fd7663bfdc90800db021679243faa5acb15de60f6dc281032e05c51a8625124c69e7759099fc682678eb98c08507f952763e665ac9c4
+Size (carla-2.2.0.tar.gz) = 9844747 bytes
+SHA1 (patch-source_Makefile.mk) = adf4fdbf6c56ca06035c40433f6654244389886f
+SHA1 (patch-source_utils_CarlaMutex.hpp) = c50dfe4cc7887f389c8ef776030b4d02d795c422
+SHA1 (patch-source_utils_CarlaScopeUtils.hpp) = aeb077167587908a04c07a27f7137cedefba5c71

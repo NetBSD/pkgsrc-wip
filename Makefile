@@ -366,6 +366,7 @@ SUBDIR+=	capnproto
 SUBDIR+=	cardpeek
 SUBDIR+=	cargo-audit
 SUBDIR+=	caribou
+SUBDIR+=	carla
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
 SUBDIR+=	castget
