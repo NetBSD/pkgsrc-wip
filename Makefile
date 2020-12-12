@@ -247,6 +247,7 @@ SUBDIR+=	bashdb
 SUBDIR+=	bashtop
 SUBDIR+=	basic-stats
 SUBDIR+=	bastard
+SUBDIR+=	bats-core
 SUBDIR+=	bcftools
 SUBDIR+=	beads
 SUBDIR+=	beanstalkd
