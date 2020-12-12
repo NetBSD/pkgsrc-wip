@@ -268,12 +268,13 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-19.1.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-20.2.4-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-20.3.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-43.0.0-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-44.1.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-50.3.2-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-51.0.0-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.33.6-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.35.1-py2.py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.36.1-py2.py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.py
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyo
