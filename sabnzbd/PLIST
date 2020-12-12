@@ -11,6 +11,7 @@ ${PYSITELIB}/sabnzbd/constants.py
 ${PYSITELIB}/sabnzbd/database.py
 ${PYSITELIB}/sabnzbd/decoder.py
 ${PYSITELIB}/sabnzbd/decorators.py
+${PYSITELIB}/sabnzbd/deobfuscate_filenames.py
 ${PYSITELIB}/sabnzbd/directunpacker.py
 ${PYSITELIB}/sabnzbd/dirscanner.py
 ${PYSITELIB}/sabnzbd/downloader.py
@@ -238,6 +239,7 @@ share/sabnzbd/interfaces/wizard/static/javascript/checkserver.js
 share/sabnzbd/interfaces/wizard/static/style.css
 share/sabnzbd/interfaces/wizard/two.html
 share/sabnzbd/po/email/SABemail.pot
+share/sabnzbd/po/email/cs.po
 share/sabnzbd/po/email/da.po
 share/sabnzbd/po/email/de.po
 share/sabnzbd/po/email/en.po
@@ -255,6 +257,7 @@ share/sabnzbd/po/email/sr.po
 share/sabnzbd/po/email/sv.po
 share/sabnzbd/po/email/zh_CN.po
 share/sabnzbd/po/main/SABnzbd.pot
+share/sabnzbd/po/main/cs.po
 share/sabnzbd/po/main/da.po
 share/sabnzbd/po/main/de.po
 share/sabnzbd/po/main/en.po
@@ -272,6 +275,7 @@ share/sabnzbd/po/main/sr.po
 share/sabnzbd/po/main/sv.po
 share/sabnzbd/po/main/zh_CN.po
 share/sabnzbd/po/nsis/SABnsis.pot
+share/sabnzbd/po/nsis/cs.po
 share/sabnzbd/po/nsis/da.po
 share/sabnzbd/po/nsis/de.po
 share/sabnzbd/po/nsis/en.po
@@ -300,6 +304,7 @@ share/sabnzbd/sabnzbd/constants.py
 share/sabnzbd/sabnzbd/database.py
 share/sabnzbd/sabnzbd/decoder.py
 share/sabnzbd/sabnzbd/decorators.py
+share/sabnzbd/sabnzbd/deobfuscate_filenames.py
 share/sabnzbd/sabnzbd/directunpacker.py
 share/sabnzbd/sabnzbd/dirscanner.py
 share/sabnzbd/sabnzbd/downloader.py

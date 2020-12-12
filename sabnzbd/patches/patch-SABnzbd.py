@@ -15,7 +15,7 @@ Fix path.
  try:
      import Cheetah
      import feedparser
-@@ -925,7 +929,8 @@
+@@ -942,7 +946,8 @@
  
      sabnzbd.MY_FULLNAME = os.path.normpath(os.path.abspath(sabnzbd.MY_FULLNAME))
      sabnzbd.MY_NAME = os.path.basename(sabnzbd.MY_FULLNAME)

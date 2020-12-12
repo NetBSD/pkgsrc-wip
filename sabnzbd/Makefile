@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/04 10:10:53 thomasklausner Exp $
 
 DISTNAME=	sabnzbd-${DISTVERSION}
-DISTVERSION=	3.0.2
+DISTVERSION=	3.1.1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sabnzbd/}
 GITHUB_PROJECT=	sabnzbd
@@ -23,10 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
 DEPENDS+=	${PYPKGPREFIX}-cherrypy>=18.2:../../www/py-cherrypy
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
-
-# in options.mk
-#DEPENDS+=	par2-[0-9]*:../../archivers/par2
-#DEPENDS+=	unrar-[0-9]*:../../archivers/unrar
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	p7zip-[0-9]*:../../archivers/p7zip
 
