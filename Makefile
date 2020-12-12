@@ -164,6 +164,7 @@ SUBDIR+=	apel-git
 SUBDIR+=	apinger
 SUBDIR+=	apstget
 SUBDIR+=	apvlv
+SUBDIR+=	aqemu
 SUBDIR+=	aquaria
 SUBDIR+=	ar7
 SUBDIR+=	arabeyes-qr-ttf
