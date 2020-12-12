@@ -5092,6 +5092,7 @@ SUBDIR+=	ttyload
 SUBDIR+=	ttysnoop
 SUBDIR+=	ttytter
 SUBDIR+=	tuareg-mode
+SUBDIR+=	tudu
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server
