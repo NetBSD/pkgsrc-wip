@@ -1,3 +1,8 @@
+* SHLIB CHANGE
+
+3.0.4 changes the libguile shlib version backwards.  Reported upstream
+on 20201213.
+
 * MPROTECT
 
 On NetBSD, guile is marked NOT_MPROTECT_SAFE.  However, guile is built
@@ -15,8 +20,9 @@ Reported to guile-devel@ on 20200827.
 Probably needs a "paxctl +m guile" for the binary (in .libs via
 libtool) after build and before use as a build tool.
 
+* TMPNAM
 
-* with CONFIGURE_ARGS+=       --disable-tmpnam
+with CONFIGURE_ARGS+=       --disable-tmpnam
 
 as per https://debbugs.gnu.org/cgi/bugreport.cgi?bug=29001
 
@@ -25,7 +31,9 @@ Perhaps fixed upstream
 \todo Explain why we want to give this arg.  Just vague best
 practices?
 
-* Without threads support, doesn't build:
+* THREADS
+
+Without threads support, doesn't build:
 
   CCLD     libguile-3.0.la
 ld: .libs/libguile_3.0_la-posix.o: in function `scm_tmpnam':
@@ -40,4 +48,3 @@ Reported upstream as http://debbugs.gnu.org/cgi/bugreport.cgi?bug=40075
 
 Perhaps make a no-threads option, but it is not clear why we care
 about the non-threaded case.
-

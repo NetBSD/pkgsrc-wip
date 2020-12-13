@@ -461,7 +461,7 @@ guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.3.0.0-gdb.scm
+guile/3.0/lib/libguile-3.0.so.1.2.0-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
