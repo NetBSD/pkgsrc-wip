@@ -1,20 +1,20 @@
 $NetBSD$
 
 * enable test on illumos
-* use ifru_addr_sa that is available both on illumos and linux
+* use ifru_Addr_sa that is available on illumos and linux
 
---- src/lib/dhcp/tests/iface_mgr_unittest.cc.orig	2020-01-02 23:01:48.000000000 +0000
+--- src/lib/dhcp/tests/iface_mgr_unittest.cc.orig	2020-08-24 16:36:38.000000000 +0000
 +++ src/lib/dhcp/tests/iface_mgr_unittest.cc
-@@ -1569,7 +1569,7 @@ TEST_F(IfaceMgrTest, setPacketFilter6) {
+@@ -1636,7 +1636,7 @@ TEST_F(IfaceMgrTest, setPacketFilter6) {
+     EXPECT_NO_THROW(iface_mgr->setPacketFilter(custom_packet_filter));
  }
- 
  
 -#if defined OS_LINUX || OS_BSD
 +#if defined OS_LINUX || OS_BSD || OS_SOLARIS
  
  // This test is only supported on Linux and BSD systems. It checks
  // if it is possible to use the IfaceMgr to select the packet filter
-@@ -2600,7 +2600,7 @@ checkIfFlags(const Iface & iface,
+@@ -2716,7 +2716,7 @@ checkIfFlags(const Iface & iface,
  bool
  checkIfAddrs(const Iface & iface, struct ifaddrs *& ifptr) {
      const unsigned char * p = 0;
@@ -23,7 +23,7 @@ $NetBSD$
      // Workaround for Linux ...
      if(ifptr->ifa_data != 0) {
          // We avoid localhost as it has no MAC Address
-@@ -2624,7 +2624,7 @@ checkIfAddrs(const Iface & iface, struct
+@@ -2740,7 +2740,7 @@ checkIfAddrs(const Iface & iface, struct
          }
  
          const uint8_t * p =

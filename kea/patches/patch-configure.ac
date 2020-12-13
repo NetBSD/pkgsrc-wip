@@ -1,20 +1,10 @@
 $NetBSD$
 
-* fix typo to find googletest
 * fix compatability errors
 
---- configure.ac.orig	2019-11-19 14:50:46.000000000 +0000
+--- configure.ac.orig	2020-08-24 16:36:40.000000000 +0000
 +++ configure.ac
-@@ -1148,7 +1148,7 @@ if test "x$enable_gtest" = "xyes" ; then
-             GTEST_FOUND="false"
-             for dir in $GTEST_PATHS; do
-                 if test -f "$dir/include/gtest/gtest.h"; then
--                    if ! test -f "$dir/lib/libgtests.a"; then
-+                    if ! test -f "$dir/lib/libgtest.a"; then
-                         AC_MSG_WARN([Found Google Test include but not the library in $dir.])
-                         continue
-                     fi
-@@ -1391,7 +1391,7 @@ if test "x$enable_generate_parser" != "x
+@@ -1298,7 +1298,7 @@ if test "x$enable_generate_parser" != "x
         AC_MSG_ERROR([Flex is required for enable-generate-parser, but was not found])
      fi
  
@@ -23,7 +13,7 @@ $NetBSD$
         AC_MSG_ERROR([Bison is required for enable-generate-parser, but was not found])
      fi
  
-@@ -1515,7 +1515,7 @@ if test "x$enable_generate_docs" != xno
+@@ -1422,7 +1422,7 @@ if test "x$enable_generate_docs" != xno 
  
    if test -z "$PDFLATEX"; then
      PDFLATEX=no
@@ -32,3 +22,12 @@ $NetBSD$
      AC_MSG_CHECKING([for pdflatex])
      AC_MSG_RESULT([no (disabled)])
    else
+@@ -1472,7 +1472,7 @@ else
+   fi
+   generate_docs_report="no"
+ fi
+-AM_CONDITIONAL(INSTALL_MANS, test "x$install_mans" == "xyes")
++AM_CONDITIONAL(INSTALL_MANS, test "x$install_mans" = "xyes")
+ AM_CONDITIONAL(HAVE_PDFLATEX, test "x$PDFLATEX" != "xno")
+ AM_CONDITIONAL(GENERATE_DOCS, test x$enable_generate_docs != xno)
+ 

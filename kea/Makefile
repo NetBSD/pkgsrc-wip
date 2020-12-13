@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kea-1.6.1
+DISTNAME=	kea-1.8.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/kea/${PKGVERSION_NOREV}/
 MASTER_SITES+=	ftp://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/

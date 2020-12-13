@@ -1,15 +1,16 @@
 $NetBSD$
 
-SHA1 (kea-1.6.1.tar.gz) = 165ee499c40a1033d733e8a5197522562804a19b
-RMD160 (kea-1.6.1.tar.gz) = 261b0ea1bca0a70034532112011c64ad809c37ec
-SHA512 (kea-1.6.1.tar.gz) = 4220f46fc185f4434ad01886d2d43ba1f9dcca57f5afa33235c8593269220a79e2dcb4ad71298dec868444c29e7cb6febe66a1456fdc116a2d9fd3f019f740d8
-Size (kea-1.6.1.tar.gz) = 7155604 bytes
+SHA1 (kea-1.8.0.tar.gz) = ae9bc739bf58e876b61184e34fdbf6297d786e7a
+RMD160 (kea-1.8.0.tar.gz) = daff3aac1f3459a1d86007f3563e5aa39f896d61
+SHA512 (kea-1.8.0.tar.gz) = a8896ebdb6948851cddca015d696db4ec205af1472ccc25e7fd6d2f9070599cb7f80998f1dc94e763723723e8e0edd8a53274b96630d27db8c40995489d3a883
+Size (kea-1.8.0.tar.gz) = 8997516 bytes
 SHA1 (patch-Makefile.am) = 4e4896be44290114160be878666878bb44d71a8e
-SHA1 (patch-configure.ac) = e6ef32f92a70d248749e72e627d8fde11fb50805
-SHA1 (patch-src_bin_agent_agent__lexer.ll) = de64c9ad03b1c6812f95f52c8fcd5f6c1aa1ef27
+SHA1 (patch-configure.ac) = 5922054574a91b9164062a5cdd68b704e0f2d84c
+SHA1 (patch-m4macros_ax__gtest.m4) = 66d5c4c4a05e4691881b4938bcf67b99f7cf441b
+SHA1 (patch-src_bin_agent_agent__lexer.ll) = d5bc016c0939f5f4bbb391b2f588c9840f60cb96
 SHA1 (patch-src_bin_d2_d2__lexer.ll) = 400b9f54b5bb9c9eb9c52c1ef23c9a377f29960e
 SHA1 (patch-src_bin_dhcp4_dhcp4__lexer.ll) = dfcca8319ca3b6b8902676bb1662ceb9abca74bc
-SHA1 (patch-src_bin_dhcp4_tests_parser__unittest.cc) = 6f213d5abd286b57c41b6fad27ada49c9301857a
+SHA1 (patch-src_bin_dhcp4_tests_parser__unittest.cc) = bcc737988cd306f3acbd232e40874d7daa1a4c7b
 SHA1 (patch-src_bin_dhcp6_dhcp6__lexer.ll) = 6ebeb6b18dc8d86d0890ce3cfcaeea4c2658e958
 SHA1 (patch-src_bin_dhcp6_tests_parser__unittest.cc) = f671c6b5c26a6b6179971f2f10af8e2b1b8b7e6a
 SHA1 (patch-src_bin_keactrl_Makefile.am) = 5b6fd816da6011858d1167d297c83eda7947efd7
@@ -18,9 +19,9 @@ SHA1 (patch-src_lib_dhcp_Makefile.am) = 452036d0100a85f41c52562292931bea2501e396
 SHA1 (patch-src_lib_dhcp_iface__mgr__sun.cc) = ca4330b27adfa12b1ff6c6cc54c8c30f89f9851f
 SHA1 (patch-src_lib_dhcp_pkt__filter__inet.cc) = 32f70306483a719a8b400eff613cdbb935fe9cd0
 SHA1 (patch-src_lib_dhcp_tests_Makefile.am) = 9ee63ba82b05d02ea88e3a74183a7aa6da7b36c9
-SHA1 (patch-src_lib_dhcp_tests_iface__mgr__unittest.cc) = 8e274dbb5d9897ccd1708e4007cbe69ab2db0ef5
+SHA1 (patch-src_lib_dhcp_tests_iface__mgr__unittest.cc) = 833ce8dd4d06253a53a1ab9868fe92a5412b99ee
 SHA1 (patch-src_lib_dhcpsrv_Makefile.am) = bdd2be227d8c7f34b4329092e6de3bcaa7117284
 SHA1 (patch-src_lib_dhcpsrv_host__data__source__factory.cc) = a1bc71ec40b9eb5a6c9247360a84ce480521cad2
-SHA1 (patch-src_lib_util_encode_base__n.cc) = 61bf8402e4baf0578a7ec9444f396a9b6c69d87d
+SHA1 (patch-src_lib_dhcpsrv_timer__mgr.cc) = ccdde3264c6e80b3d971d3af96c48cffbcaee141
 SHA1 (patch-src_lib_util_signal__set.cc) = f060fcedecb8ccdda997fbef2040dab82c620cb0
 SHA1 (patch-src_lib_util_watch__socket.cc) = ab55b5e613bc431dcd92ef68bf3501a7e4aca7de
