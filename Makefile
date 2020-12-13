@@ -3419,6 +3419,7 @@ SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-executor
 SUBDIR+=	py-exocode
+SUBDIR+=	py-extension-helpers
 SUBDIR+=	py-extremes
 SUBDIR+=	py-factory-boy
 SUBDIR+=	py-fancyimpute
