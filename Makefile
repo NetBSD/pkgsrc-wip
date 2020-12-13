@@ -3634,6 +3634,7 @@ SUBDIR+=	py-jitcode
 SUBDIR+=	py-jitcxde-common
 SUBDIR+=	py-jokosher
 SUBDIR+=	py-jose
+SUBDIR+=	py-jplephem
 SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonrequester
 SUBDIR+=	py-jswebkit
