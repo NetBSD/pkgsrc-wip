@@ -34,8 +34,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/kermit
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${DESTDIR}${PREFIX}/bin/kermit
-	${INSTALL_MAN} ${WRKSRC}/ckuker.nr \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1
+	#${INSTALL_MAN} ${WRKSRC}/ckuker.nr \
+	#	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
