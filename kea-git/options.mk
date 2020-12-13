@@ -29,6 +29,11 @@ REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_5.0_to_5.1.sh.in
 REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_7.0_to_8.0.sh.in
 REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_5.1_to_5.2.sh.in
 REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_6.0_to_7.0.sh.in
+REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_9.0_to_9.1.sh.in
+REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_9.1_to_9.2.sh.in
+REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_9.2_to_9.3.sh.in
+REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_9.3_to_9.4.sh.in
+REPLACE_BASH+= src/share/database/scripts/mysql/upgrade_9.4_to_9.5.sh.in
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
@@ -45,6 +50,8 @@ REPLACE_BASH+= src/share/database/scripts/pgsql/upgrade_3.3_to_4.0.sh.in
 REPLACE_BASH+= src/share/database/scripts/pgsql/upgrade_5.1_to_6.0.sh.in
 REPLACE_BASH+= src/share/database/scripts/pgsql/upgrade_2.0_to_3.0.sh.in
 REPLACE_BASH+= src/share/database/scripts/pgsql/upgrade_4.0_to_5.0.sh.in
+REPLACE_BASH+= src/share/database/scripts/pgsql/upgrade_6.0_to_6.1.sh.in
+REPLACE_BASH+= src/share/database/scripts/pgsql/upgrade_6.1_to_6.2.sh.in
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)

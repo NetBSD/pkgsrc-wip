@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	kea-git-1.7
+PKGNAME=	kea-git-1.9
 CATEGORIES=	net
 GIT_REPO=	https://gitlab.isc.org/isc-projects/kea.git
 GIT_ENV=	GIT_SSL_NO_VERIFY=true
