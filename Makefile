@@ -753,6 +753,7 @@ SUBDIR+=	eot
 SUBDIR+=	epacts
 SUBDIR+=	epix
 SUBDIR+=	epson-inkjet-printer-escpr
+SUBDIR+=	erfa
 SUBDIR+=	erlang-basho
 SUBDIR+=	es40-cvs
 SUBDIR+=	es40-firmware
