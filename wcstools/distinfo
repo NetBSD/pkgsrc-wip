@@ -4,4 +4,4 @@ SHA1 (wcstools-3.9.6.tar.gz) = 4cf2ff53ad45126362bebbf1cb2c7c4cfb6302d7
 RMD160 (wcstools-3.9.6.tar.gz) = 253383241c86e2eb4b948866c25e32e3a0be0cc8
 SHA512 (wcstools-3.9.6.tar.gz) = b971c9c65ba09b8904b09bd14d8e0fbc220dabc7eea9a94fbb39e5710e6e340e712b64954e51f7f11a1406a8600afa65670deef9662e071ad42e0a92c0929341
 Size (wcstools-3.9.6.tar.gz) = 8614498 bytes
-SHA1 (patch-Makefile) = 552ad5bf456281af7eee32cd902513e18d59d449
+SHA1 (patch-Makefile) = 545071c3326f145e76ef78554bf7101fc9ba0113

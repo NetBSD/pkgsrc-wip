@@ -1,5 +1,7 @@
 $NetBSD$
 
+The original "Makefile" does not support "make install".
+
 --- Makefile.orig	2020-07-23 19:42:02.000000000 +0000
 +++ Makefile
 @@ -8,6 +8,19 @@ BIN = bin
