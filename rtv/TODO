@@ -23,3 +23,7 @@
 
 - This package has known vulnerabilities, please investigate and fix if possible:
    CVE-2017-17516
+
+- Probably not worth to import: www/tuir - a maintained rtv fork - was
+  imported (at the moment there is probably no real differences between
+  the two and I am still using rtv)
