@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/01 22:13:38 jihbed Exp $
+$NetBSD$
 
-SHA1 (colorlog-2.6.0.tar.gz) = 8a05deaa52fc8233a9f0ea013a23a346feef41b7
-RMD160 (colorlog-2.6.0.tar.gz) = 9bee33efd2634c54fb98d6e47dda679dc3e6db48
-SHA512 (colorlog-2.6.0.tar.gz) = be0fbdb617f2edede0d7076a7d9bb0f32578d8f8e688734cf2f29a3bad8e95a8cd2ee32abd680289602a8fb5fb3da728a134ac0f9eb7bcf645a3220c9e02dbf0
-Size (colorlog-2.6.0.tar.gz) = 7079 bytes
+SHA1 (colorlog-4.6.2.tar.gz) = e8539b36d84cfed650aa84780d0a3d61b25f7749
+RMD160 (colorlog-4.6.2.tar.gz) = 3841a09cf99fcdac028292495ff57f0e0520419c
+SHA512 (colorlog-4.6.2.tar.gz) = f041d6c4f1f2bc15d02112e4a1a050e0398e21f1a98026cb61a4f0630fe3bd714c8cda6dcae1a46a61d527733c87821f53ae6d46cdbdc281e81563b8afc942c0
+Size (colorlog-4.6.2.tar.gz) = 12345 bytes

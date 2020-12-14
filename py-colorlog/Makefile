@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/08/01 22:13:38 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	colorlog-2.6.0
+DISTNAME=	colorlog-4.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel sysutils misc
-MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorlog/}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorlog}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/borntyping/python-colorlog
