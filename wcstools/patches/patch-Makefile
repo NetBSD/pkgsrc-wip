@@ -1,0 +1,36 @@
+$NetBSD$
+
+--- Makefile.orig	2020-07-23 19:42:02.000000000 +0000
++++ Makefile
+@@ -8,6 +8,19 @@ BIN = bin
+ .c.o:
+ 	$(CC) -c $(CFLAGS) $(DEFS) $<
+ 
++DEST = ../.destdir/usr/pkg
++
++HEADERS = libwcs/fitsfile.h libwcs/fitswcs.h libwcs/wcs.h libwcs/wcslib.h \
++	libwcs/fitsfile1.h  libwcs/imio.h    libwcs/wcscat.h \
++	libwcs/fitshead.h   libwcs/lwcs.h    libwcs/wcscat1.h
++
++PROGRAMS = cphead delwcs delhead edhead fixpix gethead i2f imcat imhead immatch \
++	imrot imsize imstar imwcs scat sethead addpix getpix setpix sky2xy \
++	keyhead skycoor subpix xy2sky wcshead conpix gettab newfits getfits \
++	imstack imextract sumpix remap getcol getdate imfill imsmooth imresize \
++	fileroot filename filext char2sp sp2char crlf htmlsp isnum isrange isfits \
++	isfile simpos bincat
++
+ all:	cphead delwcs delhead edhead fixpix gethead i2f imcat imhead immatch \
+ 	imrot imsize imstar imwcs scat sethead addpix getpix setpix sky2xy \
+ 	keyhead skycoor subpix xy2sky wcshead conpix gettab newfits getfits \
+@@ -206,3 +219,11 @@ binclean:
+ 
+ clean:
+ 	make objclean; make binclean
++
++install:
++	mkdir $(DEST)/lib
++	install $(LIBWCS) $(DEST)/lib
++	mkdir $(DEST)/include/libwcs
++	install $(HEADERS) $(DEST)/include/libwcs
++	mkdir $(DEST)/bin
++	cd bin; install $(PROGRAMS) ../$(DEST)/bin

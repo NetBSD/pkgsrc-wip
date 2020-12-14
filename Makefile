@@ -5241,6 +5241,7 @@ SUBDIR+=	wargus
 SUBDIR+=	warsow
 SUBDIR+=	watch
 SUBDIR+=	wbox
+SUBDIR+=	wcstools
 SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
