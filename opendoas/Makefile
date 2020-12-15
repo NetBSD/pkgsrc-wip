@@ -43,12 +43,17 @@ NOT_FOR_UNPRIVILEGED=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
 
-PLIST_VARS+=	linux-pam
+PLIST_VARS+=	pam-conf
 
 .if ${OPSYS} == "Linux" && exists(/usr/include/security/pam_appl.h)
-PLIST.linux-pam=	yes
-REQD_FILES=		${EGDIR}/doas /etc/pam.d/doas
+PLIST.pam-conf=	yes
+REQD_FILES=	${EGDIR}/doas /etc/pam.d/doas
 .include "../../mk/pam.buildlink3.mk"
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST.pam-conf=	yes
+REQD_FILES=	${EGDIR}/doas /etc/pam.d/doas
 .endif
 
 .if ${OPSYS} != "Linux"
