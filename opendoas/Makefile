@@ -22,6 +22,8 @@ SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 
 EGDIR=	share/examples/${PKGBASE}
 
+CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS	# getpwuid_r
+
 .include "../../mk/bsd.prefs.mk"
 
 HAS_CONFIGURE=		yes
