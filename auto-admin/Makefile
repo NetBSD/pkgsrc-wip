@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	auto-admin-0.6.7.18
+DISTNAME=	auto-admin-0.6.8.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	d2c50572b04ce8c47dac5bf080e4685ff8e76f8a
+GITHUB_TAG=	7d1f55d4d0344a9aeb5af3bab7905670fa5a3351
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/
+HOMEPAGE=	https://acadix.biz/auto-admin.php
 COMMENT=	Portable tools for automating systems management
 LICENSE=	2-clause-bsd
 
