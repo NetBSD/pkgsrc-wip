@@ -9,8 +9,8 @@ SUPERLU_BUILDLINK3_MK:=
 # least that matters a bit less with the static lib.
 # Since API changed a lot since version 2, use the
 # jump to 5.2.1 as new minimum. 
-BUILDLINK_API_DEPENDS.superlu+=	superlu>=5.2.1nb8
-BUILDLINK_ABI_DEPENDS.superlu?=	superlu>=5.2.1nb8
+BUILDLINK_API_DEPENDS.superlu+=	superlu>=5.2.1nb1
+BUILDLINK_ABI_DEPENDS.superlu?=	superlu>=5.2.1nb1
 BUILDLINK_PKGSRCDIR.superlu?=	../../wip/superlu
 
 # When it is the static lib, the users actually have
