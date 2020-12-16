@@ -20,6 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	36
 REPLACE_PYTHON=			asdf-standard/reference_files/generate/generate
 
 DEPENDS+=	git>=2:../../devel/git
+BUILD_DEPENDS+=	py[0-9]*-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
