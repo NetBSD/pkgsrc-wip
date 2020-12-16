@@ -19,10 +19,14 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
 REPLACE_PYTHON=			asdf-standard/reference_files/generate/generate
 
-DEPENDS+=	git>=2:../../devel/git
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.10.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.2:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8:../../devel/py-semantic_version
+DEPENDS+=	${PYPKGPREFIX}-lz4>=0.10:../../archivers/py-lz4
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
