@@ -1,11 +1,11 @@
 # $NetBSD$
 #
-# used by devel/libunit/Makefile
-# used by www/unit/Makefile
-# used by www/unit-perl/Makefile
-# used by www/unit-php/Makefile
-# used by www/unit-python/Makefile
-# used by www/unit-ruby/Makefile
+# used by wip/libunit/Makefile
+# used by wip/unit/Makefile
+# used by wip/unit-perl/Makefile
+# used by wip/unit-php/Makefile
+# used by wip/unit-python/Makefile
+# used by wip/unit-ruby/Makefile
 
 # Do *not* add any version-specific data here
 
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
 CONFIGURE_ARGS+=	--user=${UNIT_USER}
 CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
 
-.include "../../www/unit/options.mk"
+.include "../../wip/unit/options.mk"
 
 INSTALLATION_DIRS+=	sbin ${UNIT_EXTENSION_DIR}
 MAKE_DIRS+=		${UNIT_PIDDIR} ${UNIT_DATADIR} ${UNIT_RUNDIR}

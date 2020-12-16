@@ -7,4 +7,4 @@ DISTNAME?=	unit-${UNIT_VERSION}
 
 .endif
 
-.include "../../www/unit/version.mk"
+.include "../../wip/unit/version.mk"

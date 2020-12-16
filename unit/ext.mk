@@ -6,18 +6,18 @@
 # add dependencies, and add the appropriate --with-configure-arg, then include
 # bsd.pkg.mk.
 #
-# used by www/unit-perl/Makefile
-# used by www/unit-php/Makefile
-# used by www/unit-python/Makefile
-# used by www/unit-ruby/Makefile
+# used by wip/unit-perl/Makefile
+# used by wip/unit-php/Makefile
+# used by wip/unit-python/Makefile
+# used by wip/unit-ruby/Makefile
 
 .if !defined(UNITEXT_MK)
 UNITEXT_MK=	defined
 
-.include "../../www/unit/version.mk"
+.include "../../wip/unit/version.mk"
 
-DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
-PATCHDIR=	${.CURDIR}/../../www/unit/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/unit/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/unit/patches
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,7 +31,7 @@ PLIST_SUBST+=	PKGMODNAME=${MODNAME}.unit
 PLIST_SUBST+=	SHLIB_SUFFIX=${SHLIB_SUFFIX}
 PLIST_SUBST+=	UNIT_EXTENSION_DIR=${UNIT_EXTENSION_DIR}
 
-PLIST_SRC+=	${.CURDIR}/../../www/unit/PLIST.module
+PLIST_SRC+=	${.CURDIR}/../../wip/unit/PLIST.module
 
 INSTALLATION_DIRS+=	${UNIT_EXTENSION_DIR}
 
@@ -50,4 +50,4 @@ do-install:
 
 .endif  # UNITEXT_MK
 
-.include "${.CURDIR}/../../www/unit/common.mk"
+.include "${.CURDIR}/../../wip/unit/common.mk"

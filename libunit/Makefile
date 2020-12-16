@@ -18,7 +18,7 @@ do-build:
 do-install:
 	${MAKE} -C ${WRKSRC} libunit-install DESTDIR=${DESTDIR}
 
-.include "../../www/unit/version.mk"
-.include "../../www/unit/Makefile.common"
+.include "../../wip/unit/version.mk"
+.include "../../wip/unit/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

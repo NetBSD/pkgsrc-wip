@@ -15,6 +15,6 @@ post-configure:
 	./configure ${LANG} --module=${MODNAME}
 
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../www/unit/ext.mk"
-.include "../../www/unit/Makefile.common"
+.include "../../wip/unit/ext.mk"
+.include "../../wip/unit/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
