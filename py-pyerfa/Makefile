@@ -4,7 +4,7 @@ DISTNAME=	pyerfa-1.7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
-GITHUB_PROJECT=	pyerfa
+GITHUB_PROJECT=	pyerfa python
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kinoshita@astro.ncu.edu.tw
@@ -36,5 +36,5 @@ pre-configure:
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../math/erfa/buildlink3.mk"
+.include "../../wip/erfa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
