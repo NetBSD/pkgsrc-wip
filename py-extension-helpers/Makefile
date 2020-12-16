@@ -13,6 +13,7 @@ COMMENT=	helpers to assist with building Python packages
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
