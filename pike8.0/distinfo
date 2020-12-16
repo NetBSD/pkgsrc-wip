@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (Pike-v8.0.702.tar.gz) = d13793b05d659acd79c999252fcb5c454eaa4a4b
-RMD160 (Pike-v8.0.702.tar.gz) = 923eac1152e0c839aa17bf051c91c5c82b4cea56
-SHA512 (Pike-v8.0.702.tar.gz) = 67ee5a6af9e7ab1031c63647d0f351b6f9a29a736f6b049beada577997bab199d542d39c16c328a81ea52821555f8db9bd227caad55fed9c3613ba6718124e09
-Size (Pike-v8.0.702.tar.gz) = 18850526 bytes
-SHA1 (patch-src_Makefile.in) = f50c9f14a7d5012a52d8afb884dea147faa278e8
+SHA1 (Pike-v8.0.1110.tar.gz) = 0a7ec69e9e076abf6afa4975ba38914f80bf6c1a
+RMD160 (Pike-v8.0.1110.tar.gz) = d02917eb2849432013269d327a6a9ac663ba3b51
+SHA512 (Pike-v8.0.1110.tar.gz) = 22511b689ddd5c814370a2647f34e3ba6d08e6100ebf780a0fff00a4a93f16a6b87763a457428c4aa03bcecc8f4dc8aa488b18143d30a83bd2974c580a539a9f
+Size (Pike-v8.0.1110.tar.gz) = 16843339 bytes
