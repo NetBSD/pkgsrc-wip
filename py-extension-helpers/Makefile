@@ -12,6 +12,8 @@ HOMEPAGE=	https://pypi.org/project/extension-helpers/
 COMMENT=	helpers to assist with building Python packages
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
