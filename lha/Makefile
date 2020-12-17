@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/jca02266/lha
 COMMENT=	Archive files using LZW compression (.lzh files)
 LICENSE=	lha-license
 
+CONFIGURE_ARGS+=	--disable-multibyte-filename
+
 RESTRICTED=		Other than for-free distribution of the unmodified \
 			source over a network, redistribution terms are complex.
 NO_SRC_ON_CDROM=	${RESTRICTED}
