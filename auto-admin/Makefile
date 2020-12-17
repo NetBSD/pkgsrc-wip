@@ -3,6 +3,7 @@
 DISTNAME=	auto-admin-0.6.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	6cdc4975d1b094bceebd3bcef9b590e348ffa2ac
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/auto-admin
