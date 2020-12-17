@@ -6,7 +6,7 @@ COLLECTD_PACKAGE=	perl
 
 COMMENT=		Statistics collection daemon - perl plugin
 
-.include "../../wip/collectd/Makefile.common"
+.include "../../sysutils/collectd/Makefile.common"
 
 USE_TOOLS+=		perl
 

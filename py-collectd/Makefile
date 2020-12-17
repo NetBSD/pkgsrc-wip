@@ -6,7 +6,7 @@ COLLECTD_PACKAGE=	python
 
 COMMENT=		Statistics collection daemon - python plugin
 
-.include "../../wip/collectd/Makefile.common"
+.include "../../sysutils/collectd/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		PYTHON_CONFIG=${PREFIX}/bin/python${PYVERSSUFFIX}-config
