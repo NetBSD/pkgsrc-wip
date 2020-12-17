@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=astroML/}
 GITHUB_PROJECT=	astroML
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.astroml.org/
 COMMENT=	Astropy affiliated module for machine learning and data mining
 LICENSE=	modified-bsd
