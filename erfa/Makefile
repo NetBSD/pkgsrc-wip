@@ -5,7 +5,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/liberfa/
 COMMENT=	Essential Routines for Fundamental Astronomy
 LICENSE=	modified-bsd
