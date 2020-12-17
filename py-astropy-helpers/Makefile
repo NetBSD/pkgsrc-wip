@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	py-astropy-helpers-4.0.1
+DISTNAME=	astropy-helpers-4.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
 GITHUB_PROJECT=	astropy-helpers
