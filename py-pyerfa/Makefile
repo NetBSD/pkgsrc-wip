@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
 GITHUB_PROJECT=	pyerfa
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/liberfa/pyerfa/
 COMMENT=	Python wrapper for ERFA library
 LICENSE=	modified-bsd
