@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	https://files.pythonhosted.org/packages/c9/f0/e57456436531333455f40864622c5ae359654ccede8fe1156c3c2ac6c492/
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/jplephem/
 COMMENT=	Python module to load a JPL ephemeris for dynamical calculations
 LICENSE=	mit
