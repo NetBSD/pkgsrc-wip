@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=asdf-format/}
 GITHUB_PROJECT=	asdf
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/asdf-format/
 COMMENT=	Advanced Scientific Data Format
 LICENSE=	modified-bsd
