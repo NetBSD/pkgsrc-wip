@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
 GITHUB_PROJECT=	photutils
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://photutils.readthedocs.io/en/stable/
 COMMENT=	Astropy coordinated module for astronomical photometry
 LICENSE=	modified-bsd
