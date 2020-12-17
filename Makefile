@@ -4165,6 +4165,7 @@ SUBDIR+=	py-scikits_timeseries
 SUBDIR+=	py-scikits_vectorplot
 SUBDIR+=	py-scimath
 SUBDIR+=	py-sciproc
+SUBDIR+=	py-scipy
 SUBDIR+=	py-scipy-data_fitting
 SUBDIR+=	py-scitools
 SUBDIR+=	py-screenutils
