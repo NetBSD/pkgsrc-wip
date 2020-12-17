@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
 GITHUB_PROJECT=	astropy
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Python module for astronomical calculations and data analysis
 LICENSE=	modified-bsd
@@ -15,10 +15,10 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
-DEPENDS+=	git>=2:../../devel/git
+BUILD_DEPENDS+=	git-base>=[0-9]*:../../devel/git-base
 DEPENDS+=	libxml2>=2.9.10:../../textproc/libxml2
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../wip/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-h5py>=2.9.0:../../devel/py-h5py
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.9.3:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
