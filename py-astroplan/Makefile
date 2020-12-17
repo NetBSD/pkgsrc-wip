@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
 GITHUB_PROJECT=	astroplan
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://astroplan.readthedocs.io/en/latest/
 COMMENT=	Astropy affiliated module for planning astronomical observations
 LICENSE=	modified-bsd
