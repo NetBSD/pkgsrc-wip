@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
 GITHUB_PROJECT=	astroquery
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://astroquery.readthedocs.io/en/latest/
 COMMENT=	Astropy coordinated Python module for querying astronomical databases
 LICENSE=	modified-bsd
