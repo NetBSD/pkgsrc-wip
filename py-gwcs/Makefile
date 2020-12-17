@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=spacetelescope/}
 GITHUB_PROJECT=	gwcs
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	kinoshita@astro.ncu.edu.tw
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gwcs.readthedocs.io/en/latest/
 COMMENT=	Generalized World Coordinate System
 LICENSE=	modified-bsd
