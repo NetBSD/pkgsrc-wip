@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	erfa
 ERFA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.erfa+=	erfa>=1.7.1
-BUILDLINK_PKGSRCDIR.erfa?=	../../math/erfa
+BUILDLINK_PKGSRCDIR.erfa?=	../../wip/erfa
 .endif	# ERFA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-erfa
