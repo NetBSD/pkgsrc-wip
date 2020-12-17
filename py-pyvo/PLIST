@@ -1,11 +1,11 @@
 @comment $NetBSD$
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63032-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/pyvo-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/pyvo/__init__.py
 ${PYSITELIB}/pyvo/__init__.pyc
 ${PYSITELIB}/pyvo/__init__.pyo
