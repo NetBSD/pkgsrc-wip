@@ -14,6 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-pybind11-[0-9]*:../../devel/py-pybind11
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
+post-extract:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} go-w {} +
+
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
 
