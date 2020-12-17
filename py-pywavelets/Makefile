@@ -10,8 +10,7 @@ HOMEPAGE=	https://github.com/PyWavelets/pywt/releases
 COMMENT=	Discrete Wavelet Transforms in Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-numpy>=0.19.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.0.1:../../math/py-scipy
+#EPENDS+=	${PYPKGPREFIX}-scipy>=1.0.1:../../math/py-scipy
 
 REPLACE_PYTHON+=	pywt/tests/*.py
 
