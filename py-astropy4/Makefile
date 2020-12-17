@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
-BUILD_DEPENDS+=	git-base>=[0-9]*:../../devel/git-base
+BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	libxml2>=2.9.10:../../textproc/libxml2
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../wip/py-scipy
