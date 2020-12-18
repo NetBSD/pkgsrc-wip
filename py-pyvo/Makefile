@@ -16,7 +16,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-astropy4>=4.2:../../wip/py-astropy4
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../wip/py-astropy4
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
