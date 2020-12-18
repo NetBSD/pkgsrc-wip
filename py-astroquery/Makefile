@@ -18,7 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	36
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-keyring>=21.2.1:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-astropy4>=4.2:../../wip/py-astropy4
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../wip/py-astropy4
 DEPENDS+=	${PYPKGPREFIX}-pyvo>=1.0:../../wip/py-pyvo
 
 .include "../../lang/python/distutils.mk"
