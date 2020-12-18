@@ -121,12 +121,12 @@ sbin/slurm-update-idle-nodes
 sbin/slurm-usage-report
 sbin/spcm-banner
 sbin/spcm-update-from-wip
-share/spcm/WWW/centos-power.jpg
 share/spcm/WWW/global_styles.css
 share/spcm/WWW/gmetad.conf.template
 share/spcm/WWW/gmond.conf.template
 share/spcm/WWW/index.php
 share/spcm/WWW/pkgsrc.jpg
+share/spcm/WWW/powered-by.png
 share/spcm/profile.d/zzz-cluster.csh
 share/spcm/profile.d/zzz-cluster.sh
 share/spcm/sys-update.sbatch
