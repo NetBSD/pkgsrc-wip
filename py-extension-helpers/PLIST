@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/extension_helpers-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/extension_helpers-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/extension_helpers-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/extension_helpers-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/extension_helpers-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/extension_helpers-${PKGVERSION}.dev0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/extension_helpers-0.0.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/extension_helpers-0.0.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/extension_helpers-0.0.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/extension_helpers-0.0.0-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/extension_helpers-0.0.0-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/extension_helpers-0.0.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/extension_helpers/__init__.py
 ${PYSITELIB}/extension_helpers/__init__.pyc
 ${PYSITELIB}/extension_helpers/__init__.pyo

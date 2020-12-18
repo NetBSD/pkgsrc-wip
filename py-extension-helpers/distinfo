@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (extension-helpers-0.1.tar.gz) = 99feca4f13ae428e662cc1defe91834567fcd3a2
-RMD160 (extension-helpers-0.1.tar.gz) = 696611dcadda8747c9caf53e0ebf8eec3c3b2aa3
-SHA512 (extension-helpers-0.1.tar.gz) = 225cc84c08885b7cab8f123b24da2aa0a6c8458bd06190fe6d57dcad6d14b7e6b227bb8387ed62285153ada399bf14b66171921465f89cf55b746edeab8d0744
-Size (extension-helpers-0.1.tar.gz) = 21797 bytes
+SHA1 (extension-helpers-0.1.tar.gz) = f37a4f34f31f1c763370741ac46b073ab92111ce
+RMD160 (extension-helpers-0.1.tar.gz) = 056e7ad8728abafa51fa2ca4742feb393e30c925
+SHA512 (extension-helpers-0.1.tar.gz) = d8394f5f0de28dfa2c204b918a39b5f3b990057bfdb7a21907b0b9ae3bacd5b95c5f25b32a08a50606fbae35b93629dcfe1fee512c6aa4f4e7c08c22bcfd3fbb
+Size (extension-helpers-0.1.tar.gz) = 24306 bytes

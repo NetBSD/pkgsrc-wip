@@ -3,24 +3,17 @@
 DISTNAME=	extension-helpers-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
-GITHUB_PROJECT=	extension-helpers
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/extension-helpers/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/extension-helpers/
-COMMENT=	Helpers to assist with building Python packages
+COMMENT=	Helpers to assist building packages with C/Cython extension
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
-
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	git init;
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
