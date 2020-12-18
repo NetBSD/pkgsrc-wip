@@ -2191,7 +2191,6 @@ SUBDIR+=	modular-xorg-server-dfbsd
 SUBDIR+=	modular-xorg-server-dfbsd-meson
 SUBDIR+=	modular-xorg-xspice
 SUBDIR+=	moe
-SUBDIR+=	molsketch
 SUBDIR+=	mona
 SUBDIR+=	monajat
 SUBDIR+=	mono

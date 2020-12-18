@@ -1,9 +1,0 @@
-$NetBSD$
-
-SHA1 (Molsketch-0.6.0-src.tar.gz) = c6292b9cc913374bc748a511c4595a5abb435569
-RMD160 (Molsketch-0.6.0-src.tar.gz) = 91322bace06ef1da18512619a7dc7583415af25c
-SHA512 (Molsketch-0.6.0-src.tar.gz) = 94e6ae7daff5dd6b17923022873c8891b316a29f7b6cc9bb8eef5b515a376477f5d05d6c746b30696740aa01acb23cbbd9a6c16baa61479da4d2e6f9fd85e2b1
-Size (Molsketch-0.6.0-src.tar.gz) = 1680065 bytes
-SHA1 (patch-CMakeLists.txt) = c3d43bd07d443d69edf855f8e47aafdde726ee71
-SHA1 (patch-cmake_modules_FindOpenBabel2.cmake) = 3a6493e0af9d61d62c1f068c30c3d80cda8a2844
-SHA1 (patch-obabeliface_obabeliface.cpp) = 56af584f0cde18951943ba7008c22252186b740d
