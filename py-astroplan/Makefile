@@ -17,7 +17,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.4:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-astropy4>=4.2:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../wip/py-astropy4
 DEPENDS+=	${PYPKGPREFIX}-astroquery>=0.3.9:../../wip/py-astroquery
 
 .include "../../lang/python/egg.mk"
