@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	conan-1.29.2
+DISTNAME=	conan-1.32.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/conan/}
@@ -40,9 +40,9 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0<3.0.0:../../time/py-dateutil
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
-DEPENDS+=   ${PYPKGPREFIX}-idna-2.6:../../www/py-idna
-DEPENDS+=   ${PYPKGPREFIX}-cryptography>=1.3.4<2.4.0:../../security/py-cryptography
-DEPENDS+=   ${PYPKGPREFIX}-OpenSSL>=16.0.0<19.0.0:../../security/py-OpenSSL
+#DEPENDS+=   ${PYPKGPREFIX}-idna-2.6:../../www/py-idna
+#DEPENDS+=   ${PYPKGPREFIX}-cryptography>=1.3.4<2.4.0:../../security/py-cryptography
+#DEPENDS+=   ${PYPKGPREFIX}-OpenSSL>=16.0.0<19.0.0:../../security/py-OpenSSL
 .endif
 
 .include "../../lang/python/egg.mk"
