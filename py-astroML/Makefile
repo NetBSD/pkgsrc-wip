@@ -17,7 +17,7 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=2.1.1:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.18:../../math/py-scikit-learn
-DEPENDS+=	${PYPKGPREFIX}-astropy4>=4.2:../../wip/py-astropy4
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../wip/py-astropy4
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
