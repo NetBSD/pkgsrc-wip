@@ -2,7 +2,7 @@
 
 DISTNAME=	bc-python-hcl2-0.3.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	category python
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bc-python-hcl2/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
