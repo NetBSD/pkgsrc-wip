@@ -1,11 +1,11 @@
 @comment $NetBSD$
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/pyvo-${PKGVERSION}.dev63125-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pyvo/__init__.py
 ${PYSITELIB}/pyvo/__init__.pyc
 ${PYSITELIB}/pyvo/__init__.pyo
@@ -70,6 +70,9 @@ ${PYSITELIB}/pyvo/dal/scs.pyo
 ${PYSITELIB}/pyvo/dal/sia.py
 ${PYSITELIB}/pyvo/dal/sia.pyc
 ${PYSITELIB}/pyvo/dal/sia.pyo
+${PYSITELIB}/pyvo/dal/sia2.py
+${PYSITELIB}/pyvo/dal/sia2.pyc
+${PYSITELIB}/pyvo/dal/sia2.pyo
 ${PYSITELIB}/pyvo/dal/sla.py
 ${PYSITELIB}/pyvo/dal/sla.pyc
 ${PYSITELIB}/pyvo/dal/sla.pyo
@@ -85,6 +88,9 @@ ${PYSITELIB}/pyvo/dal/tests/__init__.pyo
 ${PYSITELIB}/pyvo/dal/tests/conftest.py
 ${PYSITELIB}/pyvo/dal/tests/conftest.pyc
 ${PYSITELIB}/pyvo/dal/tests/conftest.pyo
+${PYSITELIB}/pyvo/dal/tests/data/datalink/cutout1.xml
+${PYSITELIB}/pyvo/dal/tests/data/datalink/cutout2.xml
+${PYSITELIB}/pyvo/dal/tests/data/datalink/datalink-obscore.xml
 ${PYSITELIB}/pyvo/dal/tests/data/datalink/datalink-ssa.xml
 ${PYSITELIB}/pyvo/dal/tests/data/datalink/datalink.xml
 ${PYSITELIB}/pyvo/dal/tests/data/datalink/proc.xml
@@ -103,9 +109,12 @@ ${PYSITELIB}/pyvo/dal/tests/data/query/tableinfo.xml
 ${PYSITELIB}/pyvo/dal/tests/data/querydata/image.fits
 ${PYSITELIB}/pyvo/dal/tests/data/scs/result.xml
 ${PYSITELIB}/pyvo/dal/tests/data/sia/dataset.xml
+${PYSITELIB}/pyvo/dal/tests/data/sia2/capabilities.xml
+${PYSITELIB}/pyvo/dal/tests/data/sia2/dataset.xml
 ${PYSITELIB}/pyvo/dal/tests/data/sla/dataset.xml
 ${PYSITELIB}/pyvo/dal/tests/data/ssa/result.xml
 ${PYSITELIB}/pyvo/dal/tests/data/tap/capabilities.xml
+${PYSITELIB}/pyvo/dal/tests/data/tap/examples.htm
 ${PYSITELIB}/pyvo/dal/tests/data/tap/lazy-table1.xml
 ${PYSITELIB}/pyvo/dal/tests/data/tap/lazy-table2.xml
 ${PYSITELIB}/pyvo/dal/tests/data/tap/obscore-image.xml
@@ -116,6 +125,9 @@ ${PYSITELIB}/pyvo/dal/tests/make_testdata.pyo
 ${PYSITELIB}/pyvo/dal/tests/setup_package.py
 ${PYSITELIB}/pyvo/dal/tests/setup_package.pyc
 ${PYSITELIB}/pyvo/dal/tests/setup_package.pyo
+${PYSITELIB}/pyvo/dal/tests/test_adhoc.py
+${PYSITELIB}/pyvo/dal/tests/test_adhoc.pyc
+${PYSITELIB}/pyvo/dal/tests/test_adhoc.pyo
 ${PYSITELIB}/pyvo/dal/tests/test_datalink.py
 ${PYSITELIB}/pyvo/dal/tests/test_datalink.pyc
 ${PYSITELIB}/pyvo/dal/tests/test_datalink.pyo
@@ -134,6 +146,12 @@ ${PYSITELIB}/pyvo/dal/tests/test_scs.pyo
 ${PYSITELIB}/pyvo/dal/tests/test_sia.py
 ${PYSITELIB}/pyvo/dal/tests/test_sia.pyc
 ${PYSITELIB}/pyvo/dal/tests/test_sia.pyo
+${PYSITELIB}/pyvo/dal/tests/test_sia2.py
+${PYSITELIB}/pyvo/dal/tests/test_sia2.pyc
+${PYSITELIB}/pyvo/dal/tests/test_sia2.pyo
+${PYSITELIB}/pyvo/dal/tests/test_sia2_remote.py
+${PYSITELIB}/pyvo/dal/tests/test_sia2_remote.pyc
+${PYSITELIB}/pyvo/dal/tests/test_sia2_remote.pyo
 ${PYSITELIB}/pyvo/dal/tests/test_sla.py
 ${PYSITELIB}/pyvo/dal/tests/test_sla.pyc
 ${PYSITELIB}/pyvo/dal/tests/test_sla.pyo
@@ -146,6 +164,12 @@ ${PYSITELIB}/pyvo/dal/tests/test_tap.pyo
 ${PYSITELIB}/pyvo/dal/vosi.py
 ${PYSITELIB}/pyvo/dal/vosi.pyc
 ${PYSITELIB}/pyvo/dal/vosi.pyo
+${PYSITELIB}/pyvo/dam/__init__.py
+${PYSITELIB}/pyvo/dam/__init__.pyc
+${PYSITELIB}/pyvo/dam/__init__.pyo
+${PYSITELIB}/pyvo/dam/obscore.py
+${PYSITELIB}/pyvo/dam/obscore.pyc
+${PYSITELIB}/pyvo/dam/obscore.pyo
 ${PYSITELIB}/pyvo/io/__init__.py
 ${PYSITELIB}/pyvo/io/__init__.pyc
 ${PYSITELIB}/pyvo/io/__init__.pyo
@@ -158,6 +182,7 @@ ${PYSITELIB}/pyvo/io/uws/endpoint.pyo
 ${PYSITELIB}/pyvo/io/uws/tests/__init__.py
 ${PYSITELIB}/pyvo/io/uws/tests/__init__.pyc
 ${PYSITELIB}/pyvo/io/uws/tests/__init__.pyo
+${PYSITELIB}/pyvo/io/uws/tests/data/job-implicit-v1.0.xml
 ${PYSITELIB}/pyvo/io/uws/tests/data/job.xml
 ${PYSITELIB}/pyvo/io/uws/tests/setup_package.py
 ${PYSITELIB}/pyvo/io/uws/tests/setup_package.pyc
@@ -214,8 +239,10 @@ ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/multiple_targettables.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/no_fromcolumn.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/no_schema_name.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/no_schemas.xml
+${PYSITELIB}/pyvo/io/vosi/tests/data/tables/no_table_description.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/no_table_name.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/no_targetcolumn.xml
+${PYSITELIB}/pyvo/io/vosi/tests/data/tables/single_table_description.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/sizenegative.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/wrong_arraysize.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/wrong_datatypes_tap.xml
@@ -272,6 +299,9 @@ ${PYSITELIB}/pyvo/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/utils/__init__.py
 ${PYSITELIB}/pyvo/utils/__init__.pyc
 ${PYSITELIB}/pyvo/utils/__init__.pyo
+${PYSITELIB}/pyvo/utils/compat.py
+${PYSITELIB}/pyvo/utils/compat.pyc
+${PYSITELIB}/pyvo/utils/compat.pyo
 ${PYSITELIB}/pyvo/utils/decorators.py
 ${PYSITELIB}/pyvo/utils/decorators.pyc
 ${PYSITELIB}/pyvo/utils/decorators.pyo
