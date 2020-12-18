@@ -5,6 +5,7 @@ bin/cluster-compute-nodes
 bin/cluster-down-nodes
 bin/cluster-file-servers
 bin/cluster-head-check
+bin/cluster-node-status
 bin/cluster-passwd
 bin/cluster-pfs-nodes
 bin/cluster-pw-check
@@ -47,7 +48,7 @@ sbin/cluster-create-pw-age
 sbin/cluster-diagnostics
 sbin/cluster-dist-file
 sbin/cluster-enable-autologout
-sbin/cluster-firewalld-config
+sbin/cluster-firewall-config
 sbin/cluster-ganglia-restart
 sbin/cluster-get-sync-file
 sbin/cluster-highest-uid
@@ -63,6 +64,7 @@ sbin/cluster-node-type
 sbin/cluster-passwd-expiration
 sbin/cluster-passwd-user-expiration
 sbin/cluster-pkgsrc-admin
+sbin/cluster-ports-update
 sbin/cluster-power-saver
 sbin/cluster-power-waster
 sbin/cluster-recreate-user
@@ -96,7 +98,10 @@ sbin/cluster-update-vis-nodes
 sbin/cluster-user-admin
 sbin/cluster-user-cleanup
 sbin/cluster-useradd
+sbin/cluster-usermod
 sbin/cluster-users
+sbin/cluster-wip-update
+sbin/compute-node-set-arc-max
 sbin/ganglia-web-setup
 sbin/node-iftop
 sbin/node-sync-all-users
@@ -116,7 +121,6 @@ sbin/slurm-update-idle-nodes
 sbin/slurm-usage-report
 sbin/spcm-banner
 sbin/spcm-update-from-wip
-sbin/ssh-keygen-for-user
 share/spcm/WWW/centos-power.jpg
 share/spcm/WWW/global_styles.css
 share/spcm/WWW/gmetad.conf.template
