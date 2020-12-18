@@ -24,9 +24,9 @@ ${PYSITELIB}/erfa/ufunc.so
 ${PYSITELIB}/erfa/version.py
 ${PYSITELIB}/erfa/version.pyc
 ${PYSITELIB}/erfa/version.pyo
-${PYSITELIB}/pyerfa-1.7.1.dev0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pyerfa-1.7.1.dev0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pyerfa-1.7.1.dev0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pyerfa-1.7.1.dev0-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/pyerfa-1.7.1.dev0-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/pyerfa-1.7.1.dev0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

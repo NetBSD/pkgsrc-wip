@@ -3,9 +3,7 @@
 DISTNAME=	pyerfa-1.7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=liberfa/}
-GITHUB_PROJECT=	pyerfa
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyerfa/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/liberfa/pyerfa/
@@ -26,13 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	erfa>=1.7.1:../../wip/erfa
-
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	git init; \
-	cd liberfa; \
-	git config --global http.sslVerify false; \
-	git clone https://github.com/liberfa/erfa.git;
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
