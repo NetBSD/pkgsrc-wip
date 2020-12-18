@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (astropy4-4.2.tar.gz) = 84acb108ebc22410e7af17bc64bacef72856086c
-RMD160 (astropy4-4.2.tar.gz) = 88572be3cd74340efa4645ddc5f40d224108edbd
-SHA512 (astropy4-4.2.tar.gz) = e2447862678128d51a23ae1e30888277d916c18ffba90295c2118b5397e28c4873565ed9daf5c97b2103156e8dc9e7d638b451ba6cdff3b6ba3c60e8b4e15eb6
-Size (astropy4-4.2.tar.gz) = 7361906 bytes
+SHA1 (astropy-4.2.tar.gz) = d103658b11fcc67de50e4b0422fdcac94aeb2f79
+RMD160 (astropy-4.2.tar.gz) = 2125f33572a4910bb16a78d42d2e10b98ac87eca
+SHA512 (astropy-4.2.tar.gz) = 14bb90aac13f3fe668114ebe578aac401987e8e2cd2bb9fb0971e5b8e9f8df6a594d454bb53e330807c3854c44d295e2b4dc96b57ccb69e5f53ee11356869d9d
+Size (astropy-4.2.tar.gz) = 7462293 bytes
