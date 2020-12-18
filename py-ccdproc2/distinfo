@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (ccdproc-2.1.0.tar.gz) = 76b2b422fe1c0d6817732daca601446140805f65
-RMD160 (ccdproc-2.1.0.tar.gz) = cdb8fb05789bff5ead321cfbd3d122839d66ad0d
-SHA512 (ccdproc-2.1.0.tar.gz) = f13d57177ac3300706fd33e2824e78578918e2acc1d5a2fb2da08581be858875b47546fab66c78e54c9d4cf137a8c86d0570d512eceeff0f7b605cf7671f2f61
-Size (ccdproc-2.1.0.tar.gz) = 614374 bytes
+SHA1 (ccdproc-2.1.0.tar.gz) = 8165c96a0f41eb779875ae699fad1a487f40527e
+RMD160 (ccdproc-2.1.0.tar.gz) = 9b4930cd792ea452246b02950100d680a4cb5b3e
+SHA512 (ccdproc-2.1.0.tar.gz) = 25fea4e3f750c70d4d952bf99c3846a0e7ec0ac22adf6fd9a3dfced5399ab3a40846396367abf397835a2f243b6a25e73baa9ef11861bb0374ccaaa5e4190ff6
+Size (ccdproc-2.1.0.tar.gz) = 604227 bytes

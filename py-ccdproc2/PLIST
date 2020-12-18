@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/ccdproc-0.1.dev0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/ccdproc-0.1.dev0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/ccdproc-0.1.dev0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/ccdproc-0.1.dev0-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/ccdproc-0.1.dev0-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/ccdproc-0.1.dev0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ccdproc/__init__.py
 ${PYSITELIB}/ccdproc/__init__.pyc
 ${PYSITELIB}/ccdproc/__init__.pyo
