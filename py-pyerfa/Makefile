@@ -18,7 +18,6 @@ USE_LANGUAGES=	c
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
 
-DEPENDS+=	git>=2:../../devel/git
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
