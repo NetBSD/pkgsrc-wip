@@ -11,7 +11,7 @@ COMMENT=	Discrete Wavelet Transforms in Python
 LICENSE=	mit
 
 #EPENDS+=	${PYPKGPREFIX}-scipy>=1.0.1:../../math/py-scipy
-PYTHON_VERSIONS_INCOMPATIBLE+=        27
+PYTHON_VERSIONS_INCOMPATIBLE+= 27
 
 REPLACE_PYTHON+=	pywt/tests/*.py
 
