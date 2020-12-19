@@ -15,5 +15,12 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
+# adhoc fix to convert below
+# extension_helpers-0.1-py3.8.egg-info
+# extension_helpers-0.0.0-py3.8.egg-info
+
+EGG_INFODIR=	${DISTNAME:S/-/_/:S/0.1/0.0.0/}-py${PYVERSSUFFIX}.egg-info
+
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
