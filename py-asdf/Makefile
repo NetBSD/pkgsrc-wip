@@ -15,8 +15,8 @@ USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 PYTHON_VERSIONS_INCOMPATIBLE+=	36
-REPLACE_PYTHON+=	asdf-standard/reference_files/generate/generate
-REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py
+REPLACE_PYTHON+=		asdf-standard/reference_files/generate/generate
+REPLACE_PYTHON+=		asdf/extern/RangeHTTPServer.py
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
