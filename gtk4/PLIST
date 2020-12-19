@@ -168,7 +168,6 @@ include/gtk-4.0/gtk/gtkeventcontrollerscroll.h
 include/gtk-4.0/gtk/gtkexpander.h
 include/gtk-4.0/gtk/gtkexpression.h
 include/gtk-4.0/gtk/gtkfilechooser.h
-include/gtk-4.0/gtk/gtkfilechooserbutton.h
 include/gtk-4.0/gtk/gtkfilechooserdialog.h
 include/gtk-4.0/gtk/gtkfilechoosernative.h
 include/gtk-4.0/gtk/gtkfilechooserwidget.h
@@ -344,9 +343,9 @@ include/gtk-4.0/unix-print/gtk/gtkunixprint.h
 lib/girepository-1.0/Gdk-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
-lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.dylib
-lib/gtk-4.0/4.0.0/printbackends/libprintbackend-lpr.dylib
-lib/libgtk-4.0.dylib
+lib/gtk-4.0/${PKGVERSION}/printbackends/libprintbackend-file.dylib
+lib/gtk-4.0/${PKGVERSION}/printbackends/libprintbackend-lpr.dylib
+lib/libgtk-4.1.dylib
 lib/libgtk-4.dylib
 lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
@@ -598,6 +597,6 @@ share/locale/zh_HK/LC_MESSAGES/gtk40-properties.mo
 share/locale/zh_HK/LC_MESSAGES/gtk40.mo
 share/locale/zh_TW/LC_MESSAGES/gtk40-properties.mo
 share/locale/zh_TW/LC_MESSAGES/gtk40.mo
-@pkgdir lib/gtk-3.0/modules
-@pkgdir lib/gtk-3.0/immodules
-@pkgdir lib/gtk-3.0/3.0.0/filesystems
+@pkgdir lib/gtk-4.0/modules
+@pkgdir lib/gtk-4.0/immodules
+@pkgdir lib/gtk-4.0/${PKGVERSION}/filesystems
