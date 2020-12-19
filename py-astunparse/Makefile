@@ -1,10 +1,9 @@
 # $NetBSD$
 
-VERS=		1.6.3
 DISTNAME=	astunparse-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=i/${DISTNAME:S/${VERS}//}/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/astunparse/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/simonpercivall/astunparse
