@@ -2223,7 +2223,6 @@ SUBDIR+=	mppdec
 SUBDIR+=	mppp
 SUBDIR+=	mpq-tools
 SUBDIR+=	mps-youtube
-SUBDIR+=	mpv
 SUBDIR+=	mpv-git
 SUBDIR+=	mruby
 SUBDIR+=	msgpack-git
