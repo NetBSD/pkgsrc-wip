@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	iosevka-curly-ttf-4.0.3
+PKGNAME=	iosevka-curly-ttf-4.1.1
 DISTNAME=	ttc-${PKGNAME:S/-ttf//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
