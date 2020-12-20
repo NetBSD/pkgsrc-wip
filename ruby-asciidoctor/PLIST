@@ -1013,14 +1013,8 @@ ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/Writer/cdesc-Writer.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/Writer/write-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/cdesc-Asciidoctor.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/const_missing-c.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/convert-i.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/convert_file-i.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/load-i.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/load_file-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/render-c.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/render-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/render_file-c.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/render_file-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Hash/cdesc-Hash.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/MatchData/cdesc-MatchData.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/MatchData/names-i.ri
@@ -1057,7 +1051,7 @@ ${GEM_LIBDIR}/data/locale/attributes-hu.adoc
 ${GEM_LIBDIR}/data/locale/attributes-id.adoc
 ${GEM_LIBDIR}/data/locale/attributes-it.adoc
 ${GEM_LIBDIR}/data/locale/attributes-ja.adoc
-${GEM_LIBDIR}/data/locale/attributes-kr.adoc
+${GEM_LIBDIR}/data/locale/attributes-ko.adoc
 ${GEM_LIBDIR}/data/locale/attributes-nb.adoc
 ${GEM_LIBDIR}/data/locale/attributes-nl.adoc
 ${GEM_LIBDIR}/data/locale/attributes-nn.adoc
@@ -1128,5 +1122,5 @@ ${GEM_LIBDIR}/lib/asciidoctor/writer.rb
 ${GEM_LIBDIR}/man/asciidoctor.1
 ${GEM_LIBDIR}/man/asciidoctor.adoc
 bin/asciidoctor
-lib/ruby/gems/2.6.0/cache/asciidoctor-2.0.10.gem
-lib/ruby/gems/2.6.0/specifications/asciidoctor-2.0.10.gemspec
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

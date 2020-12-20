@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	asciidoctor-2.0.10
+DISTNAME=	asciidoctor-2.0.12
 CATEGORIES=	print
 
 MAINTAINER=	cfkoch@edgebsd.org
