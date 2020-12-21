@@ -68,8 +68,13 @@ Part 17: Undefined behaviour
 ============================
 GCC 10 produce several warnings while compiling the code.
 [X] Created upstream bug report #671
-    Fixed in SVN revision 1561
+    Fixed in SVN revisions 1561 and 1564
     => Works as expected
+
+
+Part 18: Import final release
+=============================
+[ ] Import version 1.48.8 to pkgsrc
 
 
 EOF

@@ -20,15 +20,15 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
  #include "p_local.h"
  #include "p_tick.h"
    // think
-@@ -251,14 +254,15 @@ typedef struct mapdata_s {
+@@ -253,15 +256,16 @@ typedef struct mapdata_s {
  // Created from axis aligned bounding box of the map, a rectangular array of
  // blocks of size ...
  // Used to speed up collision detection by spatial subdivision in 2D.
 +// [MB] 2020-05-13: Fix comments (blockmapindex points to offset part of lump)
  //
  // Blockmap size.
- int             bmapwidth;
- int             bmapheight;     // size in mapblocks
+ unsigned int    bmapwidth;
+ unsigned int    bmapheight;     // size in mapblocks
  
 -uint32_t *      blockmapindex;       // for large maps, wad is 16bit
 -// offsets in blockmap are from here
@@ -38,8 +38,9 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
 +                                // (offsets in blockmap are from here)
  
  // origin of block map
+ // The bottom left corner of the most SW block.
  fixed_t         bmaporgx;
-@@ -282,6 +286,7 @@ mapthing_t  *   playerstarts[MAXPLAYERS]
+@@ -285,6 +289,7 @@ mapthing_t  *   playerstarts[MAXPLAYERS]
  
  #if 0
  // [WDJ] Checks from PrBoom.
@@ -47,7 +48,7 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
  
  // figgi 08/21/00 -- constants and globals for glBsp support
  #define gNd2  0x32644E67
-@@ -793,7 +798,22 @@ void P_LoadNodes (int lump)
+@@ -796,7 +801,22 @@ void P_LoadNodes (int lump)
          no->dy = LE_SWAP16(mn->dy)<<FRACBITS;
          for (j=0 ; j<2 ; j++)
          {
@@ -71,7 +72,7 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
              for (k=0 ; k<4 ; k++)
                  no->bbox[j][k] = LE_SWAP16(mn->bbox[j][k])<<FRACBITS;
          }
-@@ -1851,6 +1871,7 @@ boolean P_SetupLevel (int      to_episod
+@@ -1968,6 +1988,7 @@ boolean P_SetupLevel (int      to_episod
      const char  *errstr;
      char  *sl_mapname = NULL;
      int   i;
@@ -79,7 +80,7 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
  
      GenPrintf( (verbose? (EMSG_ver|EMSG_now) : (EMSG_console|EMSG_now)),
                 "Setup Level\n" );
-@@ -1999,18 +2020,69 @@ boolean P_SetupLevel (int      to_episod
+@@ -2116,18 +2137,69 @@ boolean P_SetupLevel (int      to_episod
          goto load_reject;
      }
  

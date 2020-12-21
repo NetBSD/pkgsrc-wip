@@ -2,7 +2,7 @@
 
 VERS=		1.48.6
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1563
+SVNVERS=	1567
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -61,6 +61,7 @@ DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
 
 # Configure to honor environment and disable ZIP support on GNU/Linux
+# Use native CPU architecture
 SUBST_CLASSES+=		makeopt
 SUBST_STAGE.makeopt=	do-configure
 SUBST_MESSAGE.makeopt=	Preparing make_options file ...
@@ -68,6 +69,8 @@ SUBST_FILES.makeopt=	make_options
 SUBST_SED.makeopt=	-e 's,\#[ ]*COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
 SUBST_SED.makeopt+=	-e 's,HAVE_LIBZIP,\# HAVE_LIBZIP,'
 SUBST_SED.makeopt+=	-e 's,HAVE_DLOPEN,\# HAVE_DLOPEN,'
+SUBST_SED.makeopt+=	-e 's,\# ARCH=-march=native,ARCH=-march=native,'
+SUBST_SED.makeopt+=	-e 's,\ARCH=-march=i686,\# ARCH=-march=native,'
 # Enable debug build
 #SUBST_SED.makeopt+=	-e 's,\# DEBUG=1,DEBUG=1,'
 

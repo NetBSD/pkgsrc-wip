@@ -14,6 +14,6 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
 +// [MB] 2020-05-13: Fix comments (blockmapindex points to offset part of lump)
 +extern uint32_t*        blockmaphead;   // Big blockmap, SSNTails
 +extern uint32_t*        blockmapindex;  // offsets in blockmap are from here
- extern int              bmapwidth;
- extern int              bmapheight;     // in mapblocks
+ extern unsigned int     bmapwidth;
+ extern unsigned int     bmapheight;     // in mapblocks
  extern fixed_t          bmaporgx;
