@@ -1681,6 +1681,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/map-ynp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map-ynp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/memory-report.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/memory-report.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/nadvice.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/nadvice.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.el.gz
@@ -2748,6 +2750,10 @@ share/emacs/${PKGVERSION}/lisp/net/browse-url.el.gz
 share/emacs/${PKGVERSION}/lisp/net/browse-url.elc
 share/emacs/${PKGVERSION}/lisp/net/dbus.el.gz
 share/emacs/${PKGVERSION}/lisp/net/dbus.elc
+share/emacs/${PKGVERSION}/lisp/net/dictionary-connection.el.gz
+share/emacs/${PKGVERSION}/lisp/net/dictionary-connection.elc
+share/emacs/${PKGVERSION}/lisp/net/dictionary.el.gz
+share/emacs/${PKGVERSION}/lisp/net/dictionary.elc
 share/emacs/${PKGVERSION}/lisp/net/dig.el.gz
 share/emacs/${PKGVERSION}/lisp/net/dig.elc
 share/emacs/${PKGVERSION}/lisp/net/dns.el.gz
@@ -3270,6 +3276,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-plot.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-plot.elc
 share/emacs/${PKGVERSION}/lisp/org/org-protocol.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-protocol.elc
+share/emacs/${PKGVERSION}/lisp/org/org-refile.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-refile.elc
 share/emacs/${PKGVERSION}/lisp/org/org-src.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-src.elc
 share/emacs/${PKGVERSION}/lisp/org/org-table.el.gz
