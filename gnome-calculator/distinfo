@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2017/08/29 23:34:02 prlw1 Exp $
+
+SHA1 (gnome-calculator-3.38.2.tar.xz) = 6f5f6fbdd402abce919bcf9d96009d203370674f
+RMD160 (gnome-calculator-3.38.2.tar.xz) = 34970f69a503923543240bd0dde11f6b4578389e
+SHA512 (gnome-calculator-3.38.2.tar.xz) = 41e58b34640e795108a552aa0d95b03f0c84c4d5af6eef7fe8350c5f4e031a0fad7cad73034b38b2121f09687815b6b10a6a86fb00c7cbf720ccb06a8eea0403
+Size (gnome-calculator-3.38.2.tar.xz) = 1004684 bytes

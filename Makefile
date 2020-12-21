@@ -1126,6 +1126,7 @@ SUBDIR+=	gnomad2
 SUBDIR+=	gnome-apps
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-builder
+SUBDIR+=	gnome-calculator
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-common
 SUBDIR+=	gnome-core
