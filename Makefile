@@ -270,6 +270,7 @@ SUBDIR+=	bioruby
 SUBDIR+=	bip
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
+SUBDIR+=	bk
 SUBDIR+=	bkchem
 SUBDIR+=	blad
 SUBDIR+=	blas
