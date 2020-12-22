@@ -1,8 +1,8 @@
-$NetBSD: patch-src_ndata.c,v 1.1 2015/08/19 20:11:36 yhardy Exp $
+$NetBSD: patch-src_ndata.c,v 1.1 2019/10/01 12:25:37 nia Exp $
 
 Support loading data from @DATADIR@ (set in the Makefile).
 
-$NetBSD: patch-src_ndata.c,v 1.1 2015/08/19 20:11:36 yhardy Exp $
+$NetBSD: patch-src_ndata.c,v 1.1 2019/10/01 12:25:37 nia Exp $
 
 --- src/ndata.c.orig	2015-03-17 16:29:43.000000000 +0000
 +++ src/ndata.c

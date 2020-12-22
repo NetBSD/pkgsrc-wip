@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-configure.ac,v 1.1 2019/10/01 12:25:37 nia Exp $
 
 Add compile and linker flags for NetBSD.
 Fix shell script = tests.

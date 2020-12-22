@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/19 20:11:36 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:25:37 nia Exp $
 bin/naev
 man/man6/naev.6
 share/appdata/naev.appdata.xml

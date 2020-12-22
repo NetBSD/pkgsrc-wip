@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/08/19 20:11:36 yhardy Exp $
+$NetBSD: distinfo,v 1.1 2019/10/01 12:25:37 nia Exp $
 
 SHA1 (naev-0.7.0.tar.gz) = 5c5c5dc98052ef78248b8bd28fb07b23a1f8691c
 RMD160 (naev-0.7.0.tar.gz) = b689366541732392feda2991a2d38f28cb1c517f
