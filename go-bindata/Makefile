@@ -1,6 +1,6 @@
 # $NetBSD: $
 
-DISTNAME=	go-bindata-3.6.0
+DISTNAME=	go-bindata-4.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shuLhan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
