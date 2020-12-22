@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		libtls-bearssl-0.2
+DISTNAME=		libtls-bearssl-0.3
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=		${PKGBASE}
@@ -15,6 +15,7 @@ USE_TOOLS+=		pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	libtls.pc.in
 INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
+BUILD_TARGET=		libtls.a
 
 .include "../../security/bearssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
