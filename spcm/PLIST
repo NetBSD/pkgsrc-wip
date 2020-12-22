@@ -63,7 +63,6 @@ sbin/cluster-node-admin
 sbin/cluster-node-type
 sbin/cluster-passwd-expiration
 sbin/cluster-passwd-user-expiration
-sbin/cluster-pkgsrc-admin
 sbin/cluster-ports-update
 sbin/cluster-power-saver
 sbin/cluster-power-waster
@@ -85,6 +84,7 @@ sbin/cluster-sync-backup-nodes
 sbin/cluster-sync-files
 sbin/cluster-sync-node
 sbin/cluster-sync-packages
+sbin/cluster-sync-pkgsrc
 sbin/cluster-sync-pw
 sbin/cluster-sync-sysfiles
 sbin/cluster-sync-user
@@ -106,6 +106,7 @@ sbin/ganglia-web-setup
 sbin/node-iftop
 sbin/node-sync-all-users
 sbin/node-sync-groups
+sbin/node-sync-pkgsrc
 sbin/node-sync-users
 sbin/slurm-cron-updates
 sbin/slurm-drain-all
