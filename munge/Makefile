@@ -38,6 +38,9 @@ SUBST_FILES.systemd=	src/etc/munge.systemd.service.in
 SUBST_SED.systemd=	-e 's|User=munge|User=daemon|g'
 SUBST_SED.systemd+=	-e 's|Group=munge|Group=daemon|g'
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Linux
 EGDIR=			${PREFIX}/share/examples/munge
 PKG_SYSCONFSUBDIR=	sysconfig
 CONF_FILES=		${EGDIR}/systemd.sysconfig ${PKG_SYSCONFDIR}/munge
@@ -50,6 +53,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/munge/logrotate.conf
 	${MV} ${DESTDIR}${PREFIX}/etc/sysconfig/munge \
 		${DESTDIR}${PREFIX}/share/examples/munge/systemd.sysconfig
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
