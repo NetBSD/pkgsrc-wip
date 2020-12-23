@@ -1,4 +1,4 @@
 @comment $NetBSD: PLIST.Linux,v 1.4 2018/03/24 18:05:58 bacon Exp $
 lib/systemd/system/munge.service
-share/examples/munge/munge.logrotate.conf
-share/examples/munge/munge.systemd.sysconfig
+share/examples/munge/logrotate.conf
+share/examples/munge/systemd.sysconfig

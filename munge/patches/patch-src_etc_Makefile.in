@@ -3,7 +3,6 @@ $NetBSD$
 # pkgsrc hierarchy
 
 --- src/etc/Makefile.in.orig	2020-02-01 00:21:19.726062417 +0000
---- src/etc/Makefile.in.orig	2020-01-14 20:44:31.000000000 +0000
 +++ src/etc/Makefile.in
 @@ -286,6 +286,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -13,7 +12,7 @@ $NetBSD$
  sysconfigdir = @sysconfigdir@
  systemdunitdir = @systemdunitdir@
  sysvinitddir = @sysvinitddir@
-@@ -598,25 +599,25 @@ install-data-hook: install-dirs install-
+@@ -598,13 +599,13 @@ install-data-hook: install-dirs install-
  uninstall-local: uninstall-dirs uninstall-logrotate uninstall-pkgconfig uninstall-systemd uninstall-sysvinit
  
  install-dirs:
@@ -29,38 +28,3 @@ $NetBSD$
  	rmdir '$(DESTDIR)$(localstatedir)/lib/munge' 2>/dev/null || :
  	rmdir '$(DESTDIR)$(localstatedir)/log/munge' 2>/dev/null || :
  	rmdir '$(DESTDIR)$(runstatedir)/munge' 2>/dev/null || :
- 
- install-logrotate: munge.logrotate.conf
- 	@if test 'x$(logrotateddir)' != x; then \
--	  echo $(MKDIR_P) "'$(DESTDIR)$(logrotateddir)'"; \
--	  $(MKDIR_P) '$(DESTDIR)$(logrotateddir)'; \
-+	  echo $(MKDIR_P) "'$(DESTDIR)$(sysconfexampledir)'"; \
-+	  $(MKDIR_P) '$(DESTDIR)$(sysconfexampledir)'; \
- 	  echo $(INSTALL_DATA) "'$(builddir)/munge.logrotate.conf'" \
--	      "'$(DESTDIR)$(logrotateddir)/$(PACKAGE)'"; \
-+	      "'$(DESTDIR)$(sysconfexampledir)/$(PACKAGE)'"; \
- 	  $(INSTALL_DATA) '$(builddir)/munge.logrotate.conf' \
--	      '$(DESTDIR)$(logrotateddir)/$(PACKAGE)'; \
-+	      '$(DESTDIR)$(sysconfexampledir)/$(PACKAGE)'; \
- 	fi
- 
- uninstall-logrotate:
-@@ -659,13 +660,13 @@ uninstall-systemd:
- 
- install-systemd-sysconfig: munge.systemd.sysconfig
- 	@if test 'x${systemdunitdir}' != x \
--	      && test 'x$(sysconfigdir)' != x; then \
--	  echo $(MKDIR_P) "'$(DESTDIR)$(sysconfigdir)'"; \
--	  $(MKDIR_P) '$(DESTDIR)$(sysconfigdir)'; \
-+	      && test 'x$(sysconfexampledir)' != x; then \
-+	  echo $(MKDIR_P) "'$(DESTDIR)$(sysconfexampledir)'"; \
-+	  $(MKDIR_P) '$(DESTDIR)$(sysconfexampledir)'; \
- 	  echo $(INSTALL_DATA) "'$(builddir)/munge.systemd.sysconfig'" \
--	      "'$(DESTDIR)$(sysconfigdir)/$(PACKAGE)'"; \
-+	      "'$(DESTDIR)$(sysconfexampledir)/$(PACKAGE)'"; \
- 	  $(INSTALL_DATA) '$(builddir)/munge.systemd.sysconfig' \
--	      '$(DESTDIR)$(sysconfigdir)/$(PACKAGE)'; \
-+	      '$(DESTDIR)$(sysconfexampledir)/$(PACKAGE)'; \
- 	fi
- 
- uninstall-systemd-sysconfig:

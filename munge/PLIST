@@ -28,6 +28,7 @@ man/man8/munged.8
 man/man8/mungekey.8
 sbin/munged
 sbin/mungekey
+@pkgdir etc/logrotate.d
 @pkgdir var/run/munge
 @pkgdir var/log/munge
 @pkgdir var/lib/munge
