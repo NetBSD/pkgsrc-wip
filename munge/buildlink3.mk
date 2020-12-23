@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	munge
 MUNGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.munge+=	munge>=0.5.10
-BUILDLINK_PKGSRCDIR.munge?=	../../security/munge
+BUILDLINK_PKGSRCDIR.munge?=	../../wip/munge
 
 .endif	# MUNGE_BUILDLINK3_MK
 

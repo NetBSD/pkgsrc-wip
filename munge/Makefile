@@ -27,16 +27,20 @@ BUILD_DEFS+=	VARBASE
 RCD_SCRIPTS+=	munge
 
 SUBST_CLASSES+=		init
-SUBST_STAGE.init=	post-patch
-SUBST_FILES.init=	${WRKSRC}/src/etc/munge.sysvinit.init.in
+SUBST_STAGE.init=	pre-configure
+SUBST_FILES.init=	src/etc/munge.sysvinit.init.in
 SUBST_SED.init=		-e 's|USER="munge"|USER="daemon"|g'
 SUBST_SED.init+=	-e 's|GROUP="munge"|GROUP="daemon"|g'
 
 SUBST_CLASSES+=		systemd
-SUBST_STAGE.systemd=	post-patch
-SUBST_FILES.systemd=	${WRKSRC}/src/etc/munge.systemd.service.in
+SUBST_STAGE.systemd=	pre-configure
+SUBST_FILES.systemd=	src/etc/munge.systemd.service.in
 SUBST_SED.systemd=	-e 's|User=munge|User=daemon|g'
 SUBST_SED.systemd+=	-e 's|Group=munge|Group=daemon|g'
+
+EGDIR=			${PREFIX}/share/examples/munge
+CONF_FILES=		${EGDIR}/munge.systemd.sysconfig ${PKG_SYSCONFDIR}/sysconfig/munge
+#CONF_FILES=		etc/logrotate.d/munge
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
