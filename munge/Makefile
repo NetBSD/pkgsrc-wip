@@ -38,9 +38,12 @@ SUBST_FILES.systemd=	src/etc/munge.systemd.service.in
 SUBST_SED.systemd=	-e 's|User=munge|User=daemon|g'
 SUBST_SED.systemd+=	-e 's|Group=munge|Group=daemon|g'
 
+# FIXME: Patch to use etc/munge.systemd.sysconfig and in place of
+# etc/sysconfig/munge and etc/munge.logrotate.conf in place of
+# etc/logrotate.d/munge
 EGDIR=			${PREFIX}/share/examples/munge
-CONF_FILES=		${EGDIR}/munge.systemd.sysconfig ${PKG_SYSCONFDIR}/sysconfig/munge
-#CONF_FILES=		etc/logrotate.d/munge
+CONF_FILES=		${EGDIR}/munge.systemd.sysconfig ${PKG_SYSCONFDIR}/munge.systemd.sysconfig
+CONF_FILES+=		${EGDIR}/munge.logrotate.conf ${PKG_SYSCONFDIR}/munge.logrotate.conf
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
