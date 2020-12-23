@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	reproc
+
+.if !defined(REPROC_BUILDLINK3_MK)
+REPROC_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.reproc+=	reproc>=14.2.1
+BUILDLINK_ABI_DEPENDS.reproc+=	reproc>=14.2.1
+BUILDLINK_PKGSRCDIR.reproc?=	../../wip/reproc
+.endif # REPROC_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-reproc

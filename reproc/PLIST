@@ -1,0 +1,11 @@
+@comment $NetBSD$
+include/reproc/drain.h
+include/reproc/export.h
+include/reproc/reproc.h
+include/reproc/run.h
+lib/cmake/reproc/reproc-config-version.cmake
+lib/cmake/reproc/reproc-config.cmake
+lib/cmake/reproc/reproc-targets-noconfig.cmake
+lib/cmake/reproc/reproc-targets.cmake
+lib/libreproc.a
+lib/pkgconfig/reproc.pc

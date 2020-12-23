@@ -4543,6 +4543,7 @@ SUBDIR+=	refkeen
 SUBDIR+=	regexxer
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
+SUBDIR+=	reproc
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	residualvm-git
