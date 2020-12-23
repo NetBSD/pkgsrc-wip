@@ -1813,6 +1813,7 @@ SUBDIR+=	libLLVM38
 SUBDIR+=	libaec
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
+SUBDIR+=	libaudec
 SUBDIR+=	libavc1394
 SUBDIR+=	libbacon
 SUBDIR+=	libbfio
