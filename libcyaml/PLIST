@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/cyaml/cyaml.h
+lib/libcyaml.a
+lib/libcyaml.so
+lib/libcyaml.so.${PKGVERSION}
+lib/libcyaml.so.1
+lib/pkgconfig/libcyaml.pc
