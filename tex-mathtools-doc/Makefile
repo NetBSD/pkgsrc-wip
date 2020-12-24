@@ -4,6 +4,7 @@ DISTNAME=		mathtools.doc
 PKGNAME=		tex-${DISTNAME:S/./-/}-${TEXLIVE_REV}
 TEXLIVE_REV=		38833
 TEXLIVE_USE_CTAN=	yes
+TEXLIVE_UNVERSIONED=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-mathtools
