@@ -1,7 +1,6 @@
 $NetBSD$
 
 SHA1 (patch-Makefile) = db3fd5a59a90857800818217d823baa440459cc8
-SHA1 (patch-jfaudiolib_src_driver_fluidsynth.c) = cb104d3584c629104578d071f794fd728748fbc1
 SHA1 (patch-jfbuild_Makefile.shared) = b7f15a87d4a391678f38cb623376e89d1d3d5a18
 SHA1 (patch-jfbuild_include_compat.h) = 8d398f00aebb8724d50bc0f818b429ef235989db
 SHA1 (patch-jfbuild_src_mmulti.c) = eccf5b7c753a88a1a38c8aacf1689a182c6f1e7e
