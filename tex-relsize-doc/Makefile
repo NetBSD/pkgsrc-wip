@@ -4,6 +4,7 @@ DISTNAME=		relsize.doc
 PKGNAME=		tex-${DISTNAME:S/./-/}-4.1
 TEXLIVE_REV=		30707
 TEXLIVE_USE_CTAN=	yes
+TEXLIVE_UNVERSIONED=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-relsize
