@@ -822,7 +822,6 @@ SUBDIR+=	festvox-tp
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg-git
-SUBDIR+=	ffmpeg4-nbsdaudio
 SUBDIR+=	ffmpegthumbs
 SUBDIR+=	fftjet
 SUBDIR+=	fftw-mpich
