@@ -4,6 +4,7 @@ DISTNAME=		setspace.doc
 PKGNAME=		tex-${DISTNAME:S/./-/}-6.7a
 TEXLIVE_REV=		24881
 TEXLIVE_USE_CTAN=	yes
+TEXLIVE_UNVERSIONED=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-setspace
