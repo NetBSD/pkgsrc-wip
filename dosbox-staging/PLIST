@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/dosbox_staging
+man/man1/dosbox_staging.1

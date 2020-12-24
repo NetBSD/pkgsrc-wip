@@ -649,6 +649,7 @@ SUBDIR+=	dolphin-plugins
 SUBDIR+=	dolphin5
 SUBDIR+=	doomlegacy-devel
 SUBDIR+=	doorman
+SUBDIR+=	dosbox-staging
 SUBDIR+=	dosbox-svn
 SUBDIR+=	dosemu2
 SUBDIR+=	dotproject
