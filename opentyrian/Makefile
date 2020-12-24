@@ -2,6 +2,7 @@
 
 DISTNAME=	opentyrian-2.1.20130907-src
 PKGNAME=	opentyrian-2.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.camanis.net/opentyrian/releases/
 
