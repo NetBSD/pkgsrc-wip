@@ -4871,6 +4871,7 @@ SUBDIR+=	stackdriver-collectd
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	starfighter
+SUBDIR+=	stitchy
 SUBDIR+=	stksolver
 SUBDIR+=	stmd-git
 SUBDIR+=	stmpclean
