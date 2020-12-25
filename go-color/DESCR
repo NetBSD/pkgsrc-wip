@@ -1,0 +1,3 @@
+Color lets you use colorized outputs in terms of ANSI Escape Codes
+in Go (Golang). It has support for Windows too! The API can be used
+in several ways, pick one that suits you.
