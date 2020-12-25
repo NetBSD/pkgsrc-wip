@@ -57,8 +57,8 @@ PLIST_SUBST+=			PKGBASE=${PKGBASE}
 
 CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
 
-REPLACE_BASH+=                  misc/snmptrap/snmptrap.sh \
-                                misc/images/png_to_xml.sh
+REPLACE_BASH+=			misc/snmptrap/snmptrap.sh \
+				misc/images/png_to_xml.sh
 
 .include "../../mk/bsd.prefs.mk"
 

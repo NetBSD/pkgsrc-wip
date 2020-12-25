@@ -545,6 +545,7 @@ share/zabbix/include/classes/helpers/CConfigGeneralHelper.php
 share/zabbix/include/classes/helpers/CCookieHelper.php
 share/zabbix/include/classes/helpers/CDashboardHelper.php
 share/zabbix/include/classes/helpers/CDataCacheHelper.php
+share/zabbix/include/classes/helpers/CDateTimeZoneHelper.php
 share/zabbix/include/classes/helpers/CElasticsearchHelper.php
 share/zabbix/include/classes/helpers/CEncryptHelper.php
 share/zabbix/include/classes/helpers/CHousekeepingHelper.php

@@ -1,11 +1,11 @@
 # $NetBSD$
-# used by sysutils/zabbix52-agent/Makefile
-# used by sysutils/zabbix52-proxy/Makefile
-# used by sysutils/zabbix52-server/Makefile
-# used by sysutils/zabbix52-frontend/Makefile
-# used by sysutils/zabbix52-java/Makefile
+# used by wip/zabbix52-agent/Makefile
+# used by wip/zabbix52-proxy/Makefile
+# used by wip/zabbix52-server/Makefile
+# used by wip/zabbix52-frontend/Makefile
+# used by wip/zabbix52-java/Makefile
 
-DISTNAME=	zabbix-5.2.2
+DISTNAME=	zabbix-5.2.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/5.2/
 
