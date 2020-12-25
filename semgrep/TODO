@@ -1,0 +1,6 @@
+- This package in order to works needs `semgrep-core' and `spacecat' binaries
+  already installed.
+
+  If possible package semgrep-core and add it as a DEPENDS (probably
+  pretty tricky to build in pkgsrc due heavy git submodules use, opam
+  and dune usage at build time that access external resources).
