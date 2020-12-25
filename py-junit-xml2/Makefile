@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junit-xml-2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/kyrus/python-junit-xml
+HOMEPAGE=	https://github.com/returntocorp/python-junit-xml
 COMMENT=	Python module for creating JUnit XML test result documents
 LICENSE=	mit
 
