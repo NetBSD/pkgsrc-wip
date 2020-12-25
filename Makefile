@@ -4731,6 +4731,7 @@ SUBDIR+=	seeks
 SUBDIR+=	segvcatch
 SUBDIR+=	self-git
 SUBDIR+=	semanticscuttle
+SUBDIR+=	semgrep
 SUBDIR+=	send-pr
 SUBDIR+=	sendmail
 SUBDIR+=	sendmailX
