@@ -3,8 +3,6 @@
 DISTNAME=	nanogrep-1.0.10
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uniminin/}
-GITHUB_PROJECT=	nanogrep
-GITHUB_TAG=	9441de53c3512175ecfd51f262efcf9543ce7815
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Uniminin/nanogrep/
