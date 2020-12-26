@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (OctoPrint-1.5.1.tar.gz) = b2bbf82d584892871a444e67424793370d40a619
-RMD160 (OctoPrint-1.5.1.tar.gz) = 331627291a7e49c870ccb1dfde088ae85b45cfae
-SHA512 (OctoPrint-1.5.1.tar.gz) = 23733bba7f6fceb4170a4df89e5bf93daf92122f2e8e38c6a230e6a52321dcdbd66c91f670d8aab5b141a3c0cedfe15f37fc3ad4c9b3565e445a907d20627cd9
-Size (OctoPrint-1.5.1.tar.gz) = 5976925 bytes
-SHA1 (patch-setup.py) = 75fa95db8dcb8ffbcaa3a2b76c7a8ba03c7fdac6
+SHA1 (OctoPrint-1.5.2.tar.gz) = ff4b00f12c21ff4a47f24c7dc3dbd4e79628cd66
+RMD160 (OctoPrint-1.5.2.tar.gz) = e558116080e57e0b36a43ccd1f7bc3d2705a3ca0
+SHA512 (OctoPrint-1.5.2.tar.gz) = 297349b69c62fabfd746e34001154aa17bd990fc1b2e6bf03fa29150745013250e33e7e82c9dda8c425d360ea38a5d679658ba018d13ecc42b21f36a413cf177
+Size (OctoPrint-1.5.2.tar.gz) = 5976625 bytes
+SHA1 (patch-setup.py) = 7a31a193bdafa7b8b09a56933209110b97fffaa4
