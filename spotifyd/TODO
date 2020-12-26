@@ -1,2 +1,89 @@
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2020-35711
+
+## Todo
+
+1. In the Makefile there is this todo item:
+
+		# TODO investigate why this is needed
+		CHECK_WRKREF_SKIP+=	bin/spotifyd
+
+## Done
+
+1. Need to somewhat manually create patches. mkpatches doesn't pick up changes
+from vendor directory. E.g, do `pkgdiff` in the directory and then edit patch
+to reference correct location like:
+
+		../vendor/daemonize-0.2.3/src/ffi.rs
+
+2. Figure out why it can't find OpenSSL. Building _normally_ works fine, so
+something to do with pkgsrc. Maybe need to set a variable somewhere.
+
+		error: failed to run custom build command for `openssl-sys v0.9.39`
+		process didn't exit successfully: `/usr/pkgsrc/wip/spotifyd/work/spotifyd-0.2.3/target/release/build/openssl-sys-db8d42dae8a7dcaf/build-script-main` (exit code: 101)
+		--- stdout
+		cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_LIB_DIR
+		cargo:rerun-if-env-changed=OPENSSL_LIB_DIR
+		cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_INCLUDE_DIR
+		cargo:rerun-if-env-changed=OPENSSL_INCLUDE_DIR
+		cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_DIR
+		cargo:rerun-if-env-changed=OPENSSL_DIR
+		run pkg_config fail: "Failed to run `\"\" \"--libs\" \"--cflags\" \"openssl\"`: No such file or directory (os error 2)"
+
+		--- stderr
+		thread 'main' panicked at '
+
+		Could not find directory of OpenSSL installation, and this `-sys` crate cannot
+		proceed without this knowledge. If OpenSSL is installed and this crate had
+		trouble finding it,  you can set the `OPENSSL_DIR` environment variable for the
+		compilation process.
+
+		Make sure you also have the development packages of openssl installed.
+		For example, `libssl-dev` on Ubuntu or `openssl-devel` on Fedora.
+
+		If you're in a situation where you think the directory *should* be found
+		automatically, please open a bug at https://github.com/sfackler/rust-openssl
+		and include information about your system as well as this message.
+
+		    $HOST = x86_64-unknown-netbsd
+		    $TARGET = x86_64-unknown-netbsd
+		    openssl-sys = 0.9.39
+
+	Needed to set these:
+
+		MAKE_ENV+= OPENSSL_INCLUDE_DIR=/usr/include/openssl
+		MAKE_ENV+= OPENSSL_LIB_DIR=/usr/lib
+
+	Actually though I probably need to copy what tealdeer does with openssl
+
+3. In updating to spotifyd 0.2.5 ran into some issues with nix and libc
+
+		 error[E0425]: cannot find function `fexecve` in module `libc`
+		   --> /usr/pkgsrc/wip/spotifyd/work/vendor/nix-0.11.0/src/unistd.rs:655:15
+		    |
+		655 |         libc::fexecve(fd, args_p.as_ptr(), env_p.as_ptr())
+		    |               ^^^^^^^ did you mean `execve`?
+		help: possible candidate is found in another module, you can import it into scope
+		    |
+		3   | use unistd::fexecve;
+		    |
+
+		error: aborting due to previous error
+
+		For more information about this error, try `rustc --explain E0425`.
+		error: Could not compile `nix`.
+		warning: build failed, waiting for other jobs to finish...
+		error: build failed
+		*** Error code 101
+
+	The relevant PRs for this are:
+
+		- https://github.com/nix-rust/nix/pull/1000
+		- https://github.com/rust-lang/libc/pull/1201
+
+	In a nutshell the problem is that libc was updated to remove `fexecve`
+	for netbsd-like platforms as it's irrelevant, but spotifyd has dependencies on
+	older versions of nix that still look for this function so we need to patch one
+	of these older versions to remove this function. Rust dependency management is
+	obviously not solving _all_ the problems although it is nice (I think?) how you
+	can be dependent on multiple versions of the same thing.
