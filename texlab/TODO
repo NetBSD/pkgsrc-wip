@@ -1,4 +1,2 @@
-Needs support in lang/rust/cargo.mk for crates that are not on
-crates.io, or some workaround.
-
-https://mail-index.netbsd.org/tech-pkg/2020/05/20/msg023190.html
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2020-35711
