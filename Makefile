@@ -1169,6 +1169,7 @@ SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bindata
+SUBDIR+=	go-circbuf
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
 SUBDIR+=	go-dotenv
