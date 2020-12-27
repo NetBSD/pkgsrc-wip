@@ -4488,6 +4488,7 @@ SUBDIR+=	py-visionegg-demos
 SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vispy
 SUBDIR+=	py-vistir
+SUBDIR+=	py-viz
 SUBDIR+=	py-viz-comms
 SUBDIR+=	py-vo
 SUBDIR+=	py-voluptuous
