@@ -3319,6 +3319,7 @@ SUBDIR+=	py-dana
 SUBDIR+=	py-dantic
 SUBDIR+=	py-das
 SUBDIR+=	py-dask
+SUBDIR+=	dash-bootstrap-components
 SUBDIR+=	py-data-google-auth
 SUBDIR+=	py-dataclasses
 SUBDIR+=	py-dataclasses-json
