@@ -4391,6 +4391,7 @@ SUBDIR+=	py-testfixtures
 SUBDIR+=	py-texext
 SUBDIR+=	py-texml
 SUBDIR+=	py-textblob
+SUBDIR+=	py-textx
 SUBDIR+=	py-thLib
 SUBDIR+=	py-thermistor
 SUBDIR+=	py-thermopy
