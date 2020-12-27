@@ -1,0 +1,4 @@
+Altair is a declarative statistical visualization library
+for Python. With Altair,you can spend more time understanding
+your data and its meaning. Altair's API is simple, friendly
+and consistent and built on top of the powerful Vega-Lite JSON specification
