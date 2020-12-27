@@ -3151,6 +3151,7 @@ SUBDIR+=	py-b3j0f.aop
 SUBDIR+=	py-backports-datetime-fromisoformat
 SUBDIR+=	py-backports.csv
 SUBDIR+=	py-backports.ssl_match_hostname
+SUBDIR+=	py-badges
 SUBDIR+=	py-bandicoot
 SUBDIR+=	py-bandit
 SUBDIR+=	py-bannock
