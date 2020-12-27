@@ -3190,6 +3190,7 @@ SUBDIR+=	py-brython
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-bson
 SUBDIR+=	py-bxa
+SUBDIR+=	py-c-lasso
 SUBDIR+=	py-cPyparsing
 SUBDIR+=	py-cachelib
 SUBDIR+=	py-calphad
