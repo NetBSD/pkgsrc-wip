@@ -3482,6 +3482,7 @@ SUBDIR+=	py-flask-babel
 SUBDIR+=	py-flask-migrate
 SUBDIR+=	py-flask-pwa
 SUBDIR+=	py-flask-simplelogin
+SUBDIR+=	py-flatbuffers
 SUBDIR+=	py-flavio
 SUBDIR+=	py-flipper
 SUBDIR+=	py-fluiddyn

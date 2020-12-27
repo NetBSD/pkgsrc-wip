@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (flatbuffers-1.12.tar.gz) = 333842bab2e79cf67994bb95731700209801746a
+RMD160 (flatbuffers-1.12.tar.gz) = 3a2bc474fd9323abc981a1fb25a41785c591e84b
+SHA512 (flatbuffers-1.12.tar.gz) = d7059508908c6bc7f421d04c0f8dbc9884015009b3601822489119853d851f2bf3aab941a96d19b354edf3c9c377625d0faf7b92f7a63a6d597e6ceac4abcf2d
+Size (flatbuffers-1.12.tar.gz) = 11286 bytes
+SHA1 (patch-setup.py) = 6d775f8f31db6b320e921c605c2716525184751c
