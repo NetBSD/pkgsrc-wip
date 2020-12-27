@@ -3330,6 +3330,7 @@ SUBDIR+=	py-deap
 SUBDIR+=	py-debacl
 SUBDIR+=	py-debian
 SUBDIR+=	py-debinning
+SUBDIR+=	py-debtcollector
 SUBDIR+=	py-decimalfp
 SUBDIR+=	py-decimalpy
 SUBDIR+=	py-decode
