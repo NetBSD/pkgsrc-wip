@@ -4418,6 +4418,7 @@ SUBDIR+=	py-txdbus
 SUBDIR+=	py-typedecorator
 SUBDIR+=	py-typedload
 SUBDIR+=	py-typing-inspect
+SUBDIR+=	u-msgpack
 SUBDIR+=	py-u2flib-server
 SUBDIR+=	py-ua-parser
 SUBDIR+=	py-ubjson
