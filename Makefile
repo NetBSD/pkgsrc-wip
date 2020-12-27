@@ -3525,6 +3525,7 @@ SUBDIR+=	py-geom
 SUBDIR+=	py-geometry-utils
 SUBDIR+=	py-geopandas
 SUBDIR+=	py-geopy
+SUBDIR+=	py-gooey
 SUBDIR+=	py-geppy
 SUBDIR+=	py-gerrychain
 SUBDIR+=	py-gettext-tools
