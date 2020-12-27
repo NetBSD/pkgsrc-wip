@@ -3922,6 +3922,7 @@ SUBDIR+=	py-orm
 SUBDIR+=	py-otb
 SUBDIR+=	py-othman
 SUBDIR+=	py-otp
+SUBDIR+=	py-outcome
 SUBDIR+=	py-owslib
 SUBDIR+=	py-p4
 SUBDIR+=	py-p_tqdm
