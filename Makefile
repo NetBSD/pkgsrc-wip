@@ -3529,6 +3529,7 @@ SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-ghalatawi
 SUBDIR+=	py-gist
 SUBDIR+=	py-git
+SUBDIR+=	git-code-debt
 SUBDIR+=	py-github3.py
 SUBDIR+=	py-glespy
 SUBDIR+=	py-gmane
