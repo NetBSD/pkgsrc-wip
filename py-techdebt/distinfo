@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (techdebt-0.1.1.tar.gz) = 3ee18ecc4bf448da2b76391696861f363d244a67
+RMD160 (techdebt-0.1.1.tar.gz) = 85217e0a46a2cce0c3cef7fb4e284da272a27a11
+SHA512 (techdebt-0.1.1.tar.gz) = d28b83b817c6f5a8caefb43b96b39ec3f5379d3f2abefbc9c41d712b38aa3d9d18f6ca6c2e7ac7482471069be34d4d7630437fbc7e326e2bbfacb049f32553ff
+Size (techdebt-0.1.1.tar.gz) = 5594 bytes
+SHA1 (patch-setup.py) = d57aa812b9cd835340d0554deac314283f5365a2
