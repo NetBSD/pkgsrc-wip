@@ -1,0 +1,4 @@
+The Software Heritage Directory Loader is a tool and a library.
+Its sole purpose is to walk a local directory and inject into
+the SWH dataset all unknown contained files from that directory
+structure.
