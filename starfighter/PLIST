@@ -204,6 +204,8 @@ share/starfighter/locale/en/LC_MESSAGES/pr-starfighter.mo
 share/starfighter/locale/genpot.sh
 share/starfighter/locale/ja.po
 share/starfighter/locale/ja/LC_MESSAGES/pr-starfighter.mo
+share/starfighter/locale/nl.po
+share/starfighter/locale/nl/LC_MESSAGES/pr-starfighter.mo
 share/starfighter/locale/pr-starfighter.pot
 share/starfighter/music/RE.ogg
 share/starfighter/music/death.ogg

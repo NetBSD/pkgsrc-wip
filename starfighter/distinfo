@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (starfighter-2.3.3.tar.gz) = a7889260006167bc8145443b1d363f007d29bed7
-RMD160 (starfighter-2.3.3.tar.gz) = 078486ce113bd7d5d2dbcf7f1081b3b164edc74d
-SHA512 (starfighter-2.3.3.tar.gz) = 17cc74d7e17e7efcda366a882f4094c02132bad67730beb7e6644469b79226fe37001e0dafde964960d2b9e99e460de1b103f41017e4ceef2663468e75e1520e
-Size (starfighter-2.3.3.tar.gz) = 50190857 bytes
-SHA1 (patch-sound_Makefile.am) = fbbc22398f227402bee9ae3dffde8a6243e06937
+SHA1 (starfighter-2.4.tar.gz) = 312b17e3fab7b25813b0d5175ecd8e45cc104d5e
+RMD160 (starfighter-2.4.tar.gz) = 672f3e53f797a29b3b7b4b06f1d8dcc779069376
+SHA512 (starfighter-2.4.tar.gz) = 107b87d9aacd6c21b2f257a24bf18113663419c33200d6697fd3793436f68623108049ec22718021551c83b918a19c79d26ac30c4996276c416f13bc76384f42
+Size (starfighter-2.4.tar.gz) = 50221089 bytes
