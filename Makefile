@@ -3618,6 +3618,7 @@ SUBDIR+=	py-hiredis
 SUBDIR+=	py-hmf
 SUBDIR+=	py-homeassistant
 SUBDIR+=	py-honcho
+SUBDIR+=	py-holoviews
 SUBDIR+=	py-holoviz
 SUBDIR+=	py-hopic
 SUBDIR+=	py-hostlist
