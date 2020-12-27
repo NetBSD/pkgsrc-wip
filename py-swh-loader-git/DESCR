@@ -1,0 +1,4 @@
+The Software Heritage Git Loader is a tool and a
+library to walk a local Git repository and inject
+into the SWH dataset all contained files that
+weren't known before.
