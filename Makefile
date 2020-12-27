@@ -4409,6 +4409,7 @@ SUBDIR+=	py-toro
 SUBDIR+=	py-toronado
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-towncrier
+SUBDIR+=	py-traceInv
 SUBDIR+=	py-traces
 SUBDIR+=	py-tracks
 SUBDIR+=	py-traits
