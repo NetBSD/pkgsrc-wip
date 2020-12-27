@@ -30,14 +30,20 @@ PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
 PLIST_SUBST+=		PARROT_VERSION=${PARROT_VERSION:Q}
 PRINT_PLIST_AWK+=	{ gsub(/${PARROT_VERSION}/, "$${PARROT_VERSION}") }
 
+SUBST_CLASSES+=		make
+SUBST_MESSAGE.make=	Some needs make, the other needs gmake
+SUBST_STAGE.make=	pre-configure
+SUBST_FILES.make=	lib/actions/install.bash
+SUBST_SED.make=		-e 's,@@GMAKE@@,${PREFIX}/bin/gmake,g'
+
 do-configure:
 	(cd ${WRKSRC};  ./bin/rstar install)
 
 do-build:
 	(cd ${WRKSRC};  ${MAKE})
 
-do-install:
-	(cd ${WRKSRC};  ${GMAKE} install)
+#do-install:
+#	(cd ${WRKSRC};  ${GMAKE} install)
 
 
 .include "../../devel/MoarVM/buildlink3.mk"
