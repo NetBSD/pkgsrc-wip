@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (crossbar-20.12.3.tar.gz) = 7557b32082b04c22cd2e49daa8e07d31fca5b578
+RMD160 (crossbar-20.12.3.tar.gz) = ad6e7d484c9c50a1f6718e176aebe55d267bfe87
+SHA512 (crossbar-20.12.3.tar.gz) = f636cde08b1504b79b3d8e24efdcfb34e83d3bfde152528ba2b0bfb97a5f51d7087e397385d14002aec980a1386ed2ea5471435cb56a02aa550e942c3fc4dd30
+Size (crossbar-20.12.3.tar.gz) = 379551 bytes
+SHA1 (patch-setup.py) = 7cf456aad8746fb73859752b5a824a39d415c0e1
