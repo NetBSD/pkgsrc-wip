@@ -1,0 +1,7 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/kr/fs.a
+gopkg/src/github.com/kr/fs/LICENSE
+gopkg/src/github.com/kr/fs/README.md
+gopkg/src/github.com/kr/fs/circbuf.go
+gopkg/src/github.com/kr/fs/circbuf_test.go
+gopkg/src/github.com/kr/fs/go.mod

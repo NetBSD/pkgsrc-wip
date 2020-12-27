@@ -4392,6 +4392,7 @@ SUBDIR+=	py-test-nbval
 SUBDIR+=	py-test-ordering
 SUBDIR+=	py-test-remotedata
 SUBDIR+=	py-test-repeat
+SUBDIR+=	py-testing-common-database
 SUBDIR+=	py-testfixtures
 SUBDIR+=	py-texext
 SUBDIR+=	py-texml
