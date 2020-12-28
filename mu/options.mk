@@ -13,6 +13,8 @@ PLIST_SRC=	PLIST
 INFO_FILES=	yes
 USE_TOOLS+=	makeinfo
 PLIST_SRC+=	PLIST.emacs
+.else
+CONFIGURE_ARGS+= --disable-mu4e
 .endif
 
 # needs gtk3 and webkit-gtk-3
@@ -22,6 +24,10 @@ PLIST_SRC+=	PLIST.emacs
 .endif
 
 .if !empty(PKG_OPTIONS:Mguile)
-.include "../../lang/guile20/buildlink3.mk"
+.include "../../lang/guile22/buildlink3.mk"
 PLIST_SRC+=	PLIST.guile
+CONFIGURE_ENV+= ac_cv_path_GUILE=guile
+USE_TOOLS+= makeinfo
+.else
+CONFIGURE_ARGS+= --disable-guile
 .endif

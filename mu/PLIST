@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/02 18:30:39 thomasklausner Exp $
+@comment $NetBSD$
 bin/mu
 man/man1/mu-add.1
 man/man1/mu-cfind.1
@@ -7,6 +7,8 @@ man/man1/mu-extract.1
 man/man1/mu-find.1
 man/man1/mu-help.1
 man/man1/mu-index.1
+man/man1/mu-info.1
+man/man1/mu-init.1
 man/man1/mu-mkdir.1
 man/man1/mu-remove.1
 man/man1/mu-script.1
@@ -14,5 +16,6 @@ man/man1/mu-server.1
 man/man1/mu-verify.1
 man/man1/mu-view.1
 man/man1/mu.1
-man/man1/mug.1
 man/man5/mu-bookmarks.5
+man/man7/mu-query.7
+share/doc/mu/NEWS.org

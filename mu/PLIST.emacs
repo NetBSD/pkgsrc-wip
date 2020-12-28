@@ -1,17 +1,20 @@
 @comment $NetBSD: PLIST.emacs,v 1.1 2014/11/09 21:02:12 thomasklausner Exp $
-info/mu4e.info
-${EMACS_LISPPREFIX}/mu4e/mu4e-about.el
-${EMACS_LISPPREFIX}/mu4e/mu4e-about.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-actions.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-actions.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-compose.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-compose.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-context.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-context.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-contrib.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-draft.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-draft.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e.el
+${EMACS_LISPPREFIX}/mu4e/mu4e.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-headers.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-headers.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-icalendar.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-icalendar.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-lists.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-lists.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-main.el
@@ -22,6 +25,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-message.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-message.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-meta.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-meta.elc
+${EMACS_LISPPREFIX}/mu4e/mu4e-org.el
+${EMACS_LISPPREFIX}/mu4e/mu4e-org.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-proc.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-proc.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-speedbar.el
@@ -32,7 +37,8 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-vars.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-vars.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e-view.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-view.elc
-${EMACS_LISPPREFIX}/mu4e/mu4e.el
-${EMACS_LISPPREFIX}/mu4e/mu4e.elc
 ${EMACS_LISPPREFIX}/mu4e/org-mu4e.el
 ${EMACS_LISPPREFIX}/mu4e/org-mu4e.elc
+info/mu4e.info
+info/mu-guile.info
+share/doc/mu/mu4e-about.org
