@@ -1,23 +1,21 @@
 # $NetBSD$
 
-DISTNAME=	control-0.6d
+DISTNAME=	control-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math
-MASTER_SITES=	http://downloads.sourceforge.net/project/python-control/
+CATEGORIES=	math python
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/control/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://python-control.sourceforge.net
+HOMEPAGE=	http://python-control.org
 COMMENT=	Python Control Systems Library
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-do-test:
-	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_all.py
-
-.include "../../lang/python/egg.mk"
+BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
