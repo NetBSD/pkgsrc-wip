@@ -16,9 +16,6 @@ GO_SRCPATH=	github.com/docker/cli
 
 INSTALLATION_DIRS+=	bin
 
-#pre-extract:
-#	${MKDIR} ${WRKDIR}/src/github.com/docker/cli
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/docker ${DESTDIR}${PREFIX}/bin
 
