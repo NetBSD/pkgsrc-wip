@@ -1,0 +1,14 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/klauspost/pgzip.a
+gopkg/src/github.com/klauspost/pgzip/GO_LICENSE
+gopkg/src/github.com/klauspost/pgzip/LICENSE
+gopkg/src/github.com/klauspost/pgzip/README.md
+gopkg/src/github.com/klauspost/pgzip/gunzip.go
+gopkg/src/github.com/klauspost/pgzip/gunzip_test.go
+gopkg/src/github.com/klauspost/pgzip/gzip.go
+gopkg/src/github.com/klauspost/pgzip/gzip_norace_test.go
+gopkg/src/github.com/klauspost/pgzip/gzip_test.go
+gopkg/src/github.com/klauspost/pgzip/gzip_unreliable_test.go
+gopkg/src/github.com/klauspost/pgzip/testdata/bigempty.gz
+gopkg/src/github.com/klauspost/pgzip/testdata/issue6550.gz
+gopkg/src/github.com/klauspost/pgzip/testdata/test.json

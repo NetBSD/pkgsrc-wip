@@ -1190,6 +1190,7 @@ SUBDIR+=	go-madon
 SUBDIR+=	go-notify
 SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper
+SUBDIR+=	go-pgzip
 SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go
 SUBDIR+=	go-rateio
