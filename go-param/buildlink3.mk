@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-param
+
+.if !defined(GO_PARAM_BUILDLINK3_MK)
+GO_PARAM_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-param=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-param?=		build
+
+BUILDLINK_API_DEPENDS.go-param+=	go-param>=0.0.20160926
+BUILDLINK_PKGSRCDIR.go-param?=	../../wip/go-param
+.endif	# GO_PARAM_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-param
