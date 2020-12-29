@@ -1,0 +1,11 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/jinzhu/copier.a
+gopkg/src/github.com/jinzhu/copier/Guardfile
+gopkg/src/github.com/jinzhu/copier/License
+gopkg/src/github.com/jinzhu/copier/README.md
+gopkg/src/github.com/jinzhu/copier/copier.go
+gopkg/src/github.com/jinzhu/copier/copier_benchmark_test.go
+gopkg/src/github.com/jinzhu/copier/copier_different_type_test.go
+gopkg/src/github.com/jinzhu/copier/copier_tags_test.go
+gopkg/src/github.com/jinzhu/copier/copier_test.go
+gopkg/src/github.com/jinzhu/copier/go.mod
