@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/ansi-mgutz
+gopkg/pkg/${GO_PLATFORM}/github.com/mgutz/ansi.a
+gopkg/src/github.com/mgutz/ansi/LICENSE
+gopkg/src/github.com/mgutz/ansi/README.md
+gopkg/src/github.com/mgutz/ansi/ansi.go
+gopkg/src/github.com/mgutz/ansi/ansi_test.go
+gopkg/src/github.com/mgutz/ansi/cmd/ansi-mgutz/main.go
+gopkg/src/github.com/mgutz/ansi/doc.go
+gopkg/src/github.com/mgutz/ansi/print.go
