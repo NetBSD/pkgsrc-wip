@@ -1,0 +1,1 @@
+Gocyclo calculates cyclomatic complexities of functions in Go source code.

@@ -1173,6 +1173,7 @@ SUBDIR+=	go-bindata
 SUBDIR+=	go-circbuf
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
+SUBDIR+=	go-cyclo
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
