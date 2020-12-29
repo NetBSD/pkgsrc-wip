@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-ole
+
+.if !defined(GO_OLE_BUILDLINK3_MK)
+GO_OLE_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-ole=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-ole?=		build
+
+BUILDLINK_API_DEPENDS.go-ole+=	go-ole>=1.2.0
+BUILDLINK_PKGSRCDIR.go-ole?=	../../wip/go-ole
+.endif	# GO_OLE_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-ole
