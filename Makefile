@@ -1170,6 +1170,7 @@ SUBDIR+=	gnutls-guile
 SUBDIR+=	go-aurora
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bindata
+SUBDIR+=	go-bpool
 SUBDIR+=	go-circbuf
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color

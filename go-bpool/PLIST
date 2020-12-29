@@ -1,0 +1,15 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/oxtoacart/bpool.a
+gopkg/src/github.com/oxtoacart/bpool/LICENSE
+gopkg/src/github.com/oxtoacart/bpool/README.md
+gopkg/src/github.com/oxtoacart/bpool/bpool.go
+gopkg/src/github.com/oxtoacart/bpool/bufferpool.go
+gopkg/src/github.com/oxtoacart/bpool/bufferpool_test.go
+gopkg/src/github.com/oxtoacart/bpool/bytepool.go
+gopkg/src/github.com/oxtoacart/bpool/bytepool_test.go
+gopkg/src/github.com/oxtoacart/bpool/byteslice.go
+gopkg/src/github.com/oxtoacart/bpool/byteslice_test.go
+gopkg/src/github.com/oxtoacart/bpool/go.mod
+gopkg/src/github.com/oxtoacart/bpool/go.sum
+gopkg/src/github.com/oxtoacart/bpool/sizedbufferpool.go
+gopkg/src/github.com/oxtoacart/bpool/sizedbufferpool_test.go
