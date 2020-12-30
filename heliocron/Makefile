@@ -13,7 +13,6 @@ LICENSE=	apache-2.0
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=	c	# rust, but needs a toolchain to link
-#USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
 
