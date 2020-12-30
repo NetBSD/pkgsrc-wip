@@ -10,12 +10,19 @@
 
 current error messages are:
 
-Found /tmp/wip/rakudo-star/work/rakudo-star-2020.10/bin/moar version 2020.10, which is new enough.
-Cleaning up ...
-You can now use '/usr/pkg/bin/gmake' to build NQP.
-After that, '/usr/pkg/bin/gmake test' will run some tests and
-'/usr/pkg/bin/gmake install' will install NQP.
-make[2]: "/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.uwgf1qCj/Makefile" line 27: Need an operator
-make[2]: "/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.uwgf1qCj/Makefile" line 29: Need an operator
-....
+perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncall/*.h "/export/CHROOT/tmp/wip/rakudo-star/work/.destdir/export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/include/dyncall"
+perl -MExtUtils::Command -e cp 3rdparty/dyncall/dyncallback/*.h "/export/CHROOT/tmp/wip/rakudo-star/work/.destdir/export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/include/dyncall"
+[2020-12-30T12:54:57] [INFO]  Starting build on NQP
+[2020-12-30T12:54:57] [NOTIC] Using /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.QKOoo7Wu as working directory
+fatal: not in a git directory
+fatal: not in a git directory
+===SORRY!===
+  No moar executable found in /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10 at /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.QKOoo7Wu/3rdparty/nqp-configure/lib/NQP/Config.pm line 192.
+ at /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.QKOoo7Wu/3rdparty/nqp-configure/lib/NQP/Config.pm line 34.
+        NQP::Config::__ANON__("===SORRY!===\x{a}  No moar executable found in /export/CHROOT/tmp"...) called at /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.QKOoo7Wu/3rdparty/nqp-configure/lib/NQP/Config.pm line 192
+        NQP::Config::sorry(NQP::Config::NQP=HASH(0x78aaaa8469d8), "No moar executable found in /export/CHROOT/tmp/wip/rakudo-sta"...) called at /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.QKOoo7Wu/tools/lib/NQP/Config/NQP.pm line 112
+        NQP::Config::NQP::configure_moar_backend(NQP::Config::NQP=HASH(0x78aaaa8469d8)) called at /export/CHROOT/tmp/wip/rakudo-star/work/rakudo-star-2020.10/tmp/mktemp.QKOoo7Wu/3rdparty/nqp-configure/lib/NQP/Config.pm line 660
+        NQP::Config::configure_active_backends(NQP::Config::NQP=HASH(0x78aaaa8469d8)) called at Configure.pl line 93
+[2020-12-30T12:54:58] [ALERT] Build failed!
+*** Error code 1
 :

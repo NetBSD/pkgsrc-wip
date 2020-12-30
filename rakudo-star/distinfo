@@ -4,4 +4,4 @@ SHA1 (rakudo-star-2020.10.tar.gz) = e9caa085894e32581dd2d9fb09ab9e253b758e33
 RMD160 (rakudo-star-2020.10.tar.gz) = 3e85ef6bd2e997126807e32ebc4e68120b360afe
 SHA512 (rakudo-star-2020.10.tar.gz) = f8c7ab9e67018db0422f30232180122f25c20f113dd54e85af67e080e9320bb1499930de65464aa299043204503838085322b26cb705246fd4ee8dd9f52c4f42
 Size (rakudo-star-2020.10.tar.gz) = 17377748 bytes
-SHA1 (patch-lib_actions_install.bash) = 7bfc52f46e9b0d755a4edb0ad6f08e398394078f
+SHA1 (patch-lib_actions_install.bash) = 31a658f4d55f226c5f2e9b47623a05cd016b7b67

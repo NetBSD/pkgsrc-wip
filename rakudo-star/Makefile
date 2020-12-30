@@ -9,7 +9,7 @@ HOMEPAGE=	https://rakudo.org/
 COMMENT=	Perl 6 reference implementation
 LICENSE=	artistic-2.0
 
-#AKE_JOBS_SAFE=	no
+BUILD_DEPENDS+=	MoarVM>=2020.10:../../devel/MoarVM
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,15 +34,17 @@ SUBST_CLASSES+=		make
 SUBST_MESSAGE.make=	Some needs make, the other needs gmake
 SUBST_STAGE.make=	pre-configure
 SUBST_FILES.make=	lib/actions/install.bash
-SUBST_SED.make=		-e 's,@@GMAKE@@,${PREFIX}/bin/gmake,g'
+#UBST_SED.make=		-e 's,@@GMAKE@@,${PREFIX}/bin/gmake,g'
+SUBST_VARS.make=	DESTDIR PREFIX
 
 do-configure:
-	(cd ${WRKSRC};  ./bin/rstar install)
+	(cd ${WRKSRC};  env DESTDIR=${DESTDIR} ./bin/rstar install core)
+	(cd ${WRKSRC};  env DESTDIR=${DESTDIR} ./bin/rstar install modules)
 
 do-build:
-	(cd ${WRKSRC};  ${MAKE})
+#	(cd ${WRKSRC};  ${MAKE})
 
-#do-install:
+do-install:
 #	(cd ${WRKSRC};  ${GMAKE} install)
 
 
