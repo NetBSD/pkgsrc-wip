@@ -1,10 +1,29 @@
 $NetBSD$
 
 Use appropriate options for dlopen.
+Link pkgsrc libdumb, libaldmb and freetype2.
 
---- Engine/Makefile-defs.linux.orig	2019-12-29 17:06:00.000000000 +0000
+--- Engine/Makefile-defs.linux.orig	2020-12-29 21:18:54.000000000 +0000
 +++ Engine/Makefile-defs.linux
-@@ -33,7 +33,11 @@ else
+@@ -1,7 +1,7 @@
+ USE_BUILT_IN_LIBSRC = 0
+ USE_MIDI_PATCH = 1
+ 
+-include Makefile-defs.freetype
++#include Makefile-defs.freetype
+ 
+ INCDIR = ../Engine ../Common ../Common/libinclude ../Common/libsrc/alfont-2.0.9 ../Plugins ../Engine/libsrc/glad/include
+ LIBDIR =
+@@ -25,6 +25,8 @@ LIBS += $(shell pkg-config --libs allegr
+ LIBS += $(shell pkg-config --libs x11)
+ LIBS += $(shell pkg-config --libs ogg)
+ LIBS += $(shell pkg-config --libs theora)
++LIBS += $(shell pkg-config --libs freetype2)
++CFLAGS += $(shell pkg-config --cflags freetype2)
+ 
+ ifeq ($(USE_TREMOR), 1)
+   LIBS += -lvorbisidec
+@@ -33,11 +35,16 @@ else
    LIBS += $(shell pkg-config --libs vorbis)
  endif
  LIBS += $(shell pkg-config --libs vorbisfile)
@@ -17,3 +36,9 @@ Use appropriate options for dlopen.
  
  ifneq ($(USE_BUILT_IN_LIBSRC), 1)
  ALDUMB :=
+-LIBS += -Wl,--push-state,-Bstatic -laldmb -ldumb -Wl,--pop-state
++LIBS += $(shell pkg-config --libs dumb)
++LIBS += -laldmb
+ endif
+ 
+ ifeq ($(ALLEGRO_MAGIC_DRV), 1)

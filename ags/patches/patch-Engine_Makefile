@@ -1,0 +1,15 @@
+$NetBSD$
+
+Don't build the ags copy of freetype.
+
+--- Engine/Makefile.orig	2020-12-29 21:18:54.000000000 +0000
++++ Engine/Makefile
+@@ -23,7 +23,7 @@ OBJS := $(OBJS:.mm=.o)
+ OBJS := $(OBJS:.cpp=.o)
+ OBJS := $(OBJS:.c=.o)
+ 
+-OBJS_COMMON := $(COMMON) $(ALFONT) $(FREETYPE)
++OBJS_COMMON := $(COMMON) $(ALFONT)
+ OBJS_COMMON := $(OBJS_COMMON:.mm=.o)
+ OBJS_COMMON := $(OBJS_COMMON:.cpp=.o)
+ OBJS_COMMON := $(OBJS_COMMON:.c=.o)
