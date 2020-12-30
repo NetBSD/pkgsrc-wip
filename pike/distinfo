@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2006/04/22 15:26:38 rillig Exp $
 
-SHA1 (Pike-v8.0.276.tar.gz) = a3fe6179156589fa95ebb2ea84a2b2c0b1cc0046
-RMD160 (Pike-v8.0.276.tar.gz) = abf1320282b1967f5fb43e4d22f1907344fcd9a7
-SHA512 (Pike-v8.0.276.tar.gz) = c1f3c5a34a186d0558838d933f55c7935696bc5ee2ffe144c9bdec1fced791245f9c72063f5f9143a860baf8ac679c7f10086abf653f1840799e4141ad161b7d
-Size (Pike-v8.0.276.tar.gz) = 18640851 bytes
+SHA1 (Pike-v8.0.702.tar.gz) = d13793b05d659acd79c999252fcb5c454eaa4a4b
+RMD160 (Pike-v8.0.702.tar.gz) = 923eac1152e0c839aa17bf051c91c5c82b4cea56
+SHA512 (Pike-v8.0.702.tar.gz) = 67ee5a6af9e7ab1031c63647d0f351b6f9a29a736f6b049beada577997bab199d542d39c16c328a81ea52821555f8db9bd227caad55fed9c3613ba6718124e09
+Size (Pike-v8.0.702.tar.gz) = 18850526 bytes
