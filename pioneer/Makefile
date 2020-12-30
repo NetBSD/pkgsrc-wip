@@ -5,7 +5,7 @@ PKGNAME=	pioneer-${VERSION}
 VERSION=	${GITHUB_TAG}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pioneerspacesim/}
-GITHUB_TAG=	20160205
+GITHUB_TAG=	20200203
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://pioneerspacesim.net/
@@ -13,17 +13,13 @@ COMMENT=	A game of lonely space adventure
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES+=	c c++
-HAS_CONFIGURE=	yes
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config automake autoconf gmake
+USE_CMAKE=	yes
 
 CONFIGURE_ENV+=	PIONEER_DATA_DIR=${PREFIX}/share/pioneer/data
 
 BUILDLINK_PKGSRCDIR.assimp=	../../wip/assimp
 
-pre-configure:
-	cd ${WRKSRC} && ./bootstrap
-
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
