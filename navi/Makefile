@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES+=		c	# rust, but needs a toolchain to link
 
+DEPENDS+=	fzf-[0-9]*:../../sysutils/fzf
+
 INSTALLATION_DIRS=	bin
 
 do-install:
