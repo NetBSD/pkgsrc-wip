@@ -1,0 +1,8 @@
+- (30 Dec 2020) charlotte: NetBSD support has not yet been merged upstream,
+  see https://github.com/carp-lang/Carp/pull/1109
+
+- (30 Dec 2020) charlotte: Need to upgrade devel/hs-ansi-terminal to 0.10.3
+  -- works for me, locally
+
+- (30 Dec 2020) charlotte: Should probably find a way to ship a complete
+  CARP_DIR, too

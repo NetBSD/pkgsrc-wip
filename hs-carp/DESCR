@@ -1,0 +1,13 @@
+Carp is a programming language designed to work well for interactive and
+performance sensitive use cases like games, sound synthesis and
+visualizations.
+
+The key features of Carp are the following:
+
+- Automatic and deterministic memory management (no garbage collector or VM)
+- Inferred static types for great speed and reliability
+- Ownership tracking enables a functional programming style while still
+  using mutation of cache-friendly data structures under the hood
+- No hidden performance penalties – allocation and copying are explicit
+- Straightforward integration with existing C code
+- Lisp macros, compile time scripting and a helpful REPL
