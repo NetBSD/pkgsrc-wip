@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/graphql-python/graphql-relay-py
 COMMENT=	Relay library for graphql-core-next
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 #DEPENDS+=	${PYPKGPREFIX}-graphql-core>=3.1.2:../../wip/py-graphql-core
 

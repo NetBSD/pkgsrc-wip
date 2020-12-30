@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/taler-util-0.6.2
 USE_LANGUAGES=	# none
 
 # Needs at least python 3.7
-PYTHON_VERSIONS_ACCEPTED=	38 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

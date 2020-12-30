@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/graphql-python/graphql-core
 COMMENT=	GraphQL.js, the JavaScript reference implementation for GraphQL
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

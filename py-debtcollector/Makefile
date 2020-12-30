@@ -10,7 +10,7 @@ HOMEPAGE=	https://docs.openstack.org/debtcollector/latest/
 COMMENT=	Python deprecation patterns and strategiest you technical debt
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
 

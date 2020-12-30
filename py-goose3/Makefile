@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/goose3/goose3
 COMMENT=	Html Content / Article Extractor, web scrapping for Python3
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

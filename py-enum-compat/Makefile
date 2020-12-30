@@ -12,7 +12,7 @@ LICENSE=	mit
 
 #DEPENDS+=	${PYPKGPREFIX}-enum34>=1.1.10:../../devel/py-enum34
 
-PYTHON_VERSIONS_ACCEPTED= 38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE= 27
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

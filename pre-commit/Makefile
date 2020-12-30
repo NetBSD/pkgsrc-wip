@@ -10,7 +10,7 @@ HOMEPAGE=	https://pre-commit.com/
 COMMENT=	Framework for managing and maintaining multi-language pre-commit hook
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36 # Only supports 3.6+ since pre-commit v2.0.0
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
 DEPENDS+=	${PYPKGPREFIX}-conda-[0-9]*:../../wip/py-conda

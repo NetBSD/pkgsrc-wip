@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 38 37
+PYTHON_VERSIONS_INCOMPATIBLE= 27 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

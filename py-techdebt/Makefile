@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/lcetinsoy/tech-debt
 COMMENT=	Technical debt tracker package
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
 #DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23.0:../../math/py-pandas

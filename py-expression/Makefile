@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/cognitedata/expression
 COMMENT=	Practical functional programming for Python 3.8+
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	39 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36 37
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
 	

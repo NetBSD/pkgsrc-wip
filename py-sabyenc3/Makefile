@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd AND mit
 
 USE_LANGUAGES+=	c
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 #.include "../../lang/python/extension.mk"

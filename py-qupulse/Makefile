@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=3.2.3:../../devel/py-test-benchmar
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	36 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_API_DEPENDS.py-numpy+=        ${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"

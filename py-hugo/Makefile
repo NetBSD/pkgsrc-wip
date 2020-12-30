@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-discord.py>=0:../../wip/py-discord.py
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

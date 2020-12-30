@@ -10,7 +10,7 @@ HOMEPAGE=	http://eventlet.net
 COMMENT=	Highly concurrent networking library
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.16.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.3:../../devel/py-greenlet

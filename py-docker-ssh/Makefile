@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	38 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

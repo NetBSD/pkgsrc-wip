@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

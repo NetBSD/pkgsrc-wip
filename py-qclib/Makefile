@@ -12,7 +12,7 @@ COMMENT=	Quantum computing library using qiskit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	38 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 #DEPENDS+=	${PYPKGPREFIX}-qiskit>=0.20.1:../../wip/py-qiskit
 

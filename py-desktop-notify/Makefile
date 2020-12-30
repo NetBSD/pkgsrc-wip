@@ -10,7 +10,7 @@ HOMEPAGE=	https://gitlab.com/hxss/desktop-notify
 COMMENT=	Util for sending desktop notifications over dbus
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	38 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 DEPENDS+=	${PYPKGPREFIX}-dbus-next>=0.1.3:../../wip/py-dbus-next
 
