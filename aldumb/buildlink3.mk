@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	aldumb
+
+.if !defined(ALDUMB_BUILDLINK3_MK)
+ALDUMB_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.aldumb+=	aldumb>=2.0.3
+BUILDLINK_PKGSRCDIR.aldumb?=	../../wip/aldumb
+
+.endif	# ALDUMB_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-aldumb

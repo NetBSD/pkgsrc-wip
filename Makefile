@@ -111,6 +111,7 @@ SUBDIR+=	akonadi-search
 SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	aldo
+SUBDIR+=	aldumb
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-lib-git
