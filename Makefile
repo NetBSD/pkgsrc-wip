@@ -750,6 +750,7 @@ SUBDIR+=	empathy
 SUBDIR+=	engauge-digitizer
 SUBDIR+=	enigma2000
 SUBDIR+=	enlightenment-current
+SUBDIR+=	entityx
 SUBDIR+=	eolie
 SUBDIR+=	eor
 SUBDIR+=	eot

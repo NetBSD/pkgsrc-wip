@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	entityx
+
+.if !defined(ENTITYX_BUILDLINK3_MK)
+ENTITYX_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.entityx+=	entityx>=1.3.0
+BUILDLINK_PKGSRCDIR.entityx?=	../../wip/entityx
+.endif	# ENTITYX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-entityx

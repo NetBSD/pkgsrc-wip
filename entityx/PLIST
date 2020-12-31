@@ -1,0 +1,17 @@
+@comment $NetBSD$
+include/entityx/3rdparty/simplesignal.h
+include/entityx/Entity.h
+include/entityx/Event.h
+include/entityx/System.h
+include/entityx/config.h
+include/entityx/deps/Dependencies.h
+include/entityx/entityx.h
+include/entityx/help/NonCopyable.h
+include/entityx/help/Pool.h
+include/entityx/help/Timer.h
+include/entityx/quick.h
+include/entityx/tags/TagsComponent.h
+lib/libentityx.so
+lib/libentityx.so.1
+lib/libentityx.so.1.1.2
+lib/pkgconfig/entityx.pc
