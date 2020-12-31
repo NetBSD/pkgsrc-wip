@@ -4013,6 +4013,7 @@ SUBDIR+=	py-picture-to-gds
 SUBDIR+=	py-pint
 SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pipenv
+SUBDIR+=	py-pipfile
 SUBDIR+=	py-piquant
 SUBDIR+=	py-pithos
 SUBDIR+=	py-pixiedust
