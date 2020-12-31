@@ -4,7 +4,7 @@ PKGNAME=	arx-libertatis-1.2
 CATEGORIES=	games
 DISTFILES+=	arx-libertatis-data-1.tar.xz
 SITES.arx-libertatis-data-1.tar.xz= \
-https://arx-libertatis.org/files/data/
+	https://arx-libertatis.org/files/data/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://arx-libertatis.org/
@@ -38,6 +38,7 @@ PLIST.NotDarwin=	yes
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
