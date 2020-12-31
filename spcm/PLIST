@@ -17,6 +17,7 @@ bin/condor-cpus
 bin/condor-list-packages
 bin/job-top
 bin/node-iostat
+bin/node-netstat
 bin/node-ps
 bin/node-top
 bin/psnode
@@ -60,7 +61,6 @@ sbin/cluster-lock-user
 sbin/cluster-lowest-uid
 sbin/cluster-munge-enable
 sbin/cluster-node-admin
-sbin/cluster-node-type
 sbin/cluster-passwd-expiration
 sbin/cluster-passwd-user-expiration
 sbin/cluster-ports-update
@@ -95,6 +95,7 @@ sbin/cluster-update-backup-nodes
 sbin/cluster-update-file-servers
 sbin/cluster-update-menu
 sbin/cluster-update-vis-nodes
+sbin/cluster-upgrade
 sbin/cluster-user-admin
 sbin/cluster-user-cleanup
 sbin/cluster-useradd
@@ -108,6 +109,8 @@ sbin/node-sync-all-users
 sbin/node-sync-groups
 sbin/node-sync-pkgsrc
 sbin/node-sync-users
+sbin/node-type
+sbin/node-upgrade
 sbin/slurm-cron-updates
 sbin/slurm-drain-all
 sbin/slurm-node-resume
