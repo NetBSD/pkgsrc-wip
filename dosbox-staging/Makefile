@@ -18,10 +18,10 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	aclocal automake autoconf gmake pkg-config
 
-NOT_PAX_MPROTECT_SAFE=	bin/dosbox_staging
+NOT_PAX_MPROTECT_SAFE=	bin/dosbox-staging
 
 pre-configure:
-	${MV} ${WRKSRC}/docs/dosbox.1 ${WRKSRC}/docs/dosbox_staging.1
+	${MV} ${WRKSRC}/docs/dosbox.1 ${WRKSRC}/docs/dosbox-staging.1
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 

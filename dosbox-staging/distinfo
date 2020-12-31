@@ -4,5 +4,5 @@ SHA1 (dosbox-staging/v0.76.0.tar.gz) = ca64bc6285a7f5d7c88fb23671e3639c23f3ed30
 RMD160 (dosbox-staging/v0.76.0.tar.gz) = 3cc9aa389bc8a906cbf5a899992e9b9364884775
 SHA512 (dosbox-staging/v0.76.0.tar.gz) = 8c0357bcec08cac2cd2b306edd8b51ad05e16a3c3efb1f4c77e1d942f285493cae8aab45f1633e9c168c0b4b45aa289cf3ffc72685dc004d83127cdb6c76ae9d
 Size (dosbox-staging/v0.76.0.tar.gz) = 1908605 bytes
-SHA1 (patch-docs_Makefile.am) = 1a10779a5abf2329359683b5d1bf3da9ac888747
-SHA1 (patch-src_Makefile.am) = ead30d4bcebcafae531d2c3e0bdededa59ae32f2
+SHA1 (patch-docs_Makefile.am) = 89ea60bae98438fb6d86d28ff0ce02949588bae4
+SHA1 (patch-src_Makefile.am) = 369abff7137bb602478c62babca980dac54af876

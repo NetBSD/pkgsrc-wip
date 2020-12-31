@@ -1,6 +1,6 @@
 $NetBSD$
 
-Install as "dosbox_staging" to avoid a conflict with emulators dosbox.
+Install as "dosbox-staging" to avoid a conflict with emulators/dosbox.
 
 --- src/Makefile.am.orig	2020-12-03 18:36:19.000000000 +0000
 +++ src/Makefile.am
@@ -9,7 +9,7 @@ Install as "dosbox_staging" to avoid a conflict with emulators dosbox.
  SUBDIRS = cpu debug dos fpu gui hardware libs ints midi misc shell platform
  
 -bin_PROGRAMS = dosbox
-+bin_PROGRAMS = dosbox_staging
++bin_PROGRAMS = dosbox-staging
  
  if HAVE_WINDRES
  ico_stuff = winres.rc

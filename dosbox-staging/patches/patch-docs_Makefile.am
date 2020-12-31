@@ -1,6 +1,6 @@
 $NetBSD$
 
-Install as "dosbox_staging" to avoid a conflict with emulators dosbox.
+Install as "dosbox-staging" to avoid a conflict with emulators/dosbox.
 
 --- docs/Makefile.am.orig	2020-12-03 18:36:19.000000000 +0000
 +++ docs/Makefile.am
@@ -8,7 +8,7 @@ Install as "dosbox_staging" to avoid a conflict with emulators dosbox.
  # Main Makefile for DOSBox
  
 -man_MANS = dosbox.1 
-+man_MANS = dosbox_staging.1 
++man_MANS = dosbox-staging.1 
  EXTRA_DIST = $(man_MANS) README.video PORTING
  
  
