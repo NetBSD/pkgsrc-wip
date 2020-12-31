@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nanogrep-1.2.0
+DISTNAME=	nanogrep-1.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Uniminin/}
 
