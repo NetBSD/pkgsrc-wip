@@ -4405,6 +4405,7 @@ SUBDIR+=	py-tenacity
 SUBDIR+=	py-teng
 SUBDIR+=	py-teradata
 SUBDIR+=	py-test-doctestplus
+SUBDIR+=	py-test-datadir
 SUBDIR+=	py-test-html
 SUBDIR+=	py-test-metadata
 SUBDIR+=	py-test-mpl
