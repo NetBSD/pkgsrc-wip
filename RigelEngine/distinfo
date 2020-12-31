@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (RigelEngine/imgui-1.7.9.tar.gz) = da92c36e123002475cd6adba8e3429051a317e71
+RMD160 (RigelEngine/imgui-1.7.9.tar.gz) = 2ae1cb43d0048e1f74f812ec47de5280dda53a84
+SHA512 (RigelEngine/imgui-1.7.9.tar.gz) = 35ed7af89123e09989ef81085f19ed15f97f4798e2b35834fd8b4ae918889b51132d85901f867ab2f379711a734bc7b2edd309d74f3f7527eaaaebfd766d3737
+Size (RigelEngine/imgui-1.7.9.tar.gz) = 1299303 bytes
+SHA1 (RigelEngine/v0.7.0-beta.tar.gz) = f4ebd8ac989500beb80bcba973bd444c852c3359
+RMD160 (RigelEngine/v0.7.0-beta.tar.gz) = 0b7ab181717ad36cc3524d265857079c82f97506
+SHA512 (RigelEngine/v0.7.0-beta.tar.gz) = 0eae25c434f2cf5e10f63c02fb776c56595683dfa6076c8cbc0f3b5101df431c08778c5ee44ebec38e320342619dc9d4161adfbf1c8036899208df51d552ee88
+Size (RigelEngine/v0.7.0-beta.tar.gz) = 756157 bytes
+SHA1 (patch-3rd__party_CMakeLists.txt) = 10629ff9d8d15eb817737f5d364aff29aa42ea90
+SHA1 (patch-CMakeLists.txt) = 148e401abbed52fc5747f6c182f2efeb9018fbd6

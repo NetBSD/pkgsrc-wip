@@ -66,6 +66,7 @@ SUBDIR+=	R-signal
 SUBDIR+=	R-tuneR
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
+SUBDIR+=	RigelEngine
 SUBDIR+=	SLADE
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk

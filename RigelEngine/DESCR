@@ -1,0 +1,7 @@
+This project is a re-implementation of the game Duke Nukem II,
+originally released by Apogee Software in 1993. RigelEngine works
+as a drop-in replacement for the original executable: It reads the
+original data files and offers the same experience (plus some
+improvements), but runs natively on modern operating systems, and
+is written in modern C++ code with a completely new architecture
+under the hood.

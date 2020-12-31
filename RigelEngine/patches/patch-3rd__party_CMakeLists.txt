@@ -1,0 +1,19 @@
+$NetBSD$
+
+Don't download entityx. Use the pkgsrc version.
+
+--- 3rd_party/CMakeLists.txt.orig	2020-11-28 16:11:39.000000000 +0000
++++ 3rd_party/CMakeLists.txt
+@@ -28,10 +28,10 @@ set(ENTITYX_RUN_BENCHMARKS false CACHE I
+ set(ENTITYX_MAX_COMPONENTS 64 CACHE INTERNAL "")
+ 
+ add_subdirectory(dbopl)
+-add_subdirectory(entityx)
++#add_subdirectory(entityx)
+ add_subdirectory(glad)
+ add_subdirectory(speex_resampler)
+ add_subdirectory(imgui)
+ add_subdirectory(imgui-filebrowser)
+ 
+-rigel_disable_warnings(entityx)
++#rigel_disable_warnings(entityx)

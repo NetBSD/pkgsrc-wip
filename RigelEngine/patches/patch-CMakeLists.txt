@@ -1,0 +1,30 @@
+$NetBSD$
+
+Don't download entityx. Use the pkgsrc.
+
+--- CMakeLists.txt.orig	2020-11-28 16:11:39.000000000 +0000
++++ CMakeLists.txt
+@@ -25,10 +25,10 @@ include("${CMAKE_SOURCE_DIR}/cmake/rigel
+ # initialized. It's still possible to get in a state where entityx is present
+ # but other submodules are not, but that's unlikely to happen to someone who
+ # has just cloned the repo and wants to build for the first time.
+-if(NOT EXISTS "${CMAKE_SOURCE_DIR}/3rd_party/entityx/entityx/Entity.h")
+-    message(FATAL_ERROR
+-        "It seems git submodules were not initialized. You need to run git submodule update --init --recursive, and then re-run CMake.")
+-endif()
++#if(NOT EXISTS "${CMAKE_SOURCE_DIR}/3rd_party/entityx/entityx/Entity.h")
++#    message(FATAL_ERROR
++#        "It seems git submodules were not initialized. You need to run git submodule update --init --recursive, and then re-run CMake.")
++#endif()
+ 
+ 
+ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Emscripten")
+@@ -53,6 +53,8 @@ else()
+     find_package(Boost 1.65 COMPONENTS program_options REQUIRED)
+     find_package(SDL2 REQUIRED)
+     find_package(SDL2_mixer REQUIRED)
++    find_package(PkgConfig REQUIRED)
++    pkg_check_modules(ENTITYX entityx REQUIRED)
+ endif()
+ 
+ find_package(Filesystem REQUIRED)
