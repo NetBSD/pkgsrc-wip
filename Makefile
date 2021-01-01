@@ -2310,7 +2310,6 @@ SUBDIR+=	nary
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
 SUBDIR+=	nauty
-SUBDIR+=	navi
 SUBDIR+=	navi2ch-current
 SUBDIR+=	navit
 SUBDIR+=	navit-git
