@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2014/12/25 04:53:14 obache Exp $
+$NetBSD$
+
+- Add dragonfly
+- Add -lm for LIBS
 
 --- configure.orig	2005-10-10 18:35:27.000000000 +0000
 +++ configure
