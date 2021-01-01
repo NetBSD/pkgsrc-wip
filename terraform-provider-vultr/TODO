@@ -1,0 +1,1 @@
+Doesn't build w/ PKGSRC_USE_RELRO=yes
