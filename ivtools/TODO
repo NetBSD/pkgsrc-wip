@@ -1,0 +1,13 @@
+Current problem is:
+
+--- libUnidraw.so.1.2.11 ---
+building libUnidraw.so.1.2.11
+rm -f libUnidraw.so.1.2.11
+c++  -gdwarf-2 -O2  -Wl,-rpath-link,../../IV/NETBSD -L../../IV/NETBSD -lIV -lX11 -lc -Wl,-R/usr/X11R7/lib -Wl,-R/usr/pkg/lib -shared  -o libUnidraw.so.1.2.11 *.o
+ld: cannot find -lX11
+ld: catcmds.o: in function `ivPrintCmd::Execute()':
+/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/Unidraw/NETBSD/../catcmds.c:540: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
+ld: catalog.o: in function `ivCatalog::CopyObject(void*, unsigned long)':
+/export/CHROOT/tmp/wip/ivtools/work/ivtools-1.2/src/Unidraw/NETBSD/../catalog.c:681: warning: warning: tempnam() possibly used unsafely, use mkstemp() or mkdtemp()
+*** [libUnidraw.so.1.2.11] Error code 1
+

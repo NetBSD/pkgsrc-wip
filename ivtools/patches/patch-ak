@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.4 2010/04/05 22:52:23 markd Exp $
+
+--- src/ComTerp/comterp.c.orig	2013-02-13 17:57:54.000000000 +0900
++++ src/ComTerp/comterp.c	2020-12-30 15:14:37.524413132 +0900
+@@ -1078,7 +1078,7 @@ int ComTerp::run(boolean one_expr, boole
+     fbuf.attach(fd);
+   } else
+     fbuf.attach(fileno(stdout));
+-#elif (__GNUC__==3 && __GNUC_MINOR__<1) || __GNUC__>3 || defined(__CYGWIN__)
++#elif (__GNUC__==3 && (__GNUC_MINOR__<1 || __GNUC_MINOR__ >= 4)) || __GNUC__>3 || defined(__CYGWIN__)
+   fileptr_filebuf fbuf(handler() && handler()->wrfptr() 
+ 		       ? handler()->wrfptr() : (_fd>0 ? fdopen(_fd, "w") : stdout), 
+ 	       ios_base::out);
