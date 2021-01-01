@@ -5,7 +5,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ars3niy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/ars3niy/tdlib-purple/
 COMMENT=	Libpurple Telegram plugin using tdlib
 LICENSE=	gnu-gpl-v2
