@@ -4,4 +4,4 @@ SHA1 (tdlib-purple-0.7.5.tar.gz) = 650d33a4f3880759ee7e30740f1f7757daa7313b
 RMD160 (tdlib-purple-0.7.5.tar.gz) = af4b9398c2f02d2235aaa858ada531e9d80efcb3
 SHA512 (tdlib-purple-0.7.5.tar.gz) = e4fe787c9398721808c4a49e3a08e0eaaead146c55d34cd253956ef0eff268ac072f4aaf66b2851f17c83fcbccd28390b87a8ad7ced6371ad3f6e7c4e0c67a3e
 Size (tdlib-purple-0.7.5.tar.gz) = 772001 bytes
-SHA1 (patch-tdlib-purple.cpp) = 1c252f99db139f60d97e2e1599aa5e24dc33684b
+SHA1 (patch-tdlib-purple.cpp) = 1b72926994b882c1cf968462598c24fb89db15d2
