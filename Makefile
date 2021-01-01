@@ -2473,7 +2473,6 @@ SUBDIR+=	opencl-headers
 SUBDIR+=	openclonk
 SUBDIR+=	openconnect
 SUBDIR+=	opendchub
-SUBDIR+=	opendoas
 SUBDIR+=	opendune
 SUBDIR+=	openerp-server
 SUBDIR+=	openfodder
