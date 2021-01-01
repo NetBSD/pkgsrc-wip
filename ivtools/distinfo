@@ -40,5 +40,6 @@ SHA1 (patch-bi) = 477ce54baeb05a4c383c26af696ce18c07085e60
 SHA1 (patch-bj) = d262c3a217b8f7838a08d6a0952417aeb3e525dd
 SHA1 (patch-bk) = 96edb15971da782c78fc2dd177bce5869cb68201
 SHA1 (patch-bl) = 807a2b860184e990fbf5afcebf4a161c4c614741
+SHA1 (patch-src_ComTerp_ctrlfunc.c) = 271f7a6229b500f99ec7fc35cfbc16aea9afe4e3
 SHA1 (patch-src_glyphs_strchooser_main.c) = 7cd91aaaba73d412bb0d41d5030f0c956e3ef000
 SHA1 (patch-src_tests_y2k_y2ktest.cc) = ef1b1d3d20031b3d769152e2896b656aa716abfd
