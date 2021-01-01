@@ -1350,7 +1350,6 @@ SUBDIR+=	hdparm
 SUBDIR+=	heaptrack
 SUBDIR+=	heimdal
 SUBDIR+=	heimdall
-SUBDIR+=	heliocron
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
