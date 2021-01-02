@@ -199,7 +199,6 @@ SUBDIR+=	arx-libertatis-git
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
-SUBDIR+=	assimp
 SUBDIR+=	ast-ksh
 SUBDIR+=	asterisk11-vicidial
 SUBDIR+=	astguiclient-vicidial
