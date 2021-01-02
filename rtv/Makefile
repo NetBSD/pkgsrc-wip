@@ -12,7 +12,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-kitchen-[0-9]*:../../wip/py-kitchen
+DEPENDS+=	${PYPKGPREFIX}-kitchen-[0-9]*:../../devel/py-kitchen
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
