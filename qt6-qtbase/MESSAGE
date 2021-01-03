@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD$
+
+To allow this package to coexist with other versions of Qt
+it has been installed in ${PREFIX}/qt6/{bin,include,lib,doc} etc.
+
+You should be able to select this version of Qt when compiling
+programs which use it by ensuring that
+
+1) QTDIR is set to ${PREFIX}/qt6
+
+2) Use the "configure" argument "--with-qt-dir=${PREFIX}/qt6"
+
+3) Use the "cmake" argument "-DCMAKE_SYSTEM_PREFIX_PATH:PATH=${PREFIX}/qt6"
+
+4) you may also have to put ${PREFIX}/qt6/bin in your PATH
+
+===========================================================================

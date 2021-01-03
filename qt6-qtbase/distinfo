@@ -1,0 +1,35 @@
+$NetBSD$
+
+SHA1 (qtbase-everywhere-src-6.0.0.tar.xz) = 01b05dba35f5ed230ae402fde71ac1b5ff3c999b
+RMD160 (qtbase-everywhere-src-6.0.0.tar.xz) = d1eef5f53909afecdf30be9d5a468085938dd626
+SHA512 (qtbase-everywhere-src-6.0.0.tar.xz) = 0b32e38394c25577ab7746d36b8b96bdae9491395cd471887f56a62be6de533393056e9bc8c5219a7791e238bde3cdcc32f1f59b2d015fdc16260edf866fdafb
+Size (qtbase-everywhere-src-6.0.0.tar.xz) = 46234820 bytes
+SHA1 (patch-cmake_QtBuild.cmake) = 9e51c025686de3b1a383056eb6c61b0884349b57
+SHA1 (patch-cmake_QtPlatformSupport.cmake) = 597c57d1acd2798e2f8393c6fd391721c2f54f41
+SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
+SHA1 (patch-mkspecs_features_qt__module.prf) = a04c4b1fe80250b6b3591f5486ac0fd3b5056c26
+SHA1 (patch-mkspecs_features_toolchain.prf) = 0cf13cb6e859dd6276954239b91953e557add515
+SHA1 (patch-qmake_Makefile.unix) = 05037b4db1b83dbfc9647b3258f896f4fac4a4dc
+SHA1 (patch-qmake_generators_makefile.cpp) = 1bca636dc88f258876df54bd0c6c64114fa7411d
+SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf984fe3b6af04
+SHA1 (patch-src_corelib_CMakeLists.txt) = 143853018b34cda0f0d48c3fe2d106714136d88d
+SHA1 (patch-src_corelib_configure.json) = 7a83a356330e602cbc65256dd345a107004a67cb
+SHA1 (patch-src_corelib_global_qrandom.cpp) = d910579df42d5b01583b88fa19f514b230596ca7
+SHA1 (patch-src_corelib_io_io.pri) = b2c1057e20c3150162695947bab958a2644df7dc
+SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = b12a41da19b25e34e12fdf80714a37e8c46278f9
+SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
+SHA1 (patch-src_corelib_thread_qmutex__p.h) = 093089b8a37baa3071257c99bbde5f6295bd2eec
+SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
+SHA1 (patch-src_gui_configure.cmake) = c83546416253522a96e2e8de418211ce3d0ec131
+SHA1 (patch-src_gui_kernel_qopenglcontext__platform.h) = 13f6c1c91f1ad3ca5a5090fd21d01f8e0c887251
+SHA1 (patch-src_gui_kernel_qplatformopenglcontext.h) = adbdbb18e2a6699454c042d4b1232a56eb35d1ab
+SHA1 (patch-src_gui_platform_unix_qunixnativeinterface.cpp) = 7bc8bd78c6c6f4ec70526f2efaff2551acb3697a
+SHA1 (patch-src_network_kernel_qnetworkinterface__unix.cpp) = 2c5569eb2ba19999eb62e4fdb54f347c88f6e6a5
+SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
+SHA1 (patch-src_plugins_platforms_xcb_qxcbatom.cpp) = abbd0b04b881666e82f45adc18e49aafdb43d4be
+SHA1 (patch-src_plugins_platforms_xcb_qxcbconnection__basic.h) = e369001cba31e865adf010ab714ad132b96c1bef
+SHA1 (patch-src_tools_moc_main.cpp) = ebdddd657ba1c24657a9ca5624907e31a5d0c8bb
+SHA1 (patch-src_widgets_graphicsview_qgraphicsitem__p.h) = fd55d5ef6fde506849aab07f7ba23e856373b3a1
+SHA1 (patch-tests_auto_corelib_global_qnumeric_CMakeLists.txt) = 53f3fcfcfd344565e36253d2b9105c1cd5dc6dd0
+SHA1 (patch-tests_auto_corelib_io_qprocess_qprocess.pro) = 1dbb08e5ec6715cbe239efdfb45389959b179ea3
+SHA1 (patch-tests_auto_widgets_itemviews_qtreewidgetitemiterator_qtreewidgetitemiterator.pro) = a0534c3fe05ea1d7a23170811d1da7fa740e31d1
