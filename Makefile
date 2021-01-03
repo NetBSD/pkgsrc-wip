@@ -1891,6 +1891,7 @@ SUBDIR+=	libfolks
 SUBDIR+=	libfplll
 SUBDIR+=	libftdi1
 SUBDIR+=	libgamecommon
+SUBDIR+=	libgamemusic
 SUBDIR+=	libgda-bdb
 SUBDIR+=	libgda-ldap
 SUBDIR+=	libgda-mdb

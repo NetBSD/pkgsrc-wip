@@ -1,0 +1,6 @@
+Camoto is a collection of utilities for editing (modding) "classic games",
+those from the early to mid 1990s running under DOS.
+
+This is libgamemusic, one component of the Camoto suite.  libgamemusic is a
+library that can read and write many different music file formats, with a focus
+on formats used by DOS games.

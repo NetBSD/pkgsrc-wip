@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/dro2txt
+bin/gamemus
+include/camoto-1.0/camoto/gamemusic.hpp
+include/camoto-1.0/camoto/gamemusic/eventconverter-midi.hpp
+include/camoto-1.0/camoto/gamemusic/eventconverter-opl.hpp
+include/camoto-1.0/camoto/gamemusic/events.hpp
+include/camoto-1.0/camoto/gamemusic/exceptions.hpp
+include/camoto-1.0/camoto/gamemusic/manager.hpp
+include/camoto-1.0/camoto/gamemusic/music.hpp
+include/camoto-1.0/camoto/gamemusic/musictype.hpp
+include/camoto-1.0/camoto/gamemusic/patch-midi.hpp
+include/camoto-1.0/camoto/gamemusic/patch-opl.hpp
+include/camoto-1.0/camoto/gamemusic/patch-pcm.hpp
+include/camoto-1.0/camoto/gamemusic/patch.hpp
+include/camoto-1.0/camoto/gamemusic/patchbank.hpp
+include/camoto-1.0/camoto/gamemusic/playback.hpp
+include/camoto-1.0/camoto/gamemusic/synth-opl.hpp
+include/camoto-1.0/camoto/gamemusic/synth-pcm.hpp
+include/camoto-1.0/camoto/gamemusic/tempo.hpp
+include/camoto-1.0/camoto/gamemusic/util-opl.hpp
+include/camoto-1.0/camoto/gamemusic/util-pcm.hpp
+lib/libgamemusic.la
+lib/pkgconfig/libgamemusic.pc
+man/man1/dro2txt.1
+man/man1/gamemus.1
