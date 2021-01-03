@@ -2155,6 +2155,7 @@ SUBDIR+=	mccs
 SUBDIR+=	mce
 SUBDIR+=	mcl
 SUBDIR+=	mcwm
+SUBDIR+=	md4c
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
 SUBDIR+=	mdpress
