@@ -23,7 +23,7 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
 BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
-# Bootstrap is built for NetBSD 9.x:
+# Bootstrap is built for NetBSD 9.x on these platforms:
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-*arm*
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-aarch64
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-sparc64
@@ -36,8 +36,6 @@ CONFIGURE_ARGS+=		--prefix=${PREFIX}
 CONFIGURE_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=		--python=${PYTHONBIN}
-# Switch this to "nightly" to build a nightly compiler, required for some software,
-# then update BOOTSTRAP_NAME below.
 CONFIGURE_ARGS+=		--release-channel=stable
 CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
 CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
@@ -52,9 +50,9 @@ CONFIGURE_ARGS+=		--disable-ninja
 
 .if !empty(TARGET)
 # Use "dist" build target for cross compile of bootstrap
-BUILD_TARGET=	dist
+BUILD_TARGET=		dist
 .else
-BUILD_TARGET=	build
+BUILD_TARGET=		build
 .endif
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
@@ -248,7 +246,7 @@ RUST_ARCH=		powerpc-unknown-netbsd
 # Cross-built against NetBSD 9.0
 .  if empty(OS_VERSION:M8.*) || make(distinfo) || make(makesum) || make(mdi)
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.gz
-RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.gz 
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.gz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
@@ -296,7 +294,8 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 pre-build-fix:
 .endif
 
-# You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf if you have a local bootstrap compiler.
+# You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf
+# if you have a local bootstrap compiler.
 .if !defined(RUST_ARCH) && !defined(RUST_BOOTSTRAP_PATH)
 NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 .else
@@ -398,9 +397,9 @@ pre-build: pre-build-fix
 do-build:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
-	${SETENV} ${MAKE_ENV} 						\
-	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then 		\
-		unset DESTDIR; 						\
+	${SETENV} ${MAKE_ENV}						\
+	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then		\
+		unset DESTDIR;						\
 		${PYTHONBIN} ./x.py -v					\
 		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N};			\
 	else								\
@@ -413,20 +412,21 @@ do-build:
 do-test:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
-	${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v			\
-	    test -j ${_MAKE_JOBS_N}
+	${SETENV} ${MAKE_ENV}						\
+		${PYTHONBIN} ./x.py -v test -j ${_MAKE_JOBS_N}
 
 do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
-	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${PYTHONBIN} ./x.py -v	\
-	    install -j ${_MAKE_JOBS_N}
+	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
+		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib \
+	    ${DESTDIR}${PREFIX}/lib/libtracing_attributes-*.dylib \
 	    ${DESTDIR}${PREFIX}/lib/libchalk_derive-*.dylib; do \
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
@@ -516,7 +516,8 @@ stage0-bootstrap: install
 	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/*/*/*.so*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
 	done
-	(cd ${WRKDIR}; ${GTAR} -zcf ${BOOTSTRAP_NAME}.tar.gz ${BOOTSTRAP_NAME})
+	(cd ${WRKDIR}; \
+	 ${GTAR} -zcf ${BOOTSTRAP_NAME}.tar.gz ${BOOTSTRAP_NAME})
 .endif
 
 .include "options.mk"
@@ -566,11 +567,11 @@ DEPENDS+=	openssl>=1.1:../../security/openssl
 
 # This is for when we build natively:
 .if ((${OPSYS} == "NetBSD") && \
-       ((${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "i386")))
+    ((${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "i386")))
 # LLVM needs libatomic for 64-bit atomics on powerpc and i386
 .include "../../devel/libatomic/buildlink3.mk"
 # Make those libraries available via a unique directory:
-DEPENDS+=      libatomic-links>=0:../../devel/libatomic-links
+DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
