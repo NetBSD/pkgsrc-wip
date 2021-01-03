@@ -140,8 +140,6 @@ MAKE_JOBS_SAFE=	no
 # Broken package with PREFIX not /usr/pkg:
 #   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54453
 #
-# NetBSD 8.1 earmv7hf: unknown configure option
-#   http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54621
 
 .endif
 
