@@ -1,5 +1,7 @@
 $NetBSD$
 
+Defines for DragonflyBSD and for arm.
+
 --- code/qcommon/q_platform.h.orig	2017-04-28 09:13:25.000000000 +0000
 +++ code/qcommon/q_platform.h
 @@ -201,7 +201,7 @@ Foundation, Inc., 51 Franklin St, Fifth 

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Build definitions for NetBSD and some of its architectures.
+
 --- Makefile.orig	2017-04-28 09:13:25.000000000 +0000
 +++ Makefile
 @@ -794,11 +794,51 @@ ifeq ($(PLATFORM),netbsd)

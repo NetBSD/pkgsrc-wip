@@ -1,4 +1,6 @@
 @comment $NetBSD$
+bin/ioq3ded
+bin/ioquake3
 lib/ioquake3/ioquake3.${QUAKE_ARCH}
 lib/ioquake3/baseq3/cgame${QUAKE_ARCH}.so
 lib/ioquake3/baseq3/qagame${QUAKE_ARCH}.so
