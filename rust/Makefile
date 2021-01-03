@@ -46,6 +46,13 @@ CONFIGURE_ARGS+=		--disable-ninja
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
 
+.if !empty(TARGET)
+# Use "dist" build target for cross compile of bootstrap
+BUILD_TARGET=	dist
+.else
+BUILD_TARGET=	build
+.endif
+
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
@@ -359,10 +366,17 @@ pre-build: pre-build-fix
 do-build:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
-	${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v			\
-	    build --stage 2 -j ${_MAKE_JOBS_N} &&			\
-	${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v			\
-	    doc --stage 2 -j ${_MAKE_JOBS_N}
+	${SETENV} ${MAKE_ENV} 						\
+	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then 		\
+		unset DESTDIR; 						\
+		${PYTHONBIN} ./x.py -v					\
+		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N}			\
+	else								\
+		${PYTHONBIN} ./x.py -v					\
+		    ${BUILD_TARGET} --stage 2 -j ${_MAKE_JOBS_N} &&	\
+		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v		\
+		    doc --stage 2 -j ${_MAKE_JOBS_N};			\
+	fi"
 
 do-test:
 	${RUN}${_ULIMIT_CMD}						\
