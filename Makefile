@@ -654,7 +654,6 @@ SUBDIR+=	dosbox-staging
 SUBDIR+=	dosbox-svn
 SUBDIR+=	dosemu2
 SUBDIR+=	dotproject
-SUBDIR+=	double-conversion
 SUBDIR+=	dovecot-antispam
 SUBDIR+=	dovecot2-fts-xapian
 SUBDIR+=	downtimed
