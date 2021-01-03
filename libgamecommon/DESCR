@@ -1,0 +1,5 @@
+Camoto is a collection of utilities for editing (modding) "classic games",
+those from the early to mid 1990s.
+
+This is libgamecommon, the lowest-level component of the Camoto suite.  It
+contains shared code and routines used by most of the other Camoto libraries.

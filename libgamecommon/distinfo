@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (libgamecommon-1.2.tar.bz2) = 2cfc85e03ec0ee4c71bb22bf97aac76b843fc871
+RMD160 (libgamecommon-1.2.tar.bz2) = 8641b8b9bdf3c77c04b0fd334705248dde758569
+SHA512 (libgamecommon-1.2.tar.bz2) = fb123352bf53bad5a68df3241a5ad0a8a17038c32d5096218601171fc6e0bcdb12141993f4cb6c3277949b8e4070c7d8f64bd0bd70620774c47050f0abb64f7c
+Size (libgamecommon-1.2.tar.bz2) = 349522 bytes
+SHA1 (patch-src_stream__file.cpp) = 218a00dc64b06e001854fe160e5720e21d923849

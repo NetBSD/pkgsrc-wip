@@ -1,0 +1,22 @@
+@comment $NetBSD$
+include/camoto-1.0/camoto/bitstream.hpp
+include/camoto-1.0/camoto/byteorder.hpp
+include/camoto-1.0/camoto/debug.hpp
+include/camoto-1.0/camoto/error.hpp
+include/camoto-1.0/camoto/filter.hpp
+include/camoto-1.0/camoto/filter_dummy.hpp
+include/camoto-1.0/camoto/iff.hpp
+include/camoto-1.0/camoto/iostream_helpers.hpp
+include/camoto-1.0/camoto/lzw.hpp
+include/camoto-1.0/camoto/metadata.hpp
+include/camoto-1.0/camoto/stream.hpp
+include/camoto-1.0/camoto/stream_file.hpp
+include/camoto-1.0/camoto/stream_filtered.hpp
+include/camoto-1.0/camoto/stream_memory.hpp
+include/camoto-1.0/camoto/stream_seg.hpp
+include/camoto-1.0/camoto/stream_string.hpp
+include/camoto-1.0/camoto/stream_sub.hpp
+include/camoto-1.0/camoto/suppitem.hpp
+include/camoto-1.0/camoto/util.hpp
+lib/libgamecommon.la
+lib/pkgconfig/libgamecommon.pc
