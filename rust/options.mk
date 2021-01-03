@@ -14,6 +14,9 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
+PKG_SUPPORTED_OPTIONS+= rust-cargo-static
+PKG_SUGGESTED_OPTIONS+= rust-cargo-static
+
 .include "../../mk/bsd.options.mk"
 
 #
@@ -29,4 +32,17 @@ CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 # XXX: fix for Rust 1.41.0 https://github.com/rust-lang/rust/issues/68714
 MAKE_ENV+=	LIBRARY_PATH=${BUILDLINK_PREFIX.llvm}/lib
+.endif
+
+#
+# Link cargo statically against "native" libraries.
+# (openssl and curl specifically).
+#
+.if !empty(PKG_OPTIONS:Mrust-cargo-static)
+CONFIGURE_ARGS+=        --enable-cargo-native-static
+.else
+BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
+BUILDLINK_API_DEPENDS.curl+=    curl>=7.67.0
+.include "../../www/curl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .endif
