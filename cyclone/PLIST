@@ -162,10 +162,6 @@ share/cyclone/srfi/60.so
 share/cyclone/srfi/69.o
 share/cyclone/srfi/69.sld
 share/cyclone/srfi/69.so
-share/cyclone/srfi/9.meta
-share/cyclone/srfi/9.o
-share/cyclone/srfi/9.sld
-share/cyclone/srfi/9.so
 share/cyclone/srfi/list-queues/list-queues-impl.scm
 share/cyclone/srfi/list-queues/list-queues-test.scm
 share/cyclone/srfi/sorting/delndups.scm
