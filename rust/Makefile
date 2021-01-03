@@ -404,11 +404,11 @@ do-build:
 	sh -c "if [ \"${BUILD_TARGET}\" = \"dist\" ]; then 		\
 		unset DESTDIR; 						\
 		${PYTHONBIN} ./x.py -v					\
-		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N}			\
+		    ${BUILD_TARGET} -j ${_MAKE_JOBS_N};			\
 	else								\
 		${PYTHONBIN} ./x.py -v					\
 		    ${BUILD_TARGET} --stage 2 -j ${_MAKE_JOBS_N} &&	\
-		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./x.py -v		\
+		${PYTHONBIN} ./x.py -v					\
 		    doc --stage 2 -j ${_MAKE_JOBS_N};			\
 	fi"
 
