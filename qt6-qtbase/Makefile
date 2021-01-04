@@ -145,13 +145,7 @@ SUBST_MESSAGE.path=	Add to default XDG path.
 SUBST_FILES.path=	src/corelib/io/qstandardpaths_unix.cpp
 SUBST_VARS.path=	PREFIX
 
-BROKEN_FILES=		qt5/mkspecs/qmodule.pri
-
-PC_FILES=		Qt5Concurrent.pc Qt5Core.pc \
-			Qt5Gui.pc Qt5Network.pc Qt5OpenGL.pc \
-			Qt5OpenGLExtensions.pc \
-			Qt5PrintSupport.pc Qt5Sql.pc Qt5Test.pc \
-			Qt5Widgets.pc Qt5Xml.pc
+BROKEN_FILES=		qt6/mkspecs/qmodule.pri
 
 .if ${OPSYS} == "Linux"
 QMAKE_EXTRA=		QMAKE_PLATFORM += linux
@@ -202,10 +196,6 @@ LDFLAGS+=${COMPILER_RPATH_FLAG}${QTPREFIX}/lib
 .endif
 
 post-install:
-.for i in ${PC_FILES}
-	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
-	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
-.endfor
 # The pri file has WRKSRC in it.
 	${SED} -e 's,PKG_CONFIG_EXECUTABLE = .*,PKG_CONFIG_EXECUTABLE = ${TOOLS_PATH.pkg-config},' \
 		${DESTDIR}${PREFIX}/${BROKEN_FILES} \

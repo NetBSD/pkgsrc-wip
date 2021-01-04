@@ -1,16 +1,4 @@
 @comment $NetBSD$
-lib/pkgconfig/Qt5Concurrent.pc
-lib/pkgconfig/Qt5Core.pc
-${PLIST.dbus}lib/pkgconfig/Qt5DBus.pc
-lib/pkgconfig/Qt5Gui.pc
-lib/pkgconfig/Qt5Network.pc
-lib/pkgconfig/Qt5OpenGL.pc
-lib/pkgconfig/Qt5OpenGLExtensions.pc
-lib/pkgconfig/Qt5PrintSupport.pc
-lib/pkgconfig/Qt5Sql.pc
-lib/pkgconfig/Qt5Test.pc
-lib/pkgconfig/Qt5Widgets.pc
-lib/pkgconfig/Qt5Xml.pc
 qt6/bin/androiddeployqt
 qt6/bin/androidtestrunner
 qt6/bin/cmake_automoc_parser
