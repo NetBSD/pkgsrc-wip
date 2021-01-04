@@ -187,9 +187,9 @@ CFG_XDG_DESKTOP_PATH="$CFG_PREFIX/share/applications"
 # (must be an absolute path without trailing slash)
 CFG_XDG_ICON_THEME_PATH="$CFG_PREFIX/share/icons"
 
-# If you need reproducible builds for a binary package of a distribution,
-# set this to '1'.
-CFG_REPRODUCIBLE=1
+# Reproducible builds
+# The SOURCE_DATE_EPOCH specification 1.1 is supported:
+# https://reproducible-builds.org/specs/source-date-epoch/
 # ==============================================================================
 
 

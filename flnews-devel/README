@@ -1,2 +1,5 @@
 This package contains a development snapshot.
 FLTK 1.4 is used to test Pango support.
+
+Use the script "migrate_config" to convert configuration data from
+version 0.x to the new format.
