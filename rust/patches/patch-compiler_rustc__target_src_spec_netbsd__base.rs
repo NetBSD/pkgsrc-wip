@@ -9,7 +9,7 @@ search the directory containing the symlinks to -latomic.
              // libraries which follow this flag.  Thus, use it before
              // specifying libraries to link to.
              "-Wl,--as-needed".to_string(),
-+	    // For the benefit of powerpc, when libatomic-links is installed,
++            // For the benefit of powerpc, when libatomic-links is installed,
 +            "-Wl,-L@PREFIX@/lib/libatomic".to_string(),
          ],
      );

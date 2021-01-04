@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2020/06/24 09:46:26 nia Exp $
+# $NetBSD: options.mk,v 1.8 2021/01/01 20:44:48 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
-PKG_SUPPORTED_OPTIONS=	# empty
+PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -14,8 +14,9 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
-PKG_SUPPORTED_OPTIONS+= rust-cargo-static
-PKG_SUGGESTED_OPTIONS+= rust-cargo-static
+#.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
+#.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -39,10 +40,10 @@ MAKE_ENV+=	LIBRARY_PATH=${BUILDLINK_PREFIX.llvm}/lib
 # (openssl and curl specifically).
 #
 .if !empty(PKG_OPTIONS:Mrust-cargo-static)
-CONFIGURE_ARGS+=        --enable-cargo-native-static
+CONFIGURE_ARGS+=	--enable-cargo-native-static
 .else
 BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
-BUILDLINK_API_DEPENDS.curl+=    curl>=7.67.0
+BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .endif
