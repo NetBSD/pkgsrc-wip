@@ -42,39 +42,10 @@ Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 [X] Updated upstream feature request #96
 
 
-Part 14: Import final release
-=============================
-[X] Import version 1.48.6 to pkgsrc
-    Parts 10 to 13 are now available in games/doomlegacy
-
-
-Part 15: Savegame buffer overflow
-=================================
-[X] Created upstream bug report #667
-[X] Investigate crash with Antaresian Reliquary (Maps 4 and 6)
-    https://doomworld.com/idgames/levels/doom2/Ports/a-c/anta_req
-    Fixed in SVN revision 1553
-    => Works as expected
-
-
-Part 16: Sky is not rendered correctly
-======================================
-[X] Created upstream bug report #668
-    Fixed in SVN revision 1560
-    => Works as expected
-
-
-Part 17: Undefined behaviour
-============================
-GCC 10 produce several warnings while compiling the code.
-[X] Created upstream bug report #671
-    Fixed in SVN revisions 1561 and 1564
-    => Works as expected
-
-
 Part 18: Import final release
 =============================
-[ ] Import version 1.48.8 to pkgsrc
+[X] Import version 1.48.8 to pkgsrc
+    Parts 10 to 17 are now available in games/doomlegacy
 
 
 EOF

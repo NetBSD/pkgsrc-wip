@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERS=		1.48.6
+VERS=		1.48.8
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1567
+SVNVERS=	1568
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -19,6 +19,8 @@ COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 
 CONFLICTS+=		doomlegacy-[0-9]*
+
+#GCC_REQD+=		10
 
 # Tested on Linux/ppc (32bit Big Endian) and NetBSD/amd64 (64bit Little Endian)
 # Untested: In general the source code has support for the other listed OS too
@@ -70,7 +72,7 @@ SUBST_SED.makeopt=	-e 's,\#[ ]*COMP_ENVIRONMENT,COMP_ENVIRONMENT,'
 SUBST_SED.makeopt+=	-e 's,HAVE_LIBZIP,\# HAVE_LIBZIP,'
 SUBST_SED.makeopt+=	-e 's,HAVE_DLOPEN,\# HAVE_DLOPEN,'
 SUBST_SED.makeopt+=	-e 's,\# ARCH=-march=native,ARCH=-march=native,'
-SUBST_SED.makeopt+=	-e 's,\ARCH=-march=i686,\# ARCH=-march=native,'
+SUBST_SED.makeopt+=	-e 's,ARCH=-march=i686,\# ARCH=-march=native,'
 # Enable debug build
 #SUBST_SED.makeopt+=	-e 's,\# DEBUG=1,DEBUG=1,'
 
