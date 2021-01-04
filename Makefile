@@ -1622,7 +1622,6 @@ SUBDIR+=	influxdb
 SUBDIR+=	info2man
 SUBDIR+=	infraarcana
 SUBDIR+=	inkscape-snapshot
-SUBDIR+=	inn
 SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interbase-docs
 SUBDIR+=	intervaltree
