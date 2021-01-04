@@ -197,6 +197,9 @@ ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/APIGatewayXray.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AbsSecurityGroupUnrestrictedIngress.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AbsSecurityGroupUnrestrictedIngress.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AbsSecurityGroupUnrestrictedIngress.pyo
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AthenaWorkgroupConfiguration.py
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AthenaWorkgroupConfiguration.pyc
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AthenaWorkgroupConfiguration.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AuroraEncryption.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AuroraEncryption.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/AuroraEncryption.pyo
@@ -212,6 +215,9 @@ ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailEncryption.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailLogValidation.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailLogValidation.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailLogValidation.pyo
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudwatchLogGroupEncryption.py
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudwatchLogGroupEncryption.pyc
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudwatchLogGroupEncryption.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/DAXEncryption.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/DAXEncryption.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/DAXEncryption.pyo
@@ -347,6 +353,9 @@ ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/SecurityGroupUnrestricte
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/SecurityGroupUnrestrictedIngress3389.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/SecurityGroupUnrestrictedIngress3389.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/SecurityGroupUnrestrictedIngress3389.pyo
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/WAFEnabled.py
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/WAFEnabled.pyc
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/WAFEnabled.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/__init__.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/__init__.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/__init__.pyo
@@ -863,6 +872,9 @@ ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaDatabaseEncryption.pyo
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaWorkgroupConfiguration.py
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaWorkgroupConfiguration.pyc
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaWorkgroupConfiguration.pyo
+${PYSITELIB}/checkov/terraform/checks/resource/aws/AuroraEncryption.py
+${PYSITELIB}/checkov/terraform/checks/resource/aws/AuroraEncryption.pyc
+${PYSITELIB}/checkov/terraform/checks/resource/aws/AuroraEncryption.pyo
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudfrontDistributionEncryption.py
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudfrontDistributionEncryption.pyc
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudfrontDistributionEncryption.pyo
@@ -878,6 +890,9 @@ ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudtrailLogValidation.pyo
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudtrailMultiRegion.py
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudtrailMultiRegion.pyc
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudtrailMultiRegion.pyo
+${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudwatchLogGroupEncryption.py
+${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudwatchLogGroupEncryption.pyc
+${PYSITELIB}/checkov/terraform/checks/resource/aws/CloudwatchLogGroupEncryption.pyo
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CodeBuildProjectEncryption.py
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CodeBuildProjectEncryption.pyc
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/CodeBuildProjectEncryption.pyo
