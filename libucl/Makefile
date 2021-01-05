@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/06/30 02:32:02 cfkoch Exp $
 
-VERSION=	0.8.0
+VERSION=	0.8.1
 DISTNAME=	libucl-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}

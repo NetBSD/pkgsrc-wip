@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/06/22 00:34:20 cfkoch Exp $
 
-SHA1 (libucl-0.8.0.tar.gz) = 05bee1f893faa53e3c0c471dc865caad9ee9a490
-RMD160 (libucl-0.8.0.tar.gz) = 2fdd81c6e9ed2e89647a9221bb302527b2e716fa
-SHA512 (libucl-0.8.0.tar.gz) = b29b2fc32ea4e5b9b8805db7d55d2c56a08bcb7a5d6a931ef3a437687a9325e8bba3a5925e3425131ecb77bd6cd5ddae651f45aa089c4033eda1cd54078049c7
-Size (libucl-0.8.0.tar.gz) = 2022942 bytes
+SHA1 (libucl-0.8.1.tar.gz) = 9decfca0584da25eab56a536e387b7a6ef7d26da
+RMD160 (libucl-0.8.1.tar.gz) = 71435f721ef5c7ba34b591cdf369d889dc240f2e
+SHA512 (libucl-0.8.1.tar.gz) = 36a059561eadb2dd7253ca22ff56f6a0c6cdd28580e28451c0cf47e1aec321a2e1589fc83ccb2033346f2dbca31a7e6afa9666ea544a0c190b7f80ed0e9f45af
+Size (libucl-0.8.1.tar.gz) = 2028394 bytes
