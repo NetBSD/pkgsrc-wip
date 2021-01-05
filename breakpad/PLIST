@@ -8,8 +8,10 @@ include/breakpad/common/convert_UTF.h
 include/breakpad/common/dwarf_cfi_to_module.h
 include/breakpad/common/dwarf_cu_to_module.h
 include/breakpad/common/dwarf_line_to_module.h
+include/breakpad/common/dwarf_range_list_handler.h
 include/breakpad/common/language.h
 include/breakpad/common/long_string_dictionary.h
+include/breakpad/common/macros.h
 include/breakpad/common/md5.h
 include/breakpad/common/memory_allocator.h
 include/breakpad/common/memory_range.h
@@ -35,6 +37,7 @@ include/breakpad/google_breakpad/common/minidump_cpu_ppc.h
 include/breakpad/google_breakpad/common/minidump_cpu_ppc64.h
 include/breakpad/google_breakpad/common/minidump_cpu_sparc.h
 include/breakpad/google_breakpad/common/minidump_cpu_x86.h
+include/breakpad/google_breakpad/common/minidump_exception_fuchsia.h
 include/breakpad/google_breakpad/common/minidump_exception_linux.h
 include/breakpad/google_breakpad/common/minidump_exception_mac.h
 include/breakpad/google_breakpad/common/minidump_exception_ps3.h
@@ -51,6 +54,7 @@ include/breakpad/processor/cfi_frame_info-inl.h
 include/breakpad/processor/cfi_frame_info.h
 include/breakpad/processor/contained_range_map-inl.h
 include/breakpad/processor/contained_range_map.h
+include/breakpad/processor/convert_old_arm64_context.h
 include/breakpad/processor/disassembler_x86.h
 include/breakpad/processor/exploitability_linux.h
 include/breakpad/processor/exploitability_win.h

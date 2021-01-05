@@ -3,7 +3,7 @@
 PKGNAME=	breakpad-64
 GIT_REPO=	https://chromium.googlesource.com/breakpad/breakpad.git
 CATEGORIES=	misc
-GIT_REVISION=	4f9988b2546456070904dc5c6f83a952915593c9
+GIT_REVISION=	f469cab97b56b79107ce943e13b375add2676d17
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://chromium.googlesource.com/breakpad/breakpad
