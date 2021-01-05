@@ -1,11 +1,11 @@
 # $NetBSD$
 
 DISTNAME=	dma-${GITHUB_TAG}
-PKGNAME=	dma-0.12
+PKGNAME=	dma-0.13
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=corecode/}
 GITHUB_PROJECT=	dma
-GITHUB_TAG=	v0.12
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://github.com/corecode/dma
