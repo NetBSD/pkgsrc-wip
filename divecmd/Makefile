@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	divecmd-0.1.2
+DISTNAME=	divecmd-0.1.5
 CATEGORIES=	misc
 MASTER_SITES=	https://kristaps.bsd.lv/divecmd/snapshots/
 
