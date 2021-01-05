@@ -2094,7 +2094,6 @@ SUBDIR+=	lua-mpack
 SUBDIR+=	luabind
 SUBDIR+=	luakit-git
 SUBDIR+=	lucene
-SUBDIR+=	lugaru
 SUBDIR+=	lumberjack
 SUBDIR+=	lumina
 SUBDIR+=	lumina-desktop
