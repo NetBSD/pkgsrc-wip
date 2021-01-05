@@ -4,3 +4,4 @@ SHA1 (halfempty-0.40.tar.gz) = 6e58dd77ff587b89234a7ff0ce7b03ff610728d3
 RMD160 (halfempty-0.40.tar.gz) = 3fb79ba8a3e3c6a6547bed8002cf4cbf4384eab3
 SHA512 (halfempty-0.40.tar.gz) = 8e2bf9d0f7cece819031c5923f7bed0d07b1dbd23d5a275220dc976401d10c6fcfefe64afe73c3bf4582d749e485eb8ccf4626c724f6f17f09c1ea2d39979643
 Size (halfempty-0.40.tar.gz) = 1099409 bytes
+SHA1 (patch-Makefile) = eb624d1a1efd679f2c181107b641e4627006b47a
