@@ -1,0 +1,7 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/josharian/intern.a
+gopkg/src/github.com/josharian/intern/README.md
+gopkg/src/github.com/josharian/intern/go.mod
+gopkg/src/github.com/josharian/intern/intern.go
+gopkg/src/github.com/josharian/intern/intern_test.go
+gopkg/src/github.com/josharian/intern/license.md

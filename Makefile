@@ -1196,6 +1196,7 @@ SUBDIR+=	go-opentracing
 SUBDIR+=	go-humanize
 SUBDIR+=	go-jira
 SUBDIR+=	go-junit-report
+SUBDIR+=	go-intern
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-log
