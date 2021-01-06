@@ -1170,6 +1170,7 @@ SUBDIR+=	gnutls-guile
 SUBDIR+=	go-aurora
 SUBDIR+=	go-amqp
 SUBDIR+=	go-ansi
+SUBDIR+=	go-audio
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bindata
 SUBDIR+=	go-bit

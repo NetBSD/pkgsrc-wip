@@ -1,0 +1,15 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/go-audio/audio.a
+gopkg/src/github.com/go-audio/audio/LICENSE
+gopkg/src/github.com/go-audio/audio/README.md
+gopkg/src/github.com/go-audio/audio/audio.go
+gopkg/src/github.com/go-audio/audio/conv.go
+gopkg/src/github.com/go-audio/audio/conv_test.go
+gopkg/src/github.com/go-audio/audio/doc.go
+gopkg/src/github.com/go-audio/audio/float_buffer.go
+gopkg/src/github.com/go-audio/audio/float_buffer_test.go
+gopkg/src/github.com/go-audio/audio/formats.go
+gopkg/src/github.com/go-audio/audio/go.mod
+gopkg/src/github.com/go-audio/audio/int_buffer.go
+gopkg/src/github.com/go-audio/audio/int_buffer_test.go
+gopkg/src/github.com/go-audio/audio/pcm_buffer.go
