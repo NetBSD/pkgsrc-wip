@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/06 17:26:32 drochner Exp $
+@comment $NetBSD$
 bin/SciTE
 share/applications/SciTE.desktop
 share/pixmaps/Sci48M.png
@@ -18,6 +18,7 @@ share/scite/SciTEFAQ.html
 share/scite/SciTEGlobal.properties
 share/scite/SciTEIco.png
 share/scite/SciTEImage.html
+share/scite/SciTEIndicators.png
 share/scite/SciTELexer.html
 share/scite/SciTELua.html
 share/scite/SciTERegEx.html
@@ -35,6 +36,7 @@ share/scite/baan.properties
 share/scite/blitzbasic.properties
 share/scite/bullant.properties
 share/scite/caml.properties
+share/scite/cil.properties
 share/scite/cmake.properties
 share/scite/cobol.properties
 share/scite/coffeescript.properties
@@ -43,6 +45,7 @@ share/scite/cpp.properties
 share/scite/csound.properties
 share/scite/css.properties
 share/scite/d.properties
+share/scite/dataflex.properties
 share/scite/ecl.properties
 share/scite/eiffel.properties
 share/scite/erlang.properties
@@ -63,10 +66,13 @@ share/scite/lisp.properties
 share/scite/lot.properties
 share/scite/lout.properties
 share/scite/lua.properties
+share/scite/markdown.properties
 share/scite/matlab.properties
+share/scite/maxima.properties
 share/scite/metapost.properties
 share/scite/mmixal.properties
 share/scite/modula3.properties
+share/scite/nim.properties
 share/scite/nimrod.properties
 share/scite/nncrontab.properties
 share/scite/nsis.properties
@@ -82,6 +88,7 @@ share/scite/ps.properties
 share/scite/purebasic.properties
 share/scite/python.properties
 share/scite/r.properties
+share/scite/raku.properties
 share/scite/rebol.properties
 share/scite/registry.properties
 share/scite/ruby.properties
@@ -100,4 +107,6 @@ share/scite/txt2tags.properties
 share/scite/vb.properties
 share/scite/verilog.properties
 share/scite/vhdl.properties
+share/scite/visualprolog.properties
 share/scite/yaml.properties
+@pkgdir lib/scite
