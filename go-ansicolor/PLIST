@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/ansicolor
+gopkg/pkg/${GO_PLATFORM}/github.com/shiena/ansicolor.a
+gopkg/src/github.com/shiena/ansicolor/LICENSE
+gopkg/src/github.com/shiena/ansicolor/README.md
+gopkg/src/github.com/shiena/ansicolor/ansicolor.go
+gopkg/src/github.com/shiena/ansicolor/ansicolor/main.go
+gopkg/src/github.com/shiena/ansicolor/ansicolor_ansi.go
+gopkg/src/github.com/shiena/ansicolor/ansicolor_test.go
+gopkg/src/github.com/shiena/ansicolor/ansicolor_windows.go
+gopkg/src/github.com/shiena/ansicolor/ansicolor_windows_test.go
+gopkg/src/github.com/shiena/ansicolor/example_test.go
+gopkg/src/github.com/shiena/ansicolor/export_test.go
