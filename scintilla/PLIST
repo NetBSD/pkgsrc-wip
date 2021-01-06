@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2013/04/10 11:20:38 drochner Exp $
+@comment $NetBSD$
 include/scintilla/ILexer.h
+include/scintilla/ILoader.h
 include/scintilla/Platform.h
 include/scintilla/SciLexer.h
 include/scintilla/Sci_Position.h
 include/scintilla/Scintilla.h
 include/scintilla/Scintilla.iface
 include/scintilla/ScintillaWidget.h
+lib/liblexilla.a
+lib/liblexilla.so
 lib/libscintilla.a
-lib/libscintilla_lexers.a
+lib/libscintilla.so
