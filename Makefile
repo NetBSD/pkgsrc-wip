@@ -1214,6 +1214,7 @@ SUBDIR+=	go-transcoder
 SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
 SUBDIR+=	go-uilive
+SUBDIR+=	go-uuid
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict

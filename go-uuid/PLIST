@@ -1,0 +1,24 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/google/uuid.a
+gopkg/src/github.com/google/uuid/CONTRIBUTING.md
+gopkg/src/github.com/google/uuid/CONTRIBUTORS
+gopkg/src/github.com/google/uuid/LICENSE
+gopkg/src/github.com/google/uuid/README.md
+gopkg/src/github.com/google/uuid/dce.go
+gopkg/src/github.com/google/uuid/doc.go
+gopkg/src/github.com/google/uuid/go.mod
+gopkg/src/github.com/google/uuid/hash.go
+gopkg/src/github.com/google/uuid/json_test.go
+gopkg/src/github.com/google/uuid/marshal.go
+gopkg/src/github.com/google/uuid/node.go
+gopkg/src/github.com/google/uuid/node_js.go
+gopkg/src/github.com/google/uuid/node_net.go
+gopkg/src/github.com/google/uuid/seq_test.go
+gopkg/src/github.com/google/uuid/sql.go
+gopkg/src/github.com/google/uuid/sql_test.go
+gopkg/src/github.com/google/uuid/time.go
+gopkg/src/github.com/google/uuid/util.go
+gopkg/src/github.com/google/uuid/uuid.go
+gopkg/src/github.com/google/uuid/uuid_test.go
+gopkg/src/github.com/google/uuid/version1.go
+gopkg/src/github.com/google/uuid/version4.go
