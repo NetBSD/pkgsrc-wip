@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (vis-0.5.tar.gz) = d2fa0788d4f70d5d69560e730f7c753d13729c52
-RMD160 (vis-0.5.tar.gz) = 5ff5a1636fd884c49ed931905878181a8182bdea
-SHA512 (vis-0.5.tar.gz) = e6ee7228c13d26342a4fb7884412c018118199a809cf18985eaa48232081fad0d7110364e55937e71e139bbe2cd24c2964d801e64f078d7ba7f2a999eeef72cc
-Size (vis-0.5.tar.gz) = 390440 bytes
-SHA1 (patch-configure) = 856635866c5b97f93dc7dc74e2d71d365de4af05
+SHA1 (vis-0.7.tar.gz) = c84a58f990378ddcee3f2c5ac0f3ed165c1bb405
+RMD160 (vis-0.7.tar.gz) = 8ebe72eed748feddabda6a1c0e9b7f3af0d370fd
+SHA512 (vis-0.7.tar.gz) = ccc6a054fea6917e7751882468a74c30c712f7ec400a913c95c0084691f706e2bee54efb86b75be8b121c9a209c7e587e72e5474c55271d9943e91fc8aaf9bac
+Size (vis-0.7.tar.gz) = 403918 bytes

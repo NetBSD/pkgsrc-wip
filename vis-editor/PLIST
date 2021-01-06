@@ -53,16 +53,21 @@ share/vis-editor/lexers/dot.lua
 share/vis-editor/lexers/dsv.lua
 share/vis-editor/lexers/eiffel.lua
 share/vis-editor/lexers/elixir.lua
+share/vis-editor/lexers/elm.lua
 share/vis-editor/lexers/erlang.lua
+share/vis-editor/lexers/fantom.lua
 share/vis-editor/lexers/faust.lua
+share/vis-editor/lexers/fennel.lua
 share/vis-editor/lexers/fish.lua
 share/vis-editor/lexers/forth.lua
 share/vis-editor/lexers/fortran.lua
 share/vis-editor/lexers/fsharp.lua
 share/vis-editor/lexers/fstab.lua
 share/vis-editor/lexers/gap.lua
+share/vis-editor/lexers/gemini.lua
 share/vis-editor/lexers/gettext.lua
 share/vis-editor/lexers/gherkin.lua
+share/vis-editor/lexers/git-rebase.lua
 share/vis-editor/lexers/glsl.lua
 share/vis-editor/lexers/gnuplot.lua
 share/vis-editor/lexers/go.lua
@@ -79,6 +84,7 @@ share/vis-editor/lexers/java.lua
 share/vis-editor/lexers/javascript.lua
 share/vis-editor/lexers/json.lua
 share/vis-editor/lexers/jsp.lua
+share/vis-editor/lexers/julia.lua
 share/vis-editor/lexers/latex.lua
 share/vis-editor/lexers/ledger.lua
 share/vis-editor/lexers/less.lua
@@ -92,6 +98,7 @@ share/vis-editor/lexers/makefile.lua
 share/vis-editor/lexers/man.lua
 share/vis-editor/lexers/markdown.lua
 share/vis-editor/lexers/matlab.lua
+share/vis-editor/lexers/meson.lua
 share/vis-editor/lexers/moonscript.lua
 share/vis-editor/lexers/myrddin.lua
 share/vis-editor/lexers/nemerle.lua
@@ -121,6 +128,7 @@ share/vis-editor/lexers/rebol.lua
 share/vis-editor/lexers/rest.lua
 share/vis-editor/lexers/rexx.lua
 share/vis-editor/lexers/rhtml.lua
+share/vis-editor/lexers/routeros.lua
 share/vis-editor/lexers/rstats.lua
 share/vis-editor/lexers/ruby.lua
 share/vis-editor/lexers/rust.lua
@@ -151,6 +159,7 @@ share/vis-editor/lexers/xml.lua
 share/vis-editor/lexers/xs.lua
 share/vis-editor/lexers/xtend.lua
 share/vis-editor/lexers/yaml.lua
+share/vis-editor/lexers/zig.lua
 share/vis-editor/plugins/complete-filename.lua
 share/vis-editor/plugins/complete-word.lua
 share/vis-editor/plugins/digraph.lua

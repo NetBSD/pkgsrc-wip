@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		vis-0.5
+DISTNAME=		vis-0.7
 PKGNAME=		${DISTNAME:S/vis/vis-editor/}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
@@ -17,10 +17,8 @@ DISTBASE=		${DISTNAME:C/(.*)-${PKGVERSION}/\1/}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-LUA_VERSIONS_ACCEPTED=	52
+LUA_VERSIONS_ACCEPTED=	52 53
 
-USE_TOOLS+=		gmake
-USE_TOOLS+=		gsed
 USE_TOOLS+=		pkg-config
 
 HAS_CONFIGURE=		YES
@@ -28,17 +26,16 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${PREFIX}/share
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
-CFLAGS.NetBSD+=		-D_NETBSD_SOURCE	# XXX: needed for memrchr(3)
-
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		vis-lua.c man/vis.1 Makefile
-SUBST_SED.fix-paths=		-e "s,/usr/local,${PREFIX},g"
-SUBST_SED.fix-paths+=		-e "s,/share/${DISTBASE},/share/${PKGBASE},g"
-SUBST_SED.fix-paths+=		-e "s,$${SHAREPREFIX}/${DISTBASE},$${SHAREPREFIX}/${PKGBASE},g"
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-paths+=		-e 's,/share/${DISTBASE},/share/${PKGBASE},g'
+SUBST_SED.fix-paths+=		-e 's,$${SHAREPREFIX}/${DISTBASE},$${SHAREPREFIX}/${PKGBASE},g'
+SUBST_SED.fix-paths+=		-e 's,$${DOCPREFIX}/${DISTBASE},$${DOCPREFIX}/${PKGBASE},g'
 
 SUBST_CLASSES+=			binary-names
 SUBST_STAGE.binary-names=	pre-build
