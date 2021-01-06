@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-mp3
+
+.if !defined(GO_MP3_BUILDLINK3_MK)
+GO_MP3_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-mp3=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-mp3?=		build
+
+BUILDLINK_API_DEPENDS.go-mp3+=	go-mp3>=0.3.1
+BUILDLINK_PKGSRCDIR.go-mp3?=	../../wip/go-mp3
+.endif	# GO_MP3_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-mp3
