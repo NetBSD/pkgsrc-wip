@@ -1181,6 +1181,7 @@ SUBDIR+=	go-collectd
 SUBDIR+=	go-color
 SUBDIR+=	go-cyclo
 SUBDIR+=	go-dotenv
+SUBDIR+=	go-flac
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
