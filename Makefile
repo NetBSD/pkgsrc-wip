@@ -1172,6 +1172,7 @@ SUBDIR+=	go-amqp
 SUBDIR+=	go-ansi
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bindata
+SUBDIR+=	go-bit
 SUBDIR+=	go-bpool
 SUBDIR+=	go-cascadia
 SUBDIR+=	go-copier
