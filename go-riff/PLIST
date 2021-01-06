@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/riffinfo
+gopkg/pkg/${GO_PLATFORM}/github.com/go-audio/riff.a
+gopkg/src/github.com/go-audio/riff/LICENSE
+gopkg/src/github.com/go-audio/riff/README.md
+gopkg/src/github.com/go-audio/riff/chunk.go
+gopkg/src/github.com/go-audio/riff/chunk_test.go
+gopkg/src/github.com/go-audio/riff/doc.go
+gopkg/src/github.com/go-audio/riff/fixtures/junkKick.wav
+gopkg/src/github.com/go-audio/riff/fixtures/sample.avi
+gopkg/src/github.com/go-audio/riff/fixtures/sample.rmi
+gopkg/src/github.com/go-audio/riff/fixtures/sample.wav
+gopkg/src/github.com/go-audio/riff/go.mod
+gopkg/src/github.com/go-audio/riff/parser.go
+gopkg/src/github.com/go-audio/riff/parser_test.go
+gopkg/src/github.com/go-audio/riff/riff.go
+gopkg/src/github.com/go-audio/riff/riff_test.go
+gopkg/src/github.com/go-audio/riff/riffinfo/main.go

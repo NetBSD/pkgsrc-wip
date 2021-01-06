@@ -1,0 +1,4 @@
+The RIFF container format is used to store
+chunks of data in media files, especially
+in wav files hence this package inside under
+the go-audio organization
