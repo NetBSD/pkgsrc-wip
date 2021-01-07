@@ -14,9 +14,9 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
-#.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
-#.endif
+.endif
 
 .include "../../mk/bsd.options.mk"
 
