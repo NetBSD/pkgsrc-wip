@@ -1200,6 +1200,7 @@ SUBDIR+=	go-intern
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-log
+SUBDIR+=	go-lzw
 SUBDIR+=	go-madon
 SUBDIR+=	go-mp3
 SUBDIR+=	go-notify
