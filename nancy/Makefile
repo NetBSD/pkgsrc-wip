@@ -16,14 +16,13 @@ LICENSE=	apache-2.0
 WRKSRC=		${WRKDIR}/nancy-1.0.5
 USE_LANGUAGES=	# none
 
-BUILD_TARGET=	build
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build -o nancy -v
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/nancy ${DESTDIR}${PREFIX}/bin/
 
 .include "go-modules.mk"
 
-#.include "../../devel/go-fsnotify/buildlink3.mk"
-#.include "../../devel/go-protobuf/buildlink3.mk"
-#.include "../../security/go-crypto/buildlink3.mk"
-#.include "../../devel/go-cmp/buildlink3.mk"
-#.include "../../devel/go-glog/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

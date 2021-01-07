@@ -1,4 +1,2 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/home/maya/pkg/bin/bmake package"
-@comment TODO: 2. run "/home/maya/pkg/bin/bmake print-PLIST"
+bin/nancy
