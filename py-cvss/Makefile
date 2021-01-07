@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cvss-2.0
+DISTNAME=	cvss-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skontar/}
