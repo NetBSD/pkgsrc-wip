@@ -1,0 +1,2 @@
+An improved version of x/image/tiff with full read/write
+support for CCITT, LZW compression and the CMYK color model
