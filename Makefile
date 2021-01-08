@@ -1208,6 +1208,7 @@ SUBDIR+=	go-notify
 SUBDIR+=	go-param
 SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper
+SUBDIR+=	go-pcidb
 SUBDIR+=	go-pgzip
 SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go

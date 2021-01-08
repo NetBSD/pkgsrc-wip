@@ -1,0 +1,16 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/jaypipes/pcidb.a
+gopkg/src/github.com/jaypipes/pcidb/COPYING
+gopkg/src/github.com/jaypipes/pcidb/Gopkg.lock
+gopkg/src/github.com/jaypipes/pcidb/Gopkg.toml
+gopkg/src/github.com/jaypipes/pcidb/LICENSE
+gopkg/src/github.com/jaypipes/pcidb/Makefile
+gopkg/src/github.com/jaypipes/pcidb/README.md
+gopkg/src/github.com/jaypipes/pcidb/context.go
+gopkg/src/github.com/jaypipes/pcidb/discover.go
+gopkg/src/github.com/jaypipes/pcidb/go.mod
+gopkg/src/github.com/jaypipes/pcidb/go.sum
+gopkg/src/github.com/jaypipes/pcidb/internal_test.go
+gopkg/src/github.com/jaypipes/pcidb/main.go
+gopkg/src/github.com/jaypipes/pcidb/parse.go
+gopkg/src/github.com/jaypipes/pcidb/parse_test.go
