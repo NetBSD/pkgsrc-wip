@@ -1203,6 +1203,7 @@ SUBDIR+=	go-kr-text
 SUBDIR+=	go-log
 SUBDIR+=	go-lzw
 SUBDIR+=	go-madon
+SUBDIR+=	go-makezero
 SUBDIR+=	go-mp3
 SUBDIR+=	go-notify
 SUBDIR+=	go-param

@@ -1,0 +1,14 @@
+@comment $NetBSD$
+bin/makezero
+gopkg/pkg/${GO_PLATFORM}/github.com/ashanbrown/makezero/examples.a
+gopkg/pkg/${GO_PLATFORM}/github.com/ashanbrown/makezero/makezero.a
+gopkg/src/github.com/ashanbrown/makezero/LICENSE
+gopkg/src/github.com/ashanbrown/makezero/Makefile
+gopkg/src/github.com/ashanbrown/makezero/README.md
+gopkg/src/github.com/ashanbrown/makezero/examples/example.go
+gopkg/src/github.com/ashanbrown/makezero/examples/expected_results.txt
+gopkg/src/github.com/ashanbrown/makezero/go.mod
+gopkg/src/github.com/ashanbrown/makezero/go.sum
+gopkg/src/github.com/ashanbrown/makezero/main.go
+gopkg/src/github.com/ashanbrown/makezero/makezero/makezero.go
+gopkg/src/github.com/ashanbrown/makezero/makezero/makezero_test.go
