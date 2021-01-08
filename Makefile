@@ -1176,6 +1176,7 @@ SUBDIR+=	go-backoff
 SUBDIR+=	go-bindata
 SUBDIR+=	go-bit
 SUBDIR+=	go-bpool
+SUBDIR+=	go-brotli
 SUBDIR+=	go-cascadia
 SUBDIR+=	go-copier
 SUBDIR+=	go-circbuf
