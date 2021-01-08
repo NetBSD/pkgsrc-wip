@@ -1194,6 +1194,7 @@ SUBDIR+=	go-godot
 SUBDIR+=	go-gomail
 SUBDIR+=	go-gopacket
 SUBDIR+=	go-goquery
+SUBDIR+=	go-goreferrer
 SUBDIR+=	go-ole
 SUBDIR+=	go-opentracing
 SUBDIR+=	go-humanize
