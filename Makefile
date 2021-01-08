@@ -1199,6 +1199,7 @@ SUBDIR+=	go-ole
 SUBDIR+=	go-opentracing
 SUBDIR+=	go-humanize
 SUBDIR+=	go-jira
+SUBDIR+=	go-jsonparser
 SUBDIR+=	go-junit-report
 SUBDIR+=	go-intern
 SUBDIR+=	go-kong
