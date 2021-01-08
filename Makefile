@@ -1180,6 +1180,7 @@ SUBDIR+=	go-brotli
 SUBDIR+=	go-cascadia
 SUBDIR+=	go-copier
 SUBDIR+=	go-circbuf
+SUBDIR+=	go-clir
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
 SUBDIR+=	go-cyclo
