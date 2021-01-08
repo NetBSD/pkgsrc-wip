@@ -1,0 +1,4 @@
+Low-level package that provides an easy way
+to centralize different output targets.
+Supports colors and text decoration to all
+popular terminals

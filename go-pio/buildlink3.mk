@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-pio
+
+.if !defined(GO_PIO_BUILDLINK3_MK)
+GO_PIO_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-pio=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-pio?=		build
+
+BUILDLINK_API_DEPENDS.go-pio+=	go-pio>=0.0.10
+BUILDLINK_PKGSRCDIR.go-pio?=	../../wip/go-pio
+.endif	# GO_PIO_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-pio
