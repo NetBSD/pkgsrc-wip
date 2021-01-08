@@ -1,0 +1,2 @@
+# $NetBSD: DESCR,v 1.1 2020/12/31 14:34:12 jihbed Exp $
+Golang concurrency utilities

@@ -1183,6 +1183,7 @@ SUBDIR+=	go-circbuf
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
 SUBDIR+=	go-cyclo
+SUBDIR+=	go-concurrent
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-easyjson
 SUBDIR+=	go-err113
