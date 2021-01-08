@@ -1,0 +1,23 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/gobwas/pool.a
+gopkg/pkg/${GO_PLATFORM}/github.com/gobwas/pool/internal/pmath.a
+gopkg/pkg/${GO_PLATFORM}/github.com/gobwas/pool/pbufio.a
+gopkg/pkg/${GO_PLATFORM}/github.com/gobwas/pool/pbytes.a
+gopkg/src/github.com/gobwas/pool/LICENSE
+gopkg/src/github.com/gobwas/pool/README.md
+gopkg/src/github.com/gobwas/pool/generic.go
+gopkg/src/github.com/gobwas/pool/generic_test.go
+gopkg/src/github.com/gobwas/pool/internal/pmath/pmath.go
+gopkg/src/github.com/gobwas/pool/internal/pmath/pmath_test.go
+gopkg/src/github.com/gobwas/pool/option.go
+gopkg/src/github.com/gobwas/pool/pbufio/pbufio.go
+gopkg/src/github.com/gobwas/pool/pbufio/pbufio_go110.go
+gopkg/src/github.com/gobwas/pool/pbufio/pbufio_go19.go
+gopkg/src/github.com/gobwas/pool/pbufio/pbufio_test.go
+gopkg/src/github.com/gobwas/pool/pbytes/pbytes.go
+gopkg/src/github.com/gobwas/pool/pbytes/pbytes_test.go
+gopkg/src/github.com/gobwas/pool/pbytes/pool.go
+gopkg/src/github.com/gobwas/pool/pbytes/pool_sanitize.go
+gopkg/src/github.com/gobwas/pool/pbytes/pool_sanitize_test.go
+gopkg/src/github.com/gobwas/pool/pbytes/pool_test.go
+gopkg/src/github.com/gobwas/pool/pool.go
