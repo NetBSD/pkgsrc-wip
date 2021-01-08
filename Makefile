@@ -1222,6 +1222,7 @@ SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go
 SUBDIR+=	go-python
 SUBDIR+=	go-rateio
+SUBDIR+=	go-raymond
 SUBDIR+=	go-rest
 SUBDIR+=	go-resty
 SUBDIR+=	go-riff
