@@ -1,0 +1,11 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/fatih/structs.a
+gopkg/src/github.com/fatih/structs/LICENSE
+gopkg/src/github.com/fatih/structs/README.md
+gopkg/src/github.com/fatih/structs/field.go
+gopkg/src/github.com/fatih/structs/field_test.go
+gopkg/src/github.com/fatih/structs/structs.go
+gopkg/src/github.com/fatih/structs/structs_example_test.go
+gopkg/src/github.com/fatih/structs/structs_test.go
+gopkg/src/github.com/fatih/structs/tags.go
+gopkg/src/github.com/fatih/structs/tags_test.go

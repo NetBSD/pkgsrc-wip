@@ -1220,6 +1220,7 @@ SUBDIR+=	go-rateio
 SUBDIR+=	go-rest
 SUBDIR+=	go-resty
 SUBDIR+=	go-riff
+SUBDIR+=	go-structs
 SUBDIR+=	go-tiff
 SUBDIR+=	go-transcoder
 SUBDIR+=	go-trie
