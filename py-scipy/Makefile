@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	scipy-1.5.4
+DISTNAME=	scipy-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}

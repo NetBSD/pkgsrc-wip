@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (scipy-1.5.4.tar.gz) = ffbc97517d08d8a5b290c7a5dd6cda0c730ed531
-RMD160 (scipy-1.5.4.tar.gz) = c09b9a5e3bd59cae29b45a71bb0a02d38567cd56
-SHA512 (scipy-1.5.4.tar.gz) = d23f68911a8880f87767819750d4d175ba8f9c72fcb9b8080305ee65722c046d4485fde4f0c85cc53c46247dd99813afe675a38b3b0569a683ddc2c2e021b8fc
-Size (scipy-1.5.4.tar.gz) = 25237512 bytes
+SHA1 (scipy-1.6.0.tar.gz) = 39cb8936d92ed00c27e03ab32d655e51d410fc99
+RMD160 (scipy-1.6.0.tar.gz) = 19c0b5a68fd51a2702f7289be9495a6a07e72397
+SHA512 (scipy-1.6.0.tar.gz) = 995ffaf56b713cdd4bdb98d8525b892e9ad84a511878b43213cb71a67f34d87c111da36cf1e0b044c75c0d5af64bfde4ad0f3e9c5e71cae2dbf053251f37064e
+Size (scipy-1.6.0.tar.gz) = 27275413 bytes
