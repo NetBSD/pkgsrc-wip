@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/err113
+gopkg/pkg/${GO_PLATFORM}/github.com/Djarvur/go-err113.a
+gopkg/src/github.com/Djarvur/go-err113/LICENSE
+gopkg/src/github.com/Djarvur/go-err113/README.adoc
+gopkg/src/github.com/Djarvur/go-err113/cmd/err113/main.go
+gopkg/src/github.com/Djarvur/go-err113/comparison.go
+gopkg/src/github.com/Djarvur/go-err113/definition.go
+gopkg/src/github.com/Djarvur/go-err113/err113.go
+gopkg/src/github.com/Djarvur/go-err113/err113_test.go
+gopkg/src/github.com/Djarvur/go-err113/go.mod
+gopkg/src/github.com/Djarvur/go-err113/go.sum
+gopkg/src/github.com/Djarvur/go-err113/testdata/custom.go
+gopkg/src/github.com/Djarvur/go-err113/testdata/defenition.go
+gopkg/src/github.com/Djarvur/go-err113/testdata/definition-custom.go
+gopkg/src/github.com/Djarvur/go-err113/testdata/exceptions.go
+gopkg/src/github.com/Djarvur/go-err113/testdata/simple.go
+gopkg/src/github.com/Djarvur/go-err113/testdata/stdio.go
