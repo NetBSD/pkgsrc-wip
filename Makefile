@@ -1184,6 +1184,7 @@ SUBDIR+=	go-color
 SUBDIR+=	go-cyclo
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-easyjson
+SUBDIR+=	go-errors
 SUBDIR+=	go-flac-eaburns
 SUBDIR+=	go-flags
 SUBDIR+=	go-fsnotify
