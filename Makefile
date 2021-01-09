@@ -1187,6 +1187,7 @@ SUBDIR+=	go-cyclo
 SUBDIR+=	go-concurrent
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-easyjson
+SUBDIR+=	go-ewma
 SUBDIR+=	go-err113
 SUBDIR+=	go-errorx
 SUBDIR+=	go-flac-eaburns

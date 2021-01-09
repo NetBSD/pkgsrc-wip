@@ -1,0 +1,6 @@
+An exponentially weighted moving average is a way
+to continuously compute a type of average for a
+series of numbers, as the numbers arrive. After
+a value in the series is added to the average,
+its weight in the average decreases exponentially
+over time.
