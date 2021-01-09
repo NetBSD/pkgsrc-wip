@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/mattn/go-pointer/
 COMMENT=	Utility for cgo
 LICENSE=	mit
 
-GO_DIST_BASE=   ${GITHUB_PROJECT}-${GITHUB_TAG}
-GO_SRCPATH=     github.com/mattn/${GITHUB_PROJECT}
+GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
+GO_SRCPATH=	github.com/mattn/${GITHUB_PROJECT}
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
