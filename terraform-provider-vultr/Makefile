@@ -22,5 +22,8 @@ GO_SRCPATH=	github.com/vultr/${GITHUB_PROJECT}
 
 GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 
+USE_TOOLS+=	bash
+REPLACE_BASH+=	scripts/*.sh
+
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
