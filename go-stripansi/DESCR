@@ -1,0 +1,5 @@
+This Go package removes ANSI escape codes from strings.
+Ideally, we would prevent these from appearing in any
+text we want to process. However, sometimes this can't
+be helped, and we need to be able to deal with that noise.
+This will use a regexp to remove those unwanted escape codes.
