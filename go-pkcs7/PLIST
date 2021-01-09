@@ -1,0 +1,18 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/mozilla-services/pkcs7.a
+gopkg/src/github.com/mozilla-services/pkcs7/LICENSE
+gopkg/src/github.com/mozilla-services/pkcs7/Makefile
+gopkg/src/github.com/mozilla-services/pkcs7/README.md
+gopkg/src/github.com/mozilla-services/pkcs7/ber.go
+gopkg/src/github.com/mozilla-services/pkcs7/ber_test.go
+gopkg/src/github.com/mozilla-services/pkcs7/decrypt.go
+gopkg/src/github.com/mozilla-services/pkcs7/decrypt_test.go
+gopkg/src/github.com/mozilla-services/pkcs7/encrypt.go
+gopkg/src/github.com/mozilla-services/pkcs7/encrypt_test.go
+gopkg/src/github.com/mozilla-services/pkcs7/go.mod
+gopkg/src/github.com/mozilla-services/pkcs7/pkcs7.go
+gopkg/src/github.com/mozilla-services/pkcs7/pkcs7_test.go
+gopkg/src/github.com/mozilla-services/pkcs7/sign.go
+gopkg/src/github.com/mozilla-services/pkcs7/sign_test.go
+gopkg/src/github.com/mozilla-services/pkcs7/verify.go
+gopkg/src/github.com/mozilla-services/pkcs7/verify_test.go

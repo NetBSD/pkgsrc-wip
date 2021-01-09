@@ -1215,6 +1215,7 @@ SUBDIR+=	go-madon
 SUBDIR+=	go-makezero
 SUBDIR+=	go-mp3
 SUBDIR+=	go-notify
+SUBDIR+=	go-pkcs7
 SUBDIR+=	go-param
 SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper

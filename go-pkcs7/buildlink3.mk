@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-pkcs7
+
+.if !defined(GO_PKCS7_BUILDLINK3_MK)
+GO_PKCS7_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-pkcs7=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-pkcs7?=		build
+
+BUILDLINK_API_DEPENDS.go-pkcs7+=	go-pkcs7>=20200128
+BUILDLINK_PKGSRCDIR.go-pkcs7?=	../../wip/go-pkcs7
+.endif	# GO_PKCS7_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-pkcs7
