@@ -1219,6 +1219,7 @@ SUBDIR+=	go-paths-helper
 SUBDIR+=	go-pcidb
 SUBDIR+=	go-pio
 SUBDIR+=	go-pgzip
+SUBDIR+=	go-pointer
 SUBDIR+=	go-pool
 SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go

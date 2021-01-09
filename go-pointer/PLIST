@@ -1,0 +1,8 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/mattn/go-pointer.a
+gopkg/src/github.com/mattn/go-pointer/LICENSE
+gopkg/src/github.com/mattn/go-pointer/README.md
+gopkg/src/github.com/mattn/go-pointer/_example/callback.h
+gopkg/src/github.com/mattn/go-pointer/_example/main.go
+gopkg/src/github.com/mattn/go-pointer/doc.go
+gopkg/src/github.com/mattn/go-pointer/pointer.go
