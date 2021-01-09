@@ -13,7 +13,7 @@ LICENSE=	mpl-2.0
 
 DEPENDS+=	terraform-[0-9]*:../../net/terraform
 
-CHECK_RELRO_SUPPORTED=	no
+CHECK_RELRO_SKIP=	bin/terraform-provider-vultr
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
