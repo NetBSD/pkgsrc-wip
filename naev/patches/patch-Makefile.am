@@ -2,15 +2,16 @@ $NetBSD$
 
 Fix installation commands.
 
---- Makefile.am.orig	2020-12-17 02:23:41.000000000 +0000
+--- Makefile.am.orig	2021-01-09 04:18:47.000000000 +0000
 +++ Makefile.am
-@@ -106,7 +106,8 @@ $(MKSPR):
- 	$(MAKE) -C utils/mkspr
+@@ -119,8 +119,8 @@ $(MKSPR):
  
  install-data-local:
--	(cd $(top_srcdir)/dat; find . -type f -exec install -Dm 644 "{}" "$(DESTDIR)$(pkgdatadir)/dat/{}" \;)
-+	(cd $(top_srcdir)/dat; find . -type d -exec ${INSTALL_GAME_DIR} "$(DESTDIR)$(pkgdatadir)/dat/{}" \;)
-+	(cd $(top_srcdir)/dat; find . -type f -exec ${INSTALL_GAME_DATA} "{}" "$(DESTDIR)$(pkgdatadir)/dat/{}" \;)
+ 	(cd $(top_srcdir)/dat \
+-	 && find . -type d -exec install -d     "{}" "$(DESTDIR)$(pkgdatadir)/dat/{}" \; \
+-	 && find . -type f -exec install -m 644 "{}" "$(DESTDIR)$(pkgdatadir)/dat/{}" \; )
++	 && find . -type d -exec ${INSTALL_GAME_DIR} "{}" "$(DESTDIR)$(pkgdatadir)/dat/{}" \; \
++	 && find . -type f -exec ${INSTALL_GAME_DATA} "{}" "$(DESTDIR)$(pkgdatadir)/dat/{}" \; )
  
  clean-local:
  	(rm -rf $(top_builddir)/dat/gettext)
