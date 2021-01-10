@@ -9,7 +9,7 @@ BUILDLINK_CONTENTS_FILTER.go-freetype=	${EGREP} gopkg/
 BUILDLINK_DEPMETHOD.go-freetype?=		build
 
 BUILDLINK_API_DEPENDS.go-freetype+=	go-freetype>=20170609
-BUILDLINK_PKGSRCDIR.go-freetype?=	../../category/go-freetype
+BUILDLINK_PKGSRCDIR.go-freetype?=	../../wip/go-freetype
 
 
 .include "../../graphics/go-image/buildlink3.mk"
