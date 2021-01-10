@@ -1233,6 +1233,7 @@ SUBDIR+=	go-raymond
 SUBDIR+=	go-rest
 SUBDIR+=	go-resty
 SUBDIR+=	go-riff
+SUBDIR+=	go-stack
 SUBDIR+=	go-stripansi
 SUBDIR+=	go-structs
 SUBDIR+=	go-tiff

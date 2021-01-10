@@ -1,0 +1,6 @@
+Package stack implements utilities to capture,
+manipulate, and format call stacks. It provides
+a simpler API than package runtime. The implementation
+takes care of the minutia and special cases of
+interpreting the program counter (pc) values
+returned by runtime.Callers.
