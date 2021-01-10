@@ -1,6 +1,6 @@
 $NetBSD$
 
---- setup.py.orig	2020-12-31 08:39:27.000000000 +0000
+--- setup.py.orig	2021-01-07 22:20:03.000000000 +0000
 +++ setup.py
 @@ -1,6 +1,7 @@
  #!/usr/bin/env python

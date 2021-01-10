@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (checkov-1.0.684.tar.gz) = e6857d857e78d6714632bb2c8ce89516fa20f9f1
-RMD160 (checkov-1.0.684.tar.gz) = c6fe4858851139b59ecabe0990f7ec6d983c3781
-SHA512 (checkov-1.0.684.tar.gz) = 1a6f20dd351c8b470ae1eb5a56350b42881a3174da687b7c8ff885a2da53bccfbae4eb7051f4b062a3dade71b957477ec501b4855a57d40c118230057bf98acb
-Size (checkov-1.0.684.tar.gz) = 154023 bytes
-SHA1 (patch-setup.py) = 09f95cfd23f40dcfd4c04805be371eb13a7125ca
+SHA1 (checkov-1.0.693.tar.gz) = 443405c667c2c95c5d2ab994bb647fbdf4c44023
+RMD160 (checkov-1.0.693.tar.gz) = 05ac00788ca94eb0f1b14f0c48a7662ee42d695c
+SHA512 (checkov-1.0.693.tar.gz) = 78bb08e36912a320e275a8be5718b0e295108497267a1a34e11af9fd9ad6e70d943f847ea684c69967f583c0c8a1879425ea50c2f732d915c47f89e41ee91283
+Size (checkov-1.0.693.tar.gz) = 155179 bytes
+SHA1 (patch-setup.py) = c72c8a8c498e1a90c0969ba0e403c7030eb5ee26
