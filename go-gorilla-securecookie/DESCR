@@ -1,0 +1,5 @@
+securecookie encodes and decodes authenticated
+and optionally encrypted cookie values. Secure
+cookies can't be forged, because their values
+are validated using HMAC. When encrypted, the
+content is also inaccessible to malicious eyes
