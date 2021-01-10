@@ -1192,6 +1192,7 @@ SUBDIR+=	go-err113
 SUBDIR+=	go-errorx
 SUBDIR+=	go-flac-eaburns
 SUBDIR+=	go-flags
+SUBDIR+=	go-freetype
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
 SUBDIR+=	go-godot
