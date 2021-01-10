@@ -1,9 +1,9 @@
 @comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/go-gl/stack.a
-gopkg/src/github.com/go-gl/stack/LICENSE.md
-gopkg/src/github.com/go-gl/stack/README.md
-gopkg/src/github.com/go-gl/stack/format_test.go
-gopkg/src/github.com/go-gl/stack/go.mod
-gopkg/src/github.com/go-gl/stack/stack-go19_test.go
-gopkg/src/github.com/go-gl/stack/stack.go
-gopkg/src/github.com/go-gl/stack/stack_test.go
+gopkg/pkg/${GO_PLATFORM}/github.com/stack/stack.a
+gopkg/src/github.com/stack/stack/LICENSE.md
+gopkg/src/github.com/stack/stack/README.md
+gopkg/src/github.com/stack/stack/format_test.go
+gopkg/src/github.com/stack/stack/go.mod
+gopkg/src/github.com/stack/stack/stack-go19_test.go
+gopkg/src/github.com/stack/stack/stack.go
+gopkg/src/github.com/stack/stack/stack_test.go
