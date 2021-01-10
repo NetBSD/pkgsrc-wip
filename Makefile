@@ -1202,6 +1202,7 @@ SUBDIR+=	go-goquery
 SUBDIR+=	go-goreferrer
 SUBDIR+=	go-gorilla-securecookie
 SUBDIR+=	go-gtk2
+SUBDIR+=	go-httpsnoop
 SUBDIR+=	go-ole
 SUBDIR+=	go-opentracing
 SUBDIR+=	go-humanize
