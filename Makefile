@@ -1200,6 +1200,7 @@ SUBDIR+=	go-gomail
 SUBDIR+=	go-gopacket
 SUBDIR+=	go-goquery
 SUBDIR+=	go-goreferrer
+SUBDIR+=	go-gorilla-css
 SUBDIR+=	go-gorilla-securecookie
 SUBDIR+=	go-gtk2
 SUBDIR+=	go-httpsnoop
