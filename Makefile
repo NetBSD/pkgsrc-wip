@@ -1219,6 +1219,7 @@ SUBDIR+=	go-notify
 SUBDIR+=	go-pkcs7
 SUBDIR+=	go-param
 SUBDIR+=	go-pass
+SUBDIR+=	go-pathtree
 SUBDIR+=	go-paths-helper
 SUBDIR+=	go-pcidb
 SUBDIR+=	go-pio

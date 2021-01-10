@@ -1,0 +1,5 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/robfig/pathtree.a
+gopkg/src/github.com/robfig/pathtree/LICENSE
+gopkg/src/github.com/robfig/pathtree/tree.go
+gopkg/src/github.com/robfig/pathtree/tree_test.go

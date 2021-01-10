@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	pathtree
+
+.if !defined(PATHTREE_BUILDLINK3_MK)
+PATHTREE_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.pathtree=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.pathtree?=		build
+
+BUILDLINK_API_DEPENDS.pathtree+=	pathtree>=20140121
+BUILDLINK_PKGSRCDIR.pathtree?=	../../wip/go-pathtree
+.endif	# PATHTREE_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-pathtree
