@@ -1,4 +1,3 @@
 @comment $NetBSD$
 bin/aemenu
 bin/progman
-man/man1/progman.1

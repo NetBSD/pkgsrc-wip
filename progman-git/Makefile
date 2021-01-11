@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	progman-0.0
+DISTNAME=	progman-0.0.20200810
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
-GITHUB_TAG=	195c1da675cd861b0f6d3253182c8da03d3dca6e
+GITHUB_TAG=	1d001b5ec8418ee5e625828f8cbd6a8e17113a5a
 
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://github.com/jcs/progman
