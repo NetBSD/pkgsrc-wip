@@ -6,12 +6,15 @@
 
 Build failures:
  - NetBSD 9
+     https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00159.html
  - OpenBSD (transient)
  - OpenIndiana Hipster (transient)
- - macOS
+ - 'unknown instruction' on macOS:
+     https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00160.html
 
 Runtime issues:
  - Ubuntu 16.04: multi-minute hangs printing welcome message
+    - https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00158.html
     - try CONFIGURE_FLAGS+= --without-hserver
 
 To test:
