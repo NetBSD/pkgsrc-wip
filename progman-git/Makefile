@@ -8,7 +8,7 @@ GITHUB_TAG=	1d001b5ec8418ee5e625828f8cbd6a8e17113a5a
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://github.com/jcs/progman
 COMMENT=	Window manager resembling Windows 3's Program Manager
-LICENSE=	mit 
+LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
