@@ -2,8 +2,6 @@
 bin/md2html
 include/md4c-html.h
 include/md4c.h
-lib/cmake/md4c-html/md4cHtmlConfig-release.cmake
-lib/cmake/md4c-html/md4cHtmlConfig.cmake
 lib/cmake/md4c/md4cConfig-release.cmake
 lib/cmake/md4c/md4cConfig.cmake
 lib/libmd4c-html.so

@@ -4,3 +4,4 @@ SHA1 (md4c/md4c-release-0.4.7.tar.gz) = 9b85772b0a4fbed49d718086d52092e6fe84a58f
 RMD160 (md4c/md4c-release-0.4.7.tar.gz) = 180ee3c94c60a33cea56d81b67b1e1537d9f0a0b
 SHA512 (md4c/md4c-release-0.4.7.tar.gz) = 90e6f4c91ff5a0faafcea3e50f6a3f3ed6ba9a42cb779b373e82b8a6a09ed4b19ed7221036a4a32171aa5ef19ee6824d3830fb9ab613bd59174b7db51bd1099b
 Size (md4c/md4c-release-0.4.7.tar.gz) = 228223 bytes
+SHA1 (patch-src_CMakeLists.txt) = 347a9ea8c71c7bc8e77a37073181a7ec5bb5406d

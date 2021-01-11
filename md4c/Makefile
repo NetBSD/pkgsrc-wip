@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/mity/md4c/
 COMMENT=	Markdown for C library and parser
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/md4c-release-0.4.7
+WRKSRC=		${WRKDIR}/md4c-release-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
