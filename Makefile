@@ -1250,6 +1250,7 @@ SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
 SUBDIR+=	go-uilive
 SUBDIR+=	go-uuid
+SUBDIR+=	go-uuid-myesui
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict

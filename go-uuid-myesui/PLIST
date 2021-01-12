@@ -1,0 +1,27 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/myesui/uuid.a
+gopkg/pkg/${GO_PLATFORM}/github.com/myesui/uuid/savers.a
+gopkg/src/github.com/myesui/uuid/LICENSE
+gopkg/src/github.com/myesui/uuid/README.md
+gopkg/src/github.com/myesui/uuid/appveyor.yml
+gopkg/src/github.com/myesui/uuid/benchmarks_test.go
+gopkg/src/github.com/myesui/uuid/examples_test.go
+gopkg/src/github.com/myesui/uuid/format.go
+gopkg/src/github.com/myesui/uuid/format_test.go
+gopkg/src/github.com/myesui/uuid/generator.go
+gopkg/src/github.com/myesui/uuid/generator_test.go
+gopkg/src/github.com/myesui/uuid/integrations_test.go
+gopkg/src/github.com/myesui/uuid/resolution_test.go
+gopkg/src/github.com/myesui/uuid/saver.go
+gopkg/src/github.com/myesui/uuid/saver_test.go
+gopkg/src/github.com/myesui/uuid/savers/filesystem.go
+gopkg/src/github.com/myesui/uuid/savers/filesystem_test.go
+gopkg/src/github.com/myesui/uuid/savers/savers.go
+gopkg/src/github.com/myesui/uuid/timestamp.go
+gopkg/src/github.com/myesui/uuid/timestamp_test.go
+gopkg/src/github.com/myesui/uuid/types.go
+gopkg/src/github.com/myesui/uuid/types_test.go
+gopkg/src/github.com/myesui/uuid/uuid.go
+gopkg/src/github.com/myesui/uuid/uuid_test.go
+gopkg/src/github.com/myesui/uuid/version.go
+gopkg/src/github.com/myesui/uuid/version_test.go
