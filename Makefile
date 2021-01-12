@@ -4465,6 +4465,7 @@ SUBDIR+=	py-test-remotedata
 SUBDIR+=	py-test-repeat
 SUBDIR+=	py-testing-common-database
 SUBDIR+=	py-testfixtures
+SUBDIR+=	py-tex2pix
 SUBDIR+=	py-texext
 SUBDIR+=	py-texml
 SUBDIR+=	py-textblob
