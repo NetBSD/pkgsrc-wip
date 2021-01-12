@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/basic
+bin/custom
+bin/disabled
+bin/failingLineFar
+bin/stackTrace
+gopkg/pkg/${GO_PLATFORM}/github.com/snwfdhmp/errlog.a
+gopkg/src/github.com/snwfdhmp/errlog/LICENSE
+gopkg/src/github.com/snwfdhmp/errlog/README.md
+gopkg/src/github.com/snwfdhmp/errlog/defaults.go
+gopkg/src/github.com/snwfdhmp/errlog/errlog.go
+gopkg/src/github.com/snwfdhmp/errlog/examples/basic/basic.go
+gopkg/src/github.com/snwfdhmp/errlog/examples/custom/custom.go
+gopkg/src/github.com/snwfdhmp/errlog/examples/disabled/disabled.go
+gopkg/src/github.com/snwfdhmp/errlog/examples/failingLineFar/failingLineFar.go
+gopkg/src/github.com/snwfdhmp/errlog/examples/stackTrace/stackTrace.go
+gopkg/src/github.com/snwfdhmp/errlog/logger.go
+gopkg/src/github.com/snwfdhmp/errlog/regexp.go
+gopkg/src/github.com/snwfdhmp/errlog/utils.go

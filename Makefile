@@ -1191,6 +1191,7 @@ SUBDIR+=	go-concurrent
 SUBDIR+=	go-douceur
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-easyjson
+SUBDIR+=	go-errlog
 SUBDIR+=	go-eventsource
 SUBDIR+=	go-ewma
 SUBDIR+=	go-err113
