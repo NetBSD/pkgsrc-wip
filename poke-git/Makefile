@@ -1,10 +1,10 @@
 # $NetBSD$
 
-POKE_HASH=	750c179b57ee8ea522f599fa5ea1efb31ba0b31e
-GNULIB_HASH=	160d5e7d9a64a29a52d4821fd0ef2136d7e2102a
-JITTER_HASH=	37b32d525e91c855b9836c62394310f8af73d50e
+POKE_HASH=	011d904fe39ef526dc9b0fe1553b643b4bdbcc5c
+GNULIB_HASH=	5aca1898c9f62370142920be91992d4efe72bb7b
+JITTER_HASH=	a1fb50a93964676501c3530e4b73a22906d53a96
 
-PKGNAME=	poke-0.0.20201118
+PKGNAME=	poke-0.0.20210103
 DISTNAME=	poke-${POKE_HASH}
 CATEGORIES=	textproc devel
 MASTER_SITES=	https://git.savannah.gnu.org/cgit/poke.git/snapshot/
@@ -36,6 +36,7 @@ TOOLS_PLATFORM.makeinfo=
 
 BOOTSTRAP_FLAGS+=	--skip-po --no-git
 BOOTSTRAP_FLAGS+=	--gnulib-srcdir=${WRKSRC}/gnulib
+BOOTSTRAP_FLAGS+=	--jitter-srcdir=${WRKSRC}/jitter
 
 CONFIGURE_FLAGS+=	--enable-mi
 
