@@ -1,0 +1,3 @@
+Eventsource implements a Go implementation of client
+and server to allow streaming data one-way over a HTTP
+connection using the Server-Sent Events API

@@ -1,0 +1,18 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/donovanhide/eventsource.a
+gopkg/src/github.com/donovanhide/eventsource/README.md
+gopkg/src/github.com/donovanhide/eventsource/codec_test.go
+gopkg/src/github.com/donovanhide/eventsource/decoder.go
+gopkg/src/github.com/donovanhide/eventsource/decoder_test.go
+gopkg/src/github.com/donovanhide/eventsource/encoder.go
+gopkg/src/github.com/donovanhide/eventsource/example_error_handling_stream_test.go
+gopkg/src/github.com/donovanhide/eventsource/example_event_test.go
+gopkg/src/github.com/donovanhide/eventsource/example_repository_test.go
+gopkg/src/github.com/donovanhide/eventsource/interface.go
+gopkg/src/github.com/donovanhide/eventsource/normalise.go
+gopkg/src/github.com/donovanhide/eventsource/normalise_test.go
+gopkg/src/github.com/donovanhide/eventsource/repository.go
+gopkg/src/github.com/donovanhide/eventsource/server.go
+gopkg/src/github.com/donovanhide/eventsource/server_test.go
+gopkg/src/github.com/donovanhide/eventsource/stream.go
+gopkg/src/github.com/donovanhide/eventsource/stream_test.go
