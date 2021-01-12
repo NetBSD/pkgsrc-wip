@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (go-redigo-1.8.3.tar.gz) = f898e7a6ca0af13f7b7f589c2cf8f22cf4fe99e2
+RMD160 (go-redigo-1.8.3.tar.gz) = c02c6bd6605c91d5980b620d1bfef9e6894b37ed
+SHA512 (go-redigo-1.8.3.tar.gz) = 82c840410859aae57c6ca848f91fb45b83686c5a911c7b015e1edb2498b2af244501d31a267f7a212123cde7f3ef56753e64b475d2ceb22bffc96ac2b7f6f867
+Size (go-redigo-1.8.3.tar.gz) = 49485 bytes
