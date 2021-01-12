@@ -1205,6 +1205,7 @@ SUBDIR+=	go-gopacket
 SUBDIR+=	go-goquery
 SUBDIR+=	go-goreferrer
 SUBDIR+=	go-gorilla-css
+SUBDIR+=	go-gorilla-schema
 SUBDIR+=	go-gorilla-securecookie
 SUBDIR+=	go-gtk2
 SUBDIR+=	go-httpsnoop
