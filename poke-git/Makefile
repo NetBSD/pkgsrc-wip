@@ -1,13 +1,14 @@
 # $NetBSD$
 
+POKE_HASH=	750c179b57ee8ea522f599fa5ea1efb31ba0b31e
 GNULIB_HASH=	160d5e7d9a64a29a52d4821fd0ef2136d7e2102a
 JITTER_HASH=	37b32d525e91c855b9836c62394310f8af73d50e
 
-PKGNAME=	poke-git-0.20201118
-DISTNAME=	poke-750c179b57ee8ea522f599fa5ea1efb31ba0b31e
+PKGNAME=	poke-0.0.20201118
+DISTNAME=	poke-${POKE_HASH}
 CATEGORIES=	textproc devel
 MASTER_SITES=	https://git.savannah.gnu.org/cgit/poke.git/snapshot/
-DISTFILES=	${DISTNAME}.tar.gz
+DISTFILES=	poke-${POKE_HASH}.tar.gz
 DISTFILES+=	gnulib-${GNULIB_HASH}.tar.gz
 DISTFILES+=	jitter-${JITTER_HASH}.tar.gz
 SITES.gnulib-${GNULIB_HASH}.tar.gz= \
