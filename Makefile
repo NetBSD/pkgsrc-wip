@@ -1207,6 +1207,7 @@ SUBDIR+=	go-goreferrer
 SUBDIR+=	go-gorilla-css
 SUBDIR+=	go-gorilla-mux
 SUBDIR+=	go-gorilla-schema
+SUBDIR+=	go-gorilla-sessions
 SUBDIR+=	go-gorilla-securecookie
 SUBDIR+=	go-gtk2
 SUBDIR+=	go-httpsnoop

@@ -1,0 +1,19 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/gorilla/sessions.a
+gopkg/src/github.com/gorilla/sessions/AUTHORS
+gopkg/src/github.com/gorilla/sessions/LICENSE
+gopkg/src/github.com/gorilla/sessions/README.md
+gopkg/src/github.com/gorilla/sessions/cookie.go
+gopkg/src/github.com/gorilla/sessions/cookie_go111.go
+gopkg/src/github.com/gorilla/sessions/cookie_go111_test.go
+gopkg/src/github.com/gorilla/sessions/cookie_test.go
+gopkg/src/github.com/gorilla/sessions/doc.go
+gopkg/src/github.com/gorilla/sessions/go.mod
+gopkg/src/github.com/gorilla/sessions/go.sum
+gopkg/src/github.com/gorilla/sessions/lex.go
+gopkg/src/github.com/gorilla/sessions/options.go
+gopkg/src/github.com/gorilla/sessions/options_go111.go
+gopkg/src/github.com/gorilla/sessions/sessions.go
+gopkg/src/github.com/gorilla/sessions/sessions_test.go
+gopkg/src/github.com/gorilla/sessions/store.go
+gopkg/src/github.com/gorilla/sessions/store_test.go
