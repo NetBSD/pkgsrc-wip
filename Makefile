@@ -1638,6 +1638,7 @@ SUBDIR+=	hunspell-dictionaries
 SUBDIR+=	hunspell-uk_UA
 SUBDIR+=	hypatia
 SUBDIR+=	hyperrogue
+SUBDIR+=	hw-probe
 SUBDIR+=	hztool
 SUBDIR+=	i2pd
 SUBDIR+=	i2pd-git
