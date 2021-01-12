@@ -1212,6 +1212,7 @@ SUBDIR+=	go-humanize
 SUBDIR+=	go-jira
 SUBDIR+=	go-jsonparser
 SUBDIR+=	go-junit-report
+SUBDIR+=	go-imgui
 SUBDIR+=	go-intern
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
