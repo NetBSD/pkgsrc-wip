@@ -8,8 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=inkyblackness/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/inkyblackness/imgui-go/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Go wrapper library for Dear ImGui
+LICENSE=	modified-bsd
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/inkyblackness/${GITHUB_PROJECT}
