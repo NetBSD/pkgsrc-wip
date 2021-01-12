@@ -222,6 +222,7 @@ TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet
 .include "../../security/mit-krb5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../wip/md4c/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../fonts/fontconfig/buildlink3.mk"

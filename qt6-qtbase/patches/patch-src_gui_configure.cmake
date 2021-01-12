@@ -3,10 +3,19 @@ $NetBSD$
 * check for X11 libs on all systems that support X11 not just linux
 * make QT_FEATURE_xcb_glx available everywhere so that glx can enabled
   on other platforms than linux
+* Fix use of system libmd4c
 
 --- src/gui/configure.cmake.orig	2020-12-04 10:14:27.000000000 +0000
 +++ src/gui/configure.cmake
-@@ -53,82 +53,82 @@ qt_find_package(Vulkan PROVIDED_TARGETS 
+@@ -41,6 +41,7 @@ qt_find_package(gbm PROVIDED_TARGETS gbm
+ qt_find_package(WrapSystemHarfbuzz 2.6.0 PROVIDED_TARGETS WrapSystemHarfbuzz::WrapSystemHarfbuzz MODULE_NAME gui QMAKE_LIB harfbuzz)
+ qt_find_package(Libinput PROVIDED_TARGETS Libinput::Libinput MODULE_NAME gui QMAKE_LIB libinput)
+ qt_find_package(JPEG PROVIDED_TARGETS JPEG::JPEG MODULE_NAME gui QMAKE_LIB libjpeg)
++qt_find_package(md4c PROVIDED_TARGETS md4c::md4c MODULE_NAME gui QMAKE_LIB libmd4c)
+ qt_find_package(WrapSystemPNG PROVIDED_TARGETS WrapSystemPNG::WrapSystemPNG MODULE_NAME gui QMAKE_LIB libpng)
+ if(QT_FEATURE_system_zlib)
+     qt_add_qmake_lib_dependency(libpng zlib)
+@@ -53,82 +54,82 @@ qt_find_package(Vulkan PROVIDED_TARGETS 
  if((LINUX) OR QT_FIND_ALL_PACKAGES_ALWAYS)
      qt_find_package(Wayland PROVIDED_TARGETS Wayland::Server MODULE_NAME gui QMAKE_LIB wayland_server)
  endif()
@@ -110,7 +119,7 @@ $NetBSD$
      qt_find_package(XRender 0.6 PROVIDED_TARGETS PkgConfig::XRender MODULE_NAME gui QMAKE_LIB xrender)
  endif()
  qt_add_qmake_lib_dependency(xrender xlib)
-@@ -897,7 +897,7 @@ qt_feature("xcb-glx-plugin" PRIVATE
+@@ -897,7 +898,7 @@ qt_feature("xcb-glx-plugin" PRIVATE
      CONDITION QT_FEATURE_xcb_xlib AND QT_FEATURE_opengl AND NOT QT_FEATURE_opengles2
      EMIT_IF QT_FEATURE_xcb
  )
@@ -119,3 +128,12 @@ $NetBSD$
      LABEL "  XCB GLX"
      CONDITION XCB_GLX_FOUND
      EMIT_IF QT_FEATURE_xcb AND QT_FEATURE_xcb_glx_plugin
+@@ -963,7 +964,7 @@ qt_feature("textmarkdownreader" PUBLIC
+ qt_feature("system-textmarkdownreader" PUBLIC
+     SECTION "Kernel"
+     LABEL "  Using system libmd4c"
+-    CONDITION libs.libmd4c OR FIXME
++    CONDITION QT_FEATURE_textmarkdownreader AND TARGET md4c::md4c
+     ENABLE INPUT_libmd4c STREQUAL 'system'
+     DISABLE INPUT_libmd4c STREQUAL 'qt'
+ )
