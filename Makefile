@@ -1230,6 +1230,7 @@ SUBDIR+=	go-madon
 SUBDIR+=	go-makezero
 SUBDIR+=	go-memcache
 SUBDIR+=	go-mp3
+SUBDIR+=	go-mpb
 SUBDIR+=	go-notify
 SUBDIR+=	go-pkcs7
 SUBDIR+=	go-param
