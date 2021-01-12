@@ -1247,6 +1247,7 @@ SUBDIR+=	go-stack
 SUBDIR+=	go-stripansi
 SUBDIR+=	go-structs
 SUBDIR+=	go-tiff
+SUBDIR+=	go-timego
 SUBDIR+=	go-transcoder
 SUBDIR+=	go-trie
 SUBDIR+=	go-upspin
