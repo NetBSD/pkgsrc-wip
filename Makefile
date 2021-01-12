@@ -1183,6 +1183,7 @@ SUBDIR+=	go-cascadia
 SUBDIR+=	go-copier
 SUBDIR+=	go-circbuf
 SUBDIR+=	go-clir
+SUBDIR+=	go-config
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
 SUBDIR+=	go-cyclo
