@@ -5,6 +5,8 @@
  - Still getting 'bison -y' issues
 
 Build failures:
+ - Debian:
+     ./configure[6522]: syntax error: unexpected 'ac_cv_prog_cc_stdc=$ac_cv_prog_cc_c89'
  - NetBSD 9
      https://mail.gnu.org/archive/html/poke-devel/2020-11/msg00159.html
  - OpenBSD (transient)
