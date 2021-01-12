@@ -1221,6 +1221,7 @@ SUBDIR+=	go-log
 SUBDIR+=	go-lzw
 SUBDIR+=	go-madon
 SUBDIR+=	go-makezero
+SUBDIR+=	go-memcache
 SUBDIR+=	go-mp3
 SUBDIR+=	go-notify
 SUBDIR+=	go-pkcs7

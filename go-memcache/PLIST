@@ -1,0 +1,9 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/bradfitz/gomemcache/memcache.a
+gopkg/src/github.com/bradfitz/gomemcache/LICENSE
+gopkg/src/github.com/bradfitz/gomemcache/README.md
+gopkg/src/github.com/bradfitz/gomemcache/go.mod
+gopkg/src/github.com/bradfitz/gomemcache/memcache/memcache.go
+gopkg/src/github.com/bradfitz/gomemcache/memcache/memcache_test.go
+gopkg/src/github.com/bradfitz/gomemcache/memcache/selector.go
+gopkg/src/github.com/bradfitz/gomemcache/memcache/selector_test.go
