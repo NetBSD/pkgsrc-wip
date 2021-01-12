@@ -1,4 +1,0 @@
-Parser is vaguely inspired by CSS Syntax.
-Module Level 3 and corresponding JS parser.
-Inliner only parses CSS defined in HTML.
-document, it DOES NOT fetch external stylesheets
