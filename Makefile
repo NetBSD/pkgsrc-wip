@@ -1266,6 +1266,7 @@ SUBDIR+=	go-uilive
 SUBDIR+=	go-upspin
 SUBDIR+=	go-uuid
 SUBDIR+=	go-uuid-myesui
+SUBDIR+=	go-zeroconf
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict

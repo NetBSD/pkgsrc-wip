@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/proxyservice
+bin/register
+bin/resolv
+gopkg/pkg/${GO_PLATFORM}/github.com/grandcat/zeroconf.a
+gopkg/src/github.com/grandcat/zeroconf/LICENSE
+gopkg/src/github.com/grandcat/zeroconf/README.md
+gopkg/src/github.com/grandcat/zeroconf/client.go
+gopkg/src/github.com/grandcat/zeroconf/connection.go
+gopkg/src/github.com/grandcat/zeroconf/doc.go
+gopkg/src/github.com/grandcat/zeroconf/examples/proxyservice/.gitignore
+gopkg/src/github.com/grandcat/zeroconf/examples/proxyservice/server.go
+gopkg/src/github.com/grandcat/zeroconf/examples/register/.gitignore
+gopkg/src/github.com/grandcat/zeroconf/examples/register/server.go
+gopkg/src/github.com/grandcat/zeroconf/examples/resolv/.gitignore
+gopkg/src/github.com/grandcat/zeroconf/examples/resolv/README.md
+gopkg/src/github.com/grandcat/zeroconf/examples/resolv/client.go
+gopkg/src/github.com/grandcat/zeroconf/go.mod
+gopkg/src/github.com/grandcat/zeroconf/go.sum
+gopkg/src/github.com/grandcat/zeroconf/server.go
+gopkg/src/github.com/grandcat/zeroconf/service.go
+gopkg/src/github.com/grandcat/zeroconf/service_test.go
+gopkg/src/github.com/grandcat/zeroconf/utils.go
