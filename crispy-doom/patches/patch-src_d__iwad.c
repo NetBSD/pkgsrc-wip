@@ -4,7 +4,7 @@ Add pkgsrc ${PREFIX}/share/doom to WAD file search path.
 
 --- src/d_iwad.c.orig	2020-04-14 06:39:44.000000000 +0000
 +++ src/d_iwad.c
-@@ -653,6 +653,9 @@ static void AddXdgDirs(void)
+@@ -677,6 +677,9 @@ static void AddXdgDirs(void)
          env = "/usr/local/share:/usr/share";
      }
  

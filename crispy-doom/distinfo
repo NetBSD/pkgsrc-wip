@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (crispy-doom-5.9.2.tar.gz) = da404d4b360c5410984f7aff5375ae8d322c2397
-RMD160 (crispy-doom-5.9.2.tar.gz) = 55110a69662cbb4d73eca7e5ad055ecc8b2860ba
-SHA512 (crispy-doom-5.9.2.tar.gz) = bcd48a75d80b963e1b00b5acc5fc863c014cfde39f67efec50852667ed80545c78b4ed3f82b28762806f0aa3999ed26018dd6ccb34149c395409cd3c47509273
-Size (crispy-doom-5.9.2.tar.gz) = 2642419 bytes
-SHA1 (patch-src_d__iwad.c) = 96a2ea9bba5a62431f99e3b35b7bd8bba36b34ff
+SHA1 (crispy-doom-5.10.0.tar.gz) = 5e9d4abbd3e7eb0280ed14e6cdbd8fcc0cec01f0
+RMD160 (crispy-doom-5.10.0.tar.gz) = 7f22f9e3b115e15c040f9651074ba1617c2608d6
+SHA512 (crispy-doom-5.10.0.tar.gz) = b289939af35bbe3a933827fe834cbff8a267b6280749b27084abdf25174042bbdcaca313359258d7ab3fecacedd9b0f06b92624f2a7599ffff37a5e0db2436b1
+Size (crispy-doom-5.10.0.tar.gz) = 2640909 bytes
+SHA1 (patch-src_d__iwad.c) = 8cb8da89e1da4869ef9d05ef0182016bf9be63a5
