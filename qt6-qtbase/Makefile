@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	-shared
 CONFIGURE_ARGS+=	-system-doubleconversion
 CONFIGURE_ARGS+=	-system-harfbuzz
 CONFIGURE_ARGS+=	-system-libjpeg
+CONFIGURE_ARGS+=	-system-libmd4c
 CONFIGURE_ARGS+=	-system-libpng
 CONFIGURE_ARGS+=	-system-pcre
 CONFIGURE_ARGS+=	-system-sqlite
