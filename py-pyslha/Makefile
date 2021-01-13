@@ -16,6 +16,6 @@ post-extract:
 	${MV} ${WRKSRC}/slhaplot ${WRKSRC}/slhaplot${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/slha2isawig ${WRKSRC}/slha2isawig${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/isawig2slha ${WRKSRC}/isawig2slha${PYVERSSUFFIX}
-        
+
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
