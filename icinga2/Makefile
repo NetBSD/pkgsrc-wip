@@ -1,10 +1,9 @@
 # $NetBSD: Makefile $
 
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	icinga2-2.12.0
-PKGREVISION=	#empty
+DISTNAME=	icinga2-2.12.3
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ef@math.uni-bonn.de
 HOMEPAGE=	https://www.icinga.com/products/icinga-2/
