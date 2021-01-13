@@ -1,0 +1,6 @@
+ISSUE: 2021/01/14
+  RPATH is not properly set for now
+  --------------------
+    h97@makoto 08:24:43/210114(..wip/klayout)% objdump  -x /tmp/wip/klayout/work/klayout-0.26.8/build-release/klayout |grep RPATH
+    RPATH                /usr/pkg/lib:/usr/X11R7/lib:/usr/pkg/qt5/lib
+  --------------------
