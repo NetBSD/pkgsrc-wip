@@ -1,0 +1,6 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/dgryski/go-jump.a
+gopkg/src/github.com/dgryski/go-jump/LICENSE
+gopkg/src/github.com/dgryski/go-jump/README.md
+gopkg/src/github.com/dgryski/go-jump/jump.go
+gopkg/src/github.com/dgryski/go-jump/jump_test.go

@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-jump
+
+.if !defined(GO_JUMP_BUILDLINK3_MK)
+GO_JUMP_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-jump=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-jump?=		build
+
+BUILDLINK_API_DEPENDS.go-jump+=	go-jump>=20170409
+BUILDLINK_PKGSRCDIR.go-jump?=	../../wip/go-jump
+.endif	# GO_JUMP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-jump

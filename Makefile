@@ -1221,6 +1221,7 @@ SUBDIR+=	go-imgui
 SUBDIR+=	go-intern
 SUBDIR+=	go-jira
 SUBDIR+=	go-jsonparser
+SUBDIR+=	go-jump
 SUBDIR+=	go-junit-report
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
