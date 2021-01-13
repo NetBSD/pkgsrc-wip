@@ -1,5 +1,6 @@
-A simple but flexible parser of SUSY Les Houches Accord (SLHA) model and
-decay files. pyslha is a parser/writer module for particle physics SUSY
-Les Houches Accord (SLHA) supersymmetric spectrum/decay files, and a  collection
-of scripts which use the interface, e.g. for conversion to and from the legacy,
+A simple but flexible parser of SUSY Les Houches Accord (SLHA)
+model and decay files. pyslha is a parser/writer module for
+particle physics SUSY Les Houches Accord (SLHA) supersymmetric
+spectrum/decay files, and a  collection of scripts which use
+the interface, e.g. for conversion to and from the legacy,
 ISAWIG format, or to plot the mass spectrum and decay chains
