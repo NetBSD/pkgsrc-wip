@@ -10,8 +10,8 @@ Use more apropriate format specifier for shm preix
  
 -    snprintf(name, sizeof(name), NXT_SHM_PREFIX "unit.%d.%p",
 -             lib->pid, (void *) pthread_self());
-+    snprintf(name, sizeof(name), NXT_SHM_PREFIX "unit.%d.%x",
-+             lib->pid, pthread_self());
++    snprintf(name, sizeof(name), NXT_SHM_PREFIX "unit.%d.%p",
++             lib->pid, (void *) (uintptr_t)pthread_self());
  #endif
  
  #if (NXT_HAVE_MEMFD_CREATE)

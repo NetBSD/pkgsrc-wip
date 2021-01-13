@@ -9,7 +9,7 @@ Silence warning.
      nxt_thread_handle_t  handle;
  
 -    handle = (nxt_thread_handle_t) obj;
-+    handle = *(nxt_thread_handle_t*) obj;
++    handle = (nxt_thread_handle_t)(uintptr_t) obj;
      link = data;
  
      nxt_thread_wait(handle);
