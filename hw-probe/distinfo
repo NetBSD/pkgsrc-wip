@@ -1,5 +1,6 @@
 $NetBSD$
 
-TIMESTAMP = 1590737484
-SHA256 (hw-probe-1.6-beta.tar.gz) = 1e23464e57717b469e06c9a51f3a86fc76bd09388cdc82c4cb8b0d4cd1d5cae7
-SIZE (hw-probe-1.6-beta.tar.gz) = 143569
+SHA1 (hw-probe-1.6beta/hw-probe) = f7a387dc01e0e920895ba0bf6f0779554b011e81
+RMD160 (hw-probe-1.6beta/hw-probe) = 32d861cd2ca8f4c05d653362cb7fda2bef09c799
+SHA512 (hw-probe-1.6beta/hw-probe) = b41f78b96d68358efa6ac829bdc77cf09f0adaf3c39946795d89057caadea381fd1c5cb4742e41ad6292de39378705beae9e77a32d97d2ab1b20473ed6fedca3
+Size (hw-probe-1.6beta/hw-probe) = 515074 bytes

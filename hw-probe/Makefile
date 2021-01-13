@@ -1,36 +1,44 @@
 # $NetBSD$
 
-DISTNAME=	hw-probe-${PORTVERSION}
-PORTVERSION=	1.6-beta
+DISTNAME=	hw-probe
+PKGNAME=	hw-probe-1.6beta
 CATEGORIES=	sysutils perl5
-GITHUB_PROJECT=	linuxhw
-MASTER_SITES=	${MASTER_SITE_GITHUB:=hw-probe/}
+MASTER_SITES=	http://bsd-hardware.info/
+EXTRACT_SUFX=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bsd-hardware.info
+HOMEPAGE=	https://bsd-hardware.info/
 COMMENT=	Check operability of computer hardware and find drivers
+LICENSE=	gnu-lgpl-v2.1 OR original-bsd
 
-LICENSE=	gnu-lgpl-v2.1 OR 4-clause-bsd
+DEPENDS+=	curl-[0-9]*:../../www/curl
+DEPENDS+=	usbutil-[0-9]*:../../sysutils/usbutil
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+DEPENDS+=	smartmontools-[0-9]*:../../sysutils/smartmontools
 
-DEPENDS=	curl:../../www/curl \
-		usbutil:../../sysutils/usbutil \
-		mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts \
-		smartmontools:../../sysutils/smartmontools
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
+WRKSRC=		${WRKDIR}
+
+REPLACE_PERL+=	hw-probe
+
+USE_TOOLS+=	perl:run
+
+INSTALLATION_DIRS+=	bin
 
 NO_BUILD=	yes
 
-.include "<../../mk/bsd.prefs.mk>"
+.include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "aarch64")
-DEPENDS+=	dmidecode:../../sysutils/dmidecode
+DEPENDS+=	dmidecode-[0-9]*:../../sysutils/dmidecode
 .endif
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
-DEPENDS+=	cpuid:../../sysutils/cpuid
+DEPENDS+=	cpuid-[0-9]*:../../sysutils/cpuid
 .endif
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/hw-probe.pl ${DESTDIR}${PREFIX}/bin/hw-probe
+	${INSTALL_SCRIPT} ${WRKSRC}/hw-probe ${DESTDIR}${PREFIX}/bin/hw-probe
 
 .include "../../mk/bsd.pkg.mk"
