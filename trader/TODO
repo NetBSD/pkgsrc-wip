@@ -1,4 +1,0 @@
-Trader crashes when LANG is set to anything else than C, because curs_set()
-is called before initscr() in the error path.
-
-There are issues with internationalization, notably in strfmon(3) output.

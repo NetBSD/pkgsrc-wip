@@ -4,3 +4,4 @@ SHA1 (trader-7.15.tar.gz) = 16c22694663685f62b11049c8787b39574ccc0a8
 RMD160 (trader-7.15.tar.gz) = 7f582b52be57c1fe8cba67d06076a3312c21030b
 SHA512 (trader-7.15.tar.gz) = 37cb302f23de1a8b68c75dce790d56abe63ba34d4dd1653c4af13044c66c8e08101d2ff724951489a5631384833ba2fda3d4d18730a46f97a115ff5dd6b45a75
 Size (trader-7.15.tar.gz) = 1251007 bytes
+SHA1 (patch-src_trader.c) = 7c5d5fb01b23bea6ab686ff825af5b555c579a66
