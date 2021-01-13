@@ -1,0 +1,3 @@
+This is a revamped Google's jump consistent hash.
+It overcomes the shortcoming of the original
+implementation - not being able to remove nodes

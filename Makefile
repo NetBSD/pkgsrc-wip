@@ -1191,6 +1191,7 @@ SUBDIR+=	go-copier
 SUBDIR+=	go-current
 SUBDIR+=	go-cyclo
 SUBDIR+=	go-dotenv
+SUBDIR+=	go-doublejump
 SUBDIR+=	go-douceur-aymerick
 SUBDIR+=	go-easyjson
 SUBDIR+=	go-err113

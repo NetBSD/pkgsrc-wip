@@ -1,0 +1,9 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/edwingeng/doublejump.a
+gopkg/src/github.com/edwingeng/doublejump/LICENSE
+gopkg/src/github.com/edwingeng/doublejump/README.md
+gopkg/src/github.com/edwingeng/doublejump/benchmark/benchmark_test.go
+gopkg/src/github.com/edwingeng/doublejump/doublejump.go
+gopkg/src/github.com/edwingeng/doublejump/doublejump_test.go
+gopkg/src/github.com/edwingeng/doublejump/go.mod
+gopkg/src/github.com/edwingeng/doublejump/go.sum
