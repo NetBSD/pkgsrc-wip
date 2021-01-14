@@ -13,6 +13,7 @@ COMMENT=	Source code editor
 LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/scite
+GCC_REQD+=		7.1 # C++17 string_view
 USE_LANGUAGES=		c c++
 BUILD_DIRS+=		gtk
 USE_TOOLS+=		gmake pkg-config
