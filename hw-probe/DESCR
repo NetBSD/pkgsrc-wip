@@ -1,4 +1,4 @@
-a tool to probe for hardware, check operability and find drivers
+A tool to probe for hardware, check operability and find drivers
 with the help of BSD hardware database.
 
 Probe is a snapshot of your computer hardware state and system
