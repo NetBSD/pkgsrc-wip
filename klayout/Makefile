@@ -14,13 +14,10 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash
 
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/libexec/klayout
 NO_CONFIGURE=	yes
 
-MAKE_ENV+=	LD_RUN_PATH=${PREFIX}/libexec/klayout:${PREFIX}/lib
-
-CHECK_SHLIBS_SKIP+=	libexec/klayout/plugins/streamers/*/unit_tests/* \
-			libexec/klayout/plugins/tools/net_tracer/unit_tests/*
+CHECK_SHLIBS_SKIP+=	lib/klayout/plugins/streamers/*/unit_tests/* \
+			lib/klayout/plugins/tools/net_tracer/unit_tests/*
 
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
@@ -34,7 +31,7 @@ AUTO_MKDIRS=		yes
 INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
 INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib
 REL_DIR=		build-release
-INSTALLATION_DIRS+=	libexec/klayout
+INSTALLATION_DIRS+=	lib/klayout
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,11 +51,11 @@ do-build:
 do-install:
 	cd ${WRKSRC} && \
 	rsync     -aH      ${WRKSRC}/${REL_DIR}/libklayout_* \
-		${DESTDIR}${PREFIX}/libexec/klayout && \
+		${DESTDIR}${PREFIX}/lib/klayout && \
 	rsync     -aH --exclude=\*\.o      ${WRKSRC}/${REL_DIR}/plugins/ \
-		${DESTDIR}${PREFIX}/libexec/klayout/plugins/ && \
+		${DESTDIR}${PREFIX}/lib/klayout/plugins/ && \
 	rsync     -aH --exclude=\*\.o      ${WRKSRC}/${REL_DIR}/db_plugins/ \
-		${DESTDIR}${PREFIX}/libexec/klayout/db_plugins/
+		${DESTDIR}${PREFIX}/lib/klayout/db_plugins/
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/strm* \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/klayout \
@@ -69,4 +66,5 @@ do-install:
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
+BUILDLINK_RPATHDIRS+=	${PREFIX}/lib/klayout
 .include "../../mk/bsd.pkg.mk"
