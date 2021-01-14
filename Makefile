@@ -2309,7 +2309,6 @@ SUBDIR+=	mppp
 SUBDIR+=	mpq-tools
 SUBDIR+=	mps-youtube
 SUBDIR+=	mpv-git
-SUBDIR+=	mruby
 SUBDIR+=	msgpack-git
 SUBDIR+=	msworkbench
 SUBDIR+=	mtd-utils
