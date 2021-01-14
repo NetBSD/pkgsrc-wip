@@ -13,6 +13,7 @@ COMMENT=	Source code editing component
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/scintilla
+GCC_REQD+=	7.1 # C++17 string_view
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 BUILD_DIRS=	gtk
