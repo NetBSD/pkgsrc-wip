@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2021/01/01 09:52:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2021/01/14 12:25:33 mef Exp $
 
 DISTNAME=	klayout-0.26.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash
 
+BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
 NO_CONFIGURE=	yes
 
