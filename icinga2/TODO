@@ -1,9 +1,0 @@
-Does not build for me on NetBSD 9.99.77/amd64 with
-
-In file included from /scratch/wip/icinga2/work/icinga2-2.12.3/lib/base/base_unity.cpp:73:
-/scratch/wip/icinga2/work/icinga2-2.12.3/lib/base/utility.cpp: In static member function 'static void icinga::Utility::CopyFile(const icinga::String&, const icinga::String&)':
-/scratch/wip/icinga2/work/icinga2-2.12.3/lib/base/utility.cpp:728:100: error: 'fs::copy_option' has not been declared
-  728 |  fs::copy_file(fs::path(source.Begin(), source.End()), fs::path(target.Begin(), target.End()), fs::copy_option::overwrite_if_exists);
-      |                                                                                                    ^~~~~~~~~~~
-
--- wiz 20210114
