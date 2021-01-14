@@ -2,7 +2,7 @@
 
 DISTNAME=	efl-1.25.1
 CATEGORIES=	x11
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -82,7 +82,7 @@ MESON_ARGS+=	-Dopengl=base
 
 .endif
 
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
 .include "../../devel/meson/build.mk"
@@ -98,6 +98,7 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"

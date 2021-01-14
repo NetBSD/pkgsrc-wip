@@ -15,6 +15,10 @@ pkgbase := efl
 .include "../../devel/libuv/buildlink3.mk"
 .endif
 
+.if !empty(PKG_OPTIONS.efl:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+.endif
+
 .if ${X11_TYPE} == "modular"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
@@ -22,7 +26,7 @@ pkgbase := efl
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
 
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
@@ -35,6 +39,7 @@ pkgbase := efl
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"

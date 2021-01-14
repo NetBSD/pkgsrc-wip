@@ -1,9 +1,9 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.efl
-PKG_SUPPORTED_OPTIONS=		debug g-mainloop gcc8
+PKG_SUPPORTED_OPTIONS=		debug g-mainloop gcc8 pulseaudio
 PKG_SUGGESTED_OPTIONS.NetBSD=	g-mainloop
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=		pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,4 +24,11 @@ MESON_ARGS+=	-Dg-mainloop=true
 .if !empty(PKG_OPTIONS:Mgcc8)
 USE_PKGSRC_GCC=	yes
 GCC_REQD=	8
+.endif
+
+# Build with pulseaudio support
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dpulseaudio=false
 .endif
