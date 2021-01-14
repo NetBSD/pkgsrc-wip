@@ -19,8 +19,6 @@ NO_CONFIGURE=	yes
 CHECK_SHLIBS_SKIP+=	lib/klayout/plugins/streamers/*/unit_tests/* \
 			lib/klayout/plugins/tools/net_tracer/unit_tests/*
 
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/klayout
-
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
@@ -31,9 +29,8 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 AUTO_MKDIRS=		yes
 INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
-INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib
+INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib/klayout
 REL_DIR=		build-release
-INSTALLATION_DIRS+=	lib/klayout
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,20 +51,19 @@ do-build:
 do-install:
 	cd ${WRKSRC} && \
 	rsync     -aH      ${WRKSRC}/${REL_DIR}/libklayout_* \
-		${DESTDIR}${PREFIX}/lib/klayout && \
+		${INSTALL_LIBDIR} && \
 	rsync     -aH --exclude=\*\.o      ${WRKSRC}/${REL_DIR}/plugins/ \
-		${DESTDIR}${PREFIX}/lib/klayout/plugins/ && \
+		${INSTALL_LIBDIR}/plugins/ && \
 	rsync     -aH --exclude=\*\.o      ${WRKSRC}/${REL_DIR}/db_plugins/ \
-		${DESTDIR}${PREFIX}/lib/klayout/db_plugins/
+		${INSTALL_LIBDIR}/db_plugins/
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/strm* \
-		${DESTDIR}${PREFIX}/bin
+		${INSTALL_BINDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/${REL_DIR}/klayout \
-		${DESTDIR}${PREFIX}/bin
+		${INSTALL_BINDIR}
 
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
-BUILDLINK_RPATHDIRS+=	${PREFIX}/lib/klayout
 .include "../../mk/bsd.pkg.mk"
