@@ -1,8 +1,0 @@
-Light is a program to control backlights and other lights under Linux:
-
-- Works where other software has proven unreliable (xbacklight etc.)
-- Works even in a fully CLI-environment, i.e. it does not rely on X
-- Provides functionality to automatically control backlights with the
-  highest precision available
-- Extra features, like setting a minimum brightness value for controllers,
-  or saving/restoring the value for poweroffs/boots.
