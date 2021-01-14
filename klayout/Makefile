@@ -19,6 +19,8 @@ NO_CONFIGURE=	yes
 CHECK_SHLIBS_SKIP+=	lib/klayout/plugins/streamers/*/unit_tests/* \
 			lib/klayout/plugins/tools/net_tracer/unit_tests/*
 
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/klayout
+
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
@@ -46,7 +48,8 @@ do-build:
 	-qmake ${PREFIX}/qt5/bin/qmake \
 	-ruby ${PREFIX}/bin/${RUBY_NAME} \
 	${MAKE_JOBS_FLAG} \
-	-prefix ${PREFIX}
+	-prefix ${PREFIX} \
+	-rpath ${PREFIX}/lib/klayout
 
 do-install:
 	cd ${WRKSRC} && \
