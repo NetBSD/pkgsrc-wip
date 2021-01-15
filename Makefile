@@ -1659,7 +1659,6 @@ SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
 SUBDIR+=	icestorm-git
 SUBDIR+=	icewm17
-SUBDIR+=	icinga2
 SUBDIR+=	icingaweb2
 SUBDIR+=	icmpchat
 SUBDIR+=	id3
