@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.33 2021/01/14 12:25:33 mef Exp $
 
-DISTNAME=	klayout-0.26.8
-PKGREVISION=	3
+DISTNAME=	klayout-0.26.9
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -32,6 +31,8 @@ AUTO_MKDIRS=		yes
 INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
 INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib/klayout
 REL_DIR=		build-release
+INSTALLATION_DIRS+=	lib/klayout
+
 
 .include "../../mk/bsd.prefs.mk"
 
