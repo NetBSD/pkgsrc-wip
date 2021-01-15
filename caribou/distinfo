@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/28 00:39:13 poppnk Exp $
-
-SHA1 (caribou-0.4.20.tar.xz) = 8f6c99c9fadba6d2c4f6f571961c902a9daaf1ee
-RMD160 (caribou-0.4.20.tar.xz) = c7012673a7718e9b580b614518bf12b07374fe24
-SHA512 (caribou-0.4.20.tar.xz) = e72a18462268278e0c07f178085eeff0e65ece6a9bf2f667c4ca66a66d173b39c68843c537ba6e8bd056c21575be592cece5f4f752f324c7f0db44fe28c45504
-Size (caribou-0.4.20.tar.xz) = 415148 bytes
