@@ -215,6 +215,9 @@ ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailEncryption.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailLogValidation.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailLogValidation.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailLogValidation.pyo
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailMultiRegion.py
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailMultiRegion.pyc
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/CloudtrailMultiRegion.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/DAXEncryption.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/DAXEncryption.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/DAXEncryption.pyo
