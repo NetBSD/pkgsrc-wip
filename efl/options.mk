@@ -3,7 +3,6 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.efl
 PKG_SUPPORTED_OPTIONS=		debug g-mainloop gcc8 pulseaudio clang
 PKG_SUGGESTED_OPTIONS=		pulseaudio
-PKG_SUGGESTED_OPTIONS.NetBSD+=	clang debug
 
 
 .include "../../mk/bsd.options.mk"
