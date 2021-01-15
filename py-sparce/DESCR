@@ -1,6 +1,0 @@
-This provides a set of sparse matrix types for Python, with modules which
-implement:
- - Iterative methods for solving linear systems of equations
- - A set of standard preconditioners
- - An interface to a direct solver for sparse linear systems of equations
- - The JDSYM eigensolver

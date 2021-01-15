@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/10 21:17:02 jihbed Exp $
-
-SHA1 (pysparse-1.1.tar.gz) = 55e935e6b9c089e3740bd11494ed6bf451e56c84
-RMD160 (pysparse-1.1.tar.gz) = 81bccdde11c072565808eeade5995d03dd8a7010
-SHA512 (pysparse-1.1.tar.gz) = 641d9cb889629de2ddd6796abb3eb4d405b97b1b66598bd9d8fd5b26596e89e3aa88149b9002cba65bc0b88903d1fe25a4d6826b528649e4b73391866354fb14
-Size (pysparse-1.1.tar.gz) = 912439 bytes
