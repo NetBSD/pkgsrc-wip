@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-FileCheck/
 COMMENT=	Checks for common issues in uploaded files
 LICENSE=	gnu-agpl-v3
 
+EGG_NAME=	OctoPrint_FileCheck-2020.8.7
+
 PYTHON_VERSIONS_ACCEPTED=	37 36
 
 .include "../../lang/python/egg.mk"
