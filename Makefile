@@ -4877,6 +4877,7 @@ SUBDIR+=	sbcl-git
 SUBDIR+=	scalapack
 SUBDIR+=	scantailor
 SUBDIR+=	scare
+SUBDIR+=	sccache
 SUBDIR+=	schur
 SUBDIR+=	scilab
 SUBDIR+=	scim-git
