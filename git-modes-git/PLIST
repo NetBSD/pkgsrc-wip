@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 03:04:59 makoto Exp $
-share/emacs/site-lisp/git-modes/git-commit-mode.el
-share/emacs/site-lisp/git-modes/git-commit-mode.elc
-share/emacs/site-lisp/git-modes/git-rebase-mode.el
-share/emacs/site-lisp/git-modes/git-rebase-mode.elc
-share/emacs/site-lisp/git-modes/gitattributes-mode.el
-share/emacs/site-lisp/git-modes/gitattributes-mode.elc
-share/emacs/site-lisp/git-modes/gitconfig-mode.el
-share/emacs/site-lisp/git-modes/gitconfig-mode.elc
-share/emacs/site-lisp/git-modes/gitignore-mode.el
-share/emacs/site-lisp/git-modes/gitignore-mode.elc
+@comment $NetBSD$
+${EMACS_LISPPREFIX}/git-modes/git-modes-autoloads.el
+${EMACS_LISPPREFIX}/git-modes/git-modes.el
+${EMACS_LISPPREFIX}/git-modes/git-modes.elc
+${EMACS_LISPPREFIX}/git-modes/gitattributes-mode.el
+${EMACS_LISPPREFIX}/git-modes/gitattributes-mode.elc
+${EMACS_LISPPREFIX}/git-modes/gitconfig-mode.el
+${EMACS_LISPPREFIX}/git-modes/gitconfig-mode.elc
+${EMACS_LISPPREFIX}/git-modes/gitignore-mode.el
+${EMACS_LISPPREFIX}/git-modes/gitignore-mode.elc

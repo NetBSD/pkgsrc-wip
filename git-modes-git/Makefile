@@ -13,6 +13,7 @@ USE_TOOLS+=	gmake
 
 BUILD_TARGET=	lisp
 AUTO_MKDIRS=	yes
+INSTALLATION_DIRS+= share/emacs/site-lisp/git-modes
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} *.el *.elc \
