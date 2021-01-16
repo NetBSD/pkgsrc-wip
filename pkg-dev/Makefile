@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	pkg-dev-0.3.0.4
+DISTNAME=	pkg-dev-0.3.0.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	12f2c3aea4a4e25689b8a5521382c26d7c44b1b0
+GITHUB_TAG=	5fb63bd4fe796ef49eecd661f569a81c5d57961f
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/pkg-dev
