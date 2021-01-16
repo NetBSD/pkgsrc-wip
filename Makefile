@@ -3684,7 +3684,6 @@ SUBDIR+=	py-helio
 SUBDIR+=	py-hepcrawl
 SUBDIR+=	py-hessianfree
 SUBDIR+=	py-hfk
-SUBDIR+=	py-hg-git
 SUBDIR+=	py-hgapi
 SUBDIR+=	py-hickle
 SUBDIR+=	py-hidapi-git
