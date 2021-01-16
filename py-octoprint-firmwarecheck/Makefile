@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-FirmwareCheck/
 COMMENT=	Checks for unsafe or broken printer firmwares
 LICENSE=	gnu-agpl-v3
 
+EGG_NAME=	OctoPrint_FirmwareCheck-2020.9.23
+
 PYTHON_VERSIONS_ACCEPTED=	37 36
 
 .include "../../lang/python/egg.mk"
