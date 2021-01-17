@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (virtualenv-20.2.2.tar.gz) = fd4d72b017ca7e3e64f2ec2f890e45857cd9c510
-RMD160 (virtualenv-20.2.2.tar.gz) = 5b95e05e0025bd4237a82bd67c10a305c4a877ec
-SHA512 (virtualenv-20.2.2.tar.gz) = 4d78edbfbd5d69fdbe9a85ac3274510bea121bd0b8a55fb160449ce5944b2a8c5f93ce8ea6cff4aa6b2cfb1c8bc9ee1cecfa6debc8de2c57a7759f55a43a1a01
-Size (virtualenv-20.2.2.tar.gz) = 9074582 bytes
+SHA1 (virtualenv-20.3.1.tar.gz) = 634685cc47853edf03308cabee6d8884221ce966
+RMD160 (virtualenv-20.3.1.tar.gz) = 95879fbc14b5f7f85e4ba0e67a7cba5d30e55362
+SHA512 (virtualenv-20.3.1.tar.gz) = ee95e851e9e3597fd1691086d1d4dc72a41d6a143e9644be208cadbc1dfe7c8e562cd506a657ba1f77161d8d80a9f6f648b345e6533265b0e989c7ad39cc7680
+Size (virtualenv-20.3.1.tar.gz) = 9077527 bytes
