@@ -1218,6 +1218,7 @@ SUBDIR+=	go-gorilla-securecookie
 SUBDIR+=	go-gorilla-sessions
 SUBDIR+=	go-gtk2
 SUBDIR+=	go-hex
+SUBDIR+=	go-hidden
 SUBDIR+=	go-httphead
 SUBDIR+=	go-httpsnoop
 SUBDIR+=	go-humanize

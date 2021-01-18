@@ -1,0 +1,5 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/getlantern/hidden.a
+gopkg/src/github.com/getlantern/hidden/LICENSE
+gopkg/src/github.com/getlantern/hidden/hidden.go
+gopkg/src/github.com/getlantern/hidden/hidden_test.go
