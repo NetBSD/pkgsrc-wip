@@ -1,0 +1,4 @@
+flock implements a thread-safe sync.Locker
+interface for file locking. It also includes
+a non-blocking TryLock() function to allow
+locking without blocking execution.

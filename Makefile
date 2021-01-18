@@ -1201,6 +1201,7 @@ SUBDIR+=	go-eventsource
 SUBDIR+=	go-ewma
 SUBDIR+=	go-flac-eaburns
 SUBDIR+=	go-flags
+SUBDIR+=	go-flock
 SUBDIR+=	go-freetype
 SUBDIR+=	go-fsnotify
 SUBDIR+=	go-ghodss-yaml
