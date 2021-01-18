@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (go-gorilla-websocket-1.4.2.tar.gz) = 725f6555328439052238260005a10e0e2c8183c0
-RMD160 (go-gorilla-websocket-1.4.2.tar.gz) = 33ca2b874152c4f984153733cd2613c55d2e465e
-SHA512 (go-gorilla-websocket-1.4.2.tar.gz) = 2cf6ea5fcd009f0a7fc9ec111eb5a124823a9ec33d67ff2bebb15a3e770845d42b377528a2a051637ff52ef3907dc423224d15486e9744fdf24b0eaf4a0028d5
-Size (go-gorilla-websocket-1.4.2.tar.gz) = 54101 bytes
