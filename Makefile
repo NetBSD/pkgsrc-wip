@@ -1242,6 +1242,7 @@ SUBDIR+=	go-maligned
 SUBDIR+=	go-notify
 SUBDIR+=	go-ole
 SUBDIR+=	go-opentracing
+SUBDIR+=	go-ops
 SUBDIR+=	go-param
 SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper
