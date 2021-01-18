@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-hex
+
+.if !defined(GO_HEX_BUILDLINK3_MK)
+GO_HEX_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-hex=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-hex?=		build
+
+BUILDLINK_API_DEPENDS.go-hex+=	go-hex>=20190517
+BUILDLINK_PKGSRCDIR.go-hex?=	../../wip/go-hex
+.endif	# GO_HEX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-hex
