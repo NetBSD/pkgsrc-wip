@@ -116,10 +116,14 @@ NONEXECFILES+=	library/vendor/HTMLPurifier/DefinitionCache/Serializer/README
 # for actual chmod, see post-extract below
 
 
+REPLACE_SH=		test/setup_vendor.sh		# !/usr/bin/bash, no bashisms (not actually installed)
+REPLACE_SH+=		test/travis_database.sh		# !/usr/bin/bash, no bashisms (not actually installed)
+
 REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	/usr/bin/php
+REPLACE.php.old=	.*php				# /usr/bin/php, /usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	packages/files/bin/icingacli
+REPLACE_FILES.php=	packages/files/bin/icingacli	# /usr/bin/php
+REPLACE_FILES.php+=	test/check-syntax.php		# /usr/bin/env php (but not actually installed)
 
 # We need a lot of SUBSTs. The list of hard-coded paths was gathered along the lines of "grep -rF '/etc/' . | sed -n -e 's:^.*/etc/\([^/]*\)/.*$:\1:p' | sort | uniq" etc., plus manual inspection.
 # See below for a descrption what is NOT substituted.
