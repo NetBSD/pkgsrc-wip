@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/lualatex/lualatex-math/MANIFEST
+share/texmf-dist/doc/lualatex/lualatex-math/README
+share/texmf-dist/doc/lualatex/lualatex-math/lualatex-math.pdf
