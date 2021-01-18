@@ -1,0 +1,16 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/mitchellh/go-ps.a
+gopkg/src/github.com/mitchellh/go-ps/LICENSE.md
+gopkg/src/github.com/mitchellh/go-ps/README.md
+gopkg/src/github.com/mitchellh/go-ps/Vagrantfile
+gopkg/src/github.com/mitchellh/go-ps/go.mod
+gopkg/src/github.com/mitchellh/go-ps/process.go
+gopkg/src/github.com/mitchellh/go-ps/process_darwin.go
+gopkg/src/github.com/mitchellh/go-ps/process_darwin_test.go
+gopkg/src/github.com/mitchellh/go-ps/process_freebsd.go
+gopkg/src/github.com/mitchellh/go-ps/process_linux.go
+gopkg/src/github.com/mitchellh/go-ps/process_solaris.go
+gopkg/src/github.com/mitchellh/go-ps/process_test.go
+gopkg/src/github.com/mitchellh/go-ps/process_unix.go
+gopkg/src/github.com/mitchellh/go-ps/process_unix_test.go
+gopkg/src/github.com/mitchellh/go-ps/process_windows.go
