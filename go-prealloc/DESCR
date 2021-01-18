@@ -1,0 +1,2 @@
+prealloc is a Go static analysis tool to find slice
+declarations that could potentially be preallocated.

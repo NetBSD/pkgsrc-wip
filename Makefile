@@ -1248,6 +1248,7 @@ SUBDIR+=	go-pio
 SUBDIR+=	go-pkcs7
 SUBDIR+=	go-pointer
 SUBDIR+=	go-pool
+SUBDIR+=	go-prealloc
 SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go
 SUBDIR+=	go-python
