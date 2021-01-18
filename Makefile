@@ -1172,6 +1172,7 @@ SUBDIR+=	go-amqp
 SUBDIR+=	go-ansi
 SUBDIR+=	go-ansicolor
 SUBDIR+=	go-ants
+SUBDIR+=	go-atomic
 SUBDIR+=	go-audio
 SUBDIR+=	go-aurora
 SUBDIR+=	go-backoff

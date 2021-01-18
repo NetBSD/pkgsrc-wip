@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (go-atomic-1.7.0.tar.gz) = a39fec63eed7f405dcd1701f3f70b11422661e0a
+RMD160 (go-atomic-1.7.0.tar.gz) = be3ebb4d0433340aedb0df606a548456f4404af9
+SHA512 (go-atomic-1.7.0.tar.gz) = 78f0b57f33d2975b360893c371ae3aab1d2dba6248364a46c7025a5817f52fe6ba9d6561cf62e19b8e74ae5ab17e0b2adf1cb203c659e5c5041c7d8e935f5a65
+Size (go-atomic-1.7.0.tar.gz) = 18566 bytes
