@@ -1,0 +1,5 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/https:/github.com/golangci/maligned.a
+gopkg/src/https:/github.com/golangci/maligned/LICENSE
+gopkg/src/https:/github.com/golangci/maligned/README
+gopkg/src/https:/github.com/golangci/maligned/maligned.go
