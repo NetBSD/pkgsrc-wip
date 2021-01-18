@@ -1,0 +1,17 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/gobwas/httphead.a
+gopkg/src/github.com/gobwas/httphead/LICENSE
+gopkg/src/github.com/gobwas/httphead/README.md
+gopkg/src/github.com/gobwas/httphead/cookie.go
+gopkg/src/github.com/gobwas/httphead/cookie_test.go
+gopkg/src/github.com/gobwas/httphead/go.mod
+gopkg/src/github.com/gobwas/httphead/head.go
+gopkg/src/github.com/gobwas/httphead/head_test.go
+gopkg/src/github.com/gobwas/httphead/httphead.go
+gopkg/src/github.com/gobwas/httphead/httphead_test.go
+gopkg/src/github.com/gobwas/httphead/lexer.go
+gopkg/src/github.com/gobwas/httphead/lexer_test.go
+gopkg/src/github.com/gobwas/httphead/octet.go
+gopkg/src/github.com/gobwas/httphead/option.go
+gopkg/src/github.com/gobwas/httphead/writer.go
+gopkg/src/github.com/gobwas/httphead/writer_test.go
