@@ -1186,6 +1186,7 @@ SUBDIR+=	go-clir
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
 SUBDIR+=	go-config
+SUBDIR+=	go-context
 SUBDIR+=	go-copier
 SUBDIR+=	go-current
 SUBDIR+=	go-cyclo
