@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pkgsrc-wip-tools-0.1.0.1-27ab7f517bcafbb6cdf94a0b38f985f5e610d6ec.tar.gz) = 5a32ce06d2f94dbe60cd164ec99d84ea1f3c94cb
-RMD160 (pkgsrc-wip-tools-0.1.0.1-27ab7f517bcafbb6cdf94a0b38f985f5e610d6ec.tar.gz) = 0a714f1d6a72a0a44d18924fa2753fd6d8c15bdb
-SHA512 (pkgsrc-wip-tools-0.1.0.1-27ab7f517bcafbb6cdf94a0b38f985f5e610d6ec.tar.gz) = 576f8ba079156ad96db60fcbf0960c251d3292d99cd18897727e1988719c79f9e461a284d604a4323c9cd365fbef3a18b3661d7489d95b6875f9c1d217aa7970
-Size (pkgsrc-wip-tools-0.1.0.1-27ab7f517bcafbb6cdf94a0b38f985f5e610d6ec.tar.gz) = 1627 bytes
+SHA1 (pkgsrc-wip-tools-0.1.0.2-55b656c0b3dfde97143ec017aad6d6a56b934759.tar.gz) = 1a73af5c7e3c140a8cf5a0ba3a24f8a5ee5208ba
+RMD160 (pkgsrc-wip-tools-0.1.0.2-55b656c0b3dfde97143ec017aad6d6a56b934759.tar.gz) = 4b0e28b90279e507e53e766cecbc234fff76e8d7
+SHA512 (pkgsrc-wip-tools-0.1.0.2-55b656c0b3dfde97143ec017aad6d6a56b934759.tar.gz) = a80b6cbdf97fb80b4f58660124c4aa323f9f1f122284a0e4e875836d17c1dd18162c227cb72ed70fbe894d269aeb510241bc4738d30a038db02537f8dd7aab9f
+Size (pkgsrc-wip-tools-0.1.0.2-55b656c0b3dfde97143ec017aad6d6a56b934759.tar.gz) = 1620 bytes
