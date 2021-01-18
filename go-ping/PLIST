@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/ping
+gopkg/pkg/${GO_PLATFORM}/github.com/go-ping/ping.a
+gopkg/src/github.com/go-ping/ping/LICENSE
+gopkg/src/github.com/go-ping/ping/Makefile
+gopkg/src/github.com/go-ping/ping/README.md
+gopkg/src/github.com/go-ping/ping/cmd/ping/ping.go
+gopkg/src/github.com/go-ping/ping/go.mod
+gopkg/src/github.com/go-ping/ping/go.sum
+gopkg/src/github.com/go-ping/ping/ping.go
+gopkg/src/github.com/go-ping/ping/ping_test.go
