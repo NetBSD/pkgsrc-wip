@@ -1,0 +1,19 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/valyala/fasttemplate.a
+gopkg/src/github.com/valyala/fasttemplate/LICENSE
+gopkg/src/github.com/valyala/fasttemplate/README.md
+gopkg/src/github.com/valyala/fasttemplate/example_test.go
+gopkg/src/github.com/valyala/fasttemplate/go.mod
+gopkg/src/github.com/valyala/fasttemplate/go.sum
+gopkg/src/github.com/valyala/fasttemplate/template.go
+gopkg/src/github.com/valyala/fasttemplate/template_test.go
+gopkg/src/github.com/valyala/fasttemplate/template_timing_test.go
+gopkg/src/github.com/valyala/fasttemplate/unsafe.go
+gopkg/src/github.com/valyala/fasttemplate/unsafe_gae.go
+gopkg/src/github.com/valyala/fasttemplate/vendor/github.com/valyala/bytebufferpool/.travis.yml
+gopkg/src/github.com/valyala/fasttemplate/vendor/github.com/valyala/bytebufferpool/LICENSE
+gopkg/src/github.com/valyala/fasttemplate/vendor/github.com/valyala/bytebufferpool/README.md
+gopkg/src/github.com/valyala/fasttemplate/vendor/github.com/valyala/bytebufferpool/bytebuffer.go
+gopkg/src/github.com/valyala/fasttemplate/vendor/github.com/valyala/bytebufferpool/doc.go
+gopkg/src/github.com/valyala/fasttemplate/vendor/github.com/valyala/bytebufferpool/pool.go
+gopkg/src/github.com/valyala/fasttemplate/vendor/modules.txt

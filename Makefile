@@ -1204,6 +1204,7 @@ SUBDIR+=	go-errorx
 SUBDIR+=	go-eventsource
 SUBDIR+=	go-ewma
 SUBDIR+=	go-fastprinter
+SUBDIR+=	go-fasttemplate
 SUBDIR+=	go-ffmpeg
 SUBDIR+=	go-flac-eaburns
 SUBDIR+=	go-flags
