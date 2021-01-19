@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (wip-tools-0.1.0.4-112983eb60e4c39017e71fac6cec2c4356f2ad42.tar.gz) = 50dba538dd97477136136ce8ccdc7440f8c0efd0
-RMD160 (wip-tools-0.1.0.4-112983eb60e4c39017e71fac6cec2c4356f2ad42.tar.gz) = d1e191276a8564ab9a2ca444a49f0f1b8c20f847
-SHA512 (wip-tools-0.1.0.4-112983eb60e4c39017e71fac6cec2c4356f2ad42.tar.gz) = 4b91ae706290363f3f0b65fd82368305f14d33bbdc9a5e1a1b87cc69baeb33d68c688aedea5620ca2ec29c1d622b806a9e054fb6825692a08ee3ed6312e50ffc
-Size (wip-tools-0.1.0.4-112983eb60e4c39017e71fac6cec2c4356f2ad42.tar.gz) = 1623 bytes
+SHA1 (wip-tools-0.1.0.5-574daa45fa52ae9c2238a0c45e1ef4c3f3dfbfab.tar.gz) = 8657ecf862ab944db76c426ecc4a9243d1b3445b
+RMD160 (wip-tools-0.1.0.5-574daa45fa52ae9c2238a0c45e1ef4c3f3dfbfab.tar.gz) = deb79a95bf1cdd3c2c391d50f1e71ac66cd107e1
+SHA512 (wip-tools-0.1.0.5-574daa45fa52ae9c2238a0c45e1ef4c3f3dfbfab.tar.gz) = 8364068bbfb424a5f4d618fa7333867db11ed54aeb582d5db3aa6b6fe505a28ba9b7719a3a44698ba1d7eea676dc231a6cc417c041c3e2dbc71252763afc90a9
+Size (wip-tools-0.1.0.5-574daa45fa52ae9c2238a0c45e1ef4c3f3dfbfab.tar.gz) = 1619 bytes
