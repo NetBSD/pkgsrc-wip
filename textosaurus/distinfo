@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (textosaurus-0.9.13.tar.gz) = fd8311e4d7c9a04d961d57ff7075fa63a5a177f8
+RMD160 (textosaurus-0.9.13.tar.gz) = c477860c4445fe0568d084e970ec175dac7e8caa
+SHA512 (textosaurus-0.9.13.tar.gz) = 5d8505a0071b7b1f00796aac7ecce5c84b7f1f290fa1550ef3362f1a9a09e95d0b60132dbb41441d3545224a9e2e010bda6072a5219955d00b100a026f66908c
+Size (textosaurus-0.9.13.tar.gz) = 3570549 bytes
+SHA1 (patch-src_libtextosaurus_definitions_definitions.h) = 19874a70af02a08fc6c86994f542b0d7d15ce1ef

@@ -1,0 +1,7 @@
+...
+/usr/pkg/qt5/lib/libQt5Core.so -lGL
+ld: cannot find -ltextosaurus
+*** Error code 1
+
+Stop.
+bmake[1]: stopped in /usr/pkgsrc/wip/textosaurus/work/textosaurus-0.9.13/src/textosaurus

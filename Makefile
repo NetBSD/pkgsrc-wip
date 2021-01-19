@@ -5229,6 +5229,7 @@ SUBDIR+=	tex-stix2-otf-doc
 SUBDIR+=	texlab
 SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
+SUBDIR+=	textosaurus
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit-ttf
 SUBDIR+=	thawab
