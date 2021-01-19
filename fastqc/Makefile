@@ -5,8 +5,8 @@
 #              Fri Nov  3 16:02:27 CDT 2017               #
 ###########################################################
 
-DISTNAME=	fastqc_v${PORTVERSION}
-PKGNAME=	fastqc-${PORTVERSION}
+DISTNAME=	fastqc_v${PKGVERSION_NOREV}
+PKGNAME=	fastqc-0.11.9
 CATEGORIES=	biology
 MASTER_SITES=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 EXTRACT_SUFX=	.zip
@@ -14,47 +14,39 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 COMMENT=	Quality control tool for high throughput sequence data
-# Check this
 LICENSE=	gnu-gpl-v3
 
 SUBST_CLASSES+=		javapath
-SUBST_STAGE.javapath=	post-patch
+SUBST_STAGE.javapath=	pre-configure
 SUBST_SED.javapath+=	-e 's|$$RealBin$$delimiter|${DATADIR}$$delimiter${JAVAJARDIR}/fastqc$$delimiter|g'
 SUBST_SED.javapath+=	-e 's|$$RealBin/|${JAVAJARDIR}/fastqc/|g'
-SUBST_FILES.javapath+=	${WRKSRC}/fastqc
+SUBST_FILES.javapath+=	fastqc
 
 USE_TOOLS+=	perl:run pax
+USE_JAVA=	yes
+
 REPLACE_PERL=	fastqc
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/FastQC
 
 # Normal extract is corrupting org/apache/commons/math3/distribution/IntegerDistribution.class due to a bug in archivers/unzip -a
-EXTRACT_OPTS_ZIP=	-qo
+# EXTRACT_OPTS_ZIP=	-qo
 
-PORTVERSION=	0.11.5
 DATADIR=	${PREFIX}/share/fastqc
 DOCSDIR=	${PREFIX}/share/doc/fastqc
-USE_JAVA=	yes
 JAVAJARDIR=	${PREFIX}/share/java/classes
 
 INSTALLATION_DIRS=	bin ${DATADIR} ${DOCSDIR} ${JAVAJARDIR}/fastqc
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${JAVAJARDIR}/fastqc
-	${INSTALL_SCRIPT} ${WRKSRC}/fastqc \
-		${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC} && pax -rw Configuration \
-		${DESTDIR}${DATADIR}
-	cd ${WRKSRC} && pax -rw Templates \
-		${DESTDIR}${DATADIR}
-	cd ${WRKSRC} && pax -rw net \
-		${DESTDIR}${JAVAJARDIR}/fastqc
-	cd ${WRKSRC} && pax -rw org \
-		${DESTDIR}${JAVAJARDIR}/fastqc
-	cd ${WRKSRC} && pax -rw uk \
-		${DESTDIR}${JAVAJARDIR}/fastqc
-	cd ${WRKSRC} && pax -rw 'Help' \
-		${DESTDIR}${DOCSDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/fastqc ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC} && pax -rw Configuration ${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && pax -rw Templates ${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && pax -rw net ${DESTDIR}${JAVAJARDIR}/fastqc
+	cd ${WRKSRC} && pax -rw org ${DESTDIR}${JAVAJARDIR}/fastqc
+	cd ${WRKSRC} && pax -rw uk ${DESTDIR}${JAVAJARDIR}/fastqc
+	cd ${WRKSRC} && pax -rw 'Help' ${DESTDIR}${DOCSDIR}
 
 .include "../../mk/bsd.pkg.mk"
