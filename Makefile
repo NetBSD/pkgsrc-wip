@@ -1206,6 +1206,7 @@ SUBDIR+=	go-flags
 SUBDIR+=	go-flock
 SUBDIR+=	go-freetype
 SUBDIR+=	go-fsnotify
+SUBDIR+=	go-genny
 SUBDIR+=	go-ghodss-yaml
 SUBDIR+=	go-godot
 SUBDIR+=	go-gomail
