@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/curlie
+gopkg/pkg/${GO_PLATFORM}/github.com/rs/curlie/args.a
+gopkg/pkg/${GO_PLATFORM}/github.com/rs/curlie/formatter.a
+gopkg/src/github.com/rs/curlie/CNAME
+gopkg/src/github.com/rs/curlie/LICENSE
+gopkg/src/github.com/rs/curlie/README.md
+gopkg/src/github.com/rs/curlie/_config.yml
+gopkg/src/github.com/rs/curlie/args/curlopts.go
+gopkg/src/github.com/rs/curlie/args/gen.go
+gopkg/src/github.com/rs/curlie/args/gen.sh
+gopkg/src/github.com/rs/curlie/args/httpie.go
+gopkg/src/github.com/rs/curlie/args/parse.go
+gopkg/src/github.com/rs/curlie/args/parse_test.go
+gopkg/src/github.com/rs/curlie/doc/get.png
+gopkg/src/github.com/rs/curlie/doc/put.png
+gopkg/src/github.com/rs/curlie/formatter/binaryfilter.go
+gopkg/src/github.com/rs/curlie/formatter/cleanup.go
+gopkg/src/github.com/rs/curlie/formatter/color.go
+gopkg/src/github.com/rs/curlie/formatter/help.go
+gopkg/src/github.com/rs/curlie/formatter/json.go
+gopkg/src/github.com/rs/curlie/go.mod
+gopkg/src/github.com/rs/curlie/go.sum
+gopkg/src/github.com/rs/curlie/main.go

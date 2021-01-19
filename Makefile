@@ -1190,6 +1190,7 @@ SUBDIR+=	go-color
 SUBDIR+=	go-config
 SUBDIR+=	go-context
 SUBDIR+=	go-copier
+SUBDIR+=	go-curlie
 SUBDIR+=	go-current
 SUBDIR+=	go-cyclo
 SUBDIR+=	go-dotenv
