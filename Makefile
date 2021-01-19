@@ -1282,6 +1282,7 @@ SUBDIR+=	go-trie
 SUBDIR+=	go-uilive
 SUBDIR+=	go-upspin
 SUBDIR+=	go-uuid
+SUBDIR+=	go-uuid-iris-contrib
 SUBDIR+=	go-uuid-myesui
 SUBDIR+=	go-zeroconf
 SUBDIR+=	goattracker
