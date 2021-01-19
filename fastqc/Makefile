@@ -18,7 +18,8 @@ SUBST_SED.javapath+=	-e 's|$$RealBin/|${JAVAJARDIR}/fastqc/|g'
 SUBST_FILES.javapath+=	fastqc
 
 USE_TOOLS+=	perl:run pax
-USE_JAVA=	yes
+USE_JAVA=	run
+USE_JAVA2=	8
 
 WRKSRC=		${WRKDIR}/FastQC
 REPLACE_PERL=	fastqc
