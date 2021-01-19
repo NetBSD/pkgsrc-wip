@@ -1290,6 +1290,7 @@ SUBDIR+=	go-upspin
 SUBDIR+=	go-uuid
 SUBDIR+=	go-uuid-iris-contrib
 SUBDIR+=	go-uuid-myesui
+SUBDIR+=	go-zipexe
 SUBDIR+=	go-zeroconf
 SUBDIR+=	goattracker
 SUBDIR+=	godura
