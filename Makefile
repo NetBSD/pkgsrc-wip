@@ -1237,6 +1237,7 @@ SUBDIR+=	go-jump
 SUBDIR+=	go-junit-report
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
+SUBDIR+=	go-ksuid
 SUBDIR+=	go-log
 SUBDIR+=	go-lzw
 SUBDIR+=	go-madon
