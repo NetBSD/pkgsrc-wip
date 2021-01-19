@@ -1231,6 +1231,7 @@ SUBDIR+=	go-httphead
 SUBDIR+=	go-httpsnoop
 SUBDIR+=	go-humanize
 SUBDIR+=	go-imgui
+SUBDIR+=	go-incremental
 SUBDIR+=	go-intern
 SUBDIR+=	go-jira
 SUBDIR+=	go-jsonparser
