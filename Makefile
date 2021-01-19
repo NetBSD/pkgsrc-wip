@@ -1240,6 +1240,7 @@ SUBDIR+=	go-memcache
 SUBDIR+=	go-mp3
 SUBDIR+=	go-mpb
 SUBDIR+=	go-maligned
+SUBDIR+=	go-mock
 SUBDIR+=	go-notify
 SUBDIR+=	go-ole
 SUBDIR+=	go-opentracing
