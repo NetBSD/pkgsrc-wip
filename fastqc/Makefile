@@ -39,6 +39,6 @@ do-install:
 	cd ${WRKSRC} && pax -rw net ${DESTDIR}${JAVAJARDIR}/fastqc
 	cd ${WRKSRC} && pax -rw org ${DESTDIR}${JAVAJARDIR}/fastqc
 	cd ${WRKSRC} && pax -rw uk ${DESTDIR}${JAVAJARDIR}/fastqc
-	cd ${WRKSRC} && pax -rw 'Help' ${DESTDIR}${DOCSDIR}
+	cd ${WRKSRC} && pax -rw Help ${DESTDIR}${DOCSDIR}
 
 .include "../../mk/bsd.pkg.mk"
