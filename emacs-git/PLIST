@@ -2472,6 +2472,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/ZOZY.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/ZOZY.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/arabic.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/arabic.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/cham.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/cham.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/compose.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/compose.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/croatian.el.gz
