@@ -14,6 +14,11 @@ LICENSE=	apache-2.0
 GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/golang/mock
 
+USE_TOOLS+=	bash:run
+
+REPLACE_BASH+=	ci/check_go_fmt.sh ci/check_go_generate.sh \
+		ci/check_go_lint.sh ci/check_go_mod.sh
+
 .include "../../devel/go-mod/buildlink3.mk"
 .include "../../devel/go-tools/buildlink3.mk"
 .include "../../devel/go-xerrors/buildlink3.mk"
