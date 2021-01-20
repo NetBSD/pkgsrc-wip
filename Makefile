@@ -796,7 +796,6 @@ SUBDIR+=	fastbit
 SUBDIR+=	fastjet
 SUBDIR+=	fastool
 SUBDIR+=	fastp
-SUBDIR+=	fastqc
 SUBDIR+=	fastrpc
 SUBDIR+=	fasttree
 SUBDIR+=	fastx-toolkit
