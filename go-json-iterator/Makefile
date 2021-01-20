@@ -15,6 +15,10 @@ LICENSE=	mit
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}
 GO_SRCPATH=	github.com/json-iterator/${GITHUB_PROJECT}
 
+USE_TOOLS+=	bash:run
+
+REPLACE_BASH+=	test.sh
+
 .include "../../wip/go-concurrent/buildlink3.mk"
 .include "../../wip/go-reflect2/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
