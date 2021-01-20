@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (go-concurrent-1.0.3.tar.gz) = c78b1ea33f0f75a19b2fd2f2350437b45053856f
+RMD160 (go-concurrent-1.0.3.tar.gz) = 5af524af065cfe90ecb8f65929026534ec8fc9ef
+SHA512 (go-concurrent-1.0.3.tar.gz) = 2af4f6db624f66e033891b418003cc6c82708bb26ca3877ea5dd1e87e832a7160debe98ecca5c3edb633e427935011ef8b9a0c12976c6c7b25ca7d2184b18330
+Size (go-concurrent-1.0.3.tar.gz) = 7527 bytes
