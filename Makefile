@@ -1234,6 +1234,7 @@ SUBDIR+=	go-imgui
 SUBDIR+=	go-incremental
 SUBDIR+=	go-intern
 SUBDIR+=	go-jira
+SUBDIR+=	go-jpillora-backoff
 SUBDIR+=	go-json-iterator
 SUBDIR+=	go-jsonparser
 SUBDIR+=	go-jump
