@@ -1275,6 +1275,7 @@ SUBDIR+=	go-python
 SUBDIR+=	go-rateio
 SUBDIR+=	go-raymond
 SUBDIR+=	go-redigo
+SUBDIR+=	go-reflect2
 SUBDIR+=	go-rest
 SUBDIR+=	go-resty
 SUBDIR+=	go-riff
