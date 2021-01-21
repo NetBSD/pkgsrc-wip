@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gramscii-v0.4.tgz) = 5db6e34d51a4b37d5b0d0cf4d4d9e17f5cfb3693
+RMD160 (gramscii-v0.4.tgz) = ac68fb261c7876cf3da9a5cb790a0bfda60be84d
+SHA512 (gramscii-v0.4.tgz) = bc986612bdd9a745dcd81426633684d2dd7ff64490d5343c42e022c3a418a37e50f25a9d82d1aef8685d3c4f0e9f76973888ad3eadc3fbf9db47e2d68d98368a
+Size (gramscii-v0.4.tgz) = 34203 bytes
+SHA1 (patch-Makefile) = 7d4f9018ecdb57754f040411a611beb6431de224

@@ -1323,6 +1323,7 @@ SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-gsm
 SUBDIR+=	gr-osmosdr-git
 SUBDIR+=	grabtitle-git
+SUBDIR+=	gramscii
 SUBDIR+=	grandr
 SUBDIR+=	granite
 SUBDIR+=	graphmonkey

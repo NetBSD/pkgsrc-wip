@@ -1,0 +1,15 @@
+$NetBSD$
+
+Backport upstream commit 5157bd6a0b2dcda08143fd725e1c04dadc315bdc so it
+links also with BSD make.
+
+--- Makefile.orig	2019-09-29 21:23:06.000000000 +0000
++++ Makefile
+@@ -19,6 +19,7 @@ options:
+ 	@echo "-+-+-+-+-+-+-+-+-+-+-" 
+ 
+ gramscii: ${OBJ}
++	${CC} ${LDFLAGS} -o gramscii ${OBJ}
+ 
+ ${OBJ}: ${INC}
+ 
