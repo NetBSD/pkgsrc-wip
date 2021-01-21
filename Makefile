@@ -1236,6 +1236,7 @@ SUBDIR+=	go-humanize
 SUBDIR+=	go-imgui
 SUBDIR+=	go-incremental
 SUBDIR+=	go-intern
+SUBDIR+=	go-jettison
 SUBDIR+=	go-jira
 SUBDIR+=	go-jpillora-backoff
 SUBDIR+=	go-json-iterator
