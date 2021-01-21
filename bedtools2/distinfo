@@ -1,7 +1,8 @@
 $NetBSD$
 
-SHA1 (bedtools2-2.27.1.tar.gz) = 0f45ade764913f88b332c3126f152fd55da9a101
-RMD160 (bedtools2-2.27.1.tar.gz) = 957b40f240fd6b22374165f25b96fc4aa3fb8f5a
-SHA512 (bedtools2-2.27.1.tar.gz) = 65d58b5d9e00581ed73f2d5a58be56c888adbc4045396e62fe39abc27a2abcd974721c7fe25533d76613788e43529b5df427ad19acce7ff6e7133018cdd35f40
-Size (bedtools2-2.27.1.tar.gz) = 20003119 bytes
-SHA1 (patch-Makefile) = be89e0e963ca559480fa7f98ec8bd70582b6d7e2
+SHA1 (bedtools-2.29.2.tar.gz) = 51f03e1cac60f99c062d9babb6385800c89c78f6
+RMD160 (bedtools-2.29.2.tar.gz) = 08ea14501ddfc85f2d4a5a756a10512a61ec93f2
+SHA512 (bedtools-2.29.2.tar.gz) = 06b0016674acb08fd85b80fe1a8ff1ebce5c54c0a30ff7f4e52e63fe5b3f3841413f49df3c51088454d79048ca267fde8c23d9ed51f309ee6916d9b49610be41
+Size (bedtools-2.29.2.tar.gz) = 20638840 bytes
+SHA1 (patch-Makefile) = d6a76cb23e623842d6d5c60d67eff928b45b091c
+SHA1 (patch-src_utils_htslib_Makefile) = ba513efa59eed05321c176185fb576f4892ea7a5

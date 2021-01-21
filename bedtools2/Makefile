@@ -1,39 +1,30 @@
 # $NetBSD$
 
-# N.B. Not sure if we need to override "python" in the Makefiles.
-
-DISTNAME=	bedtools2-${PORTVERSION}
+DISTNAME=	bedtools-2.29.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arq5x/}
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_PROJECT=	bedtools2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/arq5x/bedtools2
 COMMENT=	Swiss army knife for genome arithmetic
-LICENSE=	gnu-gpl-v2
+LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-REPLACE_BASH=	scripts/*.sh
-REPLACE_PYTHON=	scripts/*.py
+REPLACE_SH=	scripts/vcfsortsh
+REPLACE_PYTHON=	scripts/makeBashScripts.py
 
-PORTVERSION=	2.27.1
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	pre-configure
+SUBST_SED.make=		-e 's|python|${PYTHONBIN}|g'
+SUBST_FILES.make=	Makefile
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == i386
-MAKE_ENV+=	POPCNT_CAPABILITY=0
-.endif
-
-pre-configure:
-	${SED} -i -e 's|@\$$(CXX)|$(CXX)|g' \
-	        ${WRKSRC}/*/Makefile \
-	        ${WRKSRC}/*/*/Makefile \
-	        ${WRKSRC}/*/*/*/Makefile \
-	        ${WRKSRC}/*/*/*/*/Makefile
-
-post-install:
-	${STRIP_CMD} ${DESTDIR}${PREFIX}/bin/bedtools
+# Avoid conflict with C++20 <version> by adding .txt suffix
+post-extract:
+	@${MV} ${WRKSRC}/src/utils/gzstream/version \
+		${WRKSRC}/src/utils/gzstream/version.txt
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
