@@ -1208,6 +1208,7 @@ SUBDIR+=	go-fastprinter
 SUBDIR+=	go-fasttemplate
 SUBDIR+=	go-ffmpeg
 SUBDIR+=	go-flac-eaburns
+SUBDIR+=	go-flaggy
 SUBDIR+=	go-flags
 SUBDIR+=	go-flock
 SUBDIR+=	go-freetype
