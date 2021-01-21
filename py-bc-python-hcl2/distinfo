@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (bc-python-hcl2-0.3.11.tar.gz) = 5e27eb376214e217024867e0fb4d8addb2fe3c4e
-RMD160 (bc-python-hcl2-0.3.11.tar.gz) = bd650ca2522f9e4b46b337454fff23cde5916bc2
-SHA512 (bc-python-hcl2-0.3.11.tar.gz) = 4245aed94012108767d2c14e7c1345c32335642a0bc74bc60bc38cfe0b6649fd8f2a98be6094a196529a82facaca3df026566bccd928efd7b85961e27fb8cf2a
-Size (bc-python-hcl2-0.3.11.tar.gz) = 46442 bytes
+SHA1 (bc-python-hcl2-0.3.12.tar.gz) = 1c1a5acde83edd737c5a0b6c680032c72a908f47
+RMD160 (bc-python-hcl2-0.3.12.tar.gz) = 60c6373390ad0508e60b55305673cba0b838e139
+SHA512 (bc-python-hcl2-0.3.12.tar.gz) = 7ab7a596bab9c2c11b0569df76e5b9bb71a1b39412d62a8022eee987f00b1eb0712d7f3c6b2c8399e9960d76b6d9698bd50dcc5f93cf587f496e78cfc23f1147
+Size (bc-python-hcl2-0.3.12.tar.gz) = 46386 bytes
+SHA1 (patch-setup.py) = a665cff7537fa90550b17af68df7e6454eacaa69
