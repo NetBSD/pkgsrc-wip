@@ -19,12 +19,9 @@ REPLACE_PYTHON=	bowtie2-build bowtie2-inspect
 MAKE_FLAGS+=	NO_TBB=1
 
 DATADIR=	${PREFIX}/share/bowtie2
-DOCSDIR=	${PREFIX}/share/doc/bowtie2
 EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
 
-INSTALLATION_DIRS=	share/bowtie2/scripts
-INSTALLATION_DIRS+=	share/doc/bowtie2
-INSTALLATION_DIRS+=	share/examples/bowtie2
+INSTALLATION_DIRS=	share/bowtie2/scripts share/examples/bowtie2
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bowtie2*-s ${WRKSRC}/bowtie2*-l \
@@ -33,7 +30,6 @@ post-install:
 		${DESTDIR}${DATADIR}/scripts
 	(cd ${WRKSRC}/example && pax -rw index reads reference \
 		${DESTDIR}${EXAMPLESDIR})
-	(cd ${WRKSRC}/doc && pax -rw * ${DESTDIR}${DOCSDIR})
 
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
