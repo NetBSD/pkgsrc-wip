@@ -9,6 +9,7 @@ bin/bowtie2-inspect
 bin/bowtie2-inspect-l
 bin/bowtie2-inspect-s
 bin/bowtie2-manual
+share/bowtie2/scripts/bowtie2-hbb.sh
 share/bowtie2/scripts/convert_quals.pl
 share/bowtie2/scripts/gen_2b_occ_lookup.pl
 share/bowtie2/scripts/gen_occ_lookup.pl
@@ -59,6 +60,7 @@ share/examples/bowtie2/index/lambda_virus.4.bt2
 share/examples/bowtie2/index/lambda_virus.rev.1.bt2
 share/examples/bowtie2/index/lambda_virus.rev.2.bt2
 share/examples/bowtie2/reads/combined_reads.bam
+share/examples/bowtie2/reads/conversion_utilities.sh
 share/examples/bowtie2/reads/longreads.fq
 share/examples/bowtie2/reads/reads_1.fq
 share/examples/bowtie2/reads/reads_2.fq

@@ -1,25 +1,15 @@
 $NetBSD$
 
-# Respect env
---- Makefile.orig	2018-09-14 16:46:59.124139009 +0000
+# Respect PREFIX
+
+--- Makefile.orig	2021-01-21 00:03:29.754913712 +0000
 +++ Makefile
-@@ -21,8 +21,8 @@
+@@ -21,7 +21,7 @@
  # Makefile for bowtie, bowtie2-build, bowtie2-inspect
  #
  
--prefix := /usr/local
--bindir := $(prefix)/bin
+-PREFIX := /usr/local
 +PREFIX ?= /usr/local
-+bindir := $(PREFIX)/bin
+ bindir := $(PREFIX)/bin
  
- LDLIBS := -lz
- GCC_PREFIX := $(shell dirname `which gcc`)
-@@ -187,7 +187,7 @@ endif
- SSE_FLAG := -msse2
- 
- DEBUG_FLAGS    := -O0 -g3 -m64 $(SSE_FLAG)
--RELEASE_FLAGS  := -O3 -m64 $(SSE_FLAG) -funroll-loops -g3
-+RELEASE_FLAGS  := $(CXXFLAGS)
- NOASSERT_FLAGS := -DNDEBUG
- FILE_FLAGS     := -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
- DEBUG_DEFS     = -DCOMPILER_OPTIONS="\"$(DEBUG_FLAGS) $(CXXFLAGS)\""
+ ARCH := $(shell uname -m)

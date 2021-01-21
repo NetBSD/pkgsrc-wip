@@ -5,23 +5,24 @@
 #              Wed Mar  2 08:06:07 CST 2016               #
 ###########################################################
 
-DISTNAME=	bowtie2-${PV}
+DISTNAME=	bowtie2-2.4.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
-GITHUB_PROJECT=	bowtie2
-GITHUB_TAG=	v${PV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://bowtie-bio.sourceforge.net/index.shtml
+HOMEPAGE=	https://github.com/BenLangmead/bowtie2
 COMMENT=	Ultrafast, memory-efficient short read aligner
-LICENSE=	artistic
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl:run pax
 REPLACE_PERL=	scripts/*.pl bowtie2
 REPLACE_PYTHON=	bowtie2-build bowtie2-inspect
 
-PV=		2.3.4.2
+# TBB is a little challenging, so use pthreads until onetbb is committed
+MAKE_FLAGS+=	NO_TBB=1
+
 DATADIR=	${PREFIX}/share/bowtie2
 DOCSDIR=	${PREFIX}/share/doc/bowtie2
 EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
@@ -29,22 +30,16 @@ EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
 INSTALLATION_DIRS=	share/bowtie2/scripts
 
 post-install:
-	${INSTALL_PROGRAM} \
-		${WRKSRC}/bowtie2*-s \
-		${WRKSRC}/bowtie2*-l \
+	${INSTALL_PROGRAM} ${WRKSRC}/bowtie2*-s ${WRKSRC}/bowtie2*-l \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} \
-		${WRKSRC}/scripts/*.sh \
-		${WRKSRC}/scripts/*.pl \
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.sh ${WRKSRC}/scripts/*.pl \
 		${DESTDIR}${DATADIR}/scripts
-	${INSTALL_SCRIPT} \
-		${FILESDIR}/bowtie2-manual \
+	${INSTALL_SCRIPT} ${FILESDIR}/bowtie2-manual \
 		${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/example && pax -rw index reads reference \
-		${DESTDIR}${EXAMPLESDIR}
-	cd ${WRKSRC}/doc && pax -rw * ${DESTDIR}${DOCSDIR}
+	(cd ${WRKSRC}/example && pax -rw index reads reference \
+		${DESTDIR}${EXAMPLESDIR})
+	(cd ${WRKSRC}/doc && pax -rw * ${DESTDIR}${DOCSDIR})
 
 .include "../../lang/python/application.mk"
-.include "../../wip/tbb/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
