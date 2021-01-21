@@ -1282,6 +1282,7 @@ SUBDIR+=	go-rest
 SUBDIR+=	go-resty
 SUBDIR+=	go-riff
 SUBDIR+=	go-rsrc
+SUBDIR+=	go-semver
 SUBDIR+=	go-stack
 SUBDIR+=	go-streamquote
 SUBDIR+=	go-stripansi
