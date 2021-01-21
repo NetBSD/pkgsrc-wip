@@ -1,4 +1,0 @@
-#!/bin/sh
-
-webbrowser file:///usr/local/share/doc/bowtie/manual.html
-
