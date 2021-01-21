@@ -13,9 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
 MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
-#MAKE_FLAGS+=	LIBS=${BUILDLINK_LDADD.terminfo:Q}
 
 USE_LANGUAGES=	c99
 
-#.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
