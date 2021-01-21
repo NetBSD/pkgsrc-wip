@@ -23,9 +23,11 @@ SUBST_FILES.make=	Makefile
 
 # Avoid conflict with C++20 <version> by adding .txt suffix
 post-extract:
-	@${MV} ${WRKSRC}/src/utils/gzstream/version \
+	${MV} ${WRKSRC}/src/utils/gzstream/version \
 		${WRKSRC}/src/utils/gzstream/version.txt
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
