@@ -1263,6 +1263,7 @@ SUBDIR+=	go-pass
 SUBDIR+=	go-paths-helper
 SUBDIR+=	go-pathtree
 SUBDIR+=	go-pcidb
+SUBDIR+=	go-perks
 SUBDIR+=	go-pgzip
 SUBDIR+=	go-ping
 SUBDIR+=	go-pio
