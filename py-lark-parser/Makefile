@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=l/lark-parser/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/erezsh/lark
-COMMENT=	Modern parsing library
+COMMENT=	Lark is a parsing toolkit for Python
 LICENSE=	mit
 
 .include "../../lang/python/egg.mk"
