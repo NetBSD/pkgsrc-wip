@@ -25,8 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=19.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-vistir>=0.4:../../wip/py-vistir
 DEPENDS+=	${PYPKGPREFIX}-autopep8>=1.5.4:../../devel/py-autopep8
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-typing>=3.5.2.2:../../devel/py-typing
-DEPENDS+=	${PYPKGPREFIX}-requirementslib>=1.5.15:../../wip/py-requirementslib
+DEPENDS+=	${PYPKGPREFIX}-requirementslib>=0.5.15:../../wip/py-requirementslib
 
 USE_LANGUAGES=	# none
 
