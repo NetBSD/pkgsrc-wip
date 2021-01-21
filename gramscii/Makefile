@@ -18,7 +18,7 @@ USE_LANGUAGES=	c99
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
-SUBST_MESSAGE.config=	Honor user's CFLAGS and avoid hardcoded optimization
+SUBST_MESSAGE.config=	Honor user's CFLAGS and avoid hardcoded optimizations
 SUBST_FILES.config=	config.mk
 SUBST_SED.config+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 SUBST_SED.config+=	-e '/CFLAGS/s,-O3,,'
