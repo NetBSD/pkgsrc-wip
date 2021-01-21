@@ -1,0 +1,8 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/ddymko/go-jsonerror.a
+gopkg/src/github.com/ddymko/go-jsonerror/LICENSE
+gopkg/src/github.com/ddymko/go-jsonerror/README.md
+gopkg/src/github.com/ddymko/go-jsonerror/codecov.yml
+gopkg/src/github.com/ddymko/go-jsonerror/go.mod
+gopkg/src/github.com/ddymko/go-jsonerror/json_error.go
+gopkg/src/github.com/ddymko/go-jsonerror/json_error_test.go
