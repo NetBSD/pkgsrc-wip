@@ -1284,6 +1284,7 @@ SUBDIR+=	go-redigo
 SUBDIR+=	go-reflect2
 SUBDIR+=	go-rest
 SUBDIR+=	go-resty
+SUBDIR+=	go-rice
 SUBDIR+=	go-riff
 SUBDIR+=	go-rsrc
 SUBDIR+=	go-semver
