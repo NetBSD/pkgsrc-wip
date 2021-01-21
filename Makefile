@@ -1200,6 +1200,7 @@ SUBDIR+=	go-douceur-aymerick
 SUBDIR+=	go-easyjson
 SUBDIR+=	go-err113
 SUBDIR+=	go-errlog
+SUBDIR+=	go-errwrap
 SUBDIR+=	go-errorx
 SUBDIR+=	go-eventsource
 SUBDIR+=	go-ewma
