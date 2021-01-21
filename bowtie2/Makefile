@@ -14,6 +14,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax:build perl:run
 REPLACE_PERL=	scripts/*.pl bowtie2
 REPLACE_PYTHON=	bowtie2-build bowtie2-inspect
+REPLACE_SH=	scripts/bowtie2-hbb.sh
 
 # Use onetbb on supported platforms when a package is available
 MAKE_FLAGS+=	NO_TBB=1
