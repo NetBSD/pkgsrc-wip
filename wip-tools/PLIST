@@ -1,3 +1,4 @@
 @comment $NetBSD$
+bin/wip-edit
 bin/wip-reinstall-pkg
 bin/wip-update
