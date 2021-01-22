@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-REPLACE_SH+=	scripts/vcfsortsh.sh
+REPLACE_SH+=	scripts/vcfsort.sh
 REPLACE_PYTHON=	scripts/makeBashScripts.py
 
 SUBST_CLASSES+=		pybin
