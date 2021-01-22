@@ -5,5 +5,6 @@ RMD160 (tig-2.5.0.tar.gz) = d0235e03aab2c564e4857048f9a9979affd969f1
 SHA512 (tig-2.5.0.tar.gz) = 26736fe241dd2dac25d5133ed847a7c1dab4bfeaad83af2effc8e523f8c6d8c179fe3ff05cd4343e4b1048c3c50309908aa32e81dd0789e35afe9bd8ff8772ee
 Size (tig-2.5.0.tar.gz) = 1143004 bytes
 SHA1 (patch-Makefile) = 304457804ce9a342e903ec25c1d7d6d9cf353cf5
+SHA1 (patch-contrib_config.make-Darwin) = 4cd1fb37d3f7c6d6005d676fa10c0f16ac437707
 SHA1 (patch-include_tig_tig.h) = 2c3610048421d1410c7ed73fb5f39198e1062299
 SHA1 (patch-src_view.c) = f6aa68992ebe79ce8fbf161afcb0dfc52f7e4881
