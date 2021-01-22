@@ -16,7 +16,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-FAKE_NCURSES=	yes
+USE_NCURSES=	yes	# Display issues with NetBSD curses(3)
 
 CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
@@ -45,9 +45,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR} && \
 	${INSTALL_DATA} ${WRKSRC}/tigrc ${DESTDIR}/${EGDIR}
 
-USE_CURSES=		getsyx
-
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
