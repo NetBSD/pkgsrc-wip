@@ -1,0 +1,8 @@
+@comment $NetBSD$
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiGothic-ExtraLight.otf
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiGothic-Light.otf
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiGothic-Normal.otf
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiMincho-ExtraLight.otf
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiMincho-Heavy.otf
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiMincho-Medium.otf
+share/texmf-dist/fonts/opentype/public/haranoaji-extra/HaranoAjiMincho-SemiBold.otf

@@ -5270,6 +5270,7 @@ SUBDIR+=	tex-fixjfm
 SUBDIR+=	tex-fixjfm-doc
 SUBDIR+=	tex-gentombow
 SUBDIR+=	tex-gentombow-doc
+SUBDIR+=	tex-haranoaji-extra
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-lineno-doc
