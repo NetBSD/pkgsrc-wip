@@ -1,0 +1,10 @@
+@comment $NetBSD$
+share/texmf-dist/tex/latex/bxbase/bxbase.def
+share/texmf-dist/tex/latex/bxbase/bxbase.sty
+share/texmf-dist/tex/latex/bxbase/bxtoolbox-ext.def
+share/texmf-dist/tex/latex/bxbase/bxtoolbox-ja.def
+share/texmf-dist/tex/latex/bxbase/bxtoolbox.def
+share/texmf-dist/tex/latex/bxbase/bxtoolbox.sty
+share/texmf-dist/tex/latex/bxbase/bxutf8.def
+share/texmf-dist/tex/latex/bxbase/bxutf8x.def
+share/texmf-dist/tex/latex/bxbase/zxbase.sty

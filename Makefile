@@ -5241,6 +5241,7 @@ SUBDIR+=	tex-attachfile-doc
 SUBDIR+=	tex-babel-japanese
 SUBDIR+=	tex-babel-japanese-doc
 SUBDIR+=	tex-breqn-doc
+SUBDIR+=	tex-bxbase
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
