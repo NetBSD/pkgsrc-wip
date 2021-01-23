@@ -5281,6 +5281,7 @@ SUBDIR+=	tex-japanese-otf-uptex-doc
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-jlreq
+SUBDIR+=	tex-jlreq-deluxe
 SUBDIR+=	tex-jlreq-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
