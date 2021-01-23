@@ -2100,6 +2100,7 @@ SUBDIR+=	libsquish
 SUBDIR+=	libstacktrace
 SUBDIR+=	libstatgrab
 SUBDIR+=	libstrophe
+SUBDIR+=	libstubborn
 SUBDIR+=	libsysstat
 SUBDIR+=	libtermkey
 SUBDIR+=	libtextcat
