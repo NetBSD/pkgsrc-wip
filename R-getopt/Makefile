@@ -8,7 +8,7 @@ COMMENT=	C-Like 'getopt' Behavior
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	getopt
-R_PKGVER=	1.20.2
+R_PKGVER=	1.20.3
 
 REPLACE_R=	exec/example.R
 

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (R/getopt_1.20.2.tar.gz) = ee7fc25968f7a4e0c2620a555c5b5c5a32bf3256
-RMD160 (R/getopt_1.20.2.tar.gz) = dd770f39147a774f65adc149d492b7fb028a0941
-SHA512 (R/getopt_1.20.2.tar.gz) = 2b0a55eea52a42f80494491455a1b070e6ae37eea9057a1646b5831f390e1af7cb423a4bf487e71330888ade8cbb360d87b45cfc9c4bcbe47e748eb7e3ea456c
-Size (R/getopt_1.20.2.tar.gz) = 17521 bytes
+SHA1 (R/getopt_1.20.3.tar.gz) = 21d4f167b51cb66e0393c7207b8116111b49f0b9
+RMD160 (R/getopt_1.20.3.tar.gz) = 020fe06d210a707411e85b5bf97b1fc5f7a0ebee
+SHA512 (R/getopt_1.20.3.tar.gz) = dcb681bccd717e6b73e335d5fd5f7ccc8b4f538bc0f82c1e9f6b2be9e5c4db12530e6d42182f36f8d02fd705d0ba65de250890dbecf391b386c23778a6738624
+Size (R/getopt_1.20.3.tar.gz) = 18573 bytes
