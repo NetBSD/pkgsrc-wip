@@ -5236,6 +5236,7 @@ SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-ascmac
+SUBDIR+=	tex-ascmac-doc
 SUBDIR+=	tex-attachfile-doc
 SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-fancyref-doc

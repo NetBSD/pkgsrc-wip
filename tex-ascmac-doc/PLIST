@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/ascmac/LICENSE
+share/texmf-dist/doc/latex/ascmac/README.md
+share/texmf-dist/doc/latex/ascmac/ascmac.pdf
