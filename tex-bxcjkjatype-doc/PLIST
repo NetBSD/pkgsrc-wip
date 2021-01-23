@@ -1,0 +1,8 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/bxcjkjatype/LICENSE
+share/texmf-dist/doc/latex/bxcjkjatype/README-ja.md
+share/texmf-dist/doc/latex/bxcjkjatype/README.md
+share/texmf-dist/doc/latex/bxcjkjatype/sample-bxcjkjatype-beamer.pdf
+share/texmf-dist/doc/latex/bxcjkjatype/sample-bxcjkjatype-beamer.tex
+share/texmf-dist/doc/latex/bxcjkjatype/sample-bxcjkjatype.pdf
+share/texmf-dist/doc/latex/bxcjkjatype/sample-bxcjkjatype.tex
