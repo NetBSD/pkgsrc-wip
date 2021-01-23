@@ -5289,6 +5289,7 @@ SUBDIR+=	tex-lshort-japanese-doc
 SUBDIR+=	tex-lualatex-math
 SUBDIR+=	tex-lualatex-math-doc
 SUBDIR+=	tex-luatexja
+SUBDIR+=	tex-luatexja-doc
 SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
