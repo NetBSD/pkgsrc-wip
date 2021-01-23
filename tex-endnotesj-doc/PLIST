@@ -1,0 +1,6 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/endnotesj/LICENSE
+share/texmf-dist/doc/latex/endnotesj/Makefile
+share/texmf-dist/doc/latex/endnotesj/README.md
+share/texmf-dist/doc/latex/endnotesj/endnotesj-ja.pdf
+share/texmf-dist/doc/latex/endnotesj/endnotesj-ja.tex
