@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/fonts/tfm/public/bxjatoucs/bxjatoucs-cid.tfm
+share/texmf-dist/fonts/tfm/public/bxjatoucs/bxjatoucs-jis.tfm
+share/texmf-dist/tex/latex/bxjatoucs/bxjatoucs.sty
