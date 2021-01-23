@@ -5292,6 +5292,7 @@ SUBDIR+=	tex-luatexja
 SUBDIR+=	tex-luatexja-doc
 SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-mendex-doc-doc
+SUBDIR+=	tex-morisawa
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
