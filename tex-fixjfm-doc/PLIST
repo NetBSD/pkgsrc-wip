@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/generic/fixjfm/README
+share/texmf-dist/doc/generic/fixjfm/fixjfm-doc.pdf
+share/texmf-dist/doc/generic/fixjfm/fixjfm-doc.tex
