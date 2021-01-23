@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/bxwareki/LICENSE
+share/texmf-dist/doc/latex/bxwareki/README.md
+share/texmf-dist/doc/latex/bxwareki/bxwareki.pdf
+share/texmf-dist/doc/latex/bxwareki/bxwareki.tex
