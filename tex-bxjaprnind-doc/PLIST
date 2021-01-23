@@ -1,0 +1,8 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/bxjaprnind/LICENSE
+share/texmf-dist/doc/latex/bxjaprnind/README-ja.md
+share/texmf-dist/doc/latex/bxjaprnind/README.md
+share/texmf-dist/doc/latex/bxjaprnind/bxjaprnind.pdf
+share/texmf-dist/doc/latex/bxjaprnind/bxjaprnind.tex
+share/texmf-dist/doc/latex/bxjaprnind/sample-bxjaprnind.pdf
+share/texmf-dist/doc/latex/bxjaprnind/sample-bxjaprnind.tex
