@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (R/optparse_1.6.0.tar.gz) = 4c099b8a12ebedc97b297a0151192dcd040465e4
-RMD160 (R/optparse_1.6.0.tar.gz) = f4c11072f4d89db6d6babac69b91be4be50ba184
-SHA512 (R/optparse_1.6.0.tar.gz) = 4fd72c6daf760b4bd229e7a1e3f9849fa0ca05358c4ed1e5f535707e2e2523f1a0bb1c6ed1b1b1a94914fb7199ef0d179069f3c1242e23bbca5536e3b80a101f
-Size (R/optparse_1.6.0.tar.gz) = 34931 bytes
+SHA1 (R/optparse_1.6.6.tar.gz) = 77bf374723770fa747fff15c477973eb1689369a
+RMD160 (R/optparse_1.6.6.tar.gz) = bd4dfd6b03f9f53db931c5d4b2a3dc1a8cf19b83
+SHA512 (R/optparse_1.6.6.tar.gz) = f18fd54a8f533e3e46601cdbe0b8d193e44475b5b780acd231e83b071119f670bf56cd3fa5953e0d76f4399ca00c47b76e41cfb46de0807a434946731b934ffa
+Size (R/optparse_1.6.6.tar.gz) = 37896 bytes

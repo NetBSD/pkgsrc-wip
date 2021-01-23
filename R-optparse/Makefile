@@ -8,7 +8,7 @@ COMMENT=	Command Line Option Parser
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	optparse
-R_PKGVER=	1.6.0
+R_PKGVER=	1.6.6
 
 DEPENDS+=	R-getopt>=1.20.2:../../wip/R-getopt
 
