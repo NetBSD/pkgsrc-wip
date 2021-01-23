@@ -5247,6 +5247,7 @@ SUBDIR+=	tex-bxcjkjatype
 SUBDIR+=	tex-bxcjkjatype-doc
 SUBDIR+=	tex-bxghost
 SUBDIR+=	tex-bxghost-doc
+SUBDIR+=	tex-bxjaholiday
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
