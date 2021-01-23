@@ -2313,6 +2313,7 @@ SUBDIR+=	modular-xorg-server-dfbsd
 SUBDIR+=	modular-xorg-server-dfbsd-meson
 SUBDIR+=	modular-xorg-xspice
 SUBDIR+=	moe
+SUBDIR+=	mojoshader
 SUBDIR+=	mona
 SUBDIR+=	monajat
 SUBDIR+=	mono
