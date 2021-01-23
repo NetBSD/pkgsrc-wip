@@ -5238,6 +5238,7 @@ SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-ascmac
 SUBDIR+=	tex-ascmac-doc
 SUBDIR+=	tex-attachfile-doc
+SUBDIR+=	tex-babel-japanese
 SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
