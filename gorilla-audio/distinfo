@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (gorilla-audio/a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a-a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a.tar.gz) = 727ac9c4fd22c834518c0ff6295416c915464f84
+RMD160 (gorilla-audio/a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a-a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a.tar.gz) = 3b6b3e75c25e27559f23676195e29d2e0ece4ab6
+SHA512 (gorilla-audio/a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a-a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a.tar.gz) = 671454a6603f9cff528eb5fe23b82aaa03b8b0222f0a5266fd08abf06133205625f081646502828e0b162030f4dd335e55ed0822f0e033c3d97ead6fda1e11ca
+Size (gorilla-audio/a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a-a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a.tar.gz) = 499505 bytes
+SHA1 (patch-CMakeLists.txt) = 106e75c31053efed938128913936aa1a80541fc8
+SHA1 (patch-src_common_gc__thread.c) = 002c231b12bdf378d728ccc5a5c0f44af1f637a0

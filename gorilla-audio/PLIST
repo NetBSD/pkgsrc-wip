@@ -1,0 +1,9 @@
+@comment $NetBSD$
+include/gorilla/common/ga_common.h
+include/gorilla/common/ga_thread.h
+include/gorilla/common/ga_types.h
+include/gorilla/ga.h
+include/gorilla/ga_internal.h
+include/gorilla/gau.h
+lib/libgorilla.a
+lib/libgorilla.so

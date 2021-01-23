@@ -1,0 +1,8 @@
+Gorilla Audio is a library that can be used for playing real-time
+audio.  (It's possible that it can be used for other things too,
+but we don't know anything about that.)
+
+It was originally written by Tim Ambrogi, engine programmer at
+Final Form Games, and as such has a slight bias towards game
+development, but should still be very suitable for other real-time
+audio playing needs.

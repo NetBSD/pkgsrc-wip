@@ -1,0 +1,38 @@
+$NetBSD$
+
+Support using system vorbis and libogg.
+
+--- CMakeLists.txt.orig	2020-12-07 09:04:06.000000000 +0000
++++ CMakeLists.txt
+@@ -175,6 +175,14 @@ set(GORILLA_COMMON_SRC
+   ${SRC_DIR}/common/gc_thread.c)
+ 
+ # OGG/Vorbis
++if(SYSTEM_LIBRARIES)
++find_package(PkgConfig)
++pkg_check_modules(ogg REQUIRED)
++pkg_check_modules(vorbis REQUIRED)
++
++include_directories(${OGG_INCLUDE_DIRS})
++include_directories(${VORBIS_INCLUDE_DIRS})
++else()
+ set(LIBOGGDIR ext/libogg)
+ set(LIBVORBISDIR ext/libvorbis)
+ 
+@@ -213,6 +221,7 @@ set(OGGVORBIS_SRC
+   ${LIBVORBISDIR}/lib/synthesis.c
+   ${LIBVORBISDIR}/lib/vorbisfile.c
+   ${LIBVORBISDIR}/lib/window.c)
++endif()
+ 
+ if(ENABLE_OSS)
+   list(APPEND GORILLA_SRC ${SRC_DIR}/devices/ga_oss.c)
+@@ -243,7 +252,7 @@ set(SIZE32 int32_t)
+ set(USIZE32 uint32_t)
+ set(SIZE64 int64_t)
+ set(USIZE64 uint64_t)
+-configure_file(ext/libogg/include/ogg/config_types.h.in ${CMAKE_SOURCE_DIR}/ext/libogg/include/ogg/config_types.h @ONLY)
++#configure_file(ext/libogg/include/ogg/config_types.h.in ${CMAKE_SOURCE_DIR}/ext/libogg/include/ogg/config_types.h @ONLY)
+ 
+ 
+ source_group("include" FILES ${GORILLA_INCLUDE})
