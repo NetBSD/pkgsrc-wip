@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/generic/ifptex/LICENSE
+share/texmf-dist/doc/generic/ifptex/README-ja.md
+share/texmf-dist/doc/generic/ifptex/README.md

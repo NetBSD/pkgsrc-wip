@@ -5273,6 +5273,7 @@ SUBDIR+=	tex-gentombow-doc
 SUBDIR+=	tex-haranoaji-extra
 SUBDIR+=	tex-haranoaji-extra-doc
 SUBDIR+=	tex-ifptex
+SUBDIR+=	tex-ifptex-doc
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-lineno-doc
