@@ -857,6 +857,7 @@ SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
 SUBDIR+=	flvmeta
 SUBDIR+=	flyback
+SUBDIR+=	fna3d
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft

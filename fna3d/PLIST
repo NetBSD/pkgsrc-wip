@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/FNA3D.h
+include/FNA3D_Image.h
+lib/libFNA3D.so
+lib/libFNA3D.so.0
+lib/libFNA3D.so.0.${PKGVERSION}
