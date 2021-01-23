@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/fonts/morisawa/LICENSE
+share/texmf-dist/doc/fonts/morisawa/Makefile
+share/texmf-dist/doc/fonts/morisawa/README.md
+share/texmf-dist/doc/fonts/morisawa/morisawa.pdf
