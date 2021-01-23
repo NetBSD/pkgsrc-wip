@@ -5285,6 +5285,7 @@ SUBDIR+=	tex-jlreq-deluxe
 SUBDIR+=	tex-jlreq-deluxe-doc
 SUBDIR+=	tex-jlreq-doc
 SUBDIR+=	tex-lineno-doc
+SUBDIR+=	tex-lshort-japanese-doc
 SUBDIR+=	tex-lualatex-math
 SUBDIR+=	tex-lualatex-math-doc
 SUBDIR+=	tex-mathtools-doc
