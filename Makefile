@@ -5277,6 +5277,7 @@ SUBDIR+=	tex-ifptex-doc
 SUBDIR+=	tex-ifxptex
 SUBDIR+=	tex-ifxptex-doc
 SUBDIR+=	tex-japanese-otf-uptex
+SUBDIR+=	tex-japanese-otf-uptex-doc
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-lineno-doc
