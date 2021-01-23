@@ -5264,6 +5264,7 @@ SUBDIR+=	tex-bxwareki-doc
 SUBDIR+=	tex-convbkmk
 SUBDIR+=	tex-convbkmk-doc
 SUBDIR+=	tex-fancyref-doc
+SUBDIR+=	tex-fixjfm
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
 SUBDIR+=	tex-lualatex-math-doc
