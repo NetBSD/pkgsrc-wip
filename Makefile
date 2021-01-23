@@ -5263,6 +5263,7 @@ SUBDIR+=	tex-bxwareki
 SUBDIR+=	tex-bxwareki-doc
 SUBDIR+=	tex-convbkmk
 SUBDIR+=	tex-convbkmk-doc
+SUBDIR+=	tex-endnotesj
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-fixjfm
 SUBDIR+=	tex-fixjfm-doc
