@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/rottexpr
+share/doc/rottexpr/LAUNCH ARGS.md
+share/doc/rottexpr/README.md

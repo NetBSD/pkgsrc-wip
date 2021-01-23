@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (rottexpr/v0.01.tar.gz) = 9c833f444f82678a60d08213390c8b9e851289b6
+RMD160 (rottexpr/v0.01.tar.gz) = f728b1bb2a276aeb4b0aa6ef35d9bc619cc424e1
+SHA512 (rottexpr/v0.01.tar.gz) = c393e61b11c56c18199d38bbfcfe2e22500d0adcdb648b31f7b7e24afdaf12e208b9accc82d6109a4ce0c632c56161ba2db9a2f885e5c087375fdfee69b6c4a6
+Size (rottexpr/v0.01.tar.gz) = 545824 bytes
+SHA1 (patch-w__wad.c) = 3c2b74f92f51524d605027bf7d39b5783e348f1f

@@ -4792,6 +4792,7 @@ SUBDIR+=	rootcheck
 SUBDIR+=	rootsh
 SUBDIR+=	rosegarden
 SUBDIR+=	rott
+SUBDIR+=	rottexpr
 SUBDIR+=	roundcube-plugin-carddav
 SUBDIR+=	roundcube-skin-mvision2
 SUBDIR+=	routersploit
