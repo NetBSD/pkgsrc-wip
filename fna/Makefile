@@ -30,7 +30,7 @@ USE_LANGUAGES=	# none
 
 post-extract:
 	${LN} -sf ${WRKDIR}/FNA.NetStub-${NETSTUB:S/${EXTRACT_SUFX}//} ${WRKDIR}/FNA.NetStub
-	${LN} -sf ${WRKSRC} ${WRKDIR}/FNA
+	${LN} -sf ${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME} ${WRKDIR}/FNA
 	${RM} -r ${WRKSRC}/lib/FAudio ${WRKSRC}/lib/Theorafile ${WRKSRC}/lib/SDL2-CS
 	${LN} -sf ${WRKDIR}/FAudio-${FAUDIO:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/FAudio
 	${LN} -sf ${WRKDIR}/Theorafile-${THEORAFILE:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/Theorafile
