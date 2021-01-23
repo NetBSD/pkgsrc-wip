@@ -5281,6 +5281,7 @@ SUBDIR+=	tex-smartdiagram
 SUBDIR+=	tex-stix2-otf
 SUBDIR+=	tex-stix2-otf-doc
 SUBDIR+=	texlab
+SUBDIR+=	texlive-collection-langcjk
 SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
 SUBDIR+=	textosaurus
