@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (haplohseq-0.1.2.tar.gz) = 58ef6a985c48c66bb3e824cfa903d7f63da128c2
+RMD160 (haplohseq-0.1.2.tar.gz) = 8287c3323d2bb6bee2146ce56d20ab5fb31cca80
+SHA512 (haplohseq-0.1.2.tar.gz) = 922f04203b148e52daf672b2f9d780a68a1709c9d907e76bd37841d22cbe4b4175cce7004fb38547dbc4724061db2a11755e292f0dec0b67a71f748fdb009eba
+Size (haplohseq-0.1.2.tar.gz) = 12084603 bytes
+SHA1 (patch-makefile) = 3fbba14e82d35488b7f5c1838a9b6891b6f1e2f5
+SHA1 (patch-scripts_ldmap.py) = bc66e0b1b5e40c59068ffd3b33267a97d7b3a50c
+SHA1 (patch-scripts_simple__phaser.py) = 33f2c6a6b70d236404725179629129f81607cbd7
+SHA1 (patch-src_FreqPhase.cpp) = 5b906e53f2e6968525bd4b1c420d518260388381
+SHA1 (patch-src_HaplohSeq.cpp) = cac07999985c5d45e9afc37b9afcddb217e0d701
+SHA1 (patch-src_test_InputProcessorTest.cpp) = 1a1086b082b542266a1e3509f0e833dcdb1038cb

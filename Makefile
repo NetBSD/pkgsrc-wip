@@ -1426,6 +1426,7 @@ SUBDIR+=	hal
 SUBDIR+=	halfempty
 SUBDIR+=	hammer
 SUBDIR+=	hanazono-ttf
+SUBDIR+=	haplohseq
 SUBDIR+=	harmony
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
