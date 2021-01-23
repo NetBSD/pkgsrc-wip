@@ -5256,6 +5256,7 @@ SUBDIR+=	tex-bxjaprnind-doc
 SUBDIR+=	tex-bxjatoucs
 SUBDIR+=	tex-bxjatoucs-doc
 SUBDIR+=	tex-bxjscls
+SUBDIR+=	tex-bxjscls-doc
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math

@@ -1,0 +1,7 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/bxjscls/LICENSE
+share/texmf-dist/doc/latex/bxjscls/README-ja.md
+share/texmf-dist/doc/latex/bxjscls/README.md
+share/texmf-dist/doc/latex/bxjscls/bxjscls-manual.pdf
+share/texmf-dist/doc/latex/bxjscls/bxjscls-manual.tex
+share/texmf-dist/doc/latex/bxjscls/bxjscls.pdf
