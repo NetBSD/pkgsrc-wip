@@ -1,0 +1,6 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/bxbase/LICENSE
+share/texmf-dist/doc/latex/bxbase/README-ja.md
+share/texmf-dist/doc/latex/bxbase/README.md
+share/texmf-dist/doc/latex/bxbase/bxbase-ja.pdf
+share/texmf-dist/doc/latex/bxbase/bxbase-ja.tex
