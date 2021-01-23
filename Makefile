@@ -5272,6 +5272,7 @@ SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
 SUBDIR+=	tex-lualatex-math-doc
 SUBDIR+=	tex-mathtools-doc
+SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-qrcode
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
