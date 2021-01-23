@@ -5243,6 +5243,7 @@ SUBDIR+=	tex-babel-japanese-doc
 SUBDIR+=	tex-breqn-doc
 SUBDIR+=	tex-bxbase
 SUBDIR+=	tex-bxbase-doc
+SUBDIR+=	tex-bxcjkjatype
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
