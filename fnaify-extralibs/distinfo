@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (fnaify-extralibs/0.1.tar.gz) = f1b569039dcbad2a28406495f3bdab9810134f7d
+RMD160 (fnaify-extralibs/0.1.tar.gz) = ad93c3289233b6ea27231a0c0f8ccf7c1fba4b29
+SHA512 (fnaify-extralibs/0.1.tar.gz) = 1bca0d4f7f7aedf13182847b1a83a16205b14c8cca57155f367384b8c1e774fcfa4f655eb0597cc6b75e75811a2ded2c26927590005b79a1b2040a83b4d38fa0
+Size (fnaify-extralibs/0.1.tar.gz) = 445541 bytes
+SHA1 (patch-Makefile) = ac1b1222fe97da166e911a4ed2b2e500bca1b8e1
