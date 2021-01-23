@@ -1,0 +1,6 @@
+@comment $NetBSD$
+share/texmf-dist/doc/platex/jlreq-deluxe/LICENSE
+share/texmf-dist/doc/platex/jlreq-deluxe/README-ja.md
+share/texmf-dist/doc/platex/jlreq-deluxe/README.md
+share/texmf-dist/doc/platex/jlreq-deluxe/jlreq-deluxe.pdf
+share/texmf-dist/doc/platex/jlreq-deluxe/jlreq-deluxe.tex

@@ -5282,6 +5282,7 @@ SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-jlreq
 SUBDIR+=	tex-jlreq-deluxe
+SUBDIR+=	tex-jlreq-deluxe-doc
 SUBDIR+=	tex-jlreq-doc
 SUBDIR+=	tex-lineno-doc
 SUBDIR+=	tex-lualatex-math
