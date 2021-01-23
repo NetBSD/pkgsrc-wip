@@ -5268,6 +5268,7 @@ SUBDIR+=	tex-endnotesj-doc
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-fixjfm
 SUBDIR+=	tex-fixjfm-doc
+SUBDIR+=	tex-gentombow
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-lineno-doc

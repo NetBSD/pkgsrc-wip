@@ -1,0 +1,7 @@
+@comment $NetBSD$
+share/texmf-dist/tex/latex/gentombow/bounddvi.sty
+share/texmf-dist/tex/latex/gentombow/gentombow.sty
+share/texmf-dist/tex/latex/gentombow/pxesopic.sty
+share/texmf-dist/tex/latex/gentombow/pxgentombow.sty
+share/texmf-dist/tex/latex/gentombow/pxpdfpages.sty
+share/texmf-dist/tex/latex/gentombow/pxtextpos.sty
