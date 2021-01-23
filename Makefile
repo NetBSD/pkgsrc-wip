@@ -5273,6 +5273,7 @@ SUBDIR+=	tex-lualatex-math
 SUBDIR+=	tex-lualatex-math-doc
 SUBDIR+=	tex-mathtools-doc
 SUBDIR+=	tex-pxtatescale
+SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
