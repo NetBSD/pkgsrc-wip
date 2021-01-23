@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/generic/ifxptex/README
+share/texmf-dist/doc/generic/ifxptex/ifxptex-doc.pdf
+share/texmf-dist/doc/generic/ifxptex/ifxptex-doc.tex

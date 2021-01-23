@@ -5275,6 +5275,7 @@ SUBDIR+=	tex-haranoaji-extra-doc
 SUBDIR+=	tex-ifptex
 SUBDIR+=	tex-ifptex-doc
 SUBDIR+=	tex-ifxptex
+SUBDIR+=	tex-ifxptex-doc
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
 SUBDIR+=	tex-lineno-doc
