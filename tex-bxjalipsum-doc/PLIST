@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/bxjalipsum/LICENSE
+share/texmf-dist/doc/latex/bxjalipsum/README.md
+share/texmf-dist/doc/latex/bxjalipsum/sample-bxjalipsum-1.tex
+share/texmf-dist/doc/latex/bxjalipsum/sample-bxjalipsum-2.tex
