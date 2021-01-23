@@ -22,12 +22,17 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 bin share/fnaify
 
 REPLACE_BASH+=			fnaify
 
+.include "../../mk/bsd.prefs.mk"
+
 SUBST_CLASSES+=			pkgsrc-paths
 SUBST_STAGE.pkgsrc-paths=	pre-configure
 SUBST_FILES.pkgsrc-paths+=	fnaify
-SUBST_SED.pkgsrc-paths=		-e s,depdir.*,depdir=${PREFIX}/lib:${X11BASE}/lib,
-SUBST_SED.pkgsrc-paths=		-e s,fnadir.*,fnadir=${PREFIX}/share/FNA/,
-SUBST_SED.pkgsrc-paths=		-e s,/usr/local/,${PREFIX},
+SUBST_SED.pkgsrc-paths=		-e 's,^depdir.*,depdir=${PREFIX}/lib:${X11BASE}/lib,'
+SUBST_SED.pkgsrc-paths+=	-e 's,^fnadir.*,fnadir=${PREFIX}/share/FNA/,'
+SUBST_SED.pkgsrc-paths+=	-e s,/usr/local/,${PREFIX},
+.if ${OPSYS} == "NetBSD"
+SUBST_SED.pkgsrc-paths+=	-e s,ld.so,ld.elf_so,
+.endif
 
 
 .include "../../wip/fna/buildlink3.mk"
