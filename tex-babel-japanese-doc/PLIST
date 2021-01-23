@@ -1,0 +1,7 @@
+@comment $NetBSD$
+share/texmf-dist/doc/generic/babel-japanese/README.md
+share/texmf-dist/doc/generic/babel-japanese/babel-japanese-sample.pdf
+share/texmf-dist/doc/generic/babel-japanese/babel-japanese-sample.tex
+share/texmf-dist/doc/generic/babel-japanese/babel-japanese.pdf
+share/texmf-dist/doc/generic/babel-japanese/japanese.pdf
+share/texmf-dist/doc/generic/babel-japanese/japanese.tex
