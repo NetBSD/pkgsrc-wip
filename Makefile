@@ -5297,6 +5297,7 @@ SUBDIR+=	tex-morisawa-doc
 SUBDIR+=	tex-platex-tools
 SUBDIR+=	tex-platex-tools-doc
 SUBDIR+=	tex-platexcheat-doc
+SUBDIR+=	tex-plautopatch
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
