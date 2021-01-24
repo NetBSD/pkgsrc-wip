@@ -5329,6 +5329,7 @@ SUBDIR+=	tex-smartdiagram
 SUBDIR+=	tex-stix2-otf
 SUBDIR+=	tex-stix2-otf-doc
 SUBDIR+=	tex-texlive-ja-doc
+SUBDIR+=	tex-uptex-base
 SUBDIR+=	texlab
 SUBDIR+=	texlive-collection-langcjk
 SUBDIR+=	texlive-tlpdb
