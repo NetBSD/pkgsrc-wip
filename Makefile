@@ -5575,7 +5575,6 @@ SUBDIR+=	vpr
 SUBDIR+=	vreng
 SUBDIR+=	vsearch
 SUBDIR+=	vte
-SUBDIR+=	vulkan-headers
 SUBDIR+=	vulkan-loader
 SUBDIR+=	wackamole
 SUBDIR+=	waffle
