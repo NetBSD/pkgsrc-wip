@@ -1,5 +1,9 @@
 $NetBSD$
 
+SHA1 (AdGuardHome/AdGuardHome-0.104.3-frontend.tar.gz) = c4c93793a84f5469a168f5908a79e4de618896c9
+RMD160 (AdGuardHome/AdGuardHome-0.104.3-frontend.tar.gz) = 37a7a35fbd0d7ce89ae06b248d5b5d1d3b1c9f03
+SHA512 (AdGuardHome/AdGuardHome-0.104.3-frontend.tar.gz) = 088e97fd2c1f06a79891061661046f7613253c997f4ec590077b73225e4535fa60a788c4f6b55ad6aa29a670fc459d4d1cd79ea3e08eb8b9e627fb9d9a4f8e4c
+Size (AdGuardHome/AdGuardHome-0.104.3-frontend.tar.gz) = 2298109 bytes
 SHA1 (AdGuardHome/cloud.google.com_go_@v_v0.26.0.mod) = 8293f3ba79a69f4176a8f80fba7311b4f03e179e
 RMD160 (AdGuardHome/cloud.google.com_go_@v_v0.26.0.mod) = 072627a02c6b01bbb485da13d664567e3064d7ab
 SHA512 (AdGuardHome/cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
