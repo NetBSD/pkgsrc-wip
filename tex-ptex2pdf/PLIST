@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/ptex2pdf
+share/texmf-dist/scripts/ptex2pdf/ptex2pdf.lua
