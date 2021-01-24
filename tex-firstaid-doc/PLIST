@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/firstaid/README.md
+share/texmf-dist/doc/latex/firstaid/changes.txt
+share/texmf-dist/doc/latex/firstaid/latex2e-first-aid-for-external-files.pdf
