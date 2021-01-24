@@ -5305,6 +5305,7 @@ SUBDIR+=	tex-ptex2pdf-doc
 SUBDIR+=	tex-pxbase
 SUBDIR+=	tex-pxbase-doc
 SUBDIR+=	tex-pxchfon
+SUBDIR+=	tex-pxchfon-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
