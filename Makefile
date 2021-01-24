@@ -1300,6 +1300,7 @@ SUBDIR+=	go-stack
 SUBDIR+=	go-streamquote
 SUBDIR+=	go-stripansi
 SUBDIR+=	go-structs
+SUBDIR+=	go-tail
 SUBDIR+=	go-tiff
 SUBDIR+=	go-timego
 SUBDIR+=	go-transcoder
