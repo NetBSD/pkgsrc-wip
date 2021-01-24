@@ -1,0 +1,6 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/go-tomb/tomb.a
+gopkg/src/github.com/go-tomb/tomb/LICENSE
+gopkg/src/github.com/go-tomb/tomb/README.md
+gopkg/src/github.com/go-tomb/tomb/tomb.go
+gopkg/src/github.com/go-tomb/tomb/tomb_test.go

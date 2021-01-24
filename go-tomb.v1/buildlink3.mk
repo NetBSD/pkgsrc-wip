@@ -1,0 +1,15 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	go-tomb.v1
+
+.if !defined(GO_TOMB.V1_BUILDLINK3_MK)
+GO_TOMB.V1_BUILDLINK3_MK:=
+
+BUILDLINK_CONTENTS_FILTER.go-tomb.v1=	${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.go-tomb.v1?=	build
+
+BUILDLINK_API_DEPENDS.go-tomb.v1+=	go-tomb.v1>=20140924nb1
+BUILDLINK_PKGSRCDIR.go-tomb.v1?=	../../wip/go-tomb.v1
+.endif	# GO_TOMB.V1_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-go-tomb.v1

@@ -1303,6 +1303,7 @@ SUBDIR+=	go-structs
 SUBDIR+=	go-tail
 SUBDIR+=	go-tiff
 SUBDIR+=	go-timego
+SUBDIR+=	go-tomb.v1
 SUBDIR+=	go-transcoder
 SUBDIR+=	go-trie
 SUBDIR+=	go-uilive
