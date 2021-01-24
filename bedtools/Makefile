@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bedtools-2.29.2
+DISTNAME=	bedtools-2.30.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arq5x/}
 GITHUB_PROJECT=	bedtools2
@@ -10,6 +10,8 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://bedtools.readthedocs.io/en/latest/
 COMMENT=	Swiss army knife for genome arithmetic
 LICENSE=	mit
+
+DEPENDS=	samtools>0:../../biology/samtools
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -21,10 +23,8 @@ SUBST_STAGE.pybin=	pre-configure
 SUBST_SED.pybin=	-e 's|python|${PYTHONBIN}|g'
 SUBST_FILES.pybin=	Makefile
 
-# Avoid conflict with C++20 <version> by adding .txt suffix
-post-extract:
-	${MV} ${WRKSRC}/src/utils/gzstream/version \
-		${WRKSRC}/src/utils/gzstream/version.txt
+do-test:
+	(cd ${WRKSRC}/test && bash test.sh)
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
