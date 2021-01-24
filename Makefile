@@ -5337,6 +5337,7 @@ SUBDIR+=	tex-uptex-base-doc
 SUBDIR+=	tex-uptex-doc
 SUBDIR+=	tex-uptex-fonts
 SUBDIR+=	tex-uptex-fonts-doc
+SUBDIR+=	tex-zxjafbfont
 SUBDIR+=	texlab
 SUBDIR+=	texlive-collection-langcjk
 SUBDIR+=	texlive-tlpdb
