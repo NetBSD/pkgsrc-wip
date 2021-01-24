@@ -10,7 +10,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rfht/libstubborn/
-COMMENT=	library of generic stub functions
+COMMENT=	Library of generic stub functions
 LICENSE=	isc
 
 WRKSRC=	${WRKDIR}/libstubborn-0.1
@@ -18,7 +18,7 @@ WRKSRC=	${WRKDIR}/libstubborn-0.1
 INSTALLATION_DIRS+=	lib
 
 do-install:
-	cd ${WRKSRC}; \
+	set -e; cd ${WRKSRC}; \
 	${LN} -sf libstubborn.so.0.0 libstubborn.so
 	${INSTALL_DATA} ${WRKSRC}/libstubborn.so* \
 		${DESTDIR}${PREFIX}/lib/
