@@ -5295,6 +5295,7 @@ SUBDIR+=	tex-mendex-doc-doc
 SUBDIR+=	tex-morisawa
 SUBDIR+=	tex-morisawa-doc
 SUBDIR+=	tex-platex-tools
+SUBDIR+=	tex-platex-tools-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
