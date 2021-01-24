@@ -5311,6 +5311,7 @@ SUBDIR+=	tex-pxcjkcat-doc
 SUBDIR+=	tex-pxjahyper
 SUBDIR+=	tex-pxjahyper-doc
 SUBDIR+=	tex-pxjodel
+SUBDIR+=	tex-pxjodel-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
