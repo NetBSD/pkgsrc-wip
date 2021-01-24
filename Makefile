@@ -5265,6 +5265,7 @@ SUBDIR+=	tex-convbkmk
 SUBDIR+=	tex-convbkmk-doc
 SUBDIR+=	tex-endnotesj
 SUBDIR+=	tex-endnotesj-doc
+SUBDIR+=	tex-everyshi
 SUBDIR+=	tex-fancyref-doc
 SUBDIR+=	tex-fixjfm
 SUBDIR+=	tex-fixjfm-doc
