@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.vulkan-loader?=	../../wip/vulkan-loader
 # XXX provides a wrappered API or otherwise does not expose the APIs of the
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
-.include "../../wip/vulkan-headers/buildlink3.mk"
+.include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .endif	# VULKAN_LOADER_BUILDLINK3_MK

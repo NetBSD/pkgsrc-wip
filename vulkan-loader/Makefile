@@ -27,7 +27,7 @@ PKGCONFIG_OVERRIDE+=	loader/vulkan.pc.in
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
-.include "../../wip/vulkan-headers/buildlink3.mk"
+.include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
