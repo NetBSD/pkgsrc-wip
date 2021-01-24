@@ -5268,6 +5268,7 @@ SUBDIR+=	tex-endnotesj-doc
 SUBDIR+=	tex-everyshi
 SUBDIR+=	tex-everyshi-doc
 SUBDIR+=	tex-fancyref-doc
+SUBDIR+=	tex-firstaid
 SUBDIR+=	tex-fixjfm
 SUBDIR+=	tex-fixjfm-doc
 SUBDIR+=	tex-gentombow
