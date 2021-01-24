@@ -1292,6 +1292,7 @@ SUBDIR+=	go-rice
 SUBDIR+=	go-riff
 SUBDIR+=	go-rsrc
 SUBDIR+=	go-rtp
+SUBDIR+=	go-rtcp
 SUBDIR+=	go-semver
 SUBDIR+=	go-stack
 SUBDIR+=	go-streamquote
