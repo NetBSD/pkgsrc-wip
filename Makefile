@@ -5488,6 +5488,7 @@ SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	unzip
 SUBDIR+=	uperf
+SUBDIR+=	upmendex
 SUBDIR+=	upower
 SUBDIR+=	uprof
 SUBDIR+=	ups-monitor
