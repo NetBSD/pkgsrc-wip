@@ -34,6 +34,12 @@ SUBST_SED.pkgsrc-paths+=	-e s,/usr/local/,${PREFIX},
 SUBST_SED.pkgsrc-paths+=	-e s,ld.so,ld.elf_so,
 .endif
 
-
+.include "../../wip/libstubborn/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
+.include "../../audio/faudio/buildlink3.mk"
+.include "../../wip/libtheoraplay/buildlink3.mk"
 .include "../../wip/fna/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
