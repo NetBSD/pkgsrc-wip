@@ -5317,6 +5317,7 @@ SUBDIR+=	tex-pxrubrica-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-pxufont
+SUBDIR+=	tex-pxufont-doc
 SUBDIR+=	tex-qrcode
 SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
