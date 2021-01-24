@@ -1,0 +1,6 @@
+@comment $NetBSD$
+share/texmf-dist/doc/platex/pxbase/LICENSE
+share/texmf-dist/doc/platex/pxbase/README-ja.md
+share/texmf-dist/doc/platex/pxbase/README.md
+share/texmf-dist/doc/platex/pxbase/pxbabel.pdf
+share/texmf-dist/doc/platex/pxbase/pxbabel.tex
