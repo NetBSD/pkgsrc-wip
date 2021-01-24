@@ -1231,6 +1231,7 @@ SUBDIR+=	go-gtk2
 SUBDIR+=	go-hex
 SUBDIR+=	go-hidden
 SUBDIR+=	go-httphead
+SUBDIR+=	go-httppath
 SUBDIR+=	go-httprouter
 SUBDIR+=	go-httpsnoop
 SUBDIR+=	go-humanize
