@@ -5299,6 +5299,7 @@ SUBDIR+=	tex-platex-tools-doc
 SUBDIR+=	tex-platexcheat-doc
 SUBDIR+=	tex-plautopatch
 SUBDIR+=	tex-plautopatch-doc
+SUBDIR+=	tex-ptex-manual-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
