@@ -1,0 +1,11 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/pion/logging.a
+gopkg/src/github.com/pion/logging/LICENSE
+gopkg/src/github.com/pion/logging/README.md
+gopkg/src/github.com/pion/logging/codecov.yml
+gopkg/src/github.com/pion/logging/go.mod
+gopkg/src/github.com/pion/logging/go.sum
+gopkg/src/github.com/pion/logging/logger.go
+gopkg/src/github.com/pion/logging/logging_test.go
+gopkg/src/github.com/pion/logging/renovate.json
+gopkg/src/github.com/pion/logging/scoped.go

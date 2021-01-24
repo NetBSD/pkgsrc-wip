@@ -1249,6 +1249,7 @@ SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-ksuid
 SUBDIR+=	go-log
+SUBDIR+=	go-logging
 SUBDIR+=	go-lzw
 SUBDIR+=	go-madon
 SUBDIR+=	go-makezero

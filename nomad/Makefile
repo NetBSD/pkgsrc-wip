@@ -15,5 +15,8 @@ GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/hashicorp/nomad/
 
 
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/gopkg/src/${GO_PLATFORM}/${GO_SRCPATH}/vendor
+
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
