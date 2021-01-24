@@ -5340,6 +5340,7 @@ SUBDIR+=	tex-uptex-fonts-doc
 SUBDIR+=	tex-zxjafbfont
 SUBDIR+=	tex-zxjafbfont-doc
 SUBDIR+=	tex-zxjatype
+SUBDIR+=	tex-zxjatype-doc
 SUBDIR+=	texlab
 SUBDIR+=	texlive-collection-langcjk
 SUBDIR+=	texlive-tlpdb
