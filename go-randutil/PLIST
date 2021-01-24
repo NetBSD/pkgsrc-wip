@@ -1,0 +1,12 @@
+@comment $NetBSD$
+gopkg/pkg/${GO_PLATFORM}/github.com/pion/randutil.a
+gopkg/src/github.com/pion/randutil/LICENSE
+gopkg/src/github.com/pion/randutil/README.md
+gopkg/src/github.com/pion/randutil/codecov.yml
+gopkg/src/github.com/pion/randutil/crypto.go
+gopkg/src/github.com/pion/randutil/crypto_test.go
+gopkg/src/github.com/pion/randutil/go.mod
+gopkg/src/github.com/pion/randutil/math.go
+gopkg/src/github.com/pion/randutil/math_test.go
+gopkg/src/github.com/pion/randutil/rand_test.go
+gopkg/src/github.com/pion/randutil/renovate.json
