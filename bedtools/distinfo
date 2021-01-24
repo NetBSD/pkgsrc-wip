@@ -5,4 +5,5 @@ RMD160 (bedtools-2.30.0.tar.gz) = 1cc30e5bc3df12f38d8f1e055ff2f939d7608395
 SHA512 (bedtools-2.30.0.tar.gz) = 3d69d6a53d3e5d15597dfefa26f7895231adbf3c1fe3b16ee4213e497ef01a20698add2f0e6f03d8eb7cd7c70709955f0ebdf897a025a83d31ef17e2c91f9856
 Size (bedtools-2.30.0.tar.gz) = 20639858 bytes
 SHA1 (patch-Makefile) = d6a76cb23e623842d6d5c60d67eff928b45b091c
+SHA1 (patch-src_utils_BamTools_include_SamHeader.hpp) = 7ab168b247b5edf7f3eccd9ef7329a5e1605c787
 SHA1 (patch-src_utils_htslib_Makefile) = ba513efa59eed05321c176185fb576f4892ea7a5

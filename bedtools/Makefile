@@ -11,8 +11,6 @@ HOMEPAGE=	https://bedtools.readthedocs.io/en/latest/
 COMMENT=	Swiss army knife for genome arithmetic
 LICENSE=	mit
 
-DEPENDS=	samtools>0:../../biology/samtools
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 REPLACE_SH+=	scripts/vcfsort.sh
