@@ -5307,6 +5307,7 @@ SUBDIR+=	tex-pxbase-doc
 SUBDIR+=	tex-pxchfon
 SUBDIR+=	tex-pxchfon-doc
 SUBDIR+=	tex-pxcjkcat
+SUBDIR+=	tex-pxcjkcat-doc
 SUBDIR+=	tex-pxtatescale
 SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qrcode
