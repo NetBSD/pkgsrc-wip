@@ -1,4 +1,0 @@
-@comment $NetBSD$
-include/theoraplay.h
-include/theoraplay_cvtrgb.h
-lib/libtheoraplay.so

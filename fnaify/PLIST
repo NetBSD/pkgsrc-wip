@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/fnaify
-man/man1/fnaify.1
-share/fnaify/fnaify.dllmap.config
