@@ -6,5 +6,5 @@ SHA512 (openfmod/04e63e9b0ba1562db32570a0a7b68030c289dd89-04e63e9b0ba1562db32570
 Size (openfmod/04e63e9b0ba1562db32570a0a7b68030c289dd89-04e63e9b0ba1562db32570a0a7b68030c289dd89.tar.gz) = 26809 bytes
 SHA1 (patch-include_openfmod-internal.h) = 9b1fcd0c8e8d682b08819b68b56ebb32a430b1b3
 SHA1 (patch-makefile) = c8480b3f69962acea11232220eda1f32fe113cec
-SHA1 (patch-src_fmod-studio.c) = 74bbd5411d3badc80c04e69d7e7f63cb834a5696
+SHA1 (patch-src_fmod-studio.c) = 72b37404764bc9cee198141138e503952e1cc83a
 SHA1 (patch-src_fsb-file.c) = 56ecead87136242f49275bed24d0235baafc7ef8
