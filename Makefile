@@ -5343,6 +5343,7 @@ SUBDIR+=	tex-zxjatype
 SUBDIR+=	tex-zxjatype-doc
 SUBDIR+=	texlab
 SUBDIR+=	texlive-collection-langcjk
+SUBDIR+=	texlive-collection-langjapanese
 SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
 SUBDIR+=	textosaurus
