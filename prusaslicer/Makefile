@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	${DISTNAME:tl}
-DISTNAME=	PrusaSlicer-2.2.0
+DISTNAME=	PrusaSlicer-2.3.0
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
 GITHUB_PROJECT=	PrusaSlicer
@@ -36,11 +36,13 @@ CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../wip/threadingbuildingblocks/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

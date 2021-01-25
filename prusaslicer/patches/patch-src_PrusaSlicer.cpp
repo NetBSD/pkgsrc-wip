@@ -2,17 +2,17 @@ $NetBSD$
 
 Use more portable boost routine for finding running executable path.
 
---- src/PrusaSlicer.cpp.orig	2020-03-21 10:55:51.000000000 +0000
+--- src/PrusaSlicer.cpp.orig	2021-01-11 13:01:51.000000000 +0000
 +++ src/PrusaSlicer.cpp
-@@ -22,6 +22,7 @@
- #include <cstring>
+@@ -23,6 +23,7 @@
  #include <iostream>
  #include <math.h>
+ #include <boost/algorithm/string/predicate.hpp>
 +#include <boost/dll/runtime_symbol_info.hpp>
  #include <boost/filesystem.hpp>
  #include <boost/nowide/args.hpp>
  #include <boost/nowide/cenv.hpp>
-@@ -554,7 +555,7 @@ bool CLI::setup(int argc, char **argv)
+@@ -594,7 +595,7 @@ bool CLI::setup(int argc, char **argv)
          }
      }
  

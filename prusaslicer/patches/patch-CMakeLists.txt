@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use GTK3, since that's how we build wxWidgets.
+
+--- CMakeLists.txt.orig	2021-01-11 13:01:51.000000000 +0000
++++ CMakeLists.txt
+@@ -33,7 +33,7 @@ option(SLIC3R_MSVC_PDB          "Generat
+ option(SLIC3R_PERL_XS           "Compile XS Perl module and enable Perl unit and integration tests" 0)
+ option(SLIC3R_ASAN              "Enable ASan on Clang and GCC" 0)
+ 
+-set(SLIC3R_GTK "2" CACHE STRING "GTK version to use with wxWidgets on Linux")
++set(SLIC3R_GTK "3" CACHE STRING "GTK version to use with wxWidgets on Linux")
+ 
+ if (APPLE)
+     set(CMAKE_FIND_FRAMEWORK LAST)

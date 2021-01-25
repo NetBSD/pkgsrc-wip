@@ -1,12 +1,14 @@
 $NetBSD$
 
-SHA1 (PrusaSlicer-2.2.0.tar.gz) = 6ce58ebc8b786484374ff735bc783b66b9a58099
-RMD160 (PrusaSlicer-2.2.0.tar.gz) = 2a151b3e488fa26c2a3af2e67996b5954b801966
-SHA512 (PrusaSlicer-2.2.0.tar.gz) = 5c8dc5b581e04208a1ae53771ef2607da189ee85aadf501ce1480008f5a6ddb10bb528ddc2608d3f04acd26c583ff895ad4148d6a1397f002292e20098971e1d
-Size (PrusaSlicer-2.2.0.tar.gz) = 30811929 bytes
+SHA1 (PrusaSlicer-2.3.0.tar.gz) = a7fa94868bdd5d65c3b109d724be509faa5126ef
+RMD160 (PrusaSlicer-2.3.0.tar.gz) = 7a8b48fd89ae1e4fca2da089edf2696050ae380e
+SHA512 (PrusaSlicer-2.3.0.tar.gz) = 2bd3e7d384ba1c59007744f4aba89de9ca9864e4bdc7b6faa9a56f514212878d1d2e7d70fc0f08e39310af76c365d1a3f8f1df263e8656249483a5b33cab417d
+Size (PrusaSlicer-2.3.0.tar.gz) = 34785471 bytes
+SHA1 (patch-CMakeLists.txt) = 0cf76b347d1a75bc50474674cf5e968fe325263b
 SHA1 (patch-src_CMakeLists_txt) = 1ec421e911ef96ae412643216080e1f26e5282c4
-SHA1 (patch-src_PrusaSlicer.cpp) = ab61fc3ed6b99c9686c26a0dcc978c819783a27f
-SHA1 (patch-src_admesh_stlinit.cpp) = db72a9660045de06db58188227767aefd84ad829
+SHA1 (patch-src_PrusaSlicer.cpp) = 50c517a9e6f2b7a6c639a0fd81811d087bb15e86
 SHA1 (patch-src_avrdude_arduino.c) = ff02a4cab1c2d8c82ec7b22c7447ed5ec360ac57
 SHA1 (patch-src_avrdude_libavrdude.h) = 414cf7c6c23f7eed61319f8580c1dd7218ac4337
-SHA1 (patch-src_slic3r_GUI_Mouse3DController.hpp) = 4e3d61385da6e31d09a740160bac66e77108b74d
+SHA1 (patch-src_libslic3r_Thread.cpp) = 6cc8b5ab370d82fdc245e3a666dc0b6f1200a4eb
+SHA1 (patch-src_slic3r_GUI_InstanceCheck.cpp) = c9ae1ec2db2b493578cc128383fa4cf0b3e2ae6a
+SHA1 (patch-src_slic3r_GUI_Mouse3DController.hpp) = 98de31b8d470b850aa2b098fd4e914a86631c668
