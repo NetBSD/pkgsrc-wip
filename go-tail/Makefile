@@ -19,5 +19,6 @@ GO_SRCPATH=	github.com/nxadm/tail
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/gopkg/src/${GO_SRCPATH}/vendor
 
+
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -9,7 +9,7 @@ BUILDLINK_CONTENTS_FILTER.go-amqp=	${EGREP} gopkg/
 BUILDLINK_DEPMETHOD.go-amqp?=		build
 
 BUILDLINK_API_DEPENDS.go-amqp+=	go-amqp>=1.0.0
-BUILDLINK_PKGSRCDIR.go-amqp?=	../../wipy/go-amqp
+BUILDLINK_PKGSRCDIR.go-amqp?=	../../wip/go-amqp
 .endif	# GO_AMQP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-go-amqp
