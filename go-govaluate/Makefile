@@ -15,7 +15,7 @@ LICENSE=	mit
 GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/Knetic/${GITHUB_PROJECT}
 
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash:run
 
 REPLACE_BASH+=	Knetic/govaluate/test.sh
 
