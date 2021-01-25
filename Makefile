@@ -1245,6 +1245,7 @@ SUBDIR+=	go-jettison
 SUBDIR+=	go-jira
 SUBDIR+=	go-jpillora-backoff
 SUBDIR+=	go-json-iterator
+SUBDIR+=	go-jsoncolor
 SUBDIR+=	go-jsonerror
 SUBDIR+=	go-jsonparser
 SUBDIR+=	go-jump
