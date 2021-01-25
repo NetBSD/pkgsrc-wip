@@ -14,4 +14,3 @@ sbin/pkg-remake
 sbin/pkg-vuln
 sbin/pkgsrc-add-license
 sbin/pkgsrc-make
-sbin/pkgsrc-wip-checkout
