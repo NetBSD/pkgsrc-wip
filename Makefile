@@ -1232,6 +1232,7 @@ SUBDIR+=	go-govaluate
 SUBDIR+=	go-gtk2
 SUBDIR+=	go-hex
 SUBDIR+=	go-hidden
+SUBDIR+=	go-htmlcolor
 SUBDIR+=	go-httphead
 SUBDIR+=	go-httppath
 SUBDIR+=	go-httprouter
