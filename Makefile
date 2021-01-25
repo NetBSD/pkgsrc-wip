@@ -1284,6 +1284,7 @@ SUBDIR+=	go-properties-map
 SUBDIR+=	go-protobuf-go
 SUBDIR+=	go-ps
 SUBDIR+=	go-python
+SUBDIR+=	go-randomdata
 SUBDIR+=	go-randutil
 SUBDIR+=	go-rateio
 SUBDIR+=	go-raymond
