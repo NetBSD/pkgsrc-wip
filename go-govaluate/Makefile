@@ -17,7 +17,7 @@ GO_SRCPATH=	github.com/Knetic/${GITHUB_PROJECT}
 
 USE_TOOLS+=	bash:run
 
-REPLACE_BASH+=	Knetic/govaluate/test.sh
+REPLACE_BASH+=	test.sh
 
 
 .include "../../lang/go/go-package.mk"
