@@ -1241,6 +1241,7 @@ SUBDIR+=	go-httpsnoop
 SUBDIR+=	go-humanize
 SUBDIR+=	go-imgui
 SUBDIR+=	go-incremental
+SUBDIR+=	go-influxdb1-client
 SUBDIR+=	go-intern
 SUBDIR+=	go-jennifer
 SUBDIR+=	go-jettison
