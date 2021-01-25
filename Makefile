@@ -4982,6 +4982,7 @@ SUBDIR+=	service
 SUBDIR+=	seturgent
 SUBDIR+=	sfeed-git
 SUBDIR+=	sfeed_curses-git
+SUBDIR+=	sfm
 SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
