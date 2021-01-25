@@ -1184,6 +1184,7 @@ SUBDIR+=	go-bpool
 SUBDIR+=	go-brotli
 SUBDIR+=	go-cache
 SUBDIR+=	go-cascadia
+SUBDIR+=	go-client_model
 SUBDIR+=	go-circbuf
 SUBDIR+=	go-clir
 SUBDIR+=	go-collectd
