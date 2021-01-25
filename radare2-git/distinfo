@@ -6,4 +6,3 @@ SHA512 (radare2-3.6.0.tar.gz) = 41f55611a419e32392e0a32d25c7126539bed52f1e5d5b63
 Size (radare2-3.6.0.tar.gz) = 14132547 bytes
 SHA1 (patch-libr_anal_p_pyc.mk) = f6e028702a615ac2751177e8a47e3cad379829d8
 SHA1 (patch-libr_anal_p_wasm.mk) = 5414ff02a5785e2805b60edb5e3a2b6f261bb012
-SHA1 (patch-sys_docker__build__alpine__image.sh) = 1445bbbc4497037e227cffb4878575b901628127
