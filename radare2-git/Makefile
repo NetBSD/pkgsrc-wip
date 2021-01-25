@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/03/21 21:01:51 krytarowski Exp $
+# $NetBSD: Makefile,v 1.27 2020/08/31 18:09:20 wiz Exp $
 
-DISTNAME=		radare2-1.3.0
+DISTNAME=		radare2-5.0.0
 CATEGORIES=		devel
 GIT_REPOSITORIES=	radare2
 GIT_REPO.radare2=	https://github.com/radare/radare2.git
@@ -17,9 +17,10 @@ CONFIGURE_ARGS+=	--with-sysmagic
 CONFIGURE_ARGS+=	--with-syscapstone
 CONFIGURE_ARGS+=	--with-syszip
 PKGCONFIG_OVERRIDE+=	pkgcfg/*.pc*
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake patch pkg-config perl
 
-CHECK_INTERPRETER_SKIP=	share/radare2/${PKGVERSION_NOREV}-git/www/m/vendors/fonts/iconjar-map.js
+# node
+CHECK_INTERPRETER_SKIP+=	share/radare2/${PKGVERSION_NOREV}/www/m/fonts/iconjar-map.js
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/12/05 00:50:56 krytarowski Exp $
+# $NetBSD: options.mk,v 1.1 2015/02/27 12:11:20 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.radare2
 PKG_SUPPORTED_OPTIONS=		ssl debug
