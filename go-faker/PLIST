@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/bin
+gopkg/pkg/${GO_PLATFORM}/github.com/manveru/faker.a
+gopkg/src/github.com/manveru/faker/LICENSE
+gopkg/src/github.com/manveru/faker/README.md
+gopkg/src/github.com/manveru/faker/bin/importer.go
+gopkg/src/github.com/manveru/faker/dict.go
+gopkg/src/github.com/manveru/faker/faker.go
+gopkg/src/github.com/manveru/faker/faker_test.go

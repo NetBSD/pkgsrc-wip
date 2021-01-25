@@ -1206,6 +1206,7 @@ SUBDIR+=	go-errorx
 SUBDIR+=	go-errwrap
 SUBDIR+=	go-eventsource
 SUBDIR+=	go-ewma
+SUBDIR+=	go-faker
 SUBDIR+=	go-fastprinter
 SUBDIR+=	go-fasttemplate
 SUBDIR+=	go-ffmpeg
