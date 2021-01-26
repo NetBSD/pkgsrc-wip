@@ -2,7 +2,7 @@ $NetBSD$
 
 Use pkgsrc libtommath (internally named libcyclonebn).
 
---- Makefile.orig	2020-08-14 21:48:06.000000000 +0000
+--- Makefile.orig	2021-01-25 23:12:19.000000000 +0000
 +++ Makefile
 @@ -8,8 +8,8 @@ include Makefile.config
  
@@ -15,7 +15,7 @@ Use pkgsrc libtommath (internally named libcyclonebn).
  CYC_LIBS = $(CYC_RT_LIB) $(CYC_BN_LIB)
  
  COBJ = scheme/base \
-@@ -96,8 +96,8 @@ $(CYC_RT_LIB): runtime.c include/cyclone
+@@ -95,8 +95,8 @@ $(CYC_RT_LIB): runtime.c include/cyclone
  	  $(CREATE_LIBRARY_COMMAND) $(CREATE_LIBRARY_FLAGS) $(LIBRARY_OUTPUT_FILE) runtime.o gc.o dispatch.o ffi.o mstreams.o hashset.o
  	  $(RANLIB_COMMAND)
  
@@ -26,7 +26,7 @@ Use pkgsrc libtommath (internally named libcyclonebn).
  
  cyclone: $(CFILES) $(COBJECTS) $(C_SHARED_OBJECTS) $(CYC_LIBS)
  	$(CC) cyclone.c $(CFLAGS) -c -o cyclone.o
-@@ -166,7 +166,7 @@ install:
+@@ -167,7 +167,7 @@ install:
  #install-libs:
  	$(MKDIR) $(DESTDIR)$(LIBDIR)
  	$(INSTALL) -m0644 $(CYC_RT_LIB) $(DESTDIR)$(LIBDIR)/
@@ -35,9 +35,9 @@ Use pkgsrc libtommath (internally named libcyclonebn).
  #install-cyclone:
  	$(MKDIR) $(DESTDIR)$(BINDIR)
  	$(MKDIR) $(DESTDIR)$(DATADIR)/scheme/cyclone
-@@ -191,7 +191,7 @@ install:
+@@ -192,7 +192,7 @@ install:
  	$(INSTALL) -m0755 icyc $(DESTDIR)$(BINDIR)/
- 	$(INSTALL) -m0755 cyclone-winds $(DESTDIR)$(BINDIR)/
+ 	$(INSTALL) -m0755 winds $(DESTDIR)$(BINDIR)/
  	$(INSTALL) -m0644 $(CYC_RT_LIB) $(DESTDIR)$(LIBDIR)/
 -	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
 +#	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/

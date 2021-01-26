@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/cyclone
-bin/cyclone-winds
 bin/icyc
+bin/winds
 include/cyclone/bignum.h
 include/cyclone/ck_ht_hash.h
 include/cyclone/hashset.h
