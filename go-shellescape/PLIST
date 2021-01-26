@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/escargs
+gopkg/pkg/${GO_PLATFORM}/github.com/alessio/shellescape.a
+gopkg/src/github.com/alessio/shellescape/AUTHORS
+gopkg/src/github.com/alessio/shellescape/CODE_OF_CONDUCT.md
+gopkg/src/github.com/alessio/shellescape/LICENSE
+gopkg/src/github.com/alessio/shellescape/README.md
+gopkg/src/github.com/alessio/shellescape/cmd/escargs/escargs.go
+gopkg/src/github.com/alessio/shellescape/example_test.go
+gopkg/src/github.com/alessio/shellescape/go.mod
+gopkg/src/github.com/alessio/shellescape/shellescape.go
+gopkg/src/github.com/alessio/shellescape/shellescape_test.go

@@ -1304,6 +1304,7 @@ SUBDIR+=	go-rsrc
 SUBDIR+=	go-rtp
 SUBDIR+=	go-rtcp
 SUBDIR+=	go-semver
+SUBDIR+=	go-shellescape
 SUBDIR+=	go-stack
 SUBDIR+=	go-streamquote
 SUBDIR+=	go-stripansi
