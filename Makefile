@@ -5371,7 +5371,6 @@ SUBDIR+=	thepeg
 SUBDIR+=	threadingbuildingblocks
 SUBDIR+=	thrift
 SUBDIR+=	thunderbird68-enigmail
-SUBDIR+=	tig
 SUBDIR+=	tilda
 SUBDIR+=	tilix
 SUBDIR+=	timewarrior
