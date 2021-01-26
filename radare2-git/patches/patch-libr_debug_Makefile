@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- libr/debug/Makefile.orig	2021-01-25 12:08:13.000000000 +0000
++++ libr/debug/Makefile
+@@ -6,7 +6,7 @@ R2DEPS+=r_socket
+ CFLAGS+=-DR2_PLUGIN_INCORE
+ 
+ ifeq ($(OSTYPE),bsd)
+-LDFLAGS=-lkvm
++LDFLAGS+=-lkvm
+ endif
+ 
+ foo:
