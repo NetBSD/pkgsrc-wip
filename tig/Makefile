@@ -5,7 +5,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://jonas.github.io/tig/
 COMMENT=	Ncurses-based GIT repository tool
 LICENSE=	gnu-gpl-v2
