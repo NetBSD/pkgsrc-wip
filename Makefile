@@ -3911,6 +3911,7 @@ SUBDIR+=	py-mathjspy
 SUBDIR+=	py-matplottheme
 SUBDIR+=	py-matrix-angular-sdk
 SUBDIR+=	py-matrix-synapse
+SUBDIR+=	py-mathopt
 SUBDIR+=	py-mave
 SUBDIR+=	py-mcerp
 SUBDIR+=	py-mcint
