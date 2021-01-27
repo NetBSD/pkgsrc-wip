@@ -5355,6 +5355,7 @@ SUBDIR+=	tex-smartdiagram
 SUBDIR+=	tex-stix2-otf
 SUBDIR+=	tex-stix2-otf-doc
 SUBDIR+=	tex-tabulary
+SUBDIR+=	tex-tabulary-doc
 SUBDIR+=	tex-texlive-ja-doc
 SUBDIR+=	tex-uplatex
 SUBDIR+=	tex-uplatex-doc
