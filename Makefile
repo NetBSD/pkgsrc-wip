@@ -554,6 +554,7 @@ SUBDIR+=	cvstrac
 SUBDIR+=	cwebx
 SUBDIR+=	cycle
 SUBDIR+=	cyclone
+SUBDIR+=	cyclone-docs
 SUBDIR+=	cygwin
 SUBDIR+=	cygwin-binutils
 SUBDIR+=	cyrus-imapd30
