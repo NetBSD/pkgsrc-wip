@@ -4422,6 +4422,7 @@ SUBDIR+=	py-sortedcollections
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spams
 SUBDIR+=	py-spark
+SUBDIR+=	py-sparse
 SUBDIR+=	py-spatialdata
 SUBDIR+=	py-spatious
 SUBDIR+=	py-spectral
