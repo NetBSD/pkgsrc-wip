@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.5 2014/06/01 12:49:43 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=	Numdifftools-0.4.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/N/n/}
-CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_PYPI:=N/Numdifftools/}
-EXTRACT_SUFX=	.zip
+DISTNAME=	numdifftools-0.9.39
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/numdifftools/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://code.google.com/p/numdifftools/
-COMMENT=	Tools for automatic numerical differentiation
+HOMEPAGE=	https://github.com/pbrod/numdifftools
+COMMENT=	Solves automatic numerical differentiation problems
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.12.1:../../math/py-scipy
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.8:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.11.1:../../math/py-statsmodels
+DEPENDS+=	${PYPKGPREFIX}-algopy>=0.5.7:../../wip/py-algopy
 
-do-test:
-	${RUN} cd ${WRKSRC}/numdifftools/test; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testnumdifftools.py
-
-.include "../../lang/python/egg.mk"
+BUILDLINK_API_DEPENDS.pynumpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

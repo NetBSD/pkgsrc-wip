@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2013/12/02 00:20:43 jihbed Exp $
 
-SHA1 (Numdifftools-0.4.0.zip) = 855cee9a5d3c72da058b2f6a9e704d5cb07da992
-RMD160 (Numdifftools-0.4.0.zip) = f76197f5e282a4b43b30d1ff8a8698cfc13cf28b
-SHA512 (Numdifftools-0.4.0.zip) = 7157b5e5024b186da693e436b628ffbd8306952551813afe0d553db113013f55e7ded0c98f5f3c100c6002c50323d5155aba69b6ebc216920d36059062cf3f62
-Size (Numdifftools-0.4.0.zip) = 170443 bytes
+SHA1 (numdifftools-0.9.39.tar.gz) = 336c470027eb0730e6cfec0db7710f690311b129
+RMD160 (numdifftools-0.9.39.tar.gz) = a043c7cb2111eb588549e1ae27af34aa7e621b32
+SHA512 (numdifftools-0.9.39.tar.gz) = ce582a14722bd400ceae41f0e0f17b8d31b079d3bc2fb2b66721f7570bb2b8394d21a002d535c52899cc0fc5301fd35833a4d8dc71585fe47af603e7c33f8d79
+Size (numdifftools-0.9.39.tar.gz) = 4635377 bytes
