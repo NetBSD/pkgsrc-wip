@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (exabgp/4.2.11.tar.gz) = 49076db8591cdf58dacaa40bc2e3091934056903
+RMD160 (exabgp/4.2.11.tar.gz) = 58c31f85b47ebac97e354d43fa82fdee34685cb6
+SHA512 (exabgp/4.2.11.tar.gz) = 61c143e90fd81323b03682ad46f2861576ab0328e2030259eff15bb9ef965477c514fb355112cbaf3dc138fb9f5582b6e1e1efb8d0d4313a9b9924ced156a155
+Size (exabgp/4.2.11.tar.gz) = 2931753 bytes
+SHA1 (patch-lib_exabgp_reactor_daemon.py) = cb284bfa0e3263c7c9e71b4c0adf01a25602ad41
+SHA1 (patch-setup.py) = fa9debeac9c2ab0610669244ffdbeeb3c48da264
