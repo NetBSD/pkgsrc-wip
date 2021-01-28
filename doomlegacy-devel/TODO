@@ -48,4 +48,19 @@ Part 18: Import final release
     Parts 10 to 17 are now available in games/doomlegacy
 
 
+Part 19: Warnings from modern compilers
+=======================================
+GCC 10 reports undefined behaviour for at least two locations.
+
+[X] Created upstream bug report #671
+    Fixed upstream in SVN revision 1571
+    => Still one warning with SVN revision 1574
+
+Clang 10 reports warning for a comparison to be always true.
+
+[X] Created upstream bug report #672
+    Fixed upstream in SVN revision 1572
+    => Tested to work with SVN revision 1574
+
+
 EOF
