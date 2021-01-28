@@ -50,7 +50,7 @@ SHARED_DOCS_LOC=	${PREFIX}/share/doc/${NAME}
 PIKE_MODULE_SRC=	src/${MODULE_TYPE}s/${INTERNAL_MODULENAME}
 PIKE_MODULE_OVERLAPPING_FILES=
 
-SYSTEM_MODULE_PATH!=	pike${PIKEVERSUFFIX} -x module --query=system_module_path
+SYSTEM_MODULE_PATH!=	pike${PIKEVERSUFFIX} -x module --query=system_module_path # we should execute this once per run, not per evaluation
 SYSTEM_DOC_PATH=	${PREFIX}/share/pike${PIKEVERSUFFIX}/refdoc
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/src/${MODULE_TYPE}s/${INTERNAL_MODULENAME} \
