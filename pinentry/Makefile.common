@@ -15,7 +15,7 @@ MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
+HOMEPAGE=		https://gnupg.org/related_software/pinentry/index.html
 LICENSE=		gnu-gpl-v2
 
 #PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
