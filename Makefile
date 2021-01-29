@@ -3070,6 +3070,7 @@ SUBDIR+=	pike8.0-Odbc
 SUBDIR+=	pilemc-svn
 SUBDIR+=	pimcommon
 SUBDIR+=	pinball
+SUBDIR+=	pinentry
 SUBDIR+=	pinentry-dmenu
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
