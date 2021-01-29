@@ -5,7 +5,7 @@ COMMENT=		Applications for entering PINs or Passphrases, FLTK enabled
 
 .include		"../../wip/pinentry/Makefile.common"
 
-DISTINFO_FILE=		${.CURDIR}/distinfo
+#DISTINFO_FILE=		${.CURDIR}/distinfo
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
