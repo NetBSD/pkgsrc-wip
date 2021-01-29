@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/gcta64
+share/gcta/test.bed
+share/gcta/test.bim
+share/gcta/test.fam
+share/gcta/test.phen

@@ -2164,6 +2164,7 @@ SUBDIR+=	linux-acl
 SUBDIR+=	linux-attr
 SUBDIR+=	linux-ch
 SUBDIR+=	linux-chprofessional
+SUBDIR+=	linux-gcta
 SUBDIR+=	linux-hotplug
 SUBDIR+=	linux-kbd
 SUBDIR+=	linux-kernel
