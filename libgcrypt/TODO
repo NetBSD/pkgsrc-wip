@@ -4,3 +4,5 @@ keccak.c: In function 'keccak_init':
 keccak.c:907:23: error: 'HWF_INTEL_FAST_SHLD' undeclared (first use in this function)
    else if (features & HWF_INTEL_FAST_SHLD)
                        ^~~~~~~~~~~~~~~~~~~
+
+Bugreport from wiz@: <https://dev.gnupg.org/T5278>
