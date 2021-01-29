@@ -1903,6 +1903,7 @@ SUBDIR+=	konsole
 SUBDIR+=	krename
 SUBDIR+=	kronometer
 SUBDIR+=	krusader
+SUBDIR+=	krusader-kf5
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
