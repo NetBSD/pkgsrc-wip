@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--disable-pinentry-curses
 CONFIGURE_ARGS+=	--disable-pinentry-emacs
 #CONFIGURE_ARGS+=	--disable-fallback-curses
 CONFIGURE_ARGS+=	--disable-pinentry-gnome3
+CONFIGURE_ARGS+=	--disable-pinentry-efl
 CONFIGURE_ARGS+=	--disable-libsecret
 
 INSTALL_DIRS=		fltk
