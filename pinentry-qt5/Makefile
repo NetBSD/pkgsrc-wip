@@ -2,6 +2,7 @@
 
 PKGNAME=		${DISTNAME:S/pinentry-/pinentry-qt5-/}
 COMMENT=		Applications for entering PINs or Passphrases, qt5 enabled
+CONFLICTS=		pinentry-qt4
 
 .include		"../../wip/pinentry/Makefile.common"
 

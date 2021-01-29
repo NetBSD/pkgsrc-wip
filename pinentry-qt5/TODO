@@ -1,0 +1,5 @@
+[ ] Fix buildlink dependency for moc
+    x11/qt5-qtbase should make moc visible
+    Manually adding a symlink "work/.buildlink/bin/moc" works
+[ ] Fix malformed -rpath option
+    Looks like an equal sign is missing
