@@ -2008,6 +2008,7 @@ SUBDIR+=	libfplll
 SUBDIR+=	libftdi1
 SUBDIR+=	libgamecommon
 SUBDIR+=	libgamemusic
+SUBDIR+=	libgcrypt
 SUBDIR+=	libgda-bdb
 SUBDIR+=	libgda-ldap
 SUBDIR+=	libgda-mdb
