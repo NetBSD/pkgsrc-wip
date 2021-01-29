@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (influxdb-5.2.3.tar.gz) = 51b5515ac4f5995d17328f83eba9aeac6f49a332
-RMD160 (influxdb-5.2.3.tar.gz) = 46024f1c6f76c6aa9684ff813838da1af73f8a43
-SHA512 (influxdb-5.2.3.tar.gz) = de62c745fdbe2d77b4f4a596a5377b8ec5c0bd0a6030b08e1b45435139efc4ade4fcdfbf71fc6d37f65cb04b2d48028ded2f14e5ad337fee5630ce8082c4d617
-Size (influxdb-5.2.3.tar.gz) = 62569 bytes
+SHA1 (influxdb-5.3.0.tar.gz) = f54a2a94a5220a0415c995e2e2ddd53d7bbb21d0
+RMD160 (influxdb-5.3.0.tar.gz) = 6bf69fc3bceb36da8e014bfbdc67c2efa4ab68ba
+SHA512 (influxdb-5.3.0.tar.gz) = 49ae48dc56ea8f6c6d4103f33207a35af4877c292ff4bfd32ebf8ff35fae816f570e64657406fdf9ef13092c69e7e2d1f0c641124445d35731a4a37812f67242
+Size (influxdb-5.3.0.tar.gz) = 66683 bytes
