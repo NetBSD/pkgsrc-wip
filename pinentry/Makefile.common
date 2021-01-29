@@ -19,7 +19,7 @@ HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 LICENSE=		gnu-gpl-v2
 
 #PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
-DISTINFO_FILE=		${.CURDIR}/../../security/pinentry/distinfo
+DISTINFO_FILE=		${.CURDIR}/../../wip/pinentry/distinfo
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
