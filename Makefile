@@ -3074,6 +3074,7 @@ SUBDIR+=	pinentry
 SUBDIR+=	pinentry-dmenu
 SUBDIR+=	pinentry-fltk
 SUBDIR+=	pinentry-gtk2
+SUBDIR+=	pinentry-qt4
 SUBDIR+=	pinentry-qt5
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
