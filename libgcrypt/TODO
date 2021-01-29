@@ -1,4 +1,4 @@
-Fix buid error:
+Fix build error:
 
 keccak.c: In function 'keccak_init':
 keccak.c:907:23: error: 'HWF_INTEL_FAST_SHLD' undeclared (first use in this function)
