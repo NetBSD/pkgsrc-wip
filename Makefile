@@ -3072,6 +3072,7 @@ SUBDIR+=	pimcommon
 SUBDIR+=	pinball
 SUBDIR+=	pinentry
 SUBDIR+=	pinentry-dmenu
+SUBDIR+=	pinentry-fltk
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
 SUBDIR+=	pipes-c
