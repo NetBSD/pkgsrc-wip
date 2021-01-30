@@ -5331,6 +5331,7 @@ SUBDIR+=	tex-platex-tools-doc
 SUBDIR+=	tex-platexcheat-doc
 SUBDIR+=	tex-plautopatch
 SUBDIR+=	tex-plautopatch-doc
+SUBDIR+=	tex-ptex
 SUBDIR+=	tex-ptex-manual-doc
 SUBDIR+=	tex-ptex2pdf
 SUBDIR+=	tex-ptex2pdf-doc
