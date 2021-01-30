@@ -80,7 +80,7 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/exabgp.conf.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${CP} ${FILESDIR}/exabgp.env ${DESTDIR}${PREFIX}/share/examples/exabgp/
+	${INSTALL_DATA} ${FILESDIR}/exabgp.env ${DESTDIR}${PREFIX}/share/examples/exabgp/
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
