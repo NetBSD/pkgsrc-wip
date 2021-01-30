@@ -25,6 +25,8 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kio_isorc \
 		${PKG_SYSCONFBASE}/xdg/kio_isorc
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
+DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+
 .include "../../devel/kparts/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
