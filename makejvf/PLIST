@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/makejvf
+man/man1/makejvf.1

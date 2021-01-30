@@ -2237,6 +2237,7 @@ SUBDIR+=	mailsend-go
 SUBDIR+=	mailutils
 SUBDIR+=	majordomo-devel
 SUBDIR+=	makedict
+SUBDIR+=	makejvf
 SUBDIR+=	makepp
 SUBDIR+=	malaga
 SUBDIR+=	maloc
