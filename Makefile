@@ -2283,6 +2283,7 @@ SUBDIR+=	meep-openmpi
 SUBDIR+=	meka-git
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
+SUBDIR+=	mendexk
 SUBDIR+=	menumaker
 SUBDIR+=	mes-nyacc
 SUBDIR+=	mescc-tools
