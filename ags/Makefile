@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/09/14 22:26:14 yhardy Exp $
 
-DISTNAME=	ags-3.5.0.28
+DISTNAME=	ags-3.5.0.29
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adventuregamestudio/}
 GITHUB_TAG=	v.${PKGVERSION_NOREV}
@@ -33,6 +33,7 @@ do-install:
 .include "../../audio/dumb/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/allegro/buildlink3.mk"
+# builds own copy of freetype
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
