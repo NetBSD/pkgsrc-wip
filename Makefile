@@ -5255,6 +5255,7 @@ SUBDIR+=	tenmado
 SUBDIR+=	termbox
 SUBDIR+=	terminology
 SUBDIR+=	termit
+SUBDIR+=	terraform013
 SUBDIR+=	terraform014
 SUBDIR+=	terraform-provider-vultr
 SUBDIR+=	tesseract-game
