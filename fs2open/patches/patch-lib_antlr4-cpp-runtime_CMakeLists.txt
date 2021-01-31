@@ -1,0 +1,20 @@
+$NetBSD$
+
+Why is a license installed to the binary destination? Other licenses
+are not installed, so just take it out.
+
+--- lib/antlr4-cpp-runtime/CMakeLists.txt.orig	2021-01-27 17:07:03.000000000 +0000
++++ lib/antlr4-cpp-runtime/CMakeLists.txt
+@@ -191,9 +191,9 @@ configure_package_config_file(
+ endif(ANTLR4_INSTALL)
+ 
+ # Slight changes from the standard distribution to fit better with how we handle things
+-install(FILES LICENSE.txt
+-        DESTINATION "${BINARY_DESTINATION}"
+-        RENAME "Antlr4_LICENSE.txt")
++#install(FILES LICENSE.txt
++#        DESTINATION "${BINARY_DESTINATION}"
++#        RENAME "Antlr4_LICENSE.txt")
+ 
+ #if(EXISTS LICENSE.txt)
+ #install(FILES LICENSE.txt

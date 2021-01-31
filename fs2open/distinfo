@@ -1,16 +1,25 @@
 $NetBSD: distinfo,v 1.6 2015/08/18 20:48:41 yhardy Exp $
 
-SHA1 (fs2_open_19_0_0-source-Unix.tar.gz) = 4ab780c25fc3e813d7fb319259ff7c214e271152
-RMD160 (fs2_open_19_0_0-source-Unix.tar.gz) = 465e5dc4f917f0fa4e0be04c1b9e3a39264b8b5e
-SHA512 (fs2_open_19_0_0-source-Unix.tar.gz) = c0d6824037064a6efa733c2361cccfaed8da5fa31eb5683ac4996239e2a4fe4c31d85cf7e9708ee9e5ebaf9ac1e5ef8a178380866e864d359f3ab82c26c5789d
-Size (fs2_open_19_0_0-source-Unix.tar.gz) = 12195030 bytes
+SHA1 (fs2_open/6a748896188fdf3f885820ccd686393ea5215dbf.tar.gz) = c11bcf821fc6ab68674cab077e83e9f233461af5
+RMD160 (fs2_open/6a748896188fdf3f885820ccd686393ea5215dbf.tar.gz) = ad15a96122bfec222ee4c87895346937e8fdfad6
+SHA512 (fs2_open/6a748896188fdf3f885820ccd686393ea5215dbf.tar.gz) = 25e6589d11605cbbcc3918a2d6faf9cc39dc47e8a0ccc9f491e63a8d7da339da5679a4073c3529b6d141a281e096e6aae9406712b7a66285afb948163f0e5a11
+Size (fs2_open/6a748896188fdf3f885820ccd686393ea5215dbf.tar.gz) = 241373 bytes
+SHA1 (fs2_open/ecd648a43aff8a9f3daf064d75ca5725237d5b38.tar.gz) = 526eb9faca2db63953ea219a264717fc81b3f9cd
+RMD160 (fs2_open/ecd648a43aff8a9f3daf064d75ca5725237d5b38.tar.gz) = 63cd363719f397dcfa62828d0ce983697337dd86
+SHA512 (fs2_open/ecd648a43aff8a9f3daf064d75ca5725237d5b38.tar.gz) = 700e242ecb5207faf729ca7d23ac4f28be819c0ef7a0ba51ca18de1592f1016040cd5e4c1c75a573f91cea69dd43549966ac089804a52c0f1b0cfbaabefc4346
+Size (fs2_open/ecd648a43aff8a9f3daf064d75ca5725237d5b38.tar.gz) = 2417905 bytes
+SHA1 (fs2_open/release_21_0_0.tar.gz) = ea8932aed05a26bf4a3fdc19230a45f2eae7a686
+RMD160 (fs2_open/release_21_0_0.tar.gz) = 05eb8527307a5070eb53c8e78ab77b86b4406ea0
+SHA512 (fs2_open/release_21_0_0.tar.gz) = d9dab6b1bf8d0e8a1f8367fbe28fc74f95aed7f1b871770333a1a96497a46219fbd72f4e6deab22eee4b3aac2f664c3a8dbd27a851962e5a021281f653797115
+Size (fs2_open/release_21_0_0.tar.gz) = 10188793 bytes
 SHA1 (patch-cmake_platform-unix.cmake) = 54de840e05b9ac738e84e9e33f17ce623599ec6d
 SHA1 (patch-cmake_platforms.cmake) = b91c2544b2225f7d00fa35272dd2b20725e1ba3e
 SHA1 (patch-cmake_toolchain-clang.cmake) = b3c9375059a56d2963e60d83bac38e690ea6eabc
-SHA1 (patch-cmake_toolchain-gcc.cmake) = 957a15184012f3924f265ca467bcf5875d15ff96
-SHA1 (patch-code_libs_renderdoc_renderdoc__app.h) = 8c7179a15fc5015bd8f27267fda237f3e9c7b15e
-SHA1 (patch-code_network_multi__portfwd.cpp) = 4f08bfa9b1376a9c7c054067ff993dac157280c2
-SHA1 (patch-code_osapi_dialogs.cpp) = 10eb8c64f633c6b4db62bee7bc56e07631e22f08
+SHA1 (patch-cmake_toolchain-gcc.cmake) = 3ff59fe7a0a9381ee392b7964610580f272cdd7c
+SHA1 (patch-code_network_psnet2.cpp) = dbdf0451182918c1d2f934afa3ccf58e8774898c
+SHA1 (patch-code_osapi_dialogs.cpp) = ba8156bccffde88b97903f7d263ac1138bfe4eef
 SHA1 (patch-freespace2_CMakeLists.txt) = 78cfadc9c91c90636c60bba164be387bf39b9a11
-SHA1 (patch-lib_libpcp_src_net_gateway.c) = 47cf7aff4231c5b1914609bde7025d8f9def8d67
+SHA1 (patch-lib_CMakeLists.txt) = 534d5c89b47e926a1093c040f358adc01dd30196
+SHA1 (patch-lib_antlr4-cpp-runtime_CMakeLists.txt) = 148d82805e564374baf962191092c2b3940cde5b
+SHA1 (patch-lib_libpcp_src_net_gateway.c) = a05116a7ce0fcde029b27745488d4328d739ecd1
 SHA1 (patch-lib_libpcp_src_net_sock__ntop.c) = 8d1dc4326c714010f6632ab7d229874e4357a982

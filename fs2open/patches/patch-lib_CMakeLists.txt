@@ -1,0 +1,13 @@
+$NetBSD$
+
+Don't use prebuilt binaries.
+
+--- lib/CMakeLists.txt.orig	2021-01-27 17:07:03.000000000 +0000
++++ lib/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ 
+-include(prebuilt.cmake)
++#include(prebuilt.cmake)
+ 
+ ADD_SUBDIRECTORY(libjpeg)
+ 

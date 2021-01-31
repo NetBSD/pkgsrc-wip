@@ -1,15 +1,15 @@
 $NetBSD$
 
-Also support NetbSD and OpenBSD.
+Also support NetBSD and OpenBSD.
 
---- lib/libpcp/src/net/gateway.c.orig	2019-12-15 06:53:29.677263118 +0000
+--- lib/libpcp/src/net/gateway.c.orig	2021-01-27 17:07:03.000000000 +0000
 +++ lib/libpcp/src/net/gateway.c
-@@ -62,7 +62,7 @@
- #include "pcp_win_defines.h"
- #endif
- 
--#if defined(__APPLE__) || defined(__FreeBSD__)
-+#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
- #include <sys/sysctl.h>
- #include <net/if_dl.h>          //struct sockaddr_dl
- #define USE_SOCKET_ROUTE
+@@ -50,7 +50,7 @@
+ #define USE_NETLINK
+ #elif defined(WIN32)
+ #define USE_WIN32_CODE
+-#elif defined(__APPLE__) || defined(__FreeBSD__)
++#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ #define USE_SYSCTL_NET_ROUTE
+ #elif defined(BSD) || defined(__FreeBSD_kernel__)
+ #define USE_SYSCTL_NET_ROUTE
