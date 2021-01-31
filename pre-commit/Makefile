@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-2.9.3
+DISTNAME=	pre_commit-2.10.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pre-commit.com/
 COMMENT=	Framework for managing and maintaining multi-language pre-commit hook
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported
 
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
 DEPENDS+=	${PYPKGPREFIX}-conda-[0-9]*:../../wip/py-conda
