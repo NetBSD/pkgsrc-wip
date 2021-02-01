@@ -321,6 +321,7 @@ SUBDIR+=	browserpass-native
 SUBDIR+=	brumbrumrally
 SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
+SUBDIR+=	bsdec2-image-upload
 SUBDIR+=	bsfilter
 SUBDIR+=	bsh
 SUBDIR+=	bsnmp
