@@ -3076,6 +3076,7 @@ SUBDIR+=	pinball
 SUBDIR+=	pinentry
 SUBDIR+=	pinentry-dmenu
 SUBDIR+=	pinentry-fltk
+SUBDIR+=	pinentry-gnome3
 SUBDIR+=	pinentry-gtk2
 SUBDIR+=	pinentry-qt4
 SUBDIR+=	pinentry-qt5
