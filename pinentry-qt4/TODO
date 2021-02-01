@@ -1,0 +1,3 @@
+Doesn't work anymore because QWindow class is used by pinentry 1.1.1.
+According to Qt documentation <https://doc.qt.io/qt-5/qwindow.html>
+this class does not exist in Qt 4 and older versions.
