@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/05/22 08:45:10 jmcneill Exp $
+
+SHA1 (bsdec2-image-upload-1.3.1.tar.gz) = f45ace71aa8ab71898ebc3e9360cb8cb48eaa633
+RMD160 (bsdec2-image-upload-1.3.1.tar.gz) = 02b442602ef773a8057a0a563b55cc9b30644d65
+SHA512 (bsdec2-image-upload-1.3.1.tar.gz) = b03d14b489a12a5f589c759acf3b4c57fc65520768be224613577c0778500d40a66ff154f0ab558ba6e6e81ff251defadb66a8c1c96edfc3b21abdcf75e5b4fe
+Size (bsdec2-image-upload-1.3.1.tar.gz) = 32890 bytes
+SHA1 (patch-lib_util_sslreq.c) = 8a5d8404f85a2ac340572d786b4ab1d643eb57de
+SHA1 (patch-main.c) = 4ce281161d7fae3e657e1d54b5cb33f4534d848a
