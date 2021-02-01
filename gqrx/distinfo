@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (gqrx-sdr-2.11.5-src.tar.xz) = 37317207508d736f837697b41ce390d82b3b2b22
-RMD160 (gqrx-sdr-2.11.5-src.tar.xz) = 8839abfe6f9b1912aedffbcc42514a11c884c272
-SHA512 (gqrx-sdr-2.11.5-src.tar.xz) = f1006c37567a6c177ec0f5d15dcef9803b5dc1b124226b552b408e4ce0b3279a845a5875bfb1d7ccd6563b41f67c07a434f325e4ee8d28db2ee19b249159d3a3
-Size (gqrx-sdr-2.11.5-src.tar.xz) = 901488 bytes
+SHA1 (gqrx-2.14.4.tar.gz) = a438c27c91b7e78b4445fa998eaa15ab840ec2e2
+RMD160 (gqrx-2.14.4.tar.gz) = 69f6ddae8d127922e4cd20b150ec85c12785ef0f
+SHA512 (gqrx-2.14.4.tar.gz) = c8ed2d65c52d01323c1f22717ae405a32cbd74e194e25fbc7af435e265ef393deea7554ea24a8f3f5cb9607faec3bbde8e958f9334d29f802768538efd546b63
+Size (gqrx-2.14.4.tar.gz) = 1345711 bytes
