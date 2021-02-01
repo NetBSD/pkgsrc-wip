@@ -1,6 +1,7 @@
-[ ] Fix buildlink dependency for moc
+[X] Fix buildlink dependency for moc
     x11/qt5-qtbase should make moc visible
     Manually adding a symlink "work/.buildlink/bin/moc" works
+    => Fix for bl3 file of x11/qt5-qtbase is pending
 [X] Fix malformed -rpath option
     Looks like an equal sign is missing
     => Patch for "m4/qt.m4" added
