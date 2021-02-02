@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	routinator-0.8.2
+DISTNAME=	routinator-0.8.3
 PKGNAME=	${DISTNAME:S/-rc/rc/}
-PKGREVISION=	1
 CATEGORIES=	net
 EXTRACT_SUFX=	.tar.gz
 
