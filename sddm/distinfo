@@ -1,14 +1,16 @@
 $NetBSD$
 
-SHA1 (sddm-0.18.1.tar.xz) = ca4f453fd32e68faca437d66d9fbad59258c505c
-RMD160 (sddm-0.18.1.tar.xz) = bcd59920e4db4f263604cd47fb362e9b502983f5
-SHA512 (sddm-0.18.1.tar.xz) = ff0637600cda2f4da1f643f047f8ee822bd9651ae4ccbb614b9804175c97360ada7af93e07a7b63832f014ef6e7d1b5380ab2b8959f8024ea520fa5ff17efd60
-Size (sddm-0.18.1.tar.xz) = 3402972 bytes
-SHA1 (patch-CMakeLists.txt) = 03f41795b978eb186b61537fa7c63604127de16d
-SHA1 (patch-src_daemon_CMakeLists.txt) = 42c47a49f18b81eda28466a5919697b5aa7581e6
+SHA1 (sddm-0.19.0.tar.xz) = cdb5c9cc7679bb5620bdfb9f56e4f2d5cea7edca
+RMD160 (sddm-0.19.0.tar.xz) = 933badadd73b3ca092a7e175ef12e2c52aa407a4
+SHA512 (sddm-0.19.0.tar.xz) = 0a40816bc105a1e930fec2d65fabff0ae7e27c641235d90e41f6fbaa86af4bb774a9e30f7548ce2c6c791e6d4f8195b02afddedca60a9e7c77447702e728edc3
+Size (sddm-0.19.0.tar.xz) = 3406056 bytes
+SHA1 (patch-CMakeLists.txt) = 339bb1d639824f035cc18f6fe299790d99003993
+SHA1 (patch-src_common_VirtualTerminal.cpp) = 68aa285501545111ee32e62831627ee4f0042e4a
+SHA1 (patch-src_common_VirtualTerminal__NetBSD.cpp) = 517cfdfdcfd273ae4def980d5835edcbc70d10e3
+SHA1 (patch-src_daemon_CMakeLists.txt) = 7a487d89ddf82d54a1d6c951978bebc464c4ee38
 SHA1 (patch-src_daemon_DaemonApp.cpp) = 12d86d2985cc3e96411d307ca4d724aae6494f13
-SHA1 (patch-src_daemon_VirtualTerminal.cpp) = ab1ea7a4543d47f6203c749f16dbd10a03d85b3a
-SHA1 (patch-src_daemon_VirtualTerminal__FreeBSD.cpp) = abaf6b2b21a8f4fc410714f9a0677733606b94c3
-SHA1 (patch-src_daemon_VirtualTerminal__NetBSD.cpp) = 1ddec9550a311dd602b913b288045e4819982fd7
-SHA1 (patch-src_greeter_UserModel.cpp) = 5e4deb3bc4d383d55c2125c058fadaf537ef80fb
+SHA1 (patch-src_daemon_Seat.cpp) = 310f1eb7b00a7c88fd431dcd391ef9860d0afac6
+SHA1 (patch-src_daemon_Seat.h) = b79641bcec9e4997a053db15ee3c5afee57b82ee
+SHA1 (patch-src_daemon_XorgDisplayServer.cpp) = aee5a79c3bffcb9685c91da8db5e3d6e273b75a3
+SHA1 (patch-src_helper_HelperApp.cpp) = 5822c14b72dda8f92d427cec69272e6e3cf4f6b2
 SHA1 (patch-src_helper_UserSession.cpp) = 4da90793d4d1b535562273a5f85c14e156973a9b

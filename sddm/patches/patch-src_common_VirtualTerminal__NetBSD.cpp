@@ -1,9 +1,9 @@
 $NetBSD$
 
-FreeBSD VirtualTerminal support.
+NetBSD VirtualTerminal support.
 
---- src/daemon/VirtualTerminal_FreeBSD.cpp.orig	2020-05-16 11:31:00.832245350 +0000
-+++ src/daemon/VirtualTerminal_FreeBSD.cpp
+--- src/common/VirtualTerminal_NetBSD.cpp.orig	2020-11-28 06:19:36.308310491 +0000
++++ src/common/VirtualTerminal_NetBSD.cpp
 @@ -0,0 +1,37 @@
 +/***************************************************************************
 +* Copyright (c) 2015 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
@@ -33,12 +33,12 @@ FreeBSD VirtualTerminal support.
 +namespace SDDM {
 +    namespace VirtualTerminal {
 +        int setUpNewVt() {
-+            qDebug() << "New VT is unsupported on FreeBSD";
++            qDebug() << "New VT is unsupported on NetBSD";
 +            return -1;
 +        }
 +
 +        void jumpToVt(int vt, bool vt_auto) {
-+            qDebug() << "Jumping to VT" << vt << "is unsupported on FreeBSD";
++            qDebug() << "Jumping to VT" << vt << "is unsupported on NetBSD";
 +        }
 +    }
 +}
