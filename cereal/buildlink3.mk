@@ -1,5 +1,4 @@
 # $NetBSD$
-BUILDLINK_DEPMETHOD.cereal?=	build
 
 BUILDLINK_TREE+=	cereal
 
@@ -7,6 +6,7 @@ BUILDLINK_TREE+=	cereal
 CEREAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cereal+=	cereal>=1.2.2
+BUILDLINK_DEPMETHOD.cereal?=	build
 BUILDLINK_PKGSRCDIR.cereal?=	../../wip/cereal
 
 .endif	# CEREAL_BUILDLINK3_MK
