@@ -9,7 +9,7 @@ lib/cmake/nlopt/NLoptLibraryDepends.cmake
 lib/guile/2.0/extensions/nlopt_guile.so
 lib/libnlopt.so
 lib/libnlopt.so.0
-lib/libnlopt.so.0.10.0
+lib/libnlopt.so.0.11.0
 lib/pkgconfig/nlopt.pc
 man/man3/nlopt.3
 man/man3/nlopt_minimize.3
