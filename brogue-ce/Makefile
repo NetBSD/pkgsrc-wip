@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	BrogueCE
-GITHUB_TAG=	v1.9.2
+GITHUB_TAG=	v1.9.3
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	brogue-ce-${GITHUB_TAG:S,^v,,}
 CATEGORIES=	games
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/tmewett/BrogueCE/
 COMMENT=	Community edition of the brogue roguelike game
 LICENSE=	gnu-agpl-v3
 
-WRKSRC=		${WRKDIR}/BrogueCE-1.9.2
+WRKSRC=		${WRKDIR}/BrogueCE-${PKGVERSION_NOREV}
 USE_TOOLS+=	gmake
 
 BUILD_TARGET=	bin/brogue
