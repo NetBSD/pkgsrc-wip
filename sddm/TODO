@@ -1,6 +1,3 @@
 It builds then dumps you into an empty X session with no ability to exit it.
 
 I can't debug this because I currently only have one computer.
-
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2020-28049
