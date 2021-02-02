@@ -20,29 +20,38 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake gmake
 USE_CMAKE=	yes
 
-.if 0
-CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
-.include "../../x11/wxGTK30/buildlink3.mk"
-.else
-.include "../../wip/wxGTK31/buildlink3.mk"
-.endif
-
 .include "../../mk/bsd.prefs.mk"
+
+CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
+
 .include "../../comms/libhidapi/buildlink3.mk"
+.include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/graphite2/buildlink3.mk"
 .include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
+.include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
-.include "../../wip/threadingbuildingblocks/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/xcb-proto/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
