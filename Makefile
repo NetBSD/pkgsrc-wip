@@ -339,6 +339,7 @@ SUBDIR+=	byzanz
 SUBDIR+=	c-graph
 SUBDIR+=	c-news
 SUBDIR+=	c2hs
+SUBDIR+=	c2go
 SUBDIR+=	c3270
 SUBDIR+=	cJSON
 SUBDIR+=	cabal-install
