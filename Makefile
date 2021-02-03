@@ -1271,6 +1271,7 @@ SUBDIR+=	go-mock
 SUBDIR+=	go-mp3
 SUBDIR+=	go-mpb
 SUBDIR+=	go-native
+SUBDIR+=	go-netlink
 SUBDIR+=	go-notify
 SUBDIR+=	go-ole
 SUBDIR+=	go-opentracing
