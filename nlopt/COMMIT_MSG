@@ -1,0 +1,25 @@
+Update to NLopt 2.7.0
+
+Changes:
+
+NLopt 2.7.0
+  - New nlopt_set_param API for setting internal algorithm parameters ([#365]).
+  - Avoid library-symbol conflicts ([#355], [#361])
+
+NLopt 2.6.2
+  - Fixed forced stop exception with dimension elimination ([#317])
+  - Fixed get_initial_step wrapping ([#319])
+  - Various build fixes ([#314], [#308], [#303], [#278])
+
+NLopt 2.6.1
+  - Fix nlopt_version return value for 2.6.x and update soname and docs.
+
+NLopt 2.6.0
+  - New set_upper_bound and set_lower_bound functions in the low-level C API to
+    set one bound at a time (#257). There is no longer a separate libnlopt_cxx
+    library - C++ algorithms (stogo) are compiled and included by default
+    (#198). Various build fixes (#197, #216, #245, #250, #230, #261, etc.),
+    other fixes (#242, #258).
+
+NLopt 2.5.0
+  - See NEWS: switch to cmake, various new functions, a new algorithm.
