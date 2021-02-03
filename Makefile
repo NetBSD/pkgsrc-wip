@@ -1261,6 +1261,7 @@ SUBDIR+=	go-junit-report
 SUBDIR+=	go-kong
 SUBDIR+=	go-kr-text
 SUBDIR+=	go-ksuid
+SUBDIR+=	go-libudev
 SUBDIR+=	go-log
 SUBDIR+=	go-logging
 SUBDIR+=	go-lzw
