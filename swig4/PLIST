@@ -262,6 +262,7 @@ share/swig/4.0/octave/octave.swg
 share/swig/4.0/octave/octcomplex.swg
 share/swig/4.0/octave/octcontainer.swg
 share/swig/4.0/octave/octfragments.swg
+share/swig/4.0/octave/octheaders.hpp
 share/swig/4.0/octave/octiterators.swg
 share/swig/4.0/octave/octopers.swg
 share/swig/4.0/octave/octprimtypes.swg
@@ -499,6 +500,7 @@ share/swig/4.0/ruby/rubyuserdir.swg
 share/swig/4.0/ruby/rubywstrings.swg
 share/swig/4.0/ruby/std_alloc.i
 share/swig/4.0/ruby/std_array.i
+share/swig/4.0/ruby/std_auto_ptr.i
 share/swig/4.0/ruby/std_basic_string.i
 share/swig/4.0/ruby/std_char_traits.i
 share/swig/4.0/ruby/std_common.i

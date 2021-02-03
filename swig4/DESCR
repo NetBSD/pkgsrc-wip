@@ -11,4 +11,4 @@ SWIG reads annotated C/C++ header files and creates wrapper code
 available to the listed languages, or to extend C/C++ programs with
 a scripting language.
 
-This is version 3 of swig.
+This is version 4 of swig.
