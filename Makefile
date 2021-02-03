@@ -1224,6 +1224,7 @@ SUBDIR+=	go-gabs
 SUBDIR+=	go-genny
 SUBDIR+=	go-ghodss-yaml
 SUBDIR+=	go-godot
+SUBDIR+=	go-goji
 SUBDIR+=	go-gomail
 SUBDIR+=	go-gopacket
 SUBDIR+=	go-goquery
