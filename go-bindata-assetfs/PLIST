@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/go-bindata-assetfs
+gopkg/pkg/${GO_PLATFORM}/github.com/elazarl/go-bindata-assetfs.a
+gopkg/src/github.com/elazarl/go-bindata-assetfs/LICENSE
+gopkg/src/github.com/elazarl/go-bindata-assetfs/Makefile
+gopkg/src/github.com/elazarl/go-bindata-assetfs/README.md
+gopkg/src/github.com/elazarl/go-bindata-assetfs/assetfs.go
+gopkg/src/github.com/elazarl/go-bindata-assetfs/doc.go
+gopkg/src/github.com/elazarl/go-bindata-assetfs/go-bindata-assetfs/main.go
+gopkg/src/github.com/elazarl/go-bindata-assetfs/go.mod

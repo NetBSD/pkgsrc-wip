@@ -1183,6 +1183,7 @@ SUBDIR+=	go-audio
 SUBDIR+=	go-aurora
 SUBDIR+=	go-backoff
 SUBDIR+=	go-bindata
+SUBDIR+=	bindata-assetfs
 SUBDIR+=	go-bit
 SUBDIR+=	go-bpool
 SUBDIR+=	go-brotli
