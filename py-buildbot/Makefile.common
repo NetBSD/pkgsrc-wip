@@ -1,0 +1,10 @@
+BBVERSION=	2.10.1
+MAINTAINER=	root@zta.lk
+HOMEPAGE=	https://buildbot.net/
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+LICENSE=	gnu-gpl-v2
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
