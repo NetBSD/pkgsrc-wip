@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	Vulkan-Loader
-DISTNAME=	sdk-1.1.126.0
+DISTNAME=	sdk-1.2.162.0
 PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME:S/sdk-//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 # wayland support missing in pkgsrc
 CMAKE_ARGS+=	-DBUILD_WSI_WAYLAND_SUPPORT=OFF
 CMAKE_ARGS+=	-DBUILD_TESTS=ON
+
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 PKGCONFIG_OVERRIDE+=	loader/vulkan.pc.in
 

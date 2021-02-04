@@ -1,6 +1,6 @@
 $NetBSD$
 * add netbsd support
---- loader/loader.c.orig	2019-09-11 17:39:09.000000000 +0000
+--- loader/loader.c.orig	2020-12-01 20:50:08.000000000 +0000
 +++ loader/loader.c
 @@ -44,6 +44,8 @@
  
@@ -11,19 +11,19 @@ $NetBSD$
  #include <sys/param.h>
  #endif
  
-@@ -241,7 +243,7 @@ void *loader_device_heap_realloc(const s
+@@ -253,7 +255,7 @@ void *loader_device_heap_realloc(const s
  }
  
  // Environment variables
--#if defined(__linux__) || defined(__APPLE__)
-+#if defined(__linux__) || defined(__APPLE__) || defined(__NetBSD__)
+-#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__NetBSD__)
  
  static inline bool IsHighIntegrity() {
      return geteuid() != getuid() || getegid() != getgid();
-@@ -255,7 +257,7 @@ static inline char *loader_getenv(const 
- }
+@@ -268,7 +270,7 @@ static inline char *loader_getenv(const 
  
  static inline char *loader_secure_getenv(const char *name, const struct loader_instance *inst) {
+     char *out;
 -#if defined(__APPLE__)
 +#if defined(__APPLE__) || defined(__NetBSD__)
      // Apple does not appear to have a secure getenv implementation.

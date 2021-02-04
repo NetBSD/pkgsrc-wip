@@ -2,7 +2,7 @@ $NetBSD$
 * use CMake findthreads instead of hardcoding -lpthread
 * install pkg-config file on mac
 * set the right libs in Libs.private
---- loader/CMakeLists.txt.orig	2019-10-28 17:29:17.000000000 +0000
+--- loader/CMakeLists.txt.orig	2020-12-01 20:50:08.000000000 +0000
 +++ loader/CMakeLists.txt
 @@ -21,6 +21,10 @@ include_directories(${CMAKE_CURRENT_SOUR
  include(CheckFunctionExists)
@@ -14,45 +14,37 @@ $NetBSD$
 +
  check_function_exists(secure_getenv HAVE_SECURE_GETENV)
  check_function_exists(__secure_getenv HAVE___SECURE_GETENV)
- configure_file(${CMAKE_CURRENT_SOURCE_DIR}/loader_cmake_config.h.in ${CMAKE_CURRENT_BINARY_DIR}/loader_cmake_config.h)
-@@ -236,7 +240,7 @@ else()
+ if(NOT (HAVE_SECURE_GETENV OR HAVE__SECURE_GETENV))
+@@ -259,7 +263,7 @@ else()
                                       "1"
                                       VERSION
                                       "${VulkanHeaders_VERSION_MAJOR}.${VulkanHeaders_VERSION_MINOR}.${VulkanHeaders_VERSION_PATCH}")
 -    target_link_libraries(vulkan ${CMAKE_DL_LIBS} pthread m)
 +    target_link_libraries(vulkan ${CMAKE_DL_LIBS} Threads::Threads m)
      target_link_libraries(vulkan Vulkan::Headers)
- 
      if(APPLE)
-@@ -264,7 +268,7 @@ else()
-         add_library(vulkan-framework SHARED ${NORMAL_LOADER_SRCS} ${OPT_LOADER_SRCS} ${FRAMEWORK_HEADERS})
+         find_library(COREFOUNDATION_LIBRARY NAMES CoreFoundation)
+@@ -289,7 +293,7 @@ else()
+             add_library(vulkan-framework SHARED ${NORMAL_LOADER_SRCS} ${OPT_LOADER_SRCS} ${FRAMEWORK_HEADERS})
+         endif()
          add_dependencies(vulkan-framework loader_asm_gen_files)
-         target_compile_definitions(vulkan-framework PUBLIC LOADER_DYNAMIC_LIB)
 -        target_link_libraries(vulkan-framework -ldl -lpthread -lm "-framework CoreFoundation")
 +        target_link_libraries(vulkan-framework -ldl Threads::Threads -lm "-framework CoreFoundation")
          target_link_libraries(vulkan-framework Vulkan::Headers)
  
          # The FRAMEWORK_VERSION needs to be "A" here so that Xcode code-signing works when a user adds their framework to an Xcode
-@@ -289,17 +293,18 @@ else()
- # cmake-format: on
-     endif()
- 
--    if(NOT APPLE)
-         # Generate pkg-config file.
-         include(FindPkgConfig QUIET)
-         if(PKG_CONFIG_FOUND)
-             set(VK_API_VERSION "${VulkanHeaders_VERSION_MAJOR}.${VulkanHeaders_VERSION_MINOR}.${VulkanHeaders_VERSION_PATCH}")
--            foreach(LIB ${CMAKE_CXX_IMPLICIT_LINK_LIBRARIES} ${PLATFORM_LIBS})
--                set(PRIVATE_LIBS "${PRIVATE_LIBS} -l${LIB}")
-+            foreach(LIB ${CMAKE_C_IMPLICIT_LINK_LIBRARIES} ${PLATFORM_LIBS} ${CMAKE_DL_LIBS} m)
-+                list(APPEND PRIVATE_LIBS_LIST "-l${LIB}")
-             endforeach()
-+	    list(APPEND PRIVATE_LIBS_LIST "${CMAKE_THREAD_LIBS_INIT}")
-+	    list(REMOVE_DUPLICATES PRIVATE_LIBS_LIST)
-+	    list(JOIN PRIVATE_LIBS_LIST " " PRIVATE_LIBS)
-             configure_file("vulkan.pc.in" "vulkan.pc" @ONLY)
-             install(FILES "${CMAKE_CURRENT_BINARY_DIR}/vulkan.pc" DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
--        endif()
-     endif()
- endif()
- 
+@@ -323,9 +327,12 @@ endif()
+ include(FindPkgConfig QUIET)
+ if(PKG_CONFIG_FOUND)
+     set(VK_API_VERSION "${VulkanHeaders_VERSION_MAJOR}.${VulkanHeaders_VERSION_MINOR}.${VulkanHeaders_VERSION_PATCH}")
+-    foreach(LIB ${CMAKE_CXX_IMPLICIT_LINK_LIBRARIES} ${PLATFORM_LIBS})
+-        set(PRIVATE_LIBS "${PRIVATE_LIBS} -l${LIB}")
++    foreach(LIB ${CMAKE_C_IMPLICIT_LINK_LIBRARIES} ${PLATFORM_LIBS} ${CMAKE_DL_LIBS} m)
++        list(APPEND PRIVATE_LIBS_LIST "-l${LIB}")
+     endforeach()
++    list(APPEND PRIVATE_LIBS_LIST "${CMAKE_THREAD_LIBS_INIT}")
++    list(REMOVE_DUPLICATES PRIVATE_LIBS_LIST)
++    list(JOIN PRIVATE_LIBS_LIST " " PRIVATE_LIBS)
+     if(WIN32)
+         set(LIB_SUFFIX "-1")
+     endif ()
