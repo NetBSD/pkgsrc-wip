@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--ld-opt="-L${PREFIX}/lib -R${PREFIX}/lib"
 CONFIGURE_ARGS+=	--log=${UNIT_LOGDIR}/unit.log
 CONFIGURE_ARGS+=	--modules=${UNIT_EXTENSION_DIR}
 CONFIGURE_ARGS+=	--pid=${UNIT_PIDDIR}/unit.pid
-CONFIGURE_ARGS+=	--state=libexec/unit
+CONFIGURE_ARGS+=	--state=${UNIT_DATADIR}
 CONFIGURE_ARGS+=	--control=unix:${UNIT_RUNDIR}/control.unit.sock
 CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
 CONFIGURE_ARGS+=	--user=${UNIT_USER}
