@@ -3,6 +3,7 @@
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
+CATEGORIES=	x11
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 

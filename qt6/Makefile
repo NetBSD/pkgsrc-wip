@@ -4,6 +4,8 @@ DISTNAME=	qt6-${QTVERSION}
 
 COMMENT=	"meta-package" for version 6 of the QT GUI C++ toolkit
 
+CATEGORIES=	meta-pkgs
+
 META_PACKAGE=	yes
 
 .include "Makefile.common"
