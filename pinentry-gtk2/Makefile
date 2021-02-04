@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--disable-libsecret
 
 INSTALL_DIRS=		gtk+-2
 
-BUILDLINK_API_DEPENDS.gtk2++=	gtk2+>=2.12.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
