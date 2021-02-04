@@ -10,6 +10,7 @@ share/doc/cyclone/Garbage-Collector.md
 share/doc/cyclone/Multithreaded-Development.md
 share/doc/cyclone/Release-Checklist.md
 share/doc/cyclone/Scheme-Language-Compliance.md
+share/doc/cyclone/Scheme-code-conventions.md
 share/doc/cyclone/User-Manual.md
 share/doc/cyclone/Writing-the-Cyclone-Scheme-Compiler-Revised-2017.md
 share/doc/cyclone/Writing-the-Cyclone-Scheme-Compiler.md
@@ -127,6 +128,7 @@ share/examples/cyclone/call-scm-from-c/full.c
 share/examples/cyclone/call-scm-from-c/full.h
 share/examples/cyclone/cat.scm
 share/examples/cyclone/fac.scm
+share/examples/cyclone/ffi/custom-type.scm
 share/examples/cyclone/ffi/sub-bignums.h
 share/examples/cyclone/ffi/sub-bignums.scm
 share/examples/cyclone/game-of-life-png/Makefile

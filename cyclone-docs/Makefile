@@ -1,8 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	cyclone
-GITHUB_TAG=	v0.25
-DISTNAME=	v0.25
+GITHUB_TAG=	v0.26
+DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-docs-${DISTNAME:S,^v,,}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justinethier/}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://justinethier.github.io/cyclone/index
 COMMENT=	Documentation for wip/cyclone
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/cyclone-0.25
+WRKSRC=		${WRKDIR}/cyclone-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	share/doc/cyclone
 INSTALLATION_DIRS+=	share/examples/cyclone
