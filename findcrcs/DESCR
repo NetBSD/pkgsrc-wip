@@ -1,2 +1,0 @@
-findcrcs tries to find a chunk of a file that matches a particular
-given CRC and MD5.
