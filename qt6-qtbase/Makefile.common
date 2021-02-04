@@ -39,7 +39,7 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if "${PKGPATH}" != "wip/qt6-qtbase"
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${WRKSRC} ${CONFIGURE_ARGS}
 .endif
 
 .if ${OPSYS} == "Darwin"
