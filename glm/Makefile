@@ -21,9 +21,9 @@ INSTALLATION_DIRS=	${GLM_DIR}
 
 do-install:
 	${RUN}cd ${WRKSRC}/glm && \
-		${CHMOD} 644 *hpp detail/* gtc/* gtx/* simd/*
+		${CHMOD} 644 *hpp detail/* ext/* gtc/* gtx/* simd/*
 	${RUN}cd ${WRKSRC}/glm && \
-		pax -rw *hpp detail gtc gtx simd \
+		pax -rw *hpp detail ext gtc gtx simd \
 			${DESTDIR}${PREFIX}/${GLM_DIR}
 
 # for test target
