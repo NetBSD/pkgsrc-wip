@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/gpxinfo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/gpxpy/__init__.py
+${PYSITELIB}/gpxpy/__init__.pyc
+${PYSITELIB}/gpxpy/__init__.pyo
+${PYSITELIB}/gpxpy/geo.py
+${PYSITELIB}/gpxpy/geo.pyc
+${PYSITELIB}/gpxpy/geo.pyo
+${PYSITELIB}/gpxpy/gpx.py
+${PYSITELIB}/gpxpy/gpx.pyc
+${PYSITELIB}/gpxpy/gpx.pyo
+${PYSITELIB}/gpxpy/gpxfield.py
+${PYSITELIB}/gpxpy/gpxfield.pyc
+${PYSITELIB}/gpxpy/gpxfield.pyo
+${PYSITELIB}/gpxpy/gpxxml.py
+${PYSITELIB}/gpxpy/gpxxml.pyc
+${PYSITELIB}/gpxpy/gpxxml.pyo
+${PYSITELIB}/gpxpy/parser.py
+${PYSITELIB}/gpxpy/parser.pyc
+${PYSITELIB}/gpxpy/parser.pyo
+${PYSITELIB}/gpxpy/utils.py
+${PYSITELIB}/gpxpy/utils.pyc
+${PYSITELIB}/gpxpy/utils.pyo
