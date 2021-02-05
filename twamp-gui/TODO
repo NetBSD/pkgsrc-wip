@@ -1,0 +1,7 @@
+Stuff that needs mending:
+
+ * Doesn't handle BSD-style dual-stack IPv4/IPv6; responder
+   only listens on IPv4, but client tries IPv6(?)
+
+ * Debug why this doesn't appear to work with PerfSonar.
+
