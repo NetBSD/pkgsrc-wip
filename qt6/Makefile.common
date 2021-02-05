@@ -2,7 +2,7 @@
 # used by x11/qt5-qtbase/Makefile.common
 # used by inputmethod/qt5-uim/Makefile
 
-QTVERSION=	6.0.0
+QTVERSION=	6.0.1
 
 .include "../../mk/bsd.prefs.mk"
 

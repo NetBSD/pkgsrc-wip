@@ -48,6 +48,8 @@ CONFIGURE_ENV+=		MAKEFLAGS=-j${MAKE_JOBS}
 .  endif
 .endif
 
+USE_TOOLS+=		bash:run
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
@@ -115,6 +117,7 @@ LDFLAGS.FreeBSD+=		-lutil
 REPLACE_PERL+=		bin/fixqt4headers.pl
 REPLACE_PERL+=		bin/syncqt.pl
 REPLACE_PERL+=		mkspecs/features/data/unix/findclasslist.pl
+REPLACE_BASH+=		util/android/android_emulator_launcher.sh
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize

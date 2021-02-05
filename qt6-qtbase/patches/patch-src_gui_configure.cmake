@@ -5,7 +5,7 @@ $NetBSD$
   on other platforms than linux
 * Fix use of system libmd4c
 
---- src/gui/configure.cmake.orig	2020-12-04 10:14:27.000000000 +0000
+--- src/gui/configure.cmake.orig	2021-01-26 18:29:22.000000000 +0000
 +++ src/gui/configure.cmake
 @@ -41,6 +41,7 @@ qt_find_package(gbm PROVIDED_TARGETS gbm
  qt_find_package(WrapSystemHarfbuzz 2.6.0 PROVIDED_TARGETS WrapSystemHarfbuzz::WrapSystemHarfbuzz MODULE_NAME gui QMAKE_LIB harfbuzz)
@@ -15,7 +15,7 @@ $NetBSD$
  qt_find_package(WrapSystemPNG PROVIDED_TARGETS WrapSystemPNG::WrapSystemPNG MODULE_NAME gui QMAKE_LIB libpng)
  if(QT_FEATURE_system_zlib)
      qt_add_qmake_lib_dependency(libpng zlib)
-@@ -53,82 +54,82 @@ qt_find_package(Vulkan PROVIDED_TARGETS 
+@@ -53,78 +54,78 @@ qt_find_package(Vulkan PROVIDED_TARGETS 
  if((LINUX) OR QT_FIND_ALL_PACKAGES_ALWAYS)
      qt_find_package(Wayland PROVIDED_TARGETS Wayland::Server MODULE_NAME gui QMAKE_LIB wayland_server)
  endif()
@@ -38,14 +38,9 @@ $NetBSD$
  qt_add_qmake_lib_dependency(xcb_icccm xcb)
 -if((LINUX) OR QT_FIND_ALL_PACKAGES_ALWAYS)
 +if((X11_PLATFORM) OR QT_FIND_ALL_PACKAGES_ALWAYS)
-     qt_find_package(XCB 0.3.9 COMPONENTS UTIL PROVIDED_TARGETS XCB::UTIL MODULE_NAME gui QMAKE_LIB xcb_util)
- endif()
- qt_add_qmake_lib_dependency(xcb_util xcb)
--if((LINUX) OR QT_FIND_ALL_PACKAGES_ALWAYS)
-+if((X11_PLATFORM) OR QT_FIND_ALL_PACKAGES_ALWAYS)
      qt_find_package(XCB 0.3.9 COMPONENTS IMAGE PROVIDED_TARGETS XCB::IMAGE MODULE_NAME gui QMAKE_LIB xcb_image)
  endif()
- qt_add_qmake_lib_dependency(xcb_image xcb_shm xcb_util xcb)
+ qt_add_qmake_lib_dependency(xcb_image xcb_shm xcb)
 -if((LINUX) OR QT_FIND_ALL_PACKAGES_ALWAYS)
 +if((X11_PLATFORM) OR QT_FIND_ALL_PACKAGES_ALWAYS)
      qt_find_package(XCB 0.3.9 COMPONENTS KEYSYMS PROVIDED_TARGETS XCB::KEYSYMS MODULE_NAME gui QMAKE_LIB xcb_keysyms)
@@ -67,7 +62,7 @@ $NetBSD$
  endif()
  qt_add_qmake_lib_dependency(xcb_shape xcb)
 -if((LINUX) OR QT_FIND_ALL_PACKAGES_ALWAYS)
-+if((X11_PLATFORM) OR QT_FIND_ALL_PACKAGES_ALWAYS)
++if((X11_PLARFORM) OR QT_FIND_ALL_PACKAGES_ALWAYS)
      qt_find_package(XCB COMPONENTS SHM PROVIDED_TARGETS XCB::SHM MODULE_NAME gui QMAKE_LIB xcb_shm)
  endif()
  qt_add_qmake_lib_dependency(xcb_shm xcb)
@@ -119,7 +114,7 @@ $NetBSD$
      qt_find_package(XRender 0.6 PROVIDED_TARGETS PkgConfig::XRender MODULE_NAME gui QMAKE_LIB xrender)
  endif()
  qt_add_qmake_lib_dependency(xrender xlib)
-@@ -897,7 +898,7 @@ qt_feature("xcb-glx-plugin" PRIVATE
+@@ -891,7 +892,7 @@ qt_feature("xcb-glx-plugin" PRIVATE
      CONDITION QT_FEATURE_xcb_xlib AND QT_FEATURE_opengl AND NOT QT_FEATURE_opengles2
      EMIT_IF QT_FEATURE_xcb
  )
@@ -128,7 +123,7 @@ $NetBSD$
      LABEL "  XCB GLX"
      CONDITION XCB_GLX_FOUND
      EMIT_IF QT_FEATURE_xcb AND QT_FEATURE_xcb_glx_plugin
-@@ -963,7 +964,7 @@ qt_feature("textmarkdownreader" PUBLIC
+@@ -957,7 +958,7 @@ qt_feature("textmarkdownreader" PUBLIC
  qt_feature("system-textmarkdownreader" PUBLIC
      SECTION "Kernel"
      LABEL "  Using system libmd4c"

@@ -2634,6 +2634,7 @@ qt6/lib/cmake/Qt6/Qt6ConfigVersion.cmake
 qt6/lib/cmake/Qt6/Qt6Dependencies.cmake
 qt6/lib/cmake/Qt6/Qt6Targets.cmake
 qt6/lib/cmake/Qt6/Qt6VersionlessTargets.cmake
+qt6/lib/cmake/Qt6/QtAndroidHelpers.cmake
 qt6/lib/cmake/Qt6/QtAppHelpers.cmake
 qt6/lib/cmake/Qt6/QtAutogenHelpers.cmake
 qt6/lib/cmake/Qt6/QtBuild.cmake
@@ -2704,7 +2705,6 @@ qt6/lib/cmake/Qt6/QtWrapperScriptHelpers.cmake
 qt6/lib/cmake/Qt6/QtWriteArgsFile.cmake
 qt6/lib/cmake/Qt6/qt.toolchain.cmake
 qt6/lib/cmake/Qt6BuildInternals/Qt6BuildInternalsConfig.cmake
-qt6/lib/cmake/Qt6BuildInternals/QtBuildInternalsAndroid.cmake
 qt6/lib/cmake/Qt6BuildInternals/QtBuildInternalsExtra.cmake
 qt6/lib/cmake/Qt6BuildInternals/QtStandaloneTestTemplateProject/CMakeLists.txt
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtBaseTestsConfig.cmake
@@ -3099,6 +3099,9 @@ qt6/lib/metatypes/qt6core_qobject_release_metatypes.json
 qt6/lib/metatypes/qt6core_release_metatypes.json
 qt6/lib/metatypes/qt6gui_release_metatypes.json
 qt6/lib/metatypes/qt6widgets_release_metatypes.json
+qt6/libexec/android_cmakelist_patcher.sh
+qt6/libexec/android_emulator_launcher.sh
+qt6/libexec/ensure_pro_file.cmake
 qt6/libexec/syncqt.pl
 qt6/mkspecs/aix-g++-64/qmake.conf
 qt6/mkspecs/aix-g++-64/qplatformdefs.h
