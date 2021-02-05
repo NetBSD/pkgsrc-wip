@@ -1,0 +1,2 @@
+Qt6 module that includes functions that have been deprecated in Qt6
+so that Qt5 application can be ported to Qt6 more easily
