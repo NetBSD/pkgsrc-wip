@@ -1864,6 +1864,7 @@ SUBDIR+=	jython
 SUBDIR+=	kacst-one
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kactivitymanagerd
+SUBDIR+=	kafkacat
 SUBDIR+=	kahakai
 SUBDIR+=	kalarmcal
 SUBDIR+=	kallisto
