@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (kafkacat-1.6.0.tar.gz) = 9e4b7fe17a0d57115e32f7865c3c8f6cae7b2680
+RMD160 (kafkacat-1.6.0.tar.gz) = eb27f921ae704fa8f7924c542b91049e14b677f8
+SHA512 (kafkacat-1.6.0.tar.gz) = a203f3db21fef7b885d5b394458541c830078ae3fe4c8d2d59226db14db6ef470e167bd9491982751086cd96837ff10699709e4379d007857a4058335207e858
+Size (kafkacat-1.6.0.tar.gz) = 131314 bytes
+SHA1 (patch-kafkacat.c) = 6c74eb423a8c67065ca74abff03ce7da1f8dc92f
