@@ -11,10 +11,8 @@ HOMEPAGE=	https://bedtools.readthedocs.io/en/latest/
 COMMENT=	Swiss army knife for genome arithmetic
 LICENSE=	mit
 
-TEST_DEPENDS+=	bash
-
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	bash:test gmake
 REPLACE_SH+=	scripts/vcfsort.sh
 REPLACE_PYTHON=	scripts/makeBashScripts.py
 

@@ -2,7 +2,7 @@ $NetBSD$
 
 # Respect pkgsrc env
 
---- src/utils/htslib/Makefile.orig	2021-01-21 22:49:18.823750624 +0000
+--- src/utils/htslib/Makefile.orig	2021-01-23 19:33:26.000000000 +0000
 +++ src/utils/htslib/Makefile
 @@ -22,7 +22,7 @@
  # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
