@@ -25,7 +25,7 @@ CXXFLAGS.SunOS+=	-D_Noreturn=""
 BUILDLINK_TRANSFORM+=	rm:-Wundef
 
 # SunOS ld doesn't support -rpath-link
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt6/lib
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
@@ -38,6 +38,10 @@ PLIST.notdarwin=	yes
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if "${PKGPATH}" != "wip/qt6-qtbase"
+CONFIGURE_ARGS+=	-cmake-use-default-generator
+.if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=TRUE
+.endif
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${WRKSRC} ${CONFIGURE_ARGS}
 .endif
