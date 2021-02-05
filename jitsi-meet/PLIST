@@ -3,7 +3,6 @@ share/examples/jitsi-meet/config.js
 share/examples/jitsi-meet/jitsi.example.com
 share/examples/jitsi-meet/nginx.conf
 share/examples/jitsi-meet/prosody.cfg.lua
-share/jitsi-meet/ConferenceEvents.js
 share/jitsi-meet/LICENSE
 share/jitsi-meet/analytics-ga.js
 share/jitsi-meet/app.js
@@ -22,14 +21,18 @@ share/jitsi-meet/fonts/OpenSans-Light-webfont.svg
 share/jitsi-meet/fonts/OpenSans-Light-webfont.ttf
 share/jitsi-meet/fonts/OpenSans-Light-webfont.woff
 share/jitsi-meet/head.html
+share/jitsi-meet/images/app-store-badge.png
 share/jitsi-meet/images/apple-touch-icon.png
 share/jitsi-meet/images/avatar.png
 share/jitsi-meet/images/btn_google_signin_dark_normal.png
+share/jitsi-meet/images/calendar.svg
 share/jitsi-meet/images/chromeLogo.svg
 share/jitsi-meet/images/dropboxLogo_square.png
+share/jitsi-meet/images/f-droid-badge.png
 share/jitsi-meet/images/favicon.ico
 share/jitsi-meet/images/flags.png
 share/jitsi-meet/images/flags@2x.png
+share/jitsi-meet/images/google-play-badge.png
 share/jitsi-meet/images/googleLogo.svg
 share/jitsi-meet/images/icon-users.png
 share/jitsi-meet/images/jitsiLogo_square.png
@@ -37,7 +40,8 @@ share/jitsi-meet/images/jitsilogo.png
 share/jitsi-meet/images/logo-deep-linking.png
 share/jitsi-meet/images/microsoftLogo.svg
 share/jitsi-meet/images/user-groups.svg
-share/jitsi-meet/images/watermark.png
+share/jitsi-meet/images/watermark.svg
+share/jitsi-meet/images/welcome-background.png
 share/jitsi-meet/index.android.js
 share/jitsi-meet/index.html
 share/jitsi-meet/index.ios.js
@@ -71,6 +75,7 @@ share/jitsi-meet/lang/languages-id.json
 share/jitsi-meet/lang/languages-is.json
 share/jitsi-meet/lang/languages-it.json
 share/jitsi-meet/lang/languages-ja.json
+share/jitsi-meet/lang/languages-ka.json
 share/jitsi-meet/lang/languages-kab.json
 share/jitsi-meet/lang/languages-km.json
 share/jitsi-meet/lang/languages-ko.json
@@ -129,6 +134,7 @@ share/jitsi-meet/lang/main-kab.json
 share/jitsi-meet/lang/main-ko.json
 share/jitsi-meet/lang/main-lt.json
 share/jitsi-meet/lang/main-lv.json
+share/jitsi-meet/lang/main-ml.json
 share/jitsi-meet/lang/main-mn.json
 share/jitsi-meet/lang/main-mr.json
 share/jitsi-meet/lang/main-nb.json
@@ -218,10 +224,10 @@ share/jitsi-meet/static/offline.html
 share/jitsi-meet/static/prejoin.html
 share/jitsi-meet/static/pwa/icons/icon192.png
 share/jitsi-meet/static/pwa/icons/icon512.png
-share/jitsi-meet/static/pwa/manifest.json
-share/jitsi-meet/static/pwa/registrator.js
+share/jitsi-meet/static/pwa/icons/iconMask.png
 share/jitsi-meet/static/recommendedBrowsers.html
 share/jitsi-meet/static/settingsToolbarAdditionalContent.html
+share/jitsi-meet/static/welcomePageAdditionalCard.html
 share/jitsi-meet/static/welcomePageAdditionalContent.html
 share/jitsi-meet/title.html
 share/jitsi-meet/webpack.config.js
