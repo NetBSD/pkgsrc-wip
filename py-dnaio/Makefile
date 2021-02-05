@@ -5,8 +5,8 @@
 #              Thu Oct 10 15:09:51 CDT 2019               #
 ###########################################################
 
-DISTNAME=	dnaio-${PV}
-PKGNAME=	${PYPKGPREFIX}-dnaio-${PV}
+DISTNAME=	dnaio-0.5.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnaio/}
 
@@ -21,8 +21,6 @@ LICENSE=	mit
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c
-
-PV=		0.4
 
 # Verify that we shouldn't use distutils.mk or extensions.mk instead.
 .include "../../lang/python/egg.mk"

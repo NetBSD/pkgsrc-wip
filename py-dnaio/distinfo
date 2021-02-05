@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (dnaio-0.4.tar.gz) = f4073d7a3f032dbfaaf3bb05d94a68c2a6886118
-RMD160 (dnaio-0.4.tar.gz) = 5ae69f8146d86595a09714affe4d8d8cc75614a5
-SHA512 (dnaio-0.4.tar.gz) = e6491ceab5c810cfb06f807ac24cfe95f963323002344d37a17f6c60669139469c7a6ca4ddaf19dc37c3a20c7eea9bcd80c2fcfb6378ee4f1acd5540b032b084
-Size (dnaio-0.4.tar.gz) = 123137 bytes
+SHA1 (dnaio-0.5.0.tar.gz) = 466b533b83ef34baab0492199264a6d88d34be57
+RMD160 (dnaio-0.5.0.tar.gz) = 731c217d956cf03088851579bd364d510b8222ec
+SHA512 (dnaio-0.5.0.tar.gz) = 2e6a0dd04558b70ee08a81fd1d118525734df52701735cc27bab4c423c2030ec2fb6e83ddf02c491e1eb250c471d230b8fa72993c3a20ae844716c9542059c67
+Size (dnaio-0.5.0.tar.gz) = 126321 bytes
