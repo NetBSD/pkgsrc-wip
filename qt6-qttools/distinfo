@@ -4,4 +4,4 @@ SHA1 (qttools-everywhere-src-6.0.1.tar.xz) = dee5e27261ad77388043256c55f0077791a
 RMD160 (qttools-everywhere-src-6.0.1.tar.xz) = 6cffa21c7439ba2a6f5ab9555cc11d53b836821a
 SHA512 (qttools-everywhere-src-6.0.1.tar.xz) = 6ab06290b877b5eba14475f639aa1101e6fabfaa0e1af25042f00749136dca5756b20dbe6dd3514a3bde5fd7ea21f1ec6c44fd7b656b7898937566e6528cb3ba
 Size (qttools-everywhere-src-6.0.1.tar.xz) = 8387408 bytes
-SHA1 (patch-src_linguist_lupdate_CMakeLists.txt) = 4199be2a6d87cf9e1abd4e0f9c8983e4cf604804
+SHA1 (patch-src_linguist_lupdate_CMakeLists.txt) = 040034f45e8246403c28fe9738bd8f2c8c05872e
