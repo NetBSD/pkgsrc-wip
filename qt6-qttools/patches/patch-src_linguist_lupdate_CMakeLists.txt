@@ -1,0 +1,18 @@
+$NetBSD$
+
+Clang is compiled without rtti so when compiling with gcc turn of rtti
+this fixes problems with undefined reference to
+"typeinfo for clang::ASTConsumer"  
+
+--- src/linguist/lupdate/CMakeLists.txt.orig	2021-01-28 00:04:44.000000000 +0000
++++ src/linguist/lupdate/CMakeLists.txt
+@@ -99,6 +99,9 @@ qt_internal_extend_target(${target_name}
+ # special case begin
+ if(QT_FEATURE_clangcpp)
+     set_property(SOURCE clangtoolastreader.cpp PROPERTY SKIP_AUTOMOC ON)
++    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
++        target_compile_options(${target_name} PRIVATE -fno-rtti)
++    endif()
+ endif()
+ # special case end
+ 
