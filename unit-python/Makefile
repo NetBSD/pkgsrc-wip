@@ -9,9 +9,10 @@ MODNAME=	${LANG}
 MAINTAINER=	osa@FreeBSD.org
 
 post-configure:
-	cd ${WRKSRC} && \
-	./configure ${LANG} --module=${MODNAME} \
-		--config=${LANG}${PYVERSSUFFIX}-config
+	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}		\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} ${CONFIGURE_SCRIPT}	\
+			${LANG} --module=${MODNAME}				\
+				--config=${LANG}${PYVERSSUFFIX}-config
 
 .include "../../lang/${LANG}/application.mk"
 .include "../../wip/unit/ext.mk"

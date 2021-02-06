@@ -9,8 +9,9 @@ MODNAME=	${LANG}
 MAINTAINER=	osa@FreeBSD.org
 
 post-configure:
-	cd ${WRKSRC} && \
-	./configure ${LANG} --module=${MODNAME}
+	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} 			\
+			${CONFIGURE_SCRIPT} ${LANG} --module=${MODNAME}
 
 .include "../../lang/${LANG}/buildlink3.mk"
 .include "../../wip/unit/ext.mk"

@@ -17,9 +17,11 @@ PHP_VERSIONS_ACCEPTED?=	56 72 73 74
 #.endif
 
 post-configure:
-	cd ${WRKSRC} && \
-	./configure ${LANG} --lib-path=${PREFIX}/lib \
-		--module=${MODNAME}
+	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} 			\
+			${CONFIGURE_SCRIPT} ${LANG}			\
+				--lib-path=${PREFIX}/lib		\
+					--module=${MODNAME}
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../wip/unit/ext.mk"
