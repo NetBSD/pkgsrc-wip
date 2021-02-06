@@ -1,5 +1,9 @@
 # $NetBSD$
 # used by wip/qt6-qtbase/Makefile
+# used by wip/qt6-qtdeclarative/Makefile
+# used by wip/qt6-qtsvg/Makefile
+# used by wip/qt6-qttools/Makefile
+# used by wip/qt6-qt5compat/Makefile
 
 .include "../../wip/qt6/Makefile.common"
 
