@@ -25,7 +25,7 @@ SUBST_FILES.bash+=	test/test.pl
 
 REPLACE_PERL+=		misc/*.pl
 REPLACE_PERL+=		test/*.pl
-REPLACE_PERL+=		misc/plot-bamstats
+REPLACE_PERL+=		misc/plot-bamstats misc/plot-ampliconstats
 REPLACE_LUA+=		misc/*.lua
 
 CONFIGURE_ARGS+=	--with-htslib=system
