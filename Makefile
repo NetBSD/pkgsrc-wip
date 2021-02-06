@@ -4761,6 +4761,7 @@ SUBDIR+=	qt6-qt5compat
 SUBDIR+=	qt6-qtbase
 SUBDIR+=	qt6-qtdeclarative
 SUBDIR+=	qt6-qtquickcontrols2
+SUBDIR+=	qt6-qtquicktimeline
 SUBDIR+=	qt6-qtsvg
 SUBDIR+=	qt6-qttools
 SUBDIR+=	qtaccountsservice

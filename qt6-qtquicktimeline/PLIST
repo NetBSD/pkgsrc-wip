@@ -1,0 +1,10 @@
+@comment $NetBSD$
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginConfig.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginDependencies.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets-release.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets.cmake
+qt6/qml/QtQuick/Timeline/libqtquicktimelineplugin.so
+qt6/qml/QtQuick/Timeline/plugins.qmltypes
+qt6/qml/QtQuick/Timeline/qmldir
