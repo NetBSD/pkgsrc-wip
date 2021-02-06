@@ -4765,6 +4765,7 @@ SUBDIR+=	qt5-qtwebengine
 SUBDIR+=	qt6
 SUBDIR+=	qt6-qt5compat
 SUBDIR+=	qt6-qtbase
+SUBDIR+=	qt6-qtdeclarative
 SUBDIR+=	qt6-qtsvg
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtile
