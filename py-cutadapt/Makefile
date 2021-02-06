@@ -10,8 +10,8 @@ HOMEPAGE=	https://cutadapt.readthedocs.io/en/stable/
 COMMENT=	Find and remove adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-xopen>=0.8.2:../../devel/py-xopen
-DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.3:../../wip/py-dnaio
+DEPENDS+=	${PYPKGPREFIX}-xopen>=1.0.0:../../devel/py-xopen
+DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.5.0:../../wip/py-dnaio
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
