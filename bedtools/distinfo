@@ -7,3 +7,4 @@ Size (bedtools-2.30.0.tar.gz) = 20639858 bytes
 SHA1 (patch-Makefile) = d21b4a69ce18eac7de59d277a03d0a5f5e2e1cb5
 SHA1 (patch-src_utils_BamTools_include_SamHeader.hpp) = 7ab168b247b5edf7f3eccd9ef7329a5e1605c787
 SHA1 (patch-src_utils_htslib_Makefile) = 8785ff3110f8df26e0cc5b2fdf1e2e02d6cdc836
+SHA1 (patch-test_test.sh) = e3a17815d6a30c17db7134613d25f08c6be3494e
