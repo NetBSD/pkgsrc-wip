@@ -5,7 +5,12 @@ QTVERSION=	6.0.1
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(QT_ADDLIB)
+MASTER_SITES=	http://download.qt.io/official_releases/additional_libraries/${QT_ADDLIB}/${QTVERSION:R}/${QTVERSION}/
+.else
 MASTER_SITES=	http://download.qt.io/official_releases/qt/${QTVERSION:R}/${QTVERSION}/submodules/
+.endif
+
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 
