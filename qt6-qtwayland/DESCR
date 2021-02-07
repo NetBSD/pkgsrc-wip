@@ -1,0 +1,2 @@
+Qt6 module for writing custom display servers based on the wayland protocol
+using QML and C++ APIs.

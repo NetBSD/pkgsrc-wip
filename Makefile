@@ -4764,6 +4764,7 @@ SUBDIR+=	qt6-qtquicktimeline
 SUBDIR+=	qt6-qtshadertools
 SUBDIR+=	qt6-qtsvg
 SUBDIR+=	qt6-qttools
+SUBDIR+=	qt6-qtwayland
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtile
 SUBDIR+=	qtnotifydaemon

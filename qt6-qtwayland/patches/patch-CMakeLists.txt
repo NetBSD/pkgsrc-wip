@@ -1,0 +1,15 @@
+$NetBSD$
+
+* enable NetBSD
+
+--- CMakeLists.txt.orig	2021-01-28 00:04:49.000000000 +0000
++++ CMakeLists.txt
+@@ -21,7 +21,7 @@ find_package(Qt6 ${PROJECT_VERSION} CONF
+     BuildInternals
+ )
+ 
+-if(NOT MACOS AND NOT QNX AND (ANDROID OR NOT LINUX))
++if(NOT MACOS AND NOT QNX AND (ANDROID OR NOT LINUX) AND NOT NETBSD)
+     message(NOTICE "Skipping the build as the condition \"LINUX OR MACOS OR QNX\" is not met.")
+     return()
+ endif()
