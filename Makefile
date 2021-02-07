@@ -4114,7 +4114,6 @@ SUBDIR+=	py-param
 SUBDIR+=	py-parameters
 SUBDIR+=	py-paramz
 SUBDIR+=	py-parserutils
-SUBDIR+=	py-parsimonious
 SUBDIR+=	py-parsy
 SUBDIR+=	py-parver
 SUBDIR+=	py-patch

@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-httpie>=0.9.2:../../www/py-httpie
-DEPENDS+=	${PYPKGPREFIX}-parsimonious>=0.6.2:../../wip/py-parsimonious
+DEPENDS+=	${PYPKGPREFIX}-parsimonious>=0.6.2:../../textproc/py-parsimonious
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.7:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.1.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
