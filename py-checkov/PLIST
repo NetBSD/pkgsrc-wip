@@ -248,6 +248,12 @@ ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EBSEncryption.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EBSSnapshotEncryption.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EBSSnapshotEncryption.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EBSSnapshotEncryption.pyo
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EC2Credentials.py
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EC2Credentials.pyc
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EC2Credentials.pyo
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EC2PublicIP.py
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EC2PublicIP.pyc
+${PYSITELIB}/checkov/cloudformation/checks/resource/aws/EC2PublicIP.pyo
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/ECRImageScanning.py
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/ECRImageScanning.pyc
 ${PYSITELIB}/checkov/cloudformation/checks/resource/aws/ECRImageScanning.pyo
@@ -410,6 +416,9 @@ ${PYSITELIB}/checkov/common/__init__.pyo
 ${PYSITELIB}/checkov/common/bridgecrew/__init__.py
 ${PYSITELIB}/checkov/common/bridgecrew/__init__.pyc
 ${PYSITELIB}/checkov/common/bridgecrew/__init__.pyo
+${PYSITELIB}/checkov/common/bridgecrew/ci_variables.py
+${PYSITELIB}/checkov/common/bridgecrew/ci_variables.pyc
+${PYSITELIB}/checkov/common/bridgecrew/ci_variables.pyo
 ${PYSITELIB}/checkov/common/bridgecrew/integration_features/__init__.py
 ${PYSITELIB}/checkov/common/bridgecrew/integration_features/__init__.pyc
 ${PYSITELIB}/checkov/common/bridgecrew/integration_features/__init__.pyo
@@ -902,6 +911,9 @@ ${PYSITELIB}/checkov/terraform/checks/resource/aws/APIGatewayXray.pyo
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AbsSecurityGroupUnrestrictedIngress.py
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AbsSecurityGroupUnrestrictedIngress.pyc
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AbsSecurityGroupUnrestrictedIngress.pyo
+${PYSITELIB}/checkov/terraform/checks/resource/aws/AppLoadBalancerTLS12.py
+${PYSITELIB}/checkov/terraform/checks/resource/aws/AppLoadBalancerTLS12.pyc
+${PYSITELIB}/checkov/terraform/checks/resource/aws/AppLoadBalancerTLS12.pyo
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaDatabaseEncryption.py
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaDatabaseEncryption.pyc
 ${PYSITELIB}/checkov/terraform/checks/resource/aws/AthenaDatabaseEncryption.pyo
@@ -1631,6 +1643,9 @@ ${PYSITELIB}/checkov/terraform/module_loading/registry.pyo
 ${PYSITELIB}/checkov/terraform/parser.py
 ${PYSITELIB}/checkov/terraform/parser.pyc
 ${PYSITELIB}/checkov/terraform/parser.pyo
+${PYSITELIB}/checkov/terraform/parser_var_blocks.py
+${PYSITELIB}/checkov/terraform/parser_var_blocks.pyc
+${PYSITELIB}/checkov/terraform/parser_var_blocks.pyo
 ${PYSITELIB}/checkov/terraform/plan_parser.py
 ${PYSITELIB}/checkov/terraform/plan_parser.pyc
 ${PYSITELIB}/checkov/terraform/plan_parser.pyo
