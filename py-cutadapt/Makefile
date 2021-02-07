@@ -13,8 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.0.0:../../devel/py-xopen
 DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.5.0:../../wip/py-dnaio
 
-post-install:
-	(cd ${DESTDIR}${PREFIX}/bin && ${MV} cutadapt cutadapt-${PYVERSSUFFIX})
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
