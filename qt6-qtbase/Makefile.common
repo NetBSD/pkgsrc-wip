@@ -2,6 +2,7 @@
 # used by wip/qt6-qtbase/Makefile
 # used by wip/qt6-qtdeclarative/Makefile
 # used by wip/qt6-qtimageformats/Makefile
+# used by wip/qt6-qtnetworkauth/Makefile
 # used by wip/qt6-qtquick3d/Makefile
 # used by wip/qt6-qtquickcontrols2/Makefile
 # used by wip/qt6-qtquicktimeline/Makefile
