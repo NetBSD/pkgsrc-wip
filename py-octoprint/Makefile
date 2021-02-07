@@ -14,7 +14,7 @@ LICENSE=	gnu-agpl-v3
 
 RCD_SCRIPTS=	octoprint
 
-PYTHON_VERSIONS_ACCEPTED=	37 36
+PYTHON_VERSIONS_ACCEPTED=	38 37 36
 
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-cachelib>=0.1:../../wip/py-cachelib
