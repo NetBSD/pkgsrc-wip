@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (qtimageformats-everywhere-src-6.0.1.tar.xz) = 29212e99d23923e9e8203abd843b42413794fc7f
+RMD160 (qtimageformats-everywhere-src-6.0.1.tar.xz) = 4893d0011841ffcd43d37c24d1144b231974a217
+SHA512 (qtimageformats-everywhere-src-6.0.1.tar.xz) = 064a185e80171cb18f4cfad2af71ab0ab1cd290771f34e9ac11a68cbb07e0cf1772ba8088f599cba2fefd81c3eabe2ae962ddfbff33f767678dfd2c2ad8ac8e0
+Size (qtimageformats-everywhere-src-6.0.1.tar.xz) = 1820636 bytes
+SHA1 (patch-src_imageformats_configure.cmake) = 68d54b612cf280927748fd3225c2eae0d547cce2
+SHA1 (patch-src_plugins_imageformats_CMakeLists.txt) = fc058933a2536a5d90ce78d9eacbb82e7772622a
+SHA1 (patch-src_plugins_imageformats_mng_CMakeLists.txt) = 3ca958e5259e6bfcd992ab3c45f25beda0178503
+SHA1 (patch-src_plugins_imageformats_tiff_qtiffhandler.cpp) = cd9f708caf836eca851f24bb696aad8a5e4b5506

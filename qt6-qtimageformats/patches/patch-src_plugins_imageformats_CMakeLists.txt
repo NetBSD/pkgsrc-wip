@@ -1,0 +1,15 @@
+$NetBSD$
+
+* enable mng
+
+--- src/plugins/imageformats/CMakeLists.txt.orig	2021-01-28 05:17:06.000000000 +0000
++++ src/plugins/imageformats/CMakeLists.txt
+@@ -24,7 +24,7 @@ endif()
+ if(QT_FEATURE_regularexpression)
+     add_subdirectory(icns)
+ endif()
+-if(QT_FEATURE_mng AND OFF) # special case: FIXME
++if(QT_FEATURE_mng) # special case: FIXME
+     add_subdirectory(mng)
+ endif()
+ if(QT_FEATURE_jasper)

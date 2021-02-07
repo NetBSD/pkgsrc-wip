@@ -1,0 +1,14 @@
+$NetBSD$
+
+* enable mng
+
+--- src/plugins/imageformats/mng/CMakeLists.txt.orig	2021-01-28 05:17:06.000000000 +0000
++++ src/plugins/imageformats/mng/CMakeLists.txt
+@@ -15,6 +15,7 @@ qt_internal_add_plugin(QMngPlugin
+     PUBLIC_LIBRARIES
+         Qt::Core
+         Qt::Gui
++        PkgConfig::MNG
+ )
+ 
+ #### Keys ignored in scope 1:.:.:mng.pro:<TRUE>:
