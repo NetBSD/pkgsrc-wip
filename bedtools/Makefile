@@ -22,7 +22,7 @@ SUBST_SED.pybin=	-e 's|python|${PYTHONBIN}|g'
 SUBST_FILES.pybin=	Makefile
 
 do-test:
-	(cd ${WRKSRC}/test && bash test.sh)
+	cd ${WRKSRC}/test && bash test.sh
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
