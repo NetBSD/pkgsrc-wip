@@ -21,6 +21,8 @@ SUBST_STAGE.pybin=	pre-configure
 SUBST_SED.pybin=	-e 's|python|${PYTHONBIN}|g'
 SUBST_FILES.pybin=	Makefile
 
+CFLAGS+=	-Wno-sign-compare -Wno-unused-but-set-variable
+
 do-test:
 	cd ${WRKSRC}/test && bash test.sh
 
