@@ -9,7 +9,7 @@ Use correct type.
  
          value = colon + 1;
 -        while(isspace(*value)) {
-+        while(isspace((int)(*value))) {
++        while(isspace((unsigned char)(*value))) {
              value++;
          }
  
