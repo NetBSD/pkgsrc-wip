@@ -376,6 +376,7 @@ SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
 SUBDIR+=	castget
 SUBDIR+=	catfish
+SUBDIR+=	catpoint
 SUBDIR+=	catpoint-git
 SUBDIR+=	cb2bib
 SUBDIR+=	cblas
