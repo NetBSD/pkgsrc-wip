@@ -1,4 +1,5 @@
 # $NetBSD$
+# used by wip/qt6-odbc/Makefile
 # used by wip/qt6-psql/Makefile
 # used by wip/qt6-qtbase/Makefile
 # used by wip/qt6-qtdeclarative/Makefile
