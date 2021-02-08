@@ -10,6 +10,7 @@
 # used by wip/qt6-qtsvg/Makefile
 # used by wip/qt6-qttools/Makefile
 # used by wip/qt6-qtwayland/Makefile
+# used by wip/qt6-qt3d/Makefile
 # used by wip/qt6-qt5compat/Makefile
 
 .include "../../wip/qt6/Makefile.common"
