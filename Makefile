@@ -4755,6 +4755,7 @@ SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt5-qtwebengine
 SUBDIR+=	qt6
+SUBDIR+=	qt6-psql
 SUBDIR+=	qt6-qt3d
 SUBDIR+=	qt6-qt5compat
 SUBDIR+=	qt6-qtbase

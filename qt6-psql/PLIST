@@ -1,0 +1,7 @@
+@comment $NetBSD$
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-release.cmake
+qt6/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake
+qt6/plugins/sqldrivers/libqsqlpsql.so
