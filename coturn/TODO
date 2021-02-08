@@ -1,3 +1,14 @@
+Prepare COMMIT_MSG for import to pkgsrc.
+
+Remove MESSAGE.  This repeats pkgsrc-wide configuration norms and
+exhorts to read the upstream documentation.
+
+Install upstream's postinstall as documentation.
+
+Fix path to examples.
+
+Fix detection of libevent2.
+
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2018-4056, CVE-2018-4058, CVE-2018-4059, CVE-2020-4067, CVE-2020-6061,
   CVE-2020-6062, CVE-2020-26262

@@ -1,15 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	coturn-4.5.0.6
+DISTNAME=	coturn-4.5.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 GITHUB_PROJECT=	coturn
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/coturn/coturn
 COMMENT=	The TURN Server is a VoIP media traffic NAT traversal server
-LICENSE=	citrix_ica-license
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
