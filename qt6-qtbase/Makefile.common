@@ -54,8 +54,9 @@ CONFIGURE_ARGS+=	-cmake-use-default-generator
 .if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=TRUE
 .endif
+QTCONFDIR?=		.
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${WRKSRC} ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${QTCONFDIR} ${CONFIGURE_ARGS}
 .endif
 
 .if ${OPSYS} == "Darwin"
