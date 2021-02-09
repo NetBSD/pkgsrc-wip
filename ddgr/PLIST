@@ -9,3 +9,4 @@ ${PYSITELIB}/ddgr.py
 ${PYSITELIB}/ddgr.pyc
 ${PYSITELIB}/ddgr.pyo
 man/man1/ddgr.1
+share/examples/ddgr

@@ -12,12 +12,15 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PREFIX}/share/examples
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	ddgr
 REPLACE_PYTHON+=	setup.py
+
+#PKG_SYSCONFSUBDIR=	ddgr
+EGDIR=			${PREFIX}/share/examples/ddgr
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -27,7 +30,14 @@ SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.prefix+=	-e 's,share/man,${PKGMANDIR},g'
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/ddgr.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ddgr.1
+	${INSTALL_MAN} ${WRKSRC}/ddgr.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ddgr.1
+	${INSTALL_DATA} ${WRKSRC}/auto-completion/bash/ddgr-completion.bash \
+		${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/auto-completion/fish/ddgr.fish \
+		${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/auto-completion/zsh/_ddgr \
+		${DESTDIR}${EGDIR}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
