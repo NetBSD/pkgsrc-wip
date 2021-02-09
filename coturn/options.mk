@@ -1,7 +1,9 @@
+# $NetBSD$
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.coturn
 PKG_SUPPORTED_OPTIONS=		hiredis mysql pgsql sqlite redis
 
-PKG_SUGGESTED_OPTIONS=	sqlite
+PKG_SUGGESTED_OPTIONS=		sqlite
 
 .include "../../mk/bsd.options.mk"
 
@@ -10,7 +12,7 @@ PKG_SUGGESTED_OPTIONS=	sqlite
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-.include "../../databases/mysql55-client/buildlink3.mk"
+.include "../../databases/mysql57-client/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
