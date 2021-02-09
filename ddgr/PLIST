@@ -8,3 +8,4 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ddgr.py
 ${PYSITELIB}/ddgr.pyc
 ${PYSITELIB}/ddgr.pyo
+man/man1/ddgr.1

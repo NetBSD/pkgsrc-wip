@@ -12,12 +12,19 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	Makefile
 SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.prefix+=	-e 's,share/man,${PKGMANDIR},g'
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/ddgr.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ddgr.1
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
