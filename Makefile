@@ -582,6 +582,7 @@ SUBDIR+=	dbus-dfbsd
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcdis
 SUBDIR+=	ddate
+SUBDIR+=	ddgr
 SUBDIR+=	ddocent
 SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
