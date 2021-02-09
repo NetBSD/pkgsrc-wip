@@ -16,6 +16,9 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+REPLACE_PYTHON+=	ddgr
+REPLACE_PYTHON+=	setup.py
+
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
 SUBST_STAGE.prefix=	pre-configure
