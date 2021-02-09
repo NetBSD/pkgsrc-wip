@@ -213,7 +213,6 @@ share/zabbix/app/partials/layout.htmlpage.aside.php
 share/zabbix/app/partials/layout.htmlpage.footer.php
 share/zabbix/app/partials/layout.htmlpage.header.php
 share/zabbix/app/partials/massupdate.macros.tab.php
-share/zabbix/app/partials/monitoring.dashboard.breadcrumbs.php
 share/zabbix/app/partials/monitoring.host.filter.php
 share/zabbix/app/partials/monitoring.host.view.html.php
 share/zabbix/app/partials/monitoring.latest.view.html.php
@@ -266,6 +265,7 @@ share/zabbix/app/views/js/administration.gui.edit.js.php
 share/zabbix/app/views/js/administration.housekeeping.edit.js.php
 share/zabbix/app/views/js/administration.iconmap.edit.js.php
 share/zabbix/app/views/js/administration.image.edit.js.php
+share/zabbix/app/views/js/administration.image.list.js.php
 share/zabbix/app/views/js/administration.macros.edit.js.php
 share/zabbix/app/views/js/administration.mediatype.edit.js.php
 share/zabbix/app/views/js/administration.miscconfig.edit.js.php
@@ -275,6 +275,7 @@ share/zabbix/app/views/js/administration.script.edit.js.php
 share/zabbix/app/views/js/administration.trigdisplay.edit.js.php
 share/zabbix/app/views/js/administration.user.edit.common.js.php
 share/zabbix/app/views/js/administration.user.edit.js.php
+share/zabbix/app/views/js/administration.user.list.js.php
 share/zabbix/app/views/js/administration.usergroup.edit.js.php
 share/zabbix/app/views/js/administration.userprofile.edit.js.php
 share/zabbix/app/views/js/administration.userrole.edit.js.php
@@ -289,6 +290,7 @@ share/zabbix/app/views/js/monitoring.dashboard.view.js.php
 share/zabbix/app/views/js/monitoring.host.dashboard.view.js.php
 share/zabbix/app/views/js/monitoring.host.view.js.php
 share/zabbix/app/views/js/monitoring.latest.view.js.php
+share/zabbix/app/views/js/monitoring.map.view.js.php
 share/zabbix/app/views/js/monitoring.problem.view.js.php
 share/zabbix/app/views/js/popup.acknowledge.edit.js.php
 share/zabbix/app/views/js/popup.discovery.check.js.php
@@ -298,7 +300,9 @@ share/zabbix/app/views/js/popup.media.js.php
 share/zabbix/app/views/js/popup.mediatype.message.js.php
 share/zabbix/app/views/js/popup.mediatypetest.edit.js.php
 share/zabbix/app/views/js/popup.tabfilter.edit.js.php
+share/zabbix/app/views/js/popup.triggerexpr.js.php
 share/zabbix/app/views/js/popup.triggerwizard.js.php
+share/zabbix/app/views/js/report.services.js.php
 share/zabbix/app/views/js/reports.auditlog.list.js.php
 share/zabbix/app/views/layout.csv.php
 share/zabbix/app/views/layout.export.php
@@ -565,6 +569,7 @@ share/zabbix/include/classes/helpers/CUploadFile.php
 share/zabbix/include/classes/helpers/CVaultHelper.php
 share/zabbix/include/classes/helpers/CViewHelper.php
 share/zabbix/include/classes/html/CActionButtonList.php
+share/zabbix/include/classes/html/CBreadcrumbs.php
 share/zabbix/include/classes/html/CButton.php
 share/zabbix/include/classes/html/CButtonCancel.php
 share/zabbix/include/classes/html/CButtonDelete.php
@@ -578,8 +583,6 @@ share/zabbix/include/classes/html/CCol.php
 share/zabbix/include/classes/html/CColHeader.php
 share/zabbix/include/classes/html/CCollapsibleUiWidget.php
 share/zabbix/include/classes/html/CColor.php
-share/zabbix/include/classes/html/CComboBox.php
-share/zabbix/include/classes/html/CComboItem.php
 share/zabbix/include/classes/html/CDashboardWidgetMap.php
 share/zabbix/include/classes/html/CDateSelector.php
 share/zabbix/include/classes/html/CDiv.php
@@ -602,6 +605,7 @@ share/zabbix/include/classes/html/CLink.php
 share/zabbix/include/classes/html/CLinkAction.php
 share/zabbix/include/classes/html/CList.php
 share/zabbix/include/classes/html/CListBox.php
+share/zabbix/include/classes/html/CListBoxItem.php
 share/zabbix/include/classes/html/CListItem.php
 share/zabbix/include/classes/html/CMacroValue.php
 share/zabbix/include/classes/html/CMenu.php
@@ -840,7 +844,6 @@ share/zabbix/include/classes/widgets/fields/CWidgetField.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldApplication.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldCheckBox.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldCheckBoxList.php
-share/zabbix/include/classes/widgets/fields/CWidgetFieldComboBox.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldDatePicker.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldGraphDataSet.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldGraphOverride.php
@@ -859,12 +862,13 @@ share/zabbix/include/classes/widgets/fields/CWidgetFieldNumericBox.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldRadioButtonList.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldRangeControl.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldReference.php
+share/zabbix/include/classes/widgets/fields/CWidgetFieldSelect.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldSelectResource.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldSeverities.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldTags.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldTextBox.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldUrl.php
-share/zabbix/include/classes/widgets/fields/CWidgetFieldWidgetListComboBox.php
+share/zabbix/include/classes/widgets/fields/CWidgetFieldWidgetSelect.php
 share/zabbix/include/classes/widgets/forms/CWidgetForm.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormActionLog.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormClock.php
@@ -1019,6 +1023,8 @@ share/zabbix/include/views/js/configuration.triggers.list.js.php
 share/zabbix/include/views/js/editabletable.js.php
 share/zabbix/include/views/js/item.preprocessing.js.php
 share/zabbix/include/views/js/itemtest.js.php
+share/zabbix/include/views/js/monitoring.history.js.php
+share/zabbix/include/views/js/monitoring.screen.constructor.edit.js.php
 share/zabbix/include/views/js/monitoring.screen.edit.js.php
 share/zabbix/include/views/js/monitoring.screen.js.php
 share/zabbix/include/views/js/monitoring.slideconf.edit.js.php
@@ -1100,9 +1106,13 @@ share/zabbix/js/menupopup.js
 share/zabbix/js/multilineinput.js
 share/zabbix/js/multiselect.js
 share/zabbix/js/pages/items.js
+share/zabbix/js/pages/monitoring.overview.js
 share/zabbix/js/pages/popup.condition.common.js
 share/zabbix/js/pages/popup.operation.common.js
+share/zabbix/js/pages/report2.js
+share/zabbix/js/pages/report4.js
 share/zabbix/js/pages/setup.js
+share/zabbix/js/pages/srv_status.js
 share/zabbix/js/servercheck.js
 share/zabbix/js/textareaflexible.js
 share/zabbix/js/vector/class.svg.canvas.js
