@@ -8,7 +8,8 @@ CATEGORIES=	sysutils net
 DISTNAME=	check_printer
 EXTRACT_SUFX=	# empty
 DIST_SUBDIR=	check_printer-${REVISION}
-MASTER_SITES=	https://www.secure-computing.net/trac/export/${REVISION}/SCN%20Open%20Source/trunk/nagios/
+# Can this be converted to GITHUB_*?
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bzed/pkg-nagios-plugins-contrib/raw/debian/25.20191015+1/check_printer/}
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# empty
