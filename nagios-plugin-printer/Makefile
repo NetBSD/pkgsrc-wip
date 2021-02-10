@@ -19,26 +19,26 @@ DEPENDS+=	net-snmp-[0-9]*:../../net/net-snmp
 WRKSRC=		${WRKDIR}
 
 do-extract:
-		${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
 
 PLUGINDIR=		libexec/nagios
 PLIST_SUBST+=		PLUGINDIR=${PLUGINDIR}
 
 INSTALLATION_DIRS+=	${PLUGINDIR}
 
-REPLACE_PERL+=		${WRKSRC}/check_printer
+REPLACE_PERL+=		check_printer
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing paths
 SUBST_FILES.paths=	check_printer
 SUBST_SED.paths=	-e 's;@LIBDIR@;${PREFIX}/${PLUGINDIR};'
-SUBST_SED.paths+=	-e 's;@PREFIX@;${PREFIX};'
+SUBST_VARS.paths=	PREFIX
 
 NO_BUILD=	YES
 
 do-install:
-		${INSTALL_SCRIPT} ${WRKSRC}/check_printer ${DESTDIR}${PREFIX}/${PLUGINDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/check_printer ${DESTDIR}${PREFIX}/${PLUGINDIR}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
