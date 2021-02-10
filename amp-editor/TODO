@@ -1,2 +1,2 @@
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2020-35711
+  CVE-2020-35711 (arc-swap crate), CVE-2021-26957 (xcb crate)
