@@ -9,4 +9,6 @@ ${PYSITELIB}/ddgr.py
 ${PYSITELIB}/ddgr.pyc
 ${PYSITELIB}/ddgr.pyo
 man/man1/ddgr.1
-share/examples/ddgr
+share/examples/ddgr/auto-completion/_ddgr
+share/examples/ddgr/auto-completion/ddgr-completion.bash
+share/examples/ddgr/auto-completion/ddgr.fish

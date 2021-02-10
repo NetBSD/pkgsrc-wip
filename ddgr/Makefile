@@ -12,14 +12,14 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PREFIX}/share/examples
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	ddgr
 REPLACE_PYTHON+=	setup.py
 
-EGDIR=			${PREFIX}/share/examples/ddgr
+EGDIR=			${PREFIX}/share/examples/ddgr/auto-completion
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -31,6 +31,7 @@ SUBST_SED.prefix+=	-e 's,share/man,${PKGMANDIR},g'
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/ddgr.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ddgr.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/auto-completion/bash/ddgr-completion.bash \
 		${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/auto-completion/fish/ddgr.fish \
