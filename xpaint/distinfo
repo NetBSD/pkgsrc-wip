@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.26 2015/11/03 21:34:35 agc Exp $
+
+SHA1 (xpaint-3.1.2.tar.bz2) = 5b29f3ad5af6e7d66d83c4c9196d1691673c8788
+RMD160 (xpaint-3.1.2.tar.bz2) = 6de728460115268d94e56d15220a39979a4f3340
+SHA512 (xpaint-3.1.2.tar.bz2) = d2a5b15d27462d05f6a240b8ea78860ac83be4f6c3f4e75c11e124be6b50bca7930ca21b881ad7bb4563ebfc3b63191fa7a7cefd14fd8fe8815933ed6eb7c96e
+Size (xpaint-3.1.2.tar.bz2) = 1664785 bytes
+SHA1 (patch-configure) = bc83048e71d8c8e6f95643720d1480fcce4cbc07
+SHA1 (patch-main.c) = 5d764c282b2e8798e3690ff99bea7117a83df4a8
+SHA1 (patch-util_Makefile) = b885c20eaaff01f9a6ee15796f041d5a753c371a
+SHA1 (patch-vxp2ps_Makefile) = 30ef714b8541c551fd520956bda7aab7e90a6d77
+SHA1 (patch-xpaintrw_Makefile.in) = 743442e3acb114698a773c04502787c265a30982

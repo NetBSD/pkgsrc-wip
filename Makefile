@@ -5774,6 +5774,7 @@ SUBDIR+=	xoreos-tools
 SUBDIR+=	xorgxrdp
 SUBDIR+=	xosview
 SUBDIR+=	xournalpp-git
+SUBDIR+=	xpaint
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpi-quick_locale_switcher
