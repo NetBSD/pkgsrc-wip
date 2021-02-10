@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST$
-${PLUGINDIR}/check_printer
