@@ -21,19 +21,19 @@ DEPENDS+=	net-snmp-[0-9]*:../../net/net-snmp
 WRKSRC=		${WRKDIR}
 
 do-extract:
-		${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
 
 PLUGINDIR=		libexec/nagios
 PLIST_SUBST+=		PLUGINDIR=${PLUGINDIR}
 
 INSTALLATION_DIRS+=	${PLUGINDIR}
 
-REPLACE_PERL+=		${WRKSRC}/check_snmp_environment.pl
+REPLACE_PERL+=		check_snmp_environment.pl
 
 NO_BUILD=	YES
 
 do-install:
-		${INSTALL_SCRIPT} ${WRKSRC}/check_snmp_environment.pl ${DESTDIR}${PREFIX}/${PLUGINDIR}/check_snmp_environment
+	${INSTALL_SCRIPT} ${WRKSRC}/check_snmp_environment.pl ${DESTDIR}${PREFIX}/${PLUGINDIR}/check_snmp_environment
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

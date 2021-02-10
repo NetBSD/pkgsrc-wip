@@ -1,5 +1,7 @@
 $NetBSD: patch-aa $
+
 Don't warn for non-present power supplies
+
 --- check_snmp_environment.pl.orig	2016-11-08 11:39:49.000000000 +0100
 +++ check_snmp_environment.pl	2016-11-08 11:42:56.000000000 +0100
 @@ -273,7 +273,7 @@
