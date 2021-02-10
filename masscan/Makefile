@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	masscan-1.0.5
+DISTNAME=	masscan-1.3.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=robertdavidgraham/}
 

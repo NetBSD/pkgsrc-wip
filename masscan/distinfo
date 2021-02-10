@@ -1,10 +1,6 @@
 $NetBSD$
 
-SHA1 (masscan-1.0.5.tar.gz) = fbe0a87f355688bf7b38bf3ba64f0902c6dda50b
-RMD160 (masscan-1.0.5.tar.gz) = d3b86be1ac263a592e846405ab2705bd7358b1aa
-SHA512 (masscan-1.0.5.tar.gz) = 55d58234994ebea10bcb3f45a24cdb51b020350faa116aee3a48861a119f66c339d1f533c978f52e37ccf5266be6fd2802765f13461d94eb28ec8d18c68e2f88
-Size (masscan-1.0.5.tar.gz) = 353901 bytes
-SHA1 (patch-Makefile) = 7233a8c919c85d029bc4e215f0993084fbcc78bc
-SHA1 (patch-src_pixie-threads.c) = 0790a0898605d1d7ada27c9b0370d790a7347934
-SHA1 (patch-src_rawsock-getif.c) = 19194dfc5c4689db2c05272b32af7a0f281cef7a
-SHA1 (patch-src_rawsock-getroute.c) = 85b538570f1436fdde2ef1474ffa4da77517df01
+SHA1 (masscan-1.3.2.tar.gz) = 554d9a56a1fdbda9c9a65261a59f1167c971a8df
+RMD160 (masscan-1.3.2.tar.gz) = 1173b20a382ee8daeaea574fcac200d1266ea06e
+SHA512 (masscan-1.3.2.tar.gz) = b0709f6f937a0e86c6913407c3bc60187074395ffff7a7a2bb54b23824d72982510e44fb1b1e7dcba85c4ad25ab1a623597661db43d9046165ba865cd9bd5b27
+Size (masscan-1.3.2.tar.gz) = 463449 bytes
