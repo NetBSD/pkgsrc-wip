@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	haranoaji-extra
-PKGNAME=	tex-${DISTNAME}-20210102
-TEXLIVE_REV=	57295
+PKGNAME=	tex-${DISTNAME}-20210130
+TEXLIVE_REV=	57573
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/haranoaji-extra
