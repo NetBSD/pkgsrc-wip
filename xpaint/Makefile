@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bash gmake
+USE_TOOLS+=	bash gmake gunzip
 
 REPLACE_BASH=	share/bin/imgmerge share/bin/xpaint_ocr
 
@@ -23,13 +23,16 @@ REPLACE_BASH=	share/bin/imgmerge share/bin/xpaint_ocr
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
-# XXX This substitution is inelegant but respects the logic implemented
-# XXX upstream.
 SUBST_CLASSES+=		ln
 SUBST_STAGE.ln=		pre-configure
 SUBST_MESSAGE.ln=	Linking to libXaw3dXft include directory.
 SUBST_FILES.ln=		Makefile.in
 SUBST_SED.ln=		-e 's|/usr/include/X11/Xaw3dxft|${WRKDIR}/.buildlink/include/X11/Xaw3dxft|'
+
+pre-install:
+	for file in ${WRKSRC}/bitmaps/toolicons/*.xpm.gz ; do \
+		${TOOLS_PLATFORM.gunzip} $$file ; \
+	done
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
