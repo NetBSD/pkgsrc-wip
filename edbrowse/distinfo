@@ -1,8 +1,7 @@
 $NetBSD$
 
-SHA1 (edbrowse-3.7.4.tar.gz) = 774fb0cfbf634b3ac6b5f04924c69a8fe2ec3cfe
-RMD160 (edbrowse-3.7.4.tar.gz) = eb62948767144f67e1bb790e4e6e2c128300a112
-SHA512 (edbrowse-3.7.4.tar.gz) = 79b2b450b6f54f3d74b7c722f223b3340b3ddfa1cbff2d69adcd1cd4ffb76b78a812a35a053cf224a74543020ef8423cd68eafa9a277451245d383065fb1595d
-Size (edbrowse-3.7.4.tar.gz) = 765794 bytes
+SHA1 (edbrowse-3.7.5.1.tar.gz) = 63057c3cc159267745d9a89cb3790fe639d2fc36
+RMD160 (edbrowse-3.7.5.1.tar.gz) = 5c7e7505877e42b9520dc515fa8a7c03c01a00fa
+SHA512 (edbrowse-3.7.5.1.tar.gz) = ec217bf98334e8b493a1a80082cebfb11da9fa84d20d8b5f3f3286a78ae1dc6a2731c578d000f9f0f19d3dcbec9aa2c3e2a6b5b35f7ea7672840b9bcd1c5c67a
+Size (edbrowse-3.7.5.1.tar.gz) = 790742 bytes
 SHA1 (patch-CMakeLists.txt) = 0c69e43f680cc2ddec42802d7ac1b7a3ef669e4a
-SHA1 (patch-src_http.c) = 7389ac4c3b67cacde586363e536d860f1b05fc67
