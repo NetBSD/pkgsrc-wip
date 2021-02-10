@@ -2434,6 +2434,7 @@ SUBDIR+=	n2n
 SUBDIR+=	naev
 SUBDIR+=	nag
 SUBDIR+=	nagios-plugin-mysql_health
+SUBDIR+=	nagios-plugin-printer
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	nary
 SUBDIR+=	natali
