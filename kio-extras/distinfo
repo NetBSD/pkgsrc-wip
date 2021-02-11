@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (kio-extras-19.08.0.tar.xz) = f527fee70a15a8d4931c12781d807c2aa897013d
-RMD160 (kio-extras-19.08.0.tar.xz) = 49bcb120c8feb8d2df29e45cc609f8de3ead6724
-SHA512 (kio-extras-19.08.0.tar.xz) = 61687ee7f57f880e0e205267643292a19581985b4fd42936d0cc10999306754d1f30f9ab1a7494844f53742956007520811149ffacc27273985ed44c666c6766
-Size (kio-extras-19.08.0.tar.xz) = 578108 bytes
-SHA1 (patch-info_kde-info2html.conf) = 2fbae864edf1d54cdabf3e9b715eca83596fc2d5
