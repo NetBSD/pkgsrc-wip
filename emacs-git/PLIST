@@ -259,6 +259,7 @@ share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.service
 share/emacs/${PKGVERSION}/etc/emacsclient.desktop
 share/emacs/${PKGVERSION}/etc/enriched.txt
+share/emacs/${PKGVERSION}/etc/facemenu-removal.txt
 share/emacs/${PKGVERSION}/etc/forms/README
 share/emacs/${PKGVERSION}/etc/forms/forms-d2.dat
 share/emacs/${PKGVERSION}/etc/forms/forms-d2.el
