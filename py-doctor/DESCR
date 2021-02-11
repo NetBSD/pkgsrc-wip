@@ -1,0 +1,4 @@
+Pydoctor is a tool for generating API documentation for Python
+modules based on their docstrings via static analysis.It was
+written primarily to replace epydoc for the purposes of the
+Twisted project as epydoc has difficulties with zope.interface.
