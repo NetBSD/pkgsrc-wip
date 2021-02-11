@@ -1,3 +1,7 @@
 In addition to wip/ versions of packages, this package needs:
 
 - patch to math/cgal to remove WRKDIR from installed cmake files.
+
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2020-28595, CVE-2020-28596
