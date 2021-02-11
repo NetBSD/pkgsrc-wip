@@ -2322,6 +2322,7 @@ SUBDIR+=	mini18n
 SUBDIR+=	minio
 SUBDIR+=	minio-client
 SUBDIR+=	minizip192
+SUBDIR+=	mintotp
 SUBDIR+=	minuit2
 SUBDIR+=	mipscope
 SUBDIR+=	miracl
