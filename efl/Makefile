@@ -59,7 +59,6 @@ MESON_ARGS+=	-Dsystemd=false
 PLIST.linux=	yes
 .endif
 MESON_ARGS+=	-Deeze=false
-MESON_ARGS+=	-Dbuild-tests=false
 MESON_ARGS+=	-Dbuild-examples=false
 MESON_ARGS+=	-Dphysics=true
 

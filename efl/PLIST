@@ -26,6 +26,8 @@ bin/elementary_run
 bin/elementary_test
 bin/elm_prefs_cc
 bin/embryo_cc
+${PLIST.tests}bin/emotion_test
+${PLIST.tests}bin/emotion_test-eo
 bin/eo_debug
 bin/eolian_cxx
 bin/eolian_gen
@@ -2350,6 +2352,10 @@ share/ecore_x/checkme
 share/edje/include/edje.inc
 share/eeze/checkme
 share/efreet/checkme
+${PLIST.tests}share/elementary/testdiff.diff
+${PLIST.tests}share/elementary/testfile-windows.txt
+${PLIST.tests}share/elementary/testfile-withblanks.txt
+${PLIST.tests}share/elementary/testfile.txt
 share/elementary/config/default/base.cfg
 share/elementary/config/default/icon.png
 share/elementary/config/default/profile.desktop
@@ -2474,6 +2480,7 @@ share/elementary/themes/default.edj
 share/elua/checkme
 share/embryo/include/default.inc
 share/emotion/checkme
+${PLIST.tests}share/emotion/data/theme.edj
 share/eo/gdb/eo_gdb.py
 share/eolian/include/ecore-1/efl_accelerate_interpolator.eo
 share/eolian/include/ecore-1/efl_app.eo

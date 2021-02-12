@@ -11,15 +11,15 @@ BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl
 pkgbase := efl
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.efl:Mg-mainloop)
+.if ${PKG_BUILD_OPTIONS.efl:Mg-mainloop}
 .include "../../devel/libuv/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.efl:Mpulseaudio)
+.if ${PKG_BUILD_OPTIONS.efl:Mpulseaudio}
 .include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.efl:Mclang)
+.if ${PKG_BUILD_OPTIONS.efl:Mclang}
 .include "../../parallel/openmp/buildlink3.mk"
 .endif
 
