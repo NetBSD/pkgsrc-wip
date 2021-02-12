@@ -1,4 +1,0 @@
-only knows that gcc 4.9 works
-building breaks with gcc 4.5.3 
-
-is it ok to use pkg-config to get gimplibdir?

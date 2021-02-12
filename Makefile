@@ -1085,7 +1085,6 @@ SUBDIR+=	ghmm
 SUBDIR+=	ghostpcl-urwfonts-ttf
 SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	giggle
-SUBDIR+=	gimp-dds
 SUBDIR+=	gin
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-modes-git
