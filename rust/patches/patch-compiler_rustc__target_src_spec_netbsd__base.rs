@@ -3,7 +3,7 @@ $NetBSD$
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
 
---- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2020-08-24 15:00:49.000000000 +0000
+--- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-02-10 17:36:44.000000000 +0000
 +++ compiler/rustc_target/src/spec/netbsd_base.rs
 @@ -10,6 +10,8 @@ pub fn opts() -> TargetOptions {
              // libraries which follow this flag.  Thus, use it before

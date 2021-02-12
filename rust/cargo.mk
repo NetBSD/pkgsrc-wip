@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.22 2020/08/14 21:19:22 tnn Exp $
+# $NetBSD: cargo.mk,v 1.24 2021/01/12 15:37:32 jperkin Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -20,6 +20,8 @@
 # See also www/geckodriver for a full example.
 
 MASTER_SITES?=	-${MASTER_SITE_CRATESIO}${PKGBASE}/${PKGVERSION_NOREV}/download
+
+CHECK_SSP_SUPPORTED=	no
 
 .include "../../lang/rust/rust.mk"
 
@@ -66,7 +68,10 @@ print-cargo-depends:
 			print "CARGO_CRATE_DEPENDS+=\t" name "-" vers;	\
 			}' ${WRKSRC}/Cargo.lock
 
-DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}
+DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}	\
+			  ${CARGO_NO_DEFAULT_FEATURES:M[yY][eE][sS]:C/[yY][eE][sS]/--no-default-features/}	\
+			  ${CARGO_FEATURES:C/.*/--features/W}	\
+			  ${CARGO_FEATURES:S/ /,/Wg}
 CARGO_ARGS?=		${DEFAULT_CARGO_ARGS}
 
 .if !target(do-build)

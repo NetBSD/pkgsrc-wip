@@ -5,9 +5,9 @@ Use @PREFIX@, not $ORIGIN in rpath.
 
 Fix RPATH for pkgsrc.
 
---- src/bootstrap/builder.rs.orig	2020-12-29 03:03:09.000000000 +0000
+--- src/bootstrap/builder.rs.orig	2021-02-10 17:36:44.000000000 +0000
 +++ src/bootstrap/builder.rs
-@@ -480,7 +480,6 @@ impl<'a> Builder<'a> {
+@@ -483,7 +483,6 @@ impl<'a> Builder<'a> {
                  install::Clippy,
                  install::Miri,
                  install::Analysis,
@@ -15,7 +15,7 @@ Fix RPATH for pkgsrc.
                  install::Rustc
              ),
              Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest),
-@@ -1065,7 +1064,7 @@ impl<'a> Builder<'a> {
+@@ -1082,7 +1081,7 @@ impl<'a> Builder<'a> {
                  rustflags.arg("-Zosx-rpath-install-name");
                  Some("-Wl,-rpath,@loader_path/../lib")
              } else if !target.contains("windows") {

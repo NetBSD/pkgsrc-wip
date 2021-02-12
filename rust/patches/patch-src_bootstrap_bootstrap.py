@@ -4,9 +4,9 @@ Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Do not use debuginfo; optimize 'bootstrap' instead.
 Handle earmv7hf for NetBSD.
 
---- src/bootstrap/bootstrap.py.orig	2020-01-27 15:34:02.000000000 +0000
+--- src/bootstrap/bootstrap.py.orig	2021-02-10 17:36:44.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -185,6 +185,11 @@ def default_build_triple():
+@@ -228,6 +228,11 @@ def default_build_triple(verbose):
          'OpenBSD': 'unknown-openbsd'
      }
  
@@ -18,7 +18,7 @@ Handle earmv7hf for NetBSD.
      # Consider the direct transformation first and then the special cases
      if ostype in ostype_mapper:
          ostype = ostype_mapper[ostype]
-@@ -271,10 +276,12 @@ def default_build_triple():
+@@ -314,10 +319,12 @@ def default_build_triple(verbose):
              ostype = 'linux-androideabi'
          else:
              ostype += 'eabihf'
@@ -32,12 +32,12 @@ Handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
-@@ -645,7 +652,7 @@ class RustBuild(object):
+@@ -793,7 +800,7 @@ class RustBuild(object):
              if "LIBRARY_PATH" in env else ""
          # preserve existing RUSTFLAGS
          env.setdefault("RUSTFLAGS", "")
 -        env["RUSTFLAGS"] += " -Cdebuginfo=2"
 +        env["RUSTFLAGS"] += " -Copt-level=2"
  
-         build_section = "target.{}".format(self.build_triple())
+         build_section = "target.{}".format(self.build)
          target_features = []
