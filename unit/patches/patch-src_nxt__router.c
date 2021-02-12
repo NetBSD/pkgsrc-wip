@@ -2,6 +2,8 @@ $NetBSD$
 
 Silence warning.
 
+This patch is going to be reviewed by the vendor.
+
 --- src/nxt_router.c.orig	2020-10-08 16:04:40.000000000 +0000
 +++ src/nxt_router.c
 @@ -3692,7 +3692,7 @@ nxt_router_thread_exit_handler(nxt_task_

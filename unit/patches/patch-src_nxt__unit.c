@@ -1,6 +1,8 @@
 $NetBSD$
 
-Use more apropriate format specifier for shm preix
+Use more apropriate format specifier for shm prefix.
+
+This patch is going to be reviewed by the vendor.
 
 --- src/nxt_unit.c.orig	2020-11-19 18:12:30.000000000 +0000
 +++ src/nxt_unit.c

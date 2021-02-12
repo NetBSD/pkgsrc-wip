@@ -2,6 +2,8 @@ $NetBSD$
 
 Use correct types on NetBSD-CURRENT.
 
+This patch is going to be reviewed by the vendor.
+
 --- src/nxt_kqueue_engine.c.orig	2021-02-04 15:22:33.000000000 +0000
 +++ src/nxt_kqueue_engine.c
 @@ -39,8 +39,10 @@
