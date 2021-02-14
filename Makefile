@@ -263,6 +263,7 @@ SUBDIR+=	bfgminer
 SUBDIR+=	bicon
 SUBDIR+=	bigdft
 SUBDIR+=	bijiben
+SUBDIR+=	binaryen
 SUBDIR+=	bind916
 SUBDIR+=	bindgraph
 SUBDIR+=	binutils-gold-git
