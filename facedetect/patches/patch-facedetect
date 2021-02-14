@@ -1,0 +1,35 @@
+$NetBSD$
+
+facedetect was written for python2 and now python3 doesn't support
+iteritems() anymore.
+
+--- facedetect.orig	2021-02-14 13:11:39.316639081 +0100
++++ facedetect	2021-02-14 13:14:15.345068937 +0100
+@@ -11,6 +11,9 @@
+ import sys
+ import os
+ 
++def get_items(dict_object):
++    for key in dict_object:
++        yield key, dict_object[key]
+ 
+ # CV compatibility stubs
+ if 'IMREAD_GRAYSCALE' not in dir(cv2):
+@@ -58,7 +61,7 @@
+ 
+ 
+ def load_cascades(data_dir):
+-    for k, v in PROFILES.iteritems():
++    for k, v in get_items(PROFILES):
+         v = os.path.join(data_dir, v)
+         try:
+             if not os.path.exists(v):
+@@ -258,7 +261,7 @@
+ 
+             if args.debug:
+                 lines = []
+-                for k, v in scores[i].iteritems():
++                for k, v in get_items(scores[i]):
+                     lines.append("{}: {}".format(k, v))
+                 h = rect[1] + rect[3] + fontHeight
+                 for line in lines:
