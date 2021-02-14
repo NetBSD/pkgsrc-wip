@@ -4,7 +4,7 @@ DISTNAME=	farbfeld-4
 CATEGORIES=	graphics
 MASTER_SITES=	http://dl.suckless.org/farbfeld/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 COMMENT=	Suckless image format with conversion tools
 LICENSE=	isc
 
