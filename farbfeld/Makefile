@@ -5,6 +5,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://dl.suckless.org/farbfeld/
 
 MAINTAINER=	leot@NetBSD.org
+HOMEPAGE=	http://tools.suckless.org/farbfeld/
 COMMENT=	Suckless image format with conversion tools
 LICENSE=	isc
 
