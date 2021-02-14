@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	gopass-1.11.0
+PKGNAME=	gopass-1.12.0
 DISTNAME=	gopass-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gopasspw/}
@@ -26,9 +26,6 @@ INSTALLATION_DIRS+=	bin \
 
 do-build:
 	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
-	${RUN} for cmd in gopass-git-credentials gopass-hibp gopass-jsonapi gopass-summon-provider; do \
-		cd ${WRKSRC}/cmd/$${cmd} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}; \
-	done
 
 post-build:
 	cd ${WRKDIR}/.gopath && \
