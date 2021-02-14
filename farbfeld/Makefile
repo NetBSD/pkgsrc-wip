@@ -15,8 +15,16 @@ DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+SUBST_CLASSES+=		configmk
+SUBST_STAGE.configmk=	pre-configure
+SUBST_MESSAGE.configmk=	Adjusting config.mk
+SUBST_FILES.configmk=	config.mk
+SUBST_SED.configmk+=	-e '/^CPPFLAGS/s/=/+=/'
+SUBST_SED.configmk+=	-e '/^CFLAGS/s/=/+=/'
+SUBST_SED.configmk+=	-e '/^LDFLAGS/s/=/+=/'
+SUBST_SED.configmk+=	-e '/^CFLAGS/s/-Os//'
+SUBST_SED.configmk+=	-e '/^LDFLAGS/s/-s//'
+SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
 
 USE_LANGUAGES=	c99
 
