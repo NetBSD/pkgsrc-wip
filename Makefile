@@ -790,7 +790,6 @@ SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
 SUBDIR+=	famsa
-SUBDIR+=	farbfeld
 SUBDIR+=	farsi-ttf
 SUBDIR+=	fasm
 SUBDIR+=	fasta
