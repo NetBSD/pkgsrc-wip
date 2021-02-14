@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2015/09/13 20:07:57 yhardy Exp $
 
-DISTNAME=	bstone-1.2.9
+DISTNAME=	bstone-1.2.10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bibendovsky/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,5 +21,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bstone ${DESTDIR}${PREFIX}/bin/bstone
 	${INSTALL_DATA} ${WRKSRC}/../README.md ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/README
 
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

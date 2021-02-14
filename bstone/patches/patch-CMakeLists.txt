@@ -1,0 +1,33 @@
+$NetBSD$
+
+Use pkgsrc openal-soft.
+
+--- CMakeLists.txt.orig	2021-02-14 11:47:46.000000000 +0000
++++ CMakeLists.txt
+@@ -63,6 +63,7 @@ if (BSTONE_USE_STATIC_LINKING)
+ 	set(BSTONE_SDL2_COMPONENTS "${BSTONE_SDL2_COMPONENTS};static")
+ endif ()
+ 
++find_package(OpenAL 1.7.3 REQUIRED)
+ find_package(SDL2W 2.0.4 REQUIRED COMPONENTS ${BSTONE_SDL2_COMPONENTS})
+ 
+ # Threads
+@@ -185,6 +186,8 @@ endif ()
+ 
+ target_link_libraries(
+ 	${PROJECT_NAME}
++	PUBLIC
++		${OPENAL_LIBRARY}
+ 	PRIVATE
+ 		SDL2W::SDL2Wmain
+ 		SDL2W::SDL2W
+@@ -216,8 +219,8 @@ target_include_directories(
+ 	PRIVATE
+ 		.
+ 		dosbox
++		${OPENAL_INCLUDE_DIR}
+ 		lib/glm
+-		lib/openal_soft/include/AL
+ 		lib/stb
+ 		lib/xbrz
+ 		sys/win32
