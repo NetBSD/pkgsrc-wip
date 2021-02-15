@@ -1,0 +1,5 @@
+- improve rc.d script
+- add information or DEINSTALL script to handle $PREFIX/libdata/adguardhome and
+  $PREFIX/etc/adguardhome directories
+- discuss in community if using only do-* targets is a good approach
+- create separate go-packr package and add as build dependency

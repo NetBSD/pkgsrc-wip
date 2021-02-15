@@ -1,4 +1,5 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+sbin/adguardhome
+share/examples/rc.d/adguardhome
+@pkgdir libdata/adguardhome
+@pkgdir etc/adguardhome
