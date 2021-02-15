@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mintotp-0.2.0
+DISTNAME=	mintotp-0.3.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mintotp/}
 

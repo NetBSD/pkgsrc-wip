@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mintotp-0.2.0.tar.gz) = bd82f68290bdbf2591c609eb85ad82f119502c76
-RMD160 (mintotp-0.2.0.tar.gz) = c5cd606bb79895bbb5cd7b02335583aea0723278
-SHA512 (mintotp-0.2.0.tar.gz) = 1e32c513b6fb8c346847135752c62cd5d4e8c1295578e1db878a9aa0f8ee39def562bdb316006cdb78d7f95e8f8348d4a033083a3ce5f1229775bd37e8d325c9
-Size (mintotp-0.2.0.tar.gz) = 8258 bytes
+SHA1 (mintotp-0.3.0.tar.gz) = 28cbf40c9a9dc71a9d2ce90b9beb05cd7cbc0b71
+RMD160 (mintotp-0.3.0.tar.gz) = f78bfb85110091932ea9caa340d54d11c5f24389
+SHA512 (mintotp-0.3.0.tar.gz) = e9a30f85462559347dd6b51ed1286c4167d1ba69ff48a42b353611cbafc4e268457aa8f459cead15ade1164ce2e8b8e5d62724c576b0110e5720f92660680d18
+Size (mintotp-0.3.0.tar.gz) = 8400 bytes
