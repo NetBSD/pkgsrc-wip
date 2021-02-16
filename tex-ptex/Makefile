@@ -23,6 +23,5 @@ DEPENDS+=	web2c>=2020:../../print/web2c
 TEX_FORMATS+=		"ptex ptex - ptex.ini\\neptex eptex language.def *eptex.ini\\n"
 TEX_KANJIMAP_FILES+=	ptex-@jaEmbed@@jaVariant@.map
 
-TEXLIVE_UNVERSIONED=   yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
