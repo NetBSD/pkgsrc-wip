@@ -5619,7 +5619,6 @@ SUBDIR+=	vreng
 SUBDIR+=	vsearch
 SUBDIR+=	vte
 SUBDIR+=	vulkan-loader
-SUBDIR+=	wabt
 SUBDIR+=	wackamole
 SUBDIR+=	waffle
 SUBDIR+=	wakeonlan
