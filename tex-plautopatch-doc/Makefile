@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	plautopatch.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.9m
-TEXLIVE_REV=	57011
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.9n
+TEXLIVE_REV=	57731
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/plautopatch
