@@ -4,6 +4,7 @@ SHA1 (qtbase-everywhere-src-6.0.1.tar.xz) = 1cd91a1696b8e4b59483a271aa7f9fde22a9
 RMD160 (qtbase-everywhere-src-6.0.1.tar.xz) = 2b3a5bc8834c3330ac4194eaaaedb327faeb9c3d
 SHA512 (qtbase-everywhere-src-6.0.1.tar.xz) = 69a24162239f19e8eb889d51662c6cea3869ad7e53a889fe16c35083840fde8c90053b0f943129c82066364eea0ec94eb86d91d3293ef874e100476dad10a998
 Size (qtbase-everywhere-src-6.0.1.tar.xz) = 46262020 bytes
+SHA1 (patch-cmake_FindGSSAPI.cmake) = 522dd9f02daef2587eb46a3a1c582fdd98a77360
 SHA1 (patch-cmake_QtBuild.cmake) = 9e51c025686de3b1a383056eb6c61b0884349b57
 SHA1 (patch-cmake_QtPlatformSupport.cmake) = 597c57d1acd2798e2f8393c6fd391721c2f54f41
 SHA1 (patch-configure) = f5019131cc4e6cd4e35242cc7b598fbf8f5f766b
