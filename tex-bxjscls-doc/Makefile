@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	bxjscls.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.4
-TEXLIVE_REV=	56686
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.5
+TEXLIVE_REV=	57625
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxjscls
