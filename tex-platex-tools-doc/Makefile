@@ -2,7 +2,7 @@
 
 DISTNAME=	platex-tools.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	56661
+TEXLIVE_REV=	57729
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/platex-tools
