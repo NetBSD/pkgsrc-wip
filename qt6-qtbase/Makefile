@@ -224,7 +224,6 @@ TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/double-conversion/buildlink3.mk"
 .include "../../security/libb2/buildlink3.mk"
-.include "../../security/mit-krb5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../wip/md4c/buildlink3.mk"
@@ -255,5 +254,6 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.11
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
