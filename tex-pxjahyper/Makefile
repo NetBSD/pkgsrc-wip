@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	pxjahyper
-PKGNAME=	tex-${DISTNAME}-0.6
-TEXLIVE_REV=	56662
+PKGNAME=	tex-${DISTNAME}-0.7
+TEXLIVE_REV=	57732
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxjahyper
