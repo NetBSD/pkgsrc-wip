@@ -2352,10 +2352,6 @@ share/ecore_x/checkme
 share/edje/include/edje.inc
 share/eeze/checkme
 share/efreet/checkme
-${PLIST.tests}share/elementary/testdiff.diff
-${PLIST.tests}share/elementary/testfile-windows.txt
-${PLIST.tests}share/elementary/testfile-withblanks.txt
-${PLIST.tests}share/elementary/testfile.txt
 share/elementary/config/default/base.cfg
 share/elementary/config/default/icon.png
 share/elementary/config/default/profile.desktop
@@ -2476,6 +2472,10 @@ share/elementary/objects/test_prefs.edj
 share/elementary/objects/test_prefs.epb
 share/elementary/objects/test_tab_pager.edj
 share/elementary/objects/test_tooltip.edj
+${PLIST.tests}share/elementary/testdiff.diff
+${PLIST.tests}share/elementary/testfile-windows.txt
+${PLIST.tests}share/elementary/testfile-withblanks.txt
+${PLIST.tests}share/elementary/testfile.txt
 share/elementary/themes/default.edj
 share/elua/checkme
 share/embryo/include/default.inc

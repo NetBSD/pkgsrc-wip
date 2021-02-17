@@ -4,7 +4,9 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.efl
 PKG_SUPPORTED_OPTIONS=		debug g-mainloop gcc8 pulseaudio clang
 PKG_SUPPORTED_OPTIONS+=		tests
 PKG_SUGGESTED_OPTIONS=		pulseaudio
+PKG_SUGGESTED_OPTIONS.NetBSD+=	g-mainloop
 
+PLIST_VARS+=	tests
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,7 +43,6 @@ MESON_ARGS+=	-Dpulseaudio=false
 
 # Compile tests
 .if !empty(PKG_OPTIONS:Mtests)
-PLIST_VARS+=		tests
 PLIST.tests=		yes
 MESON_ARGS+=		-Dbuild-tests=true
 REPLACE_PYTHON+=	src/tests/elementary/spec/generator.py
