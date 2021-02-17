@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/sphinxcontrib/cairosvgconverter.py
+${PYSITELIB}/sphinxcontrib/cairosvgconverter.pyc
+${PYSITELIB}/sphinxcontrib/cairosvgconverter.pyo
+${PYSITELIB}/sphinxcontrib/inkscapeconverter.py
+${PYSITELIB}/sphinxcontrib/inkscapeconverter.pyc
+${PYSITELIB}/sphinxcontrib/inkscapeconverter.pyo
+${PYSITELIB}/sphinxcontrib/rsvgconverter.py
+${PYSITELIB}/sphinxcontrib/rsvgconverter.pyc
+${PYSITELIB}/sphinxcontrib/rsvgconverter.pyo
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

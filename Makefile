@@ -4452,6 +4452,7 @@ SUBDIR+=	py-spherical-functions
 SUBDIR+=	py-sphinx-automodapi
 SUBDIR+=	py-sphinx-bootstrap-theme
 SUBDIR+=	py-sphinxcontrib-asyncio
+SUBDIR+=	py-sphinxcontrib-svg2pdfconverter
 SUBDIR+=	py-sphinxreport
 SUBDIR+=	py-sphviewer
 SUBDIR+=	py-spirack
