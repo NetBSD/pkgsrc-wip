@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/tio
-man/man1/tio.1
-share/bash-completion/completions/tio

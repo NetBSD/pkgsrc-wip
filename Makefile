@@ -5410,7 +5410,6 @@ SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
 SUBDIR+=	tinylogin
 SUBDIR+=	tinyproxy
-SUBDIR+=	tio
 SUBDIR+=	tipp10
 SUBDIR+=	tk-itk3
 SUBDIR+=	tkhtml3
