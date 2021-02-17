@@ -18,4 +18,7 @@ WRKSRC=		${WRKDIR}/binaryen-${GITHUB_TAG}
 
 CMAKE_ARGS+=	-DENABLE_WERROR=OFF
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
