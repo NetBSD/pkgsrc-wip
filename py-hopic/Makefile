@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hopic-1.29.1
+DISTNAME=	hopic-1.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hopic/}
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-yaml:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-stemming>=1<2:../../wip/py-stemming
 DEPENDS+=	${PYPKGPREFIX}-regex:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-typeguard>=2.10<3:../../wip/py-typeguard
 
 WRKSRC=		${WRKDIR}/hopic-${PKGVERSION}
 USE_LANGUAGES=	# none

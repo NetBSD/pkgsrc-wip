@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (hopic-1.29.1.tar.gz) = 443e2627a80c7d33d9daa408ce96319253719035
-RMD160 (hopic-1.29.1.tar.gz) = fb01847fd5fb6da62002eefb300420060308ed53
-SHA512 (hopic-1.29.1.tar.gz) = afa98b4401eeb1f1f4d763d46f7ee3df23d9656b02ad3e757e53e584ad847fe77e9ea1bd49436cc69a8e8077f59a91e1abd45f0977fb8f0dc9ff017921dca3e8
-Size (hopic-1.29.1.tar.gz) = 134860 bytes
+SHA1 (hopic-1.32.0.tar.gz) = afa0e23e1e3ac661f7bbe63d2b152252739ffd74
+RMD160 (hopic-1.32.0.tar.gz) = 64136f0276f6251cbd14fe0461de6903c8c3eee0
+SHA512 (hopic-1.32.0.tar.gz) = 112ed105fbaa5f49258ca2010531ca480b7865ac12a218bdf2d330a9c4bcc5a35e56ed3562ab0cf43f531dd2854a3b5bca79960355e9cf3ec446693fc39cb93e
+Size (hopic-1.32.0.tar.gz) = 142891 bytes
