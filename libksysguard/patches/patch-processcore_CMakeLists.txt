@@ -1,8 +1,8 @@
 $NetBSD$
 
---- processcore/CMakeLists.txt.orig	2019-07-30 10:27:02.000000000 +0000
+--- processcore/CMakeLists.txt.orig	2020-05-05 14:47:30.000000000 +0000
 +++ processcore/CMakeLists.txt
-@@ -26,7 +26,7 @@ target_link_libraries(processcore
+@@ -33,7 +33,7 @@ target_link_libraries(processcore
  
  if( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
    message(STATUS "Adding kvm library on NetBSD")
@@ -10,8 +10,8 @@ $NetBSD$
 +  target_link_libraries(processcore PRIVATE kvm ${RT_LIB_SCHED})
  endif()
  
- target_include_directories(processcore
-@@ -56,7 +56,7 @@ set(ksysguardprocesslist_helper_srcs
+ if(NOT HAVE_CLOCK_GETTIME_C)
+@@ -72,7 +72,7 @@ set(ksysguardprocesslist_helper_srcs
      processes_base_p.cpp)
  
  add_executable(ksysguardprocesslist_helper ${ksysguardprocesslist_helper_srcs})
