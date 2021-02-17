@@ -26,6 +26,9 @@ ${PYSITELIB}/conan/tools/cmake/base.pyo
 ${PYSITELIB}/conan/tools/cmake/cmake.py
 ${PYSITELIB}/conan/tools/cmake/cmake.pyc
 ${PYSITELIB}/conan/tools/cmake/cmake.pyo
+${PYSITELIB}/conan/tools/cmake/cmakedeps.py
+${PYSITELIB}/conan/tools/cmake/cmakedeps.pyc
+${PYSITELIB}/conan/tools/cmake/cmakedeps.pyo
 ${PYSITELIB}/conan/tools/cmake/generic.py
 ${PYSITELIB}/conan/tools/cmake/generic.pyc
 ${PYSITELIB}/conan/tools/cmake/generic.pyo
@@ -35,6 +38,9 @@ ${PYSITELIB}/conan/tools/cmake/ios.pyo
 ${PYSITELIB}/conan/tools/cmake/toolchain.py
 ${PYSITELIB}/conan/tools/cmake/toolchain.pyc
 ${PYSITELIB}/conan/tools/cmake/toolchain.pyo
+${PYSITELIB}/conan/tools/cmake/utils.py
+${PYSITELIB}/conan/tools/cmake/utils.pyc
+${PYSITELIB}/conan/tools/cmake/utils.pyo
 ${PYSITELIB}/conan/tools/gnu/__init__.py
 ${PYSITELIB}/conan/tools/gnu/__init__.pyc
 ${PYSITELIB}/conan/tools/gnu/__init__.pyo
@@ -47,6 +53,9 @@ ${PYSITELIB}/conan/tools/meson/__init__.pyo
 ${PYSITELIB}/conan/tools/meson/meson.py
 ${PYSITELIB}/conan/tools/meson/meson.pyc
 ${PYSITELIB}/conan/tools/meson/meson.pyo
+${PYSITELIB}/conan/tools/meson/toolchain.py
+${PYSITELIB}/conan/tools/meson/toolchain.pyc
+${PYSITELIB}/conan/tools/meson/toolchain.pyo
 ${PYSITELIB}/conan/tools/microsoft/__init__.py
 ${PYSITELIB}/conan/tools/microsoft/__init__.pyc
 ${PYSITELIB}/conan/tools/microsoft/__init__.pyo
@@ -62,6 +71,15 @@ ${PYSITELIB}/conan/tools/microsoft/toolchain.pyo
 ${PYSITELIB}/conan/tools/microsoft/visual.py
 ${PYSITELIB}/conan/tools/microsoft/visual.pyc
 ${PYSITELIB}/conan/tools/microsoft/visual.pyo
+${PYSITELIB}/conan/tools/qbs/__init__.py
+${PYSITELIB}/conan/tools/qbs/__init__.pyc
+${PYSITELIB}/conan/tools/qbs/__init__.pyo
+${PYSITELIB}/conan/tools/qbs/qbs.py
+${PYSITELIB}/conan/tools/qbs/qbs.pyc
+${PYSITELIB}/conan/tools/qbs/qbs.pyo
+${PYSITELIB}/conan/tools/qbs/qbstoolchain.py
+${PYSITELIB}/conan/tools/qbs/qbstoolchain.pyc
+${PYSITELIB}/conan/tools/qbs/qbstoolchain.pyo
 ${PYSITELIB}/conans/__init__.py
 ${PYSITELIB}/conans/__init__.pyc
 ${PYSITELIB}/conans/__init__.pyo
@@ -77,6 +95,9 @@ ${PYSITELIB}/conans/assets/templates/info_graph_dot.pyo
 ${PYSITELIB}/conans/assets/templates/info_graph_html.py
 ${PYSITELIB}/conans/assets/templates/info_graph_html.pyc
 ${PYSITELIB}/conans/assets/templates/info_graph_html.pyo
+${PYSITELIB}/conans/assets/templates/new_v2_cmake.py
+${PYSITELIB}/conans/assets/templates/new_v2_cmake.pyc
+${PYSITELIB}/conans/assets/templates/new_v2_cmake.pyo
 ${PYSITELIB}/conans/assets/templates/search_table_html.py
 ${PYSITELIB}/conans/assets/templates/search_table_html.pyc
 ${PYSITELIB}/conans/assets/templates/search_table_html.pyo
@@ -560,6 +581,9 @@ ${PYSITELIB}/conans/model/conan_file.pyo
 ${PYSITELIB}/conans/model/conan_generator.py
 ${PYSITELIB}/conans/model/conan_generator.pyc
 ${PYSITELIB}/conans/model/conan_generator.pyo
+${PYSITELIB}/conans/model/conf.py
+${PYSITELIB}/conans/model/conf.pyc
+${PYSITELIB}/conans/model/conf.pyo
 ${PYSITELIB}/conans/model/editable_layout.py
 ${PYSITELIB}/conans/model/editable_layout.pyc
 ${PYSITELIB}/conans/model/editable_layout.pyo
@@ -575,6 +599,9 @@ ${PYSITELIB}/conans/model/graph_lock.pyo
 ${PYSITELIB}/conans/model/info.py
 ${PYSITELIB}/conans/model/info.pyc
 ${PYSITELIB}/conans/model/info.pyo
+${PYSITELIB}/conans/model/layout.py
+${PYSITELIB}/conans/model/layout.pyc
+${PYSITELIB}/conans/model/layout.pyo
 ${PYSITELIB}/conans/model/manifest.py
 ${PYSITELIB}/conans/model/manifest.pyc
 ${PYSITELIB}/conans/model/manifest.pyo
@@ -812,9 +839,6 @@ ${PYSITELIB}/conans/test/__init__.pyo
 ${PYSITELIB}/conans/test/conftest.py
 ${PYSITELIB}/conans/test/conftest.pyc
 ${PYSITELIB}/conans/test/conftest.pyo
-${PYSITELIB}/conans/test/test_package_python_files.py
-${PYSITELIB}/conans/test/test_package_python_files.pyc
-${PYSITELIB}/conans/test/test_package_python_files.pyo
 ${PYSITELIB}/conans/test/utils/__init__.py
 ${PYSITELIB}/conans/test/utils/__init__.pyc
 ${PYSITELIB}/conans/test/utils/__init__.pyo
