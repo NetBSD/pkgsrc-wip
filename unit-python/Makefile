@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	unit-${LANG}-${UNIT_VERSION}
+PKGNAME=	unit-${LANG}${PYVERSSUFFIX}-${UNIT_VERSION}
 COMMENT=	Python module for NGINX Unit
 
 LANG=		python
