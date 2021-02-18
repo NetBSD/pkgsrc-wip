@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	unit-${LANG}-${UNIT_VERSION}
+PKGNAME=	unit-${LANG}${RUBY_VER}-${UNIT_VERSION}
 COMMENT=	Ruby module for NGINX Unit
 
 LANG=		ruby
