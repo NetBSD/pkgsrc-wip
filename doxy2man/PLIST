@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/doxy2man
+man/man8/doxy2man.8

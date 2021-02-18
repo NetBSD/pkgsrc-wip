@@ -658,6 +658,7 @@ SUBDIR+=	dotproject
 SUBDIR+=	dovecot-antispam
 SUBDIR+=	dovecot2-fts-xapian
 SUBDIR+=	downtimed
+SUBDIR+=	doxy2man
 SUBDIR+=	dpic
 SUBDIR+=	dps8m
 SUBDIR+=	dragbox-git
