@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (ksysguard-5.16.4.tar.xz) = 17cbeb55f8698fe319976ee77f1a9009a788ed7c
-RMD160 (ksysguard-5.16.4.tar.xz) = 678ff42fab1c829126cda11f93a1fed7279e4d65
-SHA512 (ksysguard-5.16.4.tar.xz) = 177a6ca6b3937275959f2855184e805f09e643f04787ea077ef137d0561150e2deabbe1bd0388045640f0e88c01f031804a1060ad4df14bdafb91f7daed4c427
-Size (ksysguard-5.16.4.tar.xz) = 500548 bytes
+SHA1 (ksysguard-5.18.5.tar.xz) = 5157906385edb9c97312d3a55458569923b141a5
+RMD160 (ksysguard-5.18.5.tar.xz) = 96b49fb3290a3f71bc245414818234d1d92e0de5
+SHA512 (ksysguard-5.18.5.tar.xz) = 2cfb82caef5d074b945f0a7478b32af86d49e174d4d294dfe6a54acdb0b1d335e151828a4f239b52cf767ba04d9e93bf1632f2a37e2b1d611128543e0e0008a3
+Size (ksysguard-5.18.5.tar.xz) = 517648 bytes
 SHA1 (patch-ksysguardd_FreeBSD_ProcessList.c) = 8ce52ef671aff102e9db0d6d4be2dae0da8ef989
 SHA1 (patch-ksysguardd_FreeBSD_cpuinfo.c) = bf646d263846faaf42ba80c0c85c3b607747f80d
 SHA1 (patch-ksysguardd_FreeBSD_uptime.c) = 8ea36c213e590f2c91c0723d03ddcf97d4f084ca

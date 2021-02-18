@@ -6,8 +6,13 @@ include/ksysguard/ksgrd/SensorShellAgent.h
 include/ksysguard/ksgrd/SensorSocketAgent.h
 include/ksysguard/ksignalplotter.h
 include/ksysguard/lsof.h
+include/ksysguard/processcore/formatter.h
 include/ksysguard/processcore/process.h
+include/ksysguard/processcore/process_attribute.h
+include/ksysguard/processcore/process_controller.h
+include/ksysguard/processcore/process_data_provider.h
 include/ksysguard/processcore/processes.h
+include/ksysguard/processcore/unit.h
 include/ksysguard/processui/KTextEditVT.h
 include/ksysguard/processui/ProcessFilter.h
 include/ksysguard/processui/ProcessModel.h
@@ -46,6 +51,7 @@ share/locale/ar/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/ar/LC_MESSAGES/processcore.mo
 share/locale/ar/LC_MESSAGES/processui.mo
 share/locale/as/LC_MESSAGES/processui.mo
+share/locale/ast/LC_MESSAGES/processcore.mo
 share/locale/be/LC_MESSAGES/processcore.mo
 share/locale/be/LC_MESSAGES/processui.mo
 share/locale/be@latin/LC_MESSAGES/ksysguardlsofwidgets.mo
@@ -191,6 +197,7 @@ share/locale/mai/LC_MESSAGES/processcore.mo
 share/locale/mai/LC_MESSAGES/processui.mo
 share/locale/mk/LC_MESSAGES/processcore.mo
 share/locale/mk/LC_MESSAGES/processui.mo
+share/locale/ml/LC_MESSAGES/ksgrd.mo
 share/locale/ml/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/ml/LC_MESSAGES/processcore.mo
 share/locale/ml/LC_MESSAGES/processui.mo
@@ -221,9 +228,6 @@ share/locale/nn/LC_MESSAGES/processcore.mo
 share/locale/nn/LC_MESSAGES/processui.mo
 share/locale/oc/LC_MESSAGES/processcore.mo
 share/locale/oc/LC_MESSAGES/processui.mo
-share/locale/or/LC_MESSAGES/ksysguardlsofwidgets.mo
-share/locale/or/LC_MESSAGES/processcore.mo
-share/locale/or/LC_MESSAGES/processui.mo
 share/locale/pa/LC_MESSAGES/ksgrd.mo
 share/locale/pa/LC_MESSAGES/ksysguardlsofwidgets.mo
 share/locale/pa/LC_MESSAGES/processcore.mo
