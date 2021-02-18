@@ -22,7 +22,7 @@ post-configure:
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} 			\
 			${CONFIGURE_SCRIPT} ${LANG}			\
 				--lib-path=${PREFIX}/lib		\
-					--module=${MODNAME}
+				--module=${MODNAME}
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../wip/unit/ext.mk"
