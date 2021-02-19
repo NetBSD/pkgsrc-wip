@@ -1,22 +1,11 @@
 $NetBSD$
 
-somehow -fp-model is added to gcc builds when it should not
+* use gzip compression instead of zstd since libarchive might miss zstd even
+  if QT uses it, fixes the configure step on NetBSD
 
-use gzip compression instead of zstd since libarchive might miss zstd even
-if QT uses it, fixes the configure step on NetBSD
-
---- src/corelib/CMakeLists.txt.orig	2020-12-04 10:14:27.000000000 +0000
+--- src/corelib/CMakeLists.txt.orig	2021-01-26 18:29:22.000000000 +0000
 +++ src/corelib/CMakeLists.txt
-@@ -690,7 +690,7 @@ qt_internal_extend_target(Core CONDITION
-         WrapAtomic::WrapAtomic
- )
- 
--qt_internal_extend_target(Core CONDITION ICC
-+qt_internal_extend_target(Core CONDITION (ICC AND NOT GCC)
-     COMPILE_OPTIONS
-         -fp-model
-         strict
-@@ -1174,7 +1174,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
+@@ -1179,7 +1179,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
              COMMENT "Generating ${qmimeprovider_db_output}"
          )
      else()
