@@ -3964,6 +3964,7 @@ SUBDIR+=	py-modargs
 SUBDIR+=	py-model-builder
 SUBDIR+=	py-modello
 SUBDIR+=	py-modelparameters
+SUBDIR+=	py-modus
 SUBDIR+=	py-moksha-common
 SUBDIR+=	py-moksha-hub
 SUBDIR+=	py-monad
