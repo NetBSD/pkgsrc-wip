@@ -3537,6 +3537,7 @@ SUBDIR+=	py-django-jsonfield
 SUBDIR+=	py-django-markwhat
 SUBDIR+=	py-django-mathjax
 SUBDIR+=	py-django-nose
+SUBDIR+=	py-django-pandas
 SUBDIR+=	py-django-picklefield
 SUBDIR+=	py-django-quran
 SUBDIR+=	py-django-stubs
