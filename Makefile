@@ -1409,6 +1409,7 @@ SUBDIR+=	gtk2-murrina-fancy-clearlooks
 SUBDIR+=	gtk2-theme-pack
 SUBDIR+=	gtk2hs-buildtools
 SUBDIR+=	gtk4
+SUBDIR+=	gtkada
 SUBDIR+=	gtkaml
 SUBDIR+=	gtkglextmm
 SUBDIR+=	gtkglk
