@@ -3294,6 +3294,7 @@ SUBDIR+=	py-autoflake
 SUBDIR+=	py-autograd
 SUBDIR+=	py-autokey
 SUBDIR+=	py-automata
+SUBDIR+=	py-avocado-framework
 SUBDIR+=	py-awesome-slugify
 SUBDIR+=	py-b3j0f.aop
 SUBDIR+=	py-backports-datetime-fromisoformat
