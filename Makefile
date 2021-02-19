@@ -3749,6 +3749,7 @@ SUBDIR+=	py-gvar
 SUBDIR+=	py-gwcs
 SUBDIR+=	py-gwpy
 SUBDIR+=	py-gwsurrogate
+SUBDIR+=	py-hatchet
 SUBDIR+=	py-hal-cgp
 SUBDIR+=	py-halp
 SUBDIR+=	py-hamcrest
