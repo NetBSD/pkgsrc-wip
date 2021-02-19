@@ -8,7 +8,7 @@ MASTER_SITES=   ${MASTER_SITE_PYPI:=a/avocado-framework/}
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://github.com/avocado-framework/avocado/
 COMMENT=	Next generation testing framework
-LICENSE=	gpl-v2
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/avocado-framework
 
