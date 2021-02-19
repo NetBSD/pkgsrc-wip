@@ -1,0 +1,9 @@
+bin/avocado @PREFIX@/bin/avocado
+bin/avocado-runner @PREFIX@/bin/avocado-runner
+bin/avocado-runner-avocado-instrumented @PREFIX@/bin/avocado-runner-avocado-instrumented
+bin/avocado-runner-exec @PREFIX@/bin/avocado-runner-exec
+bin/avocado-runner-exec-test @PREFIX@/bin/avocado-runner-exec-test
+bin/avocado-runner-noop @PREFIX@/bin/avocado-runner-noop
+bin/avocado-runner-python-unittest @PREFIX@/bin/avocado-runner-python-unittest
+bin/avocado-runner-tap @PREFIX@/bin/avocado-runner-tap
+bin/avocado-software-manager @PREFIX@/bin/avocado-software-manager
