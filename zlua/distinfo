@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (z.lua-1.8.4.tar.gz) = da6ec2936e04331fe98df8945e2612208d913681
-RMD160 (z.lua-1.8.4.tar.gz) = f2c89c118241d6f21f4d5ce8c04cd8b1c5b56c23
-SHA512 (z.lua-1.8.4.tar.gz) = dc9fd04fabbd5b6d47b3919021027ae8fddc62f85950c402ad12599f68cba8f59a924065b356febeed7384860fca334dd5f23c4b3a036b23a20a9a2cfd9b8366
-Size (z.lua-1.8.4.tar.gz) = 193289 bytes
+SHA1 (z.lua-1.8.12.tar.gz) = cbcd6932f69f475a6525db9b76b8288a0d8c464f
+RMD160 (z.lua-1.8.12.tar.gz) = 4d935cef13aac1ab7ca3d0681636631896edbfac
+SHA512 (z.lua-1.8.12.tar.gz) = fbfd57e7046d82417d900e703c815dbb70a2bc72ac11c6a89ac531e1b6973c3a64a99750e26055a9a177e6ccd004c13cbd152bbfadee2f1505896254eba69e60
+Size (z.lua-1.8.12.tar.gz) = 194736 bytes

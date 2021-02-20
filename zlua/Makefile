@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	z.lua-1.8.4
+DISTNAME=	z.lua-1.8.12
 PKGNAME=	${DISTNAME:S/z.lua/zlua/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skywind3000/}
