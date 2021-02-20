@@ -5,10 +5,10 @@
 #              Wed May 20 07:37:06 CDT 2020               #
 ###########################################################
 
-DISTNAME=	vcf2hap-0.1.1.17
+DISTNAME=	vcf2hap-0.1.1.18
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	1627283101efa231e35767c291581272389d0ec4
+GITHUB_TAG=	7c282826341df6be4cbdaf63fe32fffa9e1b3ff2
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf2hap
