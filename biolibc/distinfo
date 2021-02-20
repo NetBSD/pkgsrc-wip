@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (biolibc-0.1.0.33-9b279e6d84e3aec7f7ff09cd8da419652fcec1ca.tar.gz) = e64b50944e4022f5d94ddb4c224cc2892eb888a7
-RMD160 (biolibc-0.1.0.33-9b279e6d84e3aec7f7ff09cd8da419652fcec1ca.tar.gz) = 7ab6b846a6f0f66bbf96e3fb5f1978f8aab2d16b
-SHA512 (biolibc-0.1.0.33-9b279e6d84e3aec7f7ff09cd8da419652fcec1ca.tar.gz) = e86b9952204535349bafceffcf3a84251b0bea18c9cb210e7c7fbfe519e23aea5c051bd9458e57d26fd339f9a501ca028f3fd80ae7bcf8b83541c8e545dceeba
-Size (biolibc-0.1.0.33-9b279e6d84e3aec7f7ff09cd8da419652fcec1ca.tar.gz) = 10515 bytes
+SHA1 (biolibc-0.1.0.35-cd56b1eeab195504c7e65f870d5fe05d4709eb92.tar.gz) = ae7650844ba6dc6325caa629e8f74d3bf778540b
+RMD160 (biolibc-0.1.0.35-cd56b1eeab195504c7e65f870d5fe05d4709eb92.tar.gz) = 6d4a4a871ddb77647aabcae60a314066b12a9480
+SHA512 (biolibc-0.1.0.35-cd56b1eeab195504c7e65f870d5fe05d4709eb92.tar.gz) = f928059bfe144e9ccfa56d8cf4d2e7c9b390fe29dc716cf215f305f8c7a2d6a4617f7af01d9eeade611d8a65820bc478bb586e5f26689cde9d0cfffdccd00a8c
+Size (biolibc-0.1.0.35-cd56b1eeab195504c7e65f870d5fe05d4709eb92.tar.gz) = 10697 bytes
