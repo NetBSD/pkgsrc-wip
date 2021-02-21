@@ -4954,6 +4954,7 @@ SUBDIR+=	runas
 SUBDIR+=	runit
 SUBDIR+=	rust
 SUBDIR+=	rust-bindgen
+SUBDIR+=	rusty-rain
 SUBDIR+=	rygel
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
