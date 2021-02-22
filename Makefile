@@ -1730,6 +1730,7 @@ SUBDIR+=	ifuse
 SUBDIR+=	igal
 SUBDIR+=	igowin
 SUBDIR+=	igraph
+SUBDIR+=	igv
 SUBDIR+=	iisemulator
 SUBDIR+=	ilbc-rfc3951
 SUBDIR+=	ilohamail
