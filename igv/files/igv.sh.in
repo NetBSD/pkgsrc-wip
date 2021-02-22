@@ -1,6 +1,15 @@
 #!/bin/sh
 
 # Replace this with bundled igv.sh?
+if ! java -version 2>&1 | head -n 1 | fgrep '"11.'; then
+    printf "You need Java 11 to run IGV.\n"
+    exit 1
+fi
+
+# MacOS openjdk11
+if [ -e /usr/libexec/java_home ]; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+fi
 
 java -showversion --module-path="%%JAVAJARDIR%%/igv" -Xmx4g \
     @"%%JAVAJARDIR%%/igv/igv.args" \
