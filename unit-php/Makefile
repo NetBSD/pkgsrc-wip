@@ -8,7 +8,7 @@ MODNAME=	${LANG}${PHP_VERSION}
 
 MAINTAINER=	osa@FreeBSD.org
 
-PHP_VERSIONS_ACCEPTED?=	56 72 73 74
+PHP_VERSIONS_ACCEPTED?=	56 73 74
 
 .include "../../lang/php/phpversion.mk"
 
