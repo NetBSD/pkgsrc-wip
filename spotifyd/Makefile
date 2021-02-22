@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	spotifyd-0.2.24
+DISTNAME=	spotifyd-0.3.0
 PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
@@ -17,8 +17,6 @@ USE_LANGUAGES=	c # rust, but needs a toolchain to link
 DISTFILES=	${DEFAULT_DISTFILES}
 
 # generate using make show-cargo-depends
-CARGO_CRATE_DEPENDS+=	adler32-1.0.4
-CARGO_CRATE_DEPENDS+=	advapi32-sys-0.2.0
 CARGO_CRATE_DEPENDS+=	aes-0.3.2
 CARGO_CRATE_DEPENDS+=	aes-ctr-0.3.0
 CARGO_CRATE_DEPENDS+=	aes-soft-0.3.3
@@ -29,6 +27,7 @@ CARGO_CRATE_DEPENDS+=	alsa-0.2.2
 CARGO_CRATE_DEPENDS+=	alsa-0.3.0
 CARGO_CRATE_DEPENDS+=	alsa-sys-0.1.2
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.26
 CARGO_CRATE_DEPENDS+=	approx-0.3.2
 CARGO_CRATE_DEPENDS+=	arc-swap-0.4.4
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -36,41 +35,42 @@ CARGO_CRATE_DEPENDS+=	autocfg-0.1.7
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.0
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.40
 CARGO_CRATE_DEPENDS+=	backtrace-sys-0.1.32
-CARGO_CRATE_DEPENDS+=	base64-0.10.1
 CARGO_CRATE_DEPENDS+=	base64-0.9.3
+CARGO_CRATE_DEPENDS+=	base64-0.10.1
+CARGO_CRATE_DEPENDS+=	base64-0.11.0
 CARGO_CRATE_DEPENDS+=	bindgen-0.51.1
 CARGO_CRATE_DEPENDS+=	bit-set-0.5.1
 CARGO_CRATE_DEPENDS+=	bit-vec-0.5.1
-CARGO_CRATE_DEPENDS+=	bitflags-0.3.3
 CARGO_CRATE_DEPENDS+=	bitflags-0.9.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
 CARGO_CRATE_DEPENDS+=	block-buffer-0.7.3
+CARGO_CRATE_DEPENDS+=	block-buffer-0.9.0
 CARGO_CRATE_DEPENDS+=	block-cipher-trait-0.6.2
 CARGO_CRATE_DEPENDS+=	block-modes-0.3.3
 CARGO_CRATE_DEPENDS+=	block-padding-0.1.5
 CARGO_CRATE_DEPENDS+=	boxfnonce-0.1.1
+CARGO_CRATE_DEPENDS+=	bumpalo-3.2.0
 CARGO_CRATE_DEPENDS+=	byte-tools-0.3.1
-CARGO_CRATE_DEPENDS+=	bytecount-0.4.0
 CARGO_CRATE_DEPENDS+=	byteorder-1.3.2
 CARGO_CRATE_DEPENDS+=	bytes-0.4.12
+CARGO_CRATE_DEPENDS+=	bytes-0.5.4
 CARGO_CRATE_DEPENDS+=	c2-chacha-0.2.3
-CARGO_CRATE_DEPENDS+=	cargo_metadata-0.6.4
 CARGO_CRATE_DEPENDS+=	cc-1.0.50
 CARGO_CRATE_DEPENDS+=	cexpr-0.3.6
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
-CARGO_CRATE_DEPENDS+=	chrono-0.4.10
+CARGO_CRATE_DEPENDS+=	chrono-0.4.11
 CARGO_CRATE_DEPENDS+=	clang-sys-0.28.1
 CARGO_CRATE_DEPENDS+=	clap-2.33.0
 CARGO_CRATE_DEPENDS+=	cloudabi-0.0.3
-CARGO_CRATE_DEPENDS+=	cookie-0.12.0
-CARGO_CRATE_DEPENDS+=	cookie_store-0.7.0
 CARGO_CRATE_DEPENDS+=	core-foundation-0.6.4
+CARGO_CRATE_DEPENDS+=	core-foundation-0.7.0
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.5.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.6.2
+CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.7.0
 CARGO_CRATE_DEPENDS+=	coreaudio-rs-0.9.1
 CARGO_CRATE_DEPENDS+=	coreaudio-sys-0.2.3
 CARGO_CRATE_DEPENDS+=	cpal-0.8.2
-CARGO_CRATE_DEPENDS+=	crc32fast-1.2.0
+CARGO_CRATE_DEPENDS+=	cpuid-bool-0.1.2
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.7.2
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.8.0
 CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.1.2
@@ -85,9 +85,11 @@ CARGO_CRATE_DEPENDS+=	darling_macro-0.9.0
 CARGO_CRATE_DEPENDS+=	dbus-0.2.3
 CARGO_CRATE_DEPENDS+=	dbus-0.6.5
 CARGO_CRATE_DEPENDS+=	dbus-tokio-0.2.1
+CARGO_CRATE_DEPENDS+=	derefable-0.1.0
 CARGO_CRATE_DEPENDS+=	derive_builder-0.7.2
 CARGO_CRATE_DEPENDS+=	derive_builder_core-0.5.0
 CARGO_CRATE_DEPENDS+=	digest-0.8.1
+CARGO_CRATE_DEPENDS+=	digest-0.9.0
 CARGO_CRATE_DEPENDS+=	dotenv-0.13.0
 CARGO_CRATE_DEPENDS+=	dtoa-0.4.4
 CARGO_CRATE_DEPENDS+=	either-1.5.3
@@ -96,11 +98,10 @@ CARGO_CRATE_DEPENDS+=	env_logger-0.6.2
 CARGO_CRATE_DEPENDS+=	env_logger-0.7.1
 CARGO_CRATE_DEPENDS+=	error-chain-0.11.0
 CARGO_CRATE_DEPENDS+=	error-chain-0.12.1
-CARGO_CRATE_DEPENDS+=	failure-0.1.6
-CARGO_CRATE_DEPENDS+=	failure_derive-0.1.6
+CARGO_CRATE_DEPENDS+=	failure-0.1.7
+CARGO_CRATE_DEPENDS+=	failure_derive-0.1.7
 CARGO_CRATE_DEPENDS+=	fake-simd-0.1.2
-CARGO_CRATE_DEPENDS+=	fern-0.5.9
-CARGO_CRATE_DEPENDS+=	flate2-1.0.13
+CARGO_CRATE_DEPENDS+=	fern-0.6.0
 CARGO_CRATE_DEPENDS+=	fnv-1.0.6
 CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
 CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
@@ -108,29 +109,38 @@ CARGO_CRATE_DEPENDS+=	fuchsia-cprng-0.1.1
 CARGO_CRATE_DEPENDS+=	fuchsia-zircon-0.3.3
 CARGO_CRATE_DEPENDS+=	fuchsia-zircon-sys-0.3.3
 CARGO_CRATE_DEPENDS+=	futures-0.1.29
+CARGO_CRATE_DEPENDS+=	futures-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-channel-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-core-0.3.4
 CARGO_CRATE_DEPENDS+=	futures-cpupool-0.1.8
+CARGO_CRATE_DEPENDS+=	futures-executor-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-io-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-macro-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-sink-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-task-0.3.4
+CARGO_CRATE_DEPENDS+=	futures-util-0.3.4
 CARGO_CRATE_DEPENDS+=	gcc-0.3.55
 CARGO_CRATE_DEPENDS+=	generic-array-0.12.3
+CARGO_CRATE_DEPENDS+=	generic-array-0.14.4
 CARGO_CRATE_DEPENDS+=	gethostname-0.2.1
 CARGO_CRATE_DEPENDS+=	getopts-0.2.21
 CARGO_CRATE_DEPENDS+=	getrandom-0.1.14
-CARGO_CRATE_DEPENDS+=	glob-0.2.11
 CARGO_CRATE_DEPENDS+=	glob-0.3.0
-CARGO_CRATE_DEPENDS+=	h2-0.1.26
+CARGO_CRATE_DEPENDS+=	h2-0.2.1
 CARGO_CRATE_DEPENDS+=	heck-0.3.1
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.6
 CARGO_CRATE_DEPENDS+=	hex-0.3.2
-CARGO_CRATE_DEPENDS+=	hex-0.4.0
-CARGO_CRATE_DEPENDS+=	hkdf-0.7.1
+CARGO_CRATE_DEPENDS+=	hex-0.4.2
+CARGO_CRATE_DEPENDS+=	hkdf-0.8.0
 CARGO_CRATE_DEPENDS+=	hmac-0.7.1
-CARGO_CRATE_DEPENDS+=	http-0.1.21
-CARGO_CRATE_DEPENDS+=	http-body-0.1.0
+CARGO_CRATE_DEPENDS+=	http-0.2.0
+CARGO_CRATE_DEPENDS+=	http-body-0.3.1
 CARGO_CRATE_DEPENDS+=	httparse-1.3.4
 CARGO_CRATE_DEPENDS+=	humantime-1.3.0
 CARGO_CRATE_DEPENDS+=	hyper-0.11.27
-CARGO_CRATE_DEPENDS+=	hyper-0.12.35
+CARGO_CRATE_DEPENDS+=	hyper-0.13.2
 CARGO_CRATE_DEPENDS+=	hyper-proxy-0.4.1
-CARGO_CRATE_DEPENDS+=	hyper-tls-0.3.2
+CARGO_CRATE_DEPENDS+=	hyper-tls-0.4.1
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
 CARGO_CRATE_DEPENDS+=	idna-0.1.5
 CARGO_CRATE_DEPENDS+=	idna-0.2.0
@@ -138,24 +148,25 @@ CARGO_CRATE_DEPENDS+=	indexmap-1.3.0
 CARGO_CRATE_DEPENDS+=	iovec-0.1.4
 CARGO_CRATE_DEPENDS+=	itertools-0.8.2
 CARGO_CRATE_DEPENDS+=	itoa-0.4.4
+CARGO_CRATE_DEPENDS+=	js-sys-0.3.35
 CARGO_CRATE_DEPENDS+=	kernel32-sys-0.2.2
-CARGO_CRATE_DEPENDS+=	keyring-0.7.1
+CARGO_CRATE_DEPENDS+=	keyring-0.9.0
 CARGO_CRATE_DEPENDS+=	language-tags-0.2.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lewton-0.9.4
-CARGO_CRATE_DEPENDS+=	libc-0.2.66
+CARGO_CRATE_DEPENDS+=	libc-0.2.73
 CARGO_CRATE_DEPENDS+=	libdbus-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	libloading-0.5.2
 CARGO_CRATE_DEPENDS+=	libm-0.1.4
 CARGO_CRATE_DEPENDS+=	libmdns-0.2.4
 CARGO_CRATE_DEPENDS+=	libpulse-sys-0.0.0
-CARGO_CRATE_DEPENDS+=	librespot-0.1.0
-CARGO_CRATE_DEPENDS+=	librespot-audio-0.1.0
-CARGO_CRATE_DEPENDS+=	librespot-connect-0.1.0
-CARGO_CRATE_DEPENDS+=	librespot-core-0.1.0
-CARGO_CRATE_DEPENDS+=	librespot-metadata-0.1.0
-CARGO_CRATE_DEPENDS+=	librespot-playback-0.1.0
-CARGO_CRATE_DEPENDS+=	librespot-protocol-0.1.0
+CARGO_CRATE_DEPENDS+=	librespot-0.1.1
+CARGO_CRATE_DEPENDS+=	librespot-audio-0.1.1
+CARGO_CRATE_DEPENDS+=	librespot-connect-0.1.1
+CARGO_CRATE_DEPENDS+=	librespot-core-0.1.1
+CARGO_CRATE_DEPENDS+=	librespot-metadata-0.1.1
+CARGO_CRATE_DEPENDS+=	librespot-playback-0.1.1
+CARGO_CRATE_DEPENDS+=	librespot-protocol-0.1.1
 CARGO_CRATE_DEPENDS+=	librespot-tremor-0.1.0
 CARGO_CRATE_DEPENDS+=	linear-map-1.2.0
 CARGO_CRATE_DEPENDS+=	lock_api-0.3.3
@@ -168,7 +179,6 @@ CARGO_CRATE_DEPENDS+=	memchr-2.3.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.5.3
 CARGO_CRATE_DEPENDS+=	mime-0.3.16
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.1
-CARGO_CRATE_DEPENDS+=	miniz_oxide-0.3.5
 CARGO_CRATE_DEPENDS+=	mio-0.6.21
 CARGO_CRATE_DEPENDS+=	mio-named-pipes-0.1.6
 CARGO_CRATE_DEPENDS+=	mio-uds-0.6.7
@@ -178,9 +188,9 @@ CARGO_CRATE_DEPENDS+=	multimap-0.4.0
 CARGO_CRATE_DEPENDS+=	nalgebra-0.18.1
 CARGO_CRATE_DEPENDS+=	native-tls-0.2.3
 CARGO_CRATE_DEPENDS+=	net2-0.2.33
+CARGO_CRATE_DEPENDS+=	nix-0.9.0
 CARGO_CRATE_DEPENDS+=	nix-0.10.0
 CARGO_CRATE_DEPENDS+=	nix-0.14.1
-CARGO_CRATE_DEPENDS+=	nix-0.9.0
 CARGO_CRATE_DEPENDS+=	nom-4.2.3
 CARGO_CRATE_DEPENDS+=	num-0.2.1
 CARGO_CRATE_DEPENDS+=	num-bigint-0.2.5
@@ -193,6 +203,7 @@ CARGO_CRATE_DEPENDS+=	num_cpus-1.11.1
 CARGO_CRATE_DEPENDS+=	ogg-0.7.0
 CARGO_CRATE_DEPENDS+=	ogg-sys-0.0.9
 CARGO_CRATE_DEPENDS+=	opaque-debug-0.2.3
+CARGO_CRATE_DEPENDS+=	opaque-debug-0.3.0
 CARGO_CRATE_DEPENDS+=	openssl-0.10.26
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.2
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.53
@@ -202,19 +213,23 @@ CARGO_CRATE_DEPENDS+=	pbkdf2-0.3.0
 CARGO_CRATE_DEPENDS+=	peeking_take_while-0.1.2
 CARGO_CRATE_DEPENDS+=	percent-encoding-1.0.1
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.1.0
+CARGO_CRATE_DEPENDS+=	pin-project-0.4.8
+CARGO_CRATE_DEPENDS+=	pin-project-internal-0.4.8
+CARGO_CRATE_DEPENDS+=	pin-project-lite-0.1.4
+CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0-alpha.4
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.17
-CARGO_CRATE_DEPENDS+=	portaudio-rs-0.3.1
+CARGO_CRATE_DEPENDS+=	portaudio-rs-0.3.2
 CARGO_CRATE_DEPENDS+=	portaudio-sys-0.1.1
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.6
-CARGO_CRATE_DEPENDS+=	proc-macro-error-0.4.4
-CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-0.4.3
+CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.2
+CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.2
+CARGO_CRATE_DEPENDS+=	proc-macro-hack-0.5.11
+CARGO_CRATE_DEPENDS+=	proc-macro-nested-0.1.3
 CARGO_CRATE_DEPENDS+=	proc-macro2-0.4.30
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.7
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.19
 CARGO_CRATE_DEPENDS+=	protobuf-2.10.0
 CARGO_CRATE_DEPENDS+=	protobuf-codegen-2.10.0
 CARGO_CRATE_DEPENDS+=	protobuf-codegen-pure-2.10.0
-CARGO_CRATE_DEPENDS+=	publicsuffix-1.5.4
-CARGO_CRATE_DEPENDS+=	pulldown-cmark-0.2.0
 CARGO_CRATE_DEPENDS+=	quick-error-1.2.3
 CARGO_CRATE_DEPENDS+=	quote-0.6.13
 CARGO_CRATE_DEPENDS+=	quote-1.0.2
@@ -243,39 +258,38 @@ CARGO_CRATE_DEPENDS+=	regex-1.3.3
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.13
 CARGO_CRATE_DEPENDS+=	relay-0.1.1
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.2
-CARGO_CRATE_DEPENDS+=	reqwest-0.9.17
-CARGO_CRATE_DEPENDS+=	result-1.0.0
+CARGO_CRATE_DEPENDS+=	reqwest-0.10.1
 CARGO_CRATE_DEPENDS+=	rodio-0.9.0
 CARGO_CRATE_DEPENDS+=	rpassword-3.0.2
-CARGO_CRATE_DEPENDS+=	rspotify-0.7.0
+CARGO_CRATE_DEPENDS+=	rspotify-0.8.0
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.16
 CARGO_CRATE_DEPENDS+=	rustc-hash-1.0.1
 CARGO_CRATE_DEPENDS+=	rustc-serialize-0.3.24
 CARGO_CRATE_DEPENDS+=	rustc_version-0.2.3
-CARGO_CRATE_DEPENDS+=	rustversion-1.0.1
 CARGO_CRATE_DEPENDS+=	ryu-1.0.2
 CARGO_CRATE_DEPENDS+=	safemem-0.3.3
-CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schannel-0.1.16
 CARGO_CRATE_DEPENDS+=	scoped-tls-0.1.2
 CARGO_CRATE_DEPENDS+=	scopeguard-1.0.0
-CARGO_CRATE_DEPENDS+=	secret-service-1.0.0
+CARGO_CRATE_DEPENDS+=	secret-service-1.1.0
 CARGO_CRATE_DEPENDS+=	security-framework-0.3.4
+CARGO_CRATE_DEPENDS+=	security-framework-0.4.4
 CARGO_CRATE_DEPENDS+=	security-framework-sys-0.3.3
+CARGO_CRATE_DEPENDS+=	security-framework-sys-0.4.3
 CARGO_CRATE_DEPENDS+=	semver-0.9.0
 CARGO_CRATE_DEPENDS+=	semver-parser-0.7.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.104
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.104
-CARGO_CRATE_DEPENDS+=	serde_ini-0.2.0
+CARGO_CRATE_DEPENDS+=	serde-1.0.115
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.115
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.44
-CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.5.5
+CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.6.1
 CARGO_CRATE_DEPENDS+=	sha-1-0.8.2
+CARGO_CRATE_DEPENDS+=	sha-1-0.9.1
 CARGO_CRATE_DEPENDS+=	sha2-0.8.1
 CARGO_CRATE_DEPENDS+=	shannon-0.2.0
+CARGO_CRATE_DEPENDS+=	shell-words-0.1.0
 CARGO_CRATE_DEPENDS+=	shlex-0.1.1
 CARGO_CRATE_DEPENDS+=	signal-hook-0.1.12
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.2.0
-CARGO_CRATE_DEPENDS+=	skeptic-0.13.4
 CARGO_CRATE_DEPENDS+=	slab-0.3.0
 CARGO_CRATE_DEPENDS+=	slab-0.4.2
 CARGO_CRATE_DEPENDS+=	smallvec-0.2.1
@@ -283,50 +297,53 @@ CARGO_CRATE_DEPENDS+=	smallvec-0.6.13
 CARGO_CRATE_DEPENDS+=	smallvec-1.1.0
 CARGO_CRATE_DEPENDS+=	socket2-0.2.4
 CARGO_CRATE_DEPENDS+=	socket2-0.3.11
+CARGO_CRATE_DEPENDS+=	sourcefile-0.1.4
 CARGO_CRATE_DEPENDS+=	stdweb-0.1.3
 CARGO_CRATE_DEPENDS+=	stream-cipher-0.3.2
-CARGO_CRATE_DEPENDS+=	string-0.2.1
 CARGO_CRATE_DEPENDS+=	strsim-0.7.0
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
-CARGO_CRATE_DEPENDS+=	structopt-0.3.8
-CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.1
+CARGO_CRATE_DEPENDS+=	structopt-0.3.17
+CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.10
 CARGO_CRATE_DEPENDS+=	subtle-1.0.0
 CARGO_CRATE_DEPENDS+=	syn-0.15.44
-CARGO_CRATE_DEPENDS+=	syn-1.0.13
-CARGO_CRATE_DEPENDS+=	syn-mid-0.4.0
+CARGO_CRATE_DEPENDS+=	syn-1.0.39
+CARGO_CRATE_DEPENDS+=	syn-mid-0.5.0
 CARGO_CRATE_DEPENDS+=	synstructure-0.12.3
 CARGO_CRATE_DEPENDS+=	syslog-4.0.1
 CARGO_CRATE_DEPENDS+=	take-0.1.0
-CARGO_CRATE_DEPENDS+=	tempdir-0.3.7
 CARGO_CRATE_DEPENDS+=	tempfile-3.1.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
 CARGO_CRATE_DEPENDS+=	thread_local-1.0.1
 CARGO_CRATE_DEPENDS+=	time-0.1.42
 CARGO_CRATE_DEPENDS+=	tokio-0.1.22
-CARGO_CRATE_DEPENDS+=	tokio-buf-0.1.1
+CARGO_CRATE_DEPENDS+=	tokio-0.2.11
 CARGO_CRATE_DEPENDS+=	tokio-codec-0.1.1
 CARGO_CRATE_DEPENDS+=	tokio-core-0.1.17
 CARGO_CRATE_DEPENDS+=	tokio-current-thread-0.1.6
 CARGO_CRATE_DEPENDS+=	tokio-executor-0.1.9
 CARGO_CRATE_DEPENDS+=	tokio-fs-0.1.6
-CARGO_CRATE_DEPENDS+=	tokio-io-0.1.12
+CARGO_CRATE_DEPENDS+=	tokio-io-0.1.13
 CARGO_CRATE_DEPENDS+=	tokio-process-0.2.4
 CARGO_CRATE_DEPENDS+=	tokio-proto-0.1.1
 CARGO_CRATE_DEPENDS+=	tokio-reactor-0.1.11
 CARGO_CRATE_DEPENDS+=	tokio-service-0.1.0
 CARGO_CRATE_DEPENDS+=	tokio-signal-0.1.5
 CARGO_CRATE_DEPENDS+=	tokio-signal-0.2.7
+CARGO_CRATE_DEPENDS+=	tokio-socks-0.2.0
 CARGO_CRATE_DEPENDS+=	tokio-sync-0.1.7
 CARGO_CRATE_DEPENDS+=	tokio-tcp-0.1.3
 CARGO_CRATE_DEPENDS+=	tokio-threadpool-0.1.17
 CARGO_CRATE_DEPENDS+=	tokio-timer-0.2.12
+CARGO_CRATE_DEPENDS+=	tokio-tls-0.3.0
 CARGO_CRATE_DEPENDS+=	tokio-udp-0.1.5
 CARGO_CRATE_DEPENDS+=	tokio-uds-0.2.5
+CARGO_CRATE_DEPENDS+=	tokio-util-0.2.0
+CARGO_CRATE_DEPENDS+=	toml-0.5.6
+CARGO_CRATE_DEPENDS+=	tower-service-0.3.0
 CARGO_CRATE_DEPENDS+=	try-lock-0.1.0
 CARGO_CRATE_DEPENDS+=	try-lock-0.2.2
-CARGO_CRATE_DEPENDS+=	try_from-0.3.2
-CARGO_CRATE_DEPENDS+=	typenum-1.11.2
+CARGO_CRATE_DEPENDS+=	typenum-1.12.0
 CARGO_CRATE_DEPENDS+=	unicase-2.6.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.4
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.11
@@ -343,14 +360,22 @@ CARGO_CRATE_DEPENDS+=	vergen-3.0.4
 CARGO_CRATE_DEPENDS+=	version_check-0.1.5
 CARGO_CRATE_DEPENDS+=	version_check-0.9.1
 CARGO_CRATE_DEPENDS+=	void-1.0.2
-CARGO_CRATE_DEPENDS+=	walkdir-2.3.0
 CARGO_CRATE_DEPENDS+=	want-0.0.4
-CARGO_CRATE_DEPENDS+=	want-0.2.0
+CARGO_CRATE_DEPENDS+=	want-0.3.0
 CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
 # work around weird version pattern not supported by cargo.mk
 SITES.wasi-0.9.0+wasi-snapshot-preview1.crate+=	-https://crates.io/api/v1/crates/wasi/0.9.0+wasi-snapshot-preview1/download
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.58
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.58
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-futures-0.4.8
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.58
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.58
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.58
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-webidl-0.2.58
+CARGO_CRATE_DEPENDS+=	web-sys-0.3.35
 CARGO_CRATE_DEPENDS+=	webbrowser-0.5.2
-CARGO_CRATE_DEPENDS+=	whoami-0.7.0
+CARGO_CRATE_DEPENDS+=	weedle-0.10.0
+CARGO_CRATE_DEPENDS+=	whoami-0.9.0
 CARGO_CRATE_DEPENDS+=	widestring-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-0.2.8
 CARGO_CRATE_DEPENDS+=	winapi-0.3.8
@@ -358,8 +383,10 @@ CARGO_CRATE_DEPENDS+=	winapi-build-0.1.1
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.3
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winreg-0.6.2
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	xdg-2.2.0
+
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 INSTALLATION_DIRS+=	bin
@@ -369,21 +396,20 @@ MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulse
 # TODO investigate why this is needed
 CHECK_WRKREF_SKIP+=	bin/spotifyd
 
-#  NOTE: To update this package I think you need to do:
-#  1. remove `--frozen --locked` below
-#  2. `make extract`
-#  3. `make patch`
-#  4. That might fail. Need to...
-#  5. `cd` into working directory
-#  6. Manually update Cargo.lock and Cargo.toml based on *.rej
-#  7. Update patches... `pkgdiff Cargo.lock.orig Cargo.lock > ../../patches/patch-Cargo.lock`, etc
-#  8. Back in pkgsrc dir `make mdi`. Clean, extract, patch.
-#  9. `cd` into working directory
-# 10. `cargo update` to update the lock file
-# 11. Final update of patches, `pkgdiff Cargo.lock.orig Cargo.lock > patch-Cargo.lock`, etc.
-# 12. Can then re-add `--frozen --locked` below
-#
-# Although... also need to update the cargo crate depends list above and those patches...
+#  NOTE: To update this package currently you need to something like this:
+#  1. Update version in makefile
+#  2. `make clean`
+#  3. `make fetch`
+#  4. `make mdi`
+#  5. `make extract`
+#  6. Update the cargo crate depends list above, `make show-cargo-depends > cargodeps` and use to replace above
+#  7. `make clean`
+#  8. `make fetch`
+#  9. `make mdi`
+#  10. `make extract`
+#  11. `make patch`
+#  12. That might fail. Need to update patches, etc with help of `pkgvi` and `pkgdiff`, e.g: `pkgdiff Cargo.lock.orig Cargo.lock > ../../patches/patch-Cargo.lock`, etc
+#  13. If patches updated `make mdi`
 
 CARGO_ARGS=	${DEFAULT_CARGO_ARGS}	\
 		--no-default-features	\
@@ -392,11 +418,6 @@ CARGO_ARGS=	${DEFAULT_CARGO_ARGS}	\
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin
 
-# Spotifyd now uses 2018 edition, need more recent version of rust.  NOTE: It's
-# up to you how you meet this version requirement. The last pkgsrc binary I can
-# find for rust is 1.29.1 in 8.0_2018Q3. You can either build a required
-# version or try to cheat by installing rust via rustup and "tricking" pkgsrc
-# into using that.
 BUILDLINK_API_DEPENDS.rust+=   rust>=1.40.0
 .include "../../lang/rust/cargo.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
