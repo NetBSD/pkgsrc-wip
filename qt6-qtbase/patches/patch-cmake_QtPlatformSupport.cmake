@@ -1,5 +1,7 @@
 $NetBSD$
 
+*add Solaris support
+
 * add a common system type for all platforms that support X11
 
 * Fix ICC check, since CMAKE_C_COMPILER can include the whole path to the
@@ -9,16 +11,20 @@ $NetBSD$
 
 --- cmake/QtPlatformSupport.cmake.orig	2021-01-26 18:29:22.000000000 +0000
 +++ cmake/QtPlatformSupport.cmake
-@@ -20,6 +20,8 @@ qt_set01(WASM CMAKE_SYSTEM_NAME STREQUAL
+@@ -17,9 +17,12 @@ qt_set01(OPENBSD CMAKE_SYSTEM_NAME STREQ
+ qt_set01(FREEBSD CMAKE_SYSTEM_NAME STREQUAL "FreeBSD") # FIXME: How to identify this?
+ qt_set01(NETBSD CMAKE_SYSTEM_NAME STREQUAL "NetBSD") # FIXME: How to identify this?
+ qt_set01(WASM CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
++qt_set01(SOLARIS CMAKE_SYSTEM_NAME STREQUAL "SunOS")
  
  qt_set01(BSD APPLE OR OPENBSD OR FREEBSD OR NETBSD)
  
-+qt_set01(X11_PLATFORM LINUX OR HPUX OR OPENBSD OR FREEBSD OR NETBSD)
++qt_set01(X11_PLATFORM LINUX OR HPUX OR OPENBSD OR FREEBSD OR NETBSD OR SOLARIS)
 +
  qt_set01(WINRT WIN32 AND CMAKE_VS_PLATFORM_TOOSLET STREQUAL "winrt") # FIXME: How to identify this?
  
  qt_set01(IOS APPLE AND CMAKE_SYSTEM_NAME STREQUAL "iOS")
-@@ -31,8 +33,8 @@ qt_set01(MACOS APPLE AND NOT UIKIT)
+@@ -31,8 +34,8 @@ qt_set01(MACOS APPLE AND NOT UIKIT)
  qt_set01(GCC CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
  qt_set01(CLANG CMAKE_CXX_COMPILER_ID MATCHES "Clang")
  qt_set01(APPLECLANG CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")

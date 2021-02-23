@@ -1,0 +1,12 @@
+$NetBSD$
+
+* add libraries needed for networking on solaris
+
+--- src/network/CMakeLists.txt.orig	2021-01-26 18:29:22.000000000 +0000
++++ src/network/CMakeLists.txt
+@@ -430,3 +430,5 @@ qt_internal_add_docs(Network
+ qt_internal_extend_target(Network CONDITION WIN32 PUBLIC_LIBRARIES ws2_32) # special case: mkspecs/common/msvc-desktop.conf
+ 
+ qt_internal_extend_target(Network CONDITION QNX PUBLIC_LIBRARIES socket) # special case: mkspecs/common/qcc-base-qnx.conf
++
++qt_internal_extend_target(Network CONDITION SOLARIS PUBLIC_LIBRARIES socket nsl)
