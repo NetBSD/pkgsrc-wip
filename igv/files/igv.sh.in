@@ -3,8 +3,11 @@
 if [ -e /usr/libexec/java_home ]; then
     # MacOS openjdk
     export JAVA_HOME=$(/usr/libexec/java_home)
+elif [ -e %%PREFIX%%/java/openjdk11/bin/java ]; then
+    # Custom pkgsrc
+    export JAVA_HOME=%%PREFIX%%/java/openjdk11
 elif [ -e /usr/pkg/java/openjdk11/bin/java ]; then
-    # Pkgsrc
+    # Try NetBSD default pkgsrc if not installed in the custom tree
     export JAVA_HOME=/usr/pkg/java/openjdk11
 fi
 
