@@ -3,7 +3,7 @@
 DISTNAME=	IGV_${PKGVERSION_NOREV}
 PKGNAME=	igv-2.9.2
 CATEGORIES=	biology
-MASTER_SITES=	https://data.broadinstitute.org/igv/projects/downloads/2.9/
+MASTER_SITES=	https://data.broadinstitute.org/igv/projects/downloads/${PKGVERSION:R}/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
