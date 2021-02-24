@@ -39,11 +39,6 @@ NO_CONFIGURE=	yes
 
 TEST_TARGET=	tests
 
-# Work around CFLAGS breakage:
-# https://github.com/xianyi/OpenBLAS/issues/818
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	CXXFLAGS=${CXXFLAGS:Q}
-MAKE_FLAGS+=	FFLAGS=${FFLAGS:Q}
 # Also set compilers explicitly, overriding Makefile.rule
 MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	CXX=${CXX:Q}
