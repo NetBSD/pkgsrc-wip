@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	IGV_${PKGVERSION_NOREV}
-PKGNAME=	igv-2.9.2
+DISTNAME=	IGV_2.9.2
+PKGNAME=	${DISTNAME:S/IGV_/igv-/}
 CATEGORIES=	biology
-MASTER_SITES=	https://data.broadinstitute.org/igv/projects/downloads/${PKGVERSION:R}/
+MASTER_SITES=	https://data.broadinstitute.org/igv/projects/downloads/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
