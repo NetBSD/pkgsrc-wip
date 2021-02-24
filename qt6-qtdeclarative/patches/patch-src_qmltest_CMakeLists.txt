@@ -1,0 +1,18 @@
+$NetBSD$
+
+Workaround linking issue on SunOS
+
+--- src/qmltest/CMakeLists.txt.orig	2021-02-24 12:50:01.679198663 +0000
++++ src/qmltest/CMakeLists.txt
+@@ -55,6 +55,11 @@ qt_internal_extend_target(QuickTest COND
+         QT_QML_DEBUG_NO_WARNING
+ )
+ 
++qt_internal_extend_target(QuickTest CONDITION SOLARIS
++    LINK_OPTIONS
++        -mimpure-text
++)
++
+ #### Keys ignored in scope 4:.:.:qmltest.pro:prefix_build:
+ # INSTALLS = "qmldir"
+ 
