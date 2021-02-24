@@ -1,0 +1,13 @@
+@comment $NetBSD$
+include/rlottie.h
+include/rlottie_capi.h
+include/rlottiecommon.h
+lib/cmake/rlottie/rlottieConfig.cmake
+lib/cmake/rlottie/rlottieConfigVersion.cmake
+lib/cmake/rlottie/rlottieTargets-minsizerel.cmake
+lib/cmake/rlottie/rlottieTargets.cmake
+lib/librlottie-image-loader.so
+lib/librlottie.so
+lib/librlottie.so.0
+lib/librlottie.so.${PKGVERSION}
+lib/pkgconfig/rlottie.pc
