@@ -30,7 +30,7 @@ LICENSE=	modified-bsd
 # Needs source patching and/or GCC_REQD for NetBSD
 # NetBSD gfortran framework needs improvements for this and other packages
 # Untested on other platforms
-ONLY_FOR_PLATFORM=	Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
