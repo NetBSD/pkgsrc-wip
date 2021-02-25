@@ -37,6 +37,7 @@ SUBST_SED.ena-netbsd+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
 SUBST_CLASSES+=			fix-bash
 SUBST_STAGE.fix-bash=		pre-configure
 SUBST_MESSAGE.fix-bash=		Fix bash path
+SUBST_FILES.fix-bash+=		cmake/Modules/UtilsHelper.cmake
 SUBST_FILES.fix-bash+=		codelite_terminal/wxTerminalCtrl.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleBash.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleGnomeTerminal.cpp
