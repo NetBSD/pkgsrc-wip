@@ -4204,6 +4204,7 @@ SUBDIR+=	py-ptyx
 SUBDIR+=	py-pulp
 SUBDIR+=	py-pulsar
 SUBDIR+=	py-pweave
+SUBDIR+=	py-pwntools
 SUBDIR+=	py-py4j
 SUBDIR+=	py-pyaiml
 SUBDIR+=	py-pyamf
