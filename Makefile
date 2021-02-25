@@ -4079,7 +4079,6 @@ SUBDIR+=	py-oak
 SUBDIR+=	py-oasa
 SUBDIR+=	py-ocrodjvu
 SUBDIR+=	py-oct2py
-SUBDIR+=	py-octoprint
 SUBDIR+=	py-odeint
 SUBDIR+=	py-odesys
 SUBDIR+=	py-odeviz
