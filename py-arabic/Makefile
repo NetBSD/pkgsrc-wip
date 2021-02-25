@@ -1,21 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2015/02/22 22:46:00 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	PyArabic-0.5.2
+DISTNAME=	PyArabic-0.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyArabic/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://pyarabic.sourceforge.io/
-COMMENT=	Arabic text tools
-LICENSE=	gnu-gpl-v2
+HOMEPAGE=	http://pyarabic.sourceforge.net/
+COMMENT=	Arabic text tools for Python
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/PyArabic-0.5
 
-USE_LANGUAGES=	# none
-
-PYDISTUTILSPKG=	yes
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
