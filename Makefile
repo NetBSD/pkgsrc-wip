@@ -3348,7 +3348,6 @@ SUBDIR+=	py-buildbot-www
 SUBDIR+=	py-bxa
 SUBDIR+=	py-c-lasso
 SUBDIR+=	py-cPyparsing
-SUBDIR+=	py-cachelib
 SUBDIR+=	py-calphad
 SUBDIR+=	py-calverter
 SUBDIR+=	py-cameo
