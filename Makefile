@@ -4349,6 +4349,7 @@ SUBDIR+=	py-rigidbodysimulator
 SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-rogues
 SUBDIR+=	py-ropemode
+SUBDIR+=	py-ropgadget
 SUBDIR+=	py-rpaths
 SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rql
