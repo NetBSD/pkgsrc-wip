@@ -27,8 +27,7 @@ HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
 LICENSE=	modified-bsd
 
-# Needs source patching and/or GCC_REQD for NetBSD
-# NetBSD gfortran framework needs improvements for this and other packages
+# Darwin has a .so/.dylib PLIST issue
 # Untested on other platforms
 ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
