@@ -37,7 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-octoprint-filecheck>=2020.8.7:../../print/py-octoprint-
 DEPENDS+=	${PYPKGPREFIX}-octoprint-firmwarecheck>=2020.9.23:../../print/py-octoprint-firmwarecheck
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.5.0.1:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-pylru>=1.2:../../wip/py-pylru
+DEPENDS+=	${PYPKGPREFIX}-pylru>=1.2:../../devel/py-pylru
 DEPENDS+=	${PYPKGPREFIX}-regex>2018.11.6:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.23.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rsa>=4.0:../../security/py-rsa
