@@ -11,15 +11,18 @@ COMMENT=	st fork that uses Xresources and some patches
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
+
 CONFLICTS=	st-term-[0-9]*
+
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c99
 
 SUBST_CLASSES+=			configdefh configmk
 SUBST_STAGE.configdefh=		pre-configure
 SUBST_STAGE.configmk=		pre-configure
 SUBST_MESSAGE.configdefh=	Change default font and termname
 SUBST_FILES.configdefh=		config.def.h
-SUBST_MESSAGE.configmk=		Fixing config.mk
+SUBST_MESSAGE.configmk=		Fixing paths
 SUBST_FILES.configmk=		config.mk
 SUBST_SED.configdefh+=		-e '/font/ s,".*","monospace:size=10",'
 SUBST_SED.configdefh+=		-e 's,xst-256color,xterm,g'
