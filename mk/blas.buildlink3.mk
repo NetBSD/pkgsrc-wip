@@ -58,11 +58,12 @@ BUILD_DEFS_EFFECTS+=	BLAS_TYPE BLAS_LIBS LAPACK_LIBS
 # should come first by default for maximum compatibility.  It is also the
 # slowest and not desirable in many situations.  Users can override by setting
 # PKGSRC_BLAS_TYPES. (See comment above)
-_BLAS_TYPES=	netlib openblas openblas_pthread openblas_openmp
+_BLAS_TYPES=	netlib
 # Darwin
 .if exists(/System/Library/Frameworks/Accelerate.framework)
 _BLAS_TYPES+=	accelerate.framework
 .endif
+_BLAS_TYPES+=	openblas openblas_pthread openblas_openmp
 
 BLAS_ACCEPTED?=	${_BLAS_TYPES}
 PKGSRC_BLAS_TYPES?= ${_BLAS_TYPES}
