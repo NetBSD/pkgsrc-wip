@@ -4406,7 +4406,6 @@ SUBDIR+=	py-sempy
 SUBDIR+=	py-semver
 SUBDIR+=	py-sentinels
 SUBDIR+=	py-sentry
-SUBDIR+=	py-sentry-sdk
 SUBDIR+=	py-sep
 SUBDIR+=	py-serialize
 SUBDIR+=	py-setupdocs
