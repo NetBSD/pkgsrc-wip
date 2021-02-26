@@ -4151,6 +4151,7 @@ SUBDIR+=	py-pg8000
 SUBDIR+=	py-pgmpy
 SUBDIR+=	py-photutils
 SUBDIR+=	py-picture-to-gds
+SUBDIR+=	py-pickleDB
 SUBDIR+=	py-pint
 SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pipenv
