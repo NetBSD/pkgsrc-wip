@@ -3888,6 +3888,7 @@ SUBDIR+=	py-libgit2-glib
 SUBDIR+=	py-liblzma
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
+SUBDIR+=	py-libqutrub
 SUBDIR+=	py-librabbitmq
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
