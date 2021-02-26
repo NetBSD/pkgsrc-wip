@@ -1,6 +1,7 @@
 # $NetBSD: $
 
 DISTNAME=	zim-0.73.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
@@ -36,4 +37,6 @@ SUBST_SED.man-path=	-e s,share/man/man1,${PKGMANDIR}/man1,
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.gtk3+=    gtk3+>=3.20
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
