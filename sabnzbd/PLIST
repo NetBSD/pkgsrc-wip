@@ -57,6 +57,7 @@ ${PYSITELIB}/sabnzbd/utils/rarfile.py
 ${PYSITELIB}/sabnzbd/utils/rarvolinfo.py
 ${PYSITELIB}/sabnzbd/utils/servertests.py
 ${PYSITELIB}/sabnzbd/utils/sleepless.py
+${PYSITELIB}/sabnzbd/utils/ssdp.py
 ${PYSITELIB}/sabnzbd/utils/systrayiconthread.py
 ${PYSITELIB}/sabnzbd/version.py
 ${PYSITELIB}/sabnzbd/zconfig.py
@@ -160,7 +161,8 @@ share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/ru
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/sr.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/sv.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/zh-cn.js
-share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Default.css
+share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Auto.css
+share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Light.css
 share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Night.css
 share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/glitter.css
 share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/glitter.mobile.css
@@ -350,6 +352,7 @@ share/sabnzbd/sabnzbd/utils/rarfile.py
 share/sabnzbd/sabnzbd/utils/rarvolinfo.py
 share/sabnzbd/sabnzbd/utils/servertests.py
 share/sabnzbd/sabnzbd/utils/sleepless.py
+share/sabnzbd/sabnzbd/utils/ssdp.py
 share/sabnzbd/sabnzbd/utils/systrayiconthread.py
 share/sabnzbd/sabnzbd/version.py
 share/sabnzbd/sabnzbd/zconfig.py

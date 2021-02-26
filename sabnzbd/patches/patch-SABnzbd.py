@@ -2,20 +2,9 @@ $NetBSD$
 
 Fix path.
 
---- SABnzbd.py.orig	2020-08-30 20:58:31.000000000 +0200
-+++ SABnzbd.py	2020-09-07 20:29:13.831328403 +0200
-@@ -35,6 +35,10 @@
- import time
- import re
- 
-+# Force python to load the patched version of cherrypy included with the port,
-+# instead of any version that may be installed otherwise.
-+sys.path.insert(0,'@PREFIX@/share/sabnzbd')
-+
- try:
-     import Cheetah
-     import feedparser
-@@ -942,7 +946,8 @@
+--- SABnzbd.py.orig	2021-02-26 09:30:00.000000000 +0000
++++ SABnzbd.py
+@@ -942,7 +942,8 @@ def main():
  
      sabnzbd.MY_FULLNAME = os.path.normpath(os.path.abspath(sabnzbd.MY_FULLNAME))
      sabnzbd.MY_NAME = os.path.basename(sabnzbd.MY_FULLNAME)
