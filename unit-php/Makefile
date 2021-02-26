@@ -12,7 +12,7 @@ PHP_VERSIONS_ACCEPTED?=	56 73 74
 
 .include "../../lang/php/phpversion.mk"
 
-PHP_BUILD_OPTIONS!=	${PKG_INFO} -Bn php | ${GREP} PKG_OPTIONS
+PHP_BUILD_OPTIONS!=	${RUN} ${PKG_INFO} -Bn php | ${GREP} PKG_OPTIONS
 .if empty(PHP_BUILD_OPTIONS:Mphp-embed)
 BROKEN=		"Requires the php-embed option enabled in PHP."
 .endif
