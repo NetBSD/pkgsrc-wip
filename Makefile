@@ -4017,6 +4017,7 @@ SUBDIR+=	py-munch
 SUBDIR+=	py-mvpoly
 SUBDIR+=	py-myfitter
 SUBDIR+=	py-mys
+SUBDIR+=	py-mysam-tagmanager
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-mystic
 SUBDIR+=	py-naftawayh
