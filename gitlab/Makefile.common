@@ -1,0 +1,23 @@
+# $NetBSD$
+#
+# used by ../../wip/gitlab-assets/Makefile
+# used by ../../wip/ruby-gitlab/Makefile
+
+GITLAB_VERSION=	13.9.1
+GITLAB_COMMITID=03979b4aaf060cae40934b2aade0bbe8a210e311
+
+DISTNAME=	gitlab-v${GITLAB_VERSION}-ce
+CATEGORIES=	devel
+MASTER_SITES=	https://gitlab.com/rluna-gitlab/gitlab-ce/-/archive/v${GITLAB_VERSION}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gitlab.com/gitlab-org/gitlab
+COMMENT=	Complete software development platform around Git
+LICENSE=	mit
+
+PATCHDIR=	${.CURDIR}/../../wip/gitlab-assets/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/gitlab-assets/distinfo
+
+WRKSRC=		${WRKDIR}/gitlab-ce-v${GITLAB_VERSION}-${GITLAB_COMMITID}
+
+GITLAB_DIR=	share/gitlab
