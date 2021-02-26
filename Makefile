@@ -3255,6 +3255,7 @@ SUBDIR+=	py-applpy
 SUBDIR+=	py-apscheduler
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
+SUBDIR+=	py-arabic-text-quote
 SUBDIR+=	py-archan
 SUBDIR+=	py-arpeggio
 SUBDIR+=	py-aruudy
