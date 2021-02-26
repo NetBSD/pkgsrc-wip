@@ -1,0 +1,2 @@
+Segfaults on game load on NetBSD, seems to be invalid memory access
+on the DTCM variable.

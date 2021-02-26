@@ -1,0 +1,21 @@
+$NetBSD$
+
+libdl is optional, and not usually present on non-Linux systems.
+
+This is now solved a different way upstream.
+
+--- src/frontend/qt_sdl/CMakeLists.txt.orig	2020-12-25 13:42:23.000000000 +0000
++++ src/frontend/qt_sdl/CMakeLists.txt
+@@ -78,7 +78,11 @@ endif()
+ 
+ if (UNIX)
+     option(PORTABLE "Make a portable build that looks for its configuration in the current directory" OFF)
+-    target_link_libraries(melonDS dl Qt5::Core Qt5::Gui Qt5::Widgets)
++    target_link_libraries(melonDS Qt5::Core Qt5::Gui Qt5::Widgets)
++    find_library(LIBDL NAMES dl)
++    if (LIBDL)
++        target_link_libraries(melonDS ${LIBDL})
++    endif()
+ elseif (WIN32)
+     option(PORTABLE "Make a portable build that looks for its configuration in the current directory" ON)
+     target_sources(melonDS PUBLIC "${CMAKE_SOURCE_DIR}/melon.rc")
