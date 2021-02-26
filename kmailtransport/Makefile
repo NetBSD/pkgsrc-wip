@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2016/01/10 20:01:05 markd Exp $
 
 DISTNAME=	kmailtransport-${KAPPSVER}
-PKGREVISION=	1
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -14,28 +13,18 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Install via examples dir.
-SUBST_FILES.xdg=	CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kmailtransport.categories \
-		${PKG_SYSCONFDIR}/xdg/kmailtransport.categories
-CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kmailtransport.renamecategories \
-		${PKG_SYSCONFDIR}/xdg/kmailtransport.renamecategories
-
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/kmailtransportakonadi/plugins/CMakeFiles/mailtransport_akonadiplugin_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/kmailtransport/plugins/smtp/CMakeFiles/mailtransport_smtpplugin_autogen.dir/AutogenInfo.cmake
-SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+SUBST_FILES.fix-moc=	_KDE_build/src/kmailtransportakonadi/plugins/CMakeFiles/mailtransport_akonadiplugin_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/kmailtransport/plugins/smtp/CMakeFiles/mailtransport_smtpplugin_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/akonadi-mime/buildlink3.mk"
+.include "../../wip/libkgapi/buildlink3.mk"
 .include "../../mail/ksmtp/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
