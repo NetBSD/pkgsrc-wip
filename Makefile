@@ -2056,6 +2056,7 @@ SUBDIR+=	libitl
 SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
 SUBDIR+=	libkdepim
+SUBDIR+=	libkgapi
 SUBDIR+=	libksysguard
 SUBDIR+=	liblas
 SUBDIR+=	liblingoteach
