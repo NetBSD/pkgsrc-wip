@@ -1,6 +1,7 @@
 @comment $NetBSD$
 include/KF5/Akonadi/Contact/AbstractContactFormatter
 include/KF5/Akonadi/Contact/AbstractContactGroupFormatter
+include/KF5/Akonadi/Contact/AbstractEmailAddressSelectionDialog
 include/KF5/Akonadi/Contact/ContactDefaultActions
 include/KF5/Akonadi/Contact/ContactEditor
 include/KF5/Akonadi/Contact/ContactEditorDialog
@@ -21,15 +22,17 @@ include/KF5/Akonadi/Contact/EmailAddressSelection
 include/KF5/Akonadi/Contact/EmailAddressSelectionDialog
 include/KF5/Akonadi/Contact/EmailAddressSelectionModel
 include/KF5/Akonadi/Contact/EmailAddressSelectionWidget
+include/KF5/Akonadi/Contact/RecipientsEditorManager
+include/KF5/Akonadi/Contact/RecipientsPickerWidget
 include/KF5/Akonadi/Contact/SelectAddressBookDialog
 include/KF5/Akonadi/Contact/StandardContactActionManager
 include/KF5/Akonadi/Contact/StandardContactFormatter
 include/KF5/Akonadi/Contact/StandardContactGroupFormatter
-include/KF5/ContactEditor/AbstractAddressLocationWidget
 include/KF5/ContactEditor/CategoriesEditAbstractWidget
 include/KF5/ContactEditor/ContactEditorPagePlugin
 include/KF5/akonadi/contact/abstractcontactformatter.h
 include/KF5/akonadi/contact/abstractcontactgroupformatter.h
+include/KF5/akonadi/contact/abstractemailaddressselectiondialog.h
 include/KF5/akonadi/contact/akonadi-contact_export.h
 include/KF5/akonadi/contact/contactdefaultactions.h
 include/KF5/akonadi/contact/contacteditor.h
@@ -51,11 +54,12 @@ include/KF5/akonadi/contact/emailaddressselection.h
 include/KF5/akonadi/contact/emailaddressselectiondialog.h
 include/KF5/akonadi/contact/emailaddressselectionmodel.h
 include/KF5/akonadi/contact/emailaddressselectionwidget.h
+include/KF5/akonadi/contact/recipientseditormanager.h
+include/KF5/akonadi/contact/recipientspickerwidget.h
 include/KF5/akonadi/contact/selectaddressbookdialog.h
 include/KF5/akonadi/contact/standardcontactactionmanager.h
 include/KF5/akonadi/contact/standardcontactformatter.h
 include/KF5/akonadi/contact/standardcontactgroupformatter.h
-include/KF5/contacteditor/abstractaddresslocationwidget.h
 include/KF5/contacteditor/categorieseditabstractwidget.h
 include/KF5/contacteditor/contacteditor_export.h
 include/KF5/contacteditor/contacteditorpageplugin.h
@@ -69,10 +73,10 @@ lib/cmake/KF5ContactEditor/KF5ContactEditorTargets-noconfig.cmake
 lib/cmake/KF5ContactEditor/KF5ContactEditorTargets.cmake
 lib/libKF5AkonadiContact.so
 lib/libKF5AkonadiContact.so.5
-lib/libKF5AkonadiContact.so.5.12.0
+lib/libKF5AkonadiContact.so.5.14.1
 lib/libKF5ContactEditor.so
 lib/libKF5ContactEditor.so.5
-lib/libKF5ContactEditor.so.5.12.0
+lib/libKF5ContactEditor.so.5.14.1
 qt5/mkspecs/modules/qt_AkonadiContact.pri
 qt5/mkspecs/modules/qt_ContactEditor.pri
 qt5/plugins/akonadi/contacts/plugins/categorieseditwidgetplugin.so
