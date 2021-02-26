@@ -3869,6 +3869,7 @@ SUBDIR+=	py-krylov
 SUBDIR+=	py-krypy
 SUBDIR+=	py-kubernetes
 SUBDIR+=	py-lapack
+SUBDIR+=	py-lang-trans
 SUBDIR+=	py-lark-parser
 SUBDIR+=	py-larlib
 SUBDIR+=	py-larry
