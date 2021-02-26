@@ -6,7 +6,6 @@ BUILDLINK_TREE+=	akonadi
 AKONADI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi+=	akonadi>=17.12.1
-BUILDLINK_ABI_DEPENDS.akonadi?=	akonadi>=20.04.1nb1
 BUILDLINK_PKGSRCDIR.akonadi?=	../../wip/akonadi
 
 .include "../../devel/kio/buildlink3.mk"
