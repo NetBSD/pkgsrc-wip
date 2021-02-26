@@ -4,9 +4,9 @@ Work around build error with nested macro:
 
 'macro "memcpy" requires 3 arguments, but only 2 given'
 
---- src/sp_utils.c.orig	2020-08-12 14:16:28.000000000 +0000
+--- src/sp_utils.c.orig	2021-01-02 18:22:07.000000000 +0000
 +++ src/sp_utils.c
-@@ -422,7 +422,7 @@ int hook_function(const char* original_n
+@@ -436,7 +436,7 @@ int hook_function(const char* original_n
        return FAILURE;
      }
      memcpy(mb_name, "mb_", sizeof("mb_") - 1);

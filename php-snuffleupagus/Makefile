@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 MODNAME=		snuffleupagus
-PECL_VERSION=		0.6.0
+PECL_VERSION=		0.7.0
 CATEGORIES+=		security
 
 # See TODO
@@ -12,7 +12,7 @@ HOMEPAGE=		https://snuffleupagus.readthedocs.io/
 COMMENT=		Security module for PHP7
 LICENSE=		gnu-lgpl-v3
 
-WRKSRC=			${WRKDIR}/${MODNAME}
+WRKSRC=			${WRKDIR}/${MODNAME}-${PECL_VERSION}
 MODULESDIR=		${WRKSRC}/src/modules
 PHPSETUPSUBDIR=		src
 CONFIGURE_DIRS=		src
