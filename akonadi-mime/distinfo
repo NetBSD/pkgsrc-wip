@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (akonadi-mime-19.08.0.tar.xz) = ddb72db7050706e249c54e2993722f8566e80faf
-RMD160 (akonadi-mime-19.08.0.tar.xz) = dcb2e2f0648c1aa878fcb55953227426bcc14304
-SHA512 (akonadi-mime-19.08.0.tar.xz) = f315454144392b1a8553fc329371309bee7eb1735fc3547bfbae9a101e3452815568a8d4b6eed15848ab4d4d30c45bdbc3c3f325152b42b94d838037510af037
-Size (akonadi-mime-19.08.0.tar.xz) = 133008 bytes
+SHA1 (akonadi-mime-20.04.1.tar.xz) = 22e81ca457b3cd762473ee7532901758de0c9501
+RMD160 (akonadi-mime-20.04.1.tar.xz) = 700faba88b0a769e9c30ce6667b284c0eae8c98e
+SHA512 (akonadi-mime-20.04.1.tar.xz) = 40c3bd89fd57421aa9c24f320e315fedd4c4e2f33f2a461b22cdcef29fe3bc37a4efdc5839da8346b683db3d107c7d81a8bd2f326e3a4712ef23fed03150420d
+Size (akonadi-mime-20.04.1.tar.xz) = 132060 bytes

@@ -36,7 +36,7 @@ lib/cmake/KF5AkonadiMime/KF5AkonadiMimeTargets-noconfig.cmake
 lib/cmake/KF5AkonadiMime/KF5AkonadiMimeTargets.cmake
 lib/libKF5AkonadiMime.so
 lib/libKF5AkonadiMime.so.5
-lib/libKF5AkonadiMime.so.5.12.0
+lib/libKF5AkonadiMime.so.5.14.1
 qt5/mkspecs/modules/qt_AkonadiMime.pri
 qt5/plugins/akonadi_serializer_mail.so
 share/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
