@@ -4342,6 +4342,7 @@ SUBDIR+=	py-report
 SUBDIR+=	py-repositoryhandler
 SUBDIR+=	py-repoze.tm2
 SUBDIR+=	py-repoze.who
+SUBDIR+=	py-repr
 SUBDIR+=	py-reproducible
 SUBDIR+=	py-reproject
 SUBDIR+=	py-requests-cache
