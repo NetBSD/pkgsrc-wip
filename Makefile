@@ -4533,6 +4533,7 @@ SUBDIR+=	py-sympad
 SUBDIR+=	py-symphysics
 SUBDIR+=	py-sympy-to-c
 SUBDIR+=	py-sympycore
+SUBDIR+=	py-sylajone
 SUBDIR+=	py-t3m
 SUBDIR+=	py-tablib-garetjax
 SUBDIR+=	py-tagger

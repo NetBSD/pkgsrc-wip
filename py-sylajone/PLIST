@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sylajone/__init__.py
+${PYSITELIB}/sylajone/__init__.pyc
+${PYSITELIB}/sylajone/__init__.pyo
+${PYSITELIB}/sylajone/cache.py
+${PYSITELIB}/sylajone/cache.pyc
+${PYSITELIB}/sylajone/cache.pyo
+${PYSITELIB}/sylajone/cache_pickledb.py
+${PYSITELIB}/sylajone/cache_pickledb.pyc
+${PYSITELIB}/sylajone/cache_pickledb.pyo
+${PYSITELIB}/sylajone/refactor.py
+${PYSITELIB}/sylajone/refactor.pyc
+${PYSITELIB}/sylajone/refactor.pyo
+${PYSITELIB}/sylajone/stemmedsynword.py
+${PYSITELIB}/sylajone/stemmedsynword.pyc
+${PYSITELIB}/sylajone/stemmedsynword.pyo
+${PYSITELIB}/sylajone/syn_const.py
+${PYSITELIB}/sylajone/syn_const.pyc
+${PYSITELIB}/sylajone/syn_const.pyo
+${PYSITELIB}/sylajone/synnode.py
+${PYSITELIB}/sylajone/synnode.pyc
+${PYSITELIB}/sylajone/synnode.pyo
