@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	xtrlock-2.14
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,7 +23,7 @@ do-build:
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL} -m 4775 ${WRKSRC}/xtrlock ${DESTDIR}${PREFIX}/bin/xtrlock
+	${INSTALL} -m 4555 ${WRKSRC}/xtrlock ${DESTDIR}${PREFIX}/bin/xtrlock
 	${INSTALL_MAN} ${MAN_PAGE} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xtrlock.1
 
 .include "../../x11/libX11/buildlink3.mk"
