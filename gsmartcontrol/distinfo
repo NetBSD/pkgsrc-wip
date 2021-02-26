@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/04/20 19:39:12 noud4 Exp $
 
-SHA1 (gsmartcontrol-0.8.7.tar.bz2) = 36c255e8f493b003a616cb1eff3a86ccc6b8f80a
-RMD160 (gsmartcontrol-0.8.7.tar.bz2) = 47a2e3f8c0073faf30979f26be6003b7190318c5
-Size (gsmartcontrol-0.8.7.tar.bz2) = 684394 bytes
+SHA1 (gsmartcontrol-1.1.3.tar.bz2) = 8baf7e3964a8da8ddc6004718f184913ca2ad91e
+RMD160 (gsmartcontrol-1.1.3.tar.bz2) = 13c4ca733e652cc40de14e3115b0dfa363e19ec5
+SHA512 (gsmartcontrol-1.1.3.tar.bz2) = 7a8bb79875a53d742923fc8ff8336d7fbbdaf2e1b1f64296840557997125d4dcfea9a93a5e8a834003d592083a180ee85ca0e29d3aecf0eb475a3d4fed460456
+Size (gsmartcontrol-1.1.3.tar.bz2) = 677998 bytes
