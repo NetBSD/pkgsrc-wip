@@ -5,7 +5,7 @@ COMMENT=	Complete software development platform around Git (Ruby Gems)
 
 USE_TOOLS+=	pax
 
-USE_LANGUAGES+=	c
+USE_LANGUAGES+=	c c++
 
 GEMS_DISTFILES+=	RedCloth-4.3.2.gem
 GEMS_DISTFILES+=	acme-client-2.0.6.gem
