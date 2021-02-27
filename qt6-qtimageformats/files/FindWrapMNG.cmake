@@ -4,6 +4,8 @@
 # CMAKE_FIND_LIBRARY_PREFIXES and CMAKE_FIND_LIBRARY_SUFFIXES not being
 # set and that add_library used for imported target creation in
 # pkg_check_modules is not scriptable.
+# A version of this has been filed upstream
+# https://codereview.qt-project.org/c/qt/qtimageformats/+/335598
 #
 find_package(PkgConfig)
 pkg_check_modules(MNG IMPORTED_TARGET libmng>1.0.9)

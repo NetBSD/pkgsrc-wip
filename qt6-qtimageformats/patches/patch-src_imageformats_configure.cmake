@@ -1,6 +1,8 @@
 $NetBSD$
 
 * enable mng
+  A version of this has been filed upstream
+  https://codereview.qt-project.org/c/qt/qtimageformats/+/335598
 
 --- src/imageformats/configure.cmake.orig	2021-01-28 05:17:06.000000000 +0000
 +++ src/imageformats/configure.cmake
