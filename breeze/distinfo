@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (breeze-5.16.4.tar.xz) = 83c6684a8689048b9e131128e3c04e78e489c56f
-RMD160 (breeze-5.16.4.tar.xz) = 9c23685e30a9b8401aea90440253d9ff2a854919
-SHA512 (breeze-5.16.4.tar.xz) = 35e0d06b2bbd954d261709cecb7e59cd30f3cfe848df2323e74637d7034e066c8bd19e06aa0b5bfa901b42df1060d1867c6de67632b4b68cb3a8cec8004d1d8e
-Size (breeze-5.16.4.tar.xz) = 16593792 bytes
+SHA1 (breeze-5.18.5.tar.xz) = a22f6310bbdf2352800926770bf74152c4523b30
+RMD160 (breeze-5.18.5.tar.xz) = e71f0648f8f643a5589cf95f57cc35c22338d57e
+SHA512 (breeze-5.18.5.tar.xz) = d4797d9ecabd1d1bcaa483722c255f1a79aad5d15bca0daee571eced2e5c295e39ed8cd6039fca39d9e1a1456bd823f30fd332b2811a04df2b2e3663a04abff5
+Size (breeze-5.18.5.tar.xz) = 21583276 bytes
