@@ -1,0 +1,164 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2020-11-13 06:17:31.000000000 +0000
++++ CMakeLists.txt
+@@ -3,6 +3,7 @@ cmake_policy(SET CMP0076 NEW)
+ cmake_policy(SET CMP0091 NEW)
+ 
+ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
++set(CMAKE_POSITION_INDEPENDENT_BINARIES True)
+ 
+ set(TG_OWT_SPECIAL_TARGET "" CACHE STRING "Use special platform target, like 'macstore' for Mac App Store.")
+ 
+@@ -44,17 +45,11 @@ include(cmake/libopenh264.cmake)
+ include(cmake/libpffft.cmake)
+ include(cmake/librnnoise.cmake)
+ include(cmake/libsrtp.cmake)
+-include(cmake/libusrsctp.cmake)
+-include(cmake/libvpx.cmake)
+ include(cmake/libwebrtcbuild.cmake)
+ include(cmake/libyuv.cmake)
+-if (NOT WIN32 AND NOT APPLE)
+-    include(cmake/libevent.cmake)
+-endif()
+ if (APPLE)
+     include(cmake/libsdkmacos.cmake)
+ endif()
+-
+ # Use a separate subdirectory, because it will be exported as an INTERFACE
+ # for the generated sources and headers.
+ if (TG_OWT_USE_PROTOBUF)
+@@ -76,14 +71,6 @@ if (is_x86 OR is_x64)
+         tg_owt::libpffft
+         tg_owt::librnnoise
+         tg_owt::libsrtp
+-        tg_owt::libusrsctp
+-        tg_owt::libvpx
+-        tg_owt::libvpx_mmx
+-        tg_owt::libvpx_sse2
+-        tg_owt::libvpx_ssse3
+-        tg_owt::libvpx_sse4
+-        tg_owt::libvpx_avx
+-        tg_owt::libvpx_avx2
+         tg_owt::libyuv
+     )
+ else()
+@@ -96,8 +83,6 @@ else()
+         tg_owt::libpffft
+         tg_owt::librnnoise
+         tg_owt::libsrtp
+-        tg_owt::libusrsctp
+-        tg_owt::libvpx
+         tg_owt::libyuv
+     )
+ endif()
+@@ -111,13 +96,9 @@ endif()
+ 
+ target_sources(tg_owt
+ PRIVATE
+-    ${libvpx_yasm_objects}
+     ${libopenh264_yasm_objects}
+ )
+ 
+-if (NOT WIN32 AND NOT APPLE)
+-    target_link_libraries(tg_owt PRIVATE tg_owt::libevent)
+-endif()
+ if (APPLE)
+     target_link_libraries(tg_owt PUBLIC tg_owt::libsdkmacos)
+ endif()
+@@ -125,13 +106,54 @@ endif()
+ link_openssl(tg_owt)
+ link_ffmpeg(tg_owt)
+ link_opus(tg_owt)
++link_usrsctp(tg_owt)
++link_libvpx(tg_owt)
++if (NOT WIN32 AND NOT APPLE)
++	link_libevent(tg_owt)
++endif()
+ 
+-if (UNIX AND NOT APPLE)
++if (UNIX AND NOT APPLE AND NOT (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|DragonFly"))
+     link_libalsa(tg_owt)
+     link_libpulse(tg_owt)
+     link_dl(tg_owt)
+ endif()
+ 
++if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|DragonFly")
++    remove_target_sources(tg_owt ${webrtc_loc}
++		modules/audio_device/linux/alsasymboltable_linux.cc
++		modules/audio_device/linux/alsasymboltable_linux.h
++		modules/audio_device/linux/audio_device_alsa_linux.cc
++		modules/audio_device/linux/audio_device_alsa_linux.h
++		modules/audio_device/linux/audio_mixer_manager_alsa_linux.cc
++		modules/audio_device/linux/audio_mixer_manager_alsa_linux.h
++		modules/audio_device/linux/latebindingsymboltable_linux.cc
++		modules/audio_device/linux/latebindingsymboltable_linux.h
++		modules/audio_device/linux/audio_device_pulse_linux.cc
++		modules/audio_device/linux/audio_device_pulse_linux.h
++		modules/audio_device/linux/audio_mixer_manager_pulse_linux.cc
++		modules/audio_device/linux/audio_mixer_manager_pulse_linux.h
++		modules/audio_device/linux/pulseaudiosymboltable_linux.cc
++		modules/audio_device/linux/pulseaudiosymboltable_linux.h
++		modules/audio_device/mac/audio_device_mac.cc
++		modules/audio_device/mac/audio_device_mac.h
++		modules/audio_device/mac/audio_mixer_manager_mac.cc
++		modules/audio_device/mac/audio_mixer_manager_mac.h
++		modules/audio_device/win/audio_device_core_win.cc
++		modules/audio_device/win/audio_device_core_win.h
++		modules/video_capture/linux/device_info_linux.cc
++		modules/video_capture/linux/video_capture_linux.cc
++		modules/video_capture/windows/device_info_ds.cc
++		modules/video_capture/windows/device_info_ds.h
++		modules/video_capture/windows/help_functions_ds.cc
++		modules/video_capture/windows/help_functions_ds.h
++		modules/video_capture/windows/sink_filter_ds.cc
++		modules/video_capture/windows/sink_filter_ds.h
++		modules/video_capture/windows/video_capture_ds.cc
++		modules/video_capture/windows/video_capture_ds.h
++		modules/video_capture/windows/video_capture_factory_windows.cc
++    )
++endif()
++
+ nice_target_sources(tg_owt ${webrtc_loc}
+ PRIVATE
+     rtc_base/async_invoker.cc
+@@ -1841,28 +1863,12 @@ else()
+ endif()
+ 
+ set(platform_export)
+-if (NOT WIN32 AND NOT APPLE)
+-    set(platform_export
+-        libevent
+-    )
+-elseif (APPLE)
++if (APPLE)
+     set(platform_export
+         libsdkmacos
+     )
+ endif()
+ 
+-set(vpx_export)
+-if (is_x86 OR is_x64)
+-    set(vpx_export
+-        libvpx_mmx
+-        libvpx_sse2
+-        libvpx_ssse3
+-        libvpx_sse4
+-        libvpx_avx
+-        libvpx_avx2
+-    )
+-endif()
+-
+ set(export_targets
+     tg_owt
+     libabsl
+@@ -1870,9 +1876,6 @@ set(export_targets
+     libpffft
+     librnnoise
+     libsrtp
+-    libusrsctp
+-    libvpx
+-    ${vpx_export}
+     libwebrtcbuild
+     libyuv
+     ${platform_export}

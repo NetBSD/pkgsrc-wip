@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (tg_owt/10b988aa9111fd25358443ac34d0d422b5108029-10b988aa9111fd25358443ac34d0d422b5108029.tar.gz) = 9e7dcd7a8ac2276bddd7363038b738ff8158adfd
+RMD160 (tg_owt/10b988aa9111fd25358443ac34d0d422b5108029-10b988aa9111fd25358443ac34d0d422b5108029.tar.gz) = 31ed6a96ca980320cc4c15ffe482fa44139ea9d7
+SHA512 (tg_owt/10b988aa9111fd25358443ac34d0d422b5108029-10b988aa9111fd25358443ac34d0d422b5108029.tar.gz) = 10f6ca1a6a82e9bd9af9e815b4d849fdace39332df61d32a9b706bffc3e8647b20f58e63a2fcc4e714e1480768ddd8f7ad21588f1e9762b3c056b205abfd5806
+Size (tg_owt/10b988aa9111fd25358443ac34d0d422b5108029-10b988aa9111fd25358443ac34d0d422b5108029.tar.gz) = 18391959 bytes
+SHA1 (patch-CMakeLists.txt) = 996722b3130d6f49ebdf7265cd90f7ac759fa9bb
+SHA1 (patch-cmake_external.cmake) = 0bba30c00a1645a3c6498f8aebc1fac959924e93
+SHA1 (patch-cmake_libwebrtcbuild.cmake) = 18395d0618ba0bbbe98495c67fc97dc4fd01150e
+SHA1 (patch-src_media_sctp_sctp_transport.cc) = 2446ae9b2cafa1b56f9055d0264903943c8e5fbe
+SHA1 (patch-src_modules_audio_device_audio_device_impl.cc) = 4d8c6c36e98f1e0f50b73fed68184ab53e625b9f
+SHA1 (patch-src_rtc_base_physical_socket_server.cc) = 38e8d8b73723a2f427c8a9f06845c175a0b423b5
+SHA1 (patch-src_rtc_base_platform_thread_types.h) = bda006adbee309a578e4b068c36416c5ae86c947
+SHA1 (patch-src_rtc_base_task_queue_libevent.cc) = 5023e87f776014c7ef7217a3b0eb1c21a33af18a
