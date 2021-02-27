@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.83 2020/10/01 11:54:11 prlw1 Exp $
-
-SHA1 (gtk-4.0.0.tar.xz) = 8434efbcea09b0381652dd37843272eabe3b97c5
-RMD160 (gtk-4.0.0.tar.xz) = 72c3a455449045115bebf1513d82cad7236359ec
-SHA512 (gtk-4.0.0.tar.xz) = 5fe807bcdb59f0df2ad1cc5a28b654dbf90f5fa29bf9a4c69c9278543ab9a3e4f8b1712547fb2fd1f35711c438f78ee8a5cd1a509cf64f815274bb8c82023922
-Size (gtk-4.0.0.tar.xz) = 19487616 bytes
-SHA1 (patch-gdk_macos_gdkmacostoplevelsurface.c) = df01ff309e66b75471ce88eb727afe8faea83ddf
-SHA1 (patch-gdk_wayland_gdkdevice-wayland.c) = e283bd6533ea1307b971c524bc05f0d3ee90453d
