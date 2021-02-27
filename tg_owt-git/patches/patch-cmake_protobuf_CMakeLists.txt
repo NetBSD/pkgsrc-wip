@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- cmake/protobuf/CMakeLists.txt.orig	2021-02-27 20:40:26.219540650 +0000
++++ cmake/protobuf/CMakeLists.txt
+@@ -2,6 +2,7 @@ find_package(Protobuf REQUIRED)
+ 
+ add_library(proto OBJECT)
+ init_target(proto)
++set_property(TARGET proto PROPERTY POSITION_INDEPENDENT_CODE ON)
+ add_library(tg_owt::proto ALIAS proto)
+ 
+ target_compile_definitions(proto

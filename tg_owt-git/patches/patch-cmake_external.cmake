@@ -2,7 +2,7 @@ $NetBSD$
 
 --- cmake/external.cmake.orig	2020-11-13 06:17:31.000000000 +0000
 +++ cmake/external.cmake
-@@ -123,6 +123,42 @@ function(link_libpulse target_name)
+@@ -123,6 +123,60 @@ function(link_libpulse target_name)
      endif()
  endfunction()
  
@@ -39,6 +39,24 @@ $NetBSD$
 +        find_package(PkgConfig REQUIRED)
 +		pkg_check_modules(LIBEVENT REQUIRED libevent)
 +		target_link_libraries(${target_name} PRIVATE ${LIBEVENT_LIBRARIES})
++    endif()
++endfunction()
++
++# openh264
++function(link_openh264 target_name)
++    if (TG_OWT_PACKAGED_BUILD)
++        find_package(PkgConfig REQUIRED)
++		pkg_check_modules(LIBEVENT REQUIRED openh264)
++		target_link_libraries(${target_name} PRIVATE ${LIBOPENH264_LIBRARIES})
++    endif()
++endfunction()
++
++#libabsl
++function(link_libabsl target_name)
++    if (TG_OWT_PACKAGED_BUILD)
++		find_library(LIBABSL NAMES absl_base)
++		target_link_libraries(${target_name} PRIVATE ${ABSL_LIBRARIES})
++		add_library(tg_owt::libabsl ALIAS libabsl)
 +    endif()
 +endfunction()
 +
