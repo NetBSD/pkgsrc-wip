@@ -1893,7 +1893,6 @@ SUBDIR+=	kgpg
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
-SUBDIR+=	khelpcenter
 SUBDIR+=	khotkeys
 SUBDIR+=	kibana
 SUBDIR+=	kinfocenter
