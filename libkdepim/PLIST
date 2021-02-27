@@ -22,7 +22,6 @@ include/KF5/Libkdepim/OverlayWidget
 include/KF5/Libkdepim/PIMMessageBox
 include/KF5/Libkdepim/ProgressDialog
 include/KF5/Libkdepim/ProgressIndicatorLabel
-include/KF5/Libkdepim/ProgressIndicatorWidget
 include/KF5/Libkdepim/ProgressManager
 include/KF5/Libkdepim/ProgressStatusBarWidget
 include/KF5/Libkdepim/RecentAddresses
@@ -62,7 +61,6 @@ include/KF5/libkdepim/overlaywidget.h
 include/KF5/libkdepim/pimmessagebox.h
 include/KF5/libkdepim/progressdialog.h
 include/KF5/libkdepim/progressindicatorlabel.h
-include/KF5/libkdepim/progressindicatorwidget.h
 include/KF5/libkdepim/progressmanager.h
 include/KF5/libkdepim/progressstatusbarwidget.h
 include/KF5/libkdepim/recentaddresses.h
@@ -92,10 +90,10 @@ lib/cmake/KF5LibkdepimAkonadi/KF5LibkdepimAkonadiTargets.cmake
 lib/cmake/MailTransportDBusService/MailTransportDBusServiceConfig.cmake
 lib/libKF5Libkdepim.so
 lib/libKF5Libkdepim.so.5
-lib/libKF5Libkdepim.so.5.12.0
+lib/libKF5Libkdepim.so.5.14.1
 lib/libKF5LibkdepimAkonadi.so
 lib/libKF5LibkdepimAkonadi.so.5
-lib/libKF5LibkdepimAkonadi.so.5.12.0
+lib/libKF5LibkdepimAkonadi.so.5.14.1
 qt5/mkspecs/modules/qt_Libkdepim.pri
 qt5/mkspecs/modules/qt_LibkdepimAkonadi.pri
 qt5/plugins/designer/kdepimakonadiwidgets.so

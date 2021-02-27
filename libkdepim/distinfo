@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libkdepim-19.08.0.tar.xz) = 0718679ae6f9fcb4c2b6684921aa4c8aa639d853
-RMD160 (libkdepim-19.08.0.tar.xz) = 18cd44779ea18981f0319658ac2d083e982a765b
-SHA512 (libkdepim-19.08.0.tar.xz) = baf519dd3c395cacf430944dd5e5a68b73bb55b0a2f31f978873ec54479e776d27c7b5b5defbcfce2d263dc1bf199a4e0d8bf0ebb58f7dd9b0a8fe64f36a0cb2
-Size (libkdepim-19.08.0.tar.xz) = 333024 bytes
+SHA1 (libkdepim-20.04.1.tar.xz) = ef66113e2cc9644e7984d8c3f0a15462032a9599
+RMD160 (libkdepim-20.04.1.tar.xz) = 54385dd0fc08a00aa3eb6968af92ff799523086b
+SHA512 (libkdepim-20.04.1.tar.xz) = 9277960c017e2eeac06d672d512fb99d36e713db8c96430098bbfdc5d03f08a3b2a2330ae45a91f84ea8aa406ff653aaf4afc338b4d155a48003f9d1a171037d
+Size (libkdepim-20.04.1.tar.xz) = 333836 bytes
