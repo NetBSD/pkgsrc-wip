@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kactivitymanagerd-5.16.4.tar.xz) = d256b8de39faa4983811e6ee61f5ece15c3365a8
-RMD160 (kactivitymanagerd-5.16.4.tar.xz) = 0d3c52c112fae306ea28f436412490b435b6fbf0
-SHA512 (kactivitymanagerd-5.16.4.tar.xz) = 78e363c7c5efe2d64bb26006eb94f24893e80e17596aa0d64d47d2d7a749ce3f34b18d350aac08ec5d53780806e9be7c142126831c3b7505c2fe1f05f69a1d3d
-Size (kactivitymanagerd-5.16.4.tar.xz) = 84772 bytes
+SHA1 (kactivitymanagerd-5.18.5.tar.xz) = 8ca062794e7237349136b91304617db311d1c2db
+RMD160 (kactivitymanagerd-5.18.5.tar.xz) = f76f3fbc8e33b90ebfa722ed95f4337dfa2773bf
+SHA512 (kactivitymanagerd-5.18.5.tar.xz) = 2ee59f78cc948fe11577373ea69f895efcaa7d4f239362d3e060382c3be0f67511a0baa64a404c1e0e53d5777775afba60f49e58476c70dcdef6c63358ca4dbc
+Size (kactivitymanagerd-5.18.5.tar.xz) = 86988 bytes
