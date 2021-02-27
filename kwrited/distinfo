@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kwrited-5.16.4.tar.xz) = 9d0db763e937c9b89436d033701f8a7d920ac312
-RMD160 (kwrited-5.16.4.tar.xz) = a6b4f13e518fa7ff49f747cdffb30e21fca56160
-SHA512 (kwrited-5.16.4.tar.xz) = 7307d12f197033cf7cb820c5a0579cd33b872c7f5c55a48903dbee9fff7a8c547d3d8dfe8586fa227e25a8ae365c5d006c8c6d22a092c504c276d2eee4eb205b
-Size (kwrited-5.16.4.tar.xz) = 20016 bytes
+SHA1 (kwrited-5.18.5.tar.xz) = 99f37018bc3c71a581778ad76239700a9f859632
+RMD160 (kwrited-5.18.5.tar.xz) = 2dcff85021faf1759524ae03609065173a052b8d
+SHA512 (kwrited-5.18.5.tar.xz) = 2c28ba26228394989524b46e68cd2783eff5c412ccfdaf12947976bde6a2ba732e696c3d8af666f87cf67062c75485fb0ed01f58ff3d727fedf8d440ddfd4f84
+Size (kwrited-5.18.5.tar.xz) = 20236 bytes
