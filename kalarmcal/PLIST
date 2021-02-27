@@ -1,13 +1,18 @@
 @comment $NetBSD$
+include/KF5/KAlarmCal/KAlarmCal/Akonadi
 include/KF5/KAlarmCal/KAlarmCal/AlarmText
 include/KF5/KAlarmCal/KAlarmCal/CollectionAttribute
 include/KF5/KAlarmCal/KAlarmCal/CompatibilityAttribute
 include/KF5/KAlarmCal/KAlarmCal/DateTime
 include/KF5/KAlarmCal/KAlarmCal/EventAttribute
+include/KF5/KAlarmCal/KAlarmCal/Identities
+include/KF5/KAlarmCal/KAlarmCal/KACalendar
 include/KF5/KAlarmCal/KAlarmCal/KADateTime
 include/KF5/KAlarmCal/KAlarmCal/KAEvent
 include/KF5/KAlarmCal/KAlarmCal/KARecurrence
 include/KF5/KAlarmCal/KAlarmCal/Repetition
+include/KF5/KAlarmCal/KAlarmCal/Version
+include/KF5/KAlarmCal/kalarmcal/akonadi.h
 include/KF5/KAlarmCal/kalarmcal/alarmtext.h
 include/KF5/KAlarmCal/kalarmcal/collectionattribute.h
 include/KF5/KAlarmCal/kalarmcal/compatibilityattribute.h
@@ -28,7 +33,7 @@ lib/cmake/KF5AlarmCalendar/KF5AlarmCalendarTargets-noconfig.cmake
 lib/cmake/KF5AlarmCalendar/KF5AlarmCalendarTargets.cmake
 lib/libKF5AlarmCalendar.so
 lib/libKF5AlarmCalendar.so.5
-lib/libKF5AlarmCalendar.so.5.12.0
+lib/libKF5AlarmCalendar.so.5.14.1
 qt5/mkspecs/modules/qt_KAlarmCal.pri
 qt5/plugins/akonadi_serializer_kalarm.so
 share/akonadi/plugins/serializer/akonadi_serializer_kalarm.desktop
