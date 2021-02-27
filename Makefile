@@ -4190,6 +4190,7 @@ SUBDIR+=	py-ppscore
 SUBDIR+=	py-prayertime
 SUBDIR+=	py-prel
 SUBDIR+=	py-premailer
+SUBDIR+=	py-prettytable
 SUBDIR+=	py-print
 SUBDIR+=	py-prioritized-methods
 SUBDIR+=	py-priority
