@@ -19,5 +19,7 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	usrsctp.pc.in
 
+CMAKE_ARGS+= -DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fPIC"
+
 #.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
