@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/catpoint
-COMMENT=	Simple point utilities to hold text presentations
+COMMENT=	Simple presentation software written in curses
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	catpoint
