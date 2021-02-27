@@ -7,4 +7,6 @@
 #
 find_package(PkgConfig)
 pkg_check_modules(MNG IMPORTED_TARGET libmng>1.0.9)
-
+if(TARGET PkgConfig::MNG)
+set(WrapMNG_FOUND TRUE)
+endif()
