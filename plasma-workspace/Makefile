@@ -91,7 +91,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../time/kholidays/buildlink3.mk"
 .include "../../www/kjsembed/buildlink3.mk"
 .include "../../wip/kscreenlocker/buildlink3.mk"
-.include "../../wip/libkscreen/buildlink3.mk"
+.include "../../x11/libkscreen/buildlink3.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/kxmlgui/buildlink3.mk"
