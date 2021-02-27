@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (drkonqi-5.16.4.tar.xz) = 4d91cf77fa6dcf786ea4de18009313feccfc7359
-RMD160 (drkonqi-5.16.4.tar.xz) = 5a16fc229b160dda3e9b5b5d432b8828369662e3
-SHA512 (drkonqi-5.16.4.tar.xz) = 8623981b26cceea0238c7aa265453125970093d7edefe2cf2865b2e9384f59f44bd2f103c64f05c074c3f49d6691c22735d1884f86bead59f564544064b39f15
-Size (drkonqi-5.16.4.tar.xz) = 744380 bytes
+SHA1 (drkonqi-5.18.5.tar.xz) = 8df5310aeda2170bb316e7df2b2e7d388123f83a
+RMD160 (drkonqi-5.18.5.tar.xz) = 60763df8f55e7db2da8b4c1d919089f87fb3200f
+SHA512 (drkonqi-5.18.5.tar.xz) = b4862297e969f501f526880560acbd02026b64a0bec2f6e3b2b30f4bfe5ff2abd1798e3bda920bd61adbb6c9a3455e0c4f304f3f37bcafed3f3d8e6de1bc67a9
+Size (drkonqi-5.18.5.tar.xz) = 747984 bytes
