@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (opensurge-0.5.2.tar.gz) = 2a1057a254f331c9ad571f1a5a855ea0112e8d6d
+RMD160 (opensurge-0.5.2.tar.gz) = dff35459f467bfc8a8beff64750d1274a723f836
+SHA512 (opensurge-0.5.2.tar.gz) = f39aecdeb0a65427238dbc23922e09124c2c496f5bf582e4ce39a96e6c06a08730211b790a8c39eb7dd1c4752a35d2da11bd94b925bc202622ef7d9dd316d29c
+Size (opensurge-0.5.2.tar.gz) = 33414951 bytes
+SHA1 (patch-src_core_input.c) = 676d0609c5951a0bfb40cb06a9081b47d03ff462
+SHA1 (patch-src_core_utf8_utf8.c) = d454df7f59aadf60039c5fc660ad720382cb2193

@@ -2623,6 +2623,7 @@ SUBDIR+=	opensips
 SUBDIR+=	opensmtpd
 SUBDIR+=	openssl110
 SUBDIR+=	opensubdiv
+SUBDIR+=	opensurge
 SUBDIR+=	opentomb
 SUBDIR+=	opentracker-cvs
 SUBDIR+=	openttd-opengfx
