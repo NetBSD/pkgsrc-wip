@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- Telegram/lib_base/CMakeLists.txt.orig	2021-02-27 22:18:24.957120449 +0000
++++ Telegram/lib_base/CMakeLists.txt
+@@ -14,7 +14,6 @@ init_target(lib_base_crash_report_writer
+ 
+ get_filename_component(src_loc . REALPATH)
+ 
+-target_precompile_headers(lib_base PRIVATE ${src_loc}/base/base_pch.h)
+ nice_target_sources(lib_base ${src_loc}
+ PRIVATE
+     base/platform/linux/base_file_utilities_linux.cpp

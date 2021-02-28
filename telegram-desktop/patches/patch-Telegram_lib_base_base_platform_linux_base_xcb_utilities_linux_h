@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Telegram/lib_base/base/platform/linux/base_xcb_utilities_linux.h.orig	2021-02-28 11:03:10.939139915 +0000
++++ Telegram/lib_base/base/platform/linux/base_xcb_utilities_linux.h
+@@ -8,6 +8,8 @@
+ 
+ #include <xcb/xcb.h>
+ 
++#include "base/base_pch.h"
++
+ namespace base::Platform::XCB {
+ 
+ class CustomConnection {

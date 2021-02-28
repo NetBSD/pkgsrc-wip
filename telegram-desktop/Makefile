@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	       telegramdesktop
 DIST_SUBDIR=           tdesktop
-TD_VERSION=            1.9.9
+TD_VERSION=            2.5.9
 DISTNAME=              telegram-desktop-${TD_VERSION}
 PKGREVISION=	       1
 CATEGORIES=            chat
@@ -14,14 +14,14 @@ HOMEPAGE=              https://desktop.telegram.org/
 COMMENT=               Telegram Desktop messaging app
 LICENSE=               gnu-gpl-v3
 
-#PKGSRC_COMPILER=       clang
-#ONLY_FOR_COMPILER=     clang
+PKGSRC_COMPILER=       clang
+ONLY_FOR_COMPILER=     clang
 
 USE_LANGUAGES=         c c++ gnu++14
 USE_CMAKE=             yes
 
-ONLY_FOR_COMPILER=     gcc
-GCC_REQD=              8
+#ONLY_FOR_COMPILER=     gcc
+#GCC_REQD=              10
 
 CMAKE_ARGS+=           -Ddisable_autoupdate=1
 CMAKE_ARGS+=           -DCMAKE_INSTALL_PREFIX=${PREFIX}/usr/pkg
@@ -36,6 +36,7 @@ CMAKE_ARGS+=           -DTDESKTOP_DISABLE_DESKTOP_FILE_GENERATION=ON
 CMAKE_ARGS+=           -DTDESKTOP_USE_PACKAGED_TGVOIP=OFF
 CMAKE_ARGS+=           -DDESKTOP_APP_SPECIAL_TARGET=""
 CMAKE_ARGS+=           -DTDESKTOP_LAUNCHER_BASENAME="telegram-desktop"
+CMAKE_ARGS+=           -DDESKTOP_APP_DISABLE_WAYLAND_INTEGRATION=ON
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" # NetBSD-specific config
@@ -48,16 +49,18 @@ CMAKE_ARGS+=           -DTDESKTOP_WITHOUT_ALSA=OFF
 
 .include "options.mk"
 
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/range-v3/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libva/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtimageformats/buildlink3.mk"
-.include "../../wip/minizip/buildlink3.mk"
-.include "../../wip/range-v3/buildlink3.mk"
+.include "../../wip/rlottie/buildlink3.mk"
+.include "../../wip/tg_owt-git/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
