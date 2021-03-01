@@ -2,4 +2,3 @@
 	configure script)
 * Add support for specifying full/clients-only/server-only build (see
 	targets install-server and install-clients)
-* Add support for libtool

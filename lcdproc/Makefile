@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--enable-drivers=all
 CONFIGURE_ARGS+=	--disable-libX11
 CONFIGURE_ARGS+=	--disable-libpng
 CONFIGURE_ARGS+=	--disable-freetype
-USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
 .include "../../mk/bsd.prefs.mk"
@@ -62,6 +61,7 @@ CONF_FILES+=		${EGDIR}/lcdvc.conf ${PKG_SYSCONFDIR}/lcdvc.conf
 .include "../../devel/libftdi1/buildlink3.mk"
 .include "../../devel/libhid/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
