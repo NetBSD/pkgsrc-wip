@@ -38,5 +38,6 @@ CONF_FILES+=	${PREFIX}/share/examples/ksysguard/ksysguarddrc \
 .include "../../net/knewstuff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
