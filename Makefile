@@ -693,7 +693,6 @@ SUBDIR+=	dxmake
 SUBDIR+=	dzen-git
 SUBDIR+=	dzen2
 SUBDIR+=	e00pg
-SUBDIR+=	easy-rsa
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound

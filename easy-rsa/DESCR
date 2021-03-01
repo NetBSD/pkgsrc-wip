@@ -1,3 +1,0 @@
-This is a small RSA key management package, based on the openssl command line
-tool, that can be found in the easy-rsa subdirectory of the OpenVPN
-distribution.
