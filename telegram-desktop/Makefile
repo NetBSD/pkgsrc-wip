@@ -14,16 +14,18 @@ HOMEPAGE=              https://desktop.telegram.org/
 COMMENT=               Telegram Desktop messaging app
 LICENSE=               gnu-gpl-v3
 
-PKGSRC_COMPILER=       clang
-ONLY_FOR_COMPILER=     clang
+#PKGSRC_COMPILER=       clang
+#ONLY_FOR_COMPILER=     clang
 
 USE_LANGUAGES=         c c++ gnu++14
 USE_CMAKE=             yes
 
-#ONLY_FOR_COMPILER=     gcc
-#GCC_REQD=              10
+ONLY_FOR_COMPILER=     gcc
+GCC_REQD=              10
 
 CMAKE_ARGS+=           -Ddisable_autoupdate=1
+CMAKE_ARGS+=           -DWITHOUT_PULSE=ON
+CMAKE_ARGS+=           -DWITHOUT_ALSA=ON
 CMAKE_ARGS+=           -DCMAKE_INSTALL_PREFIX=${PREFIX}/usr/pkg
 CMAKE_ARGS+=           -DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=           -DTDESKTOP_API_TEST=ON
