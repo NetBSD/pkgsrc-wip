@@ -1925,7 +1925,6 @@ SUBDIR+=	lander
 SUBDIR+=	lanq
 SUBDIR+=	lapack
 SUBDIR+=	lapacke
-SUBDIR+=	lariza
 SUBDIR+=	lasi
 SUBDIR+=	last.fm
 SUBDIR+=	laszip
