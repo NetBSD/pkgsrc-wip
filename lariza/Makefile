@@ -1,10 +1,10 @@
 # $NetBSD$
 
-PKGNAME=	lariza-19.05
+PKGNAME=	lariza-21.01
 PKGREVISION=	# override since GIT_TAG gives the version
 CATEGORIES=	www
 GIT_REPO=	https://www.uninformativ.de/git/lariza.git
-GIT_TAG=	v19.05
+GIT_TAG=	v21.01
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://uninformativ.de/git/lariza

@@ -1,4 +1,6 @@
 @comment $NetBSD$
 bin/lariza
+lib/lariza/web_extensions/we_adblock.so
 man/man1/lariza.1
 man/man1/lariza.usage.1
+share/lariza/user-scripts/hints.js
