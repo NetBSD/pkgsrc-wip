@@ -1,6 +1,6 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2021-02-27 19:23:16.098491654 +0000
+--- CMakeLists.txt.orig	2021-02-03 11:42:41.000000000 +0000
 +++ CMakeLists.txt
 @@ -3,6 +3,7 @@ cmake_policy(SET CMP0076 NEW)
  cmake_policy(SET CMP0091 NEW)
@@ -10,7 +10,7 @@ $NetBSD$
  
  set(TG_OWT_SPECIAL_TARGET "" CACHE STRING "Use special platform target, like 'macstore' for Mac App Store.")
  
-@@ -40,21 +41,14 @@ include(cmake/init_target.cmake)
+@@ -50,21 +51,13 @@ include(cmake/init_target.cmake)
  include(cmake/target_yasm_sources.cmake)
  include(cmake/external.cmake)
  include(cmake/libabsl.cmake)
@@ -21,7 +21,7 @@ $NetBSD$
 -include(cmake/libusrsctp.cmake)
 -include(cmake/libvpx.cmake)
  include(cmake/libwebrtcbuild.cmake)
- include(cmake/libyuv.cmake)
+-include(cmake/libyuv.cmake)
 -if (NOT WIN32 AND NOT APPLE)
 -    include(cmake/libevent.cmake)
 -endif()
@@ -32,9 +32,9 @@ $NetBSD$
  # Use a separate subdirectory, because it will be exported as an INTERFACE
  # for the generated sources and headers.
  if (TG_OWT_USE_PROTOBUF)
-@@ -72,18 +66,9 @@ if (is_x86 OR is_x64)
-         tg_owt::libwebrtcbuild
-     PRIVATE
+@@ -84,19 +77,9 @@ if (is_x86 OR is_x64)
+         tg_owt::tg_owt_avx2
+         tg_owt::tg_owt_sse2
          tg_owt::libabsl
 -        tg_owt::libopenh264
          tg_owt::libpffft
@@ -48,10 +48,11 @@ $NetBSD$
 -        tg_owt::libvpx_sse4
 -        tg_owt::libvpx_avx
 -        tg_owt::libvpx_avx2
-         tg_owt::libyuv
+-        tg_owt::libyuv
      )
  else()
-@@ -92,12 +77,9 @@ else()
+     target_link_libraries(tg_owt
+@@ -104,13 +87,9 @@ else()
          tg_owt::libwebrtcbuild
      PRIVATE
          tg_owt::libabsl
@@ -61,19 +62,14 @@ $NetBSD$
          tg_owt::libsrtp
 -        tg_owt::libusrsctp
 -        tg_owt::libvpx
-         tg_owt::libyuv
-     )
- endif()
-@@ -109,29 +91,62 @@ if (TG_OWT_USE_PROTOBUF)
+-        tg_owt::libyuv
      )
  endif()
  
--target_sources(tg_owt
--PRIVATE
--    ${libvpx_yasm_objects}
--    ${libopenh264_yasm_objects}
--)
--
+@@ -127,28 +106,69 @@ PRIVATE
+     ${libopenh264_yasm_objects}
+ )
+ 
 -if (NOT WIN32 AND NOT APPLE)
 -    target_link_libraries(tg_owt PRIVATE tg_owt::libevent)
 -endif()
@@ -87,6 +83,7 @@ $NetBSD$
 +link_openh264(tg_owt)
  link_opus(tg_owt)
 +link_usrsctp(tg_owt)
++link_libyuv(tg_owt)
 +if (NOT WIN32 AND NOT APPLE)
 +	link_libevent(tg_owt)
 +endif()
@@ -96,6 +93,7 @@ $NetBSD$
      link_libalsa(tg_owt)
      link_libpulse(tg_owt)
      link_dl(tg_owt)
+     link_x11(tg_owt)
  endif()
  
 +if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|DragonFly")
@@ -134,13 +132,27 @@ $NetBSD$
 +    )
 +endif()
 +
+ function(add_sublibrary postfix)
+     add_library(tg_owt_${postfix} OBJECT)
+     init_feature_target(tg_owt_${postfix} ${postfix})
+     add_library(tg_owt::tg_owt_${postfix} ALIAS tg_owt_${postfix})
++	set_property(TARGET tg_owt_${postfix}  PROPERTY POSITION_INDEPENDENT_CODE ON)
+     target_link_libraries(tg_owt_${postfix}
+     PUBLIC
+         tg_owt::libwebrtcbuild
+@@ -166,6 +186,7 @@ function(add_sublibrary postfix)
+     PRIVATE
+         ${sources_list}
+     )
++
+ endfunction()
+ 
  nice_target_sources(tg_owt ${webrtc_loc}
- PRIVATE
-     rtc_base/async_invoker.cc
-@@ -1841,38 +1856,18 @@ else()
+@@ -2149,29 +2170,12 @@ if (WIN32)
+ else()
  endif()
  
- set(platform_export)
+-set(platform_export)
 -if (NOT WIN32 AND NOT APPLE)
 -    set(platform_export
 -        libevent
@@ -164,8 +176,12 @@ $NetBSD$
 -    )
 -endif()
 -
+ set(tg_owt_export tg_owt)
+ if (is_x86 OR is_x64)
+     set(tg_owt_export
+@@ -2184,15 +2188,10 @@ endif()
  set(export_targets
-     tg_owt
+     ${tg_owt_export}
      libabsl
 -    libopenh264
      libpffft
@@ -175,5 +191,7 @@ $NetBSD$
 -    libvpx
 -    ${vpx_export}
      libwebrtcbuild
-     libyuv
+-    libyuv
      ${platform_export}
+ )
+ if (TG_OWT_USE_PROTOBUF)

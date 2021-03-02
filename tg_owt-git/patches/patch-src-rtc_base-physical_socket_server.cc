@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/rtc_base/physical_socket_server.cc.orig	2020-11-13 06:17:31.000000000 +0000
+--- src/rtc_base/physical_socket_server.cc.orig	2021-02-03 11:42:41.000000000 +0000
 +++ src/rtc_base/physical_socket_server.cc
-@@ -74,7 +74,11 @@ typedef void* SockOptArg;
+@@ -73,7 +73,11 @@ typedef void* SockOptArg;
  
  int64_t GetSocketRecvTimestamp(int socket) {
    struct timeval tv_ioctl;
@@ -14,7 +14,7 @@ $NetBSD$
    if (ret != 0)
      return -1;
    int64_t timestamp =
-@@ -551,7 +555,7 @@ int PhysicalSocket::TranslateOption(Opti
+@@ -571,7 +575,7 @@ int PhysicalSocket::TranslateOption(Opti
        *slevel = IPPROTO_IP;
        *sopt = IP_DONTFRAGMENT;
        break;

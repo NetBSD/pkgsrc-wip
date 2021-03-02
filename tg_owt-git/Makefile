@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	tg_owt
-GITHUB_TAG=	10b988aa9111fd25358443ac34d0d422b5108029
+GITHUB_TAG=	a19877363082da634a3c851a4698376504d2eaee
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-git
 CATEGORIES=	www
@@ -26,9 +26,9 @@ CMAKE_ARGS+= -DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fPIC"
 .include "../../comms/srtp/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../wip/libvpx-git/buildlink3.mk"
+.include "../../wip/libyuv-git/buildlink3.mk"
 .include "../../wip/openh264/buildlink3.mk"
 .include "../../wip/usrsctp/buildlink3.mk"
 

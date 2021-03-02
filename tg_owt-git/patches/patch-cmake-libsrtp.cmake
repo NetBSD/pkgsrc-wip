@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/libsrtp.cmake.orig	2020-11-13 06:17:31.000000000 +0000
+--- cmake/libsrtp.cmake.orig	2021-02-03 11:42:41.000000000 +0000
 +++ cmake/libsrtp.cmake
 @@ -1,4 +1,5 @@
  add_library(libsrtp OBJECT)

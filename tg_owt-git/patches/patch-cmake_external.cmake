@@ -1,8 +1,8 @@
 $NetBSD$
 
---- cmake/external.cmake.orig	2020-11-13 06:17:31.000000000 +0000
+--- cmake/external.cmake.orig	2021-02-03 11:42:41.000000000 +0000
 +++ cmake/external.cmake
-@@ -123,6 +123,60 @@ function(link_libpulse target_name)
+@@ -123,6 +123,68 @@ function(link_libpulse target_name)
      endif()
  endfunction()
  
@@ -57,6 +57,14 @@ $NetBSD$
 +		find_library(LIBABSL NAMES absl_base)
 +		target_link_libraries(${target_name} PRIVATE ${ABSL_LIBRARIES})
 +		add_library(tg_owt::libabsl ALIAS libabsl)
++    endif()
++endfunction()
++
++#libyuv
++function(link_libyuv target_name)
++    if (TG_OWT_PACKAGED_BUILD)
++		find_library(LIBYUV NAMES yuv)
++		target_link_libraries(${target_name} PRIVATE ${YUV_LIBRARIES})
 +    endif()
 +endfunction()
 +

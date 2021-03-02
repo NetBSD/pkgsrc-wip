@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/libabsl.cmake.orig	2021-02-27 19:29:47.090667538 +0000
+--- cmake/libabsl.cmake.orig	2021-02-03 11:42:41.000000000 +0000
 +++ cmake/libabsl.cmake
 @@ -1,5 +1,6 @@
  add_library(libabsl OBJECT)

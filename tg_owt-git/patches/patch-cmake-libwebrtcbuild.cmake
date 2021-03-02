@@ -1,8 +1,16 @@
 $NetBSD$
 
---- cmake/libwebrtcbuild.cmake.orig	2021-02-25 16:19:56.688047871 +0000
+--- cmake/libwebrtcbuild.cmake.orig	2021-02-03 11:42:41.000000000 +0000
 +++ cmake/libwebrtcbuild.cmake
-@@ -34,6 +34,11 @@ elseif (APPLE)
+@@ -4,7 +4,6 @@ add_library(tg_owt::libwebrtcbuild ALIAS
+ target_link_libraries(libwebrtcbuild
+ INTERFACE
+     tg_owt::libabsl
+-    tg_owt::libyuv
+ )
+ 
+ target_compile_definitions(libwebrtcbuild
+@@ -34,6 +33,11 @@ elseif (APPLE)
          WEBRTC_POSIX
          WEBRTC_MAC
      )

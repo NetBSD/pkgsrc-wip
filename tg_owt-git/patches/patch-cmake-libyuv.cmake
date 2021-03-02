@@ -1,6 +1,6 @@
 $NetBSD$
 
---- cmake/libyuv.cmake.orig	2021-02-27 15:11:29.753790023 +0000
+--- cmake/libyuv.cmake.orig	2021-02-03 11:42:41.000000000 +0000
 +++ cmake/libyuv.cmake
 @@ -1,5 +1,6 @@
  add_library(libyuv OBJECT)
