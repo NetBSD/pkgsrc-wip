@@ -3963,6 +3963,7 @@ SUBDIR+=	py-minecraft
 SUBDIR+=	py-minepy
 SUBDIR+=	py-minidb
 SUBDIR+=	py-mipp
+SUBDIR+=	py-mishkal
 SUBDIR+=	py-mkdocs-material
 SUBDIR+=	py-mkdocs-material-extensions
 SUBDIR+=	py-mkdocs-with-pdf
