@@ -3712,6 +3712,7 @@ SUBDIR+=	py-gom
 SUBDIR+=	py-gooey
 SUBDIR+=	py-google-cloud-bigquery
 SUBDIR+=	py-google-cloud-core
+SUBDIR+=	py-google-cloud-storage
 SUBDIR+=	py-google-crc32c
 SUBDIR+=	py-google-resumable-media
 SUBDIR+=	py-goose3
