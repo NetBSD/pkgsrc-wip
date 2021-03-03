@@ -4483,6 +4483,7 @@ SUBDIR+=	py-ssh2
 SUBDIR+=	py-ssp
 SUBDIR+=	py-stache
 SUBDIR+=	py-starlette
+SUBDIR+=	py-stats-arrays
 SUBDIR+=	py-statemint
 SUBDIR+=	py-statgrap
 SUBDIR+=	py-statsd
