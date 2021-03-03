@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- Makefile.in.orig	2020-01-06 10:43:44.000000000 +0000
++++ Makefile.in
+@@ -11,8 +11,10 @@ LOCAL_LDFLAGS=-rdynamic -ggdb -levent ${
+ LINK_FLAGS=${LDFLAGS} ${LOCAL_LDFLAGS}
+ 
+ ifneq (${TARGET_OS}, FreeBSD)
++ifneq (${TARGET_OS}, NetBSD)
+ 	LOCAL_LDFLAGS += -ldl
+ endif
++endif
+ 
+ DEP=dep
+ AUTO=auto
+@@ -29,7 +31,7 @@ INCLUDE=-I. -I${srcdir} -I${srcdir}/tgl
+ CC=@CC@
+ 
+ PREFIX?=/usr/local
+-INSTALL_BIN=$(PREFIX)/bin
++INSTALL_BIN=$(DESTDIR)/${PREFIX}/bin
+ INSTALL=install
+ 
+ .SUFFIXES:
+@@ -67,5 +69,5 @@ distclean:
+ 
+ install: all
+ 	@mkdir -p $(INSTALL_BIN)
+-	$(INSTALL) telegram $(INSTALL_BIN)
++	$(INSTALL) ${EXE}/telegram-cli $(INSTALL_BIN)
+ 	rm -rf ${DIR_LIST} config.log config.status > /dev/null || echo "all clean"
