@@ -4526,6 +4526,7 @@ SUBDIR+=	py-swh-vault
 SUBDIR+=	py-swh-web
 SUBDIR+=	py-swh-web-client
 SUBDIR+=	py-swiginac
+SUBDIR+=	py-sxtwl
 SUBDIR+=	py-sydent
 SUBDIR+=	py-sym
 SUBDIR+=	py-sym2num
