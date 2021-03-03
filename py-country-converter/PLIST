@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/coco
+${PYSITELIB}/LICENSE
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/country_converter/__init__.py
+${PYSITELIB}/country_converter/__init__.pyc
+${PYSITELIB}/country_converter/__init__.pyo
+${PYSITELIB}/country_converter/country_converter.py
+${PYSITELIB}/country_converter/country_converter.pyc
+${PYSITELIB}/country_converter/country_converter.pyo
+${PYSITELIB}/country_converter/country_data.tsv
+${PYSITELIB}/country_converter/version.py
+${PYSITELIB}/country_converter/version.pyc
+${PYSITELIB}/country_converter/version.pyo
