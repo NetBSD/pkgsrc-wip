@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (ft8_lib-0.1.tar.gz) = 8ce293d53b8c24dc3b21e2843fdd8a8b0b0b3a7d
+RMD160 (ft8_lib-0.1.tar.gz) = 8dde1dfaff470d8ee7bb1319e1e291d861927585
+SHA512 (ft8_lib-0.1.tar.gz) = 7e162b0bc76d67f5989b9468054a23ceabac7364c021d9cba3e0172f7ced8bb6615ec52e84f91e903aa53900d01efd632af84271a51cc3320e37298664089881
+Size (ft8_lib-0.1.tar.gz) = 20549128 bytes
+SHA1 (patch-Makefile) = 9ec0cd552fa43d702e24f0532de61ee65215a216
