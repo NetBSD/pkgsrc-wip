@@ -4198,6 +4198,7 @@ SUBDIR+=	py-pp
 SUBDIR+=	py-ppft
 SUBDIR+=	py-ppscore
 SUBDIR+=	py-prayertime
+SUBDIR+=	py-prind
 SUBDIR+=	py-prel
 SUBDIR+=	py-premailer
 SUBDIR+=	py-prettytable
