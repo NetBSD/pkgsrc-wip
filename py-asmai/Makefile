@@ -10,7 +10,7 @@ HOMEPAGE=	http://asmai.sourceforge.net/
 COMMENT=	Arabic semantic analysis library for Python
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-arabic>=4.0.0:../../wip/py-arabic
+DEPENDS+=	${PYPKGPREFIX}-arabic>=0.6.10:../../wip/py-arabic
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
