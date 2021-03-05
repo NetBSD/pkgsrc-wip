@@ -4021,6 +4021,7 @@ SUBDIR+=	py-mpop
 SUBDIR+=	py-mrio-common-metadata
 SUBDIR+=	py-msdas
 SUBDIR+=	py-msedge-selenium-tools
+SUBDIR+=	py-msrest
 SUBDIR+=	py-mssql2
 SUBDIR+=	py-msumastro
 SUBDIR+=	py-mulpyplexer
