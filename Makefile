@@ -3592,6 +3592,7 @@ SUBDIR+=	py-eemeter
 SUBDIR+=	py-efmlrs
 SUBDIR+=	py-eggnog-mapper
 SUBDIR+=	py-eigency
+SUBDIR+=	py-eight2
 SUBDIR+=	py-einsteinpy
 SUBDIR+=	py-einsteinpy-geodesics
 SUBDIR+=	py-email-reply-parser
