@@ -3216,6 +3216,7 @@ SUBDIR+=	py-ZopeSecurity
 SUBDIR+=	py-achemkit
 SUBDIR+=	py-acq4
 SUBDIR+=	py-adal
+SUBDIR+=	py-adawat
 SUBDIR+=	py-adsbibdesk
 SUBDIR+=	py-aerocalc
 SUBDIR+=	py-affine
