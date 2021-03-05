@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kwin-5.16.4.tar.xz) = 794170e8b155d834863cb4aae85d3943c280edc8
-RMD160 (kwin-5.16.4.tar.xz) = 0cb5eebfc2cacb8327e1a04826e0e79fa8e24938
-SHA512 (kwin-5.16.4.tar.xz) = da008c2fb31e0aab23dcefbdc53d9d53b53ee0aed3546585a93e87e1857fc929be3d013c7e75b8aee5651c54249a798afb1612535d03c189aeed9ad3c6b528e5
-Size (kwin-5.16.4.tar.xz) = 6262844 bytes
+SHA1 (kwin-5.18.5.tar.xz) = 4cb437be4e13971ddeac9c5e2f288603d1a6fe3b
+RMD160 (kwin-5.18.5.tar.xz) = 4e84a664016cbdf95a8bb072a8f246128a9e553a
+SHA512 (kwin-5.18.5.tar.xz) = b703891824ec31e8ae29df27a11499579ab95789a838e893d5904e40aeba27b0ddc04836038d5b4c062d75ceed277d07e67eeb1b4e957ccf414f03786037d562
+Size (kwin-5.18.5.tar.xz) = 6274772 bytes
