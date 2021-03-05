@@ -3481,6 +3481,7 @@ SUBDIR+=	py-cvxpy
 SUBDIR+=	py-cxnet
 SUBDIR+=	py-cxvpy
 SUBDIR+=	py-cyksuid
+SUBDIR+=	py-cymem
 SUBDIR+=	py-cysignals
 SUBDIR+=	py-cythongsl
 SUBDIR+=	py-cytoolz
