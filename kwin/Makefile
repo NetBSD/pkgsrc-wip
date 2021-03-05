@@ -59,4 +59,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/org_kde_kwin.categories \
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
+.include "../../wip/libinput/buildlink3.mk"
+.include "../../wip/libudev/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
