@@ -3236,6 +3236,7 @@ SUBDIR+=	py-algebraic
 SUBDIR+=	py-algebraixlib
 SUBDIR+=	py-algopy
 SUBDIR+=	py-altair
+SUBDIR+=	py-alyahmor
 SUBDIR+=	py-amply
 SUBDIR+=	py-amqpipe
 SUBDIR+=	py-amqplib
