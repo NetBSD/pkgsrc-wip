@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/yuangu/sxtwl_cpp
 COMMENT=	Python implementation version of the astronomical calendar
 LICENSE=	2-clause-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/egg.mk"
