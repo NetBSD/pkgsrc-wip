@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:12:12 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/naftawayh/__init__.py
 ${PYSITELIB}/naftawayh/__init__.pyc
 ${PYSITELIB}/naftawayh/__init__.pyo
@@ -6,8 +6,6 @@ ${PYSITELIB}/naftawayh/affix_const.py
 ${PYSITELIB}/naftawayh/affix_const.pyc
 ${PYSITELIB}/naftawayh/affix_const.pyo
 ${PYSITELIB}/naftawayh/ar_ctype.py
-${PYSITELIB}/naftawayh/ar_ctype.pyc
-${PYSITELIB}/naftawayh/ar_ctype.pyo
 ${PYSITELIB}/naftawayh/ar_stopwords.py
 ${PYSITELIB}/naftawayh/ar_stopwords.pyc
 ${PYSITELIB}/naftawayh/ar_stopwords.pyo
@@ -18,8 +16,6 @@ ${PYSITELIB}/naftawayh/arabic_const.py
 ${PYSITELIB}/naftawayh/arabic_const.pyc
 ${PYSITELIB}/naftawayh/arabic_const.pyo
 ${PYSITELIB}/naftawayh/create_verbstamp.py
-${PYSITELIB}/naftawayh/create_verbstamp.pyc
-${PYSITELIB}/naftawayh/create_verbstamp.pyo
 ${PYSITELIB}/naftawayh/specialwords.py
 ${PYSITELIB}/naftawayh/specialwords.pyc
 ${PYSITELIB}/naftawayh/specialwords.pyo
@@ -33,5 +29,3 @@ ${PYSITELIB}/naftawayh/verb_stamp.py
 ${PYSITELIB}/naftawayh/verb_stamp.pyc
 ${PYSITELIB}/naftawayh/verb_stamp.pyo
 ${PYSITELIB}/naftawayh/wordtag.py
-${PYSITELIB}/naftawayh/wordtag.pyc
-${PYSITELIB}/naftawayh/wordtag.pyo

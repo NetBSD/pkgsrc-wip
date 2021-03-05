@@ -2,8 +2,8 @@
 #
 
 DISTNAME=	Naftawayh-0.1
-PKGNAME=	${PYPKGPREFIX}-naftawayh-0.1
-CATEGORIES=	textproc python #arabic
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/Naftawayh/}
 EXTRACT_SUFX=	.zip
 
