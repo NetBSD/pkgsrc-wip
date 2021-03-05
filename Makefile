@@ -1170,6 +1170,7 @@ SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gnutls-guile
+SUBDIR+=	gm2calc
 SUBDIR+=	go-amqp
 SUBDIR+=	go-ansi
 SUBDIR+=	go-ansicolor
