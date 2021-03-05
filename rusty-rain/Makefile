@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	rusty-rain-0.2.1
+DISTNAME=	rusty-rain-0.3.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cowboy8625/}
 GITHUB_PROJECT=	rusty-rain
-GITHUB_TAG=	86b9fd6ac6bafef83b1bc7136b1a299a62097155
+GITHUB_TAG=	04c793600da62ca5c73410bbfb44ad631015a464
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://github.com/cowboy8625/rusty-rain/
+HOMEPAGE=	https://rusty-rain.xyz/
 COMMENT=	Cross Platform Matrix Rain made with Rust
 LICENSE=	apache-2.0
 
