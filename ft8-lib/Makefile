@@ -13,6 +13,10 @@ LICENSE=	mit
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c c++
 
-INSTALLATION_DIRS=	lib
+INSTALLATION_DIRS=	lib bin
+
+post-install:
+	cd ${WRKSRC}; ${INSTALL} gen_ft8 ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}; ${INSTALL} decode_ft8 ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

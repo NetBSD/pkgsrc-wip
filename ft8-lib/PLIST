@@ -1,2 +1,4 @@
 @comment $NetBSD$
+bin/decode_ft8
+bin/gen_ft8
 lib/libft8.a
