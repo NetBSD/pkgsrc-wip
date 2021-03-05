@@ -3353,6 +3353,7 @@ SUBDIR+=	py-buildbot-pkg
 SUBDIR+=	py-buildbot-waterfall-view
 SUBDIR+=	py-buildbot-worker
 SUBDIR+=	py-buildbot-www
+SUBDIR+=	py-builder
 SUBDIR+=	py-bw2parameters
 SUBDIR+=	py-bxa
 SUBDIR+=	py-c-lasso
