@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (epson-inkjet-printer-escpr2-1.1.28-1lsb3.2.src.rpm) = c1b4bf667db60dbefc10f21bd7d6910ab8c26033
+RMD160 (epson-inkjet-printer-escpr2-1.1.28-1lsb3.2.src.rpm) = 14ef13d74193a8b6861ac081c0ec6fcefe42a48f
+SHA512 (epson-inkjet-printer-escpr2-1.1.28-1lsb3.2.src.rpm) = 0c2505b0632940725298abded5d198bd3df2b8de06c0016f05126a7591cfa584b7a9048ffc29ffd11af849d4efc2a3cf79c33453e0ee237bc7a7905b7dd4eac6
+Size (epson-inkjet-printer-escpr2-1.1.28-1lsb3.2.src.rpm) = 3555824 bytes
+SHA1 (patch-src_linux__cmn.c) = b872a649b799b41985492e488b038d6465af33dc

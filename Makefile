@@ -755,6 +755,7 @@ SUBDIR+=	eot
 SUBDIR+=	epacts
 SUBDIR+=	epix
 SUBDIR+=	epson-inkjet-printer-escpr
+SUBDIR+=	epson-inkjet-printer-escpr2
 SUBDIR+=	erfa
 SUBDIR+=	erlang-basho
 SUBDIR+=	err113

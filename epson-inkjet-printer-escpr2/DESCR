@@ -1,0 +1,14 @@
+This software is a filter program used with the Common UNIX Printing
+System (CUPS).  The software offers high quality printing with Seiko Epson
+color ink jet printers.
+
+This product can only be used with printers that support the Epson ESC/P-R
+language.
+
+Please see refer to the following for a list of supported printers.
+http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
+
+NOTE: while epson-inkjet-printer-escpr is fully open source,
+epson-inkjet-printer-escpr2 contains a binary library. If uncomfortable
+with binary blobs, it may be possible to support newer printers by using
+PPDs from epson-inkjet-printer-escpr2 with epson-inkjet-printer-escpr.
