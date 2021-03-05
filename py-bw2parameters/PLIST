@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/bw2parameters/__init__.py
+${PYSITELIB}/bw2parameters/__init__.pyc
+${PYSITELIB}/bw2parameters/__init__.pyo
+${PYSITELIB}/bw2parameters/errors.py
+${PYSITELIB}/bw2parameters/errors.pyc
+${PYSITELIB}/bw2parameters/errors.pyo
+${PYSITELIB}/bw2parameters/mangling.py
+${PYSITELIB}/bw2parameters/mangling.pyc
+${PYSITELIB}/bw2parameters/mangling.pyo
+${PYSITELIB}/bw2parameters/parameter_set.py
+${PYSITELIB}/bw2parameters/parameter_set.pyc
+${PYSITELIB}/bw2parameters/parameter_set.pyo
+${PYSITELIB}/bw2parameters/utils.py
+${PYSITELIB}/bw2parameters/utils.pyc
+${PYSITELIB}/bw2parameters/utils.pyo
