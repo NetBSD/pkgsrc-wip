@@ -5688,6 +5688,7 @@ SUBDIR+=	webkit-gtk4
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
+SUBDIR+=	wfuzz
 SUBDIR+=	wgrib2
 SUBDIR+=	which
 SUBDIR+=	why
