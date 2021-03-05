@@ -4134,6 +4134,7 @@ SUBDIR+=	py-paragram
 SUBDIR+=	py-parakeet
 SUBDIR+=	py-param
 SUBDIR+=	py-parameters
+SUBDIR+=	py-parameterizedtestcase
 SUBDIR+=	py-paramz
 SUBDIR+=	py-parserutils
 SUBDIR+=	py-parsy
