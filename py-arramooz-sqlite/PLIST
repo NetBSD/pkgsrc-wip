@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/arramooz/__init__.py
+${PYSITELIB}/arramooz/__init__.pyc
+${PYSITELIB}/arramooz/__init__.pyo
+${PYSITELIB}/arramooz/arabicdictionary.py
+${PYSITELIB}/arramooz/arabicdictionary.pyc
+${PYSITELIB}/arramooz/arabicdictionary.pyo
+${PYSITELIB}/arramooz/stopwordsdictionaryclass.py
+${PYSITELIB}/arramooz/stopwordsdictionaryclass.pyc
+${PYSITELIB}/arramooz/stopwordsdictionaryclass.pyo
+${PYSITELIB}/arramooz/wordfreqdictionaryclass.py
+${PYSITELIB}/arramooz/wordfreqdictionaryclass.pyc
+${PYSITELIB}/arramooz/wordfreqdictionaryclass.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

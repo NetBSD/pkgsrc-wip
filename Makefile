@@ -3259,6 +3259,7 @@ SUBDIR+=	py-arabic-text-quote
 SUBDIR+=	py-archan
 SUBDIR+=	py-arpeggio
 SUBDIR+=	py-aruudy
+SUBDIR+=	py-arramooz-sqlite
 SUBDIR+=	py-arrayfire
 SUBDIR+=	py-ars
 SUBDIR+=	py-art
