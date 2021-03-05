@@ -1252,8 +1252,6 @@ share/emacs/${PKGVERSION}/lisp/cedet/ede/system.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/system.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/util.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/util.elc
-share/emacs/${PKGVERSION}/lisp/cedet/inversion.el.gz
-share/emacs/${PKGVERSION}/lisp/cedet/inversion.elc
 share/emacs/${PKGVERSION}/lisp/cedet/mode-local.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/mode-local.elc
 share/emacs/${PKGVERSION}/lisp/cedet/pulse.el.gz
@@ -2988,6 +2986,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/html2text.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/info-edit.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/info-edit.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/inversion.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/inversion.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
