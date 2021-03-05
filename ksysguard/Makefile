@@ -19,10 +19,6 @@ USE_TOOLS+=	msgmerge pkg-config
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 # ksysguardd/NetBSD/netdev.c and apm.c dont like the standard setting
-SUBST_CLASSES+=		eat-std
-SUBST_STAGE.eat-std=	post-configure
-SUBST_FILES.eat-std=	_KDE_build/ksysguardd/NetBSD/CMakeFiles/libksysguardd.dir/flags.make
-SUBST_SED.eat-std=	-e 's, -std=iso9899:1990 , ,g'
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
