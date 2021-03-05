@@ -1,0 +1,4 @@
+Simple tools to define world locations from a set of topological
+faces and set algebra. For example, one could define a which
+started from all countries, but excluded every country who name
+started with the letter a.
