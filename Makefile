@@ -3514,6 +3514,7 @@ SUBDIR+=	py-decode
 SUBDIR+=	py-decorated-registry
 SUBDIR+=	py-decoratortools
 SUBDIR+=	py-deep-merge
+SUBDIR+=	py-deep-translator
 SUBDIR+=	py-delay
 SUBDIR+=	py-delny
 SUBDIR+=	py-deltasigma
