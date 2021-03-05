@@ -3586,6 +3586,7 @@ SUBDIR+=	py-dropbox
 SUBDIR+=	py-dsltools
 SUBDIR+=	py-duali
 SUBDIR+=	py-dubins
+SUBDIR+=	py-dufte
 SUBDIR+=	py-dynamicisttoolkit
 SUBDIR+=	py-eapi
 SUBDIR+=	py-easydev
