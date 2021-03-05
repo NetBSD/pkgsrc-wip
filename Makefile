@@ -3364,6 +3364,7 @@ SUBDIR+=	py-capturer
 SUBDIR+=	py-carbon
 SUBDIR+=	py-cartopy
 SUBDIR+=	py-caspy3
+SUBDIR+=	py-catalogue
 SUBDIR+=	py-causalinfo
 SUBDIR+=	py-causality
 SUBDIR+=	py-cbc
