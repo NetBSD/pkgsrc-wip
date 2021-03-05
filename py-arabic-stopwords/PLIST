@@ -1,4 +1,18 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/pkg/bin/bmake package"
-@comment TODO: 2. run "/usr/pkg/bin/bmake print-PLIST"
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/arabicstopwords/__init__.py
+${PYSITELIB}/arabicstopwords/__init__.pyc
+${PYSITELIB}/arabicstopwords/__init__.pyo
+${PYSITELIB}/arabicstopwords/arabicstopwords.py
+${PYSITELIB}/arabicstopwords/arabicstopwords.pyc
+${PYSITELIB}/arabicstopwords/arabicstopwords.pyo
+${PYSITELIB}/arabicstopwords/stopwords_classified.py
+${PYSITELIB}/arabicstopwords/stopwords_classified.pyc
+${PYSITELIB}/arabicstopwords/stopwords_classified.pyo
+${PYSITELIB}/arabicstopwords/stopwordsallforms.py
+${PYSITELIB}/arabicstopwords/stopwordsallforms.pyc
+${PYSITELIB}/arabicstopwords/stopwordsallforms.pyo
