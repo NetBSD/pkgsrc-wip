@@ -4017,6 +4017,7 @@ SUBDIR+=	py-mpi4y-fft
 SUBDIR+=	py-mpld3
 SUBDIR+=	py-mplh5canvas
 SUBDIR+=	py-mpop
+SUBDIR+=	py-mrio-common-metadata
 SUBDIR+=	py-msdas
 SUBDIR+=	py-msedge-selenium-tools
 SUBDIR+=	py-mssql2
