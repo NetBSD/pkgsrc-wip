@@ -4651,6 +4651,7 @@ SUBDIR+=	py-ua-parser
 SUBDIR+=	py-ubjson
 SUBDIR+=	py-ufl
 SUBDIR+=	py-umalqurra
+SUBDIR+=	py-unidecode
 SUBDIR+=	py-unidiff
 SUBDIR+=	py-uniseg
 SUBDIR+=	py-update-checker
