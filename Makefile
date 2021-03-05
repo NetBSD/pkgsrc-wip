@@ -3450,6 +3450,7 @@ SUBDIR+=	py-corpus
 SUBDIR+=	py-corrfitter
 SUBDIR+=	py-cosat
 SUBDIR+=	py-cosmolopy
+SUBDIR+=	py-cosmoTransitions
 SUBDIR+=	py-country
 SUBDIR+=	py-country-converter
 SUBDIR+=	py-coverage-badge
