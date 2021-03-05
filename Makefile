@@ -4391,6 +4391,7 @@ SUBDIR+=	py-sasa
 SUBDIR+=	py-scalpy
 SUBDIR+=	py-scanapi
 SUBDIR+=	py-scanless
+SUBDIR+=	py-schema
 SUBDIR+=	py-scholarmetrics
 SUBDIR+=	py-scikit-aero
 SUBDIR+=	py-scikit-glpk
