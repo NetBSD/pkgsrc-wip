@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
-#
+# $NetBSD$
 
-DISTNAME=	Tashaphyne-0.2
-PKGNAME=	${PYPKGPREFIX}-tashaphyne-0.2
-CATEGORIES=	textproc python #arabic
+DISTNAME=	Tashaphyne-0.3.4.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	textproc python
+PKGVERSION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Tashaphyne/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://tashaphyne.sourceforge.io/
-COMMENT=	Arabic Light Stemmer and segmentor
-LICENSE=	gnu-gpl-v3
+HOMEPAGE=	http://github.com/linuxscout/tashaphyne/
+COMMENT=	Tashaphyne Arabic Light Stemmer
+LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
-USE_LANGUAGES=	# none
+DEPENDS+=       ${PYPKGPREFIX}-arabic>=0.6.10:../../wip/py-arabic
 
-PYDISTUTILSPKG=	yes
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
