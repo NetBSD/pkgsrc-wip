@@ -3861,6 +3861,7 @@ SUBDIR+=	py-jose
 SUBDIR+=	py-jplephem
 SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonrequester
+SUBDIR+=	py-json-logger
 SUBDIR+=	py-jswebkit
 SUBDIR+=	py-jtextfsm
 SUBDIR+=	py-julio
