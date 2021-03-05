@@ -3865,6 +3865,7 @@ SUBDIR+=	py-keyczar
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kineticlib
 SUBDIR+=	py-kivy
+SUBDIR+=	py-klausen
 SUBDIR+=	py-klepto
 SUBDIR+=	py-knnimpute
 SUBDIR+=	py-knockknock
