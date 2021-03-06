@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2016/01/10 20:01:05 markd Exp $
 
 DISTNAME=	ksysguard-${PLASMAVER}
-PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://userbase.kde.org/KSysGuard
@@ -10,15 +9,18 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-CONFLICTS+=	kde-workspace4-[0-9]*
-
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-# ksysguardd/NetBSD/netdev.c and apm.c dont like the standard setting
+# For the moment dont find libpcap as NetBSD9 doesn't have
+# pcap/sll.h 
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_libpcap:BOOL=TRUE
+#.if !exists(/usr/include/pcap/sll.h)
+#PREFER.libpcap=	pkgsrc
+#.endif
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
@@ -32,11 +34,8 @@ CONF_FILES+=	${PREFIX}/share/examples/ksysguard/ksysguarddrc \
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
+#.include "../../net/libpcap/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/libksysguard/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
-.include "../../lang/python27/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
-.include "../../meta-pkgs/kf5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

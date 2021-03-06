@@ -13,4 +13,4 @@ SHA1 (patch-ksysguardd_NetBSD_Memory.c) = 0752eca6966424e5b7e56cef96d6868268ba6d
 SHA1 (patch-ksysguardd_NetBSD_Memory.h) = 7fe2f05789d6166a982785ae155e36d7ed1cdcd1
 SHA1 (patch-ksysguardd_NetBSD_ProcessList.c) = ab4158bcbc23210dd75e8b9bcceeff552bdc56b6
 SHA1 (patch-ksysguardd_Solaris_LoadAvg.c) = 4d21e99fd3e183cc20560ccdb08451c858536ec9
-SHA1 (patch-plugins_process_network_helper_Packet.cpp) = c86f695f485f96c55f6ac9f04996c21c67245fab
+SHA1 (patch-plugins_process_network_helper_Packet.cpp) = deec13fdd09a30c4166e1be23ee107fd004a174e
