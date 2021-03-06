@@ -1,17 +1,9 @@
-
-CMake Error at tests/CMakeLists.txt:1 (find_package):
-  By not providing "FindQt5Test.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "Qt5Test", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "Qt5Test"
-  (requested version 5) with any of the following names:
-
-    Qt5TestConfig.cmake
-    qt5test-config.cmake
-
-  Add the installation prefix of "Qt5Test" to CMAKE_PREFIX_PATH or set
-  "Qt5Test_DIR" to a directory containing one of the above files.  If
-  "Qt5Test" provides a separate development package or SDK, be sure it has
-  been installed.
-
+-- ******************************************************
+-- Building for for: NetBSD-x86_64
+-- ******************************************************
+ld: /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/build/hamlib-prefix/src/hamlib/rigs/kit/fifisdr.c:318: undefined reference to `libusb_error_name'
+ld: /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/build/hamlib-prefix/src/hamlib/rigs/kit/fifisdr.c:318: undefined reference to `libusb_error_name'
+ld: ../src/.libs/libhamlib.a(funcube.o): in function `funcube_get_info':
+/tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/build/hamlib-prefix/src/hamlib/rigs/kit/funcube.c:318: undefined reference to `libusb_get_device'
+ld: /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/build/hamlib-prefix/src/hamlib/rigs/kit/funcube.c:318: undefined reference to `libusb_get_device_descriptor'
+ld: ../src/.libs/libhamlib.a(funcube.o): in function `funcube_get_level':

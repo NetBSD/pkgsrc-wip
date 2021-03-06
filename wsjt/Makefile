@@ -38,5 +38,7 @@ do-build:
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
