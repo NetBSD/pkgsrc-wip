@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (lagrange-1.2.1.tar.gz) = 2d57b12ca6d1b26ad39783ed1ca72e4fc7c57f42
+RMD160 (lagrange-1.2.1.tar.gz) = 6f6040173be74af346e6629db50eb8b1b29a76cb
+SHA512 (lagrange-1.2.1.tar.gz) = 7356d7e424492dfa6928d3328cf43d3a12289abe022efc1c63434968d73e8465d3547311199e8344b4f4ff24bc2adc29d03f2cac15cfe197d81f9e710dcb7d02
+Size (lagrange-1.2.1.tar.gz) = 14353246 bytes
+SHA1 (patch-lib_the__Foundation_src_platform_posix_process.c) = 831e5abc9f0f06e9be51454a2c86a09b7797f19f
