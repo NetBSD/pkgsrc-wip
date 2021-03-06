@@ -22,6 +22,7 @@ do-configure:
 	cmake \
  	-D CMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX} \
 	-DWSJT_SKIP_MANPAGES=ON \
+	-DCMAKE_PREFIX_PATH=${PREFIX}/qt5 \
 	-DWSJT_GENERATE_DOCS=OFF ../../wsjtx-2.3.0 \
 	)
 
@@ -30,6 +31,9 @@ do-build:
 
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtserialport/buildlink3.mk"
+.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 
