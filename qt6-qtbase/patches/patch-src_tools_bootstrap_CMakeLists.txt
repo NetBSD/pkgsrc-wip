@@ -1,0 +1,18 @@
+$NetBSD$
+
+* get QOperatingSystemVersion using uname on Free and NetBSD
+
+--- src/tools/bootstrap/CMakeLists.txt.orig	2021-01-26 18:29:22.000000000 +0000
++++ src/tools/bootstrap/CMakeLists.txt
+@@ -258,6 +258,11 @@ qt_internal_extend_target(Bootstrap COND
+         uuid
+ )
+ 
++qt_internal_extend_target(Bootstrap CONDITION FREEBSD OR NETBSD
++    SOURCES
++        ../../corelib/global/qoperatingsystemversion_uname.cpp
++)
++
+ #### Keys ignored in scope 22:.:../../3rdparty/pcre2:../../3rdparty/pcre2/pcre2.pri:QT_FEATURE_intelcet:
+ # QMAKE_CFLAGS = "$$QMAKE_CFLAGS_SHSTK"
+ 

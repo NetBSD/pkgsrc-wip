@@ -1,11 +1,25 @@
 $NetBSD$
 
+* get QOperatinSystemVersion using uname on Free and NetBSD
+
 * use gzip compression instead of zstd since libarchive might miss zstd even
   if QT uses it, fixes the configure step on NetBSD
 
 --- src/corelib/CMakeLists.txt.orig	2021-01-26 18:29:22.000000000 +0000
 +++ src/corelib/CMakeLists.txt
-@@ -1179,7 +1179,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
+@@ -531,6 +531,11 @@ qt_internal_extend_target(Core CONDITION
+         --pending_instantiations=128
+ )
+ 
++qt_internal_extend_target(Core CONDITION FREEBSD OR NETBSD
++    SOURCES
++        global/qoperatingsystemversion_uname.cpp
++)
++
+ #### Keys ignored in scope 14:.:.:corelib.pro:pathIsAbsolute(_ss_CMAKE_HOST_DATA_DIR):
+ # CMAKE_HOST_DATA_DIR = "$$[QT_HOST_DATA/src]/"
+ # CMAKE_HOST_DATA_DIR_IS_ABSOLUTE = "True"
+@@ -1179,7 +1184,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
              COMMENT "Generating ${qmimeprovider_db_output}"
          )
      else()
