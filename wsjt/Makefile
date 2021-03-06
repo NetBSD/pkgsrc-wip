@@ -10,26 +10,16 @@ HOMEPAGE=	https://physics.princeton.edu/pulsar/k1jt/
 COMMENT=	Well known in the amateur radio WSJT
 LICENSE=	gnu-gpl-v3
 
-HAS_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++ fortran
 
 DEPENDS+=	qt5-qttranslations-[0-9]*:../../x11/qt5-qttranslations
 
-#CMAKE_ARGS+=    -DNVTT_SHARED=ON
-do-configure:
-	(cd ${WRKSRC}; \
-	mkdir build;\
-	cd    build;\
-	cmake \
- 	-D CMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX} \
-	-DWSJT_SKIP_MANPAGES=ON \
-	-DCMAKE_PREFIX_PATH=${PREFIX}/qt5 \
-	-DWSJT_GENERATE_DOCS=OFF ../../wsjtx-2.3.0 \
-	)
-
-do-build:
-	(cd ${WRKSRC}/build; cmake --build . )
+CMAKE_ARGS+=    -DNVTT_SHARED=ON
+CMAKE_ARGS+=	-D CMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX} 
+CMAKE_ARGS+=	-DWSJT_SKIP_MANPAGES=ON
+CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${PREFIX}/qt5
+CMAKE_ARGS+= 	-DWSJT_GENERATE_DOCS=OFF 
 
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -39,6 +29,6 @@ do-build:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/libusb1/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
