@@ -4,7 +4,7 @@ DISTNAME=	wfuzz-3.1.0
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wfuzz/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://wfuzz.io/
 COMMENT=	Web application fuzzer
 LICENSE=	gnu-gpl-v2
