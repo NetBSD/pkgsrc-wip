@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/smbnetfs
+man/man1/smbnetfs.1
+share/doc/smbnetfs-${PKGVERSION}/ENGLISH.FAQ
+share/doc/smbnetfs-${PKGVERSION}/INSTALL
+share/doc/smbnetfs-${PKGVERSION}/RUSSIAN.FAQ
+share/examples/smbnetfs/smbnetfs.conf

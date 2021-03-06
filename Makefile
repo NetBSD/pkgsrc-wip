@@ -909,6 +909,7 @@ SUBDIR+=	ftpsesame
 SUBDIR+=	fuse-cryfs
 SUBDIR+=	fuse-google-drive-git
 SUBDIR+=	fuse-mp3fs
+SUBDIR+=	fuse-smbnetfs
 SUBDIR+=	fuse-squashfuse
 SUBDIR+=	fuse-zip
 SUBDIR+=	fusefs-btfs
