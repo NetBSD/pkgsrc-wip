@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	wsjtx-2.3.0
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	ham
 MASTER_SITES=	https://physics.princeton.edu/pulsar/k1jt/
 EXTRACT_SUFX=	.tgz
 
