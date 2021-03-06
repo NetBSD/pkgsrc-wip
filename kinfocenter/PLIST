@@ -19,6 +19,8 @@ share/doc/HTML/de/kinfocenter/index.docbook
 share/doc/HTML/en/kinfocenter/index.cache.bz2
 share/doc/HTML/en/kinfocenter/index.docbook
 share/doc/HTML/en/kinfocenter/kinfocenter.png
+share/doc/HTML/id/kinfocenter/index.cache.bz2
+share/doc/HTML/id/kinfocenter/index.docbook
 share/doc/HTML/it/kinfocenter/index.cache.bz2
 share/doc/HTML/it/kinfocenter/index.docbook
 share/doc/HTML/nl/kinfocenter/index.cache.bz2
@@ -78,6 +80,9 @@ share/locale/ar/LC_MESSAGES/kcmsamba.mo
 share/locale/ar/LC_MESSAGES/kcmusb.mo
 share/locale/ar/LC_MESSAGES/kcmview1394.mo
 share/locale/ar/LC_MESSAGES/kinfocenter.mo
+share/locale/ast/LC_MESSAGES/kcm-about-distro.mo
+share/locale/ast/LC_MESSAGES/kcmusb.mo
+share/locale/ast/LC_MESSAGES/kinfocenter.mo
 share/locale/be/LC_MESSAGES/kcminfo.mo
 share/locale/be/LC_MESSAGES/kcmopengl.mo
 share/locale/be/LC_MESSAGES/kcmsamba.mo
@@ -563,6 +568,9 @@ share/locale/mk/LC_MESSAGES/kcmsamba.mo
 share/locale/mk/LC_MESSAGES/kcmusb.mo
 share/locale/mk/LC_MESSAGES/kcmview1394.mo
 share/locale/mk/LC_MESSAGES/kinfocenter.mo
+share/locale/ml/LC_MESSAGES/kcm-about-distro.mo
+share/locale/ml/LC_MESSAGES/kcm_energyinfo.mo
+share/locale/ml/LC_MESSAGES/kcm_fileindexermonitor.mo
 share/locale/ml/LC_MESSAGES/kcm_memory.mo
 share/locale/ml/LC_MESSAGES/kcm_pci.mo
 share/locale/ml/LC_MESSAGES/kcmdevinfo.mo
@@ -651,14 +659,6 @@ share/locale/oc/LC_MESSAGES/kcmsamba.mo
 share/locale/oc/LC_MESSAGES/kcmusb.mo
 share/locale/oc/LC_MESSAGES/kcmview1394.mo
 share/locale/oc/LC_MESSAGES/kinfocenter.mo
-share/locale/or/LC_MESSAGES/kcm_memory.mo
-share/locale/or/LC_MESSAGES/kcm_pci.mo
-share/locale/or/LC_MESSAGES/kcminfo.mo
-share/locale/or/LC_MESSAGES/kcmopengl.mo
-share/locale/or/LC_MESSAGES/kcmsamba.mo
-share/locale/or/LC_MESSAGES/kcmusb.mo
-share/locale/or/LC_MESSAGES/kcmview1394.mo
-share/locale/or/LC_MESSAGES/kinfocenter.mo
 share/locale/pa/LC_MESSAGES/kcm-about-distro.mo
 share/locale/pa/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/pa/LC_MESSAGES/kcm_memory.mo
@@ -865,6 +865,7 @@ share/locale/te/LC_MESSAGES/kcmsamba.mo
 share/locale/te/LC_MESSAGES/kcmusb.mo
 share/locale/te/LC_MESSAGES/kcmview1394.mo
 share/locale/te/LC_MESSAGES/kinfocenter.mo
+share/locale/tg/LC_MESSAGES/kcm_energyinfo.mo
 share/locale/tg/LC_MESSAGES/kcm_memory.mo
 share/locale/tg/LC_MESSAGES/kcm_pci.mo
 share/locale/tg/LC_MESSAGES/kcmdevinfo.mo
