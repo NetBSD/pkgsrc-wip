@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (konsole-19.08.0.tar.xz) = d6c7e5e11fdbc04208811c56c5b5a4540dd962b7
-RMD160 (konsole-19.08.0.tar.xz) = aafde3c368d179af520e8fac3387b62e409784a8
-SHA512 (konsole-19.08.0.tar.xz) = 9f1b17c62236fd28615cc083d5d33b2360e8a9c903d4076628018064b3240b012f6bd719fe1697f7d52c68a14f88fcfc6281986e251b62cf2571fbfdc777a412
-Size (konsole-19.08.0.tar.xz) = 1147720 bytes
-SHA1 (patch-src_ProcessInfo.cpp) = a94a20bd4ddc070278d4bf18bbc4c7b63dc27ba6

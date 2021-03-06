@@ -1907,7 +1907,6 @@ SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
 SUBDIR+=	koha
-SUBDIR+=	konsole
 SUBDIR+=	krename
 SUBDIR+=	kronometer
 SUBDIR+=	kscreen
