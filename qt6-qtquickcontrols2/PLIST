@@ -32,6 +32,7 @@ qt6/include/QtQuickControls2Impl/QtQuickControls2Impl
 qt6/include/QtQuickControls2Impl/QtQuickControls2ImplDepends
 qt6/include/QtQuickControls2Impl/QtQuickControls2ImplVersion
 qt6/include/QtQuickControls2Impl/qtquickcontrols2implversion.h
+qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qaccessiblequickpage_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickabstractbutton_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickabstractbutton_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickaction_p.h

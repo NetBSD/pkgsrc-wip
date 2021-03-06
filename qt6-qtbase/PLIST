@@ -2599,6 +2599,7 @@ qt6/lib/cmake/Qt6/FindLibudev.cmake
 qt6/lib/cmake/Qt6/FindMtdev.cmake
 qt6/lib/cmake/Qt6/FindMySQL.cmake
 qt6/lib/cmake/Qt6/FindOracle.cmake
+qt6/lib/cmake/Qt6/FindPostgreSQL.cmake
 qt6/lib/cmake/Qt6/FindPPS.cmake
 qt6/lib/cmake/Qt6/FindSlog2.cmake
 qt6/lib/cmake/Qt6/FindTslib.cmake
@@ -3099,7 +3100,6 @@ qt6/lib/metatypes/qt6core_qobject_release_metatypes.json
 qt6/lib/metatypes/qt6core_release_metatypes.json
 qt6/lib/metatypes/qt6gui_release_metatypes.json
 qt6/lib/metatypes/qt6widgets_release_metatypes.json
-qt6/libexec/android_cmakelist_patcher.sh
 qt6/libexec/android_emulator_launcher.sh
 qt6/libexec/ensure_pro_file.cmake
 qt6/libexec/syncqt.pl

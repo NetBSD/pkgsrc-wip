@@ -5,7 +5,7 @@ PKGNAME=	qt6-qtimageformats-${QTVERSION}
 COMMENT=	Extra image handlers for Qt6
 CATEGORIES=	graphics
 
-QT_ADDLIB=	qtimageformats
+QT_ADDLIB=	yes
 .include "../../wip/qt6-qtbase/Makefile.common"
 
 post-extract:

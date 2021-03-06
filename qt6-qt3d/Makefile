@@ -5,7 +5,7 @@ PKGNAME=	qt6-qt3d-${QTVERSION}
 COMMENT=	Qt6 3d
 CATEGORIES=	graphics
 
-QT_ADDLIB=	qt3d
+QT_ADDLIB=	yes
 
 CONFIGURE_ARGS+=	-system-assimp
 CONFIGURE_ARGS+=	-no-fbxsdk
