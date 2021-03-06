@@ -1,15 +1,17 @@
 
--- Looking for rig_set_cache_timeout_ms - not found
-CMake Error at /usr/pkg/qt5/lib/cmake/Qt5/Qt5Config.cmake:28 (find_package):
-  Could not find a package configuration file provided by "Qt5LinguistTools"
-  with any of the following names:
+CMake Error at tests/CMakeLists.txt:1 (find_package):
+  By not providing "FindQt5Test.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5Test", but
+  CMake did not find one.
 
-    Qt5LinguistToolsConfig.cmake
-    qt5linguisttools-config.cmake
+  Could not find a package configuration file provided by "Qt5Test"
+  (requested version 5) with any of the following names:
 
-  Add the installation prefix of "Qt5LinguistTools" to CMAKE_PREFIX_PATH or
-  set "Qt5LinguistTools_DIR" to a directory containing one of the above
-  files.  If "Qt5LinguistTools" provides a separate development package or
-  SDK, be sure it has been installed.
-Call Stack (most recent call first):
-  CMakeLists.txt:881 (find_package)
+    Qt5TestConfig.cmake
+    qt5test-config.cmake
+
+  Add the installation prefix of "Qt5Test" to CMAKE_PREFIX_PATH or set
+  "Qt5Test_DIR" to a directory containing one of the above files.  If
+  "Qt5Test" provides a separate development package or SDK, be sure it has
+  been installed.
+

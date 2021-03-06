@@ -14,6 +14,8 @@ HAS_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++ fortran
 
+DEPENDS+=	qt5-qttranslations-[0-9]*:../../x11/qt5-qttranslations
+
 #CMAKE_ARGS+=    -DNVTT_SHARED=ON
 do-configure:
 	(cd ${WRKSRC}; \
