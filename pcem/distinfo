@@ -1,0 +1,17 @@
+$NetBSD$
+
+SHA1 (PCemV17Linux.tar.gz) = 3dfca75d674e891bee3c02820aef1ef05b3ab6d4
+RMD160 (PCemV17Linux.tar.gz) = 7df7b32b7a8c48f6477bb10e1524efc755f89a63
+SHA512 (PCemV17Linux.tar.gz) = 6d84c8cbe9b6116f6439f542ac08139cfc5652a34b615a1ed841a6f8c227e77f1d26573ec35d57511b9a69e7472fbe51f2abb9307f8f8c1207c74fbe8107cadd
+Size (PCemV17Linux.tar.gz) = 1880868 bytes
+SHA1 (patch-configure) = 15b5d8950398d22f5943e8b7c73d25ca417ef766
+SHA1 (patch-src_codegen__allocator.c) = 32cdde00c9d4610c6507082738fcb8763f0b5023
+SHA1 (patch-src_codegen__backend__arm.c) = 50154c7c40d95b41a6b8217f448508a18a6e10c6
+SHA1 (patch-src_codegen__backend__arm64.c) = af94ccb5db9fc1550f057d4001d42826cd86cb43
+SHA1 (patch-src_codegen__backend__x86-64.c) = abed7d65085ca8a0bf5c9c2c64c43a05aa433d4b
+SHA1 (patch-src_codegen__backend__x86.c) = 1dda1dc776744b07f4dc829f3754cbad83fda3b5
+SHA1 (patch-src_codegen__x86-64.c) = 836124d0d8d022b0367d83afcf711c929ae7d6f6
+SHA1 (patch-src_vid__voodoo__codegen__x86-64.h) = ab689a5d27f9d927900185923ec2a372f54de6c7
+SHA1 (patch-src_vid__voodoo__codegen__x86.h) = c12ef58bc6e84c019831341d1323149770f040b1
+SHA1 (patch-src_wx-sdl2.c) = f4f599bbf2bd84017ad14064df89f0a496c8b706
+SHA1 (patch-src_wx-thread.c) = bb50cc7ec5f8005cad922d6aff76943b67dddd01

@@ -2938,6 +2938,7 @@ SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbcopper
 SUBDIR+=	pbseqan
 SUBDIR+=	pbzx
+SUBDIR+=	pcem
 SUBDIR+=	pcp
 SUBDIR+=	pcsx2
 SUBDIR+=	pdb2ldif

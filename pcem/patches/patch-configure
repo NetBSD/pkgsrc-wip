@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix shell portability.
+
+--- configure.orig	2020-12-01 20:38:33.000000000 +0000
++++ configure
+@@ -5150,7 +5150,7 @@ if test "$wxWin" != 1; then
+       " "$LINENO" 5
+ fi
+ 
+-if test "$enable_alsa" == "yes"; then
++if test "$enable_alsa" = "yes"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for snd_pcm_open in -lasound" >&5
+ $as_echo_n "checking for snd_pcm_open in -lasound... " >&6; }
+ if ${ac_cv_lib_asound_snd_pcm_open+:} false; then :
