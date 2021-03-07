@@ -3,9 +3,9 @@ $NetBSD: patch-configure,v 1.5 2018/01/17 19:30:47 markd Exp $
 Don't use SDKs on OS X
 Add NetBSD/sparc{,64} support
 
---- configure.orig	2017-05-26 12:43:31.000000000 +0000
+--- configure.orig	2021-02-09 18:01:03.000000000 +0000
 +++ configure
-@@ -292,7 +292,6 @@ getQMakeConf()
+@@ -318,7 +318,6 @@ getQMakeConf()
  {
      if [ -z "$specvals" ]; then
          specvals=`expandQMakeConf "$QMAKESPEC/qmake.conf" | extractQMakeVariables`
@@ -13,10 +13,11 @@ Add NetBSD/sparc{,64} support
      fi
      getSingleQMakeVariable "$1" "$specvals"
  }
-@@ -605,6 +604,19 @@ if [ -z "$PLATFORM" ]; then
+@@ -654,6 +653,19 @@ if [ -z "$PLATFORM" ]; then
+         ;;
       LynxOS*:*)
          PLATFORM=lynxos-g++
-         ;;
++        ;;
 +    NetBSD:*:sparc)
 +        if [ "$OPT_VERBOSE" = "yes" ]; then
 +            echo "    NetBSD on SPARC"
@@ -29,7 +30,6 @@ Add NetBSD/sparc{,64} support
 +        fi
 +        CFG_HOST_ARCH=sparc
 +        CFG_HOST_BITSIZE=64
-+        ;;
+         ;;
       QNX:*)
          PLATFORM=unsupported/qnx-g++
-         ;;

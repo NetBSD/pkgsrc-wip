@@ -5,12 +5,12 @@ $NetBSD$
 * look for heimdals gssapi implementation as well
   fixes build where KRB5_TYPE = heimdal, see mk/krb5.buildlink3.mk
 
---- cmake/FindGSSAPI.cmake.orig	2021-01-26 18:29:22.000000000 +0000
+--- cmake/FindGSSAPI.cmake.orig	2021-02-09 18:01:03.000000000 +0000
 +++ cmake/FindGSSAPI.cmake
 @@ -1,15 +1,20 @@
  find_package(PkgConfig QUIET)
 -pkg_check_modules(PC_GSSAPI QUIET krb5-gssapi)
-+pkg_search_module(PC_GSSAPI QUIET krb5-gssapi heimdal-gssapi)
++pkg_search_module(PC_GSSAPI QUIET heimdal-gssapi krb5-gssapi)
  
  find_path(GSSAPI_INCLUDE_DIRS
            NAMES gssapi/gssapi.h
@@ -26,8 +26,8 @@ $NetBSD$
               GSS # framework
 -             gssapi_krb5
 +             gss
-+             gssapi_krb5 # mit krb5
 +             gssapi # heimdal
++             gssapi_krb5 # mit krb5
               HINTS ${PC_GSSAPILIBDIR}
  )
  
