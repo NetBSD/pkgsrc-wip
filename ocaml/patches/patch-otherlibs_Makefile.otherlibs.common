@@ -1,5 +1,7 @@
 $NetBSD$
 
+Honor LDFLAGS.
+
 --- otherlibs/Makefile.otherlibs.common.orig	2021-02-24 13:49:29.000000000 +0000
 +++ otherlibs/Makefile.otherlibs.common
 @@ -50,7 +50,7 @@ EXTRACFLAGS ?=

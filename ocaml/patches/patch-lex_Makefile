@@ -1,5 +1,7 @@
 $NetBSD$
 
+Honor LDFLAGS.
+
 --- lex/Makefile.orig	2021-02-24 13:49:29.000000000 +0000
 +++ lex/Makefile
 @@ -26,7 +26,7 @@ CAMLC = $(BOOT_OCAMLC) -strict-sequence 

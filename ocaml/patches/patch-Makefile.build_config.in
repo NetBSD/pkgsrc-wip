@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use BSD_INSTALL_*
+
 --- Makefile.build_config.in.orig	2021-02-24 13:49:29.000000000 +0000
 +++ Makefile.build_config.in
 @@ -20,9 +20,9 @@

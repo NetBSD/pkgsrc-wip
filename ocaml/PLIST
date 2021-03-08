@@ -1477,10 +1477,6 @@ ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink_platform_intf.cmx
 ${PLIST.ocaml-nat}${PLIST.ocaml-opt}lib/ocaml/dynlink_types.cmx
 lib/ocaml/either.ml
 lib/ocaml/either.mli
-lib/ocaml/stdlib__ephemeron.cmi
-lib/ocaml/stdlib__ephemeron.cmt
-lib/ocaml/stdlib__ephemeron.cmti
-${PLIST.ocaml-opt}lib/ocaml/stdlib__ephemeron.cmx
 lib/ocaml/ephemeron.ml
 lib/ocaml/ephemeron.mli
 lib/ocaml/eventlog_metadata
@@ -1689,10 +1685,6 @@ ${PLIST.ocaml-opt}lib/ocaml/stdlib.cmx
 ${PLIST.ocaml-opt}lib/ocaml/stdlib.cmxa
 lib/ocaml/stdlib.ml
 lib/ocaml/stdlib.mli
-lib/ocaml/stdlib__atomic.cmi
-lib/ocaml/stdlib__atomic.cmt
-lib/ocaml/stdlib__atomic.cmti
-${PLIST.ocaml-opt}lib/ocaml/stdlib__atomic.cmx
 lib/ocaml/stdlib__arg.cmi
 lib/ocaml/stdlib__arg.cmt
 lib/ocaml/stdlib__arg.cmti
@@ -1705,6 +1697,10 @@ lib/ocaml/stdlib__arrayLabels.cmi
 lib/ocaml/stdlib__arrayLabels.cmt
 lib/ocaml/stdlib__arrayLabels.cmti
 ${PLIST.ocaml-opt}lib/ocaml/stdlib__arrayLabels.cmx
+lib/ocaml/stdlib__atomic.cmi
+lib/ocaml/stdlib__atomic.cmt
+lib/ocaml/stdlib__atomic.cmti
+${PLIST.ocaml-opt}lib/ocaml/stdlib__atomic.cmx
 lib/ocaml/stdlib__bigarray.cmi
 lib/ocaml/stdlib__bigarray.cmt
 lib/ocaml/stdlib__bigarray.cmti
