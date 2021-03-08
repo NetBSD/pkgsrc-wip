@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2020/12/08 08:53:16 he Exp $
+# $NetBSD: Makefile,v 1.141 2020/12/26 08:36:18 nia Exp $
 
 .include "Makefile.common"
 
@@ -51,7 +51,8 @@ PLIST.ocaml-prof=	yes
 # XXX This conditional is not complete.  It should match the
 # conditional in ocaml-x.y.z/configure.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "aarch64") || (${MACHINE_ARCH} == "powerpc")
+    (${MACHINE_ARCH} == "aarch64") || (${MACHINE_ARCH} == "powerpc") || \
+    !empty(MACHINE_ARCH:Mearm*)
 .  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
       !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
       !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
@@ -92,11 +93,6 @@ EXTRA_RT_LIBS.NetBSD=	-lcurses
 EXTRA_RT_LIBS.*=
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
-
-.if defined(PLIST.instrumented_runtime)
-REPLACE_BASH+=		tools/ocaml-instr-graph
-REPLACE_AWK+=		tools/ocaml-instr-report
-.endif
 
 do-test:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} ${TEST_PROGRAM}

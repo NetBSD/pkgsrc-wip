@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.12 2020/12/09 10:33:04 jaapb Exp $
 
 Honor LDFLAGS.
 

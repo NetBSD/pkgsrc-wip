@@ -1,25 +1,29 @@
 #!@SH@
+#
+# $NetBSD: wrapper.sh,v 1.5 2021/01/12 11:19:17 jperkin Exp $
 
-# $NetBSD: wrapper.sh,v 1.3 2016/02/29 13:51:28 jperkin Exp $
-
-BINDIR='@OCAML_PREFIX@'
 CFLAGS='@CFLAGS@'
 LDFLAGS='@LDFLAGS@'
 WRAPPEE='@WRAPPEE@'
 
-if echo "$@" | grep ' -c ' >/dev/null || [ "${WRAPPEE}" = "ocamlmklib" ]; then
-	flags="${CFLAGS}"
-else
-	flags="${CFLAGS} ${LDFLAGS}"
-fi
-
-for f in ${flags}
-do
-	MLFLAGS="${MLFLAGS} -ccopt ${f}"
+for flag in ${CFLAGS}; do
+	cflags="${cflags} -ccopt ${flag}"
+done
+for flag in ${LDFLAGS}; do
+	cldflags="${cldflags} -ccopt ${flag}"
+	ldflags="${ldflags} -ldopt ${flag}"
 done
 
-if [ "${WRAPPEE}" = "ocamlmklib" ]; then
-	MLFLAGS="${MLFLAGS} ${LDFLAGS}"
-fi
+case "${WRAPPEE} $@" in
+ocamlmklib*)
+	MLFLAGS="${cflags} ${ldflags}"
+	;;
+*" -c "*)
+	MLFLAGS="${cflags}"
+	;;
+*)
+	MLFLAGS="${cflags} ${cldflags}"
+	;;
+esac
 
 exec "@OCAML_PREFIX@/bin/${WRAPPEE}" ${MLFLAGS} "$@"

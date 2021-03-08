@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-tools_ocamlmklib.ml,v 1.1 2020/12/09 10:33:04 jaapb Exp $
 
 Add ELF mode support to ocamlmklib
 

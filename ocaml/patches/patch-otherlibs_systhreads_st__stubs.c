@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-otherlibs_systhreads_st__stubs.c,v 1.4 2020/12/09 10:33:04 jaapb Exp $
 
 Make the POSIX sigwait visible on SmartOS
 

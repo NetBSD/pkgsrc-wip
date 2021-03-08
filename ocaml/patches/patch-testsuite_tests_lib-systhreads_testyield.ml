@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-testsuite_tests_lib-systhreads_testyield.ml,v 1.2 2020/12/09 10:33:04 jaapb Exp $
 
 On NetBSD, the "thread scheduler" appears to just schedule two
 threads out of 4 when all they in essence to is "yield", and not

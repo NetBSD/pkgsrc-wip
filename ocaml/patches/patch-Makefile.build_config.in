@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- Makefile.build_config.in.orig	2021-02-24 13:49:29.000000000 +0000
++++ Makefile.build_config.in
+@@ -20,9 +20,9 @@
+ # $(ROOTDIR) has been defined.
+ 
+ include $(ROOTDIR)/Makefile.config
+-INSTALL ?= @INSTALL@
+-INSTALL_DATA ?= @INSTALL_DATA@
+-INSTALL_PROG ?= @INSTALL_PROGRAM@
++INSTALL ?= $(BSD_INSTALL)
++INSTALL_DATA ?= $(BSD_INSTALL_DATA)
++INSTALL_PROG ?= $(BSD_INSTALL_SCRIPT)
+ 
+ # The command to generate C dependency information
+ DEP_CC=@DEP_CC@ -MM

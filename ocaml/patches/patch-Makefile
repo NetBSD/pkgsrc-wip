@@ -1,11 +1,8 @@
 $NetBSD$
 
-Use BSD_INSTALL_* instead of mkdir
-Honor LDFLAGS
-
---- Makefile.orig	2020-09-01 12:47:58.000000000 +0000
+--- Makefile.orig	2021-02-24 13:49:29.000000000 +0000
 +++ Makefile
-@@ -61,7 +61,7 @@ INCLUDES=-I utils -I parsing -I typing -
+@@ -45,7 +45,7 @@ INCLUDES=-I utils -I parsing -I typing -
  COMPFLAGS=-strict-sequence -principal -absname -w +a-4-9-40-41-42-44-45-48-66 \
  	  -warn-error A \
            -bin-annot -safe-string -strict-formats $(INCLUDES)
@@ -14,7 +11,15 @@ Honor LDFLAGS
  
  ifeq "$(strip $(NATDYNLINKOPTS))" ""
  OCAML_NATDYNLINKOPTS=
-@@ -351,10 +351,10 @@ endif
+@@ -341,17 +341,17 @@ ifneq "$(filter-out mingw,$(TOOLCHAIN))"
+     "$(INSTALL_BINDIR)/"
+ endif
+ 	if test -n "$(wildcard flexdll/flexdll_*.$(O))" ; then \
+-	  $(MKDIR) "$(INSTALL_FLEXDLLDIR)" ; \
++	  $(BSD_INSTALL_LIB_DIR) "$(INSTALL_FLEXDLLDIR)" ; \
+ 	  $(INSTALL_DATA) flexdll/flexdll_*.$(O) "$(INSTALL_FLEXDLLDIR)" ; \
+ 	fi
+ 
  # Installation
  .PHONY: install
  install:
@@ -26,10 +31,10 @@ Honor LDFLAGS
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_LIBDIR)"
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_STUBLIBDIR)"
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_COMPLIBDIR)"
- 	$(INSTALL_DATA) \
- 	  VERSION \
- 	  "$(INSTALL_LIBDIR)"
-@@ -408,7 +408,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
+ 	$(MAKE) -C runtime install
+ 	$(INSTALL_PROG) ocaml$(EXE) "$(INSTALL_BINDIR)"
+ ifeq "$(INSTALL_BYTECODE_PROGRAMS)" "true"
+@@ -403,7 +403,7 @@ ifeq "$(INSTALL_SOURCE_ARTIFACTS)" "true
  endif
  	$(MAKE) -C tools install
  ifeq "$(UNIX_OR_WIN32)" "unix" # Install manual pages only on Unix

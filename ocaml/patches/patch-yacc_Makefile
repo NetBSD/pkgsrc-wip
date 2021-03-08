@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-yacc_Makefile,v 1.6 2020/12/09 10:33:04 jaapb Exp $
 
 Honor LDFLAGS when building ocamlyacc.
 

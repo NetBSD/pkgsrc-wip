@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/09/08 09:12:44 jaapb Exp $
+# $NetBSD: options.mk,v 1.5 2020/12/09 10:33:04 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml
 PKG_SUPPORTED_OPTIONS=	pic flambda spacetime
