@@ -102,7 +102,7 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		icu_use_data_file=false
 GN_ARGS+=	extra_cxxflags="-I${BUILDLINK_DIR}/include \
 			-I${BUILDLINK_DIR}/include/glib \
-			-I${BUILDLINK_DIR}/include/nss/nss" \
+			-I${BUILDLINK_DIR}/include/nss" \
 		extra_ldflags="-L${PREFIX}/lib \
 			-L${X11BASE}/lib \
 			${COMPILER_RPATH_FLAG}${PREFIX}/lib \

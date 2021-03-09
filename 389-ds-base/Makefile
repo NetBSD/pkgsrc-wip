@@ -24,8 +24,8 @@ CONFIGURE_ARGS+=	--with-sasl=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nspr
 CFLAGS+=		-I${BUILDLINK_DIR}/include/nspr
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nss/nss
-CFLAGS+=		-I${BUILDLINK_DIR}/include/nss/nss
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include/nss
+CFLAGS+=		-I${BUILDLINK_DIR}/include/nss
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/ldap
 CFLAGS+=		-I${BUILDLINK_DIR}/include/ldap
 
