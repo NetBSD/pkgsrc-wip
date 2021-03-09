@@ -84,6 +84,7 @@ SUBDIR+=	acpiclient
 SUBDIR+=	acpid
 SUBDIR+=	actor-framework
 SUBDIR+=	ad2vcf
+SUBDIR+=	ada_xmlada
 SUBDIR+=	adamem
 SUBDIR+=	adept
 SUBDIR+=	adguardhome
