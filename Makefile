@@ -2523,7 +2523,6 @@ SUBDIR+=	nsm
 SUBDIR+=	nsp
 SUBDIR+=	nspluginwrapper
 SUBDIR+=	nspr-hg
-SUBDIR+=	nss-hg
 SUBDIR+=	nss-pam-ldapd
 SUBDIR+=	ntimed-git
 SUBDIR+=	nuget-git
