@@ -1,0 +1,7 @@
+The template provider exposes resources to template files.
+
+Note: This provider has been archived. Please use the `templatefile` function
+or the `Cloudinit` provider instead. See documentation for more details.
+
+This package is provided for code that has not yet been updated to use the
+`templatefile` function.
