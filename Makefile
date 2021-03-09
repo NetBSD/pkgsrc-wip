@@ -5335,6 +5335,7 @@ SUBDIR+=	terminology
 SUBDIR+=	termit
 SUBDIR+=	terraform013
 SUBDIR+=	terraform014
+SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	tesseract-game
 SUBDIR+=	tesseract-game-svn
