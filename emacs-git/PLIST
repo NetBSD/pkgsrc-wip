@@ -938,6 +938,7 @@ share/emacs/${PKGVERSION}/etc/themes/light-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/manoj-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/misterioso-theme.el
 share/emacs/${PKGVERSION}/etc/themes/modus-operandi-theme.el
+share/emacs/${PKGVERSION}/etc/themes/modus-themes.el
 share/emacs/${PKGVERSION}/etc/themes/modus-vivendi-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-theme.el
@@ -2877,6 +2878,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-fuse.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-fuse.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-integration.el.gz
@@ -2888,6 +2891,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-sshfs.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-sshfs.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-sudoedit.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-sudoedit.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-uu.el.gz
