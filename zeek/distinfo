@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (zeek-4.0.0.tar.gz) = 6d1a1165dd6d6bd5e5097b673ac68890c2cf48b1
+RMD160 (zeek-4.0.0.tar.gz) = 2b1d815cccfeda88b59886d87ac6e3a43b29a808
+SHA512 (zeek-4.0.0.tar.gz) = 072ec9ca541f60619e9e214594bef3fdacb546140cdf7f80e85aa69cc783c9dd4a7b54af85be713645419522a453cc4a32bc3d29579d15156f625d239ce66c5b
+Size (zeek-4.0.0.tar.gz) = 29441929 bytes
+SHA1 (patch-CMakeLists.txt) = 57c7903177fed5f6d20d4ddfbbc17e062f7314a9
+SHA1 (patch-auxil_zeekctl_CMakeLists.txt) = 2c900f6b6dbea0d8662e92fdb30463fcf82ebdec

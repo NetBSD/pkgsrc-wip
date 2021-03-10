@@ -1,0 +1,5 @@
+Zeek is a passive, open-source network traffic analyzer. Many
+operators use Zeek as a network security monitor (NSM) to support
+investigations of suspicious or malicious activity. Zeek also supports
+a wide range of traffic analysis tasks beyond the security domain,
+including performance measurement and troubleshooting.

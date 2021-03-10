@@ -5878,6 +5878,7 @@ SUBDIR+=	zabbix52-server
 SUBDIR+=	zapping
 SUBDIR+=	zbackup
 SUBDIR+=	zdbsp
+SUBDIR+=	zeek
 SUBDIR+=	zenity
 SUBDIR+=	zero-epwing-git
 SUBDIR+=	zetacoin

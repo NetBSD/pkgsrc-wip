@@ -1,0 +1,25 @@
+$NetBSD$
+
+Install configuration files under share/examples.
+
+--- auxil/zeekctl/CMakeLists.txt.orig	2021-03-01 20:17:26.000000000 +0000
++++ auxil/zeekctl/CMakeLists.txt
+@@ -255,15 +255,15 @@ endif ()
+ 
+ InstallPackageConfigFile(
+     ${CMAKE_CURRENT_BINARY_DIR}/etc/zeekctl.cfg
+-    ${ETC}
++    @EGDIR@
+     zeekctl.cfg)
+ InstallPackageConfigFile(
+     ${CMAKE_CURRENT_SOURCE_DIR}/etc/networks.cfg
+-    ${ETC}
++    @EGDIR@
+     networks.cfg)
+ InstallPackageConfigFile(
+     ${CMAKE_CURRENT_SOURCE_DIR}/etc/node.cfg
+-    ${ETC}
++    @EGDIR@
+     node.cfg)
+ 
+ # Install legacy BroControl wrappers and links.

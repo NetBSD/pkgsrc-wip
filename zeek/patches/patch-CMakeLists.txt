@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install configuration files under share/examples.
+
+--- CMakeLists.txt.orig	2021-03-01 20:17:26.000000000 +0000
++++ CMakeLists.txt
+@@ -556,7 +556,7 @@ if ( INSTALL_ZKG )
+ 
+     install(DIRECTORY DESTINATION var/lib/zkg)
+     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/zkg-config
+-        DESTINATION ${ZEEK_ZKG_CONFIG_DIR} RENAME config)
++        DESTINATION @EGDIR@/zkg RENAME config)
+ endif ()
+ 
+ ########################################################################
