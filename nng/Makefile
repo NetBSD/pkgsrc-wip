@@ -15,7 +15,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/nng-1.4.0
 USE_CMAKE=	yes
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c99 c++
 
 .include "options.mk"
 
