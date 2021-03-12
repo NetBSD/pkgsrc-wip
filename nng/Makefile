@@ -17,4 +17,6 @@ WRKSRC=		${WRKDIR}/nng-1.4.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
