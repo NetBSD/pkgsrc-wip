@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# Azure Storage Blobs client library for Python
+Azure Blob storage is Microsoft's object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data, such as text or binary data.
+
+Blob storage is ideal for:
+
+* Serving images or documents directly to a browser
+* Storing files for distributed access
+* Streaming video and audio
+* Storing data for backup and restore, disaster recovery, and archiving
+* Storing data for analysis by an on-premises or Azure-hosted service
+
+[Source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/storage/azure-storage-blob/azure/storage/blob) | [Package (PyPI)](https://pypi.org/project/azure-storage-blob/) | [API reference documentation](https://aka.ms/azsdk-python-storage-blob-ref) | [Product documentation](https://docs.microsoft.com/azure/storage/) | [Samples](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/storage/azure-storage-blob/samples)
+
+
+## Getting started
+
+### Prerequisites
+* Python 2.7, or 3.5 or later is required to use this package.
+* You must have an [Azure subscription](https://azure.microsoft.com/free/) and an
+[Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-account-overview) to use this package.
+...
