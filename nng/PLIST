@@ -38,7 +38,10 @@ lib/cmake/nng/nng-config-version.cmake
 lib/cmake/nng/nng-config.cmake
 lib/cmake/nng/nng-targets-noconfig.cmake
 lib/cmake/nng/nng-targets.cmake
-lib/libnng.a
+${PLIST.static}lib/libnng.a
+${PLIST.shared}lib/libnng.so
+${PLIST.shared}lib/libnng.so.1
+${PLIST.shared}lib/libnng.so.${PKGVERSION}
 ${PLIST.doc}man/man1/nngcat.1
 ${PLIST.doc}man/man3/libnng.3
 ${PLIST.doc}man/man3/nng_aio_abort.3
