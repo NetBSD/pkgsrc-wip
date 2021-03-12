@@ -3262,6 +3262,7 @@ SUBDIR+=	py-applpy
 SUBDIR+=	py-apscheduler
 SUBDIR+=	py-aqopa
 SUBDIR+=	py-arabic
+SUBDIR+=	py-arabic-reshaper
 SUBDIR+=	py-arabic-stopwords
 SUBDIR+=	py-arabic-text-quote
 SUBDIR+=	py-archan
