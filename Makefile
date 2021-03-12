@@ -1061,6 +1061,7 @@ SUBDIR+=	geant
 SUBDIR+=	gecode
 SUBDIR+=	geekcode
 SUBDIR+=	gemma
+SUBDIR+=	generand
 SUBDIR+=	geners
 SUBDIR+=	genus2reduction
 SUBDIR+=	geoloc
