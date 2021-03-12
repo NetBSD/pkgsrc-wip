@@ -2500,7 +2500,6 @@ SUBDIR+=	nix
 SUBDIR+=	nlohmann-json
 SUBDIR+=	nlopt
 SUBDIR+=	nltk_data
-SUBDIR+=	nng
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
 SUBDIR+=	nodm
