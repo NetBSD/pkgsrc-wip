@@ -3040,7 +3040,6 @@ SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine
 SUBDIR+=	phoronix-test-suite
 SUBDIR+=	php-ast
-SUBDIR+=	php-base58
 SUBDIR+=	php-dotclear
 SUBDIR+=	php-imagick-imagick6
 SUBDIR+=	php-libawl-git
