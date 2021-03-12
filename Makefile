@@ -4749,6 +4749,7 @@ SUBDIR+=	py-wsaccel
 SUBDIR+=	py-wsgi-intercep
 SUBDIR+=	py-wsgi-intercept
 SUBDIR+=	py-wsgiref
+SUBDIR+=	py-wurst
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xapp
 SUBDIR+=	py-xcal-raman
