@@ -4471,6 +4471,7 @@ SUBDIR+=	py-simulators
 SUBDIR+=	py-singletonify
 SUBDIR+=	py-sipvicious
 SUBDIR+=	py-sleekxmpp
+SUBDIR+=	py-smart-open
 SUBDIR+=	py-smcp
 SUBDIR+=	py-smell
 SUBDIR+=	py-smi
