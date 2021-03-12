@@ -4515,6 +4515,7 @@ SUBDIR+=	py-sqlalchemy-stubs
 SUBDIR+=	py-sqlitedict
 SUBDIR+=	py-squarify
 SUBDIR+=	py-srpy
+SUBDIR+=	py-srsly
 SUBDIR+=	py-ssh2
 SUBDIR+=	py-ssp
 SUBDIR+=	py-stache
