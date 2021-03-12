@@ -3313,6 +3313,7 @@ SUBDIR+=	py-autokey
 SUBDIR+=	py-automata
 SUBDIR+=	py-avocado-framework
 SUBDIR+=	py-awesome-slugify
+SUBDIR+=	py-azure-storage-blob
 SUBDIR+=	py-azure-common
 SUBDIR+=	py-azure-core
 SUBDIR+=	py-b3j0f.aop
