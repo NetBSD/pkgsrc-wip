@@ -1,2 +1,0 @@
-- Double-check if all other dependencies are already provided by perl5,
-  otherwise add them to DEPENDS.
