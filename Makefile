@@ -3045,7 +3045,6 @@ SUBDIR+=	php-dotclear
 SUBDIR+=	php-imagick-imagick6
 SUBDIR+=	php-libawl-git
 SUBDIR+=	php-malware-finder
-SUBDIR+=	php-msgpack
 SUBDIR+=	php-redis5
 SUBDIR+=	php-snuffleupagus
 SUBDIR+=	php-tclink
