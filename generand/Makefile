@@ -5,10 +5,10 @@
 #              Fri Mar 12 15:04:43 CST 2021               #
 ###########################################################
 
-DISTNAME=	generand-0.1.2
+DISTNAME=	generand-0.1.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	4cb7b8a10ceb3947e85ea5998440ab79a1405641
+GITHUB_TAG=	477de381def21c4132595f1c346eae3c3557dd4c
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/generand
