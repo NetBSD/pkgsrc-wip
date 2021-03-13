@@ -3089,6 +3089,7 @@ SUBDIR+=	pinball
 SUBDIR+=	pinentry-dmenu
 SUBDIR+=	pinkpony
 SUBDIR+=	pioneer
+SUBDIR+=	pipe-viewer
 SUBDIR+=	pipes-c
 SUBDIR+=	piranha
 SUBDIR+=	piwik
