@@ -116,6 +116,9 @@ ${PYSITELIB}/pre_commit/languages/pygrep.pyo
 ${PYSITELIB}/pre_commit/languages/python.py
 ${PYSITELIB}/pre_commit/languages/python.pyc
 ${PYSITELIB}/pre_commit/languages/python.pyo
+${PYSITELIB}/pre_commit/languages/r.py
+${PYSITELIB}/pre_commit/languages/r.pyc
+${PYSITELIB}/pre_commit/languages/r.pyo
 ${PYSITELIB}/pre_commit/languages/ruby.py
 ${PYSITELIB}/pre_commit/languages/ruby.pyc
 ${PYSITELIB}/pre_commit/languages/ruby.pyo
@@ -176,6 +179,7 @@ ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
 ${PYSITELIB}/pre_commit/resources/empty_template_package.json
 ${PYSITELIB}/pre_commit/resources/empty_template_pre_commit_dummy_package.gemspec
+${PYSITELIB}/pre_commit/resources/empty_template_renv.lock
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.py
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyc
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyo
