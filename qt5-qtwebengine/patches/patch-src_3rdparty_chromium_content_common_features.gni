@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- src/3rdparty/chromium/content/common/features.gni.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/content/common/features.gni
+@@ -15,4 +15,4 @@ declare_args() {
+   enable_web_auth = !is_android
+ }
+ 
+-enable_screen_capture = is_linux || is_mac || is_win || is_android
++enable_screen_capture = is_linux || is_mac || is_win || is_android || is_bsd

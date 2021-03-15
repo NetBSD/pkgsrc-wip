@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/3rdparty/chromium/components/exo/BUILD.gn.orig	2020-07-15 18:56:46.000000000 +0000
++++ src/3rdparty/chromium/components/exo/BUILD.gn
+@@ -296,7 +296,7 @@ test("exo_unittests") {
+ 
+   data_deps = []
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//components/exo/wayland:unit_tests" ]
+   }
+ 

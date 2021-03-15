@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/3rdparty/chromium/ui/events/ozone/BUILD.gn.orig	2020-07-15 18:56:34.000000000 +0000
++++ src/3rdparty/chromium/ui/events/ozone/BUILD.gn
+@@ -70,7 +70,7 @@ source_set("unittests") {
+     sources += [ "chromeos/cursor_controller_unittest.cc" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     deps += [ "//ui/events/ozone/evdev:unittests" ]
+   }
+ }

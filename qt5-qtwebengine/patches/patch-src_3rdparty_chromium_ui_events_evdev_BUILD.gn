@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/3rdparty/chromium/ui/events/ozone/evdev/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
++++ src/3rdparty/chromium/ui/events/ozone/evdev/BUILD.gn
+@@ -6,7 +6,7 @@ import("//build/config/chromeos/args.gni
+ import("//build/config/linux/pkg_config.gni")
+ import("//build/config/ui.gni")
+ 
+-assert(use_ozone && is_linux)
++assert(use_ozone && (is_linux || is_bsd))
+ 
+ visibility = [ ":*" ]
+ 
