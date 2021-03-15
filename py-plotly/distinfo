@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (plotly-4.8.1.tar.gz) = 80f80d0223d5cc73397ba054c1c0a8e2cbd60c1f
-RMD160 (plotly-4.8.1.tar.gz) = 459f10083666418479def0d23c9c95e957bff19f
-SHA512 (plotly-4.8.1.tar.gz) = e7012a9c20e24c2a89edcf6e5c5d0e43284ea5e292789a62f51b55226d3739fcbc4e10b5adbf7f021f5c918e40bd77abb3db296d0a6f507e9c18484a903aced3
-Size (plotly-4.8.1.tar.gz) = 5509106 bytes
+SHA1 (plotly-4.14.3.tar.gz) = f6bd1d64235d7be501c2a53afcbe46e6cad8575f
+RMD160 (plotly-4.14.3.tar.gz) = b75cf28a805f57fa869495e90bc787ed04c22ae2
+SHA512 (plotly-4.14.3.tar.gz) = 7d8db7a0f6c1abeda1b222f9bd25e4395dd8d14d246ad986960868a8083e4f1d1f600d84f44416eb1d089640d190192e931b5a5f6ae24e01cf8146c4cf8e80eb
+Size (plotly-4.14.3.tar.gz) = 6374650 bytes
