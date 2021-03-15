@@ -1,9 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	htop-2.2.0.20200227
+DISTNAME=	htop-3.0.5.20210315
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fraggerfox/}
-GITHUB_TAG=	37ccabf6ec2c62007b4353df01c74eb95c301825
+GITHUB_PROJECT=	htop-dev
+GITHUB_TAG=	cbadd9e42d0b3f67e630caa104a049d6007b521d
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org
@@ -16,17 +17,15 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	htop-[0-9]*
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoreconf autoconf automake gmake m4 pkg-config
+USE_TOOLS+=	autoreconf automake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_NCURSES=	yes # uses ncurses mouse definitions
 
-REPLACE_PYTHON+=	scripts/MakeHeader.py
-
 pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} autoreconf -vif
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./autogen.sh
 
-.include "../../lang/python/application.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -2,4 +2,5 @@
 bin/htop
 man/man1/htop.1
 share/applications/htop.desktop
+share/icons/hicolor/scalable/apps/htop.svg
 share/pixmaps/htop.png
