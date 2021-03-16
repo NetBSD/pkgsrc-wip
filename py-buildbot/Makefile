@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-migrate>=0.9:../../databases/py-sqlalchemy-m
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.9.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-txaio>=2.2.2:../../devel/py-txaio
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.1.1:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 TEST_DEPENDS+=	${PYPKGPREFIX}-jade-[0-9]*:../../textproc/py-jade
 TEST_DEPENDS+=	${PYPKGPREFIX}-lz4-[0-9]*:../../archivers/py-lz4
