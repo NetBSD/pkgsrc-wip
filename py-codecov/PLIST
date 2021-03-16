@@ -13,3 +13,6 @@ ${PYSITELIB}/codecov/__init__.pyo
 ${PYSITELIB}/codecov/__main__.py
 ${PYSITELIB}/codecov/__main__.pyc
 ${PYSITELIB}/codecov/__main__.pyo
+${PYSITELIB}/codecov/__version__.py
+${PYSITELIB}/codecov/__version__.pyc
+${PYSITELIB}/codecov/__version__.pyo
