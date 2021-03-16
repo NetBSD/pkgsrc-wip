@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/termshark
+share/doc/termshark/FAQ.md
+share/doc/termshark/UserGuide.md
