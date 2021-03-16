@@ -1030,6 +1030,9 @@ ${PYSITELIB}/buildbot/test/integration/test_notifier.pyo
 ${PYSITELIB}/buildbot/test/integration/test_process_botmaster.py
 ${PYSITELIB}/buildbot/test/integration/test_process_botmaster.pyc
 ${PYSITELIB}/buildbot/test/integration/test_process_botmaster.pyo
+${PYSITELIB}/buildbot/test/integration/test_setup_entrypoints.py
+${PYSITELIB}/buildbot/test/integration/test_setup_entrypoints.pyc
+${PYSITELIB}/buildbot/test/integration/test_setup_entrypoints.pyo
 ${PYSITELIB}/buildbot/test/integration/test_stop_build.py
 ${PYSITELIB}/buildbot/test/integration/test_stop_build.pyc
 ${PYSITELIB}/buildbot/test/integration/test_stop_build.pyo
