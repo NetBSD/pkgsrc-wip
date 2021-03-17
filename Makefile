@@ -1447,6 +1447,7 @@ SUBDIR+=	gxmms2
 SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	h8300-elf-gcc
+SUBDIR+=	hackernews-tui
 SUBDIR+=	hackgen-ttf
 SUBDIR+=	hackgennerd-ttf
 SUBDIR+=	haddock
