@@ -54,7 +54,7 @@ do-install:
 generate-frontend:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client ci
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client run build-prod
-	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz ${PKGNAME_NOREV}/build
+	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${DISTNAME:S,^v,,}/build
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
 .include "../../mk/bsd.prefs.mk"

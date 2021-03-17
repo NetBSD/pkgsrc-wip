@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 
-# PROVIDE: lldpd
+# PROVIDE: adguardhome
 # REQUIRE: DAEMON
 # BEFORE:  LOGIN
 
