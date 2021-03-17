@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.kmailtransport?=	../../wip/kmailtransport
 .include "../../wip/akonadi-mime/buildlink3.mk"
 .include "../../mail/ksmtp/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# KMAILTRANSPORT_BUILDLINK3_MK
 

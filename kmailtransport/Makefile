@@ -22,7 +22,7 @@ SUBST_FILES.fix-moc+=	_KDE_build/src/kmailtransport/plugins/smtp/CMakeFiles/mail
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
-.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../wip/akonadi-mime/buildlink3.mk"
 .include "../../wip/libkgapi/buildlink3.mk"
 .include "../../mail/ksmtp/buildlink3.mk"
