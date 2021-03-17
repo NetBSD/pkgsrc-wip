@@ -33,7 +33,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/akonadi/mysql-global-mobile.conf \
 		${PKG_SYSCONFDIR}/xdg/akonadi/mysql-global-mobile.conf
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../devel/kitemmodels/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
