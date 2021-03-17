@@ -36,16 +36,12 @@ lib/cmake/KF5AkonadiCalendar/KF5AkonadiCalendarTargets-noconfig.cmake
 lib/cmake/KF5AkonadiCalendar/KF5AkonadiCalendarTargets.cmake
 lib/libKF5AkonadiCalendar.so
 lib/libKF5AkonadiCalendar.so.5
-lib/libKF5AkonadiCalendar.so.5.8.0
+lib/libKF5AkonadiCalendar.so.5.14.1
 qt5/mkspecs/modules/qt_AkonadiCalendar.pri
 qt5/plugins/akonadi_serializer_kcalcore.so
 share/akonadi/plugins/serializer/akonadi_serializer_kcalcore.desktop
-share/examples/kde-xdg/akonadi-calendar.categories
-share/examples/kde-xdg/akonadi-calendar.renamecategories
 share/locale/ar/LC_MESSAGES/libakonadi-calendar5-serializer.mo
 share/locale/ar/LC_MESSAGES/libakonadi-calendar5.mo
-share/locale/ast/LC_MESSAGES/libakonadi-calendar5-serializer.mo
-share/locale/ast/LC_MESSAGES/libakonadi-calendar5.mo
 share/locale/bs/LC_MESSAGES/libakonadi-calendar5-serializer.mo
 share/locale/bs/LC_MESSAGES/libakonadi-calendar5.mo
 share/locale/ca/LC_MESSAGES/libakonadi-calendar5-serializer.mo
@@ -128,3 +124,5 @@ share/locale/zh_CN/LC_MESSAGES/libakonadi-calendar5-serializer.mo
 share/locale/zh_CN/LC_MESSAGES/libakonadi-calendar5.mo
 share/locale/zh_TW/LC_MESSAGES/libakonadi-calendar5-serializer.mo
 share/locale/zh_TW/LC_MESSAGES/libakonadi-calendar5.mo
+share/qlogging-categories5/akonadi-calendar.categories
+share/qlogging-categories5/akonadi-calendar.renamecategories
