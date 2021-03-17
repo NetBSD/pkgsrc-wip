@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../wip/akonadi/buildlink3.mk"
 .include "../../mail/kmime/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
