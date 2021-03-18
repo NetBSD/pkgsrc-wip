@@ -256,7 +256,6 @@ SUBDIR+=	bastard
 SUBDIR+=	bats-core
 SUBDIR+=	bcftools
 SUBDIR+=	beads
-SUBDIR+=	beanstalkd
 SUBDIR+=	beast
 SUBDIR+=	bedtools
 SUBDIR+=	beignet

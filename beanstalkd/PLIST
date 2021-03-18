@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/09 19:30:42 othyro Exp $
-bin/beanstalkd
-man/man1/beanstalkd.1
-share/doc/beanstalkd/protocol.txt
-share/examples/rc.d/beanstalkd
