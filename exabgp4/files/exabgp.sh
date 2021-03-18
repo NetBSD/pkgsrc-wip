@@ -17,9 +17,10 @@ pidfile="/var/run/${name}/${name}.pid"
 command_interpreter="@PYTHONBIN@"
 
 makepipe() {
+	mkdir -p /var/run/exabgp/
 	test -p /var/run/exabgp/exabgp.in || mkfifo /var/run/exabgp/exabgp.in
 	test -p /var/run/exabgp/exabgp.out || mkfifo /var/run/exabgp/exabgp.out
-	chown nobody /var/run/exabgp/exabgp.in /var/run/exabgp/exabgp.out
+	chown -RPh nobody /var/run/exabgp
 	chmod 600 /var/run/exabgp/exabgp.in /var/run/exabgp/exabgp.out
 }
 
