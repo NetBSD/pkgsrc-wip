@@ -1,15 +1,31 @@
 $NetBSD$
 
-static cast from a pointer to intptr_t is not allowed.
+data was intptr_t until NetBSD 9, then it switched to void * like every other operating system.
 
---- src/3rdparty/chromium/base/files/file_path_watcher_kqueue.cc.orig	2020-07-24 02:37:41.000000000 +0000
+--- src/3rdparty/chromium/base/files/file_path_watcher_kqueue.cc.orig	2020-11-07 01:22:36.000000000 +0000
 +++ src/3rdparty/chromium/base/files/file_path_watcher_kqueue.cc
-@@ -74,7 +74,7 @@ int FilePathWatcherKQueue::EventsForPath
+@@ -4,6 +4,15 @@
+ 
+ #include "base/files/file_path_watcher_kqueue.h"
+ 
++#ifdef __NetBSD__
++#include <sys/param.h>
++#if __NetBSD_Version__ < 999000000
++#define KEVENT_TYPE intptr_t
++#else
++#define KEVENT_TYPE void *
++#endif
++#endif
++
+ #include <fcntl.h>
+ #include <stddef.h>
+ #include <sys/param.h>
+@@ -74,7 +83,7 @@ int FilePathWatcherKQueue::EventsForPath
      struct kevent event;
      EV_SET(&event, fd, EVFILT_VNODE, (EV_ADD | EV_CLEAR | EV_RECEIPT),
             (NOTE_DELETE | NOTE_WRITE | NOTE_ATTRIB |
 -            NOTE_RENAME | NOTE_REVOKE | NOTE_EXTEND), 0, data);
-+            NOTE_RENAME | NOTE_REVOKE | NOTE_EXTEND), 0, reinterpret_cast<intptr_t>(data));
++            NOTE_RENAME | NOTE_REVOKE | NOTE_EXTEND), 0, reinterpret_cast<KEVENT_TYPE>(data));
      events->push_back(event);
    }
    return last_existing_entry;

@@ -20,6 +20,7 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 #TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 JPEG_ACCEPTED=	libjpeg-turbo
 
@@ -64,6 +65,8 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
@@ -90,7 +93,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 BUILDLINK_TRANSFORM+=   l:pci:pciutils
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+# needs libxml2 built with icu option, which is not default in pkgsrc
+#.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
