@@ -357,6 +357,7 @@ SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
+SUBDIR+=	calendarsupport
 SUBDIR+=	calibre
 SUBDIR+=	calypso-git
 SUBDIR+=	canna
