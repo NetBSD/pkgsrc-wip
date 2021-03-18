@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (python-telegram-bot-12.8.tar.gz) = 1dcbd133513c994fc6855e70e9f4d67f98a78e6f
-RMD160 (python-telegram-bot-12.8.tar.gz) = f25d46288c63c6c5cbb772f60a7ed746a58e4110
-SHA512 (python-telegram-bot-12.8.tar.gz) = a312b07624b03711c1193aeab35530829ae16935a94f1b71fa8b98f5ebadd36ed30c43a10fcf5a24fc2c402336026b3ab49ada53bbc1889b85a7f8c8522b4c81
-Size (python-telegram-bot-12.8.tar.gz) = 253585 bytes
+SHA1 (python-telegram-bot-13.4.1.tar.gz) = 73ccbcc53ee0d9e175789c455e5cfd98e43df34d
+RMD160 (python-telegram-bot-13.4.1.tar.gz) = 67d589db53d5db43dcb4d330f3ea61683a7b67e6
+SHA512 (python-telegram-bot-13.4.1.tar.gz) = 05aec803a22e4a38fa1aa2f259f6de457908e149388caec09eba4de8777872f6ee15819e817154bd253893cca5de6b5b8bd8f95fe2fbd2137720d00d611935d3
+Size (python-telegram-bot-13.4.1.tar.gz) = 305541 bytes
