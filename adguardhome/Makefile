@@ -3,17 +3,16 @@
 .include "go-modules.mk"
 
 GITHUB_PROJECT=	AdGuardHome
-GITHUB_TAG=	v0.104.3
-DISTNAME=	v0.104.3
+GITHUB_TAG=	v0.105.2
+DISTNAME=	v0.105.2
 PKGNAME=	adguardhome-${DISTNAME:S,^v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdguardTeam/}
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${GITHUB_PROJECT}
-PKGREVISION=	1
 
 FRONTEND=	${PKGNAME_NOREV}-frontend.tar.gz
-SITES.adguardhome-0.104.3-frontend.tar.gz=	https://cloud.krawczyk.it/
+SITES.adguardhome-0.105.2-frontend.tar.gz=	https://cloud.krawczyk.it/
 DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
 
 MAINTAINER=	bbartlomiej@gmail.com
@@ -33,16 +32,18 @@ USE_TOOLS+=	tar
 # package version by pkgsrc maintainer and only when those assets change. The
 # reason is if npm commands are run during the build doznes of npm packages
 # would get downloaded bypassing pkgsrc fetch model.
-#BUILD_DEPENDS+=	npm>=6.14:../../lang/npm
-#BUILD_DEPENDS+=	nodejs>=10.16:../../lang/nodejs
+#TOOL_DEPENDS+=	npm>=6.14:../../lang/npm
+#TOOL_DEPENDS+=	nodejs>=10.16:../../lang/nodejs
+#TOOL_DEPENDS+=	yarn>=1.22.5:../../devel/yarn
 
 INSTALLATION_DIRS+=	sbin libdata/adguardhome
 PKG_SYSCONFSUBDIR=	adguardhome
 RCD_SCRIPTS+=		adguardhome
 
 do-build:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} install github.com/gobuffalo/packr/packr
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} generate ./...
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build -ldflags="-s -w -X main.version=${DISTNAME:S,^v,,} -X main.channel=release -X main.goarm=${GOARM}"
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build -ldflags="-s -w -X github.com/AdguardTeam/AdGuardHome/internal/version.version=${DISTNAME:S,^v,,} -X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release -X github.com/AdGuardTeam/AdGuardHome/internal/version..goarm=${GOARM}"
 
 #pre-install:
 #	${RUN} ${RM} ${WRKDIR}/.destdir/usr/pkg/bin/packr
@@ -53,8 +54,10 @@ do-install:
 .PHONY: generate-frontend
 generate-frontend:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client ci
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn --cwd client2 install
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client run build-prod
-	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${DISTNAME:S,^v,,}/build
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn --cwd client2 build
+	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${DISTNAME:S,^v,,}/build AdGuardHome-${DISTNAME:S,^v,,}/build2
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
 .include "../../mk/bsd.prefs.mk"
