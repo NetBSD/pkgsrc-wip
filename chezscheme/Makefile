@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	ChezScheme
-VERSION=	9.5.2
+VERSION=	9.5.4
 PKGNAME=	${GITHUB_PROJECT:tl}-${VERSION}
 DISTNAME=	v${VERSION}
 CATEGORIES=	lang
@@ -10,16 +10,19 @@ GITHUB_TAG=	${DISTNAME}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 DISTFILES=	ChezScheme-${VERSION}.tar.gz \
 		zlib-1.2.11.tar.gz \
-		nanopass-framework-scheme-1.9.tar.gz \
-		stex-1.2.1.tar.gz
+		lz4-1.9.2.tar.gz \
+		nanopass-framework-scheme-1.9.1.tar.gz \
+		stex-1.2.2.tar.gz
 SITES.zlib-1.2.11.tar.gz= \
 		-https://github.com/madler/zlib/archive/v1.2.11.tar.gz
+SITES.lz4-1.9.2.tar.gz= \
+		-https://github.com/lz4/lz4/archive/v1.9.2.tar.gz
 SITES.ChezScheme-${VERSION}.tar.gz= \
 		-https://github.com/cisco/ChezScheme/archive/v${VERSION}.tar.gz
-SITES.nanopass-framework-scheme-1.9.tar.gz= \
-		-https://github.com/nanopass/nanopass-framework-scheme/archive/v1.9.tar.gz
-SITES.stex-1.2.1.tar.gz= \
-		-https://github.com/dybvig/stex/archive/v1.2.1.tar.gz
+SITES.nanopass-framework-scheme-1.9.1.tar.gz= \
+		-https://github.com/nanopass/nanopass-framework-scheme/archive/v1.9.1.tar.gz
+SITES.stex-1.2.2.tar.gz= \
+		-https://github.com/dybvig/stex/archive/v1.2.2.tar.gz
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://cisco.github.io/ChezScheme/
@@ -34,9 +37,10 @@ USE_LANGUAGES+=	c
 .include "options.mk"
 
 pre-configure:
-	cd ${WRKSRC} && rmdir stex && mv ../stex-1.2.1 stex && \
+	cd ${WRKSRC} && rmdir stex && mv ../stex-1.2.2 stex && \
 		        rmdir zlib && mv ../zlib-1.2.11 zlib &&  \
-			rmdir nanopass && mv ../nanopass-framework-scheme-1.9 nanopass
+		        rmdir lz4 && mv ../lz4-1.9.2 lz4 &&  \
+			rmdir nanopass && mv ../nanopass-framework-scheme-1.9.1 nanopass
 do-configure:
 	cd ${WRKSRC} && ./configure ${CONFIGURE_ARGS} \
                                     --installprefix=${PREFIX} \
