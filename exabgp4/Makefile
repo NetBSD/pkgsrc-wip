@@ -3,7 +3,7 @@
 VERSION=		4.2.11
 DISTNAME=		${VERSION}
 PKGNAME=		exabgp4-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 EGG_NAME=		exabgp-${VERSION}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Exa-Networks/exabgp/archive/}
@@ -64,11 +64,10 @@ USE_LANGUAGES=		# none
 
 RCD_SCRIPTS+=		exabgp
 
-# TODO copying of these files fails during binary installation,
-# because /usr/pkg/etc/exabgp does not exist, don't know how to fix
+PKG_SYSCONFSUBDIR=	exabgp
 CONF_FILES+=		${PREFIX}/share/examples/exabgp/exabgp.env ${PREFIX}/etc/exabgp/exabgp.env
 
-INSTALLATION_DIRS+=	share/exabgp share/examples/exabgp bin etc/exabgp
+INSTALLATION_DIRS+=	share/exabgp share/examples/exabgp bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 FILES_SUBST+=		PYTHONBIN=${PYTHONBIN}
