@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (conan-1.33.1.tar.gz) = fd86227ffdabd1858f3df3dcc2674a00192a2a1d
-RMD160 (conan-1.33.1.tar.gz) = 8c4555c212350b6bfd7745364eebb7dfc32fcae4
-SHA512 (conan-1.33.1.tar.gz) = 944af93fa6b39ac53f0a4532f350aabc8b853f296007865b3dc7de69b822c1640c8f591b7dae9cc14323abef2c7f83fc69ddc610509aeba2361a7e2570bb3370
-Size (conan-1.33.1.tar.gz) = 639961 bytes
+SHA1 (conan-1.34.1.tar.gz) = 885ea4f486a5ce18e3b272514afbe9e0888e1985
+RMD160 (conan-1.34.1.tar.gz) = 18e771837fb0e681ea7b3d9e20ce04f8a736e54b
+SHA512 (conan-1.34.1.tar.gz) = f1edc6083de2ba52a3026a887ead82b422d3afd0507c92e6c1ed9f38b9e0e9ffe22576c1c694bd65d19b6f7b7c6e4e8b43d5c73d522ede1daf5516fd71a3e732
+Size (conan-1.34.1.tar.gz) = 647840 bytes
 SHA1 (patch-conans_requirements.txt) = 9b36cf98a592be64ed30adfe3838caf82483b539

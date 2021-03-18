@@ -14,6 +14,9 @@ ${PYSITELIB}/conan/__init__.pyo
 ${PYSITELIB}/conan/tools/__init__.py
 ${PYSITELIB}/conan/tools/__init__.pyc
 ${PYSITELIB}/conan/tools/__init__.pyo
+${PYSITELIB}/conan/tools/_compilers.py
+${PYSITELIB}/conan/tools/_compilers.pyc
+${PYSITELIB}/conan/tools/_compilers.pyo
 ${PYSITELIB}/conan/tools/cmake/__init__.py
 ${PYSITELIB}/conan/tools/cmake/__init__.pyc
 ${PYSITELIB}/conan/tools/cmake/__init__.pyo
@@ -77,9 +80,9 @@ ${PYSITELIB}/conan/tools/qbs/__init__.pyo
 ${PYSITELIB}/conan/tools/qbs/qbs.py
 ${PYSITELIB}/conan/tools/qbs/qbs.pyc
 ${PYSITELIB}/conan/tools/qbs/qbs.pyo
-${PYSITELIB}/conan/tools/qbs/qbstoolchain.py
-${PYSITELIB}/conan/tools/qbs/qbstoolchain.pyc
-${PYSITELIB}/conan/tools/qbs/qbstoolchain.pyo
+${PYSITELIB}/conan/tools/qbs/qbsprofile.py
+${PYSITELIB}/conan/tools/qbs/qbsprofile.pyc
+${PYSITELIB}/conan/tools/qbs/qbsprofile.pyo
 ${PYSITELIB}/conans/__init__.py
 ${PYSITELIB}/conans/__init__.pyc
 ${PYSITELIB}/conans/__init__.pyo
@@ -602,6 +605,9 @@ ${PYSITELIB}/conans/model/info.pyo
 ${PYSITELIB}/conans/model/layout.py
 ${PYSITELIB}/conans/model/layout.pyc
 ${PYSITELIB}/conans/model/layout.pyo
+${PYSITELIB}/conans/model/lock_bundle.py
+${PYSITELIB}/conans/model/lock_bundle.pyc
+${PYSITELIB}/conans/model/lock_bundle.pyo
 ${PYSITELIB}/conans/model/manifest.py
 ${PYSITELIB}/conans/model/manifest.pyc
 ${PYSITELIB}/conans/model/manifest.pyo
@@ -845,9 +851,6 @@ ${PYSITELIB}/conans/test/utils/__init__.pyo
 ${PYSITELIB}/conans/test/utils/conan_v2_tests.py
 ${PYSITELIB}/conans/test/utils/conan_v2_tests.pyc
 ${PYSITELIB}/conans/test/utils/conan_v2_tests.pyo
-${PYSITELIB}/conans/test/utils/deprecation.py
-${PYSITELIB}/conans/test/utils/deprecation.pyc
-${PYSITELIB}/conans/test/utils/deprecation.pyo
 ${PYSITELIB}/conans/test/utils/mocks.py
 ${PYSITELIB}/conans/test/utils/mocks.pyc
 ${PYSITELIB}/conans/test/utils/mocks.pyo
