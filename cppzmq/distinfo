@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cppzmq-4.6.0.tar.gz) = 4acd8eb109c1a0a0f7cea3aa34c3585e555ca929
-RMD160 (cppzmq-4.6.0.tar.gz) = 7bc3a08a64956b1d4c25868945a88c21aa6cd02a
-SHA512 (cppzmq-4.6.0.tar.gz) = f30b37c970790de2684086638084e65310396072c1c1d00415c9a36b7ef6d79fe500ce174fddab699a602a80341e2fb7f309dec2eb96252531b5ca5cf7ac5027
-Size (cppzmq-4.6.0.tar.gz) = 35078 bytes
+SHA1 (cppzmq-4.7.1.tar.gz) = e0058a5061cf85f5beb51e7b722ddb3877aef3fb
+RMD160 (cppzmq-4.7.1.tar.gz) = ff810bfadfe8533a3171d3ba4d0b327f63245aa2
+SHA512 (cppzmq-4.7.1.tar.gz) = b919db5d82997f718b6e2921f0bf3eb2a5dde227a9510aca3dc4f95479c6b5564f535c31b5ec441b7ee9f441bcbd6043f00f6f4a5ac3ff08e770853f41c217f9
+Size (cppzmq-4.7.1.tar.gz) = 46075 bytes
