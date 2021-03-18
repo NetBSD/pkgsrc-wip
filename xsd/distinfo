@@ -1,0 +1,10 @@
+$NetBSD$
+
+SHA1 (xsd-4.0.0+dep.tar.bz2) = ad3de699eb140e747a0a214462d95fc81a21b494
+RMD160 (xsd-4.0.0+dep.tar.bz2) = d1af702e6feb7216e04c2f30173311e2d4629313
+SHA512 (xsd-4.0.0+dep.tar.bz2) = 1b7f5f7a50007e0c739e23c46cf34657845038c3c58f2da4f9978a9486a30674d829e4dfe428af32669207af79375eb8d413ac471c4ffd1c2bc842411f454ae9
+Size (xsd-4.0.0+dep.tar.bz2) = 1642625 bytes
+SHA1 (patch-libxsd-frontend_xsd-frontend_semantic-graph_elements.cxx) = a4af6f1f10167577df591edc252a48c228979a43
+SHA1 (patch-makefile) = 3cb05bb13407f44e946990cc67cc07f246dd4092
+SHA1 (patch-xsd_doc_xsd.1) = 59d0669bf94b2ef214ef51ca3b662f539ce1e580
+SHA1 (patch-xsd_doc_xsd.xhtml) = bab92d4bb3075321e157fb575896991fc19bd460

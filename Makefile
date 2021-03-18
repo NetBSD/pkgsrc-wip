@@ -5844,6 +5844,7 @@ SUBDIR+=	xpipe
 SUBDIR+=	xplore
 SUBDIR+=	xplugd
 SUBDIR+=	xrdp
+SUBDIR+=	xsd
 SUBDIR+=	xsnow
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
