@@ -14,6 +14,7 @@ LICENSE=		gnu-gpl-v2
 USE_TOOLS+=		bash gmake gm4
 USE_LANGUAGES+=		c c++
 MAKE_FILE=		makefile
+MAKE_FLAGS+=		EXTERNAL_LIBCUTL=y
 INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	install_man_dir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
@@ -22,5 +23,6 @@ post-install:
 	mv ${DESTDIR}${PREFIX}/bin/xsd ${DESTDIR}${PREFIX}/bin/xsdcxx
 	mv ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xsd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xsdcxx.1
 
+.include "../../wip/libcutl/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
