@@ -64,6 +64,8 @@ USE_LANGUAGES=		# none
 
 RCD_SCRIPTS+=		exabgp
 
+# TODO copying of these files fails during binary installation,
+# because /usr/pkg/etc/exabgp does not exist, don't know how to fix
 CONF_FILES+=		${PREFIX}/share/examples/exabgp/exabgp.env ${PREFIX}/etc/exabgp/exabgp.env
 
 INSTALLATION_DIRS+=	share/exabgp share/examples/exabgp bin etc/exabgp
