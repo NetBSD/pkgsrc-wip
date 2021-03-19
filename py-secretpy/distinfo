@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2021/03/04 10:20:48 leot Exp $
+
+SHA1 (secretpy-0.10.0.tar.gz) = cce321ddd708eeda98e964eb7a4523699211e4c7
+RMD160 (secretpy-0.10.0.tar.gz) = ac54032ce950fe23b22e4fc6c1ee78e3295da074
+SHA512 (secretpy-0.10.0.tar.gz) = d0c09c60b0f6151b7d8458a853c79e87641878cebc0ebf1e9b1d67c45afa2e5f5560602bf9c94cc0afb1029b5a7c4a8548e9dc24654dc69f8d05e05ee2531212
+Size (secretpy-0.10.0.tar.gz) = 15749 bytes
