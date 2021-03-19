@@ -4,3 +4,7 @@ SHA1 (tahoe-lafs-1.15.0.tar.bz2) = 153ee4f1b9cc64b3266870172a9f6f21cbd86e40
 RMD160 (tahoe-lafs-1.15.0.tar.bz2) = 8e860e96ac23f98c554c50e1bdd9620e22fbddba
 SHA512 (tahoe-lafs-1.15.0.tar.bz2) = 3a714568c29501d0d0ae32b07d11d78189e6dee6996d4816fac41e710d8081247611870eb6bc7ba393afbd368acf938dd6852bb34e2171dc0b76a3ac840142c4
 Size (tahoe-lafs-1.15.0.tar.bz2) = 2882965 bytes
+SHA1 (patch-setup.py) = 5a6079d18d3e6f0a49470abffc46dcdcdfe14e73
+SHA1 (patch-src_allmydata___auto__deps.py) = c1def9428e908061fea53db050e44c60aef93479
+SHA1 (patch-src_allmydata_scripts_create__node.py) = cbf0a66c829b829d2b730b8dee0c12d047b08d26
+SHA1 (patch-src_allmydata_scripts_tahoe__invite.py) = f9012966d464aad0cc226f56d4cbf485538fe203

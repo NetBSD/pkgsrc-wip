@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.47 2021/03/18 23:23:31 gdt Exp $
 
 DISTNAME=	tahoe-lafs-1.15.0
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -36,14 +37,14 @@ DEPENDS+=	${PYPKGPREFIX}-pyrsistent-[0-9]*:../../devel/py-pyrsistent
 # \todo pyrsistent
 # \todo attrs
 # autobahn D2019.09.20.04.00.00
-DEPENDS+=	${PYPKGPREFIX}-autobahn-[0-9]*:../../www/py-autobahn
+#DEPENDS+=	${PYPKGPREFIX}-autobahn-[0-9]*:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 
 # 19.0.0 from 2020-01-01 works with 27
 # \todo import/version an older one
-DEPENDS+=	${PYPKGPREFIX}-txtorcon-[0-9]*:../../net/py-txtorcon
+#DEPENDS+=	${PYPKGPREFIX}-txtorcon-[0-9]*:../../net/py-txtorcon
 
 # todo txi2p
 
