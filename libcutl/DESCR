@@ -1,3 +1,0 @@
-libcutl is a C++ utility library. It contains a collection of generic and
-fairly independent components such as meta-programming tests, smart pointers,
-containers, compiler buildling blocks, etc.
