@@ -1,43 +1,9 @@
 $NetBSD$
 
-# Use pkgsrc install commands
+# Respect pkgsrc env
 
---- Makefile.orig	2020-09-22 12:15:55.000000000 +0000
+--- Makefile.orig	2021-03-19 17:48:34.572594186 +0000
 +++ Makefile
-@@ -21,13 +21,13 @@
- # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- # DEALINGS IN THE SOFTWARE.
- 
--CC       = gcc
--AR       = ar
--AWK      = awk
--CPPFLAGS =
-+CC       ?= gcc
-+AR       ?= ar
-+AWK      ?= awk
-+CPPFLAGS ?=
- #CFLAGS   = -g -Wall -O2 -pedantic -std=c99 -D_XOPEN_SOURCE=600
--CFLAGS   = -g -Wall -O2
--LDFLAGS  =
-+CFLAGS   ?= -g -Wall -O2
-+LDFLAGS  ?=
- LIBS     =
- 
- LZ4DIR   = ./lz4
-@@ -49,10 +49,10 @@ AOBJS=      bam_index.o bam_plcmd.o sam_
- 	    bam_ampliconclip.o amplicon_stats.o
- LZ4OBJS  =  $(LZ4DIR)/lz4.o
- 
--prefix      = /usr/local
--exec_prefix = $(prefix)
-+PREFIX      = /usr/local
-+exec_prefix = $(PREFIX)
- bindir      = $(exec_prefix)/bin
--datarootdir = $(prefix)/share
-+datarootdir = $(PREFIX)/share
- mandir      = $(datarootdir)/man
- man1dir     = $(mandir)/man1
- 
 @@ -61,12 +61,11 @@ misc_bindir = $(bindir)
  
  MKDIR_P = mkdir -p

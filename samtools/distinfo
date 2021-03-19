@@ -4,4 +4,4 @@ SHA1 (samtools-1.12.tar.gz) = f46eb3a18885fb352d8746d51a206f7f34916232
 RMD160 (samtools-1.12.tar.gz) = 511ba541e9f3dbbab333d4a24a83f63c628b5b18
 SHA512 (samtools-1.12.tar.gz) = 7f468a4740610c2fdc42d8f020d3082e5b2b2e73b0c2dfc19b212ca259d703f34f7df0922e409a94500ccc0357d4d46306035be29c23a523ef6e959022f9d1db
 Size (samtools-1.12.tar.gz) = 4528460 bytes
-SHA1 (patch-Makefile) = 12dd394dcf9d29f612f5ebac5731f3369109397e
+SHA1 (patch-Makefile) = 3fc1f1d67167c8ca8eff1ed17f7a084ec3d4579d
