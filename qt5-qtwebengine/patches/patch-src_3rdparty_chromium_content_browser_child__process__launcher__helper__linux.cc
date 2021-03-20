@@ -26,16 +26,53 @@ $NetBSD$
  
    options->environment = delegate_->GetEnvironment();
  
-@@ -82,7 +86,7 @@ ChildProcessLauncherHelper::LaunchProces
+@@ -69,6 +73,7 @@ ChildProcessLauncherHelper::LaunchProces
+     int* launch_result) {
+   *is_synchronous_launch = true;
+ 
++#if !defined(OS_BSD)
+   service_manager::ZygoteHandle zygote_handle =
+       base::CommandLine::ForCurrentProcess()->HasSwitch(switches::kNoZygote)
+           ? nullptr
+@@ -82,7 +87,6 @@ ChildProcessLauncherHelper::LaunchProces
          GetProcessType());
      *launch_result = LAUNCH_RESULT_SUCCESS;
  
 -#if !defined(OS_OPENBSD)
-+#if !defined(OS_BSD)
      if (handle) {
        // It could be a renderer process or an utility process.
        int oom_score = content::kMiscOomScore;
-@@ -143,13 +147,17 @@ void ChildProcessLauncherHelper::ForceNo
+@@ -92,13 +96,13 @@ ChildProcessLauncherHelper::LaunchProces
+       service_manager::ZygoteHostImpl::GetInstance()->AdjustRendererOOMScore(
+           handle, oom_score);
+     }
+-#endif
+ 
+     Process process;
+     process.process = base::Process(handle);
+     process.zygote = zygote_handle;
+     return process;
+   }
++#endif
+ 
+   Process process;
+   process.process = base::LaunchProcess(*command_line(), options);
+@@ -116,10 +120,13 @@ ChildProcessTerminationInfo ChildProcess
+     const ChildProcessLauncherHelper::Process& process,
+     bool known_dead) {
+   ChildProcessTerminationInfo info;
++#if !defined(OS_BSD)
+   if (process.zygote) {
+     info.status = process.zygote->GetTerminationStatus(
+         process.process.Handle(), known_dead, &info.exit_code);
+-  } else if (known_dead) {
++  } else
++#endif
++  if (known_dead) {
+     info.status = base::GetKnownDeadTerminationStatus(process.process.Handle(),
+                                                       &info.exit_code);
+   } else {
+@@ -143,13 +150,17 @@ void ChildProcessLauncherHelper::ForceNo
    DCHECK(CurrentlyOnProcessLauncherTaskRunner());
    process.process.Terminate(service_manager::RESULT_CODE_NORMAL_EXIT, false);
    // On POSIX, we must additionally reap the child.
