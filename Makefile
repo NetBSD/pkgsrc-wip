@@ -3724,6 +3724,7 @@ SUBDIR+=	py-geppy
 SUBDIR+=	py-gerrychain
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-ghalatawi
+SUBDIR+=	py-ginga
 SUBDIR+=	py-gist
 SUBDIR+=	py-git
 SUBDIR+=	py-git-code-debt
