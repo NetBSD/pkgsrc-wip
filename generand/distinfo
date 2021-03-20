@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (generand-0.1.1.5-ac0c57dd5dd27615ae543ef0339781e7f894b762.tar.gz) = 6eb06d04d4df744aca2b38c025cc82f1ec42ac0d
-RMD160 (generand-0.1.1.5-ac0c57dd5dd27615ae543ef0339781e7f894b762.tar.gz) = 78f5a0746ea160f393fa51573a8a08097d63aacc
-SHA512 (generand-0.1.1.5-ac0c57dd5dd27615ae543ef0339781e7f894b762.tar.gz) = 5cfa689c0227db25dc3149dac0d697baed1a3368aab31ba886b8865b80399c6ab15c0cf8410918724de60b73a41174b5bc45e041ae8b83904c2c3e741d48c92a
-Size (generand-0.1.1.5-ac0c57dd5dd27615ae543ef0339781e7f894b762.tar.gz) = 6783 bytes
+SHA1 (generand-0.1.2.tar.gz) = 964d3e510ace176ecf463458b36d522ddde6c42c
+RMD160 (generand-0.1.2.tar.gz) = 402f0accb16c46fefd08ffacaea09395ab087823
+SHA512 (generand-0.1.2.tar.gz) = ca3c0cb0940f7d179c43d608090e5b0caa87256bbe2f391e1e2907a7c80fef90bffe54f37f2e69c3a6a7ef5e757c9a26b5e6ea31c1f1140121cdff95aaa8c0ac
+Size (generand-0.1.2.tar.gz) = 6782 bytes
