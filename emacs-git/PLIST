@@ -1980,7 +1980,6 @@ share/emacs/${PKGVERSION}/lisp/fringe.el.gz
 share/emacs/${PKGVERSION}/lisp/fringe.elc
 share/emacs/${PKGVERSION}/lisp/generic-x.el.gz
 share/emacs/${PKGVERSION}/lisp/generic-x.elc
-share/emacs/${PKGVERSION}/lisp/gnus/.dir-locals.el
 share/emacs/${PKGVERSION}/lisp/gnus/canlock.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/canlock.elc
 share/emacs/${PKGVERSION}/lisp/gnus/deuglify.el.gz
