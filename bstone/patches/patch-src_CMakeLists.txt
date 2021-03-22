@@ -2,8 +2,8 @@ $NetBSD$
 
 Use pkgsrc openal-soft.
 
---- CMakeLists.txt.orig	2021-02-14 11:47:46.000000000 +0000
-+++ CMakeLists.txt
+--- src/CMakeLists.txt.orig	2021-02-14 11:47:46.000000000 +0000
++++ src/CMakeLists.txt
 @@ -63,6 +63,7 @@ if (BSTONE_USE_STATIC_LINKING)
  	set(BSTONE_SDL2_COMPONENTS "${BSTONE_SDL2_COMPONENTS};static")
  endif ()

@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.4 2015/09/13 20:07:57 yhardy Exp $
 
-SHA1 (bstone-1.2.10.tar.gz) = f909173be0ee0b58b25603da2894d1dcf9574672
-RMD160 (bstone-1.2.10.tar.gz) = 97baef0bdeebd0a9d31dcfc5ddec58cfc22e9106
-SHA512 (bstone-1.2.10.tar.gz) = a1bc4803fa11d3d0f4ae39fb01d9915a2a448094193ca3933ce7f1409b8871b5e47a34b406adb25393fca9acff3d69c7bad877c7959fef74f7164cf4b076101d
-Size (bstone-1.2.10.tar.gz) = 1364126 bytes
-SHA1 (patch-CMakeLists.txt) = a7429b267bcfa753fe358d781f473cd58e261c88
-SHA1 (patch-id__sd.cpp) = 02e34dd28520bf266ad0593e5bb961e7d435de60
+SHA1 (bstone-1.2.11.tar.gz) = deaf1c4d567abd7dc635327176b23dd01df4a34f
+RMD160 (bstone-1.2.11.tar.gz) = 4ec648034e6f1e7e377fbce21e3c9f9e6f5851fe
+SHA512 (bstone-1.2.11.tar.gz) = 986907c268ace6dce9bd1f2f4c95a12f8c07b5b1e2abec4224db93a7aabcdbdfc35bfbe33b7817e9e41566ec92b76e83535693f3fad6976cc7e8ec0f0c468887
+Size (bstone-1.2.11.tar.gz) = 1390580 bytes
+SHA1 (patch-src_CMakeLists.txt) = f765fe134b423f1a8ef578bbad000ddadce46fe7
+SHA1 (patch-src_id__sd.cpp) = d3262f6fd8f395cdc817f43c3e5b61d0a85bcf99

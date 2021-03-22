@@ -3,8 +3,8 @@ $NetBSD$
 Prefer the SDL driver, since the openal driver may crash the game
 (issue needs investigating).
 
---- id_sd.cpp.orig	2021-02-14 11:47:46.000000000 +0000
-+++ id_sd.cpp
+--- src/id_sd.cpp.orig	2021-02-14 11:47:46.000000000 +0000
++++ src/id_sd.cpp
 @@ -337,11 +337,11 @@ void sd_startup()
  
  			case AudioDriverType::auto_detect:
