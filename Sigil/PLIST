@@ -261,6 +261,7 @@ share/sigil/python3lib/xmlsanitycheck.py
 share/sigil/translations/sigil_az.qm
 share/sigil/translations/sigil_ca.qm
 share/sigil/translations/sigil_cs.qm
+share/sigil/translations/sigil_da_DK.qm
 share/sigil/translations/sigil_de.qm
 share/sigil/translations/sigil_en.qm
 share/sigil/translations/sigil_es.qm
