@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	quest-tui-0.1.1
+DISTNAME=	quest-tui-0.1.2
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=frustak/}
 GITHUB_PROJECT=	Quest
-GITHUB_TAG=	7e696c63216ee50920b498e759de82d6e61210f8
+GITHUB_TAG=	c11efbf5c876c05f6ef14dca1df8b98f3d673f5e
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/frustak/Quest/
