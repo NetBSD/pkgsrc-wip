@@ -1,2 +1,3 @@
 @comment $NetBSD$
 bin/ad2vcf
+man/man1/ad2vcf.1
