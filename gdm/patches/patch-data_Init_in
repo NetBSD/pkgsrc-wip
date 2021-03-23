@@ -2,7 +2,7 @@ $NetBSD$
 
 $OpenBSD: patch-data_Init_in,v 1.7 2015/04/15 14:47:00 ajacoutot Exp $
 
---- data/Init.in.orig	2015-11-17 17:16:04.000000000 +0000
+--- data/Init.in.orig	2020-12-15 18:16:43.000000000 +0000
 +++ data/Init.in
 @@ -6,6 +6,9 @@
  PATH="@X_PATH@:$PATH"
@@ -23,6 +23,6 @@ $OpenBSD: patch-data_Init_in,v 1.7 2015/04/15 14:47:00 ajacoutot Exp $
 +    /sbin/chown _gdm /dev/drm0
 +fi
 +# XXX OpenBSD needs an implementation of XDG_RUNTIME_DIR
-+rm -rf @VARBASE@/db/gdm/.cache/gnome-shell/runtime-state-*
++rm -rf /var/db/gdm/.cache/gnome-shell/runtime-state-*
 +
  exit 0

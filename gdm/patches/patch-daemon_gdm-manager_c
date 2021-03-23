@@ -33,7 +33,7 @@ Date: Fri, 12 Jun 2015 13:48:52 -0400
 Subject: require logind support
 
 Index: daemon/gdm-manager.c
---- daemon/gdm-manager.c.orig	2020-05-04 20:11:25.000000000 +0000
+--- daemon/gdm-manager.c.orig	2020-12-15 18:16:43.000000000 +0000
 +++ daemon/gdm-manager.c
 @@ -36,7 +36,9 @@
  
@@ -113,7 +113,7 @@ Index: daemon/gdm-manager.c
 +        return retval;
 +}
 +#endif
-+
+ 
 +static char *
 +get_session_id_for_pid (GDBusConnection  *connection,
 +                        pid_t             pid,
@@ -131,7 +131,7 @@ Index: daemon/gdm-manager.c
 +
 +        return NULL;
 +}
- 
++
 +#ifdef WITH_SYSTEMD
  static gboolean
 -get_uid_for_session_id (const char  *session_id,
@@ -513,14 +513,14 @@ Index: daemon/gdm-manager.c
 +                return is_systemd_remote_session (self, session_id, error);
 +        }
 +#endif
- 
++
 +#ifdef WITH_CONSOLE_KIT
 +        return is_consolekit_remote_session (self, connection, session_id, error);
 +#endif
 +
 +        return FALSE;
 +}
-+
+ 
 +#ifdef WITH_CONSOLE_KIT
  static char *
 -get_tty_for_session_id (const char  *session_id,
@@ -656,7 +656,7 @@ Index: daemon/gdm-manager.c
  
                  if (error != NULL) {
                          g_debug ("GdmManager: Error while retrieving remoteness for session: %s",
-@@ -609,7 +1019,7 @@ switch_to_compatible_user_session (GdmMa
+@@ -610,7 +1020,7 @@ switch_to_compatible_user_session (GdmMa
          if (existing_session != NULL) {
                  ssid_to_activate = gdm_session_get_session_id (existing_session);
                  if (seat_id != NULL) {
@@ -665,7 +665,7 @@ Index: daemon/gdm-manager.c
                          if (! res) {
                                  g_debug ("GdmManager: unable to activate session: %s", ssid_to_activate);
                                  goto out;
-@@ -711,29 +1121,6 @@ out:
+@@ -712,29 +1122,6 @@ out:
          return recorded;
  }
  
@@ -695,7 +695,7 @@ Index: daemon/gdm-manager.c
  static gboolean
  gdm_manager_handle_register_display (GdmDBusManager        *manager,
                                       GDBusMethodInvocation *invocation,
-@@ -773,7 +1160,7 @@ gdm_manager_handle_register_display (Gdm
+@@ -774,7 +1161,7 @@ gdm_manager_handle_register_display (Gdm
                  }
          }
  
@@ -704,7 +704,7 @@ Index: daemon/gdm-manager.c
  
          if (session != NULL) {
                  GPid pid;
-@@ -980,7 +1367,8 @@ on_reauthentication_client_rejected (Gdm
+@@ -981,7 +1368,8 @@ on_reauthentication_client_rejected (Gdm
                   * same audit session, ignore it since it doesn't "own" the
                   * reauthentication session
                   */
@@ -714,14 +714,14 @@ Index: daemon/gdm-manager.c
                                                              NULL);
                  session_id = g_object_get_data (G_OBJECT (session), "caller-session-id");
  
-@@ -1199,16 +1587,19 @@ static gboolean
+@@ -1200,16 +1588,19 @@ static gboolean
  display_is_on_seat0 (GdmDisplay *display)
  {
          gboolean is_on_seat0 = TRUE;
 -        char *seat_id = NULL;
--
--        g_object_get (G_OBJECT (display), "seat-id", &seat_id, NULL);
  
+-        g_object_get (G_OBJECT (display), "seat-id", &seat_id, NULL);
+-
 -        if (g_strcmp0 (seat_id, "seat0") != 0) {
 -            is_on_seat0 = FALSE;
 -        }
@@ -741,7 +741,7 @@ Index: daemon/gdm-manager.c
          return is_on_seat0;
  }
  
-@@ -2031,11 +2422,57 @@ on_user_session_died (GdmSession *sessio
+@@ -2016,11 +2407,57 @@ on_user_session_died (GdmSession *sessio
  }
  
  static char *
@@ -801,7 +801,7 @@ Index: daemon/gdm-manager.c
  }
  
  static void
-@@ -2045,25 +2482,6 @@ on_session_reauthenticated (GdmSession *
+@@ -2030,25 +2467,6 @@ on_session_reauthenticated (GdmSession *
  {
          gboolean fail_if_already_switched = FALSE;
  
