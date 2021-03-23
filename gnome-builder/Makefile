@@ -23,6 +23,16 @@ MESON_ARGS+=		-Dplugin_update_manager=false
 
 CFLAGS+=		-Wno-error=shadow
 
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_FILES.python=	src/plugins/gradle/gradle_plugin.py
+SUBST_FILES.python+=	src/plugins/maven/maven_plugin.py
+SUBST_FILES.python+=	build-aux/meson/post_install.py
+SUBST_SED.python=	-e 's,/usr/bin/env python3,/usr/bin/python,g'
+
+REPLACE_PYTHON+=	${SUBST_FILES.python}
+
+.include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"

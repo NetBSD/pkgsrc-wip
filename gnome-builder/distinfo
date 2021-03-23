@@ -4,3 +4,4 @@ SHA1 (gnome-builder-3.36.0.tar.xz) = c84fe37737d4a7aec0e2cb94729ceb6f9120dd82
 RMD160 (gnome-builder-3.36.0.tar.xz) = c51a91d50a5885ae54156f622cf055a80fd8e1b7
 SHA512 (gnome-builder-3.36.0.tar.xz) = ccd6ca916ed6ad10b69e5573482e2ea48cf4227d858605825ab56989840ebbf5a6dfafc915a1f8df3a1061b37c80adfbd03fc9d616c67e08a5032069b11aa4a6
 Size (gnome-builder-3.36.0.tar.xz) = 12015980 bytes
+SHA1 (patch-src_libide_core_ide-global.c) = ac233d658989fcce83e506c3d2cd8f262786d813
