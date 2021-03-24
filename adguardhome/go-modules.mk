@@ -1,3 +1,5 @@
+# $NetBSD$
+
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.31.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
