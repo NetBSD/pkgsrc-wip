@@ -1,5 +1,0 @@
-@comment $NetBSD$
-games/xsnow
-man/man6/xsnow.6
-share/applications/xsnow.desktop
-share/pixmaps/xsnow.svg
