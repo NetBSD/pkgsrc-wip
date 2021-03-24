@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- doinstall.orig      2020-02-28 06:18:10.000000000 +0000
++++ doinstall
+@@ -10,8 +10,8 @@
+ #                  #
+ ####################
+ 
+-basever=`./xgcc -dumpversion`
+-machine=`./xgcc -dumpmachine`
++basever=`./usr/pkg/gcc5-aux/bin/gcc -dumpversion`
++machine=`./usr/pkg/gcc5-aux/bin/gcc -dumpmachine`
+ gnatver="3.17w"
+ 
+ prefix="/usr/local/gnat"
