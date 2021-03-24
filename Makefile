@@ -774,6 +774,7 @@ SUBDIR+=	etos
 SUBDIR+=	euca2ools
 SUBDIR+=	eureka-devel
 SUBDIR+=	eventd
+SUBDIR+=	eventviews
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	exabgp4
