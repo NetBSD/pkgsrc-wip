@@ -22,6 +22,8 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/AdGuardHome-${DISTNAME:S,^v,,}
 
+CHECK_RELRO_SKIP+=	sbin/adguardhome
+
 USE_TOOLS+=	tar
 #USE_LANGUAGES=	# none
 
