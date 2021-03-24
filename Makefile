@@ -1912,6 +1912,7 @@ SUBDIR+=	kmenuedit
 SUBDIR+=	kmix
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
+SUBDIR+=	knotes
 SUBDIR+=	kodi
 SUBDIR+=	koha
 SUBDIR+=	kontactinterface
