@@ -1746,6 +1746,7 @@ SUBDIR+=	ilohamail
 SUBDIR+=	imapfilter
 SUBDIR+=	imgui
 SUBDIR+=	imonc
+SUBDIR+=	incidenceeditor
 SUBDIR+=	inetdxtra
 SUBDIR+=	influxdb
 SUBDIR+=	info2man
