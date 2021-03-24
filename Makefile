@@ -1358,6 +1358,7 @@ SUBDIR+=	grabtitle-git
 SUBDIR+=	gramscii
 SUBDIR+=	grandr
 SUBDIR+=	granite
+SUBDIR+=	grantleetheme
 SUBDIR+=	graphmonkey
 SUBDIR+=	grass
 SUBDIR+=	grass-JockeyRidge
