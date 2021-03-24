@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.58 2021/02/07 06:30:29 ryoon Exp $
+
+DISTNAME=	kdiagram-2.8.0
+CATEGORIES=	graphics kde
+MASTER_SITES=	${MASTER_SITE_KDE:=kdiagram/2.8.0/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.kde.org/
+COMMENT=	Powerful libraries for creating business diagrams
+LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

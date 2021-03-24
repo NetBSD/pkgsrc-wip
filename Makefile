@@ -1888,6 +1888,7 @@ SUBDIR+=	kdebugsettings
 SUBDIR+=	kdecoration
 SUBDIR+=	kdepim-apps-libs
 SUBDIR+=	kdepim-runtime
+SUBDIR+=	kdiagram
 SUBDIR+=	kdialog
 SUBDIR+=	kea
 SUBDIR+=	kea-git
