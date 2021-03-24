@@ -1919,6 +1919,7 @@ SUBDIR+=	knotes
 SUBDIR+=	kodi
 SUBDIR+=	koha
 SUBDIR+=	kontactinterface
+SUBDIR+=	korganizer
 SUBDIR+=	krename
 SUBDIR+=	kronometer
 SUBDIR+=	kscreen
