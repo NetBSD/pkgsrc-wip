@@ -3,7 +3,6 @@
 DISTNAME=	ad2vcf-0.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_PROJECT=	ad2vcf
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/ad2vcf
