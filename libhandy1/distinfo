@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/11/10 17:45:05 nia Exp $
+
+SHA1 (libhandy-1.2.0.tar.xz) = fb9f5429526c436ed9d48692da16651d3c07f11e
+RMD160 (libhandy-1.2.0.tar.xz) = 9bcac84bc6ca2b09ff4279b9e3dbc4395500112a
+SHA512 (libhandy-1.2.0.tar.xz) = 34f84479fcef6fdd3b46a03a0b4806887708ce8295461eae655e34febdec5b62de56e34e58696545f086be8de1e2c0ac13a61a4bbe0a945a87e7d8e860a5f919
+Size (libhandy-1.2.0.tar.xz) = 481120 bytes
