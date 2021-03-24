@@ -31,7 +31,6 @@ CHECK_RELRO_SKIP+=	sbin/adguardhome
 #USE_TOOLS+=	tar
 
 OWN_DIRS+=	libdata/adguardhome
-OWN_DIRS+=	etc/adguardhome
 
 .include "go-modules.mk"
 
