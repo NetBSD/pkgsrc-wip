@@ -2313,6 +2313,7 @@ SUBDIR+=	mendexk
 SUBDIR+=	menumaker
 SUBDIR+=	mes-nyacc
 SUBDIR+=	mescc-tools
+SUBDIR+=	messagelib
 SUBDIR+=	meta-tracker
 SUBDIR+=	metal
 SUBDIR+=	metalog
