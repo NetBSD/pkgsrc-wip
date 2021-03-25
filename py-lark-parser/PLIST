@@ -1,9 +1,11 @@
 @comment $NetBSD$
 ${PYSITELIB}/lark-stubs/__init__.pyi
 ${PYSITELIB}/lark-stubs/exceptions.pyi
+${PYSITELIB}/lark-stubs/grammar.pyi
 ${PYSITELIB}/lark-stubs/indenter.pyi
 ${PYSITELIB}/lark-stubs/lark.pyi
 ${PYSITELIB}/lark-stubs/lexer.pyi
+${PYSITELIB}/lark-stubs/load_grammar.pyi
 ${PYSITELIB}/lark-stubs/reconstruct.pyi
 ${PYSITELIB}/lark-stubs/tree.pyi
 ${PYSITELIB}/lark-stubs/visitors.pyi
@@ -26,6 +28,7 @@ ${PYSITELIB}/lark/grammar.py
 ${PYSITELIB}/lark/grammar.pyc
 ${PYSITELIB}/lark/grammar.pyo
 ${PYSITELIB}/lark/grammars/common.lark
+${PYSITELIB}/lark/grammars/lark.lark
 ${PYSITELIB}/lark/grammars/python.lark
 ${PYSITELIB}/lark/grammars/unicode.lark
 ${PYSITELIB}/lark/indenter.py

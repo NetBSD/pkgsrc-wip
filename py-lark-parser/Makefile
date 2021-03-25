@@ -1,14 +1,17 @@
 # $NetBSD$
 
-DISTNAME=	lark-parser-0.11.1
+DISTNAME=	lark-parser-0.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+CATEGORIES=	devel lang
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lark-parser/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/erezsh/lark
-COMMENT=	Lark is a parsing toolkit for Python
+COMMENT=	Parsing toolkit for Python
 LICENSE=	mit
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
