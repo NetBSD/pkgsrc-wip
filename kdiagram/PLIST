@@ -195,8 +195,8 @@ lib/libKChart.so.${PKGVERSION}
 lib/libKGantt.so
 lib/libKGantt.so.2
 lib/libKGantt.so.${PKGVERSION}
-mkspecs/modules/qt_KChart.pri
-mkspecs/modules/qt_KGantt.pri
+qt5/mkspecs/modules/qt_KChart.pri
+qt5/mkspecs/modules/qt_KGantt.pri
 share/locale/ar/LC_MESSAGES/kchart_qt.qm
 share/locale/ar/LC_MESSAGES/kgantt_qt.qm
 share/locale/ast/LC_MESSAGES/kchart_qt.qm

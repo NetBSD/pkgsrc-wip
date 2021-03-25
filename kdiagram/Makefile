@@ -15,6 +15,8 @@ BUILD_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+CMAKE_ARGS+=	-DECM_MKSPECS_INSTALL_DIR=${QTDIR}/mkspecs/modules
+
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
