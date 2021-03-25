@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.14:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	opencv-[0-9]*:../../graphics/opencv
+#DEPENDS+=	opencv-[0-9]*:../../graphics/opencv
 DEPENDS+=	${PYPKGPREFIX}-piexif-[0-9]*:../../graphics/py-piexif
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
