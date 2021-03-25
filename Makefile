@@ -2043,6 +2043,7 @@ SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgnomekbd
 SUBDIR+=	libgraphqlparser
 SUBDIR+=	libgrass5
+SUBDIR+=	libgravatar
 SUBDIR+=	libgringotts
 SUBDIR+=	libgrss
 SUBDIR+=	libgtk-java
