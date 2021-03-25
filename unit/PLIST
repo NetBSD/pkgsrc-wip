@@ -1,2 +1,3 @@
 @comment $NetBSD$
 sbin/unitd
+share/man/man8/unitd.8
