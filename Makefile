@@ -5297,6 +5297,7 @@ SUBDIR+=	syncserver-dependencies
 SUBDIR+=	syncthing-discosrv
 SUBDIR+=	syncthing-inotify
 SUBDIR+=	syncthing-relaysrv
+SUBDIR+=	syndication
 SUBDIR+=	synfig
 SUBDIR+=	synfigstudio
 SUBDIR+=	sysklogd
