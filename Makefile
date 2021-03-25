@@ -1876,6 +1876,7 @@ SUBDIR+=	jython
 SUBDIR+=	kacst-one
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kactivitymanagerd
+SUBDIR+=	kaddressbook
 SUBDIR+=	kaf
 SUBDIR+=	kafkacat
 SUBDIR+=	kahakai
