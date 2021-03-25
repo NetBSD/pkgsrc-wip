@@ -873,7 +873,8 @@ share/emacs/${PKGVERSION}/etc/schema/dbstart.rnc
 share/emacs/${PKGVERSION}/etc/schema/docbook.rnc
 share/emacs/${PKGVERSION}/etc/schema/locate.rnc
 share/emacs/${PKGVERSION}/etc/schema/od-manifest-schema-v1.2-os.rnc
-share/emacs/${PKGVERSION}/etc/schema/od-schema-v1.2-os.rnc
+share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3+libreoffice.rnc
+share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3.rnc
 share/emacs/${PKGVERSION}/etc/schema/rdfxml.rnc
 share/emacs/${PKGVERSION}/etc/schema/relaxng.rnc
 share/emacs/${PKGVERSION}/etc/schema/schemas.xml
