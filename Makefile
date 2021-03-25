@@ -115,6 +115,7 @@ SUBDIR+=	akonadi-mime
 SUBDIR+=	akonadi-notes
 SUBDIR+=	akonadi-search
 SUBDIR+=	akonadiconsole
+SUBDIR+=	akregator
 SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	aldo
