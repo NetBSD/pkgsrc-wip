@@ -3,9 +3,7 @@
 DISTNAME=	astropy-helpers-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
-GITHUB_PROJECT=	astropy-helpers
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy-helpers/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/astropy/astropy-helpers/
