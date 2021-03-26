@@ -1,0 +1,39 @@
+$NetBSD$
+
+
+patch PREFIX inside patch
+
+--- /dev/null	2021-03-22 22:25:49.591851345 +0900
++++ /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/hamlib.patch	2021-03-22 23:15:53.147421908 +0900
+@@ -0,0 +1,31 @@
++--- hamlib-prefix/src/hamlib/hamlib.pc.in.orig	2021-02-01 21:35:36.000000000 +0900
+++++ hamlib/hamlib.pc.in	2021-03-21 21:07:31.473290128 +0900
++@@ -9,5 +9,5 @@ URL: @PACKAGE_URL@
++ Version: @PACKAGE_VERSION@
++ Requires.private: @LIBUSB@
++ Cflags: -I${includedir} @PTHREAD_CFLAGS@
++-Libs: -L${libdir} -lhamlib
+++Libs: -L${libdir} ${libdir}/libhamlib.a
++ Libs.private: @MATH_LIBS@ @DL_LIBS@ @NET_LIBS@ @PTHREAD_LIBS@
++--- hamlib-prefix/src/hamlib/configure.ac.orig	2021-02-01 21:35:36.000000000 +0900
+++++ hamlib/configure.ac	2021-03-21 21:03:16.858039431 +0900
++@@ -278,6 +278,11 @@ AS_CASE(["$host_os"],
++ 	AM_LDFLAGS="${AM_LDFLAGS} -L/usr/local/lib"
++ 	AC_SUBST([AM_LDFLAGS])],
++ 
+++    [netbsd*], [
+++	AM_CPPFLAGS="-I@PREFIX@/include ${AM_CPPFLAGS}"" 
+++	AM_LDFLAGS="-L@PREFIX@/lib -lusb-1.0 ${AMD_LDFLAGS}"
+++	AC_SUBST([AM_LDFLAGSX])],
+++
++     [darwin* | rhapsody*], [
++ 	# Tell the OS X linker to allocate enough space inside the
++ 	# libhamlib.X.dylib shared object for install_name_tool(1) to
++@@ -321,6 +326,7 @@ AC_ARG_WITH([libusb],
++ 
++ AC_MSG_RESULT([$cf_with_libusb])
++ 
+++LIBUSB="-L@PREFIX@/lib -lusb-1.0"
++ LIBUSB=""
++ AC_ARG_VAR([LIBUSB_CFLAGS], [C compiler flags for libusb, overriding configure defaults])
++ AC_ARG_VAR([LIBUSB_LIBS], [linker flags for libusb, overriding configure check (useful for specifying static libusb-1.0.a (see INSTALL))])
