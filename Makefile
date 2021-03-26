@@ -1210,6 +1210,7 @@ SUBDIR+=	go-copier
 SUBDIR+=	go-curlie
 SUBDIR+=	go-current
 SUBDIR+=	go-cyclo
+SUBDIR+=	go-dnstap
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-doublejump
 SUBDIR+=	go-douceur-aymerick
