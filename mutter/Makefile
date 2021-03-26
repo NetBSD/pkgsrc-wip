@@ -5,7 +5,7 @@ CATEGORIES=	wm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/mutter
 COMMENT=	GNOME window manager
 LICENSE=	gnu-gpl-v2
@@ -46,6 +46,24 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/mutter-clutter-x11-8.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/libmutter-8.pc
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mutter-8
+
+post-extract:
+	${CP} ${FILESDIR}/90-mutter ${WRKSRC}/data
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	data/90-mutter
+SUBST_VARS.paths=	PREFIX
+
+EGDIR=			${PREFIX}/share/examples/mutter
+INSTALLATION_DIRS+=	share/examples/mutter/X11/xinit/xinitrc.d
+
+post-install:
+	${INSTALL_DATA}	${WRKSRC}/data/90-mutter \
+		${DESTDIR}${EGDIR}/X11/xinit/xinitrc.d/90-mutter
+
+REQD_FILES+=		${EGDIR}/X11/xinit/xinitrc.d/90-mutter \
+			${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-mutter
 
 .include "../../devel/meson/build.mk"
 .include "../../wip/glib2/schemas.mk"

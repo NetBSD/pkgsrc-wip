@@ -246,6 +246,7 @@ libexec/mutter-restart-helper
 man/man1/mutter.1
 share/GConf/gsettings/mutter-schemas.convert
 share/applications/mutter.desktop
+share/examples/mutter/X11/xinit/xinitrc.d/90-mutter
 share/glib-2.0/schemas/org.gnome.mutter.gschema.xml
 share/glib-2.0/schemas/org.gnome.mutter.wayland.gschema.xml
 share/gnome-control-center/keybindings/50-mutter-navigation.xml
