@@ -24,7 +24,7 @@ patch PREFIX inside patch
 ++    [netbsd*], [
 ++	AM_CPPFLAGS="-I@PREFIX@/include ${AM_CPPFLAGS}"" 
 ++	AM_LDFLAGS="-L@PREFIX@/lib -lusb-1.0 ${AMD_LDFLAGS}"
-++	AC_SUBST([AM_LDFLAGSX])],
+++	AC_SUBST([AM_LDFLAGS])],
 ++
 +     [darwin* | rhapsody*], [
 + 	# Tell the OS X linker to allocate enough space inside the
