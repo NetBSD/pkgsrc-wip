@@ -4,7 +4,7 @@ $NetBSD$
 patch PREFIX inside patch
 
 --- /dev/null	2021-03-22 22:25:49.591851345 +0900
-+++ /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/hamlib.patch	2021-03-22 23:15:53.147421908 +0900
++++ hamlib.patch	2021-03-22 23:15:53.147421908 +0900
 @@ -0,0 +1,31 @@
 +--- hamlib-prefix/src/hamlib/hamlib.pc.in.orig	2021-02-01 21:35:36.000000000 +0900
 ++++ hamlib/hamlib.pc.in	2021-03-21 21:07:31.473290128 +0900

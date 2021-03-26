@@ -36,7 +36,7 @@ MAKE_JOBS_SAFE=	no
 SUBST_CLASSES+=		hamlib
 SUBST_FILES.hamlib=	hamlib.patch
 SUBST_STAGE.hamlib=	pre-configure
-SUBST_MESSAGE.hamlib=	fix PREFIX insid patch
+SUBST_MESSAGE.hamlib=	fix PREFIX inside patch
 SUBST_VARS.hamlib=	PREFIX
 
 
