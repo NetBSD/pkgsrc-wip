@@ -33,7 +33,7 @@ Date: Fri, 12 Jun 2015 13:48:52 -0400
 Subject: require logind support
 
 Index: daemon/gdm-manager.c
---- daemon/gdm-manager.c.orig	2020-12-15 18:16:43.000000000 +0000
+--- daemon/gdm-manager.c.orig	2021-03-16 20:48:04.000000000 +0000
 +++ daemon/gdm-manager.c
 @@ -36,7 +36,9 @@
  
@@ -258,7 +258,7 @@ Index: daemon/gdm-manager.c
  {
          char *session_class = NULL;
          int ret;
-@@ -294,29 +450,49 @@ is_login_session (GdmManager  *self,
+@@ -294,29 +450,140 @@ is_login_session (GdmManager  *self,
          g_free (session_class);
          return TRUE;
  }
@@ -304,21 +304,22 @@ Index: daemon/gdm-manager.c
 -                                             g_variant_new ("(s)", ssid),
 +                                             "ActivateSessionOnSeat",
 +                                             g_variant_new ("(ss)", session_id, seat_id),
-                                              NULL, /* expected reply */
-                                              G_DBUS_CALL_FLAGS_NONE,
-                                              -1,
-                                              NULL,
-                                              &error);
-         if (reply == NULL) {
--                g_debug ("GdmManager: logind 'UnlockSession' %s raised:\n %s\n\n",
++                                             NULL, /* expected reply */
++                                             G_DBUS_CALL_FLAGS_NONE,
++                                             -1,
++                                             NULL,
++                                             &error);
++        if (reply == NULL) {
 +                g_debug ("GdmManager: logind 'ActivateSessionOnSeat' %s raised:\n %s\n\n",
-                          g_dbus_error_get_remote_error (error), error->message);
-                 g_error_free (error);
-                 return FALSE;
-@@ -326,6 +502,118 @@ session_unlock (GdmManager *manager,
- 
-         return TRUE;
- }
++                         g_dbus_error_get_remote_error (error), error->message);
++                g_error_free (error);
++                return FALSE;
++        }
++
++        g_variant_unref (reply);
++
++        return TRUE;
++}
 +#endif
 +
 +#ifdef WITH_CONSOLE_KIT
@@ -394,22 +395,21 @@ Index: daemon/gdm-manager.c
 +                                             CK_SESSION_INTERFACE,
 +                                             "Unlock",
 +                                             NULL, /* parameters */
-+                                             NULL, /* expected reply */
-+                                             G_DBUS_CALL_FLAGS_NONE,
-+                                             -1,
-+                                             NULL,
-+                                             &error);
-+        if (reply == NULL) {
+                                              NULL, /* expected reply */
+                                              G_DBUS_CALL_FLAGS_NONE,
+                                              -1,
+                                              NULL,
+                                              &error);
+         if (reply == NULL) {
+-                g_debug ("GdmManager: logind 'UnlockSession' %s raised:\n %s\n\n",
 +                g_debug ("GdmManager: ConsoleKit %s raised:\n %s\n\n",
-+                         g_dbus_error_get_remote_error (error), error->message);
-+                g_error_free (error);
-+                return FALSE;
-+        }
-+
-+        g_variant_unref (reply);
-+
-+        return TRUE;
-+}
+                          g_dbus_error_get_remote_error (error), error->message);
+                 g_error_free (error);
+                 return FALSE;
+@@ -326,6 +593,27 @@ session_unlock (GdmManager *manager,
+ 
+         return TRUE;
+ }
 +#endif
 +
 +static gboolean
@@ -439,7 +439,10 @@ Index: daemon/gdm-manager.c
  }
  
 +#ifdef WITH_CONSOLE_KIT
-+static gboolean
+ static gboolean
+-is_remote_session (GdmManager  *self,
+-                   const char  *session_id,
+-                   GError     **error)
 +is_consolekit_remote_session (GdmManager       *self,
 +                             GDBusConnection  *connection,
 +                             const char       *session_id,
@@ -471,10 +474,7 @@ Index: daemon/gdm-manager.c
 +#endif
 +
 +#ifdef WITH_SYSTEMD
- static gboolean
--is_remote_session (GdmManager  *self,
--                   const char  *session_id,
--                   GError     **error)
++static gboolean
 +is_systemd_remote_session (GdmManager  *self,
 +                           const char  *session_id,
 +                           GError     **error)
@@ -528,7 +528,7 @@ Index: daemon/gdm-manager.c
 +get_seat_id_for_consolekit_session_id (GDBusConnection  *connection,
 +                                       const char       *session_id,
 +                                       GError          **error)
-+{
+ {
 +        GVariant *reply;
 +        char *retval;
 +
@@ -576,7 +576,7 @@ Index: daemon/gdm-manager.c
 +static char *
 +get_tty_for_systemd_session_id (const char  *session_id,
 +                                GError     **error)
- {
++{
 +
 +
 +
@@ -741,7 +741,7 @@ Index: daemon/gdm-manager.c
          return is_on_seat0;
  }
  
-@@ -2016,11 +2407,57 @@ on_user_session_died (GdmSession *sessio
+@@ -2019,11 +2410,57 @@ on_user_session_died (GdmSession *sessio
  }
  
  static char *
@@ -801,7 +801,7 @@ Index: daemon/gdm-manager.c
  }
  
  static void
-@@ -2030,25 +2467,6 @@ on_session_reauthenticated (GdmSession *
+@@ -2033,25 +2470,6 @@ on_session_reauthenticated (GdmSession *
  {
          gboolean fail_if_already_switched = FALSE;
  

@@ -1,8 +1,24 @@
 $NetBSD$
 
---- data/meson.build.orig	2020-12-15 18:16:43.000000000 +0000
+--- data/meson.build.orig	2021-03-16 20:48:04.000000000 +0000
 +++ data/meson.build
-@@ -170,42 +170,11 @@ else
+@@ -149,15 +149,6 @@ foreach _pam_filename : pam_data_files
+   )
+ endforeach
+ 
+-gdm_rules = configure_file(
+-  input: '61-gdm.rules.in',
+-  output: '@BASENAME@',
+-  configuration: {
+-    'libexecdir': gdm_prefix / get_option('libexecdir'),
+-  },
+-  install_dir: udev_dir,
+-)
+-
+ # DBus service files
+ service_config = configuration_data()
+ service_config.set('sbindir', gdm_prefix / get_option('sbindir'))
+@@ -169,42 +160,11 @@ else
    service_config.set('PLYMOUTH_QUIT_SERVICE', '')
  endif
  

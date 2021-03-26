@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/06/06 20:44:44 krytarowski Exp $
 
-DISTNAME=	gdm-3.38.2.1
+DISTNAME=	gdm-40.rc
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
@@ -37,6 +37,7 @@ MESON_ARGS+=		-Dgroup=${GDMGRP}
 MESON_ARGS+=		-Ddbus-sys=${PREFIX}/etc/dbus-1/system.d
 MESON_ARGS+=		-Dinitial-vt=05
 MESON_ARGS+=		-Dgdm-xsession=true
+MESON_ARGS+=		-Dwayland-support=false
 MESON_ARGS+=		-Dwith-default-path="/usr/local/bin:/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin/sbin"
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_ENV+=		X11BASE=${X11BASE}

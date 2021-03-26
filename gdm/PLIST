@@ -12,8 +12,8 @@ lib/libgdm.so.1
 lib/libgdm.so.1.0.0
 lib/pkgconfig/gdm.pc
 lib/security/pam_gdm.so
-libexec/gdm-disable-wayland
 libexec/gdm-host-chooser
+libexec/gdm-runtime-config
 libexec/gdm-session-worker
 libexec/gdm-simple-chooser
 libexec/gdm-wayland-session
@@ -52,6 +52,8 @@ share/help/en_GB/gdm/index.docbook
 share/help/en_GB/gdm/legal.xml
 share/help/es/gdm/index.docbook
 share/help/es/gdm/legal.xml
+share/help/eu/gdm/index.docbook
+share/help/eu/gdm/legal.xml
 share/help/fr/gdm/index.docbook
 share/help/fr/gdm/legal.xml
 share/help/gl/gdm/index.docbook

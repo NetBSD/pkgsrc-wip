@@ -1,10 +1,10 @@
 $NetBSD: distinfo,v 1.5 2015/06/06 20:00:43 krytarowski Exp $
 
-SHA1 (gdm-3.38.2.1.tar.gz) = f7ca6e8a13d3ba4eb93092766aa02e84d836da16
-RMD160 (gdm-3.38.2.1.tar.gz) = 8b38542db6b59fde8b809526c00b112c2663e2ef
-SHA512 (gdm-3.38.2.1.tar.gz) = 541da6bed8b197166f865e5c29883c20d1eb62162ac450b614176f88f31ed57fcc69209df3628696fd07638ae6f838895615a93794a0a7aedbe025431d1d12cd
-Size (gdm-3.38.2.1.tar.gz) = 1545544 bytes
-SHA1 (patch-build-aux_find-x-server.sh) = bd5dfe8f35220837b08495e11f4639c861c8efa0
+SHA1 (gdm-40.rc.tar.gz) = 781ad8046d6fc190d5bd2e917fb5a2ccec8e9af1
+RMD160 (gdm-40.rc.tar.gz) = 4623ee01b11870cbab8dda45835cca8a20264862
+SHA512 (gdm-40.rc.tar.gz) = 3c209e50e17283b47476e4b15f40264dcdd9b2582e6bd513316179829dfb3134389e628508e097451c883de6458b497a7f44ad1266bd76044408447c78b45a86
+Size (gdm-40.rc.tar.gz) = 1586857 bytes
+SHA1 (patch-build-aux_find-x-server.sh) = 68934fdbb3e0f7531ebb6ed77eff03139f59a83b
 SHA1 (patch-common_gdm-address_c) = dbcf524882299d890103ed1d90b5d20af28cf667
 SHA1 (patch-common_gdm-common_c) = 347e9a527b22a79bfee6fd2e6f41f0e75e34cec2
 SHA1 (patch-common_gdm-common_h) = dfdb0758c65bc5426b214dd8f4a47a7f9df48aa4
@@ -13,8 +13,8 @@ SHA1 (patch-common_meson.build) = 77ff3a8d7f0c365b97aaca15a4d273cdda2ace4a
 SHA1 (patch-daemon_gdm-display-access-file.c) = 622556719238da6b3f77dd598699cb1c8f1e0953
 SHA1 (patch-daemon_gdm-display_c) = db972d3248c6e2cd5ac24cc72b838e6d1a8529c3
 SHA1 (patch-daemon_gdm-launch-environment_c) = 8804435a54afe85145cd995eb709096d9928a2b7
-SHA1 (patch-daemon_gdm-local-display-factory_c) = 9849167ce35655922db5afc2e5fb441e99e19070
-SHA1 (patch-daemon_gdm-manager_c) = f8ebde1311179c90a1a1172a3d6f0e73fccec1da
+SHA1 (patch-daemon_gdm-local-display-factory_c) = 1b768d9ec8004b2d3cee49f200f689c6331da4cb
+SHA1 (patch-daemon_gdm-manager_c) = 1136db38704181bc2c8de4649d3ff0f1466aa7f5
 SHA1 (patch-daemon_gdm-server_c) = 738e9e17c2b8102ff3d248fbac017b3bf3b114ea
 SHA1 (patch-daemon_gdm-session-record_c) = 367e4b9351a41abf78b4ac47e501e40ed9a93fe5
 SHA1 (patch-daemon_gdm-session-worker-job_c) = 11b5f2c1dde26aa6b6ff25d7913eff009c707724
@@ -28,8 +28,8 @@ SHA1 (patch-data_Init_in) = 1e133a79fde3bd7a8c09f0a055cdc51d17aadbe4
 SHA1 (patch-data_PostSession_in) = 0951d9c4e1404478c1ac9fba996bc96b41ed4d5b
 SHA1 (patch-data_PreSession_in) = cf1fec76b9555a911b0af6d3e32a838a94c57ca1
 SHA1 (patch-data_gdm.conf-custom.in) = 005a58326ab108f578c56c50768ae2ee164e3a5a
-SHA1 (patch-data_meson.build) = f6defe9994a1906d8c2ab80832c1dfc206b3918a
+SHA1 (patch-data_meson.build) = 1810b583af7610c997e397754c9df83ad29cd2ba
 SHA1 (patch-libgdm_gdm-user-switching_c) = 91ebba68b5496c1de00108e1609f47c6019eadcc
 SHA1 (patch-libgdm_meson.build) = 47289abb9e3031448c1007891caf1fadd1de001b
-SHA1 (patch-meson.build) = bb1aff71d391212e1709d5fb7d3553f0a409f651
+SHA1 (patch-meson.build) = 7b01e50a9ca95f6dcea337e4ae2f4419024e25e7
 SHA1 (patch-pam__gdm_pam__gdm.c) = 0b84ae2a118abab28f96717e3bbd71bf6c87c772

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- build-aux/find-x-server.sh.orig	2020-12-15 18:16:43.000000000 +0000
+--- build-aux/find-x-server.sh.orig	2021-03-16 20:48:04.000000000 +0000
 +++ build-aux/find-x-server.sh
 @@ -21,6 +21,8 @@ elif test ! -h /usr/X11 -a -x /usr/X11/b
      echo "/usr/X11/bin/X"
