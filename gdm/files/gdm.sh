@@ -22,7 +22,7 @@ extra_commands="reload"
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config ${name}
-	PATH=@PREFIX@/bin:$PATH XCURSOR_PATH=@PREFIX@/share/icons run_rc_command "$1"
+	PATH=@PREFIX@/bin:$PATH run_rc_command "$1"
 else
 	echo -n " ${name}"
 	${command} ${gdm_flags} ${command_args}
