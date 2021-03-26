@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2020/11/10 12:06:59 nia Exp $
+
+SHA1 (gnome-shell-40.0.tar.xz) = 85e3e1108c0f2cf95be52268ac47c449e06ad0b3
+RMD160 (gnome-shell-40.0.tar.xz) = 387f3946571df37897f491698e2252a8ea30117c
+SHA512 (gnome-shell-40.0.tar.xz) = fc4ca3fbd3dafd4a81f97a765e53b74fa4902018721e25a767c0d353d127b0cdc69c64171188272e3f5b48f11d6ad52064cc237e35210f5e09dfcd763ceb00c4
+Size (gnome-shell-40.0.tar.xz) = 1863432 bytes
+SHA1 (patch-data_gnome-shell-dbus-interfaces_gresource_xml) = de2bec04695594c5b1e4b0ecce3284bfd2edfab7
+SHA1 (patch-js_misc_loginManager_js) = d37d17dd8a121d5ef5497fccafea954cc797286c
+SHA1 (patch-js_ui_endSessionDialog.js) = 6971df6ee8b65fa827131d92404f6ae817acd84c
+SHA1 (patch-js_ui_main.js) = 09f28613dea05d2c90652fb97448a9a3e0accc90
+SHA1 (patch-js_ui_windowManager.js) = 44ac100a8b914709817c2c4889af26b3e613588a
+SHA1 (patch-meson.build) = e6d2e514dcc64c744e308b08190d9e2e20190ac7
+SHA1 (patch-src_main.c) = ba916545367818110d31cb2266368b447f7f0d82
+SHA1 (patch-src_shell-util.c) = 92fbc695162f7fe735b92eb344215cf0c69e65c6
