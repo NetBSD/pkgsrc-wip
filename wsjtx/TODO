@@ -7,4 +7,16 @@ ld: ../src/.libs/libhamlib.a(usb_port.o): in function `find_and_open_device':
 /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/src/usb_port.c:83: undefined reference to `libusb_get_device_list'
 ld: /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/src/usb_port.c:98: undefined reference to `libusb_get_device_descriptor'
 ld: /tmp/WRKOBJDIR/wip/wsjt/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/src/usb_port.c:110: undefined reference to `libusb_open'
+
+
+---- WATCH config.log ---
+
+configure:19279: result: yes
+configure:19289: checking whether to build USB dependent backends
+configure:19301: result: yes
+configure:19310: checking for libusb_init in -lusb-1.0
+configure:19335: gcc -o conftest -g -O2 -fPIC -fdata-sections -ffunction-sections  -I/usr/pkg/include -I/usr/include -I/usr/pkg/qt5/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/harfbuzz -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -Wl,--gc-sections conftest.c -lusb-1.0   >&5
+ld: cannot find -lusb-1.0
+configure:19335: $? = 1
+configure: failed program was:
 k
