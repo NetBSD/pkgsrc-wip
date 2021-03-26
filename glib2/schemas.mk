@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.2 2011/02/20 15:07:40 jmmv Exp $
+# $NetBSD: schemas.mk,v 1.3 2019/11/03 10:39:12 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GSettings schemas.  It takes care of rebuilding the corresponding databases

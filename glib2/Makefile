@@ -1,70 +1,82 @@
-# $NetBSD: Makefile,v 1.244 2018/10/19 16:44:15 leot Exp $
+# $NetBSD: Makefile,v 1.277 2021/03/22 06:54:19 adam Exp $
 
 .include "Makefile.common"
 
-CATEGORIES=		devel gnome
+CATEGORIES=	devel gnome
+COMMENT=	Some useful routines for C programming (glib2)
 
-COMMENT=		Some useful routines for C programming (glib2)
+.include "options.mk"
 
-USE_TOOLS+=		msgfmt perl:run readlink
+MESON_ARGS+=	-Dinstalled_tests=false
+# Avoid linux dependency on libmount-dev
+MESON_ARGS+=	-Dlibmount=disabled
+.if ${OPSYS} == "FreeBSD"
+MESON_ARGS+=	-Db_lundef=false
+.endif
 
-PKGCONFIG_OVERRIDE+=	glib-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gmodule-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gmodule-export-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gmodule-no-export-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gobject-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gthread-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gio-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gio-unix-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gio-windows-2.0.pc.in
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
-FILES_SUBST+=		GIO_MODULES_DIR=${PREFIX}/lib/gio/modules
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+LDFLAGS.SunOS+=		-liconv -lintl -lnsl -lsocket
+LDFLAGS.FreeBSD+=	-liconv
+
+REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
+REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
+REPLACE_PYTHON+=	gio/tests/memory-monitor-dbus.py.in
+REPLACE_PYTHON+=	gio/tests/memory-monitor-portal.py.in
+REPLACE_PYTHON+=	gio/tests/static-link.py
+REPLACE_PYTHON+=	glib/update-gtranslit.py
+REPLACE_PYTHON+=	gobject/tests/mkenums.py
+REPLACE_PYTHON+=	tests/gen-casefold-txt.py
+REPLACE_PYTHON+=	tests/gen-casemap-txt.py
+
+GIO_MODULES_DIR=	${PREFIX}/lib/gio/modules
+OWN_DIRS=		${GIO_MODULES_DIR}
+
+FILES_SUBST+=		GIO_MODULES_DIR=${GIO_MODULES_DIR}
 FILES_SUBST+=		GIO_QUERYMODULES=${PREFIX}/bin/gio-querymodules
 FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
 FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 
-# gtester is the glib unit testing and reporting framework
-# agc doesn't want glib2 to depend on python so we install it
-# in a broken and useless state.
-CHECK_INTERPRETER_SKIP+=	bin/gtester-report
-CHECK_WRKREF_SKIP+=		bin/gtester-report
+BUILD_DEFS+=		VARBASE
+SUBST_CLASSES+=		dbusdb
+SUBST_MESSAGE.dbusdb=	Adjust dbus machine uuid path to dbus package
+SUBST_STAGE.dbusdb=	pre-configure
+SUBST_FILES.dbusdb=	gio/gdbusconnection.c
+SUBST_FILES.dbusdb+=	po/*.po
+SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
 
-# need pcre utf8 + unicode-properties
-BUILDLINK_API_DEPENDS.pcre+=	pcre>=8.31
-# to avoid pkg-config dependency, explicitly specify pcre location
-CONFIGURE_ARGS+=		PCRE_CFLAGS=-I${BUILDLINK_PREFIX.pcre}/include
-CONFIGURE_ARGS+=		PCRE_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib -L${BUILDLINK_PREFIX.pcre}/lib -lpcre"
+SUBST_CLASSES+=		xdg
+SUBST_MESSAGE.xdg=	Adjust XDG_DATA_DIRS so schemas and pixbuf loaders are found
+SUBST_STAGE.xdg=	pre-configure
+SUBST_FILES.xdg=	glib/gcharset.c glib/gutils.c gio/xdgmime/xdgmime.c
+SUBST_SED.xdg=		-e 's,/usr/local/share/:/usr/share/,${PREFIX}/share,'
+SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,'
+SUBST_SED.xdg+=		-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,'
 
-# needs gz_header structure
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.2.1
+PKGCONFIG_OVERRIDE+=	output/meson-private/gio-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gio-unix-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/glib-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gmodule-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gmodule-export-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gmodule-no-export-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gobject-2.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gthread-2.0.pc
 
-LIBS.SunOS+=		-lnsl -lsocket
-CPPFLAGS.SunOS+=	-DBSD_COMP
-
-.if ${OBJECT_FMT} == "ELF"
-.  if ${OPSYS} == "SunOS"
-.    if empty(ABI:U:M64)
-# Solaris libelf in 32-bit mode does not support largefile.  We patch files
-# individually to force _FILE_OFFSET_BITS=32 but need to turn back on -lelf
-# after configure disabled it.
-CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
-.    endif
-.  else
-.    include "../../devel/libelf/buildlink3.mk"
-.  endif
-.endif
-
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-PYTHON_FOR_BUILD_ONLY?=	yes
-.include "../../lang/python/pyversion.mk"
+PYTHON_FOR_BUILD_ONLY=	yes
 
-.include "../../devel/meson/build.mk"
+post-extract:
+	${CHMOD} +x ${WRKSRC}/gio/tests/gengiotypefuncs.py
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.1 2010/11/17 14:09:55 drochner Exp $
+# $NetBSD: modules.mk,v 1.2 2019/11/03 10:39:12 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GIO modules.  It takes care of rebuilding the corresponding databases at

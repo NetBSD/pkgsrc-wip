@@ -1,6 +1,8 @@
-$NetBSD: patch-gio_gresource-tool.c,v 1.1 2012/07/12 14:43:26 jperkin Exp $
+$NetBSD: patch-gio_gresource-tool.c,v 1.2 2019/06/03 09:53:50 prlw1 Exp $
 
---- gio/gresource-tool.c.orig	2018-12-18 14:51:13.000000000 +0000
+Solaris fix
+
+--- gio/gresource-tool.c.orig	2019-05-03 13:43:28.000000000 +0000
 +++ gio/gresource-tool.c
 @@ -29,6 +29,11 @@
  #include <locale.h>

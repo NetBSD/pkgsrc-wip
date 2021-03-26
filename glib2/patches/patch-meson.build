@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- meson.build.orig	2021-03-18 13:28:31.970625400 +0000
++++ meson.build
+@@ -2220,9 +2220,11 @@ endif
+ 
+ glib_conf.set('HAVE_PROC_SELF_CMDLINE', have_proc_self_cmdline)
+ 
+-python = import('python').find_installation('python3')
+-# used for '#!/usr/bin/env <name>'
+-python_name = 'python3'
++python = import('python').find_installation('python3', required: false)
++if not python.found()
++  python = import('python').find_installation()
++endif
++python_name = python.path()
+ 
+ python_version = python.language_version()
+ python_version_req = '>=3.5'
