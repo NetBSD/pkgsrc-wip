@@ -4,4 +4,4 @@ SHA1 (wsjtx-2.3.0.tgz) = 2caae6d1b74d31cd7f6bc507dd15f8cfd17c2ffb
 RMD160 (wsjtx-2.3.0.tgz) = 9f5dc6c80551e4a70f90671b8d5be7b070e41916
 SHA512 (wsjtx-2.3.0.tgz) = 1b521a7c81d235b2f17b2a314528f5f9fc8b29de95a2f7f5471104866ff13d138f9913666bc00de71f34ed16e692f0f4b93c878cc3538d30a52852e4c179702c
 Size (wsjtx-2.3.0.tgz) = 17245200 bytes
-SHA1 (patch-hamlib.patch) = 5f023280593e82c77b9db0cc836ecdb5cdc399cc
+SHA1 (patch-hamlib.patch) = a9a7c7fe704553e63a10b4155c08c3eb300c7382
