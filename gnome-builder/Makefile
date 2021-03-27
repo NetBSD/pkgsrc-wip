@@ -32,6 +32,8 @@ SUBST_SED.python=	-e 's,/usr/bin/env python3,/usr/bin/python,g'
 
 REPLACE_PYTHON+=	${SUBST_FILES.python}
 
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/clang/buildlink3.mk"

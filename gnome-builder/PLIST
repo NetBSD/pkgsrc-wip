@@ -345,7 +345,7 @@ lib/gnome-builder/plugins/valgrind_plugin.gresource
 lib/gnome-builder/plugins/valgrind_plugin.py
 lib/gnome-builder/plugins/waf.plugin
 lib/gnome-builder/plugins/waf_plugin.py
-lib/python3.8/site-packages/gi/overrides/Ide.py
+lib/python${PYVERSSUFFIX}/site-packages/gi/overrides/Ide.py
 libexec/gnome-builder-clang
 share/applications/org.gnome.Builder.desktop
 share/dbus-1/services/org.gnome.Builder.service
