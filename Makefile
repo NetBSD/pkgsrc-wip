@@ -2266,6 +2266,7 @@ SUBDIR+=	mackerel-agent-plugins
 SUBDIR+=	madonctl
 SUBDIR+=	magit-git
 SUBDIR+=	mago
+SUBDIR+=	mailcommon
 SUBDIR+=	mailfilter
 SUBDIR+=	mailimporter
 SUBDIR+=	mailman3
