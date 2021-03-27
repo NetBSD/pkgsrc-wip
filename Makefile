@@ -2086,6 +2086,7 @@ SUBDIR+=	libjingle
 SUBDIR+=	libkdepim
 SUBDIR+=	libkgapi
 SUBDIR+=	libkleo
+SUBDIR+=	libksieve
 SUBDIR+=	libksysguard
 SUBDIR+=	liblas
 SUBDIR+=	liblingoteach
