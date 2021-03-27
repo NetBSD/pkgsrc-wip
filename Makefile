@@ -5386,6 +5386,7 @@ SUBDIR+=	termit
 SUBDIR+=	termshark
 SUBDIR+=	terraform
 SUBDIR+=	terraform-provider-archive
+SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform013
 SUBDIR+=	terraform014
