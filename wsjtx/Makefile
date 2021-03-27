@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://physics.princeton.edu/pulsar/k1jt/
-COMMENT=	Well known in the amateur radio WSJT
+COMMENT=	Weak Signal Communication by Joe Talor (K1JT)
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
@@ -28,10 +28,9 @@ CMAKE_ARGS+=	-DLIBUSB_CFLAGS='-I ${PREFIX}/include/libusb-1.0 -lusb-1.0 -L${PREF
 CMAKE_ARGS+=	-DLIBUSB_LIBS=-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib
 CMAKE_ARGS+=	-DLIBS=-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib
 
-LIBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
-LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib 
-#DFLAGS+=	--rpath,-Wl=-lusb-1.0
-#MAKE_ENV+=	LIBUSB_FLAGS='-L${PREFIX}/lib -lusb-1.0'
+#IBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
+LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
+#MAKE_ENV+=	LIBUSB_FLAGS='-lusb-1.0 -L${PREFIX}/lib'
 
 # debug only (checking log)
 MAKE_JOBS_SAFE=	no
