@@ -5383,6 +5383,7 @@ SUBDIR+=	termbox
 SUBDIR+=	terminology
 SUBDIR+=	termit
 SUBDIR+=	termshark
+SUBDIR+=	terraform
 SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform013
