@@ -19,4 +19,37 @@ configure:19335: gcc -o conftest -g -O2 -fPIC -fdata-sections -ffunction-section
 ld: cannot find -lusb-1.0
 configure:19335: $? = 1
 configure: failed program was:
-k
+
+'configure' line where the problem exists
+  19304 LIBUSB=""
+  19305
+  19306
+  19307
+  19308 if test x"${cf_with_libusb}" = "xyes"; then :
+  19309   if test -z $LIBUSB_LIBS; then :
+  19310   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libusb_init in -lusb-1.0" >&5
+  19311 $as_echo_n "checking for libusb_init in -lusb-1.0... " >&6; }
+  19312 if ${ac_cv_lib_usb_1_0_libusb_init+:} false; then :
+  19313   $as_echo_n "(cached) " >&6
+  19314 else
+  19315   ac_check_lib_save_LIBS=$LIBS
+
+from configure.ac:
+    318 dnl Check for libusb, treat LIBUSB_LIBS and LIBUSB_CFLAGS as precious variables
+    319 AC_MSG_CHECKING([whether to build USB dependent backends])
+    320 AC_ARG_WITH([libusb],
+    321     [AS_HELP_STRING([--without-libusb],
+    322         [disable USB dependent backends @<:@default=yes@:>@])],
+    323         [cf_with_libusb=no],
+    324         [cf_with_libusb=yes]  
+    325     )
+    326 
+    327 AC_MSG_RESULT([$cf_with_libusb])
+    328
+    329 LIBUSB=""
+    330 AC_ARG_VAR([LIBUSB_CFLAGS], [C compiler flags for libusb, overriding configure defaults])
+    331 AC_ARG_VAR([LIBUSB_LIBS], [linker flags for libusb, overriding configure check (useful for specifying static libusb-1.0.a (see INSTALL))])
+    332
+    333 AS_IF([test x"${cf_with_libusb}" = "xyes"],
+
+
