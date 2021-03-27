@@ -1,5 +1,7 @@
 $NetBSD$
 
+Properly calls std::isnan()
+
 --- Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp.orig	2021-02-26 09:57:14.000000000 +0000
 +++ Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp
 @@ -172,7 +172,7 @@ const Shape& ShapeOutsideInfo::computedS
