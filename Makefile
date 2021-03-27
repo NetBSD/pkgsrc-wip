@@ -1931,6 +1931,7 @@ SUBDIR+=	kmymoney4
 SUBDIR+=	knotes
 SUBDIR+=	kodi
 SUBDIR+=	koha
+SUBDIR+=	kontact
 SUBDIR+=	kontactinterface
 SUBDIR+=	korganizer
 SUBDIR+=	krename
