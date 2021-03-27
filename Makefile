@@ -3117,6 +3117,7 @@ SUBDIR+=	pike8.0-Java
 SUBDIR+=	pike8.0-Mysql
 SUBDIR+=	pike8.0-Odbc
 SUBDIR+=	pilemc-svn
+SUBDIR+=	pim-data-exporter
 SUBDIR+=	pimcommon
 SUBDIR+=	pinball
 SUBDIR+=	pinentry-dmenu
