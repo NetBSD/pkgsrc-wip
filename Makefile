@@ -1942,6 +1942,7 @@ SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
 SUBDIR+=	kstest
 SUBDIR+=	ksysguard
+SUBDIR+=	ktnef
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
