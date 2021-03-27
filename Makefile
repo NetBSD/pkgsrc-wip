@@ -111,6 +111,7 @@ SUBDIR+=	akonadi
 SUBDIR+=	akonadi-calendar
 SUBDIR+=	akonadi-calendar-tools
 SUBDIR+=	akonadi-contacts
+SUBDIR+=	akonadi-import-wizard
 SUBDIR+=	akonadi-mime
 SUBDIR+=	akonadi-notes
 SUBDIR+=	akonadi-search
