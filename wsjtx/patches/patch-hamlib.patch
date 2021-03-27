@@ -4,7 +4,7 @@ patch PREFIX inside patch
 
 --- /dev/null	2021-03-27 14:25:58.185030027 +0900
 +++ hamlib.patch 2021-03-27 14:26:58.703680417 +0900
-@@ -0,0 +1,57 @@
+@@ -0,0 +1,21 @@
 +--- hamlib-prefix/src/hamlib/hamlib.pc.in.orig	2021-02-01 21:35:36.000000000 +0900
 ++++ hamlib/hamlib.pc.in	2021-03-21 21:07:31.473290128 +0900
 +@@ -9,5 +9,5 @@ URL: @PACKAGE_URL@
@@ -15,50 +15,14 @@ patch PREFIX inside patch
 ++Libs: -L${libdir} ${libdir}/libhamlib.a
 + Libs.private: @MATH_LIBS@ @DL_LIBS@ @NET_LIBS@ @PTHREAD_LIBS@
 +
-+
-+--- hamlib/configure.ac.orig	2021-02-01 21:35:36.000000000 +0900
-++++ hamlib/configure.ac	2021-03-27 00:00:57.899444006 +0900
-+@@ -278,6 +278,14 @@ AS_CASE(["$host_os"],
-+ 	AM_LDFLAGS="${AM_LDFLAGS} -L/usr/local/lib"
-+ 	AC_SUBST([AM_LDFLAGS])],
-+ 
-++    [netbsd*], [
-++       AM_CPPFLAGS="-I@PREFIX@/include ${AM_CPPFLAGS} -L@PREFIX@/lib -lusb-1.0 ${AM_CPPFLAGS}"
-++       AM_LDFLAGS="-L@PREFIX@/lib -lusb-1.0 ${AM_LDFLAGS}"
-++       LIBUSB_CFLAGS="-I@PREFIX@/include ${AM_CPPFLAGS} -L@PREFIX@/lib -lusb-1.0 ${AM_CPPFLAGS}"
-++       LIBUSB_LIBS="-L@PREFIX@/lib -lusb-1.0 ${AM_LDFLAGS}"
-++       LIBS="-L@PREFIX@/lib -lusb-1.0 ${AM_LDFLAGS}"
-++       AC_SUBST([AM_LDFLAGS])],
-++
-+     [darwin* | rhapsody*], [
-+ 	# Tell the OS X linker to allocate enough space inside the
-+ 	# libhamlib.X.dylib shared object for install_name_tool(1) to
-+@@ -321,16 +325,16 @@ AC_ARG_WITH([libusb],
-+ 
-+ AC_MSG_RESULT([$cf_with_libusb])
-+ 
-+-LIBUSB=""
-++LIBUSB="-L@PREFIX@/lib -lusb-1.0"
-++LIBS="-L@PREFIX@/lib -lusb-1.0"
-+ AC_ARG_VAR([LIBUSB_CFLAGS], [C compiler flags for libusb, overriding configure defaults])
-+ AC_ARG_VAR([LIBUSB_LIBS], [linker flags for libusb, overriding configure check (useful for specifying static libusb-1.0.a (see INSTALL))])
-+ 
-+ AS_IF([test x"${cf_with_libusb}" = "xyes"],
-+     [AS_IF([test -z $LIBUSB_LIBS],
-+-	[AC_CHECK_LIB([usb-1.0], [libusb_init], [LIBUSB_LIBS="-lusb-1.0"],
-++	[AC_CHECK_LIB([usb-1.0], [libusb_init], [LIBUSB_LIBS="-lusb-1.0 -L@PREFIX@/lib"],
-+ 	    [AC_MSG_WARN([libusb_init was not found in libusb-1.0--USB backends will be disabled])])
-+ 	], [cf_with_libusb="yes"])
-+
-+
 +--- hamlib/configure.orig	2021-02-01 21:35:58.000000000 +0900
 ++++ hamlib/configure	2021-03-27 14:11:34.897938353 +0900
-+@@ -19344,7 +19344,7 @@ fi
++@@ -19344,7 +19344,7 @@
 + { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_usb_1_0_libusb_init" >&5
 + $as_echo "$ac_cv_lib_usb_1_0_libusb_init" >&6; }
 + if test "x$ac_cv_lib_usb_1_0_libusb_init" = xyes; then :
 +-  LIBUSB_LIBS="-lusb-1.0"
-++  LIBUSB_LIBS="-lusb-1.0 -L@PREFIX@lib"
+++  LIBUSB_LIBS="-lusb-1.0 -L@PREFIX@/lib"
 + else
 +   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: libusb_init was not found in libusb-1.0--USB backends will be disabled" >&5
 + $as_echo "$as_me: WARNING: libusb_init was not found in libusb-1.0--USB backends will be disabled" >&2;}

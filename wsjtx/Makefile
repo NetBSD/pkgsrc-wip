@@ -52,7 +52,8 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-#include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 BUILDLINK_API_DEPENDS.hamlib+=	hamlib>=4.1
 .include "../../ham/hamlib/buildlink3.mk"
