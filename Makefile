@@ -1923,6 +1923,7 @@ SUBDIR+=	kissme
 SUBDIR+=	klatexformula
 SUBDIR+=	klayout
 SUBDIR+=	kleopatra
+SUBDIR+=	kmail
 SUBDIR+=	kmail-account-wizard
 SUBDIR+=	kmailtransport
 SUBDIR+=	kmenuedit
