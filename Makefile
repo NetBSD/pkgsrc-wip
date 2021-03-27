@@ -2267,6 +2267,7 @@ SUBDIR+=	madonctl
 SUBDIR+=	magit-git
 SUBDIR+=	mago
 SUBDIR+=	mailfilter
+SUBDIR+=	mailimporter
 SUBDIR+=	mailman3
 SUBDIR+=	mailsend-go
 SUBDIR+=	mailutils
