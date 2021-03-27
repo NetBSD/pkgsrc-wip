@@ -1921,6 +1921,7 @@ SUBDIR+=	kinfocenter
 SUBDIR+=	kissme
 SUBDIR+=	klatexformula
 SUBDIR+=	klayout
+SUBDIR+=	kleopatra
 SUBDIR+=	kmailtransport
 SUBDIR+=	kmenuedit
 SUBDIR+=	kmix
