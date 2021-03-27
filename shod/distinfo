@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (shod-0.3.2.tar.gz) = e8fb8dd42ac0ce9ad2d584b345555e6972777829
+RMD160 (shod-0.3.2.tar.gz) = e22fd5c495f70d6bcc45e3519c3bd02fe73fa89b
+SHA512 (shod-0.3.2.tar.gz) = 165e9936174f8b4ce820bb5dc04f5bbd1a9f8aa6d6f6a99cc792a210ea2f5566baba8bdbfaa3cfdd5d3061d9f76114f1239f3cdc4e669ee779cb07adece21588
+Size (shod-0.3.2.tar.gz) = 27454 bytes
+SHA1 (patch-config.mk) = 21c97fa4cac8d0fa067a45c16cff881ca912949f

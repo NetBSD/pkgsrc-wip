@@ -1,0 +1,45 @@
+Shod is an hybrid (tiling and floating) multimonitor X11 window manager.
+Shod sets no keybindings; reads no configuration other than X resources;
+and works only via mouse with a given key modifier (Alt by default), and
+by responding to client messages with EWMH hints (so you must use wmctrl
+to control shod).
+
+WARNING: Shod is attempt of mine to write a Wm and better understand how
+         X11 works, Shod is only meant for me for educational purposes.
+         Shod is an experimental project, and should be used with caution.
+
+WARNING: You must have wmctrl(1) installed in order to control Shod.
+
+Non-features:
+• No maximization (Shod uses maximization hints to implement tiling).
+• No tags/groups (Shod uses desktops rather than dwm-like tags).
+• No viewports (Shod does not support fvwm-like viewports).
+• No keybindings (Use sxhkd(1) for binding keys).
+• No bar/panels (I do not use panels, so I add no support for them).
+
+Features:
+• Shod uses EWMH-based maximization to implement tiled windows; that is,
+  when you maximize a window (seting BOTH '_NET_WM_STATE_MAXIMIZED_HORZ'
+  and '_NET_WM_STATE_MAXIMIZED_VERT') it is tiled rather than maximized
+  (that means that classic maximization isn't possible with shod).
+• Shod uses a columnated window tiling style (the same used by wmii(1)
+  and acme(1)).  In this style, each window occupies a row in a column.
+  In order to change the column of a window, just move it left or right
+  with wmctrl(1); and to swap a window with the one above or below, just
+  move it up or down.
+• Shod places floating windows in unoccupied regions of the monitor.
+  The first floating window is spawned in the center of the monitor.
+• Shod manages desktops just like how GNOME implements “actions”.  If a
+  window is open on an empty desktop, it creates a new empty desktop on
+  that monitor.   When a desktop has no window, this desktop is deleted.
+• Each monitor has its own set of workspaces.  For example, if you have
+  two monitors you will have two desktops being shown at the same time,
+  one on each monitor.  In order to change the selected monitor just
+  click on a window or on the root window of that monitor.  In order to
+  change the monitor of a window just move this window to another
+  monitor or move this window to a workspace bound to another monitor.
+• You can use the .focusbuttons compile-time option (set in config.h) to
+  use either a focus-follow-pointer style or a click-to-focus style.
+  You can even specify which mouse button triggers the click-to-focus
+  style.  The related .raisebuttons option specify which mouse buttons
+  raise a window.

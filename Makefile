@@ -5136,6 +5136,7 @@ SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
 SUBDIR+=	shellinabox
+SUBDIR+=	shod
 SUBDIR+=	shotcut
 SUBDIR+=	shotwell
 SUBDIR+=	shoutcast
