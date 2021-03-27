@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gopasspw/}
 GITHUB_PROJECT=	gopass
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gopass.pw/
 COMMENT=	The slightly more awesome Standard Unix Password Manager for Teams
 LICENSE=	mit
