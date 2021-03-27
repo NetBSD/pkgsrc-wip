@@ -31,6 +31,7 @@ CMAKE_ARGS+=	-DLIBS=-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib
 #IBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
 LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
 #MAKE_ENV+=	LIBUSB_FLAGS='-lusb-1.0 -L${PREFIX}/lib'
+MAKE_ENV+=	AM_LDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
 
 # debug only (checking log)
 MAKE_JOBS_SAFE=	no
