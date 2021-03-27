@@ -1885,6 +1885,7 @@ SUBDIR+=	kaddressbook
 SUBDIR+=	kaf
 SUBDIR+=	kafkacat
 SUBDIR+=	kahakai
+SUBDIR+=	kalarm
 SUBDIR+=	kalarmcal
 SUBDIR+=	kallisto
 SUBDIR+=	kamailio
