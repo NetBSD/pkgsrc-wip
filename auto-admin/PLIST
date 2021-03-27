@@ -130,6 +130,7 @@ sbin/auto-transfer-pw
 sbin/auto-unlock-local-pw
 sbin/auto-unlock-user
 sbin/auto-update-infiniband-modules
+sbin/auto-update-pkgsrc
 sbin/auto-update-system
 sbin/auto-user-admin
 sbin/auto-useradd
