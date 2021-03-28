@@ -1,16 +1,9 @@
 
-
-[ 17%] Linking CXX executable message_aggregator
-ld: cannot find -lboost_log
-ld: cannot find -lboost_log_setup
-ld: cannot find -lboost_filesystem
-ld: cannot find -lboost_thread
-ld: cannot find -lboost_date_time
-ld: cannot find -lboost_regex
-ld: cannot find -lboost_chrono
-ld: cannot find -lboost_atomic
-gmake[5]: *** [CMakeFiles/message_aggregator.dir/build.make:292: message_aggregator] Error 1
-gmake[4]: *** [CMakeFiles/Makefile2:263: CMakeFiles/message_aggregator.dir/all] Error 2
+ 71%] Linking CXX executable jt9
+ld: cannot find -lfftw3f_threads
+ld: cannot find -lfftw3f
+gmake[5]: *** [CMakeFiles/jt9.dir/build.make:140: jt9] Error 1
+gmake[4]: *** [CMakeFiles/Makefile2:321: CMakeFiles/jt9.dir/all] Error 2
 gmake[3]: *** [Makefile:171: all] Error 2
 gmake[2]: *** [CMakeFiles/wsjtx-build.dir/build.make:80: wsjtx-prefix/src/wsjtx-stamp/wsjtx-build] Error 2
 gmake[1]: *** [CMakeFiles/Makefile2:244: CMakeFiles/wsjtx-build.dir/all] Error 2
@@ -18,4 +11,7 @@ gmake: *** [Makefile:103: all] Error 2
 *** Error code 2
 
 Stop.
+make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/wsjtx
+*** Error code 1
+
 
