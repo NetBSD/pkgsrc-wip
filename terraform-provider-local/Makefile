@@ -15,7 +15,8 @@ GO_BUILD_PATTERN=	.
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 TERRAFORM_PROVIDER_BIN=		terraform-provider-local
-TERRAFORM_PROVIDER_NAME=	hashicorp/local
+TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
+TERRAFORM_PROVIDER_TYPE=	local
 
 .include "go-modules.mk"
 
