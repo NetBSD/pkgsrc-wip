@@ -15,6 +15,12 @@ LICENSE=	mpl-2.0
 
 GO_BUILD_PATTERN=	.
 
+SUBST_CLASSES+=			providers-prefix
+SUBST_STAGE.providers-prefix=	pre-configure
+SUBST_MESSAGE.providers-prefix=	Honor providers installed via pkgsrc
+SUBST_FILES.providers-prefix=	provider_source.go
+SUBST_VARS.providers-prefix=	PREFIX
+
 CHECK_RELRO_SKIP+=	bin/terraform
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
