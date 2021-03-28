@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	-no-cups
 
 PLIST_VARS+=		dbus
 .if !empty(PKG_OPTIONS:Mdbus)
-PC_FILES+=		Qt5DBus.pc
 # Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
 USE_DBUS-ARCH-DEPS_H=	yes
 .include "../../sysutils/dbus/buildlink3.mk"
