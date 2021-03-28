@@ -1945,6 +1945,7 @@ SUBDIR+=	kstest
 SUBDIR+=	ksysguard
 SUBDIR+=	ktnef
 SUBDIR+=	ktjet
+SUBDIR+=	kubectl
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kwin
