@@ -27,6 +27,7 @@ CMAKE_ARGS+=	-DLDFLAGS=-'Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLIBUSB_CFLAGS='-I ${PREFIX}/include/libusb-1.0 -lusb-1.0 -L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLIBUSB_LIBS=-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib
 CMAKE_ARGS+=	-DLIBS=-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib
+CMAKE_ARGS+=	-DQt5Test_DIR=${PREFIX}/qt5/lib/cmake/Qt5Test
 
 #IBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
 LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
@@ -54,6 +55,7 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 BUILDLINK_API_DEPENDS.hamlib+=	hamlib>=4.1
 .include "../../ham/hamlib/buildlink3.mk"

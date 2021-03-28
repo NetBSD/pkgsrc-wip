@@ -1,35 +1,21 @@
 
 
--- Looking for rig_set_cache_timeout_ms - found
-CMake Error at tests/CMakeLists.txt:1 (find_package):
-  By not providing "FindQt5Test.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "Qt5Test", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "Qt5Test"
-  (requested version 5) with any of the following names:
-
-    Qt5TestConfig.cmake
-    qt5test-config.cmake
-
-  Add the installation prefix of "Qt5Test" to CMAKE_PREFIX_PATH or set
-  "Qt5Test_DIR" to a directory containing one of the above files.  If
-  "Qt5Test" provides a separate development package or SDK, be sure it has
-  been installed.
-
-
--- Configuring incomplete, errors occurred!
-See also "/tmp/WRKOBJDIR/wip/wsjtx/work/wsjtx-2.3.0/wsjtx-prefix/src/wsjtx-build/CMakeFiles/CMakeOutput.log".
-See also "/tmp/WRKOBJDIR/wip/wsjtx/work/wsjtx-2.3.0/wsjtx-prefix/src/wsjtx-build/CMakeFiles/CMakeError.log".
-gmake[2]: *** [CMakeFiles/wsjtx-build.dir/build.make:86: wsjtx-prefix/src/wsjtx-stamp/wsjtx-configure] Error 1
+[ 17%] Linking CXX executable message_aggregator
+ld: cannot find -lboost_log
+ld: cannot find -lboost_log_setup
+ld: cannot find -lboost_filesystem
+ld: cannot find -lboost_thread
+ld: cannot find -lboost_date_time
+ld: cannot find -lboost_regex
+ld: cannot find -lboost_chrono
+ld: cannot find -lboost_atomic
+gmake[5]: *** [CMakeFiles/message_aggregator.dir/build.make:292: message_aggregator] Error 1
+gmake[4]: *** [CMakeFiles/Makefile2:263: CMakeFiles/message_aggregator.dir/all] Error 2
+gmake[3]: *** [Makefile:171: all] Error 2
+gmake[2]: *** [CMakeFiles/wsjtx-build.dir/build.make:80: wsjtx-prefix/src/wsjtx-stamp/wsjtx-build] Error 2
 gmake[1]: *** [CMakeFiles/Makefile2:244: CMakeFiles/wsjtx-build.dir/all] Error 2
 gmake: *** [Makefile:103: all] Error 2
 *** Error code 2
 
 Stop.
-make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/wsjtx
-*** Error code 1
-
-Stop.
-make: stopped in /export/CHROOT/usr/pkgsrc/wip/wsjtx
 
