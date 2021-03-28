@@ -1,2 +1,2 @@
 @comment $NetBSD$
-share/terraform/plugins/${TERRAFORM_PROVIDER_NAME}/${TERRAFORM_PROVIDER_VERSION}/${GO_PLATFORM}/terraform-provider-local
+share/terraform/plugins/${TERRAFORM_PROVIDER_REGISTRY}/${TERRAFORM_PROVIDER_NAME}/${TERRAFORM_PROVIDER_VERSION}/${GO_PLATFORM}/terraform-provider-local
