@@ -2,10 +2,6 @@
 #
 # This file implements common logic for Terraform providers in pkgsrc.
 #
-# Please note that if the provided `do-install:' should be used this file
-# should be included before including lang/go/go-package.mk or
-# lang/go/go-module.mk.
-#
 # === Package-settable variables ===
 #
 # TERRAFORM_PROVIDER_HOSTNAME (optional)
@@ -40,11 +36,3 @@ PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_HOSTNAME}", "$${TERRAFORM_PROVIDER
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_NAMESPACE}", "$${TERRAFORM_PROVIDER_NAMESPACE}") }
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_TYPE}", "$${TERRAFORM_PROVIDER_TYPE}") }
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_VERSION}", "$${TERRAFORM_PROVIDER_VERSION}") }
-
-INSTALLATION_DIRS?=	${TERRAFORM_PROVIDER_DIR}
-
-.if !target(do-install)
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/${TERRAFORM_PROVIDER_BIN} \
-	    ${DESTDIR}${PREFIX}/${TERRAFORM_PROVIDER_DIR}
-.endif
