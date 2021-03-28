@@ -1,17 +1,23 @@
-
- 71%] Linking CXX executable jt9
-ld: cannot find -lfftw3f_threads
-ld: cannot find -lfftw3f
-gmake[5]: *** [CMakeFiles/jt9.dir/build.make:140: jt9] Error 1
-gmake[4]: *** [CMakeFiles/Makefile2:321: CMakeFiles/jt9.dir/all] Error 2
-gmake[3]: *** [Makefile:171: all] Error 2
-gmake[2]: *** [CMakeFiles/wsjtx-build.dir/build.make:80: wsjtx-prefix/src/wsjtx-stamp/wsjtx-build] Error 2
-gmake[1]: *** [CMakeFiles/Makefile2:244: CMakeFiles/wsjtx-build.dir/all] Error 2
-gmake: *** [Makefile:103: all] Error 2
-*** Error code 2
-
-Stop.
-make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/wsjtx
-*** Error code 1
-
+O
+lude -I/tmp/WRKOBJDIR/wip/wsjtx/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/src -I/tmp/WRKOBJDIR/wip/wsjtx/work/wsjtx-2.3.0/hamlib-prefix/src/hamlib/lib -I/usr/pkg/include -I/usr/include -I/usr/pkg/qt5/include -I/usr/pkg/incld: warning: libstdc++.so.9, needed by /tmp/WRKOBJDIR/wip/wsjtx/work/.buildlink/lib/libboost_log_setup.so, may conflict with libstdc++.so.7
+gmake[5]: *** [CMakeFiles/qra64sim.dir/build.make:108: qra64sim] Error 1
+gmake[4]: *** [CMakeFiles/Makefile2:939: CMakeFiles/qra64sim.dir/all] Error 2
+ld: warning: libstdc++.so.9, needed by /tmp/WRKOBJDIR/wip/wsjtx/work/.buildlink/lib/libboost_log_setup.so, may conflict with libstdc++.so.7
+ld: libwsjt_fort.a(four2a.f90.o): in function `four2a_':
+four2a.f90:(.text+0x3b5): undefined reference to `sfftw_destroy_plan_'
+ld: four2a.f90:(.text+0x423): undefined reference to `sfftw_destroy_plan_'
+ld: four2a.f90:(.text+0x44a): undefined reference to `sfftw_destroy_plan_'
+ld: four2a.f90:(.text+0x471): undefined reference to `sfftw_destroy_plan_'
+ld: four2a.f90:(.text+0x498): undefined reference to `sfftw_destroy_plan_'
+ld: libwsjt_fort.a(four2a.f90.o):four2a.f90:(.text+0x4bf): more undefined references to `sfftw_destroy_plan_' follow
+ld: libwsjt_fort.a(four2a.f90.o): in function `four2a_':
+four2a.f90:(.text+0x790): undefined reference to `sfftw_plan_dft_r2c_1d_'
+ld: four2a.f90:(.text+0x7d6): undefined reference to `sfftw_plan_dft_c2r_1d_'
+ld: four2a.f90:(.text+0x85b): undefined reference to `sfftw_destroy_plan_'
+ld: four2a.f90:(.text+0x8a1): undefined reference to `sfftw_plan_dft_1d_'
+ld: four2a.f90:(.text+0x83d): undefined reference to `sfftw_execute_'
+gmake[5]: *** [CMakeFiles/jt49sim.dir/build.make:108: jt49sim] Error 1
+gmake[4]: *** [CMakeFiles/Makefile2:911: CMakeFiles/jt49sim.dir/all] Error 2
+[ 64%] Built target msk144code
+[ 64%] Linking CXX executable wsprcode
 

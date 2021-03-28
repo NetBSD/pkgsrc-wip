@@ -35,7 +35,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
 MAKE_ENV+=	AM_LDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
 
 # debug only (checking log)
-MAKE_JOBS_SAFE=	no
+#AKE_JOBS_SAFE=	no
 
 # hamlib-prefix/src/hamlib/configure.ac
 SUBST_CLASSES+=		hamlib
@@ -57,6 +57,8 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+#include "../../math/fftw/buildlink3.mk"
+.include "../../math/fftwf/buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 BUILDLINK_API_DEPENDS.hamlib+=	hamlib>=4.1
 .include "../../ham/hamlib/buildlink3.mk"
