@@ -36,3 +36,12 @@ PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_HOSTNAME}", "$${TERRAFORM_PROVIDER
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_NAMESPACE}", "$${TERRAFORM_PROVIDER_NAMESPACE}") }
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_TYPE}", "$${TERRAFORM_PROVIDER_TYPE}") }
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_VERSION}", "$${TERRAFORM_PROVIDER_VERSION}") }
+
+#
+# TODO: overwrite do-install: target so it DTRT both for go-module.mk packages
+# TODO: and go-packages.mk packages.  This can be probably done by checking for
+# TODO: both existence of TERRAFORM_PROVIDER_BIN in .gopath/bin and bin and copy
+# TODO: what is found.  Currently, for all packaged providers, this is probably
+# TODO: good enough but if there is any exception we can probably adjust that
+# TODO: via pre-install:/post-install: too.
+#
