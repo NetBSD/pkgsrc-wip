@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tre-0.3.6
-PKGNAME=        ${DISTNAME:S/-/-command-/}
+DISTNAME=	tre-command-0.3.6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dduan/}
 GITHUB_PROJECT=	tre
