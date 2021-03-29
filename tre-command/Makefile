@@ -1,8 +1,10 @@
 # $NetBSD$
 
 DISTNAME=	tre-0.3.6
+PKGNAME=        ${DISTNAME:S/-/-command-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dduan/}
+GITHUB_PROJECT=	tre
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
