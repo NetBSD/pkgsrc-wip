@@ -4,7 +4,7 @@ DISTNAME=	quest-tui-0.1.3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=frustak/}
 GITHUB_PROJECT=	Quest
-GITHUB_TAG=	daae8e77ce5c8e4f71a576b68e51512852fbd515
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/frustak/Quest/
