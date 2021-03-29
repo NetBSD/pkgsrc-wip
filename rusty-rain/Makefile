@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	rusty-rain-0.3.1
+#WARNING: Newer versions require rust >= 1.50
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cowboy8625/}
 GITHUB_PROJECT=	rusty-rain
