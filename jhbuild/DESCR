@@ -1,0 +1,4 @@
+JHBuild is a tool designed to ease building collections of source
+packages, called "modules".
+JHBuild was originally written for building GNOME, but has since been
+extended to be usable with other projects.
