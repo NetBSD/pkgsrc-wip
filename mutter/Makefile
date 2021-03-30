@@ -71,7 +71,8 @@ REQD_FILES+=		${EGDIR}/X11/xinit/xinitrc.d/90-mutter \
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
 .include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
-.include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=       gsettings-desktop-schemas>=40.0
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"

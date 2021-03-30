@@ -7,7 +7,7 @@ GNOME_DESKTOP40_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-desktop40+=	gnome-desktop40>=3.4.2
 BUILDLINK_ABI_DEPENDS.gnome-desktop40+=	gnome-desktop40>=3.36
-BUILDLINK_PKGSRCDIR.gnome-desktop40?=	../../wip/gnome-desktop40
+BUILDLINK_PKGSRCDIR.gnome-desktop40?=	../../devel/gnome-desktop40
 
 BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.27.0
 .include "../../wip/gsettings-desktop-schemas/buildlink3.mk"
