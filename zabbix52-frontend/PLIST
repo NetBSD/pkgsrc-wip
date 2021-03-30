@@ -40,6 +40,7 @@ share/zabbix/app/controllers/CControllerFavouriteCreate.php
 share/zabbix/app/controllers/CControllerFavouriteDelete.php
 share/zabbix/app/controllers/CControllerGuiEdit.php
 share/zabbix/app/controllers/CControllerGuiUpdate.php
+share/zabbix/app/controllers/CControllerHintBox.php
 share/zabbix/app/controllers/CControllerHost.php
 share/zabbix/app/controllers/CControllerHostDashboardView.php
 share/zabbix/app/controllers/CControllerHostMacrosList.php
@@ -258,6 +259,7 @@ share/zabbix/app/views/configuration.dashboard.edit.php
 share/zabbix/app/views/configuration.dashboard.list.php
 share/zabbix/app/views/dashboard.properties.edit.php
 share/zabbix/app/views/dashboard.share.edit.php
+share/zabbix/app/views/hint.box.php
 share/zabbix/app/views/hostmacros.list.php
 share/zabbix/app/views/js/administration.authentication.edit.js.php
 share/zabbix/app/views/js/administration.autoreg.edit.js.php
@@ -552,6 +554,7 @@ share/zabbix/include/classes/helpers/CDataCacheHelper.php
 share/zabbix/include/classes/helpers/CDateTimeZoneHelper.php
 share/zabbix/include/classes/helpers/CElasticsearchHelper.php
 share/zabbix/include/classes/helpers/CEncryptHelper.php
+share/zabbix/include/classes/helpers/CHintBoxHelper.php
 share/zabbix/include/classes/helpers/CHousekeepingHelper.php
 share/zabbix/include/classes/helpers/CHtml.php
 share/zabbix/include/classes/helpers/CMapHelper.php
