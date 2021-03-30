@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Use prefefined macros
+
 --- gene-algorithms.c.orig	2021-03-30 13:51:05 UTC
 +++ gene-algorithms.c
 @@ -29,7 +29,7 @@

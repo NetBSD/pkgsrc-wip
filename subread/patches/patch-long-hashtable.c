@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Use predefined macros
+
 --- long-hashtable.c.orig	2020-06-04 23:59:33 UTC
 +++ long-hashtable.c
 @@ -22,7 +22,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Use predefined macros
+
 --- subread.h.orig	2018-11-08 14:46:06 UTC
 +++ subread.h
 @@ -102,7 +102,7 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Respect env
+
 --- longread-one/Makefile.orig	2019-09-04 04:22:49 UTC
 +++ longread-one/Makefile
 @@ -1,12 +1,12 @@

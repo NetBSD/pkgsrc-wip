@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Use predefined macros
+
 --- HelperFunctions.c.orig	2020-06-04 23:58:40 UTC
 +++ HelperFunctions.c
 @@ -845,7 +845,7 @@ int strcmp_number(char * s1, char * s2)

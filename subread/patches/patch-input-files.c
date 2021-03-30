@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Use predefined macros
+
 --- input-files.c.orig	2020-06-05 00:33:03 UTC
 +++ input-files.c
 @@ -48,7 +48,7 @@ FILE * f_subr_open(const char * fname, const char * mo

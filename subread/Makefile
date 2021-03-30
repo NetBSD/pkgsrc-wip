@@ -28,6 +28,5 @@ INSTALL_TARGET=	install-strip
 
 # Convert any _DEPENDS above that have a buildlink3.mk
 # .include "../..///buildlink3.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

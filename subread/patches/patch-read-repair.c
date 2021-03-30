@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Portability
+
 --- read-repair.c.orig	2018-11-08 15:20:06 UTC
 +++ read-repair.c
 @@ -3,6 +3,7 @@
