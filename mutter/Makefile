@@ -66,7 +66,7 @@ REQD_FILES+=		${EGDIR}/X11/xinit/xinitrc.d/90-mutter \
 			${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-mutter
 
 .include "../../devel/meson/build.mk"
-.include "../../wip/glib2/schemas.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"

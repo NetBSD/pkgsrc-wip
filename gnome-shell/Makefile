@@ -16,6 +16,7 @@ MESON_ARGS+=	-Dnetworkmanager=false
 MESON_ARGS+=	-Dsystemd=false
 MESON_ARGS+=	-Dextensions_app=false
 MESON_ARGS+=	-Dextensions_tool=false
+MESON_ARGS+=	-Dman=true
 
 TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc

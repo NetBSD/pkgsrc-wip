@@ -25,7 +25,7 @@ MESON_ARGS+=		-Dgtk_doc=false
 MESON_ARGS+=		-Ddebug_tools=false
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
-.include "../../wip/glib2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.36.5
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
