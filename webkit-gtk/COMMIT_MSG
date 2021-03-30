@@ -7,9 +7,8 @@ pkgsrc changes:
    existent logic was migrated there
  - Remove patch-Source_ThirdParty_ANGLE_adjust-angle-include-paths.sh: patched
    file no longer present
-
-XXX: Misc (worth in some way to mention/and/or add a comment in pkgsrc Makefile):
-XXX:  - Pass DISABLE_GAMEPAD: needs libmanette not yet in pkgsrc
+ - Add `-DENABLE_GAMEPAD=OFF' to disable gamepad support: needs libmanette not
+   yet packaged in pkgsrc
 
 Changes:
 2.32.0
@@ -24,5 +23,5 @@ Changes:
  - Improved platform support for WebAudio (WebAudio->MediaStream, Worklet, Multi-channel).
  - Support for hardware-accelerated video rendering on i.MX8 platforms (using the NXP driver).
 
-TODO: credits <cirnatdan> and <leot> and/or anyone else (depending who update
-TODO: the package)
+
+Updated in pkgsrc-wip by <cirnatdan> and me.
