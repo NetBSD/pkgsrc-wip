@@ -5915,7 +5915,6 @@ SUBDIR+=	yakuake
 SUBDIR+=	yateclient
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
-SUBDIR+=	yelp-tools
 SUBDIR+=	yersinia
 SUBDIR+=	yi
 SUBDIR+=	ympd

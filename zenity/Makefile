@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config autoreconf autoconf
 USE_TOOLS+=		automake gm4 aclocal xgettext autopoint
 
 BUILD_DEPENDS+=		gnome-common-[0-9]*:../../devel/gnome-common
-BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../wip/yelp-tools
+BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./autogen.sh
