@@ -19,6 +19,6 @@ USE_TOOLS+=	msgmerge
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/messagelib/buildlink3.mk"
 .include "../../wip/kontactinterface/buildlink3.mk"
-.include "../../wip/syndication/buildlink3.mk"
+.include "../../www/syndication/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
