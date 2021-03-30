@@ -4875,7 +4875,6 @@ SUBDIR+=	qtractor
 SUBDIR+=	qtre
 SUBDIR+=	quantlib
 SUBDIR+=	quarkcoin
-SUBDIR+=	quest-tui
 SUBDIR+=	quex
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
