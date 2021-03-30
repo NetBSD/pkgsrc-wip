@@ -39,6 +39,6 @@ BUILDLINK_API_DEPENDS.libdazzle+=	libdazzle>=3.35.3
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../wip/json-glib/buildlink3.mk"
-.include "../../wip/webkit-gtk/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
