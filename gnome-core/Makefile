@@ -89,7 +89,7 @@ DEPENDS+=	libgsf-[0-9]*:../../devel/libgsf
 # TODO libgsystem
 DEPENDS+=	libgtop-[0-9]*:../../sysutils/libgtop
 # TODO libgudev
-DEPENDS+=	libgweather-[0-9]*:../../wip/libgweather
+DEPENDS+=	libgweather-[0-9]*:../../devel/libgweather
 DEPENDS+=	libgxps-[0-9]*:../../print/libgxps
 # TODO libmediaart
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify

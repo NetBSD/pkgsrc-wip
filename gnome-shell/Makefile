@@ -42,7 +42,7 @@ post-extract:
 	cp ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces/
 
 .include "../../devel/meson/build.mk"
-.include "../../wip/libgweather/buildlink3.mk"
+.include "../../devel/libgweather/buildlink3.mk"
 .include "../../x11/gtk4/buildlink3.mk"
 .include "../../archivers/gnome-autoar/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
