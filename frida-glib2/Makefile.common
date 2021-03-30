@@ -114,7 +114,7 @@ SUBST_FILES.dbusdb=	gio/gdbusconnection.c
 SUBST_FILES.dbusdb+=	gio/gdbusprivate.c
 SUBST_FILES.dbusdb+=	po/glib20.pot
 SUBST_FILES.dbusdb+=	po/*.po
-SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/db/dbus,g'
+SUBST_SED.dbusdb=	-e 's,/var/lib/dbus,${VARBASE}/lib/dbus,g'
 
 FRIDA_SUBPREFIX=	frida
 FRIDA_PREFIX=		${PREFIX}/${FRIDA_SUBPREFIX}
