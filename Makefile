@@ -5931,7 +5931,6 @@ SUBDIR+=	zapping
 SUBDIR+=	zbackup
 SUBDIR+=	zdbsp
 SUBDIR+=	zeek
-SUBDIR+=	zenity
 SUBDIR+=	zero-epwing-git
 SUBDIR+=	zetacoin
 SUBDIR+=	zim

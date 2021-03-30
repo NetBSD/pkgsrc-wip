@@ -9,7 +9,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Gnome Display Manager
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	zenity>=2.16.0:../../wip/zenity
+DEPENDS+=	zenity>=3.32.0:../../x11/zenity
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

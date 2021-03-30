@@ -121,6 +121,6 @@ DEPENDS+=	vte-[0-9]*:../../wip/vte # x11/vte029 ?
 DEPENDS+=	yelp3-[0-9]*:../../misc/yelp3
 DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 DEPENDS+=	yelp-xsl-[0-9]*:../../textproc/yelp-xsl
-DEPENDS+=	zenity-[0-9]*:../../wip/zenity
+DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 
 .include "../../mk/bsd.pkg.mk"
