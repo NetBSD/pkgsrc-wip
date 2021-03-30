@@ -4964,7 +4964,6 @@ SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
 SUBDIR+=	rtcmix
 SUBDIR+=	rte
-SUBDIR+=	rterm
 SUBDIR+=	rthread
 SUBDIR+=	rtl-sdr-git
 SUBDIR+=	rtpbreak
