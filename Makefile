@@ -4252,7 +4252,6 @@ SUBDIR+=	py-portray
 SUBDIR+=	py-poster
 SUBDIR+=	py-postgresfixture
 SUBDIR+=	py-postmarkup
-SUBDIR+=	py-pot
 SUBDIR+=	py-potr
 SUBDIR+=	py-pox
 SUBDIR+=	py-pp
