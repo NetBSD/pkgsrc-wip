@@ -5572,7 +5572,6 @@ SUBDIR+=	tracy
 SUBDIR+=	trader
 SUBDIR+=	translate-toolkit
 SUBDIR+=	trayion
-SUBDIR+=	tre-command
 SUBDIR+=	treetool
 SUBDIR+=	treeviewx
 SUBDIR+=	trelby
