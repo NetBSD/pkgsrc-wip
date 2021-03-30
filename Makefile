@@ -5267,6 +5267,7 @@ SUBDIR+=	stress-ng
 SUBDIR+=	strongswan
 SUBDIR+=	structure
 SUBDIR+=	stumpwm
+SUBDIR+=	subread
 SUBDIR+=	suitesparse
 SUBDIR+=	sulley
 SUBDIR+=	sunterlib

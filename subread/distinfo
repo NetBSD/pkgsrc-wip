@@ -1,0 +1,18 @@
+$NetBSD$
+
+SHA1 (subread-2.0.2-source.tar.gz) = 1f5eb1ffa0184e21321fb9e40a9f02dd94bb19ff
+RMD160 (subread-2.0.2-source.tar.gz) = 2cfa127a7bea963d67330edee2ca226f9d6dde49
+SHA512 (subread-2.0.2-source.tar.gz) = 549164aadcd1e05cd1f941a4c10d6e19f904d2d75dae8391bbf3003a26e13f6a14cc22618662c2baf804b4d020a58e7ba0b0be9b4ff1181ad981a24270ffb64e
+Size (subread-2.0.2-source.tar.gz) = 23295764 bytes
+SHA1 (patch-HelperFunctions.c) = b1205dfe8c57a9033237086e39ffa8e362595bf2
+SHA1 (patch-core-junction.c) = 39b7acbc4a61c40c112c8451ab234bb06d189462
+SHA1 (patch-gene-algorithms.c) = e8f4f0e5747cba279bf8fb88a0743a58065cf7a4
+SHA1 (patch-input-files.c) = cd85b2df930eba3f910c534d93933bf4f4355cd3
+SHA1 (patch-long-hashtable.c) = c6d6fef3c6925e94d7267db23dcba97aa5ad71a3
+SHA1 (patch-longread-one_LRMsorted-hashtable.c) = 956bc03d1ce3e820a61b81bd2d524916a33e0bce
+SHA1 (patch-longread-one_Makefile) = aae55c436af25e5513e79f4dcd6aee03d2dc48d2
+SHA1 (patch-longread-one_longread-mapping.c) = 9179704c5fc3dda691e8d13e08bb5dbe66f93e44
+SHA1 (patch-read-repair.c) = 848fd626695cbe494b2579d7f18d6b5381986811
+SHA1 (patch-sambam-file.c) = 6c6edfbefcffece7c5e296e8224884f6ac34445d
+SHA1 (patch-sorted-hashtable.c) = 68cbf2b4cc516d825ccdd4260d7b2a38e9e4dd3c
+SHA1 (patch-subread.h) = f259b8dfd4d3394f4dbeee5ab5c3ac4f6bb76308
