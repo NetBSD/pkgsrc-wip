@@ -18,6 +18,8 @@ HOMEPAGE=	http://bioinf.wehi.edu.au/subread-package/
 COMMENT=	High-performance read alignment, quantification and mutation discovery
 LICENSE=	gnu-gpl-v3
 
+NOT_FOR_PLATFORM=	NetBSD-*-*	# Needs sysinfo
+
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/subread-2.0.2-source/src
