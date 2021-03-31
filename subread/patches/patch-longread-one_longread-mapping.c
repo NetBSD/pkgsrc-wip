@@ -1,8 +1,8 @@
 $NetBSD$
 
-# Use predefined macros and gettimeofday()
+# Use gettimeofday() on BSD
 
---- longread-one/longread-mapping.c.orig	2021-03-30 13:58:29 UTC
+--- longread-one/longread-mapping.c.orig	2021-03-25 01:56:09.000000000 +0000
 +++ longread-one/longread-mapping.c
 @@ -30,7 +30,9 @@
  #ifndef __MINGW32__
@@ -14,11 +14,11 @@ $NetBSD$
  #include <sys/stat.h>
  #include <locale.h>
  #include <ctype.h>
-@@ -225,6 +227,17 @@ int LRMvalidate_and_init_context(LRMcontext_t ** conte
+@@ -225,6 +227,17 @@ int LRMvalidate_and_init_context(LRMcont
  #endif
  double LRMmiltime(){
  	double ret;
-+#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
 +
 +	struct timeval tp;
 +	struct timezone tz;

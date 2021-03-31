@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Use prefefined macros
+# Use predefined macros, getttimeofday()
 
 --- gene-algorithms.c.orig	2021-03-27 07:38:08.000000000 +0000
 +++ gene-algorithms.c
@@ -54,7 +54,7 @@ $NetBSD$
  double miltime(){
  	double ret;
 -	#ifdef FREEBSD
-+	#ifdef __FreeBSD__
++	#if defined(__FreeBSD__) || defined(__NetBSD__)
  		struct timeval tp;
  		struct timezone tz;
  		tz.tz_minuteswest=0;
