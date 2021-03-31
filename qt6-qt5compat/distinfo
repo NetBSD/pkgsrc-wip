@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (qt5compat-everywhere-src-6.0.2.tar.xz) = 1b49764d72bc6b8075821b95d82a0f41f2fd5d6a
-RMD160 (qt5compat-everywhere-src-6.0.2.tar.xz) = 5d1ff0b0fba6093701002476bc28975c63a2d037
-SHA512 (qt5compat-everywhere-src-6.0.2.tar.xz) = ccc09bd79a26ef4e891df6aad1d664ab3abb2c1bc0275186c77f1c9aa36100e7e95eee8e2c784182e52b7f82d9efd5d9fe6fa44c129db81672d87381a5ed0125
-Size (qt5compat-everywhere-src-6.0.2.tar.xz) = 605028 bytes
+SHA1 (qt5compat-everywhere-src-6.0.3.tar.xz) = 5440d592301a8152256ac3fbfd3c259e280cdb0b
+RMD160 (qt5compat-everywhere-src-6.0.3.tar.xz) = bf1075c2a3997b3cfeccb1519d5c1ea569c18dd6
+SHA512 (qt5compat-everywhere-src-6.0.3.tar.xz) = 13406a9afe3c0608f9c6c76f4fa144cda52622fb9eeb9ebca4be2b0658b32180e19e07eb29ee0b02afac809f311a38acfed0367e124923a32f2ddae1a6680fa8
+Size (qt5compat-everywhere-src-6.0.3.tar.xz) = 602148 bytes
