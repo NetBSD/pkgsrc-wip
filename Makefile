@@ -4252,6 +4252,7 @@ SUBDIR+=	py-poissongeometry
 SUBDIR+=	py-polygon3
 SUBDIR+=	py-polynomial
 SUBDIR+=	py-poppy
+SUBDIR+=	py-portalocker
 SUBDIR+=	py-portray
 SUBDIR+=	py-poster
 SUBDIR+=	py-postgresfixture
