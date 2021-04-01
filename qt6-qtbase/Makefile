@@ -82,7 +82,6 @@ CONFIGURE_ARGS+=		-platform solaris-cc-64
 CONFIGURE_ARGS+=		-platform solaris-cc
 .    endif
 .  endif
-NETWORK_LIBS=			-lsocket -lnsl
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=		-platform interix-g++
 CFLAGS+=			-I/usr/local/include/bind
@@ -124,7 +123,9 @@ UNLIMIT_RESOURCES=	datasize
 
 BUILDLINK_PASSTHRU_DIRS+=	${QTPREFIX}
 
-#
+# pkgsrc does not set rapth during build
+# but qdbuscpp2xml and qdbuscpp2xml are
+# executed during build
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
 INSTALLATION_DIRS=	lib/pkgconfig
