@@ -440,6 +440,7 @@ lib/libgnc-module.so
 lib/libgnucash-guile.so
 man/man1/gnc-fq-dump.1
 man/man1/gnc-fq-helper.1
+man/man1/gnucash-cli.1
 man/man1/gnucash.1
 share/applications/gnucash.desktop
 share/doc/gnucash/AUTHORS
@@ -465,6 +466,7 @@ share/doc/gnucash/ChangeLog.2016
 share/doc/gnucash/ChangeLog.2017
 share/doc/gnucash/ChangeLog.2018
 share/doc/gnucash/ChangeLog.2019
+share/doc/gnucash/ChangeLog.2020
 share/doc/gnucash/DOCUMENTERS
 share/doc/gnucash/HACKING
 share/doc/gnucash/LICENSE
