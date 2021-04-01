@@ -1,0 +1,3 @@
+Does not build because of glib 2.68.0.
+
+https://bugs.gnucash.org/show_bug.cgi?id=798156
