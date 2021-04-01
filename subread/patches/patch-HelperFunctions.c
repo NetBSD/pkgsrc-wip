@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Work around sysinfo on BSD
+# Use predefined macros, guard sysinfo
 
 --- HelperFunctions.c.orig	2021-03-27 07:38:08.000000000 +0000
 +++ HelperFunctions.c
@@ -13,21 +13,19 @@ $NetBSD$
  
  #include <sys/types.h>
  #include <sys/socket.h>
-@@ -47,8 +47,13 @@
+@@ -47,8 +47,11 @@
  #include <sys/ioctl.h>
  #include <netinet/in.h>
  #include <net/if.h>
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#include <sys/param.h>
-+#include <sys/sysctl.h>
-+#else
++// Add other platforms that lack native or pkgsrc libsysinfo
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
  #include <sys/sysinfo.h>
  #endif
 +#endif
  #include <sys/types.h>
  #endif
  
-@@ -846,10 +851,10 @@ int strcmp_number(char * s1, char * s2)
+@@ -846,10 +849,10 @@ int strcmp_number(char * s1, char * s2)
  
  int mac_str(char * str_buff)
  {
@@ -40,7 +38,7 @@ $NetBSD$
      int         mib[6], x1, ret = 1;
  	size_t		len;
      char            *buf;
-@@ -2702,22 +2707,22 @@ void main(){
+@@ -2702,22 +2705,20 @@ void main(){
  #include <windows.h>
  #endif
  
@@ -49,10 +47,8 @@ $NetBSD$
  int get_free_total_mem(size_t * total, size_t * free_mem){
  
 -#ifdef FREEBSD
++// Add other platforms that lack native or pkgsrc libsysinfo
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
-+    size_t	buff_size = sizeof(size_t);
-+    sysctlbyname("hw.physmem", total, &buff_size, NULL, 0);
-+    // FIXME: Still need free memory.  Return 0 once we have that.
      return -1;
 -#endif
 -
@@ -70,7 +66,7 @@ $NetBSD$
      mach_msg_type_number_t count = HOST_VM_INFO_COUNT;
      vm_statistics_data_t vmstat;
      int page_size = getpagesize();
-@@ -2737,7 +2742,6 @@ int get_free_total_mem(size_t * total, s
+@@ -2737,7 +2738,6 @@ int get_free_total_mem(size_t * total, s
      *total = sinf.totalram;
      return 0;
  #endif
