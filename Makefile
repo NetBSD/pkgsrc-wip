@@ -5799,7 +5799,6 @@ SUBDIR+=	wsjtx
 SUBDIR+=	wsmake
 SUBDIR+=	wvstreams
 SUBDIR+=	wxGTK-test
-SUBDIR+=	wxGTK31
 SUBDIR+=	wxmaxima-git
 SUBDIR+=	wyeb-git
 SUBDIR+=	wyebadblock-git
