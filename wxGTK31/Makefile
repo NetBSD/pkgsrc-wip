@@ -50,16 +50,18 @@ SUBST_VARS.fix-paths=		PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_SRC+=		${PLIST_SRC_DFLT}
+
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-osx_cocoa
 CONFIGURE_ARGS+=	--without-macosx-sdk
 CONFIGURE_ARGS+=	--without-macosx-version-min
 CPPFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
 .else
-.include "options.mk"
+CONFIGURE_ARGS+=	--with-gtk=3
+PLIST_SRC+=		PLIST.gtk3
+.include "../../x11/gtk3/buildlink3.mk"
 .endif
-
-PLIST_SRC+=		${PLIST_SRC_DFLT}
 
 CONFIGURE_ARGS.SunOS+=	--disable-xlocale
 
@@ -97,11 +99,4 @@ post-install:
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"

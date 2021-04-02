@@ -1160,7 +1160,6 @@ SUBDIR+=	gnomebaker
 SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
 SUBDIR+=	gnubg-cvs
-SUBDIR+=	gnucash
 SUBDIR+=	gnujump
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet

@@ -23,15 +23,7 @@ pkgbase := wxGTK31
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-.  if !empty(PKG_BUILD_OPTIONS.wxGTK31:Mgtk2)
-.include "../../x11/gtk2/buildlink3.mk"
-.  else
 .include "../../x11/gtk3/buildlink3.mk"
-.  endif
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
 .endif
 .endif # WXGTK31_BUILDLINK3_MK
 
