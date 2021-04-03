@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	luatexja
-PKGNAME=	tex-${DISTNAME}-20210103.0
-TEXLIVE_REV=	57316
+PKGNAME=	tex-${DISTNAME}-20210319.0
+TEXLIVE_REV=	58542
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/luatexja
