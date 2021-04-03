@@ -1,9 +1,11 @@
 # $NetBSD: Makefile,v 1.1 2014/03/19 22:03:31 jihbed Exp $
 
-DISTNAME=	mod_pywebsocket-0.7.9
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/mod_py//}
+DISTNAME=	pywebsocket-0.7.9
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
-MASTER_SITES=	http://pywebsocket.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=googlearchive/}
+GITHUB_PROJECT=	pywebsocket
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pywebsocket/

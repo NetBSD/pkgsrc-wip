@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.1 2014/03/19 22:03:31 jihbed Exp $
 
-SHA1 (mod_pywebsocket-0.7.9.tar.gz) = d85a6b820d0bcd9283b0384c81f4fd8b6fc2c25f
-RMD160 (mod_pywebsocket-0.7.9.tar.gz) = ec29d9ec3c0642ee338c6ddb5058c123eaa3dac3
-Size (mod_pywebsocket-0.7.9.tar.gz) = 143920 bytes
+SHA1 (pywebsocket-0.7.9.tar.gz) = 3213604ff2ec13671e51c6def2a4460d243b3ee2
+RMD160 (pywebsocket-0.7.9.tar.gz) = 930359289bd65cbe5d4238a3aedb54a99ed378c3
+SHA512 (pywebsocket-0.7.9.tar.gz) = d36f5392db84ec86e635c182dc5b53661a88ef4721bc46c2294d585841863a8c702c099a78dcba1dddd1cc00fbb9a03b4de6b8180b66d8a4aaca2889de988de0
+Size (pywebsocket-0.7.9.tar.gz) = 141820 bytes
