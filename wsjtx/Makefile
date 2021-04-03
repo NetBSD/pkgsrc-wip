@@ -32,9 +32,7 @@ CMAKE_ARGS+=	-DQt5Test_DIR=${PREFIX}/qt5/lib/cmake/Qt5Test
 
 #IBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
 LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
-#MAKE_ENV+=	LIBUSB_FLAGS='-lusb-1.0 -L${PREFIX}/lib'
 MAKE_ENV+=	AM_LDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
-MAKE_ENV+=	'Fortran_FLAGS+=-L${PREFIX}/lib'
 
 # debug only (checking log)
 #AKE_JOBS_SAFE=	no
