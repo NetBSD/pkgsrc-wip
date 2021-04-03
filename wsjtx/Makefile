@@ -23,6 +23,7 @@ CMAKE_ARGS+=	-DWSJT_SKIP_MANPAGES=ON
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${PREFIX}/qt5
 CMAKE_ARGS+=	-DWSJT_GENERATE_DOCS=OFF
 CMAKE_ARGS+=	-DLDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
+CMAKE_ARGS+=	-DFortran_FLAGS+='-L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLDFLAGS=-'Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLIBUSB_CFLAGS='-I ${PREFIX}/include/libusb-1.0 -lusb-1.0 -L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLIBUSB_LIBS=-Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib
@@ -33,6 +34,7 @@ CMAKE_ARGS+=	-DQt5Test_DIR=${PREFIX}/qt5/lib/cmake/Qt5Test
 LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
 #MAKE_ENV+=	LIBUSB_FLAGS='-lusb-1.0 -L${PREFIX}/lib'
 MAKE_ENV+=	AM_LDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
+MAKE_ENV+=	'Fortran_FLAGS+=-L${PREFIX}/lib'
 
 # debug only (checking log)
 #AKE_JOBS_SAFE=	no
