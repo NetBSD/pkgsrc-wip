@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/04 10:10:53 thomasklausner Exp $
 
 DISTNAME=	sabnzbd-${DISTVERSION}
-DISTVERSION=	3.2.0
+DISTVERSION=	3.2.1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sabnzbd/}
 GITHUB_PROJECT=	sabnzbd
