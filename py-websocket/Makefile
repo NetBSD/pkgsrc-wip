@@ -12,14 +12,14 @@ HOMEPAGE=	http://code.google.com/p/pywebsocket/
 COMMENT=	WebSocket server and extension for Apache HTTP Server for testing
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/pywebsocket-0.7.9/src
+WRKSRC=		${WRKDIR}/pywebsocket-pywebsocket-0.7.9/src
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_LANGUAGES=	# none
-
-PYDISTUTILSPKG=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC}/test ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_all.py;
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
