@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/shairport-sync
+man/man7/shairport-sync.7
+share/examples/shairport-sync/shairport-sync.conf

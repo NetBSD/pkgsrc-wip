@@ -5132,6 +5132,7 @@ SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
 SUBDIR+=	shadow
+SUBDIR+=	shairport-sync
 SUBDIR+=	shaper
 SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	shed

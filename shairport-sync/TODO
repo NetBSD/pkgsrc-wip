@@ -1,0 +1,13 @@
+Needs a rc script, further testing, documentation and upstreaming of patches.
+
+I get this when attempting to connect with rtunes:
+
+         0.000097779 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+         0.000097583 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+         0.000097814 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+         0.000103637 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+         0.000101781 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+         0.000104861 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+         0.000096524 "rtp.c:506" Error 49 using send-to to the timing socket: "Can't assign requested address".
+
+etc
