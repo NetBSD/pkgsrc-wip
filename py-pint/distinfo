@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (Pint-0.14.tar.gz) = acd8ffefc5d292cf86b56082b7183f913bdeff6a
-RMD160 (Pint-0.14.tar.gz) = 57f9ac33b8410311e3a9386feee03efacf460edc
-SHA512 (Pint-0.14.tar.gz) = e58379805481d07e0a4634cdc999f0faa21da7e4fa7c7bade86c45492e130157e08e156d51e179b3a7c69f720ba0d6c20b54e91e9ab5e010f0ed515a0042cbcc
-Size (Pint-0.14.tar.gz) = 251229 bytes
+SHA1 (Pint-0.17.tar.gz) = 98496b31efc63adfbf640953351aafc51cb46584
+RMD160 (Pint-0.17.tar.gz) = b9b50ebe6c8c532d8814d29c28784b8afe8c8708
+SHA512 (Pint-0.17.tar.gz) = 3e715d67b4a7b931ccaf7cdbeda4aa2338e7129840de447837f86696efb52117c6e6e832d1cc3605d160f12a631f3ce2e5dceff46be0de91460c3fec4c605146
+Size (Pint-0.17.tar.gz) = 265661 bytes

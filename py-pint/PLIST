@@ -62,12 +62,12 @@ ${PYSITELIB}/pint/testsuite/__init__.pyc
 ${PYSITELIB}/pint/testsuite/__init__.pyo
 ${PYSITELIB}/pint/testsuite/baseline/test_basic_plot.png
 ${PYSITELIB}/pint/testsuite/baseline/test_plot_with_set_units.png
+${PYSITELIB}/pint/testsuite/conftest.py
+${PYSITELIB}/pint/testsuite/conftest.pyc
+${PYSITELIB}/pint/testsuite/conftest.pyo
 ${PYSITELIB}/pint/testsuite/helpers.py
 ${PYSITELIB}/pint/testsuite/helpers.pyc
 ${PYSITELIB}/pint/testsuite/helpers.pyo
-${PYSITELIB}/pint/testsuite/parameterized.py
-${PYSITELIB}/pint/testsuite/parameterized.pyc
-${PYSITELIB}/pint/testsuite/parameterized.pyo
 ${PYSITELIB}/pint/testsuite/test_application_registry.py
 ${PYSITELIB}/pint/testsuite/test_application_registry.pyc
 ${PYSITELIB}/pint/testsuite/test_application_registry.pyo
@@ -89,6 +89,9 @@ ${PYSITELIB}/pint/testsuite/test_contexts.pyo
 ${PYSITELIB}/pint/testsuite/test_converters.py
 ${PYSITELIB}/pint/testsuite/test_converters.pyc
 ${PYSITELIB}/pint/testsuite/test_converters.pyo
+${PYSITELIB}/pint/testsuite/test_dask.py
+${PYSITELIB}/pint/testsuite/test_dask.pyc
+${PYSITELIB}/pint/testsuite/test_dask.pyo
 ${PYSITELIB}/pint/testsuite/test_definitions.py
 ${PYSITELIB}/pint/testsuite/test_definitions.pyc
 ${PYSITELIB}/pint/testsuite/test_definitions.pyo
@@ -104,6 +107,9 @@ ${PYSITELIB}/pint/testsuite/test_infer_base_unit.pyo
 ${PYSITELIB}/pint/testsuite/test_issues.py
 ${PYSITELIB}/pint/testsuite/test_issues.pyc
 ${PYSITELIB}/pint/testsuite/test_issues.pyo
+${PYSITELIB}/pint/testsuite/test_log_units.py
+${PYSITELIB}/pint/testsuite/test_log_units.pyc
+${PYSITELIB}/pint/testsuite/test_log_units.pyo
 ${PYSITELIB}/pint/testsuite/test_matplotlib.py
 ${PYSITELIB}/pint/testsuite/test_matplotlib.pyc
 ${PYSITELIB}/pint/testsuite/test_matplotlib.pyo

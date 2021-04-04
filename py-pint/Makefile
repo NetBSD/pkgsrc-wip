@@ -1,17 +1,22 @@
 # $NetBSD$
 
-DISTNAME=	Pint-0.14
+DISTNAME=	Pint-0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
-MASTER_SITES=	https://files.pythonhosted.org/packages/8c/97/122b87ce55c3ba7b75b3b5e9b12a55b86d72aae4cb56d1d11c93a1ff0002/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pint/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/hgrecco/pint
 COMMENT=	Physical quantities module
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-uncertainties>=3.1.5:../../math/py-uncertainties
 
+REPLACE_PYTHON+=	pint/pint-convert
+
+
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.1
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
