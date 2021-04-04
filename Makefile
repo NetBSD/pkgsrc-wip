@@ -4248,6 +4248,7 @@ SUBDIR+=	py-pluginbase
 SUBDIR+=	py-pmi
 SUBDIR+=	py-poisson-approval
 SUBDIR+=	py-poissongeometry
+SUBDIR+=	py-policy-sentry
 SUBDIR+=	py-polygon3
 SUBDIR+=	py-polynomial
 SUBDIR+=	py-poppy
