@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/dnstap
-man/man8/dnstap.8
