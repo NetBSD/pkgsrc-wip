@@ -13,6 +13,9 @@ weewx/bin/schemas/wview.pyo
 weewx/bin/schemas/wview_extended.py
 weewx/bin/schemas/wview_extended.pyc
 weewx/bin/schemas/wview_extended.pyo
+weewx/bin/schemas/wview_small.py
+weewx/bin/schemas/wview_small.pyc
+weewx/bin/schemas/wview_small.pyo
 weewx/bin/six.py
 weewx/bin/six.pyc
 weewx/bin/six.pyo
@@ -156,9 +159,6 @@ weewx/bin/weewx/drivers/vantage.pyo
 weewx/bin/weewx/drivers/wmr100.py
 weewx/bin/weewx/drivers/wmr100.pyc
 weewx/bin/weewx/drivers/wmr100.pyo
-weewx/bin/weewx/drivers/wmr200.py
-weewx/bin/weewx/drivers/wmr200.pyc
-weewx/bin/weewx/drivers/wmr200.pyo
 weewx/bin/weewx/drivers/wmr300.py
 weewx/bin/weewx/drivers/wmr300.pyc
 weewx/bin/weewx/drivers/wmr300.pyo
@@ -183,9 +183,6 @@ weewx/bin/weewx/filegenerator.pyo
 weewx/bin/weewx/imagegenerator.py
 weewx/bin/weewx/imagegenerator.pyc
 weewx/bin/weewx/imagegenerator.pyo
-weewx/bin/weewx/junk.py
-weewx/bin/weewx/junk.pyc
-weewx/bin/weewx/junk.pyo
 weewx/bin/weewx/manager.py
 weewx/bin/weewx/manager.pyc
 weewx/bin/weewx/manager.pyo
@@ -222,6 +219,9 @@ weewx/bin/weewx/wxmanager.pyo
 weewx/bin/weewx/wxservices.py
 weewx/bin/weewx/wxservices.pyc
 weewx/bin/weewx/wxservices.pyo
+weewx/bin/weewx/wxxtypes.py
+weewx/bin/weewx/wxxtypes.pyc
+weewx/bin/weewx/wxxtypes.pyo
 weewx/bin/weewx/xtypes.py
 weewx/bin/weewx/xtypes.pyc
 weewx/bin/weewx/xtypes.pyo
@@ -230,6 +230,7 @@ weewx/bin/wunderfixer
 weewx/docs/accum.md
 weewx/docs/changes.txt
 weewx/docs/copyright.htm
+weewx/docs/css/tocbot-4.12.0.css
 weewx/docs/css/tocbot-4.3.1.css
 weewx/docs/css/weewx_ui.css
 weewx/docs/customizing.htm
@@ -242,6 +243,7 @@ weewx/docs/images/day-gap-not-shown.png
 weewx/docs/images/day-gap-showing.png
 weewx/docs/images/daycompare.png
 weewx/docs/images/daytemp_with_avg.png
+weewx/docs/images/dayvaporp.png
 weewx/docs/images/daywindvec.png
 weewx/docs/images/favicon.png
 weewx/docs/images/ferrites.jpg
@@ -269,6 +271,8 @@ weewx/docs/images/weektempdew.png
 weewx/docs/images/yearhilow.png
 weewx/docs/js/cash.js
 weewx/docs/js/cash.min.js
+weewx/docs/js/tocbot-4.12.0.js
+weewx/docs/js/tocbot-4.12.0.min.js
 weewx/docs/js/tocbot-4.3.1.js
 weewx/docs/js/tocbot-4.3.1.min.js
 weewx/docs/js/weewx.js
@@ -276,6 +280,7 @@ weewx/docs/logging.md
 weewx/docs/macos.htm
 weewx/docs/readme.htm
 weewx/docs/redhat.htm
+weewx/docs/series_tags.md
 weewx/docs/setup.htm
 weewx/docs/suse.htm
 weewx/docs/upgrading.htm
@@ -305,7 +310,9 @@ weewx/examples/pmon/readme.txt
 weewx/examples/pmon/skins/pmon/index.html.tmpl
 weewx/examples/pmon/skins/pmon/skin.conf
 weewx/examples/stats.py
+weewx/examples/tests/test_vaporpressure.py
 weewx/examples/transfer_db.py
+weewx/examples/vaporpressure.py
 weewx/examples/xstats/bin/user/xstats.py
 weewx/examples/xstats/changelog
 weewx/examples/xstats/install.py
@@ -429,7 +436,6 @@ weewx/util/udev/rules.d/te923.rules
 weewx/util/udev/rules.d/vantage.rules
 weewx/util/udev/rules.d/weewx.rules
 weewx/util/udev/rules.d/wmr100.rules
-weewx/util/udev/rules.d/wmr200.rules
 weewx/util/udev/rules.d/wmr300.rules
 weewx/util/udev/rules.d/ws28xx.rules
 weewx/weewx.conf.${PKGVERSION}

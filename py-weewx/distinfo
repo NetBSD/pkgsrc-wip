@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (weewx-4.1.1.tar.gz) = e7743aa55cc46ca3c058acdb7b1ac8a11cc8581c
-RMD160 (weewx-4.1.1.tar.gz) = 7b2d310484943100a0b47811f7ba51900a7c3972
-SHA512 (weewx-4.1.1.tar.gz) = 900ca21954eca2f5923c63c1c1959ca0a1cff99caf79ddf1945757211cf6117b61b7244346d0c86c332fe9e61515e4a8f149292986f6af91ce879272dacf7a60
-Size (weewx-4.1.1.tar.gz) = 1586240 bytes
+SHA1 (weewx-4.5.1.tar.gz) = b96c28eda334963c6407190c5584f22a50fd3539
+RMD160 (weewx-4.5.1.tar.gz) = d0221a02295d08ba94835614dc046de3b241902c
+SHA512 (weewx-4.5.1.tar.gz) = a39dcac113520c1e67a1583fbfd6c94156b561f48d1d37799ba6fa1bc9b7f76fcaf556de221fd4b67d5599078f280bf84aafe2efa833e0209c5e8070d6a14ed8
+Size (weewx-4.5.1.tar.gz) = 1624237 bytes
 SHA1 (patch-setup.cfg) = ab4c53994fd3046351dc76a4690c37ae42b0fbed
 SHA1 (patch-setup.py) = 82a138c526de031e3cb7f6ea655a7969f81e97c5
