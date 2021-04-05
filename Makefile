@@ -5903,6 +5903,7 @@ SUBDIR+=	xtreemfs-client
 SUBDIR+=	xtreemfs-server
 SUBDIR+=	xtrkcad
 SUBDIR+=	xtrlock
+SUBDIR+=	xwallpaper
 SUBDIR+=	xwax
 SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff

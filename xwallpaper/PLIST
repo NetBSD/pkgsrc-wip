@@ -1,0 +1,8 @@
+@comment $NetBSD$
+@comment TODO: to fill this file with the file listing:
+@comment TODO: 1. run "/usr/bin/make package"
+@comment TODO: 2. run "/usr/bin/make print-PLIST"
+@comment $NetBSD$
+bin/xwallpaper
+man/man1/xwallpaper.1
+share/zsh/site-functions/_xwallpaper
