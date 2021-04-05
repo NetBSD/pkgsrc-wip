@@ -3,7 +3,7 @@
 DISTNAME=	weewx-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
-MASTER_SITES=	http://weewx.com/downloads/
+MASTER_SITES=	http://weewx.com/downloads/released_versions/
 
 # See also
 # https://reviews.freebsd.org/file/data/wxlggqqqglli6l66usac/PHID-FILE-kucs3bj4stbb6iw4zpy5/D6324.diff
@@ -28,7 +28,7 @@ SUBST_VARS.paths=	PREFIX
 # These versions are probably higher than necessary, but there is little value
 # in testing with versions older than are in pkgsrc.
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=2.7.16:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow6
 DEPENDS+=	${PYPKGPREFIX}-cheetah>=2.4.4:../../devel/py-cheetah
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.6.0:../../math/py-ephem
