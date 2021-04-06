@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/06/06 20:44:44 krytarowski Exp $
 
 DISTNAME=	gdm-40.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
@@ -110,6 +110,6 @@ post-install:
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/accountsservice/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
