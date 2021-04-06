@@ -19,7 +19,7 @@ DISTFILES+=	citeproc-rs-${CITEPROC_REV}.tar.gz
 SITES.citeproc-rs-${CITEPROC_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=cormacrelf/}citeproc-rs/archive/${CITEPROC_REV}.tar.gz
 
 USE_LANGUAGES=		c c++	# Rust, but needs toolchain for linking
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-extract:
 	mv ${WRKDIR}/citeproc-rs* ${WRKDIR}/citeproc-rs
@@ -27,6 +27,8 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/texlab	\
 	  ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/texlab.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

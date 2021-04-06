@@ -37,7 +37,8 @@ CARGO_CRATE_DEPENDS+=	cesu8-1.1.0
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chashmap-2.2.2
-# next four don't work because the crates are not on crates.io
+# there's a workaround for the next four in the Makefile
+# because these are not on crates.io yet
 # https://github.com/zotero/citeproc-rs/issues/61
 #CARGO_CRATE_DEPENDS+=	citeproc-0.0.1
 #CARGO_CRATE_DEPENDS+=	citeproc-db-0.1.0
