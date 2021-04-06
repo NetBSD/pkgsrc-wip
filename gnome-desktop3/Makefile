@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.44 2020/11/17 11:35:19 nia Exp $
 
 DISTNAME=	gnome-desktop-40.0
-PKGNAME=	${DISTNAME:S/desktop/desktop40/}
+PKGNAME=	${DISTNAME:S/desktop/desktop3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +23,7 @@ MESON_ARGS+=		-Ddate_in_gnome_version=false
 MESON_ARGS+=		-Ddesktop_docs=false
 MESON_ARGS+=		-Dgtk_doc=false
 MESON_ARGS+=		-Ddebug_tools=false
+MESON_ARGS+=		-Ddatadir=share
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
