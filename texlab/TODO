@@ -1,3 +1,0 @@
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2020-35711
--> Reported upstream as https://github.com/latex-lsp/texlab/issues/390
