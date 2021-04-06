@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/06/06 20:44:44 krytarowski Exp $
 
 DISTNAME=	gdm-40.0
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
@@ -38,9 +39,7 @@ MESON_ARGS+=		-Ddbus-sys=${PREFIX}/etc/dbus-1/system.d
 MESON_ARGS+=		-Dinitial-vt=05
 MESON_ARGS+=		-Dgdm-xsession=true
 MESON_ARGS+=		-Dwayland-support=false
-MESON_ARGS+=		-Dwith-default-path="/usr/local/bin:/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin/sbin"
-CONFIGURE_ENV+=		PREFIX=${PREFIX}
-CONFIGURE_ENV+=		X11BASE=${X11BASE}
+MESON_ARGS+=		-Ddefault-path="/usr/local/bin:/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin/sbin"
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR}/custom.conf
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
@@ -52,7 +51,7 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/PostSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/PreSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dm
 OWN_DIRS+=		${PKG_SYSCONFDIR}/modules
-OWN_DIRS+=		${VARBASE}/gdm
+OWN_DIRS+=		${VARBASE}/lib/gdm
 OWN_DIRS+=		${VARBASE}/log/gdm
 
 PKG_SYSCONFSUBDIR=	gdm
@@ -89,7 +88,7 @@ GDMGRP=		daemon
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD") && \
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
      ${MACHINE_ARCH} == "aarch64")
-CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
+MESON_ARGS+=	-Dinitial-vt=5
 .endif
 
 post-install:
