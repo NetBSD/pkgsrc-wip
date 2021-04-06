@@ -1260,5 +1260,5 @@ SHA1 (xmlparser-0.10.0.crate) = 7654fe89bda2e79f2714a16a58b12f2e698cb49b
 RMD160 (xmlparser-0.10.0.crate) = 3abb1a45b192ac7ba7d9602a4bb940dfb275bd67
 SHA512 (xmlparser-0.10.0.crate) = a8470bef5c34a97ddc58849dfd06e3a737fa856ca8c341d82ba7d81cd7b3772b45f7326394551453c43a3f2470a6435b900a0d0a438694a449e2d1ff10a338da
 Size (xmlparser-0.10.0.crate) = 25005 bytes
-SHA1 (patch-Cargo.lock) = ebfbf34ca9f6f928357feefce41b9dbb5d31fb70
+SHA1 (patch-Cargo.lock) = 58fba8c71bba053ebec8b3a971c6bba548b4da77
 SHA1 (patch-Cargo.toml) = dde0c9b63389e8a5eb62dfa504df2c425cce3fd0

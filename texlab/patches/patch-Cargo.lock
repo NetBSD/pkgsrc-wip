@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix for CVE-2020-35711.
+
 --- Cargo.lock.orig	2021-01-10 13:55:04.000000000 +0000
 +++ Cargo.lock
 @@ -36,9 +36,9 @@ dependencies = [
