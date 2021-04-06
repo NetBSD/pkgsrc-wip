@@ -278,6 +278,8 @@ share/emacs/${PKGVERSION}/etc/images/bookmark_add.pbm
 share/emacs/${PKGVERSION}/etc/images/bookmark_add.xpm
 share/emacs/${PKGVERSION}/etc/images/cancel.pbm
 share/emacs/${PKGVERSION}/etc/images/cancel.xpm
+share/emacs/${PKGVERSION}/etc/images/checkbox-mixed.svg
+share/emacs/${PKGVERSION}/etc/images/checked.svg
 share/emacs/${PKGVERSION}/etc/images/checked.xpm
 share/emacs/${PKGVERSION}/etc/images/close.pbm
 share/emacs/${PKGVERSION}/etc/images/close.xpm
@@ -308,6 +310,7 @@ share/emacs/${PKGVERSION}/etc/images/diropen.pbm
 share/emacs/${PKGVERSION}/etc/images/diropen.xpm
 share/emacs/${PKGVERSION}/etc/images/disconnect.pbm
 share/emacs/${PKGVERSION}/etc/images/disconnect.xpm
+share/emacs/${PKGVERSION}/etc/images/down.svg
 share/emacs/${PKGVERSION}/etc/images/exit.pbm
 share/emacs/${PKGVERSION}/etc/images/exit.xpm
 share/emacs/${PKGVERSION}/etc/images/ezimage/README
@@ -566,6 +569,7 @@ share/emacs/${PKGVERSION}/etc/images/jump-to.pbm
 share/emacs/${PKGVERSION}/etc/images/jump-to.xpm
 share/emacs/${PKGVERSION}/etc/images/left-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/left-arrow.xpm
+share/emacs/${PKGVERSION}/etc/images/left.svg
 share/emacs/${PKGVERSION}/etc/images/letter.pbm
 share/emacs/${PKGVERSION}/etc/images/letter.xpm
 share/emacs/${PKGVERSION}/etc/images/lock-broken.pbm
@@ -682,12 +686,16 @@ share/emacs/${PKGVERSION}/etc/images/prev-node.pbm
 share/emacs/${PKGVERSION}/etc/images/prev-node.xpm
 share/emacs/${PKGVERSION}/etc/images/print.pbm
 share/emacs/${PKGVERSION}/etc/images/print.xpm
+share/emacs/${PKGVERSION}/etc/images/radio-checked.svg
+share/emacs/${PKGVERSION}/etc/images/radio-mixed.svg
+share/emacs/${PKGVERSION}/etc/images/radio.svg
 share/emacs/${PKGVERSION}/etc/images/redo.pbm
 share/emacs/${PKGVERSION}/etc/images/redo.xpm
 share/emacs/${PKGVERSION}/etc/images/refresh.pbm
 share/emacs/${PKGVERSION}/etc/images/refresh.xpm
 share/emacs/${PKGVERSION}/etc/images/right-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/right-arrow.xpm
+share/emacs/${PKGVERSION}/etc/images/right.svg
 share/emacs/${PKGVERSION}/etc/images/save.pbm
 share/emacs/${PKGVERSION}/etc/images/save.xpm
 share/emacs/${PKGVERSION}/etc/images/saveas.pbm
@@ -814,6 +822,7 @@ share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/no-handle.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/open.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/open.xpm
 share/emacs/${PKGVERSION}/etc/images/unchecked.pbm
+share/emacs/${PKGVERSION}/etc/images/unchecked.svg
 share/emacs/${PKGVERSION}/etc/images/unchecked.xpm
 share/emacs/${PKGVERSION}/etc/images/undo.pbm
 share/emacs/${PKGVERSION}/etc/images/undo.xpm
@@ -821,6 +830,7 @@ share/emacs/${PKGVERSION}/etc/images/up-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/up-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/up-node.pbm
 share/emacs/${PKGVERSION}/etc/images/up-node.xpm
+share/emacs/${PKGVERSION}/etc/images/up.svg
 share/emacs/${PKGVERSION}/etc/images/zoom-in.pbm
 share/emacs/${PKGVERSION}/etc/images/zoom-in.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.pbm
@@ -863,6 +873,8 @@ share/emacs/${PKGVERSION}/etc/refcards/survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/vipcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/viperCard.tex
 share/emacs/${PKGVERSION}/etc/rgb.txt
+share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3+libreoffice.rnc
+share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3.rnc
 share/emacs/${PKGVERSION}/etc/schema/README
 share/emacs/${PKGVERSION}/etc/schema/calstbl.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbcalstbl.rnc
@@ -873,8 +885,6 @@ share/emacs/${PKGVERSION}/etc/schema/dbstart.rnc
 share/emacs/${PKGVERSION}/etc/schema/docbook.rnc
 share/emacs/${PKGVERSION}/etc/schema/locate.rnc
 share/emacs/${PKGVERSION}/etc/schema/od-manifest-schema-v1.2-os.rnc
-share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3+libreoffice.rnc
-share/emacs/${PKGVERSION}/etc/schema/OpenDocument-schema-v1.3.rnc
 share/emacs/${PKGVERSION}/etc/schema/rdfxml.rnc
 share/emacs/${PKGVERSION}/etc/schema/relaxng.rnc
 share/emacs/${PKGVERSION}/etc/schema/schemas.xml
