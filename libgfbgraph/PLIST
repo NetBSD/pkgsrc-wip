@@ -1,0 +1,21 @@
+@comment $NetBSD$
+doc/libgfbgraph/AUTHORS
+doc/libgfbgraph/COPYING
+doc/libgfbgraph/ChangeLog
+doc/libgfbgraph/INSTALL
+doc/libgfbgraph/NEWS
+doc/libgfbgraph/README
+include/gfbgraph-0.2/gfbgraph/gfbgraph-album.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-authorizer.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-common.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-connectable.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-goa-authorizer.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-node.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-photo.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-simple-authorizer.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph-user.h
+include/gfbgraph-0.2/gfbgraph/gfbgraph.h
+lib/girepository-1.0/GFBGraph-0.2.typelib
+lib/libgfbgraph-0.2.la
+lib/pkgconfig/libgfbgraph-0.2.pc
+share/gir-1.0/GFBGraph-0.2.gir

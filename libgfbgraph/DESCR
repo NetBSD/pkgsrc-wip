@@ -1,0 +1,10 @@
+TODO: Adjust the following lines from README
+
+LibGFBGraph
+===========
+
+A GObject library for Facebook Graph API
+
+This library is in a very early stage of development, 
+don't use in a final application right now. Use it just 
+for test purposes at your own risk.
