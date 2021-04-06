@@ -12,10 +12,21 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES=		# none
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+CITEPROC_REV=	68c7a7c16088b5d7751641ab37299ad064cdb221
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	citeproc-rs-${CITEPROC_REV}.tar.gz
+SITES.citeproc-rs-${CITEPROC_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=cormacrelf/}citeproc-rs/archive/${CITEPROC_REV}.tar.gz
+
+USE_LANGUAGES=		c c++	# Rust, but needs toolchain for linking
+INSTALLATION_DIRS=	bin
+
+post-extract:
+	mv ${WRKDIR}/citeproc-rs* ${WRKDIR}/citeproc-rs
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/texlab ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/texlab	\
+	  ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
