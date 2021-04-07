@@ -667,6 +667,7 @@ SUBDIR+=	doxy2man
 SUBDIR+=	dpic
 SUBDIR+=	dps8m
 SUBDIR+=	dragbox-git
+SUBDIR+=	driftctl
 SUBDIR+=	drist
 SUBDIR+=	drkonqi
 SUBDIR+=	dropbox
