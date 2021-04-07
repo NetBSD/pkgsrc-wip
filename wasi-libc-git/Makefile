@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
 
 GIT_REPOSITORIES=	wasi-libc
 GIT_REPO.wasi-libc=	https://github.com/WebAssembly/wasi-libc.git
-GIT_BRANCH.wasi-libc=	master
+GIT_BRANCH.wasi-libc=	main
 WRKSRC=			${WRKDIR}/wasi-libc
 
 BUILD_DEPENDS+=	clang-[0-9]*:../../lang/clang # webassembly backend required

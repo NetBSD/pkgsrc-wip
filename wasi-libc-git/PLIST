@@ -190,6 +190,7 @@ wasi/include/values.h
 wasi/include/wasi/api.h
 wasi/include/wasi/libc-environ.h
 wasi/include/wasi/libc-find-relpath.h
+wasi/include/wasi/libc-nocwd.h
 wasi/include/wasi/libc.h
 wasi/include/wchar.h
 wasi/include/wctype.h
@@ -207,7 +208,9 @@ wasi/lib/wasm32-wasi/libpthread.a
 wasi/lib/wasm32-wasi/libresolv.a
 wasi/lib/wasm32-wasi/librt.a
 wasi/lib/wasm32-wasi/libutil.a
+wasi/lib/wasm32-wasi/libwasi-emulated-getpid.a
 wasi/lib/wasm32-wasi/libwasi-emulated-mman.a
+wasi/lib/wasm32-wasi/libwasi-emulated-process-clocks.a
 wasi/lib/wasm32-wasi/libwasi-emulated-signal.a
 wasi/lib/wasm32-wasi/libxnet.a
 wasi/share/wasm32-wasi/defined-symbols.txt
