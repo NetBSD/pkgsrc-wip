@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-gobject-[0-9]*:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-bitarray>=0.4:../../wip/py-bitarray
+DEPENDS+=	${PYPKGPREFIX}-bitarray>=0.4:../../devel/py-bitarray
 DEPENDS+=	${PYPKGPREFIX}-impacket-[0-9]*:../../wip/py-impacket
 # only available for FreeBSD
 #DEPENDS+=	${PYPKGPREFIX}-ptrace-[0-9]*:../../wip/py-ptrace

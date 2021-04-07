@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/01/02 20:46:22 thomasklausner Exp $
-
-SHA1 (bitarray-0.8.1.tar.gz) = cfdde3a6584eb5e94d479771644aa6ba9948310f
-RMD160 (bitarray-0.8.1.tar.gz) = 58c2a2665c2759f23bf1ab096de8c34bf7fcfcbb
-SHA512 (bitarray-0.8.1.tar.gz) = 10f4872243b92cd5a1a77e1e2aca80135d31904e17cb3de4eb2c3f2c4d3f00ad0573b6bc4b9c9379594e2912cb0e5d5870fb4e59eb298e269ecb3778fbae7d1f
-Size (bitarray-0.8.1.tar.gz) = 46877 bytes
