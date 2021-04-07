@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-hidapi-[0-9]*:../../wip/py-hidapi-git
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-Xlib>=0.16:../../wip/py-Xlib
+DEPENDS+=	${PYPKGPREFIX}-Xlib>=0.16:../../x11/py-Xlib
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*:../../x11/py-wxWidgets
 
 .include "../../lang/python/distutils.mk"

@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-hidapi-[0-9]*:../../wip/py-hidapi-git
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-Xlib>=0.15:../../wip/py-Xlib
+DEPENDS+=	${PYPKGPREFIX}-Xlib>=0.15:../../x11/py-Xlib
 
 #TODO: Should the following line be a DEPENDS line? yes
 #.include "../../wip/py-wxWidgets/buildlink3.mk"
