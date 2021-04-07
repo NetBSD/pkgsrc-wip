@@ -25,6 +25,8 @@ GO_BUILD_PATTERN+=	-ldflags ' \
 			-X helm.sh/helm/v3/pkg/chartutil.k8sVersionMinor=${K8S_MODULES_VERSION_MINOR}'
 GO_BUILD_PATTERN+=	./cmd/helm
 
+# XXX: Big kludge to patch the files in .gopath too that are the ones that needs
+# XXX: to be patched but are populated only as part of the `${GO} install -v'.
 do-build:
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN} || \
 	${CHMOD} +w ${WRKDIR}/.gopath/pkg/mod/github.com/containerd/containerd@v1.4.3/content/local/store_unix.go && \
