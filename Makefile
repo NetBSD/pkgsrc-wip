@@ -1485,6 +1485,7 @@ SUBDIR+=	hdparm
 SUBDIR+=	heaptrack
 SUBDIR+=	heimdal
 SUBDIR+=	heimdall
+SUBDIR+=	helm
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
