@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (epson-inkjet-printer-escpr-1.7.7-1lsb3.2.tar.gz) = c9c8e8faa3d147b1f9f3ffe161ac32f0956b7fd2
-RMD160 (epson-inkjet-printer-escpr-1.7.7-1lsb3.2.tar.gz) = c19ead0e8d933e933cb355b38a294ac85b2fa91c
-SHA512 (epson-inkjet-printer-escpr-1.7.7-1lsb3.2.tar.gz) = 9663b9ed425fbe5d3f2b6f85f036cdbd230665919e2cc9d62a33ebae85a0068513417209dae97ce55e406124b92c96c455cdc204d3d2335f4215f57b79f9d2a9
-Size (epson-inkjet-printer-escpr-1.7.7-1lsb3.2.tar.gz) = 4767015 bytes
+SHA1 (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = 4ca808eeea5fec93711eca0e9f7e7080ba20246f
+RMD160 (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = bac0fa218e88a15fb907c621f0bb4baeb0a273a4
+SHA512 (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = 93eb130d0d0daa3f3dc57c916e29bf1222e39ffacd1bf033a0b5e53654ec46462e8f18a6a845ce273fafd6b0c778ca61f3211b8709bb2099af79b4a23d814203
+Size (epson-inkjet-printer-escpr-1.7.9-1lsb3.2.tar.gz) = 4831399 bytes
 SHA1 (patch-src_linux__cmn.c) = e037c6ff296f0cfc11f459fb0369efa16660611e
