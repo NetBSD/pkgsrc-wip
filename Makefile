@@ -1902,7 +1902,6 @@ SUBDIR+=	kde-gtk-config
 SUBDIR+=	kde-runtime4
 SUBDIR+=	kdebugsettings
 SUBDIR+=	kdecoration
-SUBDIR+=	kdepim-apps-libs
 SUBDIR+=	kdepim-runtime
 SUBDIR+=	kdiagram
 SUBDIR+=	kdialog
