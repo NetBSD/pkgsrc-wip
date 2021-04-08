@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/akonadiconsole
 lib/libakonadiconsole.so.5
-lib/libakonadiconsole.so.5.14.1
+lib/libakonadiconsole.so.5.16.3
 share/applications/org.kde.akonadiconsole.desktop
 share/icons/hicolor/128x128/apps/akonadiconsole.png
 share/icons/hicolor/16x16/apps/akonadiconsole.png

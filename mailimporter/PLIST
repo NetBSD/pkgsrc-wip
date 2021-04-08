@@ -71,10 +71,10 @@ lib/cmake/KF5MailImporterAkonadi/KF5MailImporterAkonadiTargets-noconfig.cmake
 lib/cmake/KF5MailImporterAkonadi/KF5MailImporterAkonadiTargets.cmake
 lib/libKF5MailImporter.so
 lib/libKF5MailImporter.so.5
-lib/libKF5MailImporter.so.5.14.1
+lib/libKF5MailImporter.so.5.16.3
 lib/libKF5MailImporterAkonadi.so
 lib/libKF5MailImporterAkonadi.so.5
-lib/libKF5MailImporterAkonadi.so.5.14.1
+lib/libKF5MailImporterAkonadi.so.5.16.3
 qt5/mkspecs/modules/qt_MailImporter.pri
 qt5/mkspecs/modules/qt_MailImporterAkonadi.pri
 share/locale/ar/LC_MESSAGES/libmailimporter.mo

@@ -25,7 +25,7 @@ lib/cmake/KF5IncidenceEditor/KF5IncidenceEditorTargets-noconfig.cmake
 lib/cmake/KF5IncidenceEditor/KF5IncidenceEditorTargets.cmake
 lib/libKF5IncidenceEditor.so
 lib/libKF5IncidenceEditor.so.5
-lib/libKF5IncidenceEditor.so.5.14.1
+lib/libKF5IncidenceEditor.so.5.16.3
 qt5/mkspecs/modules/qt_IncidenceEditor.pri
 share/locale/ar/LC_MESSAGES/libincidenceeditors.mo
 share/locale/bs/LC_MESSAGES/libincidenceeditors.mo

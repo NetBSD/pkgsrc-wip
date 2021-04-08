@@ -33,7 +33,7 @@ lib/cmake/KF5AlarmCalendar/KF5AlarmCalendarTargets-noconfig.cmake
 lib/cmake/KF5AlarmCalendar/KF5AlarmCalendarTargets.cmake
 lib/libKF5AlarmCalendar.so
 lib/libKF5AlarmCalendar.so.5
-lib/libKF5AlarmCalendar.so.5.14.1
+lib/libKF5AlarmCalendar.so.5.16.3
 qt5/mkspecs/modules/qt_KAlarmCal.pri
 qt5/plugins/akonadi_serializer_kalarm.so
 share/akonadi/plugins/serializer/akonadi_serializer_kalarm.desktop
@@ -101,6 +101,7 @@ share/locale/nds/LC_MESSAGES/libkalarmcal5-serializer.mo
 share/locale/nds/LC_MESSAGES/libkalarmcal5.mo
 share/locale/nl/LC_MESSAGES/libkalarmcal5-serializer.mo
 share/locale/nl/LC_MESSAGES/libkalarmcal5.mo
+share/locale/nn/LC_MESSAGES/libkalarmcal5-serializer.mo
 share/locale/nn/LC_MESSAGES/libkalarmcal5.mo
 share/locale/pa/LC_MESSAGES/libkalarmcal5-serializer.mo
 share/locale/pa/LC_MESSAGES/libkalarmcal5.mo

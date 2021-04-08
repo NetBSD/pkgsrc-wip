@@ -22,7 +22,7 @@ lib/cmake/KPimImportWizard/KPimImportWizardTargets-noconfig.cmake
 lib/cmake/KPimImportWizard/KPimImportWizardTargets.cmake
 lib/libKPimImportWizard.so
 lib/libKPimImportWizard.so.5
-lib/libKPimImportWizard.so.5.14.1
+lib/libKPimImportWizard.so.5.16.3
 qt5/plugins/importwizard/balsaimporterplugin.so
 qt5/plugins/importwizard/clawsmailimporterplugin.so
 qt5/plugins/importwizard/evolutionv3importerplugin.so
@@ -45,8 +45,10 @@ share/doc/HTML/es/importwizard/index.cache.bz2
 share/doc/HTML/es/importwizard/index.docbook
 share/doc/HTML/et/importwizard/index.cache.bz2
 share/doc/HTML/et/importwizard/index.docbook
+share/doc/HTML/it/importwizard/import-selection.png
 share/doc/HTML/it/importwizard/index.cache.bz2
 share/doc/HTML/it/importwizard/index.docbook
+share/doc/HTML/it/importwizard/manual-import.png
 share/doc/HTML/nl/importwizard/index.cache.bz2
 share/doc/HTML/nl/importwizard/index.docbook
 share/doc/HTML/pt/importwizard/index.cache.bz2
@@ -77,6 +79,7 @@ share/locale/el/LC_MESSAGES/akonadiimportwizard.mo
 share/locale/en_GB/LC_MESSAGES/akonadiimportwizard.mo
 share/locale/es/LC_MESSAGES/akonadiimportwizard.mo
 share/locale/et/LC_MESSAGES/akonadiimportwizard.mo
+share/locale/eu/LC_MESSAGES/akonadiimportwizard.mo
 share/locale/fi/LC_MESSAGES/akonadiimportwizard.mo
 share/locale/fr/LC_MESSAGES/akonadiimportwizard.mo
 share/locale/ga/LC_MESSAGES/akonadiimportwizard.mo

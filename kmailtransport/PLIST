@@ -49,10 +49,10 @@ lib/cmake/KF5MailTransportAkonadi/KF5MailTransportAkonadiTargets-noconfig.cmake
 lib/cmake/KF5MailTransportAkonadi/KF5MailTransportAkonadiTargets.cmake
 lib/libKF5MailTransport.so
 lib/libKF5MailTransport.so.5
-lib/libKF5MailTransport.so.5.14.1
+lib/libKF5MailTransport.so.5.16.3
 lib/libKF5MailTransportAkonadi.so
 lib/libKF5MailTransportAkonadi.so.5
-lib/libKF5MailTransportAkonadi.so.5.14.1
+lib/libKF5MailTransportAkonadi.so.5.16.3
 qt5/mkspecs/modules/qt_KMailTransport.pri
 qt5/mkspecs/modules/qt_KMailTransportAkonadi.pri
 qt5/plugins/kcm_mailtransport.so

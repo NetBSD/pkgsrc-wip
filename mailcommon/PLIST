@@ -3,7 +3,11 @@ include/KF5/MailCommon/AccountConfigOrderDialog
 include/KF5/MailCommon/AddTagDialog
 include/KF5/MailCommon/BackupJob
 include/KF5/MailCommon/CollectionExpiryPage
+include/KF5/MailCommon/CollectionExpiryWidget
 include/KF5/MailCommon/CollectionGeneralPage
+include/KF5/MailCommon/CollectionGeneralWidget
+include/KF5/MailCommon/CollectionTemplatesWidget
+include/KF5/MailCommon/CollectionViewWidget
 include/KF5/MailCommon/CryptoUtils
 include/KF5/MailCommon/DBusOperators
 include/KF5/MailCommon/ExpireCollectionAttribute
@@ -51,7 +55,11 @@ include/KF5/mailcommon/accountconfigorderdialog.h
 include/KF5/mailcommon/addtagdialog.h
 include/KF5/mailcommon/backupjob.h
 include/KF5/mailcommon/collectionexpirypage.h
+include/KF5/mailcommon/collectionexpirywidget.h
 include/KF5/mailcommon/collectiongeneralpage.h
+include/KF5/mailcommon/collectiongeneralwidget.h
+include/KF5/mailcommon/collectiontemplateswidget.h
+include/KF5/mailcommon/collectionviewwidget.h
 include/KF5/mailcommon/cryptoutils.h
 include/KF5/mailcommon/dbusoperators.h
 include/KF5/mailcommon/expirecollectionattribute.h
@@ -105,7 +113,7 @@ lib/cmake/KF5MailCommon/KF5MailCommonTargets-noconfig.cmake
 lib/cmake/KF5MailCommon/KF5MailCommonTargets.cmake
 lib/libKF5MailCommon.so
 lib/libKF5MailCommon.so.5
-lib/libKF5MailCommon.so.5.14.1
+lib/libKF5MailCommon.so.5.16.3
 qt5/mkspecs/modules/qt_MailCommon.pri
 qt5/plugins/designer/mailcommonwidgets.so
 share/locale/ar/LC_MESSAGES/libmailcommon.mo

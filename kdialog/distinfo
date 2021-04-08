@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kdialog-20.04.1.tar.xz) = 019c546763a0c42658142c8d22b25393ec5c655d
-RMD160 (kdialog-20.04.1.tar.xz) = f99634fceb6b90a8156d650c520c71883c133219
-SHA512 (kdialog-20.04.1.tar.xz) = b86bc303abf83b55742d516db127bac5b4d9cebb0a54188723eb05506c845cc4150d36cc5e8fddae9487d374251a4f2947f6e0e5e26fa3074213653d91b0fee6
-Size (kdialog-20.04.1.tar.xz) = 103916 bytes
+SHA1 (kdialog-20.12.3.tar.xz) = eb64d6f244e23bed5f33cf3b857efffa18e9e54d
+RMD160 (kdialog-20.12.3.tar.xz) = c363cc6a716ffaa053ca4bec25b8b28171748428
+SHA512 (kdialog-20.12.3.tar.xz) = 09794892b150b8e9637f74971432c231c8abe9f2355b2c0c0ddd2527b5512d024a81f2d3dbab4dfd381495f729d4cb474caa46cfa8784f396abe223f989e243b
+Size (kdialog-20.12.3.tar.xz) = 108492 bytes

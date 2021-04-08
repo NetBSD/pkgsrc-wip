@@ -23,7 +23,7 @@ lib/cmake/KF5Tnef/KF5TnefTargets-noconfig.cmake
 lib/cmake/KF5Tnef/KF5TnefTargets.cmake
 lib/libKF5Tnef.so
 lib/libKF5Tnef.so.5
-lib/libKF5Tnef.so.5.14.1
+lib/libKF5Tnef.so.5.16.3
 qt5/mkspecs/modules/qt_KTNef.pri
 share/locale/ar/LC_MESSAGES/libktnef5.mo
 share/locale/bs/LC_MESSAGES/libktnef5.mo

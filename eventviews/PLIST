@@ -41,7 +41,7 @@ lib/cmake/KF5EventViews/KF5EventViewsTargets-noconfig.cmake
 lib/cmake/KF5EventViews/KF5EventViewsTargets.cmake
 lib/libKF5EventViews.so
 lib/libKF5EventViews.so.5
-lib/libKF5EventViews.so.5.14.1
+lib/libKF5EventViews.so.5.16.3
 qt5/mkspecs/modules/qt_EventViews.pri
 share/kservicetypes5/calendardecoration.desktop
 share/locale/ar/LC_MESSAGES/libeventviews.mo

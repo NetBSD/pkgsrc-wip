@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (kmailtransport-20.04.1.tar.xz) = 5cfe781fc84f2dac80cb8fe043d58b28429010a0
-RMD160 (kmailtransport-20.04.1.tar.xz) = 9bc275139d4488b292b3fc5dd5161cce8aa105f8
-SHA512 (kmailtransport-20.04.1.tar.xz) = 80c2208e187949c3521281897cc24d4b3ad92e5551639a15776a2539860af44d9937cbb897e0bae1480b5863c2cae1b6462253d114a775693a4401fbe703770e
-Size (kmailtransport-20.04.1.tar.xz) = 166368 bytes
+SHA1 (kmailtransport-20.12.3.tar.xz) = 4d9a499406bb229dcfee36f03796d2168616de67
+RMD160 (kmailtransport-20.12.3.tar.xz) = a3a4c2bdb10379950da858f33a655eed599b0e1e
+SHA512 (kmailtransport-20.12.3.tar.xz) = 7f270ee8d6695dac72611ff3f092a84ebd36bc8b4e373e04f8e80bce04080fec9f8f4eb0d88e968a641b62f7b860a7758b168ad992d5b849f6c18334a3e716a7
+Size (kmailtransport-20.12.3.tar.xz) = 168148 bytes

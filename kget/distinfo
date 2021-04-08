@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.5 2016/01/10 19:20:48 markd Exp $
 
-SHA1 (kget-19.08.0.tar.xz) = 146e3b9b76ff04e4e085dc84f05999de55ec1220
-RMD160 (kget-19.08.0.tar.xz) = ada9e08683abe12dc36ee4f93cd017aa20b44dcb
-SHA512 (kget-19.08.0.tar.xz) = 65f843d626f5164e2c391bae222079c8208a4df5d654a570dad852c30ecbf68323afcf4cbb988e15f0c03fd016f50fbede2a51d182c292a14e945fece3ef572f
-Size (kget-19.08.0.tar.xz) = 5233592 bytes
+SHA1 (kget-20.04.1.tar.xz) = 26cad2cd65a7ef7db0fa21a300ec3e144b503888
+RMD160 (kget-20.04.1.tar.xz) = 7dd8eab644e48b8298167e890b7204f5f91b76bc
+SHA512 (kget-20.04.1.tar.xz) = 100bd20d89e06372477c9ac7cbf4869aa5ed330863c52e4d2d08210b7b318356ff94837fb2a6310c6bbdf78e1404c3011e3eed8ab97751d95f37cbd173a621d8
+Size (kget-20.04.1.tar.xz) = 5238960 bytes

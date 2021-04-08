@@ -14,7 +14,6 @@ share/doc/HTML/ca/kalarm/index.cache.bz2
 share/doc/HTML/ca/kalarm/index.docbook
 share/doc/HTML/ca/kalarm/mainwindow-calendars.png
 share/doc/HTML/ca/kalarm/mainwindow.png
-share/doc/HTML/ca/kalarm/spinbox.png
 share/doc/HTML/de/kalarm/index.cache.bz2
 share/doc/HTML/de/kalarm/index.docbook
 share/doc/HTML/en/kalarm/alarmmessage.png
@@ -37,6 +36,8 @@ share/doc/HTML/pt/kalarm/index.cache.bz2
 share/doc/HTML/pt/kalarm/index.docbook
 share/doc/HTML/pt_BR/kalarm/index.cache.bz2
 share/doc/HTML/pt_BR/kalarm/index.docbook
+share/doc/HTML/ru/kalarm/index.cache.bz2
+share/doc/HTML/ru/kalarm/index.docbook
 share/doc/HTML/sv/kalarm/index.cache.bz2
 share/doc/HTML/sv/kalarm/index.docbook
 share/doc/HTML/uk/kalarm/index.cache.bz2
@@ -64,6 +65,7 @@ share/kconf_update/kalarm-2.0.2-general.pl
 share/kconf_update/kalarm-2.1.5-general.pl
 share/kconf_update/kalarm-version.pl
 share/kconf_update/kalarm.upd
+share/knotifications5/kalarm.notifyrc
 share/kxmlgui5/kalarm/kalarmui.rc
 share/locale/ar/LC_MESSAGES/kalarm.mo
 share/locale/bg/LC_MESSAGES/kalarm.mo

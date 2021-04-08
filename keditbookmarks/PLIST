@@ -32,6 +32,8 @@ share/doc/HTML/en/keditbookmarks/index.cache.bz2
 share/doc/HTML/en/keditbookmarks/index.docbook
 share/doc/HTML/es/keditbookmarks/index.cache.bz2
 share/doc/HTML/es/keditbookmarks/index.docbook
+share/doc/HTML/fr/keditbookmarks/index.cache.bz2
+share/doc/HTML/fr/keditbookmarks/index.docbook
 share/doc/HTML/it/keditbookmarks/index.cache.bz2
 share/doc/HTML/it/keditbookmarks/index.docbook
 share/doc/HTML/nl/keditbookmarks/index.cache.bz2
@@ -40,10 +42,14 @@ share/doc/HTML/pt/keditbookmarks/index.cache.bz2
 share/doc/HTML/pt/keditbookmarks/index.docbook
 share/doc/HTML/pt_BR/keditbookmarks/index.cache.bz2
 share/doc/HTML/pt_BR/keditbookmarks/index.docbook
+share/doc/HTML/ru/keditbookmarks/index.cache.bz2
+share/doc/HTML/ru/keditbookmarks/index.docbook
 share/doc/HTML/sv/keditbookmarks/index.cache.bz2
 share/doc/HTML/sv/keditbookmarks/index.docbook
 share/doc/HTML/uk/keditbookmarks/index.cache.bz2
 share/doc/HTML/uk/keditbookmarks/index.docbook
+share/doc/HTML/zh_CN/keditbookmarks/index.cache.bz2
+share/doc/HTML/zh_CN/keditbookmarks/index.docbook
 share/kxmlgui5/keditbookmarks/keditbookmarks-genui.rc
 share/kxmlgui5/keditbookmarks/keditbookmarksui.rc
 share/locale/ar/LC_MESSAGES/keditbookmarks.mo

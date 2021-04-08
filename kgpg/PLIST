@@ -41,9 +41,13 @@ share/doc/HTML/it/kgpg/index.cache.bz2
 share/doc/HTML/it/kgpg/index.docbook
 share/doc/HTML/it/kgpg/keygen.png
 share/doc/HTML/it/kgpg/keymanage.png
+share/doc/HTML/it/kgpg/keyprop.png
 share/doc/HTML/it/kgpg/keys.png
+share/doc/HTML/it/kgpg/keyserver-search.png
+share/doc/HTML/it/kgpg/keyserver.png
 share/doc/HTML/it/kgpg/kicker.png
 share/doc/HTML/it/kgpg/options.png
+share/doc/HTML/it/kgpg/select-secret-key.png
 share/doc/HTML/lt/kgpg/index.cache.bz2
 share/doc/HTML/lt/kgpg/index.docbook
 share/doc/HTML/nl/kgpg/index.cache.bz2
@@ -62,6 +66,8 @@ share/doc/HTML/pt_BR/kgpg/keyserver.png
 share/doc/HTML/pt_BR/kgpg/options.png
 share/doc/HTML/pt_BR/kgpg/select-secret-key.png
 share/doc/HTML/pt_BR/kgpg/systray.png
+share/doc/HTML/ru/kgpg/index.cache.bz2
+share/doc/HTML/ru/kgpg/index.docbook
 share/doc/HTML/sr/kgpg/index.cache.bz2
 share/doc/HTML/sr/kgpg/index.docbook
 share/doc/HTML/sv/kgpg/editor.png

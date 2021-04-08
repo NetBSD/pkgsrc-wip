@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libksieve-20.04.1.tar.xz) = e0b9d3feb06d792367c19a4a4006034b3ff840ef
-RMD160 (libksieve-20.04.1.tar.xz) = 9f85233e330007b8e27bf3e06e05ecda6a049add
-SHA512 (libksieve-20.04.1.tar.xz) = f6be11d5487ea3b4d377702ed6d3bb09cd503ea7a043f17de52055d7608e1562330d9548d4068623c120629aa9899923aa0b432ef06900a1596f18699f9c397c
-Size (libksieve-20.04.1.tar.xz) = 554840 bytes
+SHA1 (libksieve-20.12.3.tar.xz) = 9bd19c6ebfe66e7e7740250f62b8daf9418ea850
+RMD160 (libksieve-20.12.3.tar.xz) = f63b965d649142761e404fb4e06153d41bdecc78
+SHA512 (libksieve-20.12.3.tar.xz) = 0782de6b15000e97194c111e6b692721eb89e0414b4e854f8ad9bf989ad03b6792b4ae9af39549521db2f4d4c69ee07508c283f666c74d64ab5a7c51eea3091a
+Size (libksieve-20.12.3.tar.xz) = 558368 bytes

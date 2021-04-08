@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/kontact
 lib/libkontactprivate.so.5
-lib/libkontactprivate.so.5.14.1
+lib/libkontactprivate.so.5.16.3
 qt5/plugins/kcm_kontact.so
 share/applications/org.kde.kontact.desktop
 share/config.kcfg/kontact.kcfg

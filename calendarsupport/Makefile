@@ -13,7 +13,8 @@ USE_TOOLS+=	msgmerge
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../wip/akonadi-calendar/buildlink3.mk"
-.include "../../wip/kdepim-apps-libs/buildlink3.mk"
+.include "../../wip/akonadi-notes/buildlink3.mk"
+#.include "../../wip/kdepim-apps-libs/buildlink3.mk"
 .include "../../time/kholidays/buildlink3.mk"
 .include "../../wip/pimcommon/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

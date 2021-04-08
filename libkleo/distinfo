@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libkleo-20.04.1.tar.xz) = 77bd4aacbfa42f2eddd77d46d99d412cb565c94a
-RMD160 (libkleo-20.04.1.tar.xz) = a7e97b871607f7a5e3f4bd72e1963e88dac3f85a
-SHA512 (libkleo-20.04.1.tar.xz) = c8f1bd4cc58a942f2442bfbf3b0065264eca240876f5c5e29f7dda5c79d81f0c9f414e4b6667cfe0cd6d23e45a12595139f0ce5a65864a6837de9ffc21460ca7
-Size (libkleo-20.04.1.tar.xz) = 351752 bytes
+SHA1 (libkleo-20.12.3.tar.xz) = a8d26c9ce1161db63c3325645a34cccdc27c10d9
+RMD160 (libkleo-20.12.3.tar.xz) = c13a52f9f1f8e3e6d174b89afdb14f6ca0450b99
+SHA512 (libkleo-20.12.3.tar.xz) = 006b6074f6e77fff1e95be7ea209042306b5dfbea6e99ee0502e78cf37709e1d8e4e02deb3011a434712dd98d62b2f1fdb5bf9140913def8075ca45e67e45623
+Size (libkleo-20.12.3.tar.xz) = 358540 bytes

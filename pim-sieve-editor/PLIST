@@ -1,15 +1,12 @@
 @comment $NetBSD$
 bin/sieveeditor
 lib/libsieveeditor.so.5
-lib/libsieveeditor.so.5.14.1
+lib/libsieveeditor.so.5.16.3
 share/applications/org.kde.sieveeditor.desktop
 share/config.kcfg/sieveeditorglobalconfig.kcfg
 share/doc/HTML/ca/sieveeditor/first-start.png
 share/doc/HTML/ca/sieveeditor/index.cache.bz2
 share/doc/HTML/ca/sieveeditor/index.docbook
-share/doc/HTML/ca/sieveeditor/script-edit.png
-share/doc/HTML/ca/sieveeditor/script-help.png
-share/doc/HTML/ca/sieveeditor/script-tools.png
 share/doc/HTML/de/sieveeditor/index.cache.bz2
 share/doc/HTML/de/sieveeditor/index.docbook
 share/doc/HTML/en/sieveeditor/first-start.png

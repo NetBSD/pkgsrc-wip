@@ -23,6 +23,8 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../wip/akonadi-mime/buildlink3.mk"
+.include "../../wip/grantleetheme/buildlink3.mk"
+.include "../../wip/libkleo/buildlink3.mk"
 .include "../../misc/kcontacts/buildlink3.mk"
 .include "../../mail/kmime/buildlink3.mk"
 .include "../../graphics/prison/buildlink3.mk"

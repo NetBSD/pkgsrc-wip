@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.messagelib?=	../../wip/messagelib
 .include "../../misc/kidentitymanagement/buildlink3.mk"
 .include "../../wip/kmailtransport/buildlink3.mk"
 .include "../../mail/kmbox/buildlink3.mk"
-.include "../../wip/kdepim-apps-libs/buildlink3.mk"
+#.include "../../wip/kdepim-apps-libs/buildlink3.mk"
 .include "../../wip/libgravatar/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"

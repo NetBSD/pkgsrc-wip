@@ -16,7 +16,7 @@ CMAKE_ARGS+=	-DMYSQLD_EXECUTABLE="${PREFIX}/sbin/mysqld"
 CMAKE_ARGS+=	-DPOSTGRES_PATH="${PREFIX}/bin"
 CMAKE_ARGS+=	-DINSTALL_APPARMOR=FALSE
 
-USE_TOOLS+=	pkg-config msgmerge
+USE_TOOLS+=	gmake msgmerge pkg-config
 
 .include "options.mk"
 

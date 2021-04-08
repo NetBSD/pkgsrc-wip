@@ -16,7 +16,7 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/kdepim-runtime/buildlink3.mk"
-.include "../../wip/kdepim-apps-libs/buildlink3.mk"
+#.include "../../wip/kdepim-apps-libs/buildlink3.mk"
 .include "../../wip/kontactinterface/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

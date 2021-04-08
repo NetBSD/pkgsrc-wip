@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.69 2017/12/08 08:52:58 maya Exp $
 
 DISTNAME=	kmix-${KAPPSVER}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/kmix/
@@ -31,9 +30,10 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/restore_kmix_volumes.des
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/CMakeFiles/kded_kmixd_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/plasma/engine/CMakeFiles/plasma_engine_mixer_autogen.dir/AutogenInfo.cmake
-SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+SUBST_FILES.fix-moc=	_KDE_build/CMakeFiles/kded_kmixd_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/plasma/engine/CMakeFiles/plasma_engine_mixer_autogen.dir/AutogenInfo.json
+SUBST_NOOP_OK.fix-moc=	yes
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
