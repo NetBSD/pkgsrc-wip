@@ -34,6 +34,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/trim_galore ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw test_files ${DESTDIR}${DATADIR}
 
-.include "../../wip/py-cutadapt/buildlink3.mk"
+.include "../../biology/py-cutadapt/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
