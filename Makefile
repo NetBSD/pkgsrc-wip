@@ -3510,7 +3510,6 @@ SUBDIR+=	py-country
 SUBDIR+=	py-country-converter
 SUBDIR+=	py-coverage-badge
 SUBDIR+=	py-coveralls
-SUBDIR+=	py-cparser
 SUBDIR+=	py-cppimport
 SUBDIR+=	py-cracklib
 SUBDIR+=	py-crossbar
