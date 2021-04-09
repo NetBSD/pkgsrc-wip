@@ -728,6 +728,7 @@ SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
 SUBDIR+=	elixir-cross-ref
 SUBDIR+=	elk
+SUBDIR+=	elogind
 SUBDIR+=	elscreen-git
 SUBDIR+=	emacs-git
 SUBDIR+=	emacs-nox11-git
