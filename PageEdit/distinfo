@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.45 2020/03/19 11:33:13 joerg Exp $
+
+SHA1 (PageEdit-1.5.0.tar.gz) = 0d89c917214636263ba3bbb3f3dbf59ef40382c6
+RMD160 (PageEdit-1.5.0.tar.gz) = 9b811dcb18f1b9b68c6df2f4be728c10e60f7d3e
+SHA512 (PageEdit-1.5.0.tar.gz) = ed3d810134384b00d102fd8ddc9676068f974d7416be19d31498222bf1c1ed845781f7a6aa7fa1cfa802f10e3f10f66849dc4c2aad24c960fe442f62a4330dcd
+Size (PageEdit-1.5.0.tar.gz) = 6191164 bytes
