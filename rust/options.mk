@@ -14,7 +14,9 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
-.if ${OPSYS} == "NetBSD"
+# Bundle OpenSSL and curl into the cargo binary when producing
+# bootstraps on NetBSD.
+.if ${OPSYS} == "NetBSD" && ${BUILD_TARGET} == "dist"
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .endif
 
