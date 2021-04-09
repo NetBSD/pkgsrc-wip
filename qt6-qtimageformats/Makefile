@@ -16,5 +16,4 @@ post-extract:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
-.include "../../wip/qt6-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

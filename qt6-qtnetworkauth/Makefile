@@ -9,5 +9,4 @@ QT_ADDLIB=	yes
 .include "../../wip/qt6-qtbase/Makefile.common"
 
 .include "../../wip/qt6-qtbase/buildlink3.mk"
-.include "../../wip/qt6-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
