@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (identify-2.2.2.tar.gz) = 1880e9cc80a5167972dea3f207c6a5e6da495215
-RMD160 (identify-2.2.2.tar.gz) = 75196874cc394a9a4509cbc8d3f7b842cca37f21
-SHA512 (identify-2.2.2.tar.gz) = 401a1105f4da88f24d7fb3feb154ce6b1a8dbcaad26d3539ac15f774d511823648382500c854fb27d279a39363176906fb46ec55b1372379dbce310241bff87c
-Size (identify-2.2.2.tar.gz) = 98841 bytes
+SHA1 (identify-2.2.3.tar.gz) = 1659a3b0ec023a785dd5a65c54065dd4b256da22
+RMD160 (identify-2.2.3.tar.gz) = 8a3042751774e87a6c500e3b7cc30ae6e980535d
+SHA512 (identify-2.2.3.tar.gz) = 275cb0ce08cc71bb55134a502c9011ce50089cc234011d8deb291c2093a436bf5557791e9d48bfdbef322d6a89396820ea58e8c7d973e8acbc5419e227feb042
+Size (identify-2.2.3.tar.gz) = 98821 bytes
