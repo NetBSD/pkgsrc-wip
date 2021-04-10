@@ -140,9 +140,6 @@ ${PYSITELIB}/pre_commit/logging_handler.pyo
 ${PYSITELIB}/pre_commit/main.py
 ${PYSITELIB}/pre_commit/main.pyc
 ${PYSITELIB}/pre_commit/main.pyo
-${PYSITELIB}/pre_commit/make_archives.py
-${PYSITELIB}/pre_commit/make_archives.pyc
-${PYSITELIB}/pre_commit/make_archives.pyo
 ${PYSITELIB}/pre_commit/meta_hooks/__init__.py
 ${PYSITELIB}/pre_commit/meta_hooks/__init__.pyc
 ${PYSITELIB}/pre_commit/meta_hooks/__init__.pyo
