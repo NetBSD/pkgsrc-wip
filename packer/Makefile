@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	packer-1.7.0
+PKGNAME=	packer-1.7.2
 DISTNAME=	packer-${GITHUB_TAG}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
@@ -13,6 +13,9 @@ COMMENT=	Tool for creating identical machine images for multiple platforms
 LICENSE=	mpl-2.0
 
 EXTRACT_USING=	bsdtar
+
+GO_VERSION_DEFAULT=	116
+.include "../../mk/bsd.prefs.mk"
 
 GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/hashicorp/packer/
