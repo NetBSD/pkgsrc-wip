@@ -26,22 +26,23 @@
 #GNU_CROSS_TARGET=	i486--netbsdelf
 #GNU_CROSS_TARGET=	powerpc--netbsd
 #GNU_CROSS_TARGET=	aarch64--netbsd
-#MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
+MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
 # the ultimate target to built for, as well as the
 # host the compiler is supposed to run on.
 # Rust's target designation
-#TARGET=		armv7-unknown-netbsd-eabihf
-#TARGET=		sparc64-unknown-netbsd
-#TARGET=		powerpc-unknown-netbsd
-#TARGET=		aarch64-unknown-netbsd
-#TARGET=		i686-unknown-netbsd
+#TARGET= 		armv7-unknown-netbsd-eabihf
+#TARGET= 		sparc64-unknown-netbsd
+#TARGET= 		powerpc-unknown-netbsd
+#TARGET= 		aarch64-unknown-netbsd
+#TARGET= 		i686-unknown-netbsd
+#TARGET= 		i586-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}
 #CONFIGURE_ARGS+=	--target=${TARGET}
-#CONFIGURE_ARGS+=	--set=target.${TARGET}.cc=${SCRIPTS}/gcc-wrap
+#ONFIGURE_ARGS+= 	--set=target.${TARGET}.cc=${SCRIPTS}/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${SCRIPTS}/c++-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${SCRIPTS}/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${GNU_CROSS_TARGET}-ar
