@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	cyclone-bootstrap
-GITHUB_TAG=	v0.27
+GITHUB_TAG=	v0.28.0
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	cyclone-${DISTNAME:S,^v,,}
 CATEGORIES=	lang

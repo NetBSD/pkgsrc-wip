@@ -29,7 +29,6 @@ share/doc/cyclone/api/scheme/cyclone/cgen.md
 share/doc/cyclone/api/scheme/cyclone/common.md
 share/doc/cyclone/api/scheme/cyclone/cps-optimizations.md
 share/doc/cyclone/api/scheme/cyclone/libraries.md
-share/doc/cyclone/api/scheme/cyclone/macros.md
 share/doc/cyclone/api/scheme/cyclone/pretty-print.md
 share/doc/cyclone/api/scheme/cyclone/primitives.md
 share/doc/cyclone/api/scheme/cyclone/transforms.md
