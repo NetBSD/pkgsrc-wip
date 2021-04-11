@@ -26,7 +26,7 @@
 #GNU_CROSS_TARGET=	i486--netbsdelf
 #GNU_CROSS_TARGET=	powerpc--netbsd
 #GNU_CROSS_TARGET=	aarch64--netbsd
-MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
+#MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
 # the ultimate target to built for, as well as the
