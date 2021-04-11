@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2014/06/01 12:49:44 thomasklausner Exp $
 
-DISTNAME=	OWSLib-0.8.6
+DISTNAME=	OWSLib-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OWSLib/}
@@ -16,8 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-elementtree
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
