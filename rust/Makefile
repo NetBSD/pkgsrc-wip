@@ -48,11 +48,15 @@ CONFIGURE_ARGS+=		--disable-ninja
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
 
+.if !empty(rust.BUILD_TARGET)
+BUILD_TARGET=	${rust.BUILD_TARGET)
+.endif
+
 .if !empty(TARGET)
 # Use "dist" build target for cross compile of bootstrap
-BUILD_TARGET=		dist
+BUILD_TARGET?=		dist
 .else
-BUILD_TARGET=		build
+BUILD_TARGET?=		build
 .endif
 
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
