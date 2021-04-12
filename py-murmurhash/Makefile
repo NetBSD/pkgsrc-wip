@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	murmurhash-v1.0.1
-PKGNAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=explosion/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/explosion/murmurhash/
 COMMENT=	TODO: Short description of the package
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR}/${PKGNAME_NOREV:S/v//1}
+WRKSRC=	${WRKDIR}/${DISTNAME:S/v//1}
 USE_LANGUAGES= c c++
 
 

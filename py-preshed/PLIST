@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/preshed-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/preshed-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/preshed-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/preshed-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/preshed-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/preshed-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/preshed/__init__.pxd
 ${PYSITELIB}/preshed/__init__.py
 ${PYSITELIB}/preshed/__init__.pyc
