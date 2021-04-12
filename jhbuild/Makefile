@@ -22,10 +22,13 @@ BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
-SUBST_FILES.python=	scripts/jhbuild.in
-SUBST_FILES.python+=	scripts/*.py
-SUBST_SED.python=	-e 's,/usr/bin/env @python@,${PYTHONBIN},g'
-SUBST_SED.python+=	-e 's,/usr/bin/env python3,${PYTHONBIN},g'
+SUBST_FILES.python+=	modulesets/gnome-sysdeps-latest.modules
+SUBST_SED.python+=	-e 's,python3.pc,python-${PYVERSSUFFIX}.pc,g'
+
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	/usr/bin/env *.*python*.*
+REPLACE.python.new=	${PYTHONBIN}
+REPLACE_FILES.python=	scripts/*.py scripts/jhbuild.in
 
 PY_PATCHPLIST=		yes
 
