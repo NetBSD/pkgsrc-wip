@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.7 2020/02/19 19:07:19 adam Exp $
 
-SHA1 (buildbot-www-3.0.2.tar.gz) = 9414182c0c96fe2de6867aca6fd9268e7de8b99c
-RMD160 (buildbot-www-3.0.2.tar.gz) = 7a3133f49b394befc5ec9f8f58c4b61cf3c06056
-SHA512 (buildbot-www-3.0.2.tar.gz) = 9be7271dbae3b62ee6fcb10441faaa9cab952b9db989275a62b7ca9d4c5dc342ec1decf33c267c0d2d8e095ab32f4493055cda1880f73818d26a98fab674a108
-Size (buildbot-www-3.0.2.tar.gz) = 3180864 bytes
+SHA1 (buildbot-www-3.1.0.tar.gz) = 973c5cfb14f0d65945c21d49fc5791a625eda8b8
+RMD160 (buildbot-www-3.1.0.tar.gz) = a72e75beaccbe1b939cbb3be681c70549a1514e0
+SHA512 (buildbot-www-3.1.0.tar.gz) = db1be3054bc3b6112f1f4ebe846f02a1da096ffbf29bfe1b99d254a759a67d64849e3c1e3df7edbada200e791d62904a2e2c66e7e0f8273feb3dedd463efc69a
+Size (buildbot-www-3.1.0.tar.gz) = 3180991 bytes

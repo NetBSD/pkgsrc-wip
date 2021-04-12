@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.7 2020/02/19 19:07:18 adam Exp $
 
-SHA1 (buildbot-console-view-3.0.2.tar.gz) = eae5c4705e8c4d4b4e8eadb44c7a6f53378ffb2e
-RMD160 (buildbot-console-view-3.0.2.tar.gz) = c92adae345626428592a7cff374b12d505e4c555
-SHA512 (buildbot-console-view-3.0.2.tar.gz) = 15e80c4036c5451a1a48d2d7254118586c4a97ea49d06d04a1237f1c82bdf8b3c044235c7b1cfa46cf892168e94becd48cd4d376479abd8212dbfc0662b7cecc
-Size (buildbot-console-view-3.0.2.tar.gz) = 18724 bytes
+SHA1 (buildbot-console-view-3.1.0.tar.gz) = aff8d1a227705767bba8518e61899f60c92d3bb2
+RMD160 (buildbot-console-view-3.1.0.tar.gz) = b5e62e57d66554454c7c0c88df6aec180745a1f3
+SHA512 (buildbot-console-view-3.1.0.tar.gz) = 88b568ec2a7457b074e7448671991e907d52bcf5b1298d37f6b567b9e5ffc98b82ee1f0d9aed3a5841904d482476502f88aca31b93e505b5ea8db56d8b8f882f
+Size (buildbot-console-view-3.1.0.tar.gz) = 18730 bytes

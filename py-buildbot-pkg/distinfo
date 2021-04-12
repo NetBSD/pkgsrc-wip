@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.7 2020/02/19 19:07:19 adam Exp $
 
-SHA1 (buildbot-pkg-3.0.2.tar.gz) = ff0aedfc343569e24b4fad795467ff639bcf8cc6
-RMD160 (buildbot-pkg-3.0.2.tar.gz) = d4ccaf087a6ae40592d6f4aeff19f5519518621b
-SHA512 (buildbot-pkg-3.0.2.tar.gz) = 6c09ff3a78b53d4f93e331f9691f1200abda12b912cd0fed99e3b2ba900ee0d07805ee9d16f9337c0e187a74d511d1c23cebc5a286cf3c05520c22e730191996
-Size (buildbot-pkg-3.0.2.tar.gz) = 4780 bytes
+SHA1 (buildbot-pkg-3.1.0.tar.gz) = 86da478e61951398bb605487c9b6eef1df7b1828
+RMD160 (buildbot-pkg-3.1.0.tar.gz) = f1e77c59257719af58759898845edc245c66cbe5
+SHA512 (buildbot-pkg-3.1.0.tar.gz) = 8300031b01bf8d3d9e9508bbc101cfa48e516cfd4a797a04f93692a69b06e26cbe37ab4d712fa458e1aa39e1bb34567816fb5604258bf4e10c3359392aa3df6f
+Size (buildbot-pkg-3.1.0.tar.gz) = 4782 bytes

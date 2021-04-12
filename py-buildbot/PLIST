@@ -465,6 +465,9 @@ ${PYSITELIB}/buildbot/reporters/generators/__init__.pyo
 ${PYSITELIB}/buildbot/reporters/generators/build.py
 ${PYSITELIB}/buildbot/reporters/generators/build.pyc
 ${PYSITELIB}/buildbot/reporters/generators/build.pyo
+${PYSITELIB}/buildbot/reporters/generators/buildrequest.py
+${PYSITELIB}/buildbot/reporters/generators/buildrequest.pyc
+${PYSITELIB}/buildbot/reporters/generators/buildrequest.pyo
 ${PYSITELIB}/buildbot/reporters/generators/buildset.py
 ${PYSITELIB}/buildbot/reporters/generators/buildset.pyc
 ${PYSITELIB}/buildbot/reporters/generators/buildset.pyo
@@ -574,6 +577,9 @@ ${PYSITELIB}/buildbot/scripts/dataspec.pyo
 ${PYSITELIB}/buildbot/scripts/devproxy.py
 ${PYSITELIB}/buildbot/scripts/devproxy.pyc
 ${PYSITELIB}/buildbot/scripts/devproxy.pyo
+${PYSITELIB}/buildbot/scripts/gengraphql.py
+${PYSITELIB}/buildbot/scripts/gengraphql.pyc
+${PYSITELIB}/buildbot/scripts/gengraphql.pyo
 ${PYSITELIB}/buildbot/scripts/logwatcher.py
 ${PYSITELIB}/buildbot/scripts/logwatcher.pyc
 ${PYSITELIB}/buildbot/scripts/logwatcher.pyo
@@ -688,6 +694,9 @@ ${PYSITELIB}/buildbot/steps/cppcheck.pyo
 ${PYSITELIB}/buildbot/steps/download_secret_to_worker.py
 ${PYSITELIB}/buildbot/steps/download_secret_to_worker.pyc
 ${PYSITELIB}/buildbot/steps/download_secret_to_worker.pyo
+${PYSITELIB}/buildbot/steps/gitdiffinfo.py
+${PYSITELIB}/buildbot/steps/gitdiffinfo.pyc
+${PYSITELIB}/buildbot/steps/gitdiffinfo.pyo
 ${PYSITELIB}/buildbot/steps/http.py
 ${PYSITELIB}/buildbot/steps/http.pyc
 ${PYSITELIB}/buildbot/steps/http.pyo
@@ -1186,6 +1195,9 @@ ${PYSITELIB}/buildbot/test/unit/test_secret_rendered_service.pyo
 ${PYSITELIB}/buildbot/test/unit/test_stats_service.py
 ${PYSITELIB}/buildbot/test/unit/test_stats_service.pyc
 ${PYSITELIB}/buildbot/test/unit/test_stats_service.pyo
+${PYSITELIB}/buildbot/test/unit/test_steps_git_diffinfo.py
+${PYSITELIB}/buildbot/test/unit/test_steps_git_diffinfo.pyc
+${PYSITELIB}/buildbot/test/unit/test_steps_git_diffinfo.pyo
 ${PYSITELIB}/buildbot/test/unit/test_templates_dir/builds.html
 ${PYSITELIB}/buildbot/test/unit/test_templates_dir/plugin/plugin.jade
 ${PYSITELIB}/buildbot/test/unit/test_test_util_gpo.py
