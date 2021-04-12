@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2020/07/23 07:44:19 adam Exp $
+
+SHA1 (terraform-provider-kubernetes-1.13.3.tar.gz) = 24e96282c936b2491efe0c0c3e8e91bf93ccef93
+RMD160 (terraform-provider-kubernetes-1.13.3.tar.gz) = e6006449d1bf291067f72c90d4bc33c7ab1cbcf5
+SHA512 (terraform-provider-kubernetes-1.13.3.tar.gz) = 67b71e990573a1140de1401c6756cc2a240f02ada4ddc78941d76ae38f624292364d72e04704ec218298f3012d00f3ca289be6913ac864974fdd86cef3ceccad
+Size (terraform-provider-kubernetes-1.13.3.tar.gz) = 30089031 bytes
