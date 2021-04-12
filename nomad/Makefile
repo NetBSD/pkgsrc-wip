@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	nomad-1.0.2
+DISTNAME=	nomad-1.0.4
 GITHUB_PROJECT=	nomad
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://github.com/hashicorp/nomad/
 COMMENT=	Workload orchestrator that can deploy a mix of applications
 LICENSE=	mpl-2.0

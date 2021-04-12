@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (nomad-1.0.2.tar.gz) = df90f69871fbe046c3433d40dd383828e8b2be86
-RMD160 (nomad-1.0.2.tar.gz) = cd01ef56c377fe4ec29ad8c6e5a6a84ee652d497
-SHA512 (nomad-1.0.2.tar.gz) = 77e0acc07c6fcc015e296a221cbce670941b9ce8a023207a1ebcf97d68c14cecdb388508efb88acf7e1a3d1aa198852539a55f7c615b0b3dd28d478bc83989f7
-Size (nomad-1.0.2.tar.gz) = 39595443 bytes
+SHA1 (nomad-1.0.4.tar.gz) = 2ef9bac50da03d4667ab5f25c7c014106e6387eb
+RMD160 (nomad-1.0.4.tar.gz) = 968eb96b8f08458259a6f07384adbe1fd688d0fc
+SHA512 (nomad-1.0.4.tar.gz) = 935c8a6924434548f65b162c15f9ca14383546a1e0cea0694312f323d776d92863357f82c7ab53408e76c5c966986c0a511eda8a35043cf21c1020634c6e2ae4
+Size (nomad-1.0.4.tar.gz) = 39538107 bytes

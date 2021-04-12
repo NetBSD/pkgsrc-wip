@@ -33,7 +33,6 @@ gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/dynamicplugins.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/fingerprint.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/interfaces.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/lib/fifo.a
-gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/lib/nsutil.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/lib/streamframer.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/logmon.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/client/logmon/logging.a
@@ -86,6 +85,7 @@ gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/events.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/example.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/execagent.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/framework.a
+gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/isolation.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/lifecycle.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/metrics.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/namespaces.a
@@ -93,6 +93,7 @@ gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/networking.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/nodedrain.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/nomad09upgrade.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/nomadexec.a
+gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/periodic.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/podman.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/quotas.a
 gopkg/pkg/${GO_PLATFORM}/github.com/hashicorp/nomad/e2e/rescheduling.a
@@ -649,6 +650,7 @@ gopkg/src/github.com/hashicorp/nomad/command/agent/namespace_endpoint_test.go
 gopkg/src/github.com/hashicorp/nomad/command/agent/node_endpoint.go
 gopkg/src/github.com/hashicorp/nomad/command/agent/node_endpoint_test.go
 gopkg/src/github.com/hashicorp/nomad/command/agent/operator_endpoint.go
+gopkg/src/github.com/hashicorp/nomad/command/agent/operator_endpoint_oss.go
 gopkg/src/github.com/hashicorp/nomad/command/agent/operator_endpoint_test.go
 gopkg/src/github.com/hashicorp/nomad/command/agent/plugins.go
 gopkg/src/github.com/hashicorp/nomad/command/agent/pprof/pprof.go
@@ -1069,6 +1071,7 @@ gopkg/src/github.com/hashicorp/nomad/drivers/docker/fingerprint_test.go
 gopkg/src/github.com/hashicorp/nomad/drivers/docker/handle.go
 gopkg/src/github.com/hashicorp/nomad/drivers/docker/network.go
 gopkg/src/github.com/hashicorp/nomad/drivers/docker/ports.go
+gopkg/src/github.com/hashicorp/nomad/drivers/docker/ports_test.go
 gopkg/src/github.com/hashicorp/nomad/drivers/docker/progress.go
 gopkg/src/github.com/hashicorp/nomad/drivers/docker/progress_test.go
 gopkg/src/github.com/hashicorp/nomad/drivers/docker/reconciler.go
@@ -1154,6 +1157,7 @@ gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/server.go
 gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/test-resources/busybox/README
 gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/test-resources/busybox/busybox-amd64
 gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/utils.go
+gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/utils_test.go
 gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/utils_unix.go
 gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/utils_windows.go
 gopkg/src/github.com/hashicorp/nomad/drivers/shared/executor/z_executor_cmd.go
@@ -1184,15 +1188,21 @@ gopkg/src/github.com/hashicorp/nomad/e2e/connect/acls_test.go
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/client.go
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/connect.go
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/demo.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/expose-custom.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/ingress-gateway.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/multi-ingress.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/multi-service.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/native-demo.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/connect/input/terminating-gateway.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/connect/multi_service.go
+gopkg/src/github.com/hashicorp/nomad/e2e/consul/check_restart.go
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/consul.go
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/canary_tags.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/checks_group.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/checks_group_restart.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/checks_group_update.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/checks_task.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/checks_task_restart.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/checks_task_update.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/consul_example.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/consul/input/services_empty.nomad
@@ -1249,6 +1259,14 @@ gopkg/src/github.com/hashicorp/nomad/e2e/framework/doc.go
 gopkg/src/github.com/hashicorp/nomad/e2e/framework/framework.go
 gopkg/src/github.com/hashicorp/nomad/e2e/framework/interfaces.go
 gopkg/src/github.com/hashicorp/nomad/e2e/framework/provisioner.go
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/alloc_exec.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/alloc_exec_java.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/exec.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/exec_host.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/java.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/java_host.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/input/raw_exec.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/isolation/isolation.go
 gopkg/src/github.com/hashicorp/nomad/e2e/lifecycle/inputs/batch.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/lifecycle/inputs/service.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/lifecycle/lifecycle.go
@@ -1282,6 +1300,8 @@ gopkg/src/github.com/hashicorp/nomad/e2e/nomad09upgrade/upgrade.go
 gopkg/src/github.com/hashicorp/nomad/e2e/nomad09upgrade/upgrade_basic.go
 gopkg/src/github.com/hashicorp/nomad/e2e/nomadexec/exec.go
 gopkg/src/github.com/hashicorp/nomad/e2e/nomadexec/testdata/docker.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/periodic/input/simple.nomad
+gopkg/src/github.com/hashicorp/nomad/e2e/periodic/periodic.go
 gopkg/src/github.com/hashicorp/nomad/e2e/podman/input/redis.nomad
 gopkg/src/github.com/hashicorp/nomad/e2e/podman/podman.go
 gopkg/src/github.com/hashicorp/nomad/e2e/quotas/quotas_oss.go
@@ -1358,6 +1378,7 @@ gopkg/src/github.com/hashicorp/nomad/e2e/terraform/nomad-acls.tf
 gopkg/src/github.com/hashicorp/nomad/e2e/terraform/nomad.tf
 gopkg/src/github.com/hashicorp/nomad/e2e/terraform/outputs.tf
 gopkg/src/github.com/hashicorp/nomad/e2e/terraform/packer/README.md
+gopkg/src/github.com/hashicorp/nomad/e2e/terraform/packer/build
 gopkg/src/github.com/hashicorp/nomad/e2e/terraform/packer/ubuntu-bionic-amd64.pkr.hcl
 gopkg/src/github.com/hashicorp/nomad/e2e/terraform/packer/ubuntu-bionic-amd64/consul.service
 gopkg/src/github.com/hashicorp/nomad/e2e/terraform/packer/ubuntu-bionic-amd64/dnsconfig.sh
@@ -1839,6 +1860,7 @@ gopkg/src/github.com/hashicorp/nomad/nomad/structs/config/tls.go
 gopkg/src/github.com/hashicorp/nomad/nomad/structs/config/tls_test.go
 gopkg/src/github.com/hashicorp/nomad/nomad/structs/config/vault.go
 gopkg/src/github.com/hashicorp/nomad/nomad/structs/config/vault_test.go
+gopkg/src/github.com/hashicorp/nomad/nomad/structs/connect.go
 gopkg/src/github.com/hashicorp/nomad/nomad/structs/csi.go
 gopkg/src/github.com/hashicorp/nomad/nomad/structs/csi_test.go
 gopkg/src/github.com/hashicorp/nomad/nomad/structs/devices.go
@@ -2661,7 +2683,6 @@ gopkg/src/github.com/hashicorp/nomad/ui/app/templates/csi/volumes/index.hbs
 gopkg/src/github.com/hashicorp/nomad/ui/app/templates/csi/volumes/volume.hbs
 gopkg/src/github.com/hashicorp/nomad/ui/app/templates/exec-loading.hbs
 gopkg/src/github.com/hashicorp/nomad/ui/app/templates/exec.hbs
-gopkg/src/github.com/hashicorp/nomad/ui/app/templates/head.hbs
 gopkg/src/github.com/hashicorp/nomad/ui/app/templates/index.hbs
 gopkg/src/github.com/hashicorp/nomad/ui/app/templates/jobs.hbs
 gopkg/src/github.com/hashicorp/nomad/ui/app/templates/jobs/index.hbs
@@ -2732,6 +2753,7 @@ gopkg/src/github.com/hashicorp/nomad/ui/app/utils/wait.js
 gopkg/src/github.com/hashicorp/nomad/ui/blueprints/story/files/__path__/stories/components/__name__.stories.js
 gopkg/src/github.com/hashicorp/nomad/ui/blueprints/story/index.js
 gopkg/src/github.com/hashicorp/nomad/ui/config/deprecation-workflow.js
+gopkg/src/github.com/hashicorp/nomad/ui/config/ember-cli-update.json
 gopkg/src/github.com/hashicorp/nomad/ui/config/environment.js
 gopkg/src/github.com/hashicorp/nomad/ui/config/optional-features.json
 gopkg/src/github.com/hashicorp/nomad/ui/config/targets.js
@@ -3051,6 +3073,7 @@ gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/escape-task-name-test.j
 gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/format-duration-test.js
 gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/generate-exec-url-test.js
 gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/log-test.js
+gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/message-from-adapter-error-test.js
 gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/node-stats-tracker-test.js
 gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/rolling-array-test.js
 gopkg/src/github.com/hashicorp/nomad/ui/tests/unit/utils/stream-frames-test.js
@@ -4739,6 +4762,7 @@ gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/cata
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/config_entry.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/config_entry_discoverychain.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/config_entry_gateways.go
+gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/config_entry_intentions.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/connect.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/connect_ca.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/api/connect_intention.go
@@ -4808,6 +4832,7 @@ gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/sdk/test
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/sdk/testutil/server_methods.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/sdk/testutil/server_wrapper.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/sdk/testutil/testlog.go
+gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/sdk/testutil/types.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/consul/version/version.go
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/cronexpr/APLv2
 gopkg/src/github.com/hashicorp/nomad/vendor/github.com/hashicorp/cronexpr/GPLv3
@@ -8667,7 +8692,8 @@ gopkg/src/github.com/hashicorp/nomad/website/content/docs/configuration/server_j
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/configuration/telemetry.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/configuration/tls.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/configuration/vault.mdx
-gopkg/src/github.com/hashicorp/nomad/website/content/docs/devices/community.mdx
+gopkg/src/github.com/hashicorp/nomad/website/content/docs/devices/external/index.mdx
+gopkg/src/github.com/hashicorp/nomad/website/content/docs/devices/external/usb.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/devices/index.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/devices/nvidia.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/drivers/docker.mdx
@@ -8762,7 +8788,6 @@ gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/crypto/sha512.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/datetime/formatdate.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/datetime/timeadd.mdx
-gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/datetime/timestamp.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/encoding/base64decode.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/encoding/base64encode.mdx
 gopkg/src/github.com/hashicorp/nomad/website/content/docs/job-specification/hcl2/functions/encoding/csvdecode.mdx
