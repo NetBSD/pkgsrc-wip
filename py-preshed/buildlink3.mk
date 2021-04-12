@@ -1,11 +1,11 @@
 # $NetBSD$
-BUILDLINK_DEPMETHOD.py38-preshed?=	build
 
 BUILDLINK_TREE+=	py38-preshed
 
 .if !defined(PY38_PRESHED_BUILDLINK3_MK)
 PY38_PRESHED_BUILDLINK3_MK:=
 
+BUILDLINK_DEPMETHOD.py38-preshed?=	build
 BUILDLINK_API_DEPENDS.py38-preshed+=	py38-preshed>=2.0.0nb1
 BUILDLINK_PKGSRCDIR.py38-preshed?=	../../wip/py-preshed
 .endif	# PY38_PRESHED_BUILDLINK3_MK
