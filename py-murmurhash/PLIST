@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${PYSITELIB}/murmurhash-1.0.1-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/murmurhash-1.0.1-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/murmurhash-1.0.1-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/murmurhash-1.0.1-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/murmurhash-1.0.1-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/murmurhash/__init__.pxd
+${PYSITELIB}/murmurhash/__init__.py
+${PYSITELIB}/murmurhash/__init__.pyc
+${PYSITELIB}/murmurhash/__init__.pyo
+${PYSITELIB}/murmurhash/about.py
+${PYSITELIB}/murmurhash/about.pyc
+${PYSITELIB}/murmurhash/about.pyo
+${PYSITELIB}/murmurhash/include/murmurhash/MurmurHash2.h
+${PYSITELIB}/murmurhash/include/murmurhash/MurmurHash3.h
+${PYSITELIB}/murmurhash/mrmr.pxd
+${PYSITELIB}/murmurhash/mrmr.pyx
+${PYSITELIB}/murmurhash/mrmr.so
+${PYSITELIB}/murmurhash/tests/__init__.py
+${PYSITELIB}/murmurhash/tests/__init__.pyc
+${PYSITELIB}/murmurhash/tests/__init__.pyo
+${PYSITELIB}/murmurhash/tests/test_import.py
+${PYSITELIB}/murmurhash/tests/test_import.pyc
+${PYSITELIB}/murmurhash/tests/test_import.pyo
