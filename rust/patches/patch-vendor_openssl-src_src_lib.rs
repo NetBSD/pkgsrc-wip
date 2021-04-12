@@ -20,15 +20,16 @@ Provide defaults for the various NetBSD targets.
              "asmjs-unknown-emscripten" => "gcc",
              "i586-unknown-linux-gnu" => "linux-elf",
              "i586-unknown-linux-musl" => "linux-elf",
-@@ -188,6 +190,7 @@ impl Build {
+@@ -188,6 +190,8 @@ impl Build {
              "i686-unknown-freebsd" => "BSD-x86-elf",
              "i686-unknown-linux-gnu" => "linux-elf",
              "i686-unknown-linux-musl" => "linux-elf",
 +            "i686-unknown-netbsd" => "BSD-x86-elf",
++            "i586-unknown-netbsd" => "BSD-x86-elf",
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
              "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
-@@ -195,12 +198,14 @@ impl Build {
+@@ -195,12 +199,14 @@ impl Build {
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
              "powerpc-unknown-linux-gnu" => "linux-ppc",

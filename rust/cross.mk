@@ -18,6 +18,7 @@
 #CROSS_ROOT=		/u/9.0-macppc
 #CROSS_ROOT=		/u/evbarm64
 #CROSS_ROOT=		/u/i386
+#CROSS_ROOT=		/
 #MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
@@ -45,7 +46,9 @@
 #ONFIGURE_ARGS+= 	--set=target.${TARGET}.cc=${SCRIPTS}/gcc-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.cxx=${SCRIPTS}/c++-wrap
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.linker=${SCRIPTS}/gcc-wrap
+# Pick one:
 #CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${CROSS_ROOT}/tools/bin/${GNU_CROSS_TARGET}-ar
+#CONFIGURE_ARGS+=	--set=target.${TARGET}.ar=${SCRIPTS}/ar-wrap
 
 # May be required when cross-building on NetBSD
 #MAKE_ENV+=		OPENSSL_DIR=/usr

@@ -123,5 +123,5 @@ SHA1 (patch-src_tools_rust-installer_install-template.sh) = f2ec6dced2be1fa23773
 SHA1 (patch-vendor_libc_src_unix_solarish_mod.rs) = 804ea03be546fef0d2bd37d7f8abb26d38a7892b
 SHA1 (patch-vendor_lzma-sys_config.h) = b654c7e129fa02697734bc87173f89b3056a5437
 SHA1 (patch-vendor_net2_src_ext.rs) = 5c34f3eaaa0589eefe14d374d34fadd4900565fd
-SHA1 (patch-vendor_openssl-src_src_lib.rs) = dd79a75e4d570567ac02e8dbb42695682762d9e4
+SHA1 (patch-vendor_openssl-src_src_lib.rs) = b3d728b66600363b5144ff84a34683f80c034d27
 SHA1 (patch-vendor_stacker_src_lib.rs) = 2f4db9971c0558ec7034052c810b8c8be80c4ae3
