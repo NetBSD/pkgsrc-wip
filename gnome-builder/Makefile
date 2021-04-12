@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	gnome-builder-3.36.0
+DISTNAME=	gnome-builder-3.40.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-builder/3.36/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-builder/3.40/}
 EXTRACT_SUFX=	.tar.xz
-PKGREVISION=	1
 
 MAINTAINER=	dan@alt.md
 HOMEPAGE=	https://wiki.gnome.org/Apps/Builder
@@ -20,6 +19,8 @@ MESON_ARGS+=		-Dplugin_flatpak=false
 MESON_ARGS+=		-Dplugin_git=false
 MESON_ARGS+=		-Dplugin_sysprof=false
 MESON_ARGS+=		-Dplugin_update_manager=false
+MESON_ARGS+=		-Dplugin_color_picker=false
+MESON_ARGS+=		-Dplugin_dspy=false
 
 CFLAGS+=		-Wno-error=shadow
 
@@ -28,9 +29,12 @@ SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	src/plugins/gradle/gradle_plugin.py
 SUBST_FILES.python+=	src/plugins/maven/maven_plugin.py
 SUBST_FILES.python+=	build-aux/meson/post_install.py
-SUBST_SED.python=	-e 's,/usr/bin/env python3,/usr/bin/python,g'
+SUBST_SED.python=	-e 's,/usr/bin/env python3,${PREFIX}/bin/python${PYVERSSUFFIX},g'
 
-REPLACE_PYTHON+=	${SUBST_FILES.python}
+SUBST_CLASSES+=		pymod
+SUBST_STAGE.pymod=	pre-configure
+SUBST_FILES.pymod=	src/libide/meson.build
+SUBST_SED.pymod=	-e 's,python3,${PREFIX}/bin/python${PYVERSSUFFIX},g'
 
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
