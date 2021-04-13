@@ -3117,7 +3117,6 @@ SUBDIR+=	pipe-viewer
 SUBDIR+=	pipes-c
 SUBDIR+=	piranha
 SUBDIR+=	piwik
-SUBDIR+=	pixz
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg-dev
