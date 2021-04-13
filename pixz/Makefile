@@ -1,27 +1,28 @@
 # $NetBSD: Makefile,v 1.1 2015/06/20 19:27:51 ishit Exp $
 #
 
-DISTNAME=	pixz-1.0.2
+GITHUB_PROJECT=	pixz
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+DISTNAME=	pixz-1.0.7
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pixz/}
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vasi/}
 
-MAINTAINER=	ishit@users.sourceforge.net
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/vasi/pixz
 COMMENT=	Parallel, indexed xz compressor
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
-DEPENDS+=	xz>=5:../../archivers/xz
-BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/src/pixz.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pixz ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pixz.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
