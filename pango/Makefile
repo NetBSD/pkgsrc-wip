@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		wrksrc

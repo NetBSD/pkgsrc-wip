@@ -28,7 +28,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 			Linux-*-* SunOS-*-*
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 # USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
 # GNU_CONFIGURE=		yes

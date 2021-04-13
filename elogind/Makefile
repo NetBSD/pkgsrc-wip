@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/elogind-246.10
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake m4
+USE_TOOLS+=		m4
 
 PKGCONFIG_OVERRIDE+=	src/libelogind/libelogind.pc.in
 

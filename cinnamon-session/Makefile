@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/linuxmint/cinnamon-session
 COMMENT=	Cinnamon session
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-USE_TOOLS+=	gmake pkg-config intltool msgfmt
+USE_TOOLS+=	pkg-config intltool msgfmt
 
 BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto

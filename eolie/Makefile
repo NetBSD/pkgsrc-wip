@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
-USE_TOOLS+=                     gmake gettext msgfmt perl pkg-config
+USE_TOOLS+=                     gettext msgfmt perl pkg-config
 _TOOLS_USE_PKGSRC.msgfmt=       yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=   27

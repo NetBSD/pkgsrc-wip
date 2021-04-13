@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/linuxmint/cinnamon-screensaver
 COMMENT=	Cinnamon screensaver
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake pkg-config automake autoreconf intltool msgfmt
+USE_TOOLS+=	pkg-config automake autoreconf intltool msgfmt
 
 WRKSRC=	${WRKDIR}/cinnamon-screensaver-4.6.0
 

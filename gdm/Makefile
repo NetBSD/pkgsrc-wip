@@ -15,8 +15,7 @@ DEPENDS+=	zenity>=3.32.0:../../x11/zenity
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt pkg-config
-USE_TOOLS+=		automake autoconf autoreconf
+USE_TOOLS+=		msgfmt pkg-config
 BUILD_DEFS+=		VARBASE
 
 USE_LANGUAGES=		c c++

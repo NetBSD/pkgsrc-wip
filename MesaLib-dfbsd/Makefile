@@ -16,8 +16,8 @@ COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
 # GNU_CONFIGURE=	yes
-# USE_TOOLS+=	autoconf automake autoreconf bison pkg-config gmake flex
-USE_TOOLS+=	bison pkg-config gmake flex
+# USE_TOOLS+=	autoconf automake autoreconf bison pkg-config flex
+USE_TOOLS+=	bison pkg-config flex
 USE_LANGUAGES=	c99 c++
 # USE_LIBTOOL=	yes
 

@@ -10,7 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/JsonGlib
 COMMENT=	JSON parser for GLib-based libraries and applications
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=	gmake msgfmt msgmerge pkg-config xgettext
+USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 
 CONFIGURE_ARGS+=	--disable-man
 

@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 #USE_LIBTOOL=	yes
 #GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config automake autoreconf intltool msgfmt
+USE_TOOLS+=	pkg-config automake autoreconf intltool msgfmt
 
 REPLACE_PYTHON=	install-scripts/meson_install_schemas.py \
 		files/usr/bin/cinnamon-desktop-migrate-mediakeys

@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool
-#USE_TOOLS+=	gmake pkg-config automake autoreconf intltool msgfmt
+#USE_TOOLS+=	pkg-config automake autoreconf intltool msgfmt
 #GNU_CONFIGURE=	yes
 
 #PKGCONFIG_OVERRIDE+=	libmenu/libcinnamon-menu-3.0.pc.in
