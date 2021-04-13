@@ -1,40 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/20 19:59:08 briandealwis Exp $
+$NetBSD$
 
---- run-mailcap.orig	2003-04-25 08:12:02.000000000 -0600
+--- run-mailcap.orig	2018-05-30 11:43:15.000000000 +0000
 +++ run-mailcap
-@@ -120,7 +120,11 @@ sub TempFile {
- #	$tmpfile = POSIX::tmpnam($name);
- #	unlink($tmpfile);
+@@ -141,9 +141,8 @@ sub TempFile {
+ #   $tmpfile = POSIX::tmpnam($name);
+ #   unlink($tmpfile);
  
--	$tmpfile = `tempfile --mode=600`;
-+#	$tmpfile = `tempfile --mode=600`;
-+#	chomp($tmpfile);
-+
-+	# XXX: -t doesn't like having directories -- consider not using -t
-+	$tmpfile = `mktemp -t "$tmpfile"`;
- 	chomp($tmpfile);
+-    $cmd  = "tempfile --mode=600";
+-    $cmd .= " --prefix $head" if $head;
+-    $cmd .= " --suffix $tail" if $tail;
++    # XXX: -t doesn't like having directories -- consider not using -t
++    $cmd  = "mktemp -t $tmpfile";
  
- #	$tmpfile = $ENV{TMPDIR};
-@@ -330,14 +334,14 @@ foreach (@ARGV) {
- }
- 
- unless ($action) {
--	   if ($0 =~ m!(^|/)view$!)		{ $action="view";	}
--	elsif ($0 =~ m!(^|/)edit$!)		{ $action="edit";	}
--	elsif ($0 =~ m!(^|/)compose$!)	{ $action="compose";}
--	elsif ($0 =~ m!(^|/)print$!)	{ $action="print";	}
--	elsif ($0 =~ m!(^|/)see$!)		{ $action="view";	}
--	elsif ($0 =~ m!(^|/)change$!)	{ $action="edit";	}
--	elsif ($0 =~ m!(^|/)create$!)	{ $action="compose";}
--	else							{ $action="view";	}
-+	   if ($0 =~ m!(^|/)(mime-)?view$!)	{ $action="view";	}
-+	elsif ($0 =~ m!(^|/)(mime-)?edit$!)	{ $action="edit";	}
-+	elsif ($0 =~ m!(^|/)(mime-)?compose$!)	{ $action="compose";}
-+	elsif ($0 =~ m!(^|/)(mime-)?print$!)	{ $action="print";	}
-+	elsif ($0 =~ m!(^|/)(mime-)?see$!)	{ $action="view";	}
-+	elsif ($0 =~ m!(^|/)(mime-)?change$!)	{ $action="edit";	}
-+	elsif ($0 =~ m!(^|/)(mime-)?create$!)	{ $action="compose";}
-+	else					{ $action="view";	}
- }
- 
- 
+     $tmpfile = `$cmd`;
+     chomp($tmpfile);
