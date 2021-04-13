@@ -10,5 +10,7 @@ HOMEPAGE=	https://pypi.org/project/imexam/
 COMMENT=	Python module for astronomical image examination
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-photutils>=1.0.1:../../math/py-photutils
+
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
