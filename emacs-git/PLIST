@@ -1356,6 +1356,8 @@ share/emacs/${PKGVERSION}/lisp/cedet/semantic/grammar-wy.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/grammar-wy.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/grammar.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/grammar.elc
+share/emacs/${PKGVERSION}/lisp/cedet/semantic/grm-wy-boot.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/semantic/grm-wy-boot.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/html.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/html.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/ia-sb.el.gz
