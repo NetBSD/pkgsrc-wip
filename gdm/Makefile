@@ -90,13 +90,14 @@ GDMGRP=		daemon
 MESON_ARGS+=	-Dinitial-vt=5
 .endif
 
+INSTALLATION_DIRS+=	share/pixmaps
+INSTALLATION_DIRS+=	share/gdm/BuiltInSessions
+INSTALLATION_DIRS+=	share/examples/pam.d
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${FILESDIR}/NetBSD.xpm ${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gdm/BuiltInSessions
 	${INSTALL_DATA} ${FILESDIR}/custom.desktop \
 		${DESTDIR}${PREFIX}/share/gdm/BuiltInSessions
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/pam.d
 	${INSTALL_DATA} ${FILESDIR}/gdm-* ${DESTDIR}/${PREFIX}/share/examples/pam.d
 	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/gdm/Xsession
 
