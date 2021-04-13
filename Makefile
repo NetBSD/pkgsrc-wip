@@ -1147,7 +1147,6 @@ SUBDIR+=	gnome-calculator
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-common
 SUBDIR+=	gnome-core
-SUBDIR+=	gnome-desktop3
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-maps

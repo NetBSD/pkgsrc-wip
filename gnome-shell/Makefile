@@ -62,6 +62,6 @@ post-extract:
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../wip/mutter/buildlink3.mk"
-.include "../../wip/gnome-desktop3/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

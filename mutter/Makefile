@@ -79,6 +79,6 @@ BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=       gsettings-desktop-schema
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../wip/gnome-desktop3/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
