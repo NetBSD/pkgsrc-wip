@@ -1,11 +1,11 @@
 @comment $NetBSD$
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/astroquery-0.4.2.dev64588-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/astroquery-0.4.2.dev64834-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/astroquery/CITATION
 ${PYSITELIB}/astroquery/__init__.py
 ${PYSITELIB}/astroquery/__init__.pyc
