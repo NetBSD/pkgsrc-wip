@@ -16,8 +16,6 @@ WRKSRC=		${WRKDIR}/piciji-denise-958d8df8f7f7
 USE_LANGUAGES=	c c++	#c++17
 USE_TOOLS+=	gmake
 
-# ??? Doesn't x11-links contain <GL/gl.h> ???
-
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
