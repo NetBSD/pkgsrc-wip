@@ -1,9 +1,8 @@
 $NetBSD$
 
-SHA1 (v1.0.9.tar.bz2) = aa792444d372fe353edcabe8328d7b8c9efa31a3
-RMD160 (v1.0.9.tar.bz2) = 8f204e0c3aef864ecd1e5ebad08fc26b5014bf41
-SHA512 (v1.0.9.tar.bz2) = e106db70e37a22c0e861e2860e9fe4c08a91759da401e107b0d00bf0c35c4758367925eaa3b330ed021944ce86d4b4903038dcdb419e401b587293519ab71183
-Size (v1.0.9.tar.bz2) = 5941348 bytes
-SHA1 (patch-Makefile) = ffaa85b5cd947b87fa423e1ecb2bb54a9bd8f46a
-SHA1 (patch-driver_Makefile) = cfb336839ccbef29e01e4fb3fe045340592ff90c
-SHA1 (patch-driver_video_opengl_bind.h) = c09521cece8c1dd1ddd88dda7d5f50a3ae9d867c
+SHA1 (denise/v1.1.0.tar.bz2) = 3d097b86a473a45ddd74c3f8cfb3a60563c2e6e2
+RMD160 (denise/v1.1.0.tar.bz2) = ef9e0cc632b471ed134687171aad9dbe9f1a8e3b
+SHA512 (denise/v1.1.0.tar.bz2) = 2e77d5076395caba74229203e68e6d6cc44f24701a2d0329db2663fd450fb624678246916f9af19e1b3536057adb7bc9f1ac22ee61e6b8fa18a24727756a24a1
+Size (denise/v1.1.0.tar.bz2) = 5994258 bytes
+SHA1 (patch-Makefile) = b2cd86ce177a6ac2d81988969ce17a3720066fdc
+SHA1 (patch-driver_Makefile) = 7bbe730a461cb75c6a56430d352ce5f6eb9aca48

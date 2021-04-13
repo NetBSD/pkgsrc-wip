@@ -24,3 +24,4 @@ share/denise/translation/german.txt
 share/denise/translation/japanese.png
 share/denise/translation/japanese.txt
 share/icons/denise.png
+share/mime/packages/application-x-denise.xml

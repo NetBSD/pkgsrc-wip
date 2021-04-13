@@ -1,25 +1,32 @@
 $NetBSD$
 
 We don't have udev, and need a RPATH for -lX11.
-Also, GLEW may be the wrong thing but at least it compiles and links.
 
---- driver/Makefile.orig	2020-10-25 12:34:43.000000000 +0000
+--- driver/Makefile.orig	2021-03-20 16:41:21.000000000 +0000
 +++ driver/Makefile
-@@ -21,7 +21,7 @@ else ifeq ($(platform),macosx)
+@@ -21,7 +21,8 @@ else ifeq ($(platform),macosx)
      drv += cgl openal coreaudio iokit
  
  else
 -    drv += glx openal pulseaudio xlib udev sdlinput
++    # drv += glx openal pulseaudio xlib udev sdlinput
 +    drv += glx openal pulseaudio xlib sdlinput
  
  endif
  # show in screen status text for opengl
-@@ -43,7 +43,7 @@ else ifeq ($(platform),macosx)
+@@ -43,7 +44,7 @@ else ifeq ($(platform),macosx)
  else
      drvflags = $(cppflags) 
-     drvflags += `pkg-config --cflags gtk+-3.0`
+     drvflags += $(shell pkg-config --cflags gtk+-3.0)
 -    drvlink = -lX11 -lXext -ldl -lXfixes
 +    drvlink = -Wl,-R,/usr/X11R7/lib -lX11 -lXext -lXfixes
      drvlink += $(if $(findstring openal,$(drv)),-lopenal)
      ifneq ($(findstring xlib,$(drv)),)
  	drvlink += $(if $(findstring sdl,$(drv)), $(shell $(env)sdl2-config --libs))
+@@ -75,5 +76,5 @@ drvlink += $(if $(findstring cgl,$(drv))
+ drvlink += $(if $(findstring coreaudio,$(drv)),-framework CoreAudio -framework AudioToolbox -framework AudioUnit)
+ 
+ drvlink += $(if $(findstring glx,$(drv)),-lGL)
+-drvlink += $(if $(findstring udev,$(drv)),-ludev)
++# drvlink += $(if $(findstring udev,$(drv)),-ludev)
+ drvlink += $(if $(findstring pulseaudio,$(drv)),-lpulse)
