@@ -31,7 +31,7 @@ BUILDLINK_API_DEPENDS.loudmouth+=	loudmouth>=1.0
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../wip/gnome-desktop2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

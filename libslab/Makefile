@@ -24,7 +24,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../wip/gnome-desktop2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
