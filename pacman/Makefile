@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pacman-5.2.1
+DISTNAME=	pacman-5.2.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	https://sources.archlinux.org/other/pacman/
 

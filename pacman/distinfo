@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pacman-5.2.1.tar.gz) = 93a77670dfbb5bf33ee67a6a5104d25938b2d8fe
-RMD160 (pacman-5.2.1.tar.gz) = 1a9d915a15a2c528fb39e643bf564e374faaaf14
-SHA512 (pacman-5.2.1.tar.gz) = 7814420b8d71090313f1bc7d9a513138bda74c5cbcb43d9741acc27ea7b4d180a38848a7d7059969cc7afed1b108d26ba2622a16d8761566357c50a5da456981
-Size (pacman-5.2.1.tar.gz) = 3300123 bytes
+SHA1 (pacman-5.2.2.tar.gz) = 9bcd63947e8391051ce00fd982593f22af50348a
+RMD160 (pacman-5.2.2.tar.gz) = 0fbd67b3e207f6fa00dc0a2d590cbaa555eaa5c8
+SHA512 (pacman-5.2.2.tar.gz) = 1f9c569fb9cfe90afeeb7e3715bfa821ec4c57fdbbd7e09cd1e2519fad1a555b2f5378dedb2c2e551d2e92db92f1db9684969b472507f676c5bb932cdf436eda
+Size (pacman-5.2.2.tar.gz) = 3333766 bytes
