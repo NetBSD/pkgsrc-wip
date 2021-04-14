@@ -5,9 +5,11 @@ Use @PREFIX@, not $ORIGIN in rpath.
 
 Fix RPATH for pkgsrc.
 
---- src/bootstrap/builder.rs.orig	2021-02-10 17:36:44.000000000 +0000
+Workaround for building 1.51 with 1.51 bootstrap.
+
+--- src/bootstrap/builder.rs.orig	2021-03-23 16:15:10.000000000 +0000
 +++ src/bootstrap/builder.rs
-@@ -483,7 +483,6 @@ impl<'a> Builder<'a> {
+@@ -482,7 +482,6 @@ impl<'a> Builder<'a> {
                  install::Clippy,
                  install::Miri,
                  install::Analysis,
@@ -15,12 +17,21 @@ Fix RPATH for pkgsrc.
                  install::Rustc
              ),
              Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest),
-@@ -1082,7 +1081,7 @@ impl<'a> Builder<'a> {
+@@ -1088,7 +1087,7 @@ impl<'a> Builder<'a> {
                  rustflags.arg("-Zosx-rpath-install-name");
                  Some("-Wl,-rpath,@loader_path/../lib")
              } else if !target.contains("windows") {
 -                Some("-Wl,-rpath,$ORIGIN/../lib")
-+                Some("-Wl,-rpath,@PREFIX@/lib")
++                Some("-Wl,-rpath,/usr/pkg/lib")
              } else {
                  None
              };
+@@ -1490,7 +1489,7 @@ impl<'a> Builder<'a> {
+                 for el in stack.iter().rev() {
+                     out += &format!("\t{:?}\n", el);
+                 }
+-                panic!(out);
++                std::panic::panic_any(out);
+             }
+             if let Some(out) = self.cache.get(&step) {
+                 self.verbose(&format!("{}c {:?}", "  ".repeat(stack.len()), step));
