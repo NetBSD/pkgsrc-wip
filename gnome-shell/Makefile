@@ -42,6 +42,7 @@ post-extract:
 	cp ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces/
 
 .include "../../devel/meson/build.mk"
+BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=40.0
 .include "../../devel/libgweather/buildlink3.mk"
 .include "../../x11/gtk4/buildlink3.mk"
 .include "../../archivers/gnome-autoar/buildlink3.mk"

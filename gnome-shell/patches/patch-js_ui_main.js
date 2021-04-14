@@ -1,5 +1,9 @@
 $NetBSD$
 
+Remove usages of unsupported functions:
+- Gio.Credentials.get_unix_user
+- file.touch_async
+
 --- js/ui/main.js.orig	2021-03-20 12:17:01.417523000 +0000
 +++ js/ui/main.js
 @@ -289,19 +289,11 @@ function _initializeUI() {

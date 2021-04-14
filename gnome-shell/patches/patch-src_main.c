@@ -1,5 +1,7 @@
 $NetBSD$
 
+Disable gjs stack dumps?
+
 --- src/main.c.orig	2021-03-20 12:17:01.570519000 +0000
 +++ src/main.c
 @@ -352,6 +352,7 @@ dump_gjs_stack_on_signal_handler (int si

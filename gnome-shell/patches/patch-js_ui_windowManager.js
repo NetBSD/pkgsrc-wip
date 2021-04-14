@@ -1,5 +1,7 @@
 $NetBSD$
 
+Remove systemd code
+
 --- js/ui/windowManager.js.orig	2021-03-20 12:17:01.442522300 +0000
 +++ js/ui/windowManager.js
 @@ -974,8 +974,8 @@ var WindowManager = class {
