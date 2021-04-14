@@ -1,5 +1,7 @@
 $NetBSD$
 
+Hide Linux-specific evdev code under #ifdefs
+
 --- src/backends/x11/meta-seat-x11.c.orig	2021-03-20 12:08:54.069907200 +0000
 +++ src/backends/x11/meta-seat-x11.c
 @@ -17,8 +17,9 @@

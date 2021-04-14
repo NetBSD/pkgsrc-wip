@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		msgfmt pkg-config
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
 .include "../../graphics/MesaLib/features.mk"
 
@@ -66,6 +67,7 @@ REQD_FILES+=		${EGDIR}/X11/xinit/xinitrc.d/90-mutter \
 			${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-mutter
 
 .include "../../devel/meson/build.mk"
+BUILDLINK_API_DEPENDS.glib2+=				glib2>=2.67.3
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"

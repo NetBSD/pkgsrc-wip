@@ -7,5 +7,5 @@ Size (mutter-40.0.tar.xz) = 2678364 bytes
 SHA1 (patch-clutter_clutter_clutter-stage-view.c) = abba7a702a612457ba56acf1ecfd9396d28d1a2c
 SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.c) = 75547ffc2560860b6101a19165a3659bf799104e
 SHA1 (patch-cogl_cogl_cogl-dma-buf-handle.h) = 311de2a52624c081bd5baf4a6f878a6f1ebd4015
-SHA1 (patch-src_backends_x11_meta-input-settings-x11.c) = 74b4887c1f1162bc5c1ae597f8554133ec770503
-SHA1 (patch-src_backends_x11_meta-seat-x11.c) = 552b83f575ea8bc65d3e0efbdaf25ce90a31b5df
+SHA1 (patch-src_backends_x11_meta-input-settings-x11.c) = 7064b65f4eff933157464a412bfbc2e3525c2472
+SHA1 (patch-src_backends_x11_meta-seat-x11.c) = 249e3d6060ac8faf4a0767acd7ef8e9b4d96a9fd
