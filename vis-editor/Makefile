@@ -21,8 +21,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${PREFIX}/share
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
