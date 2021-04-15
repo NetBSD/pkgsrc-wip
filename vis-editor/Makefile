@@ -12,11 +12,11 @@ HOMEPAGE=		https://github.com/martanne/vis/
 COMMENT=		Vim like text editor
 LICENSE=		isc
 
-LUA_VERSIONS_ACCEPTED=	52 53 54
-
-USE_TOOLS+=		pkg-config
+DEPENDS+=		${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 
 HAS_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
+
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${PREFIX}/share
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
@@ -45,6 +45,8 @@ SUBST_SED.binary-names+=	-e 's,vis-\(complete\),vis-editor-\1,g'
 SUBST_SED.binary-names+=	-e 's,vis-\(digraph\),vis-editor-\1,g'
 SUBST_SED.binary-names+=	-e 's,vis-\(menu\),vis-editor-\1,g'
 
+LUA_VERSIONS_ACCEPTED=	52 53 54
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/vis ${DESTDIR}${PREFIX}/bin/vis-editor
 	${MV} ${DESTDIR}${PREFIX}/bin/vis-open ${DESTDIR}${PREFIX}/bin/vis-editor-open
@@ -59,9 +61,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-digraph.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-editor-digraph.1
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-menu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-editor-menu.1
 
-DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../wip/libtermkey/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
