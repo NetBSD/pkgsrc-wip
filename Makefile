@@ -5364,6 +5364,7 @@ SUBDIR+=	terminology
 SUBDIR+=	termit
 SUBDIR+=	termshark
 SUBDIR+=	terraform
+SUBDIR+=	terraform-docs
 SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws
 SUBDIR+=	terraform-provider-kubernetes
