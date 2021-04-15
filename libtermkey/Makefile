@@ -8,7 +8,6 @@ HOMEPAGE=	http://www.leonerd.org.uk/code/libtermkey/
 COMMENT=	library to process keyboard entry from terminal-based programs
 LICENSE=	mit
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
 
