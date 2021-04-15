@@ -34,7 +34,7 @@ MESON_ARGS+=		-Dsystemd-journal=false
 MESON_ARGS+=		-Duser-display-server=false
 MESON_ARGS+=		-Duser=${GDMOWN}
 MESON_ARGS+=		-Dgroup=${GDMGRP}
-MESON_ARGS+=		-Ddbus-sys=${PREFIX}/etc/dbus-1/system.d
+MESON_ARGS+=		-Ddbus-sys=${PREFIX}share/examples/dbus-1/system.d
 MESON_ARGS+=		-Dinitial-vt=05
 MESON_ARGS+=		-Dgdm-xsession=true
 MESON_ARGS+=		-Dwayland-support=false
@@ -57,6 +57,7 @@ PKG_SYSCONFSUBDIR=	gdm
 EGDIR=			${PREFIX}/share/examples/gdm
 CONF_FILES=		${EGDIR}/custom.conf ${PKG_SYSCONFDIR}/custom.conf
 CONF_FILES+=		${EGDIR}/Xsession ${PKG_SYSCONFDIR}/Xsession
+CONF_FILES+=		${PREFIX}/share/examples/dbus-1/system.d/gdm.conf ${SYSCONFDIR}/dbus-1/system.d/gdm.conf
 
 RCD_SCRIPTS=		gdm
 

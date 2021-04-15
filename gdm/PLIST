@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/gdm-screenshot
 bin/gdmflexiserver
-etc/dbus-1/system.d/gdm.conf
+share/examples/dbus-1/system.d/gdm.conf
 include/gdm/gdm-client-glue.h
 include/gdm/gdm-client.h
 include/gdm/gdm-sessions.h
