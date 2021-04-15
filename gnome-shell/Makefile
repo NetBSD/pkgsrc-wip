@@ -22,6 +22,8 @@ TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
+DEPENDS+=	gdm>=40.0:../../wip/gdm
+
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell
