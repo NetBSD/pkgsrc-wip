@@ -4,7 +4,7 @@
 #
 
 # PROVIDE: gdm
-# REQUIRE: DAEMON LOGIN wscons
+# REQUIRE: DAEMON LOGIN wscons dbus
 # KEYWORD: shutdown
 
 if [ -f /etc/rc.subr ]; then
