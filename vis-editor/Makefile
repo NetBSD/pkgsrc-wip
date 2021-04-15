@@ -12,8 +12,6 @@ HOMEPAGE=		https://github.com/martanne/vis/
 COMMENT=		Vim like text editor
 LICENSE=		isc
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-
 LUA_VERSIONS_ACCEPTED=	52 53 54
 
 USE_TOOLS+=		pkg-config
