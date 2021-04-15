@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.4.5.2-alpha
+DISTNAME=	tor-0.4.6.2-alpha
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
@@ -73,7 +73,6 @@ REPLACE_BASH+=		scripts/maint/run_check_subsystem_order.sh
 
 REPLACE_PERL+=		scripts/maint/checkOptionDocs.pl.in
 REPLACE_PERL+=		scripts/maint/checkSpace.pl
-REPLACE_PERL+=		scripts/maint/checkOptionDocs.pl
 REPLACE_PERL+=		scripts/coccinelle/test-operator-cleanup
 
 .include "options.mk"
