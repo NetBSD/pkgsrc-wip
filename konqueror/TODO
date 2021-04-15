@@ -1,0 +1,4 @@
+get qt5-qtwebengine working.
+
+Currently /usr/pkg/qt5/libexec/QtWebEngineProcess will segfault as soon
+as you try to access a URL -- seems to be inside NSS
