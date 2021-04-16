@@ -1,5 +1,7 @@
 $NetBSD$
 
+Replace unsupported HOST_NAME_MAX with _POSIX_HOST_NAME_MAX
+
 --- daemon/gdm-x-session.c.orig	2020-12-15 18:16:43.000000000 +0000
 +++ daemon/gdm-x-session.c
 @@ -114,7 +114,7 @@ prepare_auth_file (void)

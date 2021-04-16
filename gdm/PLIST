@@ -1,7 +1,6 @@
 @comment $NetBSD$
 ${PLIST.gnome-login}bin/gdm-screenshot
 ${PLIST.gnome-login}bin/gdmflexiserver
-${PLIST.gnome-login}share/examples/dbus-1/system.d/gdm.conf
 include/gdm/gdm-client-glue.h
 include/gdm/gdm-client.h
 include/gdm/gdm-sessions.h
@@ -20,6 +19,7 @@ ${PLIST.gnome-login}libexec/gdm-wayland-session
 ${PLIST.gnome-login}libexec/gdm-x-session
 ${PLIST.gnome-login}sbin/gdm
 ${PLIST.gnome-login}share/dconf/profile/gdm
+${PLIST.gnome-login}share/examples/dbus-1/system.d/gdm.conf
 ${PLIST.gnome-login}share/examples/gdm/Init/Default
 ${PLIST.gnome-login}share/examples/gdm/PostLogin/Default.sample
 ${PLIST.gnome-login}share/examples/gdm/PostSession/Default

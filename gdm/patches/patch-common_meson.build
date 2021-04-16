@@ -1,5 +1,7 @@
 $NetBSD$
 
+Disable Linux-only systemd dependency
+
 --- common/meson.build.orig	2020-12-15 18:16:43.000000000 +0000
 +++ common/meson.build
 @@ -11,7 +11,6 @@ libgdmcommon_src = files(

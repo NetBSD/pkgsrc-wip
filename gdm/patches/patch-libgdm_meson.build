@@ -1,5 +1,7 @@
 $NetBSD$
 
+Remove linux-only systemd dependency
+
 --- libgdm/meson.build.orig	2020-12-15 18:16:43.000000000 +0000
 +++ libgdm/meson.build
 @@ -56,7 +56,6 @@ libgdm_deps = [

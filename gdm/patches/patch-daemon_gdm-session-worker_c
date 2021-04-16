@@ -27,7 +27,7 @@ Date: Mon, 11 Apr 2016 23:18:10 +1000
 Subject: gdm-session: set PAM_TTY when initialising pam
 
 Index: daemon/gdm-session-worker.c
---- daemon/gdm-session-worker.c.orig	2020-12-15 18:16:43.000000000 +0000
+--- daemon/gdm-session-worker.c.orig	2021-03-30 13:25:30.000000000 +0000
 +++ daemon/gdm-session-worker.c
 @@ -28,9 +28,11 @@
  #include <string.h>
@@ -51,15 +51,6 @@ Index: daemon/gdm-session-worker.c
  
  #ifdef ENABLE_SYSTEMD_JOURNAL
  #include <systemd/sd-journal.h>
-@@ -94,7 +98,7 @@
- #endif
- 
- #ifndef GDM_SESSION_DEFAULT_PATH
--#define GDM_SESSION_DEFAULT_PATH "/usr/local/bin:/usr/bin:/bin"
-+#define GDM_SESSION_DEFAULT_PATH "/usr/pkg/bin:/usr/bin:/bin"
- #endif
- 
- #ifndef GDM_SESSION_ROOT_UID
 @@ -126,6 +130,10 @@ struct GdmSessionWorkerPrivate
  
          int               exit_code;
@@ -294,7 +285,7 @@ Index: daemon/gdm-session-worker.c
  
          if (response != NULL) {
                  *response = NULL;
-@@ -869,6 +1078,7 @@ gdm_session_worker_stop_auditor (GdmSess
+@@ -915,6 +1124,7 @@ gdm_session_worker_stop_auditor (GdmSess
          worker->priv->auditor = NULL;
  }
  
@@ -302,7 +293,7 @@ Index: daemon/gdm-session-worker.c
  static void
  on_release_display (int signal)
  {
-@@ -1011,6 +1221,7 @@ jump_to_vt (GdmSessionWorker  *worker,
+@@ -1057,6 +1267,7 @@ jump_to_vt (GdmSessionWorker  *worker,
  
          close (active_vt_tty_fd);
  }
@@ -310,7 +301,7 @@ Index: daemon/gdm-session-worker.c
  
  static void
  gdm_session_worker_set_state (GdmSessionWorker      *worker,
-@@ -1115,7 +1326,6 @@ gdm_session_worker_initialize_pam (GdmSe
+@@ -1161,7 +1372,6 @@ gdm_session_worker_initialize_pam (GdmSe
  {
          struct pam_conv        pam_conversation;
          int                    error_code;
@@ -318,7 +309,7 @@ Index: daemon/gdm-session-worker.c
  
          g_assert (worker->priv->pam_handle == NULL);
  
-@@ -1182,10 +1392,12 @@ gdm_session_worker_initialize_pam (GdmSe
+@@ -1228,10 +1438,12 @@ gdm_session_worker_initialize_pam (GdmSe
                  }
          }
  
@@ -332,7 +323,7 @@ Index: daemon/gdm-session-worker.c
  
          if (strcmp (service, "gdm-launch-environment") == 0) {
                  gdm_session_worker_set_environment_variable (worker, "XDG_SESSION_CLASS", "greeter");
-@@ -1194,12 +1406,14 @@ gdm_session_worker_initialize_pam (GdmSe
+@@ -1240,12 +1452,14 @@ gdm_session_worker_initialize_pam (GdmSe
          g_debug ("GdmSessionWorker: state SETUP_COMPLETE");
          gdm_session_worker_set_state (worker, GDM_SESSION_WORKER_STATE_SETUP_COMPLETE);
  
@@ -347,7 +338,7 @@ Index: daemon/gdm-session-worker.c
  
   out:
          if (error_code != PAM_SUCCESS) {
-@@ -1495,7 +1709,7 @@ _lookup_passwd_info (const char *usernam
+@@ -1548,7 +1762,7 @@ _lookup_passwd_info (const char *usernam
                  if (passwd_entry->pw_shell != NULL && passwd_entry->pw_shell[0] != '\0') {
                          *shellp = g_strdup (passwd_entry->pw_shell);
                  } else {
@@ -356,7 +347,7 @@ Index: daemon/gdm-session-worker.c
                  }
          }
          ret = TRUE;
-@@ -1748,6 +1962,26 @@ gdm_session_worker_get_environment (GdmS
+@@ -1800,6 +2014,26 @@ gdm_session_worker_get_environment (GdmS
          return (const char * const *) pam_getenvlist (worker->priv->pam_handle);
  }
  
@@ -383,7 +374,7 @@ Index: daemon/gdm-session-worker.c
  static gboolean
  run_script (GdmSessionWorker *worker,
              const char       *dir)
-@@ -1825,6 +2059,10 @@ session_worker_child_watch (GPid        
+@@ -1877,6 +2111,10 @@ session_worker_child_watch (GPid        
                   : WIFSIGNALED (status) ? WTERMSIG (status)
                   : -1);
  
@@ -394,7 +385,7 @@ Index: daemon/gdm-session-worker.c
          gdm_session_worker_uninitialize_pam (worker, PAM_SUCCESS);
  
          worker->priv->child_pid = -1;
-@@ -2037,6 +2275,7 @@ gdm_session_worker_start_session (GdmSes
+@@ -2089,6 +2327,7 @@ gdm_session_worker_start_session (GdmSes
  
          error_code = PAM_SUCCESS;
  
@@ -402,7 +393,7 @@ Index: daemon/gdm-session-worker.c
          /* If we're in new vt mode, jump to the new vt now. There's no need to jump for
           * the other two modes: in the logind case, the session will activate itself when
           * ready, and in the reuse server case, we're already on the correct VT. */
-@@ -2045,6 +2284,7 @@ gdm_session_worker_start_session (GdmSes
+@@ -2097,6 +2336,7 @@ gdm_session_worker_start_session (GdmSes
                          jump_to_vt (worker, worker->priv->session_vt);
                  }
          }
@@ -410,7 +401,7 @@ Index: daemon/gdm-session-worker.c
  
          if (!worker->priv->is_program_session && !run_script (worker, GDMCONFDIR "/PostLogin")) {
                  g_set_error (error,
-@@ -2107,6 +2347,7 @@ gdm_session_worker_start_session (GdmSes
+@@ -2159,6 +2399,7 @@ gdm_session_worker_start_session (GdmSes
                          _exit (EXIT_FAILURE);
                  }
  
@@ -418,7 +409,7 @@ Index: daemon/gdm-session-worker.c
                  /* Take control of the tty
                   */
                  if (needs_controlling_terminal) {
-@@ -2114,6 +2355,7 @@ gdm_session_worker_start_session (GdmSes
+@@ -2166,6 +2407,7 @@ gdm_session_worker_start_session (GdmSes
                                  g_debug ("GdmSessionWorker: could not take control of tty: %m");
                          }
                  }
@@ -426,7 +417,7 @@ Index: daemon/gdm-session-worker.c
  
  #ifdef HAVE_LOGINCAP
                  if (setusercontext (NULL, passwd_entry, passwd_entry->pw_uid, LOGIN_SETALL) < 0) {
-@@ -2245,11 +2487,13 @@ gdm_session_worker_start_session (GdmSes
+@@ -2297,11 +2539,13 @@ gdm_session_worker_start_session (GdmSes
          return TRUE;
  }
  
@@ -440,7 +431,7 @@ Index: daemon/gdm-session-worker.c
          int session_vt = 0;
  
          /* open the initial vt.  We need it for two scenarios:
-@@ -2267,6 +2511,11 @@ set_up_for_new_vt (GdmSessionWorker *wor
+@@ -2319,6 +2563,11 @@ set_up_for_new_vt (GdmSessionWorker *wor
                  return FALSE;
          }
  
@@ -452,7 +443,7 @@ Index: daemon/gdm-session-worker.c
          if (worker->priv->display_is_initial) {
                  session_vt = GDM_INITIAL_VT;
          } else {
-@@ -2280,6 +2529,7 @@ set_up_for_new_vt (GdmSessionWorker *wor
+@@ -2332,6 +2581,7 @@ set_up_for_new_vt (GdmSessionWorker *wor
                  }
          }
  
@@ -460,7 +451,7 @@ Index: daemon/gdm-session-worker.c
          worker->priv->session_vt = session_vt;
  
          g_assert (session_vt > 0);
-@@ -2345,6 +2595,7 @@ fail:
+@@ -2397,6 +2647,7 @@ fail:
          close (fd);
          return FALSE;
  }
@@ -468,7 +459,7 @@ Index: daemon/gdm-session-worker.c
  
  static gboolean
  set_up_for_current_vt (GdmSessionWorker  *worker,
-@@ -2412,12 +2663,14 @@ set_up_for_current_vt (GdmSessionWorker 
+@@ -2464,12 +2715,14 @@ set_up_for_current_vt (GdmSessionWorker 
           }
  #endif
  
@@ -483,7 +474,7 @@ Index: daemon/gdm-session-worker.c
  
          return TRUE;
  out:
-@@ -2443,6 +2696,7 @@ gdm_session_worker_open_session (GdmSess
+@@ -2495,6 +2748,7 @@ gdm_session_worker_open_session (GdmSess
                  break;
          case GDM_SESSION_DISPLAY_MODE_NEW_VT:
          case GDM_SESSION_DISPLAY_MODE_LOGIND_MANAGED:
@@ -491,7 +482,7 @@ Index: daemon/gdm-session-worker.c
                  if (!set_up_for_new_vt (worker)) {
                          g_set_error (error,
                                       GDM_SESSION_WORKER_ERROR,
-@@ -2450,6 +2704,7 @@ gdm_session_worker_open_session (GdmSess
+@@ -2502,6 +2756,7 @@ gdm_session_worker_open_session (GdmSess
                                       "Unable to open VT");
                          return FALSE;
                  }
@@ -499,7 +490,7 @@ Index: daemon/gdm-session-worker.c
                  break;
          }
  
-@@ -2472,7 +2727,17 @@ gdm_session_worker_open_session (GdmSess
+@@ -2524,7 +2779,17 @@ gdm_session_worker_open_session (GdmSess
          g_debug ("GdmSessionWorker: state SESSION_OPENED");
          gdm_session_worker_set_state (worker, GDM_SESSION_WORKER_STATE_SESSION_OPENED);
  
@@ -517,7 +508,7 @@ Index: daemon/gdm-session-worker.c
  
          if (session_id != NULL) {
                  g_free (worker->priv->session_id);
-@@ -2582,6 +2847,19 @@ gdm_session_worker_handle_set_session_na
+@@ -2634,6 +2899,19 @@ gdm_session_worker_handle_set_session_na
  }
  
  static gboolean
@@ -537,7 +528,7 @@ Index: daemon/gdm-session-worker.c
  gdm_session_worker_handle_set_session_display_mode (GdmDBusWorker         *object,
                                                      GDBusMethodInvocation *invocation,
                                                      const char            *str)
-@@ -3008,6 +3286,7 @@ gdm_session_worker_handle_open (GdmDBusW
+@@ -3060,6 +3338,7 @@ gdm_session_worker_handle_open (GdmDBusW
          return TRUE;
  }
  
@@ -545,7 +536,7 @@ Index: daemon/gdm-session-worker.c
  static char **
  filter_extensions (const char * const *extensions)
  {
-@@ -3033,6 +3312,7 @@ filter_extensions (const char * const *e
+@@ -3085,6 +3364,7 @@ filter_extensions (const char * const *e
  
          return filtered_extensions;
  }
@@ -553,7 +544,7 @@ Index: daemon/gdm-session-worker.c
  
  static gboolean
  gdm_session_worker_handle_initialize (GdmDBusWorker         *object,
-@@ -3052,8 +3332,10 @@ gdm_session_worker_handle_initialize (Gd
+@@ -3104,8 +3384,10 @@ gdm_session_worker_handle_initialize (Gd
          while (g_variant_iter_loop (&iter, "{sv}", &key, &value)) {
                  if (g_strcmp0 (key, "service") == 0) {
                          worker->priv->service = g_variant_dup_string (value, NULL);
@@ -564,7 +555,7 @@ Index: daemon/gdm-session-worker.c
                  } else if (g_strcmp0 (key, "username") == 0) {
                          worker->priv->username = g_variant_dup_string (value, NULL);
                  } else if (g_strcmp0 (key, "is-program-session") == 0) {
-@@ -3493,6 +3775,7 @@ worker_interface_init (GdmDBusWorkerIfac
+@@ -3545,6 +3827,7 @@ worker_interface_init (GdmDBusWorkerIfac
          interface->handle_open = gdm_session_worker_handle_open;
          interface->handle_set_language_name = gdm_session_worker_handle_set_language_name;
          interface->handle_set_session_name = gdm_session_worker_handle_set_session_name;

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Wayland backend not ported to NetBSD, disable by default
+
 --- data/gdm.conf-custom.in.orig	2020-05-04 20:11:25.000000000 +0000
 +++ data/gdm.conf-custom.in
 @@ -2,7 +2,7 @@

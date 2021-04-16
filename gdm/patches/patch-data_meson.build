@@ -1,5 +1,7 @@
 $NetBSD$
 
+Remove Linux-only systemd rules
+
 --- data/meson.build.orig	2021-03-16 20:48:04.000000000 +0000
 +++ data/meson.build
 @@ -149,15 +149,6 @@ foreach _pam_filename : pam_data_files

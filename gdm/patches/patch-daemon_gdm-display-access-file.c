@@ -1,5 +1,8 @@
 $NetBSD$
 
+HOST_NAME_MAX is not available on NetBSD
+Maybe replace this with MAXHOSTNAMELEN?
+
 --- daemon/gdm-display-access-file.c.orig	2020-12-15 18:16:43.000000000 +0000
 +++ daemon/gdm-display-access-file.c
 @@ -441,9 +441,9 @@ _get_auth_info_for_display (GdmDisplayAc

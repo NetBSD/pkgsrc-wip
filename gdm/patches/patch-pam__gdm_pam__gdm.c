@@ -1,5 +1,7 @@
 $NetBSD$
 
+Include only supported pam headers
+
 --- pam_gdm/pam_gdm.c.orig	2020-12-15 18:16:43.000000000 +0000
 +++ pam_gdm/pam_gdm.c
 @@ -21,11 +21,13 @@
