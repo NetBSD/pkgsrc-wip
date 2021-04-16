@@ -1,11 +1,12 @@
 # $NetBSD: Makefile,v 1.4 2021/02/07 06:30:40 ryoon Exp $
 
 DISTNAME=	gnome-shell-40.0
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	dan@alt.md
+MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeShell
 COMMENT=	Next generation GNOME shell
 LICENSE=	gnu-gpl-v2
@@ -22,7 +23,7 @@ TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
-DEPENDS+=	gdm>=40.0:../../wip/gdm
+DEPENDS+=	libgdm>=40.0:../../x11/libgdm
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
