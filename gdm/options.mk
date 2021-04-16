@@ -1,3 +1,5 @@
+# $NetBSD$
+
 PKG_OPTIONS_VAR=                PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=          gdm-login
 .include "../../mk/bsd.prefs.mk"
@@ -6,11 +8,14 @@ PKG_SUPPORTED_OPTIONS=          gdm-login
 
 # Package-specific option-handling
 
+PLIST_VARS+=	gnome-login
+
 ###
 ### gdm-login
 ### enables the daemon and gui greeter (experimental)
 ###
 .if !empty(PKG_OPTIONS:Mgdm-login)
+BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/Init
 OWN_DIRS+=		${PKG_SYSCONFDIR}/PostLogin
@@ -41,12 +46,12 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/gdm-* ${DESTDIR}/${PREFIX}/share/examples/pam.d
 	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/gdm/Xsession
 
-PLIST_VARS+=	gdm-login
+PLIST.gdm-login=	yes
 .else
 # only install libgdm, without the daemon and login screen
-INSTALLATION_DIRS+= include/gdm
-INSTALLATION_DIRS+= lib/girepository-1.0
-INSTALLATION_DIRS+= lib/
+INSTALLATION_DIRS+=	include/gdm
+INSTALLATION_DIRS+=	lib/girepository-1.0
+INSTALLATION_DIRS+=	lib/
 INSTALLATION_DIRS+=	lib/pkgconfig
 INSTALLATION_DIRS+=	share/gir-1.0 share/glib-2.0/schemas
 
