@@ -63,7 +63,7 @@ do-install:
 		${DESTDIR}${PREFIX}/include/gdm
 
 	${INSTALL} ${WRKSRC}/output/libgdm/Gdm-1.0.typelib \
-		${DESTDIR}${PREFIX}/lib/girerepository-1.0
+		${DESTDIR}${PREFIX}/lib/girepository-1.0
 	${INSTALL} ${WRKSRC}/output/libgdm/libgdm.so \
 		${DESTDIR}${PREFIX}/lib
 	${INSTALL} ${WRKSRC}/output/libgdm/libgdm.so.1 \
