@@ -6,7 +6,7 @@ fixed CVE.
 cf. FreeBSD's ports
 cf. Debian's deb fix CVE patch
 
---- pxz.c.orig	2015-06-16 17:31:51.000000000 +0000
+--- pxz.c.orig	2019-05-07 15:08:53.000000000 +0000
 +++ pxz.c
 @@ -23,11 +23,17 @@
  
@@ -37,7 +37,7 @@ cf. Debian's deb fix CVE patch
  #ifndef XZ_BINARY
  #define XZ_BINARY "xz"
  #endif
-@@ -121,6 +131,13 @@ const struct option long_opts[] = {
+@@ -132,6 +142,13 @@ const struct option long_opts[] = {
  	{ NULL,             0,                 NULL,   0 }
  };
  
@@ -48,15 +48,6 @@ cf. Debian's deb fix CVE patch
 +}
 +#endif
 +
- void __attribute__((noreturn)) run_xz( char **argv ) {
- 	execvp(XZ_BINARY, argv);
+ void __attribute__((noreturn)) run_xz( char **argv, char **envp ) {
+ 	execve(XZ_BINARY, argv, envp);
  	error(0, errno, "execution of "XZ_BINARY" binary failed");
-@@ -289,6 +306,8 @@ int main( int argc, char **argv ) {
- 		}
- 		
- 		fo = stdout;
-+		/* for fix CVE-2015-1200 */
-+		umask(077);
- 		if ( std_in ) {
- 			fi = stdin;
- 		} else {

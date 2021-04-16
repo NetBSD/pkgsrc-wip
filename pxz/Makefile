@@ -1,22 +1,21 @@
 # $NetBSD: Makefile,v 1.1 2015/06/16 18:28:35 ishit Exp $
 
-DISTNAME=	pxz-4.999.9b4
+GITHUB_PROJECT=	pxz
+GITHUB_TAG=	124382a6d0832b13b7c091f72264f8f3f463070a
+DISTNAME=	pxz-4.999.9beta
 CATEGORIES=	archivers
-GIT_REPO=	https://github.com/jnovy/pxz.git
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jnovy/}
 
-MAINTAINER=	ishit@users.sourceforge.net
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://jnovy.fedorapeople.org/pxz/
 COMMENT=	Parallel LZMA compressor using liblzma
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	xz>=5:../../archivers/xz
-
-_GIT_FLAGS?=	--depth 1
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pxz ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/pxz.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../wip/mk/git-package.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
