@@ -24,8 +24,6 @@ TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
 DEPENDS+=	gdm>=40.0:../../wip/gdm
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*
-
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/subprojects/gvc
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell

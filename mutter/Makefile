@@ -14,8 +14,6 @@ USE_TOOLS+=		msgfmt pkg-config
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*
-
 .include "../../graphics/MesaLib/features.mk"
 
 .if ${MESALIB_SUPPORTS_EGL} == "no"
