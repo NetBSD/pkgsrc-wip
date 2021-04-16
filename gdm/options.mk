@@ -58,30 +58,30 @@ INSTALLATION_DIRS+=	share/gir-1.0 share/glib-2.0/schemas
 INSTALL_DIRS=	# disable meson install
 
 do-install:
-	${INSTALL} ${WRKSRC}/output/libgdm/gdm-client-glue.h \
+	${INSTALL_DATA} ${WRKSRC}/output/libgdm/gdm-client-glue.h \
 		${DESTDIR}${PREFIX}/include/gdm
-	${INSTALL} ${WRKSRC}/libgdm/gdm-client.h \
+	${INSTALL_DATA} ${WRKSRC}/libgdm/gdm-client.h \
 		${DESTDIR}${PREFIX}/include/gdm
-	${INSTALL} ${WRKSRC}/libgdm/gdm-sessions.h \
+	${INSTALL_DATA} ${WRKSRC}/libgdm/gdm-sessions.h \
 		${DESTDIR}${PREFIX}/include/gdm
-	${INSTALL} ${WRKSRC}/libgdm/gdm-user-switching.h \
+	${INSTALL_DATA} ${WRKSRC}/libgdm/gdm-user-switching.h \
 		${DESTDIR}${PREFIX}/include/gdm
 
-	${INSTALL} ${WRKSRC}/output/libgdm/Gdm-1.0.typelib \
+	${INSTALL_DATA} ${WRKSRC}/output/libgdm/Gdm-1.0.typelib \
 		${DESTDIR}${PREFIX}/lib/girepository-1.0
-	${INSTALL} ${WRKSRC}/output/libgdm/libgdm.so \
+	${INSTALL_LIB} ${WRKSRC}/output/libgdm/libgdm.so \
 		${DESTDIR}${PREFIX}/lib
-	${INSTALL} ${WRKSRC}/output/libgdm/libgdm.so.1 \
+	${INSTALL_LIB} ${WRKSRC}/output/libgdm/libgdm.so.1 \
 		${DESTDIR}${PREFIX}/lib
-	${INSTALL} ${WRKSRC}/output/libgdm/libgdm.so.1.0.0 \
+	${INSTALL_LIB} ${WRKSRC}/output/libgdm/libgdm.so.1.0.0 \
 		${DESTDIR}${PREFIX}/lib
 
-	${INSTALL} ${WRKSRC}/output/meson-private/gdm.pc \
+	${INSTALL_DATA} ${WRKSRC}/output/meson-private/gdm.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
-	${INSTALL} ${WRKSRC}/output/libgdm/Gdm-1.0.gir \
+	${INSTALL_DATA} ${WRKSRC}/output/libgdm/Gdm-1.0.gir \
 		${DESTDIR}${PREFIX}/share/gir-1.0
-	${INSTALL} ${WRKSRC}/data/org.gnome.login-screen.gschema.xml \
+	${INSTALL_DATA} ${WRKSRC}/data/org.gnome.login-screen.gschema.xml \
 		${DESTDIR}${PREFIX}/share/glib-2.0/schemas
 
 BUILDLINK_DEPMETHOD.openpam=	build
