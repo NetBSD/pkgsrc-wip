@@ -11,6 +11,7 @@ COMMENT=	Gnome Display Manager
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	zenity>=3.32.0:../../x11/zenity
+CONFLICTS=	gdm-2.[0-9]*
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -35,7 +36,6 @@ MESON_ARGS+=		-Duser-display-server=false
 MESON_ARGS+=		-Duser=${GDMOWN}
 MESON_ARGS+=		-Dgroup=${GDMGRP}
 MESON_ARGS+=		-Ddbus-sys=${PREFIX}/share/examples/dbus-1/system.d
-MESON_ARGS+=		-Dinitial-vt=05
 MESON_ARGS+=		-Dgdm-xsession=true
 MESON_ARGS+=		-Dwayland-support=false
 MESON_ARGS+=		-Ddefault-path="/usr/local/bin:/usr/local/sbin:${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin/sbin"
@@ -44,24 +44,7 @@ INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR}/custom.conf
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/Init
-OWN_DIRS+=		${PKG_SYSCONFDIR}/PostLogin
-OWN_DIRS+=		${PKG_SYSCONFDIR}/PostSession
-OWN_DIRS+=		${PKG_SYSCONFDIR}/PreSession
-OWN_DIRS+=		${PKG_SYSCONFDIR}/dm
-OWN_DIRS+=		${PKG_SYSCONFDIR}/modules
-OWN_DIRS+=		${VARBASE}/lib/gdm
-OWN_DIRS+=		${VARBASE}/log/gdm
-
-PKG_SYSCONFSUBDIR=	gdm
-EGDIR=			${PREFIX}/share/examples/gdm
-CONF_FILES=		${EGDIR}/custom.conf ${PKG_SYSCONFDIR}/custom.conf
-CONF_FILES+=		${EGDIR}/Xsession ${PKG_SYSCONFDIR}/Xsession
-CONF_FILES+=		${PREFIX}/share/examples/dbus-1/system.d/gdm.conf ${PKG_SYSCONFBASE}/dbus-1/system.d/gdm.conf
-
-RCD_SCRIPTS=		gdm
-
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSunOS
@@ -90,17 +73,6 @@ GDMGRP=		daemon
      ${MACHINE_ARCH} == "aarch64")
 MESON_ARGS+=	-Dinitial-vt=5
 .endif
-
-INSTALLATION_DIRS+=	share/pixmaps
-INSTALLATION_DIRS+=	share/gdm/BuiltInSessions
-INSTALLATION_DIRS+=	share/examples/pam.d
-
-post-install:
-	${INSTALL_DATA} ${FILESDIR}/NetBSD.xpm ${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${FILESDIR}/custom.desktop \
-		${DESTDIR}${PREFIX}/share/gdm/BuiltInSessions
-	${INSTALL_DATA} ${FILESDIR}/gdm-* ${DESTDIR}/${PREFIX}/share/examples/pam.d
-	${CHMOD} +x ${DESTDIR}${PREFIX}/share/examples/gdm/Xsession
 
 .include "../../devel/meson/build.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
