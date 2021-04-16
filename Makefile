@@ -3215,7 +3215,6 @@ SUBDIR+=	purple-facebook
 SUBDIR+=	pwnat
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
-SUBDIR+=	pxz
 SUBDIR+=	py-Beaker
 SUBDIR+=	py-Brenda
 SUBDIR+=	py-CalDAVClientLibrary
