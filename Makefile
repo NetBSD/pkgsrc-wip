@@ -2247,7 +2247,6 @@ SUBDIR+=	luv
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
-SUBDIR+=	lxqt-panel-git
 SUBDIR+=	lzlib
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
