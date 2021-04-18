@@ -8,7 +8,7 @@ GIT_REPOSITORIES=	gnunet-go
 GIT_REPO.gnunet-go=	https://git.gnunet.org/gnunet-go.git
 WRKSRC=			${WRKDIR}/gnunet-go
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.gnunet.org/gnunet-go.git/
 COMMENT=	GNUnet implementation in Go
 LICENSE=	gnu-agpl-v3

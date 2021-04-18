@@ -4,7 +4,7 @@ DISTNAME=		gnunet-gtk-0.11.7
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
-MAINTAINER=		ng0@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://gnunet.org/
 COMMENT=		GTK user interfaces for GNUnet
 LICENSE=		gnu-gpl-v3
