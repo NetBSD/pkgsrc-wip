@@ -17,7 +17,8 @@ HOMEPAGE=	https://github.com/FelixKrueger/TrimGalore
 COMMENT=	Wrapper around Cutadapt and FastQC for adapter and quality trimming
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	fastqc>0:../../wip/fastqc
+DEPENDS+=	fastqc-[0-9]*:../../biology/fastqc
+DEPENDS+=	${PY}-cutadapt-[0-9]*:../../biology/py-cutadapt
 
 USE_TOOLS+=	perl:run pax
 REPLACE_PERL=	trim_galore
@@ -34,6 +35,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/trim_galore ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && pax -rw test_files ${DESTDIR}${DATADIR}
 
-.include "../../biology/py-cutadapt/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
