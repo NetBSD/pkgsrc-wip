@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/07 15:32:59 emil_s Exp $
+@comment $NetBSD$
 bin/locate
 bin/updatedb
 man/man1/locate.1
@@ -17,13 +17,16 @@ share/locale/de/LC_MESSAGES/mlocate.mo
 share/locale/el/LC_MESSAGES/mlocate.mo
 share/locale/en_GB/LC_MESSAGES/mlocate.mo
 share/locale/es/LC_MESSAGES/mlocate.mo
+share/locale/et/LC_MESSAGES/mlocate.mo
 share/locale/fa/LC_MESSAGES/mlocate.mo
+share/locale/fi/LC_MESSAGES/mlocate.mo
 share/locale/fr/LC_MESSAGES/mlocate.mo
 share/locale/gu/LC_MESSAGES/mlocate.mo
 share/locale/hu/LC_MESSAGES/mlocate.mo
 share/locale/it/LC_MESSAGES/mlocate.mo
 share/locale/ja/LC_MESSAGES/mlocate.mo
 share/locale/ko/LC_MESSAGES/mlocate.mo
+share/locale/lv/LC_MESSAGES/mlocate.mo
 share/locale/ms/LC_MESSAGES/mlocate.mo
 share/locale/nds/LC_MESSAGES/mlocate.mo
 share/locale/nl/LC_MESSAGES/mlocate.mo
@@ -35,6 +38,7 @@ share/locale/sr/LC_MESSAGES/mlocate.mo
 share/locale/sr@latin/LC_MESSAGES/mlocate.mo
 share/locale/sv/LC_MESSAGES/mlocate.mo
 share/locale/ta/LC_MESSAGES/mlocate.mo
+share/locale/tr/LC_MESSAGES/mlocate.mo
 share/locale/uk/LC_MESSAGES/mlocate.mo
 share/locale/zh_CN/LC_MESSAGES/mlocate.mo
 share/locale/zh_TW/LC_MESSAGES/mlocate.mo
