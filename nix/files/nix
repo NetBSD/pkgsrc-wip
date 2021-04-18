@@ -1,0 +1,86 @@
+#!@RCD_SCRIPTS_SHELL@
+#
+# PROVIDE: nix
+# REQUIRE: DAEMON NETWORKING LOGIN
+# KEYWORD: shutdown
+#
+# The creation of a /nix is intended, so that we could potentially
+# make use of content-addressed mirrors if we get support in Nix
+# upstream.
+# Theoretically this could be in any location, but any other location
+# comes with a caveat.
+#
+# You will need to set
+#	nix=YES
+# in /etc/rc.conf to start nix.
+
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
+name="nix"
+rcvar=${name}
+
+# run once, add check in the beginning if structure already exists
+# in case you've done this manually or run this rc file at least
+# one time.
+nix_precmd()
+{
+	if [ ! -f /nix/store ]; then
+		mkdir -p /nix/var/log/nix/drvs
+		mkdir -p /nix/var/nix/db
+		mkdir -p /nix/var/nix/gcroots
+		mkdir -p /nix/var/nix/profiles
+		mkdir -p /nix/var/nix/temproots
+		mkdir -p /nix/var/nix/userpool
+		mkdir -p /nix/var/nix/gcroots/per-user
+		mkdir -p /nix/var/nix/profiles/per-user
+		chmod 0755 /nix/var/log/nix/drvs
+		chmod 0755 /nix/var/nix/db
+		chmod 0755 /nix/var/nix/gcroots
+		chmod 0755 /nix/var/nix/profiles
+		chmod 0755 /nix/var/nix/temproots
+		chmod 0755 /nix/var/nix/userpool
+		chmod 0755 /nix/var/nix/gcroots/per-user
+		chmod 0755 /nix/var/nix/profiles/per-user
+		chown root:nixbld /nix/store
+		chmod 1775 /nix/store
+	fi
+}
+
+nix_start()
+{
+}
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	# newer NetBSD
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	# old NetBSD, Solaris and illumos, Linux, etc.
+	pidfile="${gnunet_home}/${name}.pid"
+	cmd=${1:-start}
+	case ${cmd} in
+	restart)
+		( $0 stop )
+		sleep 5
+		$0 start
+		;;
+	stop)
+		echo "Stopping ${name}."
+		check_pidfile
+		! [ -n ${pid} ] && eval ${stop_cmd}
+		;;
+	start)
+		echo "Starting ${name}."
+		eval ${start_precmd}
+		eval ${start_cmd}
+		;;
+	*)
+		echo 1>&2 "Usage: $0 [start|stop|restart]"
+		exit 1
+		;;
+	esac
+	exit 0
+fi

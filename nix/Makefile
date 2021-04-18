@@ -4,7 +4,7 @@ DISTNAME=		nix-2.3.7
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NixOS/}
 
-MAINTAINER=		nikita@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/NixOS/nix/
 COMMENT=		Purely functional package manager
 LICENSE=		gnu-lgpl-v2.1
@@ -60,6 +60,12 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 # incomplete, remove once the docs build
 CONFIGURE_ARGS+=	--disable-doc-gen
+
+# Buildusers
+PKG_GROUPS+=	nixbld
+.for i in 1 2 3 4 5 6 7 8 9 10
+PKG_USERS+=	nixbld${i}:nixbld
+.endfor
 
 #SUBST_CLASSES+=		docbook
 #SUBST_MESSAGE.docbook=	Fixing docbook URLs.

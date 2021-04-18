@@ -1,3 +1,8 @@
+* patch:
+  - code in next release will have moved to
+    src/libexpr/primops/fetchTree.cc , check if <sys/wait.h> is still
+    required.
+
 * port to NetBSD?
   There is a high probability that in addition to packaging, supported platforms
   must be tested and non-supported (like NetBSD host) ported to.
