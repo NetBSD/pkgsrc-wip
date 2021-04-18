@@ -1,0 +1,8 @@
+Simple system tray applet and OSD for Pulseaudio. Includes the
+following features:
+* Control main volumes as well as individual applications
+* Mute individual applications
+* Shows application icons and names
+* Per-application VU meter
+* Double-click opens pavucontrol (or custom mixer application)
+* Mouse-wheel support
