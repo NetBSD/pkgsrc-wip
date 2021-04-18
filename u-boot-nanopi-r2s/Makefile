@@ -6,15 +6,11 @@ UBOOT_BIN=		u-boot-rockchip.bin
 
 UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
-UBOOT_VERSION=		2020.07
-MASTER_SITES=		${MASTER_SITE_GITHUB:=blocktrron/}
-GITHUB_PROJECT=		uboot-nanopi-r2s
-GITHUB_TAG=		b8c2aded187e23779a9f565d3577cd46027f0946
+UBOOT_VERSION=		2021.04
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/u-boot-nanopi-r2s/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/u-boot-nanopi-r2s/patches
 DISTFILES=		${DEFAULT_DISTFILES}
-EXTRACT_SUFX=		.tar.gz # keep
 
 # This could be moved to u-boot.mk as long as we don't have support for
 # any imx8 boards.
