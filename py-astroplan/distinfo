@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (astroplan-0.7.tar.gz) = 1e7f9e58a7378eebf39524b3fe3587ddc95bc337
-RMD160 (astroplan-0.7.tar.gz) = 89497fc467737eba4c2c41f798ac4af1c91b3fd7
-SHA512 (astroplan-0.7.tar.gz) = 7182ab01303f631096eb12600f5cb1542601202303529489b5f4412e8ce24fec10c71e4cfb7c7d557d02a1c456ae29822d4a961327155decff2837ed15bcffff
-Size (astroplan-0.7.tar.gz) = 145302 bytes
+SHA1 (astroplan-0.8.tar.gz) = 5b011805c991d686e473120f5acfbb661cef2815
+RMD160 (astroplan-0.8.tar.gz) = b03a7d17f054c2290f841c9d739fedfa9df1d259
+SHA512 (astroplan-0.8.tar.gz) = 3c2e95d58ff028beeb6ee14402bc12b25444e97a7f16883005e6e8efaa4424d1883161c137b3f552044f28283548cb9865de7b81b18710549c7024cf37476067
+Size (astroplan-0.8.tar.gz) = 134720 bytes

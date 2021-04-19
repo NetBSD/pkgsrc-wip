@@ -2,7 +2,6 @@
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -45,7 +44,6 @@ ${PYSITELIB}/astroplan/plots/sky.pyo
 ${PYSITELIB}/astroplan/plots/tests/__init__.py
 ${PYSITELIB}/astroplan/plots/tests/__init__.pyc
 ${PYSITELIB}/astroplan/plots/tests/__init__.pyo
-${PYSITELIB}/astroplan/plots/tests/baseline_images/test_image_example.png
 ${PYSITELIB}/astroplan/plots/tests/test_sky.py
 ${PYSITELIB}/astroplan/plots/tests/test_sky.pyc
 ${PYSITELIB}/astroplan/plots/tests/test_sky.pyo
@@ -64,7 +62,6 @@ ${PYSITELIB}/astroplan/target.pyo
 ${PYSITELIB}/astroplan/tests/__init__.py
 ${PYSITELIB}/astroplan/tests/__init__.pyc
 ${PYSITELIB}/astroplan/tests/__init__.pyo
-${PYSITELIB}/astroplan/tests/coveragerc
 ${PYSITELIB}/astroplan/tests/test_constraints.py
 ${PYSITELIB}/astroplan/tests/test_constraints.pyc
 ${PYSITELIB}/astroplan/tests/test_constraints.pyo
