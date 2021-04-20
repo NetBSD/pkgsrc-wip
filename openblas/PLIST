@@ -1,9 +1,0 @@
-@comment $NetBSD$
-lib/lib${OPENBLAS_VARIANT}.a
-lib/lib${OPENBLAS_VARIANT}.so
-lib/lib${OPENBLAS_VARIANT}.so.0
-lib/pkgconfig/${OPENBLAS_VARIANT}.pc
-lib/cmake/${OPENBLAS_VARIANT}/OpenBLASConfig.cmake
-lib/cmake/${OPENBLAS_VARIANT}/OpenBLASConfigVersion.cmake
-include/${OPENBLAS_VARIANT}/openblas_config.h
-include/${OPENBLAS_VARIANT}/f77blas.h
