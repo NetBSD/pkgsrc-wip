@@ -1,3 +1,0 @@
-# $NetBSD$
-
-NETLIB_BLAS_VERSION=	3.9.0
