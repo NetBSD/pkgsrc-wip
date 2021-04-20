@@ -1,4 +1,0 @@
-At least on NetBSD, it fails check-shlibs checks due:
-
- => Checking for missing run-time search paths in cblas-3.8.0
- ERROR: lib/libcblas.so.3.8.0: missing library: libf95.so.0
