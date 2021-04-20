@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	cov-analysis-netbsd64-2019.03
-PKGNAME=	coverity-analysis-bin-2019.03
+DISTNAME=	cov-analysis-netbsd64-2020.09
+PKGNAME=	coverity-analysis-bin-2020.09
 CATEGORIES=	devel
 MASTER_SITES=	# http://scan.coverity.com/download/
 
@@ -24,5 +24,6 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && pax -pe -rw * ${DESTDIR}${PREFIX}/coverity/
+	find ${DESTDIR}${PREFIX}/coverity/config/templates -type f -exec ${CHMOD} a-x {} \;
 
 .include "../../mk/bsd.pkg.mk"
