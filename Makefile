@@ -1941,7 +1941,6 @@ SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lanq
 SUBDIR+=	lapack
-SUBDIR+=	lapacke
 SUBDIR+=	lasi
 SUBDIR+=	last.fm
 SUBDIR+=	laszip
