@@ -1,6 +1,0 @@
-@comment $NetBSD$
-lib/libblas.a
-lib/libblas.so
-lib/libblas.so.3
-lib/libblas.so.${PKGVERSION}
-lib/pkgconfig/blas.pc

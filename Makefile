@@ -279,7 +279,6 @@ SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
 SUBDIR+=	bkchem
 SUBDIR+=	blad
-SUBDIR+=	blas
 SUBDIR+=	blasr
 SUBDIR+=	blasr_libcpp
 SUBDIR+=	bleachbit
