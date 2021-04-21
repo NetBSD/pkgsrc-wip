@@ -12,6 +12,11 @@ LICENSE=	mit
 
 GO_BUILD_PATTERN+=	.
 
+INSTALLATION_DIRS+=	share/doc/cloud-nuke
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/cloud-nuke
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
