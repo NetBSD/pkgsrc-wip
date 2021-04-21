@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/04/12 11:16:11 nia Exp $
+@comment $NetBSD$
 bin/json-glib-format
 bin/json-glib-validate
 include/json-glib-1.0/json-glib/json-builder.h
@@ -17,7 +17,7 @@ include/json-glib-1.0/json-glib/json-version.h
 ${PLIST.introspection}lib/girepository-1.0/Json-1.0.typelib
 lib/libjson-glib-1.0.so
 lib/libjson-glib-1.0.so.0
-lib/libjson-glib-1.0.so.0.400.4
+lib/libjson-glib-1.0.so.0.600.2
 lib/pkgconfig/json-glib-1.0.pc
 libexec/installed-tests/json-glib-1.0/array
 libexec/installed-tests/json-glib-1.0/boxed
