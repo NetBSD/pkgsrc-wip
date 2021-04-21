@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.6 2012/10/16 13:07:56 asau Exp $
-#
 
 DISTNAME=	treetool2.0.2
 PKGNAME=	treetool-2.0.2
 CATEGORIES=	biology
-MASTER_SITES=	http://iubio.bio.indiana.edu/soft/molbio/unix/treetool/
+#MASTER_SITES=	http://iubio.bio.indiana.edu/soft/molbio/unix/treetool/
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=
