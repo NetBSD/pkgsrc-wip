@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2012/09/29 00:50:40 asau Exp $
-#
 
 DISTNAME=	gsview-4.9
 CATEGORIES=	print
-MASTER_SITES=	http://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum
+MASTER_SITES=	# http://mirror.cs.wisc.edu/pub/mirrors/ghost/ghostgum
 
 MAINTAINER=	schaecsn@gmx.net
 HOMEPAGE=	http://pages.cs.wisc.edu/~ghost/
