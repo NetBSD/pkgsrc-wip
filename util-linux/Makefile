@@ -5,7 +5,6 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
 		http://www.kernel.org/pub/linux/utils/util-linux/
-# old: ftp://ftp.cwi.nl/pub/aeb/util-linux/
 #EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
