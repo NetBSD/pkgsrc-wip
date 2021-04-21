@@ -1,0 +1,6 @@
+The official repository for this driver is
+https://gitlab.freedesktop.org/xorg/driver/xf86-input-libinput
+
+This is an X driver based on libinput. It is a thin wrapper around libinput,
+so while it does provide all features that libinput supports it does little
+beyond.

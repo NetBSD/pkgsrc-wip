@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/xorg/libinput-properties.h
+lib/pkgconfig/xorg-libinput.pc
+lib/xorg/modules/input/libinput_drv.la
+man/man4/libinput.4
+share/X11/xorg.conf.d/40-libinput.conf
