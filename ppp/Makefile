@@ -2,7 +2,7 @@
 
 DISTNAME=	ppp-2.4.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.samba.org/pub/ppp/
+#MASTER_SITES=	ftp://ftp.samba.org/pub/ppp/
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.samba.org/ppp/
