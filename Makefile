@@ -460,6 +460,7 @@ SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
 SUBDIR+=	cloc
 SUBDIR+=	clockspeed
+SUBDIR+=	cloud-nuke
 SUBDIR+=	clustalx
 SUBDIR+=	cluster-admin
 SUBDIR+=	clustershell
