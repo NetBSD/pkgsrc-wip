@@ -3841,6 +3841,8 @@ share/emacs/${PKGVERSION}/lisp/tool-bar.el.gz
 share/emacs/${PKGVERSION}/lisp/tool-bar.elc
 share/emacs/${PKGVERSION}/lisp/tooltip.el.gz
 share/emacs/${PKGVERSION}/lisp/tooltip.elc
+share/emacs/${PKGVERSION}/lisp/transient.el.gz
+share/emacs/${PKGVERSION}/lisp/transient.elc
 share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
 share/emacs/${PKGVERSION}/lisp/tree-widget.elc
 share/emacs/${PKGVERSION}/lisp/tutorial.el.gz
