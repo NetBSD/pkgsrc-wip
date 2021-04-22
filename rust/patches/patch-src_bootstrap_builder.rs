@@ -22,7 +22,7 @@ Workaround for building 1.51 with 1.51 bootstrap.
                  Some("-Wl,-rpath,@loader_path/../lib")
              } else if !target.contains("windows") {
 -                Some("-Wl,-rpath,$ORIGIN/../lib")
-+                Some("-Wl,-rpath,/usr/pkg/lib")
++                Some("-Wl,-rpath,@PREFIX@/lib")
              } else {
                  None
              };
@@ -31,7 +31,7 @@ Workaround for building 1.51 with 1.51 bootstrap.
                      out += &format!("\t{:?}\n", el);
                  }
 -                panic!(out);
-+                std::panic::panic_any(out);
++                panic!("{}", out);
              }
              if let Some(out) = self.cache.get(&step) {
                  self.verbose(&format!("{}c {:?}", "  ".repeat(stack.len()), step));
