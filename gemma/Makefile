@@ -27,15 +27,10 @@ MAKE_FILE=	${FILESDIR}/Makefile
 # Requires multithreading for decent performance
 # Remember that this would interact with any limitation
 # of math/cblas, if there were any.
-BLAS_ACCEPTED=	openblas_pthread openblas_openmp
+BLAS_ACCEPTED=	openblas_pthread openblas_openmp accelerate.framework
 
 .if !empty(BLAS_TYPE:Mopenblas*)
 CXXFLAGS+=	-I${PREFIX}/include/${BLAS_TYPE} -DOPENBLAS
-.endif
-
-# No multithreading
-.if ${BLAS_TYPE} == "openblas"
-CXXFLAGS+=	-DOPENBLAS_LEGACY
 .endif
 
 INSTALLATION_DIRS=	bin share/examples
