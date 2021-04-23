@@ -4,12 +4,11 @@ $NetBSD$
 
 * get QOperatinSystemVersion using uname on Free and NetBSD
 
-* use gzip compression instead of zstd since libarchive might miss zstd even
-  if QT uses it, fixes the configure step on NetBSD
+* fix avoiding the cmake archiving api when buildling with make
 
---- src/corelib/CMakeLists.txt.orig	2021-02-09 18:01:03.000000000 +0000
+--- src/corelib/CMakeLists.txt.orig	2021-02-11 10:23:05.000000000 +0000
 +++ src/corelib/CMakeLists.txt
-@@ -440,8 +440,9 @@ qt_internal_extend_target(Core CONDITION MSVC AND (TES
+@@ -440,8 +440,9 @@ qt_internal_extend_target(Core CONDITION
          "/BASE:0x67000000"
  )
  
@@ -21,7 +20,7 @@ $NetBSD$
  
  qt_internal_extend_target(Core CONDITION QT_FEATURE_animation
      SOURCES
-@@ -531,6 +532,11 @@ qt_internal_extend_target(Core CONDITION INTEGRITY
+@@ -531,6 +532,11 @@ qt_internal_extend_target(Core CONDITION
          --pending_instantiations=128
  )
  
@@ -33,12 +32,21 @@ $NetBSD$
  #### Keys ignored in scope 14:.:.:corelib.pro:pathIsAbsolute(_ss_CMAKE_HOST_DATA_DIR):
  # CMAKE_HOST_DATA_DIR = "$$[QT_HOST_DATA/src]/"
  # CMAKE_HOST_DATA_DIR_IS_ABSOLUTE = "True"
-@@ -1178,7 +1184,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mimetype_databas
-             COMMENT "Generating ${qmimeprovider_db_output}"
-         )
-     else()
--        if(QT_FEATURE_zstd)
-+        if(FALSE)
-             set(qmime_db_compression Zstd)
-             string(APPEND qmime_db_content "#define MIME_DATABASE_IS_ZSTD\n")
+@@ -1141,7 +1147,8 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
+     include(${CMAKE_CURRENT_SOURCE_DIR}/mimetypes/mimetypes_resources.cmake)
+ 
+ # Generate qmimeprovider_database.cpp
+-    set(qmimeprovider_db_output "${CMAKE_CURRENT_BINARY_DIR}/.rcc/qmimeprovider_database.cpp")
++    set(qmimeprovider_db_output_dir "${CMAKE_CURRENT_BINARY_DIR}/.rcc")
++    set(qmimeprovider_db_output "${qmimeprovider_db_output_dir}/qmimeprovider_database.cpp")
+     if(CMAKE_VERSION VERSION_LESS 3.18 OR QT_AVOID_CMAKE_ARCHIVING_API)
+         set(command_args "")
+         set(mime_dir "${CMAKE_CURRENT_SOURCE_DIR}/mimetypes/mime")
+@@ -1150,6 +1157,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
+             list(APPEND command_args "${mime_dir}/generate.bat")
+             list(APPEND command_depends "${mime_dir}/generate.bat" "${mime_dir}/hexdump.ps1" )
          else()
++            file(MAKE_DIRECTORY ${qmimeprovider_db_output_dir})
+             list(APPEND command_args perl "${mime_dir}/generate.pl" )
+         endif()
+ 

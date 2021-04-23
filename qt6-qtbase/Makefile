@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	-system-libpng
 CONFIGURE_ARGS+=	-system-pcre
 CONFIGURE_ARGS+=	-system-sqlite
 CONFIGURE_ARGS+=	-system-zlib
+CONFIGURE_ARGS+=	-avoid_cmake_archiving_api
 .if defined(MAKE_JOBS)
 .  if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
 CONFIGURE_ENV+=		MAKEFLAGS=-j${MAKE_JOBS}
