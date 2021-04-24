@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2014/12/24 05:08:48 obache Exp $
-#
 
 DISTNAME=	libslab-2.30.0
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/libslab/2.30/
+#MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/libslab/2.30/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com

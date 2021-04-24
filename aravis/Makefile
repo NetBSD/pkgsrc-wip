@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.3 2012/11/13 22:25:29 othyro Exp $
-#
 
 DISTNAME=	aravis-0.1.0
 CATEGORIES=	graphics multimedia
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/aravis/0.1/
+#MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/aravis/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com

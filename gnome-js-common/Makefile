@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2013/06/19 13:15:52 noud4 Exp $
-#
 
 DISTNAME=	gnome-js-common-0.1.1
 CATEGORIES=	devel gnome
@@ -7,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-js-common/0.1/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/gnome-js-common/0.1/
+#HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/gnome-js-common/0.1/
 COMMENT=	GNOME JavaScript common modules and tests
 LICENSE=	gnu-gpl-v3
 

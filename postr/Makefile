@@ -3,7 +3,7 @@
 DISTNAME=	postr-0.12.4
 PKGREVISION=	1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/postr/0.12/
+#MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/postr/0.12/
 EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v2
 
