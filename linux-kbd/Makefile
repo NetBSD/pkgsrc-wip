@@ -3,9 +3,7 @@
 DISTNAME=		kbd-1.08
 PKGNAME=		linux-${DISTNAME}
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/keyboards/} \
-			ftp://ftp.kernel.org/pub/linux/utils/kbd/
-# ftp://ftp.*.kernel.org/pub/linux/utils/kbd/
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/keyboards/}
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		ftp://ftp.win.tue.nl/pub/linux-local/utils/kbd/
