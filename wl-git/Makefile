@@ -3,13 +3,12 @@
 DISTNAME=	wl-2.15.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
-
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
+#MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.gohome.org/wl/
+HOMEPAGE=	https://www.emacswiki.org/emacs/WanderLust
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 WRKSRC=		${WRKDIR}/wanderlust
 USE_TOOLS=	patch
