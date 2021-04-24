@@ -1,13 +1,12 @@
 # $NetBSD: Makefile,v 1.2 2012/09/28 21:24:35 asau Exp $
-#
 
 DISTNAME=	detachtty_9
 PKGNAME=	detachtty-9
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.linux.org.uk/pub/lisp/detachtty/
+#MASTER_SITES=	ftp://ftp.linux.org.uk/pub/lisp/detachtty/
 
 MAINTAINER=	ddeus.sf@mailnull.com
-HOMEPAGE=	ftp://ftp.linux.org.uk/pub/lisp/detachtty/
+HOMEPAGE=	https://cliki.net/detachtty
 COMMENT=	Utility that lets you run interactive programs non-interactively
 LICENSE=	gnu-gpl-v2
 USE_TOOLS=	gmake
