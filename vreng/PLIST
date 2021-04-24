@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/12 16:12:31 dauphing Exp $
-bin/vre
-bin/vreng
-man/man1/vreng.1
-man/man8/vacs.8
-man/man8/vaps.8

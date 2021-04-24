@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/02/23 14:02:05 dauphing Exp $
-
-SHA1 (ubit-5.5.0.tar.gz) = bf481169d6ec7d35efad5943618267414a8cfe13
-RMD160 (ubit-5.5.0.tar.gz) = 3b6f329c6b78b1c398e71c589b5e3617aa1f9c62
-Size (ubit-5.5.0.tar.gz) = 1879706 bytes
-SHA1 (patch-aa) = 8ac248ed080df6119376b8e8b26d59983f4e2836
