@@ -3,8 +3,7 @@
 DISTNAME=	nag-h3-${NAGVER}
 PKGNAME=	nag-${NAGVER}
 CATEGORIES=	www time
-MASTER_SITES=	http://ftp.horde.org/pub/nag/ \
-		ftp://ftp.horde.org/pub/nag/
+#MASTER_SITES=	ftp://ftp.horde.org/pub/nag/
 
 MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	https://www.horde.org/nag/

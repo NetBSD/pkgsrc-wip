@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.10 2013/02/12 18:35:01 shattered Exp $
-#
 
 DISTNAME=	chora-h3-2.1.1
 PKGNAME=	${DISTNAME:S/h3-//1}
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.horde.org/pub/chora/
+#MASTER_SITES=	ftp://ftp.horde.org/pub/chora/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.horde.org/apps/chora/
