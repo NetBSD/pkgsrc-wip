@@ -2,10 +2,10 @@
 
 DISTNAME=		lidia-2.2.0
 CATEGORIES=		math
-MASTER_SITES=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current/
+#MASTER_SITES=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current/
 
 MAINTAINER=		esg@sdf.lonestar.org
-HOMEPAGE=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current/
+HOMEPAGE=		https://github.com/mkoeppe/LiDIA
 COMMENT=		C++ Library For Computational Number Theory
 
 USE_PKGLOCALEDIR=	yes
@@ -25,7 +25,6 @@ BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-
 
 post-build:
 	cd ${WRKSRC} && ${GMAKE} doc && ${GMAKE} ps && ${GMAKE} pdf
