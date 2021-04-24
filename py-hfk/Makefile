@@ -3,7 +3,7 @@
 DISTNAME=	py_hfk
 PKGNAME=	${PYPKGPREFIX}-hfk-${VERSION}
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.math.uic.edu/pub/t3m/
+#MASTER_SITES=	ftp://ftp.math.uic.edu/pub/t3m/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
