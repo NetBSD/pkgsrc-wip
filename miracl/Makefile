@@ -1,15 +1,14 @@
 # $NetBSD: Makefile,v 1.3 2012/10/03 15:09:55 asau Exp $
-#
 
 DISTNAME=	miracl
 PKGNAME=	${DISTNAME}-${PKGVERSION}
 PKGVERSION=	5.4
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.computing.dcu.ie/pub/crypto/
+#MASTER_SITES=	ftp://ftp.computing.dcu.ie/pub/crypto/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
-HOMEPAGE=	http://www.shamus.ie
+HOMEPAGE=	https://github.com/miracl/MIRACL
 COMMENT=	Multiprecision Integer and Rational Arithmetic C/C++ Library
 
 INSTALLATION_DIRS+=	include/${DISTNAME}
