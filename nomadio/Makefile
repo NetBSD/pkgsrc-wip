@@ -3,10 +3,10 @@
 DISTNAME=		nomadio-0.7
 PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		ftp://ftp.lucifier.net/pub/nomadio/
+#MASTER_SITES=		ftp://ftp.lucifier.net/pub/nomadio/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://nomadio.lucifier.net/
+#HOMEPAGE=		http://nomadio.lucifier.net/
 COMMENT=		Utility to control Creative Nomad II MG
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
