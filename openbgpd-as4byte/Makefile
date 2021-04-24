@@ -1,12 +1,11 @@
 # $NetBSD: Makefile,v 1.2 2012/10/03 21:02:10 asau Exp $
-# FreeBSD Id: ports/net/openbgpd/Makefile,v 1.10 2006/05/25 11:09:26 flz Exp
 
 PKGNAME=	openbgpd-as4byte-3.9
 DISTNAME=	openbgpd
 VERSION=	3.9
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.openbsd.org/pub/OpenBSD/OpenBGPD/
+MASTER_SITES=	https://cdn.openbsd.org/pub/OpenBSD/OpenBGPD/
 DISTFILES?=	${DISTNAME}-${VERSION}.tgz
 DISTFILES+=	if_media.h pfkey_compat.c hash.h strtonum.c
 DIST_SUBDIR=	openbgpd
