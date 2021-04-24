@@ -6,7 +6,7 @@ PKGNAME=	squirrelmail-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.squirrelmail.org/plugins/
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Sieve Script editing plugin for SquirrelMail
 LICENSE=	gnu-gpl-v2

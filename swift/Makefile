@@ -4,7 +4,7 @@ DISTNAME=	swift-4.0beta2
 CATEGORIES=	chat
 MASTER_SITES=	http://swift.im/downloads/releases/${DISTNAME}/
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://swift.im/
 COMMENT=	Swift XMPP Client
 LICENSE=	gnu-gpl-v3

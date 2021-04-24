@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:C/source-//}
 CATEGORIES=	cad
 MASTER_SITES=	http://sourceforge.net/projects/xtrkcad-fork/files/XTrackCad/Version%205.1.2/
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xtrkcad.org/
 COMMENT=	CAD program for designing model railroads
 LICENSE=	apache-2.0

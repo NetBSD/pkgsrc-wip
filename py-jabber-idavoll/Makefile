@@ -6,7 +6,7 @@ CATEGORIES=	chat python
 MASTER_SITES=	http://idavoll.ik.nu/releases/0.9.1/
 LICENSE=	mit
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://idavoll.ik.nu/
 HOMEPAGE=	https://github.com/ralphm/idavoll
 COMMENT=	XMPP publish-subscribe (XEP-0060) component (via twisted)

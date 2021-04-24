@@ -9,7 +9,7 @@ CATEGORIES=	chat python
 MASTER_SITES=	https://github.com/twonds/punjab/archive/master.zip
 LICENSE=	mit
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/twonds/punjab
 COMMENT=	HTTP XMMP client interface implementing BOSH/XEP-0124
 BROKEN=		Source tarballs have disappeared.

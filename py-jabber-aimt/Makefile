@@ -7,7 +7,7 @@ CATEGORIES=		chat python
 MASTER_SITES=		https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/pyaimt/
 LICENSE=		gnu-gpl-v2
 
-MAINTAINER=		eric@cirr.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.google.com/p/pyaimt/
 COMMENT=		Transport connecting Jabber to the AOL IM network
 

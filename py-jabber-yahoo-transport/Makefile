@@ -3,9 +3,9 @@
 DISTNAME=		yahoo-transport-0.4.90
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=		chat python
-MASTER_SITES=		ftp://ftp.cirr.com/pub/eric/
+#MASTER_SITES=		ftp://ftp.cirr.com/pub/eric/
 
-MAINTAINER=		eric@cirr.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmpppy.sourceforge.net/
 COMMENT=		Transport connecting Jabber to the Yahoo! IM network
 LICENSE=		gnu-gpl-v2

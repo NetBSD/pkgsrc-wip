@@ -9,7 +9,7 @@ MASTER_SITES=		\
 	ftp://rtfm.mit.edu/pub/usenet/comp.sources.unix/volume10/
 EXTRACT_SUFX=		.Z
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Copytape duplicates magnetic tapes, with only one drive
 
 BUILD_DEPENDS+=	gsharutils>=4.2.1nb2:../../archivers/gsharutils

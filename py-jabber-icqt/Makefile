@@ -5,7 +5,7 @@ PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/pyicqt/
 
-MAINTAINER=		eric@cirr.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.google.com/p/pyicqt/
 COMMENT=		Transport connecting Jabber to the ICQ IM network
 LICENSE=		gnu-gpl-v2

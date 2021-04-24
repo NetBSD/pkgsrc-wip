@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:S/P/p/}
 CATEGORIES=	chat python
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/proxy65/
 
-MAINTAINER=	eric@cirr.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://proxy65.googlecode.com/
 COMMENT=	XEP-0065 proxy transport for XMPP
 LICENSE=	mit
