@@ -3,7 +3,6 @@
 DISTNAME=		iptables-1.3.2
 CATEGORIES=		security
 MASTER_SITES=		http://www.netfilter.org/files/
-MASTER_SITES+=		ftp://ftp.netfilter.org/pub/iptables/
 EXTRACT_SUFX=		.tar.bz2
 LICENSE=		gnu-gpl-v2
 
