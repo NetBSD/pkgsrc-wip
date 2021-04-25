@@ -1,10 +1,8 @@
-#
 # $NetBSD: Makefile,v 1.7 2012/10/07 16:22:55 asau Exp $
-#
 
 DISTNAME=		scx-0.2
 CATEGORIES=		devel x11
-MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/scx/
+MASTER_SITES=		http://ftp.scsh.net/pub/scsh/packages/scx/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scsh.net/resources/graphics.html

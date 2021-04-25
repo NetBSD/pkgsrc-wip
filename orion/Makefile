@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.7 2012/10/03 21:32:48 asau Exp $
-#
 
 DISTNAME=		orion-0.2
 CATEGORIES=		wm
-MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/orion-wm/
+MASTER_SITES=		http://ftp.scsh.net/pub/scsh/packages/orion-wm/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://orion.antidesktop.org/
