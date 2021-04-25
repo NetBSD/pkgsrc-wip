@@ -395,6 +395,7 @@ SUBDIR+=	celluloid
 SUBDIR+=	centrifuge
 SUBDIR+=	cereal
 SUBDIR+=	cfiles
+SUBDIR+=	cfssl
 SUBDIR+=	cgal
 SUBDIR+=	cglib
 SUBDIR+=	cgnslib
