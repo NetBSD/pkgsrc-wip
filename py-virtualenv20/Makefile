@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	virtualenv-20.4.3
+DISTNAME=	virtualenv-20.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
