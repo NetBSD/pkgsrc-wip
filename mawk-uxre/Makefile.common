@@ -8,7 +8,7 @@
 DISTNAME=	mawk-1.3.4-20100625
 PKGNAME=	${DISTNAME:S/-20/.20/:S/mawk/mawk-${PKGNAMESUF}/}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://invisible-island.net/mawk/
+MASTER_SITES=	https://invisible-island.net/datafiles/release/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	cheusov@NetBSD.org
