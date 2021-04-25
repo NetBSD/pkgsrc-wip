@@ -2,10 +2,10 @@
 
 DISTNAME=	numactl-2.0.11
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://oss.sgi.com/www/projects/libnuma/download/
+#MASTER_SITES=	ftp://oss.sgi.com/www/projects/libnuma/download/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	ftp://oss.sgi.com/www/projects/libnuma/download/
+#HOMEPAGE=	ftp://oss.sgi.com/www/projects/libnuma/download/
 COMMENT=	Non Uniform Memory Access tools
 #LICENSE=	# TODO: (see mk/license.mk)
 
