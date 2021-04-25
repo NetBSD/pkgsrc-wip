@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pre_commit-2.12.0.tar.gz) = cc706edb72c3a46a1e50cc62602aeef30d84f3ec
-RMD160 (pre_commit-2.12.0.tar.gz) = a986a30f7bfc8a4c29ab2296383e55346bbb0dd4
-SHA512 (pre_commit-2.12.0.tar.gz) = 8728d7f64ba92b77d855ee53e5646d94ac7c316ba42f1c5fde0b22819f0ec4507603270a279a4b05d4314e1bd46c1cc01e1de069c73482cee8128efdcf707019
-Size (pre_commit-2.12.0.tar.gz) = 165705 bytes
+SHA1 (pre_commit-2.12.1.tar.gz) = 67172db461ad2eabe3d2d23be681e8006b5bfb8b
+RMD160 (pre_commit-2.12.1.tar.gz) = b4ba5466613a2800483b546b6386e1c03fcb69ba
+SHA512 (pre_commit-2.12.1.tar.gz) = f6b8c43330ff994ecae5cf27416f91dcd8858962774964ede1525d7614500749b8244d767d80ab0a36752dc4d830689cd5de0ccf11fb2fb21a834ac85725d525
+Size (pre_commit-2.12.1.tar.gz) = 165409 bytes
