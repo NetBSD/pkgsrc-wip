@@ -5737,6 +5737,7 @@ SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
 SUBDIR+=	wgrib2
+SUBDIR+=	whatscli
 SUBDIR+=	which
 SUBDIR+=	why
 SUBDIR+=	why3
