@@ -2,11 +2,11 @@
 
 DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
-MASTER_SITES=		ftp://ftp.pld.org.pl/software/shadow/
+#MASTER_SITES=		ftp://ftp.pld.org.pl/software/shadow/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://shadow.pld.org.pl/
+#HOMEPAGE=		http://shadow.pld.org.pl/
 COMMENT=		User administration and passwd database tools for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Linux shadow format
