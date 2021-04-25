@@ -1,17 +1,16 @@
 # $NetBSD: Makefile,v 1.10 2012/10/01 21:43:23 asau Exp $
-#
 
 DISTNAME=		EMBOSS-2.9.0
 PKGNAME=		jemboss-standalone-2.9.0
 PKGREVISION=		1
 CATEGORIES=		biology
-MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/old/2.9.0/
+#MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/old/2.9.0/
 DIST_SUBDIR=		emboss/emboss-2.9.0
-LICENSE=		gnu-gpl-v2
 
 MAINTAINER=	dprice@cs.nmsu.edu
 HOMEPAGE=	http://www.emboss.org/
 COMMENT=	Standalone Interface for EMBOSS
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	emboss-java>=0.0.3:../../wip/emboss-java
 #DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi

@@ -1,11 +1,10 @@
 # $NetBSD: Makefile,v 1.8 2012/09/02 11:14:10 noud4 Exp $
-#
 
 DISTNAME=		EMBOSS-2.9.0
 PKGNAME=		emboss-java-0.0.3
 PKGREVISION=		2
 CATEGORIES=		biology
-MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
+#MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
