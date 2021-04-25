@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	cfssl-1.5.0
+PKGREVISION=	1
 DISTNAME=	cfssl-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cloudflare/}
@@ -28,6 +29,7 @@ CHECK_RELRO_SKIP+=	bin/mkbundle
 CHECK_RELRO_SKIP+=	bin/multirootca
 
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/doc/cfssl share/doc/cfssl/api share/doc/cfssl/cmd
 
 do-build:
 	${RUN}${_ULIMIT_CMD} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install \
@@ -35,6 +37,10 @@ do-build:
 
 do-install:
 	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/cfssl
+	${INSTALL_DATA} ${WRKSRC}/doc/*.sample ${DESTDIR}${PREFIX}/share/doc/cfssl
+	${INSTALL_DATA} ${WRKSRC}/doc/api/*.txt ${DESTDIR}${PREFIX}/share/doc/cfssl/api
+	${INSTALL_DATA} ${WRKSRC}/doc/cmd/*.txt ${DESTDIR}${PREFIX}/share/doc/cfssl/cmd
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
