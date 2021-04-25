@@ -1,12 +1,11 @@
 # $NetBSD: Makefile,v 1.6 2012/11/25 23:32:28 othyro Exp $
-#
 
 DISTNAME=		netkit-tftp-0.17
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
+#MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
+#HOMEPAGE=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 COMMENT=		TFPD client and server from the Linux NetKIT
 
 USE_PKGLOCALEDIR=	yes

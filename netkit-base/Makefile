@@ -4,7 +4,7 @@ DISTNAME=		netkit-base-0.17
 PKGREVISION=		1
 CATEGORIES=		net
 # sunsite has older 0.16 version
-MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
+#MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		https://www.hcs.harvard.edu/~dholland/computers/netkit.html
