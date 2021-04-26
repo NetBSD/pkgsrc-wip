@@ -18,7 +18,7 @@ GCC_REQD+=	5
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
+USE_TOOLS+=		bash grep gmake perl:build pkg-config
 
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=		--disable-ninja
 .include "cross.mk"
 
 .if !empty(rust.BUILD_TARGET)
-BUILD_TARGET=	${rust.BUILD_TARGET)
+BUILD_TARGET=	${rust.BUILD_TARGET}
 .endif
 
 .if !empty(TARGET)
@@ -73,7 +73,7 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
-UNLIMIT_RESOURCES+=	cputime datasize virtualsize
+UNLIMIT_RESOURCES+=	cputime datasize memorysize
 
 TEST_TARGET=	check
 
@@ -269,6 +269,16 @@ SITES.${RUST_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 pre-build-fix:
 .endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make (makesum) || make(mdi)
+RUST_STAGE0_VER=	1.51.0
+RUST_ARCH=		aarch64_be-unknown-netbsd
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+SITES.${RUST_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+pre-build-fix:
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.50.0
 RUST_ARCH=		sparc64-unknown-netbsd
@@ -324,6 +334,14 @@ CKSUM_CRATES+=	vendor/libc
 CKSUMS+=	8d7ddc8dd25a9404f9181a49438d9506c676cfd4b6fa21dbe5c1f9969abc4b91
 CKSUMS+=	f147be95b04ea1303171dff46c5a66b08cd47ccd0a4c346d5bcec7a8aaac3fc4
 
+CKSUM_CRATES+=	vendor/cc-1.0.60
+CKSUMS+=	903c5f2f5dd0cc7d04f99f605a95e6abde8b38156fd4e73eefc58493f55a4e5a
+CKSUMS+=	e45520f4dda532240e4ec28af550fcb76f44090361f273bebcf0d07dc0807885
+
+CKSUM_CRATES+=	vendor/rustc-ap-rustc_target
+CKSUMS+=	ab83c62fab6927a47fc3d15c02eec41174ea9f3e8dce5c53adab613d48918bc5
+CKSUMS+=	01f50edc3845bd03459d525444150d03f57cdb479de2668a71c1538adf3d340a
+
 CKSUM_CRATES+=	vendor/lzma-sys
 CKSUMS+=	6fd5e9245db34c6f557b8bfcaf03db82fc88c3b06dbfbb5f03b2bcd138983ef9
 CKSUMS+=	5e252578b5d266f6a4c8dc9f71ca7a91536ccb8c5c7d7753b82f12ec886459ef
@@ -338,7 +356,7 @@ CKSUMS+=	9e146a847e1f726fa7d7eae224aaa925030287f99770f950a012cb398e088d12
 
 CKSUM_CRATES+=	vendor/openssl-src
 CKSUMS+=	03dcdaac7de880b860ecfe859ba2ac3e46c8f46a7bf948aa674147eebee421b0
-CKSUMS+=	58f630b56613c5ba6c03f54f21dc9cb6ee9b32960cf5b44ae25878c77f543f7e
+CKSUMS+=	580a24c5a739e688e488498b8a34e27a3284c3160e6d3aaff711a80774c35c48
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure

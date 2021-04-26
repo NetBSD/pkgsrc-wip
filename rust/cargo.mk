@@ -51,7 +51,7 @@ cargo-vendor-crates:
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for crate in ${CARGO_CRATE_DEPENDS}
 	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
-	  $$(${DIGEST} sha256 < ${_DISTDIR}/${crate}.crate) \
+	  `${DIGEST} sha256 < ${_DISTDIR}/${crate}.crate` \
 	  > ${CARGO_VENDOR_DIR}/${crate}/.cargo-checksum.json
 .endfor
 
