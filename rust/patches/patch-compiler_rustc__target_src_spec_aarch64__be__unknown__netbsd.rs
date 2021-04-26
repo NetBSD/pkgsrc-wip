@@ -20,7 +20,7 @@ Add aarch64_be NetBSD target.
 +        arch: "aarch64".to_string(),
 +        options: TargetOptions {
 +            mcount: "__mcount".to_string(),
-+	    endian: Endian::Big,
++            endian: Endian::Big,
 +            ..base
 +        },
 +    }
