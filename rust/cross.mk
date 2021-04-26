@@ -20,7 +20,7 @@
 #CROSS_ROOT=		/u/evbarm64eb
 #CROSS_ROOT=		/u/i386
 #CROSS_ROOT=		/
-MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
+#MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 
 # The GNU cross target designation
 #GNU_CROSS_TARGET=	armv7--netbsdelf-eabihf
@@ -29,7 +29,7 @@ MAKE_ENV+=		CROSS_ROOT=${CROSS_ROOT}
 #GNU_CROSS_TARGET=	aarch64--netbsd
 #GNU_CROSS_TARGET=	aarch64_be--netbsd
 #GNU_CROSS_TARGET=	i486--netbsdelf
-MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
+#MAKE_ENV+=		GNU_CROSS_TARGET=${GNU_CROSS_TARGET}
 
 # To cross-build rust, you need to specify
 # the ultimate target to built for, as well as the
