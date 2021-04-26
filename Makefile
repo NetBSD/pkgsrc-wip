@@ -3642,7 +3642,6 @@ SUBDIR+=	py-enum-compat
 SUBDIR+=	py-enumit
 SUBDIR+=	py-epigrass
 SUBDIR+=	py-epipy
-SUBDIR+=	py-epr-reader
 SUBDIR+=	py-equation
 SUBDIR+=	py-errorhandler
 SUBDIR+=	py-escher
