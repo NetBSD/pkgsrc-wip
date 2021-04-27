@@ -1,6 +1,7 @@
 # $NetBSD: buildlink3.mk,v 1.6 2020/07/08 14:46:14 jperkin Exp $
 
 BUILDLINK_TREE+=	rust
+
 #
 # DO NOT include this directly! Use rust.mk instead.
 #
