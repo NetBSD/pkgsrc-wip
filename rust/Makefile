@@ -59,6 +59,13 @@ BUILD_TARGET?=		dist
 BUILD_TARGET?=		build
 .endif
 
+# Allow overriding MAKE_JOBS_SAFE
+# some may chose to mostly build faster,
+# and deal with any failures due to deadlocks
+.if !empty(rust.MAKE_JOBS_SAFE)
+MAKE_JOBS_SAFE=	${rust.MAKE_JOBS_SAFE}
+.endif
+
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
