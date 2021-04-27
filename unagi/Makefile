@@ -33,7 +33,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
-.include "../../x11/xcb-util036/buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
