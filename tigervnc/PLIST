@@ -13,8 +13,8 @@ man/man1/vncserver.1
 man/man1/vncviewer.1
 man/man1/x0vncserver.1
 share/applications/vncviewer.desktop
-share/doc/${PKGNAME}/LICENCE.TXT
-share/doc/${PKGNAME}/README.rst
+share/doc/tigervnc-1.9.0/LICENCE.TXT
+share/doc/tigervnc-1.9.0/README.rst
 share/icons/hicolor/16x16/apps/tigervnc.png
 share/icons/hicolor/22x22/apps/tigervnc.png
 share/icons/hicolor/24x24/apps/tigervnc.png

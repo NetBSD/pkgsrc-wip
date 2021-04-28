@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.37 2021/04/21 13:25:14 adam Exp $
 
-DISTNAME=		tigervnc-1.9.0.1.18
+DISTNAME=		tigervnc-1.9.0
+PKGNAME=		${DISTNAME}.1.18.4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -18,6 +19,8 @@ BUILD_DEPENDS+=	font-util-[0-9]*:../../fonts/font-util
 BUILD_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
