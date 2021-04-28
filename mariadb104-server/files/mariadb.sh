@@ -15,14 +15,14 @@ fi
 name="mariadb"
 rcvar=${name}
 command="@PREFIX@/sbin/mysqld"
-command_args="--pid-file=@VARBASE@/run/mariadb.pid"
+command_args="--pid-file=@VARBASE@/run/mariadb/mariadb.pid"
 command_args="${command_args} --user=@MARIADB_USER@"
 command_args="${command_args} --datadir=@MARIADB_DATADIR@"
 command_args="${command_args} --log-error=@VARBASE@/log/mariadb/error.log &"
 extra_commands="initdb"
 initdb_cmd="mariadb_initdb"
 start_precmd="mariadb_prestart"
-pidfile="@VARBASE@/run/mariadb.pid"
+pidfile="@VARBASE@/run/mariadb/mariadb.pid"
 
 mariadb_initdb() {
         if [ -f @MARIADB_DATADIR@/mysql/host.frm ]; then

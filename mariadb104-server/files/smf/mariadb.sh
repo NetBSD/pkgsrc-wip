@@ -7,7 +7,7 @@
 
 . /lib/svc/share/smf_include.sh
 
-PIDFILE="@VARBASE@/run/mariadb.pid"
+PIDFILE="@VARBASE@/run/mariadb/mariadb.pid"
 
 ulimit -n 10240
 
