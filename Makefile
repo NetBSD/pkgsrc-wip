@@ -5500,6 +5500,7 @@ SUBDIR+=	thepeg
 SUBDIR+=	threadingbuildingblocks
 SUBDIR+=	thrift
 SUBDIR+=	thunderbird68-enigmail
+SUBDIR+=	tigervnc
 SUBDIR+=	tilda
 SUBDIR+=	tilix
 SUBDIR+=	timewarrior
