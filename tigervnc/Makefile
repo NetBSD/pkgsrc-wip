@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.37 2021/04/21 13:25:14 adam Exp $
 
 DISTNAME=		tigervnc-1.9.0
-PKGNAME=		${DISTNAME}.1.19.7
+PKGNAME=		${DISTNAME}.1.20.11
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
-XORG_SERVER_FILE=	xorg-server-1.19.7
+XORG_SERVER_FILE=	xorg-server-1.20.11
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
@@ -29,6 +29,9 @@ USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 
+# for reallocarray()
+CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
+
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 
 CONFIGURE_ENV+=			ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
@@ -49,7 +52,7 @@ post-extract:
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
 
 post-patch:
-	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver119.patch
+	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver120.patch
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
@@ -96,4 +99,5 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
