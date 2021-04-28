@@ -6252,4 +6252,3 @@ SHA1 (vbom.ml_util_@v_v0.0.0-20160121211510-db5cfe13f5cc.zip) = db03ab922d992d94
 RMD160 (vbom.ml_util_@v_v0.0.0-20160121211510-db5cfe13f5cc.zip) = 4bd25479a12a3d6aecf3c44700beb32c80484923
 SHA512 (vbom.ml_util_@v_v0.0.0-20160121211510-db5cfe13f5cc.zip) = 77441a4a14c9b5c266eedde3c9eb6d7499a7a2ca57139071197b71fe2d3d1d1cc63c3eed95673733a2b855f329ccb30dcab568e1d743231eb1238ca0154524e6
 Size (vbom.ml_util_@v_v0.0.0-20160121211510-db5cfe13f5cc.zip) = 27337 bytes
-SHA1 (patch-manifests_scripts_bundle.sh) = bf595ddfa8d674fd95f18f3356179831d562c815

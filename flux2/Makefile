@@ -16,6 +16,12 @@ TOOL_DEPENDS+=	kustomize-[0-9]*:../../wip/kustomize
 
 GO_BUILD_PATTERN+=	./cmd/flux
 
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Avoid to use git on non-git repository
+SUBST_FILES.path=	manifests/scripts/bundle.sh
+SUBST_SED.path+=	-e 's,$$(git rev-parse --show-toplevel),.,g'
+
 REPLACE_BASH+=	manifests/scripts/bundle.sh
 
 # Build the embedded manifests
