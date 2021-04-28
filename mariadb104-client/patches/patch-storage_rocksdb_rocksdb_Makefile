@@ -2,9 +2,18 @@ $NetBSD$
 
 Shell portability.
 
---- storage/rocksdb/rocksdb/Makefile.orig	2020-01-26 20:43:50.000000000 +0000
+--- storage/rocksdb/rocksdb/Makefile.orig	2021-02-18 23:22:28.000000000 +0000
 +++ storage/rocksdb/rocksdb/Makefile
-@@ -1830,7 +1830,7 @@ rocksdbjavastatic: $(java_static_all_lib
+@@ -911,7 +911,7 @@ valgrind_check_0:
+ 	  | grep -E '$(tests-regexp)'					\
+ 	  | grep -E -v '$(valgrind-blacklist-regexp)'					\
+ 	  | build_tools/gnu_parallel -j$(J) --plain --joblog=LOG $$eta --gnu \
+-	  '(if [[ "{}" == "./"* ]] ; then $(DRIVER) {}; else {}; fi) ' \
++	  '(if [ "{}" = "./"* ] ; then $(DRIVER) {}; else {}; fi) ' \
+ 	  '>& t/valgrind_log-{/}'
+ 
+ CLEAN_FILES += t LOG $(TMPD)
+@@ -1952,7 +1952,7 @@ rocksdbjavastatic: $(java_static_all_lib
  	  -o ./java/target/$(ROCKSDBJNILIB) $(JNI_NATIVE_SOURCES) \
  	  $(java_static_all_libobjects) $(COVERAGEFLAGS) \
  	  $(JAVA_COMPRESSIONS) $(JAVA_STATIC_LDFLAGS)

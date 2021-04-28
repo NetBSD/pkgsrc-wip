@@ -2,14 +2,18 @@ $NetBSD$
 
 Allow building a server-only configuration.
 
---- CMakeLists.txt.orig	2020-01-26 20:43:49.000000000 +0000
+--- CMakeLists.txt.orig	2021-02-18 23:22:28.000000000 +0000
 +++ CMakeLists.txt
-@@ -400,24 +400,30 @@ ENDIF()
+@@ -405,8 +405,6 @@ ENDIF()
  
  SET (MYSQLD_STATIC_PLUGIN_LIBS "" CACHE INTERNAL "")
  
 -INCLUDE(mariadb_connector_c) # this does ADD_SUBDIRECTORY(libmariadb)
 -
+ INCLUDE(cpack_rpm)
+ INCLUDE(cpack_deb)
+ 
+@@ -416,19 +414,27 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -33,14 +37,14 @@ Allow building a server-only configuration.
 +  INCLUDE(mariadb_connector_c) # this does ADD_SUBDIRECTORY(libmariadb)
 +  ADD_SUBDIRECTORY(include)
 +  ADD_SUBDIRECTORY(client)
-   ADD_SUBDIRECTORY(tests)
-+  ADD_SUBDIRECTORY(scripts)
 +  ADD_SUBDIRECTORY(man)
++  ADD_SUBDIRECTORY(scripts)
+   ADD_SUBDIRECTORY(tests)
 +ELSE()
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER) 
-@@ -435,21 +441,14 @@ IF(NOT WITHOUT_SERVER)
+@@ -446,21 +452,14 @@ IF(NOT WITHOUT_SERVER)
    ENDIF()
  ENDIF()
  

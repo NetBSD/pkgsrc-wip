@@ -3,9 +3,10 @@
 # used by wip/mariadb104-client/Makefile
 # used by wip/mariadb104-server/Makefile
 
-DISTNAME=	mariadb-10.4.12
+DISTNAME=	mariadb-10.4.18
 CATEGORIES=	databases
 MASTER_SITES=	https://downloads.mariadb.org/f/${DISTNAME}/source/
+MASTER_SITES+=	https://archive.mariadb.org/${DISTNAME}/source/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mariadb.org/
@@ -87,7 +88,7 @@ REPLACE_PERL+=		sql-bench/*.sh
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
-SUBST_FILES.perl=	${WRKSRC}/scripts/CMakeLists.txt
+SUBST_FILES.perl=	scripts/CMakeLists.txt
 SUBST_SED.perl=		-e "s,/usr/bin/perl,${TOOLS_PATH.perl},g"
 SUBST_SED.perl+=	-e "s,/usr/local/bin/perl,${TOOLS_PATH.perl},g"
 

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mariadb104
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mariadb-client
 
 PKG_SUPPORTED_OPTIONS+=	embedded-server ssl
 PKG_SUGGESTED_OPTIONS+=	embedded-server ssl

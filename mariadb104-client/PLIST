@@ -7,7 +7,6 @@ bin/mariadb-check
 bin/mariadb-dump
 bin/mariadb-find-rows
 bin/mariadb-import
-bin/mariadb-install-db
 bin/mariadb-plugin
 bin/mariadb-show
 bin/mariadb-slap
@@ -29,7 +28,6 @@ bin/mysqlshow
 bin/mysqlslap
 bin/mysqltest
 bin/mytop
-bin/wsrep_sst_rsync_wan
 include/mysql/errmsg.h
 include/mysql/ma_list.h
 include/mysql/ma_pvio.h
@@ -144,11 +142,12 @@ include/mysql/server/private/dur_prop.h
 include/mysql/server/private/ft_global.h
 include/mysql/server/private/hash.h
 include/mysql/server/private/heap.h
-include/mysql/server/private/intrusive_list.h
+include/mysql/server/private/ilist.h
 include/mysql/server/private/lf.h
 include/mysql/server/private/maria.h
 include/mysql/server/private/my_alarm.h
 include/mysql/server/private/my_atomic.h
+include/mysql/server/private/my_atomic_wrapper.h
 include/mysql/server/private/my_base.h
 include/mysql/server/private/my_bit.h
 include/mysql/server/private/my_bitmap.h
@@ -183,8 +182,10 @@ include/mysql/server/private/probes_mysql.h
 include/mysql/server/private/probes_mysql_nodtrace.h
 include/mysql/server/private/queues.h
 include/mysql/server/private/rijndael.h
+include/mysql/server/private/scope.h
 include/mysql/server/private/service_versions.h
 include/mysql/server/private/source_revision.h
+include/mysql/server/private/span.h
 include/mysql/server/private/ssl_compat.h
 include/mysql/server/private/t_ctype.h
 include/mysql/server/private/thr_alarm.h
@@ -303,8 +304,6 @@ man/man1/perror.1
 man/man1/replace.1
 man/man1/resolve_stack_dump.1
 man/man1/resolveip.1
-man/man1/tokuft_logprint.1
-man/man1/tokuftdump.1
 man/man1/wsrep_sst_common.1
 man/man1/wsrep_sst_mariabackup.1
 man/man1/wsrep_sst_mysqldump.1
