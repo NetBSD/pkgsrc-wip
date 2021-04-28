@@ -1935,6 +1935,7 @@ SUBDIR+=	ktjet
 SUBDIR+=	ktnef
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
+SUBDIR+=	kustomize
 SUBDIR+=	kwin
 SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon
