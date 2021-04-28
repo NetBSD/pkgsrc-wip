@@ -7,17 +7,17 @@
 
 . /lib/svc/share/smf_include.sh
 
-PIDFILE="@MYSQL_DATADIR@/mysql.pid"
+PIDFILE="@VARBASE@/run/mariadb.pid"
 
 ulimit -n 10240
 
 case "$1" in
 start)
-	@LOCALBASE@/sbin/mysqld --user=mysql \
+	@LOCALBASE@/sbin/mysqld --user=@MARIADB_USER@ \
 		--basedir=@LOCALBASE@ \
-		--datadir=@MYSQL_DATADIR@ \
+		--datadir=@MARIADB_DATADIR@ \
 		--pid-file=${PIDFILE} \
-		--log-error=@VARBASE@/log/mysql/error.log &
+		--log-error=@VARBASE@/log/mariadb/error.log &
 	;;
 stop)
 	[ -f ${PIDFILE} ] && kill `@HEAD@ -1 ${PIDFILE}`
