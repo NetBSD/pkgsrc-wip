@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.37 2021/04/21 13:25:14 adam Exp $
 
-DISTNAME=		tigervnc-1.9.0
+DISTNAME=		tigervnc-1.11.0
 PKGNAME=		${DISTNAME}.1.20.11
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_TAG=		v1.11.0
 XORG_SERVER_FILE=	xorg-server-1.20.11
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
@@ -20,12 +20,15 @@ BUILD_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
 
+REPLACE_BASH+=	unix/vncserver/vncsession-start.in
+REPLACE_PERL+=	unix/vncserver/vncserver.in
+
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash
+USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash:run
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 
@@ -41,7 +44,7 @@ LIBTOOL_OVERRIDE=		unix/xserver/libtool
 SUBST_CLASSES+=		hpath
 SUBST_STAGE.hpath=	pre-configure
 SUBST_MESSAGE.hpath=	fixing hardcoded paths
-SUBST_FILES.hpath=	unix/vncserver
+SUBST_FILES.hpath=	unix/vncserver/vncserver.in
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_VARS.hpath+=	PREFIX X11BASE
 
@@ -53,6 +56,21 @@ post-extract:
 
 post-patch:
 	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver120.patch
+
+# suggested by BUILDING.txt:
+#./configure --with-pic --without-dtrace --disable-static --disable-dri \
+#      --disable-xinerama --disable-xvfb --disable-xnest --disable-xorg \
+#      --disable-dmx --disable-xwin --disable-xephyr --disable-kdrive \
+#      --disable-config-dbus --disable-config-hal --disable-config-udev \
+#      --disable-dri2 --enable-install-libxf86config --enable-glx \
+#      --with-default-font-path="catalogue:/etc/X11/fontpath.d,built-ins" \
+#      --with-fontdir=/usr/share/X11/fonts \
+#      --with-xkb-path=/usr/share/X11/xkb \
+#      --with-xkb-output=/var/lib/xkb \
+#      --with-xkb-bin-directory=/usr/bin \
+#      --with-serverconfig-path=/usr/lib[64]/xorg \
+#      --with-dri-driver-path=/usr/lib[64]/dri \
+#      {additional configure options}
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
