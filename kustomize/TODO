@@ -1,2 +1,0 @@
-- Investigate/address how to properly fill the version (e.g. returned via
-  `kustomize version')
