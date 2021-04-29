@@ -24,9 +24,23 @@ BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+.if !empty(MYSQL_DATADIR)
+MARIADB_DATADIR?=	${MYSQL_DATADIR}
+.else
 MARIADB_DATADIR?=	${VARBASE}/db/mariadb
+.endif
+
+.if !empty(MYSQL_USER)
+MARIADB_USER?=		${MYSQL_USER}
+.else
 MARIADB_USER?=		mariadb
+.endif
+
+.if !empty(MYSQL_GROUP)
+MARIADB_GROUP?=		${MYSQL_GROUP}
+.else
 MARIADB_GROUP?=		mariadb
+.endif
 
 PKG_USERS_VARS+=	MARIADB_USER
 PKG_GROUPS_VARS+=	MARIADB_GROUP
