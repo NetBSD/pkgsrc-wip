@@ -13,7 +13,7 @@ Allow building a server-only configuration.
  INCLUDE(cpack_rpm)
  INCLUDE(cpack_deb)
  
-@@ -416,19 +414,27 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+@@ -416,19 +414,26 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -38,13 +38,12 @@ Allow building a server-only configuration.
 +  ADD_SUBDIRECTORY(include)
 +  ADD_SUBDIRECTORY(client)
 +  ADD_SUBDIRECTORY(man)
-+  ADD_SUBDIRECTORY(scripts)
    ADD_SUBDIRECTORY(tests)
 +ELSE()
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER) 
-@@ -446,21 +452,14 @@ IF(NOT WITHOUT_SERVER)
+@@ -446,21 +451,15 @@ IF(NOT WITHOUT_SERVER)
    ENDIF()
  ENDIF()
  
@@ -55,7 +54,7 @@ Allow building a server-only configuration.
 -INCLUDE(cmake/abi_check.cmake)
 -INCLUDE(cmake/tags.cmake)
 -INCLUDE(for_clients)
--ADD_SUBDIRECTORY(scripts)
+ ADD_SUBDIRECTORY(scripts)
 -ADD_SUBDIRECTORY(support-files)
  ADD_SUBDIRECTORY(extra/aws_sdk)
  

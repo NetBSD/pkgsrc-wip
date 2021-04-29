@@ -50,6 +50,9 @@ BUILD_DEFS+=		MARIADB_DATADIR
 OWN_DIRS_PERMS+=	${VARBASE}/run/mariadb ${MARIADB_USER} ${MARIADB_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/log/mariadb ${MARIADB_USER} ${MARIADB_GROUP} 0700
 
+post-install:
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/mysql_install_db
+
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../wip/mariadb104-client/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
