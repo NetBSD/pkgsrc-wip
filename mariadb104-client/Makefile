@@ -11,4 +11,7 @@ CMAKE_ARGS+=	-DWITHOUT_SERVER=ON
 
 INSTALL_DIRS+=	client include libmariadb man scripts
 
+post-install:
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/mysql_install_db
+
 .include "../../mk/bsd.pkg.mk"
