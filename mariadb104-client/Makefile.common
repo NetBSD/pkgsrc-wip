@@ -27,8 +27,8 @@ PLIST_SRC=	${PLIST_SRC_DFLT}
 # MYSQL_CHARSET		default character set
 # MYSQL_EXTRA_CHARSET	additional character set to be compiled in
 MYSQL_DATADIR?=		${VARBASE}/db/mariadb
-MYSQL_CHARSET?=		latin1
-MYSQL_COLLATION?=	latin1_swedish_ci
+MYSQL_CHARSET?=		utf8mb4
+MYSQL_COLLATION?=	utf8mb4_unicode_ci
 MYSQL_EXTRA_CHARSET?=	all
 
 BUILD_DEFS+=		VARBASE
