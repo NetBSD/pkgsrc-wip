@@ -14,6 +14,8 @@ USE_TOOLS+=	bash gmake
 
 TOOL_DEPENDS+=	kustomize-[0-9]*:../../wip/kustomize
 
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X main.VERSION=${PKGVERSION_NOREV}'
 GO_BUILD_PATTERN+=	./cmd/flux
 
 SUBST_CLASSES+=		path
