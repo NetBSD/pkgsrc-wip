@@ -91,13 +91,6 @@ CMAKE_ARGS+=		-DTOKUDB_OK=OFF
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
-# Override some configure bits that are not correct (fixes groonga)
-.if ${OPSYS} == "SunOS"
-CMAKE_ARGS+=		-DHAVE_NETINET_TCP_H=ON
-CMAKE_ARGS+=		-D_XPG4_2=1
-CMAKE_ARGS+=		-D__EXTENSIONS__=1
-.endif
-
 CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 CPPFLAGS.SunOS+=	-fPIC
