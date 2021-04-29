@@ -33,7 +33,7 @@ mariadb_initdb() {
 		echo "Initializing MariaDB database system tables."
 		sh @PREFIX@/bin/mysql_install_db --force \
 			--auth-root-authentication-method=normal \
-			--user=mariadb \
+			--user=@MARIADB_USER@ \
 			--datadir=@MARIADB_DATADIR@
 		if [ -d @MARIADB_DATADIR@ ]; then
 			/usr/sbin/chown -R @MARIADB_USER@:@MARIADB_GROUP@ \
