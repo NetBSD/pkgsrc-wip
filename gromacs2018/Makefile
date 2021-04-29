@@ -2,6 +2,7 @@
 #
 
 DISTNAME=		gromacs-2018.4
+PKGREVISION=		1
 CATEGORIES=		science
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -28,7 +29,6 @@ CFLAGS+=	-msse -msse2
 .endif
 
 .include "../../math/fftw/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"	# optional
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"	# optional

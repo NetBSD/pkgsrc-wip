@@ -67,7 +67,7 @@ WITHOUT_PLUGINS+=	avcodec
 .endif
 
 .if !empty(PKG_OPTIONS:Mfftw)
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 #PLIST.fftw=		yes
 .else
 WITHOUT_PLUGINS+=	fftw3f

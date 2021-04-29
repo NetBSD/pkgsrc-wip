@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2014/09/06 22:22:36 thomasklausner Exp $
 
 DISTNAME=	SuperCollider-3.7.2-Source
+PKGREVISION=	1
 GITHUB_PROJECT=	supercollider
 GITHUB_RELEASE=	Version-${PKGVERSION_NOREV}
 PKGNAME=	${DISTNAME:C/-Source//}
@@ -31,7 +32,6 @@ DL_AUTO_VARS=		yes
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

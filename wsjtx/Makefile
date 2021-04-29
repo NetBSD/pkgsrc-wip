@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	wsjtx-2.3.0
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://physics.princeton.edu/pulsar/k1jt/
 EXTRACT_SUFX=	.tgz
@@ -57,8 +58,7 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-#include "../../math/fftw/buildlink3.mk"
-.include "../../math/fftwf/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 BUILDLINK_API_DEPENDS.hamlib+=	hamlib>=4.1
 .include "../../ham/hamlib/buildlink3.mk"
