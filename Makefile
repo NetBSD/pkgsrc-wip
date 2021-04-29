@@ -1130,6 +1130,7 @@ SUBDIR+=	glm
 SUBDIR+=	glulxe
 SUBDIR+=	glusterfs
 SUBDIR+=	gm2calc
+SUBDIR+=	gmake
 SUBDIR+=	gmap
 SUBDIR+=	gmetadom
 SUBDIR+=	gmic
