@@ -11,11 +11,4 @@ This is done by running both:
 The "Enter password:" prompt is asking for the existing password.
 As there is no existing password, just press the Return key.
 
-There is a script distributed with MariaDB that can help you lock down
-an installation.  This script has been installed to
-
-  ${PREFIX}/bin/mysql_secure_installation.
-
-Please see the manual and the MariaDB web site for more instructions.
-
 ===========================================================================
