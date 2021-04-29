@@ -12,6 +12,7 @@ SHA1 (patch-libmariadb_cmake_ConnectorName.cmake) = 57f891c4bd035afb4aa0b03c269c
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-plugin_auth__pam_CMakeLists.txt) = 033f01c64014c0e61bc635d5fbe686f7a4b7f317
 SHA1 (patch-scripts_CMakeLists.txt) = 69d7adc8d50a23aeda4b9d9809cf64f6293703e0
+SHA1 (patch-scripts_mysql__install__db.sh) = adf20e80a9881db97f3d2dd8279e52bcedf0bead
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 21f9ea79ca90a78f18598d55f209a1835b95858f
 SHA1 (patch-sql_threadpool__generic.cc) = 73df368457a2e88f3cc3221031e565c4208b87ab
