@@ -3813,6 +3813,7 @@ share/emacs/${PKGVERSION}/lisp/textmodes/tex-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/tex-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfmt.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfmt.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/texinfo-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfo.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/texnfo-upd.el.gz
