@@ -1,0 +1,5 @@
+@comment $NetBSD$
+sbin/frpc
+sbin/frps
+share/examples/frp/frpc.ini.sample
+share/examples/frp/frps.ini.sample
