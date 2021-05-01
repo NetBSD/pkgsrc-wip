@@ -4,7 +4,7 @@ DISTNAME=	mathopd-1.6b15
 CATEGORIES=	www
 MASTER_SITES=	http://www.mathopd.org/dist/
 
-MAINTAINER=	ishit@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mathopd.org/
 COMMENT=	Very small, yet very fast HTTP server
 

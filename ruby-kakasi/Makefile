@@ -3,7 +3,7 @@
 DISTNAME=	kakasi-1.0.2
 CATEGORIES=	textproc
 
-MAINTAINER=	ishit@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/eitoball/kakasi-ruby/
 COMMENT=	Ruby binding for KAKASI implemented with Fiddle/DL/FFI
 LICENSE=	2-clause-bsd OR ruby-license

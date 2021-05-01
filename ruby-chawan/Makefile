@@ -3,7 +3,7 @@
 DISTNAME=	chawan-0.0.4
 CATEGORIES=	textproc
 
-MAINTAINER=	ishit@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rubygems.org/gems/chawan/
 COMMENT=	Cup for chasen that provides an easy to use for extracting Japanese
 LICENSE=	generic-nonlicense

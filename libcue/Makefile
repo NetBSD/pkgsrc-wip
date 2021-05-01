@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcue/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ishit@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcue.sourceforge.net/
 COMMENT=	Library to access a cue sheet data
 LICENSE=	modified-bsd OR gnu-gpl-v2

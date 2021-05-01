@@ -1,11 +1,10 @@
 # $NetBSD: Makefile,v 1.3 2013/11/04 13:40:53 ishit Exp $
-#
 
 DISTNAME=	sylfilter-0.8
 CATEGORIES=	mail
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylfilter/src/
 
-MAINTAINER=	ishit@users.sorceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sylpheed.sraoss.jp/sylfilter/
 COMMENT=	Bayesian spam filter
 LICENSE=	modified-bsd
