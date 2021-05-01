@@ -2,6 +2,7 @@
 
 DISTNAME=	make-4.3
 PKGNAME=	g${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
 
@@ -29,6 +30,8 @@ CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 # XXX: Do not install gmake setgid and do not override the owner group
 # XXX: based on possible /dev/kmem permissions.
 CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
+
+CONFIGURE_ARGS.NetBSD+=	--disable-posix-spawn
 
 AUTO_MKDIRS=		yes
 
