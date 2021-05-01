@@ -1,12 +1,14 @@
 # $NetBSD: Makefile,v 1.1 2014/08/10 00:06:55 thomasklausner Exp $
 
-DISTNAME=	rem-0.6.0
+DISTNAME=	rem-1.0.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net audio
-MASTER_SITES=	http://www.creytiv.com/pub/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
+GITHUB_PROJECT=	rem
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.creytiv.com/rem.html
+HOMEPAGE=	https://github.com/baresip/rem
 COMMENT=	Portable library for real-time audio and video processing
 LICENSE=	modified-bsd
 
