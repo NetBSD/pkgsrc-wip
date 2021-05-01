@@ -44,6 +44,7 @@ include/re/re_tcp.h
 include/re/re_telev.h
 include/re/re_tls.h
 include/re/re_tmr.h
+include/re/re_trace.h
 include/re/re_turn.h
 include/re/re_types.h
 include/re/re_udp.h
