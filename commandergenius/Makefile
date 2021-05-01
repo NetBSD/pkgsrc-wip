@@ -21,8 +21,6 @@ CMAKE_ARGS+=	-DDOCDIR=${PREFIX}/share/doc/commandergenius
 CMAKE_ARGS+=	-DGAMES_SHAREDIR=${PREFIX}/share
 # segmentation fault on startup
 CMAKE_ARGS+=	-DUSE_OPENGL=NO
-# make an option for SDL1 ?
-#CMAKE_ARGS+=	-DUSE_SDL2=NO
 
 INSTALLATION_DIRS=	bin share/doc/commandergenius
 
