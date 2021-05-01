@@ -906,6 +906,7 @@ SUBDIR+=	frida-gum
 SUBDIR+=	frida-libffi
 SUBDIR+=	frobby
 SUBDIR+=	frobtads
+SUBDIR+=	frp
 SUBDIR+=	fs-uae-dev
 SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fs2open
