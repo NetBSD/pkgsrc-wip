@@ -31,6 +31,8 @@ ${PLIST.ilbc}lib/baresip/modules/ilbc.so
 ${PLIST.jack}lib/baresip/modules/jack.so
 lib/baresip/modules/l16.so
 lib/baresip/modules/menu.so
+lib/baresip/modules/mixausrc.so
+lib/baresip/modules/multicast.so
 lib/baresip/modules/mwi.so
 lib/baresip/modules/natpmp.so
 ${PLIST.opus}lib/baresip/modules/opus.so
@@ -39,8 +41,10 @@ lib/baresip/modules/plc.so
 ${PLIST.portaudio}lib/baresip/modules/portaudio.so
 lib/baresip/modules/presence.so
 ${PLIST.pulseaudio}lib/baresip/modules/pulse.so
+lib/baresip/modules/rtcpsummary.so
 ${PLIST.sdl2}lib/baresip/modules/sdl.so
 lib/baresip/modules/selfview.so
+lib/baresip/modules/serreg.so
 ${PLIST.sndfile}lib/baresip/modules/sndfile.so
 ${PLIST.speex}lib/baresip/modules/speex_pp.so
 lib/baresip/modules/srtp.so
@@ -58,6 +62,7 @@ ${PLIST.libvpx}lib/baresip/modules/vp9.so
 lib/baresip/modules/vumeter.so
 ${PLIST.x11}lib/baresip/modules/x11.so
 ${PLIST.x11}lib/baresip/modules/x11grab.so
+share/baresip/autoanswer.wav
 share/baresip/busy.wav
 share/baresip/callwaiting.wav
 share/baresip/error.wav
@@ -76,6 +81,10 @@ share/baresip/sound6.wav
 share/baresip/sound7.wav
 share/baresip/sound8.wav
 share/baresip/sound9.wav
+share/baresip/sounda.wav
+share/baresip/soundb.wav
+share/baresip/soundc.wav
+share/baresip/soundd.wav
 share/baresip/soundroute.wav
 share/baresip/soundstar.wav
 share/examples/baresip/accounts
