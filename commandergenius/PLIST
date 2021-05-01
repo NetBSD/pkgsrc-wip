@@ -2,8 +2,6 @@
 bin/CGeniusExe
 share/applications/cgenius.desktop
 share/commandergenius/CGLogo.svg
-share/commandergenius/CGLogoInkscape.svg
-share/commandergenius/CGLogoOptimized.svg
 share/commandergenius/cglogo512.png
 share/commandergenius/cglogo512old.png
 share/commandergenius/global/1.png
