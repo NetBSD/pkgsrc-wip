@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.35 2018/11/14 22:22:10 kleink Exp $
 
-DISTNAME=	freerdp-2.0.0-rc4
+DISTNAME=	freerdp-2.3.2
 PKGNAME=	${DISTNAME:S/-rc/rc/}
-PKGREVISION=	1
+PKGREVISION=	# empty
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FreeRDP/}
 GITHUB_PROJECT=	FreeRDP
@@ -28,6 +28,7 @@ CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
