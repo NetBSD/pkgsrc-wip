@@ -17,10 +17,8 @@ GNU_CONFIGURE=		yes
 TEXINFO_REQD+=		4.0
 INFO_FILES=		yes
 
-# NOTE:  the 'test' target requires perl, but since gmake does
-# not otherwise require it, perl is not listed as an explicit
-# dependency
 TEST_TARGET=		check
+USE_TOOLS+=		perl:test
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
@@ -31,7 +29,12 @@ CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 # XXX: based on possible /dev/kmem permissions.
 CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
 
+.include "../../mk/bsd.prefs.mk"
+
+# kernel bug, fixed in NetBSD 9.99.82
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-9].*)
 CONFIGURE_ARGS.NetBSD+=	--disable-posix-spawn
+.endif
 
 AUTO_MKDIRS=		yes
 
