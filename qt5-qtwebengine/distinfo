@@ -814,6 +814,7 @@ SHA1 (patch-src_3rdparty_chromium_v8_gni_v8.gni) = 944c7c8e2363b07aa0242a2e748cc
 SHA1 (patch-src_3rdparty_chromium_v8_src_api_api.cc) = d563a6b50e5dff265d5a4b1b516de02e7149cab6
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_cpu.cc) = f6ec99bba983bb93e8515478f64681440ffbda1e
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_platform_platform-posix.cc) = 7e587fac8a26a975b33a93aa09ccf9af82afabb7
+SHA1 (patch-src_3rdparty_chromium_v8_src_objects_js-list-format.cc) = 077357c9113ff9267ecc96ec5b65b66b4b5b6083
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc) = 568877d1ebcaaee5782527f232a6fcc7f096066a
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.h) = a64ca7574cca4cb804e0ca24dd3454507d3d556d
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_trap-handler.h) = d0b72fff980d5072d2221dd31b2e95526cd33875
