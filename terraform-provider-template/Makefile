@@ -11,8 +11,6 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/template/
 COMMENT=	Terraform template provider
 LICENSE=	mpl-2.0
 
-DEPENDS+=	terraform-[0-9]*:../../net/terraform
-
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 GO_DIST_BASE=	${DISTNAME}
@@ -23,5 +21,10 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
 
+TERRAFORM_PROVIDER_BIN=		terraform-provider-template
+TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
+TERRAFORM_PROVIDER_TYPE=	template
+
 .include "../../lang/go/go-package.mk"
+.include "../../wip/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
