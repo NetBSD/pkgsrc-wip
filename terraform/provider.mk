@@ -2,19 +2,32 @@
 #
 # This file implements common logic for Terraform providers in pkgsrc.
 #
-# === Package-settable variables ===
+# Package-settable variables:
 #
 # TERRAFORM_PROVIDER_HOSTNAME (optional)
+#	Hostname of the Terraform registry that distributes the provider.
+#
+#	Default: registry.terraform.io
 #
 # TERRAFORM_PROVIDER_BIN
+#	Binary name of the provider that will be installed under
+#       TERRAFORM_PROVIDER_DIR.
 #
 # TERRAFORM_PROVIDER_NAMESPACE
+#	Organizational namespace within the Terraform registry.
 #
 # TERRAFORM_PROVIDER_TYPE
+#	Short name for the platform or system the provider manages.
 #
 # TERRAFORM_PROVIDER_VERSION (optional)
+#	Version of the provider.
+#
+#	Default: ${PKGVERSION_NOREV}
 #
 # TERRAFORM_PROVIDER_DIR (optional)
+#	Directory where the provider will be installed.
+#
+#	Default: share/terraform/plugins/${TERRAFORM_PROVIDER_HOSTNAME}/${TERRAFORM_PROVIDER_NAMESPACE}/${TERRAFORM_PROVIDER_TYPE}/${TERRAFORM_PROVIDER_VERSION}/${GO_PLATFORM}
 #
 # Keywords: terraform
 #
