@@ -37,11 +37,24 @@ PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_NAMESPACE}", "$${TERRAFORM_PROVIDE
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_TYPE}", "$${TERRAFORM_PROVIDER_TYPE}") }
 PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_VERSION}", "$${TERRAFORM_PROVIDER_VERSION}") }
 
+INSTALLATION_DIRS+=	${TERRAFORM_PROVIDER_DIR}
+
 #
-# TODO: overwrite do-install: target so it DTRT both for go-module.mk packages
-# TODO: and go-packages.mk packages.  This can be probably done by checking for
-# TODO: both existence of TERRAFORM_PROVIDER_BIN in .gopath/bin and bin and copy
-# TODO: what is found.  Currently, for all packaged providers, this is probably
-# TODO: good enough but if there is any exception we can probably adjust that
-# TODO: via pre-install:/post-install: too.
+# This should overwrite `do-install:' target, however
+# lang/go/go-{module,package}.mk already overwrite them.
 #
+.if !target(pre-install)
+pre-install:
+	${RUN} \
+	if [ -f ${WRKDIR}/.gopath/bin/${TERRAFORM_PROVIDER_BIN} ]; then \
+		${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/${TERRAFORM_PROVIDER_BIN} \
+		    ${DESTDIR}${PREFIX}/${TERRAFORM_PROVIDER_DIR} ; \
+		{ [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath || true ; } ; \
+		${RM} -rf ${WRKDIR}/.gopath/bin ; \
+	elif [ -f ${WRKDIR}/bin/${TERRAFORM_PROVIDER_BIN} ]; then \
+		${INSTALL_PROGRAM} ${WRKDIR}/bin/${TERRAFORM_PROVIDER_BIN} \
+		    ${DESTDIR}${PREFIX}/${TERRAFORM_PROVIDER_DIR} ; \
+		${RM} -rf ${WRKDIR}/bin ; \
+		${RM} -rf ${WRKDIR}/pkg ; \
+	fi
+.endif

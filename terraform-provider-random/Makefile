@@ -24,12 +24,6 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/.
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
 
-INSTALLATION_DIRS+=	${TERRAFORM_PROVIDER_DIR}
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/${TERRAFORM_PROVIDER_BIN} \
-	   ${DESTDIR}${PREFIX}/${TERRAFORM_PROVIDER_DIR}
-
 .include "../../lang/go/go-package.mk"
 .include "../../wip/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
