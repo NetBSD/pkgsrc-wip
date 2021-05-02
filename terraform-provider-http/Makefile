@@ -10,8 +10,6 @@ HOMEPAGE=	https://www.terraform.io/docs/providers/http/
 COMMENT=	Terraform provider for interacting with generic HTTP servers
 LICENSE=	mpl-2.0
 
-DEPENDS+=	terraform-[0-9]*:../../net/terraform
-
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 GO_DIST_BASE=	${DISTNAME}
