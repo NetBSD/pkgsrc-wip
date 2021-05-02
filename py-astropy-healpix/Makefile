@@ -11,7 +11,7 @@ COMMENT=	Hierarchical Equal Area isoLatitude Pixelisation
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.11.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=4:../../wip/py-astropy4
+DEPENDS+=	${PYPKGPREFIX}-astropy>=4:../../math/py-astropy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
