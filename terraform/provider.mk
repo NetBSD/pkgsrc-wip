@@ -49,7 +49,7 @@ pre-install:
 	if [ -f ${WRKDIR}/.gopath/bin/${TERRAFORM_PROVIDER_BIN} ]; then \
 		${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/${TERRAFORM_PROVIDER_BIN} \
 		    ${DESTDIR}${PREFIX}/${TERRAFORM_PROVIDER_DIR} ; \
-		{ [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath || true ; } ; \
+		{ [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath || ${TRUE} ; } ; \
 		${RM} -rf ${WRKDIR}/.gopath/bin ; \
 	elif [ -f ${WRKDIR}/bin/${TERRAFORM_PROVIDER_BIN} ]; then \
 		${INSTALL_PROGRAM} ${WRKDIR}/bin/${TERRAFORM_PROVIDER_BIN} \
