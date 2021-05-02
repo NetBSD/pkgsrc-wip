@@ -2973,6 +2973,7 @@ SUBDIR+=	pdfminer
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
+SUBDIR+=	peak-classifier
 SUBDIR+=	pear
 SUBDIR+=	pear-Base
 SUBDIR+=	pear-Cache

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/feature-view
+bin/filter-overlaps
+bin/peak-classifier
+man/man1/filter-overlaps.1
+man/man1/peak-classifier.1
