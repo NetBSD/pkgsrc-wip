@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (freerdp-2.3.2.tar.gz) = 955c0315fe8aa758c9e4c9b5e285cb6d0ac59cf9
-RMD160 (freerdp-2.3.2.tar.gz) = 8f01c603b1c8160371be294cd28fa948079d7efa
-SHA512 (freerdp-2.3.2.tar.gz) = ca22769c1fdf2806a21ed45ff537cbf0b3f515023943316cd089a204cefa284a9ee7a8f1b3fc87ece7c5ea8edff47622b5b4c75eb5833ecf8e478c89f53afe56
-Size (freerdp-2.3.2.tar.gz) = 7240177 bytes
-SHA1 (patch-cmake_InstallFreeRDPMan.cmake) = eb1a386c7b8ab97538fd31e1889edbe6ecbfcff1
