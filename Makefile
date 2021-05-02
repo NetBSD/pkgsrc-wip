@@ -5373,6 +5373,7 @@ SUBDIR+=	terraform-provider-kubernetes
 SUBDIR+=	terraform-provider-kubernetes1
 SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-random
+SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform013
 SUBDIR+=	terraform014
