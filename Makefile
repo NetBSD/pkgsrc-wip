@@ -5368,6 +5368,7 @@ SUBDIR+=	terraform
 SUBDIR+=	terraform-docs
 SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws
+SUBDIR+=	terraform-provider-cassandra
 SUBDIR+=	terraform-provider-kubernetes
 SUBDIR+=	terraform-provider-kubernetes1
 SUBDIR+=	terraform-provider-local
