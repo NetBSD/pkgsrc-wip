@@ -2,7 +2,7 @@
 
 VERSION=        1.8.1
 PKGNAME=	liblas-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	4
 DISTNAME=	libLAS-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/liblas/
