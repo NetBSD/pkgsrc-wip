@@ -1,10 +1,4 @@
 @comment $NetBSD$
-doc/libgfbgraph/AUTHORS
-doc/libgfbgraph/COPYING
-doc/libgfbgraph/ChangeLog
-doc/libgfbgraph/INSTALL
-doc/libgfbgraph/NEWS
-doc/libgfbgraph/README
 include/gfbgraph-0.2/gfbgraph/gfbgraph-album.h
 include/gfbgraph-0.2/gfbgraph/gfbgraph-authorizer.h
 include/gfbgraph-0.2/gfbgraph/gfbgraph-common.h
@@ -18,4 +12,10 @@ include/gfbgraph-0.2/gfbgraph/gfbgraph.h
 lib/girepository-1.0/GFBGraph-0.2.typelib
 lib/libgfbgraph-0.2.la
 lib/pkgconfig/libgfbgraph-0.2.pc
+share/doc/libgfbgraph/AUTHORS
+share/doc/libgfbgraph/COPYING
+share/doc/libgfbgraph/ChangeLog
+share/doc/libgfbgraph/INSTALL
+share/doc/libgfbgraph/NEWS
+share/doc/libgfbgraph/README
 share/gir-1.0/GFBGraph-0.2.gir
