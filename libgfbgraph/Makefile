@@ -25,7 +25,7 @@ pre-configure:
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
-.include "../../wip/json-glib/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/librest07/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
