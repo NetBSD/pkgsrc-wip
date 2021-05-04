@@ -5558,7 +5558,6 @@ SUBDIR+=	trac-plugins-screenshots
 SUBDIR+=	trac-plugins-spamfilter-svn
 SUBDIR+=	trackballs
 SUBDIR+=	tracy
-SUBDIR+=	trader
 SUBDIR+=	translate-toolkit
 SUBDIR+=	trayion
 SUBDIR+=	treetool
