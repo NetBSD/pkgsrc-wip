@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (qttools-everywhere-src-6.0.3.tar.xz) = 6f80c8d0261c99b4f1f68c36e236e1b666327b5e
-RMD160 (qttools-everywhere-src-6.0.3.tar.xz) = dc467c0546d16ac3c26c267ae8313cb1af34f0e7
-SHA512 (qttools-everywhere-src-6.0.3.tar.xz) = 764eec6ab506e90bebe113359fcc9a83c3c258587ba47a1887a0a3dff370909844710acfec53def3990493d9c3055c4064c6edf05979cdde5fa0acd05bcd4d9b
-Size (qttools-everywhere-src-6.0.3.tar.xz) = 8387672 bytes
+SHA1 (qttools-everywhere-src-6.0.4.tar.xz) = 936a2b6c2530f8c669ce4b8549f6375066c6155e
+RMD160 (qttools-everywhere-src-6.0.4.tar.xz) = adbcd455367dec7c69babb306d13b915220aec71
+SHA512 (qttools-everywhere-src-6.0.4.tar.xz) = bd17b9efc39714feddb80127d2da39ac917bb81105b061c400a552e11b733ab128d55294472ea70dd4beb249b738e78b7a53803582e53750468ad2d5affab4ba
+Size (qttools-everywhere-src-6.0.4.tar.xz) = 8388008 bytes
 SHA1 (patch-src_linguist_lupdate_CMakeLists.txt) = d70ea348c3ba7f64bcc245de9445becefecf3a9c
