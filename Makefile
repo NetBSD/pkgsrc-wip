@@ -4240,7 +4240,6 @@ SUBDIR+=	py-prayertime
 SUBDIR+=	py-prel
 SUBDIR+=	py-premailer
 SUBDIR+=	py-preshed
-SUBDIR+=	py-prettytable
 SUBDIR+=	py-prind
 SUBDIR+=	py-print
 SUBDIR+=	py-prioritized-methods
