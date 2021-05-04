@@ -6,7 +6,6 @@ share/doc/wl/en/NEWS
 share/doc/wl/en/README.md
 share/doc/wl/ja/BUGS.ja
 share/doc/wl/ja/NEWS.ja
-share/doc/wl/ja/README.ja
 ${EMACS_LISPPREFIX}/wl/acap.el
 ${EMACS_LISPPREFIX}/wl/acap.elc
 ${EMACS_LISPPREFIX}/wl/elmo-access.el
@@ -190,16 +189,12 @@ share/wl/shimbun.xpm
 share/wl/trash-e.xpm
 share/wl/trash.xpm
 share/wl/unplugged.xpm
-share/wl/wl-alpha-logo.img
 share/wl/wl-alpha-logo.xbm
 share/wl/wl-alpha-logo.xpm
-share/wl/wl-alpha-xmas-logo.img
 share/wl/wl-alpha-xmas-logo.xbm
 share/wl/wl-alpha-xmas-logo.xpm
-share/wl/wl-beta-logo.img
 share/wl/wl-beta-logo.xbm
 share/wl/wl-beta-logo.xpm
-share/wl/wl-beta-xmas-logo.img
 share/wl/wl-beta-xmas-logo.xbm
 share/wl/wl-beta-xmas-logo.xpm
 share/wl/wl-draft-insert-signature-up.xpm
@@ -227,10 +222,8 @@ share/wl/wl-message-play-content-up.xpm
 share/wl/wl-message-prev-content-up.xpm
 share/wl/wl-message-quit-up.xpm
 share/wl/wl-message-read-up.xpm
-share/wl/wl-stable-logo.img
 share/wl/wl-stable-logo.xbm
 share/wl/wl-stable-logo.xpm
-share/wl/wl-stable-xmas-logo.img
 share/wl/wl-stable-xmas-logo.xbm
 share/wl/wl-stable-xmas-logo.xpm
 share/wl/wl-summary-delete-up.xpm

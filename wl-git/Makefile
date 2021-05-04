@@ -52,7 +52,6 @@ post-install:
 	done
 	for f in README ; do \
 		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".md ${DESTDIR:Q}${DOCDIR:Q}/en; \
-		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".ja ${DESTDIR:Q}${DOCDIR:Q}/ja; \
 	done
 	${INSTALL_DATA} ${WRKSRC:Q}/samples/en/dot.* ${DESTDIR:Q}${EXAMPLESDIR:Q}/en
 	${INSTALL_DATA} ${WRKSRC:Q}/samples/ja/dot.* ${DESTDIR:Q}${EXAMPLESDIR:Q}/ja
