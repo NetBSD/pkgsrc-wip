@@ -1,5 +1,7 @@
 $NetBSD$
 
+Adapt path to pkgsrc location of cdparanoia headers.
+
 --- ext/cdparanoia/gstcdparanoiasrc.h.orig	2021-03-15 17:48:01.219277600 +0000
 +++ ext/cdparanoia/gstcdparanoiasrc.h
 @@ -34,8 +34,8 @@ static const char GST_PLUGINS_BASE_VERSI

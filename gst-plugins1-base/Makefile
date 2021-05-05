@@ -18,7 +18,7 @@ USE_TOOLS+=		pkg-config perl:run
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-PYTHON_FOR_BUILD_ONLY=  tool
+PYTHON_FOR_BUILD_ONLY=		tool
 
 # for tests
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/audio:${WRKSRC}/output/gst-libs/gst/video:${WRKSRC}/output/gst-libs/gst/tag:${WRKSRC}/output/gst-libs/gst/rtp:${WRKSRC}/output/gst-libs/gst/allocators:${WRKSRC}/output/gst-libs/gst/app:${WRKSRC}/output/gst-libs/gst/pbutils:${WRKSRC}/output/gst-libs/gst/gl:${WRKSRC}/output/gst-libs/ext/ogg:${WRKSRC}/output/gst-libs/ext/opus:${WRKSRC}/output/gst-libs/ext/theora:${WRKSRC}/output/gst-libs/ext/vorbis:${WRKSRC}/output/gst-libs/gst/riff:${WRKSRC}/output/gst-libs/gst/sdp:${WRKSRC}/output/gst-libs/gst/fft:${WRKSRC}/output/gst-libs/gst/rtsp

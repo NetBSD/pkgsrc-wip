@@ -4,4 +4,4 @@ SHA1 (gst-plugins-base-1.18.4.tar.xz) = 879dc96692609ac079cd9d05b359882fb9cf7108
 RMD160 (gst-plugins-base-1.18.4.tar.xz) = 9bb4f0f341b3167facc04307149a259d108f2c77
 SHA512 (gst-plugins-base-1.18.4.tar.xz) = c750d68404462807ff03f441e232c4d98752a9bceeec3038fb37a105942f25499bde0660ca688b6f3204c58eb6a2e3f33671e979018c8bd829e7591455961a6a
 Size (gst-plugins-base-1.18.4.tar.xz) = 3169512 bytes
-SHA1 (patch-ext_cdparanoia_gstcdparanoiasrc.h) = d0ad106ec228312e462954ac4b107cb7bcf20b57
+SHA1 (patch-ext_cdparanoia_gstcdparanoiasrc.h) = 5325f27c81cd9dc2f998bcb7733ef6b0c9a902e8
