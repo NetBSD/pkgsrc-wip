@@ -5,10 +5,10 @@
 #              Sun May  2 07:10:29 CDT 2021               #
 ###########################################################
 
-DISTNAME=	peak-classifier-0.0.1.26
+DISTNAME=	peak-classifier-0.0.1.27
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	6379d54dc04160e9386f29b9678361204f113f56
+GITHUB_TAG=	16cd294072aa84d4be4bb36af6d14def6e0fda73
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/peak-classifier
