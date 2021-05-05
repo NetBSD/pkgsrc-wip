@@ -1,0 +1,9 @@
+* add dependencies
+
+* fix PLIST
+
+* fix:
+Run-time dependency gstreamer-gl-prototypes-1.0 found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency gstreamer-gl-prototypes-1.0
+
+meson.build:309:2: ERROR: Neither a subproject directory nor a gst-plugins-base.wrap file was found.
