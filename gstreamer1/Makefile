@@ -35,6 +35,10 @@ REPLACE_PYTHON+=	output/gst/parse/gen_lex.py
 REPLACE_PYTHON+=	output/gst/parse/gen_grammar.py
 REPLACE_PYTHON+=	output/docs/gst-plugins-doc-cache-generator
 
+#Library gmp found: NO
+#Library gsl found: NO
+#Library gslcblas found: NO
+
 .include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"

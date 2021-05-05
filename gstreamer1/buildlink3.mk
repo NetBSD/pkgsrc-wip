@@ -5,8 +5,7 @@ BUILDLINK_TREE+=	gstreamer1
 .if !defined(GSTREAMER1_BUILDLINK3_MK)
 GSTREAMER1_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.0.0
-BUILDLINK_ABI_DEPENDS.gstreamer1+=	gstreamer1>=1.18.1
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18.4
 BUILDLINK_PKGSRCDIR.gstreamer1?=	../../wip/gstreamer1
 
 pkgbase := gstreamer1
