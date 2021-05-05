@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/xtendc-protos.h
+include/xtendc.h
+lib/libxtendc.a
+@pkgdir man/man3
