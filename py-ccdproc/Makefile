@@ -11,7 +11,7 @@ COMMENT=	Stropy affiliated package
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../math/py-astropy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

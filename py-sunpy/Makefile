@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.sunpy.org/
 COMMENT=	Python for Solar Physicists
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-astropy>=1.0.4:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=1.0.4:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.16.2:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy

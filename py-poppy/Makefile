@@ -10,7 +10,7 @@ HOMEPAGE=	https://pythonhosted.org/poppy/
 COMMENT=	Physical optics propagation for optical simulations
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-astropy>=1.1.1:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=1.1.1:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six

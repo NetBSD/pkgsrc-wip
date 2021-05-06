@@ -14,9 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numba>=0.51.0:../../math/py-numba
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=2.0.2:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=2.0.2:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-plotly>=4.8.1:../../wip/py-plotly
-
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"

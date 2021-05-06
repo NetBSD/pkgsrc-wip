@@ -11,7 +11,7 @@ COMMENT=	Derivation of non-thermal particle through MCMC spectral fitting
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.4.6:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-emcee>=2.1.0:../../wip/py-emcee
 
 .include "../../lang/python/egg.mk"

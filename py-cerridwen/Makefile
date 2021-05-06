@@ -10,7 +10,7 @@ HOMEPAGE=	http://cerridwen.viridian-project.de/
 COMMENT=	Accurate solar system data for everyone
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=0.3.1:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-pyswisseph-[0-9]*:../../wip/py-pyswisseph
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-astropy

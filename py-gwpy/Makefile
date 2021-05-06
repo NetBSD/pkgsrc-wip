@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-astropy>=1.2.1:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=1.2.1:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-lscsoft-glue-[0-9]*:../../wip/py-lscsoft-glue
 DEPENDS+=	${PYPKGPREFIX}-ligotimegps-[0-9]*:../../time/py-ligotimegps
