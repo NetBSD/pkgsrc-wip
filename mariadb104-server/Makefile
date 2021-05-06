@@ -65,6 +65,10 @@ OWN_DIRS_PERMS+=	${MARIADB_DATADIR} ${MARIADB_USER} ${MARIADB_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/run/mariadb ${MARIADB_USER} ${MARIADB_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/log/mariadb ${MARIADB_USER} ${MARIADB_GROUP} 0700
 
+USE_TOOLS=		bash:run perl:run
+REPLACE_BASH+=		scripts/wsrep_sst_*.sh
+REPLACE_BASH+=		scripts/mariadb-service-convert
+
 post-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/mysql_install_db
 
