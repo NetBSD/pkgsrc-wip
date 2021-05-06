@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/astropy/astropy-helpers/
 COMMENT=	Tools for Astropy package
 LICENSE=	modified-bsd
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
+
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
