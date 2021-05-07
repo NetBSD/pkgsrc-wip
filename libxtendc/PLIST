@@ -2,4 +2,9 @@
 include/xtendc-protos.h
 include/xtendc.h
 lib/libxtendc.a
-@pkgdir man/man3
+man/man3/strisint.3
+man/man3/strisreal.3
+man/man3/strptrcmp.3
+man/man3/valid_extension.3
+man/man3/xc_fclose.3
+man/man3/xc_fopen.3
