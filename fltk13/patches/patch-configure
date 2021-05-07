@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add libtool support.
+Upstream will not merge this (libtool is listed as not acceptable).
 
 --- configure.orig	2021-05-04 18:40:48.000000000 +0000
 +++ configure
