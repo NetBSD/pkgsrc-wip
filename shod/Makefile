@@ -1,22 +1,25 @@
 # $NetBSD$
 
-DISTNAME=	shod-0.3.2
+DISTNAME=	shod-0.4.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-usesr@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/phillbush/shod/
 COMMENT=	Hybrid (floating and tiling) tabbed window manager
 LICENSE=	mit
 
-SUBST_CLASSES+=		prefix
-SUBST_MESSAGE.prefix=	Fixing paths.
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix+=	config.mk
-SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.prefix+=	-e 's,/usr/X11R6,${X11BASE},g'
-SUBST_SED.prefix+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_CLASSES+=		configmk
+SUBST_MESSAGE.configmk=	Adjust config.mk
+SUBST_STAGE.configmk=	pre-configure
+SUBST_FILES.configmk+=	config.mk
+SUBST_SED.configmk+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.configmk+=	-e 's,/usr/X11R6,${X11BASE},g'
+SUBST_SED.configmk+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_SED.configmk+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.configmk+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
+SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
