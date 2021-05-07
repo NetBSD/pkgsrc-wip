@@ -39,7 +39,10 @@ share/jitsi-meet/images/jitsiLogo_square.png
 share/jitsi-meet/images/jitsilogo.png
 share/jitsi-meet/images/logo-deep-linking.png
 share/jitsi-meet/images/microsoftLogo.svg
-share/jitsi-meet/images/user-groups.svg
+share/jitsi-meet/images/virtual-background/background-1.jpg
+share/jitsi-meet/images/virtual-background/background-2.jpg
+share/jitsi-meet/images/virtual-background/background-3.jpg
+share/jitsi-meet/images/virtual-background/background-4.jpg
 share/jitsi-meet/images/watermark.svg
 share/jitsi-meet/images/welcome-background.png
 share/jitsi-meet/index.android.js
@@ -68,6 +71,7 @@ share/jitsi-meet/lang/languages-frCA.json
 share/jitsi-meet/lang/languages-fy.json
 share/jitsi-meet/lang/languages-gl.json
 share/jitsi-meet/lang/languages-he.json
+share/jitsi-meet/lang/languages-hi.json
 share/jitsi-meet/lang/languages-hr.json
 share/jitsi-meet/lang/languages-hu.json
 share/jitsi-meet/lang/languages-hy.json
@@ -123,6 +127,7 @@ share/jitsi-meet/lang/main-fr.json
 share/jitsi-meet/lang/main-frCA.json
 share/jitsi-meet/lang/main-gl.json
 share/jitsi-meet/lang/main-he.json
+share/jitsi-meet/lang/main-hi.json
 share/jitsi-meet/lang/main-hr.json
 share/jitsi-meet/lang/main-hu.json
 share/jitsi-meet/lang/main-hy.json
@@ -167,8 +172,6 @@ share/jitsi-meet/libs/app.bundle.min.map
 share/jitsi-meet/libs/capabilities.json
 share/jitsi-meet/libs/close3.min.js
 share/jitsi-meet/libs/close3.min.map
-share/jitsi-meet/libs/device_selection_popup_bundle.min.js
-share/jitsi-meet/libs/device_selection_popup_bundle.min.map
 share/jitsi-meet/libs/dial_in_info_bundle.min.js
 share/jitsi-meet/libs/dial_in_info_bundle.min.map
 share/jitsi-meet/libs/do_external_connect.min.js
@@ -184,16 +187,18 @@ share/jitsi-meet/libs/lib-jitsi-meet.min.map
 share/jitsi-meet/libs/libflac4-1.3.2.min.js
 share/jitsi-meet/libs/libflac4-1.3.2.min.js.mem
 share/jitsi-meet/libs/olm.wasm
-share/jitsi-meet/libs/rnnoise-processor.min.js
-share/jitsi-meet/libs/rnnoise-processor.min.map
 share/jitsi-meet/libs/rnnoise.wasm
-share/jitsi-meet/libs/video-blur-effect.min.js
-share/jitsi-meet/libs/video-blur-effect.min.map
+share/jitsi-meet/libs/segm_full_v679.tflite
+share/jitsi-meet/libs/segm_lite_v681.tflite
+share/jitsi-meet/libs/tflite-simd.wasm
+share/jitsi-meet/libs/tflite.wasm
 share/jitsi-meet/logging_config.js
 share/jitsi-meet/metro.config.js
 share/jitsi-meet/plugin.head.html
 share/jitsi-meet/pwa-worker.js
 share/jitsi-meet/robots.txt
+share/jitsi-meet/sounds/e2eeOff.mp3
+share/jitsi-meet/sounds/e2eeOn.mp3
 share/jitsi-meet/sounds/incomingMessage.wav
 share/jitsi-meet/sounds/joined.wav
 share/jitsi-meet/sounds/left.wav
@@ -216,7 +221,6 @@ share/jitsi-meet/static/close.js
 share/jitsi-meet/static/close2.html
 share/jitsi-meet/static/close3.html
 share/jitsi-meet/static/close3.js
-share/jitsi-meet/static/deviceSelectionPopup.html
 share/jitsi-meet/static/dialInInfo.html
 share/jitsi-meet/static/msredirect.html
 share/jitsi-meet/static/oauth.html

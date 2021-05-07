@@ -5,12 +5,12 @@
 # used by wip/jitsi-videobridge/Makefile
 
 GITHUB_PROJECT?=jitsi-meet
-GITHUB_TAG=	stable/jitsi-meet_5390
-DISTNAME=	jitsi-meet_5390
+GITHUB_TAG=	stable/jitsi-meet_5765
+DISTNAME=	jitsi-meet_5765
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-JITSI_MEET_VERSION=	2.0.5390
+JITSI_MEET_VERSION=	2.0.5765
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE?=	https://github.com/jitsi/jitsi-meet/

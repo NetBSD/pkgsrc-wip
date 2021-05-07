@@ -1,8 +1,10 @@
 @comment $NetBSD$
 share/jitsi-meet-prosody/ext_events.lib.lua
 share/jitsi-meet-prosody/mod_auth_token.lua
+share/jitsi-meet-prosody/mod_client_proxy.lua
 share/jitsi-meet-prosody/mod_conference_duration.lua
 share/jitsi-meet-prosody/mod_conference_duration_component.lua
+share/jitsi-meet-prosody/mod_external_services.lua
 share/jitsi-meet-prosody/mod_filter_iq_jibri.lua
 share/jitsi-meet-prosody/mod_filter_iq_rayo.lua
 share/jitsi-meet-prosody/mod_muc_allowners.lua
@@ -16,6 +18,8 @@ share/jitsi-meet-prosody/mod_muc_size.lua
 share/jitsi-meet-prosody/mod_muc_transcription_filter.lua
 share/jitsi-meet-prosody/mod_poltergeist_component.lua
 share/jitsi-meet-prosody/mod_presence_identity.lua
+share/jitsi-meet-prosody/mod_roster_command.lua
+share/jitsi-meet-prosody/mod_roster_command.patch
 share/jitsi-meet-prosody/mod_smacks.lua
 share/jitsi-meet-prosody/mod_speakerstats.lua
 share/jitsi-meet-prosody/mod_speakerstats_component.lua
