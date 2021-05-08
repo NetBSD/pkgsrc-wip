@@ -13,7 +13,6 @@ HOMEPAGE=	https://git.gnunet.org/gnunet-go.git/
 COMMENT=	GNUnet implementation in Go
 LICENSE=	gnu-agpl-v3
 
-GO_VERSION_DEFAULT=	113
 .include "../../mk/bsd.prefs.mk"
 
 GO_SRCPATH=		gnunet
@@ -22,6 +21,6 @@ GO_DIST_BASE=		gnunet-go/src/*
 .include "../../net/go-dns/buildlink3.mk"
 .include "../../security/go-crypto/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
-.include "../../wip/go-gospel/buildlink3.mk"
+.include "../../devel/go-gospel/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
