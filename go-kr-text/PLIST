@@ -18,5 +18,6 @@ gopkg/src/github.com/kr/text/indent.go
 gopkg/src/github.com/kr/text/indent_test.go
 gopkg/src/github.com/kr/text/mc/Readme
 gopkg/src/github.com/kr/text/mc/mc.go
+gopkg/src/github.com/kr/text/mc/mc.go.orig
 gopkg/src/github.com/kr/text/wrap.go
 gopkg/src/github.com/kr/text/wrap_test.go
