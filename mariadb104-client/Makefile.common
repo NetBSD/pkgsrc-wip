@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE?=	${.CURDIR}/../../wip/mariadb104-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../wip/mariadb104-client/patches
+MESSAGE_SRC+=	${.CURDIR}/../../wip/mariadb104-client/MESSAGE
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
