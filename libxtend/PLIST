@@ -1,7 +1,12 @@
 @comment $NetBSD$
-include/xtendc-protos.h
-include/xtendc.h
-lib/libxtendc.a
+include/xtend-protos.h
+include/xtend.h
+lib/libxtend.a
+man/man3/difftimeofday.3
+man/man3/fast_cp.3
+man/man3/fd_purge.3
+man/man3/gcd.3
+man/man3/lcm.3
 man/man3/strisint.3
 man/man3/strisreal.3
 man/man3/strptrcmp.3
