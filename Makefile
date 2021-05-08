@@ -1267,7 +1267,6 @@ SUBDIR+=	go-logging
 SUBDIR+=	go-lzw
 SUBDIR+=	go-madon
 SUBDIR+=	go-makezero
-SUBDIR+=	go-maligned
 SUBDIR+=	go-memcache
 SUBDIR+=	go-mewn
 SUBDIR+=	go-mock
