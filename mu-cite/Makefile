@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2014/06/15 13:29:21 makoto Exp $
 
-DISTNAME=	mu-cite-201908042153
+DISTNAME=	mu-cite-202011031127
 CATEGORIES=	mail
 MASTER_SITES=	http://www.jpl.org/elips/mu/snapshots/
 
