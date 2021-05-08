@@ -1,0 +1,20 @@
+The V programming language.
+
+Key Features of V:
+    Simplicity: the language can be learned in less than an hour
+    Fast compilation: ¿110k loc/s with a Clang backend, ¿1 million loc/s with native and tcc backends (Intel i5-7500, SSD, no optimization) (demo video)
+    Easy to develop: V compiles itself in less than a second
+    Performance: as fast as C (V's main backend compiles to human readable C)
+    Safety: no null, no globals, no undefined behavior, immutability by default
+    C to V translation
+    Hot code reloading
+    Innovative memory management (demo video)
+    Cross-platform UI library
+    Built-in graphics library
+    Easy cross compilation
+    REPL
+    Built-in ORM
+    Built-in web framework
+    C and JavaScript backends
+
+

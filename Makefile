@@ -5710,6 +5710,7 @@ SUBDIR+=	vis-editor
 SUBDIR+=	visidata
 SUBDIR+=	vista-fonts
 SUBDIR+=	vkeybd
+SUBDIR+=	vlang
 SUBDIR+=	vlevel
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmsbackup
