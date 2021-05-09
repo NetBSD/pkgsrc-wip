@@ -1265,7 +1265,6 @@ SUBDIR+=	go-libudev
 SUBDIR+=	go-log
 SUBDIR+=	go-logging
 SUBDIR+=	go-lzw
-SUBDIR+=	go-madon
 SUBDIR+=	go-makezero
 SUBDIR+=	go-memcache
 SUBDIR+=	go-mewn
