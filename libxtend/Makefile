@@ -5,15 +5,22 @@
 #              Wed May  5 08:37:52 CDT 2021               #
 ###########################################################
 
-DISTNAME=	libxtend-0.0.1.20
+DISTNAME=	libxtend-0.0.1.25
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	1ab313528c6806ff3aba277bd2d366f155a1bff6
+GITHUB_TAG=	b1aefd96721ca3e1d13aa96c90a9a95208904585
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/libxtendc
 COMMENT=	Miscellaneous functions to extend libc
 LICENSE=	2-clause-bsd
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Darwin
+BUILD_TARGET=	apple
+INSTALL_TARGET=	apple-install
+.endif
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} depend
