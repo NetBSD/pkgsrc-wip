@@ -15,11 +15,17 @@ HOMEPAGE=	https://github.com/auerlab/peak-classifier
 COMMENT=	Classify ChIP/ATAC-Seq peaks based on features provided in a GFF
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
 DEPENDS+=	bedtools>=0:../../biology/bedtools
-DEPENDS+=	coreutils>=0:../../sysutils/coreutils
 
 REPLACE_PYTHON=	feature-view.py
+
+.include "../../mk/bsd.prefs.mk"
+
+# Until matplotlib is fixed
+.if ${OPSYS} != Darwin
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+.endif
 
 pre-build:
 	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
