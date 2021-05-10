@@ -2,7 +2,7 @@
 
 DISTNAME=	babel-japanese
 PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	57129
+TEXLIVE_REV=	57733
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-japanese
