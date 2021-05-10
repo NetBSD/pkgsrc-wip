@@ -1,0 +1,33 @@
+$NetBSD$
+
+Honor LDFLAGS.
+
+--- configure.orig	2021-04-17 20:18:01.000000000 +0000
++++ configure
+@@ -346,7 +346,7 @@ cat << EOF >temp.c
+ #include <pthread.h>
+ int main(){pthread_self();return 0;}
+ EOF
+-gcc -o temp temp.c -lpthread >/dev/null 2>&1; check "yes" "no" "You need libpthread."
++gcc $LDFLAGS -o temp temp.c -lpthread >/dev/null 2>&1; check "yes" "no" "You need libpthread."
+ rm -f temp temp.c
+ 
+ ###############
+@@ -355,7 +355,7 @@ cat << EOF >temp.c
+ #include <mhash.h>
+ int main(){MHASH td = mhash_init(MHASH_MD5);return 0;}
+ EOF
+-gcc -o temp temp.c -lmhash >/dev/null 2>&1; check "yes" "no" "You need libmhash."
++gcc $LDFLAGS -o temp temp.c -lmhash >/dev/null 2>&1; check "yes" "no" "You need libmhash."
+ rm -f temp temp.c
+ 
+ ###############
+@@ -364,7 +364,7 @@ cat << EOF >temp.c
+ #include <mhash.h>
+ int main(){MHASH td = mhash_init(MHASH_SHA256);return 0;}
+ EOF
+-gcc -o temp temp.c -lmhash >/dev/null 2>&1; check "yes" "no" "You need a version of libmhash that supports SHA-256."
++gcc $LDFLAGS -o temp temp.c -lmhash >/dev/null 2>&1; check "yes" "no" "You need a version of libmhash that supports SHA-256."
+ rm -f temp temp.c
+ 
+ ###############

@@ -5735,6 +5735,7 @@ SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
 SUBDIR+=	webdump-git
 SUBDIR+=	webkit-gtk4
+SUBDIR+=	wendzelnntpd
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
