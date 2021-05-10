@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	1.0pre45
+FLNEWS_VERSION=	1.0.0
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -8,7 +8,6 @@ MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
 MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
-#EXTRACT_USING=	bsdtar
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://micha.freeshell.org/flnews/
@@ -19,9 +18,8 @@ USE_LANGUAGES=	c c++
 
 TEST_TARGET=	test
 
-# Override build date for reproducible builds
 # https://reproducible-builds.org/specs/source-date-epoch/
-CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1609614240
+CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1620580800
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
