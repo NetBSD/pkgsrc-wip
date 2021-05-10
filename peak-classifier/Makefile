@@ -5,10 +5,10 @@
 #              Sun May  2 07:10:29 CDT 2021               #
 ###########################################################
 
-DISTNAME=	peak-classifier-0.0.1.30
+DISTNAME=	peak-classifier-0.0.1.31
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	33cc1329d63e55c7dff47c3d32c2c0849a9f8afa
+GITHUB_TAG=	7417bb223d15c955d49ffc9e8fb5cf9192b9149b
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/peak-classifier
@@ -25,6 +25,6 @@ pre-build:
 	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
 
 .include "../../wip/biolibc/buildlink3.mk"
-.include "../../wip/libxtendc/buildlink3.mk"
+.include "../../wip/libxtend/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
