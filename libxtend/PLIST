@@ -2,6 +2,7 @@
 include/xtend-protos.h
 include/xtend.h
 lib/libxtend.a
+lib/libxtend.so
 lib/libxtend.so.1
 lib/libxtend.so.1.0
 man/man3/difftimeofday.3
