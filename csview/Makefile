@@ -21,8 +21,6 @@ SITES.prettytable-rs-${PRETTYTABLE-RS_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=wfxr/
 USE_LANGUAGES=		c	# Rust, but needs toolchain for linking
 INSTALLATION_DIRS=	bin
 
-CARGO_NO_DEFAULT_FEATURES=	YES
-
 post-extract:
 	mv ${WRKDIR}/prettytable-rs-* ${WRKDIR}/prettytable-rs
 
