@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	guile-3.0.4
+DISTNAME=	guile-3.0.7
 PKGNAME=	${DISTNAME:S/guile/guile30/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
@@ -63,12 +63,6 @@ PLIST_SUBST+=		GUILE_LIBNAME=${GUILE_LIBNAME}
 PRINT_PLIST_AWK+=	{gsub(/${GUILE_LIBNAME}/, "$${GUILE_LIBNAME}");}
 
 .include "../../mk/bsd.prefs.mk"
-
-# If not Darwin, an extra charset.alias file is installed
-PLIST_VARS+=	charset
-.if ${OPSYS} != "Darwin"
-PLIST.charset=	yes
-.endif
 
 # https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24002
 post-configure:

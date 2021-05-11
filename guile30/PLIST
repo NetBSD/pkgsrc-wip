@@ -117,7 +117,6 @@ guile/3.0/include/guile/3.0/libguile/symbols.h
 guile/3.0/include/guile/3.0/libguile/tags.h
 guile/3.0/include/guile/3.0/libguile/threads.h
 guile/3.0/include/guile/3.0/libguile/throw.h
-guile/3.0/include/guile/3.0/libguile/trees.h
 guile/3.0/include/guile/3.0/libguile/unicode.h
 guile/3.0/include/guile/3.0/libguile/uniform.h
 guile/3.0/include/guile/3.0/libguile/validate.h
@@ -135,7 +134,6 @@ guile/3.0/include/guile/3.0/libguile/weak-vector.h
 guile/3.0/include/guile/3.0/readline.h
 guile/3.0/info/guile.info
 guile/3.0/info/r5rs.info
-${PLIST.charset}guile/3.0/lib/charset.alias
 guile/3.0/lib/guile/3.0/ccache/ice-9/and-let-star.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/arrays.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/atomic.go
@@ -146,6 +144,7 @@ guile/3.0/lib/guile/3.0/ccache/ice-9/calling.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/command-line.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/common-list.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/control.go
+guile/3.0/lib/guile/3.0/ccache/ice-9/copy-tree.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/curried-definitions.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/deprecated.go
 guile/3.0/lib/guile/3.0/ccache/ice-9/documentation.go
@@ -227,6 +226,7 @@ guile/3.0/lib/guile/3.0/ccache/language/cps/cse.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/dce.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/devirtualize-integers.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/effects-analysis.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/elide-arity-checks.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/graphs.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/intmap.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/intset.go
@@ -245,6 +245,7 @@ guile/3.0/lib/guile/3.0/ccache/language/cps/spec.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/specialize-numbers.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/specialize-primcalls.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/split-rec.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/switch.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/type-checks.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/type-fold.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/types.go
@@ -418,6 +419,7 @@ guile/3.0/lib/guile/3.0/ccache/system/base/syntax.go
 guile/3.0/lib/guile/3.0/ccache/system/base/target.go
 guile/3.0/lib/guile/3.0/ccache/system/base/types.go
 guile/3.0/lib/guile/3.0/ccache/system/base/types/internal.go
+guile/3.0/lib/guile/3.0/ccache/system/foreign-library.go
 guile/3.0/lib/guile/3.0/ccache/system/foreign-object.go
 guile/3.0/lib/guile/3.0/ccache/system/foreign.go
 guile/3.0/lib/guile/3.0/ccache/system/repl/command.go
@@ -461,7 +463,7 @@ guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.1.2.0-gdb.scm
+guile/3.0/lib/libguile-3.0.so.1.4.0-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
@@ -476,6 +478,7 @@ guile/3.0/share/guile/3.0/ice-9/calling.scm
 guile/3.0/share/guile/3.0/ice-9/command-line.scm
 guile/3.0/share/guile/3.0/ice-9/common-list.scm
 guile/3.0/share/guile/3.0/ice-9/control.scm
+guile/3.0/share/guile/3.0/ice-9/copy-tree.scm
 guile/3.0/share/guile/3.0/ice-9/curried-definitions.scm
 guile/3.0/share/guile/3.0/ice-9/deprecated.scm
 guile/3.0/share/guile/3.0/ice-9/documentation.scm
@@ -524,6 +527,7 @@ guile/3.0/share/guile/3.0/ice-9/r5rs.scm
 guile/3.0/share/guile/3.0/ice-9/r6rs-libraries.scm
 guile/3.0/share/guile/3.0/ice-9/r7rs-libraries.scm
 guile/3.0/share/guile/3.0/ice-9/rdelim.scm
+guile/3.0/share/guile/3.0/ice-9/read.scm
 guile/3.0/share/guile/3.0/ice-9/readline.scm
 guile/3.0/share/guile/3.0/ice-9/receive.scm
 guile/3.0/share/guile/3.0/ice-9/regex.scm
@@ -562,6 +566,7 @@ guile/3.0/share/guile/3.0/language/cps/cse.scm
 guile/3.0/share/guile/3.0/language/cps/dce.scm
 guile/3.0/share/guile/3.0/language/cps/devirtualize-integers.scm
 guile/3.0/share/guile/3.0/language/cps/effects-analysis.scm
+guile/3.0/share/guile/3.0/language/cps/elide-arity-checks.scm
 guile/3.0/share/guile/3.0/language/cps/graphs.scm
 guile/3.0/share/guile/3.0/language/cps/intmap.scm
 guile/3.0/share/guile/3.0/language/cps/intset.scm
@@ -580,6 +585,7 @@ guile/3.0/share/guile/3.0/language/cps/spec.scm
 guile/3.0/share/guile/3.0/language/cps/specialize-numbers.scm
 guile/3.0/share/guile/3.0/language/cps/specialize-primcalls.scm
 guile/3.0/share/guile/3.0/language/cps/split-rec.scm
+guile/3.0/share/guile/3.0/language/cps/switch.scm
 guile/3.0/share/guile/3.0/language/cps/type-checks.scm
 guile/3.0/share/guile/3.0/language/cps/type-fold.scm
 guile/3.0/share/guile/3.0/language/cps/types.scm
@@ -763,6 +769,7 @@ guile/3.0/share/guile/3.0/system/base/syntax.scm
 guile/3.0/share/guile/3.0/system/base/target.scm
 guile/3.0/share/guile/3.0/system/base/types.scm
 guile/3.0/share/guile/3.0/system/base/types/internal.scm
+guile/3.0/share/guile/3.0/system/foreign-library.scm
 guile/3.0/share/guile/3.0/system/foreign-object.scm
 guile/3.0/share/guile/3.0/system/foreign.scm
 guile/3.0/share/guile/3.0/system/repl/command.scm
