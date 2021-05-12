@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	6.7.1p1
+VERSION=	6.8.0p2
 DISTNAME=	opensmtpd-${VERSION}
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/

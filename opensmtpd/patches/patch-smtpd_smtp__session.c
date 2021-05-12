@@ -12,8 +12,8 @@ For update 6.7.1p1:
 Removed hunk to increase buffersize to LOGIN_NAME_MAX+HOST_NAME_MAX+1,
 this was already increased upstream to SMTPD_MAXMAILADDRSIZE.
 
---- smtpd/smtp_session.c.orig	2020-05-21 19:06:04.000000000 +0000
-+++ smtpd/smtp_session.c
+--- usr.sbin/smtpd/smtp_session.c.orig	2020-05-21 19:06:04.000000000 +0000
++++ usr.sbin/smtpd/smtp_session.c
 @@ -84,6 +84,7 @@ enum {
  	TX_ERROR_ENVELOPE,
  	TX_ERROR_SIZE,

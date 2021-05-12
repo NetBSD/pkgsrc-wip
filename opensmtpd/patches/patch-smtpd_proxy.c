@@ -2,8 +2,8 @@ $NetBSD$
 
 Rename local variables to avoid name clash on SmartOS.
 
---- smtpd/proxy.c.orig	2020-05-21 19:06:04.000000000 +0000
-+++ smtpd/proxy.c
+--- usr.sbin/smtpd/proxy.c.orig	2020-05-21 19:06:04.000000000 +0000
++++ usr.sbin/smtpd/proxy.c
 @@ -341,7 +341,7 @@ proxy_translate_ss(struct proxy_session
  {
  	struct sockaddr_in *sin = (struct sockaddr_in *) &s->ss;
