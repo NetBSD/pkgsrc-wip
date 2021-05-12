@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (APE-3.5.3.29-9daa3d03e22d4f65755e5002f829fd32cba2e5e0.tar.gz) = ea716e714bd2fdd72bdaa8808c1c9229d51aff4a
-RMD160 (APE-3.5.3.29-9daa3d03e22d4f65755e5002f829fd32cba2e5e0.tar.gz) = 2bcf4d7bd52eb039784f6ba3474d0a9c151b20bc
-SHA512 (APE-3.5.3.29-9daa3d03e22d4f65755e5002f829fd32cba2e5e0.tar.gz) = 0219139a8b1286390564789d7925a8c511be367acb82dda583d2e93c99d4f8088aace99dbdaa9b86fd093861dfe68dd644a380e88f4cafca409e7f0e00ffcee2
-Size (APE-3.5.3.29-9daa3d03e22d4f65755e5002f829fd32cba2e5e0.tar.gz) = 187590 bytes
+SHA1 (APE-3.5.3.30-0e2f6a25efbaad61b1ac7d39eaacdeed27be2fac.tar.gz) = a3c4d19ceae5e3693e2811558dc33eedf3548577
+RMD160 (APE-3.5.3.30-0e2f6a25efbaad61b1ac7d39eaacdeed27be2fac.tar.gz) = 52e69b79345d24b1bdcb45dc92d77ae0acf0fe64
+SHA512 (APE-3.5.3.30-0e2f6a25efbaad61b1ac7d39eaacdeed27be2fac.tar.gz) = c8dd769383ba7f7f9ae904cf00c4c5d6d8c8295e70637bd15915121504dc2c2382f69771fd022c266f66ce5460e2a8a81221fab6bcfb379fed3274dda9b0383f
+Size (APE-3.5.3.30-0e2f6a25efbaad61b1ac7d39eaacdeed27be2fac.tar.gz) = 187632 bytes
