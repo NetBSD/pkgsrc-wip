@@ -2,22 +2,19 @@ $NetBSD$
 
 Allow newer boost.
 
---- cmake/boost.cmake.orig	2019-12-09 19:53:17.000000000 +0000
+--- cmake/boost.cmake.orig	2021-03-22 08:44:50.000000000 +0000
 +++ cmake/boost.cmake
-@@ -293,16 +293,6 @@ STRING(REGEX REPLACE
+@@ -300,13 +300,6 @@ IF(NOT BOOST_MAJOR_VERSION EQUAL 10)
+   COULD_NOT_FIND_BOOST()
+ ENDIF()
  
- MESSAGE(STATUS "BOOST_VERSION_NUMBER is ${BOOST_VERSION_NUMBER}")
- 
--IF(NOT BOOST_MAJOR_VERSION EQUAL 10)
--  COULD_NOT_FIND_BOOST()
--ENDIF()
--
--IF(NOT BOOST_MINOR_VERSION EQUAL 70)
+-IF(NOT BOOST_MINOR_VERSION EQUAL 73)
 -  MESSAGE(WARNING "Boost minor version found is ${BOOST_MINOR_VERSION} "
--    "we need 70"
+-    "we need 73"
 -    )
 -  COULD_NOT_FIND_BOOST()
 -ENDIF()
- 
+-
  MESSAGE(STATUS "BOOST_INCLUDE_DIR ${BOOST_INCLUDE_DIR}")
  
+ # We have a limited set of patches/bugfixes here:

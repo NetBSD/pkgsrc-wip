@@ -1,11 +1,12 @@
 $NetBSD$
 
-* bstring.h is need for bzero on some platforms
 * check for ffsll and provide a portable version if not found
 
---- configure.cmake.orig	2019-12-09 19:53:17.000000000 +0000
+$NetBSD$
+
+--- configure.cmake.orig	2021-03-22 08:44:50.000000000 +0000
 +++ configure.cmake
-@@ -199,13 +199,9 @@ ENDIF()
+@@ -186,13 +186,9 @@ ENDIF()
  #
  INCLUDE (CheckIncludeFiles)
  
@@ -20,11 +21,11 @@ $NetBSD$
  CHECK_INCLUDE_FILES (dlfcn.h HAVE_DLFCN_H)
  CHECK_INCLUDE_FILES (endian.h HAVE_ENDIAN_H)
  CHECK_INCLUDE_FILES (execinfo.h HAVE_EXECINFO_H)
-@@ -269,6 +265,7 @@ CHECK_FUNCTION_EXISTS (fcntl HAVE_FCNTL)
+@@ -241,6 +237,7 @@ CHECK_FUNCTION_EXISTS (fcntl HAVE_FCNTL)
  CHECK_FUNCTION_EXISTS (fdatasync HAVE_FDATASYNC)
  CHECK_SYMBOL_EXISTS(fdatasync "unistd.h" HAVE_DECL_FDATASYNC)
  CHECK_FUNCTION_EXISTS (fedisableexcept HAVE_FEDISABLEEXCEPT)
 +CHECK_FUNCTION_EXISTS (ffsll HAVE_FFSLL)
  CHECK_FUNCTION_EXISTS (fsync HAVE_FSYNC)
  CHECK_FUNCTION_EXISTS (gethrtime HAVE_GETHRTIME)
- CHECK_FUNCTION_EXISTS (getnameinfo HAVE_GETNAMEINFO)
+ CHECK_FUNCTION_EXISTS (getpass HAVE_GETPASS)

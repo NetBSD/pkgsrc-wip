@@ -4,10 +4,10 @@ $NetBSD$
 * use noop implementation (apple) for binding threads to a cpu
 TODO: netbsd and irix has apis for this, perhaps implement this.
 
---- sql/CMakeLists.txt.orig	2019-12-09 19:53:17.000000000 +0000
+--- sql/CMakeLists.txt.orig	2021-03-22 08:44:50.000000000 +0000
 +++ sql/CMakeLists.txt
-@@ -567,6 +567,10 @@ SET(SQL_SHARED_SOURCES
-   ${MYSQL_SERVER_SUB_COMPONENT_SOURCES}
+@@ -589,6 +589,10 @@ SET(SQL_SHARED_SOURCES
+   daemon_proxy_keyring/daemon_proxy_keyring.cc
  )
  
 +IF(NOT HAVE_FFSLL)
@@ -17,7 +17,7 @@ TODO: netbsd and irix has apis for this, perhaps implement this.
  # BISON_TARGET(<Name> <YaccInput> <CodeOutput>
  #              [COMPILE_FLAGS <flags>]
  #              [DEFINES_FILE <file>]
-@@ -663,6 +667,9 @@ ELSEIF(SOLARIS)
+@@ -689,6 +693,9 @@ ELSEIF(SOLARIS)
  ELSEIF(WIN32)
    LIST(APPEND SQL_SHARED_SOURCES
      resourcegroups/platform/thread_attrs_api_win.cc)

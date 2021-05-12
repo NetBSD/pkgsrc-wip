@@ -1,14 +1,16 @@
 $NetBSD$
 
-* don't use kqueue on netbsd since it misses EVFILT_USER
+* don't use kqueue on older NetBSD which misses EVFILT_USER
 
---- vio/viosocket.cc.orig	2019-12-09 19:53:17.000000000 +0000
+$NetBSD$
+
+--- vio/viosocket.cc.orig	2021-03-22 08:44:50.000000000 +0000
 +++ vio/viosocket.cc
-@@ -68,6 +68,10 @@
+@@ -70,6 +70,10 @@
  
  #include "mysql/psi/mysql_socket.h"
  
-+#ifdef __NetBSD__
++#if defined(HAVE_QUEUE) && !defined(EVFILT_USER)
 +#undef HAVE_KQUEUE
 +#endif
 +
