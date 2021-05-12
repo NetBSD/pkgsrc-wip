@@ -1,7 +1,7 @@
 $NetBSD$
 
 Patch for pkgsrc feature "err" (USE_FEATURES).
-Add forward declaration for lexer and parser.
+Add forward declarations for lexer and parser functions.
 
 --- src/config.y.orig	2021-04-17 20:18:01.000000000 +0000
 +++ src/config.y
