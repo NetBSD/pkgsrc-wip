@@ -545,7 +545,6 @@ SUBDIR+=	csoap
 SUBDIR+=	csp2b
 SUBDIR+=	csstidy
 SUBDIR+=	csv-mode
-SUBDIR+=	csview
 SUBDIR+=	ctags-git
 SUBDIR+=	cubature
 SUBDIR+=	cufflinks
