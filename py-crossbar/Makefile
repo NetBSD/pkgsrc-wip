@@ -33,7 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-scour>=0.38.2:../../wip/py-scour
 DEPENDS+=	${PYPKGPREFIX}-passlib>=0.14.3:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.10.4:../../sysutils/py-watchdog
-DEPENDS+=	${PYPKGPREFIX}-priority>=1.0.3:../../wip/py-priority
+DEPENDS+=	${PYPKGPREFIX}-priority>=1.0.3:../../www/py-priority
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-setproctitle>=1.2:../../sysutils/py-setproctitle
 DEPENDS+=	${PYPKGPREFIX}-testresources>=2.0.1:../../devel/py-testresources

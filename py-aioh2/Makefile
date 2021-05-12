@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-h2>=3:../../www/py-h2
-DEPENDS+=	${PYPKGPREFIX}-priority>=1.3.0:../../wip/py-priority
+DEPENDS+=	${PYPKGPREFIX}-priority>=1.3.0:../../www/py-priority
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

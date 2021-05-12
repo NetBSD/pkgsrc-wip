@@ -4241,7 +4241,6 @@ SUBDIR+=	py-preshed
 SUBDIR+=	py-prind
 SUBDIR+=	py-print
 SUBDIR+=	py-prioritized-methods
-SUBDIR+=	py-priority
 SUBDIR+=	py-processing
 SUBDIR+=	py-prody
 SUBDIR+=	py-progressbar
