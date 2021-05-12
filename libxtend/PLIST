@@ -30,3 +30,5 @@ man/man3/valid_extension.3
 man/man3/viscpy.3
 man/man3/xc_fclose.3
 man/man3/xc_fopen.3
+man/man3/xt_malloc.3
+man/man3/xt_realloc.3
