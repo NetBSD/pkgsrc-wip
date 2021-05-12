@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (qtsvg-everywhere-src-6.0.4.tar.xz) = 29f2f3dc5c180aab9b0845eb46b46ec71b2c9931
-RMD160 (qtsvg-everywhere-src-6.0.4.tar.xz) = 2156b9021898d75d5726e0964bf3e647c20d4290
-SHA512 (qtsvg-everywhere-src-6.0.4.tar.xz) = 4664112a320413f59e7c3133a860ccae29e9247d1f81582bfb47932f0e4794f86c8732fb9052c026ae9b9a26ecf0a405d40fe6b4c49b8fae1d430b0e29581490
-Size (qtsvg-everywhere-src-6.0.4.tar.xz) = 1653336 bytes
+SHA1 (qtsvg-everywhere-src-6.1.0.tar.xz) = b7a70cf8ed3f34a7eebf26fb486129cd139ca8e0
+RMD160 (qtsvg-everywhere-src-6.1.0.tar.xz) = 10dc1b6c0c1208237e77dc65decdc8e5e888eb2d
+SHA512 (qtsvg-everywhere-src-6.1.0.tar.xz) = c1a7ede0ccfed9b8742b634f6f9faecbf651e9a38e13703bf6cbd110cda0167691bf74856f096ae95d5777cbf7eb874b69fd31120fed99d9b6b0485d33f326a6
+Size (qtsvg-everywhere-src-6.1.0.tar.xz) = 1653348 bytes

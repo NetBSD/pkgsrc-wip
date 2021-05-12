@@ -67,6 +67,7 @@ qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickgrou
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickheaderview_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickheaderview_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickicon_p.h
+qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickindicatorbutton_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickitemdelegate_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickitemdelegate_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicklabel_p.h
@@ -264,6 +265,7 @@ qt6/lib/libQt6QuickTemplates2.prl
 qt6/lib/libQt6QuickTemplates2.so
 qt6/lib/libQt6QuickTemplates2.so.6
 qt6/lib/libQt6QuickTemplates2.so.${PKGVERSION}
+qt6/lib/metatypes/qt6qtlabsplatformplugin_release_metatypes.json
 qt6/lib/metatypes/qt6qtquickcontrols2basicstyleimplplugin_release_metatypes.json
 qt6/lib/metatypes/qt6qtquickcontrols2basicstyleplugin_release_metatypes.json
 qt6/lib/metatypes/qt6qtquickcontrols2fusionstyleimplplugin_release_metatypes.json
@@ -288,6 +290,7 @@ qt6/modules/QuickControls2.json
 qt6/modules/QuickControls2Impl.json
 qt6/modules/QuickTemplates2.json
 qt6/qml/Qt/labs/platform/libqtlabsplatformplugin.so
+qt6/qml/Qt/labs/platform/plugins.qmltypes
 qt6/qml/Qt/labs/platform/qmldir
 qt6/qml/QtQuick/Controls/Basic/AbstractButton.qml
 qt6/qml/QtQuick/Controls/Basic/Action.qml
@@ -350,6 +353,7 @@ qt6/qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so
 qt6/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Basic/impl/qmldir
 qt6/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so
+qt6/qml/QtQuick/Controls/Basic/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Basic/qmldir
 qt6/qml/QtQuick/Controls/Fusion/ApplicationWindow.qml
 qt6/qml/QtQuick/Controls/Fusion/BusyIndicator.qml
@@ -410,6 +414,7 @@ qt6/qml/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so
 qt6/qml/QtQuick/Controls/Fusion/impl/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Fusion/impl/qmldir
 qt6/qml/QtQuick/Controls/Fusion/libqtquickcontrols2fusionstyleplugin.so
+qt6/qml/QtQuick/Controls/Fusion/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Fusion/qmldir
 qt6/qml/QtQuick/Controls/Imagine/ApplicationWindow.qml
 qt6/qml/QtQuick/Controls/Imagine/BusyIndicator.qml
@@ -465,6 +470,7 @@ qt6/qml/QtQuick/Controls/Imagine/impl/libqtquickcontrols2imaginestyleimplplugin.
 qt6/qml/QtQuick/Controls/Imagine/impl/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Imagine/impl/qmldir
 qt6/qml/QtQuick/Controls/Imagine/libqtquickcontrols2imaginestyleplugin.so
+qt6/qml/QtQuick/Controls/Imagine/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Imagine/qmldir
 qt6/qml/QtQuick/Controls/Material/ApplicationWindow.qml
 qt6/qml/QtQuick/Controls/Material/BusyIndicator.qml
@@ -529,6 +535,7 @@ qt6/qml/QtQuick/Controls/Material/impl/libqtquickcontrols2materialstyleimplplugi
 qt6/qml/QtQuick/Controls/Material/impl/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Material/impl/qmldir
 qt6/qml/QtQuick/Controls/Material/libqtquickcontrols2materialstyleplugin.so
+qt6/qml/QtQuick/Controls/Material/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Material/qmldir
 qt6/qml/QtQuick/Controls/Universal/ApplicationWindow.qml
 qt6/qml/QtQuick/Controls/Universal/BusyIndicator.qml
@@ -587,6 +594,7 @@ qt6/qml/QtQuick/Controls/Universal/impl/libqtquickcontrols2universalstyleimplplu
 qt6/qml/QtQuick/Controls/Universal/impl/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Universal/impl/qmldir
 qt6/qml/QtQuick/Controls/Universal/libqtquickcontrols2universalstyleplugin.so
+qt6/qml/QtQuick/Controls/Universal/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Universal/qmldir
 qt6/qml/QtQuick/Controls/designer/AbstractButtonSection.qml
 qt6/qml/QtQuick/Controls/designer/BusyIndicatorSpecifics.qml

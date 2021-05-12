@@ -1,15 +1,11 @@
 # $NetBSD: Makefile.common,v 1.24 2020/09/14 20:08:26 adam Exp $
 # used by wip/qt6-qtbase/Makefile.common
 
-QTVERSION=	6.0.4
+QTVERSION=	6.1.0
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(QT_ADDLIB)
-MASTER_SITES=	http://download.qt.io/official_releases/additional_libraries/${QTVERSION:R}/${QTVERSION}/
-.else
 MASTER_SITES=	http://download.qt.io/official_releases/qt/${QTVERSION:R}/${QTVERSION}/submodules/
-.endif
 
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
@@ -19,3 +15,5 @@ HOMEPAGE=	https://www.qt.io/
 LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 AND gnu-gpl-v3
 
 QTPREFIX=	${PREFIX}/qt6
+
+GCC_REQD+=	9

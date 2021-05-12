@@ -6,9 +6,9 @@ $NetBSD$
 
 * fix avoiding the cmake archiving api when buildling with make
 
---- src/corelib/CMakeLists.txt.orig	2021-02-11 10:23:05.000000000 +0000
+--- src/corelib/CMakeLists.txt.orig	2021-04-30 09:31:33.000000000 +0000
 +++ src/corelib/CMakeLists.txt
-@@ -440,8 +440,9 @@ qt_internal_extend_target(Core CONDITION
+@@ -424,8 +424,9 @@ qt_internal_extend_target(Core CONDITION
          "/BASE:0x67000000"
  )
  
@@ -20,19 +20,7 @@ $NetBSD$
  
  qt_internal_extend_target(Core CONDITION QT_FEATURE_animation
      SOURCES
-@@ -531,6 +532,11 @@ qt_internal_extend_target(Core CONDITION
-         --pending_instantiations=128
- )
- 
-+qt_internal_extend_target(Core CONDITION FREEBSD OR NETBSD
-+    SOURCES
-+        global/qoperatingsystemversion_uname.cpp
-+)
-+
- #### Keys ignored in scope 14:.:.:corelib.pro:pathIsAbsolute(_ss_CMAKE_HOST_DATA_DIR):
- # CMAKE_HOST_DATA_DIR = "$$[QT_HOST_DATA/src]/"
- # CMAKE_HOST_DATA_DIR_IS_ABSOLUTE = "True"
-@@ -1141,7 +1147,8 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
+@@ -1141,7 +1142,8 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
      include(${CMAKE_CURRENT_SOURCE_DIR}/mimetypes/mimetypes_resources.cmake)
  
  # Generate qmimeprovider_database.cpp
@@ -42,7 +30,7 @@ $NetBSD$
      if(CMAKE_VERSION VERSION_LESS 3.18 OR QT_AVOID_CMAKE_ARCHIVING_API)
          set(command_args "")
          set(mime_dir "${CMAKE_CURRENT_SOURCE_DIR}/mimetypes/mime")
-@@ -1150,6 +1157,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
+@@ -1150,6 +1152,7 @@ if(QT_FEATURE_mimetype AND QT_FEATURE_mi
              list(APPEND command_args "${mime_dir}/generate.bat")
              list(APPEND command_depends "${mime_dir}/generate.bat" "${mime_dir}/hexdump.ps1" )
          else()

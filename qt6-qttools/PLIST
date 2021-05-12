@@ -3,11 +3,8 @@ qt6/bin/assistant
 qt6/bin/designer
 qt6/bin/lconvert
 qt6/bin/linguist
-qt6/bin/lprodump
 qt6/bin/lrelease
-qt6/bin/lrelease-pro
 qt6/bin/lupdate
-qt6/bin/lupdate-pro
 qt6/bin/pixeltool
 qt6/bin/qdbus
 qt6/bin/qdbusviewer
@@ -16,6 +13,7 @@ qt6/bin/qdoc
 qt6/bin/qhelpgenerator
 qt6/bin/qtattributionsscanner
 qt6/bin/qtdiag
+qt6/bin/qtdiag6
 qt6/bin/qtpaths
 qt6/bin/qtplugininfo
 qt6/include/QtDesigner/${PKGVERSION}/QtDesigner/private/abstractdialoggui_p.h
@@ -347,6 +345,9 @@ qt6/lib/libQt6UiTools.prl
 qt6/lib/libQt6UiTools.so
 qt6/lib/libQt6UiTools.so.6
 qt6/lib/libQt6UiTools.so.${PKGVERSION}
+qt6/libexec/lprodump
+qt6/libexec/lrelease-pro
+qt6/libexec/lupdate-pro
 qt6/mkspecs/modules/qt_lib_designer.pri
 qt6/mkspecs/modules/qt_lib_designer_private.pri
 qt6/mkspecs/modules/qt_lib_designercomponents_private.pri

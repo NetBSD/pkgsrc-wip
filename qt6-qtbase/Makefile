@@ -114,8 +114,7 @@ LDFLAGS+=			-lexecinfo
 LDFLAGS.FreeBSD+=		-lutil
 .endif
 
-REPLACE_PERL+=		bin/fixqt4headers.pl
-REPLACE_PERL+=		bin/syncqt.pl
+REPLACE_PERL+=		libexec/syncqt.pl
 REPLACE_PERL+=		mkspecs/features/data/unix/findclasslist.pl
 REPLACE_BASH+=		util/android/android_emulator_launcher.sh
 

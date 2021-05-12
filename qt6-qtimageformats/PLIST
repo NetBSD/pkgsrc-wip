@@ -1,6 +1,6 @@
 @comment $NetBSD$
 qt6/lib/cmake/Qt6/FindWrapJasper.cmake
-qt6/lib/cmake/Qt6/FindWrapMNG.cmake
+qt6/lib/cmake/Qt6/FindLibmng.cmake
 qt6/lib/cmake/Qt6/FindWrapWebP.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake

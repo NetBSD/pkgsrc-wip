@@ -160,8 +160,6 @@ qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qdownloadhelperservice_p_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qdownloadnetworkworker_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qentity_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qeventfilterservice_p.h
-qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qframeallocator_p.h
-qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qframeallocator_p_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qgeometry_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qgeometryfactory_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qgeometryview_p.h
@@ -518,6 +516,7 @@ qt6/include/Qt3DLogic/qt3dlogicversion.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qqmlaspectengine_p.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qquaternionanimation_p.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qt3dquick_global_p.h
+qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qt3dquickforeign_p.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qt3dquicknodefactory_p.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qt3dquickvaluetypes_p.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/quick3dbuffer_p.h
