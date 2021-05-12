@@ -1,4 +1,6 @@
 $NetBSD$
+
+NetBSD also has mmap().
 --- sophia/std/ss_stdvfs.c.orig	2018-02-06 22:08:26.000000000 -0800
 +++ sophia/std/ss_stdvfs.c	2018-02-06 22:09:25.000000000 -0800
 @@ -232,7 +232,8 @@

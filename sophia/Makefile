@@ -2,12 +2,12 @@
 
 DISTNAME=	sophia-version_${VERSION}
 PKGNAME=	sophia-${VERSION}
-VERSION=	2.1
+VERSION=	2.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmwkaa/}
 GITHUB_TAG=	v${VERSION}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	http://sophia.systems/
 COMMENT=	Modern embeddable key-value database
 LICENSE=	2-clause-bsd
