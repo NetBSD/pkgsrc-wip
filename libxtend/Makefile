@@ -18,6 +18,9 @@ LICENSE=	2-clause-bsd
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == Darwin
+# For $(shell realpath ...).  != doesn't work in Apple's make.
+USE_TOOLS=	gmake
+BUILD_DEPENDS=	realpath>0:../../wip/realpath
 BUILD_TARGET=	apple
 INSTALL_TARGET=	apple-install
 .endif
