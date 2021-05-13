@@ -6,6 +6,7 @@
 DISTNAME=	mysql-8.0.24
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-8.0/}
+DISTFILES=	mysql-boost-${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/
@@ -16,8 +17,6 @@ PATCHDIR?=	${.CURDIR}/../../wip/mysql80-client/patches
 MESSAGE_SRC+=	${.CURDIR}/../../databases/mariadb104-client/MESSAGE
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
-# XXX requires boost-lib 1.73, doesn't compile with 1.76
-BUILDLINK_API_DEPENDS.boost-libs+=      boost-libs-1.73.*
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++ c++14 # 1.75+ boost requires c++14
@@ -68,7 +67,7 @@ CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 
-CMAKE_ARGS+=		-DWITH_BOOST="system"
+CMAKE_ARGS+=		-DWITH_BOOST="${WRKSRC}/boost"
 CMAKE_ARGS+=		-DWITH_ICU="system"
 CMAKE_ARGS+=		-DWITH_LIBEVENT="system"
 CMAKE_ARGS+=		-DWITH_LZ4="system"
@@ -138,7 +137,6 @@ post-patch:
 .include "../../mk/curses.buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

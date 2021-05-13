@@ -1,4 +1,1 @@
 perhaps implement thread affinity for netbsd and irix
-
-server:
-requires boost-lib 1.73, doesn't compile with 1.76.0

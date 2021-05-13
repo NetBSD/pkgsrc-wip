@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.35 2019/12/06 14:05:11 jperkin Exp $
 
-SHA1 (mysql-8.0.24.tar.gz) = ad9789c74d08092a5cf95de56de2dd1947e8d873
-RMD160 (mysql-8.0.24.tar.gz) = 6472fe5880efc656f90367bef12ecd3a24ae6923
-SHA512 (mysql-8.0.24.tar.gz) = 7bf1143c7e48d6541e78f1a92138f9dc64f43243cb28975aa7ad4b8ac2c9dea2b664261bc2726fd5bddec294f879f7ac517a3a62c8f1c39ec37fe39ec51e5f48
-Size (mysql-8.0.24.tar.gz) = 283589702 bytes
+SHA1 (mysql-boost-8.0.24.tar.gz) = e640d9851c1721a0550bdca38f03cb8681d61862
+RMD160 (mysql-boost-8.0.24.tar.gz) = 2577eb94d5b8651f3520706be9c40c3e924980d4
+SHA512 (mysql-boost-8.0.24.tar.gz) = ad8510614251c056f0963f8e51b9ed5e75452ccbf2728254d662fcc3a7ee1bdc177d1d34e958ddc31c7e6b5b3af9377ef2d9cbdc0353676b3026619673447deb
+Size (mysql-boost-8.0.24.tar.gz) = 290263082 bytes
 SHA1 (patch-CMakeLists.txt) = 16ca9bcbcaefdc8bd1bc0e8dc89ca7a347d14675
 SHA1 (patch-client_CMakeLists.txt) = f96d0d2e5ad8c1c8f5d6a9eabbd1c706bee852c0
 SHA1 (patch-client_mysqladmin.cc) = e3459bd009ef7ac0b7acece6bbcb82777a384db3
