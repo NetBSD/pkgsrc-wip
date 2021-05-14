@@ -1800,6 +1800,8 @@ share/emacs/${PKGVERSION}/lisp/epa-file.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-file.elc
 share/emacs/${PKGVERSION}/lisp/epa-hook.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-hook.elc
+share/emacs/${PKGVERSION}/lisp/epa-ks.el.gz
+share/emacs/${PKGVERSION}/lisp/epa-ks.elc
 share/emacs/${PKGVERSION}/lisp/epa-mail.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-mail.elc
 share/emacs/${PKGVERSION}/lisp/epa.el.gz
