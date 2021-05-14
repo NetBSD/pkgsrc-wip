@@ -12,9 +12,9 @@ LICENSE=	mpl-2.0
 
 GO_BUILD_PATTERN=	.
 
-TERRAFORM_PROVIDER_BIN=		terraform-provider-aws
-TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
-TERRAFORM_PROVIDER_TYPE=	aws
+TERRAFORM_PROVIDER_BIN=		terraform-provider-postgresql
+TERRAFORM_PROVIDER_NAMESPACE=	cyrilgdn
+TERRAFORM_PROVIDER_TYPE=	postgresql
 
 .include "go-modules.mk"
 
