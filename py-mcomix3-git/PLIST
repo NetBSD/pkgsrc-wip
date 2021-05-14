@@ -81,6 +81,7 @@ libexec/mcomix/mcomix/images/zoom.png
 libexec/mcomix/mcomix/keybindings.py
 libexec/mcomix/mcomix/keybindings_editor.py
 libexec/mcomix/mcomix/keybindings_map.py
+libexec/mcomix/mcomix/keyhandler.py
 libexec/mcomix/mcomix/labels.py
 libexec/mcomix/mcomix/languages.py
 libexec/mcomix/mcomix/last_read_page.py
@@ -144,6 +145,7 @@ libexec/mcomix/mcomix/recent.py
 libexec/mcomix/mcomix/run.py
 libexec/mcomix/mcomix/scrolling.py
 libexec/mcomix/mcomix/slideshow.py
+libexec/mcomix/mcomix/sqlite3.py
 libexec/mcomix/mcomix/status.py
 libexec/mcomix/mcomix/strings.py
 libexec/mcomix/mcomix/thumbbar.py
