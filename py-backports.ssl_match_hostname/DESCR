@@ -1,4 +1,0 @@
-The Secure Sockets Layer is only actually *secure* if you check
-the hostname inthe certificate returned by the server to which you
-are connecting, and verify that it matches to hostname that you
-are trying to reach.

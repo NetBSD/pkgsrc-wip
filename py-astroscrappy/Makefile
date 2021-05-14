@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cython>=0.21:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-astropy-helpers-[0-9]*:../../wip/py-astropy-helpers
-DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../wip/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.13:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.9:../../wip/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.9:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-astropy-healpix>=0.5:../../wip/py-astropy-healpix
 DEPENDS+=	${PYPKGPREFIX}-astropy-helpers-[0-9]*:../../wip/py-astropy-helpers
