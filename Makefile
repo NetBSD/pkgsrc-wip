@@ -4925,6 +4925,7 @@ SUBDIR+=	roxterm
 SUBDIR+=	rpcemu
 SUBDIR+=	rpki-git
 SUBDIR+=	rpm5
+SUBDIR+=	rsclock
 SUBDIR+=	rsem
 SUBDIR+=	rsget
 SUBDIR+=	rsound
