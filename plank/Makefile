@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	plank-0.11.4
+PKGREVISION=	1
 CATEGORIES=	wm gnome
 MASTER_SITES=	http://launchpad.net/plank/1.0/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tar.xz
