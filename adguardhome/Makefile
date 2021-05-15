@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	AdGuardHome
 
 FRONTEND=	${PKGNAME_NOREV}-frontend.tar.gz
-SITES.adguardhome-0.105.2-frontend.tar.gz=	https://cloud.krawczyk.it/
+SITES.adguardhome-0.105.2-frontend.tar.gz=	https://bbartlomiej-public.s3.eu-central-1.amazonaws.com/adguardhome/
 DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
 
 MAINTAINER=	bbartlomiej@gmail.com
@@ -55,7 +55,7 @@ generate-frontend:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn --cwd client2 install
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client run build-prod
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn --cwd client2 build
-	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${DISTNAME:S,^v,,}/build AdGuardHome-${DISTNAME:S,^v,,}/build2
+	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${PKGVERSION_NOREV}/build AdGuardHome-${PKGVERSION_NOREV}/build2
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
 .include "../../mk/bsd.prefs.mk"
