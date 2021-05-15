@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	bamf-0.5.4
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://launchpad.net/bamf/0.5/${PKGVERSION_NOREV}/+download/
 
@@ -14,6 +15,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config gsed
+
+BUILD_DEPENDS+=  gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
