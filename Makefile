@@ -4790,6 +4790,7 @@ SUBDIR+=	py34-html-docs
 SUBDIR+=	py35-html-docs
 SUBDIR+=	pydance
 SUBDIR+=	pydb
+SUBDIR+=	pympress
 SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
