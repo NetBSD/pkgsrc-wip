@@ -8,11 +8,11 @@ Porting of plan 0.11.89 currently is blocked by the lack of gnome-menus-3
 --- lib/Items/DockContainer.vala.orig   2021-05-15 13:23:05.690755513 +0000
 +++ lib/Items/DockContainer.vala
 @@ -76,7 +76,7 @@ namespace Plank
-        /**
-         * Creates a new container for dock elements.
-         */
--       public DockContainer ()
-+       protected DockContainer ()
-        {
-            Object ();
-        }
+		/**
+		 * Creates a new container for dock elements.
+		 */
+-		public DockContainer ()
++		protected DockContainer ()
+		{
+			Object ();
+		}

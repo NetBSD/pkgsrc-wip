@@ -8,11 +8,11 @@ Porting of plan 0.11.89 currently is blocked by the lack of gnome-menus-3
 --- lib/Items/DockItem.vala.orig    2021-05-15 13:23:45.995070431 +0000
 +++ lib/Items/DockItem.vala
 @@ -133,7 +133,7 @@ namespace Plank
-        /**
-         * Creates a new dock item.
-         */
--       public DockItem ()
-+       protected DockItem ()
-        {
-            GLib.Object (Prefs: new DockItemPreferences ());
-        }
+		/**
+		 * Creates a new dock item.
+		 */
+-		public DockItem ()
++		protected DockItem ()
+		{
+			GLib.Object (Prefs: new DockItemPreferences ());
+		}
