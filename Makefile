@@ -1207,7 +1207,6 @@ SUBDIR+=	go-dotenv
 SUBDIR+=	go-doublejump
 SUBDIR+=	go-douceur-aymerick
 SUBDIR+=	go-easyjson
-SUBDIR+=	go-errlog
 SUBDIR+=	go-errorx
 SUBDIR+=	go-errwrap
 SUBDIR+=	go-eventsource
