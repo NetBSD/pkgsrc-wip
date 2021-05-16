@@ -35,7 +35,7 @@ BUILD_DIRS=		freebsd
 .  elif ${OPSYS} == "NetBSD"
 BUILD_DIRS=		netbsd
 .  else
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 BUILD_DIRS=		linux
 .  endif
 .endif
