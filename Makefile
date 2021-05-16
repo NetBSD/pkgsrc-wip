@@ -593,6 +593,7 @@ SUBDIR+=	debian_x11
 SUBDIR+=	debootstrap
 SUBDIR+=	debugger-git
 SUBDIR+=	decode-dimms
+SUBDIR+=	deckster
 SUBDIR+=	dee
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-desktop
