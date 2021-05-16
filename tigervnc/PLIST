@@ -2,12 +2,9 @@
 bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
+bin/vncserver
 bin/vncviewer
 bin/x0vncserver
-etc/pam.d/tigervnc
-etc/tigervnc/vncserver-config-defaults
-etc/tigervnc/vncserver-config-mandatory
-etc/tigervnc/vncserver.users
 lib/systemd/system/vncserver@.service
 lib/xorg/modules/extensions/libvnc.la
 libexec/vncserver
@@ -23,6 +20,10 @@ sbin/vncsession
 share/applications/vncviewer.desktop
 share/doc/tigervnc/LICENCE.TXT
 share/doc/tigervnc/README.rst
+share/examples/tigervnc/tigervnc
+share/examples/tigervnc/vncserver-config-defaults
+share/examples/tigervnc/vncserver-config-mandatory
+share/examples/tigervnc/vncserver.users
 share/icons/hicolor/16x16/apps/tigervnc.png
 share/icons/hicolor/22x22/apps/tigervnc.png
 share/icons/hicolor/24x24/apps/tigervnc.png

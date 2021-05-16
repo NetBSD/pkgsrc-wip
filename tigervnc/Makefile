@@ -49,10 +49,12 @@ SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_VARS.hpath+=	PREFIX X11BASE
 
 REPLACE_PERL+=	unix/vncserver
+REPLACE_PERL+=	vncserver.pl
 
 post-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.bz2
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
+	cp ${FILESDIR}/vncserver.pl ${WRKSRC}
 
 post-patch:
 	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver120.patch
@@ -79,6 +81,22 @@ XORG_CONFIGURE_ARGS+=	--disable-xorg --disable-xnest --disable-xvfb --disable-dm
 XORG_CONFIGURE_ARGS+=	--disable-config-hal --disable-config-udev --with-pic
 XORG_CONFIGURE_ARGS+=	--disable-unit-tests --disable-devel-docs --disable-selective-werror
 XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --disable-dri3 --enable-glx --enable-glx-tls
+
+EGDIR=			share/examples/tigervnc
+INSTALLATION_DIRS+=	${EGDIR}
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/pam.d
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/tigervnc
+CONF_FILES+=		${EGDIR}/tigervnc ${PKG_SYSCONFDIR}/pam.d/tigervnc
+CONF_FILES+=		${EGDIR}/vncserver-config-defaults ${PKG_SYSCONFDIR}/tigervnc/vncserver-config-defaults
+CONF_FILES+=		${EGDIR}/vncserver-config-mandatory ${PKG_SYSCONFDIR}/tigervnc/vncserver-config-mandatory
+CONF_FILES+=		${EGDIR}/vncserver.users ${PKG_SYSCONFDIR}/tigervnc/vncserver.users
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.pl ${DESTDIR}${PREFIX}/bin/vncserver
+	${MV} ${DESTDIR}${PREFIX}/etc/pam.d/tigervnc ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver-config-defaults ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver-config-mandatory ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver.users ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
