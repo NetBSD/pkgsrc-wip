@@ -23,6 +23,8 @@ USE_TOOLS=	gmake
 BUILD_DEPENDS=	realpath>0:../../wip/realpath
 BUILD_TARGET=	apple
 INSTALL_TARGET=	apple-install
+.else
+INSTALL_TARGET=	install-strip
 .endif
 
 pre-build:
