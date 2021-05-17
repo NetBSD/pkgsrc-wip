@@ -592,7 +592,6 @@ SUBDIR+=	debian_gtk
 SUBDIR+=	debian_x11
 SUBDIR+=	debootstrap
 SUBDIR+=	debugger-git
-SUBDIR+=	deckster
 SUBDIR+=	decode-dimms
 SUBDIR+=	dee
 SUBDIR+=	deforaos-accessories
