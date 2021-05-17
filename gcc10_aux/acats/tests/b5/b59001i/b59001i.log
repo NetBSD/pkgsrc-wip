@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001i.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001i.adb
+b59001i.adb:60:21: cannot exit from program unit or accept statement
+b59001i.adb:61:27: "OUTER_PROC_LABEL" is undefined
+b59001i.adb:66:16: cannot exit from program unit or accept statement
+b59001i.adb:77:21: cannot exit from program unit or accept statement
+b59001i.adb:78:21: cannot exit from program unit or accept statement
+b59001i.adb:79:27: "OUT2_LABEL" is undefined (more references follow)
+b59001i.adb:80:27: "OUTER_FUNC_LABEL" is undefined
+b59001i.adb:86:16: cannot exit from program unit or accept statement
+b59001i.adb:87:16: cannot exit from program unit or accept statement
+b59001i.adb:95:21: cannot exit from program unit or accept statement
+b59001i.adb:96:21: cannot exit from program unit or accept statement
+b59001i.adb:97:27: "OUT3_LABEL" is undefined (more references follow)
+b59001i.adb:98:27: "OUTER_PACK_LABEL" is undefined
+b59001i.adb:103:16: cannot exit from program unit or accept statement
+b59001i.adb:104:16: cannot exit from program unit or accept statement
+gnatmake: "b59001i.adb" compilation error

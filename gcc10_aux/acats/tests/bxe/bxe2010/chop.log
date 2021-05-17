@@ -1,0 +1,11 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bxe/bxe2010.a into:
+   bxe2010.ads
+   bxe2010-bxe2010_ok_child_1.ads
+   bxe2010-bxe2010_ok_child_2.ads
+   bxe2010-bxe2010_ok_child_3.ads
+   bxe2010-bxe2010_bad_child_1.ads
+   bxe2010-bxe2010_bad_child_2.ads
+   bxe2010_normal.ads
+   bxe2010_normal-bxe2010_illegal_rci.ads
+   bxe2010_pure.ads
+   bxe2010_pure-bxe2010_legal_rci.ads

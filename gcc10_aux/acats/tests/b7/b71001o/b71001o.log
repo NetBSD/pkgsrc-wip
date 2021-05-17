@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b71001o.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b71001o.adb
+b71001o.adb:36:11: proper body not allowed in package spec
+gnatmake: "b71001o.adb" compilation error

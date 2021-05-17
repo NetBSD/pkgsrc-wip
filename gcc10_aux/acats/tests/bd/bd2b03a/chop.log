@@ -1,0 +1,5 @@
+bd2b03a.ada:68:16: the only representation clause allowed here is an address clause
+/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd2b03a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd2b03a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd2b03a.ada into:
+   bd2b03a.adb

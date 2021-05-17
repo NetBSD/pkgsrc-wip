@@ -1,0 +1,6 @@
+
+,.,. C341A01 ACATS 4.1 21-05-16 10:32:24
+---- C341A01 Check that objects of a class-wide type can be initialized,
+                by direct assignment, to a value of any specific type
+                within the class.
+==== C341A01 PASSED ============================.

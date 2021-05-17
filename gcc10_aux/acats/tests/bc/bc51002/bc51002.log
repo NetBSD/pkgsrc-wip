@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51002.adb
+bc51002.adb:16:16: actual subtype must be constrained
+bc51002.adb:16:16: instantiation abandoned
+bc51002.adb:20:16: actual subtype must be constrained
+bc51002.adb:20:16: instantiation abandoned
+bc51002.adb:28:25: actual subtype must be constrained
+bc51002.adb:28:25: instantiation abandoned
+bc51002.adb:34:28: actual subtype must be constrained
+bc51002.adb:34:28: instantiation abandoned
+gnatmake: "bc51002.adb" compilation error

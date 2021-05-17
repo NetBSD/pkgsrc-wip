@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97102b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97102b.adb
+b97102b.adb:55:31: missing "OR"
+b97102b.adb:56:16: select alternative ("ACCEPT", "ABORT", "DELAY") expected
+gnatmake: "b97102b.adb" compilation error

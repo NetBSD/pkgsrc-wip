@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97102g.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97102g.adb
+b97102g.adb:54:16: select must contain at least one accept alternative
+gnatmake: "b97102g.adb" compilation error

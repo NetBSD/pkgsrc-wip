@@ -1,0 +1,7 @@
+bc3013a.ada:49:24: formal part not allowed in instantiation
+bc3013a.ada:52:23: formal part not allowed in instantiation
+bc3013a.ada:55:23: formal part not allowed in instantiation
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc3013a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc3013a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc3013a.ada into:
+   bc3013a.adb

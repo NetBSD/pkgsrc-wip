@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3006a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3006a.adb
+bc3006a.adb:57:37: "PROCINST" is not the name of a generic procedure
+bc3006a.adb:58:35: "PACKINST" is not the name of a generic package
+bc3006a.adb:59:37: "ORDPROC" is not the name of a generic procedure
+bc3006a.adb:60:35: "ORDPACK" is not the name of a generic package
+gnatmake: "bc3006a.adb" compilation error

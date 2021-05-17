@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2010.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2010.adb
+b3a2010.adb:17:04: instantiation error at b3a2010_1.ads:17
+b3a2010.adb:17:04: subprogram must not be deeper than access type
+b3a2010.adb:27:04: instantiation error at b3a2010_2.ads:17
+b3a2010.adb:27:04: subprogram must not be deeper than access type
+b3a2010.adb:45:07: instantiation error at b3a2010_1.ads:17
+b3a2010.adb:45:07: subprogram must not be deeper than access type
+b3a2010.adb:49:07: instantiation error at b3a2010_1.ads:17
+b3a2010.adb:49:07: subprogram must not be deeper than access type
+b3a2010.adb:59:07: instantiation error at b3a2010_2.ads:17
+b3a2010.adb:59:07: subprogram must not be deeper than access type
+b3a2010.adb:63:07: instantiation error at b3a2010_2.ads:17
+b3a2010.adb:63:07: subprogram must not be deeper than access type
+gnatmake: "b3a2010.adb" compilation error

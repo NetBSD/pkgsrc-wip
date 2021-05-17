@@ -1,0 +1,5 @@
+
+,.,. CXAA008 ACATS 4.1 21-05-16 10:54:58
+---- CXAA008 Check that the capabilities of Text_IO.Fixed_IO operate
+                correctly for files with mode Append_File.
+==== CXAA008 PASSED ============================.

@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7205a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7205a.adb
+bd7205a.adb:48:11: prefix of "STORAGE_SIZE" attribute must be access or task type
+bd7205a.adb:49:11: prefix of "STORAGE_SIZE" attribute must be access or task type
+gnatmake: "bd7205a.adb" compilation error

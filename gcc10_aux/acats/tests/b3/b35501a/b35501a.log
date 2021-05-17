@@ -1,0 +1,25 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35501a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35501a.adb
+b35501a.adb:56:11: prefix of "SUCC" attribute must be scalar type
+b35501a.adb:57:26: expected type "Standard.Character"
+b35501a.adb:57:26: found a string type
+b35501a.adb:59:24: expected type "Standard.Integer"
+b35501a.adb:59:24: found type universal real
+b35501a.adb:60:11: prefix of "SUCC" attribute must be scalar type
+b35501a.adb:62:11: prefix of "SUCC" attribute must be scalar type
+b35501a.adb:64:11: prefix of "PRED" attribute must be scalar type
+b35501a.adb:65:26: expected type "Standard.Character"
+b35501a.adb:65:26: found a string type
+b35501a.adb:67:24: expected type "Standard.Integer"
+b35501a.adb:67:24: found type universal real
+b35501a.adb:68:11: prefix of "PRED" attribute must be scalar type
+b35501a.adb:69:11: prefix of "PRED" attribute must be scalar type
+b35501a.adb:71:11: prefix of "POS" attribute must be discrete type
+b35501a.adb:72:25: expected type "Standard.Character"
+b35501a.adb:72:25: found a string type
+b35501a.adb:73:11: prefix of "POS" attribute must be discrete type
+b35501a.adb:74:23: expected type "Standard.Integer"
+b35501a.adb:74:23: found type universal real
+b35501a.adb:75:11: prefix of "POS" attribute must be discrete type
+b35501a.adb:76:11: prefix of "POS" attribute must be discrete type
+gnatmake: "b35501a.adb" compilation error

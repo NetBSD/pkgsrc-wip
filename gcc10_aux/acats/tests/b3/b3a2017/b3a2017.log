@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a20174.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a20174.adb
+b3a2017_g-c.adb:64:26: 'Access attribute not allowed in generic body
+b3a2017_g-c.adb:64:26: because access type "Ref" is declared outside generic unit (RM 3.10.2(32))
+b3a2017_g-c.adb:64:26: move 'Access to private part, or (Ada 2005) use anonymous access type instead of "Ref"
+b3a2017_g-c.adb:66:11: access type must not be a generic formal type
+b3a2017_fp.adb:64:31: 'Access attribute not allowed in generic body
+b3a2017_fp.adb:64:31: because access type "Ref" is declared outside generic unit (RM 3.10.2(32))
+b3a2017_fp.adb:64:31: move 'Access to private part, or (Ada 2005) use anonymous access type instead of "Ref"
+b3a2017_fp.adb:66:16: access type must not be a generic formal type
+gnatmake: "b3a20174.adb" compilation error

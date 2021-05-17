@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37301j.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37301j.adb
+b37301j.adb:37:21: component declaration expected
+gnatmake: "b37301j.adb" compilation error

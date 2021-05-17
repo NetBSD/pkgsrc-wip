@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45522a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45522a.adb
+b45522a.adb:39:15: invalid operand types for operator "*"
+b45522a.adb:39:15: left operand has type "F" defined at line 34
+b45522a.adb:39:15: right operand has type "G" defined at line 35
+b45522a.adb:40:15: invalid operand types for operator "/"
+b45522a.adb:40:15: left operand has type "F" defined at line 34
+b45522a.adb:40:15: right operand has type "G" defined at line 35
+gnatmake: "b45522a.adb" compilation error

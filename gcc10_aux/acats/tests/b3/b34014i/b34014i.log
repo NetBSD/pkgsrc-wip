@@ -1,0 +1,43 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34014i.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34014i.adb
+b34014i.adb:67:37: no candidate interpretations match the actuals:
+b34014i.adb:67:37: missing argument for parameter "Y" in call to "F" declared at line 62
+b34014i.adb:67:45: expected type "T" defined at line 39
+b34014i.adb:67:45: found private type "QT" defined at line 60
+b34014i.adb:67:45:   ==> in call to "F" at line 40
+b34014i.adb:76:37: expected type "QT" defined at line 70
+b34014i.adb:76:37: found type "T" defined at line 39
+b34014i.adb:91:32: expected type "QS" defined at line 78
+b34014i.adb:91:32: found type "T" defined at line 39
+b34014i.adb:98:27: no candidate interpretations match the actuals:
+b34014i.adb:98:27: missing argument for parameter "Y" in call to "F" declared at line 62
+b34014i.adb:98:35: expected type "T" defined at line 39
+b34014i.adb:98:35: found private type "QT" defined at line 60
+b34014i.adb:98:35:   ==> in call to "F" at line 40
+b34014i.adb:102:27: no candidate interpretations match the actuals:
+b34014i.adb:102:27: missing argument for parameter "Y" in call to "F" (inherited) at line 99
+b34014i.adb:102:27: missing argument for parameter "Y" in call to "F" declared at line 62
+b34014i.adb:102:35: expected type "T" defined at line 39
+b34014i.adb:102:35: found private type "RT" defined at line 99
+b34014i.adb:102:35:   ==> in call to "F" at line 40
+b34014i.adb:124:37: no candidate interpretations match the actuals:
+b34014i.adb:124:37: missing argument for parameter "Y" in call to "F" declared at line 119
+b34014i.adb:124:45: expected type "T" defined at line 39
+b34014i.adb:124:45: found private type "QT" defined at line 116
+b34014i.adb:124:45:   ==> in call to "F" at line 40
+b34014i.adb:133:37: expected type "QT" defined at line 127
+b34014i.adb:133:37: found type "T" defined at line 39
+b34014i.adb:148:32: expected type "QS" defined at line 135
+b34014i.adb:148:32: found type "T" defined at line 39
+b34014i.adb:155:27: no candidate interpretations match the actuals:
+b34014i.adb:155:27: missing argument for parameter "Y" in call to "F" declared at line 119
+b34014i.adb:155:35: expected type "T" defined at line 39
+b34014i.adb:155:35: found private type "QT" defined at line 116
+b34014i.adb:155:35:   ==> in call to "F" at line 40
+b34014i.adb:159:27: no candidate interpretations match the actuals:
+b34014i.adb:159:27: missing argument for parameter "Y" in call to "F" (inherited) at line 156
+b34014i.adb:159:27: missing argument for parameter "Y" in call to "F" declared at line 119
+b34014i.adb:159:35: expected type "T" defined at line 39
+b34014i.adb:159:35: found private type "RT" defined at line 156
+b34014i.adb:159:35:   ==> in call to "F" at line 40
+gnatmake: "b34014i.adb" compilation error

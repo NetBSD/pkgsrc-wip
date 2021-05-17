@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cb/cb40a030.a into:
+   fb40a00-cb40a030_0.ads
+   fb40a00-cb40a030_1.ads
+   fb40a00-cb40a030_1.adb
+   fb40a00-cb40a030_0.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cb/cb40a031.am into:
+   cb40a031.adb

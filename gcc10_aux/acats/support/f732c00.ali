@@ -1,0 +1,142 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f732c00%b		f732c00.adb		2629e21a DE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U f732c00%s		f732c00.ads		e74155dd DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f732c00.ads		20210516102806 e74155dd f732c00%s
+D f732c00.adb		20210516102806 c168b7c7 f732c00%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D system.ads		20210408115627 a6571217 system%s
+D s-assert.ads		20210408115627 cd8d2c94 system.assertions%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s s [change_tagged_typeInvariant f732c00 116 9 none]
+G c Z s b [each_bell_occurs_once f732c00 79 13 none]
+G c Z s b [and_only_once f732c00 82 13 none]
+G c Z s b [rounds f732c00 85 13 none]
+G c Z s b [invalid_change f732c00 87 13 none]
+G c Z s b [hunt_for_one_change f732c00 89 14 none]
+G c Z s b [at_lead_end f732c00 93 13 none]
+G c Z s b [grandsire_change f732c00 95 14 none]
+G c Z s b [broken_grandsire_change f732c00 99 14 none]
+G c Z s b [swaps_dont_overlap f732c00 103 13 none]
+G c Z s b [swap_places f732c00 106 14 none]
+G c Z s s [Tchange_constrained_typeBIP f732c00 114 4 none]
+G c Z s s [change_tagged_typeDA f732c00 116 9 none]
+G c Z s s [change_tagged_typeDF f732c00 116 9 none]
+G c Z s s [change_tagged_typeIP f732c00 116 9 none]
+G c Z s s [pairs_to_swap_typeIP f732c00 71 9 none]
+G c Z s s [bells_to_swap_typeIP f732c00 74 9 none]
+G c Z b b [swap_bell_with_following_bell f732c00 59 14 none]
+G c Z b b [broken_swap_bell_with_following_bell f732c00 145 14 none]
+X 6 f732c00.ads
+55K9*F732C00 114E9 123l5 123e12 7|2b14 210l5 210t12
+59N4*No_Of_Bells 61r39 66r60 69r6 97r15 101r15 7|78r45 78r66 129r47 170r47
+61I9*Bell_Range_Type<short_short_integer> 65r41 68r44 114r43 114r63 117r52
+. 7|10r30 11r27 19r27 19r52 20r49 35r19 51r29 63r14 77r35 129r20 149r14 170r20
+63R9*Change_Tagged_Type 79p13 79r45 82p13 82r45 85p13 85r27 87p13 87r35 89p14
+. 90r29 93p13 93r38 95p14 95r48 99p14 99r55 106p14 107r30 116c9 119e6 7|8r45
+. 16r45 26r27 31r16 45r35 50r25 60r29 74r29 119r38 122r48 146r29 159r55 194r29
+65I12*Swappable_Bell_Range_Type{61I9} 72r6 7|61r29 147r29
+68I12*Number_Of_Pairs_To_Swap_Type{61I9} 71r38 75r33
+71A9*Pairs_To_Swap_Type(65I12)<61I9> 76r29
+74R9*Bells_To_Swap_Type 75d7 77e14 103r52 108r30 7|186r52 195r29
+75i7*Number_Of_Pairs_To_Swap{68I12} 76r54 7|188r50 198r46
+76a7*Pairs_To_Swap{71A9} 7|189r24 190r24 202r42
+79V13*Each_Bell_Occurs_Once{boolean} 79>36 120s26 7|8b13
+79r36 Change{63R9} 7|12r13
+82V13*And_Only_Once{boolean} 82>36 121s26 7|16b13
+82r36 Change{63R9} 7|21r16 21r37
+85V13*Rounds{63R9} 7|26b13 43l8 43t14
+87V13*Invalid_Change{63R9} 7|45b13 57l8 57t22
+89U14*Hunt_For_One_Change 90=7 91>7 7|73b14 117l8 117t27
+90r7 Change{63R9} 7|74b7 91m34 106m34
+91b7 Tenor_Behind{boolean} 7|75b7 78r27
+93V13*At_Lead_End{boolean} 93>26 7|119b13
+93r26 Change{63R9} 7|120r7
+95U14*Grandsire_Change 95=32 7|122b14 143l8 143t24
+95r32 Change{63R9} 7|122b32 126m26 134m31
+99U14*Broken_Grandsire_Change 99=39 7|159b14 184l8 184t31
+99r39 Change{63R9} 7|159b39 167m26 175m31
+103V13*Swaps_Dont_Overlap{boolean} 103>33 110s15 7|186b13
+103r33 Bells_To_Swap{74R9} 7|188r36 189r10 190r10
+106U14*Swap_Places 107=7 108>7 7|193b14 208l8 208t19
+107r7 Change{63R9} 7|194b6 201m28
+108r7 Bells_To_Swap{74R9} 110r35 7|195b6 198r32 202r28
+114A9 Change_Constrained_Type(61I9)<61I9> 117r14
+117a7*Data{114A9} 7|12r20 21r23 21r44 37m17 51m10 67r22 68m14 68r44 69m14
+. 120r14 153r22 154m14 154r44
+X 7 f732c00.adb
+6i4 Change_Number{natural} 83r10 115m7 115r24 141m7 141r24 182m7 182r24 206m7
+. 206r24
+10i15 Bell_Number{6|61I9} 12r34
+11i19 Bell{6|61I9} 12r26
+19i19 Bell<short_short_integer> 20r37 21r29
+20i23 Other_Bell<short_short_integer> 21r50
+31r7 Change{6|63R9} 37m10 41r14
+35i11 Bell{6|61I9} 37r23 37r32
+50r7 Change{6|63R9} 55r14
+59U14 Swap_Bell_With_Following_Bell 59b14 60=7 61>7 71l8 71t37 90s16 105s16
+. 125s7 133s13 200s10
+60r7 Change{6|63R9} 67r15 68m7 68r37 69m7 91r18 106r18 126r10 134r15 201r12
+61i7 Bell_To_Swap{6|65I12} 67r28 68r20 68r50 69r20 92r18 107r18 127r10 135r15
+. 202r12
+63i7 Temp{6|61I9} 67m7 69r41
+77i7 Hunt_On_How_Many{6|61I9} 85r28 100r28
+85i14 Place<short_short_integer> 88r16 92r34
+100i14 Place<short_short_integer> 103r16 107r34
+129i11 Place<short_short_integer> 131r13 135r31
+145U14 Broken_Swap_Bell_With_Following_Bell 145b14 146=7 147>7 157l8 157t44
+. 166s7 174s13
+146r7 Change{6|63R9} 153r15 154m7 154r37 167r10 175r15
+147i7 Bell_To_Swap{6|65I12} 153r28 154r20 154r50 168r10 176r15
+149i7 Temp{6|61I9} 153m7
+170i11 Place<short_short_integer> 172r13 176r31
+188i15 Pair_To_Swap<short_short_integer> 189r39 190r39
+198i11 Pair_To_Swap<short_short_integer> 202r57
+

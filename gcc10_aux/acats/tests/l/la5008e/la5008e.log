@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la5008e1m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la5008e1m.adb
+cannot generate code for file la5008e1m.adb (missing subunits)
+gnatmake: "la5008e1m.adb" compilation error

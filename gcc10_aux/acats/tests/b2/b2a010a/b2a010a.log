@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a010a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a010a.adb
+b2a010a.adb:33:32: based number delimiters must match
+b2a010a.adb:34:40: based number delimiters must match
+b2a010a.adb:35:43: based number delimiters must match
+b2a010a.adb:41:36: based number delimiters must match
+b2a010a.adb:42:32: based number delimiters must match
+b2a010a.adb:43:38: based number delimiters must match
+b2a010a.adb:44:29: based number delimiters must match
+b2a010a.adb:51:20: based number delimiters must match
+b2a010a.adb:52:22: based number delimiters must match
+b2a010a.adb:53:23: based number delimiters must match
+b2a010a.adb:54:24: based number delimiters must match
+b2a010a.adb:58:20: based number delimiters must match
+b2a010a.adb:59:44: based number delimiters must match
+gnatmake: "b2a010a.adb" compilation error

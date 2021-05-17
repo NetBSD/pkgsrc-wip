@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3403c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3403c.adb
+bc3403c.adb:55:32: index types of actual do not match those of formal "AR"
+bc3403c.adb:55:32: instantiation abandoned
+bc3403c.adb:56:32: index types of actual do not match those of formal "AR"
+bc3403c.adb:56:32: instantiation abandoned
+bc3403c.adb:57:32: index types of actual do not match those of formal "AR"
+bc3403c.adb:57:32: instantiation abandoned
+bc3403c.adb:58:32: index types of actual do not match those of formal "AR"
+bc3403c.adb:58:32: instantiation abandoned
+bc3403c.adb:60:32: index types of actual do not match those of formal "AR"
+bc3403c.adb:60:32: instantiation abandoned
+gnatmake: "bc3403c.adb" compilation error

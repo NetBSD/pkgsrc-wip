@@ -1,0 +1,6 @@
+
+,.,. CXAG001 ACATS 4.1 21-05-16 10:55:19
+---- CXAG001 Check that package Ada.Directories exists and can be used
+                to create and delete directories, change the default
+                directory, and copy files.
+==== CXAG001 PASSED ============================.

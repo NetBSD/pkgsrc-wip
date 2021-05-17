@@ -1,0 +1,5 @@
+b43002k.ada:45:49: "=>" expected (positional association cannot follow named association)
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b43002k.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b43002k.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b43002k.ada into:
+   b43002k.adb

@@ -1,0 +1,5 @@
+
+,.,. C457007 ACATS 4.1 21-05-16 10:41:47
+---- C457007 Check that literals can be resolved when they appear as
+                dependent expressions in a conditional expression.
+==== C457007 PASSED ============================.

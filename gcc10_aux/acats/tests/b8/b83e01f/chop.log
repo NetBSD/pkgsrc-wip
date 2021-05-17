@@ -1,0 +1,14 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f0.ada into:
+   b83e01f0m.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f1.ada into:
+   b83e01f0m-b83e01f_gen_proc1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f2.ada into:
+   b83e01f0m-b83e01f_gen_proc2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f3.ada into:
+   b83e01f0m-b83e01f_gen_proc3.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f4.ada into:
+   b83e01f0m-b83e01f_gen_proc4.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f5.ada into:
+   b83e01f0m-b83e01f_gen_proc5.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01f6.ada into:
+   b83e01f0m-b83e01f_gen_proc6.adb

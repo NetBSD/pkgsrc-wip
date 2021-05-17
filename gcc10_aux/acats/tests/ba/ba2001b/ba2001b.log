@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001b.adb
+ba2001b.adb:33:06: missing specification for package stub
+ba2001b.adb:34:06: missing specification for task body
+gnatmake: "ba2001b.adb" compilation error

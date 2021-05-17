@@ -1,0 +1,11 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca3011a0.ada into:
+   ca3011a0.ads
+   ca3011a0.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca3011a1.ada into:
+   ca3011a0-ca3011a1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca3011a2.ada into:
+   ca3011a0-ca3011a2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca3011a3.ada into:
+   ca3011a0-ca3011a3.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca3011a4.ada into:
+   ca3011a4m.adb

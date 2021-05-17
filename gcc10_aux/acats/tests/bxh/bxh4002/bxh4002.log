@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4002.adb
+bxh4002.adb:77:15: violation of restriction "NO_ALLOCATORS" at bxh4002.ads:55
+bxh4002.adb:80:15: violation of restriction "NO_ALLOCATORS" at bxh4002.ads:55
+bxh4002.adb:89:18: violation of restriction "NO_ALLOCATORS" at bxh4002.ads:55
+gnatmake: "bxh4002.adb" compilation error

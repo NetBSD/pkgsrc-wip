@@ -1,0 +1,75 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+
+U f341a00_1%b		f341a00_1.adb		2bb4114d DE OO PK IU
+
+U f341a00_1%s		f341a00_1.ads		690a2337 DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W f341a00_0%s		f341a00_0.adb		f341a00_0.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f341a00_0.ads		20210516102805 29ef97c9 f341a00_0%s
+D f341a00_1.ads		20210516102805 40e5b4fe f341a00_1%s
+D f341a00_1.adb		20210516102805 6b51a5b3 f341a00_1%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [open f341a00_1 26 14 none]
+G c Z s s [accountDA f341a00_1 12 9 none]
+G c Z s s [accountDF f341a00_1 12 9 none]
+G c Z s s [accountIP f341a00_1 12 9 none]
+G r s account [accountIP f341a00_1 12 9 none] [accountIP f341a00_0 40 9 none]
+X 6 f341a00_0.ads
+36K9*F341A00_0 56e14 7|6w6 10r25
+38F8*Dollar_Amount<float> 7|14r31 8|11r30 12r30
+40R9*Account 43e17 7|12r29
+42f9*Current_Balance{38F8} 8|14m9
+47U14*Deposit
+49U14*Withdrawal
+51V14*Balance{38F8}
+52U14*Service_Charge
+53U14*Add_Interest
+X 7 f341a00_1.ads
+8K9*F341A00_1 28l5 28e14 8|6b14 18l5 18t14
+10K12*Bank=10:25 12r24 14r26 8|11r25 12r25
+12R9*Account<6|40R9> 6|47p14 49p14 51p14 52p14 53p14 7|15e17 26P14 26r31
+. 8|10r31
+14f10*Overdraft_Fee{6|38F8} 8|15m9
+26U14*Open<6|54p14> 26=20 8|10b14 16l8 16t12
+26r20 A{12R9} 8|10b20 14m7 15m7
+X 8 f341a00_1.adb
+11f7 Check_Guarantee{6|38F8} 15r28
+12f7 Initial_Deposit{6|38F8} 14r28
+

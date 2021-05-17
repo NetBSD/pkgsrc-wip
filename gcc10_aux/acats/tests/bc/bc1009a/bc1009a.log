@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1009a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1009a.adb
+bc1009a.adb:37:14: "P1" conflicts with declaration at line 37
+bc1009a.adb:39:16: invalid completion of private type "T1" defined at line 38
+bc1009a.adb:40:16: invalid completion of private type "T1" defined at line 38
+bc1009a.adb:45:15: "P3" conflicts with declaration at line 44
+bc1009a.adb:51:20: "P4" conflicts with declaration at line 50
+bc1009a.adb:62:15: "P6" conflicts with declaration at line 59
+bc1009a.adb:63:11: declaration of full view must appear in private part
+bc1009a.adb:63:16: generic type cannot have a completion
+bc1009a.adb:73:11: declaration of full view must appear in private part
+bc1009a.adb:73:16: generic type cannot have a completion
+bc1009a.adb:74:11: "P5" conflicts with declaration at line 55
+bc1009a.adb:80:11: "P7" conflicts with declaration at line 67
+bc1009a.adb:81:16: "T6" conflicts with declaration at line 68
+gnatmake: "bc1009a.adb" compilation error

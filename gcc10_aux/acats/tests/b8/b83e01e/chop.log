@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01e0.ada into:
+   b83e01e0m.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01e1.ada into:
+   b83e01e0m-b83e01e_proc1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01e2.ada into:
+   b83e01e0m-b83e01e_proc2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83e01e3.ada into:
+   b83e01e0m-b83e01e_proc3.adb

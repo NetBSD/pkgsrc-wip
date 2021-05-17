@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8001a.adb
+bd8001a.adb:4:05: "Asm_Insn" is undefined
+bd8001a.adb:4:15: "Asm" is undefined
+gnatmake: "bd8001a.adb" compilation error

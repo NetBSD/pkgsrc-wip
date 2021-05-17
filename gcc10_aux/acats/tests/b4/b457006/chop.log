@@ -1,0 +1,19 @@
+b457006.a:116:17: if expression must be parenthesized
+b457006.a:120:19: if expression must be parenthesized
+b457006.a:124:12: if expression must be parenthesized
+b457006.a:132:22: if expression must be parenthesized
+b457006.a:140:19: if expression must be parenthesized
+b457006.a:144:13: if expression must be parenthesized
+b457006.a:148:22: expecting expression or component association
+b457006.a:152:42: missing ")"
+b457006.a:156:25: expecting expression or component association
+b457006.a:162:39: if expression must be parenthesized
+b457006.a:169:40: if expression must be parenthesized
+b457006.a:171:33: if expression must be parenthesized
+b457006.a:179:28: if expression must be parenthesized
+b457006.a:182:19: if expression must be parenthesized
+b457006.a:185:22: if expression must be parenthesized
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b457006.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b457006.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b457006.a into:
+   b457006.adb

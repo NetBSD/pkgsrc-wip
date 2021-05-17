@@ -1,0 +1,6 @@
+
+,.,. CA20002 ACATS 4.1 21-05-16 10:49:02
+---- CA20002 Check that compiling multiple units with the same name does
+                not prevent the creation of a partition using only one
+                of the units..
+==== CA20002 PASSED ============================.

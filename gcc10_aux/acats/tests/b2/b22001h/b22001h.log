@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001h.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001h.adb
+b22001h.adb:52:10: selector expected
+gnatmake: "b22001h.adb" compilation error

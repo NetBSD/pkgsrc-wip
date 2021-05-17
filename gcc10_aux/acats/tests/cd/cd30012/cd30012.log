@@ -1,0 +1,8 @@
+
+,.,. CD30012 ACATS 4.1 21-05-16 10:51:12
+---- CD30012 Check that 'Size attribute definition clauses can be given 
+                in the visible or private part of a package for integer 
+                types declared declared in the visible part, and for
+                derived integer types and derived private types whose
+                full declarations are as integer types.
+==== CD30012 PASSED ============================.

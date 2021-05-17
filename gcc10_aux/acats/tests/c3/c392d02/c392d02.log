@@ -1,0 +1,6 @@
+
+,.,. C392D02 ACATS 4.1 21-05-16 10:34:28
+---- C392D02 Dispatching for non-overridden primitive subprograms:
+                record extension declared in non-child package, parent
+                is tagged record.
+==== C392D02 PASSED ============================.

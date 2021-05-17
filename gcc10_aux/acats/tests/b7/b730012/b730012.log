@@ -1,0 +1,39 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b730012.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b730012.adb
+b730012.adb:71:12: missing full declaration for private type "T6"
+b730012.adb:75:15: missing full declaration for private type "T9"
+b730012.adb:82:15: missing full declaration for private type "TA"
+b730012.adb:88:07: declaration of full view must appear in private part
+b730012.adb:91:07: invalid context for private declaration
+b730012.adb:93:07: invalid context for private declaration
+b730012.adb:102:12: missing full declaration for private extension
+b730012.adb:106:15: missing full declaration for private type "T4"
+b730012.adb:114:15: missing full declaration for private extension
+b730012.adb:121:07: declaration of full view must appear in private part
+b730012.adb:124:07: invalid context for private extension
+b730012.adb:126:07: invalid context for private extension
+b730012.adb:135:12: missing full declaration for private type "T1"
+b730012.adb:143:12: missing full declaration for private extension
+b730012.adb:152:12: missing full declaration for private type "T3"
+b730012.adb:158:12: missing full declaration for private extension
+b730012.adb:169:07: invalid context for private declaration
+b730012.adb:170:07: invalid context for private declaration
+b730012.adb:171:07: invalid context for private declaration
+b730012.adb:172:07: invalid context for private declaration
+b730012.adb:173:07: invalid context for private declaration
+b730012.adb:174:07: invalid context for private declaration
+b730012.adb:176:07: invalid context for private extension
+b730012.adb:177:07: invalid context for private extension
+b730012.adb:179:07: invalid context for private extension
+b730012.adb:181:07: invalid context for private extension
+b730012.adb:183:07: invalid context for private extension
+b730012.adb:185:07: invalid context for private extension
+b730012.adb:193:07: invalid context for private declaration
+b730012.adb:194:07: invalid context for private declaration
+b730012.adb:195:07: invalid context for private extension
+b730012.adb:196:07: invalid context for private extension
+b730012.adb:206:07: invalid context for private declaration
+b730012.adb:207:07: invalid context for private declaration
+b730012.adb:208:07: invalid context for private extension
+b730012.adb:210:07: invalid context for private extension
+gnatmake: "b730012.adb" compilation error

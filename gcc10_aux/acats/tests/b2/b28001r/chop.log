@@ -1,0 +1,5 @@
+b28001r.ada:39:11: component declaration expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001r.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001r.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001r.ada into:
+   b28001r.adb

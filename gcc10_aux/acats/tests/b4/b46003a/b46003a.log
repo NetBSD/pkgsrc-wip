@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46003a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46003a.adb
+b46003a.adb:70:17: illegal operand for numeric conversion
+b46003a.adb:71:17: illegal operand for numeric conversion
+b46003a.adb:72:17: illegal operand for numeric conversion
+b46003a.adb:73:20: illegal operand for numeric conversion
+b46003a.adb:74:20: illegal operand for numeric conversion
+b46003a.adb:75:19: illegal operand for numeric conversion
+b46003a.adb:76:18: illegal operand for numeric conversion
+gnatmake: "b46003a.adb" compilation error

@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70012.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70012.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70011.adb
+lxd70011.adb:26:37: violation of restriction "NO_TASK_HIERARCHY" at gnat.adc:47
+gnatmake: "lxd70011.adb" compilation error

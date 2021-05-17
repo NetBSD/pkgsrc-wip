@@ -1,0 +1,6 @@
+
+,.,. CXAC004 ACATS 4.1 21-05-16 10:55:11
+---- CXAC004 Check that the Stream_Access type and Stream function found
+                in package Ada.Text_IO.Text_Streams allows a text file
+                to be processed with the functionality of streams.
+==== CXAC004 PASSED ============================.

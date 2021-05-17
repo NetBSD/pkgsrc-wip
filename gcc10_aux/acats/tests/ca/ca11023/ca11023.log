@@ -1,0 +1,14 @@
+
+,.,. CA110232 ACATS 4.1 21-05-16 10:48:49
+---- CA110232 Check that the context clause of a limited view is empty, 
+                 and that the types imported from a limited view appear 
+                 complete when the library package is visible.
+   - CA110232 Department: Mailroom     .
+   - CA110232 Employee: Smith.
+   - CA110232 Employee: Hilton.
+   - CA110232 Employee: Rove.
+   - CA110232 Employee: Bush.
+   - CA110232 Department: Executive    .
+   - CA110232 Employee: Trump.
+   - CA110232 Employee: Stewart.
+==== CA110232 PASSED ============================.

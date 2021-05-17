@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001c.adb
+b91001c.adb:34:06: missing body for "P"
+b91001c.adb:34:16: extra "TYPE"ignored
+gnatmake: "b91001c.adb" compilation error

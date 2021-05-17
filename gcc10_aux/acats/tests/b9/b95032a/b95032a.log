@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95032a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95032a.adb
+b95032a.adb:73:09: unrecognized attribute "ET1"
+b95032a.adb:78:10: unrecognized attribute "T1"
+b95032a.adb:79:14: unrecognized attribute "ETT2"
+b95032a.adb:83:15: unrecognized attribute "OBJ_TT1"
+gnatmake: "b95032a.adb" compilation error

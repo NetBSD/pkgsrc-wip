@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b57001d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b57001d.adb
+b57001d.adb:44:16: invalid loop name in exit statement
+b57001d.adb:55:21: invalid loop name in exit statement
+b57001d.adb:66:22: "LOOP_PARAMETER" is undefined
+b57001d.adb:90:16: invalid loop name in exit statement
+b57001d.adb:107:26: invalid loop name in exit statement
+b57001d.adb:109:26: invalid loop name in exit statement
+b57001d.adb:110:26: invalid loop name in exit statement
+b57001d.adb:118:26: invalid loop name in exit statement
+b57001d.adb:119:26: invalid loop name in exit statement
+b57001d.adb:121:26: invalid loop name in exit statement
+gnatmake: "b57001d.adb" compilation error

@@ -1,0 +1,5 @@
+b85010b.ada:40:28: identifier expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85010b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85010b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85010b.ada into:
+   b85010b.adb

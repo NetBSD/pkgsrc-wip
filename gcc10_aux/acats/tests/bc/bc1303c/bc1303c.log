@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1303c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1303c.adb
+bc1303c.adb:35:25: invalid operator name
+gnatmake: "bc1303c.adb" compilation error

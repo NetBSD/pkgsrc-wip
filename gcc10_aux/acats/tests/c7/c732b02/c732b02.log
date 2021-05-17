@@ -1,0 +1,7 @@
+
+,.,. C732B02 ACATS 4.1 21-05-16 10:44:17
+---- C732B02 Check that return from a call on a subprogram declared with
+                a type T checks the invariants of T when the result or
+                an in out parameter has is an access-to-object
+                designating T.
+==== C732B02 PASSED ============================.

@@ -1,0 +1,6 @@
+
+,.,. CXACA02 ACATS 4.1 21-05-16 10:55:15
+---- CXACA02 Check that user defined subprograms can override the
+                default attributes 'Read and 'Write using attribute
+                definition clauses.
+==== CXACA02 PASSED ============================.

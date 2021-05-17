@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48003e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48003e.adb
+b48003e.adb:49:26: named association cannot follow positional association
+b48003e.adb:50:22: dynamic or empty choice in aggregate must be the only choice
+b48003e.adb:51:29: dynamic or empty choice in aggregate must be the only choice
+b48003e.adb:52:28: missing index value in array aggregate
+b48003e.adb:52:28:   3
+b48003e.adb:53:28: missing index value in array aggregate
+b48003e.adb:53:28:   3
+b48003e.adb:53:44: index value in array aggregate duplicates the one given at line 53
+b48003e.adb:53:44:   2
+b48003e.adb:54:28: expected type "Standard.Integer"
+b48003e.adb:54:28: found type "T" defined at line 36
+b48003e.adb:55:30: expected type "Standard.Integer"
+b48003e.adb:55:30: found type "T" defined at line 36
+b48003e.adb:56:29: dynamic or empty choice in aggregate must be the only choice
+gnatmake: "b48003e.adb" compilation error

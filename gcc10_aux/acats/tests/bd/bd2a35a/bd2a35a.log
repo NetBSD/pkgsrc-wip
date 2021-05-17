@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a35a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a35a.adb
+bd2a35a.adb:36:32: size for "INTEGER_TYPE" too small, minimum allowed is 7
+gnatmake: "bd2a35a.adb" compilation error

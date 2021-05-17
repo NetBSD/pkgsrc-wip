@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36103a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36103a.adb
+b36103a.adb:40:25: expected type "Standard.Boolean"
+b36103a.adb:40:25: found type "D_BOOL" defined at line 35
+b36103a.adb:44:26: expected type "Standard.Boolean"
+b36103a.adb:44:26: found type "D_BOOL" defined at line 35
+b36103a.adb:48:26: expected type "D_BOOL" defined at line 35
+b36103a.adb:48:26: found type "Standard.Boolean"
+b36103a.adb:53:33: expected type "Standard.Boolean"
+b36103a.adb:53:33: found type "D_BOOL" defined at line 35
+b36103a.adb:57:28: expected type "Standard.Boolean"
+b36103a.adb:57:28: found type "D_BOOL" defined at line 35
+b36103a.adb:61:31: expected type "D_BOOL" defined at line 35
+b36103a.adb:61:31: found type "Standard.Boolean"
+b36103a.adb:65:28: expected type "D_BOOL" defined at line 35
+b36103a.adb:65:28: found type "Standard.Boolean"
+gnatmake: "b36103a.adb" compilation error

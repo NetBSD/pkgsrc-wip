@@ -1,0 +1,18 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba11008.a into:
+   ba11008_0.ads
+   ba11008_0-ba11008_1.ads
+   ba11008_0-ba11008_1-ba11008_2.ads
+   ba11008_0-ba11008_3.ads
+   ba11008_0-ba11008_4.ads
+   ba11008_0-ba11008_4-ba11008_5.ads
+   ba11008_0-ba11008_3.adb
+   ba11008_0-ba11008_4-ba11008_5.adb
+   ba11008_6.ads
+   ba11008_6-ba11008_7.ads
+   ba11008_15.ads
+   ba11008_16.ads
+   ba11008_20.ads
+   ba11008_24.ads
+   ba11008_24-ba11008_7.ads
+   ba11008_24-ba11008_8.ads
+   ba11008.adb

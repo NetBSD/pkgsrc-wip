@@ -1,0 +1,15 @@
+
+,.,. C457005 ACATS 4.1 21-05-16 10:41:45
+---- C457005 When the selecting expression of a case expression is a
+                name with a static nominal subtype and has a static
+                predicate, the static predicate is disabled, and the
+                value of the selecting expression does not satisfy the
+                predicate, check that the others choice is returned, or,
+                if there is no others choice, that Constraint_Error is
+                raised.
+   - C457005 Case expression raised Constraint_Error as expected -
+                Even_Var_1.
+   - C457005 Case expression raised Constraint_Error as expected -
+                Prime_Var.
+   - C457005 Case expression raised Constraint_Error as expected - X1.
+==== C457005 PASSED ============================.

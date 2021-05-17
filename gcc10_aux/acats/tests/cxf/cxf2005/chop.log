@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxf/cxf2005.a into:
+   cxf2005_0.ads
+   cxf2005_0.adb
+   cxf2005_1.ads
+   cxf2005_1.adb
+   cxf2005.adb

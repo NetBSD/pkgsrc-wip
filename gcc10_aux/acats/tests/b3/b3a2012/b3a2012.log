@@ -1,0 +1,27 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2012.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2012.adb
+b3a2012.adb:28:04: instantiation error at b3a2012_1.ads:32
+b3a2012.adb:28:04: non-local pointer cannot point to local object
+b3a2012.adb:28:04: instantiation error at b3a2012_1.ads:33
+b3a2012.adb:28:04: non-local pointer cannot point to local object
+b3a2012.adb:44:04: instantiation error at b3a2012_1.ads:34
+b3a2012.adb:44:04: non-local pointer cannot point to local object
+b3a2012.adb:60:04: instantiation error at b3a2012_1.ads:35
+b3a2012.adb:60:04: non-local pointer cannot point to local object
+b3a2012.adb:102:07: instantiation error at b3a2012_1.ads:32
+b3a2012.adb:102:07: non-local pointer cannot point to local object
+b3a2012.adb:102:07: instantiation error at b3a2012_1.ads:33
+b3a2012.adb:102:07: non-local pointer cannot point to local object
+b3a2012.adb:118:07: instantiation error at b3a2012_1.ads:34
+b3a2012.adb:118:07: non-local pointer cannot point to local object
+b3a2012.adb:134:07: instantiation error at b3a2012_1.ads:35
+b3a2012.adb:134:07: non-local pointer cannot point to local object
+b3a2012.adb:175:10: instantiation error at b3a2012_1.ads:32
+b3a2012.adb:175:10: non-local pointer cannot point to local object
+b3a2012.adb:175:10: instantiation error at b3a2012_1.ads:33
+b3a2012.adb:175:10: non-local pointer cannot point to local object
+b3a2012.adb:191:10: instantiation error at b3a2012_1.ads:34
+b3a2012.adb:191:10: non-local pointer cannot point to local object
+b3a2012.adb:207:10: instantiation error at b3a2012_1.ads:35
+b3a2012.adb:207:10: non-local pointer cannot point to local object
+gnatmake: "b3a2012.adb" compilation error

@@ -1,0 +1,5 @@
+
+,.,. CA11010 ACATS 4.1 21-05-16 10:48:41
+---- CA11010 Check that a private child package can use entities
+                declared in the private part of its parent unit.
+==== CA11010 PASSED ============================.

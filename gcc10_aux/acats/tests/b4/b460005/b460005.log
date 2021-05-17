@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460005.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460005.adb
+b460005.adb:107:08: both component types in a view conversion must be aliased, or neither
+b460005.adb:109:08: both component types in a view conversion must be aliased, or neither
+b460005.adb:112:08: view conversion between unrelated by reference array types not allowed (AI-00246)
+b460005.adb:115:13: component type of a view conversion cannot be private, tagged, or volatile (RM 4.6 (24))
+gnatmake: "b460005.adb" compilation error

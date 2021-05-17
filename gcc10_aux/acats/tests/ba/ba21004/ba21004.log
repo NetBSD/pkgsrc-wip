@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba210045.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba210045.adb
+ba21004_1.ads:50:06: cannot depend on "Report" (wrong categorization)
+ba21004_1.ads:50:06: preelaborated unit cannot depend on non-preelaborated unit
+ba21004_2.ads:50:06: cannot depend on "Report" (wrong categorization)
+ba21004_2.ads:50:06: preelaborated unit cannot depend on non-preelaborated unit
+gnatmake: "ba210045.adb" compilation error

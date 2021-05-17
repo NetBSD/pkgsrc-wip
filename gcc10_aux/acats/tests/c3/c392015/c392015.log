@@ -1,0 +1,5 @@
+
+,.,. C392015 ACATS 4.1 21-05-16 10:34:26
+---- C392015 Check that default expressions of inherited dispatching
+                routines dispatch properly.
+==== C392015 PASSED ============================.

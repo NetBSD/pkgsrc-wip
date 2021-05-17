@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33201c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33201c.adb
+b33201c.adb:63:24: incorrect constraint for this kind of type
+b33201c.adb:65:24: incorrect constraint for this kind of type
+b33201c.adb:67:24: incorrect constraint for this kind of type
+b33201c.adb:69:25: incorrect constraint for this kind of type
+b33201c.adb:71:24: incorrect constraint for this kind of type
+b33201c.adb:76:25: incorrect constraint for this kind of type
+b33201c.adb:79:25: incorrect constraint for this kind of type
+b33201c.adb:82:25: incorrect constraint for this kind of type
+b33201c.adb:85:26: incorrect constraint for this kind of type
+b33201c.adb:88:25: incorrect constraint for this kind of type
+b33201c.adb:93:25: incorrect constraint for this kind of type
+b33201c.adb:96:25: incorrect constraint for this kind of type
+b33201c.adb:99:25: incorrect constraint for this kind of type
+b33201c.adb:102:26: incorrect constraint for this kind of type
+b33201c.adb:105:25: incorrect constraint for this kind of type
+gnatmake: "b33201c.adb" compilation error

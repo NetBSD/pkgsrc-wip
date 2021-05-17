@@ -1,0 +1,6 @@
+
+,.,. C3A0001 ACATS 4.1 21-05-16 10:34:47
+---- C3A0001 Check that access to subprogram can be used to select and
+                invoke an operation with appropriate arguments
+                dynamically.
+==== C3A0001 PASSED ============================.

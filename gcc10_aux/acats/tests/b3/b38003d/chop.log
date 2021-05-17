@@ -1,0 +1,12 @@
+b38003d.ada:61:43: constraint not allowed here
+b38003d.ada:62:46: constraint not allowed here
+b38003d.ada:64:40: constraint not allowed here
+b38003d.ada:65:43: constraint not allowed here
+b38003d.ada:70:43: constraint not allowed here
+b38003d.ada:76:46: constraint not allowed here
+b38003d.ada:82:40: constraint not allowed here
+b38003d.ada:88:43: constraint not allowed here
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b38003d.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b38003d.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b38003d.ada into:
+   b38003d.adb

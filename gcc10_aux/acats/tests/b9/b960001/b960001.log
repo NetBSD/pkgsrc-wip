@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b960001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b960001.adb
+b960001.adb:88:16: expect Time types for "delay until"
+b960001.adb:91:16: expect Time types for "delay until"
+b960001.adb:94:16: expect Time types for "delay until"
+gnatmake: "b960001.adb" compilation error

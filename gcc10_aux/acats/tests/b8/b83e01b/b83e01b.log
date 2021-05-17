@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83e01b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83e01b.adb
+b83e01b.adb:40:17: "PARAM1" conflicts with declaration at line 39
+b83e01b.adb:44:18: "PARAM1" conflicts with declaration at line 43
+b83e01b.adb:48:16: "PARAM1" conflicts with declaration at line 47
+b83e01b.adb:55:16: "PARAM1" conflicts with declaration at line 54
+b83e01b.adb:63:18: "PARAM1" conflicts with declaration at line 61
+b83e01b.adb:67:19: "PARAM1" conflicts with declaration at line 66
+b83e01b.adb:72:11: "PARAM1" conflicts with declaration at line 71
+b83e01b.adb:73:11: "PARAM1" conflicts with declaration at line 72
+b83e01b.adb:79:11: "PARAM1" conflicts with declaration at line 78
+b83e01b.adb:80:11: "PARAM1" conflicts with declaration at line 79
+b83e01b.adb:86:11: "PARAM1" conflicts with declaration at line 85
+b83e01b.adb:92:16: "PARAM1" conflicts with declaration at line 91
+b83e01b.adb:99:29: "PARAM3" conflicts with declaration at line 97
+b83e01b.adb:104:30: "PARAM3" conflicts with declaration at line 102
+b83e01b.adb:106:30: "PARAM3" conflicts with declaration at line 104
+b83e01b.adb:113:29: "PARAM3" conflicts with declaration at line 111
+b83e01b.adb:115:29: "PARAM3" conflicts with declaration at line 113
+b83e01b.adb:121:30: "PARAM3" conflicts with declaration at line 117
+b83e01b.adb:126:18: "PARAM1" conflicts with declaration at line 125
+b83e01b.adb:162:17: "PARAM1" conflicts with declaration at line 161
+gnatmake: "b83e01b.adb" compilation error

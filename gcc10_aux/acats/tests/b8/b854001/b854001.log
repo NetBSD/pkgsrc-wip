@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b854001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b854001.adb
+b854001_0.ads:46:35: unfrozen subprogram cannot rename itself
+b854001_0.ads:59:35: unfrozen subprogram cannot rename itself
+gnatmake: "b854001.adb" compilation error

@@ -1,0 +1,4 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cc/cc3019a.ada into:
+   cc3019a_queues.ads
+   cc3019a_queues.adb
+   cc3019a.adb

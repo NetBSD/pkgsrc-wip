@@ -1,0 +1,214 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U report%b		report.adb		92f3335b DE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali  E
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali  E
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U report%s		report.ads		df19fbea DE EE NE OO PK
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-calend.ads		20210408115627 474d9720 ada.calendar%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D report.ads		20210516102807 df19fbea report%s
+D report.adb		20210516102807 a4538afc report%b
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [test report 90 16 none]
+G c Z s b [failed report 100 16 none]
+G c Z s b [not_applicable report 108 16 none]
+G c Z s b [special_action report 117 16 none]
+G c Z s b [comment report 123 16 none]
+G c Z s b [result report 127 16 none]
+G c Z s b [ident_int report 138 15 none]
+G c Z s b [ident_char report 142 15 none]
+G c Z s b [ident_wide_char report 147 15 none]
+G c Z s b [ident_bool report 152 15 none]
+G c Z s b [ident_str report 156 15 none]
+G c Z s b [ident_wide_str report 160 15 none]
+G c Z s b [equal report 164 15 none]
+G c Z s b [legal_file_name report 171 15 none]
+G c Z s b [time_stamp report 177 15 none]
+G c Z b b [put_msg report 31 16 none]
+G c Z b b [inner_time_stamp report 65 15 none]
+G c Z b b [put_event_trace report 151 16 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|3r6 3r19 4r5 4r18 54r42 66r22 92r23 154r18 160r16 161r29
+. 163r21 165r21 166r33 170r21 174r11 187r21 195r27 197r27 203r21 209r11
+X 2 a-calend.ads
+36K13*Calendar 409e17 12|3w23 4r22 5r36 66r26 92r27
+42I9*Time<222I9> 12|66r35
+48I12*Year_Number{integer} 12|97r28
+49I12*Month_Number{integer} 12|97r48
+50I12*Day_Number{integer} 12|98r19
+54O12*Day_Duration{duration} 12|67r24 106r59 112r33 116r48 120r59
+56V13*Clock{42I9} 12|92s36
+72U14*Split 12|97s11
+222I9 Time_Rep<long_long_integer>
+X 7 a-textio.ads
+57K13*Text_IO 727e16 12|3w10 4r9 5r23 54r46 154r22 160r20 161r33 163r25 165r25
+. 166r37 170r25 174r15 187r25 195r31 197r31 203r25 209r15
+64P9*File_Type 12|154r30
+66n32*Out_File{66E9} 12|166r45
+66n42*Append_File{66E9} 12|161r41
+77I9*Count<integer> 12|54r54
+99U14*Create 12|165s33
+101e7 Mode{66E9} 12|166r25
+102a7 Name{string} 12|165r47
+114U14*Open 12|160s28
+116e7 Mode{66E9} 12|161r21
+117a7 Name{string} 12|160r40
+129U14*Close 12|197s39 209s23
+178V13*Standard_Output{64P9} 12|54s25 55s26
+318U14*Set_Col 12|54s16
+459U14*Put 12|174s23
+498U14*Put_Line 12|55s16 170s33 187s33 195s39 203s33
+544X4*Name_Error 12|163r33
+X 11 report.ads
+84K9*Report 190l5 190e11 12|7b14 402l5 402t11
+86I14*File_Num{integer} 173r15 12|377r36
+90U16*Test 94>11 95>11 12|212b16 230l10 230t14
+94a11 Name{string} 12|212b22 215r14 216r33 220r21 220r27 220r41
+95a11 Descr{string} 12|212b37 226r20 228r44
+100U16*Failed 103>11 12|238b16 246l10 246t16
+103a11 Descr{string} 12|238b24 242r20 244r43
+108U16*Not_Applicable 112>11 12|248b16 258l10 258t24
+112a11 Descr{string} 12|248b32 254r20 256r41
+117U16*Special_Action 120>11 12|260b16 270l10 270t24
+120a11 Descr{string} 12|260b32 266r20 268r43
+123U16*Comment 124>11 12|232b16 236l10 236t17
+124a11 Descr{string} 12|232b25 235r20
+127U16*Result 12|272b16 305l10 305t16
+138V15*Ident_Int{integer} 139>11 12|307b15 313l10 313t19
+139i11 X{integer} 12|307b26 309r21 309r24 310r23
+142V15*Ident_Char{character} 144>11 12|315b15 321l10 321t20
+144e11 X{character} 12|315b27 317r35 317r53 318r23
+147V15*Ident_Wide_Char{wide_character} 149>11 12|323b15 330l10 330t25
+149e11 X{wide_character} 12|323b32 325r40 325r63 327r23
+152V15*Ident_Bool{boolean} 153>11 12|332b15 338l10 338t20
+153b11 X{boolean} 12|332b27 334r33 334r49 335r23
+156V15*Ident_Str{string} 157>11 12|340b15 346l10 346t19
+157a11 X{string} 12|340b26 342r21 342r31 343r23
+160V15*Ident_Wide_Str{wide_string} 161>11 12|348b15 354l10 354t24
+161a11 X{wide_string} 12|348b31 350r21 350r31 351r23
+164V15*Equal{boolean} 166>11 166>14 12|309s14 317s14 325s14 334s14 342s14
+. 350s14 356b15 362s26 366s21 368s21 375l10 375t15
+166i11 X{integer} 12|356b22 360r14 362r34 365r17 366r41 367r17 368r28 374r23
+166i14 Y{integer} 12|356b25 361r19 362r38 366r39 368r33 369r21 374r27
+171V15*Legal_File_Name{string} 173>11 174>11 12|377b15 395l10 395t25
+173i11 X{86I14} 12|377b32 388r16
+174a11 Nam{string} 12|378b32 382r14 385r26
+177V15*Time_Stamp{string} 12|146b15 149l10 149t20 224s53
+183b6*Generate_Event_Trace_File{boolean} 12|156r18 227r14 243r14 255r14 267r14
+. 278r19 284r19 292r19 298r19
+X 12 report.adb
+9E11 Status 10e30 14r20
+9n22 Pass{9E11} 214r26 250r28 262r28 275r16
+9n28 Fail{9E11} 14r30 240r26 302r26
+9n34 Does_Not_Apply{9E11} 251r31 281r16
+9n50 Action_Required{9E11} 250r50 263r31 287r16
+10n22 Unknown{9E11}
+12I11 Time_Integer<integer> 74r23 76r38 79r22 103r26 103r43 109r29 122r21
+. 128r33 129r33 130r33 131r33 132r33 133r33 134r33 135r33 137r33 138r33 139r33
+. 140r33 141r33 142r33
+14e6 Test_Status{9E11} 214m11 240m11 250r14 250r36 251m16 262r14 263m16 274r16
+. 302m11
+16N6 Max_Name_Len 17r29 20r39 215r29 217r33
+17a6 Test_Name{string} 176r28 219m11 223r30 225r30 234r30 241r30 253r30 265r30
+. 276r35 282r35 288r35 296r35 304m11 383r26 400m6
+19a6 No_Name{string} 303r28 304r43 399r23 400r38
+20i6 Test_Name_Len{integer} 35r40 176r42 216m16 217m16 219r25 220r52 223r44
+. 225r44 234r44 241r44 253r44 265r44 276r49 282r49 288r49 290r39 296r49 303m11
+. 304r25 399m6 400r20
+22a6 Event_Trace_File_Name{string} 160r48 165r55
+25N6 Max_Event_Message_Len 186r38 191r24 192r36 206r29
+28a6 ACATS_Version{string} 224r31
+31U16 Put_Msg 31b16 31>25 63l10 63t17 222s11 223s11 225s11 234s11 241s11
+. 253s11 265s11 276s16 282s16 288s16 290s16 296s16
+31a25 Msg{string} 38r26 42r24 44r24 45r48 52r26 55r43 58r27 58r45 61r30
+33i11 Max_Len{integer} 42r40 43r31 49r41
+35i11 Indent{integer} 56r21
+37i11 I{integer} 42r19 43r39 49r49 54r61 56m16
+38i11 M{integer} 42r33 43r26 45r37 48r33 49r36 55r48 57m16 58r22 58r50 59m21
+. 59r26 61r26
+39i11 N{integer} 43m21 44r29 45r32 45r53 46m31 46r36 48r29 49m31 52m21 55r51
+. 57r21
+65V15 Inner_Time_Stamp{string} 65b15 65>33 144l10 144t26 148s18 175s28
+65b33 Full{boolean} 99r14 127r14 175r45
+66i11 Time_Now{2|42I9} 92m11 97r18
+67o11 Dur_Second{2|54O12} 98m37 103r56 106m16 106r30 108m16 108r30 109r42
+. 112r19 114m21 116m21 116r35 119m16 119r30 120m16 120r30 122r34
+68i11 Year{12I11} 97m41 97r41 128r47 129r47 137r47
+69i11 Month{12I11} 97m62 97r62 130r47 138r47
+70i11 Day{12I11} 98m31 98r31 131r47 139r47
+71i11 Hour{12I11} 123m11 132r47 140r47
+72i11 Minute{12I11} 104m16 106r51 120r51 125m11 133r47 141r47
+73i11 Second{12I11} 103m16 104r26 122m11 123r19 124m11 124r21 125r21 126m11
+. 126r21 134r47 142r47
+74i11 SubSecond{12I11} 109m16 110m16 110r29 112r46 116r61 135r47
+76V20 Convert{string} 76b20 76>29 90l15 90t22 128s24 129s24 130s24 131s24
+. 132s24 133s24 134s24 135s24 137s24 138s24 139s24 140s24 141s24 142s24
+76i29 Number{12I11} 79r38
+77a16 Str{string} 82r28 85m21 87m21 88r28
+78a16 Dec_Digit{string} 85r32 87r32
+79i16 Num{12I11} 81r19 84m21 84r28 85r52 86m21 86r28 87r52
+151U16 Put_Event_Trace 151b16 151>33 152>33 210l10 210t25 228s16 244s16 256s16
+. 268s16 279s21 285s21 293s21 299s21
+151a33 Event{string} 174r34
+152a33 Msg{string} 178r37
+154p11 File{7|64P9} 160m34 160r34 165m41 165r41 170r43 174r28 187r43 195r49
+. 197m46 197r46 203r43 209m30 209r30
+178a16 Msg_Copy{string} 180r25 181r24 183m28 186r19 187r49 190r38 191r52
+. 192r60 194r27 196r30 196r40 204r25 204r35 205r27 206r54
+180i20 I{integer} 181r33 183r37
+190i25 I{integer} 194r36 196r58
+357i11 Rec_Limit{integer} 365r21 366r28 366r43
+358b11 Z{boolean} 362m21 363m21 366m16 368m16 369m16 371r18
+380a11 Suffix{string} 383m16 385m16 389r40 390r40 391r40 392r40 393r40
+

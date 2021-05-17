@@ -1,0 +1,8 @@
+bxac005.a:128:16: unrecognized attribute "Put"
+bxac005.a:130:16: unrecognized attribute "Put_Line"
+bxac005.a:132:16: unrecognized attribute "Get"
+/home/fernando/mysandboxfolder/tmp/acats/tests/bxa/bxac005.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bxa/bxac005.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bxa/bxac005.a into:
+   bxac005_0.adb
+   bxac005.adb

@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35a01a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35a01a.adb
+b35a01a.adb:36:11: prefix of "DELTA" attribute must be fixed point type
+b35a01a.adb:37:11: prefix of "FORE" attribute must be fixed point type
+b35a01a.adb:38:11: prefix of "AFT" attribute must be fixed point type
+gnatmake: "b35a01a.adb" compilation error

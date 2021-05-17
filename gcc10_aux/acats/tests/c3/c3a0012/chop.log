@@ -1,0 +1,9 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c3a00120.a into:
+   c3a0012_0.ads
+   c3a0012_0.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c3a00121.a into:
+   c3a0012_0-log_calc_fast.adb
+   c3a0012_0-log_calc_acc.adb
+   c3a0012_0-log_calc_table.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c3a00122.am into:
+   c3a00122.adb

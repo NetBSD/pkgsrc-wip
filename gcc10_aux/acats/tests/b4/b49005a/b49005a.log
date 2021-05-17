@@ -1,0 +1,44 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49005a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49005a.adb
+b49005a.adb:52:34: non-static expression used for integer type bound
+b49005a.adb:52:34: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:53:30: non-static expression used for integer type bound
+b49005a.adb:53:33: selected component is never static (RM 4.9)
+b49005a.adb:54:30: non-static expression used for integer type bound
+b49005a.adb:54:30: indexed component is never static (RM 4.9)
+b49005a.adb:57:30: non-static expression used in number declaration
+b49005a.adb:57:38: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:58:30: non-static expression used in number declaration
+b49005a.adb:58:38: indexed component is never static (RM 4.9)
+b49005a.adb:60:30: non-static expression used in number declaration
+b49005a.adb:60:41: selected component is never static (RM 4.9)
+b49005a.adb:64:33: static integer expression required here
+b49005a.adb:64:33: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:69:31: choice given in variant part is not static
+b49005a.adb:69:31: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:71:31: choice given in variant part is not static
+b49005a.adb:71:34: selected component is never static (RM 4.9)
+b49005a.adb:74:31: choice given in variant part is not static
+b49005a.adb:74:31: indexed component is never static (RM 4.9)
+b49005a.adb:92:31: value for discriminant "I" must be static
+b49005a.adb:92:31: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:94:31: dynamic or empty choice in aggregate must be the only choice
+b49005a.adb:96:31: dynamic or empty choice in aggregate must be the only choice
+b49005a.adb:99:34: dynamic or empty choice in aggregate must be the only choice
+b49005a.adb:104:31: static integer expression required here
+b49005a.adb:104:31: indexed component is never static (RM 4.9)
+b49005a.adb:108:30: static integer expression required here
+b49005a.adb:108:37: selected component is never static (RM 4.9)
+b49005a.adb:112:43: non-static expression used for delta value
+b49005a.adb:112:43: "F" is not static constant or named number (RM 4.9(5))
+b49005a.adb:114:31: non-static expression used for digits value
+b49005a.adb:114:31: indexed component is never static (RM 4.9)
+b49005a.adb:119:41: static integer expression required here
+b49005a.adb:119:41: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:125:21: choice given in case statement is not static
+b49005a.adb:125:21: "V" is not static constant or named number (RM 4.9(5))
+b49005a.adb:127:21: choice given in case statement is not static
+b49005a.adb:127:24: selected component is never static (RM 4.9)
+b49005a.adb:129:21: choice given in case statement is not static
+b49005a.adb:129:21: indexed component is never static (RM 4.9)
+gnatmake: "b49005a.adb" compilation error

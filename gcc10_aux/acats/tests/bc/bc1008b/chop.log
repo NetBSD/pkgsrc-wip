@@ -1,0 +1,5 @@
+bc1008b.ada:31:23: "," should be ";"
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1008b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1008b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1008b.ada into:
+   bc1008b.adb

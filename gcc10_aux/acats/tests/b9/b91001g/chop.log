@@ -1,0 +1,7 @@
+b91001g.ada:37:11: the only representation clause allowed here is an address clause
+b91001g.ada:39:11: the only representation clause allowed here is an address clause
+b91001g.ada:40:11: the only representation clause allowed here is an address clause
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001g.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001g.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001g.ada into:
+   b91001g.adb

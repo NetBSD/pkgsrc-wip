@@ -1,0 +1,77 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U fa11c00_0.fa11c00_1.fa11c00_2%b  fa11c00_0-fa11c00_1-fa11c00_2.adb  ad08bdd9 DE OO PK IU
+W fa11c00_0.fa11c00_1%s	fa11c00_0-fa11c00_1.adb	fa11c00_0-fa11c00_1.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U fa11c00_0.fa11c00_1.fa11c00_2%s  fa11c00_0-fa11c00_1-fa11c00_2.ads  fc6a8b55 DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W fa11c00_0.fa11c00_1%s	fa11c00_0-fa11c00_1.adb	fa11c00_0-fa11c00_1.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210408115627 eff36322 ada.unchecked_deallocation%s
+D fa11c00_0.ads		20210516102806 49bf5b6c fa11c00_0%s
+D fa11c00_0-fa11c00_1.ads  20210516102806 ea359a90 fa11c00_0.fa11c00_1%s
+D fa11c00_0-fa11c00_1-fa11c00_2.ads  20210516102806 165f11c5 fa11c00_0.fa11c00_1.fa11c00_2%s
+D fa11c00_0-fa11c00_1-fa11c00_2.adb  20210516102806 bb57ac1c fa11c00_0.fa11c00_1.fa11c00_2%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-string.ads		20210408115627 8fe54fb7 system.strings%s
+D s-ststop.ads		20210408115627 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [image fa11c00_0__fa11c00_1__fa11c00_2 13 13 none]
+G c Z s s [primateDA fa11c00_0__fa11c00_1__fa11c00_2 8 9 none]
+G c Z s s [primateDF fa11c00_0__fa11c00_1__fa11c00_2 8 9 none]
+G c Z s s [primateIP fa11c00_0__fa11c00_1__fa11c00_2 8 9 none]
+G r s mammal [primateIP fa11c00_0__fa11c00_1__fa11c00_2 8 9 none] [mammalIP fa11c00_0__fa11c00_1 8 9 none]
+X 7 fa11c00_0.ads
+35K9*FA11C00_0 48e14 9|4r9 15r5 10|5r14 12r5
+38A12*Species_Name_Type{string}<integer>
+42a10*Common_Name{38A12} 10|9r39
+X 8 fa11c00_0-fa11c00_1.ads
+4K19*FA11C00_1 7|35k9 8|15e24 9|4r19 15r15 10|5r24 12r15
+8R9*Mammal<7|40R9> 11e17 9|8r24
+X 9 fa11c00_0-fa11c00_1-fa11c00_2.ads
+4K29*FA11C00_2 8|4k19 9|15l25 15e34 10|5b34 12l25 12t34
+6E9*Habitat_Type 6e48 10r20
+6n26*Arboreal{6E9}
+6n36*Terrestrial{6E9}
+8R9*Primate<8|8R9> 11e17 13P13 13r24 10|7r24
+10e10*Habitat{6E9}
+13V13*Image{string}<8|13p13> 13>20 10|7b13 10l8 10t13
+13r20 P{8R9} 10|7b20 9r37
+

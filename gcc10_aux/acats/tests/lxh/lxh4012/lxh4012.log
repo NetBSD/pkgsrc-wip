@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40123.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40123.adb
+lxh4012_0.adb:56:06: violation of restriction "NO_IO" at gnat.adc:56
+gnatmake: "lxh40123.adb" compilation error

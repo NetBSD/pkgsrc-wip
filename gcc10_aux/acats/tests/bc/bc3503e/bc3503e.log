@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3503e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3503e.adb
+bc3503e.adb:59:35: designated type of actual does not match that of formal "FT"
+bc3503e.adb:59:35: instantiation abandoned
+bc3503e.adb:62:33: designated type of actual does not match that of formal "FT"
+bc3503e.adb:62:33: instantiation abandoned
+bc3503e.adb:63:33: designated type of actual does not match that of formal "FT"
+bc3503e.adb:63:33: instantiation abandoned
+bc3503e.adb:67:39: designated type of actual does not match that of formal "FT"
+bc3503e.adb:67:39: instantiation abandoned
+bc3503e.adb:69:37: designated type of actual does not match that of formal "FT"
+bc3503e.adb:69:37: instantiation abandoned
+bc3503e.adb:70:37: designated type of actual does not match that of formal "FT"
+bc3503e.adb:70:37: instantiation abandoned
+gnatmake: "bc3503e.adb" compilation error

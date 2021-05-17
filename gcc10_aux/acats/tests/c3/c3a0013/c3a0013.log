@@ -1,0 +1,8 @@
+
+,.,. C3A0013 ACATS 4.1 21-05-16 10:34:53
+---- C3A0013 Check general access types.  Check aliased nature of formal
+                tagged type parameters.  Check aliased nature of the
+                current instance of a limited type.  Check the
+                constraining of actual subtypes for discriminated
+                objects.
+==== C3A0013 PASSED ============================.

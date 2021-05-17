@@ -1,0 +1,153 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f732a00%b		f732a00.adb		193a3b2e DE OO PK IU
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U f732a00%s		f732a00.ads		97969739 DE EE NE OO PK IU
+Z system.assertions%s	s-assert.adb		s-assert.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f732a00.ads		20210516102805 97969739 f732a00%s
+D f732a00.adb		20210516102805 8eacac17 f732a00%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D system.ads		20210408115627 a6571217 system%s
+D s-assert.ads		20210408115627 cd8d2c94 system.assertions%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+G a e
+G c Z s s [change_constrained_typePartial_Invariant f732a00 66 9 none]
+G c Z s s [change_constrained_typeInvariant f732a00 66 9 none]
+G c Z s b [each_bell_occurs_once f732a00 85 13 none]
+G c Z s b [and_only_once f732a00 88 13 none]
+G c Z s b [rounds_with_default_initialisation f732a00 91 13 none]
+G c Z s b [rounds f732a00 93 13 none]
+G c Z s b [invalid_change f732a00 95 13 none]
+G c Z s b [hunt_for_one_change f732a00 97 14 none]
+G c Z s b [at_lead_end f732a00 101 13 none]
+G c Z s b [grandsire_change f732a00 103 14 none]
+G c Z s b [invalid_grandsire_change f732a00 107 14 none]
+G c Z s b [swaps_dont_overlap f732a00 111 13 none]
+G c Z s b [swap_places f732a00 114 14 none]
+G c Z s s [concert_typeInvariant f732a00 121 9 none]
+G c Z s b [get_concert f732a00 128 13 none]
+G c Z s b [alter_concert_part f732a00 132 14 none]
+G c Z s s [Tchange_constrained_typeBIP f732a00 139 4 none]
+G c Z s s [pairs_to_swap_typeIP f732a00 77 9 none]
+G c Z s s [bells_to_swap_typeIP f732a00 80 9 none]
+G c Z s s [concert_typeIP f732a00 121 9 none]
+G c Z b b [swap_bell_with_following_bell f732a00 80 14 none]
+G c Z b b [broken_swap_bell_with_following_bell f732a00 166 14 none]
+X 3 f732a00.ads
+58K9*F732A00 139E9 144l5 144e12 4|2b14 280l5 280t12
+62N4*No_Of_Bells 64r39 72r59 75r6 105r15 109r15 4|99r45 99r66 150r47 192r47
+64I9*Bell_Range_Type<short_short_integer> 71r41 74r44 139r43 139r63 140r39
+. 4|10r30 11r27 19r27 19r52 20r49 36r19 52r54 56r19 72r20 84r14 98r35 150r20
+. 170r14 192r20 251r38 257r38 272r25 273r28
+66A9*Change_Constrained_Type(64I9) 85r45 88r45 91r55 93r27 95r35 98r29 101r38
+. 103r48 107r56 115r30 121r54 139c9 4|8r45 16r45 27r14 32r16 46r27 52r16
+. 66r35 71r25 81r29 95r29 140r38 143r48 167r29 181r47 216r29
+71I12*Swappable_Bell_Range_Type{64I9} 78r6 4|82r29 168r29
+74I12*Number_Of_Pairs_To_Swap_Type{64I9} 77r38 81r35
+77A9*Pairs_To_Swap_Type(71I12)<64I9> 82r28
+80R9*Bells_To_Swap_Type 81d9 83e14 111r52 116r30 4|208r52 217r29
+81i9*Number_Of_Pairs_To_Swap{74I12} 82r53 4|210r50 220r46
+82a7*Pairs_To_Swap{77A9} 4|211r24 212r24 224r42
+85V13*Each_Bell_Occurs_Once{boolean} 68s26 85>36 4|8b13
+85a36 Change{66A9} 4|12r13
+88V13*And_Only_Once{boolean} 69s26 88>36 4|16b13
+88a36 Change{66A9} 4|21r16 21r32
+91V13*Rounds_With_Default_Initialisation{66A9} 4|26b13 44l8 44t42
+93V13*Rounds{66A9} 4|46b13 64l8 64t14 242s62 244s62 248s53 248s61 254s53
+. 254s61 254s69
+95V13*Invalid_Change{66A9} 4|66b13 78l8 78t22
+97U14*Hunt_For_One_Change 98=7 99>7 4|94b14 138l8 138t27
+98a7 Change{66A9} 4|95b7 112m34 127m34
+99b7 Tenor_Behind{boolean} 4|96b7 99r27
+101V13*At_Lead_End{boolean} 101>26 4|140b13
+101a26 Change{66A9} 4|141r7
+103U14*Grandsire_Change 103=32 4|143b14 164l8 164t24 245s17 275s10
+103a32 Change{66A9} 4|143b32 147m26 155m31
+107U14*Invalid_Grandsire_Change 107=40 4|180b14 206l8 206t32
+107a40 Change{66A9} 4|181b31 189m26 197m31
+111V13*Swaps_Dont_Overlap{boolean} 111>33 118s15 4|208b13
+111r33 Bells_To_Swap{80R9} 4|210r36 211r10 212r10
+114U14*Swap_Places 115=7 116>7 4|215b14 230l8 230t19
+115a7 Change{66A9} 4|216b6 223m28
+116r7 Bells_To_Swap{80R9} 118r35 4|217b6 220r32 224r28
+121A9*Concert_Type(66A9)<integer> 128r57 132r51 4|233r57 240r25 242r26 244r26
+. 248r27 254r27 260r27 267r51
+124E9*Concert_Kind 126e27 128r36 4|233r36
+124n26*Null_Concert{124E9} 4|239r15
+124n40*OK_Len_3{124E9} 4|241r15
+124n50*OK_Len_6{124E9} 4|243r15
+125n6*One_Invalid_Change_First_of_2{124E9} 4|247r15
+125n37*One_Invalid_Change_Last_of_3{124E9} 4|253r15
+126n6*Four_Invalid_Changes{124E9} 4|259r15
+128V13*Get_Concert{121A9} 128>26 4|233b13 264l8 264t19
+128e26 Kind{124E9} 4|233b26 238r12
+130E9*Alter_Kind 130e47 134r47 4|269r47
+130n24*Set_Invalid{130E9} 4|271r17
+130n37*Set_Valid{130E9}
+132U14*Alter_Concert_Part 132=34 133>34 134>34 4|267b14 277l8 277t26
+132a34 Concert{121A9} 135r27 4|267b34 272m10 273r13 275m28 275r28
+133i34 Index{natural} 135r18 4|268b34 272r18 273r21 275r36
+134e34 Kind{130E9} 4|269b34 271r10
+X 4 f732a00.adb
+6i4 Change_Number{natural} 104r10 136m7 136r24 162m7 162r24 204m7 204r24
+. 228m7 228r24
+10i15 Bell_Number{3|64I9} 12r29
+11i19 Bell{3|64I9} 12r21
+19i19 Bell<short_short_integer> 20r37 21r24
+20i23 Other_Bell<short_short_integer> 21r40
+32a7 Change{3|66A9} 38m10 42r14
+36i11 Bell{3|64I9} 38r18 38r27
+52a7 Change{3|66A9} 58m10 62r14
+56i11 Bell{3|64I9} 58r18 58r27
+71a7 Change{3|66A9} 76r14
+80U14 Swap_Bell_With_Following_Bell 80b14 81=7 82>7 92l8 92t37 111s16 126s16
+. 146s7 154s13 222s10
+81a7 Change{3|66A9} 88r15 89m7 89r32 90m7 112r18 127r18 147r10 155r15 223r12
+82i7 Bell_To_Swap{3|71I12} 88r23 89r15 89r40 90r15 113r18 128r18 148r10 156r15
+. 224r12
+84i7 Temp{3|64I9} 88m7 90r36
+98i7 Hunt_On_How_Many{3|64I9} 106r28 121r28
+106i14 Place<short_short_integer> 109r16 113r34
+121i14 Place<short_short_integer> 124r16 128r34
+150i11 Place<short_short_integer> 152r13 156r31
+166U14 Broken_Swap_Bell_With_Following_Bell 166b14 167=7 168>7 178l8 178t44
+. 188s7 196s13
+167a7 Change{3|66A9} 174r15 175m7 175r32 189r10 197r15
+168i7 Bell_To_Swap{3|71I12} 174r23 175r15 175r40 190r10 198r15
+170i7 Temp{3|64I9} 174m7
+192i11 Place<short_short_integer> 194r13 198r31
+210i15 Pair_To_Swap<short_short_integer> 211r39 212r39
+220i11 Pair_To_Swap<short_short_integer> 224r57
+240a21 N{3|121A9}
+242a21 O3{3|121A9}
+244a21 O6{3|121A9} 245m35 245r35
+248a21 OIF{3|121A9} 251m17
+254a21 OIL{3|121A9} 257m17
+260a21 FIC{3|121A9}
+

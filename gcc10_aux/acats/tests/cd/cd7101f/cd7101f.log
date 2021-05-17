@@ -1,0 +1,6 @@
+
+,.,. CD7101F ACATS 4.1 21-05-16 10:51:43
+---- CD7101F CHECK THAT FOR MIN_INT AND MAX_INT IN PACKAGE SYSTEM,
+                LONG_INTEGER'FIRST >= MIN_INT AND LONG_INTEGER'LAST <=
+                MAX_INT.
+==== CD7101F PASSED ============================.

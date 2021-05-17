@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33302a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33302a.adb
+b33302a.adb:33:33: "+" not declared in "P"
+b33302a.adb:42:47: "+" not declared in "P1"
+b33302a.adb:43:49: "F" not declared in "P1"
+b33302a.adb:45:53: "TRUE" not declared in "P1"
+b33302a.adb:50:47: "=" not declared in "P1"
+b33302a.adb:52:33: "=" not declared in "P1"
+b33302a.adb:54:34: "=" not declared in "P1"
+b33302a.adb:65:38: no selector "C1" for type "T7" defined at line 62
+gnatmake: "b33302a.adb" compilation error

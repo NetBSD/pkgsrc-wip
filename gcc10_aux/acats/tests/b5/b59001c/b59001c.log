@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001c.adb
+b59001c.adb:56:21: cannot exit from program unit or accept statement
+b59001c.adb:58:21: cannot exit from program unit or accept statement
+b59001c.adb:59:27: "INTERM_LABEL" is undefined (more references follow)
+b59001c.adb:60:27: "LAB" is undefined
+b59001c.adb:61:27: "NONEXISTENT1" is undefined
+b59001c.adb:64:26: cannot exit from program unit or accept statement
+b59001c.adb:65:26: cannot exit from program unit or accept statement
+b59001c.adb:66:26: cannot exit from program unit or accept statement
+b59001c.adb:67:32: "INTERM_LABEL_1" is undefined
+b59001c.adb:68:32: "LAB_1" is undefined
+b59001c.adb:69:32: "NONEXISTENT2" is undefined
+b59001c.adb:80:16: cannot exit from program unit or accept statement
+b59001c.adb:81:16: cannot exit from program unit or accept statement
+b59001c.adb:83:22: "NONEXISTENT3" is undefined
+b59001c.adb:86:21: cannot exit from program unit or accept statement
+b59001c.adb:87:21: cannot exit from program unit or accept statement
+b59001c.adb:88:27: "INTERM_LABEL_9" is undefined
+b59001c.adb:89:21: cannot exit from program unit or accept statement
+b59001c.adb:90:21: cannot exit from program unit or accept statement
+b59001c.adb:91:27: "NONEXISTENT4" is undefined
+gnatmake: "b59001c.adb" compilation error

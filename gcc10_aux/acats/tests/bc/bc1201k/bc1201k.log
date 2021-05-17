@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1201k.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1201k.adb
+bc1201k.adb:38:23: only a subtype mark is allowed in a formal
+bc1201k.adb:41:23: only a subtype mark is allowed in a formal
+bc1201k.adb:48:23: only a subtype mark is allowed in a formal
+bc1201k.adb:51:23: only a subtype mark is allowed in a formal
+bc1201k.adb:61:23: only a subtype mark is allowed in a formal
+gnatmake: "bc1201k.adb" compilation error

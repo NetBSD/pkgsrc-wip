@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a0004.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a0004.adb
+b3a0004.adb:112:22: object subtype must statically match designated subtype
+b3a0004.adb:117:22: object subtype must statically match designated subtype
+b3a0004.adb:122:22: object subtype must statically match designated subtype
+b3a0004.adb:127:22: object subtype must statically match designated subtype
+b3a0004.adb:132:21: object subtype must statically match designated subtype
+b3a0004.adb:137:21: object subtype must statically match designated subtype
+b3a0004.adb:144:24: object subtype must statically match designated subtype
+gnatmake: "b3a0004.adb" compilation error

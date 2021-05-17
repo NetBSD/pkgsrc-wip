@@ -1,0 +1,8 @@
+
+,.,. C324005 ACATS 4.1 21-05-16 10:31:48
+---- C324005 Check predicate checks are not performed for static and
+                dynamic subtype predicates when the assertion policy is 
+                Ignore, but memberships, the Valid attribute, and for
+                loops continue to use the predicates -- case B: specific
+                assertion policy pragmas.
+==== C324005 PASSED ============================.

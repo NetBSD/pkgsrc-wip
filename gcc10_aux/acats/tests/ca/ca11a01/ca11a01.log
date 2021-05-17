@@ -1,0 +1,5 @@
+
+,.,. CA11A01 ACATS 4.1 21-05-16 10:48:51
+---- CA11A01 Check that type extended in a public child inherits
+                primitive operations from its ancestor.
+==== CA11A01 PASSED ============================.

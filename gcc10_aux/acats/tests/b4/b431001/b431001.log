@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431001.adb
+b431001.adb:70:28: (Ada 2005) box only allowed with named notation
+b431001.adb:78:31: (Ada 2005) box only allowed with named notation
+b431001.adb:86:37: (Ada 2005) box only allowed with named notation
+b431001.adb:94:26: (Ada 2005) box only allowed with named notation
+b431001.adb:103:28: (Ada 2005) box only allowed with named notation
+b431001.adb:111:41: (Ada 2005) box only allowed with named notation
+gnatmake: "b431001.adb" compilation error

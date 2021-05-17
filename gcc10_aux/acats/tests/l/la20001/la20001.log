@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la200012.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la200012.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la20001_0.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la20001_0-la20001_1.ads
+gnatbind -I/home/fernando/mysandboxfolder/tmp/acats/support -x la200012.ali
+error: subunit "la20001_0.la20001_1" in file "la20001_0-la20001_1.adb"
+       has same name as unit "la20001_0.la20001_1 (spec)" found in file "la20001_0-la20001_1.ads"
+       this is not allowed within a single partition (RM 10.2(19))
+gnatmake: *** bind failed.

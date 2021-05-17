@@ -1,0 +1,100 @@
+-- C460A02.A
+--
+--                             Grant of Unlimited Rights
+--
+--     Under contracts F33600-87-D-0337, F33600-84-D-0280, MDA903-79-C-0687,
+--     F08630-91-C-0015, and DCA100-97-D-0025, the U.S. Government obtained 
+--     unlimited rights in the software and documentation contained herein.
+--     Unlimited rights are defined in DFAR 252.227-7013(a)(19).  By making 
+--     this public release, the Government intends to confer upon all 
+--     recipients unlimited rights  equal to those held by the Government.  
+--     These rights include rights to use, duplicate, release or disclose the 
+--     released technical data and computer software in whole or in part, in 
+--     any manner and for any purpose whatsoever, and to have or permit others 
+--     to do so.
+--
+--                                    DISCLAIMER
+--
+--     ALL MATERIALS OR INFORMATION HEREIN RELEASED, MADE AVAILABLE OR
+--     DISCLOSED ARE AS IS.  THE GOVERNMENT MAKES NO EXPRESS OR IMPLIED 
+--     WARRANTY AS TO ANY MATTER WHATSOEVER, INCLUDING THE CONDITIONS OF THE
+--     SOFTWARE, DOCUMENTATION OR OTHER INFORMATION RELEASED, MADE AVAILABLE 
+--     OR DISCLOSED, OR THE OWNERSHIP, MERCHANTABILITY, OR FITNESS FOR A
+--     PARTICULAR PURPOSE OF SAID MATERIAL.
+--*
+--
+-- OBJECTIVE:
+--      Check that if the target type of a type conversion is a general
+--      access type, Program_Error is raised if the accessibility level of
+--      the operand type is deeper than that of the target type. Check for
+--      cases where the type conversion occurs in an instance body, and
+--      the operand type is declared inside the instance or is the anonymous
+--      access type of an access parameter or access discriminant.
+--
+-- TEST DESCRIPTION:
+--      In order to satisfy accessibility requirements, the operand type must
+--      be at the same or a less deep nesting level than the target type -- the
+--      operand type must "live" as long as the target type. Nesting levels
+--      are the run-time nestings of masters: block statements; subprogram,
+--      task, and entry bodies; and accept statements. Packages are invisible
+--      to accessibility rules.
+--
+--      This test checks for cases where the operand is a component of a
+--      generic formal object, a stand-alone object, and an access parameter.
+--
+--      The test declares three generic units, each containing an access
+--      type conversion in which the target type is a formal type:
+--
+--         (1) A generic package in which the operand type is the anonymous
+--             access type of an access discriminant, and the conversion
+--             occurs within the declarative part of the body.
+--
+--         (2) A generic package in which the operand type is declared within
+--             the specification, and the conversion occurs within the
+--             sequence of statements of the body.
+--
+--         (3) A generic procedure in which the operand type is the anonymous
+--             access type of an access parameter, and the conversion occurs
+--             within the sequence of statements.
+--
+--      The test verifies the following:
+--
+--         For (1), Program_Error is raised when the package is instantiated
+--         if the actual passed through the formal object has an accessibility
+--         level deeper than that of the target type passed as an actual, and
+--         that no exception is raised otherwise. The exception is propagated
+--         to the innermost enclosing master.
+--
+--         For (2), Program_Error is raised when the package is instantiated
+--         if the package is instantiated at a level deeper than that of the
+--         target type passed as an actual, and that no exception is raised
+--         otherwise. The exception is handled within the package body.
+--
+--         For (3), Program_Error is raised when the instance procedure is
+--         called if the actual passed through the access parameter has an
+--         accessibility level deeper than that of the target type passed as
+--         an actual, and that no exception is raised otherwise. The exception
+--         is handled within the instance procedure.
+--
+-- TEST FILES:
+--      The following files comprise this test:
+--
+--         F460A00.A
+--      => C460A02.A
+--
+--
+-- CHANGE HISTORY:
+--      10 May 95   SAIC    Initial prerelease version.
+--      24 Apr 96   SAIC    Changed the target type formal to be 
+--                          access-to-constant; Modified code to avoid dead 
+--                          variable optimization.
+--
+--!
+
+with F460A00;
+generic
+   type Target_Type is access all F460A00.Tagged_Type;
+   FObj: in out F460A00.Composite_Type;
+package C460A02_0 is
+   procedure Dummy; -- Needed to allow package body.
+end C460A02_0;

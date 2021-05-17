@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b63103a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b63103a.adb
+b63103a.adb:41:21: not fully conformant with declaration at line 35
+b63103a.adb:41:21: default expression for "X" does not match
+b63103a.adb:48:21: not fully conformant with declaration at line 37
+b63103a.adb:48:21: default expression for "Y" does not match
+b63103a.adb:62:16: not fully conformant with declaration at line 60
+b63103a.adb:62:16: default expression for "Z" does not match
+b63103a.adb:75:16: not fully conformant with declaration at line 73
+b63103a.adb:75:16: default expression for "ZZ" does not match
+gnatmake: "b63103a.adb" compilation error

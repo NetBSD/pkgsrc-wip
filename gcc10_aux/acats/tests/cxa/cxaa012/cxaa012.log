@@ -1,0 +1,7 @@
+
+,.,. CXAA012 ACATS 4.1 21-05-16 10:55:00
+---- CXAA012 Check that the exception Mode_Error is raised when an
+                attempt is made to read from (perform a Get_Line) or use
+                the predefined End_Of_File function on a text file with 
+                mode Append_File.
+==== CXAA012 PASSED ============================.

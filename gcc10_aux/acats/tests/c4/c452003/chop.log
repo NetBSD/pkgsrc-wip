@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c4/c452003.a into:
+   c452003_root.ads
+   c452003_root.adb
+   c452003_root-child.ads
+   c452003_root-child.adb
+   c452003a.ads
+   c452003a.adb
+   c452003.adb

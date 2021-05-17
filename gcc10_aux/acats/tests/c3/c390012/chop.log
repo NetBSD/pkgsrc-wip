@@ -1,0 +1,14 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c390012.a into:
+   c390012_geometry.ads
+   c390012_geometry.adb
+   c390012_manager.ads
+   c390012_manager.adb
+   c390012_geometry-circles.ads
+   c390012_geometry-circles.adb
+   c390012_geometry-squares.ads
+   c390012_geometry-squares.adb
+   c390012_geometry-triangles.ads
+   c390012_geometry-triangles.adb
+   c390012_geometry-ghosts.ads
+   c390012_geometry-ghosts.adb
+   c390012.adb

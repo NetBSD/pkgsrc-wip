@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49007b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49007b.adb
+b49007b.adb:44:25: non-static expression used for integer type bound
+b49007b.adb:44:25: "C2" is not a static constant (RM 4.9(5))
+b49007b.adb:48:21: choice given in variant part is not static
+b49007b.adb:48:21: "C2" is not a static constant (RM 4.9(5))
+b49007b.adb:62:25: value for discriminant "D" must be static
+b49007b.adb:62:25: "C2" is not a static constant (RM 4.9(5))
+b49007b.adb:66:16: choice given in case statement is not static
+b49007b.adb:66:16: "C2" is not a static constant (RM 4.9(5))
+gnatmake: "b49007b.adb" compilation error

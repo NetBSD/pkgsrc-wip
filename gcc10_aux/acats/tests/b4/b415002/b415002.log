@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b415002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b415002.adb
+b415002.adb:15:09: left hand side of assignment must be a variable
+b415002.adb:18:15: actual for "V" must be a variable
+b415002.adb:24:09: left hand side of assignment must be a variable
+b415002.adb:27:15: actual for "V" must be a variable
+b415002.adb:34:17: left hand side of assignment must be a variable
+b415002.adb:37:23: actual for "V" must be a variable
+gnatmake: "b415002.adb" compilation error

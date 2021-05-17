@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70072.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70072.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70071.adb
+lxd70071.adb:5:06: violation of restriction "NO_DYNAMIC_PRIORITIES" at gnat.adc:44
+gnatmake: "lxd70071.adb" compilation error

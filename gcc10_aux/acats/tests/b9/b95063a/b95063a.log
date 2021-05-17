@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95063a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95063a.adb
+b95063a.adb:34:22: default initialization only allowed for "IN" parameters
+b95063a.adb:36:22: default initialization only allowed for "IN" parameters
+gnatmake: "b95063a.adb" compilation error

@@ -1,0 +1,10 @@
+
+,.,. C413004 ACATS 4.1 21-05-16 10:35:18
+---- C413004 Check that for the prefixed view L.R, if L represents an
+                object or value of an access type that designates a
+                tagged type T, that R may represent a subprogram with a 
+                first access parameter that designates the type T or a
+                class-wide type covered by T that is declared
+                immediately in the declarative region of an ancestor of 
+                T..
+==== C413004 PASSED ============================.

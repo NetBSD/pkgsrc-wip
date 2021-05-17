@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41327b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41327b.adb
+b41327b.adb:63:20: "=" not declared in "P"
+b41327b.adb:65:20: "/=" not declared in "P"
+gnatmake: "b41327b.adb" compilation error

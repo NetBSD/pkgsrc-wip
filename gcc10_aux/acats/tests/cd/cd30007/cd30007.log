@@ -1,0 +1,6 @@
+
+,.,. CD30007 ACATS 4.1 21-05-16 10:51:10
+---- CD30007 Check that the implementation supports specifying Sizes for
+                types, including full types for private types, using
+                aspect specifications.
+==== CD30007 PASSED ============================.

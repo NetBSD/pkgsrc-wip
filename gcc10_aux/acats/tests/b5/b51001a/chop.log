@@ -1,0 +1,10 @@
+b51001a.ada:42:11: declarations must come before "BEGIN"
+b51001a.ada:50:06: declarations must come before "BEGIN"
+b51001a.ada:56:11: declarations must come before "BEGIN"
+b51001a.ada:64:16: declarations must come before "BEGIN"
+b51001a.ada:72:11: declarations must come before "BEGIN"
+b51001a.ada:82:11: declarations must come before "BEGIN"
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b51001a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b51001a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b51001a.ada into:
+   b51001a.adb

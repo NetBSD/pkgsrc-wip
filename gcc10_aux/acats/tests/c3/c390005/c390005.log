@@ -1,0 +1,6 @@
+
+,.,. C390005 ACATS 4.1 21-05-16 10:34:02
+---- C390005 Primitive operation inheritance by type extensions: root
+                type is private; all extensions are private and declared
+                in different packages.
+==== C390005 PASSED ============================.

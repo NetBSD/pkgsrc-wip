@@ -1,0 +1,53 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U fa11d00%b		fa11d00.adb		622a03a9 DE NE OO PK IU
+
+U fa11d00%s		fa11d00.ads		0e63e0a4 DE EE OO PK IU
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D fa11d00.ads		20210516102806 0e63e0a4 fa11d00%s
+D fa11d00.adb		20210516102806 6c49e30d fa11d00%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+G a e
+G c Z s s [complex_typeIP fa11d00 43 9 none]
+G c Z s b [complex fa11d00 65 13 none]
+X 3 fa11d00.ads
+36K9*FA11D00 68l5 68e12 4|4b14 10l5 10t12
+41I9*Int_Type<short_integer> 44r14 45r14 65r35 4|5r35
+43R9*Complex_Type 46e14 48r27 49r27 50r27 66r13 4|5r52
+44i7*Real{41I9} 48m44 49m44 50m44
+45i7*Imag{41I9} 48m55 49m55 50m56
+48r4*Zero{43R9}
+49r4*One{43R9}
+50r4*Check_Value{43R9}
+52X4*Add_Error
+53X4*Subtract_Error
+54X4*Divide_Error
+55X4*Multiply_Error
+57b4*TC_Handled_In_Caller{boolean}
+58b4*TC_Handled_In_Child_Pkg_Proc{boolean}
+59b4*TC_Handled_In_Child_Pkg_Func{boolean}
+60b4*TC_Handled_In_Grandchild_Pkg_Proc{boolean}
+61b4*TC_Handled_In_Grandchild_Pkg_Func{boolean}
+62b4*TC_Handled_In_Child_Sub{boolean}
+63b4*TC_Propagated_To_Caller{boolean}
+65V13*Complex{43R9} 65>22 65>28 4|5b13 8l8 8t15
+65i22 Real{41I9} 4|5b22 7r15
+65i28 Imag{41I9} 4|5b28 7r21
+

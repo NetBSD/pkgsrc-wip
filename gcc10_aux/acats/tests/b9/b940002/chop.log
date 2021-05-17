@@ -1,0 +1,6 @@
+b940002.a:47:30: constant components are not permitted
+b940002.a:64:07: illegal declaration in protected definition
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940002.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940002.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940002.a into:
+   b940002.adb

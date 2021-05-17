@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb2003c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb2003c.adb
+bb2003c.adb:39:11: "OTHERS" must appear alone and last
+gnatmake: "bb2003c.adb" compilation error

@@ -1,0 +1,5 @@
+
+,.,. CE3804C ACATS 4.1 21-05-16 10:53:41
+---- CE3804C CHECK THAT GET FOR FLOAT_IO RAISES MODE_ERROR WHEN THE MODE
+                IS NOT IN_FILE.
+==== CE3804C PASSED ============================.

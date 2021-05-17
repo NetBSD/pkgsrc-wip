@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003e.adb
+b91003e.adb:42:06: "END T4;" expected
+b91003e.adb:47:06: "END T5;" expected
+gnatmake: "b91003e.adb" compilation error

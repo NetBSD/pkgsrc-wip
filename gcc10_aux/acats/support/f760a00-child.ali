@@ -1,0 +1,114 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f760a00.child%b	f760a00-child.adb	e842da0e DE OO PK IU
+W f760a00%s		f760a00.adb		f760a00.ali
+
+U f760a00.child%s	f760a00-child.ads	b6fc9de6 DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W f760a00%s		f760a00.adb		f760a00.ali
+W report%s		report.adb		report.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+W tctouch%s		tctouch.adb		tctouch.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-finali.ads		20210408115627 bf4f806b ada.finalization%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f760a00.ads		20210516102806 12285b09 f760a00%s
+D f760a00-child.ads	20210516102806 568fe345 f760a00.child%s
+D f760a00-child.adb	20210516102806 becd394b f760a00.child%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-finmas.ads		20210408115627 7811a767 system.finalization_masters%s
+D s-finroo.ads		20210408115627 4ff27390 system.finalization_root%s
+D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210408115627 8747ecd2 system.os_interface%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210408115627 b16154c2 system.storage_pools%s
+D s-stposu.ads		20210408115627 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20210408115627 801abd01 system.task_info%s
+D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
+D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
+D s-taprob.ads		20210408115627 acd6094d system.tasking.protected_objects%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D tctouch.ads		20210516102805 2d42de40 tctouch%s
+G a e
+G c Z s b [check_init f760a00__child 11 15 none]
+G c Z s b [check_fin_lim_ext f760a00__child 13 15 none]
+G c Z s b [use_it f760a00__child 15 15 none]
+G c Z s s [lim_extDF f760a00__child 6 10 none]
+G c Z s s [lim_extDI f760a00__child 6 10 none]
+G c Z s s [lim_extIP f760a00__child 6 10 none]
+G r c none [check_init f760a00__child 11 15 none] [validate tctouch 116 13 none]
+G r c none [check_fin_lim_ext f760a00__child 13 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00__child 15 15 none] [use_it f760a00 101 15 none]
+G r c none [use_it f760a00__child 15 15 none] [use_it f760a00 62 15 none]
+G r e tc_copy_check [lim_extDF f760a00__child 6 10 none] [finalize f760a00 57 15 none]
+G r k lim_tagged [lim_extDF f760a00__child 6 10 none] [lim_taggedDF f760a00 92 10 none]
+G r s lim_tagged [lim_extIP f760a00__child 6 10 none] [lim_taggedIP f760a00 92 10 none]
+G r s tc_copy_check [lim_extIP f760a00__child 6 10 none] [tc_copy_checkIP f760a00 138 10 none]
+G r f tc_copy_check [lim_extIP f760a00__child 6 10 none] [initialize f760a00 53 15 none]
+G r e tc_copy_check [lim_extIP f760a00__child 6 10 none] [finalize f760a00 57 15 none]
+G r k lim_tagged [lim_extIP f760a00__child 6 10 none] [lim_taggedDF f760a00 92 10 none]
+X 7 f760a00.ads
+49K9*F760A00 142e12 8|4r9 19r5 9|3r14 23r5
+51R10*TC_Copy_Check<3|43R9> 140e15 8|8r14
+62U15*Use_It 9|20s8
+92R10*Lim_Tagged 95e15 8|6r25 9|19r16
+101U15*Use_It 9|19s8
+X 8 f760a00-child.ads
+4K17*Child 7|49k9 8|19l13 19e18 9|3b22 23l13 23t18
+6R10*Lim_Ext<7|92R10> 9e15 11p15 11r39 15r39 9|5r39 15r39
+7i8*G{natural}
+8r8*TC2{7|51R10} 9|20m23
+11U15*Check_Init 11>27 11>48 9|5b15 8l9 8t19
+11r27 Object{6R10} 9|5b27
+11a48 Message{string} 9|5b48 7r33
+13U15*Check_Fin_Lim_Ext 13>34 9|10b15 13l9 13t26
+13a34 Message{string} 9|10b34 12r33
+15U15*Use_It 15=23 9|15b15 21l9 21t15
+15c23 Object<6R10> 9|15b23 19m28 19r28 20m16 20r16
+X 12 report.ads
+84K9*Report 8|3w15 12|190e11
+X 24 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 37 tctouch.ads
+108K9*TCTouch 8|3w6 9|7r8 12r8 37|148e12
+116U13*Validate 9|7s16 12s16
+

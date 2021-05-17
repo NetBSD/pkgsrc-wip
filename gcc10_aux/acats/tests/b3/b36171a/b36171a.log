@@ -1,0 +1,50 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36171a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36171a.adb
+b36171a.adb:54:18: incorrect constraint for this kind of type
+b36171a.adb:55:19: incorrect constraint for this kind of type
+b36171a.adb:61:15: invalid constraint: type has no discriminant
+b36171a.adb:69:16: invalid constraint: type has no discriminant
+b36171a.adb:75:12: array type is already constrained
+b36171a.adb:76:12: invalid constraint on access type
+b36171a.adb:77:12: invalid constraint on access type
+b36171a.adb:79:12: invalid constraint on access type
+b36171a.adb:80:12: invalid constraint on access type
+b36171a.adb:91:15: incorrect number of index constraints for type "D3" defined at line 84
+b36171a.adb:92:15: incorrect number of index constraints for type "D3" defined at line 84
+b36171a.adb:94:17: incorrect number of index constraints for type "D3" defined at line 84
+b36171a.adb:95:17: incorrect number of index constraints for type "D3" defined at line 84
+b36171a.adb:96:14: incorrect number of index constraints for type "D4" defined at line 87
+b36171a.adb:99:17: incorrect number of index constraints for type "D4" defined at line 87
+b36171a.adb:101:12: unconstrained subtype not allowed (need initialization)
+b36171a.adb:101:12: provide initial value or explicit array bounds
+b36171a.adb:102:17: incorrect number of index constraints for type "D4" defined at line 87
+b36171a.adb:108:17: expected type "Standard.Boolean"
+b36171a.adb:108:17: found type "NB" defined at line 106
+b36171a.adb:108:21: expected type "Standard.Boolean"
+b36171a.adb:108:21: found type "NB" defined at line 106
+b36171a.adb:108:25: expected type "Standard.Boolean"
+b36171a.adb:108:25: found type "NB" defined at line 106
+b36171a.adb:108:29: expected type "Standard.Boolean"
+b36171a.adb:108:29: found type "NB" defined at line 106
+b36171a.adb:109:30: expected type "Standard.Boolean"
+b36171a.adb:109:30: found type "NB" defined at line 106
+b36171a.adb:110:16: expected type "Standard.Integer"
+b36171a.adb:110:16: found type "NI" defined at line 107
+b36171a.adb:110:19: expected type "Standard.Integer"
+b36171a.adb:110:19: found type "NI" defined at line 107
+b36171a.adb:110:22: expected type "Standard.Integer"
+b36171a.adb:110:22: found type "NI" defined at line 107
+b36171a.adb:111:29: expect subtype of type "Standard.Integer"
+b36171a.adb:116:22: array type is already constrained
+b36171a.adb:117:13: array type is already constrained
+b36171a.adb:134:16: unconstrained subtype in component declaration
+b36171a.adb:140:16: unconstrained subtype in component declaration
+b36171a.adb:144:11: unconstrained element type in array declaration
+b36171a.adb:146:11: unconstrained element type in array declaration
+b36171a.adb:148:11: unconstrained element type in array declaration
+b36171a.adb:150:10: unconstrained subtype not allowed (need initialization)
+b36171a.adb:150:10: provide initial value or explicit array bounds
+b36171a.adb:152:15: unconstrained subtype in component declaration
+b36171a.adb:154:32: unconstrained element type in array declaration
+b36171a.adb:156:11: unconstrained element type in array declaration
+gnatmake: "b36171a.adb" compilation error

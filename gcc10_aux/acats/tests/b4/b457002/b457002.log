@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457002.adb
+b457002.adb:53:19: the choice "others" must appear alone and last
+b457002.adb:57:19: the choice "others" must appear alone and last
+b457002.adb:61:23: the choice "others" must appear alone and last
+b457002.adb:65:19: the choice "others" must appear alone and last
+b457002.adb:69:23: the choice "others" must appear alone and last
+b457002.adb:73:23: the choice "others" must appear alone and last
+gnatmake: "b457002.adb" compilation error

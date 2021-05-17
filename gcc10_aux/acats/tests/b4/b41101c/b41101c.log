@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41101c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41101c.adb
+b41101c.adb:50:13: expected type "Standard.Integer"
+b41101c.adb:50:13: found type "S1" defined at line 35
+b41101c.adb:52:13: expected type "Standard.Integer"
+b41101c.adb:52:13: found type "U" defined at line 45
+b41101c.adb:54:13: expected type "Standard.Integer"
+b41101c.adb:54:13: found type "Standard.Boolean"
+b41101c.adb:56:18: expected type "Standard.Integer"
+b41101c.adb:56:18: found type "Standard.Character"
+b41101c.adb:58:13: expected type "S1" defined at line 35
+b41101c.adb:58:13: found type "Standard.Integer"
+b41101c.adb:60:14: expected type "U" defined at line 45
+b41101c.adb:60:14: found type universal integer
+gnatmake: "b41101c.adb" compilation error

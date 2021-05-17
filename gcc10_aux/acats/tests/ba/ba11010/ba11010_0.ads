@@ -1,0 +1,77 @@
+-- BA11010.A
+--
+--                             Grant of Unlimited Rights
+--
+--     Under contracts F33600-87-D-0337, F33600-84-D-0280, MDA903-79-C-0687,
+--     F08630-91-C-0015, and DCA100-97-D-0025, the U.S. Government obtained 
+--     unlimited rights in the software and documentation contained herein.
+--     Unlimited rights are defined in DFAR 252.227-7013(a)(19).  By making 
+--     this public release, the Government intends to confer upon all 
+--     recipients unlimited rights  equal to those held by the Government.  
+--     These rights include rights to use, duplicate, release or disclose the 
+--     released technical data and computer software in whole or in part, in 
+--     any manner and for any purpose whatsoever, and to have or permit others 
+--     to do so.
+--
+--                                    DISCLAIMER
+--
+--     ALL MATERIALS OR INFORMATION HEREIN RELEASED, MADE AVAILABLE OR
+--     DISCLOSED ARE AS IS.  THE GOVERNMENT MAKES NO EXPRESS OR IMPLIED 
+--     WARRANTY AS TO ANY MATTER WHATSOEVER, INCLUDING THE CONDITIONS OF THE
+--     SOFTWARE, DOCUMENTATION OR OTHER INFORMATION RELEASED, MADE AVAILABLE 
+--     OR DISCLOSED, OR THE OWNERSHIP, MERCHANTABILITY, OR FITNESS FOR A
+--     PARTICULAR PURPOSE OF SAID MATERIAL.
+--*
+--
+-- OBJECTIVE:
+--      Check that a library unit renaming declaration may not be used to
+--      rename a physically nested package, a physically nested subprogram,
+--      or a subunit.
+--
+-- TEST DESCRIPTION:
+--      Declare a generic package.  Declare a parent package.  Declare a 
+--      physically nested package in the parent package.  Instantiate the
+--      generic package in the parent package.  Declare a subunit package in
+--      the parent package.  Declare a subunit procedure in the subunit 
+--      package.  Declare a child package.  Declare a physically nested
+--      procedure in the child package.  Instantiate the generic package 
+--      in the child package.  Declare a subunit function in the child
+--      package.  Declare a child function.  Declare a physically nested 
+--      package in the child function.  Declare a subunit procedure in the
+--      child function.  Declare a procedure.  Declare a physically nested 
+--      package in the procedure.  Declare a subunit function in the
+--      procedure.  
+--
+--      The following cases should cause compile-time errors:
+--         (a) rename the instance of BA11010_0 as a generic library package.
+--         (b) rename physically nested package BA11010_2 in the parent package
+--             as a library unit.
+--         (c) rename the instance, BA11010_3, in the parent package as a
+--             library unit.
+--         (d) rename subunit procedure BA11010_5 of the subunit package
+--             BA11010_4 in the parent package as a library unit.
+--         (e) rename physically nested procedure BA11010_7 in the child  
+--             package as a library unit.
+--         (f) rename the instance, BA11010_8, in the child package as a
+--             library unit.
+--         (g) rename subunit function BA11010_9 in the child package as a
+--             a library unit.
+--         (h) rename physically nested package BA11010_11 in the child  
+--             function as a library unit.
+--         (i) rename subunit procedure BA11010_12 in the child function as a 
+--             library unit.
+--         (j) rename physically nested package BA11010_14 as a library unit.
+--         (k) rename subunit function BA11010_15 as a library unit.
+--
+--
+-- CHANGE HISTORY:
+--      06 Dec 94   SAIC    ACVC 2.0
+--
+--!
+
+-- Generic package
+generic
+-- Parameters go here.
+package BA11010_0 is
+   type Generic_Type is range 1 .. 100;
+end BA11010_0;

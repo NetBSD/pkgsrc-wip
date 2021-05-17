@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1207a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1207a.adb
+bc1207a.adb:36:49: unconstrained element type in array declaration
+bc1207a.adb:42:15: unconstrained subtype not allowed (need initialization)
+bc1207a.adb:46:25: unconstrained subtype in component declaration
+bc1207a.adb:50:42: unconstrained element type in array declaration
+bc1207a.adb:54:29: uninitialized unconstrained allocation not allowed
+bc1207a.adb:54:29: qualified expression or constraint with discriminant values required
+bc1207a.adb:56:28: uninitialized unconstrained allocation not allowed
+bc1207a.adb:56:28: qualified expression or constraint with discriminant values required
+gnatmake: "bc1207a.adb" compilation error

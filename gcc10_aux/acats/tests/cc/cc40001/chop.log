@@ -1,0 +1,12 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cc/cc40001.a into:
+   cc40001_0.ads
+   cc40001_0.adb
+   cc40001_0-cc40001_1.ads
+   cc40001_0-cc40001_1.adb
+   cc40001_0-cc40001_2.ads
+   cc40001_0-cc40001_2.adb
+   cc40001_0-cc40001_3.ads
+   cc40001_0-cc40001_3.adb
+   cc40001_0-cc40001_4.ads
+   cc40001_0-cc40001_4.adb
+   cc40001.adb

@@ -1,0 +1,8 @@
+
+,.,. C732C01 ACATS 4.1 21-05-16 10:44:18
+---- C732C01 Check that Assertion_Error is raised when the policy
+                requires checks and there is an object for which the
+                invariant check fails, but not when the invariant check 
+                passes - tagged type with unknown discriminants array
+                version.
+==== C732C01 PASSED ============================.

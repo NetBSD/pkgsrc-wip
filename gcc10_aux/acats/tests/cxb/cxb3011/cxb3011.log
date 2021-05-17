@@ -1,0 +1,6 @@
+
+,.,. CXB3011 ACATS 4.1 21-05-16 10:58:14
+---- CXB3011 Check that the two versions of Function Value returning a
+                String result, and the Function Strlen, produce correct 
+                results.
+==== CXB3011 PASSED ============================.

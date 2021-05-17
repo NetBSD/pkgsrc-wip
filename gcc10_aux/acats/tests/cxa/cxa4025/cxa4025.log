@@ -1,0 +1,6 @@
+
+,.,. CXA4025 ACATS 4.1 21-05-16 10:54:30
+---- CXA4025 Check that subprograms defined in packages
+                Ada.Strings.Wide_Maps and Ada.Strings.Wide_Fixed produce
+                correct results.
+==== CXA4025 PASSED ============================.

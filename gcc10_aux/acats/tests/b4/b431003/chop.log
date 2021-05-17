@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b431003.a into:
+   b431003_root.ads
+   b431003_b.ads
+   b431003_c.ads
+   b431003_d.ads
+   b431003.adb

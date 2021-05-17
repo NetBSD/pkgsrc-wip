@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba13b01.a into:
+   ba13b01_0.ads
+   ba13b01_0-ba13b01_1.ads
+   ba13b01_0-ba13b01_1.adb
+   ba13b01_0-ba13b01_2.ads
+   ba13b01_0-ba13b01_2.adb
+   ba13b01_0-ba13b01_2-private_child_pro.adb

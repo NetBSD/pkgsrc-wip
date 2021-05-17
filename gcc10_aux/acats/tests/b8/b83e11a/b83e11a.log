@@ -1,0 +1,19 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83e11a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83e11a.adb
+b83e11a.adb:36:21: "PARAM1" conflicts with declaration at line 35
+b83e11a.adb:37:21: "PARAM1" conflicts with declaration at line 36
+b83e11a.adb:39:21: "PARAM1" conflicts with declaration at line 37
+b83e11a.adb:41:21: "PARAM1" conflicts with declaration at line 39
+b83e11a.adb:47:21: "PARAM1" conflicts with declaration at line 45
+b83e11a.adb:49:21: "PARAM1" conflicts with declaration at line 47
+b83e11a.adb:58:21: "PARAM1" conflicts with declaration at line 56
+b83e11a.adb:64:22: "PARAM1" conflicts with declaration at line 63
+b83e11a.adb:65:22: "PARAM1" conflicts with declaration at line 64
+b83e11a.adb:67:22: "PARAM1" conflicts with declaration at line 65
+b83e11a.adb:69:22: "PARAM1" conflicts with declaration at line 67
+b83e11a.adb:76:22: "PARAM1" conflicts with declaration at line 74
+b83e11a.adb:78:22: "PARAM1" conflicts with declaration at line 76
+b83e11a.adb:86:22: "PARAM1" conflicts with declaration at line 84
+b83e11a.adb:90:22: "PARAM1" conflicts with declaration at line 88
+b83e11a.adb:94:22: "PARAM1" conflicts with declaration at line 92
+gnatmake: "b83e11a.adb" compilation error

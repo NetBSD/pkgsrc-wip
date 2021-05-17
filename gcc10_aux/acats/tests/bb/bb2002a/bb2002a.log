@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb2002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb2002a.adb
+bb2002a.adb:54:17: exception choice duplicates "SINGULAR" at line 52
+bb2002a.adb:56:16: exception choice duplicates "SINGULAR" at line 52
+bb2002a.adb:67:11: exception choice duplicates "CONSTRAINT_ERROR" at line 63
+bb2002a.adb:70:19: exception choice duplicates "STORAGE_ERROR" at line 65
+gnatmake: "bb2002a.adb" compilation error

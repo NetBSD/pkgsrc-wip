@@ -1,0 +1,98 @@
+-- BA21A01.A
+--
+--                             Grant of Unlimited Rights
+--
+--     Under contracts F33600-87-D-0337, F33600-84-D-0280, MDA903-79-C-0687,
+--     F08630-91-C-0015, and DCA100-97-D-0025, the U.S. Government obtained
+--     unlimited rights in the software and documentation contained herein.
+--     Unlimited rights are defined in DFAR 252.227-7013(a)(19).  By making
+--     this public release, the Government intends to confer upon all
+--     recipients unlimited rights  equal to those held by the Government.
+--     These rights include rights to use, duplicate, release or disclose the
+--     released technical data and computer software in whole or in part, in
+--     any manner and for any purpose whatsoever, and to have or permit others
+--     to do so.
+--
+--                                    DISCLAIMER
+--
+--     ALL MATERIALS OR INFORMATION HEREIN RELEASED, MADE AVAILABLE OR
+--     DISCLOSED ARE AS IS.  THE GOVERNMENT MAKES NO EXPRESS OR IMPLIED
+--     WARRANTY AS TO ANY MATTER WHATSOEVER, INCLUDING THE CONDITIONS OF THE
+--     SOFTWARE, DOCUMENTATION OR OTHER INFORMATION RELEASED, MADE AVAILABLE
+--     OR DISCLOSED, OR THE OWNERSHIP, MERCHANTABILITY, OR FITNESS FOR A
+--     PARTICULAR PURPOSE OF SAID MATERIAL.
+--*
+--
+-- OBJECTIVE:
+--      Check that an instantiation of a generic library package declaration
+--      to which a pragma Preelaborate applies is illegal if the instantiation
+--      occurs within a library package declaration to which a pragma
+--      Preelaborate also applies, and the generic library package contains
+--      any of the following constructs in its visible or private part (such
+--      that the construct is evaluated upon instantiation):
+--
+--         (a) A call to a nonstatic function.
+--         (b) A call to a formal function, if the corresponding actual
+--             is a nonstatic function.
+--         (c) A primary that is a name of an object, if the name is not a
+--             static expression and does not statically denote a discriminant
+--             of an enclosing type.
+--         (d) A declaration of a default-initialized object of a type that
+--             does not have preelaborable initialization.
+--         (e) An extension aggregate with an ancestor subtype mark denoting
+--             a subtype that does not have preelaborable initialization.
+--
+--      Check that each of the constructs above is legal within the visible
+--      or private part of a generic library package declaration to which a
+--      pragma Preelaborate applies, as well as within a corresponding
+--      instance to which a pragma Preelaborate does not apply.
+--
+-- TEST DESCRIPTION:
+--      A default-initialized object is one which is not explicitly
+--      initialized (the presence of default expressions is irrelevant).
+--
+--      Since the elaboration of a generic declaration has no effect,
+--      constructs which are illegal in other units to which a pragma
+--      Preelaborate applies are legal in a generic declaration. An
+--      instantiation of such a generic, however, may or may not be legal
+--      depending on whether a pragma Preelaborate applies to it. The
+--      pragma only applies to an instance if it is explicitly provided
+--      for the instance (the pragma in a generic does not automatically
+--      apply to its instances).
+--
+--      Declare various supporting types, objects, and subprograms in a
+--      preelaborated package declaration (foundation code). Verify the
+--      legality of each of the constructs above in the visible or private
+--      part of an individual preelaborated generic library package
+--      declaration (that is, place each of the constructs above in
+--      its own generic package). Verify that a library-level instance of
+--      each of these generic packages is legal if a pragma Preelaborate
+--      does not apply to it.
+--
+--      Declare a preelaborated library level package, and within it verify
+--      that instantiations of each of the generic packages are illegal.
+--      Instantiate in both the visible and private part of the package.
+--
+-- TEST FILES:
+--      The following files comprise this test:
+--
+--         FA21A00.A
+--         BA21A01.A
+--
+--
+-- CHANGE HISTORY:
+--      30 Mar 95   SAIC    Initial prerelease version.
+--      08 May 95   SAIC    Modified objective wording.
+--      26 Oct 07   RLB     Updated the test objective, description, and
+--                          expected errors to use the preelaborable
+--                          initialization description from Amendment 1.
+--
+--!
+
+with FA21A00;
+generic
+package BA21A01_0 is
+   pragma Preelaborate (BA21A01_0);
+   Call : FA21A00.My_Int := FA21A00.Func;                             -- OK.
+                                              -- Call to nonstatic function.
+end BA21A01_0;

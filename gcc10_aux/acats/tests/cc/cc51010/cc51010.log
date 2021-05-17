@@ -1,0 +1,8 @@
+
+,.,. CC51010 ACATS 4.1 21-05-16 10:50:23
+---- CC51010 Check that a generic unit with a tagged incomplete formal
+                types can be instantiated with an incomplete view of a
+                type from a limited withed package, and that operations 
+                in the instance can be used normally when the full view 
+                of the type is visible.
+==== CC51010 PASSED ============================.

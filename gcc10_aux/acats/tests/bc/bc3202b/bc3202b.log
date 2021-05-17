@@ -1,0 +1,37 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3202b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3202b.adb
+bc3202b.adb:67:37: subtypes of actual discriminants must match formal
+bc3202b.adb:67:37: instantiation abandoned
+bc3202b.adb:69:42: actual for "LP" must have discriminants
+bc3202b.adb:69:42: instantiation abandoned
+bc3202b.adb:71:42: discriminants on actual do not match formal
+bc3202b.adb:71:42: instantiation abandoned
+bc3202b.adb:73:42: types of actual discriminants must match formal
+bc3202b.adb:73:42: instantiation abandoned
+bc3202b.adb:74:42: types of actual discriminants must match formal
+bc3202b.adb:74:42: instantiation abandoned
+bc3202b.adb:75:42: actual for "LP" must be unconstrained
+bc3202b.adb:75:42: instantiation abandoned
+bc3202b.adb:77:37: types of actual discriminants must match formal
+bc3202b.adb:77:37: instantiation abandoned
+bc3202b.adb:79:38: types of actual discriminants must match formal
+bc3202b.adb:79:38: instantiation abandoned
+bc3202b.adb:80:38: actual for "PV" must have discriminants
+bc3202b.adb:80:38: instantiation abandoned
+bc3202b.adb:82:38: discriminants on actual do not match formal
+bc3202b.adb:82:38: instantiation abandoned
+bc3202b.adb:84:38: actual for "PV" must be unconstrained
+bc3202b.adb:84:38: instantiation abandoned
+bc3202b.adb:90:36: discriminants on actual do not match formal
+bc3202b.adb:90:36: instantiation abandoned
+bc3202b.adb:93:36: types of actual discriminants must match formal
+bc3202b.adb:93:36: instantiation abandoned
+bc3202b.adb:96:36: actual for "LP" must be unconstrained
+bc3202b.adb:96:36: instantiation abandoned
+bc3202b.adb:100:28: discriminants on actual do not match formal
+bc3202b.adb:100:28: instantiation abandoned
+bc3202b.adb:103:28: types of actual discriminants must match formal
+bc3202b.adb:103:28: instantiation abandoned
+bc3202b.adb:106:28: actual for "PV" must be unconstrained
+bc3202b.adb:106:28: instantiation abandoned
+gnatmake: "bc3202b.adb" compilation error

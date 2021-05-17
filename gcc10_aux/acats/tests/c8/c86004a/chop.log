@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c86004a.ada into:
+   c86004a_swap.ads
+   c86004a_swap.adb
+   c86004a1.adb
+   c86004a2.ads
+   c86004a2.adb
+   c86004a.adb

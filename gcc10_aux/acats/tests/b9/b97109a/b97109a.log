@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97109a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97109a.adb
+b97109a.adb:59:16: else part not allowed with other alternatives
+gnatmake: "b97109a.adb" compilation error

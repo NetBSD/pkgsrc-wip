@@ -1,0 +1,5 @@
+
+,.,. CE3704O ACATS 4.1 21-05-16 10:53:34
+---- CE3704O CHECK THAT MIXED USE OF # AND : IN BASED LITERALS WILL
+                RAISE DATA_ERROR.
+==== CE3704O PASSED ============================.

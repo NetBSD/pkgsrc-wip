@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33201e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33201e.adb
+b33201e.adb:55:10: unconstrained subtype not allowed (need initialization)
+b33201e.adb:55:10: provide initial value or explicit array bounds
+b33201e.adb:55:14: incorrect constraint for this kind of type
+b33201e.adb:57:14: incorrect constraint for this kind of type
+b33201e.adb:59:14: incorrect constraint for this kind of type
+b33201e.adb:61:15: incorrect constraint for this kind of type
+b33201e.adb:63:14: incorrect constraint for this kind of type
+gnatmake: "b33201e.adb" compilation error

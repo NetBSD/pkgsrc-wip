@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1205a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1205a.adb
+bc1205a.adb:69:23: expected private type "PR" defined at line 57
+bc1205a.adb:69:23: found type "Standard.Integer"
+bc1205a.adb:71:23: expected type "AC" defined at line 58
+bc1205a.adb:71:23: found type "ACCINT" defined at line 34
+bc1205a.adb:73:23: expected type "DS" defined at line 59
+bc1205a.adb:73:23: found type "ENUM" defined at line 35
+bc1205a.adb:75:25: expected type "INT" defined at line 60
+bc1205a.adb:75:25: found type "Standard.Integer"
+bc1205a.adb:77:23: expected type "FX" defined at line 61
+bc1205a.adb:77:23: found type "FIXPT" defined at line 36
+bc1205a.adb:79:23: expected type "FL" defined at line 62
+bc1205a.adb:79:23: found type "FLTPT" defined at line 37
+bc1205a.adb:81:23: expected type "CA" defined at line 63
+bc1205a.adb:81:23: found type "CONARR" defined at line 38
+bc1205a.adb:83:29: expected type "UA" defined at line 64
+bc1205a.adb:83:29: found type "UNCARR" defined at line 39
+bc1205a.adb:85:23: expected type "U" defined at line 65
+bc1205a.adb:85:23: found type "DS" defined at line 59
+bc1205a.adb:90:16: expected type "Standard.Integer"
+bc1205a.adb:90:16: found private type "LP" defined at line 56
+gnatmake: "bc1205a.adb" compilation error

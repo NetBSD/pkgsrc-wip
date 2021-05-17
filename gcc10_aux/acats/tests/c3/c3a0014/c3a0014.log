@@ -1,0 +1,10 @@
+
+,.,. C3A0014 ACATS 4.1 21-05-16 10:34:53
+---- C3A0014 Check that if the view defined by an object declaration is 
+                aliased, has discriminants, and its nominal subtype is
+                unconstrained, then the object is unconstrained. Check
+                that the attribute A'Constrained returns False if A is a
+                formal out or in out parameter and A denotes an aliased 
+                view of an object with an unconstrained nominal
+                subtype..
+==== C3A0014 PASSED ============================.

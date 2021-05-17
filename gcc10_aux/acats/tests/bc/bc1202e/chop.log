@@ -1,0 +1,5 @@
+bc1202e.ada:43:11: subtype declaration not allowed as generic parameter declaration
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202e.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202e.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202e.ada into:
+   bc1202e.adb

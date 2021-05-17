@@ -1,0 +1,51 @@
+-- C854002.A
+--
+--                             Grant of Unlimited Rights
+--
+--     Under contracts F33600-87-D-0337, F33600-84-D-0280, MDA903-79-C-0687 and
+--     F08630-91-C-0015, the U.S. Government obtained unlimited rights in the
+--     software and documentation contained herein.  Unlimited rights are
+--     defined in DFAR 252.227-7013(a)(19).  By making this public release,
+--     the Government intends to confer upon all recipients unlimited rights
+--     equal to those held by the Government.  These rights include rights to
+--     use, duplicate, release or disclose the released technical data and
+--     computer software in whole or in part, in any manner and for any purpose
+--     whatsoever, and to have or permit others to do so.
+--
+--                                    DISCLAIMER
+--
+--     ALL MATERIALS OR INFORMATION HEREIN RELEASED, MADE AVAILABLE OR
+--     DISCLOSED ARE AS IS.  THE GOVERNMENT MAKES NO EXPRESS OR IMPLIED
+--     WARRANTY AS TO ANY MATTER WHATSOVER, INCLUDING THE CONDITIONS OF THE
+--     SOFTWARE, DOCUMENTATION OR OTHER INFORMATION RELEASED, MADE AVAILABLE
+--     OR DISCLOSED, OR THE OWNERSHIP, MERCHANTABILITY, OR FITNESS FOR A
+--     PARTICULAR PURPOSE OF SAID MATERIAL.
+--*
+--
+-- OBJECTIVE
+--     Check the requirements of the new 8.5.4(8.A) from Technical
+--     Corrigendum 1 (originally discussed as AI95-00064).
+--     This paragraph requires an elaboration check on renamings-as-body:
+--     even if the body of the ultimately-called subprogram has been
+--     elaborated, the check should fail if the renaming-as-body
+--     itself has not yet been elaborated.
+--
+-- TEST DESCRIPTION
+--     We declare two functions F and G, and ensure that they are
+--     elaborated before anything else, by using pragma Pure.  Then we
+--     declare two renamings-as-body: the renaming of F is direct, and
+--     the renaming of G is via an access-to-function object.  We call
+--     the renamings during elaboration, and check that they raise
+--     Program_Error.  We then call them again after elaboration; this
+--     time, they should work.
+--
+-- CHANGE HISTORY:
+--      29 JUN 1999   RAD   Initial Version
+--      23 SEP 1999   RLB   Improved comments, renamed, issued.
+--      28 JUN 2002   RLB   Added pragma Elaborate_All for Report.
+--!
+
+package C854002_1 is
+    pragma Pure;
+    -- Empty.
+end C854002_1;

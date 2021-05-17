@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a02a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a02a.adb
+bd2a02a.adb:45:06: aspect "SIZE" for "BASIC_ENUM" previously given at line 44
+bd2a02a.adb:50:06: aspect "SIZE" for "INTEGER_TYPE" previously given at line 49
+bd2a02a.adb:55:06: aspect "SIZE" for "FIXED_TYPE" previously given at line 54
+bd2a02a.adb:61:06: aspect "SIZE" for "FLOAT_TYPE" previously given at line 60
+bd2a02a.adb:66:06: aspect "SIZE" for "ARRAY_TYPE" previously given at line 65
+bd2a02a.adb:74:06: aspect "SIZE" for "RECORD_TYPE" previously given at line 73
+bd2a02a.adb:80:06: aspect "SIZE" for "ACCESS_TYPE" previously given at line 78
+gnatmake: "bd2a02a.adb" compilation error

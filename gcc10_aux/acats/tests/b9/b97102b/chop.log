@@ -1,0 +1,6 @@
+b97102b.ada:55:31: missing "OR"
+b97102b.ada:56:16: select alternative ("ACCEPT", "ABORT", "DELAY") expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97102b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97102b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97102b.ada into:
+   b97102b.adb

@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3001c.adb
+bd3001c.adb:39:11: representation item not allowed for generic type
+bd3001c.adb:48:11: representation item not allowed for generic type
+bd3001c.adb:54:10: enumeration type required, found type "FLOAT" defined at line 53
+bd3001c.adb:57:10: enumeration type required, found type "FIXED" defined at line 56
+bd3001c.adb:65:10: enumeration type required, found type "REC" defined at line 60
+bd3001c.adb:68:10: enumeration type required, found type "ARR" defined at line 67
+bd3001c.adb:75:10: enumeration type required, found type "REC1" defined at line 71
+gnatmake: "bd3001c.adb" compilation error

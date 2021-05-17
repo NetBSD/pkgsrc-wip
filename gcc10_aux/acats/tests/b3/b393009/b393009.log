@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b393009.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b393009.adb
+b393009.adb:7:14: type of object cannot be abstract
+b393009.adb:9:22: type of object cannot be abstract
+b393009.adb:11:35: cannot allocate abstract object
+b393009.adb:15:07: type of a component cannot be abstract
+b393009.adb:19:40: cannot allocate abstract object
+b393009.adb:23:07: type of a component cannot be abstract
+b393009.adb:26:35: the type of a component cannot be abstract
+b393009.adb:31:37: cannot allocate abstract object
+b393009.adb:34:04: missing body for "Non_Abstract_Func1"
+b393009.adb:37:04: missing body for "Non_Abstract_Func2"
+b393009.adb:59:08: target of assignment operation must not be abstract
+b393009.adb:65:39: type of aggregate cannot be abstract
+b393009.adb:67:39: type of aggregate cannot be abstract
+gnatmake: "b393009.adb" compilation error

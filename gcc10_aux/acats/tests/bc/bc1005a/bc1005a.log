@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1005a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1005a.adb
+bc1005a.adb:70:38: subtype mark required in this context
+bc1005a.adb:70:38: found "TM" declared at line 71
+bc1005a.adb:74:33: subprogram "PRIM" cannot be used before end of its declaration
+bc1005a.adb:78:33: expected type "Standard.Integer"
+bc1005a.adb:78:33: found package name
+bc1005a.adb:82:33: incorrect use of "ARR_OBJ1"
+bc1005a.adb:86:33: subprogram "REC" cannot be used before end of its declaration
+bc1005a.adb:91:19: subprogram "FUNC3" cannot be used before end of its declaration
+bc1005a.adb:97:38: subprogram "EN" cannot be used before end of its declaration
+bc1005a.adb:109:34: subprogram "FUNC4" cannot be used before end of its declaration
+gnatmake: "bc1005a.adb" compilation error

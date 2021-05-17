@@ -1,0 +1,9 @@
+bd11001.a:157:34: aspect "Dynamic_Predicate" requires an aspect definition
+bd11001.a:160:30: aspect "Default_Value" requires an aspect definition
+bd11001.a:163:29: aspect "Storage_Size" requires an aspect definition
+bd11001.a:166:27: aspect "Convention" requires an aspect definition
+bd11001.a:224:16: "Unrecognized_Aspect_Name_Xyzzy" is not a valid aspect identifier
+/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd11001.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd11001.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd11001.a into:
+   bd11001.adb

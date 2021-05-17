@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95031a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95031a.adb
+b95031a.adb:73:13: no selector "E1" for type "TT3" defined at line 48
+b95031a.adb:74:15: no selector "E3" for type "TT1" defined at line 38
+b95031a.adb:75:15: invalid procedure or entry call
+b95031a.adb:76:15: invalid procedure or entry call
+b95031a.adb:77:15: too many arguments in call
+b95031a.adb:78:15: missing argument for parameter "P3"
+b95031a.adb:80:15: too many arguments in call
+b95031a.adb:81:15: missing argument for parameter "P2" in call to "E2" declared at line 45
+b95031a.adb:83:15: missing argument for parameter "P3" in call to "E2" declared at line 45
+gnatmake: "b95031a.adb" compilation error

@@ -1,0 +1,6 @@
+
+,.,. CXAA016 ACATS 4.1 21-05-16 10:55:02
+---- CXAA016 Check that the type File_Access is available in
+                Ada.Text_IO, and that objects of this type designate
+                File_Type objects.
+==== CXAA016 PASSED ============================.

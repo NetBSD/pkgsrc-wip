@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45205a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45205a.adb
+b45205a.adb:46:24: unexpected relational operator
+b45205a.adb:51:36: unexpected relational operator
+b45205a.adb:54:22: unexpected relational operator
+b45205a.adb:59:24: unexpected relational operator
+b45205a.adb:76:25: unexpected relational operator
+b45205a.adb:81:34: unexpected relational operator
+b45205a.adb:84:23: unexpected relational operator
+b45205a.adb:89:24: unexpected relational operator
+b45205a.adb:104:27: unexpected relational operator
+b45205a.adb:109:35: unexpected relational operator
+b45205a.adb:112:24: unexpected relational operator
+b45205a.adb:118:24: unexpected relational operator
+gnatmake: "b45205a.adb" compilation error

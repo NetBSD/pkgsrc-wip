@@ -1,0 +1,5 @@
+b97108a.ada:59:16: "ELSE" not allowed here
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97108a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97108a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97108a.ada into:
+   b97108a.adb

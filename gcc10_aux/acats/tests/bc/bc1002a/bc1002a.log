@@ -1,0 +1,28 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1002a.adb
+bc1002a.adb:59:26: choice given in variant part is not static
+bc1002a.adb:59:26: "P" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:69:20: dynamic or empty choice in aggregate must be the only choice
+bc1002a.adb:71:17: dynamic or empty choice in aggregate must be the only choice
+bc1002a.adb:73:17: dynamic or empty choice in aggregate must be the only choice
+bc1002a.adb:77:32: non-static expression used for integer type bound
+bc1002a.adb:77:32: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:77:37: non-static expression used for integer type bound
+bc1002a.adb:77:37: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:78:35: non-static expression used for digits value
+bc1002a.adb:78:35: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:80:16: bound in real type definition is not static
+bc1002a.adb:80:22: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:82:16: non-static expression used for delta value
+bc1002a.adb:82:22: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:84:23: non-static expression used for real type bound
+bc1002a.adb:84:29: "C" is not a static constant (RM 4.9(5))
+bc1002a.adb:86:29: small requires static expression
+bc1002a.adb:86:35: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:97:35: value for discriminant "D" must be static
+bc1002a.adb:97:35: "P" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:105:34: static integer expression required here
+bc1002a.adb:105:41: "I" is not static constant or named number (RM 4.9(5))
+bc1002a.adb:109:21: choice given in case statement is not static
+bc1002a.adb:109:21: "P" is not static constant or named number (RM 4.9(5))
+gnatmake: "bc1002a.adb" compilation error

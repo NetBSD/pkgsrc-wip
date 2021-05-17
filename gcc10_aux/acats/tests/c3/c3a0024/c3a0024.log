@@ -1,0 +1,7 @@
+
+,.,. C3A0024 ACATS 4.1 21-05-16 10:34:58
+---- C3A0024 Check that Constraint_Error is raised when a null access
+                value is converted to a null excluding subtype of a
+                named access type. Case F: null_exclusion given in a
+                pool-specific access type definition.
+==== C3A0024 PASSED ============================.

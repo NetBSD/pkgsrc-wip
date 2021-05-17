@@ -1,0 +1,7 @@
+
+,.,. CA13A02 ACATS 4.1 21-05-16 10:49:00
+---- CA13A02 Check that subunits declared in generic child units of a
+                public parent have the same visibility into its parent, 
+                its parent's siblings, and packages on which its parent 
+                depends.
+==== CA13A02 PASSED ============================.

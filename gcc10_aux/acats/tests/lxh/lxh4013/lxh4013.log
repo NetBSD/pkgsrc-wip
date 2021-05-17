@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40133.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40133.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh4013_0.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh4013_1.adb
+lxh4013_1.adb:11:08: violation of restriction "NO_DELAY" at gnat.adc:56
+gnatmake: "lxh4013_1.adb" compilation error

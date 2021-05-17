@@ -1,0 +1,12 @@
+bc1109c.ada:37:28: constraint not allowed here
+bc1109c.ada:38:21: constraint not allowed here
+bc1109c.ada:39:28: constraint not allowed here
+bc1109c.ada:40:23: constraint not allowed here
+bc1109c.ada:45:21: constraint not allowed here
+bc1109c.ada:46:28: constraint not allowed here
+bc1109c.ada:47:21: constraint not allowed here
+bc1109c.ada:48:30: constraint not allowed here
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1109c.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1109c.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1109c.ada into:
+   bc1109c.adb

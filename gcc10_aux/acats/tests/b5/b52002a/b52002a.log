@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52002a.adb
+b52002a.adb:55:11: assignment to "IN" mode parameter not allowed
+b52002a.adb:61:06: left hand side of assignment must be a variable
+b52002a.adb:62:06: left hand side of assignment must be a variable
+b52002a.adb:63:06: left hand side of assignment must be a variable
+b52002a.adb:66:11: assignment to loop parameter not allowed
+b52002a.adb:69:08: assignment to discriminant not allowed
+gnatmake: "b52002a.adb" compilation error

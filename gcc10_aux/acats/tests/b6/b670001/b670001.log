@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b670001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b670001.adb
+b670001.adb:74:09: duplicate body for "Null3" declared at line 69
+b670001.adb:79:09: duplicate body for "Null2" declared at line 67
+b670001.adb:95:15: "Null1" conflicts with declaration at line 64
+gnatmake: "b670001.adb" compilation error

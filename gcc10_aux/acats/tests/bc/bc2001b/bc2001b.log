@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2001b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2001b.adb
+bc2001b.adb:36:26: missing ";"
+bc2001b.adb:39:11: "END;" expected for "BEGIN" at line 37
+gnatmake: "bc2001b.adb" compilation error

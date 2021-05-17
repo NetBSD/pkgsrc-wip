@@ -1,0 +1,10 @@
+b95006a.ada:46:11: "END E0;" expected
+b95006a.ada:50:11: "END E1;" expected
+b95006a.ada:54:11: "END E2;" expected
+b95006a.ada:61:16: "END E1;" expected
+b95006a.ada:62:11: "END E0;" expected
+b95006a.ada:69:16: "END E2;" expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95006a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95006a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95006a.ada into:
+   b95006a.adb

@@ -1,0 +1,8 @@
+
+,.,. C730004 ACATS 4.1 21-05-16 10:44:10
+---- C730004 Check that for a type declared in a package, descendants of
+                the package use the full view of the type.  Specifically
+                check that full view of the limited type is visible only
+                in private children and in the private parts and bodies 
+                of public children.
+==== C730004 PASSED ============================.

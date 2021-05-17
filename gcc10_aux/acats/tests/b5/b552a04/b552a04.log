@@ -1,0 +1,22 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a04.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a04.adb
+b552a04.adb:105:18: subtype indication does not match element type
+b552a04.adb:109:18: subtype indication does not match element type
+b552a04.adb:113:22: subtype indication does not match element type
+b552a04.adb:121:18: subtype indication does not match element type
+b552a04.adb:133:18: subtype indication does not match element type
+b552a04.adb:137:18: subtype indication does not match element type
+b552a04.adb:264:14: iteration over constant container require constant_indexing aspect
+b552a04.adb:275:11: iteration over constant container require constant_indexing aspect
+b552a04.adb:281:11: iteration over constant container require constant_indexing aspect
+b552a04.adb:323:11: container cannot be a discriminant-dependent component of a mutable object
+b552a04.adb:328:11: container cannot be a discriminant-dependent component of a mutable object
+b552a04.adb:333:11: container cannot be a discriminant-dependent component of a mutable object
+b552a04.adb:484:11: variable container expected
+b552a04.adb:488:11: variable container expected
+b552a04.adb:498:16: actual for "Container" must be a variable
+b552a04.adb:502:16: actual for "Container" must be a variable
+b552a04.adb:704:11: cursor type cannot be limited
+b552a04.adb:708:11: cursor type cannot be limited
+b552a04.adb:712:11: cursor type cannot be limited
+gnatmake: "b552a04.adb" compilation error

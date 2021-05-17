@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a06b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a06b.adb
+b83a06b.adb:97:14: "LAB_LOOP_1" conflicts with label at line 75
+b83a06b.adb:98:14: "LAB_LOOP_2" conflicts with label at line 82
+b83a06b.adb:102:14: "LAB_BLOCK_1" conflicts with label at line 70
+b83a06b.adb:103:14: "LAB_BLOCK_2" conflicts with label at line 87
+gnatmake: "b83a06b.adb" compilation error

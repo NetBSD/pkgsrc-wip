@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c330001.a into:
+   c330001_0.ads
+   c330001_0.adb
+   c330001_0-c330001_1.ads
+   c330001_0-c330001_2.ads
+   c330001_0-c330001_2.adb
+   c330001.adb

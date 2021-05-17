@@ -1,0 +1,14 @@
+
+PACKAGE B83024F_P3 IS
+     A : FLOAT := 1.0;
+
+     GENERIC
+          X : IN OUT INTEGER;
+     PACKAGE B83024F_PACK3 IS
+          A : INTEGER := 3;
+     END B83024F_PACK3;
+
+     B : FLOAT := A;
+
+     PROCEDURE REQUIRE_BODY;
+END B83024F_P3;

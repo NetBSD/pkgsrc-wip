@@ -1,0 +1,8 @@
+
+,.,. CDB0A01 ACATS 4.1 21-05-16 10:51:52
+---- CDB0A01 Check that a storage pool may be user_determined, and that 
+                storage is allocated by calling Allocate.  Check that a 
+                storage.pool may be specified using 'Storage_Pool and
+                that S'Storage_Pool denotes the storage pool of the type
+                S.
+==== CDB0A01 PASSED ============================.

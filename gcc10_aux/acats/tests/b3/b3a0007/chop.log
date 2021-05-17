@@ -1,0 +1,10 @@
+b3a0007.a:162:30: an allocator with a subtype indication cannot have a null exclusion
+b3a0007.a:163:30: an allocator with a subtype indication cannot have a null exclusion
+b3a0007.a:164:30: an allocator with a subtype indication cannot have a null exclusion
+b3a0007.a:165:30: an allocator with a subtype indication cannot have a null exclusion
+b3a0007.a:166:30: an allocator with a subtype indication cannot have a null exclusion
+b3a0007.a:167:30: an allocator with a subtype indication cannot have a null exclusion
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a0007.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a0007.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a0007.a into:
+   b3a0007.adb

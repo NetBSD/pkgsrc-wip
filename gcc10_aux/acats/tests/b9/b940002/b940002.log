@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b940002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b940002.adb
+b940002.adb:47:30: constant components are not permitted
+b940002.adb:64:07: illegal declaration in protected definition
+gnatmake: "b940002.adb" compilation error

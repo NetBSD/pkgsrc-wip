@@ -1,0 +1,5 @@
+
+,.,. CXF3A06 ACATS 4.1 21-05-16 10:59:19
+---- CXF3A06 Check that Ada.Text_IO.Editing.Put and Ada.Text_IO.Put have
+                the same effect.
+==== CXF3A06 PASSED ============================.

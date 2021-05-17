@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2015.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2015.adb
+b3a2015.adb:23:14: object subtype must statically match designated subtype
+b3a2015.adb:40:34: illegal attribute for discriminant-dependent component
+b3a2015.adb:47:33: illegal attribute for discriminant-dependent component
+b3a2015.adb:50:33: illegal attribute for discriminant-dependent component
+b3a2015.adb:58:33: illegal attribute for discriminant-dependent component
+b3a2015.adb:65:33: illegal attribute for discriminant-dependent component
+b3a2015.adb:72:33: illegal attribute for discriminant-dependent component
+b3a2015.adb:82:32: illegal attribute for discriminant-dependent component
+b3a2015.adb:91:41: illegal renaming of discriminant-dependent component
+b3a2015.adb:106:48: illegal renaming of discriminant-dependent component
+b3a2015.adb:113:39: illegal renaming of discriminant-dependent component
+b3a2015.adb:116:44: illegal renaming of discriminant-dependent component
+b3a2015.adb:124:44: illegal renaming of discriminant-dependent component
+b3a2015.adb:131:42: illegal renaming of discriminant-dependent component
+b3a2015.adb:134:47: illegal renaming of discriminant-dependent component
+b3a2015.adb:141:41: illegal renaming of discriminant-dependent component
+b3a2015.adb:145:41: prefix of "ACCESS" attribute must be aliased
+b3a2015.adb:154:33: prefix of "ACCESS" attribute must be aliased
+gnatmake: "b3a2015.adb" compilation error

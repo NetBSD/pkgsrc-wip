@@ -1,0 +1,55 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43101a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43101a.adb
+b43101a.adb:72:39: more than one value supplied for "A"
+b43101a.adb:74:32: more than one value supplied for "B"
+b43101a.adb:79:42: more than one value supplied for "A"
+b43101a.adb:96:22: more than one value supplied for Component "A"
+b43101a.adb:96:22: no value supplied for component "C"
+b43101a.adb:97:31: more than one value supplied for Component "B"
+b43101a.adb:97:31: no value supplied for component "D"
+b43101a.adb:102:17: more than one value supplied for Component "A"
+b43101a.adb:102:17: no value supplied for component "B"
+b43101a.adb:127:32: "D" is not a component of type "R1" defined at line 111
+b43101a.adb:128:38: "D" is not a component of type "R1" defined at line 111
+b43101a.adb:130:25: no value supplied for component "B"
+b43101a.adb:130:29: "C" is not a component of the aggregate subtype
+b43101a.adb:131:34: no value supplied for component "C"
+b43101a.adb:131:38: "B" is not a component of the aggregate subtype
+b43101a.adb:136:26: "D" is not a component of type "R1" defined at line 111
+b43101a.adb:137:17: no value supplied for component "B"
+b43101a.adb:137:21: "C" is not a component of the aggregate subtype
+b43101a.adb:155:32: components in "OTHERS" choice must have same type
+b43101a.adb:156:36: components in choice list must have same type
+b43101a.adb:161:26: components in "OTHERS" choice must have same type
+b43101a.adb:185:32: "OTHERS" must represent at least one component
+b43101a.adb:187:32: "OTHERS" must represent at least one component
+b43101a.adb:210:32: "OTHERS" must represent at least one component
+b43101a.adb:211:11: ambiguous expression (cannot resolve "PROC1")
+b43101a.adb:211:11: possible interpretation at line 194
+b43101a.adb:211:11: possible interpretation at line 190
+b43101a.adb:212:11: ambiguous expression (cannot resolve "PROC1")
+b43101a.adb:212:11: possible interpretation at line 194
+b43101a.adb:212:11: possible interpretation at line 190
+b43101a.adb:213:11: ambiguous expression (cannot resolve "PROC2")
+b43101a.adb:213:11: possible interpretation at line 203
+b43101a.adb:213:11: possible interpretation at line 199
+b43101a.adb:249:22: no value supplied for component "C"
+b43101a.adb:250:31: no value supplied for component "A"
+b43101a.adb:252:25: no value supplied for component "D"
+b43101a.adb:253:34: no value supplied for component "F"
+b43101a.adb:276:17: no value supplied for component "B"
+b43101a.adb:277:27: too many components for record aggregate
+b43101a.adb:278:11: ambiguous expression (cannot resolve "PROC1")
+b43101a.adb:278:11: possible interpretation at line 260
+b43101a.adb:278:11: possible interpretation at line 256
+b43101a.adb:279:11: ambiguous expression (cannot resolve "PROC2")
+b43101a.adb:279:11: possible interpretation at line 269
+b43101a.adb:279:11: possible interpretation at line 265
+b43101a.adb:297:25: selector name should be identifier or "OTHERS"
+b43101a.adb:298:34: selector name should be identifier or "OTHERS"
+b43101a.adb:312:20: selector name should be identifier or "OTHERS"
+b43101a.adb:312:34: selector name should be identifier or "OTHERS"
+b43101a.adb:313:11: ambiguous expression (cannot resolve "PROC1")
+b43101a.adb:313:11: possible interpretation at line 305
+b43101a.adb:313:11: possible interpretation at line 301
+gnatmake: "b43101a.adb" compilation error

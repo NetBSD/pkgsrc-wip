@@ -1,0 +1,45 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83004d0m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83004d0m.adb
+b83004d0m-pack1.adb:43:14: missing body for "T" declared at b83004d0m.adb:66
+b83004d0m-pack1.adb:43:14: missing body for "FUN" declared at b83004d0m.adb:69
+b83004d0m-pack1.adb:45:06: "VAR1" conflicts with declaration at b83004d0m.adb:55
+b83004d0m-pack1.adb:46:06: "CON1" conflicts with declaration at b83004d0m.adb:56
+b83004d0m-pack1.adb:47:06: "INT" conflicts with declaration at b83004d0m.adb:59
+b83004d0m-pack1.adb:48:11: "EXC1" conflicts with declaration at b83004d0m.adb:57
+b83004d0m-pack1.adb:49:14: "P" conflicts with declaration at b83004d0m.adb:62
+b83004d0m-pack1.adb:50:14: "INT_SUBTYPE" conflicts with declaration at b83004d0m.adb:60
+b83004d0m-pack1.adb:53:11: "FUN" conflicts with declaration at b83004d0m.adb:69
+b83004d0m-pack1.adb:56:15: "T" conflicts with declaration at b83004d0m.adb:66
+b83004d0m-pack1.adb:56:15: generic units cannot be overloaded
+b83004d0m-pack1.adb:57:16: "PROC1" conflicts with declaration at b83004d0m.adb:71
+b83004d0m-pack1.adb:59:16: missing specification for task body
+b83004d0m-pack1.adb:64:15: "FUN" conflicts with declaration at line 53
+b83004d0m-pack2.adb:43:14: missing body for "T2" declared at b83004d0m.adb:94
+b83004d0m-pack2.adb:43:14: missing body for "FUN2" declared at b83004d0m.adb:97
+b83004d0m-pack2.adb:45:06: "EXC2" conflicts with declaration at b83004d0m.adb:85
+b83004d0m-pack2.adb:46:06: "P2" conflicts with declaration at b83004d0m.adb:90
+b83004d0m-pack2.adb:47:06: "INT2" conflicts with declaration at b83004d0m.adb:87
+b83004d0m-pack2.adb:49:11: "VAR2" conflicts with declaration at b83004d0m.adb:83
+b83004d0m-pack2.adb:50:14: "CON2" conflicts with declaration at b83004d0m.adb:84
+b83004d0m-pack2.adb:52:14: "T2" conflicts with declaration at b83004d0m.adb:94
+b83004d0m-pack2.adb:56:11: "FUN2" conflicts with declaration at b83004d0m.adb:97
+b83004d0m-pack2.adb:59:15: "INT_SUBTYPE2" conflicts with declaration at b83004d0m.adb:88
+b83004d0m-pack2.adb:59:15: generic units cannot be overloaded
+b83004d0m-pack2.adb:61:16: "PROC2" conflicts with declaration at b83004d0m.adb:99
+b83004d0m-pack2.adb:64:16: missing specification for task body
+b83004d0m-pack2.adb:69:15: "FUN2" conflicts with declaration at line 56
+b83004d0m-pack3.adb:55:11: missing body for "T3"
+b83004d0m-pack3.adb:58:15: missing body for "FUN3"
+b83004d0m-pack3.adb:62:06: "T3" conflicts with declaration at line 55
+b83004d0m-pack3.adb:63:06: "EXC3" conflicts with declaration at line 46
+b83004d0m-pack3.adb:64:06: "CON3" conflicts with declaration at line 45
+b83004d0m-pack3.adb:66:11: "FUN3" conflicts with declaration at line 58
+b83004d0m-pack3.adb:67:14: "P3" conflicts with declaration at line 51
+b83004d0m-pack3.adb:69:14: "INT_SUBTYPE3" conflicts with declaration at line 49
+b83004d0m-pack3.adb:73:11: "VAR3" conflicts with declaration at line 44
+b83004d0m-pack3.adb:76:15: "INT3" conflicts with declaration at line 48
+b83004d0m-pack3.adb:76:15: generic units cannot be overloaded
+b83004d0m-pack3.adb:78:16: "PROC3" conflicts with declaration at line 60
+b83004d0m-pack3.adb:80:16: missing specification for task body
+b83004d0m-pack3.adb:85:15: "FUN3" conflicts with declaration at line 66
+gnatmake: "b83004d0m.adb" compilation error

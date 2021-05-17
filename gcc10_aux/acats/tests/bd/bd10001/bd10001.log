@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd10001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd10001.adb
+bd10001.adb:81:07: aspect "SIZE" for "Tst_Int" previously given at line 79
+bd10001.adb:93:07: aspect "COMPONENT_SIZE" for "Tst_Arr" previously given at line 90
+bd10001.adb:105:07: aspect "PACK" for "Tst_Rec" previously given at line 103
+bd10001.adb:111:23: "WRITE" attribute already defined at line 116
+gnatmake: "bd10001.adb" compilation error

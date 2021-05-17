@@ -1,0 +1,6 @@
+
+,.,. CB41003 ACATS 4.1 21-05-16 10:49:29
+---- CB41003 Check that an exception occurrence can be saved into an
+                object of type Exception_Occurrence using the procedure 
+                Save_Occurrence.
+==== CB41003 PASSED ============================.

@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97103f.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97103f.adb
+b97103f.adb:41:21: duplicate accept statement for same entry (RM 9.5.2 (15))
+b97103f.adb:66:26: duplicate accept statement for same entry (RM 9.5.2 (15))
+gnatmake: "b97103f.adb" compilation error

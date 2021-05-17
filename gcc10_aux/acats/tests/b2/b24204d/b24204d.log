@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24204d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24204d.adb
+b24204d.adb:38:14: identifier may not start with digit
+b24204d.adb:39:14: identifier may not start with digit
+b24204d.adb:40:17: delimiter required between literal and identifier
+gnatmake: "b24204d.adb" compilation error

@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca200030.a into:
+   ca20003_tc.ads
+   ca20003_l.ads
+   ca20003_l.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca200031.am into:
+   ca20003_0.ads
+   ca20003_0.adb
+   ca200031.adb

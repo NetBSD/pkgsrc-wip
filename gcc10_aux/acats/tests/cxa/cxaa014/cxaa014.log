@@ -1,0 +1,7 @@
+
+,.,. CXAA014 ACATS 4.1 21-05-16 10:55:01
+---- CXAA014 Check that the exception Mode_Error is raised when an
+                attempt is made to check for the end of a line or page
+                using the predefined functions End_Of_Line or
+                End_Of_Page on a text file with mode Append_File.
+==== CXAA014 PASSED ============================.

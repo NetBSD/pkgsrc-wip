@@ -1,0 +1,32 @@
+b25002a.ada:36:13: illegal character
+b25002a.ada:37:13: illegal character
+b25002a.ada:38:13: illegal character
+b25002a.ada:39:13: illegal character
+b25002a.ada:40:13: illegal character
+b25002a.ada:41:13: illegal character
+b25002a.ada:42:13: illegal character
+b25002a.ada:43:13: illegal character
+b25002a.ada:44:13: illegal character
+b25002a.ada:45:13: illegal character
+b25002a.ada:46:13: illegal character
+b25002a.ada:47:13: illegal character
+b25002a.ada:48:13: illegal character
+b25002a.ada:49:13: illegal character
+b25002a.ada:50:13: illegal character
+b25002a.ada:51:13: illegal character
+b25002a.ada:52:13: illegal character
+b25002a.ada:53:13: illegal character
+b25002a.ada:54:13: illegal character
+b25002a.ada:55:13: illegal character
+b25002a.ada:56:12: strings are delimited by double quote character
+b25002a.ada:57:13: illegal character
+b25002a.ada:59:13: illegal character
+b25002a.ada:61:13: illegal character
+b25002a.ada:63:13: illegal character
+b25002a.ada:65:13: illegal character
+b25002a.ada:67:13: illegal character
+b25002a.ada:69:13: illegal character
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b25002a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b25002a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b25002a.ada into:
+   b25002a.adb

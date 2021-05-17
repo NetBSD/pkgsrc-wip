@@ -1,0 +1,6 @@
+
+,.,. CXA4024 ACATS 4.1 21-05-16 10:54:29
+---- CXA4024 Check that the function "-", To_Ranges, To_Domain, and
+                To_Range are available in the package Ada.Strings.Maps, 
+                and that they produce correct results.
+==== CXA4024 PASSED ============================.

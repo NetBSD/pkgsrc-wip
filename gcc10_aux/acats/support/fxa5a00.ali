@@ -1,0 +1,68 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U fxa5a00%b		fxa5a00.adb		332a20e9 DE NE OO PK IU
+
+U fxa5a00%s		fxa5a00.ads		a674cebf BN DE EE NE OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W report%s		report.adb		report.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-numeri.ads		20210408115627 bb51c45a ada.numerics%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D fxa5a00.ads		20210516102806 c23cf10f fxa5a00%s
+D fxa5a00.adb		20210516102806 f116d1e6 fxa5a00%b
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+G a e
+G c Z s b [result_within_range fxa5a00 63 13 none]
+G c Z s b [result_within_range fxa5a00 67 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|39r6 51r46 52r46
+X 2 a-numeri.ads
+16K13*Numerics 32e17 4|39w10 51r50 52r50
+21N4*Pi 4|51r59 52r59
+X 4 fxa5a00.ads
+42K9*FXA5A00 82l5 82e12 5|4b14 39l5 39t12
+46f4*Epsilon{float}
+47f4*Small{float}
+48f4*Large{float}
+49f4*Minus_Large{float} 5|32r32
+51f4*Half_Pi{float}
+52f4*Two_Pi{float}
+54f4*Floating_Delta{float} 55r53 56r53 57r53 58r53
+55f4*One_Plus_Delta{float}
+56f4*One_Minus_Delta{float}
+57f4*Minus_One_Plus_Delta{float}
+58f4*Minus_One_Minus_Delta{float}
+61F9*New_Float<float> 67r52 5|16r52
+63V13*Result_Within_Range{boolean} 63>34 64>34 65>34 5|7b13 13l8 13t27
+63f34 Result{float} 5|7b34 11r15 12r15
+64f34 Expected_Result{float} 5|8b34 11r25 12r25
+65f34 Relative_Error{float} 5|9b34 11r43 12r43
+67V13*Result_Within_Range{boolean} 67>34 68>34 69>34 5|16b13 22l8 22t27
+67f34 Result{61F9} 5|16b34 20r21 21r21
+68f34 Expected_Result{float} 5|17b34 20r32 21r32
+69f34 Relative_Error{float} 5|18b34 20r50 21r50
+78F12 Eval_Type 79r44 5|25r44
+79u14*Dont_Optimize 79>29 80>29 5|25b14 37l8 37t21
+79*29 Check_Result{78F12} 5|25b29 32r16
+80i29 Num{integer} 5|26b29 35r71
+X 6 report.ads
+84K9*Report 4|40w6 5|33r10 6|190e11
+123U16*Comment 5|33s17
+

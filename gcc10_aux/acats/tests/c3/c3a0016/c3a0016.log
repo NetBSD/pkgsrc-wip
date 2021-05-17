@@ -1,0 +1,5 @@
+
+,.,. C3A0016 ACATS 4.1 21-05-16 10:34:55
+---- C3A0016 Check that a constant access-to-variable value can be used 
+                to modify the designated object.
+==== C3A0016 PASSED ============================.

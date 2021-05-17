@@ -1,0 +1,164 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b750a07.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b750a07.adb
+b750a07.adb:75:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:75:21: return by reference not permitted in Ada 2005
+b750a07.adb:75:21: consider switching to return of access type
+b750a07.adb:78:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:78:21: return by reference not permitted in Ada 2005
+b750a07.adb:78:21: consider switching to return of access type
+b750a07.adb:84:18: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:84:18: return by reference not permitted in Ada 2005
+b750a07.adb:84:18: consider switching to return of access type
+b750a07.adb:87:18: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:87:18: return by reference not permitted in Ada 2005
+b750a07.adb:87:18: consider switching to return of access type
+b750a07.adb:93:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:93:29: return by reference not permitted in Ada 2005
+b750a07.adb:93:29: consider switching to return of access type
+b750a07.adb:96:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:96:29: return by reference not permitted in Ada 2005
+b750a07.adb:96:29: consider switching to return of access type
+b750a07.adb:99:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:99:21: return by reference not permitted in Ada 2005
+b750a07.adb:99:21: consider switching to return of access type
+b750a07.adb:102:14: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:102:14: return by reference not permitted in Ada 2005
+b750a07.adb:102:14: consider switching to return of access type
+b750a07.adb:108:17: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:108:17: return by reference not permitted in Ada 2005
+b750a07.adb:108:17: consider switching to return of access type
+b750a07.adb:108:17: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:111:17: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:111:17: return by reference not permitted in Ada 2005
+b750a07.adb:111:17: consider switching to return of access type
+b750a07.adb:111:17: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:114:17: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:114:17: return by reference not permitted in Ada 2005
+b750a07.adb:114:17: consider switching to return of access type
+b750a07.adb:114:17: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:117:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:117:21: return by reference not permitted in Ada 2005
+b750a07.adb:117:21: consider switching to return of access type
+b750a07.adb:120:22: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:120:22: return by reference not permitted in Ada 2005
+b750a07.adb:120:22: consider switching to return of access type
+b750a07.adb:123:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:123:29: return by reference not permitted in Ada 2005
+b750a07.adb:123:29: consider switching to return of access type
+b750a07.adb:126:30: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:126:30: return by reference not permitted in Ada 2005
+b750a07.adb:126:30: consider switching to return of access type
+b750a07.adb:129:14: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:129:14: return by reference not permitted in Ada 2005
+b750a07.adb:129:14: consider switching to return of access type
+b750a07.adb:129:14: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:132:15: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:132:15: return by reference not permitted in Ada 2005
+b750a07.adb:132:15: consider switching to return of access type
+b750a07.adb:132:15: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:135:31: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:135:31: return by reference not permitted in Ada 2005
+b750a07.adb:135:31: consider switching to return of access type
+b750a07.adb:135:31: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:138:14: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:138:14: return by reference not permitted in Ada 2005
+b750a07.adb:138:14: consider switching to return of access type
+b750a07.adb:138:14: component type "Lim_Rec" of type "Lim_Array" is limited
+b750a07.adb:141:14: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:141:14: return by reference not permitted in Ada 2005
+b750a07.adb:141:14: consider switching to return of access type
+b750a07.adb:144:15: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:144:15: return by reference not permitted in Ada 2005
+b750a07.adb:144:15: consider switching to return of access type
+b750a07.adb:147:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:147:29: return by reference not permitted in Ada 2005
+b750a07.adb:147:29: consider switching to return of access type
+b750a07.adb:150:32: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:150:32: return by reference not permitted in Ada 2005
+b750a07.adb:150:32: consider switching to return of access type
+b750a07.adb:156:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:156:21: return by reference not permitted in Ada 2005
+b750a07.adb:156:21: consider switching to return of access type
+b750a07.adb:156:21: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:159:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:159:21: return by reference not permitted in Ada 2005
+b750a07.adb:159:21: consider switching to return of access type
+b750a07.adb:159:21: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:165:22: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:165:22: return by reference not permitted in Ada 2005
+b750a07.adb:165:22: consider switching to return of access type
+b750a07.adb:165:22: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:168:22: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:168:22: return by reference not permitted in Ada 2005
+b750a07.adb:168:22: consider switching to return of access type
+b750a07.adb:168:22: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:174:30: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:174:30: return by reference not permitted in Ada 2005
+b750a07.adb:174:30: consider switching to return of access type
+b750a07.adb:174:30: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:177:30: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:177:30: return by reference not permitted in Ada 2005
+b750a07.adb:177:30: consider switching to return of access type
+b750a07.adb:177:30: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:180:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:180:21: return by reference not permitted in Ada 2005
+b750a07.adb:180:21: consider switching to return of access type
+b750a07.adb:180:21: component "P" of type "Lim_Comp" has limited type
+b750a07.adb:186:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:186:21: return by reference not permitted in Ada 2005
+b750a07.adb:186:21: consider switching to return of access type
+b750a07.adb:189:21: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:189:21: return by reference not permitted in Ada 2005
+b750a07.adb:189:21: consider switching to return of access type
+b750a07.adb:192:34: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:192:34: return by reference not permitted in Ada 2005
+b750a07.adb:192:34: consider switching to return of access type
+b750a07.adb:195:35: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:195:35: return by reference not permitted in Ada 2005
+b750a07.adb:195:35: consider switching to return of access type
+b750a07.adb:198:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:198:29: return by reference not permitted in Ada 2005
+b750a07.adb:198:29: consider switching to return of access type
+b750a07.adb:201:19: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:201:19: return by reference not permitted in Ada 2005
+b750a07.adb:201:19: consider switching to return of access type
+b750a07.adb:204:20: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:204:20: return by reference not permitted in Ada 2005
+b750a07.adb:204:20: consider switching to return of access type
+b750a07.adb:207:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:207:29: return by reference not permitted in Ada 2005
+b750a07.adb:207:29: consider switching to return of access type
+b750a07.adb:210:14: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:210:14: return by reference not permitted in Ada 2005
+b750a07.adb:210:14: consider switching to return of access type
+b750a07.adb:213:15: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:213:15: return by reference not permitted in Ada 2005
+b750a07.adb:213:15: consider switching to return of access type
+b750a07.adb:216:29: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:216:29: return by reference not permitted in Ada 2005
+b750a07.adb:216:29: consider switching to return of access type
+b750a07.adb:229:53: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:229:53: return by reference not permitted in Ada 2005
+b750a07.adb:229:53: consider switching to return of access type
+b750a07.adb:232:53: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:232:53: return by reference not permitted in Ada 2005
+b750a07.adb:232:53: consider switching to return of access type
+b750a07.adb:235:34: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:235:34: return by reference not permitted in Ada 2005
+b750a07.adb:235:34: consider switching to return of access type
+b750a07.adb:239:44: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:239:44: return by reference not permitted in Ada 2005
+b750a07.adb:239:44: consider switching to return of access type
+b750a07.adb:242:45: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:242:45: return by reference not permitted in Ada 2005
+b750a07.adb:242:45: consider switching to return of access type
+b750a07.adb:245:38: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:245:38: return by reference not permitted in Ada 2005
+b750a07.adb:245:38: consider switching to return of access type
+b750a07.adb:249:52: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:249:52: return by reference not permitted in Ada 2005
+b750a07.adb:249:52: consider switching to return of access type
+b750a07.adb:252:39: (Ada 2005) cannot copy object of a limited type (RM-2005 6.5(5.5/2))
+b750a07.adb:252:39: return by reference not permitted in Ada 2005
+b750a07.adb:252:39: consider switching to return of access type
+gnatmake: "b750a07.adb" compilation error

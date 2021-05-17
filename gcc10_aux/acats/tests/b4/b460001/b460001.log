@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460001.adb
+b460001.adb:74:33: cannot convert local pointer to non-local access type
+b460001.adb:81:33: cannot convert local pointer to non-local access type
+b460001.adb:88:33: cannot convert local pointer to non-local access type
+b460001.adb:99:47: cannot convert local pointer to non-local access type
+b460001.adb:108:51: cannot convert access discriminant to non-local access type
+b460001.adb:129:48: cannot convert access discriminant to non-local access type
+gnatmake: "b460001.adb" compilation error

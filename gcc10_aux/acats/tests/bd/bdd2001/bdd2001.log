@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdd2001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdd2001.adb
+bdd2001.adb:125:04: limited type "Task_Type" has no "OUTPUT" attribute
+bdd2001.adb:128:04: limited type "Derived_Limited_Type" has no "OUTPUT" attribute
+bdd2001.adb:132:04: limited type "Comp_With_Lim_Type" has no "OUTPUT" attribute
+bdd2001.adb:132:04: component "Limited_Component_Field" of type "Comp_With_Lim_Type" has limited type
+bdd2001.adb:136:04: limited type "Composite_With_Task_Type" has no "OUTPUT" attribute
+bdd2001.adb:136:04: component "Task_Component_Field" of type "Composite_With_Task_Type" has limited type
+bdd2001.adb:140:04: limited type "Protected_Type" has no "OUTPUT" attribute
+bdd2001.adb:152:21: limited type "Limited_Type" has no "INPUT" attribute
+bdd2001.adb:157:12: limited type "Comp_With_Der_Lim_Type" has no "INPUT" attribute
+bdd2001.adb:157:12: component "Derived_Limited_Component_Field" of type "Comp_With_Der_Lim_Type" has limited type
+bdd2001.adb:162:12: limited type "Comp_With_Lim_Disc" has no "INPUT" attribute
+bdd2001.adb:172:23: limited type "Root_Type'CLASS" has no "OUTPUT" attribute
+bdd2001.adb:175:27: limited type "Extended_Type'CLASS" has no "OUTPUT" attribute
+bdd2001.adb:175:27: component "Limited_Comp" of type "Extended_Type'CLASS" has limited type
+bdd2001.adb:179:41: limited type "Root_With_Limited_Comp_Type'CLASS" has no "OUTPUT" attribute
+gnatmake: "bdd2001.adb" compilation error

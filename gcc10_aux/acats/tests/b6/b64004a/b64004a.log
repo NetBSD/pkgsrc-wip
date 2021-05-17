@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b64004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b64004a.adb
+b64004a.adb:52:11: missing argument for parameter "X2" in call to "F" declared at line 45
+b64004a.adb:54:06: missing argument for parameter "X1" in call to "P" declared at line 40
+b64004a.adb:56:06: missing argument for parameter "X1" in call to "P" declared at line 40
+b64004a.adb:58:06: missing argument for parameter "X1" in call to "P" declared at line 40
+b64004a.adb:60:11: missing argument for parameter "X2" in call to "F" declared at line 45
+gnatmake: "b64004a.adb" compilation error

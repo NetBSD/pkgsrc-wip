@@ -1,0 +1,6 @@
+
+,.,. C390002 ACATS 4.1 21-05-16 10:33:59
+---- C390002 Check that a tagged type may be declared and derived from
+                in simple, private and extended forms.  Check package
+                Ada.Tags.
+==== C390002 PASSED ============================.

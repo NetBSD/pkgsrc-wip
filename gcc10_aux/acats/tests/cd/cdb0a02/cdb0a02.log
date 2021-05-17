@@ -1,0 +1,9 @@
+
+,.,. CDB0A02 ACATS 4.1 21-05-16 10:51:53
+---- CDB0A02 Check that several access types can share the same pool. 
+                Check that any exception propagated by Allocate is
+                propagated by the allocator.  Check that for an access
+                type S, S'Max_Size_In_Storage_Elements denotes the
+                maximum values for Size_In_Storage_Elements that will be
+                requested via Allocate.
+==== CDB0A02 PASSED ============================.

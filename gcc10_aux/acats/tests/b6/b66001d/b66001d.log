@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b66001d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b66001d.adb
+b66001d.adb:42:20: "P" conflicts with declaration at line 40
+gnatmake: "b66001d.adb" compilation error

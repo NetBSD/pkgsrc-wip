@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca11009.a into:
+   ca11009_0.ads
+   ca11009_0.adb
+   ca11009_0-ca11009_1.ads
+   ca11009_0-ca11009_1-ca11009_2.ads
+   ca11009_0-ca11009_1-ca11009_2.adb
+   ca11009_0-ca11009_1.adb
+   ca11009.adb

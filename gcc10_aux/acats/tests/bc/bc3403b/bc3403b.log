@@ -1,0 +1,47 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3403b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3403b.adb
+bc3403b.adb:94:36: index types of actual do not match those of formal "AR"
+bc3403b.adb:94:36: instantiation abandoned
+bc3403b.adb:95:36: index types of actual do not match those of formal "AR"
+bc3403b.adb:95:36: instantiation abandoned
+bc3403b.adb:96:36: index types of actual do not match those of formal "AR"
+bc3403b.adb:96:36: instantiation abandoned
+bc3403b.adb:97:36: index types of actual do not match those of formal "AR"
+bc3403b.adb:97:36: instantiation abandoned
+bc3403b.adb:98:36: index types of actual do not match those of formal "AR"
+bc3403b.adb:98:36: instantiation abandoned
+bc3403b.adb:102:35: index types of actual do not match those of formal "AR"
+bc3403b.adb:102:35: instantiation abandoned
+bc3403b.adb:103:35: index types of actual do not match those of formal "AR"
+bc3403b.adb:103:35: instantiation abandoned
+bc3403b.adb:106:39: index types of actual do not match those of formal "AR"
+bc3403b.adb:106:39: instantiation abandoned
+bc3403b.adb:108:39: index types of actual do not match those of formal "AR"
+bc3403b.adb:108:39: instantiation abandoned
+bc3403b.adb:111:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:111:47: instantiation abandoned
+bc3403b.adb:112:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:112:47: instantiation abandoned
+bc3403b.adb:115:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:115:47: instantiation abandoned
+bc3403b.adb:116:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:116:47: instantiation abandoned
+bc3403b.adb:117:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:117:47: instantiation abandoned
+bc3403b.adb:118:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:118:47: instantiation abandoned
+bc3403b.adb:119:48: index types of actual do not match those of formal "AR"
+bc3403b.adb:119:48: instantiation abandoned
+bc3403b.adb:120:48: index types of actual do not match those of formal "AR"
+bc3403b.adb:120:48: instantiation abandoned
+bc3403b.adb:124:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:124:47: instantiation abandoned
+bc3403b.adb:125:47: index types of actual do not match those of formal "AR"
+bc3403b.adb:125:47: instantiation abandoned
+bc3403b.adb:128:49: index types of actual do not match those of formal "AR"
+bc3403b.adb:128:49: instantiation abandoned
+bc3403b.adb:129:49: index types of actual do not match those of formal "AR"
+bc3403b.adb:129:49: instantiation abandoned
+bc3403b.adb:131:49: index types of actual do not match those of formal "AR"
+bc3403b.adb:131:49: instantiation abandoned
+gnatmake: "bc3403b.adb" compilation error

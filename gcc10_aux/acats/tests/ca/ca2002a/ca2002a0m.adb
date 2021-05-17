@@ -1,0 +1,64 @@
+
+WITH CA2002A1, CA2002A2;
+WITH REPORT; USE REPORT;
+PROCEDURE CA2002A0M IS
+BEGIN
+
+     TEST ("CA2002A", "SUBUNITS WITH DIFFERENT ANCESTORS " &
+                      "CAN HAVE THE SAME NAME");
+
+     DECLARE
+          VAR1 : INTEGER;
+          USE CA2002A1;
+     BEGIN
+
+          PROC (VAR1);
+          IF VAR1 /= 1 THEN 
+               FAILED ("CA2002A1 PROCEDURE NOT INVOKED CORRECTLY");
+          END IF;
+
+          IF NOT FUN THEN
+               FAILED ("CA2002A1 FUNCTION NOT INVOKED CORRECTLY");
+          END IF;
+
+          IF PKG.I /= 1 THEN
+               FAILED ("CA2202A1 PKG VARIABLE NOT ACCESSED CORRECTLY");
+          END IF;
+
+          VAR1 := 5;
+          PKG.PKG_PROC (VAR1);
+          IF VAR1 /= 4 THEN
+               FAILED ("CA2002A1 PKG SUBUNIT NOT INVOKED CORRECTLY");
+          END IF;
+
+     END;
+
+     DECLARE
+          VAR2 : INTEGER;
+          USE CA2002A2;
+     BEGIN
+
+          PROC (VAR2);
+          IF VAR2 /= 2 THEN
+               FAILED ("CA2002A2 PROCEDURE NOT INVOKED CORRECTLY");
+          END IF;
+
+          IF FUN THEN
+               FAILED ("CA2002A2 FUNCTION NOT INVOKED CORRECTLY");
+          END IF;
+
+          IF PKG.I /= 2 THEN
+               FAILED ("CA2002A2 PKG VARIABLE NOT ACCESSED CORRECTLY");
+          END IF;
+
+          VAR2 := 3;
+          PKG.PKG_PROC (VAR2);
+          IF VAR2 /= 4 THEN
+               FAILED ("CA2002A2 PKG SUBUNIT NOT INVOKED CORRECTLY");
+          END IF;
+
+     END;
+
+     RESULT;
+
+END CA2002A0M;

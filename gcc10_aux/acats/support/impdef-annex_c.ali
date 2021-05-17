@@ -1,0 +1,132 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P UA ZX
+
+RN
+RV NO_DELAY
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U impdef.annex_c%b	impdef-annex_c.adb	0bc72429 DE NE OO PK
+Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
+W impdef%s		impdef.adb		impdef.ali
+
+U impdef.annex_c%s	impdef-annex_c.ads	5a5f4b78 DE EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.interrupts%s	a-interr.adb		a-interr.ali
+W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
+W impdef%s		impdef.adb		impdef.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-calend.ads		20210408115627 474d9720 ada.calendar%s
+D a-caldel.ads		20210408115627 9f20b83d ada.calendar.delays%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-finali.ads		20210408115627 bf4f806b ada.finalization%s
+D a-interr.ads		20210408115627 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20210408115627 fceeb958 ada.interrupts.names%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-taside.ads		20210408115627 00e3a3f6 ada.task_identification%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-timoio.ads		20210408115627 3b5805c0 ada.text_io.modular_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210408115627 eff36322 ada.unchecked_deallocation%s
+D gnat.ads		20210408115627 b5988c27 gnat%s
+D g-os_lib.ads		20210408115627 0db74523 gnat.os_lib%s
+D impdef.ads		20210516102806 e64493f0 impdef%s
+D impdef-annex_c.ads	20210516102806 e6a273c7 impdef.annex_c%s
+D impdef-annex_c.adb	20210516102806 e0d212cd impdef.annex_c%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-finroo.ads		20210408115627 4ff27390 system.finalization_root%s
+D s-interr.ads		20210408115627 269c22db system.interrupts%s
+D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210408115627 8747ecd2 system.os_interface%s
+D s-os_lib.ads		20210408115627 5797958e system.os_lib%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-string.ads		20210408115627 8fe54fb7 system.strings%s
+D s-tasinf.ads		20210408115627 801abd01 system.task_info%s
+D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
+D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
+D s-taprob.ads		20210408115627 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20210408115627 60ad3dae system.tasking.protected_objects.entries%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [enable_interrupts impdef__annex_c 79 14 none]
+G c Z s b [generate_interrupt impdef__annex_c 88 14 none]
+G r c none [generate_interrupt impdef__annex_c 88 14 none] [comment report 123 16 none]
+X 1 ada.ads
+16K9*Ada 20e8 19|45r6 60r36 61r7
+X 6 a-interr.ads
+40K13*Interrupts 100e19 19|45r10 60r40 61r11
+42I9*Interrupt_ID<31|64I9> 19|60r51
+X 7 a-intnam.ads
+36K24*Names 136e25 19|45w21 61r22
+49i4*SIGINT{6|42I9} 19|61r28
+X 16 gnat.ads
+34K9*GNAT 57e9 20|5r6 46r14 50r7
+X 17 g-os_lib.ads
+51K14*OS_Lib=51:36 20|5w11 46r19 50r12
+X 18 impdef.ads
+78K9*ImpDef 449e11 19|48r9 102r5 20|7r14 62r5
+X 19 impdef-annex_c.ads
+48K16*Annex_C 18|78k9 19|102l12 102e19 20|7b21 62l12 62t19
+60i4*Interrupt_To_Generate{6|42I9}
+70N4*Wait_For_Interrupt
+79U14*Enable_Interrupts 20|22b14 28l8 28t25
+88U14*Generate_Interrupt 20|45b14 58l8 58t26
+96N4*Minimum_Atomic_Component_Size
+X 20 impdef-annex_c.adb
+46a7 Args{34|74A12} 52r26
+47b7 Success{boolean} 53m26 54r14
+X 24 report.ads
+84K9*Report 20|49r7 24|190e11
+123U16*Comment 20|49s14
+X 25 system.ads
+37K9*System 19|46w6 97r38 25|149e11
+71N4*Storage_Unit 19|97r45
+X 31 s-interr.ads
+64I9*Ada_Interrupt_ID<short_short_integer>
+X 34 s-os_lib.ads
+74A12*String_List{42|54A9}<integer> 20|46r26
+860U14*Spawn 20|50s19
+861a7 Program_Name{string} 20|51r10
+862a7 Args{733A12} 20|52r10
+863b7 Success{boolean} 20|53r10
+X 39 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 42 s-string.ads
+45P9*String_Access(string)
+54A9*String_List(45P9)<integer>
+

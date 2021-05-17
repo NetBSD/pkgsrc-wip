@@ -1,0 +1,8 @@
+
+,.,. C390011 ACATS 4.1 21-05-16 10:34:06
+---- C390011 Check that tagged types declared within generic package
+                declarations generate distinct tags for each instance of
+                the generic. Check that 'Base may be used as a subtype
+                mark. Check that T'Base and T'Class are allowed as the
+                subtype mark in a function result.
+==== C390011 PASSED ============================.

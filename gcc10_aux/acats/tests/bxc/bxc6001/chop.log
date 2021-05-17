@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bxc/bxc6001.a into:
+   bxc6001.adb
+   bxc6001_0.ads
+   bxc6001_1.ads
+   bxc6001_2.ads

@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1109a2m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1109a2m.adb
+ba1109a2m.adb:31:05: "Q" is not visible
+gnatmake: "ba1109a2m.adb" compilation error

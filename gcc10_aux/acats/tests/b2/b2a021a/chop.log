@@ -1,0 +1,6 @@
+b2a021a.ada:31:30: quote not allowed in percent delimited string
+b2a021a.ada:34:19: quote not allowed in percent delimited string
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b2a021a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b2a021a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b2a021a.ada into:
+   b2a021a.adb

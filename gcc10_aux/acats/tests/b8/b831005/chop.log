@@ -1,0 +1,13 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8310050.a into:
+   b8310050.ads
+   b8310050_g1.ads
+   b8310050_g2.ads
+   b8310050_g2.adb
+   b8310050_g3.ads
+   b8310050_g4.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8310051.a into:
+   b8310050_g3.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8310052.a into:
+   b8310050_g4.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8310053.a into:
+   b8310050_g5.ads

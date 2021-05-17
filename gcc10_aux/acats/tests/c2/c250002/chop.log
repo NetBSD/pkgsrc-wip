@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c2/c250002.au into:
+   c250002_0.ads
+   c250002_á.ads
+   c250002_á.adb
+   c250002.adb

@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43102b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43102b.adb
+b43102b.adb:100:06: ambiguous expression (cannot resolve "PROC_VR")
+b43102b.adb:100:06: possible interpretation at line 94
+b43102b.adb:100:06: possible interpretation at line 89
+b43102b.adb:100:06: possible interpretation at line 84
+b43102b.adb:100:06: possible interpretation at line 79
+b43102b.adb:104:06: ambiguous expression (cannot resolve "PROC_VR")
+b43102b.adb:104:06: possible interpretation at line 94
+b43102b.adb:104:06: possible interpretation at line 89
+b43102b.adb:104:06: possible interpretation at line 84
+b43102b.adb:104:06: possible interpretation at line 79
+b43102b.adb:108:06: ambiguous expression (cannot resolve "PROC_VR")
+b43102b.adb:108:06: possible interpretation at line 94
+b43102b.adb:108:06: possible interpretation at line 89
+b43102b.adb:108:06: possible interpretation at line 84
+b43102b.adb:108:06: possible interpretation at line 79
+b43102b.adb:112:06: ambiguous expression (cannot resolve "PROC_VR")
+b43102b.adb:112:06: possible interpretation at line 94
+b43102b.adb:112:06: possible interpretation at line 89
+b43102b.adb:112:06: possible interpretation at line 84
+b43102b.adb:112:06: possible interpretation at line 79
+gnatmake: "b43102b.adb" compilation error

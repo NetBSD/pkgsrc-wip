@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a09a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a09a.adb
+b83a09a.adb:46:29: expected a boolean type
+b83a09a.adb:46:29: found package or procedure name
+b83a09a.adb:61:31: label name cannot be used as operand
+b83a09a.adb:80:34: expected a boolean type
+b83a09a.adb:80:34: found package or procedure name
+gnatmake: "b83a09a.adb" compilation error

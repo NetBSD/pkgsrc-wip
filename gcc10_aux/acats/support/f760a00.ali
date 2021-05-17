@@ -1,0 +1,297 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_PROTECTED_TYPES
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U f760a00%b		f760a00.adb		05e0fd5a DE OO PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U f760a00%s		f760a00.ads		5f3cfec8 DE EE OO PF PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.ads		a-finali.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W report%s		report.adb		report.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W tctouch%s		tctouch.adb		tctouch.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-finali.ads		20210408115627 bf4f806b ada.finalization%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f760a00.ads		20210516102806 12285b09 f760a00%s
+D f760a00.adb		20210516102806 17c8a653 f760a00%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-finmas.ads		20210408115627 7811a767 system.finalization_masters%s
+D s-finroo.ads		20210408115627 4ff27390 system.finalization_root%s
+D s-memory.ads		20210408115627 597d6634 system.memory%s
+D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210408115627 8747ecd2 system.os_interface%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stalib.adb		20210408115627 f2fe2716 system.standard_library%b
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210408115627 b16154c2 system.storage_pools%s
+D s-stposu.ads		20210408115627 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20210408115627 801abd01 system.task_info%s
+D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
+D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
+D s-taprob.ads		20210408115627 acd6094d system.tasking.protected_objects%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D tctouch.ads		20210516102805 2d42de40 tctouch%s
+G a e
+G c Z s b [initialize f760a00 53 15 none]
+G c Z s b [adjust f760a00 55 15 none]
+G c Z s b [finalize f760a00 57 15 none]
+G c Z s b [check_tc_copy_check f760a00 59 15 none]
+G c Z s b [use_it f760a00 62 15 none]
+G c Z s b [use_cnst f760a00 63 15 none]
+G c Z s b [check_init f760a00 73 15 none]
+G c Z s b [check_fin_lim_rec f760a00 75 15 none]
+G c Z s b [use_it f760a00 77 15 none]
+G c Z s b [use_cnst f760a00 78 15 none]
+G c Z s b [check_init f760a00 84 15 none]
+G c Z s b [check_fin_lim_array f760a00 86 15 none]
+G c Z s b [use_it f760a00 88 15 none]
+G c Z s b [check_init f760a00 97 15 none]
+G c Z s b [check_fin_lim_tagged f760a00 99 15 none]
+G c Z s b [use_it f760a00 101 15 none]
+G c Z s b [get f760a00__prot 106 17 none]
+G c Z s b [set f760a00__prot 107 18 none]
+G c Z s b [use_it f760a00__prot 108 18 none]
+G c Z s b [prot__getN f760a00 106 8 none]
+G c Z s b [prot__getP f760a00 106 8 none]
+G c Z s b [prot__setN f760a00 107 8 none]
+G c Z s b [prot__setP f760a00 107 8 none]
+G c Z s b [prot__use_itN f760a00 108 8 none]
+G c Z s b [prot__use_itP f760a00 108 8 none]
+G c Z s b [check_init f760a00 114 15 none]
+G c Z s b [check_fin_prot f760a00 116 15 none]
+G c Z s b [use_it f760a00 118 15 none]
+G c Z s b [check_init f760a00 128 15 none]
+G c Z s b [check_fin_lim_comp f760a00 130 15 none]
+G c Z s b [use_it f760a00 132 15 none]
+G c Z s s [tc_copy_checkDA f760a00 138 10 none]
+G c Z s s [tc_copy_checkDF f760a00 138 10 none]
+G c Z s s [tc_copy_checkIP f760a00 138 10 none]
+G c Z s s [lim_recDI f760a00 67 10 none]
+G c Z s s [lim_recDF f760a00 67 10 none]
+G c Z s s [lim_recIP f760a00 67 10 none]
+G c Z s s [lim_arrayIP f760a00 82 10 none]
+G c Z s s [lim_arrayDI f760a00 82 10 none]
+G c Z s s [lim_arrayDF f760a00 82 10 none]
+G c Z s s [lim_taggedDF f760a00 92 10 none]
+G c Z s s [lim_taggedDI f760a00 92 10 none]
+G c Z s s [lim_taggedIP f760a00 92 10 none]
+G c Z s s [protVDI f760a00 105 5 none]
+G c Z s s [protVDF f760a00 105 5 none]
+G c Z s s [protVIP f760a00 105 5 none]
+G c Z s s [lim_compDI f760a00 122 10 none]
+G c Z s s [lim_compDF f760a00 122 10 none]
+G c Z s s [lim_compIP f760a00 122 10 none]
+G r c none [initialize f760a00 53 15 none] [touch tctouch 115 13 none]
+G r c none [adjust f760a00 55 15 none] [touch tctouch 115 13 none]
+G r c none [finalize f760a00 57 15 none] [touch tctouch 115 13 none]
+G r c none [check_tc_copy_check f760a00 59 15 none] [touch tctouch 115 13 none]
+G r c none [check_tc_copy_check f760a00 59 15 none] [ident_int report 138 15 none]
+G r c none [check_tc_copy_check f760a00 59 15 none] [failed report 100 16 none]
+G r c none [check_tc_copy_check f760a00 59 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00 62 15 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00 62 15 none] [failed report 100 16 none]
+G r c none [use_cnst f760a00 63 15 none] [ident_int report 138 15 none]
+G r c none [use_cnst f760a00 63 15 none] [failed report 100 16 none]
+G r c none [check_init f760a00 73 15 none] [validate tctouch 116 13 none]
+G r c none [check_fin_lim_rec f760a00 75 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00 77 15 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00 77 15 none] [failed report 100 16 none]
+G r c none [use_cnst f760a00 78 15 none] [ident_int report 138 15 none]
+G r c none [use_cnst f760a00 78 15 none] [failed report 100 16 none]
+G r c none [check_init f760a00 84 15 none] [validate tctouch 116 13 none]
+G r c none [check_fin_lim_array f760a00 86 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00 88 15 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00 88 15 none] [failed report 100 16 none]
+G r c none [check_init f760a00 97 15 none] [validate tctouch 116 13 none]
+G r c none [check_fin_lim_tagged f760a00 99 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00 101 15 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00 101 15 none] [failed report 100 16 none]
+G r c none [use_it f760a00__prot 108 18 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00__prot 108 18 none] [failed report 100 16 none]
+G r c none [check_init f760a00 114 15 none] [validate tctouch 116 13 none]
+G r c none [check_fin_prot f760a00 116 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00 118 15 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00 118 15 none] [failed report 100 16 none]
+G r c none [check_init f760a00 128 15 none] [validate tctouch 116 13 none]
+G r c none [check_fin_lim_comp f760a00 130 15 none] [validate tctouch 116 13 none]
+G r c none [use_it f760a00 132 15 none] [ident_int report 138 15 none]
+G r c none [use_it f760a00 132 15 none] [failed report 100 16 none]
+G r c none [tc_copy_checkDA f760a00 138 10 none] [touch tctouch 115 13 none]
+G r c none [tc_copy_checkDF f760a00 138 10 none] [touch tctouch 115 13 none]
+G r c none [lim_recDF f760a00 67 10 none] [touch tctouch 115 13 none]
+G r c none [lim_recIP f760a00 67 10 none] [touch tctouch 115 13 none]
+G r c none [lim_arrayIP f760a00 82 10 none] [touch tctouch 115 13 none]
+G r c none [lim_arrayDI f760a00 82 10 none] [touch tctouch 115 13 none]
+G r c none [lim_arrayDF f760a00 82 10 none] [touch tctouch 115 13 none]
+G r c none [lim_taggedDF f760a00 92 10 none] [touch tctouch 115 13 none]
+G r c none [lim_taggedIP f760a00 92 10 none] [touch tctouch 115 13 none]
+G r c none [protVDF f760a00 105 5 none] [touch tctouch 115 13 none]
+G r c none [protVIP f760a00 105 5 none] [touch tctouch 115 13 none]
+G r c none [lim_compDF f760a00 122 10 none] [touch tctouch 115 13 none]
+G r c none [lim_compIP f760a00 122 10 none] [touch tctouch 115 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 7|48r6 51r31 138r31
+X 3 a-finali.ads
+40K13*Finalization 68e21 7|48w10 51r35 138r35
+43H9*Controlled<16|40R9> 59e72 7|51r48 138r48
+X 7 f760a00.ads
+49K9*F760A00 138E10 142l5 142e12 8|3b14 171l5 171t12
+51R10*TC_Copy_Check<3|43R9> 53P15 53r43 55P15 55r39 57P15 57r41 62p15 62r39
+. 63p15 63r37 70r14 94r14 111r13 125r13 138c10 140e15 8|5r43 10r39 15r41
+. 20r39 31r37 47r18 48r18
+53U15*Initialize<3|46p14> 53=27 8|5b15 8l9 8t19
+53r27 Object{51R10} 8|5b27
+55U15*Adjust<3|47p14> 55=23 8|10b15 13l9 13t15
+55r23 Object{51R10} 8|10b23
+57U15*Finalize<3|48p14> 57=25 8|15b15 18l9 18t17
+57r25 Object{51R10} 8|15b25
+59U15*Check_TC_Copy_Check 8|42b15 56l9 56t28
+62U15*Use_It 62=23 8|20b15 29l9 29t15 50s11 51s11 53s11 72s8 97s11 115s8
+. 149s11 167s8
+62r23 Object{51R10} 8|20b23 24r36
+63U15*Use_Cnst 63>25 8|31b15 40l9 40t17 79s8
+63r25 Object{51R10} 8|31b25 35r36
+67R10*Lim_Rec 71e15 73r39 77r39 78r37 82r52 93r13 8|58r39 68r39 75r37
+68i9*A{integer}
+69b9*B{boolean}
+70r9*TC{51R10} 8|72m23 79r25 97m29
+73U15*Check_Init 73>27 73>48 8|58b15 61l9 61t19
+73r27 Object{67R10} 8|58b27
+73a48 Message{string} 8|58b48 60r31
+75U15*Check_Fin_Lim_Rec 75>34 8|63b15 66l9 66t26
+75a34 Message{string} 8|63b34 65r31
+77U15*Use_It 77=23 8|68b15 73l9 73t15 116s8
+77r23 Object{67R10} 8|68b23 72m16 72r16
+78U15*Use_Cnst 78>25 8|75b15 80l9 80t17
+78r25 Object{67R10} 8|75b25 79r18
+82A10*Lim_Array(67R10)<integer> 84r39 88r39 8|82r39 92r39
+84U15*Check_Init 84>27 84>50 8|82b15 85l9 85t19
+84a27 Object{82A10} 8|82b27 84r32
+84a50 Message{string} 8|82b50 84r55
+86U15*Check_Fin_Lim_Array 86>36 86>57 8|87b15 90l9 90t28
+86i36 Length{natural} 8|87b36 89r32
+86a57 Message{string} 8|87b57 89r48
+88U15*Use_It 88=23 8|92b15 99l9 99t15
+88a23 Object{82A10} 8|92b23 96r17 97m19 97r19
+92R10*Lim_Tagged 95e15 97r39 101r39 8|101r39 111r39
+93r9*R{67R10} 8|116m23
+94r9*TC{51R10} 8|115m23
+97U15*Check_Init 97>27 97>57 8|101b15 104l9 104t19
+97c27 Object<92R10> 8|101b27
+97a57 Message{string} 8|101b57 103r32
+99U15*Check_Fin_Lim_Tagged 99>37 8|106b15 109l9 109t29
+99a37 Message{string} 8|106b37 108r32
+101U15*Use_It 101=23 8|111b15 117l9 117t15
+101c23 Object<92R10> 8|111b23 115m16 115r16 116m16 116r16
+105W20*Prot 110E8 112l9 112e13 114r39 118r39 123r12 8|119r39 129r39 136b20
+. 151l9 151t13
+106V17 Get{natural} 8|137b17 140l12 140t15
+107U18 Set 107>23 8|142b18 145l12 145t15
+107i23 Val{natural} 8|142b23 144r20
+108U18 Use_It 8|133s15 147b18 150l12 150t18 168s17
+110i8 Value{natural} 8|139r18 144r11
+111r8 TC{51R10} 8|149r19
+114U15*Check_Init 114>27 114>45 8|119b15 122l9 122t19
+114w27 Object{105W20} 8|119b27
+114a45 Message{string} 8|119b45 121r31
+116U15*Check_Fin_Prot 116>31 8|124b15 127l9 127t23
+116a31 Message{string} 8|124b31 126r31
+118U15*Use_It 118=23 8|129b15 134l9 134t15
+118w23 Object{105W20} 8|129b23 133r8
+122R10*Lim_Comp 126e15 128r39 132r39 8|153r39 163r39
+123w8*P{105W20} 8|168m15
+124i8*N{natural}
+125r8*TC{51R10} 8|167m23
+128U15*Check_Init 128>27 128>49 8|153b15 156l9 156t19
+128r27 Object{122R10} 8|153b27
+128a49 Message{string} 8|153b49 155r32
+130U15*Check_Fin_Lim_Comp 130>35 8|158b15 161l9 161t27
+130a35 Message{string} 8|158b35 160r32
+132U15*Use_It 132=23 8|163b15 169l9 169t15
+132r23 Object{122R10} 8|163b23 167m16 167r16 168m8 168r8
+139i9 Val{natural} 8|24r43 35r43
+X 8 f760a00.adb
+47r11 Obj{7|51R10} 50m19 50r19 52m11 53m19 53r19
+48r11 Cnst{7|51R10} 51m19 51r19 52r18
+96i12 I{integer} 97r26
+X 11 report.ads
+84K9*Report 7|47w15 8|24r11 25r11 35r11 36r11 11|190e11
+100U16*Failed 8|25s18 36s18
+138V15*Ident_Int{integer} 8|24s18 35s18
+X 12 system.ads
+67M9*Address
+X 17 s-memory.ads
+53V13*Alloc{12|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{12|67M9} 105i<c,__gnat_realloc>22
+X 24 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 26 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 38 tctouch.ads
+108K9*TCTouch 7|47w6 8|7r8 12r8 17r8 55r8 60r8 65r8 84r8 89r8 103r8 108r8
+. 121r8 126r8 155r8 160r8 38|148e12
+115U13*Touch 8|7s16 12s16 17s16
+116U13*Validate 8|55s16 60s16 65s16 84s16 89s16 103s16 108s16 121s16 126s16
+. 155s16 160s16
+

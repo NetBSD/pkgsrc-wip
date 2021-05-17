@@ -1,0 +1,3 @@
+ca2001h0.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2001h0.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2001h2.ada
+use -w to overwrite files and keep last version
+no source files written

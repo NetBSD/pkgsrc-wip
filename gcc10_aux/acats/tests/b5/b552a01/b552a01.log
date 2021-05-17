@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a01.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a01.adb
+b552a01.adb:82:08: container type does not support reverse iteration
+b552a01.adb:87:08: container type does not support reverse iteration
+gnatmake: "b552a01.adb" compilation error

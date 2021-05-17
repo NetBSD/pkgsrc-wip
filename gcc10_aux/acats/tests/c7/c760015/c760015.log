@@ -1,0 +1,7 @@
+
+,.,. C760015 ACATS 4.1 21-05-16 10:44:35
+---- C760015 Check that a controlled type can be declared within a
+                subprogram, and that an overridden Initialize or
+                Finalize is called appropriately and can access local
+                variables to the subprogram.
+==== C760015 PASSED ============================.

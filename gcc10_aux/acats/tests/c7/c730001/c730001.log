@@ -1,0 +1,11 @@
+
+,.,. C730001 ACATS 4.1 21-05-16 10:44:08
+---- C730001 Check that the full view of a private extension may be
+                derived indirectly from the ancestor type. Check that,
+                for a primitive subprogram of the private extension that
+                is inherited from the ancestor type and not overridden, 
+                the formal parameter names and default expressions come 
+                from the corresponding primitive subprogram of the
+                ancestor type, while the body comes from that of the
+                parent type.
+==== C730001 PASSED ============================.

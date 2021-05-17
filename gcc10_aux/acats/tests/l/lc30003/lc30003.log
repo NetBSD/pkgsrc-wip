@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lc300032.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lc300032.adb
+lc30003_2.adb:63:05: circular Instantiation: "LC30003_0" instantiated in "LC30003_2"
+lc30003_2.adb:63:28: circular Instantiation: "LC30003_2" instantiated within "LC30003_1"
+lc30003_2.adb:63:28: circular Instantiation: "LC30003_1" instantiated within "LC30003_0"
+lc30003_2.adb:66:05: "Three" is undefined
+compilation abandoned
+gnatmake: "lc300032.adb" compilation error

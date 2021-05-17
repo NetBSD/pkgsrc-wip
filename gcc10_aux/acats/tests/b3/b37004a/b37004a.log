@@ -1,0 +1,26 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37004a.adb
+b37004a.adb:51:16: unconstrained subtype in component declaration
+b37004a.adb:52:16: unconstrained subtype in component declaration
+b37004a.adb:55:29: component "C4" cannot be used before end of record declaration
+b37004a.adb:56:25: component "C4" cannot be used before end of record declaration
+b37004a.adb:58:44: component "C7" cannot be used before end of record declaration
+b37004a.adb:59:35: component "C4" cannot be used before end of record declaration
+b37004a.adb:60:28: component "C4" cannot be used before end of record declaration
+b37004a.adb:63:26: component "C11" cannot be used before end of record declaration
+b37004a.adb:64:30: component "C11" cannot be used before end of record declaration
+b37004a.adb:65:26: component "C11" cannot be used before end of record declaration
+b37004a.adb:66:33: component "C11" cannot be used before end of record declaration
+b37004a.adb:67:33: component "C11" cannot be used before end of record declaration
+b37004a.adb:68:28: component "C4" cannot be used before end of record declaration
+b37004a.adb:69:28: component "C19" cannot be used before end of record declaration
+b37004a.adb:70:33: component "C20" cannot be used before end of record declaration
+b37004a.adb:72:25: component "C32" cannot be used before end of record declaration
+b37004a.adb:73:26: expected type "Standard.Float"
+b37004a.adb:73:26: found type universal integer
+b37004a.adb:74:28: expected type "Standard.Integer"
+b37004a.adb:74:28: found type universal real
+b37004a.adb:75:27: expected type "R" defined at line 50
+b37004a.adb:75:27: found type "AR" defined at line 49
+b37004a.adb:77:27: type declaration cannot refer to itself
+gnatmake: "b37004a.adb" compilation error

@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2116a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2116a.adb
+be2116a.adb:42:20: "INOUT_FILE" is undefined (more references follow)
+be2116a.adb:46:06: missing argument for parameter "Name" in call to "OPEN" declared at a-sequio.ads:76, instance at line 35
+gnatmake: "be2116a.adb" compilation error

@@ -1,0 +1,23 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120090.a into:
+   ba12009_0.ads
+   ba12009_1.ads
+   ba12009_2.ads
+   ba12009_3.ads
+   ba12009_3.adb
+   ba12009_6.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120091.a into:
+   ba12009_1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120092.a into:
+   ba12009_2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120093.a into:
+   ba12009_3-test_it.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120094.a into:
+   ba12009_4.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120095.a into:
+   ba12009_5.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120096.a into:
+   ba12009_6.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120097.a into:
+   ba12009_7.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120098.a into:
+   ba12009_8.ads

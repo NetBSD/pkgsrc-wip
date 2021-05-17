@@ -1,0 +1,6 @@
+
+,.,. C350A02 ACATS 4.1 21-05-16 10:32:29
+---- C350A02 Check that objects of types with a specified Default_Value 
+                are appropriately initialized. Part 2 - Generic discrete
+                types.
+==== C350A02 PASSED ============================.

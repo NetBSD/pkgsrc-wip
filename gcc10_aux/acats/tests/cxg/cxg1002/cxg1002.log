@@ -1,0 +1,6 @@
+
+,.,. CXG1002 ACATS 4.1 21-05-16 10:59:22
+---- CXG1002 Check that the subprograms defined in the package
+                Ada.Numerics.Generic_Complex_Types provide the
+                prescribed results.
+==== CXG1002 PASSED ============================.

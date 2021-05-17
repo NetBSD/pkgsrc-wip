@@ -1,0 +1,7 @@
+writing configuration pragmas from /home/fernando/mysandboxfolder/tmp/acats/tests/lxh/lxh40111.a to gnat.adc
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/lxh/lxh40110.a into:
+   lxh4011_0.ads
+   lxh4011_0.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/lxh/lxh40111.a into:
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/lxh/lxh40112.am into:
+   lxh40112.adb

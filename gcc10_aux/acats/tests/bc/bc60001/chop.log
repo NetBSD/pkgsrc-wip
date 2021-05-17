@@ -1,0 +1,7 @@
+bc60001.a:58:54: only procedures can be null
+bc60001.a:64:64: only procedures can be null
+bc60001.a:77:11: only procedures can be null
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc60001.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc60001.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc60001.a into:
+   bc60001.ads

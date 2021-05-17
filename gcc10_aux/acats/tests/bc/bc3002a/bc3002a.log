@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3002a.adb
+bc3002a.adb:50:06: missing actual "PROC"
+bc3002a.adb:50:06: in instantiation of "P" declared at line 47
+bc3002a.adb:50:06: instantiation abandoned
+bc3002a.adb:51:06: missing actual "GFP"
+bc3002a.adb:51:06: in instantiation of "P" declared at line 47
+bc3002a.adb:53:06: missing actual "FUN"
+bc3002a.adb:53:06: in instantiation of "P" declared at line 47
+bc3002a.adb:53:06: instantiation abandoned
+gnatmake: "bc3002a.adb" compilation error

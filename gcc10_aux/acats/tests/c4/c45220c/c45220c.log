@@ -1,0 +1,5 @@
+
+,.,. C45220C ACATS 4.1 21-05-16 10:40:52
+---- C45220C CHECK THAT  '='  AND  '/='  PRODUCE CORRECT RESULTS ON
+                DERIVED-BOOLEAN-TYPE OPERANDS.
+==== C45220C PASSED ============================.

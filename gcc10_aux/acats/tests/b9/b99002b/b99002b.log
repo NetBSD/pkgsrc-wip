@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99002b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99002b.adb
+b99002b.adb:64:39: attribute "COUNT" must apply to entry of current task
+gnatmake: "b99002b.adb" compilation error

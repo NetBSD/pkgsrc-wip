@@ -1,0 +1,119 @@
+V "GNAT Lib v10"
+M P W=b
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U macrosub%b		macrosub.adb		1b19a5f1 DE NE OO SU IU KU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W defs%s		defs.ads		defs.ali
+W getsubs%s		getsubs.adb		getsubs.ali
+W parsemac%s		parsemac.adb		parsemac.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D defs.ads		20210516102805 c50b07c7 defs%s
+D getsubs.ads		20210516102805 17bdcd2c getsubs%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D macrosub.adb		20210516102805 a4736ed7 macrosub%b
+D parsemac.ads		20210516102805 4c6ec955 parsemac%s
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D text_io.ads		20210408115627 21b2c898 text_io%s
+G a e
+G c Z b b [macrosub standard 5 11 none]
+G r c none [macrosub standard 5 11 none] [fill_table getsubs 21 16 none]
+G r c none [macrosub standard 5 11 none] [look_for_macro parsemac 18 16 none]
+G r c none [macrosub standard 5 11 none] [which_macro parsemac 25 16 none]
+X 6 a-textio.ads
+64P9*File_Type 12|15r39
+66n23*In_File{66E9} 12|28r26 39r31
+66n32*Out_File{66E9} 12|63r39
+99U14*Create 12|63s21
+114U14*Open 12|28s11 39s16
+129U14*Close 12|118s16 119s16 124s6
+312V13*End_Of_File{boolean} 12|35s16 71s26
+471U14*Get_Line 12|36s11 72s21
+498U14*Put_Line 12|116s21
+508U14*Put_Line 12|25s6 31s16 42s21 47s16 49s21 66s26 125s6 130s11
+544X4*Name_Error 12|30r16 41r21
+X 8 defs.ads
+67K9*DEFS 94e9 12|2w34 3r33
+80A14*VAL_STRING{string}<integer> 12|16r39 19r48
+X 9 getsubs.ads
+7K9*GETSUBS 23e12 12|2w15 3r14
+16X6*MAC_FILE 12|127r11
+16X16*LINE_LEN 12|127r22
+21U16*FILL_TABLE 12|26s6
+X 12 macrosub.adb
+5U11*MACROSUB 5b11 131l5 131t13
+15p6 INFILE1{6|64P9} 39m22 39r22 71r39 72r31 119m23 119r23
+15p15 INFILE2{6|64P9} 28m17 28r17 35r29 36r21 124m13 124r13
+15p24 OUTFILE1{6|64P9} 63m29 63r29 116r31 118m23 118r23
+16a6 FNAME{8|80A14} 36m30 39r40 43r31 47r42 52r24 57r19 58m21 59r22 60m21
+. 63r49 68r36
+16a13 MACRO{8|80A14} 78m47 82r49
+17i6 LENGTH{integer} 36m37 39r49 43r40 47r51 51r38 53m26 57r26 57r36 58r28
+. 58r38 59r29 59r39 60r28 60r38 63r59 68r45
+17i14 A_LENGTH{integer} 72m48 73r24 77r55 96r46 101r46 102r59 106m36 106r48
+. 109r47 110r56 116r52
+17i24 PTR{integer} 75m26 77m65 77r65 86r39 88r54 89r55 92r45 94r46 96r39
+. 99r46 102r54 111m36 111r43
+18i6 TEMP_MACRO_LENGTH{integer} 83m52 83r52 93r45 95r54 98r51 100r46 107r48
+. 112r43
+18i25 MACRO_LEN{integer} 78m54 78r54 79r34 82r56 86r43 88r58 89r59 92r49
+. 94r50 99r50 101r57 108r48 111r49
+18i36 FILE_COUNT{integer} 37m11 37r25 48r19
+19a6 A_LINE{8|80A14} 72m40 73r41 77r47 89r45 102r46 109m36 116r41
+19a14 TEMP_MACRO{8|80A14} 83m40 95r40
+19a26 TEMP_LINE{8|80A14}
+19a37 NEW_LINE{8|80A14} 88m41 92m36 98m41 110r43
+20b6 END_OF_LINE_SEARCH{boolean} 74m26 76r36 80m36 85r38 104m41
+20b26 FLAG{boolean} 44m21 46r18 121m16
+21a6 TESTS_FILE{string} 28r35
+22X6 TSTTESTS 33r22 127r33
+22X15 FILE_CRE 69r32 127r44
+51i20 I{integer} 52r30 53r36
+X 13 parsemac.ads
+7K9*PARSEMAC 12|2w24 3r23 13|30e13
+18U16*LOOK_FOR_MACRO 12|77s31
+25U16*WHICH_MACRO 12|82s36
+X 27 text_io.ads
+24K9*Text_IO=24:29 12|2w6 3r5
+

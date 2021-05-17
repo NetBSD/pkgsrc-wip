@@ -1,0 +1,6 @@
+
+,.,. C432004 ACATS 4.1 21-05-16 10:35:51
+---- C432004 Check that the type of an extension aggregate may be
+                derived from the type of the ancestor part through
+                multiple record extensions.
+==== C432004 PASSED ============================.

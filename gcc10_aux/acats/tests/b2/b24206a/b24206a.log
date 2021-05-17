@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24206a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24206a.adb
+b24206a.adb:32:32: base not 2-16
+b24206a.adb:33:32: base not 2-16
+b24206a.adb:34:39: base not 2-16
+b24206a.adb:35:39: base not 2-16
+b24206a.adb:36:41: base not 2-16
+b24206a.adb:40:41: base not 2-16
+b24206a.adb:48:29: base not 2-16
+b24206a.adb:49:29: base not 2-16
+b24206a.adb:50:34: base not 2-16
+b24206a.adb:51:25: base not 2-16
+b24206a.adb:58:14: base not 2-16
+b24206a.adb:59:14: base not 2-16
+b24206a.adb:61:17: base not 2-16
+b24206a.adb:62:17: base not 2-16
+b24206a.adb:64:22: base not 2-16
+b24206a.adb:65:22: base not 2-16
+b24206a.adb:69:16: base not 2-16
+b24206a.adb:70:36: base not 2-16
+b24206a.adb:71:16: base not 2-16
+b24206a.adb:72:36: base not 2-16
+gnatmake: "b24206a.adb" compilation error

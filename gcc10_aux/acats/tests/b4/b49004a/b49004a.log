@@ -1,0 +1,25 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49004a.adb
+b49004a.adb:32:32: mod with zero divisor
+b49004a.adb:32:32: static expression fails Constraint_Check
+b49004a.adb:34:26: division by zero
+b49004a.adb:34:26: static expression fails Constraint_Check
+b49004a.adb:36:45: illegal context for mixed mode operation
+b49004a.adb:36:50: expected type universal real
+b49004a.adb:36:50: found type "Standard.Integer"
+b49004a.adb:38:27: mod with zero divisor
+b49004a.adb:38:27: static expression fails Constraint_Check
+b49004a.adb:40:32: rem with zero divisor
+b49004a.adb:40:32: static expression fails Constraint_Check
+b49004a.adb:45:29: maximum allowed choice value is 5
+b49004a.adb:55:16: choice given in case statement is not static
+b49004a.adb:55:31: static value out of range
+b49004a.adb:55:31: static expression fails Constraint_Check
+b49004a.adb:55:31: expression raises exception, cannot be static (RM 4.9(34))
+b49004a.adb:62:20: Pred of "ENUM'First"
+b49004a.adb:62:20: static expression fails Constraint_Check
+b49004a.adb:69:20: Succ of "ENUM'Last"
+b49004a.adb:69:20: static expression fails Constraint_Check
+b49004a.adb:76:20: Val expression out of range
+b49004a.adb:76:20: static expression fails Constraint_Check
+gnatmake: "b49004a.adb" compilation error

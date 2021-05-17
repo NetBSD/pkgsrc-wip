@@ -1,0 +1,6 @@
+
+,.,. CA11017 ACATS 4.1 21-05-16 10:48:45
+---- CA11017 Check that body of the parent package can depend on one of 
+                its own public children.
+   - CA11017 Exception is raised as expected.
+==== CA11017 PASSED ============================.

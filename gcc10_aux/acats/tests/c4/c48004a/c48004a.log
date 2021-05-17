@@ -1,0 +1,5 @@
+
+,.,. C48004A ACATS 4.1 21-05-16 10:42:11
+---- C48004A CHECK THAT THE FORM 'NEW T' IS PERMITTED IF T IS A SCALAR
+                SUBTYPE.
+==== C48004A PASSED ============================.

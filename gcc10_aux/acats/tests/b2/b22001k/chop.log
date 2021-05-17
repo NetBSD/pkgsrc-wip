@@ -1,0 +1,6 @@
+b22001k.adt:45:201: missing ";"
+b22001k.adt:46:01: statement expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001k.adt: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001k.adt: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001k.adt into:
+   b22001k.adb

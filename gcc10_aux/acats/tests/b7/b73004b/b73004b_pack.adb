@@ -1,0 +1,30 @@
+
+PACKAGE BODY B73004B_PACK IS
+
+      INT : INT_TYPE;
+      FLT : FLT_TYPE;
+      CHR : CHR_TYPE;
+      REC : REC_TYPE;
+      BOL : BOOLEAN;
+      CON : CONSTANT INT_TYPE := 5;
+
+      PACKAGE PACK1 IS
+           A : INT_TYPE;
+      END PACK1;
+
+      FUNCTION FAIL_IT(X : INTEGER) RETURN BOOLEAN IS
+      BEGIN
+           RETURN TRUE;
+      END FAIL_IT;
+
+     PROCEDURE PROC IS
+     BEGIN
+          NULL;
+     END PROC;
+
+     PROCEDURE REQUIRE_BODY IS
+     BEGIN
+       NULL;
+     END;
+
+END B73004B_PACK;

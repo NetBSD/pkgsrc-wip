@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457005.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457005.adb
+b457005.adb:24:26: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:27:26: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:30:26: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:35:26: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:54:29: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:57:29: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:63:29: all or none of the dependent expressions can be dynamically tagged
+b457005.adb:66:29: all or none of the dependent expressions can be dynamically tagged
+gnatmake: "b457005.adb" compilation error

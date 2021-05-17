@@ -1,0 +1,14 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35701a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35701a.adb
+b35701a.adb:45:27: expected an integer type
+b35701a.adb:45:27: found type universal real
+b35701a.adb:47:27: digits value must be greater than zero
+b35701a.adb:49:27: digits value must be greater than zero
+b35701a.adb:51:27: non-static expression used for digits value
+b35701a.adb:51:27: "D" is not static constant or named number (RM 4.9(5))
+b35701a.adb:55:27: digits value out of range, maximum is 18
+b35701a.adb:58:25: expected a real type
+b35701a.adb:58:25: found type universal integer
+b35701a.adb:58:29: expected a real type
+b35701a.adb:58:29: found type universal integer
+gnatmake: "b35701a.adb" compilation error

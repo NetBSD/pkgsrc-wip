@@ -1,0 +1,8 @@
+
+,.,. C330001 ACATS 4.1 21-05-16 10:31:49
+---- C330001 Check that a variable object of an indefinite type is
+                properly initialized/constrained by an initial value
+                assignment that is a) an aggregate, b) a function, or c)
+                an object.  Check that objects of the above types do not
+                need explicit constraints if they have initial values.
+==== C330001 PASSED ============================.

@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83028b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83028b.adb
+b83028b.adb:62:31: expected type "Standard.Integer"
+b83028b.adb:62:31: found type "Standard.Float"
+b83028b.adb:88:21: expected type "Standard.Integer"
+b83028b.adb:88:21: found type "Standard.Float"
+gnatmake: "b83028b.adb" compilation error

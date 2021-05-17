@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b7400032.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b7400032.adb
+b7400031.ads:71:04: constant declaration requires initialization expression
+b7400031.ads:83:04: full constant for declaration at line 80 must be in private part
+b7400031.ads:92:04: constant declaration requires initialization expression
+b7400031.ads:96:07: constant declaration requires initialization expression
+b7400031.ads:111:04: deferred constant must be declared in visible part
+b7400031.ads:111:04: constant declaration requires initialization expression
+gnatmake: "b7400032.adb" compilation error

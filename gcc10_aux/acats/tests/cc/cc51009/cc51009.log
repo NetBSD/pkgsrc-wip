@@ -1,0 +1,7 @@
+
+,.,. CC51009 ACATS 4.1 21-05-16 10:50:23
+---- CC51009 Check that a generic unit with incomplete formal types can 
+                be instantiated with a private type prior to the full
+                declaration of that type, and that such instantiations
+                can be passed as actuals to formal packages.
+==== CC51009 PASSED ============================.

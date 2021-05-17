@@ -1,0 +1,59 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b324002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b324002.adb
+b324002.adb:26:39: subtype "Static_Pred" has predicate, not allowed as index subtype
+b324002.adb:27:39: subtype "Dynamic_Pred" has predicate, not allowed as index subtype
+b324002.adb:28:39: subtype "SubStc_Pred" has predicate, not allowed as index subtype
+b324002.adb:29:39: subtype "SubDyn_Pred" has predicate, not allowed as index subtype
+b324002.adb:34:47: subtype "Static_Pred" has predicate, not allowed in index constraint
+b324002.adb:35:47: subtype "SubStc_Pred" has predicate, not allowed in index constraint
+b324002.adb:37:16: subtype "Static_Pred" has predicate, not allowed in index constraint
+b324002.adb:38:51: subtype "Dynamic_Pred" has predicate, not allowed in index constraint
+b324002.adb:39:51: subtype "SubDyn_Pred" has predicate, not allowed in index constraint
+b324002.adb:41:20: subtype "Dynamic_Pred" has predicate, not allowed in index constraint
+b324002.adb:46:42: subtype "Static_Pred" has predicate, not allowed in slice
+b324002.adb:47:42: subtype "SubStc_Pred" has predicate, not allowed in slice
+b324002.adb:49:21: subtype "Static_Pred" has predicate, not allowed in slice
+b324002.adb:50:50: subtype "Dynamic_Pred" has predicate, not allowed in slice
+b324002.adb:51:50: subtype "SubDyn_Pred" has predicate, not allowed in slice
+b324002.adb:53:25: subtype "Dynamic_Pred" has predicate, not allowed in slice
+b324002.adb:57:15: subtype "Static_Pred" has predicate, not allowed as index subtype
+b324002.adb:59:15: subtype subtype of "Character" has predicate, not allowed as index subtype
+b324002.adb:61:24: subtype "Dynamic_Pred" has predicate, not allowed as index subtype
+b324002.adb:63:15: subtype "SubDyn_Pred" has predicate, not allowed as index subtype
+b324002.adb:65:15: subtype subtype of "Integer" has predicate, not allowed as index subtype
+b324002.adb:69:19: subtype "Static_Pred" has predicate, not allowed in entry family
+b324002.adb:70:19: subtype "SubStc_Pred" has predicate, not allowed in entry family
+b324002.adb:71:19: subtype subtype of "Character" has predicate, not allowed in entry family
+b324002.adb:72:19: subtype "Dynamic_Pred" has predicate, not allowed in entry family
+b324002.adb:73:19: subtype "Dynamic_Pred" has predicate, not allowed in entry family
+b324002.adb:74:19: subtype subtype of "Integer" has predicate, not allowed in entry family
+b324002.adb:84:19: subtype "Static_Pred" has predicate, not allowed in entry family
+b324002.adb:85:19: subtype "SubStc_Pred" has predicate, not allowed in entry family
+b324002.adb:86:19: subtype subtype of "Character" has predicate, not allowed in entry family
+b324002.adb:87:19: subtype "Dynamic_Pred" has predicate, not allowed in entry family
+b324002.adb:88:19: subtype "SubDyn_Pred" has predicate, not allowed in entry family
+b324002.adb:89:19: subtype subtype of "Integer" has predicate, not allowed in entry family
+b324002.adb:126:28: type "Static_Pred" has predicates, attribute "First" not allowed
+b324002.adb:127:27: type "SubStc_Pred" has predicates, attribute "Last" not allowed
+b324002.adb:129:23: type "Static_Pred" has predicates, attribute "Range" not allowed
+b324002.adb:130:27: type "SubDyn_Pred" has predicates, attribute "First" not allowed
+b324002.adb:131:26: type "Dynamic_Pred" has predicates, attribute "Last" not allowed
+b324002.adb:133:21: type "Dynamic_Pred" has predicates, attribute "Range" not allowed
+b324002.adb:144:16: cannot use subtype "Dynamic_Pred" with non-static predicate for loop iteration
+b324002.adb:147:16: cannot use subtype "SubDyn_Pred" with non-static predicate for loop iteration
+b324002.adb:150:16: cannot use subtype "Dynamic_Pred" with non-static predicate for loop iteration
+b324002.adb:153:16: cannot use subtype "Dyn_Static_Pred" with non-static predicate for loop iteration
+b324002.adb:153:16: predicate of "Dyn_Static_Pred" should be marked static
+b324002.adb:158:27: cannot use subtype "Dynamic_Pred" with non-static predicate for loop iteration
+b324002.adb:160:28: cannot use subtype "SubDyn_Pred" with non-static predicate for loop iteration
+b324002.adb:162:27: cannot use subtype "Dynamic_Pred" with non-static predicate for loop iteration
+b324002.adb:164:28: cannot use subtype "Dyn_Static_Pred" with non-static predicate for loop iteration
+b324002.adb:164:28: predicate of "Dyn_Static_Pred" should be marked static
+b324002.adb:173:41: subtype "Dynamic_Pred" has dynamic predicate, not allowed in aggregate choice
+b324002.adb:174:41: subtype "SubDyn_Pred" has dynamic predicate, not allowed in aggregate choice
+b324002.adb:176:11: subtype "Dynamic_Pred" has dynamic predicate, not allowed in aggregate choice
+b324002.adb:179:40: non-static subtype "Dyn_Static_Pred" has predicate, not allowed in aggregate choice
+b324002.adb:188:07: subtype has dynamic predicate, not allowed in number declaration
+b324002.adb:188:32: non-static expression used in number declaration
+b324002.adb:191:15: cannot use subtype "Dynamic_Pred" with non-static predicate as case alternative
+gnatmake: "b324002.adb" compilation error

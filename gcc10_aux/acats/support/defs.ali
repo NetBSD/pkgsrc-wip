@@ -1,0 +1,57 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U defs%s		defs.ads		e4b9cf5f DE NE OO PK IU KU
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D defs.ads		20210516102805 c50b07c7 defs%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D text_io.ads		20210408115627 21b2c898 text_io%s
+G a e
+G c Z s s [rec_typeIP defs 82 11 none]
+G c Z s s [Ttable_typeBIP defs 88 6 none]
+X 8 defs.ads
+67K9*DEFS 94l5 94e9
+78i6*MAX_VAL_LENGTH{integer} 80r39
+80A14*VAL_STRING{string}<integer> 85r25
+82R11*REC_TYPE 86e16 88r43
+83a11*MACRO_NAME{string}
+84i11*NAME_LENGTH{integer}
+84i24*VALUE_LENGTH{integer}
+85a11*MACRO_VALUE{80A14}
+88A11*TABLE_TYPE(82R11)<integer> 90r21
+90a6*SYMBOL_TABLE{88A11}
+92i6*NUM_MACROS{integer}
+X 24 text_io.ads
+24K9*Text_IO=24:29 8|64w6 65r5
+

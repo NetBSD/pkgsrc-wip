@@ -1,0 +1,27 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc60003.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc60003.adb
+bc60003.adb:14:35: actual must be dispatching subprogram for type "Root"
+bc60003.adb:18:28: actual must be dispatching subprogram for type "Root"
+bc60003.adb:26:28: actual must be dispatching subprogram
+bc60003.adb:35:28: actual must be dispatching subprogram for type "Root"
+bc60003.adb:44:35: actual must be dispatching subprogram for type "Root"
+bc60003.adb:48:28: actual must be dispatching subprogram for type "Root"
+bc60003.adb:56:28: actual must be dispatching subprogram
+bc60003.adb:65:39: actual must be dispatching subprogram for type "Root"
+bc60003.adb:69:32: actual must be dispatching subprogram for type "Root"
+bc60003.adb:73:23: no visible subprogram matches the specification for "Construct"
+bc60003.adb:79:32: actual must be dispatching subprogram
+bc60003.adb:86:35: actual must be dispatching subprogram for type "Root"
+bc60003.adb:89:28: actual must be dispatching subprogram for type "Root"
+bc60003.adb:96:39: actual must be dispatching subprogram for type "Root"
+bc60003.adb:99:32: actual must be dispatching subprogram for type "Root"
+bc60003.adb:108:34: actual must be dispatching subprogram for type "Root"
+bc60003.adb:112:27: actual must be dispatching subprogram for type "Root"
+bc60003.adb:120:27: actual must be dispatching subprogram
+bc60003.adb:129:39: actual must be dispatching subprogram for type "Root"
+bc60003.adb:133:32: actual must be dispatching subprogram for type "Root"
+bc60003.adb:137:23: no visible subprogram matches the specification for "Construct"
+bc60003.adb:141:32: actual must be dispatching subprogram
+bc60003.adb:154:38: actual must be dispatching subprogram for type "TDer"
+bc60003.adb:166:38: actual must be dispatching subprogram for type "TDer"
+gnatmake: "bc60003.adb" compilation error

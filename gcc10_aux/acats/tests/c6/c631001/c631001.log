@@ -1,0 +1,6 @@
+
+,.,. C631001 ACATS 4.1 21-05-16 10:43:27
+---- C631001 Check that if different forms of a name are used in the
+                default expression of a discriminant part, the selector 
+                may be an operator symbol or a character literal.
+==== C631001 PASSED ============================.

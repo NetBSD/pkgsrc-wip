@@ -1,0 +1,6 @@
+
+,.,. CD30009 ACATS 4.1 21-05-16 10:51:11
+---- CD30009 Check that Component_Sizes that are multiples of the word
+                size are supported. Check that for such Component_Sizes 
+                arrays contain no gaps between components.
+==== CD30009 PASSED ============================.

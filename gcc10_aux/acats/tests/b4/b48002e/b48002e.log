@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48002e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48002e.adb
+b48002e.adb:106:22: constraint not allowed here
+b48002e.adb:106:27: if qualified expression was meant, use apostrophe
+b48002e.adb:107:22: constraint not allowed here
+b48002e.adb:107:26: if qualified expression was meant, use apostrophe
+b48002e.adb:108:22: constraint not allowed here
+b48002e.adb:108:26: if qualified expression was meant, use apostrophe
+b48002e.adb:109:22: constraint not allowed here
+b48002e.adb:109:26: if qualified expression was meant, use apostrophe
+b48002e.adb:110:22: constraint not allowed here
+b48002e.adb:110:26: if qualified expression was meant, use apostrophe
+b48002e.adb:111:22: constraint not allowed here
+b48002e.adb:111:26: if qualified expression was meant, use apostrophe
+b48002e.adb:112:22: constraint not allowed here
+b48002e.adb:112:26: if qualified expression was meant, use apostrophe
+b48002e.adb:113:22: constraint not allowed here
+b48002e.adb:113:26: if qualified expression was meant, use apostrophe
+b48002e.adb:114:22: constraint not allowed here
+b48002e.adb:114:27: if qualified expression was meant, use apostrophe
+b48002e.adb:115:22: constraint not allowed here
+b48002e.adb:115:27: if qualified expression was meant, use apostrophe
+gnatmake: "b48002e.adb" compilation error

@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95094b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95094b.adb
+b95094b.adb:38:21: "E" conflicts with declaration at line 33
+gnatmake: "b95094b.adb" compilation error

@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c9/c94005b.ada into:
+   c94005b_pkg.ads
+   c94005b_pkg.adb
+   f.adb
+   c94005b.adb

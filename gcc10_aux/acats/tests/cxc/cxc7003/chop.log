@@ -1,0 +1,4 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxc/cxc7003.a into:
+   cxc7003_0.ads
+   cxc7003_0.adb
+   cxc7003.adb

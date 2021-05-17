@@ -1,0 +1,5 @@
+b56001d.ada:32:14: missing "BEGIN" for "DECLARE" at line 32
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001d.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001d.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001d.ada into:
+   b56001d.adb

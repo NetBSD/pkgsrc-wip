@@ -1,0 +1,5 @@
+
+,.,. C3A2004 ACATS 4.1 21-05-16 10:35:07
+---- C3A2004 Check that 'Access and 'Unchecked_Access attributes can use
+                the type of their prefix in resolving overloading.
+==== C3A2004 PASSED ============================.

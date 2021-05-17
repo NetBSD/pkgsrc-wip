@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91005a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91005a.adb
+b91005a.adb:43:18: subtype mark required in this context
+b91005a.adb:43:18: found "T" declared at line 39
+b91005a.adb:53:12: attribute "COUNT" must apply to entry of current task
+gnatmake: "b91005a.adb" compilation error

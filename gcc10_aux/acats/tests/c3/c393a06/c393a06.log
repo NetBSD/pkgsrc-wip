@@ -1,0 +1,8 @@
+
+,.,. C393A06 ACATS 4.1 21-05-16 10:34:38
+---- C393A06 Check that a type that inherits abstract operations but
+                overrides each of these operations is not required to be
+                abstract. Check that objects of the type and its
+                class-wide type may be declared and passed in calls to
+                the overriding subprograms.
+==== C393A06 PASSED ============================.

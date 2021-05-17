@@ -1,0 +1,5 @@
+b56001f.ada:33:14: statement not allowed in declarative part
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001f.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001f.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001f.ada into:
+   b56001f.adb

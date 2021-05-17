@@ -1,0 +1,5 @@
+
+,.,. CXAI014 ACATS 4.1 21-05-16 10:56:00
+---- CXAI014 Check that an implementation supports the functionality
+                defined in package Ada.Containers.Bounded_Hashed_Sets.
+==== CXAI014 PASSED ============================.

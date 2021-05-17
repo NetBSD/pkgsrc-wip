@@ -1,0 +1,5 @@
+
+,.,. C45431A ACATS 4.1 21-05-16 10:41:18
+---- C45431A CHECK THAT FOR FIXED POINT TYPES +A = A AND THAT, FOR MODEL
+                NUMBERS, -(-A) = A -- BASIC TYPES.
+==== C45431A PASSED ============================.

@@ -1,0 +1,7 @@
+
+,.,. C457001 ACATS 4.1 21-05-16 10:41:44
+---- C457001 Check that for the evaluation of a non-Boolean if
+                expression, the condition specified after if, and any
+                conditions specified after elsif, are evaluated in
+                succession, until one evalues to True.
+==== C457001 PASSED ============================.

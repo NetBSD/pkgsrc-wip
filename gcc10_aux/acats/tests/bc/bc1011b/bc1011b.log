@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1011b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1011b.adb
+bc1011b.adb:64:11: expect subprogram or entry name in instantiation of "X1"
+bc1011b.adb:64:11: instantiation abandoned
+bc1011b.adb:65:11: expect subprogram or entry name in instantiation of "X2"
+bc1011b.adb:65:11: instantiation abandoned
+bc1011b.adb:66:11: expect subprogram or entry name in instantiation of "Z1"
+bc1011b.adb:66:11: instantiation abandoned
+bc1011b.adb:67:11: expect subprogram or entry name in instantiation of "Z2"
+bc1011b.adb:67:11: instantiation abandoned
+gnatmake: "bc1011b.adb" compilation error

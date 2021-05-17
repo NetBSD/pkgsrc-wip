@@ -1,0 +1,9 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c7/c761005.a into:
+   c761005_support.ads
+   c761005_support.adb
+   c761005_0.ads
+   c761005_1.ads
+   c761005_2.ads
+   c761005_0.adb
+   c761005_1.adb
+   c761005.adb

@@ -1,0 +1,7 @@
+
+,.,. C460005 ACATS 4.1 21-05-16 10:41:50
+---- C460005 Check that, for a view conversion of a tagged type that is 
+                the left side of an assignment statement, the assignment
+                assigns to the corresponding part of the object denoted 
+                by the operand.
+==== C460005 PASSED ============================.

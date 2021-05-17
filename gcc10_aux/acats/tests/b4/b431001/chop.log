@@ -1,0 +1,10 @@
+b431001.a:70:28: (Ada 2005) box only allowed with named notation
+b431001.a:78:31: (Ada 2005) box only allowed with named notation
+b431001.a:86:37: (Ada 2005) box only allowed with named notation
+b431001.a:94:26: (Ada 2005) box only allowed with named notation
+b431001.a:103:28: (Ada 2005) box only allowed with named notation
+b431001.a:111:41: (Ada 2005) box only allowed with named notation
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b431001.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b431001.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b431001.a into:
+   b431001.adb

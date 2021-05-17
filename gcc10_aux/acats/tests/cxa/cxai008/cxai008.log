@@ -1,0 +1,10 @@
+
+,.,. CXAI008 ACATS 4.1 21-05-16 10:55:44
+---- CXAI008 Check basic operations in package
+                Ada.Containers.Indefinite_Multiway_Trees.
+   - CXAI008 Parsing '<ul
+                align='center'><li>Item1</li><li>Item2</li></ul>'.
+   - CXAI008 Selecting item First_Child(Last_Child(First_Child(Root))).
+   - CXAI008 Selected Item is of Kind TEXT_KIND.
+   - CXAI008 Selected Item has text "Item2".
+==== CXAI008 PASSED ============================.

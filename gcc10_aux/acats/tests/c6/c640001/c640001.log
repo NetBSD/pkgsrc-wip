@@ -1,0 +1,7 @@
+
+,.,. C640001 ACATS 4.1 21-05-16 10:43:27
+---- C640001 Check that, for an access-to-subprogram type whose
+                designated profile contains parameters of a tagged
+                generic formal type, an access-to-subprogram value may
+                designate dispatching and non-dispatching operations.
+==== C640001 PASSED ============================.

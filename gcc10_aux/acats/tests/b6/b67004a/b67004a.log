@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b67004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b67004a.adb
+b67004a.adb:96:24: no visible entity matches specification
+b67004a.adb:103:24: no visible entity matches specification
+b67004a.adb:110:24: no visible entity matches specification
+gnatmake: "b67004a.adb" compilation error

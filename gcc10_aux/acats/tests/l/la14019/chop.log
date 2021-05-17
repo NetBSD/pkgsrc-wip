@@ -1,0 +1,4 @@
+la14019_0.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la140190.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la140193.a
+la14019_0.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la140190.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la140193.a
+use -w to overwrite files and keep last version
+no source files written

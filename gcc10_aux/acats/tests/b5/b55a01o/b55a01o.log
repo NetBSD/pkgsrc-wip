@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01o.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01o.adb
+b55a01o.adb:38:15: missing "LOOP"
+gnatmake: "b55a01o.adb" compilation error

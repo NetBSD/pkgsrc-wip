@@ -1,0 +1,6 @@
+
+,.,. C540002 ACATS 4.1 21-05-16 10:42:51
+---- C540002 Check that the selecting_expression of a case statement can
+                be resolved if it is an overloaded function call, of
+                which exactly one has a discrete type.
+==== C540002 PASSED ============================.

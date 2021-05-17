@@ -1,0 +1,5 @@
+b940001.a:45:17: anonymous arrays not allowed as components
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940001.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940001.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940001.a into:
+   b940001.adb

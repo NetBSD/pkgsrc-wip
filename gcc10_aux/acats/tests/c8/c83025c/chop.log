@@ -1,0 +1,9 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c83025c.ada into:
+   c83025c_pack.ads
+   c83025c_pack.adb
+   c83025c_pack-inner.adb
+   c83025c_pack-inner2.adb
+   c83025c_pack-inner3.adb
+   c83025c_pack-inner4.adb
+   c83025c_pack-inner5.adb
+   c83025c.adb

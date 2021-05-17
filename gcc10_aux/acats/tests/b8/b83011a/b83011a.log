@@ -1,0 +1,47 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83011a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83011a.adb
+b83011a.adb:81:22: object "V1" cannot be used before end of its declaration
+b83011a.adb:82:11: object "V2" cannot be used before end of its declaration
+b83011a.adb:83:34: object "B83011A.V3" cannot be used before end of its declaration
+b83011a.adb:84:39: object "V4" cannot be used before end of its declaration
+b83011a.adb:85:29: object "C1" cannot be used before end of its declaration
+b83011a.adb:86:20: object "C2" cannot be used before end of its declaration
+b83011a.adb:87:38: object "B83011A.C3" cannot be used before end of its declaration
+b83011a.adb:89:30: object "B83011A.N1" cannot be used before end of its declaration
+b83011a.adb:90:23: object "N2" cannot be used before end of its declaration
+b83011a.adb:92:23: type "T1" cannot be used before end of its declaration
+b83011a.adb:93:30: "T4" conflicts with declaration at line 93
+b83011a.adb:94:24: type "T5" cannot be used before end of its declaration
+b83011a.adb:95:35: type "T6" cannot be used before end of its declaration
+b83011a.adb:96:28: type "B83011A.T7" cannot be used before end of its declaration
+b83011a.adb:99:21: type declaration cannot refer to itself
+b83011a.adb:103:28: type declaration cannot refer to itself
+b83011a.adb:105:25: type "T10" cannot be used before end of its declaration
+b83011a.adb:107:26: task type cannot be used as type mark within its own spec or body
+b83011a.adb:110:21: discrete type required for index
+b83011a.adb:113:33: task type cannot be used as type mark within its own spec or body
+b83011a.adb:116:21: object "ST1" cannot be used before end of its declaration
+b83011a.adb:117:29: object "ST2" cannot be used before end of its declaration
+b83011a.adb:118:28: object "B83011A.ST3" cannot be used before end of its declaration
+b83011a.adb:120:27: formal parameter "FP1" cannot be used before end of specification
+b83011a.adb:121:37: formal parameter "FP2" cannot be used before end of specification
+b83011a.adb:124:27: formal parameter "FP4" cannot be used before end of specification
+b83011a.adb:127:38: formal parameter "FP5" cannot be used before end of specification
+b83011a.adb:130:39: invalid prefix in selected component "E1"
+b83011a.adb:134:18: object "GFP1" cannot be used before end of its declaration
+b83011a.adb:135:29: object "GFP2" cannot be used before end of its declaration
+b83011a.adb:136:31: object "GFP3" cannot be used before end of its declaration
+b83011a.adb:138:46: object "GFP4" cannot be used before end of its declaration
+b83011a.adb:139:31: object "GFP5" cannot be used before end of its declaration
+b83011a.adb:143:46: "GFP9" is undefined
+b83011a.adb:147:12: object "RD1" cannot be used before end of its declaration
+b83011a.adb:148:26: object "RD2" cannot be used before end of its declaration
+b83011a.adb:149:30: object "RD4" cannot be used before end of its declaration
+b83011a.adb:150:37: object "B83011A.RD5" cannot be used before end of its declaration
+b83011a.adb:151:26: object "RD6" cannot be used before end of its declaration
+b83011a.adb:152:33: object "B83011A.RD7" cannot be used before end of its declaration
+b83011a.adb:173:27: formal parameter "FP1" cannot be used before end of specification
+b83011a.adb:178:15: not fully conformant with declaration at line 121
+b83011a.adb:178:15: default expression for "FP2" does not match
+b83011a.adb:178:37: formal parameter "FP2" cannot be used before end of specification
+gnatmake: "b83011a.adb" compilation error

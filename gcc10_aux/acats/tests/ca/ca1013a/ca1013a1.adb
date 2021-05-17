@@ -1,0 +1,9 @@
+
+
+PROCEDURE CA1013A1 (I : IN OUT INDEX) IS
+
+BEGIN
+ 
+     I := I + 1;
+
+END CA1013A1;

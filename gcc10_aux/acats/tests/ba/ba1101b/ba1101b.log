@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1101b0m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1101b0m.adb
+ba1101b0m-ba1101b2.adb:27:06: file "ba1101b1.ads" not found
+ba1101b0m-ba1101b2.adb:27:06: "BA1101B0M (body)" depends on "BA1101B0M.BA1101B2 (body)"
+ba1101b0m-ba1101b2.adb:27:06: "BA1101B0M.BA1101B2 (body)" depends on "BA1101B1 (spec)"
+gnatmake: "ba1101b0m.adb" compilation error

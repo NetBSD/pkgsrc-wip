@@ -1,0 +1,6 @@
+
+,.,. CD30001 ACATS 4.1 21-05-16 10:51:06
+---- CD30001 Check that X'Address produces a useful result when X is an 
+                aliased object, or an entity whose Address has been
+                specified.
+==== CD30001 PASSED ============================.

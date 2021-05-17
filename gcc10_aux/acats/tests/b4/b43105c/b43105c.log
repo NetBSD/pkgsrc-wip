@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43105c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43105c.adb
+b43105c.adb:62:06: ambiguous expression (cannot resolve "PROC_VR")
+b43105c.adb:62:06: possible interpretation at line 55
+b43105c.adb:62:06: possible interpretation at line 50
+gnatmake: "b43105c.adb" compilation error

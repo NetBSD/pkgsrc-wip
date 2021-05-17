@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002j.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002j.adb
+b91002j.adb:39:11: illegal declaration in task definition
+gnatmake: "b91002j.adb" compilation error

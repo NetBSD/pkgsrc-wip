@@ -1,0 +1,44 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U fb20a00%b		fb20a00.adb		9a666dc0 DE NE OO PK IU
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U fb20a00%s		fb20a00.ads		9e81f3ce DE EE NE OO PK IU
+
+D fb20a00.ads		20210516102806 9e81f3ce fb20a00%s
+D fb20a00.adb		20210516102806 04e79e0e fb20a00%b
+D system.ads		20210408115627 a6571217 system%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+G a e
+G c Z s b [find fb20a00 43 13 none]
+X 1 fb20a00.ads
+41K9*FB20A00 46l5 46e12 2|4b14 55l5 55t12
+43V13*Find{boolean} 43>20 44>20 2|6b13 53l8 53t12
+43a20 Str{string} 2|6b20 9r25 9r38 12r24 36r30
+44a20 Sub{string} 2|7b20 10r25 10r38 37r30
+X 2 fb20a00.adb
+9a7 New_Str{string} 36m7 39r22 41r11 47r18
+10a7 New_Sub{string} 37m7 39r35 41r32 41r54 47r31
+12i7 Pos{integer} 39r15 41r21 41r28 44m10 44r17 47r12
+15V16 Upper_Case{string} 15b16 15>28 31l11 31t21 36s18 37s18
+15a28 Str{string} 18r24 18r37 21r19 22r18 24r36 27r27
+16E18 Upper{character} 23r23 23r34 25r27
+17E18 Lower{character} 22r29 24r25 24r46 24r56
+18a10 Ret{string} 25m16 27m16 30r18
+19i10 Pos{integer} 23m16 25r38
+21i14 I{integer} 22r23 24r40 25r21 27r21 27r32
+

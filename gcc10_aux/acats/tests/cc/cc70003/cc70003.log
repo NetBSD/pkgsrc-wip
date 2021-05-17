@@ -1,0 +1,5 @@
+
+,.,. CC70003 ACATS 4.1 21-05-16 10:50:32
+---- CC70003 Check that the actual passed to a formal package may be a
+                formal access-to-subprogram type.
+==== CC70003 PASSED ============================.

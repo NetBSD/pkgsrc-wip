@@ -1,0 +1,19 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b458001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b458001.adb
+b458001.adb:123:17: quantified expression must be parenthesized
+b458001.adb:127:12: quantified expression must be parenthesized
+b458001.adb:133:08: quantified expression must be parenthesized
+b458001.adb:141:17: quantified expression must be parenthesized
+b458001.adb:148:18: quantified expression must be parenthesized
+b458001.adb:154:17: quantified expression must be parenthesized
+b458001.adb:163:19: quantified expression must be parenthesized
+b458001.adb:167:13: quantified expression must be parenthesized
+b458001.adb:173:17: identifier expected
+b458001.adb:179:47: missing ")"
+b458001.adb:185:24: identifier expected
+b458001.adb:195:22: quantified expression must be parenthesized
+b458001.adb:204:20: quantified expression must be parenthesized
+b458001.adb:208:16: quantified expression must be parenthesized
+b458001.adb:218:17: quantified expression must be parenthesized
+b458001.adb:222:19: quantified expression must be parenthesized
+gnatmake: "b458001.adb" compilation error

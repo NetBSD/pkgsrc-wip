@@ -1,0 +1,33 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b8300025.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b8300025.adb
+b8300025.adb:55:06: unit in with clause is private child unit
+b8300025.adb:55:06: current unit must also have parent "B8300025_1"
+b8300025.adb:56:06: unit in with clause is private child unit
+b8300025.adb:56:06: current unit must also have parent "Private_Pack"
+b8300025_1-pub.ads:55:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-pub.ads:57:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-pub.ads:61:09: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-pub.ads:70:09: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-pub.ads:78:13: "Same_Name" conflicts with declaration at line 77
+b8300025_1-pub.ads:86:13: "Same_Name" conflicts with declaration at line 83
+b8300025_1-public-pub.ads:60:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-public-pub.ads:62:14: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-public-pub.ads:66:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-public-pub.ads:75:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-public-pub.ads:80:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-public-pub.ads:82:14: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-public-pub.ads:86:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-public-pub.ads:95:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-priv.ads:57:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-priv.ads:59:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-priv.ads:63:09: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-priv.ads:72:09: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-private_pack-priv.ads:60:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-private_pack-priv.ads:62:14: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-private_pack-priv.ads:66:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-private_pack-priv.ads:75:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-private_pack-priv.ads:80:13: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-private_pack-priv.ads:82:14: "Same_Name" conflicts with declaration at b8300025_1.ads:68
+b8300025_1-private_pack-priv.ads:86:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+b8300025_1-private_pack-priv.ads:95:13: "Same_Name" conflicts with declaration at b8300025_1.ads:62
+gnatmake: "b8300025.adb" compilation error

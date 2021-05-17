@@ -1,0 +1,5 @@
+b24211b.ada:35:36: this expression must be parenthesized
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24211b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24211b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24211b.ada into:
+   b24211b.adb

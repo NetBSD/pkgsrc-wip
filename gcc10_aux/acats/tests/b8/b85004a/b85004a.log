@@ -1,0 +1,37 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85004a.adb
+b85004a.adb:98:52: actual for "X" must be a variable
+b85004a.adb:101:21: left hand side of assignment must be a variable
+b85004a.adb:103:30: actual for "I" must be a variable
+b85004a.adb:111:42: actual for "X" must be a variable
+b85004a.adb:116:11: left hand side of assignment must be a variable
+b85004a.adb:119:20: actual for "I" must be a variable
+b85004a.adb:122:11: left hand side of assignment must be a variable
+b85004a.adb:129:42: actual for "X" must be a variable
+b85004a.adb:133:11: left hand side of assignment must be a variable
+b85004a.adb:136:20: actual for "I" must be a variable
+b85004a.adb:141:36: actual for "X" must be a variable
+b85004a.adb:143:36: actual for "X" must be a variable
+b85004a.adb:146:36: actual for "X" must be a variable
+b85004a.adb:149:36: actual for "X" must be a variable
+b85004a.adb:152:36: actual for "X" must be a variable
+b85004a.adb:155:36: actual for "X" must be a variable
+b85004a.adb:158:36: actual for "X" must be a variable
+b85004a.adb:163:06: left hand side of assignment must be a variable
+b85004a.adb:165:15: actual for "I" must be a variable
+b85004a.adb:167:06: left hand side of assignment must be a variable
+b85004a.adb:170:15: actual for "I" must be a variable
+b85004a.adb:173:06: left hand side of assignment must be a variable
+b85004a.adb:176:15: actual for "I" must be a variable
+b85004a.adb:179:06: left hand side of assignment must be a variable
+b85004a.adb:182:15: actual for "I" must be a variable
+b85004a.adb:185:06: left hand side of assignment must be a variable
+b85004a.adb:188:15: actual for "I" must be a variable
+b85004a.adb:191:06: left hand side of assignment must be a variable
+b85004a.adb:194:15: actual for "I" must be a variable
+b85004a.adb:197:06: left hand side of assignment must be a variable
+b85004a.adb:200:15: actual for "I" must be a variable
+b85004a.adb:207:46: actual for "X" must be a variable
+b85004a.adb:211:16: left hand side of assignment must be a variable
+b85004a.adb:214:25: actual for "I" must be a variable
+gnatmake: "b85004a.adb" compilation error

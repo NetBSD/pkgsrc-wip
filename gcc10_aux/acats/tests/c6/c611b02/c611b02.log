@@ -1,0 +1,7 @@
+
+,.,. C611B02 ACATS 4.1 21-05-16 10:43:23
+---- C611B02 For X'Old given in the postcondition for a subprogram S,
+                check that X'Old has the same tag as X when X is a
+                parameter P of S, even if the tag of X is different than
+                the nominal subtype of P (Part 2: Post'Class).
+==== C611B02 PASSED ============================.

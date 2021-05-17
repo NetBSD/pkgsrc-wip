@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3205c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3205c.adb
+bc3205c_pk2.adb:8:17: uninitialized unconstrained allocation not allowed
+bc3205c_pk2.adb:8:17: qualified expression required
+bc3205c_pk3.adb:9:17: uninitialized unconstrained allocation not allowed
+bc3205c_pk3.adb:9:17: qualified expression required
+bc3205c_pk4.adb:6:11: unconstrained subtype not allowed (need initialization)
+bc3205c_pk5.adb:7:11: unconstrained subtype not allowed (need initialization)
+bc3205c_pk6.adb:6:37: unconstrained element type in array declaration
+bc3205c_pk7.adb:7:37: unconstrained element type in array declaration
+bc3205c_pk8.adb:8:17: unconstrained subtype in component declaration
+bc3205c_pk9.adb:7:17: unconstrained subtype in component declaration
+gnatmake: "bc3205c.adb" compilation error

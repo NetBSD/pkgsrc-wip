@@ -1,0 +1,6 @@
+
+,.,. CXA4021 ACATS 4.1 21-05-16 10:54:26
+---- CXA4021 Check that the subprograms defined in package
+                Ada.Strings.Wide_Unbounded are available, and that they 
+                produce correct results.
+==== CXA4021 PASSED ============================.

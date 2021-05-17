@@ -1,0 +1,9 @@
+bc1008c.ada:31:25: missing ";"
+bc1008c.ada:32:05: missing "BEGIN" for procedure "BC1008C" at line 29
+bc1008c.ada:32:06: subprogram specification expected
+bc1008c.ada:32:06: no "BEGIN" for this "END"
+bc1008c.ada:36:01: "END;" expected for "BEGIN" at line 34
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1008c.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1008c.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1008c.ada into:
+   bc1008c.adb

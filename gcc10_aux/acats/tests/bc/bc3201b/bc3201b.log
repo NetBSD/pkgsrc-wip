@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3201b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3201b.adb
+bc3201b.adb:67:36: actual for non-limited "GFT" cannot be a limited type
+bc3201b.adb:67:36: instantiation abandoned
+bc3201b.adb:68:36: actual for non-limited "GFT" cannot be a limited type
+bc3201b.adb:68:36: component "COMP" of type "TASKREC" has limited type
+bc3201b.adb:68:36: instantiation abandoned
+bc3201b.adb:69:36: actual for non-limited "GFT" cannot be a limited type
+bc3201b.adb:69:36: component type "T" of type "TASKARR" is limited
+bc3201b.adb:69:36: instantiation abandoned
+bc3201b.adb:70:36: actual for non-limited "GFT" cannot be a limited type
+bc3201b.adb:70:36: instantiation abandoned
+bc3201b.adb:71:36: actual for non-limited "GFT" cannot be a limited type
+bc3201b.adb:71:36: component "C1" of type "VREC" has limited type
+bc3201b.adb:71:36: component "COMP" of type "TASKREC" has limited type
+bc3201b.adb:71:36: instantiation abandoned
+gnatmake: "bc3201b.adb" compilation error

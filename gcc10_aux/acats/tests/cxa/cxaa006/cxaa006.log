@@ -1,0 +1,5 @@
+
+,.,. CXAA006 ACATS 4.1 21-05-16 10:54:57
+---- CXAA006 Check that procedure Put will correctly output string items
+                to a bounded line length text file of mode Append_File.
+==== CXAA006 PASSED ============================.

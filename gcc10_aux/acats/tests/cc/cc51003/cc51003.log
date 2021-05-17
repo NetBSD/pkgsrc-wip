@@ -1,0 +1,6 @@
+
+,.,. CC51003 ACATS 4.1 21-05-16 10:50:19
+---- CC51003 Check that a formal derived record type inherits
+                components, including discriminants, from its ancestor
+                type.
+==== CC51003 PASSED ============================.

@@ -1,0 +1,29 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431003.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431003.adb
+b431003.adb:7:39: expected private type "Private_Root" defined at b431003_root.ads:60
+b431003.adb:7:39: found a composite type
+b431003.adb:13:19: type of aggregate has private ancestor "Private_Root"
+b431003.adb:13:19: must use extension aggregate
+b431003.adb:15:19: type of aggregate has private ancestor "Private_Root"
+b431003.adb:15:19: must use extension aggregate
+b431003.adb:17:19: expected private type "Der6" defined at b431003_b.ads:13
+b431003.adb:17:19: found a composite type
+b431003.adb:19:19: type of aggregate has private ancestor "Base"
+b431003.adb:19:19: must use extension aggregate
+b431003.adb:21:19: type of aggregate has private ancestor "Private_Root"
+b431003.adb:21:19: must use extension aggregate
+b431003.adb:23:19: type of aggregate has private ancestor "Base"
+b431003.adb:23:19: must use extension aggregate
+b431003.adb:27:19: type of aggregate has private ancestor "Private_Root"
+b431003.adb:27:19: must use extension aggregate
+b431003.adb:29:19: type of aggregate has private ancestor "Private_Root"
+b431003.adb:29:19: must use extension aggregate
+b431003.adb:31:19: expected private type "Der6" defined at b431003_b.ads:13
+b431003.adb:31:19: found a composite type
+b431003.adb:33:19: type of aggregate has private ancestor "Base"
+b431003.adb:33:19: must use extension aggregate
+b431003.adb:35:19: type of aggregate has private ancestor "Private_Root"
+b431003.adb:35:19: must use extension aggregate
+b431003.adb:37:19: type of aggregate has private ancestor "Base"
+b431003.adb:37:19: must use extension aggregate
+gnatmake: "b431003.adb" compilation error

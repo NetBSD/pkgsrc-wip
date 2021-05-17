@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95002a.adb
+b95002a.adb:45:11: no entry declaration matches accept statement
+b95002a.adb:49:11: no entry declaration matches accept statement
+b95002a.adb:53:11: no entry declaration matches accept statement
+b95002a.adb:61:07: too many arguments in call
+b95002a.adb:65:12: expected type "Standard.Boolean"
+b95002a.adb:65:12: found type universal integer
+b95002a.adb:69:07: missing argument for parameter "B2" in call to "E2" declared at line 39
+gnatmake: "b95002a.adb" compilation error

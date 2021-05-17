@@ -1,0 +1,7 @@
+
+,.,. C431002 ACATS 4.1 21-05-16 10:35:40
+---- C431002 Check that a component association of others => <> in a
+                record or extension aggregate may have any number of
+                associated components, including none. (Case 2: Null
+                records and extensions).
+==== C431002 PASSED ============================.

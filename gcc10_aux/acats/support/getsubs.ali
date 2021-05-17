@@ -1,0 +1,125 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U getsubs%b		getsubs.adb		ac052f42 DE NE OO PK IU KU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+U getsubs%s		getsubs.ads		f3040273 DE EE OO PK IU KU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W defs%s		defs.ads		defs.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D defs.ads		20210516102805 c50b07c7 defs%s
+D getsubs.ads		20210516102805 17bdcd2c getsubs%s
+D getsubs.adb		20210516102805 bbb8e26e getsubs%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-valint.ads		20210408115627 b5ff6963 system.val_int%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D text_io.ads		20210408115627 21b2c898 text_io%s
+G a e
+G c Z s b [calc_max_vals getsubs 18 16 none]
+G c Z s b [fill_table getsubs 21 16 none]
+X 6 a-textio.ads
+64P9*File_Type 10|104r21
+66n23*In_File{66E9} 10|114r31
+114U14*Open 10|114s16
+129U14*Close 10|182s11
+312V13*End_Of_File{boolean} 10|121s21
+471U14*Get_Line 10|122s16
+508U14*Put_Line 10|117s21 139s31
+544X4*Name_Error 10|116r21
+X 8 defs.ads
+67K9*DEFS 94e9 9|4w6 5r5
+80A14*VAL_STRING{string}<integer> 10|106r20
+83a11*MACRO_NAME{string} 10|18r35 22r38 26r38 31r38 36r38 41r38 47r38 52r38
+. 56r38 60r38 66r38 71r38 78r35 81r38 85r38 135m47 151r55 172r50
+84i11*NAME_LENGTH{integer} 10|143m42 171r55
+84i24*VALUE_LENGTH{integer} 10|79m51 83m37 87m37 89m37 170m47
+85a11*MACRO_VALUE{80A14} 10|19m42 23m52 27m52 32m52 37m56 42m56 49m16 53m56
+. 57m57 63m16 68m16 72m51 168m47 175r31
+88A11*TABLE_TYPE(82R11)<integer>
+90a6*SYMBOL_TABLE{88A11} 10|18r14 19m21 22r17 23m31 26r17 27m31 31r17 32m31
+. 36r17 37m35 41r17 42m35 47r17 48m42 52r17 53m35 56r17 57m36 60r17 62m16
+. 66r17 67m50 71r17 72m30 78r14 79m30 81r17 83m16 85r17 87m16 89m16 135m26
+. 143m21 151r34 168m26 170m26 171r34 172r29 174r46
+92i6*NUM_MACROS{integer} 10|181m11
+X 9 getsubs.ads
+7K9*GETSUBS 23l5 23e12 10|2b14 187l5 187t12
+16X6*MAC_FILE 10|119r27
+16X16*LINE_LEN 10|141r37
+18U16*CALC_MAX_VALS 18>30 18>37 18>45 19<30 10|13b16 91l10 91t23 144s21
+18i30 INDEX{integer} 10|13b30 18r28 19r35 22r31 23r45 26r31 27r45 31r31 32r45
+. 36r31 37r49 41r31 42r49 47r31 48r56 52r31 53r49 56r31 57r50 60r31 62r30
+. 66r31 67r64 71r31 72r44 78r28 79r44 81r31 83r30 85r31 87r30 89r30
+18i37 LENGTH{integer} 10|13b37 18r50 22r53 26r53 31r53 36r53 41r53 47r53
+. 52r53 56r53 60r53 66r53 71r53 78r50 81r53 85r53
+18i45 MAX_IN_LEN{integer} 10|13b45 19r58 20r21 24r20 24r40 28r20 28r40 29r18
+. 29r41 33r20 33r40 34r18 34r41 38r21 39r38 43r20 43r34 44r26 44r40 49r32
+. 50r20 54r20 54r40 58r20 58r39 63r32 64r20 68r32 69r20 73r20 73r42 80r16
+. 84r29 88r23 88r37 89r53
+19b30 CALCULATED{boolean} 10|14b30 21m16 25m16 30m16 35m16 40m16 46m16 51m16
+. 55m16 59m16 65m16 70m16 74m16 76m16
+21U16*FILL_TABLE 10|102b16 183l10 183t20
+X 10 getsubs.adb
+104p11 INFILE1{6|64P9} 114m22 114r22 121r34 122r26 182m18 182r18
+105a11 MACRO_FILE{string} 114r40 117r57
+106a11 A_LINE{8|80A14} 122m35 123r36 124r19 124r41 127r30 128r30 129r29 136r31
+. 148r32 148r52 163r51 164r32 169r34
+107i11 I{integer} 125m21 126r27 127r38 128r38 129r37 130m26 130r31 132m21
+. 132r26 133r31 136r42 143r57 147m26 147r31 148r40 148r60 150m31 150r36 156r34
+. 162m26 163r32 163r59 164r39 165m31 165r36 167r36 169r48
+107i14 INDEX{integer} 112m11 135r40 143r35 144r36 151r48 168r40 170r40 171r48
+. 172r43 174r60 178m21 178r30 181r25
+107i21 LENGTH{integer} 133m21 135r62 144r43 152r40 167m26 168r63 170r63 175r47
+107i29 HOLD{integer} 156m26 163r36 167r40 169r42
+107i35 A_LENGTH{integer} 122m43 123r19 126r32 162r31
+107i45 NAME{integer} 171m26 172r65
+108i11 MAX_IN_LEN{integer} 144r51 173m49
+109b11 CALCULATED{boolean} 145m36 146r28
+X 27 text_io.ads
+24K9*Text_IO=24:29 9|2w6 3r5
+

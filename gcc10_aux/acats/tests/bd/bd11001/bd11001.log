@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd11001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd11001.adb
+bd11001.adb:157:34: aspect "Dynamic_Predicate" requires an aspect definition
+bd11001.adb:160:30: aspect "Default_Value" requires an aspect definition
+bd11001.adb:163:29: aspect "Storage_Size" requires an aspect definition
+bd11001.adb:166:27: aspect "Convention" requires an aspect definition
+bd11001.adb:224:16: "Unrecognized_Aspect_Name_Xyzzy" is not a valid aspect identifier
+gnatmake: "bd11001.adb" compilation error

@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3607a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3607a.adb
+bc3607a.adb:63:16: instantiation error at line 41
+bc3607a.adb:63:16: not mode conformant with declaration at line 59
+bc3607a.adb:63:16: mode of "LYNN" does not match
+bc3607a.adb:67:16: instantiation error at line 48
+bc3607a.adb:67:16: not mode conformant with declaration at line 60
+bc3607a.adb:67:16: mode of "LYNN" does not match
+bc3607a.adb:71:16: instantiation error at line 54
+bc3607a.adb:71:16: not mode conformant with declaration at line 61
+bc3607a.adb:71:16: mode of "LYNN" does not match
+gnatmake: "bc3607a.adb" compilation error

@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b551002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b551002.adb
+b551002.adb:77:13: indexing aspect can only apply to a tagged type
+b551002.adb:92:13: Iterator_Element requires indexing aspect
+b551002.adb:96:13: indexing aspect can only apply to a tagged type
+b551002.adb:97:13: Iterator_Element requires indexing aspect
+b551002.adb:111:13: Iterator_Element requires indexing aspect
+b551002.adb:115:13: Iterator_Element requires indexing aspect
+b551002.adb:153:34: aspect Iterator_Element must be a type
+b551002.adb:167:34: aspect Iterator_Element must be a type
+b551002.adb:180:34: aspect Iterator_Element must be a type
+gnatmake: "b551002.adb" compilation error

@@ -1,0 +1,8 @@
+
+,.,. CA11C02 ACATS 4.1 21-05-16 10:48:54
+---- CA11C02 Check that primitive operations declared in a child package
+                override operations declared in ancestor packages, and
+                that operations on class-wide types defined in the
+                ancestor packages dispatch as appropriate to these
+                overriding implementations.
+==== CA11C02 PASSED ============================.

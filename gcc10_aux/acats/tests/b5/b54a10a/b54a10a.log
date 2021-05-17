@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a10a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a10a.adb
+b54a10a.adb:51:16: expected type "X" defined at line 37
+b54a10a.adb:51:16: found type "Standard.Integer"
+b54a10a.adb:56:16: expected type "Standard.Integer"
+b54a10a.adb:56:16: found type "X" defined at line 37
+b54a10a.adb:72:16: expected type "Standard.Integer"
+b54a10a.adb:72:16: found type "X" defined at line 37
+gnatmake: "b54a10a.adb" compilation error

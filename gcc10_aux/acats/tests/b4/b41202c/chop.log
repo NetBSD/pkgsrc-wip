@@ -1,0 +1,5 @@
+b41202c.ada:42:29: missing ","
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b41202c.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b41202c.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b41202c.ada into:
+   b41202c.adb

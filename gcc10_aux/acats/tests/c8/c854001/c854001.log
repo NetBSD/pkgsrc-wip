@@ -1,0 +1,7 @@
+
+,.,. C854001 ACATS 4.1 21-05-16 10:45:25
+---- C854001 Check that a renaming-as-body can be given in a package
+                body to complete a subprogram declared in the package
+                specification. Check that calls to the subprogram invoke
+                the body of the renamed subprogram.
+==== C854001 PASSED ============================.

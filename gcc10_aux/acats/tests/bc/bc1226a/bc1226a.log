@@ -1,0 +1,37 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1226a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1226a.adb
+bc1226a.adb:52:17: invalid constraint: type has no discriminant
+bc1226a.adb:53:17: invalid constraint: type has no discriminant
+bc1226a.adb:57:30: initialization of limited object requires aggregate or function call
+bc1226a.adb:58:27: invalid constraint: type has no discriminant
+bc1226a.adb:59:28: invalid constraint: type has no discriminant
+bc1226a.adb:63:33: initialization of limited object requires aggregate or function call
+bc1226a.adb:67:11: constant declaration requires initialization expression
+bc1226a.adb:67:11: if variable intended, remove "CONSTANT" from declaration
+bc1226a.adb:69:11: constant declaration requires initialization expression
+bc1226a.adb:69:11: if variable intended, remove "CONSTANT" from declaration
+bc1226a.adb:74:23: invalid conversion, not compatible with private type "U" defined at line 46
+bc1226a.adb:75:29: expected private type "T1" defined at line 47
+bc1226a.adb:75:29: found private type "U1" defined at line 48
+bc1226a.adb:76:32: expected a numeric type
+bc1226a.adb:76:32: found private type "T" defined at line 45
+bc1226a.adb:79:23: initialization not allowed for limited types
+bc1226a.adb:80:30: invalid constraint: type has no discriminant
+bc1226a.adb:89:16: prefix of "CONSTRAINED" attribute must be object of discriminated type
+bc1226a.adb:90:16: prefix of "CONSTRAINED" attribute must be object of discriminated type
+bc1226a.adb:91:19: there is no applicable operator ">" for private type "T" defined at line 45
+bc1226a.adb:92:19: there is no applicable operator "=" for private type "U" defined at line 46
+bc1226a.adb:93:19: there is no applicable operator "<=" for private type "T" defined at line 45
+bc1226a.adb:94:19: there is no applicable operator "+" for private type "T" defined at line 45
+bc1226a.adb:95:16: invalid prefix in selected component "VU"
+bc1226a.adb:96:16: invalid prefix for "ADDRESS" attribute
+bc1226a.adb:96:29: invalid prefix for "ADDRESS" attribute
+bc1226a.adb:97:25: scalar type required for range
+bc1226a.adb:98:19: invalid operand types for operator "**"
+bc1226a.adb:98:19: left operand has private type "T" defined at line 45
+bc1226a.adb:98:19: right operand has type universal integer
+bc1226a.adb:99:16: operator "ABS" not defined for private type "T" defined at line 45
+bc1226a.adb:104:33: there is no applicable operator "=" for type "AU" defined at line 102
+bc1226a.adb:106:16: left hand of assignment must not be limited type
+bc1226a.adb:107:16: left hand of assignment must not be limited type
+gnatmake: "bc1226a.adb" compilation error

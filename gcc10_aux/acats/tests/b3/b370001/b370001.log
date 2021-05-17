@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b370001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b370001.adb
+b370001_1.ads:14:43: (Ada 2005) access discriminants of nonlimited types cannot have defaults
+b370001_1.ads:31:38: (Ada 2005) access discriminants of nonlimited types cannot have defaults
+b370001_1.ads:54:04: instantiation error at line 48
+b370001_1.ads:54:04: (Ada 2005) access discriminants of nonlimited types cannot have defaults
+gnatmake: "b370001.adb" compilation error

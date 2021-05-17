@@ -1,0 +1,7 @@
+
+,.,. C433006 ACATS 4.1 21-05-16 10:36:11
+---- C433006 Check that the constraint of the constrained array subtype 
+                of a function return is used to determine the bounds of 
+                an array aggregate with an others choice in the return
+                expression of an expression function.
+==== C433006 PASSED ============================.

@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba11004.a into:
+   ba11004_0.ads
+   ba11004_0.adb
+   ba11004_0-not_inherited_func.adb
+   ba11004_0-not_inherited_proc.adb
+   ba11004_2.ads
+   ba11004.adb

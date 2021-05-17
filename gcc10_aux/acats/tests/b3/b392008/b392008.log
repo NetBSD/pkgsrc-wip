@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b392008.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b392008.adb
+b392008.adb:15:32: class-wide argument not allowed here
+b392008.adb:18:11: class-wide argument not allowed here
+b392008.adb:21:14: class-wide argument not allowed here
+b392008.adb:24:25: class-wide argument not allowed here
+b392008.adb:27:11: class-wide argument not allowed here
+b392008.adb:30:29: class-wide argument not allowed here
+b392008.adb:51:35: class-wide argument not allowed here
+b392008.adb:54:14: class-wide argument not allowed here
+b392008.adb:57:31: class-wide argument not allowed here
+b392008.adb:60:14: class-wide argument not allowed here
+b392008.adb:63:42: class-wide argument not allowed here
+b392008.adb:63:42: "Dyn_Tag_Func" is not a dispatching operation of "Tag"
+b392008.adb:66:18: class-wide argument not allowed here
+gnatmake: "b392008.adb" compilation error

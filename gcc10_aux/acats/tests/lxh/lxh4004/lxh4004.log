@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40043.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40043.adb
+lxh4004_0.ads:56:06: violation of restriction "NO_UNCHECKED_DEALLOCATION" at gnat.adc:56
+gnatmake: "lxh40043.adb" compilation error

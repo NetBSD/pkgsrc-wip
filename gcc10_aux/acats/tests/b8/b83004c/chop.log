@@ -1,0 +1,13 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83004c0.ada into:
+   b83004c0.ads
+   b83004c0.adb
+   b83004c0-pack1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83004c1.ada into:
+   b83004c1.ads
+   b83004c1.adb
+   b83004c1-pack2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83004c2.ada into:
+   b83004c2.ads
+   b83004c2.adb
+   b83004c2-pack3.adb
+   b83004c2m.adb

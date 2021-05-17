@@ -1,0 +1,9 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c7/c760010.a into:
+   c760010_0.ads
+   c760010_0.adb
+   c760010_0-check_formal_tagged.ads
+   c760010_0-check_formal_tagged.adb
+   c760010_1.ads
+   c760010_1.adb
+   c760010_2.ads
+   c760010.adb

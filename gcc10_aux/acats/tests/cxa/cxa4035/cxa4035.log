@@ -1,0 +1,7 @@
+
+,.,. CXA4035 ACATS 4.1 21-05-16 10:54:41
+---- CXA4035 Check that the Equal_Case_Insensitive and
+                Less_Case_Insensitive functions for each of Strings,
+                Bounded_Strings and Unbounded_Strings provide correct
+                results.
+==== CXA4035 PASSED ============================.

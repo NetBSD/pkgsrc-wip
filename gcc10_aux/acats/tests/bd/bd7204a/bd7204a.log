@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7204a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7204a.adb
+bd7204a.adb:48:11: prefix for "POSITION" attribute must be selected component
+bd7204a.adb:49:11: prefix for "FIRST_BIT" attribute must be selected component
+bd7204a.adb:50:11: prefix for "LAST_BIT" attribute must be selected component
+bd7204a.adb:52:11: prefix for "POSITION" attribute must be selected component
+bd7204a.adb:53:11: prefix for "FIRST_BIT" attribute must be selected component
+bd7204a.adb:54:11: prefix for "LAST_BIT" attribute must be selected component
+gnatmake: "bd7204a.adb" compilation error

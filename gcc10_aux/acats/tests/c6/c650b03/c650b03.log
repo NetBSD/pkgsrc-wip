@@ -1,0 +1,7 @@
+
+,.,. C650B03 ACATS 4.1 21-05-16 10:43:57
+---- C650B03 Check that the tag of the result of a function that returns
+                a class-wide tagged type with an extended return
+                statement whose subtype indication has a specific type
+                is the tag of the specific type.
+==== C650B03 PASSED ============================.

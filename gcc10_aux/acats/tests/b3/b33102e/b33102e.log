@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33102e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33102e.adb
+b33102e.adb:47:11: missing body for "F"
+b33102e.adb:48:11: missing body for "G"
+b33102e.adb:57:16: "A" conflicts with declaration at line 40
+b33102e.adb:58:16: "B" conflicts with declaration at line 41
+b33102e.adb:59:19: "C" conflicts with declaration at line 42
+b33102e.adb:60:11: invalid context for private declaration
+b33102e.adb:60:16: "D" conflicts with declaration at line 44
+b33102e.adb:61:16: "E" conflicts with declaration at line 45
+b33102e.adb:62:16: "F" conflicts with declaration at line 47
+b33102e.adb:63:19: "G" conflicts with declaration at line 48
+b33102e.adb:64:11: invalid context for private declaration
+b33102e.adb:64:16: "H" conflicts with declaration at line 50
+b33102e.adb:65:16: "I" conflicts with declaration at line 54
+b33102e.adb:66:16: "J" conflicts with declaration at line 55
+b33102e.adb:67:19: "K" conflicts with declaration at line 37
+b33102e.adb:68:11: invalid context for private declaration
+b33102e.adb:68:16: "L" conflicts with declaration at line 37
+b33102e.adb:69:16: "M" conflicts with declaration at line 38
+b33102e.adb:71:21: "F" conflicts with declaration at line 62
+b33102e.adb:76:20: "G" conflicts with declaration at line 63
+gnatmake: "b33102e.adb" compilation error

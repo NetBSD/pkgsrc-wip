@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020f0.ada into:
+   genpack_ba1020f0.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020f1.ada into:
+   ba1020f1_pack.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020f2.ada into:
+   ba1020f1_pack.adb
+   ba1020f2m.adb

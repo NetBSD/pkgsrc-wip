@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxf1001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxf1001.adb
+bxf1001.adb:104:42: machine radix value must be 2 or 10
+bxf1001.adb:106:44: machine radix value must be 2 or 10
+bxf1001.adb:108:42: static integer expression required here
+bxf1001.adb:108:48: non-static function call (RM 4.9(6,18))
+bxf1001.adb:110:42: machine radix value must be 2 or 10
+bxf1001.adb:112:43: machine radix value must be 2 or 10
+bxf1001.adb:167:09: scale exceeds maximum value of 18
+bxf1001.adb:170:09: scale is less than minimum value of -18
+bxf1001.adb:174:37: delta expression must be positive
+bxf1001.adb:178:09: scale is less than minimum value of -18
+bxf1001.adb:182:47: digits value out of range, maximum is 18
+bxf1001.adb:186:47: digits value out of range, maximum is 18
+bxf1001.adb:190:47: digits value out of range, maximum is 18
+bxf1001.adb:194:47: digits value out of range, maximum is 18
+gnatmake: "bxf1001.adb" compilation error

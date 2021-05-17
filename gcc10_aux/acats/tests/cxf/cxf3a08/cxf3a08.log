@@ -1,0 +1,7 @@
+
+,.,. CXF3A08 ACATS 4.1 21-05-16 10:59:21
+---- CXF3A08 Check that the version of Ada.Text_IO.Editing.Put with an
+                out String parameter propagates Layout_Error if the
+                output string exceeds the length of the out String
+                parameter.
+==== CXF3A08 PASSED ============================.

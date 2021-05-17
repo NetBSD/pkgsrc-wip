@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc70002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc70002.adb
+bc70002.adb:53:46: actual parameter must be instance of "BC70002_0"
+bc70002.adb:53:46: instantiation abandoned
+bc70002.adb:56:46: actual parameter must be instance of "BC70002_0"
+bc70002.adb:56:46: instantiation abandoned
+bc70002.adb:59:46: expect package instance to instantiate formal
+bc70002.adb:59:46: instantiation abandoned
+bc70002.adb:62:46: actual parameter must be instance of "BC70002_0"
+bc70002.adb:62:46: instantiation abandoned
+gnatmake: "bc70002.adb" compilation error

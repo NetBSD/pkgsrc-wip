@@ -1,0 +1,10 @@
+
+,.,. CXA8003 ACATS 4.1 21-05-16 10:54:52
+---- CXA8003 Check that Append_File mode has not been added to package
+                Direct_IO.
+   - CXA8003 Mode changed to OUT_FILE.
+   - CXA8003 Mode changed to INOUT_FILE.
+   - CXA8003 Mode changed to IN_FILE.
+   - CXA8003 Constraint_Error correctly raised on attempted Append_File 
+                mode selection for a Direct_IO file.
+==== CXA8003 PASSED ============================.

@@ -1,0 +1,7 @@
+
+,.,. C390006 ACATS 4.1 21-05-16 10:34:03
+---- C390006 Primitive operation inheritance by type extensions: all
+                extensions declared in different packages; root type and
+                1st extension are private, 2nd extension is record
+                extension.
+==== C390006 PASSED ============================.

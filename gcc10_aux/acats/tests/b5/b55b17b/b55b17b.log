@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b17b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b17b.adb
+b55b17b.adb:40:10: selected loop parameter not allowed
+gnatmake: "b55b17b.adb" compilation error

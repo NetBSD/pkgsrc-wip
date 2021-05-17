@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7201c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7201c.adb
+bd7201c.adb:43:11: invalid prefix for "ADDRESS" attribute
+bd7201c.adb:44:11: invalid prefix for "ADDRESS" attribute
+bd7201c.adb:45:11: invalid prefix for "ADDRESS" attribute
+bd7201c.adb:46:11: invalid prefix for "ADDRESS" attribute
+bd7201c.adb:47:18: invalid prefix for "ADDRESS" attribute
+gnatmake: "bd7201c.adb" compilation error

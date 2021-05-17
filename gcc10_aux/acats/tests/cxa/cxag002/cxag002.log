@@ -1,0 +1,6 @@
+
+,.,. CXAG002 ACATS 4.1 21-05-16 10:55:19
+---- CXAG002 Check that package Ada.Directories.Hierarchical_File_Names 
+                exists and the functions it contains work as expected.
+   - CXAG002 Containing_Directory of simple name returns . - Simple.
+==== CXAG002 PASSED ============================.

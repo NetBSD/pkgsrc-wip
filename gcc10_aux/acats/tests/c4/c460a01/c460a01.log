@@ -1,0 +1,6 @@
+
+,.,. C460A01 ACATS 4.1 21-05-16 10:42:04
+---- C460A01 Run-time accessibility checks: instance bodies. Operand
+                type of access type conversion is passed as actual to
+                instance.
+==== C460A01 PASSED ============================.

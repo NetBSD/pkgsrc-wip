@@ -1,0 +1,9 @@
+
+,.,. CC70001 ACATS 4.1 21-05-16 10:50:31
+---- CC70001 Check that the template for a generic formal package may be
+                a child package, and that a child instance which is an
+                instance of the template may be passed as an actual to
+                the formal package. Check that the visible part of the
+                generic formal package includes the first list of basic 
+                declarative items of the package specification.
+==== CC70001 PASSED ============================.

@@ -1,0 +1,11 @@
+
+,.,. CB42001 ACATS 4.1 21-05-16 10:49:30
+---- CB42001 Check that the boolean expression of a pragma Assert is
+                evaluated if the Assertion_Policy is Check, and
+                Ada.Assertions.Assertion_Error is raised if the
+                expression is False. Check that the optional message
+                string in a pragma Assert whose boolean expression
+                evaluates to False is associated with the raised
+                exception occurrence.
+   - CB42001 Case 4: Exception message was: cb42001.adb:105.
+==== CB42001 PASSED ============================.

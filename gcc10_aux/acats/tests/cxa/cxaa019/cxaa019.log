@@ -1,0 +1,10 @@
+
+,.,. CXAA019 ACATS 4.1 21-05-16 10:55:04
+---- CXAA019 Check that Standard_Output can be flushed; check that 'in' 
+                Ada.Text_IO.File_Type and
+                Ada.Streams.Stream_IO.File_Typeparameters can be
+                flushed.
+   - CXAA019 About to flush Standard_Output
+   - CXAA019 About to flush a Text_IO file passed as 'in' parameter
+   - CXAA019 About to flush a Stream_IO file passed as 'in' parameter.
+==== CXAA019 PASSED ============================.

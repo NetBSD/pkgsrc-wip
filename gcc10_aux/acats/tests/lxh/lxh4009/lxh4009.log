@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40093.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40093.adb
+lxh4009_1.ads:61:08: violation of restriction "NO_ACCESS_SUBPROGRAMS" at gnat.adc:56
+gnatmake: "lxh40093.adb" compilation error

@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba15003b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba15003b.adb
+ba150031.ads:66:35: "Nested1" not declared in "BA150031"
+ba150032.ads:67:08: incorrect placement of pragma "PURE"
+ba150033.ads:67:08: incorrect placement of pragma "PURE"
+ba150034.ads:67:08: incorrect placement of pragma "PURE"
+ba150035.ads:67:08: incorrect placement of pragma "PREELABORATE"
+ba150036.ads:67:08: incorrect placement of pragma "PREELABORATE"
+ba150037.ads:67:08: incorrect placement of pragma "PREELABORATE"
+ba150038.ads:67:08: incorrect placement of pragma "ELABORATE_BODY"
+ba150039.ads:67:08: incorrect placement of pragma "ELABORATE_BODY"
+ba15003a.ads:67:08: incorrect placement of pragma "ELABORATE_BODY"
+gnatmake: "ba15003b.adb" compilation error

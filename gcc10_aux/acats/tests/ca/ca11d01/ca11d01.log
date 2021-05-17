@@ -1,0 +1,6 @@
+
+,.,. CA11D013 ACATS 4.1 21-05-16 10:48:55
+---- CA11D013 Check that a child unit can raise an exception that is
+                 declared in parent.
+   - CA11D013 Exception is properly handled in Subtract.
+==== CA11D013 PASSED ============================.

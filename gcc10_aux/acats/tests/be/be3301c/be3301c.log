@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3301c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3301c.adb
+be3301c.adb:43:06: no candidate interpretations match the actuals:
+be3301c.adb:43:06: missing argument for parameter "To" in call to "SET_LINE_LENGTH" declared at a-textio.ads:218
+be3301c.adb:43:23: expected type "Ada.Text_Io.Count"
+be3301c.adb:43:23: found type "Standard.Integer"
+be3301c.adb:43:23:   ==> in call to "Set_Line_Length" at a-textio.ads:224
+be3301c.adb:47:06: no candidate interpretations match the actuals:
+be3301c.adb:47:06: missing argument for parameter "To" in call to "SET_PAGE_LENGTH" declared at a-textio.ads:230
+be3301c.adb:47:23: expected type "Ada.Text_Io.Count"
+be3301c.adb:47:23: found type "Standard.Integer"
+be3301c.adb:47:23:   ==> in call to "Set_Page_Length" at a-textio.ads:236
+be3301c.adb:51:14: expected type "Standard.Integer"
+be3301c.adb:51:14: found type "Ada.Text_Io.Count"
+be3301c.adb:55:14: expected type "Standard.Integer"
+be3301c.adb:55:14: found type "Ada.Text_Io.Count"
+gnatmake: "be3301c.adb" compilation error

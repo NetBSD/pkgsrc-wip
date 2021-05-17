@@ -1,0 +1,14 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c7/c731001.a into:
+   c731001_1.ads
+   c731001_1.adb
+   c731001_1-parent.ads
+   c731001_1-parent-main.ads
+   c731001_1-parent.adb
+   c731001_1-unrelated.ads
+   c731001_1-unrelated.adb
+   c731001_1-parent-child.ads
+   c731001_1-parent-child.adb
+   c731001_1-main.ads
+   c731001_1-main.adb
+   c731001_1-parent-main.adb
+   c731001.adb

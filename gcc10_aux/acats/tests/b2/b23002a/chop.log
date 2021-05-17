@@ -1,0 +1,10 @@
+b23002a.ada:34:08: two consecutive underlines not permitted
+b23002a.ada:36:06: identifier cannot start with underline
+b23002a.ada:38:08: identifier cannot end with underline
+b23002a.ada:43:08: two consecutive underlines not permitted
+b23002a.ada:45:06: identifier cannot start with underline
+b23002a.ada:47:08: identifier cannot end with underline
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b23002a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b23002a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b23002a.ada into:
+   b23002a.adb

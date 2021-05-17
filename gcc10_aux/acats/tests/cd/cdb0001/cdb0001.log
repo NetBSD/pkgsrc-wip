@@ -1,0 +1,7 @@
+
+,.,. CDB0001 ACATS 4.1 21-05-16 10:51:50
+---- CDB0001 If Storage_Size is specified for an access type, check that
+                Storage_Error is raised by an allocator when
+                insufficient storage is available.
+   - CDB0001 Check_Type'Storage_Size is exactly as specified.
+==== CDB0001 PASSED ============================.

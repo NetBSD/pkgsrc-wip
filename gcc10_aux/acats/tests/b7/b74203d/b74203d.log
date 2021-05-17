@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74203d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74203d.adb
+b74203d.adb:90:14: array type required in indexed component
+b74203d.adb:94:14: expected an array type
+b74203d.adb:94:14: found private type "CHILD" defined at line 50
+b74203d.adb:98:21: prefix for "RANGE" attribute may not be private type
+b74203d.adb:102:18: prefix for "LENGTH" attribute may not be private type
+b74203d.adb:105:27: there is no applicable operator "&" for private type "CHILD" defined at line 50
+b74203d.adb:118:15: invisible selector "COMP1" for private type "REC" defined at line 47
+b74203d.adb:120:12: expected private type "ACC" defined at line 48
+b74203d.adb:120:12: found type access to "Standard.Integer" defined at line 120
+b74203d.adb:122:12: expected private type "ACC" defined at line 48
+b74203d.adb:122:12: found an access type
+b74203d.adb:124:16: prefix of dereference must be an access type
+b74203d.adb:126:14: prefix of "CALLABLE" attribute must be a task or a task interface class-wide object
+b74203d.adb:128:14: prefix of "TERMINATED" attribute must be a task or a task interface class-wide object
+b74203d.adb:130:06: invalid prefix in selected component "V1"
+gnatmake: "b74203d.adb" compilation error

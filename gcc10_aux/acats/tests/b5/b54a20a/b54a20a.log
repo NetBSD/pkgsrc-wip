@@ -1,0 +1,30 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a20a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a20a.adb
+b54a20a.adb:41:22: expected type "INT_1" defined at line 32
+b54a20a.adb:41:22: found type "Standard.Boolean"
+b54a20a.adb:43:28: expected type "INT_1" defined at line 32
+b54a20a.adb:43:28: found type "Standard.Integer"
+b54a20a.adb:45:27: expected type "INT_1" defined at line 32
+b54a20a.adb:45:27: found type "Standard.Integer"
+b54a20a.adb:47:21: expected type "INT_1" defined at line 32
+b54a20a.adb:47:21: found type "INT_2" defined at line 33
+b54a20a.adb:51:16: expect subtype of type "INT_1" defined at line 32
+b54a20a.adb:53:22: expected type "INT_1" defined at line 32
+b54a20a.adb:53:22: found type "INT_2" defined at line 33
+b54a20a.adb:55:16: expected type "INT_1" defined at line 32
+b54a20a.adb:55:16: found type "INT_2" defined at line 33
+b54a20a.adb:61:18: duplication of choice values: 7 .. 8 at line 60
+b54a20a.adb:68:18: duplication of choice value: 7 at line 66
+b54a20a.adb:72:33: duplication of choice values: 3 .. 4 at line 72
+b54a20a.adb:79:19: duplication of choice values: 'R' .. 'T' at line 78
+b54a20a.adb:81:16: duplication of choice value: 'S' at line 78
+b54a20a.adb:82:16: duplication of choice value: 'U' at line 78
+b54a20a.adb:83:16: duplication of choice value: 'X' at line 78
+b54a20a.adb:84:16: duplication of choice value: 'A' at line 77
+b54a20a.adb:86:16: duplication of choice value: 'B' at line 78
+b54a20a.adb:92:28: duplication of choice value: 8 at line 91
+b54a20a.adb:103:16: duplication of choice value: 1504 at line 97
+b54a20a.adb:106:18: duplication of choice values: 2 .. 3 at line 96
+b54a20a.adb:107:20: duplication of choice values: 999 .. 1001 at line 101
+b54a20a.adb:108:20: duplication of choice value: -48 at line 99
+gnatmake: "b54a20a.adb" compilation error

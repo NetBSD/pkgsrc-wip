@@ -1,0 +1,7 @@
+
+,.,. CXF3A02 ACATS 4.1 21-05-16 10:59:16
+---- CXF3A02 Check that the function Ada.Text_IO.Editing.To_Picture
+                raises Picture_Error if the picture string provided as
+                input parameter does not conform to the composition
+                constraints defined for picture strings.
+==== CXF3A02 PASSED ============================.

@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35a08a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35a08a.adb
+b35a08a.adb:41:20: operator for type "T" defined at line 36 is not directly visible
+b35a08a.adb:41:20: use clause would make operation legal
+b35a08a.adb:42:21: operator for type "T" defined at line 36 is not directly visible
+b35a08a.adb:42:21: use clause would make operation legal
+b35a08a.adb:43:21: operator for type "T" defined at line 36 is not directly visible
+b35a08a.adb:43:21: use clause would make operation legal
+gnatmake: "b35a08a.adb" compilation error

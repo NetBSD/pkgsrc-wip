@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40063.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40063.adb
+lxh40063.adb:101:05: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh40063.adb:101:16: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh40063.adb:101:25: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh4006_1.adb:57:30: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh4006_1.adb:58:11: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh4006_1.adb:65:10: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh4006_1.adb:65:17: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh4006_1.adb:65:22: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+lxh4006_1.adb:65:24: violation of restriction "NO_FLOATING_POINT" at gnat.adc:56
+gnatmake: "lxh40063.adb" compilation error

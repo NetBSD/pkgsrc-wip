@@ -1,0 +1,5 @@
+
+,.,. C470001 ACATS 4.1 21-05-16 10:42:05
+---- C470001 Check that a qualified expression is a name, and thus can
+                be used where a name is required.
+==== C470001 PASSED ============================.

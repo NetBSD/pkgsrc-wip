@@ -1,0 +1,14 @@
+
+,.,. C392014 ACATS 4.1 21-05-16 10:34:24
+---- C392014 Check that objects designated by X'Access (where X is of a 
+                class-wide type) and New T'Class'(...) are dynamically
+                tagged and can be used in dispatching calls.
+   - C392014 Subtest X0'Access Passed.
+   - C392014 Subtest New C392014_0.T'Class Passed.
+   - C392014 Subtest X1'Access Passed.
+   - C392014 Subtest New C392014_1.T'Class Passed.
+   - C392014 Subtest Y0'Access Passed.
+   - C392014 Subtest New S0 Passed.
+   - C392014 Subtest Y1'Access Passed.
+   - C392014 Subtest New S1 Passed.
+==== C392014 PASSED ============================.

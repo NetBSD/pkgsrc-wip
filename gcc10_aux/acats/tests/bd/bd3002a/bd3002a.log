@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3002a.adb
+bd3002a.adb:37:06: duplicate enumeration rep clause ignored
+bd3002a.adb:42:06: duplicate enumeration rep clause ignored
+gnatmake: "bd3002a.adb" compilation error

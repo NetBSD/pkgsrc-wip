@@ -1,0 +1,16 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca12002.a into:
+   ca12002_parent.ads
+   ca12002_parent-priv_pack_child.ads
+   ca12002_parent-priv_proc_child.ads
+   ca12002_parent-priv_proc_child.adb
+   ca12002_parent-priv_func_child.ads
+   ca12002_parent-priv_func_child.adb
+   ca12002_parent-pub_pack_child_1.ads
+   ca12002_parent-pub_pack_child_1.adb
+   ca12002_parent-pub_pack_child_1-f.adb
+   ca12002_parent-pub_pack_child_1-pub_grandchild.ads
+   ca12002_parent-pub_pack_child_2.ads
+   ca12002_parent-pub_pack_child_2-priv_grandchild.ads
+   ca12002_parent-pub_pack_child_2-priv_grandchild-pub_greatgrandchild.ads
+   ca12002_parent-pub_pack_child_2.adb
+   ca12002.adb

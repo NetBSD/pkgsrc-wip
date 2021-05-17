@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bde0005.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bde0005.adb
+bde0005.adb:50:14: overriding of "Op2" is too late
+bde0005.adb:50:14: spec should appear immediately after the type
+gnatmake: "bde0005.adb" compilation error

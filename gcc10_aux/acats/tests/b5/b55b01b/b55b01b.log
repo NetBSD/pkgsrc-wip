@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b01b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b01b.adb
+b55b01b.adb:55:41: actual for "PR" must be a variable
+b55b01b.adb:61:26: actual for "P2" must be a variable
+b55b01b.adb:64:22: actual for "P1" must be a variable
+gnatmake: "b55b01b.adb" compilation error

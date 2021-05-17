@@ -1,0 +1,77 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f392d00%b		f392d00.adb		ca6a4f79 DE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+
+U f392d00%s		f392d00.ads		01d1e008 DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f392d00.ads		20210516102805 01d1e008 f392d00%s
+D f392d00.adb		20210516102805 cbbbaf71 f392d00%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [focus f392d00 47 14 none]
+G c Z s b [self_test f392d00 50 14 none]
+G c Z s b [set_shutter_speed f392d00 56 14 none]
+G c Z s s [remote_cameraDA f392d00 40 9 none]
+G c Z s s [remote_cameraDF f392d00 40 9 none]
+G c Z s s [remote_cameraIP f392d00 40 9 none]
+X 6 f392d00.ads
+35K9*F392D00 56E14 64l5 64e12 7|6b14 39l5 39t12
+37I9*Depth_Of_Field<short_short_integer> 41r16 48r36 7|9r36 25r33
+38E9*Shutter_Speed 38e67 42r16 57r48 7|17r48 26r33
+38n28*One{38E9} 42r34
+38n33*Two_Fifty{38E9}
+38n44*Four_Hundred{38E9} 7|26r51
+38n58*Thousand{38E9} 7|20r20
+40R9*Remote_Camera 43e14 47p14 47r36 50r35 56p14 56r48 7|8r36 16r48 24r35
+41i7*DOF{37I9} 7|12m9
+42e7*Shutter{38E9} 7|20m9
+47U14*Focus 47=21 48>21 7|8b14 13l8 13t13 30R7
+47r21 C{40R9} 7|8b21 12m7
+48i21 Depth{37I9} 7|9b21
+50U14*Self_Test 50=25 7|24b14 37l8 37t17
+50c25 C<40R9> 7|24b25 30m13 34m25
+56U14 Set_Shutter_Speed 56=33 57>33 7|16b14 21l8 21t25 34R7
+56r33 C{40R9} 7|16b33 20m7
+57e33 Speed{38E9} 7|17b33
+X 7 f392d00.adb
+25i7 TC_Dummy_Depth{6|37I9} 30r16
+26e7 TC_Dummy_Speed{6|38E9} 34r28
+

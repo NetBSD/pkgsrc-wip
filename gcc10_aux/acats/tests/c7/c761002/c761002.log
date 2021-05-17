@@ -1,0 +1,7 @@
+
+,.,. C761002 ACATS 4.1 21-05-16 10:44:39
+---- C761002 Check that objects of a controlled type created by an
+                allocator for a named access type are finalized
+                appropriately. Check that Unchecked_Deallocation of a
+                controlled object causes finalization of that object.
+==== C761002 PASSED ============================.

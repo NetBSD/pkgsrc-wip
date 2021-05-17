@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/a/aa2012a.ada into:
+   aa2012a1.adb
+   aa2012a1-aa2012a2.adb
+   aa2012a1-aa2012a3.adb
+   aa2012a.adb

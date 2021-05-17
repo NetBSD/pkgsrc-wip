@@ -1,0 +1,9 @@
+
+,.,. C760009 ACATS 4.1 21-05-16 10:44:31
+---- C760009 Check that for an extension_aggregate whose ancestor_part
+                is a subtype_mark, Initialize is called on all
+                controlled subcomponents of the ancestor part.  Also
+                check that the utilization of a controlled type for a
+                generic actual parameter supports the correct behavior
+                in the instantiated software.
+==== C760009 PASSED ============================.

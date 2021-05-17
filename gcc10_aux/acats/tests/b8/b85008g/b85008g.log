@@ -1,0 +1,14 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85008g.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85008g.adb
+b85008g.adb:53:28: invalid exception name in renaming
+b85008g.adb:54:28: invalid exception name in renaming
+b85008g.adb:55:28: invalid exception name in renaming
+b85008g.adb:56:28: invalid exception name in renaming
+b85008g.adb:57:28: invalid exception name in renaming
+b85008g.adb:58:28: invalid exception name in renaming
+b85008g.adb:59:31: invalid exception name in renaming
+b85008g.adb:60:31: invalid exception name in renaming
+b85008g.adb:92:38: invalid exception name in renaming
+b85008g.adb:93:38: invalid exception name in renaming
+b85008g.adb:94:38: invalid exception name in renaming
+gnatmake: "b85008g.adb" compilation error

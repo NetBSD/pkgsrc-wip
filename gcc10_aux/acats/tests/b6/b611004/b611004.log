@@ -1,0 +1,14 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611004.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611004.adb
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611004p.adb
+b611004p.adb:17:13: aspect specification must appear on initial declaration
+b611004p.adb:23:13: aspect specification must appear on initial declaration
+b611004p.adb:28:13: aspect specification must appear on initial declaration
+b611004p.adb:37:13: aspect specification must appear on initial declaration
+b611004p.adb:47:13: aspect specification must appear on initial declaration
+b611004p.adb:53:13: aspect specification must appear on initial declaration
+b611004p.adb:58:13: aspect specification must appear on initial declaration
+b611004p.adb:67:13: aspect specification must appear on initial declaration
+b611004p.adb:74:13: aspect specification must appear on initial declaration
+b611004p.adb:77:13: aspect specification must appear on initial declaration
+gnatmake: "b611004p.adb" compilation error

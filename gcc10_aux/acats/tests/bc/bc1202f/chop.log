@@ -1,0 +1,5 @@
+bc1202f.ada:47:26: reserved word "EXCEPTION" cannot be used as identifier
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202f.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202f.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202f.ada into:
+   bc1202f.adb

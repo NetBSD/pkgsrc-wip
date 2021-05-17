@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85015a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85015a.adb
+b85015a.adb:48:21: invalid entry name
+b85015a.adb:49:21: invalid entry name
+gnatmake: "b85015a.adb" compilation error

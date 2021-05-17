@@ -1,0 +1,8 @@
+
+,.,. CA11C03 ACATS 4.1 21-05-16 10:48:54
+---- CA11C03 Check that when a child unit is WITHED, visibility is
+                obtained to all ancestor units named in the expanded
+                name of the WITHED child unit. Check that when the
+                parent unit is USED, the simple name of a WITHED child
+                unit is made directly visible.
+==== CA11C03 PASSED ============================.

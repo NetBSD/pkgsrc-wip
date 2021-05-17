@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b851001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b851001.adb
+b851001.adb:50:05: instantiation error at b851001_0.ads:69
+b851001.adb:50:05: illegal renaming of discriminant-dependent component
+b851001.adb:51:05: instantiation error at b851001_0.ads:77
+b851001.adb:51:05: illegal renaming of discriminant-dependent component
+gnatmake: "b851001.adb" compilation error

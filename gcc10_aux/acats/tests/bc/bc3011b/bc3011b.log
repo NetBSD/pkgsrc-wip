@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3011b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3011b.adb
+bc3011b.adb:63:08: ambiguous expression (cannot resolve "PR")
+bc3011b.adb:63:08: possible interpretation at line 41, instance at line 57
+bc3011b.adb:63:08: possible interpretation at line 40, instance at line 57
+bc3011b.adb:67:08: ambiguous expression (cannot resolve "PR")
+bc3011b.adb:67:08: possible interpretation at line 41, instance at line 58
+bc3011b.adb:67:08: possible interpretation at line 40, instance at line 58
+gnatmake: "bc3011b.adb" compilation error

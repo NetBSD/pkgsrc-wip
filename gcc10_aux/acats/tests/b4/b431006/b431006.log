@@ -1,0 +1,22 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431006.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431006.adb
+b431006.adb:168:10: value for discriminant "Dis" must be static
+b431006.adb:172:10: value for discriminant "Dis" must be static
+b431006.adb:172:30: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b431006.adb:176:18: value for discriminant "Disc" must be static
+b431006.adb:176:18: non-static function call (RM 4.9(6,18))
+b431006.adb:178:18: value for discriminant "Disc" must be static
+b431006.adb:178:18: "Z" is not a static constant (RM 4.9(5))
+b431006.adb:180:18: value for discriminant "Disc" must be static
+b431006.adb:180:18: non-static function call (RM 4.9(6,18))
+b431006.adb:182:18: value for discriminant "Disc" must be static
+b431006.adb:182:18: "Z" is not a static constant (RM 4.9(5))
+b431006.adb:188:19: value for discriminant "Disc2" must be static
+b431006.adb:188:19: "Z" is not a static constant (RM 4.9(5))
+b431006.adb:191:19: value for discriminant "Disc" must be static
+b431006.adb:191:19: non-static function call (RM 4.9(6,18))
+b431006.adb:193:19: value for discriminant "Disc" must be static
+b431006.adb:193:19: "Z" is not a static constant (RM 4.9(5))
+b431006.adb:196:09: discriminant controlling variant part is not static
+b431006.adb:200:09: discriminant controlling variant part is not static
+gnatmake: "b431006.adb" compilation error

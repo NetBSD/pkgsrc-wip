@@ -1,0 +1,8 @@
+b53001a.ada:55:06: "END IF;" expected for "IF" at line 53
+b53001a.ada:58:01: "END IF;" expected for "IF" at line 47
+b53001a.ada:58:01: "END IF;" expected for "IF" at line 45
+b53001a.ada:58:01: "END IF;" expected for "IF" at line 40
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53001a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53001a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53001a.ada into:
+   b53001a.adb

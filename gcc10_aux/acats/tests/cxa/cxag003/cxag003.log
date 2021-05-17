@@ -1,0 +1,7 @@
+
+,.,. CXAG003 ACATS 4.1 21-05-16 10:55:20
+---- CXAG003 Check that function Ada.Directories.Name_Case_Equivalence
+                exists and that the value returned reflects the actual
+                handling of file names.
+   - CXAG003 Name_Case_Equivalence returned CASE_SENSITIVE.
+==== CXAG003 PASSED ============================.

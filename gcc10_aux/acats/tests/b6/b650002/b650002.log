@@ -1,0 +1,35 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b650002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b650002.adb
+b650002.adb:66:21: procedure cannot return value (use function)
+b650002.adb:68:21: procedure cannot return value (use function)
+b650002.adb:72:21: procedure cannot return value (use function)
+b650002.adb:80:29: procedure cannot return value (use function)
+b650002.adb:82:29: procedure cannot return value (use function)
+b650002.adb:99:21: procedure cannot return value (use function)
+b650002.adb:101:21: procedure cannot return value (use function)
+b650002.adb:105:21: procedure cannot return value (use function)
+b650002.adb:119:17: missing expression in return from function
+b650002.adb:124:25: extended return statement cannot be nested (use "return;")
+b650002.adb:126:25: return nested in extended return statement cannot return value (use "return;")
+b650002.adb:146:25: procedure cannot return value (use function)
+b650002.adb:148:25: procedure cannot return value (use function)
+b650002.adb:152:25: procedure cannot return value (use function)
+b650002.adb:162:25: entry body cannot return value
+b650002.adb:164:25: entry body cannot return value
+b650002.adb:168:25: entry body cannot return value
+b650002.adb:176:33: entry body cannot return value
+b650002.adb:178:33: entry body cannot return value
+b650002.adb:199:25: accept statement cannot return value
+b650002.adb:201:25: accept statement cannot return value
+b650002.adb:205:25: accept statement cannot return value
+b650002.adb:213:33: accept statement cannot return value
+b650002.adb:215:33: accept statement cannot return value
+b650002.adb:230:13: missing expression in return from function
+b650002.adb:235:21: extended return statement cannot be nested (use "return;")
+b650002.adb:237:21: return nested in extended return statement cannot return value (use "return;")
+b650002.adb:249:21: missing expression in return from function
+b650002.adb:254:29: extended return statement cannot be nested (use "return;")
+b650002.adb:256:29: return nested in extended return statement cannot return value (use "return;")
+b650002.adb:268:09: procedure cannot return value (use function)
+b650002.adb:270:09: procedure cannot return value (use function)
+gnatmake: "b650002.adb" compilation error

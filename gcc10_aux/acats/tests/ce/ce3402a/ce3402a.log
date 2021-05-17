@@ -1,0 +1,5 @@
+
+,.,. CE3402A ACATS 4.1 21-05-16 10:53:05
+---- CE3402A CHECK THAT NEW_LINE RAISES MODE_ERROR WHEN THE FILE MODE IS
+                IN_FILE.
+==== CE3402A PASSED ============================.

@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b413003.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b413003.adb
+b413003.adb:174:04: actual for "X" must be a variable
+b413003.adb:176:04: actual for "X" must be a variable
+b413003.adb:178:04: access-to-constant operand type not allowed
+b413003.adb:182:04: actual for "X" must be a variable
+b413003.adb:184:04: actual for "X" must be a variable
+b413003.adb:188:09: actual for "X" must be a variable
+b413003.adb:194:09: actual for "X" must be a variable
+b413003.adb:196:08: actual for "X" must be a variable
+b413003.adb:197:08: actual for "X" must be a variable
+b413003.adb:200:09: actual for "X" must be a variable
+b413003.adb:206:10: actual for "X" must be a variable
+b413003.adb:207:10: actual for "X" must be a variable
+b413003.adb:208:10: actual for "X" must be a variable
+b413003.adb:210:10: actual for "X" must be a variable
+b413003.adb:211:10: actual for "X" must be a variable
+gnatmake: "b413003.adb" compilation error

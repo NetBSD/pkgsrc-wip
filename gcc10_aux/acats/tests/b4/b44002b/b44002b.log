@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44002b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44002b.adb
+b44002b.adb:62:11: expected type "Standard.Integer"
+b44002b.adb:64:11: expected type "Standard.Integer"
+b44002b.adb:64:11: found type "READER" defined at line 40
+b44002b.adb:66:11: expected type "Standard.Integer"
+b44002b.adb:66:11: found type "READER" defined at line 40
+b44002b.adb:69:18: expected type "Standard.Integer"
+b44002b.adb:69:18: found package or procedure name
+b44002b.adb:71:19: expected type "Standard.Integer"
+b44002b.adb:71:19: found package or procedure name
+gnatmake: "b44002b.adb" compilation error

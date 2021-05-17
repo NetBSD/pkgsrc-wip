@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49011a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49011a.adb
+b49011a.adb:43:34: non-static expression used for integer type bound
+b49011a.adb:44:30: non-static expression used for digits value
+b49011a.adb:44:32: attribute of generic type is never static (RM 4.9(7,8))
+b49011a.adb:53:28: non-static expression used in number declaration
+b49011a.adb:53:29: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49011a.adb:53:35: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49011a.adb:54:28: non-static expression used in number declaration
+b49011a.adb:54:29: attribute of generic type is never static (RM 4.9(7,8))
+b49011a.adb:54:35: attribute of generic type is never static (RM 4.9(7,8))
+b49011a.adb:55:28: non-static expression used in number declaration
+b49011a.adb:55:30: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49011a.adb:55:37: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49011a.adb:67:36: bound in real type definition is not static
+b49011a.adb:67:40: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49011a.adb:69:30: non-static expression used for delta value
+b49011a.adb:71:46: non-static expression used for real type bound
+b49011a.adb:71:47: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49011a.adb:72:30: non-static expression used for delta value
+gnatmake: "b49011a.adb" compilation error

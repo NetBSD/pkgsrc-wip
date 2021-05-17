@@ -1,0 +1,7 @@
+
+,.,. C611A01 ACATS 4.1 21-05-16 10:43:18
+---- C611A01 Check that if both specific and class-wide preconditions
+                (or postconditions) are enabled and apply to a
+                subprogram, then Assertion_Error is raised
+                appropriately.
+==== C611A01 PASSED ============================.

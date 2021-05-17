@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb2001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb2001a.adb
+bb2001a.adb:52:11: "E9" is undefined
+bb2001a.adb:55:13: "E8" is undefined
+bb2001a.adb:60:11: exception name expected
+gnatmake: "bb2001a.adb" compilation error

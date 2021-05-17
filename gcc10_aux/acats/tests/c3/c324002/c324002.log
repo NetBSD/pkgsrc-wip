@@ -1,0 +1,5 @@
+
+,.,. C324002 ACATS 4.1 21-05-16 10:31:46
+---- C324002 Check predicate checks are performed for a dynamic
+                predicate of a by-reference type.
+==== C324002 PASSED ============================.

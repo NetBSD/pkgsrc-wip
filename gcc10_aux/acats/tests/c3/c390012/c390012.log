@@ -1,0 +1,14 @@
+
+,.,. C390012 ACATS 4.1 21-05-16 10:34:08
+---- C390012 Check that an instance of Generic_Dispatching_Constructor
+                calls the correct functions and creates objects of the
+                correct type.
+   - C390012 Tag_Error raised as expected from attempt to create
+                abstract object (E).
+   - C390012 Tag_Error raised as expected from attempt to create object 
+                from No_Tag (F).
+   - C390012 Tag_Error raised as expected from attempt to create object 
+                from an unrelated type (G).
+   - C390012 Tag_Error raised as expected from attempt to create an
+                object of a more nested type (H).
+==== C390012 PASSED ============================.

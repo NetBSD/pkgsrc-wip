@@ -1,0 +1,126 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34001e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34001e.adb
+b34001e.adb:76:09: invalid conversion, not compatible with type "Standard.Integer"
+b34001e.adb:77:20: illegal operand for numeric conversion
+b34001e.adb:78:09: invalid conversion, not compatible with type "Standard.Float"
+b34001e.adb:79:18: illegal operand for numeric conversion
+b34001e.adb:80:09: invalid conversion, not compatible with type "Standard.Duration"
+b34001e.adb:81:21: illegal operand for numeric conversion
+b34001e.adb:82:09: invalid conversion, not compatible with subtype of "Standard.String" defined at line 52
+b34001e.adb:83:19: illegal operand for array conversion
+b34001e.adb:84:09: expected type "T" defined at line 39
+b34001e.adb:84:09: found type universal integer
+b34001e.adb:85:09: expected type "T" defined at line 39
+b34001e.adb:85:09: found type universal real
+b34001e.adb:86:09: expected type "T" defined at line 39
+b34001e.adb:86:09: found type universal integer
+b34001e.adb:87:09: expected type "T" defined at line 39
+b34001e.adb:87:09: found type universal real
+b34001e.adb:88:09: expected type "T" defined at line 39
+b34001e.adb:88:09: found a character type
+b34001e.adb:90:09: expected type "T" defined at line 39
+b34001e.adb:90:09: found a string type
+b34001e.adb:91:09: expected type "T" defined at line 39
+b34001e.adb:91:09: found an access type
+b34001e.adb:92:09: expected type "T" defined at line 39
+b34001e.adb:92:09: found a composite type
+b34001e.adb:93:09: expected type "T" defined at line 39
+b34001e.adb:93:09: found type access to "COMPONENT" defined at line 93
+b34001e.adb:94:11: invalid prefix in selected component "X"
+b34001e.adb:95:13: prefix of dereference must be an access type
+b34001e.adb:96:11: array type required in indexed component
+b34001e.adb:97:09: expected an array type
+b34001e.adb:97:09: found type "T" defined at line 39
+b34001e.adb:99:11: expected type "Standard.Boolean"
+b34001e.adb:99:11: found type "T" defined at line 39
+b34001e.adb:101:13: expected type "Standard.Boolean"
+b34001e.adb:101:13: found type "T" defined at line 39
+b34001e.adb:103:13: expected type "Standard.Boolean"
+b34001e.adb:103:13: found type "T" defined at line 39
+b34001e.adb:105:13: expected type "Standard.Boolean"
+b34001e.adb:105:13: found type "T" defined at line 39
+b34001e.adb:107:13: expected type "Standard.Boolean"
+b34001e.adb:107:13: found type "T" defined at line 39
+b34001e.adb:109:13: expected type "Standard.Boolean"
+b34001e.adb:109:13: found type "T" defined at line 39
+b34001e.adb:111:13: expected type "T" defined at line 39
+b34001e.adb:111:13: found type "Standard.Boolean"
+b34001e.adb:113:13: expected type "T" defined at line 39
+b34001e.adb:113:13: found type "Standard.Boolean"
+b34001e.adb:115:13: expected type "T" defined at line 39
+b34001e.adb:115:13: found type "Standard.Boolean"
+b34001e.adb:117:13: expected type "T" defined at line 39
+b34001e.adb:117:13: found type "Standard.Boolean"
+b34001e.adb:119:13: expected type "T" defined at line 39
+b34001e.adb:119:13: found type "Standard.Boolean"
+b34001e.adb:121:13: expected type "T" defined at line 39
+b34001e.adb:121:13: found type "Standard.Boolean"
+b34001e.adb:123:13: expected type "T" defined at line 39
+b34001e.adb:123:13: found type "Standard.Boolean"
+b34001e.adb:125:13: expected type "T" defined at line 39
+b34001e.adb:125:13: found type "Standard.Boolean"
+b34001e.adb:126:09: operator "+" not defined for type "T" defined at line 39
+b34001e.adb:127:09: operator "-" not defined for type "T" defined at line 39
+b34001e.adb:128:09: operator "ABS" not defined for type "T" defined at line 39
+b34001e.adb:129:11: there is no applicable operator "+" for type "T" defined at line 39
+b34001e.adb:130:11: there is no applicable operator "-" for type "T" defined at line 39
+b34001e.adb:131:11: there is no applicable operator "*" for type "T" defined at line 39
+b34001e.adb:132:09: expected type "Standard.Integer"
+b34001e.adb:132:09: found type "T" defined at line 39
+b34001e.adb:133:13: expected type "Standard.Integer"
+b34001e.adb:133:13: found type "T" defined at line 39
+b34001e.adb:134:11: there is no applicable operator "/" for type "T" defined at line 39
+b34001e.adb:135:09: expected type "Standard.Integer"
+b34001e.adb:135:09: found type "T" defined at line 39
+b34001e.adb:136:11: there is no applicable operator "MOD" for type "T" defined at line 39
+b34001e.adb:137:11: there is no applicable operator "REM" for type "T" defined at line 39
+b34001e.adb:138:11: invalid operand types for operator "**"
+b34001e.adb:138:11: left operand has type "T" defined at line 39
+b34001e.adb:138:11: right operand has type "Standard.Integer"
+b34001e.adb:139:11: invalid operands for concatenation
+b34001e.adb:139:11: maybe "AND" was meant
+b34001e.adb:140:11: invalid operand types for operator "&"
+b34001e.adb:141:11: invalid operand types for operator "&"
+b34001e.adb:142:11: there is no applicable operator "&" for type "Standard.Integer"
+b34001e.adb:144:11: prefix of "AFT" attribute must be fixed point type
+b34001e.adb:146:11: prefix of "CALLABLE" attribute must be a task or a task interface class-wide object
+b34001e.adb:147:11: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b34001e.adb:148:11: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b34001e.adb:149:12: invalid entry name
+b34001e.adb:150:11: prefix of "DELTA" attribute must be fixed point type
+b34001e.adb:151:11: prefix of "DIGITS" attribute must be float or decimal type
+b34001e.adb:152:11: prefix of "EMAX" attribute must be float type
+b34001e.adb:153:11: prefix of "EPSILON" attribute must be float type
+b34001e.adb:155:11: prefix of "FIRST" attribute must be a type
+b34001e.adb:156:20: invalid argument in "FIRST" attribute
+b34001e.adb:157:11: prefix of "FIRST" attribute must be a type
+b34001e.adb:158:11: prefix for "FIRST_BIT" attribute must be selected component
+b34001e.adb:159:11: prefix of "FORE" attribute must be fixed point type
+b34001e.adb:161:11: prefix of "LARGE" attribute must be real type
+b34001e.adb:163:11: prefix of "LAST" attribute must be a type
+b34001e.adb:164:19: invalid argument in "LAST" attribute
+b34001e.adb:165:11: prefix of "LAST" attribute must be a type
+b34001e.adb:166:11: prefix for "LAST_BIT" attribute must be selected component
+b34001e.adb:167:11: prefix for "LENGTH" attribute must be array
+b34001e.adb:168:11: prefix for "LENGTH" attribute must be array
+b34001e.adb:169:11: prefix for "LENGTH" attribute must be array
+b34001e.adb:170:11: prefix for "LENGTH" attribute must be array
+b34001e.adb:171:11: prefix of "MACHINE_EMAX" attribute must be float type
+b34001e.adb:172:11: prefix of "MACHINE_EMIN" attribute must be float type
+b34001e.adb:173:11: prefix of "MACHINE_MANTISSA" attribute must be float type
+b34001e.adb:174:11: prefix of "MACHINE_OVERFLOWS" attribute must be real type
+b34001e.adb:175:11: prefix of "MACHINE_RADIX" attribute must be real type
+b34001e.adb:176:11: prefix of "MACHINE_ROUNDS" attribute must be real type
+b34001e.adb:177:11: prefix of "MANTISSA" attribute must be real type
+b34001e.adb:179:11: prefix for "POSITION" attribute must be selected component
+b34001e.adb:181:15: prefix of "RANGE" attribute must be a type
+b34001e.adb:184:24: invalid argument in "RANGE" attribute
+b34001e.adb:187:15: prefix of "RANGE" attribute must be a type
+b34001e.adb:190:11: prefix of "SAFE_EMAX" attribute must be float type
+b34001e.adb:191:11: prefix of "SAFE_LARGE" attribute must be real type
+b34001e.adb:192:11: prefix of "SAFE_SMALL" attribute must be real type
+b34001e.adb:195:11: prefix of "SMALL" attribute must be real type
+b34001e.adb:196:11: prefix of "STORAGE_SIZE" attribute must be access or task type
+b34001e.adb:197:11: prefix of "STORAGE_SIZE" attribute must be access or task type
+b34001e.adb:199:11: prefix of "TERMINATED" attribute must be a task or a task interface class-wide object
+gnatmake: "b34001e.adb" compilation error

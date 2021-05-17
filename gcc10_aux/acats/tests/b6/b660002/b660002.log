@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b660002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b660002.adb
+b660002.adb:33:13: explicit definition of inequality not allowed
+b660002.adb:49:13: explicit definition of inequality not allowed
+b660002.adb:115:21: explicit definition of inequality not allowed
+b660002.adb:119:21: explicit definition of inequality not allowed
+b660002.adb:136:22: expected type "Enumeration_Type" defined at b660002_0.ads:59
+b660002.adb:136:22: found type "Standard.Integer"
+b660002.adb:142:21: expected type "Record_Type" defined at b660002_0.ads:62
+b660002.adb:142:21: found type "Standard.Boolean"
+b660002.adb:145:22: expected type "Arr_Of_Booleans" defined at b660002_0.ads:60
+b660002.adb:145:22: found type "Standard.Integer"
+gnatmake: "b660002.adb" compilation error

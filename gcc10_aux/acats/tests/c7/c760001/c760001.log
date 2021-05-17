@@ -1,0 +1,9 @@
+
+,.,. C760001 ACATS 4.1 21-05-16 10:44:28
+---- C760001 Check that Initialize is called for objects and components 
+                of a controlled type when the objects and components are
+                not assigned explicit initial values.  Check that if an 
+                explicit initial value is assigned to an object or
+                component of a controlled type then Initialize is not
+                called.
+==== C760001 PASSED ============================.

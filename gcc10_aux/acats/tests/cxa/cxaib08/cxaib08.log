@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cxaib08.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cxaib08.adb
+cxaib08_data.ads:69:04: instantiation error at a-cbhama.ads:450
+cxaib08_data.ads:69:04: object in preelaborated unit has non-static default at a-cohata.ads:75, instance at a-cbhama.ads:337, instance at line 69
+cxaib08_data.ads:77:04: instantiation error at a-cbhama.ads:450
+cxaib08_data.ads:77:04: object in preelaborated unit has non-static default at a-cohata.ads:75, instance at a-cbhama.ads:337, instance at line 77
+gnatmake: "cxaib08.adb" compilation error

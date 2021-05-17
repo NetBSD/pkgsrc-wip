@@ -1,0 +1,67 @@
+b29001a.ada:37:11: reserved word "ABORT" cannot be used as identifier
+b29001a.ada:39:11: reserved word "ABS" cannot be used as identifier
+b29001a.ada:41:11: reserved word "ACCEPT" cannot be used as identifier
+b29001a.ada:43:11: reserved word "ACCESS" cannot be used as identifier
+b29001a.ada:45:11: reserved word "ALL" cannot be used as identifier
+b29001a.ada:47:11: reserved word "AND" cannot be used as identifier
+b29001a.ada:49:11: reserved word "ARRAY" cannot be used as identifier
+b29001a.ada:51:11: reserved word "AT" cannot be used as identifier
+b29001a.ada:54:11: reserved word "BODY" cannot be used as identifier
+b29001a.ada:57:11: reserved word "CASE" cannot be used as identifier
+b29001a.ada:59:11: reserved word "CONSTANT" cannot be used as identifier
+b29001a.ada:62:11: reserved word "DECLARE" cannot be used as identifier
+b29001a.ada:64:11: reserved word "DELAY" cannot be used as identifier
+b29001a.ada:66:11: reserved word "DELTA" cannot be used as identifier
+b29001a.ada:68:11: reserved word "DIGITS" cannot be used as identifier
+b29001a.ada:70:11: reserved word "DO" cannot be used as identifier
+b29001a.ada:73:11: reserved word "ELSE" cannot be used as identifier
+b29001a.ada:75:11: reserved word "ELSIF" cannot be used as identifier
+b29001a.ada:77:11: reserved word "ENTRY" cannot be used as identifier
+b29001a.ada:79:11: reserved word "EXCEPTION" cannot be used as identifier
+b29001a.ada:81:11: reserved word "EXIT" cannot be used as identifier
+b29001a.ada:84:11: reserved word "FOR" cannot be used as identifier
+b29001a.ada:86:11: reserved word "FUNCTION" cannot be used as identifier
+b29001a.ada:89:11: reserved word "GENERIC" cannot be used as identifier
+b29001a.ada:91:11: reserved word "GOTO" cannot be used as identifier
+b29001a.ada:94:11: reserved word "IF" cannot be used as identifier
+b29001a.ada:96:11: reserved word "IN" cannot be used as identifier
+b29001a.ada:98:11: reserved word "IS" cannot be used as identifier
+b29001a.ada:101:11: reserved word "LIMITED" cannot be used as identifier
+b29001a.ada:103:11: reserved word "LOOP" cannot be used as identifier
+b29001a.ada:106:11: reserved word "MOD" cannot be used as identifier
+b29001a.ada:109:11: reserved word "NEW" cannot be used as identifier
+b29001a.ada:111:11: reserved word "NOT" cannot be used as identifier
+b29001a.ada:113:11: reserved word "NULL" cannot be used as identifier
+b29001a.ada:116:11: reserved word "OF" cannot be used as identifier
+b29001a.ada:118:11: reserved word "OR" cannot be used as identifier
+b29001a.ada:120:11: reserved word "OTHERS" cannot be used as identifier
+b29001a.ada:122:11: reserved word "OUT" cannot be used as identifier
+b29001a.ada:125:11: reserved word "PACKAGE" cannot be used as identifier
+b29001a.ada:127:11: reserved word "PRAGMA" cannot be used as identifier
+b29001a.ada:129:11: reserved word "PRIVATE" cannot be used as identifier
+b29001a.ada:131:11: reserved word "PROCEDURE" cannot be used as identifier
+b29001a.ada:134:10: identifier expected
+b29001a.ada:136:11: reserved word "RANGE" cannot be used as identifier
+b29001a.ada:138:11: reserved word "RECORD" cannot be used as identifier
+b29001a.ada:140:11: reserved word "REM" cannot be used as identifier
+b29001a.ada:142:11: reserved word "RENAMES" cannot be used as identifier
+b29001a.ada:144:11: reserved word "RETURN" cannot be used as identifier
+b29001a.ada:146:11: reserved word "REVERSE" cannot be used as identifier
+b29001a.ada:149:11: reserved word "SELECT" cannot be used as identifier
+b29001a.ada:151:11: reserved word "SEPARATE" cannot be used as identifier
+b29001a.ada:153:11: reserved word "SUBTYPE" cannot be used as identifier
+b29001a.ada:156:11: reserved word "TASK" cannot be used as identifier
+b29001a.ada:158:11: reserved word "TERMINATE" cannot be used as identifier
+b29001a.ada:160:11: reserved word "THEN" cannot be used as identifier
+b29001a.ada:162:11: reserved word "TYPE" cannot be used as identifier
+b29001a.ada:165:11: reserved word "USE" cannot be used as identifier
+b29001a.ada:168:11: reserved word "WHEN" cannot be used as identifier
+b29001a.ada:170:11: reserved word "WHILE" cannot be used as identifier
+b29001a.ada:172:11: reserved word "WITH" cannot be used as identifier
+b29001a.ada:175:11: reserved word "XOR" cannot be used as identifier
+b29001a.ada:178:11: reserved word "BEGIN" cannot be used as identifier
+b29001a.ada:180:11: reserved word "END" cannot be used as identifier
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b29001a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b29001a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b29001a.ada into:
+   b29001a.adb

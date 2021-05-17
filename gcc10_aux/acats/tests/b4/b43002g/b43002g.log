@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43002g.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43002g.adb
+b43002g.adb:40:32: "OTHERS" must appear last in an aggregate
+b43002g.adb:42:16: "OTHERS" must appear last in an aggregate
+gnatmake: "b43002g.adb" compilation error

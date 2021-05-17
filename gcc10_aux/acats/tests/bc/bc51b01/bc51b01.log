@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51b01.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51b01.adb
+bc51b01.adb:15:47: actual for "Item_Type" must be a definite subtype
+bc51b01.adb:21:57: actual for "Item_Type" must be a definite subtype
+bc51b01.adb:25:52: actual for "Item_Type" must be a definite subtype
+bc51b01.adb:29:52: actual for "Item_Type" must be a definite subtype
+bc51b01.adb:32:49: actual for "Item_Type" must be a definite subtype
+bc51b01.adb:36:59: actual for "Item_Type" must be a definite subtype
+bc51b01.adb:39:56: actual for "Item_Type" must be a definite subtype
+gnatmake: "bc51b01.adb" compilation error

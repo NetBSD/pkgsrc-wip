@@ -1,0 +1,11 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca21001.a into:
+   ca21001_1.ads
+   ca21001_1.adb
+   ca21001_1-sub.adb
+   ca21001_1-sub-sub_sub.adb
+   ca21001_1-sub-g.adb
+   ca21001_1-sub-g-g_sub.adb
+   ca21001_1-sub-g-g_sub-h.adb
+   ca21001_1-f.adb
+   ca21001_1-f-f_sub.adb
+   ca21001.adb

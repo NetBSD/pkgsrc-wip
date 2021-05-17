@@ -1,0 +1,9 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bxh/bxh4003.a into:
+   bxh4003_0.ads
+   bxh4003_0.adb
+   bxh4003_1.ads
+   bxh4003_1-instance.ads
+   bxh4003_2.ads
+   bxh4003_2.adb
+   bxh4003.ads
+   bxh4003.adb

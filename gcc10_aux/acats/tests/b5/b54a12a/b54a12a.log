@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a12a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a12a.adb
+b54a12a.adb:44:16: minimum allowed choice value is 1
+b54a12a.adb:52:16: maximum allowed choice value is 100
+b54a12a.adb:58:16: minimum allowed choice value is 1
+b54a12a.adb:66:16: maximum allowed choice value is 100
+b54a12a.adb:72:16: minimum allowed choice value is 1
+b54a12a.adb:80:16: maximum allowed choice value is 100
+b54a12a.adb:86:16: minimum allowed choice value is 1
+b54a12a.adb:94:16: maximum allowed choice value is 100
+gnatmake: "b54a12a.adb" compilation error

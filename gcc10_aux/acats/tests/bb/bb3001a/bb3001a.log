@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb3001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb3001a.adb
+bb3001a.adb:52:17: exception name expected in raise statement
+bb3001a.adb:59:17: exception name expected in raise statement
+bb3001a.adb:73:17: exception name expected in raise statement
+bb3001a.adb:87:17: "E" is undefined
+bb3001a.adb:104:17: exception name expected in raise statement
+bb3001a.adb:106:17: exception name expected in raise statement
+bb3001a.adb:108:17: exception name expected in raise statement
+bb3001a.adb:110:17: exception name expected in raise statement
+gnatmake: "bb3001a.adb" compilation error

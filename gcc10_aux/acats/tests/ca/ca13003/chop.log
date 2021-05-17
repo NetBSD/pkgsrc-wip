@@ -1,0 +1,12 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca13003.a into:
+   ca13003_0.ads
+   ca13003_0.adb
+   ca13003_0-ca13003_1.adb
+   ca13003_0-ca13003_1-ca13003_3.adb
+   ca13003_0-ca13003_1-ca13003_4.adb
+   ca13003_0-ca13003_1-ca13003_5.adb
+   ca13003_0-ca13003_2.adb
+   ca13003_0-ca13003_2-ca13003_3.adb
+   ca13003_0-ca13003_2-ca13003_4.adb
+   ca13003_0-ca13003_2-ca13003_5.adb
+   ca13003.adb

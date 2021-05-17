@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83033b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83033b.adb
+b83033b.adb:67:26: expected type "STMT2" defined at line 62
+b83033b.adb:67:26: found package or procedure name
+b83033b.adb:70:21: incorrect use of "BLUE"
+b83033b.adb:73:26: expected type "STMT2" defined at line 62
+b83033b.adb:73:26: found package or procedure name
+gnatmake: "b83033b.adb" compilation error

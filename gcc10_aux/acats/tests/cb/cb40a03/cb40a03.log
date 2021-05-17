@@ -1,0 +1,5 @@
+
+,.,. CB40A031 ACATS 4.1 21-05-16 10:49:27
+---- CB40A031 Check that a predefined exception is correctly propagated 
+                 across package boundaries.
+==== CB40A031 PASSED ============================.

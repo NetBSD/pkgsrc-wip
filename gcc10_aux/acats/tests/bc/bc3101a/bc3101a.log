@@ -1,0 +1,75 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3101a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3101a.adb
+bc3101a.adb:103:28: expected type "Standard.Character"
+bc3101a.adb:103:28: found type "DC" defined at line 42
+bc3101a.adb:104:28: expected type "Standard.Integer"
+bc3101a.adb:104:28: found type "DI" defined at line 36
+bc3101a.adb:105:28: expected type "Standard.Boolean"
+bc3101a.adb:105:28: found type universal integer
+bc3101a.adb:106:28: expected type "ENUM" defined at line 34
+bc3101a.adb:106:28: found type "DE" defined at line 41
+bc3101a.adb:107:29: expected type "DI" defined at line 36
+bc3101a.adb:107:29: found type "AI" defined at line 49
+bc3101a.adb:108:30: expected type "FIX" defined at line 37
+bc3101a.adb:108:30: found type "Standard.Integer"
+bc3101a.adb:109:31: expected type "DFIX" defined at line 38
+bc3101a.adb:109:31: found type "FIX" defined at line 37
+bc3101a.adb:110:32: expected type "Standard.Float"
+bc3101a.adb:110:32: found type "MFLOAT" defined at line 40
+bc3101a.adb:111:33: expected type "DFLOAT" defined at line 39
+bc3101a.adb:111:33: found type "Standard.Float"
+bc3101a.adb:112:33: expected type "MFLOAT" defined at line 40
+bc3101a.adb:112:33: found type "DFLOAT" defined at line 39
+bc3101a.adb:113:29: expected type "DE" defined at line 41
+bc3101a.adb:113:29: found type "ENUM" defined at line 34
+bc3101a.adb:114:29: expected type "DC" defined at line 42
+bc3101a.adb:114:29: found type "Standard.Integer"
+bc3101a.adb:115:30: expected type "REC" defined at line 44
+bc3101a.adb:115:30: found type "ARR" defined at line 48
+bc3101a.adb:116:30: expected type "REC" defined at line 44
+bc3101a.adb:116:30: found type "Standard.Integer"
+bc3101a.adb:117:30: expected type "ARR" defined at line 48
+bc3101a.adb:117:30: found type "REC" defined at line 44
+bc3101a.adb:118:30: expected type "ARR" defined at line 48
+bc3101a.adb:118:30: found type "Standard.Integer"
+bc3101a.adb:119:29: expected type "AI" defined at line 49
+bc3101a.adb:119:29: found type "DAI" defined at line 50
+bc3101a.adb:120:30: expected type "DAI" defined at line 50
+bc3101a.adb:120:30: found type "AI" defined at line 49
+bc3101a.adb:122:29: expected type "Standard.Character"
+bc3101a.adb:122:29: found type "DC" defined at line 42
+bc3101a.adb:123:29: expected type "Standard.Integer"
+bc3101a.adb:123:29: found type "DI" defined at line 36
+bc3101a.adb:124:29: expected type "Standard.Boolean"
+bc3101a.adb:124:29: found type "Standard.Character"
+bc3101a.adb:125:29: expected type "ENUM" defined at line 34
+bc3101a.adb:125:29: found type "DE" defined at line 41
+bc3101a.adb:126:30: expected type "DI" defined at line 36
+bc3101a.adb:126:30: found type "AI" defined at line 49
+bc3101a.adb:127:31: expected type "FIX" defined at line 37
+bc3101a.adb:127:31: found type "Standard.Integer"
+bc3101a.adb:128:32: expected type "DFIX" defined at line 38
+bc3101a.adb:128:32: found type "FIX" defined at line 37
+bc3101a.adb:129:33: expected type "Standard.Float"
+bc3101a.adb:129:33: found type "MFLOAT" defined at line 40
+bc3101a.adb:130:34: expected type "DFLOAT" defined at line 39
+bc3101a.adb:130:34: found type "Standard.Float"
+bc3101a.adb:131:34: expected type "MFLOAT" defined at line 40
+bc3101a.adb:131:34: found type "DFLOAT" defined at line 39
+bc3101a.adb:132:30: expected type "DE" defined at line 41
+bc3101a.adb:132:30: found type "ENUM" defined at line 34
+bc3101a.adb:133:30: expected type "DC" defined at line 42
+bc3101a.adb:133:30: found type "Standard.Integer"
+bc3101a.adb:134:31: expected type "REC" defined at line 44
+bc3101a.adb:134:31: found type "ARR" defined at line 48
+bc3101a.adb:135:31: expected type "REC" defined at line 44
+bc3101a.adb:135:31: found type "Standard.Integer"
+bc3101a.adb:136:31: expected type "ARR" defined at line 48
+bc3101a.adb:136:31: found type "REC" defined at line 44
+bc3101a.adb:137:31: expected type "ARR" defined at line 48
+bc3101a.adb:137:31: found type "Standard.Integer"
+bc3101a.adb:138:30: expected type "AI" defined at line 49
+bc3101a.adb:138:30: found type "DAI" defined at line 50
+bc3101a.adb:139:31: expected type "DAI" defined at line 50
+bc3101a.adb:139:31: found type "AI" defined at line 49
+gnatmake: "bc3101a.adb" compilation error

@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxai007.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxai007.adb
+bxai007.adb:121:44: "Reference_Type" not declared in "My_Bounded_Hashed_Sets"
+bxai007.adb:122:39: no selector "Reference" for private type "Ada.Containers.Bounded_Hashed_Sets.Set" from instance at line 77
+bxai007.adb:164:38: "Reference" not declared in "My_Bounded_Hashed_Sets"
+bxai007.adb:179:38: "Reference" not declared in "My_Bounded_Hashed_Sets"
+bxai007.adb:194:24: no selector "Reference" for private type "Ada.Containers.Bounded_Hashed_Sets.Set" from instance at line 77
+bxai007.adb:206:33: no selector "Reference" for private type "Ada.Containers.Bounded_Hashed_Sets.Set" from instance at line 77
+bxai007.adb:217:25: actual for "Value" must be a variable
+gnatmake: "bxai007.adb" compilation error

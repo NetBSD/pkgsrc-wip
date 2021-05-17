@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b860002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b860002.adb
+b860002.adb:69:12: implicit conversion of anonymous access formal not allowed
+b860002.adb:80:18: expected type "Class_Acc" defined at line 59
+b860002.adb:80:18: found type access to "T'Class" defined at line 61
+gnatmake: "b860002.adb" compilation error

@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004b.adb
+b46004b.adb:46:18: incompatible number of dimensions for conversion
+b46004b.adb:48:18: incompatible number of dimensions for conversion
+b46004b.adb:50:18: incompatible number of dimensions for conversion
+b46004b.adb:52:18: incompatible number of dimensions for conversion
+b46004b.adb:54:20: incompatible number of dimensions for conversion
+b46004b.adb:56:20: incompatible number of dimensions for conversion
+gnatmake: "b46004b.adb" compilation error

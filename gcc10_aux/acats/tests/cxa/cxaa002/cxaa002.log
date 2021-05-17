@@ -1,0 +1,6 @@
+
+,.,. CXAA002 ACATS 4.1 21-05-16 10:54:55
+---- CXAA002 Check that page, line, and column formatting subprograms
+                perform properly on text files created with mode
+                Append_File.
+==== CXAA002 PASSED ============================.

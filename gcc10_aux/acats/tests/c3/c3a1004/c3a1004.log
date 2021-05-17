@@ -1,0 +1,5 @@
+
+,.,. C3A1004 ACATS 4.1 21-05-16 10:35:05
+---- C3A1004 Check that a parameter of a tagged incomplete type can be
+                passed directly as a parameter.
+==== C3A1004 PASSED ============================.

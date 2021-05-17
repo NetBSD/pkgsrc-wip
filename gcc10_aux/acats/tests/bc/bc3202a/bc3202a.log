@@ -1,0 +1,39 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3202a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3202a.adb
+bc3202a.adb:68:30: subtypes of actual discriminants must match formal
+bc3202a.adb:68:30: instantiation abandoned
+bc3202a.adb:69:30: actual for "PV" must have discriminants
+bc3202a.adb:69:30: instantiation abandoned
+bc3202a.adb:70:30: discriminants on actual do not match formal
+bc3202a.adb:70:30: instantiation abandoned
+bc3202a.adb:71:30: types of actual discriminants must match formal
+bc3202a.adb:71:30: instantiation abandoned
+bc3202a.adb:72:30: types of actual discriminants must match formal
+bc3202a.adb:72:30: instantiation abandoned
+bc3202a.adb:73:31: actual for "PV" must be unconstrained
+bc3202a.adb:73:31: instantiation abandoned
+bc3202a.adb:77:30: subtypes of actual discriminants must match formal
+bc3202a.adb:77:30: instantiation abandoned
+bc3202a.adb:78:30: types of actual discriminants must match formal
+bc3202a.adb:78:30: instantiation abandoned
+bc3202a.adb:79:30: types of actual discriminants must match formal
+bc3202a.adb:79:30: instantiation abandoned
+bc3202a.adb:80:30: actual for "LP" must have discriminants
+bc3202a.adb:80:30: instantiation abandoned
+bc3202a.adb:81:30: discriminants on actual do not match formal
+bc3202a.adb:81:30: instantiation abandoned
+bc3202a.adb:82:30: actual for "LP" must be unconstrained
+bc3202a.adb:82:30: instantiation abandoned
+bc3202a.adb:85:30: discriminants on actual do not match formal
+bc3202a.adb:85:30: instantiation abandoned
+bc3202a.adb:87:30: types of actual discriminants must match formal
+bc3202a.adb:87:30: instantiation abandoned
+bc3202a.adb:89:30: actual for "PV" must be unconstrained
+bc3202a.adb:89:30: instantiation abandoned
+bc3202a.adb:92:30: discriminants on actual do not match formal
+bc3202a.adb:92:30: instantiation abandoned
+bc3202a.adb:94:30: types of actual discriminants must match formal
+bc3202a.adb:94:30: instantiation abandoned
+bc3202a.adb:96:30: actual for "LP" must be unconstrained
+bc3202a.adb:96:30: instantiation abandoned
+gnatmake: "bc3202a.adb" compilation error

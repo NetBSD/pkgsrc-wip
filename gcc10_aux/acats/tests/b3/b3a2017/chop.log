@@ -1,0 +1,13 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a20170.a into:
+   b3a2017_global.ads
+   b3a2017_g.ads
+   b3a2017_g-c.ads
+   b3a2017_fp.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a20171.a into:
+   b3a2017_g.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a20172.a into:
+   b3a2017_g-c.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a20173.a into:
+   b3a2017_fp.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a20174.a into:
+   b3a20174.adb

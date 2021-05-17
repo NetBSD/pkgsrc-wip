@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83f02b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83f02b.adb
+b83f02b.adb:71:14: "X1" conflicts with declaration at line 37
+b83f02b.adb:72:14: "X2" conflicts with declaration at line 38
+b83f02b.adb:73:14: "X3" conflicts with declaration at line 40
+b83f02b.adb:74:14: "T2" conflicts with declaration at line 39
+b83f02b.adb:75:14: "T3" conflicts with declaration at line 41
+b83f02b.adb:76:14: "T5" conflicts with declaration at line 42
+b83f02b.adb:77:14: "P2" conflicts with declaration at line 44
+b83f02b.adb:78:14: "PROC3" conflicts with declaration at line 48
+b83f02b.adb:82:14: "X" conflicts with declaration at line 58
+b83f02b.adb:83:14: "YY1" conflicts with declaration at line 55
+b83f02b.adb:85:14: "YY3" conflicts with declaration at line 56
+b83f02b.adb:86:14: "TT1" conflicts with declaration at line 57
+b83f02b.adb:87:14: "TT2" conflicts with declaration at line 59
+gnatmake: "b83f02b.adb" compilation error

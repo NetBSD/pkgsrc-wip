@@ -1,0 +1,6 @@
+
+,.,. C390A03 ACATS 4.1 21-05-16 10:34:14
+---- C390A03 Primitive operation inheritance by type extensions: all
+                extensions are private and declared in same package, but
+                a different package from that of root type.
+==== C390A03 PASSED ============================.

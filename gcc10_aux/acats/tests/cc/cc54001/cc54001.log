@@ -1,0 +1,6 @@
+
+,.,. CC54001 ACATS 4.1 21-05-16 10:50:27
+---- CC54001 Check that a general access-to-constant type may be passed 
+                as an actual to a generic formal access-to-constant
+                type.
+==== CC54001 PASSED ============================.

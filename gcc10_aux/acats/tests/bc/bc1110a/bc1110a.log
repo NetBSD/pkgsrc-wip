@@ -1,0 +1,29 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1110a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1110a.adb
+bc1110a.adb:53:39: expected type "INT_TYPE" defined at line 50
+bc1110a.adb:53:39: found type "Standard.Integer"
+bc1110a.adb:54:40: expected type "FLOAT_TYPE" defined at line 51
+bc1110a.adb:54:40: found type "FLOAT_5" defined at line 32
+bc1110a.adb:55:40: expected type "FIXED_TYPE" defined at line 52
+bc1110a.adb:55:40: found type "FIXED_01" defined at line 33
+bc1110a.adb:61:38: expected type "ENUM_TYPE" defined at line 60
+bc1110a.adb:61:38: found type "ENUM_COLOR" defined at line 34
+bc1110a.adb:62:41: expected type "Standard.Character"
+bc1110a.adb:62:41: found type universal integer
+bc1110a.adb:62:44: expected type "Standard.Character"
+bc1110a.adb:62:44: found type universal integer
+bc1110a.adb:62:47: expected type "Standard.Character"
+bc1110a.adb:62:47: found type universal integer
+bc1110a.adb:63:42: expected type "REC_OF_BOOL" defined at line 36
+bc1110a.adb:63:42: found type "Standard.Boolean"
+bc1110a.adb:70:40: expected type "ARRAY_TYPE" defined at line 67
+bc1110a.adb:70:40: found type "ARRAY_OF_INT" defined at line 35
+bc1110a.adb:72:31: expected type "EARLY_LETTER" defined at line 40
+bc1110a.adb:72:31: found type "Standard.Character"
+bc1110a.adb:73:36: expected type "Standard.Boolean"
+bc1110a.adb:73:36: found type universal integer
+bc1110a.adb:75:35: expected type "Standard.Integer"
+bc1110a.adb:75:35: found a character type
+bc1110a.adb:75:45: expected type "Standard.Integer"
+bc1110a.adb:75:45: found a character type
+gnatmake: "bc1110a.adb" compilation error

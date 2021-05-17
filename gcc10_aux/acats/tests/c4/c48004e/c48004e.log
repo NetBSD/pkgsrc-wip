@@ -1,0 +1,5 @@
+
+,.,. C48004E ACATS 4.1 21-05-16 10:42:13
+---- C48004E CHECK THAT THE FORM 'NEW T' IS PERMITTED IF T IS A
+                CONSTRAINED ARRAY TYPE.
+==== C48004E PASSED ============================.

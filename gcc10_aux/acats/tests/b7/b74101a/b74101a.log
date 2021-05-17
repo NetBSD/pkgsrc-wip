@@ -1,0 +1,40 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74101a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74101a.adb
+b74101a.adb:108:16: completion of nonlimited type cannot be limited
+b74101a.adb:109:16: completion of nonlimited type cannot be limited
+b74101a.adb:112:16: completion of nonlimited type cannot be limited
+b74101a.adb:112:16: component "C" of type "P8" has limited type
+b74101a.adb:113:16: completion of nonlimited type cannot be limited
+b74101a.adb:113:16: component type "R2" of type "P8A" is limited
+b74101a.adb:113:16: component "C" of type "R2" has limited type
+b74101a.adb:114:16: completion of nonlimited type cannot be limited
+b74101a.adb:114:16: component type "TSK" of type "P9" is limited
+b74101a.adb:117:16: completion of nonlimited type cannot be limited
+b74101a.adb:122:16: completion of nonlimited type cannot be limited
+b74101a.adb:122:16: component "C" of type "P15" has limited type
+b74101a.adb:124:16: completion of nonlimited type cannot be limited
+b74101a.adb:124:16: component "C" of type "P16" has limited type
+b74101a.adb:126:16: completion of nonlimited type cannot be limited
+b74101a.adb:126:16: component "C" of type "P17" has limited type
+b74101a.adb:132:16: completion of nonlimited type cannot be limited
+b74101a.adb:132:16: component "C" of type "P20" has limited type
+b74101a.adb:132:16: component "C" of type "R2" has limited type
+b74101a.adb:134:16: completion of nonlimited type cannot be limited
+b74101a.adb:134:16: component "C" of type "P21" has limited type
+b74101a.adb:134:16: component type "TSK" of type "A2" is limited
+b74101a.adb:136:16: completion of nonlimited type cannot be limited
+b74101a.adb:136:16: component "C" of type "P22" has limited type
+b74101a.adb:136:16: component type "L2" of type "ARL2" is limited
+b74101a.adb:141:16: completion of nonlimited type cannot be limited
+b74101a.adb:141:16: component type "LP" of type "P25" is limited
+b74101a.adb:142:16: completion of nonlimited type cannot be limited
+b74101a.adb:142:16: component type "L2" of type "P26" is limited
+b74101a.adb:143:16: completion of nonlimited type cannot be limited
+b74101a.adb:143:16: component type "TSK" of type "P27" is limited
+b74101a.adb:146:16: completion of nonlimited type cannot be limited
+b74101a.adb:146:16: component type "R2" of type "P30" is limited
+b74101a.adb:146:16: component "C" of type "R2" has limited type
+b74101a.adb:147:16: completion of nonlimited type cannot be limited
+b74101a.adb:147:16: component type "A2" of type "P31" is limited
+b74101a.adb:147:16: component type "TSK" of type "A2" is limited
+gnatmake: "b74101a.adb" compilation error

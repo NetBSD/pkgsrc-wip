@@ -1,0 +1,5 @@
+b85001a.ada:35:26: name expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85001a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85001a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85001a.ada into:
+   b85001a.adb

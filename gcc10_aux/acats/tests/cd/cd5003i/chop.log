@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cd/cd5003i.ada into:
+   cd5003i_pack3.ads
+   cd5003i_pack3.adb
+   cd5003i_pack3-proc2.adb
+   cd5003i.adb

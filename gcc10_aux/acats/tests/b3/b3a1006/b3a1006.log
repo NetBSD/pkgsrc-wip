@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a1006.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a1006.adb
+b3a1006.adb:80:05: type "Untagged_Inc_1" is frozen at line 82 before its full declaration
+b3a1006.adb:90:05: type "Untagged_Inc_2" is frozen at line 92 before its full declaration
+b3a1006.adb:92:14: invalid use of untagged incomplete type "Untagged_Inc_2"
+b3a1006.adb:100:05: type "Tagged_Inc_3" is frozen at line 102 before its full declaration
+b3a1006.adb:110:05: type "Untagged_Inc_4" is frozen at line 118 before its full declaration
+b3a1006.adb:129:05: type "Tagged_Inc_5" is frozen at line 137 before its full declaration
+b3a1006.adb:148:05: type "Untagged_Inc_6" is frozen at line 154 before its full declaration
+b3a1006.adb:164:05: type "Tagged_Inc_7" is frozen at line 170 before its full declaration
+b3a1006.adb:180:05: type "Tagged_Inc_8" is frozen at line 182 before its full declaration
+gnatmake: "b3a1006.adb" compilation error

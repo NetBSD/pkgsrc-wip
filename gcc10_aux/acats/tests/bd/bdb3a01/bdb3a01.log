@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdb3a01.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdb3a01.adb
+bdb3a01.adb:66:45: default storage pool must be a variable
+bdb3a01.adb:68:33: expected type "System.Storage_Pools.Root_Storage_Pool'CLASS"
+bdb3a01.adb:68:33: found type "Non_Pool_Type" defined at line 60
+bdb3a01.adb:71:36: default storage pool must be a variable
+bdb3a01.adb:91:48: default storage pool must be a variable
+bdb3a01.adb:94:36: expected type "System.Storage_Pools.Root_Storage_Pool'CLASS"
+bdb3a01.adb:94:36: found type "Non_Pool_Type" defined at line 60
+gnatmake: "bdb3a01.adb" compilation error

@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95070a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95070a.adb
+b95070a.adb:84:21: left hand side of assignment must be a variable
+b95070a.adb:85:28: actual for "I" must be a variable
+b95070a.adb:86:28: actual for "I" must be a variable
+b95070a.adb:88:21: assignment to "IN" mode parameter not allowed
+b95070a.adb:89:28: actual for "T" must be a variable
+b95070a.adb:90:28: actual for "T" must be a variable
+b95070a.adb:92:21: assignment to "IN" mode parameter not allowed
+b95070a.adb:93:28: actual for "I" must be a variable
+b95070a.adb:94:28: actual for "I" must be a variable
+b95070a.adb:96:21: assignment to "IN" mode parameter not allowed
+b95070a.adb:98:28: actual for "R" must be a variable
+b95070a.adb:99:28: actual for "R" must be a variable
+b95070a.adb:101:21: assignment to "IN" mode parameter not allowed
+b95070a.adb:102:29: actual for "I" must be a variable
+b95070a.adb:103:29: actual for "I" must be a variable
+b95070a.adb:105:21: assignment to "IN" mode parameter not allowed
+b95070a.adb:106:28: actual for "P" must be a variable
+b95070a.adb:107:28: actual for "P" must be a variable
+gnatmake: "b95070a.adb" compilation error

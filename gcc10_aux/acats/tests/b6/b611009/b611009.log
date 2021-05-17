@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611009.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611009.adb
+b611009.adb:54:25: attribute "Result" can only appear in postcondition of function
+b611009.adb:57:24: incorrect prefix for attribute "Result", expected "Foobar"
+b611009.adb:67:30: incorrect prefix for attribute "Result", expected "Blah"
+b611009.adb:76:14: attribute "Result" can only appear in postcondition of function
+b611009.adb:81:26: attribute "Result" can only appear in postcondition of function
+gnatmake: "b611009.adb" compilation error

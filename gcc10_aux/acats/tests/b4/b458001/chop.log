@@ -1,0 +1,20 @@
+b458001.a:123:17: quantified expression must be parenthesized
+b458001.a:127:12: quantified expression must be parenthesized
+b458001.a:133:08: quantified expression must be parenthesized
+b458001.a:141:17: quantified expression must be parenthesized
+b458001.a:148:18: quantified expression must be parenthesized
+b458001.a:154:17: quantified expression must be parenthesized
+b458001.a:163:19: quantified expression must be parenthesized
+b458001.a:167:13: quantified expression must be parenthesized
+b458001.a:173:17: identifier expected
+b458001.a:179:47: missing ")"
+b458001.a:185:24: identifier expected
+b458001.a:195:22: quantified expression must be parenthesized
+b458001.a:204:20: quantified expression must be parenthesized
+b458001.a:208:16: quantified expression must be parenthesized
+b458001.a:218:17: quantified expression must be parenthesized
+b458001.a:222:19: quantified expression must be parenthesized
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b458001.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b458001.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b458001.a into:
+   b458001.adb

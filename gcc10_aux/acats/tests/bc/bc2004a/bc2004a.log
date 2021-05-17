@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2004a.adb
+bc2004a.adb:37:06: missing specification for package body
+bc2004a.adb:54:06: missing body for "REAL_PLUS_MINUS"
+gnatmake: "bc2004a.adb" compilation error

@@ -1,0 +1,16 @@
+
+-----------------------------------------------------------------------
+
+WITH REPORT; USE REPORT; 
+WITH CA5006A0; USE CA5006A0;
+WITH CA5006A1; 
+WITH CA5006A2; 
+
+PROCEDURE CA5006A IS
+BEGIN
+   IF NOT P_E_RAISED THEN
+      FAILED ( "PROGRAM_ERROR NEVER RAISED" );
+   END IF;
+
+   RESULT;
+END CA5006A;

@@ -1,0 +1,20 @@
+
+
+SEPARATE (CA1108B_PKG)
+PROCEDURE SUB (X, Y : IN OUT INTEGER) IS
+     PROCEDURE SUB2 (A, B : IN OUT INTEGER) IS SEPARATE;
+BEGIN
+
+     SUB2 (Y, X);
+     IF Y /= 1 THEN
+          FAILED ("FIRST_PKG FUNCTION NOT VISIBLE IN SUBUNIT " &
+                  "OF SUBUNIT");
+     END IF;
+     IF X /= 3 THEN
+          FAILED ("LATER_PKG FUNCTION NOT VISIBLE IN SUBUNIT " &
+                  "OF SUBUNIT");
+     END IF;
+     X := FIRST_PKG.F;
+     Y := LATER_PKG.F;
+
+END SUB;

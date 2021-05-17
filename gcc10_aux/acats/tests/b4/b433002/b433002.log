@@ -1,0 +1,217 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b433002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b433002.adb
+b433002.adb:102:18: missing index value in array aggregate
+b433002.adb:102:18:   3
+b433002.adb:102:18: missing index values in array aggregate
+b433002.adb:102:18:   5 .. 7
+b433002.adb:102:18: missing index values in array aggregate
+b433002.adb:102:18:   9 .. 15
+b433002.adb:104:18: missing index values in array aggregate
+b433002.adb:104:18:   5 .. 7
+b433002.adb:104:18: missing index values in array aggregate
+b433002.adb:104:18:   10 .. 15
+b433002.adb:113:18: missing index value in array aggregate
+b433002.adb:113:18:   2
+b433002.adb:113:18: missing index value in array aggregate
+b433002.adb:113:18:   8
+b433002.adb:114:22: missing index value in array aggregate
+b433002.adb:114:22:   4
+b433002.adb:114:26: missing index value in array aggregate
+b433002.adb:114:26:   6
+b433002.adb:121:18: missing index value in array aggregate
+b433002.adb:121:18:   "Orange"
+b433002.adb:124:18: missing index value in array aggregate
+b433002.adb:124:18:   "Red"
+b433002.adb:124:18: missing index value in array aggregate
+b433002.adb:124:18:   "Yellow"
+b433002.adb:124:18: missing index value in array aggregate
+b433002.adb:124:18:   "Blue"
+b433002.adb:127:18: missing index values in array aggregate
+b433002.adb:127:18:   "Red" .. "Violet"
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   4 .. 5
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   7 .. 8
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   10 .. 11
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   13 .. 14
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   16 .. 17
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   19 .. 20
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   22 .. 23
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   25 .. 26
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   28 .. 29
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   31 .. 32
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   34 .. 35
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   37 .. 38
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   40 .. 41
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   43 .. 44
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   46 .. 47
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   49 .. 50
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   52 .. 53
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   55 .. 56
+b433002.adb:131:18: missing index values in array aggregate
+b433002.adb:131:18:   58 .. 59
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   21
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   23
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   25
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   27
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   29
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   31
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   33
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   35
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   37
+b433002.adb:133:34: missing index value in array aggregate
+b433002.adb:133:34:   39
+b433002.adb:135:27: missing index value in array aggregate
+b433002.adb:135:27:   23
+b433002.adb:135:27: missing index value in array aggregate
+b433002.adb:135:27:   29
+b433002.adb:135:27: missing index value in array aggregate
+b433002.adb:135:27:   31
+b433002.adb:135:27: missing index value in array aggregate
+b433002.adb:135:27:   35
+b433002.adb:135:27: missing index value in array aggregate
+b433002.adb:135:27:   37
+b433002.adb:135:41: missing index value in array aggregate
+b433002.adb:135:41:   41
+b433002.adb:135:41: missing index values in array aggregate
+b433002.adb:135:41:   43 .. 44
+b433002.adb:135:41: missing index values in array aggregate
+b433002.adb:135:41:   46 .. 47
+b433002.adb:135:41: missing index values in array aggregate
+b433002.adb:135:41:   52 .. 53
+b433002.adb:135:41: missing index values in array aggregate
+b433002.adb:135:41:   55 .. 56
+b433002.adb:135:41: missing index values in array aggregate
+b433002.adb:135:41:   58 .. 59
+b433002.adb:135:60: missing index value in array aggregate
+b433002.adb:135:60:   49
+b433002.adb:154:12: missing index value in array aggregate
+b433002.adb:154:12:   "Orange"
+b433002.adb:154:12: missing index value in array aggregate
+b433002.adb:154:12:   "Green"
+b433002.adb:155:20: missing index values in array aggregate
+b433002.adb:155:20:   "Indigo" .. "Violet"
+b433002.adb:158:12: missing index value in array aggregate
+b433002.adb:158:12:   "Orange"
+b433002.adb:161:18: missing index values in array aggregate
+b433002.adb:161:18:   5 .. 7
+b433002.adb:161:18: missing index values in array aggregate
+b433002.adb:161:18:   10 .. 15
+b433002.adb:164:26: missing index values in array aggregate
+b433002.adb:164:26:   5 .. 7
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   3
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   5
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   7
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   9
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   11
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   13
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   15
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   17
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   19
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   21
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   23
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   25
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   27
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   29
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   31
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   33
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   35
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   37
+b433002.adb:167:18: missing index value in array aggregate
+b433002.adb:167:18:   39
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   21
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   23
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   25
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   27
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   29
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   31
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   33
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   35
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   37
+b433002.adb:169:18: missing index value in array aggregate
+b433002.adb:169:18:   39
+b433002.adb:172:16: missing index value in array aggregate
+b433002.adb:172:16:   23
+b433002.adb:172:16: missing index value in array aggregate
+b433002.adb:172:16:   29
+b433002.adb:172:16: missing index value in array aggregate
+b433002.adb:172:16:   31
+b433002.adb:172:16: missing index value in array aggregate
+b433002.adb:172:16:   35
+b433002.adb:172:16: missing index value in array aggregate
+b433002.adb:172:16:   37
+b433002.adb:172:30: missing index value in array aggregate
+b433002.adb:172:30:   41
+b433002.adb:172:30: missing index values in array aggregate
+b433002.adb:172:30:   43 .. 44
+b433002.adb:172:30: missing index values in array aggregate
+b433002.adb:172:30:   46 .. 47
+b433002.adb:172:30: missing index values in array aggregate
+b433002.adb:172:30:   52 .. 53
+b433002.adb:172:30: missing index values in array aggregate
+b433002.adb:172:30:   55 .. 56
+b433002.adb:172:30: missing index values in array aggregate
+b433002.adb:172:30:   58 .. 59
+b433002.adb:172:49: missing index value in array aggregate
+b433002.adb:172:49:   49
+b433002.adb:175:20: missing index value in array aggregate
+b433002.adb:175:20:   "Blue"
+b433002.adb:176:18: missing index value in array aggregate
+b433002.adb:176:18:   "Orange"
+b433002.adb:176:18: missing index value in array aggregate
+b433002.adb:176:18:   "Green"
+b433002.adb:177:18: missing index values in array aggregate
+b433002.adb:177:18:   "Indigo" .. "Violet"
+gnatmake: "b433002.adb" compilation error

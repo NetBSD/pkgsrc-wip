@@ -1,0 +1,13 @@
+
+
+SEPARATE (CA1006A)
+PACKAGE BODY PKG IS
+
+     PROCEDURE P (I : IN OUT INTEGER) IS
+     BEGIN
+          I := I + 3;
+     END P;
+
+BEGIN
+     I := I + 10;
+END PKG;

@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cc/cc60001.a into:
+   cc60001_1.ads
+   cc60001_1.adb
+   cc60001_2.ads
+   cc60001_2.adb
+   cc60001.adb

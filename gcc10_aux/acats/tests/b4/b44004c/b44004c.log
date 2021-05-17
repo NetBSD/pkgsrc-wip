@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44004c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44004c.adb
+b44004c.adb:34:39: accuracy definition not allowed in membership test
+b44004c.adb:38:21: accuracy definition not allowed in membership test
+b44004c.adb:40:30: accuracy definition not allowed in membership test
+b44004c.adb:42:28: accuracy definition not allowed in membership test
+b44004c.adb:43:35: accuracy definition not allowed in membership test
+gnatmake: "b44004c.adb" compilation error

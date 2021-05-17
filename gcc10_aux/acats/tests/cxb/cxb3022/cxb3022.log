@@ -1,0 +1,7 @@
+
+,.,. CXB3022 ACATS 4.1 21-05-16 10:58:19
+---- CXB3022 Check that Program_Error is raised by the conversion from a
+                derived unchecked union type to an unconstrained
+                non-unchecked-union type if the operand of the
+                conversion lacks inferable discriminants.
+==== CXB3022 PASSED ============================.

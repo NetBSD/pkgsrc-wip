@@ -1,0 +1,45 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FIXED_POINT
+RV SPARK_05
+
+U fxf2a00%b		fxf2a00.adb		94dc99a4 DE NE OO PK IU
+
+U fxf2a00%s		fxf2a00.ads		5c130d83 BN DE EE NE OO PK IU
+
+D fxf2a00.ads		20210516102806 5c130d83 fxf2a00%s
+D fxf2a00.adb		20210516102806 c8cf9427 fxf2a00%b
+D system.ads		20210408115627 a6571217 system%s
+G a e
+X 1 fxf2a00.ads
+45K9*FXF2A00 70l5 70e12 2|6b14 26l5 26t12
+47N4*Loop_Count 51r34
+48N4*Optr_Count 52r27
+49N4*Opnd_Count 53r27
+51I9*Loop_Range<short_integer> 2|17r20
+52M9*Optr_Range 63r37 2|13r20
+53M9*Opnd_Range 64r37 2|14r20
+58D12 Decimal_Fixed 61r26 61r48 64r52 66r40 68r62 2|8r40 10r62 12r20
+60P12 Operator_Ptr(58D12) 61>19 61>22 63r52
+61*19 L{58D12}
+61*22 R{58D12}
+63A12 Operator_Table(60P12)<52M9> 67r40 2|9r40
+64A12 Operand_Table(58D12)<53M9> 68r40 2|10r40
+66v13*Operations_Loop 66>30 67>30 68>30 2|8b13 24l8 24t23
+66*30 Initial{58D12} 2|8b30 12r37
+67*30 Operator{63A12} 2|9b30 18r24
+68*30 Operand{64A12} 2|10b30 18r54
+X 2 fxf2a00.adb
+12*7 Result{1|58D12} 18m10 18r46 23r14
+13m7 Optr_Index{1|52M9} 18r33 19m10 19r24
+14m7 Opnd_Index{1|53M9} 18r62 20m10 20r24
+17i11 Count{1|51I9}
+

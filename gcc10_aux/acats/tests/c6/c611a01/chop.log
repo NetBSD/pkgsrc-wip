@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c6/c611a01.a into:
+   c611a010.ads
+   c611a010.adb
+   c611a010-child.ads
+   c611a010-child.adb
+   c611a01.adb

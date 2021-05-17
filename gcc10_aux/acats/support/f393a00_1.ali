@@ -1,0 +1,70 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f393a00_1%b		f393a00_1.adb		08a8a91e DE OO PK IU
+W f393a00_0%s		f393a00_0.adb		f393a00_0.ali
+
+U f393a00_1%s		f393a00_1.ads		cbdf10a8 DE EE OO PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f393a00_0.ads		20210516102805 bd6301f0 f393a00_0%s
+D f393a00_1.ads		20210516102805 cbdf10a8 f393a00_1%s
+D f393a00_1.adb		20210516102805 7e14b846 f393a00_1%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [initialize f393a00_1 6 14 none]
+G c Z s b [initialized f393a00_1 7 14 none]
+G c Z s s [objectDA f393a00_1 11 9 none]
+G c Z s s [objectDF f393a00_1 11 9 none]
+G c Z s s [objectIP f393a00_1 11 9 none]
+G r c none [initialize f393a00_1 6 14 none] [tc_touch f393a00_0 46 14 none]
+G r c none [initialized f393a00_1 7 14 none] [tc_touch f393a00_0 46 14 none]
+X 6 f393a00_0.ads
+45K9*F393A00_0 48e14 8|2w6 7r6 12r6
+46U14*TC_Touch 8|7s16 12s16
+X 7 f393a00_1.ads
+4K9*F393A00_1 11E9 14l5 14e14 8|3b14 15l5 15t14
+5H9*Object 6p14 6r44 7r38 8p14 8r32 9p14 9r28 11c9 13e14 8|4r44 10r38
+6U14*Initialize 6=26 8|4b14 8l8 8t18
+6r26 An_Object{5R9} 8|4b26 6m6
+7V14*Initialized{boolean} 7>27 8|10b14 14l8 14t19
+7c27 An_Object<5R9> 8|10b27 13r13
+8x14*Swap 8=20 8=22
+8r20 A{5R9}
+8r22 B{5R9}
+9y14*Create{5R9}
+12b6*Initialized{boolean} 8|6m16 13r23
+

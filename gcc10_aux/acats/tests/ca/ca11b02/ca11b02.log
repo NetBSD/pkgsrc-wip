@@ -1,0 +1,5 @@
+
+,.,. CA11B02 ACATS 4.1 21-05-16 10:48:53
+---- CA11B02 Check that a type derived in client of a public child
+                inherits primitive operations from parent.
+==== CA11B02 PASSED ============================.

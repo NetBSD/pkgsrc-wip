@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba3001f0m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba3001f0m.adb
+ba3001f0m-ba3001f1.adb:27:06: file "uncompiled.ads" not found
+ba3001f0m-ba3001f1.adb:27:06: "BA3001F0M (body)" depends on "BA3001F0M.BA3001F1 (body)"
+ba3001f0m-ba3001f1.adb:27:06: "BA3001F0M.BA3001F1 (body)" depends on "UNCOMPILED (spec)"
+gnatmake: "ba3001f0m.adb" compilation error

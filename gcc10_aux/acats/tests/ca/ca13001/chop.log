@@ -1,0 +1,11 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca13001.a into:
+   ca13001_0.ads
+   ca13001_1.ads
+   ca13001_1-ca13001_2.ads
+   ca13001_1-ca13001_2-ca13001_3.ads
+   ca13001_1-ca13001_2-ca13001_4.ads
+   ca13001_1-ca13001_2-ca13001_4.adb
+   ca13001_1-ca13001_2-ca13001_4-family_transportation.adb
+   ca13001_1-ca13001_5.ads
+   ca13001_1-ca13001_5.adb
+   ca13001.adb

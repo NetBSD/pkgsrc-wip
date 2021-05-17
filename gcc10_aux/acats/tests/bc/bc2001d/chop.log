@@ -1,0 +1,7 @@
+bc2001d.ada:37:11: subprogram specification expected
+bc2001d.ada:53:11: subprogram specification expected
+bc2001d.ada:73:11: subprogram specification expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc2001d.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc2001d.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc2001d.ada into:
+   bc2001d.adb

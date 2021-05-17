@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b951002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b951002.adb
+b951002.adb:136:41: access-to-variable designates constant
+b951002.adb:138:14: protected function cannot modify protected object
+b951002.adb:139:14: protected function cannot modify protected object
+b951002.adb:141:20: actual for "Item" must be a variable
+b951002.adb:143:24: actual for "My_Stack" must be a variable
+b951002.adb:145:20: prefix of protected procedure or entry call must be variable
+b951002.adb:149:43: actual for "Int_Obj" must be a variable
+b951002.adb:182:41: access-to-variable designates constant
+b951002.adb:184:14: protected function cannot modify protected object
+b951002.adb:185:14: protected function cannot modify protected object
+b951002.adb:187:20: actual for "Item" must be a variable
+b951002.adb:189:24: actual for "My_Stack" must be a variable
+b951002.adb:191:20: prefix of protected procedure or entry call must be variable
+b951002.adb:195:43: actual for "Int_Obj" must be a variable
+gnatmake: "b951002.adb" compilation error

@@ -1,0 +1,5 @@
+b52002e.ada:44:05: statement expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b52002e.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b52002e.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b52002e.ada into:
+   b52002e.adb

@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52004c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52004c.adb
+b52004c.adb:45:12: expected type "Standard.Integer"
+b52004c.adb:45:12: found type "FXD" defined at line 33
+b52004c.adb:46:13: expected type "FXD" defined at line 33
+b52004c.adb:46:13: found type "Standard.Integer"
+b52004c.adb:48:12: expected type "Standard.Character"
+b52004c.adb:48:12: found type "FXD" defined at line 33
+b52004c.adb:49:13: expected type "FXD" defined at line 33
+b52004c.adb:49:13: found type "Standard.Character"
+b52004c.adb:51:12: expected type of V1 declared at line 41
+b52004c.adb:51:12: found type "FXD" defined at line 33
+b52004c.adb:52:13: expected type "FXD" defined at line 33
+b52004c.adb:52:13: found type of V1 declared at line 41
+b52004c.adb:54:13: expected type of VX1 declared at line 36
+b52004c.adb:54:13: found type "FXD" defined at line 33
+b52004c.adb:55:13: expected type "FXD" defined at line 33
+b52004c.adb:55:13: found type of VX1 declared at line 36
+b52004c.adb:57:13: expected type of VX1 declared at line 36
+b52004c.adb:57:13: found type of V1 declared at line 41
+gnatmake: "b52004c.adb" compilation error

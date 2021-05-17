@@ -1,0 +1,14 @@
+
+
+PROCEDURE LA5008D0 IS
+
+     GENERIC
+     PROCEDURE LA5008D0P;
+
+     PROCEDURE LA5008D0P IS SEPARATE;   -- OPTIONAL ERROR: CORRESPONDING
+                                        -- BODY NOT IN SAME COMPILATION
+                                        -- FILE AS ITS DECLARATION.
+
+BEGIN
+     NULL;
+END LA5008D0;

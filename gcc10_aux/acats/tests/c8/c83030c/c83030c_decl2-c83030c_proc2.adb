@@ -1,0 +1,16 @@
+
+SEPARATE (C83030C_DECL2)
+PROCEDURE C83030C_PROC2 (X : T) IS
+     A : T := T'FIRST;
+BEGIN
+     IF SWITCH THEN
+          SWITCH := FALSE;
+          C83030C_PROC2 (X);
+          IF GLOBAL /= IDENT_INT(2) THEN
+               FAILED ("INCORRECT VALUE FOR PROCEDURE CALL - 20");
+          END IF;
+          GLOBAL := IDENT_INT(3);
+     ELSE
+          GLOBAL := IDENT_INT(2);
+     END IF;
+END C83030C_PROC2;

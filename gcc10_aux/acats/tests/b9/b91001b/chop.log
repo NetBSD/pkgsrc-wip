@@ -1,0 +1,7 @@
+b91001b.ada:33:13: discriminant part not allowed for single task
+b91001b.ada:33:18: reserved word "IN" cannot be used as identifier
+b91001b.ada:33:20: missing "END T;"
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001b.ada into:
+   b91001b.adb

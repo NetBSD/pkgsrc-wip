@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3606c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3606c.adb
+be3606c.adb:35:06: no candidate interpretations match the actuals:
+be3606c.adb:35:06: too many arguments in call to "PUT_LINE"
+be3606c.adb:35:20: expected type "Standard.String"
+be3606c.adb:35:20: found a character type
+be3606c.adb:35:20:   ==> in call to "Put_Line" at a-textio.ads:498
+gnatmake: "be3606c.adb" compilation error

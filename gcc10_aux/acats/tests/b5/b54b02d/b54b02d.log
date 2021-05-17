@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b02d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b02d.adb
+b54b02d.adb:63:16: missing case values: -16#8000_0000# .. 0
+b54b02d.adb:63:16: missing case values: 6 .. 16#7FFF_FFFF#
+b54b02d.adb:68:16: missing case values: 6 .. 16#7FFF_FFFF#
+b54b02d.adb:82:16: missing case values: 3 .. 16#7FFF_FFFF#
+b54b02d.adb:87:16: missing case values: -16#8000_0000# .. 0
+b54b02d.adb:87:16: missing case values: 6 .. 16#7FFF_FFFF#
+b54b02d.adb:101:16: missing case values: -16#8000_0000# .. 0
+b54b02d.adb:101:16: missing case values: 3 .. 16#7FFF_FFFF#
+gnatmake: "b54b02d.adb" compilation error

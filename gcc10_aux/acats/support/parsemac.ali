@@ -1,0 +1,84 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U parsemac%b		parsemac.adb		b41f1600 DE NE OO PK IU KU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+
+U parsemac%s		parsemac.ads		a8d7060a DE EE NE OO PK IU KU
+W defs%s		defs.ads		defs.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D defs.ads		20210516102805 c50b07c7 defs%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D parsemac.ads		20210516102805 4c6ec955 parsemac%s
+D parsemac.adb		20210516102805 f871df55 parsemac%b
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D text_io.ads		20210408115627 21b2c898 text_io%s
+G a e
+G c Z s b [look_for_macro parsemac 18 16 none]
+G c Z s b [which_macro parsemac 25 16 none]
+X 6 a-textio.ads
+508U14*Put_Line 12|71s21
+X 8 defs.ads
+67K9*DEFS 94e9 11|4w6 5r5
+80A14*VAL_STRING{string}<integer>
+83a11*MACRO_NAME{string} 12|61r40
+84i11*NAME_LENGTH{integer} 12|62r48
+84i24*VALUE_LENGTH{integer} 12|64r44
+85a11*MACRO_VALUE{80A14} 12|66r44
+88A11*TABLE_TYPE(82R11)<integer>
+90a6*SYMBOL_TABLE{88A11} 12|61r19 62r27 64r23 66r23
+92i6*NUM_MACROS{integer} 12|59r29 70r27
+X 11 parsemac.ads
+7K9*PARSEMAC 30l5 30e13 12|2b14 83l5 83t13
+18U16*LOOK_FOR_MACRO 18>32 19>32 20=32 21<32 22=32 12|13b16 45l10 45t24
+18a32 A_LINE{string} 12|13b32 23r19 31r47 32r24 33r24 38r40
+19i32 A_LENGTH{integer} 12|14b32 22r25 29r19 31r27
+20i32 PTR{integer} 12|15b32 22r20 40m16
+21a32 MACRO{string} 12|16b32 38m16
+22i32 MACRO_LEN{integer} 12|17b32 37m16 38r26 42m16
+25U16*WHICH_MACRO 25>29 26>29 27<29 28=29 12|53b16 79l10 79t21
+25a29 MACRO{string} 12|53b29 60r19 71r52 75r24
+26i29 MACRO_LEN{integer} 12|54b29 60r29 71r62 73r39 75r34
+27a29 TEMP_MACRO{string} 12|55b29 65m21 74m21
+28i29 TEMP_MACRO_LEN{integer} 12|56b29 63m21 65r36 67r29 73m21 74r36
+X 12 parsemac.adb
+19i6 II{integer} 24m21 27m16 29r14 30r21 37r32 38r48
+19i10 J{integer} 30m16 31r22 31r54 32r31 33r31 34m24 34r29 36m16 36r21 37r30
+. 38r54 40r23
+22i15 I{integer} 23r27 24r27 27r22
+59i15 INDEX{integer} 61r33 62r41 64r37 66r37 70r19
+X 26 text_io.ads
+24K9*Text_IO=24:29 11|2w6 3r5
+

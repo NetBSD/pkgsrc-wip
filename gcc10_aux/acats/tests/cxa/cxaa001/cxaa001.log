@@ -1,0 +1,8 @@
+
+,.,. CXAA001 ACATS 4.1 21-05-16 10:54:54
+---- CXAA001 Check that the Line_Length and Page_Length maximums for a
+                Text_IO file of mode Append_File are initially zero
+                (unbounded) after a Create, Open, or Reset, and that
+                these values can be modified using the procedures
+                Set_Line_Length and Set_Page_Length.
+==== CXAA001 PASSED ============================.

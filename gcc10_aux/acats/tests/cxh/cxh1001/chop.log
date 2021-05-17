@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxh/cxh1001.a into:
+   cxh1001_0.ads
+   cxh1001_0.adb
+   cxh1001_0-cxh1001_1.ads
+   cxh1001_0-cxh1001_1.adb
+   cxh1001.adb

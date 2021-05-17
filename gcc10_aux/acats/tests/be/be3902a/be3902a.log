@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3902a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3902a.adb
+be3902a.adb:53:41: expect discrete type in instantiation of "Enum"
+be3902a.adb:53:41: instantiation abandoned
+be3902a.adb:54:42: expect discrete type in instantiation of "Enum"
+be3902a.adb:54:42: instantiation abandoned
+be3902a.adb:55:42: expect discrete type in instantiation of "Enum"
+be3902a.adb:55:42: instantiation abandoned
+gnatmake: "be3902a.adb" compilation error

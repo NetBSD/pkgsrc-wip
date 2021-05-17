@@ -1,0 +1,5 @@
+
+,.,. CE3407B ACATS 4.1 21-05-16 10:53:14
+---- CE3407B CHECK THAT END_OF_PAGE RAISES MODE_ERROR FOR FILES OF MODE 
+                OUT_FILE.
+==== CE3407B PASSED ============================.

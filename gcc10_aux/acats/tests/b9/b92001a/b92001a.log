@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b92001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b92001a.adb
+b92001a.adb:76:06: left hand of assignment must not be limited type
+b92001a.adb:77:06: left hand of assignment must not be limited type
+b92001a.adb:78:06: left hand of assignment must not be limited type
+b92001a.adb:80:19: there is no applicable operator "=" for type "TT1" defined at line 36
+b92001a.adb:84:19: there is no applicable operator "/=" for type "TT1" defined at line 36
+b92001a.adb:88:19: invalid operand types for operator "="
+b92001a.adb:88:19: left operand has type "TT2" defined at line 37
+b92001a.adb:88:19: right operand has type "TT1" defined at line 36
+b92001a.adb:92:20: left hand of assignment must not be limited type
+b92001a.adb:93:20: left hand of assignment must not be limited type
+b92001a.adb:94:27: there is no applicable operator "=" for type "TT1" defined at line 36
+b92001a.adb:98:26: there is no applicable operator "/=" for type "TT1" defined at line 36
+b92001a.adb:102:27: invalid operand types for operator "="
+b92001a.adb:102:27: left operand has type "TT2" defined at line 37
+b92001a.adb:102:27: right operand has type "TT1" defined at line 36
+gnatmake: "b92001a.adb" compilation error

@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004a.adb
+b46004a.adb:66:17: illegal operand for array conversion
+b46004a.adb:68:17: illegal operand for array conversion
+b46004a.adb:70:17: illegal operand for array conversion
+b46004a.adb:72:17: illegal operand for array conversion
+b46004a.adb:74:17: illegal operand for array conversion
+gnatmake: "b46004a.adb" compilation error

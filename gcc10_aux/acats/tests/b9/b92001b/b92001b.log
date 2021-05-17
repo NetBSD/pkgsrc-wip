@@ -1,0 +1,33 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b92001b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b92001b.adb
+b92001b.adb:36:21: initialization of limited object requires aggregate or function call
+b92001b.adb:44:36: initialization not allowed for limited types
+b92001b.adb:49:28: initialization of limited object requires aggregate or function call
+b92001b.adb:54:31: initialization not allowed for limited types
+b92001b.adb:54:39: initialization not allowed for limited types
+b92001b.adb:59:38: initialization not allowed for limited types
+b92001b.adb:59:53: initialization not allowed for limited types
+b92001b.adb:68:38: initialization not allowed for limited types
+b92001b.adb:68:46: initialization not allowed for limited types
+b92001b.adb:79:06: left hand of assignment must not be limited type
+b92001b.adb:80:06: left hand of assignment must not be limited type
+b92001b.adb:80:06: component type "T1" of type "MY_ARRAY1" is limited
+b92001b.adb:81:06: left hand of assignment must not be limited type
+b92001b.adb:81:06: component "ONE" of type "MY_REC1" has limited type
+b92001b.adb:82:06: left hand of assignment must not be limited type
+b92001b.adb:82:06: component type "MY_REC1" of type "MY_ARRAY2" is limited
+b92001b.adb:82:06: component "ONE" of type "MY_REC1" has limited type
+b92001b.adb:83:06: left hand of assignment must not be limited type
+b92001b.adb:83:06: component "NEXT" of type "MY_REC3" has limited type
+b92001b.adb:83:06: component type "T1" of type "MY_ARRAY1" is limited
+b92001b.adb:85:16: there is no applicable operator "=" for type "T1" defined at line 33
+b92001b.adb:88:16: there is no applicable operator "/=" for type "T1" defined at line 33
+b92001b.adb:91:18: there is no applicable operator "=" for type "MY_ARRAY1" defined at line 52
+b92001b.adb:94:18: there is no applicable operator "/=" for type "MY_ARRAY1" defined at line 52
+b92001b.adb:97:18: there is no applicable operator "=" for type "MY_REC1" defined at line 39
+b92001b.adb:100:18: there is no applicable operator "/=" for type "MY_REC1" defined at line 39
+b92001b.adb:103:18: there is no applicable operator "=" for type "MY_ARRAY2" defined at line 57
+b92001b.adb:106:18: there is no applicable operator "/=" for type "MY_ARRAY2" defined at line 57
+b92001b.adb:109:18: there is no applicable operator "=" for type "MY_REC3" defined at line 63
+b92001b.adb:112:18: there is no applicable operator "/=" for type "MY_REC3" defined at line 63
+gnatmake: "b92001b.adb" compilation error

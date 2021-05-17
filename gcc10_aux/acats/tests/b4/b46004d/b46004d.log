@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004d.adb
+b46004d.adb:60:18: incompatible component types for array conversion
+b46004d.adb:62:18: incompatible component types for array conversion
+b46004d.adb:64:18: incompatible component types for array conversion
+b46004d.adb:66:18: incompatible component types for array conversion
+b46004d.adb:68:18: incompatible component types for array conversion
+b46004d.adb:70:18: incompatible component types for array conversion
+gnatmake: "b46004d.adb" compilation error

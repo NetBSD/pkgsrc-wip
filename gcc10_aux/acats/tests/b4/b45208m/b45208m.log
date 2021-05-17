@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208m.adb
+b45208m.adb:91:17: there is no applicable operator ">" for type "TT" defined at line 76
+b45208m.adb:96:20: there is no applicable operator ">=" for type "TT" defined at line 76
+gnatmake: "b45208m.adb" compilation error

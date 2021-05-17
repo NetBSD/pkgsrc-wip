@@ -1,0 +1,5 @@
+b64004d.ada:54:12: extra "," ignored
+/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b64004d.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b64004d.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b6/b64004d.ada into:
+   b64004d.adb

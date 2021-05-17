@@ -1,0 +1,6 @@
+
+,.,. CA11012 ACATS 4.1 21-05-16 10:48:42
+---- CA11012 Check that child instance can use its parent's declarations
+                and operations, including a formal type of the parent.
+   - CA11012 Exception is raised as expected.
+==== CA11012 PASSED ============================.

@@ -1,0 +1,6 @@
+
+,.,. CXAA005 ACATS 4.1 21-05-16 10:54:56
+---- CXAA005 Check that the procedure Put does not increment line
+                numbers when used with unbounded text files of mode
+                Append_File.
+==== CXAA005 PASSED ============================.

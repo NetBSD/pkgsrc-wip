@@ -1,0 +1,83 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U fdd2b00%b		fdd2b00.adb		e9ec2950 DE OO PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+
+U fdd2b00%s		fdd2b00.ads		492eadf5 DE EE OO PF PU PK IU
+W ada%s			ada.ads			ada.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D fdd2b00.ads		20210516102806 58b52246 fdd2b00%s
+D fdd2b00.adb		20210516102806 b1590b16 fdd2b00%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+G a e
+G c Z s b [read fdd2b00 58 14 none]
+G c Z s b [write fdd2b00 64 14 none]
+G c Z s b [element_count fdd2b00 68 13 none]
+G c Z s b [clear fdd2b00 71 14 none]
+G c Z s s [channel_typeDF fdd2b00 74 9 none]
+G c Z s s [channel_typeIP fdd2b00 74 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 6|51r6 55r29 60r20 61r20 66r19 69r14 74r29 75r16 76r16 7|7r20
+. 8r20 9r16 27r19 28r16 40r14
+X 3 a-stream.ads
+36K13*Streams 87e16 6|51w10 55r33 60r24 61r24 66r23 69r18 74r33 75r20 76r20
+. 7|7r24 8r24 9r20 27r23 28r20 40r18
+39H9*Root_Stream_Type 70e64 6|55r41 74r41
+42M9*Stream_Element
+44I9*Stream_Element_Offset<long_long_integer> 6|61r32 7|8r32 9r28 28r28
+51I12*Stream_Element_Count{44I9} 6|69r26 75r28 7|40r26
+54A9*Stream_Element_Array(42M9)<44I9> 6|60r32 66r31 76r28 7|7r32 27r31
+X 6 fdd2b00.ads
+52K9*FDD2B00 53r16 74E9 78l5 78e12 7|3b14 51l5 51t12
+55R9*Channel_Type<3|39R9> 58P14 59r23 64P14 65r23 68p13 68r37 71p14 71r37
+. 74c9 77e14 7|6r23 26r23 39r37 46r37
+58U14*Read<3|57p14> 59=7 60<7 61<7 7|5b14 22l8 22t12
+59r7 Stream{55R9} 7|6b7 11r10 12r31 13r38 13r57 14m10 17r18 18m10 18r26 19m10
+. 19r29 20r14 20r47
+60a7 Item{3|54A9} 7|7b7 11r26 12r18 13m10 13r15 16r18 17m10 17r37 18r41 20r28
+. 20r62
+61i7 Last{3|44I9} 7|8b7 12m10 13r29 16m10
+64U14*Write<3|63p14> 65=7 66>7 7|25b14 36l8 36t13
+65r7 Stream{55R9} 7|26b7 30r10 33m7 33r22 33r42 35m7 35r23
+66a7 Item{3|54A9} 7|27b7 30r25 33r57 34r10 35r38
+68V13*Element_Count{3|51I12} 68>28 7|39b13 43l8 43t21
+68r28 Stream{55R9} 7|39b28 42r14
+71U14*Clear 71=21 7|46b14 49l8 49t13
+71r21 Stream{55R9} 7|46b21 48m7
+75i7 Count{3|51I12} 7|11r17 12r38 13r64 14m17 18m17 18r33 19r36 20r54 30r17
+. 33r29 33r49 35m14 35r30 42r21 48m14
+76a7 Buffer{3|54A9} 7|13r45 17r25 19m17 20r21 33m14
+

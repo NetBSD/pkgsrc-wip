@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24104a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24104a.adb
+b24104a.adb:32:34: negative exponent not allowed for integer literal
+b24104a.adb:33:34: negative exponent not allowed for integer literal
+b24104a.adb:34:42: negative exponent not allowed for integer literal
+b24104a.adb:35:41: negative exponent not allowed for integer literal
+b24104a.adb:36:43: negative exponent not allowed for integer literal
+b24104a.adb:40:43: negative exponent not allowed for integer literal
+b24104a.adb:48:30: negative exponent not allowed for integer literal
+b24104a.adb:49:30: negative exponent not allowed for integer literal
+b24104a.adb:50:36: negative exponent not allowed for integer literal
+b24104a.adb:51:27: negative exponent not allowed for integer literal
+b24104a.adb:58:16: negative exponent not allowed for integer literal
+b24104a.adb:59:16: negative exponent not allowed for integer literal
+b24104a.adb:61:19: negative exponent not allowed for integer literal
+b24104a.adb:62:19: negative exponent not allowed for integer literal
+b24104a.adb:64:24: negative exponent not allowed for integer literal
+b24104a.adb:65:24: negative exponent not allowed for integer literal
+b24104a.adb:69:19: negative exponent not allowed for integer literal
+b24104a.adb:70:39: negative exponent not allowed for integer literal
+b24104a.adb:71:19: negative exponent not allowed for integer literal
+b24104a.adb:72:39: negative exponent not allowed for integer literal
+gnatmake: "b24104a.adb" compilation error

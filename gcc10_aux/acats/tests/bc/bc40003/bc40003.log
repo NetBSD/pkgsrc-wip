@@ -1,0 +1,38 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc40003.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc40003.adb
+bc40003.adb:145:36: actual must exclude null to match generic formal at line 85
+bc40003.adb:146:36: actual must exclude null to match generic formal at line 85
+bc40003.adb:147:36: actual must exclude null to match generic formal at line 85
+bc40003.adb:151:37: actual must exclude null to match generic formal at line 97
+bc40003.adb:157:36: actual must exclude null to match generic formal at line 103
+bc40003.adb:158:37: actual must exclude null to match generic formal at line 109
+bc40003.adb:159:37: actual must exclude null to match generic formal at line 109
+bc40003.adb:160:37: actual must exclude null to match generic formal at line 109
+bc40003.adb:194:36: actual must exclude null to match generic formal at line 131
+bc40003.adb:195:36: actual must exclude null to match generic formal at line 131
+bc40003.adb:196:36: actual must exclude null to match generic formal at line 131
+bc40003.adb:197:36: type of actual does not match type of "GObj6"
+bc40003.adb:198:36: type of actual does not match type of "GObj6"
+bc40003.adb:208:38: actual must exclude null to match generic formal at line 85
+bc40003.adb:214:37: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+bc40003.adb:221:38: actual must exclude null to match generic formal at line 85
+bc40003.adb:225:37: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+bc40003.adb:230:38: actual must exclude null to match generic formal at line 131
+bc40003.adb:236:37: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+bc40003.adb:243:38: actual must exclude null to match generic formal at line 131
+bc40003.adb:247:37: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+bc40003.adb:252:38: actual must exclude null to match generic formal at line 103
+bc40003.adb:262:39: actual must exclude null to match generic formal at line 109
+bc40003.adb:266:37: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+bc40003.adb:286:40: actual must exclude null to match generic formal at line 85
+bc40003.adb:297:41: actual must exclude null to match generic formal at line 109
+bc40003.adb:300:43: actual must exclude null to match generic formal at line 85
+bc40003.adb:304:44: actual must exclude null to match generic formal at line 109
+bc40003.adb:324:40: actual must exclude null to match generic formal at line 131
+bc40003.adb:328:40: type of actual does not match type of "GObj6"
+bc40003.adb:329:40: type of actual does not match type of "GObj6"
+bc40003.adb:332:43: actual must exclude null to match generic formal at line 131
+bc40003.adb:335:43: type of actual does not match type of "GObj6"
+bc40003.adb:336:43: type of actual does not match type of "GObj6"
+bc40003.adb:339:46: actual must exclude null to match generic formal at line 131
+gnatmake: "bc40003.adb" compilation error

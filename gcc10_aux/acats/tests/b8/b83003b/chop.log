@@ -1,0 +1,10 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83003b0.ada into:
+   b83003b0m.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83003b1.ada into:
+   b83003b0m-tsk1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83003b2.ada into:
+   b83003b0m-tsk2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83003b3.ada into:
+   b83003b0m-tsk3.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b83003b4.ada into:
+   b83003b0m-tsk4.adb

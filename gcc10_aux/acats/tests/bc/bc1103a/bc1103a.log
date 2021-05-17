@@ -1,0 +1,32 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1103a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1103a.adb
+bc1103a.adb:104:29: actual for "VT" must be a variable
+bc1103a.adb:106:25: actual for "VT" must be a variable
+bc1103a.adb:108:25: actual for "VT" must be a variable
+bc1103a.adb:110:26: actual for "VT" must be a variable
+bc1103a.adb:114:25: actual for "VT" must be a variable
+bc1103a.adb:116:27: actual for "VT" must be a variable
+bc1103a.adb:122:16: left hand side of assignment must be a variable
+bc1103a.adb:123:20: actual for "P" must be a variable
+bc1103a.adb:124:21: actual for "P" must be a variable
+bc1103a.adb:125:16: left hand side of assignment must be a variable
+bc1103a.adb:126:20: actual for "P" must be a variable
+bc1103a.adb:127:21: actual for "P" must be a variable
+bc1103a.adb:128:21: actual for "P" must be a variable
+bc1103a.adb:129:21: actual for "P" must be a variable
+bc1103a.adb:130:16: left hand side of assignment must be a variable
+bc1103a.adb:131:16: left hand side of assignment must be a variable
+bc1103a.adb:132:16: left hand side of assignment must be a variable
+bc1103a.adb:133:16: left hand side of assignment must be a variable
+bc1103a.adb:134:20: actual for "P" must be a variable
+bc1103a.adb:135:21: actual for "P" must be a variable
+bc1103a.adb:136:16: left hand side of assignment must be a variable
+bc1103a.adb:137:22: actual for "P" must be a variable
+bc1103a.adb:138:23: actual for "P" must be a variable
+bc1103a.adb:139:20: actual for "P" must be a variable
+bc1103a.adb:140:21: actual for "P" must be a variable
+bc1103a.adb:141:16: left hand side of assignment must be a variable
+bc1103a.adb:142:16: left hand side of assignment must be a variable
+bc1103a.adb:146:21: actual for "P" must be a variable
+bc1103a.adb:147:22: actual for "P" must be a variable
+gnatmake: "bc1103a.adb" compilation error

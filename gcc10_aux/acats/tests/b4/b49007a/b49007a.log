@@ -1,0 +1,35 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49007a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49007a.adb
+b49007a.adb:51:49: non-static expression used for integer type bound
+b49007a.adb:51:49: "PARM1" is not static constant or named number (RM 4.9(5))
+b49007a.adb:52:45: non-static expression used for digits value
+b49007a.adb:52:45: "PARM1" is not static constant or named number (RM 4.9(5))
+b49007a.adb:53:44: non-static expression used for delta value
+b49007a.adb:53:44: "PARM2" is not static constant or named number (RM 4.9(5))
+b49007a.adb:56:44: non-static expression used for real type bound
+b49007a.adb:56:44: "PARM2" is not static constant or named number (RM 4.9(5))
+b49007a.adb:59:36: choice given in case statement is not static
+b49007a.adb:59:36: "PARM1" is not static constant or named number (RM 4.9(5))
+b49007a.adb:80:39: non-static expression used for integer type bound
+b49007a.adb:80:39: "TYP_CON" is not a static constant (RM 4.9(5))
+b49007a.adb:81:16: full constant declaration appears too late
+b49007a.adb:85:31: choice given in variant part is not static
+b49007a.adb:85:31: "OBJ1" is not static constant or named number (RM 4.9(5))
+b49007a.adb:91:34: non-static expression used for delta value
+b49007a.adb:91:34: "OBJ2" is not static constant or named number (RM 4.9(5))
+b49007a.adb:92:39: non-static expression used for integer type bound
+b49007a.adb:92:39: "OBJ1" is not static constant or named number (RM 4.9(5))
+b49007a.adb:102:27: choice given in case statement is not static
+b49007a.adb:102:27: static expression must have scalar or string type (RM 4.9(2))
+b49007a.adb:102:37: static expression must have scalar or string type (RM 4.9(2))
+b49007a.adb:112:39: non-static expression used for integer type bound
+b49007a.adb:112:39: "J" is not static constant or named number (RM 4.9(5))
+b49007a.adb:121:39: non-static expression used for integer type bound
+b49007a.adb:121:39: "ITM" is not static constant or named number (RM 4.9(5))
+b49007a.adb:122:35: non-static expression used for delta value
+b49007a.adb:122:35: "FIT" is not static constant or named number (RM 4.9(5))
+b49007a.adb:124:37: non-static expression used for digits value
+b49007a.adb:124:37: "ITM" is not static constant or named number (RM 4.9(5))
+b49007a.adb:127:26: choice given in case statement is not static
+b49007a.adb:127:26: "ITM" is not static constant or named number (RM 4.9(5))
+gnatmake: "b49007a.adb" compilation error

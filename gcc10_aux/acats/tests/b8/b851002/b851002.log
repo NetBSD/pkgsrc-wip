@@ -1,0 +1,19 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b851002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b851002.adb
+b851002.adb:112:07: expect anonymous access type in object renaming
+b851002.adb:112:38: expected an access type with designated type "Standard.Integer"
+b851002.adb:112:38: found type "Standard.Integer"
+b851002.adb:113:07: expect anonymous access type in object renaming
+b851002.adb:116:07: subtype of renamed object does not statically match
+b851002.adb:117:07: subtype of renamed object does not statically match
+b851002.adb:119:07: subtype of renamed object does not statically match
+b851002.adb:120:07: subtype of renamed object does not statically match
+b851002.adb:122:07: subtype of renamed object does not statically match
+b851002.adb:124:07: subtype of renamed object does not statically match
+b851002.adb:128:07: (Ada 2005): the renamed object is not access-to-variable (RM 8.5.1(6))
+b851002.adb:131:07: (Ada 2005): the renamed object is not access-to-constant (RM 8.5.1(6))
+b851002.adb:134:45: ambiguous expression in renaming
+b851002.adb:135:44: ambiguous expression in renaming
+b851002.adb:136:42: ambiguous expression in renaming
+b851002.adb:137:54: ambiguous expression in renaming
+gnatmake: "b851002.adb" compilation error

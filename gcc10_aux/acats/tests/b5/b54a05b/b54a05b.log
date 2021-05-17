@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a05b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a05b.adb
+b54a05b.adb:39:11: expected a discrete type
+b54a05b.adb:39:11: found type "FIXED_INT" defined at line 34
+gnatmake: "b54a05b.adb" compilation error

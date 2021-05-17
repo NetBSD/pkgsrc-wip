@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002l.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002l.adb
+b91002l.adb:39:11: illegal declaration in task definition
+b91002l.adb:39:15: missing "END T2L;"
+b91002l.adb:41:06: no "BEGIN" for this "END"
+b91002l.adb:43:06: declarations must come before "BEGIN"
+b91002l.adb:50:01: "END;" expected for "BEGIN" at line 48
+gnatmake: "b91002l.adb" compilation error

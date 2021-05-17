@@ -1,0 +1,4 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2009d.ada into:
+   ca2009d.adb
+   ca2009d-proc1.adb
+   ca2009d-func1.adb

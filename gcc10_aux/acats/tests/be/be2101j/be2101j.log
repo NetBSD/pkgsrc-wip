@@ -1,0 +1,25 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2101j.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2101j.adb
+be2101j.adb:72:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:72:35: instantiation abandoned
+be2101j.adb:73:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:73:35: instantiation abandoned
+be2101j.adb:74:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:74:35: component type "TSK" of type "ARR" is limited
+be2101j.adb:74:35: instantiation abandoned
+be2101j.adb:75:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:75:35: component "T" of type "REC" has limited type
+be2101j.adb:75:35: instantiation abandoned
+be2101j.adb:76:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:76:35: component "C2" of type "RC" has limited type
+be2101j.adb:76:35: instantiation abandoned
+be2101j.adb:77:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:77:35: component type "TSK" of type "NARR" is limited
+be2101j.adb:77:35: instantiation abandoned
+be2101j.adb:78:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:78:35: component "C3" of type "NRC" has limited type
+be2101j.adb:78:35: component type "TSK" of type "ARR" is limited
+be2101j.adb:78:35: instantiation abandoned
+be2101j.adb:79:35: actual for non-limited "Element_Type" cannot be a limited type
+be2101j.adb:79:35: instantiation abandoned
+gnatmake: "be2101j.adb" compilation error

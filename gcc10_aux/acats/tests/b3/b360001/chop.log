@@ -1,0 +1,5 @@
+b360001.a:141:38: aspect "Default_Component_Value" requires an aspect definition
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b360001.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b360001.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b360001.a into:
+   b360001.adb

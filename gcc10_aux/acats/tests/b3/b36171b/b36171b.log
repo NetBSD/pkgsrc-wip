@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36171b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36171b.adb
+b36171b.adb:44:19: unconstrained element type in array declaration
+b36171b.adb:46:19: unconstrained element type in array declaration
+b36171b.adb:48:39: unconstrained element type in array declaration
+b36171b.adb:49:39: unconstrained element type in array declaration
+gnatmake: "b36171b.adb" compilation error

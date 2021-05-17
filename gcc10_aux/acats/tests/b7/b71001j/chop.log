@@ -1,0 +1,5 @@
+b71001j.ada:33:06: body stub not allowed in package spec
+/home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001j.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001j.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001j.ada into:
+   b71001j.ads

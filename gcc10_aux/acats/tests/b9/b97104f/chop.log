@@ -1,0 +1,5 @@
+b97104f.ada:67:21: reserved word "TERMINATE" cannot be used as identifier
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97104f.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97104f.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97104f.ada into:
+   b97104f.adb

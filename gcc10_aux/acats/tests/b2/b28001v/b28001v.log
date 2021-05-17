@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b28001v.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b28001v.adb
+b28001v.adb:39:15: "WHEN" expected (must have at least one variant)
+gnatmake: "b28001v.adb" compilation error

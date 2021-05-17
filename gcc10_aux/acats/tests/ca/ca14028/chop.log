@@ -1,0 +1,4 @@
+ca14028_func3.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca140281.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca140282.a
+ca14028_proc3.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca140281.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca140282.a
+use -w to overwrite files and keep last version
+no source files written

@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74103i.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74103i.adb
+b74103i.adb:129:32: premature usage of incomplete private type "P1" defined at line 39
+b74103i.adb:130:34: premature usage of incomplete private type "LP2" defined at line 40
+b74103i.adb:131:34: premature usage of incomplete private type "P1" defined at line 39
+b74103i.adb:132:36: premature usage of incomplete private type "LP2" defined at line 40
+b74103i.adb:133:38: premature usage of incomplete type "ARR51" defined at line 64
+b74103i.adb:134:38: premature usage of incomplete type "ARR52" defined at line 65
+b74103i.adb:135:38: premature usage of incomplete type "ARR53" defined at line 66
+b74103i.adb:136:38: premature usage of incomplete type "ARR54" defined at line 67
+b74103i.adb:137:38: premature usage of incomplete type "REC51" defined at line 99
+b74103i.adb:138:39: premature usage of incomplete type "REC52" defined at line 104
+b74103i.adb:139:39: premature usage of incomplete type "REC53" defined at line 109
+b74103i.adb:140:39: premature usage of incomplete type "REC54" defined at line 114
+gnatmake: "b74103i.adb" compilation error

@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85001i.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85001i.adb
+b85001i.adb:36:18: constraint not allowed in object renaming declaration
+gnatmake: "b85001i.adb" compilation error

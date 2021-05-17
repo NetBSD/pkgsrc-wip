@@ -1,0 +1,87 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV SPARK_05
+
+U fd72a00%b		fd72a00.adb		e86b8c5d DE NE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U fd72a00%s		fd72a00.ads		1924798c DE EE NE OO PK IU
+W impdef%s		impdef.adb		impdef.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-timoio.ads		20210408115627 3b5805c0 ada.text_io.modular_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D fd72a00.ads		20210516102806 d2a3a078 fd72a00%s
+D fd72a00.adb		20210516102806 3ac82c25 fd72a00%b
+D impdef.ads		20210516102806 e64493f0 impdef%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [address_to_hex fd72a00 54 14 none]
+G c Z s b [hex_to_address fd72a00 56 14 none]
+X 6 a-textio.ads
+91I12*Number_Base{integer}
+X 7 a-timoio.ads
+90U14*Get 10|21s14[11|444]
+97U14*Put 10|9s14[11|444]
+100i7 Base{6|91I12} 10|10r19[11|444]
+X 9 fd72a00.ads
+42K9*FD72A00 58l5 58e12 10|2b14 26l5 26t12
+45M11*Number{24|105M9} 10|9r22 18r20
+47K11*Num_IO=47:33 10|9r7 21r7
+54V14*Address_To_Hex{string} 54>30 10|4b14 15l9 15t23
+54m30 Adder{15|67M9} 10|4b30 9r66
+56V14*Hex_To_Address{15|67M9} 56^30 10|17b14 24l9 24t23
+56p30 Hex(string) 10|17b30 21r19
+X 10 fd72a00.adb
+5a7 S{string} 7r29 9m19 11r13 14r14 14r25
+7i7 DeBlank{positive} 11r15 12m9 12r20 14r16
+18m7 The_Number{9|45M11} 21m28 23r64
+19i7 Tail{natural} 21m40
+X 11 impdef.ads
+78K9*ImpDef 9|40w6 47r26 11|449e11
+444K13*Address_Value_IO[7|46] 9|47r33
+X 15 system.ads
+37K9*System 9|41r6 43r7 45r21 54r37 56r58 10|4r37 9r30 17r58 22r14 23r23
+. 15|149e11
+67M9*Address 9|54r44 56r65 10|4r44 17r65
+X 24 s-stoele.ads
+42K16*Storage_Elements 9|41w13 45r28 10|9r37 22r21 23r30 24|117e28
+105M9*Integer_Address 9|45r45 10|23r47
+107V13*To_Address{15|67M9} 10|22s38
+112V13*To_Integer{105M9} 10|9s54
+

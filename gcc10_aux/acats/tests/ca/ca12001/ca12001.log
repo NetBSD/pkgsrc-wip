@@ -1,0 +1,6 @@
+
+,.,. CA120012 ACATS 4.1 21-05-16 10:48:57
+---- CA120012 Check that a limited private with clause for a private
+                 child of a package P can be given on the declaration of
+                 P.
+==== CA120012 PASSED ============================.

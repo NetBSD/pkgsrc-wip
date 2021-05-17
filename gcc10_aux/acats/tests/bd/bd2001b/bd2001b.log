@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2001b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2001b.adb
+bd2001b.adb:34:10: entity must be declared in this scope
+bd2001b.adb:38:10: cannot specify attribute for subtype
+bd2001b.adb:41:10: entity must be declared in this scope
+bd2001b.adb:45:10: cannot specify attribute for subtype
+bd2001b.adb:49:06: attribute "FIRST" cannot be set with definition clause
+bd2001b.adb:53:06: attribute "FIRST" cannot be set with definition clause
+bd2001b.adb:57:06: attribute "FIRST" cannot be set with definition clause
+gnatmake: "bd2001b.adb" compilation error

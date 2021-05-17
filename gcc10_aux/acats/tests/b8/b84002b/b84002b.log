@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84002b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84002b.adb
+b84002b.adb:54:31: "P" is not visible
+b84002b.adb:54:31: multiple use clauses cause hiding
+b84002b.adb:54:31: hidden declaration at line 37
+b84002b.adb:54:31: hidden declaration at line 36
+gnatmake: "b84002b.adb" compilation error

@@ -1,0 +1,5 @@
+
+,.,. CB40A01 ACATS 4.1 21-05-16 10:49:26
+---- CB40A01 Check that a user defined exception is correctly propagated
+                out of a public child package.
+==== CB40A01 PASSED ============================.

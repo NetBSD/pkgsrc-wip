@@ -1,0 +1,32 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49009c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49009c.adb
+b49009c.adb:46:36: non-static expression used for integer type bound
+b49009c.adb:46:41: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:48:31: non-static expression used for delta value
+b49009c.adb:48:36: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:55:31: dynamic or empty choice in aggregate must be the only choice
+b49009c.adb:60:31: non-static expression used for delta value
+b49009c.adb:60:36: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:63:36: non-static expression used for integer type bound
+b49009c.adb:63:41: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:66:31: non-static expression used in number declaration
+b49009c.adb:66:36: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:69:32: non-static expression used for digits value
+b49009c.adb:69:37: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:73:29: non-static expression used for integer type bound
+b49009c.adb:73:34: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:76:36: non-static expression used for integer type bound
+b49009c.adb:76:41: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:83:32: non-static expression used for digits value
+b49009c.adb:83:37: size attribute is only static for static scalar type (RM 4.9(7,8))
+b49009c.adb:85:31: non-static expression used for delta value
+b49009c.adb:85:36: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:90:32: non-static expression used for digits value
+b49009c.adb:90:38: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:93:22: choice given in case statement is not static
+b49009c.adb:93:28: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:100:22: choice given in case statement is not static
+b49009c.adb:100:27: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+b49009c.adb:107:22: choice given in case statement is not static
+b49009c.adb:107:27: prefix type for attribute is not static scalar subtype (RM 4.9(7))
+gnatmake: "b49009c.adb" compilation error

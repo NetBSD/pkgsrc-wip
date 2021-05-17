@@ -1,0 +1,26 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdd2007.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdd2007.adb
+bdd2007.adb:131:30: expected an integer type
+bdd2007.adb:131:30: found type "Standard.Boolean"
+bdd2007.adb:134:30: expected an integer type
+bdd2007.adb:134:30: found type universal real
+bdd2007.adb:140:30: static integer expression required here
+bdd2007.adb:140:30: "IVar" is not static constant or named number (RM 4.9(5))
+bdd2007.adb:143:15: stream size for elementary type must be a power of 2 and at least 8
+bdd2007.adb:146:15: stream size for elementary type must be a power of 2 and at least 8
+bdd2007.adb:149:15: stream size for elementary type must be a power of 2 and at least 8
+bdd2007.adb:152:15: stream size for elementary type must be a power of 2 and at least 8
+bdd2007.adb:155:15: stream size for elementary type must be a power of 2 and at least 15
+bdd2007.adb:159:23: Stream_Size cannot be given for "TST12"
+bdd2007.adb:168:15: cannot specify attribute for subtype
+bdd2007.adb:171:15: aspect specification causes premature freezing of "Tst15"
+bdd2007.adb:175:15: visibility of aspect for "Tst16" changes after freeze point
+bdd2007.adb:176:21: object "Sub_Tst16" cannot be used before end of its declaration
+bdd2007.adb:176:21: Meaning of "Sub_Tst16" differs because of declaration at line 177
+bdd2007.adb:181:30: "Hidden_Size" is undefined
+bdd2007.adb:184:15: visibility of aspect for "Tst18" changes after freeze point
+bdd2007.adb:184:30: "Sml_Size" is undefined
+bdd2007.adb:184:30: Meaning of "Sml_Size" differs because of declaration at line 199
+bdd2007.adb:188:10: visibility of aspect for "Tst19" changes after freeze point
+bdd2007.adb:188:25: Meaning of "Outer_Stream_Size" differs because of declaration at line 205
+gnatmake: "bdd2007.adb" compilation error

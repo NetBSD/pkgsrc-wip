@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4011.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4011.adb
+bxh4011.adb:82:51: violation of restriction "NO_DISPATCH" at bxh4011.ads:56
+bxh4011.adb:85:26: violation of restriction "NO_DISPATCH" at bxh4011.ads:56
+bxh4011.adb:88:35: violation of restriction "NO_DISPATCH" at bxh4011.ads:56
+bxh4011.adb:93:23: violation of restriction "NO_DISPATCH" at bxh4011.ads:56
+gnatmake: "bxh4011.adb" compilation error

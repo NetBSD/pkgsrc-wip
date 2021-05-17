@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97102h.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97102h.adb
+b97102h.adb:59:25: missing "END SELECT;" for "SELECT" at line 54
+b97102h.adb:59:26: select alternative ("ACCEPT", "ABORT", "DELAY") expected
+b97102h.adb:60:16: "OR" not allowed here
+b97102h.adb:61:21: "WHEN" not allowed here
+b97102h.adb:63:16: no "SELECT" for this "END SELECT"
+gnatmake: "b97102h.adb" compilation error

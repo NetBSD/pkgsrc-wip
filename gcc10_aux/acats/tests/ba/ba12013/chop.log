@@ -1,0 +1,31 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120130.a into:
+   ba12013_0.ads
+   ba12013_0-ba12013_1.ads
+   ba12013_0-ba12013_2.ads
+   ba12013_0-ba12013_1-ba12013_3.ads
+   ba12013_0-ba12013_1-ba12013_3.adb
+   ba12013_0-ba12013_1-ba12013_6.ads
+   ba12013_0-ba12013_2-ba12013_4.ads
+   ba12013_0-ba12013_2-ba12013_7.ads
+   ba12013_0-ba12013_2-ba12013_4-ba12013_5.ads
+   ba12013_0-ba12013_2-ba12013_4-ba12013_5.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120131.a into:
+   ba12013_t1.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120132.a into:
+   ba12013_t2.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120133.a into:
+   ba12013_t3.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120134.a into:
+   ba12013_0-t4.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120135.a into:
+   ba12013_0-t5.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120136.a into:
+   ba12013_0-t6.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120137.a into:
+   ba12013_0-ba12013_1-t7.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120138.a into:
+   ba12013_0-ba12013_1-t8.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120139.a into:
+   ba12013_0-ba12013_2-t9.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba12013a.a into:
+   ba12013_0-ba12013_2-ta.adb

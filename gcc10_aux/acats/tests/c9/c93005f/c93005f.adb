@@ -1,0 +1,54 @@
+
+WITH REPORT, C93005F_PK1;
+USE  REPORT, C93005F_PK1;
+WITH SYSTEM; USE SYSTEM;
+PROCEDURE C93005F IS
+
+
+BEGIN
+
+     TEST("C93005F", "TEST EXCEPTIONS TERMINATE NOT YET ACTIVATED " &
+                     "TASKS");
+
+     COMMENT("SUBTEST 4: TASK IN STATEMENT PART OF BLOCK");
+     COMMENT("  THE TASKS DEPEND ON THE DECLARATIVE PART");
+B41: DECLARE
+          X : MNT;
+     BEGIN
+B42:      DECLARE
+               TYPE LOCAL_ACC IS ACCESS BAD_REC;
+               Y : MNT;
+               PTR : LOCAL_ACC;
+
+               TYPE ACC_MNT IS ACCESS MNT;
+               Z : ACC_MNT;
+
+          BEGIN
+               Z  := NEW MNT;
+               PTR := NEW BAD_REC;
+               IF PTR.I /= REPORT.IDENT_INT(0) THEN
+                  FAILED ("EXCEPTION NOT RAISED, VALUE CHANGED");
+               ELSE
+                  FAILED ("EXCEPTION NOT RAISED, CONSTRAINT IGNORED");
+               END IF;
+          EXCEPTION
+               WHEN CONSTRAINT_ERROR => NULL;
+               WHEN OTHERS =>
+                    FAILED ("WRONG EXCEPTION IN B42");
+          END B42;
+
+          COMMENT("SUBTEST 4: COMPLETED");
+     EXCEPTION
+          WHEN OTHERS =>
+               FAILED ("EXCEPTION NOT ABSORBED");
+     END B41;
+
+     CHECK;
+
+     RESULT;
+
+EXCEPTION
+     WHEN OTHERS =>
+          FAILED ("EXCEPTION NOT ABSORBED");
+          RESULT;
+END C93005F;

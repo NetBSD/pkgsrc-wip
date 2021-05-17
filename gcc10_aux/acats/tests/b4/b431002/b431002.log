@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431002.adb
+b431002.adb:9:40: missing operand
+b431002.adb:17:62: (Ada 2005) box only allowed with named notation
+b431002.adb:25:40: missing operand
+b431002.adb:33:65: "=>" expected (positional association cannot follow named association)
+b431002.adb:43:49: "=>" expected (positional association cannot follow named association)
+b431002.adb:51:61: "=>" expected (positional association cannot follow named association)
+b431002.adb:67:59: "=>" expected (positional association cannot follow named association)
+gnatmake: "b431002.adb" compilation error

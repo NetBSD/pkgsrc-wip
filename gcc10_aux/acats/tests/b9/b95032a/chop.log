@@ -1,0 +1,8 @@
+b95032a.ada:73:09: unrecognized attribute "ET1"
+b95032a.ada:78:10: unrecognized attribute "T1"
+b95032a.ada:79:14: unrecognized attribute "ETT2"
+b95032a.ada:83:15: unrecognized attribute "OBJ_TT1"
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95032a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95032a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95032a.ada into:
+   b95032a.adb

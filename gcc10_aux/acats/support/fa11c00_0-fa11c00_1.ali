@@ -1,0 +1,78 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U fa11c00_0.fa11c00_1%b	fa11c00_0-fa11c00_1.adb	da94b217 DE OO PK IU
+W fa11c00_0%s		fa11c00_0.adb		fa11c00_0.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U fa11c00_0.fa11c00_1%s	fa11c00_0-fa11c00_1.ads	a38ac1fc DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W fa11c00_0%s		fa11c00_0.adb		fa11c00_0.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210408115627 eff36322 ada.unchecked_deallocation%s
+D fa11c00_0.ads		20210516102806 49bf5b6c fa11c00_0%s
+D fa11c00_0-fa11c00_1.ads  20210516102806 ea359a90 fa11c00_0.fa11c00_1%s
+D fa11c00_0-fa11c00_1.adb  20210516102806 30a12887 fa11c00_0.fa11c00_1%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-string.ads		20210408115627 8fe54fb7 system.strings%s
+D s-ststop.ads		20210408115627 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [image fa11c00_0__fa11c00_1 13 13 none]
+G c Z s s [mammalDA fa11c00_0__fa11c00_1 8 9 none]
+G c Z s s [mammalDF fa11c00_0__fa11c00_1 8 9 none]
+G c Z s s [mammalIP fa11c00_0__fa11c00_1 8 9 none]
+G r s animal [mammalIP fa11c00_0__fa11c00_1 8 9 none] [animalIP fa11c00_0 40 9 none]
+X 7 fa11c00_0.ads
+35K9*FA11C00_0 48e14 8|4r9 15r5 9|4r14 11r5
+38A12*Species_Name_Type{string}<integer>
+40R9*Animal 44e17 8|8r23
+42a10*Common_Name{38A12} 9|8r39
+X 8 fa11c00_0-fa11c00_1.ads
+4K19*FA11C00_1 7|35k9 8|15l15 15e24 9|4b24 11l15 11t24
+6E9*Hair_Color_Type 6e68 10r23
+6n29*Black{6E9}
+6n36*Brown{6E9}
+6n43*Blonde{6E9}
+6n51*Grey{6E9}
+6n57*White{6E9}
+6n64*Red{6E9}
+8R9*Mammal<7|40R9> 11e17 13P13 13r24 9|6r24
+10e10*Hair_Color{6E9}
+13V13*Image{string}<7|46p13> 13>20 9|6b13 9l8 9t13
+13r20 M{8R9} 9|6b20 8r37
+

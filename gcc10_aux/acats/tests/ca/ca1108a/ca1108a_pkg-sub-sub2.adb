@@ -1,0 +1,10 @@
+
+
+SEPARATE (CA1108A_PKG.SUB)
+PROCEDURE SUB2 (Z : IN OUT INTEGER) IS
+     I : INTEGER := 5;
+BEGIN
+
+     Z := OTHER_PKG.F(I);    -- Z => I + 1.
+
+END SUB2;

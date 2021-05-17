@@ -1,0 +1,111 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43201d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43201d.adb
+b43201d.adb:44:19: expected type "Standard.Integer"
+b43201d.adb:44:19: found type "TC" defined at line 40
+b43201d.adb:45:34: expected type "Standard.Integer"
+b43201d.adb:45:34: found type "TC" defined at line 40
+b43201d.adb:46:34: expected type "Standard.Integer"
+b43201d.adb:46:34: found type "TC" defined at line 40
+b43201d.adb:49:29: expected type "Standard.Integer"
+b43201d.adb:49:29: found type "TC" defined at line 40
+b43201d.adb:49:34: expected type "Standard.Integer"
+b43201d.adb:49:34: found type "TC" defined at line 40
+b43201d.adb:52:30: expected type "TC" defined at line 40
+b43201d.adb:52:30: found type universal integer
+b43201d.adb:53:19: expected type "TC" defined at line 40
+b43201d.adb:53:19: found type universal integer
+b43201d.adb:54:24: expected type "TC" defined at line 40
+b43201d.adb:54:24: found type universal integer
+b43201d.adb:55:45: expected type "TC" defined at line 40
+b43201d.adb:55:45: found type universal integer
+b43201d.adb:58:50: expected type "TC" defined at line 40
+b43201d.adb:58:50: found type universal integer
+b43201d.adb:59:47: expected type "TC" defined at line 40
+b43201d.adb:59:47: found type universal integer
+b43201d.adb:60:40: expected type "TC" defined at line 40
+b43201d.adb:60:40: found type universal integer
+b43201d.adb:61:41: expected type "TC" defined at line 40
+b43201d.adb:61:41: found type universal integer
+b43201d.adb:64:29: expected type "Standard.Integer"
+b43201d.adb:64:29: found type "TC" defined at line 40
+b43201d.adb:68:29: expected type "Standard.Integer"
+b43201d.adb:68:29: found type "TC" defined at line 40
+b43201d.adb:72:29: expected type "TC" defined at line 40
+b43201d.adb:72:29: found type universal integer
+b43201d.adb:72:33: expected type "TC" defined at line 40
+b43201d.adb:72:33: found type universal integer
+b43201d.adb:72:37: expected type "TC" defined at line 40
+b43201d.adb:72:37: found type universal integer
+b43201d.adb:76:35: expected type "TC" defined at line 40
+b43201d.adb:76:35: found type universal integer
+b43201d.adb:76:44: expected type "TC" defined at line 40
+b43201d.adb:76:44: found type universal integer
+b43201d.adb:103:22: expected type "Standard.Integer"
+b43201d.adb:103:22: found type "TC" defined at line 40
+b43201d.adb:105:42: expected type "TC" defined at line 40
+b43201d.adb:105:42: found type universal integer
+b43201d.adb:112:28: expected type "Standard.Integer"
+b43201d.adb:112:28: found type "TC" defined at line 40
+b43201d.adb:118:43: expected type "TC" defined at line 40
+b43201d.adb:118:43: found type universal integer
+b43201d.adb:123:14: expected type "Standard.Integer"
+b43201d.adb:123:14: found type "TC" defined at line 40
+b43201d.adb:124:14: expected type "Standard.Integer"
+b43201d.adb:124:14: found type "TC" defined at line 40
+b43201d.adb:125:24: expected type "Standard.Integer"
+b43201d.adb:125:24: found type "TC" defined at line 40
+b43201d.adb:125:29: expected type "Standard.Integer"
+b43201d.adb:125:29: found type "TC" defined at line 40
+b43201d.adb:126:29: expected type "Standard.Integer"
+b43201d.adb:126:29: found type "TC" defined at line 40
+b43201d.adb:128:42: expected type "TC" defined at line 40
+b43201d.adb:128:42: found type universal integer
+b43201d.adb:129:53: expected type "TC" defined at line 40
+b43201d.adb:129:53: found type universal integer
+b43201d.adb:132:19: expected type "Standard.Integer"
+b43201d.adb:132:19: found type "TC" defined at line 40
+b43201d.adb:132:24: expected type "Standard.Integer"
+b43201d.adb:132:24: found type "TC" defined at line 40
+b43201d.adb:134:45: expected type "TC" defined at line 40
+b43201d.adb:134:45: found type universal integer
+b43201d.adb:135:45: expected type "Standard.Integer"
+b43201d.adb:135:45: found type "TC" defined at line 40
+b43201d.adb:137:30: expected type "TC" defined at line 40
+b43201d.adb:137:30: found type universal integer
+b43201d.adb:137:34: expected type "TC" defined at line 40
+b43201d.adb:137:34: found type universal integer
+b43201d.adb:137:38: expected type "TC" defined at line 40
+b43201d.adb:137:38: found type universal integer
+b43201d.adb:142:25: expected type "Standard.Integer"
+b43201d.adb:142:25: found type "TC" defined at line 40
+b43201d.adb:144:38: expected type "TC" defined at line 40
+b43201d.adb:144:38: found type universal integer
+b43201d.adb:146:25: expected type "Standard.Integer"
+b43201d.adb:146:25: found type "TC" defined at line 40
+b43201d.adb:146:30: expected type "Standard.Integer"
+b43201d.adb:146:30: found type "TC" defined at line 40
+b43201d.adb:149:46: expected type "TC" defined at line 40
+b43201d.adb:149:46: found type universal integer
+b43201d.adb:153:38: expected type "Standard.Integer"
+b43201d.adb:153:38: found type "TC" defined at line 40
+b43201d.adb:154:22: expected type "Standard.Integer"
+b43201d.adb:154:22: found type "TC" defined at line 40
+b43201d.adb:155:14: expected type "Standard.Integer"
+b43201d.adb:155:14: found type "TC" defined at line 40
+b43201d.adb:157:22: expected type "Standard.Boolean"
+b43201d.adb:157:22: found type universal integer
+b43201d.adb:157:26: expected type "Standard.Boolean"
+b43201d.adb:157:26: found type "TC" defined at line 40
+b43201d.adb:158:27: expected type "Standard.Boolean"
+b43201d.adb:158:27: found type "TC" defined at line 40
+b43201d.adb:159:19: expected type "Standard.Boolean"
+b43201d.adb:159:19: found type "TC" defined at line 40
+b43201d.adb:160:20: expected type "Standard.Integer"
+b43201d.adb:160:20: found type "TC" defined at line 40
+b43201d.adb:161:19: expected type "Standard.Character"
+b43201d.adb:161:19: found type "TC" defined at line 40
+b43201d.adb:163:41: expected type "Standard.Integer"
+b43201d.adb:163:41: found type "TC" defined at line 40
+b43201d.adb:167:42: expected type "Standard.Boolean"
+b43201d.adb:167:42: found type universal integer
+gnatmake: "b43201d.adb" compilation error

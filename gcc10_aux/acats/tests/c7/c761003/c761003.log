@@ -1,0 +1,6 @@
+
+,.,. C761003 ACATS 4.1 21-05-16 10:44:41
+---- C761003 Check that an object of a controlled type is finalized when
+                the enclosing master is complete, left by a transfer of 
+                control, and performed in the correct order.
+==== C761003 PASSED ============================.

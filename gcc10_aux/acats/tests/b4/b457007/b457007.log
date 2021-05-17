@@ -1,0 +1,26 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457007.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457007.adb
+b457007.adb:118:29: expected type "Standard.Boolean"
+b457007.adb:118:29: found type "Der_Bool" defined at line 74
+b457007.adb:128:32: expected type "Der_Bool" defined at line 74
+b457007.adb:128:32: found type "Standard.Boolean"
+b457007.adb:141:26: expected type "Der_Bool" defined at line 74
+b457007.adb:141:26: found type "Standard.Boolean"
+b457007.adb:161:30: expected type "Standard.Boolean"
+b457007.adb:161:30: found type "Der_Bool" defined at line 74
+b457007.adb:170:27: expected type "Color" defined at line 84
+b457007.adb:170:27: found type "Der_Color" defined at line 88
+b457007.adb:189:32: expected type "Der_Color" defined at line 88
+b457007.adb:189:32: found type "Color" defined at line 84
+b457007.adb:203:35: expected type "Root" defined at line 92
+b457007.adb:203:35: found type "Ext1" defined at line 96
+b457007.adb:209:32: expected type "Root" defined at line 92
+b457007.adb:209:32: found type "Ext1" defined at line 96
+b457007.adb:210:32: expected type "Root" defined at line 92
+b457007.adb:210:32: found type "Ext1" defined at line 96
+b457007.adb:225:45: expected type "Small" defined at line 82
+b457007.adb:225:45: found type "Standard.Integer"
+b457007.adb:231:23: non-static expression used for modular type bound
+b457007.adb:233:40: expected type "Small" defined at line 82
+b457007.adb:233:40: found type "Standard.Integer"
+gnatmake: "b457007.adb" compilation error

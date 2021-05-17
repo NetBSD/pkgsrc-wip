@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b23004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b23004a.adb
+b23004a.adb:34:06: declaration expected
+b23004a.adb:34:07: illegal character
+b23004a.adb:36:06: declaration expected
+b23004a.adb:38:06: illegal character
+b23004a.adb:40:06: strings are delimited by double quote character
+b23004a.adb:42:09: illegal character
+b23004a.adb:44:06: declaration expected
+b23004a.adb:50:07: illegal character
+b23004a.adb:52:08: attribute designator expected
+gnatmake: "b23004a.adb" compilation error

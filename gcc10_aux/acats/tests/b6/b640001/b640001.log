@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b640001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b640001.adb
+b640001.adb:112:22: ambiguous expression (cannot resolve "F")
+b640001.adb:112:22: possible interpretation at line 110
+b640001.adb:112:22: possible interpretation at line 109
+b640001.adb:152:29: ambiguous prefix for selected component
+b640001.adb:258:09: ambiguous expression (cannot resolve "Q")
+b640001.adb:258:09: possible interpretation at line 232
+b640001.adb:258:09: possible interpretation at line 234
+gnatmake: "b640001.adb" compilation error

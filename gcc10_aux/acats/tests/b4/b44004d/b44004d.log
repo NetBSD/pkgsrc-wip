@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44004d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44004d.adb
+b44004d.adb:37:25: invalid use of subtype mark in expression or call
+b44004d.adb:42:09: invalid use of subtype mark in expression or call
+b44004d.adb:44:20: invalid use of subtype mark in expression or call
+b44004d.adb:46:12: invalid use of subtype mark in expression or call
+gnatmake: "b44004d.adb" compilation error

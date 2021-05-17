@@ -1,0 +1,5 @@
+b36201a.ada:110:13: range attribute cannot be used in expression
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b36201a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b36201a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b36201a.ada into:
+   b36201a.adb

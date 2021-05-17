@@ -1,0 +1,12 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cd/cd10002.a into:
+   cd10002_0.ads
+   cd10002_0.adb
+   cd10002_1.ads
+   cd10002_1.adb
+   cd10002_deriv.ads
+   cd10002_deriv.adb
+   cd10002_gen.ads
+   cd10002_gen.adb
+   cd10002_priv.ads
+   cd10002_priv.adb
+   cd10002.adb

@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1201g.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1201g.adb
+bc1201g.adb:39:19: in a formal, a subtype indication can only be a subtype mark (RM 12.5.3(3))
+bc1201g.adb:45:19: in a formal, a subtype indication can only be a subtype mark (RM 12.5.3(3))
+gnatmake: "bc1201g.adb" compilation error

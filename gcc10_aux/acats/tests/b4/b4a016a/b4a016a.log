@@ -1,0 +1,74 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b4a016a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b4a016a.adb
+b4a016a.adb:32:28: invalid operand types for operator "<"
+b4a016a.adb:32:28: left operand has type universal real
+b4a016a.adb:32:28: right operand has type universal integer
+b4a016a.adb:33:26: invalid operand types for operator "<"
+b4a016a.adb:33:26: left operand has type universal integer
+b4a016a.adb:33:26: right operand has type universal real
+b4a016a.adb:34:28: invalid operand types for operator "<="
+b4a016a.adb:34:28: left operand has type universal real
+b4a016a.adb:34:28: right operand has type universal integer
+b4a016a.adb:35:26: invalid operand types for operator "<="
+b4a016a.adb:35:26: left operand has type universal integer
+b4a016a.adb:35:26: right operand has type universal real
+b4a016a.adb:36:28: invalid operand types for operator ">"
+b4a016a.adb:36:28: left operand has type universal real
+b4a016a.adb:36:28: right operand has type universal integer
+b4a016a.adb:37:26: invalid operand types for operator ">"
+b4a016a.adb:37:26: left operand has type universal integer
+b4a016a.adb:37:26: right operand has type universal real
+b4a016a.adb:38:28: invalid operand types for operator ">="
+b4a016a.adb:38:28: left operand has type universal real
+b4a016a.adb:38:28: right operand has type universal integer
+b4a016a.adb:39:26: invalid operand types for operator ">="
+b4a016a.adb:39:26: left operand has type universal integer
+b4a016a.adb:39:26: right operand has type universal real
+b4a016a.adb:40:28: invalid operand types for operator "="
+b4a016a.adb:40:28: left operand has type universal real
+b4a016a.adb:40:28: right operand has type universal integer
+b4a016a.adb:41:26: invalid operand types for operator "="
+b4a016a.adb:41:26: left operand has type universal integer
+b4a016a.adb:41:26: right operand has type universal real
+b4a016a.adb:42:28: invalid operand types for operator "/="
+b4a016a.adb:42:28: left operand has type universal real
+b4a016a.adb:42:28: right operand has type universal integer
+b4a016a.adb:43:26: invalid operand types for operator "/="
+b4a016a.adb:43:26: left operand has type universal integer
+b4a016a.adb:43:26: right operand has type universal real
+b4a016a.adb:44:31: incompatible types in range
+b4a016a.adb:45:35: incompatible types in range
+b4a016a.adb:46:33: incompatible types in range
+b4a016a.adb:47:37: incompatible types in range
+b4a016a.adb:48:28: incompatible types
+b4a016a.adb:49:28: incompatible types
+b4a016a.adb:50:35: incompatible types in range
+b4a016a.adb:51:39: incompatible types in range
+b4a016a.adb:52:33: incompatible types in range
+b4a016a.adb:53:37: incompatible types in range
+b4a016a.adb:54:26: incompatible types
+b4a016a.adb:55:26: incompatible types
+b4a016a.adb:57:29: invalid operand types for operator "+"
+b4a016a.adb:57:29: left operand has type universal real
+b4a016a.adb:57:29: right operand has type universal integer
+b4a016a.adb:58:27: invalid operand types for operator "+"
+b4a016a.adb:58:27: left operand has type universal integer
+b4a016a.adb:58:27: right operand has type universal real
+b4a016a.adb:60:29: invalid operand types for operator "MOD"
+b4a016a.adb:60:29: left operand has type universal real
+b4a016a.adb:60:29: right operand has type universal integer
+b4a016a.adb:61:27: invalid operand types for operator "MOD"
+b4a016a.adb:61:27: left operand has type universal integer
+b4a016a.adb:61:27: right operand has type universal real
+b4a016a.adb:62:29: invalid operand types for operator "REM"
+b4a016a.adb:62:29: left operand has type universal real
+b4a016a.adb:62:29: right operand has type universal integer
+b4a016a.adb:63:27: invalid operand types for operator "REM"
+b4a016a.adb:63:27: left operand has type universal integer
+b4a016a.adb:63:27: right operand has type universal real
+b4a016a.adb:65:26: invalid operand types for operator "/"
+b4a016a.adb:65:26: left operand has type universal integer
+b4a016a.adb:65:26: right operand has type universal real
+b4a016a.adb:67:30: exponent must be of type Natural, found type universal real
+b4a016a.adb:68:28: exponent must be of type Natural, found type universal real
+gnatmake: "b4a016a.adb" compilation error

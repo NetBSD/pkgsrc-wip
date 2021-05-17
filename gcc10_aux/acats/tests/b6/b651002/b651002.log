@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b651002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b651002.adb
+b651002.adb:80:13: "return" statement not allowed (No_Return)
+b651002.adb:84:19: "return" statement not allowed (No_Return)
+b651002.adb:94:19: "return" statement not allowed (No_Return)
+b651002.adb:100:10: "return" statement not allowed (No_Return)
+b651002.adb:115:13: "return" statement not allowed (No_Return)
+b651002.adb:119:19: "return" statement not allowed (No_Return)
+b651002.adb:129:19: "return" statement not allowed (No_Return)
+b651002.adb:135:10: "return" statement not allowed (No_Return)
+b651002.adb:178:17: procedure "Check_Error_2" is marked as No_Return
+b651002.adb:179:10: renaming completes a No_Return procedure
+b651002.adb:179:10: renamed procedure must be nonreturning (RM 6.5.1 (7/2))
+b651002.adb:184:17: procedure "Check_Error_4" is marked as No_Return
+b651002.adb:185:10: renaming completes a No_Return procedure
+b651002.adb:185:10: renamed procedure must be nonreturning (RM 6.5.1 (7/2))
+gnatmake: "b651002.adb" compilation error

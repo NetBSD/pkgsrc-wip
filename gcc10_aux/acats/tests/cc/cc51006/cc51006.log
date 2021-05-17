@@ -1,0 +1,7 @@
+
+,.,. CC51006 ACATS 4.1 21-05-16 10:50:21
+---- CC51006 Check that, in an instance, each implicit declaration of a 
+                primitive subprogram of a formal (nontagged) type
+                declares a view of the corresponding primitive
+                subprogram of the ancestor type.
+==== CC51006 PASSED ============================.

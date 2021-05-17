@@ -1,0 +1,42 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U f393a00_0%b		f393a00_0.adb		35992e7a DE NE OO PK IU
+Z interfaces%s		interfac.ads		interfac.ali
+W report%s		report.adb		report.ali
+
+U f393a00_0%s		f393a00_0.ads		bd6301f0 DE EE NE OO PK IU
+
+D f393a00_0.ads		20210516102805 bd6301f0 f393a00_0%s
+D f393a00_0.adb		20210516102805 57e3d460 f393a00_0%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+G a e
+G c Z s b [tc_touch f393a00_0 46 14 none]
+G c Z s b [tc_validate f393a00_0 47 14 none]
+G r c none [tc_validate f393a00_0 47 14 none] [failed report 100 16 none]
+X 1 f393a00_0.ads
+45K9*F393A00_0 48l5 48e14 2|3b14 21l5 21t14
+46U14*TC_Touch 46>25 2|7b14 11l8 11t16
+46e25 A_Tag{character} 2|7b25 10r29
+47U14*TC_Validate 47>27 47>45 2|13b14 20l8 20t19
+47a27 Expected{string} 2|13b27 15r35 16r50
+47a45 Message{string} 2|13b45 16r23
+X 2 f393a00_0.adb
+4a4 Expectation{string} 10m6 15r9 17r43
+5i4 Finger{natural} 9m6 9r16 10r18 15r24 17r58 19m6
+X 4 report.ads
+84K9*Report 2|2w6 16r8 4|190e11
+100U16*Failed 2|16s15
+

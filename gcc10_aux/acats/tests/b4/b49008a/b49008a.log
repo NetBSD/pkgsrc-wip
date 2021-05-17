@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49008a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49008a.adb
+b49008a.adb:47:35: non-static expression used for integer type bound
+b49008a.adb:49:29: non-static expression used for delta value
+gnatmake: "b49008a.adb" compilation error

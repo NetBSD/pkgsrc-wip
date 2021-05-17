@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1005a.ada into:
+   ca1005a_f.ads
+   ca1005a_f.adb
+   ca1005a_p.ads
+   ca1005a_p.adb
+   ca1005a.adb

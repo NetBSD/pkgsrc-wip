@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2018.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2018.adb
+b3a2018.adb:52:14: non-local pointer cannot point to local object
+b3a2018.adb:60:37: aliased actual in allocator has wrong accessibility
+b3a2018.adb:73:36: aliased actual has wrong accessibility
+b3a2018.adb:109:37: aliased actual in allocator has wrong accessibility
+b3a2018.adb:115:30: cannot convert local pointer to non-local access type
+b3a2018.adb:118:37: aliased actual in allocator has wrong accessibility
+b3a2018.adb:127:30: cannot convert local pointer to non-local access type
+b3a2018.adb:130:30: cannot convert local pointer to non-local access type
+gnatmake: "b3a2018.adb" compilation error

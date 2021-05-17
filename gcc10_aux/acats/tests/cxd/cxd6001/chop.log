@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxd/cxd6001.a into:
+   cxd6001_1.ads
+   cxd6001_1.adb
+   cxd6001_2.ads
+   cxd6001_2.adb
+   cxd6001.adb

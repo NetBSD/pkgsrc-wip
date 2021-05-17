@@ -1,0 +1,29 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48001a.adb
+b48001a.adb:120:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:120:18: qualified expression or constraint with discriminant values required
+b48001a.adb:121:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:121:18: qualified expression or constraint with discriminant values required
+b48001a.adb:122:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:122:18: qualified expression or constraint with discriminant values required
+b48001a.adb:128:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:128:18: qualified expression or constraint with discriminant values required
+b48001a.adb:130:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:130:18: qualified expression or constraint with discriminant values required
+b48001a.adb:132:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:132:18: qualified expression or constraint with discriminant values required
+b48001a.adb:134:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:134:18: qualified expression or constraint with discriminant values required
+b48001a.adb:211:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:211:18: qualified expression or constraint with discriminant values required
+b48001a.adb:212:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:212:18: qualified expression or constraint with discriminant values required
+b48001a.adb:213:18: uninitialized unconstrained allocation not allowed
+b48001a.adb:213:18: qualified expression or constraint with discriminant values required
+b48001a.adb:299:19: uninitialized unconstrained allocation not allowed
+b48001a.adb:299:19: qualified expression or constraint with discriminant values required
+b48001a.adb:300:19: uninitialized unconstrained allocation not allowed
+b48001a.adb:300:19: qualified expression or constraint with discriminant values required
+b48001a.adb:301:19: uninitialized unconstrained allocation not allowed
+b48001a.adb:301:19: qualified expression or constraint with discriminant values required
+gnatmake: "b48001a.adb" compilation error

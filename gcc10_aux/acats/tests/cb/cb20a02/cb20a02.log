@@ -1,0 +1,7 @@
+
+,.,. CB20A02 ACATS 4.1 21-05-16 10:49:19
+---- CB20A02 Check that the name of a user defined exception is
+                available to an enclosing program unit even when the
+                enclosing unit has no visibility into the scope where
+                the exception is declared and raised.
+==== CB20A02 PASSED ============================.

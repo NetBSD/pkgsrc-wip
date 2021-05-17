@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45207a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45207a.adb
+b45207a.adb:77:17: there is no applicable operator "=" for private type "LP" defined at line 60
+b45207a.adb:82:20: there is no applicable operator "/=" for private type "LP" defined at line 60
+gnatmake: "b45207a.adb" compilation error

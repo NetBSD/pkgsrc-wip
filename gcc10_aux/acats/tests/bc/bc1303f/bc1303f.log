@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1303f.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1303f.adb
+bc1303f.adb:39:26: identifier expected
+bc1303f.adb:45:26: identifier expected
+gnatmake: "bc1303f.adb" compilation error

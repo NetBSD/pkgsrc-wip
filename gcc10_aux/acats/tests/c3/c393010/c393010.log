@@ -1,0 +1,8 @@
+
+,.,. C393010 ACATS 4.1 21-05-16 10:34:33
+---- C393010 Check that an extended type can be derived from an abstract
+                type and that a call on an abstract operation is a
+                dispatching operation.  Check that such a call can
+                dispatch to an overriding operation declared in the
+                private part of a package.
+==== C393010 PASSED ============================.

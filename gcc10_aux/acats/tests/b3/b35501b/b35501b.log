@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35501b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35501b.adb
+b35501b.adb:45:12: prefix of "POS" attribute must be discrete type
+b35501b.adb:46:12: prefix of "POS" attribute must be discrete type
+b35501b.adb:48:12: prefix of "VAL" attribute must be discrete type
+b35501b.adb:49:12: prefix of "VAL" attribute must be discrete type
+gnatmake: "b35501b.adb" compilation error

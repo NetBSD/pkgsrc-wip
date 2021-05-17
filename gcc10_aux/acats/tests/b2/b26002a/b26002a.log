@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b26002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b26002a.adb
+b26002a.adb:38:59: missing string quote
+b26002a.adb:42:59: missing string quote
+b26002a.adb:46:17: binary operator expected
+b26002a.adb:50:19: binary operator expected
+gnatmake: "b26002a.adb" compilation error

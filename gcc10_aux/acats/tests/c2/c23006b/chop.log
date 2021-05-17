@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c2/c23006b.ada into:
+   c23006b_pkg.ads
+   c23006bpkg.ads
+   c23006bpkg.adb
+   c23006b.adb

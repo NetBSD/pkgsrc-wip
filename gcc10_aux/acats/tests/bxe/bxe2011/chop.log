@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bxe/bxe2011.a into:
+   bxe2011_rt.ads
+   bxe2011_rt.adb
+   bxe2011_rci.ads
+   bxe2011_rci.adb
+   bxe2011.ads
+   bxe2011.adb

@@ -1,0 +1,40 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b38103b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b38103b.adb
+b38103b.adb:178:21: not fully conformant with declaration at line 103
+b38103b.adb:178:21: name "D1" does not match
+b38103b.adb:184:21: not fully conformant with declaration at line 106
+b38103b.adb:184:21: default expression for "D" does not match
+b38103b.adb:187:21: not fully conformant with declaration at line 107
+b38103b.adb:187:21: default expression for "D" does not match
+b38103b.adb:193:21: not fully conformant with declaration at line 111
+b38103b.adb:193:21: default expression for "D" does not match
+b38103b.adb:194:31: ambiguous operands for equality
+b38103b.adb:194:31: use -gnatf switch for details
+b38103b.adb:198:21: not fully conformant with declaration at line 112
+b38103b.adb:198:21: default expression for "D" does not match
+b38103b.adb:203:21: not fully conformant with declaration at line 114
+b38103b.adb:203:21: default expression for "D" does not match
+b38103b.adb:212:21: not fully conformant with declaration at line 119
+b38103b.adb:212:21: default expression for "D" does not match
+b38103b.adb:215:21: not fully conformant with declaration at line 120
+b38103b.adb:215:21: default expression for "D" does not match
+b38103b.adb:221:21: not fully conformant with declaration at line 123
+b38103b.adb:221:21: default expression for "D" does not match
+b38103b.adb:242:21: not fully conformant with declaration at line 133
+b38103b.adb:242:21: default expression for "D" does not match
+b38103b.adb:245:21: not fully conformant with declaration at line 136
+b38103b.adb:245:21: default expression for "D" does not match
+b38103b.adb:260:21: not fully conformant with declaration at line 145
+b38103b.adb:260:21: default expression for "D" does not match
+b38103b.adb:277:22: not fully conformant with declaration at line 154
+b38103b.adb:277:22: default expression for "D" does not match
+b38103b.adb:280:22: not fully conformant with declaration at line 161
+b38103b.adb:280:22: default expression for "D" does not match
+b38103b.adb:283:22: not fully conformant with declaration at line 162
+b38103b.adb:283:22: default expression for "D" does not match
+b38103b.adb:286:11: missing discriminants in full type declaration
+b38103b.adb:286:27: discriminant constraint needed for derived untagged records
+b38103b.adb:290:11: missing discriminants in full type declaration
+b38103b.adb:293:21: "D" conflicts with declaration at line 166
+b38103b.adb:296:40: untagged parent must have discriminants
+gnatmake: "b38103b.adb" compilation error

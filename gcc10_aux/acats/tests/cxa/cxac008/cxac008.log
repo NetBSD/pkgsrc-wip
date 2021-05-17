@@ -1,0 +1,6 @@
+
+,.,. CXAC008 ACATS 4.1 21-05-16 10:55:14
+---- CXAC008 Check that the Reset and Close subprograms defined in
+                package Ada.Streams.Stream_IO do not truncate Out_File
+                mode files.
+==== CXAC008 PASSED ============================.

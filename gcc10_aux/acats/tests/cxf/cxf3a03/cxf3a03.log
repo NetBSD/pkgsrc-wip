@@ -1,0 +1,9 @@
+
+,.,. CXF3A03 ACATS 4.1 21-05-16 10:59:17
+---- CXF3A03 Check that function Length returns the number of characters
+                in the edited output string produced by function Image, 
+                for a particular decimal type, currency string, and
+                radix mark.  Check that function Valid returns correct
+                results based on the particular decimal value, and the
+                Picture and Currency string parameters.
+==== CXF3A03 PASSED ============================.

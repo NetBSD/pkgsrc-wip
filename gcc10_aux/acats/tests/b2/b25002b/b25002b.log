@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b25002b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b25002b.adb
+b25002b.adb:40:34: illegal character
+b25002b.adb:43:34: illegal character
+b25002b.adb:46:25: illegal character
+b25002b.adb:50:33: illegal character
+b25002b.adb:54:29: illegal character
+b25002b.adb:59:15: illegal character
+b25002b.adb:63:15: illegal character
+b25002b.adb:67:15: illegal character
+b25002b.adb:72:15: illegal character
+b25002b.adb:77:15: illegal character
+gnatmake: "b25002b.adb" compilation error

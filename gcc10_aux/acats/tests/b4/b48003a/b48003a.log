@@ -1,0 +1,19 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48003a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48003a.adb
+b48003a.adb:70:30: expected type "Standard.Integer"
+b48003a.adb:70:30: found a composite type
+b48003a.adb:71:30: expected type "Standard.Integer"
+b48003a.adb:71:30: found a composite type
+b48003a.adb:72:25: expected private type "UP" defined at line 42
+b48003a.adb:72:25: found a composite type
+b48003a.adb:73:25: expected private type "UP" defined at line 42
+b48003a.adb:73:25: found a composite type
+b48003a.adb:74:27: expected type "A_CP" defined at line 58
+b48003a.adb:74:27: found a composite type
+b48003a.adb:75:27: expected type "A_CP" defined at line 58
+b48003a.adb:75:27: found a composite type
+b48003a.adb:76:27: expected type "A_UP" defined at line 59
+b48003a.adb:76:27: found a composite type
+b48003a.adb:77:27: expected type "A_UP" defined at line 59
+b48003a.adb:77:27: found a composite type
+gnatmake: "b48003a.adb" compilation error

@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45207v.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45207v.adb
+b45207v.adb:90:17: there is no applicable operator "=" for type "DARR" defined at line 72
+b45207v.adb:95:20: there is no applicable operator "/=" for type "DARR" defined at line 72
+b45207v.adb:135:17: there is no applicable operator "=" for type "REC" defined at line 113
+b45207v.adb:140:20: there is no applicable operator "/=" for type "REC" defined at line 113
+gnatmake: "b45207v.adb" compilation error

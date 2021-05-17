@@ -1,0 +1,18 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca13002.a into:
+   ca13002_0.ads
+   ca13002_0-ca13002_1.ads
+   ca13002_0-ca13002_1-ca13002_5.ads
+   ca13002_0-ca13002_2.ads
+   ca13002_0-ca13002_2-ca13002_5.ads
+   ca13002_0-ca13002_3.ads
+   ca13002_0-ca13002_4.ads
+   ca13002_0.adb
+   ca13002_0-ca13002_1.adb
+   ca13002_0-ca13002_1-ca13002_5.adb
+   ca13002_0-ca13002_2.adb
+   ca13002_0-ca13002_2-ca13002_5.adb
+   ca13002_0-ca13002_3.adb
+   ca13002_0-ca13002_3-ca13002_5.adb
+   ca13002_0-ca13002_4.adb
+   ca13002_0-ca13002_4-ca13002_5.adb
+   ca13002.adb

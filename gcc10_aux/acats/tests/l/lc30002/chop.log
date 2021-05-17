@@ -1,0 +1,7 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/lc300020.a into:
+   lc30002_0.ads
+   lc30002_1.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/lc300021.a into:
+   lc30002_0.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/lc300022.am into:
+   lc300022.adb

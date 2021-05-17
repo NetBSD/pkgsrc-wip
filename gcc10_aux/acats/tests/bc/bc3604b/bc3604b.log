@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3604b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3604b.adb
+bc3604b.adb:90:06: instantiation error at line 33
+bc3604b.adb:90:06: not mode conformant with declaration at line 64
+bc3604b.adb:90:06: mode of "X" does not match
+bc3604b.adb:91:25: ambiguous actual subprogram "ACTUAL", possible interpretations:
+bc3604b.adb:91:25: "ACTUAL" declared at line 64
+bc3604b.adb:91:25: "ACTUAL" declared at line 60
+bc3604b.adb:91:25: "ACTUAL" declared at line 56
+bc3604b.adb:93:06: instantiation error at line 38
+bc3604b.adb:93:06: not mode conformant with declaration at line 64
+bc3604b.adb:93:06: mode of "Y" does not match
+bc3604b.adb:94:25: ambiguous actual subprogram "ACTUAL", possible interpretations:
+bc3604b.adb:94:25: "ACTUAL" declared at line 64
+bc3604b.adb:94:25: "ACTUAL" declared at line 60
+bc3604b.adb:94:25: "ACTUAL" declared at line 56
+bc3604b.adb:97:25: ambiguous actual subprogram "ACTUAL", possible interpretations:
+bc3604b.adb:97:25: "ACTUAL" declared at line 64
+bc3604b.adb:97:25: "ACTUAL" declared at line 60
+bc3604b.adb:97:25: "ACTUAL" declared at line 56
+gnatmake: "bc3604b.adb" compilation error

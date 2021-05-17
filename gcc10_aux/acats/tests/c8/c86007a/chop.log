@@ -1,0 +1,4 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c86007a.ada into:
+   c86007a_pack.ads
+   c86007a_pack.adb
+   c86007a.adb

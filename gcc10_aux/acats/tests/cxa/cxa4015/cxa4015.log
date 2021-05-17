@@ -1,0 +1,6 @@
+
+,.,. CXA4015 ACATS 4.1 21-05-16 10:54:19
+---- CXA4015 Check that the subprograms defined in package
+                Ada.Strings.Wide_Fixed are available, and that they
+                produce correct results.
+==== CXA4015 PASSED ============================.

@@ -1,0 +1,154 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV SPARK_05
+
+U impdef%b		impdef.adb		74d3cdd6 DE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U impdef%s		impdef.ads		ba6af773 DE EE NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.modular_aux%s  a-timoau.adb	a-timoau.ali
+Z ada.text_io.modular_io%s
+W report%s		report.adb		report.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+L "/home/fernando/mysandboxfolder/tmp/acats/support/cd300051.o"
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-charac.ads		20210408115627 2d3ec45b ada.characters%s
+D a-chahan.ads		20210408115627 1601a50f ada.characters.handling%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-timoau.ads		20210408115627 01c06610 ada.text_io.modular_aux%s
+D a-timoio.ads		20210408115627 3b5805c0 ada.text_io.modular_io%s
+D a-timoio.adb		20210408115627 de0ea1c6 ada.text_io.modular_io%b
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D impdef.ads		20210516102806 e64493f0 impdef%s
+D impdef.adb		20210516102806 8496fb29 impdef%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [exceed_time_slice impdef 179 14 none]
+G c Z s s [cd30005_proc impdef 206 13 none]
+G c Z s b [equivalent_file_names impdef 260 13 none]
+G c Z s s [get impdef__address_value_io 51 14 444_5]
+G c Z s s [get impdef__address_value_io 59 14 444_5]
+G c Z s s [put impdef__address_value_io 68 14 444_5]
+G c Z s s [put impdef__address_value_io 80 14 444_5]
+G c Z s s [get impdef__address_value_io 90 14 444_5]
+G c Z s s [put impdef__address_value_io 97 14 444_5]
+G r c none [exceed_time_slice impdef 179 14 none] [ident_int report 138 15 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|75r6 445r14 14|6r6 49r11
+X 2 a-charac.ads
+16K13*Characters 18e19 14|6r10 49r15
+X 3 a-chahan.ads
+36K24*Handling 159e28 14|6w21 49r26
+70V13*To_Lower{string} 14|51s15 51s33
+X 8 a-textio.ads
+57K13*Text_IO 727e16 13|75w10 445r18
+X 10 a-timoio.ads
+46k21*Modular_IO 108e27 13|445r26
+X 13 impdef.ads
+78K9*ImpDef 449l5 449e11 14|8b14 56l5 56t11
+89b4*Validating_Annex_C{boolean}
+92b4*Validating_Annex_D{boolean}
+95b4*Validating_Annex_E{boolean}
+98b4*Validating_Annex_F{boolean}
+101b4*Validating_Annex_G{boolean}
+104b4*Validating_Annex_H{boolean}
+114o4*Minimum_Task_Switch{duration}
+126o4*Switch_To_New_Task{duration}
+135o4*Clear_Ready_Queue{duration}
+146o4*Delay_For_Time_Past{duration}
+155o4*Time_Dependent_Reset{duration}
+170o4*Delay_Per_Random_Test{duration}
+179U14*Exceed_Time_Slice 14|19b14 26l8 26t25
+189a4*Non_State_String{string}
+198a4*External_Tag_Value{string}
+206V13*Cd30005_Proc{integer} 206>27 207b<c,_cd30005_1>22 211r58
+206i27 X{integer}
+211m4*CD30005_1_Foreign_Address{18|67M9}
+220a4*CD30005_1_External_Name{string}
+229N4*Max_Default_Alignment
+232N4*Max_Linker_Alignment
+242N4*Maximum_Adjustment_To_Specified_Storage_Size
+253a4*Directory_To_Create{string}
+260V13*Equivalent_File_Names{boolean} 260>36 260>42 14|48b13 52l8 52t29
+260a36 Left{string} 14|48b36 51r25
+260a42 Right{string} 14|48b42 51r43
+272a4*Parent_Directory_Name{string}
+285a4*Current_Directory_Name{string}
+298a4*Existing_Environment_Variable_To_Read{string}
+309a4*Unused_Environment_Variable_To_Modify{string}
+319a4*CXB30040_External_Name{string}
+322a4*CXB30060_External_Name{string}
+325a4*CXB30130_External_Name{string}
+328a4*CXB30131_External_Name{string}
+331a4*CXB30170_External_Name{string}
+334a4*CXB30230_External_Name{string}
+344a4*CXB30171_Global_External_Name{string}
+347a4*CXB30171_Proc_External_Name{string}
+356a4*CXB30180_External_Name{string}
+359a4*CXB30240_External_Name{string}
+369a4*CXB30181_Global_External_Name{string}
+372a4*CXB30181_Proc_External_Name{string}
+381a4*CXB40090_External_Name{string}
+384a4*CXB40091_External_Name{string}
+387a4*CXB40092_External_Name{string}
+401a4*CXB50040_External_Name{string}
+404a4*CXB50041_External_Name{string}
+407a4*CXB50050_External_Name{string}
+410a4*CXB50051_External_Name{string}
+427N4*Char_Bits
+430N4*Next_Storage_Slot
+444K13*Address_Value_IO[10|46]
+X 14 impdef.adb
+20i7 T{integer} 24m10
+21i7 Loop_Max{integer} 23r19
+23i11 I{integer}
+X 17 report.ads
+84K9*Report 13|74w6 14|24r15 24r38 17|190e11
+138V15*Ident_Int{integer} 14|24s22 24s45
+X 18 system.ads
+37K9*System 13|76r6 211r41 445r37 18|149e11
+67M9*Address 13|211r48
+X 27 s-stoele.ads
+42K16*Storage_Elements 13|76w13 445r44 27|117e28
+105M9*Integer_Address 13|445r61
+

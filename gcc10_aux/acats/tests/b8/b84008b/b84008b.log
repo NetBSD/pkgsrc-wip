@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84008b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84008b.adb
+b84008b.adb:49:13: "A" is not visible
+b84008b.adb:49:13: non-visible declaration at line 37
+b84008b.adb:59:06: "PROC" is not visible
+b84008b.adb:59:06: non-visible declaration at line 38
+b84008b.adb:60:06: "I" is not visible
+b84008b.adb:60:06: non-visible declaration at line 39
+gnatmake: "b84008b.adb" compilation error

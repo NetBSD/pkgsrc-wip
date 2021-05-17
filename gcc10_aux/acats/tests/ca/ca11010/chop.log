@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca11010.a into:
+   ca11010_0.ads
+   ca11010_0-ca11010_1.ads
+   ca11010_0-ca11010_1.adb
+   ca11010_0.adb
+   ca11010_0-verify_initial_conditions.adb
+   ca11010_0-final_conditions_valid.adb
+   ca11010.adb

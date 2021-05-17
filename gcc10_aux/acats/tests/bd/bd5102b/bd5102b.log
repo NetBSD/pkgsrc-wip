@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd5102b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd5102b.adb
+bd5102b.adb:37:15: address cannot be given for "E"
+gnatmake: "bd5102b.adb" compilation error

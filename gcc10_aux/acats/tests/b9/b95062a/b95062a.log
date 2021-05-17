@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95062a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95062a.adb
+b95062a.adb:36:44: "BOOL" conflicts with declaration at line 36
+b95062a.adb:38:41: "I" conflicts with declaration at line 38
+b95062a.adb:39:38: "J" conflicts with declaration at line 39
+gnatmake: "b95062a.adb" compilation error

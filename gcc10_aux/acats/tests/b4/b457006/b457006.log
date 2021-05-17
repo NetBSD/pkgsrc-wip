@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457006.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b457006.adb
+b457006.adb:116:17: if expression must be parenthesized
+b457006.adb:120:19: if expression must be parenthesized
+b457006.adb:124:12: if expression must be parenthesized
+b457006.adb:132:22: if expression must be parenthesized
+b457006.adb:140:19: if expression must be parenthesized
+b457006.adb:144:13: if expression must be parenthesized
+b457006.adb:148:22: expecting expression or component association
+b457006.adb:152:42: missing ")"
+b457006.adb:156:25: expecting expression or component association
+b457006.adb:162:39: if expression must be parenthesized
+b457006.adb:169:40: if expression must be parenthesized
+b457006.adb:171:33: if expression must be parenthesized
+b457006.adb:179:28: if expression must be parenthesized
+b457006.adb:182:19: if expression must be parenthesized
+b457006.adb:185:22: if expression must be parenthesized
+gnatmake: "b457006.adb" compilation error

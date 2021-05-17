@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2014.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2014.adb
+b3a2014.adb:18:38: expected type "AccNew_Tag_2" defined at b3a2014.ads:110
+b3a2014.adb:18:38: found type access to "NNew_Tag_2" defined at line 18
+b3a2014.adb:22:27: type of prefix: "New_Tag_2'CLASS" is not covered
+b3a2014.adb:22:27: by "New_Tag_2", the expected designated type (RM 3.10.2 (27))
+b3a2014.adb:27:41: expected type "AccNew_Tag2Class" defined at b3a2014.ads:111
+b3a2014.adb:27:41: found type access to "New_Tag_1" defined at line 27
+b3a2014.adb:31:38: expected type "AccNew_Tag2Class" defined at b3a2014.ads:111
+b3a2014.adb:31:38: found type access to "Tag_Type'CLASS" defined at line 31
+b3a2014.adb:44:16: expected type "AccNew_Tag_2" defined at line 39
+b3a2014.adb:44:16: found type access to "Tag_Type" defined at line 44
+b3a2014.adb:48:16: expected type "AccNew_Tag2Class" defined at line 40
+b3a2014.adb:48:16: found type access to "Tag_Type" defined at line 48
+b3a2014.adb:74:15: expected type "AccNew_Tag2Class" defined at line 71
+b3a2014.adb:74:15: found type access to "Tag_Type'CLASS" defined at line 74
+b3a2014.adb:87:34: object subtype must statically match designated subtype
+b3a2014.adb:91:34: object subtype must statically match designated subtype
+b3a2014.adb:122:27: object subtype must statically match designated subtype
+b3a2014.adb:131:31: expected type "AccMyStr" defined at b3a2014.ads:156
+b3a2014.adb:131:31: found type access to subtype of "Standard.String" defined at line 131
+b3a2014.adb:136:27: object subtype must statically match designated subtype
+gnatmake: "b3a2014.adb" compilation error

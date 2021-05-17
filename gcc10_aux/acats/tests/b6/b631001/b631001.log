@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b631001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b631001.adb
+b631001.adb:92:30: no selector "Bump" for type "T" defined at line 51
+b631001.adb:94:24: prefix of "Access" attribute cannot be intrinsic
+b631001.adb:96:29: no selector "Add" for type "T" defined at line 51
+b631001.adb:98:23: prefix of "Access" attribute cannot be intrinsic
+b631001.adb:100:33: expected type "Acc_Get" defined at line 80
+b631001.adb:100:33: found type access to "Standard.Natural" defined at line 100
+b631001.adb:102:23: prefix of "Access" attribute cannot be intrinsic
+b631001.adb:106:41: expected type "Acc_Get" defined at line 80
+b631001.adb:106:41: found type access to "Standard.Natural" defined at line 106
+b631001.adb:108:31: prefix of "Access" attribute cannot be intrinsic
+b631001.adb:112:41: expected access to subprogram defined at line 88
+b631001.adb:112:41: found type access to "Standard.Natural" defined at line 112
+b631001.adb:114:31: prefix of "Access" attribute cannot be intrinsic
+gnatmake: "b631001.adb" compilation error

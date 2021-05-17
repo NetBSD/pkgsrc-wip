@@ -1,0 +1,16 @@
+b36002a.ada:33:35: missing "<>"
+b36002a.ada:37:33: missing operand
+b36002a.ada:40:36: missing operand
+b36002a.ada:43:38: missing operand
+b36002a.ada:47:35: missing operand
+b36002a.ada:51:39: missing operand
+b36002a.ada:55:33: missing "<>"
+b36002a.ada:59:41: missing "<>"
+b36002a.ada:63:35: missing operand
+b36002a.ada:66:35: missing operand
+b36002a.ada:70:33: missing operand
+b36002a.ada:74:33: missing "<>"
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b36002a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b36002a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b36002a.ada into:
+   b36002a.adb

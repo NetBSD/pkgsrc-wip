@@ -1,0 +1,19 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b12b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b12b.adb
+b55b12b.adb:64:16: missing case values: -16#8000_0000# .. 0
+b55b12b.adb:64:16: missing case values: 6 .. 16#7FFF_FFFF#
+b55b12b.adb:64:22: bounds of "I" are not static, alternatives must cover base type
+b55b12b.adb:73:16: missing case values: -16#8000_0000# .. 0
+b55b12b.adb:73:16: missing case values: 6 .. 16#7FFF_FFFF#
+b55b12b.adb:73:22: bounds of "I" are not static, alternatives must cover base type
+b55b12b.adb:82:16: missing case values: -16#8000_0000# .. 0
+b55b12b.adb:82:16: missing case values: 6 .. 16#7FFF_FFFF#
+b55b12b.adb:82:22: bounds of "I" are not static, alternatives must cover base type
+b55b12b.adb:92:16: missing case values: "F" .. "N"
+b55b12b.adb:92:22: bounds of "I" are not static, alternatives must cover base type
+b55b12b.adb:102:16: missing case value: "FALSE"
+b55b12b.adb:111:16: missing case values: character'val(0) .. '@'
+b55b12b.adb:111:16: missing case values: 'F' .. character'val(255)
+b55b12b.adb:111:22: bounds of "I" are not static, alternatives must cover base type
+b55b12b.adb:121:16: missing case values: character'val(0) .. character'val(255)
+gnatmake: "b55b12b.adb" compilation error

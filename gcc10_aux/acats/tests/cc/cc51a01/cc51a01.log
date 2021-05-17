@@ -1,0 +1,8 @@
+
+,.,. CC51A01 ACATS 4.1 21-05-16 10:50:24
+---- CC51A01 Check that, in an instance, each implicit declaration of a 
+                user-defined subprogram of a formal derived record type 
+                declares a view of the corresponding primitive
+                subprogram of the ancestor, even if the primitive
+                subprogram has been overridden for the actual type.
+==== CC51A01 PASSED ============================.

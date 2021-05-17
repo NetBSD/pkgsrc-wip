@@ -1,0 +1,7 @@
+b2a003d.ada:39:14: identifier may not start with digit
+b2a003d.ada:40:14: identifier may not start with digit
+b2a003d.ada:41:17: delimiter required between literal and identifier
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b2a003d.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b2a003d.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b2a003d.ada into:
+   b2a003d.adb

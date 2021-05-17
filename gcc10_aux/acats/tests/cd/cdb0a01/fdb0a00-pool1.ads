@@ -1,0 +1,64 @@
+-- CDB0A01.A
+--
+--                             Grant of Unlimited Rights
+--
+--     Under contracts F33600-87-D-0337, F33600-84-D-0280, MDA903-79-C-0687,
+--     F08630-91-C-0015, and DCA100-97-D-0025, the U.S. Government obtained 
+--     unlimited rights in the software and documentation contained herein.
+--     Unlimited rights are defined in DFAR 252.227-7013(a)(19).  By making 
+--     this public release, the Government intends to confer upon all 
+--     recipients unlimited rights  equal to those held by the Government.  
+--     These rights include rights to use, duplicate, release or disclose the 
+--     released technical data and computer software in whole or in part, in 
+--     any manner and for any purpose whatsoever, and to have or permit others 
+--     to do so.
+--
+--                                    DISCLAIMER
+--
+--     ALL MATERIALS OR INFORMATION HEREIN RELEASED, MADE AVAILABLE OR
+--     DISCLOSED ARE AS IS.  THE GOVERNMENT MAKES NO EXPRESS OR IMPLIED 
+--     WARRANTY AS TO ANY MATTER WHATSOEVER, INCLUDING THE CONDITIONS OF THE
+--     SOFTWARE, DOCUMENTATION OR OTHER INFORMATION RELEASED, MADE AVAILABLE 
+--     OR DISCLOSED, OR THE OWNERSHIP, MERCHANTABILITY, OR FITNESS FOR A
+--     PARTICULAR PURPOSE OF SAID MATERIAL.
+--*
+--
+-- OBJECTIVE:
+--      Check that a storage pool may be user_determined, and that storage
+--      is allocated by calling Allocate.
+--
+--      Check that a storage.pool may be specified using 'Storage_Pool
+--      and that S'Storage_Pool denotes the storage pool of the type S.
+--
+-- TEST DESCRIPTION:
+--      The package System.Storage_Pools is exercised by two very similar
+--      packages which define a tree type and exercise it in a simple manner.
+--      One package uses a user defined pool.  The other package uses a
+--      storage pool assigned by the implementation; Storage_Size is
+--      specified for this pool.
+--      The dispatching procedures Allocate and Deallocate are tested as an
+--      intentional side effect of the tree packages.
+--
+--      For completeness, the actions of the tree packages are checked for
+--      correct operation.
+--
+-- TEST FILES:
+--      The following files comprise this test:
+--
+--         FDB0A00.A   (foundation code)
+--         CDB0A01.A
+--
+--
+-- CHANGE HISTORY:
+--      02 JUN 95   SAIC   Initial version
+--      07 MAY 96   SAIC   Removed ambiguity with CDB0A02
+--      13 FEB 97   PWB.CTA Corrected lexically ordered string literal
+--!
+
+---------------------------------------------------------------- CDB0A01_1
+
+---------------------------------------------------------- FDB0A00.Pool1
+
+package FDB0A00.Pool1 is
+  User_Pool : Stack_Heap( 5_000 );
+end FDB0A00.Pool1;

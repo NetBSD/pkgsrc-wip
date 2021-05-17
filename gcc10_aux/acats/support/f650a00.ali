@@ -1,0 +1,55 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_FIXED_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f650a00%b		f650a00.adb		44dbc4f3 DE OO PK IU
+
+U f650a00%s		f650a00.ads		6f76f362 DE EE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f650a00.ads		20210516102805 6f76f362 f650a00%s
+D f650a00.adb		20210516102805 2bad3791 f650a00%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+G a e
+G c Z s b [set_alert_time f650a00 58 14 none]
+G c Z s b [alert_time f650a00 60 13 none]
+G c Z s s [alertDF f650a00 63 9 none]
+G c Z s s [alertIP f650a00 63 9 none]
+X 5 f650a00.ads
+50K9*F650A00 63E9 66l5 66e12 6|4b14 17l5 17t12
+51H9*Alert 54p14 54r33 58p14 58r41 60p13 60r32 63c9 65e14 6|6r41 12r32
+54x14*Handle 54=22
+54r22 A{51R9}
+58U14*Set_Alert_Time 58=30 58>48 6|6b14 9l8 9t22
+58r30 A{51R9} 6|6b30 8m7
+58o48 Time{duration} 6|6b48 8r17
+60V13*Alert_Time{duration} 60>25 6|12b13 15l8 15t18
+60r25 A{51R9} 6|12b25 14r14
+64o7*Time{duration} 6|8m9 14r16
+

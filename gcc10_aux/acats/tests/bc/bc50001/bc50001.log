@@ -1,0 +1,31 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc50001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc50001.adb
+bc50001.adb:45:17: expect type derived from "Weight" in instantiation
+bc50001.adb:45:17: instantiation abandoned
+bc50001.adb:49:26: expect type derived from "Weight" in instantiation
+bc50001.adb:49:26: instantiation abandoned
+bc50001.adb:53:26: expect type derived from "Weight" in instantiation
+bc50001.adb:53:26: instantiation abandoned
+bc50001.adb:57:26: expect type derived from "Weight" in instantiation
+bc50001.adb:57:26: instantiation abandoned
+bc50001.adb:61:26: expect type derived from "Weight" in instantiation
+bc50001.adb:61:26: instantiation abandoned
+bc50001.adb:65:26: expect type derived from "Weight" in instantiation
+bc50001.adb:65:26: instantiation abandoned
+bc50001.adb:89:17: expect type derived from "Names" in instantiation
+bc50001.adb:89:17: instantiation abandoned
+bc50001.adb:93:26: expect type derived from "Names" in instantiation
+bc50001.adb:93:26: instantiation abandoned
+bc50001.adb:97:16: expect type derived from "Names" in instantiation
+bc50001.adb:97:16: instantiation abandoned
+bc50001.adb:101:16: expect type derived from "Names" in instantiation
+bc50001.adb:101:16: instantiation abandoned
+bc50001.adb:125:26: expect type derived from "NamePtr" in instantiation
+bc50001.adb:125:26: instantiation abandoned
+bc50001.adb:129:26: expect type derived from "NamePtr" in instantiation
+bc50001.adb:129:26: instantiation abandoned
+bc50001.adb:133:16: expect type derived from "NamePtr" in instantiation
+bc50001.adb:133:16: instantiation abandoned
+bc50001.adb:137:16: expect type derived from "NamePtr" in instantiation
+bc50001.adb:137:16: instantiation abandoned
+gnatmake: "bc50001.adb" compilation error

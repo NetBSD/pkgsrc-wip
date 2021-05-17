@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35401a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35401a.adb
+b35401a.adb:41:30: non-static expression used for integer type bound
+b35401a.adb:41:30: "I1" is not static constant or named number (RM 4.9(5))
+b35401a.adb:42:35: non-static expression used for integer type bound
+b35401a.adb:42:35: "I2" is not static constant or named number (RM 4.9(5))
+b35401a.adb:46:31: non-static expression used for integer type bound
+b35401a.adb:46:31: "ICON" is not a static constant (RM 4.9(5))
+b35401a.adb:47:36: non-static expression used for integer type bound
+b35401a.adb:47:36: "ICON" is not a static constant (RM 4.9(5))
+b35401a.adb:48:32: non-static expression used for integer type bound
+b35401a.adb:48:32: non-static function call (RM 4.9(6,18))
+b35401a.adb:49:33: non-static expression used for integer type bound
+b35401a.adb:49:33: non-static function call (RM 4.9(6,18))
+gnatmake: "b35401a.adb" compilation error

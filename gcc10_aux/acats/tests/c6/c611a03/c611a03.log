@@ -1,0 +1,6 @@
+
+,.,. C611A03 ACATS 4.1 21-05-16 10:43:20
+---- C611A03 Check that the correct expressions are evaluated for
+                class-wide precondition and postconditions, and that
+                they are evaluated at the correct point.
+==== C611A03 PASSED ============================.

@@ -1,0 +1,5 @@
+
+,.,. C45220D ACATS 4.1 21-05-16 10:40:53
+---- C45220D CHECK THAT  '<' , '<=' , '>' , '>='  PRODUCE CORRECT
+                RESULTS ON DERIVED-BOOLEAN-TYPE OPERANDS.
+==== C45220D PASSED ============================.

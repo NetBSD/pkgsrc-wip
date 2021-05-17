@@ -1,0 +1,7 @@
+
+,.,. CXAA013 ACATS 4.1 21-05-16 10:55:00
+---- CXAA013 Check that the exception Mode_Error is raised when an
+                attempt is made to skip a line or page using the
+                predefined Skip_Line and Skip_Page procedures on a text 
+                file with mode Append_File.
+==== CXAA013 PASSED ============================.

@@ -1,0 +1,18 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b38003a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b38003a.adb
+b38003a.adb:64:13: array type is already constrained
+b38003a.adb:65:13: invalid constraint on access type
+b38003a.adb:66:13: array type is already constrained
+b38003a.adb:69:35: array type is already constrained
+b38003a.adb:70:35: invalid constraint on access type
+b38003a.adb:71:35: array type is already constrained
+b38003a.adb:75:24: array type is already constrained
+b38003a.adb:76:24: invalid constraint on access type
+b38003a.adb:77:24: array type is already constrained
+b38003a.adb:80:29: array type is already constrained
+b38003a.adb:81:29: invalid constraint on access type
+b38003a.adb:82:29: array type is already constrained
+b38003a.adb:84:23: array type is already constrained
+b38003a.adb:85:23: invalid constraint on access type
+b38003a.adb:86:23: array type is already constrained
+gnatmake: "b38003a.adb" compilation error

@@ -1,0 +1,8 @@
+
+,.,. C460010 ACATS 4.1 21-05-16 10:41:53
+---- C460010 Check that Constraint_Error is not raised if an array
+                aggregate without an others choice is assigned to an
+                object of a constrained array subtype, and the length of
+                each dimension of the aggregate equals the length of the
+                corresponding dimension of the target object.
+==== C460010 PASSED ============================.

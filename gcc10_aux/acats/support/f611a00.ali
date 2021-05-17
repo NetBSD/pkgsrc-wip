@@ -1,0 +1,121 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f611a00%b		f611a00.adb		1e1d4b87 DE OO PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W report%s		report.adb		report.ali
+Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+
+U f611a00%s		f611a00.ads		e6a28fd8 DE EE OO PK IU
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f611a00.ads		20210516102805 e6a28fd8 f611a00%s
+D f611a00.adb		20210516102805 27a63fb5 f611a00%b
+D report.ads		20210516102807 df19fbea report%s
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-imgboo.ads		20210408115627 f5d971eb system.img_bool%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+G a e
+G c Z s b [tc_clear f611a00 81 14 none]
+G c Z s b [tc_log_object_distance_post_class_called f611a00 83 13 none]
+G c Z s b [tc_log_object_distance_pre_class_called f611a00 85 13 none]
+G c Z s b [tc_log_object_distance_specific_post_called f611a00 87 13 none]
+G c Z s b [tc_log_object_distance_specific_pre_called f611a00 89 13 none]
+G c Z s b [tc_log_object_x_coord_specific_post_called f611a00 91 13 none]
+G c Z s b [tc_log_object_x_coord_specific_pre_called f611a00 93 13 none]
+G c Z s b [tc_log_object_y_coord_specific_post_called f611a00 95 13 none]
+G c Z s b [tc_log_object_y_coord_specific_pre_called f611a00 97 13 none]
+G c Z s b [tc_log_point_distance_post_class_called f611a00 99 13 none]
+G c Z s b [tc_log_point_distance_pre_class_called f611a00 101 13 none]
+G c Z s b [tc_log_triangle_distance_post_class_called f611a00 103 13 none]
+G c Z s b [tc_log_triangle_distance_pre_class_called f611a00 105 13 none]
+G c Z s b [tc_log_triangle_distance_specific_post_called f611a00 107 13 none]
+G c Z s b [tc_log_triangle_distance_specific_pre_called f611a00 109 13 none]
+G c Z s b [tc_output f611a00 111 14 none]
+G r c none [tc_log_object_distance_post_class_called f611a00 83 13 none] [failed report 100 16 none]
+G r c none [tc_log_object_distance_post_class_called f611a00 83 13 none] [comment report 123 16 none]
+G r c none [tc_log_object_distance_specific_post_called f611a00 87 13 none] [failed report 100 16 none]
+G r c none [tc_log_object_distance_specific_post_called f611a00 87 13 none] [comment report 123 16 none]
+G r c none [tc_log_point_distance_post_class_called f611a00 99 13 none] [failed report 100 16 none]
+G r c none [tc_log_point_distance_post_class_called f611a00 99 13 none] [comment report 123 16 none]
+G r c none [tc_output f611a00 111 14 none] [comment report 123 16 none]
+X 4 f611a00.ads
+50K9*F611A00 113l5 113e12 5|4b14 254l5 254t12
+52X4*TC_Order_Error 5|135r16 153r16
+54b4*TC_Object_Distance_Called{boolean} 5|8m7 42r15 63r14 113r15 165r24
+55b4*TC_Object_Distance_Is_Positive_Called{boolean} 5|9m7 169r24
+56b4*TC_Object_Not_Too_Far_Called{boolean} 5|10m7 173r24
+57b4*TC_Object_Not_Too_Near_Called{boolean} 5|11m7 177r24
+58b4*TC_Object_Distance_Post_Class_Called{boolean} 5|12m7 49m7 185r24
+59b4*TC_Object_Distance_Pre_Class_Called{boolean} 5|13m7 34m7 181r24
+60b4*TC_Object_Distance_Specific_Post_Called{boolean} 5|14m7 70m7 193r24
+61b4*TC_Object_Distance_Specific_Pre_Called{boolean} 5|15m7 56m7 189r24
+62b4*TC_Object_X_Coord_Called{boolean} 5|16m7 197r24
+63b4*TC_Object_X_Coord_Specific_Post_Called{boolean} 5|84m7
+64b4*TC_Object_X_Coord_Specific_Pre_Called{boolean} 5|77m7
+65b4*TC_Object_Y_Coord_Called{boolean} 5|17m7 201r24
+66b4*TC_Object_Y_Coord_Specific_Post_Called{boolean} 5|98m7
+67b4*TC_Object_Y_Coord_Specific_Pre_Called{boolean} 5|91m7
+68b4*TC_Point_Distance_Post_Class_Called{boolean} 5|18m7 120m7 209r24
+69b4*TC_Point_Distance_Pre_Class_Called{boolean} 5|19m7 105m7 205r24
+70b4*TC_Triangle_Distance_Called{boolean} 5|20m7 42r44 113r44 134r14 152r14
+. 213r24
+71b4*TC_Triangle_Distance_Is_Positive_Called{boolean} 5|21m7 217r24
+72b4*TC_Triangle_Not_Too_Far_Called{boolean} 5|22m7 221r24
+73b4*TC_Triangle_Not_Too_Near_Called{boolean} 5|23m7 225r24
+74b4*TC_Triangle_Distance_Post_Class_Called{boolean} 5|24m7 138m7 233r24
+75b4*TC_Triangle_Distance_Pre_Class_Called{boolean} 5|25m7 127m7 229r24
+76b4*TC_Triangle_Distance_Specific_Post_Called{boolean} 5|26m7 156m7 241r24
+77b4*TC_Triangle_Distance_Specific_Pre_Called{boolean} 5|27m7 145m7 237r24
+78b4*TC_Triangle_X_Coord_Called{boolean} 5|28m7 245r24
+79b4*TC_Triangle_Y_Coord_Called{boolean} 5|29m7 249r24
+81U14*TC_Clear 5|6b14 30l8 30t16
+83V13*TC_Log_Object_Distance_Post_Class_Called{boolean} 5|39b13 52l8 52t48
+85V13*TC_Log_Object_Distance_Pre_Class_Called{boolean} 5|32b13 37l8 37t47
+87V13*TC_Log_Object_Distance_Specific_Post_Called{boolean} 5|61b13 73l8 73t51
+89V13*TC_Log_Object_Distance_Specific_Pre_Called{boolean} 5|54b13 59l8 59t50
+91V13*TC_Log_Object_X_Coord_Specific_Post_Called{boolean} 5|82b13 87l8 87t50
+93V13*TC_Log_Object_X_Coord_Specific_Pre_Called{boolean} 5|75b13 80l8 80t49
+95V13*TC_Log_Object_Y_Coord_Specific_Post_Called{boolean} 5|96b13 101l8 101t50
+97V13*TC_Log_Object_Y_Coord_Specific_Pre_Called{boolean} 5|89b13 94l8 94t49
+99V13*TC_Log_Point_Distance_Post_Class_Called{boolean} 5|110b13 123l8 123t47
+101V13*TC_Log_Point_Distance_Pre_Class_Called{boolean} 5|103b13 108l8 108t46
+103V13*TC_Log_Triangle_Distance_Post_Class_Called{boolean} 5|132b13 141l8
+. 141t50
+105V13*TC_Log_Triangle_Distance_Pre_Class_Called{boolean} 5|125b13 130l8
+. 130t49
+107V13*TC_Log_Triangle_Distance_Specific_Post_Called{boolean} 5|150b13 159l8
+. 159t53
+109V13*TC_Log_Triangle_Distance_Specific_Pre_Called{boolean} 5|143b13 148l8
+. 148t52
+111U14*TC_Output 5|46s10 67s10 117s10 161b14 252l8 252t17
+X 6 report.ads
+84K9*Report 5|2w6 43r10 64r10 114r10 163r7 167r7 171r7 175r7 179r7 183r7
+. 187r7 191r7 195r7 199r7 203r7 207r7 211r7 215r7 219r7 223r7 227r7 231r7
+. 235r7 239r7 243r7 247r7 251r7 6|190e11
+100U16*Failed 5|43s17 64s17 114s17
+123U16*Comment 5|163s14 167s14 171s14 175s14 179s14 183s14 187s14 191s14
+. 195s14 199s14 203s14 207s14 211s14 215s14 219s14 223s14 227s14 231s14 235s14
+. 239s14 243s14 247s14 251s14
+

@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b330001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b330001.adb
+b330001.adb:20:39: unconstrained subtype not allowed (need initialization)
+b330001.adb:25:39: unconstrained subtype not allowed (need initialization)
+b330001.adb:28:39: unconstrained subtype not allowed (need initialization)
+b330001.adb:28:39: provide initial value or explicit discriminant values
+b330001.adb:28:39: or give default discriminant values for type "FullViewIsIndefinite"
+b330001.adb:36:39: unconstrained subtype not allowed (need initialization)
+b330001.adb:36:39: provide initial value or explicit discriminant values
+b330001.adb:36:39: or give default discriminant values for type "NUncons_Tag_Type"
+b330001.adb:42:40: unconstrained subtype not allowed (need initialization)
+b330001.adb:45:49: unconstrained element type in array declaration
+b330001.adb:49:24: unconstrained subtype in component declaration
+b330001.adb:53:43: unconstrained element type in array declaration
+b330001.adb:57:15: unconstrained element type in array declaration
+b330001.adb:63:41: class-wide subtype with unknown discriminants in component declaration
+b330001.adb:67:60: unconstrained element type in array declaration
+b330001.adb:74:35: unconstrained element type in array declaration
+b330001.adb:80:14: unconstrained subtype not allowed (need initialization)
+b330001.adb:80:14: provide initial value or explicit array bounds
+gnatmake: "b330001.adb" compilation error

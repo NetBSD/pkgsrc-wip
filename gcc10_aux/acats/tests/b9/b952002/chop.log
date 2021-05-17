@@ -1,0 +1,7 @@
+b952002.a:57:27: missing "when"
+b952002.a:77:07: "end Wait_at_Meter;" expected
+b952002.a:83:07: "end Hold_by_Priority;" expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b952002.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b952002.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b952002.a into:
+   b952002.adb

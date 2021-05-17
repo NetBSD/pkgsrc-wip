@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001a.adb
+b59001a.adb:51:12: "NONEXISTENT1" is undefined
+b59001a.adb:62:27: "NONEXISTENT" is undefined (more references follow)
+b59001a.adb:63:21: cannot exit from program unit or accept statement
+b59001a.adb:64:27: "OUTER_PROC_LABEL" is undefined
+b59001a.adb:70:16: cannot exit from program unit or accept statement
+b59001a.adb:75:17: "NONEXISTENT2" is undefined
+b59001a.adb:87:21: cannot exit from program unit or accept statement
+b59001a.adb:88:21: cannot exit from program unit or accept statement
+b59001a.adb:89:27: "OUT2_LABEL" is undefined (more references follow)
+b59001a.adb:90:27: "OUTER_FUNC_LABEL" is undefined
+b59001a.adb:97:16: cannot exit from program unit or accept statement
+b59001a.adb:98:16: cannot exit from program unit or accept statement
+b59001a.adb:105:17: "NONEXISTENT3" is undefined
+b59001a.adb:127:21: cannot exit from program unit or accept statement
+b59001a.adb:128:21: cannot exit from program unit or accept statement
+b59001a.adb:129:27: "OUT3_LABEL" is undefined (more references follow)
+b59001a.adb:130:27: "OUTER_PACK_LABEL" is undefined
+b59001a.adb:136:16: cannot exit from program unit or accept statement
+b59001a.adb:137:16: cannot exit from program unit or accept statement
+b59001a.adb:144:17: "NONEXISTENT4" is undefined
+gnatmake: "b59001a.adb" compilation error

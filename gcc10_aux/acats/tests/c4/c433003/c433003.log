@@ -1,0 +1,6 @@
+
+,.,. C433003 ACATS 4.1 21-05-16 10:36:10
+---- C433003 Check that for each association with a <> in an array
+                aggregate, the component is initialized by default.
+                (Scalar types with Default_Values.).
+==== C433003 PASSED ============================.

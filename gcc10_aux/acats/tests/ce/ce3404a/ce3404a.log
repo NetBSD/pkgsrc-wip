@@ -1,0 +1,5 @@
+
+,.,. CE3404A ACATS 4.1 21-05-16 10:53:09
+---- CE3404A CHECK THAT END_OF_LINE RAISES MODE_ERROR WHEN APPLIED TO AN
+                OUT_FILE.
+==== CE3404A PASSED ============================.

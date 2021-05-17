@@ -1,0 +1,19 @@
+b24204a.ada:42:16: digit >= base
+b24204a.ada:43:16: digit >= base
+b24204a.ada:44:16: digit >= base
+b24204a.ada:45:16: digit >= base
+b24204a.ada:46:16: digit >= base
+b24204a.ada:47:16: digit >= base
+b24204a.ada:48:16: digit >= base
+b24204a.ada:49:16: digit >= base
+b24204a.ada:50:17: digit >= base
+b24204a.ada:51:17: digit >= base
+b24204a.ada:52:17: digit >= base
+b24204a.ada:53:17: digit >= base
+b24204a.ada:54:17: digit >= base
+b24204a.ada:55:17: digit >= base
+b24204a.ada:56:17: extended digit expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24204a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24204a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24204a.ada into:
+   b24204a.adb

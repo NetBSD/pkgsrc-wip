@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3002a.adb
+be3002a.adb:45:06: left hand of assignment must not be limited type
+be3002a.adb:49:14: "INOUT_FILE" is undefined (more references follow)
+gnatmake: "be3002a.adb" compilation error

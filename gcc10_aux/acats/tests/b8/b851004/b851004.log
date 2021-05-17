@@ -1,0 +1,24 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b851004.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b851004.adb
+b851004.adb:80:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:83:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:96:13: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:102:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:105:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:121:07: instantiation error at line 115
+b851004.adb:121:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:121:34: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:132:07: instantiation error at line 128
+b851004.adb:132:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:132:34: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:144:07: instantiation error at line 138
+b851004.adb:144:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:144:34: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:155:07: instantiation error at line 151
+b851004.adb:155:07: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:155:34: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:186:10: formal object does not have a null exclusion(RM 8.5.1(4.6/2))
+b851004.adb:191:10: renamed formal does not exclude "null" (RM 8.5.1(4.6/2))
+b851004.adb:212:10: formal object does not have a null exclusion(RM 8.5.1(4.6/2))
+b851004.adb:219:10: renamed object does not exclude "null" (RM 8.5.1(4.6/2))
+gnatmake: "b851004.adb" compilation error

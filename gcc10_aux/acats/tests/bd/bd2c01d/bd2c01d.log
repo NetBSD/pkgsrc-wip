@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2c01d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2c01d.adb
+bd2c01d.adb:42:10: storage size cannot be given for "T"
+bd2c01d.adb:46:10: cannot specify attribute for subtype
+gnatmake: "bd2c01d.adb" compilation error

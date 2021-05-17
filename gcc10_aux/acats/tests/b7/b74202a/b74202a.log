@@ -1,0 +1,12 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74202a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74202a.adb
+b74202a.adb:57:12: there is no applicable operator "<" for type "ARR" defined at line 41
+b74202a.adb:61:12: there is no applicable operator "<=" for type "ARR" defined at line 41
+b74202a.adb:65:12: there is no applicable operator ">" for type "ARR" defined at line 41
+b74202a.adb:69:12: there is no applicable operator ">=" for type "ARR" defined at line 41
+b74202a.adb:73:12: there is no applicable operator "AND" for type "BOOL" defined at line 40
+b74202a.adb:77:12: there is no applicable operator "OR" for type "BOOL" defined at line 40
+b74202a.adb:81:12: there is no applicable operator "XOR" for type "BOOL" defined at line 40
+b74202a.adb:85:12: expected type "STR" defined at line 39
+b74202a.adb:85:12: found a string type
+gnatmake: "b74202a.adb" compilation error

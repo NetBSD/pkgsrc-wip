@@ -1,0 +1,7 @@
+
+,.,. CA11C01 ACATS 4.1 21-05-16 10:48:53
+---- CA11C01 Check that when primitive operations declared in a child
+                package override operations declared in ancestor
+                packages, a client of the child package inherits the
+                operations correctly.
+==== CA11C01 PASSED ============================.

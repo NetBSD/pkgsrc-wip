@@ -1,0 +1,131 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36101a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36101a.adb
+b36101a.adb:57:40: incompatible types in range
+b36101a.adb:58:38: incompatible types in range
+b36101a.adb:59:40: expected type "DISC" defined at line 52
+b36101a.adb:59:40: found type universal real
+b36101a.adb:60:39: incompatible types in range
+b36101a.adb:61:38: incompatible types in range
+b36101a.adb:62:39: expected type "DISC" defined at line 52
+b36101a.adb:62:39: found type "FX" defined at line 38
+b36101a.adb:65:24: discrete type required for range
+b36101a.adb:65:36: expected type "FX" defined at line 38
+b36101a.adb:65:36: found type universal integer
+b36101a.adb:66:24: discrete type required for range
+b36101a.adb:66:37: incompatible types in range
+b36101a.adb:67:24: discrete type required for range
+b36101a.adb:67:36: incompatible types in range
+b36101a.adb:68:24: discrete type required for range
+b36101a.adb:70:24: discrete type required for range
+b36101a.adb:70:38: expected private type "PRIV" defined at line 43
+b36101a.adb:70:38: found type universal integer
+b36101a.adb:71:18: discrete type required for range
+b36101a.adb:74:22: discrete type required for range
+b36101a.adb:75:22: incompatible types in range
+b36101a.adb:76:23: discrete type required for range
+b36101a.adb:77:23: discrete type required for range
+b36101a.adb:78:28: discrete type required for range
+b36101a.adb:79:27: incompatible types in range
+b36101a.adb:80:28: incompatible types in range
+b36101a.adb:81:28: discrete type required for range
+b36101a.adb:83:18: ambiguous character literal
+b36101a.adb:83:18: possible interpretation: Character
+b36101a.adb:83:18: possible interpretation: Wide_Character
+b36101a.adb:83:18: possible interpretation: Wide_Wide_Character
+b36101a.adb:90:25: discrete type required for range
+b36101a.adb:92:28: discrete type required for range
+b36101a.adb:93:24: discrete type required for range
+b36101a.adb:93:37: expected type "REC" defined at line 85
+b36101a.adb:93:37: found type universal integer
+b36101a.adb:97:29: expected type "Standard.Integer"
+b36101a.adb:97:29: found type "FX" defined at line 38
+b36101a.adb:99:26: expected type "Standard.Integer"
+b36101a.adb:99:26: found type universal real
+b36101a.adb:100:25: expected type "Standard.Integer"
+b36101a.adb:100:25: found private type "PRIV" defined at line 43
+b36101a.adb:101:25: expected type "Standard.Integer"
+b36101a.adb:101:25: found type "FX" defined at line 38
+b36101a.adb:106:23: expected type "Standard.Integer"
+b36101a.adb:106:23: found a string type
+b36101a.adb:107:21: incompatible types in range
+b36101a.adb:108:33: expected type "Standard.Integer"
+b36101a.adb:108:33: found a string type
+b36101a.adb:109:32: expected type "Standard.Integer"
+b36101a.adb:109:32: found type "FX" defined at line 38
+b36101a.adb:110:23: expected type "Standard.Integer"
+b36101a.adb:110:23: found type universal real
+b36101a.adb:111:28: discrete type required for range
+b36101a.adb:115:17: ambiguous character literal
+b36101a.adb:115:17: possible interpretation: Character
+b36101a.adb:115:17: possible interpretation: Wide_Character
+b36101a.adb:115:17: possible interpretation: Wide_Wide_Character
+b36101a.adb:118:19: expected type "Standard.Integer"
+b36101a.adb:118:19: found type "FX" defined at line 38
+b36101a.adb:119:19: expected type "Standard.Integer"
+b36101a.adb:119:19: found private type "PRIV" defined at line 43
+b36101a.adb:120:20: expected type "Standard.Integer"
+b36101a.adb:120:20: found type universal real
+b36101a.adb:121:17: incompatible types in range
+b36101a.adb:126:11: expected type "Standard.Integer"
+b36101a.adb:126:11: found type "FX" defined at line 38
+b36101a.adb:126:16: expected type "Standard.Integer"
+b36101a.adb:126:16: found type "FX" defined at line 38
+b36101a.adb:127:12: expect subtype of type "Standard.Integer"
+b36101a.adb:129:11: expected type "Standard.Integer"
+b36101a.adb:129:11: found private type "PRIV" defined at line 43
+b36101a.adb:129:16: expected type "Standard.Integer"
+b36101a.adb:129:16: found private type "PRIV" defined at line 43
+b36101a.adb:130:11: incompatible types in range
+b36101a.adb:130:17: expected type "Standard.Integer"
+b36101a.adb:130:17: found type universal real
+b36101a.adb:131:33: incompatible types in range
+b36101a.adb:132:14: expected type "Standard.Integer"
+b36101a.adb:132:14: found type "FX" defined at line 38
+b36101a.adb:134:18: expected type "Standard.Integer"
+b36101a.adb:134:18: found private type "PRIV" defined at line 43
+b36101a.adb:137:20: expected an integer type
+b36101a.adb:137:20: found type "FX" defined at line 38
+b36101a.adb:138:20: incompatible types in range
+b36101a.adb:139:16: expect subtype of an integer type
+b36101a.adb:144:19: expected a discrete type
+b36101a.adb:144:19: found type universal real
+b36101a.adb:148:19: incompatible types in range
+b36101a.adb:152:17: incompatible types in range
+b36101a.adb:156:19: expected a discrete type
+b36101a.adb:156:19: found type "FX" defined at line 38
+b36101a.adb:160:19: incompatible types in range
+b36101a.adb:164:18: incompatible types in range
+b36101a.adb:168:15: discrete type required for range
+b36101a.adb:168:30: incompatible types in range
+b36101a.adb:172:15: discrete type required for range
+b36101a.adb:172:29: incompatible types in range
+b36101a.adb:176:15: expected a discrete type
+b36101a.adb:176:15: found type "FX" defined at line 38
+b36101a.adb:181:15: expected a discrete type
+b36101a.adb:181:15: found private type "PRIV" defined at line 43
+b36101a.adb:186:15: expected a discrete type
+b36101a.adb:186:15: found type universal real
+b36101a.adb:191:15: discrete type required for range
+b36101a.adb:191:27: expected type "FX" defined at line 38
+b36101a.adb:191:27: found type universal integer
+b36101a.adb:195:15: discrete type required for range
+b36101a.adb:195:28: incompatible types in range
+b36101a.adb:199:31: incompatible types in range
+b36101a.adb:203:31: incompatible types in range
+b36101a.adb:207:32: incompatible types in range
+b36101a.adb:211:33: incompatible types in range
+b36101a.adb:215:15: expected a discrete type
+b36101a.adb:215:15: found type "FX" defined at line 38
+b36101a.adb:215:32: expected type "Standard.Integer"
+b36101a.adb:215:32: found type "FX" defined at line 38
+b36101a.adb:219:15: expected a discrete type
+b36101a.adb:219:15: found type universal real
+b36101a.adb:219:33: expected type "Standard.Integer"
+b36101a.adb:219:33: found type universal real
+b36101a.adb:223:15: expected a discrete type
+b36101a.adb:223:15: found a string type
+b36101a.adb:223:35: expected type "Standard.Character"
+b36101a.adb:223:35: found a string type
+b36101a.adb:227:19: expected a discrete type
+b36101a.adb:227:19: found type "REC" defined at line 85
+gnatmake: "b36101a.adb" compilation error

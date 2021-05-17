@@ -1,0 +1,18 @@
+b55a01a.ada:51:06: "END LOOP L2;" expected
+b55a01a.ada:54:01: only one label allowed on block or loop
+b55a01a.ada:60:15: misspelling of "L5"
+b55a01a.ada:64:06: "END LOOP L6;" expected
+b55a01a.ada:68:06: "END LOOP;" expected for "LOOP" at line 66
+b55a01a.ada:73:11: "END LOOP L8;" expected
+b55a01a.ada:79:06: "END LOOP;" expected for "LOOP" at line 77
+b55a01a.ada:85:20: misspelling of "L11A"
+b55a01a.ada:90:06: "END LOOP;" expected for "LOOP" at line 88
+b55a01a.ada:109:16: subscripted loop parameter not allowed
+b55a01a.ada:114:16: selected loop parameter not allowed
+b55a01a.ada:119:17: selected loop parameter not allowed
+b55a01a.ada:124:17: selected loop parameter not allowed
+b55a01a.ada:133:17: selected loop parameter not allowed
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01a.ada into:
+   b55a01a.adb

@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1108a.ada into:
+   other_pkg.ads
+   other_pkg.adb
+   ca1108a_pkg.ads
+   ca1108a_pkg.adb
+   ca1108a.adb
+   ca1108a_pkg-sub.adb
+   ca1108a_pkg-sub-sub2.adb

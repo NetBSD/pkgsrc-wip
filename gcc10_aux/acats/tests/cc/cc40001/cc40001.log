@@ -1,0 +1,6 @@
+
+,.,. CC40001 ACATS 4.1 21-05-16 10:50:15
+---- CC40001 Check that adjust and finalize are called on the constant
+                object created by the evaluation of a generic
+                association for a formal object of mode in.
+==== CC40001 PASSED ============================.

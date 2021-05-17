@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1110a1m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1110a1m.adb
+ba1110a1m-ba1110a2.adb:29:05: "BA1110A0" is not visible (more references follow)
+ba1110a1m-ba1110a2.adb:29:05: non-visible declaration at ba1110a0.ads:33
+gnatmake: "ba1110a1m.adb" compilation error

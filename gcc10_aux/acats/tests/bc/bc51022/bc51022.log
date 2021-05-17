@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51022.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51022.adb
+bc51022_0.ads:86:21: premature usage of incomplete type
+bc51022_0.ads:88:29: premature usage of incomplete type
+bc51022_0.ads:91:09: premature usage of incomplete type
+bc51022_0.ads:91:37: invalid use of type before its full declaration
+bc51022_0.ads:97:21: premature usage of incomplete type
+bc51022_0.ads:99:29: premature usage of incomplete type
+bc51022_0.ads:102:09: premature usage of incomplete type
+bc51022_0.ads:102:37: invalid use of type before its full declaration
+bc51022_1.ads:76:20: invalid use of type before its full declaration
+bc51022_1.ads:78:31: invalid use of type before its full declaration
+bc51022_1.ads:82:22: invalid use of type before its full declaration
+bc51022_1.ads:85:47: invalid use of type before its full declaration
+bc51022_1.ads:89:35: invalid use of type before its full declaration
+bc51022_1.ads:95:20: invalid use of type before its full declaration
+bc51022_1.ads:97:31: invalid use of type before its full declaration
+bc51022_1.ads:101:22: invalid use of type before its full declaration
+bc51022_1.ads:104:47: invalid use of type before its full declaration
+bc51022_1.ads:108:35: invalid use of type before its full declaration
+gnatmake: "bc51022.adb" compilation error

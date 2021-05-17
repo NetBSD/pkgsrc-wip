@@ -1,0 +1,24 @@
+b24104a.ada:32:34: negative exponent not allowed for integer literal
+b24104a.ada:33:34: negative exponent not allowed for integer literal
+b24104a.ada:34:42: negative exponent not allowed for integer literal
+b24104a.ada:35:41: negative exponent not allowed for integer literal
+b24104a.ada:36:43: negative exponent not allowed for integer literal
+b24104a.ada:40:43: negative exponent not allowed for integer literal
+b24104a.ada:48:30: negative exponent not allowed for integer literal
+b24104a.ada:49:30: negative exponent not allowed for integer literal
+b24104a.ada:50:36: negative exponent not allowed for integer literal
+b24104a.ada:51:27: negative exponent not allowed for integer literal
+b24104a.ada:58:16: negative exponent not allowed for integer literal
+b24104a.ada:59:16: negative exponent not allowed for integer literal
+b24104a.ada:61:19: negative exponent not allowed for integer literal
+b24104a.ada:62:19: negative exponent not allowed for integer literal
+b24104a.ada:64:24: negative exponent not allowed for integer literal
+b24104a.ada:65:24: negative exponent not allowed for integer literal
+b24104a.ada:69:19: negative exponent not allowed for integer literal
+b24104a.ada:70:39: negative exponent not allowed for integer literal
+b24104a.ada:71:19: negative exponent not allowed for integer literal
+b24104a.ada:72:39: negative exponent not allowed for integer literal
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24104a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24104a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24104a.ada into:
+   b24104a.adb

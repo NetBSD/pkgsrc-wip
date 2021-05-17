@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99003a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99003a.adb
+b99003a.adb:56:21: invalid entry name
+b99003a.adb:64:20: too many subscripts in entry reference
+gnatmake: "b99003a.adb" compilation error

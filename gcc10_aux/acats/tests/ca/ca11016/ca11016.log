@@ -1,0 +1,6 @@
+
+,.,. CA11016 ACATS 4.1 21-05-16 10:48:44
+---- CA11016 Check that body of a public child package can use its
+                sibling private generic package declarations and
+                operations.
+==== CA11016 PASSED ============================.

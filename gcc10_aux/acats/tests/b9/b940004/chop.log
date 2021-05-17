@@ -1,0 +1,16 @@
+b940004_1.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400041.a
+b940004_1.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+b940004_2.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400042.a
+b940004_2.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+b940004_3.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400043.a
+b940004_3.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+b940004_4.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400044.a
+b940004_4.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+b940004_5.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400045.a
+b940004_5.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+b940004_6.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400046.a
+b940004_6.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+b940004_7.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400047.a
+b940004_7.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940004.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9400040.a
+use -w to overwrite files and keep last version
+no source files written

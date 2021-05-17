@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2007a0.ada into:
+   ca2007a0m.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2007a1.ada into:
+   ca2007a0m-ca2007a1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2007a2.ada into:
+   ca2007a0m-ca2007a2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2007a3.ada into:
+   ca2007a0m-ca2007a3.adb

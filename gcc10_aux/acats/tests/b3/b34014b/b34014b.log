@@ -1,0 +1,27 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34014b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34014b.adb
+b34014b.adb:67:37: expected type "QT" defined at line 60
+b34014b.adb:67:37: found type "T" defined at line 39
+b34014b.adb:83:32: expected type "QS" defined at line 70
+b34014b.adb:83:32: found type "T" defined at line 39
+b34014b.adb:90:27: expected type "QT" defined at line 60
+b34014b.adb:90:27: found type "T" defined at line 39
+b34014b.adb:94:27: expected type "RT" defined at line 91
+b34014b.adb:94:27: found type "T" defined at line 39
+b34014b.adb:116:37: expected type "QT" defined at line 108
+b34014b.adb:116:37: found type "T" defined at line 39
+b34014b.adb:132:32: expected type "QS" defined at line 119
+b34014b.adb:132:32: found type "T" defined at line 39
+b34014b.adb:139:27: expected type "QT" defined at line 108
+b34014b.adb:139:27: found type "T" defined at line 39
+b34014b.adb:143:27: expected type "RT" defined at line 140
+b34014b.adb:143:27: found type "T" defined at line 39
+b34014b.adb:171:27: expected type "QT" defined at line 166
+b34014b.adb:171:27: found type "T" defined at line 39
+b34014b.adb:176:27: expected type "QS" defined at line 173
+b34014b.adb:176:27: found type "T" defined at line 39
+b34014b.adb:183:27: expected type "QT" defined at line 166
+b34014b.adb:183:27: found type "T" defined at line 39
+b34014b.adb:187:27: expected type "RT" defined at line 184
+b34014b.adb:187:27: found type "T" defined at line 39
+gnatmake: "b34014b.adb" compilation error

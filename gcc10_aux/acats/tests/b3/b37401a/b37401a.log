@@ -1,0 +1,22 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37401a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37401a.adb
+b37401a.adb:67:19: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:71:19: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:74:19: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:78:19: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:82:19: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:88:24: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:90:24: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:114:25: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:116:25: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:124:25: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:126:25: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:136:20: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:138:20: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:140:20: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:142:20: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:144:20: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:149:24: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:150:25: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b37401a.adb:156:25: prefix of "CONSTRAINED" attribute must be object of discriminated type
+gnatmake: "b37401a.adb" compilation error

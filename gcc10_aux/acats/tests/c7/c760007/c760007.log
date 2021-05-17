@@ -1,0 +1,11 @@
+
+,.,. C760007 ACATS 4.1 21-05-16 10:44:30
+---- C760007 Check that Adjust is called for the execution of a return
+                statement for a function returning a result containing a
+                controlled type.  Check that Adjust is called when
+                evaluating an aggregate component association for a
+                controlled component.  Check that Adjust is called for
+                the assignment of the ancestor expression of an
+                extension aggregate when the type of the aggregate is
+                controlled.
+==== C760007 PASSED ============================.

@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a45a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a45a.adb
+bd2a45a.adb:35:30: size for "FLOAT_TYPE" too small, minimum allowed is 32
+gnatmake: "bd2a45a.adb" compilation error

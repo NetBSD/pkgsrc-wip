@@ -1,0 +1,6 @@
+
+,.,. C390010 ACATS 4.1 21-05-16 10:34:05
+---- C390010 Check that if S is a subtype of a tagged type T, and if S
+                is constrained, then the allowable values of S'Class are
+                only those that, when converted to T, belong to S.
+==== C390010 PASSED ============================.

@@ -1,0 +1,5 @@
+
+,.,. C460013 ACATS 4.1 21-05-16 10:41:54
+---- C460013 Check that if the target subtype excludes null, the value
+                is not null - access parameter cases.
+==== C460013 PASSED ============================.

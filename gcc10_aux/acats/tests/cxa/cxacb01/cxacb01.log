@@ -1,0 +1,6 @@
+
+,.,. CXACB01 ACATS 4.1 21-05-16 10:55:16
+---- CXACB01 Check that the default attributes 'Input and 'Output work
+                properly when used with objects of record, natural, and 
+                array types.
+==== CXACB01 PASSED ============================.

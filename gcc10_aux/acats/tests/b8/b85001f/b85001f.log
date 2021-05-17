@@ -1,0 +1,25 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85001f.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85001f.adb
+b85001f.adb:57:26: expected type "Standard.Integer"
+b85001f.adb:57:26: found type "ENUM" defined at line 39
+b85001f.adb:58:26: invalid use of subtype mark in expression or call
+b85001f.adb:59:26: expected type "Standard.Integer"
+b85001f.adb:59:26: found exception name
+b85001f.adb:60:26: expected type "Standard.Integer"
+b85001f.adb:60:26: found package or procedure name
+b85001f.adb:61:26: expected type "Standard.Integer"
+b85001f.adb:61:26: found package name
+b85001f.adb:62:26: expected type "Standard.Integer"
+b85001f.adb:62:26: found procedure name instead of function
+b85001f.adb:63:29: expected type "Standard.Integer"
+b85001f.adb:63:29: found package or procedure name
+b85001f.adb:64:29: expected type "Standard.Integer"
+b85001f.adb:64:29: found package or procedure name
+b85001f.adb:65:33: missing argument for "PRED" attribute
+b85001f.adb:97:35: expected type "Standard.Integer"
+b85001f.adb:97:35: found package or procedure name
+b85001f.adb:98:36: expected type "Standard.Integer"
+b85001f.adb:98:36: found package or procedure name
+b85001f.adb:99:36: expected type "Standard.Integer"
+b85001f.adb:99:36: found package or procedure name
+gnatmake: "b85001f.adb" compilation error

@@ -1,0 +1,12 @@
+
+,.,. C760002 ACATS 4.1 21-05-16 10:44:29
+---- C760002 Check that assignment causes the Adjust operation of the
+                type to be called.  Check that Adjust is called after
+                copying the value of the source expression to the target
+                object.  Check that Adjust is called for all controlled 
+                components when the containing object is assigned. 
+                Check that Adjust is called for components before the
+                containing object is adjusted.  Check that Adjust is not
+                called for a Limited_Controlled type by the
+                implementation.
+==== C760002 PASSED ============================.

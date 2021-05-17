@@ -1,0 +1,7 @@
+
+,.,. CD10001 ACATS 4.1 21-05-16 10:50:35
+---- CD10001 Check that representation items containing nonstatic
+                expressions are supported in the case that the
+                representation item is a name that statically denotes a 
+                constant declared before the entity.
+==== CD10001 PASSED ============================.

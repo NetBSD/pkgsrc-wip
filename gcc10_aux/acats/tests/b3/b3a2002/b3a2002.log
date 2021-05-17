@@ -1,0 +1,26 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2002.adb
+b3a2002.adb:68:31: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:78:43: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:89:22: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:94:30: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:117:25: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:125:52: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:172:39: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:175:39: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:181:37: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:196:16: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:232:21: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:235:21: object subtype must statically match designated subtype
+b3a2002.adb:243:21: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:253:27: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:268:27: prefix of "ACCESS" attribute must be aliased
+b3a2002.adb:288:48: expected type "Acc_To_Another_Tag" defined at line 277
+b3a2002.adb:288:48: found type access to "Acc_To_Another_Tag" defined at line 288
+b3a2002.adb:308:24: access-to-variable designates constant
+b3a2002.adb:319:14: access-to-variable designates constant
+b3a2002.adb:328:37: access-to-variable designates constant
+b3a2002.adb:342:30: access-to-variable designates constant
+b3a2002.adb:356:30: expected type "AccArray_Of_Alliased_RWTag" defined at line 349
+b3a2002.adb:356:30: found type access to "RWTag" defined at line 356
+gnatmake: "b3a2002.adb" compilation error

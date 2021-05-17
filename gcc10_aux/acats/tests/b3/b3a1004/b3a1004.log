@@ -1,0 +1,33 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a10042.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a10042.adb
+b3a10042.adb:56:14: missing full declaration for type "T2H" defined at b3a10042.ads:21
+b3a10042.adb:56:14: missing full declaration for type "T2J" defined at b3a10042.ads:22
+b3a10042.adb:82:13: "T2H" conflicts with declaration at b3a10042.ads:21
+b3a10042.adb:99:14: full declaration of type "T35" defined at line 110 must be a record extension
+b3a10042.adb:100:14: full declaration of type "T36" defined at line 111 must be a record extension
+b3a10042.adb:102:14: full declaration of type "T31" defined at line 95 must be a tagged type
+b3a10042.adb:103:14: full declaration of type "T32" defined at line 96 must be a tagged type
+b3a10042.adb:104:14: full declaration of type "T33" defined at line 97 must be a tagged type
+b3a10042.adb:105:24: full declaration of type "T34" defined at line 98 must be a tagged type
+b3a10042.adb:118:18: full declaration of type "T41" defined at line 124 must be a record extension
+b3a10042.adb:120:18: full declaration of type "T43" defined at line 126 must be a record extension
+b3a10042.adb:121:18: full declaration of type "T44" defined at line 127 must be a record extension
+b3a10042.adb:122:18: full declaration of type "T45" defined at line 128 must be a record extension
+b3a10042.adb:125:18: full declaration of type "T42" defined at line 119 must be a tagged type
+b3a10042.adb:144:14: full declaration of type "T54" defined at line 150 must be a record extension
+b3a10042.adb:145:14: full declaration of type "T55" defined at line 151 must be a record extension
+b3a10042.adb:147:14: full declaration of type "T51" defined at line 141 must be a tagged type
+b3a10042.adb:148:14: full declaration of type "T52" defined at line 142 must be a tagged type
+b3a10042.adb:149:14: full declaration of type "T53" defined at line 143 must be a tagged type
+b3a10042.ads:5:10: full declaration of type "T21" defined at b3a10042.adb:57 must be a tagged type
+b3a10042.ads:6:10: full declaration of type "T22" defined at b3a10042.adb:58 must be a tagged type
+b3a10042.ads:7:10: full declaration of type "T23" defined at b3a10042.adb:59 must be a tagged type
+b3a10042.ads:8:10: full declaration of type "T24" defined at b3a10042.adb:60 must be a tagged type
+b3a10042.ads:9:10: full declaration of type "T25" defined at b3a10042.adb:61 must be a tagged type
+b3a10042.ads:10:10: full declaration of type "T26" defined at b3a10042.adb:62 must be a tagged type
+b3a10042.ads:11:10: full declaration of type "T27" defined at b3a10042.adb:63 must be a tagged type
+b3a10042.ads:13:10: full declaration of type "T29" defined at b3a10042.adb:65 must be a tagged type
+b3a10042.ads:15:10: full declaration of type "T2B" defined at b3a10042.adb:75 must be a tagged type
+b3a10042.ads:18:10: full declaration of type "T2E" defined at b3a10042.adb:78 must be a record extension
+b3a10042.ads:20:10: full declaration of type "T2G" defined at b3a10042.adb:80 must be a record extension
+gnatmake: "b3a10042.adb" compilation error

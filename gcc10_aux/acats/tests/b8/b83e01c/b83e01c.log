@@ -1,0 +1,36 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83e01c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83e01c.adb
+b83e01c.adb:50:11: "PARAM1" conflicts with declaration at line 38
+b83e01c.adb:52:11: "PARAM2" conflicts with declaration at line 38
+b83e01c.adb:54:11: "PARAM3" conflicts with declaration at line 38
+b83e01c.adb:56:16: "PARAM4" conflicts with declaration at line 38
+b83e01c.adb:58:19: "PARAM5" conflicts with declaration at line 38
+b83e01c.adb:60:19: "PARAM6" conflicts with declaration at line 39
+b83e01c.adb:64:10: "PARAM7" conflicts with declaration at line 39
+b83e01c.adb:73:11: "PARAM1" conflicts with declaration at line 42
+b83e01c.adb:75:21: "PARAM2" conflicts with declaration at line 42
+b83e01c.adb:80:20: "PARAM3" conflicts with declaration at line 42
+b83e01c.adb:86:08: "PARAM4" conflicts with declaration at line 42
+b83e01c.adb:94:16: "PARAM1" conflicts with declaration at line 45
+b83e01c.adb:103:03: "PARAM2" conflicts with declaration at line 45
+b83e01c.adb:109:11: "PARAM1" conflicts with declaration at line 106
+b83e01c.adb:111:11: "PARAM2" conflicts with declaration at line 106
+b83e01c.adb:113:11: "PARAM3" conflicts with declaration at line 106
+b83e01c.adb:115:16: "PARAM4" conflicts with declaration at line 106
+b83e01c.adb:117:19: "PARAM5" conflicts with declaration at line 106
+b83e01c.adb:119:19: "PARAM6" conflicts with declaration at line 107
+b83e01c.adb:123:10: "PARAM7" conflicts with declaration at line 107
+b83e01c.adb:132:11: "PARAM1" conflicts with declaration at line 130
+b83e01c.adb:134:21: "PARAM2" conflicts with declaration at line 130
+b83e01c.adb:139:20: "PARAM3" conflicts with declaration at line 130
+b83e01c.adb:145:08: "PARAM4" conflicts with declaration at line 130
+b83e01c.adb:155:21: "PARAM1" conflicts with declaration at line 152
+b83e01c.adb:155:21: generic units cannot be overloaded
+b83e01c.adb:158:20: "PARAM2" conflicts with declaration at line 152
+b83e01c.adb:158:20: generic units cannot be overloaded
+b83e01c.adb:161:19: "PARAM3" conflicts with declaration at line 152
+b83e01c.adb:167:16: "PARAM4" conflicts with declaration at line 152
+b83e01c.adb:185:21: previous generic unit cannot be overloaded
+b83e01c.adb:185:21: "PARAM3" conflicts with declaration at line 161
+b83e01c.adb:193:03: "PARAM5" conflicts with declaration at line 153
+gnatmake: "b83e01c.adb" compilation error

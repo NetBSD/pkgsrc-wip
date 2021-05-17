@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1101a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1101a.adb
+bc1101a.adb:35:16: formal generic objects cannot have mode "OUT"
+gnatmake: "bc1101a.adb" compilation error

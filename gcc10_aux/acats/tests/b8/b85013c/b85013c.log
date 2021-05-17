@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85013c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85013c.adb
+b85013c.adb:56:31: "OTHERS" choice not allowed here
+b85013c.adb:65:31: "OTHERS" choice not allowed here
+b85013c.adb:69:31: "OTHERS" choice not allowed here
+b85013c.adb:88:10: "OTHERS" choice not allowed here
+gnatmake: "b85013c.adb" compilation error

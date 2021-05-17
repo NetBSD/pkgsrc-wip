@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b05a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b05a.adb
+b54b05a.adb:48:11: missing case value: 1
+b54b05a.adb:54:11: missing case value: 51
+b54b05a.adb:61:11: missing case values: -16#8000_0000# .. 0
+b54b05a.adb:61:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b05a.adb:61:18: subtype of expression is not static, alternatives must cover base type
+b54b05a.adb:65:11: missing case values: -16#8000_0000# .. 0
+b54b05a.adb:65:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b05a.adb:65:18: subtype of expression is not static, alternatives must cover base type
+b54b05a.adb:69:11: missing case values: -16#8000_0000# .. 0
+b54b05a.adb:69:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b05a.adb:69:18: subtype of expression is not static, alternatives must cover base type
+b54b05a.adb:73:11: missing case value: 6
+gnatmake: "b54b05a.adb" compilation error

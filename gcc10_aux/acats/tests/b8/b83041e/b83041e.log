@@ -1,0 +1,51 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83041e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83041e.adb
+b83041e.adb:64:25: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:64:25: use clause would make operation legal
+b83041e.adb:66:25: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:66:25: use clause would make operation legal
+b83041e.adb:67:25: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:67:25: use clause would make operation legal
+b83041e.adb:68:25: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:68:25: use clause would make operation legal
+b83041e.adb:69:23: "A" is not visible (more references follow)
+b83041e.adb:69:23: non-visible declaration at line 41
+b83041e.adb:72:23: "B" is not visible (more references follow)
+b83041e.adb:72:23: non-visible declaration at line 43
+b83041e.adb:75:23: "MIKE" is not visible
+b83041e.adb:75:23: non-visible declaration at line 43
+b83041e.adb:77:27: operator for type "C" defined at line 44 is not directly visible
+b83041e.adb:77:27: use clause would make operation legal
+b83041e.adb:79:27: operator for type "C" defined at line 44 is not directly visible
+b83041e.adb:79:27: use clause would make operation legal
+b83041e.adb:80:28: operator for type "C" defined at line 44 is not directly visible
+b83041e.adb:80:28: use clause would make operation legal
+b83041e.adb:81:28: operator for type "C" defined at line 44 is not directly visible
+b83041e.adb:81:28: use clause would make operation legal
+b83041e.adb:82:23: "C" is not visible (more references follow)
+b83041e.adb:82:23: non-visible declaration at line 44
+b83041e.adb:86:27: operator for type "D" defined at line 46 is not directly visible
+b83041e.adb:86:27: use clause would make operation legal
+b83041e.adb:88:27: operator for type "D" defined at line 46 is not directly visible
+b83041e.adb:88:27: use clause would make operation legal
+b83041e.adb:91:23: "D" is not visible (more references follow)
+b83041e.adb:91:23: non-visible declaration at line 46
+b83041e.adb:95:35: operator for type "E" defined at line 48 is not directly visible
+b83041e.adb:95:35: use clause would make operation legal
+b83041e.adb:98:23: "G" is not visible (more references follow)
+b83041e.adb:98:23: non-visible declaration at line 50
+b83041e.adb:102:37: operator for type "NB" defined at line 56 is not directly visible
+b83041e.adb:102:37: use clause would make operation legal
+b83041e.adb:104:37: operator for type "NB" defined at line 56 is not directly visible
+b83041e.adb:104:37: use clause would make operation legal
+b83041e.adb:106:37: operator for type "NB" defined at line 56 is not directly visible
+b83041e.adb:106:37: use clause would make operation legal
+b83041e.adb:108:25: operator for type "NB" defined at line 56 is not directly visible
+b83041e.adb:108:25: use clause would make operation legal
+b83041e.adb:109:35: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:109:35: use clause would make operation legal
+b83041e.adb:110:35: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:110:35: use clause would make operation legal
+b83041e.adb:111:35: operator for type "A" defined at line 41 is not directly visible
+b83041e.adb:111:35: use clause would make operation legal
+gnatmake: "b83041e.adb" compilation error

@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3002c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3002c.adb
+bc3002c.adb:40:38: invalid positional actual after named one
+bc3002c.adb:40:38: instantiation abandoned
+bc3002c.adb:41:40: invalid positional actual after named one
+bc3002c.adb:41:40: instantiation abandoned
+gnatmake: "bc3002c.adb" compilation error

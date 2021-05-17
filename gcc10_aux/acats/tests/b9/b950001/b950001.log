@@ -1,0 +1,121 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b950001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b950001.adb
+b950001.adb:216:36: prefix of protected procedure or entry call must be variable
+b950001.adb:217:36: prefix of protected procedure or entry call must be variable
+b950001.adb:218:36: prefix of protected procedure or entry call must be variable
+b950001.adb:219:36: prefix of protected procedure or entry call must be variable
+b950001.adb:222:47: target object of access to protected procedure must be variable
+b950001.adb:226:58: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:227:58: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:229:55: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:231:54: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:238:35: prefix of protected procedure or entry call must be variable
+b950001.adb:239:35: prefix of protected procedure or entry call must be variable
+b950001.adb:240:35: prefix of protected procedure or entry call must be variable
+b950001.adb:241:35: prefix of protected procedure or entry call must be variable
+b950001.adb:244:46: target object of access to protected procedure must be variable
+b950001.adb:248:57: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:249:57: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:251:54: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:253:53: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:282:32: prefix of protected procedure or entry call must be variable
+b950001.adb:283:32: prefix of protected procedure or entry call must be variable
+b950001.adb:284:32: prefix of protected procedure or entry call must be variable
+b950001.adb:285:32: prefix of protected procedure or entry call must be variable
+b950001.adb:288:43: target object of access to protected procedure must be variable
+b950001.adb:292:54: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:293:54: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:295:51: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:297:50: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:326:38: prefix of protected procedure or entry call must be variable
+b950001.adb:327:38: prefix of protected procedure or entry call must be variable
+b950001.adb:328:38: prefix of protected procedure or entry call must be variable
+b950001.adb:329:38: prefix of protected procedure or entry call must be variable
+b950001.adb:332:49: target object of access to protected procedure must be variable
+b950001.adb:336:60: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:337:60: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:339:57: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:341:56: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:370:38: prefix of protected procedure or entry call must be variable
+b950001.adb:371:38: prefix of protected procedure or entry call must be variable
+b950001.adb:372:38: prefix of protected procedure or entry call must be variable
+b950001.adb:373:38: prefix of protected procedure or entry call must be variable
+b950001.adb:376:49: target object of access to protected procedure must be variable
+b950001.adb:380:60: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:381:60: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:383:57: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:385:56: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:414:40: prefix of protected procedure or entry call must be variable
+b950001.adb:415:40: prefix of protected procedure or entry call must be variable
+b950001.adb:416:40: prefix of protected procedure or entry call must be variable
+b950001.adb:417:40: prefix of protected procedure or entry call must be variable
+b950001.adb:420:51: target object of access to protected procedure must be variable
+b950001.adb:424:62: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:425:62: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:427:59: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:429:57: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:436:44: prefix of protected procedure or entry call must be variable
+b950001.adb:437:44: prefix of protected procedure or entry call must be variable
+b950001.adb:438:44: prefix of protected procedure or entry call must be variable
+b950001.adb:439:44: prefix of protected procedure or entry call must be variable
+b950001.adb:442:55: target object of access to protected procedure must be variable
+b950001.adb:446:66: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:447:66: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:449:63: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:451:61: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:458:47: prefix of protected procedure or entry call must be variable
+b950001.adb:459:47: prefix of protected procedure or entry call must be variable
+b950001.adb:460:47: prefix of protected procedure or entry call must be variable
+b950001.adb:461:47: prefix of protected procedure or entry call must be variable
+b950001.adb:464:58: target object of access to protected procedure must be variable
+b950001.adb:468:69: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:469:69: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:471:66: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:473:64: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:480:24: actual for "Param" must be a variable
+b950001.adb:481:24: actual for "Param" must be a variable
+b950001.adb:487:46: actual for "Param" must be a variable
+b950001.adb:488:46: actual for "Param" must be a variable
+b950001.adb:489:43: actual for "Param" must be a variable
+b950001.adb:490:43: actual for "Param" must be a variable
+b950001.adb:554:40: prefix of protected procedure or entry call must be variable
+b950001.adb:555:40: prefix of protected procedure or entry call must be variable
+b950001.adb:556:40: prefix of protected procedure or entry call must be variable
+b950001.adb:557:40: prefix of protected procedure or entry call must be variable
+b950001.adb:560:51: target object of access to protected procedure must be variable
+b950001.adb:564:62: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:565:62: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:567:59: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:569:58: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:576:36: prefix of protected procedure or entry call must be variable
+b950001.adb:577:36: prefix of protected procedure or entry call must be variable
+b950001.adb:578:36: prefix of protected procedure or entry call must be variable
+b950001.adb:579:36: prefix of protected procedure or entry call must be variable
+b950001.adb:582:47: target object of access to protected procedure must be variable
+b950001.adb:586:58: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:587:58: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:589:55: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:591:54: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:610:31: prefix of protected procedure or entry call must be variable
+b950001.adb:611:31: prefix of protected procedure or entry call must be variable
+b950001.adb:612:31: prefix of protected procedure or entry call must be variable
+b950001.adb:613:31: prefix of protected procedure or entry call must be variable
+b950001.adb:616:42: target object of access to protected procedure must be variable
+b950001.adb:620:53: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:621:53: target object of protected operation used as actual for formal procedure must be a variable
+b950001.adb:623:50: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:625:48: target object of protected operation renamed as procedure, must be a variable
+b950001.adb:675:24: within protected function, protected object is constant
+b950001.adb:675:24: cannot call operation that may modify it
+b950001.adb:676:24: within protected function, protected object is constant
+b950001.adb:676:24: cannot call operation that may modify it
+b950001.adb:677:24: within protected function, protected object is constant
+b950001.adb:677:24: cannot call operation that may modify it
+b950001.adb:678:24: within protected function, protected object is constant
+b950001.adb:678:24: cannot call operation that may modify it
+b950001.adb:681:34: within protected function cannot take access of protected procedure
+b950001.adb:685:46: within protected function cannot use protected procedure in renaming or as generic actual
+b950001.adb:686:46: within protected function cannot use protected procedure in renaming or as generic actual
+b950001.adb:688:35: within protected function cannot use protected procedure in renaming or as generic actual
+b950001.adb:690:33: within protected function cannot use protected procedure in renaming or as generic actual
+gnatmake: "b950001.adb" compilation error

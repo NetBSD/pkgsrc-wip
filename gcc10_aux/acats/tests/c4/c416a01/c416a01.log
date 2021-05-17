@@ -1,0 +1,8 @@
+
+,.,. C416A01 ACATS 4.1 21-05-16 10:35:35
+---- C416A01 Check that the name specified for a Constant_Indexing or
+                Variable_Indexing aspect can refer to a set of
+                overloaded functions, with two or more parameters, and
+                that all of those functions can be used in a generalized
+                indexing.
+==== C416A01 PASSED ============================.

@@ -1,0 +1,8 @@
+
+,.,. CB41001 ACATS 4.1 21-05-16 10:49:28
+---- CB41001 Check that the 'Identity attribute returns the unique
+                identity of an exception. Check that the 'Identity
+                attribute is of type Exception_Id.  Check that the
+                Raise_Exception procedure can raise an exception that is
+                specified through the use of the 'Identity attribute.
+==== CB41001 PASSED ============================.

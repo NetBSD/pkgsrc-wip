@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3201a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3201a.adb
+bc3201a.adb:66:36: actual for non-limited "GFT" cannot be a limited type
+bc3201a.adb:66:36: instantiation abandoned
+bc3201a.adb:67:36: actual for non-limited "GFT" cannot be a limited type
+bc3201a.adb:67:36: component "COMP" of type "LIMREC" has limited type
+bc3201a.adb:67:36: instantiation abandoned
+bc3201a.adb:68:36: actual for non-limited "GFT" cannot be a limited type
+bc3201a.adb:68:36: component type "LIM" of type "LIMARR" is limited
+bc3201a.adb:68:36: instantiation abandoned
+bc3201a.adb:69:36: actual for non-limited "GFT" cannot be a limited type
+bc3201a.adb:69:36: instantiation abandoned
+bc3201a.adb:70:36: actual for non-limited "GFT" cannot be a limited type
+bc3201a.adb:70:36: component "C1" of type "VARREC" has limited type
+bc3201a.adb:70:36: instantiation abandoned
+gnatmake: "bc3201a.adb" compilation error

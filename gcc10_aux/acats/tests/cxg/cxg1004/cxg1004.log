@@ -1,0 +1,10 @@
+
+,.,. CXG1004 ACATS 4.1 21-05-16 10:59:23
+---- CXG1004 Check that the specified exceptions are raised by the
+                subprograms defined in package
+                Ada.Numerics.Generic_Complex_Elementary_Functions given 
+                the prescribed input parameter values.
+   - CXG1004 Attribute Complex_Pack.Real'Machine_Overflows is False;
+                evaluation of the complex elementary functions under
+                specified circumstances was not performed.
+==== CXG1004 PASSED ============================.

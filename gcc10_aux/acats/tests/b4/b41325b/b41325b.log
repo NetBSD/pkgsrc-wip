@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41325b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41325b.adb
+b41325b.adb:68:19: incompatible arguments for operator
+b41325b.adb:69:19: incompatible arguments for operator
+b41325b.adb:70:19: incompatible arguments for operator
+b41325b.adb:71:19: incompatible arguments for operator
+b41325b.adb:75:19: incompatible arguments for operator
+b41325b.adb:76:19: incompatible arguments for operator
+b41325b.adb:78:06: left hand of assignment must not be limited type
+b41325b.adb:78:06: component type "KEY" of subtype of "CATARRAY" is limited
+b41325b.adb:78:21: no candidate interpretations match the actuals:
+b41325b.adb:78:21: incompatible arguments for operator
+b41325b.adb:82:19: incompatible arguments for operator
+b41325b.adb:83:19: incompatible arguments for operator
+b41325b.adb:84:19: incompatible arguments for operator
+b41325b.adb:85:19: incompatible arguments for operator
+b41325b.adb:87:20: "NOT" not declared in "P"
+b41325b.adb:88:20: "AND" not declared in "P"
+b41325b.adb:89:20: "OR" not declared in "P"
+b41325b.adb:90:20: "XOR" not declared in "P"
+gnatmake: "b41325b.adb" compilation error

@@ -1,0 +1,121 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f392a00%b		f392a00.adb		952365af DE OO PK IU
+
+U f392a00%s		f392a00.ads		a7b3c33f DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f392a00.ads		20210516102805 a7b3c33f f392a00%s
+D f392a00.adb		20210516102805 3290a690 f392a00%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s s [Taccount_counterBIP f392a00 44 4 none]
+G c Z s b [increment_bank_reserve f392a00 78 14 none]
+G c Z s b [assign_representative f392a00 79 14 none]
+G c Z s b [increment_counters f392a00 80 14 none]
+G c Z s b [open f392a00 81 14 none]
+G c Z s s [bank_accountDA f392a00 71 9 none]
+G c Z s s [bank_accountDF f392a00 71 9 none]
+G c Z s s [bank_accountIP f392a00 71 9 none]
+G c Z s b [assign_representative f392a00 93 14 none]
+G c Z s b [increment_counters f392a00 94 14 none]
+G c Z s b [open f392a00 95 14 none]
+G c Z s s [savings_accountDA f392a00 85 9 none]
+G c Z s s [savings_accountDF f392a00 85 9 none]
+G c Z s s [savings_accountIP f392a00 85 9 none]
+G c Z s b [increment_counters f392a00 108 14 none]
+G c Z s b [open f392a00 109 14 none]
+G c Z s b [verify_open f392a00 112 13 none]
+G c Z s s [preferred_accountDA f392a00 99 9 none]
+G c Z s s [preferred_accountDF f392a00 99 9 none]
+G c Z s s [preferred_accountIP f392a00 99 9 none]
+X 6 f392a00.ads
+35K9*F392A00 115l5 115e12 7|6b14 85l5 85t12
+41F9*Dollar_Amount<float> 51r41 53r41 59r27 73r20 101r28
+42O9*Interest_Rate 52r41 87r17
+43E9*Account_Types 43e60 44r35
+43n28*Bank{43E9} 61r47 7|24r27 24r57
+43n34*Savings{43E9} 62r47 7|45r27 45r59
+43n43*Preferred{43E9} 63r47 7|63r27 63r61
+43n54*Total{43E9} 64r47 7|25r27 25r57 46r27 46r59 64r27 64r61
+44A9*Account_Counter(integer)<43E9> 61r27
+45E9*Account_Rep 45e73 60r27
+45n25*President{45E9}
+45n36*Manager{45E9} 7|40r31
+45n45*New_Account_Manager{45E9} 60r46
+45n66*Teller{45E9} 7|19r31
+51f4*Opening_Balance{41F9} 7|30r23 53r29
+52o4*Current_Rate{42O9} 7|52r20 81r38
+53f4*Preferred_Minimum_Balance{41F9} 7|70r31 80r38 82r38
+59f4*Bank_Reserve{41F9} 7|14m7 14r23
+60e4*Daily_Representative{45E9} 7|19m7 40m7
+61a4*Number_Of_Accounts{44A9} 7|24m7 24r37 25m7 25r37 45m7 45r39 46m7 46r39
+. 63m7 63r41 64m7 64r41
+71R9*Bank_Account 74e17 78p14 78r52 79p14 79r52 80p14 80r52 81p14 81r52 85r32
+. 7|12r48 17r47 22r44 28r34 51r13
+73f10*Balance{41F9} 7|14r43 30m12 53m12 71m12 80r20
+78U14*Increment_Bank_Reserve 78>38 7|12b14 15l8 15t30
+78r38 Acct{71R9} 7|12b38 14r38
+79U14*Assign_Representative 79>38 7|17b14 20l8 20t29
+79r38 Acct{71R9} 7|17b37
+80U14*Increment_Counters 80>38 7|22b14 26l8 26t26
+80r38 Acct{71R9} 7|22b34
+81U14*Open 81=38 7|28b14 31l8 31t12 51s7
+81r38 Acct{71R9} 7|28b20 30m7
+85R9*Savings_Account<71R9> 78p14 88e17 93P14 93r51 94P14 94r51 95P14 95r51
+. 99r34 7|38r47 43r44 49r34 69r13
+87o10*Rate{42O9} 7|52m12 81r20
+93U14*Assign_Representative<79p14> 93>37 7|38b14 41l8 41t29
+93r37 Acct{85R9} 7|38b37
+94U14*Increment_Counters<80p14> 94>37 7|43b14 47l8 47t26
+94r37 Acct{85R9} 7|43b34
+95U14*Open<81p14> 95=37 7|49b14 54l8 54t12 69s7
+95r37 Acct{85R9} 7|49b20 51m26 51r26 52m7 53m7
+99R9*Preferred_Account<85R9> 78p14 93P14 102e17 108P14 108r48 109P14 109r48
+. 112p13 112r36 7|61r44 67r34 78r36
+101f10*Minimum_Balance{41F9} 7|70m12 71r28 82r20
+108U14*Increment_Counters<94p14> 108>34 7|61b14 65l8 65t26
+108r34 Acct{99R9} 7|61b34
+109U14*Open<95p14> 109=34 7|67b14 72l8 72t12
+109r34 Acct{99R9} 7|67b20 69m29 69r29 70m7 71m7 71r23
+112V13*Verify_Open{boolean} 112>26 7|78b13 83l8 83t19
+112r26 Acct{99R9} 7|78b26 80r15 81r15 82r15
+

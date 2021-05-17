@@ -1,0 +1,22 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33102b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33102b.adb
+b33102b.adb:47:21: missing body for "F"
+b33102b.adb:48:20: missing body for "G"
+b33102b.adb:59:19: missing full declaration for type "C" defined at line 63
+b33102b.adb:59:19: missing full declaration for type "G" defined at line 67
+b33102b.adb:61:11: invalid context for private declaration
+b33102b.adb:61:16: "A" conflicts with declaration at line 40
+b33102b.adb:62:16: "B" conflicts with declaration at line 41
+b33102b.adb:63:16: "C" conflicts with declaration at line 42
+b33102b.adb:64:19: "D" conflicts with declaration at line 44
+b33102b.adb:65:11: invalid context for private declaration
+b33102b.adb:65:16: "E" conflicts with declaration at line 45
+b33102b.adb:66:16: "F" conflicts with declaration at line 47
+b33102b.adb:67:16: "G" conflicts with declaration at line 48
+b33102b.adb:68:19: "H" conflicts with declaration at line 50
+b33102b.adb:69:11: invalid context for private declaration
+b33102b.adb:69:16: "I" conflicts with declaration at line 54
+b33102b.adb:70:16: "J" conflicts with declaration at line 55
+b33102b.adb:72:21: "F" conflicts with declaration at line 66
+b33102b.adb:77:20: "G" conflicts with declaration at line 67
+gnatmake: "b33102b.adb" compilation error

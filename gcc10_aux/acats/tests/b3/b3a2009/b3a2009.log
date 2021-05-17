@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2009.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2009.adb
+b3a2009.adb:23:16: subprogram must not be deeper than access type
+b3a2009.adb:47:28: 'Access attribute not allowed in generic body
+b3a2009.adb:47:28: because access type "Acc_Outside" is declared outside generic unit (RM 3.10.2(32))
+b3a2009.adb:47:28: move 'Access to private part, or (Ada 2005) use anonymous access type instead of "Acc_Outside"
+b3a2009.adb:50:29: access type must not be a generic formal type
+gnatmake: "b3a2009.adb" compilation error

@@ -1,0 +1,10 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c390003.a into:
+   c390003_1.ads
+   c390003_2.ads
+   c390003_3.ads
+   c390003_4.ads
+   c390003_1.adb
+   c390003_2.adb
+   c390003_3.adb
+   c390003_4.adb
+   c390003.adb

@@ -1,0 +1,11 @@
+
+PACKAGE BODY BA2013A_P1 IS
+
+     PROCEDURE PROC IS
+     BEGIN
+          NULL;
+     END PROC;
+
+BEGIN
+     INT := 1;
+END BA2013A_P1;

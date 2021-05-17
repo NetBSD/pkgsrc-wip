@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b392011.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b392011.adb
+b392011.adb:67:19: access to class-wide argument not allowed here
+b392011.adb:68:18: class-wide allocator not allowed for this access type
+b392011.adb:70:36: access to class-wide expression not allowed here
+b392011.adb:75:35: class-wide allocator not allowed for this access type
+b392011.adb:88:13: access to class-wide argument not allowed here
+b392011.adb:88:13: "Q" is not a dispatching operation of "T"
+b392011.adb:89:12: class-wide allocator not allowed for this access type
+gnatmake: "b392011.adb" compilation error

@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83003a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83003a.adb
+b83003a.adb:56:21: "E1" conflicts with declaration at line 45
+b83003a.adb:58:24: "E2" conflicts with declaration at line 46
+b83003a.adb:59:16: "E3" conflicts with declaration at line 47
+b83003a.adb:60:16: "E4" conflicts with declaration at line 48
+b83003a.adb:61:16: "E5" conflicts with declaration at line 49
+b83003a.adb:62:16: "E6" conflicts with declaration at line 50
+b83003a.adb:64:24: "E7" conflicts with declaration at line 51
+b83003a.adb:66:21: "E8" conflicts with declaration at line 52
+b83003a.adb:89:25: "E10" conflicts with declaration at line 84
+b83003a.adb:89:25: generic units cannot be overloaded
+b83003a.adb:113:26: "E11" conflicts with declaration at line 107
+b83003a.adb:113:26: generic units cannot be overloaded
+b83003a.adb:116:24: "E12" conflicts with declaration at line 108
+gnatmake: "b83003a.adb" compilation error

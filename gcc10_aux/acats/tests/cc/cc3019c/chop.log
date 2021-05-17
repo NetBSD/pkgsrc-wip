@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cc/cc3019c0.ada into:
+   cc3019c0_list_class.ads
+   cc3019c0_list_class.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cc/cc3019c1.ada into:
+   cc3019c1_nested_generics.ads
+   cc3019c1_nested_generics.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cc/cc3019c2.ada into:
+   cc3019c2m.adb

@@ -1,0 +1,6 @@
+
+,.,. CXAJ001 ACATS 4.1 21-05-16 10:58:07
+---- CXAJ001 Check that Ada.Locales is supported.
+   - CXAJ001 Current country code is ZZ.
+   - CXAJ001 Current language code is und.
+==== CXAJ001 PASSED ============================.

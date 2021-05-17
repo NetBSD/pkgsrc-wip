@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a02.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a02.adb
+b552a02.adb:83:16: name must be an iterator, not a container
+b552a02.adb:83:16: to iterate directly over the elements of a container, write "of Sparse_Data"
+b552a02.adb:87:16: name must be an iterator, not a container
+b552a02.adb:87:16: to iterate directly over the elements of a container, write "of Bingo_Game"
+b552a02.adb:91:08: missing Range attribute in iteration over an array
+b552a02.adb:91:08: if "Item" is meant to designate an element of the array, use "of"
+b552a02.adb:95:16: cannot iterate over "Cursor"
+b552a02.adb:95:16: to iterate directly over the elements of a container, write "of Sparse_Cursor"
+b552a02.adb:100:08: cannot iterate over "Integer"
+b552a02.adb:104:08: cannot iterate over "Forward_Iterator'CLASS"
+b552a02.adb:116:08: cannot iterate over "Cursor"
+b552a02.adb:121:08: cannot iterate over "Integer"
+b552a02.adb:125:16: invalid use of subtype mark in expression or call
+b552a02.adb:129:35: invalid use of subtype mark in expression or call
+gnatmake: "b552a02.adb" compilation error

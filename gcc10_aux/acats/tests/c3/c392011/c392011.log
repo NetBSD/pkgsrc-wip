@@ -1,0 +1,8 @@
+
+,.,. C392011 ACATS 4.1 21-05-16 10:34:22
+---- C392011 Check that if a function call with a controlling result is 
+                itself a controlling operand of an enclosing call on a
+                dispatching operation, then its controlling tag value is
+                determined by the controlling tag value of the enclosing
+                call.
+==== C392011 PASSED ============================.

@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74404b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74404b.adb
+b74404b.adb:66:18: initialization not allowed for limited types
+b74404b.adb:66:21: initialization not allowed for limited types
+b74404b.adb:66:24: initialization not allowed for limited types
+b74404b.adb:66:27: initialization not allowed for limited types
+b74404b.adb:66:30: initialization not allowed for limited types
+b74404b.adb:70:20: initialization not allowed for limited types
+b74404b.adb:97:06: left hand of assignment must not be limited type
+b74404b.adb:97:06: component type "LP" of type "ARR" is limited
+b74404b.adb:101:06: left hand of assignment must not be limited type
+b74404b.adb:101:06: component type "LP" of type "ARR" is limited
+b74404b.adb:103:06: left hand of assignment must not be limited type
+b74404b.adb:103:06: component "COMP1" of type "REC" has limited type
+b74404b.adb:105:06: left hand of assignment must not be limited type
+b74404b.adb:105:06: component "COMP1" of type "REC" has limited type
+b74404b.adb:107:11: there is no applicable operator "=" for type "ARR" defined at line 40
+b74404b.adb:111:11: there is no applicable operator "/=" for type "ARR" defined at line 40
+b74404b.adb:115:11: there is no applicable operator "=" for type "REC" defined at line 42
+b74404b.adb:119:11: there is no applicable operator "/=" for type "REC" defined at line 42
+gnatmake: "b74404b.adb" compilation error

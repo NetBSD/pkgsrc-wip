@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36002a.adb
+b36002a.adb:33:35: missing "<>"
+b36002a.adb:37:33: missing operand
+b36002a.adb:40:36: missing operand
+b36002a.adb:43:38: missing operand
+b36002a.adb:47:35: missing operand
+b36002a.adb:51:39: missing operand
+b36002a.adb:55:33: missing "<>"
+b36002a.adb:59:41: missing "<>"
+b36002a.adb:63:35: missing operand
+b36002a.adb:66:35: missing operand
+b36002a.adb:70:33: missing operand
+b36002a.adb:74:33: missing "<>"
+gnatmake: "b36002a.adb" compilation error

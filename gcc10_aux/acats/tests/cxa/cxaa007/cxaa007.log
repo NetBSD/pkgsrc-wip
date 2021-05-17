@@ -1,0 +1,5 @@
+
+,.,. CXAA007 ACATS 4.1 21-05-16 10:54:57
+---- CXAA007 Check that the capabilities of Text_IO.Integer_IO operate
+                correctly for files with mode Append_File.
+==== CXAA007 PASSED ============================.

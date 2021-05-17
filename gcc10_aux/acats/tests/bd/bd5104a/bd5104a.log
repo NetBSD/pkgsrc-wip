@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd5104a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd5104a.adb
+bd5104a.adb:5:15: entry address must be specified in task spec
+gnatmake: "bd5104a.adb" compilation error

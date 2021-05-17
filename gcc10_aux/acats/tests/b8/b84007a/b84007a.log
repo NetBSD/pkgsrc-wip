@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84007a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84007a.adb
+b84007a.adb:40:10: "PACK2" is not visible (more references follow)
+b84007a.adb:40:10: non-visible declaration at line 35
+gnatmake: "b84007a.adb" compilation error

@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8004b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8004b.adb
+bd8004b.adb:54:06: exception handlers not permitted in machine code subprogram
+gnatmake: "bd8004b.adb" compilation error

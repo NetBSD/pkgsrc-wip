@@ -1,0 +1,24 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120100.a into:
+   ba12010.ads
+   ba12010-pak2.ads
+   ba12010-pak2-pak21.ads
+   ba12010-pak3.ads
+   ba12010-pak3-pak31.ads
+   ba12010-pak4.ads
+   ba12010-pak5.ads
+   ba12010-renpak21.ads
+   ba12010-renpak3.ads
+   ba12010-renpak31.ads
+   ba12010-pak8.ads
+   ba12010-pak9.ads
+   ba12010-paka.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120101.a into:
+   ba12010_1.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120102.a into:
+   ba12010-pak6.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120103.a into:
+   ba12010-pak8-pak81.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120104.a into:
+   ba12010-pak9-pak91.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba120105.a into:
+   ba12010-paka-paka1.ads

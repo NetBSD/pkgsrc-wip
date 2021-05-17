@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba3001e0.ada into:
+   ba3001e0m.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba3001e1.ada into:
+   ba3001e0m-uncompiled1-ba3001e1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba3001e2.ada into:
+   uncompiled2-ba3001e2.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba3001e3.ada into:
+   ba3001e0m-uncompiled3-ba3001e3.adb

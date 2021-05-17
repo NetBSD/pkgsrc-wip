@@ -1,0 +1,6 @@
+
+,.,. CC54003 ACATS 4.1 21-05-16 10:50:28
+---- CC54003 Check that a general access-to-subprogram type may be
+                passed as an actual to a generic formal
+                access-to-subprogram type.
+==== CC54003 PASSED ============================.

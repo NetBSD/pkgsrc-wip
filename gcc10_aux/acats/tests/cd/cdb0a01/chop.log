@@ -1,0 +1,9 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cd/cdb0a01.a into:
+   fdb0a00-pool1.ads
+   fdb0a00-comparator.ads
+   fdb0a00-comparator.adb
+   cdb0a01_2.ads
+   cdb0a01_2.adb
+   cdb0a01_3.ads
+   cdb0a01_3.adb
+   cdb0a01.adb

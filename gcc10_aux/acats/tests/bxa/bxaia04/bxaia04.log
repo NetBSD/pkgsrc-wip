@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxaia04.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxaia04.adb
+bxaia04.adb:91:48: "Reference_Type" not declared in "My_Indefinite_Ordered_Sets"
+bxaia04.adb:92:39: no selector "Reference" for private type "Ada.Containers.Indefinite_Ordered_Sets.Set" from instance at line 60
+bxaia04.adb:134:42: "Reference" not declared in "My_Indefinite_Ordered_Sets"
+bxaia04.adb:149:42: "Reference" not declared in "My_Indefinite_Ordered_Sets"
+bxaia04.adb:165:24: no selector "Reference" for private type "Ada.Containers.Indefinite_Ordered_Sets.Set" from instance at line 60
+bxaia04.adb:178:24: no selector "Reference" for private type "Ada.Containers.Indefinite_Ordered_Sets.Set" from instance at line 60
+bxaia04.adb:189:25: actual for "Value" must be a variable
+gnatmake: "bxaia04.adb" compilation error

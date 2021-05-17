@@ -1,0 +1,5 @@
+bc51016.a:57:35: "abstract" must be followed by "tagged"
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51016.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51016.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51016.a into:
+   bc51016.ads

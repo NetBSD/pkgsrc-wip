@@ -1,0 +1,6 @@
+
+,.,. C392C07 ACATS 4.1 21-05-16 10:34:27
+---- C392C07 Check that a dispatching subprogram call is determined by
+                the controlling tag for dynamically tagged controlling
+                operands.
+==== C392C07 PASSED ============================.

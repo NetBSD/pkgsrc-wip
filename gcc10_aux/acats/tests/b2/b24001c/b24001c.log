@@ -1,0 +1,22 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24001c.adb
+b24001c.adb:42:14: two consecutive underlines not permitted
+b24001c.adb:45:16: two consecutive underlines not permitted
+b24001c.adb:48:18: two consecutive underlines not permitted
+b24001c.adb:51:17: two consecutive underlines not permitted
+b24001c.adb:54:12: identifier cannot start with underline
+b24001c.adb:57:16: digit expected
+b24001c.adb:60:18: digit expected
+b24001c.adb:63:15: digit expected
+b24001c.adb:65:14: real literal cannot end with point
+b24001c.adb:67:16: digit expected
+b24001c.adb:69:16: digit expected
+b24001c.adb:71:17: digit expected
+b24001c.adb:73:16: digit expected
+b24001c.adb:75:17: digit expected
+b24001c.adb:77:16: digit expected
+b24001c.adb:79:15: digit expected
+b24001c.adb:81:15: extended digit expected
+b24001c.adb:83:19: extended digit expected
+b24001c.adb:85:19: delimiter required between literal and identifier
+gnatmake: "b24001c.adb" compilation error

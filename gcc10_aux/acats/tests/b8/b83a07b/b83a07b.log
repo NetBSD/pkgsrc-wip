@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a07b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a07b.adb
+b83a07b.adb:93:18: "L" conflicts with label at line 90
+gnatmake: "b83a07b.adb" compilation error

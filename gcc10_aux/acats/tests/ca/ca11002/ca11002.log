@@ -1,0 +1,5 @@
+
+,.,. CA11002 ACATS 4.1 21-05-16 10:48:36
+---- CA11002 Check that a public child can utilize its parent unit's
+                visible definitions.
+==== CA11002 PASSED ============================.

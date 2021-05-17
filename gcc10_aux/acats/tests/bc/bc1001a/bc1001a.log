@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1001a.adb
+bc1001a.adb:41:29: object "I" cannot be used before end of its declaration
+bc1001a.adb:48:34: object "P1A" cannot be used before end of its declaration
+bc1001a.adb:49:33: "P1D" is undefined
+bc1001a.adb:49:33: possible misspelling of "P1"
+bc1001a.adb:49:33: object "P1D" cannot be used before end of its declaration
+bc1001a.adb:50:27: object "P2" cannot be used before end of its declaration
+bc1001a.adb:51:36: object "P2A" cannot be used before end of its declaration
+bc1001a.adb:57:41: object "P8" cannot be used before end of its declaration
+bc1001a.adb:59:22: object "Q" cannot be used before end of its declaration
+bc1001a.adb:60:44: premature usage of formal subprogram
+bc1001a.adb:70:27: "F1" is undefined
+bc1001a.adb:84:34: premature usage of formal subprogram
+bc1001a.adb:87:34: premature usage of formal subprogram
+gnatmake: "bc1001a.adb" compilation error

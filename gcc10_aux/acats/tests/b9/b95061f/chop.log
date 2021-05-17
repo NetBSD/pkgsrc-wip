@@ -1,0 +1,5 @@
+b95061f.ada:37:30: constraint not allowed here
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061f.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061f.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061f.ada into:
+   b95061f.adb

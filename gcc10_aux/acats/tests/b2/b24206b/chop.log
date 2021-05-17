@@ -1,0 +1,14 @@
+b24206b.ada:34:33: base not 2-16
+b24206b.ada:35:24: base not 2-16
+b24206b.ada:42:14: base not 2-16
+b24206b.ada:43:14: base not 2-16
+b24206b.ada:45:17: base not 2-16
+b24206b.ada:46:17: base not 2-16
+b24206b.ada:48:22: base not 2-16
+b24206b.ada:49:22: base not 2-16
+b24206b.ada:54:27: base not 2-16
+b24206b.ada:56:27: base not 2-16
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24206b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24206b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24206b.ada into:
+   b24206b.adb

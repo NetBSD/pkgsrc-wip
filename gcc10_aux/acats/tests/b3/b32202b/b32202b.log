@@ -1,0 +1,22 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32202b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32202b.adb
+b32202b.adb:52:39: expected type "Standard.Float"
+b32202b.adb:52:39: found type universal integer
+b32202b.adb:54:41: expected type "Standard.Float"
+b32202b.adb:54:41: found type universal integer
+b32202b.adb:57:24: expected type "Standard.Float"
+b32202b.adb:57:24: found type universal integer
+b32202b.adb:60:44: expected type "Standard.Float"
+b32202b.adb:60:44: found type universal integer
+b32202b.adb:67:17: expected type "Standard.Float"
+b32202b.adb:67:17: found type universal integer
+b32202b.adb:68:26: expected type "Standard.Float"
+b32202b.adb:68:26: found type universal integer
+b32202b.adb:70:18: invalid operand types for operator "="
+b32202b.adb:70:18: left operand has type "Standard.Float"
+b32202b.adb:70:18: right operand has type universal integer
+b32202b.adb:74:17: expected type "Standard.Float"
+b32202b.adb:74:17: found type universal integer
+b32202b.adb:76:37: expected type "Standard.Float"
+b32202b.adb:76:37: found type universal integer
+gnatmake: "b32202b.adb" compilation error

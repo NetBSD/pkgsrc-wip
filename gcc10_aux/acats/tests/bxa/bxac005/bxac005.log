@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxac005.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxac005.adb
+bxac005.adb:5:06: "ADA.STREAM_SUPPORT" is not a predefined library unit
+gnatmake: "bxac005.adb" compilation error

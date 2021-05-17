@@ -1,0 +1,16 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2002a0.ada into:
+   ca2002a1.ads
+   ca2002a1.adb
+   ca2002a2.ads
+   ca2002a2.adb
+   ca2002a0m.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2002a1.ada into:
+   ca2002a1-proc.adb
+   ca2002a1-fun.adb
+   ca2002a1-pkg.adb
+   ca2002a1-pkg-pkg_proc.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2002a2.ada into:
+   ca2002a2-proc.adb
+   ca2002a2-fun.adb
+   ca2002a2-pkg.adb
+   ca2002a2-pkg-pkg_proc.adb

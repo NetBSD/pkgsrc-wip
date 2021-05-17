@@ -1,0 +1,5 @@
+b37004e.ada:41:31: component declaration expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37004e.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37004e.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37004e.ada into:
+   b37004e.adb

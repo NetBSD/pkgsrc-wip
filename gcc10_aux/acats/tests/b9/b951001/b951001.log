@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b951001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b951001.adb
+b951001.adb:64:13: within protected function, protected object is constant
+b951001.adb:64:13: cannot call operation that may modify it
+b951001.adb:87:13: within protected function, protected object is constant
+b951001.adb:87:13: cannot call operation that may modify it
+gnatmake: "b951001.adb" compilation error

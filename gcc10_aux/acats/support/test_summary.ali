@@ -1,0 +1,185 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U test_summary%b	test_summary.adb	62aed742 DE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U test_summary%s	test_summary.ads	6975efa2 DE EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W trace%s		trace.ads		trace.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-calend.ads		20210408115627 474d9720 ada.calendar%s
+D a-charac.ads		20210408115627 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210408115627 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-finali.ads		20210408115627 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-string.ads		20210408115627 90ac6797 ada.strings%s
+D a-strfix.ads		20210408115627 86d6bc21 ada.strings.fixed%s
+D a-strmap.ads		20210408115627 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20210408115627 1656705b ada.strings.unbounded%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D system.ads		20210408115627 a6571217 system%s
+D s-atocou.ads		20210408115627 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-finmas.ads		20210408115627 7811a767 system.finalization_masters%s
+D s-finroo.ads		20210408115627 4ff27390 system.finalization_root%s
+D s-imgint.ads		20210408115627 02dbe0c2 system.img_int%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20210408115627 b16154c2 system.storage_pools%s
+D s-stposu.ads		20210408115627 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D test_summary.ads	20210516102807 8543c0e7 test_summary%s
+D test_summary.adb	20210516102807 613bab84 test_summary%b
+D trace.ads		20210516102807 42c2fa28 trace%s
+G a e
+G c Z s b [write_summary_record test_summary 202 14 none]
+G c Z s s [info_recordIP test_summary 97 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 38|45r13 202r54 39|2r6 7r54 13r13 15r17 18r13 20r17 23r13 25r17
+. 28r13 30r17 33r13 35r17 38r13 40r17 43r13 45r17 50r19 52r22 55r19 57r22
+. 60r19 62r22 65r19 67r22 70r19 72r22 75r19 77r22 80r19 82r22 85r19 87r22
+. 90r19 92r22 95r19 97r22 100r19 102r22 105r19 107r22 110r19 112r22 115r19
+. 117r22 120r19 122r22 125r19 127r22 130r19 132r22 135r19 137r22 140r19 142r22
+. 145r19 147r22 150r19 152r22 155r19 157r22 160r19 162r22 165r19 167r22 172r7
+. 173r24 174r27 176r7 177r24 179r27 181r10 184r7 185r24 187r27 189r7 190r24
+. 192r27 194r7 195r24 197r27 201r13 202r30 203r33 205r16 205r51 206r48 209r13
+. 210r30 211r33 213r16 213r50 214r48 218r19 220r19 224r19 232r13 235r7 237r10
+X 9 a-string.ads
+16K13*Strings 35e16 39|2r10 173r28 174r31 177r28 179r31 185r28 187r31 190r28
+. 192r31 195r28 197r31 202r34 203r37 205r55 206r52 210r34 211r37 213r54 214r52
+33n37*Both{33E9} 39|174r39 179r39 187r39 192r39 197r39 203r45 206r60 211r45
+. 214r60
+X 10 a-strfix.ads
+43K21*Fixed 596e22 39|2w18 173r36 177r36 185r36 190r36 195r36 202r42 205r63
+. 210r42 213r62
+468V13*Trim{string} 39|173s42 177s42 185s42 190s42 195s42 202s48 205s69 210s48
+. 213s68
+X 14 a-textio.ads
+57K13*Text_IO 727e16 38|45w17 202r58 39|7r58 13r17 15r21 18r17 20r21 23r17
+. 25r21 28r17 30r21 33r17 35r21 38r17 40r21 43r17 45r21 50r23 52r26 55r23
+. 57r26 60r23 62r26 65r23 67r26 70r23 72r26 75r23 77r26 80r23 82r26 85r23
+. 87r26 90r23 92r26 95r23 97r26 100r23 102r26 105r23 107r26 110r23 112r26
+. 115r23 117r26 120r23 122r26 125r23 127r26 130r23 132r26 135r23 137r26 140r23
+. 142r26 145r23 147r26 150r23 152r26 155r23 157r26 160r23 162r26 165r23 167r26
+. 172r11 176r11 181r14 184r11 189r11 194r11 201r17 205r20 209r17 213r20 218r23
+. 220r23 224r23 232r17 235r11 237r14
+64P9*File_Type 38|202r66 39|7r66
+258U14*New_Line 39|235s19
+264U14*New_Line 39|237s22
+459U14*Put 39|13s25 18s25 23s25 28s25 33s25 38s25 43s25 50s31 55s31 60s31
+. 65s31 70s31 75s31 80s31 85s31 90s31 95s31 100s31 105s31 110s31 115s31 120s31
+. 125s31 130s31 135s31 140s31 145s31 150s31 155s31 160s31 165s31 172s19 176s19
+. 184s19 189s19 194s19 201s25 209s25 218s31 220s31 224s31 232s25
+465U14*Put 39|15s29 20s29 25s29 30s29 35s29 40s29 45s29 52s34 57s34 62s34
+. 67s34 72s34 77s34 82s34 87s34 92s34 97s34 102s34 107s34 112s34 117s34 122s34
+. 127s34 132s34 137s34 142s34 147s34 152s34 157s34 162s34 167s34 181s22 205s28
+. 213s28
+X 38 test_summary.ads
+46K9*Test_Summary 203r45 206l5 206e17 39|3b14 8r45 9r11 12r15 17r15 22r15
+. 27r15 32r15 37r15 42r15 47r15 49r21 54r21 59r21 64r21 69r21 74r21 79r21
+. 84r21 89r21 94r21 99r21 104r21 109r21 114r21 119r21 124r21 129r21 134r21
+. 139r21 144r21 149r21 154r21 159r21 164r21 241l5 241t17
+56E9*Info_Kind_Type 63e12 97r29
+56n28*Unknown{56E9} 97r47 125r15 39|12r28 231r20
+57n9*Compilation_Unit{56E9} 126r15 39|47r28 208r15
+58n9*Error{56E9} 143r15 39|17r28 230r15
+59n9*Possible_Error{56E9} 140r15 39|27r28 200r15
+60n9*Optional_Error{56E9} 143r23 39|22r28 230r23
+61n9*NA_Error{56E9} 143r40 39|32r28 230r40
+62n9*Annex_C_Requirement{56E9} 143r51 39|42r28 230r51
+63n9*OK{56E9} 143r73 39|37r28 231r15
+65E9*Compilation_Unit_Kinds 89e30 127r25
+66n9*Package_Specification{65E9} 39|49r34
+67n9*Generic_Package{65E9} 39|64r34
+68n9*Package_Body{65E9} 39|79r34
+69n9*Procedure_Specification{65E9} 39|59r34
+70n9*Generic_Procedure{65E9} 39|74r34
+71n9*Procedure_Body{65E9} 39|89r34
+72n9*Function_Specification{65E9} 39|54r34
+73n9*Generic_Function{65E9} 39|69r34
+74n9*Function_Body{65E9} 39|84r34
+75n9*Package_Instantiation{65E9} 39|94r34
+76n9*Procedure_Instantiation{65E9} 39|104r34
+77n9*Function_Instantiation{65E9} 39|99r34
+78n9*Package_Renaming{65E9} 39|109r34
+79n9*Procedure_Renaming{65E9} 39|119r34
+80n9*Function_Renaming{65E9} 39|114r34
+81n9*Generic_Package_Renaming{65E9} 39|124r34
+82n9*Generic_Procedure_Renaming{65E9} 39|134r34
+83n9*Generic_Function_Renaming{65E9} 39|129r34
+84n9*Package_Subunit{65E9} 39|139r34
+85n9*Procedure_Subunit{65E9} 39|144r34
+86n9*Function_Subunit{65E9} 39|149r34
+87n9*Task_Subunit{65E9} 39|154r34
+88n9*Protected_Subunit{65E9} 39|159r34
+89n9*Configuration_Pragma{65E9} 39|164r34
+91A12*PE_Label{string}<integer> 141r25
+94A12*Comp_Unit_Name{string}<integer> 129r25
+97R9*Info_Record 97d22 146e14 203r58 39|8r58
+97e22*Kind{56E9} 124r12 39|11r16 199r16
+98a7*Source_Name{40|106A12} 39|173r52
+100i7*Start_Line{40|112I12} 39|178r60 181r60
+101i7*Start_Position{40|116I12} 39|186r62
+102i7*End_Line{40|112I12} 39|191r60
+103i7*End_Position{40|116I12} 39|196r62
+127e13*Unit_Kind{65E9} 39|48r22
+129a13*Unit_Name{94A12} 39|210r58 214r37
+133b13*Is_Main{boolean} 39|216r20
+135b13*Optional{boolean} 39|217r23 223r23
+141a13*Set_Label{91A12} 39|202r58 206r37
+202U14*Write_Summary_Record 202>36 203>36 39|7b14 239l8 239t28
+202p36 Summary_File{14|64P9} 39|7b36 13r30 18r30 23r30 28r30 33r30 38r30
+. 43r30 50r36 55r36 60r36 65r36 70r36 75r36 80r36 85r36 90r36 95r36 100r36
+. 105r36 110r36 115r36 120r36 125r36 130r36 135r36 140r36 145r36 150r36 155r36
+. 160r36 165r36 172r24 176r24 184r24 189r24 194r24 201r30 209r30 218r36 220r36
+. 224r36 232r30 235r29
+203r36 Rec{97R9} 39|8b36 11r12 48r18 173r48 178r56 181r56 186r58 191r56 196r58
+. 199r12 202r54 206r33 210r54 214r33 216r16 217r19 223r19
+X 39 test_summary.adb
+5b4 DEBUG{boolean} 14r16 19r16 24r16 29r16 34r16 39r16 44r16 51r22 56r22
+. 61r22 66r22 71r22 76r22 81r22 86r22 91r22 96r22 101r22 106r22 111r22 116r22
+. 121r22 126r22 131r22 136r22 141r22 146r22 151r22 156r22 161r22 166r22 180r10
+. 204r16 212r16 236r10
+X 40 trace.ads
+47K9*Trace 38|45w6 98r21 100r24 101r24 102r24 103r24 39|178r27 181r27 186r27
+. 191r27 196r27 40|247e10
+106A12*Name_Subtype{string}<integer> 38|98r27
+112I12*Line_Number_Type{natural} 38|100r30 102r30 39|178r33 181r33 191r33
+116I12*Line_Position_Type{natural} 38|101r30 103r30 39|186r33 196r33
+

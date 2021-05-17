@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b63005b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b63005b.adb
+b63005b.adb:51:27: missing body for "PR1"
+b63005b.adb:67:26: missing body for "FN1"
+b63005b.adb:83:27: missing body for "PR1"
+b63005b.adb:100:26: missing body for "FN1"
+gnatmake: "b63005b.adb" compilation error

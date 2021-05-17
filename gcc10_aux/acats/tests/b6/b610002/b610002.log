@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b610002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b610002.adb
+b610002.adb:57:26: "in" not allowed together with "access"
+b610002.adb:62:30: anonymous access type definition not allowed here
+b610002.adb:67:42: anonymous access type definition not allowed here
+gnatmake: "b610002.adb" compilation error

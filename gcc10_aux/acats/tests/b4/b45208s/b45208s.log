@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208s.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208s.adb
+b45208s.adb:94:17: there is no applicable operator ">" for type "DTT" defined at line 82
+b45208s.adb:99:20: there is no applicable operator ">=" for type "DTT" defined at line 82
+gnatmake: "b45208s.adb" compilation error

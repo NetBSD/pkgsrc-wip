@@ -1,0 +1,7 @@
+
+,.,. CXB2001 ACATS 4.1 21-05-16 10:58:07
+---- CXB2001 Check that subprograms Shift_Left, Shift_Right,
+                Shift_Right_Arithmetic, Rotate_Left, and Rotate_Right
+                produce correct results for values of signed and modular
+                integer types of 8 bits.
+==== CXB2001 PASSED ============================.

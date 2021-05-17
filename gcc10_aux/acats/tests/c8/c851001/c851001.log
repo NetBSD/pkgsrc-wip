@@ -1,0 +1,6 @@
+
+,.,. C851001 ACATS 4.1 21-05-16 10:45:24
+---- C851001 Check that when renaming an object that excludes null, the 
+                renamed object still excludes null even if the
+                renaming_declaration does not include a null_exclusion.
+==== C851001 PASSED ============================.

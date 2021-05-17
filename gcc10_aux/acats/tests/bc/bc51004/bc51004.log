@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51004.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc51004.adb
+bc51004.adb:26:26: constraint on actual is incompatible with formal
+bc51004.adb:26:26: instantiation abandoned
+bc51004.adb:39:26: constraint on actual is incompatible with formal
+bc51004.adb:39:26: instantiation abandoned
+bc51004.adb:52:26: constraint on actual is incompatible with formal
+bc51004.adb:52:26: instantiation abandoned
+bc51004.adb:65:26: constraint on actual is incompatible with formal
+bc51004.adb:65:26: instantiation abandoned
+bc51004.adb:78:26: constraint on actual is incompatible with formal
+bc51004.adb:78:26: instantiation abandoned
+bc51004.adb:91:26: constraint on actual is incompatible with formal
+bc51004.adb:91:26: instantiation abandoned
+gnatmake: "bc51004.adb" compilation error

@@ -1,0 +1,151 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3101b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3101b.adb
+bc3101b.adb:101:34: expected type "ENUM" defined at line 34
+bc3101b.adb:101:34: found type "DE" defined at line 40
+bc3101b.adb:102:32: expected type "NB" defined at line 35
+bc3101b.adb:102:32: found type "Standard.Boolean"
+bc3101b.adb:103:37: expected type "Standard.Boolean"
+bc3101b.adb:103:37: found type "NB" defined at line 35
+bc3101b.adb:104:39: expected type "Standard.Character"
+bc3101b.adb:104:39: found type "DC" defined at line 36
+bc3101b.adb:105:37: expected type "DC" defined at line 36
+bc3101b.adb:105:37: found type "Standard.Character"
+bc3101b.adb:106:37: expected type "Standard.Integer"
+bc3101b.adb:106:37: found type "DDI" defined at line 39
+bc3101b.adb:107:32: expected type "DI" defined at line 37
+bc3101b.adb:107:32: found type "Standard.Integer"
+bc3101b.adb:108:33: expected type "DNB" defined at line 38
+bc3101b.adb:108:33: found type "NB" defined at line 35
+bc3101b.adb:109:33: expected type "DDI" defined at line 39
+bc3101b.adb:109:33: found type "DI" defined at line 37
+bc3101b.adb:110:32: expected type "DE" defined at line 40
+bc3101b.adb:110:32: found type "ENUM" defined at line 34
+bc3101b.adb:111:37: expected type "Standard.Float"
+bc3101b.adb:111:37: found type "MFLOAT" defined at line 41
+bc3101b.adb:112:38: expected type "MFLOAT" defined at line 41
+bc3101b.adb:112:38: found type "FIX" defined at line 44
+bc3101b.adb:113:37: expected type "DFLOAT" defined at line 42
+bc3101b.adb:113:37: found type "DMFLOAT" defined at line 43
+bc3101b.adb:114:38: expected type "DMFLOAT" defined at line 43
+bc3101b.adb:114:38: found type "MFLOAT" defined at line 41
+bc3101b.adb:115:35: expected type "FIX" defined at line 44
+bc3101b.adb:115:35: found type "Standard.Integer"
+bc3101b.adb:116:36: expected type "DFIX" defined at line 45
+bc3101b.adb:116:36: found type "FIX" defined at line 44
+bc3101b.adb:117:35: expected type "REC" defined at line 46
+bc3101b.adb:117:35: found type "Standard.Integer"
+bc3101b.adb:118:35: expected type "REC" defined at line 46
+bc3101b.adb:118:35: found type "ARR" defined at line 47
+bc3101b.adb:119:35: expected type "ARR" defined at line 47
+bc3101b.adb:119:35: found type "REC" defined at line 46
+bc3101b.adb:120:35: expected type "ARR" defined at line 47
+bc3101b.adb:120:35: found type "Standard.Integer"
+bc3101b.adb:121:34: expected type "AI" defined at line 48
+bc3101b.adb:121:34: found type "DAI" defined at line 49
+bc3101b.adb:122:35: expected type "DAI" defined at line 49
+bc3101b.adb:122:35: found type "AI" defined at line 48
+bc3101b.adb:123:36: expected type "ENUM" defined at line 34
+bc3101b.adb:123:36: found type "DE" defined at line 40
+bc3101b.adb:124:34: expected type "NB" defined at line 35
+bc3101b.adb:124:34: found type "Standard.Boolean"
+bc3101b.adb:125:39: expected type "Standard.Boolean"
+bc3101b.adb:125:39: found type "NB" defined at line 35
+bc3101b.adb:126:41: expected type "Standard.Character"
+bc3101b.adb:126:41: found type "DC" defined at line 36
+bc3101b.adb:127:39: expected type "DC" defined at line 36
+bc3101b.adb:127:39: found type "Standard.Character"
+bc3101b.adb:128:39: expected type "Standard.Integer"
+bc3101b.adb:128:39: found type "DDI" defined at line 39
+bc3101b.adb:129:35: expected type "DI" defined at line 37
+bc3101b.adb:129:35: found type "Standard.Integer"
+bc3101b.adb:130:36: expected type "DNB" defined at line 38
+bc3101b.adb:130:36: found type "NB" defined at line 35
+bc3101b.adb:131:35: expected type "DDI" defined at line 39
+bc3101b.adb:131:35: found type "DI" defined at line 37
+bc3101b.adb:132:37: expected type "Standard.Float"
+bc3101b.adb:132:37: found type "MFLOAT" defined at line 41
+bc3101b.adb:133:37: expected type "DFLOAT" defined at line 42
+bc3101b.adb:133:37: found type "DMFLOAT" defined at line 43
+bc3101b.adb:134:38: expected type "DMFLOAT" defined at line 43
+bc3101b.adb:134:38: found type "MFLOAT" defined at line 41
+bc3101b.adb:135:35: expected type "FIX" defined at line 44
+bc3101b.adb:135:35: found type "Standard.Integer"
+bc3101b.adb:136:36: expected type "DFIX" defined at line 45
+bc3101b.adb:136:36: found type "FIX" defined at line 44
+bc3101b.adb:137:35: expected type "FIX" defined at line 44
+bc3101b.adb:137:35: found type "DFIX" defined at line 45
+bc3101b.adb:139:34: expected type "ENUM" defined at line 34
+bc3101b.adb:139:34: found type "DE" defined at line 40
+bc3101b.adb:140:32: expected type "NB" defined at line 35
+bc3101b.adb:140:32: found type "Standard.Boolean"
+bc3101b.adb:141:37: expected type "Standard.Boolean"
+bc3101b.adb:141:37: found type "NB" defined at line 35
+bc3101b.adb:142:39: expected type "Standard.Character"
+bc3101b.adb:142:39: found type "DC" defined at line 36
+bc3101b.adb:143:32: expected type "DC" defined at line 36
+bc3101b.adb:143:32: found type "Standard.Character"
+bc3101b.adb:144:37: expected type "Standard.Integer"
+bc3101b.adb:144:37: found type "DDI" defined at line 39
+bc3101b.adb:145:32: expected type "DI" defined at line 37
+bc3101b.adb:145:32: found type "Standard.Integer"
+bc3101b.adb:146:33: expected type "DNB" defined at line 38
+bc3101b.adb:146:33: found type "NB" defined at line 35
+bc3101b.adb:147:33: expected type "DDI" defined at line 39
+bc3101b.adb:147:33: found type "DI" defined at line 37
+bc3101b.adb:148:32: expected type "DE" defined at line 40
+bc3101b.adb:148:32: found type "ENUM" defined at line 34
+bc3101b.adb:149:37: expected type "Standard.Float"
+bc3101b.adb:149:37: found type "MFLOAT" defined at line 41
+bc3101b.adb:150:38: expected type "MFLOAT" defined at line 41
+bc3101b.adb:150:38: found type "FIX" defined at line 44
+bc3101b.adb:151:37: expected type "DFLOAT" defined at line 42
+bc3101b.adb:151:37: found type "DMFLOAT" defined at line 43
+bc3101b.adb:152:38: expected type "DMFLOAT" defined at line 43
+bc3101b.adb:152:38: found type "MFLOAT" defined at line 41
+bc3101b.adb:153:35: expected type "FIX" defined at line 44
+bc3101b.adb:153:35: found type "Standard.Integer"
+bc3101b.adb:154:36: expected type "DFIX" defined at line 45
+bc3101b.adb:154:36: found type "FIX" defined at line 44
+bc3101b.adb:155:35: expected type "REC" defined at line 46
+bc3101b.adb:155:35: found type "Standard.Integer"
+bc3101b.adb:156:35: expected type "REC" defined at line 46
+bc3101b.adb:156:35: found type "ARR" defined at line 47
+bc3101b.adb:157:35: expected type "ARR" defined at line 47
+bc3101b.adb:157:35: found type "REC" defined at line 46
+bc3101b.adb:158:35: expected type "ARR" defined at line 47
+bc3101b.adb:158:35: found type "Standard.Integer"
+bc3101b.adb:159:34: expected type "AI" defined at line 48
+bc3101b.adb:159:34: found type "DAI" defined at line 49
+bc3101b.adb:160:35: expected type "DAI" defined at line 49
+bc3101b.adb:160:35: found type "AI" defined at line 48
+bc3101b.adb:161:36: expected type "ENUM" defined at line 34
+bc3101b.adb:161:36: found type "DE" defined at line 40
+bc3101b.adb:162:34: expected type "NB" defined at line 35
+bc3101b.adb:162:34: found type "Standard.Boolean"
+bc3101b.adb:163:39: expected type "Standard.Boolean"
+bc3101b.adb:163:39: found type "NB" defined at line 35
+bc3101b.adb:164:41: expected type "Standard.Character"
+bc3101b.adb:164:41: found type "DC" defined at line 36
+bc3101b.adb:165:34: expected type "DC" defined at line 36
+bc3101b.adb:165:34: found type "Standard.Character"
+bc3101b.adb:166:39: expected type "Standard.Integer"
+bc3101b.adb:166:39: found type "DDI" defined at line 39
+bc3101b.adb:167:35: expected type "DI" defined at line 37
+bc3101b.adb:167:35: found type "Standard.Integer"
+bc3101b.adb:168:36: expected type "DNB" defined at line 38
+bc3101b.adb:168:36: found type "NB" defined at line 35
+bc3101b.adb:169:35: expected type "DDI" defined at line 39
+bc3101b.adb:169:35: found type "DI" defined at line 37
+bc3101b.adb:170:37: expected type "Standard.Float"
+bc3101b.adb:170:37: found type "MFLOAT" defined at line 41
+bc3101b.adb:171:37: expected type "DFLOAT" defined at line 42
+bc3101b.adb:171:37: found type "DMFLOAT" defined at line 43
+bc3101b.adb:172:38: expected type "DMFLOAT" defined at line 43
+bc3101b.adb:172:38: found type "MFLOAT" defined at line 41
+bc3101b.adb:173:35: expected type "FIX" defined at line 44
+bc3101b.adb:173:35: found type "Standard.Integer"
+bc3101b.adb:174:36: expected type "DFIX" defined at line 45
+bc3101b.adb:174:36: found type "FIX" defined at line 44
+bc3101b.adb:175:35: expected type "FIX" defined at line 44
+bc3101b.adb:175:35: found type "DFIX" defined at line 45
+gnatmake: "bc3101b.adb" compilation error

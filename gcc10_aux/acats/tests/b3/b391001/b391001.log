@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b391001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b391001.adb
+b391001.adb:16:54: discriminants of nonlimited tagged type cannot have defaults
+b391001.adb:19:03: invalid context for private extension
+b391001.adb:25:07: extension of nonlimited type cannot have limited components
+b391001.adb:30:07: "Simple_Component" conflicts with declaration at line 7
+gnatmake: "b391001.adb" compilation error

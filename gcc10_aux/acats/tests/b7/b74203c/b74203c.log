@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74203c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74203c.adb
+b74203c.adb:78:13: expected private type "ARR2" defined at line 47
+b74203c.adb:78:13: found a composite type
+b74203c.adb:80:09: array type required in indexed component
+b74203c.adb:84:09: expected an array type
+b74203c.adb:84:09: found private type "ARR1" defined at line 46
+b74203c.adb:88:20: prefix for "RANGE" attribute may not be private type
+b74203c.adb:92:13: prefix for "LENGTH" attribute may not be private type
+b74203c.adb:94:15: there is no applicable operator "&" for private type "ARR2" defined at line 47
+b74203c.adb:96:12: operator "NOT" not defined for private type "ARR2" defined at line 47
+b74203c.adb:98:15: there is no applicable operator "AND" for private type "ARR2" defined at line 47
+b74203c.adb:100:15: there is no applicable operator "OR" for private type "ARR2" defined at line 47
+b74203c.adb:102:15: there is no applicable operator "XOR" for private type "ARR2" defined at line 47
+gnatmake: "b74203c.adb" compilation error

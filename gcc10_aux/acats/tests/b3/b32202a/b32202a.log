@@ -1,0 +1,31 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32202a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32202a.adb
+b32202a.adb:50:26: incompatible types in range
+b32202a.adb:51:33: incompatible types in range
+b32202a.adb:52:39: expected type "Standard.Integer"
+b32202a.adb:52:39: found type universal real
+b32202a.adb:53:36: expected type "Standard.Integer"
+b32202a.adb:53:36: found type universal real
+b32202a.adb:57:32: expected type "Standard.Integer"
+b32202a.adb:57:32: found type universal real
+b32202a.adb:64:41: expected type "Standard.Integer"
+b32202a.adb:64:41: found type universal real
+b32202a.adb:67:24: expected type "Standard.Integer"
+b32202a.adb:67:24: found type universal real
+b32202a.adb:70:44: expected type "Standard.Integer"
+b32202a.adb:70:44: found type universal real
+b32202a.adb:77:17: expected type "Standard.Integer"
+b32202a.adb:77:17: found type universal real
+b32202a.adb:79:21: expected type "Standard.Integer"
+b32202a.adb:79:21: found type universal real
+b32202a.adb:81:18: invalid operand types for operator "="
+b32202a.adb:81:18: left operand has type "Standard.Integer"
+b32202a.adb:81:18: right operand has type universal real
+b32202a.adb:85:24: incompatible types in range
+b32202a.adb:90:22: expected type "Standard.Integer"
+b32202a.adb:90:22: found type universal real
+b32202a.adb:96:17: expected type "Standard.Integer"
+b32202a.adb:96:17: found type universal real
+b32202a.adb:98:37: expected type "Standard.Integer"
+b32202a.adb:98:37: found type universal real
+gnatmake: "b32202a.adb" compilation error

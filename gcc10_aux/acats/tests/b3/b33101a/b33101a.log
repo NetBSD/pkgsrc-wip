@@ -1,0 +1,10 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33101a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b33101a.adb
+b33101a.adb:37:14: elementary or array type cannot have discriminants
+b33101a.adb:38:14: elementary or array type cannot have discriminants
+b33101a.adb:39:14: elementary or array type cannot have discriminants
+b33101a.adb:40:14: elementary or array type cannot have discriminants
+b33101a.adb:42:14: elementary or array type cannot have discriminants
+b33101a.adb:43:14: elementary or array type cannot have discriminants
+b33101a.adb:44:14: elementary or array type cannot have discriminants
+gnatmake: "b33101a.adb" compilation error

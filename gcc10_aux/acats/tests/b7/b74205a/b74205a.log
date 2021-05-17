@@ -1,0 +1,14 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74205a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74205a.adb
+b74205a.adb:95:33: initialization of limited object requires aggregate or function call
+b74205a.adb:97:30: there is no applicable operator "<" for type "ARR_BASE" defined at line 61
+b74205a.adb:98:30: there is no applicable operator ">=" for type "ARR_BASE" defined at line 61
+b74205a.adb:99:30: there is no applicable operator "=" for type "LP_ARR_BASE" defined at line 53
+b74205a.adb:100:30: there is no applicable operator "/=" for type "LP_ARR_BASE" defined at line 53
+b74205a.adb:105:33: string literal not available for private array
+b74205a.adb:107:33: initialization of limited object requires aggregate or function call
+b74205a.adb:108:33: string literal not available for private array
+b74205a.adb:112:45: operator "NOT" not defined for type "ARR_P_BOOL_2" defined at line 62
+b74205a.adb:117:48: there is no applicable operator "AND" for type "ARR_BASE" defined at line 61
+b74205a.adb:132:49: there is no applicable operator "&" for type "LP_ARR_BASE" defined at line 53
+gnatmake: "b74205a.adb" compilation error

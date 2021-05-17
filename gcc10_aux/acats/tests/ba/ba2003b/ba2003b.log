@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2003b0m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2003b0m.adb
+ba2003b0m-ba2003b1.adb:33:06: "P" is undefined
+gnatmake: "ba2003b0m.adb" compilation error

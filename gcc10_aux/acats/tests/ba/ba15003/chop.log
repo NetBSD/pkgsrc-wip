@@ -1,0 +1,40 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150030.a into:
+   ba150030.ads
+   ba150030-child1.ads
+   ba150030-child2.ads
+   ba150030-child3.ads
+   ba150030-child4.ads
+   ba150030-child5.ads
+   ba150030-child6.ads
+   ba150030-child7.ads
+   ba150030-child7.adb
+   ba150030-child8.ads
+   ba150030-child8.adb
+   ba150030-child9.ads
+   ba150030-child9.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150031.a into:
+   ba150031.ads
+   ba150031.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150032.a into:
+   ba150032.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150033.a into:
+   ba150033.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150034.a into:
+   ba150034.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150035.a into:
+   ba150035.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150036.a into:
+   ba150036.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150037.a into:
+   ba150037.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150038.a into:
+   ba150038.ads
+   ba150038.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba150039.a into:
+   ba150039.ads
+   ba150039.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba15003a.a into:
+   ba15003a.ads
+   ba15003a.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba15003b.am into:
+   ba15003b.adb

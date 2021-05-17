@@ -1,0 +1,53 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b750a03.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b750a03.adb
+b750a03.adb:70:28: initialization not allowed for limited types
+b750a03.adb:72:28: initialization not allowed for limited types
+b750a03.adb:76:29: initialization not allowed for limited types
+b750a03.adb:78:29: initialization not allowed for limited types
+b750a03.adb:82:36: initialization not allowed for limited types
+b750a03.adb:84:36: initialization not allowed for limited types
+b750a03.adb:86:28: initialization not allowed for limited types
+b750a03.adb:88:21: initialization not allowed for limited types
+b750a03.adb:90:28: initialization not allowed for limited types
+b750a03.adb:92:28: initialization not allowed for limited types
+b750a03.adb:94:29: initialization not allowed for limited types
+b750a03.adb:96:36: initialization not allowed for limited types
+b750a03.adb:99:26: initialization not allowed for limited types
+b750a03.adb:101:21: initialization not allowed for limited types
+b750a03.adb:103:22: initialization not allowed for limited types
+b750a03.adb:105:36: initialization not allowed for limited types
+b750a03.adb:107:39: initialization not allowed for limited types
+b750a03.adb:109:41: initialization not allowed for limited types
+b750a03.adb:111:42: initialization not allowed for limited types
+b750a03.adb:113:36: initialization not allowed for limited types
+b750a03.adb:115:25: initialization not allowed for limited types
+b750a03.adb:117:26: initialization not allowed for limited types
+b750a03.adb:119:36: initialization not allowed for limited types
+b750a03.adb:121:59: initialization not allowed for limited types
+b750a03.adb:123:50: initialization not allowed for limited types
+b750a03.adb:133:30: initialization not allowed for limited types
+b750a03.adb:133:30: component type "Lim_Rec" of subtype of "LIM_ARRAY" is limited
+b750a03.adb:135:30: initialization not allowed for limited types
+b750a03.adb:135:30: component type "Lim_Rec" of subtype of "LIM_ARRAY" is limited
+b750a03.adb:137:30: initialization not allowed for limited types
+b750a03.adb:137:30: component type "Lim_Rec" of subtype of "LIM_ARRAY" is limited
+b750a03.adb:139:23: initialization not allowed for limited types
+b750a03.adb:139:23: component type "Lim_Rec" of type "Short_Lim_Array" is limited
+b750a03.adb:141:24: initialization not allowed for limited types
+b750a03.adb:141:24: component type "Lim_Rec" of type "Short_Lim_Array" is limited
+b750a03.adb:143:40: initialization not allowed for limited types
+b750a03.adb:143:40: component type "Lim_Rec" of type "Short_Lim_Array" is limited
+b750a03.adb:145:23: initialization not allowed for limited types
+b750a03.adb:145:23: component type "Lim_Rec" of subtype of "LIM_ARRAY" is limited
+b750a03.adb:155:30: initialization not allowed for limited types
+b750a03.adb:157:30: initialization not allowed for limited types
+b750a03.adb:159:23: initialization not allowed for limited types
+b750a03.adb:161:24: initialization not allowed for limited types
+b750a03.adb:163:38: initialization not allowed for limited types
+b750a03.adb:165:51: initialization not allowed for limited types
+b750a03.adb:167:52: initialization not allowed for limited types
+b750a03.adb:169:52: initialization not allowed for limited types
+b750a03.adb:171:50: initialization not allowed for limited types
+b750a03.adb:173:51: initialization not allowed for limited types
+b750a03.adb:175:51: initialization not allowed for limited types
+gnatmake: "b750a03.adb" compilation error

@@ -1,0 +1,6 @@
+
+,.,. CXA4034 ACATS 4.1 21-05-16 10:54:40
+---- CXA4034 Check that Slice raises Index_Error if either Low or High
+                is greater than the Length(Source) for
+                Ada.Strings.Bounded and Ada.Strings.Wide_Bounded.
+==== CXA4034 PASSED ============================.

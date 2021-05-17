@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3018a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3018a.adb
+bc3018a.adb:63:06: instantiation abandoned
+bc3018a.adb:64:34: named association not allowed for overloaded formal
+bc3018a.adb:66:06: instantiation abandoned
+bc3018a.adb:66:34: named association not allowed for overloaded formal
+bc3018a.adb:69:06: instantiation abandoned
+bc3018a.adb:69:35: named association not allowed for overloaded formal
+bc3018a.adb:73:06: instantiation abandoned
+bc3018a.adb:74:34: named association not allowed for overloaded formal
+bc3018a.adb:76:06: instantiation abandoned
+bc3018a.adb:76:34: named association not allowed for overloaded formal
+bc3018a.adb:79:06: instantiation abandoned
+bc3018a.adb:79:35: named association not allowed for overloaded formal
+gnatmake: "bc3018a.adb" compilation error

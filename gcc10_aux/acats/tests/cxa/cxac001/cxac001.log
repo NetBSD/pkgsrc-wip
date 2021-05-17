@@ -1,0 +1,5 @@
+
+,.,. CXAC001 ACATS 4.1 21-05-16 10:55:08
+---- CXAC001 Check that the 'Read and 'Write attributes will transfer an
+                object of a specific, non-limited type to/from a stream.
+==== CXAC001 PASSED ============================.

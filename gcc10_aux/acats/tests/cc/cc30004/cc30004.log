@@ -1,0 +1,7 @@
+
+,.,. CC30004 ACATS 4.1 21-05-16 10:49:50
+---- CC30004 Check the runtime properties of a generic formal type
+                within an instance are the same as those of the actual
+                type; specifically, a by-copy actual type is passed by
+                copy.
+==== CC30004 PASSED ============================.

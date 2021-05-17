@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b84004a.adb
+b84004a.adb:86:31: "X" is not visible (more references follow)
+b84004a.adb:86:31: multiple use clauses cause hiding
+b84004a.adb:86:31: hidden declaration at line 52
+b84004a.adb:86:31: hidden declaration at line 48
+b84004a.adb:86:31: hidden declaration at line 47
+b84004a.adb:86:31: hidden declaration at line 39
+gnatmake: "b84004a.adb" compilation error

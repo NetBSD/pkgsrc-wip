@@ -1,0 +1,5 @@
+b63006a.ada:39:01: must have at least one exception handler
+/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b63006a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b63006a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b6/b63006a.ada into:
+   b63006a.adb

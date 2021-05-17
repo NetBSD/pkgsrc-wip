@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32201a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32201a.adb
+b32201a.adb:86:44: range attribute cannot be used in expression
+gnatmake: "b32201a.adb" compilation error

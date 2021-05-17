@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37409b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37409b.adb
+b37409b.adb:47:09: subtype mark required in this context
+b37409b.adb:47:09: found "X" declared at line 43
+b37409b.adb:51:09: subtype mark required in this context
+b37409b.adb:51:09: found "Y" declared at line 44
+gnatmake: "b37409b.adb" compilation error

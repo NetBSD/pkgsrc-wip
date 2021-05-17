@@ -1,0 +1,35 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b02b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b02b.adb
+b54b02b.adb:84:11: missing case value: 1
+b54b02b.adb:90:11: missing case values: -16#8000_0000# .. 0
+b54b02b.adb:90:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b02b.adb:90:17: bounds of "I" are not static, alternatives must cover base type
+b54b02b.adb:96:11: missing case value: 6
+b54b02b.adb:102:11: missing case values: -16#8000_0000# .. 0
+b54b02b.adb:102:11: missing case values: 6 .. 16#7FFF_FFFF#
+b54b02b.adb:102:17: bounds of "J" are not static, alternatives must cover base type
+b54b02b.adb:107:11: missing case value: 'B'
+b54b02b.adb:112:11: missing case values: -16#8000_0000# .. 0
+b54b02b.adb:112:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b02b.adb:112:20: subtype of expression is not static, alternatives must cover base type
+b54b02b.adb:116:11: missing case values: character'val(0) .. '@'
+b54b02b.adb:116:11: missing case values: 'D' .. character'val(255)
+b54b02b.adb:116:25: subtype of expression is not static, alternatives must cover base type
+b54b02b.adb:120:11: missing case value: 0
+b54b02b.adb:126:11: missing case value: 0
+b54b02b.adb:131:11: missing case values: -16#8000_0000# .. 0
+b54b02b.adb:131:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b02b.adb:131:17: subtype of expression is not static, alternatives must cover base type
+b54b02b.adb:138:11: missing case values: 'Z' .. character'val(255)
+b54b02b.adb:143:11: missing case value: "N"
+b54b02b.adb:149:11: missing case values: -16#8000_0000# .. 0
+b54b02b.adb:149:11: missing case values: 6 .. 16#7FFF_FFFF#
+b54b02b.adb:149:19: subtype of expression is not static, alternatives must cover base type
+b54b02b.adb:155:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b02b.adb:155:22: subtype of expression is not static, alternatives must cover base type
+b54b02b.adb:161:11: missing case values: -16#8000_0000# .. 0
+b54b02b.adb:161:11: missing case values: 51 .. 16#7FFF_FFFF#
+b54b02b.adb:161:19: subtype of expression is not static, alternatives must cover base type
+b54b02b.adb:167:11: missing case values: 'R' .. character'val(255)
+b54b02b.adb:171:11: missing case value: "N"
+gnatmake: "b54b02b.adb" compilation error

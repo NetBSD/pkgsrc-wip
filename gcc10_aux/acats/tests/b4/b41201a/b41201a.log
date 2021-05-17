@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41201a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41201a.adb
+b41201a.adb:64:18: slice cannot have more than one dimension
+b41201a.adb:66:18: missing ","
+b41201a.adb:68:19: slice cannot have more than one dimension
+b41201a.adb:70:18: slice cannot have more than one dimension
+b41201a.adb:72:18: missing ","
+b41201a.adb:74:19: slice cannot have more than one dimension
+b41201a.adb:76:17: slice cannot have more than one dimension
+b41201a.adb:78:17: missing ","
+b41201a.adb:80:18: slice cannot have more than one dimension
+b41201a.adb:84:18: slice cannot have more than one dimension
+b41201a.adb:86:18: missing ","
+b41201a.adb:88:18: slice cannot have more than one dimension
+b41201a.adb:92:18: slice cannot have more than one dimension
+b41201a.adb:94:18: missing ","
+b41201a.adb:96:18: slice cannot have more than one dimension
+b41201a.adb:100:17: slice cannot have more than one dimension
+b41201a.adb:102:17: missing ","
+b41201a.adb:104:17: slice cannot have more than one dimension
+gnatmake: "b41201a.adb" compilation error

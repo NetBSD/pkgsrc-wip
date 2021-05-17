@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a01h.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a01h.adb
+bd2a01h.adb:37:06: representation item must be after full type declaration
+bd2a01h.adb:43:06: representation item must be after full type declaration
+bd2a01h.adb:50:11: representation item must be after full type declaration
+bd2a01h.adb:60:06: representation item must be after full type declaration
+gnatmake: "bd2a01h.adb" compilation error

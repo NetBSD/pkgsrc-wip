@@ -1,0 +1,10 @@
+b44004b.ada:36:41: accuracy definition not allowed in membership test
+b44004b.ada:41:29: accuracy definition not allowed in membership test
+b44004b.ada:43:26: accuracy definition not allowed in membership test
+b44004b.ada:45:30: accuracy definition not allowed in membership test
+b44004b.ada:48:33: accuracy definition not allowed in membership test
+b44004b.ada:49:37: accuracy definition not allowed in membership test
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b44004b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b44004b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b44004b.ada into:
+   b44004b.adb

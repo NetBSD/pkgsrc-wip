@@ -1,0 +1,6 @@
+
+,.,. CDE0003 ACATS 4.1 21-05-16 10:52:03
+---- CDE0003 Check that actuals for generic formal types and for formal 
+                subprograms with formal untagged incomplete parameters
+                do not need to be frozen at instantiation..
+==== CDE0003 PASSED ============================.

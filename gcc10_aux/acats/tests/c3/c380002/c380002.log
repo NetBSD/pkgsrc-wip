@@ -1,0 +1,6 @@
+
+,.,. C380002 ACATS 4.1 21-05-16 10:33:48
+---- C380002 Check that an expression in a per-object discriminant
+                constraint which is part of a named association is
+                evaluated once for each association.
+==== C380002 PASSED ============================.

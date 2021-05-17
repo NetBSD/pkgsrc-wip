@@ -1,0 +1,10 @@
+ba1001d.ada:52:15: operator symbol cannot be used as subunit name
+ba1001d.ada:55:15: operator symbol cannot be used as subunit name
+ba1001d.ada:58:15: operator symbol cannot be used as subunit name
+ba1001d.ada:61:15: operator symbol cannot be used as subunit name
+/home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1001d.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1001d.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1001d.ada into:
+   ba1001d_pkg.ads
+   ba1001d_pkg.adb
+   ba1001d.adb

@@ -1,0 +1,10 @@
+
+,.,. C611A04 ACATS 4.1 21-05-16 10:43:21
+---- C611A04 Check that the correct expressions are evaluated for
+                class-wide precondition and postconditions, and that
+                they are evaluated at the correct point.
+   * C611A04 Assertion_Error not raised - 3.
+   - C611A04 Probably the class-wide precondition of the body actually
+                invoked was used rather than that of the denoted
+                subprogram.
+**** C611A04 FAILED ****************************.

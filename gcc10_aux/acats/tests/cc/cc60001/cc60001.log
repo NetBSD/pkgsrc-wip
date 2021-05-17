@@ -1,0 +1,5 @@
+
+,.,. CC60001 ACATS 4.1 21-05-16 10:50:30
+---- CC60001 Check that calls on formal abstract subprograms dispatch as
+                expected.
+==== CC60001 PASSED ============================.

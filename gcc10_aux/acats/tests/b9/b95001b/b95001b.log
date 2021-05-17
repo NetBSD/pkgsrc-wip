@@ -1,0 +1,46 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95001b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95001b.adb
+b95001b.adb:64:22: expected type "S1" defined at line 36
+b95001b.adb:64:22: found type "Standard.Integer"
+b95001b.adb:66:22: expected type "S1" defined at line 36
+b95001b.adb:66:22: found type "U" defined at line 39
+b95001b.adb:68:22: no visible interpretation of "FALSE" matches expected subtype of "S1"
+b95001b.adb:68:22: use -gnatf for details
+b95001b.adb:70:27: expected type "S1" defined at line 36
+b95001b.adb:70:27: found type "Standard.Character"
+b95001b.adb:72:22: expected type "Standard.Integer"
+b95001b.adb:72:22: found type "S1" defined at line 36
+b95001b.adb:75:22: expected type "U" defined at line 39
+b95001b.adb:75:22: found type universal integer
+b95001b.adb:80:22: expected type "S1" defined at line 36
+b95001b.adb:80:22: found type "Standard.Integer"
+b95001b.adb:82:22: expected type "Standard.Integer"
+b95001b.adb:82:22: found type "S1" defined at line 36
+b95001b.adb:84:22: expected type "Standard.Character"
+b95001b.adb:84:22: found type "CHAR" defined at line 42
+b95001b.adb:86:22: expected type "Standard.Boolean"
+b95001b.adb:86:22: found type "NBOOL" defined at line 40
+b95001b.adb:89:18: expected type "U" defined at line 39
+b95001b.adb:89:18: found type universal integer
+b95001b.adb:94:13: expected type "S1" defined at line 36
+b95001b.adb:94:13: found type "Standard.Integer"
+b95001b.adb:95:13: expected type "S1" defined at line 36
+b95001b.adb:95:13: found type "U" defined at line 39
+b95001b.adb:96:13: no visible interpretation of "FALSE" matches expected subtype of "S1"
+b95001b.adb:96:13: use -gnatf for details
+b95001b.adb:97:18: expected type "S1" defined at line 36
+b95001b.adb:97:18: found type "Standard.Character"
+b95001b.adb:98:08: invalid index type in entry name
+b95001b.adb:99:13: expected type "U" defined at line 39
+b95001b.adb:99:13: found type universal integer
+b95001b.adb:103:14: expected type "S1" defined at line 36
+b95001b.adb:103:14: found type "Standard.Integer"
+b95001b.adb:104:14: expected type "Standard.Integer"
+b95001b.adb:104:14: found type "S1" defined at line 36
+b95001b.adb:105:14: expected type "Standard.Character"
+b95001b.adb:105:14: found type "CHAR" defined at line 42
+b95001b.adb:106:14: expected type "Standard.Boolean"
+b95001b.adb:106:14: found type "NBOOL" defined at line 40
+b95001b.adb:107:15: expected type "U" defined at line 39
+b95001b.adb:107:15: found type universal integer
+gnatmake: "b95001b.adb" compilation error

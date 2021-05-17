@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba2013b.ada into:
+   ba2013b.adb
+   ba2013b_pack.ads
+   ba2013b_pack.adb
+   ba2013b-ba2013b_sub.adb

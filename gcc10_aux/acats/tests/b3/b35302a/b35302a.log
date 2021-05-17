@@ -1,0 +1,29 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35302a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35302a.adb
+b35302a.adb:36:13: expected a boolean type
+b35302a.adb:36:13: found type "BOOL" defined at line 32
+b35302a.adb:39:16: expected a boolean type
+b35302a.adb:39:16: found type "BOOL" defined at line 32
+b35302a.adb:44:16: expected a boolean type
+b35302a.adb:44:16: found type "BOOL" defined at line 32
+b35302a.adb:46:25: expected a boolean type
+b35302a.adb:46:25: found type "BOOL" defined at line 32
+b35302a.adb:50:23: there is no applicable operator "AND" for type "BOOL" defined at line 32
+b35302a.adb:52:23: there is no applicable operator "OR" for type "BOOL" defined at line 32
+b35302a.adb:54:23: there is no applicable operator "XOR" for type "BOOL" defined at line 32
+b35302a.adb:56:11: operator "NOT" not defined for type "BOOL" defined at line 32
+b35302a.adb:58:15: expected type "Standard.Boolean"
+b35302a.adb:58:15: found type "BOOL" defined at line 32
+b35302a.adb:58:36: expected type "Standard.Boolean"
+b35302a.adb:58:36: found type "BOOL" defined at line 32
+b35302a.adb:60:15: expected type "Standard.Boolean"
+b35302a.adb:60:15: found type "BOOL" defined at line 32
+b35302a.adb:60:35: expected type "Standard.Boolean"
+b35302a.adb:60:35: found type "BOOL" defined at line 32
+b35302a.adb:63:14: expected type "BOOL" defined at line 32
+b35302a.adb:63:14: found type "Standard.Boolean"
+b35302a.adb:64:14: expected type "BOOL" defined at line 32
+b35302a.adb:64:14: found type "Standard.Boolean"
+b35302a.adb:65:17: expected type "BOOL" defined at line 32
+b35302a.adb:65:17: found type "Standard.Boolean"
+gnatmake: "b35302a.adb" compilation error

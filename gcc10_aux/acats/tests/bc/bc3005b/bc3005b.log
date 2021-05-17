@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3005b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3005b.adb
+bc3005b.adb:89:37: missing ","
+bc3005b.adb:89:38: reserved word "RANGE" cannot be used as identifier
+bc3005b.adb:93:35: missing ","
+bc3005b.adb:97:35: missing ","
+bc3005b.adb:97:36: reserved word "DELTA" cannot be used as identifier
+bc3005b.adb:101:35: missing ","
+bc3005b.adb:105:34: missing ","
+bc3005b.adb:109:38: missing ","
+bc3005b.adb:113:36: missing ","
+bc3005b.adb:113:37: reserved word "DIGITS" cannot be used as identifier
+gnatmake: "bc3005b.adb" compilation error

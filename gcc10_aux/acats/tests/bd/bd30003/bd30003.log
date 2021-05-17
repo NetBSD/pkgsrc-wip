@@ -1,0 +1,20 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd30003.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd30003.adb
+bd30003.adb:116:33: static integer expression required here
+bd30003.adb:116:33: "IVar" is not static constant or named number (RM 4.9(5))
+bd30003.adb:119:33: size for "Byte" too small, minimum allowed is 8
+bd30003.adb:123:27: size for "Byte" too small, minimum allowed is 8
+bd30003.adb:126:15: aspect specification causes premature freezing of "Tst6"
+bd30003.adb:131:25: expected an integer type
+bd30003.adb:131:25: found type "Tst7" defined at line 129
+bd30003.adb:131:27: positional aggregate cannot have one component
+bd30003.adb:131:27: write instead "Tst7'First => ..."
+bd30003.adb:137:19: "Hidden_Component" is undefined
+bd30003.adb:140:15: visibility of aspect for "Tst9" changes after freeze point
+bd30003.adb:141:23: "Sml_Component" is undefined
+bd30003.adb:141:23: Meaning of "Sml_Component" differs because of declaration at line 163
+bd30003.adb:147:24: deferred constant is frozen before completion
+bd30003.adb:153:15: visibility of aspect for "TstC" changes after freeze point
+bd30003.adb:154:21: Meaning of "Outer_Component" differs because of declaration at line 169
+bd30003.adb:187:07: full constant declaration appears too late
+gnatmake: "bd30003.adb" compilation error

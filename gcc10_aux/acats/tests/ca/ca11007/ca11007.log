@@ -1,0 +1,6 @@
+
+,.,. CA11007 ACATS 4.1 21-05-16 10:48:39
+---- CA11007 Check that the private part of a grandchild library unit
+                can utilize its grandparent    unit's private
+                definition.
+==== CA11007 PASSED ============================.

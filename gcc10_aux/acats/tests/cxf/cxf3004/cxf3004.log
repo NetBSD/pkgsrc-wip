@@ -1,0 +1,6 @@
+
+,.,. CXF3004 ACATS 4.1 21-05-16 10:59:14
+---- CXF3004 Check that statically identifiable picture strings will
+                cause function Image to raise Layout_Error under
+                appropriate conditions.
+==== CXF3004 PASSED ============================.

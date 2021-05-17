@@ -1,0 +1,5 @@
+bd3001a.ada:36:17: representation clause requires simple name
+/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd3001a.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd3001a.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd3001a.ada into:
+   bd3001a.adb

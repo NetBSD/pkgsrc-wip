@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3401b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3401b.adb
+bc3401b.adb:50:32: expect array type in instantiation of "AR"
+bc3401b.adb:50:32: instantiation abandoned
+bc3401b.adb:51:32: expect array type in instantiation of "AR"
+bc3401b.adb:51:32: instantiation abandoned
+bc3401b.adb:52:32: expect array type in instantiation of "AR"
+bc3401b.adb:52:32: instantiation abandoned
+bc3401b.adb:53:32: expect array type in instantiation of "AR"
+bc3401b.adb:53:32: instantiation abandoned
+gnatmake: "bc3401b.adb" compilation error

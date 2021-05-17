@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2b01c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2b01c.adb
+bd2b01c.adb:37:10: storage size cannot be given for a derived access type
+gnatmake: "bd2b01c.adb" compilation error

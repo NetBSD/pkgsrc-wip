@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45341a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45341a.adb
+b45341a.adb:40:18: there is no applicable operator "&" for type "ARR" defined at line 35
+b45341a.adb:59:11: left hand of assignment must not be limited type
+b45341a.adb:59:20: there is no applicable operator "&" for private type "ARR1" defined at line 45
+b45341a.adb:60:11: left hand of assignment must not be limited type
+b45341a.adb:60:11: component type "CHAR" of type "ARR2" is limited
+b45341a.adb:60:20: there is no applicable operator "&" for type "ARR2" defined at line 47
+gnatmake: "b45341a.adb" compilation error

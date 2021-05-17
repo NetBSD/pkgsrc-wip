@@ -1,0 +1,8 @@
+
+,.,. C393A03 ACATS 4.1 21-05-16 10:34:37
+---- C393A03 Check that a non-abstract primitive subprogram of an
+                abstract type can be called as a dispatching operation
+                and that the body of this subprogram can make a
+                dispatching call to an abstract operation of the
+                corresponding abstract type.
+==== C393A03 PASSED ============================.

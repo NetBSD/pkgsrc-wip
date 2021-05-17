@@ -1,0 +1,6 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c3/c393b12.a into:
+   c393b12_0.ads
+   c393b12_0.adb
+   c393b12_1.ads
+   c393b12_1-c393b12_2.ads
+   c393b12.adb

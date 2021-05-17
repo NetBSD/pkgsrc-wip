@@ -1,0 +1,37 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48003b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48003b.adb
+b48003b.adb:60:32: more than one value supplied for "A"
+b48003b.adb:62:41: more than one value supplied for "B"
+b48003b.adb:68:25: more than one value supplied for "A"
+b48003b.adb:77:31: more than one value supplied for Component "A"
+b48003b.adb:77:31: no value supplied for component "C"
+b48003b.adb:79:40: more than one value supplied for Component "B"
+b48003b.adb:79:40: no value supplied for component "D"
+b48003b.adb:84:24: more than one value supplied for Component "A"
+b48003b.adb:84:24: no value supplied for component "B"
+b48003b.adb:104:41: "D" is not a component of type "R1" defined at line 36
+b48003b.adb:105:47: "D" is not a component of type "R1" defined at line 36
+b48003b.adb:108:31: no value supplied for component "B"
+b48003b.adb:108:35: "C" is not a component of the aggregate subtype
+b48003b.adb:109:40: no value supplied for component "C"
+b48003b.adb:109:44: "B" is not a component of the aggregate subtype
+b48003b.adb:114:33: "D" is not a component of type "R1" defined at line 36
+b48003b.adb:116:24: no value supplied for component "B"
+b48003b.adb:116:28: "C" is not a component of the aggregate subtype
+b48003b.adb:135:41: components in "OTHERS" choice must have same type
+b48003b.adb:136:45: components in choice list must have same type
+b48003b.adb:142:33: components in "OTHERS" choice must have same type
+b48003b.adb:151:41: "OTHERS" must represent at least one component
+b48003b.adb:153:32: "OTHERS" must represent at least one component
+b48003b.adb:158:39: "OTHERS" must represent at least one component
+b48003b.adb:182:31: no value supplied for component "C"
+b48003b.adb:183:40: no value supplied for component "A"
+b48003b.adb:185:34: no value supplied for component "D"
+b48003b.adb:186:43: no value supplied for component "F"
+b48003b.adb:191:24: no value supplied for component "B"
+b48003b.adb:192:34: too many components for record aggregate
+b48003b.adb:200:34: selector name should be identifier or "OTHERS"
+b48003b.adb:201:43: selector name should be identifier or "OTHERS"
+b48003b.adb:206:27: selector name should be identifier or "OTHERS"
+b48003b.adb:206:41: selector name should be identifier or "OTHERS"
+gnatmake: "b48003b.adb" compilation error

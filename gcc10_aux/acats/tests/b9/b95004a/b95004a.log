@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95004a.adb
+b95004a.adb:45:11: enclosing body of accept must be a task
+b95004a.adb:45:19: "." should be ";"
+b95004a.adb:50:11: enclosing body of accept must be a task
+b95004a.adb:50:19: "." should be ";"
+b95004a.adb:59:11: enclosing body of accept must be a task
+b95004a.adb:59:19: "." should be ";"
+b95004a.adb:69:11: no entry declaration matches accept statement
+b95004a.adb:69:19: "." should be ";"
+b95004a.adb:79:06: enclosing body of accept must be a task
+b95004a.adb:79:14: "." should be ";"
+b95004a.adb:84:11: enclosing body of accept must be a task
+b95004a.adb:84:19: "." should be ";"
+gnatmake: "b95004a.adb" compilation error

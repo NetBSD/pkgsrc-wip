@@ -1,0 +1,84 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46002a.adb
+b46002a.adb:46:13: argument of conversion cannot be an allocator
+b46002a.adb:46:13: use qualified expression instead
+b46002a.adb:46:13: target type must be general access type
+b46002a.adb:46:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:47:13: argument of conversion cannot be an allocator
+b46002a.adb:47:13: use qualified expression instead
+b46002a.adb:47:13: target type must be general access type
+b46002a.adb:47:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:48:13: argument of conversion cannot be an allocator
+b46002a.adb:48:13: use qualified expression instead
+b46002a.adb:48:13: target type must be general access type
+b46002a.adb:48:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:49:13: argument of conversion cannot be an allocator
+b46002a.adb:49:13: use qualified expression instead
+b46002a.adb:49:13: target type must be general access type
+b46002a.adb:49:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:50:13: argument of conversion cannot be an allocator
+b46002a.adb:50:13: use qualified expression instead
+b46002a.adb:50:13: target type must be general access type
+b46002a.adb:50:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:51:13: argument of conversion cannot be an allocator
+b46002a.adb:51:13: use qualified expression instead
+b46002a.adb:51:13: target type must be general access type
+b46002a.adb:51:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:52:13: argument of conversion cannot be an allocator
+b46002a.adb:52:13: use qualified expression instead
+b46002a.adb:52:13: target type must be general access type
+b46002a.adb:52:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:53:13: argument of conversion cannot be an allocator
+b46002a.adb:53:13: use qualified expression instead
+b46002a.adb:53:13: target type must be general access type
+b46002a.adb:53:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:54:13: argument of conversion cannot be an allocator
+b46002a.adb:54:13: use qualified expression instead
+b46002a.adb:54:13: target type must be general access type
+b46002a.adb:54:13: add "ALL" to type "ACC" defined at line 39
+b46002a.adb:56:13: argument of conversion cannot be aggregate
+b46002a.adb:56:13: use qualified expression instead
+b46002a.adb:56:17: illegal operand for array conversion
+b46002a.adb:57:13: argument of conversion cannot be aggregate
+b46002a.adb:57:13: use qualified expression instead
+b46002a.adb:57:18: illegal operand for array conversion
+b46002a.adb:58:13: argument of conversion cannot be aggregate
+b46002a.adb:58:13: use qualified expression instead
+b46002a.adb:58:19: illegal operand for array conversion
+b46002a.adb:59:13: argument of conversion cannot be aggregate
+b46002a.adb:59:13: use qualified expression instead
+b46002a.adb:59:17: illegal operand for array conversion
+b46002a.adb:60:13: argument of conversion cannot be aggregate
+b46002a.adb:60:13: use qualified expression instead
+b46002a.adb:60:18: illegal operand for array conversion
+b46002a.adb:61:13: argument of conversion cannot be aggregate
+b46002a.adb:61:13: use qualified expression instead
+b46002a.adb:61:19: illegal operand for array conversion
+b46002a.adb:63:13: argument of conversion cannot be aggregate
+b46002a.adb:63:13: use qualified expression instead
+b46002a.adb:63:17: illegal operand for array conversion
+b46002a.adb:64:13: argument of conversion cannot be aggregate
+b46002a.adb:64:13: use qualified expression instead
+b46002a.adb:64:18: illegal operand for array conversion
+b46002a.adb:65:13: argument of conversion cannot be aggregate
+b46002a.adb:65:13: use qualified expression instead
+b46002a.adb:65:19: illegal operand for array conversion
+b46002a.adb:66:13: argument of conversion cannot be aggregate
+b46002a.adb:66:13: use qualified expression instead
+b46002a.adb:66:17: illegal operand for array conversion
+b46002a.adb:67:13: argument of conversion cannot be aggregate
+b46002a.adb:67:13: use qualified expression instead
+b46002a.adb:67:18: illegal operand for array conversion
+b46002a.adb:68:13: argument of conversion cannot be aggregate
+b46002a.adb:68:13: use qualified expression instead
+b46002a.adb:68:19: illegal operand for array conversion
+b46002a.adb:70:13: argument of conversion cannot be string literal
+b46002a.adb:70:13: use qualified expression instead
+b46002a.adb:70:17: illegal operand for array conversion
+b46002a.adb:71:13: argument of conversion cannot be string literal
+b46002a.adb:71:13: use qualified expression instead
+b46002a.adb:71:18: illegal operand for array conversion
+b46002a.adb:72:13: argument of conversion cannot be string literal
+b46002a.adb:72:13: use qualified expression instead
+b46002a.adb:72:19: illegal operand for array conversion
+gnatmake: "b46002a.adb" compilation error

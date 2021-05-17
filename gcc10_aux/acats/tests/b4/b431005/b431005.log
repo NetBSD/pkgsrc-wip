@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431005.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b431005.adb
+b431005.adb:11:33: non-local pointer cannot point to local object
+b431005.adb:14:33: non-local pointer cannot point to local object
+b431005.adb:27:30: allocation from empty storage pool
+b431005.adb:28:39: allocation from empty storage pool
+b431005.adb:31:35: allocation from empty storage pool
+b431005.adb:51:39: non-local pointer cannot point to local object
+b431005.adb:55:34: non-local pointer cannot point to local object
+b431005.adb:64:35: non-local pointer cannot point to local object
+gnatmake: "b431005.adb" compilation error

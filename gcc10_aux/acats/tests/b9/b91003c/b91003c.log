@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003c.adb
+b91003c.adb:46:06: missing body for "T1"
+b91003c.adb:47:06: missing body for "T5"
+b91003c.adb:48:06: missing body for "T6"
+b91003c.adb:49:06: missing body for "T8"
+b91003c.adb:56:16: missing body for "T3"
+b91003c.adb:63:21: missing specification for task body
+b91003c.adb:71:11: missing body for "T4"
+b91003c.adb:73:21: missing specification for task body
+b91003c.adb:78:21: missing specification for task body
+b91003c.adb:92:11: missing body for "T7"
+b91003c.adb:94:21: missing specification for task body
+b91003c.adb:99:21: missing specification for task body
+b91003c.adb:114:21: missing specification for task body
+b91003c.adb:119:21: missing specification for task body
+gnatmake: "b91003c.adb" compilation error

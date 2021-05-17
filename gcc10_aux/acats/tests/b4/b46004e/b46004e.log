@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46004e.adb
+b46004e.adb:104:21: component subtypes must statically match
+b46004e.adb:105:21: component subtypes must statically match
+b46004e.adb:107:21: component subtypes must statically match
+b46004e.adb:108:21: component subtypes must statically match
+b46004e.adb:110:21: component subtypes must statically match
+b46004e.adb:111:21: component subtypes must statically match
+b46004e.adb:113:21: component subtypes must statically match
+b46004e.adb:114:21: component subtypes must statically match
+b46004e.adb:116:22: component subtypes must statically match
+b46004e.adb:117:22: component subtypes must statically match
+gnatmake: "b46004e.adb" compilation error

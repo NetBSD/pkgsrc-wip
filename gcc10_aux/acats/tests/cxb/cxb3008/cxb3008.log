@@ -1,0 +1,5 @@
+
+,.,. CXB3008 ACATS 4.1 21-05-16 10:58:12
+---- CXB3008 Check that functions imported from the C language
+                predefined libraries can be called from an Ada program.
+==== CXB3008 PASSED ============================.

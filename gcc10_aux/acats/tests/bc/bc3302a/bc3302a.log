@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3302a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3302a.adb
+bc3302a.adb:70:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:70:27: instantiation abandoned
+bc3302a.adb:71:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:71:27: instantiation abandoned
+bc3302a.adb:72:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:72:27: instantiation abandoned
+bc3302a.adb:73:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:73:27: instantiation abandoned
+bc3302a.adb:74:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:74:27: instantiation abandoned
+bc3302a.adb:75:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:75:27: instantiation abandoned
+bc3302a.adb:76:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:76:27: instantiation abandoned
+bc3302a.adb:77:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:77:27: instantiation abandoned
+bc3302a.adb:78:27: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:78:27: instantiation abandoned
+bc3302a.adb:79:28: expect signed integer type in instantiation of "GFT"
+bc3302a.adb:79:28: instantiation abandoned
+gnatmake: "bc3302a.adb" compilation error

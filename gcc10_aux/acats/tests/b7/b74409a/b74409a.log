@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74409a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74409a.adb
+b74409a.adb:51:17: completion of nonlimited type cannot be limited
+b74409a.adb:51:17: component type "LP" of type "NP" is limited
+b74409a.adb:68:36: actual for non-limited "T" cannot be a limited type
+b74409a.adb:68:36: component type "LP" of type "LP_ARRAY" is limited
+b74409a.adb:68:36: instantiation abandoned
+gnatmake: "b74409a.adb" compilation error

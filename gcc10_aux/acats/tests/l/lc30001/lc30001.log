@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lc300012.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lc300012.adb
+lc30001_0.adb:63:05: instantiation of "LC30001_0" within itself
+gnatmake: "lc300012.adb" compilation error

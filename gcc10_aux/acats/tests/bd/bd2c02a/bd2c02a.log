@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2c02a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2c02a.adb
+bd2c02a.adb:42:06: aspect "STORAGE_SIZE" for "T" previously given at line 41
+bd2c02a.adb:46:06: aspect "STORAGE_SIZE" for "T2" previously given at line 45
+gnatmake: "bd2c02a.adb" compilation error

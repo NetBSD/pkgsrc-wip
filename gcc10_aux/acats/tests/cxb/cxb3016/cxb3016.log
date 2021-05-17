@@ -1,0 +1,6 @@
+
+,.,. CXB3016 ACATS 4.1 21-05-16 10:58:16
+---- CXB3016 Check that subprograms Virtual_Length,
+                Copy_Terminated_Array, and Copy_Array produce correct
+                results.
+==== CXB3016 PASSED ============================.

@@ -1,0 +1,10 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c6/c611a040.a into:
+   c611a040.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c6/c611a041.a into:
+   c611a040-child.ads
+   c611a040-child.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c6/c611a042.a into:
+   c611a040-child-grandchild.ads
+   c611a040-child-grandchild.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c6/c611a043.am into:
+   c611a043.adb

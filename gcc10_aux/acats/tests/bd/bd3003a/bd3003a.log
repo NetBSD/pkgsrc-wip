@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3003a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3003a.adb
+bd3003a.adb:64:16: the only representation clause allowed here is an address clause
+bd3003a.adb:86:16: the only representation clause allowed here is an address clause
+gnatmake: "bd3003a.adb" compilation error

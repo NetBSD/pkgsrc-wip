@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41324b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41324b.adb
+b41324b.adb:45:20: "*" not declared in "P"
+b41324b.adb:47:20: "*" not declared in "P"
+b41324b.adb:51:20: "/" not declared in "P"
+b41324b.adb:53:20: "/" not declared in "P"
+b41324b.adb:57:20: incompatible arguments for operator
+b41324b.adb:59:20: incompatible arguments for operator
+gnatmake: "b41324b.adb" compilation error

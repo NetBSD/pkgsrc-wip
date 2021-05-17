@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b952001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b952001.adb
+b952001.adb:77:15: "Item_Priority" is undefined (more references follow)
+gnatmake: "b952001.adb" compilation error

@@ -1,0 +1,61 @@
+-- BC70007.A
+--
+--                             Grant of Unlimited Rights
+--
+--     Under contracts F33600-87-D-0337, F33600-84-D-0280, MDA903-79-C-0687,
+--     F08630-91-C-0015, and DCA100-97-D-0025, the U.S. Government obtained 
+--     unlimited rights in the software and documentation contained herein.
+--     Unlimited rights are defined in DFAR 252.227-7013(a)(19).  By making 
+--     this public release, the Government intends to confer upon all 
+--     recipients unlimited rights  equal to those held by the Government.  
+--     These rights include rights to use, duplicate, release or disclose the 
+--     released technical data and computer software in whole or in part, in 
+--     any manner and for any purpose whatsoever, and to have or permit others 
+--     to do so.
+--
+--                                    DISCLAIMER
+--
+--     ALL MATERIALS OR INFORMATION HEREIN RELEASED, MADE AVAILABLE OR
+--     DISCLOSED ARE AS IS.  THE GOVERNMENT MAKES NO EXPRESS OR IMPLIED 
+--     WARRANTY AS TO ANY MATTER WHATSOEVER, INCLUDING THE CONDITIONS OF THE
+--     SOFTWARE, DOCUMENTATION OR OTHER INFORMATION RELEASED, MADE AVAILABLE 
+--     OR DISCLOSED, OR THE OWNERSHIP, MERCHANTABILITY, OR FITNESS FOR A
+--     PARTICULAR PURPOSE OF SAID MATERIAL.
+--*
+--
+-- OBJECTIVE:
+--      Check that an actual instance of a generic formal package is rejected
+--      if its actuals do not match the corresponding actuals in the formal
+--      package actual part. Specifically, check that the following cases are
+--      illegal:
+--
+--         For a formal object of mode IN:
+--
+--             - The actuals are both static expressions but do not have the
+--               same value.
+--             - The actuals are not both static expressions and do not
+--               statically denote the same constant.
+--             - The actuals are not both the literal null.
+--
+--
+-- TEST DESCRIPTION:
+--      Declare templates for formal packages which declare a formal object
+--      of mode in. Declare generics containing formal package declarations,
+--      where each formal package has an explicit actual part.
+--
+--      Instantiate the template packages with various static and nonstatic
+--      entities and pass them as actuals to the formal packages. Verify
+--      that all cases in which the actuals of these instances do not
+--      match the actuals of the corresponding formal package are illegal.
+--
+--
+-- CHANGE HISTORY:
+--      06 Dec 94   SAIC    ACVC 2.0
+--
+--!
+
+package BC70007_0 is
+
+   function Get_Integer_From_User return Integer;
+
+end BC70007_0;

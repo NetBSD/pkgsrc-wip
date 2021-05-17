@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45204a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45204a.adb
+b45204a.adb:34:24: expected type "BOOLEAN" defined at line 32
+b45204a.adb:34:24: found type "Standard.Boolean"
+b45204a.adb:35:24: expected type "BOOLEAN" defined at line 32
+b45204a.adb:35:24: found type "Standard.Boolean"
+b45204a.adb:53:11: expected type "BOOLEAN" defined at line 32
+b45204a.adb:53:11: found type "Standard.Boolean"
+b45204a.adb:55:11: expected type "BOOLEAN" defined at line 32
+b45204a.adb:55:11: found type "Standard.Boolean"
+gnatmake: "b45204a.adb" compilation error

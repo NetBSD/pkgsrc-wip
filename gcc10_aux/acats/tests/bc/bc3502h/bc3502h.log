@@ -1,0 +1,29 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3502h.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3502h.adb
+bc3502h.adb:96:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:96:33: instantiation abandoned
+bc3502h.adb:97:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:97:33: instantiation abandoned
+bc3502h.adb:98:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:98:33: instantiation abandoned
+bc3502h.adb:99:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:99:33: instantiation abandoned
+bc3502h.adb:101:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:101:33: instantiation abandoned
+bc3502h.adb:103:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:103:33: instantiation abandoned
+bc3502h.adb:104:33: designated type of actual does not match that of formal "FT"
+bc3502h.adb:104:33: instantiation abandoned
+bc3502h.adb:107:34: designated type of actual does not match that of formal "FT"
+bc3502h.adb:107:34: instantiation abandoned
+bc3502h.adb:108:34: designated type of actual does not match that of formal "FT"
+bc3502h.adb:108:34: instantiation abandoned
+bc3502h.adb:109:34: designated type of actual does not match that of formal "FT"
+bc3502h.adb:109:34: instantiation abandoned
+bc3502h.adb:110:34: designated type of actual does not match that of formal "FT"
+bc3502h.adb:110:34: instantiation abandoned
+bc3502h.adb:113:34: designated type of actual does not match that of formal "FT"
+bc3502h.adb:113:34: instantiation abandoned
+bc3502h.adb:114:34: designated type of actual does not match that of formal "FT"
+bc3502h.adb:114:34: instantiation abandoned
+gnatmake: "bc3502h.adb" compilation error

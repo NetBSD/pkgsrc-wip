@@ -1,0 +1,8 @@
+ba14002a-son.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140020.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140025.a
+ba14002c.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140020.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140021.a
+ba14002d.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140020.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140022.a
+ba14002e.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140020.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140023.a
+ba14002h.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140020.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140024.a
+ba14002j.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140020.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140027.a
+use -w to overwrite files and keep last version
+no source files written

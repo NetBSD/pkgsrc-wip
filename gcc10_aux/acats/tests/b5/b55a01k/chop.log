@@ -1,0 +1,5 @@
+b55a01k.ada:43:06: "END LOOP;" expected for "LOOP" at line 41
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01k.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01k.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01k.ada into:
+   b55a01k.adb

@@ -1,0 +1,5 @@
+b55b17c.ada:37:16: selected loop parameter not allowed
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55b17c.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55b17c.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55b17c.ada into:
+   b55b17c.adb

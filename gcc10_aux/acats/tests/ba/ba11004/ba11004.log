@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba11004.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba11004.adb
+ba11004.adb:25:44: expected type "Visible_Integer" defined at ba11004_0.ads:48
+ba11004.adb:25:44: found type "New_Visible_Int" defined at ba11004_2.ads:8
+ba11004.adb:41:25: expected type "Visible_Integer" defined at ba11004_0.ads:48
+ba11004.adb:41:25: found type "New_Visible_Int" defined at ba11004_2.ads:8
+gnatmake: "ba11004.adb" compilation error

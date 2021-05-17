@@ -1,0 +1,14 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3012a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3012a.adb
+bd3012a.adb:40:25: expected an integer type
+bd3012a.adb:40:25: found type universal real
+bd3012a.adb:43:30: enumeration value for "E" not ordered
+bd3012a.adb:46:27: static integer expression required here
+bd3012a.adb:46:27: "Z" is not static constant or named number (RM 4.9(5))
+bd3012a.adb:49:21: static integer expression required here
+bd3012a.adb:49:24: "N" is not static constant or named number (RM 4.9(5))
+bd3012a.adb:52:31: static integer expression required here
+bd3012a.adb:52:43: "P" is not static constant or named number (RM 4.9(5))
+bd3012a.adb:56:21: expected an integer type
+bd3012a.adb:56:21: found type universal real
+gnatmake: "bd3012a.adb" compilation error

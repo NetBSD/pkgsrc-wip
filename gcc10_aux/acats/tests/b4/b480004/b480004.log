@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b480004.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b480004.adb
+b480004.adb:48:19: allocation from empty storage pool
+b480004.adb:52:19: allocation from empty storage pool
+b480004.adb:65:22: allocation from empty storage pool
+b480004.adb:69:22: allocation from empty storage pool
+b480004.adb:74:22: allocation from empty storage pool
+b480004.adb:75:22: allocation from empty storage pool
+b480004.adb:117:04: instantiation error at line 105
+b480004.adb:117:04: allocation from empty storage pool
+b480004.adb:118:04: instantiation error at line 113
+b480004.adb:118:04: allocation from empty storage pool
+b480004.adb:119:04: instantiation error at line 105
+b480004.adb:119:04: allocation from empty storage pool
+b480004.adb:120:04: instantiation error at line 113
+b480004.adb:120:04: allocation from empty storage pool
+b480004.adb:127:12: allocation from empty storage pool
+b480004.adb:128:12: allocation from empty storage pool
+b480004.adb:130:12: allocation from empty storage pool
+b480004.adb:131:12: allocation from empty storage pool
+b480004.adb:137:11: allocation from empty storage pool
+b480004.adb:138:11: allocation from empty storage pool
+gnatmake: "b480004.adb" compilation error

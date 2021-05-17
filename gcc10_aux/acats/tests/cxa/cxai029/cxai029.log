@@ -1,0 +1,6 @@
+
+,.,. CXAI029 ACATS 4.1 21-05-16 10:56:48
+---- CXAI029 Check iterators, indexing, and references for package
+                Ada.Containers.Bounded_Hashed_Sets.
+   - CXAI029 Reference_Preserving_Key detected key change.
+==== CXAI029 PASSED ============================.

@@ -1,0 +1,10 @@
+
+,.,. C360002 ACATS 4.1 21-05-16 10:33:05
+---- C360002 Check that modular types may be used as array indices. 
+                Check that if aliased appears in the
+                component_definition of an array_type that each
+                component of the array is aliased.  Check that
+                references to aliased array objects produce correct
+                results, and that out of bound references to aliased
+                objects correctly produce Constraint_Error.
+==== C360002 PASSED ============================.

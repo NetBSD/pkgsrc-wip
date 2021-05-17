@@ -1,0 +1,52 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b452002.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b452002.adb
+b452002.adb:40:19: incompatible arguments for operator
+b452002.adb:42:22: incompatible arguments for operator
+b452002.adb:44:22: incompatible arguments for operator
+b452002.adb:46:22: incompatible arguments for operator
+b452002.adb:48:22: incompatible arguments for operator
+b452002.adb:54:19: incompatible arguments for operator
+b452002.adb:56:32: invalid operand types for operator "="
+b452002.adb:56:32: left operand has access to subprogram defined at b452002_0.ads:126
+b452002.adb:56:32: right operand has type access to "Standard.Natural" defined at line 6
+b452002.adb:58:25: invalid operand types for operator "="
+b452002.adb:58:25: left operand has access to subprogram defined at line 6
+b452002.adb:58:25: right operand has type access to "Root'Class" defined at line 6
+b452002.adb:60:25: invalid operand types for operator "="
+b452002.adb:60:25: left operand has access to subprogram defined at line 6
+b452002.adb:60:25: right operand has access to subprogram defined at b452002_0.ads:126
+b452002.adb:66:19: incompatible arguments for operator
+b452002.adb:68:23: invalid operand types for operator "="
+b452002.adb:68:23: left operand has type access to "Standard.Positive" defined at line 34
+b452002.adb:68:23: right operand has type access to "Short_Array" defined at b452002_0.ads:124
+b452002.adb:70:25: invalid operand types for operator "="
+b452002.adb:70:25: left operand has type access to "Root" defined at line 6
+b452002.adb:70:25: right operand has type access to "Long_Array" defined at line 6
+b452002.adb:72:25: invalid operand types for operator "="
+b452002.adb:72:25: left operand has type access to "General_Acc" defined at line 6
+b452002.adb:72:25: right operand has type access to "Standard.Positive" defined at b452002_0.ads:120
+b452002.adb:74:25: invalid operand types for operator "="
+b452002.adb:74:25: left operand has type access to "Sibling" defined at line 6
+b452002.adb:74:25: right operand has type access to "General_Acc" defined at b452002_0.ads:131
+b452002.adb:84:22: incompatible arguments for operator
+b452002.adb:104:22: incompatible arguments for operator
+b452002.adb:116:33: invalid operand types for operator "="
+b452002.adb:116:33: left operand has type access to "Child'Class" defined at b452002_0.ads:129
+b452002.adb:116:33: right operand has type access to "Root" defined at line 6
+b452002.adb:118:25: invalid operand types for operator "="
+b452002.adb:118:25: left operand has type access to "Sibling" defined at line 6
+b452002.adb:118:25: right operand has type access to "Child'Class" defined at b452002_0.ads:129
+b452002.adb:120:22: invalid operand types for operator "="
+b452002.adb:120:22: left operand has type access to "Grandchild" defined at line 38
+b452002.adb:120:22: right operand has type access to "Child'Class" defined at b452002_0.ads:129
+b452002.adb:124:32: invalid operand types for operator "="
+b452002.adb:124:32: left operand has type access to "Sibling" defined at b452002_0.ads:130
+b452002.adb:124:32: right operand has type access to "Root" defined at line 6
+b452002.adb:126:32: invalid operand types for operator "="
+b452002.adb:126:32: left operand has type access to "Sibling" defined at b452002_0.ads:130
+b452002.adb:126:32: right operand has type access to "Grandchild" defined at line 38
+b452002.adb:138:19: incompatible arguments for operator
+b452002.adb:146:26: invalid operand types for operator "="
+b452002.adb:146:26: left operand has access to subprogram defined at line 6
+b452002.adb:146:26: right operand has access to subprogram defined at b452002_0.ads:127
+gnatmake: "b452002.adb" compilation error

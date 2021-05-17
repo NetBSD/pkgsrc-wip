@@ -1,0 +1,7 @@
+
+,.,. C3A0015 ACATS 4.1 21-05-16 10:34:54
+---- C3A0015 Check that a dervied access type has the same storage pool 
+                as its parent.
+   - C3A0015 Access types using the standard storage pool.
+   - C3A0015 Access types using a user-defined storage pool.
+==== C3A0015 PASSED ============================.

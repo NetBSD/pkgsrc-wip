@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3002e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be3002e.adb
+be3002e.adb:41:06: left hand side of assignment must be a variable
+be3002e.adb:42:06: left hand side of assignment must be a variable
+gnatmake: "be3002e.adb" compilation error

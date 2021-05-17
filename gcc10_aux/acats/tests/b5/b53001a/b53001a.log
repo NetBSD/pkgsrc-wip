@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53001a.adb
+b53001a.adb:55:06: "END IF;" expected for "IF" at line 53
+b53001a.adb:58:01: "END IF;" expected for "IF" at line 47
+b53001a.adb:58:01: "END IF;" expected for "IF" at line 45
+b53001a.adb:58:01: "END IF;" expected for "IF" at line 40
+gnatmake: "b53001a.adb" compilation error

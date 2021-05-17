@@ -1,0 +1,5 @@
+
+,.,. C45220B ACATS 4.1 21-05-16 10:40:52
+---- C45220B CHECK THAT  '<' , '<=' , '>' , '>='  PRODUCE CORRECT
+                RESULTS ON BOOLEAN-TYPE OPERANDS.
+==== C45220B PASSED ============================.

@@ -1,0 +1,6 @@
+
+,.,. CXB4006 ACATS 4.1 21-05-16 10:58:25
+---- CXB4006 Check that the functions Valid, Length, To_Decimal, and
+                To_Packed specific to Packed_Decimal parameters produce 
+                correct results.
+==== CXB4006 PASSED ============================.

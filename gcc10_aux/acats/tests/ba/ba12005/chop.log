@@ -1,0 +1,11 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba12005.a into:
+   ba12005_0.ads
+   ba12005_0-ba12005_1.ads
+   ba12005_0-ba12005_1-ba12005_2.ads
+   ba12005_0-ba12005_1-ba12005_2-ba12005_3.adb
+   ba12005_0-ba12005_1-ba12005_4.ads
+   ba12005_0-ba12005_1-ba12005_4.adb
+   ba12005_0-ba12005_5.ads
+   ba12005_0-ba12005_5.adb
+   ba12005_0-ba12005_6.ads
+   ba12005_0-ba12005_6.adb

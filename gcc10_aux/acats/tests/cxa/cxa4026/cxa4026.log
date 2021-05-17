@@ -1,0 +1,7 @@
+
+,.,. CXA4026 ACATS 4.1 21-05-16 10:54:31
+---- CXA4026 Check that procedures Trim, Head, and Tail, as well as the 
+                versions of subprograms Translate, Index, and Count,
+                which use the Character_Mapping_Function input
+                parameter,produce correct results.
+==== CXA4026 PASSED ============================.

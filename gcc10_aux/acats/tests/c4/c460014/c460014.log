@@ -1,0 +1,8 @@
+
+,.,. C460014 ACATS 4.1 21-05-16 10:41:55
+---- C460014 Check that if the operand type of a type conversion is
+                access-to-class-wide, Constraint_Error is raised if the 
+                tag of the object designated by the operand does not
+                identify a specific type that is covered by or descended
+                from the target type.
+==== C460014 PASSED ============================.

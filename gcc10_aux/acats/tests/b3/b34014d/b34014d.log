@@ -1,0 +1,36 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34014d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34014d.adb
+b34014d.adb:70:37: expected type "QT" defined at line 62
+b34014d.adb:70:37: found type "T" defined at line 41
+b34014d.adb:84:32: expected type "QS" defined at line 72
+b34014d.adb:84:32: found type "T" defined at line 41
+b34014d.adb:92:27: no candidate interpretations match the actuals:
+b34014d.adb:92:27: missing argument for parameter "X" in call to "F" (inherited) at line 62
+b34014d.adb:92:27: missing argument for parameter "X" in call to "F" declared at line 42
+b34014d.adb:96:27: no candidate interpretations match the actuals:
+b34014d.adb:96:27: missing argument for parameter "X" in call to "F" (inherited) at line 93
+b34014d.adb:96:27: missing argument for parameter "X" in call to "F" (inherited) at line 62
+b34014d.adb:96:27: missing argument for parameter "X" in call to "F" declared at line 42
+b34014d.adb:119:37: expected type "QT" defined at line 110
+b34014d.adb:119:37: found type "T" defined at line 41
+b34014d.adb:133:32: expected type "QS" defined at line 121
+b34014d.adb:133:32: found type "T" defined at line 41
+b34014d.adb:141:27: no candidate interpretations match the actuals:
+b34014d.adb:141:27: missing argument for parameter "X" in call to "F" (inherited) at line 110
+b34014d.adb:141:27: missing argument for parameter "X" in call to "F" declared at line 42
+b34014d.adb:145:27: no candidate interpretations match the actuals:
+b34014d.adb:145:27: missing argument for parameter "X" in call to "F" (inherited) at line 142
+b34014d.adb:145:27: missing argument for parameter "X" in call to "F" (inherited) at line 110
+b34014d.adb:145:27: missing argument for parameter "X" in call to "F" declared at line 42
+b34014d.adb:174:27: expected type "QT" defined at line 168
+b34014d.adb:174:27: found type "T" defined at line 41
+b34014d.adb:177:27: expected type "QS" defined at line 175
+b34014d.adb:177:27: found type "T" defined at line 41
+b34014d.adb:185:27: no candidate interpretations match the actuals:
+b34014d.adb:185:27: missing argument for parameter "X" in call to "F" (inherited) at line 168
+b34014d.adb:185:27: missing argument for parameter "X" in call to "F" declared at line 42
+b34014d.adb:189:27: no candidate interpretations match the actuals:
+b34014d.adb:189:27: missing argument for parameter "X" in call to "F" (inherited) at line 186
+b34014d.adb:189:27: missing argument for parameter "X" in call to "F" (inherited) at line 168
+b34014d.adb:189:27: missing argument for parameter "X" in call to "F" declared at line 42
+gnatmake: "b34014d.adb" compilation error

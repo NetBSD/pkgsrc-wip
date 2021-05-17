@@ -1,0 +1,31 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3404a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3404a.adb
+bc3404a.adb:114:35: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:114:35: instantiation abandoned
+bc3404a.adb:115:35: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:115:35: instantiation abandoned
+bc3404a.adb:116:35: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:116:35: instantiation abandoned
+bc3404a.adb:119:35: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:119:35: instantiation abandoned
+bc3404a.adb:122:37: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:122:37: instantiation abandoned
+bc3404a.adb:123:37: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:123:37: instantiation abandoned
+bc3404a.adb:124:37: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:124:37: instantiation abandoned
+bc3404a.adb:125:37: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:125:37: instantiation abandoned
+bc3404a.adb:126:37: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:126:37: instantiation abandoned
+bc3404a.adb:128:37: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:128:37: instantiation abandoned
+bc3404a.adb:132:39: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:132:39: instantiation abandoned
+bc3404a.adb:136:39: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:136:39: instantiation abandoned
+bc3404a.adb:140:39: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:140:39: instantiation abandoned
+bc3404a.adb:141:39: component subtype of actual does not match that of formal "FT"
+bc3404a.adb:141:39: instantiation abandoned
+gnatmake: "bc3404a.adb" compilation error

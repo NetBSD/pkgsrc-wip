@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c6/c650a01.a into:
+   c650a01_map.ads
+   c650a01_map.adb
+   c650a01_alerts.ads
+   c650a01.adb

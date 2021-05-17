@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4005.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4005.adb
+bxh4005.adb:70:05: violation of restriction "NO_EXCEPTIONS" at bxh4005.ads:57
+bxh4005.adb:87:03: violation of restriction "NO_EXCEPTIONS" at bxh4005.ads:57
+bxh4005.adb:88:06: violation of restriction "NO_EXCEPTIONS" at bxh4005.ads:57
+gnatmake: "bxh4005.adb" compilation error

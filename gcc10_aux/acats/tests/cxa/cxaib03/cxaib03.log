@@ -1,0 +1,6 @@
+
+,.,. CXAIB03 ACATS 4.1 21-05-16 10:58:00
+---- CXAIB03 Check that Ada.Containers.Doubly_Linked_Lists is
+                preelaborated and that type List has
+                Preeelaborable_Initialization.
+==== CXAIB03 PASSED ============================.

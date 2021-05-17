@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40012.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40012.adb
+lxh40012.adb:147:03: violation of restriction "NO_PROTECTED_TYPES" at gnat.adc:55
+gnatmake: "lxh40012.adb" compilation error

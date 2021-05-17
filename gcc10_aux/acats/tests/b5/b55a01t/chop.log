@@ -1,0 +1,6 @@
+b55a01t.ada:38:06: reserved word "LOOP" cannot be used as identifier
+b55a01t.ada:40:06: no "LOOP" for this "END LOOP"
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01t.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01t.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01t.ada into:
+   b55a01t.adb

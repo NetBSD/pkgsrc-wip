@@ -1,0 +1,122 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34005t.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34005t.adb
+b34005t.adb:131:06: left hand of assignment must not be limited type
+b34005t.adb:131:06: component type "COMPONENT" of type "T" is limited
+b34005t.adb:136:09: conversion between unrelated limited array types not allowed (AI-00246)
+b34005t.adb:136:09: component type "COMPONENT" of type "T" is limited
+b34005t.adb:136:12: illegal operand for array conversion
+b34005t.adb:137:20: illegal operand for numeric conversion
+b34005t.adb:138:09: conversion between unrelated limited array types not allowed (AI-00246)
+b34005t.adb:138:09: component type "COMPONENT" of type "T" is limited
+b34005t.adb:138:12: illegal operand for array conversion
+b34005t.adb:139:18: illegal operand for numeric conversion
+b34005t.adb:140:09: conversion between unrelated limited array types not allowed (AI-00246)
+b34005t.adb:140:09: component type "COMPONENT" of type "T" is limited
+b34005t.adb:140:12: illegal operand for array conversion
+b34005t.adb:141:21: illegal operand for numeric conversion
+b34005t.adb:142:09: conversion between unrelated limited array types not allowed (AI-00246)
+b34005t.adb:142:09: component type "COMPONENT" of type "T" is limited
+b34005t.adb:142:12: incompatible number of dimensions for conversion
+b34005t.adb:143:19: incompatible number of dimensions for conversion
+b34005t.adb:144:09: expected type "T" defined at line 59
+b34005t.adb:144:09: found type universal integer
+b34005t.adb:145:09: expected type "T" defined at line 59
+b34005t.adb:145:09: found type universal real
+b34005t.adb:146:09: expected type "T" defined at line 59
+b34005t.adb:146:09: found type universal integer
+b34005t.adb:147:09: expected type "T" defined at line 59
+b34005t.adb:147:09: found type universal real
+b34005t.adb:148:09: expected type "T" defined at line 59
+b34005t.adb:148:09: found a character type
+b34005t.adb:149:09: expected type "T" defined at line 59
+b34005t.adb:149:09: found type "Standard.Boolean"
+b34005t.adb:150:09: expected type "T" defined at line 59
+b34005t.adb:150:09: found a string type
+b34005t.adb:151:09: expected type "T" defined at line 59
+b34005t.adb:151:09: found an access type
+b34005t.adb:153:09: expected type "T" defined at line 59
+b34005t.adb:153:09: found type access to "COMPONENT" defined at line 153
+b34005t.adb:154:09: invalid prefix in selected component "X"
+b34005t.adb:154:10: prefixed call is only allowed for objects of a tagged type
+b34005t.adb:155:11: prefix of dereference must be an access type
+b34005t.adb:157:09: type is not one-dimensional array in slice prefix
+b34005t.adb:158:09: operator "NOT" not defined for type "T" defined at line 59
+b34005t.adb:159:11: there is no applicable operator "AND" for type "T" defined at line 59
+b34005t.adb:160:11: there is no applicable operator "OR" for type "T" defined at line 59
+b34005t.adb:161:11: there is no applicable operator "XOR" for type "T" defined at line 59
+b34005t.adb:162:09: expected type "Standard.Boolean"
+b34005t.adb:162:09: found type "T" defined at line 59
+b34005t.adb:162:20: expected type "Standard.Boolean"
+b34005t.adb:162:20: found type "T" defined at line 59
+b34005t.adb:163:09: expected type "Standard.Boolean"
+b34005t.adb:163:09: found type "T" defined at line 59
+b34005t.adb:163:19: expected type "Standard.Boolean"
+b34005t.adb:163:19: found type "T" defined at line 59
+b34005t.adb:164:13: there is no applicable operator "=" for type "T" defined at line 59
+b34005t.adb:165:13: there is no applicable operator "/=" for type "T" defined at line 59
+b34005t.adb:166:13: there is no applicable operator "<" for type "T" defined at line 59
+b34005t.adb:167:13: there is no applicable operator ">" for type "T" defined at line 59
+b34005t.adb:168:13: there is no applicable operator "<=" for type "T" defined at line 59
+b34005t.adb:169:13: there is no applicable operator ">=" for type "T" defined at line 59
+b34005t.adb:172:09: operator "+" not defined for type "T" defined at line 59
+b34005t.adb:173:09: operator "-" not defined for type "T" defined at line 59
+b34005t.adb:174:09: operator "ABS" not defined for type "T" defined at line 59
+b34005t.adb:175:11: there is no applicable operator "+" for type "T" defined at line 59
+b34005t.adb:176:11: there is no applicable operator "-" for type "T" defined at line 59
+b34005t.adb:177:11: there is no applicable operator "*" for type "T" defined at line 59
+b34005t.adb:178:09: expected type "Standard.Integer"
+b34005t.adb:178:09: found type "T" defined at line 59
+b34005t.adb:179:13: expected type "Standard.Integer"
+b34005t.adb:179:13: found type "T" defined at line 59
+b34005t.adb:180:11: there is no applicable operator "/" for type "T" defined at line 59
+b34005t.adb:181:09: expected type "Standard.Integer"
+b34005t.adb:181:09: found type "T" defined at line 59
+b34005t.adb:182:11: there is no applicable operator "MOD" for type "T" defined at line 59
+b34005t.adb:183:11: there is no applicable operator "REM" for type "T" defined at line 59
+b34005t.adb:184:11: invalid operand types for operator "**"
+b34005t.adb:184:11: left operand has type "T" defined at line 59
+b34005t.adb:184:11: right operand has type "Standard.Integer"
+b34005t.adb:185:11: there is no applicable operator "&" for type "T" defined at line 59
+b34005t.adb:186:11: invalid operand types for operator "&"
+b34005t.adb:187:11: invalid operand types for operator "&"
+b34005t.adb:188:11: there is no applicable operator "&" for private type "LP" defined at line 47
+b34005t.adb:190:11: prefix of "AFT" attribute must be fixed point type
+b34005t.adb:191:11: prefix of "CALLABLE" attribute must be a task or a task interface class-wide object
+b34005t.adb:192:11: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b34005t.adb:193:11: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b34005t.adb:194:12: invalid entry name
+b34005t.adb:195:11: prefix of "DELTA" attribute must be fixed point type
+b34005t.adb:196:11: prefix of "DIGITS" attribute must be float or decimal type
+b34005t.adb:197:11: prefix of "EMAX" attribute must be float type
+b34005t.adb:198:11: prefix of "EPSILON" attribute must be float type
+b34005t.adb:205:20: invalid dimension number for array type
+b34005t.adb:206:11: prefix for "FIRST_BIT" attribute must be selected component
+b34005t.adb:207:11: prefix of "FORE" attribute must be fixed point type
+b34005t.adb:208:11: prefix of "IMAGE" attribute must be a scalar type or a scalar object name
+b34005t.adb:209:11: prefix of "LARGE" attribute must be real type
+b34005t.adb:216:19: invalid dimension number for array type
+b34005t.adb:217:11: prefix for "LAST_BIT" attribute must be selected component
+b34005t.adb:225:11: prefix of "MACHINE_EMAX" attribute must be float type
+b34005t.adb:226:11: prefix of "MACHINE_EMIN" attribute must be float type
+b34005t.adb:227:11: prefix of "MACHINE_MANTISSA" attribute must be float type
+b34005t.adb:228:11: prefix of "MACHINE_OVERFLOWS" attribute must be real type
+b34005t.adb:229:11: prefix of "MACHINE_RADIX" attribute must be real type
+b34005t.adb:230:11: prefix of "MACHINE_ROUNDS" attribute must be real type
+b34005t.adb:231:11: prefix of "MANTISSA" attribute must be real type
+b34005t.adb:232:11: prefix of "POS" attribute must be discrete type
+b34005t.adb:233:11: prefix for "POSITION" attribute must be selected component
+b34005t.adb:234:09: prefix of "PRED" attribute must be scalar type
+b34005t.adb:253:24: expression for dimension must be static
+b34005t.adb:253:37: "J" is not static constant or named number (RM 4.9(5))
+b34005t.adb:256:11: prefix of "SAFE_EMAX" attribute must be float type
+b34005t.adb:257:11: prefix of "SAFE_LARGE" attribute must be real type
+b34005t.adb:258:11: prefix of "SAFE_SMALL" attribute must be real type
+b34005t.adb:261:11: prefix of "SMALL" attribute must be real type
+b34005t.adb:262:11: prefix of "STORAGE_SIZE" attribute must be access or task type
+b34005t.adb:263:11: prefix of "STORAGE_SIZE" attribute must be access or task type
+b34005t.adb:264:09: prefix of "SUCC" attribute must be scalar type
+b34005t.adb:265:11: prefix of "TERMINATED" attribute must be a task or a task interface class-wide object
+b34005t.adb:266:09: prefix of "VAL" attribute must be discrete type
+b34005t.adb:267:09: prefix of "VALUE" attribute must be scalar type
+b34005t.adb:268:11: prefix of "WIDTH" attribute must be scalar type
+gnatmake: "b34005t.adb" compilation error

@@ -1,0 +1,5 @@
+b940007.a:60:10: all components must be declared in spec
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940007.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940007.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940007.a into:
+   b940007.adb

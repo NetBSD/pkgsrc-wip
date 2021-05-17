@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40084.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40084.adb
+lxh4008_0-lxh4008_1.adb:57:06: violation of restriction "NO_UNCHECKED_CONVERSION" at gnat.adc:57
+gnatmake: "lxh40084.adb" compilation error

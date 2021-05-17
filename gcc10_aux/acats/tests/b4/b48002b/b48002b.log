@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48002b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48002b.adb
+b48002b.adb:100:22: constraint not allowed here
+b48002b.adb:100:27: if qualified expression was meant, use apostrophe
+b48002b.adb:101:22: constraint not allowed here
+b48002b.adb:101:26: if qualified expression was meant, use apostrophe
+b48002b.adb:102:22: constraint not allowed here
+b48002b.adb:102:26: if qualified expression was meant, use apostrophe
+b48002b.adb:103:22: constraint not allowed here
+b48002b.adb:103:26: if qualified expression was meant, use apostrophe
+b48002b.adb:104:22: constraint not allowed here
+b48002b.adb:104:26: if qualified expression was meant, use apostrophe
+b48002b.adb:105:22: constraint not allowed here
+b48002b.adb:105:27: if qualified expression was meant, use apostrophe
+b48002b.adb:106:22: constraint not allowed here
+b48002b.adb:106:27: if qualified expression was meant, use apostrophe
+gnatmake: "b48002b.adb" compilation error

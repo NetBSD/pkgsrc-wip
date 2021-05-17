@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43005a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43005a.adb
+b43005a.adb:53:06: ambiguous expression (cannot resolve "P")
+b43005a.adb:53:06: possible interpretation at line 43
+b43005a.adb:53:06: possible interpretation at line 38
+b43005a.adb:54:06: ambiguous expression (cannot resolve "P")
+b43005a.adb:54:06: possible interpretation at line 43
+b43005a.adb:54:06: possible interpretation at line 38
+gnatmake: "b43005a.adb" compilation error

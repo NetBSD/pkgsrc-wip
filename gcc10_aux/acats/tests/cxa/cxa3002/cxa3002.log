@@ -1,0 +1,7 @@
+
+,.,. CXA3002 ACATS 4.1 21-05-16 10:54:03
+---- CXA3002 Check that the conversion functions for Characters and
+                Strings defined in package Ada.Characters.Handling
+                provide correct results when given character/string
+                input parameters.
+==== CXA3002 PASSED ============================.

@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001c.adb
+ba2001c.adb:33:06: identifier for stub is not unique
+ba2001c.adb:37:06: identifier for stub is not unique
+gnatmake: "ba2001c.adb" compilation error

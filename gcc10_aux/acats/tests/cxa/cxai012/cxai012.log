@@ -1,0 +1,5 @@
+
+,.,. CXAI012 ACATS 4.1 21-05-16 10:55:54
+---- CXAI012 Check that an implementation supports the functionality
+                defined in package Ada.Containers.Bounded_Hashed_Maps.
+==== CXAI012 PASSED ============================.

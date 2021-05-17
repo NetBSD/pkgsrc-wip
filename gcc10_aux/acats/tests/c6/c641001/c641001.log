@@ -1,0 +1,6 @@
+
+,.,. C641001 ACATS 4.1 21-05-16 10:43:31
+---- C641001 Check that actual parameters passed by reference are view
+                converted to the nominal subtype of the formal
+                parameter.
+==== C641001 PASSED ============================.

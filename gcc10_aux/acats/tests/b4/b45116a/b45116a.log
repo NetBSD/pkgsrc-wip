@@ -1,0 +1,21 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45116a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45116a.adb
+b45116a.adb:75:25: there is no applicable operator "AND" for type "MATRIX_TYPE" defined at line 47
+b45116a.adb:78:25: there is no applicable operator "OR" for type "MATRIX_TYPE" defined at line 47
+b45116a.adb:81:25: there is no applicable operator "XOR" for type "MATRIX_TYPE" defined at line 47
+b45116a.adb:84:25: there is no applicable operator "AND" for type "VECTOR_TYPE" defined at line 48
+b45116a.adb:87:25: there is no applicable operator "OR" for type "VECTOR_TYPE" defined at line 48
+b45116a.adb:90:25: there is no applicable operator "XOR" for type "VECTOR_TYPE" defined at line 48
+b45116a.adb:93:25: there is no applicable operator "AND" for type "BOOMAT_TYPE" defined at line 50
+b45116a.adb:96:25: there is no applicable operator "OR" for type "BOOMAT_TYPE" defined at line 50
+b45116a.adb:99:25: there is no applicable operator "XOR" for type "BOOMAT_TYPE" defined at line 50
+b45116a.adb:102:27: there is no applicable operator "AND" for private type "PRIVARR_TYPE" defined at line 35
+b45116a.adb:105:27: there is no applicable operator "OR" for private type "PRIVARR_TYPE" defined at line 35
+b45116a.adb:108:27: there is no applicable operator "XOR" for private type "PRIVARR_TYPE" defined at line 35
+b45116a.adb:111:29: there is no applicable operator "AND" for type "ARRPRIBOOL_TYPE" defined at line 52
+b45116a.adb:114:29: there is no applicable operator "OR" for type "ARRPRIBOOL_TYPE" defined at line 52
+b45116a.adb:117:29: there is no applicable operator "XOR" for type "ARRPRIBOOL_TYPE" defined at line 52
+b45116a.adb:120:25: there is no applicable operator "AND" for type "NEWARR_TYPE" defined at line 69
+b45116a.adb:123:25: there is no applicable operator "OR" for type "NEWARR_TYPE" defined at line 69
+b45116a.adb:126:25: there is no applicable operator "XOR" for type "NEWARR_TYPE" defined at line 69
+gnatmake: "b45116a.adb" compilation error

@@ -1,0 +1,8 @@
+
+PROCEDURE C86004A_SWAP(X,Y: IN OUT ITEM) IS
+     T : ITEM;
+BEGIN
+     T := X;
+     X := Y;
+     Y := T;
+END C86004A_SWAP;

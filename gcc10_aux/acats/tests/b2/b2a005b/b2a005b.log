@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a005b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a005b.adb
+b2a005b.adb:35:33: base not 2-16
+b2a005b.adb:36:24: base not 2-16
+b2a005b.adb:43:14: base not 2-16
+b2a005b.adb:44:14: base not 2-16
+b2a005b.adb:46:17: base not 2-16
+b2a005b.adb:47:17: base not 2-16
+b2a005b.adb:49:22: base not 2-16
+b2a005b.adb:50:22: base not 2-16
+b2a005b.adb:55:27: base not 2-16
+b2a005b.adb:57:27: base not 2-16
+gnatmake: "b2a005b.adb" compilation error

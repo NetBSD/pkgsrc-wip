@@ -1,0 +1,7 @@
+
+,.,. CXA3006 ACATS 4.1 21-05-16 10:54:05
+---- CXA3006 Check that the conversion functions for Wide_Characters and
+                Wide_Strings defined in package
+                Ada.Wide_Characters.Handling provide correct results
+                when given wide character/string input parameters.
+==== CXA3006 PASSED ============================.

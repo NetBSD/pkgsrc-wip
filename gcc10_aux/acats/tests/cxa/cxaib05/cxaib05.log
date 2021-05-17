@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cxaib05.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cxaib05.adb
+cxaib05_data.ads:70:04: private object not allowed in preelaborated unit
+cxaib05_data.ads:70:04: would be legal if pragma Preelaborable_Initialization given for "Map" at a-coorma.ads:54, instance at line 66
+cxaib05_data.ads:77:04: private object not allowed in preelaborated unit
+cxaib05_data.ads:77:04: would be legal if pragma Preelaborable_Initialization given for "Map" at a-coorma.ads:54, instance at line 72
+gnatmake: "cxaib05.adb" compilation error

@@ -1,0 +1,187 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_PROTECTED_TYPES
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_PROTECTED_ENTRIES=1
+
+U fa21a00%b		fa21a00.adb		e6ec9d76 DE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U fa21a00%s		fa21a00.ads		65262bb0 DE EE OO PF PR PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.ads		a-finali.ali
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+Z system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-finali.ads		20210408115627 bf4f806b ada.finalization%s
+D a-reatim.ads		20210408115627 0240fc73 ada.real_time%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210408115627 eff36322 ada.unchecked_deallocation%s
+D fa21a00.ads		20210516102806 da69abdb fa21a00%s
+D fa21a00.adb		20210516102806 3c8536ad fa21a00%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D system.ads		20210408115627 a6571217 system%s
+D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-finmas.ads		20210408115627 7811a767 system.finalization_masters%s
+D s-finroo.ads		20210408115627 4ff27390 system.finalization_root%s
+D s-memory.ads		20210408115627 597d6634 system.memory%s
+D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210408115627 8747ecd2 system.os_interface%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stalib.adb		20210408115627 f2fe2716 system.standard_library%b
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210408115627 b16154c2 system.storage_pools%s
+D s-stposu.ads		20210408115627 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-string.ads		20210408115627 8fe54fb7 system.strings%s
+D s-ststop.ads		20210408115627 5fbf1b38 system.strings.stream_ops%s
+D s-tasinf.ads		20210408115627 801abd01 system.task_info%s
+D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
+D s-taprop.ads		20210408115627 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
+D s-taprob.ads		20210408115627 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20210408115627 60ad3dae system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20210408115627 5f548bb3 system.tasking.protected_objects.operations%s
+D s-tassta.ads		20210408115627 cca55c94 system.tasking.stages%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [func fa21a00 48 13 none]
+G c Z s s [tagDA fa21a00 69 9 none]
+G c Z s s [tagDF fa21a00 69 9 none]
+G c Z s s [tagIP fa21a00 69 9 none]
+G c Z s b [initialize fa21a00 82 14 none]
+G c Z s b [tsk fa21a00 88 14 none]
+G c Z s b [e fa21a00__prot 91 13 none]
+G c Z s s [recwithdiscIP fa21a00 56 9 none]
+G c Z s s [reccalldefaultIP fa21a00 60 9 none]
+G c Z s s [recprimdefaultIP fa21a00 65 9 none]
+G c Z s s [my_controlledDA fa21a00 77 9 none]
+G c Z s s [my_controlledDF fa21a00 77 9 none]
+G c Z s s [my_controlledIP fa21a00 77 9 none]
+G c Z s s [contcompDA fa21a00 84 9 none]
+G c Z s s [contcompDF fa21a00 84 9 none]
+G c Z s s [contcompDI fa21a00 84 9 none]
+G c Z s s [contcompIP fa21a00 84 9 none]
+G c Z s s [tskVIP fa21a00 88 4 none]
+G c Z s s [protVDI fa21a00 90 4 none]
+G c Z s s [protVDF fa21a00 90 4 none]
+G c Z s s [protVIP fa21a00 90 4 none]
+G c Z s s [privDA fa21a00 104 9 none]
+G c Z s s [privDF fa21a00 104 9 none]
+G c Z s s [privIP fa21a00 104 9 none]
+G c Z s s [TprivcompBIP fa21a00 96 4 none]
+G c Z s s [pri_extDA fa21a00 108 9 none]
+G c Z s s [pri_extDF fa21a00 108 9 none]
+G c Z s s [pri_extIP fa21a00 108 9 none]
+G c Z s s [TpriextcompBIP fa21a00 100 4 none]
+X 1 ada.ads
+16K9*Ada 20e8 9|41r6 77r30
+X 3 a-finali.ads
+40K13*Finalization 68e21 9|41w10 77r34
+43H9*Controlled<17|40R9> 59e72 9|77r47
+47U14*Adjust<17|42p14>
+48U14*Finalize<17|43p14>
+X 9 fa21a00.ads
+42K9*FA21A00 44r25 104E9 112l5 112e12 10|6b14 30l5 30t12
+47I9*My_Int<integer> 48r25 52r21 53r21 54r21 56r25 57r14 61r11 62r11 66r11
+. 70r11 79r11 88r22 10|25r25
+48V13*Func{47I9} 61s21 10|25b13 28l8 28t12
+50I12*Idx{natural}
+52i4*Zero{47I9}
+53i4*Three{47I9}
+54i4*Ten{47I9} 66r21
+56R9*RecWithDisc 56d22 58e14
+56i22*D{47I9} 57r24
+57i7*Twice{47I9}
+60R9*RecCallDefault 63e14
+61i7*C{47I9}
+62i7*D{47I9}
+65R9*RecPrimDefault 67e14
+66i7*C{47I9}
+69R9*Tag 71e14 73r30 75r18 98r24 108r24
+70i7*C{47I9}
+73P9*AccTag(69R9)
+75r4*Tag1{69R9}
+77R9*My_Controlled<3|43R9> 3|47P14 48P14 9|80e14 82P14 82r42 85r10 10|8r42
+79i7*C{47I9} 10|10m15
+82U14*Initialize<3|46p14> 82=26 10|8b14 11l8 11t18
+82r26 Object{77R9} 10|8b26 10m8
+84R9*ContComp 86e14
+85r7*C{77R9}
+88T14*Tsk 88d19 10|13b14 16l8 16t11
+88i19 D{47I9}
+90W19*Prot 92l8 92e12 10|18b19 23l8 23t12
+91Y13 E 10|19b13 22l11 22t12
+94R9*Priv 96r39 104c9 106e14
+96A9*PrivComp(94R9)<integer>
+98R9*Pri_Ext<69R9> 100r41 108c9 110e14
+100A9*PriExtComp(98R9)<integer>
+105b7*B{boolean}
+109a7 N{string}
+X 13 system.ads
+67M9*Address
+X 18 s-memory.ads
+53V13*Alloc{13|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{13|67M9} 105i<c,__gnat_realloc>22
+X 25 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 27 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

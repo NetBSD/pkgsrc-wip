@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a003d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a003d.adb
+b2a003d.adb:39:14: identifier may not start with digit
+b2a003d.adb:40:14: identifier may not start with digit
+b2a003d.adb:41:17: delimiter required between literal and identifier
+gnatmake: "b2a003d.adb" compilation error

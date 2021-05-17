@@ -1,0 +1,7 @@
+
+,.,. C392D01 ACATS 4.1 21-05-16 10:34:28
+---- C392D01 Dispatching for overridden and non-overridden primitive
+                subprograms: private extension declared in child unit,
+                parent is tagged private whose full view is derived 
+                type.
+==== C392D01 PASSED ============================.

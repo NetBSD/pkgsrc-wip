@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24204f.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24204f.adb
+b24204f.adb:41:16: digit >= base
+b24204f.adb:42:18: digit >= base
+gnatmake: "b24204f.adb" compilation error

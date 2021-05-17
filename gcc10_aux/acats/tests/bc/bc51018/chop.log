@@ -1,0 +1,12 @@
+bc51018.a:51:21: identifier expected
+bc51018.a:65:33: missing ";"
+bc51018.a:65:34: missing "private"
+bc51018.a:78:21: identifier expected
+bc51018.a:93:17: expecting generic type definition here
+bc51018.a:106:38: "tagged" should be "with"
+bc51018.a:115:24: missing ";"
+bc51018.a:115:25: missing "private"
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51018.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51018.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51018.a into:
+   bc51018.ads

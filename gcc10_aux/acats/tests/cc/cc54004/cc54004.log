@@ -1,0 +1,5 @@
+
+,.,. CC54004 ACATS 4.1 21-05-16 10:50:29
+---- CC54004 Check that the designated type of a generic formal
+                pool-specific access type may be class-wide.
+==== CC54004 PASSED ============================.

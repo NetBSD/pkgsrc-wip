@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97103e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97103e.adb
+b97103e.adb:47:15: missing "END TT2;"
+b97103e.adb:52:11: no "BEGIN" for this "END"
+b97103e.adb:55:11: declarations must come before "BEGIN"
+b97103e.adb:72:01: "END;" expected for "BEGIN" at line 40
+gnatmake: "b97103e.adb" compilation error

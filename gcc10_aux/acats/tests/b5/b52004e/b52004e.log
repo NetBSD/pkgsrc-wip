@@ -1,0 +1,9 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52004e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52004e.adb
+b52004e.adb:54:12: expected type "Standard.Integer"
+b52004e.adb:54:12: found type "Standard.Short_Integer"
+b52004e.adb:55:13: expected type "Standard.Short_Integer"
+b52004e.adb:55:13: found type "Standard.Integer"
+b52004e.adb:57:12: expected type "TA1" defined at line 46
+b52004e.adb:57:12: found type "TA4" defined at line 47
+gnatmake: "b52004e.adb" compilation error

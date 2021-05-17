@@ -1,0 +1,8 @@
+
+,.,. C452005 ACATS 4.1 21-05-16 10:40:49
+---- C452005 Check that a membership with a limited array tested type
+                uses primitive equality to evaluate the tests for
+                expression choices, while a nonlimited array tested type
+                uses predefined equality.
+   * C452005 Wrong limited result (5).
+**** C452005 FAILED ****************************.

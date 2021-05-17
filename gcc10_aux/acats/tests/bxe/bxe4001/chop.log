@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bxe/bxe4001.a into:
+   bxe4001_pure.ads
+   bxe4001_types.ads
+   bxe4001_normal.ads
+   bxe4001_rci.ads

@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74105a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74105a.adb
+b74105a.adb:53:16: full view of "UNCONS4" not compatible with declaration at line 37
+b74105a.adb:53:16: one is constrained, the other unconstrained
+b74105a.adb:55:16: full view of "UNCONS6" not compatible with declaration at line 39
+b74105a.adb:55:16: one is constrained, the other unconstrained
+b74105a.adb:56:16: full view of "UNCONS7" not compatible with declaration at line 40
+b74105a.adb:56:16: one is constrained, the other unconstrained
+b74105a.adb:80:16: full view of "UNCONS4" not compatible with declaration at line 65
+b74105a.adb:80:16: one is constrained, the other unconstrained
+b74105a.adb:82:16: full view of "UNCONS6" not compatible with declaration at line 67
+b74105a.adb:82:16: one is constrained, the other unconstrained
+b74105a.adb:83:16: full view of "UNCONS7" not compatible with declaration at line 68
+b74105a.adb:83:16: one is constrained, the other unconstrained
+gnatmake: "b74105a.adb" compilation error

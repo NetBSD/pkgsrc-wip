@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca5006a.ada into:
+   ca5006a0.ads
+   ca5006a0.adb
+   ca5006a1.ads
+   ca5006a2.ads
+   ca5006a1.adb
+   ca5006a2.adb
+   ca5006a.adb

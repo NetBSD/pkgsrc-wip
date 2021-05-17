@@ -1,0 +1,46 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b551001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b551001.adb
+b551001.adb:105:13: indexing aspect can only apply to a tagged type
+b551001.adb:106:13: aspect Default_Iterator applies to tagged type
+b551001.adb:120:13: Iterator_Element requires indexing aspect
+b551001.adb:128:13: aspect Default_Iterator applies to tagged type
+b551001.adb:128:13: Iterator_Element requires indexing aspect
+b551001.adb:135:13: indexing aspect can only apply to a tagged type
+b551001.adb:136:13: Iterator_Element requires indexing aspect
+b551001.adb:150:13: Iterator_Element requires indexing aspect
+b551001.adb:158:13: Iterator_Element requires indexing aspect
+b551001.adb:266:16: aspect Indexing requires a function that applies to type "T3"
+b551001.adb:278:34: no interpretation is a valid default iterator
+b551001.adb:289:34: improper function for default iterator
+b551001.adb:296:10: aspect Indexing requires a function that applies to type "T2"
+b551001.adb:300:34: improper function for default iterator
+b551001.adb:309:39: improper function for default iterator
+b551001.adb:317:22: aspect Indexing requires a function that applies to type "T4"
+b551001.adb:389:30: improper function for default iterator
+b551001.adb:395:16: aspect Indexing requires a function that applies to type "T1"
+b551001.adb:421:34: improper function for default iterator
+b551001.adb:426:19: aspect Indexing requires a function that applies to type "T1"
+b551001.adb:431:34: improper function for default iterator
+b551001.adb:433:19: aspect Indexing requires a function that applies to type "T2"
+b551001.adb:440:34: no interpretation is a valid default iterator
+b551001.adb:447:19: Default Iterator must be a primitive of "T3"
+b551001.adb:453:19: aspect Indexing requires a function that applies to type "T5"
+b551001.adb:461:34: improper function for default iterator
+b551001.adb:488:34: improper function for default iterator
+b551001.adb:490:19: aspect Indexing requires a function that applies to type "T8"
+b551001.adb:623:34: improper function for default iterator
+b551001.adb:633:34: no interpretation is a valid default iterator
+b551001.adb:736:34: improper function for default iterator
+b551001.adb:745:34: no interpretation is a valid default iterator
+b551001.adb:758:34: improper function for default iterator
+b551001.adb:767:34: improper function for default iterator
+b551001.adb:831:34: default iterator must be unique
+b551001.adb:831:34: possible interpretation at line 838
+b551001.adb:831:34: possible interpretation at line 836
+b551001.adb:843:34: default iterator must be unique
+b551001.adb:843:34: possible interpretation at line 847
+b551001.adb:843:34: possible interpretation at line 845
+b551001.adb:854:34: default iterator must be unique
+b551001.adb:854:34: possible interpretation at line 861
+b551001.adb:854:34: possible interpretation at line 859
+gnatmake: "b551001.adb" compilation error

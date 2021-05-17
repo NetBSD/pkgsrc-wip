@@ -1,0 +1,159 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_LOCAL_ALLOCATORS
+RV NO_LOCAL_PROTECTED_OBJECTS
+RV NO_PROTECTED_TYPES
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f750a00%b		f750a00.adb		7f814b09 DE OO PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U f750a00%s		f750a00.ads		942861a7 DE EE OO PF PK IU
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-finali.ads		20210408115627 bf4f806b ada.finalization%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f750a00.ads		20210516102806 942861a7 f750a00%s
+D f750a00.adb		20210516102806 eba92aae f750a00%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D system.ads		20210408115627 a6571217 system%s
+D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-finmas.ads		20210408115627 7811a767 system.finalization_masters%s
+D s-finroo.ads		20210408115627 4ff27390 system.finalization_root%s
+D s-memory.ads		20210408115627 597d6634 system.memory%s
+D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210408115627 8747ecd2 system.os_interface%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-pooglo.ads		20210408115627 ede33ef8 system.pool_global%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stalib.adb		20210408115627 f2fe2716 system.standard_library%b
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210408115627 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20210408115627 801abd01 system.task_info%s
+D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
+D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
+D s-taprob.ads		20210408115627 acd6094d system.tasking.protected_objects%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [func_lim_rec f750a00 54 14 none]
+G c Z s s [lim_recIP f750a00 49 10 none]
+G c Z s b [func_lim_array f750a00 63 14 none]
+G c Z s s [lim_arrayIP f750a00 60 10 none]
+G c Z s b [func_new_one f750a00 74 14 none]
+G c Z s s [lim_taggedDF f750a00 69 10 none]
+G c Z s s [lim_taggedIP f750a00 69 10 none]
+G c Z s b [func_lim_tagged f750a00 82 14 none]
+G c Z s b [func_new_one f750a00 84 14 none]
+G c Z s b [func_lim_ext f750a00 86 14 none]
+G c Z s b [func_lim_ext_access f750a00 88 14 none]
+G c Z s s [lim_extDF f750a00 76 10 none]
+G c Z s s [lim_extIP f750a00 76 10 none]
+G c Z s b [func_lim_tagged_access f750a00 102 14 none]
+G c Z s b [get f750a00__prot 109 17 none]
+G c Z s b [set f750a00__prot 110 18 none]
+G c Z s b [prot__getN f750a00 109 8 none]
+G c Z s b [prot__getP f750a00 109 8 none]
+G c Z s b [prot__setN f750a00 110 8 none]
+G c Z s b [prot__setP f750a00 110 8 none]
+G c Z s b [func_lim_comp f750a00 120 14 none]
+G c Z s s [protVIP f750a00 108 5 none]
+G c Z s s [lim_compIP f750a00 115 10 none]
+X 7 f750a00.ads
+47K9*F750A00 126l5 126e12 8|3b14 70l5 70t12
+49R10*Lim_Rec 52e15 54r34 56r29 58r19 60r52 70r13 8|5r34
+50i9*A{integer} 56m41 58m31 65m56 67m55 91m28 94m28 97m28 100m28 8|7m16 12m27
+. 18m33 20m36 26m22 31m22 36m22
+51b9*B{boolean} 56m50 58m40 65m64 67m63 91m37 94m37 97m37 100m37 8|7m25 12m35
+. 18m42 20m45 26m30 31m30 36m30
+54V14*Func_Lim_Rec{49R10} 8|5b14 8l9 8t21
+56r5*Cnst_Lim_Rec{49R10}
+58r5*Var_Lim_Rec{49R10}
+60A10*Lim_Array(49R10)<integer> 61r32 65r31 67r30
+61A13*Short_Lim_Array{60A10}<integer> 63r36 8|10r36
+63V14*Func_Lim_Array{61A13} 8|10b14 13l9 13t23
+65a5*Cnst_Lim_Array{60A10}
+67a5*Var_Lim_Array{60A10}
+69R10*Lim_Tagged 72e15 74p14 74r34 76r25 80r42 82r56 90r32 96r30 8|15r56
+. 20r18 24r34
+70r9*R{49R10} 91m22 94m22 97m22 100m22 8|18m27 20m30 26m16 31m16 36m16
+71i9*N{natural} 91m49 94m49 97m49 100m49 8|18m55 20m58 26m43 31m42 36m42
+74V14*Func_New_One{69R10} 8|24b14 27l9 27t21
+76R10*Lim_Ext<69R10> 78e15 84P14 84r34 86p14 86r34 88p14 88r48 93r29 99r27
+. 106r33 8|18r18 29r34 34r34 48r48
+77i8*G{natural} 94m58 100m58 8|18m64 31m50 36m50
+80P10*Any_Tagged_Access(69R10) 102r63 104r29 8|39r63
+82V14*Func_Lim_Tagged{69C10} 82>31 8|15b14 22l9 22t24
+82b31 Ext{boolean} 8|15b31 17r11
+84V14*Func_New_One{76R10}<74p14> 8|29b14 32l9 32t21
+86V14*Func_Lim_Ext{76R10} 8|34b14 37l9 37t21
+88V14*Func_Lim_Ext_Access(76R10) 8|48b14 51l9 51t28
+90r5*Cnst_Lim_Tagged{69R10}
+93r5*Cnst_Lim_Ext{76R10}
+96r5*Var_Lim_Tagged{69R10} 104m50 104r50 8|44m18 44r18
+99r5*Var_Lim_Ext{76R10} 106m44 106r44 8|42m18 42r18 50m15 50r15
+102V14*Func_Lim_Tagged_Access{80P10} 102>38 8|39b14 46l9 46t31
+102b38 Ext{boolean} 8|39b38 41r11
+104p5*Obj_Any_Tagged_Access{80P10}
+106p5*Obj_Lim_Ext_Access(76R10)
+108W20*Prot 112E8 113l9 113e13 116r12 8|58b20 68l9 68t13
+109V17 Get{natural} 8|59b17 62l12 62t15
+110U18 Set 110>23 8|64b18 67l12 67t15
+110i23 Val{natural} 8|64b23 66r20
+112i8 Value{natural} 8|61r18 66r11
+115R10*Lim_Comp 118e15 120r35 122r30 124r20 8|53r35
+116w8*P{108W20}
+117i8*N{natural} 122m43 124m33 8|55m16
+120V14*Func_Lim_Comp{115R10} 8|53b14 56l9 56t22
+122r5*Cnst_Lim_Comp{115R10}
+124r5*Var_Lim_Comp{115R10}
+X 11 system.ads
+67M9*Address
+X 16 s-memory.ads
+53V13*Alloc{11|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{11|67M9} 105i<c,__gnat_realloc>22
+X 24 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 26 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

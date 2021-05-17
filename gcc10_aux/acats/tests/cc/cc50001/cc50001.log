@@ -1,0 +1,8 @@
+
+,.,. CC50001 ACATS 4.1 21-05-16 10:50:15
+---- CC50001 Check that, in an instance, each implicit declaration of a 
+                primitive subprogram of a formal tagged private type
+                declares a view of the corresponding predefined operator
+                of the actual type (even if the operator has been
+                overridden or hidden for the actual type).
+==== CC50001 PASSED ============================.

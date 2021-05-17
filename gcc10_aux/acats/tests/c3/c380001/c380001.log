@@ -1,0 +1,6 @@
+
+,.,. C380001 ACATS 4.1 21-05-16 10:33:47
+---- C380001 Check that checks are made properly when a per-object
+                expression contains an attribute whose prefix denotes
+                the current instance of the type.
+==== C380001 PASSED ============================.

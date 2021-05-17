@@ -1,0 +1,7 @@
+
+,.,. CD30003 ACATS 4.1 21-05-16 10:51:07
+---- CD30003 Check that Size clauses are supported for values at least
+                as large as the subtypes size, and correspond to a size 
+                in storage elements that is a multiple of the objects
+                (non-zero) Alignment.
+==== CD30003 PASSED ============================.

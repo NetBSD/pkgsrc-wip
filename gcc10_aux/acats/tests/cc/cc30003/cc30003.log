@@ -1,0 +1,9 @@
+
+,.,. CC30003 ACATS 4.1 21-05-16 10:49:50
+---- CC30003 Check that, for a type extension derived from a formal
+                tagged private type, a whole new set of primitive
+                subprograms is declared for use outside of the instance.
+                Check that primitive subprograms of the type extension
+                can override those inherited from the actual type in the
+                instance.
+==== CC30003 PASSED ============================.

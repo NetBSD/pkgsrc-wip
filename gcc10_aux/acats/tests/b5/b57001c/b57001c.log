@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b57001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b57001c.adb
+b57001c.adb:48:26: cannot exit from program unit or accept statement
+b57001c.adb:77:41: cannot exit from program unit or accept statement
+b57001c.adb:87:41: cannot exit from program unit or accept statement
+b57001c.adb:93:36: cannot exit from program unit or accept statement
+b57001c.adb:99:26: cannot exit from program unit or accept statement
+gnatmake: "b57001c.adb" compilation error

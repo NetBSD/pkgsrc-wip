@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83003b0m.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83003b0m.adb
+b83003b0m-tsk1.adb:54:11: "E1" conflicts with declaration at b83003b0m.adb:58
+b83003b0m-tsk1.adb:56:14: "E2" conflicts with declaration at b83003b0m.adb:59
+b83003b0m-tsk1.adb:57:06: "E3" conflicts with declaration at b83003b0m.adb:60
+b83003b0m-tsk1.adb:58:06: "E4" conflicts with declaration at b83003b0m.adb:61
+b83003b0m-tsk1.adb:59:06: "E5" conflicts with declaration at b83003b0m.adb:62
+b83003b0m-tsk1.adb:60:06: "E6" conflicts with declaration at b83003b0m.adb:63
+b83003b0m-tsk1.adb:62:14: "E7" conflicts with declaration at b83003b0m.adb:64
+b83003b0m-tsk1.adb:64:11: "E8" conflicts with declaration at b83003b0m.adb:65
+b83003b0m-tsk2.adb:54:16: "E9" conflicts with declaration at b83003b0m.adb:69
+b83003b0m-tsk3.adb:55:15: "E10" conflicts with declaration at b83003b0m.adb:73
+b83003b0m-tsk3.adb:55:15: generic units cannot be overloaded
+b83003b0m-tsk4.adb:55:16: "E11" conflicts with declaration at b83003b0m.adb:77
+b83003b0m-tsk4.adb:55:16: generic units cannot be overloaded
+b83003b0m-tsk4.adb:58:14: "E12" conflicts with declaration at b83003b0m.adb:78
+gnatmake: "b83003b0m.adb" compilation error

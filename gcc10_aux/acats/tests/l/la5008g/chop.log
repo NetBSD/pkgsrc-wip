@@ -1,0 +1,5 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/la5008g0.ada into:
+   la5008g0.ads
+   la5008g0.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/la5008g1.ada into:
+   la5008g1m.adb

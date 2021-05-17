@@ -1,0 +1,8 @@
+
+,.,. C391003 ACATS 4.1 21-05-16 10:34:17
+---- C391003 Check that a type can be extended at a different level than
+                the parent type. Check that subprograms overridden for
+                such an extension can be dispatched to, and that the
+                overridden routine can access local variables of the
+                subprogram.
+==== C391003 PASSED ============================.

@@ -1,0 +1,5 @@
+
+,.,. CA11B01 ACATS 4.1 21-05-16 10:48:52
+---- CA11B01 Check that a type derived in a public child inherits
+                primitive operations from parent.
+==== CA11B01 PASSED ============================.

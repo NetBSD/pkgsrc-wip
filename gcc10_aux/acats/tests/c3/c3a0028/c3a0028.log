@@ -1,0 +1,6 @@
+
+,.,. C3A0028 ACATS 4.1 21-05-16 10:35:00
+---- C3A0028 Check that Constraint_Error is raised when a null access
+                value is converted to a null excluding subtype of a
+                named access-to-protected-subprogram type.
+==== C3A0028 PASSED ============================.

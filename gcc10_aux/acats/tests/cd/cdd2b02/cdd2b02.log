@@ -1,0 +1,12 @@
+
+,.,. CDD2B02 ACATS 4.1 21-05-16 10:52:01
+---- CDD2B02 Check that the default stream attributes read and write the
+                specified number of stream elements. Part 2: aspect
+                specifications with confirming stream sizes.
+   - CDD2B02 Stream_Element'Size= 8.
+   - CDD2B02 Small_Int'Stream_Size= 8.
+   - CDD2B02 Big_Stream'Stream_Size= 16.
+   - CDD2B02 Small_Mod'Stream_Size= 8.
+   - CDD2B02 Quarter_Fix'Stream_Size= 8.
+   - CDD2B02 Small_Flt'Stream_Size= 32.
+==== CDD2B02 PASSED ============================.

@@ -1,0 +1,35 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74207a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74207a.adb
+b74207a.adb:151:30: prefix of "AFT" attribute must be fixed point type
+b74207a.adb:152:30: prefix of "DELTA" attribute must be fixed point type
+b74207a.adb:153:30: prefix for "FIRST" attribute may not be private type
+b74207a.adb:154:30: prefix of "FORE" attribute must be fixed point type
+b74207a.adb:155:30: prefix for "LAST" attribute may not be private type
+b74207a.adb:156:29: prefix of "MACHINE_OVERFLOWS" attribute must be real type
+b74207a.adb:157:29: prefix of "MACHINE_ROUNDS" attribute must be real type
+b74207a.adb:158:30: prefix of "SMALL" attribute must be real type
+b74207a.adb:162:30: prefix of "DIGITS" attribute must be float or decimal type
+b74207a.adb:163:30: prefix of "MACHINE_EMAX" attribute must be float type
+b74207a.adb:164:30: prefix of "MACHINE_EMIN" attribute must be float type
+b74207a.adb:165:30: prefix of "MACHINE_MANTISSA" attribute must be float type
+b74207a.adb:166:30: prefix of "MACHINE_OVERFLOWS" attribute must be real type
+b74207a.adb:167:30: prefix of "MACHINE_RADIX" attribute must be real type
+b74207a.adb:168:30: prefix of "MACHINE_ROUNDS" attribute must be real type
+b74207a.adb:169:30: prefix of "SMALL" attribute must be real type
+b74207a.adb:173:29: prefix for "FIRST" attribute may not be private type
+b74207a.adb:175:35: prefix of "IMAGE" attribute must be a scalar type or a scalar object name
+b74207a.adb:176:29: prefix for "LAST" attribute may not be private type
+b74207a.adb:177:29: prefix of "POS" attribute must be discrete type
+b74207a.adb:178:29: prefix of "PRED" attribute must be scalar type
+b74207a.adb:179:29: prefix of "SUCC" attribute must be scalar type
+b74207a.adb:180:29: prefix of "VAL" attribute must be discrete type
+b74207a.adb:181:29: prefix of "VALUE" attribute must be scalar type
+b74207a.adb:182:29: prefix of "WIDTH" attribute must be scalar type
+b74207a.adb:186:29: prefix for "FIRST" attribute may not be private type
+b74207a.adb:187:29: prefix for "LAST" attribute may not be private type
+b74207a.adb:188:29: prefix for "LENGTH" attribute may not be private type
+b74207a.adb:189:34: prefix for "RANGE" attribute may not be private type
+b74207a.adb:199:29: prefix of "STORAGE_SIZE" attribute must be access or task type
+b74207a.adb:208:19: prefix for "FIRST" attribute may not be private type
+b74207a.adb:209:19: prefix for "LAST" attribute may not be private type
+gnatmake: "b74207a.adb" compilation error

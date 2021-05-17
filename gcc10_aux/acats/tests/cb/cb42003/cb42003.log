@@ -1,0 +1,6 @@
+
+,.,. CB42003 ACATS 4.1 21-05-16 10:49:31
+---- CB42003 Check that procedure Assert evaluates its arguments and
+                raises Assertion_Error if the boolean expression is
+                True, regardless of the Assertion_Policy.
+==== CB42003 PASSED ============================.

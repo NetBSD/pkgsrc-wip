@@ -1,0 +1,33 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b416001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b416001.adb
+b416001.adb:95:16: indexing aspect can only apply to a tagged type
+b416001.adb:100:16: indexing aspect can only apply to a tagged type
+b416001.adb:106:16: indexing aspect can only apply to a tagged type
+b416001.adb:111:16: indexing aspect can only apply to a tagged type
+b416001.adb:117:16: indexing aspect can only apply to a tagged type
+b416001.adb:136:16: indexing aspect can only apply to a tagged type
+b416001.adb:176:16: Indexing aspect cannot be specified on full view if partial view is tagged
+b416001.adb:179:16: Indexing aspect cannot be specified on full view if partial view is tagged
+b416001.adb:196:36: aspect Indexing requires a local function that applies to type "Type_1"
+b416001.adb:201:36: aspect Indexing requires a local function that applies to type "Type_1C"
+b416001.adb:206:15: Indexing requires a function that applies to type "Type_2"
+b416001.adb:212:15: Indexing requires a function that applies to type "Type_2C"
+b416001.adb:218:15: indexing function must have at least two parameters
+b416001.adb:224:15: indexing function must have at least two parameters
+b416001.adb:252:15: indexing function already inherited from parent type
+b416001.adb:252:15: override "Get_4" instead
+b416001.adb:257:15: indexing function already inherited from parent type
+b416001.adb:257:15: override "Get_4_C" instead
+b416001.adb:263:15: variable indexing must return a reference type
+b416001.adb:274:15: Indexing aspect requires a function that applies to type "Type_8"
+b416001.adb:280:15: variable indexing must return an access to variable
+b416001.adb:296:15: constant indexing must apply to an access to constant
+b416001.adb:322:15: Indexing aspect requires a function that applies to type "Type_15"
+b416001.adb:326:15: indexing function must be declared in scope of type "Type_16"
+b416001.adb:329:15: indexing function must be declared in scope of type "Type_16_C"
+b416001.adb:340:15: indexing function must have at least two parameters
+b416001.adb:350:15: indexing function must have at least two parameters
+b416001.adb:360:15: Indexing aspect requires a function that applies to type "Type_18"
+b416001.adb:371:15: Indexing aspect requires a function that applies to type "Type_19"
+b416001.adb:382:15: variable indexing must return a reference type
+gnatmake: "b416001.adb" compilation error

@@ -1,0 +1,7 @@
+
+,.,. C730003 ACATS 4.1 21-05-16 10:44:10
+---- C730003 Check that the characteristics of a type derived from a
+                private extension (outside the scope of the full view)
+                are those defined by the partial view of the private
+                extension.
+==== C730003 PASSED ============================.

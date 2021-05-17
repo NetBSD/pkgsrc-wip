@@ -1,0 +1,3 @@
+ba1010b.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1010b7.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1010b8.ada
+use -w to overwrite files and keep last version
+no source files written

@@ -1,0 +1,7 @@
+
+,.,. C3A0021 ACATS 4.1 21-05-16 10:34:57
+---- C3A0021 Check that Constraint_Error is raised when a null access
+                value is converted to a null excluding subtype of a
+                named access type. Case C: null_exclusion given in a
+                general access type definition.
+==== C3A0021 PASSED ============================.

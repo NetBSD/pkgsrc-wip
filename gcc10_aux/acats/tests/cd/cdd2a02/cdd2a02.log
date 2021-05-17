@@ -1,0 +1,5 @@
+
+,.,. CDD2A02 ACATS 4.1 21-05-16 10:51:59
+---- CDD2A02 Check that the Read, Write, Input, and Output attributes
+                are inherited for untagged derived types.
+==== CDD2A02 PASSED ============================.

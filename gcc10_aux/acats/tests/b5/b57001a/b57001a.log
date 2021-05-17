@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b57001a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b57001a.adb
+b57001a.adb:41:11: cannot exit from program unit or accept statement
+b57001a.adb:52:11: cannot exit from program unit or accept statement
+b57001a.adb:63:11: cannot exit from program unit or accept statement
+b57001a.adb:75:11: invalid loop name in exit statement
+b57001a.adb:87:11: invalid loop name in exit statement
+gnatmake: "b57001a.adb" compilation error

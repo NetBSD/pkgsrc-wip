@@ -1,0 +1,7 @@
+b22001g.adt:57:201: missing string quote
+b22001g.adt:58:04: missing ":="
+b22001g.adt:58:70: missing string quote
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001g.adt: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001g.adt: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001g.adt into:
+   b22001g.adb

@@ -1,0 +1,25 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3304a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3304a.adb
+bc3304a.adb:71:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:71:27: instantiation abandoned
+bc3304a.adb:72:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:72:27: instantiation abandoned
+bc3304a.adb:73:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:73:27: instantiation abandoned
+bc3304a.adb:74:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:74:27: instantiation abandoned
+bc3304a.adb:75:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:75:27: instantiation abandoned
+bc3304a.adb:76:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:76:27: instantiation abandoned
+bc3304a.adb:77:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:77:27: instantiation abandoned
+bc3304a.adb:78:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:78:27: instantiation abandoned
+bc3304a.adb:79:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:79:27: instantiation abandoned
+bc3304a.adb:80:27: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:80:27: instantiation abandoned
+bc3304a.adb:81:28: expect ordinary fixed point type in instantiation of "GFT"
+bc3304a.adb:81:28: instantiation abandoned
+gnatmake: "bc3304a.adb" compilation error

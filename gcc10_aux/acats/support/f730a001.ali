@@ -1,0 +1,61 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f730a001%b		f730a001.adb		c37e4d7c DE OO PK IU
+
+U f730a001%s		f730a001.ads		aba36b26 DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f730a001.ads		20210516102805 aba36b26 f730a001%s
+D f730a001.adb		20210516102805 68dd265a f730a001%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [create_book f730a001 53 14 none]
+G c Z s s [book_typeDA f730a001 47 9 none]
+G c Z s s [book_typeDF f730a001 47 9 none]
+G c Z s s [book_typeIP f730a001 47 9 none]
+X 6 f730a001.ads
+42K9*F730A001 58l5 58e13 7|6b14 18l5 18t13
+45P9*Text_Ptr(string) 48r16 49r16 53r43 54r43 7|9r43 10r43
+47R9*Book_Type 50e14 53p14 55r43 7|11r43
+48p7*Title{45P9} 7|13m12
+49p7*Author{45P9} 7|14m12
+53U14*Create_Book 53>27 54>27 55<27 7|9b14 15l8 15t19
+53p27 Title{45P9} 7|9b27 13r22
+54p27 Author{45P9} 7|10b27 14r22
+55r27 Book{47R9} 7|11b27 13m7 14m7
+

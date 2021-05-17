@@ -1,0 +1,6 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2001e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2001e.adb
+bc2001e.adb:38:11: subprogram specification expected
+bc2001e.adb:54:11: subprogram specification expected
+bc2001e.adb:73:11: subprogram specification expected
+gnatmake: "bc2001e.adb" compilation error

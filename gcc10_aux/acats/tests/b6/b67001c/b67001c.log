@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b67001c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b67001c.adb
+b67001c.adb:125:20: invalid operator name
+b67001c.adb:128:20: invalid operator name
+b67001c.adb:131:20: invalid operator name
+b67001c.adb:134:20: invalid operator name
+b67001c.adb:307:20: invalid operator name
+b67001c.adb:310:20: invalid operator name
+b67001c.adb:313:20: invalid operator name
+b67001c.adb:316:20: invalid operator name
+gnatmake: "b67001c.adb" compilation error

@@ -1,0 +1,33 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b87b48c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b87b48c.adb
+b87b48c.adb:127:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:127:06: possible interpretation at line 50
+b87b48c.adb:127:06: possible interpretation at line 45
+b87b48c.adb:129:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:129:06: possible interpretation at line 60
+b87b48c.adb:129:06: possible interpretation at line 55
+b87b48c.adb:131:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:131:06: possible interpretation at line 70
+b87b48c.adb:131:06: possible interpretation at line 65
+b87b48c.adb:133:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:133:06: possible interpretation at line 80
+b87b48c.adb:133:06: possible interpretation at line 75
+b87b48c.adb:135:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:135:06: possible interpretation at line 90
+b87b48c.adb:135:06: possible interpretation at line 85
+b87b48c.adb:137:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:137:06: possible interpretation at line 100
+b87b48c.adb:137:06: possible interpretation at line 95
+b87b48c.adb:139:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:139:06: possible interpretation at line 110
+b87b48c.adb:139:06: possible interpretation at line 105
+b87b48c.adb:141:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:141:06: possible interpretation at line 120
+b87b48c.adb:141:06: possible interpretation at line 115
+b87b48c.adb:143:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:143:06: possible interpretation at line 90
+b87b48c.adb:143:06: possible interpretation at line 85
+b87b48c.adb:145:06: ambiguous expression (cannot resolve "P")
+b87b48c.adb:145:06: possible interpretation at line 100
+b87b48c.adb:145:06: possible interpretation at line 95
+gnatmake: "b87b48c.adb" compilation error

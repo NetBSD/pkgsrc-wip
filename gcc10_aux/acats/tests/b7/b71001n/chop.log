@@ -1,0 +1,5 @@
+b71001n.ada:39:11: proper body not allowed in package spec
+/home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001n.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001n.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001n.ada into:
+   b71001n.adb

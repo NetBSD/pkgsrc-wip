@@ -1,0 +1,5 @@
+
+,.,. CXB4008 ACATS 4.1 21-05-16 10:58:26
+---- CXB4008 Check that functions To_Decimal, To_Binary, and
+                To_Long_Binary produce the correct results.
+==== CXB4008 PASSED ============================.

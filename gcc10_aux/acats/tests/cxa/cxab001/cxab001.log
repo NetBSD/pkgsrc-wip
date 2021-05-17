@@ -1,0 +1,6 @@
+
+,.,. CXAB001 ACATS 4.1 21-05-16 10:55:06
+---- CXAB001 Check that the operations defined in package Wide_Text_IO
+                allow for the input/output of Wide_Character and
+                Wide_String data.
+==== CXAB001 PASSED ============================.

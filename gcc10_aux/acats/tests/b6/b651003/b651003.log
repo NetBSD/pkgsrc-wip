@@ -1,0 +1,14 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b651003.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b651003.adb
+b651003.adb:56:29: static boolean expression required here
+b651003.adb:56:29: "Isnt_No_Return" is not static constant or named number (RM 4.9(5))
+b651003.adb:62:29: static boolean expression required here
+b651003.adb:62:29: "Old_QB" is not static constant or named number (RM 4.9(5))
+b651003.adb:65:16: no procedure "Check_5" found for aspect "No_Return"
+b651003.adb:73:16: no procedure "Check_7" found for aspect "No_Return"
+b651003.adb:87:19: no procedure "Check_P2" found for aspect "No_Return"
+b651003.adb:88:31: no procedure "Check_P3" found for aspect "No_Return"
+b651003.adb:93:33: no procedure "Obj" found for aspect "No_Return"
+b651003.adb:95:44: no procedure "Check_T1" found for aspect "No_Return"
+b651003.adb:97:37: no procedure "Check_Error" found for aspect "No_Return"
+gnatmake: "b651003.adb" compilation error

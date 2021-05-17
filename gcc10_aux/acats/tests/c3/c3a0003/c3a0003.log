@@ -1,0 +1,5 @@
+
+,.,. C3A0003 ACATS 4.1 21-05-16 10:34:48
+---- C3A0003 Check that a function in a generic instance can be called
+                using an access-to-subprogram value.
+==== C3A0003 PASSED ============================.

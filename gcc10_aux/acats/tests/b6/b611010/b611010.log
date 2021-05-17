@@ -1,0 +1,13 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611010.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b611010.adb
+b611010.adb:56:23: attribute "Old" can only appear in postcondition
+b611010.adb:57:11: attribute "Old" can only appear in postcondition
+b611010.adb:92:26: attribute "Old" can only appear in postcondition
+b611010.adb:93:25: attribute "Old" can only appear in postcondition
+b611010.adb:113:20: attribute "Old" can only appear in postcondition
+b611010.adb:116:32: attribute "Old" can only appear in postcondition
+b611010.adb:130:22: attribute "Old" can only appear in postcondition
+b611010.adb:136:14: attribute "Old" can only appear in postcondition
+b611010.adb:140:22: attribute "Old" can only appear in postcondition
+b611010.adb:142:10: attribute "Old" can only appear in postcondition
+gnatmake: "b611010.adb" compilation error

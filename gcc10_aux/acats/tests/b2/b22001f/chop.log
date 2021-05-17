@@ -1,0 +1,6 @@
+b22001f.adt:61:199: strings are delimited by double quote character
+b22001f.adt:62:01: range attribute cannot be used in expression
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001f.adt: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001f.adt: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001f.adt into:
+   b22001f.adb

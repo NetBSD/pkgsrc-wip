@@ -1,0 +1,8 @@
+writing configuration pragmas from /home/fernando/mysandboxfolder/tmp/acats/tests/cxh/cxh30030.a to gnat.adc
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxh/cxh30030.a into:
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxh/cxh30031.am into:
+   cxh3003_0.ads
+   cxh3003_0.adb
+   cxh3003_0-cxh3003_1.ads
+   cxh3003_0-cxh3003_1.adb
+   cxh30031.adb

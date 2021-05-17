@@ -1,0 +1,15 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32103a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32103a.adb
+b32103a.adb:41:06: constant declaration requires initialization expression
+b32103a.adb:42:06: constant declaration requires initialization expression
+b32103a.adb:43:06: constant declaration requires initialization expression
+b32103a.adb:44:06: constant declaration requires initialization expression
+b32103a.adb:45:06: constant declaration requires initialization expression
+b32103a.adb:46:06: constant declaration requires initialization expression
+b32103a.adb:47:06: constant declaration requires initialization expression
+b32103a.adb:60:11: constant declaration requires initialization expression
+b32103a.adb:61:11: constant declaration requires initialization expression
+b32103a.adb:62:11: constant declaration requires initialization expression
+b32103a.adb:63:11: constant declaration requires initialization expression
+b32103a.adb:64:11: constant declaration requires initialization expression
+gnatmake: "b32103a.adb" compilation error

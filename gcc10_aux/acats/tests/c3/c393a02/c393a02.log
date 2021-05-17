@@ -1,0 +1,7 @@
+
+,.,. C393A02 ACATS 4.1 21-05-16 10:34:37
+---- C393A02 Check that a dispatching call to an abstract subprogram
+                invokes the correct subprogram body. Check that a
+                subprogram declared with formal parameters/result of an 
+                abstract type's associated class-wide can be called.
+==== C393A02 PASSED ============================.

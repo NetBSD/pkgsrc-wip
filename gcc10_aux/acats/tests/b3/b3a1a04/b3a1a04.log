@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a1a04.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a1a04.adb
+b3a1a04.adb:26:48: invalid use of incomplete type "A_Tagged_Type'CLASS"
+b3a1a04.adb:42:33: invalid use of type before its full declaration
+b3a1a04.adb:46:40: invalid use of type before its full declaration
+b3a1a04.adb:51:39: invalid use of incomplete type "A_Tagged_Type'CLASS"
+gnatmake: "b3a1a04.adb" compilation error

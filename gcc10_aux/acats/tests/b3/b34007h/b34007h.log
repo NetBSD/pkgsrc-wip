@@ -1,0 +1,116 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34007h.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b34007h.adb
+b34007h.adb:92:09: invalid conversion, not compatible with type "Standard.Integer"
+b34007h.adb:93:20: illegal operand for numeric conversion
+b34007h.adb:94:09: invalid conversion, not compatible with type "Standard.Float"
+b34007h.adb:95:18: illegal operand for numeric conversion
+b34007h.adb:96:09: invalid conversion, not compatible with type "Standard.Duration"
+b34007h.adb:97:21: illegal operand for numeric conversion
+b34007h.adb:98:09: invalid conversion, not compatible with subtype of "Standard.String" defined at line 60
+b34007h.adb:99:19: illegal operand for array conversion
+b34007h.adb:100:09: expected type "T" defined at line 46
+b34007h.adb:100:09: found type universal integer
+b34007h.adb:101:09: expected type "T" defined at line 46
+b34007h.adb:101:09: found type universal real
+b34007h.adb:102:09: expected type "T" defined at line 46
+b34007h.adb:102:09: found type universal integer
+b34007h.adb:103:09: expected type "T" defined at line 46
+b34007h.adb:103:09: found type universal real
+b34007h.adb:104:09: expected type "T" defined at line 46
+b34007h.adb:104:09: found a character type
+b34007h.adb:105:09: expected type "T" defined at line 46
+b34007h.adb:105:09: found type "Standard.Boolean"
+b34007h.adb:106:09: expected type "T" defined at line 46
+b34007h.adb:106:09: found a string type
+b34007h.adb:108:09: expected type "T" defined at line 46
+b34007h.adb:108:09: found a composite type
+b34007h.adb:110:11: invalid prefix in selected component "X"
+b34007h.adb:115:11: type is not one-dimensional array in slice prefix
+b34007h.adb:116:06: type is not one-dimensional array in slice prefix
+b34007h.adb:117:09: operator "NOT" not defined for type "T" defined at line 46
+b34007h.adb:118:11: there is no applicable operator "AND" for type "T" defined at line 46
+b34007h.adb:119:11: there is no applicable operator "OR" for type "T" defined at line 46
+b34007h.adb:120:11: there is no applicable operator "XOR" for type "T" defined at line 46
+b34007h.adb:121:09: expected type "Standard.Boolean"
+b34007h.adb:121:09: found type "T" defined at line 46
+b34007h.adb:121:20: expected type "Standard.Boolean"
+b34007h.adb:121:20: found type "T" defined at line 46
+b34007h.adb:122:09: expected type "Standard.Boolean"
+b34007h.adb:122:09: found type "T" defined at line 46
+b34007h.adb:122:19: expected type "Standard.Boolean"
+b34007h.adb:122:19: found type "T" defined at line 46
+b34007h.adb:125:13: there is no applicable operator "<" for type "T" defined at line 46
+b34007h.adb:126:13: there is no applicable operator ">" for type "T" defined at line 46
+b34007h.adb:127:13: there is no applicable operator "<=" for type "T" defined at line 46
+b34007h.adb:128:13: there is no applicable operator ">=" for type "T" defined at line 46
+b34007h.adb:131:09: operator "+" not defined for type "T" defined at line 46
+b34007h.adb:132:09: operator "-" not defined for type "T" defined at line 46
+b34007h.adb:133:09: operator "ABS" not defined for type "T" defined at line 46
+b34007h.adb:134:11: there is no applicable operator "+" for type "T" defined at line 46
+b34007h.adb:135:11: there is no applicable operator "-" for type "T" defined at line 46
+b34007h.adb:136:11: there is no applicable operator "*" for type "T" defined at line 46
+b34007h.adb:137:09: expected type "Standard.Integer"
+b34007h.adb:137:09: found type "T" defined at line 46
+b34007h.adb:138:13: expected type "Standard.Integer"
+b34007h.adb:138:13: found type "T" defined at line 46
+b34007h.adb:139:11: there is no applicable operator "/" for type "T" defined at line 46
+b34007h.adb:140:09: expected type "Standard.Integer"
+b34007h.adb:140:09: found type "T" defined at line 46
+b34007h.adb:141:11: there is no applicable operator "MOD" for type "T" defined at line 46
+b34007h.adb:142:11: there is no applicable operator "REM" for type "T" defined at line 46
+b34007h.adb:143:11: invalid operand types for operator "**"
+b34007h.adb:143:11: left operand has type "T" defined at line 46
+b34007h.adb:143:11: right operand has type "Standard.Integer"
+b34007h.adb:144:11: there is no applicable operator "&" for type "T" defined at line 46
+b34007h.adb:145:11: invalid operand types for operator "&"
+b34007h.adb:145:11: left operand is access type
+b34007h.adb:146:11: invalid operand types for operator "&"
+b34007h.adb:146:11: right operand is access type
+b34007h.adb:147:11: there is no applicable operator "&" for type "Standard.Integer"
+b34007h.adb:149:11: prefix of "AFT" attribute must be fixed point type
+b34007h.adb:150:11: prefix of "CALLABLE" attribute must be a task or a task interface class-wide object
+b34007h.adb:151:11: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b34007h.adb:152:11: prefix of "CONSTRAINED" attribute must be object of discriminated type
+b34007h.adb:153:12: invalid entry name
+b34007h.adb:154:11: prefix of "DELTA" attribute must be fixed point type
+b34007h.adb:155:11: prefix of "DIGITS" attribute must be float or decimal type
+b34007h.adb:156:11: prefix of "EMAX" attribute must be float type
+b34007h.adb:157:11: prefix of "EPSILON" attribute must be float type
+b34007h.adb:158:11: prefix of "FIRST" attribute cannot be access type
+b34007h.adb:161:11: prefix of "FIRST" attribute cannot be access type
+b34007h.adb:164:20: invalid dimension number for array type
+b34007h.adb:165:11: prefix for "FIRST_BIT" attribute must be selected component
+b34007h.adb:166:11: prefix of "FORE" attribute must be fixed point type
+b34007h.adb:167:11: prefix of "IMAGE" attribute must be a scalar type or a scalar object name
+b34007h.adb:168:11: prefix of "LARGE" attribute must be real type
+b34007h.adb:169:11: prefix of "LAST" attribute cannot be access type
+b34007h.adb:172:11: prefix of "LAST" attribute cannot be access type
+b34007h.adb:175:19: invalid dimension number for array type
+b34007h.adb:176:11: prefix for "LAST_BIT" attribute must be selected component
+b34007h.adb:177:11: prefix of "LENGTH" attribute cannot be access type
+b34007h.adb:180:11: prefix of "LENGTH" attribute cannot be access type
+b34007h.adb:184:11: prefix of "MACHINE_EMAX" attribute must be float type
+b34007h.adb:185:11: prefix of "MACHINE_EMIN" attribute must be float type
+b34007h.adb:186:11: prefix of "MACHINE_MANTISSA" attribute must be float type
+b34007h.adb:187:11: prefix of "MACHINE_OVERFLOWS" attribute must be real type
+b34007h.adb:188:11: prefix of "MACHINE_RADIX" attribute must be real type
+b34007h.adb:189:11: prefix of "MACHINE_ROUNDS" attribute must be real type
+b34007h.adb:190:11: prefix of "MANTISSA" attribute must be real type
+b34007h.adb:191:11: prefix of "POS" attribute must be discrete type
+b34007h.adb:192:11: prefix for "POSITION" attribute must be selected component
+b34007h.adb:193:09: prefix of "PRED" attribute must be scalar type
+b34007h.adb:194:15: prefix of "RANGE" attribute cannot be access type
+b34007h.adb:203:15: prefix of "RANGE" attribute cannot be access type
+b34007h.adb:212:24: expression for dimension must be static
+b34007h.adb:212:37: "J" is not static constant or named number (RM 4.9(5))
+b34007h.adb:215:11: prefix of "SAFE_EMAX" attribute must be float type
+b34007h.adb:216:11: prefix of "SAFE_LARGE" attribute must be real type
+b34007h.adb:217:11: prefix of "SAFE_SMALL" attribute must be real type
+b34007h.adb:220:11: prefix of "SMALL" attribute must be real type
+b34007h.adb:222:11: prefix of "STORAGE_SIZE" attribute must be a task or a task interface class-wide object
+b34007h.adb:223:09: prefix of "SUCC" attribute must be scalar type
+b34007h.adb:224:11: prefix of "TERMINATED" attribute must be a task or a task interface class-wide object
+b34007h.adb:225:09: prefix of "VAL" attribute must be discrete type
+b34007h.adb:226:09: prefix of "VALUE" attribute must be scalar type
+b34007h.adb:227:11: prefix of "WIDTH" attribute must be scalar type
+gnatmake: "b34007h.adb" compilation error

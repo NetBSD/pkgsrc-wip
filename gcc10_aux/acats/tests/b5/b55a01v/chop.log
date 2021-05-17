@@ -1,0 +1,5 @@
+b55a01v.ada:39:20: extra ";" ignored
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01v.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01v.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01v.ada into:
+   b55a01v.adb

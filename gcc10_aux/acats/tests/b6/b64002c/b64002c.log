@@ -1,0 +1,37 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b64002c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b64002c.adb
+b64002c.adb:115:17: expected type "Standard.Integer"
+b64002c.adb:115:17: found type "NEWINT" defined at line 35
+b64002c.adb:117:17: expected type "Standard.Integer"
+b64002c.adb:117:17: found type universal real
+b64002c.adb:119:17: expected type "Standard.Integer"
+b64002c.adb:119:17: found type "NEWINT" defined at line 35
+b64002c.adb:121:16: expected type "NEWINT" defined at line 35
+b64002c.adb:121:16: found type "Standard.Integer"
+b64002c.adb:123:16: expected type "NEWINT" defined at line 35
+b64002c.adb:123:16: found type "Standard.Integer"
+b64002c.adb:125:16: expected type "NEWINT" defined at line 35
+b64002c.adb:125:16: found type "Standard.Integer"
+b64002c.adb:127:14: expected type "MAT1" defined at line 38
+b64002c.adb:127:14: found type "MAT2" defined at line 41
+b64002c.adb:129:14: expected type "REC1" defined at line 44
+b64002c.adb:129:14: found type "REC2" defined at line 49
+b64002c.adb:131:17: expected type "Standard.Integer"
+b64002c.adb:131:17: found type "NEWINT" defined at line 35
+b64002c.adb:133:17: expected type "Standard.Integer"
+b64002c.adb:133:17: found type "NEWINT" defined at line 35
+b64002c.adb:135:13: expected type "Standard.Integer"
+b64002c.adb:135:13: found type "NEWINT" defined at line 35
+b64002c.adb:137:13: expected type "Standard.Integer"
+b64002c.adb:137:13: found type "NEWINT" defined at line 35
+b64002c.adb:139:16: expected type "MAT1" defined at line 38
+b64002c.adb:139:16: found type "MAT2" defined at line 41
+b64002c.adb:141:18: expected type "MAT1" defined at line 38
+b64002c.adb:141:18: found type "MAT2" defined at line 41
+b64002c.adb:143:17: expected type "Standard.Integer"
+b64002c.adb:143:17: found a character type
+b64002c.adb:145:17: expected type "Standard.Integer"
+b64002c.adb:145:17: found type "Standard.Boolean"
+b64002c.adb:147:13: expected type "Standard.Integer"
+b64002c.adb:147:13: found type "MAT1" defined at line 38
+gnatmake: "b64002c.adb" compilation error

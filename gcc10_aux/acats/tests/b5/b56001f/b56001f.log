@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b56001f.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b56001f.adb
+b56001f.adb:33:14: statement not allowed in declarative part
+gnatmake: "b56001f.adb" compilation error

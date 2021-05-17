@@ -1,0 +1,18 @@
+b24009b.ada:34:33: real literal cannot end with point
+b24009b.ada:35:33: real literal cannot end with point
+b24009b.ada:36:42: real literal cannot end with point
+b24009b.ada:44:29: real literal cannot end with point
+b24009b.ada:45:37: prefix for selection is not a name
+b24009b.ada:46:28: numeric literal cannot start with point
+b24009b.ada:53:15: real literal cannot end with point
+b24009b.ada:54:17: illegal character
+b24009b.ada:56:22: extended digit expected
+b24009b.ada:58:29: prefix for selection is not a name
+b24009b.ada:59:29: numeric literal cannot start with point
+b24009b.ada:64:38: real literal cannot end with point
+b24009b.ada:65:18: real literal cannot end with point
+b24009b.ada:68:41: extended digit expected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24009b.ada: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24009b.ada: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24009b.ada into:
+   b24009b.adb

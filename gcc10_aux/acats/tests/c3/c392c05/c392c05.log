@@ -1,0 +1,6 @@
+
+,.,. C392C05 ACATS 4.1 21-05-16 10:34:26
+---- C392C05 Check that a dispatching subprogram call is determined by
+                the controlling tag for statically tagged controlling
+                operands.
+==== C392C05 PASSED ============================.

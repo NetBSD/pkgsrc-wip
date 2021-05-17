@@ -1,0 +1,6 @@
+
+,.,. CXAC002 ACATS 4.1 21-05-16 10:55:09
+---- CXAC002 Check that the subprograms defined in package
+                Ada.Streams.Stream_IO are accessible, and that they
+                provide the appropriate functionality.
+==== CXAC002 PASSED ============================.

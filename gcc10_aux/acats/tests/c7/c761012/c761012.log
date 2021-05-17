@@ -1,0 +1,7 @@
+
+,.,. C761012 ACATS 4.1 21-05-16 10:44:48
+---- C761012 Check that an anonymous object is finalized with its
+                enclosing master if a transfer of control or exception
+                occurs prior to performing its normal finalization.
+   - C761012 Finalize called before the transfer of control.
+==== C761012 PASSED ============================.

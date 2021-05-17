@@ -1,0 +1,43 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74103d.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74103d.adb
+b74103d.adb:84:11: premature usage of incomplete private type "P1" defined at line 42
+b74103d.adb:85:11: premature usage of incomplete private type "LP2" defined at line 43
+b74103d.adb:86:11: premature usage of incomplete private type "P1" defined at line 42
+b74103d.adb:87:11: premature usage of incomplete private type "LP2" defined at line 43
+b74103d.adb:88:11: premature usage of incomplete type "ARR1_P1" defined at line 48
+b74103d.adb:89:11: premature usage of incomplete type "ARR2_LP2" defined at line 49
+b74103d.adb:90:11: premature usage of incomplete type "ARR3_SP1" defined at line 50
+b74103d.adb:91:11: premature usage of incomplete type "ARR4_SLP2" defined at line 51
+b74103d.adb:92:11: premature usage of incomplete type "REC1" defined at line 53
+b74103d.adb:93:11: premature usage of incomplete type "REC2" defined at line 58
+b74103d.adb:94:11: premature usage of incomplete type "REC3" defined at line 63
+b74103d.adb:95:11: premature usage of incomplete type "REC4" defined at line 68
+b74103d.adb:96:11: premature usage of incomplete type "ARR1_P1" defined at line 48
+b74103d.adb:97:11: premature usage of incomplete type "ARR2_LP2" defined at line 49
+b74103d.adb:98:11: premature usage of incomplete type "ARR3_SP1" defined at line 50
+b74103d.adb:99:11: premature usage of incomplete type "ARR4_SLP2" defined at line 51
+b74103d.adb:100:11: premature usage of incomplete type "REC1" defined at line 53
+b74103d.adb:101:11: premature usage of incomplete type "REC2" defined at line 58
+b74103d.adb:102:11: premature usage of incomplete type "REC3" defined at line 63
+b74103d.adb:103:11: premature usage of incomplete type "REC4" defined at line 68
+b74103d.adb:128:11: premature usage of incomplete private type "P1" defined at line 42
+b74103d.adb:129:11: premature usage of incomplete private type "LP2" defined at line 43
+b74103d.adb:130:11: premature usage of incomplete private type "P1" defined at line 42
+b74103d.adb:131:11: premature usage of incomplete private type "LP2" defined at line 43
+b74103d.adb:132:11: premature usage of incomplete type "ARR1_P1" defined at line 48
+b74103d.adb:133:11: premature usage of incomplete type "ARR2_LP2" defined at line 49
+b74103d.adb:134:11: premature usage of incomplete type "ARR3_SP1" defined at line 50
+b74103d.adb:135:11: premature usage of incomplete type "ARR4_SLP2" defined at line 51
+b74103d.adb:136:11: premature usage of incomplete type "REC1" defined at line 53
+b74103d.adb:137:11: premature usage of incomplete type "REC2" defined at line 58
+b74103d.adb:138:11: premature usage of incomplete type "REC3" defined at line 63
+b74103d.adb:139:11: premature usage of incomplete type "REC4" defined at line 68
+b74103d.adb:140:11: premature usage of incomplete type "ARR1_P1" defined at line 48
+b74103d.adb:141:11: premature usage of incomplete type "ARR2_LP2" defined at line 49
+b74103d.adb:142:11: premature usage of incomplete type "ARR3_SP1" defined at line 50
+b74103d.adb:143:11: premature usage of incomplete type "ARR4_SLP2" defined at line 51
+b74103d.adb:144:11: premature usage of incomplete type "REC1" defined at line 53
+b74103d.adb:145:11: premature usage of incomplete type "REC2" defined at line 58
+b74103d.adb:146:11: premature usage of incomplete type "REC3" defined at line 63
+b74103d.adb:147:11: premature usage of incomplete type "REC4" defined at line 68
+gnatmake: "b74103d.adb" compilation error

@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1202e.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1202e.adb
+bc1202e.adb:43:11: subtype declaration not allowed as generic parameter declaration
+gnatmake: "bc1202e.adb" compilation error

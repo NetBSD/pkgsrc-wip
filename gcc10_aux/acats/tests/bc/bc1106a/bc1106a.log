@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1106a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1106a.adb
+bc1106a.adb:42:16: left hand side of assignment must be a variable
+gnatmake: "bc1106a.adb" compilation error

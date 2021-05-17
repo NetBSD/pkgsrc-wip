@@ -1,0 +1,6 @@
+
+,.,. C350B01 ACATS 4.1 21-05-16 10:32:29
+---- C350B01 Check that objects of types with a specified Default_Value 
+                are appropriately initialized. Part 3 - Normal real
+                types.
+==== C350B01 PASSED ============================.

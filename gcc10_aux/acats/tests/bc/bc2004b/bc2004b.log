@@ -1,0 +1,7 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2004b.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc2004b.adb
+bc2004b.adb:43:21: "GEN_PROC" conflicts with declaration at line 36
+bc2004b.adb:43:21: generic units cannot be overloaded
+bc2004b.adb:60:20: "GEN_FUNC" conflicts with declaration at line 52
+bc2004b.adb:60:20: generic units cannot be overloaded
+gnatmake: "bc2004b.adb" compilation error

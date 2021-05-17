@@ -1,0 +1,15 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8300020.a into:
+   b8300025_1.ads
+   b8300025_1_unrelated.ads
+   b8300025_1-public.ads
+   b8300025_1-private_pack.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8300021.a into:
+   b8300025_1-pub.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8300022.a into:
+   b8300025_1-public-pub.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8300023.a into:
+   b8300025_1-priv.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8300024.a into:
+   b8300025_1-private_pack-priv.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b8300025.am into:
+   b8300025.adb

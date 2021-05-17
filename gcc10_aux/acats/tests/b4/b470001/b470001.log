@@ -1,0 +1,11 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b470001.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b470001.adb
+b470001.adb:12:43: actual for "New_Indent" must be a variable
+b470001.adb:19:11: left hand side of assignment must be a variable
+b470001.adb:21:04: left hand side of assignment must be a variable
+b470001.adb:35:39: actual for "New_Indent" must be a variable
+b470001.adb:39:14: access-to-variable designates constant
+b470001.adb:60:42: actual for "Tst" must be a variable
+b470001.adb:62:35: actual for "Tst" must be a variable
+b470001.adb:73:18: actual for "P" must be a variable
+gnatmake: "b470001.adb" compilation error

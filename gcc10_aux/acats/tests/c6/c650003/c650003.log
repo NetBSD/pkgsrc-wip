@@ -1,0 +1,6 @@
+
+,.,. C650003 ACATS 4.1 21-05-16 10:43:52
+---- C650003 Check that an extended return statement can be completed by
+                a simple return statement; and that completing the
+                extended return returns from the enclosing function.
+==== C650003 PASSED ============================.

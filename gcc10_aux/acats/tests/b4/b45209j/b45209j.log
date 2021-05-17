@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45209j.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45209j.adb
+b45209j.adb:41:12: incompatible types
+b45209j.adb:45:12: incompatible types
+gnatmake: "b45209j.adb" compilation error

@@ -1,0 +1,7 @@
+
+,.,. C460004 ACATS 4.1 21-05-16 10:41:49
+---- C460004 Check that for a view conversion of a class-wide operand,
+                Constraint_Error is raised if the tag of the operand
+                does not identify a specific type covered by or
+                descended from the target type.
+==== C460004 PASSED ============================.

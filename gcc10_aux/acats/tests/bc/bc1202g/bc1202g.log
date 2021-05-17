@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1202g.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1202g.adb
+bc1202g.adb:41:16: record not allowed in generic type definition
+bc1202g.adb:42:30: anonymous arrays not allowed as components
+gnatmake: "bc1202g.adb" compilation error

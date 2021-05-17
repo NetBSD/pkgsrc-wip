@@ -1,0 +1,10 @@
+b393002.a:48:45: "tagged" expected
+b393002.a:56:35: "tagged" must come before "limited"
+b393002.a:64:36: "abstract" must come before "tagged"
+b393002.a:72:35: "abstract" must come before "limited"
+b393002.a:80:34: "abstract" must come before "tagged"
+b393002.a:88:50: missing record definition
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b393002.a: parse errors detected
+/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b393002.a: chop may not be successful
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b393002.a into:
+   b393002.ads

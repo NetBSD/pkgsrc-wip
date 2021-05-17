@@ -1,0 +1,8 @@
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200010.a into:
+   la20001_0.ads
+   la20001_0-la20001_1.ads
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200011.a into:
+   la20001_0.adb
+   la20001_0-la20001_1.adb
+splitting /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200012.am into:
+   la200012.adb

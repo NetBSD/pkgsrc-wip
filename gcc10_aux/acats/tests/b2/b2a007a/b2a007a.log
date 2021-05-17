@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a007a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a007a.adb
+b2a007a.adb:33:30: digit expected
+b2a007a.adb:34:38: digit expected
+b2a007a.adb:35:36: missing ")"
+b2a007a.adb:41:37: extended digit expected
+b2a007a.adb:42:33: extended digit expected
+b2a007a.adb:43:33: ":" should be ";"
+b2a007a.adb:44:30: delimiter required between literal and identifier
+b2a007a.adb:51:21: delimiter required between literal and identifier
+b2a007a.adb:52:19: digit expected
+b2a007a.adb:53:22: ":" should be ";"
+b2a007a.adb:54:26: delimiter required between literal and identifier
+b2a007a.adb:58:21: delimiter required between literal and identifier
+b2a007a.adb:59:22: ":=" should be "=>"
+gnatmake: "b2a007a.adb" compilation error

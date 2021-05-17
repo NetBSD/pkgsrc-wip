@@ -1,0 +1,5 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83031f.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83031f.adb
+b83031f.adb:50:21: no candidate interpretations match the actuals:
+b83031f.adb:50:21: missing argument for parameter "L" in call to "*" declared at line 44
+gnatmake: "b83031f.adb" compilation error

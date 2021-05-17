@@ -1,0 +1,6 @@
+
+,.,. CC51D02 ACATS 4.1 21-05-16 10:50:27
+---- CC51D02 Formal private extension, class-wide actual: body of
+                primitive subprogram executed is that of actual type.
+                Check for subprograms declared in formal package.
+==== CC51D02 PASSED ============================.

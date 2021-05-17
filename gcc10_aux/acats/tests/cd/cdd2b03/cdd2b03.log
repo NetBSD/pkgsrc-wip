@@ -1,0 +1,4 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cdd2b03.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cdd2b03.adb
+cdd2b03.adb:116:04: stream size for elementary type must be a power of 2 and at least 8
+gnatmake: "cdd2b03.adb" compilation error

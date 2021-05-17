@@ -1,0 +1,48 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52004a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b52004a.adb
+b52004a.adb:62:12: expected type "Standard.Integer"
+b52004a.adb:62:12: found type "NEW_INT" defined at line 35
+b52004a.adb:63:13: expected type "NEW_INT" defined at line 35
+b52004a.adb:63:13: found type "Standard.Integer"
+b52004a.adb:65:12: expected type "Standard.Integer"
+b52004a.adb:65:12: found type "Standard.Character"
+b52004a.adb:66:12: expected type "Standard.Integer"
+b52004a.adb:66:12: found a string type
+b52004a.adb:68:12: expected type "Standard.Integer"
+b52004a.adb:68:12: found type "TA1" defined at line 41
+b52004a.adb:69:12: expected type "Standard.Integer"
+b52004a.adb:69:12: found type "TA2" defined at line 42
+b52004a.adb:70:12: expected type "Standard.Integer"
+b52004a.adb:70:12: found type "TA3" defined at line 43
+b52004a.adb:72:12: expected type "TA1" defined at line 41
+b52004a.adb:72:12: found type "TA2" defined at line 42
+b52004a.adb:73:12: expected type "TA1" defined at line 41
+b52004a.adb:73:12: found type "TA3" defined at line 43
+b52004a.adb:74:12: expected type "TA2" defined at line 42
+b52004a.adb:74:12: found type "TA1" defined at line 41
+b52004a.adb:75:12: expected type "TA3" defined at line 43
+b52004a.adb:75:12: found type "TA2" defined at line 42
+b52004a.adb:77:12: expected type "TA3" defined at line 43
+b52004a.adb:77:12: found type universal integer
+b52004a.adb:78:12: expected type "TA2" defined at line 42
+b52004a.adb:78:12: found type universal integer
+b52004a.adb:79:12: expected type "TA1" defined at line 41
+b52004a.adb:79:12: found type universal integer
+b52004a.adb:81:12: expected type "TA3" defined at line 43
+b52004a.adb:81:12: found type "Standard.Integer"
+b52004a.adb:82:12: expected type "TA3" defined at line 43
+b52004a.adb:82:12: found type "TA1" defined at line 41
+b52004a.adb:83:30: nested array aggregate expected
+b52004a.adb:85:15: expected type "Standard.Integer"
+b52004a.adb:85:15: found a character type
+b52004a.adb:86:17: expected type "Standard.Integer"
+b52004a.adb:86:17: found a character type
+b52004a.adb:87:19: expected type "Standard.Integer"
+b52004a.adb:87:19: found a character type
+b52004a.adb:88:12: expected type "TA4" defined at line 44
+b52004a.adb:88:12: found type "TA1" defined at line 41
+b52004a.adb:90:12: expected type "R" defined at line 51
+b52004a.adb:90:12: found type "PR" defined at line 55
+b52004a.adb:91:13: expected type "PR" defined at line 55
+b52004a.adb:91:13: found type "R" defined at line 51
+gnatmake: "b52004a.adb" compilation error

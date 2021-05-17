@@ -1,0 +1,34 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3604a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3604a.adb
+bc3604a.adb:89:30: no visible subprogram matches the specification for "FORMAL_PROC"
+bc3604a.adb:92:30: no visible subprogram matches the specification for "FORMAL_FUNC"
+bc3604a.adb:128:30: no visible subprogram matches the specification for "FORMAL_PROC"
+bc3604a.adb:131:30: no visible subprogram matches the specification for "FORMAL_FUNC"
+bc3604a.adb:134:30: no visible subprogram matches the specification for "FORMAL_FUNC"
+bc3604a.adb:137:41: no visible subprogram matches the specification for "FORMAL_FUNC"
+bc3604a.adb:140:39: no visible subprogram matches the specification for "FORMAL_FUNC"
+bc3604a.adb:143:39: no visible subprogram matches the specification for "FORMAL_PROC"
+bc3604a.adb:173:30: no visible subprogram matches the specification for "FORMAL_PROC"
+bc3604a.adb:177:30: no visible subprogram matches the specification for "FORMAL_PROC"
+bc3604a.adb:177:30: missing specification for "Q" and other formals with defaults
+bc3604a.adb:180:30: no visible subprogram matches the specification for "FORMAL_FUNC"
+bc3604a.adb:180:30: missing specification for "Q"
+bc3604a.adb:233:11: instantiation error at line 38
+bc3604a.adb:233:11: not mode conformant with declaration at line 191
+bc3604a.adb:233:11: mode of "P2" does not match
+bc3604a.adb:237:11: instantiation error at line 39
+bc3604a.adb:237:11: not mode conformant with declaration at line 198
+bc3604a.adb:237:11: mode of "P3" does not match
+bc3604a.adb:241:11: instantiation error at line 37
+bc3604a.adb:241:11: not mode conformant with declaration at line 205
+bc3604a.adb:241:11: mode of "P1" does not match
+bc3604a.adb:245:11: instantiation error at line 39
+bc3604a.adb:245:11: not mode conformant with declaration at line 212
+bc3604a.adb:245:11: mode of "P3" does not match
+bc3604a.adb:249:11: instantiation error at line 37
+bc3604a.adb:249:11: not mode conformant with declaration at line 219
+bc3604a.adb:249:11: mode of "P1" does not match
+bc3604a.adb:253:11: instantiation error at line 38
+bc3604a.adb:253:11: not mode conformant with declaration at line 226
+bc3604a.adb:253:11: mode of "P2" does not match
+gnatmake: "bc3604a.adb" compilation error

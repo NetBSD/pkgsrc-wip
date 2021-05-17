@@ -1,0 +1,6 @@
+
+,.,. CXA8002 ACATS 4.1 21-05-16 10:54:52
+---- CXA8002 Check that resetting a file using mode Append_File allows
+                for the writing of elements to the file starting after
+                the last element in the file.
+==== CXA8002 PASSED ============================.

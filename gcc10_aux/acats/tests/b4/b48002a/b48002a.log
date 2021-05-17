@@ -1,0 +1,8 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48002a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b48002a.adb
+b48002a.adb:64:33: missing ","
+b48002a.adb:65:32: reserved word "OTHERS" cannot be used as identifier
+b48002a.adb:282:32: missing ","
+b48002a.adb:306:27: missing ","
+b48002a.adb:330:27: missing ","
+gnatmake: "b48002a.adb" compilation error

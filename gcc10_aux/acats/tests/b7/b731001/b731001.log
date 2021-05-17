@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b7310016.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b7310016.adb
+b7310016_1-parent-child_2.ads:57:35: "Op2" is not visible (more references follow)
+b7310016_1-parent-child_2.ads:57:35: non-visible declaration at b7310016_1-unrelated.ads:5
+b7310016_1-parent-child_2.ads:57:35: non-visible (private) declaration at b7310016_1-parent.ads:11
+b7310016_1-places-p-r.ads:63:37: invalid conversion, not compatible with private type "Comp2" defined at line 55
+b7310016_1-places-p-r.ads:66:33: there is no applicable operator "=" for type "A" defined at line 56
+b7310016_1-places-p-r.ads:69:27: initialization of limited object requires aggregate or function call
+b7310016_1-places-p-r.ads:72:43: there is no applicable operator "Xor" for type "A" defined at line 56
+b7310016_1-places-p-r.ads:73:27: prefix of "Image" attribute must be a scalar type or a scalar object name
+b7310016_1-places-p-r.ads:75:33: there is no applicable operator "=" for type "A" defined at line 56
+b7310016_1-places-p-r.ads:78:36: invalid conversion, not compatible with private type "Comp2" defined at line 55
+b7310016_1-places-p-r.ads:81:27: prefix of "Image" attribute must be a scalar type or a scalar object name
+b7310016_1-places-p-r.ads:90:27: there is no applicable operator "Xor" for type "A" defined at line 56
+b7310016_1-places-p-r.ads:93:36: invalid conversion, not compatible with private type "Comp2" defined at line 83
+b7310016_1-places-p-r.ads:96:27: prefix of "Image" attribute must be a scalar type or a scalar object name
+b7310016_1-places-p-r.ads:99:23: prefix of "Image" attribute must be a scalar type or a scalar object name
+b7310016_1-places-p-r.ads:106:16: initialization of limited object requires aggregate or function call
+b7310016_1-places-p-r.ads:107:43: there is no applicable operator "Xor" for type "A" defined at line 56
+b7310016_1-places-p-r.ads:108:33: incompatible arguments for operator
+b7310016_1-places-p-r.ads:111:32: invalid conversion, not compatible with private type "Comp2" defined at line 55
+b7310016_1-places-p-r.ads:114:23: prefix of "Image" attribute must be a scalar type or a scalar object name
+gnatmake: "b7310016.adb" compilation error

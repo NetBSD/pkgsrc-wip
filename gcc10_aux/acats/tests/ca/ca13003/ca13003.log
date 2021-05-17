@@ -1,0 +1,6 @@
+
+,.,. CA13003 ACATS 4.1 21-05-16 10:48:59
+---- CA13003 Check that separate subunits which share an ancestor may
+                have the same name if they have different fully
+                qualified names.
+==== CA13003 PASSED ============================.

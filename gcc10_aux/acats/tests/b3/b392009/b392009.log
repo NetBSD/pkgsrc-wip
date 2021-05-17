@@ -1,0 +1,16 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b392009.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b392009.adb
+b392009.adb:15:45: class-wide argument not allowed here
+b392009.adb:18:17: class-wide argument not allowed here
+b392009.adb:21:31: class-wide argument not allowed here
+b392009.adb:24:27: class-wide argument not allowed here
+b392009.adb:27:26: class-wide argument not allowed here
+b392009.adb:30:42: class-wide argument not allowed here
+b392009.adb:33:31: access to class-wide argument not allowed here
+b392009.adb:54:17: expected type "Root" defined at b392009_0.ads:77
+b392009.adb:54:17: found type "Child" defined at b392009_0.ads:95
+b392009.adb:60:27: expected type "Root" defined at b392009_0.ads:77
+b392009.adb:60:27: found type "Child" defined at b392009_0.ads:95
+b392009.adb:66:31: expected an access type with designated type "Root" defined at b392009_0.ads:77
+b392009.adb:66:31: found type "Child_Acc" defined at b392009.ads:43
+gnatmake: "b392009.adb" compilation error

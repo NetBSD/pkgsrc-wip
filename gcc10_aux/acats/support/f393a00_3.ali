@@ -1,0 +1,93 @@
+V "GNAT Lib v10"
+A -O2
+A -gnatws
+A -g
+A -gnato
+A -gnatE
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U f393a00_3%b		f393a00_3.adb		a83d5a38 DE OO PK IU
+W f393a00_0%s		f393a00_0.adb		f393a00_0.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U f393a00_3%s		f393a00_3.ads		a8dc14fb DE EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W f393a00_2%s		f393a00_2.adb		f393a00_2.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D f393a00_0.ads		20210516102805 bd6301f0 f393a00_0%s
+D f393a00_1.ads		20210516102805 cbdf10a8 f393a00_1%s
+D f393a00_2.ads		20210516102805 023e8645 f393a00_2%s
+D f393a00_3.ads		20210516102805 aae292be f393a00_3%s
+D f393a00_3.adb		20210516102805 bfbcc976 f393a00_3%b
+D system.ads		20210408115627 a6571217 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210408115627 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210408115627 aedef97e system.stream_attributes%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [create f393a00_3 7 13 none]
+G c Z s b [set_rate f393a00_3 10 14 none]
+G c Z s b [rate f393a00_3 11 14 none]
+G c Z s s [pumpDA f393a00_3 13 9 none]
+G c Z s s [pumpDF f393a00_3 13 9 none]
+G c Z s s [pumpIP f393a00_3 13 9 none]
+G r s windmill [create f393a00_3 7 13 none] [windmillIP f393a00_2 22 9 none]
+G r c none [create f393a00_3 7 13 none] [tc_touch f393a00_0 46 14 none]
+G r c none [set_rate f393a00_3 10 14 none] [tc_touch f393a00_0 46 14 none]
+G r c none [rate f393a00_3 11 14 none] [tc_touch f393a00_0 46 14 none]
+G r s windmill [pumpIP f393a00_3 13 9 none] [windmillIP f393a00_2 22 9 none]
+X 6 f393a00_0.ads
+45K9*F393A00_0 48e14 10|2w6 7r6 14r6 20r6
+46U14*TC_Touch 10|7s16 14s16 20s16
+X 7 f393a00_1.ads
+6U14*Initialize
+X 8 f393a00_2.ads
+5K9*F393A00_2 26e14 9|4w6 6r21 13r21
+7I9*Rotational_Measurement<short_integer>
+8R9*Windmill<7|5R9> 25e16 9|6r31 13r31
+10U14*Swap<7|8p14>
+14U14*Add_Spin
+17U14*Stop
+19V14*Spin{7I9}
+X 9 f393a00_3.ads
+5K9*F393A00_3 13E9 17l5 17e14 10|3b14 23l5 23t14
+6R9*Pump<8|8R9> 7|6p14 8|10P14 14p14 17p14 19p14 9|7P13 7r27 10p14 10r39
+. 11p14 11r29 13c9 16e16 10|4r27 5r13 11r39 18r29
+7V13*Create{6R9}<8|12p14> 10|4b13 9l8 9t14
+9F9*Gallons_Per_Revolution<short_float> 10r54 11r43 15r16 10|11r54 18r43
+10U14*Set_Rate 10=24 10>45 10|11b14 16l8 16t16
+10r24 A_Pump{6R9} 10|11b24 15m6
+10f45 To_Rate{9F9} 10|11b45 15r22
+11V14*Rate{9F9} 11>20 10|18b14 22l8 22t12
+11r20 Of_Pump{6R9} 10|18b20 21r13
+15f8 GPRPM{9F9} 10|15m13 21r21
+X 10 f393a00_3.adb
+5r6 Sump{9|6R9} 8r13
+

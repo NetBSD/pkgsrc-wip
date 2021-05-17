@@ -1,0 +1,23 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3303a.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3303a.adb
+bc3303a.adb:70:27: expect float type in instantiation of "GFT"
+bc3303a.adb:70:27: instantiation abandoned
+bc3303a.adb:71:27: expect float type in instantiation of "GFT"
+bc3303a.adb:71:27: instantiation abandoned
+bc3303a.adb:72:27: expect float type in instantiation of "GFT"
+bc3303a.adb:72:27: instantiation abandoned
+bc3303a.adb:73:27: expect float type in instantiation of "GFT"
+bc3303a.adb:73:27: instantiation abandoned
+bc3303a.adb:74:27: expect float type in instantiation of "GFT"
+bc3303a.adb:74:27: instantiation abandoned
+bc3303a.adb:75:27: expect float type in instantiation of "GFT"
+bc3303a.adb:75:27: instantiation abandoned
+bc3303a.adb:76:27: expect float type in instantiation of "GFT"
+bc3303a.adb:76:27: instantiation abandoned
+bc3303a.adb:77:27: expect float type in instantiation of "GFT"
+bc3303a.adb:77:27: instantiation abandoned
+bc3303a.adb:78:27: expect float type in instantiation of "GFT"
+bc3303a.adb:78:27: instantiation abandoned
+bc3303a.adb:79:28: expect float type in instantiation of "GFT"
+bc3303a.adb:79:28: instantiation abandoned
+gnatmake: "bc3303a.adb" compilation error

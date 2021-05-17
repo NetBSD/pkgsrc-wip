@@ -1,0 +1,8 @@
+
+,.,. CXA3003 ACATS 4.1 21-05-16 10:54:04
+---- CXA3003 Check that the functions defined in package
+                Ada.Characters.Handling for use in classifying and
+                converting characters between the ISO 646 and type
+                Character sets produce the correct results with both
+                Character and String input values.
+==== CXA3003 PASSED ============================.

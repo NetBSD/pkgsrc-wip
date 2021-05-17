@@ -1,0 +1,17 @@
+gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3123c.adb -largs
+gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3123c.adb
+bc3123c.adb:52:11: missing actual "GEN_INT2"
+bc3123c.adb:52:11: in instantiation of "P" declared at line 46
+bc3123c.adb:68:11: missing actual "GEN_REC2"
+bc3123c.adb:68:11: in instantiation of "PROC" declared at line 61
+bc3123c.adb:68:11: instantiation abandoned
+bc3123c.adb:88:11: missing actual "GEN_ARA2"
+bc3123c.adb:88:11: in instantiation of "FUN" declared at line 80
+bc3123c.adb:88:11: instantiation abandoned
+bc3123c.adb:108:11: missing actual "GEN_ARA2"
+bc3123c.adb:108:11: in instantiation of "FUN" declared at line 100
+bc3123c.adb:108:11: instantiation abandoned
+bc3123c.adb:129:11: missing actual "GEN_ARA2"
+bc3123c.adb:129:11: in instantiation of "FUN" declared at line 121
+bc3123c.adb:129:11: instantiation abandoned
+gnatmake: "bc3123c.adb" compilation error
