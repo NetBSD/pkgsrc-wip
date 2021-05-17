@@ -860,7 +860,6 @@ SUBDIR+=	flint
 SUBDIR+=	flite2
 SUBDIR+=	flnews-devel
 SUBDIR+=	flowblade
-SUBDIR+=	fltk13
 SUBDIR+=	fltk14-devel
 SUBDIR+=	fltk2
 SUBDIR+=	fluid
