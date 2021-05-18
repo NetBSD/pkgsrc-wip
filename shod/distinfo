@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (shod-0.4.0.tar.gz) = 428574595b53e97e2c5bb42a16453b84f4b9c996
-RMD160 (shod-0.4.0.tar.gz) = eb3695aaf61b154a4266d3d94ac2bbac2d26b209
-SHA512 (shod-0.4.0.tar.gz) = 8ad32c9dc50bc7cce15755078fd45bbe28a167c2f9d83a6520a1450471ccc68ae4b178c43d0543e1d4adb41e525c3f3f6b4b655facd2878864f68defffb1cdf1
-Size (shod-0.4.0.tar.gz) = 36404 bytes
+SHA1 (shod-0.4.1.tar.gz) = 519adc8d47ba2b60aa57b6fb8ac30d2af68a0578
+RMD160 (shod-0.4.1.tar.gz) = 77f5317a97e7b1d150eb6eafcb3d6be6e730fa1e
+SHA512 (shod-0.4.1.tar.gz) = 5fda22c1dde6d634d62fbfeec7295527a28160f82f54377145a5c89fe6afca598b1d1cf3242a33abddec0b7746d6b2d4675647311273958a0da490ea4d8720d8
+Size (shod-0.4.1.tar.gz) = 37146 bytes
