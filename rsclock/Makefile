@@ -5,7 +5,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=valebes/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/valebes/rsClock/
 COMMENT=	Simple terminal clock
 LICENSE=	mit
