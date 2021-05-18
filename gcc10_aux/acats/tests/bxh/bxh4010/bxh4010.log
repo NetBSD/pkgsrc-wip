@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4010.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4010.adb
-bxh4010.adb:72:18: violation of restriction "NO_UNCHECKED_ACCESS" at bxh4010.ads:57
-gnatmake: "bxh4010.adb" compilation error

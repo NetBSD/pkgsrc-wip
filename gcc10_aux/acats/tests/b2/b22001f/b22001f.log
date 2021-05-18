@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001f.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001f.adb
-b22001f.adb:61:199: strings are delimited by double quote character
-b22001f.adb:62:01: range attribute cannot be used in expression
-gnatmake: "b22001f.adb" compilation error

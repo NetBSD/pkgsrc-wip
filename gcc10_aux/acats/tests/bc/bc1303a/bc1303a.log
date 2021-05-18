@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1303a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1303a.adb
-bc1303a.adb:35:25: explicit definition of inequality not allowed
-gnatmake: "bc1303a.adb" compilation error

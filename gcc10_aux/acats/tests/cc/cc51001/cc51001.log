@@ -1,8 +1,0 @@
-
-,.,. CC51001 ACATS 4.1 21-05-16 10:50:18
----- CC51001 Check that the formal derived type may have an unknown
-                discriminant part. Check that the ancestor type in a
-                formal derived type definition may be a tagged type, and
-                that the actual parameter may be any definite or
-                indefinite descendant of the ancestor type.
-==== CC51001 PASSED ============================.

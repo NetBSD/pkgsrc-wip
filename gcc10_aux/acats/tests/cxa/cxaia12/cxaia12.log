@@ -1,6 +1,0 @@
-
-,.,. CXAIA12 ACATS 4.1 21-05-16 10:57:43
----- CXAIA12 Check iterators, indexing, and references for package
-                Ada.Containers.Indefinite_Hashed_Sets.
-   - CXAIA12 Reference_Preserving_Key detected key change.
-==== CXAIA12 PASSED ============================.

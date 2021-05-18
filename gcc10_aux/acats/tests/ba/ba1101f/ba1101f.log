@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1101f2.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1101f2.adb
-ba1101f2.adb:4:05: a subprogram is not allowed in a use clause
-gnatmake: "ba1101f2.adb" compilation error

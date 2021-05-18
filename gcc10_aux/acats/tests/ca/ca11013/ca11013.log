@@ -1,6 +1,0 @@
-
-,.,. CA11013 ACATS 4.1 21-05-16 10:48:43
----- CA11013 Check that child instance can use its parent's declarations
-                and operations, including a formal subprogram of the
-                parent.
-==== CA11013 PASSED ============================.

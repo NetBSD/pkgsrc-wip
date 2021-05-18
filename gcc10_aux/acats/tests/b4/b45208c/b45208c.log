@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208c.adb
-b45208c.adb:98:17: there is no applicable operator ">" for type "ACC" defined at line 91
-b45208c.adb:103:20: there is no applicable operator "<=" for type "ACC" defined at line 91
-b45208c.adb:127:17: there is no applicable operator ">" for type "REC" defined at line 117
-b45208c.adb:132:20: there is no applicable operator "<=" for type "REC" defined at line 117
-gnatmake: "b45208c.adb" compilation error

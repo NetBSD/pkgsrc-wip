@@ -1,6 +1,0 @@
-
-,.,. CDD2001 ACATS 4.1 21-05-16 10:51:57
----- CDD2001 Check that the default implementation of Read and Input
-                raise End_Error if the end of stream is reached before
-                the reading of a value is completed.
-==== CDD2001 PASSED ============================.

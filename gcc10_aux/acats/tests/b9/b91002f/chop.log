@@ -1,6 +1,0 @@
-b91002f.ada:39:11: illegal declaration in task definition
-b91002f.ada:42:16: no "RECORD" for this "END RECORD"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002f.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002f.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002f.ada into:
-   b91002f.adb

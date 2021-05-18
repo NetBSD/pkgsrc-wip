@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd1b06j.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd1b06j.adb
-bd1b06j.adb:44:11: representation item appears too late
-bd1b06j.adb:54:32: small value must be greater than zero
-bd1b06j.adb:65:11: representation item appears too late
-gnatmake: "bd1b06j.adb" compilation error

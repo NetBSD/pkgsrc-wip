@@ -1,6 +1,0 @@
-la200033.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200031.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200033.am
-la20003_0.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200031.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200033.am
-la20003_l.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200030.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200032.a
-la20003_l.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200030.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/l/la200032.a
-use -w to overwrite files and keep last version
-no source files written

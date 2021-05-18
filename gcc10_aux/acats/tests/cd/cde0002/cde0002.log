@@ -1,6 +1,0 @@
-
-,.,. CDE0002 ACATS 4.1 21-05-16 10:52:02
----- CDE0002 Check that the use of an entity in an aspect specification 
-                or function expression does not cause freezing to happen
-                too early.
-==== CDE0002 PASSED ============================.

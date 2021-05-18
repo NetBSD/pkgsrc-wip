@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7001a.adb
-bd7001a.adb:33:11: "ADDRESS" is undefined
-bd7001a.adb:34:11: "SYSTEM" is undefined
-bd7001a.adb:35:19: "SYSTEM" not declared in "Standard"
-gnatmake: "bd7001a.adb" compilation error

@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70052.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70052.adb
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70051.adb
-lxd70051.adb:18:36: violation of restriction "NO_TASK_ALLOCATORS" at gnat.adc:44
-gnatmake: "lxd70051.adb" compilation error

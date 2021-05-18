@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b4320020.a into:
-   b432002.ads
-   b432002-child1.ads
-   b432002_unrelated.ads
-   b432002-child2.ads
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b4320021.a into:
-   b432002-child2.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b4320022.a into:
-   b432002.adb

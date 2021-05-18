@@ -1,5 +1,0 @@
-
-,.,. C452002 ACATS 4.1 21-05-16 10:36:20
----- C452002 Check that Ada 2012 memberships can be resolved even when
-                there are many choices that are overloaded.
-==== C452002 PASSED ============================.

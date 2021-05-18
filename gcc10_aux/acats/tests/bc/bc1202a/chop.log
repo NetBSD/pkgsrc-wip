@@ -1,5 +1,0 @@
-bc1202a.ada:35:16: record not allowed in generic type definition
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202a.ada into:
-   bc1202a.adb

@@ -1,6 +1,0 @@
-
-,.,. CXA4012 ACATS 4.1 21-05-16 10:54:17
----- CXA4012 Check that the types, operations, and other entities
-                defined within the package Ada.Strings.Wide_Maps are
-                available and produce correct results.
-==== CXA4012 PASSED ============================.

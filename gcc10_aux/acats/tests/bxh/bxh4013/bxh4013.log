@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4013.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4013.adb
-bxh4013.adb:62:06: violation of restriction "NO_DELAY" at line 58
-bxh4013.adb:71:05: violation of restriction "NO_DELAY" at line 58
-gnatmake: "bxh4013.adb" compilation error

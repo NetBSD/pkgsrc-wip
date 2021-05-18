@@ -1,8 +1,0 @@
-
-,.,. C392010 ACATS 4.1 21-05-16 10:34:21
----- C392010 Check that a subprogram dispatches correctly with a
-                controlling access parameter. Check that a subprogram
-                dispatches correctly when it has access parameters that 
-                are not controlling. Check with and without default
-                expressions.
-==== C392010 PASSED ============================.

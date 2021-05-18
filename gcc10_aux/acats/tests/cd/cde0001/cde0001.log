@@ -1,9 +1,0 @@
-
-,.,. CDE0001 ACATS 4.1 21-05-16 10:52:02
----- CDE0001 Check that the name of the private type, a name that
-                denotes a subtype of the private type, or a name that
-                denotes a composite type with a subcomponent of a
-                private type can be used in the declaration of a generic
-                formal type parameter without causing freezing of the
-                named type.
-==== CDE0001 PASSED ============================.

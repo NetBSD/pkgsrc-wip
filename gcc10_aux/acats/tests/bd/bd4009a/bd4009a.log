@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4009a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4009a.adb
-bd4009a.adb:51:11: component "C1" overlaps "I1" at line 50
-gnatmake: "bd4009a.adb" compilation error

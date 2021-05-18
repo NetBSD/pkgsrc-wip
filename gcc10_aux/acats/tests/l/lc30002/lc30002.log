@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lc300022.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lc300022.adb
-lc30002_0.adb:62:05: circular Instantiation: "LC30002_1" instantiated in "LC30002_0"
-lc30002_0.adb:62:24: circular Instantiation: "LC30002_0" instantiated within "LC30002_1"
-gnatmake: "lc300022.adb" compilation error

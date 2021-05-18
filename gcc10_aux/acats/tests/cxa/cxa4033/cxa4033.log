@@ -1,5 +1,0 @@
-
-,.,. CXA4033 ACATS 4.1 21-05-16 10:54:39
----- CXA4033 Check that subprograms defined in the package
-                Ada.Strings.Wide_Unbounded produce correct results.
-==== CXA4033 PASSED ============================.

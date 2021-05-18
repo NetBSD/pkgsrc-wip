@@ -1,5 +1,0 @@
-b56001h.ada:39:05: missing "END;" for "BEGIN" at line 35
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001h.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001h.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001h.ada into:
-   b56001h.adb

@@ -1,5 +1,0 @@
-b56001e.ada:32:12: declarations must come before "BEGIN"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001e.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001e.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b56001e.ada into:
-   b56001e.adb

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b51001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b51001a.adb
-b51001a.adb:42:11: declarations must come before "BEGIN"
-b51001a.adb:50:06: declarations must come before "BEGIN"
-b51001a.adb:56:11: declarations must come before "BEGIN"
-b51001a.adb:64:16: declarations must come before "BEGIN"
-b51001a.adb:72:11: declarations must come before "BEGIN"
-b51001a.adb:82:11: declarations must come before "BEGIN"
-gnatmake: "b51001a.adb" compilation error

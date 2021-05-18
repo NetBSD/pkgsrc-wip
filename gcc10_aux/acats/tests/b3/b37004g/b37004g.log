@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37004g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37004g.adb
-b37004g.adb:35:16: anonymous arrays not allowed as components
-gnatmake: "b37004g.adb" compilation error

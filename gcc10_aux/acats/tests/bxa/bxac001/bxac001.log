@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxac001.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxac001.adb
-bxac001.adb:74:07: left hand of assignment must not be limited type
-bxac001.adb:76:39: there is no applicable operator "=" for private type "Ada.Streams.Stream_Io.File_Type"
-bxac001.adb:78:39: there is no applicable operator "/=" for private type "Ada.Streams.Stream_Io.File_Type"
-bxac001.adb:94:31: "Inout_File" not declared in "Stream_IO"
-bxac001.adb:99:43: "Inout_File" not declared in "Stream_IO"
-bxac001.adb:109:29: "InOut_File" is undefined (more references follow)
-gnatmake: "bxac001.adb" compilation error

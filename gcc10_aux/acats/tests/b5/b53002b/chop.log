@@ -1,5 +1,0 @@
-b53002b.ada:48:18: "ELSIF" cannot appear after "ELSE"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53002b.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53002b.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53002b.ada into:
-   b53002b.adb

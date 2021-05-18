@@ -1,6 +1,0 @@
-
-,.,. CXAI030 ACATS 4.1 21-05-16 10:56:52
----- CXAI030 Check iterators, indexing, and references for package
-                Ada.Containers.Bounded_Ordered_Sets.
-   - CXAI030 Reference_Preserving_Key detected key change.
-==== CXAI030 PASSED ============================.

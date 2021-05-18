@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001j.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001j.adb
-b22001j.adb:45:201: missing ";"
-b22001j.adb:46:01: "E1" is undefined
-gnatmake: "b22001j.adb" compilation error

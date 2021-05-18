@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a05a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a05a.adb
-b54a05a.adb:52:11: expected a discrete type
-b54a05a.adb:52:11: found type "Standard.String"
-b54a05a.adb:56:11: expected a discrete type
-b54a05a.adb:56:11: found private type "T" defined at line 35
-b54a05a.adb:60:11: expected a discrete type
-b54a05a.adb:60:11: found private type "LT" defined at line 36
-gnatmake: "b54a05a.adb" compilation error

@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c83022g0.ada into:
-   c83022g0m.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c83022g1.ada into:
-   c83022g0m-inner.adb
-   c83022g0m-inner2.adb
-   c83022g0m-inner3.adb
-   c83022g0m-template.adb
-   c83022g0m-inner5.adb
-   c83022g0m-inner6.adb

@@ -1,9 +1,0 @@
-
-,.,. C460001 ACATS 4.1 21-05-16 10:41:48
----- C460001 Check that if the target type of a type conversion is a
-                general access type, Program_Error is raised if the
-                accessibility level of the operand type is deeper than
-                that of the target type: operand is an access parameter;
-                corresponding actual is an allocator, expression of a
-                named access type, Obj'Access.
-==== C460001 PASSED ============================.

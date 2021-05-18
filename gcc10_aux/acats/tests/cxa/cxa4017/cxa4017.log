@@ -1,6 +1,0 @@
-
-,.,. CXA4017 ACATS 4.1 21-05-16 10:54:21
----- CXA4017 Check that the subprograms defined in package
-                Ada.Strings.Wide_Bounded are available, and that they
-                produce correct results.
-==== CXA4017 PASSED ============================.

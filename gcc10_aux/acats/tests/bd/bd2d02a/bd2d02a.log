@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2d02a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2d02a.adb
-bd2d02a.adb:41:10: small already given for "FIX1"
-bd2d02a.adb:45:10: small already given for "FIX2"
-gnatmake: "bd2d02a.adb" compilation error

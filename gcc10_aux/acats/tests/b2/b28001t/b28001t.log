@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b28001t.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b28001t.adb
-b28001t.adb:41:11: select alternative ("ACCEPT", "ABORT", "DELAY") expected
-gnatmake: "b28001t.adb" compilation error

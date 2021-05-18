@@ -1,9 +1,0 @@
-
-,.,. C413002 ACATS 4.1 21-05-16 10:35:17
----- C413002 Check that for the prefixed view L.R, if L represents an
-                object or value of an access type designating a tagged
-                type T, that R may represent a subprogram with a first
-                parameter of the type T or a class-wide type covered by 
-                T that is declared immediately in the declarative region
-                of an ancestor of T..
-==== C413002 PASSED ============================.

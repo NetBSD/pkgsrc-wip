@@ -1,5 +1,0 @@
-
-,.,. CA11022 ACATS 4.1 21-05-16 10:48:48
----- CA11022 Check that body of a child unit can depend on its generic
-                sibling.
-==== CA11022 PASSED ============================.

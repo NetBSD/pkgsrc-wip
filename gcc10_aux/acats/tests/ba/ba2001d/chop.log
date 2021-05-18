@@ -1,5 +1,0 @@
-ba2001d.ada:32:15: operator symbol cannot be used as subunit name
-/home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba2001d.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba2001d.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba2001d.ada into:
-   ba2001d.adb

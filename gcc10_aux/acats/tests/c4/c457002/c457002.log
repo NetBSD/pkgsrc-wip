@@ -1,8 +1,0 @@
-
-,.,. C457002 ACATS 4.1 21-05-16 10:41:44
----- C457002 Check that for the evaluation of a Boolean if expression,
-                the condition specified after if, and any conditions
-                specified after elsif, are evaluated in succession,
-                until one evalues to True or all conditions are
-                evaluated and yield false.
-==== C457002 PASSED ============================.

@@ -1,7 +1,0 @@
-
-,.,. C3A0007 ACATS 4.1 21-05-16 10:34:50
----- C3A0007 Check that a call to a subprogram via an
-                access-to-subprogram value stored in a data structure
-                will correctly dispatch according to the tag of the
-                class-wide parameter passed via that call.
-==== C3A0007 PASSED ============================.

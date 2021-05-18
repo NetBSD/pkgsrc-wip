@@ -1,7 +1,0 @@
-
-,.,. CXG2001 ACATS 4.1 21-05-16 10:59:25
----- CXG2001 Check the attributes Model_Mantissa, Machine_Mantissa,
-                Machine_Radix, and Machine_Rounds.
-   - CXG2001 checking Standard.Float.
-   - CXG2001 checking a digits 18 floating point type.
-==== CXG2001 PASSED ============================.

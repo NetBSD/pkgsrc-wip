@@ -1,7 +1,0 @@
-
-,.,. CXA4027 ACATS 4.1 21-05-16 10:54:32
----- CXA4027 Check that Ada.Strings.Bounded subprograms Translate,
-                Index, and Count, which use the
-                Character_Mapping_Function input parameter, produce
-                correct results.
-==== CXA4027 PASSED ============================.

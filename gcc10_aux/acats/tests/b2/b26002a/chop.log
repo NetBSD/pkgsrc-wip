@@ -1,8 +1,0 @@
-b26002a.ada:38:59: missing string quote
-b26002a.ada:42:59: missing string quote
-b26002a.ada:46:17: binary operator expected
-b26002a.ada:50:19: binary operator expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b26002a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b26002a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b26002a.ada into:
-   b26002a.adb

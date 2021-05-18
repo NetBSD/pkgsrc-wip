@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003b.adb
-b91003b.adb:49:06: missing body for "T2"
-b91003b.adb:50:06: missing body for "T3"
-b91003b.adb:57:16: missing specification for task body
-b91003b.adb:64:06: missing full declaration for type "TT2" defined at line 64
-b91003b.adb:65:06: missing full declaration for type "TT3" defined at line 65
-b91003b.adb:72:16: missing specification for task body
-gnatmake: "b91003b.adb" compilation error

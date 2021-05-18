@@ -1,6 +1,0 @@
-
-,.,. CXB3018 ACATS 4.1 21-05-16 10:58:17
----- CXB3018 Check that exported Ada subprogram and object can be used
-                from a C function. Part 2: Using aspect Export in aspect
-                specifications.
-==== CXB3018 PASSED ============================.

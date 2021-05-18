@@ -1,6 +1,0 @@
-
-,.,. C660001 ACATS 4.1 21-05-16 10:44:00
----- C660001 Check that an explicit declaration of "=" with a result of 
-                Boolean also declares an "/=" with a complementary
-                result.
-==== C660001 PASSED ============================.

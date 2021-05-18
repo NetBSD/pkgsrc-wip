@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74304b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74304b.adb
-b74304b.adb:49:33: premature use of private type
-b74304b.adb:49:39: premature usage of incomplete private type "PRIV" defined at line 46
-b74304b.adb:59:39: deferred constant is frozen before completion
-b74304b.adb:70:33: deferred constant is frozen before completion
-b74304b.adb:73:11: full constant declaration appears too late
-gnatmake: "b74304b.adb" compilation error

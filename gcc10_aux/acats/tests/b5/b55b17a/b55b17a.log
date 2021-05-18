@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b17a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b17a.adb
-b55b17a.adb:37:15: subscripted loop parameter not allowed
-gnatmake: "b55b17a.adb" compilation error

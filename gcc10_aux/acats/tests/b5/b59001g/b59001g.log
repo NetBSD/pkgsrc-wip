@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b59001g.adb
-b59001g.adb:47:27: target of goto statement is not reachable
-b59001g.adb:54:27: target of goto statement is not reachable
-gnatmake: "b59001g.adb" compilation error

@@ -1,6 +1,0 @@
-
-,.,. CC51004 ACATS 4.1 21-05-16 10:50:20
----- CC51004 Check that a formal derived tagged type inherits
-                components, including discriminants, from its ancestor
-                type.
-==== CC51004 PASSED ============================.

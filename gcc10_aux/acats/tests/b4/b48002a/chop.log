@@ -1,9 +1,0 @@
-b48002a.ada:64:33: missing ","
-b48002a.ada:65:32: reserved word "OTHERS" cannot be used as identifier
-b48002a.ada:282:32: missing ","
-b48002a.ada:306:27: missing ","
-b48002a.ada:330:27: missing ","
-/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b48002a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b4/b48002a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b4/b48002a.ada into:
-   b48002a.adb

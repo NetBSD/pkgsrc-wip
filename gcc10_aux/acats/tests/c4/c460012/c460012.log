@@ -1,5 +1,0 @@
-
-,.,. C460012 ACATS 4.1 21-05-16 10:41:54
----- C460012 Check that the view created by a view conversion is
-                constrained if the target subtype is indefinite.
-==== C460012 PASSED ============================.

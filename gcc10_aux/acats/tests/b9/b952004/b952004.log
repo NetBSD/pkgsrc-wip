@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b952004.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b952004.adb
-b952004.adb:53:28: task entries cannot have access parameters
-b952004.adb:74:10: duplicate accept statement for same entry (RM 9.5.2 (15))
-b952004.adb:86:13: duplicate accept statement for same entry (RM 9.5.2 (15))
-b952004.adb:95:10: accept statements are not allowed within an asynchronous select inner to the enclosing task body
-b952004.adb:104:13: duplicate accept statement for same entry (RM 9.5.2 (15))
-gnatmake: "b952004.adb" compilation error

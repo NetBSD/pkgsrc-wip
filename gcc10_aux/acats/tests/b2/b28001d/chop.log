@@ -1,5 +1,0 @@
-b28001d.ada:31:14: pragma not allowed here
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001d.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001d.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001d.ada into:
-   b28001d.adb

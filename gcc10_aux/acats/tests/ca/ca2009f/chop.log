@@ -1,8 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2009f0.ada into:
-   ca2009f0m.adb
-   ca2009f0m-proc2.adb
-   ca2009f0m-func2.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2009f1.ada into:
-   ca2009f0m-proc1.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca2009f2.ada into:
-   ca2009f0m-func1.adb

@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1230a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1230a.adb
-bc1230a.adb:42:26: expected type "PACK.INT" defined at line 41
-bc1230a.adb:42:26: found type "BC1230A.INT" defined at line 36
-bc1230a.adb:47:51: "NUMBER" is undefined (more references follow)
-bc1230a.adb:48:22: "ENUM" is undefined
-gnatmake: "bc1230a.adb" compilation error

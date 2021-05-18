@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45625a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45625a.adb
-b45625a.adb:50:32: exponent must be of type Natural, found type "DER_INT" defined at line 35
-b45625a.adb:51:32: exponent must be of type Natural, found type "NEW_INT" defined at line 36
-b45625a.adb:52:32: exponent must be of type Natural, found type "SHT_INT" defined at line 37
-b45625a.adb:53:32: exponent must be of type Natural, found type "LNG_INT" defined at line 38
-gnatmake: "b45625a.adb" compilation error

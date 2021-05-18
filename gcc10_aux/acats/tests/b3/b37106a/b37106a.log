@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37106a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37106a.adb
-b37106a.adb:34:30: constraint not allowed here
-b37106a.adb:43:29: constraint not allowed here
-b37106a.adb:49:29: constraint not allowed here
-b37106a.adb:55:29: constraint not allowed here
-gnatmake: "b37106a.adb" compilation error

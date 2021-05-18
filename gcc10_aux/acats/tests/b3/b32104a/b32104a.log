@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32104a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b32104a.adb
-b32104a.adb:42:11: unconstrained subtype not allowed (need initialization)
-b32104a.adb:42:11: provide initial value or explicit array bounds
-b32104a.adb:54:11: unconstrained subtype not allowed (need initialization)
-b32104a.adb:54:11: provide initial value or explicit array bounds
-gnatmake: "b32104a.adb" compilation error

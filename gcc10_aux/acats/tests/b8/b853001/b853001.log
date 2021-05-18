@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b8530014.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b8530014.adb
-b8530014.adb:65:46: "Dewey" not declared in "Inner"
-b8530014.adb:76:40: "Louie" not declared in "Innermost"
-b8530012.ads:66:32: "Louie" not declared in "Innermost"
-gnatmake: "b8530014.adb" compilation error

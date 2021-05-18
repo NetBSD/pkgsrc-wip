@@ -1,6 +1,0 @@
-
-,.,. C732A02 ACATS 4.1 21-05-16 10:44:16
----- C732A02 Check that return from a call on a subprogram declared with
-                a type T checks the invariants of T when the result or
-                an in out parameter has a part of T.
-==== C732A02 PASSED ============================.

@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b831003.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b831003.adb
-b831003.adb:65:05: subprogram "or" overrides predefined operator
-b831003.adb:71:05: subprogram "xor" overrides predefined operator
-gnatmake: "b831003.adb" compilation error

@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41101a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41101a.adb
-b41101a.adb:46:15: too many subscripts in array reference
-b41101a.adb:48:15: too many subscripts in array reference
-b41101a.adb:50:17: too many subscripts in array reference
-b41101a.adb:52:13: too few subscripts in array reference
-b41101a.adb:54:13: too few subscripts in array reference
-gnatmake: "b41101a.adb" compilation error

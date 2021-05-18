@@ -1,6 +1,0 @@
-
-,.,. CXACB02 ACATS 4.1 21-05-16 10:55:16
----- CXACB02 Check that user defined subprograms can override the
-                default attributes 'Input and 'Output using attribute
-                definition clauses.
-==== CXACB02 PASSED ============================.

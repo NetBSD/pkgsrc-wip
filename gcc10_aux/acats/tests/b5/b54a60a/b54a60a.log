@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a60a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a60a.adb
-b54a60a.adb:51:11: ambiguous expression (cannot resolve "RED")
-b54a60a.adb:51:11: possible interpretation at line 37
-b54a60a.adb:51:11: possible interpretation at line 36
-b54a60a.adb:55:11: ambiguous expression (cannot resolve "FUNC")
-b54a60a.adb:55:11: possible interpretation at line 44
-b54a60a.adb:55:11: possible interpretation at line 39
-gnatmake: "b54a60a.adb" compilation error

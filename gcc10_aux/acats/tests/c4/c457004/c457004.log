@@ -1,6 +1,0 @@
-
-,.,. C457004 ACATS 4.1 21-05-16 10:41:45
----- C457004 Check that the selecting_expression of a case expression
-                can be resolved if it is an overloaded function call, of
-                which exactly one has a discrete type.
-==== C457004 PASSED ============================.

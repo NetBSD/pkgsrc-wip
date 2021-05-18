@@ -1,4 +1,0 @@
-couldn't execute "/home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba11014/ba11014": no such file or directory
-    while executing
-"spawn -noecho $argv"
-    (file "/home/fernando/mysandboxfolder/tmp/ACATS/run_test.exp" line 9)

@@ -1,9 +1,0 @@
-b97102h.ada:59:25: missing "END SELECT;" for "SELECT" at line 54
-b97102h.ada:59:26: select alternative ("ACCEPT", "ABORT", "DELAY") expected
-b97102h.ada:60:16: "OR" not allowed here
-b97102h.ada:61:21: "WHEN" not allowed here
-b97102h.ada:63:16: no "SELECT" for this "END SELECT"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97102h.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97102h.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97102h.ada into:
-   b97102h.adb

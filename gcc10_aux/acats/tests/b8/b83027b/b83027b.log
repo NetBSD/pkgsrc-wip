@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83027b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83027b.adb
-b83027b.adb:61:31: component "F" cannot be used before end of record declaration
-b83027b.adb:77:31: expected type "Standard.Integer"
-b83027b.adb:77:31: found type "ENUM" defined at line 72
-b83027b.adb:93:38: discriminant "F" cannot be used before end of discriminant part
-gnatmake: "b83027b.adb" compilation error

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b26001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b26001a.adb
-b26001a.adb:33:71: missing string quote
-b26001a.adb:35:33: quote not allowed in percent delimited string
-b26001a.adb:42:71: missing string quote
-b26001a.adb:44:17: quote not allowed in percent delimited string
-b26001a.adb:46:71: missing string quote
-b26001a.adb:48:23: quote not allowed in percent delimited string
-gnatmake: "b26001a.adb" compilation error

@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb10001.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb10001.adb
-bb10001.adb:74:15: exception choice duplicates "Constraint_Error" at line 72
-bb10001.adb:106:15: exception choice duplicates "Renamed_Exception" at line 103
-bb10001.adb:106:31: exception choice duplicates "Renamed_Exception" at line 103
-gnatmake: "bb10001.adb" compilation error

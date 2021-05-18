@@ -1,4 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1004a.ada into:
-   ca1004a_pkg.ads
-   ca1004a_pkg.adb
-   ca1004a.adb

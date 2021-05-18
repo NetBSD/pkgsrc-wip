@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b63001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b63001a.adb
-b63001a.adb:35:10: misspelling of "PROC1"
-b63001a.adb:40:06: "END FUNC1;" expected
-b63001a.adb:45:06: "END "+";" expected
-b63001a.adb:50:06: "END PROC2;" expected
-gnatmake: "b63001a.adb" compilation error

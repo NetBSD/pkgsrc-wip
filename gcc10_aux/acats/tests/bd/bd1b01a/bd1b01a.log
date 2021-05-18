@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd1b01a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd1b01a.adb
-bd1b01a.adb:44:06: representation item appears too late
-bd1b01a.adb:56:06: representation item appears too late
-bd1b01a.adb:73:06: representation item appears too late
-bd1b01a.adb:82:06: representation item appears too late
-bd1b01a.adb:92:06: representation item appears too late
-bd1b01a.adb:101:06: representation item appears too late
-gnatmake: "bd1b01a.adb" compilation error

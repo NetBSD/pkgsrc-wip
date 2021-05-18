@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a85b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a85b.adb
-bd2a85b.adb:41:31: size for "ACCESS_TYPE" too small, minimum allowed is 64
-gnatmake: "bd2a85b.adb" compilation error

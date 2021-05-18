@@ -1,7 +1,0 @@
-
-,.,. C761013 ACATS 4.1 21-05-16 10:44:48
----- C761013 Check that a function call for a which a part is renamed as
-                an object is not finalized until the unit or block that 
-                directly contains the renaming is left. Also check that 
-                a renaming is not finalized too soon..
-==== C761013 PASSED ============================.

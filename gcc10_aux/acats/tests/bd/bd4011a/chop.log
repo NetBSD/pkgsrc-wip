@@ -1,6 +1,0 @@
-bd4011a.ada:49:27: range attribute cannot be used in expression
-bd4011a.ada:53:28: range attribute cannot be used in expression
-/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd4011a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd4011a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd4011a.ada into:
-   bd4011a.adb

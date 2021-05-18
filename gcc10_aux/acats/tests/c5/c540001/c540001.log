@@ -1,9 +1,0 @@
-
-,.,. C540001 ACATS 4.1 21-05-16 10:42:51
----- C540001 Check that an expression in a case statement may be of a
-                generic formal type.  Check that a function call may be 
-                used as a case statement expression.  Check that a call 
-                to a generic formal function may be used as a case
-                statement expression.  Check that a call to an inherited
-                function may be used as a case statement expression.
-==== C540001 PASSED ============================.

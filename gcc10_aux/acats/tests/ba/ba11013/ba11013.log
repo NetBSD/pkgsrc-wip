@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba11013a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba11013a.adb
-ba11013a-child2.adb:58:01: cannot have private subprogram body
-gnatmake: "ba11013a.adb" compilation error

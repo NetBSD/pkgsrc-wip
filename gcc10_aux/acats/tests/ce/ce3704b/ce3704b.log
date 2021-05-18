@@ -1,5 +1,0 @@
-
-,.,. CE3704B ACATS 4.1 21-05-16 10:53:30
----- CE3704B CHECK THAT INTEGER_IO GET RAISES MODE_ERROR FOR FILES OF
-                MODE OUT_FILE.
-==== CE3704B PASSED ============================.

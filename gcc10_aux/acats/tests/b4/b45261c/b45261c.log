@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45261c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45261c.adb
-b45261c.adb:64:17: there is no applicable operator ">" for type "ARR" defined at line 58
-b45261c.adb:69:20: there is no applicable operator "<=" for type "ARR" defined at line 58
-gnatmake: "b45261c.adb" compilation error

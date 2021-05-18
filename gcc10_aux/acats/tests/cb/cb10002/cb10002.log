@@ -1,6 +1,0 @@
-
-,.,. CB10002 ACATS 4.1 21-05-16 10:49:11
----- CB10002 Check that Storage_Error is raised when storage for
-                allocated objects is exceeded.
-   + CB10002 Unable to exhaust memory.
-++++ CB10002 NOT-APPLICABLE ++++++++++++++++++++.

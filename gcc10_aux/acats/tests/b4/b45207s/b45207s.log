@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45207s.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45207s.adb
-b45207s.adb:82:17: there is no applicable operator "=" for type "DTT" defined at line 70
-b45207s.adb:87:20: there is no applicable operator "/=" for type "DTT" defined at line 70
-gnatmake: "b45207s.adb" compilation error

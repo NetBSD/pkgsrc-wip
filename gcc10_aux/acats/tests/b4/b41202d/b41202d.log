@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41202d.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b41202d.adb
-b41202d.adb:44:11: expected an array type
-b41202d.adb:44:11: found type "AAA" defined at line 36
-gnatmake: "b41202d.adb" compilation error

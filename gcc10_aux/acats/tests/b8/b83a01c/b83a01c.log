@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a01c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a01c.adb
-b83a01c.adb:62:19: "LAB_OUTSIDE_INACCEPT" conflicts with label at line 45
-b83a01c.adb:63:19: "LAB_INBLOCK_INACCEPT" conflicts with label at line 49
-b83a01c.adb:64:19: "LAB_INBLOCKLOOP_INACCEPT" conflicts with label at line 52
-b83a01c.adb:65:19: "LAB_INLOOP_INACCEPT" conflicts with label at line 58
-b83a01c.adb:70:19: "LAB_INACCEPT_INACCEPT" conflicts with label at line 66
-gnatmake: "b83a01c.adb" compilation error

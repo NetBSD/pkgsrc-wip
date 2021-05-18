@@ -1,9 +1,0 @@
-
-,.,. CDD2A01 ACATS 4.1 21-05-16 10:51:58
----- CDD2A01 Check that the Read and Write attributes for a type
-                extension are created from the parent type's attribute
-                (which may be user-defined) and those for the extension 
-                components; also check that the default input and output
-                attributes are used for a type extension, even if the
-                parent type's attribute is user-defined.
-==== CDD2A01 PASSED ============================.

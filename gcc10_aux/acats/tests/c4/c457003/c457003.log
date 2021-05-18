@@ -1,6 +1,0 @@
-
-,.,. C457003 ACATS 4.1 21-05-16 10:41:45
----- C457003 Check the evaluation of a case expression.
-   - C457003 Constraint_Error raised by case expression with invalid
-                selector.
-==== C457003 PASSED ============================.

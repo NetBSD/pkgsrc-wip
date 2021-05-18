@@ -1,6 +1,0 @@
-
-,.,. C650B02 ACATS 4.1 21-05-16 10:43:56
----- C650B02 Check that the tag of the result of a function that returns
-                a class-wide tagged type is that of the return
-                expression. Case B: non-limited types.
-==== C650B02 PASSED ============================.

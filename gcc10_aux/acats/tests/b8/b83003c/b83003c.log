@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83003c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83003c.adb
-b83003c.adb:42:26: "E9" conflicts with declaration at line 38
-gnatmake: "b83003c.adb" compilation error

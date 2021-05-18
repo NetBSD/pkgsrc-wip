@@ -1,7 +1,0 @@
-
-,.,. CB42002 ACATS 4.1 21-05-16 10:49:31
----- CB42002 Check that if the Assertion_Policy is Ignore, neither the
-                boolean expression nor the string expression of a pragma
-                Assert is evaluated, even if the assertion would have
-                failed.
-==== CB42002 PASSED ============================.

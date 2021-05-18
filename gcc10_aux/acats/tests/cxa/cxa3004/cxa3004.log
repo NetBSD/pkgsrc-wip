@@ -1,8 +1,0 @@
-
-,.,. CXA3004 ACATS 4.1 21-05-16 10:54:04
----- CXA3004 Check that the functions defined in package
-                Ada.Characters.Handling for classification of and
-                conversion between Wide_Character and Character values
-                produce correct results when given the appropriate
-                Character and String inputs.
-==== CXA3004 PASSED ============================.

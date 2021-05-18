@@ -1,8 +1,0 @@
-
-,.,. C840001 ACATS 4.1 21-05-16 10:45:03
----- C840001 Check that, for the type determined by the subtype mark of 
-                a use type clause, the declaration of each primitive
-                operator is use-visible within the scope of the clause, 
-                even if explicit operators with the same names as the
-                type's operators are declared for the subtype.
-==== C840001 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdd2002.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdd2002.adb
-bdd2002_0.ads:92:13: component "L" in limited extension must have "READ" attribute
-bdd2002_0.ads:102:13: component "L" in limited extension must have "READ" attribute
-bdd2002_0.ads:108:13: component "L" in limited extension must have "READ" attribute
-bdd2002_0.ads:118:13: component "L" in limited extension must have "READ" attribute
-bdd2002_0.ads:124:13: component "L" in limited extension must have "WRITE" attribute
-bdd2002_0.ads:134:13: component "L" in limited extension must have "WRITE" attribute
-gnatmake: "bdd2002.adb" compilation error

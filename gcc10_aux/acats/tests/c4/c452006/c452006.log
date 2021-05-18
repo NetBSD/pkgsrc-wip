@@ -1,7 +1,0 @@
-
-,.,. C452006 ACATS 4.1 21-05-16 10:40:49
----- C452006 Check that a membership with a private type whose full type
-                is an access type uses the correct equality to evaluate 
-                the tests for expression choices.
-   * C452006 Wrong: limited membership uses predefined equality (5).
-**** C452006 FAILED ****************************.

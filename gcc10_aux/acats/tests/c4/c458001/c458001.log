@@ -1,6 +1,0 @@
-
-,.,. C458001 ACATS 4.1 21-05-16 10:41:47
----- C458001 Check that the predicate of a quantified expression is
-                evaluated in the order specified by the
-                loop_parameter_specification.
-==== C458001 PASSED ============================.

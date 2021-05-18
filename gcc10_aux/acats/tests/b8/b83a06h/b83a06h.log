@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a06h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a06h.adb
-b83a06h.adb:72:17: exception name expected
-b83a06h.adb:73:17: exception name expected
-gnatmake: "b83a06h.adb" compilation error

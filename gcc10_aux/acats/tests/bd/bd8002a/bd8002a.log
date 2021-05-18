@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8002a.adb
-bd8002a.adb:72:23: incorrect type for code statement
-bd8002a.adb:84:25: expected type "M_CODE2.Asm_Insn" defined at line 79
-bd8002a.adb:84:25: found private type "System.Machine_Code.Asm_Insn"
-gnatmake: "bd8002a.adb" compilation error

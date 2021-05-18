@@ -1,8 +1,0 @@
-
-,.,. C3A2002 ACATS 4.1 21-05-16 10:35:06
----- C3A2002 Check that, for X'Access of general access type A,
-                Program_Error is raised if the accessibility level of X 
-                is deeper than that of A: X is an access parameter;
-                corresponding actual is an allocator, expression of a
-                named access type, Obj'Access, or a rename thereof.
-==== C3A2002 PASSED ============================.

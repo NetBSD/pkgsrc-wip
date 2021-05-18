@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83b01a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83b01a.adb
-b83b01a.adb:43:11: "LOOP_PAR" is undefined
-gnatmake: "b83b01a.adb" compilation error

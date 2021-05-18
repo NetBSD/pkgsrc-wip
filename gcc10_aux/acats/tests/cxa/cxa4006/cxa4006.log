@@ -1,6 +1,0 @@
-
-,.,. CXA4006 ACATS 4.1 21-05-16 10:54:10
----- CXA4006 Check that the subprograms defined in package
-                Ada.Strings.Bounded are available, and that they produce
-                correct results.
-==== CXA4006 PASSED ============================.

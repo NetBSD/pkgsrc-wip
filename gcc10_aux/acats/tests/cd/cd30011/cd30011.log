@@ -1,8 +1,0 @@
-
-,.,. CD30011 ACATS 4.1 21-05-16 10:51:11
----- CD30011 Check that 'Size attribute definition clauses can be given 
-                in the visible or private part of a package for
-                enumeration types declared declared in the visible part,
-                and for derived enumeration types and derived private
-                types whose full declarations are as enumeration types.
-==== CD30011 PASSED ============================.

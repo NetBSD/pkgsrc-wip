@@ -1,6 +1,0 @@
-b3a0008.a:106:30: an allocator with a subtype indication cannot have a null exclusion
-b3a0008.a:107:30: an allocator with a subtype indication cannot have a null exclusion
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a0008.a: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a0008.a: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b3a0008.a into:
-   b3a0008.ads

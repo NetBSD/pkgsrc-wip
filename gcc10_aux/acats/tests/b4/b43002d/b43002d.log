@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43002d.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43002d.adb
-b43002d.adb:48:12: positional aggregate cannot have one component
-b43002d.adb:48:12: write instead "COMP1 => ..."
-b43002d.adb:50:12: positional aggregate cannot have one component
-b43002d.adb:50:12: write instead "D => ..."
-gnatmake: "b43002d.adb" compilation error

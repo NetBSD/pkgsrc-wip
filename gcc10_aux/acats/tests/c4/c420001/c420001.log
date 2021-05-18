@@ -1,7 +1,0 @@
-
-,.,. C420001 ACATS 4.1 21-05-16 10:35:36
----- C420001 Check that if the index subtype of a string type is a
-                modular subtype whose lower bound is zero, then the
-                evaluation of a null string_literal raises
-                Constraint_Error. .
-==== C420001 PASSED ============================.

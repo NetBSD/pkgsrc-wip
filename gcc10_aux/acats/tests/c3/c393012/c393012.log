@@ -1,8 +1,0 @@
-
-,.,. C393012 ACATS 4.1 21-05-16 10:34:34
----- C393012 Check that a non-abstract subprogram of an abstract type
-                can be called with a controlling operand that is a type 
-                conversion to the abstract type.  Check that converting 
-                to the class-wide type of an abstract type inside an
-                operation of that type causes a redispatch.
-==== C393012 PASSED ============================.

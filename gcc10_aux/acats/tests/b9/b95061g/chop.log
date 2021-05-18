@@ -1,5 +1,0 @@
-b95061g.ada:33:34: entry cannot have return value
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061g.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061g.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061g.ada into:
-   b95061g.adb

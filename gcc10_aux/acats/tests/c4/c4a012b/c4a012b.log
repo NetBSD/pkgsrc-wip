@@ -1,6 +1,0 @@
-
-,.,. C4A012B ACATS 4.1 21-05-16 10:42:29
----- C4A012B CHECK THAT CONSTRAINT_ERROR IS RAISED FOR 0.0 ** (-1) (OR
-                ANY OTHER NEGATIVE EXPONENT VALUE).
-   + C4A012B Float'Machine_Overflows = False.
-++++ C4A012B NOT-APPLICABLE ++++++++++++++++++++.

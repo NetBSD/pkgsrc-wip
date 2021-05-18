@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95007b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95007b.adb
-b95007b.adb:50:11: "END E0;" expected
-b95007b.adb:54:11: "END E1;" expected
-b95007b.adb:58:11: "END E2;" expected
-b95007b.adb:62:11: "END P0;" expected
-b95007b.adb:66:11: "END P1;" expected
-b95007b.adb:70:11: "END P2;" expected
-gnatmake: "b95007b.adb" compilation error

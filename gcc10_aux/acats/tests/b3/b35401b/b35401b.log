@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35401b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35401b.adb
-b35401b.adb:35:32: Range attribute not allowed here, use First .. Last
-gnatmake: "b35401b.adb" compilation error

@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35103a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35103a.adb
-b35103a.adb:31:28: "AB" conflicts with declaration at line 31
-b35103a.adb:32:29: "'B'" conflicts with declaration at line 32
-gnatmake: "b35103a.adb" compilation error

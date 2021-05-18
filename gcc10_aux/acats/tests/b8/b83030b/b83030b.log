@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83030b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83030b.adb
-b83030b.adb:55:41: "P" is not the name of a generic procedure
-b83030b.adb:88:40: "P" is not the name of a generic function
-b83030b.adb:114:40: "F" is not the name of a generic function
-b83030b.adb:142:41: "F" is not the name of a generic procedure
-gnatmake: "b83030b.adb" compilation error

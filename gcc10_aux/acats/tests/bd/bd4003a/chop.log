@@ -1,5 +1,0 @@
-bd4003a.ada:81:16: the only representation clause allowed here is an address clause
-/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd4003a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd4003a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bd/bd4003a.ada into:
-   bd4003a.adb

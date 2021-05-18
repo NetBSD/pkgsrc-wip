@@ -1,9 +1,0 @@
-
-,.,. CC51002 ACATS 4.1 21-05-16 10:50:19
----- CC51002 Check that, for formal derived tagged types, the formal
-                parameter names and default expressions for a primitive 
-                subprogram in an instance are determined by the
-                primitive subprogram of the ancestor type, but that the 
-                primitive subprogram body executed is that of theactual 
-                type.
-==== CC51002 PASSED ============================.

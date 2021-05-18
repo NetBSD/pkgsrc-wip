@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a60b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a60b.adb
-b54a60b.adb:38:11: character literal as case expression is ambiguous
-gnatmake: "b54a60b.adb" compilation error

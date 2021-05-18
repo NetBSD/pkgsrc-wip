@@ -1,5 +1,0 @@
-b35401b.ada:35:32: Range attribute not allowed here, use First .. Last
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b35401b.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b35401b.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b35401b.ada into:
-   b35401b.adb

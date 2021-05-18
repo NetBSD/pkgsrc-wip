@@ -1,7 +1,0 @@
-b63001b.ada:40:10: misspelling of "PROC1"
-b63001b.ada:49:06: "END FUNC1;" expected
-b63001b.ada:58:06: "END PROC2;" expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b63001b.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b63001b.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b6/b63001b.ada into:
-   b63001b.adb

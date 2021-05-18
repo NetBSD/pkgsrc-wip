@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4004.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4004.adb
-bxh4004.adb:76:06: violation of restriction "NO_UNCHECKED_DEALLOCATION" at line 65
-gnatmake: "bxh4004.adb" compilation error

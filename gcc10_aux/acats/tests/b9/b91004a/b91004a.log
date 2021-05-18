@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91004a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91004a.adb
-b91004a.adb:66:15: task type cannot be used as type mark within its own spec or body
-b91004a.adb:113:36: expected type "Standard.Integer"
-b91004a.adb:113:36: found type "T" defined at line 44
-gnatmake: "b91004a.adb" compilation error

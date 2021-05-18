@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37301i.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37301i.adb
-b37301i.adb:39:26: the choice "OTHERS" must appear alone and last
-b37301i.adb:52:26: the choice "OTHERS" must appear alone and last
-b37301i.adb:65:26: the choice "OTHERS" must appear alone and last
-b37301i.adb:77:32: the choice "OTHERS" must appear alone and last
-b37301i.adb:89:32: the choice "OTHERS" must appear alone and last
-gnatmake: "b37301i.adb" compilation error

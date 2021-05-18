@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba12015i.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba12015i.adb
-ba12015i.adb:69:36: "BA12015f" is not visible
-ba12015i.adb:69:36: non-visible declaration at ba12015f.adb:95
-ba12015i.adb:70:25: "BA12015p" is not visible
-ba12015i.adb:70:25: non-visible declaration at ba12015p.ads:4
-ba12015i.adb:73:32: "Datum" is not a visible entity of "BA12015p"
-ba12015i.adb:75:21: "T_Hidden" is not a visible entity of "BA12015p"
-gnatmake: "ba12015i.adb" compilation error

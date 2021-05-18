@@ -1,8 +1,0 @@
-b91001f.ada:36:10: misspelling of "T1"
-b91001f.ada:40:10: misspelling of "T2"
-b91001f.ada:45:10: misspelling of "T1"
-b91001f.ada:50:06: "END T2;" expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001f.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001f.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001f.ada into:
-   b91001f.adb

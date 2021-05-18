@@ -1,7 +1,0 @@
-
-,.,. C760010 ACATS 4.1 21-05-16 10:44:32
----- C760010 Check that explicit calls to finalization procedures that
-                raise exceptions propagate the exception raised.  Check 
-                the utilization of a controlled type as the actual for a
-                generic formal tagged private parameter.
-==== C760010 PASSED ============================.

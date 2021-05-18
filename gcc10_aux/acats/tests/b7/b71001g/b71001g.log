@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b71001g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b71001g.adb
-b71001g.adb:37:11: "END P3;" expected
-b71001g.adb:38:06: "END P2;" expected
-b71001g.adb:48:11: "END P6;" expected
-b71001g.adb:49:06: "END P5;" expected
-gnatmake: "b71001g.adb" compilation error

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a01l.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a01l.adb
-b54a01l.adb:39:16: the choice "OTHERS" must appear alone and last
-b54a01l.adb:44:16: the choice "OTHERS" must appear alone and last
-b54a01l.adb:49:20: the choice "OTHERS" must appear alone and last
-b54a01l.adb:54:16: the choice "OTHERS" must appear alone and last
-b54a01l.adb:59:20: the choice "OTHERS" must appear alone and last
-b54a01l.adb:64:20: the choice "OTHERS" must appear alone and last
-gnatmake: "b54a01l.adb" compilation error

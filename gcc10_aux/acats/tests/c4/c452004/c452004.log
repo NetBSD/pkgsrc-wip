@@ -1,6 +1,0 @@
-
-,.,. C452004 ACATS 4.1 21-05-16 10:40:48
----- C452004 Check that memberships with multiple choices are evaluated 
-                in order and that primitive record equality is used to
-                evaluate the tests.
-==== C452004 PASSED ============================.

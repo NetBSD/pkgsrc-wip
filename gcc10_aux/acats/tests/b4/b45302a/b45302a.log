@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45302a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45302a.adb
-b45302a.adb:42:18: there is no applicable operator "&" for type "ARR" defined at line 37
-b45302a.adb:60:20: invalid operand types for operator "&"
-b45302a.adb:61:20: invalid operand types for operator "&"
-b45302a.adb:62:20: invalid operand types for operator "&"
-b45302a.adb:63:20: invalid operand types for operator "&"
-gnatmake: "b45302a.adb" compilation error

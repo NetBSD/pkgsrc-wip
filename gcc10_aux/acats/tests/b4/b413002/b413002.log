@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b413002.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b413002.adb
-b413002.adb:128:04: object in prefixed call to "PV" must be aliased (RM 4.1.3 (13 1/2))
-b413002.adb:130:09: object in prefixed call to "FC" must be aliased (RM 4.1.3 (13 1/2))
-b413002.adb:131:09: object in prefixed call to "FV" must be aliased (RM 4.1.3 (13 1/2))
-b413002.adb:134:08: actual for "X" must be a variable
-b413002.adb:135:08: actual for "X" must be a variable
-b413002.adb:139:04: object in prefixed call to "PC" must be aliased (RM 4.1.3 (13 1/2))
-gnatmake: "b413002.adb" compilation error

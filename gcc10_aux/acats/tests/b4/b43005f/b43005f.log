@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43005f.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43005f.adb
-b43005f.adb:54:06: ambiguous expression (cannot resolve "P")
-b43005f.adb:54:06: possible interpretation at line 47
-b43005f.adb:54:06: possible interpretation at line 42
-gnatmake: "b43005f.adb" compilation error

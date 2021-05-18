@@ -1,6 +1,0 @@
-
-,.,. C455001 ACATS 4.1 21-05-16 10:41:19
----- C455001 Check that universal fixed multiplying operators can be
-                used without a conversion in contexts where the result
-                type is determined..
-==== C455001 PASSED ============================.

@@ -1,6 +1,0 @@
-
-,.,. C3A0005 ACATS 4.1 21-05-16 10:34:48
----- C3A0005 Check that access to subprogram may be stored within data
-                structures, and that the access to subprogram can
-                subsequently be called.
-==== C3A0005 PASSED ============================.

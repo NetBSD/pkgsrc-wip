@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a05.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a05.adb
-b552a05.adb:88:11: container cannot be a discriminant-dependent component of a mutable object
-b552a05.adb:93:11: container cannot be a discriminant-dependent component of a mutable object
-b552a05.adb:98:11: container cannot be a discriminant-dependent component of a mutable object
-b552a05.adb:298:11: cursor type cannot be limited
-b552a05.adb:302:11: cursor type cannot be limited
-b552a05.adb:306:11: cursor type cannot be limited
-gnatmake: "b552a05.adb" compilation error

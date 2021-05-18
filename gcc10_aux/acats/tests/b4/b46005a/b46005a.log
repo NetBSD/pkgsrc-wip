@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46005a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b46005a.adb
-b46005a.adb:82:12: invalid conversion, not compatible with type "ENUM2" defined at line 36
-b46005a.adb:84:12: invalid conversion, not compatible with type "REC2" defined at line 43
-b46005a.adb:86:12: target type must be general access type
-b46005a.adb:86:12: add "ALL" to type "ACCD" defined at line 51
-b46005a.adb:88:12: invalid conversion, not compatible with private type "PRIV2" defined at line 55
-gnatmake: "b46005a.adb" compilation error

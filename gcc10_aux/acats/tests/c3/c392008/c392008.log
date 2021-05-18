@@ -1,6 +1,0 @@
-
-,.,. C392008 ACATS 4.1 21-05-16 10:34:20
----- C392008 Check that the use of a class-wide formal parameter allows 
-                for the proper dispatching of objects to the appropriate
-                implementation of a primitive operation.
-==== C392008 PASSED ============================.

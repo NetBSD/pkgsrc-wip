@@ -1,5 +1,0 @@
-b91001d.ada:31:01: task declaration cannot be used as compilation unit
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001d.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001d.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001d.ada into:
-   b91001d.ads

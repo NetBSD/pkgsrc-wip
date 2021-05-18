@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1203a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1203a.adb
-bc1203a.adb:39:40: object "T2" cannot be used before end of its declaration
-bc1203a.adb:41:34: object "A2" cannot be used before end of its declaration
-gnatmake: "bc1203a.adb" compilation error

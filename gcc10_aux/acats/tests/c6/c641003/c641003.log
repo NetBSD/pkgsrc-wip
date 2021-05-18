@@ -1,6 +1,0 @@
-
-,.,. C641003 ACATS 4.1 21-05-16 10:43:32
----- C641003 Check that, for a parameter of a scalar type with a
-                specified Default_Value, the value of the actual
-                parameter is passed in without any predicate check.
-==== C641003 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36105c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b36105c.adb
-b36105c.adb:55:26: expected type "Standard.Short_Integer"
-b36105c.adb:55:26: found type "Standard.Integer"
-b36105c.adb:59:14: expected type "Standard.Short_Integer"
-b36105c.adb:59:14: found type "Standard.Integer"
-b36105c.adb:62:09: expected type "Standard.Integer"
-b36105c.adb:62:09: found type "Standard.Short_Integer"
-gnatmake: "b36105c.adb" compilation error

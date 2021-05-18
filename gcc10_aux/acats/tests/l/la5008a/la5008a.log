@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la5008a1m.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support la5008a1m.adb
-la5008a1m.adb:43:06: body of generic unit "LA5008A0" not found
-gnatmake: "la5008a1m.adb" compilation error

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b62001c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b62001c.adb
-b62001c.adb:33:25: formal subprogram parameter not allowed
-gnatmake: "b62001c.adb" compilation error

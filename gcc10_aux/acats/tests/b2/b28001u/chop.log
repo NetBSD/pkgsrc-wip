@@ -1,5 +1,0 @@
-b28001u.ada:41:11: select alternative ("ACCEPT", "ABORT", "DELAY") expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001u.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001u.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001u.ada into:
-   b28001u.adb

@@ -1,6 +1,0 @@
-
-,.,. C394002 ACATS 4.1 21-05-16 10:34:43
----- C394002 Check that an interface inherits primitive subprograms from
-                each progenitor. Case 1A: Limited interfaces, simple
-                primitive subprograms.
-==== C394002 PASSED ============================.

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b56001h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b56001h.adb
-b56001h.adb:39:05: missing "END;" for "BEGIN" at line 35
-gnatmake: "b56001h.adb" compilation error

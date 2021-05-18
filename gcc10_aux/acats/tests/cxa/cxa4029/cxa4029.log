@@ -1,5 +1,0 @@
-
-,.,. CXA4029 ACATS 4.1 21-05-16 10:54:34
----- CXA4029 Check that subprograms defined in package
-                Ada.Strings.Wide_Bounded produce correct results.
-==== CXA4029 PASSED ============================.

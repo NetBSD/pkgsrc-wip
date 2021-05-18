@@ -1,9 +1,0 @@
-
-,.,. C480001 ACATS 4.1 21-05-16 10:42:11
----- C480001 If the designated type of an initialized allocator is
-                class-wide, check that Program_Error is raised if the
-                master of the type of the tag of the value of the
-                qualified expression of the allocator does not include
-                the elaboration of the type of the allocator. Case 1:
-                Nested subprograms.
-==== C480001 PASSED ============================.

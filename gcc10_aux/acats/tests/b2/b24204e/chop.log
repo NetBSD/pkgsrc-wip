@@ -1,6 +1,0 @@
-b24204e.ada:39:16: digit >= base
-b24204e.ada:40:18: digit >= base
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24204e.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24204e.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b24204e.ada into:
-   b24204e.adb

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002h.adb
-b91002h.adb:39:11: illegal declaration in task definition
-b91002h.adb:39:21: missing "END T2H;"
-b91002h.adb:41:05: missing "BEGIN" for procedure "B91002H" at line 33
-b91002h.adb:41:06: no "BEGIN" for this "END"
-b91002h.adb:43:06: declarations must come before "BEGIN"
-b91002h.adb:50:01: "END;" expected for "BEGIN" at line 48
-gnatmake: "b91002h.adb" compilation error

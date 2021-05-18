@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01v.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01v.adb
-b55a01v.adb:39:20: extra ";" ignored
-gnatmake: "b55a01v.adb" compilation error

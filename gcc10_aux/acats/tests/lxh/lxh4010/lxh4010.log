@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40103.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40103.adb
-lxh4010_0.ads:62:18: violation of restriction "NO_UNCHECKED_ACCESS" at gnat.adc:56
-gnatmake: "lxh40103.adb" compilation error

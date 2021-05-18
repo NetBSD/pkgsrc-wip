@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001a.adb
-ba2001a.adb:33:11: stub cannot appear in an inner scope
-ba2001a.adb:43:11: stub cannot appear in an inner scope
-ba2001a.adb:49:11: stub cannot appear in an inner scope
-gnatmake: "ba2001a.adb" compilation error

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a0007.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a0007.adb
-b3a0007.adb:162:30: an allocator with a subtype indication cannot have a null exclusion
-b3a0007.adb:163:30: an allocator with a subtype indication cannot have a null exclusion
-b3a0007.adb:164:30: an allocator with a subtype indication cannot have a null exclusion
-b3a0007.adb:165:30: an allocator with a subtype indication cannot have a null exclusion
-b3a0007.adb:166:30: an allocator with a subtype indication cannot have a null exclusion
-b3a0007.adb:167:30: an allocator with a subtype indication cannot have a null exclusion
-gnatmake: "b3a0007.adb" compilation error

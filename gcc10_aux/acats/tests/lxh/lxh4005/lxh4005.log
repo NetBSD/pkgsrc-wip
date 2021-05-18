@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40053.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40053.adb
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh4005_0.adb
-lxh4005_0.adb:12:05: violation of restriction "NO_EXCEPTIONS" at gnat.adc:56
-lxh4005_0.adb:27:03: violation of restriction "NO_EXCEPTIONS" at gnat.adc:56
-lxh4005_0.adb:28:08: violation of restriction "NO_EXCEPTIONS" at gnat.adc:56
-gnatmake: "lxh4005_0.adb" compilation error

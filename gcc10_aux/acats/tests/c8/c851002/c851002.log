@@ -1,7 +1,0 @@
-
-,.,. C851002 ACATS 4.1 21-05-16 10:45:24
----- C851002 For an object renaming with an anonymous access type, check
-                that the name is resolved if there is only one
-                interpretation with a correct anonymous access type,
-                even if other interpretations exist.
-==== C851002 PASSED ============================.

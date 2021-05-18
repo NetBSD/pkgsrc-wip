@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44002c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44002c.adb
-b44002c.adb:38:11: expected type "Standard.Integer"
-b44002c.adb:38:11: found exception name
-gnatmake: "b44002c.adb" compilation error

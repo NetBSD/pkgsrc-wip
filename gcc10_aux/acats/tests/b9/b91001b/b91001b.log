@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001b.adb
-b91001b.adb:33:13: discriminant part not allowed for single task
-b91001b.adb:33:18: reserved word "IN" cannot be used as identifier
-b91001b.adb:33:20: missing "END T;"
-gnatmake: "b91001b.adb" compilation error

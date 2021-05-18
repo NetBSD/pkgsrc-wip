@@ -1,7 +1,0 @@
-
-,.,. C3A0009 ACATS 4.1 21-05-16 10:34:51
----- C3A0009 Check that subprogram references may be passed as
-                parameters using access-to-subprogram types. Check that 
-                the passed subprograms may be invoked from within the
-                called subprogram.
-==== C3A0009 PASSED ============================.

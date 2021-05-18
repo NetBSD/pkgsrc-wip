@@ -1,5 +1,0 @@
-
-,.,. CDB0002 ACATS 4.1 21-05-16 10:51:51
----- CDB0002 Check that operations on values of an access Type are not
-                affected if Storage_Size is specified for the Type.
-==== CDB0002 PASSED ============================.

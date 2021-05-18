@@ -1,6 +1,0 @@
-
-,.,. CC54002 ACATS 4.1 21-05-16 10:50:28
----- CC54002 Check that a general access-to-variable type may be passed 
-                as an actual to a generic formal access-to-variable
-                type.
-==== CC54002 PASSED ============================.

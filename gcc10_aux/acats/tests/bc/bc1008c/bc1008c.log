@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1008c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1008c.adb
-bc1008c.adb:31:25: missing ";"
-bc1008c.adb:32:05: missing "BEGIN" for procedure "BC1008C" at line 29
-bc1008c.adb:32:06: subprogram specification expected
-bc1008c.adb:32:06: no "BEGIN" for this "END"
-bc1008c.adb:36:01: "END;" expected for "BEGIN" at line 34
-gnatmake: "bc1008c.adb" compilation error

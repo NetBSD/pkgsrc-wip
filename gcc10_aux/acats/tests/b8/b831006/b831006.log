@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b831006.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b831006.adb
-b831006.adb:15:07: overriding indicator not allowed for protected subprogram body
-b831006.adb:21:07: overriding indicator not allowed for protected subprogram body
-b831006.adb:41:07: overriding indicator not allowed for protected subprogram body
-b831006.adb:44:07: overriding indicator not allowed for protected subprogram body
-b831006.adb:47:07: overriding indicator not allowed for protected subprogram body
-b831006.adb:53:07: overriding indicator not allowed for protected subprogram body
-gnatmake: "b831006.adb" compilation error

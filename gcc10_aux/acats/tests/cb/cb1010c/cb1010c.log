@@ -1,6 +1,0 @@
-
-,.,. CB1010C ACATS 4.1 21-05-16 10:49:13
----- CB1010C CHECK THAT STORAGE_ERROR IS RAISED WHEN STORAGE FOR A
-                DECLARATIVE ITEM IS INSUFFICIENT.
-
-raised STORAGE_ERROR : stack overflow or erroneous memory access

@@ -1,6 +1,0 @@
-
-,.,. CXF3A07 ACATS 4.1 21-05-16 10:59:20
----- CXF3A07 Check that Ada.Text_IO.Editing.Put and
-                Ada.Strings.Fixed.Move have the same effect in putting
-                edited output results into string variables.
-==== CXF3A07 PASSED ============================.

@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb3002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb3002a.adb
-bb3002a.adb:36:11: reraise statement must appear directly in a handler
-bb3002a.adb:45:26: reraise statement must appear directly in a handler
-bb3002a.adb:54:27: reraise statement must appear directly in a handler
-gnatmake: "bb3002a.adb" compilation error

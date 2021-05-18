@@ -1,7 +1,0 @@
-
-,.,. C650A01 ACATS 4.1 21-05-16 10:43:54
----- C650A01 Check that Constraint_Error is raised if the result subtype
-                of the function is an anonymous access type designating 
-                a specific tagged type and the result value is not null 
-                and designates some other specific type.
-==== C650A01 PASSED ============================.

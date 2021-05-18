@@ -1,6 +1,0 @@
-
-,.,. CXAI023 ACATS 4.1 21-05-16 10:56:30
----- CXAI023 Check iterators, indexing, and references for package
-                Ada.Containers.Ordered_Sets.
-   - CXAI023 Reference_Preserving_Key detected key change.
-==== CXAI023 PASSED ============================.

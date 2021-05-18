@@ -1,9 +1,0 @@
-
-,.,. C460009 ACATS 4.1 21-05-16 10:41:52
----- C460009 Check that Constraint_Error is raised in cases of null
-                arrays if any of the lengths mismatch in assignments and
-                parameter passing.
-   - C460009 Dead assignment prevention in Arr_Obj1 =>  1.
-   - C460009 Dead assignment prevention in Arr_Obj2 =>  2.
-   - C460009 Dead assignment prevention in Arr_Obj5 =>  1.
-==== C460009 PASSED ============================.

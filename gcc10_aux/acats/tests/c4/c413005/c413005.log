@@ -1,7 +1,0 @@
-
-,.,. C413005 ACATS 4.1 21-05-16 10:35:19
----- C413005 Check that a prefixed view is the name of a subprogram
-                (with the first parameter omitted from the profile) that
-                can be renamed and passed as a generic formal
-                parameter..
-==== C413005 PASSED ============================.

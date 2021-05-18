@@ -1,5 +1,0 @@
-b95006b.ada:44:11: "END E1;" expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95006b.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95006b.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95006b.ada into:
-   b95006b.adb

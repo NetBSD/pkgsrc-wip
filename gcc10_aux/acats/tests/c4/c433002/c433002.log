@@ -1,6 +1,0 @@
-
-,.,. C433002 ACATS 4.1 21-05-16 10:36:09
----- C433002 Check check index choices are within the applicable index
-                constraint for array aggregates with others choices
-                where the components are <>.
-==== C433002 PASSED ============================.

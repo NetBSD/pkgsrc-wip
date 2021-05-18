@@ -1,5 +1,0 @@
-b28001v.ada:39:15: "WHEN" expected (must have at least one variant)
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001v.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001v.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b28001v.ada into:
-   b28001v.adb

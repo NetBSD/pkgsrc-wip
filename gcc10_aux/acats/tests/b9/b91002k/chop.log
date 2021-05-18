@@ -1,5 +1,0 @@
-b91002k.ada:39:11: illegal declaration in task definition
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002k.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002k.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002k.ada into:
-   b91002k.adb

@@ -1,8 +1,0 @@
-
-,.,. C393013 ACATS 4.1 21-05-16 10:34:36
----- C393013 Check that a non-abstract function with a controlling
-                result of type T is inherited as non-abstract and does
-                not require overriding for a null extension of T and
-                that the result of calling the inherited function has
-                the tag of the extension.
-==== C393013 PASSED ============================.

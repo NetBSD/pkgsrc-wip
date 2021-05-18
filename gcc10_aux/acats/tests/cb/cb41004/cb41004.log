@@ -1,6 +1,0 @@
-
-,.,. CB41004 ACATS 4.1 21-05-16 10:49:30
----- CB41004 Check that Null_Id and Null_Occurrence actual parameters
-                have the appropriate effect when used in calls of the
-                subprograms found in package Ada.Exceptions.
-==== CB41004 PASSED ============================.

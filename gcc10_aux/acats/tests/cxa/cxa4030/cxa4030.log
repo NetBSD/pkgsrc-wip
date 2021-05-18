@@ -1,7 +1,0 @@
-
-,.,. CXA4030 ACATS 4.1 21-05-16 10:54:35
----- CXA4030 Check that Ada.Strings.Unbounded versions of subprograms
-                Translate (procedure and function), Index, and Count,
-                which use a Maps.Character_Mapping_Function input
-                parameter, produce correct results.
-==== CXA4030 PASSED ============================.

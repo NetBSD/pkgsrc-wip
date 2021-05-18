@@ -1,7 +1,0 @@
-b610002.a:57:26: "in" not allowed together with "access"
-b610002.a:62:30: anonymous access type definition not allowed here
-b610002.a:67:42: anonymous access type definition not allowed here
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b610002.a: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b610002.a: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b6/b610002.a into:
-   b610002.adb

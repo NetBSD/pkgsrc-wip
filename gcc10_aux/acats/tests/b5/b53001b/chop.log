@@ -1,6 +1,0 @@
-b53001b.ada:46:06: only one "ELSE" part allowed
-b53001b.ada:49:01: "END IF;" expected for "IF" at line 42
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53001b.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53001b.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b53001b.ada into:
-   b53001b.adb

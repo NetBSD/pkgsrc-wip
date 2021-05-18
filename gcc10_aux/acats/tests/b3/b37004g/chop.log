@@ -1,5 +1,0 @@
-b37004g.ada:35:16: anonymous arrays not allowed as components
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37004g.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37004g.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37004g.ada into:
-   b37004g.adb

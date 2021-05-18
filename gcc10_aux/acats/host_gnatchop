@@ -1,5 +1,0 @@
-#!/bin/sh
-PATH=/home/fernando/mysandboxfolder/usr/pkg/gcc10/bin:$PATH
-unset ADA_INCLUDE_PATH ADA_OBJECTS_PATH GCC_EXEC_PREFIX
-export PATH
-exec gnatchop "$@"

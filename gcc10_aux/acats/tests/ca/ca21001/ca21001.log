@@ -1,5 +1,0 @@
-
-,.,. CA21001 ACATS 4.1 21-05-16 10:49:07
----- CA21001 Test that a package subunit whose parent is a preelaborated
-                subprogram need not be preelaborable.
-==== CA21001 PASSED ============================.

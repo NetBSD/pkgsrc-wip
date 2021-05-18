@@ -1,6 +1,0 @@
-
-,.,. C371002 ACATS 4.1 21-05-16 10:33:27
----- C371002 Check that if a discriminant constraint depends on a
-                discriminant, the evaluation of the expressions in the
-                constraint is deferred until object declarations.
-==== C371002 PASSED ============================.

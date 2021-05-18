@@ -1,6 +1,0 @@
-
-,.,. CXAA015 ACATS 4.1 21-05-16 10:55:01
----- CXAA015 Check that the appropriate exceptions are raised when
-                procedures Create and Open are used to inappropriately
-                operate on files of mode Append_File.
-==== CXAA015 PASSED ============================.

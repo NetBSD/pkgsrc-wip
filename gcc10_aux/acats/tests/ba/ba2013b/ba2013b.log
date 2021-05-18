@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2013b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2013b.adb
-ba2013b-ba2013b_sub.adb:8:09: operator "NOT" not defined for type "Standard.Integer"
-ba2013b-ba2013b_sub.adb:18:09: expected a boolean type
-ba2013b-ba2013b_sub.adb:18:09: found type "Standard.Float"
-gnatmake: "ba2013b.adb" compilation error

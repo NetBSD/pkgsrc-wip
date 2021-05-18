@@ -1,6 +1,0 @@
-
-,.,. C460A02 ACATS 4.1 21-05-16 10:42:04
----- C460A02 Run-time accessibility checks: instance bodies. Operand
-                type of access type conversion is declared inside
-                instance or is anonymous.
-==== C460A02 PASSED ============================.

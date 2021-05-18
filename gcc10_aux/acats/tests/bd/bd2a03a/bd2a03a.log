@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a03a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a03a.adb
-bd2a03a.adb:51:15: entity must be declared in this scope
-bd2a03a.adb:52:15: entity must be declared in this scope
-bd2a03a.adb:53:15: entity must be declared in this scope
-gnatmake: "bd2a03a.adb" compilation error

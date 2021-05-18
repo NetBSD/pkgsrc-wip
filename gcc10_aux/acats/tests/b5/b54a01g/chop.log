@@ -1,5 +1,0 @@
-b54a01g.ada:38:06: "END CASE;" expected for "CASE" at line 36
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b54a01g.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b54a01g.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b54a01g.ada into:
-   b54a01g.adb

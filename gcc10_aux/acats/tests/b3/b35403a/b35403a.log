@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35403a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35403a.adb
-b35403a.adb:34:19: integer type definition bounds out of range
-b35403a.adb:37:19: integer type definition bounds out of range
-gnatmake: "b35403a.adb" compilation error

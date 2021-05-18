@@ -1,6 +1,0 @@
-
-,.,. C392013 ACATS 4.1 21-05-16 10:34:23
----- C392013 Check that the "/=" implicitly declared with the
-                declaration of "=" for a tagged type is legal and can be
-                used in a dispatching call.
-==== C392013 PASSED ============================.

@@ -1,6 +1,0 @@
-
-,.,. CXA3005 ACATS 4.1 21-05-16 10:54:05
----- CXA3005 Check that the character classification functions defined
-                in package Ada.Wide_Characters.Handling produce correct 
-                results when provided arguments from Wide_Character.
-==== CXA3005 PASSED ============================.

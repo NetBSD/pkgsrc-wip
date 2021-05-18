@@ -1,7 +1,0 @@
-
-,.,. C3A2003 ACATS 4.1 21-05-16 10:35:07
----- C3A2003 Check that, for X'Access of general access type A,
-                Program_Error is raised if the accessibility level of X 
-                is deeper than that of A: X is an access parameter;
-                corresponding actual is another access parameter.
-==== C3A2003 PASSED ============================.

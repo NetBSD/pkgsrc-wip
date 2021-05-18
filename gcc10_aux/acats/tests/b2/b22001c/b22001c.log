@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001c.adb
-b22001c.adb:60:199: procedure or entry name expected
-b22001c.adb:60:201: missing ";"
-b22001c.adb:61:01: "IT" is undefined
-gnatmake: "b22001c.adb" compilation error

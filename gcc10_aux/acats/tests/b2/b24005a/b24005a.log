@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24005a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24005a.adb
-b24005a.adb:38:17: real literal cannot end with point
-b24005a.adb:40:15: numeric literal cannot start with point
-b24005a.adb:42:17: real literal cannot end with point
-b24005a.adb:44:15: numeric literal cannot start with point
-b24005a.adb:46:18: extended digit expected
-b24005a.adb:48:20: extended digit expected
-gnatmake: "b24005a.adb" compilation error

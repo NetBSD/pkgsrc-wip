@@ -1,6 +1,0 @@
-
-,.,. C760013 ACATS 4.1 21-05-16 10:44:34
----- C760013 Check that Initialize is not called for default-initialized
-                subcomponents of the ancestor type of an extension
-                aggregate.
-==== C760013 PASSED ============================.

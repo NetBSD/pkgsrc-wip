@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c9/c94008d.ada into:
-   shared_c94008d.ads
-   shared_c94008d.adb
-   events_c94008d.ads
-   counter_c94008d.ads
-   counter_c94008d.adb
-   events_c94008d.adb
-   shared_c94008d-share.adb
-   c94008d.adb

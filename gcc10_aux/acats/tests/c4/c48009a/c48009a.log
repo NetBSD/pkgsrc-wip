@@ -1,6 +1,0 @@
-
-,.,. C48009A ACATS 4.1 21-05-16 10:42:17
----- C48009A FOR ALLOCATORS OF THE FORM 'NEW T'(X)', CHECK THAT
-                CONSTRAINT_ERROR IS RAISED WHEN APPROPRIATE - SCALAR
-                TYPES.
-==== C48009A PASSED ============================.

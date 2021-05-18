@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2005.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2005.adb
-b3a2005.adb:30:45: prefix of attribute has deeper level than allocator type
-b3a2005.adb:59:49: prefix of attribute has deeper level than allocator type
-b3a2005.adb:64:49: prefix of attribute has deeper level than allocator type
-b3a2005.adb:72:48: prefix of attribute has deeper level than allocator type
-b3a2005.adb:90:59: prefix of attribute has deeper level than allocator type
-gnatmake: "b3a2005.adb" compilation error

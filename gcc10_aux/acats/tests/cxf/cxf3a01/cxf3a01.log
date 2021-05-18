@@ -1,9 +1,0 @@
-
-,.,. CXF3A01 ACATS 4.1 21-05-16 10:59:15
----- CXF3A01 Check that the Valid function from package
-                Ada.Text_IO.Editing returns False for strings that fail 
-                to comply with the composition constraints defined for
-                picture strings. Check that the Valid function returns
-                True for strings that conform to the composition
-                constraints defined for picture strings.
-==== CXF3A01 PASSED ============================.

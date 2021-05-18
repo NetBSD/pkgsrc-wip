@@ -1,8 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c2/c23006c.ada into:
-   c23006c_proc.adb
-   c23006cproc.ads
-   c23006cproc.adb
-   c23006c_func.adb
-   c23006cfunc.ads
-   c23006cfunc.adb
-   c23006c.adb

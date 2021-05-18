@@ -1,7 +1,0 @@
-
-,.,. CD30010 ACATS 4.1 21-05-16 10:51:11
----- CD30010 Check that Component_Sizes that are specified with an
-                aspect specification and that are multiples of the word 
-                size are supported. Check that for such Component_Sizes 
-                arrays contain no gaps between components.
-==== CD30010 PASSED ============================.

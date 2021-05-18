@@ -1,4 +1,0 @@
-pac2fun.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020b3.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020b5.ada
-pac2proc.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020b0.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba1020b2.ada
-use -w to overwrite files and keep last version
-no source files written

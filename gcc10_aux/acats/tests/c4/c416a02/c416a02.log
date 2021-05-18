@@ -1,6 +1,0 @@
-
-,.,. C416A02 ACATS 4.1 21-05-16 10:35:36
----- C416A02 Check that the overloaded routines can be added to an
-                inherited indexing aspect and the new routines can be
-                used in a generalized indexing.
-==== C416A02 PASSED ============================.

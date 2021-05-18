@@ -1,5 +1,0 @@
-b22001d.adt:63:201: missing operand
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001d.adt: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001d.adt: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b2/b22001d.adt into:
-   b22001d.adb

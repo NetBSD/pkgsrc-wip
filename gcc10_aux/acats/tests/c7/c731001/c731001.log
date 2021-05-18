@@ -1,5 +1,0 @@
-
-,.,. C731001_1 ACATS 4.1 21-05-16 10:44:14
----- C731001_1 Check that inherited operations can be overridden, even
-                  when they are inherited in a body.
-==== C731001_1 PASSED ============================.

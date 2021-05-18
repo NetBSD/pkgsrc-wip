@@ -1,7 +1,0 @@
-
-,.,. C433001 ACATS 4.1 21-05-16 10:36:09
----- C433001 Check that an others choice is allowed in an array
-                aggregate whose applicable index constraint is dynamic. 
-                Also check index choices are within the applicable index
-                constraint for array aggregates with others choices.
-==== C433001 PASSED ============================.

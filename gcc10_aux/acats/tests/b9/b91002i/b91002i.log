@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002i.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002i.adb
-b91002i.adb:39:11: illegal declaration in task definition
-b91002i.adb:41:11: no "BEGIN" for this "END"
-gnatmake: "b91002i.adb" compilation error

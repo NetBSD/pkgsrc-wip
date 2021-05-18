@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3501k.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3501k.adb
-bc3501k.adb:52:36: expect access type in instantiation of "FT"
-bc3501k.adb:52:36: instantiation abandoned
-bc3501k.adb:58:31: expect access type in instantiation of "FT"
-bc3501k.adb:58:31: instantiation abandoned
-gnatmake: "bc3501k.adb" compilation error

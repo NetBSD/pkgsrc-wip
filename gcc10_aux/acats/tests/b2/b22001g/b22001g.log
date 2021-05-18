@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001g.adb
-b22001g.adb:57:201: missing string quote
-b22001g.adb:58:04: missing ":="
-b22001g.adb:58:70: missing string quote
-gnatmake: "b22001g.adb" compilation error

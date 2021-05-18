@@ -1,5 +1,0 @@
-
-,.,. CA13002 ACATS 4.1 21-05-16 10:48:59
----- CA13002 Check that two library units and/or subunits may have the
-                same simple names if they have distinct expanded names.
-==== CA13002 PASSED ============================.

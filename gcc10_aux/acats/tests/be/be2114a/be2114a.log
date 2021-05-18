@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2114a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2114a.adb
-be2114a.adb:39:06: left hand of assignment must not be limited type
-be2114a.adb:46:17: there is no applicable operator "=" for private type "Ada.Sequential_Io.File_Type" from instance at line 42
-be2114a.adb:56:11: left hand of assignment must not be limited type
-be2114a.adb:56:20: expected type universal integer
-be2114a.adb:56:20: found private type "Ada.Direct_Io.File_Type" from instance at line 52
-gnatmake: "be2114a.adb" compilation error

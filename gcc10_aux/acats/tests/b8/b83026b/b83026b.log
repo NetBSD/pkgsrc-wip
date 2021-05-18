@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83026b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83026b.adb
-b83026b.adb:87:43: formal parameter "F" cannot be used before end of specification
-b83026b.adb:94:16: not fully conformant with declaration at line 86
-b83026b.adb:94:16: default expression for "X" does not match
-b83026b.adb:95:44: formal parameter "F" cannot be used before end of specification
-gnatmake: "b83026b.adb" compilation error

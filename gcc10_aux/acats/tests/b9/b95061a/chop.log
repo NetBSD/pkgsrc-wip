@@ -1,5 +1,0 @@
-b95061a.ada:34:24: anonymous array definition not allowed here
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95061a.ada into:
-   b95061a.adb

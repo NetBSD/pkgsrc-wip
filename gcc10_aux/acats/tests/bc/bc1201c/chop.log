@@ -1,5 +1,0 @@
-bc1201c.ada:35:29: missing "<>"
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1201c.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1201c.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1201c.ada into:
-   bc1201c.adb

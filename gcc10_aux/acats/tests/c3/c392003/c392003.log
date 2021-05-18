@@ -1,7 +1,0 @@
-
-,.,. C392003 ACATS 4.1 21-05-16 10:34:18
----- C392003 Check that the use of a class-wide parameter allows for
-                proper dispatching where root type is declared in a
-                nested package, and subsequent extended types are
-                derived in further nested packages.
-==== C392003 PASSED ============================.

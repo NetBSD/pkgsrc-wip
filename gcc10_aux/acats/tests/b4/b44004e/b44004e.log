@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44004e.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44004e.adb
-b44004e.adb:41:17: invalid conversion, not compatible with type universal integer
-b44004e.adb:43:28: invalid conversion, not compatible with type universal integer
-b44004e.adb:46:24: invalid conversion, not compatible with type universal integer
-b44004e.adb:48:24: invalid conversion, not compatible with type universal integer
-gnatmake: "b44004e.adb" compilation error

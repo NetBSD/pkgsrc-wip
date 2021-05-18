@@ -1,5 +1,0 @@
-b940006.a:51:07: component must be declared in private part of protected type
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940006.a: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940006.a: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b940006.a into:
-   b940006.adb

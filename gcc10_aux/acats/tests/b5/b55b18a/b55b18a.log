@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b18a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b18a.adb
-b55b18a.adb:36:16: "I" is undefined
-b55b18a.adb:36:16: object "I" cannot be used before end of its declaration
-b55b18a.adb:45:21: object "J" cannot be used before end of its declaration
-b55b18a.adb:60:20: invalid prefix in selected component "L"
-b55b18a.adb:60:21: object "L.K" cannot be used before end of its declaration
-b55b18a.adb:64:20: object "M" cannot be used before end of its declaration
-gnatmake: "b55b18a.adb" compilation error

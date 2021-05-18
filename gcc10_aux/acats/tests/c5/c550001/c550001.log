@@ -1,6 +1,0 @@
-
-,.,. C550001 ACATS 4.1 21-05-16 10:42:59
----- C550001 For a subtype with a static predicate, check that a for
-                loop parameter is only assigned values that satisfy the 
-                predicates and does so in the correct order.
-==== C550001 PASSED ============================.

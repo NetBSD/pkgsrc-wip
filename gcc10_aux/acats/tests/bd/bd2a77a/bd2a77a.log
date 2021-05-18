@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a77a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a77a.adb
-bd2a77a.adb:40:43: size for "RECORD_TYPE" too small, minimum allowed is 96
-gnatmake: "bd2a77a.adb" compilation error

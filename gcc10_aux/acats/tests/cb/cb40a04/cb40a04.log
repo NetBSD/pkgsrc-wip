@@ -1,5 +1,0 @@
-
-,.,. CB40A04 ACATS 4.1 21-05-16 10:49:27
----- CB40A04 Check that a predefined exception is correctly propagated
-                out of a public child function to a client.
-==== CB40A04 PASSED ============================.

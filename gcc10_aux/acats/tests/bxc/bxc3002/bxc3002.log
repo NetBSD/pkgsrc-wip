@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxc3002.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxc3002.adb
-bxc3002.adb:12:05: pragma "INTERRUPT_HANDLER" must be in protected definition
-bxc3002.adb:15:05: pragma "ATTACH_HANDLER" must be in protected definition
-bxc3002.adb:30:33: argument for pragma "INTERRUPT_HANDLER" must be library level entity
-bxc3002.adb:33:30: argument for pragma "ATTACH_HANDLER" must be library level entity
-bxc3002.adb:46:07: non-local pointer cannot point to local object
-gnatmake: "bxc3002.adb" compilation error

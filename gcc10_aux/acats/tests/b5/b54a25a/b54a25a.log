@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a25a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a25a.adb
-b54a25a.adb:41:16: maximum allowed choice value is "THU"
-b54a25a.adb:43:22: maximum allowed choice value is "THU"
-b54a25a.adb:47:16: minimum allowed choice value is "TUE"
-b54a25a.adb:48:23: maximum allowed choice value is "THU"
-b54a25a.adb:50:23: maximum allowed choice value is "THU"
-gnatmake: "b54a25a.adb" compilation error

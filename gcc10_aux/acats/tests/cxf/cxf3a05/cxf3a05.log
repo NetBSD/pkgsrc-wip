@@ -1,7 +1,0 @@
-
-,.,. CXF3A05 ACATS 4.1 21-05-16 10:59:19
----- CXF3A05 Check that Function Image produces correct results when
-                provided non-default parameters for Currency, Fill,
-                Separator, and Radix_Mark, appropriate to foreign
-                currency representations.
-==== CXF3A05 PASSED ============================.

@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44001b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b44001b.adb
-b44001b.adb:52:18: procedure name cannot be used as operand
-b44001b.adb:54:18: procedure name cannot be used as operand
-b44001b.adb:56:18: procedure name cannot be used as operand
-gnatmake: "b44001b.adb" compilation error

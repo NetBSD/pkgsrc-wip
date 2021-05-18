@@ -1,5 +1,0 @@
-
-,.,. C41206A ACATS 4.1 21-05-16 10:35:15
----- C41206A USING A RANGE L..R, WHERE L=SUCC(R), TO FORM A NULL SLICE
-                FROM AN ARRAY.
-==== C41206A PASSED ============================.

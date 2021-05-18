@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83006a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83006a.adb
-b83006a.adb:37:28: "D1" conflicts with declaration at line 36
-b83006a.adb:43:22: "D1" conflicts with declaration at line 41
-b83006a.adb:48:28: "D1" conflicts with declaration at line 47
-gnatmake: "b83006a.adb" compilation error

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001f0m.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001f0m.adb
-cannot generate code for file ba2001f0m.adb (missing subunits)
-gnatmake: "ba2001f0m.adb" compilation error

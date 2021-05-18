@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b86001a1m.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b86001a1m.adb
-b86001a1m.adb:40:14: "B86001A0" not declared in "Standard"
-gnatmake: "b86001a1m.adb" compilation error

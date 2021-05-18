@@ -1,6 +1,0 @@
-b91002i.ada:39:11: illegal declaration in task definition
-b91002i.ada:41:11: no "BEGIN" for this "END"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002i.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002i.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002i.ada into:
-   b91002i.adb

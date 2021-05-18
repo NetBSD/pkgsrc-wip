@@ -1,7 +1,0 @@
-
-,.,. CXA9001 ACATS 4.1 21-05-16 10:54:53
----- CXA9001 Check that the operations defined in the generic package
-                Ada.Storage_IO provide the ability to store and retrieve
-                objects which may include implicit levels of indirection
-                in their implementation, from an in-memory buffer.
-==== CXA9001 PASSED ============================.

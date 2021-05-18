@@ -1,8 +1,0 @@
-b97103e.ada:47:15: missing "END TT2;"
-b97103e.ada:52:11: no "BEGIN" for this "END"
-b97103e.ada:55:11: declarations must come before "BEGIN"
-b97103e.ada:72:01: "END;" expected for "BEGIN" at line 40
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97103e.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97103e.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b97103e.ada into:
-   b97103e.adb

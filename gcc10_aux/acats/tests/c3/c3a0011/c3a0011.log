@@ -1,8 +1,0 @@
-
-,.,. C3A0011 ACATS 4.1 21-05-16 10:34:52
----- C3A0011 Check that an access-to-subprogram object whose type is
-                declared in a parent package, may be used to invoke
-                subprograms in a child package. Check that such access
-                objects may be stored in a data structure and that
-                subprograms may be called by walking the data structure.
-==== C3A0011 PASSED ============================.

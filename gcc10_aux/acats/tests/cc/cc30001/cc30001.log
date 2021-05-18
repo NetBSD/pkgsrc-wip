@@ -1,7 +1,0 @@
-
-,.,. CC30001 ACATS 4.1 21-05-16 10:49:48
----- CC30001 Check that if a non-overriding primitive subprogram is
-                declared for a type derived from a formal derived tagged
-                type, the copy of that subprogram in an instance can
-                override a subprogram inherited from the actual type.
-==== CC30001 PASSED ============================.

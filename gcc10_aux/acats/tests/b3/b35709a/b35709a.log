@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35709a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35709a.adb
-b35709a.adb:36:17: expected type "D2" defined at line 34
-b35709a.adb:36:17: found type "D1" defined at line 33
-b35709a.adb:41:17: expected type "D4" defined at line 39
-b35709a.adb:41:17: found type "D3" defined at line 38
-b35709a.adb:46:17: expected type "D2" defined at line 34
-b35709a.adb:46:17: found type "D1" defined at line 33
-gnatmake: "b35709a.adb" compilation error

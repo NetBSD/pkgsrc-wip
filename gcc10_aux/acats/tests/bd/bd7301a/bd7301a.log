@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7301a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7301a.adb
-bd7301a.adb:38:25: prefix of "MACHINE_ROUNDS" attribute must be real type
-bd7301a.adb:39:25: prefix of "MACHINE_ROUNDS" attribute must be real type
-bd7301a.adb:41:25: prefix of "MACHINE_OVERFLOWS" attribute must be real type
-bd7301a.adb:42:25: prefix of "MACHINE_OVERFLOWS" attribute must be real type
-gnatmake: "bd7301a.adb" compilation error

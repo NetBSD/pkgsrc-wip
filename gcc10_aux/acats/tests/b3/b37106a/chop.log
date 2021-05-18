@@ -1,8 +1,0 @@
-b37106a.ada:34:30: constraint not allowed here
-b37106a.ada:43:29: constraint not allowed here
-b37106a.ada:49:29: constraint not allowed here
-b37106a.ada:55:29: constraint not allowed here
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37106a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37106a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b37106a.ada into:
-   b37106a.adb

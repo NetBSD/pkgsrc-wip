@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3710014.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3710014.adb
-b371001_1-child_2.ads:59:25: invalid constraint: type has no discriminant
-b371001_1-child_2.ads:62:20: cannot constrain access type if designated type has constrained partial view
-b371001_1-child_2.ads:67:19: cannot constrain access type if designated type has constrained partial view
-b371001_1-child_2.ads:72:10: cannot constrain access type if designated type has constrained partial view
-gnatmake: "b3710014.adb" compilation error

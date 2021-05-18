@@ -1,9 +1,0 @@
-b91002l.ada:39:11: illegal declaration in task definition
-b91002l.ada:39:15: missing "END T2L;"
-b91002l.ada:41:06: no "BEGIN" for this "END"
-b91002l.ada:43:06: declarations must come before "BEGIN"
-b91002l.ada:50:01: "END;" expected for "BEGIN" at line 48
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002l.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002l.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91002l.ada into:
-   b91002l.adb

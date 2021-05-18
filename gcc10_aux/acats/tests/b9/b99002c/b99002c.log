@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99002c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99002c.adb
-b99002c.adb:54:25: Attribute "COUNT" cannot appear in inner unit
-b99002c.adb:61:26: Attribute "COUNT" cannot appear in inner unit
-b99002c.adb:68:25: Attribute "COUNT" cannot appear in inner unit
-b99002c.adb:75:25: Attribute "COUNT" cannot appear in inner unit
-gnatmake: "b99002c.adb" compilation error

@@ -1,5 +1,0 @@
-b9a001a.ada:58:11: reserved word "ABORT" cannot be used as identifier
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9a001a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9a001a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b9a001a.ada into:
-   b9a001a.adb

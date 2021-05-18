@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7101h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd7101h.adb
-bd7101h.adb:41:18: integer type definition bounds out of range
-bd7101h.adb:42:18: integer type definition bounds out of range
-gnatmake: "bd7101h.adb" compilation error

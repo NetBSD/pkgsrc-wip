@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83031b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83031b.adb
-b83031b.adb:58:21: no candidate interpretations match the actuals:
-b83031b.adb:58:21: missing argument for parameter "L" in call to "*" declared at line 46
-b83031b.adb:60:21: no candidate interpretations match the actuals:
-b83031b.adb:60:21: missing argument for parameter "MINUEND" in call to "-" declared at line 48
-gnatmake: "b83031b.adb" compilation error

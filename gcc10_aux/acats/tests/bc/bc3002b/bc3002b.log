@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3002b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3002b.adb
-bc3002b.adb:40:39: unmatched actual in instantiation of "P" declared at line 37
-bc3002b.adb:45:17: unmatched actual "GFP4"
-bc3002b.adb:45:17: in instantiation of "P" declared at line 37
-bc3002b.adb:50:17: unmatched actual "GFP3"
-bc3002b.adb:50:17: in instantiation of "P" declared at line 37
-gnatmake: "bc3002b.adb" compilation error

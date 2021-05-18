@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b360001.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b360001.adb
-b360001.adb:141:38: aspect "Default_Component_Value" requires an aspect definition
-gnatmake: "b360001.adb" compilation error

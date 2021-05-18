@@ -1,6 +1,0 @@
-
-,.,. A55B12A ACATS 4.1 21-05-16 10:28:34
----- A55B12A CHECK THAT THE SUBTYPE OF A LOOP PARAMETER IN A LOOP OF THE
-                FORM  'FOR  I  IN  ST RANGE L..R  LOOP'  IS CORRECTLY
-                DETERMINED  (A).
-==== A55B12A PASSED ============================.

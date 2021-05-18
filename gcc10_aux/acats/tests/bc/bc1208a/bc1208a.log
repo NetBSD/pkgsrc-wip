@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1208a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1208a.adb
-bc1208a.adb:37:38: "D1" conflicts with declaration at line 37
-bc1208a.adb:41:38: "D2" conflicts with declaration at line 41
-gnatmake: "bc1208a.adb" compilation error

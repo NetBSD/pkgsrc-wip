@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c854002.a into:
-   c854002_1.ads
-   c854002_1-pure.ads
-   c854002_1-renamings.ads
-   c854002_1-caller.ads
-   c854002_1-caller.adb
-   c854002_1-pure.adb
-   c854002_1-renamings.adb
-   c854002.adb

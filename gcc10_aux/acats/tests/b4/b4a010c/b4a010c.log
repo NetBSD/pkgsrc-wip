@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b4a010c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b4a010c.adb
-b4a010c.adb:41:16: not fully conformant with declaration at line 39
-b4a010c.adb:41:16: default expression for "X" does not match
-b4a010c.adb:47:06: missing case value: "FALSE"
-b4a010c.adb:49:16: duplication of choice value: "TRUE" at line 48
-gnatmake: "b4a010c.adb" compilation error

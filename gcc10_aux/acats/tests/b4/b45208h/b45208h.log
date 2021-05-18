@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208h.adb
-b45208h.adb:104:22: there is no applicable operator "<" for type "DARR" defined at line 98
-b45208h.adb:113:17: there is no applicable operator ">" for type "DARR" defined at line 98
-b45208h.adb:118:20: there is no applicable operator "<=" for type "DARR" defined at line 98
-gnatmake: "b45208h.adb" compilation error

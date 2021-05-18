@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01t.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01t.adb
-b55a01t.adb:38:06: reserved word "LOOP" cannot be used as identifier
-b55a01t.adb:40:06: no "LOOP" for this "END LOOP"
-gnatmake: "b55a01t.adb" compilation error

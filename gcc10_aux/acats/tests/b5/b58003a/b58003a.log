@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b58003a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b58003a.adb
-b58003a.adb:46:18: expected type "Standard.Integer"
-b58003a.adb:46:18: found a character type
-gnatmake: "b58003a.adb" compilation error

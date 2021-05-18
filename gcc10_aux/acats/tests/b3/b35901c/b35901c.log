@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35901c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35901c.adb
-b35901c.adb:37:06: size required (66) for type "FIXED_TYPE2" too large, maximum allowed is 64
-b35901c.adb:44:06: size required (65) for type "FIXED_TYPE4" too large, maximum allowed is 64
-gnatmake: "b35901c.adb" compilation error

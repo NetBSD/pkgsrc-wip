@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2013.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b3a2013.adb
-b3a2013.adb:10:29: non-local pointer cannot point to local object
-b3a2013.adb:53:45: prefix of attribute has deeper level than allocator type
-b3a2013.adb:63:25: non-local pointer cannot point to local object
-b3a2013.adb:72:34: discriminant has deeper accessibility level than target
-b3a2013.adb:76:33: non-local pointer cannot point to local object
-gnatmake: "b3a2013.adb" compilation error

@@ -1,7 +1,0 @@
-
-,.,. CC70A01 ACATS 4.1 21-05-16 10:50:32
----- CC70A01 Check that the visible part of a generic formal package
-                includes the first list of basic declarative items of
-                the package specification. Check for a generic package
-                where formal package has (<>) actual part.
-==== CC70A01 PASSED ============================.

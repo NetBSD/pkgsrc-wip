@@ -1,5 +1,0 @@
-
-,.,. C3A1003 ACATS 4.1 21-05-16 10:35:04
----- C3A1003 Check that a dereference of an access-to-tagged-incomplete 
-                type can be passed directly as a parameter.
-==== C3A1003 PASSED ============================.

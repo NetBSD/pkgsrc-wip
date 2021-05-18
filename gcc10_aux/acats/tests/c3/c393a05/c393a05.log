@@ -1,6 +1,0 @@
-
-,.,. C393A05 ACATS 4.1 21-05-16 10:34:38
----- C393A05 Check that nonabstract private extensions, inherited
-                abstract subprograms overridden in the private part can 
-                be dispatched from outside the package.
-==== C393A05 PASSED ============================.

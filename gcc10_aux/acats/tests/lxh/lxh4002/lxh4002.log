@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40022.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40022.adb
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh4002_0.adb
-lxh4002_0.adb:22:15: violation of restriction "NO_ALLOCATORS" at gnat.adc:55
-lxh4002_0.adb:24:15: violation of restriction "NO_ALLOCATORS" at gnat.adc:55
-lxh4002_0.adb:33:18: violation of restriction "NO_ALLOCATORS" at gnat.adc:55
-gnatmake: "lxh4002_0.adb" compilation error

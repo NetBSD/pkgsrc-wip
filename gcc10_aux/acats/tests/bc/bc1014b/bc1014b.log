@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1014b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1014b.adb
-bc1014b.adb:36:06: missing body for "CHECK"
-bc1014b.adb:39:16: "CHECK" conflicts with declaration at line 36
-bc1014b.adb:39:16: generic units cannot be overloaded
-bc1014b.adb:41:16: not fully conformant with declaration at line 39
-bc1014b.adb:41:16: too few parameters
-bc1014b.adb:46:06: duplicate generic body
-gnatmake: "bc1014b.adb" compilation error

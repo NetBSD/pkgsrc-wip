@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3404e.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3404e.adb
-bc3404e.adb:81:39: component subtype of actual does not match that of formal "FT"
-bc3404e.adb:81:39: instantiation abandoned
-bc3404e.adb:85:37: component subtype of actual does not match that of formal "FT"
-bc3404e.adb:85:37: instantiation abandoned
-bc3404e.adb:89:39: component subtype of actual does not match that of formal "FT"
-bc3404e.adb:89:39: instantiation abandoned
-gnatmake: "bc3404e.adb" compilation error

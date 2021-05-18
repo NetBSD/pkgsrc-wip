@@ -1,5 +1,0 @@
-b95082f.ada:50:11: missing operand
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95082f.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95082f.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95082f.ada into:
-   b95082f.adb

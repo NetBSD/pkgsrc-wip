@@ -1,6 +1,0 @@
-
-,.,. CXB2003 ACATS 4.1 21-05-16 10:58:08
----- CXB2003 Check that subprograms Shift_Left, Shift_Right,
-                Shift_Right_Arithmetic, Rotate_Left, and Rotate_Right
-                are available and produce correct results.
-==== CXB2003 PASSED ============================.

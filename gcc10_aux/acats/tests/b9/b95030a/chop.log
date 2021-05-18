@@ -1,5 +1,0 @@
-b95030a.ada:40:11: declaration expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95030a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95030a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95030a.ada into:
-   b95030a.adb

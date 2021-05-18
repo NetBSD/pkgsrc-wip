@@ -1,8 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca120010.a into:
-   ca12001_win.ads
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca120011.a into:
-   ca12001_win-impl.ads
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca120012.am into:
-   ca12001_win-impl.adb
-   ca12001_win.adb
-   ca120012.adb

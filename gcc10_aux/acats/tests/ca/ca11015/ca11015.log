@@ -1,6 +1,0 @@
-
-,.,. CA11015 ACATS 4.1 21-05-16 10:48:44
----- CA11015 Check that an instantiation of a child package of a
-                non-generic package can use its parent's declarations
-                and operations.
-==== CA11015 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460004.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460004.adb
-b460004.adb:71:46: downward conversion of tagged objects not allowed
-b460004.adb:74:47: downward conversion of tagged objects not allowed
-b460004.adb:77:47: downward conversion of tagged objects not allowed
-b460004.adb:131:44: downward conversion of tagged objects not allowed
-b460004.adb:134:45: downward conversion of tagged objects not allowed
-b460004.adb:137:45: downward conversion of tagged objects not allowed
-gnatmake: "b460004.adb" compilation error

@@ -1,7 +1,0 @@
-
-WITH MACHINE_CODE; USE MACHINE_CODE;
-PROCEDURE BD8004A_1 IS
-     TYPE ENUM IS (RED, YELLOW, BLUE);                   -- ERROR:
-BEGIN
-     Asm_Insn'(Asm ("nop"));
-END BD8004A_1;

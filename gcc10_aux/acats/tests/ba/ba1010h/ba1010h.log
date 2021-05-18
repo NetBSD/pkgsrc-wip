@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1010h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1010h.adb
-ba1010h.adb:33:11: not fully conformant with declaration at ba1010h.ads:39
-ba1010h.adb:33:11: default expression for "I" does not match
-gnatmake: "ba1010h.adb" compilation error

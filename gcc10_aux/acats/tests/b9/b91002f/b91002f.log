@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002f.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91002f.adb
-b91002f.adb:39:11: illegal declaration in task definition
-b91002f.adb:42:16: no "RECORD" for this "END RECORD"
-gnatmake: "b91002f.adb" compilation error

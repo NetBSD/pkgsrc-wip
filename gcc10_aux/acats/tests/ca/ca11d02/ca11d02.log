@@ -1,6 +1,0 @@
-
-,.,. CA11D02 ACATS 4.1 21-05-16 10:48:55
----- CA11D02 Check that an exception declared in a package can be raised
-                by a child of a child package.
-   - CA11D02 Exception is handled by others in Multiplication.
-==== CA11D02 PASSED ============================.

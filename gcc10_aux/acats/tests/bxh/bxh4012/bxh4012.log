@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4012.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4012.adb
-bxh4012.adb:62:06: violation of restriction "NO_IO" at line 58
-bxh4012.adb:65:06: violation of restriction "NO_IO" at line 58
-bxh4012.adb:68:06: violation of restriction "NO_IO" at line 58
-bxh4012.adb:71:06: violation of restriction "NO_IO" at line 58
-bxh4012.adb:74:06: violation of restriction "NO_IO" at line 58
-gnatmake: "bxh4012.adb" compilation error

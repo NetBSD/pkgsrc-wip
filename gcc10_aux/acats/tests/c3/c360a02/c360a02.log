@@ -1,6 +1,0 @@
-
-,.,. C360A02 ACATS 4.1 21-05-16 10:33:06
----- C360A02 Check that objects of types with a specified
-                Default_Component_Value are appropriately initialized.
-                Part 2 - Generic arrays of discrete types.
-==== C360A02 PASSED ============================.

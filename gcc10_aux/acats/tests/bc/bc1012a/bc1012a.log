@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1012a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1012a.adb
-bc1012a.adb:42:06: invalid prefix in selected component "TEMPLATE"
-bc1012a.adb:46:15: a generic package is not allowed in a use clause
-gnatmake: "bc1012a.adb" compilation error

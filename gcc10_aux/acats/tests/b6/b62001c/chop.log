@@ -1,5 +1,0 @@
-b62001c.ada:33:25: formal subprogram parameter not allowed
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b62001c.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b62001c.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b6/b62001c.ada into:
-   b62001c.adb

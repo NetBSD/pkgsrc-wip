@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01l.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55a01l.adb
-b55a01l.adb:43:06: "END LOOP;" expected for "LOOP" at line 41
-gnatmake: "b55a01l.adb" compilation error

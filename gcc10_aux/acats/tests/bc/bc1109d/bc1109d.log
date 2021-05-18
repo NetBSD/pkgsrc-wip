@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1109d.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1109d.adb
-bc1109d.adb:38:31: constraint not allowed here
-bc1109d.adb:39:24: constraint not allowed here
-bc1109d.adb:44:24: constraint not allowed here
-bc1109d.adb:45:31: constraint not allowed here
-gnatmake: "bc1109d.adb" compilation error

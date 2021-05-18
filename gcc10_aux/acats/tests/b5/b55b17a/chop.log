@@ -1,5 +1,0 @@
-b55b17a.ada:37:15: subscripted loop parameter not allowed
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55b17a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55b17a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55b17a.ada into:
-   b55b17a.adb

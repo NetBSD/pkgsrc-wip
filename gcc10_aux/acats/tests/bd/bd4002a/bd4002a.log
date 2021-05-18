@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4002a.adb
-bd4002a.adb:46:06: duplicate record rep clause ignored
-bd4002a.adb:55:06: duplicate record rep clause ignored
-gnatmake: "bd4002a.adb" compilation error

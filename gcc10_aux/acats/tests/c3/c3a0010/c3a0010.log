@@ -1,6 +1,0 @@
-
-,.,. C3A0010 ACATS 4.1 21-05-16 10:34:51
----- C3A0010 Check that an access-to-subprogram type in a generic
-                instance may be used to declare access-to-subprogram
-                objects which invoke subprograms in the instance.
-==== C3A0010 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b413001.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b413001.adb
-b413001.adb:117:05: invalid procedure or entry call
-b413001.adb:121:10: expected type "Standard.Float"
-b413001.adb:121:10: found type "Standard.Integer"
-b413001.adb:127:10: array type required in indexed component
-b413001.adb:133:10: expected type "Standard.Integer"
-b413001.adb:133:10: found type "Standard.Float"
-gnatmake: "b413001.adb" compilation error

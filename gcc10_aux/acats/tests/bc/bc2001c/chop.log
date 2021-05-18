@@ -1,6 +1,0 @@
-bc2001c.ada:39:26: missing ";"
-bc2001c.ada:42:11: "END;" expected for "BEGIN" at line 40
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc2001c.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc2001c.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc2001c.ada into:
-   bc2001c.adb

@@ -1,7 +1,0 @@
-
-,.,. CC50A01 ACATS 4.1 21-05-16 10:50:16
----- CC50A01 Check that a formal parameter of a library-level generic
-                unit may be a formal tagged private type.
-   - CC50A01 Testing definite tagged type...
-   - CC50A01 Testing indefinite tagged type...
-==== CC50A01 PASSED ============================.

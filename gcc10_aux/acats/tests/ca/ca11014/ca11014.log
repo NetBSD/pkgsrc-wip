@@ -1,6 +1,0 @@
-
-,.,. CA11014 ACATS 4.1 21-05-16 10:48:43
----- CA11014 Check that an instantiation of a child package of a generic
-                package can use its parent's declarations and
-                operations, including a formal package of the parent.
-==== CA11014 PASSED ============================.

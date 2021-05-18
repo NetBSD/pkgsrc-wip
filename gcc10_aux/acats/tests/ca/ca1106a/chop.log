@@ -1,8 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1106a.ada into:
-   ca1106a_1.ads
-   ca1106a_2.ads
-   ca1106a_3.ads
-   ca1106a_1.adb
-   ca1106a_2.adb
-   ca1106a_3.adb
-   ca1106a.adb

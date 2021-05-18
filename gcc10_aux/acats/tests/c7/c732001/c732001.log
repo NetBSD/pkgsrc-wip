@@ -1,9 +1,0 @@
-
-,.,. C732001 ACATS 4.1 21-05-16 10:44:15
----- C732001 Check that when the assertion policy requires checks and
-                there is a view conversion from a type to an ancestor of
-                the type, an invariant check is performed after
-                assigning to the view conversion and after a call where 
-                the view conversion is an actual in out or out
-                parameter.
-==== C732001 PASSED ============================.

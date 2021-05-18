@@ -1,5 +1,0 @@
-
-,.,. C761006 ACATS 4.1 21-05-16 10:44:44
----- C761006 Check that exceptions raised in Initialize, Adjust and
-                Finalize are processed correctly.
-==== C761006 PASSED ============================.

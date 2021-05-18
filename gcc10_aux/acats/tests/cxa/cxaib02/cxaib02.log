@@ -1,5 +1,0 @@
-
-,.,. CXAIB02 ACATS 4.1 21-05-16 10:57:57
----- CXAIB02 Check that Ada.Containers.Bounded_Vectors is preelaborated 
-                and that type Vector has Preeelaborable_Initialization.
-==== CXAIB02 PASSED ============================.

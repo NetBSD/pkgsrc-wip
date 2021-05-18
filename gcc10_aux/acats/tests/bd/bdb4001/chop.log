@@ -1,5 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bd/bdb4001.a into:
-   bdb4001_tracked_subpools.ads
-   bdb4001_tracked_subpools.adb
-   bdb4001_package.ads
-   bdb4001.adb

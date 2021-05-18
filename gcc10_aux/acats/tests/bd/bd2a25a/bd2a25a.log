@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a25a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a25a.adb
-bd2a25a.adb:38:30: size for "BASIC_ENUM" too small, minimum allowed is 5
-bd2a25a.adb:42:24: size for "ENUM" too small, minimum allowed is 5
-gnatmake: "bd2a25a.adb" compilation error

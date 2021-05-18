@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb42003.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bb42003.adb
-bb42003.adb:59:29: invalid argument for pragma "ASSERTION_POLICY"
-bb42003.adb:63:32: invalid argument for pragma "ASSERTION_POLICY"
-bb42003.adb:74:32: invalid argument for pragma "ASSERTION_POLICY"
-gnatmake: "bb42003.adb" compilation error

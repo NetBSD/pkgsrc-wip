@@ -1,8 +1,0 @@
-
-,.,. CC70B01 ACATS 4.1 21-05-16 10:50:33
----- CC70B01 Check that a library-level generic subprogram may have a
-                formal package as a formal parameter, and that the
-                generic formal actual part may specify explicit actual
-                parameters. Check that a use clause is legal in the
-                generic formal part.
-==== CC70B01 PASSED ============================.

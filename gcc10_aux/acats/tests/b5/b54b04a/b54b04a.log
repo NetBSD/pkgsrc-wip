@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b04a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b04a.adb
-b54b04a.adb:68:21: missing case value: 5
-b54b04a.adb:81:16: missing case value: "FALSE"
-b54b04a.adb:91:21: missing case value: 1
-b54b04a.adb:104:21: missing case value: 4
-gnatmake: "b54b04a.adb" compilation error

@@ -1,5 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1003a.ada into:
-   ca1003a_p.adb
-   ca1003a_pkg.ads
-   ca1003a_f.adb
-   ca1003a.adb

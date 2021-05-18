@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b22001b.adb
-b22001b.adb:57:201: missing ";"
-b22001b.adb:58:01: statement expected
-gnatmake: "b22001b.adb" compilation error

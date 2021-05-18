@@ -1,6 +1,0 @@
-
-,.,. CA11001 ACATS 4.1 21-05-16 10:48:35
----- CA11001 Check that a child unit can be used to provide an alternate
-                view and operations on a private type in its parent
-                package.
-==== CA11001 PASSED ============================.

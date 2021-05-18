@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c4/c460006.a into:
-   c460006_0.ads
-   c460006_0-c460006_1.ads
-   c460006_0-c460006_1.adb
-   c460006_0-c460006_1-c460006_2.ads
-   c460006_0-c460006_1-c460006_2.adb
-   c460006_0-c460006_1-c460006_2-c460006_3.ads
-   c460006_0-c460006_1-c460006_2-c460006_3.adb
-   c460006.adb

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001d.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba2001d.adb
-ba2001d.adb:32:15: operator symbol cannot be used as subunit name
-gnatmake: "ba2001d.adb" compilation error

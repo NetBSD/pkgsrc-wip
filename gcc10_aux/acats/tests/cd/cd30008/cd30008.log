@@ -1,6 +1,0 @@
-
-,.,. CD30008 ACATS 4.1 21-05-16 10:51:10
----- CD30008 Check that Component_Sizes that are factor of the word size
-                are supported.  Check that for such Component_Sizes
-                arrays contain no gaps between components.
-==== CD30008 PASSED ============================.

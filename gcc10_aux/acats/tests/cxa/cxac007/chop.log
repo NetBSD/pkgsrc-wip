@@ -1,6 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/cxa/cxac007.a into:
-   cxac007_logger.ads
-   cxac007_logger.adb
-   cxac007_test.ads
-   cxac007_test.adb
-   cxac007.adb

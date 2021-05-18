@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99001a.adb
-b99001a.adb:54:19: invalid use of subtype mark in expression or call
-b99001a.adb:62:15: invalid use of subtype mark in expression or call
-gnatmake: "b99001a.adb" compilation error

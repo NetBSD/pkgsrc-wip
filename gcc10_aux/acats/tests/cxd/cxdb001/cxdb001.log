@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cxdb001.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support cxdb001.adb
-Asynchronous_Task_Control is not supported in this configuration
-compilation abandoned
-gnatmake: "cxdb001.adb" compilation error

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83032b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83032b.adb
-b83032b.adb:58:22: no candidate interpretations match the actuals:
-b83032b.adb:58:22: missing argument for parameter "X" in call to "abs" declared at line 42
-b83032b.adb:58:22: missing argument for parameter "X" in call to "abs" (inherited) at line 46
-b83032b.adb:61:17: no candidate interpretations match the actuals:
-b83032b.adb:61:17: missing argument for parameter "X" in call to "abs" (inherited) at line 46
-b83032b.adb:61:17: missing argument for parameter "X" in call to "abs" declared at line 42
-gnatmake: "b83032b.adb" compilation error

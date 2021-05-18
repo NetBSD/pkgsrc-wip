@@ -1,7 +1,0 @@
-   - NO_NAME Program_Error -- OK.
-   - NO_NAME Program_Error -- OK.
-
-,.,. C854002 ACATS 4.1 21-05-16 10:45:25
----- C854002 An elaboration check is performed for a call to a
-                subprogram whose body is given as a renaming-as-body.
-==== C854002 PASSED ============================.

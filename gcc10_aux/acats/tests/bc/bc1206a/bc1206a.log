@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1206a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1206a.adb
-bc1206a.adb:41:43: discriminant constraint needed for derived untagged records
-bc1206a.adb:43:16: full view of "PRIV2" not compatible with declaration at line 37
-bc1206a.adb:43:16: one is constrained, the other unconstrained
-gnatmake: "bc1206a.adb" compilation error

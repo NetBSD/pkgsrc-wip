@@ -1,7 +1,0 @@
-
-,.,. C760011 ACATS 4.1 21-05-16 10:44:33
----- C760011 Check that anonymous objects of controlled types or types
-                containing controlled types are finalized no later than 
-                the end of the innermost enclosing declarative_item or
-                statement.
-==== C760011 PASSED ============================.

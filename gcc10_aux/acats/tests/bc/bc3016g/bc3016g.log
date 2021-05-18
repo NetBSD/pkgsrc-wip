@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3016g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3016g.adb
-bc3016g.adb:50:25: there is no applicable operator "AND" for type "AR" defined at line 48
-bc3016g.adb:53:22: expected type "AR" defined at line 48
-bc3016g.adb:53:22: found a string type
-gnatmake: "bc3016g.adb" compilation error

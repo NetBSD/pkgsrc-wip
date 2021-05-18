@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460006.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b460006.adb
-b460006.adb:12:42: expect object name in renaming
-b460006.adb:14:33: renaming of conversion only allowed for tagged types
-gnatmake: "b460006.adb" compilation error

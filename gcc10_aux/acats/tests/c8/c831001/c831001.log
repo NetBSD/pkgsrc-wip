@@ -1,6 +1,0 @@
-
-,.,. C831001 ACATS 4.1 21-05-16 10:44:57
----- C831001 Check that overriding indicators can be used on subprogram 
-                declarations, including expression functions and null
-                procedures.
-==== C831001 PASSED ============================.

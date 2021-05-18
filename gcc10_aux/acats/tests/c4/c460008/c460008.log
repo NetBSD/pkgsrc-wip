@@ -1,6 +1,0 @@
-
-,.,. C460008 ACATS 4.1 21-05-16 10:41:52
----- C460008 Check that conversion to a modular type raises
-                Constraint_Error when the operand value is outside the
-                base range of the modular type.
-==== C460008 PASSED ============================.

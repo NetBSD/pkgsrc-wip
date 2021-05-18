@@ -1,6 +1,0 @@
-
-,.,. C457006 ACATS 4.1 21-05-16 10:41:46
----- C457006 Check that overloaded functions can be resolved when they
-                appear as dependent expressions in a conditional
-                expression. Part 1: Enumeration literals.
-==== C457006 PASSED ============================.

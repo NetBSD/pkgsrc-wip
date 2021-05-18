@@ -1,5 +1,0 @@
-ca1011a0.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1011a0.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1011a1.ada
-ca1011a2.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1011a2.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1011a3.ada
-ca1011a4.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1011a4.ada is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca1011a5.ada
-use -w to overwrite files and keep last version
-no source files written

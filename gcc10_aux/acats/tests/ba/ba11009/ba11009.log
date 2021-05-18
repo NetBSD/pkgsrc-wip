@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba11009.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba11009.adb
-ba11009.adb:10:39: invalid prefix in selected component "BA11009_0"
-ba11009.adb:13:06: invalid prefix in selected component "BA11009_0"
-ba11009.adb:15:40: invalid prefix in selected component "BA11009_0"
-gnatmake: "ba11009.adb" compilation error

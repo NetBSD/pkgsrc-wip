@@ -1,7 +1,0 @@
-
-,.,. CXA4028 ACATS 4.1 21-05-16 10:54:33
----- CXA4028 Check that Ada.Strings.Bounded procedures Append, Head,
-                Tail, and Trim, and relational operator functions =, >, 
-                >=, <, <= with parameter combinations of type String and
-                Bounded_String, produce correct results.
-==== CXA4028 PASSED ============================.

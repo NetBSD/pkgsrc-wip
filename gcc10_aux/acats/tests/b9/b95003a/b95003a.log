@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95003a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95003a.adb
-b95003a.adb:47:11: no entry declaration matches accept statement
-b95003a.adb:47:20: "." should be ";"
-b95003a.adb:52:11: no entry declaration matches accept statement
-b95003a.adb:52:21: "." should be ";"
-b95003a.adb:53:11: no entry declaration matches accept statement
-b95003a.adb:53:21: "." should be ";"
-gnatmake: "b95003a.adb" compilation error

@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxai002.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxai002.adb
-bxai002.adb:151:11: container type does not support reverse iteration
-bxai002.adb:163:11: container type does not support reverse iteration
-bxai002.adb:169:25: too many arguments in call to "Iterate"
-bxai002.adb:169:33: unmatched actual "Start" in call
-gnatmake: "bxai002.adb" compilation error

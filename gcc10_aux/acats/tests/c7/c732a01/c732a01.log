@@ -1,7 +1,0 @@
-
-,.,. C732A01 ACATS 4.1 21-05-16 10:44:16
----- C732A01 Check that Assertion_Error is raised when the policy
-                requires checks and there is an object for which the
-                invariant check fails, but not when the invariant check 
-                passes - constrained array version.
-==== C732A01 PASSED ============================.

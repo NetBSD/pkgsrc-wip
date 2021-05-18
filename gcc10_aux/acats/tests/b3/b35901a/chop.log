@@ -1,5 +1,0 @@
-b35901a.ada:32:34: range must be given for fixed-point type
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b35901a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b3/b35901a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b3/b35901a.ada into:
-   b35901a.adb

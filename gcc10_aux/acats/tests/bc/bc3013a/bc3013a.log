@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3013a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3013a.adb
-bc3013a.adb:49:24: formal part not allowed in instantiation
-bc3013a.adb:52:23: formal part not allowed in instantiation
-bc3013a.adb:55:23: formal part not allowed in instantiation
-gnatmake: "bc3013a.adb" compilation error

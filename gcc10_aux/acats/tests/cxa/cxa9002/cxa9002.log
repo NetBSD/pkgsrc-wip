@@ -1,6 +1,0 @@
-
-,.,. CXA9002 ACATS 4.1 21-05-16 10:54:54
----- CXA9002 Check that the operations defined in the generic package
-                Ada.Storage_IO provide the ability to store and retrieve
-                objects of tagged types from in-memory buffers.
-==== CXA9002 PASSED ============================.

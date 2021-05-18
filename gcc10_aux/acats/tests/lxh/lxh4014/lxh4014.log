@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40142.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxh40142.adb
-lxh4014_1.ads:70:28: violation of restriction "NO_DISPATCH" at gnat.adc:55
-gnatmake: "lxh40142.adb" compilation error

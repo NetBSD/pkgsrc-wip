@@ -1,5 +1,0 @@
-
-,.,. CC70C01 ACATS 4.1 21-05-16 10:50:34
----- CC70C01 Check that a generic formal package may be passed as an
-                actual in an instantiation of a generic package.
-==== CC70C01 PASSED ============================.

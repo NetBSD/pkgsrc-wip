@@ -1,6 +1,0 @@
-
-,.,. C650B01 ACATS 4.1 21-05-16 10:43:55
----- C650B01 Check that the result of a function that returns a specific
-                tagged type has the tag of the tagged result type, even 
-                if the return expression has a different tag.
-==== C650B01 PASSED ============================.

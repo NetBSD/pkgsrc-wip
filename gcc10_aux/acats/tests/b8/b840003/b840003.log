@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b840003.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b840003.adb
-b840003.adb:81:10: "Nonprim_Proc" is not visible (more references follow)
-b840003.adb:81:10: non-visible declaration at line 58
-b840003.adb:144:14: "Nested_Cw_Operand" is not visible (more references follow)
-b840003.adb:144:14: non-visible declaration at line 100
-b840003.adb:153:10: "Another_Cw_Operand" is not visible (more references follow)
-b840003.adb:153:10: non-visible declaration at line 111
-gnatmake: "b840003.adb" compilation error

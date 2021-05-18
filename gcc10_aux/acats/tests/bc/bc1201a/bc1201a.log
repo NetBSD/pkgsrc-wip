@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1201a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1201a.adb
-bc1201a.adb:35:16: discriminants not allowed for this formal type
-bc1201a.adb:36:16: discriminants not allowed for this formal type
-bc1201a.adb:37:16: discriminants not allowed for this formal type
-bc1201a.adb:38:16: discriminants not allowed for this formal type
-gnatmake: "bc1201a.adb" compilation error

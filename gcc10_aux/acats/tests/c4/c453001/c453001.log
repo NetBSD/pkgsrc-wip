@@ -1,5 +1,0 @@
-
-,.,. C453001 ACATS 4.1 21-05-16 10:41:10
----- C453001 Check that overflow checking is not performed for adding
-                operators of modular types.
-==== C453001 PASSED ============================.

@@ -1,8 +1,0 @@
-
-,.,. C730002 ACATS 4.1 21-05-16 10:44:09
----- C730002 Check that the full view of a private extension may be
-                derived indirectly from the ancestor type.  Check for a 
-                case where the parent type is derived from the ancestor 
-                type through a series of types produced by generic
-                instantiations.
-==== C730002 PASSED ============================.

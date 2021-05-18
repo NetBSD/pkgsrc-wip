@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2d01c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2d01c.adb
-bd2d01c.adb:43:10: small requires an ordinary fixed point type
-bd2d01c.adb:44:10: cannot specify attribute for subtype
-gnatmake: "bd2d01c.adb" compilation error

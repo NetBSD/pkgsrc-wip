@@ -1,5 +1,0 @@
-
-,.,. CE3806B ACATS 4.1 21-05-16 10:53:49
----- CE3806B CHECK THAT PUT FOR FIXED_IO RAISES MODE_ERROR FOR FILES OF 
-                MODE IN_FILE.
-==== CE3806B PASSED ============================.

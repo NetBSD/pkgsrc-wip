@@ -1,8 +1,0 @@
-b64003a.ada:62:27: positional parameter association not allowed after named one
-b64003a.ada:64:21: positional parameter association not allowed after named one
-b64003a.ada:66:23: positional parameter association not allowed after named one
-b64003a.ada:70:18: positional parameter association not allowed after named one
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b64003a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b6/b64003a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b6/b64003a.ada into:
-   b64003a.adb

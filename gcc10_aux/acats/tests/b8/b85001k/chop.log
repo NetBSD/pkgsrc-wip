@@ -1,5 +1,0 @@
-b85001k.ada:39:13: constraint not allowed in object renaming declaration
-/home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85001k.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85001k.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b8/b85001k.ada into:
-   b85001k.adb

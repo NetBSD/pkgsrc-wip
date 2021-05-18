@@ -1,7 +1,0 @@
-
-,.,. CXAA010 ACATS 4.1 21-05-16 10:54:59
----- CXAA010 Check that the operations defined in package
-                Ada.Text_IO.Decimal_IO are available, and that they
-                function correctly when used for the input/output of
-                Decimal types.
-==== CXAA010 PASSED ============================.

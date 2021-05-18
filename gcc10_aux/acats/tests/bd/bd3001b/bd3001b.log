@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3001b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd3001b.adb
-bd3001b.adb:40:06: cannot give enumeration rep clause for subtype
-bd3001b.adb:44:10: subtype mark required in this context
-bd3001b.adb:44:10: found "OBJ" declared at line 42
-bd3001b.adb:50:11: representation item must be after full type declaration
-bd3001b.adb:57:11: representation item must be after full type declaration
-bd3001b.adb:60:11: representation item must be after full type declaration
-gnatmake: "bd3001b.adb" compilation error

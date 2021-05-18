@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97108b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97108b.adb
-b97108b.adb:60:15: missing "END SELECT;" for "SELECT" at line 53
-b97108b.adb:60:16: select alternative cannot follow else part
-b97108b.adb:62:16: no "SELECT" for this "END SELECT"
-gnatmake: "b97108b.adb" compilation error

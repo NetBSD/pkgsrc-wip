@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001g.adb
-b91001g.adb:37:11: the only representation clause allowed here is an address clause
-b91001g.adb:39:11: the only representation clause allowed here is an address clause
-b91001g.adb:40:11: the only representation clause allowed here is an address clause
-gnatmake: "b91001g.adb" compilation error

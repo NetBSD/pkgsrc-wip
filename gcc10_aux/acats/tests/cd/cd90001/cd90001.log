@@ -1,7 +1,0 @@
-
-,.,. CD90001 ACATS 4.1 21-05-16 10:51:47
----- CD90001 Check that Unchecked_Conversion is supported and is
-                reversible in appropriate cases.
-   - CD90001 The alignments of the 16 bit types used in this test do not
-                match.
-==== CD90001 PASSED ============================.

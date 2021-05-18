@@ -1,6 +1,0 @@
-
-,.,. C341A02 ACATS 4.1 21-05-16 10:32:25
----- C341A02 Check that class-wide objects can be reassigned with
-                objects from the same specific type used to initialize
-                them.
-==== C341A02 PASSED ============================.

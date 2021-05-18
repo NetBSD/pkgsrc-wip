@@ -1,8 +1,0 @@
-
-,.,. C350A01 ACATS 4.1 21-05-16 10:32:28
----- C350A01 Check that objects of types with a specified Default_Value 
-                are appropriately initialized. Part 1 - Normal discrete 
-                types.
-   * C350A01 Default initialization of an aggregate record component of 
-                an integer subtype did not raise Constraint_Error.
-**** C350A01 FAILED ****************************.

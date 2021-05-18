@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a05a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83a05a.adb
-b83a05a.adb:90:14: implicit label declaration for "LAB_T_TMR_L_E" is hidden at line 89
-b83a05a.adb:96:14: implicit label declaration for "LAB_ST_TM_L_I" is hidden at line 93
-b83a05a.adb:106:14: implicit label declaration for "LAB_D_R_L_C" is hidden at line 104
-gnatmake: "b83a05a.adb" compilation error

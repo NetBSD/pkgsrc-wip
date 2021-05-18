@@ -1,4 +1,0 @@
-ba140032.adb in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140030.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140032.am
-ba14003_1.ads in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140030.a is duplicated in /home/fernando/mysandboxfolder/tmp/acats/tests/ba/ba140031.a
-use -w to overwrite files and keep last version
-no source files written

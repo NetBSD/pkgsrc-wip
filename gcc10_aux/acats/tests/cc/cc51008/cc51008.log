@@ -1,8 +1,0 @@
-
-,.,. CC51008 ACATS 4.1 21-05-16 10:50:22
----- CC51008 Check that operations are inherited for a formal derived
-                type whose ancestor is also a formal type as described
-                in RM95 12.5.1(21/1).
-   - CC51008 CC51008_0.S called.
-   - CC51008 CC51008_0.S called.
-==== CC51008 PASSED ============================.

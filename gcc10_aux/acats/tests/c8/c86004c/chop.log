@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c86004c0.ada into:
-   c86004c0_gen.ads
-   c86004c0_gen.adb
-   c86004c0.ads
-   c86004c01.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c86004c1.ada into:
-   c86004c01-c86004c1.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c8/c86004c2.ada into:
-   c86004c2m.adb

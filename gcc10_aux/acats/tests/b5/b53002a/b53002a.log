@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53002a.adb
-b53002a.adb:44:18: "ELSIF" cannot appear after "ELSE"
-gnatmake: "b53002a.adb" compilation error

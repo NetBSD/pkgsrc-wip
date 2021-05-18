@@ -1,6 +1,0 @@
-
-,.,. C392002 ACATS 4.1 21-05-16 10:34:17
----- C392002 Check that the use of a class-wide parameter allows for
-                proper dispatching where root type and extended types
-                are declared in the same generic package.
-==== C392002 PASSED ============================.

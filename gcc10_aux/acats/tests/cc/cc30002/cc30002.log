@@ -1,9 +1,0 @@
-
-,.,. CC30002 ACATS 4.1 21-05-16 10:49:48
----- CC30002 Check that an explicit declaration in the private part of
-                an instance does not override an implicit declaration in
-                the instance, unless the corresponding explicit
-                declaration in the generic overrides a corresponding
-                implicit declaration in the generic. Check for primitive
-                subprograms of tagged types.
-==== CC30002 PASSED ============================.

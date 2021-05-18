@@ -1,5 +1,0 @@
-
-,.,. C854003 ACATS 4.1 21-05-16 10:45:25
----- C854003 Check that a renaming-as-body used before the subprogram is
-                frozen only requires mode conformance.
-==== C854003 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24007a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b24007a.adb
-b24007a.adb:43:32: negative exponent not allowed for integer literal
-b24007a.adb:49:32: negative exponent not allowed for integer literal
-b24007a.adb:59:22: negative exponent not allowed for integer literal
-b24007a.adb:60:14: negative exponent not allowed for integer literal
-b24007a.adb:64:24: negative exponent not allowed for integer literal
-b24007a.adb:67:35: negative exponent not allowed for integer literal
-gnatmake: "b24007a.adb" compilation error

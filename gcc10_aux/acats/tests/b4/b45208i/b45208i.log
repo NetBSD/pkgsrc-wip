@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208i.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b45208i.adb
-b45208i.adb:99:17: there is no applicable operator ">" for type "ACC" defined at line 92
-b45208i.adb:104:20: there is no applicable operator "<=" for type "ACC" defined at line 92
-b45208i.adb:130:17: there is no applicable operator ">" for type "DERREC" defined at line 123
-b45208i.adb:135:20: there is no applicable operator "<=" for type "DERREC" defined at line 123
-gnatmake: "b45208i.adb" compilation error

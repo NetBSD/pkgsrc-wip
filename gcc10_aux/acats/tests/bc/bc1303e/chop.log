@@ -1,5 +1,0 @@
-bc1303e.ada:34:25: invalid operator name
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1303e.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1303e.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1303e.ada into:
-   bc1303e.adb

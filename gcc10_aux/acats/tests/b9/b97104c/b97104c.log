@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97104c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b97104c.adb
-b97104c.adb:59:16: reserved word "TERMINATE" cannot be used as identifier
-gnatmake: "b97104c.adb" compilation error

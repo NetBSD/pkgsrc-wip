@@ -1,8 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca110050.a into:
-   ca110050_0.ads
-   ca110050_0.adb
-   ca110050_0-ca110050_1.ads
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/ca/ca110051.am into:
-   ca110050_0-ca110050_1-ca110050_2.ads
-   ca110050_0-ca110050_1-ca110050_2.adb
-   ca110051.adb

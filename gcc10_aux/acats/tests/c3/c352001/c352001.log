@@ -1,8 +1,0 @@
-
-,.,. C352001 ACATS 4.1 21-05-16 10:32:31
----- C352001 Check that, the predefined Character type comprises 256
-                positions.  Check that the names of the non-graphic
-                characters are usable with the attributes (Wide_)Image
-                and (Wide_)Value, and that these attributes produce the 
-                correct result.
-==== C352001 PASSED ============================.

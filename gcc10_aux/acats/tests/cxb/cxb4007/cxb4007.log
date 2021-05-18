@@ -1,6 +1,0 @@
-
-,.,. CXB4007 ACATS 4.1 21-05-16 10:58:26
----- CXB4007 Check that functions Valid, Length, To_Decimal and
-                To_Binary specific to Byte_Array and Binary_Format
-                parameters produce correct results.
-==== CXB4007 PASSED ============================.

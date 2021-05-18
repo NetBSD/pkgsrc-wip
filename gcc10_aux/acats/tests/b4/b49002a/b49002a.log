@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b49002a.adb
-b49002a.adb:36:36: dynamic or empty choice in aggregate must be the only choice
-b49002a.adb:45:24: dynamic or empty choice in aggregate must be the only choice
-b49002a.adb:58:36: dynamic or empty choice in aggregate must be the only choice
-gnatmake: "b49002a.adb" compilation error

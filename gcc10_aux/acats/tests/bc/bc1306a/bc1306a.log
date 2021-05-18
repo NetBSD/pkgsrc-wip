@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1306a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1306a.adb
-bc1306a.adb:60:16: entry call or dispatching primitive of interface required
-bc1306a.adb:70:16: entry call or dispatching primitive of interface required
-gnatmake: "bc1306a.adb" compilation error

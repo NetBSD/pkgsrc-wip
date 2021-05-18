@@ -1,7 +1,0 @@
-
-,.,. CB40005 ACATS 4.1 21-05-16 10:49:22
----- CB40005 Check that exceptions raised in non-generic code can be
-                handled by a procedure in a generic package.  Check that
-                the exception identity can be properly retrieved from
-                the generic code and used by the non-generic code.
-==== CB40005 PASSED ============================.

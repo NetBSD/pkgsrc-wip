@@ -1,5 +1,0 @@
-
-,.,. CA11D03 ACATS 4.1 21-05-16 10:48:56
----- CA11D03 Check that an exception declared in a package can be raised
-                by a client of a child of the package.
-==== CA11D03 PASSED ============================.

@@ -1,5 +1,0 @@
-
-,.,. CXAA009 ACATS 4.1 21-05-16 10:54:59
----- CXAA009 Check that the capabilities of Text_IO.Float_IO operate
-                correctly for files with mode Append_File.
-==== CXAA009 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4006.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxh4006.adb
-bxh4006.adb:67:43: violation of restriction "NO_FLOATING_POINT" at line 57
-bxh4006.adb:70:20: violation of restriction "NO_FLOATING_POINT" at line 57
-bxh4006.adb:78:14: violation of restriction "NO_FLOATING_POINT" at line 57
-bxh4006.adb:85:21: violation of restriction "NO_FLOATING_POINT" at line 57
-bxh4006.adb:85:30: violation of restriction "NO_FLOATING_POINT" at line 57
-bxh4006.adb:85:31: violation of restriction "NO_FLOATING_POINT" at line 57
-gnatmake: "bxh4006.adb" compilation error

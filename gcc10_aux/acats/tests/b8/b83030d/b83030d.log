@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83030d.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83030d.adb
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83030d_decl1.adb
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b83030d_decl2.adb
-b83030d_decl2-b83030d_proc1.adb:5:29: "B83030D_PROC1" is not the name of a generic procedure
-b83030d_decl2-b83030d_proc2.adb:4:28: "B83030D_PROC2" is not the name of a generic function
-b83030d_decl2-b83030d_func3.adb:4:29: "B83030D_FUNC3" is not the name of a generic procedure
-b83030d_decl2-b83030d_func4.adb:9:28: "B83030D_FUNC4" is not the name of a generic function
-gnatmake: "b83030d_decl2.adb" compilation error

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a67a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd2a67a.adb
-bd2a67a.adb:35:37: size for "ARRAY_TYPE" too small, minimum allowed is 128
-gnatmake: "bd2a67a.adb" compilation error

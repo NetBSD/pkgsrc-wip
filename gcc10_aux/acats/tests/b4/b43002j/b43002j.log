@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43002j.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b43002j.adb
-b43002j.adb:45:20: "OTHERS" must appear alone in a choice list
-gnatmake: "b43002j.adb" compilation error

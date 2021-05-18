@@ -1,7 +1,0 @@
-
-,.,. CXA3001 ACATS 4.1 21-05-16 10:54:03
----- CXA3001 Check that the character classification functions defined
-                in package Ada.Characters.Handling produce correct
-                results when provided constant arguments from package
-                Ada.Characters.Latin_1.
-==== CXA3001 PASSED ============================.

@@ -1,6 +1,0 @@
-
-,.,. CXA4001 ACATS 4.1 21-05-16 10:54:07
----- CXA4001 Check that the types, operations, and other entities
-                defined within the package Ada.Strings.Maps are
-                available and/or produce correct results.
-==== CXA4001 PASSED ============================.

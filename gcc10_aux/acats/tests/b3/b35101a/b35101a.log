@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35101a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b35101a.adb
-b35101a.adb:35:26: identifier expected
-b35101a.adb:36:18: identifier expected
-b35101a.adb:37:18: identifier expected
-gnatmake: "b35101a.adb" compilation error

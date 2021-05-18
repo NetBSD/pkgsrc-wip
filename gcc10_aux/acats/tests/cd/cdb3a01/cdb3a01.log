@@ -1,9 +1,0 @@
-
-,.,. CDB3A01 ACATS 4.1 21-05-16 10:51:53
----- CDB3A01 Testing the Default_Storage_Pool aspect with generic
-                instantiations.
-   - CDB3A01 Allocating from default pool of generic unit.
-   - CDB3A01 Allocated 10 bytes.
-   - CDB3A01 Allocating from alternate pool specified by instance
-                aspect.
-==== CDB3A01 PASSED ============================.

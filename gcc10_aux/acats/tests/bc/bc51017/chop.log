@@ -1,9 +1,0 @@
-bc51017.a:51:26: "tagged" must come before "limited"
-bc51017.a:65:25: "abstract" must come before "tagged"
-bc51017.a:78:26: "tagged" must come before "private"
-bc51017.a:93:26: "abstract tagged" must come before "private"
-bc51017.a:106:32: missing "private"
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51017.a: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51017.a: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc51017.a into:
-   bc51017.ads

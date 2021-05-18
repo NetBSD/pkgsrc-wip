@@ -1,6 +1,0 @@
-
-,.,. CA110042 ACATS 4.1 21-05-16 10:48:37
----- CA110042 Check that the private part of a child library unit
-                 package can utilize its parent unit's visible
-                 definitions.
-==== CA110042 PASSED ============================.

@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3001a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3001a.adb
-bc3001a.adb:56:26: "NEWF" is undefined
-bc3001a.adb:58:26: "NEWPACK" is undefined
-bc3001a.adb:64:11: "NEWP" is undefined
-gnatmake: "bc3001a.adb" compilation error

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1202f.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc1202f.adb
-bc1202f.adb:47:26: reserved word "EXCEPTION" cannot be used as identifier
-gnatmake: "bc1202f.adb" compilation error

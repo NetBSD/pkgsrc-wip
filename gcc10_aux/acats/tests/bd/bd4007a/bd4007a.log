@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4007a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4007a.adb
-bd4007a.adb:59:16: component clause previously given at line 58
-bd4007a.adb:65:16: component clause previously given at line 64
-bd4007a.adb:72:17: component clause previously given at line 71
-bd4007a.adb:80:17: component clause is for non-existent field
-gnatmake: "bd4007a.adb" compilation error

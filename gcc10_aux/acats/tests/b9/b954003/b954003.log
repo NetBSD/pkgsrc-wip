@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b954003.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b954003.adb
-b954003.adb:79:30: target object has invalid level for requeue
-b954003.adb:108:33: target object has invalid level for requeue
-b954003.adb:117:22: target object has invalid level for requeue
-gnatmake: "b954003.adb" compilation error

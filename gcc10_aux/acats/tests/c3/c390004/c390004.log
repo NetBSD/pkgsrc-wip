@@ -1,8 +1,0 @@
-
-,.,. C390004 ACATS 4.1 21-05-16 10:34:01
----- C390004 Check that the tags of allocated objects correctly identify
-                the type of the allocated object.  Check that tags
-                resulting from normal and view conversions.  Check tags 
-                of accessed values designating aliased objects. Check
-                function result tags.
-==== C390004 PASSED ============================.

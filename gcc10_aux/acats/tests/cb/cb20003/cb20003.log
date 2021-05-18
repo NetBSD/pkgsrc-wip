@@ -1,6 +1,0 @@
-
-,.,. CB20003 ACATS 4.1 21-05-16 10:49:14
----- CB20003 Check that exceptions can be raised, reraised, and handled 
-                in a subprogram referenced by an access to subprogram
-                value.
-==== CB20003 PASSED ============================.

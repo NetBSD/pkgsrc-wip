@@ -1,6 +1,0 @@
-b91003e.ada:42:06: "END T4;" expected
-b91003e.ada:47:06: "END T5;" expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91003e.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91003e.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91003e.ada into:
-   b91003e.adb

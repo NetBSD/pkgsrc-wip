@@ -1,6 +1,0 @@
-
-,.,. CXACC01 ACATS 4.1 21-05-16 10:55:17
----- CXACC01 Check that the use of 'Class'Output and 'Class'Input allow 
-                stream manipulation of objects of non-limited class-wide
-                types.
-==== CXACC01 PASSED ============================.

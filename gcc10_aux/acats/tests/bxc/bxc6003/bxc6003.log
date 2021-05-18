@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxc6003.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bxc6003.adb
-bxc6003.adb:58:19: atomic access to "Atomic_Type" cannot be guaranteed
-bxc6003.adb:62:19: atomic access to "Atomic_Object" cannot be guaranteed
-bxc6003.adb:66:30: atomic access to component of "Atomic_Array_Type" cannot be guaranteed
-bxc6003.adb:71:30: atomic access to component of "Atomic_Array_Object" cannot be guaranteed
-gnatmake: "bxc6003.adb" compilation error

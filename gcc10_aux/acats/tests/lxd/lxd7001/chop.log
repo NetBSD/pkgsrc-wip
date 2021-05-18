@@ -1,7 +1,0 @@
-writing configuration pragmas from /home/fernando/mysandboxfolder/tmp/acats/tests/lxd/lxd70010.a to gnat.adc
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/lxd/lxd70010.a into:
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/lxd/lxd70011.a into:
-   lxd70011.ads
-   lxd70011.adb
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/lxd/lxd70012.am into:
-   lxd70012.adb

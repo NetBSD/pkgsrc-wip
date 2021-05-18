@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37309b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37309b.adb
-b37309b.adb:48:16: missing case value: 'K'
-b37309b.adb:48:16: missing case value: 'N'
-b37309b.adb:57:16: missing case value: 'A'
-b37309b.adb:72:26: maximum allowed choice value is 'M'
-gnatmake: "b37309b.adb" compilation error

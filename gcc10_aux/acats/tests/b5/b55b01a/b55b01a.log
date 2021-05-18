@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b01a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b55b01a.adb
-b55b01a.adb:43:11: assignment to loop parameter not allowed
-b55b01a.adb:45:18: actual for "P2" must be a variable
-b55b01a.adb:47:14: actual for "P1" must be a variable
-gnatmake: "b55b01a.adb" compilation error

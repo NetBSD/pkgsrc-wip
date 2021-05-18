@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85001h.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b85001h.adb
-b85001h.adb:39:26: expected type "Standard.Integer"
-b85001h.adb:39:26: found type "Standard.Float"
-b85001h.adb:40:26: expected type "Standard.Integer"
-b85001h.adb:40:26: found type "NEWINT" defined at line 34
-gnatmake: "b85001h.adb" compilation error

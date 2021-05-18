@@ -1,7 +1,0 @@
-b95003a.ada:47:20: "." should be ";"
-b95003a.ada:52:21: "." should be ";"
-b95003a.ada:53:21: "." should be ";"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95003a.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95003a.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b95003a.ada into:
-   b95003a.adb

@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdb2001.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bdb2001.adb
-bdb2001.adb:82:10: deallocation from empty storage pool
-bdb2001.adb:83:10: deallocation from empty storage pool
-bdb2001.adb:113:04: deallocation from empty storage pool
-bdb2001.adb:114:04: deallocation from empty storage pool
-gnatmake: "bdb2001.adb" compilation error

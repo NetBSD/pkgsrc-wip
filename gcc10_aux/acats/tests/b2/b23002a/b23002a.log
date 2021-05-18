@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b23002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b23002a.adb
-b23002a.adb:34:08: two consecutive underlines not permitted
-b23002a.adb:36:06: identifier cannot start with underline
-b23002a.adb:38:08: identifier cannot end with underline
-b23002a.adb:43:08: two consecutive underlines not permitted
-b23002a.adb:45:06: identifier cannot start with underline
-b23002a.adb:47:08: identifier cannot end with underline
-gnatmake: "b23002a.adb" compilation error

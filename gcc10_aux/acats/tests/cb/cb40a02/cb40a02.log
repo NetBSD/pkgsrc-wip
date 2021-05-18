@@ -1,5 +1,0 @@
-
-,.,. CB40A021 ACATS 4.1 21-05-16 10:49:26
----- CB40A021 Check that a user defined exception is correctly
-                 propagated across package and subprogram boundaries.
-==== CB40A021 PASSED ============================.

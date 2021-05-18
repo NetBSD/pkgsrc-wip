@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001f.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91001f.adb
-b91001f.adb:36:10: misspelling of "T1"
-b91001f.adb:40:10: misspelling of "T2"
-b91001f.adb:45:10: misspelling of "T1"
-b91001f.adb:50:06: "END T2;" expected
-gnatmake: "b91001f.adb" compilation error

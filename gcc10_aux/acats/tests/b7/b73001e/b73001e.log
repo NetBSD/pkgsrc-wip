@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b73001e.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b73001e.adb
-b73001e.adb:44:11: missing body for "PACK1"
-b73001e.adb:56:11: missing body for "PACK2"
-b73001e.adb:69:11: missing body for "PACK3"
-b73001e.adb:82:11: missing body for "PACK4"
-gnatmake: "b73001e.adb" compilation error

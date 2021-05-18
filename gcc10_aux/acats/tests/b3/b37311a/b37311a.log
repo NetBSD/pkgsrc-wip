@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37311a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b37311a.adb
-b37311a.adb:42:26: missing case values: 2 .. 10
-b37311a.adb:47:26: missing case values: 1 .. 4
-gnatmake: "b37311a.adb" compilation error

@@ -1,5 +1,0 @@
-
-,.,. CD40001 ACATS 4.1 21-05-16 10:51:17
----- CD40001 Check that Enumeration_Representation_Clauses are supported
-                for codes in the range System.Min_Int..System.Max_Int.
-==== CD40001 PASSED ============================.

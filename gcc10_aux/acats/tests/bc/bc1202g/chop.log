@@ -1,6 +1,0 @@
-bc1202g.ada:41:16: record not allowed in generic type definition
-bc1202g.ada:42:30: anonymous arrays not allowed as components
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202g.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202g.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1202g.ada into:
-   bc1202g.adb

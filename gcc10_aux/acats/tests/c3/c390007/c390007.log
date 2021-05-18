@@ -1,5 +1,0 @@
-
-,.,. C390007 ACATS 4.1 21-05-16 10:34:04
----- C390007 Check that the tag of an object of a tagged type is
-                preserved by type conversion and parameter passing.
-==== C390007 PASSED ============================.

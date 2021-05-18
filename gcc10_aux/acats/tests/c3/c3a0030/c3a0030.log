@@ -1,5 +1,0 @@
-
-,.,. C3A0030 ACATS 4.1 21-05-16 10:35:01
----- C3A0030 Check that an access discriminant only is null excluding
-                when a null exclusion is given.
-==== C3A0030 PASSED ============================.

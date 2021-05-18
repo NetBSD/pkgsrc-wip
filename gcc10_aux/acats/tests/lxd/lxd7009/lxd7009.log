@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70092.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd70092.adb
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support lxd7009_1.adb
-lxd7009_1.adb:7:05: violation of restriction "MAX_TASK_ENTRIES = 0" at gnat.adc:45
-lxd7009_1.adb:12:05: violation of restriction "MAX_PROTECTED_ENTRIES = 0" at gnat.adc:46
-lxd7009_1.adb:32:05: violation of restriction "MAX_SELECT_ALTERNATIVES = 0" at gnat.adc:44
-gnatmake: "lxd7009_1.adb" compilation error

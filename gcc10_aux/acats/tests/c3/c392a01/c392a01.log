@@ -1,6 +1,0 @@
-
-,.,. C392A01 ACATS 4.1 21-05-16 10:34:26
----- C392A01 Check that the use of a class-wide parameter allows for
-                proper dispatching where root type and extended types
-                are declared in the same package.
-==== C392A01 PASSED ============================.

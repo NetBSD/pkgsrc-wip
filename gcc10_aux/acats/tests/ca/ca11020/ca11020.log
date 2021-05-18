@@ -1,5 +1,0 @@
-
-,.,. CA11020 ACATS 4.1 21-05-16 10:48:47
----- CA11020 Check that body of the generic parent package can depend on
-                one of its own public generic children.
-==== CA11020 PASSED ============================.

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1101a2.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support ba1101a2.adb
-ba1101a2.adb:4:05: "Ascii" is not visible
-gnatmake: "ba1101a2.adb" compilation error

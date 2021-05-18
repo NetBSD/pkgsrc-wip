@@ -1,8 +1,0 @@
-
-,.,. CXF1001 ACATS 4.1 21-05-16 10:59:08
----- CXF1001 Check that values of 2 and 10 are allowable values for
-                Machine_Radix of a decimal first subtype.  Check that
-                the value of Decimal.Max_Decimal_Digits is at least 18; 
-                the value of Decimal.Max_Scale is at least 18; the value
-                of Decimal.Min_Scale is at most 0.
-==== CXF1001 PASSED ============================.

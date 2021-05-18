@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a021a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b2a021a.adb
-b2a021a.adb:31:30: quote not allowed in percent delimited string
-b2a021a.adb:34:19: quote not allowed in percent delimited string
-gnatmake: "b2a021a.adb" compilation error

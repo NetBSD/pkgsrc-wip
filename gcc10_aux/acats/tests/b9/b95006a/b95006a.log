@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95006a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95006a.adb
-b95006a.adb:46:11: "END E0;" expected
-b95006a.adb:50:11: "END E1;" expected
-b95006a.adb:54:11: "END E2;" expected
-b95006a.adb:61:16: "END E1;" expected
-b95006a.adb:62:11: "END E0;" expected
-b95006a.adb:69:16: "END E2;" expected
-gnatmake: "b95006a.adb" compilation error

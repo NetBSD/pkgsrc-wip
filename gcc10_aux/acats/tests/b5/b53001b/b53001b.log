@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53001b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53001b.adb
-b53001b.adb:46:06: only one "ELSE" part allowed
-b53001b.adb:49:01: "END IF;" expected for "IF" at line 42
-gnatmake: "b53001b.adb" compilation error

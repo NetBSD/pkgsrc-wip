@@ -1,5 +1,0 @@
-
-,.,. CA11019 ACATS 4.1 21-05-16 10:48:46
----- CA11019 Check that body of a (non-generic) package may depend on
-                its private generic child.
-==== CA11019 PASSED ============================.

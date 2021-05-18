@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4011a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd4011a.adb
-bd4011a.adb:49:27: range attribute cannot be used in expression
-bd4011a.adb:53:28: range attribute cannot be used in expression
-gnatmake: "bd4011a.adb" compilation error

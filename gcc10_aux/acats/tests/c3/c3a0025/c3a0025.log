@@ -1,6 +1,0 @@
-
-,.,. C3A0025 ACATS 4.1 21-05-16 10:34:59
----- C3A0025 Check that Constraint_Error is raised when a null access
-                value is converted to a null excluding anonynous
-                access-to-object type.
-==== C3A0025 PASSED ============================.

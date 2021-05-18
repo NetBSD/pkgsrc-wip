@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b01c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54b01c.adb
-b54b01c.adb:50:28: minimum allowed choice value is 1
-b54b01c.adb:50:45: maximum allowed choice value is 5
-b54b01c.adb:60:11: missing case values: 4 .. 5
-gnatmake: "b54b01c.adb" compilation error

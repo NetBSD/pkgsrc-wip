@@ -1,5 +1,0 @@
-
-,.,. CA11008 ACATS 4.1 21-05-16 10:48:40
----- CA11008 Check that a private child package can use entities
-                declared in the visible part of its parent unit.
-==== CA11008 PASSED ============================.

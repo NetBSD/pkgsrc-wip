@@ -1,6 +1,0 @@
-
-,.,. CA20003 ACATS 4.1 21-05-16 10:49:02
----- CA20003 Check that a package that is needed only because it is
-                referenced in a limited with clause in included in a
-                partition.
-==== CA20003 PASSED ============================.

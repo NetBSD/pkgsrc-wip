@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74105c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b74105c.adb
-b74105c.adb:68:22: invalid prefix in selected component "X1"
-b74105c.adb:69:22: invalid prefix in selected component "X2"
-b74105c.adb:70:22: invalid prefix in selected component "X3"
-b74105c.adb:71:22: invalid prefix in selected component "X4"
-gnatmake: "b74105c.adb" compilation error

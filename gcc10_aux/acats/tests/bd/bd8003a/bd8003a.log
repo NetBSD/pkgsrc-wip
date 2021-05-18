@@ -1,5 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8003a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bd8003a.adb
-bd8003a.adb:62:19: code statement can only appear in body of subprogram
-bd8003a.adb:67:19: code statement can only appear in body of subprogram
-gnatmake: "bd8003a.adb" compilation error

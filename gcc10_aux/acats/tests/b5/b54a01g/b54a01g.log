@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a01g.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b54a01g.adb
-b54a01g.adb:38:06: "END CASE;" expected for "CASE" at line 36
-gnatmake: "b54a01g.adb" compilation error

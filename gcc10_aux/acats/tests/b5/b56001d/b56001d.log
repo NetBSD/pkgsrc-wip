@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b56001d.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b56001d.adb
-b56001d.adb:32:14: missing "BEGIN" for "DECLARE" at line 32
-gnatmake: "b56001d.adb" compilation error

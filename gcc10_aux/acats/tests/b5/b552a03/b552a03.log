@@ -1,8 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a03.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b552a03.adb
-b552a03.adb:81:10: assignment to loop parameter not allowed
-b552a03.adb:92:07: assignment to loop parameter not allowed
-b552a03.adb:99:13: assignment to loop parameter not allowed
-b552a03.adb:112:07: assignment to loop parameter not allowed
-b552a03.adb:117:07: assignment to loop parameter not allowed
-gnatmake: "b552a03.adb" compilation error

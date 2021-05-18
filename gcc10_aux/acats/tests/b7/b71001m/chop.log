@@ -1,8 +1,0 @@
-b71001m.ada:39:11: "END P3;" expected
-b71001m.ada:40:06: "END P2;" expected
-b71001m.ada:51:11: "END P6;" expected
-b71001m.ada:52:06: "END P5;" expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001m.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001m.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b7/b71001m.ada into:
-   b71001m.adb

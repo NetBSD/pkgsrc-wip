@@ -1,6 +1,0 @@
-
-,.,. CC51D01 ACATS 4.1 21-05-16 10:50:26
----- CC51D01 Formal private extension, specific tagged type actual: body
-                of primitive subprogram executed is that of actual type.
-                Check for subprograms declared in a formal package.
-==== CC51D01 PASSED ============================.

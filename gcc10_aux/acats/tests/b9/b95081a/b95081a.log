@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95081a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b95081a.adb
-b95081a.adb:65:29: positional parameter association not allowed after named one
-b95081a.adb:67:23: positional parameter association not allowed after named one
-b95081a.adb:71:20: positional parameter association not allowed after named one
-gnatmake: "b95081a.adb" compilation error

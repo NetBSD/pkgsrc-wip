@@ -1,9 +1,0 @@
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/c7/c761010.a into:
-   c761010_1.ads
-   c761010_1.adb
-   c761010_1-var_strings.ads
-   c761010_1-var_strings-types.ads
-   c761010_1-var_strings-types.adb
-   c761010_1-main.adb
-   c761010.adb
-   c761010_1-var_strings.adb

@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53009a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53009a.adb
-b53009a.adb:43:11: declarations must come before "BEGIN"
-gnatmake: "b53009a.adb" compilation error

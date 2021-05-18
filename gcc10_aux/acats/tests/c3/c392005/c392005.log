@@ -1,6 +1,0 @@
-
-,.,. C392005 ACATS 4.1 21-05-16 10:34:19
----- C392005 Dispatching for overridden primitive subprograms: private
-                extension declared in child unit, parent is tagged
-                private whose full view is tagged record.
-==== C392005 PASSED ============================.

@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b91003a.adb
-b91003a.adb:52:22: missing body for "TK1"
-b91003a.adb:70:25: missing full declaration for type "TK1" defined at line 67
-b91003a.adb:82:22: missing body for "TK1"
-b91003a.adb:104:25: missing full declaration for type "TK1" defined at line 99
-b91003a.adb:127:25: missing full declaration for type "TK1" defined at line 121
-b91003a.adb:129:32: missing specification for task body
-gnatmake: "b91003a.adb" compilation error

@@ -1,7 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99002a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b99002a.adb
-b99002a.adb:57:27: Attribute "COUNT" must apply to entry of current task
-b99002a.adb:61:29: attribute "COUNT" must apply to entry of current task
-b99002a.adb:61:49: attribute "COUNT" must apply to entry of current task
-b99002a.adb:65:39: attribute "COUNT" must apply to entry of current task
-gnatmake: "b99002a.adb" compilation error

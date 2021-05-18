@@ -1,6 +1,0 @@
-
-,.,. CXB3019 ACATS 4.1 21-05-16 10:58:18
----- CXB3019 Check that Program_Error is raised by the predefined
-                equality operator for an unchecked union type if either 
-                operand does not have inferable discriminants.
-==== CXB3019 PASSED ============================.

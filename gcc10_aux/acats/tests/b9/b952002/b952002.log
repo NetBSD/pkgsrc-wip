@@ -1,6 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b952002.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b952002.adb
-b952002.adb:57:27: missing "when"
-b952002.adb:77:07: "end Wait_at_Meter;" expected
-b952002.adb:83:07: "end Hold_by_Priority;" expected
-gnatmake: "b952002.adb" compilation error

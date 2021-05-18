@@ -1,7 +1,0 @@
-
-,.,. CXA4036 ACATS 4.1 21-05-16 10:54:42
----- CXA4036 Check encoding, decoding and conversions between regular
-                strings and UTF_* encodings. Case 1: Standard.String.
-   - CXA4036 Convert of overlong encoding accepted with correct result.
-   - CXA4036 Decode of overlong encoding accepted with correct result.
-==== CXA4036 PASSED ============================.

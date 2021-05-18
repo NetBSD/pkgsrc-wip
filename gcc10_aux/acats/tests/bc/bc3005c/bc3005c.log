@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3005c.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support bc3005c.adb
-bc3005c.adb:66:31: expect valid subtype mark to instantiate "FORMAL"
-bc3005c.adb:66:31: instantiation abandoned
-bc3005c.adb:70:30: invalid prefix in call
-bc3005c.adb:70:30: instantiation abandoned
-bc3005c.adb:74:29: expect valid subtype mark to instantiate "FORMAL"
-bc3005c.adb:74:29: instantiation abandoned
-gnatmake: "bc3005c.adb" compilation error

@@ -1,6 +1,0 @@
-
-,.,. CA110051 ACATS 4.1 21-05-16 10:48:38
----- CA110051 Check that entities and operations declared in a package
-                 can be used in the private part of a child of a child
-                 of the package.
-==== CA110051 PASSED ============================.

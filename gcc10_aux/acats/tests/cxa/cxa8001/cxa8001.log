@@ -1,6 +1,0 @@
-
-,.,. CXA8001 ACATS 4.1 21-05-16 10:54:51
----- CXA8001 Check that all elements to be transferred to a sequential
-                file of mode Append_File will be placed following the
-                last element currently in the file.
-==== CXA8001 PASSED ============================.

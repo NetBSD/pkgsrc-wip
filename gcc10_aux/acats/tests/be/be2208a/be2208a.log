@@ -1,9 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2208a.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support be2208a.adb
-be2208a.adb:44:16: expected private type "Ada.Direct_Io.File_Type" from instance at line 38
-be2208a.adb:44:16: found private type "Ada.Sequential_Io.File_Type" from instance at line 35
-be2208a.adb:45:17: expected private type "Ada.Direct_Io.File_Type" from instance at line 38
-be2208a.adb:45:17: found private type "Ada.Sequential_Io.File_Type" from instance at line 35
-be2208a.adb:46:16: expected private type "Ada.Direct_Io.File_Type" from instance at line 38
-be2208a.adb:46:16: found private type "Ada.Sequential_Io.File_Type" from instance at line 35
-gnatmake: "be2208a.adb" compilation error

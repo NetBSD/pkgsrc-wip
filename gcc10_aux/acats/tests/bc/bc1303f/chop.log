@@ -1,6 +1,0 @@
-bc1303f.ada:39:26: identifier expected
-bc1303f.ada:45:26: identifier expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1303f.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1303f.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1303f.ada into:
-   bc1303f.adb

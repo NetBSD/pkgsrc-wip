@@ -1,4 +1,0 @@
-gnatmake -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53009b.adb -largs
-gcc -c -gnatws -g -O2 -gnat2012 -I/home/fernando/mysandboxfolder/tmp/acats/support b53009b.adb
-b53009b.adb:44:08: "L1" conflicts with declaration at line 36
-gnatmake: "b53009b.adb" compilation error

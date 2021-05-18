@@ -1,5 +1,0 @@
-b55a01d.ada:37:22: missing "LOOP"
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01d.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01d.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b5/b55a01d.ada into:
-   b55a01d.adb

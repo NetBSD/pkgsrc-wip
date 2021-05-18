@@ -1,5 +1,0 @@
-bc1016b.ada:37:06: subprogram specification expected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1016b.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1016b.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/bc/bc1016b.ada into:
-   bc1016b.adb

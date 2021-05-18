@@ -1,5 +1,0 @@
-b91001c.ada:34:16: extra "TYPE"ignored
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001c.ada: parse errors detected
-/home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001c.ada: chop may not be successful
-splitting /home/fernando/mysandboxfolder/tmp/acats/tests/b9/b91001c.ada into:
-   b91001c.adb
