@@ -8,4 +8,7 @@ include/plist.h
 include/samio.h
 include/vcfio.h
 lib/libbiolibc.a
-man/man1/biolibc.1
+lib/libbiolibc.so
+lib/libbiolibc.so.1
+lib/libbiolibc.so.1.0
+man/man3/biolibc.3
