@@ -5,10 +5,10 @@
 #              Wed May  5 08:37:52 CDT 2021               #
 ###########################################################
 
-DISTNAME=	libxtend-0.1.1.3
+DISTNAME=	libxtend-0.1.1.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	676ae60612c97e617b684afdf2253ec232a30cd4
+GITHUB_TAG=	75f7ac8b73b5222227f62267ed85265010f2765f
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/libxtendc
