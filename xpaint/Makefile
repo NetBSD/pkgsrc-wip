@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.80 2020/03/20 11:57:53 nia Exp $
 
-DISTNAME=	xpaint-3.1.2
+DISTNAME=	xpaint-3.1.3
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
