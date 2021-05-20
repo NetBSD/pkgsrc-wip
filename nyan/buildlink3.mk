@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	nyan
+
+.if !defined(NYAN_BUILDLINK3_MK)
+NYAN_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.nyan+=	nyan>=0.1.1
+BUILDLINK_ABI_DEPENDS.nyan+=	nyan>=0.1.1
+BUILDLINK_PKGSRCDIR.nyan?=	../../wip/nyan
+
+.endif # NYAN_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-nyan

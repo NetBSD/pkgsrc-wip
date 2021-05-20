@@ -2560,6 +2560,7 @@ SUBDIR+=	nuvie
 SUBDIR+=	nvi2-git
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
+SUBDIR+=	nyan
 SUBDIR+=	nyh-hoc
 SUBDIR+=	nzbget
 SUBDIR+=	objfw-fossil
