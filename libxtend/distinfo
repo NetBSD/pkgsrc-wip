@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libxtend-0.1.2.tar.gz) = 8a581b3d7b48f30f782d0398d6bf1e42fe1d3e67
-RMD160 (libxtend-0.1.2.tar.gz) = 4f5a0953cb4c733af6776ec356aaa549c9d468c9
-SHA512 (libxtend-0.1.2.tar.gz) = c87bc6731805d81fdda5cb1fe607340b82e6537f6c02da7dd8ce51eac994d7fdc5204d38c7c10b27c681efefb0fb745341f38ad9961b0c2db00842ae2fff2a47
-Size (libxtend-0.1.2.tar.gz) = 21511 bytes
+SHA1 (libxtend-0.1.2.1-4ef9bbe2981b5b5d4d01f5c38f2a0780df822ec5.tar.gz) = 7d8082d23255cedb931d59c2a54a7e54fcb6cfe3
+RMD160 (libxtend-0.1.2.1-4ef9bbe2981b5b5d4d01f5c38f2a0780df822ec5.tar.gz) = 8cc7d718b48d2b157174c4107b5b2ef8a14bee44
+SHA512 (libxtend-0.1.2.1-4ef9bbe2981b5b5d4d01f5c38f2a0780df822ec5.tar.gz) = 3f3bbae2125ef75699c0b19936ab83e10b8e3af02ffe7594d5d816d62f746c1c7976ec2b6031cad867ccb75dcdb61e3412aa0df5e88890800b6010936900b8fe
+Size (libxtend-0.1.2.1-4ef9bbe2981b5b5d4d01f5c38f2a0780df822ec5.tar.gz) = 21539 bytes
