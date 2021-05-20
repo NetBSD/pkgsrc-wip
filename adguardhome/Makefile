@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	adguardhome-0.105.2
+DISTNAME=	adguardhome-0.106.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdguardTeam/}
 EXTRACT_SUFX=	.zip
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	AdGuardHome
 
 FRONTEND=	${PKGNAME_NOREV}-frontend.tar.gz
-SITES.adguardhome-0.105.2-frontend.tar.gz=	https://bbartlomiej-public.s3.eu-central-1.amazonaws.com/adguardhome/
+SITES.adguardhome-0.106.3-frontend.tar.gz= https://bbartlomiej-public.s3.eu-central-1.amazonaws.com/adguardhome/
 DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
 
 MAINTAINER=	bbartlomiej@gmail.com
@@ -40,11 +40,8 @@ RCD_SCRIPTS+=		adguardhome
 
 do-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} install github.com/gobuffalo/packr/packr
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} generate ./...
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build -ldflags="-s -w -X github.com/AdguardTeam/AdGuardHome/internal/version.version=${DISTNAME:S,^v,,} -X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release -X github.com/AdGuardTeam/AdGuardHome/internal/version..goarm=${GOARM}"
-
-#pre-install:
-#	${RUN} ${RM} ${WRKDIR}/.destdir/usr/pkg/bin/packr
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} generate ./main.go
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build --ldflags="-s -w -X github.com/AdguardTeam/AdGuardHome/internal/version.version=${DISTNAME:S,^v,,} -X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release -X github.com/AdGuardTeam/AdGuardHome/internal/version..goarm=${GOARM}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/AdGuardHome ${DESTDIR}${PREFIX}/sbin/adguardhome
