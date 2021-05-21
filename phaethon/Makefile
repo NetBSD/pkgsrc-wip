@@ -1,12 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	phaethon-${GITHUB_TAG}
-PKGNAME=	phaethon-${GITHUB_TAG:S/v//}
+DISTNAME=	phaethon-0.0.6
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
-GITHUB_TAG=	v0.0.6
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://xoreos.org/
 COMMENT=	Resource explorer for BioWare Aurora engine games
 LICENSE=	gnu-lgpl-v2.1
