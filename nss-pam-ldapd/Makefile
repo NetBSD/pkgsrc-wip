@@ -115,5 +115,6 @@ SUBST_SED.usergroup+=	-e 's/^gid nslcd/gid ${NSLCD_GROUP}/'
 SUBST_NOOP_OK.usergroup=yes
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
