@@ -1333,7 +1333,6 @@ SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict
 SUBDIR+=	golly
-SUBDIR+=	gomuks
 SUBDIR+=	gonepass-git
 SUBDIR+=	google-perftools
 SUBDIR+=	googlecl
