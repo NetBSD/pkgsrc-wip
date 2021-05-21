@@ -112,6 +112,7 @@ SUBST_STAGE.usergroup=	post-patch
 SUBST_FILES.usergroup=	nslcd.conf
 SUBST_SED.usergroup=	-e 's/^uid nslcd/uid ${NSLCD_USER}/'
 SUBST_SED.usergroup+=	-e 's/^gid nslcd/gid ${NSLCD_GROUP}/'
+SUBST_NOOP_OK.usergroup=yes
 
 .include "../../lang/python/application.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
