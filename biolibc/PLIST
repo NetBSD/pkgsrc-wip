@@ -11,5 +11,10 @@ lib/libbiolibc.a
 lib/libbiolibc.so
 lib/libbiolibc.so.1
 lib/libbiolibc.so.1.0
+man/man3/bed_check_order.3
+man/man3/bed_gff_cmp.3
+man/man3/bed_read_feature.3
+man/man3/bed_set_fields.3
 man/man3/bed_skip_header.3
+man/man3/bed_write_feature.3
 man/man3/biolibc.3
