@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libtls-bearssl-0.3.tar.gz) = 3158239fa466e30946e30e04c89966a44d2306c9
-RMD160 (libtls-bearssl-0.3.tar.gz) = b4417eb345b52b4fc4f3e5a622346afad61bef32
-SHA512 (libtls-bearssl-0.3.tar.gz) = 01aeb46a02068a6996c697e00ec579a823ef61d8e8bf739abd031b67065e4ebd5652dfc76fae23628f27dd41020d1e7c0c3cdf121316cfd23d9b2b7879c8c41a
-Size (libtls-bearssl-0.3.tar.gz) = 40554 bytes
+SHA1 (libtls-bearssl-0.5.tar.gz) = 7a5ff7cd8fdb346d562696d5ffdf537a20a3f2b3
+RMD160 (libtls-bearssl-0.5.tar.gz) = b5066ab243c576f7dedaeb5afa7f0788fa85d498
+SHA512 (libtls-bearssl-0.5.tar.gz) = 0e65ec8f95b80ce6d34be16566a890fc290b9f6554b8dc8fb722d574c6c3d2df1c490da83cecff442f8fa1d0e347a88d102728e87568b74093db74bfd6ba9220
+Size (libtls-bearssl-0.5.tar.gz) = 40652 bytes

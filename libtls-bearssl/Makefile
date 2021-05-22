@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		libtls-bearssl-0.3
+DISTNAME=		libtls-bearssl-0.5
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=		${PKGBASE}
