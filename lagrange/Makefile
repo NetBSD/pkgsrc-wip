@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lagrange-1.4.0
+DISTNAME=	lagrange-1.4.2
 CATEGORIES=	net
 MASTER_SITES=	https://git.skyjake.fi/gemini/lagrange/releases/download/v${PKGVERSION_NOREV}/
 
