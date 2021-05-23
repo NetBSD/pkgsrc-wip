@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.superlu?=	../../wip/superlu
 
 # When it is the static lib, the users actually have
 # to link to blas themselves. Fragile, perhaps.
-.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 
 .endif # SUPERLU_BUILDLINK3_MK
 

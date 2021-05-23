@@ -49,7 +49,7 @@ do-install:
 	${CHMOD} a+x ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*.sh
 	${CHMOD} g-w ${DESTDIR}${PREFIX}/${EXAMPLESDIR}/*
 
-.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/nlopt/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

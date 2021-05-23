@@ -41,8 +41,8 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
 
-.include "../../wip/mk/blas.buildlink3.mk"
-.include "../../wip/cblas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
+.include "../../math/cblas/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

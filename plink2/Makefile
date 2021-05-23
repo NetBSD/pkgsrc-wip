@@ -59,7 +59,7 @@ post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/plink2-bench ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/blas.buildlink3.mk"
-.include "../../wip/cblas/buildlink3.mk"
+.include "../../math/cblas/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

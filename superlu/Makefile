@@ -27,6 +27,6 @@ TEST_TARGET=		test
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}/build
 
-.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
