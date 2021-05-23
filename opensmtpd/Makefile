@@ -2,6 +2,7 @@
 
 VERSION=	6.8.0p2
 DISTNAME=	opensmtpd-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -34,10 +35,8 @@ GNU_CONFIGURE=		yes
 USE_DB185=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-mantype=man
-CONFIGURE_ARGS+=	--with-privsep-path=${SMTPD_HOME}
-CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--enable-table-db
-CONFIGURE_ARGS+=	--without-zlib-version-check
+CONFIGURE_ARGS+=	--with-libssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--with-table-db
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
