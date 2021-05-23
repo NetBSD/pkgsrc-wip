@@ -1,21 +1,15 @@
 # $NetBSD: Makefile,v 1.12 2012/11/28 21:43:05 outpaddling Exp $
-# FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
-# DISTNAME=	SuiteSparse-3.6.1
-# PKGNAME=	suitesparse-3.6.1
 DISTNAME=	SuiteSparse-4.0.2
 PKGNAME=	suitesparse-4.0.2
 PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://faculty.cse.tamu.edu/davis/SuiteSparse/
-#MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
-# Actually uses a combination of gpl and lgpl
-# Not sure how to specify 2 licenses, so just listing the stricter one
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,9 +28,6 @@ LIB=		-lm
 LIB=		-lm -lrt
 .endif
 
-# /home/bacon/Pkgsrc/pkgsrc-1/mk/pkgformat/pkg/list-dependencies: line 52: -e: command not found
-# Problem is ${SED} is empty
-# TOOLS_PLATFORM.gsed=	#empty
 USE_TOOLS+=	gmake gsed
 
 USE_LANGUAGES=	c c++ fortran77
@@ -124,6 +115,6 @@ do-install:
 #		j=$${i##*/} ;  ${LN} -sf $${j%.a}.so.${SVERSION} ${DESTDIR}${PREFIX}/lib/$${j%.a}.so ; \
 #	done
 
-.include "../../wip/mk/blas.buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/metis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
