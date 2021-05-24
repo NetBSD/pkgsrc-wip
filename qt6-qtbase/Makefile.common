@@ -3,6 +3,7 @@
 # used by wip/qt6-psql/Makefile
 # used by wip/qt6-qtbase/Makefile
 # used by wip/qt6-qtcharts/Makefile
+# used by wip/qt6-qtdatavis3d/Makefile
 # used by wip/qt6-qtdeclarative/Makefile
 # used by wip/qt6-qtimageformats/Makefile
 # used by wip/qt6-qtnetworkauth/Makefile
