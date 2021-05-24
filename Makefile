@@ -4828,6 +4828,7 @@ SUBDIR+=	qt6-psql
 SUBDIR+=	qt6-qt3d
 SUBDIR+=	qt6-qt5compat
 SUBDIR+=	qt6-qtbase
+SUBDIR+=	qt6-qtcharts
 SUBDIR+=	qt6-qtdeclarative
 SUBDIR+=	qt6-qtimageformats
 SUBDIR+=	qt6-qtnetworkauth
