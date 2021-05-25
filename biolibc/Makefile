@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	biolibc-0.1.2.6
+DISTNAME=	biolibc-0.1.2.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	bb8ab533e9a78a07a73b064a1a90c119d319988e
+GITHUB_TAG=	05355ded213ebb2af149e275b614d084f5bb47f1
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc
@@ -15,7 +15,7 @@ INSTALL_TARGET=	install-strip
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == Darwin
-# For $(shell realpath ...).  != doesn't work in Apple's make.
+# For $(shell realpath ...).  != doesn't work in Apple's gmake.
 USE_TOOLS=	gmake
 BUILD_DEPENDS=	realpath>0:../../wip/realpath
 BUILD_TARGET=	apple
