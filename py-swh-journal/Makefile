@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-tenacity>=6.2.0:../../wip/py-tenacity
+DEPENDS+=	${PYPKGPREFIX}-tenacity>=6.2.0:../../devel/py-tenacity
 DEPENDS+=	${PYPKGPREFIX}-swh-core>=0.10.0:../../wip/py-swh-core
 DEPENDS+=	${PYPKGPREFIX}-swh-model>=0.7.2:../../wip/py-swh-model
 
