@@ -2,6 +2,7 @@
 
 DISTNAME=	rustc-1.52.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 
@@ -76,7 +77,9 @@ CHECK_SSP_SUPPORTED=	no
 # some may chose to mostly build faster,
 # and deal with any failures due to deadlocks
 .if !empty(rust.MAKE_JOBS_SAFE)
-MAKE_JOBS_SAFE=	${rust.MAKE_JOBS_SAFE}
+.  if ${rust.MAKE_JOBS_SAFE:tl} == "yes"
+MAKE_JOBS_SAFE=		yes
+.  endif
 .endif
 
 .if !empty(rust.BUILD_TARGET)
@@ -88,6 +91,12 @@ BUILD_TARGET=	${rust.BUILD_TARGET}
 BUILD_TARGET?=		dist
 .else
 BUILD_TARGET?=		build
+.endif
+
+.if ${BUILD_TARGET} == "dist"
+# Reduce size of bootstrap:
+CONFIGURE_ARGS+=	--disable-docs
+CONFIGURE_ARGS+=	--disable-compiler-docs
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
