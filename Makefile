@@ -526,6 +526,7 @@ SUBDIR+=	cpm
 SUBDIR+=	cppzmq
 SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
+SUBDIR+=	cqlsh
 SUBDIR+=	crabemu
 SUBDIR+=	creal
 SUBDIR+=	cream
