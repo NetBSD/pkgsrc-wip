@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../wip/zabbix52-server/Makefile.common"
+.include "../../wip/zabbix54-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Zabbix PHP 7.2+ frontend

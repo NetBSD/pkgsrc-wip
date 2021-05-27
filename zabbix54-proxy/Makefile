@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../wip/zabbix52-server/Makefile.common"
+.include "../../wip/zabbix54-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-proxy-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone

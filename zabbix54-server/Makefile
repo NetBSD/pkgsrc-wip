@@ -1,6 +1,6 @@
 # $NetBSD$
-# used by wip/zabbix52-proxy/Makefile
-# used by wip/zabbix52-agent/Makefile
+# used by wip/zabbix54-proxy/Makefile
+# used by wip/zabbix54-agent/Makefile
 #
 .include "Makefile.common"
 

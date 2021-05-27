@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../wip/zabbix52-server/Makefile.common"
+.include "../../wip/zabbix54-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-agent-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
