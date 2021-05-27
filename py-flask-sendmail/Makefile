@@ -2,6 +2,7 @@
 
 DISTNAME=	Flask-Sendmail-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Sendmail/}
 
