@@ -3681,6 +3681,7 @@ SUBDIR+=	py-fjd
 SUBDIR+=	py-flask-babel
 SUBDIR+=	py-flask-migrate
 SUBDIR+=	py-flask-pwa
+SUBDIR+=	py-flask-sendmail
 SUBDIR+=	py-flask-simplelogin
 SUBDIR+=	py-flatbuffers
 SUBDIR+=	py-flavio
