@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tor-0.4.6.3-rc
+DISTNAME=	tor-0.4.6.4-rc
 PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
@@ -21,18 +21,15 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/tordev
 CONFIGURE_ENV+=		CPP=${CPP:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 
-# as of 0.4.5.2-alpha:
-# FAIL: src/test/unittest_part2.sh
-# FAIL: src/test/unittest_part8.sh
-# FAIL: src/test/test_include.sh
+# as of 0.4.6.4-rc
 #============================================================================
-#Testsuite summary for tor 0.4.5.2-alpha
+#Testsuite summary for tor 0.4.6.4-rc
 #============================================================================
 ## TOTAL: 33
-## PASS:  26
+## PASS:  29
 ## SKIP:  4
 ## XFAIL: 0
-## FAIL:  3
+## FAIL:  0
 ## XPASS: 0
 ## ERROR: 0
 TEST_TARGET=		check
