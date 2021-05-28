@@ -11,8 +11,7 @@ HOMEPAGE=	https://github.com/outpaddling/libpare
 COMMENT=	Pointer Array Regular Expressions
 LICENSE=	2-clause-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+pre-build:
+	cd ${WRKSRC} && make depend LOCALBASE=${LOCALBASE}
 
 .include "../../mk/bsd.pkg.mk"
