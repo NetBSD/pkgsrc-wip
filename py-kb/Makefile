@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
+# Not for 2.7.  3.6 and 3.7 would need py-attr that is currently not packaged
 PYTHON_VERSIONS_INCOMPATIBLE=	27 36 37
 
 USE_LANGUAGES=	# none
