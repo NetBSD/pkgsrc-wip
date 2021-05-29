@@ -3889,7 +3889,6 @@ SUBDIR+=	py-jupyter-console
 SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-kabuki
 SUBDIR+=	py-karta
-SUBDIR+=	py-kb
 SUBDIR+=	py-kcs11
 SUBDIR+=	py-kenv
 SUBDIR+=	py-keras
