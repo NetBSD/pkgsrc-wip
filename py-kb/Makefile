@@ -4,7 +4,7 @@ DISTNAME=	kb-manager-0.1.6
 EGGNAME=	${DISTNAME:S/-manager//}
 PKGNAME=	${PYPKGPREFIX}-${EGGNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://files.pythonhosted.org/packages/9d/a8/6c69a6c9e4bff2d8156cdc5b0307958b7f493255fcc7945975728a5981a2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/kb-manager/}
 
 MAINTAINER=	nebbionegiuseppe@gmail.com
 HOMEPAGE=	https://github.com/gnebbia/kb/
