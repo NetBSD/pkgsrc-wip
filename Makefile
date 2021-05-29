@@ -4813,7 +4813,6 @@ SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qrint
 SUBDIR+=	qrq
-SUBDIR+=	qrupdate
 SUBDIR+=	qstat214
 SUBDIR+=	qt-openzwave
 SUBDIR+=	qt4-gstreamer
