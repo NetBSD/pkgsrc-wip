@@ -11,11 +11,11 @@ HOMEPAGE=	https://github.com/gnebbia/kb/
 COMMENT=	Minimalist command line knowledge base manager
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-attrs>=0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-colored>=0:../../textproc/py-colored
-DEPENDS+=	${PYPKGPREFIX}-gitpython>=0:../../devel/py-gitpython
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-colored-[0-9]*:../../textproc/py-colored
+DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 36 37
 
