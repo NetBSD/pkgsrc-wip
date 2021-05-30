@@ -63,7 +63,7 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
-UNLIMIT_RESOURCES+=	cputime datasize memorysize
+UNLIMIT_RESOURCES+=	cputime datasize virtualsize
 
 TEST_TARGET=	check
 
