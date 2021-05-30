@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (lagrange-1.4.2.tar.gz) = 2b4b1086fc04cf8457888ed4df6ab9f3abd27709
-RMD160 (lagrange-1.4.2.tar.gz) = acf293474f235dec311e61b5cb11ded3dd57f3e6
-SHA512 (lagrange-1.4.2.tar.gz) = ea0c8331011ba3d64b3e3053ec1a36016f49da188165552db90cb7f8bf2c46d4c42fd197d5d8edd4e243abb9821e7d520f1e5d12bbc6f49917f8b417329cb291
-Size (lagrange-1.4.2.tar.gz) = 21616139 bytes
+SHA1 (lagrange-1.5.0.tar.gz) = 8cc262c4b549590c0af6d9ada68877810ebd8336
+RMD160 (lagrange-1.5.0.tar.gz) = 0ab0b064d91e1608362743480afb426d15254fe8
+SHA512 (lagrange-1.5.0.tar.gz) = 157c0bf3eee446ed66f9ad90a24aaee763a0a88834c9cecfafd95112e35f22f569766cb56567dde97a18b96a2485885374962571b0d0545d356b9fc65e9994b1
+Size (lagrange-1.5.0.tar.gz) = 20403900 bytes
