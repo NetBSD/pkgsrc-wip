@@ -253,7 +253,7 @@ share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
 share/emacs/${PKGVERSION}/etc/emacs-mail.desktop
-share/emacs/${PKGVERSION}/etc/emacs.appdata.xml
+share/emacs/${PKGVERSION}/etc/emacs.metainfo.xml
 share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.service
@@ -4057,4 +4057,4 @@ share/icons/hicolor/scalable/apps/emacs.ico
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document23.svg
-share/metainfo/emacs.appdata.xml
+share/metainfo/emacs.metainfo.xml
