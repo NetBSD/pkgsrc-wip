@@ -43,6 +43,9 @@ share/jitsi-meet/images/virtual-background/background-1.jpg
 share/jitsi-meet/images/virtual-background/background-2.jpg
 share/jitsi-meet/images/virtual-background/background-3.jpg
 share/jitsi-meet/images/virtual-background/background-4.jpg
+share/jitsi-meet/images/virtual-background/background-5.jpg
+share/jitsi-meet/images/virtual-background/background-6.jpg
+share/jitsi-meet/images/virtual-background/background-7.jpg
 share/jitsi-meet/images/watermark.svg
 share/jitsi-meet/images/welcome-background.png
 share/jitsi-meet/index.android.js
@@ -98,8 +101,10 @@ share/jitsi-meet/lang/languages-ru.json
 share/jitsi-meet/lang/languages-sc.json
 share/jitsi-meet/lang/languages-sk.json
 share/jitsi-meet/lang/languages-sl.json
+share/jitsi-meet/lang/languages-sq.json
 share/jitsi-meet/lang/languages-sr.json
 share/jitsi-meet/lang/languages-sv.json
+share/jitsi-meet/lang/languages-te.json
 share/jitsi-meet/lang/languages-tr.json
 share/jitsi-meet/lang/languages-uk.json
 share/jitsi-meet/lang/languages-vi.json
@@ -153,8 +158,10 @@ share/jitsi-meet/lang/main-ru.json
 share/jitsi-meet/lang/main-sc.json
 share/jitsi-meet/lang/main-sk.json
 share/jitsi-meet/lang/main-sl.json
+share/jitsi-meet/lang/main-sq.json
 share/jitsi-meet/lang/main-sr.json
 share/jitsi-meet/lang/main-sv.json
+share/jitsi-meet/lang/main-te.json
 share/jitsi-meet/lang/main-tr.json
 share/jitsi-meet/lang/main-uk.json
 share/jitsi-meet/lang/main-vi.json
@@ -235,4 +242,3 @@ share/jitsi-meet/static/welcomePageAdditionalCard.html
 share/jitsi-meet/static/welcomePageAdditionalContent.html
 share/jitsi-meet/title.html
 share/jitsi-meet/webpack.config.js
-@pkgdir etc/jitsi/meet

@@ -68,11 +68,11 @@ share/jitsi-videobridge/lib/jetty-util-ajax-9.4.35.v20201120.jar
 share/jitsi-videobridge/lib/jicoco-1.1-80-g6411afd.jar
 share/jitsi-videobridge/lib/jicoco-config-1.1-80-g6411afd.jar
 share/jitsi-videobridge/lib/jitsi-android-osgi-1.0-20190327.160432-3.jar
-share/jitsi-videobridge/lib/jitsi-media-transform-1.0-229-gfa5ea3f.jar
+share/jitsi-videobridge/lib/jitsi-media-transform-1.0-234-gf48db15.jar
 share/jitsi-videobridge/lib/jitsi-metaconfig-315a3cec35.jar
 share/jitsi-videobridge/lib/jitsi-srtp-1.0-33-gfe519d1.jar
 share/jitsi-videobridge/lib/jitsi-stats-1.0-4-g6d906b2.jar
-share/jitsi-videobridge/lib/jitsi-utils-1.0-82-gcab10f0.jar
+share/jitsi-videobridge/lib/jitsi-utils-1.0-88-g9bdd2a7.jar
 share/jitsi-videobridge/lib/jitsi-xmpp-extensions-1.0-21-g3651d97.jar
 share/jitsi-videobridge/lib/jna-5.5.0.jar
 share/jitsi-videobridge/lib/jnilib-1.0-4-g97f4e5e.jar
