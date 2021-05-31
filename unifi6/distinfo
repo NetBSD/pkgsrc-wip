@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2020/08/30 06:03:53 tnn Exp $
+$NetBSD: distinfo,v 1.15 2021/05/31 17:11:34 gdt Exp $
 
 SHA1 (snappy-1.0.5.tar.gz) = 3a3df859cf33f78f8e945c3f67f28685f0f38bb1
 RMD160 (snappy-1.0.5.tar.gz) = c9dec9a8a2faac7bf85b79bcf82f8080713103aa

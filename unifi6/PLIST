@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.12 2021/05/31 17:11:33 gdt Exp $
 unifi/bin/mongod
 unifi/dl/firmware/bundles.json
 unifi/lib/ace.jar
