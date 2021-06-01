@@ -1,17 +1,16 @@
 @comment $NetBSD$
-include/bedio.h
-include/biolibc.h
-include/biostring.h
-include/dsvio.h
-include/gffio.h
-include/plist.h
-include/sam-buff.h
-include/samio.h
-include/vcfio.h
+include/biolibc/bed.h
+include/biolibc/biolibc.h
+include/biolibc/dsv.h
+include/biolibc/gff.h
+include/biolibc/plist.h
+include/biolibc/sam-buff.h
+include/biolibc/sam.h
+include/biolibc/vcf.h
 lib/libbiolibc.a
 lib/libbiolibc.so
-lib/libbiolibc.so.1
-lib/libbiolibc.so.1.0
+lib/libbiolibc.so.2
+lib/libbiolibc.so.2.0
 man/man3/bed_check_order.3
 man/man3/bed_gff_cmp.3
 man/man3/bed_read_feature.3
