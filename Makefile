@@ -5774,7 +5774,6 @@ SUBDIR+=	wput
 SUBDIR+=	wqy-microhei-ttf
 SUBDIR+=	wqy-zenhei-ttf
 SUBDIR+=	wrcs
-SUBDIR+=	wsjt
 SUBDIR+=	wsjtx
 SUBDIR+=	wsmake
 SUBDIR+=	wvstreams
