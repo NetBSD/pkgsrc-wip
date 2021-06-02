@@ -1,4 +1,3 @@
-WASI Libc is a libc for WebAssembly programs built on top of WASI system
-calls. It provides a wide array of POSIX-compatible C APIs, including
-support for standard I/O, file I/O, filesystem manipulation, memory management,
- time, string, environment variables, program startup, and many other APIs.
+InitWare isn't ready to use yet!! Unless you are doing so for fun,
+to experiment, or to contribute, you most likely do not want to try to install
+InitWare until a first stable release is made!
