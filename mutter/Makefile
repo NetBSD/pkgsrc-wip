@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2020/11/22 00:05:09 gutteridge Exp $
 
-DISTNAME=	mutter-40.0
+DISTNAME=	mutter-40.1
 CATEGORIES=	wm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,8 +10,7 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/mutter
 COMMENT=	GNOME window manager
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		msgfmt pkg-config
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+USE_TOOLS+=		msgfmt pkg-config gdbus-codegen
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 .include "../../graphics/MesaLib/features.mk"
