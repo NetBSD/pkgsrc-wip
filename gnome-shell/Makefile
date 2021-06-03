@@ -11,7 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/GnomeShell
 COMMENT=	Next generation GNOME shell
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config perl msgfmt xgettext
+USE_TOOLS+=	pkg-config perl msgfmt xgettext gdbus-codegen
 
 MESON_ARGS+=	-Dnetworkmanager=false
 MESON_ARGS+=	-Dsystemd=false
@@ -21,7 +21,6 @@ MESON_ARGS+=	-Dman=true
 
 TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-TOOL_DEPENDS+=	gdbus-codegen>=2.64:../../devel/gdbus-codegen
 
 DEPENDS+=	libgdm>=40.0:../../x11/libgdm
 
