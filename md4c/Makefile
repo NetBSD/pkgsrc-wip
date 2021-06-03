@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	md4c
-GITHUB_TAG=	release-0.4.7
+GITHUB_TAG=	release-0.4.8
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${DISTNAME:S/release-//}
 CATEGORIES=	textproc converters
