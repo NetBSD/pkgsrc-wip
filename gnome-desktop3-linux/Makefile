@@ -14,9 +14,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME3 desktop-wide documents and libgnome-desktop library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.1
 
-TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-
-USE_TOOLS+=		pkg-config xgettext
+USE_TOOLS+=		pkg-config xgettext gdbus-codegen
 PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
 MESON_ARGS+=		-Dsystemd=disabled
