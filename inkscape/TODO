@@ -1,0 +1,181 @@
+Builds and packages fine, but dies during startup:
+
+** (org.inkscape.Inkscape:66): WARNING **: 10:54:36.268: Fonts dir '/home/wiz/.config/inkscape/fonts' does not exist and will be ignored.
+Shortcut::read: invalid verb: DialogSpellcheck
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.278: Could not load image 'resources/template_about.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_about.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.278: Could not load a pixbuf from icon theme.
+This may indicate that pixbuf loaders or the mime database could not be found.
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.278: Could not load image 'resources/template_icon_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_icon_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.279: Could not load image 'resources/template_icon_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_icon_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.279: Could not load image 'resources/template_icon_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_icon_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.280: Could not load image 'resources/template_icon_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_icon_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.280: Could not load image 'resources/template_icon_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_icon_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.281: Could not load image 'resources/template_icon_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_icon_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.281: Could not load image 'resources/template_businesscard_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.282: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.282: Could not load image 'resources/template_print_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.283: Could not load image 'resources/template_print_US_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_US_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.284: Could not load image 'resources/template_print_US_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_US_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.284: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.285: Could not load image 'resources/template_print_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.285: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.286: Could not load image 'resources/template_print_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.286: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.287: Could not load image 'resources/template_print_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.287: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.288: Could not load image 'resources/template_print_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.288: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.289: Could not load image 'resources/template_print_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.289: Could not load image 'resources/template_businesscard_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.290: Could not load image 'resources/template_businesscard_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.290: Could not load image 'resources/template_businesscard_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.291: Could not load image 'resources/template_businesscard_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.291: Could not load image 'resources/template_businesscard_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.292: Could not load image 'resources/template_businesscard_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.292: Could not load image 'resources/template_businesscard_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.293: Could not load image 'resources/template_businesscard_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_businesscard_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.294: Could not load image 'resources/template_envelope_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_envelope_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.294: Could not load image 'resources/template_print_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.295: Could not load image 'resources/template_envelope_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_envelope_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.295: Could not load image 'resources/template_print_US_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_US_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.296: Could not load image 'resources/template_print_US_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_US_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.296: Could not load image 'resources/template_print_US_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_US_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.297: Could not load image 'resources/template_print_US_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_print_US_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.297: Could not load image 'resources/template_desktop_hd_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_desktop_hd_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.298: Could not load image 'resources/template_desktop_hd_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_desktop_hd_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.298: Could not load image 'resources/template_desktop_hd_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_desktop_hd_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.299: Could not load image 'resources/template_desktop_hd_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_desktop_hd_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.299: Could not load image 'resources/template_desktop_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_desktop_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.300: Could not load image 'resources/template_mobile_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_mobile_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.300: Could not load image 'resources/template_mobile_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_mobile_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.301: Could not load image 'resources/template_mobile_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_mobile_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.301: Could not load image 'resources/template_tablet_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_tablet_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.302: Could not load image 'resources/template_tablet_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_tablet_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.302: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.303: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.304: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.304: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.305: Could not load image 'resources/template_social_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.305: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.306: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.306: Could not load image 'resources/template_social_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.307: Could not load image 'resources/template_social_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.307: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.308: Could not load image 'resources/template_social_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.308: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.309: Could not load image 'resources/template_social_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.309: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.310: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.310: Could not load image 'resources/template_social_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.311: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.311: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.312: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.312: Could not load image 'resources/template_social_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.313: Could not load image 'resources/template_social_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.313: Could not load image 'resources/template_social_portrait.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_portrait.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.314: Could not load image 'resources/template_social_square.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_social_square.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.315: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.315: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.316: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.316: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.317: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.317: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.318: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.318: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.319: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.319: Could not load image 'resources/template_video_landscape.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/resources/template_video_landscape.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.322: Could not load image '../screens/start-welcome-text.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/../screens/start-welcome-text.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.333: Could not load image '../pixmaps/user.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/../pixmaps/user.svg”
+
+(org.inkscape.Inkscape:66): Gtk-WARNING **: 10:54:36.334: Could not load image '../pixmaps/support.svg': Couldn’t recognize the image file format for file “/usr/pkg/share/inkscape/ui/../pixmaps/support.svg”
+**
+Gtk:ERROR:gtkiconhelper.c:494:ensure_surface_for_gicon: assertion failed (error == NULL): Failed to load /usr/pkg/share/inkscape/icons/hicolor/scalable/actions/image-missing.svg: Unrecognized image file format (gdk-pixbuf-error-quark, 3)
+Bail out! Gtk:ERROR:gtkiconhelper.c:494:ensure_surface_for_gicon: assertion failed (error == NULL): Failed to load /usr/pkg/share/inkscape/icons/hicolor/scalable/actions/image-missing.svg: Unrecognized image file format (gdk-pixbuf-error-quark, 3)
+
+Emergency save activated!
+Emergency save completed. Inkscape will close now.
+If you can reproduce this crash, please file a bug at https://inkscape.org/report
+with a detailed description of the steps leading to the crash, so we can fix it.
