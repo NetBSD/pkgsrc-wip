@@ -2482,6 +2482,7 @@ SUBDIR+=	ncp
 SUBDIR+=	ncrack
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
+SUBDIR+=	necat
 SUBDIR+=	necpp-git
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
