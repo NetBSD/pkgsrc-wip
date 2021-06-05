@@ -3,7 +3,7 @@ $NetBSD$
 Use appropriate options for dlopen.
 Link pkgsrc libdumb, libaldmb and freetype2.
 
---- Engine/Makefile-defs.linux.orig	2020-12-29 21:18:54.000000000 +0000
+--- Engine/Makefile-defs.linux.orig	2021-06-04 16:22:11.000000000 +0000
 +++ Engine/Makefile-defs.linux
 @@ -1,7 +1,7 @@
  USE_BUILT_IN_LIBSRC = 0
@@ -14,7 +14,7 @@ Link pkgsrc libdumb, libaldmb and freetype2.
  
  INCDIR = ../Engine ../Common ../Common/libinclude ../Common/libsrc/alfont-2.0.9 ../Plugins ../Engine/libsrc/glad/include
  LIBDIR =
-@@ -25,6 +25,8 @@ LIBS += $(shell pkg-config --libs allegr
+@@ -24,6 +24,8 @@ LIBS += $(shell pkg-config --libs allegr
  LIBS += $(shell pkg-config --libs x11)
  LIBS += $(shell pkg-config --libs ogg)
  LIBS += $(shell pkg-config --libs theora)
@@ -23,22 +23,21 @@ Link pkgsrc libdumb, libaldmb and freetype2.
  
  ifeq ($(USE_TREMOR), 1)
    LIBS += -lvorbisidec
-@@ -33,11 +35,16 @@ else
-   LIBS += $(shell pkg-config --libs vorbis)
+@@ -35,10 +37,15 @@ LIBS += $(shell pkg-config --libs vorbis
+ 
+ ifneq ($(USE_BUILT_IN_LIBSRC), 1)
+ ALDUMB :=
+-LIBS += -laldmb -ldumb
++LIBS += $(shell pkg-config --libs dumb)
++LIBS += -laldmb
  endif
- LIBS += $(shell pkg-config --libs vorbisfile)
--LIBS += -ldl -lpthread -lc -lm -lstdc++
-+LIBS += -lpthread -lc -lm -lstdc++
+ 
+-LIBS += -ldl -lpthread -lm
++LIBS += -lpthread -lm
 +
 +CFLAGS += $(DL_CFLAGS)
 +LDFLAGS += $(DL_LDFLAGS)
 +LIBS += $(DL_LIBS)
  
- ifneq ($(USE_BUILT_IN_LIBSRC), 1)
- ALDUMB :=
--LIBS += -Wl,--push-state,-Bstatic -laldmb -ldumb -Wl,--pop-state
-+LIBS += $(shell pkg-config --libs dumb)
-+LIBS += -laldmb
- endif
- 
  ifeq ($(ALLEGRO_MAGIC_DRV), 1)
+   CFLAGS += -DALLEGRO_MAGIC_DRV

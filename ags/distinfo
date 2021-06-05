@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (ags-3.5.0.31.tar.gz) = fd68ba60aba9f59efcfd5503e3f28620b9d9fe8a
-RMD160 (ags-3.5.0.31.tar.gz) = b8f8a853167a9106b3513c480bff9aca867d37be
-SHA512 (ags-3.5.0.31.tar.gz) = 8cc58698a5b024275543b8231738add676d3451d604b48c7bd5074838f69fb4a0dcafb39df73d2235b5266bd63fa3c4edbeed85b1cc6c36d8d022621de9b649e
-Size (ags-3.5.0.31.tar.gz) = 7615172 bytes
+SHA1 (ags-3.5.1.7.tar.gz) = bc0df7e1d2d47cc1aa79d3f446efc81095cd6f73
+RMD160 (ags-3.5.1.7.tar.gz) = acfb10370ae337ceb4a3a8b3c73683129ba39504
+SHA512 (ags-3.5.1.7.tar.gz) = 0f5e655f3e701ba6af73e8567993b719da1811aa60c966ea568ca83805ae38f38d4342f0249f85a0de848b6efb2ee7aac2a1cdc53c77d911279ab3a396123e45
+Size (ags-3.5.1.7.tar.gz) = 7638322 bytes
 SHA1 (patch-Common_core_platform.h) = 393ae8b7e90601cfab0b11ecb185693db6a24ee1
 SHA1 (patch-Engine_Makefile) = 849759ce98a4e4cdb5bf2d1ebb961295169ab170
-SHA1 (patch-Engine_Makefile-defs.linux) = 9461a89b4c2c956206abe584a9fca155440870e2
+SHA1 (patch-Engine_Makefile-defs.linux) = f283deedc28ca4c720cad52579f849668e86a30c
 SHA1 (patch-Engine_libsrc_libcda-0.5_linux.c) = f4f2bd480b36c1c47aa724b29b620b27a4ad392b
