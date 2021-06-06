@@ -12,6 +12,7 @@ share/doc/cfssl/api/endpoint_authsign.txt
 share/doc/cfssl/api/endpoint_bundle.txt
 share/doc/cfssl/api/endpoint_certinfo.txt
 share/doc/cfssl/api/endpoint_crl.txt
+share/doc/cfssl/api/endpoint_health.txt
 share/doc/cfssl/api/endpoint_info.txt
 share/doc/cfssl/api/endpoint_init_ca.txt
 share/doc/cfssl/api/endpoint_newcert.txt

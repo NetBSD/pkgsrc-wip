@@ -1,7 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	cfssl-1.5.0
-PKGREVISION=	1
+PKGNAME=	cfssl-1.6.0
 DISTNAME=	cfssl-${GITHUB_TAG}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cloudflare/}
