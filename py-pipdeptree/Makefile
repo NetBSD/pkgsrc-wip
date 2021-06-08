@@ -2,7 +2,7 @@
 
 DISTNAME=	pipdeptree-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	pkgtools
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pipdeptree/}
 
 MAINTAINER=	root@zta.lk
