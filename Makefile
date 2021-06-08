@@ -3878,6 +3878,7 @@ SUBDIR+=	py-jitcode
 SUBDIR+=	py-jitcxde-common
 SUBDIR+=	py-jokosher
 SUBDIR+=	py-jose
+SUBDIR+=	py-joypy
 SUBDIR+=	py-json-logger
 SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonrequester
