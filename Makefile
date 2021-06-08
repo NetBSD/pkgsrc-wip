@@ -2463,6 +2463,7 @@ SUBDIR+=	n2n
 SUBDIR+=	naev
 SUBDIR+=	nag
 SUBDIR+=	nagios-plugin-mysql_health
+SUBDIR+=	nanomath
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	nary
 SUBDIR+=	natali
