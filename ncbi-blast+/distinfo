@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2019/01/07 15:00:10 bacon Exp $
+$NetBSD$
 
 SHA1 (ncbi-blast-2.8.1+-src.tar.gz) = 16573b642d7861d0bed67f3eb1174fc646819eec
 RMD160 (ncbi-blast-2.8.1+-src.tar.gz) = ef8df6c4b3cae18b2ab4509af15554ee8d8f9bfd

@@ -2,7 +2,6 @@
 
 DISTNAME=	ncbi-blast-2.8.1+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-PKGREVISION=	5
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
@@ -19,7 +18,7 @@ SUBST_STAGE.configure=	pre-configure
 SUBST_SED.configure+=	-e 's|-D_THREAD_SAFE|-D_THREAD_SAFE -D__RUNETYPE_INTERNAL|'
 SUBST_SED.configure+=	-e '/--infodir=DIR/d'
 SUBST_SED.configure+=	-e '/--mandir=DIR/d'
-SUBST_FILES.configure+=	${WRKSRC}/src/build-system/configure
+SUBST_FILES.configure+=	src/build-system/configure
 
 USE_TOOLS+=		bash gmake perl
 USE_LANGUAGES=		c c++
@@ -45,6 +44,12 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 # configure checks only for undefined reference, not for usability
 CONFIGURE_ENV+=		ac_cv_func_statfs=no
 .endif
+
+# c++/src/objtools/edit/seq_entry_edit.cpp: In member function 'void ncbi::objects::edit::{anonymous}::CSeqdescSortMap::Init()':
+# c++/src/objtools/edit/seq_entry_edit.cpp:172:44: error: array subscript has type 'char' [-Werror=char-subscripts]
+#              while (descr_insert_order[index] != 0)
+# Maybe fix this later.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
