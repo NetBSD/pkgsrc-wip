@@ -16,6 +16,6 @@ DEPENDS+=	NanoFilt>=2.6.0:../../wip/nanofilt
 DEPENDS+=	NanoLyse>=1.2.0:../../wip/nanolyse
 DEPENDS+=	NanoPlot>=1.33.0:../../wip/nanoplot
 DEPENDS+=	NanoStat>=1.4.0:../../wip/nanostat
-DEPENDS+=	nanoQC>=0.0.0.20210522:../../wip/nanoQC
+DEPENDS+=	nanoQC>=0.9.4:../../wip/nanoQC
 
 .include "../../mk/bsd.pkg.mk"
