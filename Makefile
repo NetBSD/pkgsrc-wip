@@ -3976,6 +3976,7 @@ SUBDIR+=	py-mailcap-fix
 SUBDIR+=	py-mailingstats
 SUBDIR+=	py-mailq
 SUBDIR+=	py-mapcode
+SUBDIR+=	py-mappy
 SUBDIR+=	py-mapy-package
 SUBDIR+=	py-mark
 SUBDIR+=	py-markovchain

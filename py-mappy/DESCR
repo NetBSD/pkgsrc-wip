@@ -1,0 +1,24 @@
+==============================
+Mappy: Minimap2 Python Binding
+==============================
+
+Mappy provides a convenient interface to minimap2
+<https://github.com/lh3/minimap2>, a fast and accurate C program to
+align genomic and transcribe nucleotide sequences.
+
+Mappy implements two classes and two global functions.
+
+Class mappy.Aligner: performs alignment with the following methods and
+property:
+
+- mappy.Aligner(fn_idx_in=None, preset=None, ...)
+- mappy.Aligner.map(seq, seq2=None, cs=False, MD=False)
+- mappy.Aligner.seq(name, start=0, end=0x7fffffff)
+- mappy.Aligner.seq_names
+
+Class mappy.Alignment: describes a single alignment
+
+mappy.fastx_read(fn, read_comment=False): generator for a FASTA/FASTQ
+file
+
+mappy.revcomp(seq): return the reverse complement of DNA string
