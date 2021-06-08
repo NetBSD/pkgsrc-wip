@@ -1,0 +1,17 @@
+@comment $NetBSD$
+bin/NanoStat
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nanostat/NanoStat.py
+${PYSITELIB}/nanostat/NanoStat.pyc
+${PYSITELIB}/nanostat/NanoStat.pyo
+${PYSITELIB}/nanostat/__init__.py
+${PYSITELIB}/nanostat/__init__.pyc
+${PYSITELIB}/nanostat/__init__.pyo
+${PYSITELIB}/nanostat/version.py
+${PYSITELIB}/nanostat/version.pyc
+${PYSITELIB}/nanostat/version.pyo

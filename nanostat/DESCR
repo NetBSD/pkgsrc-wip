@@ -1,0 +1,20 @@
+# NanoStat
+
+Calculate various statistics from a long read sequencing dataset in
+fastq, bam or albacore sequencing summary format.
+
+#### Examples
+
+NanoStat --fastq reads.fastq.gz --outdir statreports
+
+NanoStat --summary sequencing_summary1.txt sequencing_summary2.txt \
+	 sequencing_summary3.txt --readtype 1D2
+
+NanoStat --bam alignment.bam alignment2.bam
+
+I welcome all suggestions, bug reports, feature requests and
+contributions. Please leave an issue
+(https://github.com/wdecoster/nanostat/issues) or open a pull request.
+
+If you use this tool, please consider citing our publication:
+https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty149/4934939.
