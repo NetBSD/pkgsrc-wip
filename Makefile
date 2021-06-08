@@ -2464,6 +2464,7 @@ SUBDIR+=	naev
 SUBDIR+=	nag
 SUBDIR+=	nagios-plugin-mysql_health
 SUBDIR+=	nanoQC
+SUBDIR+=	nanocomp
 SUBDIR+=	nanofilt
 SUBDIR+=	nanoget
 SUBDIR+=	nanolyse
