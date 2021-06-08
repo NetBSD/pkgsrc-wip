@@ -2469,6 +2469,7 @@ SUBDIR+=	nanofilt
 SUBDIR+=	nanoget
 SUBDIR+=	nanolyse
 SUBDIR+=	nanomath
+SUBDIR+=	nanopack
 SUBDIR+=	nanoplot
 SUBDIR+=	nanostat
 SUBDIR+=	naqsh-ttf
