@@ -13,7 +13,7 @@ COMMENT=	Removing reads mapping to the lambda genome
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-biopython>=1.74:../../biology/py-biopython
-DEPENDS+=	${PYPKGPREFIX}-mappy>=2.18:../../biology/py-mappy
+DEPENDS+=	${PYPKGPREFIX}-mappy>=2.18:../../wip/py-mappy
 
 WRKSRC=		${WRKDIR}/nanolyse-a3de1e9c81aeddf15ef985486ca80b6876674948
 USE_LANGUAGES=	# none
