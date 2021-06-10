@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.2.1<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-numpydoc>=0.5:../../textproc/py-numpydoc
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2.0.0:../../devel/py-prompt_toolkit2
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2.0.0:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0.2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2016.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.8.1:../../devel/py-requests
