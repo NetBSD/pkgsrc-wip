@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.10.6
+DISTNAME=	vips-8.11.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libvips/}
