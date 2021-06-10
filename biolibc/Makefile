@@ -10,19 +10,16 @@ HOMEPAGE=	https://github.com/auerlab/biolibc
 COMMENT=	Low-level high-performance bioinformatics library
 LICENSE=	2-clause-bsd
 
-INSTALL_TARGET=	install-strip
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == Darwin
-# For $(shell realpath ...).  != doesn't work in Apple's gmake.
-USE_TOOLS=	gmake
-BUILD_DEPENDS=	realpath>0:../../wip/realpath
 BUILD_TARGET=	apple
 INSTALL_TARGET=	apple-install
 .else
 INSTALL_TARGET=	install-strip
 .endif
+
+MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
