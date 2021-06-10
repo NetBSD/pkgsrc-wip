@@ -8,5 +8,6 @@ SHA1 (patch-compilers_xcode30__prj_configure) = b89b3be8671c6c692ba474476879ee67
 SHA1 (patch-src_algo_blast_core_blast__kappa.c) = 6fcad996b3a8e5b6c2400608bff9de62ebf6927f
 SHA1 (patch-src_build-system_Makefile.in.top) = 71d5246867a8c985c1175c338fb0af664094ca01
 SHA1 (patch-src_build-system_cmake_cmake-cfg-xcode.sh) = 9167a5092d30da46a06b0be05199afa3b08680c6
+SHA1 (patch-src_build-system_configure) = 95185d53179a69a1b1cfa6870aca36dd962d2c43
 SHA1 (patch-src_build-system_helpers_Makefile.run__with__lock.app) = d69b9e349646c970c3b296707f917defbe39cccd
 SHA1 (patch-src_util_checksum_farmhash_farmhash.h) = c3ff60de9a9020d3b706c2bff37f6f4cde4e6b6b
