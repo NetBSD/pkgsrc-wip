@@ -1,0 +1,16 @@
+@comment $NetBSD$
+include/${OPENBLAS_VARIANT}/cblas.h
+include/${OPENBLAS_VARIANT}/f77blas.h
+include/${OPENBLAS_VARIANT}/lapack.h
+include/${OPENBLAS_VARIANT}/lapacke.h
+include/${OPENBLAS_VARIANT}/lapacke_config.h
+include/${OPENBLAS_VARIANT}/lapacke_mangling.h
+include/${OPENBLAS_VARIANT}/lapacke_utils.h
+include/${OPENBLAS_VARIANT}/openblas_config.h
+lib/cmake/${OPENBLAS_VARIANT}/OpenBLASConfig.cmake
+lib/cmake/${OPENBLAS_VARIANT}/OpenBLASConfigVersion.cmake
+lib/lib${OPENBLAS_VARIANT}.a
+lib/lib${OPENBLAS_VARIANT}.so
+lib/lib${OPENBLAS_VARIANT}.so.0
+lib/pkgconfig/${OPENBLAS_VARIANT}.pc
+@pkgdir bin

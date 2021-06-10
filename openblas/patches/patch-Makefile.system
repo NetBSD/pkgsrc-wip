@@ -1,0 +1,35 @@
+$NetBSD: patch-Makefile.system,v 1.3 2021/05/29 19:57:21 thor Exp $
+
+Stable library names, determined by our choice only.
+
+--- Makefile.system.orig	2021-05-02 21:50:22.000000000 +0000
++++ Makefile.system
+@@ -1510,6 +1510,10 @@ ifndef LIBSUFFIX
+ LIBSUFFIX = a
+ endif
+ 
++ifeq ($(FIXED_LIBNAME), 1)
++LIBNAME		= $(LIBPREFIX).$(LIBSUFFIX)
++LIBNAME_P	= $(LIBPREFIX)_p.$(LIBSUFFIX)
++else
+ ifneq ($(DYNAMIC_ARCH), 1)
+ ifndef SMP
+ LIBNAME		= $(LIBPREFIX)_$(LIBCORE)$(REVISION).$(LIBSUFFIX)
+@@ -1527,12 +1531,16 @@ LIBNAME		= $(LIBPREFIX)p$(REVISION).$(LI
+ LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$(LIBSUFFIX)
+ endif
+ endif
+-
++endif
+ 
+ LIBDLLNAME   = $(LIBPREFIX).dll
+ IMPLIBNAME   = lib$(LIBNAMEBASE).dll.a
+ ifneq ($(OSNAME), AIX)
++ifeq ($(FIXED_LIBNAME), 1)
++LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so).$(MAJOR_VERSION)
++else
+ LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.so)
++endif
+ else
+ LIBSONAME    = $(LIBNAME:.$(LIBSUFFIX)=.a)
+ endif

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.5 2020/10/12 21:51:57 bacon Exp $
+lib/liblapack64.a
+lib/liblapack64.so
+lib/liblapack64.so.3
+lib/liblapack64.so.${PKGVERSION}
+lib/pkgconfig/lapack64.pc
