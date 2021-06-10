@@ -2,7 +2,7 @@
 
 DISTNAME=	ec2instanceconnectcli-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security python
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ec2instanceconnectcli/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
