@@ -3628,7 +3628,6 @@ SUBDIR+=	py-dynamicisttoolkit
 SUBDIR+=	py-eapi
 SUBDIR+=	py-easydev
 SUBDIR+=	py-easymodeler
-SUBDIR+=	py-ec2instanceconnectcli
 SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-eemeter
