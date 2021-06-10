@@ -15,5 +15,11 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.9:../../security/py-cryptography
 
 USE_LANGUAGES=	# none
 
+post-install:
+.for p in msftp mssh
+	${MV} ${DESTDIR}${PREFIX}/bin/${p} ${DESTDIR}${PREFIX}/bin/${p}${PYVERSSUFFIX} || ${TRUE}
+.endfor
+	${RM} ${DESTDIR}${PREFIX}/bin/*.cmd
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
