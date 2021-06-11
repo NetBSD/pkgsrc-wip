@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (vcf-split-0.1.1.8-52897a6a1e023b3d3d398f01eba998ee63cfd578.tar.gz) = 35d3253c87167756b60a0d421e4e2f38db4a405e
-RMD160 (vcf-split-0.1.1.8-52897a6a1e023b3d3d398f01eba998ee63cfd578.tar.gz) = 6b5593174a9c79b0e2b08438ef187272e24ac14d
-SHA512 (vcf-split-0.1.1.8-52897a6a1e023b3d3d398f01eba998ee63cfd578.tar.gz) = 8b3ddbdbc06d9f04adee32af3a7b0334d01f0c49967c6d18e8854152406dbfc80fae0e4a085aaa9839ba5258e601b482ae2038b4a5e19dc321efa37dae97cf57
-Size (vcf-split-0.1.1.8-52897a6a1e023b3d3d398f01eba998ee63cfd578.tar.gz) = 15691 bytes
+SHA1 (vcf-split-0.1.2.tar.gz) = 6ff5bd12fcbaea6fa6a0afd78cd2978cd5c25beb
+RMD160 (vcf-split-0.1.2.tar.gz) = 9cf2087943e5869ed6a293c7e420d1f0ed8a85b4
+SHA512 (vcf-split-0.1.2.tar.gz) = db0c205e71a3cd07c39bae6d7db65bdfc71ccaf2d6d3c8a1e4a5e13dcbed10052657db48943d7d564ddda2e6dc6feb32223651e06fe6a242c8c7c89056304d60
+Size (vcf-split-0.1.2.tar.gz) = 15690 bytes
