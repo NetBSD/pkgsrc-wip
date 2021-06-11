@@ -10,7 +10,7 @@ COMMENT=	Split a multi-sample VCF into single-sample VCFs
 LICENSE=	2-clause-bsd
 
 pre-build:
-	(cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend)
+	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
 
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../wip/libxtend/buildlink3.mk"
