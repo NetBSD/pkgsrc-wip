@@ -4,6 +4,7 @@ sbin/pbulk-setup
 sbin/pbulk-start-chroot
 sbin/pkg-add-to-wip
 sbin/pkg-check
+sbin/pkg-commit
 sbin/pkg-diff
 sbin/pkg-grep
 sbin/pkg-list
