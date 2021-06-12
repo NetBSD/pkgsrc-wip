@@ -1,13 +1,18 @@
 # $NetBSD: blas.buildlink3.mk,v 1.1 2020/10/12 21:51:57 bacon Exp $
 #
 # This Makefile fragment is meant to be included by packages that use any
-# ILP64 BLAS (Basic Linear Algebra System with 64 bit indices) implementation
-# instead of one particular one.
+# BLAS (Basic Linear Algebra System) implementation instead of one particular
+# one.
 #
 # Since pkgsrc always ships BLAS and LAPACK together (as upstream
 # implementations do), this adds both BLAS_LIBS and LAPACK_LIBS to the linker
-# flags.  Often, they will be identical or at least redundant. It is a matter
-# of style to stay consistent in their use.
+# flags.  Often, they will be identical or at least redundant. LAPACK_LIBS
+# does include BLAS_LIBS, in any case.
+#
+# The C interfaces CBLAS and LAPACKE are also selected
+# via BLAS_C_INTERFACE in the package and respective CBLAS_LIBS and
+# LAPACKE_LIBS are set. Also, BLAS_INCLUDES is set to preprocessor
+# flags to locate/use respective headers.
 #
 # Keywords: blas lapack netlib atlas openblas mkl
 #
@@ -39,6 +44,9 @@
 #   implementations include the C interfaces in the main library anyway,
 #   but you still have the effect on BLAS_INCLUDES.
 #
+# BLAS_INDEX64
+#   Set to yes if the package wants to utilize 64 bit indices.
+#
 # === Variables automatically set here for use in package builds ===
 # 
 # BLAS_TYPE
@@ -57,12 +65,7 @@
 # BLAS_INCLUDES
 #   Preprocessor flags to locate/use C interfaces
 
-.if defined(MK_BLAS_BUILDLINK3_MK)
-
-PKG_FAIL_REASON+=	\
-	"Attempt to mix 32 and 64 bit indices in BLAS for ${PKGNAME}."
-
-.elif !defined(MK_BLAS_BUILDLINK3_MK)
+.if !defined(MK_BLAS_BUILDLINK3_MK)
 
 MK_BLAS_BUILDLINK3_MK=
 
@@ -96,42 +99,51 @@ BLAS_TYPE=	${_BLAS_MATCH:[1]}
 BLAS_TYPE=	none
 .endif
 
+.if !empty(BLAS_INDEX64:Myes)
+_BLAS_64=	64
+.else
+_BLAS_64=
+.endif
+
 .if ${BLAS_TYPE} == "netlib"
-_BLAS_PKGPATH=		wip/lapack64
-_CBLAS_PKGPATH=		wip/cblas64
-_LAPACKE_PKGPATH=	wip/lapacke64
-BLAS_LIBS=	-lblas64
-LAPACK_LIBS=	-llapack64 ${BLAS_LIBS}
-CBLAS_LIBS=	-lcblas64 ${BLAS_LIBS}
-LAPACKE_LIBS=	-llapacke64 ${LAPACK_LIBS}
-BLAS_INCLUDES=	-I${PREFIX}/include/netlib64 -DWeirdNEC -DHAVE_LAPACK_CONFIG_H -DLAPACK_ILP64
+_BLAS_PKGPATH=		wip/lapack${_BLAS_64}
+_CBLAS_PKGPATH=		wip/cblas${_BLAS_64}
+_LAPACKE_PKGPATH=	wip/lapacke${_BLAS_64}
+BLAS_LIBS=	-lblas${_BLAS_64}
+LAPACK_LIBS=	-llapack${_BLAS_64} ${BLAS_LIBS}
+CBLAS_LIBS=	-lcblas${_BLAS_64} ${BLAS_LIBS}
+LAPACKE_LIBS=	-llapacke${_BLAS_64} ${LAPACK_LIBS}
+BLAS_INCLUDES=	-I${PREFIX}/include/netlib${_BLAS_64}
+.  if ${_BLAS_64} == "64"
+BLAS_INCLUDES+= -DWeirdNEC -DHAVE_LAPACK_CONFIG_H -DLAPACK_ILP64
+.  endif
 .elif ${BLAS_TYPE} == "openblas"
-_BLAS_PKGPATH=	wip/openblas64
-BLAS_LIBS=	-lopenblas64
+_BLAS_PKGPATH=	wip/openblas${_BLAS_64}
+BLAS_LIBS=	-lopenblas${_BLAS_64}
 LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
-BLAS_INCLUDES=	-I${PREFIX}/include/openblas64
+BLAS_INCLUDES=	-I${PREFIX}/include/openblas${_BLAS_64}
 .elif ${BLAS_TYPE} == "openblas_pthread"
-_BLAS_PKGPATH=	wip/openblas64_pthread
-BLAS_LIBS=	-lopenblas64_pthread
+_BLAS_PKGPATH=	wip/openblas${_BLAS_64}_pthread
+BLAS_LIBS=	-lopenblas${_BLAS_64}_pthread
 LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
 BLAS_INCLUDES=	-I${PREFIX}/include/openblas64_pthread
-.elif ${BLAS_TYPE} == "openblas64_openmp"
-_BLAS_PKGPATH=	wip/openblas64_openmp
-BLAS_LIBS=	-lopenblas64_openmp
+.elif ${BLAS_TYPE} == "openblas_openmp"
+_BLAS_PKGPATH=	wip/openblas${_BLAS_64}_openmp
+BLAS_LIBS=	-lopenblas${_BLAS_64}_openmp
 LAPACK_LIBS=	${BLAS_LIBS}
 CBLAS_LIBS=	${BLAS_LIBS}
 LAPACKE_LIBS=	${BLAS_LIBS}
-BLAS_INCLUDES=	-I${PREFIX}/include/openblas64_openmp
+BLAS_INCLUDES=	-I${PREFIX}/include/openblas${_BLAS_64}_openmp
 #.elif ${BLAS_TYPE} == "accelerate.framework"
 #BLAS_LIBS=	-framework Accelerate
 #LAPACK_LIBS=	${BLAS_LIBS}
 .else # invalid or unimplemented type
 PKG_FAIL_REASON+=	\
-	"There is no acceptable 64 bit BLAS for ${PKGNAME} in: ${PKGSRC_BLAS_TYPES}."
+	"There is no acceptable BLAS for ${PKGNAME} in: ${PKGSRC_BLAS_TYPES}."
 .endif
 
 .if defined(_BLAS_PKGPATH)
