@@ -4954,6 +4954,7 @@ SUBDIR+=	rpki-git
 SUBDIR+=	rpm5
 SUBDIR+=	rsclock
 SUBDIR+=	rsem
+SUBDIR+=	rset
 SUBDIR+=	rsget
 SUBDIR+=	rsound
 SUBDIR+=	rsstail

@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/labelgrep
+bin/miniquark
+bin/rinstall
+bin/rset
+bin/rsub
+man/man1/labelgrep.1
+man/man1/miniquark.1
+man/man1/rinstall.1
+man/man1/rset.1
+man/man1/rsub.1
+man/man5/pln.5
