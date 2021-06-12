@@ -16,7 +16,7 @@ CONFLICTS=	gdm-2.[0-9]*
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt pkg-config gdbus-codegen
 BUILD_DEFS+=		VARBASE
 
 USE_LANGUAGES=		c c++
