@@ -1,11 +1,15 @@
 # $NetBSD: Makefile,v 1.5 2021/05/24 19:52:33 wiz Exp $
 
-PKGREVISION= 1
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 
-DISTNAME=	go${GO116_VERSION:S/.beta/beta/}.src
-PKGNAME=	go116-${GO116_VERSION}
+# TODO(bsiegert) move this to version.mk
+GO117_VERSION=	1.17.beta1
+
+GOVERSSUFFIX=	117
+
+DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.beta/beta/}.src
+PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 
@@ -14,7 +18,6 @@ HOMEPAGE=	https://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 
-GOVERSSUFFIX=	116
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 
