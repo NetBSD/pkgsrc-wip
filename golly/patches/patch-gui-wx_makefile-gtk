@@ -1,5 +1,7 @@
 $NetBSD$
 
+We have dl* functions in libc, no need for -ldl.
+
 --- gui-wx/makefile-gtk.orig	2020-10-28 08:05:22.000000000 +0000
 +++ gui-wx/makefile-gtk
 @@ -41,7 +41,7 @@ GUIFILES = makefile-gtk makefile-mac mak

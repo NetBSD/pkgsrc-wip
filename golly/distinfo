@@ -5,4 +5,4 @@ RMD160 (golly-4.0-src.tar.gz) = 08e02803fc6737d3dc38b6319a3993cf0f46fffa
 SHA512 (golly-4.0-src.tar.gz) = 3a39e170ceddfa4f8c261a81f7b45039e9cc2aef901915d83d3227231514bf66e254d307802cb0afddd7458722b8cbf2ce527cb9ee84a2710b52bf5bdb15484d
 Size (golly-4.0-src.tar.gz) = 5579026 bytes
 SHA1 (patch-cmdline_bgolly.cpp) = 3b1fa67e7fedfcab1e4a4dab8ee1335c2c18458f
-SHA1 (patch-gui-wx_makefile-gtk) = 0387d2ce26fec7fc6089c93eed2b228e21352d32
+SHA1 (patch-gui-wx_makefile-gtk) = 1e31c3c0a9e56bb6246271e5abb8280e06240d94

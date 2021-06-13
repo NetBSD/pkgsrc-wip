@@ -15,34 +15,34 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-MAKE_FILE=      makefile-gtk
+MAKE_FILE=	makefile-gtk
 BUILD_DIRS=	gui-wx
 REPLACE_PERL+=	Help/Lexicon/modify.pl
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/doc/golly
+INSTALLATION_DIRS+=	share/golly
 
 PY3=		8	# Use python 3.8
 
 # The new 4.0 version no longer has a configure script,
 # but you need to edit a file by hand...
 do-configure:
-	( echo "WX_CONFIG = wx-config-3.0"; \
-	  echo "PYTHON = python3.${PY3}"; \
-	  echo "GOLLYDIR = ${PREFIX}/share/golly" \
+	( ${ECHO} "WX_CONFIG = wx-config-3.0"; \
+	  ${ECHO} "PYTHON = python3.${PY3}"; \
+	  ${ECHO} "GOLLYDIR = ${PREFIX}/share/golly" \
 	) >${WRKSRC}/gui-wx/local-gtk.mk
 
 # The new 4.0 version no longer has an install target in its "Makefile".
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/golly  ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bgolly ${DESTDIR}${PREFIX}/bin/
 	#
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/golly
-	cp -p ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/golly
+	cd ${WRKSRC}/docs && pax -wr * ${DESTDIR}${PREFIX}/share/doc/golly
 	#
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/golly
-	cp -pr ${WRKSRC}/Help ${DESTDIR}${PREFIX}/share/golly
-	cp -pr ${WRKSRC}/Patterns ${DESTDIR}${PREFIX}/share/golly
-	cp -pr ${WRKSRC}/Rules ${DESTDIR}${PREFIX}/share/golly
-	cp -pr ${WRKSRC}/Scripts ${DESTDIR}${PREFIX}/share/golly
+.for dir in Help Patterns Rules Scripts
+	cd ${WRKSRC} && pax -wr ${dir} ${DESTDIR}${PREFIX}/share/golly
+.endfor
 	# Remove lots of unneeded x bits
 	find ${DESTDIR}${PREFIX}/share/golly -type f -exec chmod a-x {} +
 
