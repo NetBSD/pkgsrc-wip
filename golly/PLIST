@@ -1,18 +1,32 @@
 @comment $NetBSD$
 bin/bgolly
 bin/golly
+share/doc/golly/Build.html
 share/doc/golly/License.html
 share/doc/golly/ReadMe.html
+share/doc/golly/ToDo.html
 share/golly/Help/Algorithms/Generations.html
 share/golly/Help/Algorithms/HashLife.html
 share/golly/Help/Algorithms/JvN.html
 share/golly/Help/Algorithms/Larger_than_Life.html
-share/golly/Help/Algorithms/NC.png
-share/golly/Help/Algorithms/NM.png
-share/golly/Help/Algorithms/NN.png
 share/golly/Help/Algorithms/QuickLife.html
 share/golly/Help/Algorithms/RuleLoader.html
+share/golly/Help/Algorithms/Super.html
 share/golly/Help/Algorithms/hensel.png
+share/golly/Help/Algorithms/images/N+.png
+share/golly/Help/Algorithms/images/N2.png
+share/golly/Help/Algorithms/images/N3.png
+share/golly/Help/Algorithms/images/NA.png
+share/golly/Help/Algorithms/images/NB.png
+share/golly/Help/Algorithms/images/NC.png
+share/golly/Help/Algorithms/images/NH.png
+share/golly/Help/Algorithms/images/NL.png
+share/golly/Help/Algorithms/images/NM.png
+share/golly/Help/Algorithms/images/NN.png
+share/golly/Help/Algorithms/images/NS.png
+share/golly/Help/Algorithms/images/NX.png
+share/golly/Help/Algorithms/images/NZ.png
+share/golly/Help/Algorithms/images/custom.png
 share/golly/Help/Lexicon/lex.htm
 share/golly/Help/Lexicon/lex_1.htm
 share/golly/Help/Lexicon/lex_a.htm
@@ -48,7 +62,6 @@ share/golly/Help/algos.html
 share/golly/Help/archives.html
 share/golly/Help/bounded.html
 share/golly/Help/changes.html
-share/golly/Help/changes.html~
 share/golly/Help/control.html
 share/golly/Help/credits.html
 share/golly/Help/edit.html
@@ -64,7 +77,6 @@ share/golly/Help/index.html
 share/golly/Help/intro.html
 share/golly/Help/layer.html
 share/golly/Help/lua.html
-share/golly/Help/lua.html~
 share/golly/Help/mouse.html
 share/golly/Help/overlay.html
 share/golly/Help/problems.html
@@ -109,6 +121,7 @@ share/golly/Patterns/HashLife/mosquito5.mc
 share/golly/Patterns/HashLife/nick-gotts-1.mc
 share/golly/Patterns/HashLife/nick-gotts-2.mc
 share/golly/Patterns/HashLife/puzzle.mc
+share/golly/Patterns/HashLife/roth.mc
 share/golly/Patterns/HashLife/ruler.mc
 share/golly/Patterns/HashLife/totalperiodic.mc
 share/golly/Patterns/HashLife/triple-Snark-wick-extruder.rle.gz
@@ -300,6 +313,7 @@ share/golly/Patterns/Life/Syntheses/make-p33.rle
 share/golly/Patterns/Life/Syntheses/oscillator-syntheses.rle
 share/golly/Patterns/Life/Syntheses/slow-salvo-MWSS-oscillator.rle.gz
 share/golly/Patterns/Life/Syntheses/slow-salvo-eater-recipes.rle
+share/golly/Patterns/Life/Syntheses/spaceship-synth-demo.rle
 share/golly/Patterns/Life/Syntheses/syntheses-of-c2-spaceships.rle.gz
 share/golly/Patterns/Life/Syntheses/two-glider-collisions.rle
 share/golly/Patterns/Loops/Byl-Loop.rle
@@ -403,6 +417,10 @@ share/golly/Patterns/Self-Rep/JvN/small-JvN-self-replicator.rle
 share/golly/Patterns/Self-Rep/JvN/sphinx-midpoint.mc.gz
 share/golly/Patterns/Self-Rep/JvN/sphinx-spark.mc.gz
 share/golly/Patterns/Self-Rep/JvN/sphinx.mc.gz
+share/golly/Patterns/Super/art-on-a-torus-LifeSuper.rle
+share/golly/Patterns/Super/p108-2ship-gun-MirrorTLifeSuper.rle
+share/golly/Patterns/Super/pure-nonfiller-LifeHistory.rle
+share/golly/Patterns/Super/sample-wick-construction-LifeSuper.rle
 share/golly/Patterns/Turmites/AlienCounter.rle
 share/golly/Patterns/Turmites/ComputerArt.rle
 share/golly/Patterns/Turmites/Extinction.rle
@@ -453,7 +471,6 @@ share/golly/Rules/Langtons-Ant.rule
 share/golly/Rules/Langtons-Loops.rule
 share/golly/Rules/LangtonsAnt_LLRR.rule
 share/golly/Rules/Life.rule
-share/golly/Rules/LifeHistory.rule
 share/golly/Rules/LifeOnTheEdge.rule
 share/golly/Rules/LifeOnTheSlope.rule
 share/golly/Rules/Perrier.rule
@@ -491,6 +508,7 @@ share/golly/Scripts/Lua/Margolus.lua
 share/golly/Scripts/Lua/breakout.lua
 share/golly/Scripts/Lua/bricklayer.lua
 share/golly/Scripts/Lua/browse-patterns.lua
+share/golly/Scripts/Lua/create-custom-ltl.lua
 share/golly/Scripts/Lua/credits.lua
 share/golly/Scripts/Lua/density.lua
 share/golly/Scripts/Lua/draw-lines.lua
@@ -514,7 +532,6 @@ share/golly/Scripts/Lua/metafier.lua
 share/golly/Scripts/Lua/move-object.lua
 share/golly/Scripts/Lua/move-selection.lua
 share/golly/Scripts/Lua/oplus/init.lua
-share/golly/Scripts/Lua/oplus/init.lua~
 share/golly/Scripts/Lua/oplus/sounds/README.txt
 share/golly/Scripts/Lua/oscar.lua
 share/golly/Scripts/Lua/overlay-demo.lua
@@ -522,13 +539,15 @@ share/golly/Scripts/Lua/p1100-MWSS-gun.lua
 share/golly/Scripts/Lua/pd-glider.lua
 share/golly/Scripts/Lua/pop-plot.lua
 share/golly/Scripts/Lua/shift.lua
-share/golly/Scripts/Lua/slide-show.lua
 share/golly/Scripts/Lua/showinviewer.lua
+share/golly/Scripts/Lua/slide-show.lua
 share/golly/Scripts/Lua/tile-with-clip.lua
 share/golly/Scripts/Lua/tile.lua
 share/golly/Scripts/Lua/toChangeState.lua
-share/golly/Scripts/Lua/toLife.lua
-share/golly/Scripts/Lua/toLifeHistory.lua
+share/golly/Scripts/Lua/toHistory.lua
+share/golly/Scripts/Lua/toStandard.lua
+share/golly/Scripts/Lua/toSuper.lua
+share/golly/Scripts/Lua/update-viewer.lua
 share/golly/Scripts/Python/Margolus/convert-MCell-string.py
 share/golly/Scripts/Python/Margolus/export.py
 share/golly/Scripts/Python/Margolus/import.py
@@ -549,7 +568,6 @@ share/golly/Scripts/Python/draw-lines.py
 share/golly/Scripts/Python/envelope.py
 share/golly/Scripts/Python/flood-fill.py
 share/golly/Scripts/Python/glife/BuiltinIcons.py
-share/golly/Scripts/Python/glife/BuiltinIcons.pyc
 share/golly/Scripts/Python/glife/EmulateHexagonal.py
 share/golly/Scripts/Python/glife/EmulateMargolus.py
 share/golly/Scripts/Python/glife/EmulateOneDimensional.py
@@ -559,19 +577,13 @@ share/golly/Scripts/Python/glife/RuleTree.py
 share/golly/Scripts/Python/glife/WriteBMP.py
 share/golly/Scripts/Python/glife/WriteRuleTable.py
 share/golly/Scripts/Python/glife/__init__.py
-share/golly/Scripts/Python/glife/__init__.pyc
 share/golly/Scripts/Python/glife/base.py
-share/golly/Scripts/Python/glife/base.pyc
 share/golly/Scripts/Python/glife/gun24.py
-share/golly/Scripts/Python/glife/gun24.pyc
 share/golly/Scripts/Python/glife/gun256.py
 share/golly/Scripts/Python/glife/gun30.py
-share/golly/Scripts/Python/glife/gun30.pyc
 share/golly/Scripts/Python/glife/gun46.py
-share/golly/Scripts/Python/glife/gun46.pyc
 share/golly/Scripts/Python/glife/herschel.py
 share/golly/Scripts/Python/glife/text.py
-share/golly/Scripts/Python/glife/text.pyc
 share/golly/Scripts/Python/goto.py
 share/golly/Scripts/Python/goto_expression.py
 share/golly/Scripts/Python/gun-demo.py
@@ -593,3 +605,4 @@ share/golly/Scripts/Python/shift.py
 share/golly/Scripts/Python/slide-show.py
 share/golly/Scripts/Python/tile-with-clip.py
 share/golly/Scripts/Python/tile.py
+@pkgdir share/golly/Scripts/Python/glife/__pycache__
