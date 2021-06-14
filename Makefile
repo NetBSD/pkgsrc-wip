@@ -70,6 +70,7 @@ SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
 SUBDIR+=	SLADE
+SUBDIR+=	SOGo5
 SUBDIR+=	Siesta
 SUBDIR+=	Sigil
 SUBDIR+=	StepTalk
