@@ -26,7 +26,7 @@ under linux emulation. Make sure it works.
 Then run make extract. This will extract the openjdk and bootstrap.
 cd $WORKDIR and
 	mv bootstrap{,.old}
-	ln -s /usr/local/java/openjdk-bin bootstrap
+	ln -s /usr/pkg/java/openjdk-bin bootstrap
 
 then
 export MAKE_JOBS=<something> to make the build go faster.
