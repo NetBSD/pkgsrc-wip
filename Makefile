@@ -5385,6 +5385,7 @@ SUBDIR+=	terraform
 SUBDIR+=	terraform-docs
 SUBDIR+=	terraform-provider-archive
 SUBDIR+=	terraform-provider-aws
+SUBDIR+=	terraform-provider-aws-modules-http
 SUBDIR+=	terraform-provider-cassandra
 SUBDIR+=	terraform-provider-http
 SUBDIR+=	terraform-provider-kafka
