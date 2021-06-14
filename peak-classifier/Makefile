@@ -11,8 +11,6 @@ COMMENT=	Classify ChIP/ATAC-Seq peaks based on features provided in a GFF
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	bedtools>=0:../../biology/bedtools
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 REPLACE_PYTHON=	feature-view.py
 
