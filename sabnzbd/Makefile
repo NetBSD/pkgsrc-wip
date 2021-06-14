@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/04 10:10:53 thomasklausner Exp $
 
 DISTNAME=	sabnzbd-${DISTVERSION}
-DISTVERSION=	3.2.1
+DISTVERSION=	3.3.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sabnzbd/}
 GITHUB_PROJECT=	sabnzbd
@@ -56,12 +56,16 @@ do-install:
 	cd ${WRKSRC} && pax -rw SABnzbd.py ${DESTDIR}/${PREFIX}/bin/
 	${MKDIR} ${DESTDIR}/${PREFIX}/${PYSITELIB}/
 	cd ${WRKSRC} && pax -rw -pmp sabnzbd ${DESTDIR}/${PREFIX}/${PYSITELIB}/
-.for i in ${INSTALLATION_DIRS}
 	${MKDIR} ${DESTDIR}/${PREFIX}/share/sabnzbd
+.for i in ${INSTALLATION_DIRS}
 	cd ${WRKSRC} && pax -rw -pmp ${i} ${DESTDIR}/${PREFIX}/share/sabnzbd
 .endfor
 	cd ${.CURDIR}/files && pax -rw -pmp sabnzbd.xml ${DESTDIR}/${PREFIX}/share/sabnzbd
+	${CHMOD} -R go-w ${DESTDIR}${PREFIX}
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/sabnzbd/interfaces/Plush/templates/static/stylesheets/jqueryui/overcast/images/*.png
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/sabnzbd/interfaces/Plush/templates/static/stylesheets/colorschemes/gold/images/*.png
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/sabnzbd/interfaces/Plush/licenses/*
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/*.js
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
