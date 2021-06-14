@@ -1,0 +1,37 @@
+This package does not work yet, because the jmod version of the tool
+it builds segfaults frequently.
+
+Traditionally pkgsrc does not allow $ORIGIN and that leads to very
+invasive changes to the jdk. The build system used LD_LIBRARY_PATH
+to be able to execute properly the bootstrap binaries. This interferes
+with the build because the build needs to be able to run binaries it
+just built and with LD_LIBRARY_PATH it will be using the bootstrap
+ones and fail. This is also the reason we can't bootstrap from the
+linux jdk and we need to bootstrap from NetBSD that has the same
+version.
+
+This build uses the linux jdk to bootstrap, and to be able to do
+this in will use $ORIGIN. In my opinion $ORIGIN is a lesser evil
+that $LD_LIBRARY_PATH.
+
+Here are the instructions to build:
+
+Cwrappers filters out $ORIGIN, so the first step is to apply
+cwrappers.diff in this directory and re-install cwrappers. This
+will allow link lines that contain $ORIGIN.
+
+Next install openjdk-bin. This is the latest openjdk-16 running
+under linux emulation. Make sure it works.
+
+Then run make extract. This will extract the openjdk and bootstrap.
+cd $WORKDIR and
+	mv bootstrap{,.old}
+	ln -s /usr/local/java/openjdk-bin bootstrap
+
+then
+export MAKE_JOBS=<something> to make the build go faster.
+
+Then make
+
+If the build stalls because one of the openjdk-bin binaries SEGV'd
+kill the build and restart it.
