@@ -32,10 +32,13 @@ SUBST_FILES.test=	${WRKSRC}/Tests/run_tests.sh
 SUBST_SED.test=		-e 's|../../build_dynamic|${PREFIX}/bin|g'
 SUBST_SED.test+=	-e 's|^python|${PYTHONBIN}|g'
 
-CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
-CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include
+# TODO: accelerate.framework?
+BLAS_C_INTERFACE=	yes
 
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib -lcblas ${LAPACK_LIBS} ${BLAS_LIBS}"
+CFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include ${BLAS_INCLUDES}
+CXXFLAGS+=	-g -DDYNAMIC_ZLIB -I${PREFIX}/include ${BLAS_INCLUDES}
+
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS64="-L${PREFIX}/lib  ${LAPACK_LIBS} ${CBLAS_LIBS}"
 # Keep debug info until at least next beta
 # INSTALL_TARGET=	install-strip
 
@@ -59,7 +62,6 @@ post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/plink2-bench ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/blas.buildlink3.mk"
-.include "../../math/cblas/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
