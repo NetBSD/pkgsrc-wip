@@ -25,13 +25,15 @@ USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/plink-ng-${GITHUB_TAG}/1.9
 
-CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -I.
-CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include
-MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib ${LAPACK_LIBS} ${BLAS_LIBS} -lcblas -lpthread"
+CFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include -I. ${BLAS_INCLUDES}
+CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include ${BLAS_INCLUDES}
+MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib ${LAPACK_LIBS} ${CBLAS_LIBS}  -lpthread"
 INSTALL_TARGET=	install-strip
 
 PORTVERSION=	1.90b4
 BLAS_ACCEPTED=	openblas_pthread
+
+BLAS_C_INTERFACE=	yes
 
 INSTALLATION_DIRS=	bin
 
@@ -42,7 +44,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/blas.buildlink3.mk"
-.include "../../math/cblas/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
