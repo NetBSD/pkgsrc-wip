@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake perl
 
 CXXFLAGS+=	-I${PREFIX}/include/eigen3
 CXXFLAGS+=	-fpermissive
-MAKE_FLAGS+=	LDFLAGS+="${LAPACK_LIBS} -lgsl -lcblas -lz"
+MAKE_FLAGS+=	LDFLAGS+="${LAPACK_LIBS} -lgsl ${CBLAS_LIBS} -lz"
 MAKE_FILE=	${FILESDIR}/Makefile
 
 # Requires multithreading for decent performance
@@ -29,8 +29,11 @@ MAKE_FILE=	${FILESDIR}/Makefile
 # of math/cblas, if there were any.
 BLAS_ACCEPTED=	openblas_pthread openblas_openmp accelerate.framework
 
+BLAS_C_INTERFACE=	yes
+CXXFLAGS+=		${BLAS_INCLUDES}
+
 .if !empty(BLAS_TYPE:Mopenblas*)
-CXXFLAGS+=	-I${PREFIX}/include/${BLAS_TYPE} -DOPENBLAS
+CXXFLAGS+=	-DOPENBLAS
 .endif
 
 INSTALLATION_DIRS=	bin share/examples
@@ -39,7 +42,7 @@ do-test:
 	(cd ${WRKSRC}/test && ${SH} test_suite.sh)
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../math/cblas/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
