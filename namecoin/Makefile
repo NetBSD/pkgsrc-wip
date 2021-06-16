@@ -2,6 +2,7 @@
 
 DISTNAME=	namecoin-nc0.21.0.1
 PKGNAME=	namecoin-0.21.0.1
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	https://www.namecoin.org/files/namecoin-core/namecoin-core-${PKGVERSION_NOREV}/
 
@@ -9,6 +10,10 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/namecoin/namecoin-core
 COMMENT=	Implementation of Namecoin on top of the Bitcoin Core codebase
 LICENSE=	mit
+
+CONFLICTS+=	bitcoin-[0-9]*
+
+RCD_SCRIPTS=	namecoind
 
 # namecoin-core requires c++11 (but does not need manual -std=c++11).
 USE_LANGUAGES=		c c++
