@@ -3,8 +3,6 @@
 DISTNAME=	xurl-0.1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=squioc/}
-GITHUB_PROJECT=	xurl
-GITHUB_TAG=	d604d178b88650736d746d2fe15c72e760a5977f
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/squioc/xurl/
