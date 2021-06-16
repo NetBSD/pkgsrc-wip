@@ -1,10 +1,10 @@
 # $NetBSD$
 #
 
-DISTNAME=	OptiBench-0.2.0.1
+DISTNAME=	OptiBench-0.2.0.8
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	287978199ac7c5b5c65f82f75a8032dad8d4239d
+GITHUB_TAG=	35a48f7aa7ff4f4729f06fd6d2c170564933d4c5
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/OptiBench
