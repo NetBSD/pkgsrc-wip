@@ -1,0 +1,4 @@
+xlossage is a tool to display X11 keypresses in an Emacs-like manner
+(cf. M-x view-lossage). Its primary use is to support screencasts.
+
+NOTE: The xlossage output can contain sensitive information. Use with care.
