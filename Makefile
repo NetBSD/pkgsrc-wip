@@ -5839,6 +5839,7 @@ SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
 SUBDIR+=	xinput_calibrator
 SUBDIR+=	xinvaders3d
+SUBDIR+=	xlossage-git
 SUBDIR+=	xmail
 SUBDIR+=	xmakemol
 SUBDIR+=	xmds
