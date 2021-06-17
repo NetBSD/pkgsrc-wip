@@ -10,6 +10,9 @@ HOMEPAGE=	https://github.com/starship/starship/
 COMMENT=	Fast, customizable cross-shell prompt
 LICENSE=	isc
 
+# The libc and rust-battery crates currently have limited platform support
+ONLY_FOR_PLATFORM=Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* 
+
 USE_LANGUAGES=	c
 RUST_REQ?=	1.51.0
 
