@@ -1,17 +1,13 @@
 # $NetBSD$
-#
 
-DISTNAME=	MST-Bench-0.2.0.13
+DISTNAME=	MST-Bench-0.2.1.3
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	39f2d67f4590bb463f9894b342e42bd79684a425
+GITHUB_TAG=	0175cb2cbd759d96b57194968586ecf1a529c7c4
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://github.com/outpaddling/OptiBench
-COMMENT=	Benchmark to measure optimal sustained memory and disk performance
+HOMEPAGE=	https://github.com/outpaddling/MST-Bench
+COMMENT=	Maximum sustainable throughput benchmark
 LICENSE=	2-clause-bsd
-
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
-			MANPREFIX=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
