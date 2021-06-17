@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	libxtend-0.1.2.28
+DISTNAME=	libxtend-0.1.2.30
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	5ab848a76cc6673f7768d5cf5c517492f9c8da8e
+GITHUB_TAG=	60fce9d67e0e4bebf1f8e9708ad86fa729bb7e0d
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/libxtendc
@@ -19,7 +19,7 @@ INSTALL_TARGET=	apple-install
 INSTALL_TARGET=	install-strip
 .endif
 
-MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib
+MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} depend
