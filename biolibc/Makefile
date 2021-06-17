@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	biolibc-0.1.3.2
+DISTNAME=	biolibc-0.1.3.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	69d937861329b1842778d98091e65b3c3c624add
+GITHUB_TAG=	1cbf3f0c214c4dff80c49a1e61927b1171a40cbb
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc
@@ -19,7 +19,7 @@ INSTALL_TARGET=	apple-install
 INSTALL_TARGET=	install-strip
 .endif
 
-MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib
+MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
