@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	packer-1.7.2
+PKGNAME=	packer-1.7.3
 DISTNAME=	packer-${GITHUB_TAG}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
@@ -17,13 +17,15 @@ EXTRACT_USING=	bsdtar
 GO_VERSION_DEFAULT=	116
 .include "../../mk/bsd.prefs.mk"
 
-GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-GO_SRCPATH=	github.com/hashicorp/packer/
-
 INSTALLATION_DIRS+=	bin
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/packer ${DESTDIR}${PREFIX}/bin
+.include "go-modules.mk"
 
-.include "../../lang/go/go-package.mk"
+GO_BUILD_PATTERN=	.
+CHECK_RELRO_SKIP+=	bin/packer
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/packer ${DESTDIR}${PREFIX}/bin
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
