@@ -1,10 +1,2 @@
 @comment $NetBSD$
-share/fonts/X11/TTF/iosevka-slab-bold.ttc
-share/fonts/X11/TTF/iosevka-slab-extrabold.ttc
-share/fonts/X11/TTF/iosevka-slab-extralight.ttc
-share/fonts/X11/TTF/iosevka-slab-heavy.ttc
-share/fonts/X11/TTF/iosevka-slab-light.ttc
-share/fonts/X11/TTF/iosevka-slab-medium.ttc
-share/fonts/X11/TTF/iosevka-slab-regular.ttc
-share/fonts/X11/TTF/iosevka-slab-semibold.ttc
-share/fonts/X11/TTF/iosevka-slab-thin.ttc
+share/fonts/X11/TTF/iosevka-slab.ttc
