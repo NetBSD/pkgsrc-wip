@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/xmatchview-conifer.py
+bin/xmatchview-hive.py
+bin/xmatchview.py
+share/doc/xmatchview/README.md
+share/doc/xmatchview/paper.md
+share/doc/xmatchview/paper.pdf

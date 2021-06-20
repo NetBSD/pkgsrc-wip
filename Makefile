@@ -5844,6 +5844,7 @@ SUBDIR+=	xinvaders3d
 SUBDIR+=	xlossage-git
 SUBDIR+=	xmail
 SUBDIR+=	xmakemol
+SUBDIR+=	xmatchview
 SUBDIR+=	xmds
 SUBDIR+=	xmim
 SUBDIR+=	xml-light
