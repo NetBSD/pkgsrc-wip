@@ -30,6 +30,8 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 .include "../../devel/cmake/buildlink3.mk"
 .else
+# Rust 1.53.0 depends on llvm >= 10.0
+BUILDLINK_API_DEPENDS.llvm+=    llvm>=10.0
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
