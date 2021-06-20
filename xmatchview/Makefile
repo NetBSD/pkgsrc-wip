@@ -51,6 +51,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/paper/paper.md ${DESTDIR}${PREFIX}/share/doc/xmatchview
 	${INSTALL_DATA} ${WRKSRC}/paper/paper.pdf ${DESTDIR}${PREFIX}/share/doc/xmatchview
 	cd ${WRKSRC}/tarballs/fonts && ${PAX} -rw * ${DESTDIR}${PREFIX}/share/fonts/xmatchview 
+	${INSTALL_SCRIPT} ${WRKSRC}/runCompareTwoGenomesColinear.sh ${DESTDIR}${PREFIX}/share/examples/xmatchview
+	${INSTALL_SCRIPT} ${WRKSRC}/runSpruceView.sh ${DESTDIR}${PREFIX}/share/examples/xmatchview
 	cd ${WRKSRC}/test \
 	&& ${RM} -f xmv-FTL1_pa.fa_vs_FTL1_ss.fa.rep_m10_b10_r1_c2.png \
 	&& ${RM} -f xmv-FTL1_paMF.fa_vs_FTL1_ssMF.fa.paf_m80_b10_r1_c2.png \

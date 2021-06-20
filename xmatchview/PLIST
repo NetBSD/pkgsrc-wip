@@ -5,6 +5,8 @@ bin/xmatchview.py
 share/doc/xmatchview/README.md
 share/doc/xmatchview/paper.md
 share/doc/xmatchview/paper.pdf
+share/examples/xmatchview/runCompareTwoGenomesColinear.sh
+share/examples/xmatchview/runSpruceView.sh
 share/examples/xmatchview/xmatchview-hive/2019-nCoV.fa_vs_MERS-CoV.fa.paf
 share/examples/xmatchview/xmatchview-hive/2019-nCoV.fa_vs_MERS-CoV.fa.rep
 share/examples/xmatchview/xmatchview-hive/2019-nCoV.fa_vs_SARS-CoV.fa.paf
