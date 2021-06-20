@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 .include "../../lang/python/egg.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
@@ -28,4 +27,5 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
