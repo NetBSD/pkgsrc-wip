@@ -33,7 +33,7 @@ TEST_TARGET=	all
 TEST_DIRS=	test test-hive
 TEST_ENV+=	XMATCHVIEW=../xmatchview.py
 TEST_ENV+=	XMATCHVIEW_HIVE=../xmatchview-hive.py
-TEST_ENV+=	FONT_DIR=../tarballs/fonts
+TEST_ENV+=	XMATCHVIEW_FONTDIR=../tarballs/fonts
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile.xmatchview ${WRKSRC}/test/Makefile

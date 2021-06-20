@@ -1,7 +1,7 @@
 # $NetBSD$
 
-XMATCHVIEW?=	xmatchview.py
-FONT_DIR?=	@PREFIX@/share/fonts/xmatchview
+XMATCHVIEW?=		xmatchview.py
+XMATCHVIEW_FONTDIR?=	@PREFIX@/share/fonts/xmatchview
 
 XMATCHVIEW_ARGS+=	-x FTL1_pa.fa_vs_FTL1_ss.fa.rep
 XMATCHVIEW_ARGS+=	-s FTL1_ss.fa
@@ -14,7 +14,7 @@ XMATCHVIEW_ARGS+=	-c 2
 XMATCHVIEW_ARGS+=	-f png
 XMATCHVIEW_ARGS+=	-y FTL1_pa.gff
 XMATCHVIEW_ARGS+=	-e FTL1_ss.gff
-XMATCHVIEW_ARGS+=	-p ${FONT_DIR}
+XMATCHVIEW_ARGS+=	-p ${XMATCHVIEW_FONTDIR}
 
 all:
 	${XMATCHVIEW} ${XMATCHVIEW_ARGS}
