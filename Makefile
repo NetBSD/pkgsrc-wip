@@ -5626,6 +5626,7 @@ SUBDIR+=	udunits2
 SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
+SUBDIR+=	ugdb
 SUBDIR+=	uget
 SUBDIR+=	uhd-git
 SUBDIR+=	umix
