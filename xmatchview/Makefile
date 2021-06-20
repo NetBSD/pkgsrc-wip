@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/xmatchview-1.2.5
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.2.0:../../wip/py-pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.2.0:../../graphics/py-pillow
 
 REPLACE_PYTHON+=	xmatchview-conifer.py
 REPLACE_PYTHON+=	xmatchview-hive.py
