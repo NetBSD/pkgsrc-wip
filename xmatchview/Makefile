@@ -53,6 +53,7 @@ do-install:
 	cd ${WRKSRC}/tarballs/fonts && ${PAX} -rw * ${DESTDIR}${PREFIX}/share/fonts/xmatchview 
 	cd ${WRKSRC}/test \
 	&& ${RM} -f xmv-FTL1_pa.fa_vs_FTL1_ss.fa.rep_m10_b10_r1_c2.png \
+	&& ${RM} -f xmv-FTL1_paMF.fa_vs_FTL1_ssMF.fa.paf_m80_b10_r1_c2.png \
 	&& ${PAX} -rw * ${DESTDIR}${PREFIX}/share/examples/xmatchview/xmatchview
 	cd ${WRKSRC}/test-hive \
 	&& ${RM} -f xmv-hive_i0_b1_c30_a0.75.svg \
