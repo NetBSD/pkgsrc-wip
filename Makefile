@@ -4210,6 +4210,7 @@ SUBDIR+=	py-pgmpy
 SUBDIR+=	py-photutils
 SUBDIR+=	py-pickleDB
 SUBDIR+=	py-picture-to-gds
+SUBDIR+=	py-pillow
 SUBDIR+=	py-pinout
 SUBDIR+=	py-pint
 SUBDIR+=	py-pip2pi
