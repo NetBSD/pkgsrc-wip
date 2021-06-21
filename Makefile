@@ -3969,6 +3969,7 @@ SUBDIR+=	py-lsqfit
 SUBDIR+=	py-luminous
 SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-lzma
+SUBDIR+=	py-magic-wormhole
 SUBDIR+=	py-m2ext
 SUBDIR+=	py-macs2
 SUBDIR+=	py-magnitude
