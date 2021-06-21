@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
-DEPENDS+=	${PYPKGPREFIX}-hkdf-[0-9]*:../../security/py-hkdf
+DEPENDS+=	${PYPKGPREFIX}-hkdf-[0-9]*:../../wip/py-hkdf
 
 
 .include "../../lang/python/egg.mk"
