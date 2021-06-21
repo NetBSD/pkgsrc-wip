@@ -2436,6 +2436,7 @@ SUBDIR+=	multisync-palm
 SUBDIR+=	multisync-syncml
 SUBDIR+=	multisync-syncml-moto
 SUBDIR+=	multitail
+SUBDIR+=	mummer4
 SUBDIR+=	munge
 SUBDIR+=	muparser
 SUBDIR+=	mupen64plus
