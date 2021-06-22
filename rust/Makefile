@@ -452,17 +452,6 @@ do-install:
 	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} 				\
 		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
 
-.if ${OPSYS} == "Darwin"
-.PHONY: fix-darwin-install-name
-post-install: fix-darwin-install-name
-fix-darwin-install-name:
-	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib \
-	    ${DESTDIR}${PREFIX}/lib/libtracing_attributes-*.dylib \
-	    ${DESTDIR}${PREFIX}/lib/libchalk_derive-*.dylib; do \
-		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
-	done
-.endif
-
 GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			${SED} -e 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
 
