@@ -10,8 +10,7 @@ HOMEPAGE=	https://github.com/casebeer/python-hkdf
 COMMENT=	HMAC-based Extract-and-Expand Key Derivation Function (HKDF; RFC 5869)
 LICENSE=	2-clause-bsd
 
-#DEPENDS+=	${PYPKGPREFIX}-cffi>=1.1:../../devel/py-cffi
-#DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
