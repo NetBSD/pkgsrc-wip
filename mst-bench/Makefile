@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	MST-Bench-0.2.1.3
+DISTNAME=	MST-Bench-0.2.1.5
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	0175cb2cbd759d96b57194968586ecf1a529c7c4
+GITHUB_TAG=	56750b2e6e3b0ac47bc47c9055b5f8242eb4acd8
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/MST-Bench
