@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/brogue-ce
-${PLIST.sdl2}share/brogue-ce/assets/README.txt
+${PLIST.sdl2}share/brogue-ce/assets/LICENSE.txt
 ${PLIST.sdl2}share/brogue-ce/assets/icon.png
 ${PLIST.sdl2}share/brogue-ce/assets/tiles.bin
 ${PLIST.sdl2}share/brogue-ce/assets/tiles.png
