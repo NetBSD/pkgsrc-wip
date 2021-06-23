@@ -1,103 +1,95 @@
 # $NetBSD$
 
-DISTNAME=	dotclear-2.16
+DISTNAME=	dotclear-2.18.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
 		https://download.dotclear.org/attic/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://dotclear.org/
 COMMENT=	Open-source web publising software
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
-.include "options.mk"
+NO_BUILD=	yes
+USE_TOOLS+=	find pax sed
+WRKSRC=		${WRKDIR}/dotclear
+BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
+
 .include "../../lang/php/phpversion.mk"
+.include "options.mk"
 
-NO_BUILD=		yes
-USE_TOOLS+=		pax
-WRKSRC=			${WRKDIR}/dotclear
-BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP
+PHP_VERSIONS_ACCEPTED=	74 73 56
 
-INSTALLATION_DIRS=	${DCDIR} ${DOCDIR} ${EGDIR}
+PKG_SYSCONFSUBDIR=	dotclear
 
-PKG_SYSCONFSUBDIR?=	dotclear
+DOTCLEAR_USER?=		dotclear
+DOTCLEAR_GROUP?=	dotclear
+DOTCLEAR_SHAREDIR?=	${PREFIX}/share/dotclear
+DOTCLEAR_CACHEDIR?=	${VARBASE}/cache/dotclear
+DOTCLEAR_DBDIR?=	${VARBASE}/db/dotclear
+DOTCLEAR_LOGDIR?=	${VARBASE}/log/dotclear
+DOTCLEAR_PUBDIR?=	${DOTCLEAR_DBDIR}/public
+DOTCLEAR_PLUGDIR?=	${DOTCLEAR_DBDIR}/plugins
 
-PKG_USERS_VARS=		WWW_USER
-PKG_GROUPS_VARS=	WWW_GROUP
+REQD_FILES_PERMS+=	${EGDIR}/config.php.in ${PKG_SYSCONFDIR}/config.php.in \
+			${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 644
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 770
+OWN_DIRS_PERMS+=	${DOTCLEAR_CACHEDIR} ${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 775
+OWN_DIRS_PERMS+=	${DOTCLEAR_DBDIR} ${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 775
+OWN_DIRS_PERMS+=	${DOTCLEAR_PUBDIR} ${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 775
+OWN_DIRS_PERMS+=	${DOTCLEAR_PLUGDIR} ${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 775
+OWN_DIRS_PERMS+=	${DOTCLEAR_LOGDIR} ${DOTCLEAR_USER} ${DOTCLEAR_GROUP} 775
 
-DCDIR=			${PREFIX}/share/dotclear
-DOCDIR=			${PREFIX}/share/doc/dotclear
-EGDIR=			${PREFIX}/share/examples/dotclear
+PKG_GROUPS+=			${DOTCLEAR_GROUP}
+PKG_USERS+=			${DOTCLEAR_USER}:${DOTCLEAR_GROUP}
+PKG_GECOS.${DOTCLEAR_USER}=	Dotclear user
 
-PAX_DIRS=		admin inc locales plugins themes
-DOC_FILES=		CHANGELOG CONTRIBUTING.md CREDITS LICENSE README.md
-CONF_FILES=		${EGDIR}/dotclear.conf \
-			${PKG_SYSCONFDIR}/dotclear.conf
-CONF_FILES+=		${EGDIR}/config.php.in \
-			${PKG_SYSCONFDIR}/config.php.in
-OWN_DIRS_PERMS+=	${VARBASE}/cache/dotclear \
-			${WWW_USER} ${WWW_GROUP} 750
-OWN_DIRS_PERMS+=	${VARBASE}/www/dotclear \
-			${WWW_USER} ${WWW_GROUP} 750
-OWN_DIRS_PERMS+=	${VARBASE}/www/dotclear/public \
-			${WWW_USER} ${WWW_GROUP} 750
+EGDIR=		${PREFIX}/share/examples/dotclear
 
-SUBST_CLASSES+=		files
-SUBST_STAGE.files=	do-configure
-SUBST_MESSAGE.files=	Fixing configuration files.
-SUBST_FILES.files=	dotclear.conf inc/config.php.in
-SUBST_FILES.files+=	inc/prepend.php inc/core/class.dc.core.php
-SUBST_FILES.files+=	admin/install/index.php admin/install/wizard.php
-SUBST_VARS.files=	DCDIR
-SUBST_VARS.files+=	VARBASE
-SUBST_VARS.files+=	PKG_SYSCONFDIR
-SUBST_VARS.files+=	WWW_SYSCONFDIR
-SUBST_SED.files+=	-e "s|@DC_ROOT@|${PREFIX}/share|g"
-SUBST_SED.files+=	-e "s|@DC_CACHE@|${VARBASE}/cache/dotclear|g"
-SUBST_SED.files+=	-e "s|@DC_WWW@|${VARBASE}/www/dotclear|g"
-SUBST_SED.files+=	-e "s|@DC_DBDIR@|${VARBASE}/db/dotclear|g"
+INSTALLATION_DIRS=	${DOTCLEAR_SHAREDIR} ${EGDIR}
 
-NON_EXEC_FILES=		admin/images/grid-off.png admin/images/grid-on.png \
-			admin/images/list-off.png admin/images/list-on.png \
-			plugins/breadcrumb/_admin.php plugins/breadcrumb/_define.php \
-			plugins/breadcrumb/_public.php plugins/dcLegacyEditor/icon.png \
-			themes/berlin/_define.php themes/berlin/locales/de/main.po \
-			themes/berlin/locales/en/main.po themes/berlin/locales/es/main.po \
-			themes/berlin/locales/fr/main.po themes/berlin/scripts/boxsizing.htc \
-			themes/berlin/scss/libs/_scut.scss \
-			themes/berlin/scss/libs/sass-mq-master/LICENSE.md \
-			themes/berlin/scss/libs/sass-mq-master/README.md \
-			themes/berlin/scss/libs/sass-mq-master/_mq.scss \
-			themes/berlin/scss/libs/zen-grids/_background.scss \
-			themes/berlin/scss/libs/zen-grids/_flow.scss \
-			themes/berlin/scss/libs/zen-grids/_grids.scss
+SUBST_CLASSES+=		cfg
+SUBST_STAGE.cfg=	do-configure
+SUBST_MESSAGE.cfg=	Adapting files to use pkgsrc directories.
+SUBST_FILES.cfg=	admin/install/index.php admin/install/wizard.php
+SUBST_FILES.cfg+=	inc/config.php.in inc/core/class.dc.core.php
+SUBST_FILES.cfg+=	inc/load_plugin_file.php inc/prepend.php
+SUBST_VARS.cfg=		PKG_SYSCONFDIR DOTCLEAR_SHAREDIR DOTCLEAR_CACHEDIR DOTCLEAR_DBDIR
+SUBST_VARS.cfg+=	DOTCLEAR_PUBDIR DOTCLEAR_PLUGDIR DOTCLEAR_LOGDIR
 
-post-extract:
-	${CP} ${FILESDIR}/${WWW_CONF_FILE} ${WRKSRC}/dotclear.conf
-# XXX in 2.9.1, executable bit is set on non-executable file
-.for f in ${NON_EXEC_FILES}
-	${CHMOD} -x ${WRKSRC}/${f}
-.endfor
+pre-configure:
+	${SED} -e 's|@DOTCLEAR_SHAREDIR@|${DOTCLEAR_SHAREDIR}|g' \
+	       -e 's|@DOTCLEAR_PUBDIR@|${DOTCLEAR_PUBDIR}|g' ${FILESDIR}/apache.conf > ${WRKSRC}/apache.conf
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/initdb-mysql.sh > ${WRKSRC}/initdb-mysql.sh
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/initdb-pgsql.sh > ${WRKSRC}/initdb-pgsql.sh
+	${SED} -e 's|@DOTCLEAR_SHAREDIR@|${DOTCLEAR_SHAREDIR}|g' \
+	       -e 's|@DOTCLEAR_PUBDIR@|${DOTCLEAR_PUBDIR}|g' \
+	       -e 's|@VARBASE@|${VARBASE}|g' ${FILESDIR}/lighttpd.conf > ${WRKSRC}/lighttpd.conf
+	${SED} -e 's|@DOTCLEAR_SHAREDIR@|${DOTCLEAR_SHAREDIR}|g' \
+	       -e 's|@DOTCLEAR_PUBDIR@|${DOTCLEAR_PUBDIR}|g' \
+	       -e 's|@VARBASE@|${VARBASE}|g' ${FILESDIR}/nginx.conf > ${WRKSRC}/nginx.conf
+	${SED} -e 's|@VARBASE@|${VARBASE}|g' ${FILESDIR}/php-fpm.conf > ${WRKSRC}/php-fpm.conf
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${DCDIR}
-	${INSTALL_DATA} ${WRKSRC}/inc/config.php.in ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/dotclear.conf ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/init-*.sh ${DESTDIR}${EGDIR}
-.for f in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${DOTCLEAR_SHAREDIR}/index.php
+.for d in admin inc locales plugins themes
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOTCLEAR_SHAREDIR}/${d}
+	cd ${WRKSRC}/${d} && ${FIND} . -type f \! -name '*.orig' -print | \
+		${PAX} -rw ${DESTDIR}${DOTCLEAR_SHAREDIR}/${d}
 .endfor
-.for d in ${PAX_DIRS}
-	${INSTALL_DATA_DIR} ${DESTDIR}${DCDIR}/${d}
-	cd ${WRKSRC}/${d} && \
-		${FIND} . -type f \! -name "config.php.in" \! -name "*.orig" -print | \
-		${PAX} -rw ${DESTDIR}${DCDIR}/${d}
-.endfor
-.for f in ${DOC_FILES}
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/inc/config.php.in ${DESTDIR}${EGDIR}/config.php.in
+	${RM} -f ${DESTDIR}${DOTCLEAR_SHAREDIR}/inc/config.php.in
+	${INSTALL_DATA} ${WRKSRC}/apache.conf ${DESTDIR}${EGDIR}/apache.conf
+	${INSTALL_DATA} ${WRKSRC}/initdb-mysql.sh ${DESTDIR}${EGDIR}/initdb-mysql.sh
+	${INSTALL_DATA} ${WRKSRC}/initdb-pgsql.sh ${DESTDIR}${EGDIR}/initdb-pgsql.sh
+	${INSTALL_DATA} ${WRKSRC}/lighttpd.conf ${DESTDIR}${EGDIR}/lighttpd.conf
+	${INSTALL_DATA} ${WRKSRC}/nginx.conf ${DESTDIR}${EGDIR}/nginx.conf
+	${INSTALL_DATA} ${WRKSRC}/php-fpm.conf ${DESTDIR}${EGDIR}/php-fpm.conf
 
 .include "../../mk/bsd.pkg.mk"

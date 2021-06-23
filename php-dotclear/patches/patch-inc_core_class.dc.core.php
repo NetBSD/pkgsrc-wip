@@ -1,15 +1,15 @@
 $NetBSD$
 
-Change location of public directory to /var.
+Set pkgsrc compliant directory for /public.
 
---- inc/core/class.dc.core.php.orig	2016-03-27 09:27:59.000000000 +0000
+--- inc/core/class.dc.core.php.orig	2021-02-13 10:31:06.000000000 +0000
 +++ inc/core/class.dc.core.php
-@@ -1414,7 +1414,7 @@ class dcCore
- 				'Number of comments on feeds'),
- 				array('post_url_format','string','{y}/{m}/{d}/{t}',
- 				'Post URL format. {y}: year, {m}: month, {d}: day, {id}: post id, {t}: entry title'),
--				array('public_path','string','public',
-+				array('public_path','string','@DC_WWW@/public',
- 				'Path to public directory, begins with a / for a full system path'),
- 				array('public_url','string','/public',
- 				'URL to public directory'),
+@@ -1445,7 +1445,7 @@ class dcCore
+                     'Number of comments on feeds'],
+                 ['post_url_format', 'string', '{y}/{m}/{d}/{t}',
+                     'Post URL format. {y}: year, {m}: month, {d}: day, {id}: post id, {t}: entry title'],
+-                ['public_path', 'string', 'public',
++                ['public_path', 'string', '@DOTCLEAR_PUBDIR@',
+                     'Path to public directory, begins with a / for a full system path'],
+                 ['public_url', 'string', '/public',
+                     'URL to public directory'],

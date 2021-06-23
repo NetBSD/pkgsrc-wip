@@ -2,9 +2,9 @@ $NetBSD$
 
 Honor PKG_SYSCONFDIR.
 
---- inc/prepend.php.orig	2021-02-13 10:32:13.000000000 +0000
-+++ inc/prepend.php
-@@ -117,7 +117,7 @@ if (isset($_SERVER['DC_RC_PATH'])) {
+--- inc/load_plugin_file.php.orig	2021-02-13 10:31:06.000000000 +0000
++++ inc/load_plugin_file.php
+@@ -26,7 +26,7 @@ if (isset($_SERVER['DC_RC_PATH'])) {
  } elseif (isset($_SERVER['REDIRECT_DC_RC_PATH'])) {
      define('DC_RC_PATH', $_SERVER['REDIRECT_DC_RC_PATH']);
  } else {
