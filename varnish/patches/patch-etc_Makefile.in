@@ -2,18 +2,18 @@ $NetBSD$
 
 Use standard sysconfdir for vcl files.
 
---- etc/Makefile.in.orig	2016-09-15 09:24:12.000000000 +0000
+--- etc/Makefile.in.orig	2021-03-15 11:36:30.000000000 +0000
 +++ etc/Makefile.in
-@@ -146,7 +146,7 @@ am__uninstall_files_from_dir = { \
+@@ -157,7 +157,7 @@ am__uninstall_files_from_dir = { \
      || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
           $(am__cd) "$$dir" && rm -f $$files; }; \
    }
 -am__installdirs = "$(DESTDIR)$(docdir)" "$(DESTDIR)$(vcldir)"
 +am__installdirs = "$(DESTDIR)$(sysconfdir)" "$(DESTDIR)$(vcldir)"
  DATA = $(dist_doc_DATA) $(dist_vcl_DATA)
+ am__extra_recursive_targets = recheck-recursive
  am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-@@ -347,18 +347,18 @@ clean-libtool:
+@@ -380,18 +380,18 @@ clean-libtool:
  	-rm -rf .libs _libs
  install-dist_docDATA: $(dist_doc_DATA)
  	@$(NORMAL_INSTALL)
@@ -37,7 +37,7 @@ Use standard sysconfdir for vcl files.
  	done
  
  uninstall-dist_docDATA:
-@@ -428,7 +428,7 @@ check-am: all-am
+@@ -465,7 +465,7 @@ check-am: all-am
  check: check-am
  all-am: Makefile $(DATA)
  installdirs:

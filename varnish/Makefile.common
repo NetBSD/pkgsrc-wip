@@ -1,16 +1,16 @@
 # $NetBSD$
-# used by wip/varnish/Makefile
-# used by wip/varnish4/Makefile
 
 CATEGORIES=	www
-MASTER_SITES=	http://repo.varnish-cache.org/source/
+MASTER_SITES=	https://varnish-cache.org/_downloads/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://varnish-cache.org/
 COMMENT=	High-performace HTTP accelerator
 LICENSE=	modified-bsd
+EXTRACT_SUFX=	.tgz
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -46,11 +46,13 @@ FILES_SUBST+=		VRNUSER=${VRNUSER}
 FILES_SUBST+=		VRNGROUP=${VRNGROUP}
 
 REPLACE_PYTHON+=	lib/libvcc/vmodtool.py
+REPLACE_PYTHON+=	lib/libvcc/vsctool.py
 
 CONFIGURE_ARGS+=	--localstatedir=${STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
-CONFIGURE_ARGS+=	--with-rst2html=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
-CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
+CONFIGURE_ARGS+=	--with-rst2html=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}
+CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}
+CONFIGURE_ARGS+=	--with-sphinx-build=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
 # Explicitly disable epoll on illumos, provided for Linux compat only.
 CONFIGURE_ARGS.SunOS+=	--disable-epoll
@@ -59,9 +61,10 @@ CONFIGURE_ARGS.SunOS+=	--disable-epoll
 
 # Fixes build on at least SunOS/i386
 # See https://github.com/varnishcache/varnish-cache/issues/1875
-.if !empty(CC_VERSION:Mgcc*)
+.if !empty(CC_VERSION:Mgcc*) && ${MACHINE_ARCH} == "i386"
 CFLAGS+=		-fexcess-precision=standard
 .endif
+LDFLAGS+=		-lm # for ldexp
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/varnish
 
@@ -74,11 +77,10 @@ RCD_SCRIPTS=		varnishd varnishlog varnishncsa
 
 TEST_TARGET=		check
 
-PYTHON_FOR_BUILD_ONLY=	yes
-
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"

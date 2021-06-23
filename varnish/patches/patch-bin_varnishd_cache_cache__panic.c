@@ -2,9 +2,9 @@ $NetBSD$
 
 Need sys/cdefs.h for __BEGIN_DECLS/__END_DECLS.
 
---- bin/varnishd/cache/cache_panic.c.orig	2017-03-14 14:44:51.000000000 +0000
+--- bin/varnishd/cache/cache_panic.c.orig	2021-03-12 15:02:41.000000000 +0000
 +++ bin/varnishd/cache/cache_panic.c
-@@ -29,6 +29,10 @@
+@@ -31,6 +31,10 @@
  
  #include "config.h"
  
@@ -12,6 +12,6 @@ Need sys/cdefs.h for __BEGIN_DECLS/__END_DECLS.
 +#include <sys/cdefs.h>
 +#endif
 +
- #include <execinfo.h>
- #include <errno.h>
- #include <stdio.h>
+ #ifdef WITH_UNWIND
+ #  include <libunwind.h>
+ #else
