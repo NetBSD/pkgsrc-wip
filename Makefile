@@ -5177,6 +5177,7 @@ SUBDIR+=	slurm-wlm-devel
 SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
+SUBDIR+=	smake
 SUBDIR+=	smallbasic
 SUBDIR+=	smallbasic-gui
 SUBDIR+=	smap
