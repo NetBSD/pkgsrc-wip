@@ -642,6 +642,7 @@ SUBDIR+=	dlpoly-classic
 SUBDIR+=	dlt-daemon
 SUBDIR+=	dlt-viewer
 SUBDIR+=	dma
+SUBDIR+=	dmake
 SUBDIR+=	dmapd
 SUBDIR+=	dmd
 SUBDIR+=	dmd-bin
