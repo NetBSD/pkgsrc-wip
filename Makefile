@@ -5688,7 +5688,6 @@ SUBDIR+=	vamps
 SUBDIR+=	vanitygen
 SUBDIR+=	varnish
 SUBDIR+=	varnish-modules
-SUBDIR+=	varnish4
 SUBDIR+=	vault
 SUBDIR+=	vba-m
 SUBDIR+=	vcf-split
