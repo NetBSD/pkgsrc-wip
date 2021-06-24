@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2015/09/06 20:10:45 yhardy Exp $
 
 DISTNAME=	Commander-Genius-v${PKGVERSION_NOREV}
-PKGNAME=	Commander-Genius-2.8.1
+PKGNAME=	Commander-Genius-2.8.2
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/Dringgstein/Commander-Genius/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,8 @@ CMAKE_ARGS+=	-DDOCDIR=${PREFIX}/share/doc/commandergenius
 CMAKE_ARGS+=	-DGAMES_SHAREDIR=${PREFIX}/share
 # segmentation fault on startup
 CMAKE_ARGS+=	-DUSE_OPENGL=NO
+# make an option for SDL1 ?
+#CMAKE_ARGS+=	-DUSE_SDL2=NO
 
 INSTALLATION_DIRS=	bin share/doc/commandergenius
 
