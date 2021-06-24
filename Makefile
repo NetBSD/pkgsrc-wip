@@ -3827,6 +3827,7 @@ SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hiphive
 SUBDIR+=	py-hiredis
 SUBDIR+=	py-hmf
+SUBDIR+=	py-hkdf
 SUBDIR+=	py-holoviews
 SUBDIR+=	py-holoviz
 SUBDIR+=	py-homeassistant
