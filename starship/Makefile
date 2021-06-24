@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	starship-0.54.0
+DISTNAME=	starship-0.55.0
 CATEGORIES=	shells
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
