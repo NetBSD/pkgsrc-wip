@@ -1,0 +1,6 @@
+This package doesn't /yet/ build on NetBSD due to the following:
+* https://github.com/rust-lang/libc/issues/2243
+* https://github.com/svartalf/rust-battery/issues/20
+
+See https://github.com/starship/starship/issues/2690 for more information.
+
