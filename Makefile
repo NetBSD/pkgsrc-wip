@@ -5900,6 +5900,7 @@ SUBDIR+=	xrdp
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
+SUBDIR+=	xsv
 SUBDIR+=	xssp
 SUBDIR+=	xtags
 SUBDIR+=	xtensor
