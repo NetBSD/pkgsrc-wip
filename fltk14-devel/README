@@ -1,7 +1,10 @@
 FLTK 1.4.x development snapshot
 
 Intended to test glyph substitution via Pango with X11 backend.
-This allows applications to render text using multiple fonts.
+The "pango" option allows applications to render text using multiple fonts.
+
+Disabling the "pango" and "xft2" options allows to build a lightweight FLTK
+library that use X11 Core Fonts (rendered by the X server).
 
 Also useful to test compatibility of packages with FLTK 1.4 API.
 In general application using the FLTK 1.3 API should work out-of-the-box

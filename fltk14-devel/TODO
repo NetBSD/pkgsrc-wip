@@ -1,0 +1,13 @@
+[X] Add zlib dependency
+[ ] Static libraries should not be installed with execute permissions.
+    "fltk.list" has entires with 444 permissions, looks like a bug.
+[ ] Check for library suffixes on HP-UX and macOS
+[ ] Some configurations create the compiler warnings below.
+
+drivers/Xlib/Fl_Xlib_Graphics_Driver_font_x.cxx: In member function 'virtual const char* Fl_Xlib_Graphics_Driver::get_font_name(Fl_Font, int*)':
+drivers/Xlib/Fl_Xlib_Graphics_Driver_font_x.cxx:140:9: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+         if (*e) e++; x = e; e = fl_font_word(x,1);
+         ^~
+drivers/Xlib/Fl_Xlib_Graphics_Driver_font_x.cxx:140:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+         if (*e) e++; x = e; e = fl_font_word(x,1);
+                      ^

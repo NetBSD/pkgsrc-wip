@@ -57,6 +57,8 @@ pkgbase := fltk
 .  endif
 .endif
 
+BUILDLINK_API_DEPENDS.zlib+=<-->zlib>=1.2.3
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
