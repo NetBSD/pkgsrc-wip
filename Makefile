@@ -5683,7 +5683,6 @@ SUBDIR+=	valgrind-netbsd
 SUBDIR+=	vamp
 SUBDIR+=	vamps
 SUBDIR+=	vanitygen
-SUBDIR+=	varnish
 SUBDIR+=	varnish-modules
 SUBDIR+=	vault
 SUBDIR+=	vba-m

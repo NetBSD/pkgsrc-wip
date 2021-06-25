@@ -23,6 +23,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap
 
-.include "../../wip/varnish/buildlink3.mk"
+.include "../../www/varnish/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
