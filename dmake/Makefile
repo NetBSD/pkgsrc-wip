@@ -23,7 +23,7 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMAND
 # Honor CPPFLAGS, CFLAGS and LDFLAGS
 MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/lib/make
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/lib/dmake
 
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../devel/smake/Makefile.common"
@@ -47,6 +47,6 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/sunpro && ${INSTALL_DATA}				\
 		${WRKSRC}/sunpro/Make/bin/make/common/make.rules.file	\
-		${DESTDIR}${PREFIX}/share/lib/make/make.rules
+		${DESTDIR}${PREFIX}/share/lib/dmake/make.rules
 
 .include "../../mk/bsd.pkg.mk"

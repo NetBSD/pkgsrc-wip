@@ -1,4 +1,4 @@
 @comment $NetBSD$
 bin/dmake
 man/man1/dmake.1
-share/lib/make/make.rules
+share/lib/dmake/make.rules
