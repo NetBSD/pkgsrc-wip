@@ -2308,7 +2308,6 @@ SUBDIR+=	mcwm
 SUBDIR+=	md4c
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
-SUBDIR+=	mdigest
 SUBDIR+=	mdpress
 SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
