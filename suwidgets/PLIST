@@ -1,0 +1,23 @@
+@comment $NetBSD$
+qt5/include/SuWidgets/ColorChooserButton.h
+qt5/include/SuWidgets/Constellation.h
+qt5/include/SuWidgets/Decider.h
+qt5/include/SuWidgets/FrequencySpinBox.h
+qt5/include/SuWidgets/Histogram.h
+qt5/include/SuWidgets/LCD.h
+qt5/include/SuWidgets/QVerticalLabel.h
+qt5/include/SuWidgets/SuWidgetsHelpers.h
+qt5/include/SuWidgets/SymView.h
+qt5/include/SuWidgets/TVDisplay.h
+qt5/include/SuWidgets/ThrottleableWidget.h
+qt5/include/SuWidgets/TimeSpinBox.h
+qt5/include/SuWidgets/Transition.h
+qt5/include/SuWidgets/Version.h
+qt5/include/SuWidgets/Waterfall.h
+qt5/include/SuWidgets/Waveform.h
+qt5/include/SuWidgets/ctkPimpl.h
+qt5/include/SuWidgets/ctkRangeSlider.h
+qt5/lib/libsuwidgets.so
+qt5/lib/libsuwidgets.so.0
+qt5/lib/libsuwidgets.so.0.2
+qt5/lib/libsuwidgets.so.0.2.0

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/SigDigger
+share/applications/RMSViewer.desktop
+share/applications/SigDigger.desktop
+share/icons/hicolor/256x256/apps/SigDigger.png
