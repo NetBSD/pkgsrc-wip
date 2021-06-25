@@ -1105,6 +1105,7 @@ SUBDIR+=	giggle
 SUBDIR+=	gin
 SUBDIR+=	git-crypt
 SUBDIR+=	git-docs-html
+SUBDIR+=	git-extras
 SUBDIR+=	git-modes-git
 SUBDIR+=	git-multimail
 SUBDIR+=	git-spindle
