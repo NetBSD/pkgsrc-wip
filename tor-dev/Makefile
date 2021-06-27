@@ -21,9 +21,8 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/tordev
 CONFIGURE_ENV+=		CPP=${CPP:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 
-# as of 0.4.6.4-rc
 #============================================================================
-#Testsuite summary for tor 0.4.6.4-rc
+#Testsuite summary for tor 0.4.6.5
 #============================================================================
 ## TOTAL: 33
 ## PASS:  29
@@ -52,7 +51,7 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME.${TOR_USER}} ${USER_GROUP} 0700
 
-CONF_FILES+=		${PREFIX}/share/examples/tordev/torrc.sample	\
+CONF_FILES+=		${PREFIX}/share/examples/tordev/torrc.sample \
 			${PKG_SYSCONFDIR}/torrc
 
 PRINT_PLIST_AWK+=	/^man\/man/ { $$0 = "$${PLIST.doc}" $$0 }
