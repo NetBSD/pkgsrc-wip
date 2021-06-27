@@ -3826,6 +3826,7 @@ SUBDIR+=	py-hidapi-git
 SUBDIR+=	py-hieroglyph
 SUBDIR+=	py-hiphive
 SUBDIR+=	py-hiredis
+SUBDIR+=	py-hkdf
 SUBDIR+=	py-hmf
 SUBDIR+=	py-holoviews
 SUBDIR+=	py-holoviz
