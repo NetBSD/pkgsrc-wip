@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.139 2020/12/10 21:37:07 wiz Exp $
 
-SHA1 (ocaml-4.12.0~alpha2.tar.gz) = 48748180b87f5cba3bb5e2c00c3167a13ae320d1
-RMD160 (ocaml-4.12.0~alpha2.tar.gz) = 99d505156e72e1e3e397d6a5fc48c590dad91921
-SHA512 (ocaml-4.12.0~alpha2.tar.gz) = 26ac762186563afe19f7edcb96963193de26701d8690a17b6b7cff4c6e816b32502c5ac8e9be7068d78ddae4deda85c21f6a9cd0eef5c2d2056195d2f7c61cd8
-Size (ocaml-4.12.0~alpha2.tar.gz) = 5044907 bytes
+SHA1 (ocaml-4.12.0.tar.gz) = 6aee5658204c68042fbc8ef993c28475998a97f6
+RMD160 (ocaml-4.12.0.tar.gz) = 92711b958b528fff842313deef68596dce2f02b5
+SHA512 (ocaml-4.12.0.tar.gz) = 7c9e4ebe9c6e3f04eca9b837b70f3dcfda7d81d033f4fb6d0c507cd40c82115c0dde0907444f60c406a301fafe1a48d0bca01ee6af192fd08458d3b1bee7f717
+Size (ocaml-4.12.0.tar.gz) = 5075034 bytes
 SHA1 (patch-Makefile) = be3b62bba4d9e74f97df188cdf9eb09108cd64cd
 SHA1 (patch-Makefile.build_config.in) = ae8b9bce21ef1540d0380371ceb212733ffaa758
 SHA1 (patch-check-linker-version_sh) = c90242556207242ac58499d7f42519a10aedcca4
@@ -15,7 +15,7 @@ SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb573
 SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 5518c6b4d8772d995252b6f640323e2602097c4d
 SHA1 (patch-otherlibs_systhreads_Makefile) = ff2cf90527bda37474097bb576bccbf7329c4f1d
 SHA1 (patch-otherlibs_systhreads_st__stubs.c) = 3c0aa73f0e128646c01ed3855ee9c5645d5fa3f1
-SHA1 (patch-otherlibs_unix_Makefile) = ebcd541dc3b425c96b00f457c4779bd35976c3f4
+SHA1 (patch-otherlibs_unix_Makefile) = 15425e037b287706b35e3beda72ddea0e2a5886c
 SHA1 (patch-runtime_Makefile) = 6c70b68791e4c074179aa27dfafb398646b59dcb
 SHA1 (patch-testsuite_tests_lib-systhreads_testyield.ml) = 0f6d35e030de168c6f4aeb126055065ed47878aa
 SHA1 (patch-tools_Makefile) = 69f92a8615ed6f9b33f27546c6a25a1f24995e55
