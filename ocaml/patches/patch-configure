@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-configure,v 1.43 2020/12/09 10:33:04 jaapb Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
