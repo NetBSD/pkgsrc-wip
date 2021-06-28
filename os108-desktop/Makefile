@@ -18,6 +18,7 @@ DEPENDS+=	dconf-[0-9]*:../../devel/dconf-editor
 #DEPENDS+=	evolution-[0-9]*:../../mail/evolution
 #DEPENDS+=	epiphany-[0-9]*:../../www/epiphany
 DEPENDS+=	eog-[0-9]*:../../graphics/eog
+DEPENDS+=	firefox-[0-9]*:../../www/firefox
 #DEPENDS+=	gdm-[0-9]*:../../wip/gdm
 DEPENDS+=	gedit-[0-9]*:../../editors/gedit
 DEPENDS+=	gnome-backgrounds-[0-9]*:../../graphics/gnome-backgrounds
