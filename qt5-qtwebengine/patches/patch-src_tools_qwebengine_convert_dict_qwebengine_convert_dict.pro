@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_tools_qwebengine_convert_dict_qwebengine_convert_dict_pro,v 1.1 2020/05/16 07:03:01 rsadowski Exp $
+$NetBSD$
 
 Index: src/tools/qwebengine_convert_dict/qwebengine_convert_dict.pro
 --- src/tools/qwebengine_convert_dict/qwebengine_convert_dict.pro.orig

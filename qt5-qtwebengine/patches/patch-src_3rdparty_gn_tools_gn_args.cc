@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_3rdparty_gn_tools_gn_args_cc,v 1.2 2021/01/19 06:16:35 rsadowski Exp $
+$NetBSD$
 
 Index: src/3rdparty/gn/tools/gn/args.cc
 --- src/3rdparty/gn/tools/gn/args.cc.orig

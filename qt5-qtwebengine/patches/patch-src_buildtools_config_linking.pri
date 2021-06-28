@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_buildtools_config_linking_pri,v 1.1 2021/01/19 06:16:35 rsadowski Exp $
+$NetBSD$
 
 Index: src/buildtools/config/linking.pri
 --- src/buildtools/config/linking.pri.orig

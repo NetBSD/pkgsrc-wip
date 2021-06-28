@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_3rdparty_gn_base_files_file_posix_cc,v 1.1 2021/01/19 06:16:35 rsadowski Exp $
+$NetBSD$
 
 Index: src/3rdparty/gn/base/files/file_posix.cc
 --- src/3rdparty/gn/base/files/file_posix.cc.orig

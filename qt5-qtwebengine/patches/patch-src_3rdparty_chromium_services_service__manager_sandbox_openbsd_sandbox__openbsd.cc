@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_3rdparty_chromium_services_service_manager_sandbox_openbsd_sandbox_openbsd_cc,v 1.2 2021/01/19 06:16:34 rsadowski Exp $
+$NetBSD$
 
 Index: src/3rdparty/chromium/services/service_manager/sandbox/openbsd/sandbox_openbsd.cc
 --- src/3rdparty/chromium/services/service_manager/sandbox/openbsd/sandbox_openbsd.cc.orig

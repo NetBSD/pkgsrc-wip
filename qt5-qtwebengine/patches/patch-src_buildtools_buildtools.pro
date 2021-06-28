@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_buildtools_buildtools_pro,v 1.1 2020/05/16 07:03:01 rsadowski Exp $
+$NetBSD$
 
 Index: src/buildtools/buildtools.pro
 --- src/buildtools/buildtools.pro.orig

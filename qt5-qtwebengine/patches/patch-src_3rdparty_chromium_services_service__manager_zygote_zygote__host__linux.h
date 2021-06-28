@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_3rdparty_chromium_services_service_manager_zygote_zygote_host_linux_h,v 1.2 2021/01/19 06:16:34 rsadowski Exp $
+$NetBSD$
 
 Index: src/3rdparty/chromium/services/service_manager/zygote/zygote_host_linux.h
 --- src/3rdparty/chromium/services/service_manager/zygote/zygote_host_linux.h.orig

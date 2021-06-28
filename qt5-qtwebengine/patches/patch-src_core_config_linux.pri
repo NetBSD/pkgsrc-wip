@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_core_config_linux_pri,v 1.2 2021/01/19 06:16:35 rsadowski Exp $
+$NetBSD$
 
 Index: src/core/config/linux.pri
 --- src/core/config/linux.pri.orig

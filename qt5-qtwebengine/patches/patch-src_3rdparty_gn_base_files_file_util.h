@@ -1,4 +1,4 @@
-$OpenBSD: patch-src_3rdparty_gn_base_files_file_util_h,v 1.1 2021/01/19 06:16:35 rsadowski Exp $
+$NetBSD$
 
 Index: src/3rdparty/gn/base/files/file_util.h
 --- src/3rdparty/gn/base/files/file_util.h.orig
