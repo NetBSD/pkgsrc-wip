@@ -2686,6 +2686,7 @@ SUBDIR+=	orbifolder
 SUBDIR+=	org-caldav-git
 SUBDIR+=	orion
 SUBDIR+=	orocos-kdl
+SUBDIR+=	os108-desktop
 SUBDIR+=	oslc
 SUBDIR+=	osmo
 SUBDIR+=	osmo-sdr-git
