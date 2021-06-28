@@ -2,6 +2,7 @@
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -55,12 +56,14 @@ pre-configure:
 	cd ${WRKSRC} && env -i ${MAKE_ENV} ${CHROMESRC}/build/linux/unbundle/replace_gn_files.py \
 		--system-libraries ${GN_SYSTEM_LIBS}
 
-
 post-install:
 .for i in Qt5Pdf.pc Qt5PdfWidgets.pc Qt5WebEngine.pc Qt5WebEngineCore.pc Qt5WebEngineWidgets.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
+.if ${OPSYS} == "NetBSD"
+	paxctl +m ${DESTDIR}${PREFIX}/qt5/libexec/QtWebEngineProcess
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -105,10 +108,6 @@ BUILDLINK_TRANSFORM+=   l:pci:pciutils
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-
-
-
 
 #.include "../../databases/sqlite3/buildlink3.mk"
 #.include "../../fonts/woff2/buildlink3.mk"
