@@ -15,9 +15,17 @@ search the directory containing the symlinks to -latomic.
 +        LinkerFlavor::Gcc,
 +        vec![
 +            // For the benefit of powerpc, when libatomic-links is installed,
-+            "-Wl,-L@PREFIX@/lib/libatomic".to_string(),
++            "-Wl,-L/usr/pkg/lib/libatomic".to_string(),
 +        ],
 +    );
      TargetOptions {
          os: "netbsd".to_string(),
          dynamic_linking: true,
+@@ -9,6 +17,7 @@ pub fn opts() -> TargetOptions {
+         linker_is_gnu: true,
+         no_default_libraries: false,
+         has_rpath: true,
++        pre_link_args: args,
+         position_independent_executables: true,
+         relro_level: RelroLevel::Full,
+         use_ctors_section: true,
