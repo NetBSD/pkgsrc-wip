@@ -1751,7 +1751,6 @@ SUBDIR+=	info2man
 SUBDIR+=	infraarcana
 SUBDIR+=	initware-git
 SUBDIR+=	inkscape
-SUBDIR+=	inkscape-snapshot
 SUBDIR+=	input-mono-ttf
 SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interbase-docs
