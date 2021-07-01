@@ -15,7 +15,7 @@ search the directory containing the symlinks to -latomic.
 +        LinkerFlavor::Gcc,
 +        vec![
 +            // For the benefit of powerpc, when libatomic-links is installed,
-+            "-Wl,-L/usr/pkg/lib/libatomic".to_string(),
++            "-Wl,-L@PREFIX@/lib/libatomic".to_string(),
 +        ],
 +    );
      TargetOptions {
