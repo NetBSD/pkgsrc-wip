@@ -54,6 +54,12 @@ SUBST_MESSAGE.pycmd=	Replacing COMMAND python in CMakeFiles.
 SUBST_FILES.pycmd+=	share/*/CMakeLists.txt
 SUBST_SED.pycmd=	-e "s,COMMAND python3,COMMAND ${PYTHONBIN},g"
 
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Replacing xdg search path.
+SUBST_FILES.xdg+=	src/inkscape-main.cpp
+SUBST_SED.xdg=		-e 's,xdg_data_dirs = "/usr/local/share/:/usr/share/",xdg_data_dirs = "'${PREFIX}'/share/",'
+
 REPLACE_PYTHON+=	share/extensions/*.py
 
 CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/genpofiles.sh
