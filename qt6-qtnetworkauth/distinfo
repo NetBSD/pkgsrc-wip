@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (qtnetworkauth-everywhere-src-6.1.0.tar.xz) = 02cd5092ce7bb3d71c7d9e62c7a81abefbb7f7ef
-RMD160 (qtnetworkauth-everywhere-src-6.1.0.tar.xz) = 89204a4be7bae15c485629fb97ab3672e40c5a10
-SHA512 (qtnetworkauth-everywhere-src-6.1.0.tar.xz) = 4449647253278c31f8c6c50e7ac041bcc3e47fc83944a979981184e715c32a2830f154222bf4d827f08165ec3eb6a41a2172370ab60f61c692805cefe6ac794b
-Size (qtnetworkauth-everywhere-src-6.1.0.tar.xz) = 146120 bytes
+SHA1 (qtnetworkauth-everywhere-src-6.1.2.tar.xz) = 72644e082f506158a11d49314d84106a232e2f2f
+RMD160 (qtnetworkauth-everywhere-src-6.1.2.tar.xz) = e223613a6899ad136cf38d0b70fca46e6ae9a608
+SHA512 (qtnetworkauth-everywhere-src-6.1.2.tar.xz) = b437274ea3936e78c9a8695de2bfb07674249c68e28bc21cb1bf2021fe8a5faed1b2c3fadad049cfa7704423ee5f6b45b66aa10c21561631a582f98998276605
+Size (qtnetworkauth-everywhere-src-6.1.2.tar.xz) = 146108 bytes

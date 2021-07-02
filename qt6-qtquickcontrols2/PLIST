@@ -92,6 +92,7 @@ qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopu
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopup_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopupanchors_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopupanchors_p_p.h
+qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopupitem_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopupitem_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpopuppositioner_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickpresshandler_p_p.h
@@ -131,6 +132,7 @@ qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktool
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktoolbutton_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktoolseparator_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktooltip_p.h
+qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktooltippopupitem_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktumbler_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktumbler_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickvelocitycalculator_p_p.h

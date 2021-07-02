@@ -805,7 +805,6 @@ qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickmaskex
 qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleaffector_p.h
 qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleemitter_p.h
 qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleextruder_p.h
-qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticleflatset_p.h
 qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticlegroup_p.h
 qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticlepainter_p.h
 qt6/include/QtQuickParticles/${PKGVERSION}/QtQuickParticles/private/qquickparticlesmodule_p.h

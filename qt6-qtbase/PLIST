@@ -2639,6 +2639,7 @@ qt6/lib/cmake/Qt6/FindWrapSystemFreetype.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemHarfbuzz.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemPCRE2.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemPNG.cmake
+qt6/lib/cmake/Qt6/FindWrapZLIB.cmake
 qt6/lib/cmake/Qt6/FindXKB_COMMON_X11.cmake
 qt6/lib/cmake/Qt6/FindXRender.cmake
 qt6/lib/cmake/Qt6/FindZSTD.cmake
@@ -2724,6 +2725,7 @@ qt6/lib/cmake/Qt6/qt.toolchain.cmake
 qt6/lib/cmake/Qt6BuildInternals/Qt6BuildInternalsConfig.cmake
 qt6/lib/cmake/Qt6BuildInternals/QtBuildInternalsExtra.cmake
 qt6/lib/cmake/Qt6BuildInternals/QtStandaloneTestTemplateProject/CMakeLists.txt
+qt6/lib/cmake/Qt6BuildInternals/QtStandaloneTestTemplateProject/Main.cmake
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtBaseTestsConfig.cmake
 qt6/lib/cmake/Qt6Concurrent/Qt6ConcurrentAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake

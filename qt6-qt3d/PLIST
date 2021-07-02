@@ -800,6 +800,7 @@ qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qstenciloperationargumen
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qstenciltest_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qstenciltestarguments_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qsubtreeenabler_p.h
+qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qt3drender-config_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qt3drender_global_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qtechnique_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/qtechniquefilter_p.h
@@ -1079,6 +1080,7 @@ qt6/include/Qt3DRender/qstenciloperationarguments.h
 qt6/include/Qt3DRender/qstenciltest.h
 qt6/include/Qt3DRender/qstenciltestarguments.h
 qt6/include/Qt3DRender/qsubtreeenabler.h
+qt6/include/Qt3DRender/qt3drender-config.h
 qt6/include/Qt3DRender/qt3drender_global.h
 qt6/include/Qt3DRender/qt3drenderversion.h
 qt6/include/Qt3DRender/qtechnique.h
@@ -1092,7 +1094,7 @@ qt6/include/Qt3DRender/qtextureimagedatagenerator.h
 qt6/include/Qt3DRender/qtexturewrapmode.h
 qt6/include/Qt3DRender/qviewport.h
 qt6/include/Qt3DRender/qwaitfence.h
-qt6/lib/cmake/Qt6/FindWrapAssimp.cmake
+qt6/lib/cmake/Qt6/FindWrapQt3DAssimp.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationConfig.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationConfigVersion.cmake

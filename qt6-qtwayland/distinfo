@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (qtwayland-everywhere-src-6.1.0.tar.xz) = e2aa53aa63f26c7c8f146529d516a486ea0e554a
-RMD160 (qtwayland-everywhere-src-6.1.0.tar.xz) = 1b742e962c028ea4d6334b431e381380c3c00ba9
-SHA512 (qtwayland-everywhere-src-6.1.0.tar.xz) = fddf08086ef3148de1c5738a833a9c7b92de1c1a9f4756650c40f34ed00860810eb2c2fd2690cbfdbd235e50e323590133849d290caabd8af19cc0f20caa31b6
-Size (qtwayland-everywhere-src-6.1.0.tar.xz) = 554784 bytes
+SHA1 (qtwayland-everywhere-src-6.1.2.tar.xz) = 02316dc64e659451dbd0e8ea295c9baceaab47a3
+RMD160 (qtwayland-everywhere-src-6.1.2.tar.xz) = 0c601079dceee235e815c070239c57b877fd84e1
+SHA512 (qtwayland-everywhere-src-6.1.2.tar.xz) = 6a9acac05df9b40c2b0370342eef50eb2832538f88f9b38aca40ff261313cc2bcd61d35b6fde3730d1bc6f7c943776dd53a72f3f7ea6347daa371854f8adf4cb
+Size (qtwayland-everywhere-src-6.1.2.tar.xz) = 555212 bytes
 SHA1 (patch-CMakeLists.txt) = 15eda7d0287098f7efc2acd70b05b524de1aebc6
