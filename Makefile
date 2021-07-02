@@ -5900,7 +5900,6 @@ SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xssp
-SUBDIR+=	xsv
 SUBDIR+=	xtags
 SUBDIR+=	xtensor
 SUBDIR+=	xtl-quant-stack
