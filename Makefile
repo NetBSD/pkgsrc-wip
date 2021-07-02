@@ -4478,6 +4478,7 @@ SUBDIR+=	py-sentinels
 SUBDIR+=	py-sentry
 SUBDIR+=	py-sep
 SUBDIR+=	py-serialize
+SUBDIR+=	py-serial-asyncio
 SUBDIR+=	py-setupdocs
 SUBDIR+=	py-setuptools_git
 SUBDIR+=	py-sfepy
