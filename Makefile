@@ -1750,7 +1750,6 @@ SUBDIR+=	influxdb
 SUBDIR+=	info2man
 SUBDIR+=	infraarcana
 SUBDIR+=	initware-git
-SUBDIR+=	inkscape
 SUBDIR+=	input-mono-ttf
 SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interbase-docs
