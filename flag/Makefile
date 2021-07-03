@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	flag-0.1
+DISTNAME=	flag-0.3
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=cirnatdan/}
 CATEGORIES=	pkgtools
 
