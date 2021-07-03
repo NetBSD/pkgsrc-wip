@@ -12,8 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-hkdf-[0-9]*:../../security/py-hkdf
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # devel/py-test is incompatible with 2.7 since 5.0.0
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
