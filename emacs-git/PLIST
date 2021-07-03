@@ -78,7 +78,9 @@ man/man1/ebrowse.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
+share/applications/emacs-mail.desktop
 share/applications/emacs.desktop
+share/applications/emacsclient-mail.desktop
 share/applications/emacsclient.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
@@ -253,10 +255,11 @@ share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
 share/emacs/${PKGVERSION}/etc/emacs-mail.desktop
-share/emacs/${PKGVERSION}/etc/emacs.metainfo.xml
 share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
+share/emacs/${PKGVERSION}/etc/emacs.metainfo.xml
 share/emacs/${PKGVERSION}/etc/emacs.service
+share/emacs/${PKGVERSION}/etc/emacsclient-mail.desktop
 share/emacs/${PKGVERSION}/etc/emacsclient.desktop
 share/emacs/${PKGVERSION}/etc/enriched.txt
 share/emacs/${PKGVERSION}/etc/facemenu-removal.txt
