@@ -5239,7 +5239,6 @@ SUBDIR+=	srecord
 SUBDIR+=	srvx
 SUBDIR+=	sselp
 SUBDIR+=	ssh-chat
-SUBDIR+=	ssh-copy-id
 SUBDIR+=	ssid
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
