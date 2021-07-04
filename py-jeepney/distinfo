@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (jeepney-0.5.0.tar.gz) = 92442f2b2173500f45ad0859665dfde44fc1a75a
-RMD160 (jeepney-0.5.0.tar.gz) = bee3c7105502b4eddb01f53dbd0d3b2247496412
-SHA512 (jeepney-0.5.0.tar.gz) = ae80a363cac4944cb6a499450835176d63e29545b8025c6dd0241a08b35e7b2564beaab578cbba319799ec5530fd6fed7e9f910e401d68b46290617e5f739992
-Size (jeepney-0.5.0.tar.gz) = 48460 bytes
+SHA1 (jeepney-0.6.0.tar.gz) = 21ffa0741428f600e9b2398d9ea129eb54f6df37
+RMD160 (jeepney-0.6.0.tar.gz) = 5f2fc4e13b5983273bef48fb6ed6b641ed9f3148
+SHA512 (jeepney-0.6.0.tar.gz) = 140be9dd28ed853d2d41b6a8bbeb2f22c0270ce7bf33b943ec2ac010db17d4f06e253fa8637fbbb3044fe9ffdbfa1e15f0c663eb44bdd538f8c47c2e7dab3ca5
+Size (jeepney-0.6.0.tar.gz) = 49513 bytes
