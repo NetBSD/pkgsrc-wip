@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins1-base
 GST_PLUGINS1_BASE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.0
-BUILDLINK_ABI_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.16.2nb1
+BUILDLINK_ABI_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.18
 BUILDLINK_PKGSRCDIR.gst-plugins1-base?=		../../wip/gst-plugins1-base
 
 .include "../../wip/gstreamer1/buildlink3.mk"
