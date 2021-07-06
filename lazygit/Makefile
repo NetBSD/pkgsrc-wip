@@ -10,8 +10,6 @@ HOMEPAGE=		https://github.com/jesseduffield/lazygit/
 COMMENT=		Simple terminal UI for git commands
 LICENSE=		mit
 
-GO_BUILD_PATTERN=	github.com/jesseduffield/lazygit
-
 INSTALLATION_DIRS+=	bin
 
 do-install:
