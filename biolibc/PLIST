@@ -1,5 +1,6 @@
 @comment $NetBSD$
 include/biolibc/bed.h
+include/biolibc/bio-overlap.h
 include/biolibc/biolibc.h
 include/biolibc/dsv.h
 include/biolibc/gff.h
