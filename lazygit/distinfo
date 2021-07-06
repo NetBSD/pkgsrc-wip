@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (lazygit-v0.28.2.tar.gz) = c6542e0ae032e20f49da1666647bcd2faa5d2649
-RMD160 (lazygit-v0.28.2.tar.gz) = 44b8929e8107c5b6625d058e122ebe5efa385142
-SHA512 (lazygit-v0.28.2.tar.gz) = e7002089194c572fffe8329bd245d4db64fb71cb73c63f07b950da845ecdc85c70c8bea682d2b4aa1c9b38f8cf5270cd24d3bb41eff8a26d31be58eddcdf41ce
-Size (lazygit-v0.28.2.tar.gz) = 3223174 bytes
+SHA1 (lazygit-0.28.2.tar.gz) = c6542e0ae032e20f49da1666647bcd2faa5d2649
+RMD160 (lazygit-0.28.2.tar.gz) = 44b8929e8107c5b6625d058e122ebe5efa385142
+SHA512 (lazygit-0.28.2.tar.gz) = e7002089194c572fffe8329bd245d4db64fb71cb73c63f07b950da845ecdc85c70c8bea682d2b4aa1c9b38f8cf5270cd24d3bb41eff8a26d31be58eddcdf41ce
+Size (lazygit-0.28.2.tar.gz) = 3223174 bytes

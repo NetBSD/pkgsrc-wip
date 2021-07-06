@@ -1,12 +1,9 @@
 # $NetBSD$
 
-DISTNAME=		lazygit-${GITHUB_TAG}
-PKGNAME=		go-lazygit-${VERSION}
+DISTNAME=		lazygit-0.28.2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jesseduffield/}
-GITHUB_PROJECT=		lazygit
-VERSION=		0.28.2
-GITHUB_TAG=		v${VERSION}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/jesseduffield/lazygit/
