@@ -2,6 +2,7 @@
 include/biolibc/bed.h
 include/biolibc/bio-overlap.h
 include/biolibc/biolibc.h
+include/biolibc/biostring.h
 include/biolibc/dsv.h
 include/biolibc/gff.h
 include/biolibc/plist.h
@@ -31,3 +32,16 @@ man/man3/bio_overlap_print.3
 man/man3/bio_overlap_set_all.3
 man/man3/biolibc.3
 man/man3/chromosome_name_cmp.3
+man/man3/csv_read_field.3
+man/man3/csv_skip_field.3
+man/man3/csv_skip_rest_of_line.3
+man/man3/dsv_copy_line.3
+man/man3/dsv_free_line.3
+man/man3/dsv_read_field.3
+man/man3/dsv_read_line.3
+man/man3/dsv_skip_field.3
+man/man3/dsv_skip_rest_of_line.3
+man/man3/dsv_write_line.3
+man/man3/tsv_read_field.3
+man/man3/tsv_skip_field.3
+man/man3/tsv_skip_rest_of_line.3
