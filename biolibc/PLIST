@@ -30,3 +30,4 @@ man/man3/bed_write_feature.3
 man/man3/bio_overlap_print.3
 man/man3/bio_overlap_set_all.3
 man/man3/biolibc.3
+man/man3/chromosome_name_cmp.3
