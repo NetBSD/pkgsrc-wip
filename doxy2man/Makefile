@@ -18,7 +18,7 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
-# Our asciidoc has no ".py" suffic.
+# Our asciidoc has no ".py" suffix.
 # Honor PREFIX when searching doxbook-xsl files
 SUBST_CLASSES+=		edit-pro
 SUBST_STAGE.edit-pro=	pre-configure
