@@ -8,15 +8,7 @@ Use libc that contains improved NetBSD support
  
  
  [dependencies]
-+libc = "0.2.97"
++libc = "0.2.98"
  clap = "2.33.3"
  ansi_term = "0.12.1"
  dirs-next = "2.0.0"
-@@ -102,3 +103,7 @@ lto = true
- [[bin]]
- name = "starship"
- path = "src/main.rs"
-+
-+[patch.crates-io]
-+libc = { path = 'libc-c4ae71f5e120336e50c84dbc80523efa3883d29e' }
-+

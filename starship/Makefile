@@ -13,11 +13,6 @@ LICENSE=	isc
 # The libc and rust-battery crates currently have limited platform support
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
-LIBC_REV=	c4ae71f5e120336e50c84dbc80523efa3883d29e
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	libc-${LIBC_REV}.tar.gz
-SITES.libc-${LIBC_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=rust-lang/}libc/archive/${LIBC_REV}.tar.gz
-
 USE_LANGUAGES=			c
 USE_TOOLS+=			pkg-config
 
@@ -37,9 +32,6 @@ CARGO_FEATURES+=	battery
 .include "cargo-depends.mk"
 
 INSTALLATION_DIRS=	bin
-
-post-extract:
-	mv ${WRKDIR}/libc-* ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/starship ${DESTDIR}${PREFIX}/bin

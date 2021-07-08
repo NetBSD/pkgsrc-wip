@@ -84,7 +84,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lazycell-1.3.0
 CARGO_CRATE_DEPENDS+=	lexical-core-0.7.6
 # Disabled as we need newer version containing NetBSD fix
-#CARGO_CRATE_DEPENDS+=	libc-0.2.95
+CARGO_CRATE_DEPENDS+=	libc-0.2.98
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.12.21+1.1.0
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.3
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.4
