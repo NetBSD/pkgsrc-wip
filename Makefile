@@ -3999,6 +3999,7 @@ SUBDIR+=	py-mcint
 SUBDIR+=	py-mcomix3-git
 SUBDIR+=	py-mcview
 SUBDIR+=	py-mdanalysis
+SUBDIR+=	py-modbus
 SUBDIR+=	py-mdp
 SUBDIR+=	py-mdptoolbox
 SUBDIR+=	py-mdtraj
