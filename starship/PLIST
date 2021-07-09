@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/starship
-share/examples/starship/auto-completion/_starship
-share/examples/starship/auto-completion/starship.bash
-share/examples/starship/auto-completion/starship.fish
