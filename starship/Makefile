@@ -32,9 +32,14 @@ CARGO_FEATURES+=	battery
 .include "cargo-depends.mk"
 
 INSTALLATION_DIRS=	bin
+EGDIR=			${PREFIX}/share/examples/starship/auto-completion
 
 do-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/starship ${DESTDIR}${PREFIX}/bin
+	${WRKSRC}/target/release/starship completions bash > ${DESTDIR}${EGDIR}/starship.bash
+	${WRKSRC}/target/release/starship completions fish > ${DESTDIR}${EGDIR}/starship.fish
+	${WRKSRC}/target/release/starship completions zsh > ${DESTDIR}${EGDIR}/_starship
 
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
