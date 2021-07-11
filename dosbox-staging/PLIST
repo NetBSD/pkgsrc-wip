@@ -1,3 +1,14 @@
 @comment $NetBSD$
 bin/dosbox-staging
 man/man1/dosbox-staging.1
+share/applications/dosbox-staging.desktop
+share/doc/dosbox-staging/AUTHORS
+share/doc/dosbox-staging/README
+share/doc/dosbox-staging/THANKS
+share/icons/hicolor/16x16/apps/dosbox-staging.png
+share/icons/hicolor/22x22/apps/dosbox-staging.png
+share/icons/hicolor/24x24/apps/dosbox-staging.png
+share/icons/hicolor/32x32/apps/dosbox-staging.png
+share/icons/hicolor/scalable/apps/dosbox-staging.svg
+share/licenses/dosbox-staging/COPYING
+share/metainfo/dosbox-staging.metainfo.xml

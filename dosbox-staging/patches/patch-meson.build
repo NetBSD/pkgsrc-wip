@@ -1,0 +1,24 @@
+$NetBSD$
+
+Install as "dosbox-staging" to avoid a conflict with emulators/dosbox.
+
+--- meson.build.orig	2021-07-02 15:47:39.000000000 +0000
++++ meson.build
+@@ -340,7 +340,7 @@ subdir('tests')
+ # dosbox executable
+ #
+ version_file = vcs_tag(input : 'src/version.cpp.in', output : 'version.cpp')
+-executable('dosbox', ['src/main.cpp', 'src/dosbox.cpp', version_file],
++executable('dosbox-staging', ['src/main.cpp', 'src/dosbox.cpp', version_file],
+            dependencies : [atomic_dep, threads_dep, sdl2_dep] + internal_deps,
+            include_directories : incdir,
+            install : true)
+@@ -352,7 +352,7 @@ data_dir     = get_option('datadir')
+ licenses_dir = data_dir / 'licenses' / 'dosbox-staging'
+ doc_dir      = data_dir / 'doc' / 'dosbox-staging'
+ 
+-install_man('docs/dosbox.1')
++install_man('docs/dosbox-staging.1')
+ install_data('COPYING', install_dir : licenses_dir)
+ install_data('AUTHORS', 'README', 'THANKS', install_dir : doc_dir)
+ 
