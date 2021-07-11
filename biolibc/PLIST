@@ -42,6 +42,9 @@ man/man3/dsv_read_line.3
 man/man3/dsv_skip_field.3
 man/man3/dsv_skip_rest_of_line.3
 man/man3/dsv_write_line.3
+man/man3/gff_read_feature.3
+man/man3/gff_to_bed.3
+man/man3/gff_write_feature.3
 man/man3/tsv_read_field.3
 man/man3/tsv_skip_field.3
 man/man3/tsv_skip_rest_of_line.3
