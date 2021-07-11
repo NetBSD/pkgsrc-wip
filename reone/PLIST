@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/reone
+bin/reone-tools
+lib/liblibaudio.a
+lib/liblibcommon.a
+lib/liblibgame.a
+lib/liblibgraphics.a
+lib/liblibresource.a
+lib/liblibscript.a
+lib/liblibvideo.a
