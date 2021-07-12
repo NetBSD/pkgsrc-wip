@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2014/12/04 23:03:14 othyro Exp $
-
-SHA1 (libcstring/20141018.tar.gz) = 3e0cdf536a26def0ef884897557e5ec8e31bb113
-RMD160 (libcstring/20141018.tar.gz) = 3e09282771fadbaee01febddb86b15d7b4db83af
-Size (libcstring/20141018.tar.gz) = 28273 bytes

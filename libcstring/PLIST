@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/12/04 23:03:14 othyro Exp $
-include/libcstring.h
-include/libcstring/definitions.h
-include/libcstring/extern.h
-include/libcstring/features.h
-include/libcstring/types.h
-lib/libcstring.la
-lib/pkgconfig/libcstring.pc
-man/man3/libcstring.3
