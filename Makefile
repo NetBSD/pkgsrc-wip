@@ -1999,7 +1999,6 @@ SUBDIR+=	libcouchbase
 SUBDIR+=	libcpath
 SUBDIR+=	libcpu
 SUBDIR+=	libcsplit
-SUBDIR+=	libcstring
 SUBDIR+=	libcthreads
 SUBDIR+=	libcuba
 SUBDIR+=	libcue
