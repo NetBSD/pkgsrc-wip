@@ -18,7 +18,7 @@ TERRAFORM_PROVIDER_BIN=		terraform-provider-github
 TERRAFORM_PROVIDER_NAMESPACE=	integrations
 TERRAFORM_PROVIDER_TYPE=	github
 
-#.include "go-modules.mk"
+.include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
 .include "../../wip/terraform/provider.mk"
