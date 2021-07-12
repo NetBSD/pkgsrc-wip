@@ -12,8 +12,6 @@ LICENSE=	mit
 
 GO_BUILD_PATTERN=	.
 
-#UNLIMIT_RESOURCES=	datasize virtualsize
-
 TERRAFORM_PROVIDER_BIN=		terraform-provider-github
 TERRAFORM_PROVIDER_NAMESPACE=	integrations
 TERRAFORM_PROVIDER_TYPE=	github
