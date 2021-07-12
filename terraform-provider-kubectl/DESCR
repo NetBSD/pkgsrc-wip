@@ -1,0 +1,11 @@
+This provider is the best way of managing Kubernetes resources in
+Terraform, by allowing you to use the thing Kubernetes loves best -
+YAML!
+
+This core of this provider is the kubectl_manifest resource, allowing
+free-form YAML to be processed and applied against Kubernetes. This
+YAML object is then tracked and handles creation, updates and deleted
+seamlessly - including drift detection!
+
+A set of helpful data resources to process directories of YAML files
+and inline templating is available.
