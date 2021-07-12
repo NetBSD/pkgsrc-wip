@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/18 08:31:27 adam Exp $
+
+SHA1 (terraform-provider-github-4.12.1.tar.gz) = baafa2bf5c6d0910b16de781910b78b6b797c5c1
+RMD160 (terraform-provider-github-4.12.1.tar.gz) = 2450234c1b8046643fefd464f8a754075da25081
+SHA512 (terraform-provider-github-4.12.1.tar.gz) = bac6e39fd85616628d76b22cdea9aa982e35e9059d0a2086153c871f026a0b7bd9cf50ada4e7a29b6787aefc65951f9fd6392e723fa71d214ceefdb645beea62
+Size (terraform-provider-github-4.12.1.tar.gz) = 8043933 bytes
