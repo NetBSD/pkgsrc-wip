@@ -5398,6 +5398,7 @@ SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-postgresql
 SUBDIR+=	terraform-provider-random
 SUBDIR+=	terraform-provider-template
+SUBDIR+=	terraform-provider-tls
 SUBDIR+=	terraform013
 SUBDIR+=	terraform014
 SUBDIR+=	terraform015
