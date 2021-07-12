@@ -1,0 +1,3 @@
+This is the Terraform provider for Flux v2. The provider allows you to
+install Flux on Kubernetes and configure it to reconcile the cluster
+state from a Git repository.
