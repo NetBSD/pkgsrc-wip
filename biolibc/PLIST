@@ -45,6 +45,10 @@ man/man3/dsv_write_line.3
 man/man3/gff_read_feature.3
 man/man3/gff_to_bed.3
 man/man3/gff_write_feature.3
+man/man3/sam_alignment_copy.3
+man/man3/sam_alignment_free.3
+man/man3/sam_alignment_init.3
+man/man3/sam_alignment_read.3
 man/man3/tsv_read_field.3
 man/man3/tsv_skip_field.3
 man/man3/tsv_skip_rest_of_line.3
