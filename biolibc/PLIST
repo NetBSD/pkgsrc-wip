@@ -5,7 +5,7 @@ include/biolibc/biolibc.h
 include/biolibc/biostring.h
 include/biolibc/dsv.h
 include/biolibc/gff.h
-include/biolibc/plist.h
+include/biolibc/pos-list.h
 include/biolibc/sam-buff.h
 include/biolibc/sam.h
 include/biolibc/vcf.h
@@ -45,6 +45,11 @@ man/man3/dsv_write_line.3
 man/man3/gff_read_feature.3
 man/man3/gff_to_bed.3
 man/man3/gff_write_feature.3
+man/man3/pos_list_add_position.3
+man/man3/pos_list_allocate.3
+man/man3/pos_list_free.3
+man/man3/pos_list_from_csv.3
+man/man3/pos_list_sort.3
 man/man3/sam_alignment_copy.3
 man/man3/sam_alignment_free.3
 man/man3/sam_alignment_init.3
