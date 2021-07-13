@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (peak-classifier-0.1.1.5-5992be718b2eed4093fb99ca843fa59d8d1fe17b.tar.gz) = ac56c244a687a803fb8d94a55efbb0f14ba1ea1b
-RMD160 (peak-classifier-0.1.1.5-5992be718b2eed4093fb99ca843fa59d8d1fe17b.tar.gz) = 4e244851c9391e3234c991f6b6bed204a1d3e45f
-SHA512 (peak-classifier-0.1.1.5-5992be718b2eed4093fb99ca843fa59d8d1fe17b.tar.gz) = 7cea9a0a7a5da03d09690e003aa9a8b4282c319c75dbfbef4da69ce86c98badfd0329a89c538d75ffe4a18e225d6a326a3b440bbca9e1e590be8c6a9d68d4c91
-Size (peak-classifier-0.1.1.5-5992be718b2eed4093fb99ca843fa59d8d1fe17b.tar.gz) = 86107 bytes
+SHA1 (peak-classifier-0.1.1.9-04f58fa86236d92430bd0ee813bae3fb98f90bf5.tar.gz) = 14d69b48578380dfd9313d13ee7c3993dd92f255
+RMD160 (peak-classifier-0.1.1.9-04f58fa86236d92430bd0ee813bae3fb98f90bf5.tar.gz) = d652d27bcffc0b1335ce9ffd0321341c6a19872b
+SHA512 (peak-classifier-0.1.1.9-04f58fa86236d92430bd0ee813bae3fb98f90bf5.tar.gz) = 72c320b1a2e975365767766b4037a50098bb0dc50c800d73f8f7a02042254b2854da86a89fb5b11a0194228719132dcd234e33ba313bdb31f9cb648739ee2759
+Size (peak-classifier-0.1.1.9-04f58fa86236d92430bd0ee813bae3fb98f90bf5.tar.gz) = 86461 bytes
