@@ -2976,6 +2976,7 @@ SUBDIR+=	pcp
 SUBDIR+=	pcsx2
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdfcrack
+SUBDIR+=	pdfjam3
 SUBDIR+=	pdfminer
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
