@@ -27,6 +27,7 @@ GO_BUILD_PATTERN+=	./cmd/helm
 
 # XXX: Big kludge to patch the files in .gopath too that are the ones that needs
 # XXX: to be patched but are populated only as part of the `${GO} install -v'.
+# XXX: NetBSD support will be present in containerd-1.5.0.
 do-build:
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN} || \
 	${CHMOD} +w ${WRKDIR}/.gopath/pkg/mod/github.com/containerd/containerd@v1.4.4/content/local/store_unix.go && \
