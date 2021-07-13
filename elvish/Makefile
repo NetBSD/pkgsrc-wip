@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	elvish-0.15.0
+CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elves/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-CATEGORIES=	shells
 
 MAINTAINER=	mj@mjturner.net
 HOMEPAGE=	https://elv.sh/
