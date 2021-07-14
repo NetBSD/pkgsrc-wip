@@ -1934,6 +1934,7 @@ SUBDIR+=	kstest
 SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	ktnef
+SUBDIR+=	kubeval
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kustomize
