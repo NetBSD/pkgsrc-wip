@@ -11,13 +11,15 @@ COMMENT=	Simple dynamic strings library for C
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c99
-TEST_TARGET=	test
+USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS=	lib include
+TEST_TARGET=		test
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/libsds.so ${DESTDIR}${PREFIX}/lib/libsds.so
-	${INSTALL_DATA} ${WRKSRC}/sds.h ${DESTDIR}${PREFIX}/include/sds.h
+	cd ${WRKSRC} && ${LIBTOOL} --mode=install \
+		${INSTALL_LIB} libsds.la ${DESTDIR}${PREFIX}/lib
+	cd ${WRKSRC} && ${INSTALL_DATA} sds.h ${DESTDIR}${PREFIX}/include/sds.h
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
