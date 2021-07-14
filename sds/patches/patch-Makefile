@@ -5,13 +5,17 @@ $NetBSD$
 
 --- Makefile.orig	2021-07-14 10:28:45.000000000 +0000
 +++ Makefile
-@@ -1,8 +1,40 @@
+@@ -1,8 +1,44 @@
 -all: sds-test
++# Switch make into POSIX conformant mode (must be the first non-comment line)
 +.POSIX:
  
 -sds-test: sds.c sds.h testhelp.h
 -	$(CC) -o sds-test sds.c -Wall -std=c99 -pedantic -O2 -DSDS_TEST_MAIN
 -	@echo ">>> Type ./sds-test to run the sds.c unit tests."
++# Clear suffix list for inference rules
++.SUFFIXES:
++
 +# ABI version for shared library
 +MAJOR=  2
 +MINOR=  0
