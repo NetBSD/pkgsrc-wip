@@ -12,12 +12,11 @@ LICENSE=	2-clause-bsd
 
 INSTALLATION_DIRS=	lib include
 
+TEST_TARGET=	test
+
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/libsds.so ${DESTDIR}${PREFIX}/lib/libsds.so
 	${INSTALL_DATA} ${WRKSRC}/sds.h ${DESTDIR}${PREFIX}/include/sds.h
-
-do-test:
-	${WRKSRC}/sds-test
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

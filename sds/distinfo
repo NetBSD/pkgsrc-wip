@@ -1,7 +1,3 @@
-$NetBSD: distinfo,v 1.1 2015/07/10 21:24:03 travis-paul Exp $
+$NetBSD$
 
-SHA1 (sds/fb463145c9c245636feb28b5aac0fc897e16f67e.tar.gz) = 94597811fc0c0ea9bede88d4f0a9842825cddcb8
-RMD160 (sds/fb463145c9c245636feb28b5aac0fc897e16f67e.tar.gz) = 063fc4372dbd617658ff6aee32ec7a0c66ffda81
-SHA512 (sds/fb463145c9c245636feb28b5aac0fc897e16f67e.tar.gz) = 1a7a6c18584e08768dae5ac9628468df5b39ba362bab2715da0b0f4ce30286edcb9c66f85f1e32c86c4cbe0ea0bd6527c03361b66890558a43d4e3b6fd25f397
-Size (sds/fb463145c9c245636feb28b5aac0fc897e16f67e.tar.gz) = 25833 bytes
-SHA1 (patch-Makefile) = 95d581795ef4adb3ad2fe2cfdd566666bccb0540
+SHA1 (patch-Makefile) = 5c7ca7dfd44f04877e1fc932316c1f996660f246
