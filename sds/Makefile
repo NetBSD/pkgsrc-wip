@@ -2,11 +2,8 @@
 
 PKGNAME=	sds-2.0.0
 CATEGORIES=	devel
-GHCOMMIT=	fb463145c9c245636feb28b5aac0fc897e16f67e
-DISTNAME=	${GHCOMMIT}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=antirez/sds/archive/}
-DIST_SUBDIR=	sds
-WRKSRC=		${WRKDIR}/sds-${GHCOMMIT}
+GIT_REPO=	https://github.com/antirez/sds
+GIT_REVISION=	fb463145c9c245636feb28b5aac0fc897e16f67e
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://github.com/antirez/sds/
