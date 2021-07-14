@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	sds-2.0.0.974b5d1
+PKGNAME=	sds-2.0.0
 CATEGORIES=	devel
 GHCOMMIT=	fb463145c9c245636feb28b5aac0fc897e16f67e
 DISTNAME=	${GHCOMMIT}
@@ -22,4 +22,5 @@ do-install:
 do-test:
 	${WRKSRC}/sds-test
 
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
