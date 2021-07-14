@@ -732,7 +732,6 @@ SUBDIR+=	elixir-cross-ref
 SUBDIR+=	elk
 SUBDIR+=	elogind
 SUBDIR+=	elscreen-git
-SUBDIR+=	elvish
 SUBDIR+=	emacs-git
 SUBDIR+=	emacs-nox11-git
 SUBDIR+=	emacs-pr-el
