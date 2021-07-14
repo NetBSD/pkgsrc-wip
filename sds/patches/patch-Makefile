@@ -26,7 +26,7 @@ $NetBSD$
 +
 +sds.lo: sds.c sds.h
 +	libtool --tag=CC --mode=compile \
-+            $(CC) $(CPPFLAGS) $(CFLAGS) -c -fpic -Wall -std=c99 -pedantic -O2 sds.c
++            $(CC) $(CPPFLAGS) $(CFLAGS) -c -Wall -std=c99 -pedantic -O2 sds.c
 +
 +libsds.la: sds.lo
 +	libtool --tag=CC --mode=link \
