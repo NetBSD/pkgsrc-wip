@@ -1,3 +1,4 @@
 @comment $NetBSD$
 include/sds.h
 lib/libsds.la
+share/doc/sds/README.md
