@@ -5,7 +5,7 @@ $NetBSD$
 
 --- Makefile.orig	2021-07-14 10:28:45.000000000 +0000
 +++ Makefile
-@@ -1,8 +1,25 @@
+@@ -1,8 +1,29 @@
 -all: sds-test
 +# ABI version for shared library
 +MAJOR=  2
@@ -22,7 +22,11 @@ $NetBSD$
  
  clean:
 -	rm -f sds-test
-+	rm -f sds-test sds.o libsds.so
++	rm -f sds-test sds.o sds.lo libsds.la
++	rm -rf ./.libs
++
++install:
++	
 +
 +sds.lo: sds.c sds.h
 +	libtool --tag=CC --mode=compile \
