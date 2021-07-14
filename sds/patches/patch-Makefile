@@ -11,27 +11,28 @@ $NetBSD$
 +MAJOR=  2
 +MINOR=  0
 +PATCH=  0
-+
-+all: sds-test libsds.so
-+
-+sds.lo: sds.c sds.h
-+	libtool --tag=CC --mode=compile \
-+            $(CC) $(CPPFLAGS) $(CFLAGS) -c -fpic -Wall -std=c99 -pedantic -O2 sds.c
-+
-+libsds.so: sds.lo
-+	libtool --tag=CC --mode=link \
-+            $(CC) $(LDFLAGS) -shared -o libsds.la sds.lo \
-+            -rpath ${PREFIX}/lib \
-+            -version-number ${MAJOR}:${MINOR}:${PATCH}
  
- sds-test: sds.c sds.h testhelp.h
+-sds-test: sds.c sds.h testhelp.h
 -	$(CC) -o sds-test sds.c -Wall -std=c99 -pedantic -O2 -DSDS_TEST_MAIN
 -	@echo ">>> Type ./sds-test to run the sds.c unit tests."
-+	$(CC) $(CPPFLAGS) $(CFLAGS) -o sds-test sds.c -Wall -std=c99 -pedantic -O2 -DSDS_TEST_MAIN
++all: libsds.la
 +
-+test:
++test: sds-test
 +	./sds-test
  
  clean:
 -	rm -f sds-test
 +	rm -f sds-test sds.o libsds.so
++
++sds.lo: sds.c sds.h
++	libtool --tag=CC --mode=compile \
++            $(CC) $(CPPFLAGS) $(CFLAGS) -c -fpic -Wall -std=c99 -pedantic -O2 sds.c
++
++libsds.la: sds.lo
++	libtool --tag=CC --mode=link \
++            $(CC) $(LDFLAGS) -shared -o libsds.la sds.lo \
++            -version-number ${MAJOR}:${MINOR}:${PATCH} \
++            -rpath ${PREFIX}/lib
++
++sds-test: sds.c sds.h testhelp.h
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o sds-test sds.c -Wall -std=c99 -pedantic -O2 -DSDS_TEST_MAIN
