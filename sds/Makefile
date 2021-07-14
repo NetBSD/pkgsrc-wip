@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/antirez/sds/
 COMMENT=	Simple dynamic strings library for C
 LICENSE=	2-clause-bsd
 
-INSTALLATION_DIRS=	lib include
-
+USE_LANGUAGES=	c99
 TEST_TARGET=	test
+
+INSTALLATION_DIRS=	lib include
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/libsds.so ${DESTDIR}${PREFIX}/lib/libsds.so
