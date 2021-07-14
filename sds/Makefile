@@ -13,16 +13,7 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 
-INSTALLATION_DIRS=	include lib share/doc/sds
-TEST_TARGET=		test
-
-do-install:
-	cd ${WRKSRC} && ${LIBTOOL} --mode=install ${INSTALL_LIB} libsds.la \
-		${DESTDIR}${PREFIX}/lib
-	cd ${WRKSRC} && ${INSTALL_DATA} sds.h \
-		${DESTDIR}${PREFIX}/include/sds.h
-	cd ${WRKSRC} && ${INSTALL_DATA} README.md \
-		${DESTDIR}${PREFIX}/share/doc/sds/README.md
+TEST_TARGET=	test
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
