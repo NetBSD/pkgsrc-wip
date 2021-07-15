@@ -1,0 +1,8 @@
+The small footprint CIM client library is a C API allowing client
+applications to interface with CIM implementations (e.g., CIM
+servers). Due to its small memory and disk footprint it is well-suited
+for embedded environments.
+
+SFCC provides a generic layer to load the underlying libraries to
+communicate to the CIM server via 2 methods: http interface and
+local connect interface.
