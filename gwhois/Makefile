@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.7 2012/09/29 00:50:42 asau Exp $
 
-DISTNAME=			gwhois_20080219.1
+DISTNAME=			gwhois_20120626
 PKGNAME=			${DISTNAME:S/_/-/g}
-PKGREVISION=			1
 CATEGORIES=			net
-MASTER_SITES=			http://gwhois.de/gwhois/
+MASTER_SITES=			https://julijane.de/gwhois/
 LICENSE=			gnu-gpl-v2
 
 MAINTAINER=			mj@mjturner.net
@@ -18,14 +17,14 @@ DEPENDS+=			p5-libwww>=5.4:../../www/p5-libwww
 DEPENDS+=			lynx-[0-9]*:../../www/lynx
 
 WRKSRC=				${WRKDIR}/${PKGNAME_NOREV}
-INSTALLATION_DIRS=		share/${PKGBASE} ${PKGMANDIR}/man1
+INSTALLATION_DIRS=		bin share/${PKGBASE} ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=			fix-paths
 SUBST_MESSAGE.fix-paths=	Fixing paths
 SUBST_FILES.fix-paths=		gwhois
 SUBST_FILES.fix-paths+=		gwhois.1
 SUBST_SED.fix-paths+=		-e 's,/etc/gwhois,${PREFIX}/share/gwhois,g'
-SUBST_STAGE.fix-paths=		post-patch
+SUBST_STAGE.fix-paths=		pre-configure
 
 do-build:
 
