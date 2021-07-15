@@ -1,9 +1,9 @@
 # $NetBSD$
 
 DISTNAME=	amfora-1.8.0
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makeworld-the-better-one/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-CATEGORIES=	net
 
 MAINTAINER=	mj@mjturner.net
 HOMEPAGE=	https://github.com/makeworld-the-better-one/amfora/
