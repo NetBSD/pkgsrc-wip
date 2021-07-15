@@ -64,3 +64,16 @@ man/man3/sam_read_alignment.3
 man/man3/tsv_read_field.3
 man/man3/tsv_skip_field.3
 man/man3/tsv_skip_rest_of_line.3
+man/man3/vcf_call_downstream_of_alignment.3
+man/man3/vcf_call_free.3
+man/man3/vcf_call_in_alignment.3
+man/man3/vcf_call_init.3
+man/man3/vcf_get_sample_ids.3
+man/man3/vcf_out_of_order.3
+man/man3/vcf_parse_field_spec.3
+man/man3/vcf_read_ss_call.3
+man/man3/vcf_read_static_fields.3
+man/man3/vcf_sample_alloc.3
+man/man3/vcf_skip_header.3
+man/man3/vcf_write_ss_call.3
+man/man3/vcf_write_static_fields.3
