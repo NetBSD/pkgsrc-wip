@@ -29,4 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/amfora.desktop ${DESTDIR}${PREFIX}/share/applications
 
 .include "../../lang/go/go-module.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
