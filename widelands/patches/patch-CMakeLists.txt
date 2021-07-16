@@ -1,0 +1,36 @@
+$NetBSD$
+
+Support NetBSD.
+
+Do not turn warnings into errors.
+
+--- CMakeLists.txt.orig	2021-06-14 09:22:20.000000000 +0000
++++ CMakeLists.txt
+@@ -155,6 +155,7 @@ endif()
+ 
+ if (APPLE OR WIN32 OR
+     CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "NetBSD" OR
+     CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+   if (NOT CMAKE_SYSTEM_NAME MATCHES "kFreeBSD")
+     find_package(Intl REQUIRED)
+@@ -255,8 +256,6 @@ if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "
+   wl_add_flag(WL_COMPILE_DIAGNOSTICS "-Wno-unreachable-code")
+   wl_add_flag(WL_COMPILE_DIAGNOSTICS "-Wno-documentation")
+ 
+-  wl_add_flag(WL_COMPILE_DIAGNOSTICS "-Werror=deprecated")
+-  wl_add_flag(WL_COMPILE_DIAGNOSTICS "-Werror=non-pod-varargs")
+ 
+   wl_add_flag(WL_COMPILE_DIAGNOSTICS "-Qunused-arguments")
+ 
+@@ -375,7 +374,9 @@ IF (WIN32)
+ endif (WIN32)
+ 
+ # on BSD this must be explicitly linked
+-if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "NetBSD" OR
++    CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
+   # Not needed on Debian GNU/kFreeBSD..
+   if (NOT CMAKE_SYSTEM_NAME MATCHES "kFreeBSD")
+     find_library(EXECINFO_LIBRARY NAMES execinfo)
