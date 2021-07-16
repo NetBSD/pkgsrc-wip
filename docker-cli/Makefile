@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	docker-cli-20.10.1
+DISTNAME=	docker-cli-20.10.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=docker/}
 GITHUB_PROJECT=	cli
