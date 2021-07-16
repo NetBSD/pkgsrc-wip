@@ -1,6 +1,7 @@
 $NetBSD$
 
 NetBSD already has defined beXXtoh() and leXXtoh(x) in "sys/endian.h".
+https://github.com/sirjuddington/SLADE/issues/988
 
 --- src/External/zreaders/portable_endian.h.orig	2020-05-27 23:08:34.000000000 +0000
 +++ src/External/zreaders/portable_endian.h

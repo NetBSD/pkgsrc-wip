@@ -2,6 +2,7 @@ $NetBSD$
 
 Explicitly check for FreeBSD, Linux, macOS and Windows.
 Use the generic algorithm for all other OS (formerly only for "__sun").
+https://github.com/sirjuddington/SLADE/issues/1274
 
 --- src/External/zreaders/m_alloc.cpp.orig	2020-05-27 23:08:34.000000000 +0000
 +++ src/External/zreaders/m_alloc.cpp

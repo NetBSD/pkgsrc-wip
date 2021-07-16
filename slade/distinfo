@@ -4,5 +4,5 @@ SHA1 (SLADE-3.1.13.tar.gz) = 4a11c744284ef884650f356bc0a892deb49c84f3
 RMD160 (SLADE-3.1.13.tar.gz) = 921ed1ebd0465e9a7bd61c947c8bd748d6034b0b
 SHA512 (SLADE-3.1.13.tar.gz) = 4f1f8ca86df7eb2a2ec8d0e9ba8a8a80c69a87910f9c4ab9fb705fc128324a131a26c4b1ed122dbd0b685652328097dd9dffd49e4fc356bf44ba2254505c8ea9
 Size (SLADE-3.1.13.tar.gz) = 5890835 bytes
-SHA1 (patch-src_External_zreaders_m__alloc.cpp) = 7c42fa1ca0add5c2b6b147fdd7dfa3f21e7fb0a9
-SHA1 (patch-src_External_zreaders_portable__endian.h) = df66b810b2a6a9272d8c668d7d4debd78bba95b5
+SHA1 (patch-src_External_zreaders_m__alloc.cpp) = 0e4afab8ca06013e4ff81560b91fcd0af5f7ca70
+SHA1 (patch-src_External_zreaders_portable__endian.h) = f2ed7cb8ffeca8d86047c84766a75c1b6ba088e2
