@@ -2,7 +2,7 @@ $NetBSD$
 
 * Add targets for object file, library, test and install.
 * Honor CPPFLAGS, CFLAGS and LDFLAGS
-# Use libtool
+* Use libtool
 
 --- Makefile.orig	2021-07-14 10:28:45.000000000 +0000
 +++ Makefile
