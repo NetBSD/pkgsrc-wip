@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	${DISTNAME:tl}
-DISTNAME=	PrusaSlicer-2.3.0
+DISTNAME=	PrusaSlicer-2.3.2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
 GITHUB_PROJECT=	PrusaSlicer

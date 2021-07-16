@@ -2,7 +2,7 @@ $NetBSD$
 
 Use more portable boost routine for finding running executable path.
 
---- src/PrusaSlicer.cpp.orig	2021-01-11 13:01:51.000000000 +0000
+--- src/PrusaSlicer.cpp.orig	2021-07-08 06:46:36.000000000 +0000
 +++ src/PrusaSlicer.cpp
 @@ -23,6 +23,7 @@
  #include <iostream>
@@ -12,9 +12,9 @@ Use more portable boost routine for finding running executable path.
  #include <boost/filesystem.hpp>
  #include <boost/nowide/args.hpp>
  #include <boost/nowide/cenv.hpp>
-@@ -594,7 +595,7 @@ bool CLI::setup(int argc, char **argv)
-         }
-     }
+@@ -612,7 +613,7 @@ bool CLI::setup(int argc, char **argv)
+     // Detect the operating system flavor after SLIC3R_LOGLEVEL is set.
+     detect_platform();
  
 -    boost::filesystem::path path_to_binary = boost::filesystem::system_complete(argv[0]);
 +    boost::filesystem::path path_to_binary = boost::dll::program_location();
