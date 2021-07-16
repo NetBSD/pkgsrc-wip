@@ -15,5 +15,16 @@ USE_LIBTOOL=	yes
 
 TEST_TARGET=	test
 
+INSTALLATION_DIRS=	lib/pkgconfig
+
+post-extract:
+	${CP} ${FILESDIR}/libsds-2.pc.in ${WRKDIR}
+	cd ${WRKDIR} && ${SED} -e "s,@prefix@,${PREFIX},g" \
+            -e "s,@release@,${PKGVERSION_NOREV},g" <libsds-2.pc.in >libsds-2.pc
+
+post-install:
+	cd ${WRKDIR} && ${INSTALL_DATA} libsds-2.pc \
+            ${DESTDIR}${PREFIX}/lib/pkgconfig/libsds-2.pc
+
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
