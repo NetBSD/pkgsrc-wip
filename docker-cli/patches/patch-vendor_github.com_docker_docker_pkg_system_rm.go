@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix build for NetBSD.
 
-github.com/sys/mount needs to be ported on NetBSD.
+github.com/moby/sys/mount needs to be ported on NetBSD.
 
 --- vendor/github.com/docker/docker/pkg/system/rm.go.orig	2020-12-15 02:27:14.000000000 +0000
 +++ vendor/github.com/docker/docker/pkg/system/rm.go
