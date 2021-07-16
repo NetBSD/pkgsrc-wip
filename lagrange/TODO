@@ -1,3 +1,0 @@
-Predictably segfaults about 40% of the time on startup on NetBSD/amd64.
-
-It's being discussed with upstream.

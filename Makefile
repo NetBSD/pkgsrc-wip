@@ -1945,7 +1945,6 @@ SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
-SUBDIR+=	lagrange
 SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lanq
