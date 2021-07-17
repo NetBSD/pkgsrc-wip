@@ -1,18 +1,15 @@
 # $NetBSD: Makefile,v 1.6 2015/07/13 11:10:36 leot1990 Exp $
 
-DISTNAME=	surf-2.0
+DISTNAME=	surf-2.1
 CATEGORIES=	www
-MASTER_SITES=	http://dl.suckless.org/surf/
+MASTER_SITES=	https://dl.suckless.org/surf/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://surf.suckless.org/
-COMMENT=	Surf is a fast and minimalistic web browser based on WebKit2/GTK+
+COMMENT=	Fast and minimalistic web browser based on WebKit2/GTK+
 LICENSE=	mit
 
-MAKE_JOBS_SAFE=	no
-
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c99
 
 SUBST_CLASSES+=		configmk
 SUBST_STAGE.configmk=	pre-configure
@@ -25,8 +22,7 @@ SUBST_SED.configmk+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 SUBST_SED.configmk+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
 SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
+.include "../../security/gcr/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
