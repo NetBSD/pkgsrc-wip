@@ -2,6 +2,7 @@
 
 DISTNAME=	surf-2.1
 CATEGORIES=	www
+MASTER_SITES=	https://dl.suckless.org/surf/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://surf.suckless.org/
