@@ -1,6 +1,5 @@
 @comment $NetBSD$
 bin/hashcat
-include/hashcat/Windows.h
 include/hashcat/affinity.h
 include/hashcat/autotune.h
 include/hashcat/backend.h
@@ -32,11 +31,15 @@ include/hashcat/event.h
 include/hashcat/ext_ADL.h
 include/hashcat/ext_OpenCL.h
 include/hashcat/ext_cuda.h
+include/hashcat/ext_hip.h
+include/hashcat/ext_hiprtc.h
+include/hashcat/ext_iokit.h
 include/hashcat/ext_lzma.h
 include/hashcat/ext_nvapi.h
 include/hashcat/ext_nvml.h
 include/hashcat/ext_nvrtc.h
-include/hashcat/ext_sysfs.h
+include/hashcat/ext_sysfs_amdgpu.h
+include/hashcat/ext_sysfs_cpu.h
 include/hashcat/filehandling.h
 include/hashcat/folder.h
 include/hashcat/hashcat.h
@@ -135,6 +138,7 @@ share/doc/hashcat/charsets/special/Portuguese/pt_ISO-8859-15-special.hcchr
 share/doc/hashcat/charsets/special/Portuguese/pt_cp1252-special.hcchr
 share/doc/hashcat/charsets/special/Russian/ru_ISO-8859-5-special.hcchr
 share/doc/hashcat/charsets/special/Russian/ru_cp1251-special.hcchr
+share/doc/hashcat/charsets/special/Russian/ru_cp866-special.hcchr
 share/doc/hashcat/charsets/special/Slovak/sk_ISO-8859-2-special.hcchr
 share/doc/hashcat/charsets/special/Slovak/sk_cp1250-special.hcchr
 share/doc/hashcat/charsets/special/Spanish/es_ISO-8859-1-special.hcchr
@@ -178,6 +182,7 @@ share/doc/hashcat/charsets/standard/Portuguese/pt_cp1252.hcchr
 share/doc/hashcat/charsets/standard/Russian/ru_ISO-8859-5.hcchr
 share/doc/hashcat/charsets/standard/Russian/ru_KOI8-R.hcchr
 share/doc/hashcat/charsets/standard/Russian/ru_cp1251.hcchr
+share/doc/hashcat/charsets/standard/Russian/ru_cp866.hcchr
 share/doc/hashcat/charsets/standard/Slovak/sk_ISO-8859-2.hcchr
 share/doc/hashcat/charsets/standard/Slovak/sk_cp1250.hcchr
 share/doc/hashcat/charsets/standard/Spanish/es_ISO-8859-1.hcchr
@@ -410,6 +415,8 @@ share/hashcat/OpenCL/inc_truecrypt_xts.cl
 share/hashcat/OpenCL/inc_truecrypt_xts.h
 share/hashcat/OpenCL/inc_types.h
 share/hashcat/OpenCL/inc_vendor.h
+share/hashcat/OpenCL/inc_veracrypt_keyfile.cl
+share/hashcat/OpenCL/inc_veracrypt_keyfile.h
 share/hashcat/OpenCL/inc_veracrypt_xts.cl
 share/hashcat/OpenCL/inc_veracrypt_xts.h
 share/hashcat/OpenCL/inc_zip_inflate.cl
@@ -1499,6 +1506,17 @@ share/hashcat/OpenCL/m26200_a3-pure.cl
 share/hashcat/OpenCL/m26300_a0-pure.cl
 share/hashcat/OpenCL/m26300_a1-pure.cl
 share/hashcat/OpenCL/m26300_a3-pure.cl
+share/hashcat/OpenCL/m26401_a0-optimized.cl
+share/hashcat/OpenCL/m26401_a1-optimized.cl
+share/hashcat/OpenCL/m26401_a3-optimized.cl
+share/hashcat/OpenCL/m26402_a0-optimized.cl
+share/hashcat/OpenCL/m26402_a1-optimized.cl
+share/hashcat/OpenCL/m26402_a3-optimized.cl
+share/hashcat/OpenCL/m26403_a0-optimized.cl
+share/hashcat/OpenCL/m26403_a1-optimized.cl
+share/hashcat/OpenCL/m26403_a3-optimized.cl
+share/hashcat/OpenCL/m26500-pure.cl
+share/hashcat/OpenCL/m26600-pure.cl
 share/hashcat/OpenCL/markov_be.cl
 share/hashcat/OpenCL/markov_le.cl
 share/hashcat/OpenCL/shared.cl
@@ -1743,6 +1761,9 @@ share/hashcat/modules/module_13763.so
 share/hashcat/modules/module_13771.so
 share/hashcat/modules/module_13772.so
 share/hashcat/modules/module_13773.so
+share/hashcat/modules/module_13781.so
+share/hashcat/modules/module_13782.so
+share/hashcat/modules/module_13783.so
 share/hashcat/modules/module_13800.so
 share/hashcat/modules/module_13900.so
 share/hashcat/modules/module_14000.so
@@ -1876,4 +1897,9 @@ share/hashcat/modules/module_26000.so
 share/hashcat/modules/module_26100.so
 share/hashcat/modules/module_26200.so
 share/hashcat/modules/module_26300.so
+share/hashcat/modules/module_26401.so
+share/hashcat/modules/module_26402.so
+share/hashcat/modules/module_26403.so
+share/hashcat/modules/module_26500.so
+share/hashcat/modules/module_26600.so
 share/hashcat/modules/module_99999.so

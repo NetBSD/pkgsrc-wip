@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hashcat-6.2.2
+DISTNAME=	hashcat-6.2.3
 CATEGORIES=	security
 MASTER_SITES=	https://hashcat.net/files/
 
