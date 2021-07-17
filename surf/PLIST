@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/surf
-lib/surf/webext-surf.so
-man/man1/surf.1

@@ -5278,7 +5278,6 @@ SUBDIR+=	supercollider
 SUBDIR+=	superlfv
 SUBDIR+=	superlu
 SUBDIR+=	supermodel
-SUBDIR+=	surf
 SUBDIR+=	surf-git
 SUBDIR+=	surf1
 SUBDIR+=	suscan
