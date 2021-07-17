@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2015/07/13 11:10:36 leot1990 Exp $
 
-DISTNAME=	surf-2.0
+DISTNAME=	surf-2.1
 CATEGORIES=	www
 
 MAINTAINER=	leot@NetBSD.org
