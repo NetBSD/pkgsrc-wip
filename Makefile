@@ -654,6 +654,7 @@ SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
 SUBDIR+=	docker-cli
 SUBDIR+=	docker-compose-cli
+SUBDIR+=	docker-machine
 SUBDIR+=	docviewer
 SUBDIR+=	dogecoin
 SUBDIR+=	dokuwiki
