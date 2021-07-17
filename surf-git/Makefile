@@ -23,8 +23,8 @@ SUBST_SED.configmk+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 SUBST_SED.configmk+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
 SUBST_SED.configmk+=	-e 's/cc/${CC:Q}/'
 
+.include "../../security/gcr/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../security/gcr/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
