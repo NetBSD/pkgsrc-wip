@@ -9,7 +9,7 @@ HOMEPAGE=	https://surf.suckless.org/
 COMMENT=	Fast and minimalistic web browser based on WebKit2/GTK+
 LICENSE=	mit
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		configmk
 SUBST_STAGE.configmk=	pre-configure
