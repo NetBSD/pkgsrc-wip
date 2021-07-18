@@ -3,8 +3,8 @@ include/xtend-protos.h
 include/xtend.h
 lib/libxtend.a
 lib/libxtend.so
-lib/libxtend.so.1
-lib/libxtend.so.1.0
+lib/libxtend.so.2
+lib/libxtend.so.2.0
 man/man3/csv_read_field.3
 man/man3/csv_skip_field.3
 man/man3/csv_skip_rest_of_line.3
