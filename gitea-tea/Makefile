@@ -14,8 +14,6 @@ USE_TOOLS+=	gmake
 
 .include "go-modules.mk"
 
-DEPENDS+=		ca-certificates-[0-9]*:../../security/ca-certificates
-
 INSTALLATION_DIRS=	bin
 EGDIR=			${PREFIX}/share/examples/gitea-tea/auto-completion
 
