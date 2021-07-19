@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	vcf-split-0.1.2.11
+DISTNAME=	vcf-split-0.1.2.12
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	e75a14b30f9ec1b7187f710f8696577740ecaf8a
+GITHUB_TAG=	f51d1f3531261115c0780ede3a0151ca4b04e180
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf-split
