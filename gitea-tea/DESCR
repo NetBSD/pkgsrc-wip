@@ -1,0 +1,5 @@
+Official command-line interface to interact with Gitea.
+
+Tea is a productivity helper for Gitea.  It can be used to manage most entities
+on one or multiple Gitea instances and provides local helpers like 'tea pull
+checkout'.
