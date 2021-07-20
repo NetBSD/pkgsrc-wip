@@ -1,0 +1,34 @@
+# $NetBSD$
+
+DISTNAME=	spotify-tui-0.24.0
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Rigellute/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/Rigellute/spotify-tui
+COMMENT=	Spotify client for the terminal written in Rust
+LICENSE=	mit
+
+.include "cargo-depends.mk"
+
+USE_LANGUAGES+=	c # rust, but needs a toolchain to link
+USE_TOOLS+=	pkg-config
+
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
+MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
+
+CARGO_NO_DEFAULT_FEATURES=	yes
+
+INSTALLATION_DIRS=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spt ${DESTDIR}${PREFIX}/bin
+
+.include "../../lang/rust/cargo.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
