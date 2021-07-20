@@ -4,7 +4,6 @@ SHA1 (mesa-21.1.5.tar.xz) = ceefadf8e0f0b0fee643bec98535684a8db12527
 RMD160 (mesa-21.1.5.tar.xz) = 5b189c9fc2c8843bbe0ada928a54c1a0b24ef28e
 SHA512 (mesa-21.1.5.tar.xz) = d9e0e1b6a1d717febee2aa67b06620c9a21e061ea7e594be5b4c382db1ed6f5acf5d13a75a9f2bba9c32621466ebc816708606e16e8b34700d987158fd8f0b7b
 Size (mesa-21.1.5.tar.xz) = 15286704 bytes
-SHA1 (patch-include_c11_threads__posix.h) = e1dca04b5c514d20123ef99338c6dabedbc14c5f
 SHA1 (patch-src_compiler_builtin__type__macros.h) = e4868011711fb89a293580a12eb603b8e7162336
 SHA1 (patch-src_drm-shim_drm__shim.c) = 6884d31dc3e9d47aac1785589ab289a601e64545
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 9230fbae2c04246ebca8437ecad694bbae857fbe
