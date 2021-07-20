@@ -5935,7 +5935,6 @@ SUBDIR+=	yauap
 SUBDIR+=	yaupspe
 SUBDIR+=	yersinia
 SUBDIR+=	yi
-SUBDIR+=	ympd
 SUBDIR+=	yoda
 SUBDIR+=	yosys
 SUBDIR+=	you-get
