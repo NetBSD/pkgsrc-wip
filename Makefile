@@ -1973,6 +1973,7 @@ SUBDIR+=	lha
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
+SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM38
 SUBDIR+=	libXaw3dXft
 SUBDIR+=	libaec
