@@ -2013,6 +2013,7 @@ SUBDIR+=	libdisasm
 SUBDIR+=	libdivecomputer
 SUBDIR+=	libdjconsole
 SUBDIR+=	libdoozer
+SUBDIR+=	libdrm
 SUBDIR+=	libdrm-dfbsd
 SUBDIR+=	libdrm-dfbsd-meson
 SUBDIR+=	libdxfrw
