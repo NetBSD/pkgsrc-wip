@@ -69,9 +69,9 @@ lib/libdrm_radeon.so.1.0.1
 ${PLIST.arm}lib/libdrm_tegra.so
 ${PLIST.arm}lib/libdrm_tegra.so.0
 ${PLIST.arm}lib/libdrm_tegra.so.0.0.0
-lib/libkms.so
-lib/libkms.so.1
-lib/libkms.so.1.0.0
+${PLIST.kms}lib/libkms.so
+${PLIST.kms}lib/libkms.so.1
+${PLIST.kms}lib/libkms.so.1.0.0
 lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_amdgpu.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_freedreno.pc

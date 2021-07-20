@@ -46,9 +46,9 @@ ATOMIC_OPS_CHECK=	1
 
 PLIST_VARS+=	intel arm kms
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
 MESON_ARGS+=	-Dlibkms=true
-PLIST.kms=	true
+PLIST.kms=	yes
 .else
 MESON_ARGS+=	-Dlibkms=false
 .endif
@@ -91,10 +91,6 @@ MESON_ARGS+=	-Dvalgrind=false
 #			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 
 LDFLAGS.NetBSD+=	-lpci
-
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
-PLIST.kms=	yes
-.endif
 
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
