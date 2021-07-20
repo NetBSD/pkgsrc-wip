@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	spotifyd-0.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +13,7 @@ COMMENT=	Open source Spotify client running as a UNIX daemon
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c # rust, but needs a toolchain to link
+USE_TOOLS+=	pkg-config
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
@@ -421,15 +422,12 @@ CARGO_CRATE_DEPENDS+=	winreg-0.6.2
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	xdg-2.2.0
 
-
-MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 INSTALLATION_DIRS+=	bin
 
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib
-RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib
+MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
-# TODO investigate why this is needed
-CHECK_WRKREF_SKIP+=	bin/spotifyd
+CARGO_NO_DEFAULT_FEATURES=	YES
 
 #  NOTE: To update this package currently you need to something like this:
 #  1. Update version in makefile
@@ -446,14 +444,12 @@ CHECK_WRKREF_SKIP+=	bin/spotifyd
 #  12. That might fail. Need to update patches, etc with help of `pkgvi` and `pkgdiff`, e.g: `pkgdiff Cargo.lock.orig Cargo.lock > ../../patches/patch-Cargo.lock`, etc
 #  13. If patches updated `make mdi`
 
-CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		pulseaudio_backend
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin
 
+.include "options.mk"
+
 BUILDLINK_API_DEPENDS.rust+=   rust>=1.40.0
 .include "../../lang/rust/cargo.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,6 @@
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2020-35711
 
-## Todo
-
-1. In the Makefile there is this todo item:
-
-		# TODO investigate why this is needed
-		CHECK_WRKREF_SKIP+=	bin/spotifyd
-
 ## Done
 
 1. Need to somewhat manually create patches. mkpatches doesn't pick up changes
