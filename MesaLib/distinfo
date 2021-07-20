@@ -11,6 +11,7 @@ SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = ccf7c3ba7bdac39f9924102868f3
 SHA1 (patch-src_egl_main_eglglobals.c) = 0d52014f52e62fc5fa6650336ddb0011ecf331e6
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = f913b779404e6bd8ae707a4fd66eb7c1dca9b311
 SHA1 (patch-src_gallium_auxiliary_rbug_rbug__texture.c) = 57d831b1001419191a27c05d9cb7734481372d27
+SHA1 (patch-src_gallium_drivers_freedreno_freedreno__screen.c) = 3fc96adf9b4a1c605f7a358fdb225876109ad2d5
 SHA1 (patch-src_gallium_drivers_llvmpipe_lp__memory.c) = ca3c1b317c41f6ae56a08272ffabdecb38fea2ec
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = 04f95784c3270c9bb7e95377982e217962481525
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
