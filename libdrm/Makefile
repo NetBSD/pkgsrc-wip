@@ -14,7 +14,7 @@ LICENSE=		mit
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 			Linux-*-* SunOS-*-*
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	amdgpu/libdrm_amdgpu.pc.in
 PKGCONFIG_OVERRIDE+=	etnaviv/libdrm_etnaviv.pc.in
