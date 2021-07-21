@@ -2115,6 +2115,7 @@ SUBDIR+=	libpar2
 SUBDIR+=	libpare
 SUBDIR+=	libparsifal
 SUBDIR+=	libpatterns
+SUBDIR+=	libplist2
 SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
