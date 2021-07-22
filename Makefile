@@ -3355,6 +3355,7 @@ SUBDIR+=	py-azure-storage-blob
 SUBDIR+=	py-b3j0f.aop
 SUBDIR+=	py-backports-datetime-fromisoformat
 SUBDIR+=	py-backports.csv
+SUBDIR+=	py-backports.entry_points_selectable
 SUBDIR+=	py-badges
 SUBDIR+=	py-bandicoot
 SUBDIR+=	py-bandit

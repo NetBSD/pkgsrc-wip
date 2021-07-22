@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/backports/__init__.py
+${PYSITELIB}/backports/__init__.pyc
+${PYSITELIB}/backports/__init__.pyo
+${PYSITELIB}/backports/entry_points_selectable.py
+${PYSITELIB}/backports/entry_points_selectable.pyc
+${PYSITELIB}/backports/entry_points_selectable.pyo
