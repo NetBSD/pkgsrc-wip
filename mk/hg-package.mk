@@ -185,3 +185,5 @@ _SYS_VARS.hg+=	${varbase}.${repo}
 .  endfor
 .endfor
 _USE_VARS.hg+=	DISTNAME
+
+.include "../../lang/python/pyversion.mk"
