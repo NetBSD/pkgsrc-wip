@@ -71,18 +71,21 @@ MESON_ARGS+=	-Dnouveau=true
 .if !empty(MACHINE_ARCH:Marm*) || \
       !empty(MACHINE_ARCH:Mearm*) || \
       ${MACHINE_ARCH} == "aarch64"
+MESON_ARGS+=	-Detnaviv=true
+MESON_ARGS+=	-Dexynos=true
 MESON_ARGS+=	-Dfreedreno=true
-MESON_ARGS+=	-Dtegra=true
 MESON_ARGS+=	-Dvc4=true
+MESON_ARGS+=	-Domap=true
+MESON_ARGS+=	-Dtegra=true
 PLIST.arm=	yes
 .else
+MESON_ARGS+=	-Detnaviv=false
+MESON_ARGS+=	-Dexynos=false
 MESON_ARGS+=	-Dfreedreno=false
+MESON_ARGS+=	-Domap=false
 MESON_ARGS+=	-Dtegra=false
 MESON_ARGS+=	-Dvc4=false
 .endif
-MESON_ARGS+=	-Domap=false
-MESON_ARGS+=	-Dexynos=false
-MESON_ARGS+=	-Detnaviv=false
 
 MESON_ARGS+=	-Dman-pages=false
 MESON_ARGS+=	-Dvalgrind=false
