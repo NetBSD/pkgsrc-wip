@@ -1,10 +1,10 @@
 # $NetBSD$
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2020
+PKGNAME=	texlive-${DISTNAME}-2021
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54894
+TEXLIVE_REV=	58754
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -26,6 +26,7 @@ DEPENDS+=	tex-bxorigcapt-[0-9]*:../../wip/tex-bxorigcapt
 DEPENDS+=	tex-bxwareki-[0-9]*:../../wip/tex-bxwareki
 DEPENDS+=	tex-convbkmk-[0-9]*:../../wip/tex-convbkmk
 DEPENDS+=	tex-endnotesj-[0-9]*:../../wip/tex-endnotesj
+DEPENDS+=	tex-gckanbun-[0-9]*:../../print/tex-gckanbun
 DEPENDS+=	tex-gentombow-[0-9]*:../../wip/tex-gentombow
 DEPENDS+=	tex-haranoaji-[0-9]*:../../fonts/tex-haranoaji
 DEPENDS+=	tex-haranoaji-extra-[0-9]*:../../wip/tex-haranoaji-extra
