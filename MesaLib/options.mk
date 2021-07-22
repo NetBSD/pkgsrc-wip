@@ -47,7 +47,7 @@ PKG_SUGGESTED_OPTIONS+=		elf-tls
 PLIST_VARS+=	r600 radeonsi
 
 # Windowing systems
-PLIST_VARS+=	wayland glx
+PLIST_VARS+=	glx
 
 # Misc. features
 PLIST_VARS+=	vdpau
@@ -126,7 +126,6 @@ MESON_ARGS+=		-Dgallium-vdpau=false
 #
 .if !empty(PKG_OPTIONS:Mwayland)
 MESA_PLATFORMS+=	wayland
-PLIST.wayland=		yes
 .  include "../../devel/wayland/buildlink3.mk"
 .  include "../../devel/wayland-protocols/buildlink3.mk"
 .endif
