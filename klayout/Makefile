@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2021/01/14 12:25:33 mef Exp $
+# $NetBSD: Makefile,v 1.38 2021/05/29 06:08:56 mef Exp $
 
-DISTNAME=	klayout-0.27
+DISTNAME=	klayout-0.27.2
 CATEGORIES=	cad
 MASTER_SITES=	http://www.klayout.org/downloads/source/
 
@@ -15,6 +15,9 @@ USE_TOOLS+=	gmake bash pax
 CFLAGS+=	-I${PREFIX}/include/python${PYVERSUFFIX}
 NO_CONFIGURE=	yes
 
+CHECK_SHLIBS_SKIP+=	lib/klayout/plugins/streamers/*/unit_tests/* \
+			lib/klayout/plugins/tools/net_tracer/unit_tests/*
+
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Add COMPILER_RPATH_FLAG and PREFIX to NetBSD specific config file
 SUBST_FILES.rpath+=	config/Makefile.conf.netbsd-32-gcc-release
@@ -28,8 +31,8 @@ INSTALL_BINDIR=		${DESTDIR}${PREFIX}/bin
 INSTALL_LIBDIR=		${DESTDIR}${PREFIX}/lib/klayout
 REL_DIR=		bin-release
 PLUGINS_DIR=		db_plugins lay_plugins pymod
-INSTALLATION_DIRS+=	lib/klayout
 
+PLIST_SUBST+=		PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)\.[0-9]*/\1/}
 
 .include "../../mk/bsd.prefs.mk"
 
