@@ -425,7 +425,8 @@ CARGO_CRATE_DEPENDS+=	xdg-2.2.0
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 INSTALLATION_DIRS+=	bin
 
-MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib -C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib"
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pulseaudio}/lib
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.pulseaudio}/lib
 
 # TODO investigate why this is needed
 CHECK_WRKREF_SKIP+=	bin/spotifyd
@@ -445,9 +446,8 @@ CHECK_WRKREF_SKIP+=	bin/spotifyd
 #  12. That might fail. Need to update patches, etc with help of `pkgvi` and `pkgdiff`, e.g: `pkgdiff Cargo.lock.orig Cargo.lock > ../../patches/patch-Cargo.lock`, etc
 #  13. If patches updated `make mdi`
 
-CARGO_ARGS=	${DEFAULT_CARGO_ARGS}	\
-		--no-default-features	\
-		--features pulseaudio_backend
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		pulseaudio_backend
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotifyd ${DESTDIR}${PREFIX}/bin

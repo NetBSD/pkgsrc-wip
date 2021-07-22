@@ -26,8 +26,8 @@ SUBST_SED.prefix+=	-e 's,/usr/bin,${PREFIX},g'
 
 INSTALLATION_DIRS=	bin share
 
-MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib"
-MAKE_ENV+=	RUSTFLAGS="-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib"
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib
 
 .include "../../wip/gst-plugins1-opengl/buildlink3.mk"
 .include "../../devel/meson/build.mk"
