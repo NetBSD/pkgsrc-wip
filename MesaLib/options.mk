@@ -83,10 +83,19 @@ MESON_ARGS+=		-Dllvm=disabled
 #
 # Vulkan support - experimental
 #
+PLIST_VARS+=		 vulkan vulkan_intel
 .if !empty(PKG_OPTIONS:Mvulkan)
-MESON_ARGS+=		-Dvulkan-drivers="auto"
-.else
-MESON_ARGS+=		-Dvulkan-drivers=""
+VULKAN_DRIVERS+=	amd
+VULKAN_DRIVERS+=	swrast
+PLIST.vulkan=		yes
+.  if ${MACHINE_ARCH} == "x86_64"
+VULKAN_DRIVERS+=	intel
+PLIST.vulkan_intel=	yes
+.  endif
+.  if ${MACHINE_ARCH} == "aarch64"
+VULKAN_DRIVERS+=	broadcom
+VULKAN_DRIVERS+=	freedreno
+.  endif
 .endif
 
 #

@@ -91,6 +91,11 @@ ${PLIST.kms}lib/libgbm.so.1.0.0
 lib/libglapi.so
 lib/libglapi.so.0
 lib/libglapi.so.0.0.0
+${PLIST.vulkan}${PLIST.arm}lib/libvulkan_broadcom.so
+${PLIST.vulkan}${PLIST.arm}lib/libvulkan_freedreno.so
+${PLIST.vulkan_intel}lib/libvulkan_intel.so
+${PLIST.vulkan}lib/libvulkan_lvp.so
+${PLIST.vulkan}lib/libvulkan_radeon.so
 ${PLIST.kms}lib/libxatracker.so
 ${PLIST.kms}lib/libxatracker.so.2
 ${PLIST.kms}lib/libxatracker.so.2.5.0
@@ -119,3 +124,8 @@ ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1
 ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0
 ${PLIST.radeonsi}${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0.0
 share/examples/mesa/00-mesa-defaults.conf
+${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/broadcom_icd.${MACHINE_ARCH}.json
+${PLIST.vulkan}${PLIST.arm}share/vulkan/icd.d/freedreno_icd.${MACHINE_ARCH}.json
+${PLIST.vulkan_intel}share/vulkan/icd.d/intel_icd.${MACHINE_ARCH}.json
+${PLIST.vulkan}share/vulkan/icd.d/lvp_icd.${MACHINE_ARCH}.json
+${PLIST.vulkan}share/vulkan/icd.d/radeon_icd.${MACHINE_ARCH}.json

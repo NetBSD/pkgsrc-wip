@@ -34,15 +34,16 @@ MESA_PLATFORMS=		#
 .include "options.mk"
 
 PLIST_SUBST+=	GLVER="1.2.0"
+PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
 
 # classic DRI drivers
-PLIST_VARS+=		i915 i965 r100 r200 nouveau_dri arm
+PLIST_VARS+=		i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
 PLIST_VARS+=		r300 svga nouveau
 
 # other features
-PLIST_VARS+=		kms vaapi
+PLIST_VARS+=		arm kms vaapi
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=  libdrm>=2.4.100
@@ -52,14 +53,13 @@ BUILDLINK_API_DEPENDS.libdrm+=  libdrm>=2.4.100
 .  endif
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
-MESON_ARGS+=		-Dgallium-xa=true
+MESON_ARGS+=		-Dgallium-xa=enabled
 .  if ${X11_TYPE} == "native" && !exists(${X11BASE}/include/xcb/dri3.h)
 MESON_ARGS+=		-Ddri3=false
 .  endif
 PLIST.kms=		yes
 .  if !empty(MACHINE_ARCH:M*arm*) || \
       ${MACHINE_CPU} == "aarch64"
-# not yet
 GALLIUM_DRIVERS+=	freedreno vc4 etnaviv tegra panfrost lima
 PLIST.arm=		yes
 .  endif
@@ -96,11 +96,11 @@ PLIST.r300=		yes
 .  if ${VAAPI_AVAILABLE} == "yes" && \
       !(empty(GALLIUM_DRIVERS:Mr600) && empty(GALLIUM_DRIVERS:Mradeonsi) && \
         empty(GALLIUM_DRIVERS:Mnouveau))
-MESON_ARGS+=		-Dgallium-va=true
+MESON_ARGS+=		-Dgallium-va=enabled
 PLIST.vaapi=		yes
 .    include "../../multimedia/libva/buildlink3.mk"
 .  else
-MESON_ARGS+=		-Dgallium-va=false
+MESON_ARGS+=		-Dgallium-va=disabled
 .  endif
 .else
 MESON_ARGS+=		-Degl=false
