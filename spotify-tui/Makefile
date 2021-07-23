@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/Rigellute/spotify-tui
 COMMENT=	Spotify client for the terminal written in Rust
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
 .include "cargo-depends.mk"
 
 USE_TOOLS+=			pkg-config
