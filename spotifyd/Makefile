@@ -9,7 +9,6 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	https://github.com/Spotifyd/spotifyd/
 COMMENT=	Open source Spotify client running as a UNIX daemon
-
 LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
