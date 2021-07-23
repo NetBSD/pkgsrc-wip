@@ -34,7 +34,7 @@ CARGO_NO_DEFAULT_FEATURES=	YES
 #  3. `make fetch`
 #  4. `make mdi`
 #  5. `make extract`
-#  6. Update the cargo crate depends list above, `make show-cargo-depends > cargo-depends.mk` and use to replace above
+#  6. Update the cargo crate depends list above, `make show-cargo-depends > cargo-depends.mk`
 #  7. `make clean`
 #  8. `make fetch`
 #  9. `make mdi`
