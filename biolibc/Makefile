@@ -17,9 +17,11 @@ BUILD_TARGET=	apple
 INSTALL_TARGET=	apple-install
 .else
 INSTALL_TARGET=	install-strip
+PLIST.cs=	yes
 .endif
 
 MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
+PLIST_VARS=	cs
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
