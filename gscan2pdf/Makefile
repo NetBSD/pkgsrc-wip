@@ -16,7 +16,6 @@ LICENSE+=	AND gnu-lgpl-v2.1 # icons/pdf.svg
 DEPENDS+=	p5-Config-General>=2.4:../../devel/p5-Config-General
 DEPENDS+=	p5-Date-Calc>=0:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Filesys-Df>=0:../../sysutils/p5-Filesys-Df
-DEPENDS+=	# TODO: p5-Glib>=1.21
 DEPENDS+=	# TODO: p5-GooCanvas2>=0
 DEPENDS+=	# TODO: p5-Gtk3>=0
 DEPENDS+=	# TODO: p5-Gtk3-SimpleList>=0
@@ -33,5 +32,6 @@ PERL5_PACKLIST=		auto/gscan2pdf/.packlist
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
+.include "../../devel/p5-glib2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
