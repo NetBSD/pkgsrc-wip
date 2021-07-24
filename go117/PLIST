@@ -767,6 +767,7 @@ go117/pkg/${GO_PLATFORM}/net/http/httptrace.a
 go117/pkg/${GO_PLATFORM}/net/http/httputil.a
 go117/pkg/${GO_PLATFORM}/net/http/internal.a
 go117/pkg/${GO_PLATFORM}/net/http/internal/ascii.a
+go117/pkg/${GO_PLATFORM}/net/http/internal/testcert.a
 go117/pkg/${GO_PLATFORM}/net/http/pprof.a
 go117/pkg/${GO_PLATFORM}/net/internal/socktest.a
 go117/pkg/${GO_PLATFORM}/net/mail.a
@@ -2186,6 +2187,7 @@ go117/src/cmd/go/testdata/script/build_gcflags.txt
 go117/src/cmd/go/testdata/script/build_gopath_order.txt
 go117/src/cmd/go/testdata/script/build_i.txt
 go117/src/cmd/go/testdata/script/build_i_deprecate.txt
+go117/src/cmd/go/testdata/script/build_ignore_leading_bom.txt
 go117/src/cmd/go/testdata/script/build_import_comment.txt
 go117/src/cmd/go/testdata/script/build_import_cycle.txt
 go117/src/cmd/go/testdata/script/build_internal.txt
@@ -2249,6 +2251,9 @@ go117/src/cmd/go/testdata/script/devnull.txt
 go117/src/cmd/go/testdata/script/doc.txt
 go117/src/cmd/go/testdata/script/embed.txt
 go117/src/cmd/go/testdata/script/embed_fmt.txt
+go117/src/cmd/go/testdata/script/env_cross_build.txt
+go117/src/cmd/go/testdata/script/env_exp.txt
+go117/src/cmd/go/testdata/script/env_unset.txt
 go117/src/cmd/go/testdata/script/env_write.txt
 go117/src/cmd/go/testdata/script/fileline.txt
 go117/src/cmd/go/testdata/script/fmt_load_errors.txt
@@ -2319,6 +2324,7 @@ go117/src/cmd/go/testdata/script/linkname.txt
 go117/src/cmd/go/testdata/script/list_ambiguous_path.txt
 go117/src/cmd/go/testdata/script/list_bad_import.txt
 go117/src/cmd/go/testdata/script/list_case_collision.txt
+go117/src/cmd/go/testdata/script/list_cgo_compiled_importmap.txt
 go117/src/cmd/go/testdata/script/list_compiled_imports.txt
 go117/src/cmd/go/testdata/script/list_constraints.txt
 go117/src/cmd/go/testdata/script/list_dedup_packages.txt
@@ -2394,6 +2400,7 @@ go117/src/cmd/go/testdata/script/mod_download_replace_file.txt
 go117/src/cmd/go/testdata/script/mod_e.txt
 go117/src/cmd/go/testdata/script/mod_edit.txt
 go117/src/cmd/go/testdata/script/mod_edit_go.txt
+go117/src/cmd/go/testdata/script/mod_edit_no_modcache.txt
 go117/src/cmd/go/testdata/script/mod_empty_err.txt
 go117/src/cmd/go/testdata/script/mod_enabled.txt
 go117/src/cmd/go/testdata/script/mod_file_proxy.txt
@@ -2425,6 +2432,7 @@ go117/src/cmd/go/testdata/script/mod_get_indirect.txt
 go117/src/cmd/go/testdata/script/mod_get_insecure_redirect.txt
 go117/src/cmd/go/testdata/script/mod_get_issue37438.txt
 go117/src/cmd/go/testdata/script/mod_get_latest_pseudo.txt
+go117/src/cmd/go/testdata/script/mod_get_lazy_indirect.txt
 go117/src/cmd/go/testdata/script/mod_get_local.txt
 go117/src/cmd/go/testdata/script/mod_get_main.txt
 go117/src/cmd/go/testdata/script/mod_get_major.txt
@@ -2472,6 +2480,7 @@ go117/src/cmd/go/testdata/script/mod_gonoproxy.txt
 go117/src/cmd/go/testdata/script/mod_gopkg_unstable.txt
 go117/src/cmd/go/testdata/script/mod_goroot_errors.txt
 go117/src/cmd/go/testdata/script/mod_graph.txt
+go117/src/cmd/go/testdata/script/mod_graph_version.txt
 go117/src/cmd/go/testdata/script/mod_help.txt
 go117/src/cmd/go/testdata/script/mod_import.txt
 go117/src/cmd/go/testdata/script/mod_import_cycle.txt
@@ -2490,6 +2499,7 @@ go117/src/cmd/go/testdata/script/mod_init_empty.txt
 go117/src/cmd/go/testdata/script/mod_init_glide.txt
 go117/src/cmd/go/testdata/script/mod_init_path.txt
 go117/src/cmd/go/testdata/script/mod_init_tidy.txt
+go117/src/cmd/go/testdata/script/mod_install_hint.txt
 go117/src/cmd/go/testdata/script/mod_install_pkg_version.txt
 go117/src/cmd/go/testdata/script/mod_install_versioned.txt
 go117/src/cmd/go/testdata/script/mod_internal.txt
@@ -2518,6 +2528,7 @@ go117/src/cmd/go/testdata/script/mod_list_retract.txt
 go117/src/cmd/go/testdata/script/mod_list_std.txt
 go117/src/cmd/go/testdata/script/mod_list_sums.txt
 go117/src/cmd/go/testdata/script/mod_list_test.txt
+go117/src/cmd/go/testdata/script/mod_list_test_cycle.txt
 go117/src/cmd/go/testdata/script/mod_list_update_nolatest.txt
 go117/src/cmd/go/testdata/script/mod_list_upgrade.txt
 go117/src/cmd/go/testdata/script/mod_list_upgrade_pseudo.txt
@@ -2604,6 +2615,7 @@ go117/src/cmd/go/testdata/script/mod_tidy_old.txt
 go117/src/cmd/go/testdata/script/mod_tidy_oldgo.txt
 go117/src/cmd/go/testdata/script/mod_tidy_quote.txt
 go117/src/cmd/go/testdata/script/mod_tidy_replace.txt
+go117/src/cmd/go/testdata/script/mod_tidy_replace_old.txt
 go117/src/cmd/go/testdata/script/mod_tidy_sum.txt
 go117/src/cmd/go/testdata/script/mod_tidy_symlink_issue35941.txt
 go117/src/cmd/go/testdata/script/mod_tidy_too_new.txt
@@ -2616,6 +2628,7 @@ go117/src/cmd/go/testdata/script/mod_vendor_build.txt
 go117/src/cmd/go/testdata/script/mod_vendor_embed.txt
 go117/src/cmd/go/testdata/script/mod_vendor_gomod.txt
 go117/src/cmd/go/testdata/script/mod_vendor_goversion.txt
+go117/src/cmd/go/testdata/script/mod_vendor_issue46867.txt
 go117/src/cmd/go/testdata/script/mod_vendor_nodeps.txt
 go117/src/cmd/go/testdata/script/mod_vendor_replace.txt
 go117/src/cmd/go/testdata/script/mod_vendor_trimpath.txt
@@ -3140,7 +3153,9 @@ go117/src/cmd/pack/pack_test.go
 go117/src/cmd/pprof/README
 go117/src/cmd/pprof/doc.go
 go117/src/cmd/pprof/pprof.go
+go117/src/cmd/pprof/pprof_test.go
 go117/src/cmd/pprof/readlineui.go
+go117/src/cmd/pprof/testdata/cpu.go
 go117/src/cmd/test2json/main.go
 go117/src/cmd/trace/annotations.go
 go117/src/cmd/trace/annotations_test.go
@@ -4961,6 +4976,8 @@ go117/src/go/types/testdata/fixedbugs/issue44799.go2
 go117/src/go/types/testdata/fixedbugs/issue45548.go2
 go117/src/go/types/testdata/fixedbugs/issue45635.go2
 go117/src/go/types/testdata/fixedbugs/issue45985.go2
+go117/src/go/types/testdata/fixedbugs/issue46403.src
+go117/src/go/types/testdata/fixedbugs/issue46404.go1
 go117/src/go/types/testdata/fixedbugs/issue6977.src
 go117/src/go/types/token_test.go
 go117/src/go/types/type.go
@@ -5934,7 +5951,7 @@ go117/src/net/http/internal/ascii/print.go
 go117/src/net/http/internal/ascii/print_test.go
 go117/src/net/http/internal/chunked.go
 go117/src/net/http/internal/chunked_test.go
-go117/src/net/http/internal/testcert.go
+go117/src/net/http/internal/testcert/testcert.go
 go117/src/net/http/jar.go
 go117/src/net/http/main_test.go
 go117/src/net/http/method.go
@@ -7247,6 +7264,8 @@ go117/src/runtime/testdata/testprog/timeprof.go
 go117/src/runtime/testdata/testprog/traceback_ancestors.go
 go117/src/runtime/testdata/testprog/vdso.go
 go117/src/runtime/testdata/testprogcgo/aprof.go
+go117/src/runtime/testdata/testprogcgo/aprof_c.c
+go117/src/runtime/testdata/testprogcgo/bigstack1_windows.c
 go117/src/runtime/testdata/testprogcgo/bigstack_windows.c
 go117/src/runtime/testdata/testprogcgo/bigstack_windows.go
 go117/src/runtime/testdata/testprogcgo/callback.go
@@ -9957,6 +9976,15 @@ go117/test/fixedbugs/issue46653.dir/bad/bad.go
 go117/test/fixedbugs/issue46653.dir/main.go
 go117/test/fixedbugs/issue46653.go
 go117/test/fixedbugs/issue4667.go
+go117/test/fixedbugs/issue46720.go
+go117/test/fixedbugs/issue46725.go
+go117/test/fixedbugs/issue46749.go
+go117/test/fixedbugs/issue46907.go
+go117/test/fixedbugs/issue46957.go
+go117/test/fixedbugs/issue47087.dir/a.go
+go117/test/fixedbugs/issue47087.dir/b.go
+go117/test/fixedbugs/issue47087.dir/main.go
+go117/test/fixedbugs/issue47087.go
 go117/test/fixedbugs/issue4734.go
 go117/test/fixedbugs/issue4748.go
 go117/test/fixedbugs/issue4752.go

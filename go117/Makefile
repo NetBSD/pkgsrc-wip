@@ -4,11 +4,11 @@
 .include "../../lang/go/bootstrap.mk"
 
 # TODO(bsiegert) move this to version.mk
-GO117_VERSION=	1.17.beta1
+GO117_VERSION=	1.17.rc1
 
 GOVERSSUFFIX=	117
 
-DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.beta/beta/}.src
+DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.rc/rc/}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
