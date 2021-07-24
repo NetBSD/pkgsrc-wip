@@ -2,10 +2,10 @@ $NetBSD$
 
 Install config files to examples.
 
---- Makefile.orig	2020-01-18 15:10:39.000000000 +0000
+--- Makefile.orig	2021-07-24 10:06:08.624291099 +0000
 +++ Makefile
-@@ -108,8 +108,8 @@ install: all
- 	install -m644 luakit.so $(DESTDIR)$(PREFIX)/lib/luakit/luakit.so
+@@ -109,8 +109,8 @@ install: all
+ 	install -m644 luakit.so $(DESTDIR)$(LIBDIR)/luakit.so
  	install -d $(DESTDIR)$(PREFIX)/bin
  	install luakit $(DESTDIR)$(PREFIX)/bin/luakit
 -	install -d $(DESTDIR)$(XDGPREFIX)/luakit/
