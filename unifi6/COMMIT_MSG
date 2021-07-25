@@ -1,6 +1,6 @@
-net/unifi: Update to 6.2.25
+net/unifi: Update to 6.2.26
 
-upstream changes:
+upstream changes are bugfixes and minor improvements plus:
 
 Improvements
 
