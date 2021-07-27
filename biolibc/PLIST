@@ -324,6 +324,7 @@ man/man3/bl_bed_set_thick_start.3
 man/man3/bl_bed_skip_header.3
 man/man3/bl_bed_write.3
 man/man3/bl_chrom_name_cmp.3
+man/man3/bl_fasta_free.3
 man/man3/bl_fasta_read.3
 man/man3/bl_fasta_set_desc.3
 man/man3/bl_fasta_set_desc_ae.3
