@@ -2,4 +2,5 @@
 bin/dir2point
 bin/md2point
 bin/point2pdf
+bin/pptx2md
 man/man1/md2point.1
