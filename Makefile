@@ -5139,6 +5139,7 @@ SUBDIR+=	shaper
 SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
+SUBDIR+=	shellharden
 SUBDIR+=	shellinabox
 SUBDIR+=	shod
 SUBDIR+=	shotcut
