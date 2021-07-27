@@ -1,0 +1,6 @@
+A tool similar to cloc, sloccount and tokei. Counts blank lines, comment lines,
+and physical lines of source code in many programming languages.
+
+The goal is to be the fastest code counter possible, but also perform COCOMO
+calculations like sloccount and estimate code complexity similar to cyclomatic
+complexity calculators. In short, one tool to rule them all.

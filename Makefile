@@ -5078,6 +5078,7 @@ SUBDIR+=	sblim-sfcc
 SUBDIR+=	scalapack
 SUBDIR+=	scantailor
 SUBDIR+=	scare
+SUBDIR+=	scc
 SUBDIR+=	sccache
 SUBDIR+=	schur
 SUBDIR+=	scilab
