@@ -5842,6 +5842,7 @@ SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdiskusage
 SUBDIR+=	xebece
+SUBDIR+=	xemacs-hg
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-keyboard-dfbsd
