@@ -3433,6 +3433,7 @@ SUBDIR+=	py-chainmap
 SUBDIR+=	py-chaintipy
 SUBDIR+=	py-chaos
 SUBDIR+=	py-chaospy
+SUBDIR+=	py-charset-normalizer
 SUBDIR+=	py-chealpy
 SUBDIR+=	py-chebfun
 SUBDIR+=	py-chebpy
