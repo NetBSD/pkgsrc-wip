@@ -1,0 +1,8 @@
+bore is a DNS query tool based on nonymous
+
+Features
+o gathers default resolvers natively on Unix + Windows + macOS
+o uses pledge(2) and unveil(2) on OpenBSD
+o makes reverse DNS queries easily with -x (--reverse)
+o highlights output to draw your attention (--color by default)
+o provides a detailed built-in manual (--man)
