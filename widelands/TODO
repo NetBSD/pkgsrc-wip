@@ -1,2 +1,3 @@
 [ ] Build hits limit for open files
-[ ] Update PLIST
+    https://github.com/widelands/widelands/issues/5005
+[X] Update PLIST
