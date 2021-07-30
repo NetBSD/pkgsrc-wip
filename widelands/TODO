@@ -1,3 +1,5 @@
-[ ] Build hits limit for open files
+[X] Build hits limit for open files
     https://github.com/widelands/widelands/issues/5005
 [X] Update PLIST
+[ ] FATAL EXCEPTION while loading game data
+    https://github.com/widelands/widelands/issues/5008
