@@ -1,4 +1,0 @@
-A library that helps you read text from an unknown charset encoding.
-Motivated by chardet, but using a new approach. All IANA character
-set names for which the Python core library provides codecs are
-supported.
