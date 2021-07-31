@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (platformdirs-2.0.2.tar.gz) = b9e9eb96c7ccf5b3af05794d3775d8ea5fd1e71e
-RMD160 (platformdirs-2.0.2.tar.gz) = b03f9dd52b9b7232f6e154ae51eaf662b645c05e
-SHA512 (platformdirs-2.0.2.tar.gz) = a342167cf10959b04535060dfffc11df42e046cfcf75c83c0eaa45ba314a864ff715f0764efd65aee5a404f39fe3c80a9f0fde6adf91b95cba7f508d01d09ab3
-Size (platformdirs-2.0.2.tar.gz) = 11445 bytes
+SHA1 (platformdirs-2.2.0.tar.gz) = 2c9b09649b49664cb302d3d40bb647271318a4dc
+RMD160 (platformdirs-2.2.0.tar.gz) = 7950892ad04906a41fadd8dd6a95ca794c4f1e35
+SHA512 (platformdirs-2.2.0.tar.gz) = 9822b7602aad04a0f5e8540a470c4e935ac6cd975b4f12c919f0ccba8395d7516764c764dea043e47e6f4e79d21afe049aa7f1ea57a9c9f67c83ed4decb82a67
+Size (platformdirs-2.2.0.tar.gz) = 21691 bytes

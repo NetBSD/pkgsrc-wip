@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	platformdirs-2.0.2
+DISTNAME=	platformdirs-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/platformdirs/}
