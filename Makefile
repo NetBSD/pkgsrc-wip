@@ -5239,6 +5239,7 @@ SUBDIR+=	spfmilter
 SUBDIR+=	spice-gtk
 SUBDIR+=	spice-html5
 SUBDIR+=	spice-vdagent
+SUBDIR+=	spid-compliant-certificates
 SUBDIR+=	spidermonkey24
 SUBDIR+=	spidermonkey31
 SUBDIR+=	splix
