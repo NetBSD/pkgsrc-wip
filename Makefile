@@ -5575,6 +5575,7 @@ SUBDIR+=	tor-dev
 SUBDIR+=	torcs
 SUBDIR+=	torque2d
 SUBDIR+=	torque3d
+SUBDIR+=	torrentzip
 SUBDIR+=	torsocks-git
 SUBDIR+=	tortunnel
 SUBDIR+=	toxic-git
