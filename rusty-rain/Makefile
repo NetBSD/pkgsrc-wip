@@ -11,8 +11,6 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
-
 INSTALLATION_DIRS=	bin
 
 do-install:

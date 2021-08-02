@@ -12,8 +12,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES+=	c
-
 INSTALLATION_DIRS=	bin
 
 do-install:
