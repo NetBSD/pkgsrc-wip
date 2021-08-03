@@ -5545,6 +5545,7 @@ SUBDIR+=	thrift
 SUBDIR+=	thunderbird68-enigmail
 SUBDIR+=	tilda
 SUBDIR+=	tilix
+SUBDIR+=	timg
 SUBDIR+=	timewarrior
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
