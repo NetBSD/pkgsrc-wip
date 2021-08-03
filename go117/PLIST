@@ -2620,6 +2620,7 @@ go117/src/cmd/go/testdata/script/mod_tidy_sum.txt
 go117/src/cmd/go/testdata/script/mod_tidy_symlink_issue35941.txt
 go117/src/cmd/go/testdata/script/mod_tidy_too_new.txt
 go117/src/cmd/go/testdata/script/mod_tidy_version.txt
+go117/src/cmd/go/testdata/script/mod_update_sum_readonly.txt
 go117/src/cmd/go/testdata/script/mod_upgrade_patch.txt
 go117/src/cmd/go/testdata/script/mod_vcs_missing.txt
 go117/src/cmd/go/testdata/script/mod_vendor.txt
@@ -6737,6 +6738,7 @@ go117/src/runtime/internal/sys/zgoarch_arm.go
 go117/src/runtime/internal/sys/zgoarch_arm64.go
 go117/src/runtime/internal/sys/zgoarch_arm64be.go
 go117/src/runtime/internal/sys/zgoarch_armbe.go
+go117/src/runtime/internal/sys/zgoarch_loong64.go
 go117/src/runtime/internal/sys/zgoarch_mips.go
 go117/src/runtime/internal/sys/zgoarch_mips64.go
 go117/src/runtime/internal/sys/zgoarch_mips64le.go
@@ -9985,6 +9987,15 @@ go117/test/fixedbugs/issue47087.dir/a.go
 go117/test/fixedbugs/issue47087.dir/b.go
 go117/test/fixedbugs/issue47087.dir/main.go
 go117/test/fixedbugs/issue47087.go
+go117/test/fixedbugs/issue47185.dir/bad/bad.go
+go117/test/fixedbugs/issue47185.dir/main.go
+go117/test/fixedbugs/issue47185.go
+go117/test/fixedbugs/issue47201.dir/a.go
+go117/test/fixedbugs/issue47201.dir/b.go
+go117/test/fixedbugs/issue47201.go
+go117/test/fixedbugs/issue47317.dir/a.s
+go117/test/fixedbugs/issue47317.dir/x.go
+go117/test/fixedbugs/issue47317.go
 go117/test/fixedbugs/issue4734.go
 go117/test/fixedbugs/issue4748.go
 go117/test/fixedbugs/issue4752.go
