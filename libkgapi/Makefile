@@ -17,6 +17,6 @@ USE_TOOLS+=	msgmerge
 .include "../../time/kcalendarcore/buildlink3.mk"
 .include "../../misc/kcontacts/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
-.include "../../wip/qt5-qtwebengine/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -49,6 +49,6 @@ REPLACE_PYTHON+=		src/Resource_Files/*/*.py
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-.include "../../wip/qt5-qtwebengine/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
