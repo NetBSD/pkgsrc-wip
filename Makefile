@@ -1895,6 +1895,7 @@ SUBDIR+=	kde-runtime4
 SUBDIR+=	kdebugsettings
 SUBDIR+=	kdecoration
 SUBDIR+=	kdepim-runtime
+SUBDIR+=	kdevelop
 SUBDIR+=	kdiagram
 SUBDIR+=	kdialog
 SUBDIR+=	kea
