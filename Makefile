@@ -2620,6 +2620,7 @@ SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
 SUBDIR+=	ogre
 SUBDIR+=	olsrd
+SUBDIR+=	okteta
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
 SUBDIR+=	oneko
