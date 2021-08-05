@@ -1980,6 +1980,7 @@ SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM38
 SUBDIR+=	libXaw3dXft
 SUBDIR+=	libaec
+SUBDIR+=	libaio
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
 SUBDIR+=	libaudec
