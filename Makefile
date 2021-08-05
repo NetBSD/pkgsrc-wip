@@ -2255,6 +2255,7 @@ SUBDIR+=	lucene
 SUBDIR+=	lumina
 SUBDIR+=	lumina-desktop
 SUBDIR+=	luv
+SUBDIR+=	lvm2
 SUBDIR+=	lwc
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
