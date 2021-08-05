@@ -4439,6 +4439,7 @@ SUBDIR+=	py-ropgadget
 SUBDIR+=	py-rpaths
 SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rql
+SUBDIR+=	py-rst2html5
 SUBDIR+=	py-rtree
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-rxpy3
