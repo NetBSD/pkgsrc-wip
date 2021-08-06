@@ -2099,6 +2099,7 @@ SUBDIR+=	libncl
 SUBDIR+=	libnestedsums
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
+SUBDIR+=	libnl1
 SUBDIR+=	libnl
 SUBDIR+=	libntfs
 SUBDIR+=	libode
