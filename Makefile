@@ -2528,7 +2528,6 @@ SUBDIR+=	netkit-tftp
 SUBDIR+=	netlogo
 SUBDIR+=	netquery-git
 SUBDIR+=	netrik
-SUBDIR+=	netwake
 SUBDIR+=	netwib
 SUBDIR+=	netwmpager
 SUBDIR+=	netwox
