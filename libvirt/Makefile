@@ -47,6 +47,13 @@ CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.qemu ${PKG_SYSCONFDIR}/libvirtlogrot
 
 CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+.include "../../wip/libnl1/buildlink3.mk"
+.include "../../wip/lvm2/buildlink3.mk"
+.endif
+
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
