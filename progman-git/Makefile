@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	progman-0.0.20200810
+DISTNAME=	progman-0.0.20210127
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
-GITHUB_TAG=	1d001b5ec8418ee5e625828f8cbd6a8e17113a5a
+GITHUB_TAG=	9b6f776c0157879810c0cd89075b72363a0ad40d
 
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://github.com/jcs/progman
@@ -12,6 +12,9 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
+# Supplies xxd utility
+TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
+
 CFLAGS+=	"-DINFTIM=-1"
 LDFLAGS+=	-lXext
 
@@ -19,9 +22,9 @@ MAKE_FLAGS+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
 MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
