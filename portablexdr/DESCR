@@ -1,0 +1,3 @@
+XDR (RFC 4506) library for Unix, Linux, Windows and Mac OS X supporting
+the functionality required for libvirt and including a free, modern
+replacement for rpcgen.
