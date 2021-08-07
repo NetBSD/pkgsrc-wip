@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	helm-3.6.2
+DISTNAME=	helm-3.6.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ COMMENT=	The Kubernetes Package Manager
 LICENSE=	apache-2.0
 
 # XXX: via: `cd ${WRKSRC} && go list -f '{{.Version}}' -m k8s.io/client-go`
-K8S_MODULES_VERSION=		0.21.2
+K8S_MODULES_VERSION=		0.21.0
 K8S_MODULES_VERSION_MAJOR=	1 # 0 (from 0.20.x) + 1
 K8S_MODULES_VERSION_MINOR=	21
 GO_BUILD_PATTERN+=	-ldflags ' \
