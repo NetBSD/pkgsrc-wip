@@ -7,3 +7,6 @@
   explicit with configure flags, possibily supporting options.mk.
 
 - Some files from PLIST missing on macOS.
+
+- _PATH_MOUNTED undefined in storage/storage_backend_fs.c with
+  musl-libc.
