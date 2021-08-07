@@ -5,3 +5,7 @@ RMD160 (LVM2.2.03.12.tgz) = 997e07fd3ff78a81987d607337dffdd817e82546
 SHA512 (LVM2.2.03.12.tgz) = e4d3bfb38b346251a2ea2cee7b79f2e12ed407652b659b35b65f58c8bb252943cee1c511713aeec8ff3400790e0e99ea6b83e8740050defe5cbb118f18bf7700
 Size (LVM2.2.03.12.tgz) = 2594040 bytes
 SHA1 (patch-configure) = ce48968f66d7a6ec4997da43ad3ef835615d9aea
+SHA1 (patch-lib_device_dev-cache.c) = 6c4143263280b414538bb1c2afa43ea8d3a6b69b
+SHA1 (patch-lib_mm_memlock.c) = 8965dcc419c11db5a906d8c3ac320cab1580e460
+SHA1 (patch-tools_lvmcmdline.c) = 36324688b98e1fdca405b0ddfc919d7048c7e67a
+SHA1 (patch-tools_tools.h) = a6b9d5468bbcbdd1d504efdbbb56356aded15720

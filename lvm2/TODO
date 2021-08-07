@@ -1,1 +1,0 @@
-- Undefined LOCK_EX and LOCK_SH on Void Linux with musl-libc.
