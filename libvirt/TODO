@@ -6,6 +6,7 @@
   on a fresh install it will not. These things should probably be made
   explicit with configure flags, possibily supporting options.mk.
 
-- On CentOS 8: "configure: error: Cannot find a XDR library". This can
-  be installed with the system package manager but there's also a
-  portablexdr package we could use, perhaps with a builtin.mk.
+- On CentOS 8 and Void Linux (with musl-libc): "configure: error: Cannot
+  find a XDR library". This can be installed with the system package
+  manager but there's also a portablexdr package we could use, perhaps
+  with a builtin.mk.
