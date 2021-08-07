@@ -1,2 +1,11 @@
 - Seems to be unable to communicate with libvirtd via socket.
   (Maybe take a look at systemd scripts for comparison)
+
+- Builds backends depending on availability, e.g. on a Debian machine
+  with ZFS installed libvirt_storage_backend_zfs.la will be built, but
+  on a fresh install it will not. These things should probably be made
+  explicit with configure flags, possibily supporting options.mk.
+
+- On CentOS 8: "configure: error: Cannot find a XDR library". This can
+  be installed with the system package manager but there's also a
+  portablexdr package we could use, perhaps with a builtin.mk.
