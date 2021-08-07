@@ -10,3 +10,5 @@
   find a XDR library". This can be installed with the system package
   manager but there's also a portablexdr package we could use, perhaps
   with a builtin.mk.
+
+- Some files from PLIST missing on macOS.
