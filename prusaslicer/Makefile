@@ -38,7 +38,8 @@ CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
-.include "../../graphics/ilmbase/buildlink3.mk"
+# ilmbase was removed on 2021-07-08 with no successor
+#.include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
