@@ -2,7 +2,7 @@
 
 DISTNAME=	yamllint-1.26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net python
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yamllint/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
