@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.80 2021/07/25 20:42:33 leot Exp $
 
 DISTNAME=	yamllint-1.26.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yamllint/}
 
@@ -16,6 +17,9 @@ USE_LANGUAGES=			# none
 
 # Only for Python 3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-install:
+	${RUN} ${MV} ${DESTDIR}${PREFIX}/bin/yamllint ${DESTDIR}${PREFIX}/bin/yamllint${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
