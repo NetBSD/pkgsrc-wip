@@ -5950,6 +5950,7 @@ SUBDIR+=	yad
 SUBDIR+=	yafray
 SUBDIR+=	yaggo
 SUBDIR+=	yakuake
+SUBDIR+=	yamllint
 SUBDIR+=	yateclient
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
