@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/timg-1.4.2
 USE_TOOLS=	cmake pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++
-CMAKE_ARGS+=	-DWITH_TURBOJPEG=OFF
 CMAKE_ARGS+=	-DTIMG_VERSION_FROM_GIT=OFF
 CMAKE_ARGS+=	-DWITH_OPENSLIDE_SUPPORT=OFF
 
@@ -28,5 +27,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/timg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
