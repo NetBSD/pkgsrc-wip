@@ -2,5 +2,4 @@ gprbuild -j0 -m  -p -XLIBRARY_TYPE=static -XXMLADA_BUILD_MODE=Production -XPROCE
 gmake: gprbuild: No such file or directory
 
 How-to-bootstrap is explained in
-https://github.com/AdaCore/gprconfig_kb
-
+https://github.com/AdaCore/gprbuild/blob/master/README.md

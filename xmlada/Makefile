@@ -6,6 +6,8 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_TAG=	v${VERSION}
 
+DISTFILES+=	https://github.com/AdaCore/gprconfig_kb/releases/tag/v21.0.0
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/xmlada/
 COMMENT=	Adacore XML suite for the Ada language
