@@ -1,3 +1,6 @@
 gprbuild -j0 -m  -p -XLIBRARY_TYPE=static -XXMLADA_BUILD_MODE=Production -XPROCESSORS=0 xmlada.gpr
 gmake: gprbuild: No such file or directory
 
+How-to-bootstrap is explained in
+https://github.com/AdaCore/gprconfig_kb
+
