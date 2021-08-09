@@ -897,6 +897,7 @@ SUBDIR+=	freedup16
 SUBDIR+=	freefem++
 SUBDIR+=	freegish-git
 SUBDIR+=	freej
+SUBDIR+=	freem
 SUBDIR+=	freeserf
 SUBDIR+=	freeswitch-core
 SUBDIR+=	freeswitch-music
