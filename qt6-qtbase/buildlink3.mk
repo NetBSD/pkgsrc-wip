@@ -12,6 +12,7 @@ BUILDLINK_INCDIRS.qt6-qtbase+=	qt6/include
 BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/lib
 BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/plugins
 
+# \todo Fix duplication with prefix coded in Makefile.common
 QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
 CMAKE_PREFIX_PATH+=	${QTDIR}
 

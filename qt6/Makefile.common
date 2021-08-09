@@ -14,6 +14,13 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.qt.io/
 LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 AND gnu-gpl-v3
 
+# The qt6 packages install with prefix being a qt6 subdirectory, so
+# that it can be installed in parallel with qt5, rather than being an
+# alternative.  Various things may be necessary to use it from outside
+# of pkgsrc:
+#   1) Use the "configure" argument "--with-qt-dir=${PREFIX}/qt6"
+#   2) Use the "cmake" argument "-DCMAKE_SYSTEM_PREFIX_PATH:PATH=${PREFIX}/qt6"
+#   3) you may also have to put ${PREFIX}/qt6/bin in your PATH
 QTPREFIX=	${PREFIX}/qt6
 
 GCC_REQD+=	9

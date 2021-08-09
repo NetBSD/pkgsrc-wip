@@ -12,4 +12,4 @@ Simply recompile your source code on the platform you want.
 Qt cuts down the complexity in implementing large and complex systems. Its
 ingenious signal-slot technology enables true component programming.
 
-This package tracks Qt6 qtbase submodule.
+This package tracks Qt6 qtbase submodule and installs into a qt6 subprefix.
