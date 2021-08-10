@@ -121,7 +121,7 @@ CONFIGURE_ARGS+=	--with-sysctl=check
 CONFIGURE_ARGS+=	--with-wireshark-dissector=no
 
 CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
-CONFIGURE_ARGS.NetSBD+=	--with-storage-zfs=yes
+CONFIGURE_ARGS.NetBSD+=	--with-storage-zfs=yes
 
 CONFIGURE_ARGS.FreeBSD+=	--with-storage-zfs=yes
 

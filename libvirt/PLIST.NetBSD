@@ -1,5 +1,6 @@
 @comment $NetBSD$
 lib/libvirt/connection-driver/libvirt_driver_network.la
+lib/libvirt/storage-backend/libvirt_storage_backend_zfs.la
 libexec/libvirt_leaseshelper
 sbin/virtnetworkd
 share/augeas/lenses/tests/test_virtnetworkd.aug
