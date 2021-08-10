@@ -5608,6 +5608,7 @@ SUBDIR+=	trackballs
 SUBDIR+=	tracy
 SUBDIR+=	translate-toolkit
 SUBDIR+=	trayion
+SUBDIR+=	tree-sitter
 SUBDIR+=	treetool
 SUBDIR+=	treeviewx
 SUBDIR+=	trelby
