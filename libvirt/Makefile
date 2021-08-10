@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-glusterfs=no
 CONFIGURE_ARGS+=	--with-hal=no
 CONFIGURE_ARGS+=	--with-interface=no
 CONFIGURE_ARGS+=	--with-libiscsi=no
-CONFIGURE_ARGS+=	--with-libpcap=yes
+CONFIGURE_ARGS+=	--with-libpcap=no
 CONFIGURE_ARGS+=	--with-libssh=no
 CONFIGURE_ARGS+=	--with-libxl=no
 CONFIGURE_ARGS+=	--with-libxml=yes
