@@ -47,7 +47,7 @@ CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.qemu ${PKG_SYSCONFDIR}/libvirtlogrot
 
 # Backends
 CONFIGURE_ARGS+=	--with-bhyve=check
-CONFIGURE_ARGS+=	--with-esx=no
+CONFIGURE_ARGS+=	--with-esx=yes
 CONFIGURE_ARGS+=	--with-hyperv=no
 CONFIGURE_ARGS+=	--with-openvz=no	# Linux only
 CONFIGURE_ARGS+=	--with-qemu=yes
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--with-apparmor=no
 CONFIGURE_ARGS+=	--with-attr=no
 CONFIGURE_ARGS+=	--with-blkid=no
 CONFIGURE_ARGS+=	--with-capng=no
-CONFIGURE_ARGS+=	--with-curl=no
+CONFIGURE_ARGS+=	--with-curl=yes
 CONFIGURE_ARGS+=	--with-dbus=no
 CONFIGURE_ARGS+=	--with-dtrace=no
 CONFIGURE_ARGS+=	--with-firewalld=no
@@ -144,8 +144,9 @@ CONFIGURE_ARGS.Linux+=	--with-init-script=systemd
 .endif
 
 .include "../../devel/yajl/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
