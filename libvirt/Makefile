@@ -83,8 +83,7 @@ CONFIGURE_ARGS+=	--with-pciaccess=no
 CONFIGURE_ARGS+=	--with-phyp=no
 CONFIGURE_ARGS+=	--with-pm-utils=yes
 CONFIGURE_ARGS+=	--with-polkit=no
-# TODO: yes with option readline
-CONFIGURE_ARGS+=	--with-readline=no
+CONFIGURE_ARGS+=	--with-readline=yes
 CONFIGURE_ARGS+=	--with-sanlock=no
 CONFIGURE_ARGS+=	--with-sasl=no
 CONFIGURE_ARGS+=	--with-selinux=no
@@ -114,7 +113,6 @@ CONFIGURE_ARGS+=	--with-secdriver-selinux=no	# Linux only
 CONFIGURE_ARGS+=	--with-secdriver-apparmor=no	# Linux only
 
 # Misc
-# TODO: yes with option readline
 CONFIGURE_ARGS+=	--with-bash-completion=no
 CONFIGURE_ARGS+=	--with-host-validate=yes
 CONFIGURE_ARGS+=	--with-init-script=check
@@ -149,6 +147,7 @@ CONFIGURE_ARGS.Linux+=	--with-init-script=systemd
 .include "../../wip/portablexdr/buildlink3.mk"
 .endif
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
