@@ -48,7 +48,7 @@ CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.qemu ${PKG_SYSCONFDIR}/libvirtlogrot
 # Backends
 CONFIGURE_ARGS+=	--with-bhyve=check
 CONFIGURE_ARGS+=	--with-esx=yes
-CONFIGURE_ARGS+=	--with-hyperv=no
+CONFIGURE_ARGS+=	--with-hyperv=no	# need openwsman
 CONFIGURE_ARGS+=	--with-openvz=no	# Linux only
 CONFIGURE_ARGS+=	--with-qemu=yes
 CONFIGURE_ARGS+=	--with-vbox=yes
@@ -64,10 +64,10 @@ CONFIGURE_ARGS+=	--with-dbus=no
 CONFIGURE_ARGS+=	--with-dtrace=no
 CONFIGURE_ARGS+=	--with-firewalld=no
 CONFIGURE_ARGS+=	--with-fuse=no
-CONFIGURE_ARGS+=	--with-glusterfs=no
+CONFIGURE_ARGS+=	--with-glusterfs=no	# need glusterfs-api
 CONFIGURE_ARGS+=	--with-hal=no
 CONFIGURE_ARGS+=	--with-interface=no
-CONFIGURE_ARGS+=	--with-libiscsi=no
+CONFIGURE_ARGS+=	--with-libiscsi=no	# need open-iscsi
 CONFIGURE_ARGS+=	--with-libpcap=no
 CONFIGURE_ARGS+=	--with-libssh=no
 CONFIGURE_ARGS+=	--with-libxl=no
@@ -75,11 +75,10 @@ CONFIGURE_ARGS+=	--with-libxml=yes
 CONFIGURE_ARGS+=	--with-lxc=no		# Linux only
 CONFIGURE_ARGS+=	--with-macvtap=no	# Linux only
 CONFIGURE_ARGS+=	--with-netcf=no
-# TODO: missing in Void w/ musl?
-CONFIGURE_ARGS+=	--with-nss-plugin=no
+CONFIGURE_ARGS+=	--with-nss-plugin=no	# broken with musl
 CONFIGURE_ARGS+=	--with-numactl=no
 CONFIGURE_ARGS+=	--with-numad=no
-CONFIGURE_ARGS+=	--with-openwsman=no
+CONFIGURE_ARGS+=	--with-openwsman=no	# needs openwsman
 CONFIGURE_ARGS+=	--with-pciaccess=no
 CONFIGURE_ARGS+=	--with-phyp=no
 CONFIGURE_ARGS+=	--with-pm-utils=yes
@@ -88,8 +87,8 @@ CONFIGURE_ARGS+=	--with-polkit=no
 CONFIGURE_ARGS+=	--with-readline=no
 CONFIGURE_ARGS+=	--with-sanlock=no
 CONFIGURE_ARGS+=	--with-sasl=no
-CONFIGURE_ARGS+=	--with-selinux-mount=no
 CONFIGURE_ARGS+=	--with-selinux=no
+CONFIGURE_ARGS+=	--with-selinux-mount=no
 CONFIGURE_ARGS+=	--with-ssh2=no
 CONFIGURE_ARGS+=	--with-udev=no
 CONFIGURE_ARGS+=	--with-virtualport=no	# Linux only
@@ -98,29 +97,28 @@ CONFIGURE_ARGS+=	--with-yajl=yes
 
 # Storage
 CONFIGURE_ARGS+=	--with-storage-disk=no
-# TODO: breaks Void build. Needs mntent.h.
-CONFIGURE_ARGS+=	--with-storage-fs=no
-CONFIGURE_ARGS+=	--with-storage-gluster=no
+CONFIGURE_ARGS+=	--with-storage-fs=no		# broken on musl
+CONFIGURE_ARGS+=	--with-storage-gluster=no	# need glusterfs
+CONFIGURE_ARGS+=	--with-storage-iscsi=no		# need open-iscsi
 CONFIGURE_ARGS+=	--with-storage-iscsi-direct=no
-CONFIGURE_ARGS+=	--with-storage-iscsi=no
-CONFIGURE_ARGS+=	--with-storage-lvm=no	# Linux only
-CONFIGURE_ARGS+=	--with-storage-mpath=no	# Linux only
-CONFIGURE_ARGS+=	--with-storage-rbd=no
+CONFIGURE_ARGS+=	--with-storage-lvm=no		# Linux only
+CONFIGURE_ARGS+=	--with-storage-mpath=no		# Linux only
+CONFIGURE_ARGS+=	--with-storage-rbd=no		# need librbd
 CONFIGURE_ARGS+=	--with-storage-scsi=yes
-CONFIGURE_ARGS+=	--with-storage-sheepdog=no
-CONFIGURE_ARGS+=	--with-storage-vstorage=no
-CONFIGURE_ARGS+=	--with-storage-zfs=no
+CONFIGURE_ARGS+=	--with-storage-sheepdog=no	# need sheepdog
+CONFIGURE_ARGS+=	--with-storage-vstorage=no	# need vstorage
+CONFIGURE_ARGS+=	--with-storage-zfs=no		# select platforms
 
 # Security drivers
-CONFIGURE_ARGS+=	--with-secdriver-selinux=no
-CONFIGURE_ARGS+=	--with-secdriver-apparmor=no
+CONFIGURE_ARGS+=	--with-secdriver-selinux=no	# Linux only
+CONFIGURE_ARGS+=	--with-secdriver-apparmor=no	# Linux only
 
 # Misc
 # TODO: yes with option readline
 CONFIGURE_ARGS+=	--with-bash-completion=no
 CONFIGURE_ARGS+=	--with-host-validate=yes
 CONFIGURE_ARGS+=	--with-init-script=check
-CONFIGURE_ARGS+=	--with-login-shell=no	# Linux only
+CONFIGURE_ARGS+=	--with-login-shell=no		# Linux only
 CONFIGURE_ARGS+=	--with-sysctl=check
 CONFIGURE_ARGS+=	--with-wireshark-dissector=no
 
@@ -129,15 +127,19 @@ CONFIGURE_ARGS.NetSBD+=	--with-storage-zfs=yes
 
 CONFIGURE_ARGS.FreeBSD+=	--with-storage-zfs=yes
 
+#CONFIGURE_ARGS.Linux+=	--with-apparmor=yes		# need libapparmor
 CONFIGURE_ARGS.Linux+=	--with-lxc=yes
 CONFIGURE_ARGS.Linux+=	--with-macvtap=yes
 CONFIGURE_ARGS.Linux+=	--with-virtualport=yes
+#CONFIGURE_ARGS.Linux+=	--with-selinux=yes		# need libselinux
 CONFIGURE_ARGS.Linux+=	--with-login-shell=yes
 CONFIGURE_ARGS.Linux+=	--with-storage-lvm=yes
 CONFIGURE_ARGS.Linux+=	--with-storage-mpath=yes
+#CONFIGURE_ARGS.Linux+=	--with-storage-zfs=yes		# can't detect
+#CONFIGURE_ARGS.Linux+=	--with-secdriver-apparmor=yes	# need libapparmor
+#CONFIGURE_ARGS.Linux+=	--with-secdriver-selinux=yes	# need libselinux
 # Unit files for all distros, harmless for other inits.
 CONFIGURE_ARGS.Linux+=	--with-init-script=systemd
-#CONFIGURE_ARGS.Linux+=	--with-storage-zfs=yes	# can't detect
 
 .include "../../mk/bsd.prefs.mk"
 
