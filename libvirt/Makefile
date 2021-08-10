@@ -119,6 +119,7 @@ CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
 
 .if ${OPSYS} == "Linux"
 .include "../../wip/libnl1/buildlink3.mk"
+.include "../../wip/portablexdr/buildlink3.mk"
 .endif
 
 .include "../../devel/yajl/buildlink3.mk"
