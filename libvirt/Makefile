@@ -49,7 +49,9 @@ CONFIGURE_ARGS+=	--with-libpcap=yes
 CONFIGURE_ARGS+=	--with-libxml=yes
 CONFIGURE_ARGS+=	--with-yajl=yes
 
-CONFIGURE_ARGS+=	--with-sysctl=check
+# 'check' is default, but here for reference
+#CONFIGURE_ARGS+=	--with-sysctl=check
+#CONFIGURE_ARGS+=	--with-init-script=check
 
 CONFIGURE_ARGS+=	--with-apparmor=no
 CONFIGURE_ARGS+=	--with-attr=no
@@ -114,6 +116,9 @@ CONFIGURE_ARGS+=	--with-storage-zfs=no
 CONFIGURE_ARGS+=	--with-storage-vstorage=no
 
 CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
+
+# Unit files for all distros, harmless for other inits.
+CONFIGURE_ARGS.Linux+=	--with-init-script=systemd
 
 .include "../../mk/bsd.prefs.mk"
 
