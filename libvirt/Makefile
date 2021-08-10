@@ -125,6 +125,9 @@ CONFIGURE_ARGS+=	--with-sysctl=check
 CONFIGURE_ARGS+=	--with-wireshark-dissector=no
 
 CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
+CONFIGURE_ARGS.NetSBD+=	--with-storage-zfs=yes
+
+CONFIGURE_ARGS.FreeBSD+=	--with-storage-zfs=yes
 
 CONFIGURE_ARGS.Linux+=	--with-lxc=yes
 CONFIGURE_ARGS.Linux+=	--with-macvtap=yes
@@ -134,6 +137,7 @@ CONFIGURE_ARGS.Linux+=	--with-storage-lvm=yes
 CONFIGURE_ARGS.Linux+=	--with-storage-mpath=yes
 # Unit files for all distros, harmless for other inits.
 CONFIGURE_ARGS.Linux+=	--with-init-script=systemd
+#CONFIGURE_ARGS.Linux+=	--with-storage-zfs=yes	# can't detect
 
 .include "../../mk/bsd.prefs.mk"
 
