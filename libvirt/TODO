@@ -4,3 +4,5 @@
 - Some files from PLIST missing on macOS.
 - _PATH_MOUNTED undefined in storage/storage_backend_fs.c with
   musl-libc.
+- Update (= migrate to meson)
+- Config file list is outdated (missing files on install)
