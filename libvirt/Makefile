@@ -112,7 +112,7 @@ CONFIGURE_ARGS+=	--with-storage-vstorage=no
 CONFIGURE_ARGS+=	--with-storage-zfs=no
 
 # Security drivers
-CONFIGURE_ARGS+=	--with-secdriver-linux=no
+CONFIGURE_ARGS+=	--with-secdriver-selinux=no
 CONFIGURE_ARGS+=	--with-secdriver-apparmor=no
 
 # Misc
