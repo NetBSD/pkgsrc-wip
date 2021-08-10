@@ -45,14 +45,80 @@ CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.libxl ${PKG_SYSCONFDIR}/libvirtlogro
 CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.lxc ${PKG_SYSCONFDIR}/libvirtlogrotate.d/libvirtd.lxc
 CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.qemu ${PKG_SYSCONFDIR}/libvirtlogrotate.d/libvirtd.qemu
 
+CONFIGURE_ARGS+=	--with-libpcap=yes
+CONFIGURE_ARGS+=	--with-libxml=yes
+CONFIGURE_ARGS+=	--with-yajl=yes
+
+CONFIGURE_ARGS+=	--with-sysctl=check
+
+CONFIGURE_ARGS+=	--with-apparmor=no
+CONFIGURE_ARGS+=	--with-attr=no
+CONFIGURE_ARGS+=	--with-bash-completion=no
+CONFIGURE_ARGS+=	--with-blkid=no
+CONFIGURE_ARGS+=	--with-capng=no
+CONFIGURE_ARGS+=	--with-curl=no
+CONFIGURE_ARGS+=	--with-dbus=no
+CONFIGURE_ARGS+=	--with-firewalld=no
+CONFIGURE_ARGS+=	--with-fuse=no
+CONFIGURE_ARGS+=	--with-glusterfs=no
+CONFIGURE_ARGS+=	--with-hal=no
+CONFIGURE_ARGS+=	--with-libiscsi=no
+CONFIGURE_ARGS+=	--with-libssh=no
+CONFIGURE_ARGS+=	--with-macvtap=no
+CONFIGURE_ARGS+=	--with-netcf=no
+CONFIGURE_ARGS+=	--with-nss-plugin=no
+CONFIGURE_ARGS+=	--with-numactl=no
+CONFIGURE_ARGS+=	--with-openwsman=no
+CONFIGURE_ARGS+=	--with-pciaccess=no
+CONFIGURE_ARGS+=	--with-pm-utils=no
+CONFIGURE_ARGS+=	--with-polkit=no
+CONFIGURE_ARGS+=	--with-readline=no
+CONFIGURE_ARGS+=	--with-sanlock=no
+CONFIGURE_ARGS+=	--with-sasl=no
+CONFIGURE_ARGS+=	--with-selinux=no
+CONFIGURE_ARGS+=	--with-selinux-mount=no
+CONFIGURE_ARGS+=	--with-ssh2=no
+CONFIGURE_ARGS+=	--with-udev=no
+CONFIGURE_ARGS+=	--with-virtualport=no
+CONFIGURE_ARGS+=	--with-wireshark-dissector=no
+CONFIGURE_ARGS+=	--with-qemu=no
+CONFIGURE_ARGS+=	--with-openvz=no
+CONFIGURE_ARGS+=	--with-vmware=no
+CONFIGURE_ARGS+=	--with-phyp=no
+CONFIGURE_ARGS+=	--with-libxl=no
+CONFIGURE_ARGS+=	--with-vbox=no
+CONFIGURE_ARGS+=	--with-lxc=no
+CONFIGURE_ARGS+=	--with-vz=no
+CONFIGURE_ARGS+=	--with-bhyve=no
+CONFIGURE_ARGS+=	--with-esx=no
+CONFIGURE_ARGS+=	--with-hyperv=no
+CONFIGURE_ARGS+=	--with-interface=no
+CONFIGURE_ARGS+=	--with-dtrace=no
+CONFIGURE_ARGS+=	--with-numad=no
+CONFIGURE_ARGS+=	--with-login-shell=no
+CONFIGURE_ARGS+=	--with-host-validate=no
+CONFIGURE_ARGS+=	--with-secdriver-linux=no
+CONFIGURE_ARGS+=	--with-secdriver-apparmor=no
+CONFIGURE_ARGS+=	--with-apparmor-profiles=no
+CONFIGURE_ARGS+=	--with-storage-fs=no
+CONFIGURE_ARGS+=	--with-storage-lvm=no
+CONFIGURE_ARGS+=	--with-storage-iscsi=no
+CONFIGURE_ARGS+=	--with-storage-iscsi-direct=no
+CONFIGURE_ARGS+=	--with-storage-scsi=no
+CONFIGURE_ARGS+=	--with-storage-mpath=no
+CONFIGURE_ARGS+=	--with-storage-disk=no
+CONFIGURE_ARGS+=	--with-storage-rbd=no
+CONFIGURE_ARGS+=	--with-storage-sheepdog=no
+CONFIGURE_ARGS+=	--with-storage-gluster=no
+CONFIGURE_ARGS+=	--with-storage-zfs=no
+CONFIGURE_ARGS+=	--with-storage-vstorage=no
+
 CONFIGURE_ARGS.NetBSD+=	--with-qemu-group=wheel
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 .include "../../wip/libnl1/buildlink3.mk"
-.include "../../wip/lvm2/buildlink3.mk"
-.include "../../wip/portablexdr/buildlink3.mk"
 .endif
 
 .include "../../devel/yajl/buildlink3.mk"

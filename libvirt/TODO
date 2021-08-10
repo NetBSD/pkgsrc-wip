@@ -1,12 +1,7 @@
 - Seems to be unable to communicate with libvirtd via socket.
   (Maybe take a look at systemd scripts for comparison)
-
-- Builds backends depending on availability, e.g. on a Debian machine
-  with ZFS installed libvirt_storage_backend_zfs.la will be built, but
-  on a fresh install it will not. These things should probably be made
-  explicit with configure flags, possibily supporting options.mk.
-
+- Lots of --with-X=no, should have options.
 - Some files from PLIST missing on macOS.
-
 - _PATH_MOUNTED undefined in storage/storage_backend_fs.c with
   musl-libc.
+- PLIST mismatch on non-systemd Linux.
