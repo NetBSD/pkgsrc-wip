@@ -27,14 +27,10 @@ lib/libvirt-lxc.la
 lib/libvirt-qemu.la
 lib/libvirt.la
 lib/libvirt/connection-driver/libvirt_driver_network.la
-lib/libvirt/connection-driver/libvirt_driver_qemu.a
 lib/libvirt/connection-driver/libvirt_driver_qemu.la
-lib/libvirt/connection-driver/libvirt_driver_qemu.so
 lib/libvirt/connection-driver/libvirt_driver_secret.la
 lib/libvirt/connection-driver/libvirt_driver_storage.la
-lib/libvirt/connection-driver/libvirt_driver_vbox.a
 lib/libvirt/connection-driver/libvirt_driver_vbox.la
-lib/libvirt/connection-driver/libvirt_driver_vbox.so
 lib/libvirt/lock-driver/lockd.la
 lib/libvirt/storage-backend/libvirt_storage_backend_fs.la
 lib/libvirt/storage-file/libvirt_storage_file_fs.la
