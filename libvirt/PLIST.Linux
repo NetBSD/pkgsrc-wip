@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/virt-login-shell
 lib/libvirt/connection-driver/libvirt_driver_lxc.la
+lib/libvirt/connection-driver/libvirt_driver_network.la
 lib/libvirt/connection-driver/libvirt_driver_nwfilter.la
 lib/libvirt/storage-backend/libvirt_storage_backend_logical.la
 lib/libvirt/storage-backend/libvirt_storage_backend_mpath.la
@@ -54,16 +55,20 @@ lib/systemd/system/virtvboxd-admin.socket
 lib/systemd/system/virtvboxd-ro.socket
 lib/systemd/system/virtvboxd.service
 lib/systemd/system/virtvboxd.socket
+libexec/libvirt_leaseshelper
 libexec/libvirt_lxc
 libexec/virt-login-shell-helper
 man/man1/virt-login-shell.1
 sbin/virtlxcd
+sbin/virtnetworkd
 sbin/virtnwfilterd
 share/augeas/lenses/libvirtd_lxc.aug
 share/augeas/lenses/tests/test_libvirtd_lxc.aug
 share/augeas/lenses/tests/test_virtlxcd.aug
+share/augeas/lenses/tests/test_virtnetworkd.aug
 share/augeas/lenses/tests/test_virtnwfilterd.aug
 share/augeas/lenses/virtlxcd.aug
+share/augeas/lenses/virtnetworkd.aug
 share/augeas/lenses/virtnwfilterd.aug
 share/examples/libvirt/lxc.conf
 share/examples/libvirt/nwfilter/allow-arp.xml
@@ -84,8 +89,11 @@ share/examples/libvirt/nwfilter/no-other-l2-traffic.xml
 share/examples/libvirt/nwfilter/no-other-rarp-traffic.xml
 share/examples/libvirt/nwfilter/qemu-announce-self-rarp.xml
 share/examples/libvirt/nwfilter/qemu-announce-self.xml
+share/examples/libvirt/qemu/networks/autostart/default.xml
+share/examples/libvirt/qemu/networks/default.xml
 share/examples/libvirt/virt-login-shell.conf
 share/examples/libvirt/virtlxcd.conf
+share/examples/libvirt/virtnetworkd.conf
 share/examples/libvirt/virtnwfilterd.conf
 share/examples/sysconfig/libvirt-guests
 share/examples/sysconfig/libvirtd

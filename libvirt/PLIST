@@ -26,7 +26,6 @@ lib/libvirt-admin.la
 lib/libvirt-lxc.la
 lib/libvirt-qemu.la
 lib/libvirt.la
-lib/libvirt/connection-driver/libvirt_driver_network.la
 lib/libvirt/connection-driver/libvirt_driver_qemu.la
 lib/libvirt/connection-driver/libvirt_driver_secret.la
 lib/libvirt/connection-driver/libvirt_driver_storage.la
@@ -40,7 +39,6 @@ lib/pkgconfig/libvirt-qemu.pc
 lib/pkgconfig/libvirt.pc
 libexec/libvirt-guests.sh
 libexec/libvirt_iohelper
-libexec/libvirt_leaseshelper
 man/man1/virsh.1
 man/man1/virt-admin.1
 man/man1/virt-host-validate.1
@@ -64,7 +62,6 @@ man/man8/virtlogd.8
 sbin/libvirtd
 sbin/virtlockd
 sbin/virtlogd
-sbin/virtnetworkd
 sbin/virtproxyd
 sbin/virtqemud
 sbin/virtsecretd
@@ -78,7 +75,6 @@ share/augeas/lenses/tests/test_libvirtd.aug
 share/augeas/lenses/tests/test_libvirtd_qemu.aug
 share/augeas/lenses/tests/test_virtlockd.aug
 share/augeas/lenses/tests/test_virtlogd.aug
-share/augeas/lenses/tests/test_virtnetworkd.aug
 share/augeas/lenses/tests/test_virtproxyd.aug
 share/augeas/lenses/tests/test_virtqemud.aug
 share/augeas/lenses/tests/test_virtsecretd.aug
@@ -86,7 +82,6 @@ share/augeas/lenses/tests/test_virtstoraged.aug
 share/augeas/lenses/tests/test_virtvboxd.aug
 share/augeas/lenses/virtlockd.aug
 share/augeas/lenses/virtlogd.aug
-share/augeas/lenses/virtnetworkd.aug
 share/augeas/lenses/virtproxyd.aug
 share/augeas/lenses/virtqemud.aug
 share/augeas/lenses/virtsecretd.aug
@@ -303,11 +298,8 @@ share/examples/libvirt/libvirt.conf
 share/examples/libvirt/libvirtd.conf
 share/examples/libvirt/qemu-lockd.conf
 share/examples/libvirt/qemu.conf
-share/examples/libvirt/qemu/networks/autostart/default.xml
-share/examples/libvirt/qemu/networks/default.xml
 share/examples/libvirt/virtlockd.conf
 share/examples/libvirt/virtlogd.conf
-share/examples/libvirt/virtnetworkd.conf
 share/examples/libvirt/virtproxyd.conf
 share/examples/libvirt/virtqemud.conf
 share/examples/libvirt/virtsecretd.conf
