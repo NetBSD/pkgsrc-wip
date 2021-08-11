@@ -1,10 +1,12 @@
 $NetBSD$
 
---- binutils/Makefile.in.orig	2018-01-27 15:02:51.000000000 +0000
+Avoid installing po (NLS) files.
+
+--- binutils/Makefile.in.orig	2021-07-18 16:38:08.000000000 +0000
 +++ binutils/Makefile.in
-@@ -465,7 +465,7 @@ zlibdir = @zlibdir@
+@@ -569,7 +569,7 @@ zlibdir = @zlibdir@
  zlibinc = @zlibinc@
- AUTOMAKE_OPTIONS = dejagnu no-dist foreign
+ AUTOMAKE_OPTIONS = dejagnu no-dist foreign subdir-objects
  ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
 -SUBDIRS = doc po
 +SUBDIRS = doc

@@ -1,6 +1,8 @@
 $NetBSD$
 
---- etc/Makefile.in.orig	2018-01-13 13:31:15.000000000 +0000
+Avoid installing info files (which duplicates with other CPU).
+
+--- etc/Makefile.in.orig	2021-07-08 11:37:19.000000000 +0000
 +++ etc/Makefile.in
 @@ -68,7 +68,7 @@ config.status: $(srcdir)/configure
  dist:
