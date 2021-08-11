@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--with-system-zlib
 
 AUTO_MKDIRS=		yes
 
+TEST_TARGET=		check
+
 # Prevent the need to run texi2pod.pl and pod2mane
 # hence the need for perl as build dependency.
 post-configure:
