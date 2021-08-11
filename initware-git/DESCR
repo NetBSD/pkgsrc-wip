@@ -1,3 +1,14 @@
-InitWare isn't ready to use yet!! Unless you are doing so for fun,
-to experiment, or to contribute, you most likely do not want to try to install
+InitWare isn't ready to use yet!! Unless you are doing so for fun, to
+experiment, or to contribute, you most likely do not want to try to install
 InitWare until a first stable release is made!
+
+The InitWare Suite of Middleware allows you to manage services and system
+resources as logical entities called units. Units are automatically scheduled by
+the InitWare manager according to their dependency specifications. A user
+session manager facilitates tracking of users' login sessions, with each user
+getting their own dedicated service manager. Finally the Event Log System
+provides a system-wide Event Log of events from various sources.
+
+This package provides InitWare as an auxiliary service manager running under the
+NetBSD rc.d framework. It does not replace init(8) or rc(8) by default. Logind
+is non-functional for now.

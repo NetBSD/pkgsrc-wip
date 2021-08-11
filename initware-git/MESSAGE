@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD$
+
+To set up InitWare as an auxiliary service manager:
+
+1. Unless you have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy the dbus
+   and initware rc scripts from ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/ into
+   /etc/rc.d/
+
+2. Add these lines to your /etc/rc.conf
+
+        dbus=YES
+        initware=YES
+
+3. Reboot and InitWare will start automatically, or start it immediately by
+   issuing the commands
+
+        /etc/rc.d/dbus start
+        /etc/rc.d/initware start
+
+===========================================================================

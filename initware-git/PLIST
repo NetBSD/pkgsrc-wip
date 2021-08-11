@@ -1,14 +1,18 @@
 @comment $NetBSD$
-bin/iwanalyse
-bin/iwctl
-bin/iwloginctl
-bin/iwrun
+bin/evlogcat
+bin/evlogctl
+bin/svcanalyse
+bin/svcctl
+bin/svcloginctl
+bin/svcrun
+lib/InitWare/system/auxiliary-manager.target
 lib/InitWare/system/basic.target
 lib/InitWare/system/bluetooth.target
 lib/InitWare/system/bootdone.service
 lib/InitWare/system/cryptsetup-pre.target
 lib/InitWare/system/cryptsetup.target
 lib/InitWare/system/debug-shell.service
+lib/InitWare/system/default.target
 lib/InitWare/system/emergency.service
 lib/InitWare/system/emergency.target
 lib/InitWare/system/final.target
@@ -42,10 +46,12 @@ lib/InitWare/system/sleep.target
 lib/InitWare/system/slices.target
 lib/InitWare/system/smartcard.target
 lib/InitWare/system/sockets.target
+lib/InitWare/system/sockets.target.wants/systemd-journald.socket
 lib/InitWare/system/sound.target
 lib/InitWare/system/suspend.target
 lib/InitWare/system/swap.target
 lib/InitWare/system/sysinit.target
+lib/InitWare/system/sysinit.target.wants/systemd-journald.service
 lib/InitWare/system/system-update.target
 lib/InitWare/system/system.slice
 lib/InitWare/system/systemd-ask-password-console.path
@@ -58,6 +64,8 @@ lib/InitWare/system/systemd-hostnamed.service
 lib/InitWare/system/systemd-hybrid-sleep.service
 lib/InitWare/system/systemd-initctl.service
 lib/InitWare/system/systemd-initctl.socket
+lib/InitWare/system/systemd-journald.service
+lib/InitWare/system/systemd-journald.socket
 lib/InitWare/system/systemd-logind.service
 lib/InitWare/system/systemd-nspawn@.service
 lib/InitWare/system/systemd-poweroff.service
@@ -79,6 +87,7 @@ lib/InitWare/system/umount.target
 lib/InitWare/system/user.slice
 lib/InitWare/system/user@.service
 lib/InitWare/system/x-.slice
+lib/InitWare/tmpfiles.d/systemd.conf
 lib/InitWare/user/bluetooth.target
 lib/InitWare/user/default.target
 lib/InitWare/user/exit.target
@@ -89,11 +98,15 @@ lib/InitWare/user/smartcard.target
 lib/InitWare/user/sockets.target
 lib/InitWare/user/sound.target
 lib/InitWare/user/timers.target
-libexec/InitWare/iw.logind
-libexec/InitWare/iw.manager
+libexec/InitWare/evlogd
 libexec/InitWare/rcng2unit
-libexec/InitWare/runrcng.sh
+libexec/InitWare/svc.logind
+libexec/InitWare/svc.managerd
 libexec/InitWare/system-generators/rcng-generator.sh
+libexec/InitWare/system-generators/ttys-generator
+libexec/InitWare/tmpfiles
 libexec/InitWare/user-sessions
 libexec/InitWare/wait4pipe
-@pkgdir man/man7
+man/man7/svc_rcng.7
+share/dbus-1/system-services/org.freedesktop.systemd1.service
+share/dbus-1/system.d/org.freedesktop.systemd1.conf
