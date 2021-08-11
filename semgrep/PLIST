@@ -19,8 +19,6 @@ ${PYSITELIB}/semgrep/autofix.pyo
 ${PYSITELIB}/semgrep/bin/__init__.py
 ${PYSITELIB}/semgrep/bin/__init__.pyc
 ${PYSITELIB}/semgrep/bin/__init__.pyo
-${PYSITELIB}/semgrep/bin/semgrep-core
-${PYSITELIB}/semgrep/bin/spacegrep
 ${PYSITELIB}/semgrep/bytesize.py
 ${PYSITELIB}/semgrep/bytesize.pyc
 ${PYSITELIB}/semgrep/bytesize.pyo

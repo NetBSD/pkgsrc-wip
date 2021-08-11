@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
 DEPENDS+=	semgrep-core-${PKGVERSION_NOREV}{,nb[0-9]*}:../../wip/semgrep-core
 
 # Avoid to install binaries
-INSTALL_ENV+=	HOMEBREW_SYSTEM=yes
+MAKE_ENV+=	SEMGREP_SKIP_BIN=yes
 
 USE_LANGUAGES=	# none
 
