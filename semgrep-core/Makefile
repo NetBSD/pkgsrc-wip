@@ -44,7 +44,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/semgrep/semgrep/bin/spacegrep ${DESTDIR}${PREFIX}/bin/spacegrep
 
 .include "../../devel/pcre/buildlink3.mk"
+BUILDLINK_DEPMETHOD.ocaml=	build
 .include "../../lang/ocaml/buildlink3.mk"
+BUILDLINK_DEPMETHOD.ocaml-opam=	build
 .include "../../misc/ocaml-opam/buildlink3.mk"
 .include "../../wip/tree-sitter/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
