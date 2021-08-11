@@ -1,11 +1,7 @@
 $NetBSD: distinfo,v 1.7 2014/08/29 09:15:42 makoto Exp $
 
-SHA1 (gcc-4.8.3.tar.bz2) = da0a2b9ec074f2bf624a34f3507f812ebb6e4dce
-RMD160 (gcc-4.8.3.tar.bz2) = 2c7214ff607cbe822282c04d1d6f9fea765c82c5
-SHA512 (gcc-4.8.3.tar.bz2) = 2b40d231e8445f9c1654137df509f09ce1187b475138ca7f648f710d922a1718f740b2d8a37c26e16b5e27900c60358be98229ae884a6f1f70e9df44ad24d02b
-Size (gcc-4.8.3.tar.bz2) = 86126808 bytes
-SHA1 (patch-ab) = 76bb3f264eb83beaf614eb5e106e541397340de7
-SHA1 (patch-gcc_cp_Make-lang.in) = baf41ef2c48ecc7b6757bf84977cc392880f7429
-SHA1 (patch-gcc_cp_cfns.gperf) = 2b8b995e107e78d2b07d8920bb87a956b15f18cd
-SHA1 (patch-gcc_cp_cfns.h) = 8b627cf91524689d0a15a757d0d0e4d49590b1c5
-SHA1 (patch-gcc_cp_except.c) = 4cb846c54061dfd68b0379277f301c138e889c96
+SHA1 (gcc-10.3.0.tar.xz) = fb51ed1660c065898c75951fb38e1ebad7d49feb
+RMD160 (gcc-10.3.0.tar.xz) = 8edb715cf1159fd8de773d0d5208d2e83ca36402
+SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
+Size (gcc-10.3.0.tar.xz) = 76692288 bytes
+SHA1 (patch-contrib_download__prerequisites) = 16d02e5b026ce052b61eced69cfd6a627fea65f5

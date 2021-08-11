@@ -1,0 +1,5 @@
+[ ] Check pkglint warning for libtool
+[ ] Enable test suite
+[ ] Test with real world project
+
+Note: GCC 11.1.0 and 11.2.0 do not work.

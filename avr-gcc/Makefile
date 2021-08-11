@@ -1,64 +1,63 @@
-# $NetBSD: Makefile,v 1.10 2015/08/12 19:59:50 tnn2 Exp $
+# $NetBSD$
 
-DISTNAME=		gcc-4.8.3
+DISTNAME=		gcc-10.3.0
 PKGNAME=		${DISTNAME:C/^/avr-/}
 CATEGORIES=		cross
-MASTER_SITES=		${MASTER_SITE_GNU:=gcc/releases/${DISTNAME}/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		GNU gcc-4.9 for Atmel AVR 8-bit RISC microcontrollers
+COMMENT=		GCC for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=		yes
+#MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake lex perl tar msgfmt autoconf pod2man
-USE_PKGLOCALEDIR=	yes
-USE_GNU_CONFIGURE_HOST=	no
+USE_TOOLS+=		bash gmake gsed:run gtar
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no
 
-CONFIGURE_ARGS+=	--target=avr
-CONFIGURE_ARGS+=	--enable-languages='c c++'
-CONFIGURE_ARGS+=	--disable-nls --disable-lto
-CONFIGURE_ARGS+=	--disable-libquadmath-support
+# Build outside ${WRKSRC}
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	../${DISTNAME}/configure
+
+CONFIG_SHELL=		${TOOLS_PATH.bash}
+
+CONFIGURE_ARGS+=	--enable-languages='c'
 CONFIGURE_ARGS+=	--enable-multilib
+CONFIGURE_ARGS+=	--disable-libquadmath-support
+CONFIGURE_ARGS+=	--disable-lto
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--disable-threads
 
-MAKE_ENV+=		MACHINE_ARCH=avr
-MAKE_ENV+=		SHELL=${CONFIG_SHELL}
-CFLAGS_FOR_BUILD:=	${CFLAGS}
-MAKE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
-CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
-MAKE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
-CFLAGS=			# empty
-CXXFLAGS=		# empty
-
-SUBST_CLASSES+=		sed
-SUBST_FILES.sed=	fixincludes/fixincl.x
-SUBST_SED.sed=		-e 's|@SED@|${TOOLS_PATH.sed}|g'
-SUBST_STAGE.sed=	post-patch
-
-pre-configure:
-	${MKDIR} ${WRKDIR}/obj
-	${LN} -s ${WRKDIR}/obj/gcc/include/unwind.h ${WRKSRC}/gcc/unwind.h
-
-# To avoid the conflict with other cross and native compiler
-post-install:
-	(cd  ${WRKDIR}/obj ; ${INSTALL} libiberty/libiberty.a ${DESTDIR}${PREFIX}/lib/gcc/avr)
-
-CONFIGURE_DIRS=		${WRKDIR}/obj
-CONFIGURE_SCRIPT=	${WRKSRC}/configure
+# From lang/gcc10
+MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
+MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
+MAKE_ENV.NetBSD+=	ac_cv_func_freelocale=no
+MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
+MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
+MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 INSTALLATION_DIRS+=	avr/bin
 
-.include "../../devel/gmp/buildlink3.mk"
+.include "options.mk"
+
+# For graphite support.
+.if !empty(PKG_OPTIONS:Mgcc-graphite)
+post-extract:
+	${TAR} -jxf ${DISTDIR}/${ISL16}.tar.bz2 -C ${WRKSRC}
+	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
+.endif
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
-# mpc is required since gcc-4.5.x
-.include "../../math/mpcomplex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
