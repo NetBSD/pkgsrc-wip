@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (semgrep-0.35.0.tar.gz) = e99228f9c00ca3d2836a155426c96a5134e2120a
-RMD160 (semgrep-0.35.0.tar.gz) = 2bf1cab7fa27c0e6faa7d6e81e5ad13526d2fdc6
-SHA512 (semgrep-0.35.0.tar.gz) = d16224ff9d81ea07200789bcb646dea60b0f69a2e43bd8a1cf5b0f9606b7386ffa8d365d45e005e7e75b3b359461c2ca694fe43d22eed6f729e4cfe8044dc155
-Size (semgrep-0.35.0.tar.gz) = 73774 bytes
-SHA1 (patch-setup.py) = 1b6a538d9aa553cf034a9a9cc4a929b0fcb04384
+SHA1 (semgrep-0.60.0.tar.gz) = 12547c213d501225606b759017bfea7926b67eb0
+RMD160 (semgrep-0.60.0.tar.gz) = 9d7f6d3550198df3c37591f83025472e0b1e21d4
+SHA512 (semgrep-0.60.0.tar.gz) = 8205af92f825bc2415d62705c1f69b7e506ca9e4404e9f00763a59ea26a42b13b0f6c0aac6dfe152718219f76d3a4e2fc953759fb88bb080c89674c2df243919
+Size (semgrep-0.60.0.tar.gz) = 104355 bytes
+SHA1 (patch-setup.py) = 80572df764e710c51651a4312ca4092c18e5af02
