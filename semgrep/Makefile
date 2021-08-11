@@ -19,6 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16.10:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.46.1:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.2:../../textproc/py-wcmatch
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
+DEPENDS+=	semgrep-core-${PKGVERSION_NOREV}{,nb[0-9]*}:../../wip/semgrep-core
 
 # Avoid to install binaries
 INSTALL_ENV+=	HOMEBREW_SYSTEM=yes
