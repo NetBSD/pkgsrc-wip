@@ -16,10 +16,11 @@ COMMENT=	Lightweight static analysis for many languages
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+TOOL_DEPENDS+=	mccs-[0-9]*:../../wip/mccs
 
 UNLIMIT_RESOURCES+=	stacksize # needed by parsexp
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config bash:build
 WRKSRC=			${WRKDIR}/semgrep
 
 MAKE_ENV+=	HOMEBREW_SYSTEM=fake
