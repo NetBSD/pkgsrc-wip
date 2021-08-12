@@ -1,12 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	xwallpaper-0.6.6
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+DISTNAME=	xwallpaper-0.7.3
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=stoeckmann/xwallpaper/releases/download/v0.6.6/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=stoeckmann/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	tpaul@NetBSD.org
-HOMEPAGE=	https://github.com/stoeckmann/xwallpaper/releases/download/v0.6.6/
+HOMEPAGE=	https://github.com/stoeckmann/xwallpaper
 COMMENT=	Wallpaper setting utility for X
 LICENSE=	isc
 
