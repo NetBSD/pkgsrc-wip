@@ -3,7 +3,7 @@ $NetBSD$
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
 
---- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-06-17 03:53:51.000000000 +0000
+--- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-07-26 14:43:01.000000000 +0000
 +++ compiler/rustc_target/src/spec/netbsd_base.rs
 @@ -1,6 +1,14 @@
 -use crate::spec::{RelroLevel, TargetOptions};
@@ -21,8 +21,8 @@ search the directory containing the symlinks to -latomic.
      TargetOptions {
          os: "netbsd".to_string(),
          dynamic_linking: true,
-@@ -9,6 +17,7 @@ pub fn opts() -> TargetOptions {
-         linker_is_gnu: true,
+@@ -8,6 +16,7 @@ pub fn opts() -> TargetOptions {
+         families: vec!["unix".to_string()],
          no_default_libraries: false,
          has_rpath: true,
 +        pre_link_args: args,
