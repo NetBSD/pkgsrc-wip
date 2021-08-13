@@ -2,3 +2,6 @@ Fails to build:
 
 /usr/pkg/java/openjdk11/bin/java -Xmx256m -jar /usr/pkg/share/java/classes/antlr.jar  -make -Xmultithreaded -Xconversiontimeout 10000 -fo  . ./belle_sip_message.g
 no main manifest attribute, in /usr/pkg/share/java/classes/antlr.jar
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2021-33056
