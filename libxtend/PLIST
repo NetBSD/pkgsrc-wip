@@ -1,6 +1,13 @@
 @comment $NetBSD$
-include/xtend-protos.h
-include/xtend.h
+include/xtend/ctype.h
+include/xtend/dsv.h
+include/xtend/file.h
+include/xtend/limits.h
+include/xtend/math.h
+include/xtend/mem.h
+include/xtend/proc.h
+include/xtend/string.h
+include/xtend/time.h
 lib/libxtend.a
 lib/libxtend.so
 lib/libxtend.so.2
