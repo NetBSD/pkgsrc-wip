@@ -3368,6 +3368,7 @@ SUBDIR+=	py-bandicoot
 SUBDIR+=	py-bandit
 SUBDIR+=	py-bannock
 SUBDIR+=	py-baron
+SUBDIR+=	py-base45
 SUBDIR+=	py-bc-python-hcl2
 SUBDIR+=	py-bctpy
 SUBDIR+=	py-beampy
