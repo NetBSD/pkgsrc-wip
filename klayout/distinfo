@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.16 2021/05/29 06:08:56 mef Exp $
 
-SHA1 (klayout-0.27.2.tar.gz) = 1ed598661b6017dd218b1788b30f7676daf97ea2
-RMD160 (klayout-0.27.2.tar.gz) = 4b19b5c721a33b363c37b3a31566a6d84e5487ad
-SHA512 (klayout-0.27.2.tar.gz) = d9f71c5ed18d4a0275e19e060f809ca3b921f7fc450eeb2926e3013cd56cbe66de814924385e05b7e896673aa4b9462ec4f50e0aa435b5376cd79ae61d87bf77
-Size (klayout-0.27.2.tar.gz) = 57233420 bytes
+SHA1 (klayout-0.27.3.tar.gz) = ba4803f973167a633737a54eb7a24955b30c18e7
+RMD160 (klayout-0.27.3.tar.gz) = 137d0721d2240eda4aae69260fe7aa173c3da9dc
+SHA512 (klayout-0.27.3.tar.gz) = 5f3a83cbbdc171acf200a90e4758942e7c3dd4ec66666576c6ecb041326e52a99222992e844d63f939650374a7493f542b1412ada714b6c0271103facb5acaa9
+Size (klayout-0.27.3.tar.gz) = 57274694 bytes
 SHA1 (patch-config_Makefile.conf.freebsd-32-gcc-release) = 0eaac4f5bd5441976f6113f37b1643653f4fdea4
 SHA1 (patch-config_Makefile.conf.netbsd-32-gcc-release) = b18e6708a2b40c69275bb6c285ddebb49e9808bb
 SHA1 (patch-src_lay_lay_layApplication.cc) = fa42542213519e8c04820ab08ce5c1385bf8b860
