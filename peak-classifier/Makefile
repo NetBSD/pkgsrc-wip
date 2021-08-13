@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	peak-classifier-0.1.1.19
+DISTNAME=	peak-classifier-0.1.1.20
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	b315f1affba2dc5783964de2eddcd48c0d76943e
+GITHUB_TAG=	fb47a5ccdf9df3a9c25db50fc658e0a0cbef9c36
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/peak-classifier
