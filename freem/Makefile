@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		freem-0.28.2
+DISTNAME=		freem-0.28.6
 CATEGORIES=		lang
 MASTER_SITES=		https://freem.coherent-logic.com/downloads/
 
@@ -18,3 +18,4 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 
 .include "../../mk/bsd.pkg.mk"
+.include "../../devel/readline/buildlink3.mk"
