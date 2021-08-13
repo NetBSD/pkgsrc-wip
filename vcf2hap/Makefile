@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	vcf2hap-0.1.3.11
+DISTNAME=	vcf2hap-0.1.3.12
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	b40f2406cf0f20468cfe09fb65f38d10b165d4c9
+GITHUB_TAG=	3626f5a320be8176d359b487682385fa6ab0f197
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf2hap
