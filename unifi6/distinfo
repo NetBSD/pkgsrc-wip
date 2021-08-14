@@ -12,5 +12,5 @@ SHA1 (unifi-6.2.26.zip) = 097391c5b407da490e52b6e991eacf5fd26f90f8
 RMD160 (unifi-6.2.26.zip) = 8b790e420602f1e8b65528c64c4d331ea4d940e6
 SHA512 (unifi-6.2.26.zip) = fccffca9bcb31a1da2c389e83ea9a48e4cde6d958368d4d623d459bae095b57a4d7946086b0ac0e4dff5c4c565961ed2c11f7bc2dfbf8b5c6d590fb32af351e8
 Size (unifi-6.2.26.zip) = 152767218 bytes
-SHA1 (patch-snappy-java-1.0.5.4_Makefile) = 42f0a6661715ecf4b393fff2f96974d023fc887f
-SHA1 (patch-snappy-java-1.0.5.4_Makefile.common) = 949f08d500b45946c242f6128138ca985f7a2e54
+SHA1 (patch-snappy-java-1.0.5.4_Makefile) = 10926cfb45ac67b04d9d4fba3eae1aa760a40ef4
+SHA1 (patch-snappy-java-1.0.5.4_Makefile.common) = d574d053351d2fcd55b7846f4de0fe3fa77e821e

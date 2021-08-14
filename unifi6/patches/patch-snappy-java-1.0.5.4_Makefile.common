@@ -1,5 +1,7 @@
 $NetBSD$
 
+Don't produce a broken shared library.
+
 --- snappy-java-1.0.5.4/Makefile.common.orig	2014-07-04 05:20:00.000000000 +0000
 +++ snappy-java-1.0.5.4/Makefile.common
 @@ -54,7 +54,7 @@ CROSS_PREFIX :=

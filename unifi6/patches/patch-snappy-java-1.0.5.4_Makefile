@@ -1,5 +1,9 @@
 $NetBSD$
 
+It tries to download a distfile with curl. We manage this manually.
+
+Honor LDFLAGS.
+
 --- snappy-java-1.0.5.4/Makefile.orig	2014-07-04 05:20:00.000000000 +0000
 +++ snappy-java-1.0.5.4/Makefile
 @@ -20,9 +20,7 @@ $(SNAPPY_ARCHIVE):
