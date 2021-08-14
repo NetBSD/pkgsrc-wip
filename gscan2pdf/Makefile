@@ -17,8 +17,8 @@ DEPENDS+=	p5-Config-General>=2.4:../../devel/p5-Config-General
 DEPENDS+=	p5-Date-Calc>=0:../../devel/p5-Date-Calc
 DEPENDS+=	p5-Filesys-Df>=0:../../sysutils/p5-Filesys-Df
 DEPENDS+=	p5-Gtk3-SimpleList>=0:../../graphics/p5-Gtk3-SimpleList
-DEPENDS+=	# TODO: p5-Image-Magick>=0
-DEPENDS+=	# TODO: p5-Image-Sane>=0
+DEPENDS+=	p5-PerlMagick>=0:../../graphics/p5-PerlMagick
+DEPENDS+=	p5-Image-Sane>=0:../../grapics/p5-Image-Sane
 DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Log-Log4perl>=0:../../devel/p5-Log-Log4perl
 DEPENDS+=	p5-PDF-API2>=0:../../textproc/p5-PDF-API2
