@@ -1,0 +1,5 @@
+Apply from pkgsrc/net/unifi
+
+  RELRO changes
+
+Actually test, with and without RELRO.
