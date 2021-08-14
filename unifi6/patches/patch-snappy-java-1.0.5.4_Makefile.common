@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-snappy-java-1.0.5.4_Makefile.common,v 1.1 2021/08/13 17:25:06 wiz Exp $
 
 Don't produce a broken shared library.
 
