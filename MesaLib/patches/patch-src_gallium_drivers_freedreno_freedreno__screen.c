@@ -2,7 +2,7 @@ $NetBSD$
 
 sysinfo(2) is for Linux only
 
---- src/gallium/drivers/freedreno/freedreno_screen.c.orig	2021-07-14 20:04:47.137926600 +0000
+--- src/gallium/drivers/freedreno/freedreno_screen.c.orig	2021-08-04 18:49:28.972473900 +0000
 +++ src/gallium/drivers/freedreno/freedreno_screen.c
 @@ -42,7 +42,9 @@
  #include <stdio.h>
@@ -13,8 +13,8 @@ sysinfo(2) is for Linux only
 +#endif
  
  #include "freedreno_fence.h"
- #include "freedreno_query.h"
-@@ -1010,9 +1012,13 @@ fd_screen_create(struct fd_device *dev, 
+ #include "freedreno_perfetto.h"
+@@ -1013,9 +1015,13 @@ fd_screen_create(struct fd_device *dev, 
  
     screen->has_syncobj = fd_has_syncobj(screen->dev);
  

@@ -6,18 +6,18 @@ Don't hard error when there's no pthread_setname_np.
 
 handle NetBSD-style pthread_setaffinity_np(3)
 
---- src/util/u_thread.h.orig	2021-07-14 20:04:59.275044400 +0000
+--- src/util/u_thread.h.orig	2021-08-04 18:49:29.374474500 +0000
 +++ src/util/u_thread.h
-@@ -103,7 +103,7 @@ static inline thrd_t u_thread_create(int
+@@ -129,7 +129,7 @@ static inline thrd_t u_thread_create(int
  static inline void u_thread_setname( const char *name )
  {
  #if defined(HAVE_PTHREAD)
 -#if DETECT_OS_LINUX || DETECT_OS_CYGWIN || DETECT_OS_SOLARIS
 +#if DETECT_OS_LINUX || DETECT_OS_CYGWIN
-    pthread_setname_np(pthread_self(), name);
- #elif DETECT_OS_FREEBSD || DETECT_OS_OPENBSD
-    pthread_set_name_np(pthread_self(), name);
-@@ -136,8 +136,32 @@ util_set_thread_affinity(thrd_t thread,
+    int ret = pthread_setname_np(pthread_self(), name);
+    if (ret == ERANGE) {
+       char buf[16];
+@@ -169,8 +169,32 @@ util_set_thread_affinity(thrd_t thread,
                           unsigned num_mask_bits)
  {
  #if defined(HAVE_PTHREAD_SETAFFINITY)
@@ -51,7 +51,7 @@ handle NetBSD-style pthread_setaffinity_np(3)
     if (old_mask) {
        if (pthread_getaffinity_np(thread, sizeof(cpuset), &cpuset) != 0)
           return false;
-@@ -155,7 +179,7 @@ util_set_thread_affinity(thrd_t thread,
+@@ -188,7 +212,7 @@ util_set_thread_affinity(thrd_t thread,
           CPU_SET(i, &cpuset);
     }
     return pthread_setaffinity_np(thread, sizeof(cpuset), &cpuset) == 0;
@@ -60,7 +60,7 @@ handle NetBSD-style pthread_setaffinity_np(3)
  #elif defined(_WIN32) && !defined(__CYGWIN__)
     DWORD_PTR m = mask[0];
  
-@@ -209,7 +233,7 @@ util_set_current_thread_affinity(const u
+@@ -242,7 +266,7 @@ util_set_current_thread_affinity(const u
  static inline int64_t
  util_thread_get_time_nano(thrd_t thread)
  {
