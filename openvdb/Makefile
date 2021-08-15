@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	openvdb-${PKGVERSION}
-PKGVERSION=	8.0.0
+PKGVERSION=	8.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	openvdb
@@ -22,10 +22,10 @@ pre-configure:
 	cd ${WRKSRC} && mkdir build
 
 .include "../../devel/blosc/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
-.include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../math/imath/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
