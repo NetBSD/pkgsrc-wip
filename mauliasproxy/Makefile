@@ -1,14 +1,16 @@
 # $NetBSD$
 
 DISTNAME=	mauliasproxy-master
-CATEGORIES=	# TODO: add primary category
+PKGNAME=	mailiasproxy-0.0.0001
+CATEGORIES=	net
 MASTER_SITES=	https://mau.dev/tulir/mauliasproxy/-/archive/master/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://mau.dev/tulir/mauliasproxy/-/archive/master/
+# (Feel more than free to improve the package without asking me.)
+MAINTAINER=	gdt@lexort.com
+HOMEPAGE=	https://mau.dev/tulir/mauliasproxy/
 COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	go
 
 .include "../../mk/bsd.pkg.mk"
