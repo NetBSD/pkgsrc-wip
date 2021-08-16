@@ -922,7 +922,6 @@ SUBDIR+=	fslsfonts
 SUBDIR+=	fsom
 SUBDIR+=	fstobdf
 SUBDIR+=	fswatch
-SUBDIR+=	fswebcam
 SUBDIR+=	ft8-lib
 SUBDIR+=	ftpsesame
 SUBDIR+=	fuse-cryfs
