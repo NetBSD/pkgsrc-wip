@@ -274,6 +274,7 @@ SUBDIR+=	bijiben
 SUBDIR+=	bindgraph
 SUBDIR+=	binutils-gold-git
 SUBDIR+=	biolibc
+SUBDIR+=	biolibc-tools
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bip
