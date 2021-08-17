@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGNAME=	${DISTNAME:tl}
-DISTNAME=	PrusaSlicer-2.3.2
+DISTNAME=	PrusaSlicer-2.3.3
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
 GITHUB_PROJECT=	PrusaSlicer
@@ -38,11 +38,10 @@ CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
-# ilmbase was removed on 2021-07-08 with no successor
-#.include "../../graphics/ilmbase/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
+.include "../../math/imath/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
