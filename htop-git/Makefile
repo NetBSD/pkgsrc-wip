@@ -1,14 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	htop-3.0.5.20210805
+DISTNAME=	htop-3.0.5.20210817
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htop-dev/}
 GITHUB_PROJECT=	htop
-GITHUB_TAG=	97a859c5bd8201911d4492e2440af1227527352d
+GITHUB_TAG=	3f727d4720c8df38789dea246a5217a5412ebbcf
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org
-HOMEPAGE=	https://github.com/fraggerfox/htop/tree/netbsd-no-procfs/netbsd
+HOMEPAGE=	https://htop.dev/
 COMMENT=	Enhanced version of top utility
 LICENSE=	gnu-gpl-v2
 
