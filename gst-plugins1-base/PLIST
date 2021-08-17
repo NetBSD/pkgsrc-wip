@@ -101,8 +101,6 @@ include/gstreamer-1.0/gst/gl/gstglupload.h
 include/gstreamer-1.0/gst/gl/gstglutils.h
 include/gstreamer-1.0/gst/gl/gstglviewconvert.h
 include/gstreamer-1.0/gst/gl/gstglwindow.h
-include/gstreamer-1.0/gst/gl/wayland/gstgldisplay_wayland.h
-include/gstreamer-1.0/gst/gl/wayland/wayland.h
 include/gstreamer-1.0/gst/gl/x11/gstgldisplay_x11.h
 include/gstreamer-1.0/gst/gl/x11/x11.h
 include/gstreamer-1.0/gst/pbutils/codec-utils.h
@@ -196,7 +194,6 @@ lib/girepository-1.0/GstApp-1.0.typelib
 lib/girepository-1.0/GstAudio-1.0.typelib
 lib/girepository-1.0/GstGL-1.0.typelib
 lib/girepository-1.0/GstGLEGL-1.0.typelib
-lib/girepository-1.0/GstGLWayland-1.0.typelib
 lib/girepository-1.0/GstGLX11-1.0.typelib
 lib/girepository-1.0/GstPbutils-1.0.typelib
 lib/girepository-1.0/GstRtp-1.0.typelib
@@ -280,7 +277,6 @@ lib/pkgconfig/gstreamer-fft-1.0.pc
 lib/pkgconfig/gstreamer-gl-1.0.pc
 lib/pkgconfig/gstreamer-gl-egl-1.0.pc
 lib/pkgconfig/gstreamer-gl-prototypes-1.0.pc
-lib/pkgconfig/gstreamer-gl-wayland-1.0.pc
 lib/pkgconfig/gstreamer-gl-x11-1.0.pc
 lib/pkgconfig/gstreamer-pbutils-1.0.pc
 lib/pkgconfig/gstreamer-plugins-base-1.0.pc
@@ -298,7 +294,6 @@ share/gir-1.0/GstApp-1.0.gir
 share/gir-1.0/GstAudio-1.0.gir
 share/gir-1.0/GstGL-1.0.gir
 share/gir-1.0/GstGLEGL-1.0.gir
-share/gir-1.0/GstGLWayland-1.0.gir
 share/gir-1.0/GstGLX11-1.0.gir
 share/gir-1.0/GstPbutils-1.0.gir
 share/gir-1.0/GstRtp-1.0.gir
