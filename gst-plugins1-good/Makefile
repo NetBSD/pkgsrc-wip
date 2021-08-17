@@ -39,6 +39,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/audio:${WRKSRC}/output/
 #.include "../../devel/glib2/buildlink3.mk"
 #.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 #.include "../../devel/orc/buildlink3.mk"
 #.include "../../devel/pango/buildlink3.mk"
 #.include "../../lang/python/tool.mk"
@@ -48,4 +49,5 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/audio:${WRKSRC}/output/
 .include "../../wip/gstreamer1/buildlink3.mk"
 .include "../../wip/gst-plugins1-base/buildlink3.mk"
 #.include "../../x11/gtk3/buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

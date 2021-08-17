@@ -3,7 +3,5 @@
 * fix PLIST
 
 * fix:
-Run-time dependency gstreamer-gl-prototypes-1.0 found: NO (tried pkgconfig and cmake)
-Looking for a fallback subproject for the dependency gstreamer-gl-prototypes-1.0
-
-meson.build:309:2: ERROR: Neither a subproject directory nor a gst-plugins-base.wrap file was found.
+ld: sys/oss/libgstossaudio.so.p/gstosshelper.c.o: in function `gst_oss_helper_rate_check_rate':
+.../work/gst-plugins-good-1.18.4/output/../sys/oss/gstosshelper.c:330: undefined reference to `_oss_ioctl'

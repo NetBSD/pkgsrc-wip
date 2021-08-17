@@ -10,6 +10,7 @@ BUILDLINK_ABI_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.18
 BUILDLINK_PKGSRCDIR.gst-plugins1-base?=		../../wip/gst-plugins1-base
 
 .include "../../wip/gstreamer1/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .endif # GST_PLUGINS1_BASE_BUILDLINK3_MK
 
