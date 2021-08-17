@@ -1,6 +1,8 @@
 @comment $NetBSD$
 bin/fastq-dedup
+bin/fastq-dedup.sh
 bin/fastq2tsv
 libexec/biolibc-tools/uniq-seqs.awk
 man/man1/fastq-dedup.1
+man/man1/fastq-dedup.sh.1
 man/man1/fastq2tsv.1
