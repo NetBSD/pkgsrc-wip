@@ -4,7 +4,7 @@
 .include "../../lang/go/bootstrap.mk"
 
 # TODO(bsiegert) move this to version.mk
-GO117_VERSION=	1.17.rc2
+GO117_VERSION=	1.17
 
 GOVERSSUFFIX=	117
 

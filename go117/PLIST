@@ -310,6 +310,7 @@ go117/misc/cgo/testsanitizers/testdata/msan4.go
 go117/misc/cgo/testsanitizers/testdata/msan5.go
 go117/misc/cgo/testsanitizers/testdata/msan6.go
 go117/misc/cgo/testsanitizers/testdata/msan7.go
+go117/misc/cgo/testsanitizers/testdata/msan8.go
 go117/misc/cgo/testsanitizers/testdata/msan_fail.go
 go117/misc/cgo/testsanitizers/testdata/msan_shared.go
 go117/misc/cgo/testsanitizers/testdata/tsan.go
@@ -2631,6 +2632,7 @@ go117/src/cmd/go/testdata/script/mod_vendor_gomod.txt
 go117/src/cmd/go/testdata/script/mod_vendor_goversion.txt
 go117/src/cmd/go/testdata/script/mod_vendor_issue46867.txt
 go117/src/cmd/go/testdata/script/mod_vendor_nodeps.txt
+go117/src/cmd/go/testdata/script/mod_vendor_redundant_requirement.txt
 go117/src/cmd/go/testdata/script/mod_vendor_replace.txt
 go117/src/cmd/go/testdata/script/mod_vendor_trimpath.txt
 go117/src/cmd/go/testdata/script/mod_vendor_unused.txt
