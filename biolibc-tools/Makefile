@@ -5,10 +5,10 @@
 #              Mon Aug 16 17:37:49 CDT 2021               #
 ###########################################################
 
-DISTNAME=	biolibc-tools-0.1.0.7
+DISTNAME=	biolibc-tools-0.1.0.12
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	624c9eb3d98ba3be7e5e3fd4fe1b10b15d195858
+GITHUB_TAG=	c3bfe2e2fa4d110b28cc29bf1e9686531c5e3142
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc-tools
@@ -20,6 +20,8 @@ INSTALL_TARGET=	install-strip
 pre-build:
 	(cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend)
 
+.include "../../devel/xxhash/buildlink3.mk"
+.include "../../devel/uthash/buildlink3.mk"
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../wip/libxtend/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
