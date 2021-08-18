@@ -1,7 +1,0 @@
-* add dependencies
-
-* fix PLIST
-
-* fix:
-ld: sys/oss/libgstossaudio.so.p/gstosshelper.c.o: in function `gst_oss_helper_rate_check_rate':
-.../work/gst-plugins-good-1.18.4/output/../sys/oss/gstosshelper.c:330: undefined reference to `_oss_ioctl'
