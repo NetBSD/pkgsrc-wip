@@ -14,9 +14,8 @@ DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
-#MAKE_JOBS_SAFE=		no
-
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		bash gmake gsed:run gtar
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
@@ -57,6 +56,12 @@ post-extract:
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+# Remove libcc1 and some manual pages from generic locations
+# All files of this package should not overlap with other GCC packages
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libcc1.a
+	${RM} -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"

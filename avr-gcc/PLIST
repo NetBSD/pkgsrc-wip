@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/avr-cpp
 bin/avr-gcc
-bin/${PKGNAME}
+bin/avr-gcc-${PKGVERSION}
 bin/avr-gcc-ar
 bin/avr-gcc-nm
 bin/avr-gcc-ranlib
@@ -878,7 +878,6 @@ lib/gcc/avr/${PKGVERSION}/tiny-stack/libgcc.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/libgcov.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/long-double32/libgcc.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/long-double32/libgcov.a
-lib/libcc1.la
 libexec/gcc/avr/${PKGVERSION}/cc1
 libexec/gcc/avr/${PKGVERSION}/collect2
 libexec/gcc/avr/${PKGVERSION}/install-tools/fixinc.sh
@@ -892,9 +891,3 @@ man/man1/avr-gcc.1
 man/man1/avr-gcov-dump.1
 man/man1/avr-gcov-tool.1
 man/man1/avr-gcov.1
-man/man7/fsf-funding.7
-man/man7/gfdl.7
-man/man7/gpl.7
-@pkgdir share/info
-@pkgdir include
-@pkgdir avr/bin
