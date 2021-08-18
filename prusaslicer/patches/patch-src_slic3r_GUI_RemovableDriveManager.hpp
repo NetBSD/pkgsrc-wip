@@ -4,7 +4,12 @@ Migrate from deprecated tbb::mutex to std::mutex.
 
 --- src/slic3r/GUI/RemovableDriveManager.hpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/slic3r/GUI/RemovableDriveManager.hpp
-@@ -5,7 +5,6 @@
+@@ -1,11 +1,11 @@
+ #ifndef slic3r_GUI_RemovableDriveManager_hpp_
+ #define slic3r_GUI_RemovableDriveManager_hpp_
+ 
++#include <mutex>
+ #include <vector>
  #include <string>
  
  #include <boost/thread.hpp>
@@ -12,7 +17,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  #include <condition_variable>
  
  // Custom wxWidget events
-@@ -111,9 +110,9 @@ private:
+@@ -111,9 +111,9 @@ private:
  	// m_current_drives is guarded by m_drives_mutex
  	// sorted ascending by path
  	std::vector<DriveData> 	m_current_drives;

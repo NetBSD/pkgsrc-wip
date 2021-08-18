@@ -4,7 +4,15 @@ Remove use of deprecated tbb::atomic, tbb::mutex, tbb::task_scheduler_init.
 
 --- src/libslic3r/pchheader.hpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/libslic3r/pchheader.hpp
-@@ -93,12 +93,9 @@
+@@ -35,6 +35,7 @@
+ #include <locale>
+ #include <map>
+ #include <memory>
++#include <mutex>
+ #include <numeric>
+ #include <ostream>
+ #include <queue>
+@@ -93,12 +94,9 @@
  #include <boost/thread.hpp>
  #include <boost/version.hpp>
  

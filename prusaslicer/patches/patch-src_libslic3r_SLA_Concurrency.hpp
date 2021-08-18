@@ -4,7 +4,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
 
 --- src/libslic3r/SLA/Concurrency.hpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/libslic3r/SLA/Concurrency.hpp
-@@ -2,7 +2,6 @@
+@@ -2,11 +2,11 @@
  #define SLA_CONCURRENCY_H
  
  #include <tbb/spin_mutex.h>
@@ -12,7 +12,12 @@ Migrate from deprecated tbb::mutex to std::mutex.
  #include <tbb/parallel_for.h>
  #include <tbb/parallel_reduce.h>
  
-@@ -23,7 +22,7 @@ template<bool> struct _ccr {};
+ #include <algorithm>
++#include <mutex>
+ #include <numeric>
+ 
+ #include <libslic3r/libslic3r.h>
+@@ -23,7 +23,7 @@ template<bool> struct _ccr {};
  template<> struct _ccr<true>
  {
      using SpinningMutex = tbb::spin_mutex;
