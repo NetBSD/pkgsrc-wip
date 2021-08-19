@@ -5,10 +5,10 @@
 #              Mon Aug 16 17:37:49 CDT 2021               #
 ###########################################################
 
-DISTNAME=	biolibc-tools-0.1.0.12
+DISTNAME=	biolibc-tools-0.1.0.16
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	c3bfe2e2fa4d110b28cc29bf1e9686531c5e3142
+GITHUB_TAG=	23bc9f944d27aa174bab0ca0f2cadc9b80097bf2
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc-tools
