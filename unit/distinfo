@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (unit-1.24.0.tar.gz) = 204f94cfdeaa5cd4253f7c3d3a8170d10ee72937
-RMD160 (unit-1.24.0.tar.gz) = e6ceb3f9a1c6b988bfaf0024f58848fcd7e196cd
-SHA512 (unit-1.24.0.tar.gz) = 7960d3a53bb3efc7bba3719bc2ee8571b03e853515b8d2411e2a5af44591863502728c6de6f53fa8e60705fa340dc842646150a5bc497e2f56fc6e07fa8e8e37
-Size (unit-1.24.0.tar.gz) = 843468 bytes
+SHA1 (unit-1.25.0.tar.gz) = f235f96f7f51f169bae85222dbc8c93ece69d589
+RMD160 (unit-1.25.0.tar.gz) = d08da7f6404e3fad4a69f31ba203cc9a3b69024c
+SHA512 (unit-1.25.0.tar.gz) = fc001ab21c5aa6c07b092f7b1f44be3b88636f9e2059c8bc4049a06d863daae1bbfa2531a4a24bdd5976250d7a0e260dcf0dbb0dec63efcc008b5398c6bb4bbd
+Size (unit-1.25.0.tar.gz) = 853280 bytes
 SHA1 (patch-auto_events) = 0347dfefbedaacd206c8c2bfd8ea38b18995dd9f
 SHA1 (patch-auto_os_conf) = 6d1cd7aef662a60d4288014eb6fadbe8c1268e55
 SHA1 (patch-src_nxt__kqueue__engine.c) = c341425f4b21d4cff6e003958f88a04b53dc4ee1
