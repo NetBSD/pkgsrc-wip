@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		freem-0.28.6
+DISTNAME=		freem-0.28.9
 CATEGORIES=		lang
 MASTER_SITES=		https://freem.coherent-logic.com/downloads/
 
@@ -13,8 +13,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-#EGDIR=			${PREFIX}/etc
-#CONF_FILES+=		${EGDIR}/freem.conf ${PKG_SYSCONFDIR}/freem.conf
 
 
 .include "../../mk/bsd.pkg.mk"

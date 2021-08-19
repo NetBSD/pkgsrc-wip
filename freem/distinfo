@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (freem-0.28.6.tar.gz) = 971c9ebef65a13eafa01c7e3442997dd2ef5ad5a
-RMD160 (freem-0.28.6.tar.gz) = 1397fa33eb9897d1a3e259e81da6d15e3f6824a1
-SHA512 (freem-0.28.6.tar.gz) = e63fece01acd83e790911cbf41c2f3a749f01b776eef2e281ad7209809eb270e146e592c4b2cf862b5c9c6ea26445d3dd6dca458d26eb02fe76e34b9fdb5021d
-Size (freem-0.28.6.tar.gz) = 890283 bytes
+SHA1 (freem-0.28.9.tar.gz) = f84a65e450b5f755c9cd5057a915af165eeee780
+RMD160 (freem-0.28.9.tar.gz) = cf6d1a92d0b60f4e7ce518ac5b202d423aebc967
+SHA512 (freem-0.28.9.tar.gz) = 59ce9a3a4f7617ce7d0aafce8e89bc3b9f786ff469d0b3d24a99879b884f772c0b8ce5d181abaa44dfe283286511e02e62e06627978222ba1b7a97a99acbd421
+Size (freem-0.28.9.tar.gz) = 890538 bytes
