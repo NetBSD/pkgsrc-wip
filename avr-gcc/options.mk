@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 
 # gcc-graphite: Enable Graphite support
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-ISL16=			isl-0.16.1
-SITES.${ISL16}.tar.bz2=	${MASTER_SITE_GNU:=gcc/infrastructure/}
-DISTFILES+=		${ISL16}.tar.bz2
+ISL19=			isl-0.19
+SITES.${ISL19}.tar.bz2=	http://isl.gforge.inria.fr/
+DISTFILES+=		${ISL19}.tar.bz2
 .endif

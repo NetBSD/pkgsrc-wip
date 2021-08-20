@@ -10,7 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GCC for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
+DISTFILES=		${DEFAULT_DISTFILES}
+EXTRACT_ONLY=		${DEFAULT_DISTFILES}
+
+DEPENDS+=		avr-binutils>=2.37:../../wip/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +38,11 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--with-system-zlib
 
+# XXX: Workaround for configure error:
+#    checking dependency style of c++... none
+#    configure: error: no usable dependency style found
+MAKE_ENV+=		am_cv_CXX_dependencies_compiler_type=gcc3
+
 # From lang/gcc10
 MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
 MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
@@ -45,22 +53,27 @@ MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 INSTALLATION_DIRS+=	avr/bin
 
+TEST_TARGET=		check
+
 .include "options.mk"
 
 # For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
+# CONFIG_SHELL can handle it. Patch will break with this option disabled.
+CHECK_PORTABILITY_SKIP=	isl/configure
+
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL16}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
+	${GTAR} -jxf ${DISTDIR}/${ISL19}.tar.bz2 -C ${WRKSRC}
+	${MV} ${WRKSRC}/${ISL19} ${WRKSRC}/isl
 .endif
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 # Remove libcc1 and some manual pages from generic locations
-# All files of this package should not overlap with other GCC packages
+# File paths from this package should not overlap with other GCC packages
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/lib/libcc1.a
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libcc1.*
 	${RM} -rf ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3

@@ -1,5 +1,12 @@
-[ ] Check pkglint warning for libtool
-[ ] Enable test suite
-[ ] Test with real world project
-
-Note: GCC 11.1.0 and 11.2.0 do not work.
+[X] Update package to more recent GCC
+[X] Check pkglint warning for libtool
+    => Added USE_LIBTOOL=yes
+[X] Dependency style of C++ compiler is not detected correctly
+    => Added workaround
+[X] Check package option "gcc-graphite"
+    => Updated ISL to version 0.19
+[X] Check package option "gcc-inplace-math"
+[X] Enable test suite
+    => Does not work with option "gcc-inplace-math"
+[X] Test with real world project
+    => Tested hardware with target ATmega1280
