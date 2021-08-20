@@ -234,6 +234,7 @@ SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
 SUBDIR+=	avr-libc
+SUBDIR+=	avr-libc-gcc10
 SUBDIR+=	avra
 SUBDIR+=	avrdude
 SUBDIR+=	axe
