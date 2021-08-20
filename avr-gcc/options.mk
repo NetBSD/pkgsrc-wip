@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avr-gcc
 PKG_SUPPORTED_OPTIONS=	gcc-inplace-math gcc-graphite
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	gcc-graphite
 
 .include "../../mk/bsd.options.mk"
 
