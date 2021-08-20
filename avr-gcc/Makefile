@@ -63,8 +63,8 @@ TEST_TARGET=		check
 CHECK_PORTABILITY_SKIP=	isl/configure
 
 post-extract:
-	${GTAR} -jxf ${DISTDIR}/${ISL19}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL19} ${WRKSRC}/isl
+	${GTAR} -jxf ${DISTDIR}/${ISL2X}.tar.bz2 -C ${WRKSRC}
+	${MV} ${WRKSRC}/${ISL2X} ${WRKSRC}/isl
 .endif
 
 pre-configure:
