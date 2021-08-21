@@ -1,18 +1,14 @@
 # $NetBSD: Makefile,v 1.5 2015/08/10 22:59:31 jonthn Exp $
 
-DISTNAME=	py-neovim-0.4.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
+DISTNAME=	pynvim-0.4.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pynvim/neovim/}
 CATEGORIES=	devel editors
-MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
-GITHUB_PROJECT=	pynvim
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynvim/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/neovim/pynvim
 COMMENT=	Python client to Neovim
 LICENSE=	apache-2.0
-
-WRKSRC=		${WRKDIR}/pynvim-${PKGVERSION_NOREV}
-EGG_NAME=	pynvim-${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.0:../../devel/py-msgpack
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
