@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.5 2015/08/10 22:59:31 jonthn Exp $
 
-SHA1 (py-neovim-0.4.0.tar.gz) = 150ebd53a195e8e0cd952081161d47528f307539
-RMD160 (py-neovim-0.4.0.tar.gz) = 0a2c90d605cd15e301e0383070cf961e01c0778f
-SHA512 (py-neovim-0.4.0.tar.gz) = 4b3b0e295181cf8886850477d01daba1cba8ac456aedadc5b3881b0b4910724450c4e7774282f6edf3e322792b697ae8e925f40b2a0b181a95eee48aef42a97a
-Size (py-neovim-0.4.0.tar.gz) = 53443 bytes
+SHA1 (py-neovim-0.4.3.tar.gz) = f982b211165fc143861eb8360661af086e9ba446
+RMD160 (py-neovim-0.4.3.tar.gz) = 7beb2c2df9aab6a63015eb2b103d236df003bad1
+SHA512 (py-neovim-0.4.3.tar.gz) = 5d8fc7623a5bc2e069991b901dbd4dcc6005ddab31e2f0a70ee50c2d6febf3b5c29a61fc4dce454aa494779d7a869a1e92a2a97cb66212ed858c3d3fd77c0f55
+Size (py-neovim-0.4.3.tar.gz) = 52807 bytes
