@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/05/10 00:06:14 bubuchka Exp $
-
-You may also want to install one of parallel R backends for %dopar%:
-doParallel, doMC, doMPI, or doSNOW.
-
-===========================================================================
