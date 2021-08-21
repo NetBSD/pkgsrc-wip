@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.4 2015/05/20 06:48:02 jonthn Exp $
 
-DISTNAME=	libunibilium-2.0.0
+DISTNAME=	libunibilium-2.1.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mauke/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_PROJECT=	unibilium
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
