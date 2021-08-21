@@ -2252,6 +2252,7 @@ SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-luacheck
 SUBDIR+=	lua-lualdap
+SUBDIR+=	lua-luv
 SUBDIR+=	lua-mpack
 SUBDIR+=	luabind
 SUBDIR+=	luakit-git
