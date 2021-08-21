@@ -1,9 +1,7 @@
-- _FORTFIY_SOURCE should not be redefined! Investigate why it is redefined and
-  if possible adjust it in order to avoid a lot of noise in the build output.
 - Probably more dependencies are needed (despite it seems it run fine):
-   lua-bitopt, lua-busted
+   lua-busted
  (According: <https://packages.debian.org/sid/source/neovim>, via:
   <https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites>)
-
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2019-12735
+  - lua-busted should only be needed for tests
+- Some modifications to devel/lua-luv are needed for neovim to compile
+  (namely, a buildlink3.mk and -DBUILD_SHARED_LIBS=ON in CMAKE_ARGS)
