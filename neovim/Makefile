@@ -15,6 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARG_PATH=		${WRKSRC}
 
 # should follow the LuaJIT API compatibility
