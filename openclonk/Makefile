@@ -32,6 +32,7 @@ GCC_REQD+=	4.9
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
+.include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
