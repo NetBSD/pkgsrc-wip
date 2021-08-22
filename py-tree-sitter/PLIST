@@ -1,0 +1,9 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/tree_sitter/__init__.py
+${PYSITELIB}/tree_sitter/__init__.pyc
+${PYSITELIB}/tree_sitter/__init__.pyo
+${PYSITELIB}/tree_sitter/binding.so
