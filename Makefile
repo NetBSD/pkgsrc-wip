@@ -4039,6 +4039,7 @@ SUBDIR+=	py-milksnake
 SUBDIR+=	py-minecraft
 SUBDIR+=	py-minepy
 SUBDIR+=	py-minidb
+SUBDIR+=	py-mininet
 SUBDIR+=	py-mipp
 SUBDIR+=	py-mishkal
 SUBDIR+=	py-mkdocs-material

@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (mininet-2.3.0.dev6.tar.gz) = 3993cb073a24759ae5f57ec807299332d4ffb7f7
+RMD160 (mininet-2.3.0.dev6.tar.gz) = 962c6ec4866f38077f27f7653551dfe4a6eb85ac
+SHA512 (mininet-2.3.0.dev6.tar.gz) = b12b79e8eeb7139a12e2c3fb2837508030faae4761476d9c73e58c6cf18970fe4cf2c66489d04441dc49f8f5233293e39db19320ab801d61f317ac09034de046
+Size (mininet-2.3.0.dev6.tar.gz) = 132034 bytes
+SHA1 (patch-setup.py) = 77eed0c3aafc9051394e3dd6ee9106fa2e60d05a

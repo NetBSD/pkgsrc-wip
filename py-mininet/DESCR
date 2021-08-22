@@ -1,0 +1,4 @@
+Mininet is a network emulator which uses lightweight
+virtualization to create virtual networks for rapid
+prototyping of Software-Defined Network (SDN) designs
+using OpenFlow.
