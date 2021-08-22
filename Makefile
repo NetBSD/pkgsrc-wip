@@ -4637,6 +4637,7 @@ SUBDIR+=	py-tablib-garetjax
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
 SUBDIR+=	py-taler-util
+SUBDIR+=	py-talk2stat
 SUBDIR+=	py-tappy
 SUBDIR+=	py-tardis-sn
 SUBDIR+=	py-tashaphyne
