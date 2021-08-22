@@ -1,3 +1,0 @@
-@comment $NetBSD$
-${RUBY_EG}-redmine41/unicorn.rb.example
-share/${RUBY_NAME}-redmine41/Gemfile.local

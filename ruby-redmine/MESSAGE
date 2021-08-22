@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2014/08/18 03:48:11 othyro Exp $
-
-You need an application server for Ruby like Passenger, Thin, Mongrel, WEBrick,
-etc.
-
-===========================================================================
