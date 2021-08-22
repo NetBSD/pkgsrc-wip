@@ -3596,6 +3596,7 @@ SUBDIR+=	py-discord.py
 SUBDIR+=	py-distlib
 SUBDIR+=	py-distob
 SUBDIR+=	py-distutils-extra
+SUBDIR+=	py-dit
 SUBDIR+=	py-divisi2
 SUBDIR+=	py-divmod-epsilon
 SUBDIR+=	py-dj-database-url
