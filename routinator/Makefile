@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	routinator-0.9.0
+DISTNAME=	routinator-v0.10.0
 PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	net
 EXTRACT_SUFX=	.tar.gz
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
 GITHUB_TAG=	${PKGVERSION_NOREV:S/rc/-rc/}
 
-# 0.9.0 now requires this rust version:
+# 0.9.0 requires minimum this rust version:
 RUST_REQ=		1.47.0
 
 .include "cargo-depends.mk"
