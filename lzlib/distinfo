@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (lzlib-1.11.tar.gz) = 9d2bb3afd4b7d7dd3f1f7160477d4a12c1a3fdc9
-RMD160 (lzlib-1.11.tar.gz) = ccf53dd5b04bced6629456bf51615ec373a6b59f
-SHA512 (lzlib-1.11.tar.gz) = 5aa3ff084177efe906518724a98a78c32d1c0e02b967800a44388fc6af441de48fcc5899457913fca11fae3beb8bebc260ac447f0a336b1c14f3f13726114567
-Size (lzlib-1.11.tar.gz) = 105873 bytes
+SHA1 (lzlib-1.12.tar.gz) = e028e1de57e158c4be16a0144588559053bb05f3
+RMD160 (lzlib-1.12.tar.gz) = 5fea1eef55079d020a53e2d105500261250b313b
+SHA512 (lzlib-1.12.tar.gz) = b5379422eed4016b0ee124e39902dd22c314ca5cc5f72c1af5ec2ef6a68e1e85c523ab18e30048d453689f73f780d0144dcabaf881337e1c8101e2fe17ee21f8
+Size (lzlib-1.12.tar.gz) = 128996 bytes
