@@ -30,7 +30,7 @@ CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-CONFIGURE_ARGS+=	--enable-languages='c'
+CONFIGURE_ARGS+=	--enable-languages='c c++'
 CONFIGURE_ARGS+=	--enable-multilib
 CONFIGURE_ARGS+=	--disable-libquadmath-support
 CONFIGURE_ARGS+=	--disable-lto

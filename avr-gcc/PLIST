@@ -1,5 +1,7 @@
 @comment $NetBSD$
+bin/avr-c++
 bin/avr-cpp
+bin/avr-g++
 bin/avr-gcc
 bin/avr-gcc-${PKGVERSION}
 bin/avr-gcc-ar
@@ -516,6 +518,11 @@ lib/gcc/avr/${PKGVERSION}/plugin/include/coretypes.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/coroutine-builtins.def
 lib/gcc/avr/${PKGVERSION}/plugin/include/coverage.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/cp/cp-tree.def
+lib/gcc/avr/${PKGVERSION}/plugin/include/cp/cp-tree.h
+lib/gcc/avr/${PKGVERSION}/plugin/include/cp/cxx-pretty-print.h
+lib/gcc/avr/${PKGVERSION}/plugin/include/cp/name-lookup.h
+lib/gcc/avr/${PKGVERSION}/plugin/include/cp/operators.def
+lib/gcc/avr/${PKGVERSION}/plugin/include/cp/type-utils.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/cppbuiltin.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/cppdefault.h
 lib/gcc/avr/${PKGVERSION}/plugin/include/cpplib.h
@@ -879,6 +886,7 @@ lib/gcc/avr/${PKGVERSION}/tiny-stack/libgcov.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/long-double32/libgcc.a
 lib/gcc/avr/${PKGVERSION}/tiny-stack/long-double32/libgcov.a
 libexec/gcc/avr/${PKGVERSION}/cc1
+libexec/gcc/avr/${PKGVERSION}/cc1plus
 libexec/gcc/avr/${PKGVERSION}/collect2
 libexec/gcc/avr/${PKGVERSION}/install-tools/fixinc.sh
 libexec/gcc/avr/${PKGVERSION}/install-tools/fixincl
@@ -887,6 +895,7 @@ libexec/gcc/avr/${PKGVERSION}/install-tools/mkinstalldirs
 libexec/gcc/avr/${PKGVERSION}/lto-wrapper
 libexec/gcc/avr/${PKGVERSION}/plugin/gengtype
 man/man1/avr-cpp.1
+man/man1/avr-g++.1
 man/man1/avr-gcc.1
 man/man1/avr-gcov-dump.1
 man/man1/avr-gcov-tool.1
