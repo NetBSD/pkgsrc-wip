@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tarlz-0.17
+DISTNAME=	tarlz-0.21
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/tarlz/
 EXTRACT_SUFX=	.tar.lz
