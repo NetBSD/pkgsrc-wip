@@ -4,6 +4,7 @@ include/biolibc/biolibc.h
 include/biolibc/biostring.h
 include/biolibc/fasta.h
 include/biolibc/fastq.h
+include/biolibc/fastx.h
 include/biolibc/gff.h
 include/biolibc/overlap.h
 include/biolibc/pos-list.h
@@ -399,6 +400,18 @@ man/man3/bl_fastq_set_seq_array_size.3
 man/man3/bl_fastq_set_seq_cpy.3
 man/man3/bl_fastq_set_seq_len.3
 man/man3/bl_fastq_write.3
+man/man3/bl_fastx_desc.3
+man/man3/bl_fastx_desc_len.3
+man/man3/bl_fastx_free.3
+man/man3/bl_fastx_init.3
+man/man3/bl_fastx_plus.3
+man/man3/bl_fastx_plus_len.3
+man/man3/bl_fastx_qual.3
+man/man3/bl_fastx_qual_len.3
+man/man3/bl_fastx_read.3
+man/man3/bl_fastx_seq.3
+man/man3/bl_fastx_seq_len.3
+man/man3/bl_fastx_write.3
 man/man3/bl_gff_read.3
 man/man3/bl_gff_set_attributes.3
 man/man3/bl_gff_set_attributes_ae.3
