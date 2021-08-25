@@ -1,6 +1,1 @@
-* This has only been tested on Python 3.8, although >=3.6 is supported
 * Relies on py-olm, which is also wip/
-* Needs python version checking for py3.6, which has an additional
-  dependency on devel/py-dataclasses
-* pkglint is warning about room_events.py.orig in PLIST, need to make
-  sure that's an issue with the source and not the packaging process

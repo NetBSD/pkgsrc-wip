@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	matrix-nio-0.18.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matrix-nio/}
 
