@@ -8,5 +8,5 @@ SHA1 (patch-CMakeLists.txt) = 9393491b8b9829c06dfbd6d6089e2acd0e97e328
 SHA1 (patch-src_CMakeLists.txt) = dafa0f7e77fc61bc6ac6c9608acfd27629a13f31
 SHA1 (patch-src_base_i18n.cc) = fb0bdc35166b3dac0ee906a4a8f155c190a488df
 SHA1 (patch-src_network_bufferedconnection.h) = c3b8ced8d90a70da88dcb61ed079bf95ac350a23
-SHA1 (patch-src_scripting_lua__globals.cc) = a6e93c2da3449c01a135f062d17c3abdae56a242
+SHA1 (patch-src_scripting_lua__globals.cc) = f26d5a1949078b218e1de8cd0112a98996f63e53
 SHA1 (patch-xdg_CMakeLists.txt) = 4fac4da5c8d7d1f528caec5de21a212c03f44932

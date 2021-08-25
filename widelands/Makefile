@@ -17,8 +17,8 @@ USE_LANGUAGES=	c c++11
 # C++11
 GCC_REQD+=	4.8
 
-# Will otherwise hit the limit for open files
-MAKE_JOBS_SAFE=	NO
+# Disable if build hits the limit for open files
+MAKE_JOBS_SAFE=	yes
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..

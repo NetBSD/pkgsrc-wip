@@ -12,8 +12,8 @@ The header "include/libintl.h" provides a macro that does not work.
 +
 +// pkgsrc patch for NetBSD
 +#ifdef __NetBSD__
-+#define dnpgettext_expr(domainname, msgctxt, msgid, msgidPlural, n) \
-+    dcnpgettext_expr((domainname), (msgctxt), (msgid), (msgidPlural), (n), (LC_MESSAGES))
++#define dnpgettext_expr \
++    dnpgettext
 +#endif
 +
 +
