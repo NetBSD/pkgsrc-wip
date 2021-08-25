@@ -4,3 +4,4 @@ SHA1 (olm-3.2.2.tar.gz) = 8520ad0842dbadfd11c971866e05dd3bdcc6da63
 RMD160 (olm-3.2.2.tar.gz) = 887cdd5f0ab2dac968956f3f0f92facad335a6db
 SHA512 (olm-3.2.2.tar.gz) = 4af945ee0a2d4c08c03e6706c7cb3d59ca0fcdd06acf9501ee2a22761153a6e2f7c12eb4d119663a8b5b2bc34556fe429d02362492938e4f1832e28cfe991ef7
 Size (olm-3.2.2.tar.gz) = 537337 bytes
+SHA1 (patch-setup.py) = 3ee82830e1bf0a69b455d68efc49e67b6215aada
