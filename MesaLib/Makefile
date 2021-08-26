@@ -65,7 +65,7 @@ PLIST.arm=		yes
 .  endif
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 GALLIUM_DRIVERS+=	svga
-DRI_DRIVERS+=		i830 i915 i965
+DRI_DRIVERS+=		i915 i965
 PLIST.svga=		yes
 PLIST.i830=		yes
 PLIST.i915=		yes
