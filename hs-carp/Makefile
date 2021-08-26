@@ -1,13 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	carp-0.4.8
+DISTNAME=	carp-0.5.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=carp-lang/}
 GITHUB_PROJECT=	Carp
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	eb1e060f54e287bd975b49c497335b70b2a422f5
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 COMMENT=	A statically typed Lisp
 LICENSE=	apache-2.0
 
