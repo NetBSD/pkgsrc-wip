@@ -34,6 +34,7 @@ FORTIFY_SUPPORTED=	no
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
