@@ -1,0 +1,2 @@
+* CMakeLists.txt has some information on Python bindings; need to
+  confirm how a binary Python dependency should be handled here.
