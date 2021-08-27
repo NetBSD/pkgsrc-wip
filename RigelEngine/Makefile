@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	RigelEngine
-GITHUB_TAG=	v0.8.0
+GITHUB_TAG=	v0.8.1
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	RigelEngine-${GITHUB_TAG:S/^v//}
 CATEGORIES=	games
