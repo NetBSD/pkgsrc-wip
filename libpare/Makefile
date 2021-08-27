@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/outpaddling/libpare
 COMMENT=	Pointer Array Regular Expressions
 LICENSE=	2-clause-bsd
 
+MAKE_ENV=	MANDIR=${PREFIX}/${PKGMANDIR}
+
 pre-build:
 	cd ${WRKSRC} && make depend LOCALBASE=${LOCALBASE}
 
