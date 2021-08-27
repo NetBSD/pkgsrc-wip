@@ -24,7 +24,7 @@ $NetBSD$
 +	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $<
 +
 +mpack.so: lmpack.o $(MPACK_SRC)
-+	$(CC) -shared $(LIBS) $(LDFLAGS) $< -o $@
++	$(LD) -shared $(LIBS) $(LDFLAGS) $< -o $@
  
  $(BUSTED): $(LUAROCKS)
  	$(LUAROCKS) install penlight 1.3.2-2
