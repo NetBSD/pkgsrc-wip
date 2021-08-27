@@ -1,5 +1,9 @@
 make test results
 -----------------
+
+NetBSD/amd64 9.0
+Timeout for most tests.
+
 NetBSD/amd64 6.1
 (After avr-libc installed)
 modena@makoto 20:04:25/130706(..wip/avr-gdb)% tail -12 work/gdb-7.6/gdb/testsuite/gdb.sum

@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2014/08/29 07:17:45 makoto Exp $
+# $NetBSD$
 
-DISTNAME=	gdb-7.8
+DISTNAME=	gdb-10.2
 PKGNAME=	${DISTNAME:S/^/avr-/}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
+MAKE_JOBS_SAFE=	yes
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNU gdb for Atmel AVR 8-bit RISC microcontrollers
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++11
+USE_TOOLS+=		bash gmake
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--target=avr
@@ -22,19 +26,15 @@ MAKE_ENV+=		gdb_cv_var_elf=yes
 #CONFIGURE_ENV+=	gdb_cv_struct_lwp=yes
 #MAKE_ENV+=		gdb_cv_struct_lwp=yes
 
-
 INSTALLATION_DIRS=	bin
-TEST_TARGET=		check
 
-pre-configure:
-	cd ${WRKSRC} ; ${RM} -rf dejagnu expect sim tcl texinfo
+# DejaGnu is required for the test suite
+TEST_TARGET=		check
+TEST_DEPENDS+=		dejagnu>=1.6.2:../../devel/dejagnu
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${DESTDIR}${PREFIX}/bin/avr-gdb
 
-# to link -lcurses.7 => /usr/lib/libcurses.so.7
-# instead of terminfo
 .include "../../mk/curses.buildlink3.mk"
-
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
