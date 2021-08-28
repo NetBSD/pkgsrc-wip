@@ -85,7 +85,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
 +    std::pair<StepType, bool> active_step_add_warning(PrintStateBase::WarningLevel warning_level, const std::string &message, int message_id, std::mutex &mtx)
      {
 -        tbb::mutex::scoped_lock lock(mtx);
-+	std::lock_guard<std::mutex> lock(mtx);
++        std::lock_guard<std::mutex> lock(mtx);
          assert(m_step_active != -1);
          StateWithWarnings &state = m_state[m_step_active];
          assert(state.state == STARTED);
@@ -98,28 +98,6 @@ Migrate from deprecated tbb::atomic to std::atomic.
  	static std::function<void()>        cancel_callback(PrintBase *print);
  	// Notify UI about a new warning of a milestone "step" on this PrintObjectBase.
  	// The UI will be notified by calling a status callback registered on print.
-@@ -436,16 +432,16 @@ public:
- 		// Canceled by user from the user interface (user pressed the "Cancel" button or user closed the application).
- 		CANCELED_BY_USER = 1,
- 		// Canceled internally from Print::apply() through the Print/PrintObject::invalidate_step() or ::invalidate_all_steps().
--		CANCELED_INTERNAL = 2
-+		CANCELED_INTERNAL = 2,
- 	};
-     CancelStatus               cancel_status() const { return m_cancel_status; }
-     // Has the calculation been canceled?
--	bool                       canceled() const { return m_cancel_status != NOT_CANCELED; }
-+	bool                       canceled() const { return m_cancel_status != CancelStatus::NOT_CANCELED; }
-     // Cancel the running computation. Stop execution of all the background threads.
--	void                       cancel() { m_cancel_status = CANCELED_BY_USER; }
--	void                       cancel_internal() { m_cancel_status = CANCELED_INTERNAL; }
-+	void                       cancel() { m_cancel_status = CancelStatus::CANCELED_BY_USER; }
-+	void                       cancel_internal() { m_cancel_status = CancelStatus::CANCELED_INTERNAL; }
-     // Cancel the running computation. Stop execution of all the background threads.
--	void                       restart() { m_cancel_status = NOT_CANCELED; }
-+	void                       restart() { m_cancel_status = CancelStatus::NOT_CANCELED; }
-     // Returns true if the last step was finished with success.
-     virtual bool               finished() const = 0;
- 
 @@ -461,7 +457,7 @@ protected:
  	friend class PrintObjectBase;
      friend class BackgroundSlicingProcess;
@@ -143,7 +121,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
  
  private:
 -    tbb::atomic<CancelStatus>               m_cancel_status;
-+    std::atomic<Slic3r::PrintBase::CancelStatus>               m_cancel_status {CancelStatus::NOT_CANCELED};
++    std::atomic<CancelStatus>               m_cancel_status {NOT_CANCELED};
  
      // Callback to be evoked to stop the background processing before a state is updated.
      cancel_callback_type                    m_cancel_callback = [](){};
