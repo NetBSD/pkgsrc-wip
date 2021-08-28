@@ -2115,6 +2115,7 @@ SUBDIR+=	libopensync-plugin-moto
 SUBDIR+=	libopensync-plugin-palm
 SUBDIR+=	libosinfo
 SUBDIR+=	libosmocore
+SUBDIR+=	libostree
 SUBDIR+=	libowl-av
 SUBDIR+=	libpafe
 SUBDIR+=	libpano12
