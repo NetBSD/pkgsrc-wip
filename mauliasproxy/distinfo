@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (mauliasproxy-master.tar.gz) = a511de269095ac5616cd117d326c39795e268377
-RMD160 (mauliasproxy-master.tar.gz) = 43f37ee1429fcf01d46302af7e598114e662a38a
-SHA512 (mauliasproxy-master.tar.gz) = 7f676fde76bc92f3f07b308b8d8be700139fc353ae3350f448ce450541fc2e213d74721df2a0d5daf3c2556a77ad086fffd643993493fbd6fb27e5d5825faab1
-Size (mauliasproxy-master.tar.gz) = 15418 bytes
+SHA1 (mauliasproxy-v1.0.0.tar.gz) = dcbda1d7961778fffa6cc616dc1755aa2ddd382f
+RMD160 (mauliasproxy-v1.0.0.tar.gz) = 291f3393669427737affa144501715e8ce91e823
+SHA512 (mauliasproxy-v1.0.0.tar.gz) = 7d50320165dd3f40ba879c72ee517a3a419492191f5dcbf914b1799e998f48547faf113bb7a1e10bf1245f1cbb469bcbc78ea0d882de1b781259811e53113125
+Size (mauliasproxy-v1.0.0.tar.gz) = 15420 bytes
