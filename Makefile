@@ -4251,7 +4251,6 @@ SUBDIR+=	py-piquant
 SUBDIR+=	py-pithos
 SUBDIR+=	py-pixiedust
 SUBDIR+=	py-plac
-SUBDIR+=	py-platformdirs
 SUBDIR+=	py-plete
 SUBDIR+=	py-plex
 SUBDIR+=	py-plink

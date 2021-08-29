@@ -15,7 +15,7 @@ CONFLICTS+=	${PYPKGPREFIX}-virtualenv-[0-9]*
 DEPENDS+=	${PYPKGPREFIX}-backports.entry_points_selectable>=1.0.4:../../wip/py-backports.entry_points_selectable
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1<1:../../wip/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0<4:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2<3:../../wip/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2<3:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0<2:../../lang/py-six
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
