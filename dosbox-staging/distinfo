@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (dosbox-staging/v0.77.0.tar.gz) = 2c6817f0b2f9d19dcce53ef429363ad81f6dbe72
-RMD160 (dosbox-staging/v0.77.0.tar.gz) = 38d55a92073ee69b09a500443426795f34861605
-SHA512 (dosbox-staging/v0.77.0.tar.gz) = 37259fecc091f1e318c2385d6e6fdc3b4ad0905ce63a7db1fc812c924bf8c01640692aca4f08b87d06e6001e50f3f2f4bb63c3715aa9cdfeebd205ed345558a0
-Size (dosbox-staging/v0.77.0.tar.gz) = 2579927 bytes
+SHA1 (dosbox-staging/v0.77.1.tar.gz) = 6837acf5745646368c9cccf188bf86ec4b138bb9
+RMD160 (dosbox-staging/v0.77.1.tar.gz) = 649e2939d0097e580f70ce29b7e41879a0b093c6
+SHA512 (dosbox-staging/v0.77.1.tar.gz) = fe5d6150a88f5c276aee5672f98c15b5ffee702fe9934919d3e78068efd1a85f08a8f04352bc6a8fe850324e33f3227340c59242db6cbae0475b12a58b749cac
+Size (dosbox-staging/v0.77.1.tar.gz) = 2622418 bytes
 SHA1 (patch-contrib_linux_dosbox-staging.desktop) = 896b0b24f0a0cbb1de9c66e2a58c2303677b7dea
 SHA1 (patch-meson.build) = 19f54936ad9de1d956ca8377b4491ffa5ed89d60
