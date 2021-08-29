@@ -3585,7 +3585,6 @@ SUBDIR+=	py-desktop-notify
 SUBDIR+=	py-dexml
 SUBDIR+=	py-dexy
 SUBDIR+=	py-dexy_viewer
-SUBDIR+=	py-dicom
 SUBDIR+=	py-diffeqpy
 SUBDIR+=	py-diffpy-structure
 SUBDIR+=	py-diffpy_pdffit2
