@@ -43,4 +43,4 @@ SUBST_SED.demo=		-e 's|@@@PATH@@@|${PREFIX}/bin:${PATH:Q}|g'
 .include "../../mk/bsd.pkg.mk"
 
 # Not to be overridden as --mandir=${PREFIX}, put the line here.
-CONFIGURE_ARGS+=       --mandir=${PREFIX}/share/doc/avr-libc/man
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/doc/avr-libc/man
