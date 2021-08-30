@@ -1,6 +1,7 @@
 $NetBSD$
 
-Migrate from deprecated tbb::mutex to std::mutex.
+Migrate away from features deprecated in tbb 2021.3.
+Adapted from upstream git commit e13535f822b5efe0e3b471bc366e8d3ea96059d5.
 
 --- src/libslic3r/SLAPrint.cpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/libslic3r/SLAPrint.cpp
@@ -18,7 +19,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  void SLAPrint::clear()
  {
 -    tbb::mutex::scoped_lock lock(this->state_mutex());
-+    std::lock_guard<std::mutex> lock(this->state_mutex());
++    std::scoped_lock<std::mutex> lock(this->state_mutex());
      // The following call should stop background processing if it is running.
      this->invalidate_all_steps();
      for (SLAPrintObject *object : m_objects)
@@ -27,7 +28,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  
      // Grab the lock for the Print / PrintObject milestones.
 -    tbb::mutex::scoped_lock lock(this->state_mutex());
-+    std::lock_guard<std::mutex> lock(this->state_mutex());
++    std::scoped_lock<std::mutex> lock(this->state_mutex());
  
      // The following call may stop the background processing.
      bool invalidate_all_model_objects = false;
@@ -36,7 +37,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  {
      // Grab the lock for the Print / PrintObject milestones.
 -    tbb::mutex::scoped_lock lock(this->state_mutex());
-+    std::lock_guard<std::mutex> lock(this->state_mutex());
++    std::scoped_lock<std::mutex> lock(this->state_mutex());
  
      int n_object_steps = int(params.to_object_step) + 1;
      if (n_object_steps == 0)
@@ -45,7 +46,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      if (m_objects.empty())
          return false;
 -    tbb::mutex::scoped_lock lock(this->state_mutex());
-+    std::lock_guard<std::mutex> lock(this->state_mutex());
++    std::scoped_lock<std::mutex> lock(this->state_mutex());
      for (const SLAPrintObject *object : m_objects)
          if (! object->is_step_done_unguarded(step))
              return false;

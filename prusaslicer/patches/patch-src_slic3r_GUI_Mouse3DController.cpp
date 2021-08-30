@@ -1,6 +1,7 @@
 $NetBSD$
 
-Migrate from deprecated tbb::mutex to std::mutex.
+Migrate away from features deprecated in tbb 2021.3.
+Adapted from upstream git commit e13535f822b5efe0e3b471bc366e8d3ea96059d5.
 
 --- src/slic3r/GUI/Mouse3DController.cpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/slic3r/GUI/Mouse3DController.cpp
@@ -9,7 +10,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  void Mouse3DController::State::append_translation(const Vec3d& translation, size_t input_queue_max_size)
  {
 -	tbb::mutex::scoped_lock lock(m_input_queue_mutex);
-+	std::lock_guard<std::mutex> lock(m_input_queue_mutex);
++    std::scoped_lock<std::mutex> lock(m_input_queue_mutex);
      while (m_input_queue.size() >= input_queue_max_size)
          m_input_queue.pop_front();
      m_input_queue.emplace_back(QueueItem::translation(translation));
@@ -18,7 +19,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  void Mouse3DController::State::append_rotation(const Vec3f& rotation, size_t input_queue_max_size)
  {
 -	tbb::mutex::scoped_lock lock(m_input_queue_mutex);
-+	std::lock_guard<std::mutex> lock(m_input_queue_mutex);
++    std::scoped_lock<std::mutex> lock(m_input_queue_mutex);
      while (m_input_queue.size() >= input_queue_max_size)
          m_input_queue.pop_front();
      m_input_queue.emplace_back(QueueItem::rotation(rotation.cast<double>()));
@@ -27,7 +28,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  void Mouse3DController::State::append_button(unsigned int id, size_t /* input_queue_max_size */)
  {
 -	tbb::mutex::scoped_lock lock(m_input_queue_mutex);
-+	std::lock_guard<std::mutex> lock(m_input_queue_mutex);
++    std::scoped_lock<std::mutex> lock(m_input_queue_mutex);
      m_input_queue.emplace_back(QueueItem::buttons(id));
  #if ENABLE_3DCONNEXION_DEVICES_DEBUG_OUTPUT
      update_maximum(input_queue_max_size_achieved, m_input_queue.size());
@@ -36,7 +37,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
              m_device_str = format_device_string(vid, pid);
              if (auto it_params = m_params_by_device.find(m_device_str); it_params != m_params_by_device.end()) {
 -                tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+                std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++                std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
                  m_params = m_params_ui = it_params->second;
              }
              else
@@ -45,25 +46,33 @@ Migrate from deprecated tbb::mutex to std::mutex.
      if (sscanf(device.c_str(), "\\\\?\\HID#VID_%x&PID_%x&", &vid, &pid) == 2) {
          if (std::find(_3DCONNEXION_VENDORS.begin(), _3DCONNEXION_VENDORS.end(), vid) != _3DCONNEXION_VENDORS.end()) {
 -            tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+            std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++            std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
              m_params_by_device[format_device_string(vid, pid)] = m_params_ui;
          }
      }
-@@ -307,7 +307,7 @@ void Mouse3DController::device_detached(
+@@ -307,12 +307,12 @@ void Mouse3DController::device_detached(
  // Filter out mouse scroll events produced by the 3DConnexion driver.
  bool Mouse3DController::State::process_mouse_wheel()
  {
 -	tbb::mutex::scoped_lock lock(m_input_queue_mutex);
-+	std::lock_guard<std::mutex> lock(m_input_queue_mutex);
- 	if (m_mouse_wheel_counter == 0)
-     	// No 3DConnexion rotation has been captured since the last mouse scroll event.
+-	if (m_mouse_wheel_counter == 0)
+-    	// No 3DConnexion rotation has been captured since the last mouse scroll event.
++    std::scoped_lock<std::mutex> lock(m_input_queue_mutex);
++    if (m_mouse_wheel_counter == 0)
++        // No 3DConnexion rotation has been captured since the last mouse scroll event.
          return false;
+     if (std::find_if(m_input_queue.begin(), m_input_queue.end(), [](const QueueItem &item){ return item.is_rotation(); }) != m_input_queue.end()) {
+-    	// There is a rotation stored in the queue. Suppress one mouse scroll event.
++        // There is a rotation stored in the queue. Suppress one mouse scroll event.
+         -- m_mouse_wheel_counter;
+         return true;
+     }
 @@ -329,7 +329,7 @@ bool Mouse3DController::State::apply(con
      std::deque<QueueItem> input_queue;
      {
      	// Atomically move m_input_queue to input_queue.
 -    	tbb::mutex::scoped_lock lock(m_input_queue_mutex);
-+    	std::lock_guard<std::mutex> lock(m_input_queue_mutex);
++    	std::scoped_lock<std::mutex> lock(m_input_queue_mutex);
      	input_queue = std::move(m_input_queue);
          m_input_queue.clear();
      }
@@ -72,7 +81,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
  #ifdef _WIN32
      {
 -        tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+        std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++        std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
          if (m_params_ui_changed) {
              m_params = m_params_ui;
              m_params_ui_changed = false;
@@ -81,7 +90,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      bool   params_changed = false;
      {
 -    	tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+    	std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++    	std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
      	params_copy = m_params_ui;
      }
  
@@ -90,7 +99,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      if (params_changed) {
          // Synchronize front end parameters to back end.
 -    	tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+    	std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++    	std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
          auto pthis = const_cast<Mouse3DController*>(this);
  #if ENABLE_3DCONNEXION_DEVICES_DEBUG_OUTPUT
          if (params_copy.input_queue_max_size != params_copy.input_queue_max_size)
@@ -99,7 +108,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      // Copy the parameters for m_device_str into the current parameters.
      if (auto it_params = m_params_by_device.find(m_device_str); it_params != m_params_by_device.end()) {
 -    	tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+    	std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++    	std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
      	m_params = m_params_ui = it_params->second;
      }
      m_connected = true;
@@ -108,7 +117,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      assert(m_connected == ! m_device_str.empty());
      if (m_connected) {
 -        tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+        std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++        std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
          m_params_by_device[m_device_str] = m_params_ui;
  	    m_device_str.clear();
  	    m_connected = false;
@@ -117,7 +126,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      	// Synchronize parameters between the UI thread and the background thread.
      	//FIXME is this necessary on OSX? Are these notifications triggered from the main thread or from a worker thread?
 -    	tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+    	std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++    	std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
      	if (m_params_ui_changed) {
      		m_params = m_params_ui;
      		m_params_ui_changed = false;
@@ -126,7 +135,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
      for (;;) {
          {
 -        	tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+        	std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++        	std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
          	if (m_stop)
          		break;
          	if (m_params_ui_changed) {
@@ -135,7 +144,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
          // Copy the parameters for m_device_str into the current parameters.
          if (auto it_params = m_params_by_device.find(m_device_str); it_params != m_params_by_device.end()) {
 -	    	tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+	    	std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++	    	std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
  	    	m_params = m_params_ui = it_params->second;
  	    }
      }
@@ -144,7 +153,7 @@ Migrate from deprecated tbb::mutex to std::mutex.
          // Copy the current parameters for m_device_str into the parameter database.
          {
 -	        tbb::mutex::scoped_lock lock(m_params_ui_mutex);
-+	        std::lock_guard<std::mutex> lock(m_params_ui_mutex);
++	        std::scoped_lock<std::mutex> lock(m_params_ui_mutex);
  	        m_params_by_device[m_device_str] = m_params_ui;
  	    }
  	    m_device_str.clear();

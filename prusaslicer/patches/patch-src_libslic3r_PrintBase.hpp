@@ -1,30 +1,25 @@
 $NetBSD$
 
-Migrate from deprecated tbb::mutex to std::mutex.
-Migrate from deprecated tbb::atomic to std::atomic.
+Migrate away from features deprecated in tbb 2021.3.
+Adapted from upstream git commit e13535f822b5efe0e3b471bc366e8d3ea96059d5.
 
 --- src/libslic3r/PrintBase.hpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/libslic3r/PrintBase.hpp
-@@ -2,17 +2,13 @@
- #define slic3r_PrintBase_hpp_
- 
- #include "libslic3r.h"
-+#include <atomic>
- #include <set>
+@@ -6,12 +6,8 @@
  #include <vector>
-+#include <mutex>
  #include <string>
  #include <functional>
- 
+-
 -// tbb/mutex.h includes Windows, which in turn defines min/max macros. Convince Windows.h to not define these min/max macros.
 -#ifndef NOMINMAX
 -    #define NOMINMAX
 -#endif
 -#include "tbb/mutex.h"
--
++#include <atomic>
++#include <mutex>
+ 
  #include "ObjectID.hpp"
  #include "Model.hpp"
- #include "PlaceholderParser.hpp"
 @@ -84,23 +80,23 @@ class PrintState : public PrintStateBase
  public:
      PrintState() {}
@@ -32,7 +27,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
 -    StateWithTimeStamp state_with_timestamp(StepType step, tbb::mutex &mtx) const {
 -        tbb::mutex::scoped_lock lock(mtx);
 +    StateWithTimeStamp state_with_timestamp(StepType step, std::mutex &mtx) const {
-+        std::lock_guard<std::mutex> lock(mtx);
++        std::scoped_lock<std::mutex> lock(mtx);
          StateWithTimeStamp state = m_state[step];
          return state;
      }
@@ -40,7 +35,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
 -    StateWithWarnings state_with_warnings(StepType step, tbb::mutex &mtx) const {
 -        tbb::mutex::scoped_lock lock(mtx);
 +    StateWithWarnings state_with_warnings(StepType step, std::mutex &mtx) const {
-+        std::lock_guard<std::mutex> lock(mtx);
++        std::scoped_lock<std::mutex> lock(mtx);
          StateWithWarnings state = m_state[step];
          return state;
      }
@@ -62,7 +57,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
 -    bool set_started(StepType step, tbb::mutex &mtx, ThrowIfCanceled throw_if_canceled) {
 -        tbb::mutex::scoped_lock lock(mtx);
 +    bool set_started(StepType step, std::mutex &mtx, ThrowIfCanceled throw_if_canceled) {
-+        std::lock_guard<std::mutex> lock(mtx);
++        std::scoped_lock<std::mutex> lock(mtx);
          // If canceled, throw before changing the step state.
          throw_if_canceled();
  #ifndef NDEBUG
@@ -73,7 +68,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
 -	std::pair<TimeStamp, bool> set_done(StepType step, tbb::mutex &mtx, ThrowIfCanceled throw_if_canceled) {
 -        tbb::mutex::scoped_lock lock(mtx);
 +	std::pair<TimeStamp, bool> set_done(StepType step, std::mutex &mtx, ThrowIfCanceled throw_if_canceled) {
-+        std::lock_guard<std::mutex> lock(mtx);
++        std::scoped_lock<std::mutex> lock(mtx);
          // If canceled, throw before changing the step state.
          throw_if_canceled();
          assert(m_state[step].state == STARTED);
@@ -85,7 +80,7 @@ Migrate from deprecated tbb::atomic to std::atomic.
 +    std::pair<StepType, bool> active_step_add_warning(PrintStateBase::WarningLevel warning_level, const std::string &message, int message_id, std::mutex &mtx)
      {
 -        tbb::mutex::scoped_lock lock(mtx);
-+        std::lock_guard<std::mutex> lock(mtx);
++        std::scoped_lock<std::mutex> lock(mtx);
          assert(m_step_active != -1);
          StateWithWarnings &state = m_state[m_step_active];
          assert(state.state == STARTED);
@@ -107,21 +102,12 @@ Migrate from deprecated tbb::atomic to std::atomic.
      std::function<void()>  cancel_callback() { return m_cancel_callback; }
  	void				   call_cancel_callback() { m_cancel_callback(); }
  	// Notify UI about a new warning of a milestone "step" on this PrintBase.
-@@ -471,7 +467,7 @@ protected:
- 
-     // If the background processing stop was requested, throw CanceledException.
-     // To be called by the worker thread and its sub-threads (mostly launched on the TBB thread pool) regularly.
--    void                   throw_if_canceled() const { if (m_cancel_status) throw CanceledException(); }
-+    void                   throw_if_canceled() const { if (canceled()) throw CanceledException(); }
- 
-     // To be called by this->output_filename() with the format string pulled from the configuration layer.
-     std::string            output_filename(const std::string &format, const std::string &default_ext, const std::string &filename_base, const DynamicConfig *config_override = nullptr) const;
 @@ -486,7 +482,7 @@ protected:
      status_callback_type                    m_status_callback;
  
  private:
 -    tbb::atomic<CancelStatus>               m_cancel_status;
-+    std::atomic<CancelStatus>               m_cancel_status {NOT_CANCELED};
++    std::atomic<CancelStatus>               m_cancel_status;
  
      // Callback to be evoked to stop the background processing before a state is updated.
      cancel_callback_type                    m_cancel_callback = [](){};

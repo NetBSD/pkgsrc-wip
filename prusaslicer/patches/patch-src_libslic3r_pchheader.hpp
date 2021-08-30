@@ -1,18 +1,11 @@
 $NetBSD$
 
-Remove use of deprecated tbb::atomic, tbb::mutex, tbb::task_scheduler_init.
+Migrate away from features deprecated in tbb 2021.3.
+Adapted from upstream git commit e13535f822b5efe0e3b471bc366e8d3ea96059d5.
 
 --- src/libslic3r/pchheader.hpp.orig	2021-07-16 10:14:03.000000000 +0000
 +++ src/libslic3r/pchheader.hpp
-@@ -35,6 +35,7 @@
- #include <locale>
- #include <map>
- #include <memory>
-+#include <mutex>
- #include <numeric>
- #include <ostream>
- #include <queue>
-@@ -93,12 +94,9 @@
+@@ -93,12 +93,9 @@
  #include <boost/thread.hpp>
  #include <boost/version.hpp>
  
