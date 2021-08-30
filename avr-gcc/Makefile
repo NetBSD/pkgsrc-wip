@@ -57,16 +57,6 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
-# For graphite support.
-.if !empty(PKG_OPTIONS:Mgcc-graphite)
-# CONFIG_SHELL can handle it. Patch will break with this option disabled.
-CHECK_PORTABILITY_SKIP=	isl/configure
-
-post-extract:
-	${GTAR} -jxf ${DISTDIR}/${ISL2X}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL2X} ${WRKSRC}/isl
-.endif
-
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
