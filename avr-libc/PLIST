@@ -900,6 +900,7 @@ avr/lib/tiny-stack/libscanf_flt.a
 avr/lib/tiny-stack/libscanf_min.a
 bin/avr-man
 ${PLIST.doc}share/doc/avr-libc/AUTHORS
+${PLIST.doc}share/doc/avr-libc/INSTALL.pkgsrc
 ${PLIST.doc}share/doc/avr-libc/LICENSE
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual.pdf
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/FAQ.html
