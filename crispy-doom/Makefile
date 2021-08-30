@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	crispy-doom-5.10.1
+DISTNAME=	crispy-doom-5.10.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
