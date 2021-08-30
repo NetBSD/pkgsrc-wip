@@ -954,7 +954,6 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dir_000016.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doc.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dox.css
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doxygen.css
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/doxygen.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/dtoa__conv_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/eedef_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/eeprom_8h_source.html
@@ -1487,6 +1486,7 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/_MONTHS_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_MemoryBarrier.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_NOP.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_PROTECTED_WRITE.3
+${PLIST.doc}share/doc/avr-libc/man/man3/_VECTOR.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_WEEK_DAYS_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_DATE_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_DATE_STRING__.3
