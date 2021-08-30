@@ -19,7 +19,7 @@ DEPENDS+=		avr-binutils>=2.37:../../wip/avr-binutils
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bash gmake gsed:run gtar
+USE_TOOLS+=		bash gmake gsed:run
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
 
