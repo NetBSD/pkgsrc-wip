@@ -1,4 +1,3 @@
-Biolibc-tools is a collection of simple fast, memory-efficient,
-programs for processing biological data.  These are simple programs
-built on biolibc that are not complex enough to warrant a separate
-project.
+Biolibc-tools is a collection of simple, fast, and memory-efficient
+programs for processing biological data.  These programs built on
+biolibc are not complex enough to warrant separate projects.
