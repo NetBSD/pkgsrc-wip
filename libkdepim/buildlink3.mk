@@ -8,6 +8,8 @@ LIBKDEPIM_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libkdepim+=	libkdepim>=17.12.1
 BUILDLINK_PKGSRCDIR.libkdepim?=		../../wip/libkdepim
 
+BUILDLINK_FILES.libkdepim+=	share/dbus-1/interfaces/org.kde.*.xml
+
 .include "../../databases/kldap/buildlink3.mk"
 .include "../../wip/akonadi-contacts/buildlink3.mk"
 .include "../../wip/akonadi-search/buildlink3.mk"
