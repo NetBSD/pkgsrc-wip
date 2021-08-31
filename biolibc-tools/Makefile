@@ -1,19 +1,17 @@
 # $NetBSD$
 
-DISTNAME=	biolibc-tools-0.1.0.34
+DISTNAME=	biolibc-tools-0.1.0.35
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	f1224de0ec5f1b2f8912bdda0fbd94f49e1b351c
+GITHUB_TAG=	4eca310d5191ec1336d213dbe4fc461c7affd1d7
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc-tools
 COMMENT=	High-performance bioinformatics tools based on biolibc
 LICENSE=	2-clause-bsd
 
+BUILD_TARGET=	depend all
 INSTALL_TARGET=	install-strip
-
-pre-build:
-	(cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend)
 
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"

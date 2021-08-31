@@ -3,6 +3,6 @@ bin/fastq-derep.sh
 bin/fastx-derep
 bin/fastx2tsv
 libexec/biolibc-tools/uniq-seqs.awk
-man/man1/fastq-dedup.sh.1
+man/man1/fastq-derep.sh.1
 man/man1/fastx-derep.1
 man/man1/fastx2tsv.1
