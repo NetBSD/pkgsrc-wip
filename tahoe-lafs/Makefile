@@ -1,7 +1,8 @@
 # $NetBSD: Makefile,v 1.47 2021/03/18 23:23:31 gdt Exp $
 
-DISTNAME=	tahoe-lafs-1.15.0
-PKGREVISION=	1
+VERSION_BASE=	1.16.0
+VERSION_RC=	rc0
+DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,41 +14,42 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake
 
-# \todo: fix nevow doc location
+# tahoe works with 27, but we depend on things which are
+# not available for 27 in pkgsrc.
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-xml via py-nevow, py-zbase32, py-cryptopp
+# The world sees this as part of base python.
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # from tahoe's setup.py
 DEPENDS+=	${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
-# \todo zope.interface
-DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.12.6:../../net/py-foolscap
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-twisted>=16.1.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.0:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-foolscap>=21.7.0:../../net/py-foolscap
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.6:../../security/py-cryptography
+# \todo twisted needs tls, conch options
+DEPENDS+=	${PYPKGPREFIX}-twisted>=19.1.0:../../net/py-twisted
 # bcrypt and appdirs required as twisted deps at runtime
 DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
-DEPENDS+=	${PYPKGPREFIX}-nevow>=0.11.1:../../www/py-nevow
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
-# magic wormhole does not support 2.7 because its deps are not versioned
-#DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-[0-9]*:../../net/py-magic-wormhole
-DEPENDS+=	${PYPKGPREFIX}-eliot-[0-9]*:../../sysutils/py-eliot17
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-magic-wormhole>=0.10.2:../../net/py-magic-wormhole
+DEPENDS+=	${PYPKGPREFIX}-eliot>=1.13.0:../../sysutils/py-eliot
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent-[0-9]*:../../devel/py-pyrsistent
-# \todo pyrsistent
-# \todo attrs
-# autobahn D2019.09.20.04.00.00
-#DEPENDS+=	${PYPKGPREFIX}-autobahn-[0-9]*:../../www/py-autobahn
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-pyutil-[0-9]*:../../devel/py-pyutil
-DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-attrs>=18.2.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-autobahn>=19.5.2:../../www/py-autobahn
+DEPENDS+=	${PYPKGPREFIX}-future>=0.18.2:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
+DEPENDS+=	${PYPKGPREFIX}-pyutil>=3.3.0:../../devel/py-pyutil
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.4.0:../../devel/py-distro
 
-# 19.0.0 from 2020-01-01 works with 27
-# \todo import/version an older one
-#DEPENDS+=	${PYPKGPREFIX}-txtorcon-[0-9]*:../../net/py-txtorcon
 
-# todo txi2p
+# tor option
+DEPENDS+=	${PYPKGPREFIX}-txtorcon>=0.17.0:../../net/py-txtorcon
 
+# \todo txi2p: not yet in a release, not in pkgsrc
+
+# \tood Decide why these are here and prune.
 # Not in setup.py, but seems to exist elsewhere.
 #DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.8:../../security/py-asn1
 #DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.5:../../security/py-asn1-modules
@@ -66,7 +68,7 @@ PKG_GECOS.tahoes=	tahoe server
 
 # \todo Convert do-test to use tox
 #do-test:
-#	cd ${WRKSRC} && py.test-2.7
+#	cd ${WRKSRC} && py.test-3.8
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
