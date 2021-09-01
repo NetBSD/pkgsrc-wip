@@ -4870,7 +4870,6 @@ SUBDIR+=	qt4-libqtlua
 SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
-SUBDIR+=	qt5-qtwebengine
 SUBDIR+=	qt6
 SUBDIR+=	qt6-odbc
 SUBDIR+=	qt6-psql
