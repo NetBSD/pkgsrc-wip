@@ -2992,6 +2992,7 @@ SUBDIR+=	pcem
 SUBDIR+=	pcp
 SUBDIR+=	pcsx2
 SUBDIR+=	pdb2ldif
+SUBDIR+=	pdcurses
 SUBDIR+=	pdfcrack
 SUBDIR+=	pdfjam3
 SUBDIR+=	pdfminer
