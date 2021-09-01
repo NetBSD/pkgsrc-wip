@@ -5,8 +5,7 @@ BUILDLINK_TREE+=	pdcurses
 .if !defined(PDCURSES_BUILDLINK3_MK)
 PDCURSES_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.pdcurses+=	pdcurses>=3.3
-BUILDLINK_ABI_DEPENDS.pdcurses?=	pdcurses>=3.3nb2
+BUILDLINK_API_DEPENDS.pdcurses+=	pdcurses>=3.9
 BUILDLINK_PKGSRCDIR.pdcurses?=		../../wip/pdcurses
 
 BUILDLINK_LIBNAME.pdcurses=	XCurses
