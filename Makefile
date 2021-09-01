@@ -1922,7 +1922,6 @@ SUBDIR+=	kmail
 SUBDIR+=	kmail-account-wizard
 SUBDIR+=	kmailtransport
 SUBDIR+=	kmenuedit
-SUBDIR+=	kmix
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	knotes
