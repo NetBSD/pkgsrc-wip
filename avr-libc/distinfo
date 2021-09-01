@@ -6,5 +6,5 @@ SHA512 (avr-libc-2.0.0.tar.bz2) = fc8d062043d633350dbe05978935dcb8028257a4f1013f
 Size (avr-libc-2.0.0.tar.bz2) = 3590893 bytes
 SHA1 (patch-doc_Makefile.in) = 948571851d14a15dd6aea71fa94fab86349d0988
 SHA1 (patch-doc_api_Makefile.in) = f40ae53e9ebfdeec562746586e2145570fb2429d
-SHA1 (patch-include_avr_power.h) = f5231cf26999eed5fd356afc7a44d954e30b75a3
+SHA1 (patch-include_avr_power.h) = 0b1c6f4dd9339cae40c740868ba85c39f3eeb74d
 SHA1 (patch-include_avr_wdt.h) = 4e0882cc6e795870e58182ebe7820f9bc98bf2ce
