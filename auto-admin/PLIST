@@ -103,6 +103,7 @@ sbin/auto-pkgsrc-wip-checkout
 sbin/auto-ports-branch
 sbin/auto-ports-checkout
 sbin/auto-ports-setup
+sbin/auto-power-manager
 sbin/auto-print-make-variable
 sbin/auto-print-timezone
 sbin/auto-pxe-installer-setup
