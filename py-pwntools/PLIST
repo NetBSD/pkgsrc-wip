@@ -1,10 +1,5 @@
 @comment $NetBSD$
 bin/pwn${PYVERSSUFFIX}
-${PYSITELIB}/CHANGELOG.md
-${PYSITELIB}/CONTRIBUTING.md
-${PYSITELIB}/LICENSE-pwntools.txt
-${PYSITELIB}/README.md
-${PYSITELIB}/TESTING.md
 ${PYSITELIB}/pwn/__init__.py
 ${PYSITELIB}/pwn/__init__.pyc
 ${PYSITELIB}/pwn/__init__.pyo
@@ -401,6 +396,9 @@ ${PYSITELIB}/pwnlib/encoders/encoder.pyo
 ${PYSITELIB}/pwnlib/encoders/i386/__init__.py
 ${PYSITELIB}/pwnlib/encoders/i386/__init__.pyc
 ${PYSITELIB}/pwnlib/encoders/i386/__init__.pyo
+${PYSITELIB}/pwnlib/encoders/i386/ascii_shellcode.py
+${PYSITELIB}/pwnlib/encoders/i386/ascii_shellcode.pyc
+${PYSITELIB}/pwnlib/encoders/i386/ascii_shellcode.pyo
 ${PYSITELIB}/pwnlib/encoders/i386/delta.py
 ${PYSITELIB}/pwnlib/encoders/i386/delta.pyc
 ${PYSITELIB}/pwnlib/encoders/i386/delta.pyo
@@ -419,6 +417,15 @@ ${PYSITELIB}/pwnlib/exception.pyo
 ${PYSITELIB}/pwnlib/filepointer.py
 ${PYSITELIB}/pwnlib/filepointer.pyc
 ${PYSITELIB}/pwnlib/filepointer.pyo
+${PYSITELIB}/pwnlib/filesystem/__init__.py
+${PYSITELIB}/pwnlib/filesystem/__init__.pyc
+${PYSITELIB}/pwnlib/filesystem/__init__.pyo
+${PYSITELIB}/pwnlib/filesystem/path.py
+${PYSITELIB}/pwnlib/filesystem/path.pyc
+${PYSITELIB}/pwnlib/filesystem/path.pyo
+${PYSITELIB}/pwnlib/filesystem/ssh.py
+${PYSITELIB}/pwnlib/filesystem/ssh.pyc
+${PYSITELIB}/pwnlib/filesystem/ssh.pyo
 ${PYSITELIB}/pwnlib/flag/__init__.py
 ${PYSITELIB}/pwnlib/flag/__init__.pyc
 ${PYSITELIB}/pwnlib/flag/__init__.pyo
@@ -431,6 +438,9 @@ ${PYSITELIB}/pwnlib/fmtstr.pyo
 ${PYSITELIB}/pwnlib/gdb.py
 ${PYSITELIB}/pwnlib/gdb.pyc
 ${PYSITELIB}/pwnlib/gdb.pyo
+${PYSITELIB}/pwnlib/gdb_api_bridge.py
+${PYSITELIB}/pwnlib/gdb_api_bridge.pyc
+${PYSITELIB}/pwnlib/gdb_api_bridge.pyo
 ${PYSITELIB}/pwnlib/gdb_faketerminal.py
 ${PYSITELIB}/pwnlib/gdb_faketerminal.pyc
 ${PYSITELIB}/pwnlib/gdb_faketerminal.pyo
@@ -479,6 +489,9 @@ ${PYSITELIB}/pwnlib/rop/call.pyo
 ${PYSITELIB}/pwnlib/rop/gadgets.py
 ${PYSITELIB}/pwnlib/rop/gadgets.pyc
 ${PYSITELIB}/pwnlib/rop/gadgets.pyo
+${PYSITELIB}/pwnlib/rop/ret2csu.py
+${PYSITELIB}/pwnlib/rop/ret2csu.pyc
+${PYSITELIB}/pwnlib/rop/ret2csu.pyo
 ${PYSITELIB}/pwnlib/rop/ret2dlresolve.py
 ${PYSITELIB}/pwnlib/rop/ret2dlresolve.pyc
 ${PYSITELIB}/pwnlib/rop/ret2dlresolve.pyo
@@ -507,6 +520,8 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/kill.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/loader.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/loader_append.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/open.asm
@@ -929,6 +944,8 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/kill.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/loader.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/loader_append.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/open.asm
@@ -1351,6 +1368,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/trap.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/xor.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/__doc__
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/amd64_to_i386.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/bindsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/connect.asm
@@ -1800,6 +1818,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/freebsd/syscall.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/infloop.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/itoa.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/__doc__
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/amd64_to_i386.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/bindsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/connect.asm
@@ -2267,6 +2286,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/egghunter.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/open_file.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/sh.asm
@@ -2689,6 +2709,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/egghunter.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/open_file.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/sh.asm
@@ -3113,6 +3134,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/common/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/common/freebsd/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/common/label.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/common/linux/__doc__
+${PYSITELIB}/pwnlib/shellcraft/templates/common/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/common/linux/syscalls/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/common/linux/syscalls/_llseek.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/common/linux/syscalls/_newselect.asm
@@ -3534,6 +3556,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/findpeerstager.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/forkexit.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/i386_to_amd64.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/loader.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/loader_append.asm
@@ -3993,6 +4016,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/findpeerstager.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/forkexit.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/i386_to_amd64.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/loader.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/loader_append.asm
@@ -4440,6 +4464,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/findpeer.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/findpeersh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/listen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/readfile.asm
@@ -4863,6 +4888,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/findpeer.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/findpeersh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/listen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/readfile.asm
@@ -6105,6 +6131,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/findpeersh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/findpeerstager.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/listen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/loader.asm
@@ -6538,6 +6565,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/findpeersh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/findpeerstager.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/forkbomb.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/forkexit.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/listen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/loader.asm
@@ -7107,4 +7135,10 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/requirements.txt
+${PYSITELIB}/pwntools-doc/CHANGELOG.md
+${PYSITELIB}/pwntools-doc/CONTRIBUTING.md
+${PYSITELIB}/pwntools-doc/DOCKER.md
+${PYSITELIB}/pwntools-doc/LICENSE-pwntools.txt
+${PYSITELIB}/pwntools-doc/README.md
+${PYSITELIB}/pwntools-doc/TESTING.md
+${PYSITELIB}/pwntools-doc/requirements.txt
