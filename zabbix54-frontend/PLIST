@@ -51,7 +51,8 @@ share/zabbix/app/controllers/CControllerFavouriteCreate.php
 share/zabbix/app/controllers/CControllerFavouriteDelete.php
 share/zabbix/app/controllers/CControllerGuiEdit.php
 share/zabbix/app/controllers/CControllerGuiUpdate.php
-share/zabbix/app/controllers/CControllerHintBox.php
+share/zabbix/app/controllers/CControllerHintboxActionlist.php
+share/zabbix/app/controllers/CControllerHintboxEventlist.php
 share/zabbix/app/controllers/CControllerHost.php
 share/zabbix/app/controllers/CControllerHostDashboardView.php
 share/zabbix/app/controllers/CControllerHostMacrosList.php
@@ -319,7 +320,8 @@ share/zabbix/app/views/configuration.discovery.list.php
 share/zabbix/app/views/dashboard.page.properties.edit.php
 share/zabbix/app/views/dashboard.properties.edit.php
 share/zabbix/app/views/dashboard.share.edit.php
-share/zabbix/app/views/hint.box.php
+share/zabbix/app/views/hintbox.actionlist.php
+share/zabbix/app/views/hintbox.eventlist.php
 share/zabbix/app/views/hostmacros.list.php
 share/zabbix/app/views/js/administration.authentication.edit.js.php
 share/zabbix/app/views/js/administration.autoreg.edit.js.php
