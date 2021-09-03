@@ -1,9 +1,5 @@
 $NetBSD: distinfo,v 1.118 2020/08/06 11:42:56 jperkin Exp $
 
-SHA1 (rust-1.52.1-x86_64-unknown-illumos.tar.gz) = c1de846c91a6b826c8304e1038f909c8bd6490b6
-RMD160 (rust-1.52.1-x86_64-unknown-illumos.tar.gz) = 86f743be2fb4993ee9a6f0b5a78b0173d2bbd117
-SHA512 (rust-1.52.1-x86_64-unknown-illumos.tar.gz) = 1128518c2b9a15eefec0dd040a9607679398f88f7c1c34c7b8b91f28f343236bc2616df1bbe0fcb91d75ddf8c47a83598755b0a153648f0e7d1e48bb2b68e462
-Size (rust-1.52.1-x86_64-unknown-illumos.tar.gz) = 190549996 bytes
 SHA1 (rust-1.53.0-aarch64-unknown-netbsd.tar.gz) = 805ceb6105c444f6c9fba0402ddaf4fbc6a96da3
 RMD160 (rust-1.53.0-aarch64-unknown-netbsd.tar.gz) = bb292d9dd7800bbdeb8d1df868f1f901082444eb
 SHA512 (rust-1.53.0-aarch64-unknown-netbsd.tar.gz) = db8c6865749c5536d3c5524e8d314d353b4857bd6845f9e5f9d467a39faa9c41afe02aca2c1a6dd0414ea878c0eaf3b87ba9d8c660b9c29fee0231fc69e81e51
@@ -44,6 +40,10 @@ SHA1 (rust-1.53.0-x86_64-unknown-freebsd.tar.gz) = f2058fec9907cc57d1871798d7401
 RMD160 (rust-1.53.0-x86_64-unknown-freebsd.tar.gz) = e5d2678cdbbd8a400c5d33d41286133098ac59ec
 SHA512 (rust-1.53.0-x86_64-unknown-freebsd.tar.gz) = e9eb71412defd6bcc61fe07b0c7103ab0f9582dd9d169d8c30158919c3f28327852ee6caa6dd938b2f7b9aad8f054558e42bba99eb557ad024df1c68da456ff4
 Size (rust-1.53.0-x86_64-unknown-freebsd.tar.gz) = 287871664 bytes
+SHA1 (rust-1.53.0-x86_64-unknown-illumos.tar.gz) = 4608af3c88d50dd43f8a95e117fb5818ba09326e
+RMD160 (rust-1.53.0-x86_64-unknown-illumos.tar.gz) = 0f126319ee1ceb3394cc48d96f245c2ae2b0978f
+SHA512 (rust-1.53.0-x86_64-unknown-illumos.tar.gz) = 2f1373b61f796c84bc0257c9f83fcc787cafd8d408bdc73a8069287774b06ecf025d222655a2bcbb74bfdbdbe826d6eb3c36454f10370d59e21f39a650fa5bc3
+Size (rust-1.53.0-x86_64-unknown-illumos.tar.gz) = 208714201 bytes
 SHA1 (rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz) = 2042ff56acca0fa8d39c819cba6ff80eba17e19d
 RMD160 (rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz) = 4cd0b7dfd4599f2376097ec05bd9e6f2c7a14e74
 SHA512 (rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz) = 0df9a5116ab7973f229e6a26ec623798c5b68e935e2e8bca9603ffc5f97be669f401473a306d731d46e76b461d60c96dac6926e59d8bd2e0fe779a1319624317

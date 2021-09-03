@@ -204,7 +204,7 @@ pre-build-fix:
 # x86_64-sun-solaris bootstrap and comment out the overrides.
 #
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.52.1
+RUST_STAGE0_VER=	1.53.0
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
@@ -509,36 +509,45 @@ stage0-bootstrap: install
 	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
 	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
 	${MKDIR} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc
+	set -e; \
 	for lib in libgcc_s.so.1 libssp.so.0 libstdc++.so.6; do \
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
-	done
-	# direct dependencies
-	for lib in libLLVM-10.so libcrypto.so.1.1 libcurl.so.4 \
+	done; \
+	for lib in libLLVM-12.so libcrypto.so.1.1 libcurl.so.4 \
 		   libssl.so.1.1 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
-	done
-	# libcurl dependencies
-	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.4.so.2 \
-		   libldap-2.4.so.2 libnghttp2.so.14 libsasl2.so.3 \
+	done; \
+	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber-2.5.so.0 \
+		   libldap-2.5.so.0 libnghttp2.so.14 libsasl2.so.3 \
 		   libssh2.so.1 libunistring.so.2; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
-	done
+	done; \
 	for f in ${BOOTSTRAP_TMPDIR}/bin/*; do \
 		/bin/file -b "$$f" | grep ^ELF >/dev/null || continue; \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN/../lib:$$ORIGIN/../lib/pkgsrc' $$f; \
-	done
+	done; \
 	for f in ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/*.so*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN' $$f; \
-	done
+	done; \
 	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/pkgsrc' $$f; \
-	done
-	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/*/*/*.so*; do \
+	done; \
+	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/*/*/*.so* \
+		 ${BOOTSTRAP_TMPDIR}/lib/rustlib/*/bin/*; do \
 		${ELFEDIT} -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..:$$ORIGIN/../../../pkgsrc' $$f; \
-	done
-	(cd ${WRKDIR}; \
-	 ${GTAR} -zcf ${BOOTSTRAP_NAME}.tar.gz ${BOOTSTRAP_NAME})
+	done; \
+	cd ${WRKDIR}; ${GTAR} -zcf ${BOOTSTRAP_NAME}.tar.gz ${BOOTSTRAP_NAME}
+	@${ECHO} ""
+	@${ECHO} "Verify correct library paths using the following:"
+	@${ECHO} ""
+	@${ECHO} "	cd ${BOOTSTRAP_TMPDIR}"
+	@${ECHO} "	find . -type f | xargs ldd 2>/dev/null | egrep 'not.found|${PREFIX}'"
+	@${ECHO} ""
+	@${ECHO} "If there is no output then this bootstrap kit is ready to go:"
+	@${ECHO} ""
+	@${ECHO} "	${WRKDIR}/${BOOTSTRAP_NAME}.tar.gz"
+	@${ECHO} ""
 .endif
 
 .include "options.mk"
