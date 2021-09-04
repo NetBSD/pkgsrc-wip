@@ -3,7 +3,7 @@
 DISTNAME=	plasma-workspace-wallpapers-${PLASMAVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	Additional wallpapers for the Plasma Workspace
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v3
 
