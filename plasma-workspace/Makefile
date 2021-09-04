@@ -3,7 +3,7 @@
 DISTNAME=	plasma-workspace-${PLASMAVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	KDE Plasma Workspace
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
