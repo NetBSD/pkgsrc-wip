@@ -4,7 +4,7 @@ DISTNAME=	polkit-kde-agent-1-${PLASMAVER}
 PKGNAME=	polkit-kde-agent-${PLASMAVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	Daemon providing a polkit authentication UI for KDE
 LICENSE=	gnu-gpl-v2
 
