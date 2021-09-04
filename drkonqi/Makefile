@@ -3,7 +3,7 @@
 DISTNAME=	drkonqi-${PLASMAVER}
 CATEGORIES=	devel
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	KDE crash handler
 LICENSE=	gnu-lgpl-v2
 
