@@ -387,10 +387,12 @@ post-extract:
 	set -e;									\
 	if ${TEST} -e ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/install.sh	\
 	  -a ! -e ${RUST_BOOTSTRAP_PATH}/bin/rustc; then \
-		cd ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH};		\
-		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
-		cd ${WRKDIR}/rust-std-${RUST_STAGE0_VER}-${RUST_ARCH};		\
-		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
+		cd ${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH};	\
+		env ${MAKE_ENV} ${TOOLS_BASH} \
+			./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
+		cd ${WRKDIR}/rust-std-${RUST_STAGE0_VER}-${RUST_ARCH};	\
+		env ${MAKE_ENV} ${TOOLS_BASH} \
+			./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
 .if ${OPSYS} == "NetBSD"
 	SDIR=${WRKDIR}/scripts; \
