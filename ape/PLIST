@@ -103,6 +103,10 @@ share/APE/Languages/Makefile/Macros/macros
 share/APE/Languages/Makefile/Macros/menu.txt
 share/APE/Languages/Makefile/language_opts
 share/APE/Languages/Makefile/syntax_highlighting
+share/APE/Languages/Markdown/Macros/macros
+share/APE/Languages/Markdown/Macros/menu.txt
+share/APE/Languages/Markdown/language_opts
+share/APE/Languages/Markdown/syntax_highlighting
 share/APE/Languages/NQC/Macros/macros
 share/APE/Languages/NQC/Macros/menu.txt
 share/APE/Languages/NQC/language_opts
