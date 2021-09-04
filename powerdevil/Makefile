@@ -3,7 +3,7 @@
 DISTNAME=	powerdevil-${PLASMAVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	Manages the power consumption settings of a Plasma Shell
 LICENSE=	gnu-lgpl-v2
 
