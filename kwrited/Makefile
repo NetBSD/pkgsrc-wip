@@ -3,7 +3,7 @@
 DISTNAME=	kwrited-${PLASMAVER}
 CATEGORIES=	misc
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	Plasma5 daemon listening for wall and write messages
 LICENSE=	gnu-gpl-v2
 
