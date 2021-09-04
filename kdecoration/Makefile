@@ -3,7 +3,7 @@
 DISTNAME=	kdecoration-${PLASMAVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	Plugin based library to create window decorations
 LICENSE=	gnu-lgpl-v2.1
 
