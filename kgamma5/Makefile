@@ -3,7 +3,7 @@
 DISTNAME=	kgamma5-${PLASMAVER}
 CATEGORIES=	x11
 
-HOMEPAGE=	https://www.kde.org/workspaces/plasmadesktop/
+HOMEPAGE=	https://kde.org/plasma-desktop/
 COMMENT=	Adjust your monitor's gamma settings
 LICENSE=	gnu-gpl-v2
 
