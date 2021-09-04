@@ -45,6 +45,9 @@ CONFIGURE_ARGS+=		--disable-dist-src
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
 
+# Work around gcc10 lossage related to BITWORDS_PER_ELEMENT analysis
+#CONFIGURE_ARGS+=		--set llvm.cxxflags=-Wno-error=array-bounds
+
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
 
@@ -571,6 +574,8 @@ stage0-bootstrap: install
 DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
+BUILD_DEPENDS+= cmake-[0-9]*:../../devel/cmake
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
