@@ -4,4 +4,3 @@ SHA1 (plasma-workspace-5.18.5.tar.xz) = 41af57ddd692397e6f695fd54012532afa93336f
 RMD160 (plasma-workspace-5.18.5.tar.xz) = b7c6022e8f0ba605f02926efae2722109e0bdd81
 SHA512 (plasma-workspace-5.18.5.tar.xz) = 870cf89649d9498831f4ef9b21d3c07504b7fc7b09b95dd7e0a1d356b41fbfceed1c4f27aa258bcf1e23cfe915d31701c155325fcd4944f9cc957a287ebc1ee2
 Size (plasma-workspace-5.18.5.tar.xz) = 5696256 bytes
-SHA1 (patch-startkde_startkde.cmake) = 49e9f3a5a3d0eb76865c1120d8aa3fee3a886030
