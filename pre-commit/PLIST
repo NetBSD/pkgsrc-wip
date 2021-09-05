@@ -86,6 +86,9 @@ ${PYSITELIB}/pre_commit/languages/conda.pyo
 ${PYSITELIB}/pre_commit/languages/coursier.py
 ${PYSITELIB}/pre_commit/languages/coursier.pyc
 ${PYSITELIB}/pre_commit/languages/coursier.pyo
+${PYSITELIB}/pre_commit/languages/dart.py
+${PYSITELIB}/pre_commit/languages/dart.pyc
+${PYSITELIB}/pre_commit/languages/dart.pyo
 ${PYSITELIB}/pre_commit/languages/docker.py
 ${PYSITELIB}/pre_commit/languages/docker.pyc
 ${PYSITELIB}/pre_commit/languages/docker.pyo
@@ -178,6 +181,7 @@ ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
 ${PYSITELIB}/pre_commit/resources/empty_template_package.json
 ${PYSITELIB}/pre_commit/resources/empty_template_pre_commit_placeholder_package.gemspec
+${PYSITELIB}/pre_commit/resources/empty_template_pubspec.yaml
 ${PYSITELIB}/pre_commit/resources/empty_template_renv.lock
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.py
 ${PYSITELIB}/pre_commit/resources/empty_template_setup.pyc
