@@ -1,2 +1,28 @@
-* pkg/54316
-  fetch: Unable to fetch expected file mime_guess-2.0.0-alpha.6.crate
+* 0.12.2 is the latest stable pijul version, dating back 2 years.
+  we could try building that or wait until osstring_ascii is no longer
+  a nightly rust feature?
+
+error[E0658]: arbitrary expressions in key-value attributes are unstable
+ --> /usr/work/wip/pijul/work/vendor/clap-3.0.0-beta.4/src/lib.rs:8:10
+  |
+8 | #![doc = include_str!("../README.md")]
+  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: see issue #78835 <https://github.com/rust-lang/rust/issues/78835> for more information
+
+error[E0658]: use of unstable library feature 'osstring_ascii'
+   --> /usr/work/wip/pijul/work/vendor/clap-3.0.0-beta.4/src/parse/matches/matched_arg.rs:130:19
+    |
+130 |                 v.eq_ignore_ascii_case(val)
+    |                   ^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: see issue #70516 <https://github.com/rust-lang/rust/issues/70516> for more information
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0658`.
+error: could not compile `clap`
+
+To learn more, run the command again with --verbose.
+warning: build failed, waiting for other jobs to finish...
+error: build failed
