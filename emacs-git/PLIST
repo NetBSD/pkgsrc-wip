@@ -2641,8 +2641,8 @@ share/emacs/${PKGVERSION}/lisp/mail/rfc2047.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc2047.elc
 share/emacs/${PKGVERSION}/lisp/mail/rfc2231.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc2231.elc
-share/emacs/${PKGVERSION}/lisp/mail/rfc2368.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/rfc2368.elc
+share/emacs/${PKGVERSION}/lisp/mail/rfc6068.el.gz
+share/emacs/${PKGVERSION}/lisp/mail/rfc6068.elc
 share/emacs/${PKGVERSION}/lisp/mail/rfc822.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc822.elc
 share/emacs/${PKGVERSION}/lisp/mail/rmail-loaddefs.el
@@ -3056,6 +3056,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/pgg.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.el.gz
