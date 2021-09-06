@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cgen-2017.1.tar.gz) = 2941d72f2f6827fee2f952de62b7b96a0f82d803
-RMD160 (cgen-2017.1.tar.gz) = 1a5f11b96414518d56d60a3339dd3bf6241fd7c2
-SHA512 (cgen-2017.1.tar.gz) = 8aabff9263d9a6335d655f7536a35b3f20e9c118fe52de72770007181b10aa159f8fc9141797810c1ba2f0191f00ce37e3bc2eef3f574c4c2284601cbdb0c0d9
-Size (cgen-2017.1.tar.gz) = 17088 bytes
+SHA1 (cgen-2020.1.tar.gz) = d4fa1b23840df25d7ee959c901e75b71820c0985
+RMD160 (cgen-2020.1.tar.gz) = fe1bfaf4fdf2d504e362cb744fdcbf29d7804c70
+SHA512 (cgen-2020.1.tar.gz) = 77fea61e66d099c3fb20011b5249aed2ff95246ac4530144ddb7d8631ef0fc9096fd32c67aaaba8a67ac9e292a14fdeba1d1ddd8a15bc21551f45b9cbb8deb97
+Size (cgen-2020.1.tar.gz) = 19895 bytes
