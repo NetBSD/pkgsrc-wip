@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/meli
+man/man1/meli.1
+man/man5/meli-themes.5
+man/man5/meli.conf.5
