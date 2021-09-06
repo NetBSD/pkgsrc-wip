@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adsr/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/adsr/mle/
 COMMENT=	Termbox-based texteditor
 LICENSE=	apache-2.0

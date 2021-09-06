@@ -7,7 +7,7 @@ MASTER_SITES=	https://gitlab.com/tampe/${GITLAB_PROJECT}/-/archive/${GITLAB_TAG}
 GITLAB_PROJECT=	guile-persist
 GITLAB_TAG=	ebebb66ae6d6c47dbc406cdbcaccb5ffed2e463a
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gitlab.com/tampe/guile-persist/
 COMMENT=	Persistance programming framework for GNU Guile
 LICENSE=	gnu-lgpl-v2

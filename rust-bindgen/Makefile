@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-lang/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/rust-lang/rust-bindgen/
 COMMENT=	Automatically generate Rust FFI bindings to C (and some C++) libraries
 LICENSE=	modified-bsd

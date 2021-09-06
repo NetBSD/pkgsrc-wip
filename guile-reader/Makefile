@@ -4,7 +4,7 @@ DISTNAME=	guile-reader-0.6.2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/guile-reader/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://download.savannah.nongnu.org/releases/guile-reader/
 COMMENT=	Extensible reader framework for GNU Guile.
 #LICENSE=	# TODO: (see mk/license.mk)

@@ -4,7 +4,7 @@ DISTNAME=	pijul-0.12.0
 CATEGORIES=	devel
 MASTER_SITES=	https://pijul.org/releases/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://pijul.org
 COMMENT=	Distributed version control system
 LICENSE=	gnu-gpl-v2

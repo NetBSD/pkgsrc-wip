@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/Release_//}
 CATEGORIES=	devel
 MASTER_SITES=	http://git.savannah.nongnu.org/cgit/mescc-tools.git/snapshot/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/oriansj/mescc-tools/
 COMMENT=	Tools for the full source bootstrapping process
 LICENSE=	gnu-gpl-v3

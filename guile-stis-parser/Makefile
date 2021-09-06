@@ -7,7 +7,7 @@ MASTER_SITES=	https://gitlab.com/tampe/${GITLAB_PROJECT}/-/archive/${GITLAB_TAG}
 GITLAB_PROJECT=	stis-parser
 GITLAB_TAG=	5d91e9ee8ebf7e7c5911f5689a92ece954aa3f82
 
-MAINTAINER=		ng0@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://gitlab.com/tampe/stis-parser/
 COMMENT=		Parser combinator framework for GNU Guile
 LICENSE=		gnu-lgpl-v2

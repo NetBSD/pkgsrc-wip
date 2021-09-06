@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llambda/}
 GITHUB_TAG=	4078240ae5bd2bf6759dc21668514ee3480fa646
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/llambda/nary
 COMMENT=	Npm in Rust
 LICENSE=	mit

@@ -5,7 +5,7 @@ PKGNAME=	mes-${DISTNAME:S/v//}
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/janneke/nyacc/-/archive/v0.80.43/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gitlab.com/janneke/nyacc/
 COMMENT=	NYACC (Not Yet Another Compiler Compiler) with patches for mes
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3

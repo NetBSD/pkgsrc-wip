@@ -7,7 +7,7 @@ CATEGORIES=	devel security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RustSec/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/RustSec/cargo-audit/
 COMMENT=	Audit Cargo.lock files for crates with security vulnerabilities
 LICENSE=	apache-2.0 # or MIT

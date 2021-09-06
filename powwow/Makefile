@@ -4,7 +4,7 @@ DISTNAME=	powwow-1.2.20
 CATEGORIES=	games
 MASTER_SITES=	http://hoopajoo.net/static/projects/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	http://hoopajoo.net/projects/powwow.html
 COMMENT=	Client to play MUDs
 LICENSE=	gnu-gpl-v2
