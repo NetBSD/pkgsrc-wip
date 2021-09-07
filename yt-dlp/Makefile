@@ -14,6 +14,11 @@ LICENSE=	unlicense
 
 USE_LANGUAGES=	# none
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/yt-dlp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
 # Only for >= 3.6
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
