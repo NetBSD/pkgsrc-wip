@@ -2661,8 +2661,8 @@ ${PYSITELIB}/yt_dlp/version.pyo
 ${PYSITELIB}/yt_dlp/webvtt.py
 ${PYSITELIB}/yt_dlp/webvtt.pyc
 ${PYSITELIB}/yt_dlp/webvtt.pyo
+man/man1/yt-dlp.1
 share/bash-completion/completions/yt-dlp
 share/doc/yt_dlp/README.txt
 share/fish/vendor_completions.d/yt-dlp.fish
-share/man/man1/yt-dlp.1
 share/zsh/site-functions/_yt-dlp
