@@ -17,16 +17,5 @@ USE_LANGUAGES=	# none
 # Only for >= 3.6
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# optional runtime dependencies. here or in install notes?
-DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
-DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
-DEPENDS+=	rtmpdump-[0-9]*:../../net/rtmpdump
-# pycrytodome
-# websockets
-# keyring
-# mplayer or mpv
-# phantomjs
-# sponskrub
-
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
