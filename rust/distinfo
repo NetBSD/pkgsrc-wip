@@ -1,5 +1,13 @@
 $NetBSD: distinfo,v 1.118 2020/08/06 11:42:56 jperkin Exp $
 
+SHA1 (rust-1.53.0-aarch64-apple-darwin.tar.gz) = 5353fe47a045e655afa91ae38f0a16a86de44fa6
+RMD160 (rust-1.53.0-aarch64-apple-darwin.tar.gz) = 8d3bc151689e286fef22edb87cf097eab0905fd0
+SHA512 (rust-1.53.0-aarch64-apple-darwin.tar.gz) = 2429b45a0ed689ca232e630cedafff4575f0815335f1b8e889b84458b5466e1a77172554d56a37feb8dbe3bd7ff333a922f3386e8359b07d79032cd49e0cbc5d
+Size (rust-1.53.0-aarch64-apple-darwin.tar.gz) = 274877370 bytes
+SHA1 (rust-1.53.0-aarch64-unknown-linux-gnu.tar.gz) = 295dbc1862ca0446d583d4afd39dafcbd1531b60
+RMD160 (rust-1.53.0-aarch64-unknown-linux-gnu.tar.gz) = b38320cbdd69c0260de20a9e42fc07a82815ca38
+SHA512 (rust-1.53.0-aarch64-unknown-linux-gnu.tar.gz) = 02ee2f832cd9008283a3bfedb732d3035eed16073164b7bf1e7d8586559c273296b51513b16481c317426c957fdeedd447ea19efd133303ae7fb92f5307634dd
+Size (rust-1.53.0-aarch64-unknown-linux-gnu.tar.gz) = 366640616 bytes
 SHA1 (rust-1.53.0-aarch64-unknown-netbsd.tar.gz) = 805ceb6105c444f6c9fba0402ddaf4fbc6a96da3
 RMD160 (rust-1.53.0-aarch64-unknown-netbsd.tar.gz) = bb292d9dd7800bbdeb8d1df868f1f901082444eb
 SHA512 (rust-1.53.0-aarch64-unknown-netbsd.tar.gz) = db8c6865749c5536d3c5524e8d314d353b4857bd6845f9e5f9d467a39faa9c41afe02aca2c1a6dd0414ea878c0eaf3b87ba9d8c660b9c29fee0231fc69e81e51
@@ -153,7 +161,7 @@ SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 10e6c1253adac0262b000aec
 SHA1 (patch-src_tools_miri_cargo-miri_bin.rs) = 03b3df729056b61bd627857ebf6cda68b7db42c8
 SHA1 (patch-src_tools_rls_rls_src_cmd.rs) = fade3e60fecac5c4e4d4ee5bee82659b4eb385b7
 SHA1 (patch-src_tools_rls_rls_src_server_io.rs) = 51af64526db55abcf6b4b3165df314a16cf62e34
-SHA1 (patch-src_tools_rust-installer_install-template.sh) = f2533c2ae0d45d48b5ebea5d36842b4a1b9009af
+SHA1 (patch-src_tools_rust-installer_install-template.sh) = ca769db07986ded26d92957e1055961895def546
 SHA1 (patch-vendor_cc_src_lib.rs) = ade35f1edfd251d9439e3ac3d79bca03b5a7ab9c
 SHA1 (patch-vendor_libc_src_unix_solarish_mod.rs) = 804ea03be546fef0d2bd37d7f8abb26d38a7892b
 SHA1 (patch-vendor_lzma-sys_config.h) = b654c7e129fa02697734bc87173f89b3056a5437
