@@ -102,7 +102,7 @@ should do just fine.
 +		    ;;
 +		share/man/*)
 +		    local _f=${_file#"share/man/"}
-+		    _file_install_path="$CFG_DESTDIR_PREFIX/$PKGMANDIR/$_f"
++		    _file_install_path="$CFG_MANDIR/$_f"
 +		    ;;
 +		share/doc/*)
              # HACK: Try to support overriding --docdir.  Paths with the form
