@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.21 2021/05/31 17:11:33 gdt Exp $
 
+# Please do not drop this; a new update cycle is likely very soon.
 DISTNAME=	unifi-6.2.26
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip

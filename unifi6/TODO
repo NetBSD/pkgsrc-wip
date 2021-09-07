@@ -1,1 +1,7 @@
-Actually test, with and without RELRO.
+* test with RELRO
+
+* figure out openjdk11
+
+* consider mongo 3.6, and some versions of 4, after understanding what
+  UBNT is doing.
+
