@@ -68,6 +68,7 @@ SUBDIR+=	R-optparse
 SUBDIR+=	R-png
 SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
+SUBDIR+=	R-triebeard
 SUBDIR+=	R-tuneR
 SUBDIR+=	R-wk
 SUBDIR+=	Radicale3
