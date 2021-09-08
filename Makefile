@@ -230,7 +230,6 @@ SUBDIR+=	autoq3d
 SUBDIR+=	autossh
 SUBDIR+=	avida2
 SUBDIR+=	avp
-SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
 SUBDIR+=	avr-libc
 SUBDIR+=	avra
