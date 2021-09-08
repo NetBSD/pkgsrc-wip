@@ -67,6 +67,7 @@ SUBDIR+=	R-npsurv
 SUBDIR+=	R-oai
 SUBDIR+=	R-optparse
 SUBDIR+=	R-png
+SUBDIR+=	R-rgbif
 SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
 SUBDIR+=	R-triebeard
