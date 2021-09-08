@@ -62,6 +62,7 @@ SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
 SUBDIR+=	R-np
 SUBDIR+=	R-npsurv
+SUBDIR+=	R-oai
 SUBDIR+=	R-optparse
 SUBDIR+=	R-png
 SUBDIR+=	R-rgdal
