@@ -67,6 +67,7 @@ SUBDIR+=	R-png
 SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
 SUBDIR+=	R-tuneR
+SUBDIR+=	R-wk
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
