@@ -70,6 +70,7 @@ SUBDIR+=	R-rgdal
 SUBDIR+=	R-signal
 SUBDIR+=	R-triebeard
 SUBDIR+=	R-tuneR
+SUBDIR+=	R-wellknown
 SUBDIR+=	R-wk
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
