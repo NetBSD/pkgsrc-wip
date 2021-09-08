@@ -2,7 +2,7 @@
 
 R_PKGNAME=	wk
 R_PKGVER=	0.5.0
-CATEGORIES=	wip
+CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Lightweight well-known geometry parsing
