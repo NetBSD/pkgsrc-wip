@@ -46,6 +46,7 @@ SUBDIR+=	R-bigmemory
 SUBDIR+=	R-bigmemory.sri
 SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
+SUBDIR+=	R-conditionz
 SUBDIR+=	R-cubature
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-easySVG
