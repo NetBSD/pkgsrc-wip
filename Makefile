@@ -2323,7 +2323,6 @@ SUBDIR+=	meep
 SUBDIR+=	meep-mpi
 SUBDIR+=	meep-openmpi
 SUBDIR+=	meka-git
-SUBDIR+=	meli
 SUBDIR+=	melonds
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
