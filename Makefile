@@ -231,7 +231,6 @@ SUBDIR+=	autossh
 SUBDIR+=	avida2
 SUBDIR+=	avp
 SUBDIR+=	avr-gdb
-SUBDIR+=	avr-libc
 SUBDIR+=	avra
 SUBDIR+=	avrdude
 SUBDIR+=	axe
