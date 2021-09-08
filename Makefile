@@ -5263,7 +5263,6 @@ SUBDIR+=	spidermonkey24
 SUBDIR+=	spidermonkey31
 SUBDIR+=	splix
 SUBDIR+=	spot
-SUBDIR+=	spotify-player
 SUBDIR+=	spotify-tui
 SUBDIR+=	spotifyd
 SUBDIR+=	spread4
