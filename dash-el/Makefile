@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	dash.el-2.16.0
+DISTNAME=	dash.el-2.19.0
+PKGNAME=	${DISTNAME:C/\.el//}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magnars/}
 
