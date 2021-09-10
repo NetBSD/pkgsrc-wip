@@ -2,17 +2,13 @@ $NetBSD$
 
 Add aarch64_be NetBSD target.
 
---- compiler/rustc_target/src/spec/aarch64_be_unknown_netbsd.rs.orig	2021-04-25 17:12:53.986628780 +0200
-+++ compiler/rustc_target/src/spec/aarch64_be_unknown_netbsd.rs	2021-04-25 18:00:57.795577197 +0200
-@@ -0,0 +1,20 @@
+--- compiler/rustc_target/src/spec/aarch64_be_unknown_netbsd.rs.orig	2021-09-10 09:47:35.334562996 +0000
++++ compiler/rustc_target/src/spec/aarch64_be_unknown_netbsd.rs
+@@ -0,0 +1,17 @@
 +use crate::abi::Endian;
 +use crate::spec::{Target, TargetOptions};
 +
 +pub fn target() -> Target {
-+    let mut base = super::netbsd_base::opts();
-+    base.max_atomic_width = Some(128);
-+    base.unsupported_abis = super::arm_base::unsupported_abis();
-+
 +    Target {
 +        llvm_target: "aarch64_be-unknown-netbsd".to_string(),
 +        pointer_width: 64,
@@ -20,8 +16,9 @@ Add aarch64_be NetBSD target.
 +        arch: "aarch64".to_string(),
 +        options: TargetOptions {
 +            mcount: "__mcount".to_string(),
++            max_atomic_width: Some(128),
 +            endian: Endian::Big,
-+            ..base
++            ..super::netbsd_base::opts()
 +        },
 +    }
 +}

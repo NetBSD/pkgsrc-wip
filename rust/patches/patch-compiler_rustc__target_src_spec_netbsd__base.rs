@@ -3,7 +3,7 @@ $NetBSD$
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
 
---- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-07-26 14:43:01.000000000 +0000
+--- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-09-06 18:42:35.000000000 +0000
 +++ compiler/rustc_target/src/spec/netbsd_base.rs
 @@ -1,6 +1,14 @@
 -use crate::spec::{RelroLevel, TargetOptions};

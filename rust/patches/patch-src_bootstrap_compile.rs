@@ -2,9 +2,9 @@ $NetBSD: patch-src_bootstrap_compile.rs,v 1.1 2020/03/14 08:02:46 jperkin Exp $
 
 On Darwin, do not use @rpath for internal libraries.
 
---- src/bootstrap/compile.rs.orig	2021-03-23 16:15:10.000000000 +0000
+--- src/bootstrap/compile.rs.orig	2021-09-06 18:42:35.000000000 +0000
 +++ src/bootstrap/compile.rs
-@@ -360,7 +360,7 @@ fn copy_sanitizers(
+@@ -394,7 +394,7 @@ fn copy_sanitizers(
  
          if target == "x86_64-apple-darwin" || target == "aarch64-apple-darwin" {
              // Update the library’s install name to reflect that it has has been renamed.
