@@ -23,7 +23,7 @@ PYSETUPINSTALLARGS=	--prefix=${PREFIX}
 
 SUBST_CLASSES+=		pkgsrcvar
 SUBST_STAGE.pkgsrcvar=	do-build
-SUBST_FILES.pkgsrcvar=	virtManager/createconn.py virtManager/engine.py
+SUBST_FILES.pkgsrcvar=	virtManager/engine.py
 SUBST_VARS.pkgsrcvar+=	LOCALBASE VARBASE
 
 do-configure:
@@ -38,7 +38,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../wip/libosinfo/buildlink3.mk"
 .include "../../wip/libvirt-glib/buildlink3.mk"
-.include "../../wip/vte/buildlink3.mk"
+.include "../../x11/vte3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
