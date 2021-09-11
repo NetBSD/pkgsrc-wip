@@ -1856,6 +1856,7 @@ SUBDIR+=	jgraphx
 SUBDIR+=	jhbuild
 SUBDIR+=	jibri
 SUBDIR+=	jicofo
+SUBDIR+=	jira-cli
 SUBDIR+=	jitsi
 SUBDIR+=	jitsi-meet
 SUBDIR+=	jitsi-meet-prosody
