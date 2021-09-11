@@ -26,4 +26,5 @@ CONFIGURE_ARGS+=	--with-usb-ids-path=${PREFIX}/share/usbids
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
