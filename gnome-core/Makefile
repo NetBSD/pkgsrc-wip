@@ -116,7 +116,7 @@ DEPENDS+=	gnome-tracker-[0-9]*:../../wip/gnome-tracker # upstream name "tracker"
 DEPENDS+=	vala-[0-9]*:../../lang/vala
 # TODO valadoc
 DEPENDS+=	vino-[0-9]*:../../wip/vino
-DEPENDS+=	vte-[0-9]*:../../wip/vte # x11/vte029 ?
+DEPENDS+=	vte3-[0-9]*:../../x11/vte3
 # wing - Windows only
 DEPENDS+=	yelp3-[0-9]*:../../misc/yelp3
 DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools

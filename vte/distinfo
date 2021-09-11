@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2015/06/06 15:46:31 krytarowski Exp $
-
-SHA1 (vte-0.48.3.tar.gz) = 71bfc3f0f2e6286ddce0f30b2ddd667a5dbe5fc7
-RMD160 (vte-0.48.3.tar.gz) = a02a85df3d7a171890fa455568750a737b985467
-SHA512 (vte-0.48.3.tar.gz) = 6b837857487e8a8c2dff4d878d1eccc6995e443e42f34e1dfe714956e3f82350fe71d4ee5e3f75340be5e573f4575150f0a6a534c41715b483699c71fade284a
-Size (vte-0.48.3.tar.gz) = 662855 bytes
-SHA1 (patch-bindings_vala_app.vala) = fcb7c175fac42af26099828c5006ce56e33369e5

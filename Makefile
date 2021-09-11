@@ -5785,7 +5785,6 @@ SUBDIR+=	volctl
 SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vsearch
-SUBDIR+=	vte
 SUBDIR+=	vulkan-loader
 SUBDIR+=	wackamole
 SUBDIR+=	waffle
