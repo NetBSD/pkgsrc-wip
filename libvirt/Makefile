@@ -139,6 +139,8 @@ CONFIGURE_ARGS.Linux+=	--with-storage-mpath=yes
 # Unit files for all distros, harmless for other inits.
 CONFIGURE_ARGS.Linux+=	--with-init-script=systemd
 
+CHECK_PORTABILITY_SKIP+=	docs/*
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
