@@ -1,0 +1,54 @@
+=> Bootstrap dependency digest>=20010302: found digest-20190127
+WARNING: [license.mk] Every package should define a LICENSE.
+===> Skipping vulnerability checks.
+WARNING: No /usr/pkg/pkgdb/pkg-vulnerabilities file found.
+WARNING: To fix run: `/usr/sbin/pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities'.
+===> Building for termdbms-0.3alpha
+package modernc.org/tcl
+	imports modernc.org/libc/errno: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/errno
+package termdbms
+	imports modernc.org/sqlite
+	imports modernc.org/libc
+	imports modernc.org/libc/signal: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/signal
+package termdbms
+	imports modernc.org/sqlite
+	imports modernc.org/libc/sys/types: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/sys/types
+package termdbms
+	imports modernc.org/sqlite
+	imports modernc.org/libc
+	imports modernc.org/libc/time: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/time
+package termdbms
+	imports modernc.org/sqlite
+	imports modernc.org/libc
+	imports modernc.org/libc/unistd: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/libc@v1.11.3/unistd
+../.gopath/pkg/mod/golang.org/x/mod@v0.3.0/sumdb/note/note.go:194:2: missing go.sum entry for module providing package golang.org/x/crypto/ed25519 (imported by golang.org/x/mod/sumdb/note); to add:
+	go get golang.org/x/mod/sumdb/note@v0.3.0
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/present/parse.go:23:2: missing go.sum entry for module providing package github.com/yuin/goldmark (imported by golang.org/x/tools/present); to add:
+	go get golang.org/x/tools/present@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/present/parse.go:24:2: missing go.sum entry for module providing package github.com/yuin/goldmark/ast (imported by golang.org/x/tools/present); to add:
+	go get golang.org/x/tools/present@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/present/parse.go:25:2: missing go.sum entry for module providing package github.com/yuin/goldmark/renderer/html (imported by golang.org/x/tools/present); to add:
+	go get golang.org/x/tools/present@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/present/parse.go:26:2: missing go.sum entry for module providing package github.com/yuin/goldmark/text (imported by golang.org/x/tools/present); to add:
+	go get golang.org/x/tools/present@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/godoc/redirect/redirect.go:22:2: missing go.sum entry for module providing package golang.org/x/net/context/ctxhttp (imported by golang.org/x/tools/godoc/redirect); to add:
+	go get golang.org/x/tools/godoc/redirect@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/cmd/html2article/conv.go:21:2: missing go.sum entry for module providing package golang.org/x/net/html (imported by golang.org/x/tools/cmd/html2article); to add:
+	go get golang.org/x/tools/cmd/html2article@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/cmd/html2article/conv.go:22:2: missing go.sum entry for module providing package golang.org/x/net/html/atom (imported by golang.org/x/tools/cmd/html2article); to add:
+	go get golang.org/x/tools/cmd/html2article@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/playground/socket/socket.go:36:2: missing go.sum entry for module providing package golang.org/x/net/websocket (imported by golang.org/x/tools/playground/socket); to add:
+	go get golang.org/x/tools/playground/socket@v0.0.0-20201124115921-2c860bdd6e78
+../.gopath/pkg/mod/golang.org/x/tools@v0.0.0-20201124115921-2c860bdd6e78/internal/lsp/cache/analysis.go:16:2: missing go.sum entry for module providing package golang.org/x/sync/errgroup (imported by golang.org/x/tools/internal/lsp/cache); to add:
+	go get golang.org/x/tools/internal/lsp/cache@v0.0.0-20201124115921-2c860bdd6e78
+package modernc.org/tcl
+	imports modernc.org/tcl/lib: build constraints exclude all Go files in /scratch/wip/termdbms/work/.gopath/pkg/mod/modernc.org/tcl@v1.5.9/lib
+pattern ...: github.com/google/goterm@v0.0.0-20190703233501-fc88cf888a3f: missing go.sum entry
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/termdbms
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/termdbms
