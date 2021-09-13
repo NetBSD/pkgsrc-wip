@@ -2891,6 +2891,7 @@ SUBDIR+=	p5-PDL
 SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
 SUBDIR+=	p5-Packager-Utils
+SUBDIR+=	p5-Perl-Unsafe-Signals
 SUBDIR+=	p5-PerlIO-Layers
 SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Plucene
