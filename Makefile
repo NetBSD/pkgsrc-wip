@@ -800,6 +800,7 @@ SUBDIR+=	evilvte
 SUBDIR+=	exabgp4
 SUBDIR+=	exact-image
 SUBDIR+=	exhume
+SUBDIR+=	exonerate
 SUBDIR+=	expiretable
 SUBDIR+=	exult-snapshot
 SUBDIR+=	ez-pine-gpg
