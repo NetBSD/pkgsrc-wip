@@ -4,7 +4,6 @@ maker/bin/cegma2zff
 maker/bin/chado2gff3
 maker/bin/compare_gff3_to_chado
 maker/bin/cufflinks2gff3
-maker/bin/evaluator
 maker/bin/fasta_merge
 maker/bin/fasta_tool
 maker/bin/genemark_gtf2gff3

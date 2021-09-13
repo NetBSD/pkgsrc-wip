@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	maker-3.01.03
+DISTNAME=	maker-3.01.04
 CATEGORIES=	biology
 MASTER_SITES=	http://weatherby.genetics.utah.edu/maker_downloads/E446/83FE/1E2C/EFF4EA9B639AD79928609B719046/ # XXX - private link
 EXTRACT_SUFX=	.tgz
