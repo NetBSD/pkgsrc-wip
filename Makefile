@@ -4951,6 +4951,7 @@ SUBDIR+=	regexxer
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	reone
+SUBDIR+=	repeatmasker
 SUBDIR+=	reproc
 SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
