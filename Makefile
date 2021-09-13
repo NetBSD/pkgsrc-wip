@@ -2294,6 +2294,7 @@ SUBDIR+=	majordomo-devel
 SUBDIR+=	makedict
 SUBDIR+=	makejvf
 SUBDIR+=	makepp
+SUBDIR+=	maker
 SUBDIR+=	malaga
 SUBDIR+=	maloc
 SUBDIR+=	man
