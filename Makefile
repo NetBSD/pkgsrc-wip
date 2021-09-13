@@ -5632,6 +5632,7 @@ SUBDIR+=	tree-sitter
 SUBDIR+=	treetool
 SUBDIR+=	treeviewx
 SUBDIR+=	trelby
+SUBDIR+=	trf
 SUBDIR+=	triangle
 SUBDIR+=	triforceafl
 SUBDIR+=	triforcenetbsdsyscallfuzzer
