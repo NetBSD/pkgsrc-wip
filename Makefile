@@ -78,6 +78,7 @@ SUBDIR+=	R-wk
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
+SUBDIR+=	SNAP
 SUBDIR+=	SOGo5
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
