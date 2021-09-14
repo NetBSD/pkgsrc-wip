@@ -224,6 +224,8 @@ maker/lib/polisher/exonerate/protein.pm
 maker/lib/repeat_mask_seq.pm
 maker/lib/runlog.pm
 maker/lib/shadow_AED.pm
+maker/perl/lib/MAKER/ConfigData.pm
+maker/perl/lib/Parallel/Application/MPI.pm
+maker/perl/lib/auto/MAKER/.packlist
+maker/perl/man/MAKER::ConfigData.3
 share/doc/maker/README
-@pkgdir maker/lib/verifier
-@pkgdir maker/lib/Parallel/Application

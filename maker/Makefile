@@ -37,6 +37,14 @@ REPLACE_PERL+=	lib/Nuc_translator.pm
 REPLACE_PERL+=	lib/Widget/fgenesh/fgenesh_wrap
 REPLACE_PERL+=	lib/Widget/genemark/gmhmm_wrap
 
+SUBST_CLASSES+=		PATH
+SUBST_STAGE.PATH=	post-build
+SUBST_FILES.PATH=	perl/lib/MAKER/ConfigData.pm
+SUBST_SED.PATH+=	-e 's,${WRKDIR}/.cwrapper/bin:,,'
+SUBST_SED.PATH+=	-e 's,${WRKDIR}/.buildlink/bin:,,'
+SUBST_SED.PATH+=	-e 's,${WRKDIR}/.tools/bin:,,'
+SUBST_SED.PATH+=	-e 's,${WRKSRC}/src/../,${PREFIX}/maker,'
+
 INSTALLATION_DIRS+=	maker share/doc/maker
 
 post-extract:
@@ -61,7 +69,7 @@ do-build:
 	cd ${WRKSRC}/src && ${PERL5} Build install
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw bin lib data ${DESTDIR}${PREFIX}/maker
+	cd ${WRKSRC} && ${PAX} -rw bin data lib perl ${DESTDIR}${PREFIX}/maker
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/maker
 
 .include "../../mk/bsd.pkg.mk"
