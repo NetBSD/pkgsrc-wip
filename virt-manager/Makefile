@@ -9,6 +9,10 @@ HOMEPAGE=	https://virt-manager.org/
 COMMENT=	GUI to manage virtual machines
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-libvirt-[0-9]*:../../wip/py-libvirt
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+
 USE_TOOLS+=	intltool
 
 REPLACE_PYTHON+=	virt-clone
@@ -16,6 +20,8 @@ REPLACE_PYTHON+=	virt-convert
 REPLACE_PYTHON+=	virt-install
 REPLACE_PYTHON+=	virt-manager
 REPLACE_PYTHON+=	virt-xml
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYSETUPCONFIGTARGET?=	configure
 PYSETUPCONFIGARGS=	--prefix=${PREFIX}
@@ -29,12 +35,6 @@ SUBST_VARS.pkgsrcvar+=	LOCALBASE VARBASE
 do-configure:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
 	 ${PYSETUP} ${PYSETUPARGS} ${PYSETUPCONFIGTARGET} ${PYSETUPCONFIGARGS})
-
-
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-DEPENDS+=	${PYPKGPREFIX}-libvirt-[0-9]*:../../wip/py-libvirt
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../wip/libosinfo/buildlink3.mk"
 .include "../../wip/libvirt-glib/buildlink3.mk"
