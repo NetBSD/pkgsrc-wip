@@ -344,6 +344,7 @@ SUBDIR+=	bstone
 SUBDIR+=	bsvc
 SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
+SUBDIR+=	budgie-screensaver
 SUBDIR+=	bugsx
 SUBDIR+=	bugzilla
 SUBDIR+=	bup-git
