@@ -13,16 +13,18 @@ HOMEPAGE=	https://github.com/getsolus/budgie-screensaver/
 COMMENT=	Requirement for budgie desktop
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config intltool automake autoconf autoupdate
+USE_TOOLS+=	pkg-config intltool automake autoconf autoreconf autoupdate m4
+GNU_CONFIGURE=	YES
 
 WRKSRC=			${WRKDIR}/budgie-screensaver-4.0
 USE_PKGLOCALEDIR=	yes
 
 pre-configure:
-	cd ${WRKSRC} && autoupdate
+	cd ${WRKSRC} && autoreconf -fiv
 
-do-configure:
-	cd ${WRKSRC} && autoconf
 
-#.include "../../devel/meson/build.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/gettext/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

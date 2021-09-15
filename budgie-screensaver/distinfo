@@ -4,3 +4,4 @@ SHA1 (budgie-screensaver/v4.0.tar.gz) = aaf2f9f6cef94f8e6f2d943116d7b59d1e4c9409
 RMD160 (budgie-screensaver/v4.0.tar.gz) = 9bc53ca51eaf2439b64414ec9963c8624dc3eb14
 SHA512 (budgie-screensaver/v4.0.tar.gz) = dba7270ccf359b04c8d1e69d38be812ece839664d7a7a91cf2a637ad5260b8890b697e31052b6c4902c6c922f1651bc9e2ff3a44904b11d336be46de09508693
 Size (budgie-screensaver/v4.0.tar.gz) = 548458 bytes
+SHA1 (patch-configure.ac) = afa6a6c5932df2abe286ac9db89aa7b701e820c3
