@@ -1348,7 +1348,6 @@ SUBDIR+=	go-xid
 SUBDIR+=	go-zeroconf
 SUBDIR+=	go-zipexe
 SUBDIR+=	goattracker
-SUBDIR+=	gobang
 SUBDIR+=	godura
 SUBDIR+=	goldendict
 SUBDIR+=	golly
