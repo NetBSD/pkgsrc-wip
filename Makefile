@@ -357,7 +357,6 @@ SUBDIR+=	c-news
 SUBDIR+=	c2go
 SUBDIR+=	c2hs
 SUBDIR+=	c3270
-SUBDIR+=	cJSON
 SUBDIR+=	cabal-install
 SUBDIR+=	cacti-plugin-aggregate
 SUBDIR+=	cacti-plugin-monitor
