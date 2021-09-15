@@ -1091,6 +1091,7 @@ SUBDIR+=	geekcode
 SUBDIR+=	gemma
 SUBDIR+=	generand
 SUBDIR+=	geners
+SUBDIR+=	genometools
 SUBDIR+=	genus2reduction
 SUBDIR+=	geoloc
 SUBDIR+=	gerbera
