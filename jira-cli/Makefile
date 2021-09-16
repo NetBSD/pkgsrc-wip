@@ -3,7 +3,7 @@
 DISTNAME=	jira-cli-0.0.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ankitpokhrel/}
 CATEGORIES=	net
-GITHUB_TAG=	7600cb925bc71caa4e6546e404f02f77ac677876
+GITHUB_TAG=	4d08dd5c7a72cf3bbc9b30a4b363b2eaa402cc16
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/ankitpokhrel/jira-cli
@@ -17,7 +17,9 @@ INSTALLATION_DIRS+=	bin man/man7
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/jira ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man-pages/* ${DESTDIR}${PREFIX}/man/man7
+
+post-install:
+	${DESTDIR}${PREFIX}/bin/jira man -g -o ${DESTDIR}${PREFIX}/man/man7
 
 .include "go-modules.mk"
 
