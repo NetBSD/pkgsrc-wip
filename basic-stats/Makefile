@@ -5,10 +5,9 @@
 #              Wed May 20 07:41:36 CDT 2020               #
 ###########################################################
 
-DISTNAME=	basic-stats-0.0.0.8
+DISTNAME=	basic-stats-0.1.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	a519b6ee22e7c0c4054c2332a56d1b1b4e19f829
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/basic-stats
@@ -18,4 +17,5 @@ LICENSE=	2-clause-bsd
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/basic-stats
 
+.include "../../wip/libxtend/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

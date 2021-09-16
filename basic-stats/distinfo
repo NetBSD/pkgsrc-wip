@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (basic-stats-0.0.0.8-a519b6ee22e7c0c4054c2332a56d1b1b4e19f829.tar.gz) = ed090c1abae5d4bd164fc35f73c3527cd627b870
-RMD160 (basic-stats-0.0.0.8-a519b6ee22e7c0c4054c2332a56d1b1b4e19f829.tar.gz) = ae0c5342adf4ec4e5f37d5f6820920ca1f6e0365
-SHA512 (basic-stats-0.0.0.8-a519b6ee22e7c0c4054c2332a56d1b1b4e19f829.tar.gz) = b51141b294d3bc501d2d029bca8b63d8c9dd0fb4cc5e7602e8921f67e24d796a7c81ce700e04cc9f9466c11af4142b5a3fceb0422713b5d5c610a2f2bcb943ee
-Size (basic-stats-0.0.0.8-a519b6ee22e7c0c4054c2332a56d1b1b4e19f829.tar.gz) = 5229 bytes
+SHA1 (basic-stats-0.1.0.tar.gz) = 9f1f568eb2bd5c266f72870746452e165f7eef4b
+RMD160 (basic-stats-0.1.0.tar.gz) = 3764419df0bcdd326cd487a92a98aea7ee1678f8
+SHA512 (basic-stats-0.1.0.tar.gz) = feb290f9f88b0bb2e4aebde83a33356e82a69f86d1e30c1cdb053a39b39cab20b489952a9e5502cc5f8dc0a9d09f31a8a4cf8cc1c75c2ada355ae892693f9e5f
+Size (basic-stats-0.1.0.tar.gz) = 7077 bytes
