@@ -552,7 +552,6 @@ SUBDIR+=	crust-firmware
 SUBDIR+=	cryptcat
 SUBDIR+=	crystal
 SUBDIR+=	crystal-bin
-SUBDIR+=	csmith
 SUBDIR+=	csoap
 SUBDIR+=	csp2b
 SUBDIR+=	csstidy
