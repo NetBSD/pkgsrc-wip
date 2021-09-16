@@ -1191,6 +1191,12 @@ qt6/lib/cmake/Qt63DRender/Qt6DefaultGeometryLoaderPluginConfigVersion.cmake
 qt6/lib/cmake/Qt63DRender/Qt6DefaultGeometryLoaderPluginDependencies.cmake
 qt6/lib/cmake/Qt63DRender/Qt6DefaultGeometryLoaderPluginTargets-release.cmake
 qt6/lib/cmake/Qt63DRender/Qt6DefaultGeometryLoaderPluginTargets.cmake
+qt6/lib/cmake/Qt63DRender/Qt6GLTFGeometryLoaderPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt63DRender/Qt6GLTFGeometryLoaderPluginConfig.cmake
+qt6/lib/cmake/Qt63DRender/Qt6GLTFGeometryLoaderPluginConfigVersion.cmake
+qt6/lib/cmake/Qt63DRender/Qt6GLTFGeometryLoaderPluginDependencies.cmake
+qt6/lib/cmake/Qt63DRender/Qt6GLTFGeometryLoaderPluginTargets-release.cmake
+qt6/lib/cmake/Qt63DRender/Qt6GLTFGeometryLoaderPluginTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt6GLTFSceneExportPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DRender/Qt6GLTFSceneExportPluginConfig.cmake
 qt6/lib/cmake/Qt63DRender/Qt6GLTFSceneExportPluginConfigVersion.cmake
@@ -1356,6 +1362,7 @@ qt6/modules/3DQuickRender.json
 qt6/modules/3DQuickScene2D.json
 qt6/modules/3DRender.json
 qt6/plugins/geometryloaders/libdefaultgeometryloader.so
+qt6/plugins/geometryloaders/libgltfgeometryloader.so
 qt6/plugins/renderers/libopenglrenderer.so
 qt6/plugins/renderers/librhirenderer.so
 qt6/plugins/renderplugins/libscene2d.so
