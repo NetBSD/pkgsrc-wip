@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.4 2012/11/23 22:33:29 othyro Exp $
-#
 
-DISTNAME=	csmith-2.1.0
+DISTNAME=	csmith-2.3.0
 CATEGORIES=	devel
-MASTER_SITES=	http://embed.cs.utah.edu/csmith/
+MASTER_SITES=	https://embed.cs.utah.edu/csmith/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://embed.cs.utah.edu/csmith/
