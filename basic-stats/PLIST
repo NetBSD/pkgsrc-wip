@@ -1,2 +1,3 @@
 @comment $NetBSD$
 bin/basic-stats
+man/man1/basic-stats.1
