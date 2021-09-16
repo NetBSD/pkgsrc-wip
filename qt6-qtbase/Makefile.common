@@ -11,6 +11,7 @@
 # used by wip/qt6-qtquick3d/Makefile
 # used by wip/qt6-qtquickcontrols2/Makefile
 # used by wip/qt6-qtquicktimeline/Makefile
+# used by wip/qt6-qtscxml/Makefile
 # used by wip/qt6-qtshadertools/Makefile
 # used by wip/qt6-qtsvg/Makefile
 # used by wip/qt6-qttools/Makefile

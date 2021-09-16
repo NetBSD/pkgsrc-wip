@@ -22,6 +22,7 @@ DEPENDS+=	qt6-qtnetworkauth-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtnetworkauth
 DEPENDS+=	qt6-qtquick3d-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtquick3d
 DEPENDS+=	qt6-qtquickcontrols2-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtquickcontrols2
 DEPENDS+=	qt6-qtquicktimeline-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtquicktimeline
+DEPENDS+=	qt6-qtscxml-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtscxml
 DEPENDS+=	qt6-qtshadertools-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtshadertools
 DEPENDS+=	qt6-qtsvg-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtsvg
 DEPENDS+=	qt6-qttools-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qttools
