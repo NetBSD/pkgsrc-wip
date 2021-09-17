@@ -193,4 +193,3 @@ qt6/qml/QtQml/StateMachine/qmldir
 qt6/qml/QtScxml/libdeclarative_scxml.so
 qt6/qml/QtScxml/plugins.qmltypes
 qt6/qml/QtScxml/qmldir
-@pkgdir qt6/lib/cmake/Qt6
