@@ -1,0 +1,4 @@
+Auto-dev is a collection of tools to aid in code development and
+documentation.  It automates tasks such as generating man pages (from
+specially formatted comments) and generating accessor and mutator
+functions from structure definitions in a C header.
