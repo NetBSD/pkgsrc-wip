@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (auto-dev-0.0.0.3-050247daf1f65b02fb7fdb6c7ad13f4a923badca.tar.gz) = c200fc2f4f2bac872390809c9ddd8038bd82e94d
-RMD160 (auto-dev-0.0.0.3-050247daf1f65b02fb7fdb6c7ad13f4a923badca.tar.gz) = e6295a4a412bdb6c5c1aa51efd55817cebcac0bf
-SHA512 (auto-dev-0.0.0.3-050247daf1f65b02fb7fdb6c7ad13f4a923badca.tar.gz) = 593929b5d499875663491a12a7bd65ddbb8d0e7c45e6ccd503406f76749be74ac0208bf4f257d8ce082db1f5daf1363713847eaaaba7c218c5111da3b3fadc9e
-Size (auto-dev-0.0.0.3-050247daf1f65b02fb7fdb6c7ad13f4a923badca.tar.gz) = 11363 bytes
+SHA1 (auto-dev-0.0.0.4-2495ba6bda89eb210c167230bc9ab0e486f21fc6.tar.gz) = 8eb816d11121b5700de6c2f3bdc13f7e5c7dc940
+RMD160 (auto-dev-0.0.0.4-2495ba6bda89eb210c167230bc9ab0e486f21fc6.tar.gz) = 33bd762133057db5dfad95635cd3addcccdc8567
+SHA512 (auto-dev-0.0.0.4-2495ba6bda89eb210c167230bc9ab0e486f21fc6.tar.gz) = 06167ed6dbcd6d82d648addd25a0913390833536485a454a4186a475a7665a9fb0ae6fcb1f1f49a6528b83d31b4fd37cf28de629b3c7706d4bd141ec8be048c1
+Size (auto-dev-0.0.0.4-2495ba6bda89eb210c167230bc9ab0e486f21fc6.tar.gz) = 11414 bytes
