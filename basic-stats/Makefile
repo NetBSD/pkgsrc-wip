@@ -5,15 +5,18 @@
 #              Wed May 20 07:41:36 CDT 2020               #
 ###########################################################
 
-DISTNAME=	basic-stats-0.1.0.7
+DISTNAME=	basic-stats-0.1.0.8
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	aedbb637c6c26b56095998fd34668f51febaab07
+GITHUB_TAG=	2c399beda7a0dbc8f3473d40e29f16716e083d47
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/basic-stats
 COMMENT=	Command-line tool to perform basic statistics on tabular data
 LICENSE=	2-clause-bsd
+
+pre-build:
+	cd ${WRKSRC} && ${MAKE} LOCALBASE=${LOCALBASE} depend
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/basic-stats
