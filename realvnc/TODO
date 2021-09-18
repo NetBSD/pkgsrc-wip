@@ -14,3 +14,6 @@
 gcc -O2 -ansi -Dasm=__asm GccWarningOptions   -I../../include -I../../exports/include/X11  -I../.. -I../../exports/include -I/usr/X11R6/include  -DCSRG_BASED  -DFUNCPROTO=15 -DNARROWPROTO     -DCPP_PROGRAM="\"cpp\"" -DHAS_MERGE_CONSTANTS=`if gcc -fmerge-constants -xc /dev/null -S -o /dev/null 2> /dev/null 1> /dev/null; then echo 1; else echo 0; fi`            -c imake.c
 gcc: GccWarningOptions: No such file or directory
 *** Error code 1
+
+- Possible vulnerabilites to investigate:
+	CVE-2021-41380
