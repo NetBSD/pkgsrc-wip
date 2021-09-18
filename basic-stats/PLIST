@@ -1,5 +1,12 @@
 @comment $NetBSD$
 bin/basic-stats
+include/basic-stats-protos.h
+include/basic-stats.h
+include/statsf-list-protos.h
+include/statsf-list.h
+include/statsf-protos.h
+include/statsf.h
+lib/basic-stats.a
 man/man1/basic-stats.1
 man/man3/STATSF_ARRAY_SIZE.3
 man/man3/STATSF_CODE.3
