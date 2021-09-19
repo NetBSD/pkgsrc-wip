@@ -5,10 +5,10 @@
 #              Wed May 20 07:41:36 CDT 2020               #
 ###########################################################
 
-DISTNAME=	basic-stats-0.1.0.15
+DISTNAME=	basic-stats-0.1.0.16
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	a0f075831c39351beaad21c1eee8cd656bc2cd23
+GITHUB_TAG=	c27e8f8201c5e71c216bf9f39111307d3459ec8f
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/basic-stats
@@ -18,10 +18,9 @@ LICENSE=	2-clause-bsd
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == Darwin
-BUILD_TARGET=	apple
 INSTALL_TARGET=	apple-install
 .else
-INSTALL_TARGET=	install
+INSTALL_TARGET=	install-strip
 PLIST.cs=	yes
 .endif
 
