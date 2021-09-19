@@ -1,0 +1,19 @@
+TODO: the repl wants a writable ${INSTALLDIR}/cmd/tools directory.
+
+TODO: some tests (${WRKSRC}/v test-all) fail with missing headers
+      and/or libraries, or some real failures (but most of the tests pass).
+
+TODO: Type net.Addr (a network address) seems not to get defined.
+
+TODO: Uses 'pthread_rwlockattr_setpshared()' which NetBSD doesn't seem to
+implement.
+
+$ CFLAGS=-D_PTHREAD_PSHARED ./v test
+failed    cmd: "/tmpfs/wip/vlang/work.x86_64/v-weekly.2021.37/v" -skip-unused "/tmpfs/wip/vlang/work.x86_64/v-weekly.2021.37/cmd/tools/vtest.v"
+failed   code: 1
+==================
+ld: /tmp//ccJpZukZ.o: in function `sync__RwMutex_init':
+vtest.8479168851317294636.tmp.c:(.text+0x1f877): undefined reference to `pthread_rwlockattr_setpshared'
+...
+
+I patched it out. Should be upstreamed somehow, cleanly.
