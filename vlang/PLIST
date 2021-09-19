@@ -774,6 +774,7 @@ libexec/vlang/vlib/sync/pool/pool_test.v
 libexec/vlang/vlib/sync/select_close_test.v
 libexec/vlang/vlib/sync/struct_chan_init_test.v
 libexec/vlang/vlib/sync/sync_default.c.v
+libexec/vlang/vlib/sync/sync_default.c.v.orig
 libexec/vlang/vlib/sync/sync_macos.c.v
 libexec/vlang/vlib/sync/sync_windows.c.v
 libexec/vlang/vlib/sync/threads/threads.c.v
