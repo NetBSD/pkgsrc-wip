@@ -2,8 +2,10 @@
 bin/basic-stats
 include/basic-stats-protos.h
 include/basic-stats.h
+include/statsf-list-mutators-protos.h
 include/statsf-list-protos.h
 include/statsf-list.h
+include/statsf-mutators-protos.h
 include/statsf-protos.h
 include/statsf.h
 lib/basic-stats.a
