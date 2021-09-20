@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	lodepng
+
+.if !defined(LODEPNG_BUILDLINK3_MK)
+LODEPNG_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.lodepng+=	lodepng>=0.0nb20210920
+BUILDLINK_PKGSRCDIR.lodepng?=	../../wip/lodepng-git
+.endif	# LODEPNG_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-lodepng
