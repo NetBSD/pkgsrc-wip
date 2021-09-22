@@ -181,7 +181,6 @@ REPLACE_PERL+=	scripts/zmx10.pl.in
 #
 
 CHECK_INTERPRETER_SKIP+=	bin/zmsystemctl.pl
-EXTRA_PERL+=			scripts/zmsystemctl.pl.in
 
 SUBST_CLASSES+=			systemd-perl
 SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
