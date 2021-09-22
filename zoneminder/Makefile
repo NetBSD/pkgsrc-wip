@@ -25,6 +25,7 @@ EXTRACT_USING=	gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
+# This PHP 5.6 limitation is only to match the limitation in php-mysql
 PHP_VERSIONS_ACCEPTED=	56
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zoneminder
@@ -41,7 +42,7 @@ USE_TOOLS+=	aclocal autoconf autoheader automake gmake perl pkg-config
 # configuration.  We take the view that if an installation can be
 # reasonably configured to use a module, that module should be a
 # dependency, absent some reason that it is so heavyweight that it
-# shoudl be an option.
+# should be an option.
 
 # MIME::Entity is needed from p5-MIME-tools
 # LWP::UserAgent is needed from p5-libwww
