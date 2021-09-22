@@ -34,5 +34,5 @@ share/commandergenius/scripts/Keen9/snd/sndmap.lua
 share/commandergenius/scripts/Oblivion/exitToLevel.py
 share/commandergenius/scripts/Oblivion/extraSpawn.py
 share/commandergenius/scripts/Oblivion/messageMap.py
-share/doc/commandergenius/README
+share/doc/commandergenius/README.md
 share/doc/commandergenius/changelog.txt
