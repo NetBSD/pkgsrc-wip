@@ -1,0 +1,8 @@
+update to newer upstream, which requires cmake
+
+validate that it actually runs
+
+push to pkgsrc
+
+investigate mysql and php
+
