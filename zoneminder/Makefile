@@ -4,7 +4,7 @@ VERSION=	1.29.0
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-PKGREVISION=	2
+PKGREVISION=	6
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 DISTNAME=	${NAME_DIST}-${VERSION}
@@ -70,7 +70,7 @@ BUILD_DEFS+=		ZM_HTTPD_CGIBIN
 OWN_DIRS+=		${ZM_HTTPD_CGIBIN:Q}
 
 # Omit patchfiles from PLIST.
-PRINT_PLIST_AWK+=       /.orig$$/ { next; }
+PRINT_PLIST_AWK+=	/.orig$$/ { next; }
 
 INSTALLATION_DIRS+=	share/zoneminder ${ZM_HTTPD_ROOT}
 INSTALLATION_DIRS+=	libexec/zoneminder ${ZM_HTTPD_CGIBIN}
@@ -188,7 +188,6 @@ SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
 SUBST_STAGE.systemd-perl=	pre-configure
 SUBST_FILES.systemd-perl=	scripts/zmsystemctl.pl.in
 SUBST_SED.systemd-perl=		-e 's|/usr/bin/perl|${PERL5}|g'
-
 
 SUBST_CLASSES+=			dbpaths-path
 SUBST_MESSAGE.dbpaths-path=	Adjusting default paths in configuration.
