@@ -13,13 +13,13 @@ LICENSE=	mit
 GO_BUILD_PATTERN=	./cmd/jira
 CHECK_RELRO_SKIP+=	bin/jira
 
-INSTALLATION_DIRS+=	bin man/man7
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man7
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/jira ${DESTDIR}${PREFIX}/bin
 
 post-install:
-	${DESTDIR}${PREFIX}/bin/jira man -g -o ${DESTDIR}${PREFIX}/man/man7
+	${DESTDIR}${PREFIX}/bin/jira man -g -o ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 
 .include "go-modules.mk"
 
