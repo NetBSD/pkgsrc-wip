@@ -2286,6 +2286,8 @@ share/emacs/${PKGVERSION}/lisp/international/charscript.el.gz
 share/emacs/${PKGVERSION}/lisp/international/charscript.elc
 share/emacs/${PKGVERSION}/lisp/international/cp51932.el.gz
 share/emacs/${PKGVERSION}/lisp/international/cp51932.elc
+share/emacs/${PKGVERSION}/lisp/international/emoji-zwj.el.gz
+share/emacs/${PKGVERSION}/lisp/international/emoji-zwj.elc
 share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el.gz
 share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.elc
 share/emacs/${PKGVERSION}/lisp/international/fontset.el.gz
@@ -3754,6 +3756,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/enriched.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/enriched.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/etc-authors-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/etc-authors-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/fill.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/fill.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/flyspell.el.gz
