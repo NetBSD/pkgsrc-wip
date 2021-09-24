@@ -68,6 +68,7 @@ man/man3/strptrcmp.3
 man/man3/strshellcpy.3
 man/man3/strsqueeze.3
 man/man3/strtr.3
+man/man3/strtrim.3
 man/man3/strviscpy.3
 man/man3/tsv_read_field.3
 man/man3/tsv_read_field_malloc.3
