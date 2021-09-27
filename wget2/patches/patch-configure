@@ -1,0 +1,16 @@
+$NetBSD$
+
+Unportable test(1) operator.
+https://gitlab.com/gnuwget/wget2/-/issues/562
+
+--- configure.orig	2021-09-12 11:37:49.000000000 +0000
++++ configure
+@@ -60016,7 +60016,7 @@ else $as_nop
+   if test "$with_ssl" != "none"
+ then :
+ 
+-    if test "$with_ssl" == "yes"
++    if test "$with_ssl" = "yes"
+ then :
+   as_fn_error $? "*** No SSL/TLS library not found." "$LINENO" 5
+ else $as_nop
