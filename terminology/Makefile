@@ -2,7 +2,7 @@
 
 DISTNAME=	terminology-1.9.0
 CATEGORIES=	x11
-#PKGREVISION=	
+PKGREVISION=	1
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/terminology/
 EXTRACT_SUFX=	.tar.xz
 
@@ -13,12 +13,10 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
-REPLACE_PYTHON+=	data/colorschemes/get_name.py
-REPLACE_PYTHON+=	data/colorschemes/gen_faint.py
-REPLACE_PYTHON+=	data/colorschemes/ini2desc.py
-
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	tool
+.include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/efl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
