@@ -2,7 +2,7 @@
 
 VERS=		1.48.8
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1582
+SVNVERS=	1585
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -101,8 +101,6 @@ pre-configure:
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
 	${CP} ${FILESDIR}/p_blockmap.c ${WRKSRC}/src
 	${CP} ${FILESDIR}/p_blockmap.h ${WRKSRC}/src
-	${CP} ${FILESDIR}/p_extnodes.c ${WRKSRC}/src
-	${CP} ${FILESDIR}/p_extnodes.h ${WRKSRC}/src
 	cd ${WRKSRC} && ${CP} make_options_nix make_options
 
 # Move configure options and process manpage template

@@ -1,20 +1,17 @@
 $NetBSD$
 
-Add object file for import of extended nodes and internal blockmap creation.
+Add object file for internal blockmap creation.
 
 Created upstream feature requests:
-https://sourceforge.net/p/doomlegacy/feature-requests/95/
 https://sourceforge.net/p/doomlegacy/feature-requests/96/
 
---- src/Makefile.orig	2020-05-11 09:40:36.000000000 +0000
+--- src/Makefile.orig	2021-09-27 10:05:53.000000000 +0000
 +++ src/Makefile
-@@ -1190,7 +1190,8 @@ screen.o v_video.o \
- r_draw.o r_plane.o r_segs.o r_sky.o r_things.o r_splats.o \
- r_bsp.o r_data.o r_main.o \
- z_zone.o \
--p_sight.o p_mobj.o p_enemy.o p_user.o p_inter.o p_pspr.o \
-+p_blockmap.o \
-+p_sight.o p_mobj.o p_enemy.o p_extnodes.o p_user.o p_inter.o p_pspr.o \
+@@ -1245,6 +1245,7 @@ p_sight.o p_mobj.o p_enemy.o p_user.o p_
  p_lights.o p_ceilng.o p_doors.o p_plats.o p_floor.o p_spec.o \
  p_switch.o p_genlin.o p_telept.o p_tick.o p_fab.o p_info.o p_setup.o \
+ p_extnodes.o \
++p_blockmap.o \
  p_map.o p_maputl.o \
+ p_heretic.o p_hsight.o \
+ p_chex.o \

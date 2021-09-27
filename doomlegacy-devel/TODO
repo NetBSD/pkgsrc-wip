@@ -1,23 +1,4 @@
 
-Part 7: Import final release
-============================
-[X] Import version 1.48.4 to pkgsrc
-    Parts 1 to 6 are now available in games/doomlegacy
-
-
-Part 8: Support for extended nodes
-==================================
-[X] Add patch to support DeeP and ZDoom extended nodes
-    This code is based on woof 1.2.0
-    Fixes Bug #657
-[X] Created upstream feature request #95
-    => Deferred (not considered for 1.48 release)
-[X] Add optional zlib dependency for build system
-[X] Add support for compressed ZDoom extended nodes
-    Use "zdbsp -z" to create test map with compressed ZDoom extended nodes
-    => Works as expected
-
-
 Part 9: Support for internal blockmap creation
 ==============================================
 Make it possible to play maps with broken blockmaps (or no blockmaps at all).
@@ -29,7 +10,7 @@ Make it possible to play maps with broken blockmaps (or no blockmaps at all).
 [X] Test as workaround for NOVA II
     Blockmap load error, Bug #658
     => Works as expected (needs Feature #95 too)
-[X] Test as as workaround for NOVA III
+[X] Test as workaround for NOVA III
     Blockmaps missing completely (needs Feature #95 too)
     => Works as expected
 [X] Test as workaround for Lost Civilization
