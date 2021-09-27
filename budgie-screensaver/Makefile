@@ -25,6 +25,6 @@ pre-configure:
 
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
-.include "../../devel/gettext/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

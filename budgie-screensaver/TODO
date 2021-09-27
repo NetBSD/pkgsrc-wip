@@ -1,0 +1,2 @@
+Check gettext bl3.  It was changed from gettext/ to gettext-lib/
+without understanding, because gettext/buildlink3.mk does not exist.
