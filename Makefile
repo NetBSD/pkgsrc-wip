@@ -2254,6 +2254,7 @@ SUBDIR+=	logwatch
 SUBDIR+=	lorder
 SUBDIR+=	love11
 SUBDIR+=	lpdsrv
+SUBDIR+=	lpjs
 SUBDIR+=	lrslib
 SUBDIR+=	lscpu
 SUBDIR+=	lsw
