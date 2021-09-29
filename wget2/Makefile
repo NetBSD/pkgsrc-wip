@@ -11,6 +11,7 @@ COMMENT=	Successor to wget with more modern features
 LICENSE=	gnu-lgpl-v3
 
 #USE_TOOLS+=		perl pod2man pkg-config
+USE_TOOLS+=		pkg-config
 
 GNU_CONFIGURE=		YES
 #USE_PKGLOCALEDIR=	YES
