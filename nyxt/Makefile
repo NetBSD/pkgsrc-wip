@@ -14,5 +14,7 @@ COMMENT=	Terminal browser
 LICENSE=	original-bsd
 
 
+.include "../../lang/sbcl/buildlink3.mk"
 .include "../../www/webkit24-gtk/buildlink3.mk"
+.include "../../wip/libfixposix/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
