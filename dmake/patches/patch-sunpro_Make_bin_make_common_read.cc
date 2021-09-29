@@ -5,7 +5,7 @@ Search default rules in "share/lib/dmake" and "usr/include/dmake".
 
 --- sunpro/Make/bin/make/common/read.cc.orig	2021-05-10 17:15:50.000000000 +0000
 +++ sunpro/Make/bin/make/common/read.cc
-@@ -226,14 +226,14 @@ read_simple_file(register Name makefile_
+@@ -229,14 +229,14 @@ read_simple_file(register Name makefile_
  						NOCATGETS("%s/../../share/lib/make"), run_dir);
  					} else {
  	                        		(void) sprintf(makerules_dir,
