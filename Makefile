@@ -2607,6 +2607,7 @@ SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nyan
 SUBDIR+=	nyh-hoc
+SUBDIR+=	nyxt
 SUBDIR+=	nzbget
 SUBDIR+=	objfw-fossil
 SUBDIR+=	obmenu
