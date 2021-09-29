@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libfixposix/v0.4.3.tar.gz) = 4b35f728e96948abd876c6514bb7d9b6c91455cc
-RMD160 (libfixposix/v0.4.3.tar.gz) = b113eac1f506018957c023cb5d2ca41181621539
-SHA512 (libfixposix/v0.4.3.tar.gz) = cd1ef4d51a885a0994475563472f0e9d03b8223a69d2f9b30666c2f7eb8716421434a829e710832ae58607944a09410efc693a51f76cb854ccc7278bf619702a
-Size (libfixposix/v0.4.3.tar.gz) = 40370 bytes
+SHA1 (libfixposix-0.4.3.tar.gz) = 4b35f728e96948abd876c6514bb7d9b6c91455cc
+RMD160 (libfixposix-0.4.3.tar.gz) = b113eac1f506018957c023cb5d2ca41181621539
+SHA512 (libfixposix-0.4.3.tar.gz) = cd1ef4d51a885a0994475563472f0e9d03b8223a69d2f9b30666c2f7eb8716421434a829e710832ae58607944a09410efc693a51f76cb854ccc7278bf619702a
+Size (libfixposix-0.4.3.tar.gz) = 40370 bytes

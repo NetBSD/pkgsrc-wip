@@ -1,12 +1,10 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	libfixposix
-GITHUB_TAG=	v0.4.3
-DISTNAME=	v0.4.3
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-CATEGORIES=	sysutils
+DISTNAME=	libfixposix-0.4.3
+PKGNAME=	${DISTNAME}
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sionescu/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sionescu/libfixposix/
