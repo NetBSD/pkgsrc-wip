@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
-REPLACE_PERL+=		*/*.pl contrib/smime_keys
+REPLACE_PERL+=		contrib/samples/*.pl contrib/smime_keys
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--smime
 PLIST.smime=		yes
