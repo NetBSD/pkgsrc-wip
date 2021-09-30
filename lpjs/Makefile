@@ -5,11 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.0.44
+DISTNAME=	lpjs-0.0.0.46
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	324c93b947a6a8d3303d7ebf683cbd89a8d1653f
+GITHUB_TAG=	4f801b51bf7f9c5fbb8c5cc216b4bbc1a113fb43
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -29,4 +29,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/lpjs/config.sample ${DESTDIR}${EGDIR}
 
 .include "../../wip/libxtend/buildlink3.mk"
+.include "../../security/munge/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
