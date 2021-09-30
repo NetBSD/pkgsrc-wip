@@ -5,11 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.0.46
+DISTNAME=	lpjs-0.0.0.51
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	4f801b51bf7f9c5fbb8c5cc216b4bbc1a113fb43
+GITHUB_TAG=	f30dc95c987a24abba4be094ee97c9e254578ee5
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -19,6 +19,8 @@ LICENSE=	2-clause-bsd
 EGDIR=		${PREFIX}/share/examples/lpjs
 OWN_DIRS=	${PKG_SYSCONFDIR}/lpjs
 CONF_FILES=	${EGDIR}/config.sample ${PKG_SYSCONFDIR}/lpjs/config
+
+RCD_SCRIPTS+=		lpjs_dispatchd lpjs_compd
 
 INSTALLATION_DIRS=	share/examples/lpjs
 
