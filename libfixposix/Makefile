@@ -1,20 +1,18 @@
 # $NetBSD$
 
-DISTNAME=	libfixposix-0.4.3
-PKGNAME=	${DISTNAME}
+DISTNAME=	libfixposix-0.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sionescu/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	040cd8fba91e7bec8a14236db9f318c70f8c5390
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sionescu/libfixposix/
 COMMENT=	Thin wrapper over POSIX syscalls
 LICENSE=	boost-license
 
-USE_TOOLS+=	pkg-config autoreconf autoconf automake intltool autoupdate m4
+USE_TOOLS+=	pkg-config autoconf automake
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-
-WRKSRC=		${WRKDIR}/libfixposix-0.4.3
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv

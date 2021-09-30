@@ -1,1 +1,2 @@
-Thin wrapper for posix syscalls
+The purpose of libfixposix is to offer replacements for parts of POSIX whose
+behaviour is inconsistent across *NIX flavours.
