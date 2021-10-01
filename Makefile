@@ -375,6 +375,7 @@ SUBDIR+=	calcurse
 SUBDIR+=	calendarsupport
 SUBDIR+=	calibre
 SUBDIR+=	calypso-git
+SUBDIR+=	canlock-hp
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
