@@ -1,9 +1,10 @@
 @comment $NetBSD$
-bin/lpjs-chaperone
 bin/lpjs-jobs
-bin/lpjs-node-specs
 bin/lpjs-nodes
 bin/lpjs-submit
+sbin/lpjs-chaperone
+sbin/lpjs-node-specs
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
+@pkgdir etc/lpjs
