@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pinout-0.0.10.tar.gz) = de7befabe24838b0b8c03f426a57b5e199b98c23
-RMD160 (pinout-0.0.10.tar.gz) = 4a6fede4d38a8b7fd1c46d930b281d9c1233b7d1
-SHA512 (pinout-0.0.10.tar.gz) = 8db7a0b796c0259fe0e3ec760d3aa26abae6f2a5fa9ec472ce4e4f14d70c0f15ee8d73640d0688b394674ee2949ff15156694c0a2face318dcdc3206ad3b43a6
-Size (pinout-0.0.10.tar.gz) = 568881 bytes
+SHA1 (pinout-0.0.18.tar.gz) = 83f75fba06f0c9ccfa85cda374ff504ee78605c8
+RMD160 (pinout-0.0.18.tar.gz) = 4018cf9357bcfe9594c1ceaf2fa1dece308b213a
+SHA512 (pinout-0.0.18.tar.gz) = c5b569f56f1b3313187816be0ba282ef9a5a5bc6a10c51b341a72f569ba9b6f1f031ed2f82b9fa7dcd6ab897c13aa85423154915ef388dcbcb3d4bc3da208e48
+Size (pinout-0.0.18.tar.gz) = 767876 bytes
