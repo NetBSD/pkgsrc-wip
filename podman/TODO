@@ -1,0 +1,4 @@
+- `podman machine init' does not seem to work - or at least do not create the
+  `.ign' file that can be overwritten/adjusted in order to be able to customize
+  kernel boot arguments.  Investigate it!
+- Document newly added patch
