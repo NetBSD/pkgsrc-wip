@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.157 2021/07/15 14:06:56 schmonz Exp $
 
-SHA1 (mesa-21.2.0.tar.xz) = 69201327595bc1ec06836af3ecb07c4fabf723c8
-RMD160 (mesa-21.2.0.tar.xz) = fb6172f83f72304fde8066077fb5ef5f70007172
-SHA512 (mesa-21.2.0.tar.xz) = 14323ac474bbcf178177506b5a68976238d2e7bdbdcdf4d1355dd43f5bd551c6cdebed76558c34f49ed057477ec88775306b7b8484b437325e4cb4a77e16127e
-Size (mesa-21.2.0.tar.xz) = 15678224 bytes
+SHA1 (mesa-21.2.3.tar.xz) = bcc7fdd409d896cd889db3858258a85617e4fd48
+RMD160 (mesa-21.2.3.tar.xz) = 34c653e382bb2766836c912659eb07846212c49f
+SHA512 (mesa-21.2.3.tar.xz) = a5841c200416c19b60563a3823dd51592627e64f5f794c9fa3fba630e33a126048866e9b425739d88f2832770646a7ba8752a718a50d06266392b92d1a7370ea
+Size (mesa-21.2.3.tar.xz) = 15780780 bytes
 SHA1 (patch-src_compiler_builtin__type__macros.h) = e4868011711fb89a293580a12eb603b8e7162336
 SHA1 (patch-src_drm-shim_drm__shim.c) = 6884d31dc3e9d47aac1785589ab289a601e64545
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 9230fbae2c04246ebca8437ecad694bbae857fbe
