@@ -11,7 +11,7 @@ COMMENT=	Library for storing, validating, and calculating with parameters
 #LICENSE=	Copyright (c) 2016, Chris Mutel and Paul Scherrer Institut.
 
 DEPENDS+=	${PYPKGPREFIX}-asteval>=0.9.21:../../math/py-asteval
-DEPENDS+=	${PYPKGPREFIX}-astunparse>=1.6.3:../../wip/py-astunparse
+DEPENDS+=	${PYPKGPREFIX}-astunparse>=1.6.3:../../devel/py-astunparse
 DEPENDS+=	${PYPKGPREFIX}-stats-arrays>=0.6.4:../../wip/py-stats-arrays
 
 .include "../../math/py-numpy/buildlink3.mk"

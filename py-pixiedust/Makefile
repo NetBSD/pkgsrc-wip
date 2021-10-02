@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-geojson>=2.5.0:../../geography/py-geojson
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.1.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-colour>=0.1.5:../../textproc/py-colour
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.2:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-astunparse>=1.6.3:../../wip/py-astunparse
+DEPENDS+=	${PYPKGPREFIX}-astunparse>=1.6.3:../../devel/py-astunparse
 DEPENDS+=	${PYPKGPREFIX}-mpld3>=0.5.2:../../category/py-mpld3
 
 USE_LANGUAGES=	# none
