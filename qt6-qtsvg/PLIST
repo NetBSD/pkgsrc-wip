@@ -29,13 +29,11 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtSvgTestsConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfigVersion.cmake
-qt6/lib/cmake/Qt6Gui/Qt6QSvgIconPluginDependencies.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgPluginConfigVersion.cmake
-qt6/lib/cmake/Qt6Gui/Qt6QSvgPluginDependencies.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgAdditionalTargetInfo.cmake
@@ -60,6 +58,8 @@ qt6/lib/libQt6SvgWidgets.prl
 qt6/lib/libQt6SvgWidgets.so
 qt6/lib/libQt6SvgWidgets.so.6
 qt6/lib/libQt6SvgWidgets.so.${PKGVERSION}
+qt6/lib/metatypes/qt6svg_release_metatypes.json
+qt6/lib/metatypes/qt6svgwidgets_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_svg.pri
 qt6/mkspecs/modules/qt_lib_svg_private.pri
 qt6/mkspecs/modules/qt_lib_svgwidgets.pri

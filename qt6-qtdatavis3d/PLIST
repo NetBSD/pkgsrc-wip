@@ -172,6 +172,7 @@ qt6/lib/libQt6DataVisualization.prl
 qt6/lib/libQt6DataVisualization.so
 qt6/lib/libQt6DataVisualization.so.6
 qt6/lib/libQt6DataVisualization.so.${PKGVERSION}
+qt6/lib/metatypes/qt6datavisualization_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_datavisualization.pri
 qt6/mkspecs/modules/qt_lib_datavisualization_private.pri
 qt6/modules/DataVisualization.json
@@ -188,6 +189,6 @@ qt6/qml/QtDataVisualization/designer/images/scatter3d-icon16.png
 qt6/qml/QtDataVisualization/designer/images/surface3d-icon.png
 qt6/qml/QtDataVisualization/designer/images/surface3d-icon16.png
 qt6/qml/QtDataVisualization/designer/qtdatavisualization.metainfo
-qt6/qml/QtDataVisualization/libDataVisualizationQml2.so
+qt6/qml/QtDataVisualization/libdatavisualizationqml2plugin.so
 qt6/qml/QtDataVisualization/plugins.qmltypes
 qt6/qml/QtDataVisualization/qmldir

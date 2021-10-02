@@ -16,10 +16,10 @@ qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsConfig.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsConfigVersion.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsDependencies.cmake
-qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsMacros.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsTargets-release.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsTargets.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsVersionlessTargets.cmake
+qt6/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsMacros.cmake
 qt6/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfig.cmake
 qt6/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfigVersion.cmake
@@ -31,6 +31,7 @@ qt6/lib/libQt6ShaderTools.prl
 qt6/lib/libQt6ShaderTools.so
 qt6/lib/libQt6ShaderTools.so.6
 qt6/lib/libQt6ShaderTools.so.${PKGVERSION}
+qt6/lib/metatypes/qt6shadertools_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_shadertools.pri
 qt6/mkspecs/modules/qt_lib_shadertools_private.pri
 qt6/modules/ShaderTools.json

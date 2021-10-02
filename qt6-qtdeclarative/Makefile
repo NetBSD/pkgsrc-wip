@@ -14,5 +14,7 @@ post-install:
 
 .include "../../lang/python/tool.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
+.include "../../wip/qt6-qtimageformats/buildlink3.mk"
+.include "../../wip/qt6-qtshadertools/buildlink3.mk"
 .include "../../wip/qt6-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
