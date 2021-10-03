@@ -1,4 +1,8 @@
 - `podman machine init' does not seem to work - or at least do not create the
   `.ign' file that can be overwritten/adjusted in order to be able to customize
-  kernel boot arguments.  Investigate it!
+  kernel boot arguments. This is probably due
+  <https://github.com/containers/podman/issues/11824> and can be workarounded
+  by passing arguments to `machine init', the defaults are:
+
+   % podman machine init --cpus 1 --memory 2048 --disk-size 10
 - Document newly added patch
