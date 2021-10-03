@@ -5828,7 +5828,6 @@ SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	weston
 SUBDIR+=	wezterm
-SUBDIR+=	wget2
 SUBDIR+=	wgrib2
 SUBDIR+=	whatscli
 SUBDIR+=	which

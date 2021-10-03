@@ -1,7 +1,0 @@
-wget2 is a fresh and maintainable codebase with features like
-multithreaded downloads, HTTP2, OCSP, HSTS, Metalink, IDNA2008,
-Public Suffix List, Multi-Proxies, Sitemaps, Atom/RSS Feeds,
-compression (gzip, deflate, lzma, bzip2), support for local filenames,
-etc.  Some of these feature have been built into wget in the
-meantime, but some other are really hard to implement into the old
-codebase.
