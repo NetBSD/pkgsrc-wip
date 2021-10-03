@@ -1957,6 +1957,7 @@ SUBDIR+=	kstest
 SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	ktnef
+SUBDIR+=	kubectx
 SUBDIR+=	kubeval
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
