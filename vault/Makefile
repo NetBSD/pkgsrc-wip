@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vault-1.8.2
+DISTNAME=	vault-1.8.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
