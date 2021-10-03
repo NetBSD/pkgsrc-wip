@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	flux2-0.17.0
+DISTNAME=	flux2-0.17.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fluxcd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,7 +28,7 @@ REPLACE_BASH+=	manifests/scripts/bundle.sh
 
 # Build the embedded manifests
 pre-build:
-	${RUN} cd ${WRKSRC} && ${GMAKE} cmd/flux/manifests
+	${RUN} cd ${WRKSRC} && ${GMAKE} cmd/flux/.manifests.done
 
 .include "go-modules.mk"
 
