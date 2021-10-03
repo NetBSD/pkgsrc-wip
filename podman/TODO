@@ -5,4 +5,3 @@
   by passing arguments to `machine init', the defaults are:
 
    % podman machine init --cpus 1 --memory 2048 --disk-size 10
-- Document newly added patch
