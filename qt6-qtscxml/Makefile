@@ -4,6 +4,7 @@ DISTNAME=	qtscxml-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtscxml-${QTVERSION}
 COMMENT=	Qt6 module for scxml support
 CATEGORIES=	devel
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 

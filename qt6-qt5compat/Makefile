@@ -5,6 +5,8 @@ PKGNAME=	qt6-qt5compat-${QTVERSION}
 COMMENT=	Qt6 module for Qt5 portability
 CATEGORIES=	x11
 
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+
 .include "../../wip/qt6-qtbase/Makefile.common"
 
 .include "../../wip/qt6-qtbase/buildlink3.mk"

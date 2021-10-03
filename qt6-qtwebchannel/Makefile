@@ -4,6 +4,7 @@ DISTNAME=	qtwebchannel-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebchannel-${QTVERSION}
 COMMENT=	Qt6 webchannel module
 CATEGORIES=	www
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 

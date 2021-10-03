@@ -4,6 +4,7 @@ DISTNAME=	qtimageformats-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtimageformats-${QTVERSION}
 COMMENT=	Extra image handlers for Qt6
 CATEGORIES=	graphics
+LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 

@@ -5,6 +5,8 @@ PKGNAME=	qt6-qtbase-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+
 .include "../../wip/qt6-qtbase/Makefile.common"
 
 HAS_CONFIGURE=		yes

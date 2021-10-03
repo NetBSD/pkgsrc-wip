@@ -4,6 +4,7 @@ DISTNAME=	qtquick3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtquick3d-${QTVERSION}
 COMMENT=	3d engine for Qt6 quick
 CATEGORIES=	graphics
+LICENSE=	gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 

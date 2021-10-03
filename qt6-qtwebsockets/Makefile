@@ -4,6 +4,7 @@ DISTNAME=	qtwebsockets-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-websockets-${QTVERSION}
 COMMENT=	Qt6 module for websockets communication
 CATEGORIES=	net
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 
