@@ -148,7 +148,7 @@ CONFIGURE_ARGS+=		--add-module=../${ECHOMOD_DISTNAME}
 .endif
 
 .if !empty(PKG_OPTIONS:Mset-misc) || make(makesum) || make(mdi) || make(distclean)
-SETMISC_VERSION=		0.32
+SETMISC_VERSION=		0.33
 SETMISC_DISTNAME=		set-misc-nginx-module-${SETMISC_VERSION}
 SETMISC_DISTFILE=		${SETMISC_DISTNAME}.tar.gz
 SITES.${SETMISC_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/set-misc-nginx-module/archive/}v${SETMISC_VERSION}.tar.gz
