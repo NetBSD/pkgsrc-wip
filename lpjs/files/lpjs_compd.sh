@@ -9,7 +9,7 @@
 
 name="lpjs_compd"
 rcvar=${name}
-command="@PREFIX@/sbin/lpjs_compd"
+command="@PREFIX@/sbin/lpjs_compd --daemonize"
 
 lpjs_compd_user="root"
 

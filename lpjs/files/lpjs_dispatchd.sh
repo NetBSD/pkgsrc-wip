@@ -9,7 +9,7 @@
 
 name="lpjs_dispatchd"
 rcvar=${name}
-command="@PREFIX@/sbin/lpjs_dispatchd"
+command="@PREFIX@/sbin/lpjs_dispatchd --daemonize"
 
 load_rc_config $name
 run_rc_command "$1"
