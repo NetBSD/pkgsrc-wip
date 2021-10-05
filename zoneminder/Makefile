@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
-VERSION=	1.29.0
+#VERSION=	1.36.7
+VERSION=	1.30.5
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-PKGREVISION=	6
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 DISTNAME=	${NAME_DIST}-${VERSION}
@@ -13,9 +13,10 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${NAME_DIST}/}
 GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	dsainty@NetBSD.org
+#MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://www.zoneminder.com/
 COMMENT=	Video camera security and surveillance solution
 LICENSE=	gnu-gpl-v2
@@ -34,9 +35,9 @@ PKG_SUGGESTED_OPTIONS=	apache
 
 .include "../../mk/bsd.options.mk"
 
-GNU_CONFIGURE=	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	aclocal autoconf autoheader automake gmake perl pkg-config
+USE_TOOLS+=	gmake perl pkg-config
 
 # zoneminder can depend on a number of perl modules depending on
 # configuration.  We take the view that if an installation can be

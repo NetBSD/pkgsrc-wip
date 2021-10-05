@@ -8,9 +8,9 @@ portable than syscall(SYS_gettid).
 
 \todo Fix correctly upstream.
 
---- src/zm_thread.h.orig	2016-02-03 18:40:30.000000000 +0000
+--- src/zm_thread.h.orig	2019-02-22 15:38:47.000000000 +0000
 +++ src/zm_thread.h
-@@ -22,20 +22,21 @@
+@@ -22,16 +22,17 @@
  
  #include <unistd.h>
  #include <pthread.h>
@@ -31,72 +31,41 @@ portable than syscall(SYS_gettid).
  class ThreadException : public Exception
  {
  private:
--#ifndef SOLARIS
-+#ifndef USE_PTHREAD
- pid_t pid() {
-     pid_t tid; 
- #ifdef __FreeBSD__ 
-@@ -55,7 +56,8 @@ pid_t pid() {
- pthread_t pid() { return( pthread_self() ); }
+@@ -55,7 +56,9 @@ private:
+   pthread_t pid() { return( pthread_self() ); }
  #endif
  public:
--    ThreadException( const std::string &message ) : Exception( stringtf( "(%d) "+message, (long int)pid() ) ) {
-+ /* The type of pid() varies by OS */
-+ ThreadException( const std::string &message ) : Exception( stringtf( ("(%jd) "+message).c_str(), (intmax_t)pid() ) ) {
-     }
+-  ThreadException( const std::string &message ) : Exception( stringtf( "(%d) "+message, (long int)pid() ) ) {
++  /* The type of pid() varies by OS */
++  ThreadException( const std::string &message ) : Exception( stringtf( ("(%jd) "+message).c_str(), (intmax_t)pid() ) ) {
++
+   }
  };
  
-@@ -217,7 +219,7 @@ protected:
+@@ -217,7 +220,7 @@ protected:
  
-     Mutex mThreadMutex;
-     Condition mThreadCondition;
+   Mutex mThreadMutex;
+   Condition mThreadCondition;
 -#ifndef SOLARIS
 +#ifndef USE_PTHREAD
-     pid_t mPid;
+   pid_t mPid;
  #else
-     pthread_t mPid;
-@@ -229,7 +231,7 @@ protected:
-     Thread();
-     virtual ~Thread();
+   pthread_t mPid;
+@@ -230,7 +233,7 @@ protected:
+   Thread();
+   virtual ~Thread();
  
 -#ifndef SOLARIS
 +#ifndef USE_PTHREAD
-     pid_t id() const
-     {
-         pid_t tid; 
-@@ -237,22 +239,21 @@ protected:
-         long lwpid; 
-         thr_self(&lwpid); 
-         tid = lwpid; 
--#else 
-+#else /* __FreeBSD__ */
-     #ifdef __FreeBSD_kernel__
-         if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
--
-     #else
-         tid=syscall(SYS_gettid); 
-     #endif
--#endif
-+#endif /* __FreeBSD__ */
- return tid;
-     }
--#else
-+#else /* USE_PTHREAD */
-     pthread_t id() const
-     {
-         return( pthread_self() );
-     }
--#endif
-+#endif /* USE_PTHREAD */
-     void exit( int status = 0 )
-     {
-         //INFO( "Exiting" );
-@@ -268,7 +269,7 @@ public:
-     void kill( int signal );
-     bool isThread()
-     {
--        return( mPid > -1 && pthread_equal( pthread_self(), mThread ) );
-+        return( /* mPid > -1 && */ pthread_equal( pthread_self(), mThread ) );
-     }
-     bool isStarted() const { return( mStarted ); }
-     bool isRunning() const { return( mRunning ); }
+   pid_t id() const
+   {
+     pid_t tid; 
+@@ -269,7 +272,7 @@ public:
+   void kill( int signal );
+   bool isThread()
+   {
+-    return( mPid > -1 && pthread_equal( pthread_self(), mThread ) );
++    return( /* mPid > -1 && */ pthread_equal( pthread_self(), mThread ) );
+   }
+   bool isStarted() const { return( mStarted ); }
+   bool isRunning() const { return( mRunning ); }
