@@ -12,13 +12,15 @@ COMMENT=	XEmacs text editor (HEAD version)
 
 LICENSE=	gnu-gpl-v3
 
-HG_REPOSITORIES=		xemacs
-HG_REPO.xemacs=			https://foss.heptapod.net/xemacs/xemacs
-WRKSRC=				${WRKDIR}/xemacs
+HG_REPOSITORIES=	xemacs
+HG_REPO.xemacs=		https://foss.heptapod.net/xemacs/xemacs
+WRKSRC=			${WRKDIR}/xemacs
+
+MKPIE_SUPPORTED=	no
 
 .include "options.mk"
 
-LIBDIR=				${PREFIX}/lib/${DISTNAME}
+LIBDIR=			${PREFIX}/lib/${DISTNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
