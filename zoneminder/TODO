@@ -1,8 +1,16 @@
-update to newer upstream, which requires cmake
+Get rid of MESSAGE in favor of installed documentation if needed, or
+just delete if it's duplicative with upstream docs.
 
-validate that it actually runs
+for (some subset of final point releases):
 
-push to pkgsrc
+  update to newer upstream, which requires cmake
 
-investigate mysql and php
+  validate that it actually runs
+
+  push to pkgsrc
+
+Investigate mysql and php compat requirements.  It seems modern php
+might somehow include mysql bindings and thus we don't need to require
+5.6.
+
 
