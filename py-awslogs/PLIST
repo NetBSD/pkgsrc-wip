@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/awslogs${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/awslogs/__init__.py
+${PYSITELIB}/awslogs/__init__.pyc
+${PYSITELIB}/awslogs/__init__.pyo
+${PYSITELIB}/awslogs/_version.py
+${PYSITELIB}/awslogs/_version.pyc
+${PYSITELIB}/awslogs/_version.pyo
+${PYSITELIB}/awslogs/bin.py
+${PYSITELIB}/awslogs/bin.pyc
+${PYSITELIB}/awslogs/bin.pyo
+${PYSITELIB}/awslogs/core.py
+${PYSITELIB}/awslogs/core.pyc
+${PYSITELIB}/awslogs/core.pyo
+${PYSITELIB}/awslogs/exceptions.py
+${PYSITELIB}/awslogs/exceptions.pyc
+${PYSITELIB}/awslogs/exceptions.pyo
