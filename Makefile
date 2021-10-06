@@ -3386,6 +3386,7 @@ SUBDIR+=	py-autokey
 SUBDIR+=	py-automata
 SUBDIR+=	py-avocado-framework
 SUBDIR+=	py-awesome-slugify
+SUBDIR+=	py-awslogs
 SUBDIR+=	py-azure-common
 SUBDIR+=	py-azure-core
 SUBDIR+=	py-azure-storage-blob
