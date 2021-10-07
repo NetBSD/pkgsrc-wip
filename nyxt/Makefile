@@ -14,7 +14,11 @@ COMMENT=	Terminal browser
 LICENSE=	original-bsd
 
 
+.include "../../textproc/enchant2/buildlink3.mk"
+.include "../../net/glib-networking/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/sbcl/buildlink3.mk"
 .include "../../www/webkit24-gtk/buildlink3.mk"
 .include "../../wip/libfixposix/buildlink3.mk"
+.include "../../x11/xclip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
