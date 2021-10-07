@@ -1,5 +1,7 @@
 @comment $NetBSD$
+bin/lpjs-create-script
 bin/lpjs-jobs
+bin/lpjs-menu
 bin/lpjs-nodes
 bin/lpjs-submit
 sbin/lpjs-banner
