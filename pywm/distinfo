@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/11/26 16:24:23 mpasternak Exp $
 
-SHA1 (pywm-0.1.tar.gz) = 180127d1716e2876134684ba8152de579ae10bdb
 Size (pywm-0.1.tar.gz) = 556747 bytes
 SHA1 (patch-aa) = 69013de8d63d4e2834f55d603cd600cee49677df

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (arangodb-3.2.2.tar.gz) = 29906c7f4086ecc2d3d787188319dbbf49cda148
 RMD160 (arangodb-3.2.2.tar.gz) = c14d5e750ea3c987aca8b3316c6e9bb308c748b4
 SHA512 (arangodb-3.2.2.tar.gz) = 8a6c466cc749078374de598b17390faf97eefea99ad1b301d6cf1c50df2da72992ae1d3612334a35370bd97998ac9378a7c6659d1952ab549148f191b7f712ae
 Size (arangodb-3.2.2.tar.gz) = 143296198 bytes

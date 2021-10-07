@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2020/06/30 14:40:05 thorpej Exp $
 
-SHA1 (u-boot-2021.04.tar.bz2) = a69cf9cf8ddda0935b0bfed86e90fde1124f133d
 RMD160 (u-boot-2021.04.tar.bz2) = 4834e300f5490a0af08209018aac25a1b3a8d5cb
 SHA512 (u-boot-2021.04.tar.bz2) = c24835a520bfd528032614576ca552e55e6de129372e72e22e80e0d45dc5c1c75aa4aad80e856d5bbd7146ec092cac52a6f352253cf3fdf9fe536f5e87782803
 Size (u-boot-2021.04.tar.bz2) = 16673334 bytes

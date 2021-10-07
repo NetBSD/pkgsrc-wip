@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (v0.12.0.55.tar.gz) = 827bc26d80d2d2c54f3ef00f8653d2d5b47b69d6
 RMD160 (v0.12.0.55.tar.gz) = e59d82d7456976b2f339c68d854e1c318153973b
 Size (v0.12.0.55.tar.gz) = 4175442 bytes
 SHA1 (patch-src_chainparams.cpp) = ca4e007f56359b45e63c29d5c27ccdfe5e3af237

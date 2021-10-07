@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.3 2005/09/28 06:41:43 rillig Exp $
 
-SHA1 (TUTOS-php-1.2.20040906.tar.gz) = 6808454a53b4a431b40d7efaa0a136e3c1c23701
 RMD160 (TUTOS-php-1.2.20040906.tar.gz) = 23eaff7c594a27ed1bf09c3ef565dd6ab26097ec
 Size (TUTOS-php-1.2.20040906.tar.gz) = 957969 bytes

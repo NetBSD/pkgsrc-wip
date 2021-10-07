@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2014/11/22 13:42:46 jihbed Exp $
 
-SHA1 (myFitter-python-0.1.3.tar.gz) = 42fa72ddf909026579b85e2916d9927f13d4f9a9
 RMD160 (myFitter-python-0.1.3.tar.gz) = b1770c47e731da1bd4be17810bbc6552fc81357c
 Size (myFitter-python-0.1.3.tar.gz) = 20763 bytes

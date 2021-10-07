@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.54 2015/11/02 13:40:41 ryoon Exp $
 
-SHA1 (pulseaudio-7.1.tar.gz) = e7b8e2d3e3a384379f3d99458f9ff9cff56b709b
 RMD160 (pulseaudio-7.1.tar.gz) = f6138695f1cfddfcb72654e8b204b0731c8a2234
 SHA512 (pulseaudio-7.1.tar.gz) = c2b8946a4dfb4fa2a8c7a504d9375bd51086c0f2f40aa6ddbb56115815a01665f491507d367baa375bc9595e31bb0d88f15208a1c2ad507bfa40e1bde1213091
 Size (pulseaudio-7.1.tar.gz) = 2686090 bytes

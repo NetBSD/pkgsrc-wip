@@ -1,14 +1,11 @@
 $NetBSD$
 
-SHA1 (esbuild/esbuild-0.12.22.tar.gz) = f989c8e90ba8395db36d032ad2315ffb6605afc0
 RMD160 (esbuild/esbuild-0.12.22.tar.gz) = 9e05bd0c1baf9dd763f91f0be96850b21ba9e790
 SHA512 (esbuild/esbuild-0.12.22.tar.gz) = be41ff808a051745f81b6900e5468c43ab0e3c01c567c36706629473fba4c5613eec7ed919e3bff067c98b6cfdfbdc9783e85e1c7b465569a4414d60725b539d
 Size (esbuild/esbuild-0.12.22.tar.gz) = 1552597 bytes
-SHA1 (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.mod) = 9c0a67f5f608966214879bdc8263f4927cb8da2f
 RMD160 (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.mod) = 470ffe5252fd7913930e210baaa374da49776819
 SHA512 (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.mod) = 0c7b940d567c7685dcb55c76c69aedeaab2170f4f3bde458994c879bf344169f34fb3f3ca899b0f138a8b0b8be5031217b57a6edf5980e6066ff5cb92d1ff9ab
 Size (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.mod) = 33 bytes
-SHA1 (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.zip) = 495d6c7f48806b78586f9a301318de40ac38b547
 RMD160 (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.zip) = 04c94c2b4310029760949ef8aa08395f426037b0
 SHA512 (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.zip) = d44bdec9efd70d9d17193c48b3c49ef1789e587781692b7790a98f72b103b4cf61f2056e58ec8937819b01135d175119102af8bc18344d01ca17489950341bc1
 Size (esbuild/golang.org_x_sys_@v_v0.0.0-20200501145240-bc7a7d42d5c3.zip) = 1476811 bytes

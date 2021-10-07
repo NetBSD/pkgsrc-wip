@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.20 2016/02/18 15:15:57 wiz Exp $
 
-SHA1 (alsa-lib-1.1.0.tar.bz2) = 94b9af685488221561a73ae285c4fddaa93663e4
 RMD160 (alsa-lib-1.1.0.tar.bz2) = 0a9ecf05c136ae025df7ab749db907ad81c4db8f
 SHA512 (alsa-lib-1.1.0.tar.bz2) = 2939d0b621c1c619b0a492b05f2e84f354d588c9cc982d93dbcf01c582319258dd5f803ff5c10be52343cd8827d690f671ab5b20ad586a0ee371f0949c9e98f4
 Size (alsa-lib-1.1.0.tar.bz2) = 929874 bytes

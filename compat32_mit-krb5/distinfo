@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.68 2019/05/06 14:06:05 wiz Exp $
 
-SHA1 (krb5-1.16.2.tar.gz) = 6d6ef205194be386fb5f4e6bef32cb9fc79e853b
 RMD160 (krb5-1.16.2.tar.gz) = 76188113d13eb9667d6057fe23d653a3d09d4817
 SHA512 (krb5-1.16.2.tar.gz) = 738c071a90e0f38680bb17bdcf950310bc4549f3cb851e1d34de11239ae88178e6ee1a5e5d48c6d3efef544339b07d22dba5347dd763a4266d8d4df7cf47afc9
 Size (krb5-1.16.2.tar.gz) = 9652415 bytes

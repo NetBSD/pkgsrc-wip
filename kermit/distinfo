@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.28 2020/07/30 03:03:07 gutteridge Exp $
 
-SHA1 (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = 6595ed5c8e525a2ab3ab8311340c05c5bb60d9cd
 RMD160 (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = e9d09fa9a9f532262a6a52b7bbdf9e24f80b15f2
 SHA512 (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = 24dd9f9e63209f4d9dcf3d12f1989b7617af7de2f05256794275f4bc050ad75c8447a96924a951106c8391c1f9c08e8c9a6e9c4a3b08936eb295dca130ff0059
 Size (kermit-9.0.305a2bis/pre-alpha03.tar.gz) = 2278371 bytes

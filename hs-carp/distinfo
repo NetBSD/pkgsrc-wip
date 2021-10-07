@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (carp-0.5.1.tar.gz) = 7cf8ab9cd9a79b47eb67e4a884503b8d04f0f03e
 RMD160 (carp-0.5.1.tar.gz) = d6047a9df80a0faa6a1212aa29d55fb77830c9e4
 SHA512 (carp-0.5.1.tar.gz) = 345687a23c9c89ba013a64a04646a8f15eefb7f51cf768e6b654ec206155f947c68fe44b4195b45d38c5edf194021f94c990f113e4448ed5919473789816b5a4
 Size (carp-0.5.1.tar.gz) = 4868487 bytes

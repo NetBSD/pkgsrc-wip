@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/08/17 09:09:41 szptvlfn Exp $
 
-SHA1 (basic-prelude-0.3.5.0.tar.gz) = e53302cb117c763e6daf85e76976c16eb91203d6
 RMD160 (basic-prelude-0.3.5.0.tar.gz) = 93a8c28c0b8d544e7010310d95413454350c382b
 Size (basic-prelude-0.3.5.0.tar.gz) = 4648 bytes

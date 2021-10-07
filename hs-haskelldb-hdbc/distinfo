@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2010/05/13 05:17:32 phonohawk Exp $
 
-SHA1 (haskelldb-hdbc-0.13.tar.gz) = 4e4f024afdd708dee1364dd6d6b561e94ff8dd1d
 RMD160 (haskelldb-hdbc-0.13.tar.gz) = 50a843fb8069e10bce1b5b1324e18717b0f8f909
 Size (haskelldb-hdbc-0.13.tar.gz) = 2687 bytes

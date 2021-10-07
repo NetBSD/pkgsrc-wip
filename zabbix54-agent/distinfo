@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (zabbix-5.4.4.tar.gz) = d66e42b955d750b701c1c0aa2abc75611ee86ecd
 RMD160 (zabbix-5.4.4.tar.gz) = 6f5faa16e8566f3141ecda6ff05e566823befd93
 SHA512 (zabbix-5.4.4.tar.gz) = 6b5b012bc0c53502d97bc260f7c7f0293edba194fb05c65b05c5b4084cd3f05b00ba5e1c1ead1e42be39d740dc5c617a001c2d459c8157c1cab7136fb0054883
 Size (zabbix-5.4.4.tar.gz) = 24266079 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/07/07 12:48:16 othyro Exp $
 
-SHA1 (mupen64plus-extraplugins-src-2.0.0.tar.gz) = 4d51d8e982597ade28f4159824a4360447c4f78f
 RMD160 (mupen64plus-extraplugins-src-2.0.0.tar.gz) = de19b6abbad51c2ad32c7027c51d5ba194083eb4
 Size (mupen64plus-extraplugins-src-2.0.0.tar.gz) = 589176 bytes
 SHA1 (patch-mupen64plus-rsp-z64_projects_unix_Makefile) = 82f54f19b35adba8202bcaf04b6378a97dcbd5d6

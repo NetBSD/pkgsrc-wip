@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.7 2006/08/19 16:23:58 kristerw Exp $
 
-SHA1 (Glide_V3-2.60-18.tar.bz2) = 087af3f102330881098e538b3c5f2bfa60bd6286
 RMD160 (Glide_V3-2.60-18.tar.bz2) = 39bd5c59cc518571d138b3063c923c9467289463
 Size (Glide_V3-2.60-18.tar.bz2) = 1720026 bytes
 SHA1 (patch-aa) = 410937a461b27754aa663032914115c625b4f373

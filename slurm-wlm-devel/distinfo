@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (slurm-20.11.2.tar.bz2) = d6859db7606dc4563619df38d059e5af0ce96bb7
 RMD160 (slurm-20.11.2.tar.bz2) = a075c56762d0ca155b0f93a0f3b7b1dbb19ea6d4
 SHA512 (slurm-20.11.2.tar.bz2) = 6743b8125733006e0e5ef0491b950efbeb05af0cf45f54a2c142ddbb57ea639615539bc1bcbd1985a850c20d268b8a995c81c5547a02404f9b6a61fee19f68ed
 Size (slurm-20.11.2.tar.bz2) = 6532310 bytes

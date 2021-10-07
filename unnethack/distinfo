@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.7 2014/04/20 14:53:48 rhialto Exp $
 
-SHA1 (unnethack-5.1.0-20131208.tar.gz) = 8535f69eca4f510a29dd1bf869aa55d6dea4664d
 RMD160 (unnethack-5.1.0-20131208.tar.gz) = 3dab0a9427772bbacddad4dbd1251b347465f985
 Size (unnethack-5.1.0-20131208.tar.gz) = 5422521 bytes
 SHA1 (patch-configure) = d3ceae3a9ff858c585161e38ee99e04a7f481d75

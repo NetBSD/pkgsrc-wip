@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (cyclone-bootstrap/v0.33.0.tar.gz) = ae1f85c13c2e52598070273017edd13ba4737296
 RMD160 (cyclone-bootstrap/v0.33.0.tar.gz) = 3487db5f9685d4b714a1a1474382776f062ac0c5
 SHA512 (cyclone-bootstrap/v0.33.0.tar.gz) = 96ffd3d04636b27f36c98920359a9f880c4b2a15e9820e5d91c82f821dc93357b665537e7688b00510d6a4fd113666edbd5ec109ff491f4f18d547129527b763
 Size (cyclone-bootstrap/v0.33.0.tar.gz) = 3946573 bytes

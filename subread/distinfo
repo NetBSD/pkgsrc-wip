@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (subread-2.0.2-source.tar.gz) = 1f5eb1ffa0184e21321fb9e40a9f02dd94bb19ff
 RMD160 (subread-2.0.2-source.tar.gz) = 2cfa127a7bea963d67330edee2ca226f9d6dde49
 SHA512 (subread-2.0.2-source.tar.gz) = 549164aadcd1e05cd1f941a4c10d6e19f904d2d75dae8391bbf3003a26e13f6a14cc22618662c2baf804b4d020a58e7ba0b0be9b4ff1181ad981a24270ffb64e
 Size (subread-2.0.2-source.tar.gz) = 23295764 bytes

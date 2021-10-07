@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (dask-0.11.0.tar.gz) = 0ec5c2e5edba6772bb2a41efe8119050066d7495
 RMD160 (dask-0.11.0.tar.gz) = bbaf270422353f43ee644ee5e41d0009ea54b26b
 SHA512 (dask-0.11.0.tar.gz) = 2715d2bd0f30bcfa25cc9f46bd40506cede517029f760fafe30cec1b8172a62ce3f995207b69d6470e2ca467dca4192dd370520d4f280dd9041e30bd5806e0ef
 Size (dask-0.11.0.tar.gz) = 379185 bytes

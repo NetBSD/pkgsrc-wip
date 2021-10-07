@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2015/03/07 16:28:33 tnn2 Exp $
 
-SHA1 (platform_system_core-android-5.0.2_r1.tar.gz) = fc5626cf84cc18175be498ea3e664d7c7b188c27
 RMD160 (platform_system_core-android-5.0.2_r1.tar.gz) = e1e73c0f6ac99cd0641b8ff575fe56f3a79decfb
 SHA512 (platform_system_core-android-5.0.2_r1.tar.gz) = 5fe1935117864d501cb9b543cfcc5ce090f3278f95c691f8da2623c85a0f6f6fcbefbc4886d69f1a940313ce524295be286f41e4601e0427705c0c7d1ace1014
 Size (platform_system_core-android-5.0.2_r1.tar.gz) = 1202992 bytes

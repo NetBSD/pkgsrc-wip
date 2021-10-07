@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.14 2008/02/03 16:25:42 tnn2 Exp $
 
-SHA1 (xspsrc_051219_tar.tgz) = f237f6e88d7a72225f700beb618065ac138f995e
 RMD160 (xspsrc_051219_tar.tgz) = c1acb9e5abb8d1d94b11dc73f9036d614df9bfd2
 Size (xspsrc_051219_tar.tgz) = 886315 bytes
 SHA1 (patch-aa) = aae90dc27b7619f2f33be4e94b4a7ef16a141bde

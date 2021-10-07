@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2013/07/14 12:59:00 noud4 Exp $
 
-SHA1 (pear/PHPUnit-3.7.22.tgz) = f2e9ba41c0128bd1621db94dc0332b2c89021513
 RMD160 (pear/PHPUnit-3.7.22.tgz) = 3ff9547dfa6cb2f473790d062c96f0ca2302cdc1
 Size (pear/PHPUnit-3.7.22.tgz) = 116042 bytes

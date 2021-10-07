@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2015/08/01 22:20:14 jihbed Exp $
 
-SHA1 (verbiste-0.1.41.tar.gz) = 39d6199bdf962c714de47b531177cb27d53e4a35
 RMD160 (verbiste-0.1.41.tar.gz) = 851d90eb68f78ac93227c8e219be4b47c4cc28b1
 Size (verbiste-0.1.41.tar.gz) = 751059 bytes

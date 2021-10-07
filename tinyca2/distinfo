@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2006/09/21 11:23:19 ondratu Exp $
 
-SHA1 (tinyca2-0.7.5.tar.gz) = 841355ab8478a7e7b1a3d6bba4dd31293ae11cc4
 RMD160 (tinyca2-0.7.5.tar.gz) = db384b635030164b0c32a4a814c170002105a375
 Size (tinyca2-0.7.5.tar.gz) = 290081 bytes

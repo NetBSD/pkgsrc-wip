@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2009/10/11 13:50:22 thomasklausner Exp $
 
-SHA1 (pop3proxy-2.0.0-beta8.tar.gz) = e3ad7b8a2d309ab9f68f1bc446d7e312245147eb
 RMD160 (pop3proxy-2.0.0-beta8.tar.gz) = b8265282ceb4ddb1967f91dc3402229589b21d21
 Size (pop3proxy-2.0.0-beta8.tar.gz) = 45533 bytes
 SHA1 (patch-aa) = 8e3035ca7cf5a21064c24c1276ec4f1c80813d8a

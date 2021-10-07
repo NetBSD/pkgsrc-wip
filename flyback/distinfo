@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/04/14 23:33:01 thomasklausner Exp $
 
-SHA1 (flyback_0.4.0.tar.gz) = f7346a951fa71e4dece75daa7bfc937c813e09bb
 RMD160 (flyback_0.4.0.tar.gz) = 69e5c27fe68a97dd6d4098d7b2775a65d22267ad
 Size (flyback_0.4.0.tar.gz) = 25616 bytes

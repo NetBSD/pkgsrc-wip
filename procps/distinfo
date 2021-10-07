@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/05/16 03:20:43 jeremy-c-reed Exp $
 
-SHA1 (procps-3.0.5.tar.gz) = 6114b2dae943b332d8f885c99505153eaf5c3a0f
 Size (procps-3.0.5.tar.gz) = 226875 bytes
 SHA1 (patch-aa) = a129e679681c1a63c0fd8f8c87f12d1397820fa6
 SHA1 (patch-ab) = 076791d833b2b52a6ca0458ca529bbee43ece5aa

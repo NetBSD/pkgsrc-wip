@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.6 2011/09/28 04:50:46 makoto Exp $
 
-SHA1 (despotify-r761.tar.gz) = 014679badd64ef392c58502251bcf3cc767dd724
 RMD160 (despotify-r761.tar.gz) = 7ecc7c98aa2b29ea2b08838c6a2bd7ce767fe974
 Size (despotify-r761.tar.gz) = 85936 bytes
 SHA1 (patch-ab) = e9215410dfc658217d869bedd52b5e1c7b22221b

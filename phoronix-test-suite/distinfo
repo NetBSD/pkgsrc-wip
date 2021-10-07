@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.5 2019/06/10 02:48:23 jym Exp $
 
-SHA1 (phoronix-test-suite-9.8.0.tar.gz) = b6153ab7f4e9ef2de3585307a22203885e10b20b
 RMD160 (phoronix-test-suite-9.8.0.tar.gz) = 002d687ce36be832803cc424d9ea393da77238d6
 SHA512 (phoronix-test-suite-9.8.0.tar.gz) = 0f3d524c7f4199ab504f707999cc6925ee37b17ebaffa843952005d2bbe93d30651f028b6d8b5cf1734d70750d6f793aebf236aa6b92ea9db00350da14410f54
 Size (phoronix-test-suite-9.8.0.tar.gz) = 1816657 bytes

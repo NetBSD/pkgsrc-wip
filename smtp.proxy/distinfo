@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/03/18 23:24:43 oht Exp $
 
-SHA1 (smtpproxy-1.3.3.tar.gz) = 007fafbf1099785b9828a26ab0938354d8b55253
 RMD160 (smtpproxy-1.3.3.tar.gz) = 2240436595f1325e94d9e329c2aaa1da772a7d0c
 Size (smtpproxy-1.3.3.tar.gz) = 52276 bytes
 SHA1 (patch-aa) = 5e6e9aca8de053b8a95b7a5d542952ca35c8bed5

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/05/04 10:39:12 shattered Exp $
 
-SHA1 (ffmpeg-1.2.tar.bz2) = e1df2389560da95e1a76f9375f054e630c7e2602
 RMD160 (ffmpeg-1.2.tar.bz2) = f1b1122ee39276cf5eb00b4113794a2c23c1e66f
 Size (ffmpeg-1.2.tar.bz2) = 5969590 bytes
 SHA1 (patch-aa) = 6594f212df313f56db325faf52b4c48be395ea3a

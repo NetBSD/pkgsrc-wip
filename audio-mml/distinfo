@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/03/12 05:27:58 bsadewitz Exp $
 
-SHA1 (rat-4.4.01r4121.tar.bz2) = 37cdc0c2bfbde87a25e9305d6c829f59b72ec1ca
 RMD160 (rat-4.4.01r4121.tar.bz2) = 7e2961324a66a473bcee1cf560bbe90d309273d8
 Size (rat-4.4.01r4121.tar.bz2) = 545690 bytes
 SHA1 (patch-aa) = 6e685d8e6319ae577a7706b7bd1dce04856fb562

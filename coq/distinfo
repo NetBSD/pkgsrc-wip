@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.35 2020/01/24 15:54:48 jaapb Exp $
 
-SHA1 (coq-8.11.0.tar.gz) = 2c91144debeaa370082b6eeb31b8c21b76a9c1b1
 RMD160 (coq-8.11.0.tar.gz) = e3ac2f67e9db3351bdf68f38609142999bcd3bab
 SHA512 (coq-8.11.0.tar.gz) = db7c3da4bab268cb729bcf9f03f5cd3bbb7a3b5b7094fe2b110189e54e436f9883640db88643d09cec5dc169c209a51661238e41b8de3035ff7ea8561c794c89
 Size (coq-8.11.0.tar.gz) = 6555390 bytes

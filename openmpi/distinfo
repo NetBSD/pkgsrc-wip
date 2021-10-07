@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (openmpi-4.0.0.tar.bz2) = fee1d0287abfb150bae16957de342752c9bdd4e8
 RMD160 (openmpi-4.0.0.tar.bz2) = e7833fdac28306e23e0fc878c0715e860aa80f97
 SHA512 (openmpi-4.0.0.tar.bz2) = 978097dcbb16df2a616dcbbef9536fed0f7be40914daa8f927882d91bdda9265e54334fc12aeef49b41073d8782321b5611a7e9c71182258a45bca5f640e927b
 Size (openmpi-4.0.0.tar.bz2) = 9812193 bytes

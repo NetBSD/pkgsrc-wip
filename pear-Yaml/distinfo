@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/07/14 11:43:35 noud4 Exp $
 
-SHA1 (pear/Yaml-2.3.1.tgz) = 7d470d396a186e43c6b5370e11609773cda07dac
 RMD160 (pear/Yaml-2.3.1.tgz) = fae02c4b5e1c21f83a1372bb48edb375abada364
 Size (pear/Yaml-2.3.1.tgz) = 39792 bytes

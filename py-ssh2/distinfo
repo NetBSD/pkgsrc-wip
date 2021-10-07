@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/06/01 21:35:31 guigui2 Exp $
 
-SHA1 (ssh4py-0.6.9.zip) = fe0d29e1540d2ddacafb3bcb9782361db53a64b8
 RMD160 (ssh4py-0.6.9.zip) = 22ac9325510044a247ca32a85627abb4ff8f6da9
 Size (ssh4py-0.6.9.zip) = 19351 bytes
 SHA1 (patch-aa) = 57f8aa44ba910d69eb611009a1fce339166f99d1

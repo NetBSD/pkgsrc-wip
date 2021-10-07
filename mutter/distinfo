@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2020/11/10 01:56:20 nia Exp $
 
-SHA1 (mutter-40.1.tar.xz) = 695bcedee8b2462359b33bdae06a132a1c666d73
 RMD160 (mutter-40.1.tar.xz) = a99888904705fb184c5f7cf5ee5b6accdfff9a30
 SHA512 (mutter-40.1.tar.xz) = c2b6603e1d55492916f742f9cb8e15588cb30e78c37de987404ac40d3befa65e417184305ad87fdffc41052a094790f9e324a1ea7482e5de4f0439dceefed118
 Size (mutter-40.1.tar.xz) = 2680816 bytes

@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/06/24 19:13:03 thomasklausner Exp $
 
-SHA1 (libopensync-plugin-python-0.22.tar.bz2) = 655793fdb23aedee6c6a02c49bfb8a11c1c4cf42
 RMD160 (libopensync-plugin-python-0.22.tar.bz2) = f986b5497287a2e4772f3f9b11ac2289e768ec01
 Size (libopensync-plugin-python-0.22.tar.bz2) = 215702 bytes

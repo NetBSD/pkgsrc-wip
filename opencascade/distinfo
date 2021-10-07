@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2010/11/02 13:24:38 silasdb Exp $
 
-SHA1 (opencascade-7.0.0.tgz) = 24982382cbf5f3ea8c181ea760282116a027165d
 RMD160 (opencascade-7.0.0.tgz) = e37d5bdcb68bc4f58610bd45dae9632b96d76a35
 SHA512 (opencascade-7.0.0.tgz) = 0c8e1a6c4a589a28e5baef10ccff1d94ad76c9e7ac827881fc7265e6f6d44d4332820034efc1f348d67663f7f508c2edc265c5e01da062c6ca4f94b1c47c2753
 Size (opencascade-7.0.0.tgz) = 220147192 bytes

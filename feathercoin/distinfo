@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (feathercoin/v0.8.7.1.tar.gz) = b7aef7205458bd2e2c403e15f88b97e70f560b98
 RMD160 (feathercoin/v0.8.7.1.tar.gz) = e8502841168483f4ac49d87711a9a86ca46bc336
 Size (feathercoin/v0.8.7.1.tar.gz) = 3622006 bytes
 SHA1 (patch-feathercoin-qt.pro) = 49d496354d247c0003a71c95b56a455841c08be9

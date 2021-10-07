@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2011/08/03 02:34:07 khorben Exp $
 
-SHA1 (libosmocore-1.0.1.tar.gz) = c41da6f716f6dd31bbc472575e7e2d16e07bed18
 RMD160 (libosmocore-1.0.1.tar.gz) = e53f6fdef98687afc375f81bee4dafb1189a621b
 SHA512 (libosmocore-1.0.1.tar.gz) = 15b83cedc8cd01dbd5ac7b6b54685d527f5c94a5c77896c0ca52b2d53c2066d8421166de5fb25f0355c1f372f629a4ceba39c11a80d4582aca1d696fd1bba5c4
 Size (libosmocore-1.0.1.tar.gz) = 1120580 bytes

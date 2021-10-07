@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.10 2012/06/21 09:54:07 athaba Exp $
 
-SHA1 (fasm-1.70.02.tar.gz) = 7af6c136bde2ef10d9bdf05b8e5813571e4f8f3a
 RMD160 (fasm-1.70.02.tar.gz) = 45d29fc3fe662b13b8231023fa7ed35ba0a8fadb
 Size (fasm-1.70.02.tar.gz) = 245725 bytes

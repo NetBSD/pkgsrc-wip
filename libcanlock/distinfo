@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.7 2021/01/11 12:16:36 micha Exp $
 
-SHA1 (libcanlock-3.3.0pre18.tar.bz2) = 76b18ef438531b71513916745158561d8420f04f
 RMD160 (libcanlock-3.3.0pre18.tar.bz2) = a65c2c120812912f85f37d7f331351762bcc5e6f
 SHA512 (libcanlock-3.3.0pre18.tar.bz2) = f9cbf204990957239309163ac868d6df62f1f421d4a0080c06d4372df0f6ed45f7f292fa8ca8789e6fbb422f94f5ab29f374b4a924d2e1132d97ee60aaa5a4a3
 Size (libcanlock-3.3.0pre18.tar.bz2) = 620792 bytes

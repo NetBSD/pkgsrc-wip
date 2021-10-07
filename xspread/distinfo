@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
 
-SHA1 (xspread3.1.1c.tar.gz) = a19cefffb33da569194d15e012154a0b8b40b368
 RMD160 (xspread3.1.1c.tar.gz) = 10783b103fba28ab668c40610e95fe46089a73e0
 Size (xspread3.1.1c.tar.gz) = 759445 bytes
 SHA1 (patch-aa) = 580e3ae93fab4880ce700e859c811e98b311d8da

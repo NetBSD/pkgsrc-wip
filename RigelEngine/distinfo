@@ -1,10 +1,8 @@
 $NetBSD$
 
-SHA1 (RigelEngine/imgui-1.7.9.tar.gz) = da92c36e123002475cd6adba8e3429051a317e71
 RMD160 (RigelEngine/imgui-1.7.9.tar.gz) = 2ae1cb43d0048e1f74f812ec47de5280dda53a84
 SHA512 (RigelEngine/imgui-1.7.9.tar.gz) = 35ed7af89123e09989ef81085f19ed15f97f4798e2b35834fd8b4ae918889b51132d85901f867ab2f379711a734bc7b2edd309d74f3f7527eaaaebfd766d3737
 Size (RigelEngine/imgui-1.7.9.tar.gz) = 1299303 bytes
-SHA1 (RigelEngine/v0.8.1.tar.gz) = 0ec3198931c440d66834d1f6bb594eb5f26b23a3
 RMD160 (RigelEngine/v0.8.1.tar.gz) = 45cc12c2a06a110868eedd6c70144b5e6a11a19d
 SHA512 (RigelEngine/v0.8.1.tar.gz) = 7881b1917b01e88c4a62a243e5f2bf485cc825e7f4da02b41100b943b0ad53a483146bf4450fad21826ad7def56d53c844ea43cd0db54f6ce6ba40f02f97a4ce
 Size (RigelEngine/v0.8.1.tar.gz) = 931476 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2006/11/01 22:26:59 brook1 Exp $
 
-SHA1 (gdal-grass-1.3.1.2.tar.gz) = bd1f0d6e961f93702dd3e728460b2bd24ffaf218
 RMD160 (gdal-grass-1.3.1.2.tar.gz) = c7747492875a4ada04bc23e77a1d310987773f21
 Size (gdal-grass-1.3.1.2.tar.gz) = 75034 bytes
 SHA1 (patch-aa) = dc16d7ab9f19abe6c0c8cd1cc164d56b60659203

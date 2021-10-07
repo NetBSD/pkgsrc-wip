@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2012/11/09 18:41:10 jihbed Exp $
 
-SHA1 (freefem++-3.19-1.tar.gz) = 8fb14dff09f6cdfe49f17e4a63c32d20c400a0c7
 RMD160 (freefem++-3.19-1.tar.gz) = b19da9d7bc698a937aea0a9a9b31a4327c4bf8be
 Size (freefem++-3.19-1.tar.gz) = 24601896 bytes

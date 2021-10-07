@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2012/12/27 19:52:23 ryo-on Exp $
 
-SHA1 (backintime-1.0.8_src.tar.gz) = d962b3742338099198ed763af2206aac42bafae6
 RMD160 (backintime-1.0.8_src.tar.gz) = 2516ebdf528a3ccac8c993ad26a5e3e4d89110bc
 Size (backintime-1.0.8_src.tar.gz) = 291473 bytes
 SHA1 (patch-common_Makefile.template) = 6662dea98d5ea1da790f486f7b1f68720d0655cd

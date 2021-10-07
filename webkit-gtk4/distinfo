@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.141 2020/11/06 22:21:35 leot Exp $
 
-SHA1 (webkitgtk-2.30.2.tar.xz) = e27d336570226645f861b5a00116c17da39f9df4
 RMD160 (webkitgtk-2.30.2.tar.xz) = 9544d4796cfb33bae33c41719764a775b3b6bd29
 SHA512 (webkitgtk-2.30.2.tar.xz) = caecd765ce92942fc07d0d18b834b8f1acb13e6dc1e504ed9f104862285a6032a8824ab98a7439e6f8664d83dacb4ece2011f4ec822308e5b40d1f82ca601243
 Size (webkitgtk-2.30.2.tar.xz) = 22308908 bytes

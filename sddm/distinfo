@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (sddm-0.19.0.tar.xz) = cdb5c9cc7679bb5620bdfb9f56e4f2d5cea7edca
 RMD160 (sddm-0.19.0.tar.xz) = 933badadd73b3ca092a7e175ef12e2c52aa407a4
 SHA512 (sddm-0.19.0.tar.xz) = 0a40816bc105a1e930fec2d65fabff0ae7e27c641235d90e41f6fbaa86af4bb774a9e30f7548ce2c6c791e6d4f8195b02afddedca60a9e7c77447702e728edc3
 Size (sddm-0.19.0.tar.xz) = 3406056 bytes

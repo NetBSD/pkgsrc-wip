@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2012/11/12 03:11:32 outpaddling Exp $
 
-SHA1 (SuiteSparse-4.0.2.tar.gz) = 46b24a28eef4b040ea5a02d2c43e82e28b7d6195
 RMD160 (SuiteSparse-4.0.2.tar.gz) = 69b7becaba2cd26edc13d182bf59a8d6ac38b90b
 Size (SuiteSparse-4.0.2.tar.gz) = 22421100 bytes
 SHA1 (patch-SPQR_Source_spqr__factorize.cpp) = bbd599ef35d7c321a13c33bf5bcb49ffed3c5abb

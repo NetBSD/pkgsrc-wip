@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/08/21 16:45:23 szptvlfn Exp $
 
-SHA1 (json-0.7.tar.gz) = 57622544331a47a2e89b5a19b6b59e29a1ada06e
 RMD160 (json-0.7.tar.gz) = d3f9bdb2fcd0203d394e0c97a00353662209dcba
 Size (json-0.7.tar.gz) = 22411 bytes

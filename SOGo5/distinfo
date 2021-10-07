@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2019/09/11 12:01:54 tm Exp $
 
-SHA1 (SOGo-5.1.1.tar.gz) = 4a6f6244b8001d74918540108c5642ccf2aef2e7
 RMD160 (SOGo-5.1.1.tar.gz) = 9ed6951cb66c16688c0052ebb7e2864a523b639e
 SHA512 (SOGo-5.1.1.tar.gz) = 85ab8be5bc48a842c6b92b277b87fee32576a757b2d330e45820945d9af96ca042b4488cec70cd9ba469db9ce870fd9203cdc356c246c2f6cc39f3fe58281b2b
 Size (SOGo-5.1.1.tar.gz) = 34361328 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2013/05/25 13:05:56 francksys Exp $
 
-SHA1 (info2man/info2man.tar.gz) = b7b482b0ccd3747edf8133e53f06dcd4b11ff327
 RMD160 (info2man/info2man.tar.gz) = 90e09de1d75f79d7e2177d2ad2a97a19e7ccb0e7
 Size (info2man/info2man.tar.gz) = 22263 bytes
 SHA1 (patch-cs_Misc.pm) = 943f5d521e9b85ec980a49a9bd4ce8d208c80bbc

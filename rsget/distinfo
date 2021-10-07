@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2010/12/13 11:40:51 ryo-on Exp $
 
-SHA1 (rsget.pl-11838.tar.bz2) = ce4a8eee27af84c786f2958c35e4e8681c5a870f
 RMD160 (rsget.pl-11838.tar.bz2) = bd19f9ef6f94eebb9487620ed93d349f5461cc47
 Size (rsget.pl-11838.tar.bz2) = 137692 bytes

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (minidb-2.0.2.tar.gz) = 439bbef23bcb6ad477ca0fa9d52f94c7f1060b06
 RMD160 (minidb-2.0.2.tar.gz) = 718312bdae7980f134c55ea5a72f0d8e585ec616
 SHA512 (minidb-2.0.2.tar.gz) = 98b704f8ce8efef5f0b7cd4c4e6c12f9c54d1b35a303b2ab9fa2555410bf6256d756512ffb3bd8b0380aa766788acf9c0e35073d215239dd7c38082e75402f00
 Size (minidb-2.0.2.tar.gz) = 16078 bytes

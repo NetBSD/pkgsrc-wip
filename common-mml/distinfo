@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.4 2008/03/12 05:22:16 bsadewitz Exp $
 
-SHA1 (common-1.2.18r4122.tar.bz2) = 185d1585235deb91ff6ee7c17a112f19dbae4aa6
 RMD160 (common-1.2.18r4122.tar.bz2) = 0ec06800e90c45437c93a83bc5c1e6e33b8a6cdd
 Size (common-1.2.18r4122.tar.bz2) = 606003 bytes
 SHA1 (patch-aa) = 3b20a7623b389216ea7cce63b115493d836367d2

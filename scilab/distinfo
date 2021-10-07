@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.29 2015/11/03 23:33:44 agc Exp $
 
-SHA1 (scilab-5.5.2-src.tar.gz) = 93057510f2b9089f39c557f45821146c1f6923b7
 RMD160 (scilab-5.5.2-src.tar.gz) = 19fb0707d3c30bd1ec2e6875164c205426609580
 SHA512 (scilab-5.5.2-src.tar.gz) = 7f00ac837e36b5524a9c9a3106bdaefebb71559eb2932b2a16e4fac53fa1f9e66b87eabf98b3006ede25f8ab1d16d6ef1c7561ed29b67ddb42c98610fa72fe79
 Size (scilab-5.5.2-src.tar.gz) = 69626327 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2019/12/22 22:25:21 joerg Exp $
 
-SHA1 (melonDS-0.9.1.tar.gz) = b785da967f8d330d58a36945cb552c69e1042e74
 RMD160 (melonDS-0.9.1.tar.gz) = 06941c76a6dff993218c234d9e2bf6a6c8e0c813
 SHA512 (melonDS-0.9.1.tar.gz) = 733a9f9352b7f61c76de761c7f632f5fca9c4ae2970a0235a7b5c0e6ca2ea550762472ff293f65ce29aaa63a610bb4f1a22b62e1957004606c2f85be60fbb8f2
 Size (melonDS-0.9.1.tar.gz) = 1311519 bytes

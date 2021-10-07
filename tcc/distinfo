@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.8 2005/07/20 20:51:00 rillig Exp $
 
-SHA1 (tcc-0.9.22.tar.gz) = 84100525696af2252e7f0073fd6a9fcc6b2de266
 RMD160 (tcc-0.9.22.tar.gz) = 20fd93561c5a86f0676b2e38b632b4a139a2a25d
 Size (tcc-0.9.22.tar.gz) = 237210 bytes
 SHA1 (patch-aa) = f1869719d69d3528ddad7ed0ba6368d0cd0e6a59

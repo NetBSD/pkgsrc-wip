@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2013/12/08 19:05:51 szptvlfn Exp $
 
-SHA1 (http-types-0.8.3.tar.gz) = e113a5d365318a42c25270a789d3d9642c77c2b9
 RMD160 (http-types-0.8.3.tar.gz) = dc527a2be90ecfb8e06a24385dbf7ea7f0bccf5b
 Size (http-types-0.8.3.tar.gz) = 11452 bytes

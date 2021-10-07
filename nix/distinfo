@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (nix-2.3.7.tar.gz) = a74f330e5265829031a5a18a8f4e092cccb149ce
 RMD160 (nix-2.3.7.tar.gz) = bd5e5893f73784aaf26def6f45bd4ddd8209dd84
 SHA512 (nix-2.3.7.tar.gz) = 18516df4bac346d651ac550d088f6ee378bd7ff6c644c1cf9a59445792bd10765444b4dcdad44a06ac914dbf80021c57dd4496bef2d7a0db45cdee2a5ecdc47d
 Size (nix-2.3.7.tar.gz) = 900906 bytes

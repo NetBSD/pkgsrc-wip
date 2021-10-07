@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.12 2018/07/14 15:03:57 gdt Exp $
 
-SHA1 (ZoneMinder-1.30.5.tar.gz) = 38453f66711b6c5555f56fa932250094d8aeab8d
 RMD160 (ZoneMinder-1.30.5.tar.gz) = c19d119dfad9a2d234341c84ad4f21d1dfe3e0fd
 SHA512 (ZoneMinder-1.30.5.tar.gz) = f423b79726357c277814c9346445b695fc1b0f9cff61847003d6286bc36f92aab8ab35689e1a3552fb60394793c478fefb4c8fa3861a1dd06a2655b018c6a52a
 Size (ZoneMinder-1.30.5.tar.gz) = 9936584 bytes

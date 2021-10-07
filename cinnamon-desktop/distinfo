@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
 
-SHA1 (cinnamon-desktop-4.6.4.tar.gz) = 589fa7fadd9cf63a9763f832e83e97d7fbcbcf21
 RMD160 (cinnamon-desktop-4.6.4.tar.gz) = ea0dccd48779dbda5338b0038f2429f5bf52fe4a
 SHA512 (cinnamon-desktop-4.6.4.tar.gz) = 09a0e521bd97d4eead9e84ca929a04202d3d4ef35e689d84578a534cc00f1be0a22e04c407f7caaaca4bb5b5a837bd1a2893cd727d0045f15ee20938c36fae72
 Size (cinnamon-desktop-4.6.4.tar.gz) = 495195 bytes

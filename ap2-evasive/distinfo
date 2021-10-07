@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2006/08/19 15:45:07 kristerw Exp $
 
-SHA1 (ap2-evasive-1.10.1/mod_evasive_1.10.1.tar.gz) = 7240481f9f7b0f80693787a73a2bfd9bfec6f274
 RMD160 (ap2-evasive-1.10.1/mod_evasive_1.10.1.tar.gz) = 1ce741bf3f3bbc0cc81a9aa73311b08a68bd454e
 Size (ap2-evasive-1.10.1/mod_evasive_1.10.1.tar.gz) = 20454 bytes

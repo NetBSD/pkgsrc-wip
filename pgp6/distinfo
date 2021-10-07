@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.5 2005/03/28 13:18:03 tvierling Exp $
 
-SHA1 (pgpsrc658unix.tar.gz) = aefc64e69419560653d143160ab81d046aa66bae
 RMD160 (pgpsrc658unix.tar.gz) = 3d38d862c3226038827a637ff5a58efa94375e7e
 Size (pgpsrc658unix.tar.gz) = 3633944 bytes
 SHA1 (patch-aa) = ec4f3ecb7e94ba21b2b37540617d392fc6779822

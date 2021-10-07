@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/12/03 22:30:18 nocker Exp $
 
-SHA1 (bsvc-2.1-src.tar.gz) = 3446f9896489e3f814e51608b106b68aa7696d49
 RMD160 (bsvc-2.1-src.tar.gz) = 0183b679829fda0bfd248f9c49af33fac34c2941
 Size (bsvc-2.1-src.tar.gz) = 629638 bytes
 SHA1 (patch-aa) = a9a2520be9b2af009945b2c4e4b841e5eaebed52

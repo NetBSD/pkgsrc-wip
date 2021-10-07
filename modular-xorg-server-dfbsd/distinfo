@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.94 2019/02/28 12:32:39 tnn Exp $
 
-SHA1 (xorg-server-1.20.5.tar.bz2) = fea6fd34c7f48b3c69fbecd8fb294eaa1498e69c
 RMD160 (xorg-server-1.20.5.tar.bz2) = 4b8c60978045bff8974524180e59b070fb1f1dec
 SHA512 (xorg-server-1.20.5.tar.bz2) = 625f0626b122cf95600abe382c3217348999357a0e2d2443092f1b67cff1c98d7ef09303884ceaeac181e0555dc56b0d4d44bda45cc464dac2d9a50c5b32d631
 Size (xorg-server-1.20.5.tar.bz2) = 6126757 bytes

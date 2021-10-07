@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.130 2018/09/02 07:55:30 wiz Exp $
 
-SHA1 (Net-OAuth2-AuthorizationServer-0.27.tar.gz) = 8840c23fe2f313a849d6c3bd81d2c5f0e16c48e0
 RMD160 (Net-OAuth2-AuthorizationServer-0.27.tar.gz) = e72024dc54ff2c2e3d835a9255bacd5f5272a0fa
 SHA512 (Net-OAuth2-AuthorizationServer-0.27.tar.gz) = ade04b5050e963d04adf93a8e95c3bb74be82334d9ecb82b7cbdf1e200ccf9fb9ab562aefa7a2b7ce96285eeac7142d468005a3da006cff4bf911b08f9bbe162
 Size (Net-OAuth2-AuthorizationServer-0.27.tar.gz) = 33916 bytes

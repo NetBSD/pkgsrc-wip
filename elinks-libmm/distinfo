@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2008/02/17 03:30:10 bsadewitz Exp $
 
-SHA1 (elinks-libmm/elinks-current-0.13.tar.bz2) = c1f38abcd9af861e81ea51afcd6038b5c60762e3
 RMD160 (elinks-libmm/elinks-current-0.13.tar.bz2) = 8cb2fc1e20b2d0db3fb7070293ea43154c3fcfff
 Size (elinks-libmm/elinks-current-0.13.tar.bz2) = 2924678 bytes
 SHA1 (patch-aa) = 0dd0dc8af3b79a6cbf9ba9d015650fbd0b60442d

@@ -1,8 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/02/19 22:42:28 khorben Exp $
 
-SHA1 (suse121/libgcrypt11-1.5.0-2.1.2.x86_64.rpm) = b36626c7dda3dc9110667a7f5c232aee4678f7ef
 RMD160 (suse121/libgcrypt11-1.5.0-2.1.2.x86_64.rpm) = 81e6a54af41ead834a60ad86433a7f9cd800cf87
 Size (suse121/libgcrypt11-1.5.0-2.1.2.x86_64.rpm) = 252758 bytes
-SHA1 (suse121/libgcrypt11-1.5.0-2.1.2.i586.rpm) = 69b5de52a60ec00efee50c2731988a35136086ce
 RMD160 (suse121/libgcrypt11-1.5.0-2.1.2.i586.rpm) = 3a73d14700fe38797dc3817a80cd0ca000731cdb
 Size (suse121/libgcrypt11-1.5.0-2.1.2.i586.rpm) = 251995 bytes

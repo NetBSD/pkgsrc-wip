@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2010/01/11 09:19:22 tonnerre Exp $
 
-SHA1 (nxclient-3.4.0-5.i386.tar.gz) = efa0d1bc53ac23541252a0bc31d66f4caf165a0e
 RMD160 (nxclient-3.4.0-5.i386.tar.gz) = 419f22ac81a2b7f3636cf663b8d538786f05997b
 Size (nxclient-3.4.0-5.i386.tar.gz) = 4388189 bytes

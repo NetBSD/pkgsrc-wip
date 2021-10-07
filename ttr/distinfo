@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/08/28 14:02:38 poppnk Exp $
 
-SHA1 (ttr-0.11.tar.gz) = f7a8b21630dc6999447e9d7c5ab9c26016232785
 RMD160 (ttr-0.11.tar.gz) = 6ba123554bb84b76bcfff0f84fe7db26edea6f97
 Size (ttr-0.11.tar.gz) = 44730 bytes

@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/05/08 05:07:53 jeremy-c-reed Exp $
 
-SHA1 (sysvinit-2.84.tar.gz) = d65de43ff956dc800d501d08fdcb4d2627c29594
 Size (sysvinit-2.84.tar.gz) = 91488 bytes
 SHA1 (patch-aa) = 5844532a92fea6c25a6eee314c1b29ff7835e266

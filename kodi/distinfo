@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.13 2017/02/21 16:03:21 joerg Exp $
 
-SHA1 (17.3-Krypton.tar.gz) = b76cd67f2cb32537a107664837a89d93209dd568
 RMD160 (17.3-Krypton.tar.gz) = 2b7d17470fb4e0fd3f9e76a9b2b5b0af4950ba33
 SHA512 (17.3-Krypton.tar.gz) = f071278892b9b241662ac03c415d4ad23b7abbbe59cad7c0602799bcbe85757faf9bf7e4ff262c81d5da7bb6ce5de17c9c9cd2628cd7995f51528db5b5f2fc4b
 Size (17.3-Krypton.tar.gz) = 58461624 bytes

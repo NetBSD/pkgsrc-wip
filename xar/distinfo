@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2008/02/02 00:46:03 dhowland Exp $
 
-SHA1 (xar-1.5.2.tar.gz) = eb411a92167387aa5d06a81970f7e929ec3087c9
 RMD160 (xar-1.5.2.tar.gz) = e3fd6a2ea8b2812a66305f43182ed8e41f129808
 Size (xar-1.5.2.tar.gz) = 137973 bytes

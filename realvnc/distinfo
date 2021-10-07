@@ -1,15 +1,11 @@
 $NetBSD: distinfo,v 1.5 2012/11/12 14:32:14 thomasklausner Exp $
 
-SHA1 (vnc-4_1_2-unixsrc.tar.gz) = 9d8d8d93f4120b2e60c0ec0fce7e81ea302614e7
 RMD160 (vnc-4_1_2-unixsrc.tar.gz) = 2a2d615825e6ac74aca5f0c29d025e576b725dc3
 Size (vnc-4_1_2-unixsrc.tar.gz) = 537713 bytes
-SHA1 (X430src-1.tgz) = 3aaf219e8c2d3eb299f150bd4a2554a84a19354b
 RMD160 (X430src-1.tgz) = 46d4c1c99d9b6529912b05c9fa7ed0b7993e948b
 Size (X430src-1.tgz) = 10993622 bytes
-SHA1 (X430src-2.tgz) = 0fd76324484d793498900655c15117f15c539000
 RMD160 (X430src-2.tgz) = d5081f5e1f1498b2def0ec6b562c4d873275a9e5
 Size (X430src-2.tgz) = 7962239 bytes
-SHA1 (X430src-3.tgz) = a11e619ba0b628d9e2e39e838379658b3b347f66
 RMD160 (X430src-3.tgz) = fd585512ec26fec1c70d79954376e79c3d53248b
 Size (X430src-3.tgz) = 12366363 bytes
 SHA1 (patch-aa) = 977c3c337e6778e8538b6c7daeece4a5b98aa8a4

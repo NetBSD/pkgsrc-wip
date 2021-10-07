@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
 
-SHA1 (typhoon-1.11.0.tar.gz) = 58edaddebf4a995e7ed0b0ed37f9b020b61c8e05
 RMD160 (typhoon-1.11.0.tar.gz) = 87a7ea3d6dfeb142bb3f3056920c98062266af69
 Size (typhoon-1.11.0.tar.gz) = 111833 bytes
 SHA1 (patch-aa) = b6a0d10d1935d8941e054b9c3a2df93a18f0c7f7

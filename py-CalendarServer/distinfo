@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.5 2014/12/09 10:17:42 thomasklausner Exp $
 
-SHA1 (CalendarServer-6.0.tar.gz) = b5393e13b94f8b222fc0aa2aa1116845d04493fa
 RMD160 (CalendarServer-6.0.tar.gz) = 2302ee5ceb244e94a6e2cec50719133e205449db
 Size (CalendarServer-6.0.tar.gz) = 9243997 bytes
 SHA1 (patch-bin_run) = 3930f04fdcc78d4d44f44ebec1d53968601b14f7

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.13 2015/05/08 20:18:18 gschwarz Exp $
 
-SHA1 (moe-1.9.tar.lz) = 6e7f45ccb5796544d415c3bf2206d50f4d8ee646
 RMD160 (moe-1.9.tar.lz) = 004a64d33a3b83cc6ddc28c38e5f01125339539f
 SHA512 (moe-1.9.tar.lz) = 277700e4a796e1a7aee42de55ba4599a350a612f95a1a2eca5078d85f6f9a7db190fb5611eb2f286c98580af847a2934bf38a4bce10176db4c5cddc2d257f929
 Size (moe-1.9.tar.lz) = 82046 bytes

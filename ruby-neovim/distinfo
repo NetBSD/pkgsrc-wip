@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (neovim-0.8.1.gem) = cc26d9d38cc44c349b8df647b1b7f965826b0bbf
 RMD160 (neovim-0.8.1.gem) = 730accabaf5cd8cba4a82e99cfbb5da8a6e0e5e2
 SHA512 (neovim-0.8.1.gem) = 2d56cd56c0817491622f9a4beee4cdc9244e9fd6a4a6b78d69b51f160b1a24395730f153800279b7fdebc99d61c55e3b8944d4b16c1028cfbf5d8c95308d0f53
 Size (neovim-0.8.1.gem) = 43520 bytes

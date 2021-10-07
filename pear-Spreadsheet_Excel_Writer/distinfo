@@ -1,6 +1,5 @@
 $Id: distinfo,v 1.2 2014/02/10 20:58:46 noud4 Exp $
 
-SHA1 (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = 73b48054adaceb3534f812be7fc05208a0b9d5fb
 RMD160 (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = de38c87d7fcf4b6046416eaa28d73b235a5fe715
 Size (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = 57258 bytes
 SHA1 (patch-Image_GraphViz.php) = 134888a8e2d8ce718ab1433904365b0c32608a78

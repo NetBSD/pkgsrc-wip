@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.10 2009/10/05 03:28:46 schnoebe Exp $
 
-SHA1 (yahoo-transport-0.4.90.tar.gz) = f639b5a79746786399194a8eddfba34788b7cad4
 RMD160 (yahoo-transport-0.4.90.tar.gz) = 3917dda1eebc828d93d2e861ea6c2dccae740b31
 Size (yahoo-transport-0.4.90.tar.gz) = 424053 bytes
 SHA1 (patch-ab) = 8ba2d2cb010a1a3fd4053e181e51ef97a657d1ab

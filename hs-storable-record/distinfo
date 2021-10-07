@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/09/23 11:39:47 phonohawk Exp $
 
-SHA1 (storable-record-0.0.1.tar.gz) = 852b4c82ba67526273f2b3721cb7c8953d429f53
 RMD160 (storable-record-0.0.1.tar.gz) = cbc519efad1a80ac5322df323ce07901378ebafe
 Size (storable-record-0.0.1.tar.gz) = 4266 bytes

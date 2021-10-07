@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/03/08 12:36:39 makoto Exp $
 
-SHA1 (libcgi-1.0.tar.gz) = 09f77a8b4a8e73322f9a26dc3e9d5828efebe304
 RMD160 (libcgi-1.0.tar.gz) = e67eaaab382bf77d0445c21d38a41be6a82cbf13
 Size (libcgi-1.0.tar.gz) = 78932 bytes
 SHA1 (patch-Makefile.in) = 5ff19e93b045e6576d296479bc6763188e925226

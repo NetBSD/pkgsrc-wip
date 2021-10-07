@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.17 2019/05/01 19:31:45 maya Exp $
 
-SHA1 (mesa-18.3.6.tar.xz) = cc7cb8cef999bc89142eaf5e162fcb24f6569645
 RMD160 (mesa-18.3.6.tar.xz) = f4e2812c27f7bffcc1e3a28d721752aad5330f2b
 SHA512 (mesa-18.3.6.tar.xz) = 3a6dcaba99185e28d162b130bbd760fe87e6072065958189b28f41ea287ef041397897e098d93218a64802cf11c73806f7400a866bd8e5ed69694fa15c147487
 Size (mesa-18.3.6.tar.xz) = 11882744 bytes

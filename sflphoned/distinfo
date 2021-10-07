@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2006/01/04 16:27:55 poppnk Exp $
 
-SHA1 (sflphoned-0.6.1.tar.gz) = 0e47f9c7783c0c0e9facbbcb024239fb724bfbd1
 RMD160 (sflphoned-0.6.1.tar.gz) = 108f4bc30d90c96adec6a23a73c0b04e26973bdc
 Size (sflphoned-0.6.1.tar.gz) = 1003140 bytes

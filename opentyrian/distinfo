@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:36:55 yhardy Exp $
 
-SHA1 (opentyrian-2.1.20130907-src.tar.gz) = c5b97aea3931db6889acb639e59e619162b05183
 RMD160 (opentyrian-2.1.20130907-src.tar.gz) = d6e892ebc6b865fbb4e622f5fe32f6e4a7a336a3
 Size (opentyrian-2.1.20130907-src.tar.gz) = 297517 bytes
 SHA1 (patch-Makefile) = 4436577f10ff642d2fc882cf09e0ac0c871533d9

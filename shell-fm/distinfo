@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2008/04/02 03:51:56 netcap Exp $
 
-SHA1 (shell-fm-0.4.tar.bz2) = 208354f6ac81fb4051fd15c843ad3b7603107ec4
 RMD160 (shell-fm-0.4.tar.bz2) = 59943b8db2c7dc13340b1bfd0a3060e6da99e3da
 Size (shell-fm-0.4.tar.bz2) = 63665 bytes
 SHA1 (patch-aa) = 79c22b44538b59335cabe747bc57ae23440799b4

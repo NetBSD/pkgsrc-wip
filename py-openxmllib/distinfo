@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.3 2010/05/08 18:14:08 jihbed Exp $
 
-SHA1 (openxmllib-1.0.6.tar.gz) = ab1e49f108c2a318f2dc7241bc56552ca80077e1
 RMD160 (openxmllib-1.0.6.tar.gz) = 305270afa9cc5e8d1c74d3b5831819eb24676cf9
 Size (openxmllib-1.0.6.tar.gz) = 66300 bytes

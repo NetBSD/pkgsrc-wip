@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (libksysguard-5.18.5.tar.xz) = c32216cf03ff9cdb51a088f4516f66b57744ed12
 RMD160 (libksysguard-5.18.5.tar.xz) = e252e2377ead5ad970a585b35cfdf0d17408a97e
 SHA512 (libksysguard-5.18.5.tar.xz) = a648d0db1378165188187db9de78f816b1dfe647ce7e7ea2d505bc04c5008d2c24b2a113bc73c4fc4b3ddf467682ea3b306286f4bffa2c750918112892d78fb3
 Size (libksysguard-5.18.5.tar.xz) = 610320 bytes

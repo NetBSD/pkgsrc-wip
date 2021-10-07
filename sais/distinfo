@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/09/02 19:06:35 thomasklausner Exp $
 
-SHA1 (sais-nick-20060509.tar.gz) = 16ba52b644576e2c3e59bf603fa1b28afffee3ce
 RMD160 (sais-nick-20060509.tar.gz) = 88e6e9080fab1e2b052a44b1bcd4f0057afac070
 Size (sais-nick-20060509.tar.gz) = 674775 bytes
 SHA1 (patch-aa) = 4b1c9bbc0cb19a8a63dc4568d147609fbb6e8c26

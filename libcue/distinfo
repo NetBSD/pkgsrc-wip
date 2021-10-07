@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2015/06/07 14:49:04 ishit Exp $
 
-SHA1 (libcue-1.4.0.tar.bz2) = 3fd31f2da7c0e3967d5f56363f3051a85a8fd50d
 RMD160 (libcue-1.4.0.tar.bz2) = 1339ba7ed4ce63c4b7849c10cca89b89e16e4aee
 Size (libcue-1.4.0.tar.bz2) = 249426 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/11/15 12:16:48 rhialto Exp $
 
-SHA1 (pyside-1.2.4.tar.gz) = 81999d449ef73b308dac85861c103681ea44ffb3
 RMD160 (pyside-1.2.4.tar.gz) = 977f215e01f12d3211c77d8efd8eef98dd6faca7
 SHA512 (pyside-1.2.4.tar.gz) = 8fbb4e695761bc98b73c6f63237c4ba11705599656c8fcffd06d762db1ada71ed92eda6299117b127765b0c681214bd23eaa81dfa30fc406f618cac054decbde
 Size (pyside-1.2.4.tar.gz) = 3905116 bytes

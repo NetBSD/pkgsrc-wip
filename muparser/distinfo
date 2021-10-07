@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (muparser-2.2.6.1.tar.gz) = e489115c7424b3877bee7646cb748c6ef32cfa7f
 RMD160 (muparser-2.2.6.1.tar.gz) = b488379c2628bd7ba4fdcd4d07f1e6e82152a6cc
 SHA512 (muparser-2.2.6.1.tar.gz) = 01bfc8cc48158c8413ae5e1da2ddbac1c9f0b9075470b1ab75853587d641dd195ebea268e1060a340098fd8015bc5f77d8e9cde5f81cffeade2f157c5f295496
 Size (muparser-2.2.6.1.tar.gz) = 755653 bytes

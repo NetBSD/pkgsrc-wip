@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.10 2007/09/30 20:30:12 ondratu Exp $
 
-SHA1 (bluez-libs-3.19.tar.gz) = 0e470102550c31ba90778f15d8b7771eecf15ba4
 RMD160 (bluez-libs-3.19.tar.gz) = 38ecdda81a8eb5990e32a40ad1dcc035f68d0146
 Size (bluez-libs-3.19.tar.gz) = 309088 bytes

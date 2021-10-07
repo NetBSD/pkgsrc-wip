@@ -1,8 +1,6 @@
 $NetBSD: distinfo,v 1.4 2003/06/03 03:29:36 blef Exp $
 
-SHA1 (SpeedX-0.1.4d.tar.gz) = 73e89196ea0936db07f6aa9e4c5cc87c2a2005a5
 Size (SpeedX-0.1.4d.tar.gz) = 813322 bytes
-SHA1 (mercrain.s3m.zip) = 8fba6ea3e1fc2fd3233ce48cb9ddd51860dcf5ed
 Size (mercrain.s3m.zip) = 134661 bytes
 SHA1 (patch-aa) = 106cabe0bee28ce170a35494420b807f7426852a
 SHA1 (patch-ab) = 41ffe893ed1e7d35e1097fdbd19d484b767d6d28

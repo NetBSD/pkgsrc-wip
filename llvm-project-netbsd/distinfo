@@ -1,10 +1,8 @@
 $NetBSD: distinfo,v 1.1 2019/02/01 16:30:00 mgorny Exp $
 
-SHA1 (lld-7.0.1.src.tar.xz) = 3b69e107f27d466488838d5fa65bdfd77b885007
 RMD160 (lld-7.0.1.src.tar.xz) = 44e0e851b957fef86352ebe6c2a37096f8595dcb
 SHA512 (lld-7.0.1.src.tar.xz) = e5d3ed280d8ac6014cd6bbe080b11e2c4ebbae81dc14b637e779ec027d818dbae91c6f0de9e94bcecd6bdaa37f12c35141b5d81f0a15251d27932aa9bebd4047
 Size (lld-7.0.1.src.tar.xz) = 912812 bytes
-SHA1 (llvm-7.0.1.src.tar.xz) = f97632fcc3186eb0d396492ef8acfc807648580f
 RMD160 (llvm-7.0.1.src.tar.xz) = dae96c6f85afb60e73564dc40d02171d01ffdb8f
 SHA512 (llvm-7.0.1.src.tar.xz) = ac43a3cb71a53deb55e3693653847cf20bf6f5d9056f224e6956c96d63bc59ebee9404f088eec9cabe65337b4607a905ef931354b373cf64e0004c6905a6b5df
 Size (llvm-7.0.1.src.tar.xz) = 28311056 bytes

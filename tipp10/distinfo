@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2013/01/19 12:57:35 othyro Exp $
 
-SHA1 (tipp10_2.1.0.orig.tar.gz) = 1e12750c2dcb5381132fc6d0d9c6cbb59d82fbd7
 RMD160 (tipp10_2.1.0.orig.tar.gz) = a1ddf1fa7d3b8aec9b3fa5f1574cec70857713ab
 SHA512 (tipp10_2.1.0.orig.tar.gz) = e28f7a9dcd2b3210e0945b63c31f98fac3c335c920c2345371f717621af39133f5482acf82fb1e8495e1538e1c72608f65a3519fed3d43de350914d7455526ce
 Size (tipp10_2.1.0.orig.tar.gz) = 1871451 bytes

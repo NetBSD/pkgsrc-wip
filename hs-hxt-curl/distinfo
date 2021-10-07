@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/10/01 01:47:43 phonohawk Exp $
 
-SHA1 (hxt-curl-9.1.1.tar.gz) = 27ddd9061588a20feb529e5d32643c9768227db3
 RMD160 (hxt-curl-9.1.1.tar.gz) = bb2e4c42f7b9c6991e08b9325fab905390e5cab6
 Size (hxt-curl-9.1.1.tar.gz) = 5481 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
 
-SHA1 (treetool2.0.2.tar.gz) = 2403c493ff8fc30693847da7ee2610cae242d84f
 RMD160 (treetool2.0.2.tar.gz) = 41c0f8ba84234492816639fc6997ae8e05d75f78
 Size (treetool2.0.2.tar.gz) = 940657 bytes
 SHA1 (patch-aa) = 60c3825ba4f648261ae6b67e10b3b9d333668e75

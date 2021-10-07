@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2014/03/26 12:39:00 slitvinov Exp $
 
-SHA1 (ocrodjvu-0.7.17.tar.gz) = f908206f7e4bc2e0a3fdcd17e7710b4d448150fb
 RMD160 (ocrodjvu-0.7.17.tar.gz) = 88dec1fca370ca066d3862b06a3751b28baa5cae
 Size (ocrodjvu-0.7.17.tar.gz) = 785888 bytes

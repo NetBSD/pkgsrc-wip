@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2015/01/29 07:36:46 jgoamakf Exp $
 
-SHA1 (yojson-1.1.8.tar.gz) = f3ac37915c10facb968867367b0f01755adddd22
 RMD160 (yojson-1.1.8.tar.gz) = c064d719f0ca1e117e5601f911c9bbecabd44e48
 Size (yojson-1.1.8.tar.gz) = 25157 bytes
 SHA1 (patch-Makefile) = 97caf26b95599114d729e340a00c141a5b0759d3

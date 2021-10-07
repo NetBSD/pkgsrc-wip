@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.4 2014/08/29 07:17:45 makoto Exp $
 
-SHA1 (gdb-10.2.tar.gz) = 6bf5ee7877a4740835745ed97ce525a00bb2232c
 RMD160 (gdb-10.2.tar.gz) = be6e1cea6f50a6a7cdaab925828524b278573ec4
 SHA512 (gdb-10.2.tar.gz) = aa89caf47c1c84366020377d47e7c51ddbc48e5b7686f244e38797c8eb88411cf57fcdc37eb669961efb41ceeac4181747f429625fd1acce7712cb9a1fea9c41
 Size (gdb-10.2.tar.gz) = 40267550 bytes

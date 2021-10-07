@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.28 2017/06/27 15:51:39 jperkin Exp $
 
-SHA1 (alsa-lib-1.2.3.2.tar.bz2) = 2dfe24ae4872c0a390791a515d50de4047eff02b
 RMD160 (alsa-lib-1.2.3.2.tar.bz2) = 453431be0a6914c5011d410ed25ec36d90220947
 SHA512 (alsa-lib-1.2.3.2.tar.bz2) = 1fbc6360fda841bd9ca488739bdc9f4142c1b4a07ff767f48f1e160e3d4dff914aed422c97088e238b5e77d7e30aa79ff72569c3348a4cf4a412e1e4bce0bf2a
 Size (alsa-lib-1.2.3.2.tar.bz2) = 1038591 bytes

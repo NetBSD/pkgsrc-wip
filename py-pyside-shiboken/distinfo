@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/11/15 12:14:47 rhialto Exp $
 
-SHA1 (shiboken-1.2.4.tar.gz) = cb93c497f2948b6ce2465f7ec25516bd3e643d95
 RMD160 (shiboken-1.2.4.tar.gz) = 4d5d2467e2195ecaab53ddccdd9aed6778af778a
 SHA512 (shiboken-1.2.4.tar.gz) = daa3fadf3daffaec52f199c0285a37431a4b6b0d450a43a035f49e5505a35b666a1cb0b334c7267af7530841dadbf0b97296812141c93de3b7cd07c7d9016a2a
 Size (shiboken-1.2.4.tar.gz) = 1039530 bytes

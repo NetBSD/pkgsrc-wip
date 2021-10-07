@@ -1,10 +1,8 @@
 $NetBSD$
 
-SHA1 (asterisk-11.22.0/asterisk-11.22.0-vici.tar.gz) = f31639c8222260770010f9bed7705a10737b9850
 RMD160 (asterisk-11.22.0/asterisk-11.22.0-vici.tar.gz) = afa58f16629e4d8790642ccd5379ec69b24663ba
 SHA512 (asterisk-11.22.0/asterisk-11.22.0-vici.tar.gz) = e5f5fc37f0122ce67719f4c6bd51b171f0aa0327d2ad7c8923f3b1a25ddcc43956df533ea8fa9eae1108a0fdfdc31c60ef63cb22fdc41658fef42ef48683c243
 Size (asterisk-11.22.0/asterisk-11.22.0-vici.tar.gz) = 35806918 bytes
-SHA1 (asterisk-11.22.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 831ae6442e23cbef1e7d1c84798778ad0b0524d1
 RMD160 (asterisk-11.22.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = d52df795201c53fc4cd7d99ed41516e312f6f0f3
 SHA512 (asterisk-11.22.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = c7d3c3fd2c854e6776801312d34bf69bbed78a443c16121637f508c5275f18b1d415cbb6e4f6f8c5aa3769cbbfa1a11485b9972053777f3ac39256c2c81729f1
 Size (asterisk-11.22.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 4256538 bytes

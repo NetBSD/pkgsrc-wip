@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.42 2020/04/16 21:54:06 nia Exp $
 
-SHA1 (audacity-2.4.2.tar.gz) = 689451349c7d7dc34a1927498b23ada96390e82c
 RMD160 (audacity-2.4.2.tar.gz) = fae613ada7ffbcf17ff3b2794e0c9ce785caa00b
 SHA512 (audacity-2.4.2.tar.gz) = 0d9cdabf5ba2c7207e8d8e4a8bdfc3e7d32277386436ecb480e3ff781720f5449a56b310ba91c78ca67afb752e2ab736abd5b7ce40d19d153bfc4a2067343a3d
 Size (audacity-2.4.2.tar.gz) = 61248430 bytes

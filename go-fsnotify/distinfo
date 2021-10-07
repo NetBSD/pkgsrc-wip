@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2015/03/12 21:06:12 tnn2 Exp $
 
-SHA1 (go-fsnotify-1.2.0.tar.gz) = f844ff1600c108eaf1f5c8c938ea1635bc24ecdc
 RMD160 (go-fsnotify-1.2.0.tar.gz) = 5639cd92fb2a85aae6d781044c80c12c2b916fe0
 Size (go-fsnotify-1.2.0.tar.gz) = 25655 bytes

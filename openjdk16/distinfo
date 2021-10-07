@@ -1,10 +1,8 @@
 $NetBSD: distinfo,v 1.22 2021/02/06 13:02:45 tnn Exp $
 
-SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
 SHA512 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 6e61996f7e3c3492b0c878644db30d72021dc4096639992e53b4440d4e2e18cd92e5630ecd4600d1917a1e63a7c814b63f74f811a40588febfe19ad8d3208a9d
 Size (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 105760636 bytes
-SHA1 (jdk16u-jdk-16.0.1-9-1.tar.gz) = b3087ebd0f74910583e858237ae650a66bf3671e
 RMD160 (jdk16u-jdk-16.0.1-9-1.tar.gz) = 8c1f71379730fdd8dbac1c122066658fd99a6ef6
 SHA512 (jdk16u-jdk-16.0.1-9-1.tar.gz) = 45ae7a7d14d26b85e917d9002fe525a9a3472c8ef2a8ad13d3a78fe0f85c2ebda53fd26a6d395aaed1a1bbff99287db69037410bd15bed61b3484df5a7428f7d
 Size (jdk16u-jdk-16.0.1-9-1.tar.gz) = 104513577 bytes

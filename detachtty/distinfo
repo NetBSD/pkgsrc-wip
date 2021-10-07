@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/02/20 20:58:40 ddeus Exp $
 
-SHA1 (detachtty_9.tar.gz) = 6b2e058c44d80ca68789ec0fcd511c756edeeadd
 RMD160 (detachtty_9.tar.gz) = b2cd846b1171c847c43673ee6b393f449a7c6571
 Size (detachtty_9.tar.gz) = 13085 bytes
 SHA1 (patch-aa) = cf728af5eede8fd9aecd0daeff91d01579046eff

@@ -1,9 +1,7 @@
 $NetBSD: distinfo,v 1.5 2013/01/20 14:18:58 othyro Exp $
 
-SHA1 (de-en.txt.gz) = f8854ef2674b7b8f922b4a02a335bdcab9eedd03
 RMD160 (de-en.txt.gz) = ac014d44f0900bad276fd73701309f8603535fe1
 Size (de-en.txt.gz) = 3977453 bytes
-SHA1 (ding-1.7.tar.gz) = 486b2986fbc54e8fd9de0751a2b1081d554c12f6
 RMD160 (ding-1.7.tar.gz) = 0ce34510d4855d74167d4256de041bb42736b094
 Size (ding-1.7.tar.gz) = 4037214 bytes
 SHA1 (patch-aa) = 9361c2b87b0c2009bf51d7e3d3b5d3ca14c6ebe7

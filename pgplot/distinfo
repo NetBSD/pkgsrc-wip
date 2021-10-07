@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/12/12 19:10:29 slitvinov Exp $
 
-SHA1 (pgplot5.2.tar.gz) = 1f1c9aa17eeec9a2fb23fd15a0e4a91dcc49ddc1
 RMD160 (pgplot5.2.tar.gz) = 4c21cad6613772f4104c65ac3d8d9a42e3c4afe1
 SHA512 (pgplot5.2.tar.gz) = 03a075c84506ead1d665a7105cd41c7cfbe19d12094cb36fb7459a0f6ee0df0638543b7eca92aaf80677984cc47a07b968f854db8eaa90ec605f78d89c615d1f
 Size (pgplot5.2.tar.gz) = 1197397 bytes

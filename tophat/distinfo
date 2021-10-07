@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (tophat-2.1.1.tar.gz) = 33e81e57528520edd3e67bf2259e1f3a30998a3b
 RMD160 (tophat-2.1.1.tar.gz) = 73c06278ad8bddacc3c83f1dd7f7da6e7dd148c2
 SHA512 (tophat-2.1.1.tar.gz) = e2e0943a6f3d34b83922e6e403b65a3bee480a2b2bb4bf2de0cae7e0ef5bb166b66fec923316c2b643e8550e43c842f0f1bcc2ca7249d20fbcf5a4733fbdeabc
 Size (tophat-2.1.1.tar.gz) = 2259554 bytes

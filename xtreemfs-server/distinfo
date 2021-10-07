@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2011/11/08 03:11:32 tnn2 Exp $
 
-SHA1 (XtreemFS-1.3.1.tar.gz) = 2007825dea502f31814a99a073e607d5d60c93e7
 RMD160 (XtreemFS-1.3.1.tar.gz) = 261d606ca18e7234a3543ef2f8ed14cae65bb3a3
 Size (XtreemFS-1.3.1.tar.gz) = 11867803 bytes
 SHA1 (patch-Makefile) = 3bac7604718dbd2d766dadcbf5e6cca8dba18a5a

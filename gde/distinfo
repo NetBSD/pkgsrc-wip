@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2005/09/28 06:41:18 rillig Exp $
 
-SHA1 (GDElinux.tar.gz) = 3e12b1cdcd24d58df61c8cb1aa638b5890a7a5f2
 RMD160 (GDElinux.tar.gz) = 7e6f4319f2dc47eae9c5855ce8d110edb2b46a00
 Size (GDElinux.tar.gz) = 5770919 bytes
 SHA1 (patch-aa) = e8406eec692d3b1c6642a9454883e782fa469cbb

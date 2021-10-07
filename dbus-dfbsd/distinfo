@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.90 2018/12/10 08:59:44 wiz Exp $
 
-SHA1 (dbus-1.12.12.tar.gz) = ff61dc5bb7e3b4dd86444f4a72fb54378edc54fa
 RMD160 (dbus-1.12.12.tar.gz) = d0c32565de9690671ee78cb030be6fa688aa96b6
 SHA512 (dbus-1.12.12.tar.gz) = 51af4e86ab7d36e1c9a861164e7cd7aa1605fdd82f90aed8728b34c45a87864a00671de9db00d88ea6f96be97459c7eb53d2517ea9d9687ae9ebf81c58c3a80f
 Size (dbus-1.12.12.tar.gz) = 2077301 bytes

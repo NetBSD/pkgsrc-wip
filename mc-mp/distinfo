@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.4 2009/09/03 22:08:22 cheusov Exp $
 
-SHA1 (mc-4.1.40-pre9.tar.gz) = a5d46051e4274f516df7f5251030a94be8d08e6b
 RMD160 (mc-4.1.40-pre9.tar.gz) = 17e2f0c02bd045b9d1f8bc07e9ab9545a20950dc
 Size (mc-4.1.40-pre9.tar.gz) = 1214767 bytes
 SHA1 (patch-configure) = 242e4384bb43f6695ebfc767746a2f42d5fef9fd

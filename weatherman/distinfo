@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2015/08/10 20:11:58 yhardy Exp $
 
-SHA1 (weatherman/1.2.2.tar.gz) = c1ffe2ec70e686f99ccd5bdb6344888b3a3de2f6
 RMD160 (weatherman/1.2.2.tar.gz) = b4eed7efd158d741b1828f368faefe48489d8a4a
 Size (weatherman/1.2.2.tar.gz) = 6734 bytes

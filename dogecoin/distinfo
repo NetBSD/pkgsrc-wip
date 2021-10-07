@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (dogecoin-1.10.0nbRC/v1.10.0.tar.gz) = 86900940084a78e731aeae37979913de007225fd
 RMD160 (dogecoin-1.10.0nbRC/v1.10.0.tar.gz) = bbd969f7d8fc5995200408230eeb4bd283cd4811
 Size (dogecoin-1.10.0nbRC/v1.10.0.tar.gz) = 6537704 bytes
 SHA1 (patch-src_crypto_scrypt-sse2.cpp) = 2106a27ec7a9b3fcda9e50dacd049ebdc065034e

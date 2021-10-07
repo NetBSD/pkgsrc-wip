@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.5 2015/08/17 15:34:47 fhajny Exp $
 
-SHA1 (wkhtmltox-0.12.2.1.tar.bz2) = bd022c22eafb3f1015b2726de3fafabbcdc42dc0
 RMD160 (wkhtmltox-0.12.2.1.tar.bz2) = b5081626d9f4617ee1b4555d1f0ed7514dbb5771
 Size (wkhtmltox-0.12.2.1.tar.bz2) = 36248626 bytes
 SHA1 (patch-qt_mkspecs_solaris-g++-64_qmake.conf) = d61da21fe0ae9ed29a8f9fefb8e46a8dc7fd6fe3

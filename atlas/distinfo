@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.7 2013/09/14 23:46:50 asau Exp $
 
-SHA1 (atlas3.10.2.tar.bz2) = f1f883e201d70ff60d54a2af016b4afc83a2499b
 RMD160 (atlas3.10.2.tar.bz2) = af4099e8bb65f5d771618ca1580f5bc8210f83fe
 SHA512 (atlas3.10.2.tar.bz2) = 9fe04cfa1f89449db047d1a4659a656964d13117c783cbbe43344eb32555736f037d9cd30c5ae1514c08ad5b8949a3982d7fe102d707ddb62288e76b2607fbb1
 Size (atlas3.10.2.tar.bz2) = 4904923 bytes

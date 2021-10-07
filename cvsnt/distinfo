@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/05/27 08:27:07 ondratu Exp $
 
-SHA1 (cvsnt-2.5.03.2382.tar.gz) = 0cf175765ea86b7ef764632f815b5c8f761397a1
 RMD160 (cvsnt-2.5.03.2382.tar.gz) = 666719cd5b671c3d2d79d4ce382b1c6418501fd1
 Size (cvsnt-2.5.03.2382.tar.gz) = 6935773 bytes
 SHA1 (patch-aa) = 55d60dc5e74854b0acfa6f54d6e3dbbaa1dc33d3

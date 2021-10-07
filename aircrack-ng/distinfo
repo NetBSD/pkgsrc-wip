@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.16 2015/02/07 01:35:37 tnn2 Exp $
 
-SHA1 (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = bda98c83fe57ca556e2cb3c0197de395dcfb6c2e
 RMD160 (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = c542db3f03e68c74b4cf5b1b1aee8c435bce3291
 SHA512 (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = 2300e11a4ddbd070f54425ae9dfb584f1488437b272ba4ef3b2bb8b56c049bd6faf5691f8c36df0d63c8b2aa95e3fd63a035ed05ee3ca4bf7e65bf2e95832b6b
 Size (aircrack-ng-1.2-rc4-caa946dad310ce6bf53b08ba5fc98a2d7c7a8053.tar.gz) = 4193272 bytes

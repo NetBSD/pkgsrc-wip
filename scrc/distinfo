@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
 
-SHA1 (scrc-2.1.tar.gz) = cf36b72463b217d832dc0b930a748204c2a45461
 RMD160 (scrc-2.1.tar.gz) = 78012c744fdab78f0f84ab5afe5644efbee72f60
 Size (scrc-2.1.tar.gz) = 966739 bytes
 SHA1 (patch-aa) = 7dd6b2c006fc615492bb152d7277bbbf9512643d

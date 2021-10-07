@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2014/06/17 17:54:14 jihbed Exp $
 
-SHA1 (chompack-2.0.0.tar.gz) = bd2b6d0b42e08010f6559b0ac7afbb32438f8b77
 RMD160 (chompack-2.0.0.tar.gz) = 7de63a3137e1b36e85bb3cb90661c41970b55600
 Size (chompack-2.0.0.tar.gz) = 141120 bytes

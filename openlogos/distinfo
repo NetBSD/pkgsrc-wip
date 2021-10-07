@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.6 2009/12/25 21:25:49 gschwarz Exp $
 
-SHA1 (openlogos-1.0.3.tar.gz) = c37f79d5db180502547585f3c7b8920f21394fab
 RMD160 (openlogos-1.0.3.tar.gz) = 359e52744c3e869aac8c9338d627cecbd088d4b4
 Size (openlogos-1.0.3.tar.gz) = 7741946 bytes
 SHA1 (patch-aa) = 9177093caae31bdc13d0390d722d56b49661c5d4

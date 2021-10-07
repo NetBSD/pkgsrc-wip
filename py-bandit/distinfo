@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (bandit-1.7.0.tar.gz) = b8ee2c296cfbc705c3e7a889cd5a5d0016993d89
 RMD160 (bandit-1.7.0.tar.gz) = 31f3512a9b3e0d94c426086187884f82da44fe29
 SHA512 (bandit-1.7.0.tar.gz) = c51af7ab4c667c376a11f142fa35881a776d420bd3ef41421bd29a713e0b56bbf1622e24cd878e24f57594f03d06b7c2b8258fcf34f57e3a68df4200a34becdc
 Size (bandit-1.7.0.tar.gz) = 506225 bytes

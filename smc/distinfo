@@ -1,12 +1,9 @@
 $NetBSD: distinfo,v 1.3 2009/08/25 11:56:46 thomasklausner Exp $
 
-SHA1 (SMC_0.97_source.zip) = c98775d1b88054d556f7342413e44bf7d8a23f61
 RMD160 (SMC_0.97_source.zip) = 41dd6d77132092eb5966382bd7e22747c80ebd5d
 Size (SMC_0.97_source.zip) = 233670 bytes
-SHA1 (SMC_0.97_game.zip) = 97d93bad263288be8494f13a8e625507aad67799
 RMD160 (SMC_0.97_game.zip) = fc3a49ae21f170909c5f0778b0d3d63f7093d84a
 Size (SMC_0.97_game.zip) = 5313784 bytes
-SHA1 (music_2.0_RC_1.zip) = 841ea5260ff224b2bd813c042084ad2b096fdeec
 RMD160 (music_2.0_RC_1.zip) = 722a0d09f749327a76f24c91b44fd0c48f578381
 Size (music_2.0_RC_1.zip) = 17954786 bytes
 SHA1 (patch-aa) = 394970c59109e1519300722db5a556d3d306c941

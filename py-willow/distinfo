@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/11/19 13:14:23 mpasternak Exp $
 
-SHA1 (willow-1.4.tar.gz) = 39f52e993b1ff604fdf624ba5f0e6c83e9ae22f0
 Size (willow-1.4.tar.gz) = 1329672 bytes
 SHA1 (patch-aa) = d02c9c50fb4e0ea363c4014e1a2b98559b940749
 SHA1 (patch-ab) = df16a0f9adcb07c153870c5b4aaa17f27172a3e1

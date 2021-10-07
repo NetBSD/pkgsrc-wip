@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2006/05/20 10:47:41 poppnk Exp $
 
-SHA1 (hdparm-6.6.tar.gz) = 8d288e0c22d7ff5968f5fa507bbf56703b2f6ed9
 RMD160 (hdparm-6.6.tar.gz) = 714fbc5216bdb427c7e817649f3c4f5462620c13
 Size (hdparm-6.6.tar.gz) = 45538 bytes

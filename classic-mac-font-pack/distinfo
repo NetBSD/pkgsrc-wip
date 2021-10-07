@@ -1,23 +1,16 @@
 $NetBSD: distinfo,v 1.7 2014/02/27 21:14:52 christtrekker Exp $
 
-SHA1 (Brampton.tgz) = 6c34265bd09786b74ba7323063924fea2234e11a
 RMD160 (Brampton.tgz) = 2affb237bb0dac4e4a64dcfa3a7e5a9802a90d92
 Size (Brampton.tgz) = 220789 bytes
-SHA1 (Chicago.zip) = 560ccc32a6bb37ae9b3c5e72f4224d35b205ec62
 RMD160 (Chicago.zip) = 094c885981576427b5b131ee74fc05a1d46e41ae
 Size (Chicago.zip) = 16987 bytes
-SHA1 (CityOfAngelsTTF.zip) = e22785aed1c85f17640fc31a86ee65256f003259
 RMD160 (CityOfAngelsTTF.zip) = 5040995fa9b95b4142c10b71354e7a0b3835e060
 Size (CityOfAngelsTTF.zip) = 16226 bytes
-SHA1 (Geneva_TTF.zip) = ecd6a208f4884d4fd36bfc9ad4b32c85812c8fc1
 RMD160 (Geneva_TTF.zip) = 50a30c3561999bde6d493080dee3665f9d531da8
 Size (Geneva_TTF.zip) = 37887 bytes
-SHA1 (London.ttf.gz) = f4ad2dfa48fd87f41390594240d624dfcd0742a0
 RMD160 (London.ttf.gz) = a7fd726c8848b8b6f1b170dd3d027c5991fdf074
 Size (London.ttf.gz) = 18931 bytes
-SHA1 (MONACO.TTF) = 472270a6a15f4f23c742ace3933777f6c71fe02d
 RMD160 (MONACO.TTF) = cb0e76c920ff4166dc633d3f290549b3cc7dc7bd
 Size (MONACO.TTF) = 1169 bytes
-SHA1 (virtue.zip) = fbe05243b39627326f585429fe50b3bb746c4ebe
 RMD160 (virtue.zip) = 9bd1aef190555518829cd7575e6b3504a1191eaa
 Size (virtue.zip) = 59576 bytes

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (kea-1.8.0.tar.gz) = ae9bc739bf58e876b61184e34fdbf6297d786e7a
 RMD160 (kea-1.8.0.tar.gz) = daff3aac1f3459a1d86007f3563e5aa39f896d61
 SHA512 (kea-1.8.0.tar.gz) = a8896ebdb6948851cddca015d696db4ec205af1472ccc25e7fd6d2f9070599cb7f80998f1dc94e763723723e8e0edd8a53274b96630d27db8c40995489d3a883
 Size (kea-1.8.0.tar.gz) = 8997516 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2008/11/13 19:34:13 shattered Exp $
 
-SHA1 (cpm.tar.gz) = ceaf1c6533d561aaf4a116eda7c406e10d7a051b
 RMD160 (cpm.tar.gz) = 93e04c742a34fb2932b8cbab709d8797bbac8ae3
 Size (cpm.tar.gz) = 176992 bytes
 SHA1 (patch-aa) = c8d9a9f32306b7315fc35ccea2771c53b2ff3edb

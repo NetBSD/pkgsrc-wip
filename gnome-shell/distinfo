@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2020/11/10 12:06:59 nia Exp $
 
-SHA1 (gnome-shell-40.0.tar.xz) = 85e3e1108c0f2cf95be52268ac47c449e06ad0b3
 RMD160 (gnome-shell-40.0.tar.xz) = 387f3946571df37897f491698e2252a8ea30117c
 SHA512 (gnome-shell-40.0.tar.xz) = fc4ca3fbd3dafd4a81f97a765e53b74fa4902018721e25a767c0d353d127b0cdc69c64171188272e3f5b48f11d6ad52064cc237e35210f5e09dfcd763ceb00c4
 Size (gnome-shell-40.0.tar.xz) = 1863432 bytes

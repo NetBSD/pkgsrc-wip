@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (nlohmann-json-3.7.0.tar.gz) = d40e66b98392d0cfbd348de029b7822ab5b74e25
 RMD160 (nlohmann-json-3.7.0.tar.gz) = f2c8699d955994a5c2e685c8f665cd0890f1ffc5
 SHA512 (nlohmann-json-3.7.0.tar.gz) = 35510a0ee59d847ff9fcd4f4026ef936abb89675884fdd2db808f8349a55073206f764cd4f797deb1b6493ea0e04889505f49483e5b88798011dd5db87e7c87d
 Size (nlohmann-json-3.7.0.tar.gz) = 118868542 bytes

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (libevdev-1.9.1.tar.xz) = b61c6a09446d717edc4971f7bc3ce9ffa2f05306
 RMD160 (libevdev-1.9.1.tar.xz) = 3e09951b3bc947a7a0bf86ac58f3d2a2f8c79471
 SHA512 (libevdev-1.9.1.tar.xz) = 7d845ce2279d2e2ef12437f6218550265ea0c85e5b6c0d116aff09787b73626b338fe3084baff060085d393688b5ae3d33772689e0581684eff257af01c4c645
 Size (libevdev-1.9.1.tar.xz) = 442740 bytes

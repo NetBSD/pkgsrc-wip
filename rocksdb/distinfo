@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (rocksdb/rocksdb-5.9.2.tar.gz) = 4712488b661bf6836e1d4a2d2004fdb992ef3f44
 RMD160 (rocksdb/rocksdb-5.9.2.tar.gz) = ad9e2c70f68641cab967cfd68a05c682d4d9a4b4
 SHA512 (rocksdb/rocksdb-5.9.2.tar.gz) = 8382360fa4cdfb71b5090d58cef3aa0476818f4f8a373e5a20b9eee5baec222946d198af67683933d15152ad749a6b641ef86447a6bba40fdbd1b509fdcf510c
 Size (rocksdb/rocksdb-5.9.2.tar.gz) = 3935555 bytes

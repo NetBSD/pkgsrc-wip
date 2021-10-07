@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 21:21:53 yhardy Exp $
 
-SHA1 (Commander-Genius-v3.0.2.tar.bz2) = cafc32f3556c02d661c128fcd2731e0a80218e01
 RMD160 (Commander-Genius-v3.0.2.tar.bz2) = 5cda1543e953d66f4bf80971dbd495d90e9809ce
 SHA512 (Commander-Genius-v3.0.2.tar.bz2) = d83010775f16c88a8717f270cdfbfe548288d3287fb9e8e00dca4565195ebbac01099550c51c82ece30fa52628070423be85e87784a8be04998efdbd56b4921d
 Size (Commander-Genius-v3.0.2.tar.bz2) = 55416662 bytes

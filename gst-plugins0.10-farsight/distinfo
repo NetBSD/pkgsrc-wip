@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2009/09/13 15:11:15 yacht Exp $
 
-SHA1 (gst-plugins-farsight-0.12.11.tar.gz) = 9bedd86044d4052ef98d81db61d838fbc632769a
 RMD160 (gst-plugins-farsight-0.12.11.tar.gz) = bc5e02679b3f92b4f63ec68e3010b07553dc290a
 Size (gst-plugins-farsight-0.12.11.tar.gz) = 500109 bytes
 SHA1 (patch-aa) = 3777a7f8725f90c82f341c398a7a4ec133416e9b

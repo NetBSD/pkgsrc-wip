@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2008/02/10 11:04:32 shattered Exp $
 
-SHA1 (sxemacs-22.1.5.tar.gz) = 4b9493f247b4c3a9182056a27fe3edb1fffb07f7
 RMD160 (sxemacs-22.1.5.tar.gz) = 2fcb8c4f7776451271a49957e10b671322247aee
 Size (sxemacs-22.1.5.tar.gz) = 8802240 bytes
 SHA1 (patch-aa) = f6b39953419328ff6a400b697fe8a198aa42c79a

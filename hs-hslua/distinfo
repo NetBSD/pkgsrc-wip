@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/09/16 21:06:34 szptvlfn Exp $
 
-SHA1 (hslua-0.3.6.1.tar.gz) = f6e8b2f37b60debbd52563ecdaef11b9643495a3
 RMD160 (hslua-0.3.6.1.tar.gz) = 5f510e04bb28551ebcb1e8c0df3dd85b3c25a0e3
 Size (hslua-0.3.6.1.tar.gz) = 127569 bytes

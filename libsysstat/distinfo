@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (libsysstat-0.4.2.tar.xz) = 50c186183db34091303885695df776b8a6878bd8
 RMD160 (libsysstat-0.4.2.tar.xz) = 65e76bf16f5f500a4bad5239bffdca3b46b3d520
 SHA512 (libsysstat-0.4.2.tar.xz) = 9059b9d20edbb7ecd89e722b48c6603b8042030ffad06d3eac167bb518691c2733d314649dc4c42a839d4812c7b65dcd043a13a6bd5b56678da112a8065717df
 Size (libsysstat-0.4.2.tar.xz) = 17508 bytes

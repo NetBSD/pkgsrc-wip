@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2004/01/02 03:06:31 mpasternak Exp $
 
-SHA1 (Soya-0.6.1.tar.bz2) = cefaf3d4ec7cc34b864c22b422b46209aa0e17a5
 Size (Soya-0.6.1.tar.bz2) = 860806 bytes
 SHA1 (patch-ab) = c8e9cf8b02f9dd29e2a95af410c1cf05cea29afe

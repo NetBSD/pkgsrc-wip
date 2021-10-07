@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2007/04/05 20:22:39 alchow Exp $
 
-SHA1 (filepp-1.7.1.tar.gz) = 0f83de7fe13e424c3d5bf14f3631960aa14697dc
 RMD160 (filepp-1.7.1.tar.gz) = 9776856171af31973b443ed90b728ea40932d996
 Size (filepp-1.7.1.tar.gz) = 132361 bytes

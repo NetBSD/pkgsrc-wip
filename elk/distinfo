@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/01/19 14:26:42 jihbed Exp $
 
-SHA1 (elk-1.1.4.tgz) = 02f5a0809f6240fd6c60bfe8479f26894a0759fe
 RMD160 (elk-1.1.4.tgz) = 0c13bd2aa6f81a3a02b0ba0757e07f473046aec0
 Size (elk-1.1.4.tgz) = 1443604 bytes
 SHA1 (patch-aa) = de39298bd72bbbf687f42cee9473cb378f3fcd49

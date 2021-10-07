@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2009/03/28 18:04:08 thomasklausner Exp $
 
-SHA1 (gnomebaker-0.6.4.tar.gz) = ead0fe0091a1de7ae9197bf8e1b374749fc7c61b
 RMD160 (gnomebaker-0.6.4.tar.gz) = a90d129866deefde31e859e45ad1260e6c1be4cc
 Size (gnomebaker-0.6.4.tar.gz) = 1276117 bytes
 SHA1 (patch-aa) = 9b9e1d96955a96e95b6755b4a12b1524addaffaa

@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2014/01/02 21:23:03 thomasklausner Exp $
 
-SHA1 (Netzob-0.4.1.tar.gz) = b058ba5c644d8ad75d9fa38f666ad890e2e9df3b
 RMD160 (Netzob-0.4.1.tar.gz) = 6a079b3143afc4ed32a972cd47386cb95585625b
 Size (Netzob-0.4.1.tar.gz) = 1102566 bytes

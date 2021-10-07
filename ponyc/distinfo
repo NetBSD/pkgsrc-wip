@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (ponyc/0.30.0.tar.gz) = 1a421c996c9f75bf70569d49bc73602752b8a889
 RMD160 (ponyc/0.30.0.tar.gz) = 1df124e2fe655a5f7b9d8601fb7937585d494be5
 SHA512 (ponyc/0.30.0.tar.gz) = fbf59a687e85d02ddcc5c8f56911005e2aaa5721c97f17f1cb5209f7a8de8e19182dce6aa2d6a9373d03e4cd7161ee595b3229b3b2443dbd647d59ce4e6cc435
 Size (ponyc/0.30.0.tar.gz) = 1398063 bytes

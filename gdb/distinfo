@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (gdb-8.2.1.tar.gz) = d6e40134c92e0f10636455cded0312cc799672c9
 RMD160 (gdb-8.2.1.tar.gz) = a92cabfd5da3e358e16aa424a4a3d8de63366614
 SHA512 (gdb-8.2.1.tar.gz) = 13f557290c7b3fbb99f90d95478d8c3b74f9222cfc391cbb0baad2eb7de76e31513521e4dfffcbbf4d7ab84fa72602df0e38c32666d598ac43ef12823deb84fa
 Size (gdb-8.2.1.tar.gz) = 37601384 bytes

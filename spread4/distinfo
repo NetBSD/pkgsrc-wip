@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2014/07/18 11:10:22 fhajny Exp $
 
-SHA1 (spread-src-4.4.1.tar.gz) = f1afef5b4a93644eec1c593872852b7a307098db
 RMD160 (spread-src-4.4.1.tar.gz) = ef161507ba59ece4cf48519341f920d03409eccd
 SHA512 (spread-src-4.4.1.tar.gz) = 19f3fe897e4a4bd68dffc7d28d7b99826bbcbb5c2f44eb18127ed486063594bfd788c03c8c338b9b329302659325fa84a9cbfee3f202a9970afb1a560bb6f496
 Size (spread-src-4.4.1.tar.gz) = 760038 bytes

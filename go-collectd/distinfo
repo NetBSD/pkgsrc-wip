@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (go-collectd-a1cfcc9efe.tar.gz) = 3fd53fa6d91fc8e1a82d99e54e1f4641b9c9b6c3
 RMD160 (go-collectd-a1cfcc9efe.tar.gz) = 466fe1226e513cd18cbc0b183036a269a0d2c87c
 SHA512 (go-collectd-a1cfcc9efe.tar.gz) = 0080d0fc3de34e0380f46a0638e52ab0269dd5ec29e2b073a993151078c2f585dc74ffeb550168d5bf5786860da23b36ed878b59448c15400d423acc4edc2d90
 Size (go-collectd-a1cfcc9efe.tar.gz) = 24535 bytes

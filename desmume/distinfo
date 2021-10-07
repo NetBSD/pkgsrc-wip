@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.9 2013/12/19 05:07:52 othyro Exp $
 
-SHA1 (desmume-0.9.10.tar.tar) = b59ba03f0e74b0da2522ac25316e8a75ef1bb361
 RMD160 (desmume-0.9.10.tar.tar) = 4ca447c8d767ead207d4abf81e63aedbd5f62d50
 Size (desmume-0.9.10.tar.tar) = 4141586 bytes
 SHA1 (patch-po_Makefile.in.in) = 8fe811daefecade4cc516de7886d5637dc8d5290

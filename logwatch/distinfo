@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/07/01 11:37:51 noud4 Exp $
 
-SHA1 (logwatch-7.4.0.tar.gz) = c0a07cf92e99fd48281e53fdaaef7cea72ca11f7
 RMD160 (logwatch-7.4.0.tar.gz) = 86fea2329a6cdf5a3440e4275de40edfaf7635e3
 Size (logwatch-7.4.0.tar.gz) = 294398 bytes
 SHA1 (patch-scripts_services_cron) = ec26788d49349052bab54bc9fb394b220c70c8e3

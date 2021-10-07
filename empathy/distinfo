@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.13 2015/11/03 01:20:18 agc Exp $
 
-SHA1 (empathy-3.12.10.tar.xz) = 1de7132ec517e033ba033fa00775fe620a1b2b55
 RMD160 (empathy-3.12.10.tar.xz) = 1f99444129eb32fa0a1bafae96d1bb7a5678a2e6
 SHA512 (empathy-3.12.10.tar.xz) = 59d48316d4708e04cddb395626ac1e8fc55aa215e1bbb79e6976c58c857f08e8a758ccc670a35bd966b95676a2cdd6bc70dd12e3aac85d01e02e995bb6fd6fe2
 Size (empathy-3.12.10.tar.xz) = 5064384 bytes

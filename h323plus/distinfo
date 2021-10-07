@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2013/07/17 12:52:44 obache Exp $
 
-SHA1 (h323plus-v1_20_2-src.tar.gz) = bccb2dfe9505640c2db5af676d54d65cae47f2e3
 RMD160 (h323plus-v1_20_2-src.tar.gz) = 5e6cdc098eef707978050a1d0eb8ce3f95427634
 Size (h323plus-v1_20_2-src.tar.gz) = 2148186 bytes
 SHA1 (patch-configure) = 6776b0e3bbbed269c50eda6efceeb81e7dcd5e22

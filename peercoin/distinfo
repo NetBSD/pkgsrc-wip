@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (peercoin/master.tar.gz) = d23e96c5e9860fc598e6833dc6d07fd4c689192b
 RMD160 (peercoin/master.tar.gz) = 69d50b5923ec3f7aa909facb6528ade337d328ab
 Size (peercoin/master.tar.gz) = 1710278 bytes
 SHA1 (patch-bitcoin-qt.pro) = 85bf0be2e987eb52c910f861e4810c45342b1b62

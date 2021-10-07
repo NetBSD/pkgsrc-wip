@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.367 2019/09/23 08:05:18 ng0 Exp $
 
-SHA1 (firefox-69.0.1.source.tar.xz) = 3c693918d85e789944e6fe59fe76c34115cae906
 RMD160 (firefox-69.0.1.source.tar.xz) = 602f9a09967c6badf9ce7e0025518e2ed3ac3bac
 SHA512 (firefox-69.0.1.source.tar.xz) = 89e63eb882cd729f938fef3cb0565cf166b14fa8c4e34ff027f3f6ea0469e4a49706074259013c1cea66f7a3f6f46aead8e055049d542935ddca983ac172b93f
 Size (firefox-69.0.1.source.tar.xz) = 315516072 bytes

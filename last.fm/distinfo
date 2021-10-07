@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2007/12/30 21:45:19 netcap Exp $
 
-SHA1 (last.fm-1.3.2.13.src.tar.bz2) = 0380e9e6caebbc5c6920fa3ad7fda2284bc0d042
 RMD160 (last.fm-1.3.2.13.src.tar.bz2) = 7cfa97ac99c1f732ea802c5d5ad1cac0ef17f0db
 Size (last.fm-1.3.2.13.src.tar.bz2) = 1615081 bytes
 SHA1 (patch-aa) = 2f7eda16d6d119c77acb09ce1d557d8d1f1dc230

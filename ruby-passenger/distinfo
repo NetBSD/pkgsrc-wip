@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.10 2015/04/20 16:25:04 fhajny Exp $
 
-SHA1 (passenger-5.1.12.tar.gz) = 159827735577aac19526e73c0713a1312de1e7f9
 RMD160 (passenger-5.1.12.tar.gz) = 6ca2f21dc6f06617b5c2bd7e7b8b07c2b80be46c
 SHA512 (passenger-5.1.12.tar.gz) = 7ecdf0be306a3c4b842c8497861dbc072fc87f5601840678fe1125b77d50e683003b49616397d39b34705c967f604f5193be173c52a9c5ab235ef4e6e43f2f4a
 Size (passenger-5.1.12.tar.gz) = 4245993 bytes

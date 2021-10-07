@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.132 2018/12/09 20:12:41 leot Exp $
 
-SHA1 (gnutls-3.6.5.tar.xz) = 749fcaba23f63b523ec2ad262caeca6f1e62fc6f
 RMD160 (gnutls-3.6.5.tar.xz) = a7194f821deb3b1cd9efa7be8382bf893e317a8e
 SHA512 (gnutls-3.6.5.tar.xz) = 127f053ce45c63cd745fa5a654a2d8e4fbc322f5e17dcc3740fb2e7b376dd18dad59318d66e6e93e37d6a179fca4b35cf2ae62d13be5645cd2d06badd79d4dce
 Size (gnutls-3.6.5.tar.xz) = 8192888 bytes

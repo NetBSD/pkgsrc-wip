@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.3 2012/05/30 11:59:05 thomasklausner Exp $
 
-SHA1 (povray-3.7.0.RC5.tar.gz) = 3104393b20d5a99ac58e2d62d706a072af2445fe
 RMD160 (povray-3.7.0.RC5.tar.gz) = b5b18914a2d05d2671b946b6164ffcc6bf19cc8a
 Size (povray-3.7.0.RC5.tar.gz) = 13175516 bytes
 SHA1 (patch-Makefile.in) = c8d2d76f87ba9b9eff10dc665612185c516d17e6

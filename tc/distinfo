@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.9 2014/10/08 03:57:37 makoto Exp $
 
-SHA1 (tc-2.99.3.tar.gz) = 7212a46febc7eb5ef1beb44a950d7179bfb3696b
 RMD160 (tc-2.99.3.tar.gz) = bde546dc95bad875c62c57222e6733a75cf5215b
 SHA512 (tc-2.99.3.tar.gz) = 274cc5eb6a385cef6ae755af931a47acd56553e9be9a81345ade6d2d3dfae5ff864ab6fc4b27cb02fb7c08f014052c68f5dea93db299feadc95b5999b0afbd1e
 Size (tc-2.99.3.tar.gz) = 1115797 bytes

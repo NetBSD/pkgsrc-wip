@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (mule-p20151011.tar.gz) = d85587f86ab1efdc4398a8c2c40d4a93812c063a
 RMD160 (mule-p20151011.tar.gz) = a517084a3d64a458e55f204696da7e3f952b5274
 Size (mule-p20151011.tar.gz) = 4246482 bytes
 SHA1 (patch-Makefile) = 66fd313096e18c1492b3478df3a1f70e0142a0a7

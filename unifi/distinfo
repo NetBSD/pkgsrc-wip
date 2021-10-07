@@ -1,14 +1,11 @@
 $NetBSD: distinfo,v 1.15 2021/05/31 17:11:34 gdt Exp $
 
-SHA1 (snappy-1.0.5.tar.gz) = 3a3df859cf33f78f8e945c3f67f28685f0f38bb1
 RMD160 (snappy-1.0.5.tar.gz) = c9dec9a8a2faac7bf85b79bcf82f8080713103aa
 SHA512 (snappy-1.0.5.tar.gz) = 4f772673dd1bf482f13db0f09299b46d0ee47b7052c43e69c2c5361d352031152f3132c25faf86ffcf1bfbe0e68625d7eef8fa669be873b568adfc160a82f25b
 Size (snappy-1.0.5.tar.gz) = 1731382 bytes
-SHA1 (snappy-java-1.0.5.4.tar.gz) = 2a67400be7e5967ee28c87f32ea4776f26494f2c
 RMD160 (snappy-java-1.0.5.4.tar.gz) = 30d12e9717b012bf5b214deecf59f3d02c36996b
 SHA512 (snappy-java-1.0.5.4.tar.gz) = 4fce5c0c0ce294ba789fd33dd8aeed92b6c58e004ac8e569ee1840fe4fbeb47b1f3edff75619aee0ebbda65476ec56b15a4aeead360d98dbc3d45d295ab028bd
 Size (snappy-java-1.0.5.4.tar.gz) = 6041905 bytes
-SHA1 (unifi-6.4.54.zip) = c901dcce76dafdd9d7a07b5de1c99696469f2034
 RMD160 (unifi-6.4.54.zip) = 700cd1e48f0146f167ed0097b70353e027969ae6
 SHA512 (unifi-6.4.54.zip) = d0502f87fe6827cdfabbffce7c7b0159aaad2ac032b59d04d5f233ada279fb90d5e21e043de518260c3380c7e23ff561f04040433a441866421dbe9b2db540c0
 Size (unifi-6.4.54.zip) = 158992649 bytes

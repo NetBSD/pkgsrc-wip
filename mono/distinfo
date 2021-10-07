@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.107 2015/11/03 22:50:39 agc Exp $
 
-SHA1 (mono-5.2.0.215.tar.bz2) = 99aa010c8a9ffdf569e847fc85a2c5220820f692
 RMD160 (mono-5.2.0.215.tar.bz2) = ee9453e34ec061ca931b8868a5db1a2b01e0bde0
 SHA512 (mono-5.2.0.215.tar.bz2) = 5bc0fcdc19f104447bd9371fae1035da779f5c5b149c738a449998313d7b4360b71c43ea994b2af90335b2827a1dd42c9a9d19d1adb3f2aebae97cade22de80f
 Size (mono-5.2.0.215.tar.bz2) = 158189773 bytes

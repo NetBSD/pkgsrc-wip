@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2014/08/11 23:10:13 thomasklausner Exp $
 
-SHA1 (libvalhalla-2.1.0.tar.bz2) = 4326f04ccff354443624c6854dbbcf31a1d012f3
 RMD160 (libvalhalla-2.1.0.tar.bz2) = 6a4baa34c428040060b66353b2b290a31f19dc76
 Size (libvalhalla-2.1.0.tar.bz2) = 425466 bytes

@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/12/05 20:54:04 jihbed Exp $
 
-SHA1 (pygr-0.8.0.tar.gz) = 3c642149a71fdc27492f2d8ef0b626123d688b7e
 RMD160 (pygr-0.8.0.tar.gz) = aeb5d86c2de6cd64eba452f3805f2ed32bbea55b
 Size (pygr-0.8.0.tar.gz) = 1521558 bytes

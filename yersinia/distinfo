@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2009/07/16 15:38:29 prudhvikrishna Exp $
 
-SHA1 (yersinia-0.7.1.tar.gz) = cacb446548d076149de0a71a6c03cd2edaa14660
 RMD160 (yersinia-0.7.1.tar.gz) = 005f51da891efe964a03c25da27a0cfe0ac3ac8d
 Size (yersinia-0.7.1.tar.gz) = 318396 bytes
 SHA1 (patch-aa) = f7c0221b73403172dd32c1ea53bf1c7f359e618b

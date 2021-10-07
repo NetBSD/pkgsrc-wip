@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.15 2015/11/03 03:27:53 agc Exp $
 
-SHA1 (opal-3.10.10.tar.xz) = 51cddcee0bdfe61dd0025ff6548d18e6aa0c255e
 RMD160 (opal-3.10.10.tar.xz) = a6580ebd8d711cc9b8e3ef79c4335b40efb8c9b2
 SHA512 (opal-3.10.10.tar.xz) = b72a058e001b5bf69de64467e6fc90280ec83bf31f46fa9f504e921b4702450f8732c7df333b9677e04cf1d33d27efbe22056211da94b879e013f5d7bcaa8465
 Size (opal-3.10.10.tar.xz) = 5886812 bytes

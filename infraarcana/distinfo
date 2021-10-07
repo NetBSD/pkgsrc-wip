@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-SHA1 (ia-v20.0.tar.bz2) = cff36fda201baaf6fb7628abb7a8056248b89737
 RMD160 (ia-v20.0.tar.bz2) = fdce0894e41d05f94b2fb5bb5752131ebba1675b
 SHA512 (ia-v20.0.tar.bz2) = 6714304245a1c4018575f9c2f7674262a39cfbbc1a3a0fb5d5535c332b4c7bb06fa67eaeb85fc7b99ea0211948c2610c7b7f9b2f10dbe10d2eddfa4a866acdda
 Size (ia-v20.0.tar.bz2) = 42440247 bytes

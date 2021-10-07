@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/07/26 20:30:45 jihbed Exp $
 
-SHA1 (pymdptoolbox-4.0a2.tar.gz) = 620df2147155ef4a611d07e83e934f52b97a6255
 RMD160 (pymdptoolbox-4.0a2.tar.gz) = a569d8c36f45f76b3d7a7544a884bc5fe3ca48cd
 Size (pymdptoolbox-4.0a2.tar.gz) = 18212 bytes

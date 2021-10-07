@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (mozart-1.4.0.tar.gz) = f6ae62bdcc8555e741a9cf061ba4233dfe64c5b6
 RMD160 (mozart-1.4.0.tar.gz) = 332c4aca36daf55fe3c734036203871b3a7db4ea
 Size (mozart-1.4.0.tar.gz) = 11708735 bytes
 SHA1 (patch-platform_wish_unixMain.cc) = 279550e379037d6a5cf19f0e07445c0a13ad9e72

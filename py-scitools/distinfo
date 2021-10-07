@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2012/10/11 14:25:00 jihbed Exp $
 
-SHA1 (scitools-0.9.0.tar.gz) = 5017e917a15a9fa469784584dbb3633f91466699
 RMD160 (scitools-0.9.0.tar.gz) = 6dd520ceaed097e5140209ca4cc006b0c3815488
 SHA512 (scitools-0.9.0.tar.gz) = 90ff58136e0d9e6b13018c5f31db9cb68e37938f00e9f07c828c814ed065c8fc14aa6a795170f2616d95e3d39f1e72cfbebc328ee7e489e500d9481f458b6545
 Size (scitools-0.9.0.tar.gz) = 16572053 bytes

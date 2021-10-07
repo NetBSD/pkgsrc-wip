@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.8 2005/10/06 20:40:01 ghen Exp $
 
-SHA1 (prozilla-1.3.6.tar.gz) = 5678a123c7cc2c96ea89caafe904ebf1990c6e63
 RMD160 (prozilla-1.3.6.tar.gz) = d88870fbf70d5bb16525308f5421ed30b765e19c
 Size (prozilla-1.3.6.tar.gz) = 152755 bytes
 SHA1 (patch-aa) = a5805009fdfa597b04d9abaf5367885b3e714b3b

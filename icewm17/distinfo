@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.4 2019/12/10 19:22:36 plunky Exp $
 
-SHA1 (icewm-1.7.0.tar.gz) = 3c7c1c4332449fb4348d38481ffcb4fb503c5d64
 RMD160 (icewm-1.7.0.tar.gz) = 9f11f544c08f9961f60dab23773b0331c6df4a69
 SHA512 (icewm-1.7.0.tar.gz) = 25c00d05eb63ff2bf10d8748a266ac31170e26a0f7b385734e586fabca1e001616344c9b7cffb925f0ca24722a6ca0fbb6a247fcb2dd4410caa502484f2b7e09
 Size (icewm-1.7.0.tar.gz) = 2192103 bytes

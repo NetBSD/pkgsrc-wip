@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (varnish-modules-0.18.0.tar.gz) = ff070e6529cbe53974d42a0ac309631cc6516079
 RMD160 (varnish-modules-0.18.0.tar.gz) = f0a0937741c97801f0cace9d6f0433fc4a60a4cf
 SHA512 (varnish-modules-0.18.0.tar.gz) = a6a56ea371ebe8183926e5411f8b4ee7bb47cc45464cfffb2f4a8d17b04b156889bcbe254845058ded2e712ed21ee73e6e98eb29f72d922f1fbbfc1cc506d9f1
 Size (varnish-modules-0.18.0.tar.gz) = 53830 bytes

@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2014/11/02 18:30:40 thomasklausner Exp $
 
-SHA1 (mu-1.4.13.tar.gz) = 55454a5ee4f18c4cd54181dbf3d1c449b4cd2777
 RMD160 (mu-1.4.13.tar.gz) = 2c9d6b8ddb339ce1d15bd9249414e3082ef0dcba
 SHA512 (mu-1.4.13.tar.gz) = 0f8e7f75332257e8cfdecf2c27bc23c83420387e40ecf92089232af6c545700a6c4925665b39fc236cacf8b26fa4b81df71775cdbe04c340fe3455c54c0d1bbc
 Size (mu-1.4.13.tar.gz) = 2309545 bytes

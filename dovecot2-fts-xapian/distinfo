@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (dovecot2-fts-xapian/1.4.4.tar.gz) = 6edb3d510167300a39528d77463e2e09cceb919d
 RMD160 (dovecot2-fts-xapian/1.4.4.tar.gz) = 6affc44e6578cc5cc423c382ce3c551d8519450c
 SHA512 (dovecot2-fts-xapian/1.4.4.tar.gz) = 6a29c69ffd3d4a65e0598ca6eeb658afc164e0afb405143a233009f6f6d0ea6c0f165af7ef74990fd92f385a14b5fc46fe8e4db6578be2591c473a99730c14f4
 Size (dovecot2-fts-xapian/1.4.4.tar.gz) = 28615 bytes

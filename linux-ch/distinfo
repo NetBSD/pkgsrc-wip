@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1.1.1 2003/11/08 02:05:34 mpasternak Exp $
 
-SHA1 (chstandard-4.0.0.linux2.2.5.intel.tar.gz) = c910f8e9fee518f1589182c07896c74dd44d6696
 Size (chstandard-4.0.0.linux2.2.5.intel.tar.gz) = 13332351 bytes
 SHA1 (patch-aa) = e69376a948996ce17a77c6eb9cd5606dce126f0e

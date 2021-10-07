@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2003/04/29 01:18:06 icmp Exp $
 
-SHA1 (ices-0.2.3.tar.gz) = 8e863533af5bd253985bc91654900dd1b2421f68
 Size (ices-0.2.3.tar.gz) = 331223 bytes
 SHA1 (patch-aa) = bb53e2a9c6df917762b1e29e7e079e30755e8c97

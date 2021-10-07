@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.20 2015/11/03 03:29:04 agc Exp $
 
-SHA1 (ptlib-2.10.11.tar.xz) = 870c58fb9e6959793ddf214c951a1a8ba1f6ac12
 RMD160 (ptlib-2.10.11.tar.xz) = e444715f7b2fce5e2ac78558adff621e36f2ab8b
 SHA512 (ptlib-2.10.11.tar.xz) = eefb1f9b69327518e3ad0678f189d5218529c5d2e60bd242af88736140e7feb1db09f11a7c768a2fb8f37ed74879464e0585ef9867add592f6d6a0cf92ca3655
 Size (ptlib-2.10.11.tar.xz) = 2465468 bytes

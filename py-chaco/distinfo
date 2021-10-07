@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.2 2013/12/05 16:58:03 jihbed Exp $
 
-SHA1 (chaco-4.3.0.tar.gz) = e3aa066fbdeb5c05f4a70491ad060a73a0bc6bb1
 RMD160 (chaco-4.3.0.tar.gz) = 3aa267fc79557eefa31798661148733cf17feaf5
 Size (chaco-4.3.0.tar.gz) = 12312403 bytes

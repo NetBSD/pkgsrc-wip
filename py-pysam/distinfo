@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (pysam/v0.16.0.1.tar.gz) = 928f058c9c2df814a8698bfa88f27a9bd256748c
 RMD160 (pysam/v0.16.0.1.tar.gz) = 7a980c0bd6edac6bdd9103db0fc6f540b0db6619
 SHA512 (pysam/v0.16.0.1.tar.gz) = 5cebb9f3bc8dc6186a629e91423a3c8cb802af6529b943fcd880e056661ec6ee2a00de789cf144c9e40b9d1ef2459c0e06ce27a1b9eab8e2875d2087f275af28
 Size (pysam/v0.16.0.1.tar.gz) = 3294073 bytes

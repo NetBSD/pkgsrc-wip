@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (mailman-3.1.1.tar.gz) = ab1da2fe345ccfe8c3b5d1047b07483b57072074
 RMD160 (mailman-3.1.1.tar.gz) = 28eb64d5f53f40d6dd26034730203750fc62142d
 SHA512 (mailman-3.1.1.tar.gz) = b09962ec99ca1ce1eafd40409a00f976dc47d82adb707313f4516400db6439af8597a1c4e30262fb228c102508ede688912480dbb1dcca9721bb0333693f1d85
 Size (mailman-3.1.1.tar.gz) = 749014 bytes

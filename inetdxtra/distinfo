@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1 2014/05/16 15:19:19 hfath Exp $
 
-SHA1 (inetdxtra-20140904_src.tar.gz) = 1171f2edc5bab11290d84081470e6dcb2ce674c5
 RMD160 (inetdxtra-20140904_src.tar.gz) = c3a71564b7a48b2054a8532cd267dc1a79dafd01
 SHA512 (inetdxtra-20140904_src.tar.gz) = 911e7f95d1893026caa902ab373c76e13d11a94b61c726490abae2308432a2e07346898f16ad4f463be020afc1ed86219c746e857412c83ce0e1c7772fe73ec7
 Size (inetdxtra-20140904_src.tar.gz) = 143162 bytes

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (backports.entry_points_selectable-1.1.0.tar.gz) = fa4750335874bfdbf9d266b8481301da99f08d2c
 RMD160 (backports.entry_points_selectable-1.1.0.tar.gz) = 4d5ac2f2285a16e24d11cf652d65481d01f6b934
 SHA512 (backports.entry_points_selectable-1.1.0.tar.gz) = 86c794899cac2f916b36388fd071a619ef27743ac94f0bb058e6157d02481109088ed7891c7775c2f859b92150315acce9052b04ae000363c54af052fbf50ea7
 Size (backports.entry_points_selectable-1.1.0.tar.gz) = 8770 bytes

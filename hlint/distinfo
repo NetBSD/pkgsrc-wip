@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.19 2014/08/17 21:46:06 szptvlfn Exp $
 
-SHA1 (hlint-1.9.3.tar.gz) = 588f2acba3a38f5dba220d7a212685ba29ee365d
 RMD160 (hlint-1.9.3.tar.gz) = 38558dafda05d21d4b3f04b8a755af83cf59d915
 Size (hlint-1.9.3.tar.gz) = 86068 bytes

@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.3 2013/02/28 22:11:18 szptvlfn Exp $
 
-SHA1 (data-accessor-template-0.2.1.10.tar.gz) = 5185e4fed74f6cb058c63fc76bb494320f9ef0c3
 RMD160 (data-accessor-template-0.2.1.10.tar.gz) = e8ab0a4be533b0dcef4f4c88165c514110ab1cd1
 Size (data-accessor-template-0.2.1.10.tar.gz) = 4087 bytes

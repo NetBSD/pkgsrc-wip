@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.4 2005/09/28 06:41:23 rillig Exp $
 
-SHA1 (charva-1.1.0.tar.gz) = 7c8d588239498fe1110c68684937771eb14affa5
 RMD160 (charva-1.1.0.tar.gz) = c1bcd77600157cd967439e75ed81e5ae575f2794
 Size (charva-1.1.0.tar.gz) = 1018606 bytes

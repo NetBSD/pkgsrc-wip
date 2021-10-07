@@ -1,5 +1,4 @@
 $NetBSD: distinfo,v 1.1 2013/09/25 06:16:21 noud4 Exp $
 
-SHA1 (pear/channels/pearhub.org/2013.09.24/channel.xml) = 2749c0db6911dfb1f80b4d49a15087ef0d32be12
 RMD160 (pear/channels/pearhub.org/2013.09.24/channel.xml) = 81e5dbc601bbde3111604caeaa2a01cef94aa3d7
 Size (pear/channels/pearhub.org/2013.09.24/channel.xml) = 722 bytes

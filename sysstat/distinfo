@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2005/09/16 00:26:07 jeremy-c-reed Exp $
 
-SHA1 (sysstat-6.0.1.tar.gz) = fb0b273300afc6e3696599a983ae2ff50e003132
 RMD160 (sysstat-6.0.1.tar.gz) = 3210e755e3f238f8e8c120453a8fbd5007f5a317
 Size (sysstat-6.0.1.tar.gz) = 151168 bytes
 SHA1 (patch-aa) = a75706a05d99c88e355278a0f29072f9348c5060

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (ldc-0.17.6-src.tar.gz) = b702484fc38feded05e5f42c34ce66d0d14db139
 RMD160 (ldc-0.17.6-src.tar.gz) = 2e77c5c50fef02c6d6ae912dad478d3043389560
 SHA512 (ldc-0.17.6-src.tar.gz) = 433a3582bb5214004a676741d7483ed87066b47b8bfec4633796ca5a717c78ea54ee7b9c2ce1cf7bc399082802f15133d28cb4884b879326d224f48687af68e3
 Size (ldc-0.17.6-src.tar.gz) = 4986528 bytes

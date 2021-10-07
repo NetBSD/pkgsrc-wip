@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (delve-1.0.0.tar.gz) = 396edbbb7b9360a5a1e3173a4858cc0642aecd6a
 RMD160 (delve-1.0.0.tar.gz) = 025340915ad977b3119316792ddae7c1f11ff2ca
 SHA512 (delve-1.0.0.tar.gz) = 128311bb7fd61b5b681c89060d7c0817da649fdbeef6367e627ca537ad4c3f07771d638e7e803c052c95bace8a7f5c8fb07feda1e06ce0ef34fd87143c29fece
 Size (delve-1.0.0.tar.gz) = 1573015 bytes

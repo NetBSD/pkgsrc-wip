@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2009/09/15 15:35:26 cheusov Exp $
 
-SHA1 (stardict-tools-3.0.1.tar.bz2) = 5a859fcf8aed39372cdabbac1310eb700f26c9a4
 RMD160 (stardict-tools-3.0.1.tar.bz2) = 4cc1b40b862aadd24f9dd3f97b258ffaf3e45760
 Size (stardict-tools-3.0.1.tar.bz2) = 410209 bytes
 SHA1 (patch-aa) = 6eac079deb0adfa7e17738be0e5b3f575dbddf2a

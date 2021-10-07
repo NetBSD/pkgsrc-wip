@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.29 2018/05/15 10:50:19 wiz Exp $
 
-SHA1 (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = acec51bc49102bd071ebd1ffd14eb4730dc4cdc2
 RMD160 (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = bee1e0526fb569a5942e45cacb962d7d81604a6a
 SHA512 (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = 37572630196ee124097ffbfcd6f0e77c9701ff46154a213a6a0778cd1ca4f42fe9da598e948bc167eac6af3ef8097c101f39b1569b3141fb7e0dd0e1997955df
 Size (xf86-video-intel-6afed33b2d673d88674f0c76efe500ae414e8e1b.tar.xz) = 955096 bytes

@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (simple-mtpfs/simple-mtpfs-0.3.0.tar.gz) = 9bbb315a4cc1020cdffbfea969dbd3c7a364c42d
 RMD160 (simple-mtpfs/simple-mtpfs-0.3.0.tar.gz) = f6944b6b27c460c880800b2a08d00069cc824cf1
 SHA512 (simple-mtpfs/simple-mtpfs-0.3.0.tar.gz) = 7d2da152708c01ddd2a39c1b56cba6470bfd320b92507530cdd8fc4f25f9500ff817eac6a5d19c775f31029ae6a0baef693987c59453c60c688b84934378f772
 Size (simple-mtpfs/simple-mtpfs-0.3.0.tar.gz) = 36655 bytes

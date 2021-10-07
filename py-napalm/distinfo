@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (napalm-1.2.0.tar.gz) = 4dedbafef06b4477a386012ffe8074a87470f89c
 RMD160 (napalm-1.2.0.tar.gz) = f0a30841f1010adf09a42547741dfbc8f20eb032
 SHA512 (napalm-1.2.0.tar.gz) = b8012d4d68078ea148a94c1c51f7923961916e074838bba4627042f167ef738c79e474e7a69737d8f822ec52a6c6378f2ae38d3ac6c4cd072aee633e6255033b
 Size (napalm-1.2.0.tar.gz) = 78077 bytes

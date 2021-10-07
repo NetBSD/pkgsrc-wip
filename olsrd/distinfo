@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (olsrd-0.6.8.1.tar.gz) = 85d1f895a1d6e0d1076f58ee65acf62e734760a4
 RMD160 (olsrd-0.6.8.1.tar.gz) = bfb4cb19f7c2ed40f010bd444bd5497ac24e9bfc
 SHA512 (olsrd-0.6.8.1.tar.gz) = f56cdd2a1d9d1870174762f9f3f83f208205c9dd1cf36d5103a1683636185e883ee38c79c1d4d8be71c5a0236fab8423f60f00be3c67665fb43380855749b871
 Size (olsrd-0.6.8.1.tar.gz) = 5781797 bytes

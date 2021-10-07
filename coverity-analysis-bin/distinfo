@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (cov-analysis-netbsd64-2020.09.tar.gz) = 55ad4f247631bd372af844b88bb8deccf64b7081
 RMD160 (cov-analysis-netbsd64-2020.09.tar.gz) = 6d46481679066c628a0cac0cf060f3a0451e5e67
 SHA512 (cov-analysis-netbsd64-2020.09.tar.gz) = e67ee9cc302ef422805124cd7d370ae5e9fc0d945b8ac12f3ef6a87ae45154fd6d85b3f7aaf40c9c6076d0737068dbefda888f748bf5f6e220d79c3f940616e1
 Size (cov-analysis-netbsd64-2020.09.tar.gz) = 81172609 bytes
