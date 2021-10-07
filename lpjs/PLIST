@@ -2,7 +2,9 @@
 bin/lpjs-jobs
 bin/lpjs-nodes
 bin/lpjs-submit
+sbin/lpjs-banner
 sbin/lpjs-chaperone
+sbin/lpjs-config
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
