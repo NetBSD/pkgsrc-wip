@@ -253,6 +253,7 @@ share/emacs/${PKGVERSION}/etc/compilation.txt
 share/emacs/${PKGVERSION}/etc/e/README
 share/emacs/${PKGVERSION}/etc/e/eterm-color
 share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
+share/emacs/${PKGVERSION}/etc/e/eterm-direct
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
 share/emacs/${PKGVERSION}/etc/emacs-mail.desktop
@@ -844,6 +845,9 @@ share/emacs/${PKGVERSION}/etc/nxml/test-valid.xml
 share/emacs/${PKGVERSION}/etc/org/OrgOdtContentTemplate.xml
 share/emacs/${PKGVERSION}/etc/org/OrgOdtStyles.xml
 share/emacs/${PKGVERSION}/etc/org/README
+share/emacs/${PKGVERSION}/etc/org/csl/README
+share/emacs/${PKGVERSION}/etc/org/csl/chicago-author-date.csl
+share/emacs/${PKGVERSION}/etc/org/csl/locales-en-US.xml
 share/emacs/${PKGVERSION}/etc/package-keyring.gpg
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
@@ -3641,6 +3645,8 @@ share/emacs/${PKGVERSION}/lisp/shadowfile.el.gz
 share/emacs/${PKGVERSION}/lisp/shadowfile.elc
 share/emacs/${PKGVERSION}/lisp/shell.el.gz
 share/emacs/${PKGVERSION}/lisp/shell.elc
+share/emacs/${PKGVERSION}/lisp/shorthands.el.gz
+share/emacs/${PKGVERSION}/lisp/shorthands.elc
 share/emacs/${PKGVERSION}/lisp/simple.el.gz
 share/emacs/${PKGVERSION}/lisp/simple.elc
 share/emacs/${PKGVERSION}/lisp/site-init.el.gz
