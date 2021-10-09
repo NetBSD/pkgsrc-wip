@@ -4,11 +4,12 @@ bin/lpjs-jobs
 bin/lpjs-menu
 bin/lpjs-nodes
 bin/lpjs-submit
+lib/liblpjs.a
+man/man1/lpjs-nodes.1
 sbin/lpjs-banner
 sbin/lpjs-chaperone
 sbin/lpjs-config
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
-@pkgdir man/man1
 @pkgdir etc/lpjs
