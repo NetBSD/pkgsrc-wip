@@ -53,7 +53,7 @@ PRINT_PLIST_AWK+=	{ sub("${TERRAFORM_PROVIDER_VERSION}", "$${TERRAFORM_PROVIDER_
 INSTALLATION_DIRS+=	${TERRAFORM_PROVIDER_DIR}
 
 #
-# This should overwrite `do-install:' target, however
+# This should be overwritten via `do-install:' target, however
 # lang/go/go-{module,package}.mk already overwrite them.
 #
 .if !target(pre-install)
