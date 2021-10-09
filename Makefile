@@ -4910,6 +4910,7 @@ SUBDIR+=	qt6-qtmultimedia
 SUBDIR+=	qt6-qtnetworkauth
 SUBDIR+=	qt6-qtquick3d
 SUBDIR+=	qt6-qtquicktimeline
+SUBDIR+=	qt6-qtremoteobjects
 SUBDIR+=	qt6-qtscxml
 SUBDIR+=	qt6-qtshadertools
 SUBDIR+=	qt6-qtsvg
