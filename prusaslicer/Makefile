@@ -42,6 +42,7 @@ CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
 .include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
+.include "../../math/qhull/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
