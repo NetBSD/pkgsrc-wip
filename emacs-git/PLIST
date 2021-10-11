@@ -3223,6 +3223,8 @@ share/emacs/${PKGVERSION}/lisp/org/ol-info.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ol-info.elc
 share/emacs/${PKGVERSION}/lisp/org/ol-irc.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ol-irc.elc
+share/emacs/${PKGVERSION}/lisp/org/ol-man.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ol-man.elc
 share/emacs/${PKGVERSION}/lisp/org/ol-mhe.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ol-mhe.elc
 share/emacs/${PKGVERSION}/lisp/org/ol-rmail.el.gz
