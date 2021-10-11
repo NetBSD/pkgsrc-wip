@@ -5,6 +5,7 @@ DISTNAME=	Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 EXTRACT_USING=	bsdtar
+DIST_SUBDIR=	sdl-hercules-hyperion
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
