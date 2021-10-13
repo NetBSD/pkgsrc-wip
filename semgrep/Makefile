@@ -29,6 +29,10 @@ USE_LANGUAGES=	# none
 # Only for Python >= 3.6
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# Do not install tests
+post-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/tests
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
