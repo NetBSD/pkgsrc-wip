@@ -1084,6 +1084,7 @@ SUBDIR+=	gdb-git
 SUBDIR+=	gdb5
 SUBDIR+=	gdb6
 SUBDIR+=	gde
+SUBDIR+=	gdk-pixbuf-jxl
 SUBDIR+=	gdm
 SUBDIR+=	gdm2
 SUBDIR+=	gdsreader

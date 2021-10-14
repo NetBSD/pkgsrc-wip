@@ -1,4 +1,5 @@
 # $NetBSD$
+# used by wip/gdk-pixbuf-jxl/Makefile
 # used by wip/gimp-jxl/Makefile
 
 DISTNAME=	libjxl-0.6

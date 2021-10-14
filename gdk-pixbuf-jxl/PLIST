@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jxl.so
+share/mime/packages/image-jxl.xml
+share/thumbnailers/jxl.thumbnailer
