@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	lark-parser-0.11.2
+DISTNAME=	lark-parser-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lang
-PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lark-parser/}
 
 MAINTAINER=	kamelderouiche@yahoo.com

@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (lark-parser-0.11.2.tar.gz) = ee3bd610596b75ae66b10c2f0fcb2c9a3366af07
-SHA512 (lark-parser-0.11.2.tar.gz) = 277be4e6d56d8e2747df434518d6d7918c149a67c3f6af3f978858be86f3fae9248989823c2429dbdff4a1c1615753607f5487fd9d6705cfafec698cb9d47e4b
-Size (lark-parser-0.11.2.tar.gz) = 225851 bytes
+RMD160 (lark-parser-0.10.1.tar.gz) = 8bef2ef3afa271dd1b7fc3cb78c96b14cdfe5ecd
+SHA512 (lark-parser-0.10.1.tar.gz) = 716c565b9b496eda8430c8a33e1566620240aa60e3052b3ea4f723c18975b64be69021172705896a60344ce9754e605e79a9c0d97ad28874f50d6036025a5895
+Size (lark-parser-0.10.1.tar.gz) = 216606 bytes
