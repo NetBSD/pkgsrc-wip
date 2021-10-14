@@ -1,0 +1,9 @@
+$NetBSD$
+
+RMD160 (libjxl-0.6.tar.gz) = c24c9b2b0e2a5a24a030c6be11f392e989047b9b
+SHA512 (libjxl-0.6.tar.gz) = 934c86d079c7a1f5382fad158efac225b9d1b27e551ea85ea7ec43e7ffd5cba85ddbfa35658b242a9f9c9589decf245568349abfa8a4fe12898af78d51608852
+Size (libjxl-0.6.tar.gz) = 16953410 bytes
+SHA1 (patch-CMakeLists.txt) = 037a77f2c258424fcc75f7eff2b75ae4cc150b19
+SHA1 (patch-deps.sh) = 7886018fe8f79f692865c852b2755e4b16a3ee72
+SHA1 (patch-lib_jxl_base_os__macros.h) = 083d97beeec362271fa1ce515204332f1d8938e6
+SHA1 (patch-tools_cpu_os__specific.cc) = 8cdd77ae04ad80e09c4e46ef1de29ba71cebc0b7

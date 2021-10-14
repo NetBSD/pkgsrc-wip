@@ -2100,6 +2100,7 @@ SUBDIR+=	libircclient
 SUBDIR+=	libitl
 SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
+SUBDIR+=	libjxl
 SUBDIR+=	libkdepim
 SUBDIR+=	libkgapi
 SUBDIR+=	libkleo

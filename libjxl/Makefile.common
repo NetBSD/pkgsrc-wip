@@ -1,0 +1,13 @@
+# $NetBSD$
+
+DISTNAME=	libjxl-0.6
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libjxl/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://jpegxl.info/
+LICENSE=	modified-bsd
+
+PATCHDIR?=	${.CURDIR}/../../wip/libjxl/patches
+DISTINFO_FILE?=	${.CURDIR}/../../wip/libjxl/distinfo
