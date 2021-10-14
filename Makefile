@@ -3946,7 +3946,6 @@ SUBDIR+=	py-jswebkit
 SUBDIR+=	py-jtextfsm
 SUBDIR+=	py-julio
 SUBDIR+=	py-junit-xml
-SUBDIR+=	py-junit-xml2
 SUBDIR+=	py-junos-netconify
 SUBDIR+=	py-jupyter-console
 SUBDIR+=	py-jwcrypto
