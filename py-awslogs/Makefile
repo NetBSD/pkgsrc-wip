@@ -20,9 +20,6 @@ USE_LANGUAGES=			# none
 # Only for Python 3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-#post-install:
-#	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/tests
-
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/awslogs ${DESTDIR}${PREFIX}/bin/awslogs${PYVERSSUFFIX}
 
