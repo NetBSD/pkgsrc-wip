@@ -6,6 +6,6 @@ Size (doomlegacy_1.48.8_common.zip) = 1011350 bytes
 SHA1 (patch-src_Makefile) = a5f42fcf91d516271942d82d574bc25291e987af
 SHA1 (patch-src_am__map.c) = 14b3c8b70c63778ad043827ab2f0b6f4fe07bcde
 SHA1 (patch-src_dstrings.c) = 9c3f8418a25684de72e9ad980f0390b58db12d58
-SHA1 (patch-src_hardware_hw__main.c) = ef04b52ace6a5fdf2935d88a692a335574ea0593
+SHA1 (patch-src_hardware_hw__main.c) = 7eef54453b3ecbfc37a7705887f89b8b6350baf2
 SHA1 (patch-src_p__local.h) = ad6c770b95e87fb06e34ec7643e98f59d41e71f4
 SHA1 (patch-src_p__setup.c) = b89ff33339c9fb32eec5da774e9a3692ef5d6f62

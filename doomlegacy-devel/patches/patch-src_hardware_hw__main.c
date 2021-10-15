@@ -2,6 +2,7 @@ $NetBSD$
 
 Add null statement in #else branch. Otherwise a label is located at the end of
 a block.
+https://sourceforge.net/p/doomlegacy/bugs/679/
 
 --- src/hardware/hw_main.c.orig	2021-10-15 10:34:51.000000000 +0000
 +++ src/hardware/hw_main.c
