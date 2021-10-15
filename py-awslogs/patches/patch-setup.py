@@ -2,6 +2,8 @@ $NetBSD$
 
 Do not install tests.
 
+Also shared upstream via <https://github.com/jorgebastida/awslogs/pull/324>.
+
 --- setup.py.orig	2020-07-10 07:01:23.000000000 +0000
 +++ setup.py
 @@ -19,7 +19,7 @@ setup(
