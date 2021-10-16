@@ -43,6 +43,6 @@ do-install:
 	rm -rf ${DESTDIR}${INSTALLDIR}/vlib/*/*/*/tests
 
 do-test:
-	cd ${WRKSRC} && ./v test
+	cd ${WRKSRC} && ./v test-all
 
 .include "../../mk/bsd.pkg.mk"
