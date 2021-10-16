@@ -13,7 +13,6 @@ LICENSE=	mit
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported
 
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
-DEPENDS+=	${PYPKGPREFIX}-conda-[0-9]*:../../wip/py-conda
 DEPENDS+=	${PYPKGPREFIX}-identify>=1.0.0:../../wip/py-identify
 DEPENDS+=	${PYPKGPREFIX}-nodeenv>=0.11.1:../../wip/py-nodeenv
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
