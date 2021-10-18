@@ -6,7 +6,7 @@ https://sourceforge.net/p/doomlegacy/bugs/679/
 
 --- src/hardware/hw_main.c.orig	2021-10-15 10:34:51.000000000 +0000
 +++ src/hardware/hw_main.c
-@@ -3079,6 +3079,9 @@ bad_subsector:
+@@ -3118,6 +3118,9 @@ bad_subsector:
          // Error situations, should not get here.
  #ifdef PARANOIA
          GenPrintf( EMSG_warn, "Bad BSP subsector: %i\n", subsecnum );

@@ -33,7 +33,7 @@ https://sourceforge.net/p/doomlegacy/feature-requests/96/
  
  // origin of block map
  // The bottom left corner of the most SW block.
-@@ -2211,14 +2214,25 @@ boolean P_SetupLevel (int      to_episod
+@@ -2221,14 +2224,25 @@ boolean P_SetupLevel (int      to_episod
      }
  
      // note: most of this ordering is important
