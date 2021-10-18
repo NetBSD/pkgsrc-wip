@@ -12,9 +12,9 @@ PKG_OPTIONS_GROUP.window-system=	x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+=		toolkit
 PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
 #  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk2,
-#                          gtk3, xaw or lucid or athena, motif, no)
-# gtk in next line implies gtk2, xaw = athena = lucid
-PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw
+#                          gtk3, xaw, no)
+# gtk in next line implies gtk2, xaw
+PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # gtk2 and gtk has the same effect
 # gtk3 is default in the logic below (even not included in SUGGESTED_=)
 # gtk* will be ignored for nextstep even shown as selected.
@@ -112,8 +112,7 @@ CONFIGURE_ARGS+=	--without-xaw3d
 ###
 .  if (empty(PKG_OPTIONS:Mxaw) && \
        empty(PKG_OPTIONS:Mgtk) && \
-       empty(PKG_OPTIONS:Mgtk2) && \
-       empty(PKG_OPTIONS:Mmotif))
+       empty(PKG_OPTIONS:Mgtk2))
 # defaults to gtk3
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk3/buildlink3.mk"
@@ -125,9 +124,6 @@ CONFIGURE_ARGS+=	--with-x-toolkit=gtk2
 .  elif !empty(PKG_OPTIONS:Mxaw)
 .include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
-.  elif !empty(PKG_OPTIONS:Mmotif)
-.include "../../mk/motif.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .  endif
 
 ###
