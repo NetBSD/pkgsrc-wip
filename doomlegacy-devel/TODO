@@ -1,4 +1,19 @@
 
+Part 8: Support for extended nodes
+==================================
+[X] Add patch to support DeeP and ZDoom extended nodes
+    This code is based on woof 1.2.0
+    Fixes Bug #657
+[X] Created upstream feature request #95
+    => Deferred (not considered for 1.48 release)
+[X] Add optional zlib dependency for build system
+[X] Add support for compressed ZDoom extended nodes
+    Use "zdbsp -z" to create test map with compressed ZDoom extended nodes
+    => Works as expected
+
+Merged in SVN revision 1585.
+
+
 Part 9: Support for internal blockmap creation
 ==============================================
 Make it possible to play maps with broken blockmaps (or no blockmaps at all).
@@ -22,6 +37,8 @@ Make it possible to play maps with broken blockmaps (or no blockmaps at all).
     (bug in original MBF code)
 [X] Updated upstream feature request #96
 
+Merged in SVN revision 1595.
+
 
 Part 18: Import final release
 =============================
@@ -42,6 +59,13 @@ Clang 10 reports warning for a comparison to be always true.
 [X] Created upstream bug report #672
     Fixed upstream in SVN revision 1572
     => Tested to work with SVN revision 1574
+
+
+Part 20: Label at end of compound statement
+===========================================
+Tested with GCC 7.4.0.
+
+[X] Created upstream bug report #679
 
 
 EOF
