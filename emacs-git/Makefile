@@ -59,6 +59,12 @@ post-extract:
 pre-configure:
 	(cd ${WRKSRC}; ${PKGSRC_SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ./autogen.sh)
 
+# by default the filename of the emacs dump contains a fingerprint of the corresponding emacs version
+# but this is not needed and makes the PLIST more simple
+post-install:
+	cd ${DESTDIR}${PREFIX}/libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM} && \
+		mv emacs-*.pdmp emacs.pdmp
+
 .include "../../wip/mk/git-package.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
