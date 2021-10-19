@@ -1,0 +1,20 @@
+--- gcc/ada/libgnat/s-osprim__posix.adb.orig	2021-08-30 15:32:58.056688539 +0000
++++ gcc/ada/libgnat/s-osprim__posix.adb	2021-08-30 15:35:17.972574099 +0000
+@@ -47,7 +47,7 @@
+    pragma Convention (C, timespec);
+ 
+    function nanosleep (rqtp, rmtp : not null access timespec) return Integer;
+-   pragma Import (C, nanosleep, "nanosleep");
++   pragma Import (C, nanosleep, "__nanosleep50");
+ 
+    -----------
+    -- Clock --
+@@ -77,7 +77,7 @@
+       function gettimeofday
+         (Tv : access timeval;
+          Tz : System.Address := System.Null_Address) return Integer;
+-      pragma Import (C, gettimeofday, "gettimeofday");
++      pragma Import (C, gettimeofday, "__gettimeofday50");
+ 
+    begin
+       --  The return codes for gettimeofday are as follows (from man pages):

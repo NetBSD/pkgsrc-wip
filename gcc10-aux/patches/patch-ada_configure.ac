@@ -1,0 +1,14 @@
+--- gnattools/configure.ac.orig	2021-08-28 14:58:27.669166093 +0000
++++ gnattools/configure.ac	2021-08-28 14:59:57.168648867 +0000
+@@ -80,6 +80,11 @@
+     mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
+     indepsw.adb<indepsw-gnu.adb"
+     ;;
++  *-*-netbsd*)
++    TOOLS_TARGET_PAIRS="\
++    mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
++    indepsw.adb<indepsw-gnu.adb"
++    ;;
+   *-*-linux*)
+     TOOLS_TARGET_PAIRS="\
+     mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
