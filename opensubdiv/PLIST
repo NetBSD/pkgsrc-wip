@@ -50,9 +50,9 @@ ${PLIST.opengl}include/opensubdiv/osd/glXFBEvaluator.h
 ${PLIST.opengl}include/opensubdiv/osd/glslPatchShaderSource.h
 include/opensubdiv/osd/mesh.h
 include/opensubdiv/osd/nonCopyable.h
-include/opensubdiv/osd/ompEvaluator.h
-include/opensubdiv/osd/ompKernel.h
 include/opensubdiv/osd/opengl.h
+include/opensubdiv/osd/tbbEvaluator.h
+include/opensubdiv/osd/tbbKernel.h
 include/opensubdiv/osd/types.h
 include/opensubdiv/sdc/bilinearScheme.h
 include/opensubdiv/sdc/catmarkScheme.h
@@ -73,10 +73,10 @@ include/opensubdiv/vtr/stackBuffer.h
 include/opensubdiv/vtr/types.h
 lib/libosdCPU.a
 lib/libosdCPU.so
-lib/libosdCPU.so.3.1.0.RC2
+lib/libosdCPU.so.3.4.4
 ${PLIST.opengl}lib/libosdGPU.a
 ${PLIST.opengl}lib/libosdGPU.so
-${PLIST.opengl}lib/libosdGPU.so.3.1.0.RC2
+${PLIST.opengl}lib/libosdGPU.so.3.4.4
 ${PLIST.doc}share/doc/opensubdiv/additional_resources.html
 ${PLIST.doc}share/doc/opensubdiv/api_overview.html
 ${PLIST.doc}share/doc/opensubdiv/cmake_build.html
