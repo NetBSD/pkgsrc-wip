@@ -281,7 +281,7 @@ CONFIGURE_ARGS+=	--add-module=../${RTMP_DISTNAME}
 .endif
 
 .if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.6.2
+NJS_VERSION=		0.7.0
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
