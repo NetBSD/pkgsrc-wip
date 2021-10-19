@@ -16,4 +16,5 @@ USE_LANGUAGES=		c c++
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../lang/guile20/buildlink3.mk"
+.include "../../math/octave/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
