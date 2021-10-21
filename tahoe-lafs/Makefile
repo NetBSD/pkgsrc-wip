@@ -1,11 +1,10 @@
 # $NetBSD: Makefile,v 1.47 2021/03/18 23:23:31 gdt Exp $
 
 VERSION_BASE=	1.16.0
-VERSION_RC=	rc0
+VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tahoe-lafs.org/
@@ -21,14 +20,18 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # The world sees this as part of base python.
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-# from tahoe's setup.py
+## Dependencies are from tahoe's setup.py, in order
+# install_requires
+# setuptools 28.8.0
 DEPENDS+=	${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.0:../../devel/py-ZopeInterface
 DEPENDS+=	${PYPKGPREFIX}-foolscap>=21.7.0:../../net/py-foolscap
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.6:../../security/py-cryptography
-# \todo twisted needs tls, conch options
-DEPENDS+=	${PYPKGPREFIX}-twisted>=19.1.0:../../net/py-twisted
+# twisted needs tls, conch options.  pkgsrc has tls.
+# TODO: conch??
+DEPENDS+=	${PYPKGPREFIX}-twisted>=19.10.0:../../net/py-twisted
 # bcrypt and appdirs required as twisted deps at runtime
+# TODO: resolve
 DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
@@ -42,19 +45,29 @@ DEPENDS+=	${PYPKGPREFIX}-future>=0.18.2:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-pyutil>=3.3.0:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.4.0:../../devel/py-distro
-
-
-# tor option
+# tor_requires
 DEPENDS+=	${PYPKGPREFIX}-txtorcon>=0.17.0:../../net/py-txtorcon
+# txi2p-requires
+# DEPENDS+=	${PYPKGPREFIX}-txi2p-tahoe>=0.3.5:../../net/py-txi2p-tahoe
 
-# \todo txi2p: not yet in a release, not in pkgsrc
-
-# \tood Decide why these are here and prune.
-# Not in setup.py, but seems to exist elsewhere.
-#DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.8:../../security/py-asn1
-#DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.5:../../security/py-asn1-modules
-#DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.14:../../security/py-OpenSSL
-#DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
+# test_requires
+# pyflakes
+# coverage
+# mock
+# tox
+# pytest
+# pytest-twisted
+# hypothesis
+# treq
+# towncrier
+# testtools
+# fixtures
+# beautifulsoup4
+# html5lib
+# junitxml
+# tenacity
+# paramiko
+# pytest-timeout
 
 # Note that there is an upstream (inherited from setuptools) bug
 #   https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1258#comment:29 that
