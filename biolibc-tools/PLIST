@@ -1,6 +1,5 @@
 @comment $NetBSD$
 bin/blt
-libexec/biolibc-tools/blt
 libexec/biolibc-tools/fastq-derep.sh
 libexec/biolibc-tools/fastx-derep
 libexec/biolibc-tools/fastx2tsv
