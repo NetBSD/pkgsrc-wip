@@ -5396,7 +5396,6 @@ SUBDIR+=	tabbed-git
 SUBDIR+=	tabixpp
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tagtool
-SUBDIR+=	tahoe-lafs
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
