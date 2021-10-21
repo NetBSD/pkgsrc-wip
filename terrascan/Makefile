@@ -10,12 +10,6 @@ HOMEPAGE=	https://github.com/accurics/terrascan
 COMMENT=	Static code analyzer for Infrastructure as Code
 LICENSE=	apache-2.0
 
-# TODO: find a way to extract/hardcode commitHash/buildDate
-#GO_BUILD_PATTERN+=	-ldflags ' \
-#			-X github.com/terraform-docs/terraform-docs/internal/version.version=v${PKGVERSION_NOREV} \
-#			-X github.com/terraform-docs/terraform-docs/internal/version.commitHash="" \
-#			-X github.com/terraform-docs/terraform-docs/internal/version.buildDate=""'
-
 GO_BUILD_PATTERN+=	cmd/terrascan/main.go
 
 post-install:
