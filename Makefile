@@ -3196,6 +3196,7 @@ SUBDIR+=	plibsys
 SUBDIR+=	plink
 SUBDIR+=	plink2
 SUBDIR+=	plod
+SUBDIR+=	ploot
 SUBDIR+=	plover-git
 SUBDIR+=	plover-wxgtk
 SUBDIR+=	plplot
