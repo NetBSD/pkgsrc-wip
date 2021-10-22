@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/ploot
 COMMENT=	Simple plotting tools
-#LICENSE=	generic-nonlicense
+LICENSE=	isc
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
