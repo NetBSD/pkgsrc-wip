@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libcanlock-3.3.0pre21
+DISTNAME=	libcanlock-3.3.0pre24
 PKGNAME=	${DISTNAME:S/libcanlock/canlock-hp/}
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
