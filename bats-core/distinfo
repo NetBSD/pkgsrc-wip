@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2016/09/08 14:34:02 jperkin Exp $
 
-RMD160 (bats-core-1.4.1.tar.gz) = 86429672c062f4736d49adaaf7302e31ab853f59
-SHA512 (bats-core-1.4.1.tar.gz) = 3b00af13ac97d38349f09db79179e170e2b37c5364815e0e1fb957e6593a564d291bb50c54776088dd5784ef8cd597f0c332ec3a574bcef65e3083a5f2fc1f0e
-Size (bats-core-1.4.1.tar.gz) = 98964 bytes
-SHA1 (patch-install.sh) = 8d6df7eccf4201b6b12bd94bec91e81a6ed9517c
+RMD160 (bats-core-1.5.0.tar.gz) = 52ddea5615e6facde321ffab09c9224549f3f22b
+SHA512 (bats-core-1.5.0.tar.gz) = e0386fb32214db67ae001a2040c44277988af7fa909a820843237c7d47eedfa4e370238d5b2d06a4667b874cad4b00f2cd14624b1bc45628192e5d693bd5073a
+Size (bats-core-1.5.0.tar.gz) = 108052 bytes
+SHA1 (patch-install.sh) = 482b34ba79587a54220567bc4e104c7071aab1de

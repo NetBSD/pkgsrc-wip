@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/bats
+lib/bats-core/common.bash
 lib/bats-core/formatter.bash
 lib/bats-core/preprocessing.bash
 lib/bats-core/semaphore.bash
