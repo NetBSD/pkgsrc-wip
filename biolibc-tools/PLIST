@@ -1,9 +1,12 @@
 @comment $NetBSD$
 bin/blt
+libexec/biolibc-tools/fasta2seq
 libexec/biolibc-tools/fastq-derep.sh
 libexec/biolibc-tools/fastx-derep
 libexec/biolibc-tools/fastx2tsv
+libexec/biolibc-tools/find-orfs
 libexec/biolibc-tools/uniq-seqs.awk
+libexec/biolibc-tools/vcf-search
 man/man1/blt-fastq-derep.sh.1
 man/man1/blt-fastx-derep.1
 man/man1/blt-fastx2tsv.1

@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	biolibc-tools-0.1.0.46
+DISTNAME=	biolibc-tools-0.1.0.47
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	e9c6ea04e4bf5144c6b6c6d5c3fd6ec54775311d
+GITHUB_TAG=	9b89547f97ceb11b6278db424f82862aa56b4523
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc-tools
