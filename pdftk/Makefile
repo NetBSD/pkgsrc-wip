@@ -37,8 +37,8 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-.include "../../lang/gcc34/preconfigure.mk"
+#.include "../../lang/gcc34/preconfigure.mk"
 
-.include "../../lang/gcc34/buildlink3.mk"
+#.include "../../lang/gcc34/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
