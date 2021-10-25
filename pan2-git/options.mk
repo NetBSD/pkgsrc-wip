@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pan2_git
 PKG_OPTIONS_REQUIRED_GROUPS=	gtkversion
 PKG_OPTIONS_GROUP.gtkversion=	gtk2 gtk3
-PKG_SUGGESTED_OPTIONS=		gtk2
+PKG_SUGGESTED_OPTIONS=		gtk3
 
 .include "../../mk/bsd.options.mk"
 
