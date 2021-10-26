@@ -136,6 +136,7 @@ sbin/auto-sys-manager
 sbin/auto-transfer-pw
 sbin/auto-unlock-local-pw
 sbin/auto-unlock-user
+sbin/auto-unsupported-os
 sbin/auto-update-infiniband-modules
 sbin/auto-update-pkgsrc
 sbin/auto-update-system
