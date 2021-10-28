@@ -1,8 +1,8 @@
 $NetBSD$
 
-RMD160 (master.zip) = 22d6e16dd5fa8bd7eaedb310c1d0f1fe84d6a3c4
-SHA512 (master.zip) = 40d2e5c41b3975eed13f27dc173505ed870756be751c862b03390d162334466447630c895cf1bfecaf9d47219c6004548efab1d77d011f8a29dd728511220877
-Size (master.zip) = 23258620 bytes
+BLAKE2s (wise3/master.zip) = 5519dfca229cd2a50d5c771008e7daa121149df7100582d271f4aba4bbadee7e
+SHA512 (wise3/master.zip) = 40d2e5c41b3975eed13f27dc173505ed870756be751c862b03390d162334466447630c895cf1bfecaf9d47219c6004548efab1d77d011f8a29dd728511220877
+Size (wise3/master.zip) = 23258620 bytes
 SHA1 (patch-corba_makefile) = cb6b6477ebf2d415769d654c662b3b011de00c50
 SHA1 (patch-dnaindex_assembly_makefile) = 6a800b22cec96fc5f0a84bd234cff00ba61ab041
 SHA1 (patch-dnaindex_makefile) = b207b7892de1a0a1daaae1e19177d53b26754e85
