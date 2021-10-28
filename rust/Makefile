@@ -41,7 +41,6 @@ CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
 CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--disable-codegen-tests
-CONFIGURE_ARGS+=		--disable-docs
 CONFIGURE_ARGS+=		--disable-compiler-docs
 CONFIGURE_ARGS+=		--disable-dist-src
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp

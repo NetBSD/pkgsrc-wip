@@ -1,12 +1,12 @@
 # $NetBSD: options.mk,v 1.8 2021/01/01 20:44:48 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
-PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
+PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 # The bundled LLVM current has issues building on SunOS.
-.if ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
+.if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=		rust-llvm
 # There may be compatibility issues with base LLVM.
 .  if !empty(HAVE_LLVM)
@@ -45,4 +45,13 @@ BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
 BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.endif
+
+#
+# Install documentation.
+#
+.if !empty(PKG_OPTIONS:Mrust-docs)
+CONFIGURE_ARGS+=	--enable-docs
+.else
+CONFIGURE_ARGS+=	--disable-docs
 .endif
