@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/blt
+libexec/biolibc-tools/extract-seq
 libexec/biolibc-tools/fasta2seq
 libexec/biolibc-tools/fastq-derep.sh
 libexec/biolibc-tools/fastx-derep
@@ -8,6 +9,7 @@ libexec/biolibc-tools/find-orfs
 libexec/biolibc-tools/gff-to-bed
 libexec/biolibc-tools/uniq-seqs.awk
 libexec/biolibc-tools/vcf-search
+man/man1/blt-extract-seq.1
 man/man1/blt-fasta2seq.1
 man/man1/blt-fastq-derep.sh.1
 man/man1/blt-fastx-derep.1
