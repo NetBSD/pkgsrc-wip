@@ -2531,7 +2531,6 @@ SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncp
 SUBDIR+=	ncrack
-SUBDIR+=	ncspot
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necat
