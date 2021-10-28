@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	master
+DIST_SUBDIR=	wise3
 PKGNAME=	wise-3
 CATEGORIES=	biology
 MASTER_SITES=	https://github.com/birney/wise3/archive/

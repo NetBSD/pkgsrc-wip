@@ -3,6 +3,7 @@
 # no Release yet
 GIT_COMMIT=	fef89a4174a7bf8cd99fa9154864ce9e8e3bf989
 DISTNAME=	master
+DIST_SUBDIR=	crossguid
 PKGNAME=	crossguid-0.0_pre20160908
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=/graeme-hill/crossguid/archive/}
