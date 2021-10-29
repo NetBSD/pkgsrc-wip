@@ -2560,6 +2560,7 @@ SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netlogo
+SUBDIR+=	netmask
 SUBDIR+=	netquery-git
 SUBDIR+=	netrik
 SUBDIR+=	netwib
