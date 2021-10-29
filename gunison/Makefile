@@ -14,6 +14,8 @@ USE_TOOLS+=	pkg-config
 
 GO_BUILD_PATTERN=	.
 
+CFLAGS+=	-fPIC
+
 # like all go packages
 CHECK_RELRO_SKIP=	bin/gunison
 
