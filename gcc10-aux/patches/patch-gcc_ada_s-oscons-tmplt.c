@@ -1,3 +1,8 @@
+$NetBSD$
+
+Add NetBSD to some defined parts and bump the version of
+_XOPEN_SOURCE and add _NETBSD_SOURCE.
+
 --- gcc/ada/s-oscons-tmplt.c.orig	2021-04-08 13:56:27.913738795 +0200
 +++ gcc/ada/s-oscons-tmplt.c	2021-10-09 18:26:07.630440685 +0200
 @@ -86,16 +86,25 @@

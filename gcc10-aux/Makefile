@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/04/22 12:08:16 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/10/12 13:46:14 tnn Exp $
 
-GCC_PKGNAME=		gcc10
+GCC_PKGNAME=		gcc10-aux
+PKGREVISION=		1
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC10_DIST_VERSION}
@@ -12,18 +13,21 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC10_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	irvise@irvise.xyz
 HOMEPAGE=	https://gcc.gnu.org/
-COMMENT=	The GNU Compiler Collection (GCC) - 10.0 Release Series
+COMMENT=	The GNU Compiler Collection (GCC) with Ada support v10
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
+# Relocations result in a linker error on AArch64, but not x86.
+MKPIE_SUPPORTED=	no
+
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES=		c99 c++ ada
-USE_TOOLS+=		gmake makeinfo sed:run tar:build
+USE_LANGUAGES=		c99 c++
+USE_TOOLS+=		gcc6-aux gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
 GNU_CONFIGURE=		yes
@@ -119,7 +123,10 @@ MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
 MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
 MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
-CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
+.if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-bootstrap
+CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
+.endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
@@ -190,8 +197,10 @@ post-install:
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
-	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
+	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT}
 
+# Add gcc6-aux as an explicit dependency. It is needed to bootstrap.
+.include "../../lang/gcc6-aux/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

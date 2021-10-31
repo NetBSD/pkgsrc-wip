@@ -1,6 +1,10 @@
---- gnattools/configure.ac.orig	2021-08-28 14:58:27.669166093 +0000
-+++ gnattools/configure.ac	2021-08-28 14:59:57.168648867 +0000
-@@ -80,6 +80,11 @@
+$NetBSD$
+
+Include NetBSD in the gnat tools configure.
+
+--- gnattools/configure.orig	2021-08-28 14:19:25.404806918 +0000
++++ gnattools/configure	2021-08-28 14:25:51.208977452 +0000
+@@ -2079,6 +2079,11 @@
      mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
      indepsw.adb<indepsw-gnu.adb"
      ;;

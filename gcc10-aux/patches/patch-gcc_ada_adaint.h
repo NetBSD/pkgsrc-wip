@@ -1,3 +1,9 @@
+$NetBSD$
+
+Due to the lack of symbol versioning in NetBSD, some functions need
+to be exported from C to be used correctly. This patch addresses
+that issue and makes sure that other systems also work correclty.
+
 --- gcc/ada/adaint.h.orig	2021-10-09 19:21:39.117755578 +0200
 +++ gcc/ada/adaint.h	2021-10-09 19:02:38.871872061 +0200
 @@ -345,6 +345,28 @@
@@ -16,7 +22,7 @@
 +#endif
 +#include <time.h>
 +extern int    __gnat_nanosleep     (const struct timespec *, struct timespec *);
-+extern int    __gnat_gettimeofday  (struct timeval *, void *);
++extern int    __gnat_gettimeofday  (struct timeval *, struct timezone *);
 +#include <sys/select.h>
 +extern int    __gnat_select        (int, fd_set *, fd_set *, fd_set *, struct timeval *);
 +#include <sys/socket.h>

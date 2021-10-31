@@ -1,3 +1,7 @@
+$NetBSD$
+
+Add NetBSD interface.
+
 --- gcc/ada/libgnarl/s-osinte__netbsd.adb.orig	2021-10-08 11:29:30.470090202 +0200
 +++ gcc/ada/libgnarl/s-osinte__netbsd.adb	2021-10-08 11:29:30.472274837 +0200
 @@ -0,0 +1,140 @@

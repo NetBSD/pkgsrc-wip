@@ -1,3 +1,7 @@
+$NetBSD$
+
+Create a g-socthi package that is common to all *BSD systems.
+
 --- /dev/null	2021-10-09 18:50:23.845256363 +0200
 +++ gcc/ada/libgnat/g-socthi__bsd.adb	2021-10-09 18:07:08.069557825 +0200
 @@ -0,0 +1,356 @@

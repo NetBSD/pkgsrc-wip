@@ -1,3 +1,11 @@
+$NetBSD$
+
+When using SCHED_OTHER, the minimum and maximum in NetBSD is -1.
+In most other OSs it is 0. Change the behaviour to try to set the
+params using the default priority, if that fails, use 0, otherwise
+use -1. If none are valid, the tasking system will fail if assertions
+are on.
+
 --- gcc/ada/libgnarl/s-taprop__posix.adb.orig	2021-09-23 19:55:24.471842046 +0000
 +++ gcc/ada/libgnarl/s-taprop__posix.adb	2021-09-23 20:01:31.689253592 +0000
 @@ -654,6 +654,16 @@

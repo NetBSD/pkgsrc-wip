@@ -1,19 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2020/05/10 15:02:44 maya Exp $
+# $NetBSD: options.mk,v 1.2 2021/10/01 11:56:13 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
-
-###
-### MODIFIED BY FERNANDO OLEO BLANCO 13/05/21
-### Added Ada support
-###
-
-PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
+PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-ada \
 			gcc-go gcc-objc gcc-objc++ gcc-graphite \
-			always-libgcc gcc-ada
-PKG_SUGGESTED_OPTIONS=	gcc-ada \
-			gcc-graphite gcc-inplace-math \
-			gcc-c++ gcc-fortran
-			# gcc-objc gcc-objc++ \
+			always-libgcc
+PKG_SUGGESTED_OPTIONS=	gcc-ada gcc-c++ gcc-fortran \
+			gcc-graphite gcc-inplace-math
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
@@ -134,9 +126,12 @@ DISTFILES+=		${ISL16}.tar.bz2
 
 ###
 ### Optional languages
-### Ada could be added although there is a bootstrapping issue.  See
-### ../gcc34-ada for guidance
 ###
+
+.if !empty(PKG_OPTIONS:Mgcc-ada)
+LANGS+=			ada
+USE_TOOLS+=		perl
+.endif
 
 .if !empty(PKG_OPTIONS:Mgcc-objc++)
 .  if empty(PKG_OPTIONS:Mgcc-c++)
@@ -158,10 +153,6 @@ LANGS+=			go
 
 .if !empty(PKG_OPTIONS:Mgcc-fortran)
 LANGS+=			fortran
-.endif
-
-.if !empty(PKG_OPTIONS:Mgcc-ada)
-LANGS+=			ada
 .endif
 
 .if !empty(PKG_OPTIONS:Mgcc-c++)

@@ -1,3 +1,7 @@
+$NetBSD$
+
+Add NetBSD to some defined sections.
+
 --- gcc/ada/sysdep.c.orig	2021-08-28 13:11:25.681014624 +0000
 +++ gcc/ada/sysdep.c	2021-08-28 13:21:14.748176113 +0000
 @@ -320,7 +320,7 @@

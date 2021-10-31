@@ -1,3 +1,9 @@
+$NetBSD$
+
+NetBSD does not use symbol versioning, which requires some functions
+to be preprocessed in C. This patch adds those functions definitions,
+not only for NetBSD, but for any other system too.
+
 --- gcc/ada/adaint.c.orig	2021-04-08 13:56:27.725736525 +0200
 +++ gcc/ada/adaint.c	2021-10-09 17:27:52.413919872 +0200
 @@ -817,7 +817,8 @@
@@ -63,7 +69,7 @@
 +   return nanosleep (rqtp, rmtp);
 +}
 +int
-+__gnat_gettimeofday (struct timeval * tp, void * tzp) {
++__gnat_gettimeofday (struct timeval * tp, struct timezone * tzp) {
 +   return gettimeofday (tp, tzp);
 +}
 +

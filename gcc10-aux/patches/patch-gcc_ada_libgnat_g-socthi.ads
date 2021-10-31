@@ -1,3 +1,7 @@
+$NetBSD$
+
+Fix symbol to make it use the C processed one.
+
 --- gcc/ada/libgnat/g-socthi.ads.orig	2021-10-09 18:09:40.607907149 +0200
 +++ gcc/ada/libgnat/g-socthi.ads	2021-10-09 18:24:39.373733909 +0200
 @@ -53,8 +53,6 @@

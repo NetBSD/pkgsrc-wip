@@ -1,3 +1,7 @@
+$NetBSD$
+
+Add missing defines
+
 --- gcc/ada/cstreams.c.orig	2021-08-28 18:42:21.323680378 +0000
 +++ gcc/ada/cstreams.c	2021-08-28 18:43:48.045445919 +0000
 @@ -188,7 +188,8 @@
