@@ -1,8 +1,8 @@
-$NetBSD: patch-src_libs_zbxsysinfo_netbsd_net.c,v 1.1 2020/11/03 22:46:23 otis Exp $
+$NetBSD: patch-src_libs_zbxsysinfo_netbsd_net.c,v 1.1 2020/11/03 22:44:43 otis Exp $
 
 Rework interface statistics code from using kvm to using sysctl interface.
 
---- src/libs/zbxsysinfo/netbsd/net.c.orig	2020-08-24 09:42:55.000000000 +0000
+--- src/libs/zbxsysinfo/netbsd/net.c.orig	2021-10-25 09:49:27.000000000 +0000
 +++ src/libs/zbxsysinfo/netbsd/net.c
 @@ -22,6 +22,9 @@
  #include "zbxjson.h"
@@ -14,25 +14,24 @@ Rework interface statistics code from using kvm to using sysctl interface.
  static struct nlist kernel_symbols[] =
  {
  	{"_ifnet", N_UNDF, 0, 0, 0},
-@@ -31,43 +34,91 @@ static struct nlist kernel_symbols[] =
+@@ -31,42 +34,91 @@ static struct nlist kernel_symbols[] =
  
  #define IFNET_ID 0
  
 +static void
 +get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
 +{
-+    int i;
++	int i;
 +
-+    for (i = 0; i < RTAX_MAX; i++) {
-+        if (addrs & (1 << i)) {
-+            rti_info[i] = sa;
-+            sa = (struct sockaddr *)((char *)(sa) +
-+                RT_ROUNDUP(sa->sa_len));
-+        } else
-+            rti_info[i] = NULL;
-+    }
++	for (i = 0; i < RTAX_MAX; i++) {
++		if (addrs & (1 << i)) {
++			rti_info[i] = sa;
++			sa = (struct sockaddr *)((char *)(sa) +
++					RT_ROUNDUP(sa->sa_len));
++		} else
++			rti_info[i] = NULL;
++	}
 +}
-+
 +
  static int	get_ifdata(const char *if_name,
  		zbx_uint64_t *ibytes, zbx_uint64_t *ipackets, zbx_uint64_t *ierrors, zbx_uint64_t *idropped,
@@ -43,12 +42,8 @@ Rework interface statistics code from using kvm to using sysctl interface.
 -	struct ifnet_head	head;
 -	struct ifnet		*ifp;
 -	struct ifnet		v;
--
--	kvm_t	*kp;
--	int	len = 0;
--	int	ret = SYSINFO_RET_FAIL;
 +	struct	if_msghdr *ifm;
-+	int		mib[6] = { CTL_NET, AF_ROUTE, 0, 0, NET_RT_IFLIST, 0 };
++	int	mib[6] = { CTL_NET, AF_ROUTE, 0, 0, NET_RT_IFLIST, 0 };
 +	char	*buf = NULL;
 +	char	*lim, *next;
 +	struct	rt_msghdr *rtm;
@@ -59,7 +54,9 @@ Rework interface statistics code from using kvm to using sysctl interface.
 +	size_t	len = 0;
 +	size_t	olen = 0;
 +	int		ret = SYSINFO_RET_FAIL;
-+
+ 
+-	kvm_t	*kp;
+-	int	ret = SYSINFO_RET_FAIL;
 +	static char name[IFNAMSIZ];
  
  	if (NULL == if_name || '\0' == *if_name)
@@ -75,63 +72,62 @@ Rework interface statistics code from using kvm to using sysctl interface.
 -		*error = zbx_strdup(NULL, "Cannot obtain a descriptor to access kernel virtual memory.");
 -		return FAIL;
 -	}
--
+ 
 -	if (N_UNDF == kernel_symbols[IFNET_ID].n_type)
 -		if (0 != kvm_nlist(kp, &kernel_symbols[0]))
 -			kernel_symbols[IFNET_ID].n_type = N_UNDF;
 -
 -	if (N_UNDF != kernel_symbols[IFNET_ID].n_type)
 -	{
--		len = sizeof(struct ifnet_head);
--
--		if (kvm_read(kp, kernel_symbols[IFNET_ID].n_value, &head, len) >= len)
--		{
--			len = sizeof(struct ifnet);
-+    if (sysctl(mib, 6, NULL, &len, NULL, 0) == -1) {
-+        *error = zbx_strdup(NULL, "Failed to read network interfaces data");
+-		int	len = sizeof(struct ifnet_head);
++	if (sysctl(mib, 6, NULL, &len, NULL, 0) == -1) {
++		*error = zbx_strdup(NULL, "Failed to read network interfaces data");
 +		ret = FAIL;
 +		goto out;
 +	}
-+
-+    if (len > olen) {
-+        free(buf);
-+        if ((buf = zbx_malloc(NULL, len)) == NULL) {
+ 
+-		if (kvm_read(kp, kernel_symbols[IFNET_ID].n_value, &head, len) >= len)
+-		{
+-			len = sizeof(struct ifnet);
++	if (len > olen) {
++		free(buf);
++		if ((buf = zbx_malloc(NULL, len)) == NULL) {
 +			*error = zbx_strdup(NULL, "Failed to allocate buffer for network interfaces data");
 +			ret = FAIL;
 +			goto out;
 +		}
-+        olen = len;
-+    }
-+    if (sysctl(mib, 6, buf, &len, NULL, 0) == -1) {
++		olen = len;
++	}
++	if (sysctl(mib, 6, buf, &len, NULL, 0) == -1) {
 +		*error = zbx_strdup(NULL, "Failed to allocate buffer for network interfaces data");
 +		ret = FAIL;
 +		goto out;
 +	}
 +
 +	lim = buf + len;
-+    for (next = buf; next < lim; next += rtm->rtm_msglen) {
-+        rtm = (struct rt_msghdr *)next;
-+        if ((rtm->rtm_version == RTM_VERSION) &&
-+                (rtm->rtm_type == RTM_IFINFO)) {
-+            ifm = (struct if_msghdr *)next;
-+            ifd = &ifm->ifm_data;
++	for (next = buf; next < lim; next += rtm->rtm_msglen) {
++		rtm = (struct rt_msghdr *)next;
++		if ((rtm->rtm_version == RTM_VERSION) &&
++				(rtm->rtm_type == RTM_IFINFO)) {
++			ifm = (struct if_msghdr *)next;
++			ifd = &ifm->ifm_data;
 +
-+            sa = (struct sockaddr *)(ifm + 1);
-+            get_rtaddrs(ifm->ifm_addrs, sa, rti_info);
++			sa = (struct sockaddr *)(ifm + 1);
++			get_rtaddrs(ifm->ifm_addrs, sa, rti_info);
 +
-+            sdl = (struct sockaddr_dl *)rti_info[RTAX_IFP];
-+            if (sdl == NULL || sdl->sdl_family != AF_LINK) {
-+                continue;
-+            }
-+            bzero(name, sizeof(name));
-+            if (sdl->sdl_nlen >= IFNAMSIZ)
-+                memcpy(name, sdl->sdl_data, IFNAMSIZ - 1);
-+            else if (sdl->sdl_nlen > 0)
-+                memcpy(name, sdl->sdl_data, sdl->sdl_nlen);
++			sdl = (struct sockaddr_dl *)rti_info[RTAX_IFP];
++			if (sdl == NULL || sdl->sdl_family != AF_LINK) {
++				continue;
++			}
++			bzero(name, sizeof(name));
++			if (sdl->sdl_nlen >= IFNAMSIZ)
++				memcpy(name, sdl->sdl_data, IFNAMSIZ - 1);
++			else if (sdl->sdl_nlen > 0)
++				memcpy(name, sdl->sdl_data, sdl->sdl_nlen);
  
  			/* if_ibytes;		total number of octets received */
  			/* if_ipackets;		packets received on interface */
-@@ -101,42 +152,38 @@ static int	get_ifdata(const char *if_nam
+@@ -100,42 +152,38 @@ static int	get_ifdata(const char *if_nam
  			if (icollisions)
  				*icollisions = 0;
  
