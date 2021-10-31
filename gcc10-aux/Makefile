@@ -77,6 +77,11 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 
 .include "options.mk"
 
+## Make gcc6-aux the compiler for the package since we need ada support.
+# This will allow the configure script to use the gnat* packages and gcc
+# with ada support
+CONFIGURE_ARGS+=       PATH=${PREFIX}/gcc6-aux/bin:${PATH}
+
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
