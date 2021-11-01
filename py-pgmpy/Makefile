@@ -10,13 +10,15 @@ HOMEPAGE=	https://github.com/pgmpy/pgmpy
 COMMENT=	Library for Probabilistic Graphical Models
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.8:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.18.1:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.0:../../math/py-scipy
 
+PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -11,9 +11,11 @@ COMMENT=	NetworkX Pydot Draw
 LICENSE=	unlicense
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2.4:../../math/py-networkx
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4.7:../../devel/py-pyparsing
+
+PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

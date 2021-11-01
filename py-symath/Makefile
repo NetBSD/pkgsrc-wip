@@ -10,13 +10,15 @@ HOMEPAGE=	https://github.com/bniemczyk/symbolic
 COMMENT=	symbolic mathematics for python
 LICENSE=	2-clause-bsd
 
+DPENDS+=        ${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
+
 WRKSRC=		${WRKDIR}/symath-0.1.22
+
+PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
 
 USE_LANGUAGES=	# none
 
-
-DPENDS+=        ${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-DPENDS+=        ${PYPKGPREFIX}-scipy>=0.12.0:../../math/py-scipy
 .include "../../mk/bsd.pkg.mk"

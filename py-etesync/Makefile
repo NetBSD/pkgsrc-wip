@@ -20,13 +20,15 @@ DEPENDS+=	${PYPKGPREFIX}-orderedmultidict>=0.7:../../databases/py-orderedmultidi
 DEPENDS+=	${PYPKGPREFIX}-packaging>=16.8:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-peewee>=3.7.0:../../databases/py-peewee
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4:../../devel/py-py
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.1:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9:../../textproc/py-vobject
 
+PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

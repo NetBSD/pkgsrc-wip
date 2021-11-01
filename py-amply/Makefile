@@ -12,9 +12,11 @@ LICENSE=	eclipse-license
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4.7:../../devel/py-pyparsing
+
+PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
