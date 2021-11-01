@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (gotify-server-2.1.0.tar.gz) = f2d2ad985ba2acef067c98060ece4b6de76aee4f46dbf71a3c28153d652b1f7f
+SHA512 (gotify-server-2.1.0.tar.gz) = f8c3bd4bf7ea53a4b32c23ceb17b76d1d4a5ece4c1c6fbc62f263da8a2466183f6690f69def54ae6fc1b577b5b89ae9e27b754b4b612cd9c0a22b6ca792ce36a
+Size (gotify-server-2.1.0.tar.gz) = 1113262 bytes
