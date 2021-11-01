@@ -26,7 +26,6 @@ MKPIE_SUPPORTED=	no
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gcc6-aux gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
@@ -80,7 +79,9 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 ## Make gcc6-aux the compiler for the package since we need ada support.
 # This will allow the configure script to use the gnat* packages and gcc
 # with ada support
-CONFIGURE_ARGS+=       PATH=${PREFIX}/gcc6-aux/bin:${PATH}
+PATH=  /sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc6-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
+CC=    ${PREFIX}/gcc6-aux/bin/gcc
+CXX=   ${PREFIX}/gcc6-aux/bin/g++
 
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
