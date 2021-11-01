@@ -18,5 +18,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+# \todo Absorb and integrate:
+# https://gotify.net/docs/build
+
 .include "../..//lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
