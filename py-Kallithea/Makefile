@@ -27,7 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-Whoosh>=2.4.0:../../textproc/py-Whoosh
 DEPENDS+=	${PYPKGPREFIX}-celery>=2.2.5:../../net/py-celery
 DEPENDS+=	${PYPKGPREFIX}-babel>=0.9.6:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-markdown>=2.2.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.5.2:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
@@ -38,6 +37,8 @@ DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.9.9:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.9:../../devel/py-mercurial
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=0.3.0:../../security/py-bcrypt
 
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+
 REPLACE_PYTHON+=	kallithea/lib/dbmigrate/migrate/versioning/templates/*.py_tmpl
 REPLACE_PYTHON+=	kallithea/tests/scripts/manual_test_crawler.py
 REPLACE_PYTHON+=	kallithea/lib/dbmigrate/migrate/versioning/templates/*/*.py_tmpl
@@ -46,4 +47,5 @@ USE_LANGUAGES=			# none
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

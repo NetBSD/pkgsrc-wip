@@ -13,10 +13,11 @@ LICENSE=	gnu-agpl-v3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.5.0:../../devel/py-setuptools_scm
 
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.1.3:../../devel/py-mako
-DEPENDS+=	${PYPKGPREFIX}-markdown>=3.1.1:../../textproc/py-markdown
+
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=	# none
 
-
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

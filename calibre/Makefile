@@ -23,7 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
 DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
@@ -40,6 +39,7 @@ BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 3.16.0
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
@@ -144,4 +144,5 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

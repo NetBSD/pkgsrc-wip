@@ -12,12 +12,14 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-docopt>=0.4.0:../../devel/py-docopt
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.2:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-markdown>=2.5.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-path-and-address>=2.0.1:../../wip/py-path-and-address
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.1:../../devel/py-requests
 
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
