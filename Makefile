@@ -4980,7 +4980,6 @@ SUBDIR+=	remctl
 SUBDIR+=	reone
 SUBDIR+=	repeatmasker
 SUBDIR+=	reproc
-SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	residualvm-git
 SUBDIR+=	resin
