@@ -203,7 +203,7 @@ post-install:
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
-	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT}
+	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
 
 # Add gcc6-aux as an explicit dependency. It is needed to bootstrap.
 .include "../../lang/gcc6-aux/buildlink3.mk"
