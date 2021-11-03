@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.18 2021/06/06 12:18:55 bsiegert Exp $
 
-DISTNAME=		packr-2.8.1
-CATEGORIES=		lang
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+DISTNAME=	packr-2.8.1
+CATEGORIES=	lang
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gobuffalo/}
-GITHUB_PROJECT=	packr	
+GITHUB_PROJECT=	packr
 
 MAINTAINER=		bbartlomiej@gmail.com
 HOMEPAGE=		https://github.com/gobuffalo/packr
