@@ -1,0 +1,5 @@
+Doesn't start on macOS, trying to load random resources from
+${PREFIX}/bin or whatever. Probably need to find and fix more cases
+where upstream assumes MAC means MACAPP. (pkgsrc doesn't want MACAPP.)
+
+Does it work on NetBSD as is, or nearly so?

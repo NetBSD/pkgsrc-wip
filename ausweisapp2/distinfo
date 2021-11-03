@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (AusweisApp2-1.22.2.tar.gz) = 029fc52e67755543c72e79ec1549584723ac3fccd4ac83a2a3fe8ec5917c20c3
+SHA512 (AusweisApp2-1.22.2.tar.gz) = c33c049e7d90b40a7f4942fca90c78374289bd402939162ba30a025b7e47188f4e50a2498909be91ecd4ae2a658ca4742d05c00426c5cdfabbf1deb846a70270
+Size (AusweisApp2-1.22.2.tar.gz) = 10933161 bytes
+SHA1 (patch-cmake_Helper.cmake) = 8302d55644908b0a3edcde58b267ac5b2ad63b5c
+SHA1 (patch-cmake_Install.cmake) = 961629929022476fc4a2c73e649518a79055b9ae
+SHA1 (patch-cmake_Tools.cmake) = 6e9c28f0a6c5c6cde25791e9d71a8ed8cb538b47
