@@ -30,6 +30,9 @@ CHECK_RELRO_SKIP+=	sbin/adguardhome
 #TOOL_DEPENDS+=	yarn>=1.22.5:../../devel/yarn
 #USE_TOOLS+=	tar
 
+TOOL_DEPENDS+=	packr:../../wip/packr
+
+
 OWN_DIRS+=	libdata/adguardhome
 
 .include "go-modules.mk"
@@ -39,7 +42,6 @@ PKG_SYSCONFSUBDIR=	adguardhome
 RCD_SCRIPTS+=		adguardhome
 
 do-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} install github.com/gobuffalo/packr/packr
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} generate ./main.go
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build --ldflags="-s -w -X github.com/AdguardTeam/AdGuardHome/internal/version.version=${DISTNAME:S,^v,,} -X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release -X github.com/AdGuardTeam/AdGuardHome/internal/version..goarm=${GOARM}"
 
@@ -56,8 +58,5 @@ generate-frontend:
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
 .include "../../mk/bsd.prefs.mk"
-
-PREPEND_PATH+=	${WRKDIR}/.gopath/bin
-
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
