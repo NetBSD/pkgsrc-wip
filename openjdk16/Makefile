@@ -109,11 +109,11 @@ CONFIGURE_ARGS+=	--with-toolchain-type=gcc
 .include "bootstrap.mk"
 .include "options.mk"
 
-#SUBST_CLASSES+=		libpath
-#SUBST_STAGE.libpath=	pre-configure
-#SUBST_FILES.libpath+=	src/hotspot/os/bsd/os_bsd.cpp
+SUBST_CLASSES+=		libpath
+SUBST_STAGE.libpath=	pre-configure
+SUBST_FILES.libpath+=	src/hotspot/os/bsd/os_bsd.cpp
 #SUBST_FILES.libpath+=	make/autoconf/flags-cflags.m4
-SUBST_FILES.libpath+=	make/autoconf/lib-bundled.m4
+#SUBST_FILES.libpath+=	make/autoconf/lib-bundled.m4
 SUBST_FILES.libpath+=	make/autoconf/lib-freetype.m4
 SUBST_FILES.libpath+=	make/autoconf/lib-x11.m4
 SUBST_VARS.libpath=	PREFIX COMPILER_RPATH_FLAG JAVA_NAME BUILDLINK_PREFIX.zlib X11BASE

@@ -7,7 +7,6 @@ RMD160 (jdk16u-jdk-16.0.1-9-1.tar.gz) = 8c1f71379730fdd8dbac1c122066658fd99a6ef6
 SHA512 (jdk16u-jdk-16.0.1-9-1.tar.gz) = 45ae7a7d14d26b85e917d9002fe525a9a3472c8ef2a8ad13d3a78fe0f85c2ebda53fd26a6d395aaed1a1bbff99287db69037410bd15bed61b3484df5a7428f7d
 Size (jdk16u-jdk-16.0.1-9-1.tar.gz) = 104513577 bytes
 SHA1 (patch-make_autoconf_flags-cflags.m4) = e09a84bcdeccb8a55b2de5003e839b7b311c3115
-SHA1 (patch-make_autoconf_lib-bundled.m4) = 93c1a39e50555c7ac1c9a426400640d28c33bb92
 SHA1 (patch-make_autoconf_lib-freetype.m4) = ede1fcaa4551c66c5173be809f8c2eb3eabc140c
 SHA1 (patch-make_autoconf_lib-x11.m4) = fa1834edb7c053735f6e54469fd17cc38854ebf3
 SHA1 (patch-make_common_NativeCompilation.gmk) = 8ecb719835e7c9e058592326a7df499bd3079f8e
