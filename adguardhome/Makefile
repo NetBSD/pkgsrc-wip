@@ -30,7 +30,7 @@ CHECK_RELRO_SKIP+=	sbin/adguardhome
 #TOOL_DEPENDS+=	yarn>=1.22.5:../../devel/yarn
 #USE_TOOLS+=	tar
 
-TOOL_DEPENDS+=	packr>=2.8.1:../../wip/packr
+TOOL_DEPENDS+=	packr>=2.8.1:../../devel/packr
 
 
 OWN_DIRS+=	libdata/adguardhome
