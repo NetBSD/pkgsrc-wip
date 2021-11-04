@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (Squeak5.3-19459-64bit.zip) = 49490903a52aab5a05f4e205354a6fbbbc6e12f24bb7ab4e24a3b2d8b774f747
+SHA512 (Squeak5.3-19459-64bit.zip) = 07e5240ef47d5ba334f60158312d0b54e0cb253e54994d953f11db4fea303550bd4c25242456d34da5f92f3a3bc48258e872bcbf129ebe01eeb186ddbf2d0ff0
+Size (Squeak5.3-19459-64bit.zip) = 19328222 bytes
+BLAKE2s (SqueakV50.sources.gz) = d7a8cfefef4d67b6a26aa28dc19c78ffb4a328c2878ed7b57782f40d13bdac3f
+SHA512 (SqueakV50.sources.gz) = 3571f4c8c11aed1005f885fa0b2eb56cea011eb77c162619e29bd36ecb3161083b7a4808973d08c1271509fc6386d8f5e3b5eabab9193ec56c31c93d1379656e
+Size (SqueakV50.sources.gz) = 6373123 bytes
