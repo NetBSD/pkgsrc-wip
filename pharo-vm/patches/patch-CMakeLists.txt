@@ -1,0 +1,34 @@
+$NetBSD$
+
+- backtrace(3) requires libexecinfo
+- use uuidgen(2)
+
+--- CMakeLists.txt.orig	2021-08-13 21:08:14.000000000 +0000
++++ CMakeLists.txt
+@@ -367,13 +367,14 @@ check_include_files(dlfcn.h HAVE_DLFCN_H
+ check_library_exists(dl dlopen "" HAVE_LIBDL)
+ check_library_exists(dyld dlopen "" HAVE_DYLD)
+ check_struct_has_member("struct tm" tm_gmtoff time.h HAVE_TM_GMTOFF)
++check_library_exists(execinfo backtrace "" HAVE_EXECINFO)
+ 
+ #Required by the UUID Plugin
+ 
+ check_include_files(sys/uuid.h HAVE_SYS_UUID_H)
+ check_include_files(uuid/uuid.h HAVE_UUID_UUID_H)
+ check_include_files(uuid.h HAVE_UUID_H)
+-check_library_exists(uuid uuidgen "" HAVE_UUIDGEN)
++check_function_exists(uuidgen HAVE_UUIDGEN)
+ check_library_exists(uuid uuid_generate "" HAVE_UUID_GENERATE)
+ 
+ 
+@@ -451,6 +452,10 @@ set(VM_SOURCES
+ add_executable(${VM_EXECUTABLE_NAME} ${VM_FRONTEND_APPLICATION_TYPE} ${VM_FRONTEND_SOURCES})
+ addLibraryWithRPATH(${VM_LIBRARY_NAME} ${VM_SOURCES})
+ 
++if(${HAVE_EXECINFO})
++	target_link_libraries(${VM_LIBRARY_NAME} execinfo)
++endif()
++
+ #
+ # LibFFI
+ #

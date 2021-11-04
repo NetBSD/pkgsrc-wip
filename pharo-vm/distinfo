@@ -1,0 +1,12 @@
+$NetBSD$
+
+BLAKE2s (PharoVM-9.0.9-220ee65-Linux-x86_64-c-src.zip) = ad0a4f2a49e88292d27f03642209004429231b8c418adccb324052a58fb07687
+SHA512 (PharoVM-9.0.9-220ee65-Linux-x86_64-c-src.zip) = f718b9c2aead39252fabfa99f663e49535742c705451219a542ffcff7bf94ab7a97550fff96b2de8559fedb2032be79c6795d2d855073e68f1a06ace46c703ba
+Size (PharoVM-9.0.9-220ee65-Linux-x86_64-c-src.zip) = 4675437 bytes
+SHA1 (patch-CMakeLists.txt) = 8e864b7f32c3ce775446f1c37ec206aac585b971
+SHA1 (patch-generated_64_vm_src_gcc3x-cointerp.c) = 29920ef6e43f21e762a615c3ab4379eca822c5c7
+SHA1 (patch-include_pharovm_debug.h) = a305dc8b2915bd457df3b76053a5072c1c2f8228
+SHA1 (patch-packaging_linux_bin_launch.sh.in) = 116b5151e0bd58558a1af3691d1f546437d94eae
+SHA1 (patch-plugins.cmake) = b8eb5ad47d505c0b52a7601f86109cf8f6ccae40
+SHA1 (patch-plugins_UUIDPlugin_common_UUIDPlugin.c) = 20b9e7f850d662a8d79dc025e5d991b47358e3ad
+SHA1 (patch-src_debugUnix.c) = 5db80b0d0083cd1d4c471fe877ca7d65e69b97be
