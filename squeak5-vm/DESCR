@@ -1,0 +1,12 @@
+Cog is an evolution of the Squeak Back-to-the-future Smalltalk virtual
+machine that provides a number of different Smalltalk virtual
+machines. The VMs are developed in Smalltalk, using all the dynamic
+and reflective facilities of the Squeak/Pharo Smalltalk system. As
+such, developing in Cog is a delight. The Smalltalk framework
+comprising the various Cog VMs is translated into C by its Slang
+component to produce VM source that is combined with platform-specific
+support sources and compiled via a C compiler to obtain a fast
+production VM. This directory tree includes the output of Slang for
+various configurations of "Cog VM" and the associated platform support
+code, plus build directories that can be used to produce production
+VMs.

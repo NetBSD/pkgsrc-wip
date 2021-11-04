@@ -5302,6 +5302,7 @@ SUBDIR+=	spotify-tui
 SUBDIR+=	spotifyd
 SUBDIR+=	spread4
 SUBDIR+=	spyder
+SUBDIR+=	squeak5-vm
 SUBDIR+=	squid4
 SUBDIR+=	squirrel
 SUBDIR+=	squirrelmail-avelsieve

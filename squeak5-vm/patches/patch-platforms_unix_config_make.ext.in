@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- platforms/unix/config/make.ext.in.orig	2019-01-17 23:23:50.000000000 +0000
++++ platforms/unix/config/make.ext.in
+@@ -16,8 +16,8 @@ COMPILE.cc	= $(LIBTOOL) --mode=compile \
+ 		  $(INCLUDES) $(XINCLUDES) $(CPPFLAGS) $(XCPPFLAGS) $(TARGET_ARCH) -c -o
+ LINK		= $(LIBTOOL) --mode=link \
+ 		  $(CC) $(CFLAGS) $(XCFLAGS) \
+-		  $(LDFLAGS) $(XLDFLAGS) $(TARGET_ARCH) -avoid-version -module -rpath $(plgdir) -o
++		  $(LDFLAGS) $(XLDFLAGS) $(TARGET_ARCH) -avoid-version -module -rpath $(plgdir) -Wl,-R$(rpathdir) -o
+ LINKXX		= $(LIBTOOL) --mode=link \
+ 		  $(CXX) $(CFLAGS) $(XCFLAGS) \
+-		  $(LDFLAGS) $(XLDFLAGS) $(TARGET_ARCH) -avoid-version -module -rpath $(plgdir) -o
++		  $(LDFLAGS) $(XLDFLAGS) $(TARGET_ARCH) -avoid-version -module -rpath $(plgdir) -Wl,-R$(rpathdir) -o
+ RANLIB		= :

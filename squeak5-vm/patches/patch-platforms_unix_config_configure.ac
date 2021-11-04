@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- platforms/unix/config/configure.ac.orig	2019-01-17 23:23:50.000000000 +0000
++++ platforms/unix/config/configure.ac
+@@ -141,10 +141,12 @@ test "x$exec_prefix" = xNONE && exec_pre
+ imgdir=`eval echo ${libdir}/squeak`
+ expanded_relative_imgdir=`eval echo lib/squeak/${VM_VERSION}`
+ plgdir='${imgdir}/`${blddir}/getversion VERSION_TAG`'
++rpathdir='@pkglibdir@/squeak/`${blddir}/getversion VERSION_TAG`'
+ 
+ AC_SUBST(imgdir)
+ AC_SUBST(expanded_relative_imgdir)
+ AC_SUBST(plgdir)
++AC_SUBST(rpathdir)
+ 
+ AC_DEFINE(OS_TYPE, "unix", [OS type])
+ 

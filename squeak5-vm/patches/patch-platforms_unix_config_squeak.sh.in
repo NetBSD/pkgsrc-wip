@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- platforms/unix/config/squeak.sh.in.orig	2018-10-19 04:12:21.000000000 +0000
++++ platforms/unix/config/squeak.sh.in
+@@ -18,7 +18,7 @@ case "$BIN" in
+ *) PLUGINS="`pwd`/$BIN"
+ esac
+ 
+-if [ $(uname -s) = "OpenBSD" ]; then
++if [ $(uname -s) = "OpenBSD" -o $(uname -s) = "NetBSD" ]; then
+   LD_LIBRARY_PATH="$PLUGINS:${LD_LIBRARY_PATH}" exec $GDB "$BIN/squeak" "$@"
+ fi
+ 
