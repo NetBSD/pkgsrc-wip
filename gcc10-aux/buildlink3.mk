@@ -7,12 +7,12 @@ GCC10_AUX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc10-aux+=	gcc10-aux>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc10-aux+=	gcc10-aux>=10.0
-BUILDLINK_PKGSRCDIR.gcc10-aux=	../../wip/gcc10-aux
-BUILDLINK_DEPMETHOD.gcc10-aux?=	build
+BUILDLINK_PKGSRCDIR.gcc10-aux=		../../wip/gcc10-aux
+BUILDLINK_DEPMETHOD.gcc10-aux?=		build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc10-aux}/gcc10-aux
 
-BUILDLINK_FILES.gcc10-aux=		# empty
+BUILDLINK_FILES.gcc10-aux=	# empty
 BUILDLINK_AUTO_VARS.gcc10-aux=	no
 
 pkgbase := gcc10-aux
