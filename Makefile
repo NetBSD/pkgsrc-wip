@@ -12,6 +12,7 @@ SUBDIR+=	ARC
 SUBDIR+=	Aseprite
 SUBDIR+=	Bear
 SUBDIR+=	Chinput
+SUBDIR+=	CuraEngine
 SUBDIR+=	ETL
 SUBDIR+=	FLIF
 SUBDIR+=	FLIF-git
