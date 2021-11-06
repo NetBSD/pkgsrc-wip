@@ -3311,6 +3311,7 @@ SUBDIR+=	py-RXP
 SUBDIR+=	py-Robinhood
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
+SUBDIR+=	py-Uranium
 SUBDIR+=	py-ZopeSecurity
 SUBDIR+=	py-achemkit
 SUBDIR+=	py-acq4

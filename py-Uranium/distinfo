@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (Uranium/4.11.0.tar.gz) = a94b09655ba83036dff3e97393340664e4c420a6c44f19aa5c5b16d464a35842
+SHA512 (Uranium/4.11.0.tar.gz) = 37cf6528fae7e5bfcec1c1445b6811641526471d809bc5423fae0a839f30e19508c3eb702a043837ae6bb421b8d144e2d67c351557ffd3b17d8a84147b9feac1
+Size (Uranium/4.11.0.tar.gz) = 1063771 bytes
+SHA1 (patch-UM_Platform.py) = 6bffaa910c2692e2668bd89100daa9484e07ca41
