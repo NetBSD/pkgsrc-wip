@@ -69,9 +69,10 @@ post-configure:
 	${ECHO} '#define FLEXIBLE_ARRAY_MEMBER /**/' >> ${WRKSRC}/config.h
 
 .include "../../mk/pax.mk"
-# \todo Mark the guile with paxctl +m after it is built but before
-# it is used in the build.
-# \todo Make this actually work; manual paxctl +m after install does.
+# Guile's build uses the just-built guile.  With pax enabled, the build
+# fails and after
+#   paxctl +m work/guile-3.0.7/libguile/.libs/guile
+# it succeeds.  This needs to be patched into the build.
 NOT_MPROTECT_SAFE+=	${GUILE_PREFIX}/bin/guile
 
 .include "../../devel/gmp/buildlink3.mk"
