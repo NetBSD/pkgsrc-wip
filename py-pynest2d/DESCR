@@ -1,0 +1,13 @@
+This repository contains CPython bindings for libnest2d
+(https://github.com/tamasmeszaros/libnest2d), a library to pack 2D
+polygons into a small space. Libnest2d implements the 2D bin packing
+problem.
+
+The objective of this repository is to allow libnest2d to be called
+from Python using Numpy. There is a competing solution
+(https://github.com/markfink/nest2D) to provide Python bindings to
+this end. However this solution is licensed under AGPL. Since Cura
+(https://github.com/Ultimaker/Cura) uses an LGPL license, it could not
+use that solution. This implementation is also too limited for Cura's
+purposes, so a new bindings project was set up that allows more
+configuration of the nesting algorithm.

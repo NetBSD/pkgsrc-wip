@@ -1,0 +1,2 @@
+@comment $NetBSD$
+${PYSITELIB}/pynest2d.so
