@@ -2003,6 +2003,7 @@ SUBDIR+=	libArcus
 SUBDIR+=	libGenome
 SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM38
+SUBDIR+=	libSavitar
 SUBDIR+=	libXaw3dXft
 SUBDIR+=	libaec
 SUBDIR+=	libaio

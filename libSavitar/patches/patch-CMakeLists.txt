@@ -1,0 +1,22 @@
+$NetBSD$
+
+https://github.com/Ultimaker/libSavitar/commit/91aa70c6320461ae65600dce954b5ffb905b7039.patch
+
+Do not vendor the pugixml library
+
+This prevents trying to co-install pugixml with existing system
+libraries, and also fixes the includes for pugixml.hpp to actually use
+the include path added by find_package/add_subdirectory instead of a
+hardcoded relative path.
+ 
+--- CMakeLists.txt.orig	2020-10-09 16:43:31.000000000 +0000
++++ CMakeLists.txt
+@@ -15,7 +15,7 @@ if(BUILD_TESTS)
+     find_package(Threads QUIET)
+ endif()
+ 
+-add_subdirectory(pugixml)
++find_package(pugixml REQUIRED)
+ 
+ if(BUILD_PYTHON)
+     list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
