@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (libnest2d/4.11.0.tar.gz) = c326a7af22314af0e687212b14b7c8e648101e29eda1ac1579bd86d996d27c16
+SHA512 (libnest2d/4.11.0.tar.gz) = 9d4c71f20281d28aedaada3e74398ba178130b1d3c60b9295a4e41f41fd9e2dc908de3aba55d3f48bab8197e6d1de291c3467f6e041a8125891cfd4505b1c206
+Size (libnest2d/4.11.0.tar.gz) = 366605 bytes
+SHA1 (patch-cmake__modules_FindClipper.cmake) = 2f76689999c3bda7822f023692917438b58ff773
+SHA1 (patch-cmake__modules_FindNLopt.cmake) = 2aa22fc4a5c81c124bcc79af8c4dab237e972434
