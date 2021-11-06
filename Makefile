@@ -6043,6 +6043,7 @@ SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zoneminder
+SUBDIR+=	zpaq
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
