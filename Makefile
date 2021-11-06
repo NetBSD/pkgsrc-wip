@@ -3293,6 +3293,7 @@ SUBDIR+=	py-Brenda
 SUBDIR+=	py-CalDAVClientLibrary
 SUBDIR+=	py-CalendarServer
 SUBDIR+=	py-Climate
+SUBDIR+=	py-Cura
 SUBDIR+=	py-DirectoryStorage
 SUBDIR+=	py-EMpy
 SUBDIR+=	py-EditObj2
