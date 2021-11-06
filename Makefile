@@ -1997,6 +1997,7 @@ SUBDIR+=	lgogdownloader-git
 SUBDIR+=	lha
 SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
+SUBDIR+=	libArcus
 SUBDIR+=	libGenome
 SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM38
