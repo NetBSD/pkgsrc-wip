@@ -12,3 +12,6 @@ NaN (Not a Number), and subnormal values. Both arbitrary-precision and
 fixed-size representations are supported.
 
 Refer to the package's PDF file for more information.
+
+This version is the one used by the SoftDevLabs version of Hercules
+Hercules 4.x (Hyperion).

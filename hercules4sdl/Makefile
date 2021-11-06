@@ -1,11 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	sdl-hercules-hyperion-4.3
+PKGNAME=	hercules4sdl-4.3
 DISTNAME=	Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 EXTRACT_USING=	bsdtar
-DIST_SUBDIR=	sdl-hercules-hyperion
+DIST_SUBDIR=	hercules4sdl
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
@@ -32,7 +32,7 @@ SUBST_MESSAGE.prefix=	Correcting configuration path
 SUBST_FILES.prefix=	hercules.cnf
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
-CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/sdlhercules
+CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/hercules4sdl
 
 INSTALLATION_DIRS+=	share/examples/hercules
 
@@ -47,10 +47,10 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/sdl-hercules-crypto/buildlink3.mk"
-.include "../../wip/sdl-hercules-decnumber/buildlink3.mk"
-.include "../../wip/sdl-hercules-softfloat/buildlink3.mk"
-.include "../../wip/sdl-hercules-telnet/buildlink3.mk"
+.include "../../wip/hercules4sdl-crypto/buildlink3.mk"
+.include "../../wip/hercules4sdl-decnumber/buildlink3.mk"
+.include "../../wip/hercules4sdl-softfloat/buildlink3.mk"
+.include "../../wip/hercules4sdl-telnet/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

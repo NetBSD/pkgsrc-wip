@@ -1,9 +1,9 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	SoftFloat
-GITHUB_TAG=	1991ebd466f46590d02aa68729f3283fe430bec0 # Nov 13, 2020
-DISTNAME=	sdl-hercules-softfloat-3.5.0
-PKGREVISION=	20201113
+GITHUB_TAG=	42f2f99a479a724de5b601a0551e46678a5e3c57 # 5 Jan 2021
+DISTNAME=	hercules4sdl-softfloat-2.5
+PKGREVISION=	20210105
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 
@@ -19,12 +19,12 @@ USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/SoftFloat64.Release
 CONFIGURE_DIRS=	${BLDDIR}
 CMAKE_ARG_PATH=	${WRKSRC}
-CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/sdlhercules
+CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
 
 pre-configure:
 	${MKDIR} ${BLDDIR}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libSoftFloat64.a libSoftFloat_pic.a
+	cd ${DESTDIR}${PREFIX}/lib/hercules4sdl/lib && ${MV} libSoftFloat64.a libSoftFloat_pic.a
 
 .include "../../mk/bsd.pkg.mk"

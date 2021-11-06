@@ -1,9 +1,9 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	telnet
-GITHUB_TAG=	4b8acebec532057a29bc5662f8ca80d50aeda05c # Nov 13, 2020
-DISTNAME=	sdl-hercules-telnet-1.0.0
-PKGREVISION=	20201113
+GITHUB_TAG=	2aca101e06ca84526c1a63c0f65e05fe11522c3b # 5 Jan 2021
+DISTNAME=	hercules4sdl-telnet-2.5
+PKGREVISION=	20210105
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 
@@ -19,12 +19,12 @@ USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/telnet64.Release
 CONFIGURE_DIRS=	${BLDDIR}
 CMAKE_ARG_PATH=	${WRKSRC}
-CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/sdlhercules
+CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
 
 pre-configure:
 	${MKDIR} ${BLDDIR}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libtelnet64.a libtelnet_pic.a
+	cd ${DESTDIR}${PREFIX}/lib/hercules4sdl/lib && ${MV} libtelnet64.a libtelnet_pic.a
 
 .include "../../mk/bsd.pkg.mk"

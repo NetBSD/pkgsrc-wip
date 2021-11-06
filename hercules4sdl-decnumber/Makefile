@@ -1,9 +1,9 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	decNumber
-GITHUB_TAG=	e41bb5245dbfdde1dd3d55b2c755230325b2e4be # Nov 13, 2020
-DISTNAME=	sdl-hercules-decnumber-3.68.0
-PKGREVISION=	20201113
+GITHUB_TAG=	da6650957d7dea21b5647c1fa80fa432f2891550 # 5 Jan 2021
+DISTNAME=	hercules4sdl-decnumber-2.5
+PKGREVISION=	20210105
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
 
@@ -19,12 +19,12 @@ USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/decNumber64.Release
 CONFIGURE_DIRS=	${BLDDIR}
 CMAKE_ARG_PATH=	${WRKSRC}
-CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/sdlhercules
+CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
 
 pre-configure:
 	${MKDIR} ${BLDDIR}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/lib/sdlhercules/lib && ${MV} libdecNumber64.a libdecNumber_pic.a
+	cd ${DESTDIR}${PREFIX}/lib/hercules4sdl/lib && ${MV} libdecNumber64.a libdecNumber_pic.a
 
 .include "../../mk/bsd.pkg.mk"

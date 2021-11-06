@@ -1,6 +1,0 @@
-@comment $NetBSD$
-lib/sdlhercules/include/telnet.h
-lib/sdlhercules/include/telnet_version.h
-lib/sdlhercules/lib/libtelnet_pic.a
-lib/sdlhercules/telnet.LICENSE.txt
-lib/sdlhercules/telnet.README.txt
