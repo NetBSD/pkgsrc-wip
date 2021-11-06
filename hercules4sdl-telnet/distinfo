@@ -1,7 +1,7 @@
 $NetBSD$
 
-SHA1 (hercules4sdl-telnet-2.5-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = c1c1a0fdf6de8f3ad7f3686f5704e061d56b577e
-RMD160 (hercules4sdl-telnet-2.5-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 83d3101ade82b7afb4b60b3798bc7d8162dcbcf5
-SHA512 (hercules4sdl-telnet-2.5-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 78b89d4073e0952b4c5e83b98ab2f30101869a9885759515d4c452e22d665683023e33a79a7ea1957d0190d23d3c9bbcbe70a34a09b9e20edcb550d5acbca2a5
-Size (hercules4sdl-telnet-2.5-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 67165 bytes
+SHA1 (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = c1c1a0fdf6de8f3ad7f3686f5704e061d56b577e
+RMD160 (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 83d3101ade82b7afb4b60b3798bc7d8162dcbcf5
+SHA512 (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 78b89d4073e0952b4c5e83b98ab2f30101869a9885759515d4c452e22d665683023e33a79a7ea1957d0190d23d3c9bbcbe70a34a09b9e20edcb550d5acbca2a5
+Size (hercules4sdl-telnet-1.0.0-2aca101e06ca84526c1a63c0f65e05fe11522c3b.tar.gz) = 67165 bytes
 SHA1 (patch-cflags.txt) = ed18a2aaa1da2a7f63c94e5fc061eb9fc0e0f02f

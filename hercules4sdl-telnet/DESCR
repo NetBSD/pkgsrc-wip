@@ -12,5 +12,5 @@ socket connection.
 Features supported include the full TELNET protocol, Q-method option
 negotiation, and NEW-ENVIRON.
 
-This version is the one used by the SoftDevLabs version of Hercules
+This version is the one used by the SoftDevLabs version of
 Hercules 4.x (Hyperion).

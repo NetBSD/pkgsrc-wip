@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	SoftFloat
-GITHUB_TAG=	42f2f99a479a724de5b601a0551e46678a5e3c57 # 5 Jan 2021
-DISTNAME=	hercules4sdl-softfloat-2.5
+DISTNAME=	hercules4sdl-softfloat-3.5.0
 PKGREVISION=	20210105
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
+GITHUB_PROJECT=	SoftFloat
+GITHUB_TAG=	42f2f99a479a724de5b601a0551e46678a5e3c57 # 5 Jan 2021
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/SoftFloat

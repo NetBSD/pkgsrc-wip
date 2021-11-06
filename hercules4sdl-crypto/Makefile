@@ -1,16 +1,16 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	crypto
-GITHUB_TAG=	837705eff938ca044f2eab5f1ea5cd83b2b0ece7 # 5 Jan 2021
-DISTNAME=	hercules4sdl-crypto-2.5
+DISTNAME=	hercules4sdl-crypto-1.0.0
 PKGREVISION=	20210105
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
+GITHUB_PROJECT=	crypto
+GITHUB_TAG=	837705eff938ca044f2eab5f1ea5cd83b2b0ece7 # 5 Jan 2021
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	https://github.com/SDL-Hercules-390/hyperion
+HOMEPAGE=	https://github.com/SDL-Hercules-390/crypto
 COMMENT=	The SoftDevLabs version of crypto for Hercules 4.x
-LICENSE=	modified-bsd
+LICENSE=	modified-bsd # some parts are less restricted
 
 USE_TOOLS+=	cmake
 USE_LANGUAGES+=	c

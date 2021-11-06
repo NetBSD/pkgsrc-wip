@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	telnet
-GITHUB_TAG=	2aca101e06ca84526c1a63c0f65e05fe11522c3b # 5 Jan 2021
-DISTNAME=	hercules4sdl-telnet-2.5
+DISTNAME=	hercules4sdl-telnet-1.0.0
 PKGREVISION=	20210105
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
+GITHUB_PROJECT=	telnet
+GITHUB_TAG=	2aca101e06ca84526c1a63c0f65e05fe11522c3b # 5 Jan 2021
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/SDL-Hercules-390/telnet
