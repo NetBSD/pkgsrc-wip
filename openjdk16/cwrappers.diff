@@ -1,168 +1,25 @@
-? a.out
-? work
-? work.earmv7hf
-? files/bin/.gdbinit
-Index: files/bin/cleanup-cc.c
-===================================================================
-RCS file: /cvsroot/pkgsrc/pkgtools/cwrappers/files/bin/cleanup-cc.c,v
-retrieving revision 1.3
-diff -u -p -u -r1.3 cleanup-cc.c
---- files/bin/cleanup-cc.c	10 Jan 2016 19:13:05 -0000	1.3
-+++ files/bin/cleanup-cc.c	14 Jun 2021 14:09:12 -0000
-@@ -52,7 +52,7 @@ cleanup_cc(struct arglist *args)
- 		if (arg->val[0] != '-')
- 			continue;
- 		if (strncmp(arg->val, "-Wl,-rpath,", 11) == 0) {
--			if (arg->val[11] == '/')
-+			if (isabs(arg->val[11]))
- 				continue;
- 			argument_unlink(args, &arg);
- 			continue;
-Index: files/bin/common.h
+Index: common.h
 ===================================================================
 RCS file: /cvsroot/pkgsrc/pkgtools/cwrappers/files/bin/common.h,v
-retrieving revision 1.8
-diff -u -p -u -r1.8 common.h
---- files/bin/common.h	7 Nov 2017 16:49:22 -0000	1.8
-+++ files/bin/common.h	14 Jun 2021 14:09:12 -0000
-@@ -121,4 +121,6 @@ void	fixup_libtool(struct arglist *);
+retrieving revision 1.9
+diff -u -p -u -r1.9 common.h
+--- common.h	7 Nov 2021 12:38:12 -0000	1.9
++++ common.h	7 Nov 2021 12:39:14 -0000
+@@ -121,6 +121,6 @@ void	fixup_libtool(struct arglist *);
  void	mi_vector_hash(const void *, size_t, uint32_t, uint32_t[3]);
  #endif
  
+-#define isabs(a) ((a) == '/')
 +#define isabs(a) ((a) == '/' || (a) == '$')
-+
+ 
  #endif
-Index: files/bin/fixup-libtool.c
-===================================================================
-RCS file: /cvsroot/pkgsrc/pkgtools/cwrappers/files/bin/fixup-libtool.c,v
-retrieving revision 1.7
-diff -u -p -u -r1.7 fixup-libtool.c
---- files/bin/fixup-libtool.c	19 Apr 2015 14:30:07 -0000	1.7
-+++ files/bin/fixup-libtool.c	14 Jun 2021 14:09:12 -0000
-@@ -127,7 +127,7 @@ process_option(struct processing_option 
- 					continue;
- 				if (strncmp(line + 2, r->src, r->src_len))
- 					continue;
--				if (line[r->src_len + 2] != '/' &&
-+				if (!isabs(line[r->src_len + 2]) &&
- 				    len != r->src_len + 2)
- 					continue;
- 				line += r->src_len + 2;
-@@ -144,7 +144,7 @@ process_option(struct processing_option 
- 
- 				if (wlen <= len - 2 &&
- 				    strncmp(line + 2, wrksrc, wlen) == 0 &&
--				    (line[wlen + 2] == '/' || wlen + 2 == len))
-+				    (isabs(line[wlen + 2]) || wlen + 2 == len))
- 					return;
- 			}
- 		}
-@@ -170,17 +170,17 @@ process_option(struct processing_option 
- 		goto print_option;
- 
- 	for (eol = line + len - 3; eol > line; --eol) {
--		if (*eol == '/')
-+		if (isabs(*eol))
- 			break;
- 	}
- 
--	if (opt->in_lai && *eol == '/') {
-+	if (opt->in_lai && isabs(*eol)) {
- 		TAILQ_FOREACH(r, &unwrap_rules, link) {
- 			if (eol < line + r->src_len)
- 				continue;
- 			if (strncmp(line, r->src, r->src_len))
- 				continue;
--			if (line[r->src_len] != '/')
-+			if (!isabs(*eol))
- 				continue;
- 			line += r->src_len;
- 			len -= r->src_len;
-@@ -212,12 +212,12 @@ process_option(struct processing_option 
- 	    len == strlen(opt->lafile))
- 		goto print_option;
- 
--	if (*line != '/' && line == eol) {
-+	if (!isabs(*line) && line == eol) {
- 		process_option(opt, "-L./.libs", 9, in_relink);
- 		goto print_option;
- 	}
- 
--	if (*line != '/') {
-+	if (!isabs(*line)) {
- 		tmp = xasprintf("-L%*.*s/.libs", (int)(eol - line),
- 		    (int)(eol - line), line);
- 		process_option(opt, tmp, strlen(tmp), in_relink);
-@@ -230,7 +230,7 @@ process_option(struct processing_option 
- 
- 	wlen = strlen(wrksrc);
- 	if (wlen > len ||
--	    (wlen != len && line[wlen] != '/') ||
-+	    (wlen != len && !isabs(line[wlen])) ||
- 	    strncmp(wrksrc, line, wlen))
- 		goto print_option;
- 
-Index: files/bin/generic-transform-cc.c
+Index: generic-transform-cc.c
 ===================================================================
 RCS file: /cvsroot/pkgsrc/pkgtools/cwrappers/files/bin/generic-transform-cc.c,v
-retrieving revision 1.4
-diff -u -p -u -r1.4 generic-transform-cc.c
---- files/bin/generic-transform-cc.c	14 Mar 2016 20:16:08 -0000	1.4
-+++ files/bin/generic-transform-cc.c	14 Jun 2021 14:09:12 -0000
-@@ -264,7 +264,7 @@ generic_transform_cc_absolute(struct arg
- 	TAILQ_FOREACH(rule, &libpath_rules, link) {
- 		if (rule->src_len > len)
- 			continue;
--		if (arg->val[rule->src_len] != '/')
-+		if (!isabs(arg->val[rule->src_len]))
- 			continue;
- 		if (strncmp(arg->val, rule->src, rule->src_len))
- 			continue;
-@@ -297,7 +297,7 @@ generic_transform_libtool_lib(struct arg
- 			free(fname);
- 			continue;
- 		}
--		if (arg2->val[2] == '/') {
-+		if (isabs(arg2->val[2])) {
- 			if (wrksrc == NULL)
- 				return 0;
- 			if (strncmp(arg2->val + 2, wrksrc, len))
-@@ -346,7 +346,7 @@ generic_transform_cc(struct arglist *arg
- 			continue;
- #endif
- 
--		if (arg->val[0] == '/') {
-+		if (isabs(arg->val[0])) {
- #if defined(WRAPPER_LIBTOOL)
- 			generic_transform_cc_absolute(args, arg);
- #endif
-@@ -435,14 +435,14 @@ generic_transform_cc(struct arglist *arg
- 		} else
- 			continue;
- 
--		if (*path != '/')
-+		if (!isabs(*path))
- 			continue;
- 
--		while (len > 1 && path[len - 1] == '/')
-+		while (len > 1 && isabs(path[len - 1]))
- 			--len;
- 
- 		TAILQ_FOREACH(rule, ruleset, link) {
--			if (rule->src[rule->src_len - 1] == '/') {
-+			if (isabs(rule->src[rule->src_len - 1])) {
- 				if (rule->src_len - 1 != len)
- 					continue;
- 				if (memcmp(path, rule->src, len) != 0)
-@@ -452,7 +452,7 @@ generic_transform_cc(struct arglist *arg
- 			if (rule->src_len > len)
- 				continue;
- 			if (path[rule->src_len] != '\0' &&
--			    path[rule->src_len] != '/')
-+			    !isabs(path[rule->src_len]))
- 				continue;
- 			if (strncmp(path, rule->src, rule->src_len) == 0)
- 				break;
+retrieving revision 1.5
+diff -u -p -u -r1.5 generic-transform-cc.c
+--- generic-transform-cc.c	7 Nov 2021 12:38:12 -0000	1.5
++++ generic-transform-cc.c	7 Nov 2021 12:39:14 -0000
 @@ -462,6 +462,8 @@ generic_transform_cc(struct arglist *arg
  				if (len >= 6 &&
  				    strcmp(path + len - 6, "/.libs") == 0)
@@ -172,37 +29,3 @@ diff -u -p -u -r1.4 generic-transform-cc.c
  			}
  			if (opt_arg)
  				argument_unlink(args, &opt_arg);
-Index: files/bin/normalise-cc.c
-===================================================================
-RCS file: /cvsroot/pkgsrc/pkgtools/cwrappers/files/bin/normalise-cc.c,v
-retrieving revision 1.5
-diff -u -p -u -r1.5 normalise-cc.c
---- files/bin/normalise-cc.c	11 Jun 2017 19:34:43 -0000	1.5
-+++ files/bin/normalise-cc.c	14 Jun 2021 14:09:12 -0000
-@@ -44,7 +44,7 @@ normalise_path_list(struct arglist *args
- 	struct argument *arg2;
- 
- 	while ((sep = strchr(val, ':')) != NULL) {
--		if (sep == val || (strip_relative && val[0] != '/')) {
-+		if (sep == val || (strip_relative && !isabs(val[0]))) {
- 			val = sep + 1;
- 			continue;
- 		}
-@@ -53,7 +53,7 @@ normalise_path_list(struct arglist *args
- 		arg = arg2;
- 		val = sep + 1;
- 	}
--	if (val[0] == '\0' || (strip_relative && val[0] != '/'))
-+	if (val[0] == '\0' || (strip_relative && !isabs(val[0])))
- 		return;
- 	arg2 = argument_new(concat(prefix, val));
- 	TAILQ_INSERT_AFTER(args, arg, arg2, link);
-@@ -151,7 +151,7 @@ normalise_cc(struct arglist *args)
- 			arg2 = TAILQ_NEXT(arg2, link);
- 			continue;
- 		}
--		if (arg->val[0] == '/') {
-+		if (isabs(arg->val[0])) {
- 			next = strrchr(arg->val, '/');
- 			++next;
- 			if (strncmp(next, "lib", 3))
