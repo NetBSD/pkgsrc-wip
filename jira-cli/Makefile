@@ -1,16 +1,25 @@
 # $NetBSD$
 
-DISTNAME=	jira-cli-0.1.1
+DISTNAME=	jira-cli-0.1.1.20211106
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ankitpokhrel/}
-CATEGORIES=	net
-GITHUB_TAG=	15b933e76a4d43aded648701f38a98cc1004cefd
+CATEGORIES=	www
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	624b58f0f26408c9055ec4c9eb9b0c84dad573c0
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/ankitpokhrel/jira-cli
 COMMENT=	Feature-rich Interactive Jira Command Line
 LICENSE=	mit
 
-GO_BUILD_PATTERN=	./cmd/jira
+GO_BUILD_DATE_cmd=	${DATE} "+%FT%T%Z"
+GO_XFLAG_PREFIX=	-X github.com/ankitpokhrel/jira-cli/internal/version
+
+GO_BUILD_PATTERN=	-ldflags ' \
+			${GO_XFLAG_PREFIX}.BuildDate=${GO_BUILD_DATE_cmd:sh} \
+			${GO_XFLAG_PREFIX}.Version=v${PKGVERSION_NOREV} \
+			${GO_XFLAG_PREFIX}.GitCommit=${GITHUB_TAG} '
+GO_BUILD_PATTERN+=	-mod=readonly ./cmd/jira
+
 CHECK_RELRO_SKIP+=	bin/jira
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man7
