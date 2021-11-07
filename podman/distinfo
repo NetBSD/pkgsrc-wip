@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.2 2021/09/04 21:14:15 leot Exp $
 
-RMD160 (podman-3.4.0.tar.gz) = c7b3146b6f0629d5d34754fb5d208e3df60ec0cf
-SHA512 (podman-3.4.0.tar.gz) = 195354b15beaaed19b4d5f71f5dbfcd1ebfc5c80c07db91043b76e3254d62b5fd001c52c536773656e5eba65954511c1639a50b955a9992fa4d18a55e573c2a1
-Size (podman-3.4.0.tar.gz) = 10950594 bytes
+BLAKE2s (podman-3.4.1.tar.gz) = f1ba4ccc90f31e56fb29726b010c20c1e101be6716cea84e493d000ba619f021
+SHA512 (podman-3.4.1.tar.gz) = b8602464358ab73429a9003262c92c38c9a06e1133c776fd0c4ce65dae26639db66f8f5ad510528f3e6e7bc2fe692746fcf1d90d4e95d701d102006d9a83b27e
+Size (podman-3.4.1.tar.gz) = 10953738 bytes
 SHA1 (patch-Makefile) = 5671f5452430d4b94af924defbb473eb91732281
 SHA1 (patch-cmd_podman_registry_config.go) = 6d32a7526cad5728a385de0029b2bbe5474e7f1b
 SHA1 (patch-pkg_machine_qemu_options__netbsd.go) = a256dcafceb70f29b4f7a1ed013b52b5d6b0f4ba
