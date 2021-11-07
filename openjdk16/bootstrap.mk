@@ -10,11 +10,11 @@ EXTRACT_ONLY+=			${BOOT.nb7-i386}
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-x86_64
-BOOT.nb7-amd64=			bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz
-SITES.${BOOT.nb7-amd64}=	${MASTER_SITE_LOCAL:=openjdk11/}
+BOOT.nb10-amd64=		bootstrap-jdk-1.16.0.1-netbsd-9.99.92-amd64-20211106.tar.gz
+SITES.${BOOT.nb10-amd64}=	${MASTER_SITE_LOCAL:=openjdk16/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
-DISTFILES+=			${BOOT.nb7-amd64}
-EXTRACT_ONLY+=			${BOOT.nb7-amd64}
+DISTFILES+=			${BOOT.nb10-amd64}
+EXTRACT_ONLY+=			${BOOT.nb10-amd64}
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
