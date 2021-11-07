@@ -3751,6 +3751,7 @@ SUBDIR+=	py-ffmpeg-normalize
 SUBDIR+=	py-fiat
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-fileinspector
+SUBDIR+=	py-filelock
 SUBDIR+=	py-fiona
 SUBDIR+=	py-fipy
 SUBDIR+=	py-firehose
