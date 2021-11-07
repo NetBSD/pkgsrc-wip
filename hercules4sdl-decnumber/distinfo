@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = 8cff80716c91288d0f24ab877e1917c3be552c5e
-RMD160 (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = c53cf8c287d45a2aa9c063bbdb14f0881ea64053
-SHA512 (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = 3b20fa4ecb81eedc90fe919cc06dcb150f74b56771e8521a72648149135923ce3dd19e7b66e0ce660bb66b8e3ff4aa5be38be71b2e9f1de44978e755498f00f2
-Size (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = 785599 bytes
-SHA1 (patch-cflags.txt) = 8e5833c2d43e7973dcf9d6c442976efefac30b26
