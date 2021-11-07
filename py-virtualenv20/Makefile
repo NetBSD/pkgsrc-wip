@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	virtualenv-20.9.0
+DISTNAME=	virtualenv-20.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -14,18 +14,17 @@ CONFLICTS+=	${PYPKGPREFIX}-virtualenv-[0-9]*
 
 DEPENDS+=	${PYPKGPREFIX}-backports.entry_points_selectable>=1.0.4:../../wip/py-backports.entry_points_selectable
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1<1:../../wip/py-distlib
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0<4:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.2.0<4:../../wip/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2<3:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0<2:../../lang/py-six
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12<2:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 .endif
 .if ${_PYTHON_VERSION} < 37
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.0<2:../../devel/py-importlib-resources
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.0:../../devel/py-importlib-resources
 .endif
 .if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-contextlib2>=0.6.0<1:../../devel/py-contextlib2
 DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.3.3<3:../../devel/py-pathlib2
 .endif
 
