@@ -287,6 +287,8 @@ share/emacs/${PKGVERSION}/etc/images/checked.svg
 share/emacs/${PKGVERSION}/etc/images/checked.xpm
 share/emacs/${PKGVERSION}/etc/images/close.pbm
 share/emacs/${PKGVERSION}/etc/images/close.xpm
+share/emacs/${PKGVERSION}/etc/images/connect-to-url.pbm
+share/emacs/${PKGVERSION}/etc/images/connect-to-url.xpm
 share/emacs/${PKGVERSION}/etc/images/connect.pbm
 share/emacs/${PKGVERSION}/etc/images/connect.xpm
 share/emacs/${PKGVERSION}/etc/images/contact.pbm
@@ -2295,8 +2297,11 @@ share/emacs/${PKGVERSION}/lisp/international/charscript.el.gz
 share/emacs/${PKGVERSION}/lisp/international/charscript.elc
 share/emacs/${PKGVERSION}/lisp/international/cp51932.el.gz
 share/emacs/${PKGVERSION}/lisp/international/cp51932.elc
+share/emacs/${PKGVERSION}/lisp/international/emoji-labels.el
 share/emacs/${PKGVERSION}/lisp/international/emoji-zwj.el.gz
 share/emacs/${PKGVERSION}/lisp/international/emoji-zwj.elc
+share/emacs/${PKGVERSION}/lisp/international/emoji.el.gz
+share/emacs/${PKGVERSION}/lisp/international/emoji.elc
 share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el.gz
 share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.elc
 share/emacs/${PKGVERSION}/lisp/international/fontset.el.gz
@@ -4055,6 +4060,8 @@ share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/lisp/xwidget.el.gz
 share/emacs/${PKGVERSION}/lisp/xwidget.elc
+share/emacs/${PKGVERSION}/lisp/yank-media.el.gz
+share/emacs/${PKGVERSION}/lisp/yank-media.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
 share/icons/hicolor/128x128/apps/emacs.png
