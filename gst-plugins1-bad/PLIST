@@ -88,9 +88,12 @@ lib/gstreamer-1.0/libgstcamerabin.so
 lib/gstreamer-1.0/libgstcoloreffects.so
 lib/gstreamer-1.0/libgstdash.so
 lib/gstreamer-1.0/libgstdebugutilsbad.so
+lib/gstreamer-1.0/libgstdtsdec.so
 lib/gstreamer-1.0/libgstdvbsubenc.so
 lib/gstreamer-1.0/libgstdvbsuboverlay.so
 lib/gstreamer-1.0/libgstdvdspu.so
+lib/gstreamer-1.0/libgstfaac.so
+lib/gstreamer-1.0/libgstfaad.so
 lib/gstreamer-1.0/libgstfaceoverlay.so
 lib/gstreamer-1.0/libgstfestival.so
 lib/gstreamer-1.0/libgstfieldanalysis.so
@@ -99,6 +102,7 @@ lib/gstreamer-1.0/libgstfrei0r.so
 lib/gstreamer-1.0/libgstgaudieffects.so
 lib/gstreamer-1.0/libgstgdp.so
 lib/gstreamer-1.0/libgstgeometrictransform.so
+lib/gstreamer-1.0/libgstgme.so
 lib/gstreamer-1.0/libgsthls.so
 lib/gstreamer-1.0/libgstid3tag.so
 lib/gstreamer-1.0/libgstinter.so
@@ -111,10 +115,12 @@ lib/gstreamer-1.0/libgstjpegformat.so
 lib/gstreamer-1.0/libgstlegacyrawparse.so
 lib/gstreamer-1.0/libgstmicrodns.so
 lib/gstreamer-1.0/libgstmidi.so
+lib/gstreamer-1.0/libgstmms.so
 lib/gstreamer-1.0/libgstmpegpsdemux.so
 lib/gstreamer-1.0/libgstmpegpsmux.so
 lib/gstreamer-1.0/libgstmpegtsdemux.so
 lib/gstreamer-1.0/libgstmpegtsmux.so
+lib/gstreamer-1.0/libgstmusepack.so
 lib/gstreamer-1.0/libgstmxf.so
 lib/gstreamer-1.0/libgstnetsim.so
 lib/gstreamer-1.0/libgstnvcodec.so
@@ -124,8 +130,10 @@ lib/gstreamer-1.0/libgstpcapparse.so
 lib/gstreamer-1.0/libgstpnm.so
 lib/gstreamer-1.0/libgstproxy.so
 lib/gstreamer-1.0/libgstremovesilence.so
+lib/gstreamer-1.0/libgstresindvd.so
 lib/gstreamer-1.0/libgstrfbsrc.so
 lib/gstreamer-1.0/libgstrist.so
+lib/gstreamer-1.0/libgstrtmp.so
 lib/gstreamer-1.0/libgstrtmp2.so
 lib/gstreamer-1.0/libgstrtpmanagerbad.so
 lib/gstreamer-1.0/libgstrtponvif.so
@@ -135,6 +143,7 @@ lib/gstreamer-1.0/libgstshm.so
 lib/gstreamer-1.0/libgstsiren.so
 lib/gstreamer-1.0/libgstsmooth.so
 lib/gstreamer-1.0/libgstsmoothstreaming.so
+lib/gstreamer-1.0/libgstsoundtouch.so
 lib/gstreamer-1.0/libgstspeed.so
 lib/gstreamer-1.0/libgstsubenc.so
 lib/gstreamer-1.0/libgstswitchbin.so
