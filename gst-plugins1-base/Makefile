@@ -15,6 +15,23 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config perl:run xgettext
 
+CONFLICTS+=	gst-plugins1-alsa-[0-9]*
+SUPERSEDES+=	gst-plugins1-alsa-[0-9]*
+CONFLICTS+=	gst-plugins1-cdparanoia-[0-9]*
+SUPERSEDES+=	gst-plugins1-cdparanoia-[0-9]*
+CONFLICTS+=	gst-plugins1-libvisual-[0-9]*
+SUPERSEDES+=	gst-plugins1-libvisual-[0-9]*
+CONFLICTS+=	gst-plugins1-ogg-[0-9]*
+SUPERSEDES+=	gst-plugins1-ogg-[0-9]*
+CONFLICTS+=	gst-plugins1-opus-[0-9]*
+SUPERSEDES+=	gst-plugins1-opus-[0-9]*
+CONFLICTS+=	gst-plugins1-theora-[0-9]*
+SUPERSEDES+=	gst-plugins1-theora-[0-9]*
+CONFLICTS+=	gst-plugins1-vorbis-[0-9]*
+SUPERSEDES+=	gst-plugins1-vorbis-[0-9]*
+CONFLICTS+=	gst-plugins1-x11-[0-9]*
+SUPERSEDES+=	gst-plugins1-x11-[0-9]*
+
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
