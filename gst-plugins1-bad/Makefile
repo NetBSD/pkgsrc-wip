@@ -45,8 +45,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/uridownloader:${WRKSRC}
 .include "../../wip/openh264/buildlink3.mk"
 .include "../../net/libmicrodns/buildlink3.mk"
 .include "../../net/libnice/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
 .include "../../wip/gst-plugins1-base/buildlink3.mk"
 .include "../../wip/gstreamer1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
