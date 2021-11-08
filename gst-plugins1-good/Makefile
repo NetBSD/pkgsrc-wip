@@ -15,10 +15,37 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config perl:run xgettext
 
+CONFLICTS+=	gst-plugins1-cairo-[0-9]*
+SUPERSEDES+=	gst-plugins1-cairo-[0-9]*
+CONFLICTS+=	gst-plugins1-flac-[0-9]*
+SUPERSEDES+=	gst-plugins1-flac-[0-9]*
+CONFLICTS+=	gst-plugins1-gdk_pixbuf-[0-9]*
+SUPERSEDES+=	gst-plugins1-flac-[0-9]*
+CONFLICTS+=	gst-plugins1-jpeg-[0-9]*
+SUPERSEDES+=	gst-plugins1-jpeg-[0-9]*
+CONFLICTS+=	gst-plugins1-lame-[0-9]*
+SUPERSEDES+=	gst-plugins1-lame-[0-9]*
+CONFLICTS+=	gst-plugins1-mpg123-[0-9]*
+SUPERSEDES+=	gst-plugins1-mpg123-[0-9]*
+CONFLICTS+=	gst-plugins1-png-[0-9]*
+SUPERSEDES+=	gst-plugins1-png-[0-9]*
+CONFLICTS+=	gst-plugins1-speex-[0-9]*
+SUPERSEDES+=	gst-plugins1-speex-[0-9]*
+CONFLICTS+=	gst-plugins1-twolame-[0-9]*
+SUPERSEDES+=	gst-plugins1-twolame-[0-9]*
+CONFLICTS+=	gst-plugins1-v4l2-[0-9]*
+SUPERSEDES+=	gst-plugins1-v4l2-[0-9]*
+CONFLICTS+=	gst-plugins1-vpx-[0-9]*
+SUPERSEDES+=	gst-plugins1-vpx-[0-9]*
+CONFLICTS+=	gst-plugins1-wavpack-[0-9]*
+SUPERSEDES+=	gst-plugins1-wavpack-[0-9]*
+
 .include "../../mk/oss.buildlink3.mk"
 
 PLIST_VARS+=	oss
 .if ${OSS_TYPE} != "none"
+CONFLICTS+=	gst-plugins1-oss-[0-9]*
+SUPERSEDES+=	gst-plugins1-oss-[0-9]*
 PLIST.oss=	yes
 LDFLAGS+=	${LIBOSSAUDIO}
 .endif

@@ -14,14 +14,18 @@ PKG_SUGGESTED_OPTIONS=		gtk3 x11
 PLIST_VARS+=	gtk3
 .if !empty(PKG_OPTIONS:Mgtk3)
 .include "../../x11/gtk3/buildlink3.mk"
+CONFLICTS+=		gst-plugins1-gtk-[0-9]*
+SUPERSEDES+=		gst-plugins1-gtk-[0-9]*
 PLIST.gtk3=		yes
 .else
 MESON_ARGS+=		-D gtk3=disabled
 .endif
 
 PLIST_VARS+=	jack
-.if !empty(PKG_OPTIONS:Malsa)
+.if !empty(PKG_OPTIONS:Mjack)
 .include "../../audio/jack/buildlink3.mk"
+CONFLICTS+=		gst-plugins1-jack-[0-9]*
+SUPERSEDES+=		gst-plugins1-jack-[0-9]*
 PLIST.jack=		yes
 .else
 MESON_ARGS+=		-D jack=disabled
@@ -30,6 +34,8 @@ MESON_ARGS+=		-D jack=disabled
 PLIST_VARS+=	pulseaudio
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
+CONFLICTS+=		gst-plugins1-pulse-[0-9]*
+SUPERSEDES+=		gst-plugins1-pulse-[0-9]*
 PLIST.pulseaudio=	yes
 .else
 MESON_ARGS+=		-D pulse=disabled
