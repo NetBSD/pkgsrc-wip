@@ -1,7 +1,6 @@
 # $NetBSD$
 
 DISTNAME=	yt-dlp-2021.10.22
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
 # \TODO: create symlink, as mpv makes use of youtube-dl?
