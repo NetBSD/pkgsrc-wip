@@ -15,7 +15,8 @@ USE_TOOLS+=		bison flex perl pkg-config
 TEST_TARGET=		check
 FLEX_REQD=		2.5.31
 
-PYTHON_FOR_BUILD_ONLY=	tool
+# installs a python script
+#PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "options.mk"
 
