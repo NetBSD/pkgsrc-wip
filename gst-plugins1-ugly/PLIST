@@ -1,8 +1,12 @@
 @comment $NetBSD$
+lib/gstreamer-1.0/libgsta52dec.so
 lib/gstreamer-1.0/libgstasf.so
 lib/gstreamer-1.0/libgstdvdlpcmdec.so
+lib/gstreamer-1.0/libgstdvdread.so
 lib/gstreamer-1.0/libgstdvdsub.so
+lib/gstreamer-1.0/libgstmpeg2dec.so
 lib/gstreamer-1.0/libgstrealmedia.so
+lib/gstreamer-1.0/libgstsid.so
 lib/gstreamer-1.0/libgstx264.so
 lib/gstreamer-1.0/libgstxingmux.so
 share/gstreamer-1.0/presets/GstX264Enc.prs

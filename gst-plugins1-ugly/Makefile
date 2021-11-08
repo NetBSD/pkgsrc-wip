@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config xgettext
 
 PYTHON_FOR_BUILD_ONLY=		tool
 
@@ -31,6 +31,10 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst/asfdemux:${WRKSRC}/output/gst/dv
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
+.include "../../audio/liba52/buildlink3.mk"
+.include "../../audio/libsidplay/buildlink3.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../wip/gst-plugins1-base/buildlink3.mk"
 .include "../../wip/gstreamer1/buildlink3.mk"
