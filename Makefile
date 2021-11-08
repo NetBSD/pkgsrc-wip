@@ -1421,6 +1421,7 @@ SUBDIR+=	gst-plugins1-modplug
 SUBDIR+=	gst-plugins1-opengl
 SUBDIR+=	gst-plugins1-schroedinger
 SUBDIR+=	gst-plugins1-svt-vp9
+SUBDIR+=	gst-plugins1-ugly
 SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
