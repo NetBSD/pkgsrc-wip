@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/xemu-xc65
+bin/xemu-xclcd
+bin/xemu-xep128
+bin/xemu-xmega65
+bin/xemu-xprimo
+bin/xemu-xtvc
+bin/xemu-xvic20

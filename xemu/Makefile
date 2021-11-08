@@ -1,0 +1,47 @@
+# $NetBSD: Makefile,v 1.1 2021/11/06 16:40:06 rhialto Exp $
+
+DISTNAME=	xemu-0.0.2021.11.02
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lgblgblgb/}
+GITHUB_PROJECT=	xemu
+GITHUB_TAG=	71f085f15c1761b1bf03e0f215cd742705d196d1
+
+MAINTAINER=	rhialto@NetBSD.org
+HOMEPAGE=	https://github.com/lgblgblgb/xemu
+COMMENT=	Emulators of various machines, incl the Commodore LCD and Commodore 65 and MEGA65 as well.
+LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	bash gmake
+USE_LANGUAGES+=	c
+
+REPLACE_BASH+=	build/configure/configure
+
+MAKE_ENV+=	DESTDIR=${DESTDIR}
+MAKE_ENV+=	SDL2_RPATH=${COMPILER_RPATH_FLAG},${BUILDLINK_PREFIX.SDL2}/lib
+
+# This subst only for NetBSD?
+SUBST_CLASSES+=         rl
+SUBST_STAGE.rl=		pre-configure
+SUBST_SED.rl=		-e 's/-lreadline/-ledit/'
+SUBST_FILES.rl+=	build/configure/configure
+SUBST_MESSAGE.rl+=	readline
+
+SUBST_CLASSES+=         usrlocal
+SUBST_STAGE.usrlocal=	pre-configure
+SUBST_SED.usrlocal=	-e 's;/usr/local;${PREFIX};'
+SUBST_FILES.usrlocal+=	./xemu/emutools_files.h
+SUBST_MESSAGE.usrlocal+=Replacing /usr/local
+
+SUBST_CLASSES+=         destdir
+SUBST_STAGE.destdir=	pre-configure
+SUBST_SED.destdir=	-e 's;/usr/local;$${DESTDIR}${PREFIX};'
+SUBST_FILES.destdir+=	./build/Makefile.common
+SUBST_MESSAGE.destdir+= Inserting DESTDIR into INSTALL_BINDIR
+
+do-configure:
+	cd ${WRKSRC}/build/configure && bash ./configure --arch=native
+
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
