@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2021/04/21 11:42:19 adam Exp $
 
-DISTNAME=	gst-plugins-good-1.18.4
+DISTNAME=	gst-plugins-good-1.18.5
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-good/
@@ -29,16 +29,19 @@ LDFLAGS+=	${LIBOSSAUDIO}
 # not packaged
 #Run-time dependency gudev-1.0 found: NO (tried pkgconfig and cmake)
 
-# test status as of 1.18.4
-#Ok:                 104
-#Fail:               1
+# test status as of 1.18.5
+#Ok:                 104 
+#Expected Fail:      0   
+#Fail:               1   
+#Unexpected Pass:    0   
+#Skipped:            0   
+#Timeout:            0   
 #
-#105/105 elements_videoflip            FAIL            20.26s   exit status 1
+#105/105 generic_states                         FAIL            40.92s   exit status 2
 
 .include "../../devel/meson/build.mk"
 .include "../../audio/flac/buildlink3.mk"
-#Dependency jack found: NO found 0.125.0 but need: '>= 1.9.7'
-#.include "../../audio/jack/buildlink3.mk"
+.include "../../audio/jack/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libshout/buildlink3.mk"
 # prefer mpg123 to mp3lame, twolame

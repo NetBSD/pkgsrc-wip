@@ -29,6 +29,7 @@ lib/gstreamer-1.0/libgstid3demux.so
 lib/gstreamer-1.0/libgstimagefreeze.so
 lib/gstreamer-1.0/libgstinterleave.so
 lib/gstreamer-1.0/libgstisomp4.so
+lib/gstreamer-1.0/libgstjack.so
 lib/gstreamer-1.0/libgstjpeg.so
 lib/gstreamer-1.0/libgstlevel.so
 lib/gstreamer-1.0/libgstmatroska.so

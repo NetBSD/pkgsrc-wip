@@ -35,6 +35,17 @@ REPLACE_PYTHON+=	output/gst/parse/gen_lex.py
 REPLACE_PYTHON+=	output/gst/parse/gen_grammar.py
 REPLACE_PYTHON+=	output/docs/gst-plugins-doc-cache-generator
 
+# for tests
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gst:${WRKSRC}/output/libs/gst/check:${WRKSRC}/output/libs/gst/base:${WRKSRC}/output/libs/gst/controller:${WRKSRC}/output/libs/gst/net:${WRKSRC}/output/plugins/elements:${WRKSRC}/output/plugins/tracers
+
+# test status as of 1.18.5
+#Ok:                 66
+#Expected Fail:      0
+#Fail:               39
+#Unexpected Pass:    0
+#Skipped:            1
+#Timeout:            0
+
 .include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/check/buildlink3.mk"

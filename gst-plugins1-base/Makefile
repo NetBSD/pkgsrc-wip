@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2021/04/21 11:42:19 adam Exp $
 
-DISTNAME=	gst-plugins-base-1.18.4
+DISTNAME=	gst-plugins-base-1.18.5
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-base/
@@ -25,13 +25,13 @@ MESON_ARGS+=	-D gl_winsys=x11
 # for tests
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/audio:${WRKSRC}/output/gst-libs/gst/video:${WRKSRC}/output/gst-libs/gst/tag:${WRKSRC}/output/gst-libs/gst/rtp:${WRKSRC}/output/gst-libs/gst/allocators:${WRKSRC}/output/gst-libs/gst/app:${WRKSRC}/output/gst-libs/gst/pbutils:${WRKSRC}/output/gst-libs/gst/gl:${WRKSRC}/output/gst-libs/ext/ogg:${WRKSRC}/output/gst-libs/ext/opus:${WRKSRC}/output/gst-libs/ext/theora:${WRKSRC}/output/gst-libs/ext/vorbis:${WRKSRC}/output/gst-libs/gst/riff:${WRKSRC}/output/gst-libs/gst/sdp:${WRKSRC}/output/gst-libs/gst/fft:${WRKSRC}/output/gst-libs/gst/rtsp
 
-# test status as of 1.18.4
-#Ok:                 68
-#Expected Fail:      0
-#Fail:               34
-#Unexpected Pass:    0
-#Skipped:            14
-#Timeout:            0
+# test status as of 1.18.5
+#Ok:                 88  
+#Expected Fail:      0   
+#Fail:               14  
+#Unexpected Pass:    0   
+#Skipped:            14  
+#Timeout:            0   
 
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
