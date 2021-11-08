@@ -22,13 +22,6 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 LDFLAGS+=	${LIBOSSAUDIO}
 
-# not packaged
-#Run-time dependency libiec61883 found: NO (tried pkgconfig and cmake)
-# dependency too big
-#Run-time dependency qt5 (modules: Core, Gui, Qml, Quick) found: NO (tried pkgconfig and config-tool)
-# not packaged
-#Run-time dependency gudev-1.0 found: NO (tried pkgconfig and cmake)
-
 # test status as of 1.18.5
 #Ok:                 104 
 #Expected Fail:      0   
@@ -53,7 +46,6 @@ LDFLAGS+=	${LIBOSSAUDIO}
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 # prefer libcaca to aalib
 .include "../../graphics/libcaca/buildlink3.mk"
-.include "../../graphics/libv4l/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
