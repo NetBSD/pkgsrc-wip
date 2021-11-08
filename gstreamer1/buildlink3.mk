@@ -11,10 +11,7 @@ BUILDLINK_PKGSRCDIR.gstreamer1?=	../../wip/gstreamer1
 pkgbase := gstreamer1
 .include "../../mk/pkg-build-options.mk"
 
-.if ${PKG_BUILD_OPTIONS.gstreamer1:Mgstcheck}
 .include "../../devel/check/buildlink3.mk"
-.endif
-
 .include "../../devel/glib2/buildlink3.mk"
 .endif # GSTREAMER1_BUILDLINK3_MK
 

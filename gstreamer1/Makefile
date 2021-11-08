@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.49 2020/08/31 18:10:28 wiz Exp $
 
-DISTNAME=	gstreamer-1.18.4
+DISTNAME=	gstreamer-1.18.5
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
@@ -35,11 +35,10 @@ REPLACE_PYTHON+=	output/gst/parse/gen_lex.py
 REPLACE_PYTHON+=	output/gst/parse/gen_grammar.py
 REPLACE_PYTHON+=	output/docs/gst-plugins-doc-cache-generator
 
-#Library gmp found: NO
-#Library gsl found: NO
-#Library gslcblas found: NO
-
 .include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
+.include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
