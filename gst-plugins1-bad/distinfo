@@ -3,4 +3,4 @@ $NetBSD: distinfo,v 1.39 2020/07/16 11:27:25 markd Exp $
 BLAKE2s (gst-plugins-bad-1.18.5.tar.xz) = be2cb1e39a5768b45b93c7ce760b87398af3502379c50c7d067b608278c8336d
 SHA512 (gst-plugins-bad-1.18.5.tar.xz) = 619c0ac0055b8d1b767924a9ee68a3fd87b197b3587784387a296d2dac8f30fe28d00d2ac3c94968fb71cfccb50ceffa6e2ad86d1857f63f1b05c5780a5c0a20
 Size (gst-plugins-bad-1.18.5.tar.xz) = 5649536 bytes
-SHA1 (patch-sys_shm_meson.build) = a638461c0b4b2afaa0f75d589f7e594f23d64a2f
+SHA1 (patch-sys_shm_meson.build) = b2f488083012178468d56350584e60ebee17e64b
