@@ -13,7 +13,26 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=		pkg-config perl:run
+USE_TOOLS+=	pkg-config perl:run xgettext
+
+.include "../../mk/oss.buildlink3.mk"
+
+PLIST_VARS+=	oss
+.if ${OSS_TYPE} != "none"
+PLIST.oss=	yes
+LDFLAGS+=	${LIBOSSAUDIO}
+.endif
+
+# prefer libcaca to aalib
+MESON_ARGS+=	-D aalib=disabled
+# requires nasm, but seems to not work on NetBSD/amd64
+MESON_ARGS+=	-D asm=disabled
+MESON_ARGS+=	-D examples=disabled
+# problematic on NetBSD at least
+MESON_ARGS+=	-D oss4=disabled
+MESON_ARGS+=	-D qt5=disabled
+
+TOOL_DEPENDS+=	orc-[0-9]*:../../devel/orc
 
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
@@ -32,19 +51,20 @@ LDFLAGS+=	${LIBOSSAUDIO}
 #
 #105/105 generic_states                         FAIL            40.92s   exit status 2
 
+.include "options.mk"
 .include "../../devel/meson/build.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
-.include "../../audio/jack/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libshout/buildlink3.mk"
-# prefer mpg123 to mp3lame, twolame
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../audio/twolame/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-# prefer libcaca to aalib
 .include "../../graphics/libcaca/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/tool.mk"
@@ -58,7 +78,5 @@ LDFLAGS+=	${LIBOSSAUDIO}
 #.include "../../wip/libavc1394/buildlink3.mk"
 #.include "../../wip/libraw1394/buildlink3.mk"
 #.endif
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

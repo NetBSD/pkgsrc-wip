@@ -23,14 +23,15 @@ lib/gstreamer-1.0/libgstflxdec.so
 lib/gstreamer-1.0/libgstgdkpixbuf.so
 lib/gstreamer-1.0/libgstgoom.so
 lib/gstreamer-1.0/libgstgoom2k1.so
-lib/gstreamer-1.0/libgstgtk.so
+${PLIST.gtk3}lib/gstreamer-1.0/libgstgtk.so
 lib/gstreamer-1.0/libgsticydemux.so
 lib/gstreamer-1.0/libgstid3demux.so
 lib/gstreamer-1.0/libgstimagefreeze.so
 lib/gstreamer-1.0/libgstinterleave.so
 lib/gstreamer-1.0/libgstisomp4.so
-lib/gstreamer-1.0/libgstjack.so
+${PLIST.jack}lib/gstreamer-1.0/libgstjack.so
 lib/gstreamer-1.0/libgstjpeg.so
+lib/gstreamer-1.0/libgstlame.so
 lib/gstreamer-1.0/libgstlevel.so
 lib/gstreamer-1.0/libgstmatroska.so
 lib/gstreamer-1.0/libgstmonoscope.so
@@ -39,10 +40,9 @@ lib/gstreamer-1.0/libgstmulaw.so
 lib/gstreamer-1.0/libgstmultifile.so
 lib/gstreamer-1.0/libgstmultipart.so
 lib/gstreamer-1.0/libgstnavigationtest.so
-lib/gstreamer-1.0/libgstoss4.so
-lib/gstreamer-1.0/libgstossaudio.so
+${PLIST.oss}lib/gstreamer-1.0/libgstossaudio.so
 lib/gstreamer-1.0/libgstpng.so
-lib/gstreamer-1.0/libgstpulseaudio.so
+${PLIST.pulseaudio}lib/gstreamer-1.0/libgstpulseaudio.so
 lib/gstreamer-1.0/libgstreplaygain.so
 lib/gstreamer-1.0/libgstrtp.so
 lib/gstreamer-1.0/libgstrtpmanager.so
@@ -54,6 +54,7 @@ lib/gstreamer-1.0/libgstsoup.so
 lib/gstreamer-1.0/libgstspectrum.so
 lib/gstreamer-1.0/libgstspeex.so
 lib/gstreamer-1.0/libgsttaglib.so
+lib/gstreamer-1.0/libgsttwolame.so
 lib/gstreamer-1.0/libgstudp.so
 lib/gstreamer-1.0/libgstvideo4linux2.so
 lib/gstreamer-1.0/libgstvideobox.so
@@ -64,7 +65,7 @@ lib/gstreamer-1.0/libgstvpx.so
 lib/gstreamer-1.0/libgstwavenc.so
 lib/gstreamer-1.0/libgstwavpack.so
 lib/gstreamer-1.0/libgstwavparse.so
-lib/gstreamer-1.0/libgstximagesrc.so
+${PLIST.x11}lib/gstreamer-1.0/libgstximagesrc.so
 lib/gstreamer-1.0/libgsty4menc.so
 share/gstreamer-1.0/presets/GstIirEqualizer10Bands.prs
 share/gstreamer-1.0/presets/GstIirEqualizer3Bands.prs
