@@ -13,14 +13,15 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=		pkg-config perl:run
+USE_TOOLS+=	pkg-config perl:run xgettext
 
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 PYTHON_FOR_BUILD_ONLY=		tool
 
-MESON_ARGS+=	-D gl_winsys=x11
+MESON_ARGS+=	-D examples=disabled
+MESON_ARGS+=	-D tremor=disabled
 
 .include "options.mk"
 
@@ -43,9 +44,11 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/tag:${WRKSRC}/output/gs
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/orc/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../wip/gstreamer1/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
