@@ -6,6 +6,7 @@ share/examples/jitsi-meet/prosody.cfg.lua
 share/jitsi-meet/LICENSE
 share/jitsi-meet/analytics-ga.js
 share/jitsi-meet/app.js
+share/jitsi-meet/babel.config.js
 share/jitsi-meet/base.html
 share/jitsi-meet/body.html
 share/jitsi-meet/conference.js

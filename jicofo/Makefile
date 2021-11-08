@@ -8,7 +8,7 @@ COMMENT=	Server side focus component used in Jitsi Meet conferences
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/jicofo/distinfo
 
-USE_TOOLS=	bash:run unzip
+USE_TOOLS+=	bash:run unzip
 USE_JAVA2=	8
 
 REPLACE_BASH=	resources/jicofo.sh
@@ -43,11 +43,13 @@ do-build:
 		mvn package ${MAVEN_FLAGS}
 
 do-install:
+	${RM} -rf ${DESTDIR}${PREFIX}/share/jicofo \
+		${DESTDIR}${PREFIX}/share/jicofo-1.1-SNAPSHOT
 	cd ${DESTDIR}${PREFIX}/share && \
 		${UNZIP_CMD} ${WRKSRC}/target/jicofo-1.1-SNAPSHOT-archive.zip
 	${MV} ${DESTDIR}${PREFIX}/share/jicofo-1.1-SNAPSHOT \
 		${DESTDIR}${PREFIX}/share/jicofo
-	${LN} -s ../share/jicofo/jicofo.sh \
+	${LN} -sf ../share/jicofo/jicofo.sh \
 		${DESTDIR}${PREFIX}/bin/jicofo
 
 .include "../../wip/jitsi-meet/Makefile.common"
