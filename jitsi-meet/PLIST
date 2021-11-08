@@ -211,6 +211,7 @@ share/jitsi-meet/sounds/e2eeOff.mp3
 share/jitsi-meet/sounds/e2eeOn.mp3
 share/jitsi-meet/sounds/incomingMessage.wav
 share/jitsi-meet/sounds/joined.wav
+share/jitsi-meet/sounds/knock.mp3
 share/jitsi-meet/sounds/left.wav
 share/jitsi-meet/sounds/liveStreamingOff.mp3
 share/jitsi-meet/sounds/liveStreamingOn.mp3
@@ -218,6 +219,13 @@ share/jitsi-meet/sounds/noAudioSignal.mp3
 share/jitsi-meet/sounds/noisyAudioInput.mp3
 share/jitsi-meet/sounds/outgoingRinging.wav
 share/jitsi-meet/sounds/outgoingStart.wav
+share/jitsi-meet/sounds/reactions-applause.mp3
+share/jitsi-meet/sounds/reactions-boo.mp3
+share/jitsi-meet/sounds/reactions-crickets.mp3
+share/jitsi-meet/sounds/reactions-laughter.mp3
+share/jitsi-meet/sounds/reactions-raised-hand.mp3
+share/jitsi-meet/sounds/reactions-surprise.mp3
+share/jitsi-meet/sounds/reactions-thumbs-up.mp3
 share/jitsi-meet/sounds/recordingOff.mp3
 share/jitsi-meet/sounds/recordingOn.mp3
 share/jitsi-meet/sounds/rejected.wav

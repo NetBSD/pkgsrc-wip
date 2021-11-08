@@ -1,6 +1,6 @@
 @comment $NetBSD$
 share/jitsi-meet-prosody/ext_events.lib.lua
-share/jitsi-meet-prosody/mod_auth_jitsi-annonymous.lua
+share/jitsi-meet-prosody/mod_auth_jitsi-anonymous.lua
 share/jitsi-meet-prosody/mod_auth_token.lua
 share/jitsi-meet-prosody/mod_av_moderation.lua
 share/jitsi-meet-prosody/mod_av_moderation_component.lua
@@ -22,6 +22,7 @@ share/jitsi-meet-prosody/mod_muc_meeting_id.lua
 share/jitsi-meet-prosody/mod_muc_poltergeist.lua
 share/jitsi-meet-prosody/mod_muc_size.lua
 share/jitsi-meet-prosody/mod_muc_transcription_filter.lua
+share/jitsi-meet-prosody/mod_polls.lua
 share/jitsi-meet-prosody/mod_poltergeist_component.lua
 share/jitsi-meet-prosody/mod_presence_identity.lua
 share/jitsi-meet-prosody/mod_reservations.lua
