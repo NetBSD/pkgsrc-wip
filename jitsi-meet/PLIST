@@ -35,11 +35,13 @@ share/jitsi-meet/images/flags.png
 share/jitsi-meet/images/flags@2x.png
 share/jitsi-meet/images/google-play-badge.png
 share/jitsi-meet/images/googleLogo.svg
+share/jitsi-meet/images/icon-cloud.png
 share/jitsi-meet/images/icon-users.png
 share/jitsi-meet/images/jitsiLogo_square.png
 share/jitsi-meet/images/jitsilogo.png
 share/jitsi-meet/images/logo-deep-linking.png
 share/jitsi-meet/images/microsoftLogo.svg
+share/jitsi-meet/images/share-audio.gif
 share/jitsi-meet/images/virtual-background/background-1.jpg
 share/jitsi-meet/images/virtual-background/background-2.jpg
 share/jitsi-meet/images/virtual-background/background-3.jpg
@@ -233,6 +235,7 @@ share/jitsi-meet/static/dialInInfo.html
 share/jitsi-meet/static/msredirect.html
 share/jitsi-meet/static/oauth.html
 share/jitsi-meet/static/offline.html
+share/jitsi-meet/static/planLimit.html
 share/jitsi-meet/static/prejoin.html
 share/jitsi-meet/static/pwa/icons/icon192.png
 share/jitsi-meet/static/pwa/icons/icon512.png
