@@ -1,2 +1,2 @@
 @comment $NetBSD: PLIST,v 1.1 2014/10/23 15:28:25 makoto Exp $
-lib/java/jgraphx/jgraphx.jar
+lib/java/jgraphx.jar

@@ -1,4 +1,5 @@
 $NetBSD: distinfo,v 1.1 2014/10/23 15:28:25 makoto Exp $
 
-RMD160 (jgraphx-3_1_0_1.zip) = 328c595598eff68e1196e604e6ec523c9a52113b
-Size (jgraphx-3_1_0_1.zip) = 4437525 bytes
+BLAKE2s (jgraphx-4.2.2.tar.gz) = cfb0a03ddd08161cf2d2731aefaf16d6c381c80a7e807f7ca861fe9656c187d1
+SHA512 (jgraphx-4.2.2.tar.gz) = 767c0972100c8ed41561304367cba4574d1ba1bcd5c5d57fa869dd0a1bc1b2d6d70253577a4d2a2f03641afec5bd0d4e81e52a13529681737de7918c0c24cee7
+Size (jgraphx-4.2.2.tar.gz) = 3525225 bytes
