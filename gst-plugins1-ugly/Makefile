@@ -15,6 +15,17 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config xgettext
 
+CONFLICTS+=	gst-plugins1-a52-[0-9]*
+SUPERSEDES+=	gst-plugins1-a52-[0-9]*
+CONFLICTS+=	gst-plugins1-dvdread-[0-9]*
+SUPERSEDES+=	gst-plugins1-dvdread-[0-9]*
+CONFLICTS+=	gst-plugins1-mpeg2dec-[0-9]*
+SUPERSEDES+=	gst-plugins1-mpeg2dec-[0-9]*
+CONFLICTS+=	gst-plugins1-sid-[0-9]*
+SUPERSEDES+=	gst-plugins1-sid-[0-9]*
+CONFLICTS+=	gst-plugins1-x264-[0-9]*
+SUPERSEDES+=	gst-plugins1-x264-[0-9]*
+
 PYTHON_FOR_BUILD_ONLY=		tool
 
 # generated with:
