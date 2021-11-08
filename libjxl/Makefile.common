@@ -2,7 +2,7 @@
 # used by wip/gdk-pixbuf-jxl/Makefile
 # used by wip/gimp-jxl/Makefile
 
-DISTNAME=	libjxl-0.6
+DISTNAME=	libjxl-0.6.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libjxl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

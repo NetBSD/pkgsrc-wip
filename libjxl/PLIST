@@ -21,13 +21,13 @@ include/jxl/thread_parallel_runner_cxx.h
 include/jxl/types.h
 lib/libjxl.a
 lib/libjxl.so
+lib/libjxl.so.0.6
 lib/libjxl.so.${PKGVERSION}
-lib/libjxl.so.${PKGVERSION}.0
 lib/libjxl_dec.a
 lib/libjxl_threads.a
 lib/libjxl_threads.so
+lib/libjxl_threads.so.0.6
 lib/libjxl_threads.so.${PKGVERSION}
-lib/libjxl_threads.so.${PKGVERSION}.0
 lib/pkgconfig/libjxl.pc
 lib/pkgconfig/libjxl_threads.pc
 man/man1/cjxl.1
