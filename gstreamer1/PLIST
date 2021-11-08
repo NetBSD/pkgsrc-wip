@@ -161,13 +161,13 @@ man/man1/gst-inspect-1.0.1
 man/man1/gst-launch-1.0.1
 man/man1/gst-stats-1.0.1
 man/man1/gst-typefind-1.0.1
+share/aclocal/gst-element-check-1.0.m4
+share/gdb/auto-load/usr/pkg/lib/libgstreamer-1.0.so.0.1805.0-gdb.py
 ${PLIST.introspection}share/gir-1.0/Gst-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstBase-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstCheck-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstController-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstNet-1.0.gir
-share/aclocal/gst-element-check-1.0.m4
-share/gdb/auto-load/usr/pkg/lib/libgstreamer-1.0.so.0.1805.0-gdb.py
 share/gstreamer-1.0/gdb/glib_gobject_helper.py
 share/gstreamer-1.0/gdb/gst_gdb.py
 share/locale/af/LC_MESSAGES/gstreamer-1.0.mo

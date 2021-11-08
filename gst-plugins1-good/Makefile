@@ -23,12 +23,12 @@ PYTHON_FOR_BUILD_ONLY=		tool
 LDFLAGS+=	${LIBOSSAUDIO}
 
 # test status as of 1.18.5
-#Ok:                 104 
-#Expected Fail:      0   
-#Fail:               1   
-#Unexpected Pass:    0   
-#Skipped:            0   
-#Timeout:            0   
+#Ok:                 104
+#Expected Fail:      0
+#Fail:               1
+#Unexpected Pass:    0
+#Skipped:            0
+#Timeout:            0
 #
 #105/105 generic_states                         FAIL            40.92s   exit status 2
 

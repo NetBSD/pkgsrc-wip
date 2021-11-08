@@ -15,6 +15,8 @@ USE_TOOLS+=		bison flex perl pkg-config
 TEST_TARGET=		check
 FLEX_REQD=		2.5.31
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 .include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-controller.pc.in
