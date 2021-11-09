@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.45 2020/12/18 09:03:43 adam Exp $
 
-DISTNAME=	pip-audit-0.0.4
+DISTNAME=	pip-audit-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 # pypi file does not include tests
@@ -37,6 +37,7 @@ USE_LANGUAGES=	# none
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
         ${MV} pip-audit pip-audit-${PYVERSSUFFIX} || ${TRUE}
+	${RM} -r ${DESTDIR}${PREFIX}/${PYSITELIB}/test
 
 # as of 0.0.4
 # 2 failed, 46 passed
