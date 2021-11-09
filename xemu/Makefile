@@ -19,6 +19,8 @@ REPLACE_BASH+=	build/configure/configure
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 MAKE_ENV+=	SDL2_RPATH=${COMPILER_RPATH_FLAG},${BUILDLINK_PREFIX.SDL2}/lib
 
+INSTALLATION_DIRS+= 	share/xemu-lgb
+
 # This subst only for NetBSD?
 SUBST_CLASSES+=		rl
 SUBST_STAGE.rl=		pre-configure
@@ -40,6 +42,10 @@ SUBST_MESSAGE.destdir=	Inserting DESTDIR into INSTALL_BINDIR
 
 do-configure:
 	cd ${WRKSRC}/build/configure && bash ./configure --arch=native
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/rom/clcd-u104-parasite.rom ${DESTDIR}${PREFIX}/share/xemu-lgb/
+	${INSTALL_DATA} ${WRKSRC}/rom/vic20-emulator-tool.rom ${DESTDIR}${PREFIX}/share/xemu-lgb/
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
