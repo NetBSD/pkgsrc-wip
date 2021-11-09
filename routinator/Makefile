@@ -3,14 +3,13 @@
 DISTNAME=	routinator-v0.10.2
 PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	net
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
+GITHUB_TAG=	${PKGVERSION_NOREV:S/rc/-rc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NLnetLabs/routinator
 COMMENT=	Validate RPKI ROA against routing announcements
 LICENSE=	modified-bsd
-MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
-GITHUB_TAG=	${PKGVERSION_NOREV:S/rc/-rc/}
 
 # 0.9.0 requires minimum this rust version:
 RUST_REQ=		1.47.0
