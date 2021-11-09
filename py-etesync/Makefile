@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.9.2:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-furl>=0.5:../../www/py-furl
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-orderedmultidict>=0.7:../../databases/py-orderedmultidict
-DEPENDS+=	${PYPKGPREFIX}-packaging>=16.8:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-peewee>=3.7.0:../../databases/py-peewee
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.1:../../time/py-pytz
@@ -25,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.21:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9:../../textproc/py-vobject
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+PYTHON_VERSIONED_DEPENDENCIES+=	packaging pyparsing
 
 USE_LANGUAGES=	# none
 
