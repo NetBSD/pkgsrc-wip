@@ -10,12 +10,13 @@ HOMEPAGE=	https://pypi.org/project/pip-audit/
 COMMENT=	Unofficial, importable pip API
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONED_DEPENDENCIES+=	pip
 
 # does not fully work, needs pip-api installed first
 # if this is done, as of 0.0.23:
@@ -23,5 +24,6 @@ USE_LANGUAGES=	# none
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
