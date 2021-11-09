@@ -5,10 +5,9 @@ https://github.com/trailofbits/pip-audit/pull/114/files
 
 Do not insist on one particular version of CacheControl.
 
---- setup.py.orig	2021-11-09 16:12:41.000000000 +0000
+--- setup.py.orig	2021-11-09 16:11:51.000000000 +0000
 +++ setup.py
-@@ -30,12 +30,12 @@ setup(
-     install_requires=[
+@@ -31,11 +31,11 @@ setup(
          "pip-api>=0.0.23",
          "packaging>=21.0.0",
          # TODO: Remove this once 3.7 is our minimally supported version.

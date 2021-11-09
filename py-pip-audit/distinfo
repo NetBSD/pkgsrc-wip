@@ -3,5 +3,8 @@ $NetBSD: distinfo,v 1.40 2021/10/26 10:18:45 nia Exp $
 BLAKE2s (pip-audit-0.0.4.tar.gz) = 07e726eb27ca453638d64a84490a1a4fc934e819868c1fb50bd0a3bd2c023174
 SHA512 (pip-audit-0.0.4.tar.gz) = 3192547e0c7bccda1c69ff20d7a23175f29260a05d882769f474577485da086f98dbe05af5c3e8c3eaed9b033cb251315832b84ed864986183fae8e157006bda
 Size (pip-audit-0.0.4.tar.gz) = 31496 bytes
+SHA1 (patch-mypy.ini) = 63b86e4ab5735d44ebf0d695cf9e228181fb6b26
+SHA1 (patch-pip__audit_cli.py) = 23f15f2bf7afe7c0a9bb0abb77cfdf07438af011
+SHA1 (patch-pip__audit_dependency__source_resolvelib_pypi__provider.py) = f703cfbd4f8abbc51bb1effe291564267b062203
 SHA1 (patch-pip__audit_service_pypi.py) = e9d290bd6b318e1ce0850b9e8de397b5da771620
-SHA1 (patch-setup.py) = af06b6796795e581e23fa0d89aa2d77e0832e784
+SHA1 (patch-setup.py) = 7460564df5eeef3d22f1314d9b554df0d74e8942
