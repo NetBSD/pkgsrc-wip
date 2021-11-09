@@ -3,7 +3,11 @@
 DISTNAME=	pip-audit-0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
+# pypi file does not include tests
+#MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
+GITHUB_PROJECT=	pip-audit
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/pip-audit/
@@ -20,19 +24,26 @@ DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.8.0:../../wip/py-resolvelib
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+.include "../../lang/python/pyversion.mk"
+
+.if ${_PYTHON_VERSION} == 36
+DEPENDS+=	${PYPKGPREFIX}-dataclasses>=0.6:../../devel/py-dataclasses
+.endif
+
+USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
         ${MV} pip-audit pip-audit-${PYVERSSUFFIX} || ${TRUE}
 
-# needs package installed
-# 2 test failures as of 0.0.4:
+# as of 0.0.4
+# 2 failed, 46 passed
 # https://github.com/trailofbits/pip-audit/issues/115
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib:${WRKSRC}/build/lib/test
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
