@@ -12,5 +12,8 @@ LICENSE=	isc
 
 USE_LANGUAGES=	# none
 
+post-install:
+	${CHMOD} -R go-w ${DESTDIR}${PREFIX}/${PYSITELIB}/resolvelib
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
