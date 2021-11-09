@@ -10,10 +10,10 @@ HOMEPAGE=	https://astropy.org/
 COMMENT=	Pytest plugin with advanced doctest features
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-pip>=20.2.3:../../devel/py-pip
-DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
-
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES+=	pip test
+
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -18,11 +18,12 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.3.0:../../devel/py-flake8
 BUILD_DEPENDS+=	${PYPKGPREFIX}-black>=20.8:../../textproc/py-black
 BUILD_DEPENDS+=	${PYPKGPREFIX}-parver>=0.3.1:../../wip/py-parver
 BUILD_DEPENDS+=	${PYPKGPREFIX}-invoke>=1.4.1:../../wip/py-invoke
-DEPENDS+=	${PYPKGPREFIX}-pip>=18.0:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-clone>=0.2.5:../../wip/py-virtualenv-clone
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=0:../../devel/py-virtualenv
 
+PYTHON_VERSIONED_DEPENDENCIES+=	pip
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -10,10 +10,12 @@ HOMEPAGE=	https://github.com/bebraw/pypandoc
 COMMENT=	Thin wrapper for pandoc
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-pip>=8.1.0:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES+=	pip
+
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

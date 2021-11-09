@@ -12,10 +12,11 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES+=	pip
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pipdeptree pipdeptree-${PYVERSSUFFIX}
 
-DEPENDS+=       ${PYPKGPREFIX}-pip>=6.0.0:../../devel/py-pip
-
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

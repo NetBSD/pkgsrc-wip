@@ -14,7 +14,6 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.1:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.3.1:../../devel/py-coverage
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage-badge>=1.0.1:../../wip/py-coverage-badge
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pipenv-setup>=3.1.1:../../wip/py-pipenv-setup
 BUILD_DEPENDS+=	${PYPKGPREFIX}-bandit>=1.7.0:../../wip/py-bandit
 DEPENDS+=	${PYPKGPREFIX}-bc-python-hcl2>=0.3.12:../../wip/py-bc-python-hcl2
 DEPENDS+=	${PYPKGPREFIX}-deep-merge>=0.0.4:../../wip/py-deep-merge
@@ -32,7 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.49.0:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-update-checker-[0-9]*:../../wip/py-update-checker
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8.5:../../devel/py-semantic_version
 
-PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+PYTHON_VERSIONED_DEPENDENCIES+=	packaging pip:build
 
 post-extract:
 	${MV} ${WRKSRC}/bin/checkov ${WRKSRC}/bin/checkov${PYVERSSUFFIX}
