@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=       avocado-framework-85.0
+DISTNAME=       avocado-framework-92.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=     devel
 MASTER_SITES=   ${MASTER_SITE_PYPI:=a/avocado-framework/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/avocado-framework/avocado/
 COMMENT=	Next generation testing framework
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/avocado-framework
+WRKSRC=		${WRKDIR}/avocado-framework-${PKGVERSION_NOREV}
 
 AVOCADO_BINARIES=	avocado \
 			avocado-runner \
