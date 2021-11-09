@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	routinator-v0.10.2
-PKGNAME=	${DISTNAME:S/-rc/rc/}
+DISTNAME=	routinator-0.10.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
-GITHUB_TAG=	${PKGVERSION_NOREV:S/rc/-rc/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NLnetLabs/routinator
