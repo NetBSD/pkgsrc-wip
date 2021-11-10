@@ -34,9 +34,6 @@ REPLACE_PYTHON+=	gst/parse/gen_grammar.py.in
 REPLACE_PYTHON+=	gst/parse/gen_lex.py.in
 REPLACE_PYTHON+=	scripts/dist-translations.py
 REPLACE_PYTHON+=	scripts/extract-release-date-from-doap-file.py
-REPLACE_PYTHON+=	output/gst/parse/gen_lex.py
-REPLACE_PYTHON+=	output/gst/parse/gen_grammar.py
-REPLACE_PYTHON+=	output/docs/gst-plugins-doc-cache-generator
 
 # for tests
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gst:${WRKSRC}/output/libs/gst/check:${WRKSRC}/output/libs/gst/base:${WRKSRC}/output/libs/gst/controller:${WRKSRC}/output/libs/gst/net:${WRKSRC}/output/plugins/elements:${WRKSRC}/output/plugins/tracers
