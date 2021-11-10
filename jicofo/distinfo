@@ -4,3 +4,4 @@ SHA1 (jicofo/jitsi-meet_6293.tar.gz) = 971e5e069190d74795d95b2a4abe30bafe710659
 RMD160 (jicofo/jitsi-meet_6293.tar.gz) = cd7eaa9c34a69fe1e3e47d6251a064de3c8310b2
 SHA512 (jicofo/jitsi-meet_6293.tar.gz) = 8953d8a67bc35a3fe33990d604a8a495982464211884cb68021375d6d4dbdeba3cca9bf1d45bd418d1612ad2749110650b990ff4951093c1ad99a7bb05dc10ba
 Size (jicofo/jitsi-meet_6293.tar.gz) = 241103 bytes
+SHA1 (patch-resources_jicofo.sh) = 986445ede72ec0333bb56a52bc3c57030eca8383

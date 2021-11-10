@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/jicofo
+share/examples/jicofo/logging.properties
 share/jicofo/jicofo.bat
 share/jicofo/jicofo.jar
 share/jicofo/jicofo.sh
@@ -74,7 +75,6 @@ share/jicofo/lib/kotlin-stdlib-common-1.5.20.jar
 share/jicofo/lib/kotlin-stdlib-jdk7-1.5.20.jar
 share/jicofo/lib/kotlin-stdlib-jdk8-1.5.20.jar
 share/jicofo/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
-share/jicofo/lib/logging.properties
 share/jicofo/lib/object-cloner-0.1.jar
 share/jicofo/lib/objenesis-2.6.jar
 share/jicofo/lib/org.osgi.core-4.3.1.jar

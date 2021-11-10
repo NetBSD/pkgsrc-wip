@@ -2,6 +2,7 @@
 
 GITHUB_PROJECT=	jicofo
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
+PKGREVISION=	1
 
 HOMEPAGE=	https://github.com/jitsi/jicofo/
 COMMENT=	Server side focus component used in Jitsi Meet conferences
@@ -20,13 +21,20 @@ MAVEN_FLAGS+=	-Dassembly.skipAssembly=false
 MAVEN_FLAGS+=	-Djavax.net.ssl.trustStore=${WRKDIR}/keystore
 MAVEN_FLAGS+=	-Djavax.net.ssl.trustStorePassword=password
 
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	share
+EGDIR=		share/examples/jicofo
+CONF_FILES=	${EGDIR}/logging.properties \
+		${PKG_SYSCONFDIR}/jitsi/jicofo/logging.properties
 
-SUBST_CLASSES+=		java
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${EGDIR}
+
+SUBST_CLASSES+=		java logging
 SUBST_STAGE.java=	post-configure
 SUBST_FILES.java=	resources/jicofo.sh
 SUBST_SED.java=		-e 's,^exec java,exec ${JAVA_BINPREFIX}-java,'
+SUBST_STAGE.logging=	post-configure
+SUBST_FILES.logging=	resources/jicofo.sh
+SUBST_SED.logging=	-e 's,$$SCRIPT_DIR/lib/logging\.properties,${PKG_SYSCONFDIR}/jitsi/jicofo/logging.properties,'
 
 do-configure:
 	#XXX this assumes trusted CA certificates are in /etc/openssl/certs
@@ -49,6 +57,8 @@ do-install:
 		${UNZIP_CMD} ${WRKSRC}/target/jicofo-1.1-SNAPSHOT-archive.zip
 	${MV} ${DESTDIR}${PREFIX}/share/jicofo-1.1-SNAPSHOT \
 		${DESTDIR}${PREFIX}/share/jicofo
+	${MV} ${DESTDIR}${PREFIX}/share/jicofo/lib/logging.properties \
+		${DESTDIR}${PREFIX}/share/examples/jicofo/logging.properties
 	${LN} -sf ../share/jicofo/jicofo.sh \
 		${DESTDIR}${PREFIX}/bin/jicofo
 
