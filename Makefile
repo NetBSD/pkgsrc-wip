@@ -3862,6 +3862,7 @@ SUBDIR+=	py-grpy
 SUBDIR+=	py-grtipy
 SUBDIR+=	py-gsl
 SUBDIR+=	py-gslodeiv2
+SUBDIR+=	py-gstreamer1
 SUBDIR+=	py-gsw
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gtrie

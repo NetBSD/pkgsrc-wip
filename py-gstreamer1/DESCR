@@ -1,0 +1,2 @@
+GStreamer python overrides for the gobject-introspection-based
+pygst bindings.
