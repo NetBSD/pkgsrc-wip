@@ -63,6 +63,13 @@ include/gstreamer-1.0/gst/webrtc/rtptransceiver.h
 include/gstreamer-1.0/gst/webrtc/webrtc-enumtypes.h
 include/gstreamer-1.0/gst/webrtc/webrtc.h
 include/gstreamer-1.0/gst/webrtc/webrtc_fwd.h
+lib/girepository-1.0/GstBadAudio-1.0.typelib
+lib/girepository-1.0/GstCodecs-1.0.typelib
+lib/girepository-1.0/GstInsertBin-1.0.typelib
+lib/girepository-1.0/GstMpegts-1.0.typelib
+lib/girepository-1.0/GstPlayer-1.0.typelib
+lib/girepository-1.0/GstTranscoder-1.0.typelib
+lib/girepository-1.0/GstWebRTC-1.0.typelib
 lib/gstreamer-1.0/libgstaccurip.so
 lib/gstreamer-1.0/libgstadpcmdec.so
 lib/gstreamer-1.0/libgstadpcmenc.so
@@ -178,6 +185,13 @@ lib/pkgconfig/gstreamer-plugins-bad-1.0.pc
 lib/pkgconfig/gstreamer-sctp-1.0.pc
 lib/pkgconfig/gstreamer-transcoder-1.0.pc
 lib/pkgconfig/gstreamer-webrtc-1.0.pc
+share/gir-1.0/GstBadAudio-1.0.gir
+share/gir-1.0/GstCodecs-1.0.gir
+share/gir-1.0/GstInsertBin-1.0.gir
+share/gir-1.0/GstMpegts-1.0.gir
+share/gir-1.0/GstPlayer-1.0.gir
+share/gir-1.0/GstTranscoder-1.0.gir
+share/gir-1.0/GstWebRTC-1.0.gir
 share/gstreamer-1.0/encoding-profiles/device/dvd.gep
 share/gstreamer-1.0/encoding-profiles/file-extension/avi.gep
 share/gstreamer-1.0/encoding-profiles/file-extension/flv.gep

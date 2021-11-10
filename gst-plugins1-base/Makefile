@@ -15,9 +15,9 @@ GST_PLUGINS+=	audiorate
 GST_PLUGINS+=	audioresample
 GST_PLUGINS+=	audiotestsrc
 GST_PLUGINS+=	compositor
-GST_PLUGINS+=	encoding         
+GST_PLUGINS+=	encoding       
 GST_PLUGINS+=	gio
-GST_PLUGINS+=	gio-typefinder   
+GST_PLUGINS+=	gio-typefinder 
 GST_PLUGINS+=	overlaycomposition
 GST_PLUGINS+=	pbtypes
 GST_PLUGINS+=	playback
@@ -25,12 +25,13 @@ GST_PLUGINS+=	rawparse
 GST_PLUGINS+=	subparse
 GST_PLUGINS+=	tcp
 GST_PLUGINS+=	typefind
-GST_PLUGINS+=	videoconvert     
+GST_PLUGINS+=	videoconvert  
 GST_PLUGINS+=	videorate
-GST_PLUGINS+=	videoscale       
-GST_PLUGINS+=	videotestsrc     
+GST_PLUGINS+=	videoscale     
+GST_PLUGINS+=	videotestsrc   
 GST_PLUGINS+=	volume
 
+GST_PLUGINS+=	introspection
 GST_PLUGINS+=	tools
 GST_PLUGINS+=	nls
 
@@ -48,5 +49,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/tag:${WRKSRC}/output/gs
 #Timeout:            0
 
 .include "Makefile.common"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../wip/gstreamer1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

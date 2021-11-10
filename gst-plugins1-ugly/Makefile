@@ -10,6 +10,7 @@ GST_PLUGINS+=	dvdlpcmdec
 GST_PLUGINS+=	dvdsub
 GST_PLUGINS+=	realmedia
 GST_PLUGINS+=	xingmux
+
 GST_PLUGINS+=	nls
 
 # generated with:

@@ -5,6 +5,8 @@ CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - good plugins
 
+USE_TOOLS+=	xgettext
+
 # Feature options for plugins without external deps
 GST_PLUGINS+=	alpha
 GST_PLUGINS+=	apetag
@@ -49,6 +51,7 @@ GST_PLUGINS+=	videomixer
 GST_PLUGINS+=	wavenc
 GST_PLUGINS+=	wavparse
 GST_PLUGINS+=	y4m
+
 GST_PLUGINS+=	nls
 GST_PLUGINS+=	tests
 

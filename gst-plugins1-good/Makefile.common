@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	pkg-config perl:run xgettext
+USE_TOOLS+=	pkg-config
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/gst-plugins1-good/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/gst-plugins1-good/patches

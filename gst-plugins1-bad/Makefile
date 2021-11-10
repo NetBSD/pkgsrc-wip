@@ -72,5 +72,9 @@ GST_PLUGINS+=	videosignal
 GST_PLUGINS+=	vmnc
 GST_PLUGINS+=	y4m
 
+GST_PLUGINS+=	introspection
+GST_PLUGINS+=	nls
+
 .include "Makefile.common"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
