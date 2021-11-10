@@ -1,0 +1,103 @@
+# $NetBSD: Makefile,v 1.25 2021/04/21 11:42:19 adam Exp $
+
+DISTNAME=	gst-plugins-base-1.18.5
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-base/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gstreamer.freedesktop.org/
+LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	pkg-config
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/gst-plugins1-base/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/gst-plugins1-base/patches
+
+PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+
+GST_PLUGINS_SET+=	gl
+GST_PLUGINS_SET+=	gl-graphene
+GST_PLUGINS_SET+=	gl-jpeg
+GST_PLUGINS_SET+=	gl-png
+GST_PLUGINS_SET+=	adder
+GST_PLUGINS_SET+=	app
+GST_PLUGINS_SET+=	audioconvert
+GST_PLUGINS_SET+=	audiomixer
+GST_PLUGINS_SET+=	audiorate
+GST_PLUGINS_SET+=	audioresample
+GST_PLUGINS_SET+=	audiotestsrc
+GST_PLUGINS_SET+=	compositor
+GST_PLUGINS_SET+=	encoding
+GST_PLUGINS_SET+=	gio
+GST_PLUGINS_SET+=	gio-typefinder
+GST_PLUGINS_SET+=	overlaycomposition
+GST_PLUGINS_SET+=	pbtypes
+GST_PLUGINS_SET+=	playback
+GST_PLUGINS_SET+=	rawparse
+GST_PLUGINS_SET+=	subparse
+GST_PLUGINS_SET+=	tcp
+GST_PLUGINS_SET+=	typefind
+GST_PLUGINS_SET+=	videoconvert
+GST_PLUGINS_SET+=	videorate
+GST_PLUGINS_SET+=	videoscale
+GST_PLUGINS_SET+=	videotestsrc
+GST_PLUGINS_SET+=	volume
+GST_PLUGINS_SET+=	alsa
+GST_PLUGINS_SET+=	cdparanoia
+GST_PLUGINS_SET+=	libvisual
+GST_PLUGINS_SET+=	ogg
+GST_PLUGINS_SET+=	opus
+GST_PLUGINS_SET+=	pango
+GST_PLUGINS_SET+=	theora
+GST_PLUGINS_SET+=	tremor
+GST_PLUGINS_SET+=	vorbis
+GST_PLUGINS_SET+=	x11
+GST_PLUGINS_SET+=	xshm
+GST_PLUGINS_SET+=	xvideo
+GST_PLUGINS_SET+=	examples
+GST_PLUGINS_SET+=	tests
+GST_PLUGINS_SET+=	tools
+GST_PLUGINS_SET+=	introspection
+GST_PLUGINS_SET+=	orc
+GST_PLUGINS_SET+=	nls
+
+.for i in ${GST_PLUGINS_SET}
+.  if !empty(GST_PLUGINS:M${i})
+MESON_ARGS+=	-D${i}=enabled
+.  else
+MESON_ARGS+=	-D${i}=disabled
+.  endif
+.endfor
+
+#
+# We need to force meson to only build from the "ext" directory
+# when building plugins.
+#
+.if defined(GST_EXT_BUILD)
+pre-configure: fix-subdirs
+
+fix-subdirs:
+	${AWK} -f ${.CURDIR}/../../wip/gst-plugins1-base/files/only-build-extensions.awk \
+		${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
+	${MV} ${WRKSRC}/meson.build.new ${WRKSRC}/meson.build
+	# Then, we need to append the dependency handling code for the
+	# libraries which -base itself builds...
+.  for ext in ${GST_PLUGINS}
+	${CAT} ${.CURDIR}/../../wip/gst-plugins1-base/files/base-deps.meson \
+		${WRKSRC}/ext/${ext}/meson.build > ${WRKSRC}/ext/${ext}/meson.build.new
+	${MV} ${WRKSRC}/ext/${ext}/meson.build.new ${WRKSRC}/ext/${ext}/meson.build
+.  endfor
+	# ... this is a bit nasty compared to BUILD_DIRS...
+.endif
+
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../wip/gstreamer1/buildlink3.mk"

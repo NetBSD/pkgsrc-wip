@@ -1,46 +1,38 @@
 # $NetBSD: Makefile,v 1.25 2021/04/21 11:42:19 adam Exp $
 
-DISTNAME=	gst-plugins-base-1.18.5
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-base/
-EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gstreamer.freedesktop.org/
 COMMENT=	Open source multimedia framework - base plugins
-LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+USE_TOOLS+=	xgettext
 
-USE_TOOLS+=	pkg-config perl:run xgettext
+GST_PLUGINS+=	adder
+GST_PLUGINS+=	app
+GST_PLUGINS+=	audioconvert
+GST_PLUGINS+=	audiomixer
+GST_PLUGINS+=	audiorate
+GST_PLUGINS+=	audioresample
+GST_PLUGINS+=	audiotestsrc
+GST_PLUGINS+=	compositor
+GST_PLUGINS+=	encoding         
+GST_PLUGINS+=	gio
+GST_PLUGINS+=	gio-typefinder   
+GST_PLUGINS+=	overlaycomposition
+GST_PLUGINS+=	pbtypes
+GST_PLUGINS+=	playback
+GST_PLUGINS+=	rawparse
+GST_PLUGINS+=	subparse
+GST_PLUGINS+=	tcp
+GST_PLUGINS+=	typefind
+GST_PLUGINS+=	videoconvert     
+GST_PLUGINS+=	videorate
+GST_PLUGINS+=	videoscale       
+GST_PLUGINS+=	videotestsrc     
+GST_PLUGINS+=	volume
 
-CONFLICTS+=	gst-plugins1-alsa-[0-9]*
-SUPERSEDES+=	gst-plugins1-alsa-[0-9]*
-CONFLICTS+=	gst-plugins1-cdparanoia-[0-9]*
-SUPERSEDES+=	gst-plugins1-cdparanoia-[0-9]*
-CONFLICTS+=	gst-plugins1-libvisual-[0-9]*
-SUPERSEDES+=	gst-plugins1-libvisual-[0-9]*
-CONFLICTS+=	gst-plugins1-ogg-[0-9]*
-SUPERSEDES+=	gst-plugins1-ogg-[0-9]*
-CONFLICTS+=	gst-plugins1-opus-[0-9]*
-SUPERSEDES+=	gst-plugins1-opus-[0-9]*
-CONFLICTS+=	gst-plugins1-theora-[0-9]*
-SUPERSEDES+=	gst-plugins1-theora-[0-9]*
-CONFLICTS+=	gst-plugins1-vorbis-[0-9]*
-SUPERSEDES+=	gst-plugins1-vorbis-[0-9]*
-CONFLICTS+=	gst-plugins1-x11-[0-9]*
-SUPERSEDES+=	gst-plugins1-x11-[0-9]*
-
-PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
-PKGCONFIG_OVERRIDE_STAGE=	pre-install
-
-PYTHON_FOR_BUILD_ONLY=		tool
-
-MESON_ARGS+=	-D examples=disabled
-MESON_ARGS+=	-D tremor=disabled
-
-.include "options.mk"
+GST_PLUGINS+=	tools
+GST_PLUGINS+=	nls
 
 # for tests
 # generate with:
@@ -55,17 +47,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst-libs/gst/tag:${WRKSRC}/output/gs
 #Skipped:            14
 #Timeout:            0
 
-.include "../../audio/cdparanoia/buildlink3.mk"
-.include "../../audio/libopus/buildlink3.mk"
-.include "../../audio/libvisual/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/meson/build.mk"
-.include "../../devel/orc/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/tool.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
-.include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../textproc/iso-codes/buildlink3.mk"
+.include "Makefile.common"
 .include "../../wip/gstreamer1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
