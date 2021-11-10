@@ -12,6 +12,11 @@ GST_PLUGINS+=	oss
 PKG_SKIP_REASON+=	"Requires an OSS implementation"
 .else
 LDFLAGS+=		${LIBOSSAUDIO}
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	sys/oss/*
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
 
 .include "../../wip/gst-plugins1-good/Makefile.common"
