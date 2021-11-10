@@ -6,4 +6,5 @@ Applications can take advantage of advances in codec and filter technology
 transparently.  Developers can add new codecs and filters by writing a
 simple plugin with a clean, generic interface.
 
-This package provides the Fluidsynth MIDI plugin for GStreamer.
+This package provides the x265 plugin for GStreamer, which allows encoding
+High Efficiency Video Coding (HEVC/H.265) video.
