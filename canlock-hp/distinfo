@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libcanlock-3.3.0pre24.tar.bz2) = decf32b33b7226f4ac64f683cee8e419b3f33b3f
-RMD160 (libcanlock-3.3.0pre24.tar.bz2) = fdf603e81edf204155c8ddfc1f8ccba7ca312b5b
-SHA512 (libcanlock-3.3.0pre24.tar.bz2) = 0988ea1b0ad18cfade276dfa5dcfdd99180beca30b9185699bf84e8c44d1680a96f35d162d0d1f4779a02cdf6c8f7752686c7784b8475f5997155e605f4e8131
-Size (libcanlock-3.3.0pre24.tar.bz2) = 629413 bytes
+SHA1 (libcanlock-3.3.0rc2.tar.bz2) = b601e2d68ae23c6c06857afce7f6efcf84f722a8
+RMD160 (libcanlock-3.3.0rc2.tar.bz2) = 6579e9b853da9c048cb114217156acf6114119e1
+SHA512 (libcanlock-3.3.0rc2.tar.bz2) = 3e40942ddf41f8a47bdd4234d4e4b28147e2ae4441ad70bbfbf57fddb34d96305a15301d49c6d19d7690ac6124b1a97b9efb62960db8df48843873438bd60dbf
+Size (libcanlock-3.3.0rc2.tar.bz2) = 626205 bytes
