@@ -11,12 +11,9 @@ HOMEPAGE=	https://gstreamer.freedesktop.org/
 COMMENT=	Open source multimedia framework
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=		bison flex perl pkg-config
+USE_TOOLS+=		bison flex perl pkg-config xgettext
 TEST_TARGET=		check
 FLEX_REQD=		2.5.31
-
-# installs a python script
-#PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "options.mk"
 
