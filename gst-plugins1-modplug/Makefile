@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2015/08/18 20:38:11 yhardy Exp $
-#
+# $NetBSD: Makefile,v 1.25 2021/04/21 11:42:19 adam Exp $
 
-GST_PLUGINS1_NAME=	modplug
-GST_PLUGINS1_DIRS=	ext/modplug
-GST_PLUGINS1_FLAGS=	modplug
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-modplug/}
+CATEGORIES=	audio gnome
 
-USE_LANGUAGES=		c c++
+COMMENT=	Open source multimedia framework - MOD/S3M/XM/IT decoder plugin
 
-.include "../../multimedia/gst-plugins1-bad/Makefile.common"
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	modplug
 
+.include "../../wip/gst-plugins1-bad/Makefile.common"
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

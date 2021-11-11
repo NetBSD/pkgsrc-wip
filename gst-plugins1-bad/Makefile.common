@@ -204,11 +204,14 @@ MESON_ARGS+=	-D${i}=disabled
 .endfor
 
 .if defined(GST_EXT_BUILD)
+GST_EXT_BASEDIR?=	ext
+
 pre-configure: fix-subdirs
 
 fix-subdirs:
 	${AWK} -f ${.CURDIR}/../../wip/gst-plugins1-base/files/only-build-extensions.awk \
-		${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
+	    -v basedir=${GST_EXT_BASEDIR} \
+	    ${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
 	${MV} ${WRKSRC}/meson.build.new ${WRKSRC}/meson.build
 .endif
 

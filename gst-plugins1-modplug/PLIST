@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/18 20:38:11 yhardy Exp $
-lib/gstreamer-1.0/libgstmodplug.la
+@comment $NetBSD$
+lib/gstreamer-1.0/libgstmodplug.so

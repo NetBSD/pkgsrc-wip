@@ -3,5 +3,13 @@
 }
 
 /subdir\('ext'\)/ {
-	print
+	if (basedir == "ext") {
+		print
+	}
+}
+
+/subdir\('sys'\)/ {
+	if (basedir == "sys") {
+		print
+	}
 }

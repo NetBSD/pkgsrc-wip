@@ -80,18 +80,23 @@ MESON_ARGS+=	-D${i}=disabled
 # when building plugins.
 #
 .if defined(GST_EXT_BUILD)
+GST_EXT_BASEDIR?=	ext
+GST_PLUGIN_DIRS?=	${GST_PLUGINS}
+
 pre-configure: fix-subdirs
 
 fix-subdirs:
 	${AWK} -f ${.CURDIR}/../../wip/gst-plugins1-base/files/only-build-extensions.awk \
-		${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
+	    -v basedir=${GST_EXT_BASEDIR} ${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
 	${MV} ${WRKSRC}/meson.build.new ${WRKSRC}/meson.build
 	# Then, we need to append the dependency handling code for the
 	# libraries which -base itself builds...
-.  for ext in ${GST_PLUGINS}
+.  for ext in ${GST_PLUGIN_DIRS}
 	${CAT} ${.CURDIR}/../../wip/gst-plugins1-base/files/base-deps.meson \
-		${WRKSRC}/ext/${ext}/meson.build > ${WRKSRC}/ext/${ext}/meson.build.new
-	${MV} ${WRKSRC}/ext/${ext}/meson.build.new ${WRKSRC}/ext/${ext}/meson.build
+	    ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build > \
+		    ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build.new
+	${MV} ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build.new \
+	    ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build
 .  endfor
 	# ... this is a bit nasty compared to BUILD_DIRS...
 .endif
