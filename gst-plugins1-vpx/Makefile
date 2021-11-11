@@ -3,7 +3,7 @@
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-vpx/}
 CATEGORIES=	multimedia gnome
 
-COMMENT=	Open source multimedia framework - VP8 plugin
+COMMENT=	Open source multimedia framework - VP8/VP9 plugin
 
 GST_PLUGINS+=	vpx
 
