@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	aaron@bolddaemon.com
 HOMEPAGE=	https://github.com/matrix-org/dendrite
-COMMENT=	second-generation Matrix homeserver
+COMMENT=	Second-generation Matrix homeserver
 LICENSE=	apache-2.0
 
 GO_BUILD_PATTERN=	github.com/matrix-org/dendrite/cmd/...

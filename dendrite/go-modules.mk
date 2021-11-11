@@ -2349,7 +2349,7 @@ GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.2.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.4.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.5.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.2.8.mod
-GO_MODULE_FILES+=		gopkg.in/yaml.v2/@v/v2.3.0.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.3.0.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.4.0.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20191120175047-4206685974f2.mod
@@ -2433,4 +2433,3 @@ GO_MODULE_FILES+=	sourcegraph.com/sourcegraph/go-diff/@v/v0.5.0.mod
 GO_MODULE_FILES+=	sourcegraph.com/sourcegraph/go-diff/@v/v0.5.0.zip
 GO_MODULE_FILES+=	sourcegraph.com/sqs/pbtypes/@v/v0.0.0-20180604144634-d3ebe8f20ae4.mod
 GO_MODULE_FILES+=	sourcegraph.com/sqs/pbtypes/@v/v0.0.0-20180604144634-d3ebe8f20ae4.zip
-
