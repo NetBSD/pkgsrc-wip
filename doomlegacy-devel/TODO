@@ -70,4 +70,23 @@ Tested with GCC 7.4.0.
 Merged in SVN revision 1596.
 
 
+Part 21: MBF dogs broken A
+==========================
+If helper dogs are configured, they are not spawned. Error message:
+| Warn: P_SpawnMapthing: Unknown type 143 at (184, 74)
+(143 is the internal index of thing type 888)
+
+[X] Created upstream bug report #681
+
+
+Part 22: MBF dogs broken B
+==========================
+If a dog is placed in a map as monster (type 888), no sprite is drawn.
+The monster is spawned and attacks the player, but is invisible.
+Error message:
+| Warn: R_ProjectSprite: invalid sprite frame 267 : 1 for DOGS
+
+[X] Created upstream bug report #681
+
+
 EOF
