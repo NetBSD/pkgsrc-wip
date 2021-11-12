@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (xoreos-tools-0.0.5.tar.gz) = 8820921ce08c4669b570eaabd533670010b3c31d
-SHA512 (xoreos-tools-0.0.5.tar.gz) = f869d4bb0fd9531b309a4c7624797f7b5d578dfbd9abb005394cf486af4d8bc1ebbeababa213df5b0fafd4603047b529235ecbc03229c9f91a327125968b886d
-Size (xoreos-tools-0.0.5.tar.gz) = 5577818 bytes
+BLAKE2s (xoreos-tools-0.0.6.tar.gz) = 5a987aa3e50a25567903ea4c563e3528b255f0316410664ad5025b11c5812333
+SHA512 (xoreos-tools-0.0.6.tar.gz) = cd3f1db7577ee0bd9b2ca63012f7bb33322e1d1249202afd4ac644780d4193ce97e05053b2f8b90085e42703b6fe1aaa50578d57c9eb4527e848cef22606b682
+Size (xoreos-tools-0.0.6.tar.gz) = 6360895 bytes
