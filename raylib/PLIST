@@ -1,5 +1,4 @@
 @comment $NetBSD$
-include/physac.h
 include/raudio.h
 include/raylib.h
 include/raymath.h
