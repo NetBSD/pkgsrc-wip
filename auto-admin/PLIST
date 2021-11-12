@@ -27,6 +27,7 @@ sbin/auto-clean-pkgsrc
 sbin/auto-clean-ports
 sbin/auto-clean-tmp
 sbin/auto-cuda-install
+sbin/auto-cups-setup
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
 sbin/auto-detect-laptops
@@ -121,6 +122,7 @@ sbin/auto-root-check
 sbin/auto-secure-directory
 sbin/auto-security-manager
 sbin/auto-service-enabled
+sbin/auto-services-manager
 sbin/auto-set-conf-var
 sbin/auto-set-hostname
 sbin/auto-set-lid-switch-mode
@@ -138,6 +140,8 @@ sbin/auto-unlock-local-pw
 sbin/auto-unlock-user
 sbin/auto-unsupported-os
 sbin/auto-unsupported-release
+sbin/auto-update-devfs-conf
+sbin/auto-update-devfs-rules
 sbin/auto-update-infiniband-modules
 sbin/auto-update-pkgsrc
 sbin/auto-update-system
