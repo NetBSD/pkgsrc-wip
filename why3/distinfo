@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/08/14 23:11:53 jihbed Exp $
 
-RMD160 (why3-0.86.1.tar.gz) = 57023a4d809f5783a7bea3fc956f962869fbebf3
-SHA512 (why3-0.86.1.tar.gz) = c8e0377ce2b52286cb75798b9638e0f7257f7ccf8dac901fe7410215e4dfc2efd549ab2d7b750f716b5ac0ca5f1460bb50632226a7bf09dc7e8a6d08d17c5a18
-Size (why3-0.86.1.tar.gz) = 6939963 bytes
+BLAKE2s (why3-1.4.0.tar.gz) = b636eb7ca304d9c9873fd8c76bbd3ed28ea9924b4afe6c33c3b56b419d8a9bac
+SHA512 (why3-1.4.0.tar.gz) = b492f08a3c7073782b143a4849c47766b12045ad53c56aa8d251fd5b6bc1863ddebe260c99b3ddb27c4e1e1e9ab986c8b02286ec24f4c30f99f81f5f13fdc90a
+Size (why3-1.4.0.tar.gz) = 6306524 bytes
