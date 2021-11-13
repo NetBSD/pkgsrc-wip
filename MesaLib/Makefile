@@ -40,7 +40,7 @@ PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
 PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
-PLIST_VARS+=		r300 svga nouveau
+PLIST_VARS+=		r300 svga nouveau iris
 
 # other features
 PLIST_VARS+=		arm kms vaapi
@@ -64,12 +64,13 @@ GALLIUM_DRIVERS+=	freedreno vc4 etnaviv tegra panfrost lima
 PLIST.arm=		yes
 .  endif
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-GALLIUM_DRIVERS+=	svga
+GALLIUM_DRIVERS+=	svga iris
 DRI_DRIVERS+=		i915 i965
 PLIST.svga=		yes
 PLIST.i830=		yes
 PLIST.i915=		yes
 PLIST.i965=		yes
+PLIST.iris=		yes
 .  endif
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
 .  if ${OPSYS} != "FreeBSD"
