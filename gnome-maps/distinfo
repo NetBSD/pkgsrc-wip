@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (gnome-maps-v40.0.tar.gz) = d0d62943c59922266ae68b9c2086227dae83fe64
-SHA512 (gnome-maps-v40.0.tar.gz) = 6883c0e1a1ddf3b6d56db093c4ba612811a20b6cbff6eac0037404181e75225f165e5b6df3807fc21f2a5bbc61ad3ebd1b0bcccbb1ed32b8a7e979a4454ed7bb
-Size (gnome-maps-v40.0.tar.gz) = 4122440 bytes
+BLAKE2s (gnome-maps-v41.1.tar.gz) = 85e7b9d4b67bdf5d7f383348689b3ec85ed00cdee5eae3d900d4707b36011288
+SHA512 (gnome-maps-v41.1.tar.gz) = d897e59560e8a0210183eff7debc80bb3879c0d5ddaa153b5bc439fb9e13c38151c4461ec4de33b0784c45982990b5cef25a538dc1c5c4de423c5703240db6ab
+Size (gnome-maps-v41.1.tar.gz) = 3027896 bytes

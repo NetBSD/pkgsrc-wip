@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	gnome-maps-v40.0
+DISTNAME=	gnome-maps-v41.1
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	geography
-MASTER_SITES=	https://gitlab.gnome.org/GNOME/gnome-maps/-/archive/v40.0/
+MASTER_SITES=	https://gitlab.gnome.org/GNOME/gnome-maps/-/archive/v41.1/
 
 MAINTAINER=	cirnatdan@NetBSD.org
-HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-maps/-/archive/v40.0/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/gnome-maps
 COMMENT=	Maps application for GNOME
 LICENSE=	gnu-gpl-v2
 
