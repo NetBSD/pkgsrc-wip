@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.201 2020/11/05 09:09:20 ryoon Exp $
 
-DISTNAME=	epiphany-40.0
+DISTNAME=	epiphany-41.0
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/40/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/41/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
