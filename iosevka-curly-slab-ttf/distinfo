@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (super-ttc-iosevka-curly-slab-11.0.0.zip) = a8141552702cd122eb9180adbc4a9eb464a6f364974036cf13ef4957e85cc076
-SHA512 (super-ttc-iosevka-curly-slab-11.0.0.zip) = d696ff46bc4a484ba1ab5ef7f4ade4cb0ddd7c1afba3be6cebd29ef175bf4cf16b44100ba3ebf6fe781476dac8679b28d2d719bae61eddaeea756bf8e43f587e
-Size (super-ttc-iosevka-curly-slab-11.0.0.zip) = 64248600 bytes
+BLAKE2s (super-ttc-iosevka-curly-slab-11.0.1.zip) = 60e895d5c19259510f7dfafe6882727fa791d9c0af883dc748b89ca331179771
+SHA512 (super-ttc-iosevka-curly-slab-11.0.1.zip) = 6cb5dcffc714ae8dc3829f499063c58a3e7be1af914fd33f104eb3da03fe4f9cd2440db14573b2965d6aa7b7417886d7e1c7487bb5c18a66948428235adfc30e
+Size (super-ttc-iosevka-curly-slab-11.0.1.zip) = 64248672 bytes
