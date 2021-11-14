@@ -2,6 +2,7 @@
 #
 
 DISTNAME=	Frama-C-snapshot-20.0
+PKGNAME=	${DISTNAME:S/-snapshot//:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Frama-C/}
 
