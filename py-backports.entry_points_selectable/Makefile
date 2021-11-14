@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	backports.entry_points_selectable-1.1.0
+DISTNAME=	backports.entry_points_selectable-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.entry_points_selectable/}
