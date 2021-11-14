@@ -148,6 +148,8 @@ sbin/auto-update-system
 sbin/auto-user-admin
 sbin/auto-useradd
 sbin/auto-using-pkgsrc
+sbin/auto-web-self-sign
+sbin/auto-web-setup
 sbin/auto-wifi-failover
 sbin/auto-write-cache-toggle
 sbin/auto-xdm-toggle
