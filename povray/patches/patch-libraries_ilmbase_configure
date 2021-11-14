@@ -1,0 +1,51 @@
+$NetBSD$
+
+Fix shell compatibility warning.
+
+--- libraries/ilmbase/configure.orig	2021-07-08 09:56:01.000000000 +0000
++++ libraries/ilmbase/configure
+@@ -17208,7 +17208,7 @@ LIB_SUFFIX=""
+ lib_suffix_valid="no"
+ 
+ lib_namespace=""
+-if test "x${library_namespace_versioning}" == xyes ; then
++if test "x${library_namespace_versioning}" = xyes ; then
+     cat >>confdefs.h <<_ACEOF
+ #define IMATH_INTERNAL_NAMESPACE Imath_${ILMBASE_VERSION_API}
+ _ACEOF
+@@ -17229,7 +17229,7 @@ _ACEOF
+     lib_namespace="${ILMBASE_VERSION_API}"
+     LIB_SUFFIX="${ILMBASE_VERSION_API}"
+     lib_suffix_valid="yes"
+-elif test "x${library_namespace_versioning}" == xno ; then
++elif test "x${library_namespace_versioning}" = xno ; then
+     cat >>confdefs.h <<_ACEOF
+ #define IMATH_INTERNAL_NAMESPACE Imath
+ _ACEOF
+@@ -17267,7 +17267,7 @@ _ACEOF
+ fi
+ 
+ 
+-if test "x${lib_suffix_valid}" == xyes ; then
++if test "x${lib_suffix_valid}" = xyes ; then
+ LIB_SUFFIX_DASH="-${LIB_SUFFIX}"
+ 
+  if true; then
+@@ -17302,7 +17302,7 @@ else
+ fi
+ 
+ 
+-if test "x${custom_public_namespace}" == xyes ; then
++if test "x${custom_public_namespace}" = xyes ; then
+     { $as_echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&5
+ $as_echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&2;}
+     cat >>confdefs.h <<\_ACEOF
+@@ -17320,7 +17320,7 @@ _ACEOF
+ 
+     public_namespace=""
+     custom_public_namespace=no
+-elif test "x${custom_public_namespace}" == xno ; then
++elif test "x${custom_public_namespace}" = xno ; then
+     cat >>confdefs.h <<\_ACEOF
+ #define IMATH_NAMESPACE Imath
+ _ACEOF

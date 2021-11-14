@@ -1,9 +1,16 @@
 $NetBSD: distinfo,v 1.3 2012/05/30 11:59:05 thomasklausner Exp $
 
-RMD160 (povray-3.7.0.RC5.tar.gz) = b5b18914a2d05d2671b946b6164ffcc6bf19cc8a
-Size (povray-3.7.0.RC5.tar.gz) = 13175516 bytes
-SHA1 (patch-Makefile.in) = c8d2d76f87ba9b9eff10dc665612185c516d17e6
-SHA1 (patch-source_base_image_image.cpp) = 4bcc2ee75918b8e10eaa1e47cae93a13b163fdf1
-SHA1 (patch-unix_Makefile.in) = 688a696b247982ff009d865295cc09dd08271169
+SHA1 (povray-3.7.0.10.tar.gz) = f64deda644b1d90eb8d00d99b8c96d15e053cdcd
+RMD160 (povray-3.7.0.10.tar.gz) = ee8749432450d3078395ce534a34246e83d527db
+SHA512 (povray-3.7.0.10.tar.gz) = fb947f2231f44c548b53ad27008e6a53909b375970c504938d7d7ea5dd336672891b50d3b41076598d8d025db5bcee01880d399094b4727d942d1c02a3594c47
+Size (povray-3.7.0.10.tar.gz) = 52888495 bytes
+SHA1 (patch-libraries_ilmbase_bootstrap) = c1b4ac87f145bf035000f9bb965e1e06e4f852e7
+SHA1 (patch-libraries_ilmbase_configure) = 6edff9b95af7bcd558c1b5894fd7f8d292ab624c
+SHA1 (patch-libraries_openexr_bootstrap) = 9f92a6f0bd2e8d6d59717ce5ed21f103df6a486c
+SHA1 (patch-libraries_openexr_configure) = 5d088bb8aa899180a78c03c979111f79b2b0ebb4
+SHA1 (patch-source_base_image_image.cpp) = 7ccc58e5c80a61e3cbf5d18dec60eea7f08f75a4
+SHA1 (patch-unix_configure.ac) = f5c767f3f22fa83414bfe75e4aa6aa37d1c0b186
+SHA1 (patch-unix_prebuild.sh) = 996969b7aa7085c65371d51a21cfcd7f0fd0a169
 SHA1 (patch-vfe_unix_platformbase.cpp) = 50eb102278db75efe898fe4b2f5c7bfcb45a7cfe
+SHA1 (patch-vfe_unix_syspovconfig.h) = 144b2a356eabd00301653e7fb78b828571673ccf
 SHA1 (patch-vfe_unix_vfeplatform.cpp) = 13645f638194309e963a97b095a13dcf52f2bc57
