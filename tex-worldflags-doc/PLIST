@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/texmf-dist/doc/latex/worldflags/README
+share/texmf-dist/doc/latex/worldflags/worldflags.pdf
+share/texmf-dist/doc/latex/worldflags/worldflags.tex
