@@ -958,7 +958,7 @@ ${PLIST.gui}lib/frama-c/wtable.o
 ${PLIST.gui}lib/frama-c/wtext.cmi
 ${PLIST.gui}lib/frama-c/wtext.cmo
 ${PLIST.gui}lib/frama-c/wtext.cmx
-l${PLIST.gui}ib/frama-c/wtext.o
+${PLIST.gui}lib/frama-c/wtext.o
 lib/frama-c/wto.cmi
 lib/frama-c/wto.cmo
 lib/frama-c/wto.cmx
