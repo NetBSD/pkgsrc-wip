@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2020/11/11 08:50:40 nia Exp $
 
-DISTNAME=	libhandy-1.2.0
+DISTNAME=	libhandy-1.5.0
 PKGNAME=	${DISTNAME:S/libhandy/libhandy1/1}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libhandy/${PKGVERSION_NOREV:R}/}
