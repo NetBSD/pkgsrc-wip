@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.9 2017/12/19 08:17:21 markd Exp $
+
+BLAKE2s (Frama-C-snapshot-20.0.tar.gz) = f47a7eb6d5e6574a1798a51d1c45a96c214f47584e9ea9557867c13e77564921
+SHA512 (Frama-C-snapshot-20.0.tar.gz) = 38a2e4817d7c0690fb3f3c1ccca03b518ee5b8d3f803174c413a1787d47b0bdf2f8f13ae56e8db3199ece4d6903e0930e40966cf5efcbaab673159ab9ec809cc
+Size (Frama-C-snapshot-20.0.tar.gz) = 5869359 bytes

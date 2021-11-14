@@ -1,0 +1,4 @@
+- PLIST should be sorted (after $PLIST.coq removed)
+- coq option is NOT fully checked over PLIST
+- coq option only may give packagin error with why3
+
