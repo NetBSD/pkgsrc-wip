@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+<div align="center">
+<h1>dstp</h1>
+
+[dstp](https://github.com/ycd/dstp), run common networking tests against your site.
+
+![dstp gif](assets/dstp.png)
+
+</div>
+
+
+---
+
+## Usage
+
+```
+Usage: dstp [OPTIONS] [ARGS]
+Options:
+	-a, --addr   <string>  The URL or the IP address to run tests against      [REQUIRED]
+	-o, --out    <string>  The type of the output, either json or plaintext    [Default: plaintext] 
+	-c           <bool>    Run all the tests concurrently.                     [Default: false]
+...
