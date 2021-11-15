@@ -1,3 +1,0 @@
-@comment $NetBSD$
-lib/gstreamer-1.0/libgstximagesink.so
-lib/gstreamer-1.0/libgstxvimagesink.so
