@@ -18,6 +18,8 @@ USE_LANGUAGES=		c c++
 PY_PATCHPLIST=		yes
 TEST_TARGET=		check
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18.5
 .include "../../wip/gstreamer1/buildlink3.mk"
