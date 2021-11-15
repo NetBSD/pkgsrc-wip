@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/18 20:43:31 yhardy Exp $
-lib/gstreamer-1.0/libgstschro.la
