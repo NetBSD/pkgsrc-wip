@@ -40,7 +40,7 @@ LASTUPDATE_TIMESTAMP!=	date +%s
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		nasm>=2.07:../../devel/nasm
+TOOL_DEPENDS+=		nasm>=2.07:../../devel/nasm
 .endif
 
 post-extract:
