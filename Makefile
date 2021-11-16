@@ -1930,6 +1930,7 @@ SUBDIR+=	khotkeys
 SUBDIR+=	kibana
 SUBDIR+=	kinfocenter
 SUBDIR+=	kissme
+SUBDIR+=	kivaloo
 SUBDIR+=	klatexformula
 SUBDIR+=	klayout
 SUBDIR+=	kleopatra
