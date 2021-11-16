@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/kivaloo-kvlds
+bin/kivaloo-lbs
+bin/kivaloo-mux

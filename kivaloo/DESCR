@@ -1,0 +1,12 @@
+Kivaloo (pronounced "kee-va-lieu") is a collection of utilities
+which together form a data store associating keys of up to 255
+bytes with values of up to 255 bytes. It was designed to satisfy
+the needs of the Tarsnap online backup service for high-performance
+key-value storage.
+
+At present, kivaloo comprises a block store (lbs) providing
+log-structured storage within a local filesystem; a key-value store
+(kvlds) which manages a log-structured B+Tree and services requests
+upon it from a single connection; and a request multiplexer (mux)
+which accepts multiple connections and routes requests and responses
+to and from a single "upstream" connection.
