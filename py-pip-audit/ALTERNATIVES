@@ -1,1 +1,0 @@
-bin/pip-audit @PREFIX@/bin/pip-audit-@PYVERSSUFFIX@

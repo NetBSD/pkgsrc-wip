@@ -1,4 +1,0 @@
-pip-audit is a prototype tool for scanning Python environments for
-packages with known vulnerabilities. It uses the Python Packaging
-Advisory Database via the PyPI JSON API as a source of vulnerability
-reports.
