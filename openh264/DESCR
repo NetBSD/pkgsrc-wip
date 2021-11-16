@@ -1,3 +1,2 @@
 OpenH264 is a codec library which supports H.264 encoding and decoding.
 It is suitable for use in real time applications such as WebRTC.
-This package also contains the OpenH264 plugin for www/firefox.

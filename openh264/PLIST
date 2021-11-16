@@ -3,10 +3,8 @@ include/wels/codec_api.h
 include/wels/codec_app_def.h
 include/wels/codec_def.h
 include/wels/codec_ver.h
-lib/firefox/gmp-gmpopenh264/${VERSION}/gmpopenh264.info
-lib/firefox/gmp-gmpopenh264/${VERSION}/gmpopenh264.js
-lib/firefox/gmp-gmpopenh264/${VERSION}/libgmpopenh264.so
 lib/libopenh264.a
 lib/libopenh264.so
-lib/libopenh264.so.1
+lib/libopenh264.so.${PKGVERSION}
+lib/libopenh264.so.6
 lib/pkgconfig/openh264.pc
