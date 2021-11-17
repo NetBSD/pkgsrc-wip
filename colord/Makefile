@@ -1,7 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	colord-1.3.5
-PKGREVISION=	1
+DISTNAME=	colord-1.4.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -11,36 +10,39 @@ HOMEPAGE=	https://www.freedesktop.org/software/colord/
 COMMENT=	Device color profile management daemon
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool autoconf aclocal automake
+USE_TOOLS+=	pkg-config intltool
 
 PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
 PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
 
-CONFIGURE_ARGS+=	--disable-gusb
-CONFIGURE_ARGS+=	--disable-udev
-CONFIGURE_ARGS+=	--disable-bash-completion
-CONFIGURE_ARGS+=	--disable-systemd-login
-CONFIGURE_ARGS+=	--disable-argyllcms-sensor # XXX wip
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+MESON_ARGS+=		-Dgusb=false
+MESON_ARGS+=		-Dudev=falsea
+.endif
+MESON_ARGS+=		-Dsystemd=false
+MESON_ARGS+=		-Dbash_completion=false
 
 PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
 PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
-
-CONF_DIR=	${PREFIX}/share/examples/colord
-CONF_FILES+=	${CONF_DIR}/org.freedesktop.ColorManager.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system-services/org.freedesktop.ColorManager.conf
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf
 
 BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+BUILD_DEPENDS+=	docbook-xsl-ns-[0-9]*:../../wip/docbook-xsl-ns
 
 .include "options.mk"
 
+
+.if ${OPSYS} == "Linux"
+.include "../../wip/libgusb/buildlink3.mk"
+.include "../../wip/udev/buildlink3.mk"
+.include "../../wip/libgudev/buildlink3.mk"
+.endif
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 
 .include "../../mk/bsd.pkg.mk"

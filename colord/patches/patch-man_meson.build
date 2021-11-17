@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- man/meson.build.orig	2020-11-02 10:51:09.800456000 +0000
++++ man/meson.build
+@@ -1,6 +1,6 @@
+ xsltproc = find_program('xsltproc')
+ 
+-stylesheet_url = 'http://docbook.sourceforge.net/release/xsl-ns/current/manpages/docbook.xsl'
++stylesheet_url = 'http://cdn.docbook.org/release/xsl/current/manpages/docbook.xsl'
+ ret = run_command(xsltproc, '--nonet', stylesheet_url)
+ if ret.returncode() != 0
+   error('Cannot build man pages without docbook-xsl-ns')
