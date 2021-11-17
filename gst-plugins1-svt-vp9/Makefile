@@ -16,8 +16,8 @@ USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}/gstreamer-plugin
 USE_CMAKE=	yes
 
-.include "../../wip/gstreamer1/buildlink3.mk"
-.include "../../wip/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../wip/svt-vp9/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
