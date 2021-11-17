@@ -2386,6 +2386,8 @@ share/emacs/${PKGVERSION}/lisp/jsonrpc.el.gz
 share/emacs/${PKGVERSION}/lisp/jsonrpc.elc
 share/emacs/${PKGVERSION}/lisp/kermit.el.gz
 share/emacs/${PKGVERSION}/lisp/kermit.elc
+share/emacs/${PKGVERSION}/lisp/keymap.el.gz
+share/emacs/${PKGVERSION}/lisp/keymap.elc
 share/emacs/${PKGVERSION}/lisp/kmacro.el.gz
 share/emacs/${PKGVERSION}/lisp/kmacro.elc
 share/emacs/${PKGVERSION}/lisp/language/burmese.el.gz
