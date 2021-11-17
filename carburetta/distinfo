@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (carburetta-0.8.4.tar.gz) = 9396c3a1c772fbe52b7d621fc2c9068ceb05def2
+RMD160 (carburetta-0.8.4.tar.gz) = e7865b7c3d395f83f0a029f8dd4bb3142085b1b1
+SHA512 (carburetta-0.8.4.tar.gz) = 16317c740fcf9556572a30caccbb0f12993f67f8d343ff017156e3a4acf3b1fc83b9246fde67ef9c8cb7319c1fb519077a05f88b312b61a8636e9f0bae826500
+Size (carburetta-0.8.4.tar.gz) = 172164 bytes
+SHA1 (patch-Makefile) = 1040284f70a944a041f312bacb34df9bf0719737
+SHA1 (patch-src_temp__output.c) = 2534236b8c2537011646e8fa4342ddf88ee24ceb

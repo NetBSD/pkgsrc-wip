@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/carburetta
+share/doc/carburetta/examples/calc/calc.cbrt
+share/doc/carburetta/examples/inireader/ini_reader.h
+share/doc/carburetta/examples/inireader/iniparser.cbrt
+share/doc/carburetta/examples/inireader/main.c
+share/doc/carburetta/examples/template_scan/template_scan.cbrt
+share/doc/carburetta/readme.md

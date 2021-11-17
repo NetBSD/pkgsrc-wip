@@ -1,0 +1,61 @@
+$NetBSD$
+
+Do not overwrite $CC from environment with specific compiler.
+Honor CPPFLAGS, CFLAGS and LDFLAGS for build.
+Honor DESTDIR and PREFIX for install.
+
+--- Makefile.orig	2021-04-09 12:00:52.000000000 +0000
++++ Makefile
+@@ -1,8 +1,8 @@
+-CC=gcc
++# Modified version for pkgsrc
+ 
+-OUT = build/linux
++OUT = build
+ SRC = src
+-INTERMEDIATE = build/linux/objs
++INTERMEDIATE = build/objs
+ 
+ SOURCES = $(filter-out src/tokens_generated_scanners.c,$(wildcard $(SRC)/*.c))
+ OBJECTS = $(patsubst $(SRC)/%.c,$(INTERMEDIATE)/%.o,$(SOURCES))
+@@ -12,10 +12,10 @@ all: $(OUT)/carburetta $(OUT)/calc $(OUT
+ 
+ $(INTERMEDIATE)/%.o: $(SRC)/%.c
+ 	@mkdir -p $(@D)
+-	$(CC) -c -o $@ $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
+ 
+ $(OUT)/carburetta: $(OBJECTS)
+-	$(CC) -o $(OUT)/carburetta $(OBJECTS)
++	$(CC) $(LDFLAGS) -o $(OUT)/carburetta $(OBJECTS)
+ 
+ $(INTERMEDIATE)/calc/calc.c: $(OUT)/carburetta examples/calc/calc.cbrt
+ 	mkdir -p $(@D)
+@@ -30,13 +30,13 @@ $(INTERMEDIATE)/template_scan/template_s
+ 	$(OUT)/carburetta examples/template_scan/template_scan.cbrt --c $(INTERMEDIATE)/template_scan/template_scan.c
+ 
+ $(OUT)/calc: $(INTERMEDIATE)/calc/calc.c
+-	$(CC) -o $(OUT)/calc $(INTERMEDIATE)/calc/calc.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o $(OUT)/calc $(INTERMEDIATE)/calc/calc.c
+ 
+ $(OUT)/inireader: $(INTERMEDIATE)/inireader/iniparser.c examples/inireader/main.c
+-	$(CC) -o $(OUT)/inireader -I$(INTERMEDIATE)/inireader -Iexamples/inireader $(INTERMEDIATE)/inireader/iniparser.c examples/inireader/main.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o $(OUT)/inireader -I$(INTERMEDIATE)/inireader -Iexamples/inireader $(INTERMEDIATE)/inireader/iniparser.c examples/inireader/main.c
+ 
+ $(OUT)/template_scan: $(INTERMEDIATE)/template_scan/template_scan.c
+-	$(CC) -o $(OUT)/template_scan $(INTERMEDIATE)/template_scan/template_scan.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o $(OUT)/template_scan $(INTERMEDIATE)/template_scan/template_scan.c
+ 
+ .PHONY: clean
+ clean:
+@@ -44,8 +44,8 @@ clean:
+ 
+ .PHONY: install
+ install: all
+-	install $(OUT)/carburetta /usr/local/bin
++	install $(OUT)/carburetta $(DESTDIR)$(PREFIX)/bin
+ 
+ .PHONY: uninstall
+ uninstall:
+-	rm /usr/local/bin/carburetta
++	rm $(DESTDIR)$(PREFIX)/bin/carburetta

@@ -1,0 +1,11 @@
+Carburetta is an open source fused scanner parser generator for the C and C++
+languages. Fused means it can generate both the scanner and the parser from
+the same input which simplifies parsing languages. This is beneficial for the
+following reasons:
+
+* You won't have to manually ferry data and types back and forth between the
+  scanner and the parser.
+* The nuances of the scanner are available to the parser. If the type of a
+  "[0-9]+" patterned token is "int" then that is also the type the token appears
+  as in the parser's grammar. No longer a need to shovel everything into a
+  single "token" data type only to "unshovel" it later.
