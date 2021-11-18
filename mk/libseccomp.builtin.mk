@@ -7,8 +7,8 @@ BUILTIN_FIND_LIBS:=		seccomp
 BUILTIN_FIND_HEADERS_VAR:=	H_SECCOMP
 BUILTIN_FIND_HEADERS.H_SECCOMP=	seccomp.h seccomp-syscalls.h
 
-BUILTIN_FIND_PKGCONFIG_FILES_VAR=		LIBSECCOMP
-BUILTIN_FIND_PKGCONFIG_FILES.LIBSECCOMP=	libseccomp.pc
+BUILTIN_FIND_PKGCONFIG_FILES_VAR=		PC_LIBSECCOMP
+BUILTIN_FIND_PKGCONFIG_FILES.PC_LIBSECCOMP=	libseccomp.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -39,6 +39,6 @@ BUILDLINK_TARGETS+=	buildlink-libseccomp
 buildlink-libseccomp:
 	${RUN}
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig
-	${LN} -s /usr/lib/pkgconfig/libseccomp.pc ${BUILDLINK_DIR}/lib/pkgconfig/libseccomp.pc
+	${LN} -sf ${PC_LIBSECCOMP} ${BUILDLINK_DIR}/lib/pkgconfig/${BUILTIN_FIND_PKGCONFIG_FILES.PC_LIBSECCOMP}
 
 .endif #CHECK_BUILTIN.libseccomp

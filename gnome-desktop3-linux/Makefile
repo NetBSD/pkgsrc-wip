@@ -3,7 +3,7 @@ PLIST_SRC=	${.CURDIR}/../../x11/gnome-desktop3/PLIST
 PATCHDIR=	${.CURDIR}/../../x11/gnome-desktop3/patches
 DISTINFO_FILE=	${.CURDIR}/../../x11/gnome-desktop3/distinfo
 
-DISTNAME=	gnome-desktop-40.0
+DISTNAME=	gnome-desktop-40.5
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
 MESON_ARGS+=		-Dsystemd=disabled
 MESON_ARGS+=		-Dudev=disabled
-MESON_ARGS+=		-Ddistributor="The NetBSD Foundation"
+MESON_ARGS+=		-Dgnome_distributor="The NetBSD Foundation"
 MESON_ARGS+=		-Ddate_in_gnome_version=false
 MESON_ARGS+=		-Ddesktop_docs=false
 MESON_ARGS+=		-Dgtk_doc=false
