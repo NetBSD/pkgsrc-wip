@@ -1,2 +1,2 @@
-Window manager resembling Windows 3's Program Manager. Configurable,
-supports high DPI, and comes with a simple launcher.
+Simple, configurable X11 window manager and launcher modeled after
+Program Manager from the Windows 3 era.
