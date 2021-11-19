@@ -388,6 +388,7 @@ SUBDIR+=	canto-daemon
 SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	capnproto
+SUBDIR+=	carburetta
 SUBDIR+=	cardpeek
 SUBDIR+=	cargo-audit
 SUBDIR+=	carla
