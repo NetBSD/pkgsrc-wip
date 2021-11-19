@@ -405,6 +405,7 @@ SUBDIR+=	cde
 SUBDIR+=	cdhit
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
+SUBDIR+=	cdrtools
 SUBDIR+=	cedet
 SUBDIR+=	celluloid
 SUBDIR+=	centrifuge
