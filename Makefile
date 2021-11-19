@@ -3256,7 +3256,6 @@ SUBDIR+=	probcons
 SUBDIR+=	probe
 SUBDIR+=	procps
 SUBDIR+=	prodigal
-SUBDIR+=	progman
 SUBDIR+=	progreiserfs
 SUBDIR+=	proj
 SUBDIR+=	proplib
