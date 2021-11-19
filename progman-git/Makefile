@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	progman-0.0.20210127
+DISTNAME=	progman-1.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
-GITHUB_TAG=	9b6f776c0157879810c0cd89075b72363a0ad40d
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://github.com/jcs/progman
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 # Supplies xxd utility
 TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 
-CFLAGS+=	"-DINFTIM=-1"
+CFLAGS+=	-DINFTIM=-1
 LDFLAGS+=	-lXext
 
 MAKE_FLAGS+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
