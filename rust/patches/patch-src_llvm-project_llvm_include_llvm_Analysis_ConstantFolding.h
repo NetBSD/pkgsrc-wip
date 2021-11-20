@@ -4,7 +4,7 @@ Fix SunOS CS conflict not handled by include/llvm-c/DataTypes.h
 
 --- src/llvm-project/llvm/include/llvm/Analysis/ConstantFolding.h.orig	2018-08-01 16:32:37.000000000 +0000
 +++ src/llvm-project/llvm/include/llvm/Analysis/ConstantFolding.h
-@@ -20,6 +20,10 @@
+@@ -19,6 +19,10 @@
  #ifndef LLVM_ANALYSIS_CONSTANTFOLDING_H
  #define LLVM_ANALYSIS_CONSTANTFOLDING_H
  

@@ -4,7 +4,7 @@ Avoid missing pthread_* on older SunOS.
 
 --- vendor/stacker/src/lib.rs.orig	2020-07-13 18:18:17.000000000 +0000
 +++ vendor/stacker/src/lib.rs
-@@ -355,7 +355,7 @@ cfg_if! {
+@@ -407,7 +407,7 @@ cfg_if! {
              );
              Some(mi.assume_init().AllocationBase as usize + get_thread_stack_guarantee() + 0x1000)
          }

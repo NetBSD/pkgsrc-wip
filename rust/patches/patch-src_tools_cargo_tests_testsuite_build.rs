@@ -5,7 +5,7 @@ https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_increment
 
 --- src/tools/cargo/tests/testsuite/build.rs.orig	2019-08-13 06:27:40.000000000 +0000
 +++ src/tools/cargo/tests/testsuite/build.rs
-@@ -38,6 +38,7 @@ fn cargo_fail_with_no_stderr() {
+@@ -47,6 +47,7 @@ fn cargo_fail_with_no_stderr() {
  
  /// Checks that the `CARGO_INCREMENTAL` environment variable results in
  /// `rustc` getting `-C incremental` passed to it.
@@ -13,7 +13,7 @@ https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_increment
  #[cargo_test]
  fn cargo_compile_incremental() {
      let p = project()
-@@ -60,6 +61,7 @@ fn cargo_compile_incremental() {
+@@ -69,6 +70,7 @@ fn cargo_compile_incremental() {
          .run();
  }
  
@@ -21,7 +21,7 @@ https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_increment
  #[cargo_test]
  fn incremental_profile() {
      let p = project()
-@@ -102,6 +104,7 @@ fn incremental_profile() {
+@@ -111,6 +113,7 @@ fn incremental_profile() {
          .run();
  }
  

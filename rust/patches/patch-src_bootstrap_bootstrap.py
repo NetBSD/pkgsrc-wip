@@ -6,7 +6,7 @@ Handle earmv7hf for NetBSD.
 
 --- src/bootstrap/bootstrap.py.orig	2021-02-10 17:36:44.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -229,6 +229,11 @@ def default_build_triple(verbose):
+@@ -236,6 +236,11 @@ def default_build_triple(verbose):
          'OpenBSD': 'unknown-openbsd'
      }
  
@@ -18,7 +18,7 @@ Handle earmv7hf for NetBSD.
      # Consider the direct transformation first and then the special cases
      if ostype in ostype_mapper:
          ostype = ostype_mapper[ostype]
-@@ -279,6 +284,7 @@ def default_build_triple(verbose):
+@@ -289,6 +294,7 @@ def default_build_triple(verbose):
      cputype_mapper = {
          'BePC': 'i686',
          'aarch64': 'aarch64',
@@ -26,7 +26,7 @@ Handle earmv7hf for NetBSD.
          'amd64': 'x86_64',
          'arm64': 'aarch64',
          'i386': 'i686',
-@@ -315,10 +321,12 @@ def default_build_triple(verbose):
+@@ -326,10 +332,12 @@ def default_build_triple(verbose):
              ostype = 'linux-androideabi'
          else:
              ostype += 'eabihf'
@@ -40,7 +40,7 @@ Handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
-@@ -821,7 +829,7 @@ class RustBuild(object):
+@@ -907,7 +915,7 @@ class RustBuild(object):
              if "LIBRARY_PATH" in env else ""
          # preserve existing RUSTFLAGS
          env.setdefault("RUSTFLAGS", "")

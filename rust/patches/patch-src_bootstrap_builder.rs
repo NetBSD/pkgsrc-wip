@@ -7,7 +7,7 @@ Fix RPATH for pkgsrc.
 
 --- src/bootstrap/builder.rs.orig	2021-09-06 18:42:35.000000000 +0000
 +++ src/bootstrap/builder.rs
-@@ -511,7 +511,6 @@ impl<'a> Builder<'a> {
+@@ -520,7 +520,6 @@ impl<'a> Builder<'a> {
                  install::Clippy,
                  install::Miri,
                  install::Analysis,
@@ -15,7 +15,7 @@ Fix RPATH for pkgsrc.
                  install::Rustc
              ),
              Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest),
-@@ -1148,7 +1147,7 @@ impl<'a> Builder<'a> {
+@@ -1157,7 +1156,7 @@ impl<'a> Builder<'a> {
                  rustflags.arg("-Zosx-rpath-install-name");
                  Some("-Wl,-rpath,@loader_path/../lib")
              } else if !target.contains("windows") {
