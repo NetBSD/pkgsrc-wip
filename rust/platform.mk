@@ -10,8 +10,6 @@
 # Rust needs NetBSD>7
 .  for rust_arch in aarch64 earmv7hf i386 powerpc sparc64 x86_64
 .    for rust_os in Darwin FreeBSD Linux NetBSD SunOS
-# rust fails to build on NetBSD/earmv7
-# http://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=54621
 .      if ${OPSYS} != "NetBSD" || empty(OS_VERSION:M[0-7].*)
 RUST_PLATFORMS+=	${rust_os}-*-${rust_arch}
 .      endif
