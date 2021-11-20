@@ -25,8 +25,9 @@ CHECK_SSP_SUPPORTED=	no
 
 .include "../../lang/rust/rust.mk"
 
-USE_TOOLS+=		bsdtar digest
+USE_TOOLS+=		bsdtar
 CARGO_VENDOR_DIR=	${WRKDIR}/vendor
+CARGO_WRKSRC?=		${WRKSRC}
 
 DISTFILES?=			${DEFAULT_DISTFILES}
 .for crate in ${CARGO_CRATE_DEPENDS}
@@ -46,8 +47,8 @@ post-extract: cargo-vendor-crates
 .PHONY: cargo-vendor-crates
 cargo-vendor-crates:
 	@${STEP_MSG} "Extracting local cargo crates"
-	${RUN}${MKDIR} ${WRKSRC}/.cargo
-	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${WRKSRC}/.cargo/config
+	${RUN}${MKDIR} ${CARGO_WRKSRC}/.cargo
+	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${CARGO_WRKSRC}/.cargo/config
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for crate in ${CARGO_CRATE_DEPENDS}
 	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
@@ -66,7 +67,7 @@ print-cargo-depends:
 		/^version = / { split($$3, a, "\""); vers=a[2]; }	\
 		/^source = / {						\
 			print "CARGO_CRATE_DEPENDS+=\t" name "-" vers;	\
-			}' ${WRKSRC}/Cargo.lock
+			}' ${CARGO_WRKSRC}/Cargo.lock
 
 DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}	\
 			  ${CARGO_NO_DEFAULT_FEATURES:M[yY][eE][sS]:C/[yY][eE][sS]/--no-default-features/}	\
@@ -74,10 +75,12 @@ DEFAULT_CARGO_ARGS=	build --offline --release -j${_MAKE_JOBS_N}	\
 			  ${CARGO_FEATURES:S/ /,/Wg}
 CARGO_ARGS?=		${DEFAULT_CARGO_ARGS}
 
+MAKE_ENV+=		RUSTFLAGS=${RUSTFLAGS:Q}
+
 .if !target(do-build)
 do-build: do-cargo-build
 .endif
 
 .PHONY: do-cargo-build
 do-cargo-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS}
+	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS}
