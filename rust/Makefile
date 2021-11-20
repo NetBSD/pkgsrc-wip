@@ -41,13 +41,11 @@ CONFIGURE_ARGS+=		--local-rust-root=${RUST_BOOTSTRAP_PATH}
 CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--disable-codegen-tests
+CONFIGURE_ARGS+=		--disable-docs
 CONFIGURE_ARGS+=		--disable-compiler-docs
 CONFIGURE_ARGS+=		--disable-dist-src
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
-
-# Work around gcc10 lossage related to BITWORDS_PER_ELEMENT analysis
-#CONFIGURE_ARGS+=		--set llvm.cxxflags=-Wno-error=array-bounds
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
@@ -63,6 +61,10 @@ CONFIGURE_ARGS+=	--enable-vendor
 
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
+
+# MacOS X 10.7 is the oldest supported version. See
+# ${WRKSRC}/src/bootstrap/lib.rs
+MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
@@ -587,6 +589,14 @@ stage0-bootstrap: install
 #.include "../../security/libssh2/buildlink3.mk"
 #.include "../../www/http-parser/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
+
+## Issues specific to: bootstrap AND NetBSD follow
+
+# rust i386 bootstraps are built for 8.0 and still depend on libstdc++.so.8.
+# Pull in compat80 on 9.x and newer.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) && empty(OS_VERSION:M8.*)
+BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
+.endif
 
 # This is for when we build natively:
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
