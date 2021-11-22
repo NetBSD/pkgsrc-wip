@@ -59,7 +59,6 @@ sbin/auto-harden
 sbin/auto-hex-to-octet
 sbin/auto-hyperthreading-toggle
 sbin/auto-idrac-config
-sbin/auto-idrac-passwd
 sbin/auto-insert-line
 sbin/auto-install-base-components
 sbin/auto-install-infiniband-modules
@@ -69,6 +68,7 @@ sbin/auto-install-packages
 sbin/auto-install-pkgsrc-tree
 sbin/auto-ipfw-gateway-setup
 sbin/auto-ipmi-install
+sbin/auto-ipmi-passwd
 sbin/auto-ipmi-remote-access
 sbin/auto-ipmi-remote-power
 sbin/auto-ipmi-remote-status
