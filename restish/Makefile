@@ -12,6 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+GO_BUILD_PATTERN=	.
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
