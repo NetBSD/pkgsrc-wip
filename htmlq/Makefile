@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	htmlq-0.2.0
-CATEGORIES=	# TODO: add primary category
+DISTNAME=	htmlq-0.3.0
+CATEGORIES=	textproc www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgdm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
