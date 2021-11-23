@@ -4993,7 +4993,6 @@ SUBDIR+=	reproc
 SUBDIR+=	residualvm
 SUBDIR+=	residualvm-git
 SUBDIR+=	resin
-SUBDIR+=	restish
 SUBDIR+=	revealjs
 SUBDIR+=	revelation
 SUBDIR+=	rhapsody
