@@ -1,0 +1,5 @@
+xoscope is a digital oscilloscope that uses a sound card
+(via ALSA or EsounD) and/or a data acquisition card (via COMEDI)
+as the signal input.
+
+You will need to set up the sound library used.

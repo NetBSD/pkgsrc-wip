@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/xoscope
+man/man1/xoscope.1
+share/applications/net.sourceforge.xoscope.desktop
+share/examples/xoscope/asound.conf.sample
+share/metainfo/net.sourceforge.xoscope.appdata.xml
+share/pixmaps/xoscope.png

@@ -1,0 +1,15 @@
+$NetBSD$
+
+Remove GNU man specific option
+
+--- configure.orig	2021-04-16 20:38:19.000000000 +0000
++++ configure
+@@ -7929,7 +7929,7 @@ $as_echo "#define MSECREFRESH 30" >>conf
+ 
+ 
+ 
+-$as_echo "#define HELPCOMMAND \"man -Tutf8 xoscope 2>&1\"" >>confdefs.h
++$as_echo "#define HELPCOMMAND \"man xoscope 2>&1\"" >>confdefs.h
+ 
+ 
+ 

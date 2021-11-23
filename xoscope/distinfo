@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (xoscope-2.3.tar.gz) = d47a7acae9f768535c1a3aefae410d368868ef6887fd00e81ac9dec8b6712745
+SHA512 (xoscope-2.3.tar.gz) = 9f1c15a240644027927e1bc39d2a0204d03b8dbe9d1d2aed974d062777562c6877d46f6e3768cf506799d902373fd26a090d94821b0f791f8f3151f7bb2e7eee
+Size (xoscope-2.3.tar.gz) = 390105 bytes
+SHA1 (patch-Makefile.in) = f2e394fb0fa5f1e06b5046b69b7d22534d2f329c
+SHA1 (patch-alsa.c) = 9bf98d7ea4db0c5612139a703739f26a81c7df9a
+SHA1 (patch-configure) = d55d6ebf2163c0c94d9b9f6da0121b968d609ee2

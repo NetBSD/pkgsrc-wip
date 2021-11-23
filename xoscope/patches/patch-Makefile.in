@@ -1,0 +1,15 @@
+$NetBSD$
+
+Remove bogus install(1) option
+
+--- Makefile.in.orig	2021-04-16 20:43:03.000000000 +0000
++++ Makefile.in
+@@ -1011,7 +1011,7 @@ xoscope_gtk.o: builtins.h
+ 
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+-	$(INSTALL_DATA) -D xoscope.png $(DESTDIR)$(datadir)/pixmaps/xoscope.png
++	$(INSTALL_DATA) xoscope.png $(DESTDIR)$(datadir)/pixmaps/xoscope.png
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

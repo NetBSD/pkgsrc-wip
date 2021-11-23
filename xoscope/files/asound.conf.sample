@@ -1,0 +1,15 @@
+# $NetBSD$
+
+# Use with audio/alsa-plugins-oss
+# Install as {PKG_SYSCONFDIR}/asound.conf (global setting),
+# or as ~/.asoundrc (personal setting)
+
+pcm.!default {
+        type oss
+        device /dev/audio
+}
+
+ctl.!default {
+        type oss
+        device /dev/mixer
+}

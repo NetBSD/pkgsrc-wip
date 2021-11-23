@@ -5973,6 +5973,7 @@ SUBDIR+=	xmms2
 SUBDIR+=	xmoto
 SUBDIR+=	xnedit
 SUBDIR+=	xnee
+SUBDIR+=	xoscope
 SUBDIR+=	xoo
 SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools
