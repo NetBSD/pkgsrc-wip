@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://upower.freedesktop.org/releases/
-COMMENT=	UPower is an abstraction for enumerating power devices
+COMMENT=	Astraction for enumerating power devices
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
@@ -39,6 +39,11 @@ BUILD_DEFS+=	VARBASE
 
 .include "options.mk"
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+.include "../../wip/libgudev/buildlink3.mk"
+.endif
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.0
 .include "../../sysutils/dbus/buildlink3.mk"
