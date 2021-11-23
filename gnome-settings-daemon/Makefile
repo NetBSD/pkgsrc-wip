@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.84 2021/09/29 19:01:20 adam Exp $
 
 DISTNAME=	gnome-settings-daemon-40.0.1
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/40/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,7 +18,7 @@ USE_TOOLS+=	gdbus-codegen
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-3.0
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-settings-daemon-40
 
 MESON_ARGS+=		-Drfkill=false
 MESON_ARGS+=		-Dnetwork_manager=false
