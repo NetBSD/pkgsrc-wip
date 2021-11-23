@@ -1,0 +1,39 @@
+go: downloading launchpad.net/gocheck v0.0.0-20140225173054-000000000087
+../.gopath/pkg/mod/github.com/danielgtaylor/go-jmespath-plus@v0.0.0-20200228063638-e0b6f132acba/fuzz/jmespath.go:3:8: no required module provides package github.com/jmespath/go-jmespath; to add it:
+        go get github.com/jmespath/go-jmespath
+../.gopath/pkg/mod/github.com/twpayne/httpcache@v1.0.0/memcache/memcache.go:12:2: missing go.sum entry for module providing package github.com/bradfitz/gomemcache/memcache (imported by github.com/gbl08ma/httpcache/memcache); to add:
+        go get github.com/gbl08ma/httpcache/memcache@v1.0.2
+../.gopath/pkg/mod/github.com/gbl08ma/httpcache@v1.0.2/httpcacheutil/httpcacheutil.go:7:2: missing go.sum entry for module providing package github.com/gomodule/redigo/redis (imported by github.com/gbl08ma/httpcache/httpcacheutil); to add:
+        go get github.com/gbl08ma/httpcache/httpcacheutil@v1.0.2
+../.gopath/pkg/mod/github.com/twpayne/httpcache@v1.0.0/leveldbcache/leveldbcache.go:6:2: missing go.sum entry for module providing package github.com/syndtr/goleveldb/leveldb (imported by github.com/gbl08ma/httpcache/leveldbcache); to add:
+        go get github.com/gbl08ma/httpcache/leveldbcache@v1.0.2
+../.gopath/pkg/mod/github.com/getkin/kin-openapi@v0.80.0/routers/gorillamux/router.go:17:2: missing go.sum entry for module providing package github.com/gorilla/mux (imported by github.com/getkin/kin-openapi/routers/gorillamux); to add:
+        go get github.com/getkin/kin-openapi/routers/gorillamux@v0.80.0
+../.gopath/pkg/mod/github.com/hinshun/vt10x@v0.0.0-20180809195222-d55458df857c/cmd/goterm/main.go:9:2: no required module provides package github.com/gdamore/tcell; to add it:
+        go get github.com/gdamore/tcell
+../.gopath/pkg/mod/github.com/spf13/afero@v1.6.0/sftpfs/file.go:17:2: missing go.sum entry for module providing package github.com/pkg/sftp (imported by github.com/spf13/afero/sftpfs); to add:
+        go get github.com/spf13/afero/sftpfs@v1.6.0
+../.gopath/pkg/mod/github.com/spf13/cobra@v1.2.1/doc/man_docs.go:27:2: missing go.sum entry for module providing package github.com/cpuguy83/go-md2man/v2/md2man (imported by github.com/spf13/cobra/doc); to add:
+        go get github.com/spf13/cobra/doc@v1.2.1
+../.gopath/pkg/mod/github.com/spf13/viper@v1.9.0/remote/remote.go:14:2: missing go.sum entry for module providing package github.com/sagikazarmark/crypt/config (imported by github.com/spf13/viper/remote); to add:
+        go get github.com/spf13/viper/remote@v1.9.0
+../.gopath/pkg/mod/github.com/stretchr/testify@v1.7.0/mock/mock.go:15:2: missing go.sum entry for module providing package github.com/stretchr/objx (imported by github.com/stretchr/testify/mock); to add:
+        go get github.com/stretchr/testify/mock@v1.7.0
+../.gopath/pkg/mod/golang.org/x/oauth2@v0.0.0-20211028175245-ba495a64dcb5/google/default.go:17:2: missing go.sum entry for module providing package cloud.google.com/go/compute/metadata (imported by golang.org/x/oauth2/google); to add:
+        go get golang.org/x/oauth2/google@v0.0.0-20211028175245-ba495a64dcb5
+../.gopath/pkg/mod/golang.org/x/text@v0.3.7/cmd/gotext/main.go:31:2: missing go.sum entry for module providing package golang.org/x/tools/go/buildutil (imported by golang.org/x/text/cmd/gotext); to add:
+        go get golang.org/x/text/cmd/gotext@v0.3.7
+../.gopath/pkg/mod/golang.org/x/text@v0.3.7/message/pipeline/extract.go:23:2: missing go.sum entry for module providing package golang.org/x/tools/go/callgraph (imported by golang.org/x/text/message/pipeline); to add:
+        go get golang.org/x/text/message/pipeline@v0.3.7
+../.gopath/pkg/mod/golang.org/x/text@v0.3.7/message/pipeline/extract.go:24:2: missing go.sum entry for module providing package golang.org/x/tools/go/callgraph/cha (imported by golang.org/x/text/message/pipeline); to add:
+        go get golang.org/x/text/message/pipeline@v0.3.7
+../.gopath/pkg/mod/golang.org/x/text@v0.3.7/message/pipeline/extract.go:25:2: missing go.sum entry for module providing package golang.org/x/tools/go/loader (imported by golang.org/x/text/cmd/gotext); to add:
+        go get golang.org/x/text/cmd/gotext@v0.3.7
+../.gopath/pkg/mod/golang.org/x/text@v0.3.7/message/pipeline/extract.go:26:2: missing go.sum entry for module providing package golang.org/x/tools/go/ssa (imported by golang.org/x/text/message/pipeline); to add:
+        go get golang.org/x/text/message/pipeline@v0.3.7
+../.gopath/pkg/mod/golang.org/x/text@v0.3.7/message/pipeline/extract.go:27:2: missing go.sum entry for module providing package golang.org/x/tools/go/ssa/ssautil (imported by golang.org/x/text/message/pipeline); to add:
+        go get golang.org/x/text/message/pipeline@v0.3.7
+pattern ...: cloud.google.com/go@v0.93.3: missing go.sum entry
+*** Error code 1
+
+
