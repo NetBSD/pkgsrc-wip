@@ -2,6 +2,7 @@
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -9,6 +10,14 @@ ${PYSITELIB}/pydantic/__init__.py
 ${PYSITELIB}/pydantic/__init__.pyc
 ${PYSITELIB}/pydantic/__init__.pyo
 ${PYSITELIB}/pydantic/__init__.so
+${PYSITELIB}/pydantic/_hypothesis_plugin.py
+${PYSITELIB}/pydantic/_hypothesis_plugin.pyc
+${PYSITELIB}/pydantic/_hypothesis_plugin.pyo
+${PYSITELIB}/pydantic/_hypothesis_plugin.so
+${PYSITELIB}/pydantic/annotated_types.py
+${PYSITELIB}/pydantic/annotated_types.pyc
+${PYSITELIB}/pydantic/annotated_types.pyo
+${PYSITELIB}/pydantic/annotated_types.so
 ${PYSITELIB}/pydantic/class_validators.py
 ${PYSITELIB}/pydantic/class_validators.pyc
 ${PYSITELIB}/pydantic/class_validators.pyo
