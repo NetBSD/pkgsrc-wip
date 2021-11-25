@@ -5118,6 +5118,7 @@ SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runas
 SUBDIR+=	runit
 SUBDIR+=	rust
+SUBDIR+=	rust-analyzer
 SUBDIR+=	rust-bindgen
 SUBDIR+=	rygel
 SUBDIR+=	s2tc
