@@ -3196,6 +3196,7 @@ SUBDIR+=	pkgmanager
 SUBDIR+=	plan9port
 SUBDIR+=	plank
 SUBDIR+=	plantri
+SUBDIR+=	plantuml
 SUBDIR+=	plasma-desktop
 SUBDIR+=	plasma-integration
 SUBDIR+=	plasma-widget-menubar
