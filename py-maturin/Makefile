@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.4 2020/04/18 10:52:10 js Exp $
+
+DISTNAME=	maturin-0.12.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/maturin/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/PyO3/maturin
+COMMENT=	Build and publish crates with pyo3, rust-cpython and cffi bindings
+LICENSE=	apache-2.0
+
+DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
+
+.include "cargo-depends.mk"
+
+.include "../../lang/rust/cargo.mk"
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,2 @@
+Builds fine, but does not support NetBSD.
+https://github.com/PyO3/maturin/issues/703
