@@ -115,6 +115,9 @@ ${PYSITELIB}/fastapi/templating.pyo
 ${PYSITELIB}/fastapi/testclient.py
 ${PYSITELIB}/fastapi/testclient.pyc
 ${PYSITELIB}/fastapi/testclient.pyo
+${PYSITELIB}/fastapi/types.py
+${PYSITELIB}/fastapi/types.pyc
+${PYSITELIB}/fastapi/types.pyo
 ${PYSITELIB}/fastapi/utils.py
 ${PYSITELIB}/fastapi/utils.pyc
 ${PYSITELIB}/fastapi/utils.pyo
