@@ -1024,6 +1024,8 @@ share/emacs/${PKGVERSION}/lisp/avoid.el.gz
 share/emacs/${PKGVERSION}/lisp/avoid.elc
 share/emacs/${PKGVERSION}/lisp/battery.el.gz
 share/emacs/${PKGVERSION}/lisp/battery.elc
+share/emacs/${PKGVERSION}/lisp/better-pixel-scroll.el.gz
+share/emacs/${PKGVERSION}/lisp/better-pixel-scroll.elc
 share/emacs/${PKGVERSION}/lisp/bindings.el.gz
 share/emacs/${PKGVERSION}/lisp/bindings.elc
 share/emacs/${PKGVERSION}/lisp/bookmark.el.gz
@@ -3704,6 +3706,8 @@ share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/common-win.elc
 share/emacs/${PKGVERSION}/lisp/term/cygwin.el.gz
 share/emacs/${PKGVERSION}/lisp/term/cygwin.elc
+share/emacs/${PKGVERSION}/lisp/term/haiku-win.el.gz
+share/emacs/${PKGVERSION}/lisp/term/haiku-win.elc
 share/emacs/${PKGVERSION}/lisp/term/internal.el.gz
 share/emacs/${PKGVERSION}/lisp/term/internal.elc
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el.gz
