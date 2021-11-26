@@ -1024,8 +1024,6 @@ share/emacs/${PKGVERSION}/lisp/avoid.el.gz
 share/emacs/${PKGVERSION}/lisp/avoid.elc
 share/emacs/${PKGVERSION}/lisp/battery.el.gz
 share/emacs/${PKGVERSION}/lisp/battery.elc
-share/emacs/${PKGVERSION}/lisp/better-pixel-scroll.el.gz
-share/emacs/${PKGVERSION}/lisp/better-pixel-scroll.elc
 share/emacs/${PKGVERSION}/lisp/bindings.el.gz
 share/emacs/${PKGVERSION}/lisp/bindings.elc
 share/emacs/${PKGVERSION}/lisp/bookmark.el.gz
