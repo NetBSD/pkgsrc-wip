@@ -70,7 +70,8 @@ SUBST_STAGE.fix-options=	pre-configure
 SUBST_FILES.fix-options=	meson_options.txt
 SUBST_SED.fix-options=		-e "s|'es-egl', 'none'|'es-egl', 'base', 'none'|g"
 
-MESON_ARGS+=	-Dopengl=base
+MESON_ARGS+=	-Dopengl=base -Dlua-interpreter=lua
+LUA_VERSIONS_ACCEPTED=		52 51
 
 .else
 
@@ -92,7 +93,8 @@ MESON_ARGS+=	-Dopengl=base
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+#.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"

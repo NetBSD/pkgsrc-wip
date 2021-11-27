@@ -8,6 +8,8 @@ EFL_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.efl+=	efl>=1.25.0
 BUILDLINK_PKGSRCDIR.efl?=	../../wip/efl
 
+LUA_VERSIONS_ACCEPTED= 52 51
+
 pkgbase := efl
 .include "../../mk/pkg-build-options.mk"
 
@@ -39,7 +41,7 @@ pkgbase := efl
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
-.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
