@@ -11,7 +11,8 @@ LICENSE=	mit OR apache-2.0
 
 USE_TOOLS+=	bash sh
 
-SRCLIB=			rust-src/lib/rustlib/src/rust/library
+LIBDIR=			lib/rustlib/src/rust/library
+SRCLIB=			rust-src/${LIBDIR}
 REPLACE_BASH+=		install.sh
 REPLACE_BASH+=		${SRCLIB}/backtrace/ci/debuglink.sh
 REPLACE_BASH+=		${SRCLIB}/stdarch/ci/dox.sh
@@ -28,6 +29,12 @@ NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/debuglink-docker.sh
 NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/miri-rustup.sh
 NO_INTERPRETER+=	${SRCLIB}/backtrace/ci/run-docker.sh
 
+ORIG_FILES+=		${LIBDIR}/std/src/sys/unix/mod.rs.orig
+ORIG_FILES+=		${LIBDIR}/std/src/sys/unix/thread.rs.orig
+ORIG_FILES+=		${LIBDIR}/unwind/build.rs.orig
+
+MANIFEST=		${DESTDIR}${PREFIX}/lib/rustlib/manifest-rust-src
+MANIFEST_SRC=		rust-src/manifest.in
 
 do-build:
 	# These do not have an interpreter line...
@@ -38,6 +45,12 @@ do-install:
 	set -e; \
 	\
 	cd ${WRKSRC}; \
+	set -e; \
+	for f in ${ORIG_FILES}; do \
+		rm rust-src/$$f; \
+		grep -v $$f <${MANIFEST_SRC} > ${MANIFEST_SRC}.new; \
+		mv ${MANIFEST_SRC}.new ${MANIFEST_SRC}; \
+	done; \
 	env ${MAKE_ENV} \
 		${TOOLS_BASH} \
 		./install.sh --prefix=${DESTDIR}/${PREFIX};
@@ -45,9 +58,9 @@ do-install:
 	rm -f ${DESTDIR}/${PREFIX}/lib/rustlib/components;
 	rm -f ${DESTDIR}/${PREFIX}/lib/rustlib/rust-installer-version;
 	# fix up install manifest, remove staging ${DESTDIR}
-	MANIFEST=${DESTDIR}${PREFIX}/lib/rustlib/manifest-rust-src; \
-	${SED} -e 's;file:${DESTDIR};file:;' < $${MANIFEST} > $${MANIFEST}.new; \
-	mv $${MANIFEST}.new $${MANIFEST}
+	${SED} -e 's;file:${DESTDIR};file:;' \
+		< ${MANIFEST} > ${MANIFEST}.new; \
+	mv ${MANIFEST}.new ${MANIFEST}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

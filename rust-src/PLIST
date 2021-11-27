@@ -806,7 +806,6 @@ lib/rustlib/src/rust/library/std/src/sys/unix/kernel_copy/tests.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/l4re.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/memchr.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/mod.rs
-lib/rustlib/src/rust/library/std/src/sys/unix/mod.rs.orig
 lib/rustlib/src/rust/library/std/src/sys/unix/mutex.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/net.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/os.rs
@@ -829,7 +828,6 @@ lib/rustlib/src/rust/library/std/src/sys/unix/rwlock.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/stack_overflow.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/stdio.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/thread.rs
-lib/rustlib/src/rust/library/std/src/sys/unix/thread.rs.orig
 lib/rustlib/src/rust/library/std/src/sys/unix/thread_local_dtor.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/thread_local_key.rs
 lib/rustlib/src/rust/library/std/src/sys/unix/time.rs
@@ -1213,7 +1211,6 @@ lib/rustlib/src/rust/library/test/src/time.rs
 lib/rustlib/src/rust/library/test/src/types.rs
 lib/rustlib/src/rust/library/unwind/Cargo.toml
 lib/rustlib/src/rust/library/unwind/build.rs
-lib/rustlib/src/rust/library/unwind/build.rs.orig
 lib/rustlib/src/rust/library/unwind/src/lib.rs
 lib/rustlib/src/rust/library/unwind/src/libunwind.rs
 lib/rustlib/src/rust/src/llvm-project/libunwind/.clang-format
