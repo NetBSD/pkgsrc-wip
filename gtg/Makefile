@@ -15,12 +15,16 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PY_PATCHPLIST=		yes
 
 REPLACE_PYTHON+=	GTG/gtg.in
 REPLACE_PYTHON+=	GTG/core/networkmanager.py
 
+# TODO: depend on liblarch module
+
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
