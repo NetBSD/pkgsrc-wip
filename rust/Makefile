@@ -2,6 +2,7 @@
 
 DISTNAME=	rustc-1.56.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 
@@ -42,7 +43,6 @@ CONFIGURE_ARGS+=		--enable-extended	# Build and install cargo too.
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--disable-codegen-tests
 CONFIGURE_ARGS+=		--disable-compiler-docs
-CONFIGURE_ARGS+=		--disable-dist-src
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
 
