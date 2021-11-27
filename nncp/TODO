@@ -1,0 +1,7 @@
+Some things that are optional but may be helpful:
+
+- Automatically generate a config file
+
+- Possibly create a uucp user and setuid the binaries to it (similar to uucp)
+
+- Create rc.d scripts for nncp-daemon, nncp-caller, maybe even nncp-toss

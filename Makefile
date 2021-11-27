@@ -2589,6 +2589,7 @@ SUBDIR+=	nitrogen
 SUBDIR+=	nix
 SUBDIR+=	nlohmann-json
 SUBDIR+=	nlopt
+SUBDIR+=	nncp
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
 SUBDIR+=	nodm
