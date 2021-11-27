@@ -12,6 +12,8 @@ HOMEPAGE=	https://github.com/rust-analyzer/rust-analyzer/
 COMMENT=	Rust compiler front-end for IDEs
 LICENSE=	apache-2.0
 
+DEPENDS+=	rust-src-[0-9]*:../../wip/rust-src
+
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 INSTALLATION_DIRS=	bin
