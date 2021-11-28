@@ -12,9 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config xgettext
 
-MESON_ARGS+=		-Dfusermount_wrapper=false
 MESON_ARGS+=		-Dplugin_flatpak=false
 MESON_ARGS+=		-Dplugin_git=false
 MESON_ARGS+=		-Dplugin_sysprof=false
