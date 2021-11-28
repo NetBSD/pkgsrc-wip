@@ -22,9 +22,6 @@ USE_TOOLS+=	pkg-config sh
 
 RCD_SCRIPTS=	initware
 
-post-install:
-	${TOOLS_SH} ${WRKSRC}/pkg/netbsd/postinst.sh "${DESTDIR}${PREFIX}"
-
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
