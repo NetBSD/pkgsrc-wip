@@ -4005,6 +4005,7 @@ SUBDIR+=	py-lenstools
 SUBDIR+=	py-lib
 SUBDIR+=	py-libclang-py3
 SUBDIR+=	py-libgit2-glib
+SUBDIR+=	py-liblarch
 SUBDIR+=	py-liblzma
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
