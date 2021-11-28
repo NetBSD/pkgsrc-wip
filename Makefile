@@ -5122,7 +5122,6 @@ SUBDIR+=	runit
 SUBDIR+=	rust
 SUBDIR+=	rust-analyzer
 SUBDIR+=	rust-bindgen
-SUBDIR+=	rust-src
 SUBDIR+=	rygel
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
