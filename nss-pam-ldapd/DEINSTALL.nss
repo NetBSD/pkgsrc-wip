@@ -3,4 +3,5 @@
 case ${STAGE} in
 	POST-DEINSTALL)
 		${RM} -f /usr/lib/nss_ldap.so.0 ;;
+		${RM} -f /usr/lib/security/pam_ldap.so ;;
 esac

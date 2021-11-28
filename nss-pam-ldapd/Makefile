@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2012/12/13 18:20:29 ftigeot Exp $
 
-DISTNAME=	nss-pam-ldapd-0.9.10
+DISTNAME=	nss-pam-ldapd-0.9.12
 CATEGORIES=	databases
 MASTER_SITES=	http://arthurdejong.org/nss-pam-ldapd/
 
@@ -107,12 +107,12 @@ SUBST_FILES.disable-tls=	config.h
 SUBST_SED.disable-tls=		-e 's|/\* \#undef __thread \*/|\#define __thread /\*\*/|'
 .endif
 
-SUBST_CLASSES+=		usergroup
-SUBST_STAGE.usergroup=	post-patch
-SUBST_FILES.usergroup=	nslcd.conf
-SUBST_SED.usergroup=	-e 's/^uid nslcd/uid ${NSLCD_USER}/'
-SUBST_SED.usergroup+=	-e 's/^gid nslcd/gid ${NSLCD_GROUP}/'
-SUBST_NOOP_OK.usergroup=yes
+SUBST_CLASSES+=			usergroup
+SUBST_STAGE.usergroup=		pre-configure
+SUBST_FILES.usergroup=		nslcd.conf
+SUBST_SED.usergroup=		-e 's/^uid nslcd/uid ${NSLCD_USER}/'
+SUBST_SED.usergroup+=		-e 's/^gid nslcd/gid ${NSLCD_GROUP}/'
+SUBST_NOOP_OK.usergroup=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
