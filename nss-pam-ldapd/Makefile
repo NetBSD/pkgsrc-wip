@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2012/12/13 18:20:29 ftigeot Exp $
 
 DISTNAME=	nss-pam-ldapd-0.9.12
-CATEGORIES=	databases
+CATEGORIES=	security
 MASTER_SITES=	http://arthurdejong.org/nss-pam-ldapd/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -68,8 +68,8 @@ post-install:
 # Otherwise PAM_EXTERN ends up "static" and -O2 optimizes everything away
 CFLAGS+=		-DNO_STATIC_MODULES
 
-INSTALL_TEMPLATES=	INSTALL.nss
-DEINSTALL_TEMPLATES=	DEINSTALL.nss
+INSTALL_TEMPLATES=	INSTALL.NetBSD
+DEINSTALL_TEMPLATES=	DEINSTALL.NetBSD
 .endif
 
 # NSS_LDAP_SONAME is used by both the NSS client and the server(!)

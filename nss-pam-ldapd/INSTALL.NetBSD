@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.nss $
+# $NetBSD: INSTALL.NetBSD $
 
 case ${STAGE} in
 	POST-INSTALL)
