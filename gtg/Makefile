@@ -20,7 +20,7 @@ PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	GTG/gtg.in
 REPLACE_PYTHON+=	GTG/core/networkmanager.py
 
-# TODO: depend on liblarch module
+DEPENDS+=	${PYPKGPREFIX}-liblarch-[0-9]*:../../wip/py-liblarch
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
