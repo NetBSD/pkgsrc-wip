@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	tree-sitter-0.20.0
+DISTNAME=	tree-sitter-0.20.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
