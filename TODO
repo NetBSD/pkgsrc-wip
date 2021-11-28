@@ -127,7 +127,7 @@ Suggested package updates
 	o scantailor-0.9.11.1
 	o scrc-2.2
 	o sdlpop-1.17
-	o semgrep-core-0.74.0 (needs OCaml 4.12 due ocamllsp)
+	o semgrep-core-0.75.0 [needs OCaml 4.12 due ocamllsp]
 	o sflphoned-0.7.2
 	o slim-1.3.6
 	o smc-1.9
@@ -140,6 +140,7 @@ Suggested package updates
 	o taskcoach-1.3.14
 	o tmw-0.0.29.1
 	o torcs-1.3.6
+	o tree-sitter-0.20.1
 	o trinity-14.0.3
 	o umurmur-0.2.17
 	o universalcodegrep-0.3.3
