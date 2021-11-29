@@ -2,7 +2,6 @@
 
 GITHUB_PROJECT=	jicofo
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
-PKGREVISION=	1
 
 HOMEPAGE=	https://github.com/jitsi/jicofo/
 COMMENT=	Server side focus component used in Jitsi Meet conferences

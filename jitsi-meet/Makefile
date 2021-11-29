@@ -10,10 +10,11 @@ BUILD_TARGET=	compile
 INSTALL_TARGET=	deploy source-package
 
 EGDIR=		share/jitsi-meet
-CONF_FILES=	${EGDIR}/config.js ${PKG_SYSCONFDIR}/jitsi/meet/config.js
+PKG_SYSCONFSUBDIR= jitsi/meet
+CONF_FILES=	${EGDIR}/config.js ${PKG_SYSCONFDIR}/config.js
 CONF_FILES+=	${EGDIR}/interface_config.js \
-		${PKG_SYSCONFDIR}/jitsi/meet/interface_config.js
-CONF_FILES+=	${EGDIR}/title.html ${PKG_SYSCONFDIR}/jitsi/meet/title.html
+		${PKG_SYSCONFDIR}/interface_config.js
+CONF_FILES+=	${EGDIR}/title.html ${PKG_SYSCONFDIR}/title.html
 
 INSTALLATION_DIRS=	${EGDIR} share/examples/jitsi-meet
 
@@ -24,7 +25,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	doc/example-config-files/nginx.conf.example
 SUBST_FILES.paths+=	doc/example-config-files/jitsi.example.com.example
 SUBST_FILES.paths+=	doc/example-config-files/prosody.cfg.lua.example
-SUBST_SED.paths=	-e 's,/etc/,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths=	-e 's,/etc/jitsi/meet/,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,/srv/.*;,${PREFIX}/${EGDIR};,g'
 SUBST_SED.paths+=	-e 's,/var/,${VARBASE},g'
 

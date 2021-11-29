@@ -15,6 +15,7 @@ share/jitsi-meet-prosody/mod_jitsi_session.lua
 share/jitsi-meet-prosody/mod_limits_exception.lua
 share/jitsi-meet-prosody/mod_muc_allowners.lua
 share/jitsi-meet-prosody/mod_muc_call.lua
+share/jitsi-meet-prosody/mod_muc_census.lua
 share/jitsi-meet-prosody/mod_muc_domain_mapper.lua
 share/jitsi-meet-prosody/mod_muc_lobby_rooms.lua
 share/jitsi-meet-prosody/mod_muc_max_occupants.lua
