@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix compilation on NetBSD
+
 --- src/libide/core/ide-global.c.orig	2020-03-07 00:15:02.333880400 +0000
 +++ src/libide/core/ide-global.c
 @@ -26,7 +26,9 @@

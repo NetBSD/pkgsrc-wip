@@ -1,6 +1,7 @@
 $NetBSD$
 
-RMD160 (gnome-builder-3.40.0.tar.xz) = 4d00ed9e2e68c4603210f8b1ebb43026e03c8886
-SHA512 (gnome-builder-3.40.0.tar.xz) = 9346a42371bd2529a146f81fe5a1b333495c1895978780bcb3748ef7b46e68a08241b261055b855e1d9dca47c1449fbcddc64e8bcfb7e6d780eedea214280fdc
-Size (gnome-builder-3.40.0.tar.xz) = 12088472 bytes
-SHA1 (patch-src_libide_core_ide-global.c) = ac233d658989fcce83e506c3d2cd8f262786d813
+BLAKE2s (gnome-builder-41.2.tar.xz) = 91c3f5beb64c2c24ec65ea25bc980d3d60b3f1729c8191f465b4fd2468c3f76a
+SHA512 (gnome-builder-41.2.tar.xz) = 032d877865e72f8eb4124a1f89ab55fb60213cb64dc71c5e8d1967ba58e216eeb2cd6f7f26e2b29e5618a00e7d4fe0fac032630bb3c725fbef4a314f0e5709e5
+Size (gnome-builder-41.2.tar.xz) = 12707456 bytes
+SHA1 (patch-src_libide_core_ide-global.c) = da34d24b56cad4c39960c988c5ca605997a69e8a
+SHA1 (patch-src_meson.build) = d3effd5d778cd66b5bf729793bf75b9f3732ee20

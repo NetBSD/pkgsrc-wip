@@ -1,0 +1,14 @@
+$NetBSD$
+
+Fix uninitialized test_sources var
+
+--- src/meson.build.orig	2021-11-16 22:38:20.343174500 +0000
++++ src/meson.build
+@@ -9,6 +9,7 @@ gnome_builder_private_headers = []
+ gnome_builder_generated_sources = []
+ gnome_builder_generated_headers = []
+ gnome_builder_gir_extra_args = ['--pkg-export=gnome-builder-1.0']
++test_sources = []
+ # To allow all resources to be initialized with static constructors
+ # inside the final executable, we delay compiling them until the
+ # final binary (otherwise they are silenty dropped when linking).
