@@ -3790,6 +3790,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/paragraphs.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/paragraphs.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/picture.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/picture.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/pixel-fill.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/pixel-fill.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/po.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/po.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/refbib.el.gz
