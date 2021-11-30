@@ -43,6 +43,9 @@ PYTHON_FOR_BUILD_ONLY=	tool
 post-extract:
 	cp ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces/
 
+.if ${OPSYS} == "Linux"
+.include "../../wip/mk/libseccomp.buildlink3.mk"
+.endif
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=40.0
 .include "../../devel/libgweather/buildlink3.mk"
