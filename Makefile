@@ -2674,6 +2674,7 @@ SUBDIR+=	oneloop
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
+SUBDIR+=	oorexx-svn
 SUBDIR+=	opal
 SUBDIR+=	opax
 SUBDIR+=	opd
