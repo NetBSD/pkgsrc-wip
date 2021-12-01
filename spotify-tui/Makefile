@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	spotify-tui-0.24.0
+DISTNAME=	spotify-tui-0.25.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Rigellute/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
