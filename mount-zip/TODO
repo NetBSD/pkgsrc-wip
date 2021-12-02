@@ -1,0 +1,42 @@
+Does not build on NetBSD:
+
+In file included from /usr/include/puffs.h:44,
+                 from /usr/include/fuse.h:41,
+                 from main.cc:30:
+/usr/include/fs/puffs/puffs_msgif.h:708:2: error: 'register_t' does not name a type; did you mean 'register'?
+  708 |  register_t  pvnr_retval;  /* IN */
+      |  ^~~~~~~~~~
+      |  register
+In file included from /usr/include/fuse.h:41,
+                 from main.cc:30:
+/usr/include/puffs.h:226:27: error: 'register_t' has not been declared
+  226 |      puffs_cookie_t, int, register_t *);
+      |                           ^~~~~~~~~~
+/usr/include/puffs.h:437:1: error: 'register_t' has not been declared
+  437 | PUFFSOP_PROTOS(puffs_null) /* XXX */
+      | ^~~~~~~~~~~~~~
+/usr/include/puffs.h:506:20: error: 'vsize_t' has not been declared
+  506 |        enum vtype, vsize_t, dev_t);
+      |                    ^~~~~~~
+main.cc: In function 'int main(int, char**)':
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+  384 |                            {nullptr, 0, 0}};
+      |                                           ^
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:384:43: error: narrowing conversion of '4294967295' from 'unsigned int' to 'int32_t' {aka 'int'} [-Wnarrowing]
+main.cc:451:7: error: 'fuse_setup' was not declared in this scope; did you mean 'fuse_opt'?
+  451 |       fuse_setup(args.argc, args.argv, &operations, sizeof(operations),
+      |       ^~~~~~~~~~
+      |       fuse_opt
+main.cc:469:3: error: 'fuse_teardown' was not declared in this scope
+  469 |   fuse_teardown(fuse, absolute_mount_point);
+      |   ^~~~~~~~~~~~~

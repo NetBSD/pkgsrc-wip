@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (mount-zip-1.0.3.tar.gz) = d34c89835de46fa6761ba7869d27e1a6b837b91a413d3b23a179a7822378ca68
+SHA512 (mount-zip-1.0.3.tar.gz) = f18c24cedfb09edcf3b97d86e85fe8c3cd5d37fd024cfdff4c90fc7948e79fe719b6463c7bc35b8e1d582405c73f20ef6f6f4e05a67b5f07681a369a17ff6fa3
+Size (mount-zip-1.0.3.tar.gz) = 714641 bytes
+SHA1 (patch-lib_extra__field.cc) = 21158541a3d0521bae799a6cd61b508f596355f3
+SHA1 (patch-main.cc) = 8afd48d9dda938b8f8755dfea314b05bf674e0f6
