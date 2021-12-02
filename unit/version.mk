@@ -12,7 +12,7 @@
 UNITVERSION_MK=	defined
 
 # Define NGINX Unit's version.
-UNIT_VERSION=	1.26.0
+UNIT_VERSION=	1.26.1
 
 # Define NGINX Unit's modules directory
 UNIT_EXTENSION_DIR=	libexec/unit/modules
