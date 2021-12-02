@@ -1,0 +1,15 @@
+$NetBSD$
+
+Honor CPPFLAGS; required on NetBSD.
+
+--- Makefile.orig	2021-12-02 15:21:15.664537142 +0000
++++ Makefile
+@@ -48,7 +48,7 @@ $(DEST): $(OBJECTS) $(LIB)
+ 	$(CXX) $(OBJECTS) $(LDFLAGS) $(LIBS) -o $@
+ 
+ main.o: main.cc
+-	$(CXX) -Ilib -c $(CXXFLAGS) $< -o $@
++	$(CXX) -Ilib -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+ 
+ $(LIB):
+ 	$(MAKE) -C lib
