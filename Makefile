@@ -2435,6 +2435,7 @@ SUBDIR+=	morse
 SUBDIR+=	mothur
 SUBDIR+=	motion
 SUBDIR+=	motti
+SUBDIR+=	mount-zip
 SUBDIR+=	mozart
 SUBDIR+=	mozjpeg
 SUBDIR+=	mozldap
