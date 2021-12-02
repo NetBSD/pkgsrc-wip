@@ -1,19 +1,26 @@
 # $NetBSD$
 
-DISTNAME=	fractal-4.4.0
+DISTNAME=	fractal-4.4.1b1
 CATEGORIES=	chat
-MASTER_SITES=	https://gitlab.gnome.org/GNOME/fractal/-/archive/4.4.0/
+MASTER_SITES=	https://gitlab.gnome.org/GNOME/fractal/-/archive/4.4.1b1/
 
 MAINTAINER=	cirnatdan@NetBSD.org
-HOMEPAGE=	https://gitlab.gnome.org/GNOME/fractal/-/archive/4.4.0/
+HOMEPAGE=	https://gitlab.gnome.org/GNOME/fractal
 COMMENT=	Matrix group messaging app
 LICENSE=	gnu-gpl-v3
+
+WRKSRC=		${WRKDIR}/fractal-4.4.0-dbd6e95551cbfe4db93748a699a5857dd6863b71
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
+TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
+
 MAKE_ENV+=		GETTEXT_DIR=${PREFIX}
 MAKE_ENV+=		GETTEXT_SYSTEM=enabled
+
+pre-install:
+	patchelf --set-rpath ${PREFIX}/lib ${WRKSRC}/output/fractal-gtk/src/fractal
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.13.0
 CARGO_CRATE_DEPENDS+=	adler-0.2.3
