@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.157 2021/07/15 14:06:56 schmonz Exp $
 
-BLAKE2s (mesa-21.2.5.tar.xz) = 8284d2704159dd46d9cc36e1cf68ed89667968d3560d46979b62a3c3099b2878
-SHA512 (mesa-21.2.5.tar.xz) = aaa1ebaa1e18eea76c3784c9a65942c3e417c1079d7bf75dcede574999dc459fb4d68d041cf2f767afb9cbfa834a985e0a4edd5a56b0fc90f8fdc506359aa5da
-Size (mesa-21.2.5.tar.xz) = 15829684 bytes
+BLAKE2s (mesa-21.3.1.tar.xz) = 63c96ba0d6a7cd62d4d6d27ec432a627ee87a915aa368d2addb1dd351ef1c176
+SHA512 (mesa-21.3.1.tar.xz) = 43f019d4810bafd177b1a41207ae20a77982e4e6df3ab2b7a700273748cbc766694bd44594c898c4bd7848a94200fd28237a67d290c4e06595e6eab71cb716e8
+Size (mesa-21.3.1.tar.xz) = 16439988 bytes
 SHA1 (patch-src_compiler_builtin__type__macros.h) = e4868011711fb89a293580a12eb603b8e7162336
 SHA1 (patch-src_drm-shim_drm__shim.c) = 6884d31dc3e9d47aac1785589ab289a601e64545
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 9230fbae2c04246ebca8437ecad694bbae857fbe
@@ -10,13 +10,12 @@ SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = ccf7c3ba7bdac39f9924102868f3
 SHA1 (patch-src_egl_main_eglglobals.c) = 0d52014f52e62fc5fa6650336ddb0011ecf331e6
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = f913b779404e6bd8ae707a4fd66eb7c1dca9b311
 SHA1 (patch-src_gallium_auxiliary_rbug_rbug__texture.c) = 57d831b1001419191a27c05d9cb7734481372d27
-SHA1 (patch-src_gallium_drivers_freedreno_freedreno__screen.c) = 13a99e018d0c282e9541411e428b6bf9cc4ded73
-SHA1 (patch-src_gallium_drivers_freedreno_freedreno__util.h) = bf9d96a13f859ff38e9db684ee880ed84a365965
+SHA1 (patch-src_gallium_drivers_freedreno_freedreno__screen.c) = 2d31c6d5b5271ad108f73234de34618f583e3e43
+SHA1 (patch-src_gallium_drivers_freedreno_freedreno__util.h) = 117be543dc334bb2eceaa28e048531c9c3a90205
 SHA1 (patch-src_gallium_drivers_llvmpipe_lp__memory.c) = ca3c1b317c41f6ae56a08272ffabdecb38fea2ec
 SHA1 (patch-src_gallium_drivers_nouveau_nouveau__vp3__video.c) = 04f95784c3270c9bb7e95377982e217962481525
 SHA1 (patch-src_gallium_drivers_nouveau_nv50_nv84__video.c) = 1b4239fe053523835ecac006894bdb0cde0ee626
 SHA1 (patch-src_gallium_drivers_vc4_vc4__bufmgr.c) = 1d591d346486fdf58893f69ab92a272e6a31a987
-SHA1 (patch-src_gallium_frontends_clover_llvm_invocation.cpp) = c59ab60843717369be20a83f658960e91ce68bf4
 SHA1 (patch-src_gallium_frontends_clover_util_range.hpp) = c1bd73721482642e62378c70cbe245c304c36d4f
 SHA1 (patch-src_gallium_frontends_osmesa_osmesa.c) = 36631301b02cf89f152925b62f538a3c0b6ab601
 SHA1 (patch-src_glx_dri__common.c) = 7fa80f8da89ba90649db170e45c8e842cf69c1eb
@@ -37,6 +36,7 @@ SHA1 (patch-src_mesa_x86_common__x86.c) = f8c4b93443ef66d017f6aa114b877565b30f25
 SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
 SHA1 (patch-src_util_strndup.h) = 73f49694ca48ad6b9a9d8346c5b84fddec2463bd
 SHA1 (patch-src_util_u__atomic.h) = 31d4514538ef5ee53012695eb5c66134aaec981e
+SHA1 (patch-src_util_u__printf.h) = 3b19d079d3857612be3cb1b5c1edb5384cd4d6fd
 SHA1 (patch-src_util_u__process.c) = 9b785d660f3d55803315598a66370139fcd9168f
 SHA1 (patch-src_util_u__queue.c) = e8d6b00473a16b6a32dcacd5ae092326fb2adb84
 SHA1 (patch-src_util_u__thread.h) = 6b3955489fc88b848388a329f6a9190bdac6cc86

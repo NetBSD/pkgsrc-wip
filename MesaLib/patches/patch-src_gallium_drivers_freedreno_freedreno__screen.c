@@ -2,9 +2,9 @@ $NetBSD$
 
 sysinfo(2) is for Linux only
 
---- src/gallium/drivers/freedreno/freedreno_screen.c.orig	2021-08-04 18:49:28.972473900 +0000
+--- src/gallium/drivers/freedreno/freedreno_screen.c.orig	2021-12-01 19:04:14.000000000 +0000
 +++ src/gallium/drivers/freedreno/freedreno_screen.c
-@@ -42,7 +42,9 @@
+@@ -43,7 +43,9 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include "drm-uapi/drm_fourcc.h"
@@ -14,9 +14,9 @@ sysinfo(2) is for Linux only
  
  #include "freedreno_fence.h"
  #include "freedreno_perfetto.h"
-@@ -1013,9 +1015,13 @@ fd_screen_create(struct fd_device *dev, 
- 
-    screen->has_syncobj = fd_has_syncobj(screen->dev);
+@@ -1020,9 +1022,13 @@ fd_screen_create(struct fd_device *dev, 
+    driParseConfigFiles(config->options, config->options_info, 0, "msm",
+                        NULL, fd_dev_name(screen->dev_id), NULL, 0, NULL, 0);
  
 +#if defined(__NetBSD__)
 +   screen->ram_size = 512 * 1024 * 1024; /* XXX should use sysctl hw.physmem64 here */
@@ -27,4 +27,4 @@ sysinfo(2) is for Linux only
 +#endif
  
     DBG("Pipe Info:");
-    DBG(" GPU-id:          %d", screen->gpu_id);
+    DBG(" GPU-id:          %s", fd_dev_name(screen->dev_id));

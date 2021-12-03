@@ -42,6 +42,7 @@ ${PLIST.arm}lib/dri/imx-drm_dri.so
 ${PLIST.arm}lib/dri/ingenic-drm_dri.so
 ${PLIST.iris}lib/dri/iris_dri.so
 ${PLIST.arm}lib/dri/kgsl_dri.so
+${PLIST.arm}lib/dri/kirin_dri.so
 ${PLIST.kms}lib/dri/kms_swrast_dri.so
 ${PLIST.arm}lib/dri/lima_dri.so
 ${PLIST.arm}lib/dri/mali-dp_dri.so
