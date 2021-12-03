@@ -1,0 +1,44 @@
+$NetBSD$
+
+Honour LDFLAGS.
+Use INSTALL properly.
+
+--- modes/Makefile.in.orig	2020-10-05 02:36:51.000000000 +0000
++++ modes/Makefile.in
+@@ -345,7 +345,7 @@ CFLAGS = @CFLAGS@
+ CXXFLAGS = @CXXFLAGS@
+ #CFLAGS = -O
+ #CFLAGS = -g
+-XLOCKLDFLAGS = @XLOCKLDFLAGS@ $(CHECKLDFLAG)
++XLOCKLDFLAGS = @XLOCKLDFLAGS@ $(CHECKLDFLAG) @LDFLAGS@
+ XLIBS = @XLIBS@
+ XLOCKLIBS = $(MODULELIB) @XLOCKLIBS@
+ 
+@@ -633,10 +633,10 @@ install : install-program install-man in
+ 
+ install-program : xlock
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) $(INSTPGMFLAGS) $(UTILOBJDIR)xlock$(E) $(DESTDIR)$(bindir)
+-	@MODULES@mkdir -p $(DEF_MODULEPATH)
+-	@MODULES@cp *.xlk $(DEF_MODULEPATH)
+-	@MODULES@cp glx/*.xlk $(DEF_MODULEPATH)
++	$(INSTALL_PROGRAM) $(UTILOBJDIR)xlock$(E) $(DESTDIR)$(bindir)
++	@MODULES@mkdir -p $(DESTDIR)$(DEF_MODULEPATH)
++	@MODULES@cp *.xlk $(DESTDIR)$(DEF_MODULEPATH)
++	@MODULES@cp glx/*.xlk $(DESTDIR)$(DEF_MODULEPATH)
+ 
+ install-man :
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(mandir)
+@@ -644,9 +644,10 @@ install-man :
+ 
+ install-ad :
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(xapploaddir)
+-	$(INSTALL_DATA) $(UTILDIR)XLock.ad $(DESTDIR)$(xapploaddir)/XLock
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)${datarootdir}/examples/xlock/app-defaults
++	$(INSTALL_DATA) $(UTILDIR)XLock.ad $(DESTDIR)${datarootdir}/examples/xlock/app-defaults/XLock
+ 	@FORTUNE@sed 's;^XLock.program: fortune;XLock.program: $(FORTUNE);' $(UTILDIR)XLock.ad > $(UTILOBJDIR)XLock.ad.tmp 
+-	@FORTUNE@$(INSTALL_DATA) $(UTILOBJDIR)XLock.ad.tmp $(DESTDIR)$(xapploaddir)/XLock
++	@FORTUNE@$(INSTALL_DATA) $(UTILOBJDIR)XLock.ad.tmp $(DESTDIR)${datarootdir}/examples/xlock/app-defaults/XLock
+ 	@FORTUNE@rm -f $(UTILOBJDIR)XLock.ad.tmp
+ 
+ install-sound :

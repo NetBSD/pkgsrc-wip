@@ -1,0 +1,4 @@
+[X] Modify patches for new version
+[ ] License is missing
+[ ] Check paths in "patch-xlock_XLock.ad"
+[ ] Use SUBST framework for "Makefile.common"

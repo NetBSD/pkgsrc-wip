@@ -1,0 +1,15 @@
+$NetBSD$
+
+Honour LDFLAGS.
+
+--- xglock/Makefile.in.orig	2010-04-19 13:34:35.000000000 +0000
++++ xglock/Makefile.in
+@@ -93,7 +93,7 @@ XGLOCKINC = @XGLOCKINC@ -I.. -I$(top_src
+ CFLAGS = @GTK_CFLAGS@ @CFLAGS@
+ #CFLAGS = -O
+ #CFLAGS = -g
+-XGLOCKLDFLAGS = @XGLOCKLDFLAGS@
++XGLOCKLDFLAGS = @XGLOCKLDFLAGS@ @LDFLAGS@
+ XLIBS = @XLIBS@
+ XGLOCKLIBS = @XGLOCKLIBS@
+ #If you have purify, and want to use it, uncomment this definition or
