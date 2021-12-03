@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	ad2vcf-0.1.3.36
+DISTNAME=	ad2vcf-0.1.3.37
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	0773e2bced79168b61808a280ebdea8dfd9f957f
+GITHUB_TAG=	9ac5a00f672d7b8dc253031cf38b68d4b9b730ec
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/ad2vcf
