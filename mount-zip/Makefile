@@ -10,10 +10,7 @@ HOMEPAGE=	https://github.com/google/mount-zip/
 COMMENT=	Read-only FUSE file system for ZIP archives
 LICENSE=	gnu-gpl-v3
 
-# TODO: We should support c++20 in USE_LANGUAGES. Maybe we should do
-# GCC_REQD+=8 automatically too, because GCC 8.0 is the first version
-# supporting *some* part of C++20?
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c++20
 # GCC 8.4.0 is not good enough for this particular package. But pho@
 # doesn't know which one is the exact minimum. It's somewhere between
 # 8.4 < x <= 9.
