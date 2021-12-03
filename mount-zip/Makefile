@@ -21,10 +21,10 @@ USE_TOOLS+=	gmake pkg-config
 # actually a preprocessor flag so pho@ thinks it's wrong. pho@ just
 # doesn't want to touch any mk/* in the pre-freeze phase.
 CPPFLAGS.NetBSD+=	-D_KERNTYPES
-# TODO: The underlying problem is that our <puffs.h> #include's
-# <fs/puffs/puffs_msgif.h> and exposes kernel types, and thus
-# -D_KERNTYPES is required to use the header. This too needs to be
-# fixed.
+# The underlying problem was that our <puffs.h> #include'd
+# <fs/puffs/puffs_msgif.h> and exposed kernel types, and thus
+# -D_KERNTYPES was required to use the header. This is no longer the
+# case as of HEAD@2021-12-03.
 
 # GCC < 10 doesn't support -std=c++20. Use c++2a instead.
 BUILDLINK_TRANSFORM+=	opt:-std=c++20:-std=c++2a
