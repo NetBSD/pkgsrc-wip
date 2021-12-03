@@ -24,9 +24,9 @@ MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 # The default location is /etc/default/cdrecord
 # We patch the documentation appropriately. Additionally, we also install
 # INSTALL.pkgsrc stating the reasons we do this, as required by the license.
-PKG_SYSCONFSUBDIR=	cdrecord
+#PKG_SYSCONFSUBDIR=	cdrecord
 
-CONF_FILES=	${PREFIX}/share/examples/cdrtools/cdrecord ${PKG_SYSCONFDIR}
+CONF_FILES=	${PREFIX}/share/examples/cdrtools/cdrecord ${PKG_SYSCONFDIR}/cdrecord
 SPECIAL_PERMS+=	${PREFIX}/share/examples/cdrtools/cdrecord ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 AUTO_MKDIRS=	yes
 
@@ -35,7 +35,7 @@ SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix+=	cdrecord/cdrecord.1
 SUBST_FILES.fix+=	cdrecord/cdrecord.dfl
-SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${PKG_SYSCONFDIR},g"
+SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${PKG_SYSCONFDIR}/cdrecord,g"
 SUBST_MESSAGE.fix=	Replace defaults file paths.
 
 # Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
@@ -44,7 +44,7 @@ SUBST_STAGE.install=	post-configure
 SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
 SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,PKGNAME_NOREV,${PKGNAME_NOREV},'
-SUBST_SED.install+=	-e 's,PKG_SYSCONFDIR,${PKG_SYSCONFDIR:Q},'
+SUBST_SED.install+=	-e 's,CDRECORD_CONF,${PKG_SYSCONFDIR}/cdrecord,'
 
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../devel/smake/Makefile.common"

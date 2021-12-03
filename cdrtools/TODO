@@ -1,4 +1,1 @@
-- pkglint complains that "mk/defaults/mk.conf" specifies a different config file
-  But the entry is commented out and the cdrecord source tree says "cdrecord",
-  not "cdrecord.conf". Should it be changed or removed?
 - Is "hacks.mk" still required for macOS?
