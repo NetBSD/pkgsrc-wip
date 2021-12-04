@@ -3,6 +3,6 @@ $NetBSD$
 BLAKE2s (mount-zip-1.0.3.tar.gz) = d34c89835de46fa6761ba7869d27e1a6b837b91a413d3b23a179a7822378ca68
 SHA512 (mount-zip-1.0.3.tar.gz) = f18c24cedfb09edcf3b97d86e85fe8c3cd5d37fd024cfdff4c90fc7948e79fe719b6463c7bc35b8e1d582405c73f20ef6f6f4e05a67b5f07681a369a17ff6fa3
 Size (mount-zip-1.0.3.tar.gz) = 714641 bytes
-SHA1 (patch-Makefile) = e52cebe5be150433d1d6d197f3ebc61231aea520
-SHA1 (patch-lib_extra__field.cc) = 21158541a3d0521bae799a6cd61b508f596355f3
-SHA1 (patch-main.cc) = e5df658a5b33936c0b339561457f4c4e593ce74e
+SHA1 (patch-Makefile) = 4438f39bbe972a3f5d3b3c37faf8aec4389982dc
+SHA1 (patch-lib_extra__field.cc) = dac4dd8bd26e6893d5d9e2a88d8d5ccf29afc9e3
+SHA1 (patch-main.cc) = 384a6c461bfd40c8ad194b72b86310e1b44d18b0

@@ -2,6 +2,7 @@ $NetBSD$
 
 Hunk #0:
     O_PATH does not exist on NetBSD.
+https://github.com/google/mount-zip/pull/1
 
 Hunk #1, #2:
     Work around an issue in librefuse <fuse_opt.h>. It has been
@@ -15,6 +16,7 @@ Hunk #3:
     (wrongly) removed from librefuse. Use fuse_main() instead, especially when
     nothing special needs to be done while mounting a filesystem and entering a
     main loop.
+https://github.com/google/mount-zip/pull/1
 
     TODO: These two functions should be added back to librefuse, along with
     proper FUSE_USE_VERSION checks. Old applications are everywhere and it's

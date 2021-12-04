@@ -1,6 +1,7 @@
 $NetBSD$
 
 Honor CPPFLAGS; required on NetBSD.
+https://github.com/google/mount-zip/pull/1
 
 --- Makefile.orig	2021-12-02 15:21:15.664537142 +0000
 +++ Makefile
