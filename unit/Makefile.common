@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--control=unix:${UNIT_RUNDIR}/control.unit.sock
 CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
 CONFIGURE_ARGS+=	--user=${UNIT_USER}
 CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/man
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 CHECK_WRKREF_SKIP=	libexec/unit/modules/ruby.unit.so
 

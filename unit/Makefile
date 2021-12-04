@@ -10,5 +10,7 @@ MAINTAINER=	osa@FreeBSD.org
 
 RCD_SCRIPTS=	unit
 
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror
+
 .include "../../wip/unit/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
