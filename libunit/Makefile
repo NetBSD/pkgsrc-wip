@@ -6,6 +6,9 @@ COMMENT=	Development kit for dynamic web application server
 
 MAINTAINER=	osa@FreeBSD.org
 
+DISTINFO_FILE=	${.CURDIR}/../unit/distinfo
+PATCHDIR=	${.CURDIR}/../unit/patches
+
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
