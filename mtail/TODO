@@ -1,0 +1,3 @@
+Before importing decide if this package should be renamed and/or
+PKGNAME adjusted in order to avoid conflicts with already existing and
+unrelated misc/mtail.
