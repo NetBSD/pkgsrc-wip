@@ -2457,6 +2457,7 @@ SUBDIR+=	mpv-git
 SUBDIR+=	msgpack-git
 SUBDIR+=	mst-bench
 SUBDIR+=	msworkbench
+SUBDIR+=	mtail
 SUBDIR+=	mtd-utils
 SUBDIR+=	mtdev
 SUBDIR+=	mtf
