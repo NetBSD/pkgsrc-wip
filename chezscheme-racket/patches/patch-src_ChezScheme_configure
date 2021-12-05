@@ -1,0 +1,15 @@
+$NetBSD$
+
+* /usr/sbin is usually not in the $PATH, use absolute path for paxctl
+
+--- src/ChezScheme/configure.orig	2021-10-24 04:17:58.000000000 +0000
++++ src/ChezScheme/configure
+@@ -710,7 +710,7 @@ esac
+ # post-link-executable step for c/Mf-unix
+ case "${flagsmuni}" in
+     *nb)
+-        exePostStep='paxctl +m ${Scheme}'
++        exePostStep='/usr/sbin/paxctl +m ${Scheme}'
+         ;;
+ esac
+ 
