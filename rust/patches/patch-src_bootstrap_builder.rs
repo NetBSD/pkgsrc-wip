@@ -14,7 +14,7 @@ Fix RPATH for pkgsrc.
 -                install::Src,
                  install::Rustc
              ),
-             Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest),
+             Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest, run::BumpStage0),
 @@ -1157,7 +1156,7 @@ impl<'a> Builder<'a> {
                  rustflags.arg("-Zosx-rpath-install-name");
                  Some("-Wl,-rpath,@loader_path/../lib")
