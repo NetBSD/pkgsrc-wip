@@ -1,3 +1,0 @@
-PythonDirector is a flexible fast TCP loadbalancer written entirely in python.
-It takes inbound TCP connections and connects them to one of a number of
-backend servers using a variety of scheduling algorithms.
