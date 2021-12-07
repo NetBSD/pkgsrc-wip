@@ -1,0 +1,3 @@
+Publishes and retrieves pacts, verification results, pacticipants, pacticipant
+ versions and tags.
+The functionality is available via a CLI, or via Ruby Rake tasks.

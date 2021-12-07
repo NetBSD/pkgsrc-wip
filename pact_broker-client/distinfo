@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pact_broker-client-1.58.0.gem) = e85aa3d80306b7130a3af5288e42af38f88f1492850e912f5962c995f986a1a2
+SHA512 (pact_broker-client-1.58.0.gem) = 748bdf48f7fd45fad80fa7a6da228060ce402ad111f4fffc129df9ac9189e65641eba38fe730d2c9dfe826de4dc13c766438beab938fb3a669995a0dcf30f51b
+Size (pact_broker-client-1.58.0.gem) = 115712 bytes
