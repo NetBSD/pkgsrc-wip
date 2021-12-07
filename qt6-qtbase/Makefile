@@ -129,11 +129,6 @@ UNLIMIT_RESOURCES=	datasize
 
 BUILDLINK_PASSTHRU_DIRS+=	${QTPREFIX}
 
-# pkgsrc does not set rapth during build
-# but qdbuscpp2xml and qdbuscpp2xml are
-# executed during build
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
-
 CHECK_INTERPRETER_SKIP+=	qt6/mkspecs/features/data/mac/objc_namespace.sh
 CHECK_INTERPRETER_SKIP+=	qt6/mkspecs/features/uikit/device_destinations.sh
 CHECK_INTERPRETER_SKIP+=	qt6/mkspecs/features/uikit/devices.py

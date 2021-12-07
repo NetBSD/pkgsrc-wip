@@ -31,6 +31,7 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtNetworkAuthTestsConfig.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthConfig.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthConfigVersion.cmake
+qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthDependencies.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets-release.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets.cmake

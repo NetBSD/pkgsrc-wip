@@ -19,11 +19,13 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtWebChannelTestsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6webchannelAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6webchannelConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6webchannelConfigVersion.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6webchannelConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6webchannelTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6webchannelTargets.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelConfig.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersion.cmake
+qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelDependencies.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets-release.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets.cmake

@@ -28,11 +28,13 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtWebSocketsTestsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfigVersion.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake
+qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-release.cmake
 qt6/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake

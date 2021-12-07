@@ -52,6 +52,15 @@ PLIST_VARS+=		notdarwin
 PLIST.notdarwin=	yes
 .endif
 
+# pkgsrc does not set rpath during build
+# but qdbuscpp2xml and qdbuscpp2xml are
+# executed during build,
+# some libs also link to libs in lib so
+# this is needed by some ld:s to not
+# cause linking errors.
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
+
+
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 

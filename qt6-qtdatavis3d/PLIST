@@ -158,6 +158,7 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtDataVisualizationTestsConfig.c
 qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationConfig.cmake
 qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationConfigVersion.cmake
+qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationDependencies.cmake
 qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationTargets-release.cmake
 qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationTargets.cmake
@@ -165,7 +166,7 @@ qt6/lib/cmake/Qt6DataVisualization/Qt6DataVisualizationVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2AdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2Config.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2ConfigVersion.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2Dependencies.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2ConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2Targets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQml2Targets.cmake
 qt6/lib/libQt6DataVisualization.prl

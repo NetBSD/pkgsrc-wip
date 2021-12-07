@@ -288,6 +288,7 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtChartsTestsConfig.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsConfigVersion.cmake
+qt6/lib/cmake/Qt6Charts/Qt6ChartsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsDependencies.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsTargets-release.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake
@@ -295,6 +296,7 @@ qt6/lib/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlConfig.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlConfigVersion.cmake
+qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlDependencies.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlTargets-release.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlTargets.cmake
@@ -302,6 +304,7 @@ qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2AdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Config.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2ConfigVersion.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2ConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets.cmake
 qt6/lib/libQt6Charts.prl

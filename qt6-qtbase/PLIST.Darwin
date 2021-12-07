@@ -13,6 +13,7 @@ qt6/lib/cmake/Qt6ClipboardSupport/Qt6ClipboardSupportConfig.cmake
 qt6/lib/cmake/Qt6ClipboardSupport/Qt6ClipboardSupportConfigVersion.cmake
 qt6/lib/cmake/Qt6GraphicsSupport/Qt6GraphicsSupportConfig.cmake
 qt6/lib/cmake/Qt6GraphicsSupport/Qt6GraphicsSupportConfigVersion.cmake
+qt6/lib/cmake/Qt6GraphicsSupport/Qt6GraphicsSupportConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6Gui_QCocoaIntegrationPlugin.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupport_QCocoaPrinterSupportPlugin.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6Widgets_QMacStylePlugin.cmake

@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (qtremoteobjects-everywhere-src-6.2.0.tar.xz) = 3e4935efcec5890d0a610c08f0b40753e2109139
-SHA512 (qtremoteobjects-everywhere-src-6.2.0.tar.xz) = fc8c9787c72d5e13b24ee9a5e405aacc64c616d0fe285a0699d654a1f010dbee5a6e8b05138a37faea0d8f9fa840faae14e5a26091409257ddf9df2564e91db1
-Size (qtremoteobjects-everywhere-src-6.2.0.tar.xz) = 358556 bytes
+BLAKE2s (qtremoteobjects-everywhere-src-6.2.2.tar.xz) = 7ca77e6b772bb3f3b5abadd0604fdd136bdf1e3ebe4e07b358e9fdba95c8941b
+SHA512 (qtremoteobjects-everywhere-src-6.2.2.tar.xz) = da2c7137feaf4550146aad21f1211748780c9f506ff1802eb2b1935da6a97a22fdc196bd0da60b6e636d3cd3ac8d03ec4bc3eb214f12ecaf7331baed654b7edf
+Size (qtremoteobjects-everywhere-src-6.2.2.tar.xz) = 359416 bytes

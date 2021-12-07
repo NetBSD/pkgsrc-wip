@@ -34,6 +34,7 @@ qt6/include/QtBodymovin/qtbodymovinversion.h
 qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateConfig.cmake
 qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateDependencies.cmake
 qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6BodymovinPrivate/Qt6BodymovinPrivateTargets.cmake
@@ -42,6 +43,7 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtLottieTestsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginTargets.cmake
 qt6/lib/libQt6Bodymovin.prl

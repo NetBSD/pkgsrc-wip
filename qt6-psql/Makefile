@@ -5,6 +5,8 @@ PKGNAME=	qt6-psql-${QTVERSION}
 COMMENT=	Qt6 PostgreSQL driver
 CATEGORIES=	databases
 
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+
 CONFIGURE_ARGS+=	-sql-psql
 CONFIGURE_ARGS+=	-no-sql-db2
 CONFIGURE_ARGS+=	-no-sql-ibase

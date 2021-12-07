@@ -36,7 +36,6 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/bbcamerasession_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/bbcameravideoencodersettingscontrol_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/evrcustompresenter_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/evrd3dpresentengine_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/evrdefs_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/evrhelpers_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/evrvideowindowcontrol_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/mfactivate_p.h
@@ -64,6 +63,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qalsaintegration_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qalsamediadevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qandroidaudiodecoder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qandroidaudiodevice_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qandroidaudioinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qandroidaudiooutput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qandroidaudiosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qandroidaudiosource_p.h
@@ -137,10 +137,10 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformimagecapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediacapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediadevices_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaencoder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaformatinfo_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaintegration_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaplayer_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiointegration_p.h
@@ -180,6 +180,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediadevices
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediadevicesession_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediaencoder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmultimediautils_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmfdefs_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/samplegrabber_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/sourceresolver_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/windowgrabber_p.h
@@ -273,6 +274,7 @@ qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtMultimediaTestsConfig.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-release.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake
@@ -280,6 +282,7 @@ qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfig.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets.cmake
@@ -287,6 +290,7 @@ qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessTarg
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfig.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfigVersion.cmake
+qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets.cmake
@@ -294,6 +298,7 @@ qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfigVersion.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets.cmake
 qt6/lib/libQt6Multimedia.prl

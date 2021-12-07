@@ -5,6 +5,8 @@ PKGNAME=	qt6-odbc-${QTVERSION}
 COMMENT=	Qt6 odbc SQL driver
 CATEGORIES=	databases
 
+LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
+
 CONFIGURE_ARGS+=	-sql-odbc
 CONFIGURE_ARGS+=	-no-sql-db2
 CONFIGURE_ARGS+=	-no-sql-ibase
