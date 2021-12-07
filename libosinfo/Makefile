@@ -1,27 +1,27 @@
 # $NetBSD$
 
-DISTNAME=	libosinfo-1.2.0
+DISTNAME=	libosinfo-1.9.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://releases.pagure.org/libosinfo/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libosinfo.org/
 COMMENT=	Library for querying information from the OSInfo database
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool
 
 PKGCONFIG_OVERRIDE+=	osinfo/libosinfo-1.0.pc.in
 
-CHECK_PORTABILITY_SKIP+=	configure
-
 DEPENDS+=		pciids-[0-9]*:../../misc/pciids
-CONFIGURE_ARGS+=	--with-pci-ids-path=${PREFIX}/share/pciids
+MESON_ARGS+=		-Dwith-pci-ids-path=${PREFIX}/share/pciids
 DEPENDS+=		usbids-[0-9]*:../../misc/usbids
-CONFIGURE_ARGS+=	--with-usb-ids-path=${PREFIX}/share/usbids
+MESON_ARGS+=		-Dwith-usb-ids-path=${PREFIX}/share/usbids
 
+.include "../../net/libsoup/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
