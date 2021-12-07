@@ -1,0 +1,14 @@
+$NetBSD$
+
+Fix girdirs on Linux
+
+--- subprojects/libovf-glib/govf/meson.build.orig	2021-12-03 15:18:10.938350700 +0000
++++ subprojects/libovf-glib/govf/meson.build
+@@ -71,6 +71,7 @@ govf_vapi = gnome.generate_vapi('govf-'
+   install: true,
+   install_dir: vapidir,
+   metadata_dirs: [ meson.current_source_dir() ],
++  gir_dirs: '/opt/pkg/share/gir-1.0',
+ )
+ 
+ pkg = import('pkgconfig')

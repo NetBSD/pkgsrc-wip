@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (gnome-boxes-41.2.tar.xz) = 4b9d9fad7c3384aeab6b6b60c2d20dd55eb96d3773cf55eec75755ea5fd78de5
+SHA512 (gnome-boxes-41.2.tar.xz) = ef14d4bfeb3202664bb96047de5656295f0186121599bf7a82184f4815e956e18f5ce60d0a45ec6e405ec4d22134cc4138018f0d3f86b8372303c0c639751803
+Size (gnome-boxes-41.2.tar.xz) = 1614708 bytes
+SHA1 (patch-src_meson.build) = 8564dcc080b1f4d36ffed8c742ddc703e0125397
+SHA1 (patch-subprojects_libovf-glib_govf_meson.build) = dd85e164a69343674cdbb69290d50e373dab4287
