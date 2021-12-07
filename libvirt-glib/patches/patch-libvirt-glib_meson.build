@@ -1,0 +1,14 @@
+$NetBSD$
+
+Fix girdir on Linux
+
+--- libvirt-glib/meson.build.orig	2021-02-10 16:10:21.000000000 +0000
++++ libvirt-glib/meson.build
+@@ -85,6 +85,7 @@ if enable_introspection
+         'glib-2.0',
+       ],
+       sources: libvirt_glib_gir[0],
++      gir_dirs: girdir,
+     )
+   endif
+ endif

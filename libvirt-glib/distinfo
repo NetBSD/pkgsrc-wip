@@ -1,5 +1,8 @@
 $NetBSD$
 
-RMD160 (libvirt-glib-2.0.0.tar.gz) = 6a1fdd34a99af91e8479a83b24ccdd592d8ed6a9
-SHA512 (libvirt-glib-2.0.0.tar.gz) = 79191a1d3ebbcff02136986c9ea863ffd771fac0c47ab3d94633674a2aea0ebf9f31a5fac3c3bcdf8ccbf7dbb6304b7f463d9e1a5f89d661b0e458b5ae9fd997
-Size (libvirt-glib-2.0.0.tar.gz) = 245817 bytes
+BLAKE2s (libvirt-glib-4.0.0.tar.gz) = 90705b5385a7fa675b2b6e667687657bdc83f797225b12542ea2207ce4ca7edc
+SHA512 (libvirt-glib-4.0.0.tar.gz) = f5cb90c34992c76e1bb033073a531c77bad89f7ceb02a1e8f9ae55f359e278a34874213a6cc2fa934484ffdfa2abf1fa1c344a73f305abe4ddec00dbba0ea4b4
+Size (libvirt-glib-4.0.0.tar.gz) = 218011 bytes
+SHA1 (patch-libvirt-gconfig_meson.build) = 781d5f6f90d11aa54bf8dd3a650dba13127fe79e
+SHA1 (patch-libvirt-glib_meson.build) = 51792544a49ce686f094e33c269b90c22d46686c
+SHA1 (patch-libvirt-gobject_meson.build) = ba57463a92531a5fd70ffc75b9d2db6cfbe2db33
