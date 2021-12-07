@@ -1,10 +1,9 @@
 $NetBSD: distinfo,v 1.1 2016/07/08 09:09:47 kamil Exp $
 
-RMD160 (LVM2.2.03.12.tgz) = 997e07fd3ff78a81987d607337dffdd817e82546
-SHA512 (LVM2.2.03.12.tgz) = e4d3bfb38b346251a2ea2cee7b79f2e12ed407652b659b35b65f58c8bb252943cee1c511713aeec8ff3400790e0e99ea6b83e8740050defe5cbb118f18bf7700
-Size (LVM2.2.03.12.tgz) = 2594040 bytes
+BLAKE2s (LVM2.2.03.14.tgz) = fb540fd0d086fcc547cec5a8cd398c9c3a18e84a79ec91e3a2c4c4c86f78743d
+SHA512 (LVM2.2.03.14.tgz) = 6a93bed1d5cf36f0f48d4d413d028b0e480cd4fc20e25d173770a892f265d2a0cc68d01a720b1513469953649e989532cd0c45f9538f92a4190eb3dc4555857d
+Size (LVM2.2.03.14.tgz) = 2639538 bytes
 SHA1 (patch-configure) = ce48968f66d7a6ec4997da43ad3ef835615d9aea
-SHA1 (patch-lib_device_dev-cache.c) = 6c4143263280b414538bb1c2afa43ea8d3a6b69b
 SHA1 (patch-lib_mm_memlock.c) = 8965dcc419c11db5a906d8c3ac320cab1580e460
 SHA1 (patch-tools_lvmcmdline.c) = 36324688b98e1fdca405b0ddfc919d7048c7e67a
 SHA1 (patch-tools_tools.h) = a6b9d5468bbcbdd1d504efdbbb56356aded15720

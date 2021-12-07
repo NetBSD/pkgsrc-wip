@@ -23,6 +23,7 @@ man/man8/lvm-dumpconfig.8
 man/man8/lvm-fullreport.8
 man/man8/lvm-lvpoll.8
 man/man8/lvm.8
+man/man8/lvm_import_vdo.8
 man/man8/lvmconfig.8
 man/man8/lvmdevices.8
 man/man8/lvmdiskscan.8
@@ -74,6 +75,7 @@ sbin/lvcreate
 sbin/lvdisplay
 sbin/lvextend
 sbin/lvm
+sbin/lvm_import_vdo
 sbin/lvmconfig
 sbin/lvmdevices
 sbin/lvmdiskscan
