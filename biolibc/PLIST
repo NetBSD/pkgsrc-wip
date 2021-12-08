@@ -437,6 +437,8 @@ man/man3/bl_gff_set_strand.3
 man/man3/bl_gff_skip_header.3
 man/man3/bl_gff_to_bed.3
 man/man3/bl_gff_write.3
+man/man3/bl_next_start_codon.3
+man/man3/bl_next_stop_codon.3
 man/man3/bl_overlap_print.3
 man/man3/bl_overlap_set_all.3
 man/man3/bl_overlap_set_feature1_len.3
@@ -556,8 +558,6 @@ man/man3/bl_vcf_set_sample_max.3
 man/man3/bl_vcf_set_single_sample.3
 man/man3/bl_vcf_set_single_sample_ae.3
 man/man3/bl_vcf_set_single_sample_cpy.3
-man/man3/bl_vcf_skip_header.3
+man/man3/bl_vcf_skip_meta_data.3
 man/man3/bl_vcf_write_ss_call.3
 man/man3/bl_vcf_write_static_fields.3
-man/man3/next_start_codon.3
-man/man3/next_stop_codon.3

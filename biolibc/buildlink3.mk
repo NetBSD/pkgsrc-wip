@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	biolibc
 .if !defined(BIOLIBC_BUILDLINK3_MK)
 BIOLIBC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.biolibc+=	biolibc>=0.2.0.29
+BUILDLINK_API_DEPENDS.biolibc+=	biolibc>=0.2.0.31
 BUILDLINK_PKGSRCDIR.biolibc?=	../../wip/biolibc
 .endif	# BIOLIBC_BUILDLINK3_MK
 
