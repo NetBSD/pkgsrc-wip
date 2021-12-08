@@ -10,7 +10,8 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sillycycle.com/xlockmore.html
-LICENSE=	modified-bsd
+# Similar to BSD license, but uses different words (see xlockmore.spec)
+LICENSE=	2-clause-bsd
 
 DISTINFO_FILE?=		${.CURDIR}/../../wip/xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../../wip/xlockmore/patches
