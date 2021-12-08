@@ -1,7 +1,6 @@
 $NetBSD$
 
-Disable fortune.
-Fix paths for pkgsrc.
+Modify path for fortune.
 
 --- xlock/XLock.ad.orig	2019-05-30 01:30:03.000000000 +0000
 +++ xlock/XLock.ad
@@ -20,24 +19,3 @@ Fix paths for pkgsrc.
  !XLock.program: /usr/games/fortune
  !XLock.program: finger
  !XLock.messagesfile: fortune.dat
-@@ -85,7 +85,7 @@ XLock.messagefont: -*-times-*-*-*-*-18-*
- ! For modes with images
- !XLock.*.bitmap: bitmaps/m-xlock.xbm
- !XLock.*.bitmap: pixmaps/m-xlock.xpm
--!XLock.*.bitmap: /usr/lib/X11/xlock/bitmaps
-+!XLock.*.bitmap: /usr/pkg/lib/X11/xlock/bitmaps
- 
- ! For mailbox check application
- !XLock.mailCmd: /usr/ucb/mail -e
-@@ -851,9 +851,9 @@ XLock.text3d.delay: 100000
- !XLock.text3d.cycles: 1
- !XLock.text3d.size: 1
- XLock.text3d.saturation: 1.0
--!XLock.text3d.ttfont: /usr/lib/X11/xlock/fonts/arial.ttf
-+!XLock.text3d.ttfont: /usr/pkg/lib/X11/xlock/fonts/arial.ttf
- ! Directory of only *.ttf fonts. symbol.ttf and wingding.ttf should be excluded
--!XLock.text3d.ttfont: /usr/lib/X11/xlock/fonts/
-+!XLock.text3d.ttfont: /usr/pkg/lib/X11/xlock/fonts/
- XLock.text3d.extrusion: 25.0
- XLock.text3d.rot_amplitude: 1.0
- XLock.text3d.rot_frequency: 0.001
