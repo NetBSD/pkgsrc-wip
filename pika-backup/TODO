@@ -1,0 +1,14 @@
+   Compiling zbus v1.9.1
+error[E0432]: unresolved import `nix::sys::socket::sockopt::PeerCredentials`
+   --> /scratch/wip/pika-backup/work/vendor/zbus-1.9.1/src/connection.rs:163:44
+    |
+163 |         use nix::sys::socket::{getsockopt, sockopt::PeerCredentials};
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ no `PeerCredentials` in `sys::socket::sockopt`
+
+error[E0432]: unresolved import `nix::sys::socket::sockopt::PeerCredentials`
+   --> /scratch/wip/pika-backup/work/vendor/zbus-1.9.1/src/azync/connection.rs:180:44
+    |
+180 |         use nix::sys::socket::{getsockopt, sockopt::PeerCredentials};
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ no `PeerCredentials` in `sys::socket::sockopt`
+
+For more information about this error, try `rustc --explain E0432`.
