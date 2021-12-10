@@ -675,3 +675,5 @@ Size (ws2_32-sys-0.2.1.crate) = 4697 bytes
 BLAKE2s (yaml-rust-0.4.5.crate) = 65c7c0fe708cb682959e36fbb03b09a35b09d529e5c87364107f5985940a1404
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
+SHA1 (patch-taplo-cli_Cargo.toml) = ef4636eb2e9ce33b563404fc0f934f706d70a361
+SHA1 (patch-taplo-lsp_Cargo.toml) = 0ebc8113af2100a99121da3fa6830c4acbb79f24
