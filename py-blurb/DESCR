@@ -1,0 +1,14 @@
+blurb is a tool designed to rid CPython core development of the
+scourge of Misc/NEWS conflicts.
+
+The core concept: split Misc/NEWS into many separate files that,
+when concatenated back together in sorted order, reconstitute the
+original Misc/NEWS file. After that, Misc/NEWS could be deleted
+from the CPython repo and thereafter rendered on demand (e.g. when
+building a release). When checking in a change to CPython, the
+checkin process will write out a new file that sorts into the
+correct place, using a filename unlikely to have a merge conflict.
+
+blurb is a single command with a number of subcommands. It's designed
+to be run inside a valid CPython (git) repo, and automatically uses
+the correct file paths.

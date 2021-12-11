@@ -3439,6 +3439,7 @@ SUBDIR+=	py-blaze
 SUBDIR+=	py-blist
 SUBDIR+=	py-blosc
 SUBDIR+=	py-bloscpack
+SUBDIR+=	py-blurb
 SUBDIR+=	py-bokeh
 SUBDIR+=	py-bolos
 SUBDIR+=	py-booktype

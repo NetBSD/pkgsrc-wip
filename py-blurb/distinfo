@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.27 2021/10/26 10:18:44 nia Exp $
+
+BLAKE2s (blurb-1.0.8.tar.gz) = d0588927e90098f0e1e42aa942e13f7e82f8b1a70a00f192ae49ca57eb4c4414
+SHA512 (blurb-1.0.8.tar.gz) = 63bba016cfc293923da1cf7cc5f64e8881bf28237faf9908a484d55ff435df71c30544a751e0f167ed82d1f363dca48f53be67a25adc3ebc728c88b31186abac
+Size (blurb-1.0.8.tar.gz) = 21519 bytes

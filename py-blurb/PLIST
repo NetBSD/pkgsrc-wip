@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/blurb.py
+${PYSITELIB}/blurb.pyc
+${PYSITELIB}/blurb.pyo
