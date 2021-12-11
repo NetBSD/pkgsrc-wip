@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (CuraEngine/4.11.0.tar.gz) = aea87a641f775ac4f0af6f4d709333fb65de3bb1bd539269866bc2f57858a736
-SHA512 (CuraEngine/4.11.0.tar.gz) = 3152bd0847d6977e2ee7afd57675cb5000a1824d50bbe442d6e67a0534b8f8b8858f8a71f545a8fabaaf2065b47acbd7de11c35591cf6e891bc6871ea84107c1
-Size (CuraEngine/4.11.0.tar.gz) = 1707416 bytes
+BLAKE2s (CuraEngine/4.12.1.tar.gz) = 4471a7b4c13ced42ac4d431497f1b22b621d30b9e7a64e48082738d9bab08a0a
+SHA512 (CuraEngine/4.12.1.tar.gz) = c0c703ec9c7fb05389806f45174d45dd65bece169e3ad88aa1744091ce3c3c1e1e4f5af32cb55cfa9f1a4a8bffe0a008d5924a6e5d02baed00996c9112fbafef
+Size (CuraEngine/4.12.1.tar.gz) = 1726565 bytes
