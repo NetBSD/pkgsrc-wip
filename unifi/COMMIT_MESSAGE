@@ -1,9 +1,10 @@
 NOMERGE: UPDATE IS NOT TESTED
 
-net/unifi: Update to 6.4.54
+net/unifi: Update to 6.5.54
 
 Overview
 
+    Fix for log4j
     Notification re-work.
     Real-time traffic updates from Gateway (UDM/UXG).
     Improve system performance.
