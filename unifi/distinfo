@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/05/31 17:11:34 gdt Exp $
+$NetBSD: distinfo,v 1.20 2021/12/11 17:28:25 gdt Exp $
 
 BLAKE2s (snappy-1.0.5.tar.gz) = 956b30e6d0dd96ce2002ac4aa112a813e184969cebcfbf532802d0ed2d3bab36
 SHA512 (snappy-1.0.5.tar.gz) = 4f772673dd1bf482f13db0f09299b46d0ee47b7052c43e69c2c5361d352031152f3132c25faf86ffcf1bfbe0e68625d7eef8fa669be873b568adfc160a82f25b
