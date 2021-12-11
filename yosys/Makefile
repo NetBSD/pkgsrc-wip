@@ -2,12 +2,12 @@
 
 GITHUB_PROJECT=	yosys
 GITHUB_TAG=	refs/tags/${DISTNAME}
-DISTNAME=	yosys-0.10
+DISTNAME=	yosys-0.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/cliffordwolf/
+HOMEPAGE=	https://yosyshq.net/yosys/
 COMMENT=	Framework for Verilog RTL synthesis
 LICENSE=	isc
 

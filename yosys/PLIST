@@ -53,6 +53,17 @@ share/yosys/efinix/cells_map.v
 share/yosys/efinix/cells_sim.v
 share/yosys/efinix/gbuf_map.v
 share/yosys/gate2lut.v
+share/yosys/gatemate/arith_map.v
+share/yosys/gatemate/brams.txt
+share/yosys/gatemate/brams_init_20.vh
+share/yosys/gatemate/brams_init_40.vh
+share/yosys/gatemate/brams_map.v
+share/yosys/gatemate/cells_bb.v
+share/yosys/gatemate/cells_sim.v
+share/yosys/gatemate/lut_map.v
+share/yosys/gatemate/mul_map.v
+share/yosys/gatemate/mux_map.v
+share/yosys/gatemate/reg_map.v
 share/yosys/gowin/arith_map.v
 share/yosys/gowin/bram_init_16.vh
 share/yosys/gowin/brams.txt
