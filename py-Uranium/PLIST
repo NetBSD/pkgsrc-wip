@@ -146,7 +146,9 @@ ${PYSITELIB}/UM/Settings/ContainerProvider.py
 ${PYSITELIB}/UM/Settings/ContainerQuery.py
 ${PYSITELIB}/UM/Settings/ContainerRegistry.py
 ${PYSITELIB}/UM/Settings/ContainerStack.py
+${PYSITELIB}/UM/Settings/DatabaseContainerMetadataController.py
 ${PYSITELIB}/UM/Settings/DefinitionContainer.py
+${PYSITELIB}/UM/Settings/DefinitionContainerUnpickler.py
 ${PYSITELIB}/UM/Settings/EmptyInstanceContainer.py
 ${PYSITELIB}/UM/Settings/InstanceContainer.py
 ${PYSITELIB}/UM/Settings/Interfaces.py
@@ -160,6 +162,7 @@ ${PYSITELIB}/UM/Settings/Models/SettingPropertyProvider.py
 ${PYSITELIB}/UM/Settings/Models/SettingVisibilityHandler.py
 ${PYSITELIB}/UM/Settings/Models/__init__.py
 ${PYSITELIB}/UM/Settings/PropertyEvaluationContext.py
+${PYSITELIB}/UM/Settings/SQLQueryFactory.py
 ${PYSITELIB}/UM/Settings/SettingDefinition.py
 ${PYSITELIB}/UM/Settings/SettingFunction.py
 ${PYSITELIB}/UM/Settings/SettingInstance.py
