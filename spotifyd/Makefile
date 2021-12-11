@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	spotifyd-0.3.2
+DISTNAME=	spotifyd-0.3.3
 PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
