@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	libxtend-0.1.3.22
+DISTNAME=	libxtend-0.1.3.23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	58a08c3e793915189c1179401ccef608b4125bb2
+GITHUB_TAG=	38c691bb98f961eb979ef71dce355c66b262f458
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/libxtendc

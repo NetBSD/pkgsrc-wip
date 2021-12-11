@@ -85,10 +85,11 @@ man/man3/tsv_skip_field.3
 man/man3/tsv_skip_rest_of_line.3
 man/man3/va_usage.3
 man/man3/valid_extension.3
-man/man3/xt_binomial.3
+man/man3/xt_factorial.3
 man/man3/xt_fclose.3
 man/man3/xt_fopen.3
 man/man3/xt_malloc.3
+man/man3/xt_n_choose_k.3
 man/man3/xt_realloc.3
 man/man3/xt_tic.3
 man/man3/xt_toc.3
