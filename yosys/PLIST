@@ -167,6 +167,7 @@ share/yosys/nexus/lutrams.txt
 share/yosys/nexus/lutrams_map.v
 share/yosys/nexus/parse_init.vh
 share/yosys/pmux2mux.v
+share/yosys/python3/smtio.py
 share/yosys/quicklogic/abc9_map.v
 share/yosys/quicklogic/abc9_model.v
 share/yosys/quicklogic/abc9_unmap.v
@@ -183,7 +184,6 @@ share/yosys/sf2/cells_sim.v
 share/yosys/simcells.v
 share/yosys/simlib.v
 share/yosys/techmap.v
-share/yosys/usr/pkg/bin/python3.8/smtio.py
 share/yosys/xilinx/abc9_model.v
 share/yosys/xilinx/arith_map.v
 share/yosys/xilinx/brams_init_16.vh
