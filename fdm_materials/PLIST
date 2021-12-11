@@ -1,6 +1,13 @@
 @comment $NetBSD$
 share/cura/resources/materials/3D-Fuel_PLA_PRO_Black.xml.fdm_material
 share/cura/resources/materials/3D-Fuel_PLA_SnapSupport.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_Anthracite_175.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_Black_175.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_Blue_175.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_Nature_175.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_Red_175.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_Silver_175.xml.fdm_material
+share/cura/resources/materials/Extrudr_GreenTECPro_White_175.xml.fdm_material
 share/cura/resources/materials/Vertex_Delta_ABS.xml.fdm_material
 share/cura/resources/materials/Vertex_Delta_PET.xml.fdm_material
 share/cura/resources/materials/Vertex_Delta_PLA.xml.fdm_material
@@ -58,7 +65,9 @@ share/cura/resources/materials/filo3d_pla_green.xml.fdm_material
 share/cura/resources/materials/filo3d_pla_red.xml.fdm_material
 share/cura/resources/materials/generic_abs.xml.fdm_material
 share/cura/resources/materials/generic_abs_175.xml.fdm_material
+share/cura/resources/materials/generic_asa_175.xml.fdm_material
 share/cura/resources/materials/generic_bam.xml.fdm_material
+share/cura/resources/materials/generic_bvoh_175.xml.fdm_material
 share/cura/resources/materials/generic_cffcpe.xml.fdm_material
 share/cura/resources/materials/generic_cffpa.xml.fdm_material
 share/cura/resources/materials/generic_cpe.xml.fdm_material

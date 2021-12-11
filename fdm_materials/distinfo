@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (fdm_materials/4.11.0.tar.gz) = 747b3e9e04da15f76154cb705b414d1d276c369b4f1d26cf332be8f23aac4be1
-SHA512 (fdm_materials/4.11.0.tar.gz) = 250f39914ead8261f9b6e2bc4ac6e31e4c8fcc767a6c05f608502212f047b7893a03cbc13c95cb0c3a4affb77c2b7f3032c87cb53f7c6e11c992904b8373bf35
-Size (fdm_materials/4.11.0.tar.gz) = 54798 bytes
+BLAKE2s (fdm_materials/4.12.0.tar.gz) = 6e4f5c20f27c1d7d4db2585fa588e273ea8fee6bb7d73504b2304de764b7fdca
+SHA512 (fdm_materials/4.12.0.tar.gz) = 891ba751dd94d5e733c2b283b39549dbdc075fcacbbc77598cdfcc944a225c9bded3c2f5ba75f5538bccfc8484cf7a7fcab869c199d81c047ac236225220f230
+Size (fdm_materials/4.12.0.tar.gz) = 56076 bytes
