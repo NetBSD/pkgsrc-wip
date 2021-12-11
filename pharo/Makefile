@@ -1,7 +1,7 @@
 # $NetBSD$
 
-PHARO_BUILD=	1565
-PHARO_SHA=	38c49c2
+PHARO_BUILD=	1573
+PHARO_SHA=	0e09d75
 PHARO_ARCH=	64bit
 
 DISTNAME=	Pharo9.0-SNAPSHOT.build.${PHARO_BUILD}.sha.${PHARO_SHA}.arch.${PHARO_ARCH}
@@ -11,7 +11,7 @@ MASTER_SITES=	http://files.pharo.org/image/90/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://files.pharo.org/image/90/
+HOMEPAGE=	https://pharo.org/
 COMMENT=	Pure object-oriented programming language and a powerful environment
 LICENSE=	mit AND apache-2.0
 
