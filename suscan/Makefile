@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	suscan-0.1.0git
+DISTNAME=	suscan-0.2.0git
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BatchDrake/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	4f6ede2fd62d0992e582e5efa436bbdb8d49e8c1
+GITHUB_TAG=	4ad53ffd4e6a3733e7bc72fb73d0bf6294a64aaf
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://github.com/BatchDrake/suscan/

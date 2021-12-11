@@ -2,11 +2,11 @@ $NetBSD$
 
 Fix C++ compilation.
 
---- sigutils/types.h.orig	2021-04-06 15:35:35.000000000 +0000
+--- sigutils/types.h.orig	2021-11-21 19:52:52.000000000 +0000
 +++ sigutils/types.h
-@@ -27,7 +27,11 @@
- #include <stdio.h>
+@@ -28,7 +28,11 @@
  #include <stdlib.h>
+ #include <stdint.h>
  #include <math.h>
 +#if defined(__cplusplus)
 +#include <complex>

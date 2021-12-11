@@ -1,4 +1,5 @@
 @comment $NetBSD$
+qt5/include/SuWidgets/BookmarkInfo.h
 qt5/include/SuWidgets/ColorChooserButton.h
 qt5/include/SuWidgets/Constellation.h
 qt5/include/SuWidgets/Decider.h

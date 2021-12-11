@@ -17,6 +17,7 @@ include/sigutils/sigutils/pll.h
 include/sigutils/sigutils/property.h
 include/sigutils/sigutils/sampling.h
 include/sigutils/sigutils/sigutils.h
+include/sigutils/sigutils/smoothpsd.h
 include/sigutils/sigutils/softtune.h
 include/sigutils/sigutils/specttuner.h
 include/sigutils/sigutils/taps.h

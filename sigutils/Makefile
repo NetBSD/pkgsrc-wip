@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	sigutils-0.1.0git
+DISTNAME=	sigutils-0.2.0git
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BatchDrake/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	0d434d697bd7ac94e6b51448d31d1e433debe360
+GITHUB_TAG=	eb6436559ef2d182c4099244fcfd4be50232c15e
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://github.com/BatchDrake/sigutils/

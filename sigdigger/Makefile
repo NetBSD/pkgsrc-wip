@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	SigDigger-0.1.0git
+DISTNAME=	SigDigger-0.2.0git
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BatchDrake/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	df2957b8fc4f2b595d15e4fc81b084e0053e3aa1
+GITHUB_TAG=	557f6712d868f2ee08bc38fbbab68d9171f40bfb
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	https://batchdrake.github.io/SigDigger/

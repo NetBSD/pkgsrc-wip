@@ -2,14 +2,18 @@
 bin/suscan.status
 bin/suscli
 include/suscan/analyzer/analyzer.h
+include/suscan/analyzer/discovery.h
 include/suscan/analyzer/estimator.h
 include/suscan/analyzer/inspector/inspector.h
 include/suscan/analyzer/inspector/interface.h
 include/suscan/analyzer/inspector/params.h
 include/suscan/analyzer/inspsched.h
+include/suscan/analyzer/local.h
 include/suscan/analyzer/mq.h
 include/suscan/analyzer/msg.h
 include/suscan/analyzer/realtime.h
+include/suscan/analyzer/remote.h
+include/suscan/analyzer/serialize.h
 include/suscan/analyzer/source.h
 include/suscan/analyzer/spectsrc.h
 include/suscan/analyzer/symbuf.h
@@ -21,7 +25,9 @@ include/suscan/cli/chanloop.h
 include/suscan/cli/cli.h
 include/suscan/cli/cmds.h
 include/suscan/cli/datasaver.h
+include/suscan/cli/devserv.h
 include/suscan/codec/codec.h
+include/suscan/util/cbor.h
 include/suscan/util/cfg.h
 include/suscan/util/compat.h
 include/suscan/util/confdb.h
@@ -30,6 +36,7 @@ include/suscan/util/macos-barriers.h
 include/suscan/util/macos-barriers.imp.h
 include/suscan/util/object.h
 include/suscan/util/rbtree.h
+include/suscan/util/sha256.h
 lib/libsuscan.so
 lib/libsuscan.so.0.2.0
 lib/pkgconfig/suscan.pc
