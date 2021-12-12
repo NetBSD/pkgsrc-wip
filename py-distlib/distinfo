@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (distlib-0.3.3.zip) = c702fd5e4a23987685f2ae2958e90f7ce53a77ad
-SHA512 (distlib-0.3.3.zip) = 834ed7314b2c3aecaaa833a275aac9ae72feb27e62c4e712b30bb5ac526bd38d18756d51ca8c95015953dac7f0cfd7e60382c0a7bdf330d8a01602ccb7344f0d
-Size (distlib-0.3.3.zip) = 743791 bytes
+BLAKE2s (distlib-0.3.4.zip) = 1a35df02452c170c13a743bda2aeb0a26118fb8ea612b0e2ce288f543cdabff0
+SHA512 (distlib-0.3.4.zip) = 87b5c151517a8043a4d714b561cc0758bd3209b71baf9dcd573a853bd036c54ac2359809b5e2d65cdeee3488757fdc63a2b1abb15e7e189bd601cde1fc85648c
+Size (distlib-0.3.4.zip) = 631981 bytes
