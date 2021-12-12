@@ -11,6 +11,7 @@ COMMENT=	High-performance bioinformatics tools based on biolibc
 LICENSE=	2-clause-bsd
 
 BUILD_TARGET=	depend all
+MAKE_ENV+=	VERSION=${PKGVERSION}
 INSTALL_TARGET=	install-strip
 
 pre-build:
