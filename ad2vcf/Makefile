@@ -1,14 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	ad2vcf-0.1.3.43
+DISTNAME=	ad2vcf-0.1.3.45
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	a7e0f2c7bbcc49e0b56d23531260b1edfbccddaf
+GITHUB_TAG=	22296d4e09c5ed1be65b731ccf42ddf19f8b2890
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/ad2vcf
 COMMENT=	Add allelic depth info from a SAM stream to a VCF file
 LICENSE=	2-clause-bsd
+
+MAKE_ENV+=	VERSION=${PKGVERSION}
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
