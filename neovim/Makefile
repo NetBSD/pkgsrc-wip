@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	neovim-0.5.0
+DISTNAME=	neovim-0.6.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARG_PATH=		${WRKSRC}
+
+LDFLAGS.SunOS+=		-lrt
 
 # should follow the LuaJIT API compatibility
 LUA_VERSION_REQD=	51
@@ -39,8 +41,22 @@ post-extract:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../devel/libexecinfo/buildlink3.mk"
+.endif
 .include "../../devel/msgpack/buildlink3.mk"
+# Only use luajit whenever it is supported by the current architecture,
+# fall back on plain lua if not.
+#
+# In addition, LuaJIT does not play well on x86_64 SunOS where memory
+# allocations fails.
+.if ${OPSYS} == "SunOS"
+    || (!empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Msparc) || !empty(MACHINE_ARCH:Msparc64))
+.include "../../lang/lua51/buildlink3.mk"
+CMAKE_ARGS+=		-DPREFER_LUA=ON
+.else
 .include "../../lang/LuaJIT2/buildlink3.mk"
+.endif
 .include "../../lang/lua/application.mk"
 .include "../../wip/lua-luv/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
