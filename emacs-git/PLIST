@@ -3670,6 +3670,10 @@ share/emacs/${PKGVERSION}/lisp/soundex.el.gz
 share/emacs/${PKGVERSION}/lisp/soundex.elc
 share/emacs/${PKGVERSION}/lisp/speedbar.el.gz
 share/emacs/${PKGVERSION}/lisp/speedbar.elc
+share/emacs/${PKGVERSION}/lisp/sqlite-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/sqlite-mode.elc
+share/emacs/${PKGVERSION}/lisp/sqlite.el.gz
+share/emacs/${PKGVERSION}/lisp/sqlite.elc
 share/emacs/${PKGVERSION}/lisp/startup.el.gz
 share/emacs/${PKGVERSION}/lisp/startup.elc
 share/emacs/${PKGVERSION}/lisp/strokes.el.gz
