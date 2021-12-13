@@ -1,7 +1,7 @@
 $NetBSD$
 
 Fix unportable syntax in shell script.
-Patch was reported to upstream.
+Patch was merged upstream, remove for next release.
 
 --- config.cygport.orig	2019-12-05 00:56:37.000000000 +0000
 +++ config.cygport
