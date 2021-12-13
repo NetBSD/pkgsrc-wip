@@ -1,6 +1,7 @@
 $NetBSD$
 
 Modify path for fortune.
+Not suitable for upstream.
 
 --- xlock/XLock.ad.orig	2019-05-30 01:30:03.000000000 +0000
 +++ xlock/XLock.ad

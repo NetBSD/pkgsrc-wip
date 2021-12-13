@@ -8,4 +8,4 @@ SHA1 (patch-config.cygport) = 8f515068eca680e4f00858eaba2767625d92758f
 SHA1 (patch-configure) = 48bc780cf4241c43ca6a2502cf74e700e319c238
 SHA1 (patch-modes_Makefile.in) = 0a927c8927bd5c24eabb0078651b3813eea9227a
 SHA1 (patch-xglock_Makefile.in) = e5f3bf2054d4e7ea18d13c04f6bd94457d574ad1
-SHA1 (patch-xlock_XLock.ad) = 206c9bbcbde6e077d8c6fda8eb62513f59b98d82
+SHA1 (patch-xlock_XLock.ad) = f4754850a171530465be1949b0ea4f49b359bb3a
