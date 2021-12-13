@@ -4,7 +4,7 @@ DISTNAME=	lemonbar-xft-1.3
 CATEGORIES=	x11
 MASTER_SITES=	https://gitlab.com/protesilaos/lemonbar-xft/-/archive/0042efd2ec1477ab96eb044ebba72a10aefff21f/
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/protesilaos/lemonbar-xft/
 COMMENT=	Featherweight lemon-scented bar
 LICENSE=	mit
