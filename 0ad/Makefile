@@ -23,24 +23,30 @@ do-configure:
 		--datadir=${PREFIX}/share/${PKGBASE} \
 		--libdir=${PREFIX}/lib/${PKGBASE} \
 		--with-system-nvtt \
-		--with-system-mozjs31
+		--without-lobby
+#		--with-system-mozjs31
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
 
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../chat/gloox/buildlink3.mk"
+.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+#.include "../../chat/gloox/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../wip/spidermonkey31/buildlink3.mk"
-.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
+#.include "../../wip/spidermonkey31/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
