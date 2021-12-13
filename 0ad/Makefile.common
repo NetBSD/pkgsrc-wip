@@ -1,7 +1,7 @@
 # $NetBSD$
 # used by wip/0ad-data/Makefile
 
-DISTVERSION=	0ad-0.0.20-alpha-unix
+DISTVERSION=	0ad-0.0.25b-alpha-unix
 CATEGORIES=	games
 MASTER_SITES=	http://releases.wildfiregames.com/
 EXTRACT_SUFX=	.tar.xz
