@@ -22,10 +22,10 @@ do-configure:
 		--bindir=${PREFIX}/bin \
 		--datadir=${PREFIX}/share/${PKGBASE} \
 		--libdir=${PREFIX}/lib/${PKGBASE} \
+		--with-system-mozjs \
 		--with-system-nvtt \
 		--without-lobby \
 		--disable-atlas
-#		--with-system-mozjs31
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
@@ -41,12 +41,12 @@ do-build:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/mozjs78/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-#.include "../../wip/spidermonkey31/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
