@@ -33,11 +33,12 @@ do-build:
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
+#.include "../../chat/gloox/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
-#.include "../../chat/gloox/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
