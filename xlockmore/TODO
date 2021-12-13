@@ -3,3 +3,4 @@
 [X] Check paths in "patch-xlock_XLock.ad"
 [X] Use SUBST framework for "Makefile.common"
 [ ] Check whether CVE-2006-0061 is fixed
+[ ] Move MESSAGE to ${PREFIX}/share/doc
