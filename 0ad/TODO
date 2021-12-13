@@ -1,0 +1,10 @@
+Something goes wrong with curl:
+
+../../contrib/curl/lib/strerror.c: In function 'curl_easy_strerror':
+../../contrib/curl/lib/strerror.c:217:3: error: duplicate case value
+   case CURLE_SSL_CACERT:
+   ^~~~
+../../contrib/curl/lib/strerror.c:190:3: note: previously used here
+   case CURLE_PEER_FAILED_VERIFICATION:
+   ^~~~
+gmake[3]: *** [curl-lib.make:655: obj/Release/curl-lib/strerror.o] Error 1
