@@ -7,7 +7,7 @@ libexec/biolibc-tools/fastq-derep.sh
 libexec/biolibc-tools/fastx-derep
 libexec/biolibc-tools/fastx2tsv
 libexec/biolibc-tools/find-orfs
-libexec/biolibc-tools/gff-to-bed
+libexec/biolibc-tools/gff2bed
 libexec/biolibc-tools/uniq-seqs.awk
 libexec/biolibc-tools/vcf-search
 man/man1/blt-chrom-lens.1
@@ -17,6 +17,6 @@ man/man1/blt-fastq-derep.sh.1
 man/man1/blt-fastx-derep.1
 man/man1/blt-fastx2tsv.1
 man/man1/blt-find-orfs.1
-man/man1/blt-gff-to-bed.1
+man/man1/blt-gff2bed.1
 man/man1/blt-vcf-search.1
 man/man1/blt.1
