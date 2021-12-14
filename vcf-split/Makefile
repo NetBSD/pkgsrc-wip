@@ -16,5 +16,4 @@ pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
 
 .include "../../wip/biolibc/buildlink3.mk"
-.include "../../wip/libxtend/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

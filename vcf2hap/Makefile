@@ -17,6 +17,5 @@ pre-build:
 do-test:
 	cd ${WRKSRC}/Test && ./run-test.sh
 
-.include "../../wip/libxtend/buildlink3.mk"
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

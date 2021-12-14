@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	peak-classifier-0.1.1.26
+DISTNAME=	peak-classifier-0.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	9df4f678b66ab4eb19d1ad7f84dcd3c8f37217cc
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/peak-classifier
@@ -17,7 +16,6 @@ REPLACE_PYTHON=	feature-view.py
 pre-build:
 	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
 
-.include "../../wip/libxtend/buildlink3.mk"
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
