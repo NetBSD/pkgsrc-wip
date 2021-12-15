@@ -1,4 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/03/20 16:56:17 nros Exp $
 
-RMD160 (premake-5.0-alpha1-src.zip) = 7b36afb80fdb089f175fac117efdd6a1b5ce823f
-Size (premake-5.0-alpha1-src.zip) = 704176 bytes
+SHA1 (premake-5.0.0-beta1-src.zip) = 237be0617114982c1a2fd9499b85cc449e338adf
+RMD160 (premake-5.0.0-beta1-src.zip) = 64a43218cf74efc18ebd63858b54b771693f18e6
+SHA512 (premake-5.0.0-beta1-src.zip) = 4745cfa796f3f7616b96c2541bca54ba91ef53310cd3a8b9891fcb22170b1b68ebe245471aa63d82fbd94a50643ddf468b66c85e32c1ce214cf5c65b5da27e62
+Size (premake-5.0.0-beta1-src.zip) = 8785875 bytes
