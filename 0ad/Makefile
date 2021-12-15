@@ -31,7 +31,8 @@ do-configure:
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-		${GMAKE} config=release verbose=1 -C build/workspaces/gcc
+		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N} \
+		-C build/workspaces/gcc
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
