@@ -4,6 +4,7 @@ SHA1 (0ad-0.0.25b-alpha-unix-build.tar.xz) = 130444c15e29c7fa1333b8719ae7c7da367
 RMD160 (0ad-0.0.25b-alpha-unix-build.tar.xz) = 295ad0f386df10cc95cee7dea889ccd43224dd1e
 SHA512 (0ad-0.0.25b-alpha-unix-build.tar.xz) = e8069897b97b381099ab5ec5868d27e96c699105b3307054d1bc7bf9236a537f02625ba9034892d91f3e951b4f95c9ce5fb75ed0a7c14b8a294882482fd9c1b4
 Size (0ad-0.0.25b-alpha-unix-build.tar.xz) = 75579956 bytes
+SHA1 (patch-build_premake_extern__libs5.lua) = 4a0c97a89945d0818fcb22ab09aa329160e727e8
 SHA1 (patch-build_workspaces_clean-workspaces.sh) = fed7e867eb8e24e37860599269f9feb4d30c5a43
 SHA1 (patch-build_workspaces_update-workspaces.sh) = 3e92f823e3204451522055a5f4cd2ee1d5819b2f
 SHA1 (patch-libraries_source_fcollada_include_FCDocument_FCDocument.h) = 96aef76c02ae4a3f47fdb7c31bf7d11490ba5d09
