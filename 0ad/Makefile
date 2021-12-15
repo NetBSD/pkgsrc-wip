@@ -10,6 +10,8 @@ COMMENT=	Historical real-time strategy game
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
+# Requires C++17 and add "--std" option itself
+GCC_REQD+=	7
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake perl bash pkg-config
