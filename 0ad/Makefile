@@ -18,8 +18,8 @@ DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
 DEPENDS+=	premake5-[0-9]*:../../wip/premake5
 
 do-configure:
-	${RUN} cd ${WRKSRC} && ./build/workspaces/clean-workspaces.sh
-	${RUN} cd ${WRKSRC} && ./build/workspaces/update-workspaces.sh \
+	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
+	${RUN} cd ${WRKSRC}/build/workspaces && ./update-workspaces.sh \
 		--bindir=${PREFIX}/bin \
 		--datadir=${PREFIX}/share/${PKGBASE} \
 		--libdir=${PREFIX}/lib/${PKGBASE} \
