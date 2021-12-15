@@ -1,6 +1,6 @@
 $NetBSD$
 
---- build/workspaces/update-workspaces.sh.orig	2015-06-14 20:43:12.000000000 +0000
+--- build/workspaces/update-workspaces.sh.orig	2021-07-27 21:57:40.000000000 +0000
 +++ build/workspaces/update-workspaces.sh
 @@ -1,10 +1,5 @@
  #!/bin/sh
@@ -22,3 +22,19 @@ $NetBSD$
      MAKE=${MAKE:="gmake"}
      ;;
    * )
+@@ -120,11 +115,14 @@ if [ "$with_system_premake5" = "false" ]
+   ${MAKE} -C $PREMAKE_BUILD_DIR ${JOBS} || die "Premake build failed"
+ 
+   premake_command="premake5/bin/release/premake5"
++  cd ..
++else
++  cd ../premake
+ fi
++# Now in build/premake subdirectory
+ 
+ echo
+ 
+-cd ..
+ 
+ # If we're in bash then make HOSTTYPE available to Premake, for primitive arch-detection
+ export HOSTTYPE="$HOSTTYPE"
