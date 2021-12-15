@@ -73,8 +73,10 @@ sbin/auto-ipmi-remote-access
 sbin/auto-ipmi-remote-power
 sbin/auto-ipmi-remote-status
 sbin/auto-krb-auth-setup
+sbin/auto-last-update
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
+sbin/auto-localbase
 sbin/auto-lock-local-pw
 sbin/auto-lock-user
 sbin/auto-mark-install-from-source
