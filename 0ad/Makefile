@@ -26,6 +26,7 @@ do-configure:
 		--with-system-premake5 \
 		--with-system-mozjs \
 		--with-system-nvtt \
+		--without-pch \
 		--disable-atlas
 
 do-build:
