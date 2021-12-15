@@ -10,7 +10,7 @@ GITHUB_RELEASE=		v${PREMAKE5_VERSION}-beta1
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://premake.bitbucket.org/
+HOMEPAGE=		https://premake.github.io/
 COMMENT=		Build script generator
 LICENSE=		modified-bsd
 
