@@ -15,6 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl bash pkg-config
 
 DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
+DEPENDS+=	premake5:../../wip/premake5
 
 do-configure:
 	${RUN} cd ${WRKSRC} && ./build/workspaces/clean-workspaces.sh
@@ -22,6 +23,7 @@ do-configure:
 		--bindir=${PREFIX}/bin \
 		--datadir=${PREFIX}/share/${PKGBASE} \
 		--libdir=${PREFIX}/lib/${PKGBASE} \
+		--with-system-premake5 \
 		--with-system-mozjs \
 		--with-system-nvtt \
 		--without-lobby \
