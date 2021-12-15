@@ -1,2 +1,12 @@
-[X] Fix iconv mismatch
+[X] Fix iconv mismatch in tinygettext
 [ ] Create PLIST
+
+In file included from /usr/pkg/include/mozjs-78/js/TraceKind.h:12:0,
+                 from /usr/pkg/include/mozjs-78/jspubtd.h:18,
+                 from ../../../source/scriptinterface/ScriptTypes.h:62,
+                 from ../../../source/scriptinterface/ScriptContext.h:21,
+                 from ../../../source/scriptinterface/ScriptContext.cpp:20:
+/usr/pkg/include/mozjs-78/js/TypeDecls.h:55:21: note: class type 'JS::Zone' is incomplete
+ class JS_PUBLIC_API Zone;
+                     ^~~~
+gmake[3]: *** [scriptinterface.make:138: obj/scriptinterface_Release/ScriptContext.o] Error 1
