@@ -1210,6 +1210,7 @@ SUBDIR+=	gnunet-gtk
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnurl
 SUBDIR+=	gnutls-guile
+SUBDIR+=	go118
 SUBDIR+=	go-amqp
 SUBDIR+=	go-ansi
 SUBDIR+=	go-ansicolor

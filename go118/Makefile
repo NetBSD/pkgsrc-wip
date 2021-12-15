@@ -3,9 +3,11 @@
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	117
+GOVERSSUFFIX=	118
 
-DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.rc/rc/}.src
+GO118_VERSION=	1.18.beta1
+
+DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.beta/beta/}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
