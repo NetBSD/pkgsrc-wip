@@ -47,6 +47,7 @@ do-build:
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
