@@ -19,3 +19,4 @@ SHA1 (patch-source_lib_secure__crt.cpp) = 1e56aa627c8f2343884968ab4ebd4b4eec73b7
 SHA1 (patch-source_network_StunClient.cpp) = 6267d44c3d0345d3e47c19746f105657ba984876
 SHA1 (patch-source_scriptinterface_ScriptTypes.h) = f2351c637ba7ed7a36b4399b6e89a0d8281c9ad4
 SHA1 (patch-source_third__party_mikktspace_weldmesh.cpp) = 35df7dd5d5d2aa784ef03599a47cc69982ebe332
+SHA1 (patch-source_third__party_tinygettext_include_tinygettext_iconv.hpp) = 9778a9729202a95a5b5ec3f66419d31aa9b423b9
