@@ -26,7 +26,6 @@ do-configure:
 		--with-system-premake5 \
 		--with-system-mozjs \
 		--with-system-nvtt \
-		--without-lobby \
 		--disable-atlas
 
 do-build:
@@ -35,7 +34,7 @@ do-build:
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
-#.include "../../chat/gloox/buildlink3.mk"
+.include "../../chat/gloox/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
