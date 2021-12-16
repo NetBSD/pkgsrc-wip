@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/17 21:07:31 guigui2 Exp $
-bin/dir2ogg
-man/man1/dir2ogg.1

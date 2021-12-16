@@ -642,7 +642,6 @@ SUBDIR+=	digitemp
 SUBDIR+=	dillo-devel
 SUBDIR+=	ding
 SUBDIR+=	dionysus
-SUBDIR+=	dir2ogg
 SUBDIR+=	direnv
 SUBDIR+=	discident-glib
 SUBDIR+=	dispred
