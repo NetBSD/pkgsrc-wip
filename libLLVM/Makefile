@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.37 2021/05/24 19:52:33 wiz Exp $
 
-DISTNAME=	llvm-12.0.1.src
+DISTNAME=	llvm-13.0.0.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -50,9 +50,10 @@ CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 	llvm_strings llvm_symbolizer llvm_undname llvm_xray		\
 	llvm_yaml_numeric_parser_fuzzer lto msbuild obj2yaml		\
 	opt opt_viewer remarks_shlib sancov sanstats			\
-	verify_uselistorder xcode_toolchain yaml2obj \
-	llvm_ml llvm_profgen llvm_reduce llvm_gsymutil split_file \
-	llvm_libtool_darwin llvm_ifs llvm_dwarfdump
+	verify_uselistorder xcode_toolchain yaml2obj			\
+	llvm_ml llvm_profgen llvm_reduce llvm_gsymutil split_file	\
+	llvm_libtool_darwin llvm_ifs llvm_dwarfdump llvm_sim		\
+	llvm_tapi_diff
 
 CMAKE_ARGS+=	-DLLVM_TOOL_${tool:tu}_BUILD=OFF
 .endfor
