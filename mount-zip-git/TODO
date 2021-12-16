@@ -1,0 +1,1 @@
+Eliminate BUILD_DEPENDS on pandoc (see Makefile).

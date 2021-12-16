@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/mount-zip
+man/man1/mount-zip.1

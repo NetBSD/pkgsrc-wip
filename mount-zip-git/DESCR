@@ -1,0 +1,4 @@
+mount-zip is a tool allowing to open, explore and extract ZIP
+archives.
+
+mount-zip mounts a ZIP archive as a read-only.
