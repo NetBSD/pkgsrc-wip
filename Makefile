@@ -520,7 +520,6 @@ SUBDIR+=	conkeror
 SUBDIR+=	conky
 SUBDIR+=	consul
 SUBDIR+=	contacts
-SUBDIR+=	converttomp3
 SUBDIR+=	cool-retro-term-git
 SUBDIR+=	cops
 SUBDIR+=	copytape
