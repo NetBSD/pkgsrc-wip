@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 DEPENDS+=	${PYPKGPREFIX}-pdfrw-[0-9]*:../../textproc/py-pdfrw
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mutagen
+
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	pre-patch
 SUBST_MESSAGE.setup=	Fixing hardcoded paths in setup.py
