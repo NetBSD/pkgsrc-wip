@@ -4881,7 +4881,6 @@ SUBDIR+=	py-z2pack
 SUBDIR+=	py-zbar
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zenity
-SUBDIR+=	py-zipline
 SUBDIR+=	py-zlmdb
 SUBDIR+=	py-zmqrpc
 SUBDIR+=	py34-html-docs
