@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	rtmidi
+
+.if !defined(RTMIDI_BUILDLINK3_MK)
+RTMIDI_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.rtmidi+=	rtmidi>=5.0.0
+BUILDLINK_PKGSRCDIR.rtmidi?=	../../wip/rtmidi
+
+.endif	# RTMIDI_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-rtmidi

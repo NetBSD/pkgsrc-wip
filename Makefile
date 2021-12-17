@@ -5040,6 +5040,7 @@ SUBDIR+=	rstudio
 SUBDIR+=	rtcmix
 SUBDIR+=	rte
 SUBDIR+=	rthread
+SUBDIR+=	rtmidi
 SUBDIR+=	rtl-sdr-git
 SUBDIR+=	rtl_433
 SUBDIR+=	rtpbreak

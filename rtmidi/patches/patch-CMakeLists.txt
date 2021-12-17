@@ -1,0 +1,95 @@
+$NetBSD$
+
+* Don't force program that use rtmidi to use find_package(Threads)
+  it comes with the so and the public headers don't include pthread.h
+
+* Define GNUIInstallDirs varibles before they are used and remove
+  over inclusion of GNUInstallDirs
+
+* Install cmake package files into the right directory and
+  give them correct names so that they can be found by cmake 
+
+--- CMakeLists.txt.orig	2021-11-16 17:19:37.000000000 +0000
++++ CMakeLists.txt
+@@ -156,7 +156,7 @@ if (NEED_PTHREAD)
+   find_package(Threads REQUIRED
+     CMAKE_THREAD_PREFER_PTHREAD
+     THREADS_PREFER_PTHREAD_FLAG)
+-  list(APPEND PUBLICLINKLIBS Threads::Threads)
++  list(APPEND LINKLIBS Threads::Threads)
+ endif()
+ 
+ # Create library targets.
+@@ -187,11 +187,14 @@ set_target_properties(rtmidi PROPERTIES
+   SOVERSION ${SO_VER}
+   VERSION ${FULL_VER})
+ 
++# Set standard installation directories.
++include(GNUInstallDirs)
++
+ # Set include paths, populate target interface.
+ target_include_directories(rtmidi PRIVATE ${INCDIRS}
+                                   PUBLIC
+                                     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+-                                    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
++                                    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/rtmidi>)
+ 
+ # Set compile-time definitions
+ target_compile_definitions(rtmidi PRIVATE ${API_DEFS})
+@@ -199,9 +202,6 @@ target_compile_definitions(rtmidi PRIVAT
+ target_link_libraries(rtmidi PUBLIC ${PUBLICLINKLIBS} 
+                              PRIVATE ${LINKLIBS})
+ 
+-# Set standard installation directories.
+-include(GNUInstallDirs)
+-
+ # Add tests if requested.
+ option(RTMIDI_BUILD_TESTING "Build test programs" ON)
+ if (NOT DEFINED RTMIDI_BUILD_TESTING OR RTMIDI_BUILD_TESTING STREQUAL "")
+@@ -225,9 +225,6 @@ if (RTMIDI_BUILD_TESTING)
+   add_test(NAME apinames COMMAND apinames)
+ endif()
+ 
+-# Set standard installation directories.
+-include(GNUInstallDirs)
+-
+ # Message
+ string(REPLACE ";" " " apilist "${API_LIST}")
+ message(STATUS "Compiling with support for: ${apilist}")
+@@ -251,7 +248,7 @@ install(TARGETS ${LIB_TARGETS}
+ export(PACKAGE RtMidi)
+ 
+ # Set installation path for CMake files.
+-set(RTMIDI_CMAKE_DESTINATION share/rtmidi)
++set(RTMIDI_CMAKE_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/rtmidi)
+ 
+ # Export library target (build-tree).
+ export(EXPORT RtMidiTargets
+@@ -280,7 +277,7 @@ include(CMakePackageConfigHelpers)
+ 
+ # Write cmake package version file
+ write_basic_package_version_file(
+-    RtMidi-config-version.cmake
++    RtMidiConfigVersion.cmake
+     VERSION ${FULL_VER}
+     COMPATIBILITY SameMajorVersion
+ )
+@@ -288,15 +285,15 @@ write_basic_package_version_file(
+ # Write cmake package config file
+ configure_package_config_file (
+     cmake/RtMidi-config.cmake.in
+-    RtMidi-config.cmake
++    RtMidiConfig.cmake
+     INSTALL_DESTINATION "${RTMIDI_CMAKE_DESTINATION}"
+ )
+ 
+ # Install package files
+ install (
+     FILES
+-        "${CMAKE_CURRENT_BINARY_DIR}/RtMidi-config.cmake"
+-        "${CMAKE_CURRENT_BINARY_DIR}/RtMidi-config-version.cmake"
++        "${CMAKE_CURRENT_BINARY_DIR}/RtMidiConfig.cmake"
++        "${CMAKE_CURRENT_BINARY_DIR}/RtMidiConfigVersion.cmake"
+     DESTINATION
+         "${RTMIDI_CMAKE_DESTINATION}"
+ )
