@@ -18,6 +18,8 @@ USE_TOOLS+=		autoconf automake autoreconf gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-pdfman
 
+CXXFLAGS+=	-std=c++11
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 

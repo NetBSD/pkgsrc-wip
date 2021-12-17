@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (vsearch-2.18.0.tar.gz) = 48ca99858b157da943eca273d4a4f25e94aa7c64ecf4c7373821c30cdfbc38c5
 SHA512 (vsearch-2.18.0.tar.gz) = 9da21685fe64743ccf43f209bdd5b586c8f7faaae9f1a204634b713d7ba8a86478f31b24bdda7820fba97318d4408c803a6b3eed1e37189907fbd5882183d781
 Size (vsearch-2.18.0.tar.gz) = 252014 bytes
-SHA1 (patch-configure.ac) = d52324280880db2688de0329749c9da99a812566
+SHA1 (patch-configure.ac) = 23aa28454d5f58222b10302cbd01ceaf0e7dca3f
 SHA1 (patch-src_Makefile.am) = fb76ec48d5292aaa276a0b6105e19ccc0abb03df
