@@ -34,7 +34,6 @@ TEST_TARGET=		test
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
-BUILDLINK_API_DEPENDS.htslib+=	htslib>=1.10.2
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
