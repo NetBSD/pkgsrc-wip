@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bowtie2-2.4.2
+DISTNAME=	bowtie2-2.4.4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,17 +16,12 @@ REPLACE_PERL=	scripts/*.pl bowtie2
 REPLACE_PYTHON=	bowtie2-build bowtie2-inspect
 REPLACE_SH=	scripts/bowtie2-hbb.sh
 
-# Use onetbb on supported platforms when a package is available
-MAKE_FLAGS+=	NO_TBB=1
-
 DATADIR=	${PREFIX}/share/bowtie2
 EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
 
-INSTALLATION_DIRS=	share/bowtie2/scripts share/examples/bowtie2
+INSTALLATION_DIRS=	bin share/bowtie2/scripts share/examples/bowtie2
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bowtie2*-s ${WRKSRC}/bowtie2*-l \
-		${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.sh ${WRKSRC}/scripts/*.pl \
 		${DESTDIR}${DATADIR}/scripts
 	(cd ${WRKSRC}/example && pax -rw index reads reference \
