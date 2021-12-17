@@ -47,4 +47,5 @@ INSTALLATION_DIRS+=	bin ${DOCDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/cdhit-user-guide.pdf ${DESTDIR}${DOCDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
