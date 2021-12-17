@@ -4,6 +4,7 @@ bin/cd-hit
 bin/cd-hit-2d
 bin/cd-hit-2d-para.pl
 bin/cd-hit-454
+bin/cd-hit-clstr_2_blm8.pl
 bin/cd-hit-div
 bin/cd-hit-div.pl
 bin/cd-hit-est
