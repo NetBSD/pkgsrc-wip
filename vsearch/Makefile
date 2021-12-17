@@ -11,7 +11,7 @@ COMMENT=	Versatile open-source tool for metagenomics
 LICENSE=	gnu-gpl-v3
 
 # Works on powerpc64, but only in little endian mode
-ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-aarch64* *-*-powerpc64 *-*-x86_64
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake autoreconf gmake
