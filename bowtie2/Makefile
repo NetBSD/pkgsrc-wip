@@ -19,7 +19,7 @@ REPLACE_SH=	scripts/bowtie2-hbb.sh
 DATADIR=	${PREFIX}/share/bowtie2
 EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
 
-INSTALLATION_DIRS=	bin share/bowtie2/scripts share/examples/bowtie2
+INSTALLATION_DIRS=	share/bowtie2/scripts share/examples/bowtie2
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.sh ${WRKSRC}/scripts/*.pl \
