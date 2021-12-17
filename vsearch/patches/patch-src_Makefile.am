@@ -1,14 +1,14 @@
 $NetBSD$
 
-# Respect build env
+# Respect pkgsrc env
 
---- src/Makefile.am.orig	2019-04-30 11:57:32 UTC
+--- src/Makefile.am.orig	2021-12-17 18:04:20.932004483 +0000
 +++ src/Makefile.am
 @@ -1,12 +1,12 @@
  bin_PROGRAMS = $(top_builddir)/bin/vsearch
  
  if TARGET_PPC
--AM_CXXFLAGS=-Wall -Wsign-compare -O3 -g -mcpu=power8
+-AM_CXXFLAGS=-Wall -Wsign-compare -O3 -g -mcpu=powerpc64le -maltivec
 +AM_CXXFLAGS=-Wall -Wsign-compare
  else
  if TARGET_AARCH64
