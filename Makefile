@@ -3768,6 +3768,7 @@ SUBDIR+=	py-flask-simplelogin
 SUBDIR+=	py-flatbuffers
 SUBDIR+=	py-flavio
 SUBDIR+=	py-flipper
+SUBDIR+=	py-flit_core
 SUBDIR+=	py-fluiddyn
 SUBDIR+=	py-fluids
 SUBDIR+=	py-fmmlib
