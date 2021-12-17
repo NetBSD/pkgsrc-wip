@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	canu-1.8
+DISTNAME=	canu-2.2
 CATEGORIES=	biology java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,11 +22,6 @@ SUBST_SED.optimize+=	-e 's|-funroll-loops||g'
 SUBST_SED.optimize+=	-e 's|-fexpensive-optimizations||g'
 SUBST_SED.optimize+=	-e 's|-finline-functions||g'
 SUBST_FILES.optimize+=	${WRKSRC}/Makefile
-
-SUBST_CLASSES+=		jar
-SUBST_STAGE.jar=	pre-configure
-SUBST_SED.jar+=		-e 's|\\$$bin/mhap-|${PREFIX}/${JAVAJARDIR}/mhap-|g'
-SUBST_FILES.jar+=	${WRKSRC}/pipelines/canu/OverlapMhap.pm
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
@@ -52,7 +47,6 @@ USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_JAVA2=	8
 USE_TOOLS+=	gmake pax perl
-GCC_REQD+=	4.8
 
 WRKSRC=		${WRKDIR}/canu-${PKGVERSION_NOREV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
