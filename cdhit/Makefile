@@ -33,7 +33,13 @@ SUBST_MESSAGE.bash=	Fixing bash path
 SUBST_FILES.bash=	cd-hit-2d-para.pl cd-hit-para.pl
 SUBST_SED.bash=		-e 's|/bin/bash|${PREFIX}/bin/bash|g'
 
-MAKE_FLAGS+=		openmp=yes PREFIX=${DESTDIR}${PREFIX}/bin
+MAKE_FLAGS+=		PREFIX=${DESTDIR}${PREFIX}/bin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+MAKE_FLAGS+=		openmp=no
+.endif
 
 DOCDIR=			${PREFIX}/share/doc/cdhit
 INSTALLATION_DIRS+=	bin ${DOCDIR}
