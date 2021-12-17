@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/INSTALLER
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/REQUESTED
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/flit_core/__init__.py
 ${PYSITELIB}/flit_core/__init__.pyc
 ${PYSITELIB}/flit_core/build_thyself.py
