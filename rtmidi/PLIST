@@ -1,10 +1,10 @@
 @comment $NetBSD$
 include/rtmidi/RtMidi.h
 include/rtmidi/rtmidi_c.h
-lib/cmake/rtmidi/RtMidiConfig.cmake
-lib/cmake/rtmidi/RtMidiConfigVersion.cmake
 lib/cmake/rtmidi/RtMidiTargets-noconfig.cmake
 lib/cmake/rtmidi/RtMidiTargets.cmake
+lib/cmake/rtmidi/rtmidi-config-version.cmake
+lib/cmake/rtmidi/rtmidi-config.cmake
 lib/librtmidi.so
 lib/librtmidi.so.6
 lib/librtmidi.so.6.0.0

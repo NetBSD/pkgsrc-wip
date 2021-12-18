@@ -70,7 +70,7 @@ $NetBSD$
  # Write cmake package version file
  write_basic_package_version_file(
 -    RtMidi-config-version.cmake
-+    RtMidiConfigVersion.cmake
++    rtmidi-config-version.cmake
      VERSION ${FULL_VER}
      COMPATIBILITY SameMajorVersion
  )
@@ -79,7 +79,7 @@ $NetBSD$
  configure_package_config_file (
      cmake/RtMidi-config.cmake.in
 -    RtMidi-config.cmake
-+    RtMidiConfig.cmake
++    rtmidi-config.cmake
      INSTALL_DESTINATION "${RTMIDI_CMAKE_DESTINATION}"
  )
  
@@ -88,8 +88,8 @@ $NetBSD$
      FILES
 -        "${CMAKE_CURRENT_BINARY_DIR}/RtMidi-config.cmake"
 -        "${CMAKE_CURRENT_BINARY_DIR}/RtMidi-config-version.cmake"
-+        "${CMAKE_CURRENT_BINARY_DIR}/RtMidiConfig.cmake"
-+        "${CMAKE_CURRENT_BINARY_DIR}/RtMidiConfigVersion.cmake"
++        "${CMAKE_CURRENT_BINARY_DIR}/rtmidi-config.cmake"
++        "${CMAKE_CURRENT_BINARY_DIR}/rtmidi-config-version.cmake"
      DESTINATION
          "${RTMIDI_CMAKE_DESTINATION}"
  )
