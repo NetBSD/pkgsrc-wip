@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.2 2021/09/04 21:14:15 leot Exp $
 
-BLAKE2s (podman-3.4.1.tar.gz) = f1ba4ccc90f31e56fb29726b010c20c1e101be6716cea84e493d000ba619f021
-SHA512 (podman-3.4.1.tar.gz) = b8602464358ab73429a9003262c92c38c9a06e1133c776fd0c4ce65dae26639db66f8f5ad510528f3e6e7bc2fe692746fcf1d90d4e95d701d102006d9a83b27e
-Size (podman-3.4.1.tar.gz) = 10953738 bytes
+BLAKE2s (podman-3.4.4.tar.gz) = d9923d89d2c36269696e7e8a873cc789988b586121e53d9d8fcd32e156464501
+SHA512 (podman-3.4.4.tar.gz) = cfd295bf50ce86ea70741c3e663b409ed47b1e560c962bc579f319151a0fe2b24cdd3045667660083cce89449a9c5de1508c94a9a02375165a72ce7c16166666
+Size (podman-3.4.4.tar.gz) = 10945990 bytes
 SHA1 (patch-Makefile) = 5671f5452430d4b94af924defbb473eb91732281
 SHA1 (patch-cmd_podman_registry_config.go) = 6d32a7526cad5728a385de0029b2bbe5474e7f1b
 SHA1 (patch-pkg_machine_qemu_options__netbsd.go) = a256dcafceb70f29b4f7a1ed013b52b5d6b0f4ba
@@ -18,5 +18,5 @@ SHA1 (patch-vendor_github.com_containers_storage_pkg_directory_directory__unix.g
 SHA1 (patch-vendor_github.com_containers_storage_pkg_homedir_homedir__others.go) = afe76698c46e8ae015e7128958336a80016a53b7
 SHA1 (patch-vendor_github.com_containers_storage_pkg_lockfile_lockfile__unix.go) = 0d143dd2aaa21470bc31e260dc3413b2533208f9
 SHA1 (patch-vendor_github.com_containers_storage_pkg_system_stat__netbsd.go) = 37bae90c1b3d97f8b4166fca2c59d144c41f81f8
-SHA1 (patch-vendor_github.com_godbus_dbus_v5_transport__unixcred__netbsd.go) = ff256cc59025a279c613ad91d3d483cabfbbf8c8
+SHA1 (patch-vendor_github.com_containers_storage_pkg_system_syscall__unix.go) = 08d4335e2f9980c2d72b74a0abe4786403aa5b00
 SHA1 (patch-vendor_github.com_moby_sys_mount_flags__bsd.go) = 7261a1aee3334b7da676851851678a49a22559ae
