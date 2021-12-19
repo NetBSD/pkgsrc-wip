@@ -6,8 +6,7 @@ $NetBSD$
 * Define GNUIInstallDirs varibles before they are used and remove
   over inclusion of GNUInstallDirs
 
-* Install cmake package files into the right directory and
-  give them correct names so that they can be found by cmake 
+* Give cmake package files correct names so that they can be found by cmake 
 
 --- CMakeLists.txt.orig	2021-11-16 17:19:37.000000000 +0000
 +++ CMakeLists.txt
@@ -56,15 +55,6 @@ $NetBSD$
  # Message
  string(REPLACE ";" " " apilist "${API_LIST}")
  message(STATUS "Compiling with support for: ${apilist}")
-@@ -251,7 +248,7 @@ install(TARGETS ${LIB_TARGETS}
- export(PACKAGE RtMidi)
- 
- # Set installation path for CMake files.
--set(RTMIDI_CMAKE_DESTINATION share/rtmidi)
-+set(RTMIDI_CMAKE_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/rtmidi)
- 
- # Export library target (build-tree).
- export(EXPORT RtMidiTargets
 @@ -280,7 +277,7 @@ include(CMakePackageConfigHelpers)
  
  # Write cmake package version file

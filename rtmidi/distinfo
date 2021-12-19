@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (rtmidi-5.0.0.tar.gz) = c41c51342aad49d0d65f0c13c981dc92f2e811b227bd13b5af772cae99711482
 SHA512 (rtmidi-5.0.0.tar.gz) = d2688b6777c09c213e1f6800c67bca6905ac9a0161480e7c167583322a64be086bb47f1452cc45d4a4e2c1d3d3fe626d57b4a187e79c0a20af4f6e23d4a3530a
 Size (rtmidi-5.0.0.tar.gz) = 528747 bytes
-SHA1 (patch-CMakeLists.txt) = 4b596c7a83105191f1bd38e5187d6472431f4cb0
+SHA1 (patch-CMakeLists.txt) = 061d5dfd081b53dcea486dd2d9154c1d676d5a3d
 SHA1 (patch-RtMidi.cpp) = 9eaac880696e3ea95718e4a8b9dfeffb85fc1be4
