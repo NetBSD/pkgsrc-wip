@@ -1,0 +1,17 @@
+$NetBSD$
+
+* don't include jack etc in the interface library property
+  doing so leads to -ljack without -L when other programs
+  link to RtAudio::rtaudio
+
+--- CMakeLists.txt.orig	2021-12-18 21:04:16.264795127 +0000
++++ CMakeLists.txt
+@@ -276,7 +276,7 @@ target_include_directories(rtaudio
+ # Set compile-time definitions
+ target_compile_definitions(rtaudio PRIVATE ${API_DEFS})
+ target_compile_definitions(rtaudio PRIVATE RTAUDIO_EXPORT)
+-target_link_libraries(rtaudio ${LINKLIBS})
++target_link_libraries(rtaudio PRIVATE ${LINKLIBS})
+ 
+ # Subdirs
+ include(CTest)

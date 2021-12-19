@@ -5036,6 +5036,7 @@ SUBDIR+=	rsound
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
+SUBDIR+=	rtaudio
 SUBDIR+=	rtcmix
 SUBDIR+=	rte
 SUBDIR+=	rthread

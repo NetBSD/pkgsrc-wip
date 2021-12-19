@@ -1,0 +1,11 @@
+@comment $NetBSD$
+include/rtaudio/RtAudio.h
+include/rtaudio/rtaudio_c.h
+lib/librtaudio.so
+lib/librtaudio.so.6
+lib/librtaudio.so.6.0.2
+lib/pkgconfig/rtaudio.pc
+share/rtaudio/RtAudioConfig-version.cmake
+share/rtaudio/RtAudioConfig.cmake
+share/rtaudio/RtAudioTargets-noconfig.cmake
+share/rtaudio/RtAudioTargets.cmake

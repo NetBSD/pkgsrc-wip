@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	rtaudio
+
+.if !defined(RTAUDIO_BUILDLINK3_MK)
+RTAUDIO_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.rtaudio+=	rtaudio>=5.2.0
+BUILDLINK_PKGSRCDIR.rtaudio?=	../../wip/rtaudio
+
+.endif	# RTAUDIO_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-rtaudio
