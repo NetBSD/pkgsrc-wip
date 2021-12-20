@@ -2198,6 +2198,7 @@ SUBDIR+=	libunibilium
 SUBDIR+=	libunit
 SUBDIR+=	libunwind-git
 SUBDIR+=	libusbmuxd
+SUBGDIR+=	libva
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
