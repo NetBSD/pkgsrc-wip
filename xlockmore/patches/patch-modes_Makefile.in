@@ -1,34 +1,20 @@
 $NetBSD$
 
-Honour LDFLAGS.
 Use INSTALL properly.
+First part was rejected by upstream.
+Second part is not suitable for upstream.
 
---- modes/Makefile.in.orig	2020-10-05 02:36:51.000000000 +0000
+--- modes/Makefile.in.orig	2021-12-17 04:47:25.000000000 +0000
 +++ modes/Makefile.in
-@@ -345,7 +345,7 @@ CFLAGS = @CFLAGS@
- CXXFLAGS = @CXXFLAGS@
- #CFLAGS = -O
- #CFLAGS = -g
--XLOCKLDFLAGS = @XLOCKLDFLAGS@ $(CHECKLDFLAG)
-+XLOCKLDFLAGS = @XLOCKLDFLAGS@ $(CHECKLDFLAG) @LDFLAGS@
- XLIBS = @XLIBS@
- XLOCKLIBS = $(MODULELIB) @XLOCKLIBS@
- 
-@@ -633,10 +633,10 @@ install : install-program install-man in
+@@ -633,7 +633,7 @@ install : install-program install-man in
  
  install-program : xlock
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
 -	$(INSTALL_PROGRAM) $(INSTPGMFLAGS) $(UTILOBJDIR)xlock$(E) $(DESTDIR)$(bindir)
--	@MODULES@mkdir -p $(DEF_MODULEPATH)
--	@MODULES@cp *.xlk $(DEF_MODULEPATH)
--	@MODULES@cp glx/*.xlk $(DEF_MODULEPATH)
 +	$(INSTALL_PROGRAM) $(UTILOBJDIR)xlock$(E) $(DESTDIR)$(bindir)
-+	@MODULES@mkdir -p $(DESTDIR)$(DEF_MODULEPATH)
-+	@MODULES@cp *.xlk $(DESTDIR)$(DEF_MODULEPATH)
-+	@MODULES@cp glx/*.xlk $(DESTDIR)$(DEF_MODULEPATH)
- 
- install-man :
- 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(mandir)
+ 	@MODULES@mkdir -p $(DESTDIR)$(DEF_MODULEPATH)
+ 	@MODULES@cp *.xlk $(DESTDIR)$(DEF_MODULEPATH)
+ 	@MODULES@cp glx/*.xlk $(DESTDIR)$(DEF_MODULEPATH)
 @@ -644,9 +644,10 @@ install-man :
  
  install-ad :
