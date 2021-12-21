@@ -1,5 +1,7 @@
 $NetBSD$
 
+Force clap version to avoid breakage
+
 --- taplo-cli/Cargo.toml.orig	2021-09-28 18:57:16.000000000 +0000
 +++ taplo-cli/Cargo.toml
 @@ -22,7 +22,7 @@ nightly = []

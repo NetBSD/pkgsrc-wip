@@ -1,5 +1,7 @@
 $NetBSD$
 
+Force clap version to avoid breakage
+
 --- taplo-lsp/Cargo.toml.orig	2021-09-28 18:57:16.000000000 +0000
 +++ taplo-lsp/Cargo.toml
 @@ -57,7 +57,7 @@ tokio = { version = "1", features = [

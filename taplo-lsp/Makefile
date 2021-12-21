@@ -21,6 +21,11 @@ USE_TOOLS+=	pkg-config
 # before you can run 'make print-cargo-depends'
 .include "cargo-depends.mk"
 
+INSTALLATION_DIRS=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/taplo-lsp ${DESTDIR}${PREFIX}/bin
+
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
