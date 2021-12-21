@@ -7,7 +7,7 @@ LIBHANDY1_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libhandy1+=	libhandy1>=1.0
 BUILDLINK_ABI_DEPENDS.libhandy1?=	libhandy1>=1.0
-BUILDLINK_PKGSRCDIR.libhandy1?=		../../devel/libhandy1
+BUILDLINK_PKGSRCDIR.libhandy1?=		../../wip/libhandy1
 
 .include "../../x11/gtk3/buildlink3.mk"
 .endif	# LIBHANDY1_BUILDLINK3_MK

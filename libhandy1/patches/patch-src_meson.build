@@ -1,0 +1,14 @@
+$NetBSD$
+
+Fix vapi generation on Linux
+
+--- src/meson.build.orig	2021-11-11 20:02:30.000000000 +0000
++++ src/meson.build
+@@ -307,6 +307,7 @@ if introspection
+              install: true,
+          install_dir: vapidir,
+        metadata_dirs: [ meson.current_source_dir() ],
++            gir_dirs: get_option('prefix') / girdir,
+      )
+ 
+    endif

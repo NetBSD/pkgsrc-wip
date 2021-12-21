@@ -3,3 +3,4 @@ $NetBSD: distinfo,v 1.1 2020/11/10 17:45:05 nia Exp $
 BLAKE2s (libhandy-1.5.0.tar.xz) = 6bbf51d99c62ec96dc7902b795244711eb82eb87e8fb0cf199042a3e5461fa3a
 SHA512 (libhandy-1.5.0.tar.xz) = cd7706e97bc9d5a7d595c450145bc157b95afaccc1ee26b5490149327fd644eb522b7bbfee92ea2780083c36d69bbd666c52e38a752e78068a5ba0f79b3c56a0
 Size (libhandy-1.5.0.tar.xz) = 516128 bytes
+SHA1 (patch-src_meson.build) = 8d27afb1d1b9d6f4f120f05f4f31ba5ca3d12999
