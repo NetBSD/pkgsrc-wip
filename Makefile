@@ -731,6 +731,7 @@ SUBDIR+=	edb-debugger
 SUBDIR+=	edb-debugger-git
 SUBDIR+=	edbrowse
 SUBDIR+=	edelib
+SUBDIR+=	edid-decode
 SUBDIR+=	eduke32
 SUBDIR+=	efgallery
 SUBDIR+=	efl

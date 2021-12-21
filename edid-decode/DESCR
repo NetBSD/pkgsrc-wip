@@ -1,0 +1,5 @@
+EDID is binary data encoded in the monitor firmware.  This data can be
+obtained with drvctl(8) and edid-decode(1) can be used to render this
+binary data into a human-readable text form.
+
+For example: drvctl -p nouveaufb0 EDID | base64 -d | edid-decode

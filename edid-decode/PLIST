@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/edid-decode
+man/man1/edid-decode.1
