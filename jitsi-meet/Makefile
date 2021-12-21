@@ -20,15 +20,6 @@ INSTALLATION_DIRS=	${EGDIR} share/examples/jitsi-meet
 
 BUILD_DEFS+=		VARBASE
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	doc/example-config-files/nginx.conf.example
-SUBST_FILES.paths+=	doc/example-config-files/jitsi.example.com.example
-SUBST_FILES.paths+=	doc/example-config-files/prosody.cfg.lua.example
-SUBST_SED.paths=	-e 's,/etc/jitsi/meet/,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,/srv/.*;,${PREFIX}/${EGDIR};,g'
-SUBST_SED.paths+=	-e 's,/var/,${VARBASE},g'
-
 do-configure:
 	cd ${WRKSRC} && \
 		npm install

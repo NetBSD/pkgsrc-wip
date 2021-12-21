@@ -5,18 +5,18 @@
 # used by wip/jitsi-videobridge/Makefile
 
 GITHUB_PROJECT?=jitsi-meet
-GITHUB_TAG=	stable/jitsi-meet_6433
-DISTNAME=	jitsi-meet_6433
+GITHUB_TAG=	stable/jitsi-meet_6726
+DISTNAME=	jitsi-meet_6726
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
-JITSI_MEET_VERSION=	2.0.6433
+JITSI_MEET_VERSION=	2.0.6726
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE?=	https://github.com/jitsi/jitsi-meet/
 COMMENT?=	Secure, Simple and Scalable Video Conferences
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
+WRKSRC?=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
 DISTINFO_FILE?=	${.CURDIR}/../../wip/jitsi-meet/distinfo

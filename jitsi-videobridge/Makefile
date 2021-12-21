@@ -15,6 +15,8 @@ REPLACE_BASH=	jvb/resources/jvb.sh
 
 TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
+
 MAVEN_FLAGS+=	-DskipTests
 MAVEN_FLAGS+=	-Djavax.net.ssl.trustStore=${WRKDIR}/keystore
 MAVEN_FLAGS+=	-Djavax.net.ssl.trustStorePassword=password
