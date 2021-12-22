@@ -11,6 +11,7 @@ COMMENT=	Vim-fork focused on extensibility and usability
 LICENSE=	apache-2.0 AND vim-license
 
 USE_CMAKE=	yes
+USE_TOOLS+=	xgettext
 
 USE_LANGUAGES=	c c++
 
@@ -21,7 +22,9 @@ CMAKE_ARG_PATH=		${WRKSRC}
 LDFLAGS.SunOS+=		-lrt
 
 # should follow the LuaJIT API compatibility
-LUA_VERSION_REQD=	51
+LUA_VERSIONS_ACCEPTED=  51
+
+.include "../../lang/lua/luaversion.mk"
 
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../wip/lua-mpack
