@@ -40,5 +40,5 @@ pre-configure:
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../wip/cinnamon-desktop/buildlink3.mk"
-
+.include "../../x11/zenity/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
