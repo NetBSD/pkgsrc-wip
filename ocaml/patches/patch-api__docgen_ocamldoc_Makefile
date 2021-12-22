@@ -1,0 +1,38 @@
+$NetBSD$
+
+--- api_docgen/ocamldoc/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
++++ api_docgen/ocamldoc/Makefile
+@@ -17,7 +17,7 @@ include $(ROOTDIR)/ocamldoc/Makefile.bes
+ vpath %.mli $(ROOTDIR)/stdlib $(DOC_COMPILERLIBS_DIRS)  $(DOC_STDLIB_DIRS)
+ 
+ 
+-man: build/man/Stdlib.3o
++man: build/man/Stdlib.3
+ latex: build/latex/Stdlib.tex
+ html: \
+   build/html/libref/Stdlib.html \
+@@ -32,7 +32,7 @@ DOC_ALL_INCLUDES = \
+ 
+ libref=$(stdlib_UNPREFIXED) $(otherlibref)
+ 
+-ALL_MAN= $(ALL_DOC:%=build/man/%.3o)
++ALL_MAN= $(ALL_DOC:%=build/man/%.3)
+ ALL_LATEX= $(ALL_DOC:%=build/latex/%.tex)
+ 
+ build/latex/ifocamldoc.tex: | build/latex
+@@ -58,7 +58,7 @@ build/libref/%.odoc: $(DOCGEN)/%.mld | b
+ 	$(OCAMLDOC_RUN) $(DOC_STDLIB_INCLUDES) -text $< -dump  $@
+ 
+ ALL_COMPILED_DOC=$(ALL_DOC:%=build/%.odoc)
+-build/man/Stdlib.3o: $(ALL_COMPILED_DOC) | build/man
++build/man/Stdlib.3: $(ALL_COMPILED_DOC) | build/man
+ 	$(OCAMLDOC_RUN) -man -d build/man -man-mini \
+ 	-nostdlib -hide Stdlib -lib Stdlib -t "OCaml library" \
+ 	$(addprefix -load , $(ALL_COMPILED_DOC))
+@@ -122,5 +122,5 @@ INSTALL_MANODIR=$(INSTALL_MANDIR)/man3
+ install:
+ 	$(MKDIR) "$(INSTALL_MANODIR)"
+ 	if test -d build/man; then \
+-	  $(INSTALL_DATA) build/man/*.3o "$(INSTALL_MANODIR)"; \
++	  $(INSTALL_DATA) build/man/*.3 "$(INSTALL_MANODIR)"; \
+ 	else : ; fi
