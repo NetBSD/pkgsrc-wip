@@ -844,6 +844,7 @@ share/emacs/${PKGVERSION}/etc/images/zoom-out.xpm
 share/emacs/${PKGVERSION}/etc/nxml/README
 share/emacs/${PKGVERSION}/etc/nxml/test-invalid.xml
 share/emacs/${PKGVERSION}/etc/nxml/test-valid.xml
+share/emacs/${PKGVERSION}/etc/org.gnu.emacs.defaults.gschema.xml
 share/emacs/${PKGVERSION}/etc/org/OrgOdtContentTemplate.xml
 share/emacs/${PKGVERSION}/etc/org/OrgOdtStyles.xml
 share/emacs/${PKGVERSION}/etc/org/README
@@ -2086,6 +2087,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-registry.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-registry.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-rfc1843.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-rfc1843.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-rmail.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-rmail.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-salt.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-salt.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-score.el.gz
@@ -3730,6 +3733,8 @@ share/emacs/${PKGVERSION}/lisp/term/ns-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/ns-win.elc
 share/emacs/${PKGVERSION}/lisp/term/pc-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/pc-win.elc
+share/emacs/${PKGVERSION}/lisp/term/pgtk-win.el.gz
+share/emacs/${PKGVERSION}/lisp/term/pgtk-win.elc
 share/emacs/${PKGVERSION}/lisp/term/rxvt.el.gz
 share/emacs/${PKGVERSION}/lisp/term/rxvt.elc
 share/emacs/${PKGVERSION}/lisp/term/screen.el.gz
