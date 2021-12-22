@@ -1,8 +1,6 @@
 $NetBSD$
 
-Fix ninja build.
-
---- libcinnamon-desktop/cdesktop-enums.h.orig	2018-05-18 19:35:15.000000000 +0000
+--- libcinnamon-desktop/cdesktop-enums.h.orig	2021-11-15 12:11:43.000000000 +0000
 +++ libcinnamon-desktop/cdesktop-enums.h
 @@ -219,64 +219,64 @@ typedef enum
  } CDesktopMediaKeyType;

@@ -1,20 +1,18 @@
 $NetBSD$
 
-Disable systemd features.
-
---- schemas/org.cinnamon.desktop.session.gschema.xml.in.in.orig	2020-09-03 09:37:59.891385447 +0000
-+++ schemas/org.cinnamon.desktop.session.gschema.xml.in.in
-@@ -12,11 +12,11 @@
+--- schemas/org.cinnamon.desktop.session.gschema.xml.in.orig	2021-11-15 12:11:43.000000000 +0000
++++ schemas/org.cinnamon.desktop.session.gschema.xml.in
+@@ -13,11 +13,11 @@
        "gnome" and "gnome-fallback".</description>
      </key>
      <key name="session-manager-uses-logind" type="b">
 -      <default>true</default>
 +      <default>false</default>
-       <_summary>*no longer used*</_summary>
+       <summary>*no longer used*</summary>
      </key>
      <key name="settings-daemon-uses-logind" type="b">
 -      <default>true</default>
 +      <default>false</default>
-       <_summary>*no longer used*</_summary>
+       <summary>*no longer used*</summary>
      </key>
    </schema>
