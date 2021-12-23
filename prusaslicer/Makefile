@@ -17,6 +17,7 @@ LICENSE=	gnu-agpl-v3
 
 ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
 
+# Uses std::to_chars_result from <charconv> which is actually gcc8+.
 GCC_REQD+=	10
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	cmake gmake
@@ -25,6 +26,7 @@ USE_CMAKE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
+CMAKE_ARGS+=	-DSLIC3R_FHS=1
 #CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS=-g
 
 .include "../../comms/libhidapi/buildlink3.mk"
