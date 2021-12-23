@@ -140,6 +140,7 @@ sbin/auto-sound-driver-setup
 sbin/auto-ssh-authorize
 sbin/auto-ssh-reverse-authorize
 sbin/auto-su+j-toggle
+sbin/auto-sync-pxe-root-pw
 sbin/auto-sys-manager
 sbin/auto-transfer-pw
 sbin/auto-unlock-local-pw
