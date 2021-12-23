@@ -56,12 +56,12 @@ share/jicofo/lib/jetty-servlet-9.4.44.v20210927.jar
 share/jicofo/lib/jetty-servlets-9.4.44.v20210927.jar
 share/jicofo/lib/jetty-util-9.4.44.v20210927.jar
 share/jicofo/lib/jetty-util-ajax-9.4.44.v20210927.jar
-share/jicofo/lib/jicoco-1.1-98-gbeeaa92.jar
-share/jicofo/lib/jicoco-config-1.1-98-gbeeaa92.jar
+share/jicofo/lib/jicoco-1.1-101-g2170967.jar
+share/jicofo/lib/jicoco-config-1.1-101-g2170967.jar
 share/jicofo/lib/jitsi-android-osgi-1.0-20190327.160432-3.jar
 share/jicofo/lib/jitsi-metaconfig-1.0-9-g5e1b624.jar
-share/jicofo/lib/jitsi-utils-1.0-108-g480acf0.jar
-share/jicofo/lib/jitsi-xmpp-extensions-1.0-36-gc8f4179.jar
+share/jicofo/lib/jitsi-utils-1.0-109-g31bfa99.jar
+share/jicofo/lib/jitsi-xmpp-extensions-1.0-41-g9eb11d9.jar
 share/jicofo/lib/jna-5.9.0.jar
 share/jicofo/lib/json-simple-1.1.1.jar
 share/jicofo/lib/jsr305-3.0.2.jar

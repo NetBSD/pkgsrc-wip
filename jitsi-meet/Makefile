@@ -2,6 +2,7 @@
 
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 
+USE_LANGUAGES+=	c++
 USE_TOOLS+=	gmake tar
 
 BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm
@@ -20,20 +21,20 @@ INSTALLATION_DIRS=	${EGDIR} share/examples/jitsi-meet
 
 BUILD_DEFS+=		VARBASE
 
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
+
 do-configure:
 	cd ${WRKSRC} && \
 		npm install
 
 post-install:
 	${RUN} ${TAR} -C ${DESTDIR}${PREFIX}/share -xjf ${WRKSRC}/jitsi-meet.tar.bz2
-	${INSTALL_DATA} ${WRKSRC}/doc/example-config-files/config.js.example \
+	${INSTALL_DATA} ${WRKSRC}/config.js \
 		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/config.js
-	${INSTALL_DATA} ${WRKSRC}/doc/example-config-files/jitsi.example.com.example \
-		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/jitsi.example.com
-	${INSTALL_DATA} ${WRKSRC}/doc/example-config-files/nginx.conf.example \
-		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/nginx.conf
-	${INSTALL_DATA} ${WRKSRC}/doc/example-config-files/prosody.cfg.lua.example \
-		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/prosody.cfg.lua
+	${INSTALL_DATA} ${WRKSRC}/interface_config.js \
+		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/interface_config.js
+	${INSTALL_DATA} ${WRKSRC}/title.html \
+		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/title.html
 
 .include "../../wip/jitsi-meet/Makefile.common"
 .include "../../lang/nodejs/buildlink3.mk"
