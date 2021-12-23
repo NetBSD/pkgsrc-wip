@@ -1,5 +1,6 @@
 $NetBSD$
 
-RMD160 (xapps-1.8.9.tar.gz) = 79b0aa92f1fc2423d51fb635fbfaea33f60880de
-SHA512 (xapps-1.8.9.tar.gz) = 95dd1cbf84b59adf6682d9025e0cfa7a414c24d4f584cde87d0cc6ea82c06338de2c320dad8d997e105980782ec5cb23f0def6f6d60ea84be7d74c90d7cd692c
-Size (xapps-1.8.9.tar.gz) = 187789 bytes
+SHA1 (xapp-2.2.6.tar.gz) = d448c136ea55f898a8305eb05a9341e986fb15c1
+RMD160 (xapp-2.2.6.tar.gz) = 8102908fcb5d329d6ba6f2cb857b032fbc7ab401
+SHA512 (xapp-2.2.6.tar.gz) = e54790176d25ecae09ebd9a394ac72eaa2d21c392a33de145fd89cdbf0e7853573753fa2ecb8dcf36210dcbd543d1dc5401449d09f18e49b4a92932f7c188c79
+Size (xapp-2.2.6.tar.gz) = 243642 bytes
