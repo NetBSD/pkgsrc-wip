@@ -1,4 +1,5 @@
 @comment $NetBSD$
+include/cinnamon-menus-3.0/gmenu-desktopappinfo.h
 include/cinnamon-menus-3.0/gmenu-tree.h
 lib/girepository-1.0/CMenu-3.0.typelib
 lib/libcinnamon-menu-3.so
