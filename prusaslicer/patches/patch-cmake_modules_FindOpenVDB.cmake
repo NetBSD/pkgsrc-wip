@@ -3,7 +3,7 @@ $NetBSD$
 cmake file copied from OpenVDB 8.1.0 distribution, with unknown cmake
 function OPENVDB_GET_VERSION_DEFINE commented out.
 
---- cmake/modules/FindOpenVDB.cmake.orig	2021-07-16 10:14:03.000000000 +0000
+--- cmake/modules/FindOpenVDB.cmake.orig	2021-12-17 14:00:02.000000000 +0000
 +++ cmake/modules/FindOpenVDB.cmake
 @@ -1,28 +1,5 @@
 -# Copyright (c) DreamWorks Animation LLC
@@ -94,7 +94,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
    Individual component libraries for OpenVDB
  
  Hints
-@@ -91,34 +83,30 @@ Hints
+@@ -91,55 +83,30 @@ Hints
  Instead of explicitly setting the cache variables, the following variables
  may be provided to tell this module where to look.
  
@@ -121,14 +121,35 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  
  #]=======================================================================]
  
+-# If an explicit openvdb module path was specified, that will be used
+-if (OPENVDB_FIND_MODULE_PATH)
+-  set(_module_path_bak ${CMAKE_MODULE_PATH})
+-  set(CMAKE_MODULE_PATH ${OPENVDB_FIND_MODULE_PATH})
+-  find_package(
+-    OpenVDB ${OpenVDB_FIND_VERSION} QUIET
+-    COMPONENTS
+-      ${OpenVDB_FIND_COMPONENTS}
+-  )
++cmake_minimum_required(VERSION 3.12)
++include(GNUInstallDirs)
+ 
+-  set(CMAKE_MODULE_PATH ${_module_path_bak})
+-  if (OpenVDB_FOUND)
+-    return()
+-  endif ()
+-
+-  if (NOT OpenVDB_FIND_QUIETLY)
+-    message(STATUS "Using bundled find module for OpenVDB")
+-  endif ()
+-endif ()
+-# ###########################################################################
+-
 -cmake_minimum_required(VERSION 3.3)
 -# Monitoring <PackageName>_ROOT variables
 -if(POLICY CMP0074)
 -  cmake_policy(SET CMP0074 NEW)
 -endif()
-+cmake_minimum_required(VERSION 3.12)
-+include(GNUInstallDirs)
- 
+-
 -if(OpenVDB_FIND_QUIETLY)
 -  set (_quiet "QUIET")
 -else()
@@ -143,7 +164,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  
  # Include utility functions for version information
  include(${CMAKE_CURRENT_LIST_DIR}/OpenVDBUtils.cmake)
-@@ -128,8 +116,17 @@ mark_as_advanced(
+@@ -149,8 +116,17 @@ mark_as_advanced(
    OpenVDB_LIBRARY
  )
  
@@ -161,7 +182,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  )
  
  if(OpenVDB_FIND_COMPONENTS)
-@@ -150,16 +147,65 @@ if(OpenVDB_FIND_COMPONENTS)
+@@ -171,16 +147,65 @@ if(OpenVDB_FIND_COMPONENTS)
    endif()
  else()
    set(OPENVDB_COMPONENTS_PROVIDED FALSE)
@@ -206,11 +227,11 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 +#
 +# (repo structure = <root>/cmake/FindOpenVDB.cmake)
 +# (inst structure = <root>/lib/cmake/OpenVDB/FindOpenVDB.cmake)
-+
-+get_filename_component(_DIR_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)
  
 -find_package(PkgConfig ${_quiet} )
 -pkg_check_modules(PC_OpenVDB QUIET OpenVDB)
++get_filename_component(_DIR_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)
++
 +if(${_DIR_NAME} STREQUAL "cmake")
 +  # Called from root repo for openvdb components
 +elseif(${_DIR_NAME} STREQUAL "OpenVDB")
@@ -232,7 +253,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  
  # ------------------------------------------------------------------------
  #  Search for OpenVDB include DIR
-@@ -168,24 +214,89 @@ pkg_check_modules(PC_OpenVDB QUIET OpenV
+@@ -189,24 +214,89 @@ pkg_check_modules(PC_OpenVDB QUIET OpenV
  set(_OPENVDB_INCLUDE_SEARCH_DIRS "")
  list(APPEND _OPENVDB_INCLUDE_SEARCH_DIRS
    ${OPENVDB_INCLUDEDIR}
@@ -303,11 +324,11 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 +  endif()
 +  unset(_VDB_COMPONENT_SEARCH_DIRS)
 +endforeach()
- 
--OPENVDB_VERSION_FROM_HEADER("${OpenVDB_INCLUDE_DIR}/openvdb/version.h"
++
 +set(OpenVDB_INCLUDE_DIR ${OpenVDB_openvdb_INCLUDE_DIR}
 +  CACHE PATH "The OpenVDB core include directory")
-+
+ 
+-OPENVDB_VERSION_FROM_HEADER("${OpenVDB_INCLUDE_DIR}/openvdb/version.h"
 +set(_OPENVDB_VERSION_HEADER "${OpenVDB_INCLUDE_DIR}/openvdb/version.h")
 +OPENVDB_VERSION_FROM_HEADER("${_OPENVDB_VERSION_HEADER}"
    VERSION OpenVDB_VERSION
@@ -329,7 +350,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  # ------------------------------------------------------------------------
  #  Search for OPENVDB lib DIR
  # ------------------------------------------------------------------------
-@@ -196,81 +307,95 @@ set(_OPENVDB_LIBRARYDIR_SEARCH_DIRS "")
+@@ -217,81 +307,95 @@ set(_OPENVDB_LIBRARYDIR_SEARCH_DIRS "")
  
  list(APPEND _OPENVDB_LIBRARYDIR_SEARCH_DIRS
    ${OPENVDB_LIBRARYDIR}
@@ -391,11 +412,6 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 -  find_library(OpenVDB_${COMPONENT}_LIBRARY_RELEASE ${LIB_NAME} lib${LIB_NAME}
 -    PATHS ${_OPENVDB_LIBRARYDIR_SEARCH_DIRS}
 -    PATH_SUFFIXES ${OPENVDB_PATH_SUFFIXES}
--  )
--
--  find_library(OpenVDB_${COMPONENT}_LIBRARY_DEBUG ${LIB_NAME}${OpenVDB_DEBUG_SUFFIX} lib${LIB_NAME}${OpenVDB_DEBUG_SUFFIX}
--    PATHS ${_OPENVDB_LIBRARYDIR_SEARCH_DIRS}
--    PATH_SUFFIXES ${OPENVDB_PATH_SUFFIXES}
 +  # Add in extra component paths
 +  set(_VDB_COMPONENT_SEARCH_DIRS ${_OPENVDB_LIBRARYDIR_SEARCH_DIRS})
 +  list(APPEND _VDB_COMPONENT_SEARCH_DIRS
@@ -403,6 +419,11 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 +    ${OPENVDB_${COMPONENT}_LIBRARYDIR}
    )
  
+-  find_library(OpenVDB_${COMPONENT}_LIBRARY_DEBUG ${LIB_NAME}${OpenVDB_DEBUG_SUFFIX} lib${LIB_NAME}${OpenVDB_DEBUG_SUFFIX}
+-    PATHS ${_OPENVDB_LIBRARYDIR_SEARCH_DIRS}
+-    PATH_SUFFIXES ${OPENVDB_PATH_SUFFIXES}
+-  )
+-
 -  if (_is_multi)
 -    list(APPEND OpenVDB_LIB_COMPONENTS ${OpenVDB_${COMPONENT}_LIBRARY_RELEASE})
 -    if (OpenVDB_${COMPONENT}_LIBRARY_DEBUG)
@@ -420,12 +441,6 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 -    set(OpenVDB_${COMPONENT}_LIBRARY ${OpenVDB_${COMPONENT}_LIBRARY_RELEASE})
 -  else ()
 -    string(TOUPPER "${CMAKE_BUILD_TYPE}" _BUILD_TYPE)
--
--    set(OpenVDB_${COMPONENT}_LIBRARY ${OpenVDB_${COMPONENT}_LIBRARY_${_BUILD_TYPE}})
--
--    if (NOT OpenVDB_${COMPONENT}_LIBRARY)
--      set(OpenVDB_${COMPONENT}_LIBRARY ${OpenVDB_${COMPONENT}_LIBRARY_RELEASE})
--    endif ()
 +  if(${COMPONENT} STREQUAL "pyopenvdb")
 +    set(_OPENVDB_ORIG_CMAKE_FIND_LIBRARY_PREFIXES ${CMAKE_FIND_LIBRARY_PREFIXES})
 +    set(CMAKE_FIND_LIBRARY_PREFIXES ";lib") # find non-prefixed
@@ -446,7 +461,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 +    )
 +  endif()
  
--    list(APPEND OpenVDB_LIB_COMPONENTS ${OpenVDB_${COMPONENT}_LIBRARY})
+-    set(OpenVDB_${COMPONENT}_LIBRARY ${OpenVDB_${COMPONENT}_LIBRARY_${_BUILD_TYPE}})
 +  list(APPEND OpenVDB_LIB_COMPONENTS ${OpenVDB_${COMPONENT}_LIBRARY})
 +  if(OpenVDB_${COMPONENT}_LIBRARY)
 +    set(OpenVDB_${COMPONENT}_FOUND TRUE)
@@ -456,18 +471,24 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 +  unset(_VDB_COMPONENT_SEARCH_DIRS)
 +endforeach()
  
+-    if (NOT OpenVDB_${COMPONENT}_LIBRARY)
+-      set(OpenVDB_${COMPONENT}_LIBRARY ${OpenVDB_${COMPONENT}_LIBRARY_RELEASE})
+-    endif ()
++unset(OPENVDB_PYTHON_PATH_SUFFIXES)
++unset(OPENVDB_LIB_PATH_SUFFIXES)
+ 
+-    list(APPEND OpenVDB_LIB_COMPONENTS ${OpenVDB_${COMPONENT}_LIBRARY})
++# Reset library suffix
+ 
 -    if(OpenVDB_${COMPONENT}_LIBRARY)
 -      set(OpenVDB_${COMPONENT}_FOUND TRUE)
 -    else()
 -      set(OpenVDB_${COMPONENT}_FOUND FALSE)
 -    endif()
 -  endif ()
-+unset(OPENVDB_PYTHON_PATH_SUFFIXES)
-+unset(OPENVDB_LIB_PATH_SUFFIXES)
- 
+-
 -endforeach()
-+# Reset library suffix
- 
+-
 -if(UNIX AND OPENVDB_USE_STATIC_LIBS)
 -  set(CMAKE_FIND_LIBRARY_SUFFIXES ${_OPENVDB_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES})
 -  unset(_OPENVDB_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES)
@@ -477,7 +498,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  
  # ------------------------------------------------------------------------
  #  Cache and set OPENVDB_FOUND
-@@ -290,15 +415,25 @@ find_package_handle_standard_args(OpenVD
+@@ -311,15 +415,25 @@ find_package_handle_standard_args(OpenVD
  #  Determine ABI number
  # ------------------------------------------------------------------------
  
@@ -510,7 +531,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
    if(NOT OpenVDB_ABI)
      message(WARNING "Unable to determine OpenVDB ABI version from OpenVDB "
        "installation. The library major version \"${OpenVDB_MAJOR_VERSION}\" "
-@@ -311,166 +446,209 @@ if(NOT OpenVDB_FIND_QUIETLY)
+@@ -332,166 +446,209 @@ if(NOT OpenVDB_FIND_QUIETLY)
  endif()
  
  # ------------------------------------------------------------------------
@@ -536,7 +557,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 -  return()
 -endmacro()
 -
--find_package(IlmBase QUIET COMPONENTS Half)
+-find_package(IlmBase QUIET)
 -if(NOT IlmBase_FOUND)
 -  pkg_check_modules(IlmBase QUIET IlmBase)
 -endif()
@@ -769,14 +790,14 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
 -  find_package(Log4cplus ${_quiet} ${_required})
 +if(OpenVDB_USES_BLOSC)
 +  find_package(Blosc REQUIRED)
++endif()
++
++if(OpenVDB_USES_ZLIB)
++  find_package(ZLIB REQUIRED)
  endif()
  
 -if(OpenVDB_USES_ILM)
 -  find_package(IlmBase ${_quiet} ${_required})
-+if(OpenVDB_USES_ZLIB)
-+  find_package(ZLIB REQUIRED)
-+endif()
-+
 +if(OpenVDB_USES_LOG4CPLUS)
 +  find_package(Log4cplus REQUIRED)
  endif()
@@ -837,7 +858,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  endif()
  
  list(APPEND _OPENVDB_VISIBLE_DEPENDENCIES
-@@ -484,34 +662,26 @@ endif()
+@@ -505,34 +662,26 @@ endif()
  
  set(_OPENVDB_HIDDEN_DEPENDENCIES)
  
@@ -881,7 +902,7 @@ function OPENVDB_GET_VERSION_DEFINE commented out.
  set(OpenVDB_LIBRARY_DIRS "")
  foreach(LIB ${OpenVDB_LIB_COMPONENTS})
    get_filename_component(_OPENVDB_LIBDIR ${LIB} DIRECTORY)
-@@ -519,49 +689,102 @@ foreach(LIB ${OpenVDB_LIB_COMPONENTS})
+@@ -540,49 +689,102 @@ foreach(LIB ${OpenVDB_LIB_COMPONENTS})
  endforeach()
  list(REMOVE_DUPLICATES OpenVDB_LIBRARY_DIRS)
  

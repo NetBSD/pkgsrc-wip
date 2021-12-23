@@ -4,9 +4,9 @@ Use libhidapi from pkgsrc.
 Only use libdl on Linux.
 Allow use of stable track wxWidgets on NetBSD.
 
---- src/CMakeLists.txt.orig	2020-03-21 10:55:51.000000000 +0000
+--- src/CMakeLists.txt.orig	2021-12-17 14:00:02.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -23,8 +23,6 @@ add_subdirectory(libslic3r)
+@@ -22,8 +22,6 @@ add_subdirectory(libslic3r)
  
  if (SLIC3R_GUI)
      add_subdirectory(imgui)
@@ -15,7 +15,7 @@ Allow use of stable track wxWidgets on NetBSD.
  
      if(WIN32)
          message(STATUS "WXWIN environment set to: $ENV{WXWIN}")
-@@ -37,10 +35,10 @@ if (SLIC3R_GUI)
+@@ -36,10 +34,10 @@ if (SLIC3R_GUI)
          endif()
      endif()
  
@@ -29,7 +29,7 @@ Allow use of stable track wxWidgets on NetBSD.
          else ()
              find_package(wxWidgets 3.1 QUIET COMPONENTS base core adv html gl)
  
-@@ -113,8 +111,10 @@ target_link_libraries(PrusaSlicer libsli
+@@ -151,8 +149,10 @@ target_link_libraries(PrusaSlicer libsli
          target_link_libraries(PrusaSlicer ws2_32 uxtheme setupapi)
      elseif (APPLE)
          target_link_libraries(PrusaSlicer "-framework OpenGL")
@@ -39,5 +39,5 @@ Allow use of stable track wxWidgets on NetBSD.
 +    else ()
 +        # nothing.
      endif ()
- endif ()
- 
+     if (WIN32)
+         find_library(PSAPI_LIB NAMES Psapi)

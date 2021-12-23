@@ -3,22 +3,24 @@ $NetBSD$
 Add a NetBSD entry to the Platform enum.
 Undef a NetBSD macro that's coming in from somewhere.
 
---- src/libslic3r/Platform.hpp.orig	2021-07-08 06:46:36.000000000 +0000
+--- src/libslic3r/Platform.hpp.orig	2021-12-17 14:00:02.000000000 +0000
 +++ src/libslic3r/Platform.hpp
-@@ -1,6 +1,8 @@
- #ifndef SLIC3R_Platform_HPP
- #define SLIC3R_Platform_HPP
+@@ -3,6 +3,10 @@
  
+ #include <string>
+ 
++#ifdef NetBSD
 +#undef NetBSD
++#endif
 +
  namespace Slic3r {
  
  enum class Platform
-@@ -28,6 +30,7 @@ enum class PlatformFlavor
- 	WSL2,
- 	// For Platform::BSDUnix
- 	OpenBSD,
-+	NetBSD,
- };
- 
- // To be called on program start-up.
+@@ -25,6 +29,7 @@ enum class PlatformFlavor
+     WSL,             // Microsoft's Windows on Linux (Linux kernel simulated on NTFS kernel)
+     WSL2,            // Microsoft's Windows on Linux, version 2 (virtual machine)
+     OpenBSD,         // For Platform::BSDUnix
++    NetBSD,
+     GenericOSX,      // For Platform::OSX
+     OSXOnX86,        // For Apple's on Intel X86 CPU
+     OSXOnArm,        // For Apple's on Arm CPU
