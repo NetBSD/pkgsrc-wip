@@ -45,6 +45,10 @@ share/APE/Languages/Csh/Macros/macros
 share/APE/Languages/Csh/Macros/menu.txt
 share/APE/Languages/Csh/language_opts
 share/APE/Languages/Csh/syntax_highlighting
+share/APE/Languages/D/Macros/macros
+share/APE/Languages/D/Macros/menu.txt
+share/APE/Languages/D/language_opts
+share/APE/Languages/D/syntax_highlighting
 share/APE/Languages/DocBook/Macros/macros
 share/APE/Languages/DocBook/Macros/menu.txt
 share/APE/Languages/DocBook/language_opts
