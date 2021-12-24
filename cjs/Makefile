@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
-.include "../../lang/spidermonkey/buildlink3.mk"
+.include "../../lang/spidermonkey185/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
