@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/19 17:04:55 jihbed Exp $
+$NetBSD$
 
-RMD160 (cinnamon-settings-daemon-4.6.4.tar.gz) = 4cb68f51262ad042cd99974432cba7b991c84ccd
-SHA512 (cinnamon-settings-daemon-4.6.4.tar.gz) = 77ddb637fd93fdfd59fb27c5a10082259fd99b4753ff36b3473db12f2fe0d19ee89d44c9e72f1ce9eab3f228c5fef418ce774dd78746d77b959ad9d8f93c1208
-Size (cinnamon-settings-daemon-4.6.4.tar.gz) = 668339 bytes
-SHA1 (patch-configure.ac) = 0ab4cb7368487fae951d68d5bc2a5d6c7f40f4f1
-SHA1 (patch-data_org.cinnamon.settings-daemon.plugins.power.gschema.xml.in.in) = 5da78c10161554521bba6ff19215763ddbe93e25
-SHA1 (patch-files_Makefile.in) = 1a100b728e963ffa354502913ef77b4d023e6acf
-SHA1 (patch-plugins_Makefile.am) = 492237b848baf9da31f78e705374f8e8ec6a2432
-SHA1 (patch-plugins_background_csd-background-manager.c) = 03549c68025e2fd31ea6cbae0346a1124c7a9a70
-SHA1 (patch-plugins_power_csd-power-manager.c) = 86ec01c3b9d3b5811c8581d2366033c3806c6942
+SHA1 (cinnamon-settings-daemon-5.2.0.tar.gz) = 15441d7519f1b992af5f20884ec6f2ed94278397
+RMD160 (cinnamon-settings-daemon-5.2.0.tar.gz) = 29006841b5b7857cbd64585fb96e8c66cf1fe6f7
+SHA512 (cinnamon-settings-daemon-5.2.0.tar.gz) = ae076956715bc7b47746868df0f1cb4034a8ce26b2d64878c74654f08a4498155063f16bf7972316fa138f72e10a82e8589fdb607f8072bbcd92e106bedbe98e
+Size (cinnamon-settings-daemon-5.2.0.tar.gz) = 662588 bytes
