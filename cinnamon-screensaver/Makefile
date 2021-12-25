@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/02/19 18:01:20 jihbed Exp $
 
-DISTNAME=	cinnamon-screensaver-4.6.0
+DISTNAME=	cinnamon-screensaver-5.2.0
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config automake autoreconf intltool msgfmt
 
-WRKSRC=	${WRKDIR}/cinnamon-screensaver-4.6.0
+WRKSRC=	${WRKDIR}/cinnamon-screensaver-5.2.0
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
