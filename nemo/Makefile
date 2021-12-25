@@ -13,7 +13,7 @@ COMMENT=	File Manager for Cinnamon
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config intltool
+USE_TOOLS+=		pkg-config intltool msgfmt
 #MESON_ARGS+=		--buildtype=debug
 USE_CMAKE=		yes
 
