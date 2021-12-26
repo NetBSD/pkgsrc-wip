@@ -153,6 +153,8 @@ share/APE/Languages/R/Macros/macros
 share/APE/Languages/R/Macros/menu.txt
 share/APE/Languages/R/language_opts
 share/APE/Languages/R/syntax_highlighting
+share/APE/Languages/Rust/Macros/macros
+share/APE/Languages/Rust/Macros/menu.txt
 share/APE/Languages/Rust/language_opts
 share/APE/Languages/Rust/syntax_highlighting
 share/APE/Languages/SAL/Macros/macros
