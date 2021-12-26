@@ -31,7 +31,6 @@ pre-configure:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/gmime3/buildlink3.mk"
