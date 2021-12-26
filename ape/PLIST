@@ -77,6 +77,10 @@ share/APE/Languages/Java/Macros/macros
 share/APE/Languages/Java/Macros/menu.txt
 share/APE/Languages/Java/language_opts
 share/APE/Languages/Java/syntax_highlighting
+share/APE/Languages/Julia/Macros/macros
+share/APE/Languages/Julia/Macros/menu.txt
+share/APE/Languages/Julia/language_opts
+share/APE/Languages/Julia/syntax_highlighting
 share/APE/Languages/Ksh/Macros/macros
 share/APE/Languages/Ksh/Macros/menu.txt
 share/APE/Languages/Ksh/language_opts
