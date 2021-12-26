@@ -18,6 +18,7 @@ CMAKE_ARGS+=	-DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
 
 PKGCONFIG_OVERRIDE+=	rtaudio.pc.in
 
-.include "../../audio/jack/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "options.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
