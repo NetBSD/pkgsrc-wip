@@ -901,6 +901,7 @@ SUBDIR+=	fonttosfnt
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fpc
 SUBDIR+=	fprobe
+SUBDIR+=	fq
 SUBDIR+=	fractal
 SUBDIR+=	fragrouter
 SUBDIR+=	frama-c
