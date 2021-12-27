@@ -1648,6 +1648,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/edebug.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-base.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-base.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-compat.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-compat.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-core.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-core.elc
