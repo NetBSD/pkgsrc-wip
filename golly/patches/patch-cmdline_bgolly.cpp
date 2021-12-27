@@ -18,7 +18,7 @@ popcount() is declared in <strings.h> included from <string.h>.
    { "",   "--render", "Render (benchmarking)", 'b', &render },
    { "",   "--progress", "Render during progress dialog (debugging)", 'b', &progress },
 -  { "",   "--popcount", "Popcount (benchmarking)", 'b', &popcount },
-+  { "",   "--xpopcount", "Popcount (benchmarking)", 'b', &xpopcount },
++  { "",   "--popcount", "Popcount (benchmarking)", 'b', &xpopcount },
    { "",   "--scale", "Rendering scale", 's', &renderscale },
  //{ "",   "--stepthreshold", "Stepsize >= gencount/this (default 1)",
  //                                                          'i', &stepthresh },

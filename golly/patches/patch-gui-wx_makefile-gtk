@@ -2,11 +2,11 @@ $NetBSD$
 
 We have dl* functions in libc, no need for -ldl.
 
---- gui-wx/makefile-gtk.orig	2020-10-28 08:05:22.000000000 +0000
+--- gui-wx/makefile-gtk.orig	2021-11-26 23:39:22.000000000 +0000
 +++ gui-wx/makefile-gtk
-@@ -41,7 +41,7 @@ GUIFILES = makefile-gtk makefile-mac mak
-     golly.rc Info.plist.in wx*.h wx*.cpp bitmaps icons
+@@ -43,7 +43,7 @@ GUIFILES = makefile-gtk makefile-mac mak
  LUAFILES = $(LUADIR)/*.h $(LUADIR)/*.c $(LUADIR)/*.hpp $(LUADIR)/Makefile $(LUADIR)/ReadMe.html
+ SOUNDFILES = $(SOUNDDIR)/*.h $(SOUNDDIR)/*.c
  
 -LUALIB = $(LUADIR)/liblua.a -ldl
 +LUALIB = $(LUADIR)/liblua.a
