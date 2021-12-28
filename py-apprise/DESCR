@@ -1,0 +1,20 @@
+Apprise allows you to send a notification to almost all of the most
+popular notification services available to us today such as: Telegram,
+Discord, Slack, Amazon SNS, Gotify, etc.
+
+    One notification library to rule them all.
+    A common and intuitive notification syntax.
+    Supports the handling of images and attachments (to the notification services that will accept them).
+    It's incredibly lightweight.
+    Amazing response times because all messages sent asynchronously.
+
+Developers who wish to provide a notification service no longer need
+to research each and every one out there. They no longer need to try
+to adapt to the new ones that comeout thereafter. They just need to
+include this one library and then they can immediately gain access to
+almost all of the notifications services available to us today.
+
+System Administrators and DevOps who wish to send a notification now
+no longer need to find the right tool for the job. Everything is
+already wrapped and supported within the apprise command line tool
+(CLI) that ships with this product.

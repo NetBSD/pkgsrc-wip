@@ -1,0 +1,10 @@
+- Add basic python packaging.
+
+- Add dependencies for XMPP.
+
+- Think about other dependencies, at least for those of manageable
+  size which enable notification to open protocols
+
+- Think about dependencies for proprietary protcols.  With any luck,
+  there is simply a requirement to install some python for runtime and
+  there is no need to have it be part of the package.
