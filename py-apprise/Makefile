@@ -5,7 +5,7 @@ CATEGORIES=	comms
 MASTER_SITES=	https://files.pythonhosted.org/packages/da/8b/218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://files.pythonhosted.org/packages/da/8b/218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/
+HOMEPAGE=	https://github.com/caronc/apprise
 COMMENT=	Notify muliple services with one interface
 LICENSE=	mit
 
