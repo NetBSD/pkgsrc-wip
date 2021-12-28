@@ -12,7 +12,7 @@ COMMENT=	Lightweight desktop for Unix-like operating systems
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
-
+USE_TOOLS+=	msgfmt
 USE_LIBTOOL=	yes
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
