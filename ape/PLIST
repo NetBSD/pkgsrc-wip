@@ -5,7 +5,6 @@ bin/ascii
 bin/runjava
 bin/search_headers
 bin/search_libs
-bin/xape
 man/man1/ape.1
 man/man1/apeascii.1
 man/man1/apekeys.1
