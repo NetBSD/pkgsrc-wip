@@ -3,14 +3,14 @@
 DISTNAME=	weewx-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
-MASTER_SITES=	http://weewx.com/downloads/released_versions/
+MASTER_SITES=	https://weewx.com/downloads/released_versions/
 
 # See also
 # https://reviews.freebsd.org/file/data/wxlggqqqglli6l66usac/PHID-FILE-kucs3bj4stbb6iw4zpy5/D6324.diff
 
 # Do not make this package installable; email me if questions.
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://weewx.com/
+HOMEPAGE=	https://weewx.com/
 COMMENT=	Python-powered template engine and code-generator
 LICENSE=	gnu-gpl-v3
 
