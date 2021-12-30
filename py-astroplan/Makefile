@@ -10,8 +10,7 @@ HOMEPAGE=	https://astroplan.readthedocs.io/en/latest/
 COMMENT=	Astropy affiliated module for planning astronomical observations
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy>1.10:../../math/py-numpy

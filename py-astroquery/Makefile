@@ -10,8 +10,7 @@ HOMEPAGE=	https://astroquery.readthedocs.io/en/latest/
 COMMENT=	Astropy coordinated Python module for querying astronomical databases
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-keyring>=21.2.1:../../security/py-keyring

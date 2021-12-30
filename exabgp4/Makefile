@@ -58,7 +58,7 @@ REPLACE_PYTHON+=	etc/exabgp/examples/stderr-1.py
 REPLACE_PYTHON+=	etc/exabgp/examples/syslog-1.py
 REPLACE_PYTHON+=	etc/exabgp/examples/watchdog.run
 
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=		# none
 

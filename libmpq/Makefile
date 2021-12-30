@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libmpq.pc.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 37 38
+PYTHON_VERSIONS_ACCEPTED=	27
 PY_PATCHPLIST=			yes
 
 .include "../../archivers/bzip2/buildlink3.mk"

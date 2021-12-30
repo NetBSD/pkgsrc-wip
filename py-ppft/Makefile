@@ -11,10 +11,7 @@ HOMEPAGE=	https://pypi.org/project/ppft
 COMMENT=	Distributed and parallel python
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
-
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7.3:../../lang/py-six
-
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

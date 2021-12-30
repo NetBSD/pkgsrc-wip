@@ -17,9 +17,7 @@ DEPENDS+=	wget>=1.21.1:../../net/wget
 DEPENDS+=	${PYPKGPREFIX}-bottle>=0.12.19:../../www/py-bottle
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.1:../../devel/py-requests
 
-
-PYTHON_VERSIONS_ACCEPTED=	39 38 37 36
-
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"

@@ -12,7 +12,7 @@ LICENSE=	apache-2.0 OR mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../wip/py-maturin
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin build

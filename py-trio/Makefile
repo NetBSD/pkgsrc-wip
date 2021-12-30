@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/python-trio/trio
 COMMENT=	Friendly Python library for async concurrency and I/O
 LICENSE=	mit OR apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	37 36 27
+PYTHON_VERSIONS_INCOMPATIBLE=	37 27
 
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.2.2:../../devel/py-sortedcontainers

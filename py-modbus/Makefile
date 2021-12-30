@@ -10,8 +10,6 @@ HOMEPAGE=	https://github.com/riptideio/pymodbus/
 COMMENT=	Fully featured modbus protocol stack in python
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
-
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-coverage>=4.4:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-click>=6.7:../../devel/py-click
@@ -32,7 +30,6 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.5.5:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-serial-asyncio>=0.5:../../wip/py-serial-asyncio
 #DEPENDS+=	${PYPKGPREFIX}-wsgiref>=0.1.2:../../wip/py-wsgiref
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.5.2:../../www/py-tornado
-
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
