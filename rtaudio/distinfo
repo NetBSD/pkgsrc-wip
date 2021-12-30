@@ -4,3 +4,4 @@ BLAKE2s (rtaudio-5.2.0.tar.gz) = 412cfbbaa2a68b3da0ce09b05256050f552c4d82159a5c8
 SHA512 (rtaudio-5.2.0.tar.gz) = f0eb656717d1ebf8b36660b9609ca0bfaf9635c41d658dd9dfff559e81e48de6abd4d78afe022cce5e885a2e3ae90ef97a0c6563b57d8c8c1102088e9aa05905
 Size (rtaudio-5.2.0.tar.gz) = 681205 bytes
 SHA1 (patch-CMakeLists.txt) = 7029ffd053158f75650b55bf11ae08cfef1e2bc6
+SHA1 (patch-RtAudio.cpp) = aba041863427d2460f7622bb895a246cfed1acee
