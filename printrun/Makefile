@@ -11,7 +11,6 @@ HOMEPAGE=	https://www.pronterface.com/
 COMMENT=	3D printing host suite
 LICENSE=	gnu-gpl-v3
 
-#PYTHON_VERSIONS_ACCEPTED=	36 27
 PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-readline>=1.0:../../devel/py-readline

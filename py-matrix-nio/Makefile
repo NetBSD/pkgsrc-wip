@@ -10,10 +10,6 @@ HOMEPAGE=	https://github.com/poljar/matrix-nio
 COMMENT=	Matrix client library for Python
 LICENSE=	isc
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 36
-DEPENDS+=	${PYPKGPREFIX}-dataclasses>=0.7:../../devel/py-dataclasses
-.endif
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-aiohttp-socks>=0.6.0:../../www/py-aiohttp-socks
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.7.4:../../www/py-aiohttp

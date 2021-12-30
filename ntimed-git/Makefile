@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
 REPLACE_PYTHON+=		plotgen.py
-#PYTHON_VERSIONS_INCOMPATIBLE=	36 # as of 20150109
 
 INSTALLATION_DIRS+=	sbin share/doc/ntimed
 

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	rtv-1.27.0
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rtv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/egg.mk"
 
-.if ${_PYTHON_VERSION} < 36
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-mailcap-fix-[0-9]*:../../wip/py-mailcap-fix
 .endif
 
@@ -30,5 +30,4 @@ SUBST_SED.pkgmandir=		-e 's,share/man,${PKGMANDIR},'
 
 USE_LANGUAGES=		# none
 
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
