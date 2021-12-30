@@ -1,13 +1,15 @@
 @comment $NetBSD$
 bin/aucat
 bin/midicat
+bin/sndioctl
 bin/sndiod
 include/sndio.h
 lib/libsndio.so
-lib/libsndio.so.6.0
+lib/libsndio.so.7.1
+lib/pkgconfig/sndio.pc
 man/man1/aucat.1
 man/man1/midicat.1
-man/man1/sndiod.1
+man/man1/sndioctl.1
 man/man3/mio_close.3
 man/man3/mio_eof.3
 man/man3/mio_nfds.3
@@ -33,4 +35,14 @@ man/man3/sio_setvol.3
 man/man3/sio_start.3
 man/man3/sio_stop.3
 man/man3/sio_write.3
+man/man3/sioctl_close.3
+man/man3/sioctl_eof.3
+man/man3/sioctl_nfds.3
+man/man3/sioctl_ondesc.3
+man/man3/sioctl_onval.3
+man/man3/sioctl_open.3
+man/man3/sioctl_pollfd.3
+man/man3/sioctl_revents.3
+man/man3/sioctl_setval.3
 man/man7/sndio.7
+man/man8/sndiod.8
