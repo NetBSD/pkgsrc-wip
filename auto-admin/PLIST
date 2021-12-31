@@ -60,6 +60,7 @@ sbin/auto-get-network
 sbin/auto-gpu-setup
 sbin/auto-group-check
 sbin/auto-harden
+sbin/auto-hardware-specs
 sbin/auto-hex-to-octet
 sbin/auto-hyperthreading-toggle
 sbin/auto-idrac-config
