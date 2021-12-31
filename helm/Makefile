@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://helm.sh/
 COMMENT=	The Kubernetes Package Manager
 LICENSE=	apache-2.0
