@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gnome-builder-41.2
+DISTNAME=	gnome-builder-41.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-builder/41/}
 EXTRACT_SUFX=	.tar.xz
