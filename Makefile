@@ -2180,6 +2180,7 @@ SUBDIR+=	librocket
 SUBDIR+=	libs-gui
 SUBDIR+=	libscscp
 SUBDIR+=	libsearpc
+SUBDIR+=	libseccomp
 SUBDIR+=	libslab
 SUBDIR+=	libsocialweb
 SUBDIR+=	libspt
