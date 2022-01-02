@@ -2390,6 +2390,7 @@ SUBDIR+=	milou
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
+SUBDIR+=	mindforger
 SUBDIR+=	mindy-git
 SUBDIR+=	mingw-w64-binutils
 SUBDIR+=	mingw-w64-crt

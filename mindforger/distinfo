@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (mindforger_1.52.0.tgz) = d362562b17cd70dd5017581ee0e890a64aae1b099966050b91d13d8bdbb25fea
+SHA512 (mindforger_1.52.0.tgz) = 8b5431c7b780c8f7aa21efc5e3ef2dd8050b7954c2bf3a387f532db4605eeaee8dec10c4679f032e2f36dcd0ab48517d3a3bd643dfc65080df72de627bbf7f32
+Size (mindforger_1.52.0.tgz) = 10954086 bytes
+SHA1 (patch-app_app.pro) = 0b30f271731f0e91a8ff087128d18084efd1ce75
+SHA1 (patch-mindforger.pro) = 0ba2491bdc7404df17ff95041a7dc0223c98ae7c
