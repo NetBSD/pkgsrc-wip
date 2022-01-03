@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (libmapper-2.1.tar.gz) = c7e01582eb740759bdfe06d942c1105a10ce084a95670e758c85af8d0214e689
+SHA512 (libmapper-2.1.tar.gz) = 19e51084c9deccddc9379055cc8c1a0a812367476463d3cca10ae1074f87aa8d469958544ae94bc8d5afc84c6b411e3d9e722ca53e1b1b66082cf74be65b75c8
+Size (libmapper-2.1.tar.gz) = 1074372 bytes
+SHA1 (patch-configure) = a101a742e3742902dd15ba30a9c3ae436effa443

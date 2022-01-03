@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${PYSITELIB}/_libmapper.so
+${PYSITELIB}/libmapper.py
+${PYSITELIB}/libmapper.pyc

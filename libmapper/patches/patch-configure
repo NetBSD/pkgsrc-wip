@@ -1,0 +1,37 @@
+$NetBSD$
+
+* use so extension for all pkgsrc platforms 
+
+* compatability fix
+
+* jni/Makefile.in does not exist
+
+--- configure.orig	2021-11-08 18:18:42.000000000 +0000
++++ configure
+@@ -19564,7 +19564,7 @@ printf "%s\n" "$am_cv_python_pyexecdir" 
+      if test x$have_python = xyes; then
+        SWIGDIR=swig
+ 
+-       PYEXT=$($PYTHON -c "import sys; print({'win32':'pyd','darwin':'so','linux':'so','linux2':'so'}[sys.platform])")
++       PYEXT=$($PYTHON -c "import sys; print({'win32':'pyd'}.get(sys.platform,'so'))")
+ 
+        case "$PYTHON_VERSION" in
+        3*) PY3SWIG=" -py3";
+@@ -19581,7 +19581,7 @@ fi
+ if test x$enable_jni = xyes; then
+    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking JDK path" >&5
+ printf %s "checking JDK path... " >&6; }
+-   if test x"$JAVA_HOME" == "x"; then
++   if test x"$JAVA_HOME" = "x"; then
+       JAVA_HOME="$(dirname $(dirname $(readlink /etc/alternatives/javac 2>/dev/null)))"
+    fi
+    if test x"$JAVA_HOME" != "x" && test -d "$JAVA_HOME/include"; then
+@@ -20207,7 +20207,7 @@ else
+ fi
+ 
+ 
+-ac_config_files="$ac_config_files Makefile src/Makefile include/Makefile test/Makefile doc/Makefile doc/libmapper.doxyfile swig/Makefile swig/setup.py jni/Makefile jni/mapper/NativeLib.java examples/Makefile examples/pwm_synth/Makefile examples/py_tk_gui/Makefile examples/py_tk_gui/setup.py extra/Makefile extra/macOS/Makefile libmapper.pc"
++ac_config_files="$ac_config_files Makefile src/Makefile include/Makefile test/Makefile doc/Makefile doc/libmapper.doxyfile swig/Makefile swig/setup.py jni/mapper/NativeLib.java examples/Makefile examples/pwm_synth/Makefile examples/py_tk_gui/Makefile examples/py_tk_gui/setup.py extra/Makefile extra/macOS/Makefile libmapper.pc"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
