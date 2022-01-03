@@ -7,3 +7,4 @@ ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/maturin/__init__.py
+${PYSITELIB}/maturin/import_hook.py
