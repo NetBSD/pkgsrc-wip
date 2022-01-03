@@ -1941,6 +1941,7 @@ SUBDIR+=	kivaloo
 SUBDIR+=	klatexformula
 SUBDIR+=	klayout
 SUBDIR+=	kleopatra
+SUBDIR+=	klh10
 SUBDIR+=	kmail
 SUBDIR+=	kmail-account-wizard
 SUBDIR+=	kmailtransport

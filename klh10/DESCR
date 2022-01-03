@@ -1,0 +1,4 @@
+PDP-10 emulator, models KS, KS-its and KL. KL10B model supports extended
+addressing.
+See http://panda.trailing-edge.com/ for a the Panda TOPS-20 distribution.
+See PREFIX/share/klh10/usage.txt for usage information.

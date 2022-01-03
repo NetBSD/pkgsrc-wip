@@ -1,0 +1,4 @@
+* How to fetch multiple distfiles, from github and from a normal URL?
+* The executables in libexec/ are ugly
+* Where to put instructions on using the emulator (which requires its helper
+  programs linked into the current directory when running).
