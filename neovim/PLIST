@@ -365,6 +365,7 @@ share/nvim/runtime/ftplugin/cdrdaoconf.vim
 share/nvim/runtime/ftplugin/cfg.vim
 share/nvim/runtime/ftplugin/ch.vim
 share/nvim/runtime/ftplugin/changelog.vim
+share/nvim/runtime/ftplugin/checkhealth.vim
 share/nvim/runtime/ftplugin/chicken.vim
 share/nvim/runtime/ftplugin/clojure.vim
 share/nvim/runtime/ftplugin/cmake.vim
@@ -989,6 +990,7 @@ share/nvim/runtime/syntax/chaiscript.vim
 share/nvim/runtime/syntax/change.vim
 share/nvim/runtime/syntax/changelog.vim
 share/nvim/runtime/syntax/chaskell.vim
+share/nvim/runtime/syntax/checkhealth.vim
 share/nvim/runtime/syntax/cheetah.vim
 share/nvim/runtime/syntax/chicken.vim
 share/nvim/runtime/syntax/chill.vim

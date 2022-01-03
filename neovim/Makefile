@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	neovim-0.6.0
+DISTNAME=	neovim-0.6.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -48,17 +48,12 @@ post-extract:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../devel/msgpack/buildlink3.mk"
-# Only use luajit whenever it is supported by the current architecture,
-# fall back on plain lua if not.
-#
-# In addition, LuaJIT does not play well on x86_64 SunOS where memory
-# allocations fails.
-.if ${OPSYS} == "SunOS"
-    || (!empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Msparc) || !empty(MACHINE_ARCH:Msparc64))
+.include "../../lang/LuaJIT2/platform.mk"
+.if !empty(PLATFORM_SUPPORTS_LUAJIT:M[Yy][Ee][Ss])
+.include "../../lang/LuaJIT2/buildlink3.mk"
+.else
 .include "../../lang/lua51/buildlink3.mk"
 CMAKE_ARGS+=		-DPREFER_LUA=ON
-.else
-.include "../../lang/LuaJIT2/buildlink3.mk"
 .endif
 .include "../../lang/lua/application.mk"
 .include "../../wip/lua-luv/buildlink3.mk"

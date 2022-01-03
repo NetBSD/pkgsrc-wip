@@ -1,8 +1,9 @@
 $NetBSD$
 
-BLAKE2s (neovim-0.6.0.tar.gz) = 18476ac9020956db7dc5bffca0fb376efe840ae528bca742db409ae2f7e3e7e2
-SHA512 (neovim-0.6.0.tar.gz) = c007d076fb89288fe0496fa243fc6f485b0b33120c96b0bf37d8fe6469c672eb641fefbc3f7262ec726e40910c44d37ff7efb1723c05ba920ff6ae512b1d43e6
-Size (neovim-0.6.0.tar.gz) = 10592213 bytes
+BLAKE2s (neovim-0.6.1.tar.gz) = 02bc2f170ae89028af959f0ccecf6f71c2bfd478b7888c046c08bf787cb3b656
+SHA512 (neovim-0.6.1.tar.gz) = 399489f6aaabec2a89b695b22dcd860149acaad723372cced0b4d2cdae464e2db5758372b9123cd0d2a683e0ea42b871935eb85e550cecce620d896691cfda53
+Size (neovim-0.6.1.tar.gz) = 10597584 bytes
+SHA1 (patch-CMakeLists.txt) = eab736e08c8ab25b8c44921f4cac86b9dfc10a9c
 SHA1 (patch-config_CMakeLists.txt) = 6ebc442788888fc65036d054042b6d6abf9a1e36
 SHA1 (patch-config_config.h.in) = 66f41996991b59e68007bd4882ea9189d6575505
 SHA1 (patch-src_nvim_CMakeLists.txt) = 792b9a4a5921ff1fe7fb02d5dafd9f4a0b0df8f8
