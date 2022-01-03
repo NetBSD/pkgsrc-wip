@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/17 15:41:09 ryoon Exp $
+@comment $NetBSD$
 libexec/klh10/home-kl/dpni20
 libexec/klh10/home-kl/dprpxx
 libexec/klh10/home-kl/dptm03
@@ -98,6 +98,28 @@ share/klh10/kst20/kst20.ini
 share/klh10/kst20/smboot-k.sav
 share/klh10/kst20/smmtbt-k.sav
 share/klh10/news.txt
+share/klh10/panda/CPYRIGHT
+share/klh10/panda/PandaPanel.jpg
+share/klh10/panda/README
+share/klh10/panda/README-MULTIUNIT-RP07
+share/klh10/panda/RH20.RP07.1.gz
+share/klh10/panda/boot.sav
+share/klh10/panda/dpni20
+share/klh10/panda/dprpxx
+share/klh10/panda/dptm03
+share/klh10/panda/enaddr
+share/klh10/panda/inst-klt20
+share/klh10/panda/inst-klt20.ini
+share/klh10/panda/klt20
+share/klh10/panda/klt20.ini
+share/klh10/panda/kn10-kl
+share/klh10/panda/mtboot.sav
+share/klh10/panda/tapedd
+share/klh10/panda/udlconv
+share/klh10/panda/uexbconv
+share/klh10/panda/vdkfmt
+share/klh10/panda/wfconv
+share/klh10/panda/wxtest
 share/klh10/usage.txt
 share/klh10/utils.txt
 share/klh10/vtape.txt
