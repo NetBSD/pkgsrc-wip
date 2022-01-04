@@ -1935,6 +1935,7 @@ SUBDIR+=	kgraphviewer
 SUBDIR+=	khard-git
 SUBDIR+=	khotkeys
 SUBDIR+=	kibana
+SUBDIR+=	kind
 SUBDIR+=	kinfocenter
 SUBDIR+=	kissme
 SUBDIR+=	kivaloo
