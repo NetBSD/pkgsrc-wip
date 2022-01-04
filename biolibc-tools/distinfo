@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (biolibc-tools-0.1.1.5-b11d80bdc48ae8c6230068cbeda1b07b637c069b.tar.gz) = 243358b2574b788c9788182021615ae6592e6a95d1c843bbeef0ed558bdcfcf1
-SHA512 (biolibc-tools-0.1.1.5-b11d80bdc48ae8c6230068cbeda1b07b637c069b.tar.gz) = 14f24e13478a7979a343d387870a5613d03c8cb839acdedde4c655a7eed1850f8c3a518358abe5b6c1e6c9fc818da571ad3e2d1f654a5435b93d818f1452136a
-Size (biolibc-tools-0.1.1.5-b11d80bdc48ae8c6230068cbeda1b07b637c069b.tar.gz) = 22598 bytes
+BLAKE2s (biolibc-tools-0.1.1.6-dcc2b3d018ffdd9de4b1f9cd67f3c31cd9cc6e38.tar.gz) = 37285aa519285fedc84252c4450e25896ce40b817fa998986bf9e418061ba834
+SHA512 (biolibc-tools-0.1.1.6-dcc2b3d018ffdd9de4b1f9cd67f3c31cd9cc6e38.tar.gz) = 38815b64d979f1c90c5267b90f7d48c33cea82d2c0290ef691227e0c8ed5c0e5d6bfcb24c5ee8c286e34ca1ced5373f9e57fddb7c33f508e908ce2469aeb53e1
+Size (biolibc-tools-0.1.1.6-dcc2b3d018ffdd9de4b1f9cd67f3c31cd9cc6e38.tar.gz) = 22696 bytes
