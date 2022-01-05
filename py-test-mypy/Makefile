@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	pytest-mypy-0.7.0
+DISTNAME=	pytest-mypy-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/36/5e/6ea1fe0a56d3334bfbca51d71e5e119eacc84d872762e0b9dcf611fba4df/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mypy/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/dbader/pytest-mypy
