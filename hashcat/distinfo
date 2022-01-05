@@ -5,5 +5,5 @@ SHA512 (hashcat-6.2.5.tar.gz) = 2b881146c625172c91cb74b33851473155dcde2421fba1b4
 Size (hashcat-6.2.5.tar.gz) = 6341872 bytes
 SHA1 (patch-include_sort__r.h) = 710a6866d1f1b0ba4c499e07897cdaaed5d2f2cb
 SHA1 (patch-src_Makefile) = 2781200f402b5cebaded0cce72023d6e1cda7ef9
-SHA1 (patch-src_affinity.c) = 83621bdd3f9a891cc80ef4a864c14864e917d6d8
+SHA1 (patch-src_affinity.c) = 6054fea2478244292bd855bb8eb8d064aa0d81d1
 SHA1 (patch-src_folder.c) = 9db8506a5fa6aaceb05acb772ab4a58d8f3cac57
