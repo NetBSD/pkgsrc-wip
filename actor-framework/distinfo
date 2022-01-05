@@ -1,5 +1,7 @@
 $NetBSD$
 
-RMD160 (actor-framework-0.17.4.tar.gz) = 5ff8580d05c832d7e4b86d8ef670936d2a5b3a3a
-SHA512 (actor-framework-0.17.4.tar.gz) = 05ccc6c8c6bd0458c72cc2e13b9079ee1dc38d10c66f491d60f0c064e1e301a3bf43c0305e10ef7459eae39d92a0950504781b182fd4d867f452cd04bd87ecbb
-Size (actor-framework-0.17.4.tar.gz) = 2683477 bytes
+BLAKE2s (actor-framework-0.18.5.tar.gz) = 8cd0bdd72cfa5a99edc5401f162193addd7c49a13bbe0e3d93a40a9036fde9b7
+SHA512 (actor-framework-0.18.5.tar.gz) = 5b85e127cacc6df4a20c97d1c1f4d08f19a3e37812a7d8347c6ac46fcc1264a35212619030456221b70fc311b8078c0362cf8b21470518050ece5de4a5de1774
+Size (actor-framework-0.18.5.tar.gz) = 2827181 bytes
+SHA1 (patch-libcaf__core_caf_config.hpp) = a46342be3f0e710b0f184cf4cbf352a6c3077909
+SHA1 (patch-libcaf__core_src_detail_set__thread__name.cpp) = eba1aeba28f9001bc1b9bf337153815dcbd57abc
