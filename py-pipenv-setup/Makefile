@@ -13,7 +13,7 @@ LICENSE=	mit
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.10:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0.7.0:../../wip/py-test-mypy
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0.7.0:../../devel/py-test-mypy
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-datadir>=1.3.1:../../wip/py-test-datadir
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist

@@ -4715,7 +4715,6 @@ SUBDIR+=	py-test-doctestplus
 SUBDIR+=	py-test-html
 SUBDIR+=	py-test-metadata
 SUBDIR+=	py-test-mpl
-SUBDIR+=	py-test-mypy
 SUBDIR+=	py-test-nbval
 SUBDIR+=	py-test-ordering
 SUBDIR+=	py-test-remotedata
