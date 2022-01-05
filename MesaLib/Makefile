@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.197 2021/04/25 07:51:26 mrg Exp $
 
-DISTNAME=	mesa-21.3.1
+DISTNAME=	mesa-21.3.3
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
@@ -100,6 +100,7 @@ PLIST.r300=		yes
         empty(GALLIUM_DRIVERS:Mnouveau))
 MESON_ARGS+=		-Dgallium-va=enabled
 PLIST.vaapi=		yes
+BUILDLINK_API_DEPENDS.libva+=	libva>=2.13.0
 .    include "../../multimedia/libva/buildlink3.mk"
 .  else
 MESON_ARGS+=		-Dgallium-va=disabled
