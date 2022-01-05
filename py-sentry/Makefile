@@ -42,7 +42,7 @@ DEPENDS+=	${PYPKGPREFIX}-openid>=2.2.5:../../security/py-openid
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=5.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-percy>=1.1.2:../../wip/py-percy
 DEPENDS+=	${PYPKGPREFIX}-petname>=2.2:../../wip/py-petname
-DEPENDS+=	${PYPKGPREFIX}-progressbar2>=3.6.0:../../wip/py-progressbar2
+DEPENDS+=	${PYPKGPREFIX}-progressbar2>=3.6.0:../../devel/py-progressbar2
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7.4:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-pyaml>=17.12.1:../../textproc/py-pyaml
 DEPENDS+=	${PYPKGPREFIX}-qrcode>=5.3:../../graphics/py-qrcode

@@ -4342,7 +4342,6 @@ SUBDIR+=	py-prioritized-methods
 SUBDIR+=	py-processing
 SUBDIR+=	py-prody
 SUBDIR+=	py-progressbar
-SUBDIR+=	py-progressbar2
 SUBDIR+=	py-projectq
 SUBDIR+=	py-prometheus-client
 SUBDIR+=	py-promise
