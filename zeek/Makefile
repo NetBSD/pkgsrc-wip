@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	zeek-4.0.0
+DISTNAME=	zeek-4.0.4
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zeek/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -14,23 +14,23 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 GCC_REQD+=	7
 USE_LANGUAGES=	c c++17
-USE_TOOLS+=	bash:run bison cmake flex pkg-config
+USE_CMAKE=	yes
+USE_TOOLS+=	bash:run bison flex pkg-config
 
 BUILD_DEFS+=		VARBASE
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--logdir=${VARBASE}/log/${PKGBASE}
-CONFIGURE_ARGS+=	--spooldir=${VARBASE}/spool/${PKGBASE}
-CONFIGURE_ARGS+=	--conf-files-dir=${PKG_SYSCONFDIR}
-HAS_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
-PKGCONFIG_OVERRIDE+=	auxil/libkqueue/libkqueue.pc.in
-PKGCONFIG_OVERRIDE+=	auxil/rapidjson/RapidJSON.pc.in
-PKGCONFIG_OVERRIDE+=	auxil/rapidjson/thirdparty/gtest/googlemock/cmake/gmock.pc.in
-PKGCONFIG_OVERRIDE+=	auxil/rapidjson/thirdparty/gtest/googlemock/cmake/gmock_main.pc.in
-PKGCONFIG_OVERRIDE+=	auxil/rapidjson/thirdparty/gtest/googletest/cmake/gtest.pc.in
-PKGCONFIG_OVERRIDE+=	auxil/rapidjson/thirdparty/gtest/googletest/cmake/gtest_main.pc.in
+CONFIGURE_DIRS=		build
+CMAKE_ARGS+=		-DINSTALL_ZEEK_ARCHIVER:BOOL=ON
+CMAKE_ARGS+=		-DINSTALL_ZEEKCTL:BOOL=ON
+CMAKE_ARGS+=		-DINSTALL_ZKG:BOOL=ON
+CMAKE_ARGS+=		-DZEEK_ETC_INSTALL_DIR:PATH=${PKG_SYSCONFDIR}
+CMAKE_ARGS+=		-DZEEK_MAN_INSTALL_PATH:PATH=${PREFIX}/${PKGMANDIR}
+CMAKE_ARGS+=		-DCAF_ROOT:BOOL=ON  # use pkgsrc CAF(actors-framework)
+CMAKE_ARG_PATH=		..
+
+pre-configure:
+	${RUN} mkdir ${WRKSRC}/build
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/networks.cfg ${PKG_SYSCONFDIR}/networks.cfg
@@ -79,6 +79,20 @@ REPLACE_PYTHON+=	auxil/btest/btest-setsid
 REPLACE_PYTHON+=	auxil/package-manager/zkg
 REPLACE_PYTHON+=	auxil/zeekctl/bin/stats-to-csv
 REPLACE_PYTHON+=	auxil/zeekctl/bin/zeekctl.in
+#REPLACE_BASH+=		testing/scripts/diff-canonifier
+#REPLACE_BASH+=		testing/scripts/diff-canonifier-external
+#REPLACE_BASH+=		testing/scripts/diff-remove-abspath
+#REPLACE_BASH+=		testing/scripts/diff-remove-fields
+#REPLACE_BASH+=		testing/scripts/diff-remove-file-ids
+#REPLACE_BASH+=		testing/scripts/diff-remove-fractions
+#REPLACE_BASH+=		testing/scripts/diff-remove-openclose-timestamps
+#REPLACE_BASH+=		testing/scripts/diff-remove-timestamps
+#REPLACE_BASH+=		testing/scripts/diff-remove-uids
+#REPLACE_BASH+=		testing/scripts/diff-remove-x509-key-info
+#REPLACE_BASH+=		testing/scripts/diff-remove-x509-names
+#REPLACE_BASH+=		testing/scripts/diff-sort
+#REPLACE_BASH+=		testing/scripts/diff-sort-conn-service
+#REPLACE_BASH+=		testing/scripts/diff-sort-set-elements
 
 INSTALLATION_DIRS+=	${EGDIR}
 
@@ -113,9 +127,14 @@ fix-darwin-install-name:
 	done
 .endif
 
-.include "../../devel/swig3/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
+.include "../../wip/actor-framework/buildlink3.mk"
+.include "../../wip/swig4/tool.mk"
 .include "../../mk/bsd.pkg.mk"

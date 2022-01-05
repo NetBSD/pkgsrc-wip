@@ -1,2 +1,8 @@
 This package has known vulnerabilities, please investigate and fix if possible:
 CVE-2021-41732
+
+nros: CVE-2021-41732 seems to be nothing according to the zeek developers:
+      see: https://github.com/zeek/zeek/issues/1798
+
+nros: how to get the package to find the python version that is
+      PYTHON_VERSION_DEFAULT without adding lang/python/tool.mk ?

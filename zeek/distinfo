@@ -1,7 +1,15 @@
 $NetBSD$
 
-RMD160 (zeek-4.0.0.tar.gz) = 2b1d815cccfeda88b59886d87ac6e3a43b29a808
-SHA512 (zeek-4.0.0.tar.gz) = 072ec9ca541f60619e9e214594bef3fdacb546140cdf7f80e85aa69cc783c9dd4a7b54af85be713645419522a453cc4a32bc3d29579d15156f625d239ce66c5b
-Size (zeek-4.0.0.tar.gz) = 29441929 bytes
-SHA1 (patch-CMakeLists.txt) = 57c7903177fed5f6d20d4ddfbbc17e062f7314a9
+BLAKE2s (zeek-4.0.4.tar.gz) = 1820666af6f43f6c3bb6d7513669410451f9f32f6fb9d8bb339c69e0f526c870
+SHA512 (zeek-4.0.4.tar.gz) = 5baed8a24d45896db44e09eda8b95c85364e96806d31d0317d0c88ae52be9b7e282a78feb9054c9a7627ac9dad156b159976467d1b665dd3a7b7921e91fc78b2
+Size (zeek-4.0.4.tar.gz) = 30981125 bytes
+SHA1 (patch-CMakeLists.txt) = e8cb31fb6e29285cec6a9ae74e81e9e8ef3fdf39
+SHA1 (patch-auxil_broker_CMakeLists.txt) = 5891d583346ce4258487f807a2899ded5a126df2
+SHA1 (patch-auxil_highwayhash_highwayhash_os__specific.cc) = 79599ccdf1aa373ed15fc452086c20412d6d46f6
+SHA1 (patch-auxil_zeek-archiver_zeek-archiver.cc) = cba258b276a6c70984b61d37e949b3c359307194
 SHA1 (patch-auxil_zeekctl_CMakeLists.txt) = 2c900f6b6dbea0d8662e92fdb30463fcf82ebdec
+SHA1 (patch-src_CMakeLists.txt) = 0a4c4f95eeebd67e3cf75fcff230dcb34aad58ea
+SHA1 (patch-src_input_readers_sqlite_SQLite.h) = 78138183b06b05c0128a20f8f4b0d0d92d1a10b0
+SHA1 (patch-src_logging_writers_sqlite_SQLite.h) = 6fb73dde9b160e5979e27dd30d3d83e3a5d11283
+SHA1 (patch-src_packet__analysis_protocol_arp_ARP.h) = 6a1543d8b648958d955f71e403d322d8b9b50fe1
+SHA1 (patch-src_zeek-setup.cc) = aaf56756b1e13639592e0f95e6e14ecb5e0290e5

@@ -1,0 +1,45 @@
+$NetBSD$
+
+Use pkgsrc sqlite3
+
+--- src/CMakeLists.txt.orig	2021-09-22 16:48:14.000000000 +0000
++++ src/CMakeLists.txt
+@@ -398,10 +398,6 @@ set(MAIN_SRCS
+     digest.h
+ )
+ 
+-set(THIRD_PARTY_SRCS
+-    3rdparty/sqlite3.c
+-)
+-
+ # Highwayhash. Highwayhash is a bit special since it has architecture dependent code...
+ 
+ set(HH_SRCS
+@@ -468,7 +464,6 @@ set(zeek_SRCS
+     ${FLEX_Scanner_INPUT}
+     ${BISON_Parser_INPUT}
+     ${CMAKE_CURRENT_BINARY_DIR}/DebugCmdConstants.h
+-    ${THIRD_PARTY_SRCS}
+     ${HH_SRCS}
+     ${MAIN_SRCS}
+ )
+@@ -483,7 +478,7 @@ add_executable(zeek main.cc
+                ${bro_SUBDIR_LIBS}
+                ${bro_PLUGIN_LIBS}
+ )
+-target_link_libraries(zeek ${zeekdeps} ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
++target_link_libraries(zeek ${zeekdeps} ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS} PkgConfig::SQLITE3)
+ # Export symbols from zeek executable for use by plugins
+ set_target_properties(zeek PROPERTIES ENABLE_EXPORTS TRUE)
+ 
+@@ -568,10 +563,6 @@ install(DIRECTORY ${CMAKE_CURRENT_BINARY
+         PATTERN "CMakeFiles" EXCLUDE
+ )
+ 
+-install(FILES
+-        ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/sqlite3.h
+-        DESTINATION include/zeek/3rdparty
+-)
+ 
+ ########################################################################
+ ## Clang-tidy target now that we have all of the sources

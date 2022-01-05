@@ -1,10 +1,22 @@
 $NetBSD$
 
+use pkgsrc sqlite3
+
 Install configuration files under share/examples.
 
---- CMakeLists.txt.orig	2021-03-01 20:17:26.000000000 +0000
+--- CMakeLists.txt.orig	2021-09-22 16:48:14.000000000 +0000
 +++ CMakeLists.txt
-@@ -556,7 +556,7 @@ if ( INSTALL_ZKG )
+@@ -253,6 +253,9 @@ FindRequiredPackage(PCAP)
+ FindRequiredPackage(OpenSSL)
+ FindRequiredPackage(BIND)
+ FindRequiredPackage(ZLIB)
++FindRequiredPackage(PkgConfig)
++
++pkg_check_modules(SQLITE3 REQUIRED IMPORTED_TARGET sqlite3)
+ 
+ # Installation directory for the distribution's Python modules. An
+ # override via configure's --python-dir wins, specifying a directory
+@@ -570,7 +573,7 @@ if ( INSTALL_ZKG )
  
      install(DIRECTORY DESTINATION var/lib/zkg)
      install(FILES ${CMAKE_CURRENT_BINARY_DIR}/zkg-config

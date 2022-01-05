@@ -1,0 +1,22 @@
+$NetBSD$
+
+Use pkgsrc sqlite3
+
+--- auxil/broker/CMakeLists.txt.orig	2021-09-22 16:48:27.000000000 +0000
++++ auxil/broker/CMakeLists.txt
+@@ -272,13 +272,13 @@ configure_file(${CMAKE_CURRENT_SOURCE_DI
+                ${CMAKE_CURRENT_BINARY_DIR}/include/broker/config.hh)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/include/broker/config.hh DESTINATION include/broker)
+ 
+-if (NOT BROKER_EXTERNAL_SQLITE_TARGET)
++if (NOT TARGET PkgConfig::SQLITE3)
+   include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty)
+   set_source_files_properties(3rdparty/sqlite3.c PROPERTIES COMPILE_FLAGS
+                               -DSQLITE_OMIT_LOAD_EXTENSION)
+   list(APPEND OPTIONAL_SRC 3rdparty/sqlite3.c)
+ else()
+-  list(APPEND LINK_LIBS ${BROKER_EXTERNAL_SQLITE_TARGET})
++  list(APPEND LINK_LIBS PkgConfig::SQLITE3)
+ endif()
+ 
+ set(BROKER_SRC
