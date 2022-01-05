@@ -16,6 +16,9 @@ MAKE_ENV+=	SHARED=1
 MAKE_ENV+=	USE_SYSTEM_ZLIB=1
 MAKE_ENV+=	USE_SYSTEM_XXHASH=1
 
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/include/hashcat/sort_r.h.orig
+
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,6 +1,6 @@
 $NetBSD$
 
-Tentatively fix the build for NetBSD
+Fix the build for NetBSD
 
 --- include/sort_r.h.orig	2022-01-05 22:11:43.619407583 +0000
 +++ include/sort_r.h
@@ -13,3 +13,17 @@ Tentatively fix the build for NetBSD
  #  define _SORT_R_BSD
  #  define _SORT_R_INLINE inline
  #elif (defined __linux__) || defined (__CYGWIN__)
+@@ -202,7 +202,12 @@ static _SORT_R_INLINE void sort_r_simple
+       struct sort_r_data tmp;
+       tmp.arg = arg;
+       tmp.compar = compar;
+-      qsort_r(base, nel, width, &tmp, sort_r_arg_swap);
++
++      #if defined __NetBSD__
++        sort_r_simple(base, nel, width, compar, arg);
++      #else
++        qsort_r(base, nel, width, &tmp, sort_r_arg_swap);
++      #endif
+ 
+     #elif defined _SORT_R_WINDOWS
+ 

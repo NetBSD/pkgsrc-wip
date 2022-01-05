@@ -78,7 +78,6 @@ include/hashcat/types.h
 include/hashcat/usage.h
 include/hashcat/user_options.h
 include/hashcat/wordlist.h
-lib/libhashcat.so
 lib/libhashcat.so.${PKGVERSION}
 share/doc/hashcat/charsets/DES_full.hcchr
 share/doc/hashcat/charsets/DES_special/DES_alpha.hcchr

@@ -3,8 +3,8 @@ $NetBSD$
 BLAKE2s (hashcat-6.2.5.tar.gz) = 425d720ca0bb48e585988dc0557a829b3906d697ad14722c68e34fb5b4f7ebaa
 SHA512 (hashcat-6.2.5.tar.gz) = 2b881146c625172c91cb74b33851473155dcde2421fba1b4acfba28116499b9cff832a62c4dbc24e16df06a827494f30699a7d0e5195d5ed107704f525255383
 Size (hashcat-6.2.5.tar.gz) = 6341872 bytes
-SHA1 (patch-include_sort__r.h) = 710a6866d1f1b0ba4c499e07897cdaaed5d2f2cb
-SHA1 (patch-src_Makefile) = 2781200f402b5cebaded0cce72023d6e1cda7ef9
+SHA1 (patch-include_sort__r.h) = b5418315b7abd50d95b9ec526964f94418c1aafd
+SHA1 (patch-src_Makefile) = 427c7d162ff8373d6b180718fff4845bdb119d1c
 SHA1 (patch-src_affinity.c) = 6054fea2478244292bd855bb8eb8d064aa0d81d1
 SHA1 (patch-src_folder.c) = dfac6b9c75ce0e6e694eb2f3e902a040226b2e6e
 SHA1 (patch-src_terminal.c) = 40b52cdb1f9030b9ad7649bf0a9a4cf17b1f52fe

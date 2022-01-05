@@ -1,11 +1,11 @@
 $NetBSD$
 
 Set preferences.
-Add minimal NetBSD support.
+Add NetBSD support.
 Don't override CC nor optimisation flags in CFLAGS.
 Remove sed magic; we'll use nbsed.
 
---- src/Makefile.orig	2021-05-15 12:07:58.000000000 +0000
+--- src/Makefile.orig	2021-11-21 15:39:01.000000000 +0000
 +++ src/Makefile
 @@ -31,7 +31,7 @@ UNAME                   := $(patsubst MS
  UNAME                   := $(patsubst MINGW32_NT-%,MSYS2,$(UNAME))
@@ -16,7 +16,7 @@ Remove sed magic; we'll use nbsed.
  $(error "! Your Operating System ($(UNAME)) is not supported by this Makefile")
  endif
  
-@@ -59,8 +59,6 @@ MODULE_INTERFACE_VERSION := 620
+@@ -59,8 +59,6 @@ MODULE_INTERFACE_VERSION := 630
  ## Native compiler paths
  ##
  
@@ -46,7 +46,7 @@ Remove sed magic; we'll use nbsed.
  
  ##
  ## Version
-@@ -222,7 +209,6 @@ endif
+@@ -228,7 +215,6 @@ endif
  endif
  
  ifeq ($(DEBUG),0)
@@ -54,7 +54,7 @@ Remove sed magic; we'll use nbsed.
  ifneq ($(UNAME),Darwin)
  LFLAGS                  += -s
  endif
-@@ -306,6 +292,13 @@ LFLAGS_NATIVE           += -liconv
+@@ -312,6 +298,13 @@ LFLAGS_NATIVE           += -liconv
  endif
  endif # FreeBSD
  
@@ -68,7 +68,20 @@ Remove sed magic; we'll use nbsed.
  ifeq ($(UNAME),Darwin)
  export MACOSX_DEPLOYMENT_TARGET=10.9
  CFLAGS_NATIVE           := $(CFLAGS)
-@@ -630,8 +623,13 @@ endif
+@@ -456,10 +449,10 @@ distclean: clean
+ # allow (whitelist) "make install" only on unix-based systems (also disallow cygwin/msys)
+ 
+ ifneq ($(findstring install,$(MAKECMDGOALS)),)
+-  ifeq (,$(filter $(UNAME),Linux FreeBSD Darwin))
++  ifeq (,$(filter $(UNAME),Linux FreeBSD Darwin NetBSD))
+     define ERROR_INSTALL_DISALLOWED
+ ! The 'install' target is not allowed on this operating system ($(UNAME)). \
+-Only Linux, FreeBSD and Darwin can use the 'install' target
++Only Linux, FreeBSD, NetBSD and Darwin can use the 'install' target
+     endef
+ 
+     $(error $(ERROR_INSTALL_DISALLOWED))
+@@ -637,8 +630,13 @@ endif
  $(MODULES_DISABLE): ;
  
  ifeq ($(SHARED),1)
