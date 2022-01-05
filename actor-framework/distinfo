@@ -3,5 +3,6 @@ $NetBSD$
 BLAKE2s (actor-framework-0.18.5.tar.gz) = 8cd0bdd72cfa5a99edc5401f162193addd7c49a13bbe0e3d93a40a9036fde9b7
 SHA512 (actor-framework-0.18.5.tar.gz) = 5b85e127cacc6df4a20c97d1c1f4d08f19a3e37812a7d8347c6ac46fcc1264a35212619030456221b70fc311b8078c0362cf8b21470518050ece5de4a5de1774
 Size (actor-framework-0.18.5.tar.gz) = 2827181 bytes
-SHA1 (patch-libcaf__core_caf_config.hpp) = a46342be3f0e710b0f184cf4cbf352a6c3077909
-SHA1 (patch-libcaf__core_src_detail_set__thread__name.cpp) = eba1aeba28f9001bc1b9bf337153815dcbd57abc
+SHA1 (patch-libcaf__core_caf_config.hpp) = ea9cad613dedf78387fd7932b4df2598d0fe14f5
+SHA1 (patch-libcaf__core_src_detail_pretty__type__name.cpp) = 922423499220ba8481da6076877fb755ab49c569
+SHA1 (patch-libcaf__core_src_detail_set__thread__name.cpp) = b5a573a7c01c09b745020c048c644c2575ab1a18

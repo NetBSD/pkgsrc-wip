@@ -16,15 +16,12 @@ $NetBSD$
  #  include <pthread_np.h>
  #endif // defined(...)
  
-@@ -33,7 +33,11 @@ void set_thread_name(const char* name) {
+@@ -32,6 +32,8 @@ void set_thread_name(const char* name) {
+   pthread_setname_np(name);
  #  elif defined(CAF_LINUX)
    prctl(PR_SET_NAME, name, 0, 0, 0);
- #  elif defined(CAF_BSD)
-+#    if defined(__NetBSD__)
++#  elif defined(CAF_NETBSD)
 +  pthread_setname_np(pthread_self(), name , NULL); 
-+#    else
+ #  elif defined(CAF_BSD)
    pthread_set_name_np(pthread_self(), name);
-+#    endif
  #  endif // defined(...)
- #endif   // CAF_WINDOWS
- }
