@@ -2310,6 +2310,7 @@ SUBDIR+=	mac-robber
 SUBDIR+=	macaulay2
 SUBDIR+=	mackerel-agent
 SUBDIR+=	mackerel-agent-plugins
+SUBDIR+=	macro11
 SUBDIR+=	madonctl
 SUBDIR+=	magit-git
 SUBDIR+=	mago

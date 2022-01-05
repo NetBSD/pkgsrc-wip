@@ -1,0 +1,2 @@
+PDP-11 cross-assembler. Generates either RSX-11M+ or RT11 object files.
+Also includes obj2bin.pl to convert to several nonrelocatable formats.
