@@ -1,0 +1,22 @@
+Digital Imaging and Communications in Medicine (DICOM) is a standard that
+governs this capability by specifying handling, storing, printing, and
+transmitting information in medical imaging.
+
+Grassroots DICOM (GDCM) is an implementation of the DICOM standard designed
+to be open source so that researchers may access clinical data directly. GDCM
+includes a file format definition and a network communications protocol, both
+of which should be extended to provide a full set of tools for a researcher or
+small medical imaging vendor to interface with an existing medical database.
+
+GDCM is an open source implementation of the DICOM standard. It offers some
+compatibility with ACR-NEMA 1.0 & 2.0 files (raw files). It is written in C++
+and offers wrapping to the following target languages (via the use of swig):
+
+Python, C#, Java, PHP (experimental), Perl (experimental).
+
+It attempts to support all possible DICOM image encodings, namely:
+
+RAW, JPEG lossy 8 & 12 bits (ITU-T T.81, ISO/IEC IS 10918-1), JPEG lossless
+8-16 bits (ITU-T T.81, ISO/IEC IS 10918-1), JPEG 2000 reversible &
+irreversible (ITU-T T.800, ISO/IEC IS 15444-1), RLE, Deflated (compression at
+DICOM Dataset level), JPEG-LS (ITU-T T.87, ISO/IEC IS 14495-1).

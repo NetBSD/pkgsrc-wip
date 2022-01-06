@@ -1091,6 +1091,7 @@ SUBDIR+=	gdb
 SUBDIR+=	gdb-git
 SUBDIR+=	gdb5
 SUBDIR+=	gdb6
+SUBDIR+=	gdcm
 SUBDIR+=	gde
 SUBDIR+=	gdk-pixbuf-jxl
 SUBDIR+=	gdm

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (gdcm-3.0.10.tar.bz2) = d22656cc9d1914e269e519359f5d376553d68ee4094573dbe155ed265e0c7842
+SHA512 (gdcm-3.0.10.tar.bz2) = f309bd79b0d65f4d3c09aa7f298ae3292b04376fc944fe7d513f2bde82461afe84a778557af1ff4964b80a84ef2c4940707881b395532ad6acef1d45b7d6f790
+Size (gdcm-3.0.10.tar.bz2) = 2935000 bytes
+SHA1 (patch-Source_MediaStorageAndFileFormat_gdcmFileStreamer.cxx) = 6309252457c465e0a5fbe32a4fa108e4e12ed92f
