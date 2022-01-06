@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (leocad-21.06.tar.gz) = 181d3311a71442827d5ac197f67244e33ac9a256
-RMD160 (leocad-21.06.tar.gz) = 06a4dfb0e316686e7922d6c84359c114f506b89f
+BLAKE2s (leocad-21.06.tar.gz) = fe510e60bddeba5b5ba7fe4f196fd86c6927b0ed826443052edc9f0546861e71
 SHA512 (leocad-21.06.tar.gz) = 6cc868d3da15f9fe003a70d3a8ebaf2b4e6562a8728652cb7fc9e3ab5ddd9a90c5e433fd4d37cc9f972dc314399b4edb34fe5d9cd47ad63bf7c5d71e04e3c662
 Size (leocad-21.06.tar.gz) = 2213955 bytes
 SHA1 (patch-common_lc__application.h) = 759bfb463074d0a9a585610dec09ef444c16ebe5

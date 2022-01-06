@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (PrusaSlicer-2.4.0.tar.gz) = 8f9d41a403da21eaf5c52e21acc2180c3d1f8537
-RMD160 (PrusaSlicer-2.4.0.tar.gz) = b2246c5c695ce4bfe495a6126812888b43a1cd0d
+BLAKE2s (PrusaSlicer-2.4.0.tar.gz) = cd9ea388c82a3eb687d7d3639446cea40d57fa069657fa8940e210cbe3d66d78
 SHA512 (PrusaSlicer-2.4.0.tar.gz) = e923e4e6273dbcfc3e2bc0e28f9eb8cda8530747c0a834f48aea715d75ba1d02be9cfee043689efccdaee40de00114f7964e43accad245b9acd801b997868e3c
 Size (PrusaSlicer-2.4.0.tar.gz) = 46397442 bytes
 SHA1 (patch-CMakeLists.txt) = 9d6c8e2f1f491b18b6781799bd5e99775e3e3e79

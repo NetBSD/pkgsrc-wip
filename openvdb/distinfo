@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (openvdb-8.1.0.tar.gz) = 307b60cc2de21c74ed8e5a45a23a57a4c51fc78e
+BLAKE2s (openvdb-8.1.0.tar.gz) = c77e0df037f13fd264b4bbd0db39468ebeaa83b7fb3d40e246c268f5576a99a6
 SHA512 (openvdb-8.1.0.tar.gz) = 081ccedb122ff9bd73e0cd7ff083ad0ff0165e0cf6305187edcbe90ff12f01ec085c91ad5c52c53596035e0c2afd5b8801e6c00374b0fc4b0cc111f5c7f37eb5
 Size (openvdb-8.1.0.tar.gz) = 2619432 bytes
 SHA1 (patch-cmake_FindTBB.cmake) = 4e5dee93840c8a1d8ce31583c6e875c7c7180268
