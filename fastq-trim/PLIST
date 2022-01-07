@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/fastq-trim
+bin/fastq-vis
+man/man1/fastq-trim.1
+man/man1/fastq-vis.1
