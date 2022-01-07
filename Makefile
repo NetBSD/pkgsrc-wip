@@ -4447,6 +4447,7 @@ SUBDIR+=	py-qnet
 SUBDIR+=	py-qrng
 SUBDIR+=	py-qsymm
 SUBDIR+=	py-qt-thread-updater
+SUBDIR+=	py-qt5-webengine
 SUBDIR+=	py-qtpy
 SUBDIR+=	py-qtt
 SUBDIR+=	py-quandl

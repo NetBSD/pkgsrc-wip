@@ -13,9 +13,10 @@ COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+#DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
@@ -33,6 +34,7 @@ DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../wip/py-qt5-webengine
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
@@ -143,6 +145,7 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

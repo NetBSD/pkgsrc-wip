@@ -1,3 +1,20 @@
-Does not start:
+Clean up a bit.
+Go on with Calibre 5.x.
 
-ImportError: No module named QtWebEngineCore
+>> Startup method for device MTP_DEVICE threw exception
+>> KeyError: u"No plugin named u'libmtp'"
+>> KeyError: u"No plugin named u'libusb'"
+
+this probably "just" means you can't connect to the actual reader device;
+but libmtp and libusb are included in the dependencies, so probably this
+could be improved.
+
+>> Failed to create system tray icon, your desktop environment probably does
+>> not support the StatusNotifier spec
+>> https://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/
+
+I don't really care.
+
+>> qt.xkb.compose: failed to create compose table
+
+This is unclear.
