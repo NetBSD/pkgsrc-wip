@@ -1,0 +1,14 @@
+$NetBSD$
+
+* libsocket needed on SunOS(illumos) due to use of socket function
+
+--- libcaf_core/CMakeLists.txt.orig	2021-07-16 09:33:16.000000000 +0000
++++ libcaf_core/CMakeLists.txt
+@@ -52,6 +52,7 @@ caf_add_component(
+       ${LIBCAF_CORE_OPTIONAL_DEPENDENCIES}
+     PRIVATE
+       CAF::internal
++      $<$<PLATFORM_ID:SunOS>:socket>
+   ENUM_CONSISTENCY_CHECKS
+     exit_reason
+     intrusive.inbox_result

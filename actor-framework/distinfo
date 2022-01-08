@@ -3,6 +3,12 @@ $NetBSD$
 BLAKE2s (actor-framework-0.18.5.tar.gz) = 8cd0bdd72cfa5a99edc5401f162193addd7c49a13bbe0e3d93a40a9036fde9b7
 SHA512 (actor-framework-0.18.5.tar.gz) = 5b85e127cacc6df4a20c97d1c1f4d08f19a3e37812a7d8347c6ac46fcc1264a35212619030456221b70fc311b8078c0362cf8b21470518050ece5de4a5de1774
 Size (actor-framework-0.18.5.tar.gz) = 2827181 bytes
-SHA1 (patch-libcaf__core_caf_config.hpp) = ea9cad613dedf78387fd7932b4df2598d0fe14f5
+SHA1 (patch-examples_message__passing_fan__out__request.cpp) = 2039d3a58f8c4dd23ebf70772d75f88f8f265dd0
+SHA1 (patch-libcaf__core_CMakeLists.txt) = 9791d9ad4036a5eae13183e354f37f3abc98b3e9
+SHA1 (patch-libcaf__core_caf_config.hpp) = af9dc056a274539d8d27e89313f342a822c38e90
+SHA1 (patch-libcaf__core_src_detail_get__mac__addresses.cpp) = 509e8081f66cebe93866e26858357145efc46199
+SHA1 (patch-libcaf__core_src_detail_get__root__uuid.cpp) = ba158be8761dfe0dc5705de48c885e4cc9739743
 SHA1 (patch-libcaf__core_src_detail_pretty__type__name.cpp) = 922423499220ba8481da6076877fb755ab49c569
-SHA1 (patch-libcaf__core_src_detail_set__thread__name.cpp) = b5a573a7c01c09b745020c048c644c2575ab1a18
+SHA1 (patch-libcaf__core_src_detail_set__thread__name.cpp) = fb3cfefb1eccbf77ccf65173f1cfeb1e71b2e875
+SHA1 (patch-libcaf__core_src_telemetry_importer_process.cpp) = 729b9574cba607f9c05558150a780701ea75e7ba
+SHA1 (patch-libcaf__io_CMakeLists.txt) = 327649d0fef862e75a5367d38e1baf769923c9f0

@@ -1,0 +1,15 @@
+$NetBSD$
+
+* socket and nsl needed for networking on Solaris
+
+--- libcaf_io/CMakeLists.txt.orig	2021-07-16 09:33:16.000000000 +0000
++++ libcaf_io/CMakeLists.txt
+@@ -10,6 +10,8 @@ caf_add_component(
+     PUBLIC
+       CAF::core
+       $<$<CXX_COMPILER_ID:MSVC>:ws2_32>
++      $<$<PLATFORM_ID:SunOS>:socket>
++      $<$<PLATFORM_ID:SunOS>:nsl>
+     PRIVATE
+       CAF::internal
+   ENUM_CONSISTENCY_CHECKS
