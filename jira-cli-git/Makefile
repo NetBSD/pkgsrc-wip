@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	jira-cli-0.1.1.20211106
+DISTNAME=	jira-cli-0.2.0.20220107
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ankitpokhrel/}
 CATEGORIES=	www
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	624b58f0f26408c9055ec4c9eb9b0c84dad573c0
+GITHUB_TAG=	71969fade44ce6d2a01b87cd14df6b0f973e1524
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://github.com/ankitpokhrel/jira-cli
