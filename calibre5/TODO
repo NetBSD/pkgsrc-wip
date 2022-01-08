@@ -1,0 +1,19 @@
+During make build:
+
+>> SIPing 3 files...
+>> /usr/pkg/bin/python3.9 -c from sipbuild.tools.build import main; main(); --verbose --no-make --qmake /usr/pkg/qt5/bin/qmake
+>> Traceback (most recent call last):
+>>   File "<string>", line 1, in <module>
+>> ModuleNotFoundError: No module named 'sipbuild'
+
+We don't seem to have a package with sipbuild in it.
+It may be that x11/py-sip needs to be updated from sip-4.19.25 to sip-5.5.0.tar.gz.
+However its Makefile.common has the ominous comment
+# Before updating, please check that any new version works with qgis.
+# Apparently, there are problems with 5 and 6 with qgis 3.16 as of
+# 2021-11.
+
+https://riverbankcomputing.com/software/sip/download doesn't have a distfile
+for sip 5 and 6 but refers to PyPI.
+
+According to near code in setup/build.py we would need py-toml (toml-0.10.1.tar.gz)
