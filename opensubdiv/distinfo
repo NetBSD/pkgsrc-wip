@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (OpenSubdiv-3.4.4.tar.gz) = 0ab59390bfc25c87ec16e60e2ef7e6cabbcf546b
+BLAKE2s (OpenSubdiv-3.4.4.tar.gz) = fc2a6c2fd533d4609831711dbf648198063d3cce669dd7fab0bef6e4287b4f11
 SHA512 (OpenSubdiv-3.4.4.tar.gz) = fc8f28b79347015c8991150535c1339e695d96947c72fadd4fa27b546a0813c1125cd175ee03bed5aacdb3609f74c4e526ef70103d1195ba9f7df041e73ea9fb
 Size (OpenSubdiv-3.4.4.tar.gz) = 39228037 bytes
 SHA1 (patch-opensubdiv_osd_tbbEvaluator.cpp) = fb2601b15e9d1acd98228c88a6adc29513b20495
