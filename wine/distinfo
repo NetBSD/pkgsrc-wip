@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.99 2021/10/26 10:24:15 nia Exp $
+
+BLAKE2s (wine-6.0.2.tar.xz) = ac420b3a262b380b97a4131c89b49af6ac5c5ec8f3f261ae7d68c0b0df04d10c
+SHA512 (wine-6.0.2.tar.xz) = 6cf002c6a06161665614c9f977dfa402bae8e657c0744dd824575066cdeb676bb9d61ebfc3c4b6f76486077a7457fe91cbe5bbadb467279a61e5a320da587696
+Size (wine-6.0.2.tar.xz) = 24217772 bytes
+SHA1 (patch-configure) = 815d363228575d40dc011ce1afb135638c7b9510
+SHA1 (patch-dlls_wininet_http.c) = 5ca2fa79d4177f8503232c5960220249bdda1b8d
+SHA1 (patch-dlls_ws2__32_socket.c) = 93df656181fe698de441e52bd25005142fbbaa04
