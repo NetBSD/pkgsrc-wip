@@ -1,4 +1,7 @@
 @comment $NetBSD$
+lib/calibre/calibre/plugins/libmtp.so
+lib/calibre/calibre/plugins/libusb.so
+
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1153,6 +1156,8 @@ lib/calibre/calibre/plugins/hyphen.so
 lib/calibre/calibre/plugins/icu.so
 lib/calibre/calibre/plugins/imageops.so
 lib/calibre/calibre/plugins/libheadless.so
+lib/calibre/calibre/plugins/libmtp.so
+lib/calibre/calibre/plugins/libusb.so
 lib/calibre/calibre/plugins/lzma_binding.so
 lib/calibre/calibre/plugins/lzx.so
 lib/calibre/calibre/plugins/matcher.so

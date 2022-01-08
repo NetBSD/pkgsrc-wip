@@ -109,6 +109,9 @@ post-install:
 	    COPYRIGHT INSTALL.rst LICENSE.* \
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
 
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} ./setup.py test
+
 .include "../../lang/python/application.mk"
 .include "../../archivers//bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
