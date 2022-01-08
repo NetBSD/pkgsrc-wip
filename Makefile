@@ -19,7 +19,6 @@ SUBDIR+=	FLIF-git
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	Geomyidae-git
-SUBDIR+=	GoogleEarth
 SUBDIR+=	I2util
 SUBDIR+=	LuaJIT21
 SUBDIR+=	MesaLib

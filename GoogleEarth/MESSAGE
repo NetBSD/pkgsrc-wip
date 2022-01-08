@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2015/03/02 19:59:26 tnn2 Exp $
-
-Note: Google Earth *requires* DRI accelerated 3D graphics.
-Note: Application tends to frequency crash on startup due to some race.
-Here are possible workarounds:
-- use cpuctl(8) to offline all but one CPU while starting the app
-- quickly minimize the window while the application loads
-===========================================================================
