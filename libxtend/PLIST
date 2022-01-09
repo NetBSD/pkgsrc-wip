@@ -65,11 +65,15 @@ man/man3/strblank.3
 man/man3/strisint.3
 man/man3/strisreal.3
 man/man3/strlbasecpy.3
+man/man3/strllower.3
+man/man3/strlower.3
+man/man3/strlupper.3
 man/man3/strptrcmp.3
 man/man3/strshellcpy.3
 man/man3/strsqueeze.3
 man/man3/strtr.3
 man/man3/strtrim.3
+man/man3/strupper.3
 man/man3/strviscpy.3
 man/man3/tsv_read_field.3
 man/man3/tsv_read_field_malloc.3
