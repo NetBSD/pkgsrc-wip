@@ -94,7 +94,7 @@ PLIST.r100=		yes
 PLIST.r200=		yes
 PLIST.r300=		yes
 .  endif
-.  include "../../wip/libva/available.mk"
+.  include "../../multimedia/libva/available.mk"
 .  if ${VAAPI_AVAILABLE} == "yes" && \
       !(empty(GALLIUM_DRIVERS:Mr600) && empty(GALLIUM_DRIVERS:Mradeonsi) && \
         empty(GALLIUM_DRIVERS:Mnouveau))
