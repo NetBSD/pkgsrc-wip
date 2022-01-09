@@ -13,7 +13,7 @@ $NetBSD$
  #  define CAF_HAS_PROCESS_METRICS
  #endif
  
-@@ -212,6 +212,92 @@ sys_stats read_sys_stats() {
+@@ -212,6 +212,90 @@ sys_stats read_sys_stats() {
  
  #endif // CAF_LINUX
  
@@ -37,19 +37,17 @@ $NetBSD$
 +    auto rd = fread(&ppsi, sizeof(ppsi), 1, f);
 +    fclose(f);
 +    if (rd != 1) {
-+       CAF_LOG_ERROR("failed to read content of " + procfs_path);
++       CAF_LOG_ERROR("failed to read content of" << procfs_path);
 +       return result;
 +    }
 +
 +    result.rss = static_cast<int64_t>(ppsi.pr_rssize) * 1024;
 +    result.vms = static_cast<int64_t>(ppsi.pr_size) * 1024;
 +    result.cpu_time = ppsi.pr_time.tv_sec;
-+    if (ppsi.pr_time.tv_nsec > 500000000) {
-+      result.cpu_time += 1;
-+    }
++    result.cpu_time += static_cast<double>(ppsi.pr_time.tv_nsec) / 1000000000;
 +  }
 +  else {
-+    CAF_LOG_ERROR("failed to open file " + procfs_path);
++    CAF_LOG_ERROR("failed to open file" << procfs_path);
 +  }
 +
 +  return result;
