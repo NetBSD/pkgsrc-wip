@@ -1,6 +1,7 @@
 $NetBSD$
 
 Oracle Solaris has pthread_setname_np. illumos does not.
+(actually, newer Illumos does have it, but never mind.)
 
 Don't hard error when there's no pthread_setname_np.
 
