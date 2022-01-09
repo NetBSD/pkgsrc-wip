@@ -10,5 +10,5 @@ SHA1 (patch-src_calibre_constants.py) = a72594b5a68fa42e7133d8be42dd30e73c8db205
 SHA1 (patch-src_calibre_ebooks_BeautifulSoup.py) = b0775f55806a67322eaaae340c6f80ed87aa2332
 SHA1 (patch-src_calibre_headless_fontconfig__database.cpp) = 55e7bd7b779ec2ff4a28fdd3ca9d9c10811b6bb1
 SHA1 (patch-src_calibre_linux.py) = 382191b8c8c6c893c4f2385613c599fcfc3bff09
-SHA1 (patch-src_calibre_utils_icu.c) = a9b90dbe7e7e39d2cf971132a9c45c3d8e31a6fb
-SHA1 (patch-src_calibre_utils_matcher.c) = 4f5969ba3ce1fe96e99c17fe46c992d9adf03b99
+SHA1 (patch-src_calibre_utils_icu.c) = bfcb097de7ba30bc03c5357f5ed1b8ce8627dc40
+SHA1 (patch-src_calibre_utils_matcher.c) = 9f5e6b3444189242bf0be331be883793edb65f69

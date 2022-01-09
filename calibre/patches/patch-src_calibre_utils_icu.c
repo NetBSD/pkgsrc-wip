@@ -1,6 +1,6 @@
 $NetBSD$
 
-I compiled with gcc8.
+At least for gcc 7.5 and 8.
 
 --- src/calibre/utils/icu.c.orig	2020-02-21 03:27:12.000000000 +0000
 +++ src/calibre/utils/icu.c

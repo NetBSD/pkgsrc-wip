@@ -1,7 +1,4 @@
 @comment $NetBSD$
-lib/calibre/calibre/plugins/libmtp.so
-lib/calibre/calibre/plugins/libusb.so
-
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
