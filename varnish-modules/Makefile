@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	varnish-modules
-DISTNAME=	varnish-modules-0.18.0
+DISTNAME=	varnish-modules-0.19.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=varnish/}
 

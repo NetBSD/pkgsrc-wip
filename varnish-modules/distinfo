@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (varnish-modules-0.18.0.tar.gz) = f0a0937741c97801f0cace9d6f0433fc4a60a4cf
-SHA512 (varnish-modules-0.18.0.tar.gz) = a6a56ea371ebe8183926e5411f8b4ee7bb47cc45464cfffb2f4a8d17b04b156889bcbe254845058ded2e712ed21ee73e6e98eb29f72d922f1fbbfc1cc506d9f1
-Size (varnish-modules-0.18.0.tar.gz) = 53830 bytes
+BLAKE2s (varnish-modules-0.19.0.tar.gz) = e06f6217d300c4c9cb5643f0cd53002c269d634d1d12877eab4d249c5196460e
+SHA512 (varnish-modules-0.19.0.tar.gz) = fc588ac7e89186a3a6e9ad6e8fa760323220dda30774c7b1fbcba277d8462ee16efd45393e51851a35c2050f6e4a7cf2d726538773a846358b8c0828d1e36eb4
+Size (varnish-modules-0.19.0.tar.gz) = 54097 bytes
 SHA1 (patch-src_vmod__tcp.c) = c7c1d8803c281b55c01d562f7f7d11cf65237973
