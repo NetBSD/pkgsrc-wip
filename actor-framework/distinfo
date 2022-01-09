@@ -11,4 +11,5 @@ SHA1 (patch-libcaf__core_src_detail_get__root__uuid.cpp) = ba158be8761dfe0dc5705
 SHA1 (patch-libcaf__core_src_detail_pretty__type__name.cpp) = 922423499220ba8481da6076877fb755ab49c569
 SHA1 (patch-libcaf__core_src_detail_set__thread__name.cpp) = fb3cfefb1eccbf77ccf65173f1cfeb1e71b2e875
 SHA1 (patch-libcaf__core_src_telemetry_importer_process.cpp) = 00215e17c6536d7e90abd54871fbbeb9842955bd
+SHA1 (patch-libcaf__core_test_scheduled__actor.cpp) = c16b336c67173b4d8c562b624fadf4443ae27005
 SHA1 (patch-libcaf__io_CMakeLists.txt) = 327649d0fef862e75a5367d38e1baf769923c9f0
