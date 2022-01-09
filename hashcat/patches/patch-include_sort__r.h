@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix the build for NetBSD
 
---- include/sort_r.h.orig	2022-01-05 22:11:43.619407583 +0000
+--- include/sort_r.h.orig	2021-11-21 15:39:01.000000000 +0000
 +++ include/sort_r.h
 @@ -25,7 +25,7 @@ Slightly modified to work with hashcat t
  */

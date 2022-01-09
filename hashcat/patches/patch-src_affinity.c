@@ -2,7 +2,7 @@ $NetBSD$
 
 Fix the build for NetBSD
 
---- src/affinity.c.orig	2022-01-05 22:06:04.906472892 +0000
+--- src/affinity.c.orig	2021-11-21 15:39:01.000000000 +0000
 +++ src/affinity.c
 @@ -45,6 +45,12 @@ static int pthread_setaffinity_np (pthre
  typedef cpuset_t cpu_set_t;
