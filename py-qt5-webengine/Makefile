@@ -27,8 +27,6 @@ PY_PATCHPLIST=		yes
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
-DEPENDS+=		${PYPKGPREFIX}-sip-qt5>=4.19.23:../../x11/py-sip-qt5
-
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
                 ${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
