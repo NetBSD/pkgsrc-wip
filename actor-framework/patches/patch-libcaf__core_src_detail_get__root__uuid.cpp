@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Add Solaris support
+* Use the native uuid api on NetBSD
 
 --- libcaf_core/src/detail/get_root_uuid.cpp.orig	2021-07-16 09:33:16.000000000 +0000
 +++ libcaf_core/src/detail/get_root_uuid.cpp

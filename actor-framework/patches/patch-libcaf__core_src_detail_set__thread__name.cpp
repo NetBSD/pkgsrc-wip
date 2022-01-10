@@ -1,8 +1,5 @@
 $NetBSD$
 
-* NetBSD does not have pthread_np.h, since this package requires c++17 use _has_include
-  so that pthread_np.h is only included on platforms that have it
-
 * add NetBSD support
 * add Solaris support
 

@@ -1,6 +1,7 @@
 $NetBSD$
 
 * Add Solaris support
+* Add NetBSD support
 
 --- libcaf_core/src/telemetry/importer/process.cpp.orig	2021-07-16 09:33:16.000000000 +0000
 +++ libcaf_core/src/telemetry/importer/process.cpp

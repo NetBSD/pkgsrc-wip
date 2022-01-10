@@ -1,5 +1,6 @@
 $NetBSD$
 
+* add NetBSD support
 * add Solaris build , add defines and includes to fix solaris build
 
 --- libcaf_core/src/detail/get_mac_addresses.cpp.orig	2021-07-16 09:33:16.000000000 +0000
