@@ -1,0 +1,114 @@
+# $NetBSD: Makefile.common,v 1.1 2021/12/04 08:08:43 xxxx Exp $
+# used by lang/mrust-mrustc/Makefile
+# used by lang/mrust-minicargo/Makefile
+# used by lang/mrust-libs/Makefile
+# used by lang/mrust-rustc/Makefile
+# used by lang/mrust-cargo/Makefile
+# used by (etc)
+
+GITHUB_PROJECT=	mrustc
+GITHUB_TAG=	0e5ffbf19d4331ec96c2231866a81429b90b2dbe
+DISTNAME=	0e5ffbf19d4331ec96c2231866a81429b90b2dbe
+SNAPSTAMP=	20210912a
+PKGNAME=	mrust-${SNAPSTAMP}
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITHUB:=thepowersgang/}
+#MASTER_SITES=	https://github.com/thepowersgang/mrustc/archive/0e5ffbf19d4331ec96c2231866a81429b90b2dbe.zip
+EXTRACT_SUFX=	.zip
+DIST_SUBDIR=	${GITHUB_PROJECT}
+
+#MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-mrust@web5by5.com
+#HOMEPAGE=	https://github.com/thepowersgang/mrustc/
+HOMEPAGE=	https://github.com/thepowersgang/mrustc\#readme
+COMMENT=	Mutabah's Rust Compiler--rustc bootstrapper implemented in C++
+LICENSE=	mit
+
+
+USE_LANGUAGES+=		c++14
+USE_TOOLS+=		gmake
+###GNU_CONFIGURE=		yes
+#CONFIGURE_ENV+=	BDB_LIBS=${BDB_LINK:Q}
+#CONFIGURE_ARGS+=	-prefix ${PREFIX}
+#CONFIGURE_ARGS+=	-with-pthread
+#CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
+#CONFIGURE_ARGS+=	--without-x
+#CPPFLAGS+=		-DDB_DBM_HSEARCH
+
+RUSTVER=		1.39.0
+
+RUSTSRC_DIST=		rustc-${RUSTVER}-src.tar.gz
+SITES.${RUSTRSRC_DIST}=	https://static.rust-lang.org/dist/
+
+MR_OUTDIR=		output-${RUSTVER}/
+
+BUILD_MAKE_FLAGS=	PARLEVEL:=${MAKE_JOBS}
+MAKE_ENV+=		MRUSTC_TARGET_VER=1.39
+MAKE_ENV+=		OUTDIR_SUF=-${RUSTVER}
+MAKE_ENV+=		RUSTC_VERSION=${RUSTVER}
+
+##
+# FIXME [-DLB, 28dec2021]:
+#   On NetBSD 9.x/amd64, setting RUSTC_TARGET results in a
+#   "... panicked at 'failed to allocate a guard page', ..." error
+#   during the build of rustc (via mrust tools), whereas leaving it
+#   unset** results in a successful build; but does it do so at the
+#   peril of leaving behind hidden, platform-specific errors, or
+#   even just a result that's not well optimized for the platform?
+#
+#   Therefore: leave it unset for now, but assistance is requested
+#   from someone knowledgeable to identify what's going on (e.g,.
+#   could this have anything to do with, e.g., a PaX mitigation?).
+#
+#  ** (in which case it defaults to a -linux suffix)
+#
+#MAKE_ENV+=		RUSTC_TARGET=${MACHINE_ARCH}-unknown-${OPSYS:tl}
+##
+
+#DISTINFO_FILE=	${.CURDIR}/../../lang/ocaml/distinfo
+#PATCHDIR=	${.CURDIR}/../../lang/ocaml/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+###.if ${OPSYS} == "Linux"
+###INSTALL_UNSTRIPPED=	yes
+###.endif
+
+#.if ${OPSYS} == "Darwin"
+#CONFIGURE_ENV+=	CC="${CC} -arch ${MACHINE_ARCH} ${CFLAGS}"
+#CONFIGURE_ENV+=	ASPP="${CC} -arch ${MACHINE_ARCH} -c"
+#CONFIGURE_ENV+=	AS="as -arch ${MACHINE_ARCH}"
+#.else
+#CONFIGURE_ENV+=	CC="${CC} ${CFLAGS}"
+#.endif
+
+###.include "../../mk/bdb.buildlink3.mk"
+
+#BDB_LINK=	${BDB_LIBS}
+#.if empty(BDBBASE:M/usr)
+#BDB_LINK+=	-L${BDBBASE}/lib ${COMPILER_RPATH_FLAG}${BDBBASE}/lib
+#.endif
+
+SUBST_CLASSES+=			atomic-pathfix
+SUBST_STAGE.atomic-pathfix=	pre-configure
+SUBST_MESSAGE.atomic-pathfix=	Configuring default path for libatomic.so
+SUBST_FILES.atomic-pathfix=	src/trans/target.cpp
+SUBST_SED.atomic-pathfix=	-e '/define.*BACKEND_C_OPTS_GNU/s|"atomic"|"atomic", "-L", "${PREFIX}/lib"|'
+
+post-patch:
+	@(cd ${WRKSRC};							\
+	    ${MV} rust-version rust-version.dist;			\
+	    ${ECHO} ${RUSTVER} > rust-version;				\
+	    ${TOUCH} -t 200101010101 rust-version)
+
+#post-extract: cp-gnu-config
+
+#.PHONY: cp-gnu-config
+#cp-gnu-config:
+#	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config/gnu/
+#	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
+
+##.include "../../mk/atomic64.mk"	# DLBFLAG: will this be needed?
+###.include "../../mk/pthread.buildlink3.mk"
+
+# url2pkg-marker (please do not remove this line.)
