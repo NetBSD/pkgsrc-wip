@@ -8,9 +8,3 @@ for (some subset of final point releases):
   validate that it actually runs
 
   push to pkgsrc
-
-Investigate mysql and php compat requirements.  It seems modern php
-might somehow include mysql bindings and thus we don't need to require
-5.6.
-
-
