@@ -54,6 +54,7 @@ man/man3/lcm.3
 man/man3/long_cmp.3
 man/man3/long_long_cmp.3
 man/man3/ltostrn.3
+man/man3/mv.3
 man/man3/parse_cmd.3
 man/man3/resolve_hostname.3
 man/man3/rmkdir.3
