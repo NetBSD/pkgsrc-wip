@@ -74,5 +74,5 @@ GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.0-20200313102051-9f266ea9e77c.zip
 GO_MODULE_FILES+=	mvdan.cc/editorconfig/@v/v0.2.0.mod
 GO_MODULE_FILES+=	mvdan.cc/editorconfig/@v/v0.2.0.zip
-GO_MODULE_FILES+=	mvdan.cc/sh/v3/@v/v3.4.2-0.20211202103622-5ae9d64e1402.mod
-GO_MODULE_FILES+=	mvdan.cc/sh/v3/@v/v3.4.2-0.20211202103622-5ae9d64e1402.zip
+GO_MODULE_FILES+=	mvdan.cc/sh/v3/@v/v3.4.2.mod
+GO_MODULE_FILES+=	mvdan.cc/sh/v3/@v/v3.4.2.zip
