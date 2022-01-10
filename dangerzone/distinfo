@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (dangerzone-0.3.tar.gz) = 2b6b8ff0d5a80c46eb7570fd4122eec32b41a2d380fc9c589329ff62cc0ccf20
+SHA512 (dangerzone-0.3.tar.gz) = cd263223b68f9dc66791a5fe65fd033e8b14d9a0542d0ce804ee23cebce03ee095c0d499d4c666d103ff1ddd656f41e1bccc40717b7be866a08ad5fe39c182f3
+Size (dangerzone-0.3.tar.gz) = 1683480 bytes

@@ -585,6 +585,7 @@ SUBDIR+=	d-feet
 SUBDIR+=	d1x-rebirth
 SUBDIR+=	d2x-rebirth
 SUBDIR+=	daligner
+SUBDIR+=	dangerzone
 SUBDIR+=	daphne
 SUBDIR+=	darcs
 SUBDIR+=	darcs-to-git
