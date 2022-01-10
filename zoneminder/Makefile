@@ -143,10 +143,11 @@ MAKE_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CONFIGURE_ARGS+=	--with-webuser=${APACHE_USER}
 CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
 
-# If we're using Apache we're going to need PHP, and PHP MySQL support.
+# If we're using Apache we're going to need PHP, and PHP extensions.
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 .endif
 
 # \todo Somehow, this permission setup still fails.
