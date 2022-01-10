@@ -4145,7 +4145,6 @@ SUBDIR+=	py-msedge-selenium-tools
 SUBDIR+=	py-msrest
 SUBDIR+=	py-mssql2
 SUBDIR+=	py-msumastro
-SUBDIR+=	py-mulpyplexer
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-multimethods
 SUBDIR+=	py-multiprocess
