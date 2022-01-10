@@ -4,6 +4,15 @@ $NetBSD$
 
 --- libcaf_core/src/detail/get_mac_addresses.cpp.orig	2021-07-16 09:33:16.000000000 +0000
 +++ libcaf_core/src/detail/get_mac_addresses.cpp
+@@ -7,7 +7,7 @@
+ #include "caf/config.hpp"
+ #include "caf/detail/scope_guard.hpp"
+ 
+-#if defined(CAF_MACOS) || defined(CAF_BSD) || defined(CAF_IOS)
++#if defined(CAF_MACOS) || defined(CAF_BSD) || defined(CAF_IOS) || defined(CAF_NETBSD)
+ 
+ #  include <arpa/inet.h>
+ #  include <cerrno>
 @@ -83,7 +83,7 @@ std::vector<iface_info> get_mac_addresse
  } // namespace detail
  } // namespace caf
