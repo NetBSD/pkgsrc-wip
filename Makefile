@@ -1484,7 +1484,6 @@ SUBDIR+=	haplohseq
 SUBDIR+=	harmony
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
-SUBDIR+=	hashcat
 SUBDIR+=	hashcat-utils
 SUBDIR+=	haskell-mode
 SUBDIR+=	hasktags
