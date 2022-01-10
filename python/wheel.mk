@@ -14,7 +14,7 @@
 #
 # TODO: 		fix BUILDDIR support
 #			
-# Feel free to contibute to this file
+# Feel free to contribute to this file
 #			
 
 .include "../../lang/python/pyversion.mk"
