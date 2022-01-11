@@ -5,10 +5,10 @@
 #              Fri Jan  7 09:05:08 CST 2022               #
 ###########################################################
 
-DISTNAME=	fastq-trim-0.0.0.38
+DISTNAME=	fastq-trim-0.0.0.41
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	6710157c4107d82142699aee98acab23561ceaa9
+GITHUB_TAG=	812bbe90323d2c8ae95d7c6730de77075a58f6cf
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/Fastq-trim
