@@ -10,7 +10,7 @@ HOMEPAGE=	http://scp.indiegames.us/
 COMMENT=	Freespace 2 source code project
 
 GIT_REPOSITORIES=	fs2open
-GIT_REPO.fs2open=	git://github.com/scp-fs2open/fs2open.github.com.git
+GIT_REPO.fs2open=	https://github.com/scp-fs2open/fs2open.github.com.git
 WRKSRC=			${WRKDIR}/fs2open
 
 USE_CMAKE=	yes

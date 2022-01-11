@@ -11,7 +11,7 @@ COMMENT=	Classic Tomb Raider open-source engine
 LICENSE=	2-clause-bsd
 
 GIT_REPOSITORIES=	OpenLara
-GIT_REPO.OpenLara=	git://github.com/XProger/OpenLara.git
+GIT_REPO.OpenLara=	https://github.com/XProger/OpenLara.git
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/OpenLara
 

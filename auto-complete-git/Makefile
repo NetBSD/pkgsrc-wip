@@ -3,7 +3,7 @@
 
 DISTNAME=	auto-complete-0
 CATEGORIES=	editors
-GIT_REPO=	git://github.com/auto-complete/auto-complete.git
+GIT_REPO=	https://github.com/auto-complete/auto-complete.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cx4a.org/software/auto-complete/

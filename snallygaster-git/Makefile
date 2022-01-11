@@ -10,7 +10,7 @@ COMMENT=	Tool to scan for secret files on HTTP servers
 LICENSE=	cc0-1.0-universal
 
 GIT_REPOSITORIES=	snallygaster
-GIT_REPO.snallygaster=	git://github.com/hannob/snallygaster.git
+GIT_REPO.snallygaster=	https://github.com/hannob/snallygaster.git
 WRKSRC=			${WRKDIR}/snallygaster
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4

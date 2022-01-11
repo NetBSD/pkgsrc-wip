@@ -10,7 +10,7 @@ COMMENT=	Utilities for manipulating pkg_summary(5) files
 LICENSE=	2-clause-bsd
 
 GIT_REPOSITORIES=		pkg_summary-utils
-GIT_REPO.pkg_summary-utils=	git://github.com/cheusov/pkg_summary-utils.git
+GIT_REPO.pkg_summary-utils=	https://github.com/cheusov/pkg_summary-utils.git
 .include "../../wip/mk/git-package.mk"
 
 DEPENDS+=	paexec>=0.19.1:../../parallel/paexec

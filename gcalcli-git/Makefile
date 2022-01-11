@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/insanum/gcalcli/
 COMMENT=	Command line interface to Google Calendar
 
 GIT_REPOSITORIES=	gcalcli
-GIT_REPO.gcalcli=	git://github.com/insanum/gcalcli.git
+GIT_REPO.gcalcli=	https://github.com/insanum/gcalcli.git
 WRKSRC=			${WRKDIR}/gcalcli
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil

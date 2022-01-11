@@ -3,7 +3,7 @@
 DISTNAME=	elscreen-current-0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	misc
-GIT_REPO=	git://github.com/knu/elscreen.git
+GIT_REPO=	https://github.com/knu/elscreen.git
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/knu/elscreen

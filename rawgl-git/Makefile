@@ -10,7 +10,7 @@ COMMENT=	Re-implementation of the engine used in the game Another World
 #LICENSE=	# TODO: (see mk/license.mk)
 
 GIT_REPOSITORIES=	rawgl
-GIT_REPO.rawgl=		git://github.com/cyxx/rawgl.git
+GIT_REPO.rawgl=		https://github.com/cyxx/rawgl.git
 WRKSRC=			${WRKDIR}/rawgl/
 
 USE_LANGUAGES=	c++

@@ -4,7 +4,7 @@ DISTNAME=	netdata-1.5.0
 CATEGORIES=	sysutils
 
 GIT_REPOSITORIES=	netdata
-GIT_REPO.netdata=	git://github.com/firehol/netdata.git
+GIT_REPO.netdata=	https://github.com/firehol/netdata.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://my-netdata.io/

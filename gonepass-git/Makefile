@@ -10,7 +10,7 @@ COMMENT=	Password manager compatible with 1Password (git version)
 LICENSE=	apache-2.0
 
 GIT_REPOSITORIES=	gonepass
-GIT_REPO.gonepass=	git://github.com/jbreams/gonepass.git
+GIT_REPO.gonepass=	https://github.com/jbreams/gonepass.git
 WRKSRC=			${WRKDIR}/gonepass
 
 USE_CMAKE=	yes

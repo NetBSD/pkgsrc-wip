@@ -21,7 +21,7 @@ BUILD_TARGET=	smlnj-mlton all
 BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 GIT_REPOSITORIES=	mlton
-GIT_REPO.mlton=		git://github.com/MLton/mlton.git
+GIT_REPO.mlton=		https://github.com/MLton/mlton.git
 WRKSRC=			${WRKDIR}/mlton
 
 REPLACE_PERL=	lib/mlrisc-lib/MLRISC/Doc/html/mltex2html \

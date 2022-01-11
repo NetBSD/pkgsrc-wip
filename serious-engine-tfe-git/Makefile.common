@@ -13,7 +13,7 @@ COMMENT=	Open source version of a game engine for the Serious Sam games
 LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	serious
-GIT_REPO.serious=	git://github.com/ptitSeb/Serious-Engine
+GIT_REPO.serious=	https://github.com/ptitSeb/Serious-Engine
 WRKSRC=			${WRKDIR}/serious/Sources
 
 USE_LANGUAGES=	c c++

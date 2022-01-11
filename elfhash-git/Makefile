@@ -3,7 +3,7 @@ PKGNAME=		elfhash-0.1
 CATEGORIES=		devel
 
 GIT_REPOSITORIES=		elfhash
-GIT_REPO.elfhash=		git://github.com/cjacker/elfhash
+GIT_REPO.elfhash=		https://github.com/cjacker/elfhash
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cjacker/elfhash

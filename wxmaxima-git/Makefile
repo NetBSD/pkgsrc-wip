@@ -11,7 +11,7 @@ COMMENT=	Graphical UI for maxima
 LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	wxmaxima
-GIT_REPO.wxmaxima=	git://github.com/andrejv/wxmaxima.git
+GIT_REPO.wxmaxima=	https://github.com/andrejv/wxmaxima.git
 WRKSRC=			${WRKDIR}/wxmaxima
 
 DEPENDS+=	maxima>=5.15.0:../../math/maxima

@@ -10,7 +10,7 @@ COMMENT=	DISTributed Bulk Build tool for pkgsrc
 LICENSE=	2-clause-bsd
 
 GIT_REPOSITORIES=	distbb
-GIT_REPO.distbb=	git://github.com/cheusov/distbb.git
+GIT_REPO.distbb=	https://github.com/cheusov/distbb.git
 .include "../../wip/mk/git-package.mk"
 
 DEPENDS+=	pkg_summary-utils>=0.65.0:../../pkgtools/pkg_summary-utils

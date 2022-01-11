@@ -2,7 +2,7 @@ PKGNAME=	sulley-1.0.20161018
 CATEGORIES=	net security
 
 GIT_REPOSITORIES=	OpenRCE
-GIT_REPO.OpenRCE=	git://github.com/OpenRCE/sulley.git
+GIT_REPO.OpenRCE=	https://github.com/OpenRCE/sulley.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenRCE/sulley

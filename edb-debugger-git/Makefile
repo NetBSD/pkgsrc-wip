@@ -4,7 +4,7 @@ PKGNAME=	edb-debugger-0.9.21
 CATEGORIES=	devel
 
 GIT_REPOSITORIES=	edb
-GIT_REPO.edb=		git://github.com/eteran/edb-debugger.git
+GIT_REPO.edb=		https://github.com/eteran/edb-debugger.git
 
 WRKSRC=		${WRKDIR}/edb
 

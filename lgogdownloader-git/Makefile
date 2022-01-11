@@ -2,7 +2,7 @@
 
 DISTNAME=	lgogdownloader-3.7
 CATEGORIES=	games
-GIT_REPO=	git://github.com/Sude-/lgogdownloader.git
+GIT_REPO=	https://github.com/Sude-/lgogdownloader.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Sude-/lgogdownloader

@@ -4,7 +4,7 @@ PKGNAME=		wla-dx-9.7
 CATEGORIES=		devel
 
 GIT_REPOSITORIES=		wla-dx
-GIT_REPO.wla-dx=		git://github.com/vhelin/wla-dx
+GIT_REPO.wla-dx=		https://github.com/vhelin/wla-dx
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.villehelin.com/wla.html

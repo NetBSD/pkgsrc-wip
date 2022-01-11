@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.85 2020/10/25 12:43:45 nia Exp $
 
 DISTNAME=   libvpx-git
-GIT_REPO=   git://github.com/webmproject/libvpx.git
+GIT_REPO=   https://github.com/webmproject/libvpx.git
 CATEGORIES=	multimedia
 
 MAINTAINER=	ryoon@NetBSD.org

@@ -21,7 +21,7 @@ BUILD_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-fuse-bindings
 
-GIT_REPO=	git://github.com/bup/bup.git
+GIT_REPO=	https://github.com/bup/bup.git
 
 TEST_TARGET=	test
 

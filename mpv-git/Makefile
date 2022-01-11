@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 BUILD_DEPENDS+=	waf>=1.8.4:../../devel/waf
 
 GIT_REPOSITORIES=	mpv
-GIT_REPO.mpv=		git://github.com/mpv-player/mpv.git
+GIT_REPO.mpv=		https://github.com/mpv-player/mpv.git
 WRKSRC=			${WRKDIR}/mpv
 
 PYTHON_FOR_BUILD_ONLY=		yes

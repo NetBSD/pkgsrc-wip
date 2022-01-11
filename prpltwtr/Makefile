@@ -11,7 +11,7 @@ COMMENT=		Treat microblogging (Twitter, etc) as IM protocols
 LICENSE=		gnu-gpl-v2
 
 GIT_REPOSITORIES=	prpltwtr
-GIT_REPO.prpltwtr=	git://github.com/mikeage/prpltwtr.git
+GIT_REPO.prpltwtr=	https://github.com/mikeage/prpltwtr.git
 
 WRKSRC=			${WRKDIR}/prpltwtr
 USE_TOOLS+=		autoconf

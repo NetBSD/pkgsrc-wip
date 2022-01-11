@@ -10,7 +10,7 @@ COMMENT=	Vim-like webkit browser
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	vimb
-GIT_REPO.vimb=		git://github.com/fanglingsu/vimb.git
+GIT_REPO.vimb=		https://github.com/fanglingsu/vimb.git
 WRKSRC=			${WRKDIR}/vimb
 
 USE_TOOLS+=	gmake pkg-config

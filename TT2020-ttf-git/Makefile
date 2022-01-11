@@ -2,7 +2,7 @@
 
 DISTNAME=	TT2020-ttf-0.0
 CATEGORIES=	games
-GIT_REPO=	git://github.com/ctrlcctrlv/TT2020.git
+GIT_REPO=	https://github.com/ctrlcctrlv/TT2020.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ctrlcctrlv/TT2020/

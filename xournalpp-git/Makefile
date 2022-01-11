@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GIT_REPOSITORIES=	xournalpp
 #GIT_BRANCH.xournalpp=	master
-GIT_REPO.xournalpp=	git://github.com/xournalpp/xournalpp.git
+GIT_REPO.xournalpp=	https://github.com/xournalpp/xournalpp.git
 WRKSRC=			${WRKDIR}/xournalpp
 
 USE_CMAKE=	yes

@@ -12,7 +12,7 @@ COMMENT=	Cross-platform, open source port of the Arx Fatalis RPG
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	arxlibertatis
-GIT_REPO.arxlibertatis=	git://github.com/arx/ArxLibertatis
+GIT_REPO.arxlibertatis=	https://github.com/arx/ArxLibertatis
 WRKSRC=			${WRKDIR}/arxlibertatis
 
 USE_CMAKE=	yes

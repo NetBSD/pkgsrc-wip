@@ -10,7 +10,7 @@ COMMENT=	Vim-like webkit2gtk browser
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	wyeb
-GIT_REPO.wyeb=		git://github.com/jun7/wyeb.git
+GIT_REPO.wyeb=		https://github.com/jun7/wyeb.git
 WRKSRC=			${WRKDIR}/wyeb
 
 BUILD_MAKE_FLAGS+=	DISTRONAME=pkgsrc

@@ -11,7 +11,7 @@ COMMENT=	Synchronization tool for vdir
 LICENSE=	mit
 
 GIT_REPOSITORIES=	vdirsyncer
-GIT_REPO.vdirsyncer=	git://github.com/untitaker/vdirsyncer.git
+GIT_REPO.vdirsyncer=	https://github.com/untitaker/vdirsyncer.git
 
 WRKSRC=			${WRKDIR}/vdirsyncer
 

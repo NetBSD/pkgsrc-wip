@@ -9,7 +9,7 @@ COMMENT=	PNG encoder and decoder in C and C++
 LICENSE=	zlib
 
 GIT_REPOSITORIES=	lodepng
-GIT_REPO.lodepng=	git://github.com/lvandeve/lodepng.git
+GIT_REPO.lodepng=	https://github.com/lvandeve/lodepng.git
 WRKSRC=			${WRKDIR}/lodepng
 
 USE_LANGUAGES=	c++

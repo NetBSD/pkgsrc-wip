@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 GIT_REPOSITORIES=	samyk
-GIT_REPO.samyk=		git://github.com/samyk/${PKGBASE}.git
+GIT_REPO.samyk=		https://github.com/samyk/${PKGBASE}.git
 GIT_MODULE.samyk=	${PKGBASE}
 WRKSRC=			${WRKDIR}/${PKGBASE}
 

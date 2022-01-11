@@ -4,7 +4,7 @@ DISTNAME=		neomutt-20201127
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
-GIT_REPO=		git://github.com/neomutt/neomutt.git
+GIT_REPO=		https://github.com/neomutt/neomutt.git
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		https://www.neomutt.org/

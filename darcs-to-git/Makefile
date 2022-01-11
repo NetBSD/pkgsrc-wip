@@ -2,7 +2,7 @@
 
 DISTNAME=	darcs-to-git-0.1
 CATEGORIES=	devel
-GIT_REPO=	git://github.com/purcell/${PKGBASE}.git
+GIT_REPO=	https://github.com/purcell/${PKGBASE}.git
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/purcell/${PKGBASE}

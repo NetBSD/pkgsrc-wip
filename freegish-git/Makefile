@@ -14,7 +14,7 @@ CMAKE_ARGS+=	-DINSTALL_FHS:BOOL=ON
 CMAKE_ARGS+=	-DMAN_DIR:PATH=${PREFIX}/${PKGMANDIR}/man6
 
 GIT_REPOSITORIES=	freegish
-GIT_REPO.freegish=	git://github.com/freegish/freegish.git
+GIT_REPO.freegish=	https://github.com/freegish/freegish.git
 WRKSRC=			${WRKDIR}/freegish
 
 .include "../../audio/libvorbis/buildlink3.mk"

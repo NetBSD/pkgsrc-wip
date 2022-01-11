@@ -2,7 +2,7 @@
 PKGNAME=		vhdtool-0.1
 CATEGORIES=		converters
 GIT_REPOSITORIES=	vhdtool
-GIT_REPO.vhdtool=	git://github.com/andreiw/vhdtool
+GIT_REPO.vhdtool=	https://github.com/andreiw/vhdtool
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/andreiw/vhdtool

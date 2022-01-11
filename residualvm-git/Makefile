@@ -11,7 +11,7 @@ COMMENT=	Lucas Arts' LUA-based 3D adventure engine
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND isc AND ofl-v1.1 AND zlib
 
 GIT_REPOSITORIES=	residualvm
-GIT_REPO.residualvm=	git://github.com/residualvm/residualvm.git
+GIT_REPO.residualvm=	https://github.com/residualvm/residualvm.git
 WRKSRC=			${WRKDIR}/residualvm
 
 USE_TOOLS+=	gmake pkg-config

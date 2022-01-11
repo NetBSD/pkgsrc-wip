@@ -39,7 +39,7 @@ INSTALLATION_DIRS=	${DOCDIR}/en ${DOCDIR}/ja \
 EMACS_BUILDLINK=	# empty
 
 GIT_REPOSITORIES=	master
-GIT_REPO.master=	git://github.com/wanderlust/wanderlust.git
+GIT_REPO.master=	https://github.com/wanderlust/wanderlust.git
 GIT_MODULE.master=	wanderlust
 _GIT_FLAGS?=		--depth 1
 

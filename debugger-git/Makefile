@@ -12,7 +12,7 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GIT_REPOSITORIES=	debugger
-GIT_REPO.debugger=	git://github.com/path64/debugger.git
+GIT_REPO.debugger=	https://github.com/path64/debugger.git
 WRKSRC=			${WRKDIR}/debugger
 USE_CMAKE=		yes
 

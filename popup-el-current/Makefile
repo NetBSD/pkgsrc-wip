@@ -10,7 +10,7 @@ COMMENT=	Visual popup user interface library for emacs
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	popup-el
-GIT_REPO.popup-el=	git://github.com/auto-complete/popup-el.git
+GIT_REPO.popup-el=	https://github.com/auto-complete/popup-el.git
 .include "../../wip/mk/git-package.mk"
 
 WRKSRC=			${WRKDIR}/popup-el

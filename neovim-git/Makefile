@@ -9,7 +9,7 @@ COMMENT=	Refactor vim for the 21st century
 LICENSE=	vim-license AND apache-2.0
 
 GIT_REPOSITORIES=	neovim
-GIT_REPO.neovim=	git://github.com/neovim/neovim.git
+GIT_REPO.neovim=	https://github.com/neovim/neovim.git
 GIT_EXTRACTDIR.neovim=	neovim
 
 USE_LANGUAGES=	c c++

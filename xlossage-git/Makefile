@@ -10,7 +10,7 @@ COMMENT=	Display pressed keys in X11 in a readable way
 LICENSE=	mit
 
 GIT_REPOSITORIES=	xlossage
-GIT_REPO.xlossage=	git://github.com/leahneukirchen/xlossage
+GIT_REPO.xlossage=	https://github.com/leahneukirchen/xlossage
 WRKSRC=			${WRKDIR}/${PKGBASE}
 
 USE_TOOLS+=	pkg-config

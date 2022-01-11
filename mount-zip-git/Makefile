@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/google/mount-zip/
 COMMENT=	Read-only FUSE file system for ZIP archives
 LICENSE=	gnu-gpl-v3
 
-GIT_REPO=	git://github.com/google/mount-zip.git
+GIT_REPO=	https://github.com/google/mount-zip.git
 
 USE_LANGUAGES=	c++20
 # GCC 8.4.0 is not good enough for this particular package. But pho@

@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/libcpu
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 GIT_REPOSITORIES=	libcpu
-GIT_REPO.libcpu=	git://github.com/libcpu/libcpu.git
+GIT_REPO.libcpu=	https://github.com/libcpu/libcpu.git
 
 pre-configure:
 	${LN} -s ${LLVM_CONFIG_PATH} ${TOOLS_DIR}/bin/llvm-config

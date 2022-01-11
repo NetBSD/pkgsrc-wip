@@ -4,7 +4,7 @@ PKGNAME=		libmobi-0.3
 CATEGORIES=		textproc
 
 GIT_REPOSITORIES=		libmobi
-GIT_REPO.libmobi=		git://github.com/bfabiszewski/libmobi
+GIT_REPO.libmobi=		https://github.com/bfabiszewski/libmobi
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/bfabiszewski/libmobi

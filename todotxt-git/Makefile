@@ -8,7 +8,7 @@ COMMENT=	Simple and extensible shell script for managing your todo.txt file
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	todo.txt-cli
-GIT_REPO.todo.txt-cli=	git://github.com/ginatrapani/todo.txt-cli.git
+GIT_REPO.todo.txt-cli=	https://github.com/ginatrapani/todo.txt-cli.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://todotxt.com/

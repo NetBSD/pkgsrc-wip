@@ -13,7 +13,7 @@ USE_TOOLS+=	gmake pkg-config
 
 GIT_REPOSITORIES=	luakit
 GIT_BRANCH.luakit=	develop
-GIT_REPO.luakit=	git://github.com/luakit/luakit
+GIT_REPO.luakit=	https://github.com/luakit/luakit
 WRKSRC=			${WRKDIR}/luakit
 
 MAKE_FLAGS+=	DEVELOPMENT_PATHS=0

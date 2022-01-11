@@ -2,7 +2,7 @@
 
 PKGNAME=	zero-epwing-0.1
 CATEGORIES=	textproc
-GIT_REPO=	git://github.com/FooSoft/zero-epwing.git
+GIT_REPO=	https://github.com/FooSoft/zero-epwing.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/FooSoft/zero-epwing

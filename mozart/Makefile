@@ -10,7 +10,7 @@ COMMENT=	Mozart Programming System
 LICENSE=	mit # with modifications
 
 GIT_REPOSITORIES=	mozart
-GIT_REPO.mozart=	git://github.com/mozart/mozart.git
+GIT_REPO.mozart=	https://github.com/mozart/mozart.git
 WRKSRC=			${WRKDIR}/mozart
 
 # Does not build on 64bit platforms (still not ported)

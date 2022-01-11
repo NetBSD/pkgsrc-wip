@@ -4,7 +4,7 @@ PKGNAME=	ds2-0.0.0
 CATEGORIES=	lang devel
 
 GIT_REPOSITORIES=	ds2
-GIT_REPO.ds2=		git://github.com/facebook/ds2.git
+GIT_REPO.ds2=		https://github.com/facebook/ds2.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/facebook/ds2

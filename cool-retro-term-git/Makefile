@@ -24,7 +24,7 @@ LICENSE=		gnu-gpl-v3
 # For pkgsrc/wip:
 PKGREVISION=			1
 GIT_REPOSITORIES=		cool-retro-term
-GIT_REPO.cool-retro-term=	git://github.com/Swordfish90/cool-retro-term.git
+GIT_REPO.cool-retro-term=	https://github.com/Swordfish90/cool-retro-term.git
 GIT_TAG.cool-retro-term=	1.1.1
 WRKSRC=				${WRKDIR}/cool-retro-term
 

@@ -10,7 +10,7 @@ COMMENT=	SDL port of the DOS game Xargon
 LICENSE=	gnu-gpl-v3
 
 GIT_REPOSITORIES=	xargon
-GIT_REPO.xargon=	git://github.com/Malvineous/xargon.git
+GIT_REPO.xargon=	https://github.com/Malvineous/xargon.git
 WRKSRC=			${WRKDIR}/xargon
 
 GNU_CONFIGURE=	yes

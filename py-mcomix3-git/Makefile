@@ -3,7 +3,7 @@
 DISTNAME=	mcomix3-0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	games
-GIT_REPO=	git://github.com/multiSnow/mcomix3.git
+GIT_REPO=	https://github.com/multiSnow/mcomix3.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/multiSnow/mcomix3

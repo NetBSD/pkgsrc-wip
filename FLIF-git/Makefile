@@ -2,7 +2,7 @@
 
 DISTNAME=	FLIF-0.3
 CATEGORIES=	graphics
-GIT_REPO=	git://github.com/FLIF-hub/flif.git
+GIT_REPO=	https://github.com/FLIF-hub/flif.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://flif.info/
