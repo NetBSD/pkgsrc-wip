@@ -10,6 +10,6 @@ HOMEPAGE=	http://www.losonczylab.org/sima/
 COMMENT=	Software for analysis of sequential imaging data
 LICENSE=	gnu-gpl-v2
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

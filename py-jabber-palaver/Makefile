@@ -63,5 +63,5 @@ SUBST_VARS.paths+=	PKG_SYSCONFDIR
 SUBST_VARS.paths+=	PREFIX
 SUBST_VARS.paths+=	TRANSPORTDIR
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

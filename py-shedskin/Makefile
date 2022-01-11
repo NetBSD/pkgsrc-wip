@@ -22,5 +22,5 @@ post-extract:
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

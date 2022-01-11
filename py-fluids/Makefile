@@ -14,6 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

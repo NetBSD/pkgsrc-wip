@@ -16,5 +16,5 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	27 # py-docutils
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

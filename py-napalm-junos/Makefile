@@ -14,5 +14,5 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-junos-eznc-[0-9]*:../../net/py-junos-eznc
 DEPENDS+=	${PYPKGPREFIX}-napalm-base>=0.23.0:../../wip/py-napalm-base
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

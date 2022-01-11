@@ -59,5 +59,5 @@ CONF_FILES+=	${PREFIX}/weewx/weewx.conf.DIST ${PREFIX}/weewx/weewx.conf
 # and sort of config files.
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

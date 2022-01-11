@@ -13,5 +13,5 @@ LICENSE=	python-software-foundation
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

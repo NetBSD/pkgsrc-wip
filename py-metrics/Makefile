@@ -17,5 +17,5 @@ PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.8.1
 post-extract:
 	${MV} ${WRKSRC}/pymetrics ${WRKSRC}/pymetrics${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

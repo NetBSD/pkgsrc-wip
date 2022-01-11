@@ -18,6 +18,6 @@ PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 REPLACE_PYTHON+=	beautysh/beautysh.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -15,5 +15,5 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04.14:../../textproc/py-Unidecode
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

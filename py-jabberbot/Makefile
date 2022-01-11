@@ -25,5 +25,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/* \
 		${DESTDIR}${EXDIR}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

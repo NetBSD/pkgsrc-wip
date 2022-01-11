@@ -14,5 +14,5 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.7.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -16,5 +16,5 @@ DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 REPLACE_PYTHON+=	lib/logger.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

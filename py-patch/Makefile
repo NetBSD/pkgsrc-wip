@@ -14,5 +14,5 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/patch-1.16
 EXTRACT_DIR=	${WRKSRC}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

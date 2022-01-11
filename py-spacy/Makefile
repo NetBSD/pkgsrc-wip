@@ -21,6 +21,6 @@ BUILD_DEPENDS+= ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 .include "../../wip/py-cymem/buildlink3.mk"
 .include "../../wip/py-preshed/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
-#.include "../../lang/python/distutils.mk"
+#.include "../../wip/python/distutils.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

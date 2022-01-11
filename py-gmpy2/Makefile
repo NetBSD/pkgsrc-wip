@@ -15,7 +15,7 @@ BUILD_TARGET=	gmpy2.so
 
 BUILDLINK_API_DEPENDS.gmp+=		gmp>=4.2.1
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 BUILDLINK_API_DEPENDS.mpcomplex+=       mpcomplex>=0.8.2
 .include "../../math/mpcomplex/buildlink3.mk"
 BUILDLINK_API_DEPENDS.mpfr+=    mpfr>=2.0.3

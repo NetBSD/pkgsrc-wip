@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	share/doc/py-gsl/ref
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/ref/* ${DESTDIR}${PREFIX}/share/doc/py-gsl/ref
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 BUILDLINK_API_DEPENDS.gsl+=		gsl>=1.9
 .include "../../math/gsl/buildlink3.mk"
 # furur replace py-Numeric; py-numarray by py-numpy

@@ -22,7 +22,7 @@ post-extract:
 do-test:
 	${RUN} cd ${WRKSRC}/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testAIGO.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

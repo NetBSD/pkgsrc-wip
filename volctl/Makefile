@@ -22,6 +22,6 @@ USE_LANGUAGES=	# none
 EGG_NAME=	${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../mk/bsd.pkg.mk"

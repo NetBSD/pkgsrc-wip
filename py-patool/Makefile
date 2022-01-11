@@ -17,5 +17,5 @@ SUBST_VARS.prefix=      PREFIX
 SUBST_SED.prefix+=      -e 's,share/man/man1,${PREFIX}/man/man1,g'
 SUBST_MESSAGE.paths=    Fixing header search paths.
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

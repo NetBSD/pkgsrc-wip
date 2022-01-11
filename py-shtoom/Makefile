@@ -19,5 +19,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/shtoom/ui/gnomeui/shtoom.glade \
 		${DESTDIR}${PREFIX}/${PYSITELIB}/shtoom/ui/gnomeui/shtoom.glade
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -25,6 +25,6 @@ post-extract:
 	${MV} ${WRKSRC}/bin/pyflation_srcmerge.py ${WRKSRC}/bin/pyflation_srcmerge.py${PYVERSSUFFIX}
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

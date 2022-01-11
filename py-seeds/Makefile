@@ -14,5 +14,5 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 
 USE_LANGUAGES=	c
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

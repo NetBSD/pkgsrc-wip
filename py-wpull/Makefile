@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-yapsy-[0-9]*:../../wip/py-yapsy
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 
 .if ${PYVERSSUFFIX} == "3.4" || ${PYVERSSUFFIX} == "3.5"
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing

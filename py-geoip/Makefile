@@ -10,5 +10,5 @@ HOMEPAGE=	https://github.com/appliedsec/pygeoip
 COMMENT=	Pure Python GeoIP API
 LICENSE=	gnu-lgpl-v3
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

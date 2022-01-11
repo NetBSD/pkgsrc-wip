@@ -46,6 +46,6 @@ USE_LANGUAGES=	# none
 PKG_OPTIONS.libcaca+=	imlib2
 
 .include	"options.mk"
-.include	"../../lang/python/distutils.mk"
+.include	"../../wip/python/distutils.mk"
 .include	"../../lang/python/application.mk"
 .include	"../../mk/bsd.pkg.mk"

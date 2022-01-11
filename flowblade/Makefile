@@ -35,7 +35,7 @@ SUBST_VARS.py=		FLOWBLADE_PATH
 # https://github.com/jliljebl/flowblade/issues/597
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"
 .include "../../wip/mlt/buildlink3.mk"

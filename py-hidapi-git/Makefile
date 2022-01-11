@@ -11,6 +11,6 @@ LICENSE=	gnu-gpl-v3 OR modified-bsd
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 
 .include "../../mk/bsd.pkg.mk"

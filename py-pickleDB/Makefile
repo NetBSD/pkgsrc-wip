@@ -10,5 +10,5 @@ HOMEPAGE=	https://github.com/patx/pickledb
 COMMENT=	Lightweight and simple database using json
 LICENSE=	modified-bsd
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

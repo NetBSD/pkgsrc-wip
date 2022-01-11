@@ -16,5 +16,5 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.5.12
 EGG_NAME=	${DISTNAME}_r17222
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

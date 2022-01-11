@@ -83,7 +83,7 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${FILESDIR}/exabgp.env ${DESTDIR}${PREFIX}/share/examples/exabgp/
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/versioned_dependencies.mk"

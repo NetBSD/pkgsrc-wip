@@ -15,5 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=1.1.1rc1:../../net/py-twisted
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.6.3
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -13,5 +13,5 @@ LICENSE=	unlicense
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.6.0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.14.2:../../devel/py-requests
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

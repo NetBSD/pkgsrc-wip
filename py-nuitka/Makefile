@@ -18,5 +18,5 @@ post-extract:
 	${MV} ${WRKSRC}/bin/nuitka  ${WRKSRC}/bin/nuitka${PYVERSSUFFIX}
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

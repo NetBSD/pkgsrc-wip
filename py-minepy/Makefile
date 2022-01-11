@@ -15,6 +15,6 @@ USE_LANGUAGES=	c c++
 post-extract:
 	${MV} ${WRKSRC}/minepy/scripts/mine ${WRKSRC}/minepy/scripts/mine${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

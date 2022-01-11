@@ -70,5 +70,5 @@ PYSETUPINSTALLARGS=	--prefix=${PREFIX} \
 INSTALLATION_DIRS+=	share/examples/graphite
 
 .include "../../databases/py-carbon/Makefile.common"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -22,5 +22,5 @@ DEPENDS+=	${PYPKGPREFIX}-astropy-helpers>=4.0.1:../../wip/py-astropy-helpers
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

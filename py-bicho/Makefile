@@ -20,5 +20,5 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 post-extract:
 	${MV} ${WRKSRC}/bin/bicho ${WRKSRC}/bin/bicho${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

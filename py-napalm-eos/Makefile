@@ -16,5 +16,5 @@ EXTRACT_USING=	gtar
 DEPENDS+=	${PYPKGPREFIX}-napalm-base>=0.23.0:../../wip/py-napalm-base
 DEPENDS+=	${PYPKGPREFIX}-eapi-[0-9]*:../../wip/py-eapi
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -14,5 +14,5 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	tex-latex-bin>=2010:../../print/tex-latex-bin
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

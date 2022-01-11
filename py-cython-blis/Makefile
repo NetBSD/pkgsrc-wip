@@ -15,5 +15,5 @@ LICENSE=	modified-bsd
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV:S/v//1}
 
 # url2pkg-marker (please do not remove this line.)
-.include	"../../lang/python/distutils.mk"
+.include	"../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

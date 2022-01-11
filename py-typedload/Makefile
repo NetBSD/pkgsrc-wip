@@ -15,5 +15,5 @@ USE_LANGUAGES=	# none
 # Only for Python 3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

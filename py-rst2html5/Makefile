@@ -18,5 +18,5 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/rst2html5_.py ${DESTDIR}${PREFIX}/${PYSITELIB}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

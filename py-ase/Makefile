@@ -30,6 +30,6 @@ post-extract:
 .include "../../x11/py-gtk2/buildlink3.mk"
 
 ##required for basic ASE functionality
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

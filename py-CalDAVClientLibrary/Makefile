@@ -16,5 +16,5 @@ EGG_NAME=	UNKNOWN-0.0.0
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 13824
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

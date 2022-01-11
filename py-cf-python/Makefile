@@ -17,6 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-psutil-2.1.3:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-netCDF4>=1.1.8:../../math/py-netCDF4
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

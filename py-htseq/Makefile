@@ -16,6 +16,6 @@ USE_LANGUAGES=	c c++
 
 PORTVERSION=	0.6.1p1
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

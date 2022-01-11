@@ -14,5 +14,5 @@ DEPENDS+=	${PYPKGPREFIX}-krypy>=2.1.1:../../wip/py-krypy
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

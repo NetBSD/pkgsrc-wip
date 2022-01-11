@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

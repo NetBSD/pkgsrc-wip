@@ -14,7 +14,7 @@ COMMENT=	Python based U2F server library
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.2.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 
 .if ${PYVERSSUFFIX} == "3.4"
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34

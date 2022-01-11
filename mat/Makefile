@@ -29,6 +29,6 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's,share/man,${PKGMANDIR},g'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

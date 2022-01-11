@@ -21,5 +21,5 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.0.1
 
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.1.4
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

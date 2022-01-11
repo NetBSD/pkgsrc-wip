@@ -20,5 +20,5 @@ post-extract:
 	${MV} ${WRKSRC}/bin/conda-env ${WRKSRC}/bin/conda-env${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/bin/deactivate ${WRKSRC}/bin/deactivate${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

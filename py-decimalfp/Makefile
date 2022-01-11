@@ -10,5 +10,5 @@ HOMEPAGE=	https://pypi.python.org/pypi/decimalfp
 COMMENT=	Decimal fixed-point arithmetic
 LICENSE=	modified-bsd
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

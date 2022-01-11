@@ -14,5 +14,5 @@ USE_LANGUAGES=	# none
 
 BROKEN=		Distfile not available.
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

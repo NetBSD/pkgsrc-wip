@@ -38,5 +38,5 @@ post-extract:
 #.include "../../graphics/vtk/buildlink3.mk"
 
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

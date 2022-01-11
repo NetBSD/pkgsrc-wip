@@ -11,5 +11,5 @@ HOMEPAGE=	https://github.com/jonathanslenders/textfsm
 COMMENT=	Template based state machine for semi-formatted text
 LICENSE=	apache-2.0
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

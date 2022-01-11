@@ -14,5 +14,5 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-napalm-base>=0.23.2:../../wip/py-napalm-base
 DEPENDS+=	${PYPKGPREFIX}-netmiko>=1.4.0:../../wip/py-netmiko
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

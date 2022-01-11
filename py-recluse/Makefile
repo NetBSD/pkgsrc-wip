@@ -18,5 +18,5 @@ USE_LANGUAGES=	# none
 post-extract:
 	${MV} ${WRKSRC}/scripts/nltkbasedsegmentertokeniserrunner ${WRKSRC}/scripts/nltkbasedsegmentertokeniserrunner${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

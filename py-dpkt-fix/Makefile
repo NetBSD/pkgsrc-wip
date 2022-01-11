@@ -11,5 +11,5 @@ COMMENT=	Dumb packet module
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

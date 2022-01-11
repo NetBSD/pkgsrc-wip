@@ -47,7 +47,7 @@ post-build:
 	${SED} -e "s#@PYSITELIB@#${PREFIX}/${PYSITELIB}#g" < \
 		${FILESDIR}/openerp-server.conf.in > ${PREFIX}/etc/openerp-server.conf.sample
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../textproc/py-libxml2/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"

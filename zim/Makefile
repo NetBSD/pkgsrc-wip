@@ -33,7 +33,7 @@ SUBST_FILES.man-path+=	setup.py
 SUBST_SED.man-path=	-e s,share/man/man1,${PKGMANDIR}/man1,
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

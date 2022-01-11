@@ -15,5 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytest>=0:../../devel/py-test
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

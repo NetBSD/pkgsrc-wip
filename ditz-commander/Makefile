@@ -18,7 +18,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2, py-gtk2, py-gobject
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../x11/py-gnome2-extras/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

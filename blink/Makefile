@@ -36,5 +36,5 @@ post-install:
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

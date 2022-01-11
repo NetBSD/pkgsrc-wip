@@ -24,5 +24,5 @@ post-extract:
 	${MV} ${WRKSRC}/src/python/golem/gosam.py \
 			${WRKSRC}/src/python/golem/gosam.py${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

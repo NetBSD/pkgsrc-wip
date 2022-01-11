@@ -18,5 +18,5 @@ DEPENDS+=	${PYPKGPREFIX}-coala_utils-[0-9]*:../../wip/py-coala_utils
 DEPENDS+=	${PYPKGPREFIX}-sarge-[0-9]*:../../wip/py-sarge
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

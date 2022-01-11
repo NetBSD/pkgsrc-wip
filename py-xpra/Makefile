@@ -54,5 +54,5 @@ post-install:
 .include "../../x11/libxkbfile/buildlink3.mk"
 #.include "../../x11/gtk3/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

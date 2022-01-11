@@ -15,5 +15,5 @@ PYSETUPARGS+=	--apidir ${BUILDLINK_DIR}/share/examples/p4
 EGG_NAME=	${DISTNAME}-${P4_VER}.${P4_VER_PL}
 
 .include "../../wip/p4api/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

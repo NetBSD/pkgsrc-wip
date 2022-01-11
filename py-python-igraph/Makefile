@@ -11,5 +11,5 @@ COMMENT=	Library for creating and manipulating graphs
 LICENSE=	gnu-gpl-v2
 
 .include "../../wip/igraph/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -19,7 +19,7 @@ USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-fuse-bindings
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -31,5 +31,5 @@ DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

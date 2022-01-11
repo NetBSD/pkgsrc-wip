@@ -27,5 +27,5 @@ REPLACE_PYTHON+=		test/opengl_info.py
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

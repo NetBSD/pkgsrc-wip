@@ -23,5 +23,5 @@ post-install:
 	rm -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/test/__init__.*
 
 .include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../wip/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
