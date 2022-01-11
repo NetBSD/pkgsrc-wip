@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (fetchmail-7.0alpha10.tar.gz) = afe8e37326c4f4b223ed131b2c3dfa447d8a927be9729b18caab83027dcb72a4
+SHA512 (fetchmail-7.0alpha10.tar.gz) = f7e55e9325489df8ef2fd72cdbbb7fa93aa3a675453f59aabf67e0190d667ebca67ddb9bc88481ac106032732a1aed238ff965bffc4923f80a162945e7979824
+Size (fetchmail-7.0alpha10.tar.gz) = 1409592 bytes
