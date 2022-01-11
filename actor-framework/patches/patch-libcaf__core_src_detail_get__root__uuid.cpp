@@ -22,50 +22,80 @@ $NetBSD$
  
  #  include <algorithm>
  #  include <fstream>
-@@ -125,6 +126,50 @@ std::string get_root_uuid() {
+@@ -125,6 +126,80 @@ std::string get_root_uuid() {
  
  } // namespace caf::detail
  
-+#elif defined(CAF_NETBSD)
++#elif defined(CAF_NETBSD) || defined(CAF_BSD)
 +
-+#  include <uuid.h>
++#  include <sys/param.h>
++#  include <sys/types.h>
++#  include <sys/sysctl.h>
 +
 +#  include <cstdlib>
 +#  include <string>
++
++#  include "caf/uuid.hpp"
 +
 +namespace caf {
 +namespace detail {
 +
 +namespace {
-+  uuid_t s_uuid;
-+  bool s_uuid_need_init = true;
-+}
++  std::string root_uuid;
++
++  std::string get_sysctl_uuid()
++  {
++#  if defined(__FreeBSD__)
++    int mib[2];
++    u_int mib_len = 2;
++    mib[0] = CTL_KERN;
++    mib[1] = KERN_HOSTUUID;
++#  elif defined(__OpenBSD__)
++    int mib[2];
++    u_int mib_len = 2;
++    mib[0] = CTL_HW;
++    mib[1] = HW_UUID;
++#  elif defined(CAF_NETBSD)
++    int mib[3];
++    size_t mib_len = 3;
++    if (sysctlnametomib("machdep.dmi.system-uuid", mib, &mib_len)) {
++      return std::string{};
++    }
++#  endif
++    size_t uuid_len;
++    char *uuid_str;
++
++    if (sysctl(mib, mib_len, NULL, &uuid_len, NULL, (size_t)0)) {
++      return std::string{};
++    }
++
++    uuid_str = (char*)malloc(uuid_len);
++
++    if (sysctl(mib, mib_len, uuid_str, &uuid_len, NULL, (size_t)0)) {
++      free(uuid_str);
++      return std::string{};
++    }
++
++    std::string sc_uuid{uuid_str};
++    free(uuid_str);
++
++    return sc_uuid;
++  }
++
++} // namespace
 +
 +std::string get_root_uuid()
 +{
-+  std::string uuid;
-+  char *uuid_str;
-+  uint32_t status;
-+  if(s_uuid_need_init) {
-+    uuid_create(&s_uuid, &status);
-+    if(status != uuid_s_ok) {
-+      CAF_LOG_ERROR("failed to get uuid from uuid_create in get_root_uuid");
-+      return uuid;
++  if(root_uuid.empty()) {
++    root_uuid = get_sysctl_uuid();
++
++    if(root_uuid.empty() || (root_uuid.compare("00000000-0000-0000-0000-000000000000") == 0)) {
++      root_uuid = to_string(caf::uuid::random());
 +    }
-+    s_uuid_need_init = false;
 +  }
 +
-+  uuid_to_string(&s_uuid, &uuid_str, &status);
-+  if(status != uuid_s_ok) {
-+    CAF_LOG_ERROR("failed to create uuid string using uuid_to_string in get_root_uuid");
-+    return uuid;
-+  }
-+  uuid.assign(uuid_str);
-+  free(uuid_str);
-+
-+  return uuid;
++  return root_uuid;
 +}
-+
 +
 +} // detail
 +} // caf
@@ -73,12 +103,12 @@ $NetBSD$
  #elif defined(CAF_WINDOWS)
  
  #  include <algorithm>
-@@ -192,7 +237,7 @@ std::string get_root_uuid() {
+@@ -192,7 +267,7 @@ std::string get_root_uuid() {
  } // namespace detail
  } // namespace caf
  
 -#elif defined(CAF_IOS) || defined(CAF_ANDROID)
-+#elif defined(CAF_IOS) || defined(CAF_ANDROID) || defined(CAF_SOLARIS) || defined(CAF_BSD)
++#elif defined(CAF_IOS) || defined(CAF_ANDROID) || defined(CAF_SOLARIS)
  
  // return a randomly-generated UUID on mobile devices
  
