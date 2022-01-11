@@ -3326,6 +3326,7 @@ SUBDIR+=	py-OT
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
+SUBDIR+=	py-PySide2
 SUBDIR+=	py-PythonMagick
 SUBDIR+=	py-RXP
 SUBDIR+=	py-Robinhood

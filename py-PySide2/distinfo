@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.21 2021/10/26 11:34:20 nia Exp $
+
+BLAKE2s (pyside-setup-opensource-src-5.15.2.tar.xz) = 6c93e330d66b861d1e1232ccfb7579503ed309cee6f7c8fad0f2af9aeef8ae2f
+SHA512 (pyside-setup-opensource-src-5.15.2.tar.xz) = 5043c1c9db4ba0133baaabb4d4943182e9741b1007bedd992394758707a37bba0688dc6413ea46620e7c2fb09daa3c74e6a7bb2c302b9d08e5f3bb7575d02b62
+Size (pyside-setup-opensource-src-5.15.2.tar.xz) = 3472624 bytes
