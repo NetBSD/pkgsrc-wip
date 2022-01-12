@@ -855,6 +855,7 @@ SUBDIR+=	festvox-mv
 SUBDIR+=	festvox-rms
 SUBDIR+=	festvox-slt
 SUBDIR+=	festvox-tp
+SUBDIR+=	fetchmail
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg-git
