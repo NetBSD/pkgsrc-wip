@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2021/10/12 08:50:00 dlb Exp $
 
-.include "../../lang/mrust/Makefile.common"
+.include "../../wip/mrust/Makefile.common"
 
 PKGNAME=	mrust-minicargo-${SNAPSTAMP}
 COMMENT=	Cargo workalike from the mrustc tool suite

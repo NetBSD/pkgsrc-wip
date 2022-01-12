@@ -38,7 +38,7 @@ USE_TOOLS+=		gmake
 RUSTVER=		1.39.0
 
 RUSTSRC_DIST=		rustc-${RUSTVER}-src.tar.gz
-SITES.${RUSTRSRC_DIST}=	https://static.rust-lang.org/dist/
+SITES.${RUSTSRC_DIST}=	https://static.rust-lang.org/dist/
 
 MR_OUTDIR=		output-${RUSTVER}/
 
@@ -96,10 +96,10 @@ SUBST_FILES.atomic-pathfix=	src/trans/target.cpp
 SUBST_SED.atomic-pathfix=	-e '/define.*BACKEND_C_OPTS_GNU/s|"atomic"|"atomic", "-L", "${PREFIX}/lib"|'
 
 post-patch:
-	@(cd ${WRKSRC};							\
+	@if [ -e ${WRKSRC} ]; then (cd ${WRKSRC};			\
 	    ${MV} rust-version rust-version.dist;			\
 	    ${ECHO} ${RUSTVER} > rust-version;				\
-	    ${TOUCH} -t 200101010101 rust-version)
+	    ${TOUCH} -t 200101010101 rust-version); fi
 
 #post-extract: cp-gnu-config
 

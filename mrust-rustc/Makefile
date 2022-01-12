@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2021/10/12 08:50:00 dlb Exp $
 
-.include "../../lang/mrust/Makefile.common"
+.include "../../wip/mrust/Makefile.common"
 
 PKGNAME=	mrust-rustc-${SNAPSTAMP}
 COMMENT=	Rustc--built from rustc src, using mrustc toolchain
@@ -77,9 +77,9 @@ do-install:
 			${DESTDIR}${PREFIX}/bin )
 
 
-BUILD_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../lang/mrust-mrustc
-BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../lang/mrust-minicargo
-BUILD_DEPENDS+=	mrust-libs>=${SNAPSTAMP}:../../lang/mrust-libs
+BUILD_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
+BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
+BUILD_DEPENDS+=	mrust-libs>=${SNAPSTAMP}:../../wip/mrust-libs
 BUILD_DEPENDS+=	cmake>=3.18.2:../../devel/cmake
 
 

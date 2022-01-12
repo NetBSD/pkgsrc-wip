@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2021/10/12 08:50:00 dlb Exp $
 
-.include "../../lang/mrust/Makefile.common"
+.include "../../wip/mrust/Makefile.common"
 
 PKGNAME=	mrust-mrustc-${SNAPSTAMP}
 COMMENT=	Mutabah's Rust Compiler--the compiler itself

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2021/10/12 08:50:00 dlb Exp $
 
-.include "../../lang/mrust/Makefile.common"
+.include "../../wip/mrust/Makefile.common"
 
 PKGNAME=	mrust-libs-${SNAPSTAMP}
 COMMENT=	Rustc libraries & crates built using mrustc toolchain
@@ -73,8 +73,8 @@ do-install:
 	    done )
 
 
-BUILD_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../lang/mrust-mrustc
-BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../lang/mrust-minicargo
+BUILD_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
+BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
 
 .include "../../devel/libatomic/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
