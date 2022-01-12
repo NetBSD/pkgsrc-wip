@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pandas>=1.2.4:../../math/py-pandas
 DEPENDS+=	nanoget>=1.4.0:../../wip/nanoget
 DEPENDS+=	nanomath>=1.0.0:../../wip/nanomath
 DEPENDS+=	NanoPlot>=1.38.0:../../wip/nanoplot
-DEPENDS+=	${PYPKGPREFIX}-Deprecated>=1.2.7:../../devel/py-Deprecated
+DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2.7:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.8.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-plotly>=3.4.2:../../wip/py-plotly
 DEPENDS+=	${PYPKGPREFIX}-seaborn>=0.9.0:../../graphics/py-seaborn

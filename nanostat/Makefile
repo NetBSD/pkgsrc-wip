@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	nanoget>=1.12.2:../../wip/nanoget
 DEPENDS+=	nanomath>=1.0.0:../../wip/nanomath
-DEPENDS+=	${PYPKGPREFIX}-Deprecated>=1.2.7:../../devel/py-Deprecated
+DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2.7:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-pysam>=0.15.1:../../wip/py-pysam
 
 WRKSRC=		${WRKDIR}/nanostat-f50c7530f072e9e2b3c830334d806a619dc37c68
