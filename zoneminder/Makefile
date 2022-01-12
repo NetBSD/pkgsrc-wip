@@ -15,6 +15,9 @@ GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
+# Submodules as per ZoneMinder's .gitmodules file
+GITHUB_SUBMODULES=	FriendsOfCake crud v3.0.10 web/api/app/Plugin/Crud
+
 MAINTAINER=	dsainty@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://www.zoneminder.com/

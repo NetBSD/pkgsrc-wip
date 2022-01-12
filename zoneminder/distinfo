@@ -1,6 +1,9 @@
 $NetBSD: distinfo,v 1.12 2018/07/14 15:03:57 gdt Exp $
 
-RMD160 (ZoneMinder-1.30.5.tar.gz) = c19d119dfad9a2d234341c84ad4f21d1dfe3e0fd
+BLAKE2s (FriendsOfCake-crud-v3.0.10.tar.gz) = e04238f274c6ce5b27f4a106630ef224fe6cb61a8172d32474e8660af7adea81
+SHA512 (FriendsOfCake-crud-v3.0.10.tar.gz) = 2f60557f2c783bb448e06c1ca40b536a1d7d5f3caf0626fa6716a28f808492d4799e238f16c022571be96921105b074b6763920fd7b9cc77b76d17ceadae2040
+Size (FriendsOfCake-crud-v3.0.10.tar.gz) = 72960 bytes
+BLAKE2s (ZoneMinder-1.30.5.tar.gz) = eae68bdd260feaf529154de3173805dd318c7bc22ca0a76341f330d04d06bf1b
 SHA512 (ZoneMinder-1.30.5.tar.gz) = f423b79726357c277814c9346445b695fc1b0f9cff61847003d6286bc36f92aab8ab35689e1a3552fb60394793c478fefb4c8fa3861a1dd06a2655b018c6a52a
 Size (ZoneMinder-1.30.5.tar.gz) = 9936584 bytes
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = bded373e318cd074b92853165d5ca38d23bdea5f
