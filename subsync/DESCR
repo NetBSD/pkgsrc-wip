@@ -1,0 +1,6 @@
+This is an automatic movie subtitle synchronization tool.
+
+Synchronization is done by listening to the audio track. Tracks
+could be of different languages, it will be translated if necessary.
+Synchronization with another subtitles is also supported. You don't
+have to adjust subtitles manually anymore!

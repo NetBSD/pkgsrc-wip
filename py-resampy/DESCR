@@ -1,0 +1,4 @@
+Efficient sample rate conversion in Python.
+
+This package implements the band-limited sinc interpolation method
+for sampling rate conversion as described by Julius O. Smith.

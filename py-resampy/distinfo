@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:25 nia Exp $
+
+BLAKE2s (resampy-0.2.2.tar.gz) = 2c3c4975301f9b098b6ba866440e33405f23771d5233c32b5051b160b07ec9f3
+SHA512 (resampy-0.2.2.tar.gz) = 779aee8a41e478f90c43f672872f8ce5c81f372b70318d0b0236eed6816abebf006f920e732e4263d43ecd900bcdb16cf7cb71fdb7f4094cc8fbcae53f2271dd
+Size (resampy-0.2.2.tar.gz) = 323380 bytes

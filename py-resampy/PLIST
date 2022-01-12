@@ -1,0 +1,23 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/resampy/__init__.py
+${PYSITELIB}/resampy/__init__.pyc
+${PYSITELIB}/resampy/__init__.pyo
+${PYSITELIB}/resampy/core.py
+${PYSITELIB}/resampy/core.pyc
+${PYSITELIB}/resampy/core.pyo
+${PYSITELIB}/resampy/data/kaiser_best.npz
+${PYSITELIB}/resampy/data/kaiser_fast.npz
+${PYSITELIB}/resampy/filters.py
+${PYSITELIB}/resampy/filters.pyc
+${PYSITELIB}/resampy/filters.pyo
+${PYSITELIB}/resampy/interpn.py
+${PYSITELIB}/resampy/interpn.pyc
+${PYSITELIB}/resampy/interpn.pyo
+${PYSITELIB}/resampy/version.py
+${PYSITELIB}/resampy/version.pyc
+${PYSITELIB}/resampy/version.pyo

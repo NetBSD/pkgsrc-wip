@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:05 nia Exp $
+
+BLAKE2s (subsync-0.1.5.tar.gz) = 7ad5aa02b3e69e2f5efdbef4f8d545c7f07a6e353d61e313cc9c57103051185e
+SHA512 (subsync-0.1.5.tar.gz) = 0c83c718efdf59e615834213d2be67e165f425eaf570eabf20f3b1bf3ee8765b209af185f43580351a131d68ebf557cefe7a3246bbffce9b129471d42d48815a
+Size (subsync-0.1.5.tar.gz) = 43186 bytes
+SHA1 (patch-setup.py) = 9049f4b0b48f27d63ca580c09ec76904d5d5bf9e

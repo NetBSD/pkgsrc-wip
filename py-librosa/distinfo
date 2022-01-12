@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:25 nia Exp $
+
+BLAKE2s (librosa-0.8.1.tar.gz) = d5584fa38ad4ce2988493f003640f11471554a2d55c2104f8ea87b381b291ac9
+SHA512 (librosa-0.8.1.tar.gz) = c6736eed87252b7f85a7eda50ecafaed9a7080b96b06b0d51a552d56c8028b75b11f6c7006552e30f9ee74c6202644853712d64481d5d1873f5b5f6694a295f5
+Size (librosa-0.8.1.tar.gz) = 189365 bytes
