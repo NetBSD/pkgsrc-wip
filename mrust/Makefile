@@ -1,12 +1,15 @@
 # $NetBSD: Makefile,v 1.1 2022/01/11 20:10:00 dlb Exp $
 
+SKIP_MRUSTC_SRC=	true
 .include "../../wip/mrust/Makefile.common"
 
-PKGNAME=	mrust-${SNAPSTAMP}
-COMMENT=	mrustc meta package (builds several other "mrust-" packages)
-DISTFILES=	
+##PKGNAME=	mrust-${SNAPSTAMP}
+COMMENT=	Meta package for mrustc (builds other "mrust-" packages)
+DISTFILES=
 
-SUBST_STAGE.atomic-pathfix=	none
+.if defined(MR_OUTDIR)
+.  undef MR_OUTDIR
+.endif
 
 DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
 DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
