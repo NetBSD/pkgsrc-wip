@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.0:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-decorator>=3.2.0:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8.1:../../wip/py-simplegeneric
+DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8.1:../../devel/py-simplegeneric
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo118
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2

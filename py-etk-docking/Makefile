@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/dieterv/etk.docking/
 COMMENT=	PyGTK Docking Widgets
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8:../../wip/py-simplegeneric
+DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8:../../devel/py-simplegeneric
 
 USE_LANGUAGES=	# none
 

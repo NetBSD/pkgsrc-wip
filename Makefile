@@ -4586,7 +4586,6 @@ SUBDIR+=	py-shtoom
 SUBDIR+=	py-shutilwhich
 SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-sima
-SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
 SUBDIR+=	py-singletonify
