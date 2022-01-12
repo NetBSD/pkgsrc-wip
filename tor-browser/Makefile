@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.99 2021/11/01 21:41:59 wiz Exp $
-FIREFOX_MAINTAINER=yes
 #
 # How to update this package:
 #
@@ -16,8 +15,8 @@ FIREFOX_MAINTAINER=yes
 # when packaged up, read MESSAGE and test by visiting https://check.torproject.org
 # and https://panopticlick.eff.org
 
-DISTNAME=	src-firefox-tor-browser-91.4.1esr-11.0-1-build1
-PKGNAME=	tor-browser-11.0.3
+DISTNAME=	src-firefox-tor-browser-91.5.0esr-11.0-1-build1
+PKGNAME=	tor-browser-11.0.4
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

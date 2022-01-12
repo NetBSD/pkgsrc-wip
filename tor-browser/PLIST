@@ -24,6 +24,7 @@ lib/tor-browser/browser/fonts/NotoSansDevanagari-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansEthiopic-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansGeorgian-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansGujarati-Regular.ttf
+lib/tor-browser/browser/fonts/NotoSansGurmukhi-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansHebrew-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansJP-Regular.otf
 lib/tor-browser/browser/fonts/NotoSansKR-Regular.otf
@@ -35,6 +36,7 @@ lib/tor-browser/browser/fonts/NotoSansMongolian-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansMyanmar-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansOriya-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansSC-Regular.otf
+lib/tor-browser/browser/fonts/NotoSansSinhala-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansTC-Regular.otf
 lib/tor-browser/browser/fonts/NotoSansTamil-Regular.ttf
 lib/tor-browser/browser/fonts/NotoSansTelugu-Regular.ttf
