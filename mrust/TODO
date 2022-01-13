@@ -1,45 +1,85 @@
 These aren't in a particular order (as of this writing), except
-maybe the order they occurred to em [-DLB]
+maybe the order they occurred to me to add them [-DLB]
+
 
  *  = new upstream snapshot =
-    rework the mrust package-set to use a newer upstream snapshot
+    rework the mrust package set to use a newer upstream snapshot
     (I believe the mrustc project is now able to compile rust
     1.54 on linux rather than being limited to 1.39)
 
+
  *  = "optimize" llvm phase =
     if possible, factor out the llvm portion of the build--which
-    currently occurs as part of the mrust-rustc subpackage--so
+    currently occurs as part of the mrust-rustc subpackage, so
     that it either
+
      a) lives in its own mrust-llvm subpackage, or
      b) depends on a pkgsrc llvm package instead (enabling the
-        mrust-rustc package to skip the llvm phase entirely)
-    [c) capable of both? perhaps via an "option" or something? ]
-    This would really help troubleshooting, because the llvm
+        mrust* packages to skip the llvm build phase entirely)
+    [or,
+     c) offer a choice? perhaps via an "option" or something? ]
+
+    This could really help troubleshooting, because the llvm
     build phase is usually one of the most reliable, yet one of
-    the most time-expensive phases of the mrust* suite, so if it
+    the most time-consuming phases of the mrust* suite, so if it
     could be separated out and skipped when not actually
-    necessary, it could significantly speed up the debugging
-    troubleshooting process of the rest of the mrust-rustc phase
+    necessary, it could significantly speed up the debugging/
+    troubleshooting process of the rest of the mrust-rustc phases
+
 
  *  = save distfiles/ space on rustc src =
     somehow, use a shared copy of "rustc-1.39.0-src.tar.gz" with
     the rest of distfiles/ rather than putting a (possibly
-    duplicate) copy in an mrustc subdir
+    duplicate) copy in an mrustc/ subdir
+
 
  *  = block (inadvertent) downloads =
     add configuration so that every subpackage that invokes any
     kind of upstream make commands does so with a
     "socket buffer size" limit of 0 (e.g., limit -h sock 0m) in
-    every stage after fetch, so that accidental binary downloads
-    can't occur (rust builds are prone to these); I did this in
+    any stage after fetch, so that accidental binary downloads
+    can't occur (rustc builds are prone to these); I did this in
     my pre-pkgsrc work on porting mrustc to NetBSD, but I don't
     know how to do it in pkgsrc
 
+
  *  = next stages =
-    add subpackages or targets to
+    add subpackages or targets that can
+
      a) rebuild rustc & crate with "itself": or, more exactly,
         the mrustc built rustc & cargo
      b) bootstrap the next version (e.g., 1.40) with either
         mrust-rust & mrust-cargo, or the above self-rebuilt ones
      c) run the x.py rust testsuite
 
+
+ *  = fix sporadic the "guard page" build failures =
+    I've tried, but I haven't been able to figure out the cause
+    of this problem
+
+
+ *  = try inhibiting minicargo's forced use of "-g" =
+    mrustc's minicargo is hard coded to invoke mrustc with -g,
+    which in turn causes mrustc to invoke gcc/g++ on the backend
+    with -g as well: this makes artifacts larger, maybe
+    substantially, than necessary--especially given that mrustc
+    uses fairly long identifiers to begin with; getting rid of
+    -g (if everything then stills work...) might even help clear
+    up the "guard page" issue
+
+     a) the change should perhaps parameterize minicargo's use of
+        -g rather than eliminating it, but that's venturing at
+        least a bit into mrustc development, rather than just
+        mrustc packaging
+
+
+ *  = dynamic MAKE_JOBS =
+    some stages of the mrust* packages benefit hugely from
+    setting MAKE_JOBS appropriately for the number of CPUs, while
+    other stages fail catastrophically because of it--especially
+    if there isn't a huge supply of RAM to match it for the
+    biggest artifacts; if there were a way to have make
+    automatically tune MAKE_JOBS up and down on the fly, based on
+    resource pressure vs. availability, it could improve build
+    time significantly (this is not an mrust-specific topic,
+    though; pkgsrc could potentially benefit from it in general)
