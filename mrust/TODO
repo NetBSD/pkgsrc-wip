@@ -1,0 +1,45 @@
+These aren't in a particular order (as of this writing), except
+maybe the order they occurred to em [-DLB]
+
+ *  = new upstream snapshot =
+    rework the mrust package-set to use a newer upstream snapshot
+    (I believe the mrustc project is now able to compile rust
+    1.54 on linux rather than being limited to 1.39)
+
+ *  = "optimize" llvm phase =
+    if possible, factor out the llvm portion of the build--which
+    currently occurs as part of the mrust-rustc subpackage--so
+    that it either
+     a) lives in its own mrust-llvm subpackage, or
+     b) depends on a pkgsrc llvm package instead (enabling the
+        mrust-rustc package to skip the llvm phase entirely)
+    [c) capable of both? perhaps via an "option" or something? ]
+    This would really help troubleshooting, because the llvm
+    build phase is usually one of the most reliable, yet one of
+    the most time-expensive phases of the mrust* suite, so if it
+    could be separated out and skipped when not actually
+    necessary, it could significantly speed up the debugging
+    troubleshooting process of the rest of the mrust-rustc phase
+
+ *  = save distfiles/ space on rustc src =
+    somehow, use a shared copy of "rustc-1.39.0-src.tar.gz" with
+    the rest of distfiles/ rather than putting a (possibly
+    duplicate) copy in an mrustc subdir
+
+ *  = block (inadvertent) downloads =
+    add configuration so that every subpackage that invokes any
+    kind of upstream make commands does so with a
+    "socket buffer size" limit of 0 (e.g., limit -h sock 0m) in
+    every stage after fetch, so that accidental binary downloads
+    can't occur (rust builds are prone to these); I did this in
+    my pre-pkgsrc work on porting mrustc to NetBSD, but I don't
+    know how to do it in pkgsrc
+
+ *  = next stages =
+    add subpackages or targets to
+     a) rebuild rustc & crate with "itself": or, more exactly,
+        the mrustc built rustc & cargo
+     b) bootstrap the next version (e.g., 1.40) with either
+        mrust-rust & mrust-cargo, or the above self-rebuilt ones
+     c) run the x.py rust testsuite
+
