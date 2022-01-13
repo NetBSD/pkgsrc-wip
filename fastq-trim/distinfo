@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (fastq-trim-0.1.0.tar.gz) = 381bc18bcf6eb970fd42c4c3bec017899b31d2b212ee7cb1ed42a6a9f5046c38
-SHA512 (fastq-trim-0.1.0.tar.gz) = 526d23306ea1eae8b50aa2b73547c48c7348b17a5a8e885ca5d4f73f8aca30c68de87d9a94df2caab6facd5758e2c7be6145e253a6d70feb0c70c0c2b07aa431
-Size (fastq-trim-0.1.0.tar.gz) = 18462 bytes
+BLAKE2s (fastq-trim-0.1.0.7-04dd71b089219adca00ff89c1f40421b61b6bab6.tar.gz) = 1ed3f6a9fd3620fc475162cded5e675d78d75ce5f2141029a26386c47ff68402
+SHA512 (fastq-trim-0.1.0.7-04dd71b089219adca00ff89c1f40421b61b6bab6.tar.gz) = fa5fd7920a168b9a3dfb009bc1150cad694655c22c2f1577ff4bf38ba8e6be97ca236c0c5fb460c5692809c5d26f59554b1203f2663c32749baa06f12c1bc58f
+Size (fastq-trim-0.1.0.7-04dd71b089219adca00ff89c1f40421b61b6bab6.tar.gz) = 20591 bytes
