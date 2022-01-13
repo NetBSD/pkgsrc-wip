@@ -2523,6 +2523,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/cyrillic.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/cyrillic.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/czech.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/czech.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/emoji.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/emoji.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/ethiopic.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/ethiopic.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/georgian.el.gz
