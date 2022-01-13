@@ -1,0 +1,15 @@
+github.com/muesli/duf
+# github.com/muesli/duf
+./filesystems.go:54:5: undefined: isNetworkFs
+./filesystems.go:57:5: undefined: isSpecialFs
+./filesystems.go:60:5: undefined: isFuseFs
+./groups.go:61:6: undefined: isHiddenFs
+./main.go:161:22: undefined: mounts
+./main.go:178:13: cannot assign error to err in multiple assignment
+./main.go:185:13: cannot assign error to err in multiple assignment
+./main.go:192:15: cannot assign error to err in multiple assignment
+./main.go:207:15: cannot assign error to err in multiple assignment
+./main.go:257:10: cannot assign error to err in multiple assignment
+./main.go:257:10: too many errors
+*** Error code 2
+
