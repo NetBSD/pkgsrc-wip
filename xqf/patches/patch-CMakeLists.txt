@@ -1,0 +1,11 @@
+--- CMakeLists.txt~	2021-09-14 22:39:19.000000000 +0200
++++ CMakeLists.txt	2022-01-13 22:03:17.799403764 +0100
+@@ -520,7 +520,7 @@
+ 
+ # Compile and link
+ add_executable (xqf ${xqf_SOURCES})
+-target_link_libraries (xqf ${UNZIP_LIBRARIES} dl)
++target_link_libraries (xqf ${UNZIP_LIBRARIES})
+ 
+ if (GUI MATCHES GTK2)
+     target_link_libraries (xqf ${GTK2_LIBRARIES})

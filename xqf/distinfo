@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (pkgsrc/xqf-1.0.7.0.zip) = 915259dc4debdebccdad0da9d7346a6e1bc3a8e9861dfa2b9d874dd7908c466e
+SHA512 (pkgsrc/xqf-1.0.7.0.zip) = 01bd7811c7077a73b64bbd5903fd26bbe2d192d3d2aedc4d7edeb50f301d2e51553bb3143dac00feb6a1b8074ada3221b92c03b8f825f2713bd99f2e21de185d
+Size (pkgsrc/xqf-1.0.7.0.zip) = 706692 bytes
+SHA1 (patch-CMakeLists.txt) = abaea923eb9eeab93e60ff6c16d15f68d6d5f163
