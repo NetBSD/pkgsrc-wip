@@ -1,0 +1,15 @@
+$NetBSD$
+
+Substitute apparent linux usage of "fmt" with "tr".
+
+--- Makefile.orig	2021-01-20 02:08:37.000000000 +0000
++++ Makefile
+@@ -179,7 +179,7 @@ extra_clean := $(extra_clean) *~ */*~
+ 	@$(CC) -MM $(CPPFLAGS) -o $*.d $<
+ 	@mv -f $*.d $*.d.tmp
+ 	@sed -e 's|.*:|$*.o $*.d:|' < $*.d.tmp > $*.d
+-	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
++	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | tr " " "\n" | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
+ 	@rm -f $*.d.tmp
+ 	@echo Building $@
+ 	@$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<

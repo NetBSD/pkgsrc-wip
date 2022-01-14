@@ -2302,6 +2302,7 @@ SUBDIR+=	lumina-desktop
 SUBDIR+=	luv
 SUBDIR+=	lvm2
 SUBDIR+=	lwc
+SUBDIR+=	lwtools
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
 SUBDIR+=	lzlib
