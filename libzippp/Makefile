@@ -4,7 +4,7 @@ DISTNAME=	libzippp-v5.0-1.8.0
 PKGNAME=	${DISTNAME:C/-[0-9].*//:S,-v,-,}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ctabin/}
-GITHUB_TAG=	refs/tags/${DISTNAME}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ctabin/libzippp/
