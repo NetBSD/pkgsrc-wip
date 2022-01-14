@@ -1,3 +1,2 @@
-build and install on netbsd
-its crashing, with many error in gdk and more
-building is clean and good
+build and install on netbsd but not working/starting
+build and install on macos and works but the master server list is wrong/broken
