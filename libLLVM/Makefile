@@ -1,10 +1,19 @@
 # $NetBSD: Makefile,v 1.37 2021/05/24 19:52:33 wiz Exp $
 
-DISTNAME=	llvm-13.0.0.src
+#DISTNAME=	llvm-13.0.0.src
+#PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
+#CATEGORIES=	lang devel
+#MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+#EXTRACT_SUFX=	.tar.xz
+
+# for RC
+DISTNAME=	llvm-13.0.1rc2.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 EXTRACT_SUFX=	.tar.xz
+GITHUB_PROJECT=	llvm-project
+GITHUB_RELEASE=	llvmorg-13.0.1-rc2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://llvm.org/
