@@ -1,0 +1,20 @@
+$NetBSD$
+
+* Use cmake files installed by libzip instead of FindLIBZIP.cmake
+
+--- Config.cmake.in.orig	2022-01-13 19:47:41.330833533 +0000
++++ Config.cmake.in
+@@ -1,10 +1,10 @@
+ @PACKAGE_INIT@
+ 
+-find_package(LIBZIP QUIET)
+-if(NOT LIBZIP_FOUND)
++find_package(libzip QUIET)
++if(NOT libzip_FOUND)
+     list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
+     include(CMakeFindDependencyMacro)
+-    find_dependency(LIBZIP REQUIRED)
++    find_dependency(libzip REQUIRED)
+ endif()
+ 
+ include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")

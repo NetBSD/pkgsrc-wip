@@ -1,0 +1,2 @@
+libzippp is an easy-to-use library for ZIP handling,
+it is a simple basic C++ wrapper around the libzip library.

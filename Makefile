@@ -2226,6 +2226,7 @@ SUBDIR+=	libxtend
 SUBDIR+=	libyuv-git
 SUBDIR+=	libzahl
 SUBDIR+=	libzeep
+SUBDIR+=	libzippp
 SUBDIR+=	libzn-poly
 SUBDIR+=	libzrtp
 SUBDIR+=	lidia
