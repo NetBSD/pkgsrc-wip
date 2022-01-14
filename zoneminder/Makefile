@@ -91,7 +91,10 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 # PolicyKit doesn't actually seem to be necessary.  This hack disables
 # configure's hunt for PolicyKit, but has no other apparent ill effects.
+# cmake needs an almost identical hack - though resorting to patching might
+# be safer.
 CONFIGURE_ENV+=		POLKIT_CFLAGS=" " POLKIT_LIBS=" "
+CMAKE_ARGS+=		-DPOLKIT_LIBRARIES=" " -DPOLKIT_INCLUDE_DIR=" "
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
