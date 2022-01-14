@@ -23,9 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.0.8:../../wip/py-virtualenv20
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
-.if ${_PYTHON_VERSION} < 37
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-.endif
 
 USE_LANGUAGES=	# none
 

@@ -20,11 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0<2:../../lang/py-six
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 .endif
-.if ${_PYTHON_VERSION} < 37
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.0:../../devel/py-importlib-resources
-.endif
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.3.3<3:../../devel/py-pathlib2
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.0:../../devel/py-importlib-resources
 .endif
 
 USE_LANGUAGES=	# none
