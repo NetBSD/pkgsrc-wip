@@ -90,9 +90,6 @@ MESON_ARGS+=	-Dvc4=false
 MESON_ARGS+=	-Dman-pages=false
 MESON_ARGS+=	-Dvalgrind=false
 
-#CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
-#			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
-
 LDFLAGS.NetBSD+=	-lpci
 
 .include "../../devel/meson/build.mk"
