@@ -2,10 +2,11 @@
 bin/zabbix_proxy_js
 man/man8/zabbix_proxy.8
 sbin/zabbix_proxy
-share/examples/${PKGBASE}/zabbix_proxy.conf
-${PLIST.sqldb}share/${PKGBASE}/double.sql
-share/${PKGBASE}/schema.sql
-${PLIST.pgsql}share/${PKGBASE}/timescaledb.sql
-@pkgdir share/${PKGBASE}/externalscripts
+share/examples/zabbix-proxy-postgresql/zabbix_proxy.conf
+share/zabbix-proxy-postgresql/double.sql
+share/zabbix-proxy-postgresql/history_pk_prepare.sql
+share/zabbix-proxy-postgresql/schema.sql
+share/zabbix-proxy-postgresql/timescaledb.sql
+@pkgdir share/zabbix-proxy-postgresql/zabbix/externalscripts
 @pkgdir lib/modules
 @pkgdir etc/zabbix_proxy.conf.d

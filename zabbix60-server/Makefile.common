@@ -5,7 +5,7 @@
 # used by wip/zabbix54-frontend/Makefile
 # used by wip/zabbix54-java/Makefile
 
-DISTNAME=	zabbix-6.0.0beta1
+DISTNAME=	zabbix-6.0.0beta2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/development/6.0/
 
