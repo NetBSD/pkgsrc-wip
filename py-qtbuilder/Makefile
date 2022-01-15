@@ -19,8 +19,13 @@ DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 
 USE_LANGUAGES=	c c++
 
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/pyqtbuild/bundle && rm -r dlls
+	cd ${DESTDIR}${PREFIX}/bin && \
+		mv pyqt-bundle ${PYPKGPREFIX}qt-bundle && \
+		mv pyqt-qt-wheel ${PYPKGPREFIX}qt-qt-wheel
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
