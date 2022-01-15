@@ -3,7 +3,7 @@ $NetBSD: distinfo,v 1.104 2019/09/24 16:39:50 kamil Exp $
 BLAKE2s (calibre-5.34.0.tar.xz) = 62505402dee81ebd41063e80dc9611e9517c27b3a69e8cb88d99755ccbd3bca5
 SHA512 (calibre-5.34.0.tar.xz) = fe60f43493e8830a02a08db017efa8d8bdf873618c75efd73ed9a5a6e13a5afc41daa79489645f15fbeeadc6f99b16a70ebc8e6979b0c113f73a170e20f4c95f
 Size (calibre-5.34.0.tar.xz) = 37077184 bytes
-SHA1 (patch-setup_build.py) = 6da68dd2c42b44bf832c861519bfcc032c71130b
+SHA1 (patch-setup_build.py) = 1c0213c2483407f8d488ae014e0ff62f26a0fd43
 SHA1 (patch-setup_extensions.json) = a15bf58d20bd9a7566f14ebae20116f646c834e7
 SHA1 (patch-setup_install.py) = 758dc31959a6a850602abfcd5d58b19f6b9c6939
 SHA1 (patch-src_calibre_constants.py) = e35f904d075ddb2cf2256895b564a55490fb5897

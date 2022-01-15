@@ -30,6 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
@@ -37,7 +38,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # TODO: these are still in pkgsrc/wip:
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../wip/py-jeepney
-DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../wip/py-qt5-webengine
+DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../wip/py-sip6
+DEPENDS+=	${PYPKGPREFIX}-qt5-builder>=1:../../wip/py-qtbuilder
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging needed for sip
@@ -94,12 +96,10 @@ REPLACE_PYTHON+=	src/calibre/ebooks/metadata/odt.py
 REPLACE_PYTHON+=	src/calibre/utils/*.py
 REPLACE_PYTHON+=	src/odf/*.py
 
-MAKE_ENV+=		FC_INC_DIR=${BUILDLINK_PREFIX.fontconfig}/include/fontconfig
-MAKE_ENV+=		FC_LIB_DIR=${BUILDLINK_PREFIX.fontconfig}/lib
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
-MAKE_ENV+=		SIP_DIR=${BUILDLINK_PREFIX.py-sip}/share/sip${PYVERSSUFFIX}
+MAKE_ENV+=		SIP_DIR=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
 MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 
 # Turn off x bits on non-executable files.
@@ -128,7 +128,7 @@ BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../mk/libusb.buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
+#.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -153,7 +153,7 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../textproc/libstemmer/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../x11/py-sip/buildlink3.mk"
+#.include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"

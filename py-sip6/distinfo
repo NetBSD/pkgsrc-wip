@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sip-6.5.0.tar.gz) = 4d4924c0ddb2ee96dfa624e5f41012b16ff581792d2637dddae92a1fbae8c6d3
+SHA512 (sip-6.5.0.tar.gz) = 3baa20403b668e5f02b2506a693522ce421080e073ac39f62a23823b3e023b0b88fc60ab79e2301ecc39304f6df3d8647adc56429641e91c217fecea9bfacb91
+Size (sip-6.5.0.tar.gz) = 1202004 bytes

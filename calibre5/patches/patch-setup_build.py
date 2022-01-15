@@ -2,11 +2,17 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
 
 - Fix linking against native X.
 - Include netbsd in various conditional building criteria.
-
-$NetBSD$
+- Patch in the directory /usr/pkg/share/sip3.9/PyQt5 for
+  QtWidgets/QtWidgetsmod.sip etc.
 
 --- setup/build.py.orig	2021-12-17 00:40:19.000000000 +0000
 +++ setup/build.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/pkg/bin/python
+ # vim:fileencoding=UTF-8:ts=4:sw=4:sta:et:sts=4:ai
+ 
+ __license__   = 'GPL v3'
 @@ -8,7 +8,7 @@ __docformat__ = 'restructuredtext en'
  import textwrap, os, shlex, subprocess, glob, shutil, sys, json, errno, sysconfig
  from collections import namedtuple
@@ -51,3 +57,19 @@ $NetBSD$
              ''').format(
                  headers=' '.join(headers), sources=' '.join(sources), others=' '.join(others), destdir=self.d(
                      target), freetype=' '.join(ft_inc_dirs))
+@@ -523,6 +528,7 @@ class Build(Command):
+             abi_version = f'abi-version = "{pyqt_sip_abi_version()}"'
+         sipf = ext.sip_files[0]
+         needs_exceptions = 'true' if ext.needs_exceptions else 'false'
++        sip_include_dirs = [os.getenv('SIP_DIR')]
+         with open(os.path.join(src_dir, 'pyproject.toml'), 'w') as f:
+             f.write(f'''
+ [build-system]
+@@ -538,6 +544,7 @@ project-factory = "pyqtbuild:PyQtProject
+ 
+ [tool.sip.project]
+ sip-files-dir = "."
++sip-include-dirs = {sip_include_dirs}
+ {abi_version}
+ 
+ [tool.sip.bindings.pictureflow]

@@ -1,0 +1,21 @@
+SIP - A Python Bindings Generator for C and C++ Libraries
+=========================================================
+
+What is SIP?
+------------
+
+One of the features of Python that makes it so powerful is the ability to take
+existing libraries, written in C or C++, and make them available as Python
+extension modules.  Such extension modules are often called bindings for the
+library.
+
+SIP is a collection of tools that makes it very easy to create Python bindings
+for C and C++ libraries.  It was originally developed in 1998 to create PyQt,
+the Python bindings for the Qt toolkit, but can be used to create bindings for
+any C or C++ library.  For example it is also used to generate wxPython, the
+Python bindings for wxWidgets.
+
+SIP comprises a set of build tools and a sip module. The build tools process a
+set of specification files and generates C or C++ code which is then compiled
+to create the bindings extension module.  Several extension modules may be
+...
