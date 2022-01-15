@@ -65,6 +65,7 @@ DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CMAKE_ARGS+=		-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}
 
 ZM_HTTPD_ROOT=		share/zoneminder/htdocs
 PLIST_SUBST+=		ZM_HTTPD_ROOT=${ZM_HTTPD_ROOT:Q}
@@ -84,8 +85,13 @@ BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--with-webdir=${PREFIX}/${ZM_HTTPD_ROOT:Q}
 CMAKE_ARGS+=		-DZM_WEBDIR=${PREFIX}/${ZM_HTTPD_ROOT:Q}
 CONFIGURE_ARGS+=	--with-cgidir=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
+CMAKE_ARGS+=		-DZM_CGIDIR=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CMAKE_ARGS+=		-DZM_RUNDIR=${VARBASE}/run/zm
+CMAKE_ARGS+=		-DZM_SOCKDIR=${VARBASE}/run/zm
+CMAKE_ARGS+=		-DZM_TMPDIR=${VARBASE}/tmp/zm
+CMAKE_ARGS+=		-DZM_LOGDIR=${VARBASE}/log/zm
 
 # PolicyKit doesn't actually seem to be necessary.  This hack disables
 # configure's hunt for PolicyKit, but has no other apparent ill effects.
@@ -149,7 +155,9 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 MAKE_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 CONFIGURE_ARGS+=	--with-webuser=${APACHE_USER}
+CMAKE_ARGS+=		-DZM_WEB_USER=${APACHE_USER}
 CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
+CMAKE_ARGS+=		-DZM_WEB_GROUP=${APACHE_GROUP}
 
 # If we're using Apache we're going to need PHP, and PHP extensions.
 .include "../../lang/php/phpversion.mk"
@@ -165,6 +173,7 @@ OWN_DIRS_PERMS+=	${ZM_CACHE} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 OWN_DIRS_PERMS+=	${ZM_CACHE}/temp ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/events ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+CMAKE_ARGS+=		-DZM_CONTENTDIR=${ZM_CACHE}
 
 REPLACE_PERL+=	scripts/zmaudit.pl.in
 REPLACE_PERL+=	scripts/zmcamtool.pl.in
