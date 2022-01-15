@@ -250,10 +250,13 @@ pre-configure:
 # Arrange for module.mk to perform its magic here on top of the non-Perl
 # build tasks.
 #
+# Set ZM_PERL_MM_PARMS in order to inhibit NO_PACKLIST
+#
 PERL5_REQD+=		5.6.0
 PERL5_CONFIGURE=	no
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
 PERL5_PACKLIST=		auto/ZoneMinder/.packlist
+CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
 .include "../../lang/perl5/module.mk"
 
 post-configure: perl5-configure
