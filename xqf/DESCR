@@ -1,23 +1,3 @@
-TODO: Adjust the following lines from README.md
-
-XQF
-===
-
-![XQF logo](pixmaps/128x128/xqf.png)
-
-DESCRIPTION
------------
-
-XQF is a server browser and launcher for games using id Tech engines, Unreal engines and many others (see the [wiki/Supported-games](https://github.com/XQF/xqf/wiki/Supported-games) page for details). XQF is a front-end to QStat and uses the GTK+ 2 toolkit.
-
-To learn more about what's new in XQF, please read the file [NEWS.md](NEWS.md) and the [ChangeLog](ChangeLog).
-
-
-DOWNLOADS
----------
-
-See the Wiki page: [wiki/Downloads](https://github.com/XQF/xqf/wiki/Downloads).
-
-
-INSTALLATION
-...
+XQF is a server browser and launcher for games using id Tech engines, Unreal
+engines and many others (see the wiki/Supported-games page for details). XQF
+is a front-end to QStat and uses the GTK+ 2 toolkit.

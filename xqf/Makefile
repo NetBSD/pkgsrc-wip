@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	pkgsrc
 DISTNAME=	xqf-1.0.7.0
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shozp/}
 GITHUB_RELEASE=	pkgsrc-xqf
 EXTRACT_SUFX=	.zip
