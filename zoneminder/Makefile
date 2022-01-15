@@ -123,6 +123,10 @@ CFLAGS+=		-D__STDC_CONSTANT_MACROS
 # Since MySQL uses openssl, use the same library instead of defaulting to
 # gnutls.
 CONFIGURE_ENV+=		ZM_SSL_LIB=openssl
+CMAKE_ARGS+=		-DGNUTLS_LIBRARIES=""
+
+# Make sure cmake doesn't think libgcrypt is available (We have OpenSSL)
+CMAKE_ARGS+=		-DGCRYPT_LIBRARIES=""
 
 # Control where run-time state (PID file and sockets) get stored.
 # Default is "/var/run/zm", but we want to conform to VARBASE.
