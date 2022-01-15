@@ -22,8 +22,8 @@ USE_LANGUAGES=	c c++
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/pyqtbuild/bundle && rm -r dlls
 	cd ${DESTDIR}${PREFIX}/bin && \
-		mv pyqt-bundle pyqt-bundle-${PYVERSSUFFIX} && \
-		mv pyqt-qt-wheel pyqt-qt-wheel-${PYVERSSUFFIX}
+		${MV} pyqt-bundle pyqt-bundle-${PYVERSSUFFIX} && \
+		${MV} pyqt-qt-wheel pyqt-qt-wheel-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
