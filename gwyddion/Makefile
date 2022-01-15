@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2014/05/09 07:38:43 thomasklausner Exp $
 
-DISTNAME=	gwyddion-2.20
+DISTNAME=	gwyddion-2.60
 CATEGORIES=	graphics #science
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwyddion/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gwyddion.sourceforge.net/
@@ -20,11 +20,11 @@ USE_LANGUAGES=		c c++
 GCONF_SCHEMAS+=		data/gwyddion-thumbnailer.schemas
 PKGCONFIG_OVERRIDE+=	data/gwyddion.pc.in
 
-SUBST_CLASSES+=		schema
-SUBST_STAGE.schema=	pre-configure
-SUBST_MESSAGE.schema=	Fixing schema installation path.
-SUBST_FILES.schema+=	data/Makefile.in
-SUBST_SED.schema+=	-e "s,..sysconfdir./gconf/schemas,${PREFIX}/share/gconf/schemas/,"
+# SUBST_CLASSES+=		schema
+# SUBST_STAGE.schema=	pre-configure
+# SUBST_MESSAGE.schema=	Fixing schema installation path.
+# SUBST_FILES.schema+=	m4/gconf-2.m4
+# SUBST_SED.schema+=	-e "s,..sysconfdir./gconf/schemas,${PREFIX}/share/gconf/schemas/,"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gwyddion
 PKG_SUPPORTED_OPTIONS=		pygwy fftw3
@@ -47,6 +47,7 @@ CONFIGURE_ARGS+=	--without-fftw3
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
+.include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
