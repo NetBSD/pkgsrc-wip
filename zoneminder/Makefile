@@ -77,9 +77,6 @@ PRINT_PLIST_AWK+=	{ gsub(/${ZM_HTTPD_CGIBIN:S|/|\\/|g}/, "$${ZM_HTTPD_CGIBIN}") 
 BUILD_DEFS+=		ZM_HTTPD_CGIBIN
 OWN_DIRS+=		${ZM_HTTPD_CGIBIN:Q}
 
-# Omit patchfiles from PLIST.
-PRINT_PLIST_AWK+=	/.orig$$/ { next; }
-
 INSTALLATION_DIRS+=	share/zoneminder ${ZM_HTTPD_ROOT}
 INSTALLATION_DIRS+=	libexec/zoneminder ${ZM_HTTPD_CGIBIN}
 
@@ -243,9 +240,14 @@ LIBS+=		-lexecinfo
 post-extract:
 	${CP} ${FILESDIR}/zoneminder.conf ${WRKSRC}/zoneminder.conf
 
+# Omit patchfiles from PLIST if present.  The pre-configure step below
+# should prevent this from being necessary.
+PRINT_PLIST_AWK+=	/.orig$$/ { next; }
+
+# After patching remove any .orig files because (for patched .pm files) they
+# end up going through the installation process.
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal; autoheader; automake -a --foreign -i; autoconf
+	${FIND} ${WRKSRC} -name "*.pm.orig" -type f | ${XARGS} ${RM} -f
 
 #
 # Arrange for module.mk to perform its magic here on top of the non-Perl
@@ -254,13 +256,16 @@ pre-configure:
 # Set ZM_PERL_MM_PARMS in order to inhibit NO_PACKLIST
 #
 PERL5_REQD+=		5.6.0
-PERL5_CONFIGURE=	no
-PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
-PERL5_PACKLIST=		auto/ZoneMinder/.packlist
-CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
-.include "../../lang/perl5/module.mk"
+#PERL5_CONFIGURE=	no
+#PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
+#PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/proxy
+#PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/modules
+#PERL5_PACKLIST=		auto/ZoneMinder/.packlist
+#PERL5_PACKLIST+=	auto/ONVIF/.packlist
+#CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
+#.include "../../lang/perl5/module.mk"
 
-post-configure: perl5-configure
+#post-configure: perl5-configure
 
 EGDIR=			share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/config ${EGDIR}/apache
