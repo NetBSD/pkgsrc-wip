@@ -19,5 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 
 USE_LANGUAGES=	c c++
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/pyqtbuild/bundle && rm -r dlls
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
