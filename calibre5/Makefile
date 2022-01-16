@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.calibre-ebook.com/
 COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
+DEPENDS+=	${PYPKGPREFIX}-apsw>=3.35.4:../../databases/py-apsw
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 #DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
