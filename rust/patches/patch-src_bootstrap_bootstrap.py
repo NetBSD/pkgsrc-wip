@@ -1,6 +1,7 @@
 $NetBSD: patch-src_bootstrap_bootstrap.py,v 1.4 2020/02/17 20:24:18 jperkin Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
+Add -Copt-level=2 to RUSTFLAGS.
 Handle earmv7hf for NetBSD.
 
 --- src/bootstrap/bootstrap.py.orig	2021-02-10 17:36:44.000000000 +0000
@@ -39,3 +40,11 @@ Handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
+@@ -936,6 +944,7 @@ class RustBuild(object):
+ 
+         # preserve existing RUSTFLAGS
+         env.setdefault("RUSTFLAGS", "")
++        env["RUSTFLAGS"] += " -Copt-level=2"
+         build_section = "target.{}".format(self.build)
+         target_features = []
+         if self.get_toml("crt-static", build_section) == "true":
