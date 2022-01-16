@@ -28,5 +28,35 @@ Next error:
 >> Generating the pictureflow bindings...
 >> -c: Q_PID is undefined
 
+I son't see where it is used, but it seems to be defined in
 
-According to near code in setup/build.py we would need py-toml (toml-0.10.1.tar.gz)
+/usr/pkg/share/sip3.9/PyQt5/QtCore/qprocess.sip:typedef void *Q_PID;
+/usr/pkg/share/sip3.9/PyQt5/QtCore/qprocess.sip:typedef qint64 Q_PID;
+/usr/pkg/share/sip3.9/PyQt5/QtCore/qprocess.sip:    Q_PID pid() const;
+
+Moving that file aside gives an error that it isn't found, so it is included
+from somewhere.
+Commenting out the 3rd line makes the build work.
+The first two are conditional defines; 
+It seems that %If (WS_X11 || WS_MACX) isn't matching.
+
+
+Next error:
+
+$ calibre
+Traceback (most recent call last):
+  File "/usr/pkg/bin/calibre", line 21, in <module>
+    sys.exit(calibre())
+  File "/usr/pkg/lib/calibre/calibre/gui_launch.py", line 64, in calibre
+    main(args)
+  File "/usr/pkg/lib/calibre/calibre/gui2/main.py", line 533, in main
+    app, opts, args = init_qt(args)
+  File "/usr/pkg/lib/calibre/calibre/gui2/main.py", line 124, in init_qt
+    app = Application(args, override_program_name=override, windows_app_uid=MAIN_APP_UID)
+  File "/usr/pkg/lib/calibre/calibre/gui2/__init__.py", line 915, in __init__
+    from calibre_extensions import progress_indicator
+RuntimeError: the sip module implements API v12.0 to v12.7 but the progress_indicator module requires API v12.9
+
+
+Does that mean that py39-qt5 also needs to be built with sip6 somehow?
+Or that calibre's use of sip6 needs to be replaced with sip4?

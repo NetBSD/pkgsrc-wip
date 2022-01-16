@@ -4,15 +4,11 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
 - Include netbsd in various conditional building criteria.
 - Patch in the directory /usr/pkg/share/sip3.9/PyQt5 for
   QtWidgets/QtWidgetsmod.sip etc.
+- Define the %Platform value WS_X11, so that Q_PID gets defined in
+  PyQt5/QtCore/qprocess.sip.
 
 --- setup/build.py.orig	2021-12-17 00:40:19.000000000 +0000
 +++ setup/build.py
-@@ -1,4 +1,4 @@
--#!/usr/bin/env python
-+#!/usr/pkg/bin/python
- # vim:fileencoding=UTF-8:ts=4:sw=4:sta:et:sts=4:ai
- 
- __license__   = 'GPL v3'
 @@ -8,7 +8,7 @@ __docformat__ = 'restructuredtext en'
  import textwrap, os, shlex, subprocess, glob, shutil, sys, json, errno, sysconfig
  from collections import namedtuple
@@ -40,15 +36,6 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
          elif ishaiku:
              ans = ext.pop('haiku_' + k, ans)
          else:
-@@ -197,6 +199,8 @@ def init_env(debug=False, sanitize=False
-         if sanitize:
-             cflags.append('-fsanitize-address')
-             ldflags.append('-shared-libasan')
-+        # QMAKE_LFLAGS += $(COMPILER_RPATH_FLAG)$(X11BASE)/lib
-+        # ldflags.append('$(COMPILER_RPATH_FLAG)$(X11BASE)/lib')
- 
-     if islinux:
-         cflags.append('-pthread')
 @@ -496,6 +500,7 @@ class Build(Command):
              INCLUDEPATH += {freetype}
              DESTDIR = {destdir}
@@ -73,3 +60,11 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
  {abi_version}
  
  [tool.sip.bindings.pictureflow]
+@@ -547,6 +554,7 @@ exceptions = {needs_exceptions}
+ include-dirs = {ext.inc_dirs}
+ qmake-QT = ["widgets"]
+ sip-file = "{os.path.basename(sipf)}"
++tags = ["WS_X11"]
+ ''')
+         shutil.copy2(sipf, src_dir)
+ 

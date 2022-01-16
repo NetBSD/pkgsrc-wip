@@ -2,7 +2,6 @@
 
 DISTNAME=	calibre-5.34.0
 CATEGORIES=	misc
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -38,12 +37,11 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # TODO: these are still in pkgsrc/wip:
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../wip/py-jeepney
-DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../wip/py-sip6
-DEPENDS+=	${PYPKGPREFIX}-qt5-builder>=1:../../wip/py-qtbuilder
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../wip/py-sip6
+BUILD_DEPENDS+=	${PYPKGPREFIX}-qt5-builder>=1:../../wip/py-qtbuilder
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging needed for sip
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-sipbuild-[0-9]*:../../???/py-sipbuild???
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging needed for sip?
 BUILD_DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
 EXTRACT_USING=	bsdtar
@@ -98,7 +96,7 @@ REPLACE_PYTHON+=	src/odf/*.py
 
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
-MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
+#MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 MAKE_ENV+=		SIP_DIR=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
 MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 
@@ -106,7 +104,6 @@ MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 post-extract:
 	find  ${WRKSRC}/src/calibre/devices ${WRKSRC}/src/calibre/ebooks ${WRKSRC}/src/calibre/web -name '*.py' -exec chmod a-x \{} \;
 	find  ${WRKSRC}/resources/images/mimetypes  -name '*.png' -exec chmod a-x \{} \;
-#	chmod a-x ${WRKSRC}/src/calibre/utils/smtplib.py
 
 post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
@@ -128,7 +125,6 @@ BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../mk/libusb.buildlink3.mk"
-#.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
