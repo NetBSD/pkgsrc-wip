@@ -6,6 +6,8 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
   QtWidgets/QtWidgetsmod.sip etc.
 - Define the %Platform value WS_X11, so that Q_PID gets defined in
   PyQt5/QtCore/qprocess.sip.
+- Autodetection of the sip API version of PyQt5.so fails because sip 4
+  does not write the QtCore.toml file with that information. DOESNOTHELP?
 
 --- setup/build.py.orig	2021-12-17 00:40:19.000000000 +0000
 +++ setup/build.py
@@ -36,7 +38,7 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
          elif ishaiku:
              ans = ext.pop('haiku_' + k, ans)
          else:
-@@ -496,6 +500,7 @@ class Build(Command):
+@@ -496,6 +498,7 @@ class Build(Command):
              INCLUDEPATH += {freetype}
              DESTDIR = {destdir}
              CONFIG -= create_cmake  # Prevent qmake from generating a cmake build file which it puts in the calibre src directory
@@ -44,14 +46,23 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
              ''').format(
                  headers=' '.join(headers), sources=' '.join(sources), others=' '.join(others), destdir=self.d(
                      target), freetype=' '.join(ft_inc_dirs))
-@@ -523,6 +528,7 @@ class Build(Command):
+@@ -521,12 +524,15 @@ class Build(Command):
+         abi_version = ''
+         if pyqt_sip_abi_version():
              abi_version = f'abi-version = "{pyqt_sip_abi_version()}"'
++        else:
++            abi_version = f'abi-version = "12.7"'   # 12.7 sip-4.19.25
          sipf = ext.sip_files[0]
          needs_exceptions = 'true' if ext.needs_exceptions else 'false'
 +        sip_include_dirs = [os.getenv('SIP_DIR')]
          with open(os.path.join(src_dir, 'pyproject.toml'), 'w') as f:
              f.write(f'''
  [build-system]
+-requires = ["sip >=5.3", "PyQt-builder >=1"]
++requires = ["sip >=5.3", "PyQt-builder >=1"]
+ build-backend = "sipbuild.api"
+ 
+ [tool.sip.metadata]
 @@ -538,6 +544,7 @@ project-factory = "pyqtbuild:PyQtProject
  
  [tool.sip.project]

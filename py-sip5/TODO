@@ -1,0 +1,8 @@
+bin/sip-build doesn't find its libraries.
+
+It seems this is because importlib.metadata.distribution(name) only returns
+the first of the .dist-info and/or .egg-info instances it finds.
+But we can have both sip-4.19.25.dist-info and sip-6.5.0-py3.9.egg-info
+because they have no conflicting files, and then it finds the wrong one...
+
+This seems to be a systematic problem for all command line wrappers like these.

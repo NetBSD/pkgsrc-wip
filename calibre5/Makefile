@@ -37,7 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # TODO: these are still in pkgsrc/wip:
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../wip/py-jeepney
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../wip/py-sip6
+DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../wip/py-sip5
 BUILD_DEPENDS+=	${PYPKGPREFIX}-qt5-builder>=1:../../wip/py-qtbuilder
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
@@ -142,8 +142,9 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
-.include "../../sysutils/py-dbus/buildlink3.mk"
+# Maybe not anymore now it uses jeepney?
+#BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
+#.include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/libstemmer/buildlink3.mk"

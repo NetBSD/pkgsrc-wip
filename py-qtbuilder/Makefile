@@ -11,7 +11,7 @@ COMMENT=	Tool to create Python bindings for C++ libraries
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR modified-bsd
 
 
-DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../wip/py-sip6
+DEPENDS+=	${PYPKGPREFIX}-sip5>=5<6:../../wip/py-sip5
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools

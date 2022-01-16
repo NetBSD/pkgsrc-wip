@@ -57,6 +57,44 @@ Traceback (most recent call last):
     from calibre_extensions import progress_indicator
 RuntimeError: the sip module implements API v12.0 to v12.7 but the progress_indicator module requires API v12.9
 
+https://bbs.archlinux.org/viewtopic.php?id=271344 was somewhat informative.
 
 Does that mean that py39-qt5 also needs to be built with sip6 somehow?
+Or py39-sip-qt5-4.19.25 needs to be updated? There is talk of a version
+12.9.0-1. But that version makes no sense since the latest is 6.x.
+(However it does match the API versions mentioned above)
+
 Or that calibre's use of sip6 needs to be replaced with sip4?
+Or is it using a wrong sip implementation somewhere?
+
+$ python3.9 -c "import PyQt5.sip as ps; print(ps.__file__)"
+/usr/pkg/lib/python3.9/site-packages/PyQt5/sip.so
+
+There is a
+https://files.pythonhosted.org/packages/3b/27/fd81188a35f37be9b3b4c2db1654d9439d1418823916fe702ac3658c9c41/PyQt5-5.15.6.tar.gz;
+maybe this version uses sip6? 5.15.5 uses sip4.
+
+Try using sip5 instead of sip6.
+
+Next problem: "Bad database location '...'. Will start with a new. emtpy calibre library".
+
+Traceback (most recent call last):
+  File "/usr/pkg/lib/calibre/calibre/gui2/main.py", line 330, in initialize_db
+    db = LibraryDatabase(self.library_path)
+  File "/usr/pkg/lib/calibre/calibre/db/legacy.py", line 188, in __init__
+    backend = self.backend = create_backend(library_path, default_prefs=default_prefs,
+  File "/usr/pkg/lib/calibre/calibre/db/legacy.py", line 45, in create_backend
+    return DB(library_path, default_prefs=default_prefs,
+  File "/usr/pkg/lib/calibre/calibre/db/backend.py", line 462, in __init__
+    if self.user_version == 0:
+  File "/usr/pkg/lib/calibre/calibre/db/backend.py", line 1213, in user_version
+    return self.conn.get('pragma user_version;', all=False)
+  File "/usr/pkg/lib/calibre/calibre/db/backend.py", line 926, in conn
+    self._conn = Connection(self.dbpath)
+  File "/usr/pkg/lib/calibre/calibre/db/backend.py", line 341, in __init__
+    plugins.load_apsw_extension(self, 'sqlite_extension')
+  File "/usr/pkg/lib/calibre/calibre/constants.py", line 325, in load_apsw_extension
+    conn.enableloadextension(True)
+AttributeError: 'Connection' object has no attribute 'enableloadextension'
+
+ebook-viewer works, though.
