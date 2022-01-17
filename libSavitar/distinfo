@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (libSavitar/4.12.0.tar.gz) = 79a566de98b360a7c2b43e4f18990b4baed91329b211b33a07ef9ad498ced88d
-SHA512 (libSavitar/4.12.0.tar.gz) = 992701699b761b71ce0856cdfc3be5081fac2ef727b0adf744c6cea8483f87fd9dd74311255f897a16c1830803bdc9c59ee0680f5fd6e69174c756981c48ac43
-Size (libSavitar/4.12.0.tar.gz) = 100728 bytes
+BLAKE2s (libSavitar/4.13.0.tar.gz) = 3277ac678387e45d71611a474e7195d71477b67731743176a40af2b6939e6b3b
+SHA512 (libSavitar/4.13.0.tar.gz) = a446131c0bbcc34e55c093032af823b9750797f06297bea9fd4d64838e793811e71679a1f6ae99be9fc9382a23e8763140147c7a6eea0a310f6f2d40b53be3bf
+Size (libSavitar/4.13.0.tar.gz) = 100723 bytes
 SHA1 (patch-CMakeLists.txt) = ba38f18ee294393b64959907e004804634ce6d84
 SHA1 (patch-src_MeshData.cpp) = 0569b56d3e7e005bd82e32ceb473db137a482c51
 SHA1 (patch-src_Namespace.cpp) = 60fd4cae95dbbef303fedc9672f3d2f0d653cb90
