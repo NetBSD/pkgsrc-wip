@@ -1,19 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	pytest-doctestplus-0.8.0
+DISTNAME=	pytest-doctestplus-0.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
-MASTER_SITES=	https://files.pythonhosted.org/packages/53/0d/23d7f503f1d219bbd66987371eaa4c38149742ed4cdae9dbe6a5576655a0/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-doctestplus/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://astropy.org/
 COMMENT=	Pytest plugin with advanced doctest features
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pip test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
