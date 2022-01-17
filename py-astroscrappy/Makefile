@@ -13,7 +13,7 @@ COMMENT=	Astropy affiliated Python module for cosmic ray removal
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cython>=0.21:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-astropy-helpers-[0-9]*:../../wip/py-astropy-helpers
+DEPENDS+=	${PYPKGPREFIX}-astropy-helpers-[0-9]*:../../math/py-astropy-helpers
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 .include "../../lang/python/egg.mk"

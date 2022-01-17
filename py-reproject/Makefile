@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.13:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.9:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-astropy-healpix>=0.5:../../wip/py-astropy-healpix
-DEPENDS+=	${PYPKGPREFIX}-astropy-helpers-[0-9]*:../../wip/py-astropy-helpers
+DEPENDS+=	${PYPKGPREFIX}-astropy-helpers-[0-9]*:../../math/py-astropy-helpers
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
