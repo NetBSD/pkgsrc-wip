@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	Cura
-GITHUB_TAG=	4.12.1
+GITHUB_TAG=	4.13.0
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	cad
@@ -19,6 +19,7 @@ USE_LANGUAGES=		c c++
 
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-sentry-sdk-[0-9]*:../../devel/py-sentry-sdk
 DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
