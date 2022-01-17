@@ -1,15 +1,14 @@
 # $NetBSD$
 
 DISTNAME=	PyQt-builder-${PKGVERSION_NOREV}
-PKGNAME=        ${PYPKGPREFIX}-qt5-builder-1.12.2
+PKGNAME=	${PYPKGPREFIX}-qt-builder-1.12.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt-builder/}
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/PyQt-builder/
+HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt-builder/
 COMMENT=	Tool to create Python bindings for C++ libraries
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR modified-bsd
-
 
 DEPENDS+=	${PYPKGPREFIX}-sip5>=5<6:../../wip/py-sip5
 
