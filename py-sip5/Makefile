@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://www.riverbankcomputing.com/software/sip/
 COMMENT=	Tool to create Python bindings for C++ libraries
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR modified-bsd
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging

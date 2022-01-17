@@ -1,21 +1,19 @@
-SIP - A Python Bindings Generator for C and C++ Libraries
-=========================================================
+PyQt-builder is a tool for generating Python bindings for C++ libraries that
+use the Qt application framework. The bindings are built on top of the PyQt
+bindings for Qt. PyQt-builder is used to build PyQt itself.
 
-What is SIP?
-------------
+PyQt-builder also includes the pyqt-bundle command line tool used to bundle a
+copy of Qt with a PyQt wheel. This is separate from the build system and
+described in Bundling Qt Using pyqt-bundle.
 
-One of the features of Python that makes it so powerful is the ability to take
-existing libraries, written in C or C++, and make them available as Python
-extension modules.  Such extension modules are often called bindings for the
-library.
+PyQt-builder is actually an extension of the PEP 384-compliant SIP bindings
+generator and build system. In the simplest cases all that is needed is a
+pyproject.toml file that specifies how the bindings are to be generated. More
+complicated cases require additional code, typically implemented in a
+project.py file.
 
-SIP is a collection of tools that makes it very easy to create Python bindings
-for C and C++ libraries.  It was originally developed in 1998 to create PyQt,
-the Python bindings for the Qt toolkit, but can be used to create bindings for
-any C or C++ library.  For example it is also used to generate wxPython, the
-Python bindings for wxWidgets.
-
-SIP comprises a set of build tools and a sip module. The build tools process a
-set of specification files and generates C or C++ code which is then compiled
-to create the bindings extension module.  Several extension modules may be
-...
+PyQt-builder doesn't provide any additional command line build tools but does
+extend the SIP tools by providing additional command line options and options
+that can be specified in the pyproject.toml file. These are implemented by the
+pyqtbuild module which also provides an API that can be used by a project¿s
+project.py file.
