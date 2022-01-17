@@ -17,14 +17,14 @@ DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 
 USE_LANGUAGES=	c c++
 
-CLI=			build distinfo install module sdist sip5 wheel
+CLI=			build distinfo install module sdist wheel
 MODULE.build=		sipbuild.tools.build
 MODULE.distinfo=	sipbuild.distinfo.main
 MODULE.install=		sipbuild.tools.install
 MODULE.module=		sipbuild.module.main
 MODULE.sdist=		sipbuild.tools.sdist
-MODULE.sip5=		sipbuild.legacy.sip5
 MODULE.wheel=		sipbuild.tools.wheel
+MODULE.sip5=		sipbuild.legacy.sip5
 
 # Overwrite the console scripts with versions that don't fail
 # when sip-4.* is also installed.
@@ -35,6 +35,10 @@ post-install:
 	  ${ECHO} "from ${MODULE.${cli}} import main; sys.exit(main());"; \
 	} > ${DESTDIR}${PREFIX}/bin/sip-${cli}
 .endfor
+	{ ${ECHO} "#!${PYTHONBIN}"; \
+	  ${ECHO} "import sys"; \
+	  ${ECHO} "from ${MODULE.sip5} import main; sys.exit(main());"; \
+	} > ${DESTDIR}${PREFIX}/bin/sip5
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
