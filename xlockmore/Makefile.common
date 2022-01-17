@@ -17,7 +17,6 @@ DISTINFO_FILE?=		${.CURDIR}/../../wip/xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../../wip/xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../../wip/xlockmore/PLIST
 FILESDIR?=		${.CURDIR}/../../wip/xlockmore/files
-MESSAGE_SRC?=		${.CURDIR}/../../wip/xlockmore/MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -98,6 +97,7 @@ SPECIAL_PERMS+=	bin/xlock ${REAL_ROOT_USER} shadow 2511
 EGDIR=			${PREFIX}/share/examples/xlock
 MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 INSTALLATION_DIRS+=	${EGDIR}/pam.d
+INSTALLATION_DIRS+=	share/doc/xlockmore
 
 # XXX framework bug: while we don't need it, this would kill
 # the inherited full dependency
@@ -130,6 +130,19 @@ SUBST_MESSAGE.mode=	Preparing default mode in xlock/XLock.ad file ...
 SUBST_FILES.mode=	xlock/XLock.ad
 SUBST_SED.mode=		-e 's|^\(XLock.mode:[ 	]*\).*|\1${XLOCK_DEFAULT_MODE}|'
 
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	post-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_VARS.install=	PREFIX
+SUBST_VARS.install+=	EGDIR
+
+post-patch:
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/pam-xlock-NetBSD \
 	    ${DESTDIR}${EGDIR}/pam.d/xlock-NetBSD
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
+	    ${DESTDIR}${PREFIX}/share/doc/xlockmore/INSTALL.pkgsrc

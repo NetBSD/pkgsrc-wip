@@ -3,6 +3,7 @@ bin/play.sh
 ${LITE}bin/xglock
 bin/xlock
 man/man1/xlock.1
+share/doc/xlockmore/INSTALL.pkgsrc
 share/examples/xlock/app-defaults/XLock
 share/examples/xlock/pam.d/xlock-NetBSD
 share/xlock/sounds/complete.au
