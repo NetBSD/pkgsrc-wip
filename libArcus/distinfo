@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (libArcus/4.12.1.tar.gz) = 929b1efcfeb33feb47ebda98b4be26f3c06b520be9fe417791478d1c433034fd
-SHA512 (libArcus/4.12.1.tar.gz) = 0b2f2a0b4c3492725b83f2c8b0bb38a2cba10c27317cedd722b27447f0e36c571f1ae7a796de29cfb30e9827f35449327cc20c21780212fdeb35d05c90c3e2e6
-Size (libArcus/4.12.1.tar.gz) = 32079 bytes
+BLAKE2s (libArcus/4.13.0.tar.gz) = effa6edbb0f4a10e1957a3f735cbd2e71fd3b3ab0a763e37a0515dbdf52b88db
+SHA512 (libArcus/4.13.0.tar.gz) = a48ab1cb286c13b817363e113707499f2619724c8d2f7672309f9aad78123a89f60e60e92932d8761af87ec5f868f8c319717457532d45e3f2d8e5c3cc010db5
+Size (libArcus/4.13.0.tar.gz) = 32079 bytes
 SHA1 (patch-src_Socket__p.h) = c7933e7fe5e6c7a4ebf913bade8b99fdc3fe1395
