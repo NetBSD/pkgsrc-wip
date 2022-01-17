@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2020/03/10 22:10:31 wiz Exp $
+# $NetBSD$
 
 DISTNAME=	calibre-5.34.0
 CATEGORIES=	misc
@@ -11,15 +11,13 @@ HOMEPAGE=	https://www.calibre-ebook.com/
 COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-apsw>=3.35.4:../../databases/py-apsw
+DEPENDS+=	${PYPKGPREFIX}-apsw>=3.37.0nb1:../../databases/py-apsw
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-#DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
-#DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
 DEPENDS+=	${PYPKGPREFIX}-feedparser>=6.0.0:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
@@ -34,15 +32,14 @@ DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-unrardll-[0-9]:../../archivers/py-unrardll
 
 # TODO: these are still in pkgsrc/wip:
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../wip/py-jeepney
 DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../wip/py-sip5
-BUILD_DEPENDS+=	${PYPKGPREFIX}-qt5-builder>=1:../../wip/py-qtbuilder
+BUILD_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../wip/py-qt-builder
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging needed for sip?
-BUILD_DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
 EXTRACT_USING=	bsdtar
 
@@ -96,7 +93,6 @@ REPLACE_PYTHON+=	src/odf/*.py
 
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
-#MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 MAKE_ENV+=		SIP_DIR=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
 MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 
@@ -150,7 +146,6 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../textproc/libstemmer/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-#.include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
