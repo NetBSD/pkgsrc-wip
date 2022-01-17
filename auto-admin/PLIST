@@ -161,4 +161,4 @@ sbin/auto-web-setup
 sbin/auto-wifi-failover
 sbin/auto-write-cache-toggle
 sbin/auto-xdm-toggle
-share/auto-admin/Data/ipfw-rules.sh
+share/auto-admin/ipfw-rules.sh
