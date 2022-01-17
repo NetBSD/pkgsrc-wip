@@ -15,7 +15,7 @@ USE_TOOLS=		aclocal autoreconf autoconf automake autoheader
 USE_TOOLS+=		bash gmake perl pkg-config
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}.py
+CONFIGURE_ARGS+=	RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--enable-macro-patterns
 CONFIGURE_ARGS+=	--enable-readlib
 CONFIGURE_ARGS+=	--disable-readcmd
