@@ -1,6 +1,20 @@
 @comment $NetBSD$
 bin/${PREFIX_PROGRAM}ctags
+bin/${PREFIX_PROGRAM}optscript
 ${PLIST.emacs}bin/${PREFIX_PROGRAM}etags
 man/man1/${PREFIX_PROGRAM}ctags.1
+man/man1/${PREFIX_PROGRAM}readtags.1
+man/man5/tags.5
+man/man7/ctags-client-tools.7
+man/man7/ctags-faq.7
 man/man7/ctags-incompatibilities.7
+man/man7/ctags-lang-gdscript.7
+man/man7/ctags-lang-iPythonCell.7
+man/man7/ctags-lang-inko.7
+man/man7/ctags-lang-julia.7
+man/man7/ctags-lang-python.7
+man/man7/ctags-lang-r.7
+man/man7/ctags-lang-sql.7
+man/man7/ctags-lang-tcl.7
+man/man7/ctags-lang-verilog.7
 man/man7/ctags-optlib.7
