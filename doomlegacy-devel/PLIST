@@ -5,4 +5,5 @@ man/man6/doomlegacy.6
 share/doc/doomlegacy/INSTALL.pkgsrc
 share/doc/doomlegacy/legacy.css
 share/doc/doomlegacy/whatsnew.html
+share/doom/dogs.wad
 share/doom/legacy.wad

@@ -90,5 +90,14 @@ Error message:
 
 [X] Created upstream bug report #681
 
+Fixed in release 1.48.10 (now contains dogs.wad).
+Add "-file dogs.wad" to the command line.
+
+
+Part 23: Import final release
+=============================
+[X] Import version 1.48.10 to pkgsrc
+    Parts 8 to 22 are now available in games/doomlegacy
+
 
 EOF
