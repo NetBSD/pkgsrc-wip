@@ -13,7 +13,6 @@ SHA1 (patch-src_zm__event.cpp) = c9ffa1f11c410b56b774be1879a227f2be361f36
 SHA1 (patch-src_zm__monitor.cpp) = 95400e1e524c6efe479a6eb3512596ba0f284334
 SHA1 (patch-src_zm__rtp__ctrl.h) = 4e0fd8e80932de8d77b3386a356cc026ddc23113
 SHA1 (patch-src_zm__rtp__source.cpp) = 039257e76768df2e32a5550625ba7f8d1cb9ba26
-SHA1 (patch-src_zm__sdp.cpp) = ce1b8a9e597ce7b500533a42d14390f580c72de7
 SHA1 (patch-src_zm__thread.h) = 8ac734f991c74a8744f7ee7015e583a701517951
 SHA1 (patch-src_zm__timer.h) = d91d41ef987fa4cc67d6f55c25afc581ef3a273f
 SHA1 (patch-src_zm__utils.cpp) = d5012fb54b0a91640fa49a16daf7c5f0eb54228e
