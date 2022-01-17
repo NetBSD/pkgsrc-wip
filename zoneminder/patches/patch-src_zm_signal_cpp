@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_signal_cpp,v 1.1 2015/04/10 02:58:49 dsainty Exp $
+$NetBSD: patch-src_zm_signal_cpp,v 1.2 2020/08/25 16:42:21 gdt Exp $
 
 Don't assume machine-dependent IP register details are available for any
 platform except Linux.  Only Linux is sure to have this style of mcontext_t.
@@ -6,3 +6,23 @@ platform except Linux.  Only Linux is sure to have this style of mcontext_t.
 Resolves build on systems that have ucontext_t but an mcontext_t that
 doesn't look like Linux.
 
+--- src/zm_signal.cpp.orig	2019-02-23 04:38:47.000000000 +1300
++++ src/zm_signal.cpp	2022-01-18 00:42:50.000000000 +1300
+@@ -66,13 +66,17 @@
+ 	    #ifdef __FreeBSD_kernel__
+ 		ip = (void *)(uc->uc_mcontext.mc_rip);
+ 	    #else
++		#if defined(__linux__)
+ 		ip = (void *)(uc->uc_mcontext.gregs[REG_RIP]);
++		#endif
+ 	    #endif
+     #else
+ 	    #ifdef __FreeBSD_kernel__
+ 		ip = (void *)(uc->uc_mcontext.mc_eip);
+ 	    #else
++		#if defined(__linux__)
+ 		ip = (void *)(uc->uc_mcontext.gregs[REG_EIP]);
++		#endif
+ 	    #endif
+     #endif				// defined(__x86_64__)
+ 
