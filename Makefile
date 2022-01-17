@@ -4439,6 +4439,7 @@ SUBDIR+=	py-pytkgen
 SUBDIR+=	py-pytools
 SUBDIR+=	py-pytrends
 SUBDIR+=	py-pyvib2
+SUBDIR+=	py-pyvo
 SUBDIR+=	py-pywavelets
 SUBDIR+=	py-qalsadi
 SUBDIR+=	py-qclib
