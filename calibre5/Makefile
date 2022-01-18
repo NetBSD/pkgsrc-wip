@@ -29,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
@@ -36,9 +37,8 @@ DEPENDS+=	${PYPKGPREFIX}-unrardll-[0-9]:../../archivers/py-unrardll
 
 # TODO: these are still in pkgsrc/wip:
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../wip/py-jeepney
-DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../wip/py-sip5
-BUILD_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../wip/py-qt-builder
 # for installation
+BUILD_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../x11/py-qt-builder
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
 EXTRACT_USING=	bsdtar
