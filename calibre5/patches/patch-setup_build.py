@@ -46,7 +46,7 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
              ''').format(
                  headers=' '.join(headers), sources=' '.join(sources), others=' '.join(others), destdir=self.d(
                      target), freetype=' '.join(ft_inc_dirs))
-@@ -521,12 +524,15 @@ class Build(Command):
+@@ -521,8 +524,11 @@ class Build(Command):
          abi_version = ''
          if pyqt_sip_abi_version():
              abi_version = f'abi-version = "{pyqt_sip_abi_version()}"'
@@ -58,11 +58,6 @@ $NetBSD: patch-setup_build.py,v 1.3 2018/02/01 16:05:56 wiz Exp $
          with open(os.path.join(src_dir, 'pyproject.toml'), 'w') as f:
              f.write(f'''
  [build-system]
--requires = ["sip >=5.3", "PyQt-builder >=1"]
-+requires = ["sip >=5.3", "PyQt-builder >=1"]
- build-backend = "sipbuild.api"
- 
- [tool.sip.metadata]
 @@ -538,6 +544,7 @@ project-factory = "pyqtbuild:PyQtProject
  
  [tool.sip.project]

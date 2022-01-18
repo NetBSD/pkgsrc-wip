@@ -33,7 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-unrardll-[0-9]:../../archivers/py-unrardll
+DEPENDS+=	${PYPKGPREFIX}-unrardll-[0-9]*:../../archivers/py-unrardll
 
 # TODO: these are still in pkgsrc/wip:
 DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../wip/py-jeepney
