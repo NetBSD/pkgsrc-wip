@@ -1720,6 +1720,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/pp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/radix-tree.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/radix-tree.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/range.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/range.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/re-builder.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/re-builder.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/regexp-opt.el.gz
@@ -2347,6 +2349,8 @@ share/emacs/${PKGVERSION}/lisp/international/rfc1843.el.gz
 share/emacs/${PKGVERSION}/lisp/international/rfc1843.elc
 share/emacs/${PKGVERSION}/lisp/international/robin.el.gz
 share/emacs/${PKGVERSION}/lisp/international/robin.elc
+share/emacs/${PKGVERSION}/lisp/international/textsec.el.gz
+share/emacs/${PKGVERSION}/lisp/international/textsec.elc
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.el.gz
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.elc
 share/emacs/${PKGVERSION}/lisp/international/ucs-normalize.el.gz
@@ -2356,6 +2360,7 @@ share/emacs/${PKGVERSION}/lisp/international/uni-brackets.el
 share/emacs/${PKGVERSION}/lisp/international/uni-category.el
 share/emacs/${PKGVERSION}/lisp/international/uni-combining.el
 share/emacs/${PKGVERSION}/lisp/international/uni-comment.el
+share/emacs/${PKGVERSION}/lisp/international/uni-confusable.el
 share/emacs/${PKGVERSION}/lisp/international/uni-decimal.el
 share/emacs/${PKGVERSION}/lisp/international/uni-decomposition.el
 share/emacs/${PKGVERSION}/lisp/international/uni-digit.el
@@ -2364,6 +2369,7 @@ share/emacs/${PKGVERSION}/lisp/international/uni-mirrored.el
 share/emacs/${PKGVERSION}/lisp/international/uni-name.el
 share/emacs/${PKGVERSION}/lisp/international/uni-numeric.el
 share/emacs/${PKGVERSION}/lisp/international/uni-old-name.el
+share/emacs/${PKGVERSION}/lisp/international/uni-scripts.el
 share/emacs/${PKGVERSION}/lisp/international/uni-special-lowercase.el
 share/emacs/${PKGVERSION}/lisp/international/uni-special-titlecase.el
 share/emacs/${PKGVERSION}/lisp/international/uni-special-uppercase.el
