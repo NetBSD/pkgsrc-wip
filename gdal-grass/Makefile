@@ -2,7 +2,7 @@
 #
 
 DISTNAME=		gdal-grass-1.3.1.2
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gdal.org/dl/
 
