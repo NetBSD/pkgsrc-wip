@@ -2311,6 +2311,7 @@ share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el.gz
 share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.elc
 share/emacs/${PKGVERSION}/lisp/international/fontset.el.gz
 share/emacs/${PKGVERSION}/lisp/international/fontset.elc
+share/emacs/${PKGVERSION}/lisp/international/idna-mapping.el
 share/emacs/${PKGVERSION}/lisp/international/isearch-x.el.gz
 share/emacs/${PKGVERSION}/lisp/international/isearch-x.elc
 share/emacs/${PKGVERSION}/lisp/international/iso-ascii.el.gz
@@ -2349,6 +2350,8 @@ share/emacs/${PKGVERSION}/lisp/international/rfc1843.el.gz
 share/emacs/${PKGVERSION}/lisp/international/rfc1843.elc
 share/emacs/${PKGVERSION}/lisp/international/robin.el.gz
 share/emacs/${PKGVERSION}/lisp/international/robin.elc
+share/emacs/${PKGVERSION}/lisp/international/textsec-check.el.gz
+share/emacs/${PKGVERSION}/lisp/international/textsec-check.elc
 share/emacs/${PKGVERSION}/lisp/international/textsec.el.gz
 share/emacs/${PKGVERSION}/lisp/international/textsec.elc
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.el.gz
