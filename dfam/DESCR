@@ -1,0 +1,16 @@
+The Dfam database is a open collection of Transposable Element DNA
+sequence alignments, hidden Markov Models (HMMs), consensus sequences,
+and genome annotations.
+
+Transposable elements (or interspersed repeats) account for a
+substantial portion of eukaryotic genomes. Accurate annotation of TEs
+enables research into their biology and can shed light on the
+evolutionary processes that shape genomes. Dfam represents a
+collection of multiple sequence alignments, each containing a set of
+representative members of a specific transposable element
+family. These alignments (seed alignments) are used to generate HMMs
+and consensus sequences for each family. The Dfam website gives
+information about each family, and provides genome annotations for a
+collection of core genomes. The HMM models, and consensus sequences
+may also be downloaded from the ftp site, for example to mask repeats
+in new genomes.
