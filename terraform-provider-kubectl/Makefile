@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.12 2021/02/01 16:54:00 tpaul Exp $
 
-DISTNAME=	terraform-provider-kubectl-1.11.2
+DISTNAME=	terraform-provider-kubectl-1.13.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gavinbunney/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
