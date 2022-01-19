@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-changes@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.openpolicyagent.org/
 COMMENT=	Open source, general-purpose policy engine
 LICENSE=	apache-2.0
