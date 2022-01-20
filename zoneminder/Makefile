@@ -2,6 +2,7 @@
 
 #VERSION=	1.36.7
 VERSION=	1.30.5
+PKGREVISION=	1
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -278,7 +279,7 @@ PERL5_REQD+=		5.6.0
 #PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
 #PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/proxy
 #PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/modules
-#PERL5_PACKLIST=		auto/ZoneMinder/.packlist
+#PERL5_PACKLIST=	auto/ZoneMinder/.packlist
 #PERL5_PACKLIST+=	auto/ONVIF/.packlist
 #CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
 #.include "../../lang/perl5/module.mk"

@@ -3,7 +3,7 @@ just delete if it's duplicative with upstream docs.
 
 for (some subset of final point releases):
 
-  update to newer upstream, which requires cmake
+  update to newer upstream
 
   validate that it actually runs
 
