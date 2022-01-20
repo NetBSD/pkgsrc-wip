@@ -175,18 +175,25 @@ OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/events ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CMAKE_ARGS+=		-DZM_CONTENTDIR=${ZM_CACHE}
 
-REPLACE_PERL+=	scripts/zmaudit.pl.in
-REPLACE_PERL+=	scripts/zmcamtool.pl.in
-REPLACE_PERL+=	scripts/zmcontrol.pl.in
-REPLACE_PERL+=	scripts/zmdc.pl.in
-REPLACE_PERL+=	scripts/zmfilter.pl.in
-REPLACE_PERL+=	scripts/zmpkg.pl.in
-REPLACE_PERL+=	scripts/zmtrack.pl.in
-REPLACE_PERL+=	scripts/zmtrigger.pl.in
-REPLACE_PERL+=	scripts/zmupdate.pl.in
-REPLACE_PERL+=	scripts/zmvideo.pl.in
-REPLACE_PERL+=	scripts/zmwatch.pl.in
-REPLACE_PERL+=	scripts/zmx10.pl.in
+# ZoneMinder scripts needing Perl $PATH patching AND interpreter patching
+ZM_REPLACE_PERL+=	scripts/zmaudit.pl.in
+ZM_REPLACE_PERL+=	scripts/zmcamtool.pl.in
+ZM_REPLACE_PERL+=	scripts/zmcontrol.pl.in
+ZM_REPLACE_PERL+=	scripts/zmdc.pl.in
+ZM_REPLACE_PERL+=	scripts/zmfilter.pl.in
+ZM_REPLACE_PERL+=	scripts/zmpkg.pl.in
+ZM_REPLACE_PERL+=	scripts/zmtelemetry.pl.in
+ZM_REPLACE_PERL+=	scripts/zmtrack.pl.in
+ZM_REPLACE_PERL+=	scripts/zmtrigger.pl.in
+ZM_REPLACE_PERL+=	scripts/zmupdate.pl.in
+ZM_REPLACE_PERL+=	scripts/zmvideo.pl.in
+ZM_REPLACE_PERL+=	scripts/zmwatch.pl.in
+ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
+
+# ZoneMinder scripts needing interpreter patching
+REPLACE_PERL+=	${ZM_REPLACE_PERL}
+REPLACE_PERL+=	onvif/scripts/zmonvif-probe.pl
+REPLACE_PERL+=	zmconfgen.pl.in
 
 #
 # The intention of zmsystemctl.pl is to use bin/pkexec to allow the
@@ -225,7 +232,7 @@ SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
 SUBST_CLASSES+=			script-path
 SUBST_MESSAGE.script-path=	Adjusting paths in scripts.
 SUBST_STAGE.script-path=	pre-configure
-SUBST_FILES.script-path=	${REPLACE_PERL} ${EXTRA_PERL}
+SUBST_FILES.script-path=	${ZM_REPLACE_PERL}
 SUBST_SED.script-path=		-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
 
 SUBST_CLASSES+=		files
