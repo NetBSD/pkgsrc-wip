@@ -3259,6 +3259,7 @@ SUBDIR+=	polymul
 SUBDIR+=	ponyc
 SUBDIR+=	pooler
 SUBDIR+=	pop3.proxy
+SUBDIR+=	poppler-qt6
 SUBDIR+=	popup-el-current
 SUBDIR+=	portablexdr
 SUBDIR+=	portfwd
