@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	conftest-0.30.0
-CATEGORIES=	security
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
