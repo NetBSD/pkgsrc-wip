@@ -515,7 +515,6 @@ SUBDIR+=	compat80-x11
 SUBDIR+=	compiz-boxmenu
 SUBDIR+=	complexity
 SUBDIR+=	concorde
-SUBDIR+=	conftest
 SUBDIR+=	conkeror
 SUBDIR+=	conky
 SUBDIR+=	consul
