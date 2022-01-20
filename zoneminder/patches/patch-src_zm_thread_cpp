@@ -45,7 +45,7 @@ Work around varying notion of an undefined mpid on pthread/not.
      throw ThreadException( "Can't self join thread" );
    mThreadMutex.lock();
 -  if ( mPid >= 0 )
-+  if ( mPid >= MPID_UNDEFINED )
++  if ( mPid != MPID_UNDEFINED )
    {
      if ( mStarted )
      {
