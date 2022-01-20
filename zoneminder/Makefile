@@ -246,8 +246,10 @@ PRINT_PLIST_AWK+=	{ gsub(/^.+\/examples\/rc.d/, "$${PLIST.rcd}&"); }
 LIBS+=		-lexecinfo
 .endif
 
+# Avoid conflict with C++20 <version> - intertwined with patch-CMakeLists.txt
 post-extract:
 	${CP} ${FILESDIR}/zoneminder.conf ${WRKSRC}/zoneminder.conf
+	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
 
 # Omit patchfiles from PLIST if present.  The pre-configure step below
 # should prevent this from being necessary.
