@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=open-policy-agent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://conftest.dev/
+HOMEPAGE=	https://www.conftest.dev/
 COMMENT=	Tests structured configuration data via OPA Rego query language
 LICENSE=	apache-2.0
 
