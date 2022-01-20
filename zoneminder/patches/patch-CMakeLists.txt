@@ -1,14 +1,19 @@
 $NetBSD$
 
-Don't have a file called "version", as XCode will attempt to include it.
+Don't have a file called "version", to avoid conflict with C++20 <version>.
 
-The MacOS sendfile() is not supported, so don't set HAVE_SENDFILE in that case.
+CMake will detect the MacOS 6-argument sendfile() support and configure
+HAVE_SENDFILE, but the code itself doesn't support this interface.  So don't
+probe for HAVE_SENDFILE if we HAVE_SENDFILE6_SUPPORT.
 
 Just because librt doesn't exist does not mean that clock_gettime() doesn't
 exist, so don't insist on librt being present.  Fixes the build on MacOS.
 
+Let Pkgsrc be responsible for zm.conf into examples, rather than overwriting
+the existing configuration file.
+
 --- CMakeLists.txt.orig	2019-02-23 04:38:47.000000000 +1300
-+++ CMakeLists.txt	2022-01-19 20:16:39.000000000 +1300
++++ CMakeLists.txt	2022-01-19 22:51:36.000000000 +1300
 @@ -4,7 +4,7 @@
  #
  cmake_minimum_required (VERSION 2.8.7)
@@ -37,3 +42,12 @@ exist, so don't insist on librt being present.  Fixes the build on MacOS.
      else(NOT HAVE_CLOCK_GETTIME)
          list(APPEND ZM_BIN_LIBS "-lrt")
      endif(NOT HAVE_CLOCK_GETTIME)
+@@ -733,7 +735,7 @@
+ endif(zmconfgen_result EQUAL 0)
+ 
+ # Install zm.conf
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/zm.conf" DESTINATION "${ZM_CONFIG_DIR}")
++#install(FILES "${CMAKE_CURRENT_BINARY_DIR}/zm.conf" DESTINATION "${ZM_CONFIG_DIR}")
+ 
+ # Uninstall target
+ configure_file(
