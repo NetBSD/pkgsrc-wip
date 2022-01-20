@@ -10,7 +10,7 @@ of <limits.h>, for portability.
  #include <getopt.h>
  #include <signal.h>
 -#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__)
  #include <limits.h>
  #else
  #include <values.h>
