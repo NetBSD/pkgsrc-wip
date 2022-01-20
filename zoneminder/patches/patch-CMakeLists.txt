@@ -1,0 +1,39 @@
+$NetBSD$
+
+Don't have a file called "version", as XCode will attempt to include it.
+
+The MacOS sendfile() is not supported, so don't set HAVE_SENDFILE in that case.
+
+Just because librt doesn't exist does not mean that clock_gettime() doesn't
+exist, so don't insist on librt being present.  Fixes the build on MacOS.
+
+--- CMakeLists.txt.orig	2019-02-23 04:38:47.000000000 +1300
++++ CMakeLists.txt	2022-01-19 20:16:39.000000000 +1300
+@@ -4,7 +4,7 @@
+ #
+ cmake_minimum_required (VERSION 2.8.7)
+ project (zoneminder)
+-file (STRINGS "version" zoneminder_VERSION)
++file (STRINGS "version.txt" zoneminder_VERSION)
+ # make API version a minor of ZM version
+ set(zoneminder_API_VERSION "${zoneminder_VERSION}.1")
+ 
+@@ -226,7 +226,9 @@
+ check_include_file("sys/sendfile.h" HAVE_SYS_SENDFILE_H)
+ check_include_file("sys/syscall.h" HAVE_SYS_SYSCALL_H)
+ check_function_exists("syscall" HAVE_SYSCALL)
++if(NOT HAVE_SENDFILE6_SUPPORT)
+ check_function_exists("sendfile" HAVE_SENDFILE)
++endif(NOT HAVE_SENDFILE6_SUPPORT)
+ check_function_exists("posix_memalign" HAVE_POSIX_MEMALIGN)
+ check_type_size("siginfo_t" HAVE_SIGINFO_T)
+ check_type_size("ucontext_t" HAVE_UCONTEXT_T)
+@@ -237,7 +239,7 @@
+     include (CheckLibraryExists)
+     CHECK_LIBRARY_EXISTS(rt clock_gettime "time.h" HAVE_CLOCK_GETTIME)
+     if(NOT HAVE_CLOCK_GETTIME)
+-        message(FATAL_ERROR "clock_gettime not found")
++        #message(FATAL_ERROR "clock_gettime not found")
+     else(NOT HAVE_CLOCK_GETTIME)
+         list(APPEND ZM_BIN_LIBS "-lrt")
+     endif(NOT HAVE_CLOCK_GETTIME)
