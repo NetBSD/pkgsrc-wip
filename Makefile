@@ -5654,7 +5654,6 @@ SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
 SUBDIR+=	tme
 SUBDIR+=	tmuni-ttf
-SUBDIR+=	tmux
 SUBDIR+=	tmva
 SUBDIR+=	tmw
 SUBDIR+=	tnt
