@@ -2457,6 +2457,7 @@ SUBDIR+=	mp3chop
 SUBDIR+=	mpb
 SUBDIR+=	mpb-openmpi
 SUBDIR+=	mpc-el
+SUBDIR+=	mpdecimal
 SUBDIR+=	mpg123-jack
 SUBDIR+=	mpg123-svn
 SUBDIR+=	mpgedit

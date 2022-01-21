@@ -1,0 +1,2 @@
+=> Checking for missing run-time search paths in mpdecimal-2.5.1
+ERROR: lib/libmpdec++.so.2.5.1: missing library: libmpdec.so.3
