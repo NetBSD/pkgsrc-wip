@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pipenv-2020.8.13.tar.gz) = 35a3af49ee09b66ec9f6ed7faa61fcd31938c6a4
-SHA512 (pipenv-2020.8.13.tar.gz) = 3bca22fd86b3562da772808fa3a3b3d5758dfbe0d647db6be954a5914a04094dd3020c178afd8cdd97f75c1f7bc741c4ed66d125e276eb97a8872dfff925eaa5
-Size (pipenv-2020.8.13.tar.gz) = 5153905 bytes
+BLAKE2s (pipenv-2022.1.8.tar.gz) = d7537bdd9e4b8dff8f52d115959ee6e11badbf51d017090c07c4b997e88e3e20
+SHA512 (pipenv-2022.1.8.tar.gz) = d6b190d9f3c14565a9c7fdf6e91dd93eda83251640c93b91c2358d94af79807f6fc9da1a24cf1342976067dd2bdd31b5db37143d036f5970eb46f439fc8364f2
+Size (pipenv-2022.1.8.tar.gz) = 5002974 bytes
