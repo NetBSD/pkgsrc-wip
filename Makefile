@@ -5011,6 +5011,7 @@ SUBDIR+=	redfang
 SUBDIR+=	reduze
 SUBDIR+=	refkeen
 SUBDIR+=	regexxer
+SUBDIR+=	regula
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	reone
