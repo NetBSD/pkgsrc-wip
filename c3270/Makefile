@@ -1,20 +1,20 @@
 # $NetBSD$
 
-DISTNAME=	c3270-3.3.15ga9-src
-PKGNAME=	c3270-3.3.15ga9
+DISTNAME=	suite3270-4.1ga11-src
+PKGNAME=	c3270-4.1ga11
 CATEGORIES=	net
-MASTER_SITES=	http://x3270.bgp.nu/download/03.03/
+MASTER_SITES=	http://x3270.bgp.nu/download/04.01/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://x3270.bgp.nu/
-COMMENT=	3270 Terminal emulator ncurses
+COMMENT=	3270 Terminal emulator for ncurses
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/c3270-3.3
+WRKSRC=			${WRKDIR}/suite3270-4.1
 CONFLICTS=		x3270-[0-9]*
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	enable-c3270
+CONFIGURE_ARGS+=	--enable-c3270
 USE_TOOLS+=		gmake pkg-config
 
 PKG_SYSCONFSUBDIR=	c3270
