@@ -17,7 +17,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-c3270
 USE_TOOLS+=		gmake pkg-config
 
-PKG_SYSCONFSUBDIR=	c3270
+PKG_SYSCONFSUBDIR=	x3270
+EGDIR=			share/examples/c3270
+INSTALLATION_DIRS+=	${EGDIR}
+CONF_FILES+=		${EGDIR}/ibm_hosts ${PKG_SYSCONFDIR}/ibm_hosts
+
+post-install:
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/ibm_hosts ${DESTDIR}${PREFIX}/${EGDIR}
+
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
