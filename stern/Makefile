@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stern/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/stern/stern
 COMMENT=	Multi pod and container log tailing for Kubernetes
 LICENSE=	apache-2.0
