@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/c3270
-bin/x3270if
-share/examples/c3270/ibm_hosts
