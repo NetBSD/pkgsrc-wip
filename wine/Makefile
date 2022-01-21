@@ -1,8 +1,10 @@
 # $NetBSD: Makefile,v 1.234 2021/12/08 16:04:19 adam Exp $
 
-DISTNAME=	wine-6.0.2
+DISTNAME=	wine-7.0
 CATEGORIES=	emulators
-MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV}/
+MASTER_SITES+=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
+MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
@@ -26,7 +28,6 @@ CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-capi
 CONFIGURE_ARGS+=	--without-gphoto
 CONFIGURE_ARGS+=	--without-gssapi
-CONFIGURE_ARGS+=	--without-hal
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-opencl
 CONFIGURE_ARGS+=	--without-udev
