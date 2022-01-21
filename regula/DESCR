@@ -1,0 +1,14 @@
+Regula is a tool that evaluates infrastructure as code files for
+potential AWS, Azure, Google Cloud, and Kubernetes security and
+compliance violations prior to deployment.
+
+Regula supports the following file types:
+
+ * CloudFormation JSON/YAML templates
+ * Terraform HCL code
+ * Terraform JSON plans
+ * Kubernetes YAML manifests
+ * Azure Resource Manager (ARM) JSON templates (in preview)
+
+Regula includes a library of rules written in Rego, the policy language
+used by the Open Policy Agent (OPA) project.
