@@ -107,6 +107,9 @@ ${PYSITELIB}/pre_commit/languages/golang.pyo
 ${PYSITELIB}/pre_commit/languages/helpers.py
 ${PYSITELIB}/pre_commit/languages/helpers.pyc
 ${PYSITELIB}/pre_commit/languages/helpers.pyo
+${PYSITELIB}/pre_commit/languages/lua.py
+${PYSITELIB}/pre_commit/languages/lua.pyc
+${PYSITELIB}/pre_commit/languages/lua.pyo
 ${PYSITELIB}/pre_commit/languages/node.py
 ${PYSITELIB}/pre_commit/languages/node.pyc
 ${PYSITELIB}/pre_commit/languages/node.pyo
@@ -180,6 +183,7 @@ ${PYSITELIB}/pre_commit/resources/empty_template_go.mod
 ${PYSITELIB}/pre_commit/resources/empty_template_main.go
 ${PYSITELIB}/pre_commit/resources/empty_template_main.rs
 ${PYSITELIB}/pre_commit/resources/empty_template_package.json
+${PYSITELIB}/pre_commit/resources/empty_template_pre-commit-package-dev-1.rockspec
 ${PYSITELIB}/pre_commit/resources/empty_template_pre_commit_placeholder_package.gemspec
 ${PYSITELIB}/pre_commit/resources/empty_template_pubspec.yaml
 ${PYSITELIB}/pre_commit/resources/empty_template_renv.lock
