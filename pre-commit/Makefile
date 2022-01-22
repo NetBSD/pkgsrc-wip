@@ -25,8 +25,10 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 .endif
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	bash
 
-REPLACE_PYTHON=	pre-commit.py pre_commit/resources/hook-tmpl
+REPLACE_PYTHON=	pre-commit.py
+REPLACE_BASH=	pre_commit/resources/hook-tmpl
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
