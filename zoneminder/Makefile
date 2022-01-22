@@ -112,6 +112,17 @@ CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
 CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg2}/bin/ffmpeg2
 CONFIGURE_ENV+=		OPT_FFMPEG=yes
 
+.if ${OPSYS} == "Darwin"
+SOEXT=	dylib
+.else
+SOEXT=	so
+.endif
+
+.for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE
+CMAKE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg2}/include/ffmpeg2
+CMAKE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg2}/lib/ffmpeg2/lib${lib:tl}.${SOEXT}
+.endfor
+
 # The backtrace requires Linux's unportable <execinfo.h> header.
 CONFIGURE_ARGS+=	--enable-crashtrace=no
 
