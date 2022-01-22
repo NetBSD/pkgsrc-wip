@@ -3974,7 +3974,6 @@ SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-jabberbot
 SUBDIR+=	py-jarowinkler
 SUBDIR+=	py-jbessel
-SUBDIR+=	py-jeepney
 SUBDIR+=	py-jelly
 SUBDIR+=	py-jewish
 SUBDIR+=	py-jitcdde
