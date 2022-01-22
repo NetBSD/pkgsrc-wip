@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex gmake mktemp msgfmt perl pkg-config
 GNU_CONFIGURE=	yes
 
+CHECK_SHLIBS_SUPPORTED=	no
+
 REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
 
