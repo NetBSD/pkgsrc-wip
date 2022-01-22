@@ -11,7 +11,29 @@ $NetBSD$
  # include <sys/sysctl.h>
  #endif
  
-@@ -1266,7 +1266,11 @@ const helpers::path& get_mrustc_path()
+@@ -906,9 +906,11 @@ bool Builder::build_target(const Package
+         }
+     }
+     if( true /*this->enable_debug*/ ) {
+-        args.push_back("-g");
+         args.push_back("--cfg"); args.push_back("debug_assertions");
+     }
++    if( m_opts.mrustc_g ) {
++        args.push_back("-g");
++    }
+     if( true /*this->enable_optimise*/ ) {
+         args.push_back("-O");
+     }
+@@ -1044,7 +1046,7 @@ bool Builder::build_target(const Package
+     args.push_back("--crate-type"); args.push_back("bin");
+     args.push_back("-o"); args.push_back(outfile);
+     args.push_back("-L"); args.push_back(this->get_output_dir(true).str()); // NOTE: Forces `is_for_host` to true here.
+-    if( true )
++    if( m_opts.mrustc_g )
+     {
+         args.push_back("-g");
+     }
+@@ -1266,7 +1268,11 @@ const helpers::path& get_mrustc_path()
          else
              // TODO: Buffer too small
  # elif defined(__FreeBSD__) || defined(__DragonFly__) || (defined(__NetBSD__) && defined(KERN_PROC_PATHNAME)) // NetBSD 8.0+
