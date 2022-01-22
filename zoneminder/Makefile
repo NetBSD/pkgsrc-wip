@@ -174,6 +174,7 @@ CMAKE_ARGS+=		-DZM_WEB_GROUP=${APACHE_GROUP}
 # If we're using Apache we're going to need PHP, and PHP extensions.
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 .endif
