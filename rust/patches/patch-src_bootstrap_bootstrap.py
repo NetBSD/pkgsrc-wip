@@ -2,6 +2,7 @@ $NetBSD: patch-src_bootstrap_bootstrap.py,v 1.4 2020/02/17 20:24:18 jperkin Exp 
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv7hf for NetBSD.
+Default to non-verbose compilation.
 
 --- src/bootstrap/bootstrap.py.orig	2021-02-10 17:36:44.000000000 +0000
 +++ src/bootstrap/bootstrap.py
@@ -39,3 +40,12 @@ Handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
+@@ -980,7 +988,7 @@ class RustBuild(object):
+                 self.cargo()))
+         args = [self.cargo(), "build", "--manifest-path",
+                 os.path.join(self.rust_root, "src/bootstrap/Cargo.toml")]
+-        for _ in range(0, self.verbose):
++        for _ in range(1, self.verbose):
+             args.append("--verbose")
+         if self.use_locked_deps:
+             args.append("--locked")
