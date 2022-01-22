@@ -48,6 +48,9 @@ CONFIGURE_ARGS+=		--disable-ninja
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
 
+# optional from do-cross.mk
+CONFIGURE_ARGS+=		${ADD_CONFIGURE_ARGS}
+
 # Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
 # uncommenting the LD_LIBRARY_PATH setting may be required to run
 # the bootstrap
