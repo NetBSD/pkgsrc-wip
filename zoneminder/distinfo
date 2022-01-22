@@ -11,6 +11,7 @@ SHA1 (patch-cmake_Modules_Pod2Man.cmake) = f0a1462037fc63fa9f35d0595f4f50946f551
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = bded373e318cd074b92853165d5ca38d23bdea5f
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = b97c104f6ac102fc4510eb0977169375cdd97197
 SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51
+SHA1 (patch-scripts_zmpkg_pl_in) = 04f30a02ad5132a58c5396bbf5dbb92280eddb8f
 SHA1 (patch-src_zm__event.cpp) = c9ffa1f11c410b56b774be1879a227f2be361f36
 SHA1 (patch-src_zm__monitor.cpp) = f690dae0adee48faeb94a393ca22f1ec49e8331e
 SHA1 (patch-src_zm__rtp__ctrl.h) = 4e0fd8e80932de8d77b3386a356cc026ddc23113
