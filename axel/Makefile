@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://wilmer.gaast.net/downloads/
 
 MAINTAINER=		alchow@users.sourceforge.net
-HOMEPAGE=		http://wilmer.gaast.net/downloads/
+HOMEPAGE=		https://github.com/axel-download-accelerator/axel
 COMMENT=		HTTP/FTP download accelerator
 
 HAS_CONFIGURE=		yes
