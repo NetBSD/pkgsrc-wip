@@ -1,0 +1,28 @@
+$NetBSD$
+
+* use pkgsrc c++gsl and yaml-cpp
+
+--- CMakeLists.txt.orig	2020-02-05 05:36:17.000000000 +0000
++++ CMakeLists.txt
+@@ -71,6 +71,8 @@ elseif(TARGET_COMPILER_MSVC)
+ endif()
+ 
+ find_package(Boost 1.35 REQUIRED)
++find_package(yaml-cpp REQUIRED)
++find_package(Microsoft.GSL REQUIRED)
+ 
+ if(NOT CMAKE_BUILD_TYPE)
+     set(CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING "Choose the type of build." FORCE)
+@@ -100,12 +102,10 @@ endif()
+ 
+ add_subdirectory(Util)
+ add_subdirectory(src)
+-add_subdirectory(libs)
+ add_subdirectory(client)
+ add_subdirectory(Regex)
+ add_subdirectory(Settings)
+ add_subdirectory(Interpreter)
+-add_subdirectory(GSL EXCLUDE_FROM_ALL)
+ 
+ if(UNIX)
+     find_package(X11)

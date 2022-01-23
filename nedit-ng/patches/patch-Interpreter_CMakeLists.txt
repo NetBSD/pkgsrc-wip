@@ -1,0 +1,15 @@
+$NetBSD$
+
+* use pkgsrc c++gsl
+
+--- Interpreter/CMakeLists.txt.orig	2020-02-05 05:36:17.000000000 +0000
++++ Interpreter/CMakeLists.txt
+@@ -33,7 +33,7 @@ target_link_libraries(Interpreter
+ PUBLIC
+ 	Qt5::Core
+ 	Util
+-	GSL
++	Microsoft.GSL::GSL
+ PRIVATE
+ 	Boost::boost
+ )

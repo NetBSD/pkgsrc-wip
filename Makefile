@@ -2563,6 +2563,7 @@ SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necat
 SUBDIR+=	necpp-git
+SUBDIR+=	nedit-ng
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
 SUBDIR+=	neomutt-git

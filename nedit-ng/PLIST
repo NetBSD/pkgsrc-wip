@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/nc-ng
+bin/nedit-import
+bin/nedit-ng

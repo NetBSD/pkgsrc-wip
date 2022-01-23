@@ -1,0 +1,14 @@
+$NetBSD$
+
+BLAKE2s (nedit-ng/2020.1.tar.gz) = 51969204fab8aae5cc6ab1dd486d776a3c7e053f566a4e875e0926c64af68d26
+SHA512 (nedit-ng/2020.1.tar.gz) = 8fea2b669e07c92b800aac81de92d8971c60c4c9138c9822bdd5fdb42261bc6ff0dc2a1b3fb9e83243d8762845745dcd7909859a3b53aa469508f0d64aa2b92d
+Size (nedit-ng/2020.1.tar.gz) = 2719729 bytes
+SHA1 (patch-CMakeLists.txt) = 4115b5e2662f68569fa5c4e6cac94db011bb0aac
+SHA1 (patch-Interpreter_CMakeLists.txt) = f250257eab653d9755ef27ac93eb678fab30a402
+SHA1 (patch-Interpreter_interpret.h) = 79ab6d225d1bb377565a985cbd800b8cfa25316e
+SHA1 (patch-Util_CMakeLists.txt) = cb4fb33f70e35d1d9b1c338ce65bf30fc3f88cf4
+SHA1 (patch-cmake_Modules_DetectOS.cmake) = 9d473b80b09b631cc26522e2217dda98763ee8d9
+SHA1 (patch-src_CMakeLists.txt) = f5ad9ad837065583ec66d16d18fb63cb273860e0
+SHA1 (patch-src_TextArea.cpp) = 66b390710a5146df21323c3e6f34ff8b29504ac9
+SHA1 (patch-src_macro.cpp) = 57fde11ed47fc27d934f28ea6248bd577580fa78
+SHA1 (patch-src_userCmds.cpp) = 32441c405cea5ca4dd2da54f250a819c445b365a
