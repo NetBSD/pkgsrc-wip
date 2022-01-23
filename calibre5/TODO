@@ -1,7 +1,0 @@
-$ calibre
-Failed to initialize plugin: SmartDevice App Interface (0, 0, 1)
-Failed to initialize plugin: <class 'calibre.devices.smart_device_app.driver.SMART_DEVICE_APP'>
-(several times)
-qt.xkb.compose: failed to create compose table
-
-but it seems to work anyway.
