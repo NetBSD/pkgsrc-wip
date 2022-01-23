@@ -8,6 +8,7 @@ SHA512 (ZoneMinder-1.30.5.tar.gz) = f423b79726357c277814c9346445b695fc1b0f9cff61
 Size (ZoneMinder-1.30.5.tar.gz) = 9936584 bytes
 SHA1 (patch-CMakeLists.txt) = 4cf38ed2818c2000863c4b6587c5b5f64b0c1127
 SHA1 (patch-cmake_Modules_Pod2Man.cmake) = f0a1462037fc63fa9f35d0595f4f50946f5518e7
+SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_ConfigData.pm.in) = b8f508abcd5451da73092070a302b99d1fd59def
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm) = bded373e318cd074b92853165d5ca38d23bdea5f
 SHA1 (patch-scripts_ZoneMinder_lib_ZoneMinder_Memory_Shared.pm) = b97c104f6ac102fc4510eb0977169375cdd97197
 SHA1 (patch-scripts_zm_in) = a05727261bb8be6b707e9a14ae4ff52ea3770d51

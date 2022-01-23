@@ -278,7 +278,7 @@ PRINT_PLIST_AWK+=	/.orig$$/ { next; }
 # After patching remove any .orig files because (for patched .pm files) they
 # end up going through the installation process.
 pre-configure:
-	${FIND} ${WRKSRC} -name "*.pm.orig" -type f | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name "*.pm*.orig" -type f | ${XARGS} ${RM} -f
 
 #
 # Arrange for module.mk to perform its magic here on top of the non-Perl
