@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-yaml:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-stemming>=1<2:../../wip/py-stemming
 DEPENDS+=	${PYPKGPREFIX}-regex:../../textproc/py-regex
-DEPENDS+=	${PYPKGPREFIX}-typeguard>=2.10<3:../../wip/py-typeguard
+DEPENDS+=	${PYPKGPREFIX}-typeguard>=2.10<3:../../devel/py-typeguard
 
 WRKSRC=		${WRKDIR}/hopic-${PKGVERSION}
 USE_LANGUAGES=	# none

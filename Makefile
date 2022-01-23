@@ -4786,7 +4786,6 @@ SUBDIR+=	py-txZMQ
 SUBDIR+=	py-txdbus
 SUBDIR+=	py-typedecorator
 SUBDIR+=	py-typedload
-SUBDIR+=	py-typeguard
 SUBDIR+=	py-typing-inspect
 SUBDIR+=	py-u-msgpack
 SUBDIR+=	py-u2flib-server
