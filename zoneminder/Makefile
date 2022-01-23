@@ -28,8 +28,6 @@ LICENSE=	gnu-gpl-v2
 # NetBSD tar: Invalid header, starting valid header search.
 EXTRACT_USING=	gtar
 
-DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-
 # ZoneMinder 1.29.0 seems to work fine on at least PHP 5.6 and 7.4.
 # Under PHP 8.0 it is logging at Error level type errors out of skin.js.
 # Under PHP 8.1 it is logging at Panic level that strftime is deprecated.
@@ -103,9 +101,6 @@ CMAKE_ARGS+=		-DPOLKIT_LIBRARIES=" " -DPOLKIT_INCLUDE_DIR=" "
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
-
-CONFIGURE_ENV+=		OPT_NETPBM=yes
-CONFIGURE_ENV+=		PATH_NETPBM=${PREFIX}/bin/pnmscale
 
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
