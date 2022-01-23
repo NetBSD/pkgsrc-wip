@@ -3,7 +3,7 @@
 
 DISTNAME=		axel-1.0b
 CATEGORIES=		net
-MASTER_SITES=		http://wilmer.gaast.net/downloads/
+MASTER_SITES=		https://wilmer.gaa.st/downloads/
 
 MAINTAINER=		alchow@users.sourceforge.net
 HOMEPAGE=		https://github.com/axel-download-accelerator/axel
