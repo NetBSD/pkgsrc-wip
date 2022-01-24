@@ -1,4 +1,8 @@
 @comment $NetBSD$
+include/biolibc/align-accessors.h
+include/biolibc/align-mutators.h
+include/biolibc/align-rvs.h
+include/biolibc/align.h
 include/biolibc/bed-accessors.h
 include/biolibc/bed-mutators.h
 include/biolibc/bed-rvs.h
@@ -46,6 +50,8 @@ lib/libbiolibc.a
 lib/libbiolibc.so
 lib/libbiolibc.so.2
 lib/libbiolibc.so.2.0
+man/man3/BL_ALIGN_MAX_MISMATCH_PERCENT.3
+man/man3/BL_ALIGN_MIN_MATCH.3
 man/man3/BL_BED_BLOCK_COUNT.3
 man/man3/BL_BED_BLOCK_SIZES.3
 man/man3/BL_BED_BLOCK_SIZES_AE.3
@@ -197,6 +203,10 @@ man/man3/BL_VCF_SAMPLE_MAX.3
 man/man3/BL_VCF_SINGLE_SAMPLE.3
 man/man3/BL_VCF_SINGLE_SAMPLE_AE.3
 man/man3/biolibc.3
+man/man3/bl_align_map_seq_exact.3
+man/man3/bl_align_map_seq_sub.3
+man/man3/bl_align_set_max_mismatch_percent.3
+man/man3/bl_align_set_min_match.3
 man/man3/bl_bed_check_order.3
 man/man3/bl_bed_gff_cmp.3
 man/man3/bl_bed_read.3
@@ -239,8 +249,6 @@ man/man3/bl_fasta_set_seq_len.3
 man/man3/bl_fasta_write.3
 man/man3/bl_fastq_3p_trim.3
 man/man3/bl_fastq_find_3p_low_qual.3
-man/man3/bl_fastq_find_adapter_exact.3
-man/man3/bl_fastq_find_adapter_smart.3
 man/man3/bl_fastq_free.3
 man/man3/bl_fastq_init.3
 man/man3/bl_fastq_name_cmp.3
