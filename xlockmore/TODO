@@ -1,6 +1,0 @@
-[X] Modify patches for new version
-[X] License is missing
-[X] Check paths in "patch-xlock_XLock.ad"
-[X] Use SUBST framework for "Makefile.common"
-[X] Check whether CVE-2006-0061 is fixed
-[X] Move MESSAGE to ${PREFIX}/share/doc
