@@ -17,6 +17,7 @@ WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		generic
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
 
+# Search for Xft headers in X11 subdirectory
 SUBST_CLASSES+=			fix-include
 SUBST_STAGE.fix-include=	pre-configure
 SUBST_MESSAGE.fix-include=	Fixing include Xft.h.
