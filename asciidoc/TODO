@@ -1,0 +1,2 @@
+The package seems fine, but when I use asciidoc,
+it also exits with code 1 and does nothing.
