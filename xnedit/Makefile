@@ -14,7 +14,7 @@ USE_LANGUAGES=	c99
 USE_TOOLS=	pkg-config yacc
 
 WRKSRC=			${WRKDIR}/xnedit
-BUILD_TARGET=		netbsd
+BUILD_TARGET=		generic
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
 
 SUBST_CLASSES+=			fix-include
