@@ -1,0 +1,200 @@
+x11/xlockmore: Update to 5.68
+
+5.68
+  Updated xscreensaver port for xscreensaver-6.02.
+  Various NetBsd install issues fixed including config.cygport.
+  pam vulnerabiliy patch added thanks to Elmar Hoffmann, elho AT elho.net.
+    Card vulnerability may remain, see README.
+  module fixes for deluxe, eyes, starfish, swirl, text3d2, module use is
+    still experimental.
+  biof mode removed again (though was not building by default).
+
+5.67
+  Fixing specified bound equals destination size warning in iostuff.c.
+  Port updated for xscreensaver-6.01.  With help from EoflaOE ViceCity.
+     Also removed some warnings.
+  maze3d.c updated for VMS as CRTL now contains more standard functions,
+    thanks to Jouk Jansen.
+
+5.66
+  GL mode atunnels, juggler3d, atlantis, lament, invert, solitaire, text3d,
+    and text3d2 fixed up by EoflaOE ViceCity and myself to build in
+    xscreensaver.
+  bomb, helix, lightning, penrose, petal, scooter fixes for xscreensaver
+    port (clear screen issue).  Clock fixed to run by changing a spot from
+    "Clock" to "CLOCK".
+  A few updates from xscreensaver-5.44/hacks/xlockmore.c for xscreensaver
+    port.
+  Duplicate resources and unloadable resources for xscreensaver port fixed
+    by EoflaOE.
+  Double free removed for xscreensaver port fixed by EoflaOE and myself.
+  Removed some warnings in xscreensaver port in fzort, rubik, skewb, and
+    sproingies.
+  Xpm textures added to xscreensaver ports that need them.
+  image, puzzle, decay, bat now work but use xscreensaver bitmap/pixmap
+    in xscreensaver port.
+  Bug fix in qix and toneclock for xscreensaver port, xlock was not
+    affected by negative NRAND input.
+  euler2d synced up with xscreensaver version.
+  Change to fzort to use __asm__ instead of asm as its probably more
+    likely to work.
+  Fixed solitaire so deckPile changes just a little bit as it doles
+    out cards.
+  Updated bomb to use size 18 font when USE_MB is not set as it seems
+    34 is not widely available anymore.
+  pacman now has different colored ghosts (no green ghost) and also
+    oscillating dress and eyes.  See README for a notice for this mode.
+  Fixed some bad drawings in solitaire and pacman noticed on
+    Windows side.
+  Warnings removed for -Wstrict-prototypes -Wmissing-prototypes
+    -Wdeclaration-after-statement
+
+5.65
+  Fix from Jan Kratochvil and Adrian Reber, adrian AT lisas.de for Fedora.
+    xlock -startCmd true... would core on Fedora, exit() replaced with
+    _exit().
+  Update for magick.c to use strncpy thanks to Jouk Jansen.
+
+5.64
+  Fix for hyper mode from original author, for potential but not
+    likely memory leak and free(NULL) issue John Heidemann, johnh
+    AT isi.edu.
+  More buffer gcc warnings removed for dclock.c, image.c, and
+    scrnsave.c.
+  ras.c/magick.c gcc 10 fix from Adrian Reber, adrian AT lisas.de .
+    VMS already handles this in make.com.
+
+5.63
+  Lots of spelling errors fixed due to codespell
+    https://manpages.debian.org/testing/codespell/codespell.1.en.html
+  A few more gl modes (molecule, invert) fixed up by
+    EoflaOE ViceCity to run in xscreensaver.
+  Added additional changes to solitaire and invert.  invert will
+    build in xscreensaver with some coaxing, see README in
+    xscreensaver directory.
+  Removed buffer gcc warning about nose.c.
+
+5.62
+  Fix from brett.diamond AT gmail.com to get "xlock -help" from
+    crashing.
+  As a Blake's 7 fan, I had to add the Liberator to star mode.
+
+5.61
+  Same fix from Jouk Jansen and Adrian Reber, adrian AT lisas.de
+    for juggler3d.cc in previous release.
+  Change from Denys Vlasenko (thanks to Adrian Reber for pointing out)
+    https://bugzilla.redhat.com/show_bug.cgi?id=874484
+    This helps xlock's parent process to know xlock crashed.
+  ico mode added truncated octahedron.
+  Another  gl mode, sierpinski3d, fixed up by EoflaOE ViceCity to run
+    in xscreensaver.
+
+5.60
+  Updated references to website to https.  https://www.sillycycle.com
+  A few more gl modes (incl. maze3d, pipe, sproingies) fixed up by
+    EoflaOE ViceCity to run in xscreensaver.
+
+5.59
+  Thanks to tobik, ohartmann AT walstatt.org, and Jason Helfman,
+    jgh AT FreeBSD.org for xglock fixes for "failed due to signal" for
+    clang.
+  Syncing with xscreensaver and many modes modified, more than
+    half working there.  pacman and puzzle run but need some
+    obvious work, others run too fast or flash on the screen.
+    Various fixes from Jouk Jansen and EoflaOE ViceCity.
+    Updated GL modes also, inaddition to overlap: biof, skewb, and
+    fire (needs images). See xscreensaver/README for new directions.
+  Updated in linux to build with modules, must have broken somewhere
+    down the line.  imake build fixed too.
+  bomb mode fixed for xlock.
+
+5.58
+  Syncing with xscreensaver.  Much has changed since last time this
+    was done and much left to do.  Nonglx "a"'s and some "b"'s done
+    so far.  Automata modes like ant.c should use automata.c and
+    automata.h supplied by xlockmore.
+    ball bat not working right there yet.  Also bouboule to do right will
+    require changes to xlockmore files from xscreensaver.
+    See new xscreensaver/README for instructions.
+  While testing uncovered old security bug in anenome mode and fixed.
+
+5.57
+  life updates to use a more standard notation for nontotalistic cellular
+    automata.
+  ax_pthread.m4 needed for autoconf, added back in, oops.
+  Removed VMS caddr_t fix from matrix.c, cage.c, gears.c, glplanet.c,
+    invert.c, juggler3d.c, lament.c, moebius.c, molecule.c, morph3d.c,
+    noof.c, pipes.c, rubik.c, sierpinski3d.c, skewb.c, stairs.c,
+    superquadrics.c as no longer needed.  Thanks to Jouk Jansen.
+  boxed and maze3d modes added thanks mainly to Jouk Jansen.
+  boxed added to xlock95.scr.  xlock95 Makefile now builds to 64 bit.
+
+5.56
+  Thanks to Jason Helfman, jgh AT FreeBSD.org for sound installation fixes.
+  Thanks to Tobias Kortkamp, for his patch for glock compile issue with
+     CLANG 6.0.0.
+  Fixing warnings using clang for back.xpm, nose.c, passwd.c.
+  Fixing errors using g++ for deluxe.c, also various casting added.
+  Fixing potential some buffer overruns pointed out in mingw in
+    apollonian.c and hyper.c.
+  Fixing potential error of using null pointer thanks again to mingw in
+    xlock.c.
+  pyro2 was not showing anything on screen due to it not finding font,
+    changed it to default to mode_font if can not find.
+
+5.55
+  Thanks to Dave Odell, dmo2118 AT gmail.com for his fzort mode update to
+    use the functions in xshm.c and fixes crash when running X11 over network.
+  Note from Dave Odell:
+    <https://www.jwz.org/xscreensaver/xscreensaver-5.37.tar.gz>. MI_INIT() is
+    defined and documented in hacks/xlockmore.h, with related functions
+    defined in hacks/xlockmore.c.  MI_INIT() currently takes three parameters:
+    the ModeInfo *, the state array, and a function pointer for the new free
+    hook. FWIW, it could instead be just the first two parameters, with the
+    free hook being set up like the other ModeHooks; this would be a bit
+    nicer, I think. But I was going for something that could be applied
+    incrementally to individual screenhacks in XScreenSaver, and could -- in
+    theory -- be brought back to xlockmore with minimal impact.
+  ant mode resync'd with xscreensaver...  Thanks to David Odell redoing my
+    sad attempt.
+  -sound configuration changed around so it should work on more machines,
+    now uses DEF_PLAY and play.sh by default.
+  Thanks to Stanislav Brabec, sbrabec AT suse.cz for his "hack" to fix for
+    PAM with non-English locales.  He notes to fix properly a "Password"
+    prompt list should be obtained at the initial phase of authentication.
+    Added PAM_PASSWORD_PROMPT for using old way.
+  Fixed leak in scooter thanks to Valgrind.
+
+5.54
+  Thanks to Dave Odell, dmo2118 AT gmail.com for his strange mode
+    updates to include aligned_malloc.[ch], thread_util.[ch], xshm.[ch],
+    and visual_pixmap_depth() from XScreenSaver.  Also updates for building
+    macOS and Debian for crypt.  Made safe for VMS by Jouk Jansen.
+  juggle fixed for multiscreens.
+
+5.53
+  Goofed on last VMS xmlock update.
+  dclock fix for led bounce.  :)  Added to windows port but only graphical
+    part.
+  Windows port fixed petri black screen.  Added anemone and deluxe but turned
+    off double buffering to get default black screen.
+
+5.52
+  Install changes for fortune. VMS xmlock build update.
+  Thanks to Dave Odell, dmo2118 AT gmail.com for his strange mode
+    updates.  New options -points N and -curve N .  Also now working
+    for windows port (which led to bubble and ifs porting easily).
+
+5.51
+  life3d updates including a distinct 18 neighborhood using rhombic
+    dodecahedrons (neighoborhood -18 as there is already 18
+    neighborhood), and a 22 neighborhood using tetrahedrons, i.e. the
+    tetrahedral part of alternated cubic honeycomb
+  Less compile warnings and configure update.
+
+5.50
+  -messagefont was broken if USE_MB set (default from 5.42). E.g.:
+    -mode dclock -messagefont "-*-times-*-*-*-*-18-*-*-*-*-*-*-*"
+  Changed default message font to above.
+  Should now compile with less warnings.
+  spiral erase mode changed from 100 iterations to 8.
