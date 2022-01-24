@@ -14,6 +14,8 @@ COMMENT=	Remake of nedit using Qt
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+USE_TOOLS+=	bison
+BISON_REQD=	3.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++
 
