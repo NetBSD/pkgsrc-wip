@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 VERS=		1.4.0
 
 USE_LANGUAGES=	c99
+USE_TOOLS=	pkg-config yacc
 
 WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		netbsd
@@ -44,8 +45,7 @@ do-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-# Not needed (indirect dependency of libXft)
-#.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
