@@ -50,6 +50,7 @@ SUBST_VARS.hamlib=	PREFIX
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
