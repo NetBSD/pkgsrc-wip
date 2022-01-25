@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (flit_core-3.5.1.tar.gz) = fa0a94c9a11a7cf0fcc973e175470bb3482826874dc626467a4db81e72a1a72d
-SHA512 (flit_core-3.5.1.tar.gz) = c83b5bd54ffdf2d7dbea340939cb5f0210ffd36aa0f61b02519837843ebbab206a2456a007f76cbae45c2133ef3d21949d1834083c8dddb505ed5bb127a5fdba
-Size (flit_core-3.5.1.tar.gz) = 27497 bytes

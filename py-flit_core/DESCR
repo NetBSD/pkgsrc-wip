@@ -1,7 +1,0 @@
-Flit is a simple way to put Python packages and modules on PyPI.
-
-It tries to require less thought about packaging and help you avoid
-common mistakes.
-
-flit_core is the build backend inside flit, used to bootstrap the build
-of the flit tool.
