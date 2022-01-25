@@ -4235,7 +4235,6 @@ SUBDIR+=	py-odesys
 SUBDIR+=	py-odeviz
 SUBDIR+=	py-okasha
 SUBDIR+=	py-okpy
-SUBDIR+=	py-olm
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openastro
 SUBDIR+=	py-openopt
