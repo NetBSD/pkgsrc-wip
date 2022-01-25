@@ -1,0 +1,19 @@
+[Unit]
+Description=LPJS job compute node service
+Documentation=man:lpjs_compd(8)
+After=network.target
+After=time-sync.target
+
+[Service]
+Type=forking
+EnvironmentFile=-@sysconfigdir@/lpjs_compd
+ExecStart=@sbindir@/lpjs_compd $OPTIONS
+PIDFile=@runstatedir@/lpjs/lpjs_compd.pid
+RuntimeDirectory=lpjs
+RuntimeDirectoryMode=0755
+User=root
+Group=root
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
