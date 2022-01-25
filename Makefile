@@ -3458,7 +3458,6 @@ SUBDIR+=	py-bigfloat
 SUBDIR+=	py-biofrills
 SUBDIR+=	py-biopython
 SUBDIR+=	py-bip
-SUBDIR+=	py-biskit
 SUBDIR+=	py-bitsets
 SUBDIR+=	py-blake2
 SUBDIR+=	py-blaze
