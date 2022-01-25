@@ -11,7 +11,6 @@ HOMEPAGE=	http://casper.berkeley.edu/astrobaki/index.php/AIPY
 COMMENT=	Astronomical Interferometry in Python
 LICENSE=	gnu-gpl-v2
 
-#DEPENDS+=	${PYPKGPREFIX}-fits>=3.2:../../graphics/py-fits
 #DEPENDS+=	${PYPKGPREFIX}-ephem-[0-9]*:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 
