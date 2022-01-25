@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	olm-3.2.2
+DISTNAME=	olm-3.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/
+MASTER_SITES=	https://gitlab.matrix.org/matrix-org/olm/-/archive/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.2/
+HOMEPAGE=	https://gitlab.matrix.org/matrix-org/olm/
 COMMENT=	Olm bindings for Python
 LICENSE=	apache-2.0
 
