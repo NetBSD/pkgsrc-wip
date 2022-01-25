@@ -1907,6 +1907,8 @@ share/emacs/${PKGVERSION}/lisp/eshell/em-cmpl.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-cmpl.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-dirs.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-dirs.elc
+share/emacs/${PKGVERSION}/lisp/eshell/em-extpipe.el.gz
+share/emacs/${PKGVERSION}/lisp/eshell/em-extpipe.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-glob.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-glob.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-hist.el.gz
