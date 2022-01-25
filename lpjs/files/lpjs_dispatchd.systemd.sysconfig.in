@@ -1,4 +1,0 @@
-# MUNGE configuration
-
-# Pass additional command-line options to lpjs_dispatchd.
-OPTIONS="--daemonize"
