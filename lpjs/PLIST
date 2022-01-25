@@ -13,4 +13,8 @@ sbin/lpjs-config
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
+share/lpjs/Systemd/lpjs_compd.service
+share/lpjs/Systemd/lpjs_compd.sysconfig
+share/lpjs/Systemd/lpjs_dispatchd.service
+share/lpjs/Systemd/lpjs_dispatchd.sysconfig
 @pkgdir etc/lpjs
