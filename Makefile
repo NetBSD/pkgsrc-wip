@@ -709,7 +709,6 @@ SUBDIR+=	dune-common
 SUBDIR+=	dune-geometry
 SUBDIR+=	dune-istl
 SUBDIR+=	duplo
-SUBDIR+=	dusage
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvegas
 SUBDIR+=	dvisvgm
