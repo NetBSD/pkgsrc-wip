@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	matrix-nio-0.18.6
+DISTNAME=	matrix-nio-0.18.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matrix-nio/}
@@ -20,14 +20,16 @@ DEPENDS+=	${PYPKGPREFIX}-h2>=4.0.0:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-logbook>=1.5.3:../../devel/py-logbook
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
-# TODO: py-olm is still wip
-DEPENDS+=	${PYPKGPREFIX}-olm>=3.2.2:../../wip/py-olm
+DEPENDS+=	${PYPKGPREFIX}-olm>=3.2.2:../../security/py-olm
 DEPENDS+=	${PYPKGPREFIX}-peewee>=3.14.4:../../databases/py-peewee
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=4.2.1:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.4.0:../../devel/py-atomicwrites
 
 # matrix-nio is only supported on python3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-extract:
+	${FIND} ${WRKSRC} -name '*.orig' | ${XARGS} ${RM} -f
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

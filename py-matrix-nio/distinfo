@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (matrix-nio-0.18.6.tar.gz) = 75014cf69cccd860a00c83b114b9e869e74f4e2c
-SHA512 (matrix-nio-0.18.6.tar.gz) = 410aaab77c430dba850816fc50fdee707f9d68078483bd19d4d1e18194fc403225dbbba330f7fe8adab7e538f31eede7d1dbd1d2c966755d953c6df760e69f1c
-Size (matrix-nio-0.18.6.tar.gz) = 153436 bytes
+BLAKE2s (matrix-nio-0.18.7.tar.gz) = 868013319eb6f3698815a118b6ab0213810db0fd2c582fa2d9aa85117459cfd1
+SHA512 (matrix-nio-0.18.7.tar.gz) = 9fa8935cab499ba15659ccb9f63c86a9485816d9f3b1eed9379155c1cb2115d2f0a81878097fc9e55f172842939d449f8f8a495b566e3a607a81da24666a956a
+Size (matrix-nio-0.18.7.tar.gz) = 155811 bytes

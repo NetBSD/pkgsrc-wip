@@ -92,7 +92,6 @@ ${PYSITELIB}/nio/events/presence.py
 ${PYSITELIB}/nio/events/presence.pyc
 ${PYSITELIB}/nio/events/presence.pyo
 ${PYSITELIB}/nio/events/room_events.py
-${PYSITELIB}/nio/events/room_events.py.orig
 ${PYSITELIB}/nio/events/room_events.pyc
 ${PYSITELIB}/nio/events/room_events.pyo
 ${PYSITELIB}/nio/events/to_device.py
