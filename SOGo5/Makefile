@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.9 2020/06/02 08:24:54 adam Exp $
 #
 
-DISTNAME=	SOGo-5.1.1
+DISTNAME=	SOGo-5.5.0
 CATEGORIES=	www
-MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
+MASTER_SITES=	https://packages.inverse.ca/SOGo/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sogo.nu/
@@ -11,7 +11,7 @@ COMMENT=	Groupware server supporting CalDAV, CardDAV and GroupDAV
 LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
-USE_TOOLS+=	bash gmake zip:run
+USE_TOOLS+=	bash gmake zip:run pkg-config
 
 CONFIG_SHELL=	bash
 CONFIGURE_ARGS=	--enable-debug --disable-strip
@@ -83,7 +83,9 @@ post-install:
 	${SED} -e "s|@PREFIX@|${PREFIX}|" ${FILESDIR}/SOGo.conf >> \
 	  ${DESTDIR}${PREFIX}/share/examples/SOGo/SOGo.conf
 
-.include "options.mk"
+# options.mk are not supported because gnustep-make/-base set
+# PKG_OPTIONS_VAR to support the fragile option.
+.include "../../security/libsodium/buildlink3.mk"
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../devel/gnustep-make/buildlink3.mk"
@@ -92,5 +94,6 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../mail/libytnef/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
