@@ -1,5 +1,6 @@
 # $NetBSD$
 
+VERS=		1.4.0
 DISTNAME=	xnedit-${VERS}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
@@ -8,7 +9,6 @@ MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/xnedit/
 COMMENT=	Fork of NEdit with Unicode support and antialiased text
 LICENSE=	gnu-gpl-v2
-VERS=		1.4.0
 
 USE_LANGUAGES=	c99
 USE_TOOLS=	pkg-config yacc
