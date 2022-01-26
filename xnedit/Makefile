@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/xnedit.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xnedit.1
 	${INSTALL_MAN} ${WRKSRC}/doc/xnc.man \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xnedit-nc.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xnc.1
 .for f in README.md ReleaseNotes
 	 ${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/xnedit
 .endfor
