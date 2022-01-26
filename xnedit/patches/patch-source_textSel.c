@@ -8,6 +8,7 @@ Otherwise inserting the X11 primary selection does not work in some cases
 Upstream ticket: <https://sourceforge.net/p/xnedit/bugs/18/>
 Fixed with commit 20e0de407a217a279f229c216288a5f8aa1b309f, remove this patch
 for next release.
+
 --- source/textSel.c.orig	2022-01-09 12:28:40.000000000 +0000
 +++ source/textSel.c
 @@ -251,7 +251,9 @@ void InsertPrimarySelection(Widget w, Ti
