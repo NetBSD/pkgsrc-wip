@@ -1,13 +1,13 @@
 # $NetBSD$
 
 PKGNAME=		nget-${VER}
-VER=			0.32.1
+VER=			0.32.2
 CATEGORIES=		news
 MASTER_SITES=		https://gitlab.com/Rhialto/nget/-/archive/${GIT_TAG}/
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		${GIT_TAG}-${PKGNAME}
 GIT_TAG=		nget-${VER:S/./_/g}
-GIT_REV=		5274f1728b467c2c313c165061acc3b2c3a86fea
+GIT_REV=		d00b21179aa12ec497426c58a36572bdfb45528a
 WRKSRC=			${WRKDIR}/nget-${GIT_TAG}-${GIT_REV}
 
 MAINTAINER=		rhialto@NetBSD.org
@@ -17,7 +17,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake aclocal autoconf autoheader
+USE_TOOLS+=		gmake automake autoconf autoheader
 USE_LANGUAGES=		c c++11
 
 CONFIGURE_ARGS+=	--with-pcre

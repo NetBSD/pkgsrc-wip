@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (nget-0_32_1-nget-0.32.1.tar.bz2) = c9bf5b997594346475ac48d9e0ce30d8a35b982e
-SHA512 (nget-0_32_1-nget-0.32.1.tar.bz2) = b58291e34f2f5965ddd4f142ed46838b71705a155aa658fdb4cd9a94c4be6c28971f214aada290e633d2cb6aa5926bd8ac90d1d7d7e54d547fc27bb2a2319517
-Size (nget-0_32_1-nget-0.32.1.tar.bz2) = 382735 bytes
+BLAKE2s (nget-0_32_2-nget-0.32.2.tar.bz2) = 78bf5081aaf36048c3cd855df71e4ca8b23c40943bf80d644abffbd46fdac523
+SHA512 (nget-0_32_2-nget-0.32.2.tar.bz2) = cac4adba1d95fec4771414d63992601c83608d94651cc505d469af9f127e16db10f9be2a670c595a4bddf01c66dd0f7f7c9b4eed4bbe37d21d9a0fa41c5aeb0c
+Size (nget-0_32_2-nget-0.32.2.tar.bz2) = 381424 bytes
