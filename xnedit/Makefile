@@ -18,6 +18,9 @@ BUILD_TARGET=		generic
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
 
 # Search for Xft headers in X11 subdirectory
+# Upstream ticket: <https://sourceforge.net/p/xnedit/bugs/20/>
+# Fixed with commit 452499daab227afab372763f7a64ec996c7057db, remove this patch
+# for next release.
 SUBST_CLASSES+=			fix-include
 SUBST_STAGE.fix-include=	pre-configure
 SUBST_MESSAGE.fix-include=	Fixing include Xft.h.
