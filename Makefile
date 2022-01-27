@@ -1899,6 +1899,7 @@ SUBDIR+=	junit
 SUBDIR+=	jupp
 SUBDIR+=	jython
 SUBDIR+=	k6
+SUBDIR+=	k9s
 SUBDIR+=	kacst-one
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kactivitymanagerd
