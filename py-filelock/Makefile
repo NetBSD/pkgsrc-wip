@@ -12,5 +12,7 @@ LICENSE=	unlicense
 
 USE_LANGUAGES=	# none
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
