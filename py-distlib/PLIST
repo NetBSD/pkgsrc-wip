@@ -1,5 +1,9 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_FILE}
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/distlib/__init__.py
 ${PYSITELIB}/distlib/__init__.pyc
 ${PYSITELIB}/distlib/__init__.pyo
