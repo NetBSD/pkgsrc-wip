@@ -19,7 +19,7 @@ BUILD_DEPENDS+= ${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+= ${PYPKGPREFIX}-sphinx-autodoc-typehints>=1.10.3:../../textproc/py-sphinx-autodoc-typehints
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
 BUILD_DEPENDS+= ${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
-#BUILD_DEPENDS+= ${PYPKGPREFIX}-pre-commit>=2.7.1:../../wip/py-pre-commit
+BUILD_DEPENDS+= ${PYPKGPREFIX}-pre-commit>=2.7.1:../../wip/py-pre-commit
 BUILD_DEPENDS+= ${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
 
 PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test

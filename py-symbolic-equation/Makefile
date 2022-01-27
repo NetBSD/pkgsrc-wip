@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython>=7.18.1:../../devel/py-ipython
 BUILD_DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.6.3:../../devel/py-jupyter_core
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nbsphinx>=0.7.1:../../wip/py-nbsphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-nbval>=0.9.6:../../wip/py-test-nbval
-BUILD_DEPENDS+=	pre-commit>=2.7.1:../../wip/pre-commit
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pre-commit>=2.7.1:../../wip/py-pre-commit
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pylint>=1.9.3:../../devel/py-pylint
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.5:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov

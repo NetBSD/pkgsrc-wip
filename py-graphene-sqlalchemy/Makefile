@@ -13,7 +13,7 @@ LICENSE=	mit
 #Force dependency for >= Py3.6
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=3.7.0:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coveralls>=2.4.2:../../wip/py-coveralls
-BUILD_DEPENDS+=	pre-commit>=2.7.1:../../wip/pre-commit
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pre-commit>=2.7.1:../../wip/py-pre-commit
 DEPENDS+=	${PYPKGPREFIX}-graphene>=2.1.3:../../wip/py-graphene
 DEPENDS+=	${PYPKGPREFIX}-promise>=2.3:../../wip/py-promise
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2:../../databases/py-sqlalchemy
