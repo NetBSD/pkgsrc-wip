@@ -2263,6 +2263,8 @@ lib/wine/x86_64-unix/winemsibuilder.exe.so
 ${PLIST.oss}lib/wine/x86_64-unix/wineoss.drv.so
 lib/wine/x86_64-unix/winepath.exe.so
 lib/wine/x86_64-unix/wineps.drv.so
+${PLIST.pulse}lib/wine/x86_64-unix/winepulse.drv.so
+${PLIST.pulse}lib/wine/x86_64-unix/winepulse.so
 lib/wine/x86_64-unix/wineusb.sys.so
 lib/wine/x86_64-unix/winevulkan.dll.so
 lib/wine/x86_64-unix/winevulkan.so
@@ -3231,6 +3233,7 @@ lib/wine/x86_64-windows/winemsibuilder.exe
 ${PLIST.oss}lib/wine/x86_64-windows/wineoss.drv
 lib/wine/x86_64-windows/winepath.exe
 lib/wine/x86_64-windows/wineps.drv
+lib/wine/x86_64-windows/winepulse.drv
 lib/wine/x86_64-windows/wineusb.sys
 lib/wine/x86_64-windows/winevulkan.dll
 lib/wine/x86_64-windows/winex11.drv
