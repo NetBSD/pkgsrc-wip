@@ -59,6 +59,8 @@ CONFIGURE_ENV+=		ac_cv_cflags__Wl___enable_new_dtags=no
 CONFIGURE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
 .endif
 
+# OSSv4 is required (oss_sysinfo.numaudioengies is cheched by configure)
+BUILTIN_FIND_GREP.H_SOUNDCARD=	numaudioengines
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
