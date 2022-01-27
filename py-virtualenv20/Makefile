@@ -29,10 +29,13 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	virtualenv.py
 
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} virtualenv virtualenv-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
