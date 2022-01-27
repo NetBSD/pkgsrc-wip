@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/nvie/git-toolbelt/
 COMMENT=	Suite of useful Git commands
 LICENSE=	modified-bsd
 
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
 REPLACE_SH+=	git-*
 
 USE_LANGUAGES=	# none
