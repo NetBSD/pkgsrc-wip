@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (bpytop-1.0.50.tar.gz) = 5222bb11bb2e184191db991c31ec4a8d41a95811
-SHA512 (bpytop-1.0.50.tar.gz) = 89a7d7b2cd8a607188e3ee02d8d19278e66a561ba99f823bba7378a9fe1787336e5e0a64bc6f6a528df76292e3e89f43ca6e2d91dc9eba7d18da37471adf1d68
-Size (bpytop-1.0.50.tar.gz) = 68688 bytes
+BLAKE2s (bpytop-1.0.68.tar.gz) = 611ecaea4a8c7850c8c5685b854d773bf94d10cd33a899ba553c992028d6e76a
+SHA512 (bpytop-1.0.68.tar.gz) = 3525a3cce9b039c4ffe310d829866570119b3d36da4a73e5a0c94cc22e1044ce710ad02d205bef9d52cfdf6fabd434523d7d753c5950f160c8594627dcdbed6f
+Size (bpytop-1.0.68.tar.gz) = 78658 bytes

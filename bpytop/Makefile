@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bpytop-1.0.50
+DISTNAME=	bpytop-1.0.68
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bpytop/}
 
@@ -10,6 +10,8 @@ COMMENT=	Stats for processor, memory, disks, network and processes
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7.0:../../sysutils/py-psutil
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 

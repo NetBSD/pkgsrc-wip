@@ -1,23 +1,17 @@
-TODO: Adjust the following lines from README.md
+Resource monitor that shows usage and stats for processor, memory,
+disks, network and processes. Python port and continuation of bashtop.
 
-# ![bpytop](https://github.com/aristocratos/bpytop/raw/master/Imgs/logo.png)
+Features:
 
-<a href="https://repology.org/project/bpytop/versions">
-    <img src="https://repology.org/badge/vertical-allrepos/bpytop.svg" alt="Packaging status" align="right">
-</a>
-
-![Linux](https://img.shields.io/badge/-Linux-grey?logo=linux)
-![OSX](https://img.shields.io/badge/-OSX-black?logo=apple)
-![FreeBSD](https://img.shields.io/badge/-FreeBSD-red?logo=freebsd)
-![Usage](https://img.shields.io/badge/Usage-System%20resource%20monitor-yellow)
-![Python](https://img.shields.io/badge/Python-v3.6%5E-green?logo=python)
-![bpytop_version](https://img.shields.io/github/v/tag/aristocratos/bpytop?label=version)
-[![pypi_version](https://img.shields.io/pypi/v/bpytop?label=pypi)](https://pypi.org/project/bpytop)
-[![Build Status](https://travis-ci.com/aristocratos/bpytop.svg?branch=master)](https://travis-ci.com/aristocratos/bpytop)
-[![Donate](https://img.shields.io/badge/-Donate-yellow?logo=paypal)](https://paypal.me/aristocratos)
-[![Sponsor](https://img.shields.io/badge/-Sponsor-red?logo=github)](https://github.com/sponsors/aristocratos)
-[![Coffee](https://img.shields.io/badge/-Buy%20me%20a%20Coffee-grey?logo=Ko-fi)](https://ko-fi.com/aristocratos)
-
-## Index
-
-...
+- Easy to use, with a game inspired menu system.
+- Full mouse support, all buttons with a highlighted key is clickable
+  and mouse scroll works in process list and menu boxes.
+- Fast and responsive UI with UP, DOWN keys process selection.
+- Function for showing detailed stats for selected process.
+- Ability to filter processes, multiple filters can be entered.
+- Easy switching between sorting options.
+- Send SIGTERM, SIGKILL, SIGINT to selected process.
+- UI menu for changing all config file options.
+- Auto scaling graph for network usage.
+- Shows message in menu if new version is available
+- Shows current read and write speeds for disks
