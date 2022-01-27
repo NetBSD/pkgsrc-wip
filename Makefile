@@ -1141,6 +1141,7 @@ SUBDIR+=	git-extras
 SUBDIR+=	git-modes-git
 SUBDIR+=	git-multimail
 SUBDIR+=	git-spindle
+SUBDIR+=	git-toolbelt
 SUBDIR+=	git-xargs
 SUBDIR+=	gitea-tea
 SUBDIR+=	gitg
