@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.5 2008/12/31 08:11:39 akihabara Exp $
 
-RMD160 (runit-2.0.0.tar.gz) = fc55f22462b5b05d991558adf99468777789671a
-SHA512 (runit-2.0.0.tar.gz) = b892b4dd7dcb183a9d4c4522855d9c8f4e32f3b764db3c9de98ec66a1b20dfdd6f9069758065695bb8f364ad7eb0dd8ab72c9220314c3d05f174928448be0071
-Size (runit-2.0.0.tar.gz) = 104373 bytes
+BLAKE2s (runit-2.1.2.tar.gz) = 5ada95c1ed1ac5c01158ae110faf655e4dd6b44690ce09fe3404df889bcf54e6
+SHA512 (runit-2.1.2.tar.gz) = a18773ebf1aa22305dd89ed67363165b9fcf86c192b2be4e268d08005dd82d51265160c637abe072f2f2e378c4b315a75bd3d3e602c3e75bdd451a3b0190f8cf
+Size (runit-2.1.2.tar.gz) = 110916 bytes
