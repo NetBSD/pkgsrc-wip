@@ -1,0 +1,1 @@
+Add rc.d script (and let rc.d-boot handle system-specific bringup)
