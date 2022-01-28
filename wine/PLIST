@@ -1634,6 +1634,8 @@ lib/wine/x86_64-unix/gamingtcui.dll.so
 lib/wine/x86_64-unix/gdi32.dll.so
 lib/wine/x86_64-unix/gdiplus.dll.so
 lib/wine/x86_64-unix/glu32.dll.so
+${PLIST.gphoto2}lib/wine/x86_64-unix/gphoto2.ds.so
+${PLIST.gphoto2}lib/wine/x86_64-unix/gphoto2.so
 lib/wine/x86_64-unix/gpkcsp.dll.so
 lib/wine/x86_64-unix/hal.dll.so
 lib/wine/x86_64-unix/hh.exe.so
@@ -2854,6 +2856,7 @@ lib/wine/x86_64-windows/gdi32.dll
 lib/wine/x86_64-windows/gdiplus.dll
 lib/wine/x86_64-windows/glu32.dll
 lib/wine/x86_64-windows/gpkcsp.dll
+${PLIST.gphoto2}lib/wine/x86_64-windows/gphoto2.ds
 lib/wine/x86_64-windows/hal.dll
 lib/wine/x86_64-windows/hh.exe
 lib/wine/x86_64-windows/hhctrl.ocx

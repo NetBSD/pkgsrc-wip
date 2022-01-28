@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.21 2021/06/01 05:05:54 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wine
-PKG_SUPPORTED_OPTIONS=		alsa cups dbus pulseaudio sane x11
+PKG_SUPPORTED_OPTIONS=		alsa cups dbus gphoto2 pulseaudio sane x11
 PKG_SUGGESTED_OPTIONS=		cups dbus sane x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 
@@ -25,6 +25,14 @@ CONFIGURE_ARGS+=	--without-cups
 .  include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-dbus
+.endif
+
+PLIST_VARS+=	gphoto2
+.if !empty(PKG_OPTIONS:Mgphoto2)
+PLIST.gphoto2=		yes
+.  include "../../devel/libgphoto2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gphoto
 .endif
 
 PLIST_VARS+=	pulse

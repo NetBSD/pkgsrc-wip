@@ -28,7 +28,6 @@ UNLIMIT_RESOURCES=	datasize
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-capi
-CONFIGURE_ARGS+=	--without-gphoto
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-opencl
