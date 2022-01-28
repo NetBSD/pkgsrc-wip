@@ -2268,7 +2268,7 @@ ${PLIST.pulse}lib/wine/x86_64-unix/winepulse.so
 lib/wine/x86_64-unix/wineusb.sys.so
 lib/wine/x86_64-unix/winevulkan.dll.so
 lib/wine/x86_64-unix/winevulkan.so
-lib/wine/x86_64-unix/winex11.drv.so
+${PLIST.x11}lib/wine/x86_64-unix/winex11.drv.so
 lib/wine/x86_64-unix/winexinput.sys.so
 lib/wine/x86_64-unix/wing32.dll.so
 lib/wine/x86_64-unix/winhlp32.exe.so
@@ -3236,7 +3236,7 @@ lib/wine/x86_64-windows/wineps.drv
 lib/wine/x86_64-windows/winepulse.drv
 lib/wine/x86_64-windows/wineusb.sys
 lib/wine/x86_64-windows/winevulkan.dll
-lib/wine/x86_64-windows/winex11.drv
+${PLIST.x11}lib/wine/x86_64-windows/winex11.drv
 lib/wine/x86_64-windows/winexinput.sys
 lib/wine/x86_64-windows/wing32.dll
 lib/wine/x86_64-windows/winhlp32.exe
