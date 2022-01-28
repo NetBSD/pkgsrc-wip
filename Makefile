@@ -1993,6 +1993,7 @@ SUBDIR+=	lcov-git
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	ldapuseradd
+SUBDIR+=	ldb
 SUBDIR+=	ldc
 SUBDIR+=	ldc-git
 SUBDIR+=	ldc017
