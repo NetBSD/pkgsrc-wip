@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_replace_wscript,v 1.2 2019/03/20 19:09:10 adam Exp $
+
+Skip epoll tests on SunOS, implementation is Linux-specific.
+
+--- lib/replace/wscript.orig	2021-08-26 09:01:35.530309000 +0000
++++ lib/replace/wscript
+@@ -451,7 +451,9 @@ def configure(conf):
+     conf.CHECK_FUNCS('gai_strerror get_current_dir_name')
+     conf.CHECK_FUNCS('timegm getifaddrs freeifaddrs mmap setgroups syscall setsid')
+     conf.CHECK_FUNCS('getgrent_r getgrgid_r getgrnam_r getgrouplist getpagesize')
+-    conf.CHECK_FUNCS('getpwent_r getpwnam_r getpwuid_r epoll_create')
++    conf.CHECK_FUNCS('getpwent_r getpwnam_r getpwuid_r')
++    if not sys.platform.startswith('sunos'):
++        conf.CHECK_FUNCS('epoll_create')
+     conf.CHECK_FUNCS('port_create')
+     conf.CHECK_FUNCS('getprogname')
+     if not conf.CHECK_FUNCS('copy_file_range'):

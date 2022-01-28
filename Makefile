@@ -5151,6 +5151,7 @@ SUBDIR+=	sailor
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
 SUBDIR+=	salmon
+SUBDIR+=	samba
 SUBDIR+=	samhain
 SUBDIR+=	samtools
 SUBDIR+=	sara
