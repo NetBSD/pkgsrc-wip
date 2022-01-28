@@ -320,6 +320,7 @@ SUBDIR+=	boost-threadpool
 SUBDIR+=	boost-yap
 SUBDIR+=	bore
 SUBDIR+=	boringssl
+SUBDIR+=	botan3
 SUBDIR+=	bowtie
 SUBDIR+=	bowtie2
 SUBDIR+=	bpcscripts
