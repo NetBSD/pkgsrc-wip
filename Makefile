@@ -474,6 +474,7 @@ SUBDIR+=	cliquer
 SUBDIR+=	clisp
 SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
+SUBDIR+=	clock-signal
 SUBDIR+=	clockspeed
 SUBDIR+=	cloud-nuke
 SUBDIR+=	clustalx

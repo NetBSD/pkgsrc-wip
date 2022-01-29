@@ -1,0 +1,30 @@
+Clock Signal ('CLK') is an emulator for tourists that seeks to be invisible.
+Users directly launch classic software, avoiding the learning curves
+associated with emulators and with classic machines.
+
+This emulator seeks to offer:
+
+- single-click load of any piece of source media for any supported platform;
+- with a heavy signal processing tilt for accurate reproduction of original
+  outputs;
+- while minimising latency.
+
+It currently contains emulations of the:
+
+- Acorn Electron;
+- Amstrad CPC;
+- Apple II/II+ and IIe;
+- Atari 2600;
+- Atari ST;
+- ColecoVision;
+- Commodore Vic-20 (and Commodore 1540/1);
+- Enterprise 64/128;
+- Macintosh 512ke and Plus;
+- MSX 1;
+- Oric 1/Atmos;
+- Sega Master System;
+- Sinclair ZX80/81; and
+- Sinclair ZX Spectrum.
+
+Commodore Amiga emulation is also present, but for now remains wilfully
+inaccurate.
