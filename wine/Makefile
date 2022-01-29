@@ -34,7 +34,6 @@ CONFIGURE_ARGS+=	--without-opencl
 CONFIGURE_ARGS+=	--without-udev
 CONFIGURE_ARGS+=	--without-v4l2
 CONFIGURE_ARGS+=	--without-vkd3d
-CONFIGURE_ARGS+=	--without-vulkan
 
 .include "../../mk/bsd.prefs.mk"
 
