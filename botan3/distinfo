@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (Botan-3.0.0-alpha0.tar.xz) = 08fb16af40ff3dcf704617aae5ac0abf5f34ce2444ec9497dcd1f13815d5b41a
 SHA512 (Botan-3.0.0-alpha0.tar.xz) = 5a334c90156b8a62b1d1e5b5579daa8a6868551ac2b83d193490b937053219547b7de56b085c82e1cf1b59f97c9f785382faee9963eceeaaed344723e2be6005
 Size (Botan-3.0.0-alpha0.tar.xz) = 5947164 bytes
-SHA1 (patch-src_scripts_build__docs.py) = cec84bb4bde239037c43388e8c0d3983360be02d
+SHA1 (patch-src_scripts_install.py) = c8ac2a6315e0e53a0292447e8e6b967572de9d24
