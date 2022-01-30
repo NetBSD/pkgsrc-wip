@@ -141,7 +141,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-.include "../../wip/pango/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"
 .include "../../fonts/woff2/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
