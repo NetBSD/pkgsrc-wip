@@ -147,8 +147,8 @@ share/zabbix/app/controllers/CControllerPopupTabFilterDelete.php
 share/zabbix/app/controllers/CControllerPopupTabFilterEdit.php
 share/zabbix/app/controllers/CControllerPopupTabFilterUpdate.php
 share/zabbix/app/controllers/CControllerPopupTestTriggerExpr.php
+share/zabbix/app/controllers/CControllerPopupTopHostsColumnEdit.php
 share/zabbix/app/controllers/CControllerPopupTriggerExpr.php
-share/zabbix/app/controllers/CControllerPopupTriggerWizard.php
 share/zabbix/app/controllers/CControllerPopupValueMapEdit.php
 share/zabbix/app/controllers/CControllerPopupValueMapUpdate.php
 share/zabbix/app/controllers/CControllerProblem.php
@@ -272,6 +272,7 @@ share/zabbix/app/controllers/CControllerWidgetProblemsView.php
 share/zabbix/app/controllers/CControllerWidgetSlaReportView.php
 share/zabbix/app/controllers/CControllerWidgetSvgGraphView.php
 share/zabbix/app/controllers/CControllerWidgetSystemInfoView.php
+share/zabbix/app/controllers/CControllerWidgetTopHostsView.php
 share/zabbix/app/controllers/CControllerWidgetTrigOverView.php
 share/zabbix/app/controllers/CControllerWidgetUrlView.php
 share/zabbix/app/controllers/CControllerWidgetWebView.php
@@ -300,6 +301,8 @@ share/zabbix/app/partials/massupdate.macros.tab.php
 share/zabbix/app/partials/massupdate.valuemaps.tab.php
 share/zabbix/app/partials/monitoring.host.filter.php
 share/zabbix/app/partials/monitoring.host.view.html.php
+share/zabbix/app/partials/monitoring.latest.filter.php
+share/zabbix/app/partials/monitoring.latest.subfilter.php
 share/zabbix/app/partials/monitoring.latest.view.html.php
 share/zabbix/app/partials/monitoring.problem.filter.php
 share/zabbix/app/partials/popup.operations.php
@@ -432,8 +435,8 @@ share/zabbix/app/views/js/popup.services.js.php
 share/zabbix/app/views/js/popup.sla.edit.js.php
 share/zabbix/app/views/js/popup.sla.excludeddowntime.edit.js.php
 share/zabbix/app/views/js/popup.tabfilter.edit.js.php
+share/zabbix/app/views/js/popup.tophosts.column.edit.js.php
 share/zabbix/app/views/js/popup.triggerexpr.js.php
-share/zabbix/app/views/js/popup.triggerwizard.js.php
 share/zabbix/app/views/js/popup.valuemap.edit.js.php
 share/zabbix/app/views/js/reports.auditlog.list.js.php
 share/zabbix/app/views/js/reports.scheduledreport.edit.js.php
@@ -483,6 +486,7 @@ share/zabbix/app/views/monitoring.widget.problemsbysv.view.php
 share/zabbix/app/views/monitoring.widget.slareport.view.php
 share/zabbix/app/views/monitoring.widget.svggraph.view.php
 share/zabbix/app/views/monitoring.widget.systeminfo.view.php
+share/zabbix/app/views/monitoring.widget.tophosts.view.php
 share/zabbix/app/views/monitoring.widget.trigover.view.php
 share/zabbix/app/views/monitoring.widget.url.view.php
 share/zabbix/app/views/monitoring.widget.web.view.php
@@ -519,8 +523,8 @@ share/zabbix/app/views/popup.sla.edit.php
 share/zabbix/app/views/popup.sla.excludeddowntime.edit.php
 share/zabbix/app/views/popup.tabfilter.edit.php
 share/zabbix/app/views/popup.testtriggerexpr.php
+share/zabbix/app/views/popup.tophosts.column.edit.php
 share/zabbix/app/views/popup.triggerexpr.php
-share/zabbix/app/views/popup.triggerwizard.php
 share/zabbix/app/views/popup.valuemap.edit.php
 share/zabbix/app/views/popup.view.php
 share/zabbix/app/views/report.status.php
@@ -749,6 +753,7 @@ share/zabbix/include/classes/helpers/CValueMapHelper.php
 share/zabbix/include/classes/helpers/CVaultHelper.php
 share/zabbix/include/classes/helpers/CViewHelper.php
 share/zabbix/include/classes/html/CActionButtonList.php
+share/zabbix/include/classes/html/CBarGauge.php
 share/zabbix/include/classes/html/CBreadcrumbs.php
 share/zabbix/include/classes/html/CButton.php
 share/zabbix/include/classes/html/CButtonCancel.php
@@ -988,7 +993,6 @@ share/zabbix/include/classes/server/CZabbixServer.php
 share/zabbix/include/classes/services/CTabFilterProfile.php
 share/zabbix/include/classes/setup/CFrontendSetup.php
 share/zabbix/include/classes/setup/CSetupWizard.php
-share/zabbix/include/classes/triggers/CTextTriggerConstructor.php
 share/zabbix/include/classes/user/CFavorite.php
 share/zabbix/include/classes/user/CProfile.php
 share/zabbix/include/classes/user/CWebUser.php
@@ -1023,6 +1027,7 @@ share/zabbix/include/classes/widgets/fields/CWidgetField.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldCheckBox.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldCheckBoxList.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldColor.php
+share/zabbix/include/classes/widgets/fields/CWidgetFieldColumnsList.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldDatePicker.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldGraphDataSet.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldGraphOverride.php
@@ -1070,10 +1075,12 @@ share/zabbix/include/classes/widgets/forms/CWidgetFormProblemsBySv.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormSlaReport.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormSvgGraph.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormSystemInfo.php
+share/zabbix/include/classes/widgets/forms/CWidgetFormTopHosts.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormTrigOver.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormUrl.php
 share/zabbix/include/classes/widgets/forms/CWidgetFormWeb.php
 share/zabbix/include/classes/widgets/views/js/widget.slareport.form.view.js.php
+share/zabbix/include/classes/widgets/views/js/widget.tophosts.form.view.js.php
 share/zabbix/include/classes/widgets/views/widget.actionlog.form.view.php
 share/zabbix/include/classes/widgets/views/widget.clock.form.view.php
 share/zabbix/include/classes/widgets/views/widget.dataover.form.view.php
@@ -1094,6 +1101,7 @@ share/zabbix/include/classes/widgets/views/widget.problemsbysv.form.view.php
 share/zabbix/include/classes/widgets/views/widget.slareport.form.view.php
 share/zabbix/include/classes/widgets/views/widget.svggraph.form.view.php
 share/zabbix/include/classes/widgets/views/widget.systeminfo.form.view.php
+share/zabbix/include/classes/widgets/views/widget.tophosts.form.view.php
 share/zabbix/include/classes/widgets/views/widget.trigover.form.view.php
 share/zabbix/include/classes/widgets/views/widget.url.form.view.php
 share/zabbix/include/classes/widgets/views/widget.web.form.view.php
@@ -1167,18 +1175,22 @@ share/zabbix/include/views/js/common.template.edit.js.php
 share/zabbix/include/views/js/configuration.action.edit.js.php
 share/zabbix/include/views/js/configuration.copy.elements.js.php
 share/zabbix/include/views/js/configuration.graph.edit.js.php
+share/zabbix/include/views/js/configuration.graph.list.js.php
 share/zabbix/include/views/js/configuration.host.discovery.edit.js.php
 share/zabbix/include/views/js/configuration.host.discovery.edit.overr.js.php
 share/zabbix/include/views/js/configuration.host.discovery.list.js.php
 share/zabbix/include/views/js/configuration.host.prototype.edit.js.php
+share/zabbix/include/views/js/configuration.host.prototype.list.js.php
 share/zabbix/include/views/js/configuration.hostgroups.list.js.php
 share/zabbix/include/views/js/configuration.httpconf.edit.js.php
 share/zabbix/include/views/js/configuration.httpconf.list.js.php
 share/zabbix/include/views/js/configuration.item.edit.js.php
 share/zabbix/include/views/js/configuration.item.list.js.php
 share/zabbix/include/views/js/configuration.item.prototype.edit.js.php
+share/zabbix/include/views/js/configuration.item.prototype.list.js.php
 share/zabbix/include/views/js/configuration.maintenance.edit.js.php
 share/zabbix/include/views/js/configuration.template.list.js.php
+share/zabbix/include/views/js/configuration.trigger.prototype.list.js.php
 share/zabbix/include/views/js/configuration.triggers.edit.js.php
 share/zabbix/include/views/js/configuration.triggers.list.js.php
 share/zabbix/include/views/js/editabletable.js.php
@@ -1241,6 +1253,7 @@ share/zabbix/js/class.tagfilteritem.js
 share/zabbix/js/class.template.js
 share/zabbix/js/colorpicker.js
 share/zabbix/js/common.js
+share/zabbix/js/component.z-bar-gauge.js
 share/zabbix/js/component.z-select.js
 share/zabbix/js/flickerfreescreen.js
 share/zabbix/js/functions.js
