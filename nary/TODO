@@ -1,0 +1,39 @@
+Probably not very well maintained in upstream dependency-wise:
+
+   Compiling git2 v0.13.18
+error[E0495]: cannot infer an appropriate lifetime due to conflicting requirements
+  --> /usr/work/wip/nary/work/vendor/git2-0.13.18/src/attr.rs:74:15
+   |
+74 |         match (self, other) {
+   |               ^^^^^^^^^^^^^
+   |
+note: first, the lifetime cannot outlive the anonymous lifetime defined on the method body at 73:26...
+  --> /usr/work/wip/nary/work/vendor/git2-0.13.18/src/attr.rs:73:26
+   |
+73 |     fn eq(&self, other: &AttrValue<'_>) -> bool {
+   |                          ^^^^^^^^^^^^^
+note: ...so that the types are compatible
+  --> /usr/work/wip/nary/work/vendor/git2-0.13.18/src/attr.rs:74:15
+   |
+74 |         match (self, other) {
+   |               ^^^^^^^^^^^^^
+   = note: expected `(&AttrValue<'_>, &AttrValue<'_>)`
+              found `(&AttrValue<'_>, &AttrValue<'_>)`
+note: but, the lifetime must be valid for the lifetime `'_` as defined on the impl at 72:30...
+  --> /usr/work/wip/nary/work/vendor/git2-0.13.18/src/attr.rs:72:30
+   |
+72 | impl PartialEq for AttrValue<'_> {
+   |                              ^^
+note: ...so that the types are compatible
+  --> /usr/work/wip/nary/work/vendor/git2-0.13.18/src/attr.rs:79:16
+   |
+79 |             | (Self::Bytes(bytes), AttrValue::String(string)) => string.as_bytes() == *bytes,
+   |                ^^^^^^^^^^^^^^^^^^
+   = note: expected `AttrValue<'_>`
+              found `AttrValue<'_>`
+
+For more information about this error, try `rustc --explain E0495`.
+error: could not compile `git2` due to previous error
+*** Error code 101
+
+Stop.
