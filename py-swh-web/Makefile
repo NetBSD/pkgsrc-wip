@@ -10,7 +10,7 @@ HOMEPAGE=	https://forge.softwareheritage.org/diffusion/DWUI/
 COMMENT=	Software Heritage Web UI
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=0:../../www/py-beautifulsoup4
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-htmlmin>=0.1.12:../../wip/py-htmlmin
 DEPENDS+=	${PYPKGPREFIX}-iso8601>=0.1.13:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.2:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-prometheus-client>=0:../../wip/py-prometheus-client
+DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0:../../net/py-prometheus_client
 DEPENDS+=	${PYPKGPREFIX}-badges>=0:../../wip/py-badges
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.5.2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-keycloak>=0.19.0:../../wip/py-keycloak

@@ -4346,7 +4346,6 @@ SUBDIR+=	py-processing
 SUBDIR+=	py-prody
 SUBDIR+=	py-progressbar
 SUBDIR+=	py-projectq
-SUBDIR+=	py-prometheus-client
 SUBDIR+=	py-promise
 SUBDIR+=	py-property-manager
 SUBDIR+=	py-propyte
