@@ -4184,7 +4184,6 @@ SUBDIR+=	py-ndjson
 SUBDIR+=	py-neo
 SUBDIR+=	py-neovim
 SUBDIR+=	py-neqsys
-SUBDIR+=	py-nest-asyncio
 SUBDIR+=	py-netcdf
 SUBDIR+=	py-netflowvizu
 SUBDIR+=	py-netmiko
