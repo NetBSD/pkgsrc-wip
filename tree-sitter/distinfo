@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (tree-sitter-0.20.3.tar.gz) = 7fc13345607143d68d92c78b1be165bfa45e39da67e88248a03a0bf0d7edcd34
-SHA512 (tree-sitter-0.20.3.tar.gz) = 6ecffe10079701c53022ecf47252bf1f3c70a6f3b5a67af9556c4af6fddcbe342e4318cd96c8c4c3db7f007df811f45091a4535b150c41d1770763a9e0423d5f
-Size (tree-sitter-0.20.3.tar.gz) = 2909755 bytes
+BLAKE2s (tree-sitter-0.20.4.tar.gz) = 8ce1f471cf686b2d2ffffe6acf4fa132acff85d7b750a1889b6ec8cad5709d5f
+SHA512 (tree-sitter-0.20.4.tar.gz) = 24554dd048c443a18b3a5372ca94d942cf7ade8835afd8837c874c65c5b15117a87430eb00a0880e220f64a421a290fe2a5aa63ca54487d9ca0507fa264a2718
+Size (tree-sitter-0.20.4.tar.gz) = 2909707 bytes
 SHA1 (patch-Makefile) = 9dcde8bb8924cfe80ff4e24fad56528b271a86cf
