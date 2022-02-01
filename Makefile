@@ -141,6 +141,7 @@ SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
 SUBDIR+=	amavis-logwatch
+SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amfora
 SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amp-editor
