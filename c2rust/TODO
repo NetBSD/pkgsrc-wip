@@ -1,0 +1,30 @@
+===> Building for c2rust-0.15.0
+   Compiling c2rust-ast-builder v0.15.0 (/scratch/wip/c2rust/work/c2rust-0.15.0/c2rust-ast-builder)
+   Compiling fake-simd v0.1.2
+   Compiling strum v0.16.0
+   Compiling json v0.12.0
+   Compiling pulldown-cmark v0.2.0
+   Compiling dtoa v0.4.4
+   Compiling diff v0.1.12
+   Compiling sequence_trie v0.3.6
+error[E0463]: can't find crate for `rustc`
+ --> c2rust-ast-builder/src/lib.rs:2:1
+  |
+2 | extern crate rustc;
+  | ^^^^^^^^^^^^^^^^^^^ can't find crate
+
+   Compiling slotmap v0.4.0
+   Compiling pulldown-cmark v0.6.1
+For more information about this error, try `rustc --explain E0463`.
+error: could not compile `c2rust-ast-builder` due to previous error
+warning: build failed, waiting for other jobs to finish...
+error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /scratch/wip/c2rust/work/vendor/slotmap-0.4.0/src/lib.rs:4:35
+  |
+4 | #![cfg_attr(feature = "unstable", feature(untagged_unions, try_reserve))]
+  |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0554`.
+error: build failed
+*** Error code 101
+
