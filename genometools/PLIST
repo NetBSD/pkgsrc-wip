@@ -197,7 +197,7 @@ include/genometools/ltr/ltr_cluster_stream_api.h
 include/genometools/ltr/ltr_orf_annotator_stream_api.h
 include/genometools/ltr/ltr_refseq_match_stream_api.h
 lib/libgenometools.a
-lib/libgenometools.dylib
+lib/libgenometools.so
 share/genometools/gtdata/doc/cds.lua
 share/genometools/gtdata/doc/chseqids.lua
 share/genometools/gtdata/doc/csa.lua
