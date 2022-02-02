@@ -106,6 +106,7 @@ man/man3/BL_GFF_FEATURE.3
 man/man3/BL_GFF_FEATURE_AE.3
 man/man3/BL_GFF_FEATURE_ID.3
 man/man3/BL_GFF_FEATURE_ID_AE.3
+man/man3/BL_GFF_FILE_POS.3
 man/man3/BL_GFF_GENE_NAME.3
 man/man3/BL_GFF_GENE_NAME_AE.3
 man/man3/BL_GFF_PHASE.3
@@ -302,6 +303,7 @@ man/man3/bl_gff_set_feature_cpy.3
 man/man3/bl_gff_set_feature_id.3
 man/man3/bl_gff_set_feature_id_ae.3
 man/man3/bl_gff_set_feature_id_cpy.3
+man/man3/bl_gff_set_file_pos.3
 man/man3/bl_gff_set_gene_name.3
 man/man3/bl_gff_set_gene_name_ae.3
 man/man3/bl_gff_set_gene_name_cpy.3
