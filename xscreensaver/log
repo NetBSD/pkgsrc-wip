@@ -1,0 +1,47 @@
+6.02    11-Oct-2021
+
+    New hacks, marbling and binaryhorizon.
+    atlantis behaviors are more random and lifelike.
+    headroom is now Mask Headroom.
+    X11: fontglide skips fonts that can't display ASCII.
+    X11: Use asterisks in the password dialog if the system fonts
+    don't have bullets in them.
+    X11: “Disable Screen Saver” was behaving like “Blank Screen
+    Only”.
+    Android: These hacks work now: antinspect, barcode, energystream,
+    fliptext, fontglide, glsnake, raverhoop, starwars, unicrud.
+
+6.01    09-Jun-2021
+
+    X11: Properly disable the server's built-in screen saver.
+    X11: The passwdTimeout option was being ignored.
+    X11: The display of the unlock thermometer was weird.
+    X11: Fixed password entry on old-school multi-screen setups
+    (:0.1).
+    X11: Worked around a KDE 5 compositor bug that caused the
+    desktop to momentarily become visible when cycling.
+    X11: Fixed possible high CPU usage in xscreensaver-systemd.
+    X11: Fixed some spurious warnings in xscreensaver-text.
+    X11: Warn when Wayland is in use, since it makes both screen
+    saving and locking impossible.
+
+6.00    01-Apr-2021
+
+    X11: Major refactor of the xscreensaver daemon for improved
+    security, dividing it into three programs: xscreensaver,
+    xscreensaver-gfx and xscreensaver-auth.
+    X11: Dropped support for systems older than X11R7 (2009).
+    X11: Renamed xscreensaver-demo to xscreensaver-settings.
+    X11: Unlock dialog has user-selectable color schemes.
+    X11: Everything uses XFreeType for fonts now.
+    X11: Install a few custom fonts needed by some savers.
+    X11: Fading works on systems without gamma (e.g. Raspberry Pi).
+    X11: Use EGL instead of GLX when available.
+    X11: xscreensaver-systemd now detects when a video player has
+    inhibited screen blanking and then exits without uninhibiting.
+    Improved GLSL and GLES3 support: Phong shading in etruscanvenus,
+    hypertorus, klein, projectiveplane,`romanboy' and sphereeversion.
+    Updates to cubicgrid.
+    macOS: Added a Random XScreenSaver screen saver, which implements
+    cycle mode, among other things.
+    iOS: Also added cycle mode.
