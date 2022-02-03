@@ -22,6 +22,9 @@ bin/nncp-toss
 bin/nncp-trns
 bin/nncp-xfer
 info/nncp.info
+libexec/nncp-caller
+libexec/nncp-daemon
+libexec/nncp-toss
 share/doc/nncp/AUTHORS
 share/doc/nncp/NEWS
 share/doc/nncp/NEWS.RU

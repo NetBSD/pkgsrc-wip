@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- config.orig	2021-11-10 09:45:48.000000000 +0000
++++ config
+@@ -5,7 +5,7 @@ PLANTUML=${PLANTUML:-plantuml}
+ PREFIX=${PREFIX:-/usr/local}
+ 
+ SENDMAIL=${SENDMAIL:-/usr/sbin/sendmail}
+-CFGPATH=${CFGPATH:-$PREFIX/etc/nncp.hjson}
++CFGPATH=${CFGPATH:-${PKG_SYSCONFDIR}/nncp.hjson}
+ SPOOLPATH=${SPOOLPATH:-/var/spool/nncp}
+ LOGPATH=${LOGPATH:-/var/spool/nncp/log}
+ 
