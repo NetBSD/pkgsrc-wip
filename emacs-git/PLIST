@@ -954,6 +954,7 @@ share/emacs/${PKGVERSION}/etc/srecode/wisent.srt
 share/emacs/${PKGVERSION}/etc/themes/adwaita-theme.el
 share/emacs/${PKGVERSION}/etc/themes/deeper-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/dichromacy-theme.el
+share/emacs/${PKGVERSION}/etc/themes/leuven-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/leuven-theme.el
 share/emacs/${PKGVERSION}/etc/themes/light-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/manoj-dark-theme.el
@@ -1633,6 +1634,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/crm.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/crm.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cursor-sensor.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cursor-sensor.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/debug-early.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/debug-early.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/debug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/debug.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/derived.el.gz
@@ -3120,6 +3123,10 @@ share/emacs/${PKGVERSION}/lisp/obsolete/vi.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vi.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vip.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vip.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vt-control.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/vt-control.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vt100-led.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/vt100-led.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/ws-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/yow.el.gz
@@ -4056,10 +4063,6 @@ share/emacs/${PKGVERSION}/lisp/version.el.gz
 share/emacs/${PKGVERSION}/lisp/version.elc
 share/emacs/${PKGVERSION}/lisp/view.el.gz
 share/emacs/${PKGVERSION}/lisp/view.elc
-share/emacs/${PKGVERSION}/lisp/vt-control.el.gz
-share/emacs/${PKGVERSION}/lisp/vt-control.elc
-share/emacs/${PKGVERSION}/lisp/vt100-led.el.gz
-share/emacs/${PKGVERSION}/lisp/vt100-led.elc
 share/emacs/${PKGVERSION}/lisp/w32-fns.el.gz
 share/emacs/${PKGVERSION}/lisp/w32-fns.elc
 share/emacs/${PKGVERSION}/lisp/w32-vars.el.gz

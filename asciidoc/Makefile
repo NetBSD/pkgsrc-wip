@@ -19,6 +19,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-py-/}
 
 USE_TOOLS+=		pax
 
+USE_PKG_RESOURCES=	yes
+
 SUBST_CLASSES+=		ad
 SUBST_STAGE.ad=		pre-configure
 SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
