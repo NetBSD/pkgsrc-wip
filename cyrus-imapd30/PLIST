@@ -212,22 +212,22 @@ sbin/sync_client
 sbin/sync_reset
 sbin/tls_prune
 sbin/unexpunge
-share/doc/cyrus-imapd/_downloads/netnews.png
+share/doc/cyrus-imapd/_downloads/b567d54b4a8856e017843f865ac3309f/netnews.png
 share/doc/cyrus-imapd/_images/architecture.jpg
-share/doc/cyrus-imapd/_images/graphviz-19762385ec79073fedffa36dbe07aecace4b4b44.png
-share/doc/cyrus-imapd/_images/graphviz-1e5092951b8d8570deb56c2558baebf233fbcc91.png
-share/doc/cyrus-imapd/_images/graphviz-22a660b7a5ef861530eb057afbc6d6b7b8d63d3f.png
-share/doc/cyrus-imapd/_images/graphviz-50bd36f10190feceeb7910097ed7f398ee462fcf.png
-share/doc/cyrus-imapd/_images/graphviz-52fd92920cf28f26f89ce02a92d05956282d8066.png
-share/doc/cyrus-imapd/_images/graphviz-6786d722ac573eb537659287d8bf600b3a13d356.png
-share/doc/cyrus-imapd/_images/graphviz-6c7c78ba8966e4e092789acf9e77baf205a28efa.png
-share/doc/cyrus-imapd/_images/graphviz-7dae6dd6e8e8cb405462bc197bb8dd603b208565.png
-share/doc/cyrus-imapd/_images/graphviz-8b1ee81495109dc486349f8684f91ced86ce6bb1.png
-share/doc/cyrus-imapd/_images/graphviz-a580b8819035e9b4da261789b06642271baa7a26.png
-share/doc/cyrus-imapd/_images/graphviz-a71a85915417bac5a113996d1b8091faf89fd1ea.png
-share/doc/cyrus-imapd/_images/graphviz-c8eaf7af6ed0d03027ca9a0c855710e4c71deb13.png
-share/doc/cyrus-imapd/_images/graphviz-e90a9877863339b48302c7516b8318216793e131.png
-share/doc/cyrus-imapd/_images/graphviz-f12ccd5576f4a7badda9d85dc1a114f5b529a013.png
+share/doc/cyrus-imapd/_images/graphviz-0852bad6c81528b03a6a9b20cde58b4f345a64a4.png
+share/doc/cyrus-imapd/_images/graphviz-15926abfe5296ef31c75a433c2f4b45d38539bf9.png
+share/doc/cyrus-imapd/_images/graphviz-16c58fc33efd21d9840aceeaaf50a614fc1f8373.png
+share/doc/cyrus-imapd/_images/graphviz-7471cface160b78c511e20efa6ffc6fea00adf16.png
+share/doc/cyrus-imapd/_images/graphviz-adbf50d66b6a95131793bec06e4413d83bdeb0b5.png
+share/doc/cyrus-imapd/_images/graphviz-b44f6abf0397009116222283a85effce72482810.png
+share/doc/cyrus-imapd/_images/graphviz-d8f481e8a8264c449af700ce6f8defb17ec5b538.png
+share/doc/cyrus-imapd/_images/graphviz-de403c6a6b97546ff835c33e065ba4f740120243.png
+share/doc/cyrus-imapd/_images/graphviz-df1a525b3e1f4396df05dcdf033b8061f722487f.png
+share/doc/cyrus-imapd/_images/graphviz-dfd45161af7a61b48d8473407fe3b5ca25e6a5a9.png
+share/doc/cyrus-imapd/_images/graphviz-e2b174db3d1bfbdbc17f35cf7e585d9e067723f6.png
+share/doc/cyrus-imapd/_images/graphviz-e592e74491fbb72ca565cace0d0aba7dbf534f91.png
+share/doc/cyrus-imapd/_images/graphviz-e8c14332e45461e9388b174e24694bd933ff4741.png
+share/doc/cyrus-imapd/_images/graphviz-ec37db6a988bd68ebaf353970199fd3c2d6ca5de.png
 share/doc/cyrus-imapd/_images/image2-murder.jpg
 share/doc/cyrus-imapd/_images/image3-replication.jpg
 share/doc/cyrus-imapd/_static/basic.css
@@ -238,6 +238,7 @@ share/doc/cyrus-imapd/_static/css/badge_only.css
 share/doc/cyrus-imapd/_static/css/theme.css
 share/doc/cyrus-imapd/_static/cyrus.css
 share/doc/cyrus-imapd/_static/doctools.js
+share/doc/cyrus-imapd/_static/documentation_options.js
 share/doc/cyrus-imapd/_static/down-pressed.png
 share/doc/cyrus-imapd/_static/down.png
 share/doc/cyrus-imapd/_static/event_notifications/AclChange.json
@@ -263,9 +264,11 @@ share/doc/cyrus-imapd/_static/event_notifications/QuotaChange.json
 share/doc/cyrus-imapd/_static/event_notifications/QuotaExceed.json
 share/doc/cyrus-imapd/_static/event_notifications/QuotaWithin.json
 share/doc/cyrus-imapd/_static/file.png
+share/doc/cyrus-imapd/_static/graphviz.css
 share/doc/cyrus-imapd/_static/jquery.js
 share/doc/cyrus-imapd/_static/js/modernizr.min.js
 share/doc/cyrus-imapd/_static/js/theme.js
+share/doc/cyrus-imapd/_static/language_data.js
 share/doc/cyrus-imapd/_static/minus.png
 share/doc/cyrus-imapd/_static/plus.png
 share/doc/cyrus-imapd/_static/pygments.css
@@ -415,6 +418,7 @@ share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.11.html
 share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.12.html
 share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.13.html
 share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.14.html
+share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.15.html
 share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.2.html
 share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.3.html
 share/doc/cyrus-imapd/imap/download/release-notes/2.5/x/2.5.4.html
@@ -439,6 +443,10 @@ share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.1.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.10.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.11.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.12.html
+share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.13.html
+share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.14.html
+share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.15.html
+share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.16.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/${PKGVERSION}.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.2.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.3.html
@@ -448,6 +456,7 @@ share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.6.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.7.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.8.html
 share/doc/cyrus-imapd/imap/download/release-notes/3.0/x/3.0.9.html
+share/doc/cyrus-imapd/imap/download/release-notes/3.2/x/3.2.1.html
 share/doc/cyrus-imapd/imap/download/release-notes/index.html
 share/doc/cyrus-imapd/imap/download/upgrade.html
 share/doc/cyrus-imapd/imap/installing.html
@@ -617,7 +626,6 @@ share/doc/cyrus-imapd/imap/reference/manpages/usercommands/smtptest.html
 share/doc/cyrus-imapd/imap/reference/manpages/usercommands/synctest.html
 share/doc/cyrus-imapd/imap/rfc-support.html
 share/doc/cyrus-imapd/imap/support/feedback-bugs.html
-share/doc/cyrus-imapd/imap/support/feedback-irc.html
 share/doc/cyrus-imapd/imap/support/feedback-mailing-lists.html
 share/doc/cyrus-imapd/imap/support/feedback-meetings.html
 share/doc/cyrus-imapd/index.html
@@ -653,6 +661,7 @@ share/examples/cyrus-imapd/imapd.conf
 @pkgdir share/doc/cyrus-imapd/_sources/imap/reference/admin/locations
 @pkgdir share/doc/cyrus-imapd/_sources/imap/reference/admin/access-control
 @pkgdir share/doc/cyrus-imapd/_sources/imap/quickstart
+@pkgdir share/doc/cyrus-imapd/_sources/imap/download/release-notes/3.2/x
 @pkgdir share/doc/cyrus-imapd/_sources/imap/download/release-notes/3.0/x
 @pkgdir share/doc/cyrus-imapd/_sources/imap/download/release-notes/2.5/x
 @pkgdir share/doc/cyrus-imapd/_sources/imap/download/release-notes/2.4/x

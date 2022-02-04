@@ -1,6 +1,6 @@
 $NetBSD: $
 
-RMD160 (cyrus-imapd-3.0.13.tar.gz) = b789c903620e83160fce4de3e06bbe0c842f7957
-SHA512 (cyrus-imapd-3.0.13.tar.gz) = 5cd066916797efb975cdb97720f65edc72d3fe82afbd78a26aa8369d95ae4ca09c0593dd4bec5521156c64ea38af7a13065f3b35447a76267dec93feb0ac6ac6
-Size (cyrus-imapd-3.0.13.tar.gz) = 10840005 bytes
+BLAKE2s (cyrus-imapd-3.0.17.tar.gz) = e9a306ff686c7da2e132c072c08db71a1640228897c395712e7a0b9a04582709
+SHA512 (cyrus-imapd-3.0.17.tar.gz) = 75519bf8a2ae4a8ff844338bee641d519eaf3419fb81b819dc7a42e5956ef57569e47a0e094ccb9726a9c43f0469cd3def6c62783565b2a2aaa863bda354a7da
+Size (cyrus-imapd-3.0.17.tar.gz) = 11445224 bytes
 SHA1 (patch-imap_http__dav.c) = dfbac5c379dce8977b28376692b8de7621caeca3
