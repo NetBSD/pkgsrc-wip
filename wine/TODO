@@ -1,0 +1,2 @@
+* Link wine32 to i386 libraries
+* Implement cookies for wine32 configure/build step

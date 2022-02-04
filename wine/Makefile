@@ -41,7 +41,10 @@ PLIST_VARS+=		desktop lp32 lp64 oss
 
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.lp64=		yes
-CONFIGURE_ARGS+=	--enable-win64
+WINE32_BUILD_DIR=	${WRKDIR}/wine32
+WINE64_BUILD_DIR=	${WRKDIR}/wine64
+BUILD_DIRS=		${WINE64_BUILD_DIR}
+INSTALL_DIRS=		${WINE32_BUILD_DIR} ${WINE64_BUILD_DIR}
 NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 .else
 PLIST.lp32=		yes
@@ -75,6 +78,35 @@ CONFIGURE_ARGS+=	--without-oss
 
 # Fix warning due to _FORTIFY_SOURCE being redefined
 CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
+
+.if ${MACHINE_ARCH} == "x86_64"
+pre-configure:
+	${RUN} ${MKDIR} -p ${WINE32_BUILD_DIR}
+	${RUN} ${MKDIR} -p ${WINE64_BUILD_DIR}
+
+do-configure:
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WINE64_BUILD_DIR} &&					\
+	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
+			${WRKSRC}/${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} --enable-win64
+
+.PHONY: do-configure-wine32
+do-configure-wine32:
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WINE32_BUILD_DIR} &&					\
+	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
+			${WRKSRC}/${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} --with-wine64=${WINE64_BUILD_DIR} --without-freetype
+
+.PHONY: do-build-wine32
+do-build-wine32: do-configure-wine32
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WINE32_BUILD_DIR} &&					\
+	${BUILD_MAKE_CMD} ${BUILD_TARGET}
+
+post-build: do-build-wine32
+.endif	
 
 # Wine will use system frameworks on Darwin.
 .if ${OPSYS} != "Darwin"

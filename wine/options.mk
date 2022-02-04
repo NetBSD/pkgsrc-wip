@@ -43,7 +43,9 @@ PLIST.pulse=		yes
 CONFIGURE_ARGS+=	--without-pulse
 .endif
 
+PLIST_VARS+=	sane
 .if !empty(PKG_OPTIONS:Msane)
+PLIST.sane=		yes	
 .  include "../../graphics/sane-backends/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-sane
