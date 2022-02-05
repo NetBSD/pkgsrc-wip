@@ -1,7 +1,12 @@
-* test with RELRO
+* Update to 7.0.20, but note that it is a release candidate, not a
+  release, and thus we need to wait for release status in addition to
+  testing before promotion to pkgsrc.
 
-* figure out openjdk11
+* Test with RELRO
 
-* consider mongo 3.6, and some versions of 4, after understanding what
-  UBNT is doing.
+* Figure out openjdk11.
+
+* Consider adding mongo 3.6, which is the documented version.  It
+  would be good to understand Ubiqitui's plans before doing this.
+
 
