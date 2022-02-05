@@ -299,6 +299,7 @@ share/zabbix/app/partials/layout.htmlpage.footer.php
 share/zabbix/app/partials/layout.htmlpage.header.php
 share/zabbix/app/partials/massupdate.macros.tab.php
 share/zabbix/app/partials/massupdate.valuemaps.tab.php
+share/zabbix/app/partials/monitoring.charts.subfilter.php
 share/zabbix/app/partials/monitoring.host.filter.php
 share/zabbix/app/partials/monitoring.host.view.html.php
 share/zabbix/app/partials/monitoring.latest.filter.php
