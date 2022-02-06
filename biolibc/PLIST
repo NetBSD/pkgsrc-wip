@@ -293,6 +293,7 @@ man/man3/bl_fastx_set_union.3
 man/man3/bl_fastx_set_}.3
 man/man3/bl_fastx_write.3
 man/man3/bl_gff_copy_header.3
+man/man3/bl_gff_extract_attribute.3
 man/man3/bl_gff_free.3
 man/man3/bl_gff_read.3
 man/man3/bl_gff_set_attributes.3
