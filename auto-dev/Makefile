@@ -5,10 +5,10 @@
 #              Fri Sep 17 10:16:54 CDT 2021               #
 ###########################################################
 
-DISTNAME=	auto-dev-0.0.0.13
+DISTNAME=	auto-dev-0.0.0.14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	4ba31e1a922a536000ea733d82a3d22f69b7b808
+GITHUB_TAG=	2cbc8372d9911ee37a6b6f98c6ea269e481bcb43
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/auto-dev/
