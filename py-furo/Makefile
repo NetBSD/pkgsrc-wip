@@ -11,7 +11,7 @@ COMMENT=	Clean customisable Sphinx documentation theme
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-theme-builder-[0-9]*:../../textproc/py-sphinx-theme-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-theme-builder-[0-9]*:../../wip/py-sphinx-theme-builder
 
 USE_LANGUAGES=	# none
 

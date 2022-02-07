@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 DEPENDS+=	${PYPKGPREFIX}-nodeenv-[0-9]*:../../wip/py-nodeenv
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-#DEPENDS+=	${PYPKGPREFIX}-pep621-[0-9]*:../../devel/py-pep621
+DEPENDS+=	${PYPKGPREFIX}-pep621-[0-9]*:../../devel/py-pep621
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

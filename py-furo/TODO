@@ -1,1 +1,68 @@
-needs a finished py-sphinx-theme-builder package
+Fails to build:
+
+===> Building for py310-furo-2022.1.2
+* Building wheel...
+[stb] # nodeenv does not exist.
+[stb] # Generating new nodeenv with NodeJS 16.13.0!
+[stb] $ python -m nodeenv --node=16.13.0 --prebuilt --clean-src /scratch/wip/py-furo/work/furo-2022.1.2/.nodeenv
+ * Install prebuilt node (16.13.0) .
+╭─────────────────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────────────────╮
+│ <string>:12 in <module>                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ─────────────────────────────────────────────╮                                                                                                      │
+│ │ __annotations__ = {}                                                                            │                                                                                                      │
+│ │    __builtins__ = <module 'builtins' (built-in)>                                                │                                                                                                      │
+│ │         __doc__ = None                                                                          │                                                                                                      │
+│ │      __loader__ = <class '_frozen_importlib.BuiltinImporter'>                                   │                                                                                                      │
+│ │        __name__ = '__main__'                                                                    │                                                                                                      │
+│ │     __package__ = None                                                                          │                                                                                                      │
+│ │        __spec__ = None                                                                          │                                                                                                      │
+│ │            rich = <module 'rich' from '/usr/pkg/lib/python3.10/site-packages/rich/__init__.py'> │                                                                                                      │
+│ │           runpy = <module 'runpy' from '/usr/pkg/lib/python3.10/runpy.py'>                      │                                                                                                      │
+│ │          urllib = <module 'urllib' from '/usr/pkg/lib/python3.10/urllib/__init__.py'>           │                                                                                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                                      │
+│ /usr/pkg/lib/python3.10/runpy.py:209 in run_module                                                                                                                                                       │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/runpy.py:96 in _run_module_code                                                                                                                                                  │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/runpy.py:86 in _run_code                                                                                                                                                         │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:1494 in <module>                                                                                                                                        │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:1079 in main                                                                                                                                            │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:956 in create_environment                                                                                                                               │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:721 in install_node                                                                                                                                     │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:743 in install_node_wrapped                                                                                                                             │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:570 in download_node_src                                                                                                                                │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/site-packages/nodeenv.py:606 in urlopen                                                                                                                                          │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/urllib/request.py:216 in urlopen                                                                                                                                                 │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/urllib/request.py:525 in open                                                                                                                                                    │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/urllib/request.py:634 in http_response                                                                                                                                           │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/urllib/request.py:563 in error                                                                                                                                                   │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/urllib/request.py:496 in _call_chain                                                                                                                                             │
+│                                                                                                                                                                                                          │
+│ /usr/pkg/lib/python3.10/urllib/request.py:643 in http_error_default                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+HTTPError: HTTP Error 404: Not Found
+error: nodeenv-creation-failed
+
+× Failed to create a `nodeenv`
+╰─> See above for failure output from the underlying tooling.
+
+hint: A `urllib.error.HTTPError` would indicate mean that the issue is related to the network, or the NodeJS servers, or the node version that this tool is trying to fetch is no longer available.
+
+Link: https://sphinx-theme-builder.rtfd.io/errors/#nodeenv-creation-failed
+
+ERROR Backend subproccess exited when trying to invoke build_wheel
+*** Error code 1
+
+
