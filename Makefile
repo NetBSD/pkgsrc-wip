@@ -1512,6 +1512,7 @@ SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
 SUBDIR+=	heroes
 SUBDIR+=	herwig
+SUBDIR+=	hey
 SUBDIR+=	hgsubversion
 SUBDIR+=	higan
 SUBDIR+=	higgsbounds
