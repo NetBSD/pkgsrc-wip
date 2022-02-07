@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.16 2020/03/06 22:44:18 tnn Exp $
 
-BLAKE2s (llvm-13.0.1rc2.src.tar.xz) = 5c1296ce2b3b8cb9153f3cd20b10cb2fd1bc52d042b06f7ed4dcf91102cf9da8
-SHA512 (llvm-13.0.1rc2.src.tar.xz) = e543c4de9d99ca8b5cd7bd17a34c3884a9fc8baa30359cdf0113ecf907139370289c60a1a75a8182462b5989e4b851a555741fcb0044c95961489fe4672a5b15
-Size (llvm-13.0.1rc2.src.tar.xz) = 45469768 bytes
+BLAKE2s (llvm-13.0.1.src.tar.xz) = 5fff4c8506340cc14b2160478be6403c80f526841209a4b1b3a9f16cf61dcc05
+SHA512 (llvm-13.0.1.src.tar.xz) = 05fbe8708ac3d0dfef3a9135ee88185a95ed492095429a97d33b8aadb0187e59ad42d1a7184f02b5c84fdd31f3d7227c65bd292ed0aa039b29522e59cf90a965
+Size (llvm-13.0.1.src.tar.xz) = 45479112 bytes
 SHA1 (patch-CMakeLists.txt) = c60afc86b44ae6c37840b3fea3533136aae2616d
 SHA1 (patch-cmake_config-ix.cmake) = 3b8b5295872ac1a5d90a8b4c78540d8ce1224bf0
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 41000d0660af1bfe6ccd15d0e0611b7cbbd456a4
