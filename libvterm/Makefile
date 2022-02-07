@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/03/01 15:44:34 jonthn Exp $
 
-DISTNAME=	libvterm-0.1.4
+DISTNAME=	libvterm-0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.leonerd.org.uk/code/libvterm/
 
