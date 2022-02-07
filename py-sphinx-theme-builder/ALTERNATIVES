@@ -1,0 +1,1 @@
+bin/stb @PREFIX@/bin/stb-@PYVERSSUFFIX@

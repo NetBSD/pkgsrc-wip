@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.8 2021/10/26 11:23:13 nia Exp $
+
+BLAKE2s (sphinx-theme-builder-0.2.0a13.tar.gz) = 050caca99e78acc78f160958efaec6a3f256ecb1325368be8ec2ae5dfb02625a
+SHA512 (sphinx-theme-builder-0.2.0a13.tar.gz) = 1ab24f26f2a2caf27400d905839058dc2c25d5df1dbc7c579cd81b5a0c85536a3c59de0db068f1b34534159284ff627ce647e9cfbd72aa1109a12a38012bbb6d
+Size (sphinx-theme-builder-0.2.0a13.tar.gz) = 21363 bytes
