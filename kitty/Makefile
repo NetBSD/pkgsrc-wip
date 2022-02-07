@@ -12,11 +12,6 @@ HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-copybutton-[0-9]*:../../textproc/py-sphinx-copybutton
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-inline-tabs-[0-9]*:../../textproc/py-sphinx-inline-tabs
-
 USE_LANGUAGES=	c99
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
@@ -31,28 +26,23 @@ BUILDLINK_TRANSFORM+=	rm:-pedantic-errors
 # comes with ncurses.
 USE_NCURSES=	yes
 
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-build
-SUBST_MESSAGE.python=	Replacing path to Sphinx.
-SUBST_FILES.python=	docs/Makefile
-SUBST_SED.python+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},g"
-
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-sphinx-inline-tabs
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PY_PATCHPLIST=			yes
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
-	cd ${WRKSRC} && ${MAKE_ENV} ${GMAKE} man
 
 do-install:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package \
 	    --prefix ${DESTDIR}${PREFIX}
-	${FIND} ${DESTDIR} -type d -name __pycache__ -print0 | ${XARGS} -0 ${RM} -rf
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/kitty.1 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1 || ${FALSE}
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1 || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/share/man/man5/kitty.conf.5 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${FALSE}
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${TRUE}
+# pkgsrc framwork only handles optimization level 1 files correctly
+	${FIND} ${DESTDIR} -type f -name *.opt-2.pyc -print0 | ${XARGS} -0 ${RM} -rf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -79,7 +69,6 @@ do-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
