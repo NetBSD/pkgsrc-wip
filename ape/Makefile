@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.7 2014/04/03 01:21:22 outpaddling Exp $
 
-DISTNAME=	APE-3.5.3.90
+DISTNAME=	APE-3.5.3.92
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	144f1c5c4b5daadad5bac16237ffab9f3e2ddf3c
+GITHUB_TAG=	0203fa48534fa8da0c5f000a9626c2d1db6e5e2f
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/APE
