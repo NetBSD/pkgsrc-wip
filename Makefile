@@ -1947,7 +1947,6 @@ SUBDIR+=	kibana
 SUBDIR+=	kind
 SUBDIR+=	kinfocenter
 SUBDIR+=	kissme
-SUBDIR+=	kitty
 SUBDIR+=	kivaloo
 SUBDIR+=	klatexformula
 SUBDIR+=	klayout
