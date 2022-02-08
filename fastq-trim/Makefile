@@ -15,6 +15,8 @@ HOMEPAGE=	https://github.com/outpaddling/Fastq-trim
 COMMENT=	Lightening fast sequence read trimmer
 LICENSE=	2-clause-bsd
 
+MAKE_ENV=	VERSION=${PKGVERSION}
+
 pre-build:
 	(cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend)
 
