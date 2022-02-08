@@ -1,0 +1,9 @@
+Debug and fix the issue causing
+
+   Error: could not determine local timezone
+
+   Caused by:
+       The system's UTC offset could not be determined
+
+   Location:
+       src/bin/wordle/game.rs:40:47
