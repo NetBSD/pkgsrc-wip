@@ -64,6 +64,7 @@ man/man3/rmkdir.3
 man/man3/short_cmp.3
 man/man3/spawnlp.3
 man/man3/spawnvp.3
+man/man3/str2u64.3
 man/man3/str_argv_cat.3
 man/man3/strblank.3
 man/man3/strisint.3
