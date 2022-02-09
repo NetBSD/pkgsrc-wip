@@ -1,22 +1,18 @@
 # $NetBSD$
 
-DISTNAME=	wordle-0.0
+DISTNAME=	wordle-0.2.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=conradludgate/}
-GITHUB_TAG=	bffaaa8
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/conradludgate/wordle
 COMMENT=	The wordle game, in rust
-#LICENSE=	unclear
-
-WRKSRC=		${WRKDIR}/wordle-bffaaa891fecb0c73509113547a835d9b3968b6d
+LICENSE=	mit
 
 INSTALLATION_DIRS=	bin
 
 .include "cargo-depends.mk"
-
-.include "../../mk/bsd.prefs.mk"
 
 do-install:
 	${INSTALL} ${WRKSRC}/target/release/wordle \
