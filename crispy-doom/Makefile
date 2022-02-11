@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	crispy-doom-5.10.3
+DISTNAME=	crispy-doom-5.11
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -73,6 +73,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/applications/crispy-doom.desktop
 	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.Heretic.desktop \
 		${DESTDIR}${PREFIX}/share/applications/crispy-heretic.desktop
+	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.Hexen.desktop \
+		${DESTDIR}${PREFIX}/share/applications/crispy-hexen.desktop
 	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.Setup.desktop \
 		${DESTDIR}${PREFIX}/share/applications/crispy-setup.desktop
 	${MV} ${DESTDIR}${PREFIX}/share/applications/screensavers/io.github.fabiangreffrath.Doom_Screensaver.desktop \
@@ -81,16 +83,22 @@ post-install:
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-doom.metainfo.xml
 	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Heretic.metainfo.xml \
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-heretic.metainfo.xml
+	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Hexen.metainfo.xml \
+		${DESTDIR}${PREFIX}/share/metainfo/crispy-hexen.metainfo.xml
 .if defined(PLIST.sysv)
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/default.cfg.4 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-default.cfg.4
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/heretic.cfg.4 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-heretic.cfg.4
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/hexen.cfg.4 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-hexen.cfg.4
 .else
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/default.cfg.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-default.cfg.5
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/heretic.cfg.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-heretic.cfg.5
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/hexen.cfg.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-hexen.cfg.5
 .endif
 
 BUILDLINK_API_DEPENDS.SDL2_mixer+=	SDL2_mixer>=2.0.2
