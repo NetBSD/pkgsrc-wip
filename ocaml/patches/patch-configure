@@ -1,8 +1,8 @@
 $NetBSD$
 
---- configure.orig	2021-09-30 15:40:11.000000000 +0000
+--- configure.orig	2022-02-08 16:50:12.000000000 +0000
 +++ configure
-@@ -14024,7 +14024,7 @@ sharedlib_cflags=''
+@@ -14081,7 +14081,7 @@ sharedlib_cflags=''
  mksharedlib='shared-libs-not-available'
  rpath=''
  mksharedlibrpath=''
@@ -11,20 +11,7 @@ $NetBSD$
  
  if test x"$enable_shared" != "xno"; then :
    case $host in #(
-@@ -14078,6 +14078,12 @@ esac
-       mksharedlibrpath="-Wl,-rpath,"
-       natdynlinkopts="-Wl,-E"
-       shared_libraries_supported=true ;; #(
-+  *-*-solaris*)
-+    sharedlib_cflags="-fPIC"
-+    mksharedlib="$CC -shared"
-+    rpath="-Wl,-rpath,"
-+    mksharedlibrpath="-Wl,rpath,"
-+    shared_libraries_supported=true ;;
-   *) :
-      ;;
- esac
-@@ -14099,6 +14105,8 @@ if test x"$shared_libraries_supported" =
+@@ -14153,6 +14153,8 @@ if test x"$supports_shared_libraries" = 
      natdynlink=true ;; #(
    *-pc-windows) :
      natdynlink=true ;; #(
@@ -33,7 +20,7 @@ $NetBSD$
    i[3456]86-*-linux*) :
      natdynlink=true ;; #(
    i[3456]86-*-gnu*) :
-@@ -14133,6 +14141,8 @@ if test x"$shared_libraries_supported" =
+@@ -14187,6 +14189,8 @@ if test x"$supports_shared_libraries" = 
      natdynlink=true ;; #(
    i[3456]86-*-netbsd*) :
      natdynlink=true ;; #(
@@ -42,7 +29,7 @@ $NetBSD$
    x86_64-*-netbsd*) :
      natdynlink=true ;; #(
    i386-*-gnu0.3) :
-@@ -14143,12 +14153,16 @@ if test x"$shared_libraries_supported" =
+@@ -14197,12 +14201,16 @@ if test x"$supports_shared_libraries" = 
      natdynlink=true ;; #(
    arm*-*-freebsd*) :
      natdynlink=true ;; #(
@@ -59,7 +46,7 @@ $NetBSD$
    riscv*-*-linux*) :
      natdynlink=true ;; #(
    *) :
-@@ -14246,6 +14260,8 @@ case $host in #(
+@@ -14309,6 +14317,8 @@ case $host in #(
      arch=i386; system=beos ;; #(
    i[3456]86-*-cygwin) :
      arch=i386; system=cygwin ;; #(
@@ -68,7 +55,7 @@ $NetBSD$
    i[3456]86-*-gnu*) :
      arch=i386; system=gnu ;; #(
    i[3456]86-*-mingw32) :
-@@ -14262,6 +14278,8 @@ case $host in #(
+@@ -14325,6 +14335,8 @@ case $host in #(
  else
    model=ppc
  fi; system=elf ;; #(
@@ -77,7 +64,7 @@ $NetBSD$
    s390x*-*-linux*) :
      arch=s390x; model=z10; system=elf ;; #(
    # expected to match "gnueabihf" as well as "musleabihf"
-@@ -14281,6 +14299,10 @@ fi; system=elf ;; #(
+@@ -14344,6 +14356,10 @@ fi; system=elf ;; #(
      arch=arm; model=armv6; system=linux_eabi ;; #(
    armv6*-*-freebsd*) :
      arch=arm; model=armv6; system=freebsd ;; #(
@@ -88,7 +75,7 @@ $NetBSD$
    earmv6*-*-netbsd*) :
      arch=arm; model=armv6; system=netbsd ;; #(
    earmv7*-*-netbsd*) :
-@@ -14323,8 +14345,12 @@ fi; system=elf ;; #(
+@@ -14388,8 +14404,12 @@ fi; system=elf ;; #(
      arch=arm64; system=linux ;; #(
    aarch64-*-freebsd*) :
      arch=arm64; system=freebsd ;; #(
@@ -101,7 +88,7 @@ $NetBSD$
    riscv64-*-linux*) :
      arch=riscv; model=riscv64; system=linux
   ;; #(
-@@ -14540,6 +14566,9 @@ case $as_target,$ocaml_cv_cc_vendor in #
+@@ -14605,6 +14625,9 @@ case $as_target,$ocaml_cv_cc_vendor in #
    *) :
       ;;
  esac ;; #(
@@ -111,7 +98,7 @@ $NetBSD$
    i686-pc-windows,*) :
      default_as="ml -nologo -coff -Cp -c -Fo"
      default_aspp="$default_as" ;; #(
-@@ -15144,6 +15173,64 @@ if test "$ac_res" != no; then :
+@@ -15215,6 +15238,64 @@ if test "x$ac_cv_func_socketpair" = xyes
  
  fi
   ;; #(
@@ -176,7 +163,7 @@ $NetBSD$
    *-*-haiku) :
      cclibs="$cclibs -lnetwork"
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing socket" >&5
-@@ -17269,7 +17356,7 @@ as_has_debug_prefix_map=false
+@@ -17366,7 +17447,7 @@ as_has_debug_prefix_map=false
  asm_cfi_supported=false
  if $native_compiler; then :
    case $host in #(

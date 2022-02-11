@@ -1,6 +1,6 @@
 $NetBSD$
 
---- api_docgen/ocamldoc/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
+--- api_docgen/ocamldoc/Makefile.orig	2022-02-08 16:50:12.000000000 +0000
 +++ api_docgen/ocamldoc/Makefile
 @@ -17,7 +17,7 @@ include $(ROOTDIR)/ocamldoc/Makefile.bes
  vpath %.mli $(ROOTDIR)/stdlib $(DOC_COMPILERLIBS_DIRS)  $(DOC_STDLIB_DIRS)
@@ -29,10 +29,10 @@ $NetBSD$
  	$(OCAMLDOC_RUN) -man -d build/man -man-mini \
  	-nostdlib -hide Stdlib -lib Stdlib -t "OCaml library" \
  	$(addprefix -load , $(ALL_COMPILED_DOC))
-@@ -122,5 +122,5 @@ INSTALL_MANODIR=$(INSTALL_MANDIR)/man3
+@@ -121,5 +121,5 @@ build/latex/compilerlibs_input.tex: | bu
  install:
- 	$(MKDIR) "$(INSTALL_MANODIR)"
+ 	$(MKDIR) "$(INSTALL_LIBRARIES_MAN_DIR)"
  	if test -d build/man; then \
--	  $(INSTALL_DATA) build/man/*.3o "$(INSTALL_MANODIR)"; \
-+	  $(INSTALL_DATA) build/man/*.3 "$(INSTALL_MANODIR)"; \
- 	else : ; fi
+-	  $(INSTALL_DATA) build/man/*.3o "$(INSTALL_LIBRARIES_MAN_DIR)"; \
++	  $(INSTALL_DATA) build/man/*.3 "$(INSTALL_LIBRARIES_MAN_DIR)"; \
+ 	fi

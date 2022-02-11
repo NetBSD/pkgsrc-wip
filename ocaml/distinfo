@@ -1,15 +1,15 @@
 $NetBSD: distinfo,v 1.139 2020/12/10 21:37:07 wiz Exp $
 
-BLAKE2s (ocaml-4.13.1.tar.gz) = e41df491a04c284c92763df4ea906daa862a3385bbd6f83856098b5c68082461
-SHA512 (ocaml-4.13.1.tar.gz) = f94687952789ff946718fd1d60f224eb238411419e36c7beb48c2087885f3ac2b2a20f3d13738c08b5459104d2e97a05458a6428bd644d6cb33772159f95a5d2
-Size (ocaml-4.13.1.tar.gz) = 5327797 bytes
-SHA1 (patch-Makefile) = 12fc3f6c611c966bafe7bcdb15d73e929c89a291
-SHA1 (patch-Makefile.build_config.in) = ae8b9bce21ef1540d0380371ceb212733ffaa758
-SHA1 (patch-api__docgen_ocamldoc_Makefile) = 6508236f9718d6458d4014bd2b9297962ed0baf6
+BLAKE2s (ocaml-4.14.0~alpha2.tar.gz) = dc97616665ab9bc303a6f5d180ab0d0591e06998dcd86b814c601e4d9d596cca
+SHA512 (ocaml-4.14.0~alpha2.tar.gz) = 06ef0e2eff358075375775aab06de450da6c49a716898d02f9d146d4328fa1c19d825c34915df8214788025bc2d762cb8be1def31c076455cfacaf066c887ff1
+Size (ocaml-4.14.0~alpha2.tar.gz) = 5366036 bytes
+SHA1 (patch-Makefile) = 090510112ab849a56a9a2b4722d5d87a01dc29e2
+SHA1 (patch-Makefile.build_config.in) = 38ed679eb5931ecd11274092793a94e1e16d633a
+SHA1 (patch-api__docgen_ocamldoc_Makefile) = 6dd0e336e09017ac80083d7b49f43254d18064e7
 SHA1 (patch-check-linker-version_sh) = c90242556207242ac58499d7f42519a10aedcca4
-SHA1 (patch-configure) = 0bc23a2dd4ee6b57aa835ea550a562ca4220d2ed
+SHA1 (patch-configure) = 75855793f32c6aa3e5ce4bc6484605e92a450440
 SHA1 (patch-lex_Makefile) = 4f06085be65c5cc17093035de0e18bdb512585a0
-SHA1 (patch-man_Makefile) = b780c026aef5f7e6b22b142fce3ec87ef9d2ab22
+SHA1 (patch-man_Makefile) = c02cfd5b18773bf2156d672705c948bb2eb0d2dc
 SHA1 (patch-ocamldoc_Makefile) = 589f2f8b03ea4ae2ed090a35fd1a303ffe9d1d92
 SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb5734b
 SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 5518c6b4d8772d995252b6f640323e2602097c4d
@@ -20,4 +20,4 @@ SHA1 (patch-runtime_Makefile) = e97f198f7eefbeeabc481104f71edad68167c956
 SHA1 (patch-testsuite_tests_lib-systhreads_testyield.ml) = 0f6d35e030de168c6f4aeb126055065ed47878aa
 SHA1 (patch-tools_Makefile) = 95db9b6151f89ea900ae7805f3456a19a02f70c0
 SHA1 (patch-tools_ocamlmklib.ml) = 6d468c187608e367e23f418dc68aa4977288a94f
-SHA1 (patch-yacc_Makefile) = 3d8962a2d447aa7e88e59151d66e2080f7fad1fb
+SHA1 (patch-yacc_Makefile) = 32d1875f109fdaf79b88bd964ad030709615ac37
