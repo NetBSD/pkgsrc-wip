@@ -1,3 +1,5 @@
+SDL1 based branch formerly maintained by e6y.
+
 If you see crashes only with certain maps and only on big endian machines
 like PowerPC or SPARC, try this patched version.
 
@@ -15,4 +17,5 @@ This package contains fixes for CVE-2019-20797 backported from 2.5.1.5.
 
 =========
 
-This package will stay in wip until the next release of PrBoom+.
+games/prboom-plus now tracks the SDL2 based UMAPINFO branch.
+This package will stay in wip for machines that are slow with SDL2.
