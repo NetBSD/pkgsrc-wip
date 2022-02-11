@@ -1,0 +1,4 @@
+@comment $NetBSD$
+@comment TODO: to fill this file with the file listing:
+@comment TODO: 1. run "/opt/local/bin/bmake package"
+@comment TODO: 2. run "/opt/local/bin/bmake print-PLIST"
