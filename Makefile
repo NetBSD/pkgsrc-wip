@@ -426,6 +426,7 @@ SUBDIR+=	checkstyle
 SUBDIR+=	chemeq
 SUBDIR+=	chems
 SUBDIR+=	cherokee
+SUBDIR+=	chezmoi
 SUBDIR+=	chezscheme
 SUBDIR+=	chezscheme-racket
 SUBDIR+=	chntpw
