@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bcbio-gff-0.6.9.tar.gz) = f47b20601bbb8c0d200e6d8cd6ba0fc752b8ccf45dd3b7b2a38604c21dc0387f
+SHA512 (bcbio-gff-0.6.9.tar.gz) = 90498cd073cbc582bcbecbe8fd962b2ada09c955bc1b9474ce60dc2fb681c5d783dba050c9684d78cde765f2a9be2c56e0cd96fe78c72c9792364c795edfe742
+Size (bcbio-gff-0.6.9.tar.gz) = 44236 bytes
