@@ -3698,6 +3698,7 @@ SUBDIR+=	py-djangopypi2
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dlx
+SUBDIR+=	py-dna-features-viewer
 SUBDIR+=	py-dns
 SUBDIR+=	py-dns-clientsubnetoption
 SUBDIR+=	py-docker
