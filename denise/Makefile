@@ -4,7 +4,7 @@ DISTNAME=	v1.1.2
 PKGNAME=	denise-${DISTNAME:S,^v,,}
 CATEGORIES=	emulators
 MASTER_SITES=	https://bitbucket.org/piciji/denise/get/
-DIST_SUBDIR=    denise
+DIST_SUBDIR=	denise
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rhialto@NetBSD.org
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/piciji-denise-a3a771d2672c
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	gmake
 
-SUBST_CLASSES+=         path
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-configure
 SUBST_MESSAGE.path=	Fixing reference to installation path
 SUBST_FILES.path+=	guikit/gtk/tools.cpp
