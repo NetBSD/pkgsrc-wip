@@ -1,0 +1,56 @@
+=> Checksum BLAKE2s OK for glazier-1.0.tar.bz2
+=> Checksum SHA512 OK for glazier-1.0.tar.bz2
+===> Installing dependencies for glazier-1.0
+=> Build dependency x11-links>=1.34: found x11-links-1.34
+=> Build dependency cwrappers>=20150314: found cwrappers-20180325
+=> Full dependency xcb-util-cursor>=0.1.1nb1: found xcb-util-cursor-0.1.3
+=> Full dependency xcb-util-image>=0.3.9: found xcb-util-image-0.4.0
+=> Full dependency wmutils-libwm>=1.2: found wmutils-libwm-1.2
+===> Skipping vulnerability checks.
+WARNING: No /usr/pkg/pkgdb/pkg-vulnerabilities file found.
+WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities'.
+===> Overriding tools for glazier-1.0
+===> Extracting for glazier-1.0
+===> Patching for glazier-1.0
+===> Creating toolchain wrappers for glazier-1.0
+===> Configuring for glazier-1.0
+=> Adjust comfig.mk
+===> Building for glazier-1.0
+cp config.def.h config.h
+cc -pipe -O2 -fPIC -D_FORTIFY_SOURCE=2 -I/usr/pkg/include -I/usr/X11R7/include -Wall -Wextra -pedantic -g -I/usr/pkg/include -I/usr/X11R7/include -I./libwm -c glazier.c
+glazier.c: In function 'paint':
+glazier.c:206:28: error: 'ATTR_D' undeclared (first use in this function); did you mean 'ATTR_I'?
+  206 |  d = wm_get_attribute(wid, ATTR_D);
+      |                            ^~~~~~
+      |                            ATTR_I
+glazier.c:206:28: note: each undeclared identifier is reported only once for each function it appears in
+glazier.c: In function 'cb_create':
+glazier.c:394:12: warning: implicit declaration of function 'wm_get_monitor' [-Wimplicit-function-declaration]
+  394 |   if ((m = wm_get_monitor(wm_find_monitor(x, y)))) {
+      |            ^~~~~~~~~~~~~~
+glazier.c:394:27: warning: implicit declaration of function 'wm_find_monitor' [-Wimplicit-function-declaration]
+  394 |   if ((m = wm_get_monitor(wm_find_monitor(x, y)))) {
+      |                           ^~~~~~~~~~~~~~~
+glazier.c:394:10: warning: assignment to 'xcb_randr_monitor_info_t *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  394 |   if ((m = wm_get_monitor(wm_find_monitor(x, y)))) {
+      |          ^
+glazier.c: In function 'crossedge':
+glazier.c:808:4: warning: assignment to 'xcb_randr_monitor_info_t *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  808 |  m = wm_get_monitor(wm_find_monitor(x, y));
+      |    ^
+glazier.c: In function 'snaptoedge':
+glazier.c:835:4: warning: assignment to 'xcb_randr_monitor_info_t *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  835 |  m = wm_get_monitor(wm_find_monitor(x, y));
+      |    ^
+*** Error code 1
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/glazier/work/glazier-1.0
+*** Error code 1
+
+Stop.
+bmake[1]: stopped in /usr/pkgsrc/wip/glazier
+*** Error code 1
+
+Stop.
+
