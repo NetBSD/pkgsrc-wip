@@ -2,19 +2,19 @@ $NetBSD$
 
 Fix installation directories, and use of install command.
 
---- Makefile.orig	2021-03-20 16:41:21.000000000 +0000
+--- Makefile.orig	2021-11-16 17:17:14.000000000 +0000
 +++ Makefile
-@@ -11,7 +11,8 @@ fontFolder := fonts
- shaderFolder := shader
+@@ -12,7 +12,8 @@ shaderFolder := shader
  imgFolder := img
+ soundFolder := sounds
  
 -prefix ?= /usr
 +prefix := ${DESTDIR}${PREFIX}
 +#prefix ?= /usr
  #prefix ?= $(HOME)/.local
  
- # temporary: to uninstall previous versions of Denise, will be removed in future releases
-@@ -255,17 +256,17 @@ install:
+ include data/Makefile
+@@ -271,17 +272,17 @@ install:
  	mkdir -p $(prefix)/share/$(loname)/$(shaderFolder)/
  
  	if [ -d $(prefix)/local ]; then	\
@@ -38,6 +38,6 @@ Fix installation directories, and use of install command.
 +	install -m 644 data/$(dataFolder)/* $(prefix)/share/$(loname)/$(dataFolder)
 +	install -m 644 data/$(fontFolder)/*.ttf $(prefix)/share/$(loname)/$(fontFolder)
 +	install -m 644 data/$(imgFolder)/bundle/* $(prefix)/share/$(loname)/$(imgFolder)
+ 	cp -r data/$(soundFolder)/* $(prefix)/share/$(loname)/$(soundFolder)/
  	cp -r data/$(shaderFolder)/* $(prefix)/share/$(loname)/$(shaderFolder)/
      endif
- 
