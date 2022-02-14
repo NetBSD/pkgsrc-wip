@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/MisterTea/EternalTerminal/
 COMMENT=	Remote shell to automatically reconnect
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/EternalTerminal-et-v6.1.11
+WRKSRC=		${WRKDIR}/EternalTerminal-${GITHUB_TAG}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
