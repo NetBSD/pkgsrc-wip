@@ -5935,6 +5935,7 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbnbt
 SUBDIR+=	xbps
 SUBDIR+=	xbsql
+SUBDIR+=	xcape
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdiskusage
