@@ -1,0 +1,2 @@
+pkgsrc's sysutils/xhyve is very outdated and won't compile on more recent macos. This WIP package brings in a more recent commit from Github repo. With it,
+I can compile on Darwin 21.3.0 x86_64. However, I do have trouble running it.

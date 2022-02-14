@@ -1,0 +1,16 @@
+$NetBSD$
+
+Suppress poison-system-directories warning, as xhyve is not
+intended for crossplatform
+
+--- Makefile.orig	2021-10-01 21:16:50.000000000 -0700
++++ Makefile	2022-02-14 11:57:12.000000000 -0800
+@@ -85,7 +85,7 @@
+ DEP := $(OBJ:%.o=%.d)
+ INC := -Iinclude
+ 
+-CFLAGS += -DVERSION=\"$(GIT_VERSION)\"
++CFLAGS += -DVERSION=\"$(GIT_VERSION)\" -Wno-error=poison-system-directories
+ 
+ TARGET = build/xhyve
+ 
