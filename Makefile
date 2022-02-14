@@ -4513,6 +4513,7 @@ SUBDIR+=	py-restkit
 SUBDIR+=	py-retrying
 SUBDIR+=	py-rf
 SUBDIR+=	py-rfc3987
+SUBDIR+=	py-rfc6555
 SUBDIR+=	py-riccipy
 SUBDIR+=	py-rigidbodysimulator
 SUBDIR+=	py-rlcompleter2
