@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	chezmoi-2.9.5
+DISTNAME=	chezmoi-2.11.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=twpayne/}
 GITHUB_PROJECT=	chezmoi
@@ -27,7 +27,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/chezmoi ${DESTDIR}${PREFIX}/bin/chezmoi
 	mkdir -p ${DESTDIR}${PREFIX}/share/doc/chezmoi
-	${INSTALL_DATA} ${WRKSRC}/docs/*md ${DESTDIR}${PREFIX}/share/doc/chezmoi/
+	${INSTALL_DATA} ${WRKSRC}/assets/chezmoi.io/docs/*md ${DESTDIR}${PREFIX}/share/doc/chezmoi/
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
