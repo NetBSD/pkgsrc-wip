@@ -4908,6 +4908,7 @@ SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	pythia6
+SUBDIR+=	python3
 SUBDIR+=	pythoncad
 SUBDIR+=	pythontoolkit
 SUBDIR+=	pywm
