@@ -15,8 +15,8 @@
 # when packaged up, read MESSAGE and test by visiting https://check.torproject.org
 # and https://panopticlick.eff.org
 
-DISTNAME=	src-firefox-tor-browser-91.5.0esr-11.0-1-build1
-PKGNAME=	tor-browser-11.0.4
+DISTNAME=	src-firefox-tor-browser-91.6.0esr-11.0-1-build1
+PKGNAME=	tor-browser-11.0.6
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
