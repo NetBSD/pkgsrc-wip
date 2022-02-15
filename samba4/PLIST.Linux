@@ -1,5 +1,4 @@
 @comment $NetBSD: PLIST.Linux,v 1.5 2021/05/30 20:02:31 thor Exp $
-lib/libnss_winbind.so
 lib/libnss_winbind.so.2
 lib/libnss_wins.so
 lib/libnss_wins.so.2

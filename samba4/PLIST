@@ -146,6 +146,7 @@ lib/libndr.so.2.0.0
 lib/libnetapi.so
 lib/libnetapi.so.1
 lib/libnetapi.so.1.0.0
+lib/libnss_winbind.so
 lib/libsamba-credentials.so
 lib/libsamba-credentials.so.1
 lib/libsamba-credentials.so.1.0.0
