@@ -12,10 +12,12 @@ PHP_VERSIONS_ACCEPTED?=	56 73 74 80
 
 .include "../../lang/php/phpversion.mk"
 
-PHP_BUILD_OPTIONS!=	${RUN} ${PKG_INFO} -Bn php | ${GREP} PKG_OPTIONS
-.if empty(PHP_BUILD_OPTIONS:Mphp-embed)
-BROKEN=		"Requires the php-embed option enabled in PHP."
-.endif
+#PHP_BUILD_OPTIONS!=	${RUN} ${PKG_INFO} -Bn php | ${GREP} PKG_OPTIONS
+#.if empty(PHP_BUILD_OPTIONS:Mphp-embed)
+#BROKEN=		"Requires the php-embed option enabled in PHP."
+#.endif
+
+BROKEN=		"Requires the php-embed option enabled in PHP but there is no code to check if this is so."
 
 post-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
