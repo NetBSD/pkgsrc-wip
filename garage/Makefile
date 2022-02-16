@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	v0.6.0
-PKGNAME=	${DISTNAME:S,^v,,}
+PKGNAME=	garage-${DISTNAME:S,^v,,}
 CATEGORIES=	www
 MASTER_SITES=	https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/
 
