@@ -323,6 +323,7 @@ man/man3/bl_gff_index_set_seqid_cpy.3
 man/man3/bl_gff_index_set_start.3
 man/man3/bl_gff_index_set_start_ae.3
 man/man3/bl_gff_index_set_start_cpy.3
+man/man3/bl_gff_init.3
 man/man3/bl_gff_read.3
 man/man3/bl_gff_set_attributes.3
 man/man3/bl_gff_set_attributes_ae.3
