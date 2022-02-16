@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (glazier-1.0.tar.bz2) = 39923dada688db86d9bd21c799d679c6c2bc1e1894eac8d52ba5825596b5f332
-SHA512 (glazier-1.0.tar.bz2) = 12b45a025c59682bee70aabd60d3513d103e3aa499f790fa10c379b1a92945c867562d931ac118fc92cb4d2ed36d7f4bc2dd62873a075aa489869132ca1a4b2c
-Size (glazier-1.0.tar.bz2) = 12799 bytes
+BLAKE2s (glazier-1.1.tar.bz2) = b8ca0334fdca4ec97f21e43a17486eb39ae8172e3744eca1266381e8124bc4e0
+SHA512 (glazier-1.1.tar.bz2) = 80b8ab8a3167908b0ed9c2232d229d07107ada6cc81d7a32c9b9811752739765abaf7cf385d929d6fa69e20c74abbc7ce0a721a881925ee01b7d6b087a47bc6f
+Size (glazier-1.1.tar.bz2) = 12793 bytes

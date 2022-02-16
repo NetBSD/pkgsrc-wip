@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	glazier-1.0
+DISTNAME=	glazier-1.1
 CATEGORIES=	wm
 MASTER_SITES=	https://dl.z3bra.org/releases/
 EXTRACT_SUFX=	.tar.bz2
