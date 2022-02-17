@@ -6025,7 +6025,6 @@ SUBDIR+=	xplore
 SUBDIR+=	xplugd
 SUBDIR+=	xqf
 SUBDIR+=	xrdp
-SUBDIR+=	xscreensaver
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
