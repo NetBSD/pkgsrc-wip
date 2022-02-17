@@ -1,0 +1,20 @@
+Fix compilation problem:
+
+c++ -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-check -I/usr/pkg/include -I/usr/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -I/usr/pkg/include/python3.10 -g -I/usr/pkg/include/netlib -I/usr/pkg/include -I/usr/include -I/usr/X11R7/include/freetype2 -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -I/usr/pkg/include/python3.10 -std=c++11 -fPIC -D_PYMOL_LIBPNG -D_PYMOL_FREETYPE -DPYMOL_OPENMP -D_PYMOL_VMD_PLUGINS -D_HAVE_LIBXML -D_PYMOL_NO_MSGPACKC -D_PYMOL_NO_MAIN -D_PYMOL_NUMPY -Iinclude -Icontrib/uiuc/plugins/include -Iov/src -Ilayer0 -Ilaye
+r1 -Ilayer2 -Ilayer3 -Ilayer4 -Ilayer5 -Ibuild/generated -Icontrib/uiuc/plugins/molfile_plugin/src -I/usr/pkg/lib/python3.10/site-packages/numpy/core/include -I/usr/include -I/usr/pkg/include/python3.10 -c -MMD layer1/COLLADA.cpp -o build/temp.netbsd-9.99.93-amd64-3.10/layer1/COLLADA.o -Werror=return-type -Wunused-variable -Wno-switch -Wno-narrowing -Wno-char-subscripts -O3 -fopenmp                                                        layer1/COLLADA.cpp:16:10: fatal error: libxml/xmlwriter.h: No such file or directory                                                                  16 | #include <libxml/xmlwriter.h>                                                                                                                    |          ^~~~~~~~~~~~~~~~~~~~                                                                                                              compilation terminated.
+...
+
+
+Fix python problem:
+
+error: command '/scratch/biology/py-mol/work/.cwrapper/bin/gcc' failed with exit code 1
+Exception ignored in: <function Pool.__del__ at 0x7532caff7fd0>
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python3.10/multiprocessing/pool.py", line 268, in __del__
+  File "/usr/pkg/lib/python3.10/multiprocessing/queues.py", line 378, in put
+  File "/usr/pkg/lib/python3.10/multiprocessing/connection.py", line 205, in send_bytes
+  File "/usr/pkg/lib/python3.10/multiprocessing/connection.py", line 405, in _send_bytes
+AttributeError: 'NoneType' object has no attribute 'pack'
+*** Error code 1
+
+Convert to py-qt* instead of py-Pmw.

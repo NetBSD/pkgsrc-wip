@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.6 2021/10/26 10:03:43 nia Exp $
+
+BLAKE2s (pymol-2.5.0.tar.gz) = ccc7cd9621283d980a5580f61ca1be9abaa8832a43e273e0916a91ba54e15409
+SHA512 (pymol-2.5.0.tar.gz) = 19f21b8f735fda5314abf202d56f3c81c7251bf6ef0df73ccee534d9c08035f4ef6155ffb68e09d7717a0fb5ba7289bbfa440691bea4cec0de7199c9e858ea91
+Size (pymol-2.5.0.tar.gz) = 10470268 bytes
