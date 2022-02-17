@@ -4129,6 +4129,7 @@ SUBDIR+=	py-modelparameters
 SUBDIR+=	py-modus
 SUBDIR+=	py-moksha-common
 SUBDIR+=	py-moksha-hub
+SUBDIR+=	py-mol
 SUBDIR+=	py-monad
 SUBDIR+=	py-mongomock
 SUBDIR+=	py-monty
