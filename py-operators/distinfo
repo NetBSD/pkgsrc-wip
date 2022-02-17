@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/05/30 17:42:10 jihbed Exp $
-
-RMD160 (pyoperators-0.13.10.tar.gz) = d7840940fb044d75b58338343a542155146db8c8
-SHA512 (pyoperators-0.13.10.tar.gz) = 09a89219b4cc52c1021813a470ea8de9cacdad1ef54ef576c9982e1336cee5784a70c0b33b15a4e2f5d7e594116f8d89d495104cc86c73183c16ef4ff51a1e91
-Size (pyoperators-0.13.10.tar.gz) = 177278 bytes
