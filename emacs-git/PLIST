@@ -1016,8 +1016,6 @@ share/emacs/${PKGVERSION}/lisp/auth-source-pass.el.gz
 share/emacs/${PKGVERSION}/lisp/auth-source-pass.elc
 share/emacs/${PKGVERSION}/lisp/auth-source.el.gz
 share/emacs/${PKGVERSION}/lisp/auth-source.elc
-share/emacs/${PKGVERSION}/lisp/autoarg.el.gz
-share/emacs/${PKGVERSION}/lisp/autoarg.elc
 share/emacs/${PKGVERSION}/lisp/autoinsert.el.gz
 share/emacs/${PKGVERSION}/lisp/autoinsert.elc
 share/emacs/${PKGVERSION}/lisp/autorevert.el.gz
@@ -3016,6 +3014,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/abbrevlist.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/abbrevlist.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/assoc.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/assoc.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/autoarg.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/autoarg.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.el.gz
