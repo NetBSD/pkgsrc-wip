@@ -20,5 +20,4 @@ do-install:
 		 ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
