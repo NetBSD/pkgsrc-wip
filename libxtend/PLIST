@@ -52,6 +52,8 @@ man/man3/ffclose.3
 man/man3/ffdopen.3
 man/man3/ffgetc.3
 man/man3/ffopen.3
+man/man3/ffpclose.3
+man/man3/ffpopen.3
 man/man3/ffputc.3
 man/man3/ffstdin.3
 man/man3/ffstdout.3
@@ -98,6 +100,8 @@ man/man3/va_usage.3
 man/man3/valid_extension.3
 man/man3/xt_factorial.3
 man/man3/xt_fclose.3
+man/man3/xt_ffclose.3
+man/man3/xt_ffopen.3
 man/man3/xt_fopen.3
 man/man3/xt_malloc.3
 man/man3/xt_n_choose_k.3
