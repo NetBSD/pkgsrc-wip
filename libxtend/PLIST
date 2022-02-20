@@ -56,6 +56,7 @@ man/man3/ffpclose.3
 man/man3/ffpopen.3
 man/man3/ffprintf.3
 man/man3/ffputc.3
+man/man3/ffread_line_malloc.3
 man/man3/ffstdin.3
 man/man3/ffstdout.3
 man/man3/ffungetc.3
