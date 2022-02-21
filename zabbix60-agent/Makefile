@@ -1,5 +1,6 @@
 # $NetBSD$
 
+PKGREVISION=	1
 .include "../../wip/zabbix60-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-agent-/}
@@ -14,7 +15,7 @@ CONFIGURE_ARGS+=	--enable-agent
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--with-libcurl
-CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ARGS+=	--with-libpcre2=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 EGDIR=		share/examples/${PKGBASE}
@@ -45,5 +46,5 @@ PLIST_SUBST+=			PKGBASE=${PKGBASE}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

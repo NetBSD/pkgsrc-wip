@@ -1,9 +1,9 @@
 # $NetBSD$
-# used by wip/zabbix54-agent/Makefile
-# used by wip/zabbix54-proxy/Makefile
-# used by wip/zabbix54-server/Makefile
-# used by wip/zabbix54-frontend/Makefile
-# used by wip/zabbix54-java/Makefile
+# used by wip/zabbix60-agent/Makefile
+# used by wip/zabbix60-proxy/Makefile
+# used by wip/zabbix60-server/Makefile
+# used by wip/zabbix60-frontend/Makefile
+# used by wip/zabbix60-java/Makefile
 
 DISTNAME=	zabbix-6.0.0
 CATEGORIES=	sysutils
