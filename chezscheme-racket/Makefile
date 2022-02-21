@@ -69,6 +69,15 @@ do-configure:
 			--installman=${PREFIX}/${PKGMANDIR} \
 			--temproot=${DESTDIR}
 
+post-install:
+	mkdir -p ${DESTDIR}/${PREFIX}/share/examples/csv${PKGVERSION}
+	${MV} -f \
+		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/*.c \
+		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/*.ss \
+		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/Makefile \
+		${DESTDIR}/${PREFIX}/share/examples/csv${PKGVERSION}
+	${RMDIR} ${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples
+
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
