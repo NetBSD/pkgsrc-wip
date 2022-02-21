@@ -61,10 +61,12 @@ info/speedbar.info.gz
 info/srecode.info.gz
 info/todo-mode.info.gz
 info/tramp.info.gz
+info/transient.info.gz
 info/url.info.gz
 info/vhdl-mode.info.gz
 info/vip.info.gz
 info/viper.info.gz
+info/vtable.info.gz
 info/widget.info.gz
 info/wisent.info.gz
 info/woman.info.gz
@@ -1769,6 +1771,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/trace.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/trace.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/unsafep.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/unsafep.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/vtable.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/vtable.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/warnings.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/warnings.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lock.el.gz
