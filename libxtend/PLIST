@@ -105,8 +105,10 @@ man/man3/xt_fclose.3
 man/man3/xt_ffclose.3
 man/man3/xt_ffopen.3
 man/man3/xt_fopen.3
+man/man3/xt_inhale_strings.3
 man/man3/xt_malloc.3
 man/man3/xt_n_choose_k.3
+man/man3/xt_read_line_malloc.3
 man/man3/xt_realloc.3
 man/man3/xt_tic.3
 man/man3/xt_toc.3
