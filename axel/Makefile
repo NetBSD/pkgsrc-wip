@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.8 2012/09/24 16:56:41 asau Exp $
-#
 
 DISTNAME=		axel-2.17.11
 CATEGORIES=		net
-MASTER_SITES=		https://github.com/axel-download-accelerator/axel/releases/download/v${PKGVERSION_NOREV}/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=axel-download-accelerator/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		ismael@iodev.co.uk
 HOMEPAGE=		https://github.com/axel-download-accelerator/axel
