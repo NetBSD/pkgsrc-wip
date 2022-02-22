@@ -1,26 +1,22 @@
 # $NetBSD: Makefile,v 1.8 2012/09/24 16:56:41 asau Exp $
 #
 
-DISTNAME=		axel-1.0b
+DISTNAME=		axel-2.17.11
 CATEGORIES=		net
-MASTER_SITES=		https://wilmer.gaa.st/downloads/
+MASTER_SITES=		https://github.com/axel-download-accelerator/axel/releases/download/v${PKGVERSION_NOREV}/
 
-MAINTAINER=		alchow@users.sourceforge.net
+MAINTAINER=		ismael@iodev.co.uk
 HOMEPAGE=		https://github.com/axel-download-accelerator/axel
 COMMENT=		HTTP/FTP download accelerator
 
-HAS_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	bin etc ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/examples/axel
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/axelrc.example ${PKG_SYSCONFDIR}/axelrc
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/axel ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/axelrc.example ${DESTDIR}${EGDIR}
-	${INSTALL_MAN} ${WRKSRC}/axel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/axelrc.example ${DESTDIR}${EGDIR}
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
