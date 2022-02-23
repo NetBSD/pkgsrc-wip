@@ -3944,7 +3944,6 @@ SUBDIR+=	py-hybridlfpy
 SUBDIR+=	py-hydrointerp
 SUBDIR+=	py-hyperbolic
 SUBDIR+=	py-hyperspy
-SUBDIR+=	py-hypothesmith
 SUBDIR+=	py-ibis
 SUBDIR+=	py-ibmiotf
 SUBDIR+=	py-icane
