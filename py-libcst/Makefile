@@ -22,6 +22,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # for updating cargo-depends, uncomment the next line since Cargo.lock lives there
 #WRKSRC=		${WRKDIR}/${DISTNAME}/native
 
+CHECK_WRKREF_SKIP+=	${PYSITELIB}/libcst/native.so
+
 .include "../../lang/python/egg.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
