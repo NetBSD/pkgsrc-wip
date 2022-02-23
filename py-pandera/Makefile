@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.6.0:../../wip/py-typing-inspect
+DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.6.0:../../devel/py-typing-inspect
 .endif
 
 

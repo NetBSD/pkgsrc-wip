@@ -13,7 +13,7 @@ LICENSE=	mit
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.0.0:../../devel/py-setuptools-rust
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.2:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.4.0:../../wip/py-typing-inspect
+DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.4.0:../../devel/py-typing-inspect
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.2:../../textproc/py-yaml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
