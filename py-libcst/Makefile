@@ -10,13 +10,13 @@ HOMEPAGE=	https://github.com/Instagram/LibCST
 COMMENT=	Concrete syntax tree with AST-like properties for Python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.0.0:../../devel/py-setuptools-rust
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.2:../../devel/py-typing-extensions
 BUILD_DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.4.0:../../wip/py-typing-inspect
 BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml>=5.2:../../textproc/py-yaml
 
-USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "cargo-depends.mk"
 # for updating cargo-depends, uncomment the next line since Cargo.lock lives there
