@@ -11,7 +11,7 @@ COMMENT=	Hypothesis strategies for generating Python programs, like CSmith
 LICENSE=	mpl-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-libcst-[0-9]*:../../lang/py-libcst
-DEPENDS+=	${PYPKGPREFIX}-lark-parser-[0-9]*:../../wip/py-lark-parser
+DEPENDS+=	${PYPKGPREFIX}-lark-parser-[0-9]*:../../lang/py-lark-parser
 DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-parso-[0-9]*:../../lang/py-parso
