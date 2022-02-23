@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	typing_inspect-0.7.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_i/-i/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typing_inspect/}
 
