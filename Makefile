@@ -3670,7 +3670,6 @@ SUBDIR+=	py-dill
 SUBDIR+=	py-dimarray
 SUBDIR+=	py-diofant
 SUBDIR+=	py-discord.py
-SUBDIR+=	py-distlib
 SUBDIR+=	py-distob
 SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-dit

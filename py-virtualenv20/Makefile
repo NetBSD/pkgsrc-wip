@@ -12,7 +12,7 @@ LICENSE=	mit
 
 CONFLICTS+=	${PYPKGPREFIX}-virtualenv-[0-9]*
 
-DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1<1:../../wip/py-distlib
+DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1<1:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.2.0<4:../../wip/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2<3:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0<2:../../lang/py-six
