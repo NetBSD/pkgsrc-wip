@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Zac-HD/hypothesmith
 COMMENT=	Hypothesis strategies for generating Python programs, like CSmith
 LICENSE=	mpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-libcst-[0-9]*:../../wip/py-libcst
+DEPENDS+=	${PYPKGPREFIX}-libcst-[0-9]*:../../lang/py-libcst
 DEPENDS+=	${PYPKGPREFIX}-lark-parser-[0-9]*:../../wip/py-lark-parser
 DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black

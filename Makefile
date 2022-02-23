@@ -4031,7 +4031,6 @@ SUBDIR+=	py-lempel-Ziv_Complexity
 SUBDIR+=	py-lenstools
 SUBDIR+=	py-lib
 SUBDIR+=	py-libclang-py3
-SUBDIR+=	py-libcst
 SUBDIR+=	py-libgit2-glib
 SUBDIR+=	py-liblarch
 SUBDIR+=	py-liblzma
