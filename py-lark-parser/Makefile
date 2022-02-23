@@ -2,7 +2,7 @@
 
 DISTNAME=	lark-parser-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel lang
+CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lark-parser/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
