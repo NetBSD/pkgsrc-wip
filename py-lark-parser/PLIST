@@ -1,9 +1,12 @@
 @comment $NetBSD$
 ${PYSITELIB}/lark-stubs/__init__.pyi
+${PYSITELIB}/lark-stubs/ast_utils.pyi
 ${PYSITELIB}/lark-stubs/exceptions.pyi
+${PYSITELIB}/lark-stubs/grammar.pyi
 ${PYSITELIB}/lark-stubs/indenter.pyi
 ${PYSITELIB}/lark-stubs/lark.pyi
 ${PYSITELIB}/lark-stubs/lexer.pyi
+${PYSITELIB}/lark-stubs/load_grammar.pyi
 ${PYSITELIB}/lark-stubs/reconstruct.pyi
 ${PYSITELIB}/lark-stubs/tree.pyi
 ${PYSITELIB}/lark-stubs/visitors.pyi
@@ -16,6 +19,9 @@ ${PYSITELIB}/lark/__pyinstaller/__init__.pyo
 ${PYSITELIB}/lark/__pyinstaller/hook-lark.py
 ${PYSITELIB}/lark/__pyinstaller/hook-lark.pyc
 ${PYSITELIB}/lark/__pyinstaller/hook-lark.pyo
+${PYSITELIB}/lark/ast_utils.py
+${PYSITELIB}/lark/ast_utils.pyc
+${PYSITELIB}/lark/ast_utils.pyo
 ${PYSITELIB}/lark/common.py
 ${PYSITELIB}/lark/common.pyc
 ${PYSITELIB}/lark/common.pyo
@@ -26,6 +32,9 @@ ${PYSITELIB}/lark/grammar.py
 ${PYSITELIB}/lark/grammar.pyc
 ${PYSITELIB}/lark/grammar.pyo
 ${PYSITELIB}/lark/grammars/common.lark
+${PYSITELIB}/lark/grammars/lark.lark
+${PYSITELIB}/lark/grammars/python.lark
+${PYSITELIB}/lark/grammars/unicode.lark
 ${PYSITELIB}/lark/indenter.py
 ${PYSITELIB}/lark/indenter.pyc
 ${PYSITELIB}/lark/indenter.pyo
@@ -65,6 +74,9 @@ ${PYSITELIB}/lark/parsers/grammar_analysis.pyo
 ${PYSITELIB}/lark/parsers/lalr_analysis.py
 ${PYSITELIB}/lark/parsers/lalr_analysis.pyc
 ${PYSITELIB}/lark/parsers/lalr_analysis.pyo
+${PYSITELIB}/lark/parsers/lalr_interactive_parser.py
+${PYSITELIB}/lark/parsers/lalr_interactive_parser.pyc
+${PYSITELIB}/lark/parsers/lalr_interactive_parser.pyo
 ${PYSITELIB}/lark/parsers/lalr_parser.py
 ${PYSITELIB}/lark/parsers/lalr_parser.pyc
 ${PYSITELIB}/lark/parsers/lalr_parser.pyo
@@ -77,9 +89,6 @@ ${PYSITELIB}/lark/parsers/xearley.pyo
 ${PYSITELIB}/lark/reconstruct.py
 ${PYSITELIB}/lark/reconstruct.pyc
 ${PYSITELIB}/lark/reconstruct.pyo
-${PYSITELIB}/lark/reconstruct2.py
-${PYSITELIB}/lark/reconstruct2.pyc
-${PYSITELIB}/lark/reconstruct2.pyo
 ${PYSITELIB}/lark/tools/__init__.py
 ${PYSITELIB}/lark/tools/__init__.pyc
 ${PYSITELIB}/lark/tools/__init__.pyo
