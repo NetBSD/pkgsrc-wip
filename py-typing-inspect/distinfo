@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (typing_inspect-0.6.0.tar.gz) = 5be0db114325dc20e547e888e5e7b1b09e784709
-SHA512 (typing_inspect-0.6.0.tar.gz) = 489ec587c8c4053dab2c13975b36b71d5c0e5e47e3501c3a627ea6fede971e7a85ff7a6c43a2b23ae8f79225e38cdc4c35a364f1fbad472424798f9b6b3160cb
-Size (typing_inspect-0.6.0.tar.gz) = 12229 bytes
+BLAKE2s (typing_inspect-0.7.1.tar.gz) = df06ee4c8959858b4443de7e1856caaa4b6b9f00322e6da140cb8aff6932c5a6
+SHA512 (typing_inspect-0.7.1.tar.gz) = 16aa279e5bcdcaa4ad28b68a5c5cedcefee32ec78f57c75b4285888ab6d634e3306eedc63445839cc57923ae956e9b2234cb2afcf71216b3f6ff6839cd48fc58
+Size (typing_inspect-0.7.1.tar.gz) = 11799 bytes
