@@ -1,9 +1,9 @@
 $NetBSD$
 
---- api_docgen/ocamldoc/Makefile.orig	2022-02-08 16:50:12.000000000 +0000
+--- api_docgen/ocamldoc/Makefile.orig	2022-02-21 15:57:25.000000000 +0000
 +++ api_docgen/ocamldoc/Makefile
-@@ -17,7 +17,7 @@ include $(ROOTDIR)/ocamldoc/Makefile.bes
- vpath %.mli $(ROOTDIR)/stdlib $(DOC_COMPILERLIBS_DIRS)  $(DOC_STDLIB_DIRS)
+@@ -19,7 +19,7 @@ include ../../ocamldoc/Makefile.best_oca
+ vpath %.mli ../../stdlib $(DOC_COMPILERLIBS_DIRS)  $(DOC_STDLIB_DIRS)
  
  
 -man: build/man/Stdlib.3o
@@ -11,7 +11,7 @@ $NetBSD$
  latex: build/latex/Stdlib.tex
  html: \
    build/html/libref/Stdlib.html \
-@@ -32,7 +32,7 @@ DOC_ALL_INCLUDES = \
+@@ -34,7 +34,7 @@ DOC_ALL_INCLUDES = \
  
  libref=$(stdlib_UNPREFIXED) $(otherlibref)
  
@@ -20,7 +20,7 @@ $NetBSD$
  ALL_LATEX= $(ALL_DOC:%=build/latex/%.tex)
  
  build/latex/ifocamldoc.tex: | build/latex
-@@ -58,7 +58,7 @@ build/libref/%.odoc: $(DOCGEN)/%.mld | b
+@@ -60,7 +60,7 @@ build/libref/%.odoc: build/%.mld | build
  	$(OCAMLDOC_RUN) $(DOC_STDLIB_INCLUDES) -text $< -dump  $@
  
  ALL_COMPILED_DOC=$(ALL_DOC:%=build/%.odoc)
@@ -29,7 +29,7 @@ $NetBSD$
  	$(OCAMLDOC_RUN) -man -d build/man -man-mini \
  	-nostdlib -hide Stdlib -lib Stdlib -t "OCaml library" \
  	$(addprefix -load , $(ALL_COMPILED_DOC))
-@@ -121,5 +121,5 @@ build/latex/compilerlibs_input.tex: | bu
+@@ -123,5 +123,5 @@ build/latex/compilerlibs_input.tex: | bu
  install:
  	$(MKDIR) "$(INSTALL_LIBRARIES_MAN_DIR)"
  	if test -d build/man; then \

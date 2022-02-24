@@ -1,4 +1,5 @@
 # $NetBSD: buildlink3.mk,v 1.56 2021/03/08 08:08:43 jaapb Exp $
+# Should only be used through ocaml.mk, not directly.
 
 BUILDLINK_TREE+=	ocaml
 
