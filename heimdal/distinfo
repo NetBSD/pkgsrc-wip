@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.46 2018/11/27 23:36:00 sevan Exp $
-
-RMD160 (heimdal-7.7.0.tar.gz) = a29bd27e99c0e3e05752d090fba99d14a94095af
-SHA512 (heimdal-7.7.0.tar.gz) = 6660939b5a36ce36310721a08a089fb671d1e3d2e8ac74ea4775bfa5f8f772d32de805551456200fe96cc486c092c44beb84f5dd877008bc305490ee971bbf99
-Size (heimdal-7.7.0.tar.gz) = 10189293 bytes
-SHA1 (patch-lib_hdb_hdb-mitdb.c) = 4e88d1cda0ff5960d8e07ab1b38f13c895d9b416
-SHA1 (patch-lib_libedit_configure) = c16317b2a05f1ce22121f4ada8696e3721861a5e

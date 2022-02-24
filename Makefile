@@ -1506,7 +1506,6 @@ SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
 SUBDIR+=	hdparm
 SUBDIR+=	heaptrack
-SUBDIR+=	heimdal
 SUBDIR+=	heimdall
 SUBDIR+=	helm
 SUBDIR+=	hengband
