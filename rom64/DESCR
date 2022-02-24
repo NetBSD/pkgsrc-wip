@@ -1,0 +1,6 @@
+Nintendo 64 ROM utility written in Go.
+
+* List information about all ROMs in a directory
+* Show information about a single ROM
+* Convert a ROM file to the native (Z64, Big-endian) format
+* Validate the ROM's SHA-1 checksum against a list of known-good ROM dumps.

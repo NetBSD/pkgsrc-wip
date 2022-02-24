@@ -5034,6 +5034,7 @@ SUBDIR+=	rnp
 SUBDIR+=	roadfighter
 SUBDIR+=	rocksdb
 SUBDIR+=	rolo
+SUBDIR+=	rom64
 SUBDIR+=	rootcheck
 SUBDIR+=	rootsh
 SUBDIR+=	rosegarden
