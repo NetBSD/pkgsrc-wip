@@ -2648,6 +2648,8 @@ share/emacs/${PKGVERSION}/lisp/mail/footnote.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/footnote.elc
 share/emacs/${PKGVERSION}/lisp/mail/hashcash.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/hashcash.elc
+share/emacs/${PKGVERSION}/lisp/mail/ietf-drums-date.el.gz
+share/emacs/${PKGVERSION}/lisp/mail/ietf-drums-date.elc
 share/emacs/${PKGVERSION}/lisp/mail/ietf-drums.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/ietf-drums.elc
 share/emacs/${PKGVERSION}/lisp/mail/mail-extr.el.gz
