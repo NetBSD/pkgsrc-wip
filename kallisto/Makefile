@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2018/12/21 19:00:56 bacon Exp $
 
-DISTNAME=	kallisto-0.46.1
+DISTNAME=	kallisto-0.48.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,13 +20,15 @@ SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
 CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON
-MAKE_JOBS_SAFE=		no	# Doesn't finished bundled htslib first
+# MAKE_JOBS_SAFE=		no	# Doesn't finish bundled htslib first
+LDFLAGS+=		-lhts
 INSTALLATION_DIRS+=	${DATADIR}
 
 DATADIR=		${PREFIX}/share/kallisto
 
 post-extract:
 	${CP} ${FILESDIR}/kallisto-test ${WRKSRC}
+	${RM} -rf ${WRKSRC}/ext/htslib
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/kallisto-test ${DESTDIR}${PREFIX}/bin
@@ -35,4 +37,5 @@ post-install:
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/libaec/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../wip/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
