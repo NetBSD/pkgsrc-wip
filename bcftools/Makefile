@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	bcftools-1.14
+DISTNAME=	bcftools-1.15
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 
