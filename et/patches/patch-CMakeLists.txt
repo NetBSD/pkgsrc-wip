@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2022-02-18 19:34:07.809964843 +0000
++++ CMakeLists.txt
+@@ -281,11 +281,6 @@ macro(DECORATE_TARGET TARGET_NAME)
+   add_sanitizers(${TARGET_NAME})
+   set_target_properties(${TARGET_NAME} PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT
+                                                   "src/base/Headers.hpp")
+-  if(CMAKE_CROSSCOMPILING)
+-    # Doesn't work when cross-compiling
+-  else()
+-    cotire(${TARGET_NAME})
+-  endif()
+ endmacro()
+ 
+ include_directories(

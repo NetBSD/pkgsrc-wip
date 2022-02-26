@@ -18,6 +18,19 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
+GCC_REQD+=	8  # uses std::filesystem
+LIBS+=		-lstdc++fs
+
+#.include "../../mk/bsd.prefs.mk"
+#PKGSRC_COMPILER=                clang
+#CLANGBASE=                      ${PREFIX}
+#.include "../../lang/llvm/buildlink3.mk"
+#BUILDLINK_DEPMETHOD.llvm=       build
+#.include "../../lang/clang/buildlink3.mk"
+#BUILDLINK_DEPMETHOD.clang=      build
+
+CMAKE_ARGS+=	-DDISABLE_VCPKG=ON
+
 
 PKGCONFIG_OVERRIDE+=	external_imported/Catch2/CMake/catch2.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/UniversalStacktrace/external/Catch2/CMake/catch2.pc.in
@@ -35,5 +48,8 @@ PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8_libbase.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8_libplatform.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8_monolith.pc.in
+
+.include "../../devel/protobuf/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
