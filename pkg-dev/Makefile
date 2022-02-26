@@ -19,9 +19,9 @@ DEPENDS+=	auto-admin>0:../../wip/auto-admin
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/* ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/* ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
