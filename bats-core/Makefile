@@ -23,6 +23,6 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} PKGMANDIR=${PKGMANDIR} ./install.sh ${DESTDIR}${PREFIX}
 
 do-test:
-	cd ${WRKSRC} && ./bin/bats ./test
+	cd ${WRKSRC} && ${SETENV} LC_MESSAGES=C PKGMANDIR=${PKGMANDIR} ./bin/bats ./test
 
 .include "../../mk/bsd.pkg.mk"
