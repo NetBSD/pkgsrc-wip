@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	browserpass-native-3.0.8
+DISTNAME=	browserpass-native-3.0.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=browserpass/}
 

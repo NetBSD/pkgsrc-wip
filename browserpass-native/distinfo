@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (browserpass-native-3.0.8.tar.gz) = 9d9d73dbe402d6ed61f8570c190a32d0034b77ef4a3993f34186389b6d6342b7
-SHA512 (browserpass-native-3.0.8.tar.gz) = c854e671153694bf87f8393e284983d213f31c46cbbc4e6fd892e1793b8aa59d81c257f0709334667b533a9570dc5819662c2bc7d165133398c9149fcc1eb1d0
-Size (browserpass-native-3.0.8.tar.gz) = 19274 bytes
+BLAKE2s (browserpass-native-3.0.9.tar.gz) = b7cee7137881271a821320c76edc4651d443c4ef02a856bc52b790333338b4cc
+SHA512 (browserpass-native-3.0.9.tar.gz) = 967091176ff1a8ee184b61fcaa386a59f134e02dd7a064b3c16cb963d1334ca0a0d3281f1bfc150c69ec5d7f082abce9b811731902645d377a44f8fe4a31bc8f
+Size (browserpass-native-3.0.9.tar.gz) = 19260 bytes
 BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.0.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
 Size (github.com_davecgh_go-spew_@v_v1.1.0.mod) = 34 bytes
