@@ -1,0 +1,11 @@
+@comment $NetBSD$
+include/csv2/mio.hpp
+include/csv2/parameters.hpp
+include/csv2/reader.hpp
+include/csv2/writer.hpp
+lib/cmake/csv2/csv2Config.cmake
+lib/cmake/csv2/csv2ConfigVersion.cmake
+lib/cmake/csv2/csv2Targets.cmake
+lib/pkgconfig/csv2.pc
+share/licenses/csv2/LICENSE
+share/licenses/csv2/LICENSE.mio
