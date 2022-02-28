@@ -1,6 +1,8 @@
 $NetBSD$
 
---- CMakeLists.txt.orig	2022-02-18 19:34:07.809964843 +0000
+* use pkgsrc cxxopts
+
+--- CMakeLists.txt.orig	2022-01-11 14:53:44.000000000 +0000
 +++ CMakeLists.txt
 @@ -281,11 +281,6 @@ macro(DECORATE_TARGET TARGET_NAME)
    add_sanitizers(${TARGET_NAME})
@@ -14,3 +16,11 @@ $NetBSD$
  endmacro()
  
  include_directories(
+@@ -293,7 +288,6 @@ include_directories(
+   ${EXTERNAL_DIR}/ThreadPool
+   ${EXTERNAL_DIR}/PlatformFolders
+   ${EXTERNAL_DIR}/Catch2/single_include
+-  ${EXTERNAL_DIR}/cxxopts/include
+   ${EXTERNAL_DIR}/msgpack-c/include
+   ${EXTERNAL_DIR}/sentry-native/include
+   ${EXTERNAL_DIR}/json/single_include/nlohmann

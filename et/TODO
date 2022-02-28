@@ -7,3 +7,4 @@ std::filesystem:
 /usr/obj/pkgsrc/wip/et/work/EternalTerminal-et-v6.1.11/src/base/LogHandler.cpp:51: undefined reference to `std::filesystem::permissions(std::filesystem::__cxx11::path const&, std::filesystem::perms, std::filesystem::perm_options)'
 collect2: error: ld returned 1 exit status
 
+nros: The above is now fixed.
