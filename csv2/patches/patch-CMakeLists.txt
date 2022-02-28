@@ -1,0 +1,29 @@
+$NetBSD$
+
+* Set description and url in pkg-config file
+* Install licenses in docdir as share/licenses are not used in pkgsrc
+
+--- CMakeLists.txt.orig	2020-07-27 15:19:54.000000000 +0000
++++ CMakeLists.txt
+@@ -4,7 +4,11 @@ if(DEFINED PROJECT_NAME)
+   set(CSV2_SUBPROJECT ON)
+ endif()
+ 
+-project(csv2 VERSION 1.8.0 LANGUAGES CXX)
++project(csv2
++        VERSION 1.8.0
++        DESCRIPTION "Fast CSV parser and writer for Modern C++"
++        HOMEPAGE_URL "https://github.com/p-ranav/csv2"
++        LANGUAGES CXX)
+   
+ if(EXISTS "${CMAKE_BINARY_DIR}/conanbuildinfo.cmake")
+     include("${CMAKE_BINARY_DIR}/conanbuildinfo.cmake")
+@@ -54,7 +58,7 @@ if(NOT CSV2_SUBPROJECT)
+           USE_SOURCE_PERMISSIONS
+           PATTERN "*.hpp")
+   install(FILES LICENSE LICENSE.mio
+-          DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/licenses/csv2)
++          DESTINATION ${CMAKE_INSTALL_DOCDIR})
+ 
+   if(EXISTS "${PROJECT_SOURCE_DIR}/.gitignore")
+     # Simple glob to regex conversion (.gitignore => CPACK_SOURCE_IGNORE_FILES)
