@@ -12,7 +12,9 @@ include/cereal/details/polymorphic_impl_fwd.hpp
 include/cereal/details/static_object.hpp
 include/cereal/details/traits.hpp
 include/cereal/details/util.hpp
+include/cereal/external/LICENSE
 include/cereal/external/base64.hpp
+include/cereal/external/rapidjson/LICENSE
 include/cereal/external/rapidjson/allocators.h
 include/cereal/external/rapidjson/cursorstreamwrapper.h
 include/cereal/external/rapidjson/document.h
@@ -38,6 +40,7 @@ include/cereal/external/rapidjson/internal/swap.h
 include/cereal/external/rapidjson/istreamwrapper.h
 include/cereal/external/rapidjson/memorybuffer.h
 include/cereal/external/rapidjson/memorystream.h
+include/cereal/external/rapidjson/msinttypes/LICENSE
 include/cereal/external/rapidjson/msinttypes/inttypes.h
 include/cereal/external/rapidjson/msinttypes/stdint.h
 include/cereal/external/rapidjson/ostreamwrapper.h
@@ -86,4 +89,6 @@ include/cereal/types/valarray.hpp
 include/cereal/types/variant.hpp
 include/cereal/types/vector.hpp
 include/cereal/version.hpp
-share/cmake/cereal/cereal-config.cmake
+lib/cmake/cereal/cerealConfig.cmake
+lib/cmake/cereal/cerealConfigVersion.cmake
+lib/cmake/cereal/cerealTargets.cmake

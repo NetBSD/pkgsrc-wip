@@ -1,0 +1,15 @@
+$NetBSD$
+
+boost as of pkgsrc-2020Q1 fails with -Wold-style-cast.
+
+--- CMakeLists.txt.orig	2022-02-28 03:46:32.000000000 +0000
++++ CMakeLists.txt
+@@ -35,7 +35,7 @@ endif()
+ if(MSVC)
+     add_compile_options(/bigobj /W3 /WX)
+ else()
+-    add_compile_options(-Wall -Wextra -pedantic -Wshadow -Wold-style-cast)
++    add_compile_options(-Wall -Wextra -pedantic -Wshadow)
+     option(WITH_WERROR "Compile with '-Werror' C++ compiler flag" ON)
+     if(WITH_WERROR)
+         add_compile_options(-Werror)
