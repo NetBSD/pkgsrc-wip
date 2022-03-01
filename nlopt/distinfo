@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (nlopt-2.7.0.tar.gz) = 6287f9a45e924ed5df3cf40d53a10b1f5cc888d45a02d0802bd6a7676bcedefd
-SHA512 (nlopt-2.7.0.tar.gz) = 3c41cab357b50adf50fe2d6225409ade8c5e8ee3576e3680ab29dded29ed7d328bc3d51d3a50054630159c319dca69e47ff08dc5df891b180b7d7e8fcbc27694
-Size (nlopt-2.7.0.tar.gz) = 2045585 bytes
+BLAKE2s (nlopt-2.7.1.tar.gz) = cd2c3ab540c794c8e1804fc29b1d0b6804cff226522e3f748d0c083ef579f0ea
+SHA512 (nlopt-2.7.1.tar.gz) = e23cb522fc696010574c14b72be85acc0f8ccf0bf208bf2b8789c57d6c5a6e6d419ee10330581518b1c1567018ae909b626ce7761d4fbd5bf112916871e420e2
+Size (nlopt-2.7.1.tar.gz) = 2044180 bytes

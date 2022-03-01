@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		nlopt-2.7.0
+DISTNAME=		nlopt-2.7.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=stevengj/}
 GITHUB_PROJECT=		nlopt
