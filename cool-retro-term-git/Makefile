@@ -1,6 +1,7 @@
 # $NetBSD$
 
-PKGNAME=		cool-retro-term-1.1.1
+PKGVERSION=		1.2.0
+PKGNAME=		cool-retro-term-${PKGVERSION}
 CATEGORIES=		x11
 
 MAINTAINER=		stix@stix.id.au
@@ -10,7 +11,7 @@ LICENSE=		gnu-gpl-v3
 
 # For non-pkgsrc/wip:
 # MASTER_SITES=		${MASTER_SITE_GITHUB:=Swordfish90/}
-# TERM_TAG=		1.1.1
+# TERM_TAG=		${PKGVERSION}
 # QMLTERMWIDGET_TAG=	0.2.0
 # DISTFILES+=		${TERM_TAG}.tar.gz
 # DISTFILES+=		${QMLTERMWIDGET_TAG}.tar.gz
@@ -22,10 +23,9 @@ LICENSE=		gnu-gpl-v3
 # WRKSRC=		${WRKDIR}/cool-retro-term-${TERM_TAG}
 
 # For pkgsrc/wip:
-PKGREVISION=			1
 GIT_REPOSITORIES=		cool-retro-term
 GIT_REPO.cool-retro-term=	https://github.com/Swordfish90/cool-retro-term.git
-GIT_TAG.cool-retro-term=	1.1.1
+GIT_TAG.cool-retro-term=	${PKGVERSION}
 WRKSRC=				${WRKDIR}/cool-retro-term
 
 SUBST_CLASSES+=		usrpath
@@ -51,7 +51,7 @@ do-configure:
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
-.include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
