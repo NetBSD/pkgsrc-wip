@@ -2,7 +2,6 @@
 # used by wip/zabbix60-proxy/Makefile
 # used by wip/zabbix60-agent/Makefile
 #
-#PKGREVISION=	1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-server-${ZABBIX_DB_TYPE}-/}

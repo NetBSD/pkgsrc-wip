@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix54-proxy
+PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix60-proxy
 PKG_SUPPORTED_OPTIONS+=		inet6 ipmi libssh libssh2 snmp
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	mysql pgsql sqlite3

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix54-frontend
+PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix60-frontend
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	mysql pgsql
 PKG_SUGGESTED_OPTIONS+=		pgsql

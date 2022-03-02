@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix54-agent
+PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix60-agent
 PKG_SUPPORTED_OPTIONS+=		inet6
 
 .if empty(MISSING_FEATURES:Minet6)
