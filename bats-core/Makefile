@@ -20,7 +20,8 @@ USE_TOOLS+=		bash:run
 REPLACE_BASH+=		bin/bats libexec/bats-core/*
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} PKGMANDIR=${PKGMANDIR} ./install.sh ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && rm -f bin/bats.orig libexec/bats-core/bats.orig && \
+		${SETENV} PKGMANDIR=${PKGMANDIR} ./install.sh ${DESTDIR}${PREFIX}
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} LC_MESSAGES=C PKGMANDIR=${PKGMANDIR} ./bin/bats ./test
