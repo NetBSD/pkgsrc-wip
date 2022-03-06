@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (cli_helpers-2.2.1.tar.gz) = cb3b23440e3a2776ced52a042ca9ecae446ccd4881d6e998c74a6e2c5d2e8ac7
+SHA512 (cli_helpers-2.2.1.tar.gz) = df0972f8ae3f2dfc8ad0541391762a8e80aa97bfd78ff14e999c386f08da2817bafaf41da74c7ca7cf24fbfc5e14e725fe18ab9865e5307fbe9fe65ff915a1c0
+Size (cli_helpers-2.2.1.tar.gz) = 36089 bytes

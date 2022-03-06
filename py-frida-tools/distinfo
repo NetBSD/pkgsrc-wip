@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (frida-tools-10.5.4.tar.gz) = 2e7d4ab4f9f66ff147dcc94c530db668449d37c418deaa082ebf02ec90136abc
+SHA512 (frida-tools-10.5.4.tar.gz) = 9880dba6f2d4d5d7db820f308240e6a9e3c6065347f03c7b1bd0754f4d7acdcbe29737b04a2039273aee045b45161dc299395ee7f12536ffbec3a59cbfe7ce40
+Size (frida-tools-10.5.4.tar.gz) = 44988 bytes

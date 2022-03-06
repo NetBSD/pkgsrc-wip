@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (litecli-1.7.0.tar.gz) = 853e22189a1abeb953399fe1cc603dc5588d0b76f67ac8d84430989f5053e009
+SHA512 (litecli-1.7.0.tar.gz) = 83322e659e537c6b13c3da2c531f0513ae84c76419d8cebd4867d74eac9313b8525aff05eae7cdcbec31813a344833a982ae1b2e8fcba7b5cec439238917e112
+Size (litecli-1.7.0.tar.gz) = 58502 bytes

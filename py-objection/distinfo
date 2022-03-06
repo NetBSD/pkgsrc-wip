@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (objection-1.11.0.tar.gz) = 95af7b43bd165d863505e4a56bd2e87bfa843ff97bfeea709c97a06a2af247b4
+SHA512 (objection-1.11.0.tar.gz) = 40b2feb140c9d33898c649a640b525d683adf823ca6ef9a7845a89055f40db753b4d91442cbb0e48c4cfe6913ca36ee9ec3fc78b9001539752b3c8a0bacc90c4
+Size (objection-1.11.0.tar.gz) = 327219 bytes

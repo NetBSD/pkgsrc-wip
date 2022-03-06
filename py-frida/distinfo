@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (frida-15.1.17.tar.gz) = 3d82fdcc0fcba56ca3ec277a5389fa2ebe46e056ad0637ebb79d9972031b0e00
+SHA512 (frida-15.1.17.tar.gz) = 6bb669ee28cdae9856fb0ce14db9ab8d2ca093fe18c48df9649e5f230facdbb5ba23032fe55d21056b21775fbeea798d36cfac53299ee8b78cf1052510c4c3ba
+Size (frida-15.1.17.tar.gz) = 11598 bytes
