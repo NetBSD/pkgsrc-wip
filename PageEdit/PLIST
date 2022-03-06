@@ -18,6 +18,7 @@ share/pageedit/translations/pageedit_de.qm
 share/pageedit/translations/pageedit_en.qm
 share/pageedit/translations/pageedit_es.qm
 share/pageedit/translations/pageedit_fr.qm
+share/pageedit/translations/pageedit_hu_HU.qm
 share/pageedit/translations/pageedit_it.qm
 share/pageedit/translations/pageedit_ja.qm
 share/pageedit/translations/pageedit_ko.qm
@@ -27,7 +28,7 @@ share/pageedit/translations/pageedit_pt_BR.qm
 share/pageedit/translations/pageedit_ru.qm
 share/pageedit/translations/pageedit_sr.qm
 share/pageedit/translations/pageedit_sv.qm
+share/pageedit/translations/pageedit_tr.qm
 share/pageedit/translations/pageedit_uk_UA.qm
-share/pageedit/translations/pageedit_zh.qm
 share/pageedit/translations/pageedit_zh_CN.qm
 share/pageedit/translations/pageedit_zh_TW.qm

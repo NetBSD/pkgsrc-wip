@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.139 2021/02/07 06:30:19 ryoon Exp $
 
-DISTNAME=	PageEdit-1.5.0
+DISTNAME=	PageEdit-1.7.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Sigil-Ebook/PageEdit/
-COMMENT=	ePub XHTML Visual Editor
+COMMENT=	XHTML Visual Editor for ePubs
 LICENSE=	gnu-gpl-v3
 
 Qt5_DIR=	${BUILDLINK_PREFIX.qt5-qtbase}/qt5
