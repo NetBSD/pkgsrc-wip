@@ -5418,6 +5418,7 @@ SUBDIR+=	syn68k
 SUBDIR+=	synce-dynamite
 SUBDIR+=	synce-orange
 SUBDIR+=	syncserver-dependencies
+SUBDIR+=	syncstorage-rs
 SUBDIR+=	syncthing-discosrv
 SUBDIR+=	syncthing-inotify
 SUBDIR+=	syncthing-relaysrv
@@ -6079,6 +6080,7 @@ SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zoneminder
 SUBDIR+=	zpaq
+SUBDIR+=	zrepl
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
