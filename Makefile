@@ -31,7 +31,6 @@ SUBDIR+=	OpenLara
 SUBDIR+=	OpenTESArena
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
-SUBDIR+=	PageEdit
 SUBDIR+=	PatternPaint
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
