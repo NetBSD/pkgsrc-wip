@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://bugs.chromium.org/p/boringssl/issues/detail?id=482
+
 --- third_party/boringssl/src/include/openssl/thread.h.orig	2020-06-25 09:34:42.000000000 +0000
 +++ third_party/boringssl/src/include/openssl/thread.h
 @@ -88,6 +88,9 @@ typedef pthread_rwlock_t CRYPTO_MUTEX;
