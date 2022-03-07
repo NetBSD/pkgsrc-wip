@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.18 2012/11/17 11:03:23 kristerw Exp $
-#
 
 DISTNAME=	beast-0.5.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://beast.gtk.org/beast-ftp/v0.5/
 
@@ -24,7 +23,7 @@ pre-configure:
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile18/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

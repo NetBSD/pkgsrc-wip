@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2012/10/07 17:17:48 asau Exp $
-#
 
 DISTNAME=	trackballs-1.1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trackballs/}
 
@@ -28,7 +27,7 @@ SUBST_FILES.share=	share/Makefile.in
 SUBST_SED.share=	-e 's|install -D|${INSTALL_DATA:Q}|'
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile18/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

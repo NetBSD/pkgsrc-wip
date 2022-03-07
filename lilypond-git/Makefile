@@ -78,7 +78,7 @@ pre-configure:
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile18/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../wip/mk/git-package.mk"
