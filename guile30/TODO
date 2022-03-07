@@ -13,21 +13,3 @@ Perhaps fixed upstream
 
 \todo Explain why we want to give this arg.  Just vague best
 practices?
-
-* THREADS
-
-Without threads support, doesn't build:
-
-  CCLD     libguile-3.0.la
-ld: .libs/libguile_3.0_la-posix.o: in function `scm_tmpnam':
-/scratch/wip/guile30/work/guile-3.0.1/libguile/posix.c:1605: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
-  CCLD     guile
-ld: ./.libs/libguile-3.0.so: warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
-ld: ./.libs/libguile-3.0.so: undefined reference to `scm_i_pthread_key_create'
-
-Reported upstream as http://debbugs.gnu.org/cgi/bugreport.cgi?bug=40075
-
-(Probably fixed in 3.0.3, based on bug)
-
-Perhaps make a no-threads option, but it is not clear why we care
-about the non-threaded case.
