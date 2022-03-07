@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
+MAKE_ENV+=		PAXCTL=echo
+MAKE_ENV.NetBSD+=	PAXCTL=paxctl
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.

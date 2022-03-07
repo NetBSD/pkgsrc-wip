@@ -3,23 +3,6 @@
 3.0.4 changes the libguile shlib version backwards.  Reported upstream
 on 20201213.
 
-* MPROTECT
-
-On NetBSD, guile is marked NOT_MPROTECT_SAFE.  However, guile is built
-and then used during the build, and that version hits the same
-problem:
-
-      GEN      guile-procedures.texi
-    allocating JIT code buffer failed: Permission denied
-    jit.c:5612: fatal: assertion failed
-    [1]   Broken pipe             cat alist.doc array-handle.doc array-map.doc a... |
-	  Abort trap (core dumped) GUILE_AUTO_COMPILE=0 ../meta/build-env guild s...
-
-Reported to guile-devel@ on 20200827.
-
-Probably needs a "paxctl +m guile" for the binary (in .libs via
-libtool) after build and before use as a build tool.
-
 * TMPNAM
 
 with CONFIGURE_ARGS+=       --disable-tmpnam
