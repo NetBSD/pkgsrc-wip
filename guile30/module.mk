@@ -20,5 +20,5 @@ pre-configure:
 	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${PREFIX}/guile/3.0/share/aclocal -vif)
 .  endif
 
-.include "../../lang/guile30/buildlink3.mk"
+.include "../../wip/guile30/buildlink3.mk"
 .endif

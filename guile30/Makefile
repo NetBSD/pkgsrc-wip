@@ -16,7 +16,6 @@ GUILE_SUBDIR=	guile/3.0
 
 # guile does not like the --build and --host triplets on NetBSD
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
@@ -64,19 +63,7 @@ GUILE_LIBNAME.*=	so.1.4.1
 PLIST_SUBST+=		GUILE_LIBNAME=${GUILE_LIBNAME}
 PRINT_PLIST_AWK+=	{gsub(/${GUILE_LIBNAME}/, "$${GUILE_LIBNAME}");}
 
-.include "../../mk/bsd.prefs.mk"
-
-# https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24002
-post-configure:
-	${ECHO} '#define FLEXIBLE_ARRAY_MEMBER /**/' >> ${WRKSRC}/config.h
-
 .include "../../mk/pax.mk"
-# Guile's build uses the just-built guile.  With pax enabled, the build
-# fails and after
-#   paxctl +m work/guile-3.0.7/libguile/.libs/guile
-# it succeeds.  This needs to be patched into the build.
-NOT_MPROTECT_SAFE+=	${GUILE_PREFIX}/bin/guile
-
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
