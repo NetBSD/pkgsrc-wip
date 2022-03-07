@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/ms-extract
+bin/ms-intersect
+bin/ms-plot
+bin/ms-stack
+man/man1/ms-extract.1
+man/man1/ms-intersect.1
+man/man1/ms-plot.1
+man/man1/ms-stack.1

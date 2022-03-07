@@ -2400,6 +2400,7 @@ SUBDIR+=	microbiomeutil
 SUBDIR+=	microblog-purple
 SUBDIR+=	microcom
 SUBDIR+=	micropolis
+SUBDIR+=	microsynteny-tools
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
 SUBDIR+=	miktex
