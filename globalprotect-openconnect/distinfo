@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (globalprotect-openconnect-v1.4.1.tar.gz) = 6a3410892cce13fbeef7f2c7dceabf562c5844151f04f0bf68ba66359f6daf4c
+SHA512 (globalprotect-openconnect-v1.4.1.tar.gz) = 94f9480da19d00788768dbc6cd84006427cb9a36a51a4f5ec730eba6c6782c1490bcea1b7b4d6f3661b13b90682759273a98e57126b2c5498698b9182da21312
+Size (globalprotect-openconnect-v1.4.1.tar.gz) = 118400 bytes
+SHA1 (patch-GPClient_CMakeLists.txt) = 173f9b88327e82eac504e3a54eae4bb2a43b0b96
+SHA1 (patch-GPService_CMakeLists.txt) = 6e412803be484680f6e2aabcdc822db555f9913a
