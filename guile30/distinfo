@@ -5,3 +5,4 @@ SHA512 (guile-3.0.7.tar.gz) = d7b159e109fd4a08231ef9b961376e71c2872f08d47d82896d
 Size (guile-3.0.7.tar.gz) = 21878396 bytes
 SHA1 (patch-libguile_Makefile.in) = eae49ebd5b2a4a415be89503819f454b7eb6a21d
 SHA1 (patch-libguile_loader.c) = 32b012d095c343995f93d0c8160411c4b0cfbee1
+SHA1 (patch-test-suite_standalone_Makefile.in) = d1f0b24adcb7db4b1d6f91e2e55d4a9c245700e6
