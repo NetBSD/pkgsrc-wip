@@ -5,8 +5,12 @@
 #              Mon Mar  7 19:53:02 CST 2022               #
 ###########################################################
 
-# Unknown tool: USE_TOOLS=	qt:5
-#USE_QT=		buildtools core dbus declarative gui location network printsupport qmake_build webchannel webengine websockets widgets
+# FreeBSD ports system supports Github submodules.  This adds deps to
+# DISTFILES and indicates where to place them in the source tree, e.g.
+# ${WRKSRC}/3rdparty/plog.  ( The first plog is a tag, not part of the path).
+# Not sure if there is something similar in pkgsrc or if they have to be
+# installed separately, which will require hacking the cmake files.
+# https://github.com/yuezk/GlobalProtect-openconnect/issues/126
 #GH_TUPLE+=	itay-grudev:SingleApplication:v3.3.0:sa/3rdparty/SingleApplication
 #GH_TUPLE+=	SergiusTheBest:plog:1.1.6:plog/3rdparty/plog
 
@@ -28,8 +32,9 @@ USE_CMAKE=	yes
 # FIXME: Clean up this hack
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-1.4.1
 
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
+# FreeBSD port
+# USE_QT=		buildtools core dbus declarative gui location network printsupport qmake_build webchannel webengine websockets widgets
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 # CentOS doesn't have zlib in the base, so uncomment if needed.
 # .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
