@@ -1,0 +1,3 @@
+tg-timer is a program for timing mechanical watches. It uses a microphone to
+analyse the "ticks" and "tocks" and generates statistics used by horologists
+for regulating mechanical watches.

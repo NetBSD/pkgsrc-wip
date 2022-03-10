@@ -5632,6 +5632,7 @@ SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
 SUBDIR+=	textosaurus
 SUBDIR+=	tftp-hpa
+SUBDIR+=	tg-timer-tg
 SUBDIR+=	tg_owt-git
 SUBDIR+=	thabit-ttf
 SUBDIR+=	thawab

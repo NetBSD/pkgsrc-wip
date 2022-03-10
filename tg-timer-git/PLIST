@@ -1,0 +1,21 @@
+@comment $NetBSD$
+bin/tg-timer
+man/man1/tg-timer.1
+share/applications/tg-timer.desktop
+share/icons/hicolor/128x128/apps/tg-timer.png
+share/icons/hicolor/128x128/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/16x16/apps/tg-timer.png
+share/icons/hicolor/16x16/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/22x22/apps/tg-timer.png
+share/icons/hicolor/22x22/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/256x256/apps/tg-timer.png
+share/icons/hicolor/256x256/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/32x32/apps/tg-timer.png
+share/icons/hicolor/32x32/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/48x48/apps/tg-timer.png
+share/icons/hicolor/48x48/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/64x64/apps/tg-timer.png
+share/icons/hicolor/64x64/mimetypes/application-x-tg-timer-data.png
+share/icons/hicolor/scalable/apps/tg-timer.svg
+share/icons/hicolor/scalable/mimetypes/application-x-tg-timer-data.svg
+share/mime/packages/tg-timer.xml
