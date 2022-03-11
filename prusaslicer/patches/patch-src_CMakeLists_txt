@@ -3,8 +3,10 @@ $NetBSD$
 Use libhidapi from pkgsrc.
 Only use libdl on Linux.
 Allow use of stable track wxWidgets on NetBSD.
+Use namespaces to link against libcereal >= 1.3.1 from:
+https://github.com/prusa3d/PrusaSlicer/commit/0ffcfd8393457fd035576436752267c9a1e6bbcc
 
---- src/CMakeLists.txt.orig	2021-12-17 14:00:02.000000000 +0000
+--- src/CMakeLists.txt.orig	2022-03-10 10:35:03.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -22,8 +22,6 @@ add_subdirectory(libslic3r)
  
@@ -29,6 +31,15 @@ Allow use of stable track wxWidgets on NetBSD.
          else ()
              find_package(wxWidgets 3.1 QUIET COMPONENTS base core adv html gl)
  
+@@ -125,7 +123,7 @@ if (NOT WIN32 AND NOT APPLE)
+     set_target_properties(PrusaSlicer PROPERTIES OUTPUT_NAME "prusa-slicer")
+ endif ()
+ 
+-target_link_libraries(PrusaSlicer libslic3r cereal)
++target_link_libraries(PrusaSlicer libslic3r cereal::cereal)
+ if (APPLE)
+ #    add_compile_options(-stdlib=libc++)
+ #    add_definitions(-DBOOST_THREAD_DONT_USE_CHRONO -DBOOST_NO_CXX11_RVALUE_REFERENCES -DBOOST_THREAD_USES_MOVE)
 @@ -151,8 +149,10 @@ target_link_libraries(PrusaSlicer libsli
          target_link_libraries(PrusaSlicer ws2_32 uxtheme setupapi)
      elseif (APPLE)

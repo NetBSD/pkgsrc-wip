@@ -2,10 +2,10 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/PrintHostDialogs.cpp.orig	2021-12-17 14:00:02.000000000 +0000
+--- src/slic3r/GUI/PrintHostDialogs.cpp.orig	2022-03-10 10:35:03.000000000 +0000
 +++ src/slic3r/GUI/PrintHostDialogs.cpp
 @@ -121,7 +121,7 @@ PrintHostSendDialog::PrintHostSendDialog
-     }
+     add_button(wxID_CANCEL);
      finalize();
  
 -#ifdef __linux__
