@@ -26,6 +26,7 @@ LUA_VERSIONS_ACCEPTED=  51
 
 .include "../../lang/lua/luaversion.mk"
 
+DEPENDS+=	libvterm>=0.1.3<0.2.0:../../wip/libvterm
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../wip/lua-mpack
 DEPENDS+=	${LUA_PKGPREFIX}-luv-[0-9]*:../../wip/lua-luv
