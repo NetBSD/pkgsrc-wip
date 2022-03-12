@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libvterm-0.2.tar.gz) = 682fc5e8ed5b821b0917d7e5b679508847bbf68f1dab86a45ec9c83be58b92f0
-SHA512 (libvterm-0.2.tar.gz) = bc99ae4fbdc165ced92c10fb0168ae6da2ed702208064616fefcd42aba71c57b7d42a08bc5b0e7e1ebda8cc4b5682d16059bdd2edfb12fbd8ac97527e854b14c
-Size (libvterm-0.2.tar.gz) = 79712 bytes
+RMD160 (libvterm-0.1.4.tar.gz) = 827234390d2ac60377786c896808736827cbfbee
+SHA512 (libvterm-0.1.4.tar.gz) = 90b5d47417e3f469df5c6574a27d12bd6bd1571d17cab7c4ac0ee61b1dbcb6361987f6fdfd11e314ea32f8958ec165c319a34d0f77288947c7cbc11de697d524
+Size (libvterm-0.1.4.tar.gz) = 69122 bytes
