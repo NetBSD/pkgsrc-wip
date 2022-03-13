@@ -11,6 +11,7 @@ SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = b47025f33d2991275bb
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
 SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = f99d9bee3ce452dda41c9b2943ee16cebcbd0af3
 SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = 802a95f1b1d131e0d85c1f99c659cc68b31ba2f6
+SHA1 (patch-deps_v8_src_base_strings.h) = 4d2b37491f2f74f1a573f8c1942790204e23a8bb
 SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b11ebb0e582b
 SHA1 (patch-deps_v8_src_common_globals.h) = 86637724864389f2b24251904de41669a2f00fbc
 SHA1 (patch-deps_v8_src_compiler_types.h) = 2a212282ab9d71e98ae56827fdb1d9778a6047a5
