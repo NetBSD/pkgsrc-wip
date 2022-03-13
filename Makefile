@@ -4913,6 +4913,7 @@ SUBDIR+=	pympress
 SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
+SUBDIR+=	pystring
 SUBDIR+=	pythia6
 SUBDIR+=	python3
 SUBDIR+=	pythoncad

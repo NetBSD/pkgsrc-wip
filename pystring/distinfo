@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (pystring-1.1.3.tar.gz) = 91fa8f699f50c4bb24ddadfcebaca9972bbe90c4af68cdb31662cb7313e28fa6
+SHA512 (pystring-1.1.3.tar.gz) = a46bb2e96d6eb351a4a8097cde46ac2877d28e88f9e57e0ac36c42e8fc8543517c4be70306a01e2f88a891fc53c612494aeb37f47a200d94b8e1b050ed16eff6
+Size (pystring-1.1.3.tar.gz) = 18364 bytes
+SHA1 (patch-Makefile) = 5e9a6f5419e0e48b310798c513daced28f3e8745
+SHA1 (patch-pystring.cpp) = 8f5e710e5991abf3875c843596f56328f50c3bba
