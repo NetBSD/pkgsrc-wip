@@ -5,9 +5,6 @@ GCC_PKGNAME=		gcc10-aux
 
 DISTNAME=	gcc-${GCC10_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC10_DIST_VERSION}
-## When bumping the PKGREVISION of this package the PKGREVISION of
-## lang/gcc10-libs needs to be bumped to be at least 1 more than the
-## PKGREVISION of this package!
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC10_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
