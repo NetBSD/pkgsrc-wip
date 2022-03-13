@@ -24,6 +24,8 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 # Relocations result in a linker error on AArch64, but not x86.
 MKPIE_SUPPORTED=	no
 
+CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
+
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake makeinfo sed:run tar:build
@@ -131,7 +133,6 @@ MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 .if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
-CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
