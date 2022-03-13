@@ -5773,6 +5773,7 @@ SUBDIR+=	unimrcp
 SUBDIR+=	unimrcp-apr
 SUBDIR+=	unimrcp-aprutil
 SUBDIR+=	unimrcp-sofiasip
+SUBDIR+=	unison-snapshot
 SUBDIR+=	unit
 SUBDIR+=	unit-perl
 SUBDIR+=	unit-php
