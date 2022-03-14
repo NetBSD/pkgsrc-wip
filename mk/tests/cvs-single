@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "cvs-single.mk"
-setup_cvs_repository
+set_up_package "cvs-single.mk"
+set_up_repository cvs
 
 step "Testing CVS with a single repository"
 package_make patch

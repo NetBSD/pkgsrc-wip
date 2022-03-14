@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes
 
-FOSSIL_REPO=		${.CURDIR}/files/repo/pkgbase.fossil
+FOSSIL_REPO=		${.CURDIR:H}/repos/pkgbase.fossil
 FOSSIL_REPOSITORIES=	2017 current
 FOSSIL_REPO.2017=	${FOSSIL_REPO}
 FOSSIL_VERSION.2017=	v2017

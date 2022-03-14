@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "fossil-show-all.mk"
-setup_fossil_repository
+set_up_package "fossil-show-all.mk"
+set_up_repository fossil
 
 step "Testing show-all-fossil"
 package_make show-all-fossil

@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes
 
-GIT_REPO=		${.CURDIR}/files/repo/pkgbase
+GIT_REPO=		${.CURDIR:H}/repos/pkgbase
 GIT_REPOSITORIES=	2017 current
 GIT_REPO.2017=		${GIT_REPO}
 GIT_TAG.2017=		v2017

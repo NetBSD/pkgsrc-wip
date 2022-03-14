@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes
 
-SVN_REPO=		file://${.CURDIR}/files/repo/pkgbase/trunk
+SVN_REPO=		file://${.CURDIR:H}/repos/pkgbase/trunk
 SVN_REPOSITORIES=	2017 current
 SVN_REPO.2017=		${SVN_REPO}
 SVN_REVISION.2017=	1

@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "fossil-multi.mk"
-setup_fossil_repository
+set_up_package "fossil-multi.mk"
+set_up_repository fossil
 
 step "Testing Fossil with multiple repositories"
 package_make patch

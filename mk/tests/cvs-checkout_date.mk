@@ -2,7 +2,7 @@
 
 DISTNAME=	pkgbase-1.0
 CATEGORIES=	pkgtools
-CVS_ROOT=	${.CURDIR}/files/repo
+CVS_ROOT=	${.CURDIR:H}/repos
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/

@@ -20,6 +20,7 @@ test "git-show-all"
 test "git-single"
 test "git-checkout_date"
 test "git-multi"
+test "git-update"
 
 test "hg-show-all"
 test "hg-single"

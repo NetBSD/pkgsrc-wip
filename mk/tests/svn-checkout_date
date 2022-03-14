@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "svn-checkout_date.mk"
-setup_svn_repository
+set_up_package "svn-checkout_date.mk"
+set_up_repository svn
 
 step "Testing Subversion with CHECKOUT_DATE"
 CHECKOUT_DATE="2018-02-01" package_make patch

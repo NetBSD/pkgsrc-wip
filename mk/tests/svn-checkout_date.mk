@@ -2,7 +2,7 @@
 
 DISTNAME=	pkgbase-1.0
 CATEGORIES=	pkgtools
-SVN_REPO=	file://${.CURDIR}/files/repo/pkgbase/trunk
+SVN_REPO=	file://${.CURDIR:H}/repos/pkgbase/trunk
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/

@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "hg-single.mk"
-setup_hg_repository
+set_up_package "hg-single.mk"
+set_up_repository hg
 
 step "Testing Mercurial with a single repository"
 package_make patch

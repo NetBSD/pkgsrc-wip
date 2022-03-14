@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "svn-single.mk"
-setup_svn_repository
+set_up_package "svn-single.mk"
+set_up_repository svn
 
 step "Testing Subversion with a single repository"
 package_make patch

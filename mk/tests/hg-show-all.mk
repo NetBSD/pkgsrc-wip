@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes
 
-HG_REPO=		${.CURDIR}/files/repo/pkgbase
+HG_REPO=		${.CURDIR:H}/repos/pkgbase
 HG_REPOSITORIES=	2017 current
 HG_REPO.2017=		${HG_REPO}
 HG_TAG.2017=		v2017

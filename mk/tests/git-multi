@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "git-multi.mk"
-setup_git_repository
+set_up_package "git-multi.mk"
+set_up_repository git
 
 step "Testing Git with multiple repositories"
 package_make patch

@@ -1,8 +1,8 @@
 #! /bin/sh
 . "${0%/*}/test.subr"
 
-setup_package "git-single.mk"
-setup_git_repository
+set_up_package "git-single.mk"
+set_up_repository git
 
 step "Testing Git with a single repository"
 package_make patch

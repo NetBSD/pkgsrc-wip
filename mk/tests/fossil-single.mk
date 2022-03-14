@@ -2,7 +2,7 @@
 
 DISTNAME=	pkgbase-1.0
 CATEGORIES=	pkgtools
-FOSSIL_REPO=	${.CURDIR}/files/repo/pkgbase.fossil
+FOSSIL_REPO=	${.CURDIR:H}/repos/pkgbase.fossil
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/

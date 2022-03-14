@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes
 
-CVS_ROOT=		${.CURDIR}/files/repo
+CVS_ROOT=		${.CURDIR:H}/repos
 CVS_REPOSITORIES=	2017 current
 CVS_ROOT.2017=		${CVS_ROOT}
 CVS_MODULE.2017=	${CVS_MODULE}
