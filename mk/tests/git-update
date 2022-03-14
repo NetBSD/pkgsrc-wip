@@ -4,27 +4,37 @@
 set_up_package "git-update.mk"
 set_up_repository git
 
-step "Testing Git before a remote update"
+step "Testing Git before an update in the remote repository"
 package_make patch
 
 assert_that --file "$wrkdir/pkgbase/today" --has-content "2018-03-01"
 
-step "Testing Git after a remote update"
+
+# A newer version becomes available in the remote repository.  Since the
+# package uses the default reference origin/HEAD, it will pick up these
+# changes.
 cd "$repoworkdir"
 scm_git_commit "2022-03-01"
+
+step "Testing Git after an update in the remote repository"
 package_make clean
 package_make patch
+# The output contains "Creating cached Git archive".
 
-# The working copy of the package has been updated to reflect the remote
-# change.
 assert_that --file "$wrkdir/pkgbase/today" --has-content "2022-03-01"
-# TODO: The archive in ${DISTDIR} should be updated, but it isn't.
+
+# Ensure that the archive in ${DISTDIR} has been updated, to avoid
+# unnecessary downloads in the future.
+cd "$wrkdir"
+echo "before-tar" > pkgbase/today
+tar xfz "$distdir/git-packages/pkgbase-default-gitarchive.tar.gz" pkgbase/today
+assert_that --file "pkgbase/today" --has-content "2022-03-01"
 
 
-step "Testing Git after a remote update"
+step "Testing Git from a cached archive that has been updated"
 package_make clean
 package_make patch
+# The output does not contain "Creating cached Git archive" since origin/HEAD
+# still points to the same commit as before.
 
-# The working copy of the package has been updated to reflect the remote
-# change.
 assert_that --file "$wrkdir/pkgbase/today" --has-content "2022-03-01"

@@ -52,6 +52,7 @@ set_up_package() {
 
 	reposdir="$categorydir/repos"
 	repoworkdir="$categorydir/repo-work"
+	distdir="$categorydir/distfiles"
 
 	# Install the VCS if necessary; needed by set_up_repository.
 	package_make depends
@@ -233,7 +234,7 @@ scm_svn_tag() {
 package_make() {
 	cd "$pkgdir"
 	bmake=`type "bmake" 1>/dev/null 2>&1 && echo "bmake" || echo "make"`
-	DISTDIR="$categorydir/distfiles" "$bmake" "$@"
+	DISTDIR="$distdir" "$bmake" "$@"
 }
 
 assert_that() {
