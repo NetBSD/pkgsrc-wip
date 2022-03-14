@@ -16,13 +16,10 @@ WRKSRC=			${WRKDIR}/xml2tsv
 USE_LANGUAGES=	c99
 
 MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=		MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		CC=${CC:Q}
-
-post-install:
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/xml2tsv.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
