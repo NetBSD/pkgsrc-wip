@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libopenshot-0.2.5
+DISTNAME=	libopenshot-0.2.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenShot/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.openshot.org/libopenshot/
 COMMENT=	Powerful, cross-platform open-source C++ video editing library
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libopenshot-0.2.5
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
@@ -18,7 +17,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	swig4>=4.0.0:../../wip/swig4
 
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../wip/cppzmq/buildlink3.mk"
 .include "../../wip/libopenshot-audio/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"

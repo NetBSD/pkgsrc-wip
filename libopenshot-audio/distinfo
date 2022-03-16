@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (libopenshot-audio-0.2.0.tar.gz) = ffba3afbd01340b7ee6ce6eb7aa0cf27901f664a
-SHA512 (libopenshot-audio-0.2.0.tar.gz) = c014a619f32283a8482e0df9224785610a9563073fbd98378367f28f713afa1dc9873d212a40352d3c96040004344f16084e5fe30e4cf64c57309f96e66068c1
-Size (libopenshot-audio-0.2.0.tar.gz) = 1711504 bytes
+BLAKE2s (libopenshot-audio-0.2.2.tar.gz) = aaf29eff009beac4a14e823e28ad8ada072a21c7adbd09e6beeb7877de346d8d
+SHA512 (libopenshot-audio-0.2.2.tar.gz) = 9960c6225dd9b843d18134e851761bf12861220a2c63970055bc73d554725e56abd6d35339f7490b672faaf0699f58e3701ff8a966ab07af3264325a9d0dc472
+Size (libopenshot-audio-0.2.2.tar.gz) = 1808059 bytes

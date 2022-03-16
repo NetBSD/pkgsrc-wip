@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libopenshot-audio-0.2.0
+DISTNAME=	libopenshot-audio-0.2.2
 CATEGORIES=	devel audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenShot/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
