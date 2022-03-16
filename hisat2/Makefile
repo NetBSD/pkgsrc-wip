@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	hisat2-2.1.0.23
+DISTNAME=	hisat2-v2.2.1
+PKGNAME=	hisat2-2.2.1
 CATEGORIES=	biology
-MASTER_SITES=	${MASTER_SITE_GITHUB:=infphilo/}
-GITHUB_TAG=	20f333e2cfe7ff4d1362b248912893e2644683d7
+MASTER_SITES=	${MASTER_SITE_GITHUB:=DaehwanKimLab/}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://ccb.jhu.edu/software/hisat2/index.shtml
@@ -16,13 +16,12 @@ ONLY_FOR_PLATFORM=	*-*-x86_64
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake perl
 
-REPLACE_BASH=		hisatgenotype_scripts/*.sh
-REPLACE_PERL=		hisat2 scripts/*.sh scripts/*.pl
-REPLACE_PYTHON=		*.py hisat2-build hisat2-inspect
-REPLACE_PYTHON+=	hisatgenotype_modules/*.py hisatgenotype_scripts/*.py
+REPLACE_BASH=		scripts/*.sh
+REPLACE_PERL=		hisat2 scripts/*.sh scripts/*.pl scripts/*.py
+REPLACE_PYTHON=		*.py scripts/*.py hisat2-build hisat2-inspect
 
-MAKE_FILE=		${FILESDIR}/Makefile.pkg
 PTHREAD_AUTO_VARS=	yes
+WRKSRC=			${WRKDIR}/hisat2-2.2.1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"

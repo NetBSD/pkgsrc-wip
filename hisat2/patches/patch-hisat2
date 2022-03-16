@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Limit Windows-specific patches to Windows
+# Support BSD, etc.
 
 --- hisat2.orig	2018-11-07 21:43:32 UTC
 +++ hisat2
