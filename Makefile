@@ -5250,6 +5250,7 @@ SUBDIR+=	sil-scheherazade-ttf
 SUBDIR+=	silky
 SUBDIR+=	silo
 SUBDIR+=	silvertree
+SUBDIR+=	simde
 SUBDIR+=	simgrid
 SUBDIR+=	simpa
 SUBDIR+=	simple-mtpfs

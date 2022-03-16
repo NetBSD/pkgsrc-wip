@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (simde-0.7.2.tar.gz) = aabf04b4243c1b75f82120696be0150235cbf94b2738aece7339bebf2100d04b
+SHA512 (simde-0.7.2.tar.gz) = e4ee5a4a7e8453f116f1325d147f91d358a300f41ea5566ea30fc19649bababf3b87e3dc838d5608b578bd152207df4156200ffc7fb98141bc7c0bb60c75f1f5
+Size (simde-0.7.2.tar.gz) = 3821158 bytes
