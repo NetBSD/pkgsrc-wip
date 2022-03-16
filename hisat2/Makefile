@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	hisat2-v2.2.1
-PKGNAME=	hisat2-2.2.1
+DISTNAME=	hisat2-2.2.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DaehwanKimLab/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://ccb.jhu.edu/software/hisat2/index.shtml

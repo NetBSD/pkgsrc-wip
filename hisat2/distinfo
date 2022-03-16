@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (hisat2-v2.2.1.tar.gz) = 1cc424a10f1fcf25c70294bef3b21e67b07cebcb7b73e36c0176a2dfdec51bdb
-SHA512 (hisat2-v2.2.1.tar.gz) = a5a688ad0ccfaf326b3ec6dc97206995306aa6f5b6e58223c2113adbca2745f1e8205b436fdf8e01f42da7a38718f9f3bf214b951fb5360d53247d99a0bdbf46
-Size (hisat2-v2.2.1.tar.gz) = 6761242 bytes
+BLAKE2s (hisat2-2.2.1.tar.gz) = 1cc424a10f1fcf25c70294bef3b21e67b07cebcb7b73e36c0176a2dfdec51bdb
+SHA512 (hisat2-2.2.1.tar.gz) = a5a688ad0ccfaf326b3ec6dc97206995306aa6f5b6e58223c2113adbca2745f1e8205b436fdf8e01f42da7a38718f9f3bf214b951fb5360d53247d99a0bdbf46
+Size (hisat2-2.2.1.tar.gz) = 6761242 bytes
 SHA1 (patch-Makefile) = e002806f8daa4e5c45b95b5f173de818a8737b43
 SHA1 (patch-aligner__sw.h) = bdd7e3a189b5c2886df85cc4252d4f41487f423f
 SHA1 (patch-hisat2) = 6010f5fcc1e7dfcb383a4defc4e3d9f06322370d
