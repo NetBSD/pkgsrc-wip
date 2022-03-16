@@ -1314,6 +1314,7 @@ share/zabbix/locale/de/LC_MESSAGES/frontend.mo
 share/zabbix/locale/de/LC_MESSAGES/frontend.po
 share/zabbix/locale/el/LC_MESSAGES/frontend.mo
 share/zabbix/locale/el/LC_MESSAGES/frontend.po
+share/zabbix/locale/en/LC_MESSAGES/frontend.pot
 share/zabbix/locale/es/LC_MESSAGES/frontend.mo
 share/zabbix/locale/es/LC_MESSAGES/frontend.po
 share/zabbix/locale/fa/LC_MESSAGES/frontend.mo
@@ -1341,8 +1342,8 @@ share/zabbix/locale/lt/LC_MESSAGES/frontend.po
 share/zabbix/locale/lv/LC_MESSAGES/frontend.mo
 share/zabbix/locale/lv/LC_MESSAGES/frontend.po
 share/zabbix/locale/make_mo.sh
-share/zabbix/locale/nb/LC_MESSAGES/frontend.mo
-share/zabbix/locale/nb/LC_MESSAGES/frontend.po
+share/zabbix/locale/nb-NO/LC_MESSAGES/frontend.mo
+share/zabbix/locale/nb-NO/LC_MESSAGES/frontend.po
 share/zabbix/locale/nl/LC_MESSAGES/frontend.mo
 share/zabbix/locale/nl/LC_MESSAGES/frontend.po
 share/zabbix/locale/pl/LC_MESSAGES/frontend.mo
@@ -1357,8 +1358,8 @@ share/zabbix/locale/ru/LC_MESSAGES/frontend.mo
 share/zabbix/locale/ru/LC_MESSAGES/frontend.po
 share/zabbix/locale/sk/LC_MESSAGES/frontend.mo
 share/zabbix/locale/sk/LC_MESSAGES/frontend.po
-share/zabbix/locale/sv/LC_MESSAGES/frontend.mo
-share/zabbix/locale/sv/LC_MESSAGES/frontend.po
+share/zabbix/locale/sv-SE/LC_MESSAGES/frontend.mo
+share/zabbix/locale/sv-SE/LC_MESSAGES/frontend.po
 share/zabbix/locale/tr/LC_MESSAGES/frontend.mo
 share/zabbix/locale/tr/LC_MESSAGES/frontend.po
 share/zabbix/locale/uk/LC_MESSAGES/frontend.mo
