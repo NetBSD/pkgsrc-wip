@@ -10,13 +10,13 @@ $NetBSD$
  
 +#define	SIMDE_ENABLE_NATIVE_ALIASES
 +
-+// #include <simde/x86/sse2.h>
++#include <simde/x86/sse2.h>
  #include <stdint.h>
  #include <iostream>
  #include <limits>
  #include "threading.h"
 -#include <emmintrin.h>
-+#include <emmintrin.h>		// Replace this with simde when possible
++// #include <emmintrin.h>	// Replace this with simde when possible
  #include "aligner_sw_common.h"
  #include "aligner_sw_nuc.h"
  #include "ds.h"

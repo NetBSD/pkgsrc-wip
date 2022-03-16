@@ -9,14 +9,14 @@ $NetBSD$
  #define SSE_UTIL_H_
  
 +#define SIMDE_ENABLE_NATIVE_ALIASES
-+//#include <simde/x86/sse2.h>
++#include <simde/x86/sse2.h>
 +
  #include "assert_helpers.h"
  #include "ds.h"
  #include "limit.h"
  #include <iostream>
 -#include <emmintrin.h>
-+#include <emmintrin.h>		// Replace with simde when possible
++// #include <emmintrin.h>		// Replace with simde when possible
  
  class EList_m128i {
  public:
