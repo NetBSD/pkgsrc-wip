@@ -21,7 +21,7 @@ NO_BUILD=	yes
 MESON_ARGS+=	-Dtests=false
 BUILD_WRKSRC=	${WRKSRC}/output
 
-# Passes on Darwin
+# Passes on Darwin, Linux (Alma8)
 # Fails on NetBSD 9
 do-test:
 	@${RM} -r ${BUILD_WRKSRC}/*
