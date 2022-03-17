@@ -28,8 +28,15 @@ REPLACE_FILES.Rscript=	scripts/stacks-hist2d-loci-samples-coverage
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != Darwin
-CFLAGS+=	-fopenmp
+.if ${OPSYS} == Darwin
+# pkgsrc sed wrapper lacks -i
+SUBST_CLASSES+=		sed
+SUBST_STAGE.sed=	pre-configure
+SUBST_FILES.sed=	Makefile.in
+SUBST_SED.sed=		-e 's|sed -i.bkp|/usr/bin/sed -i .bkp|'
+.else
+# macOS clang lacks OpenMP
+CFLAGS+=		-fopenmp
 .endif
 
 .include "../../lang/python/application.mk"
