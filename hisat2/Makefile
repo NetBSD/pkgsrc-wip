@@ -23,6 +23,10 @@ REPLACE_PYTHON=		*.py scripts/*.py hisat2-build hisat2-inspect
 PTHREAD_AUTO_VARS=	yes
 WRKSRC=			${WRKDIR}/hisat2-2.2.1
 
+# Unbreak #include <version> on case-insensitive file systems
+post-patch:
+	${MV} ${WRKSRC}/VERSION ${WRKSRC}/HISAT2_VERSION
+
 .include "../../wip/simde/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
