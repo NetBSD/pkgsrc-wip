@@ -5,31 +5,26 @@
 #              Wed Mar 16 17:38:53 CDT 2022               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-# On FreeBSD, adds munit to distfiles and unpacks under ${WRKSRC}/test/munit
-#GH_TUPLE=	nemequ:munit:da8f73412998e4f1adf1100dc187533a51af77fd:nemequ_munit/test/munit
-#do-test:
-#	@${RM} -r ${BUILD_WRKSRC}/*
-#	@cd ${CONFIGURE_WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS:S/Dtests=false/Dtests=true/}
-#	@cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_ARGS} ${TEST_TARGET}
-
 DISTNAME=	simde-0.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simd-everywhere/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_SUBMODULES=	nemequ munit da8f73412998e4f1adf1100dc187533a51af77fd test/munit
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/simd-everywhere/simde
 COMMENT=	Header-only library for SIMD intrinsics
 LICENSE=	mit
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 NO_BUILD=	yes
 MESON_ARGS+=	-Dtests=false
+BUILD_WRKSRC=	${WRKSRC}/output
 
-# CentOS doesn't have zlib in the base, so uncomment if needed.
+do-test:
+	@${RM} -r ${BUILD_WRKSRC}/*
+	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} meson -Dtests=true output
+	@cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -v test
+
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
