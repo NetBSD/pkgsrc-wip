@@ -1,15 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	fractal-4.4.1b1
+DISTNAME=	fractal-release-4.4.1
 CATEGORIES=	chat
-MASTER_SITES=	https://gitlab.gnome.org/GNOME/fractal/-/archive/4.4.1b1/
+MASTER_SITES=	https://gitlab.gnome.org/GNOME/fractal/-/archive/release-4.4.1/
 
 MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/fractal
 COMMENT=	Matrix group messaging app
 LICENSE=	gnu-gpl-v3
-
-WRKSRC=		${WRKDIR}/fractal-4.4.0-dbd6e95551cbfe4db93748a699a5857dd6863b71
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
