@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (openshot-qt/v2.5.1.tar.gz) = 8272edfc72cc9af436cbc1b781ca1b2ab132bab7
-SHA512 (openshot-qt/v2.5.1.tar.gz) = 8254a45254bbe523b6485b9598022de2c46ec30818e606ac4665790d29486693c4efe9f5bc55ee43d6342de6782cf0090e4bc880e831c08e3b1218bca555af14
-Size (openshot-qt/v2.5.1.tar.gz) = 60217543 bytes
+BLAKE2s (openshot-qt/v2.6.1.tar.gz) = 3079a67b7726596484c757a3e49fc0e808761fc3b7e1dd012ed015386ac0b603
+SHA512 (openshot-qt/v2.6.1.tar.gz) = 9e2d1eae5d72ec2deab914e464dac0d84a864ba2ca63104fad57c90fc907764d5683149fb8136d50030cae993cef9a977e995b0783868988de4668e71a3a5ee2
+Size (openshot-qt/v2.6.1.tar.gz) = 68566443 bytes
