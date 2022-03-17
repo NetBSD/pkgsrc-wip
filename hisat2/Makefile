@@ -27,7 +27,6 @@ WRKSRC=			${WRKDIR}/hisat2-2.2.1
 post-patch:
 	${MV} ${WRKSRC}/VERSION ${WRKSRC}/HISAT2_VERSION
 
-.include "../../wip/simde/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
