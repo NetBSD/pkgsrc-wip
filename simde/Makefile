@@ -21,6 +21,8 @@ NO_BUILD=	yes
 MESON_ARGS+=	-Dtests=false
 BUILD_WRKSRC=	${WRKSRC}/output
 
+# Passes on Darwin
+# Fails on NetBSD 9
 do-test:
 	@${RM} -r ${BUILD_WRKSRC}/*
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} meson -Dtests=true output
