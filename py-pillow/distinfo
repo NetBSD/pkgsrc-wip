@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (Pillow/8.2.0.tar.gz) = 15920d126d90b211b48b9daf1ae3352b717dcdac
-SHA512 (Pillow/8.2.0.tar.gz) = 40e97a54689ca04349d17b69b0e95bb3ef4fde0b60c6c55a2ec76034a5c2a9ebee0b310f68de1636db08786d9b2ad444bf10ac3b42a31404847cc165aa8392ac
-Size (Pillow/8.2.0.tar.gz) = 47898485 bytes
+BLAKE2s (Pillow/9.0.1.tar.gz) = 0ef8eb757c9a2ad7db2fdd685b286da532d4f78775c711cd2d626ce6290bd997
+SHA512 (Pillow/9.0.1.tar.gz) = 73893fe079bb2405c87b73b13b6eff198fb8970a891a7c9586bd2620ea0310d54cb35b1d594c6c6d3859e47d8d467700f987ae32aa6d3dc4a2e9286e8749869e
+Size (Pillow/9.0.1.tar.gz) = 49512045 bytes
