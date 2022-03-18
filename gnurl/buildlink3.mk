@@ -7,7 +7,7 @@ GNURL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnurl+=	gnurl>=7.63.0
 BUILDLINK_ABI_DEPENDS.gnurl+=	gnurl>=7.72.0nb1
-BUILDLINK_PKGSRCDIR.gnurl?=	../../www/gnurl
+BUILDLINK_PKGSRCDIR.gnurl?=	../../wip/gnurl
 
 pkgbase:= gnurl
 .include "../../mk/pkg-build-options.mk"
