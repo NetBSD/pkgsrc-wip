@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pysaml2-4.4.0
+DISTNAME=	pysaml2-7.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysaml2/}
