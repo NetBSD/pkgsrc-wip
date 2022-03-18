@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.18 2021/05/24 19:55:14 wiz Exp $
 
 DISTNAME=	gnurl-7.72.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
 EXTRACT_SUFX=	.tar.Z
@@ -73,6 +73,7 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"

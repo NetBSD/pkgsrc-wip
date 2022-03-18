@@ -13,6 +13,7 @@ pkgbase:= gnurl
 .include "../../mk/pkg-build-options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
