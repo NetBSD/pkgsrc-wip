@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lzlib-1.12
+DISTNAME=	lzlib-1.13
 CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lzlib/
 

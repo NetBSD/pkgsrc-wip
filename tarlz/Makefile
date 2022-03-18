@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	tarlz-0.21
+DISTNAME=	tarlz-0.22
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/tarlz/
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	http://download.savannah.gnu.org/releases/lzip/tarlz/
+HOMEPAGE=	https://lzip.nongnu.org/tarlz.html
 COMMENT=	Combined implementation of tar archiver and lzip compressor
 LICENSE=	gnu-gpl-v2
 
