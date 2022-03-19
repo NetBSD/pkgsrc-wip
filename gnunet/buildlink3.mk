@@ -21,10 +21,6 @@ pkgbase:= gnunet
 .include "../../devel/libidn/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mjson)
-.include "../../textproc/jansson/buildlink3.mk"
-.endif
-
 .if !empty(PKG_BUILD_OPTIONS.gnunet:Msqlite3)
 .include "../../databases/sqlite3/buildlink3.mk"
 .endif
@@ -55,7 +51,7 @@ pkgbase:= gnunet
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.gnunet:Mzbar)
-.include "../../wip/zbar/buildlink3.mk"
+.include "../../graphics/zbar/buildlink3.mk"
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -67,8 +63,9 @@ pkgbase:= gnunet
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-.include "../../www/gnurl/buildlink3.mk"
+.include "../../wip/gnurl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

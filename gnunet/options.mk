@@ -4,15 +4,11 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
 PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
-PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 json
+PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
 # Should we name this qrcode instead?
 PKG_SUPPORTED_OPTIONS+=		zbar
-
-# mdoc should be fixed in 0.11.9, missing files were included
-# post-0.11.8.
-# in 0.11.9 when fixed for pkgsrc, add back idn.
-PKG_SUGGESTED_OPTIONS+=		doc sqlite3 json opus ogg gstreamer idn
+PKG_SUGGESTED_OPTIONS+=		idn gstreamer doc sqlite3 opus ogg
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
@@ -24,12 +20,10 @@ PKG_SUGGESTED_OPTIONS+=		bluez
 PKG_SUGGESTED_OPTIONS+=		zbar
 .endif
 
-PLIST_VARS+=			doc mdoc conversations
-PLIST_VARS+=			experimental json
-PLIST_VARS+=			pgsql mysql sqlite3
-PLIST_VARS+=			linux freebsd bluez
-PLIST_VARS+=			linuxfreebsd zbar
-PLIST_VARS+=			perl
+# We use several PLIST files, as the build process is
+# rather lengthy, and keeping it in one file for every
+# option is not easy on the one doing the updates.
+PLIST_SRC=			PLIST
 
 # openssl is currently required by:
 # src/transport/gnunet-transport-certificate-creation
@@ -40,15 +34,16 @@ PLIST_VARS+=			perl
 .if !empty(PKG_OPTIONS:Mtests)
 .include "../../lang/python/tool.mk"
 PYTHON_FOR_BUILD_ONLY=	yes
+CONFIGURE_ARGS+=	--enable-testruns
 .else
-CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-testruns
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
 USE_TOOLS+=		makeinfo
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-documentation
-PLIST.doc=		yes
+PLIST_SRC+=		PLIST.doc
 .else
 CONFIGURE_ARGS+=	--disable-documentation
 .endif
@@ -57,7 +52,7 @@ CONFIGURE_ARGS+=	--disable-documentation
 .if !empty(PKG_OPTIONS:Mmdoc)
 BUILD_DEPENDS+=		texi2mdoc-[0-9]*:../../textproc/texi2mdoc
 CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
-PLIST.mdoc=		yes
+PLIST_SRC+=		PLIST.mdoc
 .else
 CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
@@ -67,18 +62,10 @@ CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 # https://bugs.gnunet.org/view.php?id=5948 is fixed.
 .if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-libidn=no
+CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn2}
 .else
 .include "../../devel/libidn/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
-.endif
-
-.if !empty(PKG_OPTIONS:Mjson)
-.include "../../textproc/jansson/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-jansson=${BUILDLINK_PREFIX.jansson}
-PLIST.json=		yes
-.else
-CONFIGURE_ARGS+=	--without-jansson
 .endif
 
 # database support - they don't exclude other databases,
@@ -87,28 +74,31 @@ CONFIGURE_ARGS+=	--without-jansson
 # the build won't build when you have none of them.
 .if !empty(PKG_OPTIONS:Msqlite3)
 .include "../../databases/sqlite3/buildlink3.mk"
-PLIST.sqlite3=		yes
+PLIST_SRC+=		PLIST.sqlite3
 .else
 CONFIGURE_ARGS+=	--without-sqlite3
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
-PLIST.mysql=		yes
+PLIST_SRC+=		PLIST.mysql
 .else
 CONFIGURE_ARGS+=	--without-mysql
 .endif
 
+# \todo:
+# checking for mysql version... < 4.1
+# mysql version >= 4.1 required. Will not use MySQL
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
-PLIST.pgsql=		yes
+PLIST_SRC+=		PLIST.pgsql
 .else
 CONFIGURE_ARGS+=	--without-postgres
 .endif
 
 .if !empty(PKG_OPTIONS:Mexperimental)
 CONFIGURE_ARGS+=	--enable-experimental
-PLIST.experimental=	yes
+PLIST_SRC+=		PLIST.experimental
 .  if !empty(PKG_OPTIONS:Mverbose-logging)
 CONFIGURE_ARGS+=	--enable-logging=verbose
 .  endif
@@ -120,31 +110,23 @@ CONFIGURE_ARGS+=	--disable-experimental
 # exists, pulseaudio is not necessary.
 .if !empty(PKG_OPTIONS:Mopus)
 .include "../../audio/libopus/buildlink3.mk"
-PLIST.conversations=	yes
-.else
-CONFIGURE_ARGS+=	--without-libopus
+PLIST_SRC+=		PLIST.conversations
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
 .include "../../multimedia/libogg/buildlink3.mk"
-PLIST.conversations=	yes
-.else
-CONFIGURE_ARGS+=	--without-libogg
+PLIST_SRC+=		PLIST.conversations
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-PLIST.conversations=	yes
-.else
-CONFIGURE_ARGS+=	--without-gstreamer
+PLIST_SRC+=		PLIST.conversations
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
-PLIST.conversations=	yes
-.else
-CONFIGURE_ARGS+=	--without-libpulse
+PLIST_SRC+=		PLIST.conversations
 .endif
 
 .if !empty(PKG_OPTIONS:Mzbar)
@@ -172,23 +154,28 @@ PLIST.bluez=		yes
 CONFIGURE_ARGS+=	--without-libbluetooth
 .endif
 
+# there are files which only exist on Linux, only on FreeBSD, and on both of them.
+# I have neither of them. If you do, please create the appropriate PLIST files
+# with content.
 .if ${OPSYS} == "Linux"
-PLIST.linux=		yes
+# PLIST_SRC+=		PLIST.linux
 .endif
 
 .if ${OPSYS} == "FreeBSD"
-PLIST.freebsd=		yes
+# PLIST_SRC+=		PLIST.freebsd
 .endif
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
-PLIST.linuxfreebsd=	yes
+# PLIST_SRC+=		PLIST.linuxfreebsd
 .endif
 
-# optional gnunet-logread
 .if !empty(PKG_OPTIONS:Mperl)
 USE_TOOLS+=		perl:run
-PLIST.perl=		yes
+PLIST_SRC+=		PLIST.perl
 CONFIGURE_ARGS+=	--with-gnunet-logread
-.else
-CONFIGURE_ARGS+=	--without-gnunet-logread
+REPLACE_INTERPRETER+=	envperl
+REPLACE.envperl.old=	.*@PERLEXE@
+REPLACE.envperl.new=	${PERL5}
+REPLACE_FILES.envperl=	contrib/scripts/gnunet-logread/gnunet-logread-ipc-sdedit.in
+REPLACE_FILES.envperl=	contrib/scripts/gnunet-logread/gnunet-logread.in
 .endif

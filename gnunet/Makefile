@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.13.3
+DISTNAME=		gnunet-0.16.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
@@ -27,6 +27,12 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
+CONFIGURE_ARGS+=	--with-jansson=${BUILDLINK_PREFIX.jansson}
+CONFIGURE_ARGS+=	--with-microhttpd=${BUILDLINK_PREFIX.libmicrohttpd}
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+CONFIGURE_ENV+=		DEFAULT_INTERFACE="\"lo0\""
+.endif
 
 GNUNET_DIR=		${VARBASE}/chroot/gnunet
 GNUNET_LOG_DIR?=	${VARBASE}/log/gnunet
@@ -91,7 +97,6 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-client ${SETUID_R
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_ROOT_PERMS}
 .endif
 
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -103,8 +108,9 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-.include "../../www/gnurl/buildlink3.mk"
+.include "../../wip/gnurl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

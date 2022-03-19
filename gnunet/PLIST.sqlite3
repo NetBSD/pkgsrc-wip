@@ -1,0 +1,9 @@
+@comment $NetBSD$
+lib/gnunet/libexec/gnunet-daemon-latency-logger
+lib/gnunet/libexec/gnunet-daemon-testbed-underlay
+lib/gnunet/libgnunet_plugin_datacache_sqlite.la
+lib/gnunet/libgnunet_plugin_datastore_sqlite.la
+lib/gnunet/libgnunet_plugin_namecache_sqlite.la
+lib/gnunet/libgnunet_plugin_namestore_sqlite.la
+lib/gnunet/libgnunet_plugin_peerstore_sqlite.la
+lib/libgnunetsq.la
