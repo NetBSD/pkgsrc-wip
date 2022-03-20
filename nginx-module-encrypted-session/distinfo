@@ -1,0 +1,15 @@
+$NetBSD$
+
+BLAKE2s (encrypted-session-nginx-module-0.09.tar.gz) = 696be087d7aa0144d212f2753423489677e78ba3bb97dbfeb30cadbe08cd7b0a
+SHA512 (encrypted-session-nginx-module-0.09.tar.gz) = 399ce2690e85ee27802e8031954a1a3aa3fdc9246e17323a72a298d235931a8dbebdcb121ac8788e074872df0ef5b5a8a3d512b17fbe860b38f696ce42de3655
+Size (encrypted-session-nginx-module-0.09.tar.gz) = 11847 bytes
+BLAKE2s (nginx-1.20.2.tar.gz) = 6b437b200e57db3988bd6737740c11833e5091e3b84eef1fbd95168a4f5914b2
+SHA512 (nginx-1.20.2.tar.gz) = 8b65e881ea4ac6162cbf32e5e95cf47a6d5418819f8763ca4a781cffa38187dd7886d4bc195d000a7046111a27121ff25800f8645405174995247e6738b4279a
+Size (nginx-1.20.2.tar.gz) = 1062124 bytes
+BLAKE2s (ngx_devel_kit-0.3.1.tar.gz) = e059ff3e7706eb444be721b28cc9989568c842db5ffcca7985203ed3368509f4
+SHA512 (ngx_devel_kit-0.3.1.tar.gz) = de1e3349d8dd08e5982279b2219dc8a8006739f0409b8e0f5c50d93434beff1fbafba43e9c5ac85a5fab90afc5c0a7244a340610339c36f82f2cba7233e72de9
+Size (ngx_devel_kit-0.3.1.tar.gz) = 66542 bytes
+SHA1 (patch-aa) = c280ea8114163b7a2ca3770a08177c0b35290345
+SHA1 (patch-ab) = 7d126a4372aa8575ef01a4bfd9aec9898861c763
+SHA1 (patch-auto_cc_conf) = 5e6a479ba419cd16dedeb3b4c47dc685d126ef6a
+SHA1 (patch-src_event_modules_ngx__eventport__module.c) = c8e919f48d68bd5bffc4ad11d9c79dc6da3a0de2

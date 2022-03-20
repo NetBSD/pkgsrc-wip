@@ -1,0 +1,2 @@
+@comment $NetBSD$
+libexec/nginx/ngx_http_encrypted_session_module.so

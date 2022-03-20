@@ -1,0 +1,90 @@
+# $NetBSD$
+
+.include "../../mk/bsd.prefs.mk"
+
+NGINX_USER?=		nginx
+NGINX_GROUP?=		nginx
+NGINX_DATADIR?=		${VARBASE}/db/nginx
+NGINX_LOGDIR?=		${VARBASE}/log/nginx
+NGINX_PIDDIR?=		${VARBASE}/run
+
+BUILD_DEFS+=		NGINX_DATADIR NGINX_LOGDIR NGINX_PIDDIR VARBASE
+
+USE_PKGLOCALEDIR=	yes
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--user=${NGINX_USER}
+CONFIGURE_ARGS+=	--group=${NGINX_GROUP}
+CONFIGURE_ARGS+=	--with-ld-opt=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--sbin-path=${PREFIX}/sbin
+CONFIGURE_ARGS+=	--conf-path=${PKG_SYSCONFDIR}/nginx.conf
+CONFIGURE_ARGS+=	--pid-path=${NGINX_PIDDIR}/nginx.pid
+CONFIGURE_ARGS+=	--lock-path=${NGINX_DATADIR}/nginx.lock
+CONFIGURE_ARGS+=	--error-log-path=${NGINX_LOGDIR}/error.log
+CONFIGURE_ARGS+=	--http-log-path=${NGINX_LOGDIR}/access.log
+CONFIGURE_ARGS+=	--http-client-body-temp-path=${NGINX_DATADIR}/client_body_temp
+CONFIGURE_ARGS+=	--http-proxy-temp-path=${NGINX_DATADIR}/proxy_temp
+CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
+CONFIGURE_ARGS+=	--http-scgi-temp-path=${NGINX_DATADIR}/scgi_temp
+
+PKG_SYSCONFSUBDIR=	nginx
+
+EGDIR=			${PREFIX}/share/examples/nginx
+
+.for file in ${EGFILES}
+CONF_FILES+=	${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
+.endfor
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	conf/nginx.conf
+SUBST_SED.paths=	-e 's,%%PKG_SYSCONFDIR%%,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_LOGDIR%%,${NGINX_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_PIDDIR%%,${NGINX_PIDDIR},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_USER%%,${NGINX_USER},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_GROUP%%,${NGINX_GROUP},g'
+
+MESSAGE_SUBST+=		NGINX_LOGDIR=${NGINX_LOGDIR}
+MESSAGE_SUBST+=		NGINX_PIDDIR=${NGINX_PIDDIR}
+MESSAGE_SUBST+=		NGINX_USER=${NGINX_USER}
+MESSAGE_SUBST+=		NGINX_GROUP=${NGINX_GROUP}
+
+.if ${OPSYS} == "Darwin"
+SOEXT=		bundle
+.else
+SOEXT=		so
+.endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
+
+#do-install:
+#.if !empty(PKG_OPTIONS:Mnaxsi)
+#	${INSTALL_DATA} ${WRKDIR}/${NAXSI_DISTNAME}/naxsi_config/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
+#.endif
+#	(cd ${WRKSRC}/objs/ && ${FIND} . -name '*.so' -maxdepth 1 -type f \
+#		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
+
+# default modules
+CONFIGURE_ARGS+=	--modules-path=${PREFIX}/libexec/nginx
+CONFIGURE_ARGS+=	--with-stream_ssl_preread_module
+
+# NDK must be added once and before 3rd party modules needing it
+NDK_VERSION=		0.3.1
+NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
+NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
+SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=simpl/ngx_devel_kit/archive/}v${NDK_VERSION}.tar.gz
+DISTFILES+=		${NDK_DISTFILE}
+
+FIRST_DSO_EXTMODS+=	ndk
+
+DSO_BASEMODS+=		mail
+DSO_BASEMODS+=		stream
+
+.for mod in ${DSO_BASEMODS}
+CONFIGURE_ARGS+=	--with-${mod}=dynamic
+.endfor
+
+.for mod in ${FIRST_DSO_EXTMODS}
+CONFIGURE_ARGS+=	--add-dynamic-module=../${${mod:tu}_DISTNAME}${${mod:tu}_SUBDIR}
+.endfor
+
+.include "../../devel/zlib/buildlink3.mk"

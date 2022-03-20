@@ -1,0 +1,3 @@
+@comment $NetBSD$
+libexec/nginx/ngx_http_naxsi_module.so
+share/examples/nginx/conf/naxsi_core.rules

@@ -1,0 +1,2 @@
+@comment $NetBSD$
+libexec/nginx/ngx_http_set_misc_module.so

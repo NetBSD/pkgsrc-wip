@@ -1,0 +1,8 @@
+Nginx (pronounced engine-x) is a free, open-source, high-performance HTTP
+server and reverse proxy, as well as an IMAP/POP3 proxy server. Igor Sysoev
+started development of Nginx in 2002, with the first public release in 2004.
+Nginx now hosts nearly 12.18% (22.2M) of active sites across all domains.
+Nginx is known for its high performance, stability, rich feature set, simple
+configuration, and low resource consumption.
+
+This package contains the lua module for Nginx.

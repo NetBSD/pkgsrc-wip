@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.14 2022/03/14 02:49:09 osa Exp $
+libexec/nginx/ngx_mail_module.so
+libexec/nginx/ndk_http_module.so
+${PLIST.imagefilter}libexec/nginx/ngx_http_image_filter_module.so
+${PLIST.perl}libexec/nginx/ngx_http_perl_module.so
+libexec/nginx/ngx_stream_module.so
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.${SOEXT}
+${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/nginx.pm
+man/man8/nginx.8
+sbin/nginx
+share/examples/nginx/conf/fastcgi.conf
+share/examples/nginx/conf/fastcgi_params
+share/examples/nginx/conf/koi-utf
+share/examples/nginx/conf/koi-win
+share/examples/nginx/conf/mime.types
+share/examples/nginx/conf/nginx.conf
+${PLIST.uwsgi}share/examples/nginx/conf/uwsgi_params
+share/examples/nginx/conf/win-utf
+share/examples/nginx/html/50x.html
+share/examples/nginx/html/index.html
