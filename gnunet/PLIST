@@ -55,6 +55,8 @@ bin/gnunet-unindex
 bin/gnunet-uri
 bin/gnunet-vpn
 bin/gnunet-zoneimport
+etc/gnunet/gnunet.conf
+etc/gnunet/gnunet_user.conf
 include/gnunet/compat.h
 include/gnunet/gettext.h
 include/gnunet/gnu_name_system_record_types.h

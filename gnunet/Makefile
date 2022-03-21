@@ -71,7 +71,7 @@ SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DI
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 
-post-build:
+post-configure:
 	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}
 	${INSTALL_DATA} ${FILESDIR}/gnunet.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet.conf
 	${INSTALL_DATA} ${FILESDIR}/gnunet_user.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet_user.conf
