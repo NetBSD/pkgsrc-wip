@@ -69,9 +69,9 @@ SUBST_STAGE.sysconfdir=		post-build
 SUBST_MESSAGE.sysconfdir=	Fixing paths in gnunet.conf
 SUBST_FILES.sysconfdir=		${FILESDIR}/gnunet.conf
 SUBST_SED.sysconfdir+=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}/gnunet.conf,g'
-SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DIR}/data,g'
-SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
-SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
+SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = "${GNUNET_DIR}"/data,g'
+SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = "${GNUNET_DIR}",g'
+SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = "${GNUNET_DIR}",g'
 
 # All helpers have to be suid. fs helper must not be suid.
 # Some helpers and functionalities are only supported on
