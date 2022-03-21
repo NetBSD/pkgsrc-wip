@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (gnunet-0.16.1.tar.gz) = a410f2d08942ad106df1fc3b4a6001411b2897db003c27a25ef3edf68e0bf61f
-SHA512 (gnunet-0.16.1.tar.gz) = cba1a86d5b10392185256efa498008d676ae0d9d6e66e1fa950f94f8ff7a92b1bbe6b4ab41074541cf96dc13cc99f28a3cbc59c99b72e2e770739281ff0ab0e6
-Size (gnunet-0.16.1.tar.gz) = 9387068 bytes
+BLAKE2s (gnunet-0.16.2.tar.gz) = 70755def2aa6562ac941a0c042f0bc8b3aca45472a78a4b58444b33baeab6f24
+SHA512 (gnunet-0.16.2.tar.gz) = 3e08418ced7002d5ba3bc10006b4ca498255047cb1b4477e281ee655a189bd9d4b0d984e6559d4957fd17357fe0ec7592568f57ca3617c203572dba245fa0f09
+Size (gnunet-0.16.2.tar.gz) = 9385626 bytes
 SHA1 (patch-src_setu_gnunet-service-setu.c) = 2e6c8eb895544fe79e27edec85e37379ec9b3783

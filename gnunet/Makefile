@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.16.1
+DISTNAME=		gnunet-0.16.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
@@ -29,10 +29,6 @@ CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
 CONFIGURE_ARGS+=	--with-jansson=${BUILDLINK_PREFIX.jansson}
 CONFIGURE_ARGS+=	--with-microhttpd=${BUILDLINK_PREFIX.libmicrohttpd}
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
-CONFIGURE_ENV+=		DEFAULT_INTERFACE="\"lo0\""
-.endif
 
 GNUNET_DIR=		${VARBASE}/chroot/gnunet
 GNUNET_LOG_DIR?=	${VARBASE}/log/gnunet
