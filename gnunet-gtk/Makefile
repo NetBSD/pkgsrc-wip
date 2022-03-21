@@ -14,6 +14,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
+# options.mk uses an option from gnunet's bl3
+.include "../../wip/gnunet/buildlink3.mk"
 .include "options.mk"
 
 CONFIGURE_ENV+=		LD_LIBRARY_PATH+=${BUILDLINK_PREFIX.gtk3}/lib
@@ -22,10 +24,10 @@ CONFIGURE_ARGS+=	--with-glade=${BUILDLINK_PREFIX.glade}
 # optional dependency, but x11/libunique says it is deprecated.
 # CONFIGURE_ARGS+=	--with-libunique
 
+.include "../../converters/qrencode/buildlink3.mk"
 .include "../../devel/glade/buildlink3.mk"
 .include "../../devel/libextractor/buildlink3.mk"
-.include "../../converters/qrencode/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../wip/gnunet/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
