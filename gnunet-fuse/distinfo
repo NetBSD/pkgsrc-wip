@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (gnunet-fuse-0.11.8.tar.gz) = 412d2d4b5b1ae45344e7f2c17bf262cac5c32c50
-SHA512 (gnunet-fuse-0.11.8.tar.gz) = 8dc90da16e8fa618e679aac48584280ee563580d21374f4663cc792b577db81e959c36ac41c658bd95d761cb0637fd4a710724d4ac83179a54b728089b6964ee
-Size (gnunet-fuse-0.11.8.tar.gz) = 221376 bytes
+BLAKE2s (gnunet-fuse-0.16.0.tar.gz) = 3649a95b91bf80d285b789491ef3cde0360c89fa84e3c9dd05466f1cc3fa3e06
+SHA512 (gnunet-fuse-0.16.0.tar.gz) = 973ec06d97a032b5805ef148221be18e101a9b6211b47ab750e32597017fe3a7b7d879fdaf689339c5c3f70d6eb4a154c65ad04b7b6034dd85a4c735205b5042
+Size (gnunet-fuse-0.16.0.tar.gz) = 214171 bytes

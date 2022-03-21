@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-fuse-0.11.8
+DISTNAME=		gnunet-fuse-0.16.0
 CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
