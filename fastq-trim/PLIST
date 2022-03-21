@@ -1,6 +1,6 @@
 @comment $NetBSD$
+bin/fastq-scum
 bin/fastq-trim
-bin/fastq-vis
 include/fastq-trim-accessors.h
 include/fastq-trim-mutators.h
 include/fastq-trim-rvs.h
