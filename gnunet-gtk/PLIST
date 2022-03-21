@@ -1,5 +1,4 @@
 @comment $NetBSD$
-bin/gnunet-conversation-gtk
 bin/gnunet-fs-gtk
 bin/gnunet-namestore-gtk
 bin/gnunet-peerinfo-gtk
@@ -25,6 +24,7 @@ lib/gnunet/libgnunet_plugin_gtk_namestore_vpn.la
 lib/libgnunetgtk.la
 man/man1/gnunet-conversation-gtk.1
 man/man1/gnunet-fs-gtk.1
+man/man1/gnunet-gns-gtk.1
 man/man1/gnunet-identity-gtk.1
 man/man1/gnunet-namestore-gtk.1
 man/man1/gnunet-peerinfo-gtk.1
@@ -33,7 +33,6 @@ man/man1/gnunet-statistics-gtk.1
 share/applications/gnunet-fs-gtk.desktop
 share/applications/gnunet-gtk.desktop
 share/applications/gnunet-setup.desktop
-share/doc/gnunet-gtk/COPYING
 share/doc/gnunet-gtk/README
 share/gnunet-gtk/gnunet_logo.png
 share/gnunet/black.png
@@ -374,6 +373,7 @@ share/locale/de/LC_MESSAGES/gnunet-gtk.mo
 share/locale/es/LC_MESSAGES/gnunet-gtk.mo
 share/locale/fr/LC_MESSAGES/gnunet-gtk.mo
 share/locale/it/LC_MESSAGES/gnunet-gtk.mo
+share/locale/sr/LC_MESSAGES/gnunet-gtk.mo
 share/locale/sv/LC_MESSAGES/gnunet-gtk.mo
 share/locale/tr/LC_MESSAGES/gnunet-gtk.mo
 share/locale/vi/LC_MESSAGES/gnunet-gtk.mo

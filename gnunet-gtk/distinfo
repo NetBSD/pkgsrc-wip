@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (gnunet-gtk-0.11.7.tar.gz) = 85aaaedf78586f45ec0a840375c71c7450f0a33b
-SHA512 (gnunet-gtk-0.11.7.tar.gz) = 368d31e876d3ace60e62e744e5a7d375962a6f7e6c2800cf1389185673ec643a91160fccbd380427e5fdcf0683824aa17265b3de4eb8a8493aa20c55596d982f
-Size (gnunet-gtk-0.11.7.tar.gz) = 1689898 bytes
+BLAKE2s (gnunet-gtk-0.16.0.tar.gz) = 5ac4cfa1c6a3b67a940b96c47229aa707c17c5434ed3896de999a21fcd86c01b
+SHA512 (gnunet-gtk-0.16.0.tar.gz) = 478815504430e130c161b769ade2ad253d7c365a873bb42e619e926fe4550afd91e73a9a8a22f95ef0b0966d82c8addc81cc7c1d6e31ccba6704c594a8fae06c
+Size (gnunet-gtk-0.16.0.tar.gz) = 1566556 bytes
