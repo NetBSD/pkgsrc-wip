@@ -33,6 +33,7 @@ pkgbase:= gnunet
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
+.if !empty(PKG_BUILD_OPTIONS.gnunet:Maudio)
 .if !empty(PKG_BUILD_OPTIONS.gnunet:Mopus)
 .include "../../audio/libopus/buildlink3.mk"
 .endif
@@ -48,6 +49,7 @@ pkgbase:= gnunet
 
 .if !empty(PKG_BUILD_OPTIONS.gnunet:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
+.endif
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.gnunet:Mzbar)

@@ -4,11 +4,12 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
 PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
-PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3
+PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 audio
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
 # Should we name this qrcode instead?
 PKG_SUPPORTED_OPTIONS+=		zbar
 PKG_SUGGESTED_OPTIONS+=		idn gstreamer doc sqlite3 opus ogg
+PKG_SUGGESTED_OPTIONS+=		audio
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
@@ -107,7 +108,10 @@ CONFIGURE_ARGS+=	--disable-experimental
 .endif
 
 # conversation submodule. if gstreamer + opus + ogg
-# exists, pulseaudio is not necessary.
+# exists, pulseaudio is not necessary. gnunet-gtk
+# conditionally builds a binary if the conversation
+# submodule is build by gnunet.
+.if !empty(PKG_OPTIONS:Maudio)
 .if !empty(PKG_OPTIONS:Mopus)
 .include "../../audio/libopus/buildlink3.mk"
 PLIST_SRC+=		PLIST.conversations
@@ -127,6 +131,7 @@ PLIST_SRC+=		PLIST.conversations
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 PLIST_SRC+=		PLIST.conversations
+.endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mzbar)
