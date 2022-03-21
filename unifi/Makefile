@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.32 2021/12/11 17:30:07 gdt Exp $
 
 # Please do not drop this; a new update cycle is likely soon.
-DISTNAME=	unifi-6.5.55
+DISTNAME=	unifi-7.0.25
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
@@ -14,6 +14,8 @@ HOMEPAGE=	https://www.ubnt.com/download/unifi/
 #BLOGPAGE=	https://community.ui.com/releases
 COMMENT=	Provisioning software for network products made by Ubiquiti
 LICENSE=	ubiquiti-license
+
+# \todo Upstream changed how they bundle this; it's now a .deb
 
 # Bundled firmware images cannot be redistributed
 RESTRICTED=		No permission to redistribute
