@@ -59,11 +59,15 @@ AUTO_MKDIRS=		YES
 
 FILES_SUBST+=		PKG_HOME=${GNUNET_DIR}
 
+post-extract:
+	${CP} ${FILESDIR}/gnunet.conf ${WRKSRC}/gnunet.conf
+	${CP} ${FILESDIR}/gnunet_user.conf ${WRKSRC}/gnunet_user.conf
+
 # TODO: This should be an .in file, but how.
 SUBST_CLASSES+=			sysconfdir
-SUBST_STAGE.sysconfdir=		post-configure
+SUBST_STAGE.sysconfdir=		pre-configure
 SUBST_MESSAGE.sysconfdir=	Fixing paths in gnunet.conf
-SUBST_FILES.sysconfdir=		${FILESDIR}/gnunet.conf
+SUBST_FILES.sysconfdir=		${WRKSRC}/gnunet.conf
 SUBST_SED.sysconfdir+=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}/gnunet.conf,g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DIR}/data,g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'
@@ -71,8 +75,8 @@ SUBST_SED.sysconfdir+=		-e 's,^GNUNET_HOME.*,GNUNET_HOME = ${GNUNET_DIR},g'
 
 post-configure:
 	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}
-	${INSTALL_DATA} ${FILESDIR}/gnunet.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet.conf
-	${INSTALL_DATA} ${FILESDIR}/gnunet_user.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet_user.conf
+	${INSTALL_DATA} ${WRKSRC}/gnunet.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet.conf
+	${INSTALL_DATA} ${WRKSRC}/gnunet_user.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet_user.conf
 
 # All helpers have to be suid. fs helper must not be suid.
 # Some helpers and functionalities are only supported on
