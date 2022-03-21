@@ -62,6 +62,7 @@ pkgbase:= gnunet
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
