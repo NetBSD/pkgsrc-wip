@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.139 2020/12/10 21:37:07 wiz Exp $
 
-BLAKE2s (ocaml-4.14.0~beta1.tar.gz) = c4f459fa6215a67a534d3cef8349bfcc62114a4d9b8aad3aefcc52d459373187
-SHA512 (ocaml-4.14.0~beta1.tar.gz) = 4c124611a598427debe1dc694472867dd3514cfa86ab105f29a2551fcae954e0bb6b19af023f881cee5e5bd08bf9bfb37ffa61126f42df15844ced38fc524ce1
-Size (ocaml-4.14.0~beta1.tar.gz) = 5483110 bytes
+BLAKE2s (ocaml-4.14.0~rc2.tar.gz) = fd4a92f1a3e0a44947ce1e48d093fed68ede35f9e28a149c468611cea83a8537
+SHA512 (ocaml-4.14.0~rc2.tar.gz) = f8628bbee2f921c67f3af48ed2c0d1c5fb081c946fb51c4701aa95f5952f41c365d83ddd2039ec6cdac797a5b21681a2d6a917c13356874edf4cc29b4814e75f
+Size (ocaml-4.14.0~rc2.tar.gz) = 5489107 bytes
 SHA1 (patch-Makefile) = 090510112ab849a56a9a2b4722d5d87a01dc29e2
 SHA1 (patch-Makefile.build_config.in) = 38ed679eb5931ecd11274092793a94e1e16d633a
 SHA1 (patch-api__docgen_ocamldoc_Makefile) = d1d5aaa159f865ddcccfff334399f0ed908fee7f
