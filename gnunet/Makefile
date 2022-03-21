@@ -56,8 +56,6 @@ MAKE_DIRS+=		${GNUNET_DIR}
 MAKE_DIRS+=		${GNUNET_LOG_DIR}
 MAKE_DIRS+=		${GNUNET_DIR}/data
 AUTO_MKDIRS=		YES
-#CONF_FILES+=		${FILESDIR}/gnunet.conf ${PKG_SYSCONFDIR}/gnunet.conf
-#CONF_FILES+=		${FILESDIR}/gnunet_user.conf ${PKG_SYSCONFDIR}/gnunet_user.conf
 
 FILES_SUBST+=		PKG_HOME=${GNUNET_DIR}
 

@@ -49,7 +49,7 @@ PLIST_SRC+=		PLIST.doc
 CONFIGURE_ARGS+=	--disable-documentation
 .endif
 
-# Build the mdoc output.
+# Build the texi2mdoc output.
 .if !empty(PKG_OPTIONS:Mmdoc)
 BUILD_DEPENDS+=		texi2mdoc-[0-9]*:../../textproc/texi2mdoc
 CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
@@ -58,9 +58,8 @@ PLIST_SRC+=		PLIST.mdoc
 CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
 
-# idn is mandatory but idn or idn2 can be used with a preference
-# for idn2. Use different option content once
-# https://bugs.gnunet.org/view.php?id=5948 is fixed.
+# idn is mandatory but idn or idn2 can be used with a preference for
+# idn2.
 .if !empty(PKG_OPTIONS:Midn)
 .include "../../devel/libidn2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn2}
@@ -80,6 +79,9 @@ PLIST_SRC+=		PLIST.sqlite3
 CONFIGURE_ARGS+=	--without-sqlite3
 .endif
 
+# \todo:
+# checking for mysql version... < 4.1
+# mysql version >= 4.1 required. Will not use MySQL
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
 PLIST_SRC+=		PLIST.mysql
@@ -87,9 +89,6 @@ PLIST_SRC+=		PLIST.mysql
 CONFIGURE_ARGS+=	--without-mysql
 .endif
 
-# \todo:
-# checking for mysql version... < 4.1
-# mysql version >= 4.1 required. Will not use MySQL
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
 PLIST_SRC+=		PLIST.pgsql
@@ -159,21 +158,11 @@ PLIST.bluez=		yes
 CONFIGURE_ARGS+=	--without-libbluetooth
 .endif
 
-# there are files which only exist on Linux, only on FreeBSD, and on both of them.
-# I have neither of them. If you do, please create the appropriate PLIST files
-# with content.
-.if ${OPSYS} == "Linux"
-# PLIST_SRC+=		PLIST.linux
-.endif
+# \todo: there are files which only exist on Linux, only on FreeBSD,
+# and on both of them.  I have neither of them. If you do, please
+# create the appropriate PLIST files with content.
 
-.if ${OPSYS} == "FreeBSD"
-# PLIST_SRC+=		PLIST.freebsd
-.endif
-
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
-# PLIST_SRC+=		PLIST.linuxfreebsd
-.endif
-
+# Fix the perl path
 .if !empty(PKG_OPTIONS:Mperl)
 USE_TOOLS+=		perl:run
 PLIST_SRC+=		PLIST.perl
