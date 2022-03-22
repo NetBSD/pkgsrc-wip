@@ -3,13 +3,12 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
 PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
-PKG_SUPPORTED_OPTIONS+=		experimental bluez pulseaudio
+PKG_SUPPORTED_OPTIONS+=		experimental pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 audio
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
-# Should we name this qrcode instead?
-PKG_SUPPORTED_OPTIONS+=		zbar
-PKG_SUGGESTED_OPTIONS+=		idn gstreamer doc sqlite3 opus ogg
-PKG_SUGGESTED_OPTIONS+=		audio
+
+PKG_SUGGESTED_OPTIONS+=		audio gstreamer opus ogg
+PKG_SUGGESTED_OPTIONS+=		idn doc sqlite3
 
 # bluez is still in pkgsrc-wip, and I should test this
 # before claiming bluez from pkgsrc-wip on Linux works.
@@ -17,6 +16,7 @@ PKG_SUGGESTED_OPTIONS+=		audio
 # gnunet-qr needs zbar with video support. v4l2 only works
 # on Linux.
 .if ${OPSYS} == "Linux"
+PKG_SUPPORTED_OPTIONS+=		bluez zbar
 # outdated package, update the package in wip
 # PKG_SUGGESTED_OPTIONS+=		bluez
 PKG_SUGGESTED_OPTIONS+=		zbar
@@ -26,10 +26,6 @@ PKG_SUGGESTED_OPTIONS+=		zbar
 # rather lengthy, and keeping it in one file for every
 # option is not easy on the one doing the updates.
 PLIST_SRC=			PLIST
-
-# openssl is currently required by:
-# src/transport/gnunet-transport-certificate-creation
-# src/gns/gnunet-gns-proxy-setup-ca
 
 .include "../../mk/bsd.options.mk"
 

@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	gnunet
 .if !defined(GNUNET_BUILDLINK3_MK)
 GNUNET_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnunet+=	gnunet>=0.11.0
+BUILDLINK_API_DEPENDS.gnunet+=	gnunet>=0.16.0
 BUILDLINK_PKGSRCDIR.gnunet?=	../../wip/gnunet
 
 pkgbase:= gnunet
@@ -58,14 +58,15 @@ pkgbase:= gnunet
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/nss/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libextractor/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/nss/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../wip/gnurl/buildlink3.mk"

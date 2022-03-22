@@ -96,6 +96,10 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-client ${SETUID_R
 SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_ROOT_PERMS}
 .endif
 
+# openssl is currently required by:
+# src/transport/gnunet-transport-certificate-creation
+# src/gns/gnunet-gns-proxy-setup-ca
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
@@ -107,6 +111,7 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../wip/gnurl/buildlink3.mk"
