@@ -17,7 +17,8 @@ PKG_SUGGESTED_OPTIONS+=		audio
 # gnunet-qr needs zbar with video support. v4l2 only works
 # on Linux.
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=		bluez
+# outdated package, update the package in wip
+# PKG_SUGGESTED_OPTIONS+=		bluez
 PKG_SUGGESTED_OPTIONS+=		zbar
 .endif
 
