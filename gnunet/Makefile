@@ -51,7 +51,6 @@ OWN_DIRS_PERMS+=	${PKG_HOME.gnunet} ${GNUNET_USER} ${GNUNET_GROUP} 0700
 OWN_DIRS_PERMS+=	${GNUNET_LOG_DIR} ${GNUNET_USER} ${GNUNET_GROUP} 0755
 OWN_DIRS_PERMS+=	${GNUNET_DIR}/data ${GNUNET_USER} ${GNUNET_GROUP} 0700
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR}
 MAKE_DIRS+=		${GNUNET_DIR}
 MAKE_DIRS+=		${GNUNET_LOG_DIR}
 MAKE_DIRS+=		${GNUNET_DIR}/data
@@ -63,11 +62,10 @@ post-extract:
 	${CP} ${FILESDIR}/gnunet.conf ${WRKSRC}/gnunet.conf
 	${CP} ${FILESDIR}/gnunet_user.conf ${WRKSRC}/gnunet_user.conf
 
-# TODO: This should be an .in file, but how.
 SUBST_CLASSES+=			sysconfdir
 SUBST_STAGE.sysconfdir=		pre-configure
 SUBST_MESSAGE.sysconfdir=	Fixing paths in gnunet.conf
-SUBST_FILES.sysconfdir=		${WRKSRC}/gnunet.conf
+SUBST_FILES.sysconfdir=		gnunet.conf
 SUBST_SED.sysconfdir+=		-e 's,^DEFAULTCONFIG.*,DEFAULTCONFIG = ${PKG_SYSCONFDIR}/gnunet.conf,g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_DATA_HOME.*,GNUNET_DATA_HOME = ${GNUNET_DIR}/data,g'
 SUBST_SED.sysconfdir+=		-e 's,^GNUNET_RUNTIME_DIR.*,GNUNET_RUNTIME_DIR = ${GNUNET_DIR},g'

@@ -11,48 +11,48 @@ BUILDLINK_PKGSRCDIR.gnunet?=	../../wip/gnunet
 pkgbase:= gnunet
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mtests)
+.if ${PKG_BUILD_OPTIONS.gnunet:Mtests}
 .include "../../lang/python/tool.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Midn)
+.if ${PKG_BUILD_OPTIONS.gnunet:Midn}
 .include "../../devel/libidn2/buildlink3.mk"
 .else
 .include "../../devel/libidn/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Msqlite3)
+.if ${PKG_BUILD_OPTIONS.gnunet:Msqlite3}
 .include "../../databases/sqlite3/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mmysql)
+.if ${PKG_BUILD_OPTIONS.gnunet:Mmysql}
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mpgsql)
+.if ${PKG_BUILD_OPTIONS.gnunet:Mpgsql}
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Maudio)
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mopus)
+.if ${PKG_BUILD_OPTIONS.gnunet:Maudio}
+.  if ${PKG_BUILD_OPTIONS.gnunet:Mopus}
 .include "../../audio/libopus/buildlink3.mk"
-.endif
+.  endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mogg)
+.  if ${PKG_BUILD_OPTIONS.gnunet:Mogg}
 .include "../../multimedia/libogg/buildlink3.mk"
-.endif
+.  endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mgstreamer)
+.  if ${PKG_BUILD_OPTIONS.gnunet:Mgstreamer}
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.endif
+.  endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mpulseaudio)
+.  if ${PKG_BUILD_OPTIONS.gnunet:Mpulseaudio}
 .include "../../audio/pulseaudio/buildlink3.mk"
-.endif
+.  endif
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.gnunet:Mzbar)
+.if ${PKG_BUILD_OPTIONS.gnunet:Mzbar}
 .include "../../graphics/zbar/buildlink3.mk"
 .endif
 
@@ -72,7 +72,7 @@ pkgbase:= gnunet
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-.if ${OPSYS} == "Linux" && !empty(PKG_BUILD_OPTIONS.gnunet:Mbluez)
+.if ${OPSYS} == "Linux" && ${PKG_BUILD_OPTIONS.gnunet:Mbluez}
 .include "../../wip/bluez-libs/buildlink3.mk"
 .endif
 

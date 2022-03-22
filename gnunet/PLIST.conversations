@@ -1,3 +1,4 @@
+@comment $NetBSD$
 bin/gnunet-conversation
 bin/gnunet-conversation-test
 lib/gnunet/libexec/gnunet-helper-audio-playback
