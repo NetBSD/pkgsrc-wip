@@ -60,11 +60,17 @@ gnunet_start()
 	eval $doit
 }
 
+# stopping this is broken (with one service hanging around until you KILL it).
 gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
 	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} -e'"
 	eval $doit
+	# kill `cat ${pidfile}` 2>/dev/null
+	# check_pidfile
+	# kill ${pid}
+	# sleep 1
+	# @RM@ -rf "/tmp/gnunet-${gnunetuser_user}-runtime" 2>/dev/null 2>&1
 }
 
 if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
