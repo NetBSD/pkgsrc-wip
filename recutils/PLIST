@@ -11,7 +11,6 @@ bin/recset
 include/rec.h
 info/rec-mode.info
 info/recutils.info
-lib/charset.alias
 lib/librec.la
 man/man1/csv2rec.1
 man/man1/rec2csv.1
@@ -22,12 +21,12 @@ man/man1/recinf.1
 man/man1/recins.1
 man/man1/recsel.1
 man/man1/recset.1
-share/emacs/site-lisp/ob-rec.el
-share/emacs/site-lisp/rec-mode.el
 share/locale/de/LC_MESSAGES/recutils.mo
+share/locale/es/LC_MESSAGES/recutils.mo
 share/locale/fi/LC_MESSAGES/recutils.mo
 share/locale/fr/LC_MESSAGES/recutils.mo
 share/locale/nl/LC_MESSAGES/recutils.mo
+share/locale/pt_BR/LC_MESSAGES/recutils.mo
 share/locale/sr/LC_MESSAGES/recutils.mo
 share/locale/sv/LC_MESSAGES/recutils.mo
 share/locale/uk/LC_MESSAGES/recutils.mo
