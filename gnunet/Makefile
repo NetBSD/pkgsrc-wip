@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
 CONFIGURE_ARGS+=	--with-jansson=${BUILDLINK_PREFIX.jansson}
 CONFIGURE_ARGS+=	--with-microhttpd=${BUILDLINK_PREFIX.libmicrohttpd}
 
+GNUNET_LOG_DIR=		${VARBASE}/chroot/gnunet/cache
 GNUNET_DIR=		${VARBASE}/chroot/gnunet
 GNUNET_USER=		gnunet
 GNUNET_GROUP=		gnunet

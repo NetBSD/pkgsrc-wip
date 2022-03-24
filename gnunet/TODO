@@ -2,3 +2,4 @@
 - debug the service
 - build on linux and freebsd
   - currently broken on Linux due to bluez-libs being too old and not building.
+- should we log to varbase/log/gnunet?
