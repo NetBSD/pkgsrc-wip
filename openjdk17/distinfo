@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.29 2022/03/05 14:47:24 tnn Exp $
+
+BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220324.tar.xz) = 18b0af103119a86ba5a2bfb13d13cc3b7bb37c8098904e9775d1de0054e45cf5
+SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220324.tar.xz) = 49aa3c929529b3f3ec43c54f359bf15275013069cdde98b6d088f12a2fc3b18e113c7e3b9a7c4cba963322f2e9eb96d2d4359c324e2c4ac399bc2db3e3fcac2f
+Size (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220324.tar.xz) = 320276156 bytes
+BLAKE2s (jdk17u-jdk-17.0.2-8-1.tar.gz) = c642373e109255df6b29c91476c9afe3a0d23b88ec8ad559c432e21b1b51fdd3
+SHA512 (jdk17u-jdk-17.0.2-8-1.tar.gz) = a8127c6bd55ae5fff69209c7ed84803d411cd1660f3e48e95d8fd8fee73c54dbaaa8b5c31de51687a2f194c0c063f7e56b2426866dc926a0e02fd728ceea65b4
+Size (jdk17u-jdk-17.0.2-8-1.tar.gz) = 104857682 bytes
+SHA1 (patch-make_autoconf_flags-cflags.m4) = 0379aeecc6181cbd15f6f31518b73ca915f1f73b
+SHA1 (patch-make_autoconf_lib-alsa.m4) = 999fbf951363f6b49b22aad81537728f22d7c381
+SHA1 (patch-make_autoconf_lib-bundled.m4) = 8720c3f674955e8a51b2ab7dba80c36d34ba8594
+SHA1 (patch-make_autoconf_lib-freetype.m4) = bd791b99e4fd87f24432831fba1e814dd199445f
+SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
+SHA1 (patch-make_common_NativeCompilation.gmk) = fc97a952ba87efb450f59e87f19fb4c47558ae1d
+SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 3172d8d76e0e79b127605429fb70dccd164b33c8
+SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
+SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 0a772045ad967cbd0a1342d124c47927f4a57bfe
+SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = b70e14728e426a9f79c2c1ee735849fb53dfc1bd
+SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = a58d5eb59181d68d46272e15d47b94c6790ed00a
+SHA1 (patch-src_hotspot_os_posix_signals__posix.cpp) = 05486d931f294066e0cc04a389ce6cb038bb1b6d
+SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = 8c6f9cab9dca7bfab9e2e8f95059f702e1ce8a81
+SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
+SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
+SHA1 (patch-src_java.base_unix_native_libnio_ch_Net.c) = 2bdb089f7d4f708fb750793b7e0bfa7796fb1694
+SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = d7bd8839ecd84459fbd3e7d14ac0e2f48b8b4032
+SHA1 (patch-src_jdk.jdwp.agent_share_native_libdt__socket_socketTransport.c) = c06b49fbc9d34cb839f3bd7821779c79b763a629
+SHA1 (patch-src_jdk.management_bsd_native_libmanagement__ext_UnixOperatingSystem.c) = ba9dfd0af80493daa83a4d76c7444368f4a8c221
+SHA1 (patch-test_micro_org_openjdk_bench_java_nio_genBuffers.sh) = 07d8bd57548ce9cfea0e789ba78c27b08f9b80ba
