@@ -1,4 +1,4 @@
-# $NetBSD$
+$NetBSD$
 
 Upstream commit c06bc0c449d0a988f2848be8ae2c4779dc6f26d0
 conversation does not require libextractor or libgnunetfs

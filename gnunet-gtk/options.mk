@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS+=		audio
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Maudio)
-.  if !empty(PKG_BUILD_OPTIONS.gnunet:Maudio)
+.  if ${PKG_BUILD_OPTIONS.gnunet:Maudio}
 PLIST_VARS+=			audio
 PLIST.audio=			yes
 .  endif
