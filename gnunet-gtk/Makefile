@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config automake autoconf autoreconf
 
 # options.mk uses an option from gnunet's bl3
 .include "../../wip/gnunet/buildlink3.mk"
@@ -26,6 +26,9 @@ CONFIGURE_ARGS+=	--with-glade=${BUILDLINK_PREFIX.glade}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 # optional dependency, but x11/libunique says it is deprecated.
 # CONFIGURE_ARGS+=	--with-libunique
+
+pre-configure:
+	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -vif)
 
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../devel/glade/buildlink3.mk"
