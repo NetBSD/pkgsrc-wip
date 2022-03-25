@@ -2750,6 +2750,7 @@ SUBDIR+=	openfodder-data
 SUBDIR+=	opengrok
 SUBDIR+=	openjazz
 SUBDIR+=	openjdk16
+SUBDIR+=	openjdk17
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
