@@ -1,5 +1,4 @@
 @comment $NetBSD$
-${PLIST.audio}bin/gnunet-conversation-gtk
 bin/gnunet-fs-gtk
 bin/gnunet-namestore-gtk
 bin/gnunet-peerinfo-gtk

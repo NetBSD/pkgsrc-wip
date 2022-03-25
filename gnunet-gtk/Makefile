@@ -21,6 +21,9 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		LD_LIBRARY_PATH+=${BUILDLINK_PREFIX.gtk3}/lib
 CONFIGURE_ARGS+=	--with-gnunet=${BUILDLINK_PREFIX.gnunet}
 CONFIGURE_ARGS+=	--with-glade=${BUILDLINK_PREFIX.glade}
+# Without this, gnunet-gtk fails to build a file. Fixed upstream,
+# next release won't require LE.
+CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 # optional dependency, but x11/libunique says it is deprecated.
 # CONFIGURE_ARGS+=	--with-libunique
 
