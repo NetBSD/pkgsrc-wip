@@ -6,7 +6,7 @@ GIT_REPO=	${.CURDIR:H}/repos/pkgbase
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	https://www.pkgsrc.org/
-COMMENT=	Test for Git with a single repository
+COMMENT=	Test for Git with changes in the remote repository
 LICENSE=	2-clause-bsd
 
 NO_CHECKSUM=	yes
