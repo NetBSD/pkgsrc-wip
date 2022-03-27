@@ -2051,6 +2051,7 @@ SUBDIR+=	libcue
 SUBDIR+=	libcyaml
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
+SUBDIR+=	libdeflate
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdivecomputer
