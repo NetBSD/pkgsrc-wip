@@ -113,7 +113,10 @@ weewx/bin/weeutil/timediff.pyo
 weewx/bin/weeutil/weeutil.py
 weewx/bin/weeutil/weeutil.pyc
 weewx/bin/weeutil/weeutil.pyo
-weewx/bin/${EGG_FILE}
+weewx/bin/${EGG_FILE}/PKG-INFO
+weewx/bin/${EGG_FILE}/SOURCES.txt
+weewx/bin/${EGG_FILE}/dependency_links.txt
+weewx/bin/${EGG_FILE}/top_level.txt
 weewx/bin/weewx/__init__.py
 weewx/bin/weewx/__init__.pyc
 weewx/bin/weewx/__init__.pyo
