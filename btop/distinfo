@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (btop-1.2.5.tar.gz) = 744f8b668fb87010a480388ee2987e85a658ab18f98ec6daf45c6872f6eb7c00
+SHA512 (btop-1.2.5.tar.gz) = f881c2f8e85ccf7609ef443b4bec3c20e4f41c9b45171ddc3110a5484bf39cb2c3e4b7eff0a97930fe550d557526cec58b5867d55ed9d75f4a8976f0c92d5d10
+Size (btop-1.2.5.tar.gz) = 971598 bytes
+SHA1 (patch-Makefile) = f5631b29ed8341d90acdc6638cc5db2a5d87f739

@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- Makefile.orig	2022-03-05 23:27:23.000000000 +0000
++++ Makefile
+@@ -89,6 +89,12 @@ else ifeq ($(PLATFORM_LC),freebsd)
+ 	SU_GROUP := wheel
+ 	override ADDFLAGS += -lstdc++ -lm -lkvm -ldevstat -Wl,-rpath=/usr/local/lib/gcc11
+ 	export MAKE = gmake
++else ifeq ($(PLATFORM_LC),netbsd)
++	PLATFORM_DIR := freebsd
++	THREADS	:= $(shell getconf NPROCESSORS_ONLN 2>/dev/null || echo 1)
++	SU_GROUP := wheel
++	override ADDFLAGS += -lm
++	export MAKE = gmake
+ else ifeq ($(PLATFORM_LC),macos)
+ 	PLATFORM_DIR := osx
+ 	THREADS	:= $(shell sysctl -n hw.ncpu || echo 1)
