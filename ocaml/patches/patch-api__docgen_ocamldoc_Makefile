@@ -1,5 +1,7 @@
 $NetBSD$
 
+Install manpages with correct suffix
+
 --- api_docgen/ocamldoc/Makefile.orig	2022-02-21 15:57:25.000000000 +0000
 +++ api_docgen/ocamldoc/Makefile
 @@ -19,7 +19,7 @@ include ../../ocamldoc/Makefile.best_oca

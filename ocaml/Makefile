@@ -21,12 +21,11 @@ USE_GNU_CONFIGURE_HOST=	no
 # Options
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-CONFIGURE_ARGS+=       --enable-native-compiler
-BUILD_TARGET=          world.opt
-PLIST.native=          yes     
+CONFIGURE_ARGS+=	--enable-native-compiler
+BUILD_TARGET=		world.opt
 .else
-CONFIGURE_ARGS+=       --disable-native-compiler
-BUILD_TARGET=          world
+CONFIGURE_ARGS+=	--disable-native-compiler
+BUILD_TARGET=		world
 .endif
 
 # This is needed because ${WRKSRC}/build/partial-install.sh uses

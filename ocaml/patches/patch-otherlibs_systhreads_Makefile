@@ -1,5 +1,8 @@
 $NetBSD$
 
+Use BSD_INSTALL_* instead of mkdir
+Honor LDFLAGS.
+
 --- otherlibs/systhreads/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
 +++ otherlibs/systhreads/Makefile
 @@ -30,6 +30,7 @@ NATIVE_CPPFLAGS = \

@@ -4,14 +4,13 @@
 # It is used by ocaml.mk and the lang/ocaml package.
 #
 # Build def variables:
-# OCAML_USE_OPT_COMPILER 
+# OCAML_USE_OPT_COMPILER
 # if set to yes, will enable optimised (native code) compilation
 # default value: depends on architecture
 #
 # PLIST variable:
 # PLIST.ocaml-opt for files only installed when using the optimised compiler
 # Set based on OCAML_USE_OPT_COMPILER
-# 
 
 .if !defined(OCAML_NATIVE_MK)
 OCAML_NATIVE_MK= # defined

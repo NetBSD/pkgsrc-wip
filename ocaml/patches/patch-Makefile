@@ -1,5 +1,8 @@
 $NetBSD$
 
+Use BSD_INSTALL_* instead of mkdir
+Honor LDFLAGS
+
 --- Makefile.orig	2022-02-08 16:50:12.000000000 +0000
 +++ Makefile
 @@ -50,7 +50,7 @@ COMPFLAGS=-strict-sequence -principal -a

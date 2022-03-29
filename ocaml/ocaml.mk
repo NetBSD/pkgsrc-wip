@@ -208,7 +208,7 @@ do-build:
 #
 # opam targets
 #
-.if ${OCAML_USE_OPAM} == "yes" 
+.if ${OCAML_USE_OPAM} == "yes"
 
 do-install:
 	${RUN} for i in ${OPAM_INSTALL_FILES}; do \

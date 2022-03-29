@@ -1,5 +1,7 @@
 $NetBSD$
 
+Explicit cast to int to eliminate warning
+
 --- runtime/sak.c.orig	2022-02-21 15:57:25.000000000 +0000
 +++ runtime/sak.c
 @@ -123,7 +123,7 @@ void add_stdlib_prefix(int count, char_o

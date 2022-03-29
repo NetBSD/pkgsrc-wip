@@ -3,7 +3,6 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml
 PKG_SUPPORTED_OPTIONS=	pic flambda
 PKG_SUGGESTED_OPTIONS=	pic
-PLIST_VARS+=	pic flambda ocaml-native
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"

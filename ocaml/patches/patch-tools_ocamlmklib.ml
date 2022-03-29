@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add ELF mode support to ocamlmklib
+
 --- tools/ocamlmklib.ml.orig	2021-09-30 15:40:11.000000000 +0000
 +++ tools/ocamlmklib.ml
 @@ -42,6 +42,7 @@ and c_objs = ref []         (* .o, .a, .

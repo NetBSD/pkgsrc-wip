@@ -1,5 +1,7 @@
 $NetBSD$
 
+Honor LDFLAGS.
+
 --- runtime/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
 +++ runtime/Makefile
 @@ -265,7 +265,7 @@ build_config.h: $(ROOTDIR)/Makefile.conf
