@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	difftastic-0.18.1
+DISTNAME=	difftastic-0.24.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Wilfred/}
 
