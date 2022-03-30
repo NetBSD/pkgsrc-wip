@@ -2641,7 +2641,6 @@ SUBDIR+=	nlopt
 SUBDIR+=	nncp
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
-SUBDIR+=	nodejs
 SUBDIR+=	nodm
 SUBDIR+=	noip
 SUBDIR+=	noiptun
