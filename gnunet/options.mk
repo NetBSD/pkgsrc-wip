@@ -71,6 +71,7 @@ CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
 # the build won't build when you have none of them.
 .if ${PKG_OPTIONS:Msqlite3}
 .include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 PLIST_SRC+=		PLIST.sqlite3
 .else
 CONFIGURE_ARGS+=	--without-sqlite3
@@ -81,6 +82,7 @@ CONFIGURE_ARGS+=	--without-sqlite3
 # mysql version >= 4.1 required. Will not use MySQL
 .if ${PKG_OPTIONS:Mmysql}
 .include "../../mk/mysql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql}
 PLIST_SRC+=		PLIST.mysql
 .else
 CONFIGURE_ARGS+=	--without-mysql
@@ -88,9 +90,10 @@ CONFIGURE_ARGS+=	--without-mysql
 
 .if ${PKG_OPTIONS:Mpgsql}
 .include "../../mk/pgsql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_PREFIX.pgsql}
 PLIST_SRC+=		PLIST.pgsql
 .else
-CONFIGURE_ARGS+=	--without-postgres
+CONFIGURE_ARGS+=	--without-postgresql
 .endif
 
 .if ${PKG_OPTIONS:Mexperimental}
@@ -110,12 +113,18 @@ CONFIGURE_ARGS+=	--disable-experimental
 .if ${PKG_OPTIONS:Maudio}
 .  if ${PKG_OPTIONS:Mopus}
 .include "../../audio/libopus/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-opus=${BUILDLINK_PREFIX.libopus}
 PLIST_SRC+=		PLIST.conversations
+.  else
+CONFIGURE_ARGS+=	--without-opus
 .  endif
 
 .  if ${PKG_OPTIONS:Mogg}
 .include "../../multimedia/libogg/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ogg=${BUILDLINK_PREFIX.libogg}
 PLIST_SRC+=		PLIST.conversations
+.  else
+CONFIGURE_ARGS+=	--without-ogg
 .  endif
 
 .  if ${PKG_OPTIONS:Mgstreamer}
@@ -126,12 +135,16 @@ PLIST_SRC+=		PLIST.conversations
 
 .  if ${PKG_OPTIONS:Mpulseaudio}
 .include "../../audio/pulseaudio/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pulse=${BUILDLINK_PREFIX.pulseaudio}
 PLIST_SRC+=		PLIST.conversations
+.  else
+CONFIGURE_ARGS+=	--without-pulse
 .  endif
 .endif
 
 .if ${PKG_OPTIONS:Mzbar}
 .include "../../graphics/zbar/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-zbar=${BUILDLINK_PREFIX.zbar}
 PLIST.zbar=		yes
 .else
 CONFIGURE_ARGS+=	--without-zbar
@@ -150,6 +163,7 @@ CONFIGURE_ARGS+=	--without-zbar
 .if ${OPSYS} == "Linux" && ${PKG_OPTIONS:Mbluez}
 # Do we need more for bluez?
 .include "../../wip/bluez-libs/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libbluetooth=${BUILDLINK_PREFIX.bluez-libs}
 PLIST.bluez=		yes
 .else
 CONFIGURE_ARGS+=	--without-libbluetooth
