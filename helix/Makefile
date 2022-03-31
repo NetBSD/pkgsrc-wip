@@ -8,65 +8,6 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=helix-editor/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 DISTFILES+=	${DISTNAME}.tar.gz
-DISTFILES+=	tree-sitter-toml.tar.gz
-DISTFILES+=	tree-sitter-bash.tar.gz
-DISTFILES+=	tree-sitter-c.tar.gz
-DISTFILES+=	tree-sitter-css.tar.gz
-DISTFILES+=	tree-sitter-cpp.tar.gz
-DISTFILES+=	tree-sitter-comment.tar.gz
-DISTFILES+=	tree-sitter-cmake.tar.gz
-DISTFILES+=	tree-sitter-dart.tar.gz
-DISTFILES+=	tree-sitter-docker.tar.gz
-DISTFILES+=	tree-sitter-elixir.tar.gz
-DISTFILES+=	tree-sitter-elm.tar.gz
-DISTFILES+=	tree-sitter-erlang.tar.gz
-DISTFILES+=	tree-sitter-fish.tar.gz
-DISTFILES+=	tree-sitter-gitcommit.tar.gz
-DISTFILES+=	tree-sitter-gitconfig.tar.gz
-DISTFILES+=	tree-sitter-diff.tar.gz
-DISTFILES+=	tree-sitter-gitrebase.tar.gz
-DISTFILES+=	tree-sitter-glsl.tar.gz
-DISTFILES+=	tree-sitter-go.tar.gz
-DISTFILES+=	tree-sitter-graphql.tar.gz
-DISTFILES+=	tree-sitter-haskell.tar.gz
-DISTFILES+=	tree-sitter-hcl.tar.gz
-DISTFILES+=	tree-sitter-html.tar.gz
-DISTFILES+=	tree-sitter-iex.tar.gz
-DISTFILES+=	tree-sitter-java.tar.gz
-DISTFILES+=	tree-sitter-javascript.tar.gz
-DISTFILES+=	tree-sitter-json.tar.gz
-DISTFILES+=	tree-sitter-julia.tar.gz
-DISTFILES+=	tree-sitter-kotlin.tar.gz
-DISTFILES+=	tree-sitter-latex.tar.gz
-DISTFILES+=	tree-sitter-lean.tar.gz
-DISTFILES+=	tree-sitter-ledger.tar.gz
-DISTFILES+=	tree-sitter-llvmmir.tar.gz
-DISTFILES+=	tree-sitter-llvm.tar.gz
-DISTFILES+=	tree-sitter-lua.tar.gz
-DISTFILES+=	tree-sitter-make.tar.gz
-DISTFILES+=	tree-sitter-markdown.tar.gz
-DISTFILES+=	tree-sitter-nix.tar.gz
-DISTFILES+=	tree-sitter-ocaml.tar.gz
-DISTFILES+=	tree-sitter-org.tar.gz
-DISTFILES+=	tree-sitter-perl.tar.gz
-DISTFILES+=	tree-sitter-php.tar.gz
-DISTFILES+=	tree-sitter-protobuf.tar.gz
-DISTFILES+=	tree-sitter-python.tar.gz
-DISTFILES+=	tree-sitter-regex.tar.gz
-DISTFILES+=	tree-sitter-rescript.tar.gz
-DISTFILES+=	tree-sitter-ruby.tar.gz
-DISTFILES+=	tree-sitter-rust.tar.gz
-DISTFILES+=	tree-sitter-scala.tar.gz
-DISTFILES+=	tree-sitter-solidity.tar.gz
-DISTFILES+=	tree-sitter-svelte.tar.gz
-DISTFILES+=	tree-sitter-tablegen.tar.gz
-DISTFILES+=	tree-sitter-tsq.tar.gz
-DISTFILES+=	tree-sitter-twig.tar.gz
-DISTFILES+=	tree-sitter-typescript.tar.gz
-DISTFILES+=	tree-sitter-vue.tar.gz
-DISTFILES+=	tree-sitter-wgsl.tar.gz
-DISTFILES+=	tree-sitter-yaml.tar.gz
-DISTFILES+=	tree-sitter-zig.tar.gz
 
 TOML_TAG=	8bd2056818b21860e3d756b5a58c4f6e05fb744e
 BASH_TAG=	275effdfc0edce774acf7d481f9ea195c6c403cd
@@ -129,186 +70,247 @@ WGSL_TAG=	f00ff52251edbd58f4d39c9c3204383253032c11
 YAML_TAG=	0e36bed171768908f331ff7dff9d956bae016efb
 ZIG_TAG=	42e93d02ca945094699e2dc4de785bbaf8f740ec
 
+
+DISTFILES+=	tree-sitter-toml-${TOML_TAG}.tar.gz
+DISTFILES+=	tree-sitter-bash-${BASH_TAG}.tar.gz
+DISTFILES+=	tree-sitter-c-${C_TAG}.tar.gz
+DISTFILES+=	tree-sitter-css-${CSS_TAG}.tar.gz
+DISTFILES+=	tree-sitter-cpp-${CPP_TAG}.tar.gz
+DISTFILES+=	tree-sitter-comment-${COMMENT_TAG}.tar.gz
+DISTFILES+=	tree-sitter-cmake-${CMAKE_TAG}.tar.gz
+DISTFILES+=	tree-sitter-dart-${DART_TAG}.tar.gz
+DISTFILES+=	tree-sitter-docker-${DOCKER_TAG}.tar.gz
+DISTFILES+=	tree-sitter-elixir-${ELIXIR_TAG}.tar.gz
+DISTFILES+=	tree-sitter-elm-${ELM_TAG}.tar.gz
+DISTFILES+=	tree-sitter-erlang-${ERLANG_TAG}.tar.gz
+DISTFILES+=	tree-sitter-fish-${FISH_TAG}.tar.gz
+DISTFILES+=	tree-sitter-gitcommit-${GITCOMMIT_TAG}.tar.gz
+DISTFILES+=	tree-sitter-gitconfig-${GITCONFIG_TAG}.tar.gz
+DISTFILES+=	tree-sitter-diff-${DIFF_TAG}.tar.gz
+DISTFILES+=	tree-sitter-gitrebase-${GITREBASE_TAG}.tar.gz
+DISTFILES+=	tree-sitter-glsl-${GLSL_TAG}.tar.gz
+DISTFILES+=	tree-sitter-go-${GO_TAG}.tar.gz
+DISTFILES+=	tree-sitter-graphql-${GRAPHQL_TAG}.tar.gz
+DISTFILES+=	tree-sitter-haskell-${HASKELL_TAG}.tar.gz
+DISTFILES+=	tree-sitter-hcl-${HCL_TAG}.tar.gz
+DISTFILES+=	tree-sitter-html-${HTML_TAG}.tar.gz
+DISTFILES+=	tree-sitter-iex-${IEX_TAG}.tar.gz
+DISTFILES+=	tree-sitter-java-${JAVA_TAG}.tar.gz
+DISTFILES+=	tree-sitter-javascript-${JAVASCRIPT_TAG}.tar.gz
+DISTFILES+=	tree-sitter-json-${JSON_TAG}.tar.gz
+DISTFILES+=	tree-sitter-julia-${JULIA_TAG}.tar.gz
+DISTFILES+=	tree-sitter-kotlin-${KOTLIN_TAG}.tar.gz
+DISTFILES+=	tree-sitter-latex-${LATEX_TAG}.tar.gz
+DISTFILES+=	tree-sitter-lean-${LEAN_TAG}.tar.gz
+DISTFILES+=	tree-sitter-ledger-${LEDGER_TAG}.tar.gz
+DISTFILES+=	tree-sitter-llvmmir-${LLVMMIR_TAG}.tar.gz
+DISTFILES+=	tree-sitter-llvm-${LLVM_TAG}.tar.gz
+DISTFILES+=	tree-sitter-lua-${LUA_TAG}.tar.gz
+DISTFILES+=	tree-sitter-make-${MAKE_TAG}.tar.gz
+DISTFILES+=	tree-sitter-markdown-${MARKDOWN_TAG}.tar.gz
+DISTFILES+=	tree-sitter-nix-${NIX_TAG}.tar.gz
+DISTFILES+=	tree-sitter-ocaml-${OCAML_TAG}.tar.gz
+DISTFILES+=	tree-sitter-org-${ORG_TAG}.tar.gz
+DISTFILES+=	tree-sitter-perl-${PERL_TAG}.tar.gz
+DISTFILES+=	tree-sitter-php-${PHP_TAG}.tar.gz
+DISTFILES+=	tree-sitter-protobuf-${PROTOBUF_TAG}.tar.gz
+DISTFILES+=	tree-sitter-python-${PYTHON_TAG}.tar.gz
+DISTFILES+=	tree-sitter-regex-${REGEX_TAG}.tar.gz
+DISTFILES+=	tree-sitter-rescript-${RESCRIPT_TAG}.tar.gz
+DISTFILES+=	tree-sitter-ruby-${RUBY_TAG}.tar.gz
+DISTFILES+=	tree-sitter-rust-${RUST_TAG}.tar.gz
+DISTFILES+=	tree-sitter-scala-${SCALA_TAG}.tar.gz
+DISTFILES+=	tree-sitter-solidity-${SOLIDITY_TAG}.tar.gz
+DISTFILES+=	tree-sitter-svelte-${SVELTE_TAG}.tar.gz
+DISTFILES+=	tree-sitter-tablegen-${TABLEGEN_TAG}.tar.gz
+DISTFILES+=	tree-sitter-tsq-${TSQ_TAG}.tar.gz
+DISTFILES+=	tree-sitter-twig-${TWIG_TAG}.tar.gz
+DISTFILES+=	tree-sitter-typescript-${TYPESCRIPT_TAG}.tar.gz
+DISTFILES+=	tree-sitter-vue-${VUE_TAG}.tar.gz
+DISTFILES+=	tree-sitter-wgsl-${WGSL_TAG}.tar.gz
+DISTFILES+=	tree-sitter-yaml-${YAML_TAG}.tar.gz
+DISTFILES+=	tree-sitter-zig-${ZIG_TAG}.tar.gz
+
 TS_GH=		https://github.com/tree-sitter
 
-SITES.tree-sitter-toml.tar.gz= \
+SITES.tree-sitter-toml-${TOML_TAG}.tar.gz= \
 	-https://github.com/ikatyang/tree-sitter-toml/archive/${TOML_TAG}.tar.gz
 
-SITES.tree-sitter-bash.tar.gz= \
+SITES.tree-sitter-bash-${BASH_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-bash/archive/${BASH_TAG}.tar.gz
 
-SITES.tree-sitter-csharp.tar.gz= \
+SITES.tree-sitter-csharp-${CSHARP_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-c-sharp/archive/${CSHARP_TAG}.tar.gz
 
-SITES.tree-sitter-c.tar.gz= \
+SITES.tree-sitter-c-${C_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-c/archive/refs/tags/${C_TAG}.tar.gz
 
-SITES.tree-sitter-css.tar.gz= \
+SITES.tree-sitter-css-${CSS_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-css/archive/${CSS_TAG}.tar.gz
 
-SITES.tree-sitter-cpp.tar.gz= \
+SITES.tree-sitter-cpp-${CPP_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-cpp/archive/${CPP_TAG}.tar.gz
 
-SITES.tree-sitter-comment.tar.gz= \
+SITES.tree-sitter-comment-${COMMENT_TAG}.tar.gz= \
 	-https://github.com/stsewd/tree-sitter-comment/archive/${COMMENT_TAG}.tar.gz
 
-SITES.tree-sitter-cmake.tar.gz= \
+SITES.tree-sitter-cmake-${CMAKE_TAG}.tar.gz= \
 	-https://github.com/uyha/tree-sitter-cmake/archive/${CMAKE_TAG}.tar.gz
 
-SITES.tree-sitter-dart.tar.gz= \
+SITES.tree-sitter-dart-${DART_TAG}.tar.gz= \
 	-https://github.com/UserNobody14/tree-sitter-dart/archive/${DART_TAG}.tar.gz
 
-SITES.tree-sitter-diff.tar.gz= \
+SITES.tree-sitter-diff-${DIFF_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-diff/archive/${DIFF_TAG}.tar.gz
 
-SITES.tree-sitter-docker.tar.gz= \
+SITES.tree-sitter-docker-${DOCKER_TAG}.tar.gz= \
 	-https://github.com/camdencheek/tree-sitter-dockerfile/archive/${DOCKER_TAG}.tar.gz
 
-SITES.tree-sitter-elixir.tar.gz= \
+SITES.tree-sitter-elixir-${ELIXIR_TAG}.tar.gz= \
 	-https://github.com/elixir-lang/tree-sitter-elixir/archive/${ELIXIR_TAG}.tar.gz
 
-SITES.tree-sitter-elm.tar.gz= \
+SITES.tree-sitter-elm-${ELM_TAG}.tar.gz= \
 	-https://github.com/elm-tooling/tree-sitter-elm/archive/${ELM_TAG}.tar.gz
 
-SITES.tree-sitter-erlang.tar.gz= \
+SITES.tree-sitter-erlang-${ERLANG_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-erlang/archive/${ERLANG_TAG}.tar.gz
 
-SITES.tree-sitter-fish.tar.gz= \
+SITES.tree-sitter-fish-${FISH_TAG}.tar.gz= \
 	-https://github.com/ram02z/tree-sitter-fish/archive/${FISH_TAG}.tar.gz
 
-SITES.tree-sitter-gitconfig.tar.gz= \
+SITES.tree-sitter-gitconfig-${GITCONFIG_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-git-config/archive/${GITCONFIG_TAG}.tar.gz
 
-SITES.tree-sitter-gitrebase.tar.gz= \
+SITES.tree-sitter-gitrebase-${GITREBASE_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-git-rebase/archive/${GITREBASE_TAG}.tar.gz
 
-SITES.tree-sitter-gitcommit.tar.gz= \
+SITES.tree-sitter-gitcommit-${GITCOMMIT_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-git-commit/archive/${GITCOMMIT_TAG}.tar.gz
 
-SITES.tree-sitter-glsl.tar.gz= \
+SITES.tree-sitter-glsl-${GLSL_TAG}.tar.gz= \
 	-https://github.com/theHamsta/tree-sitter-glsl/archive/${GLSL_TAG}.tar.gz
 
-SITES.tree-sitter-go.tar.gz= \
+SITES.tree-sitter-go-${GO_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-go/archive/${GO_TAG}.tar.gz
 
-SITES.tree-sitter-graphql.tar.gz= \
+SITES.tree-sitter-graphql-${GRAPHQL_TAG}.tar.gz= \
 	-https://github.com/bkegley/tree-sitter-graphql/archive/${GRAPHQL_TAG}.tar.gz
 
-SITES.tree-sitter-haskell.tar.gz= \
+SITES.tree-sitter-haskell-${HASKELL_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-haskell/archive/${HASKELL_TAG}.tar.gz
 
-SITES.tree-sitter-hcl.tar.gz= \
+SITES.tree-sitter-hcl-${HCL_TAG}.tar.gz= \
 	-https://github.com/MichaHoffmann/tree-sitter-hcl/archive/${HCL_TAG}.tar.gz
 
-SITES.tree-sitter-html.tar.gz= \
+SITES.tree-sitter-html-${HTML_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-html/archive/${HTML_TAG}.tar.gz
 
-SITES.tree-sitter-iex.tar.gz= \
+SITES.tree-sitter-iex-${IEX_TAG}.tar.gz= \
 	-https://github.com/elixir-lang/tree-sitter-iex/archive/${IEX_TAG}.tar.gz
 
-SITES.tree-sitter-java.tar.gz= \
+SITES.tree-sitter-java-${JAVA_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-java/archive/${JAVA_TAG}.tar.gz
 
-SITES.tree-sitter-javascript.tar.gz= \
+SITES.tree-sitter-javascript-${JAVASCRIPT_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-javascript/archive/${JAVASCRIPT_TAG}.tar.gz
 
-SITES.tree-sitter-json.tar.gz= \
+SITES.tree-sitter-json-${JSON_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-json/archive/${JSON_TAG}.tar.gz
 
-SITES.tree-sitter-julia.tar.gz= \
+SITES.tree-sitter-julia-${JULIA_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-julia/archive/${JULIA_TAG}.tar.gz
 
-SITES.tree-sitter-kotlin.tar.gz= \
+SITES.tree-sitter-kotlin-${KOTLIN_TAG}.tar.gz= \
 	-https://github.com/fwcd/tree-sitter-kotlin/archive/${KOTLIN_TAG}.tar.gz
 
-SITES.tree-sitter-latex.tar.gz= \
+SITES.tree-sitter-latex-${LATEX_TAG}.tar.gz= \
 	-https://github.com/latex-lsp/tree-sitter-latex/archive/${LATEX_TAG}.tar.gz
 
-SITES.tree-sitter-lean.tar.gz= \
+SITES.tree-sitter-lean-${LEAN_TAG}.tar.gz= \
 	-https://github.com/Julian/tree-sitter-lean/archive/${LEAN_TAG}.tar.gz
 
-SITES.tree-sitter-ledger.tar.gz= \
+SITES.tree-sitter-ledger-${LEDGER_TAG}.tar.gz= \
 	-https://github.com/cbarrete/tree-sitter-ledger/archive/${LEDGER_TAG}.tar.gz
 
-SITES.tree-sitter-llvm.tar.gz= \
+SITES.tree-sitter-llvm-${LLVM_TAG}.tar.gz= \
 	-https://github.com/benwilliamgraham/tree-sitter-llvm/archive/${LLVM_TAG}.tar.gz
 
-SITES.tree-sitter-llvmmir.tar.gz= \
+SITES.tree-sitter-llvmmir-${LLVMMIR_TAG}.tar.gz= \
 	-https://github.com/Flakebi/tree-sitter-llvm-mir/archive/${LLVMMIR_TAG}.tar.gz
 
-SITES.tree-sitter-lua.tar.gz= \
+SITES.tree-sitter-lua-${LUA_TAG}.tar.gz= \
 	-https://github.com/nvim-treesitter/tree-sitter-lua/archive/${LUA_TAG}.tar.gz
 
-SITES.tree-sitter-make.tar.gz= \
+SITES.tree-sitter-make-${MAKE_TAG}.tar.gz= \
 	-https://github.com/alemuller/tree-sitter-make/archive/${MAKE_TAG}.tar.gz
 
-SITES.tree-sitter-markdown.tar.gz= \
+SITES.tree-sitter-markdown-${MARKDOWN_TAG}.tar.gz= \
 	-https://github.com/MDeiml/tree-sitter-markdown/archive/${MARKDOWN_TAG}.tar.gz
 
-SITES.tree-sitter-nix.tar.gz= \
+SITES.tree-sitter-nix-${NIX_TAG}.tar.gz= \
 	-https://github.com/cstrahan/tree-sitter-nix/archive/${NIX_TAG}.tar.gz
 
-SITES.tree-sitter-ocaml.tar.gz= \
+SITES.tree-sitter-ocaml-${OCAML_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-ocaml/archive/${OCAML_TAG}.tar.gz
 
-SITES.tree-sitter-org.tar.gz= \
+SITES.tree-sitter-org-${ORG_TAG}.tar.gz= \
 	-https://github.com/milisims/tree-sitter-org/archive/${ORG_TAG}.tar.gz
 
-SITES.tree-sitter-perl.tar.gz= \
+SITES.tree-sitter-perl-${PERL_TAG}.tar.gz= \
 	-https://github.com/ganezdragon/tree-sitter-perl/archive/${PERL_TAG}.tar.gz
 
-SITES.tree-sitter-php.tar.gz= \
+SITES.tree-sitter-php-${PHP_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-php/archive/${PHP_TAG}.tar.gz
 
-SITES.tree-sitter-protobuf.tar.gz= \
+SITES.tree-sitter-protobuf-${PROTOBUF_TAG}.tar.gz= \
 	-https://github.com/yusdacra/tree-sitter-protobuf/archive/${PROTOBUF_TAG}.tar.gz
 
-SITES.tree-sitter-python.tar.gz= \
+SITES.tree-sitter-python-${PYTHON_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-python/archive/${PYTHON_TAG}.tar.gz
 
-SITES.tree-sitter-regex.tar.gz= \
+SITES.tree-sitter-regex-${REGEX_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-regex/archive/${REGEX_TAG}.tar.gz
 
-SITES.tree-sitter-rescript.tar.gz= \
+SITES.tree-sitter-rescript-${RESCRIPT_TAG}.tar.gz= \
 	-https://github.com/jaredramirez/tree-sitter-rescript/archive/${RESCRIPT_TAG}.tar.gz
 
-SITES.tree-sitter-ruby.tar.gz= \
+SITES.tree-sitter-ruby-${RUBY_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-ruby/archive/${RUBY_TAG}.tar.gz
 
-SITES.tree-sitter-rust.tar.gz= \
+SITES.tree-sitter-rust-${RUST_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-rust/archive/${RUST_TAG}.tar.gz
 
-SITES.tree-sitter-scala.tar.gz= \
+SITES.tree-sitter-scala-${SCALA_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-scala/archive/${SCALA_TAG}.tar.gz
 
-SITES.tree-sitter-solidity.tar.gz= \
+SITES.tree-sitter-solidity-${SOLIDITY_TAG}.tar.gz= \
 	-https://github.com/slinlee/tree-sitter-solidity/archive/${SOLIDITY_TAG}.tar.gz
 
-SITES.tree-sitter-svelte.tar.gz= \
+SITES.tree-sitter-svelte-${SVELTE_TAG}.tar.gz= \
 	-https://github.com/Himujjal/tree-sitter-svelte/archive/${SVELTE_TAG}.tar.gz
 
-SITES.tree-sitter-tablegen.tar.gz= \
+SITES.tree-sitter-tablegen-${TABLEGEN_TAG}.tar.gz= \
 	-https://github.com/Flakebi/tree-sitter-tablegen/archive/${TABLEGEN_TAG}.tar.gz
 
-SITES.tree-sitter-tsq.tar.gz= \
+SITES.tree-sitter-tsq-${TSQ_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-tsq/archive/${TSQ_TAG}.tar.gz
 
-SITES.tree-sitter-twig.tar.gz= \
+SITES.tree-sitter-twig-${TWIG_TAG}.tar.gz= \
 	-https://github.com/eirabben/tree-sitter-twig/archive/${TWIG_TAG}.tar.gz
 
-SITES.tree-sitter-typescript.tar.gz= \
+SITES.tree-sitter-typescript-${TYPESCRIPT_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-typescript/archive/${TYPESCRIPT_TAG}.tar.gz
 
-SITES.tree-sitter-vue.tar.gz= \
+SITES.tree-sitter-vue-${VUE_TAG}.tar.gz= \
 	-https://github.com/ikatyang/tree-sitter-vue/archive/${VUE_TAG}.tar.gz
 
-SITES.tree-sitter-wgsl.tar.gz= \
+SITES.tree-sitter-wgsl-${WGSL_TAG}.tar.gz= \
 	-https://github.com/szebniok/tree-sitter-wgsl/archive/${WGSL_TAG}.tar.gz
 
-SITES.tree-sitter-yaml.tar.gz= \
+SITES.tree-sitter-yaml-${YAML_TAG}.tar.gz= \
 	-https://github.com/ikatyang/tree-sitter-yaml/archive/${YAML_TAG}.tar.gz
 
-SITES.tree-sitter-zig.tar.gz= \
+SITES.tree-sitter-zig-${ZIG_TAG}.tar.gz= \
 	-https://github.com/maxxnino/tree-sitter-zig/archive/${ZIG_TAG}.tar.gz
 
 MAINTAINER=	nikita@NetBSD.org
@@ -318,7 +320,33 @@ COMMENT=	Editor inspired by kakoune / neovim
 LICENSE=	mpl-2.0
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
+INSTALLATION_DIRS+=	share/helix/runtime/grammars
+
+
 .include "cargo-depends.mk"
+
+#post-extract:
+#	(cd ${WRKSRC}/runtime/grammars/sources && ${CP} -a typescript tsx)
+#	(cd ${WRKSRC}/runtime/grammars/sources && ${CP} -a ocaml ocaml-interface)
+# .for DIRS
+# 	${MV} ${WRKDIR}/armips-${ARMIPS_TAG}/* ${WRKSRC}/ext/armips
+# 	${MV} ${WRKDIR}/glslang-${GLSLANG_TAG}/* ${WRKSRC}/ext/glslang
+# 	${MV} ${WRKDIR}/SPIRV-Cross-${SPRIV_TAG}/* ${WRKSRC}/ext/SPIRV-Cross
+
+SUBST_CLASSES+=		datadir
+SUBST_STAGE.datadir=	post-patch
+SUBST_MESSAGE.datadir=	Fixing datadir
+SUBST_FILES.datadir=	helix-loader/src/lib.rs
+SUBST_SED.datadir+=	-e 's,%%DATADIR%%,${PREFIX}/share/helix,g'
+
+post-install:
+	# ${MKDIR} -p ${PREFIX}/share/helix/runtime/grammars
+.for dirs in queries themes
+	(cd ${WRKSRC}/runtime && ${INSTALL} ${dirs} ${PREFIX}/share/helix/runtime/${dirs})
+.endfor
+	${INSTALL} ${WRKSRC}/runtime/tutor.txt ${PREFIX}/share/helix/runtime/tutor.txt
+	# ${FIND} ${WRKSRC}/runtime/grammars -maxdepth 1 -type f -name '*.so' \
+	#	-exec ${INSTALL_LIB} {} ${STAGEDIR}${DATADIR}/runtime/grammars \;
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
