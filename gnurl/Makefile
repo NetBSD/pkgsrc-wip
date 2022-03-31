@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gnunet.org/en/gnurl.html
 COMMENT=	Client that groks URLs (micro fork of curl)
 # not completely, the curl license is inspired by mit
