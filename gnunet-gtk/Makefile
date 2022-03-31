@@ -4,7 +4,7 @@ DISTNAME=		gnunet-gtk-0.16.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://gnunet.org/
 COMMENT=		GTK user interfaces for GNUnet
 LICENSE=		gnu-gpl-v3

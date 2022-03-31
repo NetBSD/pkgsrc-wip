@@ -4,7 +4,7 @@ DISTNAME=		gnunet-fuse-0.16.0
 CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://gnunet.org/
 COMMENT=		GNUnet FUSE extension
 LICENSE=		gnu-gpl-v3
