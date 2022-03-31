@@ -82,10 +82,10 @@ ELIXIR_TAG=	60863fc6e27d60cf4b1917499ed2259f92c7800e
 ELM_TAG=	5128296ba8542853d59e6b7c8dfe3d1fb9a637ea
 ERLANG_TAG=	1e81393b8f0a81b35ff1679a9420fafbd2cf3511
 FISH_TAG=	d482d70ea8e191c05b2c1b613ed6fdff30a14da0
-GITCOMMIT_TAG=
-GITCONFIG_TAG=
-DIFF_TAG=
-GITREBASE_TAG=
+GITCOMMIT_TAG=	318dd72abfaa7b8044c1d1fbeabcd06deaaf038f
+GITCONFIG_TAG=	2ca03237fb279efc835ecbc50079174cf661d1df
+DIFF_TAG=	ca750e5bbc86e5716ccf4eb9e44493b14043ec4c
+GITREBASE_TAG=	8ea81bbf4c92f95b33cf3aeaa9bd348f07d4b6ab
 GLSL_TAG=	ffb93961426926554a0ba4a389ea6e9d6fafdea9
 GO_TAG=		c8fed1f0847a65a04a4b8cb7655f5f416e0742ca
 GRAPHQL_TAG=	5e66e961eee421786bdda8495ed1db045e06b5fe
@@ -101,26 +101,26 @@ KOTLIN_TAG=	a4f71eb9b8c9b19ded3e0e9470be4b1b77c2b569
 LATEX_TAG=	b71e4928a63a6d75bc1670004a5b5a98c850a149
 LEAN_TAG=	d98426109258b266e1e92358c5f11716d2e8f638
 LEDGER_TAG=	0cdeb0e51411a3ba5493662952c3039de08939ca
-LLVMMIR_TAG=
+LLVMMIR_TAG=	06fabca19454b2dc00c1b211a7cb7ad0bc2585f1
 LLVM_TAG=	3b213925b9c4f42c1acfe2e10bfbb438d9c6834d
-LUA_TAG=
+LUA_TAG=	6f5d40190ec8a0aa8c8410699353d820f4f7d7a6
 MAKE_TAG=	a4b9187417d6be349ee5fd4b6e77b4172c6827dd
 MARKDOWN_TAG=	d24196f9b3e5af6fcb2ec2a0b6cbc5c06f58b85e
 NIX_TAG=	470b15a60520ff7b86f51732b8d8f1118c86041e
 OCAML_TAG=	23d419ba45789c5a47d31448061557716b02750a
-ORG_TAG=
+ORG_TAG=	9a595e51c1f69b9ac986f0e0b788804eda0e755d
 PERL_TAG=	bbf86084d9b7eb4768f3fb9fe094b3e0600057b1
 PHP_TAG=	3c17a28da38afac41332d3ce79bbd8951867f346
-PROTOBUF_TAG=
+PROTOBUF_TAG=	5aef38d655f76a6b0d172340eed3766c93b3124c
 PYTHON_TAG=	78c4e9b6b2f08e1be23b541ffced47b15e2972ad
 REGEX_TAG=	e1cfca3c79896ff79842f057ea13e529b66af636
-RESCRIPT_TAG=
+RESCRIPT_TAG=	4cd7ba91696886fdaca086fb32b5fd8cc294a129
 RUBY_TAG=	0b107de5415e7470a30ef1a390d9db3306432bdb
 RUST_TAG=	0509e440ae042db6483984b3a56b3c5f24b5d9b9
 SCALA_TAG=	ec6047f531e7d4c13787d4ff208b94a84de34165
-SOLIDITY_TAG=
+SOLIDITY_TAG=	f3a002274744e859bf64cf3524985f8c31ea84fd
 SVELTE_TAG=	98274d94ec33e994e8354d9ddfdef58cca471294
-TABLEGEN_TAG=
+TABLEGEN_TAG=	568dd8a937347175fd58db83d4c4cdaeb6069bd2
 TSQ_TAG=	b665659d3238e6036e22ed0e24935e60efb39415
 TWIG_TAG=	b7444181fb38e603e25ea8fcdac55f9492e49c27
 TYPESCRIPT_TAG=	f2e2dd6d52ae266e86b71e0773345e5cb729f6ae
@@ -147,7 +147,7 @@ SITES.tree-sitter-css.tar.gz= \
 	-${TS_GH}/tree-sitter-css/archive/${CSS_TAG}.tar.gz
 
 SITES.tree-sitter-cpp.tar.gz= \
-	-${TS_GH}/tree-sitter-css/archive/${CPP_TAG}.tar.gz
+	-${TS_GH}/tree-sitter-cpp/archive/${CPP_TAG}.tar.gz
 
 SITES.tree-sitter-comment.tar.gz= \
 	-https://github.com/stsewd/tree-sitter-comment/archive/${COMMENT_TAG}.tar.gz
@@ -156,9 +156,12 @@ SITES.tree-sitter-cmake.tar.gz= \
 	-https://github.com/uyha/tree-sitter-cmake/archive/${CMAKE_TAG}.tar.gz
 
 SITES.tree-sitter-dart.tar.gz= \
-	-https://github.com/UserNobody14/tree-sitter-dart/archive/${COMMENT_TAG}.tar.gz
+	-https://github.com/UserNobody14/tree-sitter-dart/archive/${DART_TAG}.tar.gz
 
-SITES.tree-sitter-dockerfile.tar.gz= \
+SITES.tree-sitter-diff.tar.gz= \
+	-https://github.com/the-mikedavis/tree-sitter-diff/archive/${DIFF_TAG}.tar.gz
+
+SITES.tree-sitter-docker.tar.gz= \
 	-https://github.com/camdencheek/tree-sitter-dockerfile/archive/${DOCKER_TAG}.tar.gz
 
 SITES.tree-sitter-elixir.tar.gz= \
@@ -172,6 +175,15 @@ SITES.tree-sitter-erlang.tar.gz= \
 
 SITES.tree-sitter-fish.tar.gz= \
 	-https://github.com/ram02z/tree-sitter-fish/archive/${FISH_TAG}.tar.gz
+
+SITES.tree-sitter-gitconfig.tar.gz= \
+	-https://github.com/the-mikedavis/tree-sitter-git-config/archive/${GITCONFIG_TAG}.tar.gz
+
+SITES.tree-sitter-gitrebase.tar.gz= \
+	-https://github.com/the-mikedavis/tree-sitter-git-rebase/archive/${GITREBASE_TAG}.tar.gz
+
+SITES.tree-sitter-gitcommit.tar.gz= \
+	-https://github.com/the-mikedavis/tree-sitter-git-commit/archive/${GITCOMMIT_TAG}.tar.gz
 
 SITES.tree-sitter-glsl.tar.gz= \
 	-https://github.com/theHamsta/tree-sitter-glsl/archive/${GLSL_TAG}.tar.gz
@@ -221,6 +233,12 @@ SITES.tree-sitter-ledger.tar.gz= \
 SITES.tree-sitter-llvm.tar.gz= \
 	-https://github.com/benwilliamgraham/tree-sitter-llvm/archive/${LLVM_TAG}.tar.gz
 
+SITES.tree-sitter-llvmmir.tar.gz= \
+	-https://github.com/Flakebi/tree-sitter-llvm-mir/archive/${LLVMMIR_TAG}.tar.gz
+
+SITES.tree-sitter-lua.tar.gz= \
+	-https://github.com/nvim-treesitter/tree-sitter-lua/archive/${LUA_TAG}.tar.gz
+
 SITES.tree-sitter-make.tar.gz= \
 	-https://github.com/alemuller/tree-sitter-make/archive/${MAKE_TAG}.tar.gz
 
@@ -233,17 +251,26 @@ SITES.tree-sitter-nix.tar.gz= \
 SITES.tree-sitter-ocaml.tar.gz= \
 	-${TS_GH}/tree-sitter-ocaml/archive/${OCAML_TAG}.tar.gz
 
+SITES.tree-sitter-org.tar.gz= \
+	-https://github.com/milisims/tree-sitter-org/archive/${ORG_TAG}.tar.gz
+
 SITES.tree-sitter-perl.tar.gz= \
 	-https://github.com/ganezdragon/tree-sitter-perl/archive/${PERL_TAG}.tar.gz
 
 SITES.tree-sitter-php.tar.gz= \
 	-${TS_GH}/tree-sitter-php/archive/${PHP_TAG}.tar.gz
 
+SITES.tree-sitter-protobuf.tar.gz= \
+	-https://github.com/yusdacra/tree-sitter-protobuf/archive/${PROTOBUF_TAG}.tar.gz
+
 SITES.tree-sitter-python.tar.gz= \
 	-${TS_GH}/tree-sitter-python/archive/${PYTHON_TAG}.tar.gz
 
 SITES.tree-sitter-regex.tar.gz= \
 	-${TS_GH}/tree-sitter-regex/archive/${REGEX_TAG}.tar.gz
+
+SITES.tree-sitter-rescript.tar.gz= \
+	-https://github.com/jaredramirez/tree-sitter-rescript/archive/${RESCRIPT_TAG}.tar.gz
 
 SITES.tree-sitter-ruby.tar.gz= \
 	-${TS_GH}/tree-sitter-ruby/archive/${RUBY_TAG}.tar.gz
@@ -254,8 +281,14 @@ SITES.tree-sitter-rust.tar.gz= \
 SITES.tree-sitter-scala.tar.gz= \
 	-${TS_GH}/tree-sitter-scala/archive/${SCALA_TAG}.tar.gz
 
+SITES.tree-sitter-solidity.tar.gz= \
+	-https://github.com/slinlee/tree-sitter-solidity/archive/${SOLIDITY_TAG}.tar.gz
+
 SITES.tree-sitter-svelte.tar.gz= \
 	-https://github.com/Himujjal/tree-sitter-svelte/archive/${SVELTE_TAG}.tar.gz
+
+SITES.tree-sitter-tablegen.tar.gz= \
+	-https://github.com/Flakebi/tree-sitter-tablegen/archive/${TABLEGEN_TAG}.tar.gz
 
 SITES.tree-sitter-tsq.tar.gz= \
 	-${TS_GH}/tree-sitter-tsq/archive/${TSQ_TAG}.tar.gz
@@ -281,6 +314,7 @@ SITES.tree-sitter-zig.tar.gz= \
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://helix-editor.com/
 COMMENT=	Editor inspired by kakoune / neovim
+# Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
