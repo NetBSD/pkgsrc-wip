@@ -319,6 +319,7 @@ COMMENT=	Editor inspired by kakoune / neovim
 # Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
+USE_LANGUAGES+=	c++
 
 INSTALLATION_DIRS+=	share/helix/runtime/grammars
 
