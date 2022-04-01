@@ -323,7 +323,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 USE_LANGUAGES+=	c c++
 
 INSTALLATION_DIRS+=	share/helix/runtime/grammars
-
+INSTALLATION_DIRS+=	bin
 
 .include "cargo-depends.mk"
 
@@ -399,14 +399,15 @@ SUBST_MESSAGE.datadir=	Fixing datadir
 SUBST_FILES.datadir=	helix-loader/src/lib.rs
 SUBST_SED.datadir+=	-e 's,%%DATADIR%%,${PREFIX}/share/helix,g'
 
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hx ${DESTDIR}${PREFIX}/bin
+
 post-install:
-	# ${MKDIR} -p ${PREFIX}/share/helix/runtime/grammars
 .for dirs in queries themes
-	(cd ${WRKSRC}/runtime && ${INSTALL} ${dirs} ${PREFIX}/share/helix/runtime/${dirs})
+	(cd ${WRKSRC}/runtime && ${INSTALL_DATA_DIR} ${dirs} ${DESTDIR}${PREFIX}/share/helix/runtime/${dirs})
 .endfor
-	${INSTALL} ${WRKSRC}/runtime/tutor.txt ${PREFIX}/share/helix/runtime/tutor.txt
-	# ${FIND} ${WRKSRC}/runtime/grammars -maxdepth 1 -type f -name '*.so' \
-	#	-exec ${INSTALL_LIB} {} ${STAGEDIR}${DATADIR}/runtime/grammars \;
+	${INSTALL} ${WRKSRC}/runtime/tutor.txt ${DESTDIR}${PREFIX}/share/helix/runtime/tutor.txt
+	${INSTALL_LIB} ${WRKSRC}/runtime/grammars/*.so ${DESTDIR}${PREFIX}/share/helix/runtime/grammars/
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/rust/buildlink3.mk"
