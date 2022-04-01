@@ -75,7 +75,7 @@ DISTFILES+=	tree-sitter-toml-${TOML_TAG}.tar.gz
 DISTFILES+=	tree-sitter-bash-${BASH_TAG}.tar.gz
 DISTFILES+=	tree-sitter-c-${C_TAG}.tar.gz
 DISTFILES+=	tree-sitter-css-${CSS_TAG}.tar.gz
-DISTFILES+=	tree-sitter-csharp-${CSHARP_TAG}.tar.gz
+DISTFILES+=	tree-sitter-c-sharp-${CSHARP_TAG}.tar.gz
 DISTFILES+=	tree-sitter-cpp-${CPP_TAG}.tar.gz
 DISTFILES+=	tree-sitter-comment-${COMMENT_TAG}.tar.gz
 DISTFILES+=	tree-sitter-cmake-${CMAKE_TAG}.tar.gz
@@ -140,7 +140,7 @@ SITES.tree-sitter-toml-${TOML_TAG}.tar.gz= \
 SITES.tree-sitter-bash-${BASH_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-bash/archive/${BASH_TAG}.tar.gz
 
-SITES.tree-sitter-csharp-${CSHARP_TAG}.tar.gz= \
+SITES.tree-sitter-c-sharp-${CSHARP_TAG}.tar.gz= \
 	-${TS_GH}/tree-sitter-c-sharp/archive/${CSHARP_TAG}.tar.gz
 
 SITES.tree-sitter-c-${C_TAG}.tar.gz= \
@@ -334,7 +334,7 @@ post-extract:
 	${MV} ${WRKDIR}/tree-sitter-bash-${BASH_TAG} ${WRKSRC}/runtime/grammars/sources/bash
 	${MV} ${WRKDIR}/tree-sitter-c-${C_TAG:S/v//} ${WRKSRC}/runtime/grammars/sources/c
 	${MV} ${WRKDIR}/tree-sitter-css-${CSS_TAG} ${WRKSRC}/runtime/grammars/sources/css
-	${MV} ${WRKDIR}/tree-sitter-csharp-${CSHARP_TAG} ${WRKSRC}/runtime/grammars/sources/c-sharp
+	${MV} ${WRKDIR}/tree-sitter-c-sharp-${CSHARP_TAG} ${WRKSRC}/runtime/grammars/sources/c-sharp
 	${MV} ${WRKDIR}/tree-sitter-cpp-${CPP_TAG} ${WRKSRC}/runtime/grammars/sources/cpp
 	${MV} ${WRKDIR}/tree-sitter-comment-${COMMENT_TAG} ${WRKSRC}/runtime/grammars/sources/comment
 	${MV} ${WRKDIR}/tree-sitter-cmake-${CMAKE_TAG} ${WRKSRC}/runtime/grammars/sources/cmake
