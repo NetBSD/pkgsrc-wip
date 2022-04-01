@@ -79,7 +79,7 @@ DISTFILES+=	tree-sitter-cpp-${CPP_TAG}.tar.gz
 DISTFILES+=	tree-sitter-comment-${COMMENT_TAG}.tar.gz
 DISTFILES+=	tree-sitter-cmake-${CMAKE_TAG}.tar.gz
 DISTFILES+=	tree-sitter-dart-${DART_TAG}.tar.gz
-DISTFILES+=	tree-sitter-docker-${DOCKER_TAG}.tar.gz
+DISTFILES+=	tree-sitter-dockerfile-${DOCKER_TAG}.tar.gz
 DISTFILES+=	tree-sitter-elixir-${ELIXIR_TAG}.tar.gz
 DISTFILES+=	tree-sitter-elm-${ELM_TAG}.tar.gz
 DISTFILES+=	tree-sitter-erlang-${ERLANG_TAG}.tar.gz
@@ -163,7 +163,7 @@ SITES.tree-sitter-dart-${DART_TAG}.tar.gz= \
 SITES.tree-sitter-diff-${DIFF_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-diff/archive/${DIFF_TAG}.tar.gz
 
-SITES.tree-sitter-docker-${DOCKER_TAG}.tar.gz= \
+SITES.tree-sitter-dockerfile-${DOCKER_TAG}.tar.gz= \
 	-https://github.com/camdencheek/tree-sitter-dockerfile/archive/${DOCKER_TAG}.tar.gz
 
 SITES.tree-sitter-elixir-${ELIXIR_TAG}.tar.gz= \
@@ -336,7 +336,7 @@ post-extract:
 	${MV} ${WRKDIR}/tree-sitter-comment-${COMMENT_TAG} ${WRKSRC}/runtime/grammars/sources/comment
 	${MV} ${WRKDIR}/tree-sitter-cmake-${CMAKE_TAG} ${WRKSRC}/runtime/grammars/sources/cmake
 	${MV} ${WRKDIR}/tree-sitter-dart-${DART_TAG} ${WRKSRC}/runtime/grammars/sources/dart
-	${MV} ${WRKDIR}/tree-sitter-docker-${DOCKER_TAG} ${WRKSRC}/runtime/grammars/sources/docker
+	${MV} ${WRKDIR}/tree-sitter-dockerfile-${DOCKER_TAG} ${WRKSRC}/runtime/grammars/sources/dockerfile
 	${MV} ${WRKDIR}/tree-sitter-elixir-${ELIXIR_TAG} ${WRKSRC}/runtime/grammars/sources/elixir
 	${MV} ${WRKDIR}/tree-sitter-elm-${ELM_TAG} ${WRKSRC}/runtime/grammars/sources/elm
 	${MV} ${WRKDIR}/tree-sitter-erlang-${ERLANG_TAG} ${WRKSRC}/runtime/grammars/sources/erlang
