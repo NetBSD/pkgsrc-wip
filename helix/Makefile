@@ -346,7 +346,7 @@ post-extract:
 	${MV} ${WRKDIR}/tree-sitter-fish-${FISH_TAG} ${WRKSRC}/runtime/grammars/sources/fish
 	${MV} ${WRKDIR}/tree-sitter-git-commit-${GITCOMMIT_TAG} ${WRKSRC}/runtime/grammars/sources/git-commit
 	${MV} ${WRKDIR}/tree-sitter-git-config-${GITCONFIG_TAG} ${WRKSRC}/runtime/grammars/sources/git-config
-	${MV} ${WRKDIR}/tree-sitter-git-diff-${GITDIFF_TAG} ${WRKSRC}/runtime/grammars/sources/git-diff
+	${MV} ${WRKDIR}/tree-sitter-diff-${GITDIFF_TAG} ${WRKSRC}/runtime/grammars/sources/git-diff
 	${MV} ${WRKDIR}/tree-sitter-git-rebase-${GITREBASE_TAG} ${WRKSRC}/runtime/grammars/sources/git-rebase
 	${MV} ${WRKDIR}/tree-sitter-glsl-${GLSL_TAG} ${WRKSRC}/runtime/grammars/sources/glsl
 	${MV} ${WRKDIR}/tree-sitter-go-${GO_TAG} ${WRKSRC}/runtime/grammars/sources/go
