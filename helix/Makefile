@@ -84,10 +84,10 @@ DISTFILES+=	tree-sitter-elixir-${ELIXIR_TAG}.tar.gz
 DISTFILES+=	tree-sitter-elm-${ELM_TAG}.tar.gz
 DISTFILES+=	tree-sitter-erlang-${ERLANG_TAG}.tar.gz
 DISTFILES+=	tree-sitter-fish-${FISH_TAG}.tar.gz
-DISTFILES+=	tree-sitter-gitcommit-${GITCOMMIT_TAG}.tar.gz
-DISTFILES+=	tree-sitter-gitconfig-${GITCONFIG_TAG}.tar.gz
+DISTFILES+=	tree-sitter-git-commit-${GITCOMMIT_TAG}.tar.gz
+DISTFILES+=	tree-sitter-git-config-${GITCONFIG_TAG}.tar.gz
 DISTFILES+=	tree-sitter-diff-${DIFF_TAG}.tar.gz
-DISTFILES+=	tree-sitter-gitrebase-${GITREBASE_TAG}.tar.gz
+DISTFILES+=	tree-sitter-git-rebase-${GITREBASE_TAG}.tar.gz
 DISTFILES+=	tree-sitter-glsl-${GLSL_TAG}.tar.gz
 DISTFILES+=	tree-sitter-go-${GO_TAG}.tar.gz
 DISTFILES+=	tree-sitter-graphql-${GRAPHQL_TAG}.tar.gz
@@ -178,13 +178,13 @@ SITES.tree-sitter-erlang-${ERLANG_TAG}.tar.gz= \
 SITES.tree-sitter-fish-${FISH_TAG}.tar.gz= \
 	-https://github.com/ram02z/tree-sitter-fish/archive/${FISH_TAG}.tar.gz
 
-SITES.tree-sitter-gitconfig-${GITCONFIG_TAG}.tar.gz= \
+SITES.tree-sitter-git-config-${GITCONFIG_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-git-config/archive/${GITCONFIG_TAG}.tar.gz
 
-SITES.tree-sitter-gitrebase-${GITREBASE_TAG}.tar.gz= \
+SITES.tree-sitter-git-rebase-${GITREBASE_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-git-rebase/archive/${GITREBASE_TAG}.tar.gz
 
-SITES.tree-sitter-gitcommit-${GITCOMMIT_TAG}.tar.gz= \
+SITES.tree-sitter-git-commit-${GITCOMMIT_TAG}.tar.gz= \
 	-https://github.com/the-mikedavis/tree-sitter-git-commit/archive/${GITCOMMIT_TAG}.tar.gz
 
 SITES.tree-sitter-glsl-${GLSL_TAG}.tar.gz= \
@@ -341,10 +341,10 @@ post-extract:
 	${MV} ${WRKDIR}/tree-sitter-elm-${ELM_TAG} ${WRKSRC}/runtime/grammars/sources/elm
 	${MV} ${WRKDIR}/tree-sitter-erlang-${ERLANG_TAG} ${WRKSRC}/runtime/grammars/sources/erlang
 	${MV} ${WRKDIR}/tree-sitter-fish-${FISH_TAG} ${WRKSRC}/runtime/grammars/sources/fish
-	${MV} ${WRKDIR}/tree-sitter-gitcommit-${GITCOMMIT_TAG} ${WRKSRC}/runtime/grammars/sources/git-commit
-	${MV} ${WRKDIR}/tree-sitter-gitconfig-${GITCONFIG_TAG} ${WRKSRC}/runtime/grammars/sources/git-config
+	${MV} ${WRKDIR}/tree-sitter-git-commit-${GITCOMMIT_TAG} ${WRKSRC}/runtime/grammars/sources/git-commit
+	${MV} ${WRKDIR}/tree-sitter-git-config-${GITCONFIG_TAG} ${WRKSRC}/runtime/grammars/sources/git-config
 	${MV} ${WRKDIR}/tree-sitter-diff-${DIFF_TAG} ${WRKSRC}/runtime/grammars/sources/diff
-	${MV} ${WRKDIR}/tree-sitter-gitrebase-${GITREBASE_TAG} ${WRKSRC}/runtime/grammars/sources/git-rebase
+	${MV} ${WRKDIR}/tree-sitter-git-rebase-${GITREBASE_TAG} ${WRKSRC}/runtime/grammars/sources/git-rebase
 	${MV} ${WRKDIR}/tree-sitter-glsl-${GLSL_TAG} ${WRKSRC}/runtime/grammars/sources/glsl
 	${MV} ${WRKDIR}/tree-sitter-go-${GO_TAG} ${WRKSRC}/runtime/grammars/sources/go
 	${MV} ${WRKDIR}/tree-sitter-graphql-${GRAPHQL_TAG} ${WRKSRC}/runtime/grammars/sources/graphql
