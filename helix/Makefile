@@ -325,13 +325,12 @@ INSTALLATION_DIRS+=	share/helix/runtime/grammars
 
 .include "cargo-depends.mk"
 
-#post-extract:
+post-extract:
 #	(cd ${WRKSRC}/runtime/grammars/sources && ${CP} -a typescript tsx)
 #	(cd ${WRKSRC}/runtime/grammars/sources && ${CP} -a ocaml ocaml-interface)
-# .for DIRS
-# 	${MV} ${WRKDIR}/armips-${ARMIPS_TAG}/* ${WRKSRC}/ext/armips
-# 	${MV} ${WRKDIR}/glslang-${GLSLANG_TAG}/* ${WRKSRC}/ext/glslang
-# 	${MV} ${WRKDIR}/SPIRV-Cross-${SPRIV_TAG}/* ${WRKSRC}/ext/SPIRV-Cross
+	${MKDIR} ${WRKSRC}/runtime/grammars/sources
+# this ought to be a for loop. rinse and repeat for all tree-sitter-... directories.
+	${MV} ${WRKDIR}/tree-sitter-toml-${TOML_TAG} ${WRKSRC}/runtime/grammars/sources/toml
 
 SUBST_CLASSES+=		datadir
 SUBST_STAGE.datadir=	post-patch
