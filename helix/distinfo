@@ -429,9 +429,9 @@ Size (helix/tree-sitter-ledger-0cdeb0e51411a3ba5493662952c3039de08939ca.tar.gz) 
 BLAKE2s (helix/tree-sitter-llvm-3b213925b9c4f42c1acfe2e10bfbb438d9c6834d.tar.gz) = fa33311b9e1370da5d56022457f66d28cf5fd794c53045c016f661367506a13f
 SHA512 (helix/tree-sitter-llvm-3b213925b9c4f42c1acfe2e10bfbb438d9c6834d.tar.gz) = 720de7722ab59faa3d376b3a214bd8de6bb2335f903a11f712535cc97d9a66c4030737bc0c6e569a031b5f881a0e210f80e59da863c71722a00a83451c1f1a71
 Size (helix/tree-sitter-llvm-3b213925b9c4f42c1acfe2e10bfbb438d9c6834d.tar.gz) = 446464 bytes
-BLAKE2s (helix/tree-sitter-llvmmir-06fabca19454b2dc00c1b211a7cb7ad0bc2585f1.tar.gz) = 8bf72b083a2c2af774564e8edfedb0be9b128ba763afc9310d987a2b07fe76d4
-SHA512 (helix/tree-sitter-llvmmir-06fabca19454b2dc00c1b211a7cb7ad0bc2585f1.tar.gz) = 860b6ccba40313a2a20cd29a921042672a3b32ffc8f05531e59963874c90c75d32f40475e15dc2a0a226df0ae2b7eb11404617386933973816212fd1b5ccb8a7
-Size (helix/tree-sitter-llvmmir-06fabca19454b2dc00c1b211a7cb7ad0bc2585f1.tar.gz) = 65850 bytes
+BLAKE2s (helix/tree-sitter-llvm-mir-06fabca19454b2dc00c1b211a7cb7ad0bc2585f1.tar.gz) = 8bf72b083a2c2af774564e8edfedb0be9b128ba763afc9310d987a2b07fe76d4
+SHA512 (helix/tree-sitter-llvm-mir-06fabca19454b2dc00c1b211a7cb7ad0bc2585f1.tar.gz) = 860b6ccba40313a2a20cd29a921042672a3b32ffc8f05531e59963874c90c75d32f40475e15dc2a0a226df0ae2b7eb11404617386933973816212fd1b5ccb8a7
+Size (helix/tree-sitter-llvm-mir-06fabca19454b2dc00c1b211a7cb7ad0bc2585f1.tar.gz) = 65850 bytes
 BLAKE2s (helix/tree-sitter-lua-6f5d40190ec8a0aa8c8410699353d820f4f7d7a6.tar.gz) = 53a04b5a19e518b01d1b032ef324a122e2d1a76f98ac1ea2484d45b433e4a49f
 SHA512 (helix/tree-sitter-lua-6f5d40190ec8a0aa8c8410699353d820f4f7d7a6.tar.gz) = 779960ef72906c945e153f3ac534641112dfd4d2688668899bbe97e6ed62553e5cd3ba997e08a27e7b3fca902a3a89a7f8fd928734cdd64b1975160a851570c2
 Size (helix/tree-sitter-lua-6f5d40190ec8a0aa8c8410699353d820f4f7d7a6.tar.gz) = 110225 bytes

@@ -103,7 +103,7 @@ DISTFILES+=	tree-sitter-kotlin-${KOTLIN_TAG}.tar.gz
 DISTFILES+=	tree-sitter-latex-${LATEX_TAG}.tar.gz
 DISTFILES+=	tree-sitter-lean-${LEAN_TAG}.tar.gz
 DISTFILES+=	tree-sitter-ledger-${LEDGER_TAG}.tar.gz
-DISTFILES+=	tree-sitter-llvmmir-${LLVMMIR_TAG}.tar.gz
+DISTFILES+=	tree-sitter-llvm-mir-${LLVMMIR_TAG}.tar.gz
 DISTFILES+=	tree-sitter-llvm-${LLVM_TAG}.tar.gz
 DISTFILES+=	tree-sitter-lua-${LUA_TAG}.tar.gz
 DISTFILES+=	tree-sitter-make-${MAKE_TAG}.tar.gz
@@ -235,7 +235,7 @@ SITES.tree-sitter-ledger-${LEDGER_TAG}.tar.gz= \
 SITES.tree-sitter-llvm-${LLVM_TAG}.tar.gz= \
 	-https://github.com/benwilliamgraham/tree-sitter-llvm/archive/${LLVM_TAG}.tar.gz
 
-SITES.tree-sitter-llvmmir-${LLVMMIR_TAG}.tar.gz= \
+SITES.tree-sitter-llvm-mir-${LLVMMIR_TAG}.tar.gz= \
 	-https://github.com/Flakebi/tree-sitter-llvm-mir/archive/${LLVMMIR_TAG}.tar.gz
 
 SITES.tree-sitter-lua-${LUA_TAG}.tar.gz= \
@@ -360,7 +360,7 @@ post-extract:
 	${MV} ${WRKDIR}/tree-sitter-latex-${LATEX_TAG} ${WRKSRC}/runtime/grammars/sources/latex
 	${MV} ${WRKDIR}/tree-sitter-lean-${LEAN_TAG} ${WRKSRC}/runtime/grammars/sources/lean
 	${MV} ${WRKDIR}/tree-sitter-ledger-${LEDGER_TAG} ${WRKSRC}/runtime/grammars/sources/ledger
-	${MV} ${WRKDIR}/tree-sitter-llvmmir-${LLVMMIR_TAG} ${WRKSRC}/runtime/grammars/sources/llvm-mir
+	${MV} ${WRKDIR}/tree-sitter-llvm-mir-${LLVMMIR_TAG} ${WRKSRC}/runtime/grammars/sources/llvm-mir
 	${MV} ${WRKDIR}/tree-sitter-llvm-${LLVM_TAG} ${WRKSRC}/runtime/grammars/sources/llvm
 	${MV} ${WRKDIR}/tree-sitter-lua-${LUA_TAG} ${WRKSRC}/runtime/grammars/sources/lua
 	${MV} ${WRKDIR}/tree-sitter-make-${MAKE_TAG} ${WRKSRC}/runtime/grammars/sources/make
