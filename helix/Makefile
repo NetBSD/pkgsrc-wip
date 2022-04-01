@@ -25,7 +25,7 @@ ERLANG_TAG=	1e81393b8f0a81b35ff1679a9420fafbd2cf3511
 FISH_TAG=	d482d70ea8e191c05b2c1b613ed6fdff30a14da0
 GITCOMMIT_TAG=	318dd72abfaa7b8044c1d1fbeabcd06deaaf038f
 GITCONFIG_TAG=	2ca03237fb279efc835ecbc50079174cf661d1df
-DIFF_TAG=	ca750e5bbc86e5716ccf4eb9e44493b14043ec4c
+GITDIFF_TAG=	ca750e5bbc86e5716ccf4eb9e44493b14043ec4c
 GITREBASE_TAG=	8ea81bbf4c92f95b33cf3aeaa9bd348f07d4b6ab
 GLSL_TAG=	ffb93961426926554a0ba4a389ea6e9d6fafdea9
 GO_TAG=		c8fed1f0847a65a04a4b8cb7655f5f416e0742ca
@@ -87,7 +87,7 @@ DISTFILES+=	tree-sitter-erlang-${ERLANG_TAG}.tar.gz
 DISTFILES+=	tree-sitter-fish-${FISH_TAG}.tar.gz
 DISTFILES+=	tree-sitter-git-commit-${GITCOMMIT_TAG}.tar.gz
 DISTFILES+=	tree-sitter-git-config-${GITCONFIG_TAG}.tar.gz
-DISTFILES+=	tree-sitter-diff-${DIFF_TAG}.tar.gz
+DISTFILES+=	tree-sitter-git-diff-${GITDIFF_TAG}.tar.gz
 DISTFILES+=	tree-sitter-git-rebase-${GITREBASE_TAG}.tar.gz
 DISTFILES+=	tree-sitter-glsl-${GLSL_TAG}.tar.gz
 DISTFILES+=	tree-sitter-go-${GO_TAG}.tar.gz
@@ -161,8 +161,8 @@ SITES.tree-sitter-cmake-${CMAKE_TAG}.tar.gz= \
 SITES.tree-sitter-dart-${DART_TAG}.tar.gz= \
 	-https://github.com/UserNobody14/tree-sitter-dart/archive/${DART_TAG}.tar.gz
 
-SITES.tree-sitter-diff-${DIFF_TAG}.tar.gz= \
-	-https://github.com/the-mikedavis/tree-sitter-diff/archive/${DIFF_TAG}.tar.gz
+SITES.tree-sitter-git-diff-${GITDIFF_TAG}.tar.gz= \
+	-https://github.com/the-mikedavis/tree-sitter-diff/archive/${GITDIFF_TAG}.tar.gz
 
 SITES.tree-sitter-dockerfile-${DOCKER_TAG}.tar.gz= \
 	-https://github.com/camdencheek/tree-sitter-dockerfile/archive/${DOCKER_TAG}.tar.gz
@@ -346,7 +346,7 @@ post-extract:
 	${MV} ${WRKDIR}/tree-sitter-fish-${FISH_TAG} ${WRKSRC}/runtime/grammars/sources/fish
 	${MV} ${WRKDIR}/tree-sitter-git-commit-${GITCOMMIT_TAG} ${WRKSRC}/runtime/grammars/sources/git-commit
 	${MV} ${WRKDIR}/tree-sitter-git-config-${GITCONFIG_TAG} ${WRKSRC}/runtime/grammars/sources/git-config
-	${MV} ${WRKDIR}/tree-sitter-diff-${DIFF_TAG} ${WRKSRC}/runtime/grammars/sources/diff
+	${MV} ${WRKDIR}/tree-sitter-git-diff-${GITDIFF_TAG} ${WRKSRC}/runtime/grammars/sources/git-diff
 	${MV} ${WRKDIR}/tree-sitter-git-rebase-${GITREBASE_TAG} ${WRKSRC}/runtime/grammars/sources/git-rebase
 	${MV} ${WRKDIR}/tree-sitter-glsl-${GLSL_TAG} ${WRKSRC}/runtime/grammars/sources/glsl
 	${MV} ${WRKDIR}/tree-sitter-go-${GO_TAG} ${WRKSRC}/runtime/grammars/sources/go
