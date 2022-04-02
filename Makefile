@@ -1506,7 +1506,6 @@ SUBDIR+=	haze
 SUBDIR+=	hdparm
 SUBDIR+=	heaptrack
 SUBDIR+=	heimdall
-SUBDIR+=	helix
 SUBDIR+=	helm
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
