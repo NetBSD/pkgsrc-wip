@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgtextutils
 LIBGTEXTUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgtextutils+=	libgtextutils>=0.7
-BUILDLINK_PKGSRCDIR.libgtextutils?=	../../wip/gtextutils
+BUILDLINK_PKGSRCDIR.libgtextutils?=	../../wip/libgtextutils
 .endif	# LIBGTEXTUTILS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libgtextutils
