@@ -5,10 +5,11 @@
 #              Mon Jan  7 19:28:31 CST 2019               #
 ###########################################################
 
-DISTNAME=	fastx_toolkit-0.0.14
+DISTNAME=	fastx_toolkit-0.0.14.6
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
 GITHUB_PROJECT=	fastx_toolkit
+GITHUB_TAG=	ea0ca83ba24dce80c20ca589b838a281fe5deb0c
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://hannonlab.cshl.edu/fastx_toolkit/

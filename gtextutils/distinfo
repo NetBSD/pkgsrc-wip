@@ -1,6 +1,5 @@
 $NetBSD$
 
-RMD160 (libgtextutils-0.7.tar.gz) = 54c1eb3e4c49d3982cbb4e0b598549ea58776347
-SHA512 (libgtextutils-0.7.tar.gz) = cc6fb48e50f4fc86d92b1c7e7c1a1a31fb83d4914893e432f5b61e11473eec5acf130eab6e543b443b047cab1e9942c255c7a26f7e610ce7a63b08fedddbd9f7
-Size (libgtextutils-0.7.tar.gz) = 358602 bytes
-SHA1 (patch-src_gtextutils_text__line__reader.cpp) = e982e7e29119b813d61f65a2e83258014e4afd38
+BLAKE2s (libgtextutils-0.7.2-510270ecf2e342a81d5dffbf38505bfe18d23dca.tar.gz) = 8b5ce158e5081aae0da7349d90af8d2fb21087ea16c2c2af0a0470be714a9069
+SHA512 (libgtextutils-0.7.2-510270ecf2e342a81d5dffbf38505bfe18d23dca.tar.gz) = 5395ff3a3bd5e5f2baa7213e0df15b34ec13477491fd74fd0029b294c6760ed3ecd91363c4553addf67aba5e694a38dc7ea8664c4731b286b53c240716497f18
+Size (libgtextutils-0.7.2-510270ecf2e342a81d5dffbf38505bfe18d23dca.tar.gz) = 32601 bytes
