@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (Cura/4.13.0.tar.gz) = a98a4eac6ee5aceb4633e490d63d92738f207866d22953d4f6855258a7d9f241
-SHA512 (Cura/4.13.0.tar.gz) = 46f13cde12735d64dad2c533c7688612ebc1c2c8b78d71ced8cfd7d7abd80a53c09105bb16f64ae92cddf345fe44f83800d4448007fe5c2938c652f58354747b
-Size (Cura/4.13.0.tar.gz) = 42339276 bytes
+BLAKE2s (Cura/4.13.1.tar.gz) = e32970ee7ed2fa2bbbea4e1492a8de1395446676e402e8f788c59ee638c6a6b6
+SHA512 (Cura/4.13.1.tar.gz) = 6483fd6312bd2181cc812bce78aadc7e8532ecf292f09c75ce5e7870f7efddd63e84315ab40eb73c775b15c2ed2ce7fc804fcbefb73b3d8aaac77d8b22f0cbd0
+Size (Cura/4.13.1.tar.gz) = 42339030 bytes
