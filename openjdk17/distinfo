@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.29 2022/03/05 14:47:24 tnn Exp $
 
-BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220324.tar.xz) = 18b0af103119a86ba5a2bfb13d13cc3b7bb37c8098904e9775d1de0054e45cf5
-SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220324.tar.xz) = 49aa3c929529b3f3ec43c54f359bf15275013069cdde98b6d088f12a2fc3b18e113c7e3b9a7c4cba963322f2e9eb96d2d4359c324e2c4ac399bc2db3e3fcac2f
-Size (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220324.tar.xz) = 320276156 bytes
+BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = afd8e5dcbfa3d8fe397e97f713d24a1437936dcffbe79f3f0c3e9bfb58bce36d
+SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = f9ddd27ac0ccf77eb72e2c1fe5a06c6431a74b4feeea495233cba058dd8346f215861c59b5228e33729dccdc7f557a29e881123d8592f0cc304536fd5cc3609a
+Size (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = 320259572 bytes
 BLAKE2s (jdk17u-jdk-17.0.2-8-1.tar.gz) = c642373e109255df6b29c91476c9afe3a0d23b88ec8ad559c432e21b1b51fdd3
 SHA512 (jdk17u-jdk-17.0.2-8-1.tar.gz) = a8127c6bd55ae5fff69209c7ed84803d411cd1660f3e48e95d8fd8fee73c54dbaaa8b5c31de51687a2f194c0c063f7e56b2426866dc926a0e02fd728ceea65b4
 Size (jdk17u-jdk-17.0.2-8-1.tar.gz) = 104857682 bytes
