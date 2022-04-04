@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (cloudpickle-0.2.1.tar.gz) = da5dbd946c5814ff97224067e44f2d1038f501b6
-SHA512 (cloudpickle-0.2.1.tar.gz) = ab098186c04db1947fb6c4c92bb4708b0c45122adf0435f5da70a0cb24c08cf6d36ce627ea112a8ad8d0107a28b12259435c3e1aa2ab7a6f8f4122e5ca756e2c
-Size (cloudpickle-0.2.1.tar.gz) = 15514 bytes
+BLAKE2s (cloudpickle-2.0.0.tar.gz) = 33658ee1c053033561aa82cdc9f8bbcbcaf4cc9382bd89a965411cb2f5713e54
+SHA512 (cloudpickle-2.0.0.tar.gz) = 4f2c0019a9b6b7ca4c8749b0c2b600ac502450f6fec9c23fe5b9ddece34c77105c86666274e24c6672d405c3e0e800b0a7da055a95ada8fcc060a63214aa9666
+Size (cloudpickle-2.0.0.tar.gz) = 60038 bytes

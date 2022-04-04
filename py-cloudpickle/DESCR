@@ -1,1 +1,2 @@
-Extended pickling support for Python objects
+cloudpickle makes it possible to serialize Python constructs not supported
+by the default pickle module from the Python standard library.

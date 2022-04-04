@@ -2,7 +2,6 @@
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cloudpickle/__init__.py
 ${PYSITELIB}/cloudpickle/__init__.pyc
@@ -10,3 +9,9 @@ ${PYSITELIB}/cloudpickle/__init__.pyo
 ${PYSITELIB}/cloudpickle/cloudpickle.py
 ${PYSITELIB}/cloudpickle/cloudpickle.pyc
 ${PYSITELIB}/cloudpickle/cloudpickle.pyo
+${PYSITELIB}/cloudpickle/cloudpickle_fast.py
+${PYSITELIB}/cloudpickle/cloudpickle_fast.pyc
+${PYSITELIB}/cloudpickle/cloudpickle_fast.pyo
+${PYSITELIB}/cloudpickle/compat.py
+${PYSITELIB}/cloudpickle/compat.pyc
+${PYSITELIB}/cloudpickle/compat.pyo
