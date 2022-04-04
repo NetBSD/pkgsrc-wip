@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/tblib/__init__.py
+${PYSITELIB}/tblib/__init__.pyc
+${PYSITELIB}/tblib/cpython.py
+${PYSITELIB}/tblib/cpython.pyc
+${PYSITELIB}/tblib/decorators.py
+${PYSITELIB}/tblib/decorators.pyc
+${PYSITELIB}/tblib/pickling_support.py
+${PYSITELIB}/tblib/pickling_support.pyc

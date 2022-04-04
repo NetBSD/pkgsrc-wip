@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (tblib-1.7.0.tar.gz) = 12814d9e878630a4be933b1108d299cc3ba80bd07efd2cd9ab6f0f58839bafae
+SHA512 (tblib-1.7.0.tar.gz) = 10dcff18a1da386d9dd6bae35608f4a2d3bc8f87c15fcf49d886f98d95a6defd348ef0dc5637e03f4c553a933a0ecb4c215cf15b1e78fca58fea10052f9fb4e9
+Size (tblib-1.7.0.tar.gz) = 33074 bytes
