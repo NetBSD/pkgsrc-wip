@@ -19,6 +19,3 @@ bin/fastx_renamer
 bin/fastx_reverse_complement
 bin/fastx_trimmer
 bin/fastx_uncollapser
-share/aclocal/ax_c_long_long.m4
-share/aclocal/ax_cxx_compile_stdcxx_11.m4
-share/aclocal/ax_cxx_header_stdcxx_tr1.m4
