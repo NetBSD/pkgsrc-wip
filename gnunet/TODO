@@ -1,5 +1,9 @@
 - more contents of other PLISTs
 - debug the service
+  - XXX: gnunetuser currently prevents a shutdown via "normal" shutdown(1),
+    it does however work when you shutdown via your X11 manager etc.
+    This is due to this service not shutting down:
+      /usr/pkg/lib//gnunet/libexec/gnunet-rest-server -c /home/nikita/.config/gnunet.conf
 - build on linux and freebsd
   - currently broken on Linux due to bluez-libs being too old and not building.
 - should we log to varbase/log/gnunet?
