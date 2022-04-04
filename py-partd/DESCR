@@ -1,0 +1,2 @@
+A Key-value byte store with appendable values.
+Partd excels at shuffling operations.
