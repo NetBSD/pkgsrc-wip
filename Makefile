@@ -17,6 +17,7 @@ SUBDIR+=	ETL
 SUBDIR+=	FLIF
 SUBDIR+=	FLIF-git
 SUBDIR+=	GNUMail-pgp
+SUBDIR+=	GSAlign
 SUBDIR+=	GSCommander
 SUBDIR+=	Geomyidae-git
 SUBDIR+=	I2util

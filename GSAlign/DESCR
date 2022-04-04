@@ -1,0 +1,19 @@
+GSAlign: an ultra-fast sequence alignment algorithm for intra-species
+genome comparison
+
+Personal genomics and comparative genomics are two fields that are
+more and more important in clinical practices and genome
+researches. Both fields require sequence alignment to discover
+sequence conservation and structural variation. Though many methods
+have been developed to handle genome sequence alignment, some are
+designed for small genome comparison while some are not efficient for
+large genome comparison. Here, we present GSAlign to handle large
+genome comparison efficiently. GSAlign includes three unique features:
+1) it is the first attempt to use Burrows-Wheeler Transform on genome
+sequence alignment; 2) it supports parallel computing; 3) it adopts a
+divide-and-conquer strategy to separate a query sequence into regions
+that are easy to align and regions that require gapped alignment. With
+all these features, we demonstrated GSAlign is very efficient and
+sensitive in finding both the exact matches and differences between
+two genome sequences and it is much faster than existing
+state-of-the-art methods.
