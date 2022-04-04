@@ -1,7 +1,6 @@
 # $NetBSD$
 
-# 2 commits more than last official release
-DISTNAME=	libgtextutils-0.7.0.0.2
+DISTNAME=	libgtextutils-0.7.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
 GITHUB_TAG=	510270ecf2e342a81d5dffbf38505bfe18d23dca

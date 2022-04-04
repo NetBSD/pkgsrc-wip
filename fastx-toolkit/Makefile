@@ -1,7 +1,5 @@
 # $NetBSD$
 
-# 6 commits after 0.0.14 release
-# wiz suggested 0.0.14.0.0.6
 DISTNAME=	fastx-toolkit-0.0.14.6
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
@@ -9,7 +7,7 @@ GITHUB_PROJECT=	fastx_toolkit
 GITHUB_TAG=	ea0ca83ba24dce80c20ca589b838a281fe5deb0c
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://hannonlab.cshl.edu/fastx_toolkit/
+HOMEPAGE=	https://github.com/agordon/fastx_toolkit
 COMMENT=	CLI tools for Short-Reads FASTA/FASTQ files preprocessing
 LICENSE=	gnu-agpl-v3
 
