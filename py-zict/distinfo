@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (zict-2.1.0.tar.gz) = 0a9732b881a3425694f9a1a3aefefc5c85fa19ef8f0d0d2a0bf82c10b347fe3c
+SHA512 (zict-2.1.0.tar.gz) = 9e2070c122749d9dd42c6e985a84f0e39c21bd737ee23bbd98af4d26f6ac85ec7629235ee8b1517283f417cf0262bd0f639f7144e0cba00c870375bbbeecb5e6
+Size (zict-2.1.0.tar.gz) = 13639 bytes
