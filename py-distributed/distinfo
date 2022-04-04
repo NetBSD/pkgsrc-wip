@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (distributed-2022.4.0.tar.gz) = 0025b4a4baffb366ebc6d877d3f444f23ce850c9cf1c01f78becd599d15f0d26
+SHA512 (distributed-2022.4.0.tar.gz) = 73689ba21143422c5069a5534ebd02e53499d3e66ffaabc4e419547384fed39ce05a3a3a5d9e67a38cd3ff03f81b5e6cca09609bdc532097e7a1abcf8fcf999d
+Size (distributed-2022.4.0.tar.gz) = 927919 bytes
