@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (locket-0.2.1.tar.gz) = c98dd83d8a2f2601c5c5da88b0750dd6444406bd777ca418ac7e25d6f4f4a2e9
+SHA512 (locket-0.2.1.tar.gz) = db25454b83d176f529eb3060e4e7fff0151d8a7ccfd58a66c9bc09345445923137c2e5eb7e8a42b9d8f1bbdb3a967cb3467e91a279f19ede6f8727eaebf85857
+Size (locket-0.2.1.tar.gz) = 3936 bytes
