@@ -18,5 +18,5 @@ CVE-2021-22923 (fixed in cURL 7.78.0) does not apply, as gnurl is built without 
 CVE-2021-22924 (fixed in cURL 7.78.0): ?
 CVE-2021-22925 (fixed in cURL 7.78.0) does not apply, as gnurl is built without Telnet support.
 CVE-2021-22945 (fixed in cURL 7.79.0) does not apply, as the current gnurl release is based on curl 7.72.0 and did not enable experimental features.
-CVE-2021-22946 (fixed in cURL 7.79.0): ?
+CVE-2021-22946 (fixed in cURL 7.79.0) does not apply, as gnurl is built without fpt, pop3 and imap support.
 CVE-2021-22947 (fixed in cURL 7.79.0) does not apply, as gnurl is built without IMAP, POP3, SMTP and FTP support.
