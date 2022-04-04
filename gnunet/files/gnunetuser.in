@@ -65,7 +65,9 @@ gnunet_stop()
 {
 	@ECHO@ "Stopping ${name}."
 	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} -e'"
-	eval $doit
+	eval $doit &
+	pkill -f gnunet-rest-server
+	kill -9 $(pgrep -f gnunet-rest-server)
 	# kill `cat ${pidfile}` 2>/dev/null
 	# check_pidfile
 	# kill ${pid}
