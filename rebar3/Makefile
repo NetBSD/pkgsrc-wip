@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2019/11/03 10:39:29 rillig Exp $
 
-DISTNAME=	rebar3-3.13.2
+DISTNAME=	rebar3-3.18.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
 DIST_SUBDIR=	rebar3
@@ -12,19 +12,20 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	tar
 
-REBAR_DEPS+=	bbmustache-1.8.0
-REBAR_DEPS+=	certifi-2.5.1
-REBAR_DEPS+=	cf-0.2.2
-REBAR_DEPS+=	cth_readable-1.4.6
-REBAR_DEPS+=	erlware_commons-1.3.1
+REBAR_DEPS+=	bbmustache-1.12.2
+REBAR_DEPS+=	certifi-2.8.0
+REBAR_DEPS+=	cf-0.3.1
+REBAR_DEPS+=	cth_readable-1.5.1
+REBAR_DEPS+=	erlware_commons-1.5.0
 REBAR_DEPS+=	eunit_formatters-0.5.0
 REBAR_DEPS+=	getopt-1.0.1
-REBAR_DEPS+=	parse_trans-3.3.0
-REBAR_DEPS+=	providers-1.8.1
-REBAR_DEPS+=	relx-3.33.0
-REBAR_DEPS+=	ssl_verify_fun-1.1.5
+REBAR_DEPS+=	providers-1.9.0
+REBAR_DEPS+=	relx-4.6.0
+REBAR_DEPS+=	ssl_verify_fun-1.1.6
 
 MAKE_ENV+=	DEBUG=1
+MAKE_ENV+=	HOME=${WRKDIR}
+MAKE_ENV+=	REBAR_NO_VERIFY_REPO_ORIGIN=1
 
 DISTFILES=	${DEFAULT_DISTFILES}
 
@@ -62,15 +63,23 @@ build-cache:
 # .endfor
 
 post-extract:
-	${MKDIR} -p ${WRKSRC}/_build/bootstrap/lib
 .for dep in ${REBAR_DEPS}
-	cd ${WRKSRC}/_build/default/lib/${dep:C/-.*//} && \
-		${TAR} -xzf contents.tar.gz
-	${LN} -sf ../../default/lib/${dep:C/-.*//} \
-		${WRKSRC}/_build/bootstrap/lib/${dep:C/-.*//}
+	${MKDIR} ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
+	${TAR} xOf ${DISTDIR}/${DIST_SUBDIR}/${dep}.tar contents.tar.gz | ${TAR} xfz - -C ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
+	${MKDIR} ${WRKSRC}/_checkouts/${dep:C/-.*//}
+	${TAR} xOf ${DISTDIR}/${DIST_SUBDIR}/${dep}.tar contents.tar.gz | ${TAR} xfz - -C ${WRKSRC}/_checkouts/${dep:C-.*//}
+.endfor
+	${MKDIR} ${WRKSRC}/_build/bootstrap/lib
+	${MKDIR} ${WRKSRC}/_build/bootstrap/plugins
+.for dep in ${REBAR_DEPS}
+	${LN} -sf ${WRKSRC}/_build/default/lib/${dep:C/-.*//} ${WRKSRC}/_build/bootstrap/lib/
+.endfor
+.for dep in ${REBAR_DEPS}
+	${LN} -sf ${WRKSRC}/_build/default/plugins/${dep:C/-.*//} ${WRKSRC}/_build/bootstrap/plugins/
 .endfor
 
 do-build:
+	${RM} ${WRKSRC}/rebar.lock
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} escript ./bootstrap
 
 do-install:
