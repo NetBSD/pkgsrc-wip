@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/19 14:29:33 mef Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -34,9 +33,6 @@ ${PYSITELIB}/pyvo/auth/tests/conftest.py
 ${PYSITELIB}/pyvo/auth/tests/conftest.pyc
 ${PYSITELIB}/pyvo/auth/tests/conftest.pyo
 ${PYSITELIB}/pyvo/auth/tests/data/tap/capabilities.xml
-${PYSITELIB}/pyvo/auth/tests/setup_package.py
-${PYSITELIB}/pyvo/auth/tests/setup_package.pyc
-${PYSITELIB}/pyvo/auth/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/auth/tests/test_auth.py
 ${PYSITELIB}/pyvo/auth/tests/test_auth.pyc
 ${PYSITELIB}/pyvo/auth/tests/test_auth.pyo
@@ -96,6 +92,8 @@ ${PYSITELIB}/pyvo/dal/tests/data/datalink/datalink.xml
 ${PYSITELIB}/pyvo/dal/tests/data/datalink/proc.xml
 ${PYSITELIB}/pyvo/dal/tests/data/datalink/proc_inf.xml
 ${PYSITELIB}/pyvo/dal/tests/data/datalink/proc_units.xml
+${PYSITELIB}/pyvo/dal/tests/data/mimetype/ivoa_logo.jpg
+${PYSITELIB}/pyvo/dal/tests/data/mimetype/test.fits
 ${PYSITELIB}/pyvo/dal/tests/data/monkeypatch.xml
 ${PYSITELIB}/pyvo/dal/tests/data/query/basic.xml
 ${PYSITELIB}/pyvo/dal/tests/data/query/dataset.xml
@@ -109,6 +107,9 @@ ${PYSITELIB}/pyvo/dal/tests/data/query/tableinfo.xml
 ${PYSITELIB}/pyvo/dal/tests/data/querydata/image.fits
 ${PYSITELIB}/pyvo/dal/tests/data/scs/result.xml
 ${PYSITELIB}/pyvo/dal/tests/data/sia/dataset.xml
+${PYSITELIB}/pyvo/dal/tests/data/sia2/capabilities-basicauth.xml
+${PYSITELIB}/pyvo/dal/tests/data/sia2/capabilities-newformat.xml
+${PYSITELIB}/pyvo/dal/tests/data/sia2/capabilities-priv.xml
 ${PYSITELIB}/pyvo/dal/tests/data/sia2/capabilities.xml
 ${PYSITELIB}/pyvo/dal/tests/data/sia2/dataset.xml
 ${PYSITELIB}/pyvo/dal/tests/data/sla/dataset.xml
@@ -122,15 +123,15 @@ ${PYSITELIB}/pyvo/dal/tests/data/tap/tables.xml
 ${PYSITELIB}/pyvo/dal/tests/make_testdata.py
 ${PYSITELIB}/pyvo/dal/tests/make_testdata.pyc
 ${PYSITELIB}/pyvo/dal/tests/make_testdata.pyo
-${PYSITELIB}/pyvo/dal/tests/setup_package.py
-${PYSITELIB}/pyvo/dal/tests/setup_package.pyc
-${PYSITELIB}/pyvo/dal/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/dal/tests/test_adhoc.py
 ${PYSITELIB}/pyvo/dal/tests/test_adhoc.pyc
 ${PYSITELIB}/pyvo/dal/tests/test_adhoc.pyo
 ${PYSITELIB}/pyvo/dal/tests/test_datalink.py
 ${PYSITELIB}/pyvo/dal/tests/test_datalink.pyc
 ${PYSITELIB}/pyvo/dal/tests/test_datalink.pyo
+${PYSITELIB}/pyvo/dal/tests/test_mimetype.py
+${PYSITELIB}/pyvo/dal/tests/test_mimetype.pyc
+${PYSITELIB}/pyvo/dal/tests/test_mimetype.pyo
 ${PYSITELIB}/pyvo/dal/tests/test_monkeypatch.py
 ${PYSITELIB}/pyvo/dal/tests/test_monkeypatch.pyc
 ${PYSITELIB}/pyvo/dal/tests/test_monkeypatch.pyo
@@ -182,11 +183,9 @@ ${PYSITELIB}/pyvo/io/uws/endpoint.pyo
 ${PYSITELIB}/pyvo/io/uws/tests/__init__.py
 ${PYSITELIB}/pyvo/io/uws/tests/__init__.pyc
 ${PYSITELIB}/pyvo/io/uws/tests/__init__.pyo
+${PYSITELIB}/pyvo/io/uws/tests/data/job-error.xml
 ${PYSITELIB}/pyvo/io/uws/tests/data/job-implicit-v1.0.xml
 ${PYSITELIB}/pyvo/io/uws/tests/data/job.xml
-${PYSITELIB}/pyvo/io/uws/tests/setup_package.py
-${PYSITELIB}/pyvo/io/uws/tests/setup_package.pyc
-${PYSITELIB}/pyvo/io/uws/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/io/uws/tests/test_job.py
 ${PYSITELIB}/pyvo/io/uws/tests/test_job.pyc
 ${PYSITELIB}/pyvo/io/uws/tests/test_job.pyo
@@ -248,9 +247,6 @@ ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/wrong_arraysize.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/wrong_datatypes_tap.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/wrong_datatypes_votable.xml
 ${PYSITELIB}/pyvo/io/vosi/tests/data/tables/wrong_flag.xml
-${PYSITELIB}/pyvo/io/vosi/tests/setup_package.py
-${PYSITELIB}/pyvo/io/vosi/tests/setup_package.pyc
-${PYSITELIB}/pyvo/io/vosi/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/io/vosi/tests/test_availability.py
 ${PYSITELIB}/pyvo/io/vosi/tests/test_availability.pyc
 ${PYSITELIB}/pyvo/io/vosi/tests/test_availability.pyo
@@ -280,9 +276,6 @@ ${PYSITELIB}/pyvo/registry/tests/conftest.pyc
 ${PYSITELIB}/pyvo/registry/tests/conftest.pyo
 ${PYSITELIB}/pyvo/registry/tests/data/capabilities.xml
 ${PYSITELIB}/pyvo/registry/tests/data/regtap.xml
-${PYSITELIB}/pyvo/registry/tests/setup_package.py
-${PYSITELIB}/pyvo/registry/tests/setup_package.pyc
-${PYSITELIB}/pyvo/registry/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/registry/tests/test_regtap.py
 ${PYSITELIB}/pyvo/registry/tests/test_regtap.pyc
 ${PYSITELIB}/pyvo/registry/tests/test_regtap.pyo
@@ -292,10 +285,6 @@ ${PYSITELIB}/pyvo/samp.pyo
 ${PYSITELIB}/pyvo/tests/__init__.py
 ${PYSITELIB}/pyvo/tests/__init__.pyc
 ${PYSITELIB}/pyvo/tests/__init__.pyo
-${PYSITELIB}/pyvo/tests/coveragerc
-${PYSITELIB}/pyvo/tests/setup_package.py
-${PYSITELIB}/pyvo/tests/setup_package.pyc
-${PYSITELIB}/pyvo/tests/setup_package.pyo
 ${PYSITELIB}/pyvo/utils/__init__.py
 ${PYSITELIB}/pyvo/utils/__init__.pyc
 ${PYSITELIB}/pyvo/utils/__init__.pyo
@@ -317,9 +306,15 @@ ${PYSITELIB}/pyvo/utils/tests/__init__.pyo
 ${PYSITELIB}/pyvo/utils/tests/test_url.py
 ${PYSITELIB}/pyvo/utils/tests/test_url.pyc
 ${PYSITELIB}/pyvo/utils/tests/test_url.pyo
+${PYSITELIB}/pyvo/utils/tests/test_vocabularies_remote.py
+${PYSITELIB}/pyvo/utils/tests/test_vocabularies_remote.pyc
+${PYSITELIB}/pyvo/utils/tests/test_vocabularies_remote.pyo
 ${PYSITELIB}/pyvo/utils/url.py
 ${PYSITELIB}/pyvo/utils/url.pyc
 ${PYSITELIB}/pyvo/utils/url.pyo
+${PYSITELIB}/pyvo/utils/vocabularies.py
+${PYSITELIB}/pyvo/utils/vocabularies.pyc
+${PYSITELIB}/pyvo/utils/vocabularies.pyo
 ${PYSITELIB}/pyvo/utils/xml/__init__.py
 ${PYSITELIB}/pyvo/utils/xml/__init__.pyc
 ${PYSITELIB}/pyvo/utils/xml/__init__.pyo
