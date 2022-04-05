@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	astroalign-2.3.1
+DISTNAME=	astroalign-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroalign/}
