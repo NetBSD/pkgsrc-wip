@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	libgtextutils-0.7.2
-CATEGORIES=	biology
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
 GITHUB_TAG=	510270ecf2e342a81d5dffbf38505bfe18d23dca
 
