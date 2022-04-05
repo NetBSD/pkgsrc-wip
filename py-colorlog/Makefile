@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	colorlog-4.6.2
+DISTNAME=	colorlog-6.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorlog}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorlog/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/borntyping/python-colorlog
