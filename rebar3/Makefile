@@ -41,7 +41,8 @@ EXTRACT_DIR.${dep}.tar=	${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 SUBST_CLASSES+=		escript
 SUBST_STAGE.escript=	pre-configure
 SUBST_MESSAGE.escript=	Fix default escript shebang
-SUBST_FILES.escript=	src/rebar_prv_escriptize.erl
+SUBST_FILES.escript+=	bootstrap
+SUBST_FILES.escript+=	src/rebar_prv_escriptize.erl
 SUBST_SED.escript=	-e 's,/usr/bin/env escript,${PREFIX}/bin/escript,'
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/examples/rebar3
@@ -55,7 +56,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 	${TAR} xOf ${DISTDIR}/${DIST_SUBDIR}/${dep}.tar contents.tar.gz | ${TAR} xfz - -C ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
 	${MKDIR} ${WRKSRC}/_checkouts/${dep:C/-.*//}
-	${TAR} xOf ${DISTDIR}/${DIST_SUBDIR}/${dep}.tar contents.tar.gz | ${TAR} xfz - -C ${WRKSRC}/_checkouts/${dep:C-.*//}
+	${TAR} xOf ${DISTDIR}/${DIST_SUBDIR}/${dep}.tar contents.tar.gz | ${TAR} xfz - -C ${WRKSRC}/_checkouts/${dep:C/-.*//}
 .endfor
 	${MKDIR} ${WRKSRC}/_build/bootstrap/lib
 	${MKDIR} ${WRKSRC}/_build/bootstrap/plugins
@@ -68,7 +69,7 @@ post-extract:
 
 do-build:
 	${RM} ${WRKSRC}/rebar.lock
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} escript ./bootstrap
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./bootstrap
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rebar3 ${DESTDIR}${PREFIX}/bin/
