@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.1 2020/12/17 22:12:06 mef Exp $
 include/erfa.h
 include/erfadatextra.h
 include/erfaextra.h
