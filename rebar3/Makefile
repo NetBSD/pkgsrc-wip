@@ -50,18 +50,6 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/examples/rebar3
 build-cache:
 	cd ${WRKDIR} && ${TAR} -c -v -z -f rebar3-cache-${PKGVERSION}${EXTRACT_SUFX} .home
 
-# post-extract:
-# .for dep in ${REBAR_DEPS}
-# 	${MKDIR} ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
-# 	${TAR} xOf ${DISTDIR}/rebar3/${dep}.tar contents.tar.gz |\
-# 		${TAR} xfz - -C ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
-# .endfor
-# 	${MKDIR} ${WRKSRC}/_build/bootstrap/lib
-# 	${MKDIR} ${WRKSRC}/_build/bootstrap/plugins
-# .for dep in ${REBAR_DEPS}
-# 	${LN} -sf ${WRKSRC}/_build/default/lib/${dep:C/-.*//} ${WRKSRC}/_build/bootstrap/lib/
-# .endfor
-
 post-extract:
 .for dep in ${REBAR_DEPS}
 	${MKDIR} ${WRKSRC}/_build/default/lib/${dep:C/-.*//}
