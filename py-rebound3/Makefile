@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rebound-3.16.0
+DISTNAME=	rebound-3.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rebound/}

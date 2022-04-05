@@ -1,6 +1,5 @@
 @comment $NetBSD$
 ${PYSITELIB}/librebound.so
-${PYSITELIB}/${EGG_FILE}/.DS_Store
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
