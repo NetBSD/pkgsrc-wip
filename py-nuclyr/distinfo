@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nuclyr-0.17.tar.gz) = aaa8b78090ca1cc1a7b15f28e9d6289c52bec0afab965c989ad554824e3abeea
+SHA512 (nuclyr-0.17.tar.gz) = 693ed51780607469673ebd6ce376314e3b1acf3b03ff0ddbd2df314901225312678dc024edd0639ec2c84840e79d664a71c169b9603a87a85512ae6911a57b60
+Size (nuclyr-0.17.tar.gz) = 367912 bytes

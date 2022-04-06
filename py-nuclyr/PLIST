@@ -1,0 +1,25 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nuclyr/EXFOR.py
+${PYSITELIB}/nuclyr/EXFOR.pyc
+${PYSITELIB}/nuclyr/EXFOR.pyo
+${PYSITELIB}/nuclyr/config.py
+${PYSITELIB}/nuclyr/config.pyc
+${PYSITELIB}/nuclyr/config.pyo
+${PYSITELIB}/nuclyr/constants.py
+${PYSITELIB}/nuclyr/constants.pyc
+${PYSITELIB}/nuclyr/constants.pyo
+${PYSITELIB}/nuclyr/data/amdc/mass16.dat
+${PYSITELIB}/nuclyr/data/ripl/abundance.dat
+${PYSITELIB}/nuclyr/data/ripl/mass-frdm95.dat
+${PYSITELIB}/nuclyr/mass.py
+${PYSITELIB}/nuclyr/mass.pyc
+${PYSITELIB}/nuclyr/mass.pyo
+${PYSITELIB}/nuclyr/nndc.py
+${PYSITELIB}/nuclyr/nndc.pyc
+${PYSITELIB}/nuclyr/nndc.pyo

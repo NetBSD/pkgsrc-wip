@@ -4251,6 +4251,7 @@ SUBDIR+=	py-nox
 SUBDIR+=	py-nphelper
 SUBDIR+=	py-nptdms
 SUBDIR+=	py-nsim
+SUBDIR+=	py-nuclyr
 SUBDIR+=	py-nuitka
 SUBDIR+=	py-numberjack
 SUBDIR+=	py-numdifftools
