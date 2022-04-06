@@ -304,7 +304,9 @@ man/man3/bl_fastx_set_fasta.3
 man/man3/bl_fastx_set_fastq.3
 man/man3/bl_fastx_set_format.3
 man/man3/bl_fastx_write.3
+man/man3/bl_gff_copy.3
 man/man3/bl_gff_copy_header.3
+man/man3/bl_gff_dup.3
 man/man3/bl_gff_extract_attribute.3
 man/man3/bl_gff_free.3
 man/man3/bl_gff_index_add.3
