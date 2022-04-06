@@ -27,8 +27,10 @@ USE_CMAKE=	yes
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-1.4.1
 
 # FreeBSD port
-# USE_QT=		buildtools core dbus declarative gui location network printsupport qmake_build webchannel webengine websockets widgets
+# USE_QT=buildtools core dbus declarative gui location network printsupport qmake_build webchannel webengine websockets widgets
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebsockets/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 # CentOS doesn't have zlib in the base, so uncomment if needed.
 # .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
