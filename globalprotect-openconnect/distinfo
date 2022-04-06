@@ -1,7 +1,13 @@
 $NetBSD$
 
+BLAKE2s (SergiusTheBest-plog-1.1.6.tar.gz) = 4884c2b654df4b0f1d3de2cbcec6466c2b210ffe4c014b4620569029b2cf14b2
+SHA512 (SergiusTheBest-plog-1.1.6.tar.gz) = 5240532df96144d5026d6f879b69f7d6f393ebc9122c6458c41076fd3db998565e45ed2ab4948f8c3cb59e08c0aad7695ee416f95b49fd70209cd937220cdf8b
+Size (SergiusTheBest-plog-1.1.6.tar.gz) = 44556 bytes
 BLAKE2s (globalprotect-openconnect-v1.4.1.tar.gz) = 6a3410892cce13fbeef7f2c7dceabf562c5844151f04f0bf68ba66359f6daf4c
 SHA512 (globalprotect-openconnect-v1.4.1.tar.gz) = 94f9480da19d00788768dbc6cd84006427cb9a36a51a4f5ec730eba6c6782c1490bcea1b7b4d6f3661b13b90682759273a98e57126b2c5498698b9182da21312
 Size (globalprotect-openconnect-v1.4.1.tar.gz) = 118400 bytes
+BLAKE2s (itay-grudev-SingleApplication-v3.3.0.tar.gz) = 471740495eefa82da7d71702360edf92a59a688c05ee7d18de8a8095eaf265e5
+SHA512 (itay-grudev-SingleApplication-v3.3.0.tar.gz) = e237b0b4db33928955b4d333e374b9a109852dcf20f11dab02d7cd8a4122c134b89a6ac442664443a839a678746dab1777c4b9c28886e892dbc13f518854a4f6
+Size (itay-grudev-SingleApplication-v3.3.0.tar.gz) = 21148 bytes
 SHA1 (patch-GPClient_CMakeLists.txt) = 173f9b88327e82eac504e3a54eae4bb2a43b0b96
 SHA1 (patch-GPService_CMakeLists.txt) = 6e412803be484680f6e2aabcdc822db555f9913a

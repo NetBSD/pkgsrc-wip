@@ -5,15 +5,6 @@
 #              Mon Mar  7 19:53:02 CST 2022               #
 ###########################################################
 
-# FreeBSD ports system supports Github submodules.  This adds deps to
-# DISTFILES and indicates where to place them in the source tree, e.g.
-# ${WRKSRC}/3rdparty/plog.  ( The first plog is a tag, not part of the path).
-# Not sure if there is something similar in pkgsrc or if they have to be
-# installed separately, which will require hacking the cmake files.
-# https://github.com/yuezk/GlobalProtect-openconnect/issues/126
-#GH_TUPLE+=	itay-grudev:SingleApplication:v3.3.0:sa/3rdparty/SingleApplication
-#GH_TUPLE+=	SergiusTheBest:plog:1.1.6:plog/3rdparty/plog
-
 DISTNAME=	globalprotect-openconnect-v1.4.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yuezk/}
@@ -25,6 +16,9 @@ COMMENT=	OpenConnect GUI for GlobalProtect protocol
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	openconnect>=0:../../net/openconnect
+
+GITHUB_SUBMODULES=	itay-grudev SingleApplication v3.3.0 3rdparty/SingleApplication
+GITHUB_SUBMODULES+=	SergiusTheBest plog 1.1.6 3rdparty/plog
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
