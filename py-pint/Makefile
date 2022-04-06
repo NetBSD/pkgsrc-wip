@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Pint-0.17
+DISTNAME=	Pint-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pint/}
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-uncertainties>=3.1.5:../../math/py-uncertainties
 
 REPLACE_PYTHON+=	pint/pint-convert
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.1
 .include "../../math/py-numpy/buildlink3.mk"
