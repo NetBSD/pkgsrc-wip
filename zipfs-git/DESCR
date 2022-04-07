@@ -1,0 +1,10 @@
+zipfs purpose is to provide a zip archive that serves as a local
+file system that supports custom encryption.
+
+When encryption and/or decryption are set, zipfs will transparently:
+
+* encrypt and add files to the archive from memory or from the OS
+  file system
+* decrypt and serve file data to memory or to the OS file system
+
+Encryption and/or decryption are optional and user-defined.

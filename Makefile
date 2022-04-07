@@ -6111,6 +6111,7 @@ SUBDIR+=	zetacoin
 SUBDIR+=	zimpl
 SUBDIR+=	zip-devel
 SUBDIR+=	ziparchive
+SUBDIR+=	zipfs-git
 SUBDIR+=	zipios
 SUBDIR+=	zlua
 SUBDIR+=	zmap
