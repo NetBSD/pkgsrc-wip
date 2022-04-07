@@ -293,6 +293,7 @@ SUBDIR+=	bkchem
 SUBDIR+=	blad
 SUBDIR+=	blasr
 SUBDIR+=	blasr_libcpp
+SUBDIR+=	blast2go
 SUBDIR+=	bleachbit
 SUBDIR+=	blink
 SUBDIR+=	blueproxy
