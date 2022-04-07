@@ -1,0 +1,109 @@
+===> Building for util-0.0nb20220407
+[ 50%] Building CXX object util/CMakeFiles/util.dir/source/split.cpp.o
+[ 50%] Building CXX object util/CMakeFiles/util.dir/source/utf8_utf16_conv.cpp.o
+[ 75%] Building CXX object util/CMakeFiles/util.dir/source/filesystem_path_t.cpp.o
+In file included from /scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:1:
+/scratch/wip/lapinott-util-git/work/util/util/include/util/filesystem_path_t.h:70:3: error: 'std_filesystem_path_string_type' does not name a type
+   70 |   std_filesystem_path_string_type platform_path() const;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:9:48: error: 'std_filesystem_path_string_type' is not a member of 'util::filesystem_path_t'
+    9 |  static_assert(std::is_same<filesystem_path_t::std_filesystem_path_string_type, std::filesystem::path::string_type>::value, "std::filesystem::path::string_type mismatch.");
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:9:115: error: template argument 1 is invalid
+    9 |  static_assert(std::is_same<filesystem_path_t::std_filesystem_path_string_type, std::filesystem::path::string_type>::value, "std::filesystem::path::string_type mismatch.");
+      |                                                                                                                   ^
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:33:37: error: no declaration matches 'std::filesystem::__cxx11::path::string_type util::filesystem_path_t::platform_path() const'
+   33 |  std::filesystem::path::string_type filesystem_path_t::platform_path() const {
+      |                                     ^~~~~~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:33:37: note: no functions named 'std::filesystem::__cxx11::path::string_type util::filesystem_path_t::platform_path() const'
+In file included from /scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:1:
+/scratch/wip/lapinott-util-git/work/util/util/include/util/filesystem_path_t.h:35:8: note: 'class util::filesystem_path_t' defined here
+   35 |  class filesystem_path_t {
+      |        ^~~~~~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'util::filesystem_path_t util::filesystem_path_t::parent_path() const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:47:32: error: 'platform_path' was not declared in this scope
+   47 |   return std::filesystem::path(platform_path()).parent_path().c_str();
+      |                                ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'bool util::filesystem_path_t::exists() const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:51:34: error: 'platform_path' was not declared in this scope
+   51 |   return std::filesystem::exists(platform_path());
+      |                                  ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'bool util::filesystem_path_t::is_directory() const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:55:40: error: 'platform_path' was not declared in this scope
+   55 |   return std::filesystem::is_directory(platform_path());
+      |                                        ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'bool util::filesystem_path_t::is_regular_file() const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:59:43: error: 'platform_path' was not declared in this scope
+   59 |   return std::filesystem::is_regular_file(platform_path());
+      |                                           ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'time_t util::filesystem_path_t::last_write_time() const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:63:45: error: 'platform_path' was not declared in this scope
+   63 |   return boost::filesystem::last_write_time(platform_path());
+      |                                             ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'bool util::filesystem_path_t::last_write_time(time_t) const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:69:38: error: 'platform_path' was not declared in this scope
+   69 |   boost::filesystem::last_write_time(platform_path(), last_write_time, ec);
+      |                                      ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'size_t util::filesystem_path_t::file_size() const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:74:37: error: 'platform_path' was not declared in this scope
+   74 |   return std::filesystem::file_size(platform_path());
+      |                                     ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'std::vector<char> util::filesystem_path_t::cat(std::ios_base::openmode) const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:80:22: error: 'platform_path' was not declared in this scope
+   80 |   std::ifstream ifs{ platform_path(), open_mode };
+      |                      ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:80:49: error: no matching function for call to 'std::basic_ifstream<char>::basic_ifstream(<brace-enclosed initializer list>)'
+   80 |   std::ifstream ifs{ platform_path(), open_mode };
+      |                                                 ^
+In file included from /scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:4:
+/usr/include/g++/fstream:587:7: note: candidate: 'std::basic_ifstream<_CharT, _Traits>::basic_ifstream(std::basic_ifstream<_CharT, _Traits>&&) [with _CharT = char; _Traits = std::char_traits<char>]'
+  587 |       basic_ifstream(basic_ifstream&& __rhs)
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:587:7: note:   candidate expects 1 argument, 2 provided
+/usr/include/g++/fstream:579:2: note: candidate: 'template<class _Path, class _Require> std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const _Path&, std::ios_base::openmode) [with _Path = _Path; _Require = _Require; _CharT = char; _Traits = std::char_traits<char>]'
+  579 |  basic_ifstream(const _Path& __s,
+      |  ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:579:2: note:   template argument deduction/substitution failed:
+/usr/include/g++/fstream:562:7: note: candidate: 'std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const string&, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::string = std::__cxx11::basic_string<char>; std::ios_base::openmode = std::ios_base::openmode]'
+  562 |       basic_ifstream(const std::string& __s,
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:562:7: note:   conversion of argument 1 would be ill-formed:
+/usr/include/g++/fstream:529:7: note: candidate: 'std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const char*, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::ios_base::openmode = std::ios_base::openmode]'
+  529 |       basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:529:7: note:   conversion of argument 1 would be ill-formed:
+/usr/include/g++/fstream:518:7: note: candidate: 'std::basic_ifstream<_CharT, _Traits>::basic_ifstream() [with _CharT = char; _Traits = std::char_traits<char>]'
+  518 |       basic_ifstream() : __istream_type(), _M_filebuf()
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:518:7: note:   candidate expects 0 arguments, 2 provided
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp: In member function 'bool util::filesystem_path_t::cat(const std::vector<char>&, std::ios_base::openmode) const':
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:87:22: error: 'platform_path' was not declared in this scope
+   87 |   std::ofstream ofs{ platform_path(), open_mode };
+      |                      ^~~~~~~~~~~~~
+/scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:87:49: error: no matching function for call to 'std::basic_ofstream<char>::basic_ofstream(<brace-enclosed initializer list>)'
+   87 |   std::ofstream ofs{ platform_path(), open_mode };
+      |                                                 ^
+In file included from /scratch/wip/lapinott-util-git/work/util/util/source/filesystem_path_t.cpp:4:
+/usr/include/g++/fstream:850:7: note: candidate: 'std::basic_ofstream<_CharT, _Traits>::basic_ofstream(std::basic_ofstream<_CharT, _Traits>&&) [with _CharT = char; _Traits = std::char_traits<char>]'
+  850 |       basic_ofstream(basic_ofstream&& __rhs)
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:850:7: note:   candidate expects 1 argument, 2 provided
+/usr/include/g++/fstream:842:2: note: candidate: 'template<class _Path, class _Require> std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const _Path&, std::ios_base::openmode) [with _Path = _Path; _Require = _Require; _CharT = char; _Traits = std::char_traits<char>]'
+  842 |  basic_ofstream(const _Path& __s,
+      |  ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:842:2: note:   template argument deduction/substitution failed:
+/usr/include/g++/fstream:825:7: note: candidate: 'std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const string&, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::string = std::__cxx11::basic_string<char>; std::ios_base::openmode = std::ios_base::openmode]'
+  825 |       basic_ofstream(const std::string& __s,
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:825:7: note:   conversion of argument 1 would be ill-formed:
+/usr/include/g++/fstream:790:7: note: candidate: 'std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const char*, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::ios_base::openmode = std::ios_base::openmode]'
+  790 |       basic_ofstream(const char* __s,
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:790:7: note:   conversion of argument 1 would be ill-formed:
+/usr/include/g++/fstream:779:7: note: candidate: 'std::basic_ofstream<_CharT, _Traits>::basic_ofstream() [with _CharT = char; _Traits = std::char_traits<char>]'
+  779 |       basic_ofstream(): __ostream_type(), _M_filebuf()
+      |       ^~~~~~~~~~~~~~
+/usr/include/g++/fstream:779:7: note:   candidate expects 0 arguments, 2 provided
+--- util/CMakeFiles/util.dir/source/filesystem_path_t.cpp.o ---
+*** [util/CMakeFiles/util.dir/source/filesystem_path_t.cpp.o] Error code 1
+

@@ -1990,6 +1990,7 @@ SUBDIR+=	l2tpd
 SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lanq
+SUBDIR+=	lapinott-util-git
 SUBDIR+=	lasi
 SUBDIR+=	last.fm
 SUBDIR+=	lbt
