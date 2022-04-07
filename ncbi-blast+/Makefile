@@ -47,6 +47,10 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 CONFIGURE_ENV+=		ac_cv_func_statfs=no
 .endif
 
+.if ${OPSYS} == Darwin
+CONFIGURE_ARGS+=	--without-openmp
+.endif
+
 # c++/src/objtools/edit/seq_entry_edit.cpp: In member function 'void ncbi::objects::edit::{anonymous}::CSeqdescSortMap::Init()':
 # c++/src/objtools/edit/seq_entry_edit.cpp:172:44: error: array subscript has type 'char' [-Werror=char-subscripts]
 #              while (descr_insert_order[index] != 0)
