@@ -27,8 +27,9 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gleam ${DESTDIR}${PREFIX}/bin
 
-# \TODO: projects are compiled with rebar3 but there is no hard dependency
-# on it. Should we bring it in as runtime dependency?
+do-test:
+	(cd ${WRKSRC} && ${DESTDIR}${PREFIX}/bin/gleam new hello && cd hello && ${DESTDIR}${PREFIX}/bin/gleam test)
+
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
