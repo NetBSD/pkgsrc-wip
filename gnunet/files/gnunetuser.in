@@ -56,7 +56,7 @@ gnunet_precmd()
 gnunet_start()
 {
 	@ECHO@ "Starting ${name}."
-	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} --log=DEBUG -s'"
+	doit="@SU@ -m ${gnunetuser_user} -c '${gnunet_env} ${command} ${command_args} -s'"
 	eval $doit
 }
 
