@@ -3,6 +3,9 @@ The following is a list of CVEs checked against since its
 last release (7.72.0) against an upstream CVE list up until
 7.82.0 with no warranty of completion or correctness.
 
+For all CVEs marked "?" see the following discussion with upstream:
+https://lists.gnu.org/archive/html/gnunet-developers/2022-04/msg00022.html
+
 CVE-2020-8284 (fixed in cURL 7.74.0) does not apply, as gnurl is built without FTP support.
 CVE-2020-8285 (fixed in cURL 7.74.0) most likely does not apply, as gnurl is built without FTP support.
 CVE-2020-8286 (fixed in cURL 7.74.0) does not apply (only applies if the designated TLS Backend is OpenSSL).
