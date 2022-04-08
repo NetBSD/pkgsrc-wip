@@ -32,6 +32,13 @@ BUILDLINK_TRANSFORM+=		opt:-std=c++11:-std=gnu++11
 # For NetBSD
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
+.include "../../mk/bsd.prefs.mk"
+
+# -Wl,--hash-style=gnu is not supported by NetBSD 9.
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-9].[0-8]*.*-*)
+BUILDLINK_TRANSFORM+=	opt:-Wl,--hash-style=gnu:-Wl,--hash-style=sysv
+.endif
+
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # generates the configure script during the build
 USE_GNU_CONFIGURE_HOST=	no
@@ -75,8 +82,6 @@ CONFIGURE_ARGS+=	--with-cacerts-file=${WRKDIR}/cacerts.out
 CONFIGURE_ARGS+=	--with-default-make-target=product-images
 # It is intentional to use CONFIGURE_ARGS instead of CONFIGURE_ENV here.
 CONFIGURE_ARGS+=	USER=pkgsrc
-
-.include "../../mk/bsd.prefs.mk"
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
