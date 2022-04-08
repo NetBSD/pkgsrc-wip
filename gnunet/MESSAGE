@@ -1,9 +1,6 @@
 ===========================================================================
 $NetBSD$
 
-Big caveat warning: the rc.d scripts are still being debugged.
-
-
 To enable this package, put the following into your /etc/rc.conf:
 
 	gnunet=YES
