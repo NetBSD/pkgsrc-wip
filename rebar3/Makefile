@@ -77,5 +77,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/rebar.config.sample \
 		${DESTDIR}${PREFIX}/share/examples/rebar3
 
+do-test:
+	cd ${WRKSRC} && \
+		${SETENV} ./rebar3 escriptize && \
+		${SETENV} ./rebar3 ct
+
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
