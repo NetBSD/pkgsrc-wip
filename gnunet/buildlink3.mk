@@ -26,7 +26,7 @@ pkgbase:= gnunet
 .endif
 
 .if ${PKG_BUILD_OPTIONS.gnunet:Mmysql}
-.include "../../mk/mysql.buildlink3.mk"
+.include "../../databases/mysql80-client/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.gnunet:Mpgsql}

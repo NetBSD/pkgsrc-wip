@@ -77,9 +77,6 @@ PLIST_SRC+=		PLIST.sqlite3
 CONFIGURE_ARGS+=	--without-sqlite3
 .endif
 
-# \todo:
-# checking for mysql version... < 4.1
-# mysql version >= 4.1 required. Will not use MySQL
 .if ${PKG_OPTIONS:Mmysql}
 .include "../../databases/mysql80-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
