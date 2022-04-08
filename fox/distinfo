@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (fox-1.7.79.tar.gz) = fb107d69aba7c6c11a700fd9e259f9629f0a26c911339b7f66ce22c3811e127d
+SHA512 (fox-1.7.79.tar.gz) = 4a3dc0fb0f98fa036c0c91776af65ff1049a8047f47efedbf9864d2351d7590ed36a258e18f295f94c24169862cac7e075351a0b443495d46a535aee8dca6482
+Size (fox-1.7.79.tar.gz) = 5718513 bytes
+SHA1 (patch-configure) = c9a31c324062bf01a1cd32d4cff6d32028966ed8
+SHA1 (patch-include_fxmath.h) = 85356dd9576d5c5d18f5a8493b974b930d30b014
+SHA1 (patch-lib_FXReadWriteLock.cpp) = 3cf63ad56ba1d9be3f869fd94cf1318b5b36cf00
+SHA1 (patch-lib_FXRex.cpp) = 362beae9810729c26df34ca69c3b154d1596fc94
+SHA1 (patch-lib_FXThread.cpp) = 93592134010c865c2cd25190819d1cf1b6e16f08

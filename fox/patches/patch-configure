@@ -1,0 +1,24 @@
+$NetBSD$
+
+Use PTHREAD_LDFLAGS variable instead of "-lpthread".
+
+--- configure.orig	2021-09-03 17:06:13.000000000 +0000
++++ configure
+@@ -18363,7 +18363,7 @@ if ${ac_cv_lib_pthread_pthread_exit+:} f
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS}  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -18398,7 +18398,7 @@ if test "x$ac_cv_lib_pthread_pthread_exi
+ #define HAVE_LIBPTHREAD 1
+ _ACEOF
+ 
+-  LIBS="-lpthread $LIBS"
++  LIBS="${PTHREAD_LDFLAGS} $LIBS"
+ 
+ fi
+ 
