@@ -81,8 +81,9 @@ CONFIGURE_ARGS+=	--without-sqlite3
 # checking for mysql version... < 4.1
 # mysql version >= 4.1 required. Will not use MySQL
 .if ${PKG_OPTIONS:Mmysql}
-.include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql}
+.include "../../databases/mysql80-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
+CONFIGURE_ENV+=		MYSQL_LIBDIR=${BUILDLINK_PREFIX.mysql-client}/lib
 PLIST_SRC+=		PLIST.mysql
 .else
 CONFIGURE_ARGS+=	--without-mysql
