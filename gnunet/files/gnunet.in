@@ -23,12 +23,8 @@ pidfile="/tmp/gnunet-gnunet-runtime/gnunet-service-arm.sock"
 : ${gnunet_group:=gnunet}
 : ${gnunet_home:=@VARBASE@/chroot/gnunet}
 : ${gnunetdns_group:=gnunetdns}
-
 start_cmd="gnunet_start"
 start_precmd="gnunet_precmd"
-#stop_cmd="gnunet_stop"
-#restart_cmd="gnunet_stop ; gnunet_start"
-#restart_precmd="gnunet_precmd"
 
 # XXX: We need to export PATH with appended /usr/pkg/{sbin,bin} to get
 # the upnpc binary and others.
@@ -39,7 +35,6 @@ case "$check_path" in
     ;;
     *)
         PATH=${PATH}:@PREFIX@/bin:@PREFIX@/sbin
-        # echo $PATH
         ;;
 esac
 
@@ -64,21 +59,7 @@ gnunet_start()
 	@ECHO@ "Starting ${name}."
 	doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args}'"
 	eval $doit
-	# @SU@ -m ${gnunet_user} -c '${gnunet_env} echo "${PATH}"'
 }
-
-#gnunet_stop()
-#{
-#	@ECHO@ "Stopping ${name}."
-#	# doit="@SU@ -m ${gnunet_user} -c '${gnunet_env} ${command} ${command_args} -e'"
-#	# eval $doit
-#	# kill `cat ${pidfile}` 2>/dev/null
-#	check_pidfile
-#	kill ${pid}
-#	sleep 1
-#	rm -rf /tmp/gnunet-gnunet-runtime 2>/dev/null 2>&1
-#	rm -rf /tmp/gnunet-system-runtime 2>/dev/null 2>&1
-#}
 
 if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	# newer NetBSD
