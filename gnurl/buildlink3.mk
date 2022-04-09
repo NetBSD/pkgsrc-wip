@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	gnurl
 .if !defined(GNURL_BUILDLINK3_MK)
 GNURL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnurl+=	gnurl>=7.63.0
+BUILDLINK_API_DEPENDS.gnurl+=	gnurl>=7.72.0
 BUILDLINK_ABI_DEPENDS.gnurl+=	gnurl>=7.72.0nb1
 BUILDLINK_PKGSRCDIR.gnurl?=	../../wip/gnurl
 

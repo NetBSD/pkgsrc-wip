@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.18 2021/05/24 19:55:14 wiz Exp $
 
 DISTNAME=	gnurl-7.72.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnunet/}
 EXTRACT_SUFX=	.tar.Z
@@ -18,7 +18,6 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes # make install depends on it
 PKGCONFIG_OVERRIDE=	libgnurl.pc.in
-INSTALLATION_DIRS=	share/doc/gnurl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -66,11 +65,6 @@ CONFIGURE_ARGS+=	--without-nghttp3
 CONFIGURE_ARGS+=	--without-quiche
 
 .include "options.mk"
-
-post-install:
-.for f in TheArtOfHttpScripting FAQ
-	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DESTDIR}${PREFIX}/share/doc/gnurl/
-.endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"

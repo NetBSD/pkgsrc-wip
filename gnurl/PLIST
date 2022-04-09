@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/09/16 21:00:20 nikita Exp $
+@comment $NetBSD$
 bin/gnurl
 bin/gnurl-config
 include/gnurl/curl.h
@@ -456,5 +456,3 @@ man/man3/libgnurl-tutorial.3
 man/man3/libgnurl-url.3
 man/man3/libgnurl.3
 share/aclocal/libgnurl.m4
-share/doc/gnurl/FAQ
-share/doc/gnurl/TheArtOfHttpScripting
