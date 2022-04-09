@@ -17,6 +17,7 @@ DEPENDS+=	p5-Algorithm-Diff-[0-9]*:../../devel/p5-Algorithm-Diff
 DEPENDS+=	ruby[0-9]*-base-[0-9]*:../../lang/${RUBY_PKGPREFIX}-base
 DEPENDS+=	p5-Algorithm-Diff-[0-9]*:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_TOOLS+=	perl:run
 NO_BUILD=	YES
