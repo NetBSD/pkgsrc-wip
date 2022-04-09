@@ -3183,6 +3183,7 @@ SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
 SUBDIR+=	pharo
 SUBDIR+=	pharo-vm
+SUBDIR+=	pharo10
 SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine
 SUBDIR+=	phoronix-test-suite
