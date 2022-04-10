@@ -3,6 +3,7 @@
 DISTNAME=	mu-cite-202011031127
 CATEGORIES=	mail
 MASTER_SITES=	http://www.jpl.org/elips/mu/snapshots/
+PKGREVISION=	1
 
 MAINTAINER=	packages@ki.nu
 HOMEPAGE=	http://emacs-21.ki.nu/application/mu-cite.html
