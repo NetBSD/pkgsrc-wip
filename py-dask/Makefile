@@ -11,6 +11,9 @@ HOMEPAGE=	https://github.com/dask/dask/
 COMMENT=	Flexible parallel computing library for analytics
 LICENSE=	modified-bsd
 
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.0:../../math/py-pandas
@@ -30,7 +33,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
 
 # The setup.py has integration with pytest-runner, but throws odd errors
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s tests
 
 USE_LANGUAGES=	# none
 
