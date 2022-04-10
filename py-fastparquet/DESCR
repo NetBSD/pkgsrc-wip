@@ -1,0 +1,2 @@
+Python implementation of the parquet format, aiming integrate into
+python-based big data work-flows.
