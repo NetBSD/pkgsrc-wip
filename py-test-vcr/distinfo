@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.13 2022/03/31 10:42:16 adam Exp $
+
+BLAKE2s (pytest-vcr-1.0.2.tar.gz) = 1d2d43c030e11c6b7c52b1a234dd3c19401eb23fd598cc00d727b561edeb5814
+SHA512 (pytest-vcr-1.0.2.tar.gz) = a9ff1dc9802ffdd321774aec4e522f0266b275d0e7cc7caa0ce5c0e174c36939582645bbebc59db541116b8ec896dfb636ec7b2f64b89f243c3a60d4f10efadf
+Size (pytest-vcr-1.0.2.tar.gz) = 3810 bytes
