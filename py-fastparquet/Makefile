@@ -16,8 +16,9 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	c c++
 
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas>=1.0:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-cramjam>=1.0:../../wip/py-cramjam
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-cramjam>=2.3.0:../../wip/py-cramjam
+DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.3.0:../../wip/py-fsspec
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
