@@ -33,7 +33,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
 
 # The setup.py has integration with pytest-runner, but throws odd errors
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
 
 USE_LANGUAGES=	# none
 
