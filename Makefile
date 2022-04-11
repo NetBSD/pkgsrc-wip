@@ -352,6 +352,7 @@ SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
 SUBDIR+=	budgie-desktop
 SUBDIR+=	budgie-screensaver
+SUBDIR+=	bugdom
 SUBDIR+=	bugsx
 SUBDIR+=	bugzilla
 SUBDIR+=	bup-git
