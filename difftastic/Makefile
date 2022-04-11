@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	difftastic-0.26.0
+DISTNAME=	difftastic-0.26.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Wilfred/}
 
@@ -16,16 +16,8 @@ USE_LANGUAGES+=	c c++17
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/difft ${DESTDIR}${PREFIX}/bin
-
-# The package builds fine with base gcc on 9.99.96
-#.include "../../mk/bsd.prefs.mk"
-#PKGSRC_COMPILER=		clang
-#CLANGBASE=			${PREFIX}
-#.include "../../lang/llvm/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.llvm=	build
-#.include "../../lang/clang/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.clang=	build
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/difft \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
