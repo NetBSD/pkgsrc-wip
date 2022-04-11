@@ -32,6 +32,7 @@ man/man3/digits.3
 man/man3/double_cmp.3
 man/man3/dsv_line_copy.3
 man/man3/dsv_line_free.3
+man/man3/dsv_line_init.3
 man/man3/dsv_line_read.3
 man/man3/dsv_line_set_array_size.3
 man/man3/dsv_line_set_delims.3
