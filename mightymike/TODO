@@ -1,0 +1,7 @@
+Mighty Mike TODO:
+
+- I'm pretty sure patch-extern_Pomme_src_Files_HostVolume.cpp breaks the
+  game at runtime
+- I'm not certain about the LICENSE field
+- We depend on wip/mk/git-package.git because we need the Git submodules
+  (GitHub's 'archive' feature doesn't recurse into submodules)

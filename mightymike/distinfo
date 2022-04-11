@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-extern_Pomme_src_Files_HostVolume.cpp) = e40c15b984db4a9cf404d7d7280c6d43858d62ea
+SHA1 (patch-extern_Pomme_src_PommeDebug.cpp) = 6e4f19c2db32aa0cd3c94c4aad5146e36bab981b
