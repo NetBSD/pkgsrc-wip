@@ -1,6 +1,6 @@
 $NetBSD$
 
-Fix mysql version detection.
+Fix mysql version detection. Fixed in next release.
 
 --- configure.orig	2022-04-08 12:31:53.471282883 +0200
 +++ configure	2022-04-08 12:33:13.084608511 +0200
