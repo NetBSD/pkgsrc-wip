@@ -1,0 +1,2 @@
+Python wrapper for FarmHash and CityHash, a family of fast
+non-cryptographic hash functions.

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (cityhash-0.4.1.tar.gz) = 598e6429f86ff2330bdb9f41651096ffc8ff91ea827cf95976fb592bbc18dbf0
+SHA512 (cityhash-0.4.1.tar.gz) = c9ed870360988d26accbc0b065a67e467d50dfc8f8ca63708978e4b894b1d67fb5e108d65eab03d14473afc1e0698f4f63a5ba73eed9beac1dd85c2e305673f4
+Size (cityhash-0.4.1.tar.gz) = 327538 bytes
