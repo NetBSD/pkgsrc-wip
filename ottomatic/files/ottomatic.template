@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# $NetBSD$
+# Launcher script for Otto Matic.
+set -e
+cd @@PREFIX@@/share/ottomatic && @@PREFIX@@/libexec/OttoMatic
