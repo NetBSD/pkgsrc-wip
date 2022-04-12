@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		nix-2.3.7
+DISTNAME=		nix-2.7.0
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NixOS/}
 
@@ -76,11 +76,11 @@ PKG_USERS+=	nixbld${i}:nixbld
 #SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
 # and one more.
-SUBST_CLASSES+=		docbook2
-SUBST_MESSAGE.docbook2=	Fixing docbook URLs.
-SUBST_FILES.docbook2+=	doc/manual/local.mk
-SUBST_STAGE.docbook2=	pre-configure
-SUBST_SED.docbook2+=	-e 's,http://docbook.org/xml/5.0/rng/docbook.rng,${PREFIX}/share/xsl/docbook,g'
+# SUBST_CLASSES+=		docbook2
+# SUBST_MESSAGE.docbook2=	Fixing docbook URLs.
+# SUBST_FILES.docbook2+=	doc/manual/local.mk
+# SUBST_STAGE.docbook2=	pre-configure
+# SUBST_SED.docbook2+=	-e 's,http://docbook.org/xml/5.0/rng/docbook.rng,${PREFIX}/share/xsl/docbook,g'
 
 # remove workdir references
 SUBST_CLASSES+=			confignix
@@ -93,6 +93,12 @@ SUBST_SED.confignix+=		-e 's,@tr@,/usr/bin/tr,g'
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=	jq-[0-9]*:../../devel/jq
+
+# Linux is supported, FreeBSD support is experimental.
+# macOS is probably supported.
+# Whoever updates this package and maybe imports it
+# should declare other OS as unsupported.
 
 #.if ${OPSYS} == "NetBSD"
 #USE_BUILTIN.editline=	yes
@@ -113,13 +119,14 @@ pre-configure:
 
 #.include "../../archivers/lzmalib/buildlink3.mk"
 #.include "../../mk/dlopen.buildlink3.mk"
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

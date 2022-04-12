@@ -5,4 +5,7 @@
 
 * port to NetBSD?
   There is a high probability that in addition to packaging, supported platforms
-  must be tested and non-supported (like NetBSD host) ported to.
+  must be tested and non-supported (like NetBSD host) ported to and maintained.
+
+* dependencies:
+  needs https://github.com/anrieff/libcpuid

@@ -1,6 +1,5 @@
 $NetBSD$
 
-RMD160 (nix-2.3.7.tar.gz) = bd5e5893f73784aaf26def6f45bd4ddd8209dd84
-SHA512 (nix-2.3.7.tar.gz) = 18516df4bac346d651ac550d088f6ee378bd7ff6c644c1cf9a59445792bd10765444b4dcdad44a06ac914dbf80021c57dd4496bef2d7a0db45cdee2a5ecdc47d
-Size (nix-2.3.7.tar.gz) = 900906 bytes
-SHA1 (patch-src_libexpr_primops_fetchGit.cc) = eed459c989279873a8b48044e0925de88cb358b0
+BLAKE2s (nix-2.7.0.tar.gz) = 6729611a550c89357855a783bf388010c0edd5518b0b6e5ddd59bbf67f88d96e
+SHA512 (nix-2.7.0.tar.gz) = bb946fb66aaaf32379787cbb88dfa94f2b8095cf1c771a6b9a7f38748ca75e8b56c3681af0a98debe148a59bef7c73a270ef44fd5ada21845630e5b22b047421
+Size (nix-2.7.0.tar.gz) = 1131643 bytes
