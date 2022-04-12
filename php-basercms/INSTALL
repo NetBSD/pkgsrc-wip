@@ -1,0 +1,15 @@
+#!@SH@
+#
+# $NetBSD$
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+BASERCMS_DIR="@PREFIX@/@BASERCMS_DIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${BASERCMS_DIR} &&
+		${CHOWN} -R ${WWWOWN} ${BASERCMS_DIR} &&
+		${CHGRP} -R ${WWWGRP} ${BASERCMS_DIR}
+	;;
+esac
