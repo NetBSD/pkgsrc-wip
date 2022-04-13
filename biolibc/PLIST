@@ -110,6 +110,8 @@ man/man3/BL_GFF_FEATURE_ID.3
 man/man3/BL_GFF_FEATURE_ID_AE.3
 man/man3/BL_GFF_FEATURE_NAME.3
 man/man3/BL_GFF_FEATURE_NAME_AE.3
+man/man3/BL_GFF_FEATURE_PARENT.3
+man/man3/BL_GFF_FEATURE_PARENT_AE.3
 man/man3/BL_GFF_FILE_POS.3
 man/man3/BL_GFF_INDEX_ARRAY_SIZE.3
 man/man3/BL_GFF_INDEX_COUNT.3
@@ -339,6 +341,9 @@ man/man3/bl_gff_set_feature_id_cpy.3
 man/man3/bl_gff_set_feature_name.3
 man/man3/bl_gff_set_feature_name_ae.3
 man/man3/bl_gff_set_feature_name_cpy.3
+man/man3/bl_gff_set_feature_parent.3
+man/man3/bl_gff_set_feature_parent_ae.3
+man/man3/bl_gff_set_feature_parent_cpy.3
 man/man3/bl_gff_set_file_pos.3
 man/man3/bl_gff_set_gene_name_cpy.3
 man/man3/bl_gff_set_phase.3
