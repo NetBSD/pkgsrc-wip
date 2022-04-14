@@ -226,7 +226,6 @@ SUBDIR+=	atanks
 SUBDIR+=	aten
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
-SUBDIR+=	ats2
 SUBDIR+=	audacity-cmake
 SUBDIR+=	audiere
 SUBDIR+=	audio-mml
