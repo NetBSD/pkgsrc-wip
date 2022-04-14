@@ -4988,6 +4988,7 @@ SUBDIR+=	qt6-qtcharts
 SUBDIR+=	qt6-qtdatavis3d
 SUBDIR+=	qt6-qtdeclarative
 SUBDIR+=	qt6-qtimageformats
+SUBDIR+=	qt6-qtlanguageserver
 SUBDIR+=	qt6-qtlottie
 SUBDIR+=	qt6-qtmultimedia
 SUBDIR+=	qt6-qtnetworkauth

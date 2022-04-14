@@ -6,6 +6,7 @@
 # used by wip/qt6-qtdatavis3d/Makefile
 # used by wip/qt6-qtdeclarative/Makefile
 # used by wip/qt6-qtimageformats/Makefile
+# used by wip/qt6-qtlanguageserver/Makefile
 # used by wip/qt6-qtlottie/Makefile
 # used by wip/qt6-qtmultimedia/Makefile
 # used by wip/qt6-qtnetworkauth/Makefile

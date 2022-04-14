@@ -17,6 +17,7 @@ DEPENDS+=	qt6-qtcharts-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtcharts
 DEPENDS+=	qt6-qtdatavis3d-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtdatavis3d
 DEPENDS+=	qt6-qtdeclarative-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtdeclarative
 DEPENDS+=	qt6-qtimageformats-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtimageformats
+DEPENDS+=	qt6-qtlanguageserver-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtlanguageserver
 DEPENDS+=	qt6-qtlottie-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtlottie
 DEPENDS+=	qt6-qtmultimedia-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtmultimedia
 DEPENDS+=	qt6-qtnetworkauth-${QTVERSION}{,nb[0-9]*}:../../wip/qt6-qtnetworkauth
