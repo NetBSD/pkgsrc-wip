@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES+=			c	# rust, but needs a toolchain to link
 USE_TOOLS+=			pkg-config
-PYTHON_VERSIONS_ACCEPTED=	37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 REPLACE_PYTHON+=	scripts/meson_post_install.py
@@ -29,7 +29,7 @@ INSTALLATION_DIRS=	bin share
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib
 
-.include "../../wip/gst-plugins1-opengl/buildlink3.mk"
+#.include "../../wip/gst-plugins1-opengl/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/glib2/buildlink3.mk"
