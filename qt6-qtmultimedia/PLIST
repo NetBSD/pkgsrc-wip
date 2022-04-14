@@ -123,6 +123,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstsubtitlesink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstvideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstvideorenderersink_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qiso639_2_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
@@ -179,8 +180,9 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediadevicer
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediadevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediadevicesession_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediaencoder_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmultimediautils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmfdefs_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmultimediautils_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsresampler_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/samplegrabber_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/sourceresolver_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/windowgrabber_p.h
@@ -236,6 +238,7 @@ qt6/include/QtMultimedia/qmediatimerange.h
 qt6/include/QtMultimedia/qsoundeffect.h
 qt6/include/QtMultimedia/qtmultimedia-config.h
 qt6/include/QtMultimedia/qtmultimediadefs.h
+qt6/include/QtMultimedia/qtmultimediaexports.h
 qt6/include/QtMultimedia/qtmultimediaglobal.h
 qt6/include/QtMultimedia/qtmultimediaversion.h
 qt6/include/QtMultimedia/qvideoframe.h
@@ -244,7 +247,9 @@ qt6/include/QtMultimedia/qvideosink.h
 qt6/include/QtMultimedia/qwavedecoder.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickimagecapture_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickimagepreviewprovider_p.h
+qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickmediaplayer_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickplaylist_p.h
+qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquicksoundeffect_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickvideooutput_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideonode_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideotexture_p.h
@@ -253,6 +258,7 @@ qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qtmultimed
 qt6/include/QtMultimediaQuick/QtMultimediaQuick
 qt6/include/QtMultimediaQuick/QtMultimediaQuickDepends
 qt6/include/QtMultimediaQuick/QtMultimediaQuickVersion
+qt6/include/QtMultimediaQuick/qtmultimediaquickexports.h
 qt6/include/QtMultimediaQuick/qtmultimediaquickversion.h
 qt6/include/QtMultimediaWidgets/${PKGVERSION}/QtMultimediaWidgets/private/qvideowidget_p.h
 qt6/include/QtMultimediaWidgets/QGraphicsVideoItem
@@ -262,6 +268,8 @@ qt6/include/QtMultimediaWidgets/QtMultimediaWidgetsDepends
 qt6/include/QtMultimediaWidgets/QtMultimediaWidgetsVersion
 qt6/include/QtMultimediaWidgets/qgraphicsvideoitem.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetdefs.h
+qt6/include/QtMultimediaWidgets/qtmultimediawidgetsexports.h
+qt6/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsversion.h
 qt6/include/QtMultimediaWidgets/qvideowidget.h
 qt6/lib/cmake/Qt6/FindAVFoundation.cmake

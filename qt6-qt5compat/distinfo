@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qt5compat-everywhere-src-6.2.2.tar.xz) = 3f10082314708c39d59ec1794ac5758a585278b604ffe6ddce6b204c8c9373a9
-SHA512 (qt5compat-everywhere-src-6.2.2.tar.xz) = d6f882b454fa727791151e55a9c0050c962e109a623de16c09ce36bffbae91770097ac1871419e7dbe33e199911de6bdeefe9fdffa4f25bb987b169691e17d22
-Size (qt5compat-everywhere-src-6.2.2.tar.xz) = 8198432 bytes
+BLAKE2s (qt5compat-everywhere-src-6.3.0.tar.xz) = 25048725821600887c1b4b04121b5692c89eb9a38f86603334357177ef7d7eb7
+SHA512 (qt5compat-everywhere-src-6.3.0.tar.xz) = c6476bc2e0f5aed728c00ffd19c72c1bfe8f63893f86599584a89c60c213e262b170727771c5e1c3226856939282e727af220a12620933a2886b0816a0bb78e6
+Size (qt5compat-everywhere-src-6.3.0.tar.xz) = 8198576 bytes

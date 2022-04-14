@@ -6,18 +6,17 @@ $NetBSD$
 * add support for avoiding the cmake archiving api using configure since
   libarchive in pkgsrc that cmake uses is built without zstd support
 
---- cmake/QtProcessConfigureArgs.cmake.orig	2021-09-23 07:42:06.000000000 +0000
+--- cmake/QtProcessConfigureArgs.cmake.orig	2022-03-27 12:50:42.000000000 +0000
 +++ cmake/QtProcessConfigureArgs.cmake
-@@ -151,7 +151,7 @@ defstub(qt_find_package)
- defstub(set_package_properties)
+@@ -177,6 +177,7 @@ defstub(set_package_properties)
  defstub(qt_qml_find_python)
  defstub(qt_set01)
--
+ defstub(qt_internal_check_if_linker_is_available)
 +defstub(qt_test_lib_target)
  
  ####################################################################################################
  # Define functions/macros that are called in qt_cmdline.cmake files
-@@ -790,6 +790,7 @@ translate_boolean_input(precompile_heade
+@@ -798,6 +799,7 @@ translate_boolean_input(precompile_heade
  translate_boolean_input(ccache QT_USE_CCACHE)
  translate_boolean_input(shared BUILD_SHARED_LIBS)
  translate_boolean_input(warnings_are_errors WARNINGS_ARE_ERRORS)

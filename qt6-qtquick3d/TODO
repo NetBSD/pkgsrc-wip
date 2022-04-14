@@ -1,2 +1,0 @@
-mulitmedia/assimp needs mOrthographicView in order to be used by
-qt6qtquick3d 6.1, add it

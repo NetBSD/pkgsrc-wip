@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (qttools-everywhere-src-6.2.2.tar.xz) = da1ef5fad4a23c959101c474cfac066934aa18d78d07c1d9090cbfc99f557d0a
-SHA512 (qttools-everywhere-src-6.2.2.tar.xz) = bce7ce96e64f423eed3f3655dd53d58588093287a6879da86067c4313962afd43d6f514d776c77f5b9462df31ce5801ab42a3232ebc8ef49209da6812fa9a304
-Size (qttools-everywhere-src-6.2.2.tar.xz) = 8622800 bytes
+BLAKE2s (qttools-everywhere-src-6.3.0.tar.xz) = 176bb3b3b750a071c472fc2651ece1c28feb8b2bb7b8b1fb8c893338211b9ccb
+SHA512 (qttools-everywhere-src-6.3.0.tar.xz) = 027db897817811f8e8003551ed95d4078311b6324284dd3d4149e636227c57a3b7fc0ebf9bc2b7d381c10080deb89074bcc198d54e15ecef73a7cf41e8ecdb1e
+Size (qttools-everywhere-src-6.3.0.tar.xz) = 8625544 bytes
 SHA1 (patch-src_assistant_CMakeLists.txt) = 41e1a4eb77337f52f2b6b37a01d3217c83a29bc8
 SHA1 (patch-src_linguist_lupdate_CMakeLists.txt) = d70ea348c3ba7f64bcc245de9445becefecf3a9c

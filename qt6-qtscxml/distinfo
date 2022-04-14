@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtscxml-everywhere-src-6.2.2.tar.xz) = 62da00fa670e9cd963f63966308c2e7aa26bdc6825db137471742478c9591daa
-SHA512 (qtscxml-everywhere-src-6.2.2.tar.xz) = c4397530e101fa01753c258da10d177ff1158b2224573afa9909b269cfe35a89dedcf3b716fab89714316223a536b4acfbd2004b2de0122633cebbf033f4c8f4
-Size (qtscxml-everywhere-src-6.2.2.tar.xz) = 1781352 bytes
+BLAKE2s (qtscxml-everywhere-src-6.3.0.tar.xz) = 5202456ee1e3c9c436e16f359747264801a16149ef0026b848e53d60482a91d3
+SHA512 (qtscxml-everywhere-src-6.3.0.tar.xz) = 57d076e61e9f20383b1ec2b014f6132bc87af77641ebb71ac333b5ad4ee7aea043b0dab0d3231568e058afe5d8a07ec524ebe52340edd1ab03dbc74273bf8b9d
+Size (qtscxml-everywhere-src-6.3.0.tar.xz) = 1786636 bytes

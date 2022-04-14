@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtquicktimeline-everywhere-src-6.2.2.tar.xz) = c7c03fb4a6ef601c4f70476252c5a548197fc6cafe888e2205d5d08cf65da4bb
-SHA512 (qtquicktimeline-everywhere-src-6.2.2.tar.xz) = a35c299cf2f876aa1f07c46068fba0d9157ec12ac93bb28a45654e68086090c41e95c1c6138d7e7b7b84e923b324d0513ba0851e7683d62bab8d9ffa6a6c7357
-Size (qtquicktimeline-everywhere-src-6.2.2.tar.xz) = 109116 bytes
+BLAKE2s (qtquicktimeline-everywhere-src-6.3.0.tar.xz) = c24fcfb9497876e53a8e0a2b1b25ab53b112923b82cdac9a1b89fe08828e97de
+SHA512 (qtquicktimeline-everywhere-src-6.3.0.tar.xz) = 975c4716e356323eafd6a27647b2bb954e32f552213efc848924a30817e835ada6b19c10110dca0bce12895332839ee32eee96a65e000932b777e03905de6be8
+Size (qtquicktimeline-everywhere-src-6.3.0.tar.xz) = 113460 bytes

@@ -6,6 +6,7 @@ qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgnode_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstructure_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstyle_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgtinydocument_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgexports_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgglobal_p.h
 qt6/include/QtSvg/QSvgGenerator
 qt6/include/QtSvg/QSvgRenderer
@@ -14,6 +15,7 @@ qt6/include/QtSvg/QtSvgDepends
 qt6/include/QtSvg/QtSvgVersion
 qt6/include/QtSvg/qsvggenerator.h
 qt6/include/QtSvg/qsvgrenderer.h
+qt6/include/QtSvg/qtsvgexports.h
 qt6/include/QtSvg/qtsvgglobal.h
 qt6/include/QtSvg/qtsvgversion.h
 qt6/include/QtSvgWidgets/QGraphicsSvgItem
@@ -23,6 +25,7 @@ qt6/include/QtSvgWidgets/QtSvgWidgetsDepends
 qt6/include/QtSvgWidgets/QtSvgWidgetsVersion
 qt6/include/QtSvgWidgets/qgraphicssvgitem.h
 qt6/include/QtSvgWidgets/qsvgwidget.h
+qt6/include/QtSvgWidgets/qtsvgwidgetsexports.h
 qt6/include/QtSvgWidgets/qtsvgwidgetsglobal.h
 qt6/include/QtSvgWidgets/qtsvgwidgetsversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtSvgTestsConfig.cmake

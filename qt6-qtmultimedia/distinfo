@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtmultimedia-everywhere-src-6.2.2.tar.xz) = eadd5cf193c9dab4ed93563215f2388f17078f1e374f2461700cb6ef95a33ecf
-SHA512 (qtmultimedia-everywhere-src-6.2.2.tar.xz) = 70eaa88742f0fe5b4106e6ec0ed864fca439b8c4e8c2478894c4f550410b57eee829b2fecf2d199d4892073f0d4754b0acbbea8b8c6ab897ed480730cd9cac15
-Size (qtmultimedia-everywhere-src-6.2.2.tar.xz) = 3771836 bytes
+BLAKE2s (qtmultimedia-everywhere-src-6.3.0.tar.xz) = 51a003d0072359c1c4bb72e75a45ff026ff233944665b92662ac8f50e8b758eb
+SHA512 (qtmultimedia-everywhere-src-6.3.0.tar.xz) = b437e6c7083c91eeafa4d016fcd33a2ffec0c40dbd057d2bb3d4cb19127559ea25fb239a6af2de717945e1ddbbbda824942981772b8292e65cda508fdab1c515
+Size (qtmultimedia-everywhere-src-6.3.0.tar.xz) = 4753932 bytes

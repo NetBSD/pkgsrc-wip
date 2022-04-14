@@ -60,6 +60,7 @@ qt6/include/QtRemoteObjects/qremoteobjectsettingsstore.h
 qt6/include/QtRemoteObjects/qremoteobjectsource.h
 qt6/include/QtRemoteObjects/qtremoteobjectglobal.h
 qt6/include/QtRemoteObjects/qtremoteobjects-config.h
+qt6/include/QtRemoteObjects/qtremoteobjectsexports.h
 qt6/include/QtRemoteObjects/qtremoteobjectsversion.h
 qt6/include/QtRemoteObjectsQml/${PKGVERSION}/QtRemoteObjectsQml/private/qremoteobjectsqml_p.h
 qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQml

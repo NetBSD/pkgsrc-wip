@@ -1,5 +1,4 @@
 @comment $NetBSD$
-qt6/bin/qscxmlc
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlcompiler_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlcppdatamodel_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmldatamodel_p.h
@@ -12,6 +11,7 @@ qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlstatemachine_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlstatemachineinfo_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmltabledata_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qtscxml-config_p.h
+qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qtscxmlexports_p.h
 qt6/include/QtScxml/QScxmlCompiler
 qt6/include/QtScxml/QScxmlCppDataModel
 qt6/include/QtScxml/QScxmlDataModel
@@ -39,15 +39,18 @@ qt6/include/QtScxml/qscxmlnulldatamodel.h
 qt6/include/QtScxml/qscxmlstatemachine.h
 qt6/include/QtScxml/qscxmltabledata.h
 qt6/include/QtScxml/qtscxml-config.h
+qt6/include/QtScxml/qtscxmlexports.h
 qt6/include/QtScxml/qtscxmlversion.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/eventconnection_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/invokedservices_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/qscxmlqmlglobals_p.h
+qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/qtscxmlqmlexports_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/statemachineextended_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/statemachineloader_p.h
 qt6/include/QtScxmlQml/QtScxmlQml
 qt6/include/QtScxmlQml/QtScxmlQmlDepends
 qt6/include/QtScxmlQml/QtScxmlQmlVersion
+qt6/include/QtScxmlQml/qtscxmlqmlexports.h
 qt6/include/QtScxmlQml/qtscxmlqmlversion.h
 qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qabstractstate_p.h
 qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qabstracttransition_p.h
@@ -86,10 +89,12 @@ qt6/include/QtStateMachine/qstate.h
 qt6/include/QtStateMachine/qstatemachine.h
 qt6/include/QtStateMachine/qstatemachineglobal.h
 qt6/include/QtStateMachine/qtstatemachine-config.h
+qt6/include/QtStateMachine/qtstatemachineexports.h
 qt6/include/QtStateMachine/qtstatemachineversion.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/childrenprivate_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/finalstate_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/qstatemachineqmlglobals_p.h
+qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/qtstatemachineqmlexports_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/signaltransition_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/state_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/statemachine_p.h
@@ -98,6 +103,7 @@ qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/timeouttra
 qt6/include/QtStateMachineQml/QtStateMachineQml
 qt6/include/QtStateMachineQml/QtStateMachineQmlDepends
 qt6/include/QtStateMachineQml/QtStateMachineQmlVersion
+qt6/include/QtStateMachineQml/qtstatemachineqmlexports.h
 qt6/include/QtStateMachineQml/qtstatemachineqmlversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtScxmlTestsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlAdditionalTargetInfo.cmake
@@ -179,6 +185,7 @@ qt6/lib/metatypes/qt6scxml_release_metatypes.json
 qt6/lib/metatypes/qt6scxmlqml_release_metatypes.json
 qt6/lib/metatypes/qt6statemachine_release_metatypes.json
 qt6/lib/metatypes/qt6statemachineqml_release_metatypes.json
+qt6/libexec/qscxmlc
 qt6/mkspecs/features/qscxmlc.prf
 qt6/mkspecs/modules/qt_lib_scxml.pri
 qt6/mkspecs/modules/qt_lib_scxml_private.pri

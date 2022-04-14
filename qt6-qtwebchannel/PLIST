@@ -11,6 +11,7 @@ qt6/include/QtWebChannel/QtWebChannel
 qt6/include/QtWebChannel/QtWebChannelDepends
 qt6/include/QtWebChannel/QtWebChannelVersion
 qt6/include/QtWebChannel/qqmlwebchannel.h
+qt6/include/QtWebChannel/qtwebchannelexports.h
 qt6/include/QtWebChannel/qtwebchannelversion.h
 qt6/include/QtWebChannel/qwebchannel.h
 qt6/include/QtWebChannel/qwebchannelabstracttransport.h

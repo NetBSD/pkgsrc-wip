@@ -10,7 +10,6 @@ qt6/bin/qdbus
 qt6/bin/qdbusviewer
 qt6/bin/qdistancefieldgenerator
 qt6/bin/qdoc
-qt6/bin/qhelpgenerator
 qt6/bin/qtdiag
 qt6/bin/qtdiag6
 qt6/bin/qtplugininfo
@@ -360,6 +359,7 @@ qt6/lib/metatypes/qt6uitools_release_metatypes.json
 qt6/libexec/lprodump
 qt6/libexec/lrelease-pro
 qt6/libexec/lupdate-pro
+qt6/libexec/qhelpgenerator
 qt6/libexec/qtattributionsscanner
 qt6/mkspecs/modules/qt_lib_designer.pri
 qt6/mkspecs/modules/qt_lib_designer_private.pri

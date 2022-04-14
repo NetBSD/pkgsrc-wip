@@ -1,8 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtdatavis3d-everywhere-src-6.2.2.tar.xz) = cbc19a8f911472295d933478f7b119a1bd65e44016637f1024c6087968c560ee
-SHA512 (qtdatavis3d-everywhere-src-6.2.2.tar.xz) = 9b6af60222b80f82348eac20660e5e6ad9aa0720edc002e698fd286d42fcf8c35f263db18b344feaddfa3e5e43c8f11a7f22c3228e87eedea42e1df16250214e
-Size (qtdatavis3d-everywhere-src-6.2.2.tar.xz) = 5102720 bytes
-SHA1 (patch-src_datavisualization_data_abstractrenderitem__p.h) = 45d0ab60884084e5b3b45ace842e15ea3917ec9f
-SHA1 (patch-src_datavisualization_data_barrenderitem__p.h) = 274fdf069979e7da6771b1241c35afcfed0239e2
-SHA1 (patch-src_datavisualization_data_scatterrenderitem__p.h) = d730868d8053b2d958aaf77eb207df91664e7450
+BLAKE2s (qtdatavis3d-everywhere-src-6.3.0.tar.xz) = 771025946c3aad2ed6399f910e752176df46e0163c0088f2e880c21c377eb201
+SHA512 (qtdatavis3d-everywhere-src-6.3.0.tar.xz) = 24d70426b085439fbbe84031e4decf094c47538e08a0a6f41b3e74e588a29a9dcc22b123e90afc379e640a37323e8f28de5ce7260d8abcea6238cac25a87fc9f
+Size (qtdatavis3d-everywhere-src-6.3.0.tar.xz) = 5217576 bytes

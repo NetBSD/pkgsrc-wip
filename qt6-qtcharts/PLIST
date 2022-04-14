@@ -129,6 +129,7 @@ qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qscatterseries_p.h
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qsplineseries_p.h
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qstackedbarseries_p.h
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qtcharts-config_p.h
+qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qtchartsexports_p.h
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qvalueaxis_p.h
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qxylegendmarker_p.h
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/qxymodelmapper_p.h
@@ -250,6 +251,7 @@ qt6/include/QtCharts/qscatterseries.h
 qt6/include/QtCharts/qsplineseries.h
 qt6/include/QtCharts/qstackedbarseries.h
 qt6/include/QtCharts/qtcharts-config.h
+qt6/include/QtCharts/qtchartsexports.h
 qt6/include/QtCharts/qtchartsversion.h
 qt6/include/QtCharts/qvalueaxis.h
 qt6/include/QtCharts/qvbarmodelmapper.h
@@ -280,9 +282,11 @@ qt6/include/QtChartsQml/${PKGVERSION}/QtChartsQml/private/declarativescatterseri
 qt6/include/QtChartsQml/${PKGVERSION}/QtChartsQml/private/declarativesplineseries_p.h
 qt6/include/QtChartsQml/${PKGVERSION}/QtChartsQml/private/declarativexypoint_p.h
 qt6/include/QtChartsQml/${PKGVERSION}/QtChartsQml/private/declarativexyseries_p.h
+qt6/include/QtChartsQml/${PKGVERSION}/QtChartsQml/private/qtchartsqmlexports_p.h
 qt6/include/QtChartsQml/QtChartsQml
 qt6/include/QtChartsQml/QtChartsQmlDepends
 qt6/include/QtChartsQml/QtChartsQmlVersion
+qt6/include/QtChartsQml/qtchartsqmlexports.h
 qt6/include/QtChartsQml/qtchartsqmlversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtChartsTestsConfig.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake

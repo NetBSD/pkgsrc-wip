@@ -18,6 +18,7 @@ qt6/include/QtWebSockets/QtWebSockets
 qt6/include/QtWebSockets/QtWebSocketsDepends
 qt6/include/QtWebSockets/QtWebSocketsVersion
 qt6/include/QtWebSockets/qmaskgenerator.h
+qt6/include/QtWebSockets/qtwebsocketsexports.h
 qt6/include/QtWebSockets/qtwebsocketsversion.h
 qt6/include/QtWebSockets/qwebsocket.h
 qt6/include/QtWebSockets/qwebsocketcorsauthenticator.h

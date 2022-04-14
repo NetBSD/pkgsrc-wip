@@ -5,10 +5,12 @@ qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qshaderbatchablere
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvcompiler_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvshader_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvshaderremap_p.h
+qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qtshadertoolsexports_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qtshadertoolsglobal_p.h
 qt6/include/QtShaderTools/QtShaderTools
 qt6/include/QtShaderTools/QtShaderToolsDepends
 qt6/include/QtShaderTools/QtShaderToolsVersion
+qt6/include/QtShaderTools/qtshadertoolsexports.h
 qt6/include/QtShaderTools/qtshadertoolsglobal.h
 qt6/include/QtShaderTools/qtshadertoolsversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtShaderToolsTestsConfig.cmake
