@@ -1,30 +1,19 @@
 $NetBSD$
 
-Allow ovrride of PREFIX
+Fix installation - "-D" is not portable.
 
---- Makefile.orig	2014-02-16 22:44:57.000000000 +0000
+--- Makefile.orig	2021-09-06 03:51:46.000000000 +0000
 +++ Makefile
-@@ -42,7 +42,7 @@ BASIC_CFLAGS += -Wp,-MD,$(@D)/.$(@F).d
- endif
+@@ -300,10 +300,10 @@ install-man: $(INST_MAN1:%=$(man1dir)/%)
  
- DESTDIR=
--PREFIX=$(HOME)
-+PREFIX?=$(HOME)
- BINDIR=$(PREFIX)/bin
- LIBDIR=$(PREFIX)/lib
- MANDIR=$(PREFIX)/share/man
-@@ -128,12 +128,12 @@ QUIET_INST_SH = $(Q:@=echo -n  '     INS
- QUIET_INST    = $(Q:@=@echo -n '     INSTALL  ';)
+ $(bindir)/%: %
+ 	@echo "  INSTALL $@"
+-	$(Q)install -D        $< $@ || exit 1;
++	$(Q)${BSD_INSTALL_PROGRAM} $< $@ || exit 1;
+ $(man1dir)/%: %
+ 	@echo "  INSTALL $@"
+-	$(Q)install -D -m 644 $< $@ || exit 1;
++	$(Q)${BSD_INSTALL_MAN} $< $@ || exit 1;
  
- define INSTALL_EXEC
--	$(QUIET_INST)install -v $1 $(DESTDIR)$2/$1 || exit 1;
-+	$(QUIET_INST)install $1 $(DESTDIR)$2/$1 || exit 1;
- 
- endef
- 
- define INSTALL_FILE
--	$(QUIET_INST)install -v -m 644 $1 $(DESTDIR)$2/$1 || exit 1;
-+	$(QUIET_INST)install -m 644 $1 $(DESTDIR)$2/$1 || exit 1;
- 
- endef
+ .PHONY: FORCE
  
