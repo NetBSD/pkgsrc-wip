@@ -2047,6 +2047,7 @@ SUBDIR+=	libclocale
 SUBDIR+=	libcm
 SUBDIR+=	libcmt
 SUBDIR+=	libcnotify
+SUBDIR+=	libconfini
 SUBDIR+=	libcouchbase
 SUBDIR+=	libcpath
 SUBDIR+=	libcpu

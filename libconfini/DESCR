@@ -1,0 +1,4 @@
+libconfini is an ini parser originally designed for parsing configuration
+files written by other programs. It claims to be the ultimate and most
+consistent INI file parser library written in C.
+Focus is on standardization and parsing exactness.

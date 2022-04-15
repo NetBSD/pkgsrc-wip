@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libconfini-1.16.3-with-configure.tar.gz) = cef2152a6954056b2f8ac269e8802f91afba796ecfc4fead532fb8b9005f4325
+SHA512 (libconfini-1.16.3-with-configure.tar.gz) = 4c0258ad3fa1098e25669f069be426aad4269b3773ce4120db23ed708cc7112088d95790a03e22031b6766caa7056de37930cd34f57e987ecd21331178ef2b30
+Size (libconfini-1.16.3-with-configure.tar.gz) = 891464 bytes
