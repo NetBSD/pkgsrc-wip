@@ -1257,6 +1257,7 @@ SUBDIR+=	go-curlie
 SUBDIR+=	go-current
 SUBDIR+=	go-cyclo
 SUBDIR+=	go-discord-irc
+SUBDIR+=	go-dither
 SUBDIR+=	go-dotenv
 SUBDIR+=	go-doublejump
 SUBDIR+=	go-douceur-aymerick
