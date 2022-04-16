@@ -1980,6 +1980,7 @@ SUBDIR+=	kstest
 SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	ktnef
+SUBDIR+=	kubeconform
 SUBDIR+=	kubectx
 SUBDIR+=	kubeval
 SUBDIR+=	kuickshow
