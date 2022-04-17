@@ -1,8 +1,8 @@
 # $NetBSD: options.mk,v 1.5 2019/04/26 13:13:46 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-dask
-PKG_SUPPORTED_OPTIONS=	cityhash cytoolz fastparquet graphviz psutil scipy skimage xarray sqlalchemy
-PKG_SUGGESTED_OPTIONS=	cityhash cytoolz fastparquet psutil scipy skimage xarray sqlalchemy
+PKG_SUPPORTED_OPTIONS=	cityhash cytoolz parquet graphviz psutil scipy skimage xarray sqlalchemy
+PKG_SUGGESTED_OPTIONS=	cityhash cytoolz parquet psutil scipy skimage xarray sqlalchemy
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,7 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 .endif
 
 # enable reading parquet files
-.if !empty(PKG_OPTIONS:Mfastparquet)
+.if !empty(PKG_OPTIONS:Mparquet)
+# TODO Also needs pyarrow
 DEPENDS+=	${PYPKGPREFIX}-fastparquet-[0-9]*:../../wip/py-fastparquet
 .endif
 
@@ -28,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-graphviz-[0-9]*:../../graphics/py-graphviz
 
 # SQL Support
 .if !empty(PKG_OPTIONS:Msqlalchemy)
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../wip/py-sqlalchemy
 .endif
 
 # Enable scikit-image

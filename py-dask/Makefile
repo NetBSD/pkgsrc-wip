@@ -1,12 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	dask-2022.4.0
+GITHUB_TAG=	2022.04.0
+DISTNAME=	dask-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+GITHUB_PROJECT=	dask
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_PYPI:=d/dask/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dask/}
 
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	matthewda@fastmail.us
 HOMEPAGE=	https://github.com/dask/dask/
 COMMENT=	Flexible parallel computing library for analytics
 LICENSE=	modified-bsd

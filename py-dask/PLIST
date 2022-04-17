@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dask-2022.4.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/dask-2022.4.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/dask-2022.4.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/dask-2022.4.0-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/dask-2022.4.0-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/dask-2022.4.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/dask/__init__.py
 ${PYSITELIB}/dask/__init__.pyc
 ${PYSITELIB}/dask/__init__.pyo
