@@ -1,0 +1,11 @@
+$NetBSD$
+
+BLAKE2s (aeec9c872c8b475dedd7781336710f2dd2666cb2.tar.gz) = 55568fa5a7dc66e1e3d1d7e5196dc9ff0976ce1887b39a6de42362214b729acb
+SHA512 (aeec9c872c8b475dedd7781336710f2dd2666cb2.tar.gz) = ecc58e7909648aaa22aefbf76ee2c5a2bece4b1b88da9c7eda1b69a46247e619ff99c4366afd6015f95debd68c1a6b89292c677b9049462d0fc0255fbc0c2a33
+Size (aeec9c872c8b475dedd7781336710f2dd2666cb2.tar.gz) = 173025 bytes
+BLAKE2s (apache-arrow-7.0.0.tar.gz) = 3c14a2ca983fd0e41146d23d869c0e33fea4b1c6a39c0d7cf44efb2e9af71b14
+SHA512 (apache-arrow-7.0.0.tar.gz) = 6727ea625b1a4dc3fd452e94ef5e8fd7a5bdebcf44b105f0ba684687cf126163317caef9e91cfd3722a8defca1f0295741ed0dde2393e85d15559bddd7ecb9a2
+Size (apache-arrow-7.0.0.tar.gz) = 11949886 bytes
+BLAKE2s (jemalloc-5.2.1.tar.bz2) = a580a7fdd97dd82f1daf1b0059f229a6d34c65d76452cfc5673da1ac1a29a140
+SHA512 (jemalloc-5.2.1.tar.bz2) = 0bbb77564d767cef0c6fe1b97b705d368ddb360d55596945aea8c3ba5889fbce10479d85ad492c91d987caacdbbdccc706aa3688e321460069f00c05814fae02
+Size (jemalloc-5.2.1.tar.bz2) = 554279 bytes

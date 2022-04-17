@@ -1,0 +1,4 @@
+iApache Arrow defines a language-independent columnar memory format for flat
+and hierarchical data, organized for efficient analytic operations on modern
+hardware like CPUs and GPUs. The Arrow memory format also supports zero-copy
+reads for lightning-fast data access without serialization overhead.
