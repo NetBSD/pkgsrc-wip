@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.43 2021/10/26 10:19:15 nia Exp $
 
-BLAKE2s (virtualenv-20.14.0.tar.gz) = 714ab48f5e1401960cd1ea8ac711068c9152b8757dcb61bfd8953d783f841243
-SHA512 (virtualenv-20.14.0.tar.gz) = c4f1b40187d847602cb2ccef1be9ecce6acd234d08abf5967219d8cf900e641337ce027018c2cca566409a5ab3dda1f363d7381a0d2f676000c04e10677bfada
-Size (virtualenv-20.14.0.tar.gz) = 12209889 bytes
+BLAKE2s (virtualenv-20.14.1.tar.gz) = a29a362b33e0306b8e0d5691863fe2fef6600433fc1e62d691df8eb9c9e68081
+SHA512 (virtualenv-20.14.1.tar.gz) = 149e78787db23eabd4238baa172bf023ddcf87d59284fdd090269acfa15991aab182f9e168851f88ef810d5c50dd7cdce69d132c46ebedb10080d65a308e63a1
+Size (virtualenv-20.14.1.tar.gz) = 12216889 bytes
 SHA1 (patch-src_virtualenv_create_via__global__ref_api.py) = f6ba5ae8157b45366d9a9a85cc3a1f6c42e2d00c
