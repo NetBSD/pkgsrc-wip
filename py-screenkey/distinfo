@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (screenkey-1.5.tar.gz) = 0f1bab72183a28b4dd551c638117540474df78e7e57e89ed6f4a52ef6e1cb286
+SHA512 (screenkey-1.5.tar.gz) = 37a2e99ae3ab579fe91bed081bfd39c85896ed173a7a94f38e46fc22d1a2d9f24da147984e69d22eb2dbeb0226456bf41b5e24cface3ca72cd76d478323d4091
+Size (screenkey-1.5.tar.gz) = 94403 bytes

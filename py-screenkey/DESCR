@@ -1,0 +1,14 @@
+A screencast tool to display your keys, inspired by Screenflick.
+
+* Several keyboard translation methods
+* Key composition/input method support
+* Configurable font/size/position
+* Highlighting of recent keystrokes
+* Improved backspace processing
+* Normal/Emacs/Mac caps modes
+* Multi-monitor support
+* Dynamic recording control
+* Switch for visible shift and modifier sequences only
+* Repeats compression
+* Countless bug fixes
+* Mouse buttons support
