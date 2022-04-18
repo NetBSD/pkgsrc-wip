@@ -1,8 +1,11 @@
 @comment $NetBSD$
-bin/add-ortho
+bin/ms-add-ortho
 bin/ms-blast
 bin/ms-blast-dbs
 bin/ms-extract
+bin/ms-fetch-cdnas
+bin/ms-fetch-gffs
+bin/ms-fetch-refs
 bin/ms-fish-mammal-intersect
 bin/ms-fish-mammal-percent-changed
 bin/ms-gene-list-extract
