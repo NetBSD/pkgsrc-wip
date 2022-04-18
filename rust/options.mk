@@ -20,6 +20,13 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .endif
 
+# (NetBSD)/sparc64 systems fail to build libunwind,
+# a dependency of pkgsrc llvm, so use the internal instead
+# Ref. PR#56791
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+PKG_SUGGESTED_OPTIONS+=		rust-llvm
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 #
