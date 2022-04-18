@@ -5,17 +5,17 @@
 #              Sun Mar  6 18:38:30 CST 2022               #
 ###########################################################
 
-DISTNAME=	microsynteny-tools-0.1.0.85
+DISTNAME=	microsynteny-tools-0.1.0.133
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	0c4d9462cd481a40053550749372db951d2ca701
+GITHUB_TAG=	2d9e28c24f05adc221746039b1f2ce0fdd0e1823
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
 COMMENT=	Tools for exploring microsyntenic differences among species
 LICENSE=	2-clause-bsd
 
-REPLACE_PYTHON=	*.py
+REPLACE_PYTHON=	Scripts/*.py
 
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../lang/python/application.mk"
