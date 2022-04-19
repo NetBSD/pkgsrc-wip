@@ -18,12 +18,6 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
 CMAKE_ARGS+=	-DBOOST_DIR=${BUILDLINK_PREFIX.boost-libs}
 
-INSTALLATION_DIRS=	include/util lib
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/util/include/util/*.h ${DESTDIR}${PREFIX}/include/util
-	${INSTALL_LIB} ${WRKSRC}/util/*.a ${DESTDIR}${PREFIX}/lib
-
 .include "../../wip/mk/git-package.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
