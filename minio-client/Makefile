@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	minio-client-20210727
+DISTNAME=	minio-client-20220416
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=minio/}
 GITHUB_PROJECT=	mc
-GITHUB_TAG=	RELEASE.2021-07-27T06-46-19Z
+GITHUB_TAG=	RELEASE.2022-04-16T21-11-21Z
 
 COMMENT=	Tool implementing ls/cp/mkdir/diff/rsync for S3-like object storage
 HOMEPAGE=	https://min.io/
