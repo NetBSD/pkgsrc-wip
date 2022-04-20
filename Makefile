@@ -390,7 +390,6 @@ SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	capnproto
 SUBDIR+=	carburetta
 SUBDIR+=	cardpeek
-SUBDIR+=	cargo-audit
 SUBDIR+=	carla
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
