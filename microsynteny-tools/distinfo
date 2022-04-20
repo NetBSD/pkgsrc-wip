@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (microsynteny-tools-0.1.0.146-ec793ebb123fc8d4cdee9ede5cd14bfb127e6f5b.tar.gz) = be0192cecc57aecf02695055c02767c4ce1c485609b8f8e6b68f1f6c56ae6ddd
-SHA512 (microsynteny-tools-0.1.0.146-ec793ebb123fc8d4cdee9ede5cd14bfb127e6f5b.tar.gz) = fbb324cf450820ddd518524d06516b46d7148f235c35ede184b5735867ebba9f00003e977821249eb9e2373da6575223c5ca7b2a69cd76d6f6c3b6712fa98df6
-Size (microsynteny-tools-0.1.0.146-ec793ebb123fc8d4cdee9ede5cd14bfb127e6f5b.tar.gz) = 2276739 bytes
+BLAKE2s (microsynteny-tools-0.1.0.147-ce4e17894c4c416e2c4d9ebf4a460ab8faa41a99.tar.gz) = d3cb2376989e52782c1fcb549cf03e16cf3e945fc78cb520e1d98d3981a88f64
+SHA512 (microsynteny-tools-0.1.0.147-ce4e17894c4c416e2c4d9ebf4a460ab8faa41a99.tar.gz) = af4e57aa9ae28274671e7feb36c740f0769c58a61c3c9e262b9f7b44b8c2a27eaceefbb8b7df6a3ab123b9155fcf295b999074b3d6fa6f1e5940d799d21685bc
+Size (microsynteny-tools-0.1.0.147-ce4e17894c4c416e2c4d9ebf4a460ab8faa41a99.tar.gz) = 2276828 bytes
