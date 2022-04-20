@@ -1,8 +1,0 @@
-@comment $NetBSD$
-bin/unterm
-bin/vterm-ctrl
-bin/vterm-dump
-include/vterm.h
-include/vterm_keycodes.h
-lib/libvterm.la
-lib/pkgconfig/vterm.pc

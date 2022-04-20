@@ -1,7 +1,0 @@
-- Probably more dependencies are needed (despite it seems it run fine):
-   lua-busted
- (According: <https://packages.debian.org/sid/source/neovim>, via:
-  <https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites>)
-  - lua-busted should only be needed for tests
-- Some modifications to devel/lua-luv are needed for neovim to compile
-  (namely, a buildlink3.mk and -DBUILD_SHARED_LIBS=ON in CMAKE_ARGS)
