@@ -15,6 +15,10 @@ HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
 COMMENT=	Tools for exploring microsyntenic differences among species
 LICENSE=	2-clause-bsd
 
+DEPENDS+=	curl>0:../../www/curl
+# DEPENDS+=	ncbi-blast+>0:../../biology/ncbi-blast+
+# DEPENDS+=	py-dna-features-viewer:../../wip/py-dna-features-viewer
+
 REPLACE_PYTHON=	Scripts/*.py
 
 .include "../../wip/biolibc/buildlink3.mk"
