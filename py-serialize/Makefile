@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
 #DEPENDS+=	${PYPKGPREFIX}-serpent>=1.28:../../devel/py-serpent
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-bson>=0.5.10:../../wip/py-bson
-DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
+DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../textproc/py-dill
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

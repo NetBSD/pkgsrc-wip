@@ -3696,7 +3696,6 @@ SUBDIR+=	py-diffeqpy
 SUBDIR+=	py-diffpy-structure
 SUBDIR+=	py-diffpy_pdffit2
 SUBDIR+=	py-digraphtools
-SUBDIR+=	py-dill
 SUBDIR+=	py-dimarray
 SUBDIR+=	py-diofant
 SUBDIR+=	py-discord.py

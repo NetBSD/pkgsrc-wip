@@ -15,8 +15,7 @@ USE_LANGUAGES=	c c++
 DEPENDS+=       ${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-networkx>=0.5.0:../../math/py-networkx
 DEPENDS+=       ${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
-DEPENDS+=       ${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
-
+DEPENDS+=       ${PYPKGPREFIX}-dill>=0.3.2:../../textproc/py-dill
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

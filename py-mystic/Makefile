@@ -12,7 +12,7 @@ COMMENT=	Constrained non-convex optimization and uncertainty quantification
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.6.7:../../math/py-sympy
-DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
+DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-klepto>=0.1.9:../../wip/py-klepto
 
 USE_LANGUAGES=	# none

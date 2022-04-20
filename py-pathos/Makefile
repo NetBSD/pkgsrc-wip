@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.org/project/pathos
 COMMENT=	Parallel graph management and execution in heterogeneous computing
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
+DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-multiprocess>=0.70.10:../../wip/py-multiprocess
 DEPENDS+=	${PYPKGPREFIX}-ppft>=1.6.6.2:../../wip/py-ppft
 DEPENDS+=	${PYPKGPREFIX}-pox>=0.2.8:../../wip/py-pox

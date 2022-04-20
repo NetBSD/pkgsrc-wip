@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/telegraphic/hickle
 COMMENT=	Hickle - an HDF5 based version of pickle
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
+DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.2:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-h5py>=2.8.0:../../devel/py-h5py
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.0:../../lang/py-six
 

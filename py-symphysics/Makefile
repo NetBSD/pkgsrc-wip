@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=       ${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
 DEPENDS+=       ${PYPKGPREFIX}-scipy>=1.2.3:../../math/py-scipy
 DEPENDS+=       ${PYPKGPREFIX}-sympy>=1.6.2:../../math/py-sympy
-DEPENDS+=       ${PYPKGPREFIX}-dill>=0.3.2:../../wip/py-dill
+DEPENDS+=       ${PYPKGPREFIX}-dill>=0.3.2:../../textproc/py-dill
 
 USE_LANGUAGES=	# none
 
