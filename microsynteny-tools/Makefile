@@ -5,10 +5,10 @@
 #              Sun Mar  6 18:38:30 CST 2022               #
 ###########################################################
 
-DISTNAME=	microsynteny-tools-0.1.0.147
+DISTNAME=	microsynteny-tools-0.1.0.150
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	ce4e17894c4c416e2c4d9ebf4a460ab8faa41a99
+GITHUB_TAG=	73b2b411be0744c4950b2a2393912a266feec2e1
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
@@ -17,7 +17,8 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	ncbi-blast+>0:../../biology/ncbi-blast+
-DEPENDS+=	${PYPKGPREFIX}-dna-features-viewer>0:../../wip/py-dna-features-viewer
+# cairo fails to build on NetBSD 9 with native X11
+# DEPENDS+=	${PYPKGPREFIX}-dna-features-viewer>0:../../wip/py-dna-features-viewer
 
 REPLACE_PYTHON=	Scripts/*.py
 
