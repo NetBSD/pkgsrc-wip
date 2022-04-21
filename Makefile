@@ -3620,6 +3620,7 @@ SUBDIR+=	py-coveralls
 SUBDIR+=	py-cppimport
 SUBDIR+=	py-cracklib
 SUBDIR+=	py-crossbar
+SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptoim
 SUBDIR+=	py-csa
 SUBDIR+=	py-csb

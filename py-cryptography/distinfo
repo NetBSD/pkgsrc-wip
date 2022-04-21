@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.68 2021/10/26 11:17:44 nia Exp $
+
+BLAKE2s (cryptography-36.0.2.tar.gz) = 03753a31958ca36a8352ed86c9d1bf07427eb9332dfaf37d0483ef1e335363fb
+SHA512 (cryptography-36.0.2.tar.gz) = cf4a537ba0ccaf136c82aefc2fc80f042827c48bf9ef072e3513760a93285cb4174021c72f9df0033a8bf58af6f831988adc0f4658855710715558b56631362e
+Size (cryptography-36.0.2.tar.gz) = 572053 bytes
