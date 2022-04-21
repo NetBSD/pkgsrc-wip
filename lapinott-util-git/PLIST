@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/util/filesystem_path_t.h
-include/util/split.h
-include/util/utf8_utf16_conv.h
-lib/libutil.a
