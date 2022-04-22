@@ -17,8 +17,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	ncbi-blast+>0:../../biology/ncbi-blast+
-# cairo fails to build on NetBSD 9 with native X11
-# DEPENDS+=	${PYPKGPREFIX}-dna-features-viewer>0:../../wip/py-dna-features-viewer
+DEPENDS+=	${PYPKGPREFIX}-dna-features-viewer>0:../../wip/py-dna-features-viewer
 
 REPLACE_PYTHON=	Scripts/*.py
 
