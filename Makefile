@@ -554,6 +554,7 @@ SUBDIR+=	cronolog-devel
 SUBDIR+=	cross-binutils
 SUBDIR+=	crossguid
 SUBDIR+=	crossroads-io
+SUBDIR+=	crosswrench-git
 SUBDIR+=	crrcsim
 SUBDIR+=	crust-firmware
 SUBDIR+=	cryptcat
