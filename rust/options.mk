@@ -20,13 +20,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .endif
 
-# (NetBSD)/sparc64 systems fail to build libunwind,
-# a dependency of pkgsrc llvm, so use the internal instead
-# Ref. PR#56791
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-PKG_SUGGESTED_OPTIONS+=		rust-llvm
-.endif
-
 .include "../../mk/bsd.options.mk"
 
 #
@@ -35,7 +28,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 #
 .if empty(PKG_OPTIONS:Mrust-llvm)
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=12.0.0
-.include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 #CONFIGURE_ARGS+=	--llvm-libunwind=system
