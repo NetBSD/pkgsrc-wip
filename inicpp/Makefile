@@ -1,0 +1,29 @@
+# $NetBSD$
+
+DISTNAME=	inicpp-1.2.0
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=SemaiCZE/}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/SemaiCZE/inicpp/
+COMMENT=	C++ ini parser with schema validation
+LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DINICPP_BUILD_SHARED:BOOL=ON
+CMAKE_ARGS+=	-DINICPP_BUILD_EXAMPLES:BOOL=ON
+CMAKE_ARGS+=	-DINICPP_BUILD_TESTS:BOOL=ON
+CMAKE_ARGS+=	-DNO_GOOGLE_TEST:BOOL=ON
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
+TEST_TARGET=	test
+
+PKGCONFIG_OVERRIDE=	inicpp.pc.in
+
+.include "../../devel/googletest/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

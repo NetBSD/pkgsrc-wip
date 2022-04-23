@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	inicpp
+
+.if !defined(INICPP_BUILDLINK3_MK)
+INICPP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.inicpp+=	inicpp>=1.2.0
+BUILDLINK_PKGSRCDIR.inicpp?=	../../wip/inicpp
+.endif	# INICPP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-inicpp

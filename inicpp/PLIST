@@ -1,0 +1,17 @@
+@comment $NetBSD$
+include/inicpp/config.h
+include/inicpp/dll.h
+include/inicpp/exception.h
+include/inicpp/inicpp.h
+include/inicpp/option.h
+include/inicpp/option_schema.h
+include/inicpp/parser.h
+include/inicpp/schema.h
+include/inicpp/section.h
+include/inicpp/section_schema.h
+include/inicpp/string_utils.h
+include/inicpp/types.h
+lib/cmake/inicpp/inicppConfig-noconfig.cmake
+lib/cmake/inicpp/inicppConfig.cmake
+lib/libinicpp.so
+lib/pkgconfig/inicpp.pc

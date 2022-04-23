@@ -1,0 +1,16 @@
+$NetBSD$
+
+Install pkg-config and cmake package files
+Applied upstream: https://gitub.com/SemaiCZE/inicpp/pull/16
+
+--- inicpp.pc.in.orig	2022-04-23 08:22:00.639992818 +0000
++++ inicpp.pc.in
+@@ -0,0 +1,8 @@
++includedir=@CMAKE_INSTALL_FULL_INCLUDEDIR@
++libdir=@CMAKE_INSTALL_FULL_LIBDIR@
++
++Name: inicpp
++Description: C++ parser of INI files with schema validation
++Version: @inicpp_VERSION@
++Cflags: -I${includedir}/inicpp
++Libs: -L${libdir} -linicpp

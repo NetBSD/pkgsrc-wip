@@ -1787,6 +1787,7 @@ SUBDIR+=	inetdxtra
 SUBDIR+=	influxdb
 SUBDIR+=	info2man
 SUBDIR+=	infraarcana
+SUBDIR+=	inicpp
 SUBDIR+=	initware-git
 SUBDIR+=	input-mono-ttf
 SUBDIR+=	intel-gpu-tools
