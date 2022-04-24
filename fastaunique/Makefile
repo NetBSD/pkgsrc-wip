@@ -12,7 +12,6 @@ MASTER_SITES=	https://gist.github.com/meren/abd5c6f014da9aa554a4/archive/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://example.com
 COMMENT=	Sort and uniq fasta files
 # LICENSE=
 
