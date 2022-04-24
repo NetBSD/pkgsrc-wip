@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/bkcrack
+share/doc/bkcrack/deflate.py
+share/doc/bkcrack/inflate.py
+share/doc/bkcrack/license.txt
+share/doc/bkcrack/readme.md
+share/examples/bkcrack/secrets.zip
+share/examples/bkcrack/tutorial.md

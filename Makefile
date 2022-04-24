@@ -289,6 +289,7 @@ SUBDIR+=	bip
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
 SUBDIR+=	bkchem
+SUBDIR+=	bkcrack
 SUBDIR+=	blad
 SUBDIR+=	blasr
 SUBDIR+=	blasr_libcpp
