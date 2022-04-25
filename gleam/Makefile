@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 
 DEPENDS+=	erlang>=20.0:../../lang/erlang
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
 INSTALLATION_DIRS=	bin
 
