@@ -9,7 +9,7 @@ DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gleam-lang/gleam/
-COMMENT=	Statically typed language for the Erlang VM
+COMMENT=	ML-flavoured type-safe language using the BEAM runtime
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/gleam-${PKGVERSION_NOREV}
@@ -17,8 +17,6 @@ WRKSRC=		${WRKDIR}/gleam-${PKGVERSION_NOREV}
 .include "cargo-depends.mk"
 
 USE_LANGUAGES=	c c++
-
-DEPENDS+=	erlang>=20.0:../../lang/erlang
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
