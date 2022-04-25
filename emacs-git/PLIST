@@ -1914,6 +1914,8 @@ share/emacs/${PKGVERSION}/lisp/eshell/em-cmpl.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-cmpl.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-dirs.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-dirs.elc
+share/emacs/${PKGVERSION}/lisp/eshell/em-elecslash.el.gz
+share/emacs/${PKGVERSION}/lisp/eshell/em-elecslash.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-extpipe.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-extpipe.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-glob.el.gz
@@ -3872,6 +3874,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/rst.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/rst.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/string-edit.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/string-edit.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/table.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/table.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/tex-mode.el.gz
@@ -3891,6 +3895,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/two-column.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/two-column.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/underline.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/underline.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/word-wrap-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/word-wrap-mode.elc
 share/emacs/${PKGVERSION}/lisp/thingatpt.el.gz
 share/emacs/${PKGVERSION}/lisp/thingatpt.elc
 share/emacs/${PKGVERSION}/lisp/thread.el.gz
