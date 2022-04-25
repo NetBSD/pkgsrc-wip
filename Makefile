@@ -5039,7 +5039,6 @@ SUBDIR+=	realm-core
 SUBDIR+=	realpath
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
-SUBDIR+=	rebar3
 SUBDIR+=	recidivm
 SUBDIR+=	recoll
 SUBDIR+=	recutils
