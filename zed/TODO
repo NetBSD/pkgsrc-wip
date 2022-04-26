@@ -1,0 +1,7 @@
+Fix build.
+
+I'm not sure how to translate:
+
+go install github.com/brimdata/zed/cmd/{zed,zq}@latest
+
+into pkgsrc terms.

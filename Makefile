@@ -6110,6 +6110,7 @@ SUBDIR+=	zabbix60-server
 SUBDIR+=	zapping
 SUBDIR+=	zbackup
 SUBDIR+=	zdbsp
+SUBDIR+=	zed
 SUBDIR+=	zeek
 SUBDIR+=	zero-epwing-git
 SUBDIR+=	zetacoin
