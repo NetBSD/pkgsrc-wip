@@ -5,10 +5,10 @@
 #              Sun Mar  6 18:38:30 CST 2022               #
 ###########################################################
 
-DISTNAME=	microsynteny-tools-0.1.0.150
+DISTNAME=	microsynteny-tools-0.1.0.153
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	73b2b411be0744c4950b2a2393912a266feec2e1
+GITHUB_TAG=	757f0cc2b61285ab7b8ee3c0deca45b1cc0612ee
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
@@ -18,6 +18,7 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	ncbi-blast+>0:../../biology/ncbi-blast+
 DEPENDS+=	${PYPKGPREFIX}-dna-features-viewer>0:../../wip/py-dna-features-viewer
+DEPENDS+=	auto-admin>0:../../wip/auto-admin
 
 REPLACE_PYTHON=	Scripts/*.py
 
