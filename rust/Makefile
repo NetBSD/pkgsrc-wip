@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=		--disable-codegen-tests
 CONFIGURE_ARGS+=		--disable-compiler-docs
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
+CONFIGURE_ARGS+=		--dist-compression-formats=xz
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
