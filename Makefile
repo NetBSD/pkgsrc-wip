@@ -3555,6 +3555,7 @@ SUBDIR+=	py-checkov
 SUBDIR+=	py-chemlab
 SUBDIR+=	py-chempy
 SUBDIR+=	py-chemview
+SUBDIR+=	py-cherry_picker
 SUBDIR+=	py-chinup
 SUBDIR+=	py-chm
 SUBDIR+=	py-chompack

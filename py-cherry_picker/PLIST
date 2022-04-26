@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/cherry_picker
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cherry_picker/__init__.py
+${PYSITELIB}/cherry_picker/__init__.pyc
+${PYSITELIB}/cherry_picker/__init__.pyo
+${PYSITELIB}/cherry_picker/__main__.py
+${PYSITELIB}/cherry_picker/__main__.pyc
+${PYSITELIB}/cherry_picker/__main__.pyo
+${PYSITELIB}/cherry_picker/cherry_picker.py
+${PYSITELIB}/cherry_picker/cherry_picker.pyc
+${PYSITELIB}/cherry_picker/cherry_picker.pyo
+${PYSITELIB}/cherry_picker/test.py
+${PYSITELIB}/cherry_picker/test.pyc
+${PYSITELIB}/cherry_picker/test.pyo

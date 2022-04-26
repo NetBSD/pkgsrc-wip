@@ -1,0 +1,5 @@
+This tool is used to backport CPython changes from main into one
+or more of the maintenance branches.
+
+cherry_picker can be configured to backport other projects with
+similar workflow as CPython.
