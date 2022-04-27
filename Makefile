@@ -143,6 +143,7 @@ SUBDIR+=	amavis-logwatch
 SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amfora
 SUBDIR+=	amlogic-meson-fwtools
+SUBDIR+=	amnesia-tdd
 SUBDIR+=	amp-editor
 SUBDIR+=	analizo
 SUBDIR+=	and
