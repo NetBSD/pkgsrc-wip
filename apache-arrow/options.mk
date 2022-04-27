@@ -6,6 +6,9 @@ PKG_SUGGESTED_OPTIONS=	brotli bzip2 google-log json lz4 parquet python snappy zl
 
 .include "../../mk/bsd.options.mk"
 
+# The CMAKE_ARGS are for the C++ libraries
+# The MAKE_ENV are for the python bindings
+
 .if !empty(PKG_OPTIONS:Mbrotli)
 .include "../../archivers/brotli/buildlink3.mk"
 CMAKE_ARGS+=	-DARROW_WITH_BROTLI=ON
@@ -33,6 +36,7 @@ CMAKE_ARGS+=	-DARROW_WITH_LZ4=ON
 
 .if !empty(PKG_OPTIONS:Mparquet)
 CMAKE_ARGS+=	-DARROW_PARQUET=ON
+MAKE_ENV+=	PYARROW_WITH_PARQUET=1
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
@@ -40,6 +44,7 @@ CMAKE_ARGS+=	-DARROW_PARQUET=ON
 .include "../../lang/python/pyversion.mk"
 CMAKE_ARGS+=	-DARROW_PYTHON=ON
 .endif
+
 .if !empty(PKG_OPTIONS:Msnappy)
 .include "../../devel/snappy/buildlink3.mk"
 CMAKE_ARGS+=	-DARROW_WITH_SNAPPY=ON
