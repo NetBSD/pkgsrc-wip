@@ -1,3 +1,1 @@
-Download crates from pkgsrc infrastructure instead of during build.
-
 Fix WRKSRC warning for so file.

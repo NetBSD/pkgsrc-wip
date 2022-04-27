@@ -26,9 +26,6 @@ ${PYSITELIB}/cryptography/hazmat/_oid.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/__init__.py
 ${PYSITELIB}/cryptography/hazmat/backends/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/__init__.pyo
-${PYSITELIB}/cryptography/hazmat/backends/interfaces.py
-${PYSITELIB}/cryptography/hazmat/backends/interfaces.pyc
-${PYSITELIB}/cryptography/hazmat/backends/interfaces.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.pyo
