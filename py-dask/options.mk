@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	cityhash cytoolz parquet psutil scipy skimage xarray sqla
 
 # Cityhash is an optional dependency for faster string hashing
 .if !empty(PKG_OPTIONS:Mcityhash)
-DEPENDS+=	cityhash-[0-9]*:../../wip/py-cityhash
+DEPENDS+=	${PYPKGPREFIX}-cityhash-[0-9]*:../../wip/py-cityhash
 .endif
 
 # cytoolz is an optional dependency, will replace devel/py-toolz
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 .if !empty(PKG_OPTIONS:Mparquet)
 # TODO Also needs pyarrow
 DEPENDS+=	${PYPKGPREFIX}-fastparquet-[0-9]*:../../wip/py-fastparquet
+DEPENDS+=	${PYPKGPREFIX}-apache-arrow-[0-9]*:../../wip/py-apache-arrow
 .endif
 
 # graphviz is used to display the task dependencies
@@ -29,7 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-graphviz-[0-9]*:../../graphics/py-graphviz
 
 # SQL Support
 .if !empty(PKG_OPTIONS:Msqlalchemy)
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../wip/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
 .endif
 
 # Enable scikit-image
