@@ -1,28 +1,28 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.4.1.tar.gz) = 9049b61a662e314312c5ec74961864d9f9068896e63c1056c1fe6a23bf1b1d28
-SHA512 (PrusaSlicer-2.4.1.tar.gz) = 895388ec39e46e30ea7bdecba42793e898ceb6c6b331dad815a726ed2f7e2e8719c71c32c6ce7fff1781fa06aac8e9afb615784d3b2001bd0d6e24ba23f0866a
-Size (PrusaSlicer-2.4.1.tar.gz) = 55572739 bytes
-SHA1 (patch-CMakeLists.txt) = 4a986df0bcf0628116b5370498b6c23ba62dff71
+BLAKE2s (PrusaSlicer-2.4.2.tar.gz) = 5ef613e17f15177e1f9438a619eb1a4937186821845cb0d5e6878de43766c94f
+SHA512 (PrusaSlicer-2.4.2.tar.gz) = d480c608eadb58b53ee220317a749c0363db580759322ed7a9aebe2ea5c1acc30dbd3bdf9ed9849c23ba5c125ee6f923de6ac01987bf85abf7aeb3f91c2ae23f
+Size (PrusaSlicer-2.4.2.tar.gz) = 47752224 bytes
+SHA1 (patch-CMakeLists.txt) = 33eb39d85ba7b33226f2cc022250872c3ffa28d8
 SHA1 (patch-cmake_modules_FindOpenVDB.cmake) = 4f2afc423a70fe60617b33ff7f26859b39775faa
-SHA1 (patch-src_CMakeLists_txt) = 8075d2af2ee1b730d522e5b4776358a848836dc1
+SHA1 (patch-src_CMakeLists_txt) = 0931dccf0bd1d94544f7dc855475cc2627a9a76b
 SHA1 (patch-src_avrdude_arduino.c) = ff02a4cab1c2d8c82ec7b22c7447ed5ec360ac57
 SHA1 (patch-src_avrdude_libavrdude.h) = 62d48054b147985249664f257dbd8bbd670df233
-SHA1 (patch-src_libslic3r_CMakeLists.txt) = 449b59f6cf5ca3f104e5faa5527b0ef23a00f4c9
+SHA1 (patch-src_libslic3r_CMakeLists.txt) = bc82a71633adcb23dca4850d1076f99340030f2b
 SHA1 (patch-src_libslic3r_GCodeSender.cpp) = 07dde2f6762c9ef180512ea20f735fb4d96a8f2c
 SHA1 (patch-src_libslic3r_LocalesUtils.cpp) = 33a473cadbc05eba7f0c218110e53babea36568c
 SHA1 (patch-src_libslic3r_LocalesUtils.hpp) = 7339ef576cbd16f30271c13b706d2487ae78b457
 SHA1 (patch-src_libslic3r_Platform.cpp) = 3066585efc98ba4963e41bda5952df38a7b095a0
 SHA1 (patch-src_libslic3r_Platform.hpp) = 5626058616d04396bff6c8550951d04fe03249e4
 SHA1 (patch-src_libslic3r_Thread.cpp) = 2e6e81e77e3efef5657ac55fb6b834b2ebec5d9a
-SHA1 (patch-src_slic3r_CMakeLists.txt) = b0a8a0ca0da0db7dafb8097d2db2d40cac23583c
+SHA1 (patch-src_slic3r_CMakeLists.txt) = 32058caf991b20993c1afecf12154a923db28416
 SHA1 (patch-src_slic3r_GUI_ConfigWizard.cpp) = 523d2eeb26c9f580ccdeb034743c301dcc56c727
 SHA1 (patch-src_slic3r_GUI_ConfigWizard__private.hpp) = 7ac3e3a9a67ebe7c99fbfc17ed9c0b2750d96974
 SHA1 (patch-src_slic3r_GUI_DesktopIntegrationDialog.cpp) = d61919d6f053cd598741255bffc29e80c79863df
 SHA1 (patch-src_slic3r_GUI_DesktopIntegrationDialog.hpp) = dd35d8a5c0ccaae50b969352f0f23f974a2ee89f
 SHA1 (patch-src_slic3r_GUI_ExtraRenderers.cpp) = ac803510123ff016b8fa6f22d491c898166e0929
 SHA1 (patch-src_slic3r_GUI_GLCanvas3D.cpp) = 7abaef0d1ffd79fd1fc2de5e8dc445a073386353
-SHA1 (patch-src_slic3r_GUI_GUI__App.cpp) = 1df0066ab3b240e909c5341696aff5dbcbf9050a
+SHA1 (patch-src_slic3r_GUI_GUI__App.cpp) = 8542df80bc371945db4ef67da58be103221ef4ce
 SHA1 (patch-src_slic3r_GUI_GUI__App.hpp) = 9a4e30158b67fb6b73fc1b5ce45c458fb60c60a4
 SHA1 (patch-src_slic3r_GUI_GUI__Preview.cpp) = 8555c73aa6aa3d65b4d34fc93ccb1fbb2957a76f
 SHA1 (patch-src_slic3r_GUI_GUI__Preview.hpp) = 904556d0f85f28a8174845089647bb3691783f37

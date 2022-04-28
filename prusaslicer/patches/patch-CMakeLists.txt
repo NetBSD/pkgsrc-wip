@@ -1,10 +1,8 @@
 $NetBSD$
 
 Use GTK3, since that's how we build wxWidgets.
-Use namespaces to link against libcereal >= 1.3.1 from:
-https://github.com/prusa3d/PrusaSlicer/commit/0ffcfd8393457fd035576436752267c9a1e6bbcc
 
---- CMakeLists.txt.orig	2022-03-10 10:35:03.000000000 +0000
+--- CMakeLists.txt.orig	2022-04-22 11:01:19.000000000 +0000
 +++ CMakeLists.txt
 @@ -38,7 +38,7 @@ CMAKE_DEPENDENT_OPTION(SLIC3R_DESKTOP_IN
  
@@ -15,13 +13,3 @@ https://github.com/prusa3d/PrusaSlicer/commit/0ffcfd8393457fd035576436752267c9a1
  
  set(IS_CROSS_COMPILE FALSE)
  
-@@ -474,6 +474,9 @@ endif ()
- 
- # Find the Cereal serialization library
- find_package(cereal REQUIRED)
-+if (NOT TARGET cereal::cereal)
-+    add_library(cereal::cereal ALIAS cereal)
-+endif ()
- 
- # l10n
- set(L10N_DIR "${SLIC3R_RESOURCES_DIR}/localization")
