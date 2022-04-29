@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.84 2022/01/04 20:54:40 wiz Exp $
 
-DISTNAME=	cryptography-37.0.0
+DISTNAME=	cryptography-37.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -27,10 +27,15 @@ MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-#do-build: do-cargo-build
-
 pre-build:
 	cd ${WRKSRC} && ${LN} -f -s src/rust/.cargo .cargo
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so \
+	${DESTDIR}${PREFIX}/${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so
+.endif
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
