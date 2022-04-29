@@ -105,6 +105,8 @@ man/man3/BL_FASTX_UNION.3
 man/man3/BL_FASTX_}.3
 man/man3/BL_GFF_ATTRIBUTES.3
 man/man3/BL_GFF_ATTRIBUTES_AE.3
+man/man3/BL_GFF_ATTRIBUTES_ARRAY_SIZE.3
+man/man3/BL_GFF_ATTRIBUTES_LEN.3
 man/man3/BL_GFF_END.3
 man/man3/BL_GFF_FEATURE_ID.3
 man/man3/BL_GFF_FEATURE_ID_AE.3
@@ -343,7 +345,9 @@ man/man3/bl_gff_sam_cmp.3
 man/man3/bl_gff_sam_overlap.3
 man/man3/bl_gff_set_attributes.3
 man/man3/bl_gff_set_attributes_ae.3
+man/man3/bl_gff_set_attributes_array_size.3
 man/man3/bl_gff_set_attributes_cpy.3
+man/man3/bl_gff_set_attributes_len.3
 man/man3/bl_gff_set_end.3
 man/man3/bl_gff_set_feature_id.3
 man/man3/bl_gff_set_feature_id_ae.3
