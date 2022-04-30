@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mtail-3.0.0rc47
+DISTNAME=	mtail-3.0.0rc48
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/rc/-rc/}
