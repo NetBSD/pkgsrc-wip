@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (pwntools-4.6.0.tar.gz) = 282c2963a1790020a6b6dfa3eb0e81b446e70183
-SHA512 (pwntools-4.6.0.tar.gz) = a404456b5a3cfa8f424c20d14bc25fb5ca54d506a763803adfccf97fed006d51f33906533a8e6d298c7d585b2e6f34fc2c3fb98e3c65f252d30984c311150e8c
-Size (pwntools-4.6.0.tar.gz) = 4922014 bytes
-SHA1 (patch-setup.py) = d54b9732fdceb434e8088a842cce3536bd3b7b17
+BLAKE2s (pwntools-4.7.0.tar.gz) = 41527b76a484920dade132137edcfee9c98afb1a128d96940aab7ca5f0cd9869
+SHA512 (pwntools-4.7.0.tar.gz) = 8c00919f77853363bce661be7f30e9d0ea1fa22a03de45b5492c0e2610ca1df353222ffaed7d2dcc3ada9a8544758ebf36b2c022abe5395d9efdb996eb33c8ba
+Size (pwntools-4.7.0.tar.gz) = 5263930 bytes
+SHA1 (patch-setup.py) = a21a32938996d1a4dfe7f30fedaa3137ae112d67

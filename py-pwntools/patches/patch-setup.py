@@ -1,19 +1,9 @@
 $NetBSD$
 
-- Relax version requirements
 - Avoid to needs and call pandoc to convert description
 
 --- setup.py.orig	2021-07-12 21:07:26.000000000 +0000
 +++ setup.py
-@@ -60,7 +60,7 @@ install_requires     = ['paramiko>=1.15.
-                         'psutil>=3.3.0',
-                         'intervaltree>=3.0',
-                         'sortedcontainers',
--                        'unicorn>=1.0.2rc1,<1.0.2rc4', # see unicorn-engine/unicorn#1100, unicorn-engine/unicorn#1170, Gallopsled/pwntools#1538
-+                        'unicorn>=1.0.2rc1', # see unicorn-engine/unicorn#1100, unicorn-engine/unicorn#1170, Gallopsled/pwntools#1538
-                         'six>=1.12.0',
-                         'rpyc',
-                         'colored_traceback',
 @@ -76,14 +76,6 @@ if not os.path.exists(PythonH):
      print("$ apt-get install python-dev", file=sys.stderr)
      sys.exit(-1)

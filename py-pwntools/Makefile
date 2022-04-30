@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pwntools-4.6.0
+DISTNAME=	pwntools-4.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwntools/}
@@ -37,6 +37,7 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/${f}
 .endfor
 	${MV} ${DESTDIR}${PREFIX}/bin/pwn ${DESTDIR}${PREFIX}/bin/pwn${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/pwntools-doc ${DESTDIR}${PREFIX}/${PYSITELIB}
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
