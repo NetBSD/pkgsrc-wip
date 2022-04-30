@@ -1,295 +1,169 @@
-  [ 24%] Linking CXX static library libabsl_cord.a
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:551:13: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::IncrementSynchSem(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-    551 | inline void Mutex::IncrementSynchSem(Mutex *mu, PerThreadSynch *w) {
-        |             ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:551:13: note: no functions named 'void absl::lts_2020_09_23::Mutex::IncrementSynchSem(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:562:6: error: no declaration matches 'bool absl::lts_2020_09_23::Mutex::DecrementSynchSem(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::base_internal::PerThreadSynch*, absl::lts_2020_09_23::synchronization_internal::KernelTimeout)'
-    562 | bool Mutex::DecrementSynchSem(Mutex *mu, PerThreadSynch *w, KernelTimeout t) {
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:562:6: note: no functions named 'bool absl::lts_2020_09_23::Mutex::DecrementSynchSem(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::base_internal::PerThreadSynch*, absl::lts_2020_09_23::synchronization_internal::KernelTimeout)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In destructor 'absl::lts_2020_09_23::Mutex::~Mutex()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:720:16: error: 'mu_' was not declared in this scope
-    720 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:722:29: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'mu_'
-    722 |     ForgetSynchEvent(&this->mu_, kMuEvent, kMuSpin);
-        |                             ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::EnableDebugLog(const char*)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:731:43: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'mu_'
-    731 |   SynchEvent *e = EnsureSynchEvent(&this->mu_, name, kMuEvent, kMuSpin);
-        |                                           ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::EnableInvariantDebugging(void (*)(void*), void*)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:744:45: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'mu_'
-    744 |     SynchEvent *e = EnsureSynchEvent(&this->mu_, nullptr, kMuEvent, kMuSpin);
-        |                                             ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: At global scope:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1059:6: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::TryRemove(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-   1059 | void Mutex::TryRemove(PerThreadSynch *s) {
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1059:6: note: no functions named 'void absl::lts_2020_09_23::Mutex::TryRemove(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1114:28: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::Block(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-   1114 | ABSL_XRAY_LOG_ARGS(1) void Mutex::Block(PerThreadSynch *s) {
-        |                            ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1114:28: note: no functions named 'void absl::lts_2020_09_23::Mutex::Block(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1143:17: error: no declaration matches 'absl::lts_2020_09_23::base_internal::PerThreadSynch* absl::lts_2020_09_23::Mutex::Wakeup(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-   1143 | PerThreadSynch *Mutex::Wakeup(PerThreadSynch *w) {
-        |                 ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1143:17: note: no functions named 'absl::lts_2020_09_23::base_internal::PerThreadSynch* absl::lts_2020_09_23::Mutex::Wakeup(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::AssertNotHeld() const':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1425:8: error: 'mu_' was not declared in this scope
-   1425 |       (mu_.load(std::memory_order_relaxed) & (kMuWriter | kMuReader)) != 0 &&
-        |        ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::Lock()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1462:16: error: 'mu_' was not declared in this scope
-   1462 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1469:40: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'mu_'
-   1469 |     if (!TryAcquireWithSpinning(&this->mu_)) {
-        |                                        ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1470:13: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'LockSlow'
-   1470 |       this->LockSlow(kExclusive, nullptr, 0);
-        |             ^~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::ReaderLock()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1480:16: error: 'mu_' was not declared in this scope
-   1480 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1486:11: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'LockSlow'
-   1486 |     this->LockSlow(kShared, nullptr, 0);
-        |           ^~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::LockWhen(const absl::lts_2020_09_23::Condition&)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1495:9: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'LockSlow'
-   1495 |   this->LockSlow(kExclusive, &cond, 0);
-        |         ^~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'bool absl::lts_2020_09_23::Mutex::LockWhenWithDeadline(const absl::lts_2020_09_23::Condition&, absl::lts_2020_09_23::Time)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1507:14: error: 'LockSlowWithDeadline' was not declared in this scope; did you mean 'LockWhenWithDeadline'?
-   1507 |   bool res = LockSlowWithDeadline(kExclusive, &cond,
-        |              ^~~~~~~~~~~~~~~~~~~~
-        |              LockWhenWithDeadline
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::ReaderLockWhen(const absl::lts_2020_09_23::Condition&)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1517:9: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'LockSlow'
-   1517 |   this->LockSlow(kShared, &cond, 0);
-        |         ^~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'bool absl::lts_2020_09_23::Mutex::ReaderLockWhenWithDeadline(const absl::lts_2020_09_23::Condition&, absl::lts_2020_09_23::Time)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1531:14: error: 'LockSlowWithDeadline' was not declared in this scope; did you mean 'LockWhenWithDeadline'?
-   1531 |   bool res = LockSlowWithDeadline(kShared, &cond, KernelTimeout(deadline), 0);
-        |              ^~~~~~~~~~~~~~~~~~~~
-        |              LockWhenWithDeadline
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/base/port.h:24,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/base/internal/low_level_alloc.h:55,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:66,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::Await(const absl::lts_2020_09_23::Condition&)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1543:26: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'AwaitCommon'
-   1543 |     ABSL_RAW_CHECK(this->AwaitCommon(cond, KernelTimeout::Never()),
-        |                          ^~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/base/optimization.h:174:59: note: in definition of macro 'ABSL_PREDICT_FALSE'
-    174 | #define ABSL_PREDICT_FALSE(x) (__builtin_expect(false || (x), false))
-        |                                                           ^
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1543:5: note: in expansion of macro 'ABSL_RAW_CHECK'
-   1543 |     ABSL_RAW_CHECK(this->AwaitCommon(cond, KernelTimeout::Never()),
-        |     ^~~~~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'bool absl::lts_2020_09_23::Mutex::AwaitWithDeadline(const absl::lts_2020_09_23::Condition&, absl::lts_2020_09_23::Time)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1561:20: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'AwaitCommon'
-   1561 |   bool res = this->AwaitCommon(cond, t);
-        |                    ^~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: At global scope:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1567:6: error: no declaration matches 'bool absl::lts_2020_09_23::Mutex::AwaitCommon(const absl::lts_2020_09_23::Condition&, absl::lts_2020_09_23::synchronization_internal::KernelTimeout)'
-   1567 | bool Mutex::AwaitCommon(const Condition &cond, KernelTimeout t) {
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1567:6: note: no functions named 'bool absl::lts_2020_09_23::Mutex::AwaitCommon(const absl::lts_2020_09_23::Condition&, absl::lts_2020_09_23::synchronization_internal::KernelTimeout)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'bool absl::lts_2020_09_23::Mutex::TryLock()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1592:16: error: 'mu_' was not declared in this scope
-   1592 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'bool absl::lts_2020_09_23::Mutex::ReaderTryLock()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1622:16: error: 'mu_' was not declared in this scope
-   1622 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::Unlock()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1668:16: error: 'mu_' was not declared in this scope
-   1668 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1701:11: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'UnlockSlow'; did you mean 'Unlock'?
-   1701 |     this->UnlockSlow(nullptr /*no waitp*/);  // take slow path
-        |           ^~~~~~~~~~
-        |           Unlock
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::ReaderUnlock()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1720:16: error: 'mu_' was not declared in this scope
-   1720 |   intptr_t v = mu_.load(std::memory_order_relaxed);
-        |                ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1732:9: error: 'class absl::lts_2020_09_23::Mutex' has no member named 'UnlockSlow'; did you mean 'Unlock'?
-   1732 |   this->UnlockSlow(nullptr /*no waitp*/);  // take slow path
-        |         ^~~~~~~~~~
-        |         Unlock
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: At global scope:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1755:30: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::LockSlow(absl::lts_2020_09_23::Mutex::MuHow, const absl::lts_2020_09_23::Condition*, int)'
-   1755 | ABSL_ATTRIBUTE_NOINLINE void Mutex::LockSlow(MuHow how, const Condition *cond,
-        |                              ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1755:30: note: no functions named 'void absl::lts_2020_09_23::Mutex::LockSlow(absl::lts_2020_09_23::Mutex::MuHow, const absl::lts_2020_09_23::Condition*, int)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1838:6: error: no declaration matches 'bool absl::lts_2020_09_23::Mutex::LockSlowWithDeadline(absl::lts_2020_09_23::Mutex::MuHow, const absl::lts_2020_09_23::Condition*, absl::lts_2020_09_23::synchronization_internal::KernelTimeout, int)'
-   1838 | bool Mutex::LockSlowWithDeadline(MuHow how, const Condition *cond,
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1838:6: note: no functions named 'bool absl::lts_2020_09_23::Mutex::LockSlowWithDeadline(absl::lts_2020_09_23::Mutex::MuHow, const absl::lts_2020_09_23::Condition*, absl::lts_2020_09_23::synchronization_internal::KernelTimeout, int)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1903:6: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::LockSlowLoop(absl::lts_2020_09_23::SynchWaitParams*, int)'
-   1903 | void Mutex::LockSlowLoop(SynchWaitParams *waitp, int flags) {
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1903:6: note: no functions named 'void absl::lts_2020_09_23::Mutex::LockSlowLoop(absl::lts_2020_09_23::SynchWaitParams*, int)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2024:30: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::UnlockSlow(absl::lts_2020_09_23::SynchWaitParams*)'
-   2024 | ABSL_ATTRIBUTE_NOINLINE void Mutex::UnlockSlow(SynchWaitParams *waitp) {
-        |                              ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2024:30: note: no functions named 'void absl::lts_2020_09_23::Mutex::UnlockSlow(absl::lts_2020_09_23::SynchWaitParams*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2333:6: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::Trans(absl::lts_2020_09_23::Mutex::MuHow)'
-   2333 | void Mutex::Trans(MuHow how) {
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2333:6: note: no functions named 'void absl::lts_2020_09_23::Mutex::Trans(absl::lts_2020_09_23::Mutex::MuHow)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2341:6: error: no declaration matches 'void absl::lts_2020_09_23::Mutex::Fer(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-   2341 | void Mutex::Fer(PerThreadSynch *w) {
-        |      ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2341:6: note: no functions named 'void absl::lts_2020_09_23::Mutex::Fer(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:139:21: note: 'class absl::lts_2020_09_23::Mutex' defined here
-    139 | class ABSL_LOCKABLE Mutex {
-        |                     ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::AssertHeld() const':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2397:8: error: 'mu_' was not declared in this scope
-   2397 |   if ((mu_.load(std::memory_order_relaxed) & kMuWriter) == 0) {
-        |        ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::Mutex::AssertReaderHeld() const':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2406:8: error: 'mu_' was not declared in this scope
-   2406 |   if ((mu_.load(std::memory_order_relaxed) & (kMuReader | kMuWriter)) == 0) {
-        |        ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::CondVar::EnableDebugLog(const char*)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2427:43: error: 'class absl::lts_2020_09_23::CondVar' has no member named 'cv_'
-   2427 |   SynchEvent *e = EnsureSynchEvent(&this->cv_, name, kCvEvent, kCvSpin);
-        |                                           ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In destructor 'absl::lts_2020_09_23::CondVar::~CondVar()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2433:8: error: 'cv_' was not declared in this scope
-   2433 |   if ((cv_.load(std::memory_order_relaxed) & kCvEvent) != 0) {
-        |        ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2434:29: error: 'class absl::lts_2020_09_23::CondVar' has no member named 'cv_'
-   2434 |     ForgetSynchEvent(&this->cv_, kCvEvent, kCvSpin);
-        |                             ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: At global scope:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2440:6: error: no declaration matches 'void absl::lts_2020_09_23::CondVar::Remove(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-   2440 | void CondVar::Remove(PerThreadSynch *s) {
-        |      ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2440:6: note: no functions named 'void absl::lts_2020_09_23::CondVar::Remove(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:775:7: note: 'class absl::lts_2020_09_23::CondVar' defined here
-    775 | class CondVar {
-        |       ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2522:6: error: no declaration matches 'bool absl::lts_2020_09_23::CondVar::WaitCommon(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::synchronization_internal::KernelTimeout)'
-   2522 | bool CondVar::WaitCommon(Mutex *mutex, KernelTimeout t) {
-        |      ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2522:6: note: no functions named 'bool absl::lts_2020_09_23::CondVar::WaitCommon(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::synchronization_internal::KernelTimeout)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:775:7: note: 'class absl::lts_2020_09_23::CondVar' defined here
-    775 | class CondVar {
-        |       ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'bool absl::lts_2020_09_23::CondVar::WaitWithDeadline(absl::lts_2020_09_23::Mutex*, absl::lts_2020_09_23::Time)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2578:10: error: 'WaitCommon' was not declared in this scope
-   2578 |   return WaitCommon(mu, KernelTimeout(deadline));
-        |          ^~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::CondVar::Wait(absl::lts_2020_09_23::Mutex*)':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2582:3: error: 'WaitCommon' was not declared in this scope
-   2582 |   WaitCommon(mu, KernelTimeout::Never());
-        |   ^~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: At global scope:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2589:6: error: no declaration matches 'void absl::lts_2020_09_23::CondVar::Wakeup(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-   2589 | void CondVar::Wakeup(PerThreadSynch *w) {
-        |      ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2589:6: note: no functions named 'void absl::lts_2020_09_23::CondVar::Wakeup(absl::lts_2020_09_23::base_internal::PerThreadSynch*)'
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:15:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.h:775:7: note: 'class absl::lts_2020_09_23::CondVar' defined here
-    775 | class CondVar {
-        |       ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::CondVar::Signal()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2607:12: error: 'cv_' was not declared in this scope
-   2607 |   for (v = cv_.load(std::memory_order_relaxed); v != 0;
-        |            ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2627:18: error: 'Wakeup' is not a member of 'absl::lts_2020_09_23::CondVar'
-   2627 |         CondVar::Wakeup(w);                // wake waiter, if there was one
-        |                  ^~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: In member function 'void absl::lts_2020_09_23::CondVar::SignalAll()':
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2646:12: error: 'cv_' was not declared in this scope
-   2646 |   for (v = cv_.load(std::memory_order_relaxed); v != 0;
-        |            ^~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:2663:20: error: 'Wakeup' is not a member of 'absl::lts_2020_09_23::CondVar'
-   2663 |           CondVar::Wakeup(w);
-        |                    ^~~~~~
-  [ 24%] Built target absl_cord
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc: At global scope:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1880:13: warning: 'void absl::lts_2020_09_23::CheckForMutexCorruption(intptr_t, const char*)' defined but not used [-Wunused-function]
-   1880 | static void CheckForMutexCorruption(intptr_t v, const char* label) {
-        |             ^~~~~~~~~~~~~~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1443:13: warning: 'bool absl::lts_2020_09_23::TryAcquireWithSpinning(std::atomic<long int>*)' defined but not used [-Wunused-function]
-   1443 | static bool TryAcquireWithSpinning(std::atomic<intptr_t>* mu) {
-        |             ^~~~~~~~~~~~~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:1021:24: warning: 'absl::lts_2020_09_23::base_internal::PerThreadSynch* absl::lts_2020_09_23::DequeueAllWakeable(absl::lts_2020_09_23::base_internal::PerThreadSynch*, absl::lts_2020_09_23::base_internal::PerThreadSynch*, absl::lts_2020_09_23::base_internal::PerThreadSynch**)' defined but not used [-Wunused-function]
-   1021 | static PerThreadSynch *DequeueAllWakeable(PerThreadSynch *head,
-        |                        ^~~~~~~~~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:875:24: warning: 'absl::lts_2020_09_23::base_internal::PerThreadSynch* absl::lts_2020_09_23::Enqueue(absl::lts_2020_09_23::base_internal::PerThreadSynch*, absl::lts_2020_09_23::SynchWaitParams*, intptr_t, int)' defined but not used [-Wunused-function]
-    875 | static PerThreadSynch *Enqueue(PerThreadSynch *head,
-        |                        ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:842:13: warning: 'void absl::lts_2020_09_23::FixSkip(absl::lts_2020_09_23::base_internal::PerThreadSynch*, absl::lts_2020_09_23::base_internal::PerThreadSynch*)' defined but not used [-Wunused-function]
-    842 | static void FixSkip(PerThreadSynch *ancestor, PerThreadSynch *to_be_removed) {
-        |             ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:531:24: warning: 'absl::lts_2020_09_23::base_internal::PerThreadSynch* absl::lts_2020_09_23::Synch_GetPerThreadAnnotated(absl::lts_2020_09_23::Mutex*)' defined but not used [-Wunused-function]
-    531 | static PerThreadSynch *Synch_GetPerThreadAnnotated(Mutex *mu) {
-        |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:368:13: warning: 'void absl::lts_2020_09_23::ForgetSynchEvent(std::atomic<long int>*, intptr_t, intptr_t)' defined but not used [-Wunused-function]
-    368 | static void ForgetSynchEvent(std::atomic<intptr_t> *addr, intptr_t bits,
-        |             ^~~~~~~~~~~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.8.1/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:314:20: warning: 'absl::lts_2020_09_23::SynchEvent* absl::lts_2020_09_23::EnsureSynchEvent(std::atomic<long int>*, const char*, intptr_t, intptr_t)' defined but not used [-Wunused-function]
-    314 | static SynchEvent *EnsureSynchEvent(std::atomic<intptr_t> *addr,
-        |                    ^~~~~~~~~~~~~~~~
-  [ 24%] Building CXX object third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status.cc.o
-  [ 24%] Building CXX object third_party/abseil-cpp/absl/status/CMakeFiles/absl_status.dir/status_payload_printer.cc.o
-  --- third_party/abseil-cpp/absl/synchronization/CMakeFiles/absl_synchronization.dir/mutex.cc.o ---
-  *** [third_party/abseil-cpp/absl/synchronization/CMakeFiles/absl_synchronization.dir/mutex.cc.o] Error code 1
+  [ 24%] Building CXX object CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_iphone.cc.o
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/alloc.cc:19:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
+    398 | #error "Could not auto-detect platform"
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
+    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
+        |  ^~~~~~~
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/alloc.cc:19:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+        |  ^~~~~
+  --- CMakeFiles/gpr.dir/src/core/lib/gpr/alloc.cc.o ---
+  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/alloc.cc.o] Error code 1
+
+  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_iphone.cc:19:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
+    398 | #error "Could not auto-detect platform"
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
+    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
+        |  ^~~~~~~
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_iphone.cc:19:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+        |  ^~~~~
+  --- CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_iphone.cc.o ---
+  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_iphone.cc.o] Error code 1
+
+  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  [ 24%] Building CXX object CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_linux.cc.o
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:19:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
+    398 | #error "Could not auto-detect platform"
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
+    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
+        |  ^~~~~~~
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:19:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+        |  ^~~~~
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/atm.h:24,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:21:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/atm.h:79:2: error: #error could not determine platform for atm
+     79 | #error could not determine platform for atm
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/atm.h:88:1: error: 'gpr_atm' does not name a type
+     88 | gpr_atm gpr_atm_no_barrier_clamped_add(gpr_atm* value, gpr_atm delta,
+        | ^~~~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:25:1: error: 'gpr_atm' does not name a type
+     25 | gpr_atm gpr_atm_no_barrier_clamped_add(gpr_atm* value, gpr_atm delta,
+        | ^~~~~~~
+  --- CMakeFiles/gpr.dir/src/core/lib/gpr/atm.cc.o ---
+  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/atm.cc.o] Error code 1
+
+  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_linux.cc:23:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
+    398 | #error "Could not auto-detect platform"
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
+    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
+        |  ^~~~~~~
+  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
+                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_linux.cc:23:
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
+        |  ^~~~~
+  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
+        |  ^~~~~
+  --- CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_linux.cc.o ---
+  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_linux.cc.o] Error code 1
+
+  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  4 errors
+
+  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  --- CMakeFiles/gpr.dir/all ---
+  *** [CMakeFiles/gpr.dir/all] Error code 2
+
+  make[2]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  --- third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/all ---
+  *** [third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/all] Error code 6
+
+  make[2]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  2 errors
+
+  make[2]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  --- CMakeFiles/grpc.dir/rule ---
+  *** [CMakeFiles/grpc.dir/rule] Error code 2
+
+  make[1]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  1 error
+
+  make[1]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+  *** [grpc] Error code 2
+
+  make: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+
+  make: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
+
+  --- stderr
+  CMake Warning at cmake/protobuf.cmake:51 (message):
+    gRPC_PROTOBUF_PROVIDER is "module" but PROTOBUF_ROOT_DIR is wrong
+  Call Stack (most recent call first):
+    CMakeLists.txt:255 (include)
 
 
+  CMake Warning:
+    Manually-specified variables were not used by the project:
+
+      CMAKE_ASM_COMPILER
+      CMAKE_ASM_FLAGS
+
+
+  1 error
+  thread 'main' panicked at '
+  command did not execute successfully, got: exit status: 2
+
+  build script failed, must exit now', /scratch/wip/syncstorage-rs/work/vendor/cmake-0.1.45/src/lib.rs:894:5
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+error: build failed
+*** Error code 101
+
+S

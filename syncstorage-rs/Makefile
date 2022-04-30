@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	syncstorage-rs-0.10.2
+DISTNAME=	syncstorage-rs-0.11.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -14,13 +14,15 @@ BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+# Depends on an mozilla-modified version of crate
 DEADPOOL_REV=				deadpool-v0.5.2-issue92
 DISTFILES=				${DEFAULT_DISTFILES}
 DISTFILES+=				deadpool-${DEADPOOL_REV}.tar.gz
 SITES.deadpool-${DEADPOOL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=mozilla-services/}deadpool/archive/${DEADPOOL_REV}.tar.gz
-CURL_SYS_REV=				0.4.41+curl-7.75.0
-SITES.curl-sys-${CURL_SYS_REV}.crate+=	-${MASTER_SITE_CRATESIO}curl-sys/0.4.41+curl-7.75.0/download
+
+# automatic download path generation doesn't work for this crate
+CURL_SYS_REV=				0.4.52+curl-7.81.0
+SITES.curl-sys-${CURL_SYS_REV}.crate+=	-${MASTER_SITE_CRATESIO}curl-sys/0.4.52+curl-7.81.0/download
 
 USE_LANGUAGES=		c c++ # rust, but needs toolchain
 USE_TOOLS+=		pkg-config
