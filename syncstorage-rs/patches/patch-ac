@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- ../vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.orig	1970-01-01 00:00:00.000000000 +0000
++++ ../vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc
+@@ -23,6 +23,11 @@
+ #include <ares.h>
+ #include <string.h>
+ #include <sys/ioctl.h>
++#ifdef __sun
++#include <sys/filio.h>
++#include <unistd.h>
++#include <stropts.h>
++#endif
+ 
+ #include "absl/strings/str_cat.h"
+ 

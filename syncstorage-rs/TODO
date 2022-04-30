@@ -1,169 +1,18 @@
-  [ 24%] Building CXX object CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_iphone.cc.o
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/alloc.cc:19:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
-    398 | #error "Could not auto-detect platform"
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
-    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
-        |  ^~~~~~~
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/alloc.cc:19:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-        |  ^~~~~
-  --- CMakeFiles/gpr.dir/src/core/lib/gpr/alloc.cc.o ---
-  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/alloc.cc.o] Error code 1
+  = note: ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::UnrefSynchEvent(absl::lts_20210324::SynchEvent*) [clone .part.0]':
+          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:361: undefined reference to `absl::lts_20210324::base_internal::LowLevelAlloc::Free(void*)'
+          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::ForgetSynchEvent(std::atomic<long>*, long, long)':
+          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:361: undefined reference to `absl::lts_20210324::base_internal::LowLevelAlloc::Free(void*)'
+          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::synchronization_internal::PerThreadSem::Post(absl::lts_20210324::base_internal::ThreadIdentity*)':
+          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/per_thread_sem.h:107: undefined reference to `AbslInternalPerThreadSemPost_lts_20210324'
+          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::synchronization_internal::PerThreadSem::Wait(absl::lts_20210324::synchronization_internal::KernelTimeout)':
+          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/per_thread_sem.h:112: undefined reference to `AbslInternalPerThreadSemWait_lts_20210324'
+          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::synchronization_internal::GetOrCreateCurrentThreadIdentity()':
+          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/create_thread_identity.h:51: undefined reference to `absl::lts_20210324::synchronization_internal::CreateThreadIdentity()'
+          ld: /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/create_thread_identity.h:51: undefined reference to `absl::lts_20210324::synchronization_internal::CreateThreadIdentity()'
 
-  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_iphone.cc:19:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
-    398 | #error "Could not auto-detect platform"
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
-    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
-        |  ^~~~~~~
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_iphone.cc:19:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-        |  ^~~~~
-  --- CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_iphone.cc.o ---
-  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_iphone.cc.o] Error code 1
+  = help: some `extern` functions couldn't be found; some native libraries may need to be installed or have their path specified
+  = note: use the `-l` flag to specify native libraries to link
+  = note: use the `cargo:rustc-link-lib` directive to specify the native libraries to link with Cargo (see https://doc.rust-lang.org/cargo/reference/build-scripts.html#cargorustc-link-libkindname)
 
-  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  [ 24%] Building CXX object CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_linux.cc.o
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:19:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
-    398 | #error "Could not auto-detect platform"
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
-    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
-        |  ^~~~~~~
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:19:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-        |  ^~~~~
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/atm.h:24,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:21:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/atm.h:79:2: error: #error could not determine platform for atm
-     79 | #error could not determine platform for atm
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/atm.h:88:1: error: 'gpr_atm' does not name a type
-     88 | gpr_atm gpr_atm_no_barrier_clamped_add(gpr_atm* value, gpr_atm delta,
-        | ^~~~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/atm.cc:25:1: error: 'gpr_atm' does not name a type
-     25 | gpr_atm gpr_atm_no_barrier_clamped_add(gpr_atm* value, gpr_atm delta,
-        | ^~~~~~~
-  --- CMakeFiles/gpr.dir/src/core/lib/gpr/atm.cc.o ---
-  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/atm.cc.o] Error code 1
-
-  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_linux.cc:23:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:398:2: error: #error "Could not auto-detect platform"
-    398 | #error "Could not auto-detect platform"
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:421:2: warning: #warning "GPR_PLATFORM_STRING not auto-detected" [-Wcpp]
-    421 | #warning "GPR_PLATFORM_STRING not auto-detected"
-        |  ^~~~~~~
-  In file included from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/support/port_platform.h:22,
-                   from /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/src/core/lib/gpr/cpu_linux.cc:23:
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:488:2: error: #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-    488 | #error Must define exactly one of GPR_GCC_ATOMIC, GPR_GCC_SYNC, GPR_WINDOWS_ATOMIC
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:492:2: error: #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-    492 | #error Must define exactly one of GPR_ARCH_32, GPR_ARCH_64
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:498:2: error: #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-    498 | #error Must define exactly one of GPR_CPU_LINUX, GPR_CPU_POSIX, GPR_WINDOWS, GPR_CPU_IPHONE, GPR_CPU_CUSTOM
-        |  ^~~~~
-  /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/include/grpc/impl/codegen/port_platform.h:504:2: error: #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-    504 | #error Must define exactly one of GPR_MSVC_TLS, GPR_GCC_TLS, GPR_PTHREAD_TLS, GPR_STDCPP_TLS, GPR_CUSTOM_TLS
-        |  ^~~~~
-  --- CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_linux.cc.o ---
-  *** [CMakeFiles/gpr.dir/src/core/lib/gpr/cpu_linux.cc.o] Error code 1
-
-  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  4 errors
-
-  make[3]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  --- CMakeFiles/gpr.dir/all ---
-  *** [CMakeFiles/gpr.dir/all] Error code 2
-
-  make[2]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  --- third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/all ---
-  *** [third_party/abseil-cpp/absl/status/CMakeFiles/absl_statusor.dir/all] Error code 6
-
-  make[2]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  2 errors
-
-  make[2]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  --- CMakeFiles/grpc.dir/rule ---
-  *** [CMakeFiles/grpc.dir/rule] Error code 2
-
-  make[1]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  1 error
-
-  make[1]: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-  *** [grpc] Error code 2
-
-  make: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-
-  make: stopped in /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/build/grpcio-sys-da3498ed341bdd75/out/build
-
-  --- stderr
-  CMake Warning at cmake/protobuf.cmake:51 (message):
-    gRPC_PROTOBUF_PROVIDER is "module" but PROTOBUF_ROOT_DIR is wrong
-  Call Stack (most recent call first):
-    CMakeLists.txt:255 (include)
-
-
-  CMake Warning:
-    Manually-specified variables were not used by the project:
-
-      CMAKE_ASM_COMPILER
-      CMAKE_ASM_FLAGS
-
-
-  1 error
-  thread 'main' panicked at '
-  command did not execute successfully, got: exit status: 2
-
-  build script failed, must exit now', /scratch/wip/syncstorage-rs/work/vendor/cmake-0.1.45/src/lib.rs:894:5
-  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-warning: build failed, waiting for other jobs to finish...
 error: build failed
 *** Error code 101
-
-S

@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- ../vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc.orig	1970-01-01 00:00:00.000000000 +0000
++++ ../vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
+@@ -86,8 +86,13 @@ const void *VDSOSupport::Init() {
+     ElfW(auxv_t) aux;
+     while (read(fd, &aux, sizeof(aux)) == sizeof(aux)) {
+       if (aux.a_type == AT_SYSINFO_EHDR) {
++#if defined(__NetBSD__)
++        vdso_base_.store(reinterpret_cast<void *>(aux.a_v),
++                         std::memory_order_relaxed);
++#else
+         vdso_base_.store(reinterpret_cast<void *>(aux.a_un.a_val),
+                          std::memory_order_relaxed);
++#endif
+         break;
+       }
+     }
