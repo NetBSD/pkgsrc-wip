@@ -1,0 +1,6 @@
+
+
+SHA512 (gzip-1.11.tar) = 04a186524fa0d35af4cc248550d5b91b6cadfbe1011da7d722617a0d36c3f3bb163e2890cfc10cb74f3ea78a94651a78b7e49bc56115f1297782e83c1b0bb7d0
+SHA1 (gzip-1.11.tar) = e2d91d63d78d4515037e6b26b90cbd46c12abf2e
+Size (gzip-1.11.tar) = 5703680 bytes
+SHA1 (patch_xinuos-archivers_gzip_lib-vasnprintf.c) = 4012b674c04f83f2b3bffdef6107a7836ce21d8e
