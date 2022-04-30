@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2020/04/18 10:52:10 js Exp $
 
-DISTNAME=	maturin-0.12.6
+DISTNAME=	maturin-0.12.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maturin/}
@@ -12,6 +12,11 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
+SUBST_CLASSES+=                fix-version
+SUBST_STAGE.fix-version=   pre-build
+SUBST_MESSAGE.fix-version= Adding version to pyproject.toml
+SUBST_FILES.fix-version=   pyproject.toml
+SUBST_SED.fix-version=     -e 's|PKGSRC_VERSION|"0.12.12"|'
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
