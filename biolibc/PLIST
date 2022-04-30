@@ -171,6 +171,8 @@ man/man3/BL_SAM_BUFF_TRAILING_ALIGNMENTS.3
 man/man3/BL_SAM_BUFF_UNMAPPED_ALIGNMENTS.3
 man/man3/BL_SAM_CIGAR.3
 man/man3/BL_SAM_CIGAR_AE.3
+man/man3/BL_SAM_CIGAR_ARRAY_SIZE.3
+man/man3/BL_SAM_CIGAR_LEN.3
 man/man3/BL_SAM_FLAG.3
 man/man3/BL_SAM_MAPQ.3
 man/man3/BL_SAM_PNEXT.3
@@ -179,6 +181,7 @@ man/man3/BL_SAM_QNAME.3
 man/man3/BL_SAM_QNAME_AE.3
 man/man3/BL_SAM_QUAL.3
 man/man3/BL_SAM_QUAL_AE.3
+man/man3/BL_SAM_QUAL_ARRAY_SIZE.3
 man/man3/BL_SAM_QUAL_LEN.3
 man/man3/BL_SAM_RNAME.3
 man/man3/BL_SAM_RNAME_AE.3
@@ -186,6 +189,7 @@ man/man3/BL_SAM_RNEXT.3
 man/man3/BL_SAM_RNEXT_AE.3
 man/man3/BL_SAM_SEQ.3
 man/man3/BL_SAM_SEQ_AE.3
+man/man3/BL_SAM_SEQ_ARRAY_SIZE.3
 man/man3/BL_SAM_SEQ_LEN.3
 man/man3/BL_SAM_TLEN.3
 man/man3/BL_VCF_ALT.3
@@ -431,8 +435,11 @@ man/man3/bl_sam_gff_cmp.3
 man/man3/bl_sam_gff_overlap.3
 man/man3/bl_sam_init.3
 man/man3/bl_sam_read.3
+man/man3/bl_sam_set_cigar.3
 man/man3/bl_sam_set_cigar_ae.3
+man/man3/bl_sam_set_cigar_array_size.3
 man/man3/bl_sam_set_cigar_cpy.3
+man/man3/bl_sam_set_cigar_len.3
 man/man3/bl_sam_set_flag.3
 man/man3/bl_sam_set_mapq.3
 man/man3/bl_sam_set_pnext.3
@@ -441,6 +448,7 @@ man/man3/bl_sam_set_qname_ae.3
 man/man3/bl_sam_set_qname_cpy.3
 man/man3/bl_sam_set_qual.3
 man/man3/bl_sam_set_qual_ae.3
+man/man3/bl_sam_set_qual_array_size.3
 man/man3/bl_sam_set_qual_cpy.3
 man/man3/bl_sam_set_qual_len.3
 man/man3/bl_sam_set_rname_ae.3
@@ -449,6 +457,7 @@ man/man3/bl_sam_set_rnext_ae.3
 man/man3/bl_sam_set_rnext_cpy.3
 man/man3/bl_sam_set_seq.3
 man/man3/bl_sam_set_seq_ae.3
+man/man3/bl_sam_set_seq_array_size.3
 man/man3/bl_sam_set_seq_cpy.3
 man/man3/bl_sam_set_seq_len.3
 man/man3/bl_sam_set_tlen.3
