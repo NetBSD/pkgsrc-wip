@@ -26,8 +26,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.12:../../textproc/py-alabaster
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
 BUILD_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../wip/py-black
-
-PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
 

@@ -18,7 +18,6 @@ USE_LANGUAGES=	c c++
 
 PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/versioned_dependencies.mk"
 BUILDLINK_API_DEPENDS.pynumpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/extension.mk"

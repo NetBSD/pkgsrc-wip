@@ -34,7 +34,6 @@ USE_TOOLS+=	pkg-config
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../wip/glm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
