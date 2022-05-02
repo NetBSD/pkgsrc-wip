@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- pyproject.toml.orig	2022-04-07 07:51:58.000000000 +0000
++++ pyproject.toml
+@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "maturin"
++version = PKGSRC_VERSION
+ requires-python = ">=3.6"
+ classifiers = [
+     "Topic :: Software Development :: Build Tools",
