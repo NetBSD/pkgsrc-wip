@@ -10,7 +10,7 @@ HOMEPAGE=	https://virtualenv.pypa.io/
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.1:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
@@ -19,6 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4:../../devel/py-coverage
 #TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-env>=0.6.2:../../devel/py-test-env
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezegun>=0.4.1:../../devel/py-test-freezegun
@@ -45,6 +46,9 @@ post-install:
 	${MV} virtualenv virtualenv-${PYVERSSUFFIX} || ${TRUE}
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+# needs 'make install'
+# as of 20.14.1
+# 22 failed, 247 passed, 31 skipped, 6 warnings, 16 errors
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
