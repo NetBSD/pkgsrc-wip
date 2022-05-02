@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/PyO3/maturin
 COMMENT=	Build and publish crates with pyo3, rust-cpython and cffi bindings
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 
-SUBST_CLASSES+=                fix-version
-SUBST_STAGE.fix-version=   pre-build
-SUBST_MESSAGE.fix-version= Adding version to pyproject.toml
-SUBST_FILES.fix-version=   pyproject.toml
-SUBST_SED.fix-version=     -e 's|PKGSRC_VERSION|"0.12.12"|'
+SUBST_CLASSES+=			fix-version
+SUBST_STAGE.fix-version=	pre-build
+SUBST_MESSAGE.fix-version=	Adding version to pyproject.toml
+SUBST_FILES.fix-version=	pyproject.toml
+SUBST_SED.fix-version=		-e 's|PKGSRC_VERSION|"'${PKGVERSION_NOREV}'"|' 
+
 .include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"

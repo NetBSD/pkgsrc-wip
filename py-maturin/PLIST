@@ -3,11 +3,11 @@ bin/maturin
 ${PYSITELIB}/get_interpreter_metadata.py
 ${PYSITELIB}/get_interpreter_metadata.pyc
 ${PYSITELIB}/get_interpreter_metadata.pyo
-${PYSITELIB}/maturin-0.12.12-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/maturin-0.12.12-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/maturin-0.12.12-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/maturin-0.12.12-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/maturin-0.12.12-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/maturin-0.12.12-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/maturin/__init__.py
 ${PYSITELIB}/maturin/import_hook.py
