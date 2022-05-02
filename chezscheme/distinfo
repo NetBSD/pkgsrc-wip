@@ -1,18 +1,18 @@
 $NetBSD$
 
-RMD160 (ChezScheme/ChezScheme-9.5.4.tar.gz) = c398dea6fb003e384b2a905c8127779f452c0941
-SHA512 (ChezScheme/ChezScheme-9.5.4.tar.gz) = 8b25b688d189f0e3ce22319b9b3323fdae63e6df3481d25c699be978b85684a4eaeb3e53bd101b4fbe766a8d48ec35e66afc6b41ed09e73914bbd9fc5ce4a4c3
-Size (ChezScheme/ChezScheme-9.5.4.tar.gz) = 30670176 bytes
-RMD160 (ChezScheme/lz4-1.9.2.tar.gz) = 2938f42a12c8c16124e2d63bd70fca7024809d40
+BLAKE2s (ChezScheme/ChezScheme-9.5.8.tar.gz) = e4f98ef574a75ec7622b27d68e11056e60d2fc6a5f0ce869acba218344ab1cb5
+SHA512 (ChezScheme/ChezScheme-9.5.8.tar.gz) = fbb0f0150e958e914e34d3ff96351246f2ae155370bc6ca8f7be4c3019cbc2c33167de4e12e138b4a084c2ccde5da99a8d7ae7d2880d34e7084e89ad6258c752
+Size (ChezScheme/ChezScheme-9.5.8.tar.gz) = 32917460 bytes
+BLAKE2s (ChezScheme/lz4-1.9.2.tar.gz) = 133883db3e3a6bc73c77a549572c66e7575756ccb6ec39ab2084072e8a26ae27
 SHA512 (ChezScheme/lz4-1.9.2.tar.gz) = ae714c61ec8e33ed91359b63f2896cfa102d66b730dce112b74696ec5850e59d88bd5527173e01e354a70fbe8f036557a47c767ee0766bc5f9c257978116c3c1
 Size (ChezScheme/lz4-1.9.2.tar.gz) = 305796 bytes
-RMD160 (ChezScheme/nanopass-framework-scheme-1.9.1.tar.gz) = 6799885129cf2641f3192dfd7d2e73ae89f73fba
-SHA512 (ChezScheme/nanopass-framework-scheme-1.9.1.tar.gz) = a93e0249bbdd77e1bc329c5bc4fda1bd68b4ce7ba6b94662118ca31f9aab0df8c276a73ed618159bcf4ee3f383e3cc34058f44b1ba8d2b902bef59d5e5622c5d
-Size (ChezScheme/nanopass-framework-scheme-1.9.1.tar.gz) = 436818 bytes
-RMD160 (ChezScheme/stex-1.2.2.tar.gz) = afd1c80d371f95e18e9129853ce9002d9d66d6c0
+BLAKE2s (ChezScheme/nanopass-framework-scheme-1.9.2.tar.gz) = b9c667dab2d1f4bcd872024354cecb8a0639e6de303a91a8cb498b9d042344d9
+SHA512 (ChezScheme/nanopass-framework-scheme-1.9.2.tar.gz) = 788b396bc51ef6427b3dd63f9a76d6854014db8a81ad3f86ba0070576c50cf20e248535a0a3e66769ea94b65064f0f67312f4dea01b6b2cf963b5d78757f878c
+Size (ChezScheme/nanopass-framework-scheme-1.9.2.tar.gz) = 437581 bytes
+BLAKE2s (ChezScheme/stex-1.2.2.tar.gz) = 98b4aa508720e08e37aec396ff96f848e4a7fc3d90416eeeb09e4cf1a49b8fd4
 SHA512 (ChezScheme/stex-1.2.2.tar.gz) = b6a15e4c578a88aeb0b2c50eeba4a6451e8c5b7f1cc6e7d36b87577ed5318383006f7d8eba9a2a25e2f19795bc006c9f06c9aecdbe8094dad2ebafdc9fa4c7cb
 Size (ChezScheme/stex-1.2.2.tar.gz) = 211032 bytes
-RMD160 (ChezScheme/zlib-1.2.11.tar.gz) = 7fe2ff01eab9693ee5dca244161ff595b4372b9b
-SHA512 (ChezScheme/zlib-1.2.11.tar.gz) = 104c62ed1228b5f1199bc037081861576900eb0697a226cafa62a35c4c890b5cb46622e399f9aad82ee5dfb475bae26ae75e2bd6da3d261361b1c8b996970faf
-Size (ChezScheme/zlib-1.2.11.tar.gz) = 644492 bytes
+BLAKE2s (ChezScheme/zlib-1.2.12.tar.gz) = 1ebe0aff06e99b2485e0b285a0deb32afb341f527e8cf680ddbfada09990f205
+SHA512 (ChezScheme/zlib-1.2.12.tar.gz) = 5b029532a9f5f12ad425c12eccdf1b77c8d91801342c5b5e26ffb539f76a204e6c4882b40f0130f143f2cd38df90e90af2978cf4bb997e1fa3a0d1eff2ca979e
+Size (ChezScheme/zlib-1.2.12.tar.gz) = 1547173 bytes
 SHA1 (patch-configure) = 5d31d9168c7122c122e2e50d704ef3216126465a
