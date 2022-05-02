@@ -14,6 +14,15 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake bash gmake pkg-config
 CONFIG_SHELL=	bash
 
+PKG_SYSCONFSUBDIR=	motion
+EGDIR=			${PREFIX}/share/examples
+INSTALL_MAKE_FLAGS+=	examplesdir=${EGDIR}/motion
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+.for file in motion-dist.conf camera1-dist.conf camera2-dist.conf camera3-dist.conf camera4-dist.conf
+CONF_FILES+=	${EGDIR}/motion/${file} ${PKG_SYSCONFDIR}/${file}
+.endfor
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
 
