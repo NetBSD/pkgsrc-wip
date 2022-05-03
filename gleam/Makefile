@@ -26,7 +26,19 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gleam ${DESTDIR}${PREFIX}/bin
 
 do-test:
-	(cd ${WRKSRC} && ${DESTDIR}${PREFIX}/bin/gleam new hello && cd hello && ${DESTDIR}${PREFIX}/bin/gleam test)
+	if ${TEST} -x "${DESTDIR}${PREFIX}/bin/gleam"; then \
+		if ${TEST} -d "${WRKSRC}/hello"; then \
+			cd ${WRKSRC}/hello && ${DESTDIR}${PREFIX}/bin/gleam test; \
+		else \
+			cd ${WRKSRC} && ${DESTDIR}${PREFIX}/bin/gleam new hello && cd hello && ${DESTDIR}${PREFIX}/bin/gleam test; \
+		fi; \
+	else \
+		if ${TEST} -d "${WRKSRC}/hello"; then \
+			cd ${WRKSRC}/hello && ${WRKSRC}/target/release/gleam test; \
+		else \
+			cd ${WRKSRC} && ${WRKSRC}/target/release/gleam new hello && cd hello && ${WRKSRC}/target/release/gleam test; \
+		fi; \
+	fi
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
