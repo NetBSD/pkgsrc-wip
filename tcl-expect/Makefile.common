@@ -27,5 +27,5 @@ INSTALL_UNSTRIPPED=	yes
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h="no"
 .endif
 
-DISTINFO_FILE=	${.CURDIR}/../../lang/tcl-expect/distinfo
-PATCHDIR=	${.CURDIR}/../../lang/tcl-expect/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/tcl-expect/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/tcl-expect/patches
