@@ -7,4 +7,3 @@ the changes in each replica to the other.
 This package contains a snapshot of the git repository, either to
 allow bugfixes not in the latest release, or testing release
 candidates.
-
