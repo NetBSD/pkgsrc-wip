@@ -1,5 +1,5 @@
 ===========================================================================
 $NetBSD$
 
-You may want to install wip/rebar3 as a runtime dependency.
+You may want to install lang/erlang as a runtime dependency.
 ===========================================================================
