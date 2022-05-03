@@ -1,0 +1,7 @@
+net/unison: Update to 2.52.1
+
+Upstream NEWS:
+
+   * Remove rsh protocol
+   * Restore compatibility with Ocaml 4.02.  Deprecate 4.01.
+   * Significant bugfixes and minor improvements

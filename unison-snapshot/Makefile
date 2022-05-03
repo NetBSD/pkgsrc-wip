@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.32 2022/03/08 22:32:15 gdt Exp $
 
-DISTNAME=	unison-2.52.0.60
+DISTNAME=	unison-2.52.0.70
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	9667168f981f7676428aad5dc5c8b9190843f8d5
+GITHUB_TAG=	3fadfb1e0e14b7cd087ec65937cc8437254b4961
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
@@ -31,6 +31,7 @@ MAKE_FLAGS+=	NATIVE=false
 TEST_TARGET=		test
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/doc/unison
 
 do-install:
@@ -41,6 +42,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/src/README ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/ROADMAP.txt ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/TODO.txt ${DESTDIR}${PREFIX}/share/doc/unison
+	# soon; PR pending
+	#${INSTALL_MAN} ${WRKSRC}/man/unison.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
