@@ -3,7 +3,7 @@ $NetBSD: distinfo,v 1.22 2021/10/26 10:51:57 nia Exp $
 BLAKE2s (expect5.45.4.tar.gz) = 41310882c3658679f60911aca1a3cf9c353784f164410abf919ce7adefdc73e0
 SHA512 (expect5.45.4.tar.gz) = a8dc25e8175f67e029e15cbcfca1705165c1c4cb2dd37eaaaebffb61e3ba132d9519cd73ca5add4c3358a2b0b7a91e878279e8d0b72143ff2c287fce07e4659a
 Size (expect5.45.4.tar.gz) = 632363 bytes
-SHA1 (patch-Makefile.in) = 24efcbdb0a21985cb8a0fb7812c5f45f67de7c30
-SHA1 (patch-configure) = 728a648a818d9957ddffb5b30d4cb04f00a8f6ec
-SHA1 (patch-retoglob.c) = b270b27fcc70cf93c9a7cc9ea5613cb0d3f4f4e1
-SHA1 (patch-tclconfig_tcl.m4) = 013bc82da8a5d6630638e3b9863b19e0ebd75bdb
+SHA1 (patch-Makefile.in) = e30054a3b1005edb413fce04355eaf8b33a9fd9f
+SHA1 (patch-configure) = 658668c09824fd07d8a0687073f271984545cc7b
+SHA1 (patch-retoglob.c) = 1f06fa70d00bd715aa05e48df665949f867760f4
+SHA1 (patch-tclconfig_tcl.m4) = dc924218d32aecb4d40c97b33dc667c0f3877025

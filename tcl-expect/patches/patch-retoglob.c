@@ -1,3 +1,9 @@
+$NetBSD$
+
+\todo Describe.
+
+\todo Provide upstream bug report URL.
+
 --- retoglob.c.orig	2018-02-02 19:15:52.000000000 +0000
 +++ retoglob.c	2019-08-26 05:28:32.206672005 +0000
 @@ -10,8 +10,8 @@

@@ -2,6 +2,10 @@ $NetBSD: patch-Makefile.in,v 1.4 2018/08/27 07:12:08 wiz Exp $
 
 New Makefile.in patch, no libtool
 
+\todo Describe.
+
+\todo Provide upstream bug report URL.
+
 --- Makefile.in.orig	2010-09-30 17:14:07.000000000 +0000
 +++ Makefile.in
 @@ -99,7 +99,9 @@ PKG_HEADERS	= @PKG_HEADERS@

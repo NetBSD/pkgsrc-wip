@@ -1,3 +1,9 @@
+$NetBSD$
+
+\todo Describe.
+
+\todo Provide upstream bug report URL.
+
 --- configure.orig	2022-04-30 10:09:40.227456128 +0000
 +++ configure	2022-04-30 10:09:45.000000000 +0000
 @@ -6945,19 +6945,54 @@
