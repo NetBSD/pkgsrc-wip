@@ -1,5 +1,0 @@
-* clarify runtime deps
-  - do we need wip/rebar3 as a runtime? gleam fails to detect it if
-    added to Makefile in my pbulk.
-  - is the stdlib (separate package) a runtime dependency, or do
-    people usually expect to fetch it with rebar3, mix or others?

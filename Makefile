@@ -1165,7 +1165,6 @@ SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gksu
 SUBDIR+=	gl2ps
-SUBDIR+=	gleam
 SUBDIR+=	gleam-stdlib
 SUBDIR+=	glib-java
 SUBDIR+=	glib2
