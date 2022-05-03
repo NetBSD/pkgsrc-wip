@@ -1,3 +1,42 @@
 This does not build yet.
 
 The termios crate needs to be ported to NetBSD.
+
+   Compiling async-fs v1.5.0
+error: Support for this target OS is not implemented yet!
+        You may want to create an issue: https://github.com/svartalf/rust-battery/issues/new
+  --> /usr/work/wip/wezterm/work/vendor/battery-0.7.8/src/platform/mod.rs:27:9
+   |
+27 | /         compile_error!("Support for this target OS is not implemented yet!\n \
+28 | |             You may want to create an issue: https://github.com/svartalf/rust-battery/issues/new");
+   | |__________________________________________________________________________________________________^
+
+error[E0432]: unresolved import `crate::platform::Device`
+ --> /usr/work/wip/wezterm/work/vendor/battery-0.7.8/src/types/battery.rs:5:5
+  |
+5 | use crate::platform::Device;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^ no `Device` in `platform`
+
+error[E0432]: unresolved import `crate::platform::Iterator`
+ --> /usr/work/wip/wezterm/work/vendor/battery-0.7.8/src/types/iterator.rs:3:5
+  |
+3 | use crate::platform::Iterator as PlatformIterator;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Iterator` in `platform`
+
+error[E0432]: unresolved import `crate::platform::Iterator`
+ --> /usr/work/wip/wezterm/work/vendor/battery-0.7.8/src/types/manager.rs:5:5
+  |
+5 | use crate::platform::Iterator as PlatformIterator;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Iterator` in `platform`
+
+error[E0432]: unresolved import `crate::platform::Manager`
+ --> /usr/work/wip/wezterm/work/vendor/battery-0.7.8/src/types/manager.rs:6:5
+  |
+6 | use crate::platform::Manager as PlatformManager;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Manager` in `platform`
+
+For more information about this error, try `rustc --explain E0432`.
+error: could not compile `battery` due to 5 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: build failed
+*** Error code 101
