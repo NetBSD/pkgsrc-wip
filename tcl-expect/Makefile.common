@@ -23,7 +23,7 @@ PLIST_SUBST+=		BASEVER=${EXPECT_FNAME}
 INSTALL_UNSTRIPPED=	yes
 
 # on IRIX 5.3 inttypes.h and sys/types.h are known to conflict
-.if ${OPSYS} == "IRIX" && ${OS_VERSION} == 5.3
+.if ${OPSYS} == "IRIX" && ${OS_VERSION} == "5.3"
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h="no"
 .endif
 
