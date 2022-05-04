@@ -4962,6 +4962,7 @@ SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q
 SUBDIR+=	q2pro
+SUBDIR+=	qbe
 SUBDIR+=	qcdloop
 SUBDIR+=	qdevelop
 SUBDIR+=	qemu-git
