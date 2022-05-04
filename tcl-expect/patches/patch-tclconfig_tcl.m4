@@ -1,6 +1,7 @@
 $NetBSD$
 
-\todo Describe.
+#       tclconfig/tcl.m4
+#       add support for svr5
 
 \todo Provide upstream bug report URL.
 

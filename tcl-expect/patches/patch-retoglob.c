@@ -1,6 +1,7 @@
 $NetBSD$
 
-\todo Describe.
+#       retoglob.c
+#       SVR5 name space clash
 
 \todo Provide upstream bug report URL.
 
