@@ -1,5 +1,7 @@
 net/unison: Update to 2.52.1
 
+\todo: Re-copy from upstream NEWS after it is fixed.
+
 Upstream NEWS:
 
    * Remove rsh protocol
