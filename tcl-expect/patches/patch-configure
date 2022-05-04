@@ -5,40 +5,46 @@ $NetBSD$
 
 \todo Provide upstream bug report URL.
 
---- configure.orig	2022-04-30 10:09:40.227456128 +0000
-+++ configure	2022-04-30 10:09:45.000000000 +0000
-@@ -6945,19 +6945,54 @@
+--- configure.orig      2018-02-04 03:43:58.000000000 +0000
++++ configure   2022-05-04 06:19:11.616282008 +0000
+@@ -6941,23 +6941,60 @@
+            LD_SEARCH_FLAGS=""
+            ;;
+        SCO_SV-3.2*)
++           # SCO UNIX/OpenServer 5 gcc use -melf for full feature ELF binanaries.
+            if test "$GCC" = yes; then :
  
- 		SHLIB_CFLAGS="-fPIC -melf"
- 		LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
-+	        SHLIB_LD="gcc"
+                SHLIB_CFLAGS="-fPIC -melf"
+                LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
++               SHLIB_LD="gcc"
  
  else
  
- 	       SHLIB_CFLAGS="-Kpic -belf"
- 	       LDFLAGS="$LDFLAGS -belf -Wl,-Bexport"
-+	       SHLIB_LD="ld -G"
+               SHLIB_CFLAGS="-Kpic -belf"
+               LDFLAGS="$LDFLAGS -belf -Wl,-Bexport"
++              SHLIB_LD="ld -G"
  
  fi
--	    SHLIB_LD="ld -G"
- 	    SHLIB_LD_LIBS=""
- 	    SHLIB_SUFFIX=".so"
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
-+	UnixWare-5*|SCO_SV-5*)
+-           SHLIB_LD="ld -G"
+            SHLIB_LD_LIBS=""
+            SHLIB_SUFFIX=".so"
+            CC_SEARCH_FLAGS=""
+            LD_SEARCH_FLAGS=""
+            ;;
++       UnixWare-5*|SCO_SV-5*)
++          # UnixWare gcc uses -pthread Native compiler use -KThread
 +           # -Kthread will define _REENTRANT
 +           if test "$GCC" = yes; then :
 +
 +               SHLIB_CFLAGS="-fPIC"
 +               SHLIB_LD='${CC} ${CFLAGS} -shared'
 +
-+	else
++       else
 +
 +               SHLIB_CFLAGS="-KPIC"
 +               SHLIB_LD="${CC} ${CFLAGS} -G -z text"
 +
-+	fi
++       fi
 +           SHLIB_LD_LIBS="-lsocket -lnsl -lz"
 +           SHLIB_SUFFIX=".so"
 +           CC_SEARCH_FLAGS=""
@@ -52,11 +58,11 @@ $NetBSD$
 +                CFLAGS="$CFLAGS -pthread"
 +                LDFLAGS="$LDFLAGS -pthread"
 +
-+	   else
++          else
 +                CFLAGS="$CFLAGS -Kpthread"
 +                LDFLAGS="$LDFLAGS -Kpthread"
 +
-+	  fi
++         fi
 +  
 +  fi
 +             ;;
