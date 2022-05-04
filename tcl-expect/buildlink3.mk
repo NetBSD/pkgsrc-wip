@@ -7,7 +7,7 @@ TCL_EXPECT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tcl-expect+=	tcl-expect>=5.38.0nb1
 BUILDLINK_ABI_DEPENDS.tcl-expect+=	tcl-expect>=5.45.0nb3
-BUILDLINK_ABI_DEPENDS.tcl-expect+=	tcl-expect>=5.45.4nb3
+BUILDLINK_ABI_DEPENDS.tcl-expect+=	tcl-expect>=5.45.4nb1
 BUILDLINK_PKGSRCDIR.tcl-expect?=	../../wip/tcl-expect
 
 .include "../../lang/tcl/buildlink3.mk"
