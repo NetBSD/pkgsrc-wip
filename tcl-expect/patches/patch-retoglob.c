@@ -3,7 +3,7 @@ $NetBSD$
 #       retoglob.c
 #       SVR5 name space clash
 
-\todo Provide upstream bug report URL.
+# emailed Upstream Swtempber 2019
 
 --- retoglob.c.orig	2018-02-02 19:15:52.000000000 +0000
 +++ retoglob.c	2019-08-26 05:28:32.206672005 +0000

@@ -3,7 +3,7 @@ $NetBSD$
 #       tclconfig/tcl.m4
 #       add support for svr5
 
-\todo Provide upstream bug report URL.
+# Emailed Upstream September 2019
 
 --- tclconfig/tcl.m4.orig	2018-02-04 06:55:43.000000000 +0000
 +++ tclconfig/tcl.m4	2022-04-30 09:18:53.837696001 +0000

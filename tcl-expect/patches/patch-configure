@@ -3,7 +3,7 @@ $NetBSD$
 #       configure patches to
 #       add support for svr5 and OpenServer 5 
 
-\todo Provide upstream bug report URL.
+# emailed Upstream September 2019
 
 --- configure.orig      2018-02-04 03:43:58.000000000 +0000
 +++ configure   2022-05-04 06:19:11.616282008 +0000
@@ -32,7 +32,7 @@ $NetBSD$
             LD_SEARCH_FLAGS=""
             ;;
 +       UnixWare-5*|SCO_SV-5*)
-+          # UnixWare gcc uses -pthread Native compiler use -KThread
++          # UnixWare gcc uses -pthread Native compiler use -Kpthread
 +           # -Kthread will define _REENTRANT
 +           if test "$GCC" = yes; then :
 +
