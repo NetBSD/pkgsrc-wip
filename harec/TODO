@@ -1,0 +1,5 @@
+harec TODO!
+
+For now we are straight up ignoring the following error:
+
+    Creating .build/config.mk... rt not supported for NetBSD
