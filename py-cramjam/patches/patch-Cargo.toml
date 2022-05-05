@@ -1,0 +1,24 @@
+$NetBSD$
+Remove mimallocator - On NetBSD we get the following error:
+Use of initialized Thread Local Storage with model initial-exec and dlopen is not supported
+--- Cargo.toml.orig	1970-01-01 00:00:00.000000000 +0000
++++ Cargo.toml
+@@ -13,8 +13,7 @@ readme = "README.md"
+ crate-type = ["cdylib"]
+ 
+ [features]
+-default = ["mimallocator", "extension-module"]
+-mimallocator = ["mimalloc"]
++default = ["extension-module"]
+ extension-module = ["pyo3/extension-module"]
+ 
+ [profile.release]
+@@ -31,8 +30,3 @@ lz4 = "^1"
+ flate2 = "^1"
+ zstd = "0.9.0+zstd.1.5.0"
+ numpy = "0.15"
+-
+-[dependencies.mimalloc]
+-version = "0.1.24"
+-default-features = false
+-optional = true

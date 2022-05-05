@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (cramjam-2.5.0.tar.gz) = a649034d949ee90afff97c8ca46fd87ead29722869b5a83a1e07c5b54e181427
 SHA512 (cramjam-2.5.0.tar.gz) = 2d630d9284888a48df303467d266ac11791a46dc74fd7f967be3100b352d3ade38d4fae416d0aa7b9beae8bc2deff9c242e720f9138aa94bf0c8c4aca262cb6a
 Size (cramjam-2.5.0.tar.gz) = 1051074 bytes
+SHA1 (patch-Cargo.toml) = c936775179a0f7e258e4426a9eb8a1153cc192ab
