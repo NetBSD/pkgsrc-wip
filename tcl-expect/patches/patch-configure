@@ -7,69 +7,60 @@ $NetBSD$
 
 --- configure.orig      2018-02-04 03:43:58.000000000 +0000
 +++ configure   2022-05-04 06:19:11.616282008 +0000
-@@ -6941,23 +6941,60 @@
-            LD_SEARCH_FLAGS=""
-            ;;
-        SCO_SV-3.2*)
-+           # SCO UNIX/OpenServer 5 gcc use -melf for full feature ELF binanaries.
-            if test "$GCC" = yes; then :
- 
-                SHLIB_CFLAGS="-fPIC -melf"
-                LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
-+               SHLIB_LD="gcc"
- 
- else
- 
-               SHLIB_CFLAGS="-Kpic -belf"
-               LDFLAGS="$LDFLAGS -belf -Wl,-Bexport"
-+              SHLIB_LD="ld -G"
- 
- fi
--           SHLIB_LD="ld -G"
-            SHLIB_LD_LIBS=""
-            SHLIB_SUFFIX=".so"
-            CC_SEARCH_FLAGS=""
-            LD_SEARCH_FLAGS=""
-            ;;
-+       UnixWare-5*|SCO_SV-5*)
-+          # UnixWare gcc uses -pthread Native compiler use -Kpthread
-+           # -Kthread will define _REENTRANT
-+           if test "$GCC" = yes; then :
-+
-+               SHLIB_CFLAGS="-fPIC"
-+               SHLIB_LD='${CC} ${CFLAGS} -shared'
-+
-+       else
-+
-+               SHLIB_CFLAGS="-KPIC"
-+               SHLIB_LD="${CC} ${CFLAGS} -G -z text"
-+
-+       fi
-+           SHLIB_LD_LIBS="-lsocket -lnsl -lz"
-+           SHLIB_SUFFIX=".so"
-+           CC_SEARCH_FLAGS=""
-+           LD_SEARCH_FLAGS=""
-+           if test "${TCL_THREADS}" = "1"; then :
+@@ -6941,6 +6941,52 @@
+ 	    LD_SEARCH_FLAGS=""
+ 	    ;;
+ 	SCO_SV-3.2*)
++            # SCO UNIX/OpenServer 5 gcc use -melf for full feature ELF binanaries.
++if test "$GCC" = yes; then :
 + 
-+                # The -lpthread needs to go in the CFLAGS, not LIBS
-+                LIBS=`echo $LIBS | sed s/-lpthread//`
-+           if test "$GCC" = yes; then :
-+
-+                CFLAGS="$CFLAGS -pthread"
-+                LDFLAGS="$LDFLAGS -pthread"
-+
-+          else
-+                CFLAGS="$CFLAGS -Kpthread"
-+                LDFLAGS="$LDFLAGS -Kpthread"
-+
-+         fi
-+  
-+  fi
-+             ;;
- 	SunOS-5.[0-6])
- 	    # Careful to not let 5.10+ fall into this case
++                SHLIB_CFLAGS="-fPIC -melf"
++                LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
++                SHLIB_LD="gcc"
++else
++ 
++               SHLIB_CFLAGS="-Kpic -belf"
++               LDFLAGS="$LDFLAGS -belf -Wl,-Bexport"
++               SHLIB_LD="ld -G"
++fi
++            SHLIB_LD_LIBS=""
++            SHLIB_SUFFIX=".so"
++            CC_SEARCH_FLAGS=""
++            LD_SEARCH_FLAGS=""
++            ;;
++        UnixWare-5*|SCO_SV-5*)
++            # UnixWare gcc uses -pthread Native compiler use -Kpthread
++            # -Kthread will define _REENTRANT
++if test "$GCC" = yes; then :
++                SHLIB_CFLAGS="-fPIC"
++                SHLIB_LD='${CC} ${CFLAGS} -shared'
++else
++                SHLIB_CFLAGS="-KPIC"
++                SHLIB_LD="${CC} ${CFLAGS} -G -z text"
++fi
++            SHLIB_LD_LIBS="-lsocket -lnsl -lz"
++            SHLIB_SUFFIX=".so"
++            CC_SEARCH_FLAGS=""
++            LD_SEARCH_FLAGS=""
++if test "${TCL_THREADS}" = "1"; then :
++                 # The -lpthread needs to go in the CFLAGS, not LIBS
++                 LIBS=`echo $LIBS | sed s/-lpthread//`
++    if test "$GCC" = yes; then :
++                 CFLAGS="$CFLAGS -pthread"
++                 LDFLAGS="$LDFLAGS -pthread"
++    else
++                 CFLAGS="$CFLAGS -Kpthread"
++                 LDFLAGS="$LDFLAGS -Kpthread"
++    fi
++fi
++	    ;;
++ 	SunOS-5.[0-6])
++ 	    # Careful to not let 5.10+ fall into this case
++ 
+ 	    if test "$GCC" = yes; then :
  
-@@ -7150,7 +7185,7 @@
+ 		SHLIB_CFLAGS="-fPIC -melf"
+@@ -7150,7 +7196,7 @@
  	    BSD/OS*) ;;
  	    CYGWIN_*) ;;
  	    IRIX*) ;;
@@ -78,22 +69,22 @@ $NetBSD$
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    windows) ;;
-@@ -9597,14 +9632,7 @@
+@@ -9597,14 +9643,7 @@
  
  PACKAGE_VERSION_NODOTS="`echo $PACKAGE_VERSION | sed -e 's/\.//g'`"
  
 -if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
 -    EXP_LIB_VERSION=$PACKAGE_VERSION
 -else
--    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
+     EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
 -if test $iunix -eq 1 ; then
-     EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
+-    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
  
  # also remove dots on systems that don't support filenames > 14
  # (are there systems which support shared libs and restrict filename lengths!?)
-@@ -9659,11 +9687,7 @@
+@@ -9659,11 +9698,7 @@
      $as_echo "#define EXP_FRAMEWORK 1" >>confdefs.h
  
  else
@@ -106,7 +97,7 @@ $NetBSD$
      EXP_BUILD_LIB_SPEC="-L`pwd` ${EXP_LIB_FLAG}"
      EXP_LIB_SPEC="-L${libdir} ${EXP_LIB_FLAG}"
  fi
-@@ -9965,6 +9989,9 @@
+@@ -9965,6 +10000,9 @@
      # substituted. (@@@ Might not be necessary anymore)
      #--------------------------------------------------------------------
  
@@ -116,7 +107,7 @@ $NetBSD$
      if test "${TEA_PLATFORM}" = "windows" ; then
  	if test "${SHARED_BUILD}" = "1" ; then
  	    # We force the unresolved linking of symbols that are really in
-@@ -10711,6 +10738,10 @@
+@@ -10711,6 +10749,10 @@
    case $ac_option in
    # Handling of the options.
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
