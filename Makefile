@@ -1510,6 +1510,7 @@ SUBDIR+=	haxima
 SUBDIR+=	haxor-news
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
+SUBDIR+=	hcloud
 SUBDIR+=	hdparm
 SUBDIR+=	heaptrack
 SUBDIR+=	heimdall
