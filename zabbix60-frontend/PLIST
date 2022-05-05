@@ -1315,6 +1315,8 @@ share/zabbix/locale/de/LC_MESSAGES/frontend.po
 share/zabbix/locale/el/LC_MESSAGES/frontend.mo
 share/zabbix/locale/el/LC_MESSAGES/frontend.po
 share/zabbix/locale/en/LC_MESSAGES/frontend.pot
+share/zabbix/locale/en_GB/LC_MESSAGES/frontend.mo
+share/zabbix/locale/en_GB/LC_MESSAGES/frontend.po
 share/zabbix/locale/es/LC_MESSAGES/frontend.mo
 share/zabbix/locale/es/LC_MESSAGES/frontend.po
 share/zabbix/locale/fa/LC_MESSAGES/frontend.mo

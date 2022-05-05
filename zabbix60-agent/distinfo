@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (zabbix-6.0.3.tar.gz) = 9166b54cb493a807ad24507d39ebb9dec51bc4355f950f3250189f90b5e17daf
-SHA512 (zabbix-6.0.3.tar.gz) = f93a7b4b19d2a1561e42ef67378bfb94a5edaae5b9bba8f2214de3bad1bf9d7efcb32da9f1b3ee820cc6bdc68308286606c4ceb7e1ba0ab42e24045c56f8ce47
-Size (zabbix-6.0.3.tar.gz) = 33135282 bytes
+BLAKE2s (zabbix-6.0.4.tar.gz) = e17eecad01d6147d1d86d54f1f599483fa3870a3a7ab57afab0e4c30415a309c
+SHA512 (zabbix-6.0.4.tar.gz) = a95706a8258d5161b2fec0ea9fbe33e49b44a59c9214bc43c02fb015d57032e72ea52cb494753a63234ad0af8b89b99918cdbb0c8bf517bc51d3d0eed1657f57
+Size (zabbix-6.0.4.tar.gz) = 33412454 bytes
 SHA1 (patch-configure) = 661087a4a5342bbce494b5eac45c294f3412318e
 SHA1 (patch-src_libs_zbxsysinfo_netbsd_net.c) = 0371a5cafe00d01f293a847105f7c501f443616c
 SHA1 (patch-src_zabbix__agent_Makefile.in) = efbd804ecee4b99db36db5f4fd61583b2ef96a86
