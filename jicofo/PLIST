@@ -61,7 +61,7 @@ share/jicofo/lib/jicoco-config-1.1-101-g2170967.jar
 share/jicofo/lib/jitsi-android-osgi-1.0-20190327.160432-3.jar
 share/jicofo/lib/jitsi-metaconfig-1.0-9-g5e1b624.jar
 share/jicofo/lib/jitsi-utils-1.0-109-g31bfa99.jar
-share/jicofo/lib/jitsi-xmpp-extensions-1.0-41-g9eb11d9.jar
+share/jicofo/lib/jitsi-xmpp-extensions-1.0-45-g209f259.jar
 share/jicofo/lib/jna-5.9.0.jar
 share/jicofo/lib/json-simple-1.1.1.jar
 share/jicofo/lib/jsr305-3.0.2.jar
@@ -74,7 +74,7 @@ share/jicofo/lib/kotlin-stdlib-common-1.5.31.jar
 share/jicofo/lib/kotlin-stdlib-jdk7-1.5.31.jar
 share/jicofo/lib/kotlin-stdlib-jdk8-1.5.31.jar
 share/jicofo/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
-share/jicofo/lib/minidns-core-1.0.2.jar
+share/jicofo/lib/minidns-core-1.0.3.jar
 share/jicofo/lib/object-cloner-0.1.jar
 share/jicofo/lib/objenesis-3.2.jar
 share/jicofo/lib/org.osgi.core-4.3.1.jar

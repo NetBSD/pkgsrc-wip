@@ -2,9 +2,9 @@ $NetBSD$
 
 Do not compile the load test suite
 
---- Makefile.orig	2022-01-25 10:15:05.000000000 +0000
+--- Makefile.orig	2022-04-18 14:57:25.000000000 +0000
 +++ Makefile
-@@ -19,7 +19,7 @@ WEBPACK_DEV_SERVER = ./node_modules/.bin
+@@ -20,7 +20,7 @@ WEBPACK_DEV_SERVER = ./node_modules/.bin
  
  all: compile deploy clean
  

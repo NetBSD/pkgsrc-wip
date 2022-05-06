@@ -22,6 +22,8 @@ share/jitsi-meet/fonts/OpenSans-Light-webfont.svg
 share/jitsi-meet/fonts/OpenSans-Light-webfont.ttf
 share/jitsi-meet/fonts/OpenSans-Light-webfont.woff
 share/jitsi-meet/head.html
+share/jitsi-meet/images/GIPHY_icon.png
+share/jitsi-meet/images/GIPHY_logo.png
 share/jitsi-meet/images/app-store-badge.png
 share/jitsi-meet/images/apple-touch-icon.png
 share/jitsi-meet/images/avatar.png
@@ -36,6 +38,7 @@ share/jitsi-meet/images/flags@2x.png
 share/jitsi-meet/images/google-play-badge.png
 share/jitsi-meet/images/googleLogo.svg
 share/jitsi-meet/images/icon-cloud.png
+share/jitsi-meet/images/icon-info.png
 share/jitsi-meet/images/icon-users.png
 share/jitsi-meet/images/jitsiLogo_square.png
 share/jitsi-meet/images/jitsilogo.png
@@ -173,7 +176,6 @@ share/jitsi-meet/lang/main-zhTW.json
 share/jitsi-meet/lang/main.json
 share/jitsi-meet/lang/readme.md
 share/jitsi-meet/lang/update-translation.js
-share/jitsi-meet/libs/README.md
 share/jitsi-meet/libs/alwaysontop.min.js
 share/jitsi-meet/libs/alwaysontop.min.js.map
 share/jitsi-meet/libs/analytics-ga.js
@@ -190,10 +192,10 @@ share/jitsi-meet/libs/do_external_connect.min.js.map
 share/jitsi-meet/libs/external_api.min.js
 share/jitsi-meet/libs/external_api.min.js.map
 share/jitsi-meet/libs/external_connect.js
-share/jitsi-meet/libs/face_expression_model-shard1
+share/jitsi-meet/libs/face-landmarks-worker.min.js
+share/jitsi-meet/libs/face-landmarks-worker.min.js.map
 share/jitsi-meet/libs/face_expression_model-weights_manifest.json
-share/jitsi-meet/libs/facial-expressions-worker.min.js
-share/jitsi-meet/libs/facial-expressions-worker.min.js.map
+share/jitsi-meet/libs/face_expression_model.bin
 share/jitsi-meet/libs/flacEncodeWorker.min.js
 share/jitsi-meet/libs/flacEncodeWorker.min.js.map
 share/jitsi-meet/libs/lib-jitsi-meet.e2ee-worker.js
@@ -204,10 +206,13 @@ share/jitsi-meet/libs/libflac4-1.3.2.min.js.mem
 share/jitsi-meet/libs/olm.wasm
 share/jitsi-meet/libs/rnnoise.wasm
 share/jitsi-meet/libs/selfie_segmentation_landscape.tflite
+share/jitsi-meet/libs/tfjs-backend-wasm-simd.wasm
+share/jitsi-meet/libs/tfjs-backend-wasm-threaded-simd.wasm
+share/jitsi-meet/libs/tfjs-backend-wasm.wasm
 share/jitsi-meet/libs/tflite-simd.wasm
 share/jitsi-meet/libs/tflite.wasm
-share/jitsi-meet/libs/tiny_face_detector_model-shard1
 share/jitsi-meet/libs/tiny_face_detector_model-weights_manifest.json
+share/jitsi-meet/libs/tiny_face_detector_model.bin
 share/jitsi-meet/logging_config.js
 share/jitsi-meet/metro.config.js
 share/jitsi-meet/plugin.head.html
