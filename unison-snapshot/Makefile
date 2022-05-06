@@ -4,7 +4,7 @@ DISTNAME=	unison-2.52.0.70
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	d9d34f3d050b7b1282c6b8d4db80f9bd4fd0b18f
+GITHUB_TAG=	589444e42ab97db8e28a8dcc3c1c876807fe13a7
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
