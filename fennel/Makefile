@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/fennel/archive/
 
 MAINTAINER=	dressupgeekout@gmail.com
-HOMEPAGE=	https://git.sr.ht/~technomancy/fennel/
+HOMEPAGE=	https://fennel-lang.org/
 COMMENT=	The Fennel programming language
 LICENSE=	mit
 
