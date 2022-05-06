@@ -2,9 +2,9 @@
 
 DISTNAME=	amnesia-tdd-0.0.0
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=shamazmazum/}
 GITHUB_PROJECT=	AmnesiaTheDarkDescent
-GITHUB_TAG=	be59f8410e0e9a8db583b42f588776d292ac9466
+GITHUB_TAG=	8280a2e2a35899ada5fc8970159002aec0c7f08a
 
 MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://frictionalgames.com
