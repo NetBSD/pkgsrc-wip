@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/fennel
+man/man1/fennel.1
+share/lua/5.3/fennel.lua
