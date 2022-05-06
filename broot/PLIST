@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/04 20:54:12 pin Exp $
-bin/broot
-man/man1/broot.1
