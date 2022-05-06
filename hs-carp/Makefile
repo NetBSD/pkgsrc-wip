@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	carp-0.5.3
+DISTNAME=	carp-0.5.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=carp-lang/}
 GITHUB_PROJECT=	Carp
