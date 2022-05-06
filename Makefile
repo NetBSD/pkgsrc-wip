@@ -3325,6 +3325,7 @@ SUBDIR+=	progreiserfs
 SUBDIR+=	proj
 SUBDIR+=	proplib
 SUBDIR+=	proselint
+SUBDIR+=	prosody
 SUBDIR+=	prover9
 SUBDIR+=	proxychains
 SUBDIR+=	proxychains-ng
