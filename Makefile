@@ -5550,6 +5550,7 @@ SUBDIR+=	terraform-provider-cassandra
 SUBDIR+=	terraform-provider-cloudinit
 SUBDIR+=	terraform-provider-flux
 SUBDIR+=	terraform-provider-github
+SUBDIR+=	terraform-provider-hcloud
 SUBDIR+=	terraform-provider-http
 SUBDIR+=	terraform-provider-kafka
 SUBDIR+=	terraform-provider-kubectl
