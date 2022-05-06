@@ -37,7 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 
 USE_PKG_RESOURCES=	yes
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON=	virtualenv.py
 
