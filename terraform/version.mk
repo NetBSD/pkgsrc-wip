@@ -6,6 +6,7 @@ TERRAFORM014_VERSION=	0.14.11
 #TERRAFORM013_VERSION=	TODO
 #TERRAFORM012_VERSION=	TODO
 
+.include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
 
 TERRAFORM_VERSION_DEFAULT?=	015
