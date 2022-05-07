@@ -1,5 +1,10 @@
 $NetBSD$
 
-RMD160 (warsow_21_sdk.tar.gz) = 0c6a469c09378c6e4b3abba8d980643a058d7e53
-SHA512 (warsow_21_sdk.tar.gz) = 5b1559280ffb56355a88cfd24899a199c3c76c71f6ea04b2aa66561767b9a9bd1020f41e75cf6488ba8084d20d36a8eccf84e67ec56c1a3596bd7c3c034ea940
-Size (warsow_21_sdk.tar.gz) = 563443012 bytes
+SHA1 (warsow-2.1.2.tar.gz) = 40e3277a3f8f7f70b6f887a8a7b286d48641241d
+RMD160 (warsow-2.1.2.tar.gz) = 133d4eeeb24fdac82e30c154c5bffee211270e59
+SHA512 (warsow-2.1.2.tar.gz) = c26971882c6ddad7e2a2e65c61bc2a327b9690a18b8faeabb23931a3d21a5d34bfac0a27516dfd39898419daaf607f48053754024e6a0ed66cfdccda34134c15
+Size (warsow-2.1.2.tar.gz) = 465567628 bytes
+SHA1 (warsow-engine-2.1.2.tar.gz) = 92932147751a8c64a9cdcbd162168fb3c2094272
+RMD160 (warsow-engine-2.1.2.tar.gz) = 69a39d9f49584a38215960ee9c003ba918de9f44
+SHA512 (warsow-engine-2.1.2.tar.gz) = 449c286aa4293c668abb9945b0c71bc527c5db0628e55cf2ae1d99dc13a03d0045c3dc292aa2e095dfde2986c64f14b3a005195a0352e60b6ac6f3e96ed9e4dc
+Size (warsow-engine-2.1.2.tar.gz) = 14544685 bytes

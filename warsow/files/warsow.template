@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# $NetBSD$
+# Launcher script for Warsow
+#
+
+set -e
+cd @@PREFIX@@/share/warsow && ./warsow
