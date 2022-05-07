@@ -2423,7 +2423,6 @@ SUBDIR+=	mingw-w64-gcc
 SUBDIR+=	mingw-w64-headers
 SUBDIR+=	mingw-w64-libgcc
 SUBDIR+=	mini18n
-SUBDIR+=	minimodem
 SUBDIR+=	minio
 SUBDIR+=	minio-client
 SUBDIR+=	minizip192
