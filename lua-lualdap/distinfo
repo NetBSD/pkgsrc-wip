@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (lualdap-1.2.6.tar.gz) = 53b2ce68c88f92a22f7d0b9b7c9a919de6e7f7c6
-SHA512 (lualdap-1.2.6.tar.gz) = e32010caa8efea5c23f2a595bd6a339267ecd08cf23e39389005bf8e499d6bad63771d0c7faf3ab5b8f670ba22bb15bf7ae691ed67920e86d8ed2c5649d7a079
-Size (lualdap-1.2.6.tar.gz) = 92669 bytes
-SHA1 (patch-config) = c3b2d8ada8251126f61129541884de4bf9061f57

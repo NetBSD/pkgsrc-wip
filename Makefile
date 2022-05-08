@@ -2308,7 +2308,6 @@ SUBDIR+=	lua-MessagePack
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-ldoc
 SUBDIR+=	lua-luacheck
-SUBDIR+=	lua-lualdap
 SUBDIR+=	lua-luv
 SUBDIR+=	luabind
 SUBDIR+=	luakit-git
