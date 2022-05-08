@@ -932,6 +932,7 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.bg
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.cn
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.cs
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.de
+share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.el_GR
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.eo
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.es
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.fr
