@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-7.0.0/
 
 
-MAINTAINER=	matthewda@zillowgroup.com
+MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://arrow.apache.org/
 COMMENT=	Cross-language development platform for in-memory analytics
 LICENSE=	apache-2.0
