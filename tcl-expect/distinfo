@@ -4,6 +4,6 @@ BLAKE2s (expect5.45.4.tar.gz) = 41310882c3658679f60911aca1a3cf9c353784f164410abf
 SHA512 (expect5.45.4.tar.gz) = a8dc25e8175f67e029e15cbcfca1705165c1c4cb2dd37eaaaebffb61e3ba132d9519cd73ca5add4c3358a2b0b7a91e878279e8d0b72143ff2c287fce07e4659a
 Size (expect5.45.4.tar.gz) = 632363 bytes
 SHA1 (patch-Makefile.in) = 24efcbdb0a21985cb8a0fb7812c5f45f67de7c30
-SHA1 (patch-configure) = e4ab27ebff22708de3cfe1c97c5880502a19b039
+SHA1 (patch-configure) = d42c10b5b7eb2710d33bf1b8eaeb7c192d2c0424
 SHA1 (patch-retoglob.c) = 4406f9e5d7622f393e35e7a1f70a700a98d6e981
 SHA1 (patch-tclconfig_tcl.m4) = 231db1a55f47d6446f26f9c09ad7de8f3861355a
