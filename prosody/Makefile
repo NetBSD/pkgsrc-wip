@@ -13,6 +13,7 @@ DEPENDS+=		${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
 DEPENDS+=		${LUA_PKGPREFIX}-filesystem>=1.6.2:../../devel/lua-filesystem
 DEPENDS+=		${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
 DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
+DEPENDS+=		${LUA_PKGPREFIX}-unbound-[0-9]*:../../net/lua-unbound
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c99
