@@ -15,6 +15,9 @@ ${PYSITELIB}/distributed/__init__.pyo
 ${PYSITELIB}/distributed/_concurrent_futures_thread.py
 ${PYSITELIB}/distributed/_concurrent_futures_thread.pyc
 ${PYSITELIB}/distributed/_concurrent_futures_thread.pyo
+${PYSITELIB}/distributed/_stories.py
+${PYSITELIB}/distributed/_stories.pyc
+${PYSITELIB}/distributed/_stories.pyo
 ${PYSITELIB}/distributed/_version.py
 ${PYSITELIB}/distributed/_version.pyc
 ${PYSITELIB}/distributed/_version.pyo
@@ -24,9 +27,6 @@ ${PYSITELIB}/distributed/active_memory_manager.pyo
 ${PYSITELIB}/distributed/actor.py
 ${PYSITELIB}/distributed/actor.pyc
 ${PYSITELIB}/distributed/actor.pyo
-${PYSITELIB}/distributed/asyncio.py
-${PYSITELIB}/distributed/asyncio.pyc
-${PYSITELIB}/distributed/asyncio.pyo
 ${PYSITELIB}/distributed/batched.py
 ${PYSITELIB}/distributed/batched.pyc
 ${PYSITELIB}/distributed/batched.pyo
@@ -36,6 +36,9 @@ ${PYSITELIB}/distributed/bokeh.pyo
 ${PYSITELIB}/distributed/cfexecutor.py
 ${PYSITELIB}/distributed/cfexecutor.pyc
 ${PYSITELIB}/distributed/cfexecutor.pyo
+${PYSITELIB}/distributed/chaos.py
+${PYSITELIB}/distributed/chaos.pyc
+${PYSITELIB}/distributed/chaos.pyo
 ${PYSITELIB}/distributed/cli/__init__.py
 ${PYSITELIB}/distributed/cli/__init__.pyc
 ${PYSITELIB}/distributed/cli/__init__.pyo
@@ -292,9 +295,6 @@ ${PYSITELIB}/distributed/http/worker/prometheus/core.pyo
 ${PYSITELIB}/distributed/lock.py
 ${PYSITELIB}/distributed/lock.pyc
 ${PYSITELIB}/distributed/lock.pyo
-${PYSITELIB}/distributed/locket.py
-${PYSITELIB}/distributed/locket.pyc
-${PYSITELIB}/distributed/locket.pyo
 ${PYSITELIB}/distributed/metrics.py
 ${PYSITELIB}/distributed/metrics.pyc
 ${PYSITELIB}/distributed/metrics.pyo
@@ -382,6 +382,7 @@ ${PYSITELIB}/distributed/publish.pyo
 ${PYSITELIB}/distributed/pubsub.py
 ${PYSITELIB}/distributed/pubsub.pyc
 ${PYSITELIB}/distributed/pubsub.pyo
+${PYSITELIB}/distributed/py.typed
 ${PYSITELIB}/distributed/queues.py
 ${PYSITELIB}/distributed/queues.pyc
 ${PYSITELIB}/distributed/queues.pyo
@@ -415,9 +416,6 @@ ${PYSITELIB}/distributed/spill.pyo
 ${PYSITELIB}/distributed/stealing.py
 ${PYSITELIB}/distributed/stealing.pyc
 ${PYSITELIB}/distributed/stealing.pyo
-${PYSITELIB}/distributed/stories.py
-${PYSITELIB}/distributed/stories.pyc
-${PYSITELIB}/distributed/stories.pyo
 ${PYSITELIB}/distributed/system.py
 ${PYSITELIB}/distributed/system.pyc
 ${PYSITELIB}/distributed/system.pyo

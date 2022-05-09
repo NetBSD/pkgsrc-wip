@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2022.4.0
+DISTNAME=	distributed-2022.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math python
+CATEGORIES=	devel net
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distributed/}
 
 
