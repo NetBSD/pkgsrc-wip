@@ -1,6 +1,6 @@
 # $NetBSD$
 
-GITHUB_TAG=	2022.04.0
+GITHUB_TAG=	2022.05.0
 DISTNAME=	dask-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	dask
@@ -8,7 +8,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dask/}
 
 
-MAINTAINER=	matthewda@fastmail.us
+MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/dask/dask/
 COMMENT=	Flexible parallel computing library for analytics
 LICENSE=	modified-bsd
@@ -39,6 +39,6 @@ do-test:
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
