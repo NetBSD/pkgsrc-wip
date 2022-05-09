@@ -1,13 +1,14 @@
 # $NetBSD: bootstrap.mk,v 1.4 2020/05/09 00:55:44 tnn Exp $
 
 
-#ONLY_FOR_PLATFORM+=		NetBSD-*-i386
-#BOOT.nb7-i386=			bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz
-#SITES.${BOOT.nb7-i386}=		${MASTER_SITE_LOCAL:=openjdk11/}
-#.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
-#DISTFILES+=			${BOOT.nb7-i386}
-#EXTRACT_ONLY+=			${BOOT.nb7-i386}
-#.endif
+ONLY_FOR_PLATFORM+=		NetBSD-*-i386
+BOOT.nb9-i386=			bootstrap-jdk-1.17.0.2.8-netbsd-9-i386-20220506.tar.xz
+#SITES.${BOOT.nb9-i386}=		${MASTER_SITE_LOCAL:=openjdk17/}
+SITES.${BOOT.nb9-i386}=		https://www.ryoon.net/~ryoon/
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
+DISTFILES+=			${BOOT.nb9-i386}
+EXTRACT_ONLY+=			${BOOT.nb9-i386}
+.endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-9.[0-8]*-x86_64
 BOOT.nb9-amd64=			bootstrap-jdk-1.17.0.2.8-netbsd-9-amd64-20220408.tar.xz
