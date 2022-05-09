@@ -4869,7 +4869,6 @@ SUBDIR+=	py-version-control-tools-hg
 SUBDIR+=	py-vespa
 SUBDIR+=	py-viper
 SUBDIR+=	py-virtualenv-clone
-SUBDIR+=	py-virtualenv20
 SUBDIR+=	py-vis
 SUBDIR+=	py-visa
 SUBDIR+=	py-visionegg
