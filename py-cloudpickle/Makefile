@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudpickle/}
 
-MAINTAINER=	matthewda@fastmail.us
+MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/cloudpipe/cloudpickle
 COMMENT=	Extended pickling support for Python objects
 LICENSE=	modified-bsd
