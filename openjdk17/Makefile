@@ -85,8 +85,7 @@ CONFIGURE_ARGS+=	USER=pkgsrc
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
 MAKE_ENV+=	CLASSPATH=
-.if !empty(MACHINE_PLATFORM:MNetBSD-9.99.8[1-9]-*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-9.99.9[0-9]-*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099980
 ALL_ENV+=	SED="sed -g"
 .endif
 
