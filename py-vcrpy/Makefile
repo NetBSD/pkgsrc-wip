@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcrpy/}
 
-MAINTAINER=	matthewda@fastmail.us
+MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/kevin1024/vcrpy
 COMMENT=	VCR.py simplifies and speeds up tests that make HTTP requests
 LICENSE=	mit
