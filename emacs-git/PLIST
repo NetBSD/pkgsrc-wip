@@ -2782,6 +2782,8 @@ share/emacs/${PKGVERSION}/lisp/net/dns.el.gz
 share/emacs/${PKGVERSION}/lisp/net/dns.elc
 share/emacs/${PKGVERSION}/lisp/net/eudc-bob.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudc-bob.elc
+share/emacs/${PKGVERSION}/lisp/net/eudc-capf.el.gz
+share/emacs/${PKGVERSION}/lisp/net/eudc-capf.elc
 share/emacs/${PKGVERSION}/lisp/net/eudc-export.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudc-export.elc
 share/emacs/${PKGVERSION}/lisp/net/eudc-hotlist.el.gz
