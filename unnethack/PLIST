@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/04/20 14:53:47 rhialto Exp $
+@comment $NetBSD$
 bin/unnethack
 @comment ${PLIST.x11}lib/X11/app-defaults/NetHack
 ${PLIST.x11}lib/X11/fonts/misc/ibm.bdf
@@ -13,6 +13,7 @@ share/doc/unnethack/license
 share/unnethackdir${VER}/nhdat
 share/unnethackdir${VER}/recover
 share/unnethackdir${VER}/unnethack
+share/unnethackdir${VER}/unnethack_dump.css
 share/unnethackdir${VER}/unnethackrc.default
 ${PLIST.x11}share/unnethackdir${VER}/unnethack.x11.rc
 ${PLIST.x11}share/unnethackdir${VER}/UnNetHack.ad

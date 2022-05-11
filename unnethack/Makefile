@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2014/04/20 14:53:47 rhialto Exp $
+# $NetBSD$
 #
 
-DISTNAME=	unnethack-5.1.0-20131208
+DISTNAME=	unnethack-5.2.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unnethack/}
-VER=		510
+VER=		520
 
 MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://sourceforge.net/apps/trac/unnethack/
