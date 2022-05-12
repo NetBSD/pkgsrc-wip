@@ -1,0 +1,9 @@
+======================================================================
+$NetBSD$
+
+This package provides the game engine ONLY. In order to play the game,
+please purchase a copy of Overgrowth and install the game data to:
+
+    ${PREFIX}/share/overgrowth
+
+======================================================================
