@@ -11,15 +11,18 @@ SHORT_TARGETS+=	arm64
 SHORT_TARGETS+=	arm64_be
 SHORT_TARGETS+=	i386
 
+# Local overrides to ROOT.* variables:
+.sinclude "local-roots.mk"
+
 # Root of target directories.
 # Must have dest/ (build.sh's DESTDIR) and tools/ subdirectories
-ROOT.armv7=	/u/evbarm-armv7hf
-ROOT.sparc64=	/u/sparc64
-ROOT.powerpc=	/u/macppc
-ROOT.powerpc90=	/u/9.0-macppc
-ROOT.arm64=	/u/evbarm64
-ROOT.arm64_be=	/u/evbarm64eb
-ROOT.i386=	/u/i386
+ROOT.armv7?=	/u/evbarm-armv7hf
+ROOT.sparc64?=	/u/sparc64
+ROOT.powerpc?=	/u/macppc
+ROOT.powerpc90?=/u/9.0-macppc
+ROOT.arm64?=	/u/evbarm64
+ROOT.arm64_be?=	/u/evbarm64eb
+ROOT.i386?=	/u/i386
 
 # Mapping to GNU triple
 G_TGT.armv7=	armv7--netbsdelf-eabihf
