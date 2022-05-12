@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pydantic-1.8.2
+DISTNAME=	pydantic-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}

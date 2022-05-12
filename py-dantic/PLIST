@@ -26,6 +26,10 @@ ${PYSITELIB}/pydantic/color.py
 ${PYSITELIB}/pydantic/color.pyc
 ${PYSITELIB}/pydantic/color.pyo
 ${PYSITELIB}/pydantic/color.so
+${PYSITELIB}/pydantic/config.py
+${PYSITELIB}/pydantic/config.pyc
+${PYSITELIB}/pydantic/config.pyo
+${PYSITELIB}/pydantic/config.so
 ${PYSITELIB}/pydantic/dataclasses.py
 ${PYSITELIB}/pydantic/dataclasses.pyc
 ${PYSITELIB}/pydantic/dataclasses.pyo

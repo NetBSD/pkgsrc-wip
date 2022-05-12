@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (pydantic-1.8.2.tar.gz) = 12cd644b08ef6ba9069b07917d2d88abd0fb48383972879e043c8f159707af84
-SHA512 (pydantic-1.8.2.tar.gz) = 9ee60bcfcc37a7b4db9432e319f2c0fd9875bbea603af88e1bf1ce2627220468dd190efe74bd38f37c2394f854687485f8dd2602f1e1535a25adb2e7dbbeb44a
-Size (pydantic-1.8.2.tar.gz) = 263751 bytes
+BLAKE2s (pydantic-1.9.0.tar.gz) = 3102fe03149e29ab2795c4af963fe86796bfce734e92d53a59c2513f8a9f847b
+SHA512 (pydantic-1.9.0.tar.gz) = ace542ff12698d568f2bea6121afc889c51892042b1a1b98464a6da6f71e50ecd8aafff7abd7ffd16983769844f7c970099d1fee7aa788f2e78172c0d5c4f472
+Size (pydantic-1.9.0.tar.gz) = 299758 bytes
