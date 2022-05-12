@@ -5,7 +5,7 @@ CATEGORIES=	devel games
 GIT_REPO=	https://github.com/anura-engine/anura.git
 GIT_REVISION=	188004394edf268bd9e798d0781ac394b84f5489
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 COMMENT=	Fully-featured game engine
 LICENSE=	modified-bsd AND mit
 

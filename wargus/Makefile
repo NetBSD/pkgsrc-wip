@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Wargus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://github.com/Wargus/wargus
 COMMENT=	Importer and scripts for Warcraft2 and Aleonas Tales
 LICENSE=	gnu-gpl-v2

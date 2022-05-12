@@ -3,7 +3,7 @@
 DISTNAME=	prawn-table-0.2.2
 CATEGORIES=	print
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	http://prawnpdf.org/api-docs/2.0/
 COMMENT=	Provides support for tables in Prawn
 LICENSE=	ruby-license

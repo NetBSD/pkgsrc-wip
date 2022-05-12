@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ladislav-zezula/}
 GITHUB_PROJECT=	StormLib
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	http://www.zezula.net/en/mpq/stormlib.html
 COMMENT=	Blizzard MPQ archive tool
 LICENSE=	mit

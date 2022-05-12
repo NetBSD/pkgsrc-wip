@@ -4,7 +4,7 @@ DISTNAME=	nitrogen-1.5.2
 CATEGORIES=	x11
 MASTER_SITES=	http://projects.l3ib.org/nitrogen/files/
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	http://projects.l3ib.org/nitrogen/
 COMMENT=	Background browser and setter
 LICENSE=	gnu-gpl-v2

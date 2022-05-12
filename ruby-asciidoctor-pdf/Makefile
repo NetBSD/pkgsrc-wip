@@ -3,7 +3,7 @@
 DISTNAME=	asciidoctor-pdf-1.5.3
 CATEGORIES=	print
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://asciidoctor.org/
 COMMENT=	PDF extension for Asciidoctor
 LICENSE=	mit

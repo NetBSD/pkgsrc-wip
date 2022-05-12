@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://kristaps.bsd.lv/kcgi/snapshots/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://kristaps.bsd.lv/kcgi/
 COMMENT=	CGI/FCGI library for C/C++ web apps
 LICENSE=	isc

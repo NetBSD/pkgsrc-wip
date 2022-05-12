@@ -4,7 +4,7 @@ DISTNAME=	divecmd-0.1.5
 CATEGORIES=	misc
 MASTER_SITES=	https://kristaps.bsd.lv/divecmd/snapshots/
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://kristaps.bsd.lv/divecmd/
 COMMENT=	Download and process dive computer data
 LICENSE=	gnu-lgpl-v2.1

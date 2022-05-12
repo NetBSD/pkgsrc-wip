@@ -3,7 +3,7 @@
 DISTNAME=	prawn-svg-0.30.0
 CATEGORIES=	print
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	http://prawnpdf.org/api-docs/2.0/
 COMMENT=	SVG renderer for Prawn Ruby PDF library
 LICENSE=	ruby-license

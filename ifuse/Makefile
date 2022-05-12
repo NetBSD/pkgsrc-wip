@@ -5,7 +5,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://www.libimobiledevice.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://www.libimobiledevice.org/
 COMMENT=	FUSE filesystem to access the contents of iOS devices
 LICENSE=	gnu-gpl-v2

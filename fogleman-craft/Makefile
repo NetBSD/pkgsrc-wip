@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fogleman/}
 CATEGORIES=	games
 LICENSE=	mit
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 COMMENT=	Simple Minecraft clone written in C
 HOMEPAGE=	https://www.michaelfogleman.com/craft/
 

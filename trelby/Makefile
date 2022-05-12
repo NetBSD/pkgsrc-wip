@@ -8,7 +8,7 @@ GIT_REPOSITORIES=	trelby
 GIT_REPO.trelby=	https://github.com/christiank/trelby.git
 GIT_BRANCH.trelby=	pkgsrc_netbsd
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	dressupgeekout@gmail.com
 COMMENT=	Screenplay writing program
 LICENSE=	gnu-gpl-v2
 
