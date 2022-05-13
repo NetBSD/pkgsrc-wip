@@ -7,5 +7,4 @@ SHA1 (patch-Modules_about-distro_src_Module.cpp) = 6fce0f9ce9681deb7bf4f1017104d
 SHA1 (patch-Modules_base_info__netbsd.cpp) = a762f3043ec6a7a1bab1afdb68581d474ef7f9aa
 SHA1 (patch-Modules_memory_base.h) = 6db972a12e7ba9d0cc59a483e2565042907be340
 SHA1 (patch-Modules_nics_nic.cpp) = d759de60f074d8e35d759cef3426c2f84ad9768e
-SHA1 (patch-Modules_pci_kpci.cpp) = 1ce051e907d0809e3ac680049dc63305d681ec6a
-SHA1 (patch-cmake_FindPCIUTILS.cmake) = c5f648d5eb25e9c4e6ca9fa259476ed70bad0203
+SHA1 (patch-cmake_FindPCIUTILS.cmake) = adf08e8d69e9f34e3f5367485d03625a17b00c29

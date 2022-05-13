@@ -23,6 +23,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/menus/kinfocenter.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/kinfocenter.menu
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
