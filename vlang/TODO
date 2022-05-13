@@ -17,3 +17,7 @@ vtest.8479168851317294636.tmp.c:(.text+0x1f877): undefined reference to `pthread
 ...
 
 I patched it out. Should be upstreamed somehow, cleanly.
+
+
+Update to 2022.19 with vc commit ID a298ad7069f6333ef8ab59a616654fc74e04c847.
+Fails on NetBSD 9.99.x due to missing pthread_rwlockattr_setpshared.
