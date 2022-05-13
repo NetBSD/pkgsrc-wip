@@ -4,7 +4,7 @@ DISTNAME=	overgrowth-0.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 # 'charlotte-netbsd' branch:
-GITHUB_TAG=	5ce0ab2aa62e33224fa76b8af9fb356610015f83
+GITHUB_TAG=	a8a20e09108ecfc4921a4b409af537a159982672
 
 MAINTAINER=	dressupgeekout@gmail.com
 HOMEPAGE=	https://overgrowth.wolfire.com/
@@ -41,7 +41,6 @@ do-install:
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
