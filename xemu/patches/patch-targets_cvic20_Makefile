@@ -2,13 +2,13 @@ $NetBSD$
 
 /usr/pkg/bin/sdl2-config --libs doesn't include the RPATH.
 
---- targets/cvic20/Makefile.orig	2021-11-02 17:20:35.000000000 +0000
+--- targets/cvic20/Makefile.orig	2022-04-26 10:18:38.000000000 +0000
 +++ targets/cvic20/Makefile
 @@ -22,6 +22,6 @@ EMU_DESCRIPTION	= Commodore VIC-20
  SRCS_TARGET_xvic20	= commodore_vic20.c vic6561.c
  SRCS_COMMON_xvic20	= emutools.c cpu65.c via65c22.c emutools_hid.c emutools_config.c emutools_files.c
- CFLAGS_TARGET_xvic20	= $(SDL2_CFLAGS)
--LDFLAGS_TARGET_xvic20	= $(SDL2_LIBS)
-+LDFLAGS_TARGET_xvic20	= $(SDL2_LIBS) $(SDL2_RPATH)
+ CFLAGS_TARGET_xvic20	= $(SDL2_CFLAGS) $(MATH_CFLAGS)
+-LDFLAGS_TARGET_xvic20	= $(SDL2_LIBS) $(MATH_LIBS)
++LDFLAGS_TARGET_xvic20	= $(SDL2_LIBS) $(MATH_LIBS) $(SDL2_RPATH)
  
  include ../../build/Makefile.common
