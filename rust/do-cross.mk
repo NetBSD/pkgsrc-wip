@@ -2,6 +2,7 @@
 # Collect the bootstrap kits in dist/
 
 VERSION!=	make show-var VARNAME=PKGVERSION
+V_NOREV!=	make show-var VARNAME=PKGVERSION_NOREV
 
 SHORT_TARGETS+=	armv7
 SHORT_TARGETS+=	sparc64
@@ -80,16 +81,16 @@ do-${st}:
 	else \
 		TT=${TGT.${st}}; \
 	fi; \
-	distdir=${WRKDIR}/rustc-${VERSION}-src/build/dist; \
+	distdir=${WRKDIR}/rustc-${V_NOREV}-src/build/dist; \
 	for comp in rust rust-std; do \
-		src=$${distdir}/$${comp}-${VERSION}-${TGT.${st}}.tar.gz; \
-		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.gz; \
+		src=$${distdir}/$${comp}-${V_NOREV}-${TGT.${st}}.tar.xz; \
+		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.xz; \
 		if [ ! -f "$${tgt}" ]; then \
 			echo ln $${src} $${tgt}; \
 			${DEBUG} ln $${src} $${tgt}; \
 		fi; \
 	done; \
-	src_comp=rust-src-${VERSION}.tar.gz; \
+	src_comp=rust-src-${V_NOREV}.tar.xz; \
 	if [ ! -f dist/$${src_comp} ]; then \
 		echo ln $${distdir}/$${src_comp} dist; \
 		${DEBUG} ln $${distdir}/$${src_comp} dist; \
