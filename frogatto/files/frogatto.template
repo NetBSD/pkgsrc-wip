@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# $NetBSD$
+# Launcher script for Frogatto and Friends
+#
+
+set -e
+
+cd @@PREFIX@@/share/frogatto && @@PREFIX@@/libexec/frogatto/anura
