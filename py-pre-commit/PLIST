@@ -53,6 +53,12 @@ ${PYSITELIB}/pre_commit/commands/sample_config.pyo
 ${PYSITELIB}/pre_commit/commands/try_repo.py
 ${PYSITELIB}/pre_commit/commands/try_repo.pyc
 ${PYSITELIB}/pre_commit/commands/try_repo.pyo
+${PYSITELIB}/pre_commit/commands/validate_config.py
+${PYSITELIB}/pre_commit/commands/validate_config.pyc
+${PYSITELIB}/pre_commit/commands/validate_config.pyo
+${PYSITELIB}/pre_commit/commands/validate_manifest.py
+${PYSITELIB}/pre_commit/commands/validate_manifest.pyc
+${PYSITELIB}/pre_commit/commands/validate_manifest.pyo
 ${PYSITELIB}/pre_commit/constants.py
 ${PYSITELIB}/pre_commit/constants.pyc
 ${PYSITELIB}/pre_commit/constants.pyo
