@@ -1,1 +1,0 @@
-bin/jupyter-console @PREFIX@/bin/jupyter-console-@PYVERSSUFFIX@

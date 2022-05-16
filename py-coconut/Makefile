@@ -11,7 +11,7 @@ COMMENT=	Simple, elegant, Pythonic functional programming
 LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-ipython>=6.5:../../devel/py-ipython
-BUILD_DEPENDS+=	${PYPKGPREFIX}-jupyter-console>=5.2:../../wip/py-jupyter-console
+BUILD_DEPENDS+=	${PYPKGPREFIX}-jupyter-console>=5.2:../../devel/py-jupyter-console
 BUILD_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7.2:../../sysutils/py-psutil
 BUILD_DEPENDS+=	${PYPKGPREFIX}-vprof>=0.36:../../wip/py-vprof
 BUILD_DEPENDS+=	${PYPKGPREFIX}-requests>=2.24.0:../../devel/py-requests
