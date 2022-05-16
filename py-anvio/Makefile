@@ -39,8 +39,7 @@ DEPENDS=	samtools>0:../../wip/samtools \
 		${PYPKGPREFIX}-psutil>0:../../sysutils/py-psutil \
 		${PYPKGPREFIX}-scikit-learn>0:../../math/py-scikit-learn \
 		${PYPKGPREFIX}-h5py>0:../../devel/py-h5py \
-		${PYPKGPREFIX}-biopython>0:../../wip/py-biopython \
-		${PYPKGPREFIX}-biopython>0:../../wip/py-biopython \
+		${PYPKGPREFIX}-biopython>0:../../biology/py-biopython \
 		Prodigal>0:../../wip/prodigal \
 		centrifuge>0:../../wip/centrifuge \
 		mcl>0:../../wip/mcl \
