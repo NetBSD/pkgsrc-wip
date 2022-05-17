@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=AquariaOSE/}
 GITHUB_PROJECT=	Aquaria
 GITHUB_TAG=	84366ad533fb42d00f6645052b9e56f693b81a2c
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Aquaria Open Source Edition
 LICENSE=	gnu-gpl-v2
 

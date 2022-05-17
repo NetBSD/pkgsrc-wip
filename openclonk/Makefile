@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.openclonk.org/builds/release/${VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	http://www.openclonk.org/
 COMMENT=	Open source successor of the Clonk gaming series
 LICENSE=	isc

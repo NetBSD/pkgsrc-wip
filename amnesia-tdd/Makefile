@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=shamazmazum/}
 GITHUB_PROJECT=	AmnesiaTheDarkDescent
 GITHUB_TAG=	8280a2e2a35899ada5fc8970159002aec0c7f08a
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://frictionalgames.com
 COMMENT=	Amnesia: The Dark Desceent
 LICENSE=	gnu-gpl-v3

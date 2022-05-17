@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zrythm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Wrapper library over minimp3, sndfile and libsamplerate
 LICENSE=	gnu-gpl-v3 # XXX actually it's Affero v3
 

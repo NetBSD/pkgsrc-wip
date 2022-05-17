@@ -3,7 +3,7 @@
 DISTNAME=	cmark-0.6
 CATEGORIES=	textproc
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Parser for CommonMark
 LICENSE=	modified-bsd
 

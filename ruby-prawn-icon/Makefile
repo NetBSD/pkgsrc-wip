@@ -3,7 +3,7 @@
 DISTNAME=	prawn-icon-2.5.0
 CATEGORIES=	print
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	http://prawnpdf.org
 COMMENT=	Easy icons for prawn
 LICENSE=	ruby-license

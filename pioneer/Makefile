@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pioneerspacesim/}
 GITHUB_TAG=	20200203
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pioneerspacesim.net/
 COMMENT=	Game of lonely space adventure
 LICENSE=	gnu-gpl-v3

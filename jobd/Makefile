@@ -7,7 +7,7 @@ PKGNAME=	jobd-${VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mheily/}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Job management framework
 HOMEPAGE=	https://github.com/mheily/jobd/
 LICENSE=	isc

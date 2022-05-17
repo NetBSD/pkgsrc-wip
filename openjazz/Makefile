@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=AlisterT/}
 GITHUB_PROJECT=	openjazz
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Open source reimplementation of the Jazz Jackrabbit games
 LICENSE=	gnu-gpl-v2
 

@@ -5,7 +5,7 @@ CATEGORIES=	games
 GIT_REPO=	https://github.com/jorio/OttoMatic.git
 GIT_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pangeasoft.net/otto/
 COMMENT=	Pangea Software’s Otto Matic
 LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0

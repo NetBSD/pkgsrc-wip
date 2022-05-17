@@ -5,7 +5,7 @@ GIT_REPO=	https://chromium.googlesource.com/breakpad/breakpad.git
 CATEGORIES=	misc
 GIT_REVISION=	f469cab97b56b79107ce943e13b375add2676d17
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://chromium.googlesource.com/breakpad/breakpad
 COMMENT=	Client and server components for a crash reporting system
 LICENSE=	modified-bsd AND unicode

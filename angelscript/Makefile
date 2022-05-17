@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://angelcode.com/angelscript/sdk/files/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://angelcode.com/angelscript/
 COMMENT=	The AngelScript programming language
 LICENSE=	zlib

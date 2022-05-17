@@ -13,7 +13,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}-netbsd
 DISTFILES=			${DEFAULT_DISTFILES} warsow-2.1.2.tar.gz
 SITES.warsow-2.1.2.tar.gz=	https://warsow.net/
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://warsow.net
 COMMENT=	Free fast-paced first-person shooter
 LICENSE=	gnu-gpl-v2

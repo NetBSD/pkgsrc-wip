@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 # 'charlotte-netbsd' branch:
 GITHUB_TAG=	a8a20e09108ecfc4921a4b409af537a159982672
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://overgrowth.wolfire.com/
 COMMENT=	Overgrowth from Wolfire Games (engine only)
 LICENSE=	apache-2.0

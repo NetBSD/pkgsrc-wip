@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmwkaa/}
 GITHUB_TAG=	v${VERSION}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	http://sophia.systems/
 COMMENT=	Modern embeddable key-value database
 LICENSE=	2-clause-bsd

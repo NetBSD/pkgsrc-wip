@@ -5,7 +5,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=DaanDeMeyer/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/DaanDeMeyer/reproc
 COMMENT=	Cross-platform process library
 LICENSE=	mit

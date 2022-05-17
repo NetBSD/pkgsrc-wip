@@ -9,7 +9,7 @@ DISTFILES+=	sharesrc${EXTRACT_SUFX}
 DISTFILES+=	src${EXTRACT_SUFX}
 DISTFILES+=	syssrc${EXTRACT_SUFX}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://netbsd.org/
 COMMENT=	NetBSD cross-toolchain
 

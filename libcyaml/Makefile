@@ -5,7 +5,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tlsa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Schema-based YAML parsing and serialization
 LICENSE=	isc
 

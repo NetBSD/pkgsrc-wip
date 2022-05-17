@@ -6,7 +6,7 @@ GIT_REPO=	https://git.sr.ht/~sircmpwn/hare
 GIT_BRANCH=	master
 GIT_REVISION=	d9870303ec34c851b5d5a06402d8009dac76d174
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://harelang.org/
 COMMENT=	The Hare programming language
 LICENSE=	gnu-gpl-v3

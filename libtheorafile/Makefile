@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FNA-XNA/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/FNA-XNA/Theorafile
 COMMENT=	Ogg Theora video decoder library 
 LICENSE=	zlib

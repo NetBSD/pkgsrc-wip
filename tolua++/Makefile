@@ -6,7 +6,7 @@ CATEGORIES=	devel
 GITHUB_PROJECT=	toluapp
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LuaDist/}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/LuaDist/toluapp
 COMMENT=	Tool to integrate C/C++ code with Lua
 LICENSE=	mit

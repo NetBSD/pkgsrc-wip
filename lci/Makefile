@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justinmeza/}
 GITHUB_TAG=	v0.11.2
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	http://lolcode.org/
 COMMENT=	A LOLCODE interpreter written in C
 LICENSE=	gnu-gpl-v3

@@ -5,7 +5,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SFTtech/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Modding API with a typesafe hierarchical key-value database
 LICENSE=	gnu-lgpl-v3
 

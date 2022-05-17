@@ -5,7 +5,7 @@ CATEGORIES=	games
 GIT_REPO=	https://github.com/jorio/Bugdom.git
 GIT_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pangeasoft.net/bug/
 COMMENT=	Pangea Software's Bugdom for modern systems
 LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0

@@ -4,7 +4,7 @@ DISTNAME=	libucl-0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/vstakhov/libucl
 COMMENT=	Universal configuration library parser
 LICENSE=	2-clause-bsd

@@ -12,7 +12,7 @@ GIT_REPO.frogatto=	https://github.com/frogatto/frogatto.git
 GIT_REVISION.frogatto=	8b0351854518af25b553c7fd50f6f2afb6d5e71b
 GIT_BRANCH.frogatto=	master
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Frogatto and Friends
 LICENSE=	modified-bsd AND mit AND zlib # XXX not true, + cc-by-v3.0 also
 

@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makeworld-the-better-one/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/makeworld-the-better-one/dither/
 COMMENT=	A fast, correct image dithering library in Go
 LICENSE=	mpl-2.0

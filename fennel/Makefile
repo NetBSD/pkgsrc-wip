@@ -5,7 +5,7 @@ PKGNAME=	fennel-1.1.0
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/fennel/archive/
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://fennel-lang.org/
 COMMENT=	The Fennel programming language
 LICENSE=	mit

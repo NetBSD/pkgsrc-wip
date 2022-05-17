@@ -5,7 +5,7 @@ CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://xoreos.org/
 COMMENT=	Resource explorer for BioWare Aurora engine games
 LICENSE=	gnu-lgpl-v2.1

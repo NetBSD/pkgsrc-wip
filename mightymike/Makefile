@@ -5,7 +5,7 @@ CATEGORIES=	games
 GIT_REPO=	https://github.com/jorio/MightyMike.git
 GIT_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://www.pangeasoft.net/nano/index.html
 COMMENT=	Pangea Software's Mighty Mike (Power Pete) for modern systems
 LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0

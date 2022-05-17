@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xoreos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://xoreos.org/
 COMMENT=	Tools to help the development of xoreos
 LICENSE=	gnu-gpl-v3

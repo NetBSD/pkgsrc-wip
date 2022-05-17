@@ -6,7 +6,7 @@ GIT_REPO=	https://git.sr.ht/~sircmpwn/harec
 GIT_BRANCH=	master
 GIT_REVISION=	fba0a9b547a3462d65a45ec93f78a07da58beabf
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://harelang.org/
 COMMENT=	Hare language bootstrap compiler
 LICENSE=	gnu-gpl-v3

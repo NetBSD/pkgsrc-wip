@@ -8,7 +8,7 @@ GITHUB_PROJECT=	colobot
 GITHUB_TAG=	colobot-gold-${VERSION}-alpha
 CATEGORIES=	games
 
-MAINTANER=	dressupgeekout@gmail.com
+MAINTANER=	charlotte@NetBSD.org
 HOMEPAGE=	https://colobot.info/
 COMMENT=	Real-time strategy game
 LICENSE=	gnu-gpl-v3

@@ -5,7 +5,7 @@ CATEGORIES=	devel
 HG_REPO=	https://hg.kervala.net/luabind
 HG_TAG=		d579cb61c2d2
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	${HG_REPO}
 COMMENT=	Lua bindings for C++
 LICENSE=	mit

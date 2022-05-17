@@ -3,7 +3,7 @@
 DISTNAME=	prawn-templates-0.1.2
 CATEGORIES=	print
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	http://prawnpdf.org/
 COMMENT=	Experimental extraction of template features from Prawn
 LICENSE=	ruby-license
