@@ -1,10 +1,10 @@
 $NetBSD: distinfo,v 1.10 2015/11/03 20:57:01 agc Exp $
 
-RMD160 (powwow-1.2.20.tar.gz) = c6393efaecc492ca4df1b0ed5b7ad5fb93b22ce4
-SHA512 (powwow-1.2.20.tar.gz) = bca3075201acb23f9fe0ea5c00b510efae1d00fd049104134396aae34cb5a5336ee6634ca72886554f4684add325f723c3f02503c307652a99929fca066d1720
-Size (powwow-1.2.20.tar.gz) = 313463 bytes
-SHA1 (patch-main_c) = 0be38d2e4a1c7c8a7cb9cc341d7df99dcbfc36b2
-SHA1 (patch-ptr_c) = 0042037fa939751477c480060f1506b176805f48
-SHA1 (patch-ptr_h) = 8aaf1438c296b7813a23f2c71f839d492b1f42b4
-SHA1 (patch-tcp_c) = 919bdefdebc3896c8a7d6a6ba884f47d0b10a372
-SHA1 (patch-tty_c) = c736524e71fa39d1b72aa31b4f2ce736bcd8f9f5
+BLAKE2s (powwow-1.2.23.tar.gz) = 36739c34b24752e5efb7ccf7e0f3b8b9fc4153a3d2973714a98423699f2feff9
+SHA512 (powwow-1.2.23.tar.gz) = 591ff9ca9dfc3bb624cfbb7f47785af977250cf9f6858b5149cf0fa30c6e1173f03f0cbabb8a55eb6ceb7622509f6c3fb11c36b154edc243824ecb8513c110a4
+Size (powwow-1.2.23.tar.gz) = 338893 bytes
+SHA1 (patch-main_c) = bd3cd4355e0be5f1f8b9aabd61e9a870c9e20deb
+SHA1 (patch-ptr_c) = 2ad9764c3a3925960b511247cec5ce0a1394d9c8
+SHA1 (patch-ptr_h) = 0ba84e818b6ecb56d96db4ee0ad9db5581898eb8
+SHA1 (patch-tcp_c) = ffd6a7cc1f38887f662639b4c5d2e6d1680434d2
+SHA1 (patch-tty_c) = 84393c6050992c409d301622b720e9b68d08a811
