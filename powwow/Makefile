@@ -8,6 +8,7 @@ MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	http://hoopajoo.net/projects/powwow.html
 COMMENT=	Client to play MUDs
 LICENSE=	gnu-gpl-v2
+USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-bsd

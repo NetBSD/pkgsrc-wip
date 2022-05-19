@@ -3,7 +3,7 @@ $NetBSD$
 Adapt patch from FreeBSD ports patch-src_tty.c
 
 --- src/tty.c.orig	2019-11-06 06:25:17.000000000 +0100
-+++ src/tty.c	2022-05-19 16:26:22.465610588 +0200
++++ src/tty.c	2022-05-19 18:00:08.513525079 +0200
 @@ -9,7 +9,6 @@
   *  (at your option) any later version.
   *
@@ -12,7 +12,15 @@ Adapt patch from FreeBSD ports patch-src_tty.c
  #include <assert.h>
  #include <errno.h>
  #include <fcntl.h>
-@@ -847,31 +846,29 @@
+@@ -61,6 +60,7 @@
+ 
+ #ifdef BSD_LIKE
+ #  include <sys/ioctl_compat.h>
++#  include <sys/termios.h>
+ #  define O_RAW RAW
+ #  define O_ECHO ECHO
+ #  define O_CBREAK CBREAK
+@@ -847,31 +847,29 @@
  
  int tty_printf(const char *format, ...)
  {
@@ -54,7 +62,7 @@ Adapt patch from FreeBSD ports patch-src_tty.c
      return res;
  }
  
-@@ -968,16 +965,23 @@
+@@ -968,16 +966,23 @@
  
  void tty_gets(char *s, int size)
  {
