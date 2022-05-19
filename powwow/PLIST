@@ -1,5 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:53 joerg Exp $
+@comment $NetBSD$
 bin/powwow
+bin/powwow-movie2ascii
+bin/powwow-movieplay
+bin/powwow-muc
+include/powwow/beam.h
+include/powwow/cmd.h
+include/powwow/cmd2.h
+include/powwow/defines.h
+include/powwow/edit.h
+include/powwow/eval.h
+include/powwow/list.h
+include/powwow/log.h
+include/powwow/main.h
+include/powwow/map.h
+include/powwow/ptr.h
+include/powwow/regex.h
+include/powwow/tcp.h
+include/powwow/tty.h
+include/powwow/utils.h
 man/man6/powwow.6
+share/powwow/COPYING
 share/powwow/powwow.doc
 share/powwow/powwow.help
