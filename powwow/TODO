@@ -14,7 +14,3 @@ ptr.c:442:9: warning: implicit declaration of function 'memrchr'; did you mean '
 ptr.c:442:9: warning: returning 'int' from a function with return type 'char *' makes pointer from integer without a cast [-Wint-conversion]
   442 |  return memrchr(ptrdata(p), ptrlen(p), c);
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                    
-
-
-* Correctly patch alloca() usage. Upstream has been contacted for
-  resolution.
