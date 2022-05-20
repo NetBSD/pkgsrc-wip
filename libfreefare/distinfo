@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:20 nia Exp $
+
+BLAKE2s (libfreefare-0.4.0.tar.bz2) = 089f08f352a7e3a95d179d205f1d30e9db153d231a4e1a7ba6e4ebc7e42784a7
+SHA512 (libfreefare-0.4.0.tar.bz2) = 25ea813ade68587beb5de6ea69675722ed522246c54e58e4d61f2389dd9c1f938681b36e8fd124d6158fbc6f55fe4ce699d385b7bfb17062474a890634b351ea
+Size (libfreefare-0.4.0.tar.bz2) = 386294 bytes
+SHA1 (patch-libfreefare_mifare__desfire__crypto.c) = 7fee54385f8f46829e11c2af906e03d1ed3eb67b

@@ -2085,6 +2085,7 @@ SUBDIR+=	libfirm-git
 SUBDIR+=	libfixposix
 SUBDIR+=	libfolks
 SUBDIR+=	libfplll
+SUBDIR+=	libfreefare
 SUBDIR+=	libftdi1
 SUBDIR+=	libgamecommon
 SUBDIR+=	libgamemusic
