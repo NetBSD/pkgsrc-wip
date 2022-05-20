@@ -1,0 +1,15 @@
+$NetBSD$
+
+POSIXly correct test(1) for equality.
+
+--- configure.orig	2022-04-26 13:05:15.329563183 +0000
++++ configure
+@@ -14804,7 +14804,7 @@ fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for readline.h" >&5
+ $as_echo_n "checking for readline.h... " >&6; }
+ 
+-  if test "x$cross_compiling" == "xyes"; then
++  if test "x$cross_compiling" = "xyes"; then
+       without_readline=yes
+   fi
+ 

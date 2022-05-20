@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (libnfc-1.8.0.tar.bz2) = 152ab2ba303a3c33f7dc880b83fa409a252c87b0f8a220159c4434b43fec6f16
+SHA512 (libnfc-1.8.0.tar.bz2) = aa8762ecb5b94167d20346f2c81491bb5b634bcedbf2aae3e2efdb301bca89ceb7c2e15148d0934fdc1cce6d77ee0225e28e84893232999fdc09d8a90ae2a7c5
+Size (libnfc-1.8.0.tar.bz2) = 553511 bytes
+SHA1 (patch-configure) = 97bc5b4405db8f323554c1d554965a9ddbc58cc8

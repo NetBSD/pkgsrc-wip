@@ -2154,6 +2154,7 @@ SUBDIR+=	libncl
 SUBDIR+=	libnest2d-ultimaker
 SUBDIR+=	libnestedsums
 SUBDIR+=	libneural
+SUBDIR+=	libnfc
 SUBDIR+=	libnfo
 SUBDIR+=	libnl
 SUBDIR+=	libnl1
