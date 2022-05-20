@@ -1,19 +1,1 @@
 * Fails to resolve any domain names for me.
-
-* Also, this:
-gcc -DPACKAGE_NAME=\"powwow\" -DPACKAGE_TARNAME=\"powwow\" -DPACKAGE_VERSION=\"1.2.23\" -DPACKAGE_STRING=\"powwow\ 1.2.23\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"powwow\" -D
-VERSION=\"1.2.23\" -DUSE_SGTTY=1 -DBSD_LIKE=1 -DHAVE_LIBDL=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1
- -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DUSE_LOCALE=1 -DUSE_REGEXP=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -I.  -D_XOPEN_SOURCE=700 -DPOWWOW_
-DIR=\"/usr/pkg/share/powwow\" -DPLUGIN_DIR=\"/usr/pkg/lib/powwow\" -I/usr/include  -O2 -fPIC -D_FORTIFY_SOURCE=2 -I/usr/include -MT ptr.o -MD -MP -MF .deps/ptr.Tpo -c -o ptr.o ptr.c          tty.c: In function 'tty_printf':
-tty.c:861:11: warning: implicit declaration of function 'vasprintf'; did you mean 'vsprintf'? [-Wimplicit-function-declaration]
-  861 |     res = vasprintf(&bufp, format, va); 
-      |           ^~~~~~~~~                                                                    
-      |           vsprintf             
-ptr.c: In function 'ptrrchr':                                                                  
-ptr.c:442:9: warning: implicit declaration of function 'memrchr'; did you mean 'memrchrx'? [-Wimplicit-function-declaration]
-  442 |  return memrchr(ptrdata(p), ptrlen(p), c);                        
-      |         ^~~~~~~   
-      |         memrchrx                                                                       
-ptr.c:442:9: warning: returning 'int' from a function with return type 'char *' makes pointer from integer without a cast [-Wint-conversion]
-  442 |  return memrchr(ptrdata(p), ptrlen(p), c);
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                    

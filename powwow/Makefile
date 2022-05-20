@@ -10,6 +10,7 @@ COMMENT=	Client to play MUDs
 LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	gmake
 
+CFLAGS+=		-D_XOPEN_SOURCE=700 -D_NETBSD_SOURCE
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-bsd
 
