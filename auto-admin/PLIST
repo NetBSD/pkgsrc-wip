@@ -152,6 +152,7 @@ sbin/auto-update-devfs-conf
 sbin/auto-update-devfs-rules
 sbin/auto-update-infiniband-modules
 sbin/auto-update-system
+sbin/auto-upgrade-base
 sbin/auto-user-admin
 sbin/auto-useradd
 sbin/auto-web-self-sign
