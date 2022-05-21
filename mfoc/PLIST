@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/mfoc
+man/man1/mfoc.1
