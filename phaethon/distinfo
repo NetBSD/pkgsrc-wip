@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (phaethon-0.0.6.tar.gz) = 4da658520990710833baddb7544ee5529980f38e
+BLAKE2s (phaethon-0.0.6.tar.gz) = 78c315414accb0875a3983f47d2d947433cc05d94d4a4e219c012f3f5aa97cd8
 SHA512 (phaethon-0.0.6.tar.gz) = 408605987f4b8e63c82522dc5d43ab92c97ce386e3c285edcd871b6eb82e82c45bb8e0bf2d7c2b4278da986fcb558cfd59701abc55c2041bb9f7c181c5f4c1c8
 Size (phaethon-0.0.6.tar.gz) = 1024568 bytes
