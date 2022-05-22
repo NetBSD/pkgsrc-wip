@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (clock-signal-20220417.tar.gz) = 69d46207d03b93344ddb1a835b6f1c7f6e884999
-RMD160 (clock-signal-20220417.tar.gz) = d65324cdea14635992a631f0dfb3bd5156596f23
+BLAKE2s (clock-signal-20220417.tar.gz) = fb65b7430b02805da794524bb6959a7295cdfcb8eb3fe05456f88a12e795b4d1
 SHA512 (clock-signal-20220417.tar.gz) = 97113423e02150a4f3d17f64ec8c39e6c00a5b788fb28aa06276b89ef7f9631117f3e7de37828d4cf9263f87155071df79e0a32b6e379b6c401fffae3b1edd97
 Size (clock-signal-20220417.tar.gz) = 46368190 bytes
 SHA1 (patch-OSBindings_SDL_SConstruct) = a29cec555ba2b2ef04a76d69cf38a2b2c8774667
