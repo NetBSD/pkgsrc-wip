@@ -2060,7 +2060,6 @@ SUBDIR+=	libcsplit
 SUBDIR+=	libcthreads
 SUBDIR+=	libcuba
 SUBDIR+=	libcue
-SUBDIR+=	libcyaml
 SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
 SUBDIR+=	libdialog
