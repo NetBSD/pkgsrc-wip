@@ -1394,6 +1394,7 @@ SUBDIR+=	gopass
 SUBDIR+=	gopher-validator-git
 SUBDIR+=	gorilla-audio
 SUBDIR+=	gotify
+SUBDIR+=	goyq
 SUBDIR+=	gpak
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsdrive
