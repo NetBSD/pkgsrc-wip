@@ -2398,6 +2398,7 @@ SUBDIR+=	metal
 SUBDIR+=	metalog
 SUBDIR+=	metasploit
 SUBDIR+=	mfoc
+SUBDIR+=	mfoc-hardnested
 SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
 SUBDIR+=	mic-paren

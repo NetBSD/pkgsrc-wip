@@ -1,0 +1,13 @@
+$NetBSD$
+
+BLAKE2s (2c25bf05a0b13827b9d06382c5d384b2e5c88238.tar.gz) = ab68ece6e646d48d43ee559e25f9f03d6b26967e47197a16b275acfba172b7cf
+SHA512 (2c25bf05a0b13827b9d06382c5d384b2e5c88238.tar.gz) = 358aecabdb22fc55bc2aa4eff0c696d92a02cb968fdad400cbb3e9acf18b501b024b50860729368477e84b85382b1e1c5a8847cb243f64bac88fb85957341d32
+Size (2c25bf05a0b13827b9d06382c5d384b2e5c88238.tar.gz) = 1880616 bytes
+SHA1 (patch-src_hardnested_hardnested__bf__core__AVX.c) = b80e71ce77710eb0edf9c0767e8478c769a72ca7
+SHA1 (patch-src_hardnested_hardnested__bf__core__AVX2.c) = ea57c0649b581c10c6c2846c1f26297baa462921
+SHA1 (patch-src_hardnested_hardnested__bf__core__AVX512.c) = 007f9cf712dc49bfd531e85230fd039d3d06f88b
+SHA1 (patch-src_hardnested_hardnested__bf__core__SSE2.c) = 7882a60f987b65482d03f26b61a467aaeab319f5
+SHA1 (patch-src_hardnested_hardnested__bitarray__core__AVX.c) = fb22645d586fda91f1b99eff4c9d8e0a01a3046c
+SHA1 (patch-src_hardnested_hardnested__bitarray__core__AVX2.c) = 9140198972565d3ffc5f3f91efac3ef781de9962
+SHA1 (patch-src_hardnested_hardnested__bitarray__core__AVX512.c) = bcfc9c6990b6f3a1cb3cd65d8609b8b32ef6c937
+SHA1 (patch-src_hardnested_hardnested__bitarray__core__SSE2.c) = 05b18c57cea41802f760f322398552800496715c
