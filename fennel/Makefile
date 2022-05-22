@@ -16,6 +16,8 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
+DEPENDS+=	${LUA_BASEDEPENDS}
+
 BUILD_TARGET=	build
 
 # We can't use lang/lua/application.mk's 'REPLACE_LUA' facility because that
@@ -31,4 +33,5 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/lua/application.mk"
+.include "../../lang/lua/tool.mk"
 .include "../../mk/bsd.pkg.mk"
