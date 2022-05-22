@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=antirez/}
 GITHUB_PROJECT=	disque
 GITHUB_TAG=	1.0-rc1
 
-MAINTAINER=	charlotte@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/antirez/disque
 COMMENT=	Distributed message broker
 LICENSE=	modified-bsd
