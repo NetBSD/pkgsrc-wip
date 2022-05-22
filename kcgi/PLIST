@@ -56,6 +56,7 @@ man/man3/khttp_printf.3
 man/man3/khttp_putc.3
 man/man3/khttp_puts.3
 man/man3/khttp_template.3
+man/man3/khttp_templatex.3
 man/man3/khttp_urlabs.3
 man/man3/khttp_urldecode.3
 man/man3/khttp_urlencode.3
