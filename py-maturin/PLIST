@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/maturin
+bin/maturin-${PYVERSSUFFIX}
 ${PYSITELIB}/get_interpreter_metadata.py
 ${PYSITELIB}/get_interpreter_metadata.pyc
 ${PYSITELIB}/get_interpreter_metadata.pyo
