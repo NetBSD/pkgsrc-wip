@@ -2420,6 +2420,8 @@ share/emacs/${PKGVERSION}/lisp/language/lao.el.gz
 share/emacs/${PKGVERSION}/lisp/language/lao.elc
 share/emacs/${PKGVERSION}/lisp/language/misc-lang.el.gz
 share/emacs/${PKGVERSION}/lisp/language/misc-lang.elc
+share/emacs/${PKGVERSION}/lisp/language/philippine.el.gz
+share/emacs/${PKGVERSION}/lisp/language/philippine.elc
 share/emacs/${PKGVERSION}/lisp/language/pinyin.el.gz
 share/emacs/${PKGVERSION}/lisp/language/pinyin.elc
 share/emacs/${PKGVERSION}/lisp/language/romanian.el.gz
@@ -2540,6 +2542,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/philippine.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/philippine.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/programmer-dvorak.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/programmer-dvorak.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/py-punct.el.gz
