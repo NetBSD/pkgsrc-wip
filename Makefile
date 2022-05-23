@@ -141,7 +141,6 @@ SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
 SUBDIR+=	amavis-logwatch
 SUBDIR+=	amazon-ecs-cli
-SUBDIR+=	amfora
 SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amnesia-tdd
 SUBDIR+=	amp-editor
