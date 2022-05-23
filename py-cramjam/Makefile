@@ -1,10 +1,11 @@
 # $NetBSD$
 
-VERSION=	2.5.0.post3
+VERSION=		2.5.0.post3
 PKGVERSION_NOREV=	${VERSION}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		pyrus-cramjam-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-cramjam-${VERSION}
+WHEEL_NAME=		cramjam-2.5.0
 GITHUB_PROJECT=		pyrus-cramjam
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=milesgranger/}
@@ -30,7 +31,7 @@ do-build:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s tests
 
-WHEELFILE= ${WRKSRC}/target/wheels/*.whl
+WHEELFILE=		${WRKSRC}/target/wheels/*.whl
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/wheel.mk"

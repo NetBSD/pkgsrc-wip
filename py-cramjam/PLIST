@@ -1,10 +1,10 @@
 @comment $NetBSD$
-${PYSITELIB}/cramjam-2.5.0.dist-info/INSTALLER
-${PYSITELIB}/cramjam-2.5.0.dist-info/METADATA
-${PYSITELIB}/cramjam-2.5.0.dist-info/RECORD
-${PYSITELIB}/cramjam-2.5.0.dist-info/REQUESTED
-${PYSITELIB}/cramjam-2.5.0.dist-info/WHEEL
-${PYSITELIB}/cramjam-2.5.0.dist-info/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/cramjam/__init__.py
 ${PYSITELIB}/cramjam/__init__.pyc
 ${PYSITELIB}/cramjam/cramjam.so
