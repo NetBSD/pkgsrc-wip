@@ -1,0 +1,5 @@
+MCTcli is a simple tool inspired by MIFARE Classic Tool on Android but in
+command-line (and written in C).
+It's a tool to try to access the content of a MIFARE Classic tag (1K/S50 or
+4K/S70) using libfreefare, libNFC and a device supported by libNFC (tested
+with ACR122U, ASK/LoGO, SCL3711 and PN532-over-USBserial).

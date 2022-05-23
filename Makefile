@@ -2376,6 +2376,7 @@ SUBDIR+=	mcats-iodbc
 SUBDIR+=	mccs
 SUBDIR+=	mce
 SUBDIR+=	mcl
+SUBDIR+=	mctcli
 SUBDIR+=	mcwm
 SUBDIR+=	md4c
 SUBDIR+=	mdadm
