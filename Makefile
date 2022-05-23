@@ -243,7 +243,6 @@ SUBDIR+=	avida2
 SUBDIR+=	avp
 SUBDIR+=	avr-gdb
 SUBDIR+=	avra
-SUBDIR+=	avrdude
 SUBDIR+=	axe
 SUBDIR+=	axel
 SUBDIR+=	axpbox-git
