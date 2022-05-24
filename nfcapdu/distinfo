@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nfcapdu-0.0.1.tar.gz) = f2d3e805af99424763c67358e2fe8be4275c0f8b0a75f96e09dfdd3224df2707
+SHA512 (nfcapdu-0.0.1.tar.gz) = 955c1b8db94a87c16c2f4fe338fc118e0e2827d161c3faba7cded4dc206312d021a1b5fae9f31b5eca4ce8812ef83a85fdb0ed346c3423ddfed026d20c5fab72
+Size (nfcapdu-0.0.1.tar.gz) = 17024 bytes

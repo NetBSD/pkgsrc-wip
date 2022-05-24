@@ -2397,6 +2397,7 @@ SUBDIR+=	meta-tracker
 SUBDIR+=	metal
 SUBDIR+=	metalog
 SUBDIR+=	metasploit
+SUBDIR+=	nfcapdu
 SUBDIR+=	mfoc
 SUBDIR+=	mfoc-hardnested
 SUBDIR+=	mg-cvs

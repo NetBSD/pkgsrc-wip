@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD$
+
+Before using nfcapdu you may want to create and edit the file:
+
+	~/.nfcapdurc
+
+A good start is:
+
+	$ cp ${PREFIX}/share/examples/nfcapdu/nfcapdurc ~/.nfcapdurc
+
+===========================================================================

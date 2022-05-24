@@ -1,0 +1,11 @@
+nfcapdu is a little command line tool to exchange APDUs with an RFID/NFC tag.
+It allows you to create an interactive session to send APDUs to a tag and
+receive responses.
+
+- It supports the creation of aliases (defined in ~/.nfcapdurc) to simplify
+  the sending of common commands
+- APDU history is kept between sessions (in ~/.nfcapdu_history)
+- Have completion for commands and aliases
+- You can set default modulation and baud rate in config file
+  (see nfcapdurc_sample)
+- You can enable or disable colors in config file (see nfcapdurc_sample)
