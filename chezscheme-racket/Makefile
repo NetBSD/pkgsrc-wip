@@ -79,5 +79,6 @@ post-install:
 	${RMDIR} ${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples
 
 .include "../../archivers/lz4/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

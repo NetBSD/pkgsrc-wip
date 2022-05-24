@@ -5,12 +5,13 @@ $NetBSD$
 
 --- src/ChezScheme/c/expeditor.c.orig	2021-10-24 04:17:58.000000000 +0000
 +++ src/ChezScheme/c/expeditor.c
-@@ -541,7 +541,7 @@ static void s_ee_write_char(wchar_t c) {
+@@ -539,9 +539,6 @@ static void s_ee_write_char(wchar_t c) {
+ # define CHTYPE int
+ # include </usr/include/curses.h>
  # include </usr/include/term.h>
- #elif defined(NETBSD)
- # include <ncurses.h>
+-#elif defined(NETBSD)
+-# include <ncurses.h>
 -# include <ncurses/term.h>
-+# include <term.h>
  #else
  # include <curses.h>
  # include <term.h>
