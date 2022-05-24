@@ -93,6 +93,7 @@ SUBDIR+=	accountsservice
 SUBDIR+=	acme-client
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
+SUBDIR+=	actionlint
 SUBDIR+=	actor-framework
 SUBDIR+=	ad2vcf
 SUBDIR+=	ada_gnat
