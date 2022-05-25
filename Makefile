@@ -2528,6 +2528,7 @@ SUBDIR+=	multisync-syncml-moto
 SUBDIR+=	multitail
 SUBDIR+=	mummer4
 SUBDIR+=	munge
+SUBDIR+=	muon
 SUBDIR+=	muparser
 SUBDIR+=	mupen64plus
 SUBDIR+=	mupen64plus-extraplugins
