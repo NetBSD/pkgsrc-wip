@@ -284,7 +284,7 @@ lib/uranium/plugins/UpdateChecker/tests/__init__.py
 lib/uranium/plugins/Views/SimpleView/SimpleView.py
 lib/uranium/plugins/Views/SimpleView/__init__.py
 lib/uranium/plugins/Views/SimpleView/plugin.json
-share/cmake-3.22/Modules/UraniumTranslationTools.cmake
+share/cmake-${CMAKE_API}/Modules/UraniumTranslationTools.cmake
 share/uranium/resources/bundled_packages/uranium.json
 share/uranium/resources/i18n/cs_CZ/LC_MESSAGES/uranium.mo
 share/uranium/resources/i18n/cs_CZ/uranium.po
