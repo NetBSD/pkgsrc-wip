@@ -1,18 +1,9 @@
-# sshping
-measure character-echo latency and bandwidth for an ssh session
+sshping measure character-echo latency and bandwidth for an ssh
+session.
 
-## Description
-
-Use this utility to test the performance of interactive ssh sessions
-or scp file transfers.  It uses ssh to log into a remote system, then
-runs two tests: the first test sends one character at a time, waiting
-for each character to be returned while it records the latency time
-for each.  The second test sends a dummy file over scp to /dev/null
-on the remote system.
-
-For the echo test, you may specify a character count limit (-c) or a test
-time limit (-t), and also the command (-e) used on the remote system that
-echoes characters back.
-
-For the speed test, you may specify the number of megabytes to send (-s)
-and the target location for the copies (-z).
+This utility can be used to test the performance of interactive ssh
+sessions or scp file transfers. It uses ssh to log into a remote
+system, then runs two tests: the first test sends one character at a
+time, waiting for each character to be returned while it records the
+latency time for each. The second test sends a dummy file over scp to
+/dev/null on the remote system.
