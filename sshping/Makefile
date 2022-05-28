@@ -12,5 +12,5 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-.include "../../mk/bsd.pkg.mk"
 .include "../../security/libssh/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
