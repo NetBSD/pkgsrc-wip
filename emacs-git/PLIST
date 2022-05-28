@@ -2404,6 +2404,8 @@ share/emacs/${PKGVERSION}/lisp/language/ind-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/ind-util.elc
 share/emacs/${PKGVERSION}/lisp/language/indian.el.gz
 share/emacs/${PKGVERSION}/lisp/language/indian.elc
+share/emacs/${PKGVERSION}/lisp/language/indonesian.el.gz
+share/emacs/${PKGVERSION}/lisp/language/indonesian.elc
 share/emacs/${PKGVERSION}/lisp/language/japan-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/japan-util.elc
 share/emacs/${PKGVERSION}/lisp/language/japanese.el.gz
@@ -2522,6 +2524,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/hebrew.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/hebrew.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/indian.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/indian.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/indonesian.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/indonesian.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/ipa-praat.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/ipa-praat.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/ipa.el.gz
