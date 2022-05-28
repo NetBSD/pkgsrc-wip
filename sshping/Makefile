@@ -1,0 +1,16 @@
+# $NetBSD$
+
+DISTNAME=	sshping-0.1.4
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GITHUB:=spook/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/spook/sshping/
+COMMENT=	Measure character-echo latency and bandwidth for ssh session
+LICENSE=	mit
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.pkg.mk"
+.include "../../security/libssh/buildlink3.mk"
