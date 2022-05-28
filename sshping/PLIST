@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/sshping
-man/man8/sshping.8
