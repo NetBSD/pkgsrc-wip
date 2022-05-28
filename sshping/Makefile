@@ -3,6 +3,7 @@
 DISTNAME=	sshping-0.1.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spook/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/spook/sshping/
