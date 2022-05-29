@@ -5923,7 +5923,6 @@ SUBDIR+=	weatherman
 SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
 SUBDIR+=	webdump-git
-SUBDIR+=	webkit-gtk
 SUBDIR+=	webkit-gtk4
 SUBDIR+=	wendzelnntpd
 SUBDIR+=	weplab
