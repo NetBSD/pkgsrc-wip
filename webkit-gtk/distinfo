@@ -21,6 +21,7 @@ SHA1 (patch-Source_WTF_wtf_PlatformHave.h) = 56cec19c923ccb6539f2d321abafa1e1677
 SHA1 (patch-Source_WTF_wtf_PlatformOS.h) = 80aa6ff20f10407d447fdb41606d4bb4989351aa
 SHA1 (patch-Source_WTF_wtf_PlatformUse.h) = 595486b48e7d89378208c0a209a121ef136415e6
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
+SHA1 (patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp) = 73b3facb6912411a5767b05b7d7eebdbc9416ebf
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af91386263123046c6615
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 9b323aa1fa8e6e5599ac0a7ae08fbbed4348c70e
 SHA1 (patch-Source_WebCore_crypto_algorithms_CryptoAlgorithmAES__GCM.cpp) = 03337c5eec54d6974dfea1766b14cb2c1b9f7750
