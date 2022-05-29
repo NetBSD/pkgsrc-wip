@@ -1,5 +1,13 @@
 webkit-gtk: Update to 2.36.3
 
+pkgsrc changes:
+ - Remove USE_LD_GOLD option adjustment. The option was removed, if gold is
+   accidentally picked up it should be re-investigate how to re-disable it.
+ - USE_SYSTEMD option is no longer available, switch to ENABLE_JOURNALD_LOG
+   and unconditionally disable it to avoid possible systemd dependencies
+ - ENABLE_OPENGL option is no longer available, switch to USE_OPENGL_OR_ES
+   (not tested)
+
 Changes:
 WebKitGTK 2.36.3
 ================
