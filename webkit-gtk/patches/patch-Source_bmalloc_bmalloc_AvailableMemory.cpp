@@ -2,6 +2,8 @@ $NetBSD$
 
 sysinfo() is used only on FreeBSD and Linux.
 
+Shared upstream via <https://bugs.webkit.org/show_bug.cgi?id=241077>.
+
 --- Source/bmalloc/bmalloc/AvailableMemory.cpp.orig	2022-02-23 08:59:06.000000000 +0000
 +++ Source/bmalloc/bmalloc/AvailableMemory.cpp
 @@ -44,15 +44,16 @@
