@@ -39,10 +39,6 @@ USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 
-# Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
-# versions of ld.gold.
-CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF
-
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk.pc.in
