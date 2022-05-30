@@ -1,0 +1,15 @@
+$NetBSD$
+
+regen
+
+--- doc/Makefile.in.orig	2022-05-07 20:40:53.000000000 +0000
++++ doc/Makefile.in
+@@ -836,7 +836,7 @@ html: avrdude-html/avrdude.html
+ 
+ avrdude-html/avrdude.html: $(srcdir)/$(info_TEXINFOS) $(GENERATED_TEXINFOS)
+ 	texi2html --split=node --css-include=$(srcdir)/avrdude.css $(srcdir)/$(info_TEXINFOS)
+-	if [ -e ./avrdude.html -o -e ./avrdude_1.html ]; then \
++	if [ -f ./avrdude.html -o -f ./avrdude_1.html ]; then \
+ 	 mkdir -p avrdude-html ; \
+ 	 mv -f *.html avrdude-html ; \
+ 	else \
