@@ -1,4 +1,6 @@
 @comment $NetBSD$
 bin/crosswrench
+man/man1/crosswrench.1
 share/doc/crosswrench/LICENSE
 share/doc/crosswrench/LICENSE.libs
+share/doc/crosswrench/crosswrench.1.html
