@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FLNEWS_VERSION=	1.1.0
+FLNEWS_VERSION=	1.1.1pre0
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 TEST_TARGET=	test
 
 # https://reproducible-builds.org/specs/source-date-epoch/
-CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1620580800
+CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1654099540
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
