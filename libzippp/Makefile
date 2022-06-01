@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libzippp-v5.0-1.8.0
+DISTNAME=	libzippp-v5.1-1.8.0
 PKGNAME=	${DISTNAME:C/-[0-9].*//:S,-v,-,}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ctabin/}
