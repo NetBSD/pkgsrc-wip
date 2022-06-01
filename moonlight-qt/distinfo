@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (MoonlightSrc-4.1.0.tar.gz) = a46e7c5a1718a3b03fc9a94d3b61e2eb08f95eb6
+RMD160 (MoonlightSrc-4.1.0.tar.gz) = e80d328c4840ec4c78ac34151be76cd2747d4b76
+SHA512 (MoonlightSrc-4.1.0.tar.gz) = 919d2d47916a75df7db97d1cf24e2062365aec938f7e0f9ce89ec66ca63121998d3254567d11e7a74575a4dcbb598ad532628bddea00550aac405b768dd29cf3
+Size (MoonlightSrc-4.1.0.tar.gz) = 62000096 bytes
+SHA1 (patch-moonlight-qt.pro) = 12f3ae980931eb682e2e8c0c5f4c51ef4ebbd71d
