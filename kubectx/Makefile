@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	bash:run
 
+USE_LANGUAGES=	# none
+
 REPLACE_BASH+=	kubectx
 REPLACE_BASH+=	kubens
 
