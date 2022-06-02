@@ -10,10 +10,17 @@ HOMEPAGE=	https://kubectx.dev/
 COMMENT=	Faster way to switch between clusters and namespaces in kubectl
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN+=	./cmd/kubectx
-GO_BUILD_PATTERN+=	./cmd/kubens
+USE_TOOLS+=	bash:run
 
-.include "go-modules.mk"
+REPLACE_BASH+=	kubectx
+REPLACE_BASH+=	kubens
 
-.include "../../lang/go/go-module.mk"
+INSTALLATION_DIRS=	bin
+
+do-build:
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/kubectx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/kubens ${DESTDIR}${PREFIX}/bin
+
 .include "../../mk/bsd.pkg.mk"
