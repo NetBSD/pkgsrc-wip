@@ -1122,7 +1122,7 @@ share/emacs/${PKGVERSION}/lisp/calendar/calendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.el
-share/emacs/${PKGVERSION}/lisp/calendar/hol-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
@@ -1658,6 +1658,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mode.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/loaddefs-gen.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/loaddefs-gen.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map-ynp.el.gz
@@ -2544,6 +2546,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/latin-pre.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/latin-pre.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/misc-lang.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/misc-lang.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/philippine.el.gz
