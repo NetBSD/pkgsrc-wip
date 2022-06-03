@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix nonportable syntax in "test" command.
+<https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105831>
 
 --- gcc/configure.orig	2022-05-06 07:30:57.000000000 +0000
 +++ gcc/configure
