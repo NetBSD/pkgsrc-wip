@@ -1,0 +1,5 @@
+xml2tsv is a simple xml-to-tsv converter written in C and based on the
+xmlparser library by Hiltjo Posthuma.
+
+The filter reads an XML file from stdin and writes a
+tab-separated-values file on stdout.

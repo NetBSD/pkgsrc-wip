@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (xml2tsv-0.1.tar.gz) = 1ef2c551944e08f85eeca69a4df39c12aebdcacc8d1a96ec096736f884ced376
+SHA512 (xml2tsv-0.1.tar.gz) = 0bdf900bd005f3f64d0d49704ec2026224e0cd61b9cb341322912280cf44ae9577c125816696e0b074f199614bf129361c464288d83e172cffc0d561b8c5e899
+Size (xml2tsv-0.1.tar.gz) = 7193 bytes
