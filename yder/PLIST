@@ -1,0 +1,17 @@
+@comment $NetBSD$
+include/yder-cfg.h
+include/yder.h
+lib/libyder.so
+lib/libyder.so.1.4
+lib/libyder.so.${PKGVERSION}
+lib/pkgconfig/libyder.pc
+share/doc/yder/README.md
+share/doc/yder/examples/.gitignore
+share/doc/yder/examples/Makefile
+share/doc/yder/examples/log_callback.c
+share/doc/yder/examples/log_combined.c
+share/doc/yder/examples/log_console.c
+share/doc/yder/examples/log_file.c
+share/doc/yder/examples/log_journald.c
+share/doc/yder/examples/log_newline.c
+share/doc/yder/examples/log_syslog.c

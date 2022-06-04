@@ -1,0 +1,8 @@
+Logging library written in C.
+
+Simple and easy to use logging library.
+You can log messages to the console, a file,
+syslog or a callback function.
+
+Library documentation is available at
+https://babelouest.github.io/yder/
