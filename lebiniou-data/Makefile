@@ -10,7 +10,8 @@ HOMEPAGE=	https://biniou.net/
 COMMENT=	Datafiles for Le Biniou
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	autoconf automake autoreconf
+USE_TOOLS+=	autoconf automake autoreconf bash
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 pre-configure:
