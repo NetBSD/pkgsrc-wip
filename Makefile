@@ -2725,7 +2725,6 @@ SUBDIR+=	ocserv
 SUBDIR+=	offset
 SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
-SUBDIR+=	ogre
 SUBDIR+=	okteta
 SUBDIR+=	olsrd
 SUBDIR+=	omega
