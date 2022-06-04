@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (ulfius-2.7.10.tar.gz) = 05bcf80d918920b80b85c267b514925dad05a0d06985a858443d1b3dd7067c35
+SHA512 (ulfius-2.7.10.tar.gz) = 7ecbaa6cf4329b12c45a9c8d50c7781327a03de2c9226db371b27b7bcba20738e99b2af26fb845fed74b61a9b6867f984dcee70d1addbf3fe40941537be572e1
+Size (ulfius-2.7.10.tar.gz) = 419473 bytes
+SHA1 (patch-src_ulfius.c) = afc7abaf8a0a8ce7cd601abf5681e4f9c0c68a37

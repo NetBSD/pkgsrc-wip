@@ -5806,6 +5806,7 @@ SUBDIR+=	ufc
 SUBDIR+=	uffizi
 SUBDIR+=	uget
 SUBDIR+=	uhd-git
+SUBDIR+=	ulfius
 SUBDIR+=	umix
 SUBDIR+=	umurmur
 SUBDIR+=	unagi
