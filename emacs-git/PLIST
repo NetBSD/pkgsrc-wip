@@ -3100,6 +3100,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vc-mtn.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/vc-mtn.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vi.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vi.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vip.el.gz
@@ -4032,8 +4034,6 @@ share/emacs/${PKGVERSION}/lisp/vc/vc-hg.el.gz
 share/emacs/${PKGVERSION}/lisp/vc/vc-hg.elc
 share/emacs/${PKGVERSION}/lisp/vc/vc-hooks.el.gz
 share/emacs/${PKGVERSION}/lisp/vc/vc-hooks.elc
-share/emacs/${PKGVERSION}/lisp/vc/vc-mtn.el.gz
-share/emacs/${PKGVERSION}/lisp/vc/vc-mtn.elc
 share/emacs/${PKGVERSION}/lisp/vc/vc-rcs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc/vc-rcs.elc
 share/emacs/${PKGVERSION}/lisp/vc/vc-sccs.el.gz
