@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	orcania
+
+.if !defined(ORCANIA_BUILDLINK3_MK)
+ORCANIA_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.orcania+=	orcania>=2.3.0
+BUILDLINK_PKGSRCDIR.orcania?=	../../wip/orcania
+.endif	# ORCANIA_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-orcania

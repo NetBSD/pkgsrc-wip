@@ -2796,6 +2796,7 @@ SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	oranchelo-icon-theme
 SUBDIR+=	orbifolder
+SUBDIR+=	orcania
 SUBDIR+=	org-caldav-git
 SUBDIR+=	orion
 SUBDIR+=	orocos-kdl

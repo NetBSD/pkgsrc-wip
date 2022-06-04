@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (orcania-2.3.0.tar.gz) = 0f7a038663d928923b958172f4a6ef4a1fe555054ed9fc5fa14607c68464145b
+SHA512 (orcania-2.3.0.tar.gz) = dfaa67b83569d22d5ceeabc2e7d7ef2a035aa9ac79576ea5bd1425eb8962bef85a54cbfc21ab768e15e2ac874d695b00a477c6ffef544ba5adab31e460e31393
+Size (orcania-2.3.0.tar.gz) = 66940 bytes
