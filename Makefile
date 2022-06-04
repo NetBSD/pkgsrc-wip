@@ -2017,6 +2017,7 @@ SUBDIR+=	ldc017
 SUBDIR+=	ldc120
 SUBDIR+=	lde
 SUBDIR+=	ldtp
+SUBDIR+=	lebiniou
 SUBDIR+=	lebiniou-data
 SUBDIR+=	lemonbar-xft
 SUBDIR+=	leo

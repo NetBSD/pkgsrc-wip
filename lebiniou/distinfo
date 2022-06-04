@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (lebiniou-version-3.66.0.tar.gz) = f79b61c8cd611d914e1f1a64d86785b33cc4611d09061e580a1eae386bc49a8f
+SHA512 (lebiniou-version-3.66.0.tar.gz) = 62bfbb693860b30c34730f76a079528e0d3e22889392b84b9485ca2fc2f380f9d1f616aac5baf2d614b4138206bea324340f0ded48ba5e9cd1bb7df010bcc2f9
+Size (lebiniou-version-3.66.0.tar.gz) = 482531 bytes
+SHA1 (patch-src_bulfius__get__frame.c) = 944efc77ba65c0dd8b5d812ac875d103ba6aa8b0
+SHA1 (patch-src_bulfius__preview.c) = ce9d354e5b86868520d1ae060a0234c8592903f4
+SHA1 (patch-src_context__new__delete.c) = 8fb7e1027b0fe404f9a3f8afb5ce51e90344a462
+SHA1 (patch-src_screenshot.c) = 3271f79fa94cb795608208dd3119f171dd541357
