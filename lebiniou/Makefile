@@ -15,6 +15,7 @@ USE_TOOLS+=	autoconf automake autoreconf pkg-config
 GNU_CONFIGURE=	yes
 
 DEPENDS+=	lebiniou-data>=3.66.0:../../wip/lebiniou-data
+DEPENDS+=	xdg-utils>=1.1.3:../../misc/xdg-utils
 
 pre-configure:
 	set -e; cd ${WRKSRC} && ./bootstrap
