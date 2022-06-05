@@ -10,6 +10,7 @@ HOMEPAGE=	https://biniou.net/
 COMMENT=	User-friendly, powerful music visualization / VJing tool
 LICENSE=	gnu-gpl-v2
 
+USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake autoreconf pkg-config
 GNU_CONFIGURE=	yes
 
