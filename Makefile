@@ -568,6 +568,7 @@ SUBDIR+=	csv-mode
 SUBDIR+=	csv2
 SUBDIR+=	ctags-git
 SUBDIR+=	cubature
+SUBDIR+=	cuelang
 SUBDIR+=	cufflinks
 SUBDIR+=	cufflinks-2.2.1
 SUBDIR+=	cup
