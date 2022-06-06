@@ -92,6 +92,7 @@ include/gnunet/gnunet_datacache_plugin.h
 include/gnunet/gnunet_datastore_plugin.h
 include/gnunet/gnunet_datastore_service.h
 include/gnunet/gnunet_db_lib.h
+include/gnunet/gnunet_dht_block_types.h
 include/gnunet/gnunet_dht_service.h
 include/gnunet/gnunet_dhtu_plugin.h
 include/gnunet/gnunet_disk_lib.h
