@@ -3815,7 +3815,6 @@ SUBDIR+=	py-fatiando
 SUBDIR+=	py-fcn
 SUBDIR+=	py-fcsparser
 SUBDIR+=	py-fdasrsf
-SUBDIR+=	py-fdm
 SUBDIR+=	py-fealty
 SUBDIR+=	py-fedmsg
 SUBDIR+=	py-fermilab
