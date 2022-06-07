@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.pymol.org/
 COMMENT=	Molecular Visualization System
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-Pmw-[0-9]*:../../x11/py-Pmw
+#DEPENDS+=	${PYPKGPREFIX}-Pmw-[0-9]*:../../x11/py-Pmw
 
 CONFLICTS=		pymol-[0-9]*
 
