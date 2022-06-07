@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	wireguard-go-0.0.20200320
+DISTNAME=	wireguard-go-0.0.20220316
 CATEGORIES=	net
 MASTER_SITES=	https://git.zx2c4.com/wireguard-go/snapshot/
 EXTRACT_SUFX=	.tar.xz
@@ -9,8 +9,6 @@ MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://www.wireguard.com/
 COMMENT=	Implementation of WireGuard in Go
 LICENSE=	mit
-
-#DEPENDS+=	wireguard-tools>=1.0.20200827:../../net/wireguard-tools
 
 INSTALLATION_DIRS+=	bin
 
