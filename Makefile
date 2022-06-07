@@ -4310,7 +4310,6 @@ SUBDIR+=	py-pam
 SUBDIR+=	py-pandera
 SUBDIR+=	py-pandoc
 SUBDIR+=	py-panel
-SUBDIR+=	py-papy
 SUBDIR+=	py-papyon
 SUBDIR+=	py-papyros
 SUBDIR+=	py-paragram
