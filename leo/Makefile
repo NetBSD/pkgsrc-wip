@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leo/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://leo.sourceforge.net/
+HOMEPAGE=		http://leoeditor.com/
 COMMENT=		Programmer's editor and a flexible browser
 
 DEPENDS+=		${PYPKGPREFIX}-docutils>=0.3.9:../../textproc/py-docutils
