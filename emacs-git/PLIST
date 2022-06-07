@@ -764,6 +764,8 @@ share/emacs/${PKGVERSION}/etc/images/tree-widget/default/no-guide.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/no-guide.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/no-handle.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/no-handle.xpm
+share/emacs/${PKGVERSION}/etc/images/tree-widget/default/nohandle-guide.png
+share/emacs/${PKGVERSION}/etc/images/tree-widget/default/nohandle-guide.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/open.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/open.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/README
@@ -783,6 +785,8 @@ share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/no-guide.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/no-guide.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/no-handle.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/no-handle.xpm
+share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/nohandle-guide.png
+share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/nohandle-guide.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/open.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/folder/open.xpm
 share/emacs/${PKGVERSION}/etc/images/unchecked.pbm
@@ -1638,6 +1642,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/float-sup.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/generate-lisp-file.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/generate-lisp-file.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generator.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generator.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/generic.el.gz
@@ -2217,7 +2223,6 @@ share/emacs/${PKGVERSION}/lisp/hippie-exp.el.gz
 share/emacs/${PKGVERSION}/lisp/hippie-exp.elc
 share/emacs/${PKGVERSION}/lisp/hl-line.el.gz
 share/emacs/${PKGVERSION}/lisp/hl-line.elc
-share/emacs/${PKGVERSION}/lisp/htmlfontify-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/htmlfontify.el.gz
 share/emacs/${PKGVERSION}/lisp/htmlfontify.elc
 share/emacs/${PKGVERSION}/lisp/ibuf-ext.el.gz
