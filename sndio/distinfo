@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (sndio-1.8.1.tar.gz) = 906ef717710f5d7b20b367a49f69a11ef231ebb2c0f8d0146ef608a0056cf087
 SHA512 (sndio-1.8.1.tar.gz) = 4affeac5758768f9ebf7d823b8d2287695ff02bb4a990474412ab96cb8eef3784c19436a130efb4f7a204193ad479c0086f9bff7b3ac69e6077692dffaa62658
 Size (sndio-1.8.1.tar.gz) = 155821 bytes
+SHA1 (patch-configure) = bded644c4bc5b7b38c1526ee01494fa4cda2fe10
