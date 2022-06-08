@@ -16,6 +16,7 @@ SUBDIR+=	CuraEngine
 SUBDIR+=	ETL
 SUBDIR+=	FLIF
 SUBDIR+=	FLIF-git
+SUBDIR+=	GenericRepeatFinder
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSAlign
 SUBDIR+=	GSCommander

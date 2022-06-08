@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (GenericRepeatFinder-1.0.tar.gz) = b2c7bb02748cf71d93a79aab2e79e5fd575fe7c2393002732e0010b4b96516e3
+SHA512 (GenericRepeatFinder-1.0.tar.gz) = 228ec68ee724fe97584690e9c13433659d28575e4dbbba7d22847312f4e53d1043cec7d9d8d5b98ebf23464fa4b0ce65392f02bb9c82b6a4427b27aa41e8b27b
+Size (GenericRepeatFinder-1.0.tar.gz) = 4327498 bytes
+SHA1 (patch-src_Makefile) = a8caa0ca08cf836f754426cce4837958dbcf6f00

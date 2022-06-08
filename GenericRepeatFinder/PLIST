@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/grf-alignment
+bin/grf-alignment2
+bin/grf-dbn
+bin/grf-filter
+bin/grf-intersperse
+bin/grf-main
+bin/grf-mite-cluster
+bin/grf-nest
+bin/ltr_finder
+share/doc/GenericRepeatFinder/QuickGuideForReviewer.txt
+share/doc/GenericRepeatFinder/readme.txt

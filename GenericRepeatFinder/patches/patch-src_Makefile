@@ -1,0 +1,14 @@
+$NetBSD$
+
+Handle OpenMP on Darwin, where native clang does not support -fopenmp.
+See https://mac.r-project.org/openmp/.
+
+--- src/Makefile.orig	2019-05-19 02:52:11.000000000 +0000
++++ src/Makefile
+@@ -1,5 +1,5 @@
+ # Define required macros here
+-CFLAGS = -Wall -std=c++11 -O3 -fopenmp
++CFLAGS = -Wall -std=c++11 -O3 ${OPENMP_CFLAGS}
+ CC = g++
+ INCLUDES = -Igrf-main -Igrf-intersperse -Igrf-mite-cluster
+ 

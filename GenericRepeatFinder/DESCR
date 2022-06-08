@@ -1,0 +1,4 @@
+Generic Repeat Finder (GRF) is a C++ program package for detecting
+terminal inverted repeats (TIRs), terminal direct repeats (TDRs),
+interspersed repeats, miniature inverted repeat transposable elements
+(MITEs), and long terminal repeat (LTR) transposons in genomes.
