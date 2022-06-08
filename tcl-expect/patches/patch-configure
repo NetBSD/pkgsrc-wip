@@ -6,7 +6,7 @@ $NetBSD$
 # emailed Upstream September 2019
 
 --- configure.orig      2018-02-04 03:43:58.000000000 +0000
-+++ configure   2022-05-04 06:19:11.616282008 +0000
++++ configure	2022-06-08 07:03:02.940051201 -0600
 @@ -6941,6 +6941,52 @@
  	    LD_SEARCH_FLAGS=""
  	    ;;
@@ -60,31 +60,24 @@ $NetBSD$
  	    if test "$GCC" = yes; then :
  
  		SHLIB_CFLAGS="-fPIC -melf"
-@@ -7150,7 +7196,7 @@
- 	    BSD/OS*) ;;
- 	    CYGWIN_*) ;;
- 	    IRIX*) ;;
--	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
-+	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*|MirBSD-*) ;;
- 	    Darwin-*) ;;
- 	    SCO_SV-3.2*) ;;
- 	    windows) ;;
-@@ -9597,14 +9643,7 @@
+@@ -9597,14 +9643,9 @@
  
  PACKAGE_VERSION_NODOTS="`echo $PACKAGE_VERSION | sed -e 's/\.//g'`"
  
 -if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
 -    EXP_LIB_VERSION=$PACKAGE_VERSION
 -else
-     EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
+-    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
 -if test $iunix -eq 1 ; then
--    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
++# taken from the pervious pkgsrc tcl-expect 
++
+     EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
  
  # also remove dots on systems that don't support filenames > 14
  # (are there systems which support shared libs and restrict filename lengths!?)
-@@ -9659,11 +9698,7 @@
+@@ -9659,11 +9700,8 @@
      $as_echo "#define EXP_FRAMEWORK 1" >>confdefs.h
  
  else
@@ -93,24 +86,27 @@ $NetBSD$
 -    else
 -        EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
 -    fi
++# taken from the previous tcl-expect
 +    EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
      EXP_BUILD_LIB_SPEC="-L`pwd` ${EXP_LIB_FLAG}"
      EXP_LIB_SPEC="-L${libdir} ${EXP_LIB_FLAG}"
  fi
-@@ -9965,6 +10000,9 @@
+@@ -9965,6 +10003,10 @@
      # substituted. (@@@ Might not be necessary anymore)
      #--------------------------------------------------------------------
  
++    # taken from the previous pkgsrc tcl-expect
 +    PVNODOTS=`echo ${PACKAGE_VERSION} | tr -d .`
 +    SHARED_LIB_SUFFIX=${PVNODOTS}.so
 +    UNSHARED_LIB_SUFFIX=${PVNODOTS}.a
      if test "${TEA_PLATFORM}" = "windows" ; then
  	if test "${SHARED_BUILD}" = "1" ; then
  	    # We force the unresolved linking of symbols that are really in
-@@ -10711,6 +10749,10 @@
+@@ -10711,6 +10753,11 @@
    case $ac_option in
    # Handling of the options.
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # taken from the previous pkgsrc tcl-expect
 +	: Avoid regenerating within pkgsrc
 +	exit 0
 +	: Avoid regenerating within pkgsrc
