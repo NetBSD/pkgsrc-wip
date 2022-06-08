@@ -6,8 +6,12 @@ $NetBSD$
 # Emailed Upstream September 2019
 
 --- tclconfig/tcl.m4.orig	2018-02-04 06:55:43.000000000 +0000
-+++ tclconfig/tcl.m4	2022-04-30 09:18:53.837696001 +0000
-@@ -1817,16 +1817,42 @@
++++ tclconfig/tcl.m4	2022-06-07 08:37:43.412809932 -0600
+@@ -1814,19 +1814,47 @@
+ 	    LD_SEARCH_FLAGS=""
+ 	    ;;
+ 	SCO_SV-3.2*)
++	    # fix SCO OpenServer 5 linking with gcc
  	    AS_IF([test "$GCC" = yes], [
  		SHLIB_CFLAGS="-fPIC -melf"
  		LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
@@ -24,6 +28,7 @@ $NetBSD$
  	    LD_SEARCH_FLAGS=""
  	    ;;
 +       UnixWare-5*|SCO_SV-5*)
++	    # Add UnixWare 
 +            # -Kthread will define _REENTRANT
 +            AS_IF([test "$GCC" = yes], [
 +                SHLIB_CFLAGS="-fPIC"
@@ -51,25 +56,34 @@ $NetBSD$
  	SunOS-5.[[0-6]])
  	    # Careful to not let 5.10+ fall into this case
  
-@@ -1968,9 +1994,10 @@
- 	    BSD/OS*) ;;
- 	    CYGWIN_*) ;;
- 	    IRIX*) ;;
--	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
-+	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*|MirBSD-*) ;;
+@@ -1961,6 +1989,7 @@
+     # If we're running gcc, then change the C flags for compiling shared
+     # libraries to the right flags for gcc, instead of those for the
+     # standard manufacturer compiler.
++    # Add UnixWare to the list of $systems needing -fPIC
+ 
+     AS_IF([test "$GCC" = yes], [
+ 	case $system in
+@@ -1971,6 +2000,7 @@
+ 	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
 +	    UnixWare-5*|SCO_SV-3.5*) ;;
  	    windows) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
  	esac])
-@@ -3212,6 +3239,9 @@
-     # substituted. (@@@ Might not be necessary anymore)
-     #--------------------------------------------------------------------
- 
-+    PVNODOTS=`echo ${PACKAGE_VERSION} | tr -d .`
-+    SHARED_LIB_SUFFIX=${PVNODOTS}.so
-+    UNSHARED_LIB_SUFFIX=${PVNODOTS}.a
-     if test "${TEA_PLATFORM}" = "windows" ; then
- 	if test "${SHARED_BUILD}" = "1" ; then
- 	    # We force the unresolved linking of symbols that are really in
+ 	    AS_IF([test "$GCC" = yes], [
+ 		SHLIB_CFLAGS="-fPIC -melf"
+ 		LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
++	        SHLIB_LD="gcc"
+ 	    ], [
+ 	       SHLIB_CFLAGS="-Kpic -belf"
+ 	       LDFLAGS="$LDFLAGS -belf -Wl,-Bexport"
+-	    ])
+ 	    SHLIB_LD="ld -G"
++	    ])
+ 	    SHLIB_LD_LIBS=""
+ 	    SHLIB_SUFFIX=".so"
+ 	    CC_SEARCH_FLAGS=""
+ 	    LD_SEARCH_FLAGS=""
+ 	    ;;
