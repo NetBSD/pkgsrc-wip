@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	fstrcmp
+
+.if !defined(FSTRCMP_BUILDLINK3_MK)
+FSTRCMP_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.fstrcmp+=	fstrcmp>=0.7.D001
+BUILDLINK_DEPMETHOD.fstrcmp?=	build
+BUILDLINK_PKGSRCDIR.fstrcmp?=	../../wip/fstrcmp
+.endif	# FSTRCMP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-fstrcmp

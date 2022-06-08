@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/fstrcmp
+include/fstrcmp.h
+lib/libfstrcmp.la
+lib/pkgconfig/fstrcmp.pc
+man/man1/fstrcmp.1
+man/man1/fstrcmp_license.1
+man/man3/fmemcmp.3
+man/man3/fmemcmpi.3
+man/man3/fstrcasecmp.3
+man/man3/fstrcasecmpi.3
+man/man3/fstrcmp.3
+man/man3/fstrcmpi.3
+man/man3/fstrcoll.3
+man/man3/fstrcolli.3
+man/man3/fwcscmp.3
+man/man3/fwcscmpi.3
+share/doc/fstrcmp/building.pdf
+share/doc/fstrcmp/readme.pdf
+share/doc/fstrcmp/reference.pdf
