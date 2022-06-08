@@ -1,3 +1,8 @@
 @comment $NetBSD$
-include/guid.h
-lib/libcrossguid.so
+include/crossguid/guid.hpp
+lib/libcrossguid.a
+lib/pkgconfig/crossguid.pc
+share/crossguid/LICENSE
+share/crossguid/README.md
+share/crossguid/cmake/crossguid-config-release.cmake
+share/crossguid/cmake/crossguid-config.cmake

@@ -1,4 +1,5 @@
 # $NetBSD$
+
 BUILDLINK_TREE+=	crossguid
 
 .if !defined(CROSSGUID_BUILDLINK3_MK)

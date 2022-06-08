@@ -1,32 +1,18 @@
 # $NetBSD: Makefile,v 1.1 2017/01/30 14:16:42 mef Exp $
 
-# no Release yet
-GIT_COMMIT=	fef89a4174a7bf8cd99fa9154864ce9e8e3bf989
-DISTNAME=	master
-DIST_SUBDIR=	crossguid
-PKGNAME=	crossguid-0.0_pre20160908
+DISTNAME=	crossguid-0.2.2.52
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=/graeme-hill/crossguid/archive/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=graeme-hill/}
+GITHUB_TAG=	ca1bf4b810e2d188d04cb6286f957008ee1b7681
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/graeme-hill/crossguid
-COMMENT=	C++ GUID library
-LICENSE=	mit
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://github.com/graeme-hill/crossguid
+COMMENT=		C++ GUID library
+LICENSE=		mit
 
-WRKSRC=		${WRKDIR}/crossguid-master
-
-USE_LANGUAGES=	c++11
-
-INSTALLATION_DIRS+=	lib include
-
-do-build:
-	cd ${WRKSRC} && \
-	${CXX} guid.cpp -DGUID_LIBUUID -fPIC -shared -o libcrossguid.so
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/guid.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_LIB} ${WRKSRC}/libcrossguid.so ${DESTDIR}${PREFIX}/lib
+USE_LANGUAGES=	c++17 c
+USE_CMAKE=	yes
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
