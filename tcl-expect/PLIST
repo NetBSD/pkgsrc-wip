@@ -28,7 +28,7 @@ include/tcldbg.h
 lib/libexpect${SONUM}.a
 lib/libexpect${SONUM}.so
 lib/libexpect5454.so.@SHLIB_VERSION@
-lib/tcl/expect${BASEVER}/libexpect${SONUM}.so
+lib/tcl/expect${BASEVER}/libexpect5454.so
 lib/tcl/expect${BASEVER}/pkgIndex.tcl
 man/man1/autoexpect.1
 man/man1/cryptdir.1
