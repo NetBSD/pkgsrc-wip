@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2013/10/01 20:25:20 wongk Exp $
 
-BLAKE2s (sabnzbd-3.5.3.tar.gz) = 771e2cc330fb1fdca34529e907625a820f321d2080a835f3c3748669e53ee0a4
-SHA512 (sabnzbd-3.5.3.tar.gz) = e27d7ef8e6346ddaa89906aa8025170efca5a4e550528dee0073a817e6d559ee8a8c384ac796efa34152c77929b884fc2c2b2b9e6c6389459f579edfe52836ab
-Size (sabnzbd-3.5.3.tar.gz) = 7132321 bytes
+BLAKE2s (sabnzbd-3.6.0.tar.gz) = 26723cfe8f4a1177e69c76be5f247f5b01e5a1daa73bde83bd66f54aadcc9185
+SHA512 (sabnzbd-3.6.0.tar.gz) = efc3cd8db9bfb7ee98de7975e4068b709481471b6fffade75a5c32814bb2b3cf144931b773b07ea8642944b091382e01a730494d58a01d4246cbadb440ee8b4d
+Size (sabnzbd-3.6.0.tar.gz) = 9350426 bytes
 SHA1 (patch-SABnzbd.py) = 33019b1b87cc81cea38f3b0c68a27ca37807aaa4

@@ -2,8 +2,7 @@
 
 DISTNAME=		sabyenc3-${DISTVERSION}
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-#DISTVERSION=		3.3.5
-DISTVERSION=		4.0.2
+DISTVERSION=		5.4.2
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_GITHUB:=sabnzbd/}
 GITHUB_PROJECT=		sabyenc
@@ -14,7 +13,7 @@ HOMEPAGE=	https://sabnzbd.org/
 COMMENT=	yEnc decoding library
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd AND mit
 
-USE_LANGUAGES+=	c
+USE_LANGUAGES+=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (sabyenc3-4.0.2.tar.gz) = 4d6880797f438c0bc355175ef76e2c2dd0ace8b4
-SHA512 (sabyenc3-4.0.2.tar.gz) = 88e8b47b1438ca55b51dbf8a407c33ec335f0604abf8a3dcbc45853b6dadadf9932d97cf3f0adabd71a9405e2deaeff2777483d9ea692c9d3cbab99dfbfbc901
-Size (sabyenc3-4.0.2.tar.gz) = 19579235 bytes
+BLAKE2s (sabyenc3-5.4.2.tar.gz) = d376562ff42625bd8bf410bc204293750716ce865933ddabbfd3fca2e7e41f79
+SHA512 (sabyenc3-5.4.2.tar.gz) = a07a57e6b3416e147fcef4f27e52fea4b3a522ebb722b4d223469b63e9d08f42689950d86c544a41bfe81bba934514a43094c13b98aa585167cae69a5aa1f405
+Size (sabyenc3-5.4.2.tar.gz) = 19774424 bytes

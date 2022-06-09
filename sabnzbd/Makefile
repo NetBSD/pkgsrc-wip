@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.6 2015/02/04 10:10:53 thomasklausner Exp $
 
 DISTNAME=	sabnzbd-${DISTVERSION}
-DISTVERSION=	3.5.3
-PKGREVISION=	1
+DISTVERSION=	3.6.0
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sabnzbd/}
 GITHUB_PROJECT=	sabnzbd
@@ -16,7 +15,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND modified-bsd AND mit
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-sabyenc3-[0-9]*:../../wip/py-sabyenc3
+DEPENDS+=	${PYPKGPREFIX}-sabyenc3>=5.4.2:../../wip/py-sabyenc3
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
@@ -43,8 +42,6 @@ PKG_HOME.sabnzbd=	${PREFIX}/sabnzbd
 
 OWN_DIRS_PERMS=	${PREFIX}/sabnzbd sabnzbd sabnzbd 0755
 
-INSTALLATION_DIRS+=	email icons interfaces po sabnzbd scripts tools
-
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 
@@ -60,7 +57,7 @@ do-install:
 	${MKDIR} ${DESTDIR}/${PREFIX}/${PYSITELIB}/
 	cd ${WRKSRC} && pax -rw -pmp sabnzbd ${DESTDIR}/${PREFIX}/${PYSITELIB}/
 	${MKDIR} ${DESTDIR}/${PREFIX}/share/sabnzbd
-.for i in ${INSTALLATION_DIRS}
+.for i in email icons interfaces po scripts tools
 	cd ${WRKSRC} && pax -rw -pmp ${i} ${DESTDIR}/${PREFIX}/share/sabnzbd
 .endfor
 	cd ${.CURDIR}/files && pax -rw -pmp sabnzbd.xml ${DESTDIR}/${PREFIX}/share/sabnzbd

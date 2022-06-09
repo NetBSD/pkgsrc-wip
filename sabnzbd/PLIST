@@ -33,7 +33,6 @@ ${PYSITELIB}/sabnzbd/panic.py
 ${PYSITELIB}/sabnzbd/par2file.py
 ${PYSITELIB}/sabnzbd/postproc.py
 ${PYSITELIB}/sabnzbd/powersup.py
-${PYSITELIB}/sabnzbd/rating.py
 ${PYSITELIB}/sabnzbd/rss.py
 ${PYSITELIB}/sabnzbd/sabtray.py
 ${PYSITELIB}/sabnzbd/sabtraylinux.py
@@ -227,69 +226,6 @@ share/sabnzbd/po/nsis/sr.po
 share/sabnzbd/po/nsis/sv.po
 share/sabnzbd/po/nsis/zh_CN.po
 share/sabnzbd/sabnzbd.xml
-share/sabnzbd/sabnzbd/__init__.py
-share/sabnzbd/sabnzbd/api.py
-share/sabnzbd/sabnzbd/articlecache.py
-share/sabnzbd/sabnzbd/assembler.py
-share/sabnzbd/sabnzbd/bpsmeter.py
-share/sabnzbd/sabnzbd/cfg.py
-share/sabnzbd/sabnzbd/config.py
-share/sabnzbd/sabnzbd/constants.py
-share/sabnzbd/sabnzbd/database.py
-share/sabnzbd/sabnzbd/decoder.py
-share/sabnzbd/sabnzbd/decorators.py
-share/sabnzbd/sabnzbd/deobfuscate_filenames.py
-share/sabnzbd/sabnzbd/directunpacker.py
-share/sabnzbd/sabnzbd/dirscanner.py
-share/sabnzbd/sabnzbd/downloader.py
-share/sabnzbd/sabnzbd/emailer.py
-share/sabnzbd/sabnzbd/encoding.py
-share/sabnzbd/sabnzbd/filesystem.py
-share/sabnzbd/sabnzbd/getipaddress.py
-share/sabnzbd/sabnzbd/interface.py
-share/sabnzbd/sabnzbd/lang.py
-share/sabnzbd/sabnzbd/misc.py
-share/sabnzbd/sabnzbd/newsunpack.py
-share/sabnzbd/sabnzbd/newswrapper.py
-share/sabnzbd/sabnzbd/notifier.py
-share/sabnzbd/sabnzbd/nzbparser.py
-share/sabnzbd/sabnzbd/nzbqueue.py
-share/sabnzbd/sabnzbd/nzbstuff.py
-share/sabnzbd/sabnzbd/osxmenu.py
-share/sabnzbd/sabnzbd/panic.py
-share/sabnzbd/sabnzbd/par2file.py
-share/sabnzbd/sabnzbd/postproc.py
-share/sabnzbd/sabnzbd/powersup.py
-share/sabnzbd/sabnzbd/rating.py
-share/sabnzbd/sabnzbd/rss.py
-share/sabnzbd/sabnzbd/sabtray.py
-share/sabnzbd/sabnzbd/sabtraylinux.py
-share/sabnzbd/sabnzbd/scheduler.py
-share/sabnzbd/sabnzbd/skintext.py
-share/sabnzbd/sabnzbd/sorting.py
-share/sabnzbd/sabnzbd/urlgrabber.py
-share/sabnzbd/sabnzbd/utils/__init__.py
-share/sabnzbd/sabnzbd/utils/apireg.py
-share/sabnzbd/sabnzbd/utils/certgen.py
-share/sabnzbd/sabnzbd/utils/checkdir.py
-share/sabnzbd/sabnzbd/utils/diskspeed.py
-share/sabnzbd/sabnzbd/utils/file_extension.py
-share/sabnzbd/sabnzbd/utils/getperformance.py
-share/sabnzbd/sabnzbd/utils/happyeyeballs.py
-share/sabnzbd/sabnzbd/utils/internetspeed.py
-share/sabnzbd/sabnzbd/utils/kronos.py
-share/sabnzbd/sabnzbd/utils/pathbrowser.py
-share/sabnzbd/sabnzbd/utils/pybonjour.py
-share/sabnzbd/sabnzbd/utils/pystone.py
-share/sabnzbd/sabnzbd/utils/rarfile.py
-share/sabnzbd/sabnzbd/utils/rarvolinfo.py
-share/sabnzbd/sabnzbd/utils/servertests.py
-share/sabnzbd/sabnzbd/utils/sleepless.py
-share/sabnzbd/sabnzbd/utils/ssdp.py
-share/sabnzbd/sabnzbd/utils/systrayiconthread.py
-share/sabnzbd/sabnzbd/version.py
-share/sabnzbd/sabnzbd/zconfig.py
-share/sabnzbd/scripts/Deobfuscate.py
 share/sabnzbd/scripts/Sample-PostProc.cmd
 share/sabnzbd/scripts/Sample-PostProc.py
 share/sabnzbd/scripts/Sample-PostProc.sh
@@ -297,10 +233,3 @@ share/sabnzbd/tools/extract_pot.py
 share/sabnzbd/tools/make_mo.py
 share/sabnzbd/tools/msgfmt.py
 share/sabnzbd/tools/pygettext.py
-@pkgdir tools
-@pkgdir scripts
-@pkgdir sabnzbd
-@pkgdir po
-@pkgdir interfaces
-@pkgdir icons
-@pkgdir email
