@@ -1,20 +1,21 @@
 $NetBSD: patch-Makefile.in,v 1.4 2018/08/27 07:12:08 wiz Exp $
 
-New Makefile.in patch, no libtool
+New Makefile.in patch, no libtool taken from Original pkgsrc Makefil.in patches
 
---- Makefile.in.orig	2010-09-30 17:14:07.000000000 +0000
-+++ Makefile.in
-@@ -99,7 +99,9 @@ PKG_HEADERS	= @PKG_HEADERS@
+--- Makefile.in.orig	2018-02-02 12:15:52.000000000 -0700
++++ Makefile.in	2022-06-09 06:35:29.261652426 -0600
+@@ -99,7 +99,10 @@
  # configuration options) composed of the named objects.
  #========================================================================
  
-+SHLIB_VERSION	= .@SHLIB_VERSION@
++# Add a SHLIB_VERSION because it is not defined
++SHLIB_VERSION	= .1.0
  PKG_LIB_FILE	= @PKG_LIB_FILE@
 +PKG_LIB_A_FILE  = ${PKG_LIB_FILE:.so=.a}
  PKG_STUB_LIB_FILE = @PKG_STUB_LIB_FILE@
  
  lib_BINARIES	= $(PKG_LIB_FILE)
-@@ -121,9 +123,9 @@ includedir	= @includedir@
+@@ -121,9 +124,9 @@
  DESTDIR		=
  
  PKG_DIR		= $(PACKAGE_NAME)$(PACKAGE_VERSION)
@@ -27,7 +28,7 @@ New Makefile.in patch, no libtool
  
  top_builddir	= .
  
-@@ -149,7 +151,7 @@ RANLIB		= @RANLIB@
+@@ -149,7 +152,7 @@
  RANLIB_STUB	= @RANLIB_STUB@
  SHLIB_CFLAGS	= @SHLIB_CFLAGS@
  SHLIB_LD	= @SHLIB_LD@
@@ -36,7 +37,7 @@ New Makefile.in patch, no libtool
  STLIB_LD	= @STLIB_LD@
  TCL_DEFS	= @TCL_DEFS@
  TCL_BIN_DIR	= @TCL_BIN_DIR@
-@@ -214,10 +216,15 @@ all: binaries libraries doc
+@@ -214,10 +217,15 @@
  # of the Makefile, in the "BINARIES" variable.
  #========================================================================
  
@@ -53,7 +54,7 @@ New Makefile.in patch, no libtool
  doc:
  
  install: all install-binaries install-libraries install-doc
-@@ -547,6 +554,9 @@ install-lib-binaries:
+@@ -547,6 +555,9 @@
  	    fi; \
  	  fi; \
  	done
@@ -63,7 +64,7 @@ New Makefile.in patch, no libtool
  	@list='$(PKG_TCL_SOURCES)'; for p in $$list; do \
  	  if test -f $(srcdir)/$$p; then \
  	    destp=`basename $$p`; \
-@@ -554,9 +564,11 @@ install-lib-binaries:
+@@ -554,9 +565,11 @@
  	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pkglibdir)/$$destp; \
  	  fi; \
  	done
