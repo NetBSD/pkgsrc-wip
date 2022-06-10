@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	openvdb-${PKGVERSION}
-PKGVERSION=	8.1.0
+PKGVERSION=	9.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	openvdb
