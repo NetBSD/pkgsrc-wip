@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (v1.0.0-beta.2.tar.gz) = 1852a7f7963978ea6b80d47a915fe0da868bb91f8d9830056dfc6ea1b3303165
+SHA512 (v1.0.0-beta.2.tar.gz) = c2cd5a4b442bcff1dd2c1c054ee79c4cb131dce28d811dcd3476164d6cb7e88e6b317a094b16f227564a1266708ef0cfeca2af0929c00a19497cf1b67c647cf2
+Size (v1.0.0-beta.2.tar.gz) = 2238224 bytes

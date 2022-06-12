@@ -1980,6 +1980,7 @@ SUBDIR+=	kontactinterface
 SUBDIR+=	korganizer
 SUBDIR+=	krename
 SUBDIR+=	kronometer
+SUBDIR+=	ksh93u+
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
