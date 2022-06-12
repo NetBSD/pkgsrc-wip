@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (basic-stats-0.1.1.tar.gz) = 2264e25f45c601b5eb864b9c4007dabc98647ca87aa99ad197e6ac433c283b3f
-SHA512 (basic-stats-0.1.1.tar.gz) = ee04f31c27447a42ffd4a22bb83bf39b7ea6b14ff44fc46ed2468358a99fc6e9b1139e743558ecedf4ef71b810c602f7ebddd9acaf71a845a081e1ae71cd31a0
-Size (basic-stats-0.1.1.tar.gz) = 29595 bytes
+BLAKE2s (basic-stats-0.1.1.1-365cb38b91020b5c026fcde0696f819f83143f75.tar.gz) = 3c1e85b393b464bc4b06688e4dbd7c5fbd5637d5324c7220f655a241b1f702b3
+SHA512 (basic-stats-0.1.1.1-365cb38b91020b5c026fcde0696f819f83143f75.tar.gz) = 669559c5499cc9e8ee59113b3b77acc50dfd5bdeac43cc8f5f02b015d5f6ee0e319d14ccbdb0b8211c56cd9a0c5eca306d19e367b23ae348667d94b02679eaf1
+Size (basic-stats-0.1.1.1-365cb38b91020b5c026fcde0696f819f83143f75.tar.gz) = 26869 bytes
