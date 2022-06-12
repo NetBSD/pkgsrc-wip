@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/lima-vm/lima
 COMMENT=	Linux virtual machines for running containerd
 LICENSE=	apache-2.0
 
+# Avoid to invoke/use git
 MAKE_FLAGS+=	VERSION=${GITHUB_TAG}
 
 USE_TOOLS+=	gmake
