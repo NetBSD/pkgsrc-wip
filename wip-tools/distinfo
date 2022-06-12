@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (wip-tools-0.1.0.16-bafdb01f59a88e83b7b2cc1a50f0e3a4fc416cf6.tar.gz) = 9d27af7647c3233b4fbdc44fc0077ebdf4a11a50409677693f6f688049ce3dc2
-SHA512 (wip-tools-0.1.0.16-bafdb01f59a88e83b7b2cc1a50f0e3a4fc416cf6.tar.gz) = c8c2bbbc1f0b901a31db63a35a4d061ab4c522375c4394e8e1faee369d9370bb1c31cbc945ec07e73b0813ca8aea046a6f0a7c36d623489f068e034ec4d136ee
-Size (wip-tools-0.1.0.16-bafdb01f59a88e83b7b2cc1a50f0e3a4fc416cf6.tar.gz) = 3170 bytes
+BLAKE2s (wip-tools-0.1.0.17-dbf3b5fbc61301502efa96570cebacff687778c3.tar.gz) = 63955e7d3758946c9db88e59e63c2982eaa805ff53f9f3b818c3c164d03cb736
+SHA512 (wip-tools-0.1.0.17-dbf3b5fbc61301502efa96570cebacff687778c3.tar.gz) = f30bdf4a945dc23a4c4f89f9d733dfb6bc423ed3779be75a5d0e9d2c1d5054eeb2f0f9d00d64fd3d55d37988a32c461c67b234bbff2bcba72758db7b024aeca7
+Size (wip-tools-0.1.0.17-dbf3b5fbc61301502efa96570cebacff687778c3.tar.gz) = 3254 bytes
