@@ -10,10 +10,6 @@ HOMEPAGE=	https://github.com/lima-vm/lima
 COMMENT=	Linux virtual machines for running containerd
 LICENSE=	apache-2.0
 
-#GO_BUILD_PATTERN+=	-ldflags ' \
-#			-X github.com/lima-vm/lima/pkg/version.Version=${GITHUB_TAG}'
-#GO_BUILD_PATTERN+=	./cmd/limactl
-
 MAKE_FLAGS+=	VERSION=${GITHUB_TAG}
 
 USE_TOOLS+=	gmake
