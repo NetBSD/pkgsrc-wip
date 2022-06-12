@@ -15,9 +15,13 @@ GO_DIST_BASE=	cli-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/docker/cli
 
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fish/completions
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/docker ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/contrib/completion/bash/docker ${DESTDIR}${PREFIX}/share/bash-completion/completions
+	${INSTALL_DATA} ${WRKSRC}/contrib/completion/fish/docker.fish ${DESTDIR}${PREFIX}/share/fish/completions
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
