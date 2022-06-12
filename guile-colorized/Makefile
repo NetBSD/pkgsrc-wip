@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ice-9/colorized.scm ${DESTDIR}${PREFIX}/guile/2.2/share/guile/2.2/ice-9/
 
 .include "../../lang/guile22/buildlink3.mk"
-.include "../../wip/mk/gitlab.mk"
+.include "../../mk/fetch/gitlab.mk"
 .include "../../mk/bsd.pkg.mk"
