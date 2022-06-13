@@ -1,7 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	v1.0.0-beta.2
-PKGNAME=	${GITHUB_PROJECT}93u+m-${DISTNAME:S,^v,,}
+PKGVER=		1.0.0
+PKGNAME=	${GITHUB_PROJECT}93u+-${PKGVER}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
@@ -12,7 +13,7 @@ HOMEPAGE=	https://github.com/ksh93/ksh/
 COMMENT=	Actively developed fork of AT&T KornShell 93u+
 LICENSE=	epl-v1.0
 
-CONFLICTS+=	ast-ksh-[0-9]* static-ast-ksh-[0-9]*
+CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 
 USE_LANGUAGES=		c c++
 FORTIFY_SUPPORTED=	no
