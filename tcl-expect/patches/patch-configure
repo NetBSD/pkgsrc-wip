@@ -1,9 +1,22 @@
 $NetBSD$
 
-#       configure patches to
-#       add support for svr5 and OpenServer 5 
+(This patch was created in 2012 and not adequately commented.  The
+comment included "no libtool", but there is no hint of libtool
+upstream and this patch does not remove it.)
 
-# emailed Upstream September 2019
+Add support for MirBSD as OpenBSD and DragonFly as FreeBSD.
+
+Upstream has support to use the version with or without dots as the
+shlib suffix.  This patch forces that to be the "NODOTS" flavor
+always, perhaps for PLIST consistency.
+
+\todo Expain why PVNODOTS isn't the PACKAGE_VERSION_NO_DOTS that
+upstream configure already computes.
+
+\todo Push changes upstream, or explain why that's not appropriate.
+
+Add support for SVR5 and OpenServer 5.  Sent upstream by email
+September 2019.
 
 --- configure.orig      2018-02-04 03:43:58.000000000 +0000
 +++ configure	2022-06-08 07:03:02.940051201 -0600
