@@ -3,9 +3,11 @@
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	118
+GOVERSSUFFIX=	119
 
-DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.rc/rc/}.src
+GO119_VERSION=	1.19.beta1
+
+DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION:S/.beta/beta/}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
@@ -37,6 +39,8 @@ REPLACE_BASH+=	src/cmd/compile/internal/ssa/gen/cover.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
+REPLACE_BASH+=	src/crypto/internal/boring/build.sh
+REPLACE_BASH+=	src/go/doc/comment/mkstd.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/race.bash
@@ -91,6 +95,11 @@ PLIST.pty=	yes
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PLIST.route=	yes
 .endif
+
+PRINT_PLIST_AWK+=	/^bin\/go${GOVERSSUFFIX}/ { print "bin/go$${GOVERSSUFFIX}"; next; }
+PRINT_PLIST_AWK+=	/^bin\/gofmt${GOVERSSUFFIX}/ { print "bin/gofmt$${GOVERSSUFFIX}"; next; }
+PRINT_PLIST_AWK+=	/internal\/pty\.a/ { printf "%s", "$${PLIST.pty}"; }
+PRINT_PLIST_AWK+=	/x\/net\/route\.a/ { printf "%s", "$${PLIST.route}"; }
 
 post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
