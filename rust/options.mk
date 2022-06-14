@@ -14,6 +14,12 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
 
+# As of 1.61,
+# The pkgsrc LLVM causes build failure on i386 and powerpc
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
+PKG_SUGGESTED_OPTIONS+=		rust-llvm
+.endif
+
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.
 .if ${OPSYS} == "NetBSD" && ${BUILD_TARGET} == "dist"
