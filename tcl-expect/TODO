@@ -1,19 +1,43 @@
-- Create COMMIT_MSG for use in updating pkgsrc
+- Create COMMIT_MSG for use in updating pkgsrc.  Most of the
+  explanations below belong here, besides the usual upstream NEWS.
 
-- Resolve "lib/libexpect5454.so.@SHLIB_VERSION@" in PLIST.  Somehow in
-  DESTDIR there is libexpect5454.so.@SHLIB_VERSION@ and that seems
-  like an error that should be fixed, rather than teaching PLIST about
-  the error.
+- Explain why patch-Makefile.in has .1.0 hard-coded instead of the
+  previous .@SHLIB_VERSION@.
 
-- In patch-configure, somehow make it comprehensible what has changed
-  vs what is in pkgsrc.
+- In patch-configure:
 
-- In patch-tclconfig_tcl.m4, explain migration of things from pkgsrc
-  patch-configure.  Or perhaps don't migrate.
+   - Explain why the patches to add MirBSD and DragonFly were dropped;
+     they don't appear to have been applied upstream.
+
+   - Remove comments 'taken from previous'; the expectation is that
+     all content from the pkgsrc package is in the new version, absent
+     a good reason and documented in COMMIT_MSG.
+
+   - Explain why subsituting @SHLIB_VERSION@ is added.
+
+   - Explain "avoid regenerating within pkgsrc", which is labeled as
+     from the previous version but does not appear there.  Plus, it is
+     tagged as an ERROR by pkglint.
+
+- In patch-tclconfig_tcl.m4
+
+   - Move explanations of changes to COMMIT_MSG rather than adding
+     comments to the file being patched.
+
+   - Improve patch comment; the change to SVR3.2 linking is not explained.
+   
+
+- In patch-exp__chan.c, explain why it is dropped.
+
+- The package patches an m4 file and configure, and this doesn't
+  really make sense, as either we are regenerating configure or we
+  aren't.  Explain/fix.
 
 - For things mailed upstream in 2019, one would expect they've been
   applied and are in a new release.  Explain somehow what's going on.
-  It sort of seems like "This program is not maintained upstream."
+  It sort of seems like "This program is not maintained upstream" and
+  if that's true, it probably should be noted in DESCR.
 
-- Consider patching configure.ac and regenerating instead of
-  configure.
+  However, it seems like there is a tracker:
+    https://core.tcl-lang.org/expect/rptview?rn=1
+
