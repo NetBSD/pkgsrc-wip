@@ -1,8 +1,5 @@
-net/unison: Update to 2.52.1
+net/unison: Update to 2.53.0
 
-   * Deprecate ocaml < 4.08: 2.53.0 will reqire 4.08 or higher.
-   * Add man page
-   * Remove rsh:// URI scheme (ssh:// of course remains).
-   * Significant bugfixes and minor improvements
-   * Deprecate "backups" preference (see manual for alternatives)
-   * Deprecate "stream" and "halfduplex" preferences
+Change to lablgkt3.
+
+[insertupstream NEWS]
