@@ -1,0 +1,5 @@
+(at least with modular xorg) this fails to package with PKG_DEVELOPER=yes:
+
+=> Checking for missing run-time search paths in tkblt-3.2.23
+ERROR: lib/tkblt3.2/libtkblt3.2.so: missing library: libX11.so.6
+*** Error code 1

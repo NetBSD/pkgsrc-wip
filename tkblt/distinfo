@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.19 2022/06/06 04:27:14 dholland Exp $
+
+BLAKE2s (tkblt-3.2.23.tar.gz) = 4e8e958a27e2c3e1c071bb672759331b218b6d881b400cc62da466fb99441ce7
+SHA512 (tkblt-3.2.23.tar.gz) = 1f3772321cef3dd73fed385eaea471916afc503771ead8da033868363005c21876bcbd7079595ec289ce0f72671c3bc10f95b01f13bfb94cf09b477c99b135c2
+Size (tkblt-3.2.23.tar.gz) = 431857 bytes

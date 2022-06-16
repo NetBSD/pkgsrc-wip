@@ -1,0 +1,13 @@
+@comment $NetBSD$
+include/tkbltDecls.h
+include/tkbltVector.h
+lib/tkblt3.2/graph.tcl
+lib/tkblt3.2/libtkblt3.2.so
+lib/tkblt3.2/libtkbltstub3.2.a
+lib/tkblt3.2/pkgIndex.tcl
+lib/tkbltConfig.sh
+man/mann/BLT.n
+man/mann/barchart.n
+man/mann/graph.n
+man/mann/vector.n
+@pkgdir bin
