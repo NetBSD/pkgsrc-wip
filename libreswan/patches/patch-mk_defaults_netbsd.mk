@@ -7,14 +7,12 @@ Author: Andrew Cagney <cagney@gnu.org>
 Date:   Tue Jun 14 20:54:55 2022 -0400
 
     NetBSD: install manual pages in $(PREFIX)/man
-    
+
     not share/man
 
-diff --git a/mk/defaults/netbsd.mk b/mk/defaults/netbsd.mk
-index 4c623089f5..d9e3d262f8 100644
---- a/mk/defaults/netbsd.mk
-+++ b/mk/defaults/netbsd.mk
-@@ -33,3 +33,4 @@ FINALRUNDIR=/var/run/pluto
+--- mk/defaults/netbsd.mk.orig	2022-05-24 17:23:22.000000000 +0000
++++ mk/defaults/netbsd.mk
+@@ -30,3 +30,4 @@ FINALRUNDIR=/var/run/pluto
  FINALSYSCONFDIR=$(PREFIX)/etc
  FINALNSSDIR=$(PREFIX)/etc/ipsec.d
  FINALEXAMPECONFDIR=$(PREFIX)/share/examples/libreswan

@@ -24,14 +24,19 @@ USE_TOOLS+=	bison
 
 DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 # weak dependency
-#DEPENDS+=	logrotate:../../sysutils/logrotate
+#DEPENDS+=	logrotate-[0-9]*:../../sysutils/logrotate
 
-# libreswan has GIT style patches
-PATCH_STRIP= -p1
+CHECK_PORTABILITY_SKIP=	mk/docker-targets.mk
+
+# code not clean enough
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
+MAKE_FLAGS+=	PYTHON_BINARY=${PYTHONBIN}
 
 # libevent?
 .include "../../net/unbound/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
