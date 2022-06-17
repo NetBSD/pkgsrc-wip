@@ -5,5 +5,6 @@ SHA512 (expect5.45.4.tar.gz) = a8dc25e8175f67e029e15cbcfca1705165c1c4cb2dd37eaaa
 Size (expect5.45.4.tar.gz) = 632363 bytes
 SHA1 (patch-Makefile.in) = 1efb1bdd0d3a80a8ad2d66aaf1a6b0a344df9c3d
 SHA1 (patch-configure) = be1c1ca1d274c824077988a67005050e4814354f
+SHA1 (patch-exp__chan.c) = 21cd7e8d37cdc465e9523ead81adead38a694c97
 SHA1 (patch-retoglob.c) = 4406f9e5d7622f393e35e7a1f70a700a98d6e981
 SHA1 (patch-tclconfig_tcl.m4) = 8da471800dcc5f110858dd0af36ad5e924232976
