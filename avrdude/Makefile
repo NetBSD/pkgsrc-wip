@@ -2,10 +2,11 @@
 
 DISTNAME=		avrdude-7.0
 CATEGORIES=		cross
-MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
+# The archive "archive/refs/tags/v7.0.tar.gz" uses a different build system!
+MASTER_SITES=		${MASTER_SITE_GITHUB:=avrdudes/}/avrdude/releases/download/v7.0/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.nongnu.org/avrdude/
+HOMEPAGE=		https://github.com/avrdudes/avrdude/
 COMMENT=		Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2
 
@@ -51,7 +52,6 @@ PLIST_SUBST+=		DISTNAME=${DISTNAME}
 # currently.  This makes the diffs huge.
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
-
 
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../devel/libftdi1/buildlink3.mk"
