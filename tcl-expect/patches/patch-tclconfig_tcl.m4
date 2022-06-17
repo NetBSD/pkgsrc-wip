@@ -7,11 +7,14 @@ $NetBSD$
 
 --- tclconfig/tcl.m4.orig	2018-02-04 06:55:43.000000000 +0000
 +++ tclconfig/tcl.m4	2022-06-07 08:37:43.412809932 -0600
-@@ -1814,19 +1814,47 @@
+@@ -1814,19 +1814,50 @@
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	SCO_SV-3.2*)
 +	    # fix SCO OpenServer 5 linking with gcc
++	    # gcc is use to link, there is no gnu ld.
++	    # native compiler uses ld which comes with OS
++
  	    AS_IF([test "$GCC" = yes], [
  		SHLIB_CFLAGS="-fPIC -melf"
  		LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
@@ -56,7 +59,7 @@ $NetBSD$
  	SunOS-5.[[0-6]])
  	    # Careful to not let 5.10+ fall into this case
  
-@@ -1961,6 +1989,7 @@
+@@ -1961,6 +1992,7 @@
      # If we're running gcc, then change the C flags for compiling shared
      # libraries to the right flags for gcc, instead of those for the
      # standard manufacturer compiler.
@@ -64,7 +67,7 @@ $NetBSD$
  
      AS_IF([test "$GCC" = yes], [
  	case $system in
-@@ -1971,6 +2000,7 @@
+@@ -1971,6 +2003,7 @@
  	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
@@ -72,18 +75,3 @@ $NetBSD$
  	    windows) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
  	esac])
- 	    AS_IF([test "$GCC" = yes], [
- 		SHLIB_CFLAGS="-fPIC -melf"
- 		LDFLAGS="$LDFLAGS -melf -Wl,-Bexport"
-+	        SHLIB_LD="gcc"
- 	    ], [
- 	       SHLIB_CFLAGS="-Kpic -belf"
- 	       LDFLAGS="$LDFLAGS -belf -Wl,-Bexport"
--	    ])
- 	    SHLIB_LD="ld -G"
-+	    ])
- 	    SHLIB_LD_LIBS=""
- 	    SHLIB_SUFFIX=".so"
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;

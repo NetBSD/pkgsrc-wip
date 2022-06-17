@@ -4,27 +4,50 @@ $NetBSD$
 comment included "no libtool", but there is no hint of libtool
 upstream and this patch does not remove it.)
 
-Add support for MirBSD as OpenBSD and DragonFly as FreeBSD.
-
 Upstream has support to use the version with or without dots as the
 shlib suffix.  This patch forces that to be the "NODOTS" flavor
 always, perhaps for PLIST consistency.
 
-\todo Expain why PVNODOTS isn't the PACKAGE_VERSION_NO_DOTS that
-upstream configure already computes.
+PVNODOTS isn't the PACKAGE_VERSION_NO_DOTS that upstream configure already computes.
 
-\todo Push changes upstream, or explain why that's not appropriate.
+The bug tracking system has no activity on fixing bugs reported since the release.
 
 Add support for SVR5 and OpenServer 5.  Sent upstream by email
 September 2019.
 
 --- configure.orig      2018-02-04 03:43:58.000000000 +0000
 +++ configure	2022-06-08 07:03:02.940051201 -0600
-@@ -6941,6 +6941,52 @@
+@@ -6480,7 +6480,8 @@
+ 		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ fi
+ 	    ;;
+-	OpenBSD-*)
++	OpenBSD-*|MirBSD-*)
++	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
+ 	    SHLIB_SUFFIX=".so"
+@@ -6563,11 +6564,11 @@
+ 		;;
+ 	    esac
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+-	    TCL_SHLIB_LD_EXTRAS="-soname \$@"
++	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname \$@"
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS=""
+ 	    if test $doRpath = yes; then :
+@@ -6941,6 +6942,54 @@
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	SCO_SV-3.2*)
 +            # SCO UNIX/OpenServer 5 gcc use -melf for full feature ELF binanaries.
++	    # gcc is use to link there is no gnu ld.
++	    # native compiler uses ld which comes with OS
 +if test "$GCC" = yes; then :
 + 
 +                SHLIB_CFLAGS="-fPIC -melf"
@@ -73,7 +96,18 @@ September 2019.
  	    if test "$GCC" = yes; then :
  
  		SHLIB_CFLAGS="-fPIC -melf"
-@@ -9597,14 +9643,9 @@
+@@ -7150,9 +7199,9 @@
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*) ;;
+ 	    IRIX*) ;;
+-	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*|MirBSD-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    windows) ;;
+ 	    *) SHLIB_CFLAGS="-fPIC" ;;
+ 	esac
+@@ -9597,14 +9647,9 @@
  
  PACKAGE_VERSION_NODOTS="`echo $PACKAGE_VERSION | sed -e 's/\.//g'`"
  
@@ -83,14 +117,14 @@ September 2019.
 -    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
 -if test $iunix -eq 1 ; then
-+# taken from the pervious pkgsrc tcl-expect 
++# pkgsrc tcl-expect additions from 2012 added.
 +
      EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
  
  # also remove dots on systems that don't support filenames > 14
  # (are there systems which support shared libs and restrict filename lengths!?)
-@@ -9659,11 +9700,8 @@
+@@ -9659,11 +9704,8 @@
      $as_echo "#define EXP_FRAMEWORK 1" >>confdefs.h
  
  else
@@ -99,27 +133,27 @@ September 2019.
 -    else
 -        EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
 -    fi
-+# taken from the previous tcl-expect
++# pkgsrc tcl-expect additions from 2012 added.
 +    EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
      EXP_BUILD_LIB_SPEC="-L`pwd` ${EXP_LIB_FLAG}"
      EXP_LIB_SPEC="-L${libdir} ${EXP_LIB_FLAG}"
  fi
-@@ -9965,6 +10003,10 @@
+@@ -9965,6 +10007,10 @@
      # substituted. (@@@ Might not be necessary anymore)
      #--------------------------------------------------------------------
  
-+    # taken from the previous pkgsrc tcl-expect
++    # pkgsrc tcl-expect additions from 2012 added.
 +    PVNODOTS=`echo ${PACKAGE_VERSION} | tr -d .`
 +    SHARED_LIB_SUFFIX=${PVNODOTS}.so
 +    UNSHARED_LIB_SUFFIX=${PVNODOTS}.a
      if test "${TEA_PLATFORM}" = "windows" ; then
  	if test "${SHARED_BUILD}" = "1" ; then
  	    # We force the unresolved linking of symbols that are really in
-@@ -10711,6 +10753,11 @@
+@@ -10711,6 +10757,11 @@
    case $ac_option in
    # Handling of the options.
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # taken from the previous pkgsrc tcl-expect
++    # pkgsrc tcl-expect additions from 2012 added.
 +	: Avoid regenerating within pkgsrc
 +	exit 0
 +	: Avoid regenerating within pkgsrc

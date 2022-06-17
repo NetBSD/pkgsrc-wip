@@ -4,7 +4,8 @@ $NetBSD: patch-Makefile.in,v 1.4 2018/08/27 07:12:08 wiz Exp $
 comment included "no libtool", but there is no hint of libtool
 upstream and this patch does not remove it.)
 
-Define SHLIB_VERSION, mysteriously.
+Define SHLIB_VERSION, Complaints about teaching PLIST about using SHLIB_VERSION
+required it to be defined.
 
 Add a variable for a static library version, build and install it.
 
@@ -14,7 +15,8 @@ Include LDFLAGS when linking (for RELRO).
 
 Version the shlib and the expect binary.
 
-\todo Push changes upstream, or explain why that's not appropriate.
+Changes were sent upstream by email but were never added to the bug tracking system,
+No activity since the release.
 
 --- Makefile.in.orig	2018-02-02 12:15:52.000000000 -0700
 +++ Makefile.in	2022-06-09 06:35:29.261652426 -0600

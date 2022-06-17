@@ -1,0 +1,59 @@
+Update tcl-expect to expect5.45.4 from expect5.45.0
+
+Expect is a tool for automating interactive applications such as telnet, ftp, passwd, 
+fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful 
+for testing these same applications.
+
+See: https://core.tcl-lang.org/expect/index
+
+Note: Many of the links on the above do not work.
+
+There is a bug tracker:
+
+    https://core.tcl-lang.org/expect/rptview?rn=1
+
+Emails were sent to them but on notes were added to the bug tracking system, no 
+activity on fixing bugs is reported since the release.  
+
+Open issues
+3d63349f14 	2019-03-29 18:12:38 	Code_Defect 	Open 	  	 
+
+1bf384f309 	2019-07-12 15:48:24 	Code_Defect 	Open 	  	CONST84 macro in tcl is deprecated.
+
+2c0992205c 	2019-10-13 22:08:43 	Code_Defect 	Open 	  	overlay command doesn't work as documented
+
+7a6a0da886 	2020-04-08 11:53:25 	Incident 	Open 	  	Not picking up variable values when running remote bash script with for loop
+
+ee5c5aad7d 	2020-11-30 19:47:01 	Code_Defect 	Open 	  	interact does not work under expect -c
+
+0d5b33c00e 	2020-12-05 19:20:05 	Build_Problem 	Open 	  	build issues with Xcode 12
+
+094d670f62 	2022-04-19 21:52:02 	Code_Defect 	Open 	  	-Werror=format-security failures with building expect 5.45.4
+
+be7d99dcc2 	2022-06-16 15:05:31 	Code_Defect 	Open 	  	core dump while generating glob-gate for expanded syntax with trailing whitespace 
+
+
+patch-Makefile.in from expect5.45.0 needed to be modified to define a @SHLIB_VERSION@.
+
+Rather than teaching PLIST about .@SHLIB_VERSION@ in which many said "felt wrong"
+a patch-Makefile.in has .1.0 hard-coded instead of the previous .@SHLIB_VERSION@.
+
+In patch-configure:
+
+We are patching configure and not generarting it.
+
+The patches to add MirBSD and DragonFly are not in upstream.  They don't appear 
+to have not been applied upstream...
+
+patch-tclconfig_tcl.m4
+
+Added support for UnixWare/svr5 to tclconfig/tcl.m4
+
+SCO OpenServer 5 needs linking done with gcc, gcc is use to link because there is 
+no gnu ld.  The native compiler uses ld which comes with OS and doesn't work with
+gcc.
+   
+patch-retoglob.c
+
+SVR5/UnixWare has a name space clash
+
