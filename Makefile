@@ -2302,6 +2302,7 @@ SUBDIR+=	lodepng-git
 SUBDIR+=	logfmon-git
 SUBDIR+=	logrotate-git
 SUBDIR+=	logwatch
+SUBDIR+=	loki
 SUBDIR+=	lorder
 SUBDIR+=	love11
 SUBDIR+=	lpdsrv
