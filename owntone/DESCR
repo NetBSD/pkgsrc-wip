@@ -1,0 +1,15 @@
+OwnTone is an open source (audio) media server.
+
+Owntone allows sharing and streaming your media library to iTunes
+(DAAP1), Roku (RSP), AirPlay devices (multiroom), Chromecast and also
+supports local playback.
+
+You can control OwnTone via its web interface, Apple Remote (and
+compatible DAAP/DACP clients), MPD clients or via its JSON API.
+
+Besides serving your local music, podcast and audiobook media files,
+OwnTone supports internet radios and Spotify (requires Spotify premium
+account).
+
+Prior to version 28, OwnTone was called forked-daapd, which again was
+a rewrite of mt-daapd (Firefly Media Server).
