@@ -1,8 +1,18 @@
 make test results
 -----------------
 
-NetBSD/amd64 9.0
-Timeout for most tests.
+NetBSD/amd64 9.2 (gdb-12.1, avr-gcc 10.3.0, avr-libc 2.1.0)
+One test fails (FAIL: allocfail.sh)
+============================================================================
+Testsuite summary for package-unused version-unused
+============================================================================
+# TOTAL: 33
+# PASS:  32
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  1
+# XPASS: 0
+# ERROR: 0
 
 NetBSD/amd64 6.1
 (After avr-libc installed)
@@ -26,4 +36,3 @@ NetBSD/amd64 6.1 (gdb-7.6.1, avr-gcc 4.5.3, avr-libc 1.8.0)
 # of untested testcases         161
 # of unresolved testcases       108
 # of unsupported tests          188
-

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gdb-10.2
+DISTNAME=	gdb-12.1
 PKGNAME=	${DISTNAME:S/^/avr-/}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 MAKE_JOBS_SAFE=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://sourceware.org/gdb/
 COMMENT=	GNU gdb for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
@@ -35,6 +36,9 @@ TEST_DEPENDS+=		dejagnu>=1.6.2:../../devel/dejagnu
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${DESTDIR}${PREFIX}/bin/avr-gdb
 
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
+.include "../../textproc/source-highlight/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

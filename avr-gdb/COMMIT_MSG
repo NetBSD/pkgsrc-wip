@@ -1,4 +1,8 @@
-avr-gdb: Update to 10.2
+avr-gdb: Update to 12.1
 
-Changelog:
-https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=blob_plain;f=gdb/NEWS;hb=gdb-10.2-release
+Homepage added.
+Dependencies GMP and source-highlight added.
+Patch for nonportable shell syntax added.
+
+Upstream changelog:
+<https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=blob_plain;f=gdb/NEWS;hb=gdb-12.1-release>

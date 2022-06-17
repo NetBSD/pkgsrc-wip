@@ -1,0 +1,16 @@
+$NetBSD$
+
+Nonportable shell syntax fixed.
+This patch is intended for upstream.
+
+--- gdb/configure.ac.orig	2022-05-01 18:46:31.000000000 +0000
++++ gdb/configure.ac
+@@ -2120,7 +2120,7 @@ AC_ARG_ENABLE([libbacktrace],
+ esac],
+ enable_libbacktrace=yes)
+ 
+-if test "${enable_libbacktrace}" == "yes"; then
++if test "${enable_libbacktrace}" = "yes"; then
+   LIBBACKTRACE_INC="-I$srcdir/../libbacktrace/ -I../libbacktrace/"
+   LIBBACKTRACE_LIB=../libbacktrace/.libs/libbacktrace.a
+   AC_DEFINE(HAVE_LIBBACKTRACE, 1, [Define if libbacktrace is being used.])
