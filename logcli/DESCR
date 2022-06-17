@@ -1,0 +1,3 @@
+LogCLI is the command-line interface to Grafana Loki.
+
+It facilitates running LogQL queries against a Loki instance.
