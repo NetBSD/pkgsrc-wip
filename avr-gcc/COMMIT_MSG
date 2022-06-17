@@ -1,0 +1,10 @@
+cross/avr-gcc: Update to 12.1.0
+
+Patch for NetBSD support removed (does no longer apply, it seems that it
+is no longer required).
+Patch for Darwin/aarch64 removed (as requested in patch comment by tnn@).
+Patches for build system added (nonportable "==" shell syntax).
+Patch for libgcc added (system header file "sys/mman.h" not found).
+
+Upstream changelog:
+<https://gcc.gnu.org/gcc-12/changes.html>
