@@ -1,4 +1,4 @@
-avr-gdb: Update to 12.1
+cross/avr-gdb: Update to 12.1
 
 Homepage added.
 Dependencies GMP and source-highlight added.
