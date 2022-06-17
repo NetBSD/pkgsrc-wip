@@ -2299,6 +2299,7 @@ SUBDIR+=	lmdbg-current
 SUBDIR+=	lmod
 SUBDIR+=	lnd
 SUBDIR+=	lodepng-git
+SUBDIR+=	logcli
 SUBDIR+=	logfmon-git
 SUBDIR+=	logrotate-git
 SUBDIR+=	logwatch
