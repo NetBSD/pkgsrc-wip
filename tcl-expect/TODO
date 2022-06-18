@@ -32,12 +32,3 @@
 - The package patches an m4 file and configure, and this doesn't
   really make sense, as either we are regenerating configure or we
   aren't.  Explain/fix.
-
-- For things mailed upstream in 2019, one would expect they've been
-  applied and are in a new release.  Explain somehow what's going on.
-  It sort of seems like "This program is not maintained upstream" and
-  if that's true, it probably should be noted in DESCR.
-
-  However, it seems like there is a tracker:
-    https://core.tcl-lang.org/expect/rptview?rn=1
-
