@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fluxcd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://toolkit.fluxcd.io/
+HOMEPAGE=	https://fluxcd.io/
 COMMENT=	Continuous delivery solution for Kubernetes
 LICENSE=	apache-2.0
 
