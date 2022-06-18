@@ -4896,7 +4896,6 @@ SUBDIR+=	py-voropy
 SUBDIR+=	py-vorta
 SUBDIR+=	py-vprof
 SUBDIR+=	py-vtk
-SUBDIR+=	py-vulture
 SUBDIR+=	py-wadllib
 SUBDIR+=	py-wafo
 SUBDIR+=	py-wahcade
