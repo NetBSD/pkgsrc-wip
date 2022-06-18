@@ -31,12 +31,13 @@ CHECK_PORTABILITY_SKIP=	mk/docker-targets.mk
 # code not clean enough
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+# see https://github.com/libreswan/libreswan/issues/769
 MAKE_FLAGS+=	PYTHON_BINARY=${PYTHONBIN}
+.include "../../lang/python/application.mk"
 
 # libevent?
 .include "../../net/unbound/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
