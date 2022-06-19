@@ -1,0 +1,3 @@
+- Install mitmproxy2swagger with the version suffix
+- mitmproxy should be called py-mitmproxy to possibly have multiple version
+  of it

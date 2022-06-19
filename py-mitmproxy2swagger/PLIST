@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/mitmproxy2swagger
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mitmproxy2swagger/__init__.py
+${PYSITELIB}/mitmproxy2swagger/__init__.pyc
+${PYSITELIB}/mitmproxy2swagger/__init__.pyo
+${PYSITELIB}/mitmproxy2swagger/console_util.py
+${PYSITELIB}/mitmproxy2swagger/console_util.pyc
+${PYSITELIB}/mitmproxy2swagger/console_util.pyo
+${PYSITELIB}/mitmproxy2swagger/har_capture_reader.py
+${PYSITELIB}/mitmproxy2swagger/har_capture_reader.pyc
+${PYSITELIB}/mitmproxy2swagger/har_capture_reader.pyo
+${PYSITELIB}/mitmproxy2swagger/mitmproxy2swagger.py
+${PYSITELIB}/mitmproxy2swagger/mitmproxy2swagger.pyc
+${PYSITELIB}/mitmproxy2swagger/mitmproxy2swagger.pyo
+${PYSITELIB}/mitmproxy2swagger/mitmproxy_capture_reader.py
+${PYSITELIB}/mitmproxy2swagger/mitmproxy_capture_reader.pyc
+${PYSITELIB}/mitmproxy2swagger/mitmproxy_capture_reader.pyo
+${PYSITELIB}/mitmproxy2swagger/swagger_util.py
+${PYSITELIB}/mitmproxy2swagger/swagger_util.pyc
+${PYSITELIB}/mitmproxy2swagger/swagger_util.pyo

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:26 nia Exp $
+
+BLAKE2s (mitmproxy2swagger-0.6.1.tar.gz) = 4dbb3dd6985d291d90537c3dd12565bccda36450ba92fab237c9f63943a39ede
+SHA512 (mitmproxy2swagger-0.6.1.tar.gz) = 3bc8de0d891f38f7331541753270c556ba4768eaaed48f6f735c3b4c43ea773ff5f51f44f93cb61f4b24ce51423d5df9abd7c484362df0ed57feb1d2ef60ed72
+Size (mitmproxy2swagger-0.6.1.tar.gz) = 10761 bytes
