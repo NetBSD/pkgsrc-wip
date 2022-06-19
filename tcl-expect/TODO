@@ -3,14 +3,9 @@
 
 - In patch-configure:
 
-   - Explain why the patches to add MirBSD and DragonFly were dropped;
-     they don't appear to have been applied upstream.
-
    - Remove comments 'taken from previous'; the expectation is that
      all content from the pkgsrc package is in the new version, absent
      a good reason and documented in COMMIT_MSG.
-
-   - Explain why subsituting @SHLIB_VERSION@ is added.
 
    - Explain "avoid regenerating within pkgsrc", which is labeled as
      from the previous version but does not appear there.  Plus, it is
@@ -23,9 +18,7 @@
 
    - Improve patch comment; the change to SVR3.2 linking is not explained.
    
-
-- In patch-exp__chan.c, explain why it is dropped.
-
 - The package patches an m4 file and configure, and this doesn't
   really make sense, as either we are regenerating configure or we
-  aren't.  Explain/fix.
+  aren't.  At the momennt we are not regenerating configure, so the m4
+  patch has no effect.  Explain/fix.
