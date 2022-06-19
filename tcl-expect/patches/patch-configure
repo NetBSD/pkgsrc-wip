@@ -109,24 +109,23 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    windows) ;;
-@@ -9597,14 +9646,9 @@ fi
+@@ -9596,15 +9645,7 @@ fi
+ #   up the Tcl library.
  
  PACKAGE_VERSION_NODOTS="`echo $PACKAGE_VERSION | sed -e 's/\.//g'`"
- 
+-
 -if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
 -    EXP_LIB_VERSION=$PACKAGE_VERSION
 -else
 -    EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
 -if test $iunix -eq 1 ; then
-+# pkgsrc tcl-expect additions from 2012 added.
-+
      EXP_LIB_VERSION=$PACKAGE_VERSION_NODOTS
 -fi
  
  # also remove dots on systems that don't support filenames > 14
  # (are there systems which support shared libs and restrict filename lengths!?)
-@@ -9659,11 +9703,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+@@ -9659,11 +9700,7 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
      $as_echo "#define EXP_FRAMEWORK 1" >>confdefs.h
  
  else
@@ -135,31 +134,17 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
 -    else
 -        EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
 -    fi
-+# pkgsrc tcl-expect additions from 2012 added.
 +    EXP_LIB_FLAG="-lexpect`echo ${EXP_LIB_VERSION} | tr -d .`"
      EXP_BUILD_LIB_SPEC="-L`pwd` ${EXP_LIB_FLAG}"
      EXP_LIB_SPEC="-L${libdir} ${EXP_LIB_FLAG}"
  fi
-@@ -9965,6 +10006,10 @@ rm -f conftest*
+@@ -9965,6 +10002,9 @@ rm -f conftest*
      # substituted. (@@@ Might not be necessary anymore)
      #--------------------------------------------------------------------
  
-+    # pkgsrc tcl-expect additions from 2012 added.
 +    PVNODOTS=`echo ${PACKAGE_VERSION} | tr -d .`
 +    SHARED_LIB_SUFFIX=${PVNODOTS}.so
 +    UNSHARED_LIB_SUFFIX=${PVNODOTS}.a
      if test "${TEA_PLATFORM}" = "windows" ; then
  	if test "${SHARED_BUILD}" = "1" ; then
  	    # We force the unresolved linking of symbols that are really in
-@@ -10711,6 +10756,11 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # pkgsrc tcl-expect additions from 2012 added.
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
