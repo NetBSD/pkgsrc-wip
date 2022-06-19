@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:26 nia Exp $
+
+BLAKE2s (json-stream-1.3.0.tar.gz) = 5e7d89761ae874c0082e74ccc4766ca98a796879641e2211e510e9af4d1c6c83
+SHA512 (json-stream-1.3.0.tar.gz) = e3d5fba8948ba6d781d7009c3f84d34ae374a73f366ee242aba2d4cd352dae68f9f39ceef0556efb55a80a0c4b6b03bc36b2021972567310030a019aece30f9b
+Size (json-stream-1.3.0.tar.gz) = 18892 bytes

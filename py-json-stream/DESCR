@@ -1,0 +1,3 @@
+json-stream is a JSON parser just like the standard library's
+json.load(). It will read a JSON document and convert it into native
+python types.
