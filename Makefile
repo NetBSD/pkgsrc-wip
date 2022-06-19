@@ -4039,6 +4039,7 @@ SUBDIR+=	py-jokosher
 SUBDIR+=	py-jose
 SUBDIR+=	py-joypy
 SUBDIR+=	py-json-logger
+SUBDIR+=	py-json-stream
 SUBDIR+=	py-jsonpath
 SUBDIR+=	py-jsonrequester
 SUBDIR+=	py-jswebkit
