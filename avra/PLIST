@@ -30,6 +30,7 @@ include/avr/m329def.inc
 include/avr/m32def.inc
 include/avr/m406def.inc
 include/avr/m48def.inc
+include/avr/m644def.inc
 include/avr/m649def.inc
 include/avr/m64def.inc
 include/avr/m8515def.inc
