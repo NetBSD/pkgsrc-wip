@@ -1,24 +1,14 @@
-- Explain why patch-Makefile.in has .1.0 hard-coded instead of the
-  previous .@SHLIB_VERSION@.
+- Resolve the SHLIB_VERSION issue as upstream seems to have massively
+  changed configure (in a point release).
 
 - In patch-configure:
 
-   - Remove comments 'taken from previous'; the expectation is that
-     all content from the pkgsrc package is in the new version, absent
-     a good reason and documented in COMMIT_MSG.
+   - Check "avoid regenerating within pkgsrc", which is labeled as
+     from the previous version but does not appear there.  This is no
+     longer present, but if someone thinks it belongs we should
+     discuss.
 
-   - Explain "avoid regenerating within pkgsrc", which is labeled as
-     from the previous version but does not appear there.  Plus, it is
-     tagged as an ERROR by pkglint.
-
-- In patch-tclconfig_tcl.m4
-
-   - Move explanations of changes to COMMIT_MSG rather than adding
-     comments to the file being patched.
-
-   - Improve patch comment; the change to SVR3.2 linking is not explained.
-   
 - The package patches an m4 file and configure, and this doesn't
   really make sense, as either we are regenerating configure or we
-  aren't.  At the momennt we are not regenerating configure, so the m4
+  aren't.  At the moment we are not regenerating configure, so the m4
   patch has no effect.  Explain/fix.
