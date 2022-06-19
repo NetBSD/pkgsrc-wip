@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	task-3.12.1
+PKGNAME=	task-3.13.0
 DISTNAME=	task-${GITHUB_TAG}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-task/}
