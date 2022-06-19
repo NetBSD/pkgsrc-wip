@@ -23,11 +23,15 @@ share/lima/examples/almalinux.yaml
 share/lima/examples/alpine.yaml
 share/lima/examples/archlinux.yaml
 share/lima/examples/buildkit.yaml
+share/lima/examples/centos-stream.yaml
 share/lima/examples/debian.yaml
 share/lima/examples/default.yaml
 share/lima/examples/deprecated/centos-7.yaml
 share/lima/examples/docker.yaml
 share/lima/examples/experimental/9p.yaml
+share/lima/examples/experimental/almalinux-9.yaml
+share/lima/examples/experimental/apptainer.yaml
+share/lima/examples/experimental/centos-stream-9.yaml
 share/lima/examples/experimental/riscv64.yaml
 share/lima/examples/faasd.yaml
 share/lima/examples/fedora.yaml

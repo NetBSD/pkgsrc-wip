@@ -1,16 +1,21 @@
 $NetBSD$
 
-Use `-cpu max' instead of `-cpu host' (`-cpu host' seems not supported
-at least on NetBSD).
+Fallback to `-cpu max' on platforms where `-cpu host' is not available.
 
---- pkg/limayaml/defaults.go.orig	2022-05-19 06:28:56.000000000 +0000
+`-cpu max' enables all features supported by the accelerator in the
+current host.
+
+This avoid falling back to a default qemu64 CPU that then ends up in not
+honoring accelerator in qemu.Cmdline().
+
+--- pkg/limayaml/defaults.go.orig	2022-06-19 02:01:22.000000000 +0000
 +++ pkg/limayaml/defaults.go
-@@ -106,7 +106,7 @@ func FillDefault(y, d, o *LimaYAML, file
- 	}
- 	for arch := range cpuType {
- 		if IsNativeArch(arch) {
--			cpuType[arch] = "host"
-+			cpuType[arch] = "max"
+@@ -108,6 +108,8 @@ func FillDefault(y, d, o *LimaYAML, file
+ 		if IsNativeArch(arch) && IsAccelOS() {
+ 			if HasHostCPU() {
+ 				cpuType[arch] = "host"
++			} else {
++				cpuType[arch] = "max"
+ 			}
  		}
  	}
- 	for k, v := range d.CPUType {
