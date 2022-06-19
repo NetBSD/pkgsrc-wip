@@ -17,7 +17,6 @@ libexec/vlang/cmd/tools/fuzz/fuzz.sh
 libexec/vlang/cmd/tools/fuzz/map_fuzz.v
 libexec/vlang/cmd/tools/gen1m.v
 libexec/vlang/cmd/tools/gen_vc.v
-libexec/vlang/cmd/tools/missdoc.v
 libexec/vlang/cmd/tools/modules/scripting/scripting.v
 libexec/vlang/cmd/tools/modules/testing/common.v
 libexec/vlang/cmd/tools/modules/vgit/vgit.v
@@ -87,6 +86,7 @@ libexec/vlang/cmd/tools/vdoctor.v
 libexec/vlang/cmd/tools/vfmt.v
 libexec/vlang/cmd/tools/vgret.defaults.toml
 libexec/vlang/cmd/tools/vgret.v
+libexec/vlang/cmd/tools/vmissdoc.v
 libexec/vlang/cmd/tools/vpm.v
 libexec/vlang/cmd/tools/vrepl.v
 libexec/vlang/cmd/tools/vscan.v
@@ -139,6 +139,7 @@ libexec/vlang/cmd/v/help/help_test.v
 libexec/vlang/cmd/v/help/init.txt
 libexec/vlang/cmd/v/help/install.txt
 libexec/vlang/cmd/v/help/list.txt
+libexec/vlang/cmd/v/help/missdoc.txt
 libexec/vlang/cmd/v/help/new.txt
 libexec/vlang/cmd/v/help/other.txt
 libexec/vlang/cmd/v/help/outdated.txt
@@ -184,10 +185,15 @@ libexec/vlang/vlib/builtin/array_shrinkage_test.v
 libexec/vlang/vlib/builtin/array_test.v
 libexec/vlang/vlib/builtin/builtin.c.v
 libexec/vlang/vlib/builtin/builtin.v
+libexec/vlang/vlib/builtin/builtin_backtraces_d_musl.c.v
+libexec/vlang/vlib/builtin/builtin_backtraces_nix.c.v
 libexec/vlang/vlib/builtin/builtin_d_gcboehm.c.v
+libexec/vlang/vlib/builtin/builtin_d_use_libbacktrace.c.v
 libexec/vlang/vlib/builtin/builtin_ios.c.v
 libexec/vlang/vlib/builtin/builtin_nix.c.v
 libexec/vlang/vlib/builtin/builtin_notd_gcboehm.c.v
+libexec/vlang/vlib/builtin/builtin_notd_use_libbacktrace.c.v
+libexec/vlang/vlib/builtin/builtin_test.v
 libexec/vlang/vlib/builtin/builtin_windows.c.v
 libexec/vlang/vlib/builtin/byte_test.v
 libexec/vlang/vlib/builtin/cfns.c.v
@@ -464,6 +470,7 @@ libexec/vlang/vlib/gg/gg.v
 libexec/vlang/vlib/gg/gg_android.c.v
 libexec/vlang/vlib/gg/gg_darwin.c.v
 libexec/vlang/vlib/gg/gg_darwin.m
+libexec/vlang/vlib/gg/gg_ui.c.v
 libexec/vlang/vlib/gg/image.c.v
 libexec/vlang/vlib/gg/image.js.v
 libexec/vlang/vlib/gg/image.v
@@ -1006,6 +1013,7 @@ libexec/vlang/vlib/time/README.md
 libexec/vlang/vlib/time/Y2K38_test.v
 libexec/vlang/vlib/time/chrono.c.v
 libexec/vlang/vlib/time/chrono.v
+libexec/vlang/vlib/time/custom_format_test.v
 libexec/vlang/vlib/time/duration_test.v
 libexec/vlang/vlib/time/format.v
 libexec/vlang/vlib/time/misc/misc.v
@@ -1017,6 +1025,7 @@ libexec/vlang/vlib/time/parse.js.v
 libexec/vlang/vlib/time/parse.v
 libexec/vlang/vlib/time/parse_test.v
 libexec/vlang/vlib/time/private_test.v
+libexec/vlang/vlib/time/relative_test.v
 libexec/vlang/vlib/time/stopwatch.v
 libexec/vlang/vlib/time/stopwatch_test.v
 libexec/vlang/vlib/time/time.c.v
@@ -1061,6 +1070,7 @@ libexec/vlang/vlib/v/ast/native.v
 libexec/vlang/vlib/v/ast/scope.v
 libexec/vlang/vlib/v/ast/str.v
 libexec/vlang/vlib/v/ast/table.v
+libexec/vlang/vlib/v/ast/type_size_test.v
 libexec/vlang/vlib/v/ast/types.v
 libexec/vlang/vlib/v/ast/types_test.v
 libexec/vlang/vlib/v/ast/walker/walker.v
@@ -1146,7 +1156,7 @@ libexec/vlang/vlib/v/gen/c/fn.v
 libexec/vlang/vlib/v/gen/c/for.v
 libexec/vlang/vlib/v/gen/c/if.v
 libexec/vlang/vlib/v/gen/c/index.v
-libexec/vlang/vlib/v/gen/c/infix_expr.v
+libexec/vlang/vlib/v/gen/c/infix.v
 libexec/vlang/vlib/v/gen/c/json.v
 libexec/vlang/vlib/v/gen/c/live.v
 libexec/vlang/vlib/v/gen/c/match.v
@@ -1164,6 +1174,8 @@ libexec/vlang/vlib/v/gen/c/testdata/assert_fncalls.out
 libexec/vlang/vlib/v/gen/c/testdata/assert_fncalls.vv
 libexec/vlang/vlib/v/gen/c/testdata/check_combination_of_alias_and_sumtype.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/check_combination_of_alias_and_sumtype.vv
+libexec/vlang/vlib/v/gen/c/testdata/comp_if_unknown.c.must_have
+libexec/vlang/vlib/v/gen/c/testdata/comp_if_unknown.vv
 libexec/vlang/vlib/v/gen/c/testdata/compare_structs.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/compare_structs.vv
 libexec/vlang/vlib/v/gen/c/testdata/console_windows_program.c.must_have
@@ -1185,6 +1197,9 @@ libexec/vlang/vlib/v/gen/c/testdata/embed_with_prod_zlib.vv
 libexec/vlang/vlib/v/gen/c/testdata/enum_switch_case.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/enum_switch_case.out
 libexec/vlang/vlib/v/gen/c/testdata/enum_switch_case.vv
+libexec/vlang/vlib/v/gen/c/testdata/export_and_weak.c.must_have
+libexec/vlang/vlib/v/gen/c/testdata/export_and_weak.out
+libexec/vlang/vlib/v/gen/c/testdata/export_and_weak.vv
 libexec/vlang/vlib/v/gen/c/testdata/for_in.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/for_in.out
 libexec/vlang/vlib/v/gen/c/testdata/for_in.vv
@@ -1194,6 +1209,9 @@ libexec/vlang/vlib/v/gen/c/testdata/gui_windows_program.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/gui_windows_program.vv
 libexec/vlang/vlib/v/gen/c/testdata/gui_windows_program_with_console_tag.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/gui_windows_program_with_console_tag.vv
+libexec/vlang/vlib/v/gen/c/testdata/strlit_len_optimization.c.must_have
+libexec/vlang/vlib/v/gen/c/testdata/strlit_len_optimization.out
+libexec/vlang/vlib/v/gen/c/testdata/strlit_len_optimization.vv
 libexec/vlang/vlib/v/gen/c/testdata/volatile.c.must_have
 libexec/vlang/vlib/v/gen/c/testdata/volatile.out
 libexec/vlang/vlib/v/gen/c/testdata/volatile.vv
