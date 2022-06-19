@@ -17,7 +17,7 @@ PKG_USERS=      $(OWNTONE_USER):$(OWNTONE_GROUP)
 
 RCD_SCRIPTS=	owntone
 
-CONF_FILES=	etc/owntone.conf
+#CONF_FILES=	etc/owntone.conf
 
 GNU_CONFIGURE=	yes
 

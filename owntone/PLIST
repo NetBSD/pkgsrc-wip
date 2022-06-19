@@ -1,4 +1,5 @@
 @comment $NetBSD$
+etc/owntone.conf
 lib/owntone/owntone-sqlext.la
 man/man8/owntone.8
 sbin/owntone
