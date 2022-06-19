@@ -1,19 +1,6 @@
-Update tcl-expect to expect5.45.4 from expect5.45.0
+lang/tcl-expect:  Update to 5.45.4
 
-Expect is a tool for automating interactive applications such as telnet, ftp, passwd, 
-fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful 
-for testing these same applications.
-
-See: https://core.tcl-lang.org/expect/index
-
-Note: Many of the links on the above do not work.
-
-There is a bug tracker:
-
-    https://core.tcl-lang.org/expect/rptview?rn=1
-
-Emails were sent to them but on notes were added to the bug tracking system, no 
-activity on fixing bugs is reported since the release.  
+Packaging changes:
 
 Open issues
 3d63349f14 	2019-03-29 18:12:38 	Code_Defect 	Open 	  	 
@@ -32,28 +19,16 @@ ee5c5aad7d 	2020-11-30 19:47:01 	Code_Defect 	Open 	  	interact does not work un
 
 be7d99dcc2 	2022-06-16 15:05:31 	Code_Defect 	Open 	  	core dump while generating glob-gate for expanded syntax with trailing whitespace 
 
+Upstream used to export SHLIB_VERSION from configure into
+config.status, and thus it was usable in our patched Makefile so that
+the install rules would work if SHLIB_VERSION changed.  Instead,
+\todo.
+  Rather than teaching PLIST about .@SHLIB_VERSION@ in which many said "felt wrong"
+  a patch-Makefile.in has .1.0 hard-coded instead of the previous .@SHLIB_VERSION@.
 
-patch-Makefile.in from expect5.45.0 needed to be modified to define a @SHLIB_VERSION@.
+Add patch to tclconfig/tcl.m4 for UnixWare/SVR5.  \todo Explain how
+this is effective if configure is not regenerated.
 
-Rather than teaching PLIST about .@SHLIB_VERSION@ in which many said "felt wrong"
-a patch-Makefile.in has .1.0 hard-coded instead of the previous .@SHLIB_VERSION@.
+Upstream NEWS:
 
-In patch-configure:
-
-We are patching configure and not generarting it.
-
-The patches to add MirBSD and DragonFly are not in upstream.  They don't appear 
-to have not been applied upstream...
-
-patch-tclconfig_tcl.m4
-
-Added support for UnixWare/svr5 to tclconfig/tcl.m4
-
-SCO OpenServer 5 needs linking done with gcc, gcc is use to link because there is 
-no gnu ld.  The native compiler uses ld which comes with OS and doesn't work with
-gcc.
-   
-patch-retoglob.c
-
-SVR5/UnixWare has a name space clash
-
+\todo

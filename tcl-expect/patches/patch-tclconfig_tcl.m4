@@ -1,9 +1,12 @@
 $NetBSD$
 
-#       tclconfig/tcl.m4
-#       add support for svr5
+On OpenServer 5, when compiling with gcc, also use gcc to link,
+because the system ld is not GNU ld.
 
-# Emailed Upstream September 2019
+Add support for Unixware and SCO_SV-5, and add them to the list of
+systems needing -fPIC.
+
+Sent upstream by email September 2019.
 
 --- tclconfig/tcl.m4.orig	2018-02-04 06:55:43.000000000 +0000
 +++ tclconfig/tcl.m4	2022-06-07 08:37:43.412809932 -0600
@@ -59,14 +62,6 @@ $NetBSD$
  	SunOS-5.[[0-6]])
  	    # Careful to not let 5.10+ fall into this case
  
-@@ -1961,6 +1992,7 @@
-     # If we're running gcc, then change the C flags for compiling shared
-     # libraries to the right flags for gcc, instead of those for the
-     # standard manufacturer compiler.
-+    # Add UnixWare to the list of $systems needing -fPIC
- 
-     AS_IF([test "$GCC" = yes], [
- 	case $system in
 @@ -1971,6 +2003,7 @@
  	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
  	    Darwin-*) ;;

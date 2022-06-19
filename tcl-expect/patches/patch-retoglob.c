@@ -1,9 +1,10 @@
 $NetBSD$
 
-#       retoglob.c
-#       SVR5 name space clash
+Upsteam uses identifiers that shadow the standard library (e.g. open).
+This causes a build failure on SVR5.  Because it's more surprising
+that such usage builds anywhere, just rename the identifiers.
 
-# emailed Upstream Swtempber 2019
+Sent upstream by email September 2019.
 
 --- retoglob.c.orig	2018-02-02 19:15:52.000000000 +0000
 +++ retoglob.c	2019-08-26 05:28:32.206672005 +0000

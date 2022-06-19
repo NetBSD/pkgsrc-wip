@@ -16,9 +16,9 @@ Include LDFLAGS when linking (for RELRO).
 
 \todo File changes upstream (but upstream is not functioning).
 
---- Makefile.in.orig	2018-02-02 12:15:52.000000000 -0700
-+++ Makefile.in	2022-06-09 06:35:29.261652426 -0600
-@@ -99,7 +99,10 @@
+--- Makefile.in.orig	2018-02-02 19:15:52.000000000 +0000
++++ Makefile.in
+@@ -99,7 +99,10 @@ PKG_HEADERS	= @PKG_HEADERS@
  # configuration options) composed of the named objects.
  #========================================================================
  
@@ -29,7 +29,7 @@ Include LDFLAGS when linking (for RELRO).
  PKG_STUB_LIB_FILE = @PKG_STUB_LIB_FILE@
  
  lib_BINARIES	= $(PKG_LIB_FILE)
-@@ -121,9 +124,9 @@
+@@ -121,9 +124,9 @@ includedir	= @includedir@
  DESTDIR		=
  
  PKG_DIR		= $(PACKAGE_NAME)$(PACKAGE_VERSION)
@@ -42,7 +42,7 @@ Include LDFLAGS when linking (for RELRO).
  
  top_builddir	= .
  
-@@ -149,7 +152,7 @@
+@@ -149,7 +152,7 @@ RANLIB		= @RANLIB@
  RANLIB_STUB	= @RANLIB_STUB@
  SHLIB_CFLAGS	= @SHLIB_CFLAGS@
  SHLIB_LD	= @SHLIB_LD@
@@ -51,7 +51,7 @@ Include LDFLAGS when linking (for RELRO).
  STLIB_LD	= @STLIB_LD@
  TCL_DEFS	= @TCL_DEFS@
  TCL_BIN_DIR	= @TCL_BIN_DIR@
-@@ -214,10 +217,15 @@
+@@ -214,10 +217,15 @@ all: binaries libraries doc
  # of the Makefile, in the "BINARIES" variable.
  #========================================================================
  
@@ -68,7 +68,7 @@ Include LDFLAGS when linking (for RELRO).
  doc:
  
  install: all install-binaries install-libraries install-doc
-@@ -547,6 +555,9 @@
+@@ -547,6 +555,9 @@ install-lib-binaries:
  	    fi; \
  	  fi; \
  	done
@@ -78,7 +78,7 @@ Include LDFLAGS when linking (for RELRO).
  	@list='$(PKG_TCL_SOURCES)'; for p in $$list; do \
  	  if test -f $(srcdir)/$$p; then \
  	    destp=`basename $$p`; \
-@@ -554,9 +565,11 @@
+@@ -554,9 +565,11 @@ install-lib-binaries:
  	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pkglibdir)/$$destp; \
  	  fi; \
  	done
