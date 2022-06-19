@@ -752,6 +752,7 @@ SUBDIR+=	eic
 SUBDIR+=	eina-musicplayer
 SUBDIR+=	eiskaltdcpp
 SUBDIR+=	ekermit
+SUBDIR+=	eksctl
 SUBDIR+=	electricsheep
 SUBDIR+=	electricsheep-git
 SUBDIR+=	elegent
