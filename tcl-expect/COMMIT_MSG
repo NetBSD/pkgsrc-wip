@@ -29,6 +29,57 @@ the install rules would work if SHLIB_VERSION changed.  Instead,
 Add patch to tclconfig/tcl.m4 for UnixWare/SVR5.  \todo Explain how
 this is effective if configure is not regenerated.
 
-Upstream NEWS:
+Upstream does not have NEWS.  Contents from ChangeLog, omitting minor
+bugfixes and those that are not relevant to pkgsrc:
 
-\todo
+2018-02-04  Nils Carlson <nils.carlson@ludd.ltu.se>
+
+	* exp_inter.c: [https://sourceforge.net/p/expect/patches/22/]
+	Fix interact bug - handle reads of 0 length on
+	non-blocking channels by explicitly checking if the channel
+	is non-blocking. Fix by Jack Bates.
+
+	* expect.c: [https://sourceforge.net/p/expect/patches/21/]
+	Fix eof bug introduced with previous bug fix - ensure that data
+	received just before an eof is processed. Fix by Sergei Golovan.
+
+2014-05-01  Andreas Kupries <andreask@activestate.com>
+
+	* expect.c [http://sourceforge.net/p/expect/bugs/76/]. Report and
+	  fix by Mutsuhito Iikura. On finding a full buffer during
+	  matching the sliding window mechanism slides too far, truncating
+	  the whole buffer and preventing matches across the boundary. Fix
+	  is shortening the slide distance (slide only one 1/3).
+
+	* expect.c: [http://sourceforge.net/p/expect/patches/18/]. Report
+	  and fix both by Nils Carlson <nils.carlson@ludd.ltu.se>.
+	  Replaced a cc==0 check with proper Tcl_Eof() check.
+
+2013-11-04  Andreas Kupries  <andreask@activestate.com>
+
+	* expect.c: [http://sourceforge.net/p/expect/patches/16/]. Report
+	  and fix both by Per Cederqvist. Replaced a memcpy with memmove
+	  as the latter properly handles overlapping memory, whereas the
+	  original code does not.
+
+2012-08-15  Andreas Kupries  <andreask@activestate.com>
+
+	* exp_chan.c: Applied patch sent in by Ogawa Hirofumi
+	  <hirofumi@mail.parknet.co.jp>. The patch fixes a problem when
+	  talking a tty where the writer has died. Some operating systems
+	  report the condition as EIO with nothing read, while this
+	  actually an EOF. Without the patch the returned data is
+	  incomplete due to the error reported immediately and dropping
+	  data in buffers.
+
+2012-05-16  Andreas Kupries  <andreask@activestate.com>
+
+	* exp_chan.c: [Bug 3526461]: Applied patch by Michael Cleverly
+	  <cleverly@users.sourceforge.net> fixing a problem with the
+	  iteration over the expect channel list where the loop code may
+	  modify the list, breaking the iterator.
+
+	* exp_chan.c: [Bug 3526707]: Applied patch by Michael Cleverly
+	* exp_command.h: <cleverly@users.sourceforge.net> fixing problem
+	* expect.c: with an insufficient test for a lost channel in
+	  exp_background_channelhandler.
