@@ -4165,6 +4165,7 @@ SUBDIR+=	py-minidb
 SUBDIR+=	py-mininet
 SUBDIR+=	py-mipp
 SUBDIR+=	py-mishkal
+SUBDIR+=	py-mitmproxy2swagger
 SUBDIR+=	py-mkdocs-material
 SUBDIR+=	py-mkdocs-material-extensions
 SUBDIR+=	py-mkdocs-with-pdf
