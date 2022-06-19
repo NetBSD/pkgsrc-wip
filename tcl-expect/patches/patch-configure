@@ -1,19 +1,23 @@
-$NetBSD$
+$NetBSD: patch-configure,v 1.3 2022/06/19 14:43:28 gdt Exp $
 
-(This patch was created in 2012 and not adequately commented.  The
-comment included "no libtool", but there is no hint of libtool
-upstream and this patch does not remove it.)
+Add support for MirBSD as OpenBSD and DragonFly as FreeBSD.
 
 Upstream has support to use the version with or without dots as the
-shlib suffix.  This patch forces that to be the "NODOTS" flavor
-always, perhaps for PLIST consistency.
+shlib suffix, conditioned on TCL_LIB_VERSIONS_OK.  This patch forces
+that to be the "NODOTS" flavor always.  \todo Explain the plan; this
+seems likely to make the build the same on all pkgsrc platforms.
 
-PVNODOTS isn't the PACKAGE_VERSION_NO_DOTS that upstream configure already computes.
-
-The bug tracking system has no activity on fixing bugs reported since the release.
+Define PVNODOTS and use it to overwrite SHARED_LIB_SUFFIX and
+define UNSHARED_LIB_SUFFIX.  PVNODOTS appears to have the same value as
+PACKAGE_VERSION_NO_DOTS, that upstream configure already computes.
+\todo Explain why there is a new variable.
 
 Add support for SVR5 and OpenServer 5.  Sent upstream by email
 September 2019.
+
+Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
+
+\todo File changes upstream (but upstream is not functioning).
 
 --- configure.orig      2018-02-04 03:43:58.000000000 +0000
 +++ configure	2022-06-08 07:03:02.940051201 -0600

@@ -1,6 +1,3 @@
-- Create COMMIT_MSG for use in updating pkgsrc.  Most of the
-  explanations below belong here, besides the usual upstream NEWS.
-
 - Explain why patch-Makefile.in has .1.0 hard-coded instead of the
   previous .@SHLIB_VERSION@.
 
