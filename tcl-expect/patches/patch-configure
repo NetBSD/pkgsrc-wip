@@ -21,7 +21,15 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
 
 --- configure.orig	2018-02-04 10:43:58.000000000 +0000
 +++ configure
-@@ -6480,7 +6480,8 @@ fi
+@@ -659,6 +659,7 @@ LD_LIBRARY_PATH_VAR
+ SHLIB_CFLAGS
+ SHLIB_LD_LIBS
+ SHLIB_LD
++SHLIB_VERSION
+ STLIB_LD
+ CFLAGS_WARNING
+ CFLAGS_OPTIMIZE
+@@ -6480,7 +6481,8 @@ fi
  		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  fi
  	    ;;
@@ -31,7 +39,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
  	    SHLIB_SUFFIX=".so"
-@@ -6563,11 +6564,11 @@ fi
+@@ -6563,11 +6565,11 @@ fi
  		;;
  	    esac
  	    ;;
@@ -45,7 +53,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS=""
  	    if test $doRpath = yes; then :
-@@ -6941,6 +6942,54 @@ fi
+@@ -6941,6 +6943,54 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	SCO_SV-3.2*)
@@ -100,7 +108,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  	    if test "$GCC" = yes; then :
  
  		SHLIB_CFLAGS="-fPIC -melf"
-@@ -7150,7 +7199,7 @@ fi
+@@ -7150,7 +7200,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*) ;;
  	    IRIX*) ;;
@@ -109,7 +117,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    windows) ;;
-@@ -9596,15 +9645,7 @@ fi
+@@ -9596,15 +9646,7 @@ fi
  #   up the Tcl library.
  
  PACKAGE_VERSION_NODOTS="`echo $PACKAGE_VERSION | sed -e 's/\.//g'`"
@@ -125,7 +133,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  
  # also remove dots on systems that don't support filenames > 14
  # (are there systems which support shared libs and restrict filename lengths!?)
-@@ -9659,11 +9700,7 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+@@ -9659,11 +9701,7 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
      $as_echo "#define EXP_FRAMEWORK 1" >>confdefs.h
  
  else
@@ -138,7 +146,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
      EXP_BUILD_LIB_SPEC="-L`pwd` ${EXP_LIB_FLAG}"
      EXP_LIB_SPEC="-L${libdir} ${EXP_LIB_FLAG}"
  fi
-@@ -9965,6 +10002,9 @@ rm -f conftest*
+@@ -9965,6 +10003,9 @@ rm -f conftest*
      # substituted. (@@@ Might not be necessary anymore)
      #--------------------------------------------------------------------
  

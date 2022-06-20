@@ -2,12 +2,8 @@ lang/tcl-expect:  Update to 5.45.4
 
 Packaging changes:
 
-Upstream used to export SHLIB_VERSION from configure into
-config.status, and thus it was usable in our patched Makefile so that
-the install rules would work if SHLIB_VERSION changed.  Instead,
-\todo.
-  Rather than teaching PLIST about .@SHLIB_VERSION@ in which many said "felt wrong"
-  a patch-Makefile.in has .1.0 hard-coded instead of the previous .@SHLIB_VERSION@.
+Adapt patch to add SHLIB_VERSION to config.status across autoconf
+versions; the autoconf version used in 5.45.4 is more declarative.
 
 Add patch to tclconfig/tcl.m4 for UnixWare/SVR5.  \todo Explain how
 this is effective if configure is not regenerated.
