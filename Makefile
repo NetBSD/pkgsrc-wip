@@ -1907,6 +1907,7 @@ SUBDIR+=	jmtpfs
 SUBDIR+=	jobd
 SUBDIR+=	john-jumbo
 SUBDIR+=	joomla
+SUBDIR+=	jose
 SUBDIR+=	jpgtn
 SUBDIR+=	jpicedt
 SUBDIR+=	jruby
