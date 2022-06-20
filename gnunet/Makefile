@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.17.0
+DISTNAME=		gnunet-0.17.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
@@ -28,8 +28,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
 CONFIGURE_ARGS+=	--with-gnunetdns=gnunetdns
 CONFIGURE_ARGS+=	--with-jansson=${BUILDLINK_PREFIX.jansson}
-CONFIGURE_ARGS+=	--with-microhttpd=${BUILDLINK_PREFIX.libmicrohttpd}
+CONFIGURE_ARGS+=	--with-jose=${BUILDLINK_PREFIX.jose}/lib
 CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
+CONFIGURE_ARGS+=	--with-microhttpd=${BUILDLINK_PREFIX.libmicrohttpd}
+
 
 GNUNET_LOG_DIR=		${VARBASE}/chroot/gnunet/cache
 GNUNET_DIR=		${VARBASE}/chroot/gnunet
@@ -113,6 +115,7 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
+.include "../../wip/jose/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../wip/gnurl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
