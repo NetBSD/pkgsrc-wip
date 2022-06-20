@@ -2,23 +2,6 @@ lang/tcl-expect:  Update to 5.45.4
 
 Packaging changes:
 
-Open issues
-3d63349f14 	2019-03-29 18:12:38 	Code_Defect 	Open 	  	 
-
-1bf384f309 	2019-07-12 15:48:24 	Code_Defect 	Open 	  	CONST84 macro in tcl is deprecated.
-
-2c0992205c 	2019-10-13 22:08:43 	Code_Defect 	Open 	  	overlay command doesn't work as documented
-
-7a6a0da886 	2020-04-08 11:53:25 	Incident 	Open 	  	Not picking up variable values when running remote bash script with for loop
-
-ee5c5aad7d 	2020-11-30 19:47:01 	Code_Defect 	Open 	  	interact does not work under expect -c
-
-0d5b33c00e 	2020-12-05 19:20:05 	Build_Problem 	Open 	  	build issues with Xcode 12
-
-094d670f62 	2022-04-19 21:52:02 	Code_Defect 	Open 	  	-Werror=format-security failures with building expect 5.45.4
-
-be7d99dcc2 	2022-06-16 15:05:31 	Code_Defect 	Open 	  	core dump while generating glob-gate for expanded syntax with trailing whitespace 
-
 Upstream used to export SHLIB_VERSION from configure into
 config.status, and thus it was usable in our patched Makefile so that
 the install rules would work if SHLIB_VERSION changed.  Instead,
