@@ -1,6 +1,3 @@
-- Resolve the SHLIB_VERSION issue as upstream seems to have massively
-  changed configure (in a point release).
-
 - In patch-configure:
 
    - Check "avoid regenerating within pkgsrc", which is labeled as
