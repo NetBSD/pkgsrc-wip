@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/xmsession
+bin/xmsm
+bin/xmtoolbox
+lib/X11/app-defaults/XmSm
+lib/X11/app-defaults/XmToolbox
+man/man1/xmsm.1
+man/man1/xmtoolbox.1
+share/examples/emwm-utils/toolboxrc
