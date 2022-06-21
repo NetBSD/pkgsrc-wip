@@ -1,11 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	v11
-PKGNAME=	jose-${DISTNAME:S/v//}
+DISTNAME=	jose-11
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=latchset/}
-GITHUB_TAG=	${DISTNAME}
-DIST_SUBDIR=	jose
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/latchset/jose/
