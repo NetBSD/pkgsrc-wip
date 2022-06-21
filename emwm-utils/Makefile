@@ -13,10 +13,7 @@ HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Companion utilies for EMWM
 LICENSE=	mit
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	src/xmsession.src
-SUBST_SED.paths=	-e 's,PREFIX,${PREFIX},g'
+MAKEFLAGS+=	PREFIX=${PREFIX}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/${DISTNAME:S,-src,,}
