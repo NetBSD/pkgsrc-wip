@@ -3,6 +3,7 @@
 DISTNAME=	emwm-src
 PKGVER=		1.0a
 PKGNAME=	${DISTNAME:S,-src,,}-${PKGVER}
+PKGREVISION=	1
 CATEGORIES=	wm
 DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://fastestcode.org/dl/
