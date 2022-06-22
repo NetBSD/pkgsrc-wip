@@ -679,6 +679,7 @@ SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook-xsl-ns
 SUBDIR+=	docbook2X
 SUBDIR+=	docker-cli
+SUBDIR+=	docker-compose
 SUBDIR+=	docker-compose-cli
 SUBDIR+=	docker-machine
 SUBDIR+=	docviewer
