@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://www.hadrons.org/software/libmd/
-COMMENT=	Message Digest functions from BSD systems=
+COMMENT=	Message Digest functions from BSD systems
 LICENSE=	modified-bsd AND 2-clause-bsd AND isc AND beer-ware
 
 GNU_CONFIGURE=	yes

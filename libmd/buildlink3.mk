@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	libmd
+
+.if !defined(LIBMD_BUILDLINK3_MK)
+LIBMD_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libmd+=	libmd>=1.0.4
+BUILDLINK_PKGSRCDIR.libmd?=	../../wip/libmd
+.endif	# LIBMD_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libmd
