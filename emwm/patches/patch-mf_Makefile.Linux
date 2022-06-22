@@ -1,0 +1,17 @@
+$NetBSD$
+
+Portability fixes fox bmake, due to a substitution reference in
+src/common.mf. Imported from mf/Makefile.NetBSD. 
+
+--- mf/Makefile.Linux.orig	2022-04-12 15:34:31.000000000 +0000
++++ mf/Makefile.Linux
+@@ -12,6 +12,7 @@ CFLAGS = -O2 -Wall $(INCDIRS)
+ 
+ include common.mf
+ 
+-install: common_install
++.c.o:
++	$(CC) $(CFLAGS) $(DEFINES) $(INCDIRS) -c -o $(<:.c=.o) $>
+ 
+--include .depend
++install: common_install
