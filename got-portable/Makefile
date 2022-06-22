@@ -31,6 +31,12 @@ post-patch:
 	${RM} -f ${WRKSRC}/openbsd-compat/sha1.h
 .endif
 
+.if ${OPSYS} == "Linux"
+# compatibility macros and functions for Linux.
+.include "../../devel/libbsd/buildlink3.mk"
+.include "../../wip/libmd/buildlink3.mk"
+.endif
+
 # For set_panel_userptr(3)'s second argument and waddwstr(3).
 .include "../../devel/ncursesw/buildlink3.mk"
 
