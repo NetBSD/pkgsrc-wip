@@ -13,7 +13,7 @@ GIT_REVISION.frogatto=	8b0351854518af25b553c7fd50f6f2afb6d5e71b
 GIT_BRANCH.frogatto=	master
 
 MAINTAINER=	charlotte@NetBSD.org
-COMMENT=	Frogatto and Friends
+COMMENT=	The Frogatto and Friends game
 LICENSE=	modified-bsd AND mit AND zlib # XXX not true, + cc-by-v3.0 also
 
 USE_LANGUAGES=	c c++
@@ -35,14 +35,12 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec/frogatto
 INSTALLATION_DIRS+=	share/frogatto
 
-ANURA_DIRS=	# defined
 ANURA_DIRS+=	data
 ANURA_DIRS+=	images
 ANURA_DIRS+=	modules
 ANURA_DIRS+=	music
 ANURA_DIRS+=	update
 
-FROGATTO_DIRS=	# defined
 FROGATTO_DIRS+=	data
 FROGATTO_DIRS+=	images
 FROGATTO_DIRS+=	locale
@@ -52,7 +50,6 @@ FROGATTO_DIRS+=	po
 FROGATTO_DIRS+=	sounds
 FROGATTO_DIRS+=	sounds_wav
 
-FROGATTO_FILES=		# defined
 FROGATTO_FILES+=	master-config.cfg
 FROGATTO_FILES+=	module.cfg
 
@@ -77,7 +74,7 @@ pre-install:
 		cd ${WRKDIR}/frogatto/$${dir} && ${PAX} -r -w . ${WRKDIR}/anura/modules/frogatto4/$${dir};	\
 	done
 	for file in ${FROGATTO_FILES}; do							\
-		${CP} ${WRKDIR}/frogatto/$${file} ${WRKDIR}/anura/modules/frogatto4/$${file};	\
+		${INSTALL_DATA} ${WRKDIR}/frogatto/$${file} ${WRKDIR}/anura/modules/frogatto4/$${file};	\
 	done
 
 do-install:
