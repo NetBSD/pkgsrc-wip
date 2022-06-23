@@ -14,6 +14,12 @@ LICENSE=	apache-2.0
 GO_DIST_BASE=	cli-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/docker/cli
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Honor plugins under PREFIX
+SUBST_FILES.paths+=	cli-plugins/manager/manager_unix.go
+SUBST_VARS.paths+=	PREFIX
+
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/fish/completions

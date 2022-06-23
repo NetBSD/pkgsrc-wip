@@ -3,4 +3,5 @@ $NetBSD$
 BLAKE2s (docker-cli-20.10.17.tar.gz) = 400a98a6bcfa0671be9d0bf22b0658fde30b048ffffbd61ecd7736bf357ec034
 SHA512 (docker-cli-20.10.17.tar.gz) = 9c2cff7e248272e234eac9febdfd7c5c844fc65ee4b08fd4ce0f526e4fed33f2d12682d0991ef28b42977b9de2c84d7ef9c6ddd6f31c4e8c34a3985c1cea3316
 Size (docker-cli-20.10.17.tar.gz) = 7636087 bytes
+SHA1 (patch-cli-plugins_manager_manager__unix.go) = 2d17cd8c7dc958e14d23cef6e619c4d798cad5a7
 SHA1 (patch-vendor_github.com_docker_docker_pkg_system_rm.go) = b9b220f90afdead624184b4121e25b80d27c4420
