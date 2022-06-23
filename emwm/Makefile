@@ -18,7 +18,7 @@ MAKEFLAGS+=	PREFIX=${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} != "NetBSD"
 USE_TOOLS+=	gmake
 .endif
 
