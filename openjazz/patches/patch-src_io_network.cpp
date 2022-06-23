@@ -1,4 +1,7 @@
 $NetBSD$
+
+Use correct timeval struct for NetBSD.
+
 --- src/io/network.cpp.orig	2019-01-06 13:41:53.000000000 +0000
 +++ src/io/network.cpp
 @@ -63,6 +63,8 @@
