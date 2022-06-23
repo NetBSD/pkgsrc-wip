@@ -13,8 +13,11 @@ LICENSE=	apache-2.0
 
 GO_BUILD_PATTERN+=	./cmd
 
+INSTALLATION_DIRS+=	bin lib/docker/cli-plugins
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/cmd ${DESTDIR}${PREFIX}/bin/docker-compose
+	${LN} -sf ${DESTDIR}${PREFIX}/bin/docker-compose ${DESTDIR}${PREFIX}/lib/docker/cli-plugins
 
 .include "go-modules.mk"
 
