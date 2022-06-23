@@ -16,6 +16,12 @@ LICENSE=	gnu-lgpl-v2.1
 
 MAKEFLAGS+=	PREFIX=${PREFIX}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+USE_TOOLS+=	gmake
+.endif
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/${DISTNAME:S,-src,,}
 INSTALLATION_DIRS+=	lib/X11/app-defaults
