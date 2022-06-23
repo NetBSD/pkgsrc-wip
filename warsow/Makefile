@@ -8,13 +8,11 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 GITHUB_PROJECT=	warsow
 GITHUB_TAG=	${PKGVERSION_NOREV}-netbsd
-
-# Game data found here:
-DISTFILES=			${DEFAULT_DISTFILES} warsow-2.1.2.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES} warsow-2.1.2.tar.gz
 SITES.warsow-2.1.2.tar.gz=	https://warsow.net/
 
 MAINTAINER=	charlotte@NetBSD.org
-HOMEPAGE=	https://warsow.net
+HOMEPAGE=	https://warsow.net/
 COMMENT=	Free fast-paced first-person shooter
 LICENSE=	gnu-gpl-v2
 
@@ -31,12 +29,10 @@ INSTALLATION_DIRS+=	share/warsow
 INSTALLATION_DIRS+=	share/warsow/libs
 INSTALLATION_DIRS+=	share/warsow/basewsw
 
-WARSOW_PROGRAMS=	# defined
 WARSOW_PROGRAMS+=	warsow
 WARSOW_PROGRAMS+=	wsw_server
 WARSOW_PROGRAMS+=	wswtv_server
 
-WARSOW_INTERNAL_LIBS=	# defined
 WARSOW_INTERNAL_LIBS+=	libangelwrap.so
 WARSOW_INTERNAL_LIBS+=	libcin.so
 WARSOW_INTERNAL_LIBS+=	libftlib.so
@@ -47,7 +43,6 @@ WARSOW_INTERNAL_LIBS+=	libsnd_qf.so
 WARSOW_INTERNAL_LIBS+=	libsteamlib.so
 WARSOW_INTERNAL_LIBS+=	libui.so
 
-WARSOW_BASEWSW_LIBS=	# defined
 WARSOW_BASEWSW_LIBS+=	libcgame.so
 WARSOW_BASEWSW_LIBS+=	libgame.so
 
