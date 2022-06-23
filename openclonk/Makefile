@@ -29,6 +29,7 @@ GCC_REQD+=	4.9
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
