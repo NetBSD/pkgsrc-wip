@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 USE_TOOLS+=	pkg-config cmake
 
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 post-install:
 	rm -rf ${DESTDIR}/usr/pkg/share/licenses/jose
