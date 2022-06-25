@@ -2,9 +2,8 @@
 
 DISTNAME=	64tass-1.56.2625-src
 PKGNAME=	${DISTNAME:S/-src//}
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tass64/}
-#	https://deac-ams.dl.sourceforge.net/project/tass64/source/64tass-1.56.2625-src.zip
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
