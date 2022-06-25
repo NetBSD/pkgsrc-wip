@@ -57,7 +57,7 @@ SUBST_FILES.paths+=	Make.unix
 SUBST_SED.paths=	-e 's,i.86/386,i86pc/amd64,'
 
 .  if ${OPSYS} == "SunOS" && empty(PKGSRC_COMPILER:Msunpro)
-MAKEFLAGS+=	CONF=unix AUDIO=none
+MAKEFLAGS+=	CONF=unix AUDIO=unix
 MAKEFLAGS+=	LDADD="-L${X11}/lib/64 -L${X11}/lib -lX11 -lX11 -lrt \
 		-lpthread -lsocket -lnsl"
 .  endif
