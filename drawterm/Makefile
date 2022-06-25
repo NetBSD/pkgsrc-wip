@@ -26,7 +26,7 @@ MAKEFLAGS+=	LDFLAGS+="${PTHREAD} -lpthread"
 .else
 MAKEFLAGS+=	CFLAGS+="-I{WRKSRC} -I${WRKSRC}/include -I${WRKSRC}/kern"
 MAKEFLAGS+=	CFLAGS+="-g -c -I${X11}/include -D_THREAD_SAFE -O2"
-MAKEFLAGS+=	LDFLAGS="-lpthread"
+MAKEFLAGS+=	LDFLAGS+="-lpthread"
 .endif
 
 .if ${OPSYS:M*BSD}
@@ -57,6 +57,7 @@ SUBST_FILES.paths+=	Make.unix
 SUBST_SED.paths=	-e 's,i.86/386,i86pc/amd64,'
 
 .  if ${OPSYS} == "SunOS" && empty(PKGSRC_COMPILER:Msunpro)
+# On Solaris 10, AUDIO=sun is most probably needed,
 MAKEFLAGS+=	CONF=unix AUDIO=unix
 MAKEFLAGS+=	LDADD="-L${X11}/lib/64 -L${X11}/lib -lX11 -lX11 -lrt \
 		-lpthread -lsocket -lnsl"
