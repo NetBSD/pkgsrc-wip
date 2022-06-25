@@ -17,12 +17,16 @@ CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 
 USE_LANGUAGES=		c c++
 FORTIFY_SUPPORTED=	no
-MAKE_FLAGS+=		CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
+MAKEFLAGS+=		CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-MAKE_FLAGS+=	CCFLAGS=${CFLAGS:M*:Q} -D_NETBSD_SOURCE
+MAKEFLAGS+=	CCFLAGS="-D_NETBSD_SOURCE ${CFLAGS}"
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKEFLAGS+=	CCFLAGS="-std=c11 -D_XPG6 ${CFLAGS}"
 .endif
 
 PKG_SHELL=		bin/ksh93
@@ -34,7 +38,7 @@ WRKSRC=	${WRKDIR}/ksh-${DISTNAME:S,^v,,}
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${TOOLS_SHELL} ${WRKSRC}/bin/package \
-		make ${MAKE_FLAGS}
+		make ${MAKEFLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arch/*/bin/ksh \
