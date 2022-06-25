@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/64tass
+man/man1/64tass.1
+share/doc/64tass/README
+share/doc/64tass/README.html
