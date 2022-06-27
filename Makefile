@@ -5691,7 +5691,6 @@ SUBDIR+=	texlive-collection-langcjk
 SUBDIR+=	texlive-collection-langjapanese
 SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
-SUBDIR+=	textosaurus
 SUBDIR+=	tftp-hpa
 SUBDIR+=	tg-timer-git
 SUBDIR+=	tg_owt-git
