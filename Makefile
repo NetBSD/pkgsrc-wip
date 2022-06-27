@@ -292,6 +292,7 @@ SUBDIR+=	bip
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
 SUBDIR+=	biz-ud-gothic-ttf
+SUBDIR+=	biz-ud-mincho-ttf
 SUBDIR+=	bkcrack
 SUBDIR+=	blad
 SUBDIR+=	blasr
