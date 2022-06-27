@@ -1175,7 +1175,6 @@ SUBDIR+=	gleam-stdlib
 SUBDIR+=	glib-java
 SUBDIR+=	glib2
 SUBDIR+=	glibc
-SUBDIR+=	glide
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
 SUBDIR+=	glimpse

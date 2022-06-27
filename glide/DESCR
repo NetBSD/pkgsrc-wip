@@ -1,4 +1,0 @@
-Glide is a simple and minimalistic media player relying on GStreamer for the
-multimedia support and GTK+ for the user interface. Glide should be able
-to play any multimedia format supported by GStreamer, locally or remotely
-hosted.
