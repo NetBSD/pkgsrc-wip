@@ -1,0 +1,39 @@
+# $NetBSD$
+
+DISTNAME=	04_NotoSansCJK-OTF
+PKGNAME=	noto-sans-cjk-ttf-${GITHUB_RELEASE:S,^Sans,,}
+CATEGORIES=	fonts
+MASTER_SITES=	${MASTER_SITE_GITHUB:=googlefonts/}
+GITHUB_PROJECT=	noto-cjk
+GITHUB_RELEASE=	Sans2.004
+EXTRACT_SUFX=	.zip
+DIST_SUBDIR=	${GITHUB_PROJECT}-${GITHUB_RELEASE}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://fonts.google.com/noto
+COMMENT=	Noto Sans CJK fonts
+LICENSE=	ofl-v1.1
+
+CONFLICTS+=	noto-cjk-[0-9]*
+
+DISTFILES=	${DEFAULT_DISTFILES} \
+		11_NotoSansMonoCJKjp${EXTRACT_SUFX} \
+		12_NotoSansMonoCJKkr${EXTRACT_SUFX} \
+		13_NotoSansMonoCJKsc${EXTRACT_SUFX} \
+		14_NotoSansMonoCJKtc${EXTRACT_SUFX} \
+		15_NotoSansMonoCJKhk${EXTRACT_SUFX}
+
+NOTO_CJK_SITES=	${SITES.${DISTNAME}${EXTRACT_SUFX}}
+
+SITES.11_NotoSansMonoCJKjp${EXTRACT_SUFX}=	${NOTO_CJK_SITES}
+SITES.12_NotoSansMonoCJKkr${EXTRACT_SUFX}=	${NOTO_CJK_SITES}
+SITES.13_NotoSansMonoCJKsc${EXTRACT_SUFX}=	${NOTO_CJK_SITES}
+SITES.14_NotoSansMonoCJKtc${EXTRACT_SUFX}=	${NOTO_CJK_SITES}
+SITES.15_NotoSansMonoCJKhk${EXTRACT_SUFX}=	${NOTO_CJK_SITES}
+
+USE_LANGUAGES=	# none
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}
+
+.include "../../mk/fonts.mk"
+.include "../../mk/bsd.pkg.mk"

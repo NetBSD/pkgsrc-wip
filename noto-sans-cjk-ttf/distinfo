@@ -1,0 +1,20 @@
+$NetBSD$
+
+BLAKE2s (noto-cjk-Sans2.004/04_NotoSansCJK-OTF.zip) = 1b3bb4efabdc177a4eef26b2f3c060b49cf091fcaf811e08764ec4f30102f935
+SHA512 (noto-cjk-Sans2.004/04_NotoSansCJK-OTF.zip) = 17bc6d076d0d731ce8bcdf050be677bc6b4837d0b70275ea640fe070af6e948e3debae93ac5cd85c7607ff1da4449a4c29dc1aec9d4c725dec81a745490a54bb
+Size (noto-cjk-Sans2.004/04_NotoSansCJK-OTF.zip) = 473335582 bytes
+BLAKE2s (noto-cjk-Sans2.004/11_NotoSansMonoCJKjp.zip) = 7bb45c840599831f0f99bef038755db999e1328b985738db27ae18d5a4d17633
+SHA512 (noto-cjk-Sans2.004/11_NotoSansMonoCJKjp.zip) = b4cb166ec28a06237dc4aaf0e6fc2a47380c3c0b32c005d69d36c4fac6eb6bddac8f80e9729ef202ee5787682bab534e4db88aea27cc4d951d7add368a2248d3
+Size (noto-cjk-Sans2.004/11_NotoSansMonoCJKjp.zip) = 27839173 bytes
+BLAKE2s (noto-cjk-Sans2.004/12_NotoSansMonoCJKkr.zip) = 0423c6315ebd3ad2df7512e71f28bf690510f8a9fd66017c6f90050c2f0e0ce3
+SHA512 (noto-cjk-Sans2.004/12_NotoSansMonoCJKkr.zip) = 7462cfbab25ab741735e874b10d9e4b04d92f3a4f4b98daaf4dccbe8341d51db7524bb2757a813045109bdff53dee520247f0ffa501b7148f032712a2e20dae0
+Size (noto-cjk-Sans2.004/12_NotoSansMonoCJKkr.zip) = 27792452 bytes
+BLAKE2s (noto-cjk-Sans2.004/13_NotoSansMonoCJKsc.zip) = 17154bf1448d90be73bc867ae8ff5a0730e347ece0de94bb34dd5d75b141a2de
+SHA512 (noto-cjk-Sans2.004/13_NotoSansMonoCJKsc.zip) = 3c501aab12522b608ffbe002eff2451bf30501637138e257ce4e924c644372c0d7348ae5b340ff085889c741df0adca53d3e5c999793498bedbfe578deda833a
+Size (noto-cjk-Sans2.004/13_NotoSansMonoCJKsc.zip) = 27750553 bytes
+BLAKE2s (noto-cjk-Sans2.004/14_NotoSansMonoCJKtc.zip) = 5f41c7223c0c1f1e6c3ece89a57d5e6056de14518db7bfcda3c3e09a7e1c329e
+SHA512 (noto-cjk-Sans2.004/14_NotoSansMonoCJKtc.zip) = e418d5e551d3390295843e410cb76b402ce0126e08869e36015c35fb3997e280d4f63122cd843d7f14df8f3680df020d645269f97463cb1a0c33b360ab3edd9d
+Size (noto-cjk-Sans2.004/14_NotoSansMonoCJKtc.zip) = 27797087 bytes
+BLAKE2s (noto-cjk-Sans2.004/15_NotoSansMonoCJKhk.zip) = fe7dc9a082df383439397b31a982e2d61784c73e520a0608f9902d816e30fa38
+SHA512 (noto-cjk-Sans2.004/15_NotoSansMonoCJKhk.zip) = 98bf37b26b1654bcd653431ea34b7c8e77820d3c237803087b54a84dbb0bd8f494179752ff991ad36198de3077202e6c1ed92a484929cfa987730696763c0691
+Size (noto-cjk-Sans2.004/15_NotoSansMonoCJKhk.zip) = 27783619 bytes
