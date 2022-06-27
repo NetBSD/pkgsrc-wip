@@ -5853,7 +5853,6 @@ SUBDIR+=	upower
 SUBDIR+=	uprof
 SUBDIR+=	ups-monitor
 SUBDIR+=	uptimed
-SUBDIR+=	uq
 SUBDIR+=	uqwk
 SUBDIR+=	urlwatch
 SUBDIR+=	urw-base35-ttf
