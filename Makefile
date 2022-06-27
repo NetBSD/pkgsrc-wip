@@ -2222,7 +2222,6 @@ SUBDIR+=	libsquish
 SUBDIR+=	libstacktrace
 SUBDIR+=	libstatgrab
 SUBDIR+=	libstrophe
-SUBDIR+=	libsysstat
 SUBDIR+=	libtextcat
 SUBDIR+=	libtheorafile
 SUBDIR+=	libtlen2
