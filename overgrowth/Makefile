@@ -8,7 +8,7 @@ GITHUB_TAG=	a8a20e09108ecfc4921a4b409af537a159982672
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://overgrowth.wolfire.com/
-COMMENT=	Overgrowth from Wolfire Games (engine only)
+COMMENT=	Game from Wolfire Games (engine only)
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/overgrowth-${GITHUB_TAG}/Projects
