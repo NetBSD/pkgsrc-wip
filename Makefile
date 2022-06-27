@@ -291,6 +291,7 @@ SUBDIR+=	bioruby
 SUBDIR+=	bip
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
+SUBDIR+=	biz-ud-gothic-ttf
 SUBDIR+=	bkcrack
 SUBDIR+=	blad
 SUBDIR+=	blasr
