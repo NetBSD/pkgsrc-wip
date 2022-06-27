@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:20 nia Exp $
+
+BLAKE2s (noto-fonts-v20201206-phase3/v20201206-phase3.tar.gz) = cd80d03aa96daa54510c9ee44bf02de7bec3170b20f5cd46c4a829ef30a3fdc9
+SHA512 (noto-fonts-v20201206-phase3/v20201206-phase3.tar.gz) = e088159332fd0172fc348de4cbda95ae80c0012e4c79cd4ee82c64d0aae6cc1664acec0b2ce3052533e133678ffc78d1e1cb831d13869c0ddadc112fd295db71
+Size (noto-fonts-v20201206-phase3/v20201206-phase3.tar.gz) = 860621581 bytes
