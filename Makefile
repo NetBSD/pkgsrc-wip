@@ -380,7 +380,6 @@ SUBDIR+=	cairo-dingbat-ttf
 SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
-SUBDIR+=	calcurse
 SUBDIR+=	calendarsupport
 SUBDIR+=	calypso-git
 SUBDIR+=	canna
