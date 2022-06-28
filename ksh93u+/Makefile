@@ -15,19 +15,12 @@ LICENSE=	epl-v1.0
 
 CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
 FORTIFY_SUPPORTED=	no
+
 MAKEFLAGS+=		CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-MAKEFLAGS+=	CCFLAGS="-D_NETBSD_SOURCE ${CFLAGS}"
-.endif
-
-.if ${OPSYS} == "SunOS"
-MAKEFLAGS+=	CCFLAGS="-std=c11 -D_XPG6 ${CFLAGS}"
-.endif
+CFLAGS.SunOS+=	-std=c11 -D__EXTENSIONS__
 
 PKG_SHELL=		bin/ksh93
 
@@ -36,14 +29,20 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 WRKSRC=	${WRKDIR}/ksh-${DISTNAME:S,^v,,}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${TOOLS_SHELL} ${WRKSRC}/bin/package \
-		make ${MAKEFLAGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 				\
+		${SH} ./bin/package make ${MAKEFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/arch/*/bin/ksh \
+	set -e;								\
+	arch=`${WRKSRC}/bin/package host`;                              \
+	${INSTALL_PROGRAM} ${WRKSRC}/arch/"$${arch}"/bin/ksh 		\
 		${DESTDIR}${PREFIX}/bin/ksh93
-	${INSTALL_MAN} ${WRKSRC}/src/cmd/ksh93/sh.1 \
+
+	${INSTALL_MAN} ${WRKSRC}/src/cmd/ksh93/sh.1 			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ksh93.1
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
+		${SH} ./bin/package test
 
 .include "../../mk/bsd.pkg.mk"
