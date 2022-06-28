@@ -10,6 +10,7 @@ COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 
 GNU_CONFIGURE=	yes
 
