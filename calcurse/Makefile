@@ -1,23 +1,37 @@
-# $NetBSD: Makefile,v 1.7 2015/08/18 20:53:24 yhardy Exp $
+# $NetBSD$
 
-DISTNAME=	calcurse-4.2.2
+DISTNAME=	calcurse-4.8.0
 CATEGORIES=	time
 MASTER_SITES=	http://calcurse.org/files/
 
-MAINTAINER=	jan.smydke@jh-inst.cas.cz
+MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://calcurse.org/
 COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	gmake msgfmt msgmerge xgettext
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
 GNU_CONFIGURE=	yes
 
-# force to use ncurses from pkgsrc
-#INCOMPAT_CURSES=	NetBSD-*-*
-REPLACE_PYTHON=		contrib/caldav/calcurse-caldav
-FAKE_NCURSES=		yes
+USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext
+
+USE_CURSES=	getmouse wide
+FAKE_NCURSES=	yes
+
+REPLACE_PYTHON+=	contrib/caldav/calcurse-caldav
+REPLACE_PYTHON+=	contrib/vdir/calcurse-vdir
+
+INSTALLATION_DIRS+=	share/examples/calcurse
+
+post-install:
+.for f in config.sample
+	${INSTALL_DATA} ${WRKSRC}/contrib/caldav/${f} 						\
+	${DESTDIR}${PREFIX}/share/examples/calcurse/caldav.config.sample
+.endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

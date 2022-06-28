@@ -2,6 +2,7 @@
 bin/calcurse
 bin/calcurse-caldav
 bin/calcurse-upgrade
+bin/calcurse-vdir
 man/man1/calcurse.1
 share/doc/calcurse/add.txt
 share/doc/calcurse/config.txt
@@ -161,6 +162,7 @@ share/doc/calcurse/submitting-patches.html
 share/doc/calcurse/tab.txt
 share/doc/calcurse/view.txt
 share/doc/calcurse/vnote.txt
+share/examples/calcurse/caldav.config.sample
 share/locale/de/LC_MESSAGES/calcurse.mo
 share/locale/en/LC_MESSAGES/calcurse.mo
 share/locale/es/LC_MESSAGES/calcurse.mo
