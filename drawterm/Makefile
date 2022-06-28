@@ -14,19 +14,20 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c99
 
-MAKEFLAGS+=	X11=${X11BASE} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
+MAKEFLAGS+=	X11=${X11BASE} CFLAGS=${CFLAGS:Q}
+MAKEFLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${PKGSRC_COMPILER:Mgcc}
-MAKEFLAGS+=	CFLAGS+="-Wall -Wno-missing-braces -ggdb \
-		-I${WRKSRC} -I${WRKSRC}/include -I${WRKSRC}/kern \
-		-c -I${X11}/include -D_THREAD_SAFE ${PTHREAD} -O2"
-MAKEFLAGS+=	LDFLAGS+="${PTHREAD} -lpthread"
+CFLAGS+=	-Wall -Wno-missing-braces -ggdb
+CFLAGS+=	-I${WRKSRC} -I${WRKSRC}/include -I${WRKSRC}/kern
+CFLAGS+=	-c -I${X11}/include -D_THREAD_SAFE ${PTHREAD} -O2
+LDFLAGS+=	${PTHREAD} -lpthread
 .else
-MAKEFLAGS+=	CFLAGS+="-I{WRKSRC} -I${WRKSRC}/include -I${WRKSRC}/kern"
-MAKEFLAGS+=	CFLAGS+="-g -c -I${X11}/include -D_THREAD_SAFE -O2"
-MAKEFLAGS+=	LDFLAGS+="-lpthread"
+CFLAGS+=	-I{WRKSRC} -I${WRKSRC}/include -I${WRKSRC}/kern
+CFLAGS+=	-g -c -I${X11}/include -D_THREAD_SAFE -O2
+LDFLAGS+=	-lpthread
 .endif
 
 .if ${OPSYS:M*BSD}
@@ -36,42 +37,45 @@ MAKEFLAGS+=		CC?=cc
 .  elif ${OPSYS} == FreeBSD
 MAKEFLAGS+=		CC?=clang
 .  endif
+.endif
 
-.elif ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
 MAKEFLAGS+=	CONF=unix AUDIO=alsa
-MAKEFLAGS+= LDADD="-L${X11}/lib64 -L${X11}/lib -lX11 -ggdb -lm -lasound"
+LD_ADD=	"-L${X11}/lib64 -L${X11}/lib -lX11 -ggdb -lm -lasound"
 
 .elif ${OPSYS} == "Darwin"
 MAKEFLAGS+=	CONF=osx-x11 CC?=clang PTHREAD=''
-MAKEFLAGS+=	LDADD="-L${X11}/lib -lX11 -ggdb"
+LD_ADD=		"-L${X11}/lib -lX11 -ggdb"
 
-# Developer Studio also runs on Oracle Linux
-.elif !empty(PKGSRC_COMPILER:Msunpro)
-MAKEFLAGS+=	CONF=sun
+.elif ${OPSYS} == "IRIX" && !empty(PKGSRC_COMPILER:Mmipspro*)
+MAKEFLAGS+=	CONF=irix CFLAGS+=-DIRIX
+.endif
 
-.elif ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	Make.unix
 SUBST_SED.paths=	-e 's,i.86/386,i86pc/amd64,'
 
-.  if ${OPSYS} == "SunOS" && empty(PKGSRC_COMPILER:Msunpro)
-# On Solaris 10, AUDIO=sun is most probably needed,
-MAKEFLAGS+=	CONF=unix AUDIO=unix
-MAKEFLAGS+=	LDADD="-L${X11}/lib/64 -L${X11}/lib -lX11 -lX11 -lrt \
-		-lpthread -lsocket -lnsl"
-.  endif
+LD_ADD=		"-L${X11}/lib/64 -L${X11}/lib -lX11 \
+			-lrt -lpthread -lsocket -lnsl"
 
-.elif ${OPSYS} == "IRIX" && !empty(PKGSRC_COMPILER:Mmipspro*)
-MAKEFLAGS+=	CONF=irix CFLAGS+=-DIRIX
-
-.else
-.  if !exists(/dev/dsp*)
-MAKEFLAGS+=	CONF=unix CC?=gcc
+.  if ${OPSYS_VERSION} <= 051000
+MAKEFLAGS+=	AUDIO=sun
 .  else
-MAKEFLAGS+=	CONF=unix CC?=gcc AUDIO=unix
+MAKEFLAGS+=	AUDIO=unix
 .  endif
+
+.  if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Msunpro)
+MAKEFLAGS+=	CONF=sun
+.  else
+MAKEFLAGS+=	CONF=unix
+.  endif
+.endif
+
+.if defined(LD_ADD)
+MAKEFLAGS+=	LDADD=${LD_ADD}
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
