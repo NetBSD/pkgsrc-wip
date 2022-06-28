@@ -20,16 +20,8 @@ DOCDIR:=	${PREFIX}/share/doc/etsh
 MAKEFLAGS+=	PREFIX=${PREFIX}
 MAKEFLAGS+=	DESTDOCDIR=${DESTDIR}${DOCDIR}
 MAKEFLAGS+=	DESTEXPDIR=${DESTDIR}${EXPDIR}
-
-# The post-install target fails with BINGRP and
-# MANGRP set, due to conflicting install(1) syntax
-# used by the project's Makefile. This was only
-# relevant on SunOS so far, where they are set by
-# default.  Consider rewriting post-install: to
-# manually copy docs and examples in the correct
-# directories.
 MAKEFLAGS+=		MANGRP:='' BINGRP:=''
-#
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	libexec.etsh/etshdir
