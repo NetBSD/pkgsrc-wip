@@ -1,2 +1,0 @@
-This library contains functionality for reading and writing
-OCaml-values in a type-safe binary protocol.

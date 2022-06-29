@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2015/04/17 22:28:58 jgoamakf Exp $
-
-RMD160 (pa_ounit-112.24.00.zip) = 0a225898512adaccee8138d2b6787f40b54e8ed4
-SHA512 (pa_ounit-112.24.00.zip) = 4a2b985bd92113b4355250bfbd3f3b0b03c225a292184fc1ef39d329c19fb4c009b3269f1b3c68307630ac32bb75d9f731ea51eddfbea4014568ebf2e0e664b9
-Size (pa_ounit-112.24.00.zip) = 64481 bytes

@@ -1,1 +1,0 @@
-Pipebang is a syntax extension to transform x |! f into f x.

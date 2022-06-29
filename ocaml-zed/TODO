@@ -1,1 +1,0 @@
-split PLIST into PLIST(contains byte code) and PLIST.opt(contains native code).

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/12 08:03:34 jgoamakf Exp $
-lib/ocaml/site-lib/pa_pipebang/META
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.a
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.cma
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.cmi
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.cmx
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.cmxa
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.cmxs
-lib/ocaml/site-lib/pa_pipebang/pa_pipebang.ml
