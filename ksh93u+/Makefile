@@ -18,7 +18,10 @@ CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 USE_LANGUAGES=		c
 FORTIFY_SUPPORTED=	no
 
-MAKEFLAGS+=		CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
+KSH=	${TOOLS_PATH.ksh:Q}
+
+MAKEFLAGS+=		CC=${CC:Q} SHELL=${KSH}
+MAKEFLAGS+=		CCFLAGS=${CFLAGS:M*:Q}
 
 CFLAGS.SunOS+=	-std=c11 -D__EXTENSIONS__
 
@@ -30,7 +33,7 @@ WRKSRC=	${WRKDIR}/ksh-${DISTNAME:S,^v,,}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 				\
-		${SH} ./bin/package make ${MAKEFLAGS}
+		${KSH} ./bin/package make ${MAKEFLAGS}
 
 do-install:
 	set -e;								\
@@ -42,7 +45,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ksh93.1
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
-		${SH} ./bin/package test
+	cd ${WRKSRC} && ${SETENV} SHELL=${KSH}				\
+		${KSH} ./bin/package test
 
 .include "../../mk/bsd.pkg.mk"
