@@ -52,7 +52,7 @@ post-patch:
 
 # For set_panel_userptr(3)'s second argument and waddwstr(3).
 .include "../../devel/ncursesw/buildlink3.mk"
-
+BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1n
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
