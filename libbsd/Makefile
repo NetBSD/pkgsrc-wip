@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libbsd-0.11.5
+DISTNAME=	libbsd-0.11.6
 CATEGORIES=	devel
 MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
