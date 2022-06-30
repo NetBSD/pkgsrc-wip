@@ -1,18 +1,40 @@
-# $NetBSD: Makefile,v 1.6 2015/02/15 21:07:04 yrmt Exp $
+# $NetBSD$
 
-GHCOMMIT=	9170b4391945da17fd2ac2e251b54b3400668192
-DISTNAME=	${GHCOMMIT}
-PKGNAME=	signify-0.1.0.20150215
+GITHUB_TAG=	v0.10
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG:S,^v,,}
+PKGNAME=	${DISTNAME:S,outils,signify,}
 CATEGORIES=	security
-MASTER_SITES=	https://github.com/yrmt/signify/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
+GITHUB_PROJECT=	outils
 
-MAINTAINER=	youri.mout@gmail.com
-HOMEPAGE=	https://github.com/yrmt/signify
+MAINTAINER=	vms@retrobsd.ddns.net
+HOMEPAGE=	https://flak.tedunangst.com/post/signify
 COMMENT=	Cryptographically sign and verify files, from OpenBSD
-LICENSE=	isc
+LICENSE=	original-bsd AND modified-bsd AND isc AND public-domain
 
-WRKSRC=		${WRKDIR}/signify-${GHCOMMIT}
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
 
-GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake
+MAKEFLAGS+=	ALL=src/usr.bin/signify/signify
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	${OUTDIR}/signify.c
+SUBST_FILES.paths+=	${OUTDIR}/signify.1
+SUBST_SED.paths=	-e 's|/etc/signify|${PKG_SYSCONFDIR}/signify|g'
+
+WRKSRC=	${WRKDIR}/${DISTNAME}
+OUTDIR=	${WRKSRC}/src/usr.bin/signify
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/signify
+
+post-patch:
+# The sys/* overrides are not needed on NetSD
+	${RM} ${WRKSRC}/src/liboutils/include/sys/*
+
+do-install:
+	${INSTALL_PROGRAM} ${OUTDIR}/signify ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${OUTDIR}/signify.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
