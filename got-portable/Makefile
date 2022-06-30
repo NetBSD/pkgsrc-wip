@@ -40,7 +40,7 @@ post-patch:
 .if ${OPSYS} == "Linux"
 # compatibility macros and functions for Linux.
 .include "../../devel/libbsd/buildlink3.mk"
-.include "../../wip/libmd/buildlink3.mk"
+.include "../../devel/libmd/buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Darwin"
