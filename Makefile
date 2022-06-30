@@ -984,6 +984,7 @@ SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
 SUBDIR+=	fxrays
 SUBDIR+=	fxt
+SUBDIR+=	fynedesk
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-rssgrab
