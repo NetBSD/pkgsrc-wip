@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libbsd-0.11.5.tar.xz) = e6851a670bd5d97c749b8bce0e5eeecb558ddfd73e1e43dca4c16be5fa32dc25
+SHA512 (libbsd-0.11.5.tar.xz) = c52c19eddd53630aca14f9f6221f7b84aa9cc798b4bb91e867822b161793313aab872ac1c0350d29312a72fee6e2061f3910ff918b724ec171d8c9de5837c841
+Size (libbsd-0.11.5.tar.xz) = 409972 bytes
