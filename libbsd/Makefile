@@ -15,10 +15,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-INSTALL=	${LIBTOOL} --mode=install ${INSTALL}
-
 PKGCONFIG_OVERRIDE+=	src/libbsd-ctor.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbsd-overlay.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbsd.pc.in
 
+.include "../../devel/libmd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
