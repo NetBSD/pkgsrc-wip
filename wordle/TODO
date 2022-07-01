@@ -7,3 +7,5 @@ Debug and fix the issue causing
 
    Location:
        src/bin/wordle/game.rs:40:47
+
+NOTE: The game launches just fine if a day number is specified.

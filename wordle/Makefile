@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	wordle-0.2.1
+DISTNAME=	wordle-0.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=conradludgate/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
