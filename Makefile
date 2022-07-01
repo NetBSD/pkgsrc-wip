@@ -212,7 +212,6 @@ SUBDIR+=	arm-elf-binutils
 SUBDIR+=	arm-elf-gcc47
 SUBDIR+=	arm-trusted-firmware-sun50i_a64-crust
 SUBDIR+=	armadillo
-SUBDIR+=	arora
 SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
