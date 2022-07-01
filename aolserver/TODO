@@ -1,6 +1,0 @@
-Now that NetBSD has TCL 4 and native threads, AOLServer 4 should build
-without the ugliness of needing to carry its own TCL install with it.
-
-This package does not build since I don't understand dynamic linking 
-very well, and can't figure out libtool.  It fails saying it can't find
-a .so file.

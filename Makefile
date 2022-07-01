@@ -162,7 +162,6 @@ SUBDIR+=	aokell
 SUBDIR+=	aols-freetds
 SUBDIR+=	aols-openssl
 SUBDIR+=	aols-postgres
-SUBDIR+=	aolserver
 SUBDIR+=	aolserver4
 SUBDIR+=	ap2-auth-imap
 SUBDIR+=	ap2-auth-pam
