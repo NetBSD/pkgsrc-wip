@@ -1,7 +1,0 @@
-@comment $NetBSD$
-bin/davis
-bin/davis-cover
-bin/davis-cur-horizontal
-bin/davis-cur-vertical
-bin/davis-fzf
-man/man1/davis.1

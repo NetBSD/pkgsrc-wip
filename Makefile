@@ -604,7 +604,6 @@ SUBDIR+=	dasht
 SUBDIR+=	datamash
 SUBDIR+=	dates
 SUBDIR+=	davical-git
-SUBDIR+=	davis
 SUBDIR+=	dazz_db
 SUBDIR+=	dbf
 SUBDIR+=	dbus-dfbsd
