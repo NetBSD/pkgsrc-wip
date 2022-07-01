@@ -146,7 +146,6 @@ SUBDIR+=	amavis-logwatch
 SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amnesia-tdd
-SUBDIR+=	amp-editor
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	android-tools-adb
