@@ -22,7 +22,7 @@
 # RUST_REQ
 #	The minimum version of Rust required by the package.
 #
-#	Default: 1.20.0
+#	Default: 1.56.1
 #
 # RUST_RUNTIME
 #	Whether rust is a runtime dependency.
@@ -33,7 +33,7 @@
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-RUST_REQ?=	1.20.0
+RUST_REQ?=	1.56.1
 RUST_RUNTIME?=	no
 
 RUST_TYPE?=	src
