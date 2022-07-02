@@ -25,6 +25,9 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/${DISTNAME:S,-src,,}
 INSTALLATION_DIRS+=	lib/X11/app-defaults
 
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4755
+SPECIAL_PERMS+=		bin/xmsm ${SETUID_ROOT_PERMS}
+
 WRKSRC=	${WRKDIR}/utils
 
 do-install:
