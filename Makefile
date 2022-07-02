@@ -3057,7 +3057,6 @@ SUBDIR+=	p6-xml-writer
 SUBDIR+=	p6-zef
 SUBDIR+=	pack
 SUBDIR+=	packer
-SUBDIR+=	packman
 SUBDIR+=	packmol
 SUBDIR+=	pacman
 SUBDIR+=	pact_broker-client
