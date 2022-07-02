@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:05 thomasklausner Exp $
-bin/pasmo
-share/doc/pasmo/NEWS
-share/doc/pasmo/README
-share/doc/pasmo/pasmodoc.html
