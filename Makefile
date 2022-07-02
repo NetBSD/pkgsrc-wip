@@ -248,7 +248,6 @@ SUBDIR+=	backintime
 SUBDIR+=	backplane
 SUBDIR+=	bagel
 SUBDIR+=	bakery
-SUBDIR+=	baler
 SUBDIR+=	ballerburg
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
