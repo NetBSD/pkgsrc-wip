@@ -81,7 +81,6 @@ SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
 SUBDIR+=	SNAP
 SUBDIR+=	SOGo5
-SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	TT2020-ttf-git
 SUBDIR+=	Terminal
