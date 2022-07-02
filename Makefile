@@ -148,7 +148,6 @@ SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	android-tools-adb
 SUBDIR+=	angelscript
-SUBDIR+=	ann
 SUBDIR+=	ansible-junos-stdlib
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	antlr
