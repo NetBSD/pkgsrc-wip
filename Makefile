@@ -343,7 +343,6 @@ SUBDIR+=	bss
 SUBDIR+=	bstone
 SUBDIR+=	bsvc
 SUBDIR+=	btop
-SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
 SUBDIR+=	budgie-desktop
 SUBDIR+=	budgie-screensaver
