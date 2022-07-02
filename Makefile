@@ -976,7 +976,6 @@ SUBDIR+=	fuse-zip
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusionpbx
 SUBDIR+=	fvcom2
-SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
 SUBDIR+=	fxrays
 SUBDIR+=	fxt
