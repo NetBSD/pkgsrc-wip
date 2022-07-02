@@ -251,7 +251,6 @@ SUBDIR+=	bakery
 SUBDIR+=	ballerburg
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
-SUBDIR+=	banshee
 SUBDIR+=	bareos-webui
 SUBDIR+=	baresip
 SUBDIR+=	barony
