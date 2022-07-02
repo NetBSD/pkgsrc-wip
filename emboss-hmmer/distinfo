@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2012/09/02 11:14:10 noud4 Exp $
-
-RMD160 (emboss/hmmer-2.1.1-20041107/HMMER-2.1.1.tar.gz) = 994d284b5fca77a6264643c8711a696cc0752051
-SHA512 (emboss/hmmer-2.1.1-20041107/HMMER-2.1.1.tar.gz) = bc6e65ff0b72d5205f97ae4e945851ab75b521571ac719f07523b28a72403e8e4ccf0ab1e7db4f29aa22179c89f57c63e4b562f989a3c86c67a7bca0cde74c76
-Size (emboss/hmmer-2.1.1-20041107/HMMER-2.1.1.tar.gz) = 555504 bytes
-SHA1 (patch-aa) = 19ece4e7116ecaec51cd9abef3460c5093241263
-SHA1 (patch-ab) = 2dc7c3085966d064005b8419f5724702e473d3d3
-SHA1 (patch-ac) = 91e569cda3fefdf152bc8d2727ce1d86e5259e5f

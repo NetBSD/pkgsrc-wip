@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/18 22:30:55 daprice Exp $
-bin/mse
-lib/libckit.la
-share/EMBOSS/acd/mse.acd
