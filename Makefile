@@ -150,7 +150,6 @@ SUBDIR+=	ansible-junos-stdlib
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	antlr
 SUBDIR+=	antlr3-c
-SUBDIR+=	aoeui
 SUBDIR+=	aoi
 SUBDIR+=	aokell
 SUBDIR+=	aols-freetds
