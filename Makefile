@@ -117,7 +117,6 @@ SUBDIR+=	afl-cov
 SUBDIR+=	agfl
 SUBDIR+=	agile
 SUBDIR+=	ags
-SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
 SUBDIR+=	akonadi
