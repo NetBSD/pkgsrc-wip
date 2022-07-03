@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bwm-ng-0.6.3.tar.gz) = 59a18b9f87a6f0ee426dd51785e4f25aa8b210cfd221aa4d0545def540f601b9
+SHA512 (bwm-ng-0.6.3.tar.gz) = 85ce29e6ffa9643b4e7c1d731f4e928ddca8cfdc71c86b65ec4e55058b951eb8da9ab80139145300518223589d5fece5bdc11ede91a1ea394d569993ccdb0ab8
+Size (bwm-ng-0.6.3.tar.gz) = 70094 bytes
