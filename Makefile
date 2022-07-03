@@ -5976,7 +5976,6 @@ SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbnbt
 SUBDIR+=	xbps
-SUBDIR+=	xbrightness
 SUBDIR+=	xbsql
 SUBDIR+=	xcape
 SUBDIR+=	xcb-util-xrm-git
