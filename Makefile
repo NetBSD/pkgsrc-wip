@@ -247,7 +247,6 @@ SUBDIR+=	azureus
 SUBDIR+=	backintime
 SUBDIR+=	backplane
 SUBDIR+=	bagel
-SUBDIR+=	bakery
 SUBDIR+=	ballerburg
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
