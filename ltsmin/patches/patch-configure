@@ -1,0 +1,64 @@
+$NetBSD$
+
+--- configure.orig	2018-07-03 19:29:06.000000000 +0000
++++ configure
+@@ -11416,9 +11416,9 @@ _LT_EOF
+ 	# Also, AIX nm treats weak defined symbols like other global
+ 	# defined symbols, whereas GNU nm marks them as "W".
+ 	if $NM -V 2>&1 | $GREP 'GNU' > /dev/null; then
+-	  export_symbols_cmds='$NM -Bpg $libobjs $convenience | awk '\''{ if (((\$ 2 == "T") || (\$ 2 == "D") || (\$ 2 == "B") || (\$ 2 == "W")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
++	  export_symbols_cmds='$NM -Bpg $libobjs $convenience | awk '\''{ if (((\$ 2 = "T") || (\$ 2 = "D") || (\$ 2 = "B") || (\$ 2 = "W")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
+ 	else
+-	  export_symbols_cmds='$NM -BCpg $libobjs $convenience | awk '\''{ if (((\$ 2 == "T") || (\$ 2 == "D") || (\$ 2 == "B")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
++	  export_symbols_cmds='$NM -BCpg $libobjs $convenience | awk '\''{ if (((\$ 2 = "T") || (\$ 2 = "D") || (\$ 2 = "B")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
+ 	fi
+ 	aix_use_runtimelinking=no
+ 
+@@ -12529,7 +12529,7 @@ aix[4-9]*)
+     # development snapshots of GCC prior to 3.0.
+     case $host_os in
+       aix4 | aix4.[01] | aix4.[01].*)
+-      if { echo '#if __GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ >= 97)'
++      if { echo '#if __GNUC__ > 2 || (__GNUC__ = 2 && __GNUC_MINOR__ >= 97)'
+ 	   echo ' yes '
+ 	   echo '#endif'; } | ${CC} -E - | $GREP yes > /dev/null; then
+ 	:
+@@ -16145,9 +16145,9 @@ $as_echo_n "checking whether the $compil
+     # Also, AIX nm treats weak defined symbols like other global defined
+     # symbols, whereas GNU nm marks them as "W".
+     if $NM -V 2>&1 | $GREP 'GNU' > /dev/null; then
+-      export_symbols_cmds_CXX='$NM -Bpg $libobjs $convenience | awk '\''{ if (((\$ 2 == "T") || (\$ 2 == "D") || (\$ 2 == "B") || (\$ 2 == "W")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
++      export_symbols_cmds_CXX='$NM -Bpg $libobjs $convenience | awk '\''{ if (((\$ 2 = "T") || (\$ 2 = "D") || (\$ 2 = "B") || (\$ 2 = "W")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
+     else
+-      export_symbols_cmds_CXX='$NM -BCpg $libobjs $convenience | awk '\''{ if (((\$ 2 == "T") || (\$ 2 == "D") || (\$ 2 == "B")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
++      export_symbols_cmds_CXX='$NM -BCpg $libobjs $convenience | awk '\''{ if (((\$ 2 = "T") || (\$ 2 = "D") || (\$ 2 = "B")) && (substr(\$ 3,1,1) != ".")) { print \$ 3 } }'\'' | sort -u > $export_symbols'
+     fi
+     ;;
+   pw32*)
+@@ -16363,7 +16363,7 @@ aix[4-9]*)
+     # development snapshots of GCC prior to 3.0.
+     case $host_os in
+       aix4 | aix4.[01] | aix4.[01].*)
+-      if { echo '#if __GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ >= 97)'
++      if { echo '#if __GNUC__ > 2 || (__GNUC__ = 2 && __GNUC_MINOR__ >= 97)'
+ 	   echo ' yes '
+ 	   echo '#endif'; } | ${CC} -E - | $GREP yes > /dev/null; then
+ 	:
+@@ -17303,7 +17303,7 @@ ac_try='"$LEX" --stdout conftest.lex >/d
+ eval ac_try_echo="\":$LINENO: $ac_try\""
+ echo "$ac_try_echo" >&5
+ (eval "$ac_try") 2>&5
+-if test $? == 0; then
++if test $? = 0; then
+     ax_cv_check_flex_compat=yes
+ else
+     ax_cv_check_flex_compat=no
+@@ -28956,7 +28956,7 @@ as_fn_error $? "no acceptable atomic ope
+ See \`config.log' for more details" "$LINENO" 5; }
+ fi
+ 
+-if test "x$have_libspg" == xyes; then
++if test "x$have_libspg" = xyes; then
+ 
+ $as_echo "#define HAVE_LIBSPG /**/" >>confdefs.h
+ 
