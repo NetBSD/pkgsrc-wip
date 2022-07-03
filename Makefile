@@ -1970,7 +1970,6 @@ SUBDIR+=	krename
 SUBDIR+=	kronometer
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
-SUBDIR+=	ksh93u+
 SUBDIR+=	ksshaskpass
 SUBDIR+=	kstest
 SUBDIR+=	ksysguard
