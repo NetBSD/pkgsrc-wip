@@ -19,6 +19,9 @@ CFLAGS+=	-ffat-lto-objects
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -fiv
 
+do-test:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${MAKE} check
+
 PKGCONFIG_OVERRIDE+=	src/libbsd-ctor.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbsd-overlay.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbsd.pc.in
