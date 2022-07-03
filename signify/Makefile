@@ -12,8 +12,6 @@ HOMEPAGE=	https://flak.tedunangst.com/post/signify
 COMMENT=	Cryptographically sign and verify files, from OpenBSD
 LICENSE=	original-bsd AND modified-bsd AND isc AND public-domain
 
-ONLY_FOR_PLATFORM+=	NetBSD-*-*
-
 USE_TOOLS+=	gmake
 MAKEFLAGS+=	ALL=src/usr.bin/signify/signify
 
@@ -29,9 +27,13 @@ OUTDIR=	${WRKSRC}/src/usr.bin/signify
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/signify
 
+.include "../../mk/bsd.prefs.mk"
+
 post-patch:
+.if ${OPSYS} == "NetBSD"
 # The sys/* overrides are not needed on NetSD
 	${RM} ${WRKSRC}/src/liboutils/include/sys/*
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${OUTDIR}/signify ${DESTDIR}${PREFIX}/bin
