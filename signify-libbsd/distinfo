@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2015/02/15 21:07:04 yrmt Exp $
-
-BLAKE2s (signify-31.tar.xz) = 2fb02db0b412367300cefff3b441d9624d2c16f88125724a52f2a36cd8ff4a45
-SHA512 (signify-31.tar.xz) = f39597ea278a7eb10b786909752fde59e16405f0bc76c9906f8014e9e7f6801b4733479eec765fb960b6062359954caf54a3460ff67258a9cff93fa978951962
-Size (signify-31.tar.xz) = 83480 bytes

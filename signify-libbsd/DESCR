@@ -1,5 +1,0 @@
-The signify utility creates and verifies cryptographic signatures.
-A signature verifies the integrity of a message.
-
-This is ia portable version of the original OpenBSD code,
-based on libbsd.
