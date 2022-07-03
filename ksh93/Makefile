@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	v1.0.0-beta.2
-PKGVER=		${DISTNAME:S,^v,,:S,-beta,,}	
+PKGVER=		${DISTNAME:S,^v,,:S,-beta,,}
 PKGNAME=	${GITHUB_PROJECT}93-${PKGVER}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
