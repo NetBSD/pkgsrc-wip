@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2022.5.0
+DISTNAME=	distributed-2022.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distributed/}

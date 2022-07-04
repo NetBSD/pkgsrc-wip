@@ -15,6 +15,9 @@ ${PYSITELIB}/distributed/__init__.pyo
 ${PYSITELIB}/distributed/_concurrent_futures_thread.py
 ${PYSITELIB}/distributed/_concurrent_futures_thread.pyc
 ${PYSITELIB}/distributed/_concurrent_futures_thread.pyo
+${PYSITELIB}/distributed/_signals.py
+${PYSITELIB}/distributed/_signals.pyc
+${PYSITELIB}/distributed/_signals.pyo
 ${PYSITELIB}/distributed/_stories.py
 ${PYSITELIB}/distributed/_stories.pyc
 ${PYSITELIB}/distributed/_stories.pyo
@@ -63,6 +66,9 @@ ${PYSITELIB}/distributed/client.pyo
 ${PYSITELIB}/distributed/cluster_dump.py
 ${PYSITELIB}/distributed/cluster_dump.pyc
 ${PYSITELIB}/distributed/cluster_dump.pyo
+${PYSITELIB}/distributed/collections.py
+${PYSITELIB}/distributed/collections.pyc
+${PYSITELIB}/distributed/collections.pyo
 ${PYSITELIB}/distributed/comm/__init__.py
 ${PYSITELIB}/distributed/comm/__init__.pyc
 ${PYSITELIB}/distributed/comm/__init__.pyo
@@ -168,9 +174,6 @@ ${PYSITELIB}/distributed/deploy/ssh.pyo
 ${PYSITELIB}/distributed/deploy/utils.py
 ${PYSITELIB}/distributed/deploy/utils.pyc
 ${PYSITELIB}/distributed/deploy/utils.pyo
-${PYSITELIB}/distributed/deploy/utils_test.py
-${PYSITELIB}/distributed/deploy/utils_test.pyc
-${PYSITELIB}/distributed/deploy/utils_test.pyo
 ${PYSITELIB}/distributed/diagnostics/__init__.py
 ${PYSITELIB}/distributed/diagnostics/__init__.pyc
 ${PYSITELIB}/distributed/diagnostics/__init__.pyo
@@ -233,6 +236,9 @@ ${PYSITELIB}/distributed/http/routing.pyo
 ${PYSITELIB}/distributed/http/scheduler/__init__.py
 ${PYSITELIB}/distributed/http/scheduler/__init__.pyc
 ${PYSITELIB}/distributed/http/scheduler/__init__.pyo
+${PYSITELIB}/distributed/http/scheduler/api.py
+${PYSITELIB}/distributed/http/scheduler/api.pyc
+${PYSITELIB}/distributed/http/scheduler/api.pyo
 ${PYSITELIB}/distributed/http/scheduler/info.py
 ${PYSITELIB}/distributed/http/scheduler/info.pyc
 ${PYSITELIB}/distributed/http/scheduler/info.pyo
@@ -401,6 +407,15 @@ ${PYSITELIB}/distributed/semaphore.pyo
 ${PYSITELIB}/distributed/shuffle/__init__.py
 ${PYSITELIB}/distributed/shuffle/__init__.pyc
 ${PYSITELIB}/distributed/shuffle/__init__.pyo
+${PYSITELIB}/distributed/shuffle/arrow.py
+${PYSITELIB}/distributed/shuffle/arrow.pyc
+${PYSITELIB}/distributed/shuffle/arrow.pyo
+${PYSITELIB}/distributed/shuffle/multi_comm.py
+${PYSITELIB}/distributed/shuffle/multi_comm.pyc
+${PYSITELIB}/distributed/shuffle/multi_comm.pyo
+${PYSITELIB}/distributed/shuffle/multi_file.py
+${PYSITELIB}/distributed/shuffle/multi_file.pyc
+${PYSITELIB}/distributed/shuffle/multi_file.pyo
 ${PYSITELIB}/distributed/shuffle/shuffle.py
 ${PYSITELIB}/distributed/shuffle/shuffle.pyc
 ${PYSITELIB}/distributed/shuffle/shuffle.pyo
