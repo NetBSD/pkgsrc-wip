@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD$
-
-A sample configuration has been installed at ${PREFIX}/share/examples/emwm
-You should copy it to ~/.emwmrc
-
-===========================================================================
