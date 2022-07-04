@@ -1,77 +1,9 @@
-Still at configure state
+undefined ref to WIFEXITED, WEXITSTATUS
 
-configure:17400: gcc -o conftest -O2 -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include  -L/usr/pkg/lib
--Wl,-zrelro -Wl,-R/usr/pkg/lib conftest.c   -lpthread >&5
-conftest.c: In function 'main':
-conftest.c:51:9: warning: implicit declaration of function 'pthread_mutexattr_setpshared'; did you mean 'pt
-hread_mutexattr_settype'? [-Wimplicit-function-declaration]
-     if (pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED))
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         pthread_mutexattr_settype
-ld: /tmp//ccnFnR6G.o: in function `main':
-conftest.c:(.text.startup+0x3b): undefined reference to `pthread_mutexattr_setpshared'
-configure:17400: $? = 1
-configure: program exited with status 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "ltsmin"
-| #define PACKAGE_TARNAME "ltsmin"
-| #define PACKAGE_VERSION "3.0.2"
-| #define PACKAGE_STRING "ltsmin 3.0.2"
-| #define PACKAGE_BUGREPORT "ltsmin-support@lists.utwente.nl"
-| #define PACKAGE_URL ""
-| #define PACKAGE "ltsmin"  
-| #define VERSION "3.0.2"
-| #define STDC_HEADERS 1  
-| #define HAVE_SYS_TYPES_H 1
-| #define HAVE_SYS_STAT_H 1
-| #define HAVE_STDLIB_H 1
-| #define HAVE_STRING_H 1
-| #define HAVE_MEMORY_H 1
-| #define HAVE_STRINGS_H 1
-| #define HAVE_INTTYPES_H 1
-| #define HAVE_STDINT_H 1
-| #define HAVE_UNISTD_H 1
-| #define __EXTENSIONS__ 1
-| #define _ALL_SOURCE 1
-| #define _DARWIN_C_SOURCE 1
-| #define _GNU_SOURCE 1
-| #define _POSIX_PTHREAD_SEMANTICS 1
-| #define __STDC_WANT_IEC_60559_ATTRIBS_EXT__ 1
-| #define __STDC_WANT_IEC_60559_BFP_EXT__ 1
-| #define __STDC_WANT_IEC_60559_DFP_EXT__ 1
-| #define __STDC_WANT_IEC_60559_FUNCS_EXT__ 1
-| #define __STDC_WANT_IEC_60559_TYPES_EXT__ 1
-| #define __STDC_WANT_LIB_EXT2__ 1
-| #define __STDC_WANT_MATH_SPEC_FUNCS__ 1
-| #define _TANDEM_SOURCE 1
-| #define LTSMIN_PATHNAME_MAX 1024
-| #define LTSMIN_CONFIG_INCLUDED 1
-| #define DEFFILEMODE 0666
-| #define HAVE_DLFCN_H 1
-| #define LT_OBJDIR ".libs/"
-| #define YYTEXT_POINTER 1
-| /* end confdefs.h.  */
-|
-| #include <stdlib.h>
-| #include <stdio.h>
-| #include <sys/types.h>
-| #include <pthread.h>
-| int main()
-| {
-|     pthread_mutex_t mutex;
-|     pthread_mutexattr_t attr;
-|     if (pthread_mutexattr_init(&attr))
-|         exit(1);
-|     if (pthread_mutexattr_setpshared(&attr, PTHREAD_PROCESS_SHARED))
-|         exit(2);
-|     if (pthread_mutex_init(&mutex, &attr))
-|         exit(3);
-|     if (pthread_mutexattr_destroy(&attr))
-|         exit(4);
-|     if (pthread_mutex_destroy(&mutex))
-|         exit(5);
-|     exit(0);
-| }
-|
+Despite buildlink to buddy, config gives error for libbdd
 
+Try to meet deps:
+
+	libczmq
+	libspot
+	sylvan
