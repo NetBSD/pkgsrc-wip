@@ -1,7 +1,7 @@
 $NetBSD$
 
 Do not build compatibility for functions
-already supported on GNU/Linux systems.
+already supported on target platforms.
 
 --- Makefile.orig	2021-10-14 15:34:52.000000000 +0000
 +++ Makefile
