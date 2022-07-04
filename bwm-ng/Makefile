@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 FAKE_NCURSES=		yes
 
 pre-configure:
-	@set -e; cd ${WRKSRC} && autoreconf -fiv
+	${RUN} set -e; cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
