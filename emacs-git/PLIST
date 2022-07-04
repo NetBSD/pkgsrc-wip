@@ -2607,6 +2607,8 @@ share/emacs/${PKGVERSION}/lisp/loadhist.elc
 share/emacs/${PKGVERSION}/lisp/loadup.el
 share/emacs/${PKGVERSION}/lisp/locate.el.gz
 share/emacs/${PKGVERSION}/lisp/locate.elc
+share/emacs/${PKGVERSION}/lisp/longlines.el.gz
+share/emacs/${PKGVERSION}/lisp/longlines.elc
 share/emacs/${PKGVERSION}/lisp/lpr.el.gz
 share/emacs/${PKGVERSION}/lisp/lpr.elc
 share/emacs/${PKGVERSION}/lisp/ls-lisp.el.gz
@@ -3028,8 +3030,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/longlines.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/longlines.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
