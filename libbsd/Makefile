@@ -8,7 +8,8 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
-LICENSE=	original-bsd
+LICENSE=	original-bsd AND modified-bsd AND 2-clause-bsd
+LICENSE+=	AND isc AND mit AND beer-ware
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
