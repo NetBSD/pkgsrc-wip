@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://scikit-learn.org/
 COMMENT=	Machine learning algorithms for Python
 LICENSE=	modified-bsd
@@ -21,13 +21,11 @@ USE_TOOLS+=	gmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
-# The setup.py has integration with pytest-runner, but throws odd errors
 TEST_ENV+=PYTHON=python${PYVERSSUFFIX}
 TEST_ENV+=PYTEST=py.test-${PYVERSSUFFIX}
 TEST_ENV+=PYTHONPATH=.
-TEST_ENV+=OPENBLAS_NUM_THREADS=1
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} gmake test-code
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} gmake test
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

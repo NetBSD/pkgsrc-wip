@@ -1,0 +1,14 @@
+$NetBSD$
+
+Use ${PYTHON} as our executable to determine which platform we are on
+
+--- Makefile.orig	2022-05-19 12:16:26.428781300 +0000
++++ Makefile
+@@ -8,7 +8,7 @@ PYTEST ?= pytest
+ CTAGS ?= ctags
+
+ # skip doctests on 32bit python
+-BITS := $(shell python -c 'import struct; print(8 * struct.calcsize("P"))')
++BITS := $(shell ${PYTHON} -c 'import struct; print(8 * struct.calcsize("P"))')
+
+ all: clean inplace test
