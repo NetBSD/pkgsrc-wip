@@ -7,3 +7,7 @@ Size (ltsmin-v3.0.2-source.tgz) = 3273078 bytes
 SHA1 (patch-Makefile.in) = a20bc2c99a8baa2d5c3580990d20b41944454520
 SHA1 (patch-configure) = 8e15569fd3d58708b8b489e63df33d0b4878a41a
 SHA1 (patch-src_hre_hre__pthread.c) = db0b7a74f43dcd01ca3ac6bbaefca4a2b96e0053
+SHA1 (patch-src_pins-lib_modules_dve-pins.c) = 2ed2fa4485cef28505c8d941a70d920c9a85f1ab
+SHA1 (patch-src_pins-lib_modules_opaal-pins.c) = a6de6ae4170796398bbd775e5af2a16a439e3224
+SHA1 (patch-src_pins2lts-sym_pins2lts-sym.c) = 15024896eaa379f2ecacbe2c0caaa76252165033
+SHA1 (patch-src_util-lib_sort__r.h) = 87d951d7877f855cb09d45d6c5c91d7986bbabb2

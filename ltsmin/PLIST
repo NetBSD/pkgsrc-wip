@@ -1,4 +1,50 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+bin/dve2lts-dist
+bin/dve2lts-mc
+bin/dve2lts-seq
+bin/dve2lts-sym
+bin/dve2torx
+bin/etf2lts-dist
+bin/etf2lts-mc
+bin/etf2lts-seq
+bin/etf2lts-sym
+bin/etf2torx
+bin/gcf
+bin/ltl2ba
+bin/ltsmin-compare
+bin/ltsmin-convert
+bin/ltsmin-printtrace
+bin/ltsmin-reduce
+bin/opaal2lts-mc
+bin/pins2lts-dist
+bin/pins2lts-mc
+bin/pins2lts-seq
+bin/pins2lts-sym
+bin/pins2torx
+bin/pnml2lts-dist
+bin/pnml2lts-mc
+bin/pnml2lts-seq
+bin/pnml2lts-sym
+bin/prom2lts-dist
+bin/prom2lts-mc
+bin/prom2lts-seq
+bin/prom2lts-sym
+bin/prom2torx
+bin/spgsolver
+bin/spins
+include/ltsmin/bitvector.h
+include/ltsmin/chunk_support.h
+include/ltsmin/chunk_table_factory.h
+include/ltsmin/dlopen-api.h
+include/ltsmin/dm.h
+include/ltsmin/feedback.h
+include/ltsmin/lts-type.h
+include/ltsmin/ltsmin-standard.h
+include/ltsmin/pins-util.h
+include/ltsmin/pins.h
+include/ltsmin/string-map.h
+include/ltsmin/tables.h
+share/doc/ltsmin/AUTHORS
+share/doc/ltsmin/CODING-STANDARDS
+share/doc/ltsmin/COPYING
+share/doc/ltsmin/README.md

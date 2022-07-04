@@ -15,11 +15,14 @@ WRKSRC=	${WRKDIR}/ltsmin-3.0.2
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 DEPENDS+=	flex>=2.6.4:../../devel/flex
+USE_TOOLS+=	gmake
 CONFIG_SHELL=	bash
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
 CONFIGURE_ARGS+=	CFLAGS=-D__NetBSD__
-
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/man
+CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/html/${PKGBASE}
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
