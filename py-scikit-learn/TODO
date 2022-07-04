@@ -1,0 +1,10 @@
+Investigate why Make test fails:
+sklearn/decomposition/tests/test_kernel_pca.py::test_kernel_pca_consistent_transform Fatal Python error: Aborted
+
+Thread 0x00007f9f24ff9700 (most recent call first):
+  File "/home/matthew/pkgsrc/install.20220701/lib/python3.10/threading.py", line 320 in wait
+  File "/home/matthew/pkgsrc/install.20220701/lib/python3.10/site-packages/joblib/externals/loky/backend/queues.py", line 141 in _feed
+  File "/home/matthew/pkgsrc/install.20220701/lib/python3.10/threading.py", line 953 in run
+  File "/home/matthew/pkgsrc/install.20220701/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
+  File "/home/matthew/pkgsrc/install.20220701/lib/python3.10/threading.py", line 973 in _bootstrap
+
