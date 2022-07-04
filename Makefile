@@ -2007,7 +2007,6 @@ SUBDIR+=	lde
 SUBDIR+=	ldtp
 SUBDIR+=	lebiniou
 SUBDIR+=	lebiniou-data
-SUBDIR+=	lemonbar-xft
 SUBDIR+=	leo
 SUBDIR+=	leocad
 SUBDIR+=	lfe
