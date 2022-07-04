@@ -13,7 +13,7 @@ already supported on GNU/Linux systems.
  
  ALL=src/usr.bin/apply/apply src/usr.bin/jot/jot src/usr.bin/lam/lam src/usr.bin/lndir/lndir src/bin/md5/md5 src/usr.bin/rs/rs src/usr.bin/signify/signify src/usr.bin/calendar/calendar src/usr.bin/vis/vis src/usr.bin/unvis/unvis src/usr.bin/what/what src/usr.sbin/rdate/rdate 
  all: $(ALL)
-@@ -21,8 +22,24 @@ src/bin/md5/md5: src/bin/md5/md5.o src/b
+@@ -21,8 +22,20 @@ src/bin/md5/md5: src/bin/md5/md5.o src/b
  
  src/usr.bin/rs/rs: src/usr.bin/rs/rs.o src/usr.bin/rs/utf8.o src/liboutils/pledge.o src/liboutils/strtonum.o src/liboutils/reallocarray.o
  
@@ -22,10 +22,6 @@ already supported on GNU/Linux systems.
 +src/usr.bin/signify/signify: src/usr.bin/signify/signify.o src/usr.bin/signify/crypto_api.o src/usr.bin/signify/fe25519.o src/usr.bin/signify/mod_ed25519.o src/usr.bin/signify/mod_ge25519.o src/usr.bin/signify/sc25519.o src/usr.bin/signify/zsig.o src/liboutils/pledge.o src/liboutils/explicit_bzero.o src/liboutils/ohash.o src/liboutils/readpassphrase.o src/liboutils/sha2.o src/liboutils/sha256hl.o src/liboutils/sha512_256hl.o src/liboutils/sha512hl.o src/liboutils/timingsafe_bcmp.o src/liboutils/bcrypt_pbkdf.o src/liboutils/blowfish.o src/liboutils/freezero.o
 +
 +else ifeq ($(UNAME_S),SunOS)
-+
-+CPPFLAGS+=-include src/liboutils/minmax.h
-+
-+LIBS=-lrt -lresolv -lm
 +
 +src/usr.bin/signify/signify: src/usr.bin/signify/signify.o src/usr.bin/signify/crypto_api.o src/usr.bin/signify/fe25519.o src/usr.bin/signify/mod_ed25519.o src/usr.bin/signify/mod_ge25519.o src/usr.bin/signify/sc25519.o src/usr.bin/signify/zsig.o src/liboutils/pledge.o src/liboutils/ohash.o src/liboutils/readpassphrase.o src/liboutils/sha2.o src/liboutils/sha256hl.o src/liboutils/sha512_256hl.o src/liboutils/sha512hl.o src/liboutils/timingsafe_bcmp.o src/liboutils/bcrypt_pbkdf.o src/liboutils/blowfish.o
 +
