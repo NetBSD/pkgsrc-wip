@@ -797,7 +797,6 @@ SUBDIR+=	etoile
 SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
 SUBDIR+=	etos
-SUBDIR+=	etsh
 SUBDIR+=	eureka-devel
 SUBDIR+=	eventd
 SUBDIR+=	eventviews
