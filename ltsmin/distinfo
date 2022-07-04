@@ -4,7 +4,6 @@ SHA1 (ltsmin-v3.0.2-source.tgz) = a658aaa6efa4a2c7fd0d48c4e8c406ebb4916c27
 RMD160 (ltsmin-v3.0.2-source.tgz) = 2e36b9cf08dd51ae6554cd8e7d5301726fb7202e
 SHA512 (ltsmin-v3.0.2-source.tgz) = f05f45384e2d12b82f9f59819c5701ad097819b77394296b3927d39183680fa86d7c94b2d2e8d497444887ed1a29b030e09f1808cb5c714ed8c939f9a6e7944a
 Size (ltsmin-v3.0.2-source.tgz) = 3273078 bytes
-SHA1 (patch-Makefile.in) = a20bc2c99a8baa2d5c3580990d20b41944454520
 SHA1 (patch-configure) = 8e15569fd3d58708b8b489e63df33d0b4878a41a
 SHA1 (patch-src_hre_hre__pthread.c) = db0b7a74f43dcd01ca3ac6bbaefca4a2b96e0053
 SHA1 (patch-src_pins-lib_modules_dve-pins.c) = 2ed2fa4485cef28505c8d941a70d920c9a85f1ab
