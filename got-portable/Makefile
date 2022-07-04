@@ -21,21 +21,16 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
 USE_TOOLS+=		pkg-config autoconf automake autoreconf
 GNU_CONFIGURE=		yes
+
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-_short_dist=	"`echo ${DISTNAME} | cut -c 1-7`"
-WRKSRC=		${WRKDIR}/got-portable-${_short_dist}
+shortdist=	"`${ECHO} ${DISTNAME} | ${CUT} -c 1-7`"
+WRKSRC=		${WRKDIR}/got-portable-${shortdist}
 
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -fiv
-
-post-patch:
-.if ${OPSYS} == "NetBSD"
-	# NetBSD has sha1.h.
-	${RM} -f ${WRKSRC}/openbsd-compat/sha1.h
-.endif
 
 .if ${OPSYS} == "Linux"
 # compatibility macros and functions for Linux.
@@ -50,9 +45,12 @@ post-patch:
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
 
-# For set_panel_userptr(3)'s second argument and waddwstr(3).
-.include "../../devel/ncursesw/buildlink3.mk"
+# need libcrypto.so.1.1
 BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1n
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+
+# required for set_panel_userptr(3) and waddwstr(3).
+.include "../../devel/ncursesw/buildlink3.mk"
+
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
