@@ -769,7 +769,6 @@ SUBDIR+=	emirror
 SUBDIR+=	emokit
 SUBDIR+=	emovix
 SUBDIR+=	empathy
-SUBDIR+=	emwm-utils
 SUBDIR+=	engauge-digitizer
 SUBDIR+=	enigma2000
 SUBDIR+=	enlightenment-current
