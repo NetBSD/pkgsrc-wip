@@ -6104,7 +6104,6 @@ SUBDIR+=	zabbix60-frontend
 SUBDIR+=	zabbix60-java
 SUBDIR+=	zabbix60-proxy
 SUBDIR+=	zabbix60-server
-SUBDIR+=	zapping
 SUBDIR+=	zbackup
 SUBDIR+=	zdbsp
 SUBDIR+=	zed
