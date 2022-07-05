@@ -18,7 +18,6 @@ MAKEFLAGS+=	ALL=src/usr.bin/signify/signify
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/signify
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
 OUTDIR:=	${WRKSRC}/src/usr.bin/signify
 LIBSRCDIR:=	${WRKSRC}/src/liboutils
 
