@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	ltsmin-v3.0.2-source
-PKGNAME=	${DISTNAME:S,-v,-,}
+PKGNAME=	${DISTNAME:S,-v,-,:S,-source$,,}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=utwente-fmt/ltsmin/releases/download/v3.0.2/}
 EXTRACT_SUFX=	.tgz
