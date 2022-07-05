@@ -1,5 +1,13 @@
 $NetBSD$
 
+1. = preferred instead of == as the latter breaks compatibility on some
+platforms and former is more portable.
+
+2. As of NetBSD 9.2 pthread_*_setpshared aren't supported, hence the check is
+skipped for NetBSD
+
+Upstream: https://github.com/utwente-fmt/ltsmin/issues/203
+
 --- configure.orig	2018-07-03 19:29:06.000000000 +0000
 +++ configure
 @@ -17303,7 +17303,7 @@ ac_try='"$LEX" --stdout conftest.lex >/d
