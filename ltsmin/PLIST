@@ -108,7 +108,7 @@ man/man5/ltsmin-mucalc.5
 man/man5/ltsmin-pred.5
 man/man5/ltsmin-type-system.5
 man/man7/ltsmin.7
-share/doc/ltsmin-3.0.2/AUTHORS
-share/doc/ltsmin-3.0.2/CODING-STANDARDS
-share/doc/ltsmin-3.0.2/COPYING
-share/doc/ltsmin-3.0.2/README.md
+share/doc/ltsmin/AUTHORS
+share/doc/ltsmin/CODING-STANDARDS
+share/doc/ltsmin/COPYING
+share/doc/ltsmin/README.md

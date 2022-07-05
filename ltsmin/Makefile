@@ -19,9 +19,8 @@ USE_TOOLS+=	gmake
 CONFIG_SHELL=	bash
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
-CONFIGURE_ARGS+=	CFLAGS=-D__NetBSD__
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
-CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/html/${PKGBASE}
+CFLAGS+=	-D__NetBSD__
 
 post-install:
 	DESTDIR=${DESTDIR} gmake -C ${WRKSRC}/doc install-man
