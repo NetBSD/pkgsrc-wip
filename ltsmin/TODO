@@ -3,9 +3,6 @@ Make __NetBSD__ and patches specific to NetBSD
 Despite buildlink to buddy, configure gives error for libbdd. buddy doesn't
 have .pc file.
 
-Defining --docdir as configure argument installs minimal documentation. But
-defining htmldir or mandir does not get the man pages and htmls respectively.
-
 Try to meet deps:
 
 	libczmq
