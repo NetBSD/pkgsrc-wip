@@ -37,11 +37,9 @@ SUBST_STAGE.ints=	pre-configure
 SUBST_FILES.ints+=	${LIBSRCDIR}/*.c
 SUBST_FILES.ints+=	${LIBSRCDIR}/include/*.h
 SUBST_SED.ints=		-e 's|u_int|uint|g'
-
-# link against libresolv to fix referencing
-# errors to `__b64_ntop' | `__b64_pton'
-MAKEFLAGS+=	LIBS='-lresolv -lrt -lm'
 .endif
+
+LIBS.SunOS+=	-lresolv -lrt
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
