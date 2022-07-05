@@ -24,6 +24,12 @@ CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 post-install:
 	DESTDIR=${DESTDIR} gmake -C ${WRKSRC}/doc install-man
 
+# Please install wip/buddy till the time pkgsrc maintainers fix devel/buddy to
+# pick the right package from github. The issue is reported on mailing list.
+#
+# This build does not use sylvan, libczmq and libspot as these aren't available
+# in pkgsrc at the time of creating this package.
+
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/buddy/buildlink3.mk"
