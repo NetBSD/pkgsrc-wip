@@ -350,7 +350,6 @@ SUBDIR+=	bugzilla
 SUBDIR+=	bup-git
 SUBDIR+=	busybox
 SUBDIR+=	bwa
-SUBDIR+=	bwm-ng
 SUBDIR+=	byzanz
 SUBDIR+=	c-graph
 SUBDIR+=	c-news
