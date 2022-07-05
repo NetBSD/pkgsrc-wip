@@ -885,7 +885,6 @@ SUBDIR+=	flowblade
 SUBDIR+=	fltk14-devel
 SUBDIR+=	fltk2
 SUBDIR+=	flux2
-SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
 SUBDIR+=	flvmeta
 SUBDIR+=	flyback
