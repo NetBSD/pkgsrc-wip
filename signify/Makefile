@@ -22,16 +22,17 @@ OUTDIR:=	${WRKSRC}/src/usr.bin/signify
 LIBSRCDIR:=	${WRKSRC}/src/liboutils
 
 .include "../../mk/bsd.prefs.mk"
-# do not hard-code configuration dir
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Do not hardcode configuration directory
 SUBST_FILES.paths+=	${OUTDIR}/signify.c
 SUBST_FILES.paths+=	${OUTDIR}/signify.1
 SUBST_SED.paths=	-e 's|/etc/signify|${PKG_SYSCONFDIR}/signify|g'
 
 .if ${OPSYS} == "SunOS"
-# SunOS stdint(3) doesn't provide `u_int*' typedefs
 SUBST_CLASSES+=		ints
+SUBST_MESSAGE.ints=	SunOS stdint(3) doesn't provide `u_int*' typedefs
 SUBST_STAGE.ints=	pre-configure
 SUBST_FILES.ints+=	${LIBSRCDIR}/*.c
 SUBST_FILES.ints+=	${LIBSRCDIR}/include/*.h
