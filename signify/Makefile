@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_TAG=	v0.10
-DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG:S,^v,,}
+DISTNAME=	outils-0.10
 PKGNAME=	${DISTNAME:S,outils,signify,}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_PROJECT=	outils
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://flak.tedunangst.com/post/signify
