@@ -1,0 +1,6 @@
+This is github based version of devel/buddy. The latter is sourceforge based.
+Unfortunately the relase 2.4 from both these sources are out of sync. github
+based release (this) is newer and contains the .pc file required for dependent
+packages like ltsmin to build.
+
+THIS PACKAGE SHOULD BE REMOVED ONCE devel/buddy ADOPTS github BASED ONE.
