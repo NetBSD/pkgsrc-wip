@@ -4981,7 +4981,6 @@ SUBDIR+=	qt6-qtwebchannel
 SUBDIR+=	qt6-qtwebsockets
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtile
-SUBDIR+=	qtnotifydaemon
 SUBDIR+=	qtractor
 SUBDIR+=	quantlib
 SUBDIR+=	quarkcoin
