@@ -13,7 +13,9 @@ COMMENT=	Cryptographically sign and verify files, from OpenBSD
 LICENSE=	original-bsd AND modified-bsd AND isc AND public-domain
 
 USE_TOOLS+=	gmake
-MAKEFLAGS+=	ALL=src/usr.bin/signify/signify
+MAKE_FLAGS+=	ALL=src/usr.bin/signify/signify
+MAKE_FLAGS+=	LIBS=${LIBS:Q}
+LIBS+=		-lm
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/signify
