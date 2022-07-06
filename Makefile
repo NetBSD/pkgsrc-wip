@@ -4991,7 +4991,6 @@ SUBDIR+=	quex
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
 SUBDIR+=	quiterss
-SUBDIR+=	qupzilla
 SUBDIR+=	quvi
 SUBDIR+=	qxmpp
 SUBDIR+=	r8s
