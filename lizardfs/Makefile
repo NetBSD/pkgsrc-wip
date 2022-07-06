@@ -1,20 +1,15 @@
 # $NetBSD$
 
-PKGNAME=	lizardfs-${VERSION}
-VERSION=	3.10.4
+DISTNAME=	lizardfs-0.0
 CATEGORIES=	filesystems
-MASTER_SITES=	# defined
-
-GIT_REPOSITORIES=	lizardfs
-GIT_REPO.lizardfs=	https://github.com/christiank/lizardfs.git
-GIT_BRANCH.lizardfs=	cfkoch_netbsdrefuse
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
+GITHUB_TAG=	d3355b690aa4e216aa5b0656c5cd4eb80c6dafd4
 
 MAINTANER=	charlotte@NetBSD.org
 HOMEPAGE=	https://lizardfs.com/
 COMMENT=	Open source, distributed file system
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=			${WRKDIR}/lizardfs
 USE_LANGUAGES+=		c c++
 USE_CMAKE=		yes
 CONFIGURE_DIRS+=	build
@@ -27,5 +22,4 @@ pre-configure:
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
