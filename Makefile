@@ -4985,7 +4985,6 @@ SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtile
 SUBDIR+=	qtnotifydaemon
 SUBDIR+=	qtractor
-SUBDIR+=	qtre
 SUBDIR+=	quantlib
 SUBDIR+=	quarkcoin
 SUBDIR+=	quex
