@@ -1,0 +1,5 @@
+- Resolve state-map crate
+  Perhaps at https://github.com/matrix-org/rust-matrix-state-map
+- Generate PLIST
+- Test
+

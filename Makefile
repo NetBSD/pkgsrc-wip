@@ -5161,6 +5161,7 @@ SUBDIR+=	runas
 SUBDIR+=	runit
 SUBDIR+=	rust
 SUBDIR+=	rust-bindgen
+SUBDIR+=	rust-synapse-compress-state
 SUBDIR+=	rygel
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd

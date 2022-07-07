@@ -1,0 +1,2 @@
+This package contains experimental tools that attempt to reduce the number of
+rows in the `state_groups_state` table inside of a Synapse Postgresql database.
