@@ -1,0 +1,24 @@
+CMake Warning at benchmarks/CMakeLists.txt:7 (message):
+  The libc++ benchmarks are not available in a standalone build.  Please
+  migrate to an official build as documented in
+  https://libcxx.llvm.org/BuildingLibcxx.html.
+
+
+-- ABI list file not generated for configuration x86_64-unknown-netbsd9.99.98.libcxxabi.v1.stable.exceptions.no_new_in_libcxx, `check-cxx-abilist` will not be available.
+-- Configuring done
+CMake Error at src/CMakeLists.txt:307 (add_dependencies):
+  The dependency target "unwind" of target "cxx_static" does not exist.
+
+
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+*** Error code 1
+
+Stop.
+bmake[1]: stopped in /usr/pkgsrc/wip/libcxx
+*** Error code 1
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/libcxx
+Exception: bmake exited with 1
+[tty 69], line 1: bmake
