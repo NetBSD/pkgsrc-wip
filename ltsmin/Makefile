@@ -11,15 +11,15 @@ HOMEPAGE=	https://ltsmin.utwente.nl/
 COMMENT=	The LTSmin model checking toolset
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/ltsmin-3.0.2
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-DEPENDS+=	flex>=2.6.4:../../devel/flex
-USE_TOOLS+=	gmake
-CONFIG_SHELL=	bash
+WRKSRC=				${WRKDIR}/ltsmin-3.0.2
+GNU_CONFIGURE=			yes
+USE_LANGUAGES=			c c++
+DEPENDS+=			flex>=2.6.4:../../devel/flex
+USE_TOOLS+=			gmake
+CONFIG_SHELL=			bash
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
-CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
-CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=		PKG_CONFIG=${PREFIX}/bin/pkg-config
+CONFIGURE_ARGS+=		--docdir=${PREFIX}/share/doc/${PKGBASE}
 
 post-install:
 	DESTDIR=${DESTDIR} gmake -C ${WRKSRC}/doc install-man
