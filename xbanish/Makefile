@@ -1,12 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	v1.8
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	xbanish-1.8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
-GITHUB_PROJECT=	xbanish
-GITHUB_TAG=	v1.8
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://github.com/jcs/xbanish/
@@ -16,8 +13,6 @@ LICENSE=	isc
 USE_TOOLS+=	pkg-config
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
-
-WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
