@@ -5,9 +5,9 @@
 # used by wip/zabbix62-frontend/Makefile
 # used by wip/zabbix62-java/Makefile
 
-DISTNAME=	zabbix-6.2.0rc3
+DISTNAME=	zabbix-6.2.0
 CATEGORIES=	sysutils
-MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/release_candidates/6.2/
+MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/6.2/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.zabbix.com/
