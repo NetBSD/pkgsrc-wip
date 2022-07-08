@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2011/06/04 13:39:32 othyro Exp $
-
-RMD160 (vidalia-0.2.12.tar.gz) = 679d0662fffd3b3ac9e644c8553d8809e22cc836
-Size (vidalia-0.2.12.tar.gz) = 5977063 bytes
-SHA1 (patch-aa) = 8b4900758399bb73185a41ec6d55c96f25ff5057
