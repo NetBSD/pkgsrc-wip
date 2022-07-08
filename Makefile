@@ -1445,7 +1445,6 @@ SUBDIR+=	guile-colorized
 SUBDIR+=	guile-persist
 SUBDIR+=	guile-reader
 SUBDIR+=	guile-stis-parser
-SUBDIR+=	guitone
 SUBDIR+=	gunison
 SUBDIR+=	gupnp-ui
 SUBDIR+=	gurlchecker
