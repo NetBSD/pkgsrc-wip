@@ -4931,7 +4931,6 @@ SUBDIR+=	q
 SUBDIR+=	q2pro
 SUBDIR+=	qbe
 SUBDIR+=	qcdloop
-SUBDIR+=	qdevelop
 SUBDIR+=	qemu-git
 SUBDIR+=	qico
 SUBDIR+=	qiew

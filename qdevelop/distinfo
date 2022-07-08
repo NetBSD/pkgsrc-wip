@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2011/11/10 13:02:17 othyro Exp $
-
-RMD160 (qdevelop-v0.28.tar.gz) = 43fe7cf315291ae2061ca5e4b542e5259e6dbc4a
-Size (qdevelop-v0.28.tar.gz) = 1660363 bytes
-SHA1 (patch-aa) = 02e3d80b0b8c2ccad268cf6c329823f5ef0eb0ad
