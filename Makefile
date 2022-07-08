@@ -229,7 +229,6 @@ SUBDIR+=	auto-complete-mode
 SUBDIR+=	auto-dev
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
-SUBDIR+=	autoq3d
 SUBDIR+=	autossh
 SUBDIR+=	avida2
 SUBDIR+=	avp
