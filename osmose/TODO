@@ -1,9 +1,0 @@
-Osmose uses Linux-only libraries for dealing with sound and
-joystick input, so they've been gutted so that Osmose can at
-least compile and run.
-
-The Preferences screen also seems to be broken, and the File
-Select window acts a bit funny too.
-
-At the very least, ROMs seem to load and run fine, as well as
-as the rest of the UI controls. Not seeing any performance issues.
