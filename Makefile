@@ -6064,7 +6064,6 @@ SUBDIR+=	yad
 SUBDIR+=	yafray
 SUBDIR+=	yaggo
 SUBDIR+=	yakuake
-SUBDIR+=	yateclient
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
 SUBDIR+=	yder
