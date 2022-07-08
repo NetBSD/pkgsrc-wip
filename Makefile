@@ -3252,7 +3252,6 @@ SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointtools-git
 SUBDIR+=	poke-git
-SUBDIR+=	pokerth
 SUBDIR+=	polarssl11
 SUBDIR+=	polipo
 SUBDIR+=	polkit-kde-agent
