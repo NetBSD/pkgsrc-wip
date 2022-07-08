@@ -580,7 +580,6 @@ SUBDIR+=	dangerzone
 SUBDIR+=	daphne
 SUBDIR+=	darcs
 SUBDIR+=	darcs-to-git
-SUBDIR+=	darkcoin
 SUBDIR+=	dart-git
 SUBDIR+=	dash-el
 SUBDIR+=	dasht
