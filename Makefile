@@ -259,7 +259,6 @@ SUBDIR+=	basic-stats
 SUBDIR+=	bastard
 SUBDIR+=	bats-core
 SUBDIR+=	bcftools
-SUBDIR+=	beads
 SUBDIR+=	beast
 SUBDIR+=	bedtools
 SUBDIR+=	beignet
