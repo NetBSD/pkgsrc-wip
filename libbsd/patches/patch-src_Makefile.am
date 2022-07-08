@@ -1,5 +1,8 @@
 $NetBSD$
 
+Prevent the libbsd.so.0.11.6 shared library from being overwitten during
+the instal-exec-hook target. 
+
 --- src/Makefile.am.orig	2022-01-29 14:23:40.000000000 +0000
 +++ src/Makefile.am
 @@ -156,7 +156,7 @@ if NEED_TRANSPARENT_LIBMD
