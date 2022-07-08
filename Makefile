@@ -5315,7 +5315,6 @@ SUBDIR+=	solvespace-git
 SUBDIR+=	songwrite2
 SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia
-SUBDIR+=	soqt
 SUBDIR+=	spacefm
 SUBDIR+=	spai
 SUBDIR+=	spamassassin-cvs
