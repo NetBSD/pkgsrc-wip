@@ -5176,7 +5176,6 @@ SUBDIR+=	sbc
 SUBDIR+=	sbcl-git
 SUBDIR+=	sblim-sfcc
 SUBDIR+=	scalapack
-SUBDIR+=	scantailor
 SUBDIR+=	scare
 SUBDIR+=	scc
 SUBDIR+=	sccache
