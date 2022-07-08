@@ -532,7 +532,6 @@ SUBDIR+=	cppzmq
 SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
 SUBDIR+=	cqlsh
-SUBDIR+=	crabemu
 SUBDIR+=	creal
 SUBDIR+=	cream
 SUBDIR+=	creduce-git
