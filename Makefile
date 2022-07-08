@@ -3283,7 +3283,6 @@ SUBDIR+=	preload
 SUBDIR+=	premake
 SUBDIR+=	premake4
 SUBDIR+=	premake5
-SUBDIR+=	primecoin
 SUBDIR+=	printrun
 SUBDIR+=	probcons
 SUBDIR+=	probe
