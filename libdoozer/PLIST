@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/08 20:45:28 tonnerre Exp $
-bin/doozer-cli
-bin/doozer-ping
-include/doozer.h
-lib/libdoozer.la
