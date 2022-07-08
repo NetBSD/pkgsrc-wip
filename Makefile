@@ -5252,7 +5252,6 @@ SUBDIR+=	sigutils
 SUBDIR+=	sil
 SUBDIR+=	sil-scheherazade-ttf
 SUBDIR+=	silky
-SUBDIR+=	silo
 SUBDIR+=	silvertree
 SUBDIR+=	simgrid
 SUBDIR+=	simh3
