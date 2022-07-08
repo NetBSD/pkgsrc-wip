@@ -559,7 +559,6 @@ SUBDIR+=	cufflinks
 SUBDIR+=	cufflinks-2.2.1
 SUBDIR+=	cup
 SUBDIR+=	cut-and-run
-SUBDIR+=	cutecom
 SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs2darcs
