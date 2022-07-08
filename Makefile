@@ -216,7 +216,6 @@ SUBDIR+=	asql
 SUBDIR+=	asterisk11-vicidial
 SUBDIR+=	astguiclient-vicidial
 SUBDIR+=	atanks
-SUBDIR+=	aten
 SUBDIR+=	atlas
 SUBDIR+=	atompaw
 SUBDIR+=	audacity-cmake
