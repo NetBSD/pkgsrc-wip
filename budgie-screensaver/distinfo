@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (budgie-screensaver/v4.0.tar.gz) = 9bc53ca51eaf2439b64414ec9963c8624dc3eb14
-SHA512 (budgie-screensaver/v4.0.tar.gz) = dba7270ccf359b04c8d1e69d38be812ece839664d7a7a91cf2a637ad5260b8890b697e31052b6c4902c6c922f1651bc9e2ff3a44904b11d336be46de09508693
-Size (budgie-screensaver/v4.0.tar.gz) = 548458 bytes
-SHA1 (patch-configure.ac) = afa6a6c5932df2abe286ac9db89aa7b701e820c3
+SHA1 (budgie-screensaver/v5.0.2.tar.gz) = 9a87b4d6d7181fcc58955501f345616a8935a89c
+RMD160 (budgie-screensaver/v5.0.2.tar.gz) = 13cbf6ecebcdc47b35be0ca17dbc5a6e79e8617f
+SHA512 (budgie-screensaver/v5.0.2.tar.gz) = 4d0017361d6b1a3903e4dfd64b4f68ce860fb3c4154926a47542adcfa61431851fd8222024e727c71bf51971986212251ed56765a637c477ef511654c6c2265a
+Size (budgie-screensaver/v5.0.2.tar.gz) = 518787 bytes
