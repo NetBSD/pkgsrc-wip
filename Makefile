@@ -2045,7 +2045,6 @@ SUBDIR+=	libdrm-dfbsd
 SUBDIR+=	libdrm-dfbsd-meson
 SUBDIR+=	libdxfrw
 SUBDIR+=	libecc
-SUBDIR+=	libechonest
 SUBDIR+=	libee
 SUBDIR+=	libeio
 SUBDIR+=	libeio-cvs
