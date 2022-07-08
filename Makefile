@@ -1972,7 +1972,6 @@ SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lanq
 SUBDIR+=	lasi
-SUBDIR+=	last.fm
 SUBDIR+=	lbt
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
