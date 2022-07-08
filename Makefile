@@ -4937,7 +4937,6 @@ SUBDIR+=	qiew
 SUBDIR+=	qira
 SUBDIR+=	qlcplus
 SUBDIR+=	qmc2
-SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qrint
 SUBDIR+=	qrq
