@@ -469,7 +469,6 @@ SUBDIR+=	clisp-hg
 SUBDIR+=	clock-signal
 SUBDIR+=	clockspeed
 SUBDIR+=	cloud-nuke
-SUBDIR+=	clustalx
 SUBDIR+=	cluster-admin
 SUBDIR+=	clustershell
 SUBDIR+=	clutter-gst
