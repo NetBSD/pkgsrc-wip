@@ -30,6 +30,7 @@ post-install:
 # This build does not use sylvan, libczmq and libspot as these aren't available
 # in pkgsrc at the time of creating this package.
 
+.include "../../wip/sylvan/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/buddy/buildlink3.mk"
