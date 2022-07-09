@@ -61,6 +61,7 @@ go119/misc/cgo/errors/testdata/issue28069.go
 go119/misc/cgo/errors/testdata/issue28721.go
 go119/misc/cgo/errors/testdata/issue33061.go
 go119/misc/cgo/errors/testdata/issue42580.go
+go119/misc/cgo/errors/testdata/issue50710.go
 go119/misc/cgo/errors/testdata/long_double_size.go
 go119/misc/cgo/errors/testdata/malloc.go
 go119/misc/cgo/fortran/answer.f90
@@ -138,6 +139,7 @@ go119/misc/cgo/test/issue8694.go
 go119/misc/cgo/test/issue8811.c
 go119/misc/cgo/test/overlaydir_test.go
 go119/misc/cgo/test/pkg_test.go
+go119/misc/cgo/test/setgid2_linux.go
 go119/misc/cgo/test/setgid_linux.go
 go119/misc/cgo/test/sigaltstack.go
 go119/misc/cgo/test/sigprocmask.c
@@ -186,6 +188,11 @@ go119/misc/cgo/test/testdata/issue41761.go
 go119/misc/cgo/test/testdata/issue41761a/a.go
 go119/misc/cgo/test/testdata/issue43639.go
 go119/misc/cgo/test/testdata/issue43639/a.go
+go119/misc/cgo/test/testdata/issue52611.go
+go119/misc/cgo/test/testdata/issue52611a/a.go
+go119/misc/cgo/test/testdata/issue52611a/b.go
+go119/misc/cgo/test/testdata/issue52611b/a.go
+go119/misc/cgo/test/testdata/issue52611b/b.go
 go119/misc/cgo/test/testdata/issue8756.go
 go119/misc/cgo/test/testdata/issue8756/issue8756.go
 go119/misc/cgo/test/testdata/issue8828.go
@@ -686,6 +693,7 @@ go119/pkg/${GO_PLATFORM}/crypto/elliptic.a
 go119/pkg/${GO_PLATFORM}/crypto/hmac.a
 go119/pkg/${GO_PLATFORM}/crypto/internal/boring.a
 go119/pkg/${GO_PLATFORM}/crypto/internal/boring/bbig.a
+go119/pkg/${GO_PLATFORM}/crypto/internal/boring/bcache.a
 go119/pkg/${GO_PLATFORM}/crypto/internal/boring/sig.a
 go119/pkg/${GO_PLATFORM}/crypto/internal/edwards25519.a
 go119/pkg/${GO_PLATFORM}/crypto/internal/edwards25519/field.a
@@ -909,7 +917,6 @@ go119/pkg/tool/${GO_PLATFORM}/dist
 go119/pkg/tool/${GO_PLATFORM}/doc
 go119/pkg/tool/${GO_PLATFORM}/fix
 go119/pkg/tool/${GO_PLATFORM}/link
-go119/pkg/tool/${GO_PLATFORM}/metadata
 go119/pkg/tool/${GO_PLATFORM}/nm
 go119/pkg/tool/${GO_PLATFORM}/objdump
 go119/pkg/tool/${GO_PLATFORM}/pack
@@ -1488,6 +1495,7 @@ go119/src/cmd/compile/internal/syntax/scanner_test.go
 go119/src/cmd/compile/internal/syntax/source.go
 go119/src/cmd/compile/internal/syntax/syntax.go
 go119/src/cmd/compile/internal/syntax/testdata/chans.go
+go119/src/cmd/compile/internal/syntax/testdata/fallthrough.go
 go119/src/cmd/compile/internal/syntax/testdata/interface.go
 go119/src/cmd/compile/internal/syntax/testdata/issue20789.go
 go119/src/cmd/compile/internal/syntax/testdata/issue23385.go
@@ -1874,6 +1882,7 @@ go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50426.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50450.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50516.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50646.go
+go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50729.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50755.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50779.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue50782.go
@@ -1898,6 +1907,7 @@ go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51386.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51437.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51472.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51509.go
+go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51525.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51533.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51578.go
 go119/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51593.go
@@ -2530,6 +2540,7 @@ go119/src/cmd/go/testdata/script/cgo_path_space_quote.txt
 go119/src/cmd/go/testdata/script/cgo_stale.txt
 go119/src/cmd/go/testdata/script/cgo_stale_precompiled.txt
 go119/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
+go119/src/cmd/go/testdata/script/cgo_undef.txt
 go119/src/cmd/go/testdata/script/clean_binary.txt
 go119/src/cmd/go/testdata/script/clean_cache_n.txt
 go119/src/cmd/go/testdata/script/clean_testcache.txt
@@ -2559,6 +2570,7 @@ go119/src/cmd/go/testdata/script/cpu_profile_twice.txt
 go119/src/cmd/go/testdata/script/devnull.txt
 go119/src/cmd/go/testdata/script/doc.txt
 go119/src/cmd/go/testdata/script/embed.txt
+go119/src/cmd/go/testdata/script/embed_brackets.txt
 go119/src/cmd/go/testdata/script/embed_fmt.txt
 go119/src/cmd/go/testdata/script/env_cross_build.txt
 go119/src/cmd/go/testdata/script/env_exp.txt
@@ -2628,6 +2640,7 @@ go119/src/cmd/go/testdata/script/install_rebuild_removed.txt
 go119/src/cmd/go/testdata/script/install_relative_gobin_fail.txt
 go119/src/cmd/go/testdata/script/install_shadow_gopath.txt
 go119/src/cmd/go/testdata/script/issue36000.txt
+go119/src/cmd/go/testdata/script/issue53586.txt
 go119/src/cmd/go/testdata/script/ldflag.txt
 go119/src/cmd/go/testdata/script/link_external_undef.txt
 go119/src/cmd/go/testdata/script/link_matching_actionid.txt
@@ -2712,6 +2725,7 @@ go119/src/cmd/go/testdata/script/mod_domain_root.txt
 go119/src/cmd/go/testdata/script/mod_dot.txt
 go119/src/cmd/go/testdata/script/mod_download.txt
 go119/src/cmd/go/testdata/script/mod_download_concurrent_read.txt
+go119/src/cmd/go/testdata/script/mod_download_git_decorate_full.txt
 go119/src/cmd/go/testdata/script/mod_download_hash.txt
 go119/src/cmd/go/testdata/script/mod_download_insecure_redirect.txt
 go119/src/cmd/go/testdata/script/mod_download_json.txt
@@ -2935,6 +2949,7 @@ go119/src/cmd/go/testdata/script/mod_tidy_convergence.txt
 go119/src/cmd/go/testdata/script/mod_tidy_convergence_loop.txt
 go119/src/cmd/go/testdata/script/mod_tidy_cycle.txt
 go119/src/cmd/go/testdata/script/mod_tidy_downgrade_ambiguous.txt
+go119/src/cmd/go/testdata/script/mod_tidy_duplicates.txt
 go119/src/cmd/go/testdata/script/mod_tidy_error.txt
 go119/src/cmd/go/testdata/script/mod_tidy_indirect.txt
 go119/src/cmd/go/testdata/script/mod_tidy_lazy_self.txt
@@ -2972,6 +2987,7 @@ go119/src/cmd/go/testdata/script/modfile_flag.txt
 go119/src/cmd/go/testdata/script/noncanonical_import.txt
 go119/src/cmd/go/testdata/script/pattern_syntax_error.txt
 go119/src/cmd/go/testdata/script/prevent_sys_unix_import.txt
+go119/src/cmd/go/testdata/script/reuse_git.txt
 go119/src/cmd/go/testdata/script/run_dirs.txt
 go119/src/cmd/go/testdata/script/run_hello.txt
 go119/src/cmd/go/testdata/script/run_hello_pkg.txt
@@ -4424,11 +4440,12 @@ go119/src/crypto/internal/boring/Dockerfile
 go119/src/crypto/internal/boring/LICENSE
 go119/src/crypto/internal/boring/aes.go
 go119/src/crypto/internal/boring/bbig/big.go
+go119/src/crypto/internal/boring/bcache/cache.go
+go119/src/crypto/internal/boring/bcache/cache_test.go
+go119/src/crypto/internal/boring/bcache/stub.s
 go119/src/crypto/internal/boring/boring.go
 go119/src/crypto/internal/boring/boring_test.go
 go119/src/crypto/internal/boring/build.sh
-go119/src/crypto/internal/boring/cache.go
-go119/src/crypto/internal/boring/cache_test.go
 go119/src/crypto/internal/boring/doc.go
 go119/src/crypto/internal/boring/ecdsa.go
 go119/src/crypto/internal/boring/fipstls/stub.s
@@ -4442,7 +4459,6 @@ go119/src/crypto/internal/boring/sha.go
 go119/src/crypto/internal/boring/sig/sig.go
 go119/src/crypto/internal/boring/sig/sig_amd64.s
 go119/src/crypto/internal/boring/sig/sig_other.s
-go119/src/crypto/internal/boring/stub.s
 go119/src/crypto/internal/boring/syso/goboringcrypto_linux_amd64.syso
 go119/src/crypto/internal/boring/syso/syso.go
 go119/src/crypto/internal/edwards25519/doc.go
@@ -5146,6 +5162,10 @@ go119/src/go/doc/comment/testdata/link4.txt
 go119/src/go/doc/comment/testdata/link5.txt
 go119/src/go/doc/comment/testdata/link6.txt
 go119/src/go/doc/comment/testdata/link7.txt
+go119/src/go/doc/comment/testdata/linklist.txt
+go119/src/go/doc/comment/testdata/linklist2.txt
+go119/src/go/doc/comment/testdata/linklist3.txt
+go119/src/go/doc/comment/testdata/linklist4.txt
 go119/src/go/doc/comment/testdata/list.txt
 go119/src/go/doc/comment/testdata/list10.txt
 go119/src/go/doc/comment/testdata/list2.txt
@@ -5720,6 +5740,7 @@ go119/src/go/types/testdata/fixedbugs/issue50427.go
 go119/src/go/types/testdata/fixedbugs/issue50450.go
 go119/src/go/types/testdata/fixedbugs/issue50516.go
 go119/src/go/types/testdata/fixedbugs/issue50646.go
+go119/src/go/types/testdata/fixedbugs/issue50729.go
 go119/src/go/types/testdata/fixedbugs/issue50755.go
 go119/src/go/types/testdata/fixedbugs/issue50779.go
 go119/src/go/types/testdata/fixedbugs/issue50782.go
@@ -5744,6 +5765,7 @@ go119/src/go/types/testdata/fixedbugs/issue51386.go
 go119/src/go/types/testdata/fixedbugs/issue51437.go
 go119/src/go/types/testdata/fixedbugs/issue51472.go
 go119/src/go/types/testdata/fixedbugs/issue51509.go
+go119/src/go/types/testdata/fixedbugs/issue51525.go
 go119/src/go/types/testdata/fixedbugs/issue51533.go
 go119/src/go/types/testdata/fixedbugs/issue51578.go
 go119/src/go/types/testdata/fixedbugs/issue51593.go
@@ -6429,21 +6451,25 @@ go119/src/internal/trace/parser.go
 go119/src/internal/trace/parser_test.go
 go119/src/internal/trace/testdata/http_1_10_good
 go119/src/internal/trace/testdata/http_1_11_good
+go119/src/internal/trace/testdata/http_1_19_good
 go119/src/internal/trace/testdata/http_1_5_good
 go119/src/internal/trace/testdata/http_1_7_good
 go119/src/internal/trace/testdata/http_1_9_good
 go119/src/internal/trace/testdata/stress_1_10_good
 go119/src/internal/trace/testdata/stress_1_11_good
+go119/src/internal/trace/testdata/stress_1_19_good
 go119/src/internal/trace/testdata/stress_1_5_good
 go119/src/internal/trace/testdata/stress_1_5_unordered
 go119/src/internal/trace/testdata/stress_1_7_good
 go119/src/internal/trace/testdata/stress_1_9_good
 go119/src/internal/trace/testdata/stress_start_stop_1_10_good
 go119/src/internal/trace/testdata/stress_start_stop_1_11_good
+go119/src/internal/trace/testdata/stress_start_stop_1_19_good
 go119/src/internal/trace/testdata/stress_start_stop_1_5_good
 go119/src/internal/trace/testdata/stress_start_stop_1_7_good
 go119/src/internal/trace/testdata/stress_start_stop_1_9_good
-go119/src/internal/trace/testdata/user_task_span_1_11_good
+go119/src/internal/trace/testdata/user_task_region_1_11_good
+go119/src/internal/trace/testdata/user_task_region_1_19_good
 go119/src/internal/trace/writer.go
 go119/src/internal/txtar/archive.go
 go119/src/internal/unsafeheader/unsafeheader.go
@@ -9271,6 +9297,7 @@ go119/test/const4.go
 go119/test/const5.go
 go119/test/const6.go
 go119/test/const7.go
+go119/test/const8.go
 go119/test/convT2X.go
 go119/test/convert.go
 go119/test/convert1.go
@@ -10430,6 +10457,7 @@ go119/test/fixedbugs/issue23734.go
 go119/test/fixedbugs/issue23780.go
 go119/test/fixedbugs/issue23781.go
 go119/test/fixedbugs/issue23812.go
+go119/test/fixedbugs/issue23814.go
 go119/test/fixedbugs/issue23823.go
 go119/test/fixedbugs/issue23837.go
 go119/test/fixedbugs/issue23912.go
@@ -11103,6 +11131,9 @@ go119/test/fixedbugs/issue50439.go
 go119/test/fixedbugs/issue5056.go
 go119/test/fixedbugs/issue50671.go
 go119/test/fixedbugs/issue50672.go
+go119/test/fixedbugs/issue50788.dir/a.go
+go119/test/fixedbugs/issue50788.dir/b.go
+go119/test/fixedbugs/issue50788.go
 go119/test/fixedbugs/issue50854.go
 go119/test/fixedbugs/issue5089.go
 go119/test/fixedbugs/issue5105.dir/a.go
@@ -11117,6 +11148,7 @@ go119/test/fixedbugs/issue51291.dir/b.go
 go119/test/fixedbugs/issue51291.go
 go119/test/fixedbugs/issue51401.go
 go119/test/fixedbugs/issue51437.go
+go119/test/fixedbugs/issue51475.go
 go119/test/fixedbugs/issue51531.go
 go119/test/fixedbugs/issue5162.go
 go119/test/fixedbugs/issue5172.go
@@ -11148,6 +11180,15 @@ go119/test/fixedbugs/issue52788.go
 go119/test/fixedbugs/issue52788a.go
 go119/test/fixedbugs/issue52788a.out
 go119/test/fixedbugs/issue52841.go
+go119/test/fixedbugs/issue52846.go
+go119/test/fixedbugs/issue52856.dir/a.go
+go119/test/fixedbugs/issue52856.dir/main.go
+go119/test/fixedbugs/issue52856.go
+go119/test/fixedbugs/issue52862.dir/a.go
+go119/test/fixedbugs/issue52862.dir/b.go
+go119/test/fixedbugs/issue52862.go
+go119/test/fixedbugs/issue52870.go
+go119/test/fixedbugs/issue52871.go
 go119/test/fixedbugs/issue52907.go
 go119/test/fixedbugs/issue5291.dir/pkg1.go
 go119/test/fixedbugs/issue5291.dir/prog.go
@@ -11155,7 +11196,14 @@ go119/test/fixedbugs/issue5291.go
 go119/test/fixedbugs/issue52953.go
 go119/test/fixedbugs/issue53018.go
 go119/test/fixedbugs/issue53137.go
+go119/test/fixedbugs/issue53309.go
+go119/test/fixedbugs/issue53454.go
 go119/test/fixedbugs/issue5358.go
+go119/test/fixedbugs/issue53600.go
+go119/test/fixedbugs/issue53600.out
+go119/test/fixedbugs/issue53619.go
+go119/test/fixedbugs/issue53653.go
+go119/test/fixedbugs/issue53653.out
 go119/test/fixedbugs/issue5373.go
 go119/test/fixedbugs/issue5470.dir/a.go
 go119/test/fixedbugs/issue5470.dir/b.go
@@ -11532,7 +11580,6 @@ go119/test/live1.go
 go119/test/live2.go
 go119/test/live_regabi.go
 go119/test/live_uintptrkeepalive.go
-go119/test/locklinear.go
 go119/test/loopbce.go
 go119/test/mainsig.go
 go119/test/makechan.go
@@ -12009,6 +12056,11 @@ go119/test/typeparam/issue52117.go
 go119/test/typeparam/issue52124.go
 go119/test/typeparam/issue52228.go
 go119/test/typeparam/issue52241.go
+go119/test/typeparam/issue53254.go
+go119/test/typeparam/issue53390.go
+go119/test/typeparam/issue53406.go
+go119/test/typeparam/issue53419.go
+go119/test/typeparam/issue53477.go
 go119/test/typeparam/list.go
 go119/test/typeparam/list2.go
 go119/test/typeparam/listimp.dir/a.go
