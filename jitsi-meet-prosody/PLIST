@@ -1,5 +1,6 @@
 @comment $NetBSD$
 share/jitsi-meet-prosody/ext_events.lib.lua
+share/jitsi-meet-prosody/luajwtjitsi.lib.lua
 share/jitsi-meet-prosody/mod_auth_jitsi-anonymous.lua
 share/jitsi-meet-prosody/mod_auth_token.lua
 share/jitsi-meet-prosody/mod_av_moderation.lua

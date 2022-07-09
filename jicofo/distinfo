@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (jicofo/jitsi-meet_7210.tar.gz) = b85c19ba6e7bf8ae94fdb3f1f783ae71479471c7632665aefea722f4983c44b6
-SHA512 (jicofo/jitsi-meet_7210.tar.gz) = a99a7f3d108de7844030b409efba732aa129f44b089935d0052a6180baff295ab018c18eb2e38c4b8007e8431725ed51598c102798f4f2cae4ec923bcf023450
-Size (jicofo/jitsi-meet_7210.tar.gz) = 231649 bytes
+BLAKE2s (jicofo/jitsi-meet_7439.tar.gz) = 27b2f40a9abb49fff4eb99dc05da288faa5c4e6d4e7d741377fca1571e54ceea
+SHA512 (jicofo/jitsi-meet_7439.tar.gz) = 198270797048e83e162bbb85b13d8f597203a9b91108d23e1a4c24b73ec1eabb17c2508ef1c0fbaec966d0f1c41c6f3f26173aca489d6ff9b6cabbf725900e0a
+Size (jicofo/jitsi-meet_7439.tar.gz) = 233960 bytes
 SHA1 (patch-resources_jicofo.sh) = 986445ede72ec0333bb56a52bc3c57030eca8383
