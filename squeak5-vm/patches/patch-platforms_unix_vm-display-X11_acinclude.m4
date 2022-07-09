@@ -1,8 +1,8 @@
 $NetBSD$
 
---- platforms/unix/vm-display-X11/acinclude.m4.orig	2018-10-19 04:12:21.000000000 +0000
+--- platforms/unix/vm-display-X11/acinclude.m4.orig	2022-06-02 14:10:44.000000000 +0000
 +++ platforms/unix/vm-display-X11/acinclude.m4
-@@ -45,18 +45,19 @@ if test "$have_x" = "yes"; then
+@@ -45,16 +45,16 @@ if test "$have_x" = "yes"; then
      INCLUDES="${INCLUDES} -I${x_includes}"
      X_INCLUDES="-I${x_includes}"
    fi
@@ -10,27 +10,19 @@ $NetBSD$
 +  PKG_CHECK_MODULES([x11], [x11], [
      AC_DEFINE([USE_X11], [1], [Use X11])
      AC_DEFINE_UNQUOTED([VM_X11DIR], "${x_libraries}", [X11 libraries])
--    AC_SEARCH_LIBS([XShmAttach],[Xext])
-+    PKG_CHECK_MODULES([xext], [xext])
-+
+-    AC_SEARCH_LIBS([XShmAttach],[Xext], [
++    PKG_CHECK_MODULES([xext], [xext], [
+       AC_DEFINE([HAVE_LIBXEXT], [1], [Have Xext library])
+     ])
      if test "$have_gl" = ""; then have_gl="no"; fi
      if test "$have_gl" = "yes"; then
--        AC_CHECK_HEADERS([GL/gl.h gl/gl.h gl.h], [
--          have_gl=yes
--          AC_DEFINE([USE_X11_GLX], [1], [Use X11 GLX])
--          AC_SEARCH_LIBS([glIsEnabled],[GL])
--          break
--        ])
-+      PKG_CHECK_MODULES([gl], [gl], [
-+        AC_CHECK_HEADERS([GL/gl.h gl/gl.h gl.h])
-+        have_gl=yes
-+        AC_DEFINE([USE_X11_GLX], [1], [Use X11 GLX])
-+        break
-+      ])
-     else
-         AC_DEFINE([USE_X11_GLX], [0], [Use X11 GLX])
-     fi
-@@ -77,9 +78,10 @@ X_INCLUDES=${INCLUDES}
+       AC_CHECK_HEADERS([GL/gl.h gl/gl.h gl.h], [
+-        AC_SEARCH_LIBS([glIsEnabled],[GL], [
++        PKG_CHECK_MODULES([gl], [gl], [
+           have_gl=yes 
+           AC_DEFINE([USE_X11_GLX], [1], [Use X11 GLX])
+           break
+@@ -88,9 +88,10 @@ X_INCLUDES=${INCLUDES}
  AC_SUBST(X_INCLUDES)
  
  LIBS=${VMLIBS}

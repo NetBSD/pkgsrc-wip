@@ -1,8 +1,8 @@
 $NetBSD$
 
---- platforms/unix/plugins/SqueakSSL/openssl_overlay.h.orig	2018-10-19 04:12:21.000000000 +0000
+--- platforms/unix/plugins/SqueakSSL/openssl_overlay.h.orig	2022-06-02 14:10:44.000000000 +0000
 +++ platforms/unix/plugins/SqueakSSL/openssl_overlay.h
-@@ -516,6 +516,7 @@ static size_t _sqo_lib_paths(size_t cons
+@@ -524,6 +524,7 @@ static size_t _sqo_lib_paths(size_t cons
      _SQO_ADD_LIB("/lib");
      _SQO_ADD_LIB("/usr/lib");
      _SQO_ADD_LIB("/usr/local/lib");

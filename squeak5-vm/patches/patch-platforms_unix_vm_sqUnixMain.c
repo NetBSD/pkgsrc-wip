@@ -1,21 +1,11 @@
 $NetBSD$
 
---- platforms/unix/vm/sqUnixMain.c.orig	2020-03-02 17:30:55.000000000 +0000
+--- platforms/unix/vm/sqUnixMain.c.orig	2022-06-02 14:10:44.000000000 +0000
 +++ platforms/unix/vm/sqUnixMain.c
-@@ -933,6 +933,9 @@ reportStackState(char *msg, char *date, 
- # elif __FreeBSD__ && __amd64__
- 			void *fp = (void *)(uap ? uap->uc_mcontext.mc_rbp : 0);
- 			void *sp = (void *)(uap ? uap->uc_mcontext.mc_rsp : 0);
-+# elif __NetBSD__ && __x86_64__
-+			void *fp = (void *)(uap ? _UC_MACHINE_FP(uap) : 0);
-+			void *sp = (void *)(uap ? _UC_MACHINE_SP(uap) : 0);
- # elif __OpenBSD__ && __i386__
- 			void *fp = (void *)(uap ? uap->sc_ebp : 0);
- 			void *sp = (void *)(uap ? uap->sc_esp : 0);
-@@ -1008,6 +1011,19 @@ printRegisterState(ucontext_t *uap)
- 			regs->mc_edi, regs->mc_edi, regs->mc_ebp, regs->mc_esp,
- 			regs->mc_eip);
- 	return regs->mc_eip;
+@@ -999,6 +999,19 @@ printRegisterState(FILE *file,ucontext_t
+ 			v(regs[REG_R12]),v(regs[REG_R13]),v(regs[REG_R14]),v(regs[REG_R15]),
+ 			v(regs[REG_RIP]));
+ 	return v(regs[REG_RIP]);
 +#elif __NetBSD__ && __x86_64__
 +	__greg_t *regs = &uap->uc_mcontext.__gregs;
 +	printf(	"\trax 0x%08lx rbx 0x%08lx rcx 0x%08lx rdx 0x%08lx\n"
@@ -29,6 +19,6 @@ $NetBSD$
 +			regs[_REG_R12], regs[_REG_R13], regs[_REG_R14], regs[_REG_R15],
 +			regs[_REG_RIP]);
 +	return (void *)regs[_REG_RIP];
- #elif __linux__ && __x86_64__
- 	greg_t *regs = (greg_t *)&uap->uc_mcontext.gregs;
- 	printf(	"\trax 0x%08lx rbx 0x%08lx rcx 0x%08lx rdx 0x%08lx\n"
+ # elif __OpenBSD__ && __x86_64__
+ 	fprintf(file,
+ 			"    rax %14p rbx %14p rcx %14p rdx %14p\n"

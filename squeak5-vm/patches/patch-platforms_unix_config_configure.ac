@@ -1,8 +1,8 @@
 $NetBSD$
 
---- platforms/unix/config/configure.ac.orig	2019-01-17 23:23:50.000000000 +0000
+--- platforms/unix/config/configure.ac.orig	2022-06-02 14:10:44.000000000 +0000
 +++ platforms/unix/config/configure.ac
-@@ -141,10 +141,12 @@ test "x$exec_prefix" = xNONE && exec_pre
+@@ -152,10 +152,12 @@ test "x$exec_prefix" = xNONE && exec_pre
  imgdir=`eval echo ${libdir}/squeak`
  expanded_relative_imgdir=`eval echo lib/squeak/${VM_VERSION}`
  plgdir='${imgdir}/`${blddir}/getversion VERSION_TAG`'
@@ -14,4 +14,13 @@ $NetBSD$
 +AC_SUBST(rpathdir)
  
  AC_DEFINE(OS_TYPE, "unix", [OS type])
+ 
+@@ -268,7 +270,7 @@ case $target in
+ 		PKG_CONFIG=/usr/bin/i686-linux-gnu-pkg-config
+ 		;;
+ 	*)
+-		PKG_CONFIG=/usr/bin/pkg-config
++		PKG_CONFIG=pkg-config
+ 		;;
+ esac
  

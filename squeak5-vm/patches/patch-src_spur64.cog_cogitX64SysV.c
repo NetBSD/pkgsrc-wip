@@ -1,8 +1,8 @@
 $NetBSD$
 
---- spur64src/vm/cogitX64SysV.c.orig	2021-02-18 16:42:20.999184653 +0000
-+++ spur64src/vm/cogitX64SysV.c
-@@ -22288,9 +22288,7 @@ dispatchConcretize(AbstractInstruction *
+--- src/spur64.cog/cogitX64SysV.c.orig	2022-06-02 14:10:44.000000000 +0000
++++ src/spur64.cog/cogitX64SysV.c
+@@ -22979,9 +22979,7 @@ dispatchConcretize(AbstractInstruction *
  			((self_in_dispatchConcretize->operands))[2] = 0;
  			return savedSize1;
  		}
