@@ -1,12 +1,12 @@
 @comment $NetBSD$
 bin/plasma_store
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pyarrow/__init__.pxd
 ${PYSITELIB}/pyarrow/__init__.py
 ${PYSITELIB}/pyarrow/__init__.pyc
@@ -28,6 +28,8 @@ ${PYSITELIB}/pyarrow/_dataset.so
 ${PYSITELIB}/pyarrow/_dataset_orc.pyx
 ${PYSITELIB}/pyarrow/_dataset_parquet.pyx
 ${PYSITELIB}/pyarrow/_dataset_parquet.so
+${PYSITELIB}/pyarrow/_exec_plan.pyx
+${PYSITELIB}/pyarrow/_exec_plan.so
 ${PYSITELIB}/pyarrow/_feather.pyx
 ${PYSITELIB}/pyarrow/_feather.so
 ${PYSITELIB}/pyarrow/_flight.pyx
@@ -47,6 +49,8 @@ ${PYSITELIB}/pyarrow/_orc.pyx
 ${PYSITELIB}/pyarrow/_parquet.pxd
 ${PYSITELIB}/pyarrow/_parquet.pyx
 ${PYSITELIB}/pyarrow/_parquet.so
+${PYSITELIB}/pyarrow/_parquet_encryption.pxd
+${PYSITELIB}/pyarrow/_parquet_encryption.pyx
 ${PYSITELIB}/pyarrow/_plasma.pyx
 ${PYSITELIB}/pyarrow/_s3fs.pyx
 ${PYSITELIB}/pyarrow/array.pxi
@@ -120,6 +124,7 @@ ${PYSITELIB}/pyarrow/include/arrow/builder.h
 ${PYSITELIB}/pyarrow/include/arrow/c/abi.h
 ${PYSITELIB}/pyarrow/include/arrow/c/bridge.h
 ${PYSITELIB}/pyarrow/include/arrow/c/helpers.h
+${PYSITELIB}/pyarrow/include/arrow/chunk_resolver.h
 ${PYSITELIB}/pyarrow/include/arrow/chunked_array.h
 ${PYSITELIB}/pyarrow/include/arrow/compare.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/api.h
@@ -128,6 +133,7 @@ ${PYSITELIB}/pyarrow/include/arrow/compute/api_scalar.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/api_vector.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/cast.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec.h
+${PYSITELIB}/pyarrow/include/arrow/compute/exec/bloom_filter.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/exec_plan.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/expression.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/hash_join.h
@@ -139,12 +145,15 @@ ${PYSITELIB}/pyarrow/include/arrow/compute/exec/key_hash.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/key_map.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/options.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/order_by_impl.h
+${PYSITELIB}/pyarrow/include/arrow/compute/exec/partition_util.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/schema_util.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/task_util.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/test_util.h
+${PYSITELIB}/pyarrow/include/arrow/compute/exec/tpch_node.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec/util.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/function.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/kernel.h
+${PYSITELIB}/pyarrow/include/arrow/compute/light_array.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/registry.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/type_fwd.h
 ${PYSITELIB}/pyarrow/include/arrow/config.h
@@ -254,6 +263,7 @@ ${PYSITELIB}/pyarrow/include/arrow/python/iterators.h
 ${PYSITELIB}/pyarrow/include/arrow/python/numpy_convert.h
 ${PYSITELIB}/pyarrow/include/arrow/python/numpy_interop.h
 ${PYSITELIB}/pyarrow/include/arrow/python/numpy_to_arrow.h
+${PYSITELIB}/pyarrow/include/arrow/python/parquet_encryption.h
 ${PYSITELIB}/pyarrow/include/arrow/python/pch.h
 ${PYSITELIB}/pyarrow/include/arrow/python/platform.h
 ${PYSITELIB}/pyarrow/include/arrow/python/pyarrow.h
@@ -334,6 +344,7 @@ ${PYSITELIB}/pyarrow/include/arrow/util/config.h
 ${PYSITELIB}/pyarrow/include/arrow/util/converter.h
 ${PYSITELIB}/pyarrow/include/arrow/util/counting_semaphore.h
 ${PYSITELIB}/pyarrow/include/arrow/util/cpu_info.h
+${PYSITELIB}/pyarrow/include/arrow/util/debug.h
 ${PYSITELIB}/pyarrow/include/arrow/util/decimal.h
 ${PYSITELIB}/pyarrow/include/arrow/util/delimiting.h
 ${PYSITELIB}/pyarrow/include/arrow/util/dispatch.h
@@ -377,6 +388,7 @@ ${PYSITELIB}/pyarrow/include/arrow/util/tdigest.h
 ${PYSITELIB}/pyarrow/include/arrow/util/test_common.h
 ${PYSITELIB}/pyarrow/include/arrow/util/thread_pool.h
 ${PYSITELIB}/pyarrow/include/arrow/util/time.h
+${PYSITELIB}/pyarrow/include/arrow/util/tracing.h
 ${PYSITELIB}/pyarrow/include/arrow/util/trie.h
 ${PYSITELIB}/pyarrow/include/arrow/util/type_fwd.h
 ${PYSITELIB}/pyarrow/include/arrow/util/type_traits.h
@@ -408,6 +420,9 @@ ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/ieee.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/strtod.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/utils.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/optional.hpp
+${PYSITELIB}/pyarrow/include/arrow/vendored/pcg/pcg_extras.hpp
+${PYSITELIB}/pyarrow/include/arrow/vendored/pcg/pcg_random.hpp
+${PYSITELIB}/pyarrow/include/arrow/vendored/pcg/pcg_uint128.hpp
 ${PYSITELIB}/pyarrow/include/arrow/vendored/string_view.hpp
 ${PYSITELIB}/pyarrow/include/arrow/vendored/strptime.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/xxhash.h
@@ -426,6 +441,7 @@ ${PYSITELIB}/pyarrow/includes/libarrow_dataset_parquet.pxd
 ${PYSITELIB}/pyarrow/includes/libarrow_feather.pxd
 ${PYSITELIB}/pyarrow/includes/libarrow_flight.pxd
 ${PYSITELIB}/pyarrow/includes/libarrow_fs.pxd
+${PYSITELIB}/pyarrow/includes/libarrow_python.pxd
 ${PYSITELIB}/pyarrow/includes/libgandiva.pxd
 ${PYSITELIB}/pyarrow/includes/libplasma.pxd
 ${PYSITELIB}/pyarrow/io.pxi
@@ -451,9 +467,12 @@ ${PYSITELIB}/pyarrow/pandas-shim.pxi
 ${PYSITELIB}/pyarrow/pandas_compat.py
 ${PYSITELIB}/pyarrow/pandas_compat.pyc
 ${PYSITELIB}/pyarrow/pandas_compat.pyo
-${PYSITELIB}/pyarrow/parquet.py
-${PYSITELIB}/pyarrow/parquet.pyc
-${PYSITELIB}/pyarrow/parquet.pyo
+${PYSITELIB}/pyarrow/parquet/__init__.py
+${PYSITELIB}/pyarrow/parquet/__init__.pyc
+${PYSITELIB}/pyarrow/parquet/__init__.pyo
+${PYSITELIB}/pyarrow/parquet/encryption.py
+${PYSITELIB}/pyarrow/parquet/encryption.pyc
+${PYSITELIB}/pyarrow/parquet/encryption.pyo
 ${PYSITELIB}/pyarrow/plasma.py
 ${PYSITELIB}/pyarrow/plasma.pyc
 ${PYSITELIB}/pyarrow/plasma.pyo
@@ -476,7 +495,7 @@ ${PYSITELIB}/pyarrow/tests/bound_function_visit_strings.pyx
 ${PYSITELIB}/pyarrow/tests/conftest.py
 ${PYSITELIB}/pyarrow/tests/conftest.pyc
 ${PYSITELIB}/pyarrow/tests/conftest.pyo
-${PYSITELIB}/pyarrow/tests/data/feather/v0.17.0.version=2-compression=lz4.feather
+${PYSITELIB}/pyarrow/tests/data/feather/v0.17.0.version.2-compression.lz4.feather
 ${PYSITELIB}/pyarrow/tests/data/orc/README.md
 ${PYSITELIB}/pyarrow/tests/data/orc/TestOrcFile.emptyFile.jsn.gz
 ${PYSITELIB}/pyarrow/tests/data/orc/TestOrcFile.emptyFile.orc
@@ -499,12 +518,18 @@ ${PYSITELIB}/pyarrow/tests/pandas_examples.pyo
 ${PYSITELIB}/pyarrow/tests/pandas_threaded_import.py
 ${PYSITELIB}/pyarrow/tests/pandas_threaded_import.pyc
 ${PYSITELIB}/pyarrow/tests/pandas_threaded_import.pyo
+${PYSITELIB}/pyarrow/tests/parquet/__init__.py
+${PYSITELIB}/pyarrow/tests/parquet/__init__.pyc
+${PYSITELIB}/pyarrow/tests/parquet/__init__.pyo
 ${PYSITELIB}/pyarrow/tests/parquet/common.py
 ${PYSITELIB}/pyarrow/tests/parquet/common.pyc
 ${PYSITELIB}/pyarrow/tests/parquet/common.pyo
 ${PYSITELIB}/pyarrow/tests/parquet/conftest.py
 ${PYSITELIB}/pyarrow/tests/parquet/conftest.pyc
 ${PYSITELIB}/pyarrow/tests/parquet/conftest.pyo
+${PYSITELIB}/pyarrow/tests/parquet/encryption.py
+${PYSITELIB}/pyarrow/tests/parquet/encryption.pyc
+${PYSITELIB}/pyarrow/tests/parquet/encryption.pyo
 ${PYSITELIB}/pyarrow/tests/parquet/test_basic.py
 ${PYSITELIB}/pyarrow/tests/parquet/test_basic.pyc
 ${PYSITELIB}/pyarrow/tests/parquet/test_basic.pyo
@@ -520,6 +545,9 @@ ${PYSITELIB}/pyarrow/tests/parquet/test_dataset.pyo
 ${PYSITELIB}/pyarrow/tests/parquet/test_datetime.py
 ${PYSITELIB}/pyarrow/tests/parquet/test_datetime.pyc
 ${PYSITELIB}/pyarrow/tests/parquet/test_datetime.pyo
+${PYSITELIB}/pyarrow/tests/parquet/test_encryption.py
+${PYSITELIB}/pyarrow/tests/parquet/test_encryption.pyc
+${PYSITELIB}/pyarrow/tests/parquet/test_encryption.pyo
 ${PYSITELIB}/pyarrow/tests/parquet/test_metadata.py
 ${PYSITELIB}/pyarrow/tests/parquet/test_metadata.pyc
 ${PYSITELIB}/pyarrow/tests/parquet/test_metadata.pyo
@@ -533,6 +561,9 @@ ${PYSITELIB}/pyarrow/tests/parquet/test_parquet_writer.py
 ${PYSITELIB}/pyarrow/tests/parquet/test_parquet_writer.pyc
 ${PYSITELIB}/pyarrow/tests/parquet/test_parquet_writer.pyo
 ${PYSITELIB}/pyarrow/tests/pyarrow_cython_example.pyx
+${PYSITELIB}/pyarrow/tests/read_record_batch.py
+${PYSITELIB}/pyarrow/tests/read_record_batch.pyc
+${PYSITELIB}/pyarrow/tests/read_record_batch.pyo
 ${PYSITELIB}/pyarrow/tests/strategies.py
 ${PYSITELIB}/pyarrow/tests/strategies.pyc
 ${PYSITELIB}/pyarrow/tests/strategies.pyo
@@ -572,6 +603,9 @@ ${PYSITELIB}/pyarrow/tests/test_dataset.pyo
 ${PYSITELIB}/pyarrow/tests/test_deprecations.py
 ${PYSITELIB}/pyarrow/tests/test_deprecations.pyc
 ${PYSITELIB}/pyarrow/tests/test_deprecations.pyo
+${PYSITELIB}/pyarrow/tests/test_exec_plan.py
+${PYSITELIB}/pyarrow/tests/test_exec_plan.pyc
+${PYSITELIB}/pyarrow/tests/test_exec_plan.pyo
 ${PYSITELIB}/pyarrow/tests/test_extension_type.py
 ${PYSITELIB}/pyarrow/tests/test_extension_type.pyc
 ${PYSITELIB}/pyarrow/tests/test_extension_type.pyo
