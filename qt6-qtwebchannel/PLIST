@@ -1,4 +1,5 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6WebChannel.pc
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qmetaobjectpublisher_p.h
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qqmlwebchannelattached_p.h
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qwebchannel_p.h
@@ -36,6 +37,7 @@ qt6/lib/libQt6WebChannel.so
 qt6/lib/libQt6WebChannel.so.6
 qt6/lib/libQt6WebChannel.so.${PKGVERSION}
 qt6/lib/metatypes/qt6webchannel_release_metatypes.json
+qt6/lib/pkgconfig/Qt6WebChannel.pc
 qt6/mkspecs/modules/qt_lib_webchannel.pri
 qt6/mkspecs/modules/qt_lib_webchannel_private.pri
 qt6/modules/WebChannel.json

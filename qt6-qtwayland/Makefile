@@ -8,6 +8,9 @@ LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WaylandClient.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WaylandCompositor.pc
+
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"

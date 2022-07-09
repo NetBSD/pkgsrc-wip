@@ -8,5 +8,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6NetworkAuth.pc
+
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

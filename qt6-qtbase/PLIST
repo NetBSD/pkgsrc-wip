@@ -1,4 +1,17 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6Concurrent.pc
+lib/pkgconfig/Qt6Core.pc
+${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
+lib/pkgconfig/Qt6Gui.pc
+lib/pkgconfig/Qt6Network.pc
+lib/pkgconfig/Qt6OpenGL.pc
+lib/pkgconfig/Qt6OpenGLWidgets.pc
+lib/pkgconfig/Qt6Platform.pc
+lib/pkgconfig/Qt6PrintSupport.pc
+lib/pkgconfig/Qt6Sql.pc
+lib/pkgconfig/Qt6Test.pc
+lib/pkgconfig/Qt6Widgets.pc
+lib/pkgconfig/Qt6Xml.pc
 qt6/bin/androiddeployqt
 qt6/bin/androidtestrunner
 ${PLIST.dbus}qt6/bin/qdbuscpp2xml
@@ -59,6 +72,7 @@ qt6/doc/global/externalsites/qtcreator.qdoc
 qt6/doc/global/externalsites/qtdesignstudio.qdoc
 qt6/doc/global/externalsites/rfc.qdoc
 qt6/doc/global/fileextensions.qdocconf
+qt6/doc/global/htmltabs.qdocconf
 qt6/doc/global/html-config.qdocconf
 qt6/doc/global/html-footer-online.qdocconf
 qt6/doc/global/html-footer.qdocconf
@@ -122,6 +136,7 @@ qt6/doc/global/template/style/cookie-confirm.css
 qt6/doc/global/template/style/cookiebar-x.png
 qt6/doc/global/template/style/doc_search.png
 qt6/doc/global/template/style/gsc.css
+qt6/doc/global/template/style/htmltabs.css
 qt6/doc/global/template/style/icomoon.eot
 qt6/doc/global/template/style/icomoon.svg
 qt6/doc/global/template/style/icomoon.ttf
@@ -504,6 +519,7 @@ qt6/include/QtCore/QMutableMapIterator
 qt6/include/QtCore/QMutableMultiHashIterator
 qt6/include/QtCore/QMutableMultiMapIterator
 qt6/include/QtCore/QMutableSetIterator
+qt6/include/QtCore/QMutableVectorIterator
 qt6/include/QtCore/QMutex
 qt6/include/QtCore/QMutexLocker
 qt6/include/QtCore/QNoDebug
@@ -649,6 +665,7 @@ qt6/include/QtCore/QVariantMap
 qt6/include/QtCore/QVariantPointer
 qt6/include/QtCore/QVariantRef
 qt6/include/QtCore/QVector
+qt6/include/QtCore/QVectorIterator
 qt6/include/QtCore/QVersionNumber
 qt6/include/QtCore/QWaitCondition
 qt6/include/QtCore/QWeakPointer
@@ -2636,6 +2653,7 @@ qt6/lib/cmake/Qt6/FindWrapBundledHarfbuzzConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapBundledLibjpegConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapBundledLibpngConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapBundledPcre2ConfigExtra.cmake
+qt6/lib/cmake/Qt6/FindWrapBundledZLIBConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapDBus1.cmake
 qt6/lib/cmake/Qt6/FindWrapDoubleConversion.cmake
 qt6/lib/cmake/Qt6/FindWrapFreetype.cmake
@@ -2653,6 +2671,7 @@ qt6/lib/cmake/Qt6/FindWrapSystemJpeg.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemMd4c.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemPCRE2.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemPNG.cmake
+qt6/lib/cmake/Qt6/FindWrapSystemZLIB.cmake
 qt6/lib/cmake/Qt6/FindWrapVulkan.cmake
 qt6/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake
 qt6/lib/cmake/Qt6/FindWrapZLIB.cmake
@@ -2661,6 +2680,7 @@ qt6/lib/cmake/Qt6/FindXKB_COMMON_X11.cmake
 qt6/lib/cmake/Qt6/FindXRender.cmake
 qt6/lib/cmake/Qt6/Finddouble-conversion.cmake
 qt6/lib/cmake/Qt6/ModuleDescription.json.in
+qt6/lib/cmake/Qt6/PkgConfigLibrary.pc.in
 qt6/lib/cmake/Qt6/Qt3rdPartyLibraryConfig.cmake.in
 qt6/lib/cmake/Qt6/Qt3rdPartyLibraryHelpers.cmake
 qt6/lib/cmake/Qt6/Qt6Config.cmake
@@ -2693,6 +2713,7 @@ qt6/lib/cmake/Qt6/QtFindPackageHelpers.cmake
 qt6/lib/cmake/Qt6/QtFindWrapConfigExtra.cmake.in
 qt6/lib/cmake/Qt6/QtFindWrapHelper.cmake
 qt6/lib/cmake/Qt6/QtFinishPrlFile.cmake
+qt6/lib/cmake/Qt6/QtFinishPkgConfigFile.cmake
 qt6/lib/cmake/Qt6/QtFlagHandlingHelpers.cmake
 qt6/lib/cmake/Qt6/QtFrameworkHelpers.cmake
 qt6/lib/cmake/Qt6/QtGenerateExtPri.cmake
@@ -2710,6 +2731,7 @@ qt6/lib/cmake/Qt6/QtModuleToolsConfig.cmake.in
 qt6/lib/cmake/Qt6/QtModuleToolsDependencies.cmake.in
 qt6/lib/cmake/Qt6/QtModuleToolsVersionlessTargets.cmake.in
 qt6/lib/cmake/Qt6/QtNoLinkTargetHelpers.cmake
+qt6/lib/cmake/Qt6/QtPkgConfigHelpers.cmake
 qt6/lib/cmake/Qt6/QtPlatformAndroid.cmake
 qt6/lib/cmake/Qt6/QtPlatformSupport.cmake
 qt6/lib/cmake/Qt6/QtPlatformTargetHelpers.cmake
@@ -2751,13 +2773,20 @@ qt6/lib/cmake/Qt6/QtToolchainHelpers.cmake
 qt6/lib/cmake/Qt6/QtWasmHelpers.cmake
 qt6/lib/cmake/Qt6/QtWrapperScriptHelpers.cmake
 qt6/lib/cmake/Qt6/QtWriteArgsFile.cmake
+qt6/lib/cmake/Qt6/config.tests/binary_for_strip/CMakeLists.txt
+qt6/lib/cmake/Qt6/config.tests/binary_for_strip/lib1.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/CMakeLists.txt
 qt6/lib/cmake/Qt6/config.tests/static_link_order/main.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp
+qt6/lib/cmake/Qt6/libexec/qt-internal-ninja.bat.in
+qt6/lib/cmake/Qt6/libexec/qt-internal-ninja.in
+qt6/lib/cmake/Qt6/libexec/qt-internal-strip.bat.in
+qt6/lib/cmake/Qt6/libexec/qt-internal-strip.in
 qt6/lib/cmake/Qt6/modulecppexports.h.in
 qt6/lib/cmake/Qt6/modulecppexports_p.h.in
+qt6/lib/cmake/Qt6/platforms/FindIntegrityPlatformGraphics.cmake
 qt6/lib/cmake/Qt6/platforms/Platform/Integrity.cmake
 qt6/lib/cmake/Qt6/qt.toolchain.cmake
 qt6/lib/cmake/Qt6BuildInternals/Qt6BuildInternalsConfig.cmake
@@ -3209,12 +3238,26 @@ qt6/lib/metatypes/qt6test_release_metatypes.json
 qt6/lib/metatypes/qt6widgets_release_metatypes.json
 qt6/lib/metatypes/qt6xcbqpaprivate_release_metatypes.json
 qt6/lib/metatypes/qt6xml_release_metatypes.json
+qt6/lib/pkgconfig/Qt6Concurrent.pc
+qt6/lib/pkgconfig/Qt6Core.pc
+${PLIST.dbus}qt6/lib/pkgconfig/Qt6DBus.pc
+qt6/lib/pkgconfig/Qt6Gui.pc
+qt6/lib/pkgconfig/Qt6Network.pc
+qt6/lib/pkgconfig/Qt6OpenGL.pc
+qt6/lib/pkgconfig/Qt6OpenGLWidgets.pc
+qt6/lib/pkgconfig/Qt6Platform.pc
+qt6/lib/pkgconfig/Qt6PrintSupport.pc
+qt6/lib/pkgconfig/Qt6Sql.pc
+qt6/lib/pkgconfig/Qt6Test.pc
+qt6/lib/pkgconfig/Qt6Widgets.pc
+qt6/lib/pkgconfig/Qt6Xml.pc
 qt6/libexec/android_emulator_launcher.sh
 qt6/libexec/cmake_automoc_parser
 qt6/libexec/ensure_pro_file.cmake
 qt6/libexec/moc
 qt6/libexec/qlalr
 qt6/libexec/qt-internal-configure-tests
+qt6/libexec/qt-testrunner.py
 qt6/libexec/qvkgen
 qt6/libexec/rcc
 qt6/libexec/syncqt.pl

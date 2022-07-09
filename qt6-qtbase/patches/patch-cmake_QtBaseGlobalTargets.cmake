@@ -2,14 +2,14 @@ $NetBSD$
 
 * only install non-generated files, this is needed since use in source build
 
---- cmake/QtBaseGlobalTargets.cmake.orig	2021-10-10 21:32:13.849657000 +0000
+--- cmake/QtBaseGlobalTargets.cmake.orig	2022-05-25 08:58:52.000000000 +0000
 +++ cmake/QtBaseGlobalTargets.cmake
-@@ -267,6 +267,8 @@ qt_copy_or_install(FILES
- qt_copy_or_install(DIRECTORY
+@@ -294,6 +294,8 @@ qt_copy_or_install(DIRECTORY
      "config.tests/static_link_order"
+     "config.tests/binary_for_strip"
      DESTINATION "${__GlobalConfig_install_dir}/config.tests"
 +    FILES_MATCHING PATTERN "*.cpp"
 +    PATTERN "CMakeLists.txt"
  )
  
- # Install public CMake files.
+ # Install qt-internal-strip and qt-internal-ninja files.

@@ -1,4 +1,16 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt63DAnimation.pc
+lib/pkgconfig/Qt63DCore.pc
+lib/pkgconfig/Qt63DExtras.pc
+lib/pkgconfig/Qt63DInput.pc
+lib/pkgconfig/Qt63DLogic.pc
+lib/pkgconfig/Qt63DQuick.pc
+lib/pkgconfig/Qt63DQuickAnimation.pc
+lib/pkgconfig/Qt63DQuickExtras.pc
+lib/pkgconfig/Qt63DQuickInput.pc
+lib/pkgconfig/Qt63DQuickRender.pc
+lib/pkgconfig/Qt63DQuickScene2D.pc
+lib/pkgconfig/Qt63DRender.pc
 qt6/include/Qt3DAnimation/${PKGVERSION}/Qt3DAnimation/private/abstractevaluateclipanimatorjob_p.h
 qt6/include/Qt3DAnimation/${PKGVERSION}/Qt3DAnimation/private/additiveclipblend_p.h
 qt6/include/Qt3DAnimation/${PKGVERSION}/Qt3DAnimation/private/animationclip_p.h
@@ -1227,6 +1239,12 @@ qt6/lib/cmake/Qt63DRender/Qt6OpenGLRendererPluginConfigVersion.cmake
 qt6/lib/cmake/Qt63DRender/Qt6OpenGLRendererPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DRender/Qt6OpenGLRendererPluginTargets-release.cmake
 qt6/lib/cmake/Qt63DRender/Qt6OpenGLRendererPluginTargets.cmake
+qt6/lib/cmake/Qt63DRender/Qt6RhiRendererPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt63DRender/Qt6RhiRendererPluginConfig.cmake
+qt6/lib/cmake/Qt63DRender/Qt6RhiRendererPluginConfigVersion.cmake
+qt6/lib/cmake/Qt63DRender/Qt6RhiRendererPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt63DRender/Qt6RhiRendererPluginTargets-release.cmake
+qt6/lib/cmake/Qt63DRender/Qt6RhiRendererPluginTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt6Scene2DPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DRender/Qt6Scene2DPluginConfig.cmake
 qt6/lib/cmake/Qt63DRender/Qt6Scene2DPluginConfigVersion.cmake
@@ -1342,6 +1360,18 @@ qt6/lib/metatypes/qt63dquickinput_release_metatypes.json
 qt6/lib/metatypes/qt63dquickrender_release_metatypes.json
 qt6/lib/metatypes/qt63dquickscene2d_release_metatypes.json
 qt6/lib/metatypes/qt63drender_release_metatypes.json
+qt6/lib/pkgconfig/Qt63DAnimation.pc
+qt6/lib/pkgconfig/Qt63DCore.pc
+qt6/lib/pkgconfig/Qt63DExtras.pc
+qt6/lib/pkgconfig/Qt63DInput.pc
+qt6/lib/pkgconfig/Qt63DLogic.pc
+qt6/lib/pkgconfig/Qt63DQuick.pc
+qt6/lib/pkgconfig/Qt63DQuickAnimation.pc
+qt6/lib/pkgconfig/Qt63DQuickExtras.pc
+qt6/lib/pkgconfig/Qt63DQuickInput.pc
+qt6/lib/pkgconfig/Qt63DQuickRender.pc
+qt6/lib/pkgconfig/Qt63DQuickScene2D.pc
+qt6/lib/pkgconfig/Qt63DRender.pc
 qt6/mkspecs/modules/qt_lib_3danimation.pri
 qt6/mkspecs/modules/qt_lib_3danimation_private.pri
 qt6/mkspecs/modules/qt_lib_3dcore.pri
@@ -1381,6 +1411,7 @@ qt6/modules/3DRender.json
 qt6/plugins/geometryloaders/libdefaultgeometryloader.so
 qt6/plugins/geometryloaders/libgltfgeometryloader.so
 qt6/plugins/renderers/libopenglrenderer.so
+qt6/plugins/renderers/librhirenderer.so
 qt6/plugins/renderplugins/libscene2d.so
 qt6/plugins/sceneparsers/libassimpsceneimport.so
 qt6/plugins/sceneparsers/libgltfsceneexport.so

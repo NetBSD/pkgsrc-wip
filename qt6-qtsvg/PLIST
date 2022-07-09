@@ -1,4 +1,6 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6Svg.pc
+lib/pkgconfig/Qt6SvgWidgets.pc
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfont_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvggraphics_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvghandler_p.h
@@ -67,6 +69,8 @@ qt6/lib/libQt6SvgWidgets.so.6
 qt6/lib/libQt6SvgWidgets.so.${PKGVERSION}
 qt6/lib/metatypes/qt6svg_release_metatypes.json
 qt6/lib/metatypes/qt6svgwidgets_release_metatypes.json
+qt6/lib/pkgconfig/Qt6Svg.pc
+qt6/lib/pkgconfig/Qt6SvgWidgets.pc
 qt6/mkspecs/modules/qt_lib_svg.pri
 qt6/mkspecs/modules/qt_lib_svg_private.pri
 qt6/mkspecs/modules/qt_lib_svgwidgets.pri

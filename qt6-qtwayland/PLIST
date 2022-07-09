@@ -1,4 +1,6 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6WaylandClient.pc
+lib/pkgconfig/Qt6WaylandCompositor.pc
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclientglobal_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-hardware-integration.h
@@ -87,6 +89,7 @@ qt6/include/QtWaylandClient/QtWaylandClient
 qt6/include/QtWaylandClient/QtWaylandClientDepends
 qt6/include/QtWaylandClient/QtWaylandClientVersion
 qt6/include/QtWaylandClient/qtwaylandclient-config.h
+qt6/include/QtWaylandClient/qtwaylandclientexports.h
 qt6/include/QtWaylandClient/qtwaylandclientglobal.h
 qt6/include/QtWaylandClient/qtwaylandclientversion.h
 qt6/include/QtWaylandClient/qwaylandclientexport.h
@@ -531,6 +534,8 @@ qt6/lib/metatypes/qt6waylandcompositor_release_metatypes.json
 qt6/lib/metatypes/qt6waylandeglclienthwintegrationprivate_release_metatypes.json
 qt6/lib/metatypes/qt6waylandeglcompositorhwintegrationprivate_release_metatypes.json
 qt6/lib/metatypes/qt6wlshellintegrationprivate_release_metatypes.json
+qt6/lib/pkgconfig/Qt6WaylandClient.pc
+qt6/lib/pkgconfig/Qt6WaylandCompositor.pc
 qt6/libexec/qtwaylandscanner
 qt6/mkspecs/modules/qt_lib_wayland_egl_client_hw_integration_private.pri
 qt6/mkspecs/modules/qt_lib_wayland_egl_compositor_hw_integration_private.pri

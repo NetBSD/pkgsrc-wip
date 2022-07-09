@@ -33,7 +33,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:build pkg-config
 
 # https://doc.qt.io/qt-5/supported-platforms.html
-GCC_REQD+=		5
+GCC_REQD+=		9
 
 # Avoid failures to due 'register' usage in X11 headers.
 CXXFLAGS+=		-Wno-register
@@ -86,3 +86,19 @@ fix-darwin-install-name:
 		install_name_tool -id $${libdir}/$${libname} $${lib};	\
 	done
 .endif
+
+PKGCONFIG_OVERRIDE_STAGE=	post-build
+.PHONY: pkgconfig-link
+post-install: pkgconfig-link
+pkgconfig-link:
+	${RUN}	if ${TEST} -d ${DESTDIR}${QTPREFIX}/lib/pkgconfig; then			\
+		${ECHO} -- Linking pkg-config files to pkgconfig dir in prefix;		\
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig;			\
+		${FIND} ${DESTDIR}${QTPREFIX}/lib/pkgconfig -name "*.pc" -print |	\
+			while read pcpath; do						\
+			pcfile=`basename $${pcpath}`;					\
+			cd ${DESTDIR}${PREFIX}/lib/pkgconfig && 			\
+			${LN} -f -s ${QTPREFIX}/lib/pkgconfig/$${pcfile} $${pcfile};	\
+		done									\
+		fi
+

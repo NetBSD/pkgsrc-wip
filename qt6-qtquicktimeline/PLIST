@@ -1,4 +1,5 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6QuickTimeline.pc
 qt6/include/QtQuickTimeline/${PKGVERSION}/QtQuickTimeline/private/qquickkeyframe_p.h
 qt6/include/QtQuickTimeline/${PKGVERSION}/QtQuickTimeline/private/qquickkeyframedatautils_p.h
 qt6/include/QtQuickTimeline/${PKGVERSION}/QtQuickTimeline/private/qquicktimeline_p.h
@@ -31,6 +32,7 @@ qt6/lib/libQt6QuickTimeline.so
 qt6/lib/libQt6QuickTimeline.so.6
 qt6/lib/libQt6QuickTimeline.so.${PKGVERSION}
 qt6/lib/metatypes/qt6quicktimeline_release_metatypes.json
+qt6/lib/pkgconfig/Qt6QuickTimeline.pc
 qt6/mkspecs/modules/qt_lib_quicktimeline.pri
 qt6/mkspecs/modules/qt_lib_quicktimeline_private.pri
 qt6/modules/QuickTimeline.json

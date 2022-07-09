@@ -1,4 +1,5 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6NetworkAuth.pc
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth2_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauthreplyhandler_p.h
@@ -41,6 +42,7 @@ qt6/lib/libQt6NetworkAuth.so
 qt6/lib/libQt6NetworkAuth.so.6
 qt6/lib/libQt6NetworkAuth.so.${PKGVERSION}
 qt6/lib/metatypes/qt6networkauth_release_metatypes.json
+qt6/lib/pkgconfig/Qt6NetworkAuth.pc
 qt6/mkspecs/modules/qt_lib_networkauth.pri
 qt6/mkspecs/modules/qt_lib_networkauth_private.pri
 qt6/modules/NetworkAuth.json

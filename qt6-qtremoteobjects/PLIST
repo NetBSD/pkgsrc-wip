@@ -1,4 +1,7 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6RemoteObjects.pc
+lib/pkgconfig/Qt6RemoteObjectsQml.pc
+lib/pkgconfig/Qt6RepParser.pc
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_local_backend_p.h
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_qnx_backend_p.h
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_qnx_global_p.h
@@ -123,6 +126,9 @@ qt6/lib/libQt6RemoteObjectsQml.so.6
 qt6/lib/libQt6RemoteObjectsQml.so.${PKGVERSION}
 qt6/lib/metatypes/qt6remoteobjects_release_metatypes.json
 qt6/lib/metatypes/qt6remoteobjectsqml_release_metatypes.json
+qt6/lib/pkgconfig/Qt6RemoteObjects.pc
+qt6/lib/pkgconfig/Qt6RemoteObjectsQml.pc
+qt6/lib/pkgconfig/Qt6RepParser.pc
 qt6/libexec/repc
 qt6/mkspecs/features/remoteobjects_repc.prf
 qt6/mkspecs/features/repcclient.pri

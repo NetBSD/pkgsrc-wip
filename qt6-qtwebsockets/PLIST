@@ -1,4 +1,5 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6WebSockets.pc
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qdefaultmaskgenerator_p.h
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qsslserver_p.h
 qt6/include/QtWebSockets/${PKGVERSION}/QtWebSockets/private/qwebsocket_p.h
@@ -45,6 +46,7 @@ qt6/lib/libQt6WebSockets.so
 qt6/lib/libQt6WebSockets.so.6
 qt6/lib/libQt6WebSockets.so.${PKGVERSION}
 qt6/lib/metatypes/qt6websockets_release_metatypes.json
+qt6/lib/pkgconfig/Qt6WebSockets.pc
 qt6/mkspecs/modules/qt_lib_websockets.pri
 qt6/mkspecs/modules/qt_lib_websockets_private.pri
 qt6/modules/WebSockets.json

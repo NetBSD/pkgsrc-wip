@@ -22,6 +22,7 @@ USE_DBUS-ARCH-DEPS_H=	yes
 .include "../../sysutils/dbus/buildlink3.mk"
 CONFIGURE_ARGS+=	-dbus-linked
 PLIST.dbus=		yes
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6DBus.pc
 .else
 CONFIGURE_ARGS+=	-no-dbus
 .endif

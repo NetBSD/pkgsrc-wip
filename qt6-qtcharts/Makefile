@@ -7,6 +7,9 @@ CATEGORIES=	x11
 
 LICENSE=	gnu-gpl-v3
 
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Charts.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6ChartsQml.pc
+
 .include "../../wip/qt6-qtbase/Makefile.common"
 
 .include "../../wip/qt6-qtbase/buildlink3.mk"

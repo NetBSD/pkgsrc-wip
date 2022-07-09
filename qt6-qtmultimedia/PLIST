@@ -1,4 +1,6 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6Multimedia.pc
+lib/pkgconfig/Qt6MultimediaWidgets.pc
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/androidcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/androidmediametadataretriever_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/androidmediaplayer_p.h
@@ -324,6 +326,8 @@ qt6/lib/libQt6MultimediaWidgets.so.${PKGVERSION}
 qt6/lib/metatypes/qt6multimedia_release_metatypes.json
 qt6/lib/metatypes/qt6multimediaquickprivate_release_metatypes.json
 qt6/lib/metatypes/qt6multimediawidgets_release_metatypes.json
+qt6/lib/pkgconfig/Qt6Multimedia.pc
+qt6/lib/pkgconfig/Qt6MultimediaWidgets.pc
 qt6/mkspecs/modules/qt_lib_multimedia.pri
 qt6/mkspecs/modules/qt_lib_multimedia_private.pri
 qt6/mkspecs/modules/qt_lib_multimediaquick_private.pri

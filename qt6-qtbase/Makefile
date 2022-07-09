@@ -124,6 +124,7 @@ LDFLAGS.FreeBSD+=		-lutil
 REPLACE_PERL+=		libexec/syncqt.pl
 REPLACE_PERL+=		mkspecs/features/data/unix/findclasslist.pl
 REPLACE_BASH+=		util/android/android_emulator_launcher.sh
+REPLACE_PYTHON+=	util/testrunner/qt-testrunner.py
 
 PTHREAD_OPTS+=		require
 UNLIMIT_RESOURCES=	datasize
@@ -211,6 +212,18 @@ post-install:
 
 TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet
 
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Concurrent.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Core.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Gui.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Network.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6OpenGL.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6OpenGLWidgets.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6PrintSupport.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Sql.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Test.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Widgets.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Xml.pc
+
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
@@ -223,6 +236,7 @@ TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../math/double-conversion/buildlink3.mk"
 .include "../../security/libb2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

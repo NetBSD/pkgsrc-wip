@@ -1,4 +1,14 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6Quick3D.pc
+lib/pkgconfig/Qt6Quick3DAssetImport.pc
+lib/pkgconfig/Qt6Quick3DAssetUtils.pc
+lib/pkgconfig/Qt6Quick3DEffects.pc
+lib/pkgconfig/Qt6Quick3DHelpers.pc
+lib/pkgconfig/Qt6Quick3DIblBaker.pc
+lib/pkgconfig/Qt6Quick3DParticleEffects.pc
+lib/pkgconfig/Qt6Quick3DParticles.pc
+lib/pkgconfig/Qt6Quick3DRuntimeRender.pc
+lib/pkgconfig/Qt6Quick3DUtils.pc
 qt6/bin/balsam
 qt6/bin/balsamui
 qt6/bin/instancer
@@ -451,6 +461,16 @@ qt6/lib/metatypes/qt6quick3dparticleeffects_release_metatypes.json
 qt6/lib/metatypes/qt6quick3dparticles_release_metatypes.json
 qt6/lib/metatypes/qt6quick3druntimerender_release_metatypes.json
 qt6/lib/metatypes/qt6quick3dutils_release_metatypes.json
+qt6/lib/pkgconfig/Qt6Quick3D.pc
+qt6/lib/pkgconfig/Qt6Quick3DAssetImport.pc
+qt6/lib/pkgconfig/Qt6Quick3DAssetUtils.pc
+qt6/lib/pkgconfig/Qt6Quick3DEffects.pc
+qt6/lib/pkgconfig/Qt6Quick3DHelpers.pc
+qt6/lib/pkgconfig/Qt6Quick3DIblBaker.pc
+qt6/lib/pkgconfig/Qt6Quick3DParticleEffects.pc
+qt6/lib/pkgconfig/Qt6Quick3DParticles.pc
+qt6/lib/pkgconfig/Qt6Quick3DRuntimeRender.pc
+qt6/lib/pkgconfig/Qt6Quick3DUtils.pc
 qt6/mkspecs/modules/qt_lib_quick3d.pri
 qt6/mkspecs/modules/qt_lib_quick3d_private.pri
 qt6/mkspecs/modules/qt_lib_quick3dassetimport.pri
@@ -884,14 +904,9 @@ qt6/qml/QtQuick3D/designer/images/view3D.png
 qt6/qml/QtQuick3D/designer/images/view3D16.png
 qt6/qml/QtQuick3D/designer/images/view3D@2x.png
 qt6/qml/QtQuick3D/designer/quick3d.metainfo
-qt6/qml/QtQuick3D/designer/source/cone_model_template.qml
-qt6/qml/QtQuick3D/designer/source/cube_model_template.qml
 qt6/qml/QtQuick3D/designer/source/custom_material_default_shader.frag
-qt6/qml/QtQuick3D/designer/source/cylinder_model_template.qml
 qt6/qml/QtQuick3D/designer/source/effect_default_shader.frag
 qt6/qml/QtQuick3D/designer/source/effect_template.qml
-qt6/qml/QtQuick3D/designer/source/plane_model_template.qml
-qt6/qml/QtQuick3D/designer/source/sphere_model_template.qml
 qt6/qml/QtQuick3D/designer/source/view3D_template.qml
 qt6/qml/QtQuick3D/libqquick3dplugin.so
 qt6/qml/QtQuick3D/plugins.qmltypes

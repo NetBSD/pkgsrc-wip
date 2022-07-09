@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	qt6-qtwayland
 .if !defined(QT6_QTWAYLAND_BUILDLINK3_MK)
 QT6_QTWAYLAND_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt6-qtwayland+=	qt6-qtwayland>=6.0.1
+BUILDLINK_API_DEPENDS.qt6-qtwayland+=	qt6-qtwayland>=6.3.1
 BUILDLINK_PKGSRCDIR.qt6-qtwayland?=	../../wip/qt6-qtwayland
 
 BUILDLINK_LIBDIRS.qt6-qtwayland+=	qt6/plugins/platforms

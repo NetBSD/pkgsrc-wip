@@ -12,6 +12,8 @@ CONFIGURE_ARGS+=	-no-alsa
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Multimedia.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6MultimediaWidgets.pc
 
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"

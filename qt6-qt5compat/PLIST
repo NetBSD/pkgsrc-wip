@@ -1,4 +1,5 @@
 @comment $NetBSD$
+lib/pkgconfig/Qt6Core5Compat.pc
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/cp949codetbl_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbig5codec_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjson_p.h
@@ -87,6 +88,7 @@ qt6/lib/libQt6Core5Compat.so
 qt6/lib/libQt6Core5Compat.so.6
 qt6/lib/libQt6Core5Compat.so.${PKGVERSION}
 qt6/lib/metatypes/qt6core5compat_release_metatypes.json
+qt6/lib/pkgconfig/Qt6Core5Compat.pc
 qt6/mkspecs/modules/qt_lib_core5compat.pri
 qt6/mkspecs/modules/qt_lib_core5compat_private.pri
 qt6/modules/Core5Compat.json
