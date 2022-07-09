@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config intltool automake autoconf autoreconf autoupdate m4
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
 
 WRKSRC=			${WRKDIR}/budgie-screensaver-5.0.2
 USE_PKGLOCALEDIR=	yes
@@ -23,6 +24,7 @@ USE_PKGLOCALEDIR=	yes
 #	cd ${WRKSRC} && autoreconf -fiv
 
 
+.include "../../devel/meson/build.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
