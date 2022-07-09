@@ -423,3 +423,5 @@ Size (howett.net_plist_@v_v0.0.0-20181124034731-591f970eefbb.mod) = 222 bytes
 BLAKE2s (howett.net_plist_@v_v0.0.0-20181124034731-591f970eefbb.zip) = cb9f1df8ec5c48729845454b9baf1cf03813d0904b4f5813f64a19d7d9057855
 SHA512 (howett.net_plist_@v_v0.0.0-20181124034731-591f970eefbb.zip) = 42edffcf1da65083864d4ad866a4bf09bb184f52888e3ae7c2e47e6ff1967916cfe6e777de231a5e5a46f25b658b1c633429b6793584886373b2f8ebef8c5cef
 Size (howett.net_plist_@v_v0.0.0-20181124034731-591f970eefbb.zip) = 69738 bytes
+SHA1 (patch-vendor_github.com_go-gl_glfw_v3.3_glfw_build.go) = 068b6ab37520c77fefde822d18da7d65efe6d64f
+SHA1 (patch-vendor_github.com_go-gl_glfw_v3.3_glfw_native__linbsd.go) = 385cfe5c73477dd8afa22c687585a7401c0b60bb

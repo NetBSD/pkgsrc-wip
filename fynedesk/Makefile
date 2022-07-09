@@ -14,5 +14,6 @@ GO_BUILD_PATTERN=	./cmd/...
 
 .include "go-modules.mk"
 
+.include "../../graphics/glfw/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
