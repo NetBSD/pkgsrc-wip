@@ -1,0 +1,2 @@
+pytest-lazy-fixture lets you use a fixture as one of the
+values passed in @pytest.mark.parametrize:
