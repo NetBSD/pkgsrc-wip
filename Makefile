@@ -5332,6 +5332,7 @@ SUBDIR+=	spread4
 SUBDIR+=	spyder
 SUBDIR+=	squeak5
 SUBDIR+=	squeak5-vm
+SUBDIR+=	squeak6
 SUBDIR+=	squid4
 SUBDIR+=	squirrel
 SUBDIR+=	squirrelmail-avelsieve

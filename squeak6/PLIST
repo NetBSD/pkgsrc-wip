@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/squeak/${SQUEAK_VERSION}/Squeak${SQUEAK_VERSION}-${IMAGE_VERSION}-${IMAGE_ARCH}.changes
+share/squeak/${SQUEAK_VERSION}/Squeak${SQUEAK_VERSION}-${IMAGE_VERSION}-${IMAGE_ARCH}.image
+share/squeak/${SQUEAK_VERSION}/SqueakV60.sources
