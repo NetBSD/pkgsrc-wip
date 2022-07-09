@@ -11,6 +11,7 @@ COMMENT=	Multi-core Decision Diagram (BDD/LDD) implementation
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/sylvan-1.5.0
+USE_LIBTOOL=	yes
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 

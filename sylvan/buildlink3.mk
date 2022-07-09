@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	sylvan
+
+.if !defined(SYLVAN_BUILDLINK3_MK)
+SYLVAN_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.sylvan+=	sylvan>=1.5.0
+BUILDLINK_PKGSRCDIR.sylvan?=	../../wip/sylvan
+
+.endif	# SYLVAN_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-sylvan
