@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	apache-arrow-7.0.0
+
+DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-7.0.0/
+MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
 
 
 MAINTAINER=	matthewd@fastmail.us
@@ -12,7 +13,8 @@ LICENSE=	apache-2.0
 
 # These packages are built within arrow, and it
 # looks difficult to decouple them
-XSIMD=		aeec9c872c8b475dedd7781336710f2dd2666cb2.tar.gz
+# They come from ./cpp/thirdparty/versions.txt
+XSIMD=		7d1778c3b38d63db7cec7145d939f40bc5d859d1.tar.gz
 JEMALLOC=	jemalloc-5.2.1.tar.bz2
 
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
@@ -34,6 +36,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=	-DARROW_DEPENDENCY_SOURCE=SYSTEM
 # Not yet for Gandiva
 CMAKE_ARGS+=	-DARROW_GANDIVA=OFF
+CMAKE_ARGS+=	-DARROW_CUDA=OFF
 # These seem OK
 CMAKE_ARGS+=	-DARROW_FILESYSTEM=ON
 CMAKE_ARGS+=	-DARROW_BUILD_UTILITIES=ON
@@ -49,6 +52,7 @@ CMAKE_ARGS+=	-DARROW_BUILD_TESTS=OFF
 
 BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
+.include "../../wip/apache-arrow/version.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
