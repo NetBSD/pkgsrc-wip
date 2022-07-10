@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.7 2021/10/26 10:05:26 nia Exp $
+
+BLAKE2s (telegram-purple_1.4.7.orig.tar.gz) = 01183ead0864c8a53cbadaee803eb5266de7ba9d1335299912476fadcd079893
+SHA512 (telegram-purple_1.4.7.orig.tar.gz) = ae3032b33bd2a20b58b2d66c83fbc405f43c38c0e93b00394ad3165b0bc5d5aba02a8e1946872e4bd082894679737fa20f3e1991e9bb16c3c3aba4c7abbbf7d8
+Size (telegram-purple_1.4.7.orig.tar.gz) = 498573 bytes
+SHA1 (patch-Makefile.in) = 40059334d21cb6dd45c23e6edfdc0a1871197c4d
+SHA1 (patch-configure) = c6af945b2dc575375c29d643783d4c6e92d53817
+SHA1 (patch-tgl_Makefile.in) = 3a584e4258cfb0368a9e9704018dc48df8dfa715
+SHA1 (patch-tgl_tl-parser_tl-parser.c) = bd6af1514d724f71ffffb51b824baa18084c289d

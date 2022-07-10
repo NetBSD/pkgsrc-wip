@@ -5472,6 +5472,7 @@ SUBDIR+=	teco
 SUBDIR+=	telegraf
 SUBDIR+=	telegram-cli
 SUBDIR+=	telegram-desktop
+SUBDIR+=	telegram-purple
 SUBDIR+=	telepathy-butterfly
 SUBDIR+=	telepathy-logger
 SUBDIR+=	template-glib
