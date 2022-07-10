@@ -3,6 +3,7 @@ include/litehtml/attributes.h
 include/litehtml/background.h
 include/litehtml/borders.h
 include/litehtml/box.h
+include/litehtml/codepoint.h
 include/litehtml/context.h
 include/litehtml/css_length.h
 include/litehtml/css_margins.h
@@ -41,7 +42,10 @@ include/litehtml/os_types.h
 include/litehtml/style.h
 include/litehtml/stylesheet.h
 include/litehtml/table.h
+include/litehtml/tstring_view.h
 include/litehtml/types.h
+include/litehtml/url.h
+include/litehtml/url_path.h
 include/litehtml/utf8_strings.h
 include/litehtml/web_color.h
 lib/cmake/litehtml/litehtmlConfig.cmake

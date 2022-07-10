@@ -4,11 +4,10 @@ $NetBSD$
 * Use PRIVATE instead of PUBLIC keyword since we use
   dynamic linking and don't want -lgumbo if requesting
   linkage to litehtml via cmake.
-* Turn of the test section since it installs gtest
 
---- CMakeLists.txt.orig	2021-09-03 06:59:31.000000000 +0000
+--- CMakeLists.txt.orig	2022-04-05 20:49:06.000000000 +0000
 +++ CMakeLists.txt
-@@ -123,7 +123,7 @@ set(TEST_LITEHTML
+@@ -131,7 +131,7 @@ set(TEST_LITEHTML
  set(PROJECT_LIB_VERSION ${PROJECT_MAJOR}.${PROJECT_MINOR}.0)
  set(PROJECT_SO_VERSION ${PROJECT_MAJOR})
  
@@ -17,7 +16,7 @@ $NetBSD$
  set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_LIB_VERSION} SOVERSION ${PROJECT_SO_VERSION})
  
  set_target_properties(${PROJECT_NAME} PROPERTIES
-@@ -145,7 +145,7 @@ if (LITEHTML_UTF8)
+@@ -153,7 +153,7 @@ if (LITEHTML_UTF8)
  endif()
  
  # Gumbo
@@ -26,20 +25,3 @@ $NetBSD$
  
  # install and export
  install(TARGETS ${PROJECT_NAME}
-@@ -177,7 +177,7 @@ endif()
- set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/src/master.css.inc PROPERTIES GENERATED TRUE)
- 
- # Tests
--
-+if(OFF)
- include(FetchContent)
- FetchContent_Declare(
-   googletest
-@@ -222,6 +222,7 @@ if (BUILD_TESTING)
-     include(GoogleTest)
-     gtest_discover_tests(${TEST_NAME})
- endif()
-+endif()
- 
- #     set(TEST_NAME ${PROJECT_NAME}_tests)
- #     add_executable(${TEST_NAME} ${TEST_LITEHTML} ${CMAKE_CURRENT_SOURCE_DIR}/src/master.css.inc)
