@@ -4,4 +4,6 @@ BLAKE2s (qttools-everywhere-src-6.3.1.tar.xz) = 411a29de00f060c471b0060619e03b88
 SHA512 (qttools-everywhere-src-6.3.1.tar.xz) = 6e392ef2415b14119d0c4058efa78f1a66e91c01c8f48a2f1926df43f7f1cb8fcd94f84c91fc0188baa96e3055eede6f080ca4e9f150e263c3fdc5c864649883
 Size (qttools-everywhere-src-6.3.1.tar.xz) = 8628880 bytes
 SHA1 (patch-src_assistant_CMakeLists.txt) = 41e1a4eb77337f52f2b6b37a01d3217c83a29bc8
+SHA1 (patch-src_assistant_qlitehtml_src_container__qpainter.cpp) = b2f9fb7e30af8bd8e42e1ba65289d56590595493
+SHA1 (patch-src_assistant_qlitehtml_src_container__qpainter__p.h) = a478ef2748d2baf7cfb9e3a064a334d079a5c042
 SHA1 (patch-src_linguist_lupdate_CMakeLists.txt) = d70ea348c3ba7f64bcc245de9445becefecf3a9c
