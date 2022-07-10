@@ -1,12 +1,12 @@
 @comment $NetBSD$
 bin/plasma_store
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/pyarrow-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/pyarrow/__init__.pxd
 ${PYSITELIB}/pyarrow/__init__.py
 ${PYSITELIB}/pyarrow/__init__.pyc

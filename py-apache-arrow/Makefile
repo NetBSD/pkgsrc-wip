@@ -1,6 +1,6 @@
 # $NetBSD$
 DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
-PKGNAME=	${PYPKGPREFIX}-pyarrow-${APACHE_ARROW_VERSION}
+PKGNAME=	${PYPKGPREFIX}-apache-arrow-${APACHE_ARROW_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
 

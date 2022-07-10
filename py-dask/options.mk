@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 .if !empty(PKG_OPTIONS:Mparquet)
 # TODO Also needs pyarrow
 DEPENDS+=	${PYPKGPREFIX}-fastparquet-[0-9]*:../../wip/py-fastparquet
-DEPENDS+=	${PYPKGPREFIX}-pyarrow-[0-9]*:../../wip/py-apache-arrow
+DEPENDS+=	${PYPKGPREFIX}-apache-arrow-[0-9]*:../../wip/py-apache-arrow
 .endif
 
 # graphviz is used to display the task dependencies
