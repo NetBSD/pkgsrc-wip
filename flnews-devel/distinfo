@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (flnews-1.1.1pre4.tar.bz2) = 49b36bbc063ddb952f73b84aa96f8554a7319a71d87dc8b0dace9af55f544eef
-SHA512 (flnews-1.1.1pre4.tar.bz2) = b7d0be866fb5c7d16ac6c3a0c9fb868f703db7feebefc76c476cb4ff858117b9bf2751bb04426653516ba1e1d698726810fd7d5391a771bae4f0d8c89a9a7b50
-Size (flnews-1.1.1pre4.tar.bz2) = 1185368 bytes
+BLAKE2s (flnews-1.1.1pre6.tar.bz2) = 093740225985be8ad822749c822e688b8fa35a8d4f6d60ec87ba306ea1db16b0
+SHA512 (flnews-1.1.1pre6.tar.bz2) = 3b3db822640dbd7158054969fde4adb596b9489156bbcd7295bdd7f45a79b85bc054b876dc53f030ff442abf830b1754fa26678bafa324044400547d683a2efc
+Size (flnews-1.1.1pre6.tar.bz2) = 1194975 bytes
