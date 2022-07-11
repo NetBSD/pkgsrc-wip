@@ -2866,8 +2866,6 @@ share/emacs/${PKGVERSION}/lisp/net/rcirc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rcirc.elc
 share/emacs/${PKGVERSION}/lisp/net/rfc2104.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rfc2104.elc
-share/emacs/${PKGVERSION}/lisp/net/rlogin.el.gz
-share/emacs/${PKGVERSION}/lisp/net/rlogin.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-cram.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-cram.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-digest.el.gz
@@ -3056,6 +3054,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/rlogin.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/rlogin.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/starttls.el.gz
