@@ -37,6 +37,4 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/title.html
 
 .include "../../wip/jitsi-meet/Makefile.common"
-.include "../../lang/nodejs/buildlink3.mk"
-.include "../../lang/nodejs/nodeversion.mk"
 .include "../../mk/bsd.pkg.mk"
