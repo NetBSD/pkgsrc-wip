@@ -10,6 +10,11 @@ HOMEPAGE=	https://www.spice-space.org/spice-gtk.html
 COMMENT=	GTK+ widget for SPICE clients
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 
@@ -19,12 +24,12 @@ PKGCONFIG_OVERRIDE+=	spice-client-gtk-3.0.pc.in
 MESON_ARGS+=		-Dintrospection=enabled
 MESON_ARGS+=		-Dvapi=enabled
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../devel/meson/build.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
