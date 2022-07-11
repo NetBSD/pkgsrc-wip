@@ -263,6 +263,7 @@ share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.metainfo.xml
 share/emacs/${PKGVERSION}/etc/emacs.service
+share/emacs/${PKGVERSION}/etc/emacs_lldb.py
 share/emacs/${PKGVERSION}/etc/emacsclient-mail.desktop
 share/emacs/${PKGVERSION}/etc/emacsclient.desktop
 share/emacs/${PKGVERSION}/etc/enriched.txt
@@ -1617,7 +1618,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-opt.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-opt.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-speedbar.el.gz
@@ -2666,7 +2666,6 @@ share/emacs/${PKGVERSION}/lisp/mail/rfc6068.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc6068.elc
 share/emacs/${PKGVERSION}/lisp/mail/rfc822.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rfc822.elc
-share/emacs/${PKGVERSION}/lisp/mail/rmail-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/mail/rmail-spam-filter.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rmail-spam-filter.elc
 share/emacs/${PKGVERSION}/lisp/mail/rmail.el.gz
