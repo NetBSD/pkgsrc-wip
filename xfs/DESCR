@@ -1,1 +1,3 @@
-Xorg version of X font server.
+xfs is the X Font Server, allowing remote X servers such as X
+Terminals to access fonts for rendering via legacy X11 core protocol
+requests.
