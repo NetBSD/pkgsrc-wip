@@ -2741,6 +2741,7 @@ SUBDIR+=	openshot-qt
 SUBDIR+=	opensips
 SUBDIR+=	opensmtpd
 SUBDIR+=	openssl110
+SUBDIR+=	openssl3
 SUBDIR+=	opensubdiv
 SUBDIR+=	opensurge
 SUBDIR+=	opentomb
