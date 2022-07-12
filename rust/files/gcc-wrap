@@ -72,7 +72,8 @@ while [ $# -gt 0 ]; do
 			args="$args -I=/usr/include/krb5"
 			;;
 		-I/usr/pkg/include)
-			args="$args -I=/usr/pkg/include"
+# Try to drop this...
+#			args="$args -I=/usr/pkg/include"
 			;;
 		-I)
 			if [ $2 = "/usr/include" ]; then
@@ -82,7 +83,8 @@ while [ $# -gt 0 ]; do
 				args="$args -I=/usr/include/krb5"
 				shift
 			elif [ $2 = "/usr/pkg/include" ]; then
-				args="$args -I=/usr/pkg/include"
+# Try to drop this too...
+#				args="$args -I=/usr/pkg/include"
 				shift
 			else
 				args="$args -I"
