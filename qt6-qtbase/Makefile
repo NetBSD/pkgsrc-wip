@@ -103,7 +103,7 @@ CONFIGURE_ARGS+=		-no-framework
 # so give it a direct path to them if they aren't installed
 # in /usr/include
 .  if !exists(/usr/include)
-CONFIGURE_ARGS+=	-I ${OSX_SDK_PATH}/usr/include
+CONFIGURE_ARGS+=		-I ${OSX_SDK_PATH}/usr/include
 .  endif
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=			-lresolv
@@ -152,7 +152,12 @@ SUBST_MESSAGE.path=	Add to default XDG path.
 SUBST_FILES.path=	src/corelib/io/qstandardpaths_unix.cpp
 SUBST_VARS.path=	PREFIX
 
-BROKEN_FILES=		qt6/mkspecs/qmodule.pri
+# The pri file has WRKSRC in it.
+SUBST_CLASSES+=		pkgconf
+SUBST_STAGE.pkgconf=	post-build
+SUBST_MESSAGE.pkgconf=	Fixing pkg-config WRKSRC path.
+SUBST_FILES.pkgconf=	mkspecs/qmodule.pri
+SUBST_SED.pkgconf=	-e 's,PKG_CONFIG_EXECUTABLE = .*,PKG_CONFIG_EXECUTABLE = ${TOOLS_PATH.pkg-config},'
 
 .if ${OPSYS} == "Linux"
 QMAKE_EXTRA=		QMAKE_PLATFORM += linux
@@ -197,18 +202,10 @@ pre-configure:
 .include "options.mk"
 
 .if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+= -- -DQT_DISABLE_RPATH:BOOL=ON
-CONFIGURE_ARGS+= -DCMAKE_SKIP_RPATH:BOOL=ON
-LDFLAGS+=${COMPILER_RPATH_FLAG}${QTPREFIX}/lib
+CONFIGURE_ARGS+=	-- -DQT_DISABLE_RPATH:BOOL=ON
+CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=ON
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${QTPREFIX}/lib
 .endif
-
-post-install:
-# The pri file has WRKSRC in it.
-	${SED} -e 's,PKG_CONFIG_EXECUTABLE = .*,PKG_CONFIG_EXECUTABLE = ${TOOLS_PATH.pkg-config},' \
-		${DESTDIR}${PREFIX}/${BROKEN_FILES} \
-		> ${DESTDIR}${PREFIX}/${BROKEN_FILES}.1
-	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES}.1 \
-		${DESTDIR}${PREFIX}/${BROKEN_FILES}
 
 TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet
 

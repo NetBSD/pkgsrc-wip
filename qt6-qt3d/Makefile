@@ -11,18 +11,18 @@ CONFIGURE_ARGS+=	-no-fbxsdk
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DAnimation.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DCore.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DExtras.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DInput.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DLogic.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DQuick.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DQuickAnimation.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DQuickExtras.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DQuickInput.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DQuickRender.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DQuickScene2D.pc
-PKGCONFIG_OVERRIDE+= lib/pkgconfig/Qt63DRender.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DAnimation.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DCore.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DExtras.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DInput.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DLogic.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuick.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickAnimation.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickExtras.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickInput.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickRender.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickScene2D.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DRender.pc
 
 .include "../../multimedia/assimp/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"

@@ -72,12 +72,12 @@ qt6/doc/global/externalsites/qtcreator.qdoc
 qt6/doc/global/externalsites/qtdesignstudio.qdoc
 qt6/doc/global/externalsites/rfc.qdoc
 qt6/doc/global/fileextensions.qdocconf
-qt6/doc/global/htmltabs.qdocconf
 qt6/doc/global/html-config.qdocconf
 qt6/doc/global/html-footer-online.qdocconf
 qt6/doc/global/html-footer.qdocconf
 qt6/doc/global/html-header-offline.qdocconf
 qt6/doc/global/html-header-online.qdocconf
+qt6/doc/global/htmltabs.qdocconf
 qt6/doc/global/includes-online/search.qdoc
 qt6/doc/global/includes/cli-build-cmake.qdocinc
 qt6/doc/global/includes/examples-run.qdocinc
@@ -2712,8 +2712,8 @@ qt6/lib/cmake/Qt6/QtFileConfigure.txt.in
 qt6/lib/cmake/Qt6/QtFindPackageHelpers.cmake
 qt6/lib/cmake/Qt6/QtFindWrapConfigExtra.cmake.in
 qt6/lib/cmake/Qt6/QtFindWrapHelper.cmake
-qt6/lib/cmake/Qt6/QtFinishPrlFile.cmake
 qt6/lib/cmake/Qt6/QtFinishPkgConfigFile.cmake
+qt6/lib/cmake/Qt6/QtFinishPrlFile.cmake
 qt6/lib/cmake/Qt6/QtFlagHandlingHelpers.cmake
 qt6/lib/cmake/Qt6/QtFrameworkHelpers.cmake
 qt6/lib/cmake/Qt6/QtGenerateExtPri.cmake

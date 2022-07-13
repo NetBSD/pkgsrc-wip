@@ -67,9 +67,9 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if "${PKGPATH}" != "wip/qt6-qtbase"
 CONFIGURE_ARGS+=	-cmake-use-default-generator
-.if ${OPSYS} != "Darwin"
+.  if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=TRUE
-.endif
+.  endif
 QTCONFDIR?=		.
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${QTCONFDIR} ${CONFIGURE_ARGS}
