@@ -17,6 +17,7 @@ SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = b12a41da19b25e34e12fdf8071
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
 SHA1 (patch-src_corelib_qt__cmdline.cmake) = 25fe89821ba1e1323edae87ca1ee0bd5ccf0e407
 SHA1 (patch-src_corelib_thread_qmutex__p.h) = 47047f5af4383b622c59c3969145e44c6ac4bf18
+SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = 41f9db4f26660641e1269287c37622ab6e21b504
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
 SHA1 (patch-src_network_configure.cmake) = 754461c21574b99232efc95af3a80765b2edbecc
 SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
