@@ -3961,7 +3961,6 @@ SUBDIR+=	py-imreg-dft
 SUBDIR+=	py-influxdb
 SUBDIR+=	py-inspyred
 SUBDIR+=	py-instant
-SUBDIR+=	py-invoke
 SUBDIR+=	py-ioTPy
 SUBDIR+=	py-ionize
 SUBDIR+=	py-iprogress
