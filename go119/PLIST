@@ -2198,6 +2198,7 @@ go119/src/cmd/go/internal/modget/query.go
 go119/src/cmd/go/internal/modindex/build.go
 go119/src/cmd/go/internal/modindex/build_read.go
 go119/src/cmd/go/internal/modindex/index_format.txt
+go119/src/cmd/go/internal/modindex/index_test.go
 go119/src/cmd/go/internal/modindex/read.go
 go119/src/cmd/go/internal/modindex/scan.go
 go119/src/cmd/go/internal/modindex/syslist.go
@@ -2578,6 +2579,7 @@ go119/src/cmd/go/testdata/script/env_unset.txt
 go119/src/cmd/go/testdata/script/env_write.txt
 go119/src/cmd/go/testdata/script/fileline.txt
 go119/src/cmd/go/testdata/script/fmt_load_errors.txt
+go119/src/cmd/go/testdata/script/fsys_walk.txt
 go119/src/cmd/go/testdata/script/gccgo_link_c.txt
 go119/src/cmd/go/testdata/script/gccgo_m.txt
 go119/src/cmd/go/testdata/script/gccgo_mangle.txt
@@ -2630,6 +2632,7 @@ go119/src/cmd/go/testdata/script/help.txt
 go119/src/cmd/go/testdata/script/import_cycle.txt
 go119/src/cmd/go/testdata/script/import_ignore.txt
 go119/src/cmd/go/testdata/script/import_main.txt
+go119/src/cmd/go/testdata/script/index.txt
 go119/src/cmd/go/testdata/script/install_cgo_excluded.txt
 go119/src/cmd/go/testdata/script/install_cleans_build.txt
 go119/src/cmd/go/testdata/script/install_cmd_gobin.txt
@@ -2669,7 +2672,7 @@ go119/src/cmd/go/testdata/script/list_load_err.txt
 go119/src/cmd/go/testdata/script/list_module_when_error.txt
 go119/src/cmd/go/testdata/script/list_overlay.txt
 go119/src/cmd/go/testdata/script/list_parse_err.txt
-go119/src/cmd/go/testdata/script/list_permissions.txt
+go119/src/cmd/go/testdata/script/list_perm.txt
 go119/src/cmd/go/testdata/script/list_replace_absolute_windows.txt
 go119/src/cmd/go/testdata/script/list_reserved.txt
 go119/src/cmd/go/testdata/script/list_shadow.txt
@@ -2888,6 +2891,7 @@ go119/src/cmd/go/testdata/script/mod_outside.txt
 go119/src/cmd/go/testdata/script/mod_overlay.txt
 go119/src/cmd/go/testdata/script/mod_patterns.txt
 go119/src/cmd/go/testdata/script/mod_patterns_vendor.txt
+go119/src/cmd/go/testdata/script/mod_perm.txt
 go119/src/cmd/go/testdata/script/mod_permissions.txt
 go119/src/cmd/go/testdata/script/mod_prefer_compatible.txt
 go119/src/cmd/go/testdata/script/mod_proxy_errors.txt
@@ -11202,6 +11206,7 @@ go119/test/fixedbugs/issue5358.go
 go119/test/fixedbugs/issue53600.go
 go119/test/fixedbugs/issue53600.out
 go119/test/fixedbugs/issue53619.go
+go119/test/fixedbugs/issue53635.go
 go119/test/fixedbugs/issue53653.go
 go119/test/fixedbugs/issue53653.out
 go119/test/fixedbugs/issue5373.go
