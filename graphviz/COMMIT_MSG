@@ -1,0 +1,192 @@
+graphics/graphviz: Update to 5.0.0
+
+- Patch for lefty on OpenBSD removed (lefty is not installed anymore).
+- Patch for configure.ac modified (list Github Issue #370 and remove hunk for
+  OCaml that does no longer work).
+- Patch for version.m4 removed (no longer required).
+- Explicit dependency for urw-fonts added.
+- Warning suppression for GCC 2 removed.
+- swig is now a tool dependency (as documented by upstream).
+- Guile option removed (already broken with older package versions).
+- OCaml option removed (already broken with older package versions).
+- Lua, Perl and Tcl language extension options are now disabled by default.
+
+
+5.0.0 - 2022-07-07
+==================
+
+Changed
+-------
+- `use_sanitizers` option has been removed from the CMake build system.
+
+Fixed
+-----
+- *Breaking*: The 4.0.0 change replacing the `Agiodisc_t` struct member
+  `putstr` by `printf` has been reverted
+- graphviz-4.0.0: build error: cmd/tools/gvcolor.c:159: undefined reference to
+  `fmax` #2246
+- Failed assertion in `chkSgraph` for twopi layout and ortho splines. #14
+- Failed assertion in `chkSgraph` for dot layout and ortho splines. #1408
+- Failed assertion in `chkSgraph` for circo layout and ortho splines. #1990
+- Segmentation Fault with splines="ortho". #1658
+- Transparent Label appear in SVG output #146
+- Binary tcl modules should compile with -module #1285
+- b15.gv crashes dot #827
+- heap overflow in function startElementHandler in gxl2gv.c #2093
+- Crash on assertion #121
+- `xdotversion` attribute is no longer misparsed. This was a regression in
+  Graphviz 2.47.2. #358
+
+
+4.0.0 - 2022-05-29
+==================
+
+Changed
+-------
+- *Breaking*: The `mark` field of the `Agnodeinfo_t` struct is now a
+  `size_t` instead of a `char`.
+- *Breaking*: The unused `shape_t` struct has been removed from the public
+  header `types.h`
+- *Breaking*: The `Agiodisc_t` struct member `putstr` that was previously an
+  `fputs` analog is replaced by `printf` that is required to behave similar to
+  `fprintf`.
+- the `mingle`, `diffimg`, `gvmap`, and `edgepaint` binaries are now included in
+  the CMake build system
+- the `gvmap.sh` and `vimdot` scripts are now installed by the CMake build
+  system on operating systems other than Windows
+- a brief note about the (previously undocumented) behavior of Graphviz when
+  sent `SIGUSR1` is now mentioned in the man page
+- build system support for `dotty`, `lefty`, and `lneato` has been removed
+- the CMake build system now includes the DevIL, GDK, GhostScript, GTK, LASi,
+  Poppler, Quartz, Rsvg, Visio, WebP, and Xlib plugins
+- `awk` is no longer a build-time dependency #2118
+
+Fixed
+-----
+- `agcanon`, `agcanonStr`, and `agwrite` now return error values on memory
+  allocation failures instead of crashing or corrupting data
+- `gvpr` programs can now pass dynamically allocated arguments to user-defined
+  functions without corrupting their content. Some cases of this were a
+  regression in Graphviz 2.46.0. Other cases have existed since the first
+  release of `gvpr`. #2185
+- spurious "no hard-coded metrics" warnings on labels with empty lines #2179
+- fixed corruption of user shape characteristics during EPSF initialization
+- output formats canon, dot, and xdot are not completely faithful to input #2184
+- gvpr index function produces wrong results #2211. This was a regression in
+  Graphviz 2.47.0.
+- Error on more than 128 cluster subgraphs #2080
+- `dot2gxl` no longer crashes on input `<node id="">` #2092
+- remove itos #2229
+- `sfdp` no longer crashes on certain graphs with cycles. #2225
+- `gml2gv` does not handle integer penwidth correctly #1871
+
+Removed
+-------
+- the glitz plugin has been removed. The plugin was never complete and
+  distributions no longer ship glitz.
+
+
+3.0.0 - 2022-02-26
+==================
+
+Changed
+-------
+- *Breaking*: Using Graphviz as a library on Windows now requires the `GVDLL`
+  symbol to be set to ensure correct linking.
+- *Breaking*: Graphviz headers no longer define the `boolean` type. A
+  replacement is C99 `bool` in the C standard library's stdbool.h.
+- *Breaking*: The `insidefn` member of the `shape_functions` struct must now
+  be a pointer to a function returning a C99 `bool` instead of a
+  Graphviz-specific `boolean`.
+- *Breaking*: The `swapEnds` and `splineMerge` members of the `splineInfo`
+  struct must now be pointers to functions returning a C99 `bool`s instead of
+  Graphviz-specific `boolean`s. Similarly the `ignoreSwap` and `isOrtho` members
+  of this struct must now be C99 `bool`s instead of a Graphviz-specific
+  `boolean`s.
+- *Breaking*: The `defined`, `constrained`, `clip`, and `dyna` fields of the
+  `port` struct are now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `set` and `html` fields of the `textlabel_t` struct are now
+  C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `usershape` field of the `shape_desc` struct is now a C99
+  `bool` instead of a Graphviz-specific `boolean`.
+- *Breaking*: The `candidate` and `valid` fields of the `rank_t` struct are
+  now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `filled`, `landscape`, and `centered` fields of the
+  `layout_t` struct are now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `has_images`, `has_flat_edges`, `has_sourcerank`,
+  `has_sinkrank`, `expanded`, and `exact_ranksep` fields of the `Agraphinfo_t`
+  struct are now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `clustnode` and `has_port` fields of the `Agnodeinfo_t`
+  struct are now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `conc_opp_flag` field of the `Agedgeinfo_t` struct is now a
+  C99 `bool` instead of a Graphviz-specific `boolean`.
+- *Breaking*: The `must_inline` and `nocache` fields of the `usershape_t`
+  struct are now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `device_sets_dpi`, `external_context`, `fit_mode`,
+  `needs_refresh`, `click`, `has_grown`, and `has_been_rendered` fields of the
+  `GVJ_t` struct are now C99 `bool`s instead of Graphviz-specific `boolean`s.
+- *Breaking*: The `loadimage` member of the `gvloadimage_engine_t` struct must
+  now accept a C99 `bool` parameter instead of a former Graphviz-specific
+  `boolean` parameter.
+- *Breaking*: The `textlayout` member of the `gvtextlayout_engine_t` struct
+  must now return a C99 `bool` instead of a Graphviz-specific `boolean`.
+- *Breaking*: The `config` and `auto_outfile_names` members of the
+  `GVC_common_s` struct are now C99 `bool`s instead of Graphviz-specific
+  `boolean`s.
+- *Breaking*: The `fixed` member of the `pack_info` struct is now an array of
+  C99 `bool`s instead of an array of Graphviz-specific `boolean`s. Similarly,
+  `pack_graph` now takes a `bool` array instead of a `boolean` array.
+- *Breaking*: `pccomps` now takes a C99 `bool` instead of a `boolean` output
+  parameter.
+- *Breaking*: `gvusershape_file_access` now returns a C99 `bool` instead of a
+  Graphviz-specific `boolean`.
+- *Breaking*: 1-bit fields of the `obj_state_s` struct are now unsigned
+  instead of signed.
+- *Breaking*: Graphviz headers no longer define the constant `MAXSHORT`. A
+  drop-in replacement is `SHRT_MAX` in the C standard library's limits.h.
+- *Breaking*: Graphviz headers no lnger define `NIL` macros. A drop-in
+  replacement is `NULL` in the C standard library's stddef.h.
+- *Breaking*: Graphviz headers no longer define the `NOT` macro. A drop-in
+  replacement is the C/C++ operator `!`.
+- *Breaking*: Graphviz headers no longer (re-)define the C constants `INT_MIN`
+  and `INT_MAX`. Replacements can be found in the C standard library's limits.h.
+- *Breaking*: Graphviz headers no longer define the constant `_DUMMY_ELEM`.
+- *Breaking*: The `-m` memory test option to Graphviz command-line programs
+  has been deprecated. Tools such as
+  [Leak Sanitizer](https://clang.llvm.org/docs/LeakSanitizer.html) are a more
+  effective modern way of diagnosing memory safety issues.
+- *Breaking*: Graphviz headers no longer define the constant `MAXFLOAT`. A
+  replacement is `FLT_MAX` in the C standard library's float.h.
+- The Ming plugin that produced Shockwave files has been removed. This format
+  was EOLed by Adobe in April 2019. #2160
+- CentOS 7 packages now include libmingle and the `mingle` program.
+- The tclpkg Makefile no longer suppresses `-fstack-clash-protection` nor
+  other compiler options containing `-x`
+- Lefty is no longer enabled in the portable source tarball.
+- on Linux, the CMake build system uses the standard `GNUInstallDirs` to locate
+  target installation paths
+
+Fixed
+-----
+- *Breaking*: GVPR now typedefs `ssize_t` as `SSIZE_T` on Windows instead of
+  `int` #1804
+- *Breaking*: `vgpanecmd` in the TCL tclpathplan library no longer accepts
+  abbreviated commands (e.g. `r` for `rotate`) and commands must be given in
+  full #1961
+- fix detection of unavailable output format
+- SVG layout doesn't always respect requested size #1855
+- mismatched format string in `mingle`
+- Building from scratch with Visual Studio fails #2175
+- Plugins are not configured on MinGW #2176
+- gvpr on MinGW does not support absolute paths #1780
+- PNG format not available in CMake builds with MinGW
+- tclpkg Makefile corrupts CFLAGS #2177
+- lneato -? sometimes fails with STATUS_STACK_BUFFER_OVERRUN on Windows #1934
+- expr misinterprets `<<` and `>>` #2103
+- stdout and stderr are not flushed at exit on MinGW #2178
+- Gvedit on macOS now understands the `-?` help command line argument
+- CMAKE_LIBRARY_PATH is not honored #1973
+- assert failure with `nslimit1=0` #1902
+- `gvpr` usage output has been restored. This was a regression in Graphviz
+  2.46.0.
+- C++ API not usable after install #2196

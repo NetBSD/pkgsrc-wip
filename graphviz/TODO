@@ -1,0 +1,15 @@
+Verify that package can be build with and without options:
+[X] Test option gd
+[X] Test option ghostscript
+[X] Test option gtk
+[X] Test option lua
+[X] Test option perl
+[X] Test option poppler
+[X] Test option svg
+[X] Test option tcl
+[X] Test option x11
+
+[ ] Test with devel/doxygen
+[ ] Test with graphics/py-graphviz
+[ ] Test with lang/vala
+[ ] Test with sysutils/openxenmanager

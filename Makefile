@@ -1383,6 +1383,7 @@ SUBDIR+=	granite
 SUBDIR+=	grantlee-editor
 SUBDIR+=	grantleetheme
 SUBDIR+=	graphmonkey
+SUBDIR+=	graphviz
 SUBDIR+=	grass
 SUBDIR+=	grass-JockeyRidge
 SUBDIR+=	grass-Maas
