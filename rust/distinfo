@@ -1,8 +1,5 @@
 $NetBSD: distinfo,v 1.118 2020/08/06 11:42:56 jperkin Exp $
 
-BLAKE2s (rust-1.58.1-x86_64-unknown-illumos.tar.gz) = 867ef1783de52f6d6c59905d0fea90ac9db8ed623ed58956acba6af090521508
-SHA512 (rust-1.58.1-x86_64-unknown-illumos.tar.gz) = 9649f840e8052f3d77c40938d9e651035f181f7ed71b2d4375dd911a270cb9e3d1d86f8ca62629e230e02612d6972729b5f3becca16af9eb3c53c4538a4a2f3b
-Size (rust-1.58.1-x86_64-unknown-illumos.tar.gz) = 196899563 bytes
 BLAKE2s (rust-1.61.0-aarch64-apple-darwin.tar.gz) = 302f636b2e73cdd5233e520bdfec0a2071d7c0c3c299780e2de75e727024fb38
 SHA512 (rust-1.61.0-aarch64-apple-darwin.tar.gz) = 248c5d1c3b440aa1ebb8d8d519651259566407f3efd0c33724d274a4f85a371c1b3ead79be24bf38cbca8b57740cb017b26634a4c34c1f3c605d28a8d181a8af
 Size (rust-1.61.0-aarch64-apple-darwin.tar.gz) = 223157966 bytes
@@ -45,6 +42,9 @@ Size (rust-1.61.0-x86_64-apple-darwin.tar.gz) = 294924562 bytes
 BLAKE2s (rust-1.61.0-x86_64-unknown-freebsd.tar.gz) = b45e3011ce13ceeebac6eb179042c04da61713daaee1d01f3006f4c1563a974d
 SHA512 (rust-1.61.0-x86_64-unknown-freebsd.tar.gz) = da30babf3a6dba8af0cfdf5f131206360219af1b598568f6cbb55680e74e4d7a38ff14166e69daa4b8c16d7d9d9e2866511b9c20090b8e136b275ecb8c5a0133
 Size (rust-1.61.0-x86_64-unknown-freebsd.tar.gz) = 279844072 bytes
+BLAKE2s (rust-1.61.0-x86_64-unknown-illumos.tar.gz) = 3f6b3720e1d1643a832c9e576e9338b39236243965e245978a0fbc585cadf6cf
+SHA512 (rust-1.61.0-x86_64-unknown-illumos.tar.gz) = 31b38f6adc164e2f1873af31899a32180c93c0fb0881557c19ec688b952e85dfc9e2c4b8543aae642f13f77ebad98c0d9e14b206b32b3f54504d495ba801b3e5
+Size (rust-1.61.0-x86_64-unknown-illumos.tar.gz) = 196885675 bytes
 BLAKE2s (rust-1.61.0-x86_64-unknown-linux-gnu.tar.gz) = 5f3564c314d3622d64a590267706097d1cb9704c252638f07aa239c1fcf48256
 SHA512 (rust-1.61.0-x86_64-unknown-linux-gnu.tar.gz) = 7352d98d3acfe8bd754641381435d4bcb3399a8448fe6883b7c96ee41ffa380d8545cc8471ca4b21ee29c0d8e891e28de3ab91e985ad16b88965342358a87590
 Size (rust-1.61.0-x86_64-unknown-linux-gnu.tar.gz) = 267765196 bytes
@@ -113,7 +113,7 @@ SHA1 (patch-library_std_src_sys_unix_mod.rs) = f8669d680f169137ac2891af297790961
 SHA1 (patch-library_std_src_sys_unix_thread.rs) = e5f661b3dd00058e874fe60cd89d9e919325e99b
 SHA1 (patch-library_unwind_build.rs) = df092d5c07fa0be63a9510f1d6a77e5094ca3b15
 SHA1 (patch-src_bootstrap_bootstrap.py) = 84af2ffa57ae1b68d12c6b9d3ce181a13576992c
-SHA1 (patch-src_bootstrap_builder.rs) = bddcd392de816b69f5e1a13c2b6423b95387da39
+SHA1 (patch-src_bootstrap_builder.rs) = e17ec4c4fbcac0824f0e45fb60f35c2db842bc6c
 SHA1 (patch-src_bootstrap_compile.rs) = c57799aee9c12603f5e6a13cb6b5befc8f96b4b6
 SHA1 (patch-src_bootstrap_lib.rs) = f6918e0939b6fe63ae9b524d4c809375149efb15
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = 7abfabb6ec70df229a69355f8c76825610165c37
