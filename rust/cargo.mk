@@ -39,7 +39,7 @@ EXTRACT_DIR.${crate}.crate?=	${CARGO_VENDOR_DIR}
 .include "../../mk/bsd.prefs.mk"
 # Triggers NetBSD ld.so bug (PR toolchain/54192)
 # See Makefile for further information.
-.if ${MACHINE_PLATFORM:MNetBSD-[1-9].*} && !${MACHINE_PLATFORM:MNetBSD-9.99.*}
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099957
 MAKE_JOBS_SAFE=	no
 .endif
 

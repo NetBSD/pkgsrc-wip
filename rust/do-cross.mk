@@ -12,7 +12,7 @@ SHORT_TARGETS+=	arm64
 SHORT_TARGETS+=	arm64_be
 SHORT_TARGETS+=	i386
 
-# Local overrides to ROOT.* variables:
+# Conditional local overrides of ROOT.* variables:
 .sinclude "local-roots.mk"
 
 # Root of target directories.
