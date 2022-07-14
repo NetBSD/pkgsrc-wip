@@ -32,6 +32,6 @@ post-install:
 .include "../../wip/sylvan/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../devel/buddy/buildlink3.mk"
+.include "../../wip/buddy/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
