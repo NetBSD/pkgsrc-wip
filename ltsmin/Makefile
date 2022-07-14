@@ -15,7 +15,8 @@ WRKSRC=				${WRKDIR}/ltsmin-3.0.2
 GNU_CONFIGURE=			yes
 USE_LANGUAGES=			c c++
 DEPENDS+=			flex>=2.6.4:../../devel/flex
-USE_TOOLS+=			gmake
+DEPENDS+=			bison>=3.8.2:../../devel/bison
+USE_TOOLS+=			gmake bison
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 CONFIGURE_ARGS+=		PKG_CONFIG=${PREFIX}/bin/pkg-config
 CONFIGURE_ARGS+=		--docdir=${PREFIX}/share/doc/${PKGBASE}
