@@ -10,7 +10,7 @@ Make NetBSD also find its debug libraries, if present.
  
 +#[cfg(target_os = "netbsd")]
 +const DEBUG_PATH: &[u8] = b"/usr/libdata/debug";
-+#[cfg(target_os != "netbsd")]
++#[cfg(not(target_os = "netbsd"))]
  const DEBUG_PATH: &[u8] = b"/usr/lib/debug";
  
  fn debug_path_exists() -> bool {
