@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pytorch-1.12.0.tar.gz) = e4a7c2b9fba289880fbb6e0dbd854980b22c208fa03620b1c2c39b5cc6571189
+SHA512 (pytorch-1.12.0.tar.gz) = c9c748a2e0047daaaf199a1ba3198d2d1aee47f664170a9b34ccacd3deeb95f2070e4035eeb900012ef48dc62cf6fb6806f1a1dfe22de8c94892963076e593b7
+Size (pytorch-1.12.0.tar.gz) = 106286765 bytes

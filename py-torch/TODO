@@ -1,0 +1,16 @@
+fatal: not a git repository (or any of the parent directories): .git                                                                   
+Building wheel torch-1.12.0a0+gitUnknown
+-- Building version 1.12.0a0+gitUnknown
+ --- Trying to initialize submodules
+fatal: not a git repository (or any of the parent directories): .git                                                                   
+ --- Submodule initalization failed
+Please run:
+        git submodule update --init --recursive --jobs 0
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/py-torch
+*** Error code 1
+
+Stop.
+
