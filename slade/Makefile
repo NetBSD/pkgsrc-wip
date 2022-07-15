@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	SLADE-3.1.13
+DISTNAME=	SLADE-3.2.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sirjuddington/}
 GITHUB_TAG=	${DISTNAME:S/SLADE-//}
@@ -12,11 +12,14 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES=	c c++14
+# Needs C++17 std::filesystem (>=GCC 8 according to documentation)
+GCC_REQD+=	8
+USE_LANGUAGES=	c c++17
 USE_TOOLS+=	pkg-config zip
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DNO_COTIRE=ON  # CMake has similar functionality since 3.16
+CMAKE_ARGS+=	-DNO_LUA=ON
 CMAKE_ARGS+=	-DNO_WEBVIEW=ON
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release  # Use "Debug" for development
 
