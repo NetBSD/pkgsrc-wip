@@ -9,7 +9,8 @@ graphics/graphviz: Update to 5.0.0
 - swig is now a tool dependency (as documented by upstream).
 - Guile option removed (already broken with older package versions).
 - OCaml option removed (already broken with older package versions).
-- Lua, Perl and Tcl language extension options are now disabled by default.
+- Lua, Perl and Tcl language extension options are now disabled by default
+  (to reduce expensive dependencies).
 
 
 5.0.0 - 2022-07-07

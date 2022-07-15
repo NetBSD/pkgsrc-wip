@@ -100,6 +100,9 @@ CONFIGURE_ARGS+=	--disable-lua
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcl)
+.  if empty(PKG_OPTIONS:Mx11)
+PKG_FAIL_REASON=	"tcl option requires x11 option"
+.  endif
 USING_SWIG=	yes
 .  include "../../lang/tcl/Makefile.version"
 .  include "../../x11/tk/buildlink3.mk"

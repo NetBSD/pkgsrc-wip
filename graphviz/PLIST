@@ -81,7 +81,7 @@ ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
 ${PLIST.perl}lib/graphviz/perl/gv.pm
 ${PLIST.perl}lib/graphviz/perl/gv.so
 ${PLIST.perl}lib/graphviz/perl/libgv_perl.la
-${PLIST.tcl}${PLIST.gd}lib/graphviz/tcl/libgdtclft.la
+${PLIST.tcl}${PLIST.x11}lib/graphviz/tcl/libgdtclft.la
 ${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot_builtin.la
@@ -104,7 +104,7 @@ lib/pkgconfig/libgvpr.pc
 lib/pkgconfig/liblab_gamut.pc
 lib/pkgconfig/libpathplan.pc
 lib/pkgconfig/libxdot.pc
-${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libgdtclft.la
+${PLIST.tcl}${PLIST.x11}lib/tcl${TCL_BASEVER}/graphviz/libgdtclft.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libgv_tcl.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtcldot.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtcldot_builtin.la
