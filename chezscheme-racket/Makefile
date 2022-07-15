@@ -1,17 +1,18 @@
 # $NetBSD$
 
-DISTNAME=	racket-minimal-8.3-src
-PKGNAME=	chezscheme-racket-9.5.5.5
+DISTNAME=	racket-minimal-${DISTVERS}-src
+DISTVERS=	8.5
+PKGNAME=	chezscheme-racket-9.5.7.6
 CATEGORIES=	lang
-MASTER_SITES=	https://download.racket-lang.org/releases/8.3/installers/
+MASTER_SITES=	https://download.racket-lang.org/releases/${DISTVERS}/installers/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://download.racket-lang.org/installers/8.3/
+HOMEPAGE=	https://download.racket-lang.org/installers/${DISTVERS}/
 COMMENT=	Racket's fork of Chez Scheme
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/racket-8.3
+WRKSRC=		${WRKDIR}/racket-${DISTVERS}
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c
@@ -27,27 +28,31 @@ CHECK_PORTABILITY_SKIP=	src/cs/c/configure
 .include "../../mk/bsd.prefs.mk"
 
 # For now, we always build with threads support
-PLIST_SUBST+=		CHEZ_THREADED=t
+CHEZ_THREADED=t
 
 .if ${MACHINE_ARCH} == i386
-PLIST_SUBST+=		CHEZ_ARCH=i3
+CHEZ_ARCH=i3
 .elif ${MACHINE_ARCH} == x86_64
-PLIST_SUBST+=		CHEZ_ARCH=a6
+CHEZ_ARCH=a6
 .elif ${MACHINE_ARCH} == aarch64
-PLIST_SUBST+=		CHEZ_ARCH=arm64
+CHEZ_ARCH=arm64
 .endif
 
 .if ${OPSYS} == NetBSD
-PLIST_SUBST+=		CHEZ_OS=nb
+CHEZ_OS=nb
 .elif ${OPSYS} == FreeBSD
-PLIST_SUBST+=		CHEZ_OS=fb
+CHEZ_OS=fb
 .elif ${OPSYS} == OpenBSD
-PLIST_SUBST+=		CHEZ_OS=ob
+CHEZ_OS=ob
 .elif ${OPSYS} == Linux
-PLIST_SUBST+=		CHEZ_OS=le
+CHEZ_OS=le
 .elif ${OPSYS} == Darwin
-PLIST_SUBST+=		CHEZ_OS=osx
+CHEZ_OS=osx
 .endif
+
+PLIST_SUBST+=		CHEZ_THREADED=${CHEZ_THREADED}
+PLIST_SUBST+=		CHEZ_ARCH=${CHEZ_ARCH}
+PLIST_SUBST+=		CHEZ_OS=${CHEZ_OS}
 
 post-extract:
 	rm -rf ${WRKSRC}/src/bc ${WRKSRC}/src/cs
@@ -56,7 +61,7 @@ pre-configure:
 	cd ${WRKSRC}/src/ChezScheme && \
 		./configure --pb ZLIB=-lz \
 		LZ4="`pkg-config --libs liblz4`" && \
-		gmake auto.bootquick
+		gmake ${CHEZ_THREADED}${CHEZ_ARCH}${CHEZ_OS}.bootquick
 
 do-configure:
 	cd ${WRKSRC}/src/ChezScheme && \

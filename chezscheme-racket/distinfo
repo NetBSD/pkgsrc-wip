@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (racket-minimal-8.3-src.tgz) = de7f1383be48a88aacdf67b0f57b8ae44c4ba4d99b24cce5827c9e61b9f5a510
-SHA512 (racket-minimal-8.3-src.tgz) = 374c1a294e9b48155de6b809eb0bd756fb3779101bbce1aee08765ac52a68f9f3c707c97d193e0a32550154909e7fcf47c1ecf2955b90e3612afeb9796a22891
-Size (racket-minimal-8.3-src.tgz) = 14988873 bytes
+BLAKE2s (racket-minimal-8.5-src.tgz) = a13c914204c2ec100f8d082b4a4cfb3d6da33a6e99b18cc039d2aba0c2def2df
+SHA512 (racket-minimal-8.5-src.tgz) = 9eec6c8d4a210c6d36c02ac26f360663731ba3240da45b75f98fcc1deef4bc6bed4566ce454430324fa69676c7b9561940c21d27b806b0a6513584b832af12d6
+Size (racket-minimal-8.5-src.tgz) = 15083671 bytes
 SHA1 (patch-src_ChezScheme_c_expeditor.c) = cd68b6ec17755b0f788d56a54cc36efc95840eac
-SHA1 (patch-src_ChezScheme_configure) = 6f9ce9d2f1a0f7ff9a3c4a56e8d7a57e91b5c5df
+SHA1 (patch-src_ChezScheme_configure) = fd65c3a65b6f832a03f514bfb81c2b8d8286e41a
