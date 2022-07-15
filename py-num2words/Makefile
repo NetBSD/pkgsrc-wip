@@ -1,10 +1,11 @@
 # $NetBSD$
 
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	num2words-0.5.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=savoirfairelinux/}
+GITHUB_PROJECT=	num2words
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/savoirfairelinux/num2words
