@@ -16,7 +16,7 @@ DEPENDS+=	# TODO: mozinfo>=0.7,<2
 DEPENDS+=	# TODO: mozlog>=6.0
 DEPENDS+=	# TODO: mozprocess>=1.2.0,<2
 DEPENDS+=	# TODO: mozprofile~=2.3>=0
-DEPENDS+=	py-six>=1.10.0,<2:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
