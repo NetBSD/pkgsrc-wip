@@ -10,12 +10,12 @@ HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
 COMMENT=	Reliable start/stop/configuration of Mozilla Applications (Firefox, Thunderbird, etc.)
 #LICENSE=	MPL 2.0 # TODO: from setup.py; needs to be adjusted
 
-DEPENDS+=	# TODO: mozdevice>=4.0.0,<5
-DEPENDS+=	# TODO: mozfile>=1.2
-DEPENDS+=	# TODO: mozinfo>=0.7,<2
-DEPENDS+=	# TODO: mozlog>=6.0
-DEPENDS+=	# TODO: mozprocess>=1.2.0,<2
-DEPENDS+=	# TODO: mozprofile~=2.3>=0
+DEPENDS+=	${PYPKGPREFIX}-mozdevice>=4.0.0:../../wip/py-mozdevice
+DEPENDS+=	${PYPKGPREFIX}-mozfile>=1.2:../../wip/py-mozfile
+DEPENDS+=	${PYPKGPREFIX}-mozinfo>=0.7:../../wip/py-mozinfo
+DEPENDS+=	${PYPKGPREFIX}-mozlog>=6.0:../../wip/py-mozlog
+DEPENDS+=	${PYPKGPREFIX}-mozprocess>=1.2.0:../../wip/py-mozprocess
+DEPENDS+=	${PYPKGPREFIX}-mozprofile>=2.3.0:../../wip/py-mozprofile
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
