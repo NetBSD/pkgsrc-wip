@@ -10,7 +10,7 @@ HOMEPAGE=	https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
 COMMENT=	Library to get version information for applications
 LICENSE=	mpl-2.0
 
-DEPENDS+=	# TODO: mozlog>=6.0
+DEPENDS+=	${PYPKGPREFIX}-mozlog>=6.0:../../wip/py-mozlog
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
