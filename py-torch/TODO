@@ -1,16 +1,8 @@
-fatal: not a git repository (or any of the parent directories): .git                                                                   
-Building wheel torch-1.12.0a0+gitUnknown
--- Building version 1.12.0a0+gitUnknown
- --- Trying to initialize submodules
-fatal: not a git repository (or any of the parent directories): .git                                                                   
- --- Submodule initalization failed
-Please run:
-        git submodule update --init --recursive --jobs 0
-*** Error code 1
+There are errors suggesting to look at the choice of c and c++ compiler.
 
-Stop.
-make[1]: stopped in /usr/pkgsrc/wip/py-torch
-*** Error code 1
+Suggested compiler by the package is clang. But how does it work when there are
+buildlink deps like google-glog?
 
-Stop.
+Also hwo to set USE_CUDA=0 for the entire build. Do not know exactly which all
+phases require it?
 
