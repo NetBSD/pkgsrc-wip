@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2021/03/14 14:10:18 leot Exp $
 
-DISTNAME=	termshark-2.2.0
+DISTNAME=	termshark-2.4.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gcla/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
