@@ -10,7 +10,7 @@ HOMEPAGE=	https://firefox-source-docs.mozilla.org/mozbase/mozdevice.html
 COMMENT=	Mozilla-authored device management
 LICENSE=	mpl
 
-#DEPENDS+=	${PYPKGPREFIX}-mozlog>=6.0:../../wip/py-mozlog
+DEPENDS+=	${PYPKGPREFIX}-mozlog>=6.0:../../wip/py-mozlog
 
 USE_LANGUAGES=	# none
 
