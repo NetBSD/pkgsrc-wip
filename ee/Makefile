@@ -22,8 +22,6 @@ WRKSRC=	${WRKDIR}/easyedit-1.5.2
 post-configure:
 	cd ${WRKSRC} && ${MAKE:Q} all
 
-INSTALLATION_DIRS=  bin ${PKGMANDIR}/man1
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ee ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/ee.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
