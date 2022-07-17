@@ -1,0 +1,21 @@
+@comment $NetBSD$
+bin/mepo
+bin/mepo_dl.sh
+bin/mepo_ui_central_menu.sh
+bin/mepo_ui_helper_menu.sh
+bin/mepo_ui_helper_pref_pan.sh
+bin/mepo_ui_menu_bookmarks_droppin.sh
+bin/mepo_ui_menu_dbg_queueclear.sh
+bin/mepo_ui_menu_dbg_queuedownloadinteractive.sh
+bin/mepo_ui_menu_dbg_queuedownloadnoninteractive.sh
+bin/mepo_ui_menu_pref_fontsize.sh
+bin/mepo_ui_menu_pref_network.sh
+bin/mepo_ui_menu_pref_url.sh
+bin/mepo_ui_menu_pref_zoom.sh
+bin/mepo_ui_menu_reposition_nominatim.sh
+bin/mepo_ui_menu_route_graphhopper.sh
+bin/mepo_ui_menu_route_overpassrelation.sh
+bin/mepo_ui_menu_search_nominatim.sh
+bin/mepo_ui_menu_search_overpass.sh
+share/applications/mepo.desktop
+share/pixmaps/mepo.png

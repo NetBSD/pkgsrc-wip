@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (mepo/0.4.2.tar.gz) = c8cc78a7fa97564436ec761bf540b7668823ca199e50c705cd039dadd80040bf
+SHA512 (mepo/0.4.2.tar.gz) = d136c38aeab869713df4a79d9bde40674a828fdcfa0cb2af92a30d7f11f0c8ef0ea7cc7fd162d329dea4a279d71363afcdd53913f8dbeb8cc33be08cc86257ae
+Size (mepo/0.4.2.tar.gz) = 5235674 bytes
+SHA1 (patch-src_Mepo.zig) = 585f593c41b9894af321f689776994a5c5c2c195

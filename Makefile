@@ -2370,6 +2370,7 @@ SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	mendexk
 SUBDIR+=	menumaker
+SUBDIR+=	mepo
 SUBDIR+=	mes-nyacc
 SUBDIR+=	mescc-tools
 SUBDIR+=	messagelib

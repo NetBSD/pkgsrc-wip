@@ -1,0 +1,8 @@
+Mepo is a fast, simple, and hackable OSM map viewer for desktop linux
+& mobile linux devices (like the Pinephone, Librem 5 etc.) and both
+environment's various user interfaces (Wayland & X inclusive). Mepo
+works both offline and online, features a minimalist both touch/mouse
+and keyboard compatible interface, and offers a UNIX-philosophy inspired
+underlying design, exposing a powerful command language called mepolang
+capable of being scripted to provide things like custom bounding-box
+search scripts, bookmarks, and more.
