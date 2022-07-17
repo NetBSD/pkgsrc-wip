@@ -3,7 +3,9 @@
 .include "../../wip/libjxl/Makefile.common"
 COMMENT=	JpegXL reference codec
 
-USE_TOOLS+=	bash pkg-config
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
+USE_TOOLS+=	bash pkg-config realpath
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
@@ -20,9 +22,6 @@ PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 
 pre-configure:
 	cd ${WRKSRC} && ./deps.sh
-
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-TOOL_DEPENDS+=	realpath-[0-9]*:../../wip/realpath
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
