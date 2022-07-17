@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/jfsw
 USE_TOOLS+=	gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
-BUILD_MAKE_FLAGS+=	LDFLAGS="${X11_LDFLAGS}"
+BUILD_MAKE_FLAGS+=	PKGSRCLDFLAGS="${LDFLAGS} ${X11_LDFLAGS}"
 GIT_REPOSITORIES=	jfsw
 GIT_REPO.jfsw=		https://github.com/jonof/jfsw.git
 INSTALLATION_DIRS+=	bin share/doc/jfsw

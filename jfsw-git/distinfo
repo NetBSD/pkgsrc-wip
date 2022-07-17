@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (patch-Makefile) = db3fd5a59a90857800818217d823baa440459cc8
+SHA1 (patch-Makefile) = 3d6a5b855df58dd46c3e1f111ad7d649de30c763
 SHA1 (patch-jfbuild_Makefile.shared) = b7f15a87d4a391678f38cb623376e89d1d3d5a18
 SHA1 (patch-jfbuild_include_compat.h) = 8d398f00aebb8724d50bc0f818b429ef235989db
 SHA1 (patch-jfbuild_src_mmulti.c) = eccf5b7c753a88a1a38c8aacf1689a182c6f1e7e
