@@ -1500,7 +1500,6 @@ SUBDIR+=	hey
 SUBDIR+=	hgsubversion
 SUBDIR+=	higan
 SUBDIR+=	higgsbounds
-SUBDIR+=	highway
 SUBDIR+=	hijra
 SUBDIR+=	hisat2
 SUBDIR+=	hisat2-simde
