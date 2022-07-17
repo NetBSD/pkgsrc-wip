@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/hetznercloud/cli
 COMMENT=	Command-line interface for Hetzner Cloud
 LICENSE=	mit
 
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X github.com/hetznercloud/cli/internal/version.Version=${PKGVERSION_NOREV}'
 GO_BUILD_PATTERN+=	./cmd/hcloud
 
 .include "go-modules.mk"
