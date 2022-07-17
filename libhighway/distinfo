@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (highway-0.12.2.tar.gz) = be9d2ddaf210c0fa2715aa353006b7a7aeb346371fdcfb471b0442f7c5302c9b
-SHA512 (highway-0.12.2.tar.gz) = 857a3ecbeaf13d69b9807d6f7daf0a1dc791008c7ce0413cb20457eb057f60fa9a5836eff7cf28c884566bae746d9b7d850b3cf88767bb299f10fd1440a56e06
-Size (highway-0.12.2.tar.gz) = 1487685 bytes
+BLAKE2s (highway-0.17.0.tar.gz) = 0797498051a9bdccac2f7451d0c5fd4ead0406cfd7f92c8cad5e5182b57862ec
+SHA512 (highway-0.17.0.tar.gz) = 7e55724c844a09a07cb981a7d8e913dcc5491e07d14ff3e7783a69060b0c470e7d5adc4f5dbeea526b3e109eea8cc9e80605d6b8d2da1b794382e56fd534ba06
+Size (highway-0.17.0.tar.gz) = 1694290 bytes
