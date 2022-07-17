@@ -30,6 +30,6 @@ TOOL_DEPENDS+=	realpath-[0-9]*:../../wip/realpath
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../wip/libhighway/buildlink3.mk"
+.include "../../graphics/libhighway/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

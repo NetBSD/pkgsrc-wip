@@ -2095,7 +2095,6 @@ SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
 SUBDIR+=	libhandy1
 SUBDIR+=	libharu
-SUBDIR+=	libhighway
 SUBDIR+=	libhttpd
 SUBDIR+=	libi2pd
 SUBDIR+=	libical2
