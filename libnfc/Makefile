@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/libnfc
 CONF_FILES+=		${EGDIR}/libnfc.conf ${PKG_SYSCONFDIR}/nfc/libnfc.conf
+OWN_DIRS+=		${PKG_SYSCONFDIR}/nfc
 
 .include "options.mk"
 
