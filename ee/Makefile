@@ -15,15 +15,18 @@ LICENSE=	2-clause-bsd
 USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes     # fixterm()
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths+=	Makefile
-SUBST_SED.paths=	-e 's|/usr/local|${DESTDIR}${PREFIX}|g'
-SUBST_MESSAGE.paths=	Fixing installation dirs.
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 WRKSRC=	${WRKDIR}/easyedit-1.5.2
+
+post-configure:
+	cd ${WRKSRC} && ${MAKE:Q} all
+
+INSTALLATION_DIRS=  bin ${PKGMANDIR}/man1
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/ee ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/ee.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
