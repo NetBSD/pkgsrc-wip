@@ -1,0 +1,42 @@
+Core dump during startup:
+
+Program terminated with signal SIGILL, Illegal instruction.
+#0  0x00000001b5c096db in plug_in_rc_write_proc_arg (writer=writer@entry=0x7f5c22bd2ac0,
+    pspec=<optimized out>) at plug-in-rc.c:1102
+1102    plug-in-rc.c: No such file or directory.
+[Current thread is 1 (process 25277)]
+(gdb) bt
+#0  0x00000001b5c096db in plug_in_rc_write_proc_arg (writer=writer@entry=0x7f5c22bd2ac0,
+    pspec=<optimized out>) at plug-in-rc.c:1102
+#1  0x00000001b5c0b0c7 in plug_in_rc_write (plug_in_defs=<optimized out>, file=file@entry=0x7f5c26baf660,
+    error=error@entry=0x7f7fff052cd0) at plug-in-rc.c:1302
+#2  0x00000001b5c04cd8 in gimp_plug_in_manager_restore (manager=0x7f5c273da2d0, context=0x7f5c25b224e0,
+    status_callback=status_callback@entry=0x1b58f1568 <splash_update>) at gimppluginmanager-restore.c:139
+#3  0x00000001b5c2a614 in gimp_real_restore (gimp=0x7f5c27370100,
+    status_callback=0x1b58f1568 <splash_update>) at gimp.c:561
+#4  0x00007f5c1aa14b9a in g_closure_invoke (closure=closure@entry=0x7f5c273ab620,
+    return_value=return_value@entry=0x0, n_param_values=2,
+    param_values=param_values@entry=0x7f7fff052f20, invocation_hint=invocation_hint@entry=0x7f7fff052ea0)
+    at ../gobject/gclosure.c:830
+#5  0x00007f5c1aa2a52f in signal_emit_unlocked_R (node=node@entry=0x7f5c273d8740, detail=detail@entry=0,
+    instance=instance@entry=0x7f5c27370100, emission_return=emission_return@entry=0x0,
+    instance_and_params=instance_and_params@entry=0x7f7fff052f20) at ../gobject/gsignal.c:3781
+#6  0x00007f5c1aa312c6 in g_signal_emit_valist (instance=<optimized out>, signal_id=<optimized out>,
+    detail=<optimized out>, var_args=var_args@entry=0x7f7fff053060) at ../gobject/gsignal.c:3497
+#7  0x00007f5c1aa31524 in g_signal_emit (instance=instance@entry=0x7f5c27370100,
+    signal_id=<optimized out>, detail=detail@entry=0) at ../gobject/gsignal.c:3553
+#8  0x00000001b5c2965a in gimp_restore (gimp=gimp@entry=0x7f5c27370100,
+    status_callback=status_callback@entry=0x1b58f1568 <splash_update>, error=error@entry=0x7f7fff053268)
+    at gimp.c:859
+#9  0x00000001b58e76eb in app_run (full_prog_name=0x7f5c2877a6a0 "gimp-2.99", filenames=<optimized out>,
+    alternate_system_gimprc=alternate_system_gimprc@entry=0x0,
+    alternate_gimprc=alternate_gimprc@entry=0x0, session_name=<optimized out>, batch_interpreter=0x0,
+    batch_commands=0x0, as_new=0, no_interface=0, no_data=0, no_fonts=0, no_splash=0, be_verbose=0,
+    use_shm=1, use_cpu_accel=1, console_messages=0, use_debug_handler=0, show_playground=1,
+    show_debug_menu=1, stack_trace_mode=GIMP_STACK_TRACE_QUERY, pdb_compat_mode=GIMP_PDB_COMPAT_WARN,
+    backtrace_file=0x7f5c28753100 "/home/wiz/.config/GIMP/2.99/CrashLog/GIMP-crash-1658083217.txt")
+    at app.c:312
+#10 0x00000001b5dcd0bc in main (argc=<optimized out>, argv=<optimized out>) at main.c:784
+
+Reported upstream as:
+https://gitlab.gnome.org/GNOME/gimp/-/issues/8377
