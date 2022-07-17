@@ -4,3 +4,5 @@ BLAKE2s (xidle-26052015/xidle-26052015.tar.bz2) = 18d1b041f2a2cab14570af881a199e
 SHA512 (xidle-26052015/xidle-26052015.tar.bz2) = bb132a431a5dd585be6a93519aa06a73eade63dde81bbe582a5dd966646c5eeaca65fa2573e6795b73bbfd08388390b4e92954929577051f13098ef8e38c2200
 Size (xidle-26052015/xidle-26052015.tar.bz2) = 5897 bytes
 SHA1 (patch-Makefile) = f93b2ffc31da13d143dd157d670e299f0568713a
+SHA1 (patch-xidle.1) = dcb4906dd1ca4780925ffd96193afd3cdb3b6401
+SHA1 (patch-xidle.c) = 7c1082bd3cc12fd26fec1ef58aebd0e6941420b5

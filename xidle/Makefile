@@ -13,6 +13,14 @@ LICENSE=	isc
 
 MAKEFLAGS+=	X11BASE=${X11BASE}
 MAKEFLAGS+=	MANDIR=${PKGMANDIR}
+MAKEFLAGS+=	CFLAGS=${CFLAGS:Q}
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	xidle.c
+SUBST_FILES.paths+=	xidle.1
+SUBST_VARS.paths=	PREFIX
+SUBST_MESSAGE.paths=	Setting default locker's path.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
