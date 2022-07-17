@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2015/09/14 22:26:14 yhardy Exp $
 
-DISTNAME=	ags-3.5.1.11
+DISTNAME=	ags-3.5.1.19
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adventuregamestudio/}
 GITHUB_TAG=	v.${PKGVERSION_NOREV}
@@ -15,8 +15,7 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake pkg-config
 
-do-build:
-	cd ${WRKSRC} && ${MAKE_PROGRAM} --directory=Engine
+BUILD_DIRS=	Engine
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/ags

@@ -1,9 +1,10 @@
 $NetBSD$
 
-RMD160 (ags-3.5.1.11.tar.gz) = 90cc9b75e4304c67f986695e1f4cf1910ead8eef
-SHA512 (ags-3.5.1.11.tar.gz) = 1330c376f2c6645feaf2473fb6a8b537828a38955fb2bd41aae29f0e29038f8279db3d91939c7da90772fac0327e34d8a53a95ea931c9beaee62b51d3ce92494
-Size (ags-3.5.1.11.tar.gz) = 7638521 bytes
+BLAKE2s (ags-3.5.1.19.tar.gz) = 9125ca2426d586b65947b511876f209253480cc672f0f63dd5793b9372f293ab
+SHA512 (ags-3.5.1.19.tar.gz) = 408f348c5f9fee617676de925809f638e84de3a334cf60de550dd95e883a324b60c6a2e01dfeb7245612e97ab736d537f43eba962fa0217a001e26031237f655
+Size (ags-3.5.1.19.tar.gz) = 7640653 bytes
 SHA1 (patch-Common_core_platform.h) = 393ae8b7e90601cfab0b11ecb185693db6a24ee1
 SHA1 (patch-Engine_Makefile) = 849759ce98a4e4cdb5bf2d1ebb961295169ab170
 SHA1 (patch-Engine_Makefile-defs.linux) = f283deedc28ca4c720cad52579f849668e86a30c
 SHA1 (patch-Engine_libsrc_libcda-0.5_linux.c) = f4f2bd480b36c1c47aa724b29b620b27a4ad392b
+SHA1 (patch-Engine_media_audio_sound.cpp) = 7820e80f8b601ed4fd809b9d2348dfe1710c4e5a
