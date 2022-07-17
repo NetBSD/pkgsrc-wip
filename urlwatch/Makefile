@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/08/18 18:36:32 yhardy Exp $
 
-DISTNAME=	urlwatch-2.23
+DISTNAME=	urlwatch-2.25
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thp/}
 
@@ -10,6 +10,7 @@ COMMENT=	Watch web pages and arbitrary URLs for changes
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
 DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
@@ -29,5 +30,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
