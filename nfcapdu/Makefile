@@ -32,6 +32,5 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../wip/libnfc/buildlink3.mk"
-.include "../../wip/libfreefare/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
