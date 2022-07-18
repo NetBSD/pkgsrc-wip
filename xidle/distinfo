@@ -5,4 +5,4 @@ SHA512 (xidle-20220718/xidle-20220718.tar.xz) = f72fdc91a2c9173ca26291d46ed38576
 Size (xidle-20220718/xidle-20220718.tar.xz) = 5640 bytes
 SHA1 (patch-Makefile) = f93b2ffc31da13d143dd157d670e299f0568713a
 SHA1 (patch-xidle.1) = dcb4906dd1ca4780925ffd96193afd3cdb3b6401
-SHA1 (patch-xidle.c) = bcdb287b5ea23407e916fe4b7b56c4a1da703d9d
+SHA1 (patch-xidle.c) = 02058baddefbad2ba42784eba6fce980a1020314

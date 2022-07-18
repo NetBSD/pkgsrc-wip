@@ -28,6 +28,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xidle ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xidle.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux" 	# strtonum()
+LDFLAGS+=   -lbsd
+.include "../../devel/libbsd/buildlink3.mk"
+.endif
+
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
