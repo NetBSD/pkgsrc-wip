@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:21:33 yhardy Exp $
 
-RMD160 (refkeen-20210824.tar.gz) = 15e8f24f969d17da01c659dae07cad3aceafda4b
-SHA512 (refkeen-20210824.tar.gz) = 7ed1462b62d989eacde15d3746e75bd04ab45751875c98a66380a059bc9d9f66f55aaa86b6d84322a97f594f20d12e02a753e6064aa4ba1d8e21c90f861de7aa
-Size (refkeen-20210824.tar.gz) = 4281072 bytes
+BLAKE2s (reflectionhle-20211231.tar.gz) = 33adf5a688df421b968ed9e633cedf5e66e22ef1900471bd0c69214bcc683767
+SHA512 (reflectionhle-20211231.tar.gz) = 7d44cebcaeaa7c5cd5b8ab4ee43429f1b5073dea3783736a8b60da3508635af297755ee0dcbeff187198e23ec6a4feb992466f6b42099cb3547137622b5d8906
+Size (reflectionhle-20211231.tar.gz) = 3565198 bytes
