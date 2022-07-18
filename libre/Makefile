@@ -22,13 +22,13 @@ SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
 SUBST_SED.prefix+=	-e "s|/usr|${PREFIX}|1"
 SUBST_SED.prefix+=	-e "s|} -lre|} ${COMPILER_RPATH_FLAG}"'$$$$'"{libdir} -lre|"
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-build
 
 SUBST_CLASSES+=		re
 SUBST_FILES.re=		mk/re.mk
 SUBST_MESSAGE.re=	Fixing PREFIX path.
 SUBST_SED.re=		-e "s|/usr/local|${PREFIX}|g"
-SUBST_STAGE.re=		post-patch
+SUBST_STAGE.re=		pre-build
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libre.a
