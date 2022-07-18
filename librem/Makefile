@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2014/08/10 00:06:55 thomasklausner Exp $
 
-DISTNAME=	rem-1.0.0
+DISTNAME=	rem-2.5.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
@@ -23,7 +23,7 @@ SUBST_FILES.prefix=	Makefile
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
 SUBST_SED.prefix+=	-e "s|} -lre|} ${COMPILER_RPATH_FLAG}"'$$$$'"{libdir} -lre|"
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-build
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/librem.a
