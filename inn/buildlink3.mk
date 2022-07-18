@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	inn
+
+.if !defined(INN_BUILDLINK3_MK)
+INN_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.inn+=	inn>=2.3.4
+BUILDLINK_ABI_DEPENDS.inn?=	inn>=2.7.0
+BUILDLINK_PKGSRCDIR.inn?=	../../wip/inn
+.endif # INN_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-inn

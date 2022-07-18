@@ -1,0 +1,13 @@
+$NetBSD$
+
+BLAKE2s (inn-2.7.0.tar.gz) = 7db6d505e582ac5b3a821383bf720e10340fe8c2d10a935a3f9a206727d4c746
+SHA512 (inn-2.7.0.tar.gz) = 5c54816edfab667b12ea330714656de6501d780f3f622fd3cc7721d767f17eb38e7a18ddfe123fd0d8e67c4f21e0beb9ea05668ef77e1c52abd7e32f603824c4
+Size (inn-2.7.0.tar.gz) = 2718463 bytes
+SHA1 (patch-aa) = 1801206391e5f37e75edad0955cfc426d4701e45
+SHA1 (patch-ab) = 28b341559ba7d132e8a6dbb0989e964b1d5849fd
+SHA1 (patch-ac) = e60a9f39aed6aed2004dc625d08afb7403ac18a1
+SHA1 (patch-ad) = 96a38291dcd9a836dcaaa9f48ec6a8d2133dc7c6
+SHA1 (patch-ag) = 31bee657a4e35475e902cd179716328aa39ee4b1
+SHA1 (patch-ah) = 231ccb7c0402441760692c32fa0dafcf5c6a72aa
+SHA1 (patch-ak) = cdc37267d5f5151300b4c595b9274dc984c66651
+SHA1 (patch-al) = 3751913f2e7f1e530db9b2f6e762bdda314fd4fd
