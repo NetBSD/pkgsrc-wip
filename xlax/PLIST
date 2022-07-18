@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/mkxlax
+bin/xlax
+lib/X11/app-defaults/Xlax
+man/man1/mkxlax.1
+man/man1/xlax.1
