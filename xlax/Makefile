@@ -42,7 +42,6 @@ post-install:
 .if ${OPSYS} == "Linux"         # strlcpy()
 LDFLAGS+=   -lbsd
 .include "../../devel/libbsd/buildlink3.mk"
-.include "../../devel/libmd/buildlink3.mk"
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"
