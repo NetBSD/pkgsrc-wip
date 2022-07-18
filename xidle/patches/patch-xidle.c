@@ -1,11 +1,14 @@
 $NetBSD$
 
-Define non-standard compiler attribute extension.
-Do not hard-code xlock path.
+Portability fixes:
 
---- xidle.c.orig	2015-05-26 05:22:15.000000000 +0000
+- Define non-standard compiler attribute extension.
+- Do not hard-code xlock path.
+- Disable pledge.
+
+--- xidle.c.orig	2022-07-18 06:17:31.000000000 +0000
 +++ xidle.c
-@@ -43,9 +43,12 @@
+@@ -45,9 +45,12 @@
  #endif
  
  #ifndef PATH_PROG
@@ -19,3 +22,13 @@ Do not hard-code xlock path.
  
  enum {
  	north = 0x01,
+@@ -354,9 +357,6 @@ main(int argc, char **argv)
+ 	if (fd > 2)
+ 		close(fd);
+ 
+-	if (pledge("stdio proc exec", NULL) == -1)
+-		err(1, "pledge");
+-
+ 	for (;;) {
+ 		XEvent ev;
+ 		u_long mask;

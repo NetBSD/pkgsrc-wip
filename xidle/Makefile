@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	xidle-26052015
+DISTNAME=	xidle-20220718
 CATEGORIES=	x11
-MASTER_SITES=	http://distcache.freebsd.org/local-distfiles/novel/
+MASTER_SITES=	https://sehnsucht.multics.org/pub/pkgsrc/distfiles/
 DIST_SUBDIR=	${PKGNAME_NOREV}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vms@retrobsd.ddns.net
-HOMEPAGE=	http://distcache.freebsd.org/local-distfiles/novel/
+HOMEPAGE=	https://man.openbsd.org/xidle.1
 COMMENT=	Run a program on X inactivity
 LICENSE=	isc
 
