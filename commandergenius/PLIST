@@ -1,9 +1,11 @@
 @comment $NetBSD: PLIST,v 1.1 2015/08/19 21:21:53 yhardy Exp $
 bin/CGeniusExe
 share/applications/cgenius.desktop
+share/commandergenius/CGLogo.png
 share/commandergenius/CGLogo.svg
 share/commandergenius/cglogo512.png
 share/commandergenius/cglogo512old.png
+share/commandergenius/cglogo512veryold.png
 share/commandergenius/global/1.png
 share/commandergenius/global/2.png
 share/commandergenius/global/3.png
