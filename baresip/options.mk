@@ -1,11 +1,10 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.baresip
-PKG_SUPPORTED_OPTIONS=		alsa cairo ffmpeg gstreamer gtk ilbc jack
-PKG_SUPPORTED_OPTIONS+=		libvpx oss opencore-amr opus portaudio
-PKG_SUPPORTED_OPTIONS+=		pulseaudio sdl2 sndfile sndio speex v4l2
-PKG_SUPPORTED_OPTIONS+=		x11
-PKG_SUGGESTED_OPTIONS=		oss ilbc speex
+PKG_SUPPORTED_OPTIONS=		alsa ffmpeg gtk jack libvpx
+PKG_SUPPORTED_OPTIONS+=		opencore-amr opus portaudio pulseaudio
+PKG_SUPPORTED_OPTIONS+=		sdl2 sndfile sndio speex v4l2 x11
+PKG_SUGGESTED_OPTIONS=		portaudio
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -24,37 +23,12 @@ MAKE_FLAGS+=	USE_ALSA=
 .endif
 
 ###
-### cairo support (video input)
-###
-.if !empty(PKG_OPTIONS:Mcairo)
-PLIST.cairo=	yes
-MAKE_FLAGS+=	USE_CAIRO=yes
-.include "../../graphics/cairo/buildlink3.mk"
-.else
-MAKE_FLAGS+=	USE_CAIRO=
-.endif
-
-###
-### Gstreamer1 support (video codecs)
-###
-.if !empty(PKG_OPTIONS:Mgstreamer)
-PLIST.gstreamer=	yes
-MAKE_FLAGS+=	USE_GST1=yes
-MAKE_FLAGS+=	USE_GST_VIDEO1=yes
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.else
-MAKE_FLAGS+=	USE_GST1=
-MAKE_FLAGS+=	USE_GST_VIDEO1=
-.endif
-
-###
 ### GTK gui support
 ###
 .if !empty(PKG_OPTIONS:Mgtk)
 PLIST.gtk=	yes
 MAKE_FLAGS+=	USE_GTK=yes
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_GTK=
 .endif
@@ -66,25 +40,13 @@ MAKE_FLAGS+=	USE_GTK=
 PLIST.ffmpeg=	yes
 MAKE_FLAGS+=	USE_AVCODEC=yes
 MAKE_FLAGS+=	USE_AVFORMAT=yes
-LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
-LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg4}/${BUILDLINK_LIBDIRS.ffmpeg4}
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+LFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ffmpeg5}/${BUILDLINK_LIBDIRS.ffmpeg5}
+LFLAGS+=	-L${BUILDLINK_PREFIX.ffmpeg5}/${BUILDLINK_LIBDIRS.ffmpeg5}
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_AVCODEC=
 MAKE_FLAGS+=	USE_AVFORMAT=
-.endif
-
-###
-### ILBC support (audio codec)
-###
-.if !empty(PKG_OPTIONS:Milbc)
-PLIST.ilbc=	yes
-MAKE_FLAGS+=	USE_ILBC=yes
-#.include "../../wip/ilbc-rfc3951/buildlink3.mk"
-.include "../../wip/libilbc/buildlink3.mk"
-.else
-MAKE_FLAGS+=	USE_ILBC=
 .endif
 
 ###
@@ -107,16 +69,6 @@ MAKE_FLAGS+=	USE_VPX=yes
 .include "../../multimedia/libvpx/buildlink3.mk"
 .else
 MAKE_FLAGS+=	USE_VPX=
-.endif
-
-###
-### OSS support (audio output)
-###
-.if !empty(PKG_OPTIONS:Moss)
-PLIST.oss=	yes
-MAKE_FLAGS+=	USE_OSS=yes    # full-duplex issues
-.else
-MAKE_FLAGS+=	USE_OSS=
 .endif
 
 ###
@@ -203,13 +155,9 @@ MAKE_FLAGS+=	USE_SNDIO=
 .if !empty(PKG_OPTIONS:Mspeex)
 PLIST.speex=	yes
 MAKE_FLAGS+=	HAVE_SPEEXDSP=yes
-MAKE_FLAGS+=	USE_SPEEX_AEC=yes
-MAKE_FLAGS+=	USE_SPEEX_PP=yes
 .include "../../audio/speexdsp/buildlink3.mk"
 .else
 MAKE_FLAGS+=	HAVE_SPEEXDSP=
-MAKE_FLAGS+=	USE_SPEEX_AEC=
-MAKE_FLAGS+=	USE_SPEEX_PP=
 .endif
 
 ###

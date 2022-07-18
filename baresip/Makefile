@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2014/09/05 08:06:00 thomasklausner Exp $
 
-DISTNAME=	baresip-1.1.0
+DISTNAME=	baresip-2.5.1
 CATEGORIES=	net audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
