@@ -2,9 +2,9 @@ $NetBSD$
 
 Don't download entityx. Use the pkgsrc version.
 
---- 3rd_party/CMakeLists.txt.orig	2021-08-22 10:14:12.000000000 +0000
+--- 3rd_party/CMakeLists.txt.orig	2022-05-29 11:42:06.000000000 +0000
 +++ 3rd_party/CMakeLists.txt
-@@ -34,11 +34,11 @@ set(ENTITYX_MAX_COMPONENTS 64 CACHE INTE
+@@ -39,7 +39,7 @@ set(ENTITYX_MAX_COMPONENTS 64 CACHE INTE
  
  # EXCLUDE_FROM_ALL to disable installing these HO or static library deps
  add_subdirectory(dbopl EXCLUDE_FROM_ALL)
@@ -13,8 +13,9 @@ Don't download entityx. Use the pkgsrc version.
  add_subdirectory(glad EXCLUDE_FROM_ALL)
  add_subdirectory(speex_resampler EXCLUDE_FROM_ALL)
  add_subdirectory(stb EXCLUDE_FROM_ALL)
- add_subdirectory(imgui EXCLUDE_FROM_ALL)
- add_subdirectory(imgui-filebrowser EXCLUDE_FROM_ALL)
+@@ -48,4 +48,4 @@ add_subdirectory(imgui-filebrowser EXCLU
+ add_subdirectory(nuked-opl3 EXCLUDE_FROM_ALL)
+ add_subdirectory(loguru EXCLUDE_FROM_ALL)
  
 -rigel_disable_warnings(entityx)
 +#rigel_disable_warnings(entityx)

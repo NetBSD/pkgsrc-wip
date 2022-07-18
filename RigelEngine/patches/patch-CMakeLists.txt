@@ -1,10 +1,17 @@
 $NetBSD$
 
-Don't download entityx. Use the pkgsrc.
+Don't download entityx. Use the pkgsrc version.
 
---- CMakeLists.txt.orig	2021-08-22 10:14:12.000000000 +0000
+--- CMakeLists.txt.orig	2022-05-29 11:42:06.000000000 +0000
 +++ CMakeLists.txt
-@@ -30,10 +30,10 @@ include("${CMAKE_SOURCE_DIR}/cmake/rigel
+@@ -24,17 +24,17 @@ option(BUILD_TESTS "Build tests" OFF)
+ # Dependencies
+ ###############################################################################
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+ include("${CMAKE_SOURCE_DIR}/cmake/rigel.cmake")
+ 
+ # This catches the most common case, where none of the submodules have been
  # initialized. It's still possible to get in a state where entityx is present
  # but other submodules are not, but that's unlikely to happen to someone who
  # has just cloned the repo and wants to build for the first time.
@@ -19,8 +26,8 @@ Don't download entityx. Use the pkgsrc.
  
  
  if("${CMAKE_SYSTEM_NAME}" STREQUAL "Emscripten")
-@@ -58,6 +58,8 @@ else()
-     find_package(Boost 1.65 COMPONENTS program_options)
+@@ -57,6 +57,8 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Emsc
+ else()
      find_package(SDL2 REQUIRED)
      find_package(SDL2_mixer REQUIRED)
 +    find_package(PkgConfig REQUIRED)
