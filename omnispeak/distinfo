@@ -1,8 +1,6 @@
 $NetBSD$
 
-RMD160 (omnispeak/27d7041ec353f9a8ff60bd7837e9558e2e5d6a2b-27d7041ec353f9a8ff60bd7837e9558e2e5d6a2b.tar.gz) = daf1ccd26313b0cbc66efb691536e73a05c6de2e
-SHA512 (omnispeak/27d7041ec353f9a8ff60bd7837e9558e2e5d6a2b-27d7041ec353f9a8ff60bd7837e9558e2e5d6a2b.tar.gz) = 8f0618c6c88301aa01c7d2ee46a1e3023c98177b45a46f9bd7d3db693ea0bc085470f8d6c1c3197333196f8e967909d5edb1f317f1264bdd9292fcd9a8df62d2
-Size (omnispeak/27d7041ec353f9a8ff60bd7837e9558e2e5d6a2b-27d7041ec353f9a8ff60bd7837e9558e2e5d6a2b.tar.gz) = 380394 bytes
+BLAKE2s (omnispeak/v1.1.tar.gz) = fc90d0f1bbedd406dfb1b632cd76c47ed99cf52f9db0ce3ddb5337ec5426b487
+SHA512 (omnispeak/v1.1.tar.gz) = e3138bfa6f15204365cd09cf061fcfd9909805a8c0054b8f2eb62acaa7ba619ef2c6d4bf444eb6310b17c129fef113800ca1acff67b7f2a989395b7da58828e0
+Size (omnispeak/v1.1.tar.gz) = 3402722 bytes
 SHA1 (patch-Makefile) = 08ac01bcfe30c22cddf501c83d2ddb737e21cc96
-SHA1 (patch-src_ck6_misc.c) = 8f069f65737229458cc81163b40d0fe94b39c4cc
-SHA1 (patch-src_id_ca.c) = 69c342c7dcabfa3345b634405f866f4d9ded300f
