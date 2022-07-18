@@ -1865,6 +1865,7 @@ SUBDIR+=	jgraphx
 SUBDIR+=	jhbuild
 SUBDIR+=	jibri
 SUBDIR+=	jicofo
+SUBDIR+=	jigasi
 SUBDIR+=	jira-cli-git
 SUBDIR+=	jitsi
 SUBDIR+=	jitsi-meet

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (jigasi-1.1.tar.gz) = 5d97bade3cabf9db6b33da38064ad473415d0db2147d3ed22ec4ffad0d5acb32
+SHA512 (jigasi-1.1.tar.gz) = 26e22bbf033c9127687b2ff349c700e4e81c22e25a0feea94b22b9c6466d725eadb8142c4daf4a64c33860f2a4c606c3a364d9d048d94725100fbde6362e82ef
+Size (jigasi-1.1.tar.gz) = 278449 bytes

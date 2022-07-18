@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/jigasi
+share/doc/jigasi/README.md
+share/examples/jigasi/callstats-java-sdk.properties
+share/examples/jigasi/log4j2.xml
+share/examples/jigasi/sip-communicator.properties
+share/jigasi/jigasi.sh
+share/jigasi/lib/jigasi.jar
+share/jigasi/lib/logging.properties
+share/jigasi/lib/native/linux-64/libhwaddressretriever.so
+share/jigasi/lib/native/linux/libhwaddressretriever.so
+share/jigasi/lib/native/macosx/libhwaddressretriever.jnilib
+share/jigasi/lib/native/windows-64/LocalhostRetriever.dll
+share/jigasi/lib/native/windows-64/hwaddressretriever.dll
+share/jigasi/lib/native/windows/LocalhostRetriever.dll
+share/jigasi/lib/native/windows/hwaddressretriever.dll
