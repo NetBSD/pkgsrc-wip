@@ -1,0 +1,4 @@
+JSON parsing and manipulation with friendly s-expressions for Guile
+Scheme.
+
+This package is for use with guile 3.0.

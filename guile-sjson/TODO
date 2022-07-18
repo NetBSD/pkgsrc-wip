@@ -1,0 +1,2 @@
+Resolve devel vs textproc.  I don't really see json as "text
+processing"; it's a serialization format.

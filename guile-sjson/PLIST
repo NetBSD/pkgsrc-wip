@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/guile/3.0/ccache/fash.go
+lib/guile/3.0/ccache/sjson.go
+lib/guile/3.0/ccache/sjson/utils.go
+share/guile/site/3.0/fash.scm
+share/guile/site/3.0/sjson.scm
+share/guile/site/3.0/sjson/utils.scm
