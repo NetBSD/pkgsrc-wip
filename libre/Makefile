@@ -30,7 +30,10 @@ SUBST_MESSAGE.re=	Fixing PREFIX path.
 SUBST_SED.re=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_STAGE.re=		pre-build
 
+MAKE_FLAGS+=		EXTRA_LFLAGS="${BUILDLINK_LDADD.libexecinfo}"
+
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libre.a
 
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
