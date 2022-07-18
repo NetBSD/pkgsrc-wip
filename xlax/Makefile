@@ -37,6 +37,14 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/xlax.ad 								\
 	${DESTDIR}${PREFIX}/lib/X11/app-defaults/Xlax
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"         # strlcpy()
+LDFLAGS+=   -lbsd
+.include "../../devel/libbsd/buildlink3.mk"
+.include "../../devel/libmd/buildlink3.mk"
+.endif
+
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
