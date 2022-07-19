@@ -19,9 +19,6 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
 
-# didn't find all places hardcoding libdl, so force them away
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
-
 TO_UNWRAP=	${WRKSRC}/lib/wx/config/gtk3-unicode-3.2
 
 # Installation rules in cmake are not using DESTDIR properly, do it manually
