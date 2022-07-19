@@ -71,6 +71,7 @@ CMAKE_ARGS+=		-DwxUSE_JOYSTICK:BOOL=OFF
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
 # curl not checked by cmake but used by webrequest_curl.h
+# https://github.com/wxWidgets/wxWidgets/issues/22648
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
