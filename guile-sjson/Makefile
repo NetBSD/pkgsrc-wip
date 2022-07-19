@@ -2,7 +2,7 @@
 
 DISTNAME=	sjson-0.2.2
 PKGNAME=	guile-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	textproc
 MASTER_SITES=	https://dustycloud.org/misc/
 
 MAINTAINER=	gdt@NetBSD.org
@@ -16,5 +16,5 @@ USE_TOOLS+=	pkg-config
 
 TEST_TARGET=	check
 
-.include "../../lang/guile30/buildlink3.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../mk/bsd.pkg.mk"
