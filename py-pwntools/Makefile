@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pwntools-4.7.0
+DISTNAME=	pwntools-4.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwntools/}
