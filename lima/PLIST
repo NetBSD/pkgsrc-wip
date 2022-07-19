@@ -33,6 +33,7 @@ share/lima/examples/experimental/almalinux-9.yaml
 share/lima/examples/experimental/apptainer.yaml
 share/lima/examples/experimental/centos-stream-9.yaml
 share/lima/examples/experimental/riscv64.yaml
+share/lima/examples/experimental/rocky-9.yaml
 share/lima/examples/faasd.yaml
 share/lima/examples/fedora.yaml
 share/lima/examples/k3s.yaml
