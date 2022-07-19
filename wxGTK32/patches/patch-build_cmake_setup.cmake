@@ -1,7 +1,10 @@
 $NetBSD$
 
 Add statvfs() checks.
+https://github.com/wxWidgets/wxWidgets/pull/22643
+
 Use proper variable for dlopen() library.
+https://github.com/wxWidgets/wxWidgets/pull/22644
 
 --- build/cmake/setup.cmake.orig	2022-07-06 14:19:50.000000000 +0000
 +++ build/cmake/setup.cmake

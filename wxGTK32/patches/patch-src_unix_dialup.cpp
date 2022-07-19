@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add NetBSD support.
+https://github.com/wxWidgets/wxWidgets/pull/22645
 
 --- src/unix/dialup.cpp.orig	2022-07-06 14:19:50.000000000 +0000
 +++ src/unix/dialup.cpp

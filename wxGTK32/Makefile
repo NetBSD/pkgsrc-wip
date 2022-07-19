@@ -17,15 +17,15 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=		pkg-config msgfmt
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+CMAKE_ARGS+=		-DCMAKE_DISABLE_PRECOMPILE_HEADERS:BOOL=ON
 
 # didn't find all places hardcoding libdl, so force them away
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
-#TO_UNWRAP=	${DESTDIR}${PREFIX}/lib/wx/config/gtk3-unicode-3.2
-#TO_UNWRAP=	${WRKSRC}/CMakeFiles/gtk3-unicode-3.2
 TO_UNWRAP=	${WRKSRC}/lib/wx/config/gtk3-unicode-3.2
 
 # Installation rules in cmake are not using DESTDIR properly, do it manually
+# https://github.com/wxWidgets/wxWidgets/issues/22647
 # CMake Error: failed to create symbolic link '/usr/pkg/bin/wx-config': Permission denied
 # CMake Error: failed to create symbolic link '/usr/pkg/bin/wxrc': Permission denied
 post-install:
@@ -42,6 +42,7 @@ post-build:
 
 .include "../../mk/bsd.prefs.mk"
 
+# https://github.com/wxWidgets/wxWidgets/issues/22646
 .if ${OPSYS} != "Linux"
 CMAKE_ARGS+=		-DwxUSE_JOYSTICK:BOOL=OFF
 .endif

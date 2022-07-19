@@ -3,8 +3,6 @@ $NetBSD: distinfo,v 1.5 2022/06/07 18:48:34 adam Exp $
 BLAKE2s (wxWidgets-3.2.0.tar.bz2) = 4029147a8e77a22e0379eeda11bc26f8fee998862aaa52819adf16a8ed4860ea
 SHA512 (wxWidgets-3.2.0.tar.bz2) = e55e7c5ac7abcacf2ecff7c22e367db17ff5a077d3d5d2aa7589e8ba7cc6695cfa48c0f00bcfdffeda8dc4f974f97a857fb61b4b300a724f7687d710fbb23967
 Size (wxWidgets-3.2.0.tar.bz2) = 25296814 bytes
-SHA1 (patch-build_cmake_functions.cmake) = 86b2c62913b8db5bc1436cea5479f7e4bbbcf408
 SHA1 (patch-build_cmake_init.cmake) = e692fa357e9bbdfa2c5a81b38ddea9c799b462e9
-SHA1 (patch-build_cmake_lib_stc_CMakeLists.txt) = 696b656323a090ad8a59a7bc37eaf817efe3853a
-SHA1 (patch-build_cmake_setup.cmake) = 193d75fa45090f3a8803b74e21eb464c3eca42de
-SHA1 (patch-src_unix_dialup.cpp) = 63f4e5dc4cbb256067afaad8e44121d98af7ddd7
+SHA1 (patch-build_cmake_setup.cmake) = a3d99b0363a17ac80083126e1ccb1b8a9d29d679
+SHA1 (patch-src_unix_dialup.cpp) = 1c62d37508e45a0095ef062f7d450529e9b557e7
