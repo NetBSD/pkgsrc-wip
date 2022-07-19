@@ -61,7 +61,6 @@ include/gnunet/compat.h
 include/gnunet/gettext.h
 include/gnunet/gnu_name_system_record_types.h
 include/gnunet/gnunet_abd_service.h
-include/gnunet/gnunet_abe_lib.h
 include/gnunet/gnunet_applications.h
 include/gnunet/gnunet_arm_service.h
 include/gnunet/gnunet_ats_application_service.h
