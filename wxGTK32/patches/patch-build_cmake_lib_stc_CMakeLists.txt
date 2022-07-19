@@ -1,0 +1,14 @@
+$NetBSD$
+
+Disable pre-compiled headers, don't generally work.
+
+--- build/cmake/lib/stc/CMakeLists.txt.orig	2022-07-06 14:19:50.000000000 +0000
++++ build/cmake/lib/stc/CMakeLists.txt
+@@ -169,7 +169,6 @@ target_compile_definitions(wxscintilla P
+     LINK_LEXERS
+ )
+ 
+-wx_target_enable_precomp(wxscintilla "${wxSOURCE_DIR}/src/stc/scintilla/include/Scintilla.h")
+ wx_add_library(wxstc ${STC_FILES})
+ wx_lib_include_directories(wxstc
+     ${wxSOURCE_DIR}/src/stc/scintilla/include
