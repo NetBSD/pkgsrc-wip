@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	sjson-0.2.2
+PKGNAME=	guile-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://dustycloud.org/misc/
 
