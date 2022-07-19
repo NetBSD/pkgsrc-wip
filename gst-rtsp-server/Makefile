@@ -15,6 +15,8 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		lib/pkgconfig/gstreamer-rtsp-server-1.0.pc
 PYTHON_FOR_BUILD_ONLY=		tool
 
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst/rtsp-server
+
 BUILDLINK_API_DEPENDS.gobject-introspection+=		gobject-introspection>=1.7.0
 BUILDLINK_DEPMETHOD.gobject-introspection+=     build
 .include "../../devel/gobject-introspection/buildlink3.mk"
