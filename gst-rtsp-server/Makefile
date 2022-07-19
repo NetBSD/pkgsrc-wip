@@ -10,7 +10,7 @@ HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
 COMMENT=	GStreamer RTSP server
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=					pkg-config msgfmt xgettext
+USE_TOOLS+=			pkg-config msgfmt xgettext
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		lib/pkgconfig/gstreamer-rtsp-server-1.0.pc
 PYTHON_FOR_BUILD_ONLY=		tool
