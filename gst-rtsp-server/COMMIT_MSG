@@ -1,0 +1,25 @@
+Update net/gst-rtsp-server to 1.19.2
+
+## Summary
+
+ - updated from 1.12.3 to 1.19.2
+ - converted build from autotools to meson [1]
+
+## Objective
+
+Since the last update, there have been a lot of bugfixes and additions, 
+which I cannot estimate in their scope. Please refer to the changelog 
+of the Upstream project [2]. The motivation behind the update in pkgsrc 
+is to fulfill a dependency of gstreamer-rs (Rust wrapper for gstreamer, 
+in particular there gstreamer-rtsp-server). There the wrapper for the 
+media factory refers via FFI to a function 
+gst_rtsp_media_factory_add_role_from_structure[3], which does not exist 
+in the previous version of this package. For this reason, neolink[4] 
+does not build on NetBSD.
+
+## References
+
+[1] https://wiki.netbsd.org/pkgsrc/how_to_convert_autotools_to_meson/
+[2] https://github.com/GStreamer/gst-rtsp-server/blob/master/ChangeLog
+[3] https://gitlab.freedesktop.org/gstreamer/gstreamer-rs/-/blob/main/gstreamer-rtsp-server/src/rtsp_media_factory.rs
+[4] https://github.com/thirtythreeforty/neolink
