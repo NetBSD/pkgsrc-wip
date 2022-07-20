@@ -10,12 +10,11 @@ HOMEPAGE=	http://www.alfanous.org/
 COMMENT=	Arabic Quranic Corpus python API
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/PyCorpus-0.1
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+WRKSRC=		${WRKDIR}/PyCorpus-0.1
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

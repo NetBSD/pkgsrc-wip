@@ -10,12 +10,11 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/cmd2/
 COMMENT=	Extra features for standard library's cmd module
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 WRKSRC=		${WRKDIR}/cmd2-0.6.7
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

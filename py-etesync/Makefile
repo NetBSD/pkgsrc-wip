@@ -23,11 +23,9 @@ DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.1:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9:../../textproc/py-vobject
-
-PYTHON_VERSIONED_DEPENDENCIES+=	packaging pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -12,10 +12,9 @@ LICENSE=	gnu-agpl-v3
 
 WRKSRC=		${WRKDIR}/alfanous-0.7.28
 
-PYTHON_VERSIONED_DEPENDENCIES==	pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

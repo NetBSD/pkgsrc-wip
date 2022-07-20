@@ -13,11 +13,9 @@ LICENSE=	modified-bsd # TODO: (see mk/license.mk)
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils-[0-9]*:../../databases/py-sqlalchemy-utils
 DEPENDS+=	${PYPKGPREFIX}-validators-[0-9]*:../../textproc/py-validators
-
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

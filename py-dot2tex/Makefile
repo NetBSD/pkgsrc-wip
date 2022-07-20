@@ -10,10 +10,9 @@ HOMEPAGE=	https://github.com/kjellmf/dot2tex
 COMMENT=	Graphviz to LaTeX converter
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

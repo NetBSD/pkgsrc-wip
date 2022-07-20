@@ -18,11 +18,9 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-sparqlwrapper:../../www/py-sparqlwrapper
 DEPENDS+=	${PYPKGPREFIX}-isodate:../../time/py-isodate
-
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 PORTVERSION=	3.4.0
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

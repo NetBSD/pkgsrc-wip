@@ -11,13 +11,11 @@ COMMENT=	CNF formula generator
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 WRKSRC=		${WRKDIR}/CNFgen-0.7.1
-
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

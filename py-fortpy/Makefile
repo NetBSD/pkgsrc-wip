@@ -11,9 +11,8 @@ COMMENT=	Fortran Parsing, Unit Testing and Intellisense
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.14.0:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 #DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
-
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
 
 USE_LANGUAGES=		# none
 REPLACE_PYTHON+=	fortpy/scripts/*.py*
@@ -25,5 +24,4 @@ post-extract:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

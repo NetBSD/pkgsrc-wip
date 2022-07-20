@@ -29,8 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-postmarkup>=1.2.2:../../wip/py-postmarkup
 DEPENDS+=	${PYPKGPREFIX}-premailer>=0.5.7:../../wip/py-premailer
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.7.1:../../sysutils/py-watchdog
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.4:../../www/py-WebOb
-
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 USE_LANGUAGES=		# none
 USE_PKGLOCALEDIR=	yes
@@ -39,5 +38,4 @@ REPLACE_PYTHON+=	moya/command/moya-doc
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

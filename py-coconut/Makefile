@@ -26,11 +26,10 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.8.0:../../devel/py-pexpect
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.761:../../lang/py-mypy
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pre-commit>=2.8.2:../../wip/py-pre-commit
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-cPyparsing>=2.4.5.0.1.1:../../wip/py-cPyparsing
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.8:../../devel/py-prompt_toolkit
-
-PYTHON_VERSIONED_DEPENDENCIES+=	pyparsing:build
 
 USE_LANGUAGES=	# none
 
@@ -38,5 +37,4 @@ BUILDLINK_DEPENDS.${PYPKGPREFIX}-numpy+=	build
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
