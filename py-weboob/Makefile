@@ -23,9 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.2.5:../../www/py-mechanize
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	html2text
-
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
