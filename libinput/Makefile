@@ -11,7 +11,6 @@ COMMENT=	Coordinate scaling, relative pointer, acceleration
 LICENSE=	mit
 
 USE_TOOLS+=		pkg-config
-PYTHON_FOR_BUILD_ONLY=	tool
 
 SUBST_CLASSES+=		allno
 SUBST_STAGE.allno=	pre-configure
