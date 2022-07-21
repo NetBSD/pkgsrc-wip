@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pyexpander-2.1.1.tar.gz) = 6a40de8c94c73b641875349ff3eca99f0252d3bca754d958afece2b88b8b394e
+SHA512 (pyexpander-2.1.1.tar.gz) = 76bcc7f9a6e079e7b6421d943122e46b8cb636c890467c44256fbed422f441916e06ba7afb641ae52a99f4db100cffb7c16d6929c31051f4f15ab869916f854e
+Size (pyexpander-2.1.1.tar.gz) = 3111490 bytes

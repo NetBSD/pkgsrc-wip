@@ -1,0 +1,13 @@
+pyexpander is a macro processor that allows to embed python code in text files.
+
+Some of the features are:
+
+    Variables like $(VAR) are replaced.
+
+    Valid python expressions like $(2+3/2) are evaluated.
+
+    Arbitrary python code like in $py(import math; math.pi) can be executed.
+
+    The functionality is available as a script and a python library.
+
+    The program is availiable for python version 3.
