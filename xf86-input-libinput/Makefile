@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	xf86-input-libinput-1.0.1
+DISTNAME=	xf86-input-libinput-1.2.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://gitlab.freedesktop.org/xorg/driver/xf86-input-libinput
