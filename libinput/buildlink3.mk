@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	libinput
 .if !defined(LIBINPUT_BUILDLINK3_MK)
 LIBINPUT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libinput+=	libinput>=0.8.0
+BUILDLINK_API_DEPENDS.libinput+=	libinput>=1.19.4
 BUILDLINK_PKGSRCDIR.libinput?=		../../wip/libinput
 
 .include "../../wip/libevdev/buildlink3.mk"
