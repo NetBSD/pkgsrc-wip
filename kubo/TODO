@@ -1,0 +1,8 @@
+Despite running 'make show-go-modules' and including the result,
+the build starts with:
+
+===> Building for kubo-0.13.1
+go: downloading bazil.org/fuse v0.0.0-20200117225306-7b5117fecadc
+go: downloading contrib.go.opencensus.io/exporter/prometheus v0.4.0
+go: downloading github.com/AndreasBriese/bbloom v0.0.0-20190825152654-46b345b51c96
+...
