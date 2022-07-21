@@ -1558,6 +1558,3 @@ lib/libwx_gtk3u_webview-3.2.so.0.0.0
 lib/libwx_gtk3u_xrc-3.2.so
 lib/libwx_gtk3u_xrc-3.2.so.0
 lib/libwx_gtk3u_xrc-3.2.so.0.0.0
-lib/wx/3.2/web-extensions/webkit2_extu-3.2.so
-lib/wx/config/gtk3-unicode-3.2
-lib/wx/include/gtk3-unicode-3.2/wx/setup.h

@@ -17,10 +17,13 @@ https://github.com/wxWidgets/wxWidgets/pull/22644
      wx_check_c_source_compiles("
          return 0; }
          #if defined(__BSD__)
-@@ -308,6 +308,18 @@ if(UNIX)
+@@ -308,9 +308,23 @@ if(UNIX)
          l += fs.f_blocks;
          l += fs.f_bavail;"
          HAVE_STATFS)
+-    if(HAVE_STATFS)
+-        set(WX_STATFS_T "struct statfs")
+-        wx_check_cxx_source_compiles("
 +    wx_check_c_source_compiles("
 +        return 0; }
 +        #include <sys/statvfs.h>
@@ -33,21 +36,29 @@ https://github.com/wxWidgets/wxWidgets/pull/22644
 +        l += fs.f_blocks;
 +        l += fs.f_bavail;"
 +        HAVE_STATVFS)
-     if(HAVE_STATFS)
-         set(WX_STATFS_T "struct statfs")
-         wx_check_cxx_source_compiles("
-@@ -324,9 +336,8 @@ if(UNIX)
++    if(HAVE_STATVFS)
++      set(WX_STATFS_T "struct statvfs")
++    elseif(HAVE_STATFS)
++      set(WX_STATFS_T "struct statfs")
++      wx_check_cxx_source_compiles("
+             return 0; }
+             #if defined(__BSD__)
+             #include <sys/param.h>
+@@ -322,12 +336,7 @@ if(UNIX)
+             int foo() {
+             struct statfs fs;
              statfs(\"/\", &fs);"
-             HAVE_STATFS_DECL)
-     else()
+-            HAVE_STATFS_DECL)
+-    else()
 -        # TODO: implement statvfs checks
-         if(HAVE_STATVFS)
+-        if(HAVE_STATVFS)
 -            set(WX_STATFS_T statvfs_t)
-+            set(WX_STATFS_T "struct statvfs")
-         endif()
+-        endif()
++        HAVE_STATFS_DECL)
      endif()
  
-@@ -611,7 +622,7 @@ if(wxUSE_DATETIME)
+     if(NOT HAVE_STATFS AND NOT HAVE_STATVFS)
+@@ -611,7 +620,7 @@ if(wxUSE_DATETIME)
  endif()
  
  cmake_push_check_state(RESET)
