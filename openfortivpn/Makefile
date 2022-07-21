@@ -17,14 +17,6 @@ CONF_FILES+=		${PREFIX}/share/examples/${PKGNAME}/config ${PKG_SYSCONFDIR}/openf
 MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/openfortivpn \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
-.include "../../mk/bsd.prefs.mk"
-
-NETSTAT_PATH?=		/usr/sbin/netstat
-PPP_PATH?=		/usr/sbin/pppd
-PPPD_PATH?=		/usr/sbin/pppd
-RESOLVCONF_PATH?=	/sbin/resolvconf
-SYSTEMDSYSTEMUNITDIR?=	/usr/lib/systemd/system
-
 .include "options.mk"
 
 .include "../../security/openssl/buildlink3.mk"
