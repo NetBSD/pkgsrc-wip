@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/openfortivpn
+share/examples/${PKGNAME}/config
+man/man1/openfortivpn.1
+share/openfortivpn/config.template
+@pkgdir etc/openfortivpn
