@@ -3245,6 +3245,7 @@ SUBDIR+=	plasma-workspace
 SUBDIR+=	plasma-workspace-wallpapers
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
+SUBDIR+=	please
 SUBDIR+=	plibsys
 SUBDIR+=	plink
 SUBDIR+=	plink2
