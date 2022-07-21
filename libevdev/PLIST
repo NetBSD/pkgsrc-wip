@@ -8,4 +8,6 @@ lib/libevdev.so
 lib/libevdev.so.2
 lib/libevdev.so.2.3.0
 lib/pkgconfig/libevdev.pc
+man/man1/libevdev-tweak-device.1
+man/man1/touchpad-edge-detector.1
 man/man3/libevdev.3
