@@ -16,10 +16,12 @@ COMMENT=	Tensors and Dynamic neural networks in Python with GPU acceleration
 #USE_CUDA=	0
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.2:../../devel/py-typing-extensions
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	cmake>=3.17:../../devel/cmake
 
 USE_LANGUAGES+=	c c++
+CFLAGS+=	-fopenmp
 
 WRKSRC=	${WRKDIR}/pytorch
 
@@ -33,8 +35,8 @@ post-extract:
 	#git submodule update --init --recursive --jobs 0
 
 # url2pkg-marker (please do not remove this line.)
-.include "../../lang/python/egg.mk"
 .include "../../devel/google-glog/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+.include "../../parallel/openmp/buildlink3.mk"

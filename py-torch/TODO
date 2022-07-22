@@ -1,13 +1,4 @@
-numpy dep
-
-OpenMP error
-
 Watch CMake warnings, some of those could be addressable
-
-There are errors suggesting to look at the choice of c and c++ compiler.
-
-Suggested compiler by the package is clang. But how does it work when there are
-buildlink deps like google-glog?
 
 Also hwo to set USE_CUDA=0 for the entire build. Do not know exactly which all
 phases require it?
