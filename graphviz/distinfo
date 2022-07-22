@@ -8,4 +8,4 @@ SHA1 (patch-configure.ac) = 1c39f0b25cfc995de10a07492656c2f12a24686f
 SHA1 (patch-lib_gvc_Makefile.am) = b5d793ec0a676c5d4b257c6fec1eb182ee93718b
 SHA1 (patch-plugin_gs_gvloadimage__gs.c) = d777c822ef11b15eff992f36a9f4073c02cd4ca6
 SHA1 (patch-plugin_xlib_gvdevice__xlib.c) = 05d1549db3b9221f5bcb947173034775b0df7c6c
-SHA1 (patch-tclpkg_gv_Makefile.am) = 1cc05da71077aacc65b772ba26e7958ad52d83b3
+SHA1 (patch-tclpkg_gv_Makefile.am) = 47e15ae0342d39db7ef88e414491495c18e2c45c

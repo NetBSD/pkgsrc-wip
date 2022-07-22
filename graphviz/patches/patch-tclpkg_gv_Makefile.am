@@ -5,6 +5,8 @@ Add missing -I flags to point to perl files.
 See https://gitlab.com/graphviz/graphviz/issues/1576.
 Issue was closed, but patch is still missing. Regression?
 
+https://gitlab.com/graphviz/graphviz/-/merge_requests/2758
+
 --- tclpkg/gv/Makefile.am.orig	2021-10-16 16:39:12.000000000 +0000
 +++ tclpkg/gv/Makefile.am
 @@ -180,7 +180,7 @@ nodist_libgv_perl_la_SOURCES = gv_perl.c
