@@ -13,20 +13,28 @@ COMMENT=	Tensors and Dynamic neural networks in Python with GPU acceleration
 #LICENSE=	# TODO: (see mk/license.mk)
 
 # This neeeds to be set as environment variable, not sure how
-#USE_CUDA=0
+#USE_CUDA=	0
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	cmake>=3.17:../../devel/cmake
+
+USE_LANGUAGES+=	c c++
 
 WRKSRC=	${WRKDIR}/pytorch
 
 post-extract:
-	cd ${WRKDIR}; \
-	git clone --recursive https://github.com/pytorch/pytorch; \
-	cd pytorch; \
-	git submodule sync; \
-	git submodule update --init --recursive --jobs 0
+	rsync -a /tmp/pytorch ${WRKDIR}
+	# This step takes long. During development use a local copy
+	#cd ${WRKDIR}; \
+	#git clone --recursive https://github.com/pytorch/pytorch; \
+	#cd pytorch; \
+	#git submodule sync; \
+	#git submodule update --init --recursive --jobs 0
 
 # url2pkg-marker (please do not remove this line.)
 .include "../../lang/python/egg.mk"
 .include "../../devel/google-glog/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
