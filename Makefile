@@ -3051,6 +3051,7 @@ SUBDIR+=	pam-pwdfile
 SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pangoterm
+SUBDIR+=	papp
 SUBDIR+=	parafly
 SUBDIR+=	parcellite
 SUBDIR+=	parole

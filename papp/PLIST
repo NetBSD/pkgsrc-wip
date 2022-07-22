@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/papp
+man/man1/papp.1
+share/papp/include/exceptions.mal
+share/papp/include/lowio.mal
+share/papp/include/syscalls.mal
