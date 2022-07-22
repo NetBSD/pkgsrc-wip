@@ -1120,7 +1120,6 @@ SUBDIR+=	ghmm
 SUBDIR+=	ghostpcl-urwfonts-ttf
 SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	giggle
-SUBDIR+=	gimp-devel
 SUBDIR+=	gimp-jxl
 SUBDIR+=	gin
 SUBDIR+=	git-crypt
