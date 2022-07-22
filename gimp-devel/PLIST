@@ -302,6 +302,7 @@ lib/gimp/2.99/plug-ins/file-pdf-save/file-pdf-save
 lib/gimp/2.99/plug-ins/file-pix/file-pix
 lib/gimp/2.99/plug-ins/file-png/file-png
 lib/gimp/2.99/plug-ins/file-pnm/file-pnm
+lib/gimp/2.99/plug-ins/file-ps/file-ps
 lib/gimp/2.99/plug-ins/file-psd/file-psd
 lib/gimp/2.99/plug-ins/file-psp/file-psp
 lib/gimp/2.99/plug-ins/file-raw-data/file-raw-data
@@ -2453,4 +2454,3 @@ share/vala/vapi/gimp-3.0.deps
 share/vala/vapi/gimp-3.0.vapi
 share/vala/vapi/gimp-ui-3.0.deps
 share/vala/vapi/gimp-ui-3.0.vapi
-@pkgdir share/gimp/2.99/fonts

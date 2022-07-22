@@ -14,6 +14,8 @@ BUILD_DEPENDS+=	vera-ttf-[0-9]*:../../fonts/vera-ttf
 TOOL_DEPENDS+=	gettext-tools>=0.19:../../devel/gettext-tools
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LANGUAGES+=		c c++14
 USE_LIBTOOL=		yes
@@ -27,10 +29,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-alsatest
 CONFIGURE_ARGS+=	--disable-glibtest
-CONFIGURE_ARGS+=	--disable-gtktest
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-linux-input
-CONFIGURE_ARGS+=	--without-gs
 
 PKG_SYSCONFSUBDIR=	gimp/2.99
 PKGCONFIG_OVERRIDE=	gimp.pc.in
@@ -58,7 +58,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 _TOOLS_USE_PKGSRC.xgettext=	yes
 
 # Ensure we export symbols in the linked shared object.
-LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+#LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="bin"
@@ -105,9 +105,12 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36nb4
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

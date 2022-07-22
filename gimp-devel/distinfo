@@ -5,7 +5,3 @@ SHA512 (gimp-2.99.10.tar.bz2) = 898c1e1ffd2270ccc965db9a8263e04d95455535361b47f9
 Size (gimp-2.99.10.tar.bz2) = 26782056 bytes
 SHA1 (patch-aa) = e2b91db783beb4baa7d6344ac0b7d126ef3c3b19
 SHA1 (patch-ab) = 79a42760bdc9362861d9c11b363d21766b8c6412
-SHA1 (patch-app_core_gimpbrush-transform.cc) = 3bd3f69401ee7dabb53f7ebf533870ee9add856c
-SHA1 (patch-configure.ac) = c7e89bc9fd576eb95a9288eccea8959cbe1ee6de
-SHA1 (patch-plug-ins_common_file-mng.c) = 3f64ff0542d2b5524d1ceca8b2a41bd239958e8c
-SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = c424b1a8e345ec3d0763ac2cf1f8535da9e10797
