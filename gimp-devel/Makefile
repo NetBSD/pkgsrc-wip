@@ -36,6 +36,9 @@ PKG_SYSCONFSUBDIR=	gimp/2.99
 PKGCONFIG_OVERRIDE=	gimp.pc.in
 UNLIMIT_RESOURCES+=	datasize
 
+# https://gitlab.gnome.org/GNOME/gimp/-/issues/8377
+PKGSRC_USE_STACK_CHECK=	no
+
 # example files
 CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/extensions/org.gimp.extension.goat-exercises/*
 
