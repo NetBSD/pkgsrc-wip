@@ -9,8 +9,8 @@ Verify that package can be build with and without options:
 [X] Test option tcl
 [X] Test option x11
 
-[ ] Test with devel/doxygen
-[ ] Test with graphics/py-graphviz
-[ ] Test with lang/vala
+[X] Test with devel/doxygen
+[X] Test with graphics/py-graphviz
+[X] Test with lang/vala
 [-] Test with sysutils/openxenmanager
     Removed from pkgsrc in the meantime.
