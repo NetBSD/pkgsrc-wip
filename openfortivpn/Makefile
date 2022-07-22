@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/adrienverge/openfortivpn/
 COMMENT=	Client for PPP+SSL VPN tunnel services, compatible with Fortinet VPNs
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		aclocal autoconf automake gmake pkg-config awk
+USE_TOOLS+=		aclocal autoconf automake gmake pkg-config awk gsed
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 BUILD_DEFS+=		PKG_SYSCONFBASE
