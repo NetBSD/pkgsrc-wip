@@ -12,4 +12,5 @@ Verify that package can be build with and without options:
 [ ] Test with devel/doxygen
 [ ] Test with graphics/py-graphviz
 [ ] Test with lang/vala
-[ ] Test with sysutils/openxenmanager
+[-] Test with sysutils/openxenmanager
+    Removed from pkgsrc in the meantime.
