@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (geodiff/1.0.6.tar.gz) = 305f1c035953635b3ed0fd920871a6f638a65abe6fc3016fe5da667e40ae280d
+SHA512 (geodiff/1.0.6.tar.gz) = e91c189fd14434cb8b1975de52f986e54495a4cebde27c53ec5b4fef78ff880df3b329705b50a39ffec3c60bae62967e235fd8f60ed41d8505191184d02cae8f
+Size (geodiff/1.0.6.tar.gz) = 2282078 bytes
