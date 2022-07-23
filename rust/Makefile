@@ -71,7 +71,7 @@ MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 MAKE_ENV.SunOS+=	AR=gar
 
-UNLIMIT_RESOURCES+=	cputime datasize virtualsize
+UNLIMIT_RESOURCES+=	cputime stacksize datasize virtualsize
 
 TEST_TARGET=	check
 
