@@ -1,3 +1,4 @@
 @comment $NetBSD$
+man/man1/chkugenids.1
 sbin/chkugenids
 share/examples/chkugenids/04-NFCsetperm
