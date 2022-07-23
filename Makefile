@@ -418,6 +418,7 @@ SUBDIR+=	cherokee
 SUBDIR+=	chezmoi
 SUBDIR+=	chezscheme
 SUBDIR+=	chezscheme-racket
+SUBDIR+=        chkugenids
 SUBDIR+=	chntpw
 SUBDIR+=	choosefont
 SUBDIR+=	chora
