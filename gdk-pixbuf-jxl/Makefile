@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../graphics/libjxl/Makefile.common"
+.include "../../wip/libjxl/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lib/gdk-pixbuf-/g}
 COMMENT=	JpegXL GDK pixbuf loader
@@ -27,5 +27,5 @@ pre-configure:
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/gdk-pixbuf2/loaders.mk"
-.include "../../graphics/libjxl/buildlink3.mk"
+.include "../../wip/libjxl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

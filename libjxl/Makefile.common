@@ -1,0 +1,15 @@
+# $NetBSD$
+# used by wip/gdk-pixbuf-jxl/Makefile
+# used by wip/gimp-jxl/Makefile
+
+DISTNAME=	libjxl-0.6.1
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libjxl/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://jpegxl.info/
+LICENSE=	modified-bsd
+
+PATCHDIR?=	${.CURDIR}/../../wip/libjxl/patches
+DISTINFO_FILE?=	${.CURDIR}/../../wip/libjxl/distinfo

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-.include "../../graphics/libjxl/Makefile.common"
+.include "../../wip/libjxl/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lib/gimp-/g}
 COMMENT=	JpegXL Gimp plugin
@@ -15,5 +15,5 @@ CONFIGURE_DIRS=	plugins/gimp
 BUILD_DIRS=	plugins/gimp
 
 .include "../../graphics/gimp/buildlink3.mk"
-.include "../../graphics/libjxl/buildlink3.mk"
+.include "../../wip/libjxl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
