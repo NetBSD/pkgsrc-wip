@@ -20,6 +20,10 @@ REPLACE_BASH=	deps.sh
 PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl.pc.in
 PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 
+# TODO:
+# The dependencies installed using deps.sh should be packaged
+# and buildlink3ed instead:
+# lodepng, sjpeg, skcms
 pre-configure:
 	cd ${WRKSRC} && ./deps.sh
 
