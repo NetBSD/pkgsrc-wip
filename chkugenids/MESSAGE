@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD$
+
+chkugenids can be used with devpubd to adjust permissions of /dev/ugenN.EE
+entries. Sample script can be found in /usr/pkg/share/examples/chkugenids.
+
+You can start with :
+
+	cp /usr/pkg/share/examples/chkugenids/04-NFCsetperm \
+	/libexec/devpubd-hooks
+
+===========================================================================

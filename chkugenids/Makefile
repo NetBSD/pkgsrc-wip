@@ -1,0 +1,31 @@
+# $NetBSD$
+
+PROGNAME=	chkugenids
+VERS=		0.1
+
+DISTNAME=	${PROGNAME}-${VERS}
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=0xDRRB/}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+
+MAINTAINER=	lefinnois@lefinnois.net
+HOMEPAGE=	https://github.com/0xDRRB/chkugenids/
+COMMENT=	Command line tool to get info on USB device through /dev/ugenN.EE
+LICENSE=	2-clause-bsd
+
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+USE_LANGUAGES+=	c
+
+EGDIR=		${PREFIX}/share/examples/chkugenids
+
+INSTALLATION_DIRS=	sbin ${EGDIR}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PROGNAME} ${DESTDIR}/${PREFIX}/sbin/${PROGNAME}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/04-NFCsetperm ${DESTDIR}${EGDIR}/04-NFCsetperm
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,6 @@
+chkugenids is a little tool to get informations about USB devices from
+`/dev/ugenN.EE` (endpoint *EE* of device *N*).
+
+The main goal of this program is to display informations about USB generic
+device so you can use them with `devpubd` to setup symlinks, permissions,
+and so on.
