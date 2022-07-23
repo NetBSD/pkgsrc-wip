@@ -5,10 +5,10 @@
 #              Fri Jul 22 14:00:26 CDT 2022               #
 ###########################################################
 
-DISTNAME=	plasm-0.0.0.30
+DISTNAME=	plasm-0.0.0.32
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	cbbe98c8b32f6750f04014673399c94e93924eec
+GITHUB_TAG=	3d41cf97b685a2cf39930b75dbc47804661ab961
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/plasm
@@ -16,7 +16,7 @@ COMMENT=	Portable Assembler
 # Check this
 LICENSE=	2-clause-bsd
 
-DEPENDS=	papp:../../wip/papp
+DEPENDS=	papp>0:../../wip/papp
 
 USE_LANGUAGES=	c c++
 
