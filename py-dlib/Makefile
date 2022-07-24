@@ -15,6 +15,8 @@ USE_LANGUAGES+=	c c++
 CMAKE_ARGS+=	-B ${WRKSRC}/build
 BUILD_DIRS=	build
 
+DEPENDS+=	dlib-cpp>=19.24:../../wip/dlib-cpp
+
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
