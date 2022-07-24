@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-2.19.0
+DISTNAME=	pre_commit-2.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
