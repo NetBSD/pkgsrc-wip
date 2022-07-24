@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	dlib-19.24
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	http://dlib.net/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,10 @@ USE_LANGUAGES+=	c c++
 CMAKE_ARGS+=	-B ${WRKSRC}/build
 BUILD_DIRS=	build
 
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../wip/dlib-cpp/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
