@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	semgrep-0.60.0
+DISTNAME=	semgrep-0.106.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/semgrep/}
 
@@ -9,20 +9,33 @@ HOMEPAGE=	https://github.com/returntocorp/semgrep
 COMMENT=	Syntax-aware semantic code pattern search for many languages
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-attrs>=19.3.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.3:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-peewee>=3.14.4:../../databases/py-peewee
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16.10:../../devel/py-ruamel-yaml
-DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.46.1:../../misc/py-tqdm
-DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.2:../../textproc/py-wcmatch
-DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-attrs>=21.3:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-boltons>=21.0:../../devel/py-boltons
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click-option-group>=0.5:../../wip/py-click-option-group
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.0:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
+DEPENDS+=	${PYPKGPREFIX}-glom>=0.4.0:../../wip/py-glom
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.6:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-lsp-jsonrpc>=1.0.0:../../textproc/py-lsp-jsonrpc
+DEPENDS+=	${PYPKGPREFIX}-packaging>=21.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-peewee>=3.14:../../databases/py-peewee
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.22:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16.0:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.46:../../misc/py-tqdm
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.26:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.3:../../textproc/py-wcmatch
 DEPENDS+=	semgrep-core-${PKGVERSION_NOREV}{,nb[0-9]*}:../../wip/semgrep-core
 
 # Avoid to install binaries
 MAKE_ENV+=	SEMGREP_SKIP_BIN=yes
+
+SUBST_CLASSES+=			setuppyversions
+SUBST_STAGE.setuppyversions=	pre-configure
+SUBST_MESSAGE.setuppyversions=	Avoid too strict version requirements
+SUBST_FILES.setuppyversions=	setup.py
+SUBST_SED.setuppyversions+=	-E -e '/~=[0-9.]+",/ s/~=/>=/g'
 
 USE_LANGUAGES=	# none
 
