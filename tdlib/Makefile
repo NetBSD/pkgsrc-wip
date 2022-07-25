@@ -20,6 +20,7 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
