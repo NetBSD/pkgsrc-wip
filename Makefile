@@ -3548,6 +3548,7 @@ SUBDIR+=	py-cito
 SUBDIR+=	py-cityhash
 SUBDIR+=	py-cli
 SUBDIR+=	py-cli_helpers
+SUBDIR+=	py-click-option-group
 SUBDIR+=	py-clickatell
 SUBDIR+=	py-clics
 SUBDIR+=	py-clid
