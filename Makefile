@@ -3854,6 +3854,7 @@ SUBDIR+=	py-gist
 SUBDIR+=	py-git-code-debt
 SUBDIR+=	py-github3.py
 SUBDIR+=	py-glespy
+SUBDIR+=	py-glom
 SUBDIR+=	py-gmane
 SUBDIR+=	py-gmpy2
 SUBDIR+=	py-gnm
