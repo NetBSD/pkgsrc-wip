@@ -1,0 +1,16 @@
+$NetBSD$
+
+Avoid pipenv dependency.
+
+--- semgrep-core/src/core/ast/dune.orig	2022-07-25 09:57:31.003633884 +0000
++++ semgrep-core/src/core/ast/dune
+@@ -48,8 +48,7 @@
+   (action
+     (no-infer
+       (progn
+-        (run pipenv install)
+-        (run pipenv run python3 gen_lang.py)
++        (run python3 gen_lang.py)
+       )
+     )
+   )
