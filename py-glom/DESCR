@@ -1,0 +1,7 @@
+glom is a new approach to working with data in Python, featuring:
+
+ * Path-based access for nested structures
+ * Declarative data transformation using lightweight, Pythonic specifications
+ * Readable, meaningful error messages
+ * Built-in debugging features
+ * Plus, deep assignment, streaming, data validation, and more!
