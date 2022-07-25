@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.depends,v 1.5 2010/09/14 13:03:31 cheusov Exp $
-#
-
-DEPENDS+=	mplayer-share>=${MPLAYER_VERSION}:../../wip/mplayer-snapshot-share
-
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
