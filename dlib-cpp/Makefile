@@ -19,9 +19,11 @@ DOCSDIR=		${PREFIX}/share/doc/dlib
 INSTALLATION_DIRS+=	${DOCSDIR}
 
 post-install:
-	cd ${WRKSRC} && \
-	find ${WRKSRC}/docs -type f -exec \
-		${INSTALL_DATA} {} ${DESTDIR}${DOCSDIR} \;
+	cd ${WRKSRC}/docs && \
+	find . -type d -exec \
+		mkdir -p ${DESTDIR}${DOCSDIR}/{} \; && \
+	find . -type f -exec \
+		${INSTALL_DATA} {} ${DESTDIR}${DOCSDIR}/{} \;
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
