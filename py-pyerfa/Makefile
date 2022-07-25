@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
-DEPENDS+=	erfa>=2.0.0:../../wip/erfa
+DEPENDS+=	erfa>=2.0.0:../../math/erfa
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
