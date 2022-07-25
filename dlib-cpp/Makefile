@@ -15,6 +15,14 @@ USE_LANGUAGES+=	c c++
 CMAKE_ARGS+=	-B ${WRKSRC}/build
 BUILD_DIRS=	build
 
+DOCSDIR=		${PREFIX}/share/doc/dlib
+INSTALLATION_DIRS+=	${DOCSDIR}
+
+post-install:
+	cd ${WRKSRC} && \
+	find ${WRKSRC}/docs -type f -exec \
+		${INSTALL_DATA} {} ${DESTDIR}${DOCSDIR} \;
+
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
