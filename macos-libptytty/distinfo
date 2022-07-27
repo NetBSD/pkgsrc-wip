@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libptytty-2.0.tar.gz) = 9043deca5fe2cacba9bca94a42931dc133b487f4ba126207da4807cd0b8f353b
+SHA512 (libptytty-2.0.tar.gz) = 9cca5fddbcc4025c2bbe043e3367ac902d0024a34301258dafcf0de70935c055279d88227168d112d0e4c0dc37f1f49e1ea587bd6bddf0b9d92400657bc7be08
+Size (libptytty-2.0.tar.gz) = 45673 bytes

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/libptytty.h
+lib/libptytty.0.dylib
+lib/libptytty.dylib
+lib/pkgconfig/libptytty.pc
+man/man3/libptytty.3
