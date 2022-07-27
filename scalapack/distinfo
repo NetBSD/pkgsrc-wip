@@ -1,8 +1,10 @@
 $NetBSD$
 
-RMD160 (scalapack-2.1.0.tgz) = 4eee240e39bcfaad1c2a38657014e1a51b778340
-SHA512 (scalapack-2.1.0.tgz) = 0e77fb535ebcc28e2d97499ef4bd5161f76ca0ba4a3e308c26ce5071cfc4be4f3814262f3fb38f378ce0b5b31c0913432fea00a1e9e3f7717b853d1182bdf5b4
-Size (scalapack-2.1.0.tgz) = 5307441 bytes
-SHA1 (patch-CMakeLists.txt) = a826593cfbc0fe2cfbb87d4dfc2b342c1a45d0d6
-SHA1 (patch-gcc10fixfromgit) = a6ac951efdf93bfde597cf83ef75de8afb615d8c
-SHA1 (patch-scalapack.pc.in) = 53dd2eeba58462e8788e92f4684d943357799361
+BLAKE2s (scalapack-2.2.0.tgz) = deff6c2cbd5993fa07333191f223995bfcdf55d65d30089970b976a97b2d9ccf
+SHA512 (scalapack-2.2.0.tgz) = 1e6c69a4faab8165c273479ff8b63e98df6a7253cffc524b5700d0344c3f89c52c5bccc5d3a9a9bded4d9da50080123abd8340b75e1f92317e471c4375704999
+Size (scalapack-2.2.0.tgz) = 4769286 bytes
+SHA1 (patch-PR67-MPI-linking) = 704d77790bcf5d73203a8d7a86161230d650e23c
+SHA1 (patch-SRC_pdtrord.f) = 7c51c59c4f570020595904e964901e27ec45e2c4
+SHA1 (patch-SRC_pstrord.f) = 1ca9fd5d3520b5ecb030f3e07fc0f13f1bbc8a2d
+SHA1 (patch-SRC_pstrsen.f) = 5956f03bae7ad44861a9b7776a1cb7a8438483fb
+SHA1 (patch-scalapack.pc.in) = c6a2b9068b89ecdf2b26263117b37761fdf14808
