@@ -12,10 +12,13 @@ LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoreconf autoconf aclocal automake
 USE_LANGUAGES+=	c c++
 
 PKGCONFIG_OVERRIDE+=	libfreefare.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf --install
 
 .include "../../wip/libnfc/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
