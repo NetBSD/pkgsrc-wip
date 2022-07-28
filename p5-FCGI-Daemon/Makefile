@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGBASE=	FCGI-Daemon
-DISTNAME=	${PKGBASE}-0.20151226
+DISTNAME=	${PKGBASE}-0.20220206
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www perl5
@@ -14,9 +14,9 @@ LICENSE=	gnu-agpl-v3
 
 USE_TOOLS+=	perl:run
 
-DEPENDS+=	p5-FCGI>=0.71:../../www/p5-FCGI
+DEPENDS+=	p5-FCGI>=0.82:../../www/p5-FCGI
 DEPENDS+=	p5-BSD-Resource>=1.29:../../devel/p5-BSD-Resource
-DEPENDS+=	p5-FCGI-ProcManager>=0.18:../../www/p5-FCGI-ProcManager
+DEPENDS+=	p5-FCGI-ProcManager>=0.28:../../www/p5-FCGI-ProcManager
 
 FCGID_EG_DIR=	share/examples/fcgi-daemon
 FCGID_NGINX=	nginx/common.conf nginx/ikiwiki.conf nginx/sample.conf

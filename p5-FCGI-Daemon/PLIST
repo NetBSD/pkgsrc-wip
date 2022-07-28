@@ -1,7 +1,7 @@
 @comment $NetBSD$
-share/examples/rc.d/fcgi_daemon
+${PERL5_SUB_INSTALLVENDORLIB}/FCGI/Daemon.pm
+lib/perl5/vendor_perl/man/man3/FCGI::Daemon.3
 share/examples/fcgi-daemon/nginx/common.conf
 share/examples/fcgi-daemon/nginx/ikiwiki.conf
 share/examples/fcgi-daemon/nginx/sample.conf
-${PERL5_SUB_INSTALLVENDORLIB}/FCGI/Daemon.pm
-lib/perl5/vendor_perl/man/man3/FCGI::Daemon.3
+share/examples/rc.d/fcgi_daemon
