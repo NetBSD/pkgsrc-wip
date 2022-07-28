@@ -5,9 +5,9 @@ $NetBSD$
 3) Name the executables according to "the first encounter" or "the second encounter"
 4) Install the files in more reasonable places.
 
---- CMakeLists.txt.orig	2020-09-04 12:08:26.000000000 +0000
+--- CMakeLists.txt.orig	2022-07-28 19:12:44.000000000 +0000
 +++ CMakeLists.txt
-@@ -60,6 +60,31 @@ if(USE_SYSTEM_ZLIB)
+@@ -61,6 +61,31 @@ if(USE_SYSTEM_ZLIB)
      endif()
  endif()
  
@@ -39,7 +39,7 @@ $NetBSD$
  # RAKE! Where to install the binaries.
  if(CMAKE_INSTALL_PREFIX STREQUAL "/usr/local" OR CMAKE_INSTALL_PREFIX STREQUAL "") # Only works for linux since I don't
                                                                                     # know what default is for windows/macos/freebsd.
-@@ -75,6 +100,12 @@ endif()
+@@ -76,6 +101,12 @@ endif()
  if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
      SET(FREEBSD TRUE)
  endif()
@@ -52,7 +52,7 @@ $NetBSD$
  if(APPLE)
      SET(MACOSX TRUE)
  endif()
-@@ -180,7 +211,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_CO
+@@ -195,7 +226,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_CO
      		add_definitions(-D_FILE_OFFSET_BITS=64)
      		add_definitions(-D_LARGEFILE_SOURCE=1)
      		add_definitions(-DPRAGMA_ONCE=1)
@@ -61,7 +61,7 @@ $NetBSD$
      		set(CMAKE_SKIP_RPATH ON CACHE BOOL "Skip RPATH" FORCE)
      		add_definitions(-DPLATFORM_UNIX=1)
      		add_definitions(-DPLATFORM_FREEBSD=1)
-@@ -190,7 +221,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_CO
+@@ -205,7 +236,7 @@ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_CO
      		include_directories("/usr/local/include")
  	endif()
  	
@@ -70,7 +70,7 @@ $NetBSD$
  		add_compile_options(-pthread)
                  add_compile_options(-fsigned-char)
  	endif()
-@@ -272,8 +303,10 @@ option(TFE "Compile a The First Encounte
+@@ -287,8 +318,10 @@ option(TFE "Compile a The First Encounte
  if (TFE)
   add_definitions(-DFIRST_ENCOUNTER=1)
   set(MP "")
@@ -81,7 +81,7 @@ $NetBSD$
  endif()
  
  
-@@ -286,7 +319,7 @@ endif()
+@@ -301,7 +334,7 @@ endif()
  
  include_directories(
      .
@@ -90,18 +90,7 @@ $NetBSD$
  )
  if(USE_TREMOR)
  if(PANDORA)
-@@ -294,8 +327,8 @@ if(PANDORA)
- else()
-     # !!!Do something here!
- endif()
--else()
--    include_directories(External/libvorbis/include)
-+#else()
-+#    include_directories(External/libvorbis/include)
- endif()
- 
- # We build ECC, then use it to generate C++ code for the game entities...
-@@ -1001,6 +1034,9 @@ if(LINUX)
+@@ -992,6 +1025,9 @@ if(LINUX)
      target_link_libraries(ssam "m")
      target_link_libraries(ssam "dl")
      target_link_libraries(ssam "pthread")
@@ -111,7 +100,7 @@ $NetBSD$
      target_link_libraries(ssam ${SDL2_LIBRARY})
      target_link_libraries(ssam ${ZLIB_LIBRARIES})
      if(PANDORA)
-@@ -1016,10 +1052,13 @@ if(LINUX)
+@@ -1007,10 +1043,13 @@ if(LINUX)
      endif()
  endif()
  
@@ -126,7 +115,7 @@ $NetBSD$
      target_link_libraries(ssam ${SDL2_LIBRARY})
      target_link_libraries(ssam ${ZLIB_LIBRARIES})
      if(BUILD_DEDICATED_SERVER)
-@@ -1031,9 +1070,7 @@ if(FREEBSD)
+@@ -1022,9 +1061,7 @@ if(FREEBSD)
      endif()
  endif()
  
@@ -137,7 +126,7 @@ $NetBSD$
  
  # RAKE! Install Section.
  if(DEBUG) # RAKE! Will this work with TFE?
-@@ -1048,8 +1085,8 @@ if(DEBUG) # RAKE! Will this work with TF
+@@ -1039,8 +1076,8 @@ if(DEBUG) # RAKE! Will this work with TF
      endif()
  else()
      install(TARGETS ssam ${SHADERSLIB} ${GAMEMPLIB} ${ENTITIESMPLIB}
@@ -148,7 +137,7 @@ $NetBSD$
              PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_WRITE GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
      if(BUILD_DEDICATED_SERVER)
          install(TARGETS SeriousSamDedicated
-@@ -1062,7 +1099,7 @@ endif()
+@@ -1053,7 +1090,7 @@ endif()
  # and SE1_10.gro needs to be installed to Games root dir.
  if(NOT LOCAL_INSTALL)
      install(FILES ${CMAKE_SOURCE_DIR}/../SE1_10.gro
