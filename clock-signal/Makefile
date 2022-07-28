@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	clock-signal-20220417
+DISTNAME=	clock-signal-20220723
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TomHarte/}
 GITHUB_PROJECT=	CLK
-GITHUB_TAG=	2022-04-17
+GITHUB_TAG=	2022-07-23
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/TomHarte/CLK
