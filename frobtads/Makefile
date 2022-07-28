@@ -1,24 +1,18 @@
 # $NetBSD: Makefile,v 1.1 2015/08/17 21:11:24 yhardy Exp $
 
-GITHUB_PROJECT=	frobtads
-DISTNAME=	${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-1.2.4
+DISTNAME=	frobtads-2.0
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=realnc/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=realnc/frobtads/releases/download/v2.0/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tads.org/
 COMMENT=	Portable TADS toolkit
 #LICENSE=	tads3
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++11
-USE_TOOLS+=	autoconf automake libtool
+USE_CMAKE=	YES
+USE_LANGUAGES=	c c++14
 
-pre-configure:
-	cd ${WRKSRC} && ${SH} bootstrap
-
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

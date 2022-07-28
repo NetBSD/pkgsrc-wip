@@ -3,6 +3,12 @@ bin/frob
 bin/t3make
 bin/tadsc
 bin/tadsrsc
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/BUGS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/THANKS
 share/frobtads/tads2/adv.t
 share/frobtads/tads2/gameinfo.t
 share/frobtads/tads2/std.t
@@ -86,6 +92,8 @@ share/frobtads/tads3/lib/adv3/pov.t
 share/frobtads/tads3/lib/adv3/precond.t
 share/frobtads/tads3/lib/adv3/report.t
 share/frobtads/tads3/lib/adv3/resolver.t
+share/frobtads/tads3/lib/adv3/samples/starta3.t
+share/frobtads/tads3/lib/adv3/samples/starti3.t
 share/frobtads/tads3/lib/adv3/score.t
 share/frobtads/tads3/lib/adv3/sense.t
 share/frobtads/tads3/lib/adv3/settings.t
@@ -114,6 +122,7 @@ share/frobtads/tads3/lib/gameinfo.t
 share/frobtads/tads3/lib/gramprod.t
 share/frobtads/tads3/lib/multmeth.t
 share/frobtads/tads3/lib/reflect.t
+share/frobtads/tads3/lib/samples/startB3.t
 share/frobtads/tads3/lib/system.tl
 share/frobtads/tads3/lib/tadsnet.t
 share/frobtads/tads3/lib/tok.t
