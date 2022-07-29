@@ -1,0 +1,3 @@
+This is an experimental package which (ultimately) would allow a user to
+install the tools to build NetBSD itself by downloading a precompiled
+package.
