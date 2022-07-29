@@ -1,14 +1,9 @@
-   Compiling zbus v1.9.1
-error[E0432]: unresolved import `nix::sys::socket::sockopt::PeerCredentials`
-   --> /scratch/wip/pika-backup/work/vendor/zbus-1.9.1/src/connection.rs:163:44
-    |
-163 |         use nix::sys::socket::{getsockopt, sockopt::PeerCredentials};
-    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ no `PeerCredentials` in `sys::socket::sockopt`
+  --- localename.o ---
+  In file included from /tmp/ted7-0/gettext/gettext-runtime/gnulib-lib/localename.c:33:
+  ./locale.h:687:11: fatal error: setlocale_null.h: No such file or directory
+    687 | # include "setlocale_null.h"
+        |           ^~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  *** [localename.o] Error code 1
 
-error[E0432]: unresolved import `nix::sys::socket::sockopt::PeerCredentials`
-   --> /scratch/wip/pika-backup/work/vendor/zbus-1.9.1/src/azync/connection.rs:180:44
-    |
-180 |         use nix::sys::socket::{getsockopt, sockopt::PeerCredentials};
-    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^ no `PeerCredentials` in `sys::socket::sockopt`
-
-For more information about this error, try `rustc --explain E0432`.
+  make[6]: stopped in /tmp/ted7-0/build/gettext-runtime/gnulib-lib
