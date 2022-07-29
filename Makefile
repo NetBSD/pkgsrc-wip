@@ -2737,7 +2737,6 @@ SUBDIR+=	openjazz
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
-SUBDIR+=	openmpi163
 SUBDIR+=	openmx-openmpi
 SUBDIR+=	opennurbs
 SUBDIR+=	openra
