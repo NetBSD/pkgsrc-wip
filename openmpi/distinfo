@@ -1,13 +1,12 @@
 $NetBSD$
 
-RMD160 (openmpi-4.0.0.tar.bz2) = e7833fdac28306e23e0fc878c0715e860aa80f97
-SHA512 (openmpi-4.0.0.tar.bz2) = 978097dcbb16df2a616dcbbef9536fed0f7be40914daa8f927882d91bdda9265e54334fc12aeef49b41073d8782321b5611a7e9c71182258a45bca5f640e927b
-Size (openmpi-4.0.0.tar.bz2) = 9812193 bytes
+BLAKE2s (openmpi-4.1.4.tar.bz2) = 0d98f1b9404f2a4328288c01d614421ca0a409f7e8550164664a5d692209b4b4
+SHA512 (openmpi-4.1.4.tar.bz2) = c70a92c9b16b8c76a871183f9b180d60861186e64140da897d206d53bc06213f31ea93b31734645f580f4bf28dda5605d85dbce2417e4596955384d961bed653
+Size (openmpi-4.1.4.tar.bz2) = 10042839 bytes
 SHA1 (patch-aj) = e50a1843fa512b1957faea952f01da77e3396543
 SHA1 (patch-ak) = 1dba883fb533df57f5869b743e499a3117339529
 SHA1 (patch-config_opal__setup__wrappers.m4) = c3fe3cb5ff7cedcb5c847f25eea129d4299dd5d2
-SHA1 (patch-configure) = fa89816deef508726f960baf1c01a7a66fd48d11
+SHA1 (patch-configure) = bb6373289ffa2beabccedb6ead679367c85dbe1e
 SHA1 (patch-ompi_mca_io_romio321_romio_configure) = 1adf4e3fff2ece5abba7c5909f006e8345917b9d
+SHA1 (patch-ompi_mca_sharedfp_sm_sharedfp__sm.c) = 7ce9147662864be5ae072166231d65189cb1bed2
 SHA1 (patch-ompi_mpi_java_java_Makefile.in) = bd61f02f56e03af9799d2ba86d66c1ded35f62f4
-SHA1 (patch-opal_mca_pmix_pmix3x_pmix_configure) = 3f8fdb36b3a5da1335d44ac467b2516c29550f14
-SHA1 (patch-opal_tools_wrappers_opal__wrapper.c) = b566990131b1a0ea815961610d21263a8764bce7

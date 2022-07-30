@@ -8,6 +8,9 @@ OPENMPI_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.openmpi+=	openmpi>=1.5.1
 BUILDLINK_PKGSRCDIR.openmpi?=	../../parallel/openmpi
 
+MPI_SUBPREFIX=  openmpi4
+MPI_PREFIX=     ${PREFIX}/${MPI_SUBPREFIX}
+
 .include "../../parallel/hwloc/buildlink3.mk"
 .endif # OPENMPI_BUILDLINK3_MK
 

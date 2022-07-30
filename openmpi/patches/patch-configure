@@ -1,19 +1,64 @@
 $NetBSD$
 
-# POSIX sh compat
+# Portability of test command
 
---- configure.orig	2019-02-05 14:06:54.253381573 +0000
+--- configure.orig	2022-07-29 20:55:26.095390777 +0000
 +++ configure
-@@ -164141,7 +164141,7 @@ else
- fi
-     { $as_echo "$as_me:${as_lineno-$LINENO}: checking if want to install standalone libpmix" >&5
- $as_echo_n "checking if want to install standalone libpmix... " >&6; }
--    if test "$enable_install_libpmix" == "yes"; then :
-+    if test "$enable_install_libpmix" = "yes"; then :
-   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
- $as_echo "yes" >&6; }
+@@ -156118,7 +156118,7 @@ $as_echo_n "checking if memory patcher s
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $opal_memory_patcher_happy" >&5
+ $as_echo "$opal_memory_patcher_happy" >&6; }
+ 
+-    if test "$opal_memory_patcher_happy" == "yes"; then :
++    if test "$opal_memory_patcher_happy" = "yes"; then :
+ 
+         for ac_func in __curbrk
+ do :
+@@ -338377,7 +338377,7 @@ cat >>confdefs.h <<_ACEOF
+ #define OMPI_MCA_OP_HAVE_SSE3 $op_sse3_support
+ _ACEOF
+ 
+-     if test "$op_avx512_support" == "1"; then
++     if test "$op_avx512_support" = "1"; then
+   MCA_BUILD_ompi_op_has_avx512_support_TRUE=
+   MCA_BUILD_ompi_op_has_avx512_support_FALSE='#'
  else
-@@ -340177,7 +340177,7 @@ if test "${with_ompi_pmix_rte+set}" = se
+@@ -338385,7 +338385,7 @@ else
+   MCA_BUILD_ompi_op_has_avx512_support_FALSE=
+ fi
+ 
+-     if test "$op_avx2_support" == "1"; then
++     if test "$op_avx2_support" = "1"; then
+   MCA_BUILD_ompi_op_has_avx2_support_TRUE=
+   MCA_BUILD_ompi_op_has_avx2_support_FALSE='#'
+ else
+@@ -338393,7 +338393,7 @@ else
+   MCA_BUILD_ompi_op_has_avx2_support_FALSE=
+ fi
+ 
+-     if test "$op_avx_support" == "1"; then
++     if test "$op_avx_support" = "1"; then
+   MCA_BUILD_ompi_op_has_avx_support_TRUE=
+   MCA_BUILD_ompi_op_has_avx_support_FALSE='#'
+ else
+@@ -338401,7 +338401,7 @@ else
+   MCA_BUILD_ompi_op_has_avx_support_FALSE=
+ fi
+ 
+-     if test "$op_sse41_support" == "1"; then
++     if test "$op_sse41_support" = "1"; then
+   MCA_BUILD_ompi_op_has_sse41_support_TRUE=
+   MCA_BUILD_ompi_op_has_sse41_support_FALSE='#'
+ else
+@@ -338409,7 +338409,7 @@ else
+   MCA_BUILD_ompi_op_has_sse41_support_FALSE=
+ fi
+ 
+-     if test "$op_sse3_support" == "1"; then
++     if test "$op_sse3_support" = "1"; then
+   MCA_BUILD_ompi_op_has_sse3_support_TRUE=
+   MCA_BUILD_ompi_op_has_sse3_support_FALSE='#'
+ else
+@@ -361527,7 +361527,7 @@ if test "${with_ompi_pmix_rte+set}" = se
    withval=$with_ompi_pmix_rte;
  fi
  
