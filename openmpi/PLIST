@@ -123,7 +123,7 @@ openmpi4/lib/openmpi/mca_pmix_pmix3x.la
 openmpi4/lib/openmpi/mca_pml_cm.la
 openmpi4/lib/openmpi/mca_pml_monitoring.la
 openmpi4/lib/openmpi/mca_pml_ob1.la
-openmpi4/lib/openmpi/mca_pstat_test.la
+openmpi4/lib/openmpi/mca_pstat_linux.la
 openmpi4/lib/openmpi/mca_ras_simulator.la
 openmpi4/lib/openmpi/mca_rcache_grdma.la
 openmpi4/lib/openmpi/mca_reachable_weighted.la
@@ -172,6 +172,7 @@ openmpi4/lib/pmix/mca_bfrops_v20.la
 openmpi4/lib/pmix/mca_bfrops_v21.la
 openmpi4/lib/pmix/mca_bfrops_v3.la
 openmpi4/lib/pmix/mca_gds_ds12.la
+openmpi4/lib/pmix/mca_gds_ds21.la
 openmpi4/lib/pmix/mca_gds_hash.la
 openmpi4/lib/pmix/mca_pcompress_zlib.la
 openmpi4/lib/pmix/mca_plog_default.la
@@ -685,6 +686,7 @@ openmpi4/share/openmpi/help-opal-runtime.txt
 openmpi4/share/openmpi/help-opal-shmem-mmap.txt
 openmpi4/share/openmpi/help-opal-shmem-posix.txt
 openmpi4/share/openmpi/help-opal-shmem-sysv.txt
+openmpi4/share/openmpi/help-opal-timer-linux.txt
 openmpi4/share/openmpi/help-opal-util.txt
 openmpi4/share/openmpi/help-opal-wrapper.txt
 openmpi4/share/openmpi/help-opal_info.txt
