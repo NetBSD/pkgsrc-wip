@@ -10,3 +10,4 @@ SHA1 (patch-configure) = bb6373289ffa2beabccedb6ead679367c85dbe1e
 SHA1 (patch-ompi_mca_io_romio321_romio_configure) = 1adf4e3fff2ece5abba7c5909f006e8345917b9d
 SHA1 (patch-ompi_mca_sharedfp_sm_sharedfp__sm.c) = 7ce9147662864be5ae072166231d65189cb1bed2
 SHA1 (patch-ompi_mpi_java_java_Makefile.in) = bd61f02f56e03af9799d2ba86d66c1ded35f62f4
+SHA1 (patch-opal_tools_wrappers_opal__wrapper.c) = c21620ceab6aff220e6a4b74ce4929ff0d1c9885
