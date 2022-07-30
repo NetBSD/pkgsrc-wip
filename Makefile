@@ -130,6 +130,7 @@ SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	aldumb
+SUBDIR+=	alertmanager
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-lib-git
