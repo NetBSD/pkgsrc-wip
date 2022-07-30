@@ -50,6 +50,7 @@ man/man3/dsv_skip_rest_of_line.3
 man/man3/ffclose.3
 man/man3/ffdopen.3
 man/man3/ffgetc.3
+man/man3/ffgets.3
 man/man3/ffopen.3
 man/man3/ffpclose.3
 man/man3/ffpopen.3
