@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (fastcluster-1.2.6.tar.gz) = 150ac6c9e3e5e4886afea99250c707b08220822c7a3ad75a3a5123ed3286c7bb
+SHA512 (fastcluster-1.2.6.tar.gz) = 94a11ddd80fe219a91f1713230decfde761cd745a6ce0782e5cc0ab7d9818855d031be8c79f97256f0266fd6992a9fa4b0f5e7a30cb42387810fd8baff2a2135
+Size (fastcluster-1.2.6.tar.gz) = 173773 bytes
+SHA1 (patch-tests_test.py) = e46484e3c35b1e3d31828fd58db27fa995fa19ea
+SHA1 (patch-tests_vectortest.py) = 6f90acef713f1f9300cef22f26b22eb7b2fcbbc6

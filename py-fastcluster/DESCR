@@ -1,0 +1,2 @@
+This library provides Python functions for hierarchical clustering.
+It generates hierarchical clusters from distance matrices or from vector data.
