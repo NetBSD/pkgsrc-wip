@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2018/08/22 09:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2022/07/27 14:28:32 wiz Exp $
 
 DISTNAME=	openmpi-4.1.4
 CATEGORIES=	parallel
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.open-mpi.org/
-COMMENT=	Open source implementation
+COMMENT=	Open source MPI-3.1 implementation
 LICENSE=	modified-bsd
 
 CONFLICTS=	mpich-[0-9]*
