@@ -1654,6 +1654,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/hierarchy.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/hierarchy.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/icons.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/icons.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/inline.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/inline.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/let-alist.el.gz
@@ -2858,8 +2860,6 @@ share/emacs/${PKGVERSION}/lisp/net/pop3.el.gz
 share/emacs/${PKGVERSION}/lisp/net/pop3.elc
 share/emacs/${PKGVERSION}/lisp/net/puny.el.gz
 share/emacs/${PKGVERSION}/lisp/net/puny.elc
-share/emacs/${PKGVERSION}/lisp/net/quickurl.el.gz
-share/emacs/${PKGVERSION}/lisp/net/quickurl.elc
 share/emacs/${PKGVERSION}/lisp/net/rcirc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rcirc.elc
 share/emacs/${PKGVERSION}/lisp/net/rfc2104.el.gz
@@ -3007,8 +3007,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/eieio-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/eieio-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/eudcb-ph.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/gs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/gulp.el.gz
@@ -3023,8 +3021,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.el.gz
@@ -3050,6 +3046,10 @@ share/emacs/${PKGVERSION}/lisp/obsolete/pgg-pgp5.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-pgp5.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/ps-def.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/ps-def.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/quickurl.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/quickurl.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rfc2368.el.gz
@@ -3591,8 +3591,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/xscheme.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/xscheme.elc
 share/emacs/${PKGVERSION}/lisp/ps-bdf.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-bdf.elc
-share/emacs/${PKGVERSION}/lisp/ps-def.el.gz
-share/emacs/${PKGVERSION}/lisp/ps-def.elc
 share/emacs/${PKGVERSION}/lisp/ps-mule.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-mule.elc
 share/emacs/${PKGVERSION}/lisp/ps-print-loaddefs.el
