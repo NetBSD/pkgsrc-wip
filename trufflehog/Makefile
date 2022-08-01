@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	trufflehog-3.6.9
+DISTNAME=	trufflehog-3.6.11
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trufflesecurity/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
