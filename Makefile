@@ -480,6 +480,7 @@ SUBDIR+=	cmetrics
 SUBDIR+=	coccigrep
 SUBDIR+=	coccinelle
 SUBDIR+=	cockatrice
+SUBDIR+=	cockatrice-server
 SUBDIR+=	cockroach
 SUBDIR+=	collectd-unbound
 SUBDIR+=	colm-devel
