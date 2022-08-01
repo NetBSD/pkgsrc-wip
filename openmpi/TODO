@@ -1,0 +1,26 @@
+- Update API/ABI depends in buildlink3.mk; seems like it can't be right.
+
+- Explain if this is to update openmpi, or to be openmpi4.  I assume
+  the former, given the wip name.
+
+- Explain if fortran is an option or not.  USE_LANGUAGES has fortran
+  (which 1.10.7 didn't), but there's still an f90 option.  Perhaps the
+  base openmpi always needs fortran to build, but one only can use it
+  with fortran if the option is on?
+
+- Explain if the subprefix scheme depend on other MPI impls adopting
+  it.  Or is it just that one can install one non-prefixed, or N
+  prefixed, or at most one non-prefixed?
+
+- PLIST error on NetBDS 9:
+    => Checking file-check results for openmpi-4.1.4
+    ERROR: ************************************************************
+    ERROR: The following files are in the PLIST but not in /tmp/work/wip/openmpi/work/.destdir/usr/pkg:
+    ERROR:         /tmp/work/wip/openmpi/work/.destdir/usr/pkg/openmpi4/lib/openmpi/mca_pstat_linux.la
+    ERROR:         /tmp/work/wip/openmpi/work/.destdir/usr/pkg/openmpi4/lib/pmix/mca_gds_ds21.la
+    ERROR:         /tmp/work/wip/openmpi/work/.destdir/usr/pkg/openmpi4/share/openmpi/help-opal-timer-linux.txt
+    ERROR: ************************************************************
+    ERROR: The following files are in /tmp/work/wip/openmpi/work/.destdir/usr/pkg but not in the PLIST:
+    ERROR:         /tmp/work/wip/openmpi/work/.destdir/usr/pkg/openmpi4/lib/openmpi/mca_pstat_test.a
+    ERROR:         /tmp/work/wip/openmpi/work/.destdir/usr/pkg/openmpi4/lib/openmpi/mca_pstat_test.la
+    ERROR:         /tmp/work/wip/openmpi/work/.destdir/usr/pkg/openmpi4/lib/openmpi/mca_pstat_test.so
