@@ -479,6 +479,7 @@ SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	coccigrep
 SUBDIR+=	coccinelle
+SUBDIR+=	cockatrice
 SUBDIR+=	cockroach
 SUBDIR+=	collectd-unbound
 SUBDIR+=	colm-devel
