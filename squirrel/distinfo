@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (squirrel_3_1_stable.tar.gz) = 0eca28b9390548587bb819d5ca24c36be266f881
-SHA512 (squirrel_3_1_stable.tar.gz) = 0f6d3e0addadd8facec86b95ca4dff3cd27b3807adb0c623fa634b17e941f0916cb295d9ae0229380da73162142d7a2bbe8bf5b93d2676c36b122084cfae2776
-Size (squirrel_3_1_stable.tar.gz) = 616961 bytes
+RMD160 (squirrel_3_2_stable.tar.gz) = 413d4360909a96eee4af053e426d7e21cb5a6565
+SHA512 (squirrel_3_2_stable.tar.gz) = e488ccc07b851e1707f3fde923f691747b18dc2fcc4748d2a68f2590ab84a3c0db647c8ac9ee775796984d2302a3d3686459556ea0c49a0b96b1354fcb8a6c74
+Size (squirrel_3_2_stable.tar.gz) = 620486 bytes

@@ -1,8 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	squirrel-${VERSION}
-DISTNAME=	squirrel_${VERSION:S/./_/g}_stable
-VERSION=	3.1
+PKGNAME=	squirrel-3.2
+DISTNAME=	squirrel_${PKGVERSION_NOREV:S/./_/g}_stable
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrel/}
 
@@ -30,4 +29,3 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/sq ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
-.include "../../mk/fetch/sites.mk"
