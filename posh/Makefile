@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	posh_0.13.1
+DISTNAME=	posh_0.14.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
@@ -17,7 +17,7 @@ USE_TOOLS+=	perl autoconf automake
 GNU_CONFIGURE=	YES
 
 PKG_SHELL=		bin/posh
-WRKSRC=			${WRKDIR}/posh
+WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/}
 INSTALLATION_DIRS=	share/doc/posh
 
 TEST_TARGET=	check
