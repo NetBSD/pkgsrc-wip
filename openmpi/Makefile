@@ -90,7 +90,7 @@ REPLACE_PERL=	ompi/tools/wrappers/mpijavac.pl.in
 REPLACE_PERL+=	ompi/mca/common/monitoring/*.pl
 
 post-install:
-	echo "Move files in etc to examples and fix PLIST!"
+	${ECHO} "Move files in etc to examples and fix PLIST!"
 
 # Some people want pkgsrc to support multiple versions of MPI at once,
 # but this is not the standard approach.   This logic, or perhaps extracting
