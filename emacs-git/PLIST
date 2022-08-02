@@ -3074,6 +3074,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/uce.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/uce.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/url-dired.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/url-dired.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-arch.el.gz
@@ -3888,8 +3890,6 @@ share/emacs/${PKGVERSION}/lisp/url/url-cookie.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-cookie.elc
 share/emacs/${PKGVERSION}/lisp/url/url-dav.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-dav.elc
-share/emacs/${PKGVERSION}/lisp/url/url-dired.el.gz
-share/emacs/${PKGVERSION}/lisp/url/url-dired.elc
 share/emacs/${PKGVERSION}/lisp/url/url-domsuf.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-domsuf.elc
 share/emacs/${PKGVERSION}/lisp/url/url-expand.el.gz
