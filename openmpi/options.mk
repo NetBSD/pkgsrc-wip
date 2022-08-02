@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS+=	f90
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
-PLIST_VARS+=		f08 f90 java
+PLIST_VARS+=		f08 f90 java sge
 
 .if !empty(PKG_OPTIONS:Mf90)
 USE_LANGUAGES+=		fortran
@@ -32,4 +32,6 @@ PLIST.java=		yes
 CONFIGURE_ARGS+=	--disable-mpi-java
 .endif
 
+# \todo Keep sge, or add to COMMIT_MSG an explanation of why it is
+# dropped.
 CONFIGURE_ARGS+=	--without-sge

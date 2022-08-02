@@ -22,7 +22,9 @@ CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=${BUILDLINK_PREFIX.libltdl}
 CONFIGURE_ARGS+=	--with-hwloc=${BUILDLINK_PREFIX.hwloc}
+.if defined(PKGSRC_USE_MPI_SUBPREFIX)
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${MPI_PREFIX}/lib ${LINKER_RPATH_FLAG}${MPI_PREFIX}/lib"
+.endif
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 LIBTOOL_OVERRIDE=	libtool \
 			ompi/contrib/vt/vt/extlib/otf/libtool \
@@ -39,6 +41,10 @@ TEST_TARGET=	check
 
 PLIST_VARS+=	linux loadleveler oshmem pstattest shm
 PLIST_VARS+=	ignoretkr noignoretkr
+
+# \todo There are no PLIST entries with PLIST.shm
+
+# \todo ignoretkr is not making sense
 
 .if ${OPSYS} == "Linux"
 PLIST.shm=		yes
@@ -62,11 +68,17 @@ PLIST.noignoretkr=	yes
 REPLACE_PERL=	ompi/tools/wrappers/mpijavac.pl.in
 REPLACE_PERL+=	ompi/mca/common/monitoring/*.pl
 
-# In HPC, we must have multiple implementations and multiple versions of
-# core tools like MPI in the same tree.  Some programs will require openmp3
-# while others will need 4, while still others will need mpich.
+# Some people want pkgsrc to support multiple versions of MPI at once,
+# but this is not the standard approach.   This logic, or perhaps extracting
+# the variable from the built package, is needed in buildlink3.mk.
+.if defined(PKGSRC_USE_MPI_SUBPREFIX)
 MPI_SUBPREFIX=	openmpi4
 MPI_PREFIX=	${PREFIX}/${MPI_SUBPREFIX}
+# \todo Support this in PLIST.
+.else
+MPI_SUBPREFIX=
+MPI_PREFIX=	${PREFIX}
+.endif
 
 #LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 #.include "../../devel/libltdl/convenience.mk" # for "test" target to work
