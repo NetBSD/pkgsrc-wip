@@ -1,14 +1,14 @@
 This is a candidate to replace the contents of parallel/openmpi.
 
-- Update API/ABI depends in buildlink3.mk; seems like it can't be right.
+- f90 is a default-on option, which seems right.  However fortran was
+  unconditionally in USE_LANGUAGES.  Test build with f90 off.
 
-- f90 is a default-on option, which seems right.  However fortran is
-  unconditionally in USE_LANGUAGES.  Either make it condition or
-  explain why.
+- Get consensus on lack of subprefix. 
 
-- Explain if the subprefix scheme depend on other MPI impls adopting
-  it.  Or is it just that one can install one non-prefixed, or N
-  prefixed, or at most one non-prefixed?
+- If not, explain if the subprefix scheme depend on other MPI impls
+  adopting it.  Or is it just that one can install one non-prefixed,
+  or N prefixed, or at most one non-prefixed?
 
-- PLIST errors, especially PLIST.ignoretkr related
+- PLIST errors, especially PLIST.ignoretkr related.
 
+- There are two files in etc which should be moved and be CONF_FILES.

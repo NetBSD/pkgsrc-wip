@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 CONFLICTS=	mpich-[0-9]*
 
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run bash:run
 GNU_CONFIGURE=		yes
@@ -39,8 +39,23 @@ BUILDLINK_TRANSFORM=	rm:-fopenmp
 
 TEST_TARGET=	check
 
-PLIST_VARS+=	linux loadleveler oshmem pstattest shm
-PLIST_VARS+=	ignoretkr noignoretkr
+# openmpi has a large number of build options, and we must figure out
+# what is going to be discovered and enabled.  First, we describe each
+# PLIST var.
+
+# Unsurprisingly, files that are only produced on GNU/Linux systems.
+PLIST_VARS+=	linux
+# This controls if a single library is built, apparently only on Linux and AIX.
+PLIST_VARS+=	loadleveler
+# True if OpenSHMEM is enabled, perhaps currently only on Linux.
+PLIST_VARS+=	oshmem
+# \todo Explain.  Apparently built if !Linux.
+PLIST_VARS+=	pstattest
+# \todo Explain.  Not used in PLIST.
+PLIST_VARS+=	shm
+# \todo Explain.
+PLIST_VARS+=	ignoretkr
+PLIST_VARS+=	noignoretkr
 
 # \todo There are no PLIST entries with PLIST.shm
 
@@ -51,15 +66,21 @@ PLIST.shm=		yes
 PLIST.linux=		yes
 PLIST.loadleveler=	yes
 PLIST.oshmem=		yes
-PLIST.ignoretkr=	yes
 .elif ${OPSYS} == "AIX"
 PLIST.loadleveler=	yes
 .elif ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || \
     (${OPSYS} == "NetBSD" && exists(/var/shm))
 PLIST.shm=		yes
 .endif
+
 .if ${OPSYS} != "Linux"
 PLIST.pstattest=	yes
+.endif
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+PLIST.ignoretkr=	yes
+.else
+# \todo Explain why on Darwin we don't set one of them.
 .  if ${OPSYS} != "Darwin"
 PLIST.noignoretkr=	yes
 .  endif
@@ -67,6 +88,9 @@ PLIST.noignoretkr=	yes
 
 REPLACE_PERL=	ompi/tools/wrappers/mpijavac.pl.in
 REPLACE_PERL+=	ompi/mca/common/monitoring/*.pl
+
+post-install:
+	echo "Move files in etc to examples and fix PLIST!"
 
 # Some people want pkgsrc to support multiple versions of MPI at once,
 # but this is not the standard approach.   This logic, or perhaps extracting

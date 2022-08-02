@@ -29,6 +29,8 @@ bin/profile2mat.pl
 ${PLIST.oshmem}bin/shmemcc
 ${PLIST.oshmem}bin/shmemfort
 ${PLIST.oshmem}bin/shmemrun
+etc/openmpi-default-hostfile
+etc/pmix-mca-params.conf
 include/mpi-ext.h
 include/mpi.h
 include/mpi_portable_platform.h

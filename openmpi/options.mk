@@ -16,10 +16,11 @@ PLIST_VARS+=		f08 f90 java sge
 USE_LANGUAGES+=		fortran
 GCC_REQD+=		4.7
 CONFIGURE_ARGS+=	--enable-mpi-fortran=yes
+# Enabling fortran builds for Fortran 90, and also for Fortran 08 if
+# the toolchain is good enough.  In 2022, start by assuming that
+# USE_LANGUAGES=fortran gets us a sufficiently modern compiler.
 PLIST.f90=		yes
-.  if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
 PLIST.f08=		yes
-.  endif
 .else
 CONFIGURE_ARGS+=	--enable-mpi-fortran=no
 .endif
