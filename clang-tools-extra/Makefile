@@ -22,6 +22,8 @@ REPLACE_PYTHON+=	tools/extra/clang-include-fixer/find-all-symbols/tool/run-find-
 REPLACE_PYTHON+=	tools/extra/clang-tidy/tool/clang-tidy-diff.py
 REPLACE_PYTHON+=	tools/extra/clang-tidy/tool/run-clang-tidy.py
 
+BUILDLINK_TRANSFORM.SunOS+=     rm:-Wl,-Bsymbolic-functions
+
 .PHONY: inject-clang-tools
 post-extract: inject-clang-tools
 inject-clang-tools:
