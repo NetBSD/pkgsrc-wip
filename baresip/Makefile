@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.2 2014/09/05 08:06:00 thomasklausner Exp $
 
-DISTNAME=	baresip-2.5.1
+DISTNAME=	baresip-2.6.0
 CATEGORIES=	net audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -55,7 +55,6 @@ MAKE_FLAGS+=	USE_STDIO=yes
 
 MAKE_FLAGS+=	LFLAGS="${LFLAGS}"
 
-.include "../../audio/gsm/buildlink3.mk"
 .include "../../comms/spandsp/buildlink3.mk"
 .include "../../wip/libre/buildlink3.mk"
 .include "../../wip/librem/buildlink3.mk"
