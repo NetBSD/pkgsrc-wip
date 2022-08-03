@@ -5856,6 +5856,7 @@ SUBDIR+=	velero
 SUBDIR+=	verbiste
 SUBDIR+=	vgo
 SUBDIR+=	vhdtool-git
+SUBDIR+=	video-trimmer
 SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
 SUBDIR+=	viewer

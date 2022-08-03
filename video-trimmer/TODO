@@ -1,0 +1,48 @@
+The following warnings were emitted during compilation:
+
+warning: `"/scratch/wip/video-trimmer/work/.tools/bin/pkg-config" "--libs" "--cflags" "gtk4-wayland" "gtk4-wayland >= 4.0.0"` did not exit successfully: exit status: 1
+
+error: failed to run custom build command for `gdk4-wayland-sys v0.4.2`
+
+Caused by:
+  process didn't exit successfully: `/scratch/wip/video-trimmer/work/video-trimmer-v0.7.1/output/target/release/build/gdk4-wayland-sys-e95c58ecf18dd449/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-env-changed=GTK4_WAYLAND_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-netbsd
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_netbsd
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-netbsd
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_netbsd
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-netbsd
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_netbsd
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-netbsd
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_netbsd
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+  cargo:warning=`"/scratch/wip/video-trimmer/work/.tools/bin/pkg-config" "--libs" "--cflags" "gtk4-wayland" "gtk4-wayland >= 4.0.0"` did not exit successfully: exit status: 1
+  error: could not find system library 'gtk4-wayland' required by the 'gdk4-wayland-sys' crate
+
+  --- stderr
+  Package gtk4-wayland was not found in the pkg-config search path.
+  Perhaps you should add the directory containing `gtk4-wayland.pc'
+  to the PKG_CONFIG_PATH environment variable
+  Package 'gtk4-wayland', required by 'virtual:world', not found
+  Package 'gtk4-wayland', required by 'virtual:world', not found
+
+warning: build failed, waiting for other jobs to finish...
+error: build failed
+
+
+And later:
+
+/usr/pkg/bin/blueprint-compiler batch-compile src ../src ../src/window.blp ../src/video_preview.blp ../src/timeline.blp
+error: Could not find GTK 4 introspection files. Is gobject-introspection installed?
+at ../src/window.blp line 1 column 11:
+   1 |using Gtk 4.0;
+     |          ^
+
