@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.7 2015/03/15 14:37:03 othyro Exp $
 
-BLAKE2s (re-2.5.0.tar.gz) = 934c389b2303e3928aae17403becc564a60b910924c285478bd8554a2596e03e
-SHA512 (re-2.5.0.tar.gz) = 2546cc619b7147376755874efe97ab62f1c67d416235d0536cf800c86f08242aad70d74df6271275639285e3ba4bc40aa5f1ccaa9161a715128178df8bf12bcd
-Size (re-2.5.0.tar.gz) = 379987 bytes
+BLAKE2s (re-2.6.0.tar.gz) = 785cee8a71613c79e8f5eab09078a8becdc5343c8718994def662cb6d08d77a4
+SHA512 (re-2.6.0.tar.gz) = ffd8a0abdad1a0cbcabd6991395b5d0dbbb8e264b0773af2d6b5956fe6e2444d9751ffb9b2587148875cc7f1f10b3caeeb1acc369d6adc6df51cfb93fe25d92f
+Size (re-2.6.0.tar.gz) = 387308 bytes

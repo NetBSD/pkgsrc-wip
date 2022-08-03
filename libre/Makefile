@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2015/03/15 14:37:03 othyro Exp $
 
-DISTNAME=	re-2.5.0
+DISTNAME=	re-2.6.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
