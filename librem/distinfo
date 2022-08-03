@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1 2014/08/10 00:06:55 thomasklausner Exp $
 
-BLAKE2s (rem-2.5.0.tar.gz) = c8bcd91274f09bcb003c55abcf30d44d0f425facd71e01586824439db9472b83
-SHA512 (rem-2.5.0.tar.gz) = c28150b2cca9fd12f54ca39cb56df3acebbb4cd27f5acb5c7adc4f70885b2a8968c0b3f1054e7624bf81477465156834a262fb61488c960d93eea9a647ffdc1d
-Size (rem-2.5.0.tar.gz) = 54150 bytes
+BLAKE2s (rem-2.6.0.tar.gz) = 4b2d366d5b8315fb794375fd4d81d386797b47c747df1ca0d8c1746e74d9e950
+SHA512 (rem-2.6.0.tar.gz) = adb1ad5e42b77b5f0341713d1a645a9d999ee42b01c09f335be8f61b9d8ced56c48f6a0461022370a920b386e1f68ede405cf21382f51898d862c4a652b51315
+Size (rem-2.6.0.tar.gz) = 54566 bytes

@@ -25,5 +25,5 @@ include/rem/rem_vidmix.h
 lib/librem.a
 lib/librem.so
 lib/librem.so.3
-lib/librem.so.3.5.0
+lib/librem.so.3.6.0
 lib/pkgconfig/librem.pc

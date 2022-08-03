@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2014/08/10 00:06:55 thomasklausner Exp $
 
-DISTNAME=	rem-2.5.0
+DISTNAME=	rem-2.6.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	net audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baresip/}
