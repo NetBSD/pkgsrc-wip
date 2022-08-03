@@ -2664,6 +2664,7 @@ SUBDIR+=	nspluginwrapper
 SUBDIR+=	nspr-hg
 SUBDIR+=	nss-pam-ldapd
 SUBDIR+=	ntimed-git
+SUBDIR+=	nuclei
 SUBDIR+=	nuget-git
 SUBDIR+=	nullpop
 SUBDIR+=	num-utils
