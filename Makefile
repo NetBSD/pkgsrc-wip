@@ -1769,6 +1769,7 @@ SUBDIR+=	imapfilter
 SUBDIR+=	imgui
 SUBDIR+=	imonc
 SUBDIR+=	incidenceeditor
+SUBDIR+=	include-what-you-use
 SUBDIR+=	inetdxtra
 SUBDIR+=	influxdb
 SUBDIR+=	info2man

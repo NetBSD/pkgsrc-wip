@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.17 2021/12/05 14:50:41 wiz Exp $
+
+BLAKE2s (include-what-you-use-0.18.tar.gz) = a67b695f48d473a3955059655deeff6db4ea26795da89006baab929a59969bb5
+SHA512 (include-what-you-use-0.18.tar.gz) = bfce2ff00b572961dcba83519959cbedaf1c2ec4bd4e0a2b8b6d12f440887ee64a1c9970fa1a80c7517898ce936219436ab709893cfed92891c5c2aa5d76770e
+Size (include-what-you-use-0.18.tar.gz) = 750341 bytes
