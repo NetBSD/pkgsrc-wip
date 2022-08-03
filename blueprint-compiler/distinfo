@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (blueprint-compiler-v0.2.0.tar.bz2) = 2a0592851113c1866db6cf490a2a94d9cbfd5db180cf35b14d3251fd905b55e2
+SHA512 (blueprint-compiler-v0.2.0.tar.bz2) = dfb16354a13a18c0e6db52dc0b88ab7339fbf3eb56541d0a273551c009c7f05c651d41814397986ef2cebdefb6d4e57d0eb3690dd2a7a9eebfb0cfb23e96e3e6
+Size (blueprint-compiler-v0.2.0.tar.bz2) = 45480 bytes
