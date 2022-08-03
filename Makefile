@@ -2267,6 +2267,7 @@ SUBDIR+=	litecoin
 SUBDIR+=	litehtml
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
+SUBDIR+=	lld
 SUBDIR+=	llilc-git
 SUBDIR+=	llvm
 SUBDIR+=	llvm-dfbsd
