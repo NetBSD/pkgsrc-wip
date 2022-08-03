@@ -3270,6 +3270,7 @@ SUBDIR+=	poke-git
 SUBDIR+=	polarssl11
 SUBDIR+=	polipo
 SUBDIR+=	polkit-kde-agent
+SUBDIR+=	polly
 SUBDIR+=	polyclipping
 SUBDIR+=	polylib
 SUBDIR+=	polymul
