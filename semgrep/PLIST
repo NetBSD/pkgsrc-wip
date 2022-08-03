@@ -112,6 +112,9 @@ ${PYSITELIB}/semgrep/env.pyo
 ${PYSITELIB}/semgrep/error.py
 ${PYSITELIB}/semgrep/error.pyc
 ${PYSITELIB}/semgrep/error.pyo
+${PYSITELIB}/semgrep/error_handler.py
+${PYSITELIB}/semgrep/error_handler.pyc
+${PYSITELIB}/semgrep/error_handler.pyo
 ${PYSITELIB}/semgrep/external/__init__.py
 ${PYSITELIB}/semgrep/external/__init__.pyc
 ${PYSITELIB}/semgrep/external/__init__.pyo
