@@ -454,6 +454,7 @@ SUBDIR+=	cl-unicode
 SUBDIR+=	cl-who
 SUBDIR+=	clamassassin
 SUBDIR+=	clang
+SUBDIR+=	clang-tools-extra
 SUBDIR+=	clasp
 SUBDIR+=	classgen
 SUBDIR+=	classic-mac-font-pack
