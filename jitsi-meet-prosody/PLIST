@@ -22,6 +22,7 @@ share/jitsi-meet-prosody/mod_muc_domain_mapper.lua
 share/jitsi-meet-prosody/mod_muc_lobby_rooms.lua
 share/jitsi-meet-prosody/mod_muc_max_occupants.lua
 share/jitsi-meet-prosody/mod_muc_meeting_id.lua
+share/jitsi-meet-prosody/mod_muc_password_check.lua
 share/jitsi-meet-prosody/mod_muc_password_whitelist.lua
 share/jitsi-meet-prosody/mod_muc_poltergeist.lua
 share/jitsi-meet-prosody/mod_muc_rate_limit.lua

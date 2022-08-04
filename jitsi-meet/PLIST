@@ -82,6 +82,7 @@ share/jitsi-meet/lang/languages-gl.json
 share/jitsi-meet/lang/languages-he.json
 share/jitsi-meet/lang/languages-hi.json
 share/jitsi-meet/lang/languages-hr.json
+share/jitsi-meet/lang/languages-hsb.json
 share/jitsi-meet/lang/languages-hu.json
 share/jitsi-meet/lang/languages-hy.json
 share/jitsi-meet/lang/languages-id.json
@@ -140,6 +141,7 @@ share/jitsi-meet/lang/main-gl.json
 share/jitsi-meet/lang/main-he.json
 share/jitsi-meet/lang/main-hi.json
 share/jitsi-meet/lang/main-hr.json
+share/jitsi-meet/lang/main-hsb.json
 share/jitsi-meet/lang/main-hu.json
 share/jitsi-meet/lang/main-hy.json
 share/jitsi-meet/lang/main-id.json
@@ -201,6 +203,8 @@ share/jitsi-meet/libs/face-landmarks-worker.min.js.map
 share/jitsi-meet/libs/lib-jitsi-meet.e2ee-worker.js
 share/jitsi-meet/libs/lib-jitsi-meet.min.js
 share/jitsi-meet/libs/lib-jitsi-meet.min.map
+share/jitsi-meet/libs/noise-suppressor-worklet.min.js
+share/jitsi-meet/libs/noise-suppressor-worklet.min.js.map
 share/jitsi-meet/libs/olm.wasm
 share/jitsi-meet/libs/rnnoise.wasm
 share/jitsi-meet/libs/selfie_segmentation_landscape.tflite

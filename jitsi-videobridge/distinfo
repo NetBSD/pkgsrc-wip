@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (jitsi-videobridge/jitsi-meet_7439.tar.gz) = 996b3140ebd3110300ab6674da06b132dca5457d6c4e3404df9455586a23fced
-SHA512 (jitsi-videobridge/jitsi-meet_7439.tar.gz) = fa1447d983a1436034146d59dc9abcb97dad72b61f717e85fa9ecc48535d61acb2329d332ecc528f8ddd6140597459b0e4be93748eefad2eb8e07a11dcf84b65
-Size (jitsi-videobridge/jitsi-meet_7439.tar.gz) = 62358329 bytes
+BLAKE2s (jitsi-videobridge/jitsi-meet_7577.tar.gz) = d9e7b20429881a4256cd6375921d1bcf858d37f9ff7661666daabb720dca9ca5
+SHA512 (jitsi-videobridge/jitsi-meet_7577.tar.gz) = 7c5c192ef5d9149a89d59499e10b41931c068070a48e2ee5377eb72d556b9cc005e0d9b0f2f9b97f0ed238371253435ef39e661bb56c17019bcec5fa05372d79
+Size (jitsi-videobridge/jitsi-meet_7577.tar.gz) = 62356125 bytes
