@@ -118,6 +118,9 @@ ${PYSITELIB}/semgrep/error_handler.pyo
 ${PYSITELIB}/semgrep/external/__init__.py
 ${PYSITELIB}/semgrep/external/__init__.pyc
 ${PYSITELIB}/semgrep/external/__init__.pyo
+${PYSITELIB}/semgrep/external/git_url_parser.py
+${PYSITELIB}/semgrep/external/git_url_parser.pyc
+${PYSITELIB}/semgrep/external/git_url_parser.pyo
 ${PYSITELIB}/semgrep/external/junit_xml.py
 ${PYSITELIB}/semgrep/external/junit_xml.pyc
 ${PYSITELIB}/semgrep/external/junit_xml.pyo
@@ -206,6 +209,9 @@ ${PYSITELIB}/semgrep/output.pyo
 ${PYSITELIB}/semgrep/output_from_core.py
 ${PYSITELIB}/semgrep/output_from_core.pyc
 ${PYSITELIB}/semgrep/output_from_core.pyo
+${PYSITELIB}/semgrep/parsing_data.py
+${PYSITELIB}/semgrep/parsing_data.pyc
+${PYSITELIB}/semgrep/parsing_data.pyo
 ${PYSITELIB}/semgrep/profile_manager.py
 ${PYSITELIB}/semgrep/profile_manager.pyc
 ${PYSITELIB}/semgrep/profile_manager.pyo
