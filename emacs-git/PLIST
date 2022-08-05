@@ -1032,7 +1032,8 @@ share/emacs/${PKGVERSION}/lisp/calc/calc-keypd.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-keypd.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-lang.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-lang.elc
-share/emacs/${PKGVERSION}/lisp/calc/calc-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/calc/calc-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/calc/calc-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-macs.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-map.el.gz
@@ -1109,7 +1110,8 @@ share/emacs/${PKGVERSION}/lisp/calendar/cal-iso.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-iso.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-julian.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-julian.elc
-share/emacs/${PKGVERSION}/lisp/calendar/cal-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/calendar/cal-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/calendar/cal-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-mayan.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-mayan.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-menu.el.gz
@@ -1126,8 +1128,10 @@ share/emacs/${PKGVERSION}/lisp/calendar/calendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/calendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.elc
-share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.el
-share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.elc
+share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/calendar/holiday-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
@@ -1188,7 +1192,8 @@ share/emacs/${PKGVERSION}/lisp/cedet/ede/generic.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/generic.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/linux.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/linux.elc
-share/emacs/${PKGVERSION}/lisp/cedet/ede/loaddefs.el
+share/emacs/${PKGVERSION}/lisp/cedet/ede/loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/locate.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/locate.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/make.el.gz
@@ -1347,7 +1352,8 @@ share/emacs/${PKGVERSION}/lisp/cedet/semantic/lex-spp.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/lex-spp.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/lex.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/lex.elc
-share/emacs/${PKGVERSION}/lisp/cedet/semantic/loaddefs.el
+share/emacs/${PKGVERSION}/lisp/cedet/semantic/loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/semantic/loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/mru-bookmark.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/mru-bookmark.elc
 share/emacs/${PKGVERSION}/lisp/cedet/semantic/sb.el.gz
@@ -1438,7 +1444,8 @@ share/emacs/${PKGVERSION}/lisp/cedet/srecode/insert.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/insert.elc
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/java.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/java.elc
-share/emacs/${PKGVERSION}/lisp/cedet/srecode/loaddefs.el
+share/emacs/${PKGVERSION}/lisp/cedet/srecode/loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/srecode/loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/map.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/map.elc
 share/emacs/${PKGVERSION}/lisp/cedet/srecode/mode.el.gz
@@ -1498,7 +1505,8 @@ share/emacs/${PKGVERSION}/lisp/dframe.el.gz
 share/emacs/${PKGVERSION}/lisp/dframe.elc
 share/emacs/${PKGVERSION}/lisp/dired-aux.el.gz
 share/emacs/${PKGVERSION}/lisp/dired-aux.elc
-share/emacs/${PKGVERSION}/lisp/dired-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/dired-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/dired-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/dired-x.el.gz
 share/emacs/${PKGVERSION}/lisp/dired-x.elc
 share/emacs/${PKGVERSION}/lisp/dired.el.gz
@@ -1545,8 +1553,6 @@ share/emacs/${PKGVERSION}/lisp/elide-head.el.gz
 share/emacs/${PKGVERSION}/lisp/elide-head.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/autoload.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/autoload.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/avl-tree.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/avl-tree.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/backquote.el.gz
@@ -1579,7 +1585,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-indent.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-indent.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-lib.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-lib.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-preloaded.el.gz
@@ -1830,7 +1837,8 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-lang.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-lang.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-list.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-list.elc
-share/emacs/${PKGVERSION}/lisp/erc/erc-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/erc/erc-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/erc/erc-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-log.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-log.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-match.el.gz
@@ -1915,7 +1923,8 @@ share/emacs/${PKGVERSION}/lisp/eshell/esh-cmd.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-cmd.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-ext.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-ext.elc
-share/emacs/${PKGVERSION}/lisp/eshell/esh-groups.el
+share/emacs/${PKGVERSION}/lisp/eshell/esh-groups.el.gz
+share/emacs/${PKGVERSION}/lisp/eshell/esh-groups.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-io.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-io.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-mode.el.gz
@@ -2231,7 +2240,8 @@ share/emacs/${PKGVERSION}/lisp/ibuf-ext.el.gz
 share/emacs/${PKGVERSION}/lisp/ibuf-ext.elc
 share/emacs/${PKGVERSION}/lisp/ibuf-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/ibuf-macs.elc
-share/emacs/${PKGVERSION}/lisp/ibuffer-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/ibuffer-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/ibuffer-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/ibuffer.el.gz
 share/emacs/${PKGVERSION}/lisp/ibuffer.elc
 share/emacs/${PKGVERSION}/lisp/icomplete.el.gz
@@ -2603,7 +2613,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/welsh.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/welsh.elc
 share/emacs/${PKGVERSION}/lisp/linum.el.gz
 share/emacs/${PKGVERSION}/lisp/linum.elc
-share/emacs/${PKGVERSION}/lisp/loaddefs.el
+share/emacs/${PKGVERSION}/lisp/loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/loadhist.el.gz
 share/emacs/${PKGVERSION}/lisp/loadhist.elc
 share/emacs/${PKGVERSION}/lisp/loadup.el
@@ -2737,7 +2748,8 @@ share/emacs/${PKGVERSION}/lisp/mh-e/mh-letter.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-letter.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-limit.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-limit.elc
-share/emacs/${PKGVERSION}/lisp/mh-e/mh-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-mime.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-mime.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-print.el.gz
@@ -2836,8 +2848,6 @@ share/emacs/${PKGVERSION}/lisp/net/mairix.el.gz
 share/emacs/${PKGVERSION}/lisp/net/mairix.elc
 share/emacs/${PKGVERSION}/lisp/net/net-utils.el.gz
 share/emacs/${PKGVERSION}/lisp/net/net-utils.elc
-share/emacs/${PKGVERSION}/lisp/net/netrc.el.gz
-share/emacs/${PKGVERSION}/lisp/net/netrc.elc
 share/emacs/${PKGVERSION}/lisp/net/network-stream.el.gz
 share/emacs/${PKGVERSION}/lisp/net/network-stream.elc
 share/emacs/${PKGVERSION}/lisp/net/newst-backend.el.gz
@@ -2918,7 +2928,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-integration.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-integration.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-rclone.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-rclone.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
@@ -2993,6 +3004,8 @@ share/emacs/${PKGVERSION}/lisp/obarray.el.gz
 share/emacs/${PKGVERSION}/lisp/obarray.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/autoarg.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/autoarg.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/autoload.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/autoload.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/bruce.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cc-compat.el.gz
@@ -3030,6 +3043,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/meese.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/messcompat.el
 share/emacs/${PKGVERSION}/lisp/obsolete/metamail.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/metamail.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/netrc.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/netrc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/nnir.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/nnir.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.el.gz
@@ -3074,6 +3089,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-mapper.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/uce.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/uce.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/url-about.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/url-about.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/url-dired.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/url-dired.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/url-ns.el.gz
@@ -3281,7 +3298,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-lint.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-lint.elc
 share/emacs/${PKGVERSION}/lisp/org/org-list.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-list.elc
-share/emacs/${PKGVERSION}/lisp/org/org-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/org/org-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/org/org-macro.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-macro.elc
 share/emacs/${PKGVERSION}/lisp/org/org-macs.el.gz
@@ -3595,7 +3613,8 @@ share/emacs/${PKGVERSION}/lisp/ps-bdf.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-bdf.elc
 share/emacs/${PKGVERSION}/lisp/ps-mule.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-mule.elc
-share/emacs/${PKGVERSION}/lisp/ps-print-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/ps-print-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/ps-print-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/ps-print.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-print.elc
 share/emacs/${PKGVERSION}/lisp/ps-samp.el.gz
@@ -3808,7 +3827,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/reftex-global.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-global.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-index.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-index.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/reftex-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/textmodes/reftex-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/reftex-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-parse.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-parse.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-ref.el.gz
@@ -3835,7 +3855,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/tex-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/tex-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfmt.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfmt.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/texinfo-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/textmodes/texinfo-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/texinfo-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/texinfo.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/texnfo-upd.el.gz
@@ -3878,8 +3899,6 @@ share/emacs/${PKGVERSION}/lisp/type-break.el.gz
 share/emacs/${PKGVERSION}/lisp/type-break.elc
 share/emacs/${PKGVERSION}/lisp/uniquify.el.gz
 share/emacs/${PKGVERSION}/lisp/uniquify.elc
-share/emacs/${PKGVERSION}/lisp/url/url-about.el.gz
-share/emacs/${PKGVERSION}/lisp/url/url-about.elc
 share/emacs/${PKGVERSION}/lisp/url/url-auth.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-auth.elc
 share/emacs/${PKGVERSION}/lisp/url/url-cache.el.gz
