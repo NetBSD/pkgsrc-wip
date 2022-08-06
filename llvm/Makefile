@@ -104,8 +104,8 @@ CXXFLAGS+=	-march=i586
 
 .if !empty(MACHINE_ARCH:Mpowerpc*)
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
-CFLAGS+=	-mlongcall
-CXXFLAGS+=	-mlongcall
+CFLAGS+=	-mlongcall -mno-pltseq
+CXXFLAGS+=	-mlongcall -mno-pltseq
 .endif
 
 .if ${OPSYS} == "NetBSD"
