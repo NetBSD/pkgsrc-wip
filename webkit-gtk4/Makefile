@@ -165,4 +165,5 @@ BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
