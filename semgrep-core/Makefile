@@ -52,6 +52,7 @@ do-install:
 .include "../../lang/python/pyversion.mk"
 BUILDLINK_DEPMETHOD.ocaml=	build
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.ocaml-opam=	build
 .include "../../misc/ocaml-opam/buildlink3.mk"
 .include "../../textproc/tree-sitter/buildlink3.mk"
