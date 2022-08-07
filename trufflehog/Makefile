@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=trufflesecurity/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://trufflesecurity.com/
+HOMEPAGE=	https://github.com/trufflesecurity/trufflehog
 COMMENT=	Find credentials all over the place
 LICENSE=	gnu-agpl-v3
 
