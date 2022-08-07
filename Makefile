@@ -5739,7 +5739,6 @@ SUBDIR+=	trimadap
 SUBDIR+=	trinity
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
-SUBDIR+=	trufflehog
 SUBDIR+=	tscrape-git
 SUBDIR+=	tsh
 SUBDIR+=	tslib
