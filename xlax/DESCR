@@ -4,7 +4,7 @@ system administrators who typically have to do the same thing on several
 machines (or in several different directories).
 Windows can be added or deleted interactively, or temporarily
 disconnected and reconnected.
-xlax allows you to assign a custom string to each window (e.g. a
+xlax allows the user to assign a custom string to each window (e.g. a
 hostname) that can be sent with a button click.
 An included script handles starting up and arranging windows, and
-allowing to dfine commonly used window groupings in a config file.
+permits to define commonly used window groupings in a config file.
