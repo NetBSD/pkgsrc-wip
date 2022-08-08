@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	html-xml-utils-7.9
+DISTNAME=	html-xml-utils-8.4
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.w3.org/Tools/HTML-XML-utils/
 

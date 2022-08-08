@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (html-xml-utils-7.9.tar.gz) = 1102042678f17298300f2e50f1c0db55ea683e3d
-SHA512 (html-xml-utils-7.9.tar.gz) = 9913448a4a8b52dedfd17d2bb7a924aa2a0a9733628097d098f827a4cd23bc8b26d545ae4ca4a240dd9dea2328c674d28386775cbae0798685af0739ff312373
-Size (html-xml-utils-7.9.tar.gz) = 407764 bytes
+BLAKE2s (html-xml-utils-8.4.tar.gz) = ea660f5a1074bf76cac3764ea1bfe109c11ef2437dc224789d303ce153937bf3
+SHA512 (html-xml-utils-8.4.tar.gz) = 8e011e8bb73b0ca46af8aa54f8080b0ba0ac074910056571ab030d5b8ac2156a5ba0342bfe1ddc3a60ea8ec7c2149b58fc126fc59204fead5f0366ebb8fa46a7
+Size (html-xml-utils-8.4.tar.gz) = 420832 bytes
 SHA1 (patch-fopencookie.c) = 58a464521e323a87806d46b83902c74b846b8f26
