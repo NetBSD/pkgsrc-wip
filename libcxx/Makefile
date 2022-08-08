@@ -15,9 +15,11 @@ LICENSE=	apache-2.0
 # libcxx's includes to build, so we have this unholy extra distfiles thing
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
+# Since llvm-14, libunwind also needs to be present.
 LIBCXXABI=				libcxxabi-${LLVM_VERSION}.src
 LLVMDIST=				llvm-${LLVM_VERSION}.src
-_EXTRA_DIST=				${LIBCXXABI}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX} # ${LIBUNWIND}${EXTRACT_SUFX}
+LIBUNWIND=				libunwind-${LLVM_VERSION}.src
+_EXTRA_DIST=				${LIBCXXABI}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX} ${LIBUNWIND}${EXTRACT_SUFX}
 SITES.${LIBCXXABI}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 SITES.${LLLVMDIST}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
@@ -38,7 +40,7 @@ CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=libcxxabi
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI_INCLUDE_PATHS=${WRKDIR}/${LIBCXXABI}/include
 CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=OFF
-CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
+CMAKE_ARGS+=	-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=ON
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
