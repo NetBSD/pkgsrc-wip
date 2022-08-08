@@ -2709,8 +2709,6 @@ share/emacs/${PKGVERSION}/lisp/mail/uudecode.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/uudecode.elc
 share/emacs/${PKGVERSION}/lisp/mail/yenc.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/yenc.elc
-share/emacs/${PKGVERSION}/lisp/makesum.el.gz
-share/emacs/${PKGVERSION}/lisp/makesum.elc
 share/emacs/${PKGVERSION}/lisp/man.el.gz
 share/emacs/${PKGVERSION}/lisp/man.elc
 share/emacs/${PKGVERSION}/lisp/master.el.gz
@@ -3035,6 +3033,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/makesum.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/makesum.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mantemp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/meese.el.gz
