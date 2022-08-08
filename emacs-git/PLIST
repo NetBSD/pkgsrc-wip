@@ -2721,7 +2721,8 @@ share/emacs/${PKGVERSION}/lisp/md4.el.gz
 share/emacs/${PKGVERSION}/lisp/md4.elc
 share/emacs/${PKGVERSION}/lisp/menu-bar.el.gz
 share/emacs/${PKGVERSION}/lisp/menu-bar.elc
-share/emacs/${PKGVERSION}/lisp/mh-e/mh-acros.el
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-acros.el.gz
+share/emacs/${PKGVERSION}/lisp/mh-e/mh-acros.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-alias.el.gz
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-alias.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-buffers.el.gz
