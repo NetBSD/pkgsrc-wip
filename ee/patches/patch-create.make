@@ -56,7 +56,7 @@ Use local ncurses rather then ee's own implementation.
  
  curses :	ee.c
 -	cc ee.c -o ee \$(CFLAGS) -lcurses 
-+	cc ee.c -o ee \$(CFLAGS) `pkg-config --libs ncurses`
++	cc ee.c -o ee \$(CFLAGS) `@PREFIX@/bin/pkg-config --cflags --libs ncurses`
  
  ee :	ee.o new_curse.o
  	cc -o ee ee.o new_curse.o \$(CFLAGS) 

@@ -15,11 +15,17 @@ LICENSE=	2-clause-bsd
 USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes     # fixterm()
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	create.make
+SUBST_VARS.paths=	PREFIX
+SUBST_MESSAGE.paths=	Setting default pkg-config's path.
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-WRKSRC=	${WRKDIR}/easyedit-1.5.2
+WRKSRC=	${WRKDIR}/easyedit-${PKGVERSION_NOREV}
 
-post-configure:
+do-build:
 	cd ${WRKSRC} && ${MAKE:Q} all
 
 do-install:

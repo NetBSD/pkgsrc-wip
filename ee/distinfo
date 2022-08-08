@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (ee-1.5.2/ee-1.5.2.src.tgz) = a8be0743e80ab053ff72e238da2ce66ed80bc494f1aa066cb50eb57ab5a9faf9
 SHA512 (ee-1.5.2/ee-1.5.2.src.tgz) = 9ca0e82d65971b0bce38e09c365b6eb8b81ca6ff5b244107ae254322e47e841e7f5345bf242a0a9dd66b731d46cead6f442016b9e070a1298e1a5319b1d7b97a
 Size (ee-1.5.2/ee-1.5.2.src.tgz) = 69651 bytes
-SHA1 (patch-create.make) = 86f4bce3998da808b11adfbd3934536b49f07081
+SHA1 (patch-create.make) = 2e142087d3a8a2b8bb204de6bd69fe0b8995e130
 SHA1 (patch-ee.c) = 9da740c0bf6720c8b44839a6037d9cdbd7b3ba52
