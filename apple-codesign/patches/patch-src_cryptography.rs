@@ -1,6 +1,7 @@
 $NetBSD$
 
 Remove unused include.
+https://github.com/indygreg/PyOxidizer/pull/623
 
 --- src/cryptography.rs.orig	2022-08-07 20:37:36.000000000 +0000
 +++ src/cryptography.rs

@@ -1821,5 +1821,5 @@ Size (zstd-safe-5.0.2+zstd.1.5.2.crate) = 17273 bytes
 BLAKE2s (zstd-sys-2.0.1+zstd.1.5.2.crate) = 4c473c76ca5254bd77d77de889e4eda51596896aff105a2f68ed977da0ee53b8
 SHA512 (zstd-sys-2.0.1+zstd.1.5.2.crate) = a54ff4159640d31f898cbd374b9117d1e7ee4b54c5b4a8e1ed6286d9e954341e077088c52161e086ef0f28dfec13e03f64013712fa9bc59d471191cffd8e0e1e
 Size (zstd-sys-2.0.1+zstd.1.5.2.crate) = 715552 bytes
-SHA1 (patch-src_cryptography.rs) = df423315fa987f2f68754a8640a3b5b137be9e54
-SHA1 (patch-src_macho.rs) = fd47a9943c5a66aa0a5cb6021d6b0412ed4fb740
+SHA1 (patch-src_cryptography.rs) = 48e7d5f396224088bcb33fdbb6288aa506a0483d
+SHA1 (patch-src_macho.rs) = 39af66be00beee8f6ae64d4a54398ce7d74cac99
