@@ -1,0 +1,18 @@
+$NetBSD$
+
+	Fix garage build on illumos, upstream didn't update
+	dependency yet. Illumos support in libpnet present since
+	version 0.30.0, see: https://github.com/libpnet/libpnet/releases/tag/v0.30.0
+	And: https://github.com/libpnet/libpnet/pull/549
+
+--- src/rpc/Cargo.toml.orig     2022-05-24 10:48:05.000000000 +0000
++++ src/rpc/Cargo.toml
+@@ -38,7 +38,7 @@ openssl = { version = "0.10", features =
+ schemars = { version = "0.8", optional = true }
+
+ # newer version requires rust edition 2021
+-pnet_datalink = "0.28"
++pnet_datalink = "0.31"
+
+ futures = "0.3"
+ futures-util = "0.3"
