@@ -10,8 +10,6 @@ HOMEPAGE=	https://github.com/yannh/kubeconform
 COMMENT=	Kubernetes manifests validator
 LICENSE=	apache-2.0
 
-#GO_BUILD_PATTERN+=	.
-
 .include "go-modules.mk"
 
 post-install:
