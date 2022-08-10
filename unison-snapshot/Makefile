@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
+# multiple random build issues
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/ocaml.mk"
 
