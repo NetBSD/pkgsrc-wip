@@ -1,0 +1,14 @@
+The apple-codesign Rust crate and its corresponding rcodesign CLI
+tool implement code signing for Apple platforms.
+
+It supports the following features:
+
+    Signing Mach-O binaries (the executable file format on Apple
+    operating systems).
+
+    Signing, notarizing, and stapling directory bundles (e.g. .app
+    directories).
+
+    Signing, notarizing, and stapling XAR archives / .pkg installers.
+
+    Signing, notarizing, and stapling disk images / .dmg files.
