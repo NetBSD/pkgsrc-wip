@@ -16,6 +16,7 @@ USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 # multiple random build issues
+# https://github.com/bcpierce00/unison/issues/774
 MAKE_JOBS_SAFE=	no
 
 .include "../../mk/ocaml.mk"
