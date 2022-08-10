@@ -1975,6 +1975,7 @@ SUBDIR+=	ktjet
 SUBDIR+=	ktnef
 SUBDIR+=	kubeconform
 SUBDIR+=	kubectx
+SUBDIR+=	kubepug
 SUBDIR+=	kubeval
 SUBDIR+=	kubo
 SUBDIR+=	kuickshow
