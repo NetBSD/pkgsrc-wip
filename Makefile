@@ -2715,6 +2715,7 @@ SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak
 SUBDIR+=	oneloop
+SUBDIR+=	onetbb
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
