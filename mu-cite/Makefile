@@ -19,7 +19,7 @@ SUBST_FILES.dest+=	Makefile
 .include "../../wip/emacs-git/modules.mk"
 
 DEPENDS+=		flim-[0-9]*:../../devel/flim
-DEPENDS+=		bbdb-[0-9]*:../../misc/bbdb
+DEPENDS+=		bbdb2-[0-9]*:../../misc/bbdb2
 MAKE_DIRS+=		${PREFIX}/share/doc/mu-cite
 AUTO_MKDIRS=		yes
 
