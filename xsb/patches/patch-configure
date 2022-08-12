@@ -1,0 +1,65 @@
+$NetBSD$
+
+1. Path to configvars.in should be from $topdir in development area, not from $prefix which is in install area
+
+2. LDFLAGS require -lpthread on NetBSD
+
+--- configure.orig	2022-05-12 20:54:07.000000000 +0000
++++ configure
+@@ -5204,7 +5204,7 @@ fi
+ 
+ # xsbpy package
+ if test -d "$topdir/packages/xsbpy"; then
+-    ac_config_files="$ac_config_files '"${prefix}/packages/xsbpy/configvars.sh"':'"${prefix}/packages/xsbpy/configvars.in"'"
++    ac_config_files="$ac_config_files '"${topdir}/packages/xsbpy/configvars.sh"':'"${topdir}/packages/xsbpy/configvars.in"'"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+@@ -5912,7 +5914,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+ for ac_config_target in $ac_config_targets
+ do
+   case $ac_config_target in
+-    "'"${prefix}/packages/xsbpy/configvars.sh"'") CONFIG_FILES="$CONFIG_FILES '"${prefix}/packages/xsbpy/configvars.sh"':'"${prefix}/packages/xsbpy/configvars.in"'" ;;
++    "'"${topdir}/packages/xsbpy/configvars.sh"'") CONFIG_FILES="$CONFIG_FILES '"${topdir}/packages/xsbpy/configvars.sh"':'"${topdir}/packages/xsbpy/configvars.in"'" ;;
+ 
+   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
+   esac
+@@ -7457,6 +7459,11 @@ case "$canonical" in
+                 ;;
+                 esac
+         ;;
++    *netbsd* )
++                if test "${have_pthread}" != "no" ; then
++                    LDFLAGS="${LDFLAGS} -lpthread"
++                fi
++        ;;
+     *freebsd* ) $as_echo "#define FREEBSD 1" >>confdefs.h
+ 
+                 $as_echo "#define FOREIGN_ELF 1" >>confdefs.h
+@@ -8326,7 +8333,7 @@ ac_config_headers="$ac_config_headers '"
+ 
+ 
+ 
+-ac_config_files="$ac_config_files '"${arch_config_prefix}/topMakefile"':topMakefile.in '"${arch_config_prefix}/emuMakefile"':emuMakefile.in '"${arch_config_prefix}/modMakefile"':modMakefile.in '"${arch_config_prefix}/gppMakefile"':gppMakefile.in '"${arch_config_prefix}/smoMakefile"':smoMakefile.in '"${arch_config_prefix}/makedef.sh"':makedef.sh.in '"${arch_config_file}"':xsb_configuration.in windows/xsb_configuration.P:windows/xsb_configuration.in windows64/xsb_configuration.P:windows64/xsb_configuration.in makexsb:makexsb.in '"${scriptdir}/chr_pp${config_tag}"':chr_pp.in '"${scriptdir}/xsb${config_tag}"':xsb.in '"${arch_config_prefix}/banner.msg"':banner.in windows/banner.msg:windows/banner.in windows64/banner.msg:windows64/banner.in windows/MSVC_mkfile.mak:windows/MSVC_mkfile.in windows64/MSVC_mkfile.mak:windows64/MSVC_mkfile.in '"${prefix}/packages/xmc/xmc-gui"':xmc-gui.in"
++ac_config_files="$ac_config_files '"${arch_config_prefix}/topMakefile"':topMakefile.in '"${arch_config_prefix}/emuMakefile"':emuMakefile.in '"${arch_config_prefix}/modMakefile"':modMakefile.in '"${arch_config_prefix}/gppMakefile"':gppMakefile.in '"${arch_config_prefix}/smoMakefile"':smoMakefile.in '"${arch_config_prefix}/makedef.sh"':makedef.sh.in '"${arch_config_file}"':xsb_configuration.in windows/xsb_configuration.P:windows/xsb_configuration.in windows64/xsb_configuration.P:windows64/xsb_configuration.in makexsb:makexsb.in '"${scriptdir}/chr_pp${config_tag}"':chr_pp.in '"${scriptdir}/xsb${config_tag}"':xsb.in '"${arch_config_prefix}/banner.msg"':banner.in windows/banner.msg:windows/banner.in windows64/banner.msg:windows64/banner.in windows/MSVC_mkfile.mak:windows/MSVC_mkfile.in windows64/MSVC_mkfile.mak:windows64/MSVC_mkfile.in '"${topdir}/packages/xmc/xmc-gui"':xmc-gui.in"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+@@ -9018,7 +9027,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+ for ac_config_target in $ac_config_targets
+ do
+   case $ac_config_target in
+-    "'"${prefix}/packages/xsbpy/configvars.sh"'") CONFIG_FILES="$CONFIG_FILES '"${prefix}/packages/xsbpy/configvars.sh"':'"${prefix}/packages/xsbpy/configvars.in"'" ;;
++    "'"${topdir}/packages/xsbpy/configvars.sh"'") CONFIG_FILES="$CONFIG_FILES '"${topdir}/packages/xsbpy/configvars.sh"':'"${topdir}/packages/xsbpy/configvars.in"'" ;;
+     "'"${arch_config_prefix}/xsb_config.h"'") CONFIG_HEADERS="$CONFIG_HEADERS '"${arch_config_prefix}/xsb_config.h"':${config_dot_h_templ}" ;;
+     "windows/xsb_config.h") CONFIG_HEADERS="$CONFIG_HEADERS windows/xsb_config.h:windows/def_config.in" ;;
+     "windows/xsb_debug.h") CONFIG_HEADERS="$CONFIG_HEADERS windows/xsb_debug.h:def_debug.in" ;;
+@@ -9042,7 +9051,7 @@ do
+     "windows64/banner.msg") CONFIG_FILES="$CONFIG_FILES windows64/banner.msg:windows64/banner.in" ;;
+     "windows/MSVC_mkfile.mak") CONFIG_FILES="$CONFIG_FILES windows/MSVC_mkfile.mak:windows/MSVC_mkfile.in" ;;
+     "windows64/MSVC_mkfile.mak") CONFIG_FILES="$CONFIG_FILES windows64/MSVC_mkfile.mak:windows64/MSVC_mkfile.in" ;;
+-    "'"${prefix}/packages/xmc/xmc-gui"'") CONFIG_FILES="$CONFIG_FILES '"${prefix}/packages/xmc/xmc-gui"':xmc-gui.in" ;;
++    "'"${topdir}/packages/xmc/xmc-gui"'") CONFIG_FILES="$CONFIG_FILES '"${topdir}/packages/xmc/xmc-gui"':xmc-gui.in" ;;
+ 
+   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
+   esac
