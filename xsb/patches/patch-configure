@@ -24,11 +24,17 @@ $NetBSD$
  
    *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
    esac
-@@ -7457,6 +7459,11 @@ case "$canonical" in
+@@ -7457,6 +7459,17 @@ case "$canonical" in
                  ;;
                  esac
          ;;
 +    *netbsd* )
++                $as_echo "#define FOREIGN_ELF 1" >>confdefs.h
++
++                if test "$__export_dynamic" = "yes" ; then
++                    LDFLAGS="${LDFLAGS} -Wl,-export-dynamic"
++                fi
++
 +                if test "${have_pthread}" != "no" ; then
 +                    LDFLAGS="${LDFLAGS} -lpthread"
 +                fi
@@ -36,7 +42,7 @@ $NetBSD$
      *freebsd* ) $as_echo "#define FREEBSD 1" >>confdefs.h
  
                  $as_echo "#define FOREIGN_ELF 1" >>confdefs.h
-@@ -8326,7 +8333,7 @@ ac_config_headers="$ac_config_headers '"
+@@ -8326,7 +8339,7 @@ ac_config_headers="$ac_config_headers '"
  
  
  
@@ -45,7 +51,7 @@ $NetBSD$
  
  cat >confcache <<\_ACEOF
  # This file is a shell script that caches the results of configure
-@@ -9018,7 +9027,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+@@ -9018,7 +9033,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
  for ac_config_target in $ac_config_targets
  do
    case $ac_config_target in
@@ -54,7 +60,7 @@ $NetBSD$
      "'"${arch_config_prefix}/xsb_config.h"'") CONFIG_HEADERS="$CONFIG_HEADERS '"${arch_config_prefix}/xsb_config.h"':${config_dot_h_templ}" ;;
      "windows/xsb_config.h") CONFIG_HEADERS="$CONFIG_HEADERS windows/xsb_config.h:windows/def_config.in" ;;
      "windows/xsb_debug.h") CONFIG_HEADERS="$CONFIG_HEADERS windows/xsb_debug.h:def_debug.in" ;;
-@@ -9042,7 +9051,7 @@ do
+@@ -9042,7 +9057,7 @@ do
      "windows64/banner.msg") CONFIG_FILES="$CONFIG_FILES windows64/banner.msg:windows64/banner.in" ;;
      "windows/MSVC_mkfile.mak") CONFIG_FILES="$CONFIG_FILES windows/MSVC_mkfile.mak:windows/MSVC_mkfile.in" ;;
      "windows64/MSVC_mkfile.mak") CONFIG_FILES="$CONFIG_FILES windows64/MSVC_mkfile.mak:windows64/MSVC_mkfile.in" ;;

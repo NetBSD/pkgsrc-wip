@@ -14,23 +14,27 @@ WRKSRC=		${WRKDIR}/XSB/build
 # There is "hard link not found" error for MSVC.sh with stock tar
 EXTRACT_USING=	gtar
 
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-AUTOCONF_REQD=		2.7
 GNU_CONFIGURE_STRICT=	no
 USE_GNU_CONFIGURE_HOST=	no
 
+XSB_VERSION_STR=	xsb-5.0.0
 # The source uses P_tmpdir, u_long which are under _NETBSD_SOURCE flag in respective headers
 CONFIGURE_ARGS+=	--with-cflags=-D_NETBSD_SOURCE
-CONFIGURE_ARGS+=	--with-site-prefix=${PREFIX}/xsb-5.0.0
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/xsb-5.0.0
+CONFIGURE_ARGS+=	--with-site-prefix=${PREFIX}/${XSB_VERSION_STR}
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/${XSB_VERSION_STR}
 
+REPLACE_BASH+=	${WRKDIR}/XSB/packages/xasp/makelinks.sh
+INSTALLATION_DIRS+=	bin
+XSB_BIN=	${DESTDIR}${PREFIX}/${XSB_VERSION_STR}/bin/xsb
 
 do-build:
-	cd ${WRKSRC} && ./makexsb fast
+	cd ${WRKSRC} && ./makexsb fast packages
 
-#do-install:
-#	cd ${WRKSRC} && ./makexsb install
-
+do-install:
+	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
+	${INSTALL} ${XSB_BIN} ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
