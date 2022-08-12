@@ -5481,7 +5481,6 @@ SUBDIR+=	tarlz
 SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
-SUBDIR+=	tbb
 SUBDIR+=	tc
 SUBDIR+=	tc-git
 SUBDIR+=	tc-hasida-table
