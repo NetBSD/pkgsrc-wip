@@ -5670,7 +5670,6 @@ SUBDIR+=	thcrut
 SUBDIR+=	theama
 SUBDIR+=	thedarkmod
 SUBDIR+=	thepeg
-SUBDIR+=	threadingbuildingblocks
 SUBDIR+=	thrift
 SUBDIR+=	thunderbird68-enigmail
 SUBDIR+=	tilda
