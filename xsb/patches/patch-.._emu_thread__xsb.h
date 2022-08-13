@@ -2,6 +2,8 @@ $NetBSD$
 
 Just like FREEBSD et al NetBSD requires *_NP #defined
 
+https://sourceforge.net/p/xsb/patches/9/
+
 --- ../emu/thread_xsb.h.orig	2022-05-12 20:54:07.000000000 +0000
 +++ ../emu/thread_xsb.h
 @@ -215,7 +215,7 @@ int get_waiting_for_tid( int t );

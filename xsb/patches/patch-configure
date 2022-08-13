@@ -4,6 +4,8 @@ $NetBSD$
 
 2. LDFLAGS require -lpthread on NetBSD
 
+https://sourceforge.net/p/xsb/patches/9/
+
 --- configure.orig	2022-05-12 20:54:07.000000000 +0000
 +++ configure
 @@ -5204,7 +5204,7 @@ fi

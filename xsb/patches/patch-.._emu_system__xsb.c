@@ -2,6 +2,8 @@ $NetBSD$
 
 S_IREAD, S_IWRITE handling on __NetBSD__ is same as that on DARWIN
 
+https://sourceforge.net/p/xsb/patches/9/
+
 --- ../emu/system_xsb.c.orig	2022-05-12 20:54:07.000000000 +0000
 +++ ../emu/system_xsb.c
 @@ -228,7 +228,7 @@ int sys_syscall(CTXTdeclc int callno)
