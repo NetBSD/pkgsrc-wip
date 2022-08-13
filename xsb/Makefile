@@ -21,7 +21,7 @@ USE_GNU_CONFIGURE_HOST=	no
 
 XSB_VERSION_STR=	xsb-5.0.0
 # The source uses P_tmpdir, u_long which are under _NETBSD_SOURCE flag in respective headers
-CONFIGURE_ARGS+=	--with-cflags=-D_NETBSD_SOURCE
+CONFIGURE_ARGS.NetBSD+=	--with-cflags=-D_NETBSD_SOURCE
 CONFIGURE_ARGS+=	--with-site-prefix=${PREFIX}/${XSB_VERSION_STR}
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/${XSB_VERSION_STR}
 
@@ -42,9 +42,9 @@ do-build:
 # already packaged.
 
 XSB_CONFIG_NAME=	`${WRKSRC}/config.guess`
-REMOVE_P+=	${XSB_PREFIXDIR}/config/${XSB_CONFIG_NAME}/lib/xsb_configuration.P
-REMOVE_P+=	${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
-REMOVE_P+=	${XSB_PREFIXDIR}/syslib/debugger_data.P
+REMOVE_P+=		${XSB_PREFIXDIR}/config/${XSB_CONFIG_NAME}/lib/xsb_configuration.P
+REMOVE_P+=		${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
+REMOVE_P+=		${XSB_PREFIXDIR}/syslib/debugger_data.P
 
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install package && \
