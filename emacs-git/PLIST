@@ -3778,12 +3778,12 @@ share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/emacs-authors-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/emacs-authors-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/emacs-news-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/emacs-news-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/enriched.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/enriched.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/etc-authors-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/etc-authors-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/fill.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/fill.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/flyspell.el.gz
