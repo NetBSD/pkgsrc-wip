@@ -1,9 +1,7 @@
 @comment $NetBSD$
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
-go119/AUTHORS
 go119/CONTRIBUTING.md
-go119/CONTRIBUTORS
 go119/LICENSE
 go119/PATENTS
 go119/README.md
@@ -36,7 +34,6 @@ go119/bin/gofmt
 go119/codereview.cfg
 go119/doc/asm.html
 go119/doc/go1.17_spec.html
-go119/doc/go1.19.html
 go119/doc/go_mem.html
 go119/doc/go_spec.html
 go119/lib/time/README
@@ -310,6 +307,9 @@ go119/misc/cgo/testplugin/testdata/issue44956/main.go
 go119/misc/cgo/testplugin/testdata/issue44956/plugin1.go
 go119/misc/cgo/testplugin/testdata/issue44956/plugin2.go
 go119/misc/cgo/testplugin/testdata/issue52937/main.go
+go119/misc/cgo/testplugin/testdata/issue53989/main.go
+go119/misc/cgo/testplugin/testdata/issue53989/p/p.go
+go119/misc/cgo/testplugin/testdata/issue53989/plugin.go
 go119/misc/cgo/testplugin/testdata/method/main.go
 go119/misc/cgo/testplugin/testdata/method/plugin.go
 go119/misc/cgo/testplugin/testdata/method2/main.go
@@ -2351,6 +2351,7 @@ go119/src/cmd/go/testdata/mod/example.com_retract_incompatible_v1.0.0.txt
 go119/src/cmd/go/testdata/mod/example.com_retract_incompatible_v2.0.0+incompatible.txt
 go119/src/cmd/go/testdata/mod/example.com_retract_missingmod_v1.0.0.txt
 go119/src/cmd/go/testdata/mod/example.com_retract_missingmod_v1.9.0.txt
+go119/src/cmd/go/testdata/mod/example.com_retract_noupgrade_v1.0.0.txt
 go119/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-block.txt
 go119/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-blockwithcomment.txt
 go119/src/cmd/go/testdata/mod/example.com_retract_rationale_v1.0.0-empty.txt
@@ -2606,6 +2607,7 @@ go119/src/cmd/go/testdata/script/get_insecure_redirect.txt
 go119/src/cmd/go/testdata/script/get_insecure_update.txt
 go119/src/cmd/go/testdata/script/get_internal_wildcard.txt
 go119/src/cmd/go/testdata/script/get_issue11307.txt
+go119/src/cmd/go/testdata/script/get_issue16471.txt
 go119/src/cmd/go/testdata/script/get_legacy.txt
 go119/src/cmd/go/testdata/script/get_non_pkg.txt
 go119/src/cmd/go/testdata/script/get_race.txt
@@ -2731,6 +2733,7 @@ go119/src/cmd/go/testdata/script/mod_download_concurrent_read.txt
 go119/src/cmd/go/testdata/script/mod_download_git_decorate_full.txt
 go119/src/cmd/go/testdata/script/mod_download_hash.txt
 go119/src/cmd/go/testdata/script/mod_download_insecure_redirect.txt
+go119/src/cmd/go/testdata/script/mod_download_issue51114.txt
 go119/src/cmd/go/testdata/script/mod_download_json.txt
 go119/src/cmd/go/testdata/script/mod_download_partial.txt
 go119/src/cmd/go/testdata/script/mod_download_private_vcs.txt
@@ -2913,6 +2916,7 @@ go119/src/cmd/go/testdata/script/mod_retention.txt
 go119/src/cmd/go/testdata/script/mod_retract.txt
 go119/src/cmd/go/testdata/script/mod_retract_fix_version.txt
 go119/src/cmd/go/testdata/script/mod_retract_incompatible.txt
+go119/src/cmd/go/testdata/script/mod_retract_noupgrade.txt
 go119/src/cmd/go/testdata/script/mod_retract_pseudo_base.txt
 go119/src/cmd/go/testdata/script/mod_retract_rationale.txt
 go119/src/cmd/go/testdata/script/mod_retract_rename.txt
@@ -3147,6 +3151,7 @@ go119/src/cmd/go/testdata/script/work.txt
 go119/src/cmd/go/testdata/script/work_build_no_modules.txt
 go119/src/cmd/go/testdata/script/work_edit.txt
 go119/src/cmd/go/testdata/script/work_env.txt
+go119/src/cmd/go/testdata/script/work_goproxy_off.txt
 go119/src/cmd/go/testdata/script/work_gowork.txt
 go119/src/cmd/go/testdata/script/work_init_gowork.txt
 go119/src/cmd/go/testdata/script/work_init_path.txt
@@ -12066,6 +12071,8 @@ go119/test/typeparam/issue53390.go
 go119/test/typeparam/issue53406.go
 go119/test/typeparam/issue53419.go
 go119/test/typeparam/issue53477.go
+go119/test/typeparam/issue53762.go
+go119/test/typeparam/issue54135.go
 go119/test/typeparam/list.go
 go119/test/typeparam/list2.go
 go119/test/typeparam/listimp.dir/a.go
