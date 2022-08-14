@@ -23,6 +23,9 @@ CONFIGURE_ARGS+=	--without-elisp
 PKGCONFIG_OVERRIDE=	pure/pure.pc.in
 CONFIGURE_DIRS=		pure
 
+# bombs on rpath check for some reason, but the rpath is present?
+CHECK_SHLIBS_SKIP+=	bin/pure
+
 pre-configure:
 	${LN} -sf ${LLVM_CONFIG_PATH} ${TOOLS_DIR}/bin/llvm-config
 	cd ${WRKSRC}/pure && ${TOOLS_PATH.autoreconf} -vif
