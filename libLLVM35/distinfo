@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.6 2021/10/26 10:51:40 nia Exp $
+
+BLAKE2s (llvm-3.5.2.src.tar.xz) = e9d251641efad38aefd8d160d187daba77c273f39780d3763858b644af6130cf
+SHA512 (llvm-3.5.2.src.tar.xz) = 0f6a83cc61a385387e7baf8fb8f0d9f18e3fd00d2d389a3c7e2c3792be7d82ed095506cac52c24e65ae3c1f94456a441d39440feef6125e25ef18447ec9dd406
+Size (llvm-3.5.2.src.tar.xz) = 11876128 bytes
+SHA1 (patch-tools_llvm-shlib_Makefile) = 9ad3cee98ef552aa788e8bef5bfafea8a6f14a1b
+SHA1 (patch-unittests_ExecutionEngine_MCJIT_Makefile) = ce5620cd51c6e92201a6e74f24f6b73357cc6f6b

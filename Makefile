@@ -2012,6 +2012,7 @@ SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libArcus
 SUBDIR+=	libGenome
+SUBDIR+=	libLLVM35
 SUBDIR+=	libLLVM38
 SUBDIR+=	libSavitar
 SUBDIR+=	libXaw3dXft
