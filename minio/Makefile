@@ -10,7 +10,7 @@ GITHUB_TAG=	RELEASE.2022-08-13T21-54-44Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://minio.io/
 COMMENT=	High performance distributed object storage server
-LICENSE=	apache-2.0
+LICENSE=	gnu-agpl-v3
 
 CHECK_RELRO_SKIP=	bin/minio
 GO_BUILD_PATTERN=	--ldflags '-X github.com/minio/minio/cmd.Version=${GITHUB_TAG} -X github.com/minio/minio/cmd.ReleaseTag=${GITHUB_TAG}' .

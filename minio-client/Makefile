@@ -9,7 +9,7 @@ GITHUB_TAG=	RELEASE.2022-08-11T00-30-48Z
 COMMENT=	Tool implementing ls/cp/mkdir/diff/rsync for S3-like object storage
 HOMEPAGE=	https://min.io/
 MAINTAINER=	pkgsrc-users@NetBSD.org
-LICENSE=	apache-2.0
+LICENSE=	gnu-agpl-v3
 
 CHECK_RELRO_SKIP=	bin/minio-client
 GO_BUILD_PATTERN=	--ldflags '-X github.com/minio/mc/cmd.Version=${PKGVERSION} -X github.com/minio/mc/cmd.ReleaseTag=${GITHUB_TAG}' .
