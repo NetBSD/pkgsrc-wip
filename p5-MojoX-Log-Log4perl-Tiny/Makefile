@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MojoX/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/MojoX::Log::Log4perl::Tiny
 COMMENT=	Minimalistic Log4perl adapter for Mojolicious
-LICENSE=	${PERL_LICENSE}
+LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MojoX/Log/Log4perl/Tiny/.packlist
