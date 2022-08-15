@@ -5,10 +5,10 @@
 #              Fri Jul 22 14:00:26 CDT 2022               #
 ###########################################################
 
-DISTNAME=	plasm-0.0.0.35
+DISTNAME=	plasm-0.0.0.38
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	4765a01f5403d8c0011ee338f5959de11602514a
+GITHUB_TAG=	cc07d1b06b8dc76f83831b89d383b6f57c54e4fa
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/plasm
