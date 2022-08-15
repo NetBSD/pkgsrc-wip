@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nncp-8.0.2
+DISTNAME=	nncp-8.7.2
 CATEGORIES=	net
 MASTER_SITES=	https://www.nncpgo.org/download/
 EXTRACT_SUFX=	.tar.xz
