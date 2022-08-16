@@ -5,10 +5,10 @@
 #              Fri Jul 22 13:54:17 CDT 2022               #
 ###########################################################
 
-DISTNAME=	papp-0.0.0.9
+DISTNAME=	papp-0.0.0.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	6e8aae183acb91ca0b0914f4ea68f1b84b6fd785
+GITHUB_TAG=	dbb485276b9b18f12cc0e90c221a4141617ec2a0
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/papp
