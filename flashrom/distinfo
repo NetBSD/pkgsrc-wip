@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (flashrom-1.2.tar.gz) = fd67120ff38153808881f3ba01e4f349c0e4c89dcddedc9529ff4331cd31e7b6
+SHA512 (flashrom-1.2.tar.gz) = d4d45f8cd94ad5496702ef039d45b320086053088dfdac06a63d56c66cb8ebd59f0987c9a38b1b0d9617dca6f0f8feb99223789dfdb6c6961fb743807609ea8a
+Size (flashrom-1.2.tar.gz) = 429866 bytes
+SHA1 (patch-Makefile) = c5f4258177bb2b1694d23b75eda8e07d5d1ffeda
+SHA1 (patch-hwaccess.h) = b803e82b329c96e184029d85014b4441b7e6a585

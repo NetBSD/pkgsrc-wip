@@ -874,6 +874,7 @@ SUBDIR+=	firehose
 SUBDIR+=	flag
 SUBDIR+=	flam3-svn
 SUBDIR+=	flang-git
+SUBDIR+=	flashrom
 SUBDIR+=	flasm
 SUBDIR+=	flexdock
 SUBDIR+=	flexdump
