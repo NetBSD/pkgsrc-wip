@@ -3259,6 +3259,7 @@ SUBDIR+=	plover-git
 SUBDIR+=	plover-wxgtk
 SUBDIR+=	plplot
 SUBDIR+=	plugger
+SUBDIR+=	pluto
 SUBDIR+=	pmacct
 SUBDIR+=	pmk
 SUBDIR+=	png2ico
