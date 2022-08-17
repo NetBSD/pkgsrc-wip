@@ -5082,6 +5082,7 @@ SUBDIR+=	rsem
 SUBDIR+=	rset
 SUBDIR+=	rsget
 SUBDIR+=	rsound
+SUBDIR+=	rspamd31
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
