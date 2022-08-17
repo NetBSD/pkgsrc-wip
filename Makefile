@@ -4208,6 +4208,7 @@ SUBDIR+=	py-napalm-ios
 SUBDIR+=	py-napalm-iosxr
 SUBDIR+=	py-napalm-junos
 SUBDIR+=	py-napalm-nxos
+SUBDIR+=	py-nbclassic
 SUBDIR+=	py-nbimporter
 SUBDIR+=	py-nbsphinx
 SUBDIR+=	py-ncomb
