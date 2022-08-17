@@ -1,0 +1,12 @@
+===========================================================================
+
+For the first usage of JupyterLab, execute following command before
+starting JupyterLab.
+
+# jupyter-${PYVERSSUFFIX} lab-${PYVERSSUFFIX} build
+
+After executing above command, start JupyterLab by following command.
+
+% jupyter-${PYVERSSUFFIX} lab-${PYVERSSUFFIX}
+
+===========================================================================
