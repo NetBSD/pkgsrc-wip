@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (jupyter_server-1.18.1.tar.gz) = 749b8b35cae09bc7ebf242829392cba09f3caa597a7ce49e0dba5339f2864961
+SHA512 (jupyter_server-1.18.1.tar.gz) = 7acf101f337af903318de263dcf78cf3b45b799bb6095bc79568fde7f3f56ca508d39a1d40ffe2a4ab0bdc0173f0ee2f4a7426f41e0855c1b7f9dfd86f7e6d73
+Size (jupyter_server-1.18.1.tar.gz) = 451117 bytes

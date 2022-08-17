@@ -4016,6 +4016,7 @@ SUBDIR+=	py-jtextfsm
 SUBDIR+=	py-julio
 SUBDIR+=	py-junit-xml
 SUBDIR+=	py-junos-netconify
+SUBDIR+=	py-jupyter_server
 SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-kabuki
 SUBDIR+=	py-karta
