@@ -96,7 +96,6 @@ USE_TOOLS+=		date gzip pax
 
 _SVN_CMD=		${PREFIX}/bin/svn
 _SVN_CONFIG_DIR=	${WRKDIR}/.subversion
-_SVN_CHECKOUT_FLAGS=	--config-dir=${_SVN_CONFIG_DIR} --non-interactive
 _SVN_PKGREVISION_CMD=	${DATE} -u +'%Y%m%d'
 _SVN_DISTDIR=		${DISTDIR}/svn-packages
 
@@ -140,11 +139,11 @@ _SVN_CMD.install_certs.${repo}= \
 _SVN_CMD.fetch_repo.${repo}= \
 	if [ ! -d "$$extractdir" ]; then				\
 	  ${STEP_MSG} "Checking out revision $$revision from repository $$repo."; \
-	  ${_SVN_CMD} checkout -r "$$revision" ${SVN_CHECKOUT_FLAGS}	\
+	  ${_SVN_CMD} checkout -r "$$revision"				\
 	    "$$repo" "$$extractdir";					\
 	else								\
-	  ${STEP_MSG} "Updating to revision $$revision."; \
-	  ${_SVN_CMD} update -r "$$revision" ${SVN_CHECKOUT_FLAGS} "$$extractdir"; \
+	  ${STEP_MSG} "Updating to revision $$revision.";		\
+	  ${_SVN_CMD} update -r "$$revision" "$$extractdir";		\
 	fi
 
 # Create the cached archive from the checked out repository
@@ -173,12 +172,15 @@ _VARGROUPS+=		svn
 _USER_VARS.svn+=	CHECKOUT_DATE
 _PKG_VARS.svn+=		SVN_REPO SVN_REVISION SVN_EXTRACTDIR SVN_REPOSITORIES
 _SYS_VARS.svn+=		DISTFILES PKGREVISION
-_SYS_VARS.svn+=		_SVN_DISTDIR
+_DEF_VARS.svn+=		USE_TOOLS WRKSRC BUILD_DEPENDS
+_DEF_VARS.svn+=		_SVN_DISTDIR _SVN_CONFIG_DIR
+_USE_VARS.svn+=		DISTDIR PKGBASE WRKDIR PREFIX
 .for repo in ${SVN_REPOSITORIES}
 .  for varbase in SVN_REPO SVN_EXTRACTDIR SVN_REVISION SVN_CERTS
 _PKG_VARS.svn+=		${varbase}.${repo}
 .  endfor
 .  for varbase in _SVN_DISTFILE
-_SYS_VARS.svn+=		${varbase}.${repo}
+_DEF_VARS.svn+=		${varbase}.${repo}
 .  endfor
 .endfor
+_IGN_VARS.svn+=		WARNINGS

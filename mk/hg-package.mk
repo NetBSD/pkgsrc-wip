@@ -84,7 +84,6 @@ USE_TOOLS+=		date gzip pax
 
 _HG_CMD=		${PREFIX}/bin/hg
 _HG_FLAGS=		-q
-_HG_CONFIG_DIR=		${WRKDIR}/.hg
 _HG_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _HG_TODAY=		${_HG_TODAY_CMD:sh}
 _HG_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
@@ -176,7 +175,6 @@ _VARGROUPS+=	hg
 _USER_VARS.hg+=	CHECKOUT_DATE
 _PKG_VARS.hg+=	HG_REPO HG_EXTRACTDIR HG_TAG HG_REPOSITORIES
 _SYS_VARS.hg+=	DISTFILES PKGNAME PKGREVISION WRKSRC
-_SYS_VARS.hg+=	_HG_PKGVERSION _HG_DISTDIR
 .for repo in ${HG_REPOSITORIES}
 .  for varbase in HG_REPO HG_EXTRACTDIR HG_TAG
 _PKG_VARS.hg+=	${varbase}.${repo}
@@ -185,6 +183,9 @@ _PKG_VARS.hg+=	${varbase}.${repo}
 _SYS_VARS.hg+=	${varbase}.${repo}
 .  endfor
 .endfor
-_USE_VARS.hg+=	DISTNAME
+_USE_VARS.hg+=	DISTDIR DISTNAME PKGBASE PYPKGPREFIX
+_USE_VARS.hg+=	WRKDIR PREFIX
+_DEF_VARS.hg+=	WARNINGS USE_TOOLS BUILD_DEPENDS
+_DEF_VARS.hg+=	_HG_PKGVERSION _HG_DISTDIR _HG_TODAY _HG_FLAGS
 
 .include "../../lang/python/pyversion.mk"

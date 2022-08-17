@@ -132,9 +132,9 @@ _GIT_DISTDIR=		${DISTDIR}/git-packages
 
 # Definition of repository-specific variables
 .for repo in ${GIT_REPOSITORIES}
-.if defined(GIT_MODULE.${repo}) # for backwards compatibility
+.  if defined(GIT_MODULE.${repo}) # for backwards compatibility
 GIT_EXTRACTDIR.${repo}?=	${GIT_MODULE.${repo}}
-.endif
+.  endif
 GIT_EXTRACTDIR.${repo}?=	${repo}
 _GIT_ENV.${repo}=		${GIT_ENV.${repo}}
 
@@ -248,3 +248,5 @@ _PKG_VARS.git+=		${varbase}.${repo}
 _SYS_VARS.git+=		${varbase}.${repo}
 .  endfor
 .endfor
+_DEF_VARS.git+=		BUILD_DEPENDS USE_TOOLS WARNINGS _GIT_DISTDIR _GIT_CHECKOUT_FLAGS
+_USE_VARS.git+=		PKGBASE DISTDIR WRKDIR PREFIX _GIT_PKGVERSION
