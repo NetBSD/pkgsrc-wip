@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (notebook_shim-0.1.0.tar.gz) = 6375eff77dbaf7a3ccdce1ea4db1e86cc52ca3df4c119fe2c6f574073567c466
+SHA512 (notebook_shim-0.1.0.tar.gz) = 7814b5bb4d4c4dd39b1ce3629e77513bdc3069a553208ee5a2bb6432fda5d20dcf48bbf5d8f61b9bc1f2ea666abd8706a8e8ba627b27ff4561eb4982ba04b1dc
+Size (notebook_shim-0.1.0.tar.gz) = 12275 bytes
