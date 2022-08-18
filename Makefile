@@ -690,7 +690,6 @@ SUBDIR+=	docker-compose
 SUBDIR+=	docker-compose-cli
 SUBDIR+=	docker-machine
 SUBDIR+=	docviewer
-SUBDIR+=	dogecoin
 SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin
 SUBDIR+=	doomlegacy-devel
