@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.3 2021/10/26 10:56:01 nia Exp $
 
-BLAKE2s (gwcs-0.16.0.tar.gz) = 0957a33d99f39ac75ae21b7d49f80ce5ede1a136259a727214f8ca74b5bd57fb
-SHA512 (gwcs-0.16.0.tar.gz) = 459d91c9de86c3652fbf41d7c2c4fda3d7f4e6522196b6a1aa7abda3d0e83143566a4d2eadb0a3287cad8ac8082d82df7e08205cce1c14c689848ab23181016c
-Size (gwcs-0.16.0.tar.gz) = 171070 bytes
+BLAKE2s (gwcs-0.18.1.tar.gz) = 1e4933c26efeea12b5cd20265844897e19e4af03fb0c092b685ffb98d1e5c303
+SHA512 (gwcs-0.18.1.tar.gz) = 6ffdd57067c1bf1c14ce348c1056b08bfeaab6b1b736303e752c0117f0828032ec6e701976b026e0cffc0eb89c904530d7c1a1c29794dfa6709366e6b5ac8e95
+Size (gwcs-0.18.1.tar.gz) = 179900 bytes
