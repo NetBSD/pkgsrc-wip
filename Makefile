@@ -3432,6 +3432,7 @@ SUBDIR+=	py-astroML
 SUBDIR+=	py-astroalign
 SUBDIR+=	py-astroplan
 SUBDIR+=	py-astropy
+SUBDIR+=	py-astropy5
 SUBDIR+=	py-astropy-healpix
 SUBDIR+=	py-astroquery
 SUBDIR+=	py-astroscrappy
