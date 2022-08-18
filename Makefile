@@ -3422,6 +3422,7 @@ SUBDIR+=	py-asciimathml
 SUBDIR+=	py-asdf
 SUBDIR+=	py-asdf_astropy
 SUBDIR+=	py-asdf_coordinates_schemas
+SUBDIR+=	py-asdf_standard
 SUBDIR+=	py-ase
 SUBDIR+=	py-asmai
 SUBDIR+=	py-aspects
