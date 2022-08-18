@@ -3,7 +3,6 @@ $NetBSD: distinfo,v 1.22 2021/10/26 11:10:37 nia Exp $
 BLAKE2s (openmpi-4.1.4.tar.bz2) = 0d98f1b9404f2a4328288c01d614421ca0a409f7e8550164664a5d692209b4b4
 SHA512 (openmpi-4.1.4.tar.bz2) = c70a92c9b16b8c76a871183f9b180d60861186e64140da897d206d53bc06213f31ea93b31734645f580f4bf28dda5605d85dbce2417e4596955384d961bed653
 Size (openmpi-4.1.4.tar.bz2) = 10042839 bytes
-SHA1 (patch-aj) = e50a1843fa512b1957faea952f01da77e3396543
 SHA1 (patch-ak) = 1dba883fb533df57f5869b743e499a3117339529
 SHA1 (patch-config_opal__setup__wrappers.m4) = c3fe3cb5ff7cedcb5c847f25eea129d4299dd5d2
 SHA1 (patch-configure) = bb6373289ffa2beabccedb6ead679367c85dbe1e

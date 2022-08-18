@@ -1,7 +1,7 @@
 # $NetBSD: options.mk,v 1.10 2018/01/04 20:31:28 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
-PKG_SUPPORTED_OPTIONS=	debug f90 java
+PKG_SUPPORTED_OPTIONS=	debug f90 java sge slurm
 PKG_SUGGESTED_OPTIONS+=	f90
 
 .include "../../mk/bsd.options.mk"
@@ -33,6 +33,15 @@ PLIST.java=		yes
 CONFIGURE_ARGS+=	--disable-mpi-java
 .endif
 
-# \todo Keep sge, or add to COMMIT_MSG an explanation of why it is
-# dropped.
+.if !empty(PKG_OPTIONS:Msge)
+CONFIGURE_ARGS+=	--with-sge
+PLIST.sge=		yes
+.else
 CONFIGURE_ARGS+=	--without-sge
+.endif
+
+.if !empty(PKG_OPTIONS:Mslurm)
+CONFIGURE_ARGS+=	--with-slurm
+.else
+CONFIGURE_ARGS+=	--without-slurm
+.endif

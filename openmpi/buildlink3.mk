@@ -8,12 +8,6 @@ OPENMPI_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.openmpi+=	openmpi>=1.5.1
 BUILDLINK_PKGSRCDIR.openmpi?=	../../wip/openmpi
 
-# \todo Extract to a mk fragment.
-#MPI_SUBPREFIX=			openmpi4
-#MPI_PREFIX=			${PREFIX}/${MPI_SUBPREFIX}
-MPI_PREFIX=			${PREFIX}
-
-.include "../../parallel/hwloc/buildlink3.mk"
 .endif # OPENMPI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-openmpi
