@@ -13,6 +13,8 @@ BUILD_TARGET=	depend all
 MAKE_ENV+=	VERSION=${PKGVERSION}
 INSTALL_TARGET=	install-strip
 
+LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
+
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
 
