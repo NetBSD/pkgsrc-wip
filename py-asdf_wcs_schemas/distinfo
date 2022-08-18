@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (asdf_wcs_schemas-0.1.1.tar.gz) = 2fe993c6bff43d2f3c0db469a9539f8fc805d7ddbef74cadb02a4bbbd5fb1d9b
+SHA512 (asdf_wcs_schemas-0.1.1.tar.gz) = b6ee447b4e155aa3fd62a6f8fb365fb2bcee70ab82e8c7177c83898c0090506945fbbef23e0c1f98004f964e0d74381814128cc46bc9a5a647b0c9df27e91f98
+Size (asdf_wcs_schemas-0.1.1.tar.gz) = 22158 bytes
