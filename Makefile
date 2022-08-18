@@ -3420,6 +3420,7 @@ SUBDIR+=	py-arxiv2bib
 SUBDIR+=	py-arxvier
 SUBDIR+=	py-asciimathml
 SUBDIR+=	py-asdf
+SUBDIR+=	py-asdf_astropy
 SUBDIR+=	py-ase
 SUBDIR+=	py-asmai
 SUBDIR+=	py-aspects
