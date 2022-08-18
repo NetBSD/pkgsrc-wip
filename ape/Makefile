@@ -15,6 +15,8 @@ DEPENDS=	webbrowser>=0:../../wip/webbrowser
 MAKE_ENV+=		VERSION=${PKGVERSION}
 INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
+LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
+
 pre-build:
 	cd ${WRKSRC} && ${MAKE} LOCALBASE=${PREFIX} depend
 
