@@ -1,17 +1,21 @@
 # $NetBSD$
 
-DISTNAME=	QtPy-1.9.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	python # TODO: add primary category
-MASTER_SITES=	https://files.pythonhosted.org/packages/af/9f/f92125f9ba07830e5dd99141d07d5edffd555670d2c16a8454ac4a65d27b/
+DISTNAME=	QtPy-2.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	python
+MASTER_SITES=	${MASTER_SITE_PYPI:=Q/QtPy/}
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://github.com/spyder-ide/qtpy
-COMMENT=	Qt bindings PyQt5, PyQt4 and PySide
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://pypi.org/project/QtPy/
+COMMENT=	Abstraction layer for PyQt5/PySide2/PyQt6/PySide6
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
 
-.include "../../x11/py-qt5/buildlink3.mk"
+post-extract:
+	${CHMOD} -R o-w,g-w ${WRKSRC}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
