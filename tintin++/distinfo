@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (tintin-2.02.20.tar.gz) = 09fbebc59112547c5d5a17ff1f31b6eb35ce2c80d8426302eb16712e1efc7e1c
+SHA512 (tintin-2.02.20.tar.gz) = 41e46f55bf88bee58638d1628edda338b9fbbd0197c67dfa8b0610ea58aacdd1039f36e9c3393bc34599a506278538c8782c0ea09ef1fadb6dc6db203bbe359d
+Size (tintin-2.02.20.tar.gz) = 2258013 bytes
