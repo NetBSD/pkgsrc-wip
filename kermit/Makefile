@@ -1,38 +1,40 @@
 # $NetBSD: Makefile,v 1.93 2020/04/08 15:22:07 rhialto Exp $
 
-DISTNAME=	pre-alpha03
-PKGNAME=	kermit-9.0.305a2bis
+# https://www.kermitproject.org/ftp/kermit/test/tar/cku10.0-beta04.tar.gz
+VERSION=	10.0
+VERSIONSEP=	-
+VERSIONRC=	beta04
+DISTNAME=	cku${VERSION}${VERSIONSEP}${VERSIONRC}
+PKGNAME=	kermit-${VERSION}${VERSIONRC}
 CATEGORIES=	comms
-#MASTER_SITES=	ftp://ftp.kermitproject.org/kermit/archives/
-MASTER_SITES=	http://www.kermitproject.org/ftp/kermit/test/tar/
+MASTER_SITES=	https://www.kermitproject.org/ftp/kermit/test/tar/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.kermitproject.org/
+HOMEPAGE=	https://www.kermitproject.org/
 COMMENT=	Network and serial communication, file transfer, and scripting utility
 
-# UNIX C-Kermit 9.0 has been released with the Revised 3-Clause BSD License.
-# http://www.columbia.edu/kermit/licensing.html
 LICENSE=	modified-bsd
 
 .include "../../mk/bsd.prefs.mk"
 
+# The tarball just has files, no directory.
+# \todo Create "kermit" in ${WRKDIR} and unpack into it.
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	${PKGNAME_NOREV}
 BUILD_DEFS+=	KFLAGS LIBS MANINSTALL
-MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
+MAKE_ENV+=	prefix=${PREFIX} KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
 MAKE_FILE=	makefile
-
-LIBS+=		${BUILDLINK_LDADD.termcap}
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 KFLAGS+=	${BUILDLINK_CPPFLAGS}
+
+LIBS+=		${BUILDLINK_LDADD.termcap}
 LIBS+=		${BUILDLINK_LDFLAGS}
 
 .include "options.mk"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/kermit
 
-do-install:
+foo-do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${DESTDIR}${PREFIX}/bin/kermit
 	#${INSTALL_MAN} ${WRKSRC}/ckuker.nr \
 	#	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1
