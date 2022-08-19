@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://faculty.cse.tamu.edu/davis/SuiteSparse/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
