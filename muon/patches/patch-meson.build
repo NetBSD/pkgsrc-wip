@@ -2,21 +2,15 @@ $NetBSD$
 
 Honor CFLAGS and LDFLAGS.
 
---- meson.build.orig	2022-05-25 11:33:02.000000000 +0000
+--- meson.build.orig	2022-07-11 08:37:18.000000000 +0000
 +++ meson.build
-@@ -58,6 +58,7 @@ add_project_arguments(
+@@ -43,7 +43,9 @@ endif
+ # compiler setup
  
- deps = []
- c_args = []
+ c_args = ['-DMUON_PLATFORM_' + platform]
 +@CFLAGS@
- 
- include_dir = include_directories('include')
- 
-@@ -65,6 +66,7 @@ subdir('tools')
- subdir('src')
- 
  link_args = []
 +@LDFLAGS@
+ 
  if get_option('static')
-     link_args += '-static'
- endif
+     c_args += '-DMUON_STATIC'

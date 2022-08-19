@@ -4,7 +4,7 @@ DISTNAME=	muon-0.0.1
 CATEGORIES=	devel
 GIT_REPO=	https://git.sr.ht/~lattis/muon
 GIT_BRANCH=	master
-GIT_REVISION=	944dd7e2f91a83fd39f50aa49b30a19c2fcb02ce
+GIT_REVISION=	6b8073be2501abf34f488c46f9eca9958d702f8a
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~lattis/muon
@@ -18,10 +18,9 @@ MESON_LDFLAGS=	${LDFLAGS:S/ /' link_args+='/Wg}
 
 SUBST_CLASSES+=		flags1
 SUBST_STAGE.flags1=	pre-configure
-SUBST_MESSAGE.flags1=	Honor CFLAGS and LDFLAGS in bootstrap.sh ...
+SUBST_MESSAGE.flags1=	Honor LDFLAGS in bootstrap.sh ...
 SUBST_FILES.flags1=	bootstrap.sh
-SUBST_SED.flags1=	-e 's,$${CC:-c99} -o "$$dir/muon",$${CC} -std=c99 $$LDFLAGS -o "$$dir/muon",'
-SUBST_SED.flags1+=	-e 's,$${CC:-c99} -g,$${CC} -std=c99 $$CFLAGS -g,'
+SUBST_SED.flags1=	-e 's, -o ,$$LDFLAGS -o,'
 
 SUBST_CLASSES+=		flags2
 SUBST_STAGE.flags2=	pre-configure
