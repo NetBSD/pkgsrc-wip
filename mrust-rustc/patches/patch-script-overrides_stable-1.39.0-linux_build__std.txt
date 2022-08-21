@@ -1,9 +1,0 @@
-$NetBSD$
-
---- script-overrides/stable-1.39.0-linux/build_std.txt.orig	2021-09-12 00:15:52.000000000 +0000
-+++ script-overrides/stable-1.39.0-linux/build_std.txt
-@@ -1,4 +1,3 @@
--cargo:rustc-link-lib=dl
- cargo:rustc-link-lib=rt
- cargo:rustc-link-lib=pthread
- 

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/hir_conv/constant_evaluation.cpp.orig	2021-09-12 00:15:52.000000000 +0000
+--- src/hir_conv/constant_evaluation.cpp.orig	2022-08-14 04:09:16.000000000 +0000
 +++ src/hir_conv/constant_evaluation.cpp
 @@ -21,6 +21,12 @@
  #include <trans/monomorphise.hpp>   // For handling monomorph of MIR in provided associated constants

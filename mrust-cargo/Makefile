@@ -6,6 +6,8 @@ PKGNAME=	mrust-cargo-${SNAPSTAMP}
 COMMENT=	Cargo--built from rustc src, using mrustc toolchain
 BUILD_TARGET=	${MR_OUTDIR}cargo
 DISTFILES=	${DEFAULT_DISTFILES} ${RUSTSRC_DIST}
+MRUST_DISTDIR=	${DISTDIR}/${DIST_SUBDIR}
+RUSTSRC_LINK=	${DISTDIR}/${DIST_SUBDIR}/${RUSTSRC_DIST}
 MAKE_FILE=	minicargo.mk
 MAKE_ENV+=	LD_RUN_PATH=${PREFIX}/lib
 MAKE_ENV+=	LIBGIT2_SYS_USE_PKG_CONFIG=1
@@ -30,6 +32,32 @@ CARGOBIN=		mrust-cargo
 #* (no options yet) *#.include "options.mk"
 
 
+#
+# "De-duplicate" the rust source tarball.
+#
+# Without the following pre-fetch and pre-extract targets,
+# the mrust build infrastructure will needlessly download its
+# own, duplicate copy of the rust-lang source tarball into
+# distinfo/mrustc.  Instead, this makes a hardlink from the
+# canonical location, if the tarball already exists there.
+#
+pre-fetch:
+	[ -e "${MRUST_DISTDIR}" ] || ${MKDIR} "${MRUST_DISTDIR}"
+	if [ -e "${DISTDIR}/${RUSTSRC_DIST}" ]; then			\
+	    ${LN} -f "${DISTDIR}/${RUSTSRC_DIST}" "${MRUST_DISTDIR}";	\
+	fi
+#
+# Once the checksum is verified, also make the rust source tarball
+# available in the expected location for real rust-src builds.
+# Note: be certain the checksum for the rust-lang tarball
+# in the mrust* distinfo files matches the one in the rust-src
+# distinfo files.
+#
+pre-extract:
+	[ -e "${DISTDIR}/${RUSTSRC_DIST}" ] ||				\
+	    ${LN} "${RUSTSRC_LINK}" "${DISTDIR}/"
+
+
 # "put" (link?) mrustc & minicargo binaries and libraries into
 # directories where minicargo.mk will look for them.
 # Could buildlink3 help with this?  (Probably not without changing
@@ -39,14 +67,17 @@ pre-build:
 		[ -e "$${dd}" ] || ${MKDIR} "$${dd}";			\
 	done
 	for ff in mrustc minicargo; do					\
-	    [ -e "${WRKSRC}/bin/$${ff}" ] ||				\
-		${LN} -s ${PREFIX}/bin/$${ff} "${WRKSRC}/bin";		\
+	    [ -e "${WRKSRC}/bin/$$ff" ] ||				\
+		${LN} -s "${PREFIX}/bin/$$ff" "${WRKSRC}/bin";		\
+		${TOUCH} -hr "${PREFIX}/bin/$$ff" "${WRKSRC}/bin/$$ff";	\
 	done
 	( cd ${PREFIX}/lib/mrust/;					\
 	    for ff in *; do						\
 		[ -e "${WRKSRC}/${MR_OUTDIR}$$ff" ] ||			\
 		    ${LN} -s "${PREFIX}/lib/mrust/$$ff"			\
 			"${WRKSRC}/${MR_OUTDIR}";			\
+		    ${TOUCH} -hr "${PREFIX}/lib/mrust/$$ff"		\
+			"${WRKSRC}/${MR_OUTDIR}/$$ff";			\
 	    done; )
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS} RUSTCSRC

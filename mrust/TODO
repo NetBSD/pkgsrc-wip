@@ -2,12 +2,6 @@ These aren't in a particular order (as of this writing), except
 maybe the order they occurred to me to add them [-DLB]
 
 
- *  = new upstream snapshot =
-    rework the mrust package set to use a newer upstream snapshot
-    (I believe the mrustc project is now able to compile rust
-    1.54 on linux rather than being limited to 1.39)
-
-
  *  = "optimize" llvm phase =
     if possible, factor out the llvm portion of the build--which
     currently occurs as part of the mrust-rustc subpackage, so
@@ -27,12 +21,6 @@ maybe the order they occurred to me to add them [-DLB]
     troubleshooting process of the rest of the mrust-rustc phases
 
 
- *  = save distfiles/ space on rustc src =
-    somehow, use a shared copy of "rustc-1.39.0-src.tar.gz" with
-    the rest of distfiles/ rather than putting a (possibly
-    duplicate) copy in an mrustc/ subdir
-
-
  *  = block (inadvertent) downloads =
     add configuration so that every subpackage that invokes any
     kind of upstream make commands does so with a
@@ -48,14 +36,48 @@ maybe the order they occurred to me to add them [-DLB]
 
      a) rebuild rustc & crate with "itself": or, more exactly,
         the mrustc built rustc & cargo
-     b) bootstrap the next version (e.g., 1.40) with either
+     b) bootstrap the next version (e.g., 1.55) with either
         mrust-rust & mrust-cargo, or the above self-rebuilt ones
      c) run the x.py rust testsuite
+
+
+ *  = dynamic MAKE_JOBS =
+    some stages of the mrust* packages benefit hugely from
+    setting MAKE_JOBS appropriately for the number of CPUs, while
+    other stages fail catastrophically because of it--especially
+    if there isn't a huge supply of RAM to match it for the
+    biggest artifacts; if there were a way to have make
+    automatically tune MAKE_JOBS up and down on the fly, based on
+    resource pressure vs. availability, it could improve build
+    time significantly (this is not an mrust-specific topic,
+    though; pkgsrc could potentially benefit from it in general)
+
+
+IMPLEMENTED, TESTING:
+
+
+ *  = new upstream snapshot =
+    rework the mrust package set to use a newer upstream snapshot
+    (I believe the mrustc project is now able to compile rust
+    1.54 on linux rather than being limited to 1.39)
+
+
+ *  = save distfiles/ space on rustc src =
+    somehow, use a shared copy of "rustc-1.39.0-src.tar.gz" with
+    the rest of distfiles/ rather than putting a (possibly
+    duplicate) copy in an mrustc/ subdir
 
 
  *  = fix sporadic the "guard page" build failures =
     I've tried, but I haven't been able to figure out the cause
     of this problem
+   [NOTE: "fix" needs review--I don't know whether it has parity
+    with stock functionality, or if it just eliminates the error
+    but lacks at least some of the actual security that guard
+    pages offer in the first place)
+
+
+DONE:
 
 
  *  = try inhibiting minicargo's forced use of "-g" =
@@ -71,15 +93,5 @@ maybe the order they occurred to me to add them [-DLB]
         -g rather than eliminating it, but that's venturing at
         least a bit into mrustc development, rather than just
         mrustc packaging
-
-
- *  = dynamic MAKE_JOBS =
-    some stages of the mrust* packages benefit hugely from
-    setting MAKE_JOBS appropriately for the number of CPUs, while
-    other stages fail catastrophically because of it--especially
-    if there isn't a huge supply of RAM to match it for the
-    biggest artifacts; if there were a way to have make
-    automatically tune MAKE_JOBS up and down on the fly, based on
-    resource pressure vs. availability, it could improve build
-    time significantly (this is not an mrust-specific topic,
-    though; pkgsrc could potentially benefit from it in general)
+   [NOTE: my implementation was obsoleted by a similar upstream
+    implementation]

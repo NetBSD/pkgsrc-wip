@@ -6,6 +6,8 @@ PKGNAME=	mrust-libs-${SNAPSTAMP}
 COMMENT=	Rustc libraries & crates built using mrustc toolchain
 
 DISTFILES=		${DEFAULT_DISTFILES} ${RUSTSRC_DIST}
+MRUST_DISTDIR=		${DISTDIR}/${DIST_SUBDIR}
+RUSTSRC_LINK=		${DISTDIR}/${DIST_SUBDIR}/${RUSTSRC_DIST}
 BUILD_TARGET=		LIBS
 TEST_TARGET=		mrustc_tests
 ##TEST_TARGET2=		rust_tests-libs
@@ -30,6 +32,35 @@ USE_LANGUAGES+=		c c++14
 
 
 #* (no options yet) *#.include "options.mk"
+
+
+#
+# "De-duplicate" the rust source tarball.
+#
+# Without the following pre-fetch and pre-extract targets,
+# the mrust build infrastructure will needlessly download its
+# own, duplicate copy of the rust-lang source tarball into
+# distinfo/mrustc.  Instead, this makes a hardlink from the
+# canonical location, if the tarball already exists there.
+#
+pre-fetch:
+	[ -e "${MRUST_DISTDIR}" ] || ${MKDIR} "${MRUST_DISTDIR}"
+	if [ -e "${DISTDIR}/${RUSTSRC_DIST}" ]; then			\
+	    ${LN} -f "${DISTDIR}/${RUSTSRC_DIST}" "${MRUST_DISTDIR}";	\
+	fi
+
+##	    ${RM} -f "${RUSTSRC_LINK}" && 				\
+
+#
+# Once the checksum is verified, also make the rust source tarball
+# available in the expected location for real rust-src builds.
+# Note: be certain the checksum for the rust-lang tarball
+# in the mrust* distinfo files matches the one in the rust-src
+# distinfo files.
+#
+pre-extract:
+	[ -e "${DISTDIR}/${RUSTSRC_DIST}" ] ||				\
+	    ${LN} "${RUSTSRC_LINK}" "${DISTDIR}/"
 
 
 #
@@ -66,12 +97,14 @@ do-install:
 	${PKGSRC_SETENV} ${INSTALL_ENV}					\
 	    ${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/mrust
 	( cd ${WRKSRC}/${MR_OUTDIR} &&					\
-	    for ff in lib*.rlib lib*.rlib.[ho]* *build build*.txt; do	\
+	    ${RM} build*_cmd.txt build*_dbg.txt;			\
+	    for ff in lib*.rlib lib*.rlib.[ho]* build*.txt; do		\
 	        ${PKGSRC_SETENV} ${INSTALL_ENV}                         \
 		    ${INSTALL_LIB} $$ff					\
 			${DESTDIR}${PREFIX}/lib/mrust;			\
 	    done )
 
+##	    for ff in lib*.rlib lib*.rlib.[ho]* *build build*.txt; do	\
 
 BUILD_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
 BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo

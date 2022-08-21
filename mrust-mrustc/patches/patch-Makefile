@@ -1,32 +1,24 @@
 $NetBSD$
 
---- Makefile.orig	2021-09-12 00:15:52.000000000 +0000
+--- Makefile.orig	2022-08-14 04:09:16.000000000 +0000
 +++ Makefile
-@@ -45,10 +45,8 @@ CXXFLAGS += $(CXXFLAGS_EXTRA)
+@@ -49,10 +49,8 @@ CXXFLAGS += $(CXXFLAGS_EXTRA)
  CPPFLAGS := -I src/include/ -I src/
  CPPFLAGS += -I tools/common/
  
 -CXXFLAGS += -Wno-pessimizing-move
  CXXFLAGS += -Wno-misleading-indentation
  #CXXFLAGS += -Wno-unused-private-field
--CXXFLAGS += -Wno-unknown-warning-option
+-#CXXFLAGS += -Wno-unknown-warning-option
  
  CXXFLAGS += -Werror=return-type
  
-@@ -216,6 +214,7 @@ $(RUSTC_SRC_TARBALL): $(RUSTC_SRC_DES)
- $(RUSTC_SRC_DL): $(RUSTC_SRC_TARBALL) rustc-$(RUSTC_VERSION)-src.patch
- 	tar -xf $(RUSTC_SRC_TARBALL)
- 	cd $(RUSTCSRC) && patch -p0 < ../rustc-$(RUSTC_VERSION)-src.patch;
-+	find $(RUSTCSRC) -name '*.[oa]' -print0 | xargs -0 rm
- 	cat $(RUSTC_SRC_DES) > $(RUSTC_SRC_DL)
- endif
- 
-@@ -310,7 +309,7 @@ $(OBJDIR)%.o: src/%.cpp
+@@ -178,7 +176,7 @@ $(OBJDIR)%.o: src/%.cpp
  $(OBJDIR)version.o: $(OBJDIR)%.o: src/%.cpp $(filter-out $(OBJDIR)version.o,$(OBJ)) Makefile
- 	@mkdir -p $(dir $@)
+ 	@+mkdir -p $(dir $@)
  	@echo [CXX] -o $@
--	$V$(CXX) -o $@ -c $< $(CXXFLAGS) $(CPPFLAGS) -MMD -MP -MF $@.dep -D VERSION_GIT_FULLHASH=\"$(shell git show --pretty=%H -s)\" -D VERSION_GIT_BRANCH="\"$(shell git symbolic-ref -q --short HEAD || git describe --tags --exact-match)\"" -D VERSION_GIT_SHORTHASH=\"$(shell git show -s --pretty=%h)\" -D VERSION_BUILDTIME="\"$(shell date -uR)\"" -D VERSION_GIT_ISDIRTY=$(shell git diff-index --quiet HEAD; echo $$?)
-+	$V$(CXX) -o $@ -c $< $(CXXFLAGS) $(CPPFLAGS) -MMD -MP -MF $@.dep -D VERSION_GIT_FULLHASH=\"$(GIT_L_HASH)\" -D VERSION_GIT_BRANCH="\"(branch n/a)"\" -D VERSION_GIT_SHORTHASH=\"$(GIT_S_HASH)\" -D VERSION_BUILDTIME="\"$(shell date -u +"%a, %d %b %Y %X %z")\"" -D VERSION_GIT_ISDIRTY="\"(not available)"\"
+-	$V$(CXX) -o $@ -c $< $(CXXFLAGS) $(CPPFLAGS) -MMD -MP -MF $@.dep -D VERSION_GIT_FULLHASH=\"$(shell git show --pretty=%H -s --no-show-signature)\" -D VERSION_GIT_BRANCH="\"$(shell git symbolic-ref -q --short HEAD || git describe --tags --exact-match)\"" -D VERSION_GIT_SHORTHASH=\"$(shell git show -s --pretty=%h --no-show-signature)\" -D VERSION_BUILDTIME="\"$(shell date -uR)\"" -D VERSION_GIT_ISDIRTY=$(shell git diff-index --quiet HEAD; echo $$?)
++	$V$(CXX) -o $@ -c $< $(CXXFLAGS) $(CPPFLAGS) -MMD -MP -MF $@.dep -D VERSION_GIT_FULLHASH=\"$(GIT_L_HASH)\" -D VERSION_GIT_BRANCH="\"master\"" -D VERSION_GIT_SHORTHASH=\"$(GIT_S_HASH)\" -D VERSION_BUILDTIME="\"$(shell date -u +"%a, %d %b %Y %X %z")\"" -D VERSION_GIT_ISDIRTY=1
  
  src/main.cpp: $(PCHS:%=src/%.gch)
  
