@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.39 2021/05/24 19:52:02 wiz Exp $
 
-DISTNAME=	rt-5.0.2
+DISTNAME=	rt-5.0.3
 PKGNAME=	${DISTNAME:S/rt/rt5/}
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
@@ -26,7 +26,7 @@ DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=	p5-Convert-Color-[0-9]*:../../converters/p5-Convert-Color
 DEPENDS+=	p5-Crypt-Eksblowfish-[0-9]*:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-DBIx-SearchBuilder>=1.65:../../databases/p5-DBIx-SearchBuilder
+DEPENDS+=	p5-DBIx-SearchBuilder>=1.71:../../databases/p5-DBIx-SearchBuilder
 DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-Data-ICal-[0-9]*:../../time/p5-Data-ICal
 DEPENDS+=	p5-Data-Page-Pageset-[0-9]*:../../devel/p5-Data-Page-Pageset

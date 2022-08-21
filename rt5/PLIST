@@ -418,6 +418,7 @@ share/rt5/data/html/Elements/Crypt/SignEncryptWidget
 share/rt5/data/html/Elements/CryptStatus
 share/rt5/data/html/Elements/Dashboards
 share/rt5/data/html/Elements/DoAuth
+share/rt5/data/html/Elements/DropdownMenu
 share/rt5/data/html/Elements/EditCustomDateRanges
 share/rt5/data/html/Elements/EditCustomField
 share/rt5/data/html/Elements/EditCustomFieldAutocomplete
@@ -428,6 +429,7 @@ share/rt5/data/html/Elements/EditCustomFieldDate
 share/rt5/data/html/Elements/EditCustomFieldDateTime
 share/rt5/data/html/Elements/EditCustomFieldDisplay
 share/rt5/data/html/Elements/EditCustomFieldFreeform
+share/rt5/data/html/Elements/EditCustomFieldHTML
 share/rt5/data/html/Elements/EditCustomFieldIPAddress
 share/rt5/data/html/Elements/EditCustomFieldIPAddressRange
 share/rt5/data/html/Elements/EditCustomFieldImage
@@ -544,6 +546,7 @@ share/rt5/data/html/Elements/ShowCustomFieldBinary
 share/rt5/data/html/Elements/ShowCustomFieldCustomGroupings
 share/rt5/data/html/Elements/ShowCustomFieldDate
 share/rt5/data/html/Elements/ShowCustomFieldDateTime
+share/rt5/data/html/Elements/ShowCustomFieldHTML
 share/rt5/data/html/Elements/ShowCustomFieldImage
 share/rt5/data/html/Elements/ShowCustomFieldText
 share/rt5/data/html/Elements/ShowCustomFieldWikitext
@@ -1362,7 +1365,7 @@ share/rt5/data/static/js/assets.js
 share/rt5/data/static/js/autocomplete.js
 share/rt5/data/static/js/bootstrap-combobox.js
 share/rt5/data/static/js/bootstrap-select.min.js
-share/rt5/data/static/js/bootstrap.min.js
+share/rt5/data/static/js/bootstrap.bundle.min.js
 share/rt5/data/static/js/cascaded.js
 share/rt5/data/static/js/chartjs-plugin-colorschemes.min.js
 share/rt5/data/static/js/chosen.jquery.min.js
@@ -1374,7 +1377,7 @@ share/rt5/data/static/js/fontawesome.min.js
 share/rt5/data/static/js/forms.js
 share/rt5/data/static/js/history-folding.js
 share/rt5/data/static/js/i18n.js
-share/rt5/data/static/js/jquery-3.4.1.min.js
+share/rt5/data/static/js/jquery-3.6.0.min.js
 share/rt5/data/static/js/jquery-ui-patch-datepicker.js
 share/rt5/data/static/js/jquery-ui-timepicker-addon.js
 share/rt5/data/static/js/jquery-ui.min.js
@@ -1388,7 +1391,6 @@ share/rt5/data/static/js/late.js
 share/rt5/data/static/js/lifecycleui-editor.js
 share/rt5/data/static/js/lifecycleui-model.js
 share/rt5/data/static/js/mousetrap.min.js
-share/rt5/data/static/js/popper.min.js
 share/rt5/data/static/js/quoteselection.js
 share/rt5/data/static/js/rights-inspector.js
 share/rt5/data/static/js/selectize.min.js
@@ -1616,6 +1618,8 @@ share/rt5/etc/upgrade/4.4.2/schema.Pg
 share/rt5/etc/upgrade/4.4.2/schema.SQLite
 share/rt5/etc/upgrade/4.4.2/schema.mysql
 share/rt5/etc/upgrade/4.4.5/content
+share/rt5/etc/upgrade/4.4.6/indexes
+share/rt5/etc/upgrade/4.4.6/schema.Pg
 share/rt5/etc/upgrade/4.5.0/schema.Oracle
 share/rt5/etc/upgrade/4.5.0/schema.Pg
 share/rt5/etc/upgrade/4.5.0/schema.mysql
@@ -1640,6 +1644,8 @@ share/rt5/etc/upgrade/4.5.7/schema.SQLite
 share/rt5/etc/upgrade/4.5.7/schema.mysql
 share/rt5/etc/upgrade/4.5.8/content
 share/rt5/etc/upgrade/5.0.2/content
+share/rt5/etc/upgrade/5.0.3/indexes
+share/rt5/etc/upgrade/5.0.3/schema.Pg
 share/rt5/etc/upgrade/generate-rtaddressregexp
 share/rt5/etc/upgrade/reset-sequences
 share/rt5/etc/upgrade/sanity-check-stylesheets
@@ -1839,6 +1845,7 @@ share/rt5/lib/RT/Queues.pm
 share/rt5/lib/RT/REST2.pm
 share/rt5/lib/RT/REST2/Dispatcher.pm
 share/rt5/lib/RT/REST2/Middleware/Auth.pm
+share/rt5/lib/RT/REST2/Middleware/CleanupRequest.pm
 share/rt5/lib/RT/REST2/Middleware/ErrorAsJSON.pm
 share/rt5/lib/RT/REST2/Middleware/Log.pm
 share/rt5/lib/RT/REST2/Resource.pm
