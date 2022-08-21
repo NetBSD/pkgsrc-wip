@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	loki-2.5.0
+DISTNAME=	loki-2.6.1
 PKGNAME=	${DISTNAME:S/loki/logcli/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
