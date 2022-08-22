@@ -1,0 +1,6 @@
+Goblins is a distributed programming system with local transactions
+and following object capability security principles.  It is both
+Spritely's core distributed networked technology, and general enough
+to be used broadly.
+
+guile-goblins is a port of Spritely Goblins to Guile.

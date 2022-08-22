@@ -1,0 +1,6 @@
+Package fibers and add a dependency on it.
+
+Use a better workaround for guile.m4 not being found by bootstrap.
+
+Test.
+

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (guile-goblins-v0.8.tar.gz) = 8a89af47366caf93814e7a51e060014aeb5f2c088cf48e456b641cc5ae2446a1
+SHA512 (guile-goblins-v0.8.tar.gz) = bc4ffd0b09c34d4c066558b4c77ab318b8a0d10419fe455de238d4a76afda6ab4143e61fbc19b7c9e99bdde5a161e7ff7f0dc86ce3fb87a40de79bc2022e028e
+Size (guile-goblins-v0.8.tar.gz) = 160194 bytes
+SHA1 (patch-m4_guile.m4) = e891a5f4a985999b4966d54263935394884ed112

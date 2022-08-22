@@ -1451,6 +1451,7 @@ SUBDIR+=	gucharmap
 SUBDIR+=	guest-oslogin
 SUBDIR+=	guichan
 SUBDIR+=	guile-colorized
+SUBDIR+=	guile-goblins
 SUBDIR+=	guile-persist
 SUBDIR+=	guile-reader
 SUBDIR+=	guile-sjson
