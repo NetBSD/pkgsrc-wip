@@ -1,0 +1,4 @@
+Wait for upstream to not depend on (non-POSIX) epoll:
+  https://github.com/wingo/fibers/issues/64
+
+Test

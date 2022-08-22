@@ -1,0 +1,2 @@
+Fibers is a facility that provides Go-like concurrency for Guile
+Scheme, in the tradition of Concurrent ML.
