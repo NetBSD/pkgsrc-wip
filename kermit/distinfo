@@ -6,4 +6,4 @@ Size (cku10.0-beta04.tar.gz) = 3009017 bytes
 SHA1 (patch-ckuath.c) = 494e9f5dc9edc2b8738129bb53de2d5affa8cca2
 SHA1 (patch-ckupty.c) = 97cb6cca9b90d4c9a3a2faf9161310cb51fd2a58
 SHA1 (patch-ckuusx.c) = d92471b5f2b1e0444a9498052ec768f5d1bacef7
-SHA1 (patch-makefile) = e38c98a10fb1d10c5227d0499b6a659bab054d27
+SHA1 (patch-makefile) = 7734ea01328bb50a4649037201fe414691e31f80

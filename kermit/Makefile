@@ -20,7 +20,7 @@ LICENSE=	modified-bsd
 # The tarball just has files, no directory.
 # \todo Create "kermit" in ${WRKDIR} and unpack into it.
 WRKSRC=		${WRKDIR}
-BUILD_DEFS+=	KFLAGS LIBS MANINSTALL
+BUILD_DEFS+=	KFLAGS LIBS
 MAKE_ENV+=	prefix=${PREFIX} KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
 MAKE_FILE=	makefile
 
@@ -31,13 +31,6 @@ LIBS+=		${BUILDLINK_LDADD.termcap}
 LIBS+=		${BUILDLINK_LDFLAGS}
 
 .include "options.mk"
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/kermit
-
-foo-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${DESTDIR}${PREFIX}/bin/kermit
-	#${INSTALL_MAN} ${WRKSRC}/ckuker.nr \
-	#	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
