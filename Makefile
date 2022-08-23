@@ -5050,6 +5050,7 @@ SUBDIR+=	residualvm-git
 SUBDIR+=	resin
 SUBDIR+=	revealjs
 SUBDIR+=	revelation
+SUBDIR+=	reviewdog
 SUBDIR+=	rhapsody
 SUBDIR+=	riak
 SUBDIR+=	riak14
