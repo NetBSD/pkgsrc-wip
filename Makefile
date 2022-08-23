@@ -3778,6 +3778,7 @@ SUBDIR+=	py-eventlet
 SUBDIR+=	py-executor
 SUBDIR+=	py-exocode
 SUBDIR+=	py-expander
+SUBDIR+=	py-expiringdict
 SUBDIR+=	py-expression
 SUBDIR+=	py-extremes
 SUBDIR+=	py-face
