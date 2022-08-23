@@ -1,23 +1,26 @@
 # $NetBSD: Makefile,v 1.3 2014/12/31 13:58:23 thomasklausner Exp $
 
-DISTNAME=	python-coveralls-2.4.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+DISTNAME=	coveralls-3.3.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-coveralls/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/coveralls/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/z4r/python-coveralls
 COMMENT=	Python interface to coveralls.io API
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-coverage>=3.7.1:../../devel/py-coverage
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.2.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-coverage>=4.1:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-docopt>=0.6.1:../../devel/py-docopt
+DEPENDS+=	${PYPKGPREFIX}-requests>=1.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
-
-WRKSRC=		${WRKDIR}/python-coveralls-2.4.2
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0:../../net/py-responses
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
