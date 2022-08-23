@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (graphtage-0.2.6.tar.gz) = c83b0c876a6c9b6dc30de0d2d65791bfc7d65417911da5af8639b97bb4cdbfb9
+SHA512 (graphtage-0.2.6.tar.gz) = a393ed15b9b84b580a13fad7f5a29d76025eb8b4354b7f6bb28249205894cd541f238afe9b71966700c2300e617b2fba5afa209fd814ef3accc90685aee1b825
+Size (graphtage-0.2.6.tar.gz) = 91453 bytes
+SHA1 (patch-setup.py) = fde727fe5eeae399d9a9f9ed0bedbe096402694c
