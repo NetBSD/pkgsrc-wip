@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	semgrep-0.109.0
+DISTNAME=	semgrep-0.111.1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/semgrep/}
 

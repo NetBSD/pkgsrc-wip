@@ -6,9 +6,6 @@ ${PYSITELIB}/semdep/__init__.pyo
 ${PYSITELIB}/semdep/find_lockfiles.py
 ${PYSITELIB}/semdep/find_lockfiles.pyc
 ${PYSITELIB}/semdep/find_lockfiles.pyo
-${PYSITELIB}/semdep/models.py
-${PYSITELIB}/semdep/models.pyc
-${PYSITELIB}/semdep/models.pyo
 ${PYSITELIB}/semdep/package_restrictions.py
 ${PYSITELIB}/semdep/package_restrictions.pyc
 ${PYSITELIB}/semdep/package_restrictions.pyo
@@ -163,9 +160,6 @@ ${PYSITELIB}/semgrep/git.pyo
 ${PYSITELIB}/semgrep/ignores.py
 ${PYSITELIB}/semgrep/ignores.pyc
 ${PYSITELIB}/semgrep/ignores.pyo
-${PYSITELIB}/semgrep/job_postings.py
-${PYSITELIB}/semgrep/job_postings.pyc
-${PYSITELIB}/semgrep/job_postings.pyo
 ${PYSITELIB}/semgrep/join_rule.py
 ${PYSITELIB}/semgrep/join_rule.pyc
 ${PYSITELIB}/semgrep/join_rule.pyo

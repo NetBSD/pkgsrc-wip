@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (semgrep-0.109.0.tar.gz) = d7d8e72f6aee9aa9e87da31a3a84b1e00859d0e5c496a661a32599779ce600e5
-SHA512 (semgrep-0.109.0.tar.gz) = 3fc5f0aa11d39e2ca18dc572f5ffe407773465fc4c8e0a25532170c0c03d9ee46332f98321895de93d34e8286a27c53f5d494d3b70d4aeb1d7632b5e026e33dc
-Size (semgrep-0.109.0.tar.gz) = 187691 bytes
+BLAKE2s (semgrep-0.111.1.tar.gz) = ec203d73e2c56846b7f4e7e1e2e3743a3e9760bbe95213e0f192b84938522ad2
+SHA512 (semgrep-0.111.1.tar.gz) = 57216bc20f4db559e3f6d7fe17ed80c3c0c411c0cb2968a1f3c6bf0f6f54a7c548f33f4d042ad3e7ee5665ae9894897fde4e4faeae7d748f40aafa22bd2231bd
+Size (semgrep-0.111.1.tar.gz) = 187717 bytes

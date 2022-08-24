@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	semgrep-core-0.109.0
+DISTNAME=	semgrep-core-0.111.1
 PKGREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=returntocorp/}
