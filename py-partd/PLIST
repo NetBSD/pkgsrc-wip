@@ -14,9 +14,6 @@ ${PYSITELIB}/partd/_version.pyo
 ${PYSITELIB}/partd/buffer.py
 ${PYSITELIB}/partd/buffer.pyc
 ${PYSITELIB}/partd/buffer.pyo
-${PYSITELIB}/partd/compatibility.py
-${PYSITELIB}/partd/compatibility.pyc
-${PYSITELIB}/partd/compatibility.pyo
 ${PYSITELIB}/partd/compressed.py
 ${PYSITELIB}/partd/compressed.pyc
 ${PYSITELIB}/partd/compressed.pyo

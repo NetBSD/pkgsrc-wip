@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	partd-1.2.0
+DISTNAME=	partd-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/partd/}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-locket>=0.2.1:../../wip/py-locket
 DEPENDS+=	${PYPKGPREFIX}-blosc>=0.2.1:../../wip/py-blosc
 DEPENDS+=	${PYPKGPREFIX}-zmq>=0.2.1:../../net/py-zmq
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.3.0:../../math/py-pandas
 
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
