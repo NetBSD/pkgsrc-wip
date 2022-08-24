@@ -4307,6 +4307,7 @@ SUBDIR+=	py-param
 SUBDIR+=	py-parameterizedtestcase
 SUBDIR+=	py-parameters
 SUBDIR+=	py-paramz
+SUBDIR+=	py-parsedmarc
 SUBDIR+=	py-parserutils
 SUBDIR+=	py-parsy
 SUBDIR+=	py-partd

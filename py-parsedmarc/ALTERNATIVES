@@ -1,0 +1,1 @@
+bin/parsedmarc @PREFIX@/bin/parsedmarc-@PYVERSSUFFIX@
