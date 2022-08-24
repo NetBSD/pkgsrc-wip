@@ -2,7 +2,7 @@
 
 # Prefer pulling from github instead of pypi
 # so that we can run tests
-DISTNAME=	fastparquet-0.8.1
+DISTNAME=	fastparquet-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	fastparquet
 CATEGORIES=	devel
