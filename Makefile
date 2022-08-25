@@ -4081,7 +4081,6 @@ SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-logtools
-SUBDIR+=	py-loguru
 SUBDIR+=	py-loky
 SUBDIR+=	py-louie
 SUBDIR+=	py-louvain

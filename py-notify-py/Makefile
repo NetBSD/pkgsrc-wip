@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	bash
 
-DEPENDS+=       ${PYPKGPREFIX}-loguru>=0.5.1:../../wip/py-loguru
+DEPENDS+=       ${PYPKGPREFIX}-loguru>=0.5.1:../../sysutils/py-loguru
 
 REPLACE_BASH+=	notifypy/os_notifiers/binaries/Notificator.app/Contents/Resources/Scripts/notificator
 
