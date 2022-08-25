@@ -1,14 +1,13 @@
 $NetBSD$
 
 Use libhidapi from pkgsrc.
-Only use libdl on Linux.
 Allow use of stable track wxWidgets on NetBSD.
 Use namespaces to link against libcereal >= 1.3.1 from:
 https://github.com/prusa3d/PrusaSlicer/commit/0ffcfd8393457fd035576436752267c9a1e6bbcc
 
---- src/CMakeLists.txt.orig	2022-04-22 11:01:19.000000000 +0000
+--- src/CMakeLists.txt.orig	2022-08-19 14:41:23.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -22,8 +22,6 @@ add_subdirectory(libslic3r)
+@@ -24,8 +24,6 @@ endif ()
  
  if (SLIC3R_GUI)
      add_subdirectory(imgui)
@@ -17,7 +16,7 @@ https://github.com/prusa3d/PrusaSlicer/commit/0ffcfd8393457fd035576436752267c9a1
  
      if(WIN32)
          message(STATUS "WXWIN environment set to: $ENV{WXWIN}")
-@@ -36,10 +34,10 @@ if (SLIC3R_GUI)
+@@ -38,10 +36,10 @@ if (SLIC3R_GUI)
          endif()
      endif()
  
@@ -31,24 +30,12 @@ https://github.com/prusa3d/PrusaSlicer/commit/0ffcfd8393457fd035576436752267c9a1
          else ()
              find_package(wxWidgets 3.1 QUIET COMPONENTS base core adv html gl)
  
-@@ -125,7 +123,7 @@ if (NOT WIN32 AND NOT APPLE)
+@@ -127,7 +125,7 @@ if (NOT WIN32 AND NOT APPLE)
      set_target_properties(PrusaSlicer PROPERTIES OUTPUT_NAME "prusa-slicer")
  endif ()
  
 -target_link_libraries(PrusaSlicer libslic3r cereal)
 +target_link_libraries(PrusaSlicer libslic3r cereal::cereal)
+ 
  if (APPLE)
  #    add_compile_options(-stdlib=libc++)
- #    add_definitions(-DBOOST_THREAD_DONT_USE_CHRONO -DBOOST_NO_CXX11_RVALUE_REFERENCES -DBOOST_THREAD_USES_MOVE)
-@@ -151,8 +149,10 @@ target_link_libraries(PrusaSlicer libsli
-         target_link_libraries(PrusaSlicer ws2_32 uxtheme setupapi)
-     elseif (APPLE)
-         target_link_libraries(PrusaSlicer "-framework OpenGL")
--    else ()
-+    elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
-         target_link_libraries(PrusaSlicer -ldl)
-+    else ()
-+        # nothing.
-     endif ()
-     if (WIN32)
-         find_library(PSAPI_LIB NAMES Psapi)

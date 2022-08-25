@@ -1,5 +1,7 @@
 $NetBSD$
 
+Treat NetBSD the same as OpenBSD.
+
 --- src/libslic3r/GCodeSender.cpp.orig	2022-03-10 10:35:03.000000000 +0000
 +++ src/libslic3r/GCodeSender.cpp
 @@ -8,7 +8,7 @@

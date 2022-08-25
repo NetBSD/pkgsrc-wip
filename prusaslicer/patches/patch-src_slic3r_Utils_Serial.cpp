@@ -1,5 +1,7 @@
 $NetBSD$
 
+Treat NetBSD the same as OpenBSD.
+
 --- src/slic3r/Utils/Serial.cpp.orig	2022-03-10 10:35:03.000000000 +0000
 +++ src/slic3r/Utils/Serial.cpp
 @@ -49,7 +49,7 @@

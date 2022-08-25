@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.4.2
+PKGVERSION=	2.5.0rc1
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:S/rc/-rc/}
 CATEGORIES=	cad
@@ -22,12 +22,16 @@ GCC_REQD+=	10
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	cmake gmake
 USE_CMAKE=	yes
+ICON_THEMES=	yes
+
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
 
 .include "../../mk/bsd.prefs.mk"
 
-CMAKE_ARGS+=	-DSLIC3R_WX_STABLE=1
-CMAKE_ARGS+=	-DSLIC3R_FHS=1
-#CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS=-g
+CMAKE_ARGS+=	-DSLIC3R_WX_STABLE:BOOL=TRUE
+CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
+#CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS:STRING=-g
 
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
@@ -43,6 +47,8 @@ CMAKE_ARGS+=	-DSLIC3R_FHS=1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/cgal/buildlink3.mk"
@@ -54,6 +60,7 @@ CMAKE_ARGS+=	-DSLIC3R_FHS=1
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
+.include "../../wip/opencascade-git/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"

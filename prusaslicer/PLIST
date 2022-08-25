@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/OCCTWrapper.so
 bin/prusa-gcodeviewer
 bin/prusa-slicer
 lib/udev/rules.d/90-3dconnexion.rules
@@ -343,6 +344,7 @@ share/PrusaSlicer/profiles/Creality/CR10MAX_thumbnail.png
 share/PrusaSlicer/profiles/Creality/CR10MINI_thumbnail.png
 share/PrusaSlicer/profiles/Creality/CR10S4_thumbnail.png
 share/PrusaSlicer/profiles/Creality/CR10S5_thumbnail.png
+share/PrusaSlicer/profiles/Creality/CR10SMARTPRO_thumbnail.png
 share/PrusaSlicer/profiles/Creality/CR10SMART_thumbnail.png
 share/PrusaSlicer/profiles/Creality/CR10SPROV2_thumbnail.png
 share/PrusaSlicer/profiles/Creality/CR10SPRO_thumbnail.png
@@ -363,9 +365,12 @@ share/PrusaSlicer/profiles/Creality/CRX_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER2PRO_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER2_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER3BLTOUCH_thumbnail.png
+share/PrusaSlicer/profiles/Creality/ENDER3MAXNEO_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER3MAX_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER3PRO_thumbnail.png
+share/PrusaSlicer/profiles/Creality/ENDER3S1PRO_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER3S1_thumbnail.png
+share/PrusaSlicer/profiles/Creality/ENDER3V2NEO_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER3V2_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER3_thumbnail.png
 share/PrusaSlicer/profiles/Creality/ENDER4_thumbnail.png
@@ -411,6 +416,14 @@ share/PrusaSlicer/profiles/Creality/ender7.svg
 share/PrusaSlicer/profiles/Creality/ender7_bed.stl
 share/PrusaSlicer/profiles/Creality/sermoond1.svg
 share/PrusaSlicer/profiles/Creality/sermoond1_bed.stl
+share/PrusaSlicer/profiles/Elegoo.idx
+share/PrusaSlicer/profiles/Elegoo.ini
+share/PrusaSlicer/profiles/Elegoo/NEPTUNE1_thumbnail.png
+share/PrusaSlicer/profiles/Elegoo/NEPTUNE2D_thumbnail.png
+share/PrusaSlicer/profiles/Elegoo/NEPTUNE2S_thumbnail.png
+share/PrusaSlicer/profiles/Elegoo/NEPTUNE2_thumbnail.png
+share/PrusaSlicer/profiles/Elegoo/NEPTUNE3_thumbnail.png
+share/PrusaSlicer/profiles/Elegoo/NEPTUNEX_thumbnail.png
 share/PrusaSlicer/profiles/FLSun.idx
 share/PrusaSlicer/profiles/FLSun.ini
 share/PrusaSlicer/profiles/FLSun/Q5.svg
@@ -421,8 +434,17 @@ share/PrusaSlicer/profiles/FLSun/QQSP_bed.stl
 share/PrusaSlicer/profiles/FLSun/QQSP_thumbnail.png
 share/PrusaSlicer/profiles/INAT.idx
 share/PrusaSlicer/profiles/INAT.ini
+share/PrusaSlicer/profiles/INAT/PROTON_XE750_thumbnail.png
 share/PrusaSlicer/profiles/INAT/PROTON_X_RAIL_thumbnail.png
 share/PrusaSlicer/profiles/INAT/PROTON_X_ROD_thumbnail.png
+share/PrusaSlicer/profiles/Infinity3D.idx
+share/PrusaSlicer/profiles/Infinity3D.ini
+share/PrusaSlicer/profiles/Infinity3D/DEV-200_thumbnail.png
+share/PrusaSlicer/profiles/Infinity3D/DEV-350_thumbnail.png
+share/PrusaSlicer/profiles/Infinity3D/DEV_200_bed.stl
+share/PrusaSlicer/profiles/Infinity3D/DEV_200_texture.svg
+share/PrusaSlicer/profiles/Infinity3D/DEV_350_bed.stl
+share/PrusaSlicer/profiles/Infinity3D/DEV_350_texture.svg
 share/PrusaSlicer/profiles/Jubilee.idx
 share/PrusaSlicer/profiles/Jubilee.ini
 share/PrusaSlicer/profiles/Jubilee/Jubilee_bed.stl
