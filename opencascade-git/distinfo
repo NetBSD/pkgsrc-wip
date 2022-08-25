@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (patch-CMakeLists.txt) = 0aed9c33580f915de7ff0c2800a78d00d655edc4
+SHA1 (patch-src_DrawResources_InitEnvironment.tcl) = 436803f7b8f3e72b0c62a8df7a3b76babf9aecaf
+SHA1 (patch-src_OSD_OSD__Chronometer.cxx) = 8df82aefe0fe738534c4ee2c93aa0d542cd75443
+SHA1 (patch-src_OSD_OSD__Host.cxx) = 6f56c0a582c0880e01b8923ef9356acf0a3bf55c
+SHA1 (patch-src_OSD_OSD__Path.cxx) = c6972cbd91658923b75a6e343adacfb217da87fc
+SHA1 (patch-src_Standard_Standard__CString.cxx) = 9e2a8235326bf144dd674269dc6fedf2f0fdd45c
+SHA1 (patch-src_Standard_Standard__MMgrOpt.cxx) = ed4f05ca2b24563ecffe22bae6000b652ec18ab6
