@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fsspec-2022.3.0
+DISTNAME=	fsspec-2022.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 GITHUB_PROJECT=	filesystem_spec
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/fsspec/filesystem_spec
 COMMENT=	Specifications for pythonic filesystems
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-2022.3.0
+WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-2022.7.1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

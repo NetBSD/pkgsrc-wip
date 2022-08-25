@@ -44,6 +44,9 @@ ${PYSITELIB}/fsspec/exceptions.pyo
 ${PYSITELIB}/fsspec/fuse.py
 ${PYSITELIB}/fsspec/fuse.pyc
 ${PYSITELIB}/fsspec/fuse.pyo
+${PYSITELIB}/fsspec/generic.py
+${PYSITELIB}/fsspec/generic.pyc
+${PYSITELIB}/fsspec/generic.pyo
 ${PYSITELIB}/fsspec/gui.py
 ${PYSITELIB}/fsspec/gui.pyc
 ${PYSITELIB}/fsspec/gui.pyo
