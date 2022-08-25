@@ -74,8 +74,9 @@ share/jitsi-videobridge/lib/jetty-servlets-11.0.10.jar
 share/jitsi-videobridge/lib/jetty-util-11.0.10.jar
 share/jitsi-videobridge/lib/jetty-webapp-11.0.10.jar
 share/jitsi-videobridge/lib/jetty-xml-11.0.10.jar
-share/jitsi-videobridge/lib/jicoco-1.1-113-g4e7ea8b.jar
-share/jitsi-videobridge/lib/jicoco-config-1.1-113-g4e7ea8b.jar
+share/jitsi-videobridge/lib/jicoco-1.1-115-g332f4e7.jar
+share/jitsi-videobridge/lib/jicoco-config-1.1-115-g332f4e7.jar
+share/jitsi-videobridge/lib/jicoco-metrics-1.1-115-g332f4e7.jar
 share/jitsi-videobridge/lib/jitsi-media-transform-2.1-SNAPSHOT.jar
 share/jitsi-videobridge/lib/jitsi-metaconfig-1.0-9-g5e1b624.jar
 share/jitsi-videobridge/lib/jitsi-srtp-1.1-7-gd8d1435.jar
@@ -99,7 +100,7 @@ share/jitsi-videobridge/lib/kotlin-stdlib-jdk7-1.6.21.jar
 share/jitsi-videobridge/lib/kotlin-stdlib-jdk8-1.6.21.jar
 share/jitsi-videobridge/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
 share/jitsi-videobridge/lib/logging.properties
-share/jitsi-videobridge/lib/minidns-core-1.0.3.jar
+share/jitsi-videobridge/lib/minidns-core-1.0.4.jar
 share/jitsi-videobridge/lib/object-cloner-0.1.jar
 share/jitsi-videobridge/lib/objenesis-2.1.jar
 share/jitsi-videobridge/lib/okhttp-3.9.1.jar
@@ -112,6 +113,11 @@ share/jitsi-videobridge/lib/rtp-2.1-SNAPSHOT.jar
 share/jitsi-videobridge/lib/sctp-1.0-9-g45bf9f2.jar
 share/jitsi-videobridge/lib/sdp-api-1.0.jar
 share/jitsi-videobridge/lib/sentry-5.3.0.jar
+share/jitsi-videobridge/lib/simpleclient-0.16.0.jar
+share/jitsi-videobridge/lib/simpleclient_common-0.16.0.jar
+share/jitsi-videobridge/lib/simpleclient_tracer_common-0.16.0.jar
+share/jitsi-videobridge/lib/simpleclient_tracer_otel-0.16.0.jar
+share/jitsi-videobridge/lib/simpleclient_tracer_otel_agent-0.16.0.jar
 share/jitsi-videobridge/lib/slf4j-api-1.7.32.jar
 share/jitsi-videobridge/lib/smack-core-4.4.5.jar
 share/jitsi-videobridge/lib/smack-extensions-4.4.5.jar

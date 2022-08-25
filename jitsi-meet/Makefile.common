@@ -4,19 +4,19 @@
 # used by wip/jitsi-meet-prosody/Makefile
 # used by wip/jitsi-videobridge/Makefile
 
-GITHUB_PROJECT?=jitsi-meet
-GITHUB_TAG=	stable/jitsi-meet_7577
-DISTNAME=	jitsi-meet_7577
-CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-JITSI_MEET_VERSION=	2.0.7577
+GITHUB_PROJECT?=	jitsi-meet
+GITHUB_TAG?=		stable/jitsi-meet_7648
+DISTNAME?=		jitsi-meet_7648
+CATEGORIES=		chat
+MASTER_SITES=		${MASTER_SITE_GITHUB:=jitsi/}
+DIST_SUBDIR=		${GITHUB_PROJECT}
+JITSI_MEET_VERSION=	2.0.7648
 
-MAINTAINER=	khorben@defora.org
-HOMEPAGE?=	https://github.com/jitsi/jitsi-meet/
-COMMENT?=	Secure, Simple and Scalable Video Conferences
-LICENSE=	apache-2.0
+MAINTAINER=		khorben@defora.org
+HOMEPAGE?=		https://github.com/jitsi/jitsi-meet/
+COMMENT?=		Secure, Simple and Scalable Video Conferences
+LICENSE=		apache-2.0
 
 WRKSRC?=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
 
-DISTINFO_FILE?=	${.CURDIR}/../../wip/jitsi-meet/distinfo
+DISTINFO_FILE?=		${.CURDIR}/../../wip/jitsi-meet/distinfo

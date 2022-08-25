@@ -1,5 +1,4 @@
-- Place configuration files in $SYSCONFDIR/jitsi-meet (config.js,
-  interface_config.js, branding.json...)
+- Place more configuration files in $SYSCONFDIR/jitsi-meet (branding.json...)
 - Provide installation instructions
 - No longer pull data from the network (see www/gitea)
 - Work around out of memory conditions (eg "ulimit -l $((`ulimit -l` * 2))")
