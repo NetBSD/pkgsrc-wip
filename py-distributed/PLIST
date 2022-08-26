@@ -276,6 +276,7 @@ ${PYSITELIB}/distributed/http/statics.pyc
 ${PYSITELIB}/distributed/http/statics.pyo
 ${PYSITELIB}/distributed/http/templates/base.html
 ${PYSITELIB}/distributed/http/templates/call-stack.html
+${PYSITELIB}/distributed/http/templates/exceptions.html
 ${PYSITELIB}/distributed/http/templates/gpu.html
 ${PYSITELIB}/distributed/http/templates/json-index.html
 ${PYSITELIB}/distributed/http/templates/logs.html
@@ -389,6 +390,9 @@ ${PYSITELIB}/distributed/pubsub.py
 ${PYSITELIB}/distributed/pubsub.pyc
 ${PYSITELIB}/distributed/pubsub.pyo
 ${PYSITELIB}/distributed/py.typed
+${PYSITELIB}/distributed/pytest_resourceleaks.py
+${PYSITELIB}/distributed/pytest_resourceleaks.pyc
+${PYSITELIB}/distributed/pytest_resourceleaks.pyo
 ${PYSITELIB}/distributed/queues.py
 ${PYSITELIB}/distributed/queues.pyc
 ${PYSITELIB}/distributed/queues.pyo
