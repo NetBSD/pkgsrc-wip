@@ -422,6 +422,8 @@ ${PYSITELIB}/dask/tests/test_cache.py
 ${PYSITELIB}/dask/tests/test_cache.pyc
 ${PYSITELIB}/dask/tests/test_callbacks.py
 ${PYSITELIB}/dask/tests/test_callbacks.pyc
+${PYSITELIB}/dask/tests/test_compatibility.py
+${PYSITELIB}/dask/tests/test_compatibility.pyc
 ${PYSITELIB}/dask/tests/test_config.py
 ${PYSITELIB}/dask/tests/test_config.pyc
 ${PYSITELIB}/dask/tests/test_context.py
