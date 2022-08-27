@@ -15,7 +15,11 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 # As of 1.61, the pkgsrc LLVM causes build failure on i386 and powerpc
 .  if ${OPSYS} == "NetBSD"
 .    if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
+# In-tree g++ is too old on NetBSD 8.x and due to the shenanigans
+# files/gcc-wrap does, we need the internal LLVM
+.      if !empty(OS_VERSION:M8.*)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
+.      endif
 .    endif
 .  endif
 .endif
