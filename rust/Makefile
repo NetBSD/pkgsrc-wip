@@ -600,12 +600,11 @@ stage0-bootstrap: install
 BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
+.include "../../mk/atomic64.mk"
 # This is for when we build natively:
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-# LLVM needs libatomic for 64-bit atomics on powerpc and i386
-.include "../../devel/libatomic/buildlink3.mk"
-# Make those libraries available via a unique directory:
+# Make libatomic library available via a unique directory:
 DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
