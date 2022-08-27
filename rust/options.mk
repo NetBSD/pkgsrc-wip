@@ -12,17 +12,6 @@ PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 .  if !empty(HAVE_LLVM) || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
-# As of 1.61, the pkgsrc LLVM causes build failure on i386 and powerpc
-.  if ${OPSYS} == "NetBSD"
-.    if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
-# In-tree g++ is too old on NetBSD 8.x and due to the shenanigans
-# files/gcc-wrap does, we need the internal LLVM
-.      if !empty(OS_VERSION:M8.*)
-PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
-.      endif
-.    endif
-.  endif
-.endif
 
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.

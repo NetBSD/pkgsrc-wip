@@ -152,6 +152,7 @@ if $native; then
 	# Try to avoid cwrappers, which does "undocumented magic"
 	# by invoking the compiler "directly".
 	cmd="/usr/bin/${who} $args"
+	# (however, this wrapper isn't used when buliding natively...)
 else
 	cmd="${root}/tools/bin/${gnuarch}-${who} \
 		--sysroot=${root}/dest \
