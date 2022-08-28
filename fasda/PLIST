@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/fasda
+libexec/fasda/abundance
+libexec/fasda/fold-change
+libexec/fasda/normalize
+man/man1/fasda-abundance.1
+man/man1/fasda-fold-change.1
+man/man1/fasda-normalize.1
+man/man1/fasda.1
