@@ -418,6 +418,7 @@ man/man1/gnunet-vpn.1
 man/man1/gnunet-zoneimport.1
 man/man5/gnunet.conf.5
 share/aclocal/gnunet.m4
+share/applications/gnunet-uri.desktop
 share/doc/gnunet/COPYING
 share/doc/gnunet/README
 share/gnunet/config.d/arm.conf

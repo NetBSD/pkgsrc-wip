@@ -38,8 +38,9 @@ CONFIGURE_ARGS+=	--disable-testruns
 .endif
 
 .if ${PKG_OPTIONS:Mdoc}
-USE_TOOLS+=		makeinfo
-INFO_FILES=		yes
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
+BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 CONFIGURE_ARGS+=	--enable-documentation
 PLIST_SRC+=		PLIST.doc
 .else
