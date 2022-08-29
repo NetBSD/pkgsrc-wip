@@ -30,7 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=0.1:../../devel/py-extension-helpers
 DEPENDS+=	${PYPKGPREFIX}-jplephem>=2.15:../../math/py-jplephem
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-colorlog>=6.6.0:../../wip/py-colorlog
+DEPENDS+=	${PYPKGPREFIX}-colorlog>=6.6.0:../../devel/py-colorlog
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
