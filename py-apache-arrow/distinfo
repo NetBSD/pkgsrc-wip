@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (apache-arrow-8.0.0.tar.gz) = f3bc6d5fc8e26743d0c1bd7c1ca5c73c7a4ba0c77cb1ddfdd4e7be95a5ca1a6e
-SHA512 (apache-arrow-8.0.0.tar.gz) = 8280ce775c05296e33a292241c976caee2bddda7da396ef3c5da700347cb616a932475140139a5e96027781e71f66466e27fcf6423440bf720fbc83faabf0f3d
-Size (apache-arrow-8.0.0.tar.gz) = 17962146 bytes
+BLAKE2s (apache-arrow-9.0.0.tar.gz) = e06c46febd9849343357b449d8f85a6375825dd47431ede47f1ba936fa87a93d
+SHA512 (apache-arrow-9.0.0.tar.gz) = 6eb14c766e4542e110a2d6748cea19a71d7035b8a3fda095efe36b5f02c134abc8c5bbcc9cd72dbc40ae1e87c28399a116501d983b5501b9b277fbcbfa09d7e5
+Size (apache-arrow-9.0.0.tar.gz) = 18314915 bytes
