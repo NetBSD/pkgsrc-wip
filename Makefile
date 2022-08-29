@@ -4423,7 +4423,6 @@ SUBDIR+=	py-pydy-viz
 SUBDIR+=	py-pyec
 SUBDIR+=	py-pyecm
 SUBDIR+=	py-pyentropy
-SUBDIR+=	py-pyerfa
 SUBDIR+=	py-pyevolve
 SUBDIR+=	py-pyfaces
 SUBDIR+=	py-pyflation

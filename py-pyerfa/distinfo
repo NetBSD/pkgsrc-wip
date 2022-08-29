@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:56:03 nia Exp $
-
-BLAKE2s (pyerfa-2.0.0.1.tar.gz) = da83e4c27b58d647c78f981aa7ff4773450c8be2d161934ad400cd0be89b6c1c
-SHA512 (pyerfa-2.0.0.1.tar.gz) = 420e7bb2d00a9bd7d2290b6b0598b5963404ac021f713ae7bbf607135b9db6605f63dd89694d2cf406eb230b58b1028f2458f96ed834127ce9a398810cfea589
-Size (pyerfa-2.0.0.1.tar.gz) = 808497 bytes
