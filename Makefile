@@ -3588,7 +3588,6 @@ SUBDIR+=	py-collectd
 SUBDIR+=	py-colorcet
 SUBDIR+=	py-colored-traceback
 SUBDIR+=	py-coloredlogs
-SUBDIR+=	py-colorlog
 SUBDIR+=	py-colormath
 SUBDIR+=	py-colorpy
 SUBDIR+=	py-commisery
