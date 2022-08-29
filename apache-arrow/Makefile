@@ -14,14 +14,14 @@ LICENSE=	apache-2.0
 # These packages are built within arrow, and it
 # looks difficult to decouple them
 # They come from ./cpp/thirdparty/versions.txt
-XSIMD=		7d1778c3b38d63db7cec7145d939f40bc5d859d1.tar.gz
-JEMALLOC=	jemalloc-5.2.1.tar.bz2
+XSIMD=		8.1.0.tar.gz
+JEMALLOC=	jemalloc-5.3.0.tar.bz2
 
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${XSIMD}
 DISTFILES+=		${JEMALLOC}
 SITES.${XSIMD}=		https://github.com/xtensor-stack/xsimd/archive/
-SITES.${JEMALLOC}=	${MASTER_SITE_GITHUB:=jemalloc/}
+SITES.${JEMALLOC}=	${MASTER_SITE_GITHUB:=jemalloc/jemalloc/releases/download/5.3.0/}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -42,6 +42,9 @@ CMAKE_ARGS+=	-DARROW_FILESYSTEM=ON
 CMAKE_ARGS+=	-DARROW_BUILD_UTILITIES=ON
 CMAKE_ARGS+=	-DARROW_CSV=ON
 CMAKE_ARGS+=	-DARROW_DATASET=ON
+
+# For finding deps
+CMAKE_ARGS+=	-Dxsimd_SOURCE=BUNDLED
 
 # Set environment variable to find the extra source packages
 CONFIGURE_ENV+=	ARROW_JEMALLOC_URL=/${DISTDIR}/${JEMALLOC}
