@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.201 2020/11/05 09:09:20 ryoon Exp $
 
-DISTNAME=	epiphany-41.0
+DISTNAME=	epiphany-42.2
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/41/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/42/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,9 +18,6 @@ MESON_ARGS+=	-Dlibportal=disabled
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/epiphany
 
 PYTHON_FOR_BUILD_ONLY=	tool
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
