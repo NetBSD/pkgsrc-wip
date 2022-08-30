@@ -13,6 +13,11 @@ PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
 
+# If cross-building, always use the internal LLVM
+.if !empty(TARGET)
+PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
+.endif
+
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.
 .if ${OPSYS} == "NetBSD" && ${BUILD_TARGET} == "dist"
