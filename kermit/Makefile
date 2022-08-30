@@ -24,6 +24,8 @@ BUILD_DEFS+=	KFLAGS LIBS
 MAKE_ENV+=	prefix=${PREFIX} KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
 MAKE_FILE=	makefile
 
+# \todo Enhance for non-standard mandir.
+
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 KFLAGS+=	${BUILDLINK_CPPFLAGS}
 
@@ -36,17 +38,8 @@ LIBS+=		${BUILDLINK_LDFLAGS}
 .include "../../mk/termcap.buildlink3.mk"
 
 .if ${OPSYS} == "Darwin"
-.  if !empty(OS_VERSION:M??.*)
-BUILD_TARGET_OPSYS=	macosx10.6
-.  elif !empty(OS_VERSION:M9.*)
-BUILD_TARGET_OPSYS=	macosx10.5
-.  elif !empty(OS_VERSION:M8.*)
-BUILD_TARGET_OPSYS=	macosx10.4
-.  elif empty(OS_VERSION:M7.*)
-BUILD_TARGET_OPSYS=	macosx103.9
-.  else
-BUILD_TARGET_OPSYS=	macosx10
-.  endif
+# Assume >= 10.12 for now.
+BUILD_TARGET_OPSYS=	macos
 .elif ${OPSYS} == "Linux"
 BUILD_TARGET_OPSYS=	linux
 MAKE_ENV+=		HAVE_LIBCURSES=-l${BUILDLINK_LIBNAME.curses}

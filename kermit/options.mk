@@ -1,7 +1,12 @@
 # $NetBSD: options.mk,v 1.6 2015/09/30 08:25:37 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kermit
-PKG_SUPPORTED_OPTIONS=		kermit-suid-uucp ssl kerberos
+PKG_SUPPORTED_OPTIONS=		kermit-suid-uucp kerberos
+.if ${OPSYS} != "Darwin"
+# ssl without krb5 is not supported on Darwin, and ssl+krb5 is marked
+# experimental.  Avoid for now.
+SSL_TARGET=	ssl
+.endif
 PKG_OPTIONS_OPTIONAL_GROUPS+=	socks
 PKG_OPTIONS_GROUP.socks=	socks4 dante
 
