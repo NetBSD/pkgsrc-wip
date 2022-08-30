@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2014/02/10 21:07:56 noud4 Exp $
+# $NetBSD$
 
 DISTNAME=	File_Util-1.0.0
 CATEGORIES=	devel

@@ -8,5 +8,4 @@ SHA1 (patch-src_crypto_scrypt.cpp) = 35b7a5c0ea59f7309f4e4ccd3f092f6223fd6e33
 SHA1 (patch-src_crypto_scrypt.h) = 9595a2c0a722958d27879e7f1f2dc4ccbae2bf13
 SHA1 (patch-src_db.h) = bd65519b99e4486cf6be7e42da535e465496a00b
 SHA1 (patch-src_netbase.cpp) = 72bcfc3b65a7ede4adc99da914715cf65df442b4
-#SHA1 (patch-src_utilstrencodings.cpp) = bade934fc481a1597c604a93a96c8a46877c1477
 SHA1 (patch-src_walletdb.cpp) = 7c70770a3e0de7b7daf6799b86ff67a511e2c0ff

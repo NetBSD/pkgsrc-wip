@@ -1,4 +1,4 @@
-$Id: patch-Image_GraphViz.php,v 1.1 2014/02/10 21:02:01 noud4 Exp $
+$NetBSD$
 
 taken from:
 http://pear.php.net/bugs/bug.php?id=20171&edit=12&patch=GraphViz.php.patch&revision=1389192687

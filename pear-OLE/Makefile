@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2014/02/10 20:55:56 noud4 Exp $
+# $NetBSD$
 
 DISTNAME=	OLE-0.6.1
 CATEGORIES=	misc

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2014/02/10 21:06:41 noud4 Exp $
+# $NetBSD$
 
 DISTNAME=	File_CSV-1.0.0
 CATEGORIES=	textproc

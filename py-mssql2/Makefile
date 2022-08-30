@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2014/10/31 12:24:41 bartoszkuzma Exp $
+# $NetBSD$
 
 DISTNAME=		pymssql-2.1.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2014/02/10 20:57:32 noud4 Exp $
+# $NetBSD$
 
 DISTNAME=	Spreadsheet_Excel_Writer-0.9.3
 CATEGORIES=	math

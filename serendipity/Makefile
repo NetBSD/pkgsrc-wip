@@ -1,4 +1,3 @@
-# $Id: Makefile,v 1.5 2013/10/01 20:52:48 tonnerre Exp $
 # $NetBSD: Makefile,v 1.5 2013/10/01 20:52:48 tonnerre Exp $
 
 DISTNAME=		serendipity-${VERSION}

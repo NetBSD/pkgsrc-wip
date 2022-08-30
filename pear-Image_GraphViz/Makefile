@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2014/02/10 21:02:00 noud4 Exp $
+# $NetBSD$
 
 DISTNAME=	Image_GraphViz-1.3.0
 CATEGORIES=	graphics

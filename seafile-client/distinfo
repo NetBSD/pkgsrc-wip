@@ -6,4 +6,3 @@ Size (seafile/v6.0.4.tar.gz) = 454474 bytes
 SHA1 (patch-common_obj-backend-fs.c) = a02039cb7b7e18094acfdf03603aaaf65a04257e
 SHA1 (patch-configure.ac) = 31dd263769416c447a2fe25ef3b0ab6324057919
 SHA1 (patch-daemon_Makefile.am) = 577bb58378dec7777272b11f6431832a75fce59d
-#SHA1 (patch-lib_Makefile.am) = 98a35c1965a431aa1ced13e271568a05e293d9d5

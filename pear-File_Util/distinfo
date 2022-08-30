@@ -1,5 +1,5 @@
-$Id: distinfo,v 1.1 2014/02/10 21:07:56 noud4 Exp $
+$NetBSD$
 
-RMD160 (pear/File_Util-1.0.0.tgz) = dc2033ec5785e55728b85319e964869c8ed42815
-Size (pear/File_Util-1.0.0.tgz) = 7657 bytes
-SHA1 (patch-Image_GraphViz.php) = 134888a8e2d8ce718ab1433904365b0c32608a78
+BLAKE2s (pear/File_Util-1.0.0.tgz) = 647310ed09b7313e27ccc5135470a45bce65b500ccb2d75eb25247d349076774
+SHA512 (pear/File_Util-1.0.0.tgz) = 61b0af9be1837ef5c86e42a53686532ec0479d1e72fc75308988b411aa547e13cae16e5621e95981b9712350e1f8c14dd3b7397dab610c701af68d2ceb569806
+Size (pear/File_Util-1.0.0.tgz) = 7738 bytes

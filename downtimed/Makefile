@@ -1,5 +1,4 @@
-# $Id: Makefile,v 1.8 2014/10/31 12:45:46 bartoszkuzma Exp $
-#
+# $NetBSD$
 
 DISTNAME=	downtimed-0.6
 CATEGORIES=	sysutils

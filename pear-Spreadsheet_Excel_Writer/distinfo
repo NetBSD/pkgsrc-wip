@@ -1,5 +1,5 @@
-$Id: distinfo,v 1.2 2014/02/10 20:58:46 noud4 Exp $
+$NetBSD$
 
-RMD160 (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = de38c87d7fcf4b6046416eaa28d73b235a5fe715
-Size (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = 57258 bytes
-SHA1 (patch-Image_GraphViz.php) = 134888a8e2d8ce718ab1433904365b0c32608a78
+BLAKE2s (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = 1d98f47c98b4bb78269936f807ebc1ac3572d59e2952ddb2085975762d5c3968
+SHA512 (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = c7b34c13e072c9707b68394e11ecd3d309436d1dcb4eeb550612fa48a6d7a27563d22a2e09965ca94bc7512bd5d9ba08625587ed00f162f0f5834244bdec0527
+Size (pear/Spreadsheet_Excel_Writer-0.9.3.tgz) = 57994 bytes
