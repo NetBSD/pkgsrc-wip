@@ -31,12 +31,8 @@ DEPENDS+=	${PYPKGPREFIX}-boto3>=1.16.63:../../net/py-boto3
 # pkgsrc version too old
 #DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.4.0:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=0:../../devel/py-google-api-core
-# pkgsrc version too old
-#DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.35.0:../../www/py-google-api-python-client
-DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=0:../../www/py-google-api-python-client
-# pkgsrc version too old
-#DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.3.3:../../security/py-google-auth
-DEPENDS+=	${PYPKGPREFIX}-google-auth>=0:../../security/py-google-auth
+DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.35.0:../../www/py-google-api-python-client
+DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.3.3:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2>=0.1.0:../../security/py-google-auth-httplib2
 DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib>=0.4.6:../../security/py-google-auth-oauthlib
 
