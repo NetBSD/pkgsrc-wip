@@ -12,6 +12,7 @@ PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 .  if !empty(HAVE_LLVM) || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
+.endif
 
 # If cross-building, always use the internal LLVM
 .if !empty(TARGET)
@@ -32,7 +33,6 @@ PKG_OPTIONS_LEGACY_OPTS+=	rust-llvm:rust-internal-llvm
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=12.0.0
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 #CONFIGURE_ARGS+=	--llvm-libunwind=system
