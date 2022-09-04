@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	c22fe1e8698a5a1ce97cb4bd7624f73b0bd7aa6b
+DISTNAME=	ed7004e63cb94ddb796262fdd42c889fa29a32fb	
 PKGNAME=	got-portable-${PKGVER}
-PKGVER=		0.71
+PKGVER=		0.74
 CATEGORIES=	devel
 MASTER_SITES=	https://repo.or.cz/got-portable.git/snapshot/
 
