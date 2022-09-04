@@ -423,12 +423,14 @@ share/zabbix/app/views/js/configuration.templategroup.list.js.php
 share/zabbix/app/views/js/monitoring.charts.view.js.php
 share/zabbix/app/views/js/monitoring.dashboard.print.js.php
 share/zabbix/app/views/js/monitoring.dashboard.view.js.php
+share/zabbix/app/views/js/monitoring.dashboard.widget.edit.js.php
 share/zabbix/app/views/js/monitoring.host.dashboard.view.js.php
 share/zabbix/app/views/js/monitoring.host.view.js.php
 share/zabbix/app/views/js/monitoring.latest.view.js.php
 share/zabbix/app/views/js/monitoring.map.view.js.php
 share/zabbix/app/views/js/monitoring.problem.view.js.php
 share/zabbix/app/views/js/monitoring.web.view.js.php
+share/zabbix/app/views/js/monitoring.widget.navtreeitem.edit.js.php
 share/zabbix/app/views/js/popup.acknowledge.edit.js.php
 share/zabbix/app/views/js/popup.dashboard.share.edit.js.php
 share/zabbix/app/views/js/popup.discovery.check.js.php
