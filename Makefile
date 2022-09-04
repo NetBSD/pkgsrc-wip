@@ -545,6 +545,7 @@ SUBDIR+=	cream
 SUBDIR+=	creduce-git
 SUBDIR+=	crispy-doom
 SUBDIR+=	crm114
+SUBDIR+=	cromagrally
 SUBDIR+=	cronolog-devel
 SUBDIR+=	cross-binutils
 SUBDIR+=	crossguid
