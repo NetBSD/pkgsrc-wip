@@ -1,21 +1,20 @@
 # $NetBSD$
 
-DISTNAME=	qbe-0
+DISTNAME=	qbe-1.0
 CATEGORIES=	lang
-GIT_REPO=	git://c9x.me/qbe.git
-GIT_BRANCH=	master
-GIT_REVISION=	2caa26e388b1c904d2f12fb09f84df7e761d8331
+MASTER_SITES=	https://c9x.me/git/qbe.git/snapshot/
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://c9x.me/compile/
-COMMENT=	QBE compiler backend
+COMMENT=	Compiler backend
 LICENSE=	mit
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
-BUILD_TARGET=	obj/qbe
+BUILD_TARGET=	qbe
 
-.include "../../wip/mk/git-package.mk"
+INSTALL_MAKE_FLAGS+=	BINDIR=${PREFIX}/bin
+
 .include "../../mk/bsd.pkg.mk"
