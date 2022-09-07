@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2013/01/20 14:18:58 othyro Exp $
+$NetBSD$
 
 Fix PREFIX (replaced in SUBST_*.
 
---- ding.orig	2005-04-27 13:28:29.000000000 +0000
+--- ding.orig	2020-12-22 12:16:18.000000000 +0000
 +++ ding
 @@ -85,7 +85,7 @@ set param(noticefile) [expr {$param(isun
  # The provided German-English dictionary:
  set default_searchmeth(0,name) {Dictionary}
- set default_searchmeth(0,grepcmds) {agrep egrep internal_search}
+ set default_searchmeth(0,grepcmds) {tre-agrep agrep egrep internal_search}
 -set default_searchmeth(0,dictfile) [expr {$param(isunix) ?  "/usr/share/dict/de-en.txt" : "[file dirname argv0]/de-en.txt"}]
 +set default_searchmeth(0,dictfile) [expr {$param(isunix) ?  "PFIX/share/dict/de-en.txt" : "[file dirname argv0]/de-en.txt"}]
  set default_searchmeth(0,separator) { :: }

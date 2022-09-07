@@ -1,15 +1,16 @@
 # $NetBSD: Makefile,v 1.14 2013/04/21 17:54:56 kristerw Exp $
 
-DISTNAME=	ding-1.7
+DISTNAME=	ding-1.9
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/	\
-		ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/de-en/
-DISTFILES=	ding-1.7.tar.gz \
-		de-en.txt.gz
+MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/
+MASTER_SITES+=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/de-en/
+DIST_SUBDIR=	${PKGNAME_NOREV}
+DISTFILES=	${DISTNAME}.tar.gz
+DISTFILES+=	de-en.txt.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www-user.tu-chemnitz.de/~fri/ding/
-COMMENT=	Ding is a Dictionary lookup program for the X window system
+COMMENT=	Dictionary lookup program for the X window system
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
@@ -25,7 +26,7 @@ SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	ding
 SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|PFIX|${PREFIX}|1"
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-build
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/dict
 

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.5 2013/01/20 14:18:58 othyro Exp $
+$NetBSD$
 
-RMD160 (de-en.txt.gz) = ac014d44f0900bad276fd73701309f8603535fe1
-Size (de-en.txt.gz) = 3977453 bytes
-RMD160 (ding-1.7.tar.gz) = 0ce34510d4855d74167d4256de041bb42736b094
-Size (ding-1.7.tar.gz) = 4037214 bytes
-SHA1 (patch-aa) = 9361c2b87b0c2009bf51d7e3d3b5d3ca14c6ebe7
+BLAKE2s (ding-1.9/de-en.txt.gz) = f26aa52abd4865d36eb5ed72680a2d1bb6d396a82ac4c5383bc339005bf9dc79
+SHA512 (ding-1.9/de-en.txt.gz) = 172b61d4ee52ea14385608cca62891ecab22a4136aa5967654f56b5ef4c77c9f4feeb294396be43b7787133fabdfb2ace8648d2ee4fa877cf21ec566a0ef2b77
+Size (ding-1.9/de-en.txt.gz) = 7804867 bytes
+BLAKE2s (ding-1.9/ding-1.9.tar.gz) = f0daa95ad4c51777ada41da8ea92298e133a040558bb420240ee33cfb79b4e72
+SHA512 (ding-1.9/ding-1.9.tar.gz) = fa5500d1ced311ba21ef8a16a25f3a3cdcebc24daacff79c05351a46cc2a1d466891caa1dec3a77ae9a4d7e59332d991974917875f967d93ac1358f5532e8a72
+Size (ding-1.9/ding-1.9.tar.gz) = 7864078 bytes
+SHA1 (patch-ding) = 2a6168cca9ff51c7db07d90ed98afa768fbbf8ed
