@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.17.4
+DISTNAME=		gnunet-0.17.5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 

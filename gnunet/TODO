@@ -6,3 +6,9 @@
       /usr/pkg/lib//gnunet/libexec/gnunet-rest-server -c /home/nikita/.config/gnunet.conf
 - build on linux and freebsd
   - currently broken on Linux due to bluez-libs being too old and not building.
+
+warning: /usr/work/wip/gnunet/work/.destdir/usr/pkg/share/gnunet/netjail_core.sh: other permissions (r-x) are higher than group permissions (r--).
+warning: /usr/work/wip/gnunet/work/.destdir/usr/pkg/share/gnunet/netjail_exec.sh: other permissions (r-x) are higher than group permissions (r--).
+warning: /usr/work/wip/gnunet/work/.destdir/usr/pkg/share/gnunet/netjail_start.sh: other permissions (r-x) are higher than group permissions (r--).
+warning: /usr/work/wip/gnunet/work/.destdir/usr/pkg/share/gnunet/netjail_stop.sh: other permissions (r-x) are higher than group permissions (r--).
+warning: /usr/work/wip/gnunet/work/.destdir/usr/pkg/share/gnunet/topo.sh: other permissions (r-x) are higher than group permissions (r--).

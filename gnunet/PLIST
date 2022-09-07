@@ -292,6 +292,7 @@ lib/libgnunetdatacache.la
 lib/libgnunetdatastore.la
 lib/libgnunetdht.la
 lib/libgnunetdns.la
+lib/libgnunetdid.la
 lib/libgnunetfragmentation.la
 lib/libgnunetfriends.la
 lib/libgnunetfs.la
