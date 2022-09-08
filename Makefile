@@ -1469,6 +1469,7 @@ SUBDIR+=	gwhois
 SUBDIR+=	gwyddion
 SUBDIR+=	gxconsole
 SUBDIR+=	gxmms2
+SUBDIR+=	gzdoom
 SUBDIR+=	gzip
 SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
