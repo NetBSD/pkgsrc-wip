@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	helm-3.7.2
+DISTNAME=	helm-3.9.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,14 +11,14 @@ COMMENT=	The Kubernetes Package Manager
 LICENSE=	apache-2.0
 
 # XXX: via: `cd ${WRKSRC} && go list -f '{{.Version}}' -m k8s.io/client-go`
-K8S_MODULES_VERSION=		0.22.4 # <major - 1>.<minor>.x
+K8S_MODULES_VERSION=		0.24.2 # <major + 1>.<minor>.x
 K8S_MODULES_VERSION_MAJOR=	1
-K8S_MODULES_VERSION_MINOR=	22
+K8S_MODULES_VERSION_MINOR=	24
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X helm.sh/helm/v3/internal/version.version=${PKGVERSION_NOREV} \
-			-X helm.sh/helm/v3/internal/version.metadata="" \
-			-X helm.sh/helm/v3/internal/version.gitCommit="" \
-			-X helm.sh/helm/v3/internal/version.gitTreeState="" \
+			-X helm.sh/helm/v3/internal/version.metadata= \
+			-X helm.sh/helm/v3/internal/version.gitCommit= \
+			-X helm.sh/helm/v3/internal/version.gitTreeState= \
 			-X helm.sh/helm/v3/pkg/lint/rules.k8sVersionMajor=${K8S_MODULES_VERSION_MAJOR} \
 			-X helm.sh/helm/v3/pkg/lint/rules.k8sVersionMinor=${K8S_MODULES_VERSION_MINOR} \
 			-X helm.sh/helm/v3/pkg/chartutil.k8sVersionMajor=${K8S_MODULES_VERSION_MAJOR} \
