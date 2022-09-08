@@ -14,6 +14,7 @@ share/doc/cyclone/Scheme-code-conventions.md
 share/doc/cyclone/User-Manual.md
 share/doc/cyclone/Writing-the-Cyclone-Scheme-Compiler-Revised-2017.md
 share/doc/cyclone/Writing-the-Cyclone-Scheme-Compiler.md
+share/doc/cyclone/api/api-index.scm
 share/doc/cyclone/api/cyclone/concurrent.md
 share/doc/cyclone/api/cyclone/foreign.md
 share/doc/cyclone/api/cyclone/match.md
@@ -103,6 +104,8 @@ share/doc/cyclone/images/gc-graph-sweep.dia
 share/doc/cyclone/images/gc-graph-sweep.png
 share/doc/cyclone/images/gc-graph-trace.dia
 share/doc/cyclone/images/gc-graph-trace.png
+share/doc/cyclone/images/gentoo-linux-logo.png
+share/doc/cyclone/images/gentoo-logo.svg
 share/doc/cyclone/images/homebrew-thumb.png
 share/doc/cyclone/images/logo.png
 share/doc/cyclone/images/runtime.dia
@@ -115,6 +118,7 @@ share/doc/cyclone/old-notes/global-opts-notes.txt
 share/doc/cyclone/r7rs.pdf
 share/doc/cyclone/research-papers/CheneyMTA.pdf
 share/doc/cyclone/research-papers/d1-mlton-realtime.pdf
+share/doc/cyclone/research-papers/syntactic-closures.pdf
 share/examples/cyclone/Makefile
 share/examples/cyclone/begin-splicing.scm
 share/examples/cyclone/call-scm-from-c/Makefile
