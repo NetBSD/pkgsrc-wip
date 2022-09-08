@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--disable-testruns
 .endif
 
 .if ${PKG_OPTIONS:Mdoc}
+.include "../../lang/python/tool.mk"
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
