@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (Raze/1.5.0.tar.gz) = 4fb17a904893cb5a0e68614d6024f13f3a40f837943741b2ea22dece272b4dfc
+SHA512 (Raze/1.5.0.tar.gz) = 6686e0d0a8e73b676eaa3df45d8be6c0100e7732b916d572caeff5b1a3b6caef1a4e733ea98ce63cc23f3fca079e94eab8a08f563eb1f48c2ec3615bfbdc5719
+Size (Raze/1.5.0.tar.gz) = 15553911 bytes
+SHA1 (patch-source_core_gameconfigfile.cpp) = d147437dd1729dccb1a92a5d446bb08784352778
