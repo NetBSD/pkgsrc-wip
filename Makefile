@@ -526,6 +526,7 @@ SUBDIR+=	coreclr-git
 SUBDIR+=	corefx-git
 SUBDIR+=	corert-git
 SUBDIR+=	cortex-var
+SUBDIR+=	cortextool
 SUBDIR+=	cosmo-engine
 SUBDIR+=	coturn
 SUBDIR+=	courier-imap
