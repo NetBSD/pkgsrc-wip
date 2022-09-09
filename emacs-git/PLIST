@@ -2252,8 +2252,6 @@ share/emacs/${PKGVERSION}/lisp/ielm.el.gz
 share/emacs/${PKGVERSION}/lisp/ielm.elc
 share/emacs/${PKGVERSION}/lisp/iimage.el.gz
 share/emacs/${PKGVERSION}/lisp/iimage.elc
-share/emacs/${PKGVERSION}/lisp/image-dired.el.gz
-share/emacs/${PKGVERSION}/lisp/image-dired.elc
 share/emacs/${PKGVERSION}/lisp/image-file.el.gz
 share/emacs/${PKGVERSION}/lisp/image-file.elc
 share/emacs/${PKGVERSION}/lisp/image-mode.el.gz
@@ -2268,6 +2266,16 @@ share/emacs/${PKGVERSION}/lisp/image/gravatar.el.gz
 share/emacs/${PKGVERSION}/lisp/image/gravatar.elc
 share/emacs/${PKGVERSION}/lisp/image/image-converter.el.gz
 share/emacs/${PKGVERSION}/lisp/image/image-converter.elc
+share/emacs/${PKGVERSION}/lisp/image/image-dired-dired.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-dired-dired.elc
+share/emacs/${PKGVERSION}/lisp/image/image-dired-external.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-dired-external.elc
+share/emacs/${PKGVERSION}/lisp/image/image-dired-tags.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-dired-tags.elc
+share/emacs/${PKGVERSION}/lisp/image/image-dired-util.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-dired-util.elc
+share/emacs/${PKGVERSION}/lisp/image/image-dired.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-dired.elc
 share/emacs/${PKGVERSION}/lisp/imenu.el.gz
 share/emacs/${PKGVERSION}/lisp/imenu.elc
 share/emacs/${PKGVERSION}/lisp/indent.el.gz
@@ -3716,6 +3724,8 @@ share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/common-win.elc
 share/emacs/${PKGVERSION}/lisp/term/cygwin.el.gz
 share/emacs/${PKGVERSION}/lisp/term/cygwin.elc
+share/emacs/${PKGVERSION}/lisp/term/fbterm.el.gz
+share/emacs/${PKGVERSION}/lisp/term/fbterm.elc
 share/emacs/${PKGVERSION}/lisp/term/haiku-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/haiku-win.elc
 share/emacs/${PKGVERSION}/lisp/term/internal.el.gz
