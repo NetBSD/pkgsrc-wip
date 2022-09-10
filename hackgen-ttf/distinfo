@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (HackGen_v2.7.0.zip) = 45252a2c47f639b76dfaa5b1fbedb36b34c89a8cda2e50fe2f596265eea3de41
-SHA512 (HackGen_v2.7.0.zip) = 55f31e44b64f72ae0c7c57ad12676a1b1779841041deb8fcf6c5242af96ea14d0ed83afbcb9d720ca080d1ce7ccb5fc62be00edfed35ebf1328ef1b5aef3f938
-Size (HackGen_v2.7.0.zip) = 40456677 bytes
+BLAKE2s (HackGen_v2.7.1.zip) = eda3d7b70be1b87f6496bf2261811301662e5db1ee0a815ba42c522a8c1ef97f
+SHA512 (HackGen_v2.7.1.zip) = 8d8c4425536535e60f5677bfbc7cbb5a83cb7c9e48ca46a0e109452e72e58de91d127e16c5967041f1535a3342cb862956d5b2e32d3745bd93c26483eeef4e82
+Size (HackGen_v2.7.1.zip) = 40458742 bytes
