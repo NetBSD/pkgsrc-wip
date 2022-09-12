@@ -5,6 +5,7 @@ bin/pbulk-start-chroot
 bin/pkg-add-to-wip
 bin/pkg-check
 bin/pkg-commit
+bin/pkg-dep-test
 bin/pkg-diff
 bin/pkg-grep
 bin/pkg-list
