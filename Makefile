@@ -3303,6 +3303,7 @@ SUBDIR+=	procps
 SUBDIR+=	prodigal
 SUBDIR+=	progreiserfs
 SUBDIR+=	proj
+SUBDIR+=	promtail
 SUBDIR+=	proplib
 SUBDIR+=	proselint
 SUBDIR+=	proton-bridge
