@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (aws-iam-authenticator-0.5.7.tar.gz) = 93a4127d2d3a95f5f942dca827b7fb13cf98ae99b2f092657ce32bc7e7e72502
-SHA512 (aws-iam-authenticator-0.5.7.tar.gz) = 64d0959555a39f0fd1f55e689495507a3d1fd005ced4287ea853750915c1953a328f794a37799b4f0936fca2a009fa7d7fdb432be79468b643f5f967edaf8f9c
-Size (aws-iam-authenticator-0.5.7.tar.gz) = 7021679 bytes
+BLAKE2s (aws-iam-authenticator-0.5.9.tar.gz) = f0b48d7d45203a055c282e800099926c58ab0e5be1e8e7a0ee3608edd741c24a
+SHA512 (aws-iam-authenticator-0.5.9.tar.gz) = 1e1750f2734faea5cae612debb8777891247f59c51ad98e4c466bc20925950b1b04dc407458cfb0db9c3d961d1d9d07639523619399c5037211e8e6f64794fca
+Size (aws-iam-authenticator-0.5.9.tar.gz) = 7021417 bytes
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
 Size (cloud.google.com_go_@v_v0.26.0.mod) = 27 bytes

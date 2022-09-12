@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	aws-iam-authenticator-0.5.7
+DISTNAME=	aws-iam-authenticator-0.5.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes-sigs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
