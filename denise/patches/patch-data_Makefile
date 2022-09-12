@@ -1,0 +1,16 @@
+$NetBSD$
+
+Use plain g++ instead of g++10.
+
+--- data/Makefile.bak	2022-09-11 17:48:38.629412808 +0000
++++ data/Makefile
+@@ -33,7 +33,8 @@ ifeq ($(compiler),)
+ 	compiler := clang++
+     endif
+     ifeq ($(platform),BSD)
+-	compiler := g++10
++	# compiler := g++10
++	compiler := g++
+     endif
+ endif
+ 

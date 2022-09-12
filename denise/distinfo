@@ -1,8 +1,10 @@
 $NetBSD$
 
-BLAKE2s (denise/v1.1.2.tar.bz2) = bf8a7ce61986056f3111f6f2631b2a622da17a26a6f50030665369135a8d3559
-SHA512 (denise/v1.1.2.tar.bz2) = e061d224831e5502728b6ace698dbd86c4ecde050f517d30e9e5e1d02fe09a576f21679fbff3e9fa0a52d5178ab3d5d88a1ccbadfd0c74d9bd59348ab019f29d
-Size (denise/v1.1.2.tar.bz2) = 8888652 bytes
-SHA1 (patch-Makefile) = 79b2a01b93a301bf4b1dabe375332f2529ac3efb
+BLAKE2s (denise/v1.1.3.1.tar.bz2) = 09985665f436161de663c68b21da862fc45f312c3170c1603a0e6ae5e1964eae
+SHA512 (denise/v1.1.3.1.tar.bz2) = cd987b26de621a2b2c6cba149210b5795e13292b054320a9320d36bfee759cf4306db880f43bb4f9c45bf8a8af0c1fb48d2c28e40300c832002f24bed7f7ceb6
+Size (denise/v1.1.3.1.tar.bz2) = 11430217 bytes
+SHA1 (patch-Makefile) = 003ca5b84e18e7603d6e2d0fb183edf4557da2e7
+SHA1 (patch-data_Makefile) = 506377eae091e8dc7da38fad68d0e7d8820032e1
 SHA1 (patch-driver_Makefile) = 7bbe730a461cb75c6a56430d352ce5f6eb9aca48
 SHA1 (patch-emulation_tools_socket.cpp) = 6ae695c4187de352f4d27c7d7a3f937869850cf7
+SHA1 (patch-guikit_gtk_main.cpp) = a8ef2efc8fc297be82d34d30bb4ce58eb1b2592f
