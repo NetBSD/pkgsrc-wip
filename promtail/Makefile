@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_PROJECT=	loki
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://grafana.com/loki
 COMMENT=	Agent to ship logs to Grafana Loki
 LICENSE=	gnu-agpl-v3
