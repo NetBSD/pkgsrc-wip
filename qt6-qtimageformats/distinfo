@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtimageformats-everywhere-src-6.3.1.tar.xz) = 2da4fc9852ef449c507f70f3e4bfa2577558b59e742586c6c5afb4c994e42c36
-SHA512 (qtimageformats-everywhere-src-6.3.1.tar.xz) = 9be2c4dab869c7709775514ee2dbc9d84c8e76b98e8e8a01fcf96355b3309f1830bff57cd9455bc4a33c5f8f0cb948619806dff6f303233c35e5efbdf3cc92f7
-Size (qtimageformats-everywhere-src-6.3.1.tar.xz) = 1860072 bytes
+BLAKE2s (qtimageformats-everywhere-src-6.3.2.tar.xz) = ed1ad92f2581169522f19f10b3dcefb193005e4797fb3a5479d888a4ce088b90
+SHA512 (qtimageformats-everywhere-src-6.3.2.tar.xz) = 5964c1f0e5fc4032495641268881f2288f90f361cb5a7e4953e05005ea907033ef634192ef26e1b0343e09c1a0306f83bef88ad4a5dba4665387001290dccc77
+Size (qtimageformats-everywhere-src-6.3.2.tar.xz) = 1859996 bytes

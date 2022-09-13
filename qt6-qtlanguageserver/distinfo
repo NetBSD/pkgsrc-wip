@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtlanguageserver-everywhere-src-6.3.1.tar.xz) = 04d45ba92ad51e6b5fb2a5ab41c58d8b52bd75fa4e650948869cfb785596baa9
-SHA512 (qtlanguageserver-everywhere-src-6.3.1.tar.xz) = c9f3914f649f99d907eb3f7c4d67bd088ebec53f501df0523d5f2ca058129895f45bdb4cd8435a8039879d25ba1da34d8f812392e066bb7642387546d4838c90
-Size (qtlanguageserver-everywhere-src-6.3.1.tar.xz) = 147848 bytes
+BLAKE2s (qtlanguageserver-everywhere-src-6.3.2.tar.xz) = 8a56d9f6d5a2829eed65618216c5b52b820377fe901808453987382f244b72b0
+SHA512 (qtlanguageserver-everywhere-src-6.3.2.tar.xz) = 69c944e27ddd8b4e779f1f12fb9691a62219db4699f83380818bc149b5b1b2a92582eafa5573eee1ca01a6856a7ad79153a7a56e0eb0aa6b2113d2548b2f153e
+Size (qtlanguageserver-everywhere-src-6.3.2.tar.xz) = 147844 bytes

@@ -2,7 +2,6 @@
 
 DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qttools-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 tools
 CATEGORIES=	x11
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

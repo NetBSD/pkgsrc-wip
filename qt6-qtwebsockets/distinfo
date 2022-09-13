@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtwebsockets-everywhere-src-6.3.1.tar.xz) = 07fe44a431b515ca1b0c135bd21674c3d4993b4e1d313f2059cd1274c52166f8
-SHA512 (qtwebsockets-everywhere-src-6.3.1.tar.xz) = 25ab603753fdc1c65585b6aa91d3777f48e0763cff97978478586a0f04d0536b5c4d5853f9218d2a0c3b3d01b1bd9ca7e2f0e90020737c1fc70bdd4a3cd5a30c
-Size (qtwebsockets-everywhere-src-6.3.1.tar.xz) = 264268 bytes
+BLAKE2s (qtwebsockets-everywhere-src-6.3.2.tar.xz) = a4a01ceba4ff756f404dc7b8fc90c7a0e2751fa38aafdbb50a451092e3efdd3e
+SHA512 (qtwebsockets-everywhere-src-6.3.2.tar.xz) = b57621b00d0919c57ced9eabd553a624585b16f9b061366af53abdd00c5ca6b203ed01323728d8de61b2dee7c905a20be3c31baf73780afe1cce4d5f0308483d
+Size (qtwebsockets-everywhere-src-6.3.2.tar.xz) = 264360 bytes

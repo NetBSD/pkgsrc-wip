@@ -1,9 +1,8 @@
 $NetBSD$
 
-BLAKE2s (qtbase-everywhere-src-6.3.1.tar.xz) = 01486b876bd6ed1e9fd2c0063772d3122980d8d628311a1d1033f19efb9e8407
-SHA512 (qtbase-everywhere-src-6.3.1.tar.xz) = 5c4304dc1f5fa80201b61c9c8dbf4c3449506a243ea1f87e336dc3641a37b9d40c2aa4a93190cc69ddde0f349c74e327c35de5f46de888ddfd49616903e8a7b5
-Size (qtbase-everywhere-src-6.3.1.tar.xz) = 47118260 bytes
-SHA1 (patch-cmake_FindGSSAPI.cmake) = af72f4a2f11652f61275a95b6e7e22566e549eaa
+BLAKE2s (qtbase-everywhere-src-6.3.2.tar.xz) = f9de810b7804d87da74fb73d06a1554024c6b236af42488918fd85a2533515c0
+SHA512 (qtbase-everywhere-src-6.3.2.tar.xz) = e164ed6511cf6d5aa39f91cfb624c89b4dd3fc7d3c6c14b60d0c211e5b40ba1ad379ecca653db33dfa944ecfbd9c7044a8d7a968c660e8a76c4897c869584822
+Size (qtbase-everywhere-src-6.3.2.tar.xz) = 47507396 bytes
 SHA1 (patch-cmake_QtBaseGlobalTargets.cmake) = 015e6bbd049445832d6494209badc1c1a140b9a0
 SHA1 (patch-cmake_QtBuildInternals_QtBuildInternalsConfig.cmake) = f58e8e445c73444d7f0c015dd8fda64a5a662ef7
 SHA1 (patch-cmake_QtFeature.cmake) = a8e83d33467205ce39fb6df70d6dd5fcd4172d89

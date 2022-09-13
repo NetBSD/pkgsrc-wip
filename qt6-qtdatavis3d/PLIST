@@ -3,6 +3,7 @@ lib/pkgconfig/Qt6DataVisualization.pc
 lib/pkgconfig/Qt6DataVisualizationQml.pc
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstract3dcontroller_p.h
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstract3drenderer_p.h
+qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstractdeclarativeinterface_p.h
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstractitemmodelhandler_p.h
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstractobjecthelper_p.h
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstractrenderitem_p.h

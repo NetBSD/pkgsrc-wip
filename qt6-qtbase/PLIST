@@ -80,6 +80,7 @@ qt6/doc/global/html-header-online.qdocconf
 qt6/doc/global/htmltabs.qdocconf
 qt6/doc/global/includes-online/search.qdoc
 qt6/doc/global/includes/cli-build-cmake.qdocinc
+qt6/doc/global/includes/corelib/port-from-qregexp.qdocinc
 qt6/doc/global/includes/examples-run.qdocinc
 qt6/doc/global/includes/module-use.qdocinc
 qt6/doc/global/includes/standardpath/functiondocs.qdocinc
@@ -94,6 +95,7 @@ qt6/doc/global/qt-module-defaults-offline.qdocconf
 qt6/doc/global/qt-module-defaults-online-commercial.qdocconf
 qt6/doc/global/qt-module-defaults-online.qdocconf
 qt6/doc/global/qt-module-defaults.qdocconf
+qt6/doc/global/snippets/code/doc_src_port_from_qregexp.cpp
 qt6/doc/global/template/images/Qt-dark_gradient.png
 qt6/doc/global/template/images/Qt-footer-bg.jpg
 qt6/doc/global/template/images/Qt-footer_shadow.png
@@ -2655,7 +2657,6 @@ qt6/lib/cmake/Qt6/FindWrapBundledLibpngConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapBundledPcre2ConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapBundledZLIBConfigExtra.cmake
 qt6/lib/cmake/Qt6/FindWrapDBus1.cmake
-qt6/lib/cmake/Qt6/FindWrapDoubleConversion.cmake
 qt6/lib/cmake/Qt6/FindWrapFreetype.cmake
 qt6/lib/cmake/Qt6/FindWrapHarfbuzz.cmake
 qt6/lib/cmake/Qt6/FindWrapJpeg.cmake
@@ -2665,6 +2666,7 @@ qt6/lib/cmake/Qt6/FindWrapOpenSSLHeaders.cmake
 qt6/lib/cmake/Qt6/FindWrapPCRE2.cmake
 qt6/lib/cmake/Qt6/FindWrapPNG.cmake
 qt6/lib/cmake/Qt6/FindWrapRt.cmake
+qt6/lib/cmake/Qt6/FindWrapSystemDoubleConversion.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemFreetype.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemHarfbuzz.cmake
 qt6/lib/cmake/Qt6/FindWrapSystemJpeg.cmake
@@ -2678,7 +2680,6 @@ qt6/lib/cmake/Qt6/FindWrapZLIB.cmake
 qt6/lib/cmake/Qt6/FindWrapZSTD.cmake
 qt6/lib/cmake/Qt6/FindXKB_COMMON_X11.cmake
 qt6/lib/cmake/Qt6/FindXRender.cmake
-qt6/lib/cmake/Qt6/Finddouble-conversion.cmake
 qt6/lib/cmake/Qt6/ModuleDescription.json.in
 qt6/lib/cmake/Qt6/PkgConfigLibrary.pc.in
 qt6/lib/cmake/Qt6/Qt3rdPartyLibraryConfig.cmake.in
@@ -3398,6 +3399,8 @@ qt6/mkspecs/devices/linux-rasp-pi3-g++/qmake.conf
 qt6/mkspecs/devices/linux-rasp-pi3-g++/qplatformdefs.h
 qt6/mkspecs/devices/linux-rasp-pi3-vc4-g++/qmake.conf
 qt6/mkspecs/devices/linux-rasp-pi3-vc4-g++/qplatformdefs.h
+qt6/mkspecs/devices/linux-rasp-pi4-aarch64/qmake.conf
+qt6/mkspecs/devices/linux-rasp-pi4-aarch64/qplatformdefs.h
 qt6/mkspecs/devices/linux-rasp-pi4-v3d-g++/qmake.conf
 qt6/mkspecs/devices/linux-rasp-pi4-v3d-g++/qplatformdefs.h
 qt6/mkspecs/devices/linux-rcar-h2-g++/qmake.conf

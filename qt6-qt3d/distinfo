@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (qt3d-everywhere-src-6.3.1.tar.xz) = fe14af6ae7679aaeb057563a1d5e434cd1c216e6deb9c0fd15977ea06fb0a829
-SHA512 (qt3d-everywhere-src-6.3.1.tar.xz) = 7627eec3c52c745a4af4f8b416b64b4a1887ad0bf4e01794e328e0dc30604ad53bb04e58a075b144a3c85c868c63ca0c4d99809b149b796ca717c31318881372
-Size (qt3d-everywhere-src-6.3.1.tar.xz) = 104053756 bytes
+BLAKE2s (qt3d-everywhere-src-6.3.2.tar.xz) = 44a0fd3ac5545048bf4571ab22168c20a2f97c5ed0a9cf33550ec5f90bc99bd2
+SHA512 (qt3d-everywhere-src-6.3.2.tar.xz) = 1856aaf3ae7f91129b7eb0524497b0505f7ba9e1a7cbfee5eec26400d8ea36f88115f8d49ad93b3ef94c09f1ee11246482d6ab0416972a56431bd084cab44aa8
+Size (qt3d-everywhere-src-6.3.2.tar.xz) = 104036300 bytes
 SHA1 (patch-qt__cmdline.cmake) = 700aeffe48a623135ebc92049eedda896f0b272a
 SHA1 (patch-src_plugins_geometryloaders_configure.cmake) = 02401ea3019229fdc448fe2b31c17ebeca69ca76
 SHA1 (patch-src_plugins_renderers_opengl_CMakeLists.txt) = 0a94746a8767cd9244ae394d95872b15b6eaefb0
