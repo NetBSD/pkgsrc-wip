@@ -2266,6 +2266,8 @@ share/emacs/${PKGVERSION}/lisp/image/gravatar.el.gz
 share/emacs/${PKGVERSION}/lisp/image/gravatar.elc
 share/emacs/${PKGVERSION}/lisp/image/image-converter.el.gz
 share/emacs/${PKGVERSION}/lisp/image/image-converter.elc
+share/emacs/${PKGVERSION}/lisp/image/image-crop.el.gz
+share/emacs/${PKGVERSION}/lisp/image/image-crop.elc
 share/emacs/${PKGVERSION}/lisp/image/image-dired-dired.el.gz
 share/emacs/${PKGVERSION}/lisp/image/image-dired-dired.elc
 share/emacs/${PKGVERSION}/lisp/image/image-dired-external.el.gz
@@ -2276,6 +2278,8 @@ share/emacs/${PKGVERSION}/lisp/image/image-dired-util.el.gz
 share/emacs/${PKGVERSION}/lisp/image/image-dired-util.elc
 share/emacs/${PKGVERSION}/lisp/image/image-dired.el.gz
 share/emacs/${PKGVERSION}/lisp/image/image-dired.elc
+share/emacs/${PKGVERSION}/lisp/image/wallpaper.el.gz
+share/emacs/${PKGVERSION}/lisp/image/wallpaper.elc
 share/emacs/${PKGVERSION}/lisp/imenu.el.gz
 share/emacs/${PKGVERSION}/lisp/imenu.elc
 share/emacs/${PKGVERSION}/lisp/indent.el.gz
