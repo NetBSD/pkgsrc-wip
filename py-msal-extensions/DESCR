@@ -1,0 +1,4 @@
+The Microsoft Authentication Extensions for Python offers secure
+mechanisms for client applications to perform cross-platform token
+cache serialization and persistence. It gives additional support
+to the Microsoft Authentication Library for Python (MSAL).

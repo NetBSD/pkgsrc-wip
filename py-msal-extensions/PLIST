@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/msal_extensions/__init__.py
+${PYSITELIB}/msal_extensions/__init__.pyc
+${PYSITELIB}/msal_extensions/__init__.pyo
+${PYSITELIB}/msal_extensions/cache_lock.py
+${PYSITELIB}/msal_extensions/cache_lock.pyc
+${PYSITELIB}/msal_extensions/cache_lock.pyo
+${PYSITELIB}/msal_extensions/libsecret.py
+${PYSITELIB}/msal_extensions/libsecret.pyc
+${PYSITELIB}/msal_extensions/libsecret.pyo
+${PYSITELIB}/msal_extensions/osx.py
+${PYSITELIB}/msal_extensions/osx.pyc
+${PYSITELIB}/msal_extensions/osx.pyo
+${PYSITELIB}/msal_extensions/persistence.py
+${PYSITELIB}/msal_extensions/persistence.pyc
+${PYSITELIB}/msal_extensions/persistence.pyo
+${PYSITELIB}/msal_extensions/token_cache.py
+${PYSITELIB}/msal_extensions/token_cache.pyc
+${PYSITELIB}/msal_extensions/token_cache.pyo
+${PYSITELIB}/msal_extensions/windows.py
+${PYSITELIB}/msal_extensions/windows.pyc
+${PYSITELIB}/msal_extensions/windows.pyo

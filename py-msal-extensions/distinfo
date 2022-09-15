@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (msal-extensions-1.0.0.tar.gz) = 4fea3b20b78efdcd0a8fdecf4e98d8563cc8423326966da78661ee44e909e16b
+SHA512 (msal-extensions-1.0.0.tar.gz) = 5dc22a64a535ac9c7488d0d1e85e2f8320cb5c9e4cb5891599c8fc07060ff1eac310fe93ef42416142600ade8666ac4f0a3614a3e81950311f6d752cac5de959
+Size (msal-extensions-1.0.0.tar.gz) = 18763 bytes
+SHA1 (patch-msal__extensions_persistence.py) = 9e4a9d814f82d59dded74cf416d55d13e77872e9
