@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.31.1:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.4.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.16.63:../../net/py-boto3
 #DEPENDS+=	# TODO: msgraph-core>=0.2.2
-#DEPENDS+=	# TODO: azure-identity>=1.8.0
+DEPENDS+=	${PYPKGPREFIX}-azure-identity>=1.9.0:../../wip/py-azure-identity
 # pkgsrc version too old
 #DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.4.0:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=0:../../devel/py-google-api-core
