@@ -2023,7 +2023,6 @@ SUBDIR+=	libaec
 SUBDIR+=	libaio
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
-SUBDIR+=	libaudec
 SUBDIR+=	libavc1394
 SUBDIR+=	libbfio
 SUBDIR+=	libbpg

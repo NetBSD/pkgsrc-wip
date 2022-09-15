@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/audec
-include/audec/audec.h
-lib/libaudec.a
-lib/pkgconfig/audec.pc
