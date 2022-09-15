@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (portalocker-2.3.0.tar.gz) = 6abff927b0c6f36fc9d1da0b1bf7a2a8a4b74dac
-SHA512 (portalocker-2.3.0.tar.gz) = 3d2431509db8367f963c0e810002efa7ee15f0b0ac8f5ca52cd5ebabfcd94ee9f62771dc0574e14c3195b9868e119e3bd1eef01459d69b6a0d1c6f23915f9b57
-Size (portalocker-2.3.0.tar.gz) = 20142 bytes
+BLAKE2s (portalocker-2.5.1.tar.gz) = fe9f079aa9f72e3758f130dd3d186e577ad7852a49a2150a44408ac62dff7be1
+SHA512 (portalocker-2.5.1.tar.gz) = a1aeea4cb09a05d4fc65a346965b5af509963f84c6b440bed974770576cab8d5c94c8535f2debd72613f3c603cf9fe3cc236fac6bec2fd69d7d48d206ba4c344
+Size (portalocker-2.5.1.tar.gz) = 20552 bytes
