@@ -3376,6 +3376,8 @@ share/emacs/${PKGVERSION}/lisp/password-cache.el.gz
 share/emacs/${PKGVERSION}/lisp/password-cache.elc
 share/emacs/${PKGVERSION}/lisp/pcmpl-cvs.el.gz
 share/emacs/${PKGVERSION}/lisp/pcmpl-cvs.elc
+share/emacs/${PKGVERSION}/lisp/pcmpl-git.el.gz
+share/emacs/${PKGVERSION}/lisp/pcmpl-git.elc
 share/emacs/${PKGVERSION}/lisp/pcmpl-gnu.el.gz
 share/emacs/${PKGVERSION}/lisp/pcmpl-gnu.elc
 share/emacs/${PKGVERSION}/lisp/pcmpl-linux.el.gz
