@@ -5089,6 +5089,7 @@ SUBDIR+=	rpm5
 SUBDIR+=	rsem
 SUBDIR+=	rset
 SUBDIR+=	rsget
+SUBDIR+=	rslack
 SUBDIR+=	rsound
 SUBDIR+=	rspamd31
 SUBDIR+=	rsstail
