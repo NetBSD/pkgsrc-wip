@@ -1,0 +1,6 @@
+The Azure Identity library provides Azure Active Directory (AAD)
+token authentication through a set of convenient TokenCredential
+implementations. It enables Azure SDK clients to authenticate with
+AAD, while also allowing other Python apps to authenticate with
+AAD work and school accounts, Microsoft personal accounts (MSA),
+and other Identity providers like AAD B2C service.

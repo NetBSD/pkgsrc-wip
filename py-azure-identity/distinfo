@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (azure-identity-1.10.0.zip) = e024193813fbb7150788ce64d78af7f40a4b5d20fe355a71b53bd72c0145c477
+SHA512 (azure-identity-1.10.0.zip) = 66551765ac0a4d43dc95cb755be3bfc31e2e7afa7eebf72c061c6c7d1dd0cf88988d88a39c2c1463fe27caced7ccd72da6520a9e977bfed0ee5f495fe00fab6a
+Size (azure-identity-1.10.0.zip) = 312469 bytes
+SHA1 (patch-azure_identity___credentials_silent.py) = 45a9c93bad70ffd128d394328cd7f1ecf3d83c7d
+SHA1 (patch-azure_identity___internal_shared__token__cache.py) = b2571144a37899aaa95df4d0d5445cce4dfa8bb1
+SHA1 (patch-azure_identity___persistent__cache.py) = 964793e6b7faf9e50b85d3c71b836b75a2534078
