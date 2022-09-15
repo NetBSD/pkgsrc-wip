@@ -5247,6 +5247,7 @@ SUBDIR+=	semgrep-core
 SUBDIR+=	send-pr
 SUBDIR+=	sendmail
 SUBDIR+=	sendmailX
+SUBDIR+=	senpai
 SUBDIR+=	sent
 SUBDIR+=	seqtk
 SUBDIR+=	serendipity
