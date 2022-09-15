@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-kafka-python>=1.4.4:../../devel/py-kafka-python
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.31.1:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.4.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.16.63:../../net/py-boto3
-#DEPENDS+=	# TODO: msgraph-core>=0.2.2
+DEPENDS+=	${PYPKGPREFIX}-msgraph-core>=0.2.2:../../wip/py-msgraph-core
 DEPENDS+=	${PYPKGPREFIX}-azure-identity>=1.9.0:../../wip/py-azure-identity
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.4.0:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=0:../../devel/py-google-api-core

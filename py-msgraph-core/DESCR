@@ -1,0 +1,3 @@
+The Microsoft Graph Core Python client library is a lightweight
+wrapper around the Microsoft Graph API. It provides functionality
+to create clients with desired configuration and middleware.

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (msgraph-core-0.2.2.tar.gz) = 61325b44898deb948dc7730a57dbf18f0d9c2d4bd922c7b91d7f082e92e3fadf
+SHA512 (msgraph-core-0.2.2.tar.gz) = 14beb6f4b19033fd9027704ea68c37b65a296e7e346ecc8051e1aea0ac7f8f9012539a406fb9205455a2d1a5059ce8969de2edc56d04df3e95ad1284f166c3ab
+Size (msgraph-core-0.2.2.tar.gz) = 49258 bytes

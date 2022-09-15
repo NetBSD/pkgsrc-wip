@@ -4191,6 +4191,7 @@ SUBDIR+=	py-msal
 SUBDIR+=	py-msal-extensions
 SUBDIR+=	py-msdas
 SUBDIR+=	py-msedge-selenium-tools
+SUBDIR+=	py-msgraph-core
 SUBDIR+=	py-msrest
 SUBDIR+=	py-mssql2
 SUBDIR+=	py-msumastro
