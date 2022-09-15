@@ -28,8 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=4.4.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.16.63:../../net/py-boto3
 #DEPENDS+=	# TODO: msgraph-core>=0.2.2
 DEPENDS+=	${PYPKGPREFIX}-azure-identity>=1.9.0:../../wip/py-azure-identity
-# pkgsrc version too old
-#DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.4.0:../../devel/py-google-api-core
+DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.4.0:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=0:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.35.0:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.3.3:../../security/py-google-auth
