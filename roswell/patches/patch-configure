@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use /libexec as directory for lisp scripts instead of /etc
+
+--- configure.orig	2022-09-14 10:25:05.613740278 +0000
++++ configure
+@@ -818,7 +818,7 @@ sbindir='${exec_prefix}/sbin'
+ libexecdir='${exec_prefix}/libexec'
+ datarootdir='${prefix}/share'
+ datadir='${datarootdir}'
+-sysconfdir='${prefix}/etc'
++sysconfdir='${prefix}/libexec'
+ sharedstatedir='${prefix}/com'
+ localstatedir='${prefix}/var'
+ runstatedir='${localstatedir}/run'

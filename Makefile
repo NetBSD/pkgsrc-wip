@@ -5079,6 +5079,7 @@ SUBDIR+=	rom64
 SUBDIR+=	rootcheck
 SUBDIR+=	rootsh
 SUBDIR+=	rosegarden
+SUBDIR+=	roswell
 SUBDIR+=	rott
 SUBDIR+=	rottexpr
 SUBDIR+=	roundcube-plugin-carddav
