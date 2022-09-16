@@ -5292,6 +5292,7 @@ SUBDIR+=	silky
 SUBDIR+=	silvertree
 SUBDIR+=	simgrid
 SUBDIR+=	simh3
+SUBDIR+=	simp
 SUBDIR+=	simpa
 SUBDIR+=	simple-mtpfs
 SUBDIR+=	simple-scan
