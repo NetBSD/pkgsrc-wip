@@ -643,6 +643,10 @@ share/emacs/${PKGVERSION}/etc/images/next-page.pbm
 share/emacs/${PKGVERSION}/etc/images/next-page.xpm
 share/emacs/${PKGVERSION}/etc/images/open.pbm
 share/emacs/${PKGVERSION}/etc/images/open.xpm
+share/emacs/${PKGVERSION}/etc/images/outline-close.pbm
+share/emacs/${PKGVERSION}/etc/images/outline-close.svg
+share/emacs/${PKGVERSION}/etc/images/outline-open.pbm
+share/emacs/${PKGVERSION}/etc/images/outline-open.svg
 share/emacs/${PKGVERSION}/etc/images/paste.pbm
 share/emacs/${PKGVERSION}/etc/images/paste.xpm
 share/emacs/${PKGVERSION}/etc/images/preferences.pbm
