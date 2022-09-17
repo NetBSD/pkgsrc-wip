@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (nuspell-4.0.1.tar.gz) = 9594b7c8a7a5913ab561ce59f7c1001062799178
-SHA512 (nuspell-4.0.1.tar.gz) = 122616fd24c2de35000ba12d680d3617e7fe97881d33febbcb106ce70d3bac356a00d90680a1bc8ee631ed532ace0f4b4f9fce4760a25b0f7fc1d60553e74528
-Size (nuspell-4.0.1.tar.gz) = 379342 bytes
+BLAKE2s (nuspell-5.1.1.tar.gz) = 4df44ea04f1503f3af03e9cf52cb478bee9d7e3a5af5611330be5e77723c9193
+SHA512 (nuspell-5.1.1.tar.gz) = c33a52e3603071d3281b7cdcfa42776cd7ecb998292939538e53e364cfff63227cf094cd88ee6072b8a857f5d85c984c359a16b480dd462dac9cfd602cfd6c2c
+Size (nuspell-5.1.1.tar.gz) = 370879 bytes
