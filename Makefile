@@ -3757,6 +3757,7 @@ SUBDIR+=	py-einsteinpy
 SUBDIR+=	py-einsteinpy-geodesics
 SUBDIR+=	py-elastic-transport
 SUBDIR+=	py-elasticsearch
+SUBDIR+=	py-elasticsearch-dsl
 SUBDIR+=	py-email-reply-parser
 SUBDIR+=	py-emcee
 SUBDIR+=	py-emmsa

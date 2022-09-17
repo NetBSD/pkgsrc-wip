@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (elasticsearch-dsl-7.4.0.tar.gz) = 98e2f3e9c269513ba865f91412b23ce6a73cdd21284db59e418ad2cf4da2b992
+SHA512 (elasticsearch-dsl-7.4.0.tar.gz) = 4f125cbf3750e31b1ba18f988950377db04f13c59dd2336745c5fbbf056f7a482686ca486ec41c203098f5fdfb519fb1fdac893887b06b596863f72ad430cf4e
+Size (elasticsearch-dsl-7.4.0.tar.gz) = 56549 bytes
