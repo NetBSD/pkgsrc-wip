@@ -1,0 +1,1404 @@
+Fails to build:
+
+  checking whether printf supports POSIX/XSI format strings with positions... yes
+  checking for snprintf... (cached) yes
+  checking whether snprintf truncates the result as in C99... yes
+  checking whether snprintf fully supports the 'n' directive... yes
+  checking whether snprintf respects a size of 1... (cached) yes
+  checking whether vsnprintf respects a zero size as in C99... yes
+  checking for nl_langinfo... yes
+  checking for ptrdiff_t... yes
+  checking for socklen_t... yes
+  checking for ssize_t... (cached) yes
+  checking whether stat handles trailing slashes on files... yes
+  checking for struct stat.st_atim.tv_nsec... yes
+  checking whether struct stat.st_atim is of type struct timespec... yes
+  checking for struct stat.st_birthtimespec.tv_nsec... yes
+  checking for working stdalign.h... yes
+  checking for va_copy... yes
+  checking for good max_align_t... yes
+  checking whether NULL can be used in arbitrary expressions... yes
+  checking which flavor of printf attribute matches inttypes macros... system
+  checking for stpcpy... yes
+  checking for nlink_t... (cached) yes
+  checking for ptrdiff_t... (cached) yes
+  checking for vasprintf... yes
+  checking for vasprintf... (cached) yes
+  checking for nl_langinfo... (cached) yes
+  checking for ptrdiff_t... (cached) yes
+  checking for vsnprintf... yes
+  checking whether snprintf respects a size of 1... (cached) yes
+  checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+  checking for stdint.h... (cached) yes
+  checking for BSD- or MS-compatible name lister (nm)... (cached) /usr/bin/nm -B
+  checking the name lister (/usr/bin/nm -B) interface... (cached) BSD nm
+  checking for gawk... (cached) awk
+  checking for texi2dvi... /usr/bin/texi2dvi
+  checking for dvips... /tmp/.tmpEKVFcY/gettext/libtextstyle/build-aux/missing dvips
+  checking for perl... /scratch/wip/gettext-rs/work/.tools/bin/perl
+  checking that generated files are newer than configure... done
+  configure: creating ./config.status
+  config.status: creating Makefile
+  config.status: creating doc/Makefile
+  config.status: creating lib/Makefile
+  config.status: creating lib/exported.sh
+  config.status: creating lib/textstyle/version.h
+  config.status: creating lib/textstyle/woe32dll.h
+  config.status: creating tests/Makefile
+  config.status: creating adhoc-tests/Makefile
+  config.status: creating config.h
+  config.status: executing depfiles commands
+  config.status: executing libtool commands
+  === configuring in gettext-tools (/tmp/.tmpEKVFcY/build/gettext-tools)
+  configure: running /bin/sh /tmp/.tmpEKVFcY/gettext/gettext-tools/configure --disable-option-checking '--prefix=/tmp/.tmpEKVFcY'  '--without-emacs' '--disable-java' '--disable-csharp' '--disable-c++' '--disable-shared' '--enable-static' '--enable-fast-install' '--with-included-gettext' '--with-included-glib' '--with-included-libcroco' '--with-included-libunistring' 'CC=gcc' 'CFLAGS=-O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include ' 'LDFLAGS=-Wl,-zrelro -Wl,-znow -L/usr/pkg/lib -Wl,-R/usr/pkg/lib' 'CPPFLAGS=-g -I/usr/pkg/include' 'CPP=cpp' 'CXX=c++' 'CXXFLAGS=-O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include' --cache-file=/dev/null --srcdir=/tmp/.tmpEKVFcY/gettext/gettext-tools
+  checking for a BSD-compatible install... /scratch/wip/gettext-rs/work/.tools/bin/install -c
+  checking whether build environment is sane... yes
+  checking for a thread-safe mkdir -p... /tmp/.tmpEKVFcY/gettext/gettext-tools/../build-aux/install-sh -c -d
+  checking for gawk... no
+  checking for mawk... no
+  checking for nawk... no
+  checking for awk... awk
+  checking whether make sets $(MAKE)... yes
+  checking whether make supports nested variables... yes
+  checking for gcc... gcc
+  checking whether the C compiler works... yes
+  checking for C compiler default output file name... a.out
+  checking for suffix of executables...
+  checking whether we are cross compiling... no
+  checking for suffix of object files... o
+  checking whether we are using the GNU C compiler... yes
+  checking whether gcc accepts -g... yes
+  checking for gcc option to enable C11 features... none needed
+  checking whether the compiler is clang... no
+  checking for compiler option needed when checking for declarations... none
+  checking whether make supports the include directive... yes (GNU style)
+  checking dependency style of gcc... gcc3
+  checking whether to use Java... no
+  checking how to run the C preprocessor... cpp
+  checking for grep that handles long lines and -e... /scratch/wip/gettext-rs/work/.tools/bin/grep
+  checking for egrep... /scratch/wip/gettext-rs/work/.tools/bin/grep -E
+  checking for Java virtual machine... no
+  checking for Java compiler... no
+  checking for jar... no
+  checking for preferred C# implementation... no
+  checking for C# compiler... no
+  checking build system type... x86_64-unknown-netbsd9.99
+  checking host system type... x86_64-unknown-netbsd9.99
+  checking for C# program execution engine... no
+  checking for Minix Amsterdam compiler... no
+  checking for ar... ar
+  checking for ranlib... ranlib
+  checking for ANSI C header files... yes
+  checking for sys/types.h... yes
+  checking for sys/stat.h... yes
+  checking for stdlib.h... yes
+  checking for string.h... yes
+  checking for memory.h... yes
+  checking for strings.h... yes
+  checking for inttypes.h... yes
+  checking for stdint.h... yes
+  checking for unistd.h... yes
+  checking minix/config.h usability... no
+  checking minix/config.h presence... no
+  checking for minix/config.h... no
+  checking whether it is safe to define __EXTENSIONS__... yes
+  checking whether _XOPEN_SOURCE should be defined... no
+  checking for _LARGEFILE_SOURCE value needed for large files... no
+  checking for special C compiler options needed for large files... no
+  checking for _FILE_OFFSET_BITS value needed for large files... no
+  checking how to print strings... printf
+  checking for a sed that does not truncate output... /scratch/wip/gettext-rs/work/.tools/bin/sed
+  checking for fgrep... /scratch/wip/gettext-rs/work/.tools/bin/grep -F
+  checking for ld used by gcc... /scratch/wip/gettext-rs/work/.cwrapper/bin/ld
+  checking if the linker (/scratch/wip/gettext-rs/work/.cwrapper/bin/ld) is GNU ld... yes
+  checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+  checking the name lister (/usr/bin/nm -B) interface... BSD nm
+  checking whether ln -s works... yes
+  checking the maximum length of command line arguments... 196608
+  checking how to convert x86_64-unknown-netbsd9.99 file names to x86_64-unknown-netbsd9.99 format... func_convert_file_noop
+  checking how to convert x86_64-unknown-netbsd9.99 file names to toolchain format... func_convert_file_noop
+  checking for /scratch/wip/gettext-rs/work/.cwrapper/bin/ld option to reload object files... -r
+  checking for objdump... objdump
+  checking how to recognize dependent libraries... match_pattern /lib[^/]+(\.so|_pic\.a)$
+  checking for dlltool... no
+  checking how to associate runtime and link libraries... printf %s\n
+  checking for archiver @FILE support... @
+  checking for strip... strip
+  checking for ranlib... (cached) ranlib
+  checking command to parse /usr/bin/nm -B output from gcc object... ok
+  checking for sysroot... no
+  checking for a working dd... /bin/dd
+  checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+  checking for mt... mt
+  checking if mt is a manifest tool... no
+  checking for dlfcn.h... yes
+  checking for objdir... .libs
+  checking if gcc supports -fno-rtti -fno-exceptions... no
+  checking for gcc option to produce PIC... -fPIC -DPIC
+  checking if gcc PIC flag -fPIC -DPIC works... yes
+  checking if gcc static flag -static works... yes
+  checking if gcc supports -c -o file.o... yes
+  checking if gcc supports -c -o file.o... (cached) yes
+  checking whether the gcc linker (/scratch/wip/gettext-rs/work/.cwrapper/bin/ld) supports shared libraries... yes
+  checking dynamic linker characteristics... NetBSD ld.elf_so
+  checking how to hardcode library paths into programs... immediate
+  checking whether stripping libraries is possible... no
+  checking if libtool supports shared libraries... yes
+  checking whether to build shared libraries... no
+  checking whether to build static libraries... yes
+  checking for windres... no
+  checking whether NLS is requested... yes
+  checking for msgfmt... /usr/bin/msgfmt
+  checking for gmsgfmt... /usr/bin/msgfmt
+  checking for xgettext... /usr/bin/xgettext
+  checking for msgmerge... /usr/bin/msgmerge
+  checking whether we are using the GNU C Library 2 or newer... no
+  checking whether the -Werror option is usable... yes
+  checking for simple visibility declarations... yes
+  checking for inline... inline
+  checking for size_t... yes
+  checking for stdint.h... yes
+  checking for working alloca.h... no
+  checking for alloca... yes
+  checking for stdlib.h... (cached) yes
+  checking for unistd.h... (cached) yes
+  checking for sys/param.h... yes
+  checking for threads.h... yes
+  checking for xlocale.h... no
+  checking for pthread.h... yes
+  checking for sys/socket.h... yes
+  checking for dirent.h... yes
+  checking for fnmatch.h... yes
+  checking for sys/stat.h... (cached) yes
+  checking for getopt.h... yes
+  checking for sys/cdefs.h... yes
+  checking for sys/time.h... yes
+  checking for iconv.h... yes
+  checking for limits.h... yes
+  checking for wchar.h... yes
+  checking for stdint.h... (cached) yes
+  checking for inttypes.h... (cached) yes
+  checking for crtdefs.h... no
+  checking for wctype.h... yes
+  checking for langinfo.h... yes
+  checking for libxml2/libxml/xmlexports.h... no
+  checking for libxml2/libxml/xmlversion.h... no
+  checking for math.h... yes
+  checking for sys/mman.h... yes
+  checking for spawn.h... yes
+  checking for sys/random.h... yes
+  checking for sys/select.h... yes
+  checking for sys/wait.h... yes
+  checking for utime.h... yes
+  checking for features.h... no
+  checking for arpa/inet.h... yes
+  checking for semaphore.h... yes
+  checking for netdb.h... yes
+  checking for netinet/in.h... yes
+  checking for priv.h... no
+  checking for sys/ioctl.h... yes
+  checking for sys/uio.h... yes
+  checking for malloc.h... yes
+  checking for getpagesize... yes
+  checking for working mmap... yes
+  checking whether integer division by zero raises SIGFPE... yes
+  checking for inttypes.h... yes
+  checking for unsigned long long int... yes
+  checking whether imported symbols can be declared weak... yes
+  checking for pthread.h... (cached) yes
+  checking for pthread_kill in -lpthread... yes
+  checking whether POSIX threads API is available... yes
+  checking for multithread API to use... posix
+  checking for pthread_rwlock_t... yes
+  checking whether pthread_rwlock_rdlock prefers a writer to a reader... yes
+  checking for ld... /scratch/wip/gettext-rs/work/.cwrapper/bin/ld
+  checking if the linker (/scratch/wip/gettext-rs/work/.cwrapper/bin/ld) is GNU ld... yes
+  checking for shared library run path origin... done
+  checking 32-bit host C ABI... no
+  checking for ELF binary format... yes
+  checking for the common suffixes of directories in the library search path... lib,lib,lib
+  checking whether to use C++... no
+  checking for iconv... yes
+  checking for working iconv... yes
+  checking for iconv declaration...
+           extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+  checking for inttypes.h... (cached) yes
+  checking for limits.h... (cached) yes
+  checking for unistd.h... (cached) yes
+  checking for sys/param.h... (cached) yes
+  checking for getcwd... yes
+  checking for getegid... yes
+  checking for geteuid... yes
+  checking for getgid... yes
+  checking for getuid... yes
+  checking for mempcpy... no
+  checking for munmap... yes
+  checking for stpcpy... yes
+  checking for strcasecmp... yes
+  checking for strdup... yes
+  checking for strtoul... yes
+  checking for tsearch... yes
+  checking for __fsetlocking... no
+  checking whether feof_unlocked is declared... no
+  checking whether fgets_unlocked is declared... no
+  checking for bison... no
+  checking for long long int... yes
+  checking for wchar_t... yes
+  checking for wint_t... yes
+  checking whether wint_t is too small... no
+  checking for intmax_t... yes
+  checking whether printf() supports POSIX/XSI format strings... yes
+  checking whether we are using the GNU C Library >= 2.1 or uClibc... no
+  checking for stdint.h... (cached) yes
+  checking for SIZE_MAX... yes
+  checking for stdint.h... (cached) yes
+  checking for symlink... yes
+  checking for uselocale... no
+  checking for fchmod... yes
+  checking for btowc... yes
+  checking for canonicalize_file_name... no
+  checking for realpath... yes
+  checking for getcwd... (cached) yes
+  checking for readlink... yes
+  checking for readlinkat... yes
+  checking for _set_invalid_parameter_handler... no
+  checking for explicit_bzero... no
+  checking for memset_s... no
+  checking for fcntl... yes
+  checking for fnmatch... yes
+  checking for mbsrtowcs... yes
+  checking for getdelim... yes
+  checking for getdtablesize... yes
+  checking for getprogname... yes
+  checking for getexecname... no
+  checking for getrandom... yes
+  checking for gettimeofday... yes
+  checking for isblank... yes
+  checking for iswcntrl... yes
+  checking for iswblank... yes
+  checking for newlocale... yes
+  checking for duplocale... yes
+  checking for freelocale... yes
+  checking for lstat... yes
+  checking for mbsinit... yes
+  checking for mbrtowc... yes
+  checking for mbslen... no
+  checking for isascii... yes
+  checking for mprotect... yes
+  checking for select... yes
+  checking for pipe2... yes
+  checking for setenv... yes
+  checking for secure_getenv... no
+  checking for getuid... (cached) yes
+  checking for geteuid... (cached) yes
+  checking for getgid... (cached) yes
+  checking for getegid... (cached) yes
+  checking for sigaction... yes
+  checking for sigaltstack... yes
+  checking for siginterrupt... yes
+  checking for snprintf... yes
+  checking for stpncpy... yes
+  checking for strerror_r... yes
+  checking for __xpg_strerror_r... no
+  checking for pipe... yes
+  checking for utime... yes
+  checking for futimes... yes
+  checking for futimesat... no
+  checking for futimens... yes
+  checking for utimensat... yes
+  checking for lutimes... yes
+  checking for vasnprintf... no
+  checking for wcwidth... yes
+  checking for wmempcpy... no
+  checking for mempcpy... (cached) no
+  checking for ftruncate... yes
+  checking for pthread_sigmask... no
+  checking for sleep... yes
+  checking for catgets... yes
+  checking for shutdown... yes
+  checking for usleep... yes
+  checking for mquery... no
+  checking for pstat_getprocvm... no
+  checking for wcrtomb... yes
+  checking for wctob... yes
+  checking for mbrlen... yes
+  checking for nl_langinfo... yes
+  checking for iswctype... yes
+  checking for fsync... yes
+  checking for tcdrain... yes
+  checking for getrlimit... yes
+  checking for setrlimit... yes
+  checking for working fcntl.h... no (bad O_NOATIME)
+  checking for CFPreferencesCopyAppValue... no
+  checking for CFLocaleCopyPreferredLanguages... no
+  checking for flexible array member... yes
+  checking for ptrdiff_t... yes
+  checking for features.h... (cached) no
+  checking stddef.h usability... yes
+  checking stddef.h presence... yes
+  checking for stddef.h... yes
+  checking for stdlib.h... (cached) yes
+  checking for string.h... (cached) yes
+  checking for asprintf... yes
+  checking for wprintf... yes
+  checking for newlocale... (cached) yes
+  checking for putenv... yes
+  checking for setenv... (cached) yes
+  checking for snprintf... (cached) yes
+  checking for strnlen... yes
+  checking for uselocale... (cached) no
+  checking for wcslen... yes
+  checking for wcsnlen... yes
+  checking for mbrtowc... (cached) yes
+  checking for wcrtomb... (cached) yes
+  checking whether _snprintf is declared... no
+  checking whether _snwprintf is declared... no
+  checking whether getc_unlocked is declared... yes
+  checking for nl_langinfo and CODESET... yes
+  checking for LC_MESSAGES... yes
+  checking for CFPreferencesCopyAppValue... (cached) no
+  checking for CFLocaleCopyPreferredLanguages... (cached) no
+  checking whether included gettext is requested... yes
+  checking whether to use NLS... yes
+  checking where the gettext function comes from... included intl directory
+  checking for bison... no
+  checking for gcc option to support OpenMP... -fopenmp
+  checking whether <wchar.h> uses 'inline' correctly... yes
+  checking for a traditional french locale... fr_FR.ISO8859-1
+  checking whether // is distinct from /... no
+  checking whether realpath works... yes
+  checking for C/C++ restrict keyword... __restrict
+  checking whether the preprocessor supports include_next... yes
+  checking whether system header files limit the line length... no
+  checking if environ is properly declared... no
+  checking for complete errno.h... yes
+  checking whether strerror_r is declared... yes
+  checking for strerror_r... (cached) yes
+  checking whether strerror_r returns char *... no
+  checking for mode_t... yes
+  checking for sig_atomic_t... yes
+  checking for pid_t... yes
+  checking for eaccess... no
+  checking for mbstate_t... yes
+  checking whether stat file-mode macros are broken... no
+  checking for nlink_t... yes
+  checking whether stdin defaults to large file offsets... yes
+  checking whether ftello is declared... yes
+  checking for ftello... yes
+  checking whether ftello works... yes
+  checking whether getdelim is declared... yes
+  checking whether getdtablesize is declared... yes
+  checking whether getline is declared... yes
+  checking for getopt.h... (cached) yes
+  checking for getopt_long_only... no
+  checking for struct timeval... yes
+  checking for wide-enough struct timeval.tv_sec member... yes
+  checking whether setlocale (LC_ALL, NULL) is multithread-safe... no
+  checking whether setlocale (category, NULL) is multithread-safe... yes
+  checking whether imported symbols can be declared weak... (cached) yes
+  checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... no
+  checking whether the compiler produces multi-arch binaries... no
+  checking whether stdint.h conforms to C99... yes
+  checking whether stdint.h predates C++11... no
+  checking whether stdint.h has UINTMAX_WIDTH etc.... no
+  checking whether byte ordering is bigendian... no
+  checking whether long double and double are the same... no
+  checking where to find the exponent in a 'float'... word 0 bit 23
+  checking whether isnan(float) can be used without linking with libm... yes
+  checking whether isnan(float) works... yes
+  checking whether isnan(double) can be used without linking with libm... yes
+  checking whether isnan(long double) can be used without linking with libm... yes
+  checking whether isnanl works... yes
+  checking where to find the exponent in a 'double'... word 1 bit 20
+  checking whether iswcntrl works... yes
+  checking for towlower... yes
+  checking for wctype_t... yes
+  checking for wctrans_t... yes
+  checking for a traditional japanese locale... ja_JP.eucJP
+  checking for a french Unicode locale... fr_FR.UTF-8
+  checking for a transitional chinese locale... zh_CN.GB18030
+  checking whether included libunistring is requested... yes
+  checking for good max_align_t... yes
+  checking whether NULL can be used in arbitrary expressions... yes
+  checking whether locale.h defines locale_t... yes
+  checking whether pow can be used without linking with libm... no
+  checking whether pow can be used with libm... yes
+  checking whether lstat correctly handles trailing slash... yes
+  checking whether malloc, realloc, calloc are POSIX compliant... yes
+  checking for stdlib.h... (cached) yes
+  checking for GNU libc compatible malloc... yes
+  checking for mmap... yes
+  checking for MAP_ANONYMOUS... yes
+  checking whether memchr works... yes
+  checking whether <limits.h> defines MIN and MAX... no
+  checking whether <sys/param.h> defines MIN and MAX... yes
+  checking for O_CLOEXEC... yes
+  checking for promoted mode_t type... mode_t
+  checking for library containing posix_spawn... none required
+  checking for posix_spawn... yes
+  checking whether posix_spawn works... yes
+  checking whether posix_spawnattr_setschedpolicy is supported... yes
+  checking whether posix_spawnattr_setschedparam is supported... yes
+  checking for sigset_t... yes
+  checking for SIGPIPE... yes
+  checking for shared library path variable... LD_LIBRARY_PATH
+  checking whether to activate relocatable installation... no
+  checking whether setenv is declared... yes
+  checking for ssize_t... yes
+  checking for uid_t in sys/types.h... yes
+  checking whether C symbols are prefixed with underscore at the linker level... no
+  checking whether snprintf returns a byte count as in C99... yes
+  checking whether snprintf is declared... yes
+  checking for stdbool.h that conforms to C99... yes
+  checking for _Bool... yes
+  checking whether stpncpy is declared... yes
+  checking whether strerror(0) succeeds... no
+  checking whether strnlen is declared... yes
+  checking whether strstr works... yes
+  checking whether <sys/select.h> is self-contained... yes
+  checking for struct timespec in <time.h>... yes
+  checking whether clearerr_unlocked is declared... no
+  checking whether feof_unlocked is declared... (cached) no
+  checking whether ferror_unlocked is declared... no
+  checking whether fflush_unlocked is declared... no
+  checking whether fgets_unlocked is declared... (cached) no
+  checking whether fputc_unlocked is declared... no
+  checking whether fputs_unlocked is declared... no
+  checking whether fread_unlocked is declared... no
+  checking whether fwrite_unlocked is declared... no
+  checking whether getc_unlocked is declared... (cached) yes
+  checking whether getchar_unlocked is declared... yes
+  checking whether putc_unlocked is declared... yes
+  checking whether putchar_unlocked is declared... yes
+  checking whether unsetenv is declared... yes
+  checking whether the utimes function works... yes
+  checking for intmax_t... (cached) yes
+  checking for snprintf... (cached) yes
+  checking for strnlen... (cached) yes
+  checking for wcslen... (cached) yes
+  checking for wcsnlen... (cached) yes
+  checking for mbrtowc... (cached) yes
+  checking for wcrtomb... (cached) yes
+  checking whether _snprintf is declared... (cached) no
+  checking whether vsnprintf is declared... yes
+  checking whether <sys/socket.h> is self-contained... yes
+  checking for shutdown... (cached) yes
+  checking whether <sys/socket.h> defines the SHUT_* macros... yes
+  checking for struct sockaddr_storage... yes
+  checking for sa_family_t... yes
+  checking for struct sockaddr_storage.ss_family... yes
+  checking whether alarm is declared... yes
+  checking for library needed for semaphore functions... none
+  checking whether ungetc works on arbitrary bytes... yes
+  checking whether getcwd (NULL, 0) allocates memory for result... yes
+  checking for getcwd with POSIX signature... yes
+  checking for IPv4 sockets... yes
+  checking for IPv6 sockets... yes
+  checking for off_t... yes
+  checking for library containing setsockopt... none needed
+  checking whether select supports a 0 argument... yes
+  checking whether select detects invalid fds... yes
+  checking whether strerror_r is declared... (cached) yes
+  checking sys/acl.h usability... yes
+  checking sys/acl.h presence... yes
+  checking for sys/acl.h... yes
+  checking for library containing acl_get_file... none required
+  checking for acl_get_file... yes
+  checking for acl_get_fd... yes
+  checking for acl_set_file... yes
+  checking for acl_set_fd... yes
+  checking for acl_free... yes
+  checking for acl_from_mode... no
+  checking for acl_from_text... yes
+  checking for acl_delete_def_file... yes
+  checking for acl_extended_file... no
+  checking for acl_delete_fd_np... yes
+  checking for acl_delete_file_np... yes
+  checking for acl_copy_ext_native... no
+  checking for acl_create_entry_np... yes
+  checking for acl_to_short_text... no
+  checking for acl_free_text... no
+  checking for working acl_get_file... yes
+  checking acl/libacl.h usability... no
+  checking acl/libacl.h presence... no
+  checking for acl/libacl.h... no
+  checking for acl_entries... no
+  checking for ACL_FIRST_ENTRY... yes
+  checking for ACL_TYPE_EXTENDED... no
+  checking for atexit... yes
+  checking for dirent.h... (cached) yes
+  checking for string.h... (cached) yes
+  checking for long file names... yes
+  checking for pathconf... yes
+  checking for string.h... (cached) yes
+  checking for unistd.h... (cached) yes
+  checking whether btowc(0) is correct... yes
+  checking whether btowc(EOF) is correct... yes
+  checking for __builtin_expect... yes
+  checking byteswap.h usability... no
+  checking byteswap.h presence... no
+  checking for byteswap.h... no
+  checking for library containing clock_gettime... none required
+  checking for clock_gettime... yes
+  checking for clock_settime... yes
+  checking for closedir... yes
+  checking for chown... yes
+  checking for copy_file_range... no
+  checking for dirfd... no
+  checking whether dirfd is declared... yes
+  checking whether dirfd is a macro... yes
+  checking whether // is distinct from /... (cached) no
+  checking whether dup2 works... yes
+  checking for error_at_line... no
+  checking for explicit_memset... yes
+  checking whether fabs can be used without linking with libm... yes
+  checking whether fcntl handles F_DUPFD correctly... yes
+  checking whether fcntl understands F_DUPFD_CLOEXEC... yes
+  checking whether fdopen sets errno... yes
+  checking for flexible array member... (cached) yes
+  checking whether conversion from 'int' to 'long double' works... yes
+  checking for working POSIX fnmatch... yes
+  checking whether fopen recognizes a trailing slash... yes
+  checking whether fopen supports the mode character 'x'... yes
+  checking whether fopen supports the mode character 'e'... yes
+  checking for ftello... (cached) yes
+  checking whether ftello works... (cached) yes
+  checking for working getdelim function... yes
+  checking whether getdtablesize works... yes
+  checking for getline... yes
+  checking for working getline function... yes
+  checking whether program_invocation_name is declared... no
+  checking whether program_invocation_short_name is declared... no
+  checking whether __argv is declared... no
+  checking whether __progname is defined in default libraries... yes
+  checking whether getrandom is compatible with its GNU+BSD signature... yes
+  checking for gettimeofday with POSIX signature... yes
+  checking whether the compiler generally respects inline... yes
+  checking whether isinf is declared... yes
+  checking whether isinf(long double) works... yes
+  checking whether isnan macro works... yes
+  checking whether isnan(double) can be used without linking with libm... (cached) yes
+  checking whether isnan(double) can be used without linking with libm... (cached) yes
+  checking whether isnan(float) can be used without linking with libm... (cached) yes
+  checking whether isnan(float) works... (cached) yes
+  checking whether isnan(float) can be used without linking with libm... (cached) yes
+  checking whether isnan(float) works... (cached) yes
+  checking whether isnan(long double) can be used without linking with libm... (cached) yes
+  checking whether isnanl works... (cached) yes
+  checking whether isnan(long double) can be used without linking with libm... (cached) yes
+  checking whether isnanl works... (cached) yes
+  checking whether iswblank is declared... yes
+  checking whether iswdigit is ISO C compliant... no
+  checking whether iswxdigit is ISO C compliant... no
+  checking whether to use Java... no
+  checking whether langinfo.h defines CODESET... yes
+  checking whether langinfo.h defines T_FMT_AMPM... yes
+  checking whether langinfo.h defines ALTMON_1... no
+  checking whether langinfo.h defines ERA... yes
+  checking whether langinfo.h defines YESEXPR... yes
+  checking whether the compiler supports the __inline keyword... yes
+  checking whether to use the included libunistring... yes
+  checking whether included libxml is requested... no
+  checking for libxml... no
+  checking whether to use the included libxml... yes
+  checking for arpa/inet.h... (cached) yes
+  checking ctype.h usability... yes
+  checking ctype.h presence... yes
+  checking for ctype.h... yes
+  checking for dlfcn.h... (cached) yes
+  checking dl.h usability... no
+  checking dl.h presence... no
+  checking for dl.h... no
+  checking errno.h usability... yes
+  checking errno.h presence... yes
+  checking for errno.h... yes
+  checking fcntl.h usability... yes
+  checking fcntl.h presence... yes
+  checking for fcntl.h... yes
+  checking float.h usability... yes
+  checking float.h presence... yes
+  checking for float.h... yes
+  checking for limits.h... (cached) yes
+  checking for malloc.h... (cached) yes
+  checking for math.h... (cached) yes
+  checking for netdb.h... (cached) yes
+  checking for netinet/in.h... (cached) yes
+  checking signal.h usability... yes
+  checking signal.h presence... yes
+  checking for signal.h... yes
+  checking for stdlib.h... (cached) yes
+  checking for string.h... (cached) yes
+  checking for strings.h... (cached) yes
+  checking for sys/select.h... (cached) yes
+  checking for sys/socket.h... (cached) yes
+  checking for sys/stat.h... (cached) yes
+  checking for sys/time.h... (cached) yes
+  checking for sys/types.h... (cached) yes
+  checking time.h usability... yes
+  checking time.h presence... yes
+  checking for time.h... yes
+  checking for unistd.h... (cached) yes
+  checking for arpa/nameser.h... yes
+  checking for resolv.h... yes
+  checking for getaddrinfo... yes
+  checking for localtime... yes
+  checking for stat... yes
+  checking for strftime... yes
+  checking whether locale.h conforms to POSIX:2001... yes
+  checking whether struct lconv is properly defined... yes
+  checking for pthread_rwlock_t... (cached) yes
+  checking whether pthread_rwlock_rdlock prefers a writer to a reader... (cached) yes
+  checking whether log10 works... yes
+  checking whether lseek detects pipes... yes
+  checking whether NAN macro works... yes
+  checking whether HUGE_VAL works... yes
+  checking whether mbrtowc handles incomplete characters... yes
+  checking whether mbrtowc works as well as mbtowc... yes
+  checking whether mbrtowc handles a NULL pwc argument... yes
+  checking whether mbrtowc handles a NULL string argument... yes
+  checking whether mbrtowc has a correct return value... yes
+  checking whether mbrtowc returns 0 when parsing a NUL character... yes
+  checking whether mbrtowc stores incomplete characters... no
+  checking whether mbrtowc works on empty input... yes
+  checking whether the C locale is free of encoding errors... yes
+  checking whether mbrtowc handles incomplete characters... (cached) yes
+  checking whether mbrtowc works as well as mbtowc... (cached) yes
+  checking whether mbrtowc handles incomplete characters... (cached) yes
+  checking whether mbrtowc works as well as mbtowc... (cached) yes
+  checking whether mbsrtowcs works... yes
+  checking whether mbswidth is declared in <wchar.h>... no
+  checking for mbstate_t... (cached) yes
+  checking for mbtowc... yes
+  checking for memmove... yes
+  checking for mempcpy... (cached) no
+  checking for memset... yes
+  checking whether mkdir handles trailing slash... yes
+  checking whether mkdir handles trailing dot... yes
+  checking for mkdtemp... yes
+  checking for obstacks that work with any size object... no
+  checking whether open recognizes a trailing slash... yes
+  checking for opendir... yes
+  checking whether posix_spawn_file_actions_addclose works... no
+  checking whether posix_spawn_file_actions_adddup2 works... no
+  checking whether posix_spawn_file_actions_addopen works... no
+  checking whether program_invocation_name is declared... (cached) no
+  checking whether program_invocation_short_name is declared... (cached) no
+  checking for raise... yes
+  checking for sigprocmask... yes
+  checking for rawmemchr... no
+  checking for readdir... yes
+  checking whether readlink signature is correct... yes
+  checking whether readlink handles trailing slash correctly... yes
+  checking search.h usability... yes
+  checking search.h presence... yes
+  checking for search.h... yes
+  checking for tsearch... (cached) yes
+  checking whether rmdir works... yes
+  checking for sched.h... yes
+  checking for struct sched_param... yes
+  checking for __secure_getenv... no
+  checking for issetugid... yes
+  checking whether setenv validates arguments... yes
+  checking whether setlocale supports the C locale... yes
+  checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) no
+  checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+  checking whether imported symbols can be declared weak... (cached) yes
+  checking whether the -Werror option is usable... (cached) yes
+  checking for simple visibility declarations... (cached) yes
+  checking for struct sigaction.sa_sigaction... yes
+  checking for volatile sig_atomic_t... yes
+  checking for sighandler_t... no
+  checking for signbit macro... yes
+  checking for signbit compiler built-ins... yes
+  checking for sigprocmask... (cached) yes
+  checking for stdint.h... (cached) yes
+  checking for SIZE_MAX... (cached) yes
+  checking for snprintf... (cached) yes
+  checking whether snprintf respects a size of 1... yes
+  checking whether printf supports POSIX/XSI format strings with positions... yes
+  checking for posix_spawnattr_t... yes
+  checking for posix_spawn_file_actions_t... yes
+  checking for ssize_t... (cached) yes
+  checking whether stat handles trailing slashes on files... yes
+  checking for struct stat.st_atim.tv_nsec... yes
+  checking whether struct stat.st_atim is of type struct timespec... yes
+  checking for struct stat.st_birthtimespec.tv_nsec... yes
+  checking for va_copy... yes
+  checking for good max_align_t... (cached) yes
+  checking whether NULL can be used in arbitrary expressions... (cached) yes
+  checking which flavor of printf attribute matches inttypes macros... system
+  checking for stpcpy... (cached) yes
+  checking for working stpncpy... yes
+  checking for strchrnul... yes
+  checking whether strchrnul works... yes
+  checking for strcspn... yes
+  checking for working strnlen... yes
+  checking for strpbrk... yes
+  checking whether strstr works in linear time... no
+  checking whether strstr works... (cached) yes
+  checking for strtol... yes
+  checking for strtoul... (cached) yes
+  checking for chown... (cached) yes
+  checking for nlink_t... (cached) yes
+  checking whether unlink honors trailing slashes... yes
+  checking whether unlink of a parent directory fails as it should... guessing yes
+  checking for unsetenv... yes
+  checking for unsetenv() return type... int
+  checking whether unsetenv obeys POSIX... yes
+  checking for ptrdiff_t... (cached) yes
+  checking for vasprintf... yes
+  checking for vsnprintf... yes
+  checking whether snprintf respects a size of 1... (cached) yes
+  checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+  checking for waitid... yes
+  checking whether iswcntrl works... (cached) yes
+  checking for towlower... (cached) yes
+  checking for wctype_t... (cached) yes
+  checking for wctrans_t... (cached) yes
+  checking whether wcwidth is declared... yes
+  checking whether wcwidth works reasonably in UTF-8 locales... no
+  checking for wmemchr... yes
+  checking for stdint.h... (cached) yes
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a turkish Unicode locale... none
+  checking whether open recognizes a trailing slash... (cached) yes
+  checking whether dup works... yes
+  checking for getxattr with XATTR_NAME_POSIX_ACL macros... no
+  checking for getpagesize... yes
+  checking whether getpagesize is declared... yes
+  checking for library containing inet_pton... none required
+  checking whether inet_pton is declared... yes
+  checking whether byte ordering is bigendian... (cached) no
+  checking whether INT32_MAX < INTMAX_MAX... yes
+  checking whether INT64_MAX == LONG_MAX... yes
+  checking whether UINT32_MAX < UINTMAX_MAX... yes
+  checking whether UINT64_MAX == ULONG_MAX... yes
+  checking for ioctl... yes
+  checking for ioctl with POSIX signature... no
+  checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+  checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+  checking where to find the exponent in a 'long double'... word 2 bit 0
+  checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+  checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+  checking where to find the exponent in a 'long double'... (cached) word 2 bit 0
+  checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+  checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+  checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+  checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+  checking where to find the exponent in a 'long double'... (cached) word 2 bit 0
+  checking where to find the exponent in a 'long double'... (cached) word 2 bit 0
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking for library containing nanosleep... none required
+  checking for working nanosleep... yes
+  checking whether <netinet/in.h> is self-contained... yes
+  checking whether perror matches strerror... yes
+  checking for getppriv... no
+  checking for pthread_t... yes
+  checking for pthread_spinlock_t... yes
+  checking for PTHREAD_CREATE_DETACHED... yes
+  checking for PTHREAD_MUTEX_RECURSIVE... yes
+  checking for PTHREAD_MUTEX_ROBUST... no
+  checking for PTHREAD_PROCESS_SHARED... yes
+  checking whether pthread_create exists as a global function... yes
+  checking whether pthread_sigmask is a macro... yes
+  checking for putenv compatible with GNU and SVID... no
+  checking whether _putenv is declared... no
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking whether select supports a 0 argument... (cached) yes
+  checking whether select detects invalid fds... (cached) yes
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking whether sleep is declared... yes
+  checking for working sleep... yes
+  checking for socklen_t... yes
+  checking for working stdalign.h... yes
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking whether symlink handles trailing slash correctly... yes
+  checking whether <sys/ioctl.h> declares ioctl... yes
+  checking for pthread_atfork... yes
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking for useconds_t... yes
+  checking whether usleep allows large arguments... no
+  checking for mmap... (cached) yes
+  checking for MAP_ANONYMOUS... yes
+  checking whether mbrtowc handles incomplete characters... (cached) yes
+  checking whether mbrtowc works as well as mbtowc... (cached) yes
+  checking whether wcrtomb works in the C locale... yes
+  checking whether wcrtomb return value is correct... yes
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a transitional chinese locale... (cached) zh_CN.GB18030
+  checking whether wctob works... yes
+  checking whether wctob is declared... yes
+  checking whether btowc(0) is correct... (cached) yes
+  checking whether btowc(EOF) is correct... (cached) yes
+  checking for __builtin_expect... (cached) yes
+  checking whether langinfo.h defines CODESET... (cached) yes
+  checking whether langinfo.h defines T_FMT_AMPM... (cached) yes
+  checking whether langinfo.h defines ALTMON_1... (cached) no
+  checking whether langinfo.h defines ERA... (cached) yes
+  checking whether langinfo.h defines YESEXPR... (cached) yes
+  checking whether the compiler supports the __inline keyword... (cached) yes
+  checking for pthread_rwlock_t... (cached) yes
+  checking whether pthread_rwlock_rdlock prefers a writer to a reader... (cached) yes
+  checking for mbtowc... (cached) yes
+  checking whether YESEXPR works... yes
+  checking for working re_compile_pattern... no
+  checking libintl.h usability... yes
+  checking libintl.h presence... yes
+  checking for libintl.h... yes
+  checking whether isblank is declared... yes
+  checking whether mbrtowc handles incomplete characters... (cached) yes
+  checking whether mbrtowc works as well as mbtowc... (cached) yes
+  checking whether wcrtomb works in the C locale... (cached) yes
+  checking whether wcrtomb return value is correct... (cached) yes
+  checking for __builtin_expect... (cached) yes
+  checking whether // is distinct from /... (cached) no
+  checking whether dup2 works... (cached) yes
+  checking for error_at_line... (cached) no
+  checking whether fcntl handles F_DUPFD correctly... (cached) yes
+  checking whether fcntl understands F_DUPFD_CLOEXEC... (cached) yes
+  checking whether fdopen sets errno... (cached) yes
+  checking whether conversion from 'int' to 'long double' works... (cached) yes
+  checking whether fopen recognizes a trailing slash... (cached) yes
+  checking for working getdelim function... (cached) yes
+  checking whether getdtablesize works... (cached) yes
+  checking for getline... (cached) yes
+  checking for working getline function... (cached) yes
+  checking whether program_invocation_name is declared... (cached) no
+  checking whether program_invocation_short_name is declared... (cached) no
+  checking whether __argv is declared... (cached) no
+  checking whether __progname is defined in default libraries... (cached) yes
+  checking whether the compiler generally respects inline... (cached) yes
+  checking whether to use the included libunistring... yes
+  checking whether locale.h conforms to POSIX:2001... (cached) yes
+  checking whether struct lconv is properly defined... (cached) yes
+  checking for pthread_rwlock_t... (cached) yes
+  checking whether pthread_rwlock_rdlock prefers a writer to a reader... (cached) yes
+  checking whether mbrtowc handles incomplete characters... (cached) yes
+  checking whether mbrtowc works as well as mbtowc... (cached) yes
+  checking whether mbrtowc handles a NULL pwc argument... (cached) yes
+  checking whether mbrtowc handles a NULL string argument... (cached) yes
+  checking whether mbrtowc has a correct return value... (cached) yes
+  checking whether mbrtowc returns 0 when parsing a NUL character... (cached) yes
+  checking whether mbrtowc stores incomplete characters... (cached) no
+  checking whether mbrtowc works on empty input... (cached) yes
+  checking whether the C locale is free of encoding errors... (cached) yes
+  checking whether mbrtowc handles incomplete characters... (cached) yes
+  checking whether mbrtowc works as well as mbtowc... (cached) yes
+  checking whether mbswidth is declared in <wchar.h>... (cached) no
+  checking for mbstate_t... (cached) yes
+  checking for obstacks that work with any size object... (cached) no
+  checking whether open recognizes a trailing slash... (cached) yes
+  checking for raise... (cached) yes
+  checking for sigprocmask... (cached) yes
+  checking for rawmemchr... (cached) no
+  checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) no
+  checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+  checking whether imported symbols can be declared weak... (cached) yes
+  checking whether the -Werror option is usable... (cached) yes
+  checking for simple visibility declarations... (cached) yes
+  checking for volatile sig_atomic_t... (cached) yes
+  checking for sighandler_t... (cached) no
+  checking for sigprocmask... (cached) yes
+  checking for stdint.h... (cached) yes
+  checking for SIZE_MAX... (cached) yes
+  checking for ssize_t... (cached) yes
+  checking whether stat handles trailing slashes on files... (cached) yes
+  checking for struct stat.st_atim.tv_nsec... (cached) yes
+  checking whether struct stat.st_atim is of type struct timespec... (cached) yes
+  checking for struct stat.st_birthtimespec.tv_nsec... (cached) yes
+  checking for va_copy... (cached) yes
+  checking for good max_align_t... (cached) yes
+  checking whether NULL can be used in arbitrary expressions... (cached) yes
+  checking which flavor of printf attribute matches inttypes macros... (cached) system
+  checking for stpcpy... (cached) yes
+  checking for working stpncpy... (cached) yes
+  checking for strchrnul... (cached) yes
+  checking whether strchrnul works... (cached) yes
+  checking whether strstr works... (cached) yes
+  checking for nlink_t... (cached) yes
+  checking for ptrdiff_t... (cached) yes
+  checking for vasprintf... (cached) yes
+  checking whether iswcntrl works... (cached) yes
+  checking for towlower... (cached) yes
+  checking for wctype_t... (cached) yes
+  checking for wctrans_t... (cached) yes
+  checking whether wcwidth is declared... (cached) yes
+  checking whether wcwidth works reasonably in UTF-8 locales... (cached) no
+  checking for stdint.h... (cached) yes
+  checking pwd.h usability... yes
+  checking pwd.h presence... yes
+  checking for pwd.h... yes
+  checking for inline... (cached) inline
+  checking for unsigned long long int... (cached) yes
+  checking for size_t... (cached) yes
+  checking for ptrdiff_t... (cached) yes
+  checking for ssize_t... (cached) yes
+  checking for pid_t... (cached) yes
+  checking whether we are using the GNU C Library >= 2.1 or uClibc... (cached) no
+  checking for select... (cached) yes
+  checking vfork.h usability... no
+  checking vfork.h presence... no
+  checking for vfork.h... no
+  checking for fork... yes
+  checking for vfork... yes
+  checking for working fork... yes
+  checking for working vfork... (cached) yes
+  checking for signal handlers with siginfo_t... yes
+  checking for setlocale declaration...
+           extern char *setlocale (int category, const char *locale);
+  checking whether byte ordering is bigendian... (cached) no
+  checking for arpa/inet.h... (cached) yes
+  checking for gethostname... yes
+  checking for gethostbyname... yes
+  checking for inet_ntop... yes
+  checking for IPv6 sockets... yes
+  checking for BSD- or MS-compatible name lister (nm)... (cached) /usr/bin/nm -B
+  checking the name lister (/usr/bin/nm -B) interface... (cached) BSD nm
+  checking whether Emacs support is requested... no
+  checking for dvips... /tmp/.tmpEKVFcY/gettext/build-aux/missing dvips
+  checking for texi2pdf... /tmp/.tmpEKVFcY/gettext/build-aux/missing texi2pdf
+  checking for perl... /scratch/wip/gettext-rs/work/.tools/bin/perl
+  checking for a traditional french locale... (cached) fr_FR.ISO8859-1
+  checking for a french Unicode locale... (cached) fr_FR.UTF-8
+  checking for a traditional japanese locale... (cached) ja_JP.eucJP
+  checking for a german Unicode locale... de_DE.UTF-8
+  checking whether we are using the GNU C++ compiler... no
+  checking whether no accepts -g... no
+  checking for no option to enable C++11 features... unsupported
+  checking for no option to enable C++98 features... unsupported
+  checking dependency style of no... none
+  checking that generated files are newer than configure... done
+  configure: creating ./config.status
+  config.status: creating csharpcomp.sh
+  config.status: creating csharpexec.sh
+  config.status: creating javacomp.sh
+  config.status: creating javaexec.sh
+  config.status: creating Makefile
+  config.status: creating doc/Makefile
+  config.status: creating intl/Makefile
+  config.status: creating its/Makefile
+  config.status: creating gnulib-lib/Makefile
+  config.status: creating libgrep/Makefile
+  config.status: creating src/Makefile
+  config.status: creating src/user-email
+  config.status: creating libgettextpo/Makefile
+  config.status: creating libgettextpo/exported.sh
+  config.status: creating po/Makefile.in
+  config.status: creating projects/Makefile
+  config.status: creating styles/Makefile
+  config.status: creating emacs/Makefile
+  config.status: creating misc/Makefile
+  config.status: creating misc/gettextize
+  config.status: creating misc/autopoint
+  config.status: creating misc/convert-archive
+  config.status: creating man/Makefile
+  config.status: creating man/x-to-1
+  config.status: creating m4/Makefile
+  config.status: creating tests/Makefile
+  config.status: creating tests/init-env
+  config.status: creating system-tests/Makefile
+  config.status: creating gnulib-tests/Makefile
+  config.status: creating config.h
+  config.status: executing depfiles commands
+  config.status: executing libtool commands
+  config.status: executing po-directories commands
+  config.status: creating po/POTFILES
+  config.status: creating po/Makefile
+  === configuring in examples (/tmp/.tmpEKVFcY/build/gettext-tools/examples)
+  configure: running /bin/sh /tmp/.tmpEKVFcY/gettext/gettext-tools/examples/configure --disable-option-checking '--prefix=/tmp/.tmpEKVFcY'  '--without-emacs' '--disable-java' '--disable-csharp' '--disable-c++' '--disable-shared' '--enable-static' '--enable-fast-install' '--with-included-gettext' '--with-included-glib' '--with-included-libcroco' '--with-included-libunistring' 'CC=gcc' 'CFLAGS=-O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include ' 'LDFLAGS=-Wl,-zrelro -Wl,-znow -L/usr/pkg/lib -Wl,-R/usr/pkg/lib' 'CPPFLAGS=-g -I/usr/pkg/include' 'CPP=cpp' 'CXX=c++' 'CXXFLAGS=-O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include' --cache-file=/dev/null --srcdir=/tmp/.tmpEKVFcY/gettext/gettext-tools/examples
+  checking for a BSD-compatible install... /scratch/wip/gettext-rs/work/.tools/bin/install -c
+  checking whether build environment is sane... yes
+  checking for a thread-safe mkdir -p... /tmp/.tmpEKVFcY/gettext/gettext-tools/examples/../../build-aux/install-sh -c -d
+  checking for gawk... no
+  checking for mawk... no
+  checking for nawk... no
+  checking for awk... awk
+  checking whether make sets $(MAKE)... yes
+  checking whether make supports nested variables... yes
+  checking for a sed that does not truncate output... /scratch/wip/gettext-rs/work/.tools/bin/sed
+  checking whether NLS is requested... yes
+  checking for msgfmt... /usr/bin/msgfmt
+  checking for gmsgfmt... /usr/bin/msgfmt
+  checking for xgettext... /usr/bin/xgettext
+  checking for msgmerge... /usr/bin/msgmerge
+  checking that generated files are newer than configure... done
+  configure: creating ./config.status
+  config.status: creating Makefile
+  config.status: creating installpaths
+  config.status: creating po/Makefile
+  config.status: executing po-directories commands
+  running: "make" "-j8"
+  --- all ---
+  make  all-recursive
+  --- all-recursive ---
+  Making all in gnulib-local
+  Making all in gettext-runtime
+  --- all ---
+  make  all-recursive
+  --- all-recursive ---
+  Making all in doc
+  Making all in intl
+  --- all ---
+  make  all-am
+  --- libintl.h ---
+  --- libgnuintl.h ---
+  --- hash-string.lo ---
+  --- l10nflist.lo ---
+  --- explodename.lo ---
+  --- plural-exp.lo ---
+  --- localcharset.lo ---
+  --- threadlib.lo ---
+  --- hash-string.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o hash-string.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/hash-string.c
+  --- l10nflist.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o l10nflist.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/l10nflist.c
+  --- explodename.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o explodename.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/explodename.c
+  --- libintl.h ---
+  sed -e '/IN_LIBGLOCALE/d'  -e 's,@''HAVE_POSIX_PRINTF''@,1,g'  -e 's,@''HAVE_ASPRINTF''@,1,g'  -e 's,@''HAVE_SNPRINTF''@,1,g'  -e 's,@''HAVE_WPRINTF''@,1,g'  -e 's,@''HAVE_NAMELESS_LOCALES''@,0,g'  -e 's,@''HAVE_NEWLOCALE''@,1,g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/libgnuintl.in.h > libintl.h
+  --- plural-exp.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o plural-exp.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/plural-exp.c
+  --- threadlib.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o threadlib.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/threadlib.c
+  --- localcharset.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o localcharset.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localcharset.c
+  --- libgnuintl.h ---
+  sed -e '/IN_LIBGLOCALE/d'  -e 's,@''HAVE_POSIX_PRINTF''@,1,g'  -e 's,@''HAVE_ASPRINTF''@,1,g'  -e 's,@''HAVE_SNPRINTF''@,1,g'  -e 's,@''HAVE_WPRINTF''@,1,g'  -e 's,@''HAVE_NAMELESS_LOCALES''@,0,g'  -e 's,@''HAVE_NEWLOCALE''@,1,g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/libgnuintl.in.h  | if test 'no' = yes; then  sed -e 's/extern \([^()]*\);/extern __declspec (dllimport) \1;/';  else  cat;  fi  | sed -e 's/extern \([^"]\)/extern LIBINTL_DLL_EXPORTED \1/'  -e "/#define _LIBINTL_H/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/export.h"  | sed -e 's,@''HAVE_VISIBILITY''@,1,g'  > libgnuintl.h
+  --- lock.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o lock.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/lock.c
+  --- relocatable.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o relocatable.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/relocatable.c
+  --- explodename.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/explodename.c -o explodename.o
+  --- threadlib.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/threadlib.c -o threadlib.o
+  --- hash-string.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/hash-string.c -o hash-string.o
+  --- relocatable.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/relocatable.c -o relocatable.o
+  --- l10nflist.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/l10nflist.c -o l10nflist.o
+  --- localcharset.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localcharset.c -o localcharset.o
+  --- plural-exp.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/plural-exp.c -o plural-exp.o
+  --- langprefs.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o langprefs.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/langprefs.c
+  --- lock.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/lock.c -o lock.o
+  --- localename-table.h ---
+  sed -e 's/extern \([^"]\)/extern LIBINTL_DLL_EXPORTED \1/'  -e 's/extern,/extern LIBINTL_DLL_EXPORTED,/'  -e "/#if HAVE_WORKING_USELOCALE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/export.h"  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localename-table.in.h  | sed -e 's,@''HAVE_VISIBILITY''@,1,g'  > localename-table.h
+  --- log.lo ---
+  --- printf.lo ---
+  --- log.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o log.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/log.c
+  --- printf.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o printf.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/printf.c
+  --- setlocale-lock.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o setlocale-lock.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/setlocale-lock.c
+  --- setlocale_null.lo ---
+  --- xsize.lo ---
+  --- setlocale_null.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o setlocale_null.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/setlocale_null.c
+  --- xsize.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o xsize.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/xsize.c
+  --- osdep.lo ---
+  --- ref-add.sed ---
+  --- osdep.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o osdep.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/osdep.c
+  --- ref-add.sed ---
+  sed -e '/^#/d' -e 's/@''PACKAGE''@/gettext-runtime/g' /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/ref-add.sin > t-ref-add.sed
+  mv t-ref-add.sed ref-add.sed
+  --- ref-del.sed ---
+  sed -e '/^#/d' -e 's/@''PACKAGE''@/gettext-runtime/g' /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/ref-del.sin > t-ref-del.sed
+  mv t-ref-del.sed ref-del.sed
+  --- plural.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o plural.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/plural.c
+  --- langprefs.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/langprefs.c -o langprefs.o
+  --- bindtextdom.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o bindtextdom.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/bindtextdom.c
+  --- setlocale-lock.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/setlocale-lock.c -o setlocale-lock.o
+  --- printf.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/printf.c -o printf.o
+  --- log.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/log.c -o log.o
+  --- osdep.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/osdep.c -o osdep.o
+  --- setlocale_null.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/setlocale_null.c -o setlocale_null.o
+  --- dcgettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o dcgettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dcgettext.c
+  --- dgettext.lo ---
+  --- xsize.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/xsize.c -o xsize.o
+  --- dgettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o dgettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dgettext.c
+  --- gettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o gettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/gettext.c
+  --- plural.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/plural.c -o plural.o
+  --- finddomain.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o finddomain.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/finddomain.c
+  --- loadmsgcat.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o loadmsgcat.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/loadmsgcat.c
+  --- localealias.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o localealias.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localealias.c
+  --- textdomain.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o textdomain.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/textdomain.c
+  --- bindtextdom.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/bindtextdom.c -o bindtextdom.o
+  --- dcigettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o dcigettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dcigettext.c
+  --- dcgettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dcgettext.c -o dcgettext.o
+  --- dgettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dgettext.c -o dgettext.o
+  --- gettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/gettext.c -o gettext.o
+  --- dcngettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o dcngettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dcngettext.c
+  --- finddomain.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/finddomain.c -o finddomain.o
+  --- dngettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o dngettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dngettext.c
+  --- loadmsgcat.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/loadmsgcat.c -o loadmsgcat.o
+  --- ngettext.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o ngettext.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/ngettext.c
+  --- setlocale.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o setlocale.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/setlocale.c
+  --- localealias.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localealias.c -o localealias.o
+  --- textdomain.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/textdomain.c -o textdomain.o
+  --- version.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o version.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/version.c
+  --- intl-compat.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o intl-compat.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/intl-compat.c
+  --- localename.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o localename.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localename.c
+  --- dcigettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dcigettext.c -o dcigettext.o
+  --- dcngettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dcngettext.c -o dcngettext.o
+  --- ngettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/ngettext.c -o ngettext.o
+  --- dngettext.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/dngettext.c -o dngettext.o
+  --- localename-table.lo ---
+  /bin/sh ../libtool  --tag=CC    --mode=compile gcc -DHAVE_CONFIG_H  -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I..  -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\"  -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\"  -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL   -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\"  -DNO_XMALLOC  -Dset_relocation_prefix=libintl_set_relocation_prefix  -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2  -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include  -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o localename-table.lo /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localename-table.c
+  --- setlocale.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/setlocale.c -o setlocale.o
+  --- version.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/version.c -o version.o
+  --- intl-compat.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/intl-compat.c -o intl-compat.o
+  --- localename.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localename.c -o localename.o
+  --- localename-table.lo ---
+  libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl -I.. -DLOCALEDIR=\"/tmp/.tmpEKVFcY/share/locale\" -DLOCALE_ALIAS_PATH=\"\" -DLIBDIR=\"/tmp/.tmpEKVFcY/lib\" -DBUILDING_LIBINTL -DBUILDING_DLL -DIN_LIBINTL -DENABLE_RELOCATABLE=1 -DIN_LIBRARY -DINSTALLDIR=\"/tmp/.tmpEKVFcY/lib\" -DNO_XMALLOC -Dset_relocation_prefix=libintl_set_relocation_prefix -Drelocate=libintl_relocate -Drelocate2=libintl_relocate2 -DDEPENDS_ON_LIBICONV=1 -g -I/usr/pkg/include -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c /tmp/.tmpEKVFcY/gettext/gettext-runtime/intl/localename-table.c -o localename-table.o
+  --- libintl.la ---
+  /bin/sh ../libtool  --tag=CC    --mode=link gcc -fvisibility=hidden -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include      -no-undefined  -export-symbols-regex '^([^g]|g[^l]|gl[^w]|glw[^t]|glwt[^h]|glwth[^r]|glwthr[^e]|glwthre[^a]|glwthrea[^d]).*'  -version-info 10:0:2  -rpath /tmp/.tmpEKVFcY/lib -Wl,-zrelro -Wl,-znow -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -o libintl.la  bindtextdom.lo dcgettext.lo dgettext.lo gettext.lo  finddomain.lo hash-string.lo loadmsgcat.lo localealias.lo  textdomain.lo l10nflist.lo explodename.lo dcigettext.lo  dcngettext.lo dngettext.lo ngettext.lo plural.lo plural-exp.lo  localcharset.lo threadlib.lo lock.lo relocatable.lo  langprefs.lo localename.lo localename-table.lo log.lo  printf.lo setlocale.lo setlocale-lock.lo setlocale_null.lo  version.lo xsize.lo osdep.lo intl-compat.lo
+  libtool: link: ar cru .libs/libintl.a  bindtextdom.o dcgettext.o dgettext.o gettext.o finddomain.o hash-string.o loadmsgcat.o localealias.o textdomain.o l10nflist.o explodename.o dcigettext.o dcngettext.o dngettext.o ngettext.o plural.o plural-exp.o localcharset.o threadlib.o lock.o relocatable.o langprefs.o localename.o localename-table.o log.o printf.o setlocale.o setlocale-lock.o setlocale_null.o version.o xsize.o osdep.o intl-compat.o
+  libtool: link: ranlib .libs/libintl.a
+  libtool: link: ( cd ".libs" && rm -f "libintl.la" && ln -s "../libintl.la" "libintl.la" )
+  Making all in intl-java
+  Making all in intl-csharp
+  Making all in gnulib-lib
+  --- unistr.h ---
+  --- unitypes.h ---
+  --- uniwidth.h ---
+  --- alloca.h ---
+  --- fcntl.h ---
+  --- getopt.h ---
+  --- getopt-cdefs.h ---
+  --- iconv.h ---
+  --- unistr.h ---
+  rm -f unistr.h-t unistr.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  cat /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/unistr.in.h;  } > unistr.h-t &&  mv -f unistr.h-t unistr.h
+  --- unitypes.h ---
+  rm -f unitypes.h-t unitypes.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  cat /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/unitypes.in.h;  } > unitypes.h-t &&  mv -f unitypes.h-t unitypes.h
+  --- alloca.h ---
+  rm -f alloca.h-t alloca.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''HAVE_ALLOCA_H''@|0|g' < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/alloca.in.h;  } > alloca.h-t &&  mv -f alloca.h-t alloca.h
+  --- fcntl.h ---
+  rm -f fcntl.h-t fcntl.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_FCNTL_H''@|<fcntl.h>|g'  -e 's/@''GNULIB_CREAT''@/0/g'  -e 's/@''GNULIB_FCNTL''@/1/g'  -e 's/@''GNULIB_NONBLOCKING''@/0/g'  -e 's/@''GNULIB_OPEN''@/1/g'  -e 's/@''GNULIB_OPENAT''@/0/g'  -e 's|@''HAVE_FCNTL''@|1|g'  -e 's|@''HAVE_OPENAT''@|1|g'  -e 's|@''REPLACE_CREAT''@|0|g'  -e 's|@''REPLACE_FCNTL''@|0|g'  -e 's|@''REPLACE_OPEN''@|0|g'  -e 's|@''REPLACE_OPENAT''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/fcntl.in.h;  } > fcntl.h-t &&  mv fcntl.h-t fcntl.h
+  --- getopt-cdefs.h ---
+  rm -f getopt-cdefs.h-t getopt-cdefs.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''HAVE_SYS_CDEFS_H''@|1|g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/getopt-cdefs.in.h;  } > getopt-cdefs.h-t &&  mv -f getopt-cdefs.h-t getopt-cdefs.h
+  --- getopt.h ---
+  rm -f getopt.h-t getopt.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''HAVE_GETOPT_H''@|1|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_GETOPT_H''@|<getopt.h>|g'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/getopt.in.h;  } > getopt.h-t &&  mv -f getopt.h-t getopt.h
+  --- iconv.h ---
+  rm -f iconv.h-t iconv.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_ICONV_H''@|<iconv.h>|g'  -e 's/@''GNULIB_ICONV''@/1/g'  -e 's|@''ICONV_CONST''@||g'  -e 's|@''REPLACE_ICONV''@|0|g'  -e 's|@''REPLACE_ICONV_OPEN''@|0|g'  -e 's|@''REPLACE_ICONV_UTF''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/iconv.in.h;  } > iconv.h-t &&  mv iconv.h-t iconv.h
+  --- uniwidth.h ---
+  rm -f uniwidth.h-t uniwidth.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  cat /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/uniwidth.in.h;  } > uniwidth.h-t &&  mv -f uniwidth.h-t uniwidth.h
+  --- inttypes.h ---
+  --- langinfo.h ---
+  --- limits.h ---
+  --- locale.h ---
+  --- inttypes.h ---
+  rm -f inttypes.h-t inttypes.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's/@''HAVE_INTTYPES_H''@/1/g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_INTTYPES_H''@|<inttypes.h>|g'  -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g'  -e 's/@''PRIPTR_PREFIX''@/__PRIPTR_PREFIX/g'  -e 's/@''GNULIB_IMAXABS''@/0/g'  -e 's/@''GNULIB_IMAXDIV''@/0/g'  -e 's/@''GNULIB_STRTOIMAX''@/0/g'  -e 's/@''GNULIB_STRTOUMAX''@/0/g'  -e 's/@''HAVE_DECL_IMAXABS''@/1/g'  -e 's/@''HAVE_DECL_IMAXDIV''@/1/g'  -e 's/@''HAVE_DECL_STRTOIMAX''@/1/g'  -e 's/@''HAVE_DECL_STRTOUMAX''@/1/g'  -e 's/@''HAVE_IMAXDIV_T''@/1/g'  -e 's/@''REPLACE_STRTOIMAX''@/0/g'  -e 's/@''REPLACE_STRTOUMAX''@/0/g'  -e 's/@''INT32_MAX_LT_INTMAX_MAX''@/1/g'  -e 's/@''INT64_MAX_EQ_LONG_MAX''@/defined _LP64/g'  -e 's/@''UINT32_MAX_LT_UINTMAX_MAX''@/1/g'  -e 's/@''UINT64_MAX_EQ_ULONG_MAX''@/defined _LP64/g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmp--- langinfo.h ---
+  rm -f langinfo.h-t langinfo.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''HAVE_LANGINFO_H''@|1|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_LANGINFO_H''@|<langinfo.h>|g'  -e 's/@''GNULIB_NL_LANGINFO''@/0/g'  -e 's|@''HAVE_LANGINFO_CODESET''@|1|g'  -e 's|@''HAVE_LANGINFO_T_FMT_AMPM''@|1|g'  -e 's|@''HAVE_LANGINFO_ALTMON''@|0|g'  -e 's|@''HAVE_LANGINFO_ERA''@|1|g'  -e 's|@''HAVE_LANGINFO_YESEXPR''@|1|g'  -e 's|@''HAVE_NL_LANGINFO''@|1|g'  -e 's|@''REPLACE_NL_LANGINFO''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/langinfo.in.h;  } > langinfo.h-t &&  mv langinfo.h-t langinfo.h
+  --- signal.h ---
+  --- inttypes.h ---
+  EKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/inttypes.in.h;  } > inttypes.h-t &&  mv inttypes.h-t inttypes.h
+  --- limits.h ---
+  rm -f limits.h-t limits.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_LIMITS_H''@|<limits.h>|g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/limits.in.h;  } > limits.h-t &&  mv limits.h-t limits.h
+  --- stdint.h ---
+  --- stdio.h ---
+  --- locale.h ---
+  rm -f locale.h-t locale.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_LOCALE_H''@|<locale.h>|g'  -e 's/@''GNULIB_LOCALECONV''@/0/g'  -e 's/@''GNULIB_SETLOCALE''@/1/g'  -e 's/@''GNULIB_SETLOCALE_NULL''@/1/g'  -e 's/@''GNULIB_DUPLOCALE''@/0/g'  -e 's/@''GNULIB_LOCALENAME''@/1/g'  -e 's|@''HAVE_NEWLOCALE''@|1|g'  -e 's|@''HAVE_DUPLOCALE''@|1|g'  -e 's|@''HAVE_FREELOCALE''@|1|g'  -e 's|@''HAVE_XLOCALE_H''@|0|g'  -e 's|@''REPLACE_LOCALECONV''@|0|g'  -e 's|@''REPLACE_SETLOCALE''@|1|g'  -e 's|@''REPLACE_NEWLOCALE''@|0|g'  -e 's|@''REPLACE_DUPLOCALE''@|0|g'  -e 's|@''REPLACE_FREELOCALE''@|0|g'  -e 's|@''REPLACE_STRUCT_LCONV''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/locale.in.h;  } > locale.h-t &&  mv locale.h-t locale.h
+  --- signal.h ---
+  rm -f signal.h-t signal.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SIGNAL_H''@|<signal.h>|g'  -e 's/@''GNULIB_PTHREAD_SIGMASK''@/0/g'  -e 's/@''GNULIB_RAISE''@/1/g'  -e 's/@''GNULIB_SIGNAL_H_SIGPIPE''@/1/g'  -e 's/@''GNULIB_SIGPROCMASK''@/1/g'  -e 's/@''GNULIB_SIGACTION''@/0/g'  -e 's|@''HAVE_POSIX_SIGNALBLOCKING''@|1|g'  -e 's|@''HAVE_PTHREAD_SIGMASK''@|1|g'  -e 's|@''HAVE_RAISE''@|1|g'  -e 's|@''HAVE_SIGSET_T''@|1|g'  -e 's|@''HAVE_SIGINFO_T''@|1|g'  -e 's|@''HAVE_SIGACTION''@|1|g'  -e 's|@''HAVE_STRUCT_SIGACTION_SA_SIGACTION''@|1|g'  -e 's|@''HAVE_TYPE_VOLATILE_SIG_ATOMIC_T''@|1|g'  -e 's|@''HAVE_SIGHANDLER_T''@|0|g'  -e 's|@''REPLACE_PTHREAD_SIGMASK''@|0|g'  -e 's|@''REPLACE_RAISE''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/signal.in.h;  } > signal.h-t &&  mv signal.h-t signal.h
+  --- stdlib.h ---
+  --- stdint.h ---
+  rm -f stdint.h-t stdint.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's/@''HAVE_STDINT_H''@/1/g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STDINT_H''@|<stdint.h>|g'  -e 's/@''HAVE_C99_STDINT_H''@/1/g'  -e 's/@''HAVE_SYS_TYPES_H''@/1/g'  -e 's/@''HAVE_INTTYPES_H''@/1/g'  -e 's/@''HAVE_SYS_INTTYPES_H''@/0/g'  -e 's/@''HAVE_SYS_BITYPES_H''@/0/g'  -e 's/@''HAVE_WCHAR_H''@/1/g'  -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g'  -e 's/@''BITSIZEOF_PTRDIFF_T''@//g'  -e 's/@''PTRDIFF_T_SUFFIX''@//g'  -e 's/@''BITSIZEOF_SIG_ATOMIC_T''@//g'  -e 's/@''HAVE_SIGNED_SIG_ATOMIC_T''@//g'  -e 's/@''SIG_ATOMIC_T_SUFFIX''@//g'  -e 's/@''BITSIZEOF_SIZE_T''@//g'  -e 's/@''SIZE_T_SUFFIX''@//g'  -e 's/@''BITSIZEOF_WCHAR_T''@//g'  -e 's/@''HAVE_SIGNED_WCHAR_T''@//g'  -e 's/@''WCHAR_T_SUFFIX''@//g'  -e 's/@''BITSIZEOF_WINT_T''@//g'  -e 's/@''HAVE_SIGNED_WINT_T''@//g'  -e 's/@''WINT_T_SUFFIX''@//g'  -e 's/@''GNULIB_OVERRIDES_WINT_T''@/0/g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/stdint.in.h;  } > stdint.h-t &&  mv stdint.h-t stdint.h
+  --- stdlib.h ---
+  rm -f stdlib.h-t stdlib.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STDLIB_H''@|<stdlib.h>|g'  -e 's/@''GNULIB__EXIT''@/0/g'  -e 's/@''GNULIB_ATOLL''@/0/g'  -e 's/@''GNULIB_CALLOC_POSIX''@/0/g'  -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/1/g'  -e 's/@''GNULIB_GETLOADAVG''@/0/g'  -e 's/@''GNULIB_GETSUBOPT''@/0/g'  -e 's/@''GNULIB_GRANTPT''@/0/g'  -e 's/@''GNULIB_MALLOC_POSIX''@/0/g'  -e 's/@''GNULIB_MBTOWC''@/0/g'  -e 's/@''GNULIB_MKDTEMP''@/0/g'  -e 's/@''GNULIB_MKOSTEMP''@/0/g'  -e 's/@''GNULIB_MKOSTEMPS''@/0/g'  -e 's/@''GNULIB_MKSTEMP''@/0/g'  -e 's/@''GNULIB_MKSTEMPS''@/0/g'  -e 's/@''GNULIB_POSIX_OPENPT''@/0/g'  -e 's/@''GNULIB_PTSNAME''@/0/g'  -e 's/@''GNULIB_PTSNAME_R''@/0/g'  -e 's/@''GNULIB_PUTENV''@/0/g'  -e 's/@''GNULIB_QSORT_R''@/0/g'  -e 's/@''GNULIB_RANDOM''@/0/g'  -e 's/@''GNULIB_RANDOM_R''@/0/g'  -e 's/@''GNULIB_REALLOC_POSIX''@/0/g'  -e 's/@''GNULIB_REALLOCARRAY''@/0/g'  -e 's/@''GNULIB_REALPATH''@/1/g'  -e 's/@''GNULIB_RPMATCH''@/0/g'  -e 's/@''GNULIB_SECURE_GETENV''@/0/g'  -e 's/@''GNULIB_SETENV''@/0/g'  -e 's/@''GNULIB_STRTOD''@/0/g'  -e 's/@''GNULIB_STRTOLD''@/0/g'  -e 's/@''GNULIB_STRTOLL''@/0/g'  -e 's/@''GNULIB_STRTOULL''@/0/g'  -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g'  -e 's/@''GNULIB_UNLOCKPT''@/0/g'  -e 's/@''GNULIB_UNSETENV''@/0/g'  -e 's/@''GNULIB_WCTOMB''@/0/g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/stdlib.in.h |  sed -e 's|@''HAVE__EXIT''@|1|g'  -e 's|@''HAVE_ATOLL''@|1|g'  -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|0|g'  -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g'  -e 's|@''HAVE_GETSUBOPT''@|1|g'  -e 's|@''HAVE_GRANTPT''@|1|g'  -e 's|@''HAVE_INITSTATE''@|1|g'  -e 's|@''HAVE_DECL_INITSTATE''@|1|g'  -e 's|@''HAVE_MBTOWC''@|1|g'  -e 's|@''HAVE_MKDTEMP''@|1|g'  -e 's|@''HAVE_MKOSTEMP''@|1|g'  -e 's|@''HAVE_MKOSTEMPS''@|1|g'  -e 's|@''HAVE_MKSTEMP''@|1|g'  -e 's|@''HAVE_MKSTEMPS''@|1--- stdio.h ---
+  rm -f stdio.h-t stdio.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STDIO_H''@|<stdio.h>|g'  -e 's/@''GNULIB_DPRINTF''@/0/g'  -e 's/@''GNULIB_FCLOSE''@/0/g'  -e 's/@''GNULIB_FDOPEN''@/0/g'  -e 's/@''GNULIB_FFLUSH''@/0/g'  -e 's/@''GNULIB_FGETC''@/1/g'  -e 's/@''GNULIB_FGETS''@/1/g'  -e 's/@''GNULIB_FOPEN''@/0/g'  -e 's/@''GNULIB_FPRINTF''@/1/g'  -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_FPURGE''@/0/g'  -e 's/@''GNULIB_FPUTC''@/1/g'  -e 's/@''GNULIB_FPUTS''@/1/g'  -e 's/@''GNULIB_FREAD''@/1/g'  -e 's/@''GNULIB_FREOPEN''@/0/g'  -e 's/@''GNULIB_FSCANF''@/1/g'  -e 's/@''GNULIB_FSEEK''@/0/g'  -e 's/@''GNULIB_FSEEKO''@/0/g'  -e 's/@''GNULIB_FTELL''@/0/g'  -e 's/@''GNULIB_FTELLO''@/0/g'  -e 's/@''GNULIB_FWRITE''@/1/g'  -e 's/@''GNULIB_GETC''@/1/g'  -e 's/@''GNULIB_GETCHAR''@/1/g'  -e 's/@''GNULIB_GETDEL--- string.h ---
+  --- stdlib.h ---
+  |g'  -e 's|@''HAVE_POSIX_OPENPT''@|1|g'  -e 's|@''HAVE_PTSNAME''@|1|g'  -e 's|@''HAVE_PTSNAME_R''@|1|g'  -e 's|@''HAVE_QSORT_R''@|1|g'  -e 's|@''HAVE_RANDOM''@|1|g'  -e 's|@''HAVE_RANDOM_H''@|1|g'  -e 's|@''HAVE_RANDOM_R''@|1|g'  -e 's|@''HAVE_REALLOCARRAY''@|1|g'  -e 's|@''HAVE_REALPATH''@|1|g'  -e 's|@''HAVE_RPMATCH''@|1|g'  -e 's|@''HAVE_SECURE_GETENV''@|1|g'  -e 's|@''HAVE_DECL_SETENV''@|1|g'  -e 's|@''HAVE_SETSTATE''@|1|g'  -e 's|@''HAVE_DECL_SETSTATE''@|1|g'  -e 's|@''HAVE_STRTOD''@|1|g'  -e 's|@''HAVE_STRTOLD''@|1|g'  -e 's|@''HAVE_STRTOLL''@|1|g'  -e 's|@''HAVE_STRTOULL''@|1|g'  -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g'  -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g'  -e 's|@''HAVE_UNLOCKPT''@|1|g'  -e 's|@''HAVE_DECL_UNSETENV''@|1|g'  -e 's|@''REPLACE_CALLOC''@|0|g'  -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g'  -e 's|@''REPLACE_INITSTATE''@|0|g'  -e 's|@''REPLACE_MALLOC''@|0|g'  -e 's|@''REPLACE_MBTOWC''@|0|g'  -e 's|@''REPLACE_MKSTEMP''@|0|g'  -e 's|@''REPLACE_PTSNAME''@|0|g'  -e 's|@''REPLACE_PTSNAME_R''@|--- stdio.h ---
+  IM''@/0/g'  -e 's/@''GNULIB_GETLINE''@/0/g'  -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g'  -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_PCLOSE''@/0/g'  -e 's/@''GNULIB_PERROR''@/0/g'  -e 's/@''GNULIB_POPEN''@/0/g'  -e 's/@''GNULIB_PRINTF''@/1/g'  -e 's/@''GNULIB_PRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_PUTC''@/1/g'  -e 's/@''GNULIB_PUTCHAR''@/1/g'  -e 's/@''GNULIB_PUTS''@/1/g'  -e 's/@''GNULIB_REMOVE''@/0/g'  -e 's/@''GNULIB_RENAME''@/0/g'  -e 's/@''GNULIB_RENAMEAT''@/0/g'  -e 's/@''GNULIB_SCANF''@/1/g'  -e 's/@''GNULIB_SNPRINTF''@/0/g'  -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g'  -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/1/g'  -e 's/@''GNULIB_TMPFILE''@/0/g'  -e 's/@''GNULIB_VASPRINTF''@/0/g'  -e 's/@''GNULIB_VDPRINTF''@/0/g'  -e 's/@''GNULIB_VFPRINTF''@/1/g'  -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_VFSCANF''@/0/g'  -e 's/@''GNULIB_VSCANF''@/0/g'  -e 's/@''GNULIB_VPRINTF''@/1/g'  -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_VSNPRINTF''@/0/g' --- stdlib.h ---
+  0|g'  -e 's|@''REPLACE_PUTENV''@|0|g'  -e 's|@''REPLACE_QSORT_R''@|0|g'  -e 's|@''REPLACE_RANDOM''@|0|g'  -e 's|@''REPLACE_RANDOM_R''@|0|g'  -e 's|@''REPLACE_REALLOC''@|0|g'  -e 's|@''REPLACE_REALPATH''@|0|g'  -e 's|@''REPLACE_SETENV''@|0|g'  -e 's|@''REPLACE_SETSTATE''@|0|g'  -e 's|@''REPLACE_STRTOD''@|0|g'  -e 's|@''REPLACE_STRTOLD''@|0|g'  -e 's|@''REPLACE_UNSETENV''@|0|g'  -e 's|@''REPLACE_WCTOMB''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _Noreturn/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/_Noreturn.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h';  } > stdlib.h-t &&  mv stdlib.h-t stdlib.h
+  --- stdio.h ---
+   -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/stdio.in.h |  sed -e 's|@''HAVE_DECL_FPURGE''@|1|g'  -e 's|@''HAVE_DECL_FSEEKO''@|1|g'  -e 's|@''HAVE_DECL_FTELLO''@|1|g'  -e 's|@''HAVE_DECL_GETDELIM''@|1|g'  -e 's|@''HAVE_DECL_GETLINE''@|1|g'  -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g'  -e 's|@''HAVE_DECL_SNPRINTF''@|1|g'  -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g'  -e 's|@''HAVE_DPRINTF''@|1|g'  -e 's|@''HAVE_FSEEKO''@|1|g'  -e 's|@''HAVE_FTELLO''@|1|g'  -e 's|@''HAVE_PCLOSE''@|1|g'  -e 's|@''HAVE_POPEN''@|1|g'  -e 's|@''HAVE_RENAMEAT''@|1|g'  -e 's|@''HAVE_VASPRINTF''@|1|g'  -e 's|@''HAVE_VDPRINTF''@|1|g'  -e 's|@''REPLACE_DPRINTF''@|0|g'  -e 's|@''REPLACE_FCLOSE''@|0|g'  -e 's|@''REPLACE_FDOPEN''@|0|g'  -e 's|@''REPLACE_FFLUSH''@|0|g'  -e 's|@''REPLACE_FOPEN''@|0|g'  -e 's|@''REPLACE_FPRINTF''@|0|g'  -e 's|@''REPLACE_FPURGE''@|0|g'  -e 's|@''REPLACE_FREOPEN''@|0|g'  -e 's|@''REPLACE_FSEEK''@|0|g'  -e 's|@''REPLACE_FSEEKO''@|0|g'  -e 's|@''REPLACE_FTELL''@|0|g'  -e 's|@''REPLACE_FTELLO''@|0|g'  -e 's|@''REPLACE_GETDELIM''@|0|g'  -e 's|@''REPLACE_GETLINE''@|0|g'  -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g'  -e 's|@''REPLACE_PERROR''@|0|g'  -e 's|@''REPLACE_POPEN''@|0|g'  -e 's|@''REPLACE_PRINTF''@|0|g'  -e 's|@''REPLACE_REMOVE''@|0|g'  -e 's|@''REPLACE_RENAME''@|0|g'  -e 's|@''REPLACE_RENAMEAT''@|0|g'  -e 's|@''REPLACE_SNPRINTF''@|0|g'  -e 's|@''REPLACE_SPRINTF''@|0|g'  -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g'  -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g'  -e 's|@''REPLACE_TMPFILE''@|0|g'  -e 's|@''REPLACE_VASPRINTF''@|0|g'  -e 's|@''REPLACE_VDPRINTF''@|0|g'  -e 's|@''REPLACE_VFPRINTF''@|0|g'  -e 's|@''REPLACE_VPRINTF''@|0|g'  -e 's|@''REPLACE_VSNPRINTF''@|0|g'  -e 's|@''REPLACE_VSPRINTF''@|0|g'  -e 's|@''ASM_SYMBOL_PREFIX''@|""|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h';  } > stdio.h-t &&  mv stdio.h-t stdio.h
+  --- sys/stat.h ---
+  --- string.h ---
+  rm -f string.h-t string.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STRING_H''@|<string.h>|g'  -e 's/@''GNULIB_EXPLICIT_BZERO''@/0/g'  -e 's/@''GNULIB_FFSL''@/0/g'  -e 's/@''GNULIB_FFSLL''@/0/g'  -e 's/@''GNULIB_MBSLEN''@/1/g'  -e 's/@''GNULIB_MBSNLEN''@/0/g'  -e 's/@''GNULIB_MBSCHR''@/0/g'  -e 's/@''GNULIB_MBSRCHR''@/0/g'  -e 's/@''GNULIB_MBSSTR''@/1/g'  -e 's/@''GNULIB_MBSCASECMP''@/0/g'  -e 's/@''GNULIB_MBSNCASECMP''@/0/g'  -e 's/@''GNULIB_MBSPCASECMP''@/0/g'  -e 's/@''GNULIB_MBSCASESTR''@/0/g'  -e 's/@''GNULIB_MBSCSPN''@/0/g'  -e 's/@''GNULIB_MBSPBRK''@/0/g'  -e 's/@''GNULIB_MBSSPN''@/0/g'  -e 's/@''GNULIB_MBSSEP''@/0/g'  -e 's/@''GNULIB_MBSTOK_R''@/0/g'  -e 's/@''GNULIB_MEMCHR''@/1/g'  -e 's/@''GNULIB_MEMMEM''@/0/g'  -e 's/@''GNULIB_MEMPCPY''@/0/g'  -e 's/@''GNULIB_MEMRCHR''@/0/g'  -e 's/@''GNULIB_RAWMEMCHR''@/0/g'  -e 's/@''GNULIB_STPCPY''@/0/g'  -e 's/@''GNULIB_STPNCPY''@/0/g'  -e 's/@''GNULIB_STRCHRNUL''@/0/g'  -e 's/@''GNULIB_STRDUP''@/0/g'  -e 's/@''GNULIB_STRNCAT''@/0/g'  -e 's/@''GNULIB_STRNDUP''@/0/g'  -e 's/@''GNULIB_STRNLEN''@/1/g'  -e 's/@''GNULIB_STRPBRK''@/0/g'  -e 's/@''GNULIB_STRSEP''@/0/g'  -e 's/@''GNULIB_STRSTR''@/0/g'  -e 's/@''GNULIB_STRCASESTR''@/0/g'  -e 's/@''GNULIB_STRTOK_R''@/0/g'  -e 's/@''GNULIB_STRERROR''@/1/g'  -e 's/@''GNULIB_STRERROR_R''@/0/g'  -e 's/@''GNULIB_STRSIGNAL''@/0/g'  -e 's/@''GNULIB_STRVERSCMP''@/0/g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/string.in.h |  sed -e 's|@''HAVE_EXPLICIT_BZERO''@|1|g'  -e 's|@''HAVE_FFSL''@|1|g'  -e 's|@''HAVE_FFSLL''@|1|g'  -e 's|@''HAVE_MBSLEN''@|0|g'  -e 's|@''HAVE_DECL_MEMMEM''@|1|g'  -e 's|@''HAVE_MEMPCPY''@|1|g'  -e 's|@''HAVE_DECL_MEMRCHR''@|1|g'  -e 's|@''HAVE_RAWMEMCHR''@|1|g'  -e 's|@''HAVE_STPCPY''@|1|g'  -e 's|@''HAVE_STPNCPY''@|1|g'  -e 's|@''HAVE_STRCHRNUL''@|1|g'  -e 's|@''HAVE_DECL_STRDUP''@|1|g'  -e 's|@''HAVE_DECL_STRNDUP''@|1|g'  -e 's|@''HAVE_DECL_STRNLEN''@|1|g'  -e 's|@''HAVE_STRPBRK''@|1|g'  -e 's|@''HAVE_STRSEP''@|1|g'  -e 's|@''HAVE_STRCASESTR''@|1|g'  -e 's|@''HAVE_DECL_STRTOK_R''@|1|g'  -e 's|@''HAVE_DECL_STRERROR_R''@|1|g'  -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g'  -e 's|@''HAVE_STRVERSCMP''@|1|g'  -e 's|@''REPLACE_MEMCHR''@|0|g'  -e 's|@''REPLACE_MEMMEM''@|0|g'  -e 's|@''REPLACE_STPNCPY''@|0|g'  -e 's|@''REPLACE_STRCHRNUL''@|0|g'  -e 's|@''REPLACE_STRDUP''@|0|g'  -e 's|@''REPLACE_STRNCAT''@|0|g'  -e 's|@''REPLACE_STRNDUP''@|0|g'  -e 's|@''REPLACE_STRNLEN''@|0|g'  -e 's|@''REPLACE_STRSTR''@|0|g'  -e 's|@''REPLACE_STRCASESTR''@|0|g'  -e 's|@''REPLACE_STRTOK_R''@|0|g'  -e 's|@''REPLACE_STRERROR''@|1|g'  -e 's|@''REPLACE_STRERROR_R''@|0|g'  -e 's|@''REPLACE_STRSIGNAL''@|0|g'  -e 's|@''UNDEFINE_STRTOK_R''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h';  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/string.in.h;  } > string.h-t &&  mv string.h-t string.h
+  --- sys/types.h ---
+  --- time.h ---
+  --- unistd.h ---
+  --- wchar.h ---
+  --- sys/stat.h ---
+  /tmp/.tmpEKVFcY/gettext/gettext-runtime/../build-aux/install-sh -c -d sys
+  --- sys/types.h ---
+  /tmp/.tmpEKVFcY/gettext/gettext-runtime/../build-aux/install-sh -c -d sys
+  --- time.h ---
+  rm -f time.h-t time.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_TIME_H''@|<time.h>|g'  -e 's/@''GNULIB_CTIME''@/0/g'  -e 's/@''GNULIB_LOCALTIME''@/0/g'  -e 's/@''GNULIB_MKTIME''@/0/g'  -e 's/@''GNULIB_NANOSLEEP''@/0/g'  -e 's/@''GNULIB_STRFTIME''@/0/g'  -e 's/@''GNULIB_STRPTIME''@/0/g'  -e 's/@''GNULIB_TIMEGM''@/0/g'  -e 's/@''GNULIB_TIME_R''@/0/g'  -e 's/@''GNULIB_TIME_RZ''@/0/g'  -e 's/@''GNULIB_TZSET''@/0/g'  -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g'  -e 's|@''HAVE_NANOSLEEP''@|1|g'  -e 's|@''HAVE_STRPTIME''@|1|g'  -e 's|@''HAVE_TIMEGM''@|1|g'  -e 's|@''HAVE_TIMEZONE_T''@|0|g'  -e 's|@''HAVE_TZSET''@|1|g'  -e 's|@''REPLACE_CTIME''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_GMTIME''@|0|g'  -e 's|@''REPLACE_LOCALTIME''@|0|g'  -e 's|@''REPLACE_LOCALTIME_R''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_MKTIME''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_NANOSLEEP''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_STRFTIME''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_TIMEGM''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_TZSET''@|GNULIB_PORTCHECK|g'  -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g'  -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g'  -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g'  -e 's|@''UNISTD_H_DEFINES_STRUCT_TIMESPEC''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/time.in.h;  } > time.h-t &&  mv time.h-t time.h
+  --- wchar.h ---
+  rm -f wchar.h-t wchar.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''HAVE_FEATURES_H''@|0|g'  -e 's|@''NEXT_WCHAR_H''@|<wchar.h>|g'  -e 's|@''HAVE_WCHAR_H''@|1|g'  -e 's/@''HAVE_CRTDEFS_H''@/0/g'  -e 's/@''GNULIB_OVERRIDES_WINT_T''@/0/g'  -e 's/@''GNULIB_BTOWC''@/0/g'  -e 's/@''GNULIB_WCTOB''@/0/g'  -e 's/@''GNULIB_MBSINIT''@/1/g'  -e 's/@''GNULIB_MBRTOWC''@/1/g'  -e 's/@''GNULIB_MBRLEN''@/0/g'  -e 's/@''GNULIB_MBSRTOWCS''@/0/g'  -e 's/@''GNULIB_MBSNRTOWCS''@/0/g'  -e 's/@''GNULIB_WCRTOMB''@/0/g'  -e 's/@''GNULIB_WCSRTOMBS''@/0/g'  -e 's/@''GNULIB_WCSNRTOMBS''@/0/g'  -e 's/@''GNULIB_WCWIDTH''@/1/g'  -e 's/@''GNULIB_WMEMCHR''@/0/g'  -e 's/@''GNULIB_WMEMCMP''@/0/g'  -e 's/@''GNULIB_WMEMCPY''@/0/g'  -e 's/@''GNULIB_WMEMMOVE''@/0/g'  -e 's/@''GNULIB_WMEMPCPY''@/0/g'  -e 's/@''GNULIB_WMEMSET''@/0/g'  -e 's/@''GNULIB_WCSLEN''@/0/g'  -e 's/@''GNULIB_WCSNLEN''@/0/g'  -e 's/@''GNULIB_WCSCPY''@/0/g'  -e 's/@''GNULIB_WCPCPY''@/0/g'  -e 's/@''GNULIB_WCSNCPY''@/0/g'  -e 's/@''GNULIB_WCPNCPY''@/0/g'  -e 's/@''GNULIB_WCSCAT''@/0/g'  -e 's/@''GNULIB_WCSNCAT''@/0/g'  -e 's/@''GNULIB_WCSCMP''@/0/g'  -e 's/@''GNULIB_WCSNCMP''@/0/g'  -e 's/@''GNULIB_WCSCASECMP''@/0/g'  -e 's/@''GNULIB_WCSNCASECMP''@/0/g'  -e 's/@''GNULIB_WCSCOLL''@/0/g'  -e 's/@''GNULIB_WCSXFRM''@/0/g'  -e 's/@''GNULIB_WCSDUP''@/0/g'  -e 's/@''GNULIB_WCSCHR''@/0/g'  -e 's/@''GNULIB_WCSRCHR''@/0/g'  -e 's/@''GNULIB_WCSCSPN''@/0/g'  -e 's/@''GNULIB_WCSSPN''@/0/g'  -e 's/@''GNULIB_WCSPBRK''@/0/g'  -e 's/@''GNULIB_WCSSTR''@/0/g'  -e 's/@''GNULIB_WCSTOK''@/0/g'  -e 's/@''GNULIB_WCSWIDTH''@/0/g'  -e 's/@''GNULIB_WCSFTIME''@/0/g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/wchar.in.h |  sed -e 's|@''HAVE_WINT_T''@|1|g'  -e 's|@''HAVE_BTOWC''@|1|g'  -e 's|@''HAVE_MBSINIT''@|1|g'  -e 's|@''HAVE_MBRTOWC''@|1|g'  -e 's|@''HAVE_MBRLEN''@|1|g'  -e 's|@''HAVE_MBSRTOWCS''@|1|g'  -e 's|@''HAVE_MBSNRTOWCS''@|1|g'  -e 's|@''HAVE_WCRTOMB''@|1|g'  -e 's|@''HAVE_WCSRTOMBS''@|1|g'  -e 's|@''HAVE_WCSNRTOMBS''@|1|g'  -e 's|@''HAVE_WMEMCHR''@|1|g'  -e 's|@''HAVE_WMEMCMP''@|1|g'  -e 's|@''HAVE_WMEMCPY''@|1|g'  -e 's|@''HAVE_WMEMMOVE''@|1|g'  -e 's|@''HAVE_WMEMPCPY''@|1|g'  -e 's|@''HAVE_WMEMSET''@|1|g'  -e 's|@''HAVE_WCSLEN''@|1|g'  -e 's|@''HAVE_WCSNLEN''@|1|g'  -e 's|@''HAVE_WCSCPY''@|1|g'  -e 's|@''HAVE_WCPCPY''@|1|g'  -e 's|@''HAVE_WCSNCPY''@|1|g'  -e 's|@''HAVE_WCPNCPY''@|1|g'  -e 's|@''HAVE_WCSCAT''@|1|g'  -e 's|@''HAVE_WCSNCAT''@|1|g'  -e 's|@''HAVE_WCSCMP''@|1|g'  -e 's|@''HAVE_WCSNCMP''@|1|g'  -e 's|@''HAVE_WCSCASECMP''@|1|g'  -e 's|@''HAVE_WCSNCASECMP''@|1|g'  -e 's|@''HAVE_WCSCOLL''@|1|g'  -e 's|@''HAVE_WCSXFRM''@|1|g'  -e 's|@''HAVE_WCSDUP''@|1|g'  -e 's|@''HAVE_WCSCHR''@|1|g'  -e 's|@''HAVE_WCSRCHR''@|1|g'  -e 's|@''HAVE_WCSCSPN''@|1|g'  -e 's|@''HAVE_WCSSPN''@|1|g'  -e 's|@''HAVE_WCSPBRK''@|1|g'  -e 's|@''HAVE_WCSSTR''@|1|g'  -e 's|@''HAVE_WCSTOK''@|1|g'  -e 's|@''HAVE_WCSWIDTH''@|1|g'  -e 's|@''HAVE_WCSFTIME''@|1|g'  -e 's|@''HAVE_DECL_WCTOB''@|1|g'  -e 's|@''HAVE_DECL_WCWIDTH''@|1|g'  |  sed -e 's|@''REPLACE_MBSTATE_T''@|0|g'  -e 's|@''REPLACE_BTOWC''@|0|g'  -e 's|@''REPLACE_WCTOB''@|0|g'  -e 's|@''REPLACE_MBSINIT''@|0|g'  -e 's|@''REPLACE_MBRTOWC''@|0|g'  -e 's|@''REPLACE_MBRLEN''@|0|g'  -e 's|@''REPLACE_MBSRTOWCS''@|0|g'  -e 's|@''REPLACE_MBSNRTOWCS''@|0|g'  -e 's|@''REPLACE_WCRTOMB''@|0|g'  -e 's|@''REPLACE_WCSRTOMBS''@|0|g'  -e 's|@''REPLACE_WCSNRTOMBS''@|0|g'  -e 's|@''REPLACE_WCWIDTH''@|1|g'  -e 's|@''REPLACE_WCSWIDTH''@|0|g'  -e 's|@''REPLACE_WCSFTIME''@|0|g'  -e 's|@''REPLACE_WCSTOK''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h';  } > wchar.h-t &&  mv wchar.h-t wchar.h
+  --- unistd.h ---
+  rm -f unistd.h-t unistd.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''HAVE_UNISTD_H''@|1|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g'  -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g'  -e 's/@''GNULIB_ACCESS''@/0/g'  -e 's/@''GNULIB_CHDIR''@/0/g'  -e 's/@''GNULIB_CHOWN''@/0/g'  -e 's/@''GNULIB_CLOSE''@/1/g'  -e 's/@''GNULIB_COPY_FILE_RANGE''@/0/g'  -e 's/@''GNULIB_DUP''@/0/g'  -e 's/@''GNULIB_DUP2''@/1/g'  -e 's/@''GNULIB_DUP3''@/0/g'  -e 's/@''GNULIB_ENVIRON''@/1/g'  -e 's/@''GNULIB_EUIDACCESS''@/0/g'  -e 's/@''GNULIB_FACCESSAT''@/0/g'  -e 's/@''GNULIB_FCHDIR''@/0/g'  -e 's/@''GNULIB_FCHOWNAT''@/0/g'  -e 's/@''GNULIB_FDATASYNC''@/0/g'  -e 's/@''GNULIB_FSYNC''@/0/g'  -e 's/@''GNULIB_FTRUNCATE''@/0/g'  -e 's/@''GNULIB_GETCWD''@/0/g'  -e 's/@''GNULIB_GETDOMAINNAME''@/0/g'  -e 's/@''GNULIB_GETDTABLESIZE''@/1/g'  -e 's/@''GNULIB_GETENTROPY''@/0/g'  -e 's/@''GNULIB_GETGROUPS''@/0/g'  -e 's/@''GNULIB_GETHOSTNAME''@/0/g'  -e 's/@''GNULIB_GETLOGIN''@/0/g'  -e 's/@''GNULIB_GETLOGIN_R''@/0/g'  -e 's/@''GNULIB_GETOPT_POSIX''@/1/g'  -e 's/@''GNULIB_GETPAGESIZE''@/0/g'  -e 's/@''GNULIB_GETPASS''@/0/g'  -e 's/@''GNULIB_GETUSERSHELL''@/0/g'  -e 's/@''GNULIB_GROUP_MEMBER''@/0/g'  -e 's/@''GNULIB_ISATTY''@/0/g'  -e 's/@''GNULIB_LCHOWN''@/0/g'  -e 's/@''GNULIB_LINK''@/0/g'  -e 's/@''GNULIB_LINKAT''@/0/g'  -e 's/@''GNULIB_LSEEK''@/0/g'  -e 's/@''GNULIB_PIPE''@/0/g'  -e 's/@''GNULIB_PIPE2''@/0/g'  -e 's/@''GNULIB_PREAD''@/0/g'  -e 's/@''GNULIB_PWRITE''@/0/g'  -e 's/@''GNULIB_READ''@/0/g'  -e 's/@''GNULIB_READLINK''@/1/g'  -e 's/@''GNULIB_READLINKAT''@/0/g'  -e 's/@''GNULIB_RMDIR''@/0/g'  -e 's/@''GNULIB_SETHOSTNAME''@/0/g'  -e 's/@''GNULIB_SLEEP''@/0/g'  -e 's/@''GNULIB_SYMLINK''@/0/g'  -e 's/@''GNULIB_SYMLINKAT''@/0/g'  -e 's/@''GNULIB_TRUNCATE''@/0/g'  -e 's/@''GNULIB_TTYNAME_R''@/0/g'  -e 's/@''GNULIB_UNISTD_H_GETOPT''@/01/g'  -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g'  -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/1/g'  -e 's/@''GNULIB_UNLINK''@/0/g'  -e 's/@''GNULIB_UNLINKAT''@/0/g'  -e 's/@''GNULIB_USLEEP''@/0/g'  -e 's/@''GNULIB_WRITE''@/0/g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/unistd.in.h |  sed -e 's|@''HAVE_CHOWN''@|1|g'  -e 's|@''HAVE_COPY_FILE_RANGE''@|1|g'  -e 's|@''HAVE_DUP3''@|1|g'  -e 's|@''HAVE_EUIDACCESS''@|1|g'  -e 's|@''HAVE_FACCESSAT''@|1|g'  -e 's|@''HAVE_FCHDIR''@|1|g'  -e 's|@''HAVE_FCHOWNAT''@|1|g'  -e 's|@''HAVE_FDATASYNC''@|1|g'  -e 's|@''HAVE_FSYNC''@|1|g'  -e 's|@''HAVE_FTRUNCATE''@|1|g'  -e 's|@''HAVE_GETDTABLESIZE''@|1|g'  -e 's|@''HAVE_GETENTROPY''@|1|g'  -e 's|@''HAVE_GETGROUPS''@|1|g'  -e 's|@''HAVE_GETHOSTNAME''@|1|g'  -e 's|@''HAVE_GETPAGESIZE''@|1|g'  -e 's|@''HAVE_GETPASS''@|1|g'  -e 's|@''HAVE_GROUP_MEMBER''@|1|g'  -e 's|@''HAVE_LCHOWN''@|1|g'  -e 's|@''HAVE_LINK''@|1|g'  -e 's|@''HAVE_LINKAT''@|1|g'  -e 's|@''HAVE_PIPE''@|1|g'  -e 's|@''HAVE_PIPE2''@|1|g'  -e 's|@''HAVE_PREAD''@|1|g'  -e 's|@''HAVE_PWRITE''@|1|g'  -e 's|@''HAVE_READLINK''@|1|g'  -e 's|@''HAVE_READLINKAT''@|1|g'  -e 's|@''HAVE_SETHOSTNAME''@|1|g'  -e 's|@''HAVE_SLEEP''@|1|g'  -e 's|@''HAVE_SYMLINK''@|1|g'  -e 's|@''HAVE_SYMLINKAT''@|1|g'  -e 's|@''HAVE_UNLINKAT''@|1|g'  -e 's|@''HAVE_USLEEP''@|1|g'  -e 's|@''HAVE_DECL_ENVIRON''@|0|g'  -e 's|@''HAVE_DECL_FCHDIR''@|1|g'  -e 's|@''HAVE_DECL_FDATASYNC''@|1|g'  -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g'  -e 's|@''HAVE_DECL_GETLOGIN''@|1|g'  -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g'  -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g'  -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g'  -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g'  -e 's|@''HAVE_DECL_TRUNCATE''@|1|g'  -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g'  -e 's|@''HAVE_OS_H''@|0|g'  -e 's|@''HAVE_SYS_PARAM_H''@|0|g'  |  sed -e 's|@''REPLACE_ACCESS''@|0|g'  -e 's|@''REPLACE_CHOWN''@|0|g'  -e 's|@''REPLACE_CLOSE''@|0|g'  -e 's|@''REPLACE_DUP''@|0|g'  -e 's|@''REPLACE_DUP2''@|0|g'  -e 's|@''REPLACE_FACCESSAT''@|0|g'  -e 's|@''REPLACE_FCHOWNAT''@|0|g'  -e 's|@''REPLACE_FTRUNCATE''@|0|g'  -e 's|@''REPLACE_GETCWD''@|0|g'  -e 's|@''REPLACE_GETDOMAINNAME''@|0|g'  -e 's|@''REPLACE_GETDTABLESIZE''@|0|g'  -e 's|@''REPLACE_GETLOGIN_R''@|0|g'  -e 's|@''REPLACE_GETGROUPS''@|0|g'  -e 's|@''REPLACE_GETPAGESIZE''@|0|g'  -e 's|@''REPLACE_GETPASS''@|0|g'  -e 's|@''REPLACE_ISATTY''@|0|g'  -e 's|@''REPLACE_LCHOWN''@|0|g'  -e 's|@''REPLACE_LINK''@|0|g'  -e 's|@''REPLACE_LINKAT''@|0|g'  -e 's|@''REPLACE_LSEEK''@|0|g'  -e 's|@''REPLACE_PREAD''@|0|g'  -e 's|@''REPLACE_PWRITE''@|0|g'  -e 's|@''REPLACE_READ''@|0|g'  -e 's|@''REPLACE_READLINK''@|0|g'  -e 's|@''REPLACE_READLINKAT''@|0|g'  -e 's|@''REPLACE_RMDIR''@|0|g'  -e 's|@''REPLACE_SLEEP''@|0|g'  -e 's|@''REPLACE_SYMLINK''@|0|g'  -e 's|@''REPLACE_SYMLINKAT''@|0|g'  -e 's|@''REPLACE_TRUNCATE''@|0|g'  -e 's|@''REPLACE_TTYNAME_R''@|0|g'  -e 's|@''REPLACE_UNLINK''@|0|g'  -e 's|@''REPLACE_UNLINKAT''@|0|g'  -e 's|@''REPLACE_USLEEP''@|0|g'  -e 's|@''REPLACE_WRITE''@|0|g'  -e 's|@''UNISTD_H_HAVE_SYS_RANDOM_H''@|0|g'  -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g'  -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h';  } > unistd.h-t &&  mv unistd.h-t unistd.h
+  --- wctype.h ---
+  rm -f wctype.h-t wctype.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's/@''HAVE_WCTYPE_H''@/1/g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_WCTYPE_H''@|<wctype.h>|g'  -e 's/@''HAVE_CRTDEFS_H''@/0/g'  -e 's/@''GNULIB_OVERRIDES_WINT_T''@/0/g'  -e 's/@''GNULIB_ISWBLANK''@/1/g'  -e 's/@''GNULIB_ISWDIGIT''@/1/g'  -e 's/@''GNULIB_ISWXDIGIT''@/1/g'  -e 's/@''GNULIB_WCTYPE''@/0/g'  -e 's/@''GNULIB_ISWCTYPE''@/0/g'  -e 's/@''GNULIB_WCTRANS''@/0/g'  -e 's/@''GNULIB_TOWCTRANS''@/0/g'  -e 's/@''HAVE_ISWBLANK''@/1/g'  -e 's/@''HAVE_ISWCNTRL''@/1/g'  -e 's/@''HAVE_WCTYPE_T''@/1/g'  -e 's/@''HAVE_WCTRANS_T''@/1/g'  -e 's/@''HAVE_WINT_T''@/1/g'  -e 's/@''REPLACE_ISWBLANK''@/0/g'  -e 's/@''REPLACE_ISWDIGIT''@/1/g'  -e 's/@''REPLACE_ISWXDIGIT''@/1/g'  -e 's/@''REPLACE_ISWCNTRL''@/0/g'  -e 's/@''REPLACE_TOWLOWER''@/0/g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/wctype.in.h;  } > wctype.h-t &&  mv wctype.h-t wctype.h
+  --- sys/stat.h ---
+  rm -f sys/stat.h-t sys/stat.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SYS_STAT_H''@|<sys/stat.h>|g'  -e 's|@''WINDOWS_64_BIT_ST_SIZE''@|0|g'  -e 's|@''WINDOWS_STAT_TIMESPEC''@|0|g'  -e 's/@''GNULIB_FCHMODAT''@/0/g'  -e 's/@''GNULIB_FSTAT''@/1/g'  -e 's/@''GNULIB_FSTATAT''@/0/g'  -e 's/@''GNULIB_FUTIMENS''@/0/g'  -e 's/@''GNULIB_GETUMASK''@/0/g'  -e 's/@''GNULIB_LCHMOD''@/0/g'  -e 's/@''GNULIB_LSTAT''@/1/g'  -e 's/@''GNULIB_MKDIRAT''@/0/g'  -e 's/@''GNULIB_MKFIFO''@/0/g'  -e 's/@''GNULIB_MKFIFOAT''@/0/g'  -e 's/@''GNULIB_MKNOD''@/0/g'  -e 's/@''GNULIB_MKNODAT''@/0/g'  -e 's/@''GNULIB_STAT''@/1/g'  -e 's/@''GNULIB_UTIMENSAT''@/0/g'  -e 's/@''GNULIB_OVERRIDES_STRUCT_STAT''@/0/g'  -e 's|@''HAVE_FCHMODAT''@|1|g'  -e 's|@''HAVE_FSTATAT''@|1|g'  -e 's|@''HAVE_FUTIMENS''@|1|g'  -e 's|@''HAVE_GETUMASK''@|1|g'  -e 's|@''HAVE_LCHMOD''@|1|g'  -e 's|@''HAVE_LSTAT''@|1|g'  -e 's|@''HAVE_MKDIRAT''@|1|g'  -e 's|@''HAVE_MKFIFO''@|1|g'  -e 's|@''HAVE_MKFIFOAT''@|1|g'  -e 's|@''HAVE_MKNOD''@|1|g'  -e 's|@''HAVE_MKNODAT''@|1|g'  -e 's|@''HAVE_UTIMENSAT''@|1|g'  -e 's|@''REPLACE_FCHMODAT''@|0|g'  -e 's|@''REPLACE_FSTAT''@|0|g'  -e 's|@''REPLACE_FSTATAT''@|0|g'  -e 's|@''REPLACE_FUTIMENS''@|0|g'  -e 's|@''REPLACE_LSTAT''@|0|g'  -e 's|@''REPLACE_MKDIR''@|0|g'  -e 's|@''REPLACE_MKFIFO''@|0|g'  -e 's|@''REPLACE_MKNOD''@|0|g'  -e 's|@''REPLACE_STAT''@|0|g'  -e 's|@''REPLACE_UTIMENSAT''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/warn-on-use.h'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/sys_stat.in.h;  } > sys/stat.h-t &&  mv sys/stat.h-t sys/stat.h
+  --- sys/types.h ---
+  rm -f sys/types.h-t sys/types.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SYS_TYPES_H''@|<sys/types.h>|g'  -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g'  -e 's|@''WINDOWS_STAT_INODES''@|0|g'  < /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/sys_types.in.h;  } > sys/types.h-t &&  mv sys/types.h-t sys/types.h
+  --- all ---
+  make  all-recursive
+  --- all-recursive ---
+  --- glthread/.dirstamp ---
+  --- unistr/.dirstamp ---
+  --- uniwidth/.dirstamp ---
+  --- allocator.o ---
+  --- areadlink.o ---
+  --- basename-lgpl.o ---
+  --- binary-io.o ---
+  --- c-ctype.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o c-ctype.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c-ctype.c
+  --- basename-lgpl.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o basename-lgpl.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/basename-lgpl.c
+  --- binary-io.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o binary-io.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/binary-io.c
+  --- allocator.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o allocator.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/allocator.c
+  --- areadlink.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o areadlink.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/areadlink.c
+  --- c-strcasecmp.o ---
+  --- c-strncasecmp.o ---
+  --- c-strcasecmp.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o c-strcasecmp.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c-strcasecmp.c
+  --- c-strncasecmp.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o c-strncasecmp.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/c-strncasecmp.c
+  --- careadlinkat.o ---
+  gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib -I..  -I../intl -I/tmp/.tmpEKVFcY/gettext/gettext-runtime/intl  -DDEPENDS_ON_LIBICONV=1 -DDEPENDS_ON_LIBINTL=1   -g -I/usr/pkg/include  -O3 -ffunction-sections -fdata-sections -fPIC -m64 -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -c -o careadlinkat.o /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/careadlinkat.c
+  --- binary-io.o ---
+  In file included from ./fcntl.h:79,
+                   from /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/binary-io.h:22,
+                   from /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/binary-io.c:20:
+  ./unistd.h:637:11: fatal error: getopt-pfx-core.h: No such file or directory
+    637 | # include <getopt-pfx-core.h>
+        |           ^~~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  *** [binary-io.o] Error code 1
+
+  make[6]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime/gnulib-lib
+  --- areadlink.o ---
+  In file included from ./fcntl.h:79,
+                   from /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/careadlinkat.h:23,
+                   from /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/areadlink.c:27:
+  ./unistd.h:637:11: fatal error: getopt-pfx-core.h: No such file or directory
+    637 | # include <getopt-pfx-core.h>
+        |           ^~~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  *** [areadlink.o] Error code 1
+
+  make[6]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime/gnulib-lib
+  --- careadlinkat.o ---
+  In file included from ./fcntl.h:79,
+                   from /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/careadlinkat.h:23,
+                   from /tmp/.tmpEKVFcY/gettext/gettext-runtime/gnulib-lib/careadlinkat.c:23:
+  ./unistd.h:637:11: fatal error: getopt-pfx-core.h: No such file or directory
+    637 | # include <getopt-pfx-core.h>
+        |           ^~~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  *** [careadlinkat.o] Error code 1
+
+  make[6]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime/gnulib-lib
+  3 errors
+
+  make[6]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime/gnulib-lib
+
+  make[5]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime/gnulib-lib
+
+  make[4]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime/gnulib-lib
+
+  make[3]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime
+
+  make[2]: stopped in /tmp/.tmpEKVFcY/build/gettext-runtime
+
+  make[1]: stopped in /tmp/.tmpEKVFcY/build
+
+  make: stopped in /tmp/.tmpEKVFcY/build
+
+  --- stderr
+  thread 'main' panicked at '
+  command did not execute successfully, got: exit status: 2
+
+  build script failed, must exit now', gettext-sys/build.rs:299:5
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+*** Error code 101
