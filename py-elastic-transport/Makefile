@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	elastic-transport-8.1.2
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=	elastic-transport-python

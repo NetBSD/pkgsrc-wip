@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (parsedmarc-8.3.0.tar.gz) = 0ded0d325f1ce6a080227b2a562ddaee07866ea61a50a4d59ea260050e9e6b3e
 SHA512 (parsedmarc-8.3.0.tar.gz) = 5ab5d5291780525fd7ba728d8321542c49feb8f172894e1ea60e39e761c99bb690786e0ae2529ba47fa96fa77d13f22a431f2682875581b0f12d3938ca5bcc1c
 Size (parsedmarc-8.3.0.tar.gz) = 3642199 bytes
+SHA1 (patch-setup.py) = 193f95cd5e1796dd2c1eceb14d64ed167db92a30
