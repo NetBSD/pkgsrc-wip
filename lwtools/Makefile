@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lwtools-4.18
+DISTNAME=	lwtools-4.20
 CATEGORIES=	devel
 MASTER_SITES=	http://www.lwtools.ca/releases/lwtools/
 
