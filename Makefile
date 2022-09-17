@@ -3452,6 +3452,7 @@ SUBDIR+=	py-autoflake
 SUBDIR+=	py-autograd
 SUBDIR+=	py-autokey
 SUBDIR+=	py-automata
+SUBDIR+=	py-autorandr
 SUBDIR+=	py-avocado-framework
 SUBDIR+=	py-awesome-slugify
 SUBDIR+=	py-awslogs

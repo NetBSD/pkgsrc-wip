@@ -1,0 +1,12 @@
+Autorandr is an automatic display configuration manager.
+It allows us to automatically select a display configuration
+based on connected devices.  This is a compatible Python rewrite
+of wertarbyte/autorandr.  The original wertarbyte/autorandr tree is
+unmaintained, with lots of open pull requests and issues. I forked it
+and merged what I thought were the most important changes. If you are
+searching for that version, see the legacy branch. Note that the Python
+version is better suited for non-standard configurations, like if you
+use --transform or --reflect. If you use auto-disper, you have to use
+the bash version, as there is no disper support in the Python version
+(yet). Both versions use a compatible configuration file format, so you
+can, to some extent, switch between them.
