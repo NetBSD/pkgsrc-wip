@@ -213,6 +213,7 @@ SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	arx-libertatis-git
+SUBDIR+=	aschord
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	asql
