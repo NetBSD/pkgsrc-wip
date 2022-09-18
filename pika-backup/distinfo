@@ -633,3 +633,4 @@ Size (zvariant_derive-3.2.1.crate) = 10935 bytes
 BLAKE2s (zxcvbn-2.2.1.crate) = 153688e6455198404c4700b542425eef0261ef562b6ba17110ccbb82aa87b791
 SHA512 (zxcvbn-2.2.1.crate) = eaa45b3b2c59307d7ec312bc6c170fe2d604c8c98896bf0ee2c2e3cf6e0642587710f81340afc8555582fada2efac1891188ee4fb7c14456f7b6f589b95be914
 Size (zxcvbn-2.2.1.crate) = 423554 bytes
+SHA1 (patch-data_meson.build) = a2d2269fa6c30e8c2731a4a639ee7f9088c80c87

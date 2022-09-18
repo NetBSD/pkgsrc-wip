@@ -1,0 +1,22 @@
+$NetBSD$
+
+Let pkgsrc deal with this itself, since meson does not provide $DESTDIR for its rules.
+
+--- data/meson.build.orig	2022-07-12 21:56:53.000000000 +0000
++++ data/meson.build
+@@ -116,15 +116,3 @@ else
+   resources_path = resources.full_path()
+ endif
+ 
+-# Post install
+-
+-meson.add_install_script(
+-    find_program('update-desktop-database').path(),
+-    usrdir / 'applications'
+-)
+-
+-meson.add_install_script(
+-    find_program('gtk4-update-icon-cache').path(),
+-    '-qtf',
+-    usrdir / 'icons' / 'hicolor'
+-)

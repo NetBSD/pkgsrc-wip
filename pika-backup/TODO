@@ -1,9 +1,9 @@
-  --- localename.o ---
-  In file included from /tmp/ted7-0/gettext/gettext-runtime/gnulib-lib/localename.c:33:
-  ./locale.h:687:11: fatal error: setlocale_null.h: No such file or directory
-    687 | # include "setlocale_null.h"
-        |           ^~~~~~~~~~~~~~~~~~
-  compilation terminated.
-  *** [localename.o] Error code 1
+Builds fine, but when I try to start it I see:
 
-  make[6]: stopped in /tmp/ted7-0/build/gettext-runtime/gnulib-lib
+thread 'main' panicked at 'Failed to create ZBus session connection.: Io(Os { code 2, Kind: NotFound, message: "No such file or directory" })', src/globals.rs:12:14
+
+I ktraced it and see that this error message after the program tries to access "/run/user/1000/bus".
+
+Reported upstream:
+
+https://gitlab.gnome.org/World/pika-backup/-/issues/269

@@ -23,6 +23,12 @@ TOOLS_PLATFORM.msgfmt=
 .endif
 TOOL_DEPENDS+=	gettext-tools>=0.19.4nb1:../../devel/gettext-tools
 
+# for gettext-sys crate
+MAKE_ENV+=	GETTEXT_DIR=${PREFIX}
+MAKE_ENV+=	GETTEXT_SYSTEM=enabled
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libadwaita}/lib
+
 USE_TOOLS+=	itstool msgfmt pkg-config
 
 .include "cargo-depends.mk"
@@ -32,6 +38,7 @@ USE_TOOLS+=	itstool msgfmt pkg-config
 .include "../../lang/rust/cargo.mk"
 BUILDLINK_API_DEPENDS.libadwaita+=	libadwaita>=1.1
 .include "../../devel/libadwaita/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
