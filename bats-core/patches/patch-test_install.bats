@@ -2,7 +2,7 @@ $NetBSD$
 
 Use $PKGMANDIR to check installation of man files.
 
---- test/install.bats.orig	2022-02-24 14:27:24.000000000 +0000
+--- test/install.bats.orig	2022-09-14 23:35:50.000000000 +0000
 +++ test/install.bats
 @@ -29,8 +29,8 @@ setup() {
    [ -x "$INSTALL_DIR/libexec/bats-core/bats-format-junit" ]
@@ -13,7 +13,7 @@ Use $PKGMANDIR to check installation of man files.
 +  [ -f "$INSTALL_DIR/$PKGMANDIR/man1/bats.1" ]
 +  [ -f "$INSTALL_DIR/$PKGMANDIR/man7/bats.7" ]
  
-   run "$INSTALL_DIR/bin/bats" -v
+   reentrant_run "$INSTALL_DIR/bin/bats" -v
    [ "$status" -eq 0 ]
 @@ -52,8 +52,8 @@ setup() {
    [ ! -x "$INSTALL_DIR/libexec/bats-core/bats-format-pretty" ]
@@ -35,7 +35,7 @@ Use $PKGMANDIR to check installation of man files.
 +  [ -f "$INSTALL_DIR/$PKGMANDIR/man1/bats.1" ]
 +  [ -f "$INSTALL_DIR/$PKGMANDIR/man7/bats.7" ]
  
-   run "$INSTALL_DIR/bin/bats" -v
+   reentrant_run "$INSTALL_DIR/bin/bats" -v
    [ "$status" -eq 0 ]
 @@ -98,8 +98,8 @@ setup() {
    [ ! -x "$INSTALL_DIR/libexec/bats-core/bats-format-pretty" ]
