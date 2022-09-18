@@ -1231,7 +1231,6 @@ SUBDIR+=	go-brotli
 SUBDIR+=	go-cache
 SUBDIR+=	go-cascadia
 SUBDIR+=	go-circbuf
-SUBDIR+=	go-client_model
 SUBDIR+=	go-clir
 SUBDIR+=	go-collectd
 SUBDIR+=	go-color
