@@ -1,0 +1,373 @@
+@comment $NetBSD$
+share/PayloadsAllTheThings/API Key Leaks/Files/MachineKeys.txt
+share/PayloadsAllTheThings/API Key Leaks/README.md
+share/PayloadsAllTheThings/AWS Amazon Bucket S3/README.md
+share/PayloadsAllTheThings/Account Takeover/README.md
+share/PayloadsAllTheThings/BOOKS.md
+share/PayloadsAllTheThings/CONTRIBUTING.md
+share/PayloadsAllTheThings/CORS Misconfiguration/README.md
+share/PayloadsAllTheThings/CRLF Injection/README.md
+share/PayloadsAllTheThings/CRLF Injection/crlfinjection.txt
+share/PayloadsAllTheThings/CSRF Injection/Images/CSRF-CheatSheet.png
+share/PayloadsAllTheThings/CSRF Injection/README.md
+share/PayloadsAllTheThings/CSV Injection/README.md
+share/PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py
+share/PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py
+share/PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py
+share/PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py
+share/PayloadsAllTheThings/CVE Exploits/Docker API RCE.py
+share/PayloadsAllTheThings/CVE Exploits/Drupalgeddon2 CVE-2018-7600.rb
+share/PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py
+share/PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py
+share/PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py
+share/PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py
+share/PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py
+share/PayloadsAllTheThings/CVE Exploits/Log4Shell.md
+share/PayloadsAllTheThings/CVE Exploits/README.md
+share/PayloadsAllTheThings/CVE Exploits/Rails CVE-2019-5420.rb
+share/PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py
+share/PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py
+share/PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py
+share/PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py
+share/PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py
+share/PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2017-10271.py
+share/PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py
+share/PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py
+share/PayloadsAllTheThings/CVE Exploits/vBulletin RCE 5.0.0 - 5.5.4.sh
+share/PayloadsAllTheThings/Command Injection/Intruder/command-execution-unix.txt
+share/PayloadsAllTheThings/Command Injection/Intruder/command_exec.txt
+share/PayloadsAllTheThings/Command Injection/README.md
+share/PayloadsAllTheThings/DNS Rebinding/README.md
+share/PayloadsAllTheThings/Dependency Confusion/README.md
+share/PayloadsAllTheThings/Directory Traversal/Intruder/deep_traversal.txt
+share/PayloadsAllTheThings/Directory Traversal/Intruder/directory_traversal.txt
+share/PayloadsAllTheThings/Directory Traversal/Intruder/dotdotpwn.txt
+share/PayloadsAllTheThings/Directory Traversal/Intruder/traversals-8-deep-exotic-encoding.txt
+share/PayloadsAllTheThings/Directory Traversal/README.md
+share/PayloadsAllTheThings/File Inclusion/Intruders/BSD-files.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/JHADDIX_LFI.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/LFI-FD-check.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/LFI-WindowsFileCheck.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/Linux-files.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/List_Of_File_To_Include.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/List_Of_File_To_Include_NullByteAdded.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/Mac-files.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/Traversal.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/Web-files.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/Windows-files.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/dot-slash-PathTraversal_and_LFI_pairing.txt
+share/PayloadsAllTheThings/File Inclusion/Intruders/simple-check.txt
+share/PayloadsAllTheThings/File Inclusion/README.md
+share/PayloadsAllTheThings/File Inclusion/phpinfolfi.py
+share/PayloadsAllTheThings/File Inclusion/uploadlfi.py
+share/PayloadsAllTheThings/GraphQL Injection/Images/htb-help.png
+share/PayloadsAllTheThings/GraphQL Injection/README.md
+share/PayloadsAllTheThings/HTTP Parameter Pollution/README.md
+share/PayloadsAllTheThings/Insecure Deserialization/Files/PHP-Serialization-RCE-Exploit.php
+share/PayloadsAllTheThings/Insecure Deserialization/Files/Ruby_universal_gadget_generate_verify.rb
+share/PayloadsAllTheThings/Insecure Deserialization/Java.md
+share/PayloadsAllTheThings/Insecure Deserialization/PHP.md
+share/PayloadsAllTheThings/Insecure Deserialization/Python.md
+share/PayloadsAllTheThings/Insecure Deserialization/README.md
+share/PayloadsAllTheThings/Insecure Deserialization/Ruby.md
+share/PayloadsAllTheThings/Insecure Direct Object References/Images/idor.png
+share/PayloadsAllTheThings/Insecure Direct Object References/README.md
+share/PayloadsAllTheThings/Insecure Management Interface/Intruder/springboot_actuator.txt
+share/PayloadsAllTheThings/Insecure Management Interface/README.md
+share/PayloadsAllTheThings/Insecure Source Code Management/README.md
+share/PayloadsAllTheThings/JSON Web Token/README.md
+share/PayloadsAllTheThings/Java RMI/README.md
+share/PayloadsAllTheThings/Kubernetes/readme.md
+share/PayloadsAllTheThings/LDAP Injection/Intruder/LDAP_FUZZ.txt
+share/PayloadsAllTheThings/LDAP Injection/Intruder/LDAP_attributes.txt
+share/PayloadsAllTheThings/LDAP Injection/README.md
+share/PayloadsAllTheThings/LICENSE
+share/PayloadsAllTheThings/LaTeX Injection/README.md
+share/PayloadsAllTheThings/Methodology and Resources/Active Directory Attack.md
+share/PayloadsAllTheThings/Methodology and Resources/Bind Shell Cheatsheet.md
+share/PayloadsAllTheThings/Methodology and Resources/Cloud - AWS Pentest.md
+share/PayloadsAllTheThings/Methodology and Resources/Cloud - Azure Pentest.md
+share/PayloadsAllTheThings/Methodology and Resources/Cobalt Strike - Cheatsheet.md
+share/PayloadsAllTheThings/Methodology and Resources/Container - Docker Pentest.md
+share/PayloadsAllTheThings/Methodology and Resources/Escape Breakout.md
+share/PayloadsAllTheThings/Methodology and Resources/Hash Cracking.md
+share/PayloadsAllTheThings/Methodology and Resources/Linux - Persistence.md
+share/PayloadsAllTheThings/Methodology and Resources/Linux - Privilege Escalation.md
+share/PayloadsAllTheThings/Methodology and Resources/MSSQL Server - Cheatsheet.md
+share/PayloadsAllTheThings/Methodology and Resources/Metasploit - Cheatsheet.md
+share/PayloadsAllTheThings/Methodology and Resources/Methodology and enumeration.md
+share/PayloadsAllTheThings/Methodology and Resources/Miscellaneous - Tricks.md
+share/PayloadsAllTheThings/Methodology and Resources/Network Discovery.md
+share/PayloadsAllTheThings/Methodology and Resources/Network Pivoting Techniques.md
+share/PayloadsAllTheThings/Methodology and Resources/Office - Attacks.md
+share/PayloadsAllTheThings/Methodology and Resources/Powershell - Cheatsheet.md
+share/PayloadsAllTheThings/Methodology and Resources/Reverse Shell Cheatsheet.md
+share/PayloadsAllTheThings/Methodology and Resources/Subdomains Enumeration.md
+share/PayloadsAllTheThings/Methodology and Resources/Windows - AMSI Bypass.md
+share/PayloadsAllTheThings/Methodology and Resources/Windows - Download and Execute.md
+share/PayloadsAllTheThings/Methodology and Resources/Windows - Mimikatz.md
+share/PayloadsAllTheThings/Methodology and Resources/Windows - Persistence.md
+share/PayloadsAllTheThings/Methodology and Resources/Windows - Privilege Escalation.md
+share/PayloadsAllTheThings/Methodology and Resources/Windows - Using credentials.md
+share/PayloadsAllTheThings/NoSQL Injection/Intruder/NoSQL.txt
+share/PayloadsAllTheThings/NoSQL Injection/README.md
+share/PayloadsAllTheThings/OAuth/README.md
+share/PayloadsAllTheThings/Open Redirect/Intruder/Open-Redirect-payloads.txt
+share/PayloadsAllTheThings/Open Redirect/Intruder/open_redirect_wordlist.txt
+share/PayloadsAllTheThings/Open Redirect/Intruder/openredirects.txt
+share/PayloadsAllTheThings/Open Redirect/README.md
+share/PayloadsAllTheThings/README.md
+share/PayloadsAllTheThings/Race Condition/README.md
+share/PayloadsAllTheThings/Request Smuggling/README.md
+share/PayloadsAllTheThings/SAML Injection/Images/SAML-xml-flaw.png
+share/PayloadsAllTheThings/SAML Injection/Images/XSLT1.jpg
+share/PayloadsAllTheThings/SAML Injection/README.md
+share/PayloadsAllTheThings/SQL Injection/BigQuery Injection.md
+share/PayloadsAllTheThings/SQL Injection/Cassandra Injection.md
+share/PayloadsAllTheThings/SQL Injection/DB2 Injection.md
+share/PayloadsAllTheThings/SQL Injection/HQL Injection.md
+share/PayloadsAllTheThings/SQL Injection/Images/PostgreSQL_cmd_exec.png
+share/PayloadsAllTheThings/SQL Injection/Images/Unicode_SQL_injection.png
+share/PayloadsAllTheThings/SQL Injection/Images/wildcard_underscore.jpg
+share/PayloadsAllTheThings/SQL Injection/Intruder/Auth_Bypass.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/Auth_Bypass2.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_MSSQL-WHERE_Time.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_MSSQL.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_MSSQL_Enumeration.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_MYSQL.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_MySQL-WHERE_Time.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_MySQL_ReadLocalFiles.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_Oracle.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/FUZZDB_Postgres_Enumeration.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/Generic_ErrorBased.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/Generic_Fuzz.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/Generic_TimeBased.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/Generic_UnionSelect.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/SQL-Injection
+share/PayloadsAllTheThings/SQL Injection/Intruder/SQLi_Polyglots.txt
+share/PayloadsAllTheThings/SQL Injection/Intruder/payloads-sql-blind-MSSQL-INSERT
+share/PayloadsAllTheThings/SQL Injection/Intruder/payloads-sql-blind-MSSQL-WHERE
+share/PayloadsAllTheThings/SQL Injection/Intruder/payloads-sql-blind-MySQL-INSERT
+share/PayloadsAllTheThings/SQL Injection/Intruder/payloads-sql-blind-MySQL-ORDER_BY
+share/PayloadsAllTheThings/SQL Injection/Intruder/payloads-sql-blind-MySQL-WHERE
+share/PayloadsAllTheThings/SQL Injection/MSSQL Injection.md
+share/PayloadsAllTheThings/SQL Injection/MySQL Injection.md
+share/PayloadsAllTheThings/SQL Injection/OracleSQL Injection.md
+share/PayloadsAllTheThings/SQL Injection/PostgreSQL Injection.md
+share/PayloadsAllTheThings/SQL Injection/README.md
+share/PayloadsAllTheThings/SQL Injection/SQLite Injection.md
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/SSRF_expect.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/SSRF_url.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_ffmpeg.avi
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_iframe.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_svg_css_import.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_svg_css_link.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_svg_css_xmlstylesheet.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_svg_image.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Files/ssrf_svg_use.svg
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/Parser & Curl < 7.54.png
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/Parser and Curl less than 7.54.png
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/SSRF_PDF.png
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/SSRF_Parser.png
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/SSRF_stream.png
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/WeakParser.jpg
+share/PayloadsAllTheThings/Server Side Request Forgery/Images/aws-cli.jpg
+share/PayloadsAllTheThings/Server Side Request Forgery/README.md
+share/PayloadsAllTheThings/Server Side Template Injection/Images/serverside.png
+share/PayloadsAllTheThings/Server Side Template Injection/Intruder/ssti.fuzz
+share/PayloadsAllTheThings/Server Side Template Injection/README.md
+share/PayloadsAllTheThings/TWITTER.md
+share/PayloadsAllTheThings/Tabnabbing/README.md
+share/PayloadsAllTheThings/Type Juggling/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_avi_bypass.py
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_xbin_avi.py
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/read_passwd.avi
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/read_passwd_bypass.mp4
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/read_shadow.avi
+share/PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/read_shadow_bypass.mp4
+share/PayloadsAllTheThings/Upload Insecure Files/CVE ZIP Symbolic Link/etc_passwd.zip
+share/PayloadsAllTheThings/Upload Insecure Files/CVE ZIP Symbolic Link/generate.sh
+share/PayloadsAllTheThings/Upload Insecure Files/CVE ZIP Symbolic Link/passwd
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Apache .htaccess/.htaccess
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Apache .htaccess/.htaccess_phpinfo
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Apache .htaccess/.htaccess_shell
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Apache .htaccess/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Busybox httpd.conf/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Busybox httpd.conf/httpd.conf
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Busybox httpd.conf/shellymcshellface.sh
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration IIS web.config/web.config
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-admin-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-conf-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-config-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-controllers-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-login-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-models-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-modules-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-scripts-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-settings-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-tests-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-urls-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-utils-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-view-__init__.py.zip
+share/PayloadsAllTheThings/Upload Insecure Files/EICAR/eicar.txt
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.asa
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.ashx
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.asmx
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.asp
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.aspx
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.cer
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.soap
+share/PayloadsAllTheThings/Upload Insecure Files/Extension ASP/shell.xamlx
+share/PayloadsAllTheThings/Upload Insecure Files/Extension Flash/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/Extension Flash/xss.swf
+share/PayloadsAllTheThings/Upload Insecure Files/Extension Flash/xssproject.swf
+share/PayloadsAllTheThings/Upload Insecure Files/Extension HTML/xss.html
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.js
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/result.pdf
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/extensions.lst
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.jpg.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.phar
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.php3
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.php4
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.php5
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.php7
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.php8
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.phpt
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.pht
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/phpinfo.phtml
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.gif?shell.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.jpeg.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.jpg.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.jpg?shell.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.pgif
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.phar
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.php3
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.php4
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.php5
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.php7
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.phpt
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.pht
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.phtml
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.png.php
+share/PayloadsAllTheThings/Upload Insecure Files/Extension PHP/shell.png?shell.php
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/convert_local_etc_passwd.svg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/convert_local_etc_passwd_html.svg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/ghostscript_rce_curl.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagemagik_ghostscript_cmd_exec.pdf
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagemagik_ghostscript_reverse_shell.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_imageover_file_exfiltration_pangu_wrapper.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_imageover_file_exfiltration_text_wrapper.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_imageover_reverse_shell_devtcp.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_imageover_reverse_shell_netcat_fifo.png
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_imageover_wget.gif
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_url_bind_shell_nc.mvg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_url_curl.png
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_url_portscan.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_url_remote_connection.mvg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_url_reverse_shell_bash.mvg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_url_touch.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_xml_reverse_shell_nctraditional.xml
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik1_payload_xml_reverse_shell_netcat_encoded.xml
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik2_burpcollaborator_passwd.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik2_centos_id.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik2_ubuntu_id.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik2_ubuntu_shell.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Image Magik/imagetragik2_ubuntu_shell2.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/CVE-2021-22204_exiftool_echo.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/CVE-2021-22204_exiftool_revshell.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/PHP_exif_phpinfo.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/PHP_exif_system.gif
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/PHP_exif_system.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/PHP_exif_system.png
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/GIF_exploit.gif
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/JPG_exploit-55.jpg
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/PNG_110x110_resize_bypass_use_LFI.png
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/PNG_32x32_resize_bypass_use_LFI.png
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/README.txt
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py
+share/PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_PNG_110x110.php
+share/PayloadsAllTheThings/Upload Insecure Files/README.md
+share/PayloadsAllTheThings/Upload Insecure Files/Server Side Include/exec.shtml
+share/PayloadsAllTheThings/Upload Insecure Files/Server Side Include/include.shtml
+share/PayloadsAllTheThings/Upload Insecure Files/Server Side Include/index.stm
+share/PayloadsAllTheThings/Upload Insecure Files/Zip Slip/README.md
+share/PayloadsAllTheThings/Web Cache Deception/Intruders/param_miner_lowercase_headers.txt
+share/PayloadsAllTheThings/Web Cache Deception/README.md
+share/PayloadsAllTheThings/Web Sockets/Files/ws-harness.py
+share/PayloadsAllTheThings/Web Sockets/Images/WebsocketHarness.jpg
+share/PayloadsAllTheThings/Web Sockets/Images/sqlmap.png
+share/PayloadsAllTheThings/Web Sockets/Images/websocket-harness-start.png
+share/PayloadsAllTheThings/Web Sockets/README.md
+share/PayloadsAllTheThings/XPATH Injection/README.md
+share/PayloadsAllTheThings/XSLT Injection/README.md
+share/PayloadsAllTheThings/XSS Injection/Files/InsecureFlashFile.swf
+share/PayloadsAllTheThings/XSS Injection/Files/JupyterNotebookXSS.ipynb
+share/PayloadsAllTheThings/XSS Injection/Files/SVG_XSS.svg
+share/PayloadsAllTheThings/XSS Injection/Files/SVG_XSS1.svg
+share/PayloadsAllTheThings/XSS Injection/Files/SVG_XSS2.svg
+share/PayloadsAllTheThings/XSS Injection/Files/SVG_XSS3.svg
+share/PayloadsAllTheThings/XSS Injection/Files/SWF_XSS.swf
+share/PayloadsAllTheThings/XSS Injection/Files/mouseover-xss-ecs.jpeg
+share/PayloadsAllTheThings/XSS Injection/Files/onclick-xss-ecs.jpeg
+share/PayloadsAllTheThings/XSS Injection/Files/payload_in_all_known_exif_corrupted.jpg
+share/PayloadsAllTheThings/XSS Injection/Files/payload_in_all_known_exif_corrupted.png
+share/PayloadsAllTheThings/XSS Injection/Files/payload_in_all_known_metadata.jpg
+share/PayloadsAllTheThings/XSS Injection/Files/payload_in_all_known_metadata.png
+share/PayloadsAllTheThings/XSS Injection/Files/payload_text_xss.png
+share/PayloadsAllTheThings/XSS Injection/Files/xml.xsd
+share/PayloadsAllTheThings/XSS Injection/Files/xss.cer
+share/PayloadsAllTheThings/XSS Injection/Files/xss.dtd
+share/PayloadsAllTheThings/XSS Injection/Files/xss.htm
+share/PayloadsAllTheThings/XSS Injection/Files/xss.html.demo
+share/PayloadsAllTheThings/XSS Injection/Files/xss.hxt
+share/PayloadsAllTheThings/XSS Injection/Files/xss.mno
+share/PayloadsAllTheThings/XSS Injection/Files/xss.rdf
+share/PayloadsAllTheThings/XSS Injection/Files/xss.svgz
+share/PayloadsAllTheThings/XSS Injection/Files/xss.url.url
+share/PayloadsAllTheThings/XSS Injection/Files/xss.vml
+share/PayloadsAllTheThings/XSS Injection/Files/xss.wsdl
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xht
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xhtml
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xml
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xsd
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xsf
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xsl
+share/PayloadsAllTheThings/XSS Injection/Files/xss.xslt
+share/PayloadsAllTheThings/XSS Injection/Files/xss_comment_exif_metadata_double_quote.png
+share/PayloadsAllTheThings/XSS Injection/Files/xss_comment_exif_metadata_single_quote.png
+share/PayloadsAllTheThings/XSS Injection/Images/DwrkbH1VAAErOI2.jpg
+share/PayloadsAllTheThings/XSS Injection/Intruders/0xcela_event_handlers.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/BRUTELOGIC-XSS-JS.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/BRUTELOGIC-XSS-STRINGS.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/IntrudersXSS.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/JHADDIX_XSS.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/MarioXSSVectors.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/RSNAKE_XSS.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/XSSDetection.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/XSS_Polyglots.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/jsonp_endpoint.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/xss_alert.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/xss_payloads_quick.txt
+share/PayloadsAllTheThings/XSS Injection/Intruders/xss_swf_fuzz.txt
+share/PayloadsAllTheThings/XSS Injection/README.md
+share/PayloadsAllTheThings/XSS Injection/XSS in Angular.md
+share/PayloadsAllTheThings/XSS Injection/XSS with Relative Path Overwrite.md
+share/PayloadsAllTheThings/XXE Injection/Files/Classic XXE - etc passwd.xml
+share/PayloadsAllTheThings/XXE Injection/Files/Classic XXE B64 Encoded.xml
+share/PayloadsAllTheThings/XXE Injection/Files/Classic XXE.xml
+share/PayloadsAllTheThings/XXE Injection/Files/Deny Of Service - Billion Laugh Attack
+share/PayloadsAllTheThings/XXE Injection/Files/XXE OOB Attack (Yunusov, 2013).xml
+share/PayloadsAllTheThings/XXE Injection/Files/XXE PHP Wrapper.xml
+share/PayloadsAllTheThings/XXE Injection/Intruders/XXE_Fuzzing.txt
+share/PayloadsAllTheThings/XXE Injection/Intruders/xml-attacks.txt
+share/PayloadsAllTheThings/XXE Injection/README.md
+share/PayloadsAllTheThings/YOUTUBE.md
+share/PayloadsAllTheThings/_template_vuln/README.md

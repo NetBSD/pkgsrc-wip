@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (PayloadsAllTheThings/3.0.tar.gz) = a1208d2df46d379b4b55289bdae8b0006f9c33affaff639bd819fe783871d56f
+SHA512 (PayloadsAllTheThings/3.0.tar.gz) = 2b2aef51744ac1738a5a979157be6606f4968276b888655ca4144687baea5988ffbf53c00141e8f8127791891f168777d1e0c864c29cf93cbbc974e09d2f4bc8
+Size (PayloadsAllTheThings/3.0.tar.gz) = 5940799 bytes
