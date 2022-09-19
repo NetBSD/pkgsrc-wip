@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (SecLists/2022.3.tar.gz) = 483a06b4f8c0bbec1bdc65b65f252acae8fb37f29740c085f4113d22586e838f
+SHA512 (SecLists/2022.3.tar.gz) = 090dac9dc85e9abdaab48e08cabd5ba084e6bc976fb92c329c39482fd4db8a41f984a27812877738cdf4cedf7edcbd48628013336da640636e435c0ebaab273d
+Size (SecLists/2022.3.tar.gz) = 534085313 bytes

@@ -79,6 +79,7 @@ SUBDIR+=	R-wk
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
+SUBDIR+=	SecLists
 SUBDIR+=	SNAP
 SUBDIR+=	SOGo5
 SUBDIR+=	StepTalk
