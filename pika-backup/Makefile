@@ -42,6 +42,7 @@ BUILDLINK_API_DEPENDS.libadwaita+=	libadwaita>=1.1
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.gtk4+=	gtk4>=4.6
 .include "../../x11/gtk4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
