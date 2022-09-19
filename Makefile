@@ -1147,6 +1147,7 @@ SUBDIR+=	gitea-tea
 SUBDIR+=	gitg
 SUBDIR+=	gitlab
 SUBDIR+=	gitlab-assets
+SUBDIR+=	gitleaks
 SUBDIR+=	gitless
 SUBDIR+=	gitsome
 SUBDIR+=	givaro
