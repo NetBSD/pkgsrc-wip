@@ -3372,6 +3372,8 @@ share/emacs/${PKGVERSION}/lisp/org/ox-texinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ox-texinfo.elc
 share/emacs/${PKGVERSION}/lisp/org/ox.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ox.elc
+share/emacs/${PKGVERSION}/lisp/osc.el.gz
+share/emacs/${PKGVERSION}/lisp/osc.elc
 share/emacs/${PKGVERSION}/lisp/outline.el.gz
 share/emacs/${PKGVERSION}/lisp/outline.elc
 share/emacs/${PKGVERSION}/lisp/paren.el.gz

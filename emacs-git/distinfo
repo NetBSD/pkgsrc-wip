@@ -1,3 +1,4 @@
 $NetBSD$
 
+SHA1 (patch-Makefile.in) = 423e632d159b51c93f665c67d7bc4b326f32f940
 SHA1 (patch-configure.ac) = f54d1d1428e25c5320bf166606cd2808d3e4797e
