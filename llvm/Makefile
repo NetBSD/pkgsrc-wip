@@ -111,7 +111,7 @@ PLIST.notdylib=	yes
 PLIST_SUBST+=	SOEXT=${SOEXT}
 PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
-NOTDYLIBS=	LTO Remarks
+NOTDYLIBS=		LTO Remarks
 .for libname in ${NOTDYLIBS}
 PRINT_PLIST_AWK+=	/lib${libname}.${SOEXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SOEXT}\.${LLVM_MAJOR_VERSION}/, ".$${SOEXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
 .endfor
@@ -153,6 +153,7 @@ post-extract:
 .for f in config.guess config.sub
 	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
+	${LN} -f -s ${WRKDIR}/${CMAKE} ${WRKDIR}/cmake
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
