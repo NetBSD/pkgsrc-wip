@@ -2272,6 +2272,7 @@ SUBDIR+=	litehtml
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
 SUBDIR+=	llilc-git
+SUBDIR+=	llvm
 SUBDIR+=	llvm-dfbsd
 SUBDIR+=	llvm-project-netbsd
 SUBDIR+=	lmdbg-current

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.36 2022/08/14 20:22:44 tnn Exp $
+
+BLAKE2s (llvm-15.0.1.src.tar.xz) = ed1e687e9fc2c529180f7352d3f8dcaa9a0de1bf4edc9c128f1fb85575afe31f
+SHA512 (llvm-15.0.1.src.tar.xz) = ec61b6d061ba71e00f6e9c1042705ab3512ff71a823e18ce75a3b8fd2ef40efff186b42d4be6ef948019e5bb5b3fb28f0c615ebb7872ec89f7643261eadf276a
+Size (llvm-15.0.1.src.tar.xz) = 53522984 bytes
+SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
+SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
+SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
+SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
+SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = be0f3fd2a020f634a5f8ec972275e52dc92d36a5
