@@ -11,7 +11,6 @@ COMMENT=	Potluck with different functions for different purposes for C programs
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	liborcania.pc.in
 
