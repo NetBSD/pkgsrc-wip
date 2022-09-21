@@ -34,6 +34,15 @@ HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 
+# As of v15.0.0 llvm requires cmake source code to build
+CMAKE=		cmake-${LLVM_VERSION}.src
+EXTRA_DIST=	${CMAKE}${EXTRACT_SUFX}
+
+SITES.${CMAKE}${EXTRACT_SUFX}=	\
+	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+
+DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
+
 USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
 GCC_REQD+=		7
