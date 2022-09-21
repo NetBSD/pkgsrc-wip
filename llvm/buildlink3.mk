@@ -11,6 +11,14 @@ BUILDLINK_PKGSRCDIR.llvm?=	../../wip/llvm
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 
 BUILDLINK_FILES.llvm+=		bin/FileCheck
+BUILDLINK_FILES.llvm+=		bin/UnicodeNameMappingGenerator
+BUILDLINK_FILES.llvm+=		bin/llvm-debuginfod
+BUILDLINK_FILES.llvm+=		bin/llvm-dwarfutil
+BUILDLINK_FILES.llvm+=		bin/llvm-remark-size-diff
+BUILDLINK_FILES.llvm+=		bin/UnicodeNameMappingGenerator
+BUILDLINK_FILES.llvm+=		bin/llvm-debuginfod
+BUILDLINK_FILES.llvm+=		bin/llvm-dwarfutil
+BUILDLINK_FILES.llvm+=		bin/llvm-remark-size-diff
 BUILDLINK_FILES.llvm+=		bin/bugpoint
 BUILDLINK_FILES.llvm+=		bin/count
 BUILDLINK_FILES.llvm+=		bin/dsymutil
