@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.25 2022/08/12 08:39:56 pin Exp $
+
+BLAKE2s (cmake-15.0.1.src.tar.xz) = 1f7fb68a1c7c05b82a72137f3edf4a9b8dfb9e2fae277af1643e4bc545db6f75
+SHA512 (cmake-15.0.1.src.tar.xz) = fbb29395a337be4e591567cc0f990857a2663cb2335b5ef30945c6b516dbc65e86f022ef3acc1dc572cf6791e1cd20f6754256e00b60cdbf579c04ed74460522
+Size (cmake-15.0.1.src.tar.xz) = 6976 bytes
+BLAKE2s (libcxx-15.0.1.src.tar.xz) = 990ed1b196ec72548326496613b39a460f3836b34ec1e99443ec06d85096295e
+SHA512 (libcxx-15.0.1.src.tar.xz) = 1438b689bb11b25a0b77c83c8fc0dbe98f729186aa2718119c42f4efe42fca9ec33a79a0fac036d6617d0452dcfd76463a8adbc55b0552a0a4e72757d841fdf0
+Size (libcxx-15.0.1.src.tar.xz) = 3345100 bytes
+BLAKE2s (libunwind-15.0.1.src.tar.xz) = 9a2720e3a01da911d528011470dd6a4c110f11be7f69a8b120305dccdebe61a1
+SHA512 (libunwind-15.0.1.src.tar.xz) = 2ff2d84f62c41724caf3c121a515facd6a7eaf6f65658f4a04b268cb839861d4561b5ab11557474c41b59c42c00a4381cf5d561bf612251044b4774883888b59
+Size (libunwind-15.0.1.src.tar.xz) = 113356 bytes
+BLAKE2s (llvm-15.0.1.src.tar.xz) = ed1e687e9fc2c529180f7352d3f8dcaa9a0de1bf4edc9c128f1fb85575afe31f
+SHA512 (llvm-15.0.1.src.tar.xz) = ec61b6d061ba71e00f6e9c1042705ab3512ff71a823e18ce75a3b8fd2ef40efff186b42d4be6ef948019e5bb5b3fb28f0c615ebb7872ec89f7643261eadf276a
+Size (llvm-15.0.1.src.tar.xz) = 53522984 bytes

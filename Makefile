@@ -2212,6 +2212,7 @@ SUBDIR+=	libucl
 SUBDIR+=	libudev
 SUBDIR+=	libuna
 SUBDIR+=	libunit
+SUBDIR+=	libunwind
 SUBDIR+=	libunwind-git
 SUBDIR+=	libusbmuxd
 SUBDIR+=	libvalhalla
