@@ -1,0 +1,12 @@
+Eigenvalue SoLvers for Petaflop-Applications (ELPA)
+
+The computation of selected or all eigenvalues and eigenvectors of a symmetric
+(Hermitian) matrix has high relevance for various scientific disciplines.
+For the calculation of a significant part of the eigensystem typically direct
+eigensolvers are used. For large problems, the eigensystem calculations with
+existing solvers can become the computational bottleneck.
+
+As a consequence, the *ELPA* project was initiated with the aim to develop and
+implement an efficient eigenvalue solver for petaflop applications, supported
+by the German Federal Government, through BMBF Grant 01IH08007, from
+Dec 2008 to Nov 2011.

@@ -1,0 +1,24 @@
+$NetBSD$
+
+portability
+
+--- configure.orig	2022-09-16 13:39:33.834688191 +0000
++++ configure
+@@ -14592,7 +14592,7 @@ printf %s "checking whether double-preci
+ 
+   $CC $CFLAGS -c $srcdir/src/elpa2/kernels/asm_x86_64_double_precision.s -o conftest.o 2>&5
+ 
+-  if test "$?" == 0; then
++  if test "$?" = 0; then
+     can_compile_sse_asm_double=yes
+   else
+     can_compile_sse_asm_double=no
+@@ -14610,7 +14610,7 @@ printf %s "checking whether single-preci
+ 
+     $CC $CFLAGS -c $srcdir/src/elpa2/kernels/asm_x86_64_single_precision.s -o conftest.o 2>&5
+ 
+-    if test "$?" == 0; then
++    if test "$?" = 0; then
+       can_compile_sse_asm_single=yes
+     else
+       can_compile_sse_asm_single=no
