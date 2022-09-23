@@ -2627,8 +2627,6 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/vnvni.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/vnvni.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/welsh.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/welsh.elc
-share/emacs/${PKGVERSION}/lisp/linum.el.gz
-share/emacs/${PKGVERSION}/lisp/linum.elc
 share/emacs/${PKGVERSION}/lisp/loaddefs.el.gz
 share/emacs/${PKGVERSION}/lisp/loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/loadhist.el.gz
@@ -3047,6 +3045,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/iswitchb.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/landmark.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/linum.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/linum.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/longlines.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/makesum.el.gz
