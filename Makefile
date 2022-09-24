@@ -2346,6 +2346,7 @@ SUBDIR+=	manatee
 SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
+SUBDIR+=	mark
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
 SUBDIR+=	masscan
