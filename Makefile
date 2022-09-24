@@ -180,7 +180,6 @@ SUBDIR+=	apache-commons-logging
 SUBDIR+=	apache-commons-pool
 SUBDIR+=	apache-log4j
 SUBDIR+=	ape
-SUBDIR+=	apecrunch
 SUBDIR+=	apel-git
 SUBDIR+=	apinger
 SUBDIR+=	apple-codesign
