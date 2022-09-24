@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2015/05/26 15:11:25 jperkin Exp $
-lib/samba/vfs/dirsort.so
-lib/samba/vfs/syncops.so
