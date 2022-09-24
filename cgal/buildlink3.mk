@@ -7,7 +7,7 @@ CGAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cgal+=	cgal>=5.1
 BUILDLINK_ABI_DEPENDS.cgal+=	cgal>=5.1
-BUILDLINK_PKGSRCDIR.cgal?=	../../math/cgal
+BUILDLINK_PKGSRCDIR.cgal?=	../../wip/cgal
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
