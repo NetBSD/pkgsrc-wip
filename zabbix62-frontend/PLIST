@@ -829,8 +829,6 @@ share/zabbix/include/classes/html/CLabel.php
 share/zabbix/include/classes/html/CLink.php
 share/zabbix/include/classes/html/CLinkAction.php
 share/zabbix/include/classes/html/CList.php
-share/zabbix/include/classes/html/CListBox.php
-share/zabbix/include/classes/html/CListBoxItem.php
 share/zabbix/include/classes/html/CListItem.php
 share/zabbix/include/classes/html/CMacroValue.php
 share/zabbix/include/classes/html/CMenu.php
@@ -1361,6 +1359,8 @@ share/zabbix/locale/ca/LC_MESSAGES/frontend.mo
 share/zabbix/locale/ca/LC_MESSAGES/frontend.po
 share/zabbix/locale/cs/LC_MESSAGES/frontend.mo
 share/zabbix/locale/cs/LC_MESSAGES/frontend.po
+share/zabbix/locale/da/LC_MESSAGES/frontend.mo
+share/zabbix/locale/da/LC_MESSAGES/frontend.po
 share/zabbix/locale/de/LC_MESSAGES/frontend.mo
 share/zabbix/locale/de/LC_MESSAGES/frontend.po
 share/zabbix/locale/el/LC_MESSAGES/frontend.mo
