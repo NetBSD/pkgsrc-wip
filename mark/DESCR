@@ -1,0 +1,18 @@
+Mark is a tool for syncing your markdown documentation with Atlassian
+Confluence pages.
+
+This is very useful if you store documentation to your software in a
+Git repository and don't want to do an extra job of updating Confluence
+page using a tinymce wysiwyg enterprise core editor which always breaks
+everything.
+
+Mark does the same but in a different way. Mark reads your markdown
+file, creates a Confluence page if it's not found by its name, uploads
+attachments, translates Markdown into HTML and updates the contents of
+the page via REST API. It's like you don't even need to create
+sections/pages in your Confluence anymore, just use them in your
+Markdown documentation.
+
+Mark uses an extended file format, which, still being valid markdown,
+contains several HTML-ish metadata headers, which can be used to locate
+page inside Confluence instance and update it accordingly.
