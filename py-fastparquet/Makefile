@@ -2,7 +2,7 @@
 
 # Prefer pulling from github instead of pypi
 # so that we can run tests
-DISTNAME=	fastparquet-0.8.2
+DISTNAME=	fastparquet-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	fastparquet
 CATEGORIES=	devel
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
