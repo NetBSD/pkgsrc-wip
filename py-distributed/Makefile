@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2022.8.1
+DISTNAME=	distributed-2022.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 GITHUB_PROJECT=	distributed
@@ -17,8 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=2.28.1:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
-# TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko>=2.11.0:../../security/py-paramiko
-TEST_DEPENDS+=	${PYPKGPREFIX}-dask-2022.8.1:../../wip/py-dask
+TEST_DEPENDS+=	${PYPKGPREFIX}-dask-2022.9.1{,nb*}:../../wip/py-dask
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets>=7.7.0:../../www/py-ipywidgets
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.0.1:../../devel/py-sortedcontainers
@@ -31,9 +30,15 @@ DEPENDS+=	${PYPKGPREFIX}-tornado>=6.0.3:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-tblib>=1.7.0:../../wip/py-tblib
 
 USE_LANGUAGES=	# none
+post-install:
+	cd ${DESTDIR}${PREFIX} && \
+	${MV} bin/dask-scheduler bin/dask-scheduler-${PYVERSSUFFIX} && \
+	${MV} bin/dask-ssh bin/dask-ssh-${PYVERSSUFFIX} && \
+	${MV} bin/dask-worker bin/dask-worker-${PYVERSSUFFIX} || ${TRUE}
+
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
