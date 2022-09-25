@@ -2931,6 +2931,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-docker.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-docker.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-fuse.el.gz
@@ -3096,6 +3098,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/thumbs.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/thumbs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/tls.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/tls.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/tpu-edt.el.gz
@@ -3898,8 +3902,6 @@ share/emacs/${PKGVERSION}/lisp/thingatpt.el.gz
 share/emacs/${PKGVERSION}/lisp/thingatpt.elc
 share/emacs/${PKGVERSION}/lisp/thread.el.gz
 share/emacs/${PKGVERSION}/lisp/thread.elc
-share/emacs/${PKGVERSION}/lisp/thumbs.el.gz
-share/emacs/${PKGVERSION}/lisp/thumbs.elc
 share/emacs/${PKGVERSION}/lisp/time-stamp.el.gz
 share/emacs/${PKGVERSION}/lisp/time-stamp.elc
 share/emacs/${PKGVERSION}/lisp/time.el.gz
