@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	fsspec-2022.7.1
+FSSPEC_VERSION=	2022.8.2
+DISTNAME=	fsspec-${FSSPEC_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 GITHUB_PROJECT=	filesystem_spec
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/fsspec/filesystem_spec
 COMMENT=	Specifications for pythonic filesystems
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-2022.7.1
+WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${FSSPEC_VERSION}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -22,5 +23,5 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-vcr>=1.0.2:../../wip/py-test-vcr
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
