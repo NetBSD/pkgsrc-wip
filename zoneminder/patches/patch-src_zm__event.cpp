@@ -40,7 +40,7 @@ Avoid sendfile code when sendfile doesn't exist.
      Debug( 1, "Adding closing frame %d to DB", frames );
      static char sql[ZM_SQL_SML_BUFSIZ];
 -    snprintf( sql, sizeof(sql), "insert into Frames ( EventId, FrameId, TimeStamp, Delta ) values ( %d, %d, from_unixtime( %ld ), %s%ld.%02ld )", id, frames, end_time.tv_sec, delta_time.positive?"":"-", delta_time.sec, delta_time.fsec );
-+    snprintf( sql, sizeof(sql), "insert into Frames ( EventId, FrameId, TimeStamp, Delta ) values ( %d, %d, from_unixtime( %jd ), %s%ld.%02ld )", id, frames, end_time.tv_sec, delta_time.positive?"":"-", (intmax_t) delta_time.sec, delta_time.fsec );
++    snprintf( sql, sizeof(sql), "insert into Frames ( EventId, FrameId, TimeStamp, Delta ) values ( %d, %d, from_unixtime( %jd ), %s%jd.%02ld )", id, frames, (intmax_t) end_time.tv_sec, delta_time.positive?"":"-", (intmax_t) delta_time.sec, delta_time.fsec );
      if ( mysql_query( &dbconn, sql ) )
      {
        Error( "Can't insert frame: %s", mysql_error( &dbconn ) );
@@ -67,7 +67,7 @@ Avoid sendfile code when sendfile doesn't exist.
      Debug( 1, "Adding frame %d of type \"%s\" to DB", frames, frame_type );
      static char sql[ZM_SQL_MED_BUFSIZ];
 -    snprintf( sql, sizeof(sql), "insert into Frames ( EventId, FrameId, Type, TimeStamp, Delta, Score ) values ( %d, %d, '%s', from_unixtime( %ld ), %s%ld.%02ld, %d )", id, frames, frame_type, timestamp.tv_sec, delta_time.positive?"":"-", delta_time.sec, delta_time.fsec, score );
-+    snprintf( sql, sizeof(sql), "insert into Frames ( EventId, FrameId, Type, TimeStamp, Delta, Score ) values ( %d, %d, '%s', from_unixtime( %jd ), %s%ld.%02ld, %d )", id, frames, frame_type, timestamp.tv_sec, delta_time.positive?"":"-", (intmax_t) delta_time.sec, delta_time.fsec, score );
++    snprintf( sql, sizeof(sql), "insert into Frames ( EventId, FrameId, Type, TimeStamp, Delta, Score ) values ( %d, %d, '%s', from_unixtime( %jd ), %s%jd.%02ld, %d )", id, frames, frame_type, (intmax_t) timestamp.tv_sec, delta_time.positive?"":"-", (intmax_t) delta_time.sec, delta_time.fsec, score );
      if ( mysql_query( &dbconn, sql ) )
      {
        Error( "Can't insert frame: %s", mysql_error( &dbconn ) );
