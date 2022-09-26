@@ -1,2 +1,3 @@
 * Build python support as a separate package
 * Try and run tests?
+* Does not build on NetBSD - Need to fix some Linux-isms

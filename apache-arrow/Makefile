@@ -53,7 +53,15 @@ CONFIGURE_ENV+=	ARROW_XSIMD_URL=/${DISTDIR}/${XSIMD}
 # To enable tests, devel/googletest needs -fPIE removed
 CMAKE_ARGS+=	-DARROW_BUILD_TESTS=OFF
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.900.0.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
+
+BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+# Needs gnu install for -v option
+.if ${OPSYS} == "NetBSD"
+TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
+TOOLS_PATH.install=	${PREFIX}/bin/ginstall
+.endif
 
 .include "../../wip/apache-arrow/version.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
