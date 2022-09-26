@@ -7654,3 +7654,4 @@ ${ZM_HTTPD_ROOT}/tools/mootools/mootools-core.js
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-more-1.5.1.js
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-more.js
 ${ZM_HTTPD_ROOT}/views/image.php
+share/doc/zoneminder/README-pkgsrc.md

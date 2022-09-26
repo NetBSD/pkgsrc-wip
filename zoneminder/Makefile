@@ -2,7 +2,7 @@
 
 #VERSION=	1.36.7
 VERSION=	1.30.5
-PKGREVISION=	1
+PKGREVISION=	2
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -102,6 +102,8 @@ CMAKE_ARGS+=		-DPOLKIT_LIBRARIES=" " -DPOLKIT_INCLUDE_DIR=" "
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
+# This should probably be ffmpeg4 at least, and zm seems to have
+# trouble with ffmpeg2.  Defer until up-to-date.
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
 CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg2}/bin/ffmpeg2
@@ -294,9 +296,11 @@ PERL5_REQD+=		5.6.0
 #post-configure: perl5-configure
 
 EGDIR=			share/examples/${PKGBASE}
+DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/config ${EGDIR}/apache
 CONF_FILES+=		${PREFIX}/${EGDIR}/config/zm.conf ${PKG_SYSCONFDIR}/zm.conf
 INSTALLATION_DIRS+=	bin share/examples/rc.d share/zoneminder/db
+INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/zoneminder.conf ${DESTDIR}${PREFIX}/${EGDIR}/apache/zoneminder.conf
 	${INSTALL_DATA} ${WRKSRC}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
@@ -309,7 +313,7 @@ post-install:
 	${LN} -s ${ZM_CACHE}/temp ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/temp
 	${LN} -s ${ZM_CACHE}/events ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events
 	${LN} -s ${ZM_CACHE}/images ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images
-
+	${INSTALL_DATA} files/README-pkgsrc.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
