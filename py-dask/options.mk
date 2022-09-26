@@ -2,6 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-dask
 PKG_SUPPORTED_OPTIONS=	cityhash cytoolz parquet graphviz psutil scipy skimage xarray sqlalchemy
+
 PKG_SUGGESTED_OPTIONS=	cityhash cytoolz parquet psutil scipy skimage xarray sqlalchemy
 
 .include "../../mk/bsd.options.mk"
@@ -20,7 +21,9 @@ DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 .if !empty(PKG_OPTIONS:Mparquet)
 # TODO Also needs pyarrow
 DEPENDS+=	${PYPKGPREFIX}-fastparquet-[0-9]*:../../wip/py-fastparquet
+.  if ${OPSYS} != "NetBSD"
 DEPENDS+=	${PYPKGPREFIX}-apache-arrow-[0-9]*:../../wip/py-apache-arrow
+.  endif
 .endif
 
 # graphviz is used to display the task dependencies
