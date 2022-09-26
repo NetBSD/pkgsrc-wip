@@ -25,6 +25,8 @@ post-install:
 	find . -type f -exec \
 		${INSTALL_DATA} {} ${DESTDIR}${DOCSDIR}/{} \;
 
+BLAS_C_INTERFACE=	yes
+
 .include "../../mk/blas.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
