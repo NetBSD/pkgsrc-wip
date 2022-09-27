@@ -1783,6 +1783,7 @@ SUBDIR+=	infraarcana
 SUBDIR+=	inicpp
 SUBDIR+=	initware-git
 SUBDIR+=	inn
+SUBDIR+=	innernet
 SUBDIR+=	input-mono-ttf
 SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interbase-docs

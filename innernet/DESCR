@@ -1,0 +1,12 @@
+innernet is a private network system that uses WireGuard under the hood.
+
+innernet is similar in its goals to Slack's nebula or Tailscale, but takes a
+bit of a different approach. It aims to take advantage of existing networking
+concepts like CIDRs and the security properties of WireGuard to turn your
+computer's basic IP networking into more powerful ACL primitives.
+
+innernet is not an official WireGuard project, and WireGuard is a registered
+trademark of Jason A. Donenfeld.
+
+This has not received an independent security audit, and should be considered
+experimental software at this early point in its lifetime.
