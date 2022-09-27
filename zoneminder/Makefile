@@ -63,6 +63,9 @@ DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
 #DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
+# \todo: Decide to drop CONFIGURE_ARGS, validating that each has been
+# turned into cmake, once we are at a zoneminder version that does not
+# support autoconf (which maybe we are at already!).
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CMAKE_ARGS+=		-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}
 
@@ -102,8 +105,7 @@ CMAKE_ARGS+=		-DPOLKIT_LIBRARIES=" " -DPOLKIT_INCLUDE_DIR=" "
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
-# This should probably be ffmpeg4 at least, and zm seems to have
-# trouble with ffmpeg2.  Defer until up-to-date.
+# This should probably be ffmpeg4 at least.  Defer until up-to-date.
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
 CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg2}/bin/ffmpeg2
