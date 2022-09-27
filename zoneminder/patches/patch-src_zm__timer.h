@@ -22,7 +22,7 @@ portable than syscall(SYS_gettid).
  #endif
    public:
 -    explicit TimerException( const std::string &message ) : Exception( stringtf("(%d) ", (long int)pid())+message ) {
-+    explicit TimerException( const std::string &message ) : Exception( stringtf( ("(%d) "+message).c_str(), (long int)pid() ) )
++    explicit TimerException( const std::string &message ) : Exception( stringtf( ("(%d) "+message).c_str(), (long int)pid() ) ) {
      }
    };
  

@@ -10,7 +10,7 @@ portable than syscall(SYS_gettid).
 
 --- src/zm_thread.h.orig	2018-12-08 14:22:36.000000000 +0000
 +++ src/zm_thread.h
-@@ -22,10 +22,8 @@
+@@ -22,19 +22,20 @@
  
  #include <unistd.h>
  #include <pthread.h>
@@ -22,7 +22,11 @@ portable than syscall(SYS_gettid).
  #include "zm_exception.h"
  #include "zm_utils.h"
  #ifdef __FreeBSD__
-@@ -34,7 +32,7 @@
+ #include <sys/thr.h>
+ #endif
++#ifdef __NetBSD__
++#include <lwp.h>
++#endif
  
  class ThreadException : public Exception {
  private:
@@ -31,7 +35,16 @@ portable than syscall(SYS_gettid).
    pid_t pid() {
      pid_t tid; 
  #ifdef __FreeBSD__ 
-@@ -54,7 +52,7 @@ private:
+@@ -44,6 +45,8 @@ private:
+ #else 
+   #ifdef __FreeBSD_kernel__
+     if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
++  #elif defined(__NetBSD__)
++    tid = _lwp_self();
+   # else
+     tid=syscall(SYS_gettid); 
+   #endif
+@@ -54,7 +57,7 @@ private:
    pthread_t pid() { return( pthread_self() ); }
  #endif
  public:
@@ -40,7 +53,7 @@ portable than syscall(SYS_gettid).
    }
  };
  
-@@ -209,7 +207,7 @@ protected:
+@@ -209,7 +212,7 @@ protected:
  
    Mutex mThreadMutex;
    Condition mThreadCondition;
@@ -49,7 +62,7 @@ portable than syscall(SYS_gettid).
    pid_t mPid;
  #else
    pthread_t mPid;
-@@ -222,7 +220,7 @@ protected:
+@@ -222,7 +225,7 @@ protected:
    Thread();
    virtual ~Thread();
  
@@ -58,7 +71,16 @@ portable than syscall(SYS_gettid).
    pid_t id() const {
      pid_t tid; 
  #ifdef __FreeBSD__ 
-@@ -257,7 +255,7 @@ public:
+@@ -233,6 +236,8 @@ protected:
+   #ifdef __FreeBSD_kernel__
+     if ( (syscall(SYS_thr_self, &tid)) < 0 ) // Thread/Process id
+ 
++  #elif defined(__NetBSD__)
++    tid = _lwp_self();
+   #else
+     tid=syscall(SYS_gettid); 
+   #endif
+@@ -257,7 +262,7 @@ public:
    void join();
    void kill( int signal );
    bool isThread() {
