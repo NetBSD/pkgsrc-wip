@@ -2,20 +2,20 @@ $NetBSD: patch-src_zm__utils.cpp,v 1.1 2013/03/24 16:47:47 joerg Exp $
 
 \todo Explain
 
---- src/zm_utils.cpp.orig	2019-02-22 15:38:47.000000000 +0000
+--- src/zm_utils.cpp.orig	2018-12-08 14:22:36.000000000 +0000
 +++ src/zm_utils.cpp
-@@ -76,21 +76,6 @@ const std::string stringtf( const char *
-   return( tempString );
+@@ -66,21 +66,6 @@ std::string replaceAll(std::string str, 
+   return str;
  }
  
--const std::string stringtf( const std::string &format, ... )
+-const std::string stringtf( const char *format, ... )
 -{
 -  va_list ap;
 -  char tempBuffer[8192];
 -  std::string tempString;
 -
 -  va_start(ap, format );
--  vsnprintf( tempBuffer, sizeof(tempBuffer), format.c_str() , ap );
+-  vsnprintf( tempBuffer, sizeof(tempBuffer), format , ap );
 -  va_end(ap);
 -
 -  tempString = tempBuffer;
@@ -23,6 +23,6 @@ $NetBSD: patch-src_zm__utils.cpp,v 1.1 2013/03/24 16:47:47 joerg Exp $
 -  return( tempString );
 -}
 -
- bool startsWith( const std::string &haystack, const std::string &needle )
+ const std::string stringtf( const std::string format, ... )
  {
-   return( haystack.substr( 0, needle.length() ) == needle );
+   va_list ap;

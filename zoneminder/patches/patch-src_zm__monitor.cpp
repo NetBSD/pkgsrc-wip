@@ -7,27 +7,27 @@ particular values that might make sense.
 
 Avoid type error (suseconds_t is not long).  To be addressed upstream once caught up.
 
---- src/zm_monitor.cpp.orig	2019-02-23 04:38:47.000000000 +1300
-+++ src/zm_monitor.cpp	2022-01-19 21:56:47.000000000 +1300
-@@ -160,7 +160,7 @@
+--- src/zm_monitor.cpp.orig	2018-12-08 14:22:36.000000000 +0000
++++ src/zm_monitor.cpp
+@@ -180,7 +180,7 @@ bool Monitor::MonitorLink::connect() {
        return( false );
      }
      mem_ptr = (unsigned char *)shmat( shm_id, 0, 0 );
--    if ( mem_ptr < 0 )
-+    if ( mem_ptr == (void *)-1 )
-     {
+-    if ( mem_ptr < (void *)0 ) {
++    if ( mem_ptr == (void *)-1 ) {
        Debug( 3, "Can't shmat link memory: %s", strerror(errno) );
        connected = false;
-@@ -194,7 +194,7 @@
+       return( false );
+@@ -210,7 +210,7 @@ bool Monitor::MonitorLink::disconnect() 
      connected = false;
  
  #if ZM_MEM_MAPPED
--    if ( mem_ptr > 0 )
-+    if ( mem_ptr != 0 && mem_ptr != (void *)-1 )
-     {
+-    if ( mem_ptr > (void *)0 ) {
++    if ( mem_ptr != (void *)0 && mem_ptr != (void *)-1) {
        msync( mem_ptr, mem_size, MS_ASYNC );
        munmap( mem_ptr, mem_size );
-@@ -3175,7 +3175,7 @@
+     }
+@@ -2531,7 +2531,7 @@ void Monitor::TimestampImage( Image *ts_
              found_macro = true;
              break;
            case 'f' :

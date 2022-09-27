@@ -7,14 +7,14 @@ between zmpkg.pl and systemd or init - such as /etc/init.d/zoneminder
 But everything does seem to work ok from systemd without this roundabout code
 anyway, so just inhibit it.
 
---- scripts/zmpkg.pl.in.orig	2021-09-26 20:28:10.324733138 +1300
-+++ scripts/zmpkg.pl.in	2021-09-26 20:28:30.414613144 +1300
-@@ -168,7 +168,7 @@
- }
+--- scripts/zmpkg.pl.in.orig	2018-12-08 14:22:36.000000000 +0000
++++ scripts/zmpkg.pl.in
+@@ -143,7 +143,7 @@ if ( $command eq 'state' ) {
+ } # end if command = state
  
  # Check if we are running systemd and if we have been called by the system
--if ( $command =~ /^(start|stop|restart)$/ )
-+if ( 0 && $command =~ /^(start|stop|restart)$/ )
- {
-     # We have to detaint to keep perl from complaining
-     $command = $1;
+-if ( $command =~ /^(start|stop|restart)$/ ) {
++if ( 0 && $command =~ /^(start|stop|restart)$/ ) {
+ # We have to detaint to keep perl from complaining
+   $command = $1;
+ 

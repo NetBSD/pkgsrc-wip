@@ -5,26 +5,26 @@ in ZoneMinder.
 
 Work around varying notion of an undefined mpid on pthread/not.
 
---- src/zm_thread.cpp.orig	2019-02-22 15:38:47.000000000 +0000
+--- src/zm_thread.cpp.orig	2018-12-08 14:22:36.000000000 +0000
 +++ src/zm_thread.cpp
-@@ -72,6 +72,7 @@ void Mutex::lock()
+@@ -69,6 +69,7 @@ void Mutex::lock() {
      throw ThreadException( stringtf( "Unable to lock pthread mutex: %s", strerror(errno) ) );
  }
  
 +#if 0
- void Mutex::lock( int secs )
- {
+ void Mutex::lock( int secs ) {
    struct timespec timeout = getTimeout( secs );
-@@ -85,6 +86,7 @@ void Mutex::lock( double secs )
+   if ( pthread_mutex_timedlock( &mMutex, &timeout ) < 0 )
+@@ -80,6 +81,7 @@ void Mutex::lock( double secs ) {
    if ( pthread_mutex_timedlock( &mMutex, &timeout ) < 0 )
      throw ThreadException( stringtf( "Unable to timedlock pthread mutex: %s", strerror(errno) ) );
  }
 +#endif
  
- void Mutex::unlock()
- {
-@@ -232,9 +234,15 @@ template <class T> void ThreadData<T>::u
-   Debug( 9, "Updated value, %p", this );
+ void Mutex::unlock() {
+   if ( pthread_mutex_unlock( &mMutex ) < 0 )
+@@ -218,9 +220,15 @@ template <class T> void ThreadData<T>::u
+   Debug(9, "Updated value, %p", this);
  }
  
 +#ifndef USE_PTHREAD
@@ -40,16 +40,16 @@ Work around varying notion of an undefined mpid on pthread/not.
    mStarted( false ),
    mRunning( false )
  {
-@@ -307,7 +315,7 @@ void Thread::join()
+@@ -283,7 +291,7 @@ void Thread::join() {
    if ( isThread() )
      throw ThreadException( "Can't self join thread" );
    mThreadMutex.lock();
--  if ( mPid >= 0 )
-+  if ( mPid != MPID_UNDEFINED )
-   {
-     if ( mStarted )
-     {
-@@ -336,4 +344,5 @@ void Thread::kill( int signal )
+-  if ( mPid >= 0 ) {
++  if ( mPid != MPID_UNDEFINED ) {
+     if ( mStarted ) {
+       void *threadStatus = 0;
+       if ( pthread_join( mThread, &threadStatus ) < 0 )
+@@ -305,4 +313,5 @@ void Thread::kill( int signal ) {
  }
  
  // Some explicit template instantiations

@@ -19,14 +19,14 @@ installed on the system, or not in the $PATH.
 
 Use the -m parameter to su, as ZM_WEB_USER shouldn't require a login shell.
 
---- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2019-02-22 15:38:47.000000000 +0000
+--- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2018-12-08 14:22:36.000000000 +0000
 +++ scripts/ZoneMinder/lib/ZoneMinder/General.pm
-@@ -129,7 +129,7 @@ sub getCmdFormat {
-       chomp( $output );
-       Debug( "Test failed, '$output'\n" );
+@@ -104,7 +104,7 @@ sub getCmdFormat {
+       chomp($output);
+       Debug("Test failed, '$output'");
  
 -      $prefix = "su ".$Config{ZM_WEB_USER}." -c '";
 +      $prefix = "su -m ".$Config{ZM_WEB_USER}." -c '";
        $suffix = "'";
        $command = $prefix.$null_command.$suffix;
-       Debug( "Testing \"$command\"\n" );
+       Debug("Testing \"$command\"");
