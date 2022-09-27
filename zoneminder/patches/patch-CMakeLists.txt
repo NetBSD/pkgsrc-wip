@@ -12,8 +12,8 @@ exist, so don't insist on librt being present.  Fixes the build on MacOS.
 Let Pkgsrc be responsible for zm.conf into examples, rather than overwriting
 the existing configuration file.
 
---- CMakeLists.txt.orig	2019-02-23 04:38:47.000000000 +1300
-+++ CMakeLists.txt	2022-01-19 22:51:36.000000000 +1300
+--- CMakeLists.txt.orig	2018-12-08 14:22:36.000000000 +0000
++++ CMakeLists.txt
 @@ -4,7 +4,7 @@
  #
  cmake_minimum_required (VERSION 2.8.7)
@@ -23,7 +23,7 @@ the existing configuration file.
  # make API version a minor of ZM version
  set(zoneminder_API_VERSION "${zoneminder_VERSION}.1")
  
-@@ -226,7 +226,9 @@
+@@ -282,7 +282,9 @@ check_include_file("ucontext.h" HAVE_UCO
  check_include_file("sys/sendfile.h" HAVE_SYS_SENDFILE_H)
  check_include_file("sys/syscall.h" HAVE_SYS_SYSCALL_H)
  check_function_exists("syscall" HAVE_SYSCALL)
@@ -33,7 +33,7 @@ the existing configuration file.
  check_function_exists("posix_memalign" HAVE_POSIX_MEMALIGN)
  check_type_size("siginfo_t" HAVE_SIGINFO_T)
  check_type_size("ucontext_t" HAVE_UCONTEXT_T)
-@@ -237,7 +239,7 @@
+@@ -293,7 +295,7 @@ if (UNIX)
      include (CheckLibraryExists)
      CHECK_LIBRARY_EXISTS(rt clock_gettime "time.h" HAVE_CLOCK_GETTIME)
      if(NOT HAVE_CLOCK_GETTIME)
@@ -42,12 +42,14 @@ the existing configuration file.
      else(NOT HAVE_CLOCK_GETTIME)
          list(APPEND ZM_BIN_LIBS "-lrt")
      endif(NOT HAVE_CLOCK_GETTIME)
-@@ -733,7 +735,7 @@
+@@ -891,8 +893,8 @@ else(zmconfgen_result EQUAL 0)
  endif(zmconfgen_result EQUAL 0)
  
  # Install zm.conf
 -install(FILES "${CMAKE_CURRENT_BINARY_DIR}/zm.conf" DESTINATION "${ZM_CONFIG_DIR}")
+-install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/conf.d/" DESTINATION "${ZM_CONFIG_SUBDIR}" PATTERN "*.in" EXCLUDE)
 +#install(FILES "${CMAKE_CURRENT_BINARY_DIR}/zm.conf" DESTINATION "${ZM_CONFIG_DIR}")
++#install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/conf.d/" DESTINATION "${ZM_CONFIG_SUBDIR}" PATTERN "*.in" EXCLUDE)
  
  # Uninstall target
  configure_file(

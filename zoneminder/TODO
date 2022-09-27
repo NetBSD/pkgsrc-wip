@@ -7,3 +7,10 @@
   push to pkgsrc
 
 2) evaluate patches and push upstream
+
+3) 1.32 notes:
+
+  https://github.com/ZoneMinder/zoneminder/releases/tag/1.32.0
+  https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
+
+  new deps: pecl-apcu, file-slurp, format-human-bytes
