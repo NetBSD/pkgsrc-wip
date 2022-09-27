@@ -185,6 +185,7 @@ ZM_REPLACE_PERL+=	scripts/zmcontrol.pl.in
 ZM_REPLACE_PERL+=	scripts/zmdc.pl.in
 ZM_REPLACE_PERL+=	scripts/zmfilter.pl.in
 ZM_REPLACE_PERL+=	scripts/zmpkg.pl.in
+ZM_REPLACE_PERL+=	scripts/zmstats.pl.in
 ZM_REPLACE_PERL+=	scripts/zmtelemetry.pl.in
 ZM_REPLACE_PERL+=	scripts/zmtrack.pl.in
 ZM_REPLACE_PERL+=	scripts/zmtrigger.pl.in
@@ -195,7 +196,7 @@ ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
 
 # ZoneMinder scripts needing interpreter patching
 REPLACE_PERL+=	${ZM_REPLACE_PERL}
-REPLACE_PERL+=	onvif/scripts/zmonvif-probe.pl
+REPLACE_PERL+=	scripts/zmonvif-probe.pl.in
 REPLACE_PERL+=	zmconfgen.pl.in
 
 #
