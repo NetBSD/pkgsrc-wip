@@ -1,0 +1,11 @@
+xpopple is the xpdf version 3 program - a Motif-based PDF viewer for X11
+
+Modified to use the Poppler library. This gives you the classic xpdf
+interface, with Poppler's updated rendering facilities.
+
+Why would you want to use xpopple rather than something like Evince?
+One advantage is the flexible resource-based customisability of the
+Motif interface and xpdf's commands system.
+Another advantage is the much better performance with DISPLAY redirected
+via network (compared to the Qt-based xdpf version 4, that is very slow
+in this case).

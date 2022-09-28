@@ -1,0 +1,31 @@
+$NetBSD$
+
+With poppler 22.04.0:
+error: 'class Links' has no member named 'getNumLinks'; did you mean 'getLinks'?
+
+Add check for libXpm.
+
+--- configure.ac.orig	2022-09-28 11:53:00.000000000 +0000
++++ configure.ac
+@@ -57,7 +57,7 @@ PKG_CHECK_EXISTS([poppler >= 22.03.0], [
+   AC_DEFINE([PDFDOC_PASSWORDS_OPTIONAL])
+   AC_DEFINE([PDFDOC_SAVEAS_GOOSTRING])
+ ])
+-PKG_CHECK_EXISTS([poppler >= 22.05.0], [
++PKG_CHECK_EXISTS([poppler >= 22.04.0], [
+   AC_DEFINE([LINKS_GETLINKS])
+ ])
+ 
+@@ -69,6 +69,12 @@ PKG_CHECK_MODULES([XT], [xt x11])
+ CPPFLAGS="$CPPFLAGS $XT_CFLAGS"
+ LIBS="$LIBS $XT_LIBS"
+ 
++PKG_CHECK_MODULES([XPM], [xpm x11], [
++  AC_DEFINE([HAVE_X11_XPM_H])
++])
++CPPFLAGS="$CPPFLAGS $XPM_CFLAGS"
++LIBS="$LIBS $XPM_LIBS"
++
+ AC_SEARCH_LIBS([pthread_mutexattr_settype], [pthread], [], [
+   AC_MSG_ERROR([pthreads is required])
+ ])

@@ -6084,6 +6084,7 @@ SUBDIR+=	xpilot-ng
 SUBDIR+=	xpipe
 SUBDIR+=	xplore
 SUBDIR+=	xplugd
+SUBDIR+=	xpopple
 SUBDIR+=	xqf
 SUBDIR+=	xrdp
 SUBDIR+=	xsb
