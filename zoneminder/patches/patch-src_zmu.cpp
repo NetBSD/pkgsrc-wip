@@ -25,13 +25,13 @@ time types
              if ( monitor && monitor->connect() ) {
                struct timeval tv = monitor->GetTimestamp();
 -              printf( "%4d%5d%6d%9d%11ld.%02ld%6d%6d%8" PRIu64 "%8.2f\n",
-+              printf( "%4d%5d%6d%9d%11jd.%02ld%6d%6d%8" PRIu64 "%8.2f\n",
++              printf( "%4d%5d%6d%9d%11jd.%02jd%6d%6d%8" PRIu64 "%8.2f\n",
                  monitor->Id(),
                  function,
                  monitor->GetState(),
                  monitor->GetTriggerState(),
 -                tv.tv_sec, tv.tv_usec/10000,
-+                (intmax_t) tv.tv_sec, tv.tv_usec/10000,
++                (intmax_t) tv.tv_sec, (intmax_t) tv.tv_usec/10000,
                  monitor->GetLastReadIndex(),
                  monitor->GetLastWriteIndex(),
                  monitor->GetLastEventId(),
@@ -40,13 +40,13 @@ time types
            } else {
              struct timeval tv = { 0, 0 };
 -            printf( "%4d%5d%6d%9d%11ld.%02ld%6d%6d%8d%8.2f\n",
-+            printf( "%4d%5d%6d%9d%11jd.%02ld%6d%6d%8d%8.2f\n",
++            printf( "%4d%5d%6d%9d%11jd.%02jd%6d%6d%8d%8.2f\n",
                mon_id,
                function,
                0,
                0,
 -              tv.tv_sec, tv.tv_usec/10000,
-+              (intmax_t) tv.tv_sec, tv.tv_usec/10000,
++              (intmax_t) tv.tv_sec, (intmax_t) tv.tv_usec/10000,
                0,
                0,
                0,
