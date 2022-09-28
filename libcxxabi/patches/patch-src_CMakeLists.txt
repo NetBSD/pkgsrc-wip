@@ -1,0 +1,29 @@
+$NetBSD$
+
+Make sure that libcxx headers are found, they are normally found
+using the target cxx-headers but, it does not exist since libcxxabi
+it's built alone, so have to create it.
+
+Link to -lunwind since the target unwind_shared does not exist
+due to that libcxxabi it's build alone.
+
+--- src/CMakeLists.txt.orig	2022-09-20 06:05:50.000000000 +0000
++++ src/CMakeLists.txt
+@@ -58,6 +58,8 @@ endif()
+ 
+ # Some files depend on libc++ internals.
+ include_directories("${LIBCXXABI_LIBCXX_PATH}/src")
++add_library(cxx-headers INTERFACE)
++target_include_directories(cxx-headers INTERFACE "${LIBCXXABI_LIBCXX_INCLUDES}")
+ 
+ if (LIBCXXABI_HAS_CXA_THREAD_ATEXIT_IMPL)
+   add_definitions(-DHAVE___CXA_THREAD_ATEXIT_IMPL)
+@@ -165,7 +167,7 @@ if (LIBCXXABI_USE_LLVM_UNWINDER)
+     target_link_libraries(cxxabi_shared_objects PUBLIC unwind_shared_objects) # propagate usage requirements
+     target_sources(cxxabi_shared_objects PUBLIC $<TARGET_OBJECTS:unwind_shared_objects>)
+   else()
+-    target_link_libraries(cxxabi_shared_objects PUBLIC unwind_shared)
++    target_link_libraries(cxxabi_shared_objects PUBLIC unwind)
+   endif()
+ endif()
+ target_link_libraries(cxxabi_shared_objects PRIVATE cxx-headers ${LIBCXXABI_BUILTINS_LIBRARY} ${LIBCXXABI_SHARED_LIBRARIES} ${LIBCXXABI_LIBRARIES})
