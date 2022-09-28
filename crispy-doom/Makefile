@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	crispy-doom-5.11.1
+DISTNAME=	crispy-doom-5.12.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	micha@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fabiangreffrath/crispy-doom/
 COMMENT=	Limit-removing enhanced-resolution Doom source port
 LICENSE=	gnu-gpl-v2

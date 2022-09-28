@@ -42,7 +42,10 @@ share/doc/crispy-heretic/INSTALL.heretic
 share/doc/crispy-hexen/CMDLINE.hexen
 share/doc/crispy-hexen/INSTALL.hexen
 share/icons/hicolor/128x128/apps/crispy-doom.png
+share/icons/hicolor/128x128/apps/crispy-heretic.png
+share/icons/hicolor/128x128/apps/crispy-hexen.png
 share/icons/hicolor/128x128/apps/crispy-setup.png
+share/icons/hicolor/128x128/apps/crispy-strife.png
 share/icons/hicolor/48x48/apps/crispy-doom.png
 share/metainfo/crispy-doom.metainfo.xml
 share/metainfo/crispy-heretic.metainfo.xml

@@ -13,3 +13,5 @@ Fails without Python:
 [X] Fix man page sections (4 vs. 5 for file format pages on different OS)
 [X] Fix man page default.cfg conflict with chocolate-doom
 [X] Rename man page heretic.cfg to crispy-heretic.cfg
+
+[ ] Test whether XDG stuff works as inteded
