@@ -2781,6 +2781,7 @@ SUBDIR+=	opera60-bin
 SUBDIR+=	ophcrack
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
+SUBDIR+=	oracle-jdk17
 SUBDIR+=	oranchelo-icon-theme
 SUBDIR+=	orbifolder
 SUBDIR+=	orcania

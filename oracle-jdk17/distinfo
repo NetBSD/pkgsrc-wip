@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.17 2022/04/28 06:21:49 wiz Exp $
+
+BLAKE2s (jdk-17.0.4.1_linux-x64_bin.tar.gz) = ca5c7e93f295a78bba1c54c587b2126dfb8a6d21d85d85c5e7e9d44907b09a43
+SHA512 (jdk-17.0.4.1_linux-x64_bin.tar.gz) = 2f2d60fb9768d57261834b86827435ec74621ed030f2fc4b6365b5182860a124ee315430dbbe8232ab8af1803009467d6e4423da648e9a7fddbb00eb95a5c6d9
+Size (jdk-17.0.4.1_linux-x64_bin.tar.gz) = 181244275 bytes
