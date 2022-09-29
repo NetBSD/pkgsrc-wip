@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (akregator-20.12.3.tar.xz) = 92c903fe9e9322339c8d7e773cc8c6290fc78d1f
-SHA512 (akregator-20.12.3.tar.xz) = f223c45fb63a844a1f662c3a77a1f6d23a9b0f8de738fd3a0a88379a82c1be4343536f6ae11856839b03406181ed1bc42cee8ab2cb1ff2515a74a2adb2327ad7
-Size (akregator-20.12.3.tar.xz) = 2206188 bytes
+BLAKE2s (akregator-22.08.1.tar.xz) = bcff4afbacf8b2b06065c58670ebfcc7778882fa13c228c5912259947163e576
+SHA512 (akregator-22.08.1.tar.xz) = 7054568ad9d74054e764bf941ac56360fdf4ea9e72489ed102d7d9956ef5cfc6866d6494a720ca128ad48469b4db4b3827d5c0f15b6d081d5c0de680fbae3ea3
+Size (akregator-22.08.1.tar.xz) = 2253940 bytes
