@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (kontactinterface-20.12.3.tar.xz) = 4dfa4d7b1c62ac93202fcff45a76ee7313ffad12
-SHA512 (kontactinterface-20.12.3.tar.xz) = 619b68a856e14795241e814cd148660477c320a10ee26f198aff83f0828861b718dec542cc28c161de0a771c5b36c4241585d2e67c17959ad04def346438b71b
-Size (kontactinterface-20.12.3.tar.xz) = 36056 bytes
+BLAKE2s (kontactinterface-22.08.1.tar.xz) = 4aed70e43bb2d9521da12870423bf477ef5356d3c97d4a4395cca8f71c09f8c3
+SHA512 (kontactinterface-22.08.1.tar.xz) = ba65af578afceba7c13bf3453144043861494e91082ebf78a0b84f452509684c79d8d82840d4530c52a2ed237137e8f8ae3680dff80e70d42f3e42c2af3df4da
+Size (kontactinterface-22.08.1.tar.xz) = 40512 bytes
