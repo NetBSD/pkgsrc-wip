@@ -2,9 +2,8 @@
 bin/contactprintthemeeditor
 bin/contactthemeeditor
 bin/headerthemeeditor
-lib/libgrantleethemeeditor.so
 lib/libgrantleethemeeditor.so.5
-lib/libgrantleethemeeditor.so.5.16.3
+lib/libgrantleethemeeditor.so.5.21.1
 share/applications/org.kde.contactprintthemeeditor.desktop
 share/applications/org.kde.contactthemeeditor.desktop
 share/applications/org.kde.headerthemeeditor.desktop
@@ -45,6 +44,10 @@ share/doc/HTML/pt_BR/contactthemeeditor/index.cache.bz2
 share/doc/HTML/pt_BR/contactthemeeditor/index.docbook
 share/doc/HTML/pt_BR/headerthemeeditor/index.cache.bz2
 share/doc/HTML/pt_BR/headerthemeeditor/index.docbook
+share/doc/HTML/ru/contactthemeeditor/index.cache.bz2
+share/doc/HTML/ru/contactthemeeditor/index.docbook
+share/doc/HTML/ru/headerthemeeditor/index.cache.bz2
+share/doc/HTML/ru/headerthemeeditor/index.docbook
 share/doc/HTML/sv/contactthemeeditor/index.cache.bz2
 share/doc/HTML/sv/contactthemeeditor/index.docbook
 share/doc/HTML/sv/headerthemeeditor/index.cache.bz2
@@ -57,6 +60,9 @@ share/locale/ar/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/ar/LC_MESSAGES/contactthemeeditor.mo
 share/locale/ar/LC_MESSAGES/headerthemeeditor.mo
 share/locale/ar/LC_MESSAGES/libgrantleethemeeditor.mo
+share/locale/bg/LC_MESSAGES/contactprintthemeeditor.mo
+share/locale/bg/LC_MESSAGES/contactthemeeditor.mo
+share/locale/bg/LC_MESSAGES/headerthemeeditor.mo
 share/locale/bg/LC_MESSAGES/libgrantleethemeeditor.mo
 share/locale/bs/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/bs/LC_MESSAGES/contactthemeeditor.mo

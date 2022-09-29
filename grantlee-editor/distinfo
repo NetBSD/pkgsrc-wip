@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (grantlee-editor-20.12.3.tar.xz) = a2fce8186d379d2f24379da9e0f33d2e13b7ff18
-SHA512 (grantlee-editor-20.12.3.tar.xz) = 7e601b8f180e502f639ee6fc62fea45c383602a8d9732034ffb5a14d27bf4ec47fe5115e09eb8bca6ba039fa703765fe57aab9b5221c70e05deac2438dcf2fbb
-Size (grantlee-editor-20.12.3.tar.xz) = 107424 bytes
+BLAKE2s (grantlee-editor-22.08.1.tar.xz) = 5a9a20ab0bc58e64adb5c16b2e7e0b046dc8a03c358a10cd625ed1f0a97e2773
+SHA512 (grantlee-editor-22.08.1.tar.xz) = 7a1f6076fc3c0f55ca0c96ef896a9019a29573e6897bc0d8db0ad89616e3b7b5fda36eb8f863a38294614fdb6a3401fe73e4e767d2262e6bbf83f8f0122bcd90
+Size (grantlee-editor-22.08.1.tar.xz) = 112736 bytes
