@@ -19,6 +19,7 @@ DEPENDS+=	milou>=${PLASMAVER}:../../wip/milou
 DEPENDS+=	plasma-integration>=${PLASMAVER}:../../wip/plasma-integration
 
 USE_TOOLS+=	gmake msgmerge pkg-config
+GCC_REQD+=	10	# default member initializers for bit-fields in kcms/lookandfeel/lookandfeelmanager.h
 
 #CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
@@ -89,4 +90,5 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../x11/kxmlgui/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
+#.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

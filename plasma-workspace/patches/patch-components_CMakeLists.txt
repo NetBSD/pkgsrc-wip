@@ -1,0 +1,14 @@
+$NetBSD$
+
+Need newer kwin than 5.12.5 for virtualkeyboard
+
+--- components/CMakeLists.txt.orig	2022-07-11 11:02:54.000000000 +0000
++++ components/CMakeLists.txt
+@@ -4,6 +4,6 @@ install(DIRECTORY workspace/ DESTINATION
+ install(DIRECTORY dialogs/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/workspace/dialogs)
+ add_subdirectory(containmentlayoutmanager)
+ add_subdirectory(shellprivate)
+-add_subdirectory(keyboardlayout)
++#add_subdirectory(keyboardlayout)
+ add_subdirectory(sessionsprivate)
+ add_subdirectory(lookandfeelqml)
