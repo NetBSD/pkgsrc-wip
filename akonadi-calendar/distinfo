@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (akonadi-calendar-20.12.3.tar.xz) = ad74fba30d308f3adb9f691aa88bc6b0a2fa00ae
-SHA512 (akonadi-calendar-20.12.3.tar.xz) = 739a7896d457283f92f94e022139edfc22e80383724818bdc457128d1c952f4024ec5e3c91a444c48977d1c8932c60f5b90bda7dd4dddc82fce7ede5bb04c89b
-Size (akonadi-calendar-20.12.3.tar.xz) = 342788 bytes
+BLAKE2s (akonadi-calendar-22.08.1.tar.xz) = e370e95d510036a8b0b435dafdd880077c43e81ed51bfac462c99f4604ff39fe
+SHA512 (akonadi-calendar-22.08.1.tar.xz) = 7d9ee5bc8bc030c50eca6ec10cd406d622478f84a06cccb09ff08269693e96b8d3560954bec23006216dbab55e4cd406ed896f63e5de2cdbe9144b05ee3b40d6
+Size (akonadi-calendar-22.08.1.tar.xz) = 394932 bytes
