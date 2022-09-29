@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2016/01/10 20:01:05 markd Exp $
 
 DISTNAME=	libksysguard-${PLASMAVER}
-PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://userbase.kde.org/KSysGuard
@@ -13,6 +12,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
+USE_LANGUAGES+=	c++20
+GCC_REQD+=	10
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
@@ -34,5 +35,6 @@ INSTALLATION_DIRS+=	share/examples/libksysguard
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

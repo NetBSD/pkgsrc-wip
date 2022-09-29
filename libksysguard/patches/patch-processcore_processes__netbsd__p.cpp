@@ -2,18 +2,18 @@ $NetBSD: patch-libs_ksysguard_processcore_processes__netbsd__p.cpp,v 1.1 2013/01
 
 No more sys/user.h in netbsd.
 
---- processcore/processes_netbsd_p.cpp.orig	2019-07-30 10:27:02.000000000 +0000
+--- processcore/processes_netbsd_p.cpp.orig	2022-07-11 10:53:39.000000000 +0000
 +++ processcore/processes_netbsd_p.cpp
-@@ -29,7 +29,7 @@
- #include <sys/param.h>
+@@ -20,7 +20,7 @@
+ #include <sys/stat.h>
  #include <sys/sysctl.h>
  #include <sys/types.h>
 -#include <sys/user.h>
 +#include <sys/resource.h>
- #include <sys/stat.h>
- #include <signal.h>
  #include <unistd.h>
-@@ -102,7 +102,7 @@ void ProcessesLocal::Private::readProcSt
+ 
+ namespace KSysGuard
+@@ -92,7 +92,7 @@ void ProcessesLocal::Private::readProcSt
      process->setEgid(p->p_gid);
      process->setTracerpid(-1);
  
@@ -22,7 +22,7 @@ No more sys/user.h in netbsd.
  }
  
  void ProcessesLocal::Private::readProcStat(struct kinfo_proc2 *p, Process *ps)
-@@ -167,11 +167,11 @@ bool ProcessesLocal::Private::readProcCm
+@@ -156,11 +156,11 @@ bool ProcessesLocal::Private::readProcCm
      if ((argv = kvm_getargv2(kd, p, 256)) == NULL)
          return false;
  
@@ -31,9 +31,9 @@ No more sys/user.h in netbsd.
  
      while (*argv) {
 -        command += *argv;
--	command += " ";
+-        command += " ";
 +        command += QString::fromUtf8(*argv);
-+	command += QString::fromUtf8(" ");
- 	argv++;
++        command += QString::fromUtf8(" ");
+         argv++;
      }
      process->setCommand(command.trimmed());
