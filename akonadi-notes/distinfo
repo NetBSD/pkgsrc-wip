@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (akonadi-notes-20.12.3.tar.xz) = 16212b85bc9d21f48b09e8978210ad90c6b749ff
-SHA512 (akonadi-notes-20.12.3.tar.xz) = 100d26caa3e8ace0d58c58ba58a71f301d9979c86dcd993e43d6bac63ccded76e063d942f86533ea4da20d6657eb9992321c83ec73ed0f5817aff6ce6c90d812
-Size (akonadi-notes-20.12.3.tar.xz) = 22876 bytes
+BLAKE2s (akonadi-notes-22.08.1.tar.xz) = b1c31f420011d2916bd456a8af0f4d890b3b0b1f1b7c2ed5758346212977b126
+SHA512 (akonadi-notes-22.08.1.tar.xz) = 04b1fafded2201d10d4ef80a67d336cf9b45645825885630597b6935f3a0301ac35e26d89aa2001cdfdedcec42c4aa27f46f131cef081753cc400013096f0250
+Size (akonadi-notes-22.08.1.tar.xz) = 27420 bytes
