@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (akonadi-import-wizard-20.12.3.tar.xz) = 23f773c3958247692d407f4d50593ecb9a6e640f
-SHA512 (akonadi-import-wizard-20.12.3.tar.xz) = 8b35a37617347c39ef4c76eaec8e3a982d985e6bd41b6219ab353542a82168b6bb46f01fb383bf02ef2819c51a60b86b837e126a23415a8bbb025b27bfabef2d
-Size (akonadi-import-wizard-20.12.3.tar.xz) = 506664 bytes
+BLAKE2s (akonadi-import-wizard-22.08.1.tar.xz) = f45b121065b38bc4fa87c7635d6e8e56c2648afd707d508f6c81ec464c245440
+SHA512 (akonadi-import-wizard-22.08.1.tar.xz) = 1f6506cf33c64495b0e783adc53c062bcbfc05b99941e87754e97fedfe6d40bc2c721eb9ec21961ee24bd86ca94fe3dac0ede4c0d363b06b962e9c2c87de6897
+Size (akonadi-import-wizard-22.08.1.tar.xz) = 512876 bytes
