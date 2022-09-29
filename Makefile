@@ -1993,6 +1993,7 @@ SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lanq
 SUBDIR+=	lasi
+SUBDIR+=	layer-shell-qt
 SUBDIR+=	lbt
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc

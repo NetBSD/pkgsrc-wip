@@ -1,0 +1,14 @@
+@comment $NetBSD$
+include/LayerShellQt/Shell
+include/LayerShellQt/Window
+include/LayerShellQt/layershellqt_export.h
+include/LayerShellQt/shell.h
+include/LayerShellQt/window.h
+lib/cmake/LayerShellQt/LayerShellQtConfig.cmake
+lib/cmake/LayerShellQt/LayerShellQtConfigVersion.cmake
+lib/cmake/LayerShellQt/LayerShellQtTargets-noconfig.cmake
+lib/cmake/LayerShellQt/LayerShellQtTargets.cmake
+lib/libLayerShellQtInterface.so
+lib/libLayerShellQtInterface.so.5
+lib/libLayerShellQtInterface.so.${PKGVERSION}
+qt5/plugins/wayland-shell-integration/liblayer-shell.so
