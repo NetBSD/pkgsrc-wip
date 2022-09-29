@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (messagelib-20.12.3.tar.xz) = 0347fbe3618e0a72a19c948d7ef62bbe6f54ca42
-SHA512 (messagelib-20.12.3.tar.xz) = bd7fbab82cc53d141e27e6148a9b957603beef508ed10786fe3052df94e27d23f424ea3cdf8a6c1aa412ecb999ec21c3b61705dcc29d85ece2ccfdf4c4ff159e
-Size (messagelib-20.12.3.tar.xz) = 10527968 bytes
+BLAKE2s (messagelib-22.08.1.tar.xz) = adde44733b9256b6ceaacfa89c386a50e621b9423d82f6c23af222e6b25a5f88
+SHA512 (messagelib-22.08.1.tar.xz) = f8109f99cabbf8f5a17276168fe916eb9bd7d40b8472aac0e97123ff63e4784891c3b96e2bdd6def8143e872f3c0413ef069df0815830a28de94b0a16090336e
+Size (messagelib-22.08.1.tar.xz) = 10762260 bytes
