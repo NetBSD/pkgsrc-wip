@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (grantleetheme-20.12.3.tar.xz) = ed434ce054904307ad16f2bd0030ebc0a39950ec
-SHA512 (grantleetheme-20.12.3.tar.xz) = 8daa07c7903dbff3b2435c35f31e8ff0fc7b7d29ca6f8f05473ef09331c0fc14bb18f419c575c2f4f4778fb6847f5f202b2a30d6e2d699bc57711ee8028f3ac1
-Size (grantleetheme-20.12.3.tar.xz) = 56540 bytes
+BLAKE2s (grantleetheme-22.08.1.tar.xz) = 2090c489f047752c040c3ce6d6602cb0769d7a0dd867785e5537a803f9b45472
+SHA512 (grantleetheme-22.08.1.tar.xz) = 5151a091db59544973efd3c6de6eb5efa6a6ed6863e71f967c63ff978d19bb721743343dcb8a2eb1989137c06b8b1fcca2f81bc6f69727a4854c18ecda11eeb0
+Size (grantleetheme-22.08.1.tar.xz) = 61960 bytes
