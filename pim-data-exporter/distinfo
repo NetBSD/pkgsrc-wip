@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pim-data-exporter-20.12.3.tar.xz) = 544570da725a659ae241ce9672458763f25d6936
-SHA512 (pim-data-exporter-20.12.3.tar.xz) = d9b96081967f6271908624b303fcb358ebabf90fad2aa731f2c0e67e421921f47dfbc054d59fbdea875c3719407a717c40fd708fe915baef179dbe22c3242129
-Size (pim-data-exporter-20.12.3.tar.xz) = 401632 bytes
+BLAKE2s (pim-data-exporter-22.08.1.tar.xz) = 3d5b544c653c831dc2b447ec9fbd8f52f9d829a9fb838c20a4f6f781e6318eaa
+SHA512 (pim-data-exporter-22.08.1.tar.xz) = 2acac60d3f5d1c107161c241c4660078f646ea69c6325ce546f38c4fbdca1c541c2671fde1cb699e6ebe44d0fbdc13e14a7fbccef088616355f36cdc19cf5184
+Size (pim-data-exporter-22.08.1.tar.xz) = 415852 bytes
