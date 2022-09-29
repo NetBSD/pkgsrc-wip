@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (khotkeys-5.18.5.tar.xz) = cc9ba61c87366f472f4a6db928f4e1faf8f4cc5e
-SHA512 (khotkeys-5.18.5.tar.xz) = 67e5d904127764e89d4a5c5d1c5fcc6ff0070d2a298f1032189dd3e9e17246482431ae651869d157625fc81caedee2a897947a6cb0bbe7508b5d76c61f5fca85
-Size (khotkeys-5.18.5.tar.xz) = 1854812 bytes
+BLAKE2s (khotkeys-5.24.6.tar.xz) = ddb2911b4a9b38a6195fd0dc72dfcaa84cd09f0378ae710967147ad5987c01f7
+SHA512 (khotkeys-5.24.6.tar.xz) = 444ca2231f612a8f04e3a983cdd56ac2cd2552ff37972aea8a8930bf5eb5c6de4059f6ee55f98b9a57412cbcbb60c67fee0b721b4fe036a503c3657937a57ab8
+Size (khotkeys-5.24.6.tar.xz) = 1855072 bytes
