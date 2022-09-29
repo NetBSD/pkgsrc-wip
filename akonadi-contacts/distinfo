@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (akonadi-contacts-20.12.3.tar.xz) = 55eec692655df5c0ee11414c71694404b08d7641
-SHA512 (akonadi-contacts-20.12.3.tar.xz) = 41f201d7e37e7570667f4ef6fa61972622301a11b1952a3558491b9263fa8890fa468e55048353ccbe8b4b12339c36352a5f2630dea36e083e932e9b8c045d6a
-Size (akonadi-contacts-20.12.3.tar.xz) = 414416 bytes
+BLAKE2s (akonadi-contacts-22.08.1.tar.xz) = 9dfe3183a92dbc8164892bd081af2e7663a52ccb13a821fbb96cea23144073c1
+SHA512 (akonadi-contacts-22.08.1.tar.xz) = 74de92e19277e6d4993975fb66c3ec2361bc6f10e02360a996f5c24b1c6159d6a042efb4239616c3a7a3152a947700d61932598d767b7de20eab9245b360051b
+Size (akonadi-contacts-22.08.1.tar.xz) = 427276 bytes
