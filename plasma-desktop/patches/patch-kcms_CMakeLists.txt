@@ -1,0 +1,15 @@
+$NetBSD$
+
+Need newer kwin than 5.12.5 for tablet
+
+--- kcms/CMakeLists.txt.orig	2022-07-11 10:55:42.000000000 +0000
++++ kcms/CMakeLists.txt
+@@ -30,7 +30,7 @@ add_subdirectory(kded)
+ add_subdirectory(runners)
+ add_subdirectory(spellchecking)
+ add_subdirectory(qtquicksettings)
+-add_subdirectory(tablet)
++#add_subdirectory(tablet)
+ 
+ add_subdirectory(workspaceoptions)
+ if (KF5Baloo_FOUND)

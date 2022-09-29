@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 .include "../../meta-pkgs/kde/plasma5.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
-DEPENDS+=	ksysguard>=${PLASMAVER}:../../wip/ksysguard
+#DEPENDS+=	ksysguard>=${PLASMAVER}:../../wip/ksysguard
 DEPENDS+=	kmenuedit>=${PLASMAVER}:../../wip/kmenuedit
 DEPENDS+=	polkit-kde-agent>=${PLASMAVER}:../../wip/polkit-kde-agent
 DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
@@ -19,7 +19,8 @@ USE_TOOLS+=	msgmerge pkg-config
 
 CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/plasma-desktop
 
-REPLACE_PYTHON+=	kcms/ksmserver/kconf_update/ksmserver_update_loginMode_value.py
+#REPLACE_PYTHON+=	kcms/ksmserver/kconf_update/ksmserver_update_loginMode_value.py
+CHECK_INTERPRETER_SKIP+=	share/kconf_update/*
 
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
@@ -31,8 +32,6 @@ SUBST_FILES.fix-moc+=	_KDE_build/*/*/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.js
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
-CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.fontinst.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.fontinst.conf
 CONF_FILES+=	${PREFIX}/share/examples/plasma-desktop/org.kde.kcontrol.kcmclock.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmclock.conf
 
