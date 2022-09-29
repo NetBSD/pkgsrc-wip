@@ -11,9 +11,11 @@ share/drkonqi/debuggers/internal/dbxrc
 share/drkonqi/debuggers/internal/gdbrc
 share/drkonqi/debuggers/internal/kdbgwinrc
 share/drkonqi/debuggers/internal/lldbrc
+share/drkonqi/gdb/preamble.py
 share/drkonqi/mappings
 share/locale/af/LC_MESSAGES/drkonqi5.mo
 share/locale/ar/LC_MESSAGES/drkonqi5.mo
+share/locale/az/LC_MESSAGES/drkonqi5.mo
 share/locale/be/LC_MESSAGES/drkonqi5.mo
 share/locale/bg/LC_MESSAGES/drkonqi5.mo
 share/locale/bn/LC_MESSAGES/drkonqi5.mo
