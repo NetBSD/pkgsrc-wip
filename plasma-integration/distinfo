@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (plasma-integration-5.18.5.tar.xz) = 6400d8d65baf05283ebe2bf94db4e50bcdedfd6d
-SHA512 (plasma-integration-5.18.5.tar.xz) = d217c49555ee17e3b18d006368ec7aa4d8585c05070bcf3a3c7e471b1c7dc830080d0405209979d8a27c7c2fc2adcd3d248e595f43f0b4a2928683f93c6d4b48
-Size (plasma-integration-5.18.5.tar.xz) = 57656 bytes
+BLAKE2s (plasma-integration-5.24.6.tar.xz) = a499984ec63707a0b7c7542b883ceea83b813fa23d2d2f94c857f53a9b80af17
+SHA512 (plasma-integration-5.24.6.tar.xz) = 9ed2e42d5705f8680321377635b204bf06548869e661ea1c42b07dc12ac707f57e5287c987d50d9e31a61ab4e751841a307f1db0a377ca332e1fb602cc9bca56
+Size (plasma-integration-5.24.6.tar.xz) = 83748 bytes

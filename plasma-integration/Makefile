@@ -14,7 +14,7 @@ DEPENDS+=	Hack-ttf-[0-9]*:../../fonts/Hack-ttf
 DEPENDS+=	breeze-[0-9]*:../../wip/breeze
 DEPENDS+=	qqc2-desktop-style-[0-9]*:../../x11/qqc2-desktop-style
 
-USE_TOOLS+=	msgmerge
+USE_TOOLS+=	msgmerge pkg-config
 
 REPLACE_PERL+=	src/platformtheme/*.pl
 
