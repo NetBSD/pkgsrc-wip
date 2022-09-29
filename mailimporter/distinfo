@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mailimporter-20.12.3.tar.xz) = 4da34f63c522848945802f4e5f1b22b5a9f2eefb
-SHA512 (mailimporter-20.12.3.tar.xz) = 2952c7f7bba61dc7e36bc877516aa6d46c5ec75b998f2f080a5d40d7f95ee553c97b8cc950a36b03929a57063b7c9899dc997e3397fd574c0278b01ffe2b4994
-Size (mailimporter-20.12.3.tar.xz) = 548588 bytes
+BLAKE2s (mailimporter-22.08.1.tar.xz) = 79d93f385e4d472b22a2ef54a8956dcb5397ff559adb443db83dc4e029550ae8
+SHA512 (mailimporter-22.08.1.tar.xz) = c51cd36a1bdb1920618bcbc0391dd29658e3da6c172c136e1d06c606aae2697a70c7573733c0913fce1dcb1904448e7721f2d101178e4aaa04f29f5255e09b1d
+Size (mailimporter-22.08.1.tar.xz) = 559528 bytes
