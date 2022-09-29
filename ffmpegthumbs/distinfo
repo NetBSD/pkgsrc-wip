@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (ffmpegthumbs-20.12.3.tar.xz) = b00f563770ae5e4d0598e6c67e0c56d34275e8bd
-SHA512 (ffmpegthumbs-20.12.3.tar.xz) = d81f89fa3c26982d9f7e84f76b2deb562308467376b5f01af9acda1bc2d62e21cc3054afe5bcbad5d098e3ecf79d9e9b0adee7e719127aaab228ee8efa190aad
-Size (ffmpegthumbs-20.12.3.tar.xz) = 34088 bytes
+BLAKE2s (ffmpegthumbs-22.08.1.tar.xz) = bc42871bb547b9f014a381a5e4e17de52793b5f12fc097debd420ef84bd4acbd
+SHA512 (ffmpegthumbs-22.08.1.tar.xz) = abe8250c24c1b8742742aa8508c48060ea1523b1d57c3f8ba43193e053bb1a6c856bf0efa15450a0688d51944bcb64bf6b6ad82e0af320d2f4f9c82a9c19ec68
+Size (ffmpegthumbs-22.08.1.tar.xz) = 30776 bytes
