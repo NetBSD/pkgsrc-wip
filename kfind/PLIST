@@ -49,6 +49,8 @@ share/doc/HTML/sv/kfind/index.cache.bz2
 share/doc/HTML/sv/kfind/index.docbook
 share/doc/HTML/uk/kfind/index.cache.bz2
 share/doc/HTML/uk/kfind/index.docbook
+share/doc/HTML/zh_CN/kfind/index.cache.bz2
+share/doc/HTML/zh_CN/kfind/index.docbook
 share/icons/hicolor/128x128/apps/kfind.png
 share/icons/hicolor/16x16/apps/kfind.png
 share/icons/hicolor/22x22/apps/kfind.png
@@ -58,6 +60,8 @@ share/icons/hicolor/64x64/apps/kfind.png
 share/icons/hicolor/scalable/apps/kfind.svgz
 share/locale/ar/LC_MESSAGES/kfind.mo
 share/locale/ast/LC_MESSAGES/kfind.mo
+share/locale/az/LC_MESSAGES/kfind.mo
+share/locale/be/LC_MESSAGES/kfind.mo
 share/locale/bg/LC_MESSAGES/kfind.mo
 share/locale/bs/LC_MESSAGES/kfind.mo
 share/locale/ca/LC_MESSAGES/kfind.mo
@@ -102,13 +106,18 @@ share/locale/pt/LC_MESSAGES/kfind.mo
 share/locale/pt_BR/LC_MESSAGES/kfind.mo
 share/locale/ro/LC_MESSAGES/kfind.mo
 share/locale/ru/LC_MESSAGES/kfind.mo
+share/locale/se/LC_MESSAGES/kfind.mo
 share/locale/sk/LC_MESSAGES/kfind.mo
 share/locale/sl/LC_MESSAGES/kfind.mo
+share/locale/sq/LC_MESSAGES/kfind.mo
 share/locale/sr/LC_MESSAGES/kfind.mo
 share/locale/sv/LC_MESSAGES/kfind.mo
+share/locale/ta/LC_MESSAGES/kfind.mo
+share/locale/tg/LC_MESSAGES/kfind.mo
 share/locale/tr/LC_MESSAGES/kfind.mo
 share/locale/ug/LC_MESSAGES/kfind.mo
 share/locale/uk/LC_MESSAGES/kfind.mo
+share/locale/vi/LC_MESSAGES/kfind.mo
 share/locale/wa/LC_MESSAGES/kfind.mo
 share/locale/zh_CN/LC_MESSAGES/kfind.mo
 share/locale/zh_TW/LC_MESSAGES/kfind.mo

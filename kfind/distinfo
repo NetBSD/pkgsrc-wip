@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (kfind-20.12.3.tar.xz) = 047dba25035fc22ad6d0754a42f5ddb6ad29b13b
-SHA512 (kfind-20.12.3.tar.xz) = e66ef911138c844ddad606b31c9075b8b0d3984315e52f95beb6f3035d8ddbf16a40bc1390d4d7ef1e93eaf27aeb4d1b1566db3db0d1b26691c8dea443b0eca9
-Size (kfind-20.12.3.tar.xz) = 278656 bytes
+BLAKE2s (kfind-22.08.1.tar.xz) = 2de15a8102b054a7984a1a1a0cccfc1b4dc52a29ffd1794524c0681859daf479
+SHA512 (kfind-22.08.1.tar.xz) = 26a82dc2c1409267d0cabd50c96c392c3f66459f1060184ede6e6318ebfde39ceb4289af9b9a475d54e8d60843991c4bb32aba6244777d9581ec8844a6c55b05
+Size (kfind-22.08.1.tar.xz) = 290104 bytes
