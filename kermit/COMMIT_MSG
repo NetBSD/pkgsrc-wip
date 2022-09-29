@@ -1,0 +1,5 @@
+comms/kermit: Update to 10.0
+
+Upstream changes (since 9.0.302) are basically dealing with more
+recent versions of dependencies and structural cleanup.  Notably one
+can build without telnet/etc. support.

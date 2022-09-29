@@ -5,7 +5,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
 * Don't install the mysterious kermit-sshsub
 * Don't install kermit.ini in bindir, because it doesn't belong there
   and because (yay!) it is empty, and people don't need empty templates
-
+* Use DESTDIR harder when installing
 * Get K5LIB, K5INC, SSLLIB and SSLINC from pkgsrc.
 * s/-lgssapi/-lgssapi_krb5/ on netbsd+krb5* 
 * Add $(LIBS) to link command on solaris2xg+openssl+zlib+pam+shadow

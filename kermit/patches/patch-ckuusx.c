@@ -1,14 +1,19 @@
 $NetBSD: patch-am,v 1.1 2011/05/14 19:27:53 hans Exp $
 
---- ckuusx.c.orig	2020-09-19 19:52:28.000000000 +0000
+This patch needs an explanation, and perhaps trying to build without it.
+
+Not yet submitted upstream.
+
+--- ckuusx.c.orig	2022-09-26 17:53:45.000000000 +0000
 +++ ckuusx.c
-@@ -79,9 +79,6 @@ char * tgoto (const char *, int, int);
- _PROTOTYP(char * os2_gethostname, (void));
- #define getpid _getpid
- #endif /* OS2 */
+@@ -99,10 +99,6 @@ _PROTOTYP(int ck_tn_encrypting, (void));
+ _PROTOTYP(int ck_tn_decrypting, (void));
+ #endif /* CK_ENCRYPTION */
+ 
 -#ifdef BSD44
 -#include <errno.h>
 -#endif /* BSD44 */
- 
+-
  extern xx_strp xxstring;
  
+ #ifdef OS2
