@@ -1,9 +1,19 @@
 $NetBSD$
 
-Patches from Fabian Vogt to retry starting the display server
+Fix compilation once QTBUG-88431 got fixed
+Also patches from Fabian Vogt to retry starting the display server
 
 --- src/daemon/XorgDisplayServer.cpp.orig	2020-11-03 09:49:10.000000000 +0000
 +++ src/daemon/XorgDisplayServer.cpp
+@@ -65,7 +65,7 @@ namespace SDDM {
+         // create a random hexadecimal number
+         const char *digits = "0123456789abcdef";
+         for (int i = 0; i < 32; ++i)
+-            m_cookie[i] = digits[dis(gen)];
++            m_cookie[i] = QLatin1Char(digits[dis(gen)]);
+     }
+ 
+     XorgDisplayServer::~XorgDisplayServer() {
 @@ -118,6 +118,11 @@ namespace SDDM {
          if (m_started)
              return false;
