@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (kdecoration-5.18.5.tar.xz) = 1f56615263efe74de7cb48dd87eed9852a0cdaba
-SHA512 (kdecoration-5.18.5.tar.xz) = ecbeeea7e2239999995facee481794bb35da359b3e64c0b4e10dd7b0d18d8cd43a6a13ff216ed963cd7f59a78b0b190ab994e6d30f7b84572a8cf69a74abb164
-Size (kdecoration-5.18.5.tar.xz) = 43884 bytes
+BLAKE2s (kdecoration-5.24.6.tar.xz) = cffee428fcf8c391889d2702c6fbfecd4b144da8646ed2c306b0e5626dc845a8
+SHA512 (kdecoration-5.24.6.tar.xz) = 2fa95acac5dd77415f43eb74c4043e1460e33b4b7ac9f6583bf4d8b6c6222b5bed02ee51b2f42a499834a30cfd2371fe8b22cb5e7ba679760eaf3f15d83bb2de
+Size (kdecoration-5.24.6.tar.xz) = 48864 bytes
