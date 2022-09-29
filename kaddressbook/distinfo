@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (kaddressbook-20.12.3.tar.xz) = 1f26e9b743eab5dc525fca5a388bb767060c655e
-SHA512 (kaddressbook-20.12.3.tar.xz) = 6f8b069222734fd3d42078d1bb2401db8dc4d8697c0383e49c47479b559fd7776b0ae7f7f757e2e767c2a173b1738c7ba8adda928481ac947dbfd404fdaa0434
-Size (kaddressbook-20.12.3.tar.xz) = 3263556 bytes
+BLAKE2s (kaddressbook-22.08.1.tar.xz) = 1dd338fb050c7675addd21452c8a17493b089bac0527912c11954133d55d0eb1
+SHA512 (kaddressbook-22.08.1.tar.xz) = 829d72069322afcfd0425bbeb0087bf44a9593bb88a59442d3b82a0340582b1a250e30cde18cdae7aaa5a694c0782c7c74cfbce8991da5ee04abd7ba991992d4
+Size (kaddressbook-22.08.1.tar.xz) = 3334892 bytes
