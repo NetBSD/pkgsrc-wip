@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pim-sieve-editor-20.12.3.tar.xz) = e21c3b398c8f47fdc1fce3af5c103f9a95e6ff2f
-SHA512 (pim-sieve-editor-20.12.3.tar.xz) = 27270916ec2c41e2222ed1f5248091b19e6569564f82ff56d75204c81a6ad1ea7c0d6dbc907e2dc4d1a02f032162ecc443915f936f1577b0245f1b40d52166e9
-Size (pim-sieve-editor-20.12.3.tar.xz) = 455152 bytes
+BLAKE2s (pim-sieve-editor-22.08.1.tar.xz) = e94632e9549978adc6424e738c1cebd63223ee9f68ac28b360abfdc6e45f4e8a
+SHA512 (pim-sieve-editor-22.08.1.tar.xz) = d19943b805336c247f3844d9afdc1468cc58e1d5a2584464d88b22982f95f558dccd6efc5c15c3f2a427d6a4285413520fbf50fc1da431ce7354fe6303246bc4
+Size (pim-sieve-editor-22.08.1.tar.xz) = 458256 bytes

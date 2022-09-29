@@ -1,7 +1,7 @@
 @comment $NetBSD$
 bin/sieveeditor
 lib/libsieveeditor.so.5
-lib/libsieveeditor.so.5.16.3
+lib/libsieveeditor.so.5.21.1
 share/applications/org.kde.sieveeditor.desktop
 share/config.kcfg/sieveeditorglobalconfig.kcfg
 share/doc/HTML/ca/sieveeditor/first-start.png
@@ -27,13 +27,15 @@ share/doc/HTML/pt/sieveeditor/index.cache.bz2
 share/doc/HTML/pt/sieveeditor/index.docbook
 share/doc/HTML/pt_BR/sieveeditor/index.cache.bz2
 share/doc/HTML/pt_BR/sieveeditor/index.docbook
+share/doc/HTML/ru/sieveeditor/index.cache.bz2
+share/doc/HTML/ru/sieveeditor/index.docbook
 share/doc/HTML/sv/sieveeditor/index.cache.bz2
 share/doc/HTML/sv/sieveeditor/index.docbook
 share/doc/HTML/uk/sieveeditor/index.cache.bz2
 share/doc/HTML/uk/sieveeditor/index.docbook
-share/kconf_update/sieveeditor-15.08-kickoff.sh
-share/kconf_update/sieveeditor.upd
 share/locale/ar/LC_MESSAGES/sieveeditor.mo
+share/locale/az/LC_MESSAGES/sieveeditor.mo
+share/locale/bg/LC_MESSAGES/sieveeditor.mo
 share/locale/bs/LC_MESSAGES/sieveeditor.mo
 share/locale/ca/LC_MESSAGES/sieveeditor.mo
 share/locale/ca@valencia/LC_MESSAGES/sieveeditor.mo
