@@ -48,7 +48,11 @@ share/icons/KDE_Classic/cursors/left_ptr_watch
 share/icons/KDE_Classic/cursors/left_side
 share/icons/KDE_Classic/cursors/move
 share/icons/KDE_Classic/cursors/n-resize
+share/icons/KDE_Classic/cursors/ne-resize
+share/icons/KDE_Classic/cursors/nesw-resize
 share/icons/KDE_Classic/cursors/not-allowed
+share/icons/KDE_Classic/cursors/nw-resize
+share/icons/KDE_Classic/cursors/nwse-resize
 share/icons/KDE_Classic/cursors/openhand
 share/icons/KDE_Classic/cursors/pirate
 share/icons/KDE_Classic/cursors/pointer
@@ -61,6 +65,7 @@ share/icons/KDE_Classic/cursors/row-resize
 share/icons/KDE_Classic/cursors/s-resize
 share/icons/KDE_Classic/cursors/sb_h_double_arrow
 share/icons/KDE_Classic/cursors/sb_v_double_arrow
+share/icons/KDE_Classic/cursors/se-resize
 share/icons/KDE_Classic/cursors/size_all
 share/icons/KDE_Classic/cursors/size_bdiag
 share/icons/KDE_Classic/cursors/size_fdiag
@@ -68,6 +73,7 @@ share/icons/KDE_Classic/cursors/size_hor
 share/icons/KDE_Classic/cursors/size_ver
 share/icons/KDE_Classic/cursors/split_h
 share/icons/KDE_Classic/cursors/split_v
+share/icons/KDE_Classic/cursors/sw-resize
 share/icons/KDE_Classic/cursors/text
 share/icons/KDE_Classic/cursors/top_left_corner
 share/icons/KDE_Classic/cursors/top_right_corner
@@ -127,7 +133,11 @@ share/icons/Oxygen_Black/cursors/left_ptr_watch
 share/icons/Oxygen_Black/cursors/link
 share/icons/Oxygen_Black/cursors/move
 share/icons/Oxygen_Black/cursors/n-resize
+share/icons/Oxygen_Black/cursors/ne-resize
+share/icons/Oxygen_Black/cursors/nesw-resize
 share/icons/Oxygen_Black/cursors/not-allowed
+share/icons/Oxygen_Black/cursors/nw-resize
+share/icons/Oxygen_Black/cursors/nwse-resize
 share/icons/Oxygen_Black/cursors/openhand
 share/icons/Oxygen_Black/cursors/pencil
 share/icons/Oxygen_Black/cursors/pirate
@@ -140,6 +150,7 @@ share/icons/Oxygen_Black/cursors/row-resize
 share/icons/Oxygen_Black/cursors/s-resize
 share/icons/Oxygen_Black/cursors/sb_h_double_arrow
 share/icons/Oxygen_Black/cursors/sb_v_double_arrow
+share/icons/Oxygen_Black/cursors/se-resize
 share/icons/Oxygen_Black/cursors/size_all
 share/icons/Oxygen_Black/cursors/size_bdiag
 share/icons/Oxygen_Black/cursors/size_fdiag
@@ -147,6 +158,7 @@ share/icons/Oxygen_Black/cursors/size_hor
 share/icons/Oxygen_Black/cursors/size_ver
 share/icons/Oxygen_Black/cursors/split_h
 share/icons/Oxygen_Black/cursors/split_v
+share/icons/Oxygen_Black/cursors/sw-resize
 share/icons/Oxygen_Black/cursors/text
 share/icons/Oxygen_Black/cursors/up_arrow
 share/icons/Oxygen_Black/cursors/v_double_arrow
@@ -202,7 +214,11 @@ share/icons/Oxygen_Blue/cursors/left_ptr_watch
 share/icons/Oxygen_Blue/cursors/link
 share/icons/Oxygen_Blue/cursors/move
 share/icons/Oxygen_Blue/cursors/n-resize
+share/icons/Oxygen_Blue/cursors/ne-resize
+share/icons/Oxygen_Blue/cursors/nesw-resize
 share/icons/Oxygen_Blue/cursors/not-allowed
+share/icons/Oxygen_Blue/cursors/nw-resize
+share/icons/Oxygen_Blue/cursors/nwse-resize
 share/icons/Oxygen_Blue/cursors/openhand
 share/icons/Oxygen_Blue/cursors/pencil
 share/icons/Oxygen_Blue/cursors/pirate
@@ -215,6 +231,7 @@ share/icons/Oxygen_Blue/cursors/row-resize
 share/icons/Oxygen_Blue/cursors/s-resize
 share/icons/Oxygen_Blue/cursors/sb_h_double_arrow
 share/icons/Oxygen_Blue/cursors/sb_v_double_arrow
+share/icons/Oxygen_Blue/cursors/se-resize
 share/icons/Oxygen_Blue/cursors/size_all
 share/icons/Oxygen_Blue/cursors/size_bdiag
 share/icons/Oxygen_Blue/cursors/size_fdiag
@@ -222,6 +239,7 @@ share/icons/Oxygen_Blue/cursors/size_hor
 share/icons/Oxygen_Blue/cursors/size_ver
 share/icons/Oxygen_Blue/cursors/split_h
 share/icons/Oxygen_Blue/cursors/split_v
+share/icons/Oxygen_Blue/cursors/sw-resize
 share/icons/Oxygen_Blue/cursors/text
 share/icons/Oxygen_Blue/cursors/up_arrow
 share/icons/Oxygen_Blue/cursors/v_double_arrow
@@ -277,7 +295,11 @@ share/icons/Oxygen_White/cursors/left_ptr_watch
 share/icons/Oxygen_White/cursors/link
 share/icons/Oxygen_White/cursors/move
 share/icons/Oxygen_White/cursors/n-resize
+share/icons/Oxygen_White/cursors/ne-resize
+share/icons/Oxygen_White/cursors/nesw-resize
 share/icons/Oxygen_White/cursors/not-allowed
+share/icons/Oxygen_White/cursors/nw-resize
+share/icons/Oxygen_White/cursors/nwse-resize
 share/icons/Oxygen_White/cursors/openhand
 share/icons/Oxygen_White/cursors/pencil
 share/icons/Oxygen_White/cursors/pirate
@@ -290,6 +312,7 @@ share/icons/Oxygen_White/cursors/row-resize
 share/icons/Oxygen_White/cursors/s-resize
 share/icons/Oxygen_White/cursors/sb_h_double_arrow
 share/icons/Oxygen_White/cursors/sb_v_double_arrow
+share/icons/Oxygen_White/cursors/se-resize
 share/icons/Oxygen_White/cursors/size_all
 share/icons/Oxygen_White/cursors/size_bdiag
 share/icons/Oxygen_White/cursors/size_fdiag
@@ -297,6 +320,7 @@ share/icons/Oxygen_White/cursors/size_hor
 share/icons/Oxygen_White/cursors/size_ver
 share/icons/Oxygen_White/cursors/split_h
 share/icons/Oxygen_White/cursors/split_v
+share/icons/Oxygen_White/cursors/sw-resize
 share/icons/Oxygen_White/cursors/text
 share/icons/Oxygen_White/cursors/up_arrow
 share/icons/Oxygen_White/cursors/v_double_arrow
@@ -352,7 +376,11 @@ share/icons/Oxygen_Yellow/cursors/left_ptr_watch
 share/icons/Oxygen_Yellow/cursors/link
 share/icons/Oxygen_Yellow/cursors/move
 share/icons/Oxygen_Yellow/cursors/n-resize
+share/icons/Oxygen_Yellow/cursors/ne-resize
+share/icons/Oxygen_Yellow/cursors/nesw-resize
 share/icons/Oxygen_Yellow/cursors/not-allowed
+share/icons/Oxygen_Yellow/cursors/nw-resize
+share/icons/Oxygen_Yellow/cursors/nwse-resize
 share/icons/Oxygen_Yellow/cursors/openhand
 share/icons/Oxygen_Yellow/cursors/pencil
 share/icons/Oxygen_Yellow/cursors/pirate
@@ -365,6 +393,7 @@ share/icons/Oxygen_Yellow/cursors/row-resize
 share/icons/Oxygen_Yellow/cursors/s-resize
 share/icons/Oxygen_Yellow/cursors/sb_h_double_arrow
 share/icons/Oxygen_Yellow/cursors/sb_v_double_arrow
+share/icons/Oxygen_Yellow/cursors/se-resize
 share/icons/Oxygen_Yellow/cursors/size_all
 share/icons/Oxygen_Yellow/cursors/size_bdiag
 share/icons/Oxygen_Yellow/cursors/size_fdiag
@@ -372,6 +401,7 @@ share/icons/Oxygen_Yellow/cursors/size_hor
 share/icons/Oxygen_Yellow/cursors/size_ver
 share/icons/Oxygen_Yellow/cursors/split_h
 share/icons/Oxygen_Yellow/cursors/split_v
+share/icons/Oxygen_Yellow/cursors/sw-resize
 share/icons/Oxygen_Yellow/cursors/text
 share/icons/Oxygen_Yellow/cursors/up_arrow
 share/icons/Oxygen_Yellow/cursors/v_double_arrow
@@ -427,7 +457,11 @@ share/icons/Oxygen_Zion/cursors/left_ptr_watch
 share/icons/Oxygen_Zion/cursors/link
 share/icons/Oxygen_Zion/cursors/move
 share/icons/Oxygen_Zion/cursors/n-resize
+share/icons/Oxygen_Zion/cursors/ne-resize
+share/icons/Oxygen_Zion/cursors/nesw-resize
 share/icons/Oxygen_Zion/cursors/not-allowed
+share/icons/Oxygen_Zion/cursors/nw-resize
+share/icons/Oxygen_Zion/cursors/nwse-resize
 share/icons/Oxygen_Zion/cursors/openhand
 share/icons/Oxygen_Zion/cursors/pencil
 share/icons/Oxygen_Zion/cursors/pirate
@@ -440,6 +474,7 @@ share/icons/Oxygen_Zion/cursors/row-resize
 share/icons/Oxygen_Zion/cursors/s-resize
 share/icons/Oxygen_Zion/cursors/sb_h_double_arrow
 share/icons/Oxygen_Zion/cursors/sb_v_double_arrow
+share/icons/Oxygen_Zion/cursors/se-resize
 share/icons/Oxygen_Zion/cursors/size_all
 share/icons/Oxygen_Zion/cursors/size_bdiag
 share/icons/Oxygen_Zion/cursors/size_fdiag
@@ -447,6 +482,7 @@ share/icons/Oxygen_Zion/cursors/size_hor
 share/icons/Oxygen_Zion/cursors/size_ver
 share/icons/Oxygen_Zion/cursors/split_h
 share/icons/Oxygen_Zion/cursors/split_v
+share/icons/Oxygen_Zion/cursors/sw-resize
 share/icons/Oxygen_Zion/cursors/text
 share/icons/Oxygen_Zion/cursors/up_arrow
 share/icons/Oxygen_Zion/cursors/v_double_arrow
@@ -466,6 +502,10 @@ share/locale/ar/LC_MESSAGES/liboxygenstyleconfig.mo
 share/locale/ar/LC_MESSAGES/oxygen_kdecoration.mo
 share/locale/ar/LC_MESSAGES/oxygen_style_config.mo
 share/locale/ar/LC_MESSAGES/oxygen_style_demo.mo
+share/locale/az/LC_MESSAGES/liboxygenstyleconfig.mo
+share/locale/az/LC_MESSAGES/oxygen_kdecoration.mo
+share/locale/az/LC_MESSAGES/oxygen_style_config.mo
+share/locale/az/LC_MESSAGES/oxygen_style_demo.mo
 share/locale/be/LC_MESSAGES/oxygen_style_config.mo
 share/locale/be/LC_MESSAGES/oxygen_style_demo.mo
 share/locale/be@latin/LC_MESSAGES/oxygen_style_config.mo
@@ -755,6 +795,7 @@ share/sounds/Oxygen-Sys-List-Match-No.ogg
 share/sounds/Oxygen-Sys-Log-In-Long.ogg
 share/sounds/Oxygen-Sys-Log-In-Short.ogg
 share/sounds/Oxygen-Sys-Log-In.ogg
+share/sounds/Oxygen-Sys-Log-Out-Long.ogg
 share/sounds/Oxygen-Sys-Log-Out.ogg
 share/sounds/Oxygen-Sys-Question.ogg
 share/sounds/Oxygen-Sys-Special.ogg

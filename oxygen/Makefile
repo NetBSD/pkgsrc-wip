@@ -9,8 +9,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-CONFLICTS+=	kde-workspace4-[0-9]*
-
 USE_TOOLS+=	msgmerge pkg-config
 
 .include "../../wip/kdecoration/buildlink3.mk"
