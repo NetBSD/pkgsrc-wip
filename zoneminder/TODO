@@ -14,3 +14,5 @@
   https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
 
   new deps: pecl-apcu, file-slurp, format-human-bytes
+
+  merge apache config
