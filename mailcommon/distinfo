@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mailcommon-20.12.3.tar.xz) = 4273d7c02d10527dc1668a640cc83cab37b53cc5
-SHA512 (mailcommon-20.12.3.tar.xz) = 348c8ed4db7e4db234adbb1eeadccb2cbc85e59d47fca607b834ead5b6f65a0c62b9c1396bd34ee4eae91cdb95b5fc52b9caedf3b23d5ffbd9efbafd6e56ed32
-Size (mailcommon-20.12.3.tar.xz) = 723876 bytes
+BLAKE2s (mailcommon-22.08.1.tar.xz) = 4e4fa428c204c425df163c09a16890d8dde0856112279b20d661ad6266833b8d
+SHA512 (mailcommon-22.08.1.tar.xz) = cf9b76407a7bdf85a3b39dddd5e2a2c940dc2601278800947c699f9182c157dc8a823c68ad78c5d6ab60870fb69c5bfd9656dfd60712dc245dc5a81dff19b336
+Size (mailcommon-22.08.1.tar.xz) = 745480 bytes
