@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (libgravatar-20.12.3.tar.xz) = 2698b9f6bfa12313263d75e117dc494ff651cd36
-SHA512 (libgravatar-20.12.3.tar.xz) = 920e4db3c9c2813cb02b8324772494b600865372ae6fa4ab7e883e013c837c04ce55b2b8cff74e00d89f7afd3eb7120e10e80640a139d06d05d0646be0fd6ee0
-Size (libgravatar-20.12.3.tar.xz) = 31160 bytes
+BLAKE2s (libgravatar-22.08.1.tar.xz) = 3379131ae0e056364e0f971731b8d3aadc9168b81bfd00a11e965d2cb3537530
+SHA512 (libgravatar-22.08.1.tar.xz) = 23eceb80d17d52772dfc5288ff173f57bb4b9aa2ee0cb1a4b74abc1f9ab3f8c221aad76adbea4394e05e3eb3d00e17c349525220252b1d836c89d2675887173b
+Size (libgravatar-22.08.1.tar.xz) = 35932 bytes
