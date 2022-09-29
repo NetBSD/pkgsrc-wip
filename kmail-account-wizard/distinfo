@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (kmail-account-wizard-20.12.3.tar.xz) = e9a1684dda3a077e95e5be95a85b9698ce8416ff
-SHA512 (kmail-account-wizard-20.12.3.tar.xz) = 08508bd5e28ee20953dac413f56a62cef49b4d5d8ce5c14cb8482feb9b5c9f2abd65473923b5035977112bfce320b1da466d98bb64f931dbb435406327b57ed5
-Size (kmail-account-wizard-20.12.3.tar.xz) = 160704 bytes
+BLAKE2s (kmail-account-wizard-22.08.1.tar.xz) = c95c8f1003640eaf70b6e8079d08f23996f38d4cda9c450ceae47d99b233c501
+SHA512 (kmail-account-wizard-22.08.1.tar.xz) = a0f279b86c58304fd404ae58c9971163efcde49ce634a47b7f84a6f8d80ee6df9e7adf2994c8112de24d1c8d49215662d1f19ec85c44e1cb24de8026c039d48e
+Size (kmail-account-wizard-22.08.1.tar.xz) = 174892 bytes
