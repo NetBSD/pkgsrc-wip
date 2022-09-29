@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pimcommon-20.12.3.tar.xz) = 243253a75cefcfb194940693e6d6e2150671a09b
-SHA512 (pimcommon-20.12.3.tar.xz) = f016b68ca9f768b7e3c506034f2d9d8e13e2325aa3291ded274cb8d71abcea521051180342a9b6ee4488ad54715da729adf48c0f2ab562030622dcc64de96df0
-Size (pimcommon-20.12.3.tar.xz) = 364304 bytes
+BLAKE2s (pimcommon-22.08.1.tar.xz) = 1eb11d90ef8a9f4bdbbd8d72d7503c39d6cc7ffddcbfa887596ae77c447c70aa
+SHA512 (pimcommon-22.08.1.tar.xz) = 5e8d522e98acc38736cf042288e94622d1912e7961b6d7b6ee68388cdbb05ec93895ace0783fdf9fadadae980bb8548e56888f3b071d8d892a60d279952334be
+Size (pimcommon-22.08.1.tar.xz) = 371092 bytes
