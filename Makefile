@@ -3274,6 +3274,7 @@ SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointtools-git
+SUBDIR+=	poke
 SUBDIR+=	poke-git
 SUBDIR+=	polarssl11
 SUBDIR+=	polipo
