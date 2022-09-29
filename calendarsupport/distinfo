@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (calendarsupport-20.12.3.tar.xz) = b894b42e2d281b6db9a61828bee6dbb24bbef2fe
-SHA512 (calendarsupport-20.12.3.tar.xz) = cfb2c1faabdeae1aee13d1f0a6e3b960b68e835e5f96dc86acb9af7c84d57516b3e7ab131e9f0dda12db41e26aabe65f02c4326c989ed2f54620325e6b11196e
-Size (calendarsupport-20.12.3.tar.xz) = 666200 bytes
+BLAKE2s (calendarsupport-22.08.1.tar.xz) = e5fb68cababfe69bd5ce7c3937db537338cf0ec88995a2b4262972de17ec8f0c
+SHA512 (calendarsupport-22.08.1.tar.xz) = 50d9d3f7587d915935f8670cd6f6d489f7051ab1d8214e73a40306bfb1f405f8f5e1a155fdd647e9cd6d240aef5d26ade91d899dc31626cd3e4dddc374da2d56
+Size (calendarsupport-22.08.1.tar.xz) = 751516 bytes
