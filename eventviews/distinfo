@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (eventviews-20.12.3.tar.xz) = d12a9a4ccea07358362e588b4933176be3c964ff
-SHA512 (eventviews-20.12.3.tar.xz) = a9f69fceffe8772cd059e5407660ef040bd9e4a4d8bff8ef4b4be3e18df989b74e4bb8c66b5d42251c89aeac9b1602fed08e75380e332182160c0a00c9a334cc
-Size (eventviews-20.12.3.tar.xz) = 444100 bytes
+BLAKE2s (eventviews-22.08.1.tar.xz) = e0f2057c7b128c4e998049edc5aac6746f353a16e65f56f6b52eb26e731b5f55
+SHA512 (eventviews-22.08.1.tar.xz) = 5d5f4695654ff96f0e412b5938659acac0031bf9224064c025e051412a97cf937e069a472472d5364bb4b2e5e75959a1c9a994b1a7bc45e0888b834e263d1504
+Size (eventviews-22.08.1.tar.xz) = 461660 bytes
