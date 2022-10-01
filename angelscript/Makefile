@@ -2,7 +2,7 @@
 
 PKGNAME=	angelscript-${VERSION}
 DISTNAME=	angelscript_${VERSION}
-VERSION=	2.32.0
+VERSION=	2.36.0
 CATEGORIES=	lang
 MASTER_SITES=	http://angelcode.com/angelscript/sdk/files/
 EXTRACT_SUFX=	.zip

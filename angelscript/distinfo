@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (angelscript_2.32.0.zip) = b5a31bbdcb7d1dbfec5cd504e655899f07474cd4
-SHA512 (angelscript_2.32.0.zip) = a88bd8e7e9f7116450ea8185642d7f6bfccf1530bff3630957839031aaed80075ecf27b9c551d4282051a8fb28d0b8814b56abf84a45d6008de2afa4019edf8e
-Size (angelscript_2.32.0.zip) = 1989108 bytes
+BLAKE2s (angelscript_2.36.0.zip) = 3c99212b9616a7c73a3bff585f5a408801d40789e424dde93b58fe7aaae62eb8
+SHA512 (angelscript_2.36.0.zip) = afd2b9096d0b62bc3d182d684fe34ddc8e9520af7734eea1f1a5c7d3439a28a1be7502faf692080cb0c4591799b7fea09fc8c4ccf25b8ec63a3d306e678682ff
+Size (angelscript_2.36.0.zip) = 2038804 bytes
 SHA1 (patch-angelscript_projects_gnuc_Makefile) = 23b2771459677fb7c05e32cc614f7da8bbb9c0d3
