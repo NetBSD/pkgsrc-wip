@@ -17,6 +17,7 @@
 # used by wip/qt6-qtremoteobjects/Makefile
 # used by wip/qt6-qtscxml/Makefile
 # used by wip/qt6-qtshadertools/Makefile
+# used by wip/qt6-qtspeech/Makefile
 # used by wip/qt6-qtsvg/Makefile
 # used by wip/qt6-qttools/Makefile
 # used by wip/qt6-qtwayland/Makefile
