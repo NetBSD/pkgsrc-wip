@@ -3,13 +3,14 @@ $NetBSD$
 * put io_adress.h first so that map from net/if.h on solaris won't confict
   with std::map on illumos
 
---- src/bin/agent/agent_lexer.ll.orig	2019-11-19 14:50:43.000000000 +0000
+--- src/bin/agent/agent_lexer.ll.orig   2022-09-30 18:57:27.637505322 +0000
 +++ src/bin/agent/agent_lexer.ll
-@@ -9,12 +9,12 @@
+@@ -9,13 +9,13 @@
  /* Generated files do not make clang static analyser so happy */
  #ifndef __clang_analyzer__
- 
+
 +#include <asiolink/io_address.h>
+ #include <cctype>
  #include <cerrno>
  #include <climits>
  #include <cstdlib>

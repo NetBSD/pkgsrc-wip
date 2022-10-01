@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kea-1.8.0
+DISTNAME=	kea-2.2.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/kea/${PKGVERSION_NOREV}/
 MASTER_SITES+=	ftp://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.isc.org/kea/
 COMMENT=	DHCP servers from ISC
 LICENSE=	mpl-2.0
 
+BUILD_DEFS+=	VARBASE
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++

@@ -8,7 +8,7 @@ $NetBSD$
   copyright ISC licensed under mpl-2.0
   https://www.mozilla.org/en-US/MPL/2.0/
 
---- src/lib/dhcp/iface_mgr_sun.cc.orig	2020-01-02 23:01:48.000000000 +0000
+--- src/lib/dhcp/iface_mgr_sun.cc.orig	2022-07-26 06:08:02.000000000 +0000
 +++ src/lib/dhcp/iface_mgr_sun.cc
 @@ -10,6 +10,7 @@
  
@@ -18,7 +18,7 @@ $NetBSD$
  #include <dhcp/pkt_filter_inet.h>
  #include <exceptions/exceptions.h>
  
-@@ -39,7 +40,12 @@ IfaceMgr::detectIfaces() {
+@@ -43,7 +44,12 @@ IfaceMgr::detectIfaces(bool update_only)
          isc_throw(Unexpected, "Network interfaces detection failed.");
      }
  
@@ -32,7 +32,7 @@ $NetBSD$
      IfaceLst::iterator iface_iter;
      IfaceLst ifaces;
  
-@@ -51,6 +57,7 @@ IfaceMgr::detectIfaces() {
+@@ -55,6 +61,7 @@ IfaceMgr::detectIfaces(bool update_only)
          if (!(ifindex = if_nametoindex(ifname))) {
              // Interface name does not have corresponding index ...
              freeifaddrs(iflist);
@@ -40,8 +40,8 @@ $NetBSD$
              isc_throw(Unexpected, "Interface " << ifname << " has no index");
          }
  
-@@ -62,9 +69,26 @@ IfaceMgr::detectIfaces() {
-         IfacePtr iface(new Iface(ifname, ifindex));
+@@ -72,9 +79,26 @@ IfaceMgr::detectIfaces(bool update_only)
+         }
          iface->setFlags(ifptr->ifa_flags);
          ifaces.insert(pair<string, IfacePtr>(ifname, iface));
 +
@@ -68,11 +68,11 @@ $NetBSD$
      for (ifptr = iflist; ifptr != 0; ifptr = ifptr->ifa_next) {
          iface_iter = ifaces.find(ifptr->ifa_name);
          if (iface_iter == ifaces.end()) {
-@@ -72,15 +96,7 @@ IfaceMgr::detectIfaces() {
+@@ -82,15 +106,7 @@ IfaceMgr::detectIfaces(bool update_only)
          }
          // Common byte pointer for following data
          const uint8_t * ptr = 0;
--        if(ifptr->ifa_addr->sa_family == AF_LINK) {
+-        if (ifptr->ifa_addr->sa_family == AF_LINK) {
 -            // HWAddr
 -            struct sockaddr_dl * ldata =
 -                reinterpret_cast<struct sockaddr_dl *>(ifptr->ifa_addr);
@@ -80,20 +80,20 @@ $NetBSD$
 -
 -            iface_iter->second->setHWType(ldata->sdl_type);
 -            iface_iter->second->setMac(ptr, ldata->sdl_alen);
--        } else if(ifptr->ifa_addr->sa_family == AF_INET6) {
-+        if(ifptr->ifa_addr->sa_family == AF_INET6) {
+-        } else if (ifptr->ifa_addr->sa_family == AF_INET6) {
++        if (ifptr->ifa_addr->sa_family == AF_INET6) {
              // IPv6 Addr
              struct sockaddr_in6 * adata =
                  reinterpret_cast<struct sockaddr_in6 *>(ifptr->ifa_addr);
-@@ -100,6 +116,7 @@ IfaceMgr::detectIfaces() {
+@@ -110,6 +126,7 @@ IfaceMgr::detectIfaces(bool update_only)
      }
  
      freeifaddrs(iflist);
 +    close(sock);
  
      // Interfaces registering
-     for(IfaceLst::const_iterator iface_iter = ifaces.begin();
-@@ -124,10 +141,17 @@ void Iface::setFlags(uint64_t flags) {
+     for (IfaceLst::const_iterator iface_iter = ifaces.begin();
+@@ -140,10 +157,17 @@ void Iface::setFlags(uint64_t flags) {
  }
  
  void
