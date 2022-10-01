@@ -1381,6 +1381,7 @@ SUBDIR+=	gorilla-audio
 SUBDIR+=	got-portable
 SUBDIR+=	gotify
 SUBDIR+=	goyq
+SUBDIR+=	gp-toric
 SUBDIR+=	gpak
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsdrive

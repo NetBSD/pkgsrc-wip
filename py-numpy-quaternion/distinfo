@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (numpy-quaternion-2020.9.5.14.42.2.tar.gz) = c9c055f4696ee11f14f2dd47a6dde0ca05e3c214
-SHA512 (numpy-quaternion-2020.9.5.14.42.2.tar.gz) = 17d57df2c194b8c229b0596c5b1546aee2ead54466b9575a2ecfb54434488e2dfd5ecf10b35ee6b80448594948a9279d5810f80efb1f932922b8b8abe9bfc9d8
-Size (numpy-quaternion-2020.9.5.14.42.2.tar.gz) = 54201 bytes
+BLAKE2s (numpy-quaternion-2022.4.2.tar.gz) = 620d2b731985a5afb7b442704e66a0ba2aad4fca4b700311c6d028ee58c7a7d9
+SHA512 (numpy-quaternion-2022.4.2.tar.gz) = 61d34cfabc51dabf3418f9027958e28a075648302fcc1a17caf2445c835f1201df9886b4ccb6078010a58d1a09f66e8e2e70241afdb85bf8683781ee6d860e81
+Size (numpy-quaternion-2022.4.2.tar.gz) = 60041 bytes
