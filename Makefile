@@ -5883,7 +5883,6 @@ SUBDIR+=	vdesk
 SUBDIR+=	vee
 SUBDIR+=	velero
 SUBDIR+=	verbiste
-SUBDIR+=	vgo
 SUBDIR+=	vhdtool-git
 SUBDIR+=	video-trimmer
 SUBDIR+=	vidrioclock
