@@ -181,6 +181,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractitemmodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qabstractproxymodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qandroidextras_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qanimationgroup_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qatomicscopedvaluerollback_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qbytearray_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qbytedata_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcalendarbackend_p.h
@@ -260,6 +261,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlibraryinfo_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocale_data_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocale_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocale_tools_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocaltime_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlockfile_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlocking_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qlogging_p.h
@@ -284,6 +286,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qnoncontiguousbytedevice_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qntdll_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qnumeric_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qobject_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qobject_p_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qoffsetstringarray_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qoperatingsystemversion_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qoperatingsystemversion_win_p.h
@@ -390,6 +393,7 @@ qt6/include/QtCore/QCborParserError
 qt6/include/QtCore/QCborStreamReader
 qt6/include/QtCore/QCborStreamWriter
 qt6/include/QtCore/QCborValue
+qt6/include/QtCore/QCborValueConstRef
 qt6/include/QtCore/QCborValueRef
 qt6/include/QtCore/QChar
 qt6/include/QtCore/QChildEvent
@@ -433,6 +437,7 @@ qt6/include/QtCore/QFileSystemWatcher
 qt6/include/QtCore/QFlag
 qt6/include/QtCore/QFlags
 qt6/include/QtCore/QFloat16
+qt6/include/QtCore/QForeach
 qt6/include/QtCore/QFunctionPointer
 qt6/include/QtCore/QFuture
 qt6/include/QtCore/QFutureInterface
@@ -467,12 +472,14 @@ qt6/include/QtCore/QJsonDocument
 qt6/include/QtCore/QJsonObject
 qt6/include/QtCore/QJsonParseError
 qt6/include/QtCore/QJsonValue
+qt6/include/QtCore/QJsonValueConstRef
 qt6/include/QtCore/QJsonValueRef
 qt6/include/QtCore/QKeyCombination
 qt6/include/QtCore/QKeyValueIterator
 qt6/include/QtCore/QLEInteger
 qt6/include/QtCore/QLatin1Char
 qt6/include/QtCore/QLatin1String
+qt6/include/QtCore/QLatin1StringView
 qt6/include/QtCore/QLibrary
 qt6/include/QtCore/QLibraryInfo
 qt6/include/QtCore/QLine
@@ -706,6 +713,7 @@ qt6/include/QtCore/QtPluginMetaDataFunction
 qt6/include/QtCore/q20algorithm.h
 qt6/include/QtCore/q20functional.h
 qt6/include/QtCore/q20iterator.h
+qt6/include/QtCore/q23functional.h
 qt6/include/QtCore/qabstractanimation.h
 qt6/include/QtCore/qabstracteventdispatcher.h
 qt6/include/QtCore/qabstractitemmodel.h
@@ -778,6 +786,7 @@ qt6/include/QtCore/qfileselector.h
 qt6/include/QtCore/qfilesystemwatcher.h
 qt6/include/QtCore/qflags.h
 qt6/include/QtCore/qfloat16.h
+qt6/include/QtCore/qforeach.h
 qt6/include/QtCore/qfunctions_vxworks.h
 qt6/include/QtCore/qfuture.h
 qt6/include/QtCore/qfuture_impl.h
@@ -797,6 +806,7 @@ qt6/include/QtCore/qiterable.h
 qt6/include/QtCore/qiterator.h
 qt6/include/QtCore/qjnienvironment.h
 qt6/include/QtCore/qjniobject.h
+qt6/include/QtCore/qjnitypes.h
 qt6/include/QtCore/qjsonarray.h
 qt6/include/QtCore/qjsondocument.h
 qt6/include/QtCore/qjsonobject.h
@@ -877,6 +887,8 @@ qt6/include/QtCore/qstring.h
 qt6/include/QtCore/qstringalgorithms.h
 qt6/include/QtCore/qstringbuilder.h
 qt6/include/QtCore/qstringconverter.h
+qt6/include/QtCore/qstringconverter_base.h
+qt6/include/QtCore/qstringfwd.h
 qt6/include/QtCore/qstringlist.h
 qt6/include/QtCore/qstringlistmodel.h
 qt6/include/QtCore/qstringliteral.h
@@ -888,6 +900,7 @@ qt6/include/QtCore/qsystemdetection.h
 qt6/include/QtCore/qsystemsemaphore.h
 qt6/include/QtCore/qt_windows.h
 qt6/include/QtCore/qtaggedpointer.h
+qt6/include/QtCore/qtconfigmacros.h
 qt6/include/QtCore/qtcore-config.h
 qt6/include/QtCore/qtcoreexports.h
 qt6/include/QtCore/qtcoreversion.h
@@ -905,6 +918,7 @@ qt6/include/QtCore/qtimezone.h
 qt6/include/QtCore/qtmetamacros.h
 qt6/include/QtCore/qtranslator.h
 qt6/include/QtCore/qtransposeproxymodel.h
+qt6/include/QtCore/qtsan_impl.h
 qt6/include/QtCore/qtypeinfo.h
 qt6/include/QtCore/qurl.h
 qt6/include/QtCore/qurlquery.h
@@ -912,6 +926,9 @@ qt6/include/QtCore/qutf8stringview.h
 qt6/include/QtCore/quuid.h
 qt6/include/QtCore/qvariant.h
 qt6/include/QtCore/qvariantanimation.h
+qt6/include/QtCore/qvarianthash.h
+qt6/include/QtCore/qvariantlist.h
+qt6/include/QtCore/qvariantmap.h
 qt6/include/QtCore/qvarlengtharray.h
 qt6/include/QtCore/qvector.h
 qt6/include/QtCore/qversionnumber.h
@@ -919,6 +936,7 @@ qt6/include/QtCore/qversiontagging.h
 qt6/include/QtCore/qwaitcondition.h
 qt6/include/QtCore/qwineventnotifier.h
 qt6/include/QtCore/qxmlstream.h
+qt6/include/QtCore/qxpfunctional.h
 ${PLIST.dbus}qt6/include/QtDBus/${PKGVERSION}/QtDBus/private/dbus_minimal_p.h
 ${PLIST.dbus}qt6/include/QtDBus/${PKGVERSION}/QtDBus/private/qdbus_symbols_p.h
 ${PLIST.dbus}qt6/include/QtDBus/${PKGVERSION}/QtDBus/private/qdbusabstractadaptor_p.h
@@ -1047,6 +1065,8 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaction_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qactiongroup_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qapplekeymapper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qastchandler_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbackingstoredefaultcompositor_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbackingstorerhisupport_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbasicvulkanplatforminstance_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qbezier_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qblendfunctions_p.h
@@ -1175,6 +1195,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrbtree_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrgba64_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhi_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhi_p_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhibackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhid3d11_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhid3d11_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhigles2_p.h
@@ -1183,8 +1204,6 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhimetal_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhimetal_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhinull_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhinull_p_p.h
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhiprofiler_p.h
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhiprofiler_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhivulkan_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhivulkan_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhivulkanext_p.h
@@ -1235,6 +1254,8 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qtx11extras_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qundostack_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qunixeventdispatcher_qpa_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvectorpath_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkandefaultinstance_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkaninstance_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvulkanwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qwasmlocalfileaccess_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qwindow_p.h
@@ -1251,7 +1272,6 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qwindowsuiawrapper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxbmhandler_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxdgnotificationproxy_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxkbcommon_p.h
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxlibeglintegration_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxpmhandler_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qzipreader_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qzipwriter_p.h
@@ -1265,6 +1285,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/uiapatternids_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/uiapropertyids_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/uiaserverinterfaces_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/uiatypes_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/vs_test_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformaccessibility.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformbackingstore.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/qpa/qplatformclipboard.h
@@ -1531,6 +1552,7 @@ qt6/include/QtGui/QtGuiVersion
 qt6/include/QtGui/qabstractfileiconprovider.h
 qt6/include/QtGui/qabstracttextdocumentlayout.h
 qt6/include/QtGui/qaccessible.h
+qt6/include/QtGui/qaccessible_base.h
 qt6/include/QtGui/qaccessiblebridge.h
 qt6/include/QtGui/qaccessibleobject.h
 qt6/include/QtGui/qaccessibleplugin.h
@@ -1742,6 +1764,7 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslconfiguration_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qssldiffiehellmanparameters_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslkey_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslpresharedkeyauthenticator_p.h
+qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslserver_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qsslsocket_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtcpserver_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtcpsocket_p.h
@@ -1750,7 +1773,6 @@ qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtlsbackend_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetwork-config_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetworkexports_p.h
 qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qtnetworkglobal_p.h
-qt6/include/QtNetwork/${PKGVERSION}/QtNetwork/private/qurltlds_p.h
 qt6/include/QtNetwork/QAbstractNetworkCache
 qt6/include/QtNetwork/QAbstractSocket
 qt6/include/QtNetwork/QAuthenticator
@@ -1799,6 +1821,7 @@ qt6/include/QtNetwork/QSslEllipticCurve
 qt6/include/QtNetwork/QSslError
 qt6/include/QtNetwork/QSslKey
 qt6/include/QtNetwork/QSslPreSharedKeyAuthenticator
+qt6/include/QtNetwork/QSslServer
 qt6/include/QtNetwork/QSslSocket
 qt6/include/QtNetwork/QTcpServer
 qt6/include/QtNetwork/QTcpSocket
@@ -1843,6 +1866,7 @@ qt6/include/QtNetwork/qsslellipticcurve.h
 qt6/include/QtNetwork/qsslerror.h
 qt6/include/QtNetwork/qsslkey.h
 qt6/include/QtNetwork/qsslpresharedkeyauthenticator.h
+qt6/include/QtNetwork/qsslserver.h
 qt6/include/QtNetwork/qsslsocket.h
 qt6/include/QtNetwork/qtcpserver.h
 qt6/include/QtNetwork/qtcpsocket.h
@@ -1871,7 +1895,6 @@ qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopengltextureuploader_p.h
 qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopenglversionfunctions_p.h
 qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qopenglvertexarrayobject_p.h
 qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/private/qvkconvenience_p.h
-qt6/include/QtOpenGL/${PKGVERSION}/QtOpenGL/qpa/qplatformbackingstoreopenglsupport.h
 qt6/include/QtOpenGL/QOpenGLBuffer
 qt6/include/QtOpenGL/QOpenGLDebugLogger
 qt6/include/QtOpenGL/QOpenGLDebugMessage
@@ -2629,7 +2652,6 @@ qt6/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake
 qt6/lib/cmake/Qt6/3rdparty/kwin/Findgbm.cmake
 qt6/lib/cmake/Qt6/3rdparty/kwin/qt_attribution.json
 qt6/lib/cmake/Qt6/FindATSPI2.cmake
-qt6/lib/cmake/Qt6/FindCups.cmake
 qt6/lib/cmake/Qt6/FindDB2.cmake
 qt6/lib/cmake/Qt6/FindDirectFB.cmake
 qt6/lib/cmake/Qt6/FindGLESv2.cmake
@@ -2746,6 +2768,7 @@ qt6/lib/cmake/Qt6/QtPrecompiledHeadersHelpers.cmake
 qt6/lib/cmake/Qt6/QtPriHelpers.cmake
 qt6/lib/cmake/Qt6/QtPrlHelpers.cmake
 qt6/lib/cmake/Qt6/QtProcessConfigureArgs.cmake
+qt6/lib/cmake/Qt6/QtPublicAppleHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake
@@ -2753,6 +2776,8 @@ qt6/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTargetHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicTestHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicToolHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicWasmToolchainHelpers.cmake
 qt6/lib/cmake/Qt6/QtQmakeHelpers.cmake
@@ -2888,6 +2913,7 @@ qt6/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake
+qt6/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake
 qt6/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake
@@ -3041,6 +3067,7 @@ qt6/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake
 qt6/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake
 qt6/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake
+qt6/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake
 qt6/lib/cmake/Qt6Network/Qt6NetworkTargets-release.cmake
 qt6/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake
 qt6/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake
@@ -3083,6 +3110,7 @@ qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersion.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportDependencies.cmake
+${PLIST.cups}qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets-release.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessTargets.cmake
@@ -3103,6 +3131,7 @@ qt6/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake
 qt6/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake
 qt6/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake
+qt6/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake
 qt6/lib/cmake/Qt6Sql/Qt6SqlTargets-release.cmake
 qt6/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake
 qt6/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake
@@ -3555,6 +3584,7 @@ qt6/mkspecs/features/unix/bsymbolic_functions.prf
 qt6/mkspecs/features/unix/ccache.prf
 qt6/mkspecs/features/unix/hide_symbols.prf
 qt6/mkspecs/features/unix/largefile.prf
+qt6/mkspecs/features/unix/no_direct_extern_access.prf
 qt6/mkspecs/features/unix/opengl.prf
 qt6/mkspecs/features/unix/separate_debug_info.prf
 qt6/mkspecs/features/unix/thread.prf

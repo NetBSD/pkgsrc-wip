@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtwebchannel-everywhere-src-6.3.2.tar.xz) = 60aa92850cdb5f1c2553cb41ac3ce500d9a1da6419d1a5b7f95e97a8e9938268
-SHA512 (qtwebchannel-everywhere-src-6.3.2.tar.xz) = 83de9a61d25bcf8346ff46417173ecffe15cff9802db524def1afbce4367f3d414b10e8042d45db36555945544dfe1c1d081e4ec33756250afca7ad58975c9d9
-Size (qtwebchannel-everywhere-src-6.3.2.tar.xz) = 213916 bytes
+BLAKE2s (qtwebchannel-everywhere-src-6.4.0.tar.xz) = 588bb5eaf23277016d8a42a67c062e5562ac8c034fd4fcfce97df1d2ed9e904a
+SHA512 (qtwebchannel-everywhere-src-6.4.0.tar.xz) = 5e668869646e9a4a115680004180948777c9cc2b4e6cc3afb4be74e298ec1e7338f61643ac1f46649d39f65e3f50de05d2b635d77bf211105e91dd0d5324fff6
+Size (qtwebchannel-everywhere-src-6.4.0.tar.xz) = 213096 bytes

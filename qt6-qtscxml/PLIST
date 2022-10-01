@@ -134,6 +134,7 @@ qt6/lib/cmake/Qt6Scxml/Qt6ScxmlConfigVersion.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlDependencies.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlMacros.cmake
+qt6/lib/cmake/Qt6Scxml/Qt6ScxmlPlugins.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlTargets-release.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlTargets.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessTargets.cmake

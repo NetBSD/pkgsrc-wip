@@ -1200,6 +1200,7 @@ qt6/lib/cmake/Qt63DRender/Qt63DRenderConfig.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderConfigVersion.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderDependencies.cmake
+qt6/lib/cmake/Qt63DRender/Qt63DRenderPlugins.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderTargets-release.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderVersionlessTargets.cmake

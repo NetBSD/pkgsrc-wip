@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (qtdeclarative-everywhere-src-6.3.2.tar.xz) = 816cd688ce5a3ff02598da96a866bcfb453aa764ac156886bc608e93c438d5a4
-SHA512 (qtdeclarative-everywhere-src-6.3.2.tar.xz) = 4929bd1e5ff16475847ddd75322353afc35c7a06688d32e6186649b38a08d88f435a134fdcfbb4f9fe588f9cd317eb8c0fb6aa0f08416b900064156f3af926af
-Size (qtdeclarative-everywhere-src-6.3.2.tar.xz) = 30157476 bytes
+BLAKE2s (qtdeclarative-everywhere-src-6.4.0.tar.xz) = 4a1b08369c43bc3a1a5b8e5825aaa0719b582aec933dfa007d5622c9dc6e2430
+SHA512 (qtdeclarative-everywhere-src-6.4.0.tar.xz) = 6d43c09a14e2ca236fc50166ed477e37084e89a67a04d914f30f31662a18a4e6d0433cb9b2f0654ba9ffcbcd7abcb5dadcb7b12f0ef5928fc11b10925ee6f41e
+Size (qtdeclarative-everywhere-src-6.4.0.tar.xz) = 30538764 bytes
 SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 697cd2dc622aebabf640e1625494c981dcf6df19
 SHA1 (patch-src_3rdparty_masm_wtf_Compiler.h) = 8d7e318e0148eea0f262ec13463bc15bd03478dc
 SHA1 (patch-src_qml_common_qv4alloca__p.h) = 15a300585e4f5acf956badf0d94e388934883041

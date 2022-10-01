@@ -14,5 +14,4 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6WaylandCompositor.pc
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"
-.include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

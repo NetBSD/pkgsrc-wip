@@ -11,6 +11,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-qt-wi
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-server-buffer-extension.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-surface-extension.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-tablet-unstable-v2.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v1.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v2.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-text-input-unstable-v4-wip.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwayland-touch-extension.h
@@ -62,6 +63,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandsubsur
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandsurface_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtabletv2_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputinterface_p.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv1_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv2_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtextinputv4_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandtouch_p.h
@@ -77,6 +79,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-qt-win
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-server-buffer-extension-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-surface-extension-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-tablet-unstable-v2-client-protocol.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v2-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-text-input-unstable-v4-wip-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-touch-extension-client-protocol.h
@@ -440,6 +443,7 @@ qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientConfigVersion.cmake
 qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientDependencies.cmake
 qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientMacros.cmake
+qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientPlugins.cmake
 qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientTargets-release.cmake
 qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientTargets.cmake
 qt6/lib/cmake/Qt6WaylandClient/Qt6WaylandClientVersionlessTargets.cmake
@@ -467,6 +471,7 @@ qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorConfigVersion.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorDependencies.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorMacros.cmake
+qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorPlugins.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorTargets-release.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorTargets.cmake
 qt6/lib/cmake/Qt6WaylandCompositor/Qt6WaylandCompositorVersionlessTargets.cmake

@@ -14,8 +14,11 @@ CONFIGURE_ARGS+=	-no-alsa
 
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Multimedia.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6MultimediaWidgets.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6SpatialAudio.pc
 
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"
+.include "../../wip/qt6-qtquick3d/buildlink3.mk"
 .include "../../wip/qt6-qtshadertools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

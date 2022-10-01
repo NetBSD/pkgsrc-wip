@@ -101,4 +101,3 @@ pkgconfig-link:
 			${LN} -f -s ${QTPREFIX}/lib/pkgconfig/$${pcfile} $${pcfile};	\
 		done									\
 		fi
-

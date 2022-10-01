@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (qtbase-everywhere-src-6.3.2.tar.xz) = f9de810b7804d87da74fb73d06a1554024c6b236af42488918fd85a2533515c0
-SHA512 (qtbase-everywhere-src-6.3.2.tar.xz) = e164ed6511cf6d5aa39f91cfb624c89b4dd3fc7d3c6c14b60d0c211e5b40ba1ad379ecca653db33dfa944ecfbd9c7044a8d7a968c660e8a76c4897c869584822
-Size (qtbase-everywhere-src-6.3.2.tar.xz) = 47507396 bytes
+BLAKE2s (qtbase-everywhere-src-6.4.0.tar.xz) = f21b823fd591a92f5e62ccb997ec8ba44df012e27b723f5c849bdd470a39c86b
+SHA512 (qtbase-everywhere-src-6.4.0.tar.xz) = 7c9430da115529fa5697d134bf53d185259de23529d6db17398d91d48a0b7a95acd1fbe55189a2d2b3a2ecdafb27065ea99f29f7022110c95a45d6c04ebf46a3
+Size (qtbase-everywhere-src-6.4.0.tar.xz) = 47957680 bytes
 SHA1 (patch-cmake_QtBaseGlobalTargets.cmake) = 015e6bbd049445832d6494209badc1c1a140b9a0
 SHA1 (patch-cmake_QtBuildInternals_QtBuildInternalsConfig.cmake) = f58e8e445c73444d7f0c015dd8fda64a5a662ef7
 SHA1 (patch-cmake_QtFeature.cmake) = a8e83d33467205ce39fb6df70d6dd5fcd4172d89
@@ -16,7 +16,6 @@ SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = b12a41da19b25e34e12fdf8071
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
 SHA1 (patch-src_corelib_qt__cmdline.cmake) = 25fe89821ba1e1323edae87ca1ee0bd5ccf0e407
 SHA1 (patch-src_corelib_thread_qmutex__p.h) = 47047f5af4383b622c59c3969145e44c6ac4bf18
-SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = b9d2d18413b5670a3c9b5ceb90561c3258ffd64b
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
 SHA1 (patch-src_network_configure.cmake) = 754461c21574b99232efc95af3a80765b2edbecc
 SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9

@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	qt6-qtsvg
 .if !defined(QT6_QTSVG_BUILDLINK3_MK)
 QT6_QTSVG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt6-qtsvg+=	qt6-qtsvg>=6.3.1
+BUILDLINK_API_DEPENDS.qt6-qtsvg+=	qt6-qtsvg>=6.4.0
 BUILDLINK_PKGSRCDIR.qt6-qtsvg?=		../../wip/qt6-qtsvg
 
 BUILDLINK_INCDIRS.qt6-qtsvg+=	qt6/include

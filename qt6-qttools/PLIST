@@ -11,8 +11,8 @@ qt6/bin/linguist
 qt6/bin/lrelease
 qt6/bin/lupdate
 qt6/bin/pixeltool
-qt6/bin/qdbus
-qt6/bin/qdbusviewer
+${PLIST.dbus}qt6/bin/qdbus
+${PLIST.dbus}qt6/bin/qdbusviewer
 qt6/bin/qdistancefieldgenerator
 qt6/bin/qdoc
 qt6/bin/qtdiag
@@ -269,6 +269,7 @@ qt6/lib/cmake/Qt6Designer/Qt6DesignerConfig.cmake
 qt6/lib/cmake/Qt6Designer/Qt6DesignerConfigVersion.cmake
 qt6/lib/cmake/Qt6Designer/Qt6DesignerConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Designer/Qt6DesignerDependencies.cmake
+qt6/lib/cmake/Qt6Designer/Qt6DesignerPlugins.cmake
 qt6/lib/cmake/Qt6Designer/Qt6DesignerTargets-release.cmake
 qt6/lib/cmake/Qt6Designer/Qt6DesignerTargets.cmake
 qt6/lib/cmake/Qt6Designer/Qt6DesignerVersionlessTargets.cmake

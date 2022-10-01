@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	qt6-qtmultimedia
 .if !defined(QT6_QTMULTIMEDIA_BUILDLINK3_MK)
 QT6_QTMULTIMEDIA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.qt6-qtmultimedia+=	qt6-qtmultimedia>=6.3.1
+BUILDLINK_API_DEPENDS.qt6-qtmultimedia+=	qt6-qtmultimedia>=6.4.0
 BUILDLINK_PKGSRCDIR.qt6-qtmultimedia?=		../../wip/qt6-qtmultimedia
 
 pkgbase := qt6-qtmultimedia

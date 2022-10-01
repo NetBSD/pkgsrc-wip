@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtlottie-everywhere-src-6.3.2.tar.xz) = a6b1187e3e68fc32ce1ff1938c54c8c03518641c3ca8e22911485970e437ac95
-SHA512 (qtlottie-everywhere-src-6.3.2.tar.xz) = 973ecf403cb1944e24176f4b021b17e0eb7d06a188b92d71e3ae41cd59a668f57e7fd135607b428a9822af0daa7f18bf84b4f8436d0e1c4587797d3735ae2088
-Size (qtlottie-everywhere-src-6.3.2.tar.xz) = 92372 bytes
+BLAKE2s (qtlottie-everywhere-src-6.4.0.tar.xz) = e88c2913bdc7b003d6006aa9e094cffd82705c56bdd4efe4430dfd169e0e2e1a
+SHA512 (qtlottie-everywhere-src-6.4.0.tar.xz) = 3fb3d35b289fc47f5eecf9052f419142f3e91504b7bc92786bf0f56f84273db81f9fbd8477937d2e04c7cdf3e46764f9fa7ac09240ceae6a641617906631e0fc
+Size (qtlottie-everywhere-src-6.4.0.tar.xz) = 91788 bytes
