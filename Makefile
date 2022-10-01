@@ -3758,6 +3758,7 @@ SUBDIR+=	py-easydev
 SUBDIR+=	py-easymodeler
 SUBDIR+=	py-ecos
 SUBDIR+=	py-ecspy
+SUBDIR+=	py-edt
 SUBDIR+=	py-eemeter
 SUBDIR+=	py-efmlrs
 SUBDIR+=	py-eggnog-mapper

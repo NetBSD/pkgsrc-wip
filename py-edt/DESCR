@@ -1,0 +1,3 @@
+Compute the Euclidean Distance Transform of a 1d, 2d, or 3d
+labeled image containing multiple labels in a single pass with
+support for anisotropic dimensions.
