@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/piciji-denise-c592258703c8
 USE_LANGUAGES=	c c++17
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-configure
