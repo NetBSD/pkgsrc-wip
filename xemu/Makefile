@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/lgblgblgb/xemu
 COMMENT=	Emulators of various machines, incl the MEGA65
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	bash gmake
+USE_TOOLS+=	bash gmake pkg-config
 USE_LANGUAGES+=	c
 
 REPLACE_BASH+=	build/configure/configure
