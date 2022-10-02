@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (backports.entry_points_selectable-1.1.1.tar.gz) = 1695f43cab80241ab16b60d06fa530092bd9445d2965b87aa8d2921e56a7ad0d
-SHA512 (backports.entry_points_selectable-1.1.1.tar.gz) = 117f177ef150350c0befe84c6737d7e35044b1559529dd98c5c4b8341d5f68d975cc088a9e0c50025913725172237026385c374dac9941e2e52bf5f4724a461c
-Size (backports.entry_points_selectable-1.1.1.tar.gz) = 8806 bytes
+BLAKE2s (backports.entry_points_selectable-1.2.0.tar.gz) = 3db4a1ddfc500e627e886127cf441610d325508ad38636f3a502d158a334955f
+SHA512 (backports.entry_points_selectable-1.2.0.tar.gz) = de2ff8d5ec54369c8847d4975fd8666f64ca7689aed2c05b7bbe9f1bc1c3816b527786410bd36f6c337e6b57bc04e714e5f77a301828049fa290b65c474c2825
+Size (backports.entry_points_selectable-1.2.0.tar.gz) = 9179 bytes
