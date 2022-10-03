@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/primesieve
+include/primesieve.h
+include/primesieve.hpp
+include/primesieve/StorePrimes.hpp
+include/primesieve/iterator.h
+include/primesieve/iterator.hpp
+include/primesieve/primesieve_error.hpp
+lib/cmake/primesieve/primesieveConfig.cmake
+lib/cmake/primesieve/primesieveConfigVersion.cmake
+lib/cmake/primesieve/primesieveShared-release.cmake
+lib/cmake/primesieve/primesieveShared.cmake
+lib/cmake/primesieve/primesieveStatic-release.cmake
+lib/cmake/primesieve/primesieveStatic.cmake
+lib/libprimesieve.a
+lib/libprimesieve.so
+lib/libprimesieve.so.10
+lib/libprimesieve.so.10.0.0
+lib/pkgconfig/primesieve.pc
+man/man1/primesieve.1

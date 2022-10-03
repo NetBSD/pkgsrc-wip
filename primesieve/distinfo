@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (primesieve-8.0.tar.gz) = 817ee6a84e846f04211dd1339b36769b2f40fc49eeaf7627df77e6089e995052
+SHA512 (primesieve-8.0.tar.gz) = 213785c89868f224091fe76a74b98a896c374a7a96e2bdb44b07f4c6288bd50e22d9a563382fb512e71a1ad366d8b94e74fcc8b5f58bb94c85b4d435fbb6a571
+Size (primesieve-8.0.tar.gz) = 119635 bytes

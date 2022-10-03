@@ -2489,6 +2489,7 @@ SUBDIR+=	mppp
 SUBDIR+=	mpq-tools
 SUBDIR+=	mps-youtube
 SUBDIR+=	mpv-git
+SUBDIR+=	primesieve
 SUBDIR+=	mrust
 SUBDIR+=	mrust-cargo
 SUBDIR+=	mrust-libs
