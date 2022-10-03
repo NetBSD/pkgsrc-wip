@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+
+BLAKE2s (flang-14.0.6.src.tar.xz) = e676747776dc1c4d93fde957f733f20aa167226db7ec60a36eac4739c74f2783
+SHA512 (flang-14.0.6.src.tar.xz) = c9c1b5af3effca10878a61ceb231cf7e1e8e687f7f17ed40ab07ec4da6f272a38fa0aaa075b98610c5f53a0b69361edc6cb13bf975b42bd8994fbe5909b2551d
+Size (flang-14.0.6.src.tar.xz) = 1590156 bytes

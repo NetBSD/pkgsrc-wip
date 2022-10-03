@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
+
+BLAKE2s (llvm-project-14.0.6.src.tar.xz) = fa73399b6d3655e16751a6c5053be83ac912f758642a0026b949870017485546
+SHA512 (llvm-project-14.0.6.src.tar.xz) = 6fc6eeb60fac698702d1aac495fc0161eb7216a1f8db2020af8fccec5837831f7cc20dc2a169bf4f0b5f520748280b4a86621f3697d622aa58faaa45dbfaad13
+Size (llvm-project-14.0.6.src.tar.xz) = 105618228 bytes
+SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = d05683d2a005e3539d4f71743510b5e01a468dad
+SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = db2768503c7e7b89bd99801d1eba588f23ac0b04
