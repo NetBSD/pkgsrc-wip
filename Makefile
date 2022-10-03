@@ -129,6 +129,7 @@ SUBDIR+=	akonadi-search
 SUBDIR+=	akonadiconsole
 SUBDIR+=	akregator
 SUBDIR+=	alac_decoder
+SUBDIR+=	alacritty
 SUBDIR+=	alberta
 SUBDIR+=	aldo
 SUBDIR+=	aldumb
