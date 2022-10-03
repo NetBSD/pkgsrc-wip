@@ -6,7 +6,7 @@
 # specific overides in mk/default/*.mk (for instance,
 # mk/default/netbsd.mk).
 
-DISTNAME=	libreswan-4.7
+DISTNAME=	libreswan-4.8
 CATEGORIES=	security
 MASTER_SITES=	https://download.libreswan.org/
 
@@ -23,17 +23,19 @@ USE_TOOLS+=	bison
 #default is: USE_LANGUAGES+=	c
 
 DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-# weak dependency
+
+# Logroate isn't required; just recommended.
+# Logroate isn't installed into examples:
+#   https://github.com/libreswan/libreswan/issues/767
+#EGDIR=		${PREFIX}/share/examples/libreswan
 #DEPENDS+=	logrotate-[0-9]*:../../sysutils/logrotate
+#CONF_FILES+=	${EGDIR}/logrotate.d/ipsec ${PKG_SYSCONFDIR}/logrotate.d/ipsec
+#MAKE_DIRS+=	${PKG_SYSCONFDIR}/logrotate.d
 
 CHECK_PORTABILITY_SKIP=	mk/docker-targets.mk
 
 # code not clean enough
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-# see https://github.com/libreswan/libreswan/issues/769
-MAKE_FLAGS+=	PYTHON_BINARY=${PYTHONBIN}
-.include "../../lang/python/application.mk"
 
 # libevent?
 .include "../../net/unbound/buildlink3.mk"
