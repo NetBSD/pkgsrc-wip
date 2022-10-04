@@ -974,6 +974,8 @@ share/emacs/${PKGVERSION}/lisp/allout.el.gz
 share/emacs/${PKGVERSION}/lisp/allout.elc
 share/emacs/${PKGVERSION}/lisp/ansi-color.el.gz
 share/emacs/${PKGVERSION}/lisp/ansi-color.elc
+share/emacs/${PKGVERSION}/lisp/ansi-osc.el.gz
+share/emacs/${PKGVERSION}/lisp/ansi-osc.elc
 share/emacs/${PKGVERSION}/lisp/apropos.el.gz
 share/emacs/${PKGVERSION}/lisp/apropos.elc
 share/emacs/${PKGVERSION}/lisp/arc-mode.el.gz
@@ -3376,8 +3378,6 @@ share/emacs/${PKGVERSION}/lisp/org/ox-texinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ox-texinfo.elc
 share/emacs/${PKGVERSION}/lisp/org/ox.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ox.elc
-share/emacs/${PKGVERSION}/lisp/osc.el.gz
-share/emacs/${PKGVERSION}/lisp/osc.elc
 share/emacs/${PKGVERSION}/lisp/outline.el.gz
 share/emacs/${PKGVERSION}/lisp/outline.elc
 share/emacs/${PKGVERSION}/lisp/paren.el.gz
