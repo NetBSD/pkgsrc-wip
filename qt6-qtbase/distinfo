@@ -14,6 +14,7 @@ SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf9
 SHA1 (patch-src_corelib_global_qglobal.cpp) = 6368692c2d5d64633d956a89c6b4607667c121a7
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = b12a41da19b25e34e12fdf80714a37e8c46278f9
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
+SHA1 (patch-src_corelib_plugin_qelfparser__p.cpp) = 2a8c7b052472afaeb3b0e797625615072e1b4abf
 SHA1 (patch-src_corelib_qt__cmdline.cmake) = 25fe89821ba1e1323edae87ca1ee0bd5ccf0e407
 SHA1 (patch-src_corelib_thread_qmutex__p.h) = 47047f5af4383b622c59c3969145e44c6ac4bf18
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 9dffdbfc81bc7d3259020cd32b4039b7be6ee2bd
