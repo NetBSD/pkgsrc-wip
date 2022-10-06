@@ -1,0 +1,6 @@
+multi-gitter allows you to make changes in multiple repositories
+simultaneously. This is achieved by running a script or program in the
+context of multiple repositories. If any changes are made, a pull
+request is created that can be merged manually by the set reviewers, or
+automatically by multi-gitter when CI pipelines has completed
+successfully.
