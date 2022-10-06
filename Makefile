@@ -2515,6 +2515,7 @@ SUBDIR+=	mu-cite
 SUBDIR+=	mudlet-301
 SUBDIR+=	muffin
 SUBDIR+=	mule11
+SUBDIR+=	multi-gitter
 SUBDIR+=	multichoose
 SUBDIR+=	multisync
 SUBDIR+=	multisync-backup
