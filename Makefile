@@ -5117,7 +5117,6 @@ SUBDIR+=	rspamd31
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
-SUBDIR+=	rt5
 SUBDIR+=	rtaudio
 SUBDIR+=	rtcmix
 SUBDIR+=	rte
