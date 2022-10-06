@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/scooby/__init__.py
+${PYSITELIB}/scooby/__init__.pyc
+${PYSITELIB}/scooby/__init__.pyo
+${PYSITELIB}/scooby/knowledge.py
+${PYSITELIB}/scooby/knowledge.pyc
+${PYSITELIB}/scooby/knowledge.pyo
+${PYSITELIB}/scooby/report.py
+${PYSITELIB}/scooby/report.pyc
+${PYSITELIB}/scooby/report.pyo
+${PYSITELIB}/scooby/tracker.py
+${PYSITELIB}/scooby/tracker.pyc
+${PYSITELIB}/scooby/tracker.pyo
