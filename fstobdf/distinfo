@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.4 2014/12/31 14:15:08 thomasklausner Exp $
 
-RMD160 (fstobdf-1.0.6.tar.bz2) = 18d0cc9eabffa804c6809895be1838330b50ce3a
-SHA512 (fstobdf-1.0.6.tar.bz2) = ec5b8f62019ba51725bb47241d4fc244412f354e7c12094ed884109a88e3db9d25d41a6142fd002e6c49877b4c7f2c5dde549682dcc05f7ce102621d2c71671f
-Size (fstobdf-1.0.6.tar.bz2) = 127170 bytes
+BLAKE2s (fstobdf-1.0.7.tar.xz) = 50fc22cc302e775c69117f5e0a1235511b9ba8345e63253f3145a6a1b79ad77c
+SHA512 (fstobdf-1.0.7.tar.xz) = b303cc2060e8ccaa139e855a7d377d28877158efa1087eeeebf9f30f7c9962764eceab5c4044b4b508890413cf38546da9b26756dd27a142b806dcd6fdb6ba59
+Size (fstobdf-1.0.7.tar.xz) = 122432 bytes

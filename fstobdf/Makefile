@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.7 2014/12/31 14:15:08 thomasklausner Exp $
 
-DISTNAME=	fstobdf-1.0.6
+DISTNAME=	fstobdf-1.0.7
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	https://xorg.freedesktop.org/
@@ -15,5 +15,4 @@ USE_LANGUAGES=	c
 
 .include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
