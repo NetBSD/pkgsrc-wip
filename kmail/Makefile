@@ -24,7 +24,7 @@ USE_TOOLS+=	msgmerge
 .include "../../wip/kontactinterface/buildlink3.mk"
 .include "../../wip/libksieve/buildlink3.mk"
 .include "../../wip/mailcommon/buildlink3.mk"
-.include "../../wip/ktnef/buildlink3.mk"
+.include "../../mail/ktnef/buildlink3.mk"
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
