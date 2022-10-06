@@ -1,0 +1,3 @@
+PyVista is a helper module for the Visualization Toolkit (VTK) that wraps
+the VTK library through NumPy and direct array access through a variety
+of methods and classes.
