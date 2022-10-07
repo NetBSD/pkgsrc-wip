@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nuclei-2.7.5
+DISTNAME=	nuclei-2.7.7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
