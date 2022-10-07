@@ -1124,6 +1124,7 @@ SUBDIR+=	gfeedline
 SUBDIR+=	gfontview
 SUBDIR+=	gforth-git
 SUBDIR+=	gfsview-snapshot
+SUBDIR+=	ggobi
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
