@@ -1,0 +1,4 @@
+ARIBAS is an interactive interpreter for big integer arithmetic and
+multi-precision floating point arithmetic. It has a syntax similar to Pascal
+or Modula-2, but contains also features from other programming languages
+like C, Lisp, Oberon. In ease of use it is comparable to Basic

@@ -201,6 +201,7 @@ SUBDIR+=	argouml
 SUBDIR+=	argtable2
 SUBDIR+=	argyllcms
 SUBDIR+=	ariamaestosa
+SUBDIR+=	aribas
 SUBDIR+=	arista
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	arm-eabi-binutils
