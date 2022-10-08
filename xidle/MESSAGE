@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD$
-
-Unless told otherwise, xidle will attempt to start xlock(1) as default
-screen locker.
-
-Install x11/xlockmore if you wish this behaviour to take effect.
-
-===========================================================================

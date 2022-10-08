@@ -6035,7 +6035,6 @@ SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-wm-dfbsd
 SUBDIR+=	xfs
 SUBDIR+=	xhyve
-SUBDIR+=	xidle
 SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
 SUBDIR+=	xinput_calibrator
