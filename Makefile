@@ -5303,7 +5303,6 @@ SUBDIR+=	shunt
 SUBDIR+=	sic
 SUBDIR+=	sickle
 SUBDIR+=	sigdigger
-SUBDIR+=	signify
 SUBDIR+=	sigutils
 SUBDIR+=	sil
 SUBDIR+=	sil-scheherazade-ttf
