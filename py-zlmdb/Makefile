@@ -13,7 +13,7 @@ LICENSE=	mit
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
-DEPENDS+=	${PYPKGPREFIX}-cbor2>=5.1.0:../../wip/py-cbor2
+DEPENDS+=	${PYPKGPREFIX}-cbor2>=5.1.0:../../devel/py-cbor2
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-txaio>=20.3.1:../../devel/py-txaio
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.15.4:../../math/py-numpy

@@ -21,7 +21,7 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../wip/cppzmq/buildlink3.mk"
+.include "../../net/cppzmq/buildlink3.mk"
 .include "../../wip/libopenshot-audio/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
