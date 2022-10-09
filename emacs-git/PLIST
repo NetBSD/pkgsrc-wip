@@ -959,6 +959,7 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.sl
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.sv
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.th
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.translators
+share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.uk
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.zh
 share/emacs/${PKGVERSION}/etc/w32-feature.el
 share/emacs/${PKGVERSION}/etc/yow.lines
@@ -2931,10 +2932,10 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-container.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-container.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-crypt.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-docker.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-docker.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-fuse.el.gz
