@@ -188,6 +188,7 @@ SUBDIR+=	apstget
 SUBDIR+=	apvlv
 SUBDIR+=	aqemu
 SUBDIR+=	aquaria
+SUBDIR+=	aquatone
 SUBDIR+=	ar7
 SUBDIR+=	arabeyes-qr-ttf
 SUBDIR+=	arachne-pnr-git
