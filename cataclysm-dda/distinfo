@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.9 2022/08/23 10:41:34 wiz Exp $
+
+BLAKE2s (cataclysm-dda-0.F.3.tar.gz) = d7f969ba2fd3f5228fdd325413c39589020a7a09f8b88a37938668a462837be6
+SHA512 (cataclysm-dda-0.F.3.tar.gz) = 1bbbe101d37fc90d9b6b5bbe6503523801a91ece399d2e776f500af84d10b786decf5ece61ae9fb04d5cea9d760d026f11a91ba29122b9844c0c772c1e684ed8
+Size (cataclysm-dda-0.F.3.tar.gz) = 90173246 bytes
+SHA1 (patch-Makefile) = cee0c0e1a6293b5beafe06fe2282d469bcd995a2
+SHA1 (patch-lang_compile__mo.sh) = 1a2e65a5f5a5b8c4f56ceb9ddc8e3383856fac57
+SHA1 (patch-src_sdl__font.cpp) = aa4b19ae074b44dcf3081722ed7f311b1a12d873
+SHA1 (patch-src_translations.cpp) = 90d55c1b526bcf44c8b0c902ac2c4df5c87ba68f
+SHA1 (patch-src_translations.h) = 106413eefeaff7b99661f781e2fb4002a3eace52
