@@ -4,7 +4,7 @@ On Darwin, use correct install-name for shared libraries.
 
 --- src/llvm-project/llvm/cmake/modules/AddLLVM.cmake.orig	2020-09-22 17:14:20.000000000 +0000
 +++ src/llvm-project/llvm/cmake/modules/AddLLVM.cmake
-@@ -2117,7 +2117,7 @@ function(llvm_setup_rpath name)
+@@ -2143,7 +2143,7 @@ function(llvm_setup_rpath name)
    endif()
  
    if (APPLE)
