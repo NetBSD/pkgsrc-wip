@@ -1,0 +1,25 @@
+$NetBSD$
+
+libdl is not available on all systems.
+--- Makefile.posix.orig	2022-10-08 18:21:42.000000000 -0700
++++ Makefile.posix	2022-10-08 20:45:22.808746284 -0700
+@@ -13,13 +13,17 @@
+ #CFLAGS = -Wall -O0 -fPIC -Wno-unused-variable -g
+ 
+ # Flags to pass to the linker
+-LDFLAGS = -lm -ldl
++LDFLAGS = -lm
++
++ifeq ($(shell uname -s),Linux)
++LDFLAGS += -ldl
++endif
+ 
+ # Objects to build
+ OBJS = main.o lua/liblua.a
+ 
+ # Lua building
+-LUABUILD = $(MAKE) -C lua linux
++LUABUILD = $(MAKE) -C lua
+ LUACLEAN = $(MAKE) -C lua clean
+ 
+ # Clean up program

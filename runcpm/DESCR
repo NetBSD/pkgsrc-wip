@@ -1,0 +1,11 @@
+RunCPM is an application which can execute vintage CP/M 8-bit programs on many
+modern platforms. It can be built both on 32- and 64-bit host environments and
+should be easily portable to other platforms. RunCPM is fully written in C and
+in a modular way, so porting to other platforms should be only a matter of
+writing an abstraction layer file for it. No modification to the main code
+modules should be necessary.
+
+If you miss using powerful programs like Wordstar, dBaseII, mBasic and others,
+then RunCPM is for you. RunCPM emulates CP/M 2.2 from Digital Research as close
+as possible, the only difference being that it uses regular folders on the host
+instead of disk images.

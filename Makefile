@@ -5207,6 +5207,7 @@ SUBDIR+=	ruby-versionomy
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runas
+SUBDIR+=	runcpm
 SUBDIR+=	runit
 SUBDIR+=	rust
 SUBDIR+=	rust-bindgen
