@@ -1,23 +1,18 @@
 # $NetBSD: Makefile,v 1.11 2018/09/21 17:10:57 leot Exp $
 
-DISTNAME=	geomyidae-v0.34
+DISTNAME=	geomyidae-v0.52
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/geomyidae/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/geomyidae
-COMMENT=	Gopher daemon for Linux/BSD
+COMMENT=	Gopher daemon
 LICENSE=	mit
 
 GIT_REPOSITORIES=	geomyidae
 GIT_REPO.geomyidae=	git://bitreich.org/geomyidae
 WRKSRC=			${WRKDIR}/geomyidae
-
-# Disable TLS support (avoids libressl dependency)
-MAKE_FLAGS+=	TLS_CFLAGS=
-MAKE_FLAGS+=	TLS_LDFLAGS=
 
 BUILD_DEFS+=	VARBASE GEOMYIDAE_USER GEOMYIDAE_GROUP GEOMYIDAE_ROOTDIR
 FILES_SUBST+=	GEOMYIDAE_USER=${GEOMYIDAE_USER} GEOMYIDAE_GROUP=${GEOMYIDAE_GROUP}
@@ -44,16 +39,17 @@ SUBST_STAGE.rootdir=	pre-configure
 SUBST_FILES.rootdir=	main.c
 SUBST_SED.rootdir=	-e 's;/var/gopher;${GEOMYIDAE_ROOTDIR};'
 
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/geomyidae ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/geomyidae ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/geomyidae.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/CGI ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/CGI.md ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/index.gph ${DESTDIR}${EGDIR}
 
+.include "../../security/libretls/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
