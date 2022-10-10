@@ -396,7 +396,6 @@ SUBDIR+=	castget
 SUBDIR+=	cataclysm-dda
 SUBDIR+=	cataclysm-dda-sdl
 SUBDIR+=	catfish
-SUBDIR+=	catfish
 SUBDIR+=	catpoint-git
 SUBDIR+=	cb2bib
 SUBDIR+=	ccnet-server
