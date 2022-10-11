@@ -2903,7 +2903,6 @@ SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Egg-Plugin-Crypt-CBC
 SUBDIR+=	p5-Email-AddressParser
-SUBDIR+=	p5-Email-Outlook-Message
 SUBDIR+=	p5-Encode-Arabic
 SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-compat
