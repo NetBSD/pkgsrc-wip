@@ -7,7 +7,7 @@ Do not use @rpath on Darwin.
 @@ -326,7 +326,7 @@ impl<'a> GccLinker<'a> {
              // principled solution at some point to force the compiler to pass
              // the right `-Wl,-install_name` with an `@rpath` in it.
-             if self.sess.opts.cg.rpath || self.sess.opts.debugging_opts.osx_rpath_install_name {
+             if self.sess.opts.cg.rpath || self.sess.opts.unstable_opts.osx_rpath_install_name {
 -                let mut rpath = OsString::from("@rpath/");
 +                let mut rpath = OsString::from("@PREFIX@/lib/");
                  rpath.push(out_filename.file_name().unwrap());

@@ -9,7 +9,7 @@ BUILDLINK_TREE+=	rust
 .if !defined(RUST_BUILDLINK3_MK)
 RUST_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.20.0
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.56.1
 BUILDLINK_PKGSRCDIR.rust?=	../../wip/rust
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/lib/rustlib
 .endif
