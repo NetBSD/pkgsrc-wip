@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Email-Outlook-Message-0.920
+DISTNAME=	Email-Outlook-Message-0.921
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
