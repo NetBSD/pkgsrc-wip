@@ -1,0 +1,17 @@
+$NetBSD$
+
+Fixing Makefile to correctly compile and link on NetBSD.
+
+--- Makefile.bsd.orig	2021-11-18 06:32:06.000000000 +0000
++++ Makefile.bsd
+@@ -60,8 +60,8 @@ include $(SRCDIR)/defaults.make
+ 
+ # These may be useful for NetBSD:
+ #
+-#C_COMPILER_OPTIONS += -I/usr/pkg/lib
+-#LINKER_OPTIONS += -L/usr/pkg/lib -Wl,-R/usr/pkg/lib
++C_COMPILER_OPTIONS += -I${PREFIX}/lib
++LINKER_OPTIONS += -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
+ 
+ chicken-config.h: chicken-defaults.h
+ 	echo "/* GENERATED */" >$@
