@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	racket-minimal-${DISTVERS}-src
-DISTVERS=	8.5
-PKGNAME=	chezscheme-racket-9.5.7.6
+DISTVERS=	8.6
+PKGNAME=	chezscheme-racket-9.5.9.2
 CATEGORIES=	lang
 MASTER_SITES=	https://download.racket-lang.org/releases/${DISTVERS}/installers/
 EXTRACT_SUFX=	.tgz
@@ -80,10 +80,12 @@ post-install:
 		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/*.c \
 		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/*.ss \
 		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/Makefile \
+		${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples/build.zuo \
 		${DESTDIR}/${PREFIX}/share/examples/csv${PKGVERSION}
 	${RMDIR} ${DESTDIR}/${PREFIX}/lib/csv${PKGVERSION}/examples
 
 .include "../../archivers/lz4/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

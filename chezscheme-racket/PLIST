@@ -3,6 +3,7 @@ bin/petite
 bin/scheme
 bin/scheme-script
 share/examples/csv${PKGVERSION}/Makefile
+share/examples/csv${PKGVERSION}/build.zuo
 share/examples/csv${PKGVERSION}/compat.ss
 share/examples/csv${PKGVERSION}/crepl.c
 share/examples/csv${PKGVERSION}/csocket.c
