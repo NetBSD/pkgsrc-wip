@@ -748,6 +748,7 @@ SUBDIR+=	edid-decode
 SUBDIR+=	eduke32
 SUBDIR+=	ee
 SUBDIR+=	efgallery
+SUBDIR+=	efivar
 SUBDIR+=	efl
 SUBDIR+=	efltk
 SUBDIR+=	eic
