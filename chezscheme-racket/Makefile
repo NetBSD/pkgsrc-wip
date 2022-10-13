@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/racket-${DISTVERS}
 HAS_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake paxctl pkg-config
 USE_LANGUAGES=	c
 
 CONFLICTS=	chezscheme-[0-9]*

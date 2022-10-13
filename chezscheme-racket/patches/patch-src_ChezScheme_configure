@@ -1,15 +1,15 @@
 $NetBSD$
 
-* /usr/sbin is usually not in the $PATH, use absolute path for paxctl
+* use standard `=` for string comparison instead of bashism `==`
 
 --- src/ChezScheme/configure.orig	2022-07-08 06:15:58.000000000 +0000
 +++ src/ChezScheme/configure
-@@ -808,7 +808,7 @@ esac
- # pre- and post-link-executable step for c/Mf-unix
- case "${flagsmuni}" in
-     *nb)
--        exePostStep='paxctl +m'
-+        exePostStep='/usr/sbin/paxctl +m'
+@@ -811,7 +811,7 @@ case "${flagsmuni}" in
+         exePostStep='paxctl +m'
          ;;
      em)
-         if [ "$empetite" == yes ]; then
+-        if [ "$empetite" == yes ]; then
++        if [ "$empetite" = yes ]; then
+             preloadBootFiles="$w/boot/$m/petite.boot"
+         else
+             preloadBootFiles="$w/boot/$m/petite.boot $w/boot/$m/scheme.boot"

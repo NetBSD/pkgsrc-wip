@@ -4,4 +4,4 @@ BLAKE2s (racket-minimal-8.6-src.tgz) = 6a429a827795d056853207552b1fd90c18700ebc3
 SHA512 (racket-minimal-8.6-src.tgz) = 1ac526478dba65b5b9970d531d7a1ed2740ca3b3133e6ccc20c41d9958f046689883648cdd714c0d1fe33aabab8649803f9be0506ec77ec4d7e0c7d9c2f351fc
 Size (racket-minimal-8.6-src.tgz) = 16074810 bytes
 SHA1 (patch-src_ChezScheme_c_expeditor.c) = 9b9d0bd606c010527090bb08e29ccc7be855a3ae
-SHA1 (patch-src_ChezScheme_configure) = e1494f16900307a0ae25bc5e5d089c230672bc64
+SHA1 (patch-src_ChezScheme_configure) = 68f419acdedd0c838a4af42c44889f614210f6e4
