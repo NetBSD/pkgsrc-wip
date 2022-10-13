@@ -1259,6 +1259,7 @@ SUBDIR+=	go-douceur-aymerick
 SUBDIR+=	go-easyjson
 SUBDIR+=	go-errorx
 SUBDIR+=	go-errwrap
+SUBDIR+=	go-ethereum
 SUBDIR+=	go-eventsource
 SUBDIR+=	go-ewma
 SUBDIR+=	go-faker
