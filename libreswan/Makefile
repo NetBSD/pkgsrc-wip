@@ -6,7 +6,7 @@
 # specific overides in mk/default/*.mk (for instance,
 # mk/default/netbsd.mk).
 
-DISTNAME=	libreswan-4.8
+DISTNAME=	libreswan-4.9
 CATEGORIES=	security
 MASTER_SITES=	https://download.libreswan.org/
 
