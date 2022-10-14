@@ -1,0 +1,16 @@
+
+--- Runtime/codelite-remote.orig	2022-10-15 00:18:53.677326014 +0300
++++ Runtime/codelite-remote
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python3
++#@PYTHONBIN@
+ import sys
+ import os
+ import json
+@@ -435,4 +435,4 @@ def main():
+     main_loop()
+ 
+ if __name__ == "__main__":
+-    main()
+\ No newline at end of file
++    main()

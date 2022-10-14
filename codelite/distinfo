@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.11 2021/10/26 10:21:25 nia Exp $
+
+BLAKE2s (codelite-16.0.tar.gz) = 9f1d0335b0d7571e2aa2add64996a70141571ab8ae67fd360f3db9bfa9f6a3cf
+SHA512 (codelite-16.0.tar.gz) = 4965207a11869bb5f5ec33538bdc2a7312f8d444c615cf7e5a653a26abe2e823bd35a07d1bce73812935025e9a2dc3d6b970e02c7eb2da75f3a22c14d7670af7
+Size (codelite-16.0.tar.gz) = 89755705 bytes
+SHA1 (patch-CodeLite_tags_storage_sqlite3.h) = 89ba11011c33a4de82f246c1ba198ab61f478d8d
+SHA1 (patch-LanguageServer_UI.h) = 8a40c5cc65bb210bb5f7e6b198580694503a4d95
+SHA1 (patch-Plugin_DiffSideBySidePanel.h) = a62fd170d51bc6ba650d5d7862d5c9633d5dcedb
+SHA1 (patch-Runtime_codelite-remote) = a77124761f844ace5a25c327ebf5bf2e7e4ed80b
+SHA1 (patch-ctagsd_CMakeLists.txt) = 43d488040d834f077b4cebf8b47b7299c4ef2f15
+SHA1 (patch-sdk_asio-1.12.1_asio_detail_impl_kqueue__reactor.ipp) = bdbcf78c6198da9ceb123373fd6b99419ae94896
+SHA1 (patch-svgs_svgs-dark_create-logo.sh) = d794ca7bb16a248a7aead3ca30e6c9f16073e1a3
+SHA1 (patch-svgs_svgs-light_create-logo.sh) = 4b0d06911baf89636311cc10e7042f3a2b4f22b3
+SHA1 (patch-wxcrafter_myxh__propgrid.cpp) = 68a28603f733f8cf6347d0c65d79fd1adc48f8a9

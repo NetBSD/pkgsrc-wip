@@ -1,0 +1,12 @@
+
+--- ctagsd/CMakeLists.txt.orig	2022-10-15 00:18:53.670224875 +0300
++++ ctagsd/CMakeLists.txt
+@@ -42,7 +42,7 @@ include_directories("${CL_SRC_ROOT}/Plug
+ 
+ set(UTIL_LIB "")
+ if(UNIX)
+-    set(UTIL_LIB "-lutil -ldl")
++    set(UTIL_LIB "-lutil")
+ endif(UNIX)
+ 
+ FILE(GLOB LIBSRC "lib/*.cpp")
