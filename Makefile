@@ -3303,7 +3303,6 @@ SUBDIR+=	posh
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch
 SUBDIR+=	postoffice
-SUBDIR+=	postr
 SUBDIR+=	povray
 SUBDIR+=	powerdevil
 SUBDIR+=	powwow
