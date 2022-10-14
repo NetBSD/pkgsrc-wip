@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/05/22 02:20:47 jeremy-c-reed Exp $
 
-RMD160 (mtpaint-3.40.tar.bz2) = 52fbf141fd4814130ffe0cb11362c76f78863eb7
-SHA512 (mtpaint-3.40.tar.bz2) = b242794ea74edeedeb1bc51df581b82b30196388b2aae03564f3152a9c4a20cdeeff715d46417722673279bcff5e5fb7e80147fc06babb8720b65bfa29f124fd
-Size (mtpaint-3.40.tar.bz2) = 600857 bytes
+BLAKE2s (mtpaint-3.50.tar.bz2) = 125d8f84478cf7a24fea1bddcdf396df24a7f62b383c0ad035123a2963252e0a
+SHA512 (mtpaint-3.50.tar.bz2) = b52951291262b770aa792128149c9130ecb8fc31186a6333608ff3a664719f4cc502d653a6e995182b4238f7795f5ef652664256ef0595ac37df90e72e7b67e6
+Size (mtpaint-3.50.tar.bz2) = 800134 bytes

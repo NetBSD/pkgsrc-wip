@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.6 2014/05/31 15:57:20 thomasklausner Exp $
 #
 
-DISTNAME=	mtpaint-3.40
-PKGREVISION=	2
+DISTNAME=	mtpaint-3.50
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mtpaint/mtpaint/3.40/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mtpaint/mtpaint/3.50/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	cflags GIF gtk2 ft jpeg intl tiff man
+CONFIGURE_ARGS+=	cflags GIF gtk3 jpeg intl tiff man
 USE_TOOLS+=		gmake pkg-config
 
 BUILD_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
@@ -26,5 +25,5 @@ BUILD_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
