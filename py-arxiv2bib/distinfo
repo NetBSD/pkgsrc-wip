@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (arxiv2bib-1.0.5.zip) = d8c3468573283301d165fa9966c44412eb0260fc
-SHA512 (arxiv2bib-1.0.5.zip) = 41f16153ae95e0099c948541179ed1cf58a3922c5a43ff61a8c74dfb891dcf8815e9941545b9f3fbf40d59883bdb0dd212b2bf7a81278e992026946e4a4a5649
-Size (arxiv2bib-1.0.5.zip) = 9297 bytes
+BLAKE2s (arxiv2bib-1.0.8.tar.gz) = 42af08a3a2031e1cdedf7c3d03d5a156188fe2fca998f0262faff4f3072d0274
+SHA512 (arxiv2bib-1.0.8.tar.gz) = 5ba93ba296e68bb489fcba0957844ffe54abbef1f613265fbc14b7aceee65e9f30cc3ea1ca57faa9afa11f17063a02015d7e91801171301b1fb55ca6ddf43ca0
+Size (arxiv2bib-1.0.8.tar.gz) = 6750 bytes
