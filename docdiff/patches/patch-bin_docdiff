@@ -1,0 +1,14 @@
+$NetBSD$
+
+Add LOAD_PATH
+
+--- bin/docdiff.orig	2022-10-15 12:03:22.696894976 +0900
++++ bin/docdiff	2022-10-15 12:05:50.226046031 +0900
+@@ -2,6 +2,7 @@
+ # DocDiff: word/character-oriented text comparison utility
+ # Copyright (C) 2002-2011 Hisashi MORITA
+ # Requirements: Ruby (>= 2.0)
++$LOAD_PATH.unshift "@@LIBRARY@@"
+ require 'docdiff'
+ require 'optparse'
+ 

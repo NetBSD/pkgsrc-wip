@@ -1,0 +1,22 @@
+@comment $NetBSD$
+bin/docdiff
+share/docdiff/doc_diff.rb
+share/docdiff/docdiff.rb
+share/docdiff/docdiff/charstring.rb
+share/docdiff/docdiff/diff.rb
+share/docdiff/docdiff/diff/contours.rb
+share/docdiff/docdiff/diff/editscript.rb
+share/docdiff/docdiff/diff/rcsdiff.rb
+share/docdiff/docdiff/diff/shortestpath.rb
+share/docdiff/docdiff/diff/speculative.rb
+share/docdiff/docdiff/diff/subsequence.rb
+share/docdiff/docdiff/diff/unidiff.rb
+share/docdiff/docdiff/difference.rb
+share/docdiff/docdiff/document.rb
+share/docdiff/docdiff/encoding/en_ascii.rb
+share/docdiff/docdiff/encoding/ja_eucjp.rb
+share/docdiff/docdiff/encoding/ja_sjis.rb
+share/docdiff/docdiff/encoding/ja_utf8.rb
+share/docdiff/docdiff/version.rb
+share/docdiff/docdiff/view.rb
+share/docdiff/viewdiff.rb

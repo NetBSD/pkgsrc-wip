@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (docdiff-0.6.1.tar.gz) = 247d6c9ba42a656fc07d693151ade9f52e8e1ea63802173465db5c0b7aec64ed
+SHA512 (docdiff-0.6.1.tar.gz) = ea2d46f38ab2146f1d888ef9b14cdb3874523cfdc3639b04de8bb2e8583a0b4ae18c98520f459b75deef987b3da4287d3fadd25eddffa3e8e915126e442d1e24
+Size (docdiff-0.6.1.tar.gz) = 141275 bytes
+SHA1 (patch-bin_docdiff) = 3b237bb75f693a7fbe5aa59a135101b963fdf4fd
