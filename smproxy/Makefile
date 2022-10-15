@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.6 2015/04/17 06:56:55 thomasklausner Exp $
 
-DISTNAME=	smproxy-1.0.6
-PKGREVISION=	1
+DISTNAME=	smproxy-1.0.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	https://xorg.freedesktop.org/releases/individual/app/

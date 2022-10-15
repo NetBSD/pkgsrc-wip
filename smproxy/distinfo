@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.4 2015/04/17 06:56:55 thomasklausner Exp $
 
-RMD160 (smproxy-1.0.6.tar.bz2) = 5dbee06f254f275bdf67ef51c63708da7b39d1a5
-SHA512 (smproxy-1.0.6.tar.bz2) = 4945c92c0f07c5dba5698889f415e78ce406939f4a36eb977309488c27385ce4ce04235c4e850a90a451fea8d7885ded7c6b18db71335c7731b38aaeefa9fcb7
-Size (smproxy-1.0.6.tar.bz2) = 132046 bytes
+BLAKE2s (smproxy-1.0.7.tar.xz) = afb09cf416b701d740c30a854a45c89fb9ba40e561e924a8fda3cbe6bffb0600
+SHA512 (smproxy-1.0.7.tar.xz) = cd6a6933b74f76ae65fb16504e57871724bc1102eae1d02e801e99c3fe73fe44e27f87cef3fbf9f75f369d18197b53bb677d637d94cc8185b55acae0cbd44f21
+Size (smproxy-1.0.7.tar.xz) = 129044 bytes
