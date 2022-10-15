@@ -38,11 +38,18 @@ SUBST_SED.ena-netbsd+=		-e 's,IS_NETBSD 0,IS_NETBSD 1,g'
 SUBST_CLASSES+=			fix-bash
 SUBST_STAGE.fix-bash=		pre-configure
 SUBST_MESSAGE.fix-bash=		Fix bash path
+SUBST_FILES.fix-bash+=		CodeLite/TerminalEmulator.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleBash.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleGnomeTerminal.cpp
 SUBST_FILES.fix-bash+=		CodeLite/clConsoleRXVTerminal.cpp
-SUBST_FILES.fix-bash+=		CodeLite/TerminalEmulator.cpp
 SUBST_FILES.fix-bash+=		CodeLite/fileutils.cpp
+SUBST_FILES.fix-bash+=		Plugin/custombuildrequest.cpp
+SUBST_FILES.fix-bash+=		Plugin/pipedprocess.cpp
+SUBST_FILES.fix-bash+=		Plugin/wxterminal.cpp
+SUBST_FILES.fix-bash+=		Remoty/RemotyWorkspace.cpp
+SUBST_FILES.fix-bash+=		cmake/Modules/UtilsHelper.cmake
+SUBST_FILES.fix-bash+=		codelite_terminal/wxTerminalCtrl.cpp
+SUBST_FILES.fix-bash+=		ctagsd/lib/Settings.cpp
 SUBST_SED.fix-bash+=		-e 's,/bin/bash,${BASH},g'
 
 SUBST_CLASSES+=			fix-man-path
@@ -51,9 +58,12 @@ SUBST_MESSAGE.fix-man-path=	Fix man path
 SUBST_FILES.fix-man-path=	LiteEditor/CMakeLists.txt
 SUBST_SED.fix-man-path+=	-e 's,${CL_PREFIX}/share/man,${CL_PREFIX}/${PKGMANDIR},g'
 
+REPLACE_BASH+=		docs/docs/deploy.sh
 REPLACE_BASH+=		make-weekly
 REPLACE_NODEJS+=	LanguageServer/codelite-lsp/codelite-lsp-helper
+REPLACE_PYTHON+=	Runtime/codelite-remote
 REPLACE_PYTHON+=	codelite_open_helper.py
+
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
 
@@ -68,7 +78,6 @@ BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 .include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc//uchardet/buildlink3.mk"
-.include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
 .include "../../x11/wxGTK31/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
