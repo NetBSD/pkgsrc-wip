@@ -11,4 +11,4 @@ SHA1 (patch-ctagsd_CMakeLists.txt) = 4b7f216ae9384f4e4293463a3dbbd588d1e907f1
 SHA1 (patch-sdk_asio-1.12.1_asio_detail_impl_kqueue__reactor.ipp) = bdbcf78c6198da9ceb123373fd6b99419ae94896
 SHA1 (patch-svgs_svgs-dark_create-logo.sh) = d794ca7bb16a248a7aead3ca30e6c9f16073e1a3
 SHA1 (patch-svgs_svgs-light_create-logo.sh) = 4b0d06911baf89636311cc10e7042f3a2b4f22b3
-SHA1 (patch-wxcrafter_myxh__propgrid.cpp) = 68a28603f733f8cf6347d0c65d79fd1adc48f8a9
+SHA1 (patch-wxcrafter_myxh__propgrid.cpp) = 2cdf5abea02aabb187098fb08d5f9ceb1d4148f1
