@@ -64,7 +64,6 @@ REPLACE_NODEJS+=	LanguageServer/codelite-lsp/codelite-lsp-helper
 REPLACE_PYTHON+=	Runtime/codelite-remote
 REPLACE_PYTHON+=	codelite_open_helper.py
 
-
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
 
 BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca

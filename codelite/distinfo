@@ -3,9 +3,9 @@ $NetBSD: distinfo,v 1.11 2021/10/26 10:21:25 nia Exp $
 BLAKE2s (codelite-16.0.tar.gz) = 9f1d0335b0d7571e2aa2add64996a70141571ab8ae67fd360f3db9bfa9f6a3cf
 SHA512 (codelite-16.0.tar.gz) = 4965207a11869bb5f5ec33538bdc2a7312f8d444c615cf7e5a653a26abe2e823bd35a07d1bce73812935025e9a2dc3d6b970e02c7eb2da75f3a22c14d7670af7
 Size (codelite-16.0.tar.gz) = 89755705 bytes
-SHA1 (patch-CodeLite_tags_storage_sqlite3.h) = 89ba11011c33a4de82f246c1ba198ab61f478d8d
-SHA1 (patch-LanguageServer_UI.h) = 8a40c5cc65bb210bb5f7e6b198580694503a4d95
-SHA1 (patch-Plugin_DiffSideBySidePanel.h) = a62fd170d51bc6ba650d5d7862d5c9633d5dcedb
+SHA1 (patch-CodeLite_tags_storage_sqlite3.h) = 7c00f06f7472e056ec8745ac8f72c3c8a1d6baf3
+SHA1 (patch-LanguageServer_LanguageServerLogView.h) = 6b6d64b444c7aff59558ed37a76c77edf41ef505
+SHA1 (patch-Plugin_DiffSideBySidePanel.h) = c9f5842c073ce802dc511a6007f63e0c44bfebfa
 SHA1 (patch-ctagsd_CMakeLists.txt) = 4b7f216ae9384f4e4293463a3dbbd588d1e907f1
 SHA1 (patch-sdk_asio-1.12.1_asio_detail_impl_kqueue__reactor.ipp) = bdbcf78c6198da9ceb123373fd6b99419ae94896
 SHA1 (patch-svgs_svgs-dark_create-logo.sh) = d794ca7bb16a248a7aead3ca30e6c9f16073e1a3
