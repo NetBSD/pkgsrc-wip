@@ -1,5 +1,7 @@
 $NetBSD$
 
+Reorder <wx/filename.h> to fix build in NetBSD.
+
 --- Plugin/DiffSideBySidePanel.h.orig	2022-04-18 08:09:00.000000000 +0300
 +++ Plugin/DiffSideBySidePanel.h
 @@ -26,13 +26,15 @@

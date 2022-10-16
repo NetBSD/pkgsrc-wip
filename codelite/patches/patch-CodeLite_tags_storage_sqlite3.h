@@ -1,5 +1,7 @@
 $NetBSD$
 
+Reorder <wx/filename.h> to fix the build in NetBSD.
+
 --- CodeLite/tags_storage_sqlite3.h	2022-05-03 22:38:34.770034020 +0300
 +++ CodeLite/tags_storage_sqlite3.h
 @@ -25,6 +25,8 @@
