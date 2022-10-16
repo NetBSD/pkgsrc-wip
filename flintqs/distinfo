@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (flintqs-1.0.tar.gz) = 1dffd8c1bc060866389af292f33d410e6f94a478e0c8129928726d4e49d5b7e1
+SHA512 (flintqs-1.0.tar.gz) = 8391bb13bcc91f4ea68c972f0f6eaf9aa37bedc4c8694d039a21fd5153b203d561364ae545478d34013001354c4e8a013b2e5a5cb947b6e7f453c6f0f392f8be
+Size (flintqs-1.0.tar.gz) = 151535 bytes

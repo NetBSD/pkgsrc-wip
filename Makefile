@@ -893,6 +893,7 @@ SUBDIR+=	flim
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
 SUBDIR+=	flint
+SUBDIR+=	flintqs
 SUBDIR+=	flite2
 SUBDIR+=	flnews-devel
 SUBDIR+=	flowblade
