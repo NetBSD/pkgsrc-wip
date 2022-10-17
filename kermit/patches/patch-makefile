@@ -15,17 +15,9 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
 
 Not yet sent upstream.
 
---- makefile.orig	2022-06-02 14:59:50.000000000 +0000
+--- makefile.orig	2022-10-16 18:28:47.000000000 +0000
 +++ makefile
-@@ -824,19 +824,19 @@ CKVER= "10.0 Beta.03"
- #
- # The following symbols are used to specify library and header file locations:
- # 
--prefix  = /usr/local
-+prefix  ?= /usr/local
- srproot = $(prefix)
- sslroot = $(prefix)
- manroot = $(prefix)
+@@ -834,12 +834,12 @@ manroot = $(prefix)
  
  K4LIB=-L/usr/kerberos/lib
  K4INC=-I/usr/kerberos/include
@@ -42,7 +34,7 @@ Not yet sent upstream.
  
  # To override these assignments; for example, if your OpenSSL files are
  # not in /usr/local/ssl, invoke the desired target like this:
-@@ -973,7 +973,7 @@ BOOTFILE=/edition7
+@@ -976,7 +976,7 @@ BOOTFILE=/edition7
  #
  WERMIT = makewhat
  BINARY = wermit
@@ -51,7 +43,7 @@ Not yet sent upstream.
  BINDIR = $(prefix)/bin
  MANDIR = $(manroot)/man/man1
  MANEXT = 1
-@@ -1088,13 +1088,9 @@ install:
+@@ -1091,13 +1091,9 @@ install:
  	rm -f $(DESTDIR)$(BINDIR)/kermit;\
  	cp $(BINARY) $(DESTDIR)$(BINDIR)/kermit || exit 1;\
  	chmod 755    $(DESTDIR)$(BINDIR)/kermit || exit 1;\
@@ -66,7 +58,7 @@ Not yet sent upstream.
  		echo "#!$(BINDIR)/kermit" >\
  			$(DESTDIR)$(BINDIR)/_tmp.ini;\
  		cat ckermit.ini >> $(DESTDIR)$(BINDIR)/_tmp.ini;\
-@@ -1107,7 +1103,6 @@ install:
+@@ -1110,7 +1106,6 @@ install:
  	echo 'EfM' >&3;\
  	echo "Kermit binary installed:";\
  	ls -l $(DESTDIR)$(BINDIR)/kermit\
@@ -74,7 +66,7 @@ Not yet sent upstream.
  	      $(DESTDIR)$(BINDIR)/ckermit.ini;\
  	echo;\
  	echo " WARNING: If C-Kermit is to be used for dialing out,";\
-@@ -1120,9 +1115,9 @@ install:
+@@ -1123,9 +1118,9 @@ install:
  		if test -d $(DESTDIR)$(MANDIR); then\
  			echo  "$(DESTDIR)$(MANDIR) exists...";\
  		else\
@@ -87,7 +79,7 @@ Not yet sent upstream.
  		fi;\
  		rm -f $(DESTDIR)$(MANDIR)/kermit.$(MANEXT);\
  		cp ckuker.nr $(DESTDIR)$(MANDIR)/kermit.$(MANEXT) || exit 1;\
-@@ -1935,7 +1930,7 @@ netbsd+krb5:
+@@ -1937,7 +1932,7 @@ netbsd+krb5:
  	-DCK_CAST $$HAVE_DES -DNOFTP_GSSAPI $(K5INC) $(K5INC)/krb5 \
  	$(KFLAGS)" \
  	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lcurses $$DES_LIB \
@@ -96,7 +88,7 @@ Not yet sent upstream.
  
  # NetBSD - With Kerberos 5 and SSL and Zlib.
  # OK: 2011/08/21 on 5.1 with MIT Kerberos.
-@@ -1962,7 +1957,7 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
+@@ -1964,7 +1959,7 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
  	-DCK_SSL -DCK_PAM -DZLIB -DNO_DCL_INET_ATON $$OPENSSLOPTION \
  	$(KFLAGS)" "LNKFLAGS = $(LNKFLAGS)" \
  	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lssl $$DES_LIB \
@@ -105,7 +97,7 @@ Not yet sent upstream.
  
  #Special Security Enhanced NetBSD target with SRP, SSL, and zlib support.
  #To build this, you need to BUILD the pkgsrc srp_client package.  After
-@@ -3673,7 +3668,7 @@ solaris2xg+openssl+zlib+pam+shadow:
+@@ -3675,7 +3670,7 @@ solaris2xg+openssl+zlib+pam+shadow:
  	-DCK_AUTHENTICATION -DCK_SSL -DCK_PAM -DCK_SHADOW  -DZLIB \
  	-DBIGBUFOK $(SSLINC) $(KFLAGS)" \
  	"LIBS= $(SSLLIB) -ltermlib \
@@ -114,7 +106,7 @@ Not yet sent upstream.
  
  #Ditto but with GCC 3.1 in which you have to specify 32-bit with -m32.
  #In Solaris 9 (and maybe 8) you'll also need specifiy the Library path.
-@@ -4028,7 +4023,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
+@@ -4030,7 +4025,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
  	-DCK_CURSES -DCK_NEWTERM -DDIRENT -DHDBUUCP -DTCPSOCKET  -DBIGBUFOK \
  	-DCK_AUTHENTICATION -DCK_SSL -DZLIB -DCK_KERBEROS -DKRB5 \
  	-DCK_ENCRYPTION -DCK_CAST $$OPENSSLOPTION \
@@ -123,7 +115,7 @@ Not yet sent upstream.
  	"LIBS= $(SSLLIB) $(K5LIB) -lz -lssl -ltermlib -lsocket -lnsl -lm \
  	-lresolv -lcrypto \
  	$$GSSAPILIB -lkrb5 -lcom_err -lk5crypto $$DES_LIB $(LIBS)"
-@@ -6367,32 +6362,6 @@ linux-2015:
+@@ -6359,32 +6354,6 @@ linux-2015:
  	if test `grep openpty /usr/include/pty.h | wc -l` -gt 0; \
  	then HAVE_OPENPTY='-DHAVE_OPENPTY'; \
  	else HAVE_OPENPTY=''; fi ; \

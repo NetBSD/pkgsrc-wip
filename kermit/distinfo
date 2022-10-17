@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.28 2020/07/30 03:03:07 gutteridge Exp $
 
-BLAKE2s (cku400-beta05.tar.gz) = 22e1582c7715fa206351a0d9fc2e50a90d210bf30b816e9561a68523657e93f0
-SHA512 (cku400-beta05.tar.gz) = d590966f38de4ca9f343b64997141f66919f4b55ba379a09e81ce92cde89c4909409142c71e5e97eb5e88e78eca4df549b0317033c97fc1c78460dc1afa5cac3
-Size (cku400-beta05.tar.gz) = 3022920 bytes
-SHA1 (patch-ckuath.c) = 494e9f5dc9edc2b8738129bb53de2d5affa8cca2
+BLAKE2s (cku400-beta06.tar.gz) = e8a84583e82842e0ca55b43af4e5e13f36c1ffa9d7750a728ad22f7cf40c5941
+SHA512 (cku400-beta06.tar.gz) = b363042d7ae5d0454be04988d716d21f825372fb44aa6b09ff9217a4a69548a7403a1ff100a1ee723dcc13d4f7c75298a6a1adb5036010fc77351324fcc2f5b1
+Size (cku400-beta06.tar.gz) = 3124191 bytes
+SHA1 (patch-ckuath.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-ckupty.c) = 97cb6cca9b90d4c9a3a2faf9161310cb51fd2a58
 SHA1 (patch-ckuusx.c) = 4482c383b25cac5382863b811b6e13b3a64c85c1
-SHA1 (patch-makefile) = f60bad5ed3cb1ce556ceb714204c9876ac49a12f
+SHA1 (patch-makefile) = 918d820b05495740b220498fdd4fea01e41e0353
