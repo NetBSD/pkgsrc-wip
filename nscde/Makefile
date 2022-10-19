@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NsCDE/}
 GITHUB_PROJECT=	NsCDE
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/NsCDE/NsCDE
 COMMENT=	Not so Common Desktop Environment
 LICENSE=	gnu-gpl-v3
