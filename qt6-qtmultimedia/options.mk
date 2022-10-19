@@ -17,6 +17,7 @@ PKG_SUGGESTED_OPTIONS+=		gstreamer
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	-gstreamer
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 PLIST.gstreamer=	yes
 .else
 CONFIGURE_ARGS+=	-no-gstreamer
