@@ -2677,6 +2677,7 @@ SUBDIR+=	nq
 SUBDIR+=	nqp
 SUBDIR+=	nrg4iso
 SUBDIR+=	nsc2ke
+SUBDIR+=	nscde
 SUBDIR+=	nsm
 SUBDIR+=	nsp
 SUBDIR+=	nspluginwrapper
