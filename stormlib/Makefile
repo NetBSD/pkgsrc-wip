@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	stormlib-9.22
+DISTNAME=	stormlib-9.24
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ladislav-zezula/}
 GITHUB_PROJECT=	StormLib
