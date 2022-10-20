@@ -19,6 +19,7 @@ info/ede.info.gz
 info/ediff.info.gz
 info/edt.info.gz
 info/efaq.info.gz
+info/eglot.info.gz
 info/eieio.info.gz
 info/eintr.info.gz
 info/elisp.info.gz
@@ -3533,6 +3534,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/ebnf2ps.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ebnf2ps.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ebrowse.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ebrowse.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/eglot.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/eglot.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/elisp-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/elisp-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/erts-mode.el.gz
