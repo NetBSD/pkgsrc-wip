@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cloudpickle-2.1.0
+DISTNAME=	cloudpickle-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudpickle/}
