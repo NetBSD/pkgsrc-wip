@@ -2,9 +2,11 @@
 
 DISTNAME=	amnesia-tdd-0.0.0
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=shamazmazum/}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=shamazmazum/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 GITHUB_PROJECT=	AmnesiaTheDarkDescent
-GITHUB_TAG=	8280a2e2a35899ada5fc8970159002aec0c7f08a
+# the 'netbsd_again' branch:
+GITHUB_TAG=	3086f2c562e73948f60ff32746f44552ca39c2c8
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://frictionalgames.com/
