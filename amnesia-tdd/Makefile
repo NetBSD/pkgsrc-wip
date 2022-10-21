@@ -10,7 +10,7 @@ GITHUB_TAG=	3086f2c562e73948f60ff32746f44552ca39c2c8
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://frictionalgames.com/
-COMMENT=	Amnesia: The Dark Desceent
+COMMENT=	Amnesia: The Dark Descent
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
