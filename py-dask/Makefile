@@ -1,6 +1,6 @@
 # $NetBSD$
 
-GITHUB_TAG=	2022.9.1
+GITHUB_TAG=	2022.10.0
 DISTNAME=	dask-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	dask
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-partd>=0.3.10:../../wip/py-partd
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-distributed>=2022.8.0:../../wip/py-distributed
+DEPENDS+=	${PYPKGPREFIX}-distributed>=2022.10.0:../../wip/py-distributed
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.1.1:../../wip/py-cloudpickle
 DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.7.1:../../wip/py-fsspec
 DEPENDS+=	${PYPKGPREFIX}-zict>=2.1.0:../../wip/py-zict

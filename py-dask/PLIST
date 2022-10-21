@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/dask
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,9 +8,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dask/__init__.py
 ${PYSITELIB}/dask/__init__.pyc
+${PYSITELIB}/dask/__main__.py
+${PYSITELIB}/dask/__main__.pyc
 ${PYSITELIB}/dask/_version.py
 ${PYSITELIB}/dask/_version.pyc
 ${PYSITELIB}/dask/array/NUMPY_LICENSE.txt
@@ -27,6 +31,8 @@ ${PYSITELIB}/dask/array/core.py
 ${PYSITELIB}/dask/array/core.pyc
 ${PYSITELIB}/dask/array/creation.py
 ${PYSITELIB}/dask/array/creation.pyc
+${PYSITELIB}/dask/array/cupy_entry_point.py
+${PYSITELIB}/dask/array/cupy_entry_point.pyc
 ${PYSITELIB}/dask/array/dispatch.py
 ${PYSITELIB}/dask/array/dispatch.pyc
 ${PYSITELIB}/dask/array/einsumfuncs.py
@@ -159,6 +165,8 @@ ${PYSITELIB}/dask/array/utils.py
 ${PYSITELIB}/dask/array/utils.pyc
 ${PYSITELIB}/dask/array/wrap.py
 ${PYSITELIB}/dask/array/wrap.pyc
+${PYSITELIB}/dask/backends.py
+${PYSITELIB}/dask/backends.pyc
 ${PYSITELIB}/dask/bag/__init__.py
 ${PYSITELIB}/dask/bag/__init__.pyc
 ${PYSITELIB}/dask/bag/avro.py
@@ -209,6 +217,8 @@ ${PYSITELIB}/dask/cache.py
 ${PYSITELIB}/dask/cache.pyc
 ${PYSITELIB}/dask/callbacks.py
 ${PYSITELIB}/dask/callbacks.pyc
+${PYSITELIB}/dask/cli.py
+${PYSITELIB}/dask/cli.pyc
 ${PYSITELIB}/dask/compatibility.py
 ${PYSITELIB}/dask/compatibility.pyc
 ${PYSITELIB}/dask/config.py
@@ -422,6 +432,8 @@ ${PYSITELIB}/dask/tests/test_cache.py
 ${PYSITELIB}/dask/tests/test_cache.pyc
 ${PYSITELIB}/dask/tests/test_callbacks.py
 ${PYSITELIB}/dask/tests/test_callbacks.pyc
+${PYSITELIB}/dask/tests/test_cli.py
+${PYSITELIB}/dask/tests/test_cli.pyc
 ${PYSITELIB}/dask/tests/test_compatibility.py
 ${PYSITELIB}/dask/tests/test_compatibility.pyc
 ${PYSITELIB}/dask/tests/test_config.py
