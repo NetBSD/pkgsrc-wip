@@ -49,16 +49,12 @@ ${PYSITELIB}/fsspec/implementations/dbfs.py
 ${PYSITELIB}/fsspec/implementations/dbfs.pyc
 ${PYSITELIB}/fsspec/implementations/dirfs.py
 ${PYSITELIB}/fsspec/implementations/dirfs.pyc
-${PYSITELIB}/fsspec/implementations/dvc.py
-${PYSITELIB}/fsspec/implementations/dvc.pyc
 ${PYSITELIB}/fsspec/implementations/ftp.py
 ${PYSITELIB}/fsspec/implementations/ftp.pyc
 ${PYSITELIB}/fsspec/implementations/git.py
 ${PYSITELIB}/fsspec/implementations/git.pyc
 ${PYSITELIB}/fsspec/implementations/github.py
 ${PYSITELIB}/fsspec/implementations/github.pyc
-${PYSITELIB}/fsspec/implementations/hdfs.py
-${PYSITELIB}/fsspec/implementations/hdfs.pyc
 ${PYSITELIB}/fsspec/implementations/http.py
 ${PYSITELIB}/fsspec/implementations/http.pyc
 ${PYSITELIB}/fsspec/implementations/jupyter.py

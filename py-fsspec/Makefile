@@ -1,6 +1,6 @@
 # $NetBSD$
 
-FSSPEC_VERSION=	2022.8.2
+FSSPEC_VERSION=	2022.10.0
 DISTNAME=	fsspec-${FSSPEC_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
@@ -15,6 +15,7 @@ WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${FSSPEC_VERSION}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.14.1:../../devel/py-wrapt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.18.3:../../devel/py-test-asyncio
