@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cityhash-0.4.1
+DISTNAME=	cityhash-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	python-cityhash
 CATEGORIES=	devel
