@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	inicpp-1.2.0
+DISTNAME=	inicpp-1.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SemaiCZE/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

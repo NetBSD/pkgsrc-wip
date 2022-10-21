@@ -1,7 +1,5 @@
 $NetBSD$
 
-BLAKE2s (inicpp-1.2.0.tar.gz) = 6d80d6df72544abb841a148536730dde8cc1d7b7b9f021a3699bfb905142eec8
-SHA512 (inicpp-1.2.0.tar.gz) = c843951723b611bb02be322f5abd0e373006541ab2c110e114b8890add7cb70f8c38c1031ce733c60a1dc43b88e7b3ff64124a6cd7c7f0b876101470d0c962e5
-Size (inicpp-1.2.0.tar.gz) = 64068 bytes
-SHA1 (patch-CMakeLists.txt) = 027a7b5d7c0ac3ec3922b30511700f22b65e14a1
-SHA1 (patch-inicpp.pc.in) = 85db9786a1ce3b802cdce11ccb388ed8b1194fe0
+BLAKE2s (inicpp-1.2.1.tar.gz) = 935f8873e503b7e0cac4f750d9008eee1c64a718afaf1d88811348718da7b855
+SHA512 (inicpp-1.2.1.tar.gz) = f98842fd7f415f45322fab2e3caa80d4c97f52847108712caa221dda79c579c377ccec0ce4ab7a86ae3036ae01aa6905caf5b1b34718fcaf2dbfa40168d2823b
+Size (inicpp-1.2.1.tar.gz) = 64411 bytes
