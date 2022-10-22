@@ -1,0 +1,14 @@
+$NetBSD$
+
+* NetBSD needs ossaudio for oss emulation
+
+--- src/CMakeLists.txt.orig	2022-02-19 05:05:00.000000000 +0000
++++ src/CMakeLists.txt
+@@ -99,6 +99,7 @@ set(twinkle_LIBS
+ if (WITH_GSM)
+ 	list(APPEND twinkle_LIBS ${GSM_LIBRARY})
+ endif (WITH_GSM)
++list(APPEND twinkle_LIBS $<$<PLATFORM_ID:NetBSD>:-lossaudio>)
+ 
+ if (WITH_QT5)
+ 	add_subdirectory(gui)

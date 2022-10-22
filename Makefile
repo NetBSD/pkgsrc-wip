@@ -5798,6 +5798,7 @@ SUBDIR+=	tvmet
 SUBDIR+=	twamp-gui
 SUBDIR+=	twemproxy
 SUBDIR+=	twin-environment
+SUBDIR+=	twinkle
 SUBDIR+=	twintk
 SUBDIR+=	twitim
 SUBDIR+=	twitmail

@@ -1,0 +1,3 @@
+twinkle does not end its process when
+closing it on NetBSD, t_thread->cancel()
+does not cancel thr_listen_udp in main.cpp.

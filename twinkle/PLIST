@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/twinkle
+bin/twinkle-console
+man/man1/twinkle.1
+share/applications/twinkle.desktop
+share/icons/hicolor/16x16/apps/twinkle.png
+share/icons/hicolor/24x24/apps/twinkle.png
+share/icons/hicolor/32x32/apps/twinkle.png
+share/icons/hicolor/48x48/apps/twinkle.png
+share/icons/hicolor/scalable/apps/twinkle.svg
+share/pixmaps/twinkle.png
+share/twinkle/lang/twinkle_cs.qm
+share/twinkle/lang/twinkle_de.qm
+share/twinkle/lang/twinkle_fr.qm
+share/twinkle/lang/twinkle_nl.qm
+share/twinkle/lang/twinkle_ru.qm
+share/twinkle/lang/twinkle_sv.qm
+share/twinkle/providers.csv
+share/twinkle/ringback.wav
+share/twinkle/ringtone.wav
+share/twinkle/twinkle16.png
+share/twinkle/twinkle32.png
+share/twinkle/twinkle48.png

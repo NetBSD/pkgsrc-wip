@@ -1,0 +1,33 @@
+$NetBSD$
+
+* allow compiler extensions for compiler based alloca
+* install manpages into PKGMANDIR
+
+--- CMakeLists.txt.orig	2022-02-19 05:05:00.000000000 +0000
++++ CMakeLists.txt
+@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.6.0 FAT
+ 
+ set(PRODUCT_VERSION "1.10.3")
+ set(PRODUCT_DATE    "February 18, 2022")
+-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
++set(CMAKE_CXX_STANDARD 11)
+ 
+ OPTION(WITH_ZRTP		"Enable ZRTP encrypted calls" OFF)
+ OPTION(WITH_SPEEX		"Enable the Speex codec" OFF)
+@@ -19,6 +19,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_C
+ 
+ include (CheckIncludeFile)
+ include (CheckIncludeFiles)
++include (GNUInstallDirs)
+ 
+ find_package(LibXml2 REQUIRED)
+ find_package(LibMagic REQUIRED)
+@@ -159,7 +160,7 @@ install(FILES data/twinkle.svg
+ 	DESTINATION share/icons/hicolor/scalable/apps)
+ 
+ install(FILES data/twinkle.1
+-	DESTINATION share/man/man1)
++	DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ 
+ add_subdirectory(src)
+ 

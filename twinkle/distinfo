@@ -1,0 +1,11 @@
+$NetBSD$
+
+BLAKE2s (twinkle-1.10.3.tar.gz) = f99250cc3bf48f8a0da0ad639c105cf549490c1802cf5eac0c4f369a07e3f979
+SHA512 (twinkle-1.10.3.tar.gz) = 7b70a346e6d3f1dd08c1d019dd671da3cb3539815d8a14de7268b2bf43fc0b632834e00d3b63823b1338472a1b91f727a479e5381da8b1076327b112c8a9bea2
+Size (twinkle-1.10.3.tar.gz) = 1196890 bytes
+SHA1 (patch-CMakeLists.txt) = 28890aeb4d89d8a9e903c8b1f2f658d53a550f8d
+SHA1 (patch-src_CMakeLists.txt) = 3e5f9e1f234d3972bfa317c686181eb26ea05f68
+SHA1 (patch-src_call__script.cpp) = 69ee7528de4a0fe3191a328f66bbff1cf98190c9
+SHA1 (patch-src_sys__settings.cpp) = 938fc221b9732529312385c5fecede01e66f3d7f
+SHA1 (patch-src_sys__settings.h) = a638124a9f688bd20b0001097552923d83941d0b
+SHA1 (patch-src_threads_mutex.cpp) = bacd240d0df36d97f25f25173dda649aa8637637
