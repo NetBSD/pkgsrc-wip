@@ -2,7 +2,7 @@
 
 DISTNAME=	tarlz-0.22
 CATEGORIES=	archivers
-MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/tarlz/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/tarlz/
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	root@zta.lk
