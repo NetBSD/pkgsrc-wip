@@ -1,0 +1,31 @@
+$NetBSD$
+
+* Make common macro defines actually common (beyond Mac/Windows/Linux)
+* Don't unconditionally define _GNU_SOURCE and _XOPEN_SOURCE
+--- CMakeLists.txt.orig	2022-05-02 12:02:01.000000000 -0700
++++ CMakeLists.txt	2022-10-22 22:46:49.797980253 -0700
+@@ -5,19 +5,19 @@
+ message(STATUS "Using toolchain file: ${CMAKE_TOOLCHAIN_FILE}.")
+ 
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DLINUX -DUSE_IOSZ -DDO_GRAB \
+-	-DNEWSERIAL -DSH_MEM -DXSCREEN \
+-    -DEVM_SCR -D_GNU_SOURCE -D_XOPEN_SOURCE -DMOUSE -DQVFS")
++	-DNEWSERIAL -DSH_MEM -DXSCREEN -DSOUND -DIPDEV \
++    -DEVM_SCR -DMOUSE -DQVFS")
+ 
+ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration -DSOUND -DIPDEV -DSERIAL -DUX_WAIT -DNEWPTY")
++	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration -DSERIAL -DUX_WAIT -DNEWPTY")
+ endif()
+ 
+ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DSOUND -DIPDEV -DSERIAL -DUX_WAIT -DNEWPTY")
++	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DSERIAL -DUX_WAIT -DNEWPTY")
+ endif()
+ 
+ if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DSOUND -DIPDEV -DNO_LOCK -DNO_FORK -D_POSIX -mwindows")
++	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DNO_LOCK -DNO_FORK -D_POSIX -mwindows")
+ endif()
+ 
+ if(${CMAKE_BUILD_TYPE} MATCHES "Debug")

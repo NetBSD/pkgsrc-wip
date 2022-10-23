@@ -5398,6 +5398,7 @@ SUBDIR+=	spotify-tui
 SUBDIR+=	spotifyd
 SUBDIR+=	spread4
 SUBDIR+=	spyder
+SUBDIR+=	sqlux
 SUBDIR+=	squeak5
 SUBDIR+=	squeak5-vm
 SUBDIR+=	squeak6
