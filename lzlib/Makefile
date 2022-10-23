@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	lzlib-1.13
-CATEGORIES=	devel
-MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lzlib/
+CATEGORIES=	archivers devel
+MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lzlib/
 
 MAINTAINER=	root@zta.lk
 HOMEPAGE=	https://www.nongnu.org/lzip/lzlib.html
