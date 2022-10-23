@@ -22,14 +22,22 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	alsa
+PLIST_VARS+=	alsa v4l2 pulse
 .if ${OPSYS} == "Linux"
 PLIST.alsa=	yes
+.endif
+.if ${OPSYS} != "Darwin"
+PLIST.v4l2=	yes
+PLIST.pulse=	yes
+.else
+CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/liblo/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../audio/pulseaudio/buildlink3.mk"
+.endif
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
