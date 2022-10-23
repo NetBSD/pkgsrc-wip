@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.2 2016/09/08 14:34:02 jperkin Exp $
 
-BLAKE2s (bats-core-1.8.0.tar.gz) = 344649bf13d314ed181b8a2dc6db55a8124cae8af2f655c79d17135dc760559e
-SHA512 (bats-core-1.8.0.tar.gz) = e51ea85bf2f455881a90220d783b4a261bd91331326a7184eb31ea9adf31c18a79a062fd77af12d082ccef953d992382ec19ca9a27395b2a03c4a9a120bdda76
-Size (bats-core-1.8.0.tar.gz) = 144262 bytes
+BLAKE2s (bats-core-1.8.2.tar.gz) = dcee1e4d22d02d9338f33485b94e9a1c8bdb5d791cf9e871b13cee180bcce099
+SHA512 (bats-core-1.8.2.tar.gz) = 7eace32f19789e081112af1ce8ab33ff210d52bd3ea84962bbec226349b3b8d8912b6a495f5524f9cc7cfe692f1d23d684c93c24e182752e2b30731670d6eeea
+Size (bats-core-1.8.2.tar.gz) = 143952 bytes
 SHA1 (patch-install.sh) = 482b34ba79587a54220567bc4e104c7071aab1de
 SHA1 (patch-libexec_bats-core_bats) = ba322d4d3085030a07f6683e692ab26573d8a98d
 SHA1 (patch-test_install.bats) = 669253c1cf8fa3e8a76f132e6da21ab7e8e79844
