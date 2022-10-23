@@ -1,4 +1,5 @@
 @comment $NetBSD$
+include/xtend/array.h
 include/xtend/common.h
 include/xtend/ctype.h
 include/xtend/dsv-accessors.h
@@ -115,6 +116,7 @@ man/man3/xt_n_choose_k.3
 man/man3/xt_read_line_malloc.3
 man/man3/xt_realloc.3
 man/man3/xt_rmkdir.3
+man/man3/xt_shuffle.3
 man/man3/xt_tic.3
 man/man3/xt_toc.3
 man/man3/xt_valid_extension.3
