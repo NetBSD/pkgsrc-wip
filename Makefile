@@ -5512,7 +5512,6 @@ SUBDIR+=	tagtool
 SUBDIR+=	talksoup
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
-SUBDIR+=	tarlz
 SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
