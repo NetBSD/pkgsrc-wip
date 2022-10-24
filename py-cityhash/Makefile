@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 WRKSRC=	${WRKDIR}/python-${DISTNAME}
 
 DEPENDS+=	cityhash-[0-9]*:../../textproc/cityhash
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.2:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 do-test:
