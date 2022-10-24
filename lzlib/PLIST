@@ -1,7 +1,0 @@
-@comment $NetBSD$
-include/lzlib.h
-info/lzlib.info
-lib/liblz.a
-lib/liblz.so
-lib/liblz.so.1
-lib/liblz.so.${PKGVERSION}
