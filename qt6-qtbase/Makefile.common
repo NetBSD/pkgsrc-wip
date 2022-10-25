@@ -43,6 +43,9 @@ CXXFLAGS+=		-Wno-register
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
+# ld: undefined symbol qt_version_tag
+CFLAGS.SunOS+=		-DQT_NO_VERSION_TAGGING
+
 # include/openssl/e_os2.h:283:25: error: '_Noreturn' does not name a type
 CXXFLAGS.SunOS+=	-D_Noreturn=""
 
