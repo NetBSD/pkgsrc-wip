@@ -15,6 +15,8 @@ HOMEPAGE=	https://github.com/auerlab/fasda
 COMMENT=	Fast and simple differential analysis
 LICENSE=	2-clause-bsd
 
+LDFLAGS.SunOS+=	-lresolv
+
 pre-build:
 	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
 
