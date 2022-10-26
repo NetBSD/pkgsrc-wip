@@ -1,7 +1,7 @@
 $NetBSD: patch-src_bootstrap_bootstrap.py,v 1.4 2020/02/17 20:24:18 jperkin Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
-Handle earmv7hf for NetBSD.
+Handle earmv[67]hf for NetBSD.
 Default to non-verbose compilation.
 
 --- src/bootstrap/bootstrap.py.orig	2022-09-19 14:07:21.000000000 +0000
@@ -31,7 +31,7 @@ Default to non-verbose compilation.
          else:
              ostype += 'eabihf'
 -    elif cputype in {'armv7l', 'armv8l'}:
-+    elif cputype == 'armv6hf':
++    elif cputype in {'armv6hf', 'earmv6hf'}:
 +        cputype = 'armv6'
 +        if ostype == 'unknown-netbsd':
 +            ostype += '-eabihf'
