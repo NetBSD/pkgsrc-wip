@@ -16,6 +16,9 @@ HOMEPAGE=		https://github.com/rhboot/efivar
 COMMENT=		Tools and libraries to work with EFI
 LICENSE=		gnu-lgpl-v2.1 # or later
 
+# Depends on EFI and relevant API in the kernel
+ONLY_FOR_PLATFORM=	*-*-x86_64
+
 USE_TOOLS+=		gmake
 
 # Specify lib directory name.
