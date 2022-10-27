@@ -1122,6 +1122,7 @@ SUBDIR+=	gerris-snapshot
 SUBDIR+=	getdns
 SUBDIR+=	getdp
 SUBDIR+=	gf2x
+SUBDIR+=	gffread
 SUBDIR+=	gfa
 SUBDIR+=	gfan
 SUBDIR+=	gfeedline
