@@ -5093,6 +5093,7 @@ SUBDIR+=	rippled
 SUBDIR+=	rk
 SUBDIR+=	rlottie
 SUBDIR+=	rmilter
+SUBDIR+=	rna-seq
 SUBDIR+=	rnc-mode
 SUBDIR+=	rng-tools
 SUBDIR+=	rnp
