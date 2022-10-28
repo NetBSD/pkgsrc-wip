@@ -27,12 +27,12 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets.cmake
-qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfig.cmake
-qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfigVersion.cmake
-qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargets-release.cmake
-qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargets.cmake
+${PLIST.flite}qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginAdditionalTargetInfo.cmake
+${PLIST.flite}qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfig.cmake
+${PLIST.flite}qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfigVersion.cmake
+${PLIST.flite}qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfigVersionImpl.cmake
+${PLIST.flite}qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargets-release.cmake
+${PLIST.flite}qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargets.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMockPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMockPluginConfig.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMockPluginConfigVersion.cmake
@@ -63,7 +63,7 @@ qt6/lib/pkgconfig/Qt6TextToSpeech.pc
 qt6/mkspecs/modules/qt_lib_texttospeech.pri
 qt6/mkspecs/modules/qt_lib_texttospeech_private.pri
 qt6/modules/TextToSpeech.json
-qt6/plugins/texttospeech/libqtexttospeech_flite.so
+${PLIST.flite}qt6/plugins/texttospeech/libqtexttospeech_flite.so
 qt6/plugins/texttospeech/libqtexttospeech_mock.so
 qt6/plugins/texttospeech/libqtexttospeech_speechd.so
 qt6/qml/QtTextToSpeech/libtexttospeechqmlplugin.so

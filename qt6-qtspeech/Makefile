@@ -6,13 +6,25 @@ COMMENT=	Qt6 module for text to speech
 CATEGORIES=	audio
 LICENSE=	gnu-gpl-v3
 
-CONFIGURE_ARGS+=	-no-flite-alsa
+.include "../../mk/bsd.prefs.mk"
 
-PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6TextToSpeech.pc
+PLIST_VARS+=	flite
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	-no-flite
+.else
+PLIST.flite=	yes
+CONFIGURE_ARGS+=	-no-flite-alsa
+.endif
 
 .include "../../wip/qt6-qtbase/Makefile.common"
 
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6TextToSpeech.pc
+
+.if ${OPSYS} != "Linux"
 .include "../../audio/flite/buildlink3.mk"
+.endif
+
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"
