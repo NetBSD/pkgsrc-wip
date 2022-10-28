@@ -13,18 +13,26 @@ LICENSE=	gnu-gpl-v3
 
 USE_IMAKE=	yes
 
-WRKSRC=		${WRKDIR}/xtrlock-2.15
-MAN_PAGE=	${WRKSRC}/xtrlock.man
+MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4555
+SPECIAL_PERMS+=		bin/xtrlock ${SETUID_ROOT_PERMS}
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} ${MAKE_FLAGS} xtrlock
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 do-install:
-	${INSTALL} -m 4555 ${WRKSRC}/xtrlock ${DESTDIR}${PREFIX}/bin/xtrlock
-	${INSTALL_MAN} ${MAN_PAGE} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xtrlock.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xtrlock								\
+	${DESTDIR}${PREFIX}/bin/xtrlock
+
+	${INSTALL_MAN} ${WRKSRC}/xtrlock.man								\
+	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xtrlock.1
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
