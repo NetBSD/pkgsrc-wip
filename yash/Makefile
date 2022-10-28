@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	yash-2.53
-CATEGORIES=	shells	
+CATEGORIES=	shells
 MASTER_SITES=	https://free.nchc.org.tw/osdn/yash/77664/
 EXTRACT_SUFX=	.tar.xz
 
@@ -10,9 +10,9 @@ HOMEPAGE=	https://yash.osdn.jp/index.html.en
 COMMENT=	POSIX-compliant command line shell
 LICENSE=	gnu-gpl-v2
 
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=    --mandir=${PKGMANDIR}
+CONFIGURE_ARGS+=	--mandir=${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-history
 CONFIGURE_ARGS+=	--enable-lineedit
 

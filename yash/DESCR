@@ -11,4 +11,4 @@ interactive and scripting use. Notable features are:
 - Prompt command and command-not-found handler
 - Command line completion with predefined completion scripts for more
   than 100 commands
-- Command line prediction based on command history 
+- Command line prediction based on command history
