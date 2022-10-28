@@ -4,7 +4,7 @@ DISTNAME=	overgrowth-0.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
 # 'charlotte-netbsd' branch:
-GITHUB_TAG=	a8a20e09108ecfc4921a4b409af537a159982672
+GITHUB_TAG=	506fd955a2edf881109edd16961964e5bb33e126
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://overgrowth.wolfire.com/
