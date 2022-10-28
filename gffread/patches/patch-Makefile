@@ -2,7 +2,7 @@ $NetBSD$
 
 # Portability and package-friendliness
 
---- Makefile.orig	2021-07-23 14:21:36 UTC
+--- Makefile.orig	2021-07-23 14:21:36.000000000 +0000
 +++ Makefile
 @@ -1,11 +1,11 @@
 -GCLDIR := $(if $(GCLDIR),$(GCLDIR),../gclib)
@@ -18,7 +18,7 @@ $NetBSD$
  
  LDFLAGS := $(if $(LDFLAGS),$(LDFLAGS),-g)
  
-@@ -15,7 +15,7 @@ BASEFLAGS  := -Wall -Wextra -std=c++11 ${SEARCHDIRS} -
+@@ -15,7 +15,7 @@ BASEFLAGS  := -Wall -Wextra -std=c++11 $
  
  GCCV8 := $(shell expr `${CXX} -dumpversion | cut -f1 -d.` \>= 8)
  ifeq "$(GCCV8)" "1"
@@ -36,20 +36,19 @@ $NetBSD$
    endif
    ifneq (,$(filter %memcheck %memdebug, $(MAKECMDGOALS)))
       #use sanitizer in gcc 4.9+
-@@ -79,11 +79,8 @@ OBJS := ${GCLDIR}/GBase.o ${GCLDIR}/GArgs.o ${GCLDIR}/
+@@ -79,10 +79,7 @@ OBJS := ${GCLDIR}/GBase.o ${GCLDIR}/GArg
   
  .PHONY : all
  
 -all static release debug memcheck memdebug profile gprof prof: ../gclib gffread
-+all static release debug memcheck memdebug profile gprof prof: ${GCLDIR} gffread
- 
+-
 -../gclib:
 -	git clone https://github.com/gpertea/gclib.git ../gclib
--
++all static release debug memcheck memdebug profile gprof prof: ${GCLDIR} gffread
+ 
  $(OBJS) : $(GCLDIR)/GBase.h $(GCLDIR)/gff.h
  gffread.o : gff_utils.h $(GCLDIR)/GBase.h $(GCLDIR)/gff.h
- gff_utils.o : gff_utils.h $(GCLDIR)/gff.h
-@@ -97,9 +94,19 @@ gffread: $(OBJS) gffread.o
+@@ -97,9 +94,21 @@ gffread: $(OBJS) gffread.o
  
  # target for removing all object files
  
@@ -60,13 +59,15 @@ $NetBSD$
  	@${RM} gffread gffread.o* gffread.exe $(OBJS)
  	@${RM} core.*
  
++MKDIR	?= mkdir
 +INSTALL	?= install
 +STRIP	?= strip
 +PREFIX	?= /usr/local
 +DESTDIR	?= .
- 
-+install:
-+	${INSTALL} -c gffread ${DESTDIR}${PREFIX}/bin
 +
++install:
++	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
++	${INSTALL} -c gffread ${DESTDIR}${PREFIX}/bin
+ 
 +install-strip: install
 +	${STRIP} ${DESTDIR}${PREFIX}/bin/gffread

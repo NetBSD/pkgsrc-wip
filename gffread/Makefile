@@ -5,16 +5,13 @@
 #              Thu Oct 27 09:58:19 CDT 2022               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
 DISTNAME=	gffread-0.12.7
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpertea/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread
+HOMEPAGE=	https://ccb.jhu.edu/software/stringtie/gff.shtml
 COMMENT=	GFF/GTF format conversions, filtering, FASTA extraction, etc
 LICENSE=	mit
 
@@ -24,8 +21,4 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 INSTALL_TARGET=	install-strip
 
-INSTALLATION_DIRS=	bin
-
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
