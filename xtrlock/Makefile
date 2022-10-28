@@ -22,7 +22,8 @@ SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4555
 SPECIAL_PERMS+=		bin/xtrlock ${SETUID_ROOT_PERMS}
 
 do-build:
-	cd ${WRKSRC} && ${MAKE_PROGRAM} ${MAKE_FLAGS} xtrlock
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}								\
+	${MAKE_PROGRAM} ${MAKE_FLAGS} xtrlock
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xtrlock								\
