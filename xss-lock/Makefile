@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 
 PYTHON_FOR_BUILD_ONLY=	tool
 # Requires rst2man to generate man page
-# TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 SUBST_CLASSES+=		doc
 SUBST_MESSAGE.doc=	Fixing rst2man name due to python versioning.
