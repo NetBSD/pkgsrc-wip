@@ -17,6 +17,8 @@ LICENSE=	2-clause-bsd
 
 MAKE_ENV=	VERSION=${PKGVERSION}
 
+LDFLAGS.SunOS=	-lresolv
+
 pre-build:
 	(cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend)
 
