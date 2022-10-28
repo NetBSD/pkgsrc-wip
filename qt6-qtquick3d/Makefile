@@ -19,6 +19,14 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DParticles.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DRuntimeRender.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DUtils.pc
 
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) \
+ || !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) \
+ || !empty(MACHINE_PLATFORM:MLinux-*-aarch64) \
+ || !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+PLIST_SRC=	PLIST
+PLIST_SRC+=	PLIST.embree
+.endif
+
 .include "../../multimedia/assimp/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"
