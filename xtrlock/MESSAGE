@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD$
+
+By default, xtrlock(1) is installed suid root, this is required to inspect
+the user database when locking the screen.
+
+On systems relying on a special group to grant read permission to the
+password file (by default `shadow'), xtrlock is installed sgid shadow.
+Define SHADOWGRP if you want to change this behaviour.
+
+Privileges are dropped at startup and are reacquired only upon unlocking.
+
+===========================================================================
