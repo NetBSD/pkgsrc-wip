@@ -1,13 +1,13 @@
 # $NetBSD$
 
-PKGNAME=	icestorm-1.0
+PKGNAME=	icestorm-0
 DISTNAME=	icestorm
 CATEGORIES=	cross
-MASTER_SITES=	${MASTER_SITE_GITHUB:=cliffordwolf/}
-GITHUB_TAG=	ce4e1bcfd8c791fe3fb6f991fbfaed309bc1f5ad
+MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
+GITHUB_TAG=	a545498d6fd0a28a006976293917115037d4628c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/cliffordwolf/
+HOMEPAGE=	http://bygone.clairexen.net/icestorm/
 COMMENT=	Project IceStorm
 LICENSE=	mit
 
@@ -18,11 +18,13 @@ PYTHON_VERSIONS_INCOMPATIBLE= 27
 
 WRKSRC=			${WRKDIR}/icestorm-${GITHUB_TAG}
 
-SUBST_CLASSES+=		python
-SUBST_MESSAGE.python=	Fixing non-shellbang references to python3.
-SUBST_STAGE.python=	pre-configure
-SUBST_SED.python=	-e 's,python3,${PYTHONBIN},g'
-SUBST_FILES.python=	icebox/Makefile icefuzz/Makefile icetime/Makefile
+BUILD_MAKE_FLAGS+=	PYTHON3=${PYTHONBIN}
+
+# SUBST_CLASSES+=		python
+# SUBST_MESSAGE.python=	Fixing non-shellbang references to python3.
+# SUBST_STAGE.python=	pre-configure
+# SUBST_SED.python=	-e 's,python3,${PYTHONBIN},g'
+# SUBST_FILES.python=	config.mk
 
 REPLACE_INTERPRETER+=		usrbinenv
 REPLACE.usrbinenv.old=		'/usr/bin/env\ python3'
