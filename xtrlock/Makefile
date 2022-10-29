@@ -13,19 +13,17 @@ LICENSE=	gnu-gpl-v3
 
 USE_IMAKE=	yes
 
-.if exists(/etc/shadow)
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(/etc/shadow) && !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
 MAKE_FLAGS+=		CCOPTIONS="-DSHADOW_PWD ${CFLAGS}"
 .else
 MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
-SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4555
 .endif
 MAKE_FLAGS+=		LOCAL_LDFLAGS=${LDFLAGS:Q}
 
-SHADOWGRP?=		shadow
-CHECK_SHADOWGRP:=	${GREP} ${SHADOWGRP} /etc/group
-
-.if !empty(CHECK_SHADOWGRP)
-SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${SHADOWGRP} 2555
+.if	${OPSYS} == "Linux"
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} shadow 2555
 .else
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4555
 .endif
