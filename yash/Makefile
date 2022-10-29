@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${PKGMANDIR}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-history
 CONFIGURE_ARGS+=	--enable-lineedit
 

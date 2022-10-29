@@ -1,5 +1,7 @@
 @comment $NetBSD$
 bin/yash
+man/ja/man1/yash.1
+man/man1/yash.1
 share/locale/en@boldquot/LC_MESSAGES/yash.mo
 share/locale/en@quot/LC_MESSAGES/yash.mo
 share/locale/ja/LC_MESSAGES/yash.mo
