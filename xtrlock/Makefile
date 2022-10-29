@@ -13,10 +13,14 @@ LICENSE=	gnu-gpl-v3
 
 USE_IMAKE=	yes
 
+# mitigate CVE-2016-10894
+CFLAGS+=	-DMULTITOUCH
+LDFLAGS+=	-lXi
+
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(/etc/shadow) && !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
-MAKE_FLAGS+=		CCOPTIONS="-DSHADOW_PWD ${CFLAGS}"
+MAKE_FLAGS+=		CCOPTIONS="${CFLAGS} -DSHADOW_PWD"			#getspnam()
 .else
 MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
 .endif
