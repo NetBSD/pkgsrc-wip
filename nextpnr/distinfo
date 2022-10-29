@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nextpnr-0.4.tar.gz) = 439b61f2c064ed57092e2e8e6134294c9392395f7db79d2d59b00c000bdcd153
+SHA512 (nextpnr-0.4.tar.gz) = 9af65b3e7bdbc1f23dd8a6ed8446e29b51039c3c9d8316cae355e584173f972e8f547864563ab86dadc5fa952798020e763e694adfddc02c9e72d8b473f68031
+Size (nextpnr-0.4.tar.gz) = 4460419 bytes

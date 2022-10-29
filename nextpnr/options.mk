@@ -1,0 +1,57 @@
+# $NetBSD$
+
+PKG_OPTIONS_VAR=		PKG_OPTIONS.nextpnr
+
+PKG_OPTIONS_REQUIRED_GROUPS=	arch
+PKG_OPTIONS_GROUP.arch=		all
+#PKG_OPTIONS_GROUP.arch+=	all+alpha
+PKG_OPTIONS_GROUP.arch+=	generic ice40 ecp5 # stable
+# PKG_OPTIONS_GROUP.arch+=	gowin fpgainterchange machxo2 mistral # alpha
+
+PKG_SUPPORTED_OPTIONS=		x11
+PKG_SUGGESTED_OPTIONS=		ice40
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mall)
+CMAKE_ARGS+=			-DARCH=all
+# .elif !empty(PKG_OPTIONS:Mall+alpha)
+# CMAKE_ARGS+=			-DARCH=all+alpha
+.elif !empty(PKG_OPTIONS:Mgeneric)
+CMAKE_ARGS+=			-DARCH=generic
+.elif !empty(PKG_OPTIONS:Mice40)
+CMAKE_ARGS+=			-DARCH=ice40
+.elif !empty(PKG_OPTIONS:Mecp5)
+CMAKE_ARGS+=			-DARCH=ecp5
+# .elif !empty(PKG_OPTIONS:Mgowin)
+# CMAKE_ARGS+=			-DARCH=gowin
+# .elif !empty(PKG_OPTIONS:Mfpgainterchange)
+# CMAKE_ARGS+=			-DARCH=fpga_interchange
+# .elif !empty(PKG_OPTIONS:Mmachxo2)
+# CMAKE_ARGS+=			-DARCH=machxo2
+# .elif !empty(PKG_OPTIONS:Mmistral)
+# CMAKE_ARGS+=			-DARCH=mistral
+.endif
+
+
+###
+### Build with ice40 support
+###
+.if !empty(PKG_OPTIONS:Mice40) || !empty(PKG_OPTIONS:Mall)
+TOOL_DEPENDS+=			icestorm-[0-9]*:../../wip/icestorm-git
+.endif
+
+###
+### Build with ecp5 support
+###
+.if !empty(PKG_OPTIONS:Mecp5) || !empty(PKG_OPTIONS:Mall)
+TOOL_DEPENDS+=			${PYPKGPREFIX}-prjtrellis-[0-9]*:../../wip/prjtrellis
+.endif
+
+###
+### Build with the QT5 GUI
+###
+.if !empty(PKG_OPTIONS:Mx11)
+CMAKE_ARGS+=			-DBUILD_GUI=ON
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.endif
