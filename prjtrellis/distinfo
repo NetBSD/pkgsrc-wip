@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (YosysHQ-prjtrellis-db-35d900a94ff0db152679a67bf6e4fbf40ebc34aa.tar.gz) = 38d6b0593ff69679062abf727d267c350c931990d5c556e4fddb8a02c9ab0f8a
+SHA512 (YosysHQ-prjtrellis-db-35d900a94ff0db152679a67bf6e4fbf40ebc34aa.tar.gz) = 21e3a6ea386af610fdff4124151ebe98cb0ad75be641b641fa1f52ef0fd521feb289628d156cdcf69e209fdcdb9c65aeb3226128dd652c8ae3fb2cb7f3aa4389
+Size (YosysHQ-prjtrellis-db-35d900a94ff0db152679a67bf6e4fbf40ebc34aa.tar.gz) = 2912708 bytes
+BLAKE2s (prjtrellis-1.2.1-35f5affe10a2995bdace49e23fcbafb5723c5347.tar.gz) = 05d4795e5b44784064938ae685e90c71d2046e9d5869743c1526e7e3b147a5d3
+SHA512 (prjtrellis-1.2.1-35f5affe10a2995bdace49e23fcbafb5723c5347.tar.gz) = 03cb0ed3a327d0f254fefdd4d3b860d8ab018e849f821d1e6a6c3bbd838601a36066df87ae0175b28812de429e4597ea9e3d3562560753f2a70e7ad6aede0cd6
+Size (prjtrellis-1.2.1-35f5affe10a2995bdace49e23fcbafb5723c5347.tar.gz) = 1157837 bytes
