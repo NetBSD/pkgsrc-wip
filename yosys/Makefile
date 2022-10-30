@@ -61,6 +61,9 @@ SUBST_FILES.python+=	tests/tools/txt2tikztiming.py
 BUILDLINK_TRANSFORM=	rm:-ldl
 .endif
 
+TOOL_DEPENDS+=          git-base-[0-9]*:../../devel/git-base
+TOOL_DEPENDS+=          mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
+
 do-configure:
 	${RUN} ${ECHO} 'CONFIG := ${YOSYS_CONFIG}' > ${WRKSRC}/Makefile.conf
 
