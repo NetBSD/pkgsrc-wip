@@ -40,6 +40,6 @@ REPLACE_FILES.usrbinenv+=	icebox/icebox_maps.py
 REPLACE_FILES.usrbinenv+=	icebox/icebox_stat.py
 REPLACE_FILES.usrbinenv+=	icebox/icebox_vlog.py
 
-.include "../../devel/libftdi/buildlink3.mk"
+.include "../../devel/libftdi1/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
