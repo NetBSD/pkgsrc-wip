@@ -26,6 +26,8 @@ ${PYSITELIB}/hmmlearn/tests/conftest.py
 ${PYSITELIB}/hmmlearn/tests/conftest.pyc
 ${PYSITELIB}/hmmlearn/tests/test_base.py
 ${PYSITELIB}/hmmlearn/tests/test_base.pyc
+${PYSITELIB}/hmmlearn/tests/test_categorical_hmm.py
+${PYSITELIB}/hmmlearn/tests/test_categorical_hmm.pyc
 ${PYSITELIB}/hmmlearn/tests/test_gaussian_hmm.py
 ${PYSITELIB}/hmmlearn/tests/test_gaussian_hmm.pyc
 ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm.py
@@ -36,6 +38,8 @@ ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm_new.py
 ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm_new.pyc
 ${PYSITELIB}/hmmlearn/tests/test_multinomial_hmm.py
 ${PYSITELIB}/hmmlearn/tests/test_multinomial_hmm.pyc
+${PYSITELIB}/hmmlearn/tests/test_poisson_hmm.py
+${PYSITELIB}/hmmlearn/tests/test_poisson_hmm.pyc
 ${PYSITELIB}/hmmlearn/tests/test_utils.py
 ${PYSITELIB}/hmmlearn/tests/test_utils.pyc
 ${PYSITELIB}/hmmlearn/utils.py
