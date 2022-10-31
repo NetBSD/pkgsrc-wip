@@ -12,6 +12,11 @@ man/man1/jpico.1
 man/man1/jstar.1
 man/man1/jupp.1
 man/man1/rjoe.1
+share/applications/jmacs.desktop
+share/applications/joe.desktop
+share/applications/jpico.desktop
+share/applications/jstar.desktop
+share/applications/jupp.desktop
 share/examples/joe/charmaps/klingon
 share/examples/joe/jmacsrc
 share/examples/joe/joerc
@@ -40,3 +45,8 @@ share/examples/joe/syntax/tex.jsf
 share/examples/joe/syntax/verilog.jsf
 share/examples/joe/syntax/vhdl.jsf
 share/examples/joe/syntax/xml.jsf
+share/pixmaps/jmacs.png
+share/pixmaps/joe.png
+share/pixmaps/jpico.png
+share/pixmaps/jstar.png
+share/pixmaps/jupp.png

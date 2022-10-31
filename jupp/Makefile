@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.7 2012/10/01 21:43:26 asau Exp $
 #
 
-DISTNAME=	joe-3.1jupp40
+DISTNAME=	joe-3.1jupp41
 PKGNAME=	${DISTNAME:S/jupp/./:S/joe/jupp/}
 CATEGORIES=	editors
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \
@@ -12,14 +12,26 @@ MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://www.mirbsd.org/jupp.htm
 COMMENT=	The portable version of joe from the MirOS project
 LICENSE=	gnu-gpl-v1
-WRKSRC=		${WRKDIR}/jupp
 
 CONFLICTS+=	joe-[0-9]*
-BUILD_DEPENDS+=	mksh-[0-9]*:../../shells/mksh
 
-FAKE_NCURSES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples
+CONFIGURE_ARGS+=	--disable-dependency-tracking
+
+INSTALLATION_DIRS+=	share/pixmaps
+INSTALLATION_DIRS+=	share/applications
+
+WRKSRC=		${WRKDIR}/jupp
+
+post-install:
+.for f in jmacs joe jpico jstar jupp
+	${INSTALL_DATA} ${WRKSRC}/docs/${f}.png								\
+    ${DESTDIR}${PREFIX}/share/pixmaps/
+
+	${INSTALL_DATA} ${FILESDIR}/${f}.desktop							\
+    ${DESTDIR}${PREFIX}/share/applications/
+.endfor
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
