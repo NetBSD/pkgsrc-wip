@@ -158,5 +158,5 @@ lib/cmake/OpenVDB/OpenVDBMayaSetup.cmake
 lib/cmake/OpenVDB/OpenVDBUtils.cmake
 lib/libopenvdb.a
 lib/libopenvdb.so
-lib/libopenvdb.so.9.1
+lib/libopenvdb.so.10.0
 lib/libopenvdb.so.${PKGVERSION}

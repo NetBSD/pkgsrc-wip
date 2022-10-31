@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	openvdb-${PKGVERSION}
-PKGVERSION=	9.1.0
+PKGVERSION=	10.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	openvdb
@@ -13,6 +13,7 @@ COMMENT=	Efficient storage and manipulation of sparse volumetric data
 LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	c c++
+GCC_REQD+=	10	# actually needs 9.3.1, but we don't have that
 USE_TOOLS+=	gmake cmake pkg-config
 USE_CMAKE=	yes
 CONFIGURE_DIRS=	build
