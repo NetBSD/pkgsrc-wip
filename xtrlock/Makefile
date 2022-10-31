@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	xtrlock_2.15.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vms@retrobsd.ddns.net
 COMMENT=	Simple X11 screen lock tool
 LICENSE=	gnu-gpl-v3
 
