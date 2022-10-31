@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libbsd-0.11.6
+DISTNAME=	libbsd-0.11.7
 CATEGORIES=	devel
 MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -10,6 +10,9 @@ HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
 LICENSE=	original-bsd AND modified-bsd AND 2-clause-bsd
 LICENSE+=	AND isc AND mit AND beer-ware
+
+NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-*
+NOT_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
