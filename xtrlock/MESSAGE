@@ -4,8 +4,8 @@ $NetBSD$
 By default, xtrlock(1) is installed suid root, this is required to inspect
 the user database when locking the screen.
 
-On Linux, where the shadow file is generally made group-redable by the
-`shadow' group, xtrlock will be installed sgid shadow instead.
+On Linux and OpenBSD, where the shadow file is generally made group-redable
+by a '[_]shadow' group, xtrlock will be installed sgid shadow instead.
 
 Privileges are dropped at startup and reacquired only upon unlocking.
 

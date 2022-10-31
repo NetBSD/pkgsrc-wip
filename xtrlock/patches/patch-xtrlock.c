@@ -21,3 +21,17 @@ Portability fixes for BSD systems.
  
  #ifdef SHADOW_PWD
  #include <shadow.h>
+@@ -138,8 +143,12 @@ int main(int argc, char **argv){
+       exit(1);
+     }
+   }
+-  
++
++#ifdef __OpenBSD__
++  errno=0;  pw= getpwuid_shadow(getuid());
++#else
+   errno=0;  pw= getpwuid(getuid());
++#endif
+   if (!pw) { perror("password entry for uid not found"); exit(1); }
+ #ifdef SHADOW_PWD
+   sp = getspnam(pw->pw_name);
