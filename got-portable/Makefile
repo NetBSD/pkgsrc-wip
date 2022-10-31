@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	ed7004e63cb94ddb796262fdd42c889fa29a32fb	
+DISTNAME=	e6ef48a9d4e506755058cf8aadafaf6820228e17
 PKGNAME=	got-portable-${PKGVER}
-PKGVER=		0.74
+PKGVER=		0.77
 CATEGORIES=	devel
 MASTER_SITES=	https://repo.or.cz/got-portable.git/snapshot/
 
@@ -46,7 +46,7 @@ pre-configure:
 .endif
 
 # need libcrypto.so.1.1
-BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1n
+BUILDLINK_API_DEPENDS.openssl+=   openssl>=1.1.1
 .include "../../security/openssl/buildlink3.mk"
 
 # required for set_panel_userptr(3) and waddwstr(3).
