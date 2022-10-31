@@ -13,16 +13,27 @@ PKG_SUGGESTED_OPTIONS=		ice40
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=			ice40 generic ecp5
+
 .if !empty(PKG_OPTIONS:Mall)
 CMAKE_ARGS+=			-DARCH=all
+PLIST.ice40=			yes
+PLIST.ecp5=			yes
+PLIST.generic=			yes
 # .elif !empty(PKG_OPTIONS:Mall+alpha)
 # CMAKE_ARGS+=			-DARCH=all+alpha
-.elif !empty(PKG_OPTIONS:Mgeneric)
-CMAKE_ARGS+=			-DARCH=generic
+# PLIST.ice40=			yes
+# PLIST.ecp5=			yes
+# PLIST.generic=		yes
 .elif !empty(PKG_OPTIONS:Mice40)
 CMAKE_ARGS+=			-DARCH=ice40
+PLIST.ice40=			yes
 .elif !empty(PKG_OPTIONS:Mecp5)
 CMAKE_ARGS+=			-DARCH=ecp5
+PLIST.ecp5=			yes
+.elif !empty(PKG_OPTIONS:Mgeneric)
+CMAKE_ARGS+=			-DARCH=generic
+PLIST.generic=			yes
 # .elif !empty(PKG_OPTIONS:Mgowin)
 # CMAKE_ARGS+=			-DARCH=gowin
 # .elif !empty(PKG_OPTIONS:Mfpgainterchange)
@@ -34,17 +45,17 @@ CMAKE_ARGS+=			-DARCH=ecp5
 .endif
 
 
-###
-### Build with ice40 support
-###
-.if !empty(PKG_OPTIONS:Mice40) || !empty(PKG_OPTIONS:Mall)
+# Using the PLIST.xyzzy variables below is a slightly hacky way of
+# easily checking if a particular target is being built.
+#
+# This simply avoids duplicating the TOOL_DEPENDS lines in the "all"
+# and "all+alpha" .if sections above.
+
+.if "${PLIST.ice40}" == "yes"
 TOOL_DEPENDS+=			icestorm-[0-9]*:../../wip/icestorm-git
 .endif
 
-###
-### Build with ecp5 support
-###
-.if !empty(PKG_OPTIONS:Mecp5) || !empty(PKG_OPTIONS:Mall)
+.if "${PLIST.ecp5}" == "yes"
 TOOL_DEPENDS+=			${PYPKGPREFIX}-prjtrellis-[0-9]*:../../wip/prjtrellis
 .endif
 

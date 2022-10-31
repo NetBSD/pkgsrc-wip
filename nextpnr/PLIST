@@ -1,4 +1,4 @@
 @comment $NetBSD$
-${PLIST.ice40}bin/nextpnr-ice40
-${PLIST.generic}bin/nextpnr-generic
 ${PLIST.ecp5}bin/nextpnr-ecp5
+${PLIST.generic}bin/nextpnr-generic
+${PLIST.ice40}bin/nextpnr-ice40

@@ -21,20 +21,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
-PLIST_VARS+=	ice40 generic ecp5
-
-.if !empty(PKG_OPTIONS:Mice40) || !empty(PKG_OPTIONS:Mall)
-PLIST.ice40=	yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mgeneric) || !empty(PKG_OPTIONS:Mall)
-PLIST.generic=	yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mecp5) || !empty(PKG_OPTIONS:Mall)
-PLIST.ecp5=	yes
-.endif
-
 .include "../../lang/python/application.mk"
 
 .include "../../math/eigen3/buildlink3.mk"
