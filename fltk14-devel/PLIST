@@ -30,6 +30,7 @@ include/FL/Fl_File_Icon.H
 include/FL/Fl_File_Input.H
 include/FL/Fl_Fill_Dial.H
 include/FL/Fl_Fill_Slider.H
+include/FL/Fl_Flex.H
 include/FL/Fl_Float_Input.H
 include/FL/Fl_FormsBitmap.H
 include/FL/Fl_FormsPixmap.H
@@ -102,6 +103,7 @@ include/FL/Fl_Simple_Terminal.H
 include/FL/Fl_Single_Window.H
 include/FL/Fl_Slider.H
 include/FL/Fl_Spinner.H
+include/FL/Fl_String.H
 include/FL/Fl_Sys_Menu_Bar.H
 include/FL/Fl_Table.H
 include/FL/Fl_Table_Row.H
@@ -130,15 +132,16 @@ include/FL/Fl_Window.H
 include/FL/Fl_Wizard.H
 include/FL/Fl_XBM_Image.H
 include/FL/Fl_XPM_Image.H
-include/FL/abi-version.h
-include/FL/android.H
 include/FL/filename.H
 include/FL/fl_ask.H
+include/FL/fl_attr.h
+include/FL/fl_casts.H
+include/FL/fl_config.h
 include/FL/fl_draw.H
 include/FL/fl_message.H
 include/FL/fl_show_colormap.H
 include/FL/fl_show_input.H
-include/FL/fl_string.h
+include/FL/fl_string_functions.h
 include/FL/fl_types.h
 include/FL/fl_utf8.h
 include/FL/forms.H
@@ -152,8 +155,10 @@ include/FL/math.h
 include/FL/names.h
 include/FL/platform.H
 include/FL/platform_types.h
+include/FL/wayland.H
 include/FL/win32.H
 include/FL/x.H
+include/FL/x11.H
 lib/libfltk.a
 lib/libfltk.so
 lib/libfltk.so.1.4
