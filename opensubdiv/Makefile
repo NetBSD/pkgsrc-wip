@@ -1,10 +1,10 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	OpenSubdiv
-DISTNAME=	OpenSubdiv-3.4.4
+DISTNAME=	OpenSubdiv-3.5.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PixarAnimationStudios/}
+GITHUB_PROJECT=	OpenSubdiv
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./_/g:tu}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
