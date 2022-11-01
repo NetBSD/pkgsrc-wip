@@ -36,5 +36,6 @@ if your user name is "name", and
 Read the documentation (info gnunet) and provided example
 files as well as the man pages to learn how to customize
 your peer configuration. An online documentation is
-provided at https://docs.gnunet.org/.
+provided at https://docs.gnunet.org/ as well as offline at
+${PREFIX}/share/doc/gnunet/html/index.html.
 ===========================================================================
