@@ -69,7 +69,7 @@ pkgbase:= gnunet
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-.include "../../wip/gnurl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

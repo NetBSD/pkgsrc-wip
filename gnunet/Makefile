@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-0.17.5
+DISTNAME=		gnunet-0.18.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 
@@ -117,7 +117,7 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../wip/jose/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
-.include "../../wip/gnurl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

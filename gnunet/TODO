@@ -1,3 +1,4 @@
+- package curl built against GnuTLS, as gnunet stopped checking for gnurl.
 - more contents of other PLISTs
 - debug the service
   - XXX: gnunetuser currently prevents a shutdown via "normal" shutdown(1),

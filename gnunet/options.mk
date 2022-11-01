@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
-PKG_SUPPORTED_OPTIONS+=		doc mdoc idn mysql pgsql tests
+PKG_SUPPORTED_OPTIONS+=		doc idn mysql pgsql tests
 PKG_SUPPORTED_OPTIONS+=		experimental pulseaudio
 PKG_SUPPORTED_OPTIONS+=		opus ogg sqlite3 audio
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl verbose-logging
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--enable-testruns
 CONFIGURE_ARGS+=	--disable-testruns
 .endif
 
+# \XXX: 7 MB in size, but useful (although we could strip off some files).
 .if ${PKG_OPTIONS:Mdoc}
 .include "../../lang/python/tool.mk"
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
@@ -44,17 +45,9 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 CONFIGURE_ARGS+=	--enable-documentation
 PLIST_SRC+=		PLIST.doc
+INFO_FILES=yes
 .else
 CONFIGURE_ARGS+=	--disable-documentation
-.endif
-
-# Build the texi2mdoc output.
-.if ${PKG_OPTIONS:Mmdoc}
-BUILD_DEPENDS+=		texi2mdoc-[0-9]*:../../textproc/texi2mdoc
-CONFIGURE_ARGS+=	--enable-texi2mdoc-generation
-PLIST_SRC+=		PLIST.mdoc
-.else
-CONFIGURE_ARGS+=	--disable-texi2mdoc-generation
 .endif
 
 # idn is mandatory but idn or idn2 can be used with a preference for

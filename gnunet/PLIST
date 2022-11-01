@@ -27,6 +27,8 @@ bin/gnunet-identity
 bin/gnunet-messenger
 bin/gnunet-namecache
 bin/gnunet-namestore
+bin/gnunet-namestore-dbtool
+bin/gnunet-namestore-zonefile
 bin/gnunet-nat
 bin/gnunet-nat-auto
 bin/gnunet-nat-server
@@ -58,6 +60,7 @@ bin/gnunet-zoneimport
 etc/gnunet/gnunet.conf
 etc/gnunet/gnunet_user.conf
 include/gnunet/compat.h
+include/gnunet/gnunet_error_codes.h
 include/gnunet/gettext.h
 include/gnunet/gnu_name_system_record_types.h
 include/gnunet/gnunet_abd_service.h
@@ -236,7 +239,6 @@ lib/gnunet/libexec/gnunet-service-tng
 lib/gnunet/libexec/gnunet-service-transport
 lib/gnunet/libexec/gnunet-service-vpn
 lib/gnunet/libexec/gnunet-service-zonemaster
-lib/gnunet/libexec/gnunet-service-zonemaster-monitor
 lib/gnunet/libexec/gnunet-timeout
 lib/gnunet/libgnunet_plugin_ats_proportional.la
 lib/gnunet/libgnunet_plugin_block_consensus.la
@@ -258,7 +260,6 @@ lib/gnunet/libgnunet_plugin_gnsrecord_dns.la
 lib/gnunet/libgnunet_plugin_gnsrecord_gns.la
 lib/gnunet/libgnunet_plugin_gnsrecord_messenger.la
 lib/gnunet/libgnunet_plugin_gnsrecord_reclaim.la
-lib/gnunet/libgnunet_plugin_namestore_flat.la
 lib/gnunet/libgnunet_plugin_reclaim_attribute_basic.la
 lib/gnunet/libgnunet_plugin_reclaim_credential_jwt.la
 lib/gnunet/libgnunet_plugin_rest_config.la
@@ -394,6 +395,8 @@ man/man1/gnunet-identity.1
 man/man1/gnunet-namecache.1
 man/man1/gnunet-namestore-fcfsd.1
 man/man1/gnunet-namestore.1
+man/man1/gnunet-namestore-dbtool.1
+man/man1/gnunet-namestore-zonefile.1
 man/man1/gnunet-nat-auto.1
 man/man1/gnunet-nat-server.1
 man/man1/gnunet-nat.1
@@ -482,12 +485,14 @@ share/gnunet/gns-bcd-simple.tex
 share/gnunet/gns-bcd.html
 share/gnunet/gns-bcd.tex
 share/gnunet/gnunet-gns-proxy-ca.template
-share/gnunet/gnunet-logo-big.png
-share/gnunet/gnunet-logo-color.png
 share/gnunet/gnunet-logo-dark-only-text.svg
 share/gnunet/gnunet-logo-dark-text.svg
-share/gnunet/gnunet-logo.pdf
 share/gnunet/gnunet-logo.png
+share/gnunet/old-gnunet-logo-big.png
+share/gnunet/old-gnunet-logo-color.png
+share/gnunet/old-gnunet-logo-regrouped.svg
+share/gnunet/old-gnunet-logo.pdf
+share/gnunet/old-gnunet-logo.svg
 share/gnunet/hellos/Y924NSHMMZ1N1SQCE5TXF93ED6S6JY311K0QT86G9WJC68F6XVZ0
 share/gnunet/lynXified-amirouche-anonymous-v3.png
 share/gnunet/lynXified-amirouche-v3.svg
@@ -510,4 +515,3 @@ share/locale/sr/LC_MESSAGES/gnunet.mo
 share/locale/sv/LC_MESSAGES/gnunet.mo
 share/locale/vi/LC_MESSAGES/gnunet.mo
 share/locale/zh_CN/LC_MESSAGES/gnunet.mo
-@pkgdir man/man7
