@@ -9,7 +9,7 @@ Move the ok flag out of the destruct_guard_t so that GCC won't optimise
  
  		// the global id string cache
  
-+		bool destruct_guard_ok; // POD, will be initialized to zero
++		static bool destruct_guard_ok; // POD, will be initialized to zero
  		static struct destruct_guard_t {
 -			bool ok; // POD, will be initialized to zero
 -			destruct_guard_t() { ok = true; }

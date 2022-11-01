@@ -14,7 +14,6 @@ LICENSE=	isc
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			gmake pkg-config bison gawk flex bash:test
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-# PKGCONFIG_CONFIG=		${PKG_CONFIG:Q}
 
 WRKSRC=			${WRKDIR}/yosys-${DISTNAME}
 TEST_TARGET=		test
@@ -55,8 +54,6 @@ SUBST_FILES.python+=	tests/tools/txt2tikztiming.py
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "options.mk"
-
 .if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM=	rm:-ldl
 .endif
@@ -64,12 +61,18 @@ BUILDLINK_TRANSFORM=	rm:-ldl
 do-configure:
 	${RUN} ${ECHO} 'CONFIG := ${YOSYS_CONFIG}' > ${WRKSRC}/Makefile.conf
 
-.if ${YOSYS_CONFIG} == "clang"
-.include "../../lang/clang/buildlink3.mk"
-.endif
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+YOSYS_CONFIG=		clang
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+YOSYS_CONFIG=		gcc
+GCC_REQD+=		4.8.1
+.else
+.  error Yosys must be compiled with either GCC or Clang
+.endif
