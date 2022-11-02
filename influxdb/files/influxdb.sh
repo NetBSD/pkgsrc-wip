@@ -15,9 +15,9 @@ influxdb_user="@INFLUXDB_USER@"
 influxdb_group="@INFLUXDB_GROUP@"
 influxdb_chdir="@VARBASE@/lib/influxdb"
 pidfile="@VARBASE@/lib/influxdb/data/influxdb.pid"
-STDERR="@LOGDIR@/influxdb.log"
-command="@PREFIX@/bin/influxd"
-command_args="-config @PREFIX@/etc/influxdb/config.toml -pidfile ${pidfile} 1>/dev/null 2>> $STDERR &"
+STDOUT="@LOGDIR@/influxdb.log"
+command="@PREFIX@/sbin/influxd"
+command_args=">> $STDOUT &"
 
 load_rc_config $name
 run_rc_command "$1"
