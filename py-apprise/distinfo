@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (apprise-0.9.6.tar.gz) = 00f52cb16064323536ef1bba2bdacd6fccfd60edbf1faaeeeb781290e8ad32f0
-SHA512 (apprise-0.9.6.tar.gz) = cc2957f7c9d023a47b0fa22bad8c4984cd53e15884bead73031aad53e8593a4c9ab2a19fdf139e8818ff29d1426e5c20b655d248ab05ab7d236765cda0f06908
-Size (apprise-0.9.6.tar.gz) = 1384560 bytes
+BLAKE2s (apprise-1.1.0.tar.gz) = 5351882800d94bfe1f3ae0c0050047b0225c20efef24e3ab817a39d580c23b55
+SHA512 (apprise-1.1.0.tar.gz) = 0aa7f7b5a56e54b317e3acd0ccc993f5114ad5b64deb7c9659665cadc23768cb8e7dff16786bd0548a2ed713c0fd185988c382ad0fa58b126a19f36ed0e52834
+Size (apprise-1.1.0.tar.gz) = 1504286 bytes
