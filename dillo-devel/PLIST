@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2014/04/12 02:24:19 obache Exp $
+@comment $NetBSD$
 bin/dillo
 bin/dillo-install-hyphenation
 bin/dpid

@@ -1,4 +1,4 @@
-$NetBSD: patch-dpi_https.c,v 1.1 2018/03/24 15:40:07 ryoon Exp $
+$NetBSD$
 
 * Support OpenSSL 1.1.0
 

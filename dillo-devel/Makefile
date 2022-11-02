@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2018/08/22 09:47:24 wiz Exp $
+# $NetBSD$
 
 DISTNAME=	dillo-3.0.5
 PKGREVISION=	4
