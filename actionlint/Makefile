@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	actionlint-1.6.16
+DISTNAME=	actionlint-1.6.22
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhysd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
