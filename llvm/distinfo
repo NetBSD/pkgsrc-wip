@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.36 2022/08/14 20:22:44 tnn Exp $
 
-BLAKE2s (cmake-15.0.1.src.tar.xz) = 1f7fb68a1c7c05b82a72137f3edf4a9b8dfb9e2fae277af1643e4bc545db6f75
-SHA512 (cmake-15.0.1.src.tar.xz) = fbb29395a337be4e591567cc0f990857a2663cb2335b5ef30945c6b516dbc65e86f022ef3acc1dc572cf6791e1cd20f6754256e00b60cdbf579c04ed74460522
-Size (cmake-15.0.1.src.tar.xz) = 6976 bytes
-BLAKE2s (llvm-15.0.1.src.tar.xz) = ed1e687e9fc2c529180f7352d3f8dcaa9a0de1bf4edc9c128f1fb85575afe31f
-SHA512 (llvm-15.0.1.src.tar.xz) = ec61b6d061ba71e00f6e9c1042705ab3512ff71a823e18ce75a3b8fd2ef40efff186b42d4be6ef948019e5bb5b3fb28f0c615ebb7872ec89f7643261eadf276a
-Size (llvm-15.0.1.src.tar.xz) = 53522984 bytes
+BLAKE2s (cmake-15.0.3.src.tar.xz) = 5f4956e9bbc6f0d9442a4af469cedc3a0321088bc1348e2e1cc38fdf28dcf575
+SHA512 (cmake-15.0.3.src.tar.xz) = 1dc5531c71035104773164238b7bcda0c13ce3a515d605b021726fc3360d8e84f1c4f5a7190f3954b117c0dd6fda8016e986f96a282c2e7436704985e18c191b
+Size (cmake-15.0.3.src.tar.xz) = 6980 bytes
+BLAKE2s (llvm-15.0.3.src.tar.xz) = 9ed7eae7ee3f85765076bd0cc928cded4188d88ed0e3c821d160ed26d1181dd5
+SHA512 (llvm-15.0.3.src.tar.xz) = 97a2578e494666db93fe2c8e2e0f23b6a3d5c0ab07b92f782316d5480021c3dae39bf71714100dbb3ed140938411f559faecee10538aaafbdb3caf810819c2b9
+Size (llvm-15.0.3.src.tar.xz) = 53528544 bytes
 SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562

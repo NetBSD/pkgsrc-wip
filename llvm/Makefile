@@ -37,10 +37,8 @@ LICENSE=	apache-2.0
 # As of v15.0.0 llvm requires cmake source code to build
 CMAKE=		cmake-${LLVM_VERSION}.src
 EXTRA_DIST=	${CMAKE}${EXTRACT_SUFX}
-
 SITES.${CMAKE}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
-
 DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
 
 USE_LANGUAGES=		c c++14
@@ -151,10 +149,11 @@ CMAKE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 post-extract:
 	${MKDIR} ${WRKSRC}/build
 .for f in config.guess config.sub
-	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
+	${CP} ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 	${LN} -f -s ${WRKDIR}/${CMAKE} ${WRKDIR}/cmake
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"

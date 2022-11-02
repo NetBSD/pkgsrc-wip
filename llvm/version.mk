@@ -12,7 +12,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	15.0.1
+LLVM_VERSION=	15.0.3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
 GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
