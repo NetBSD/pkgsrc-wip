@@ -13,4 +13,5 @@ keywords.h: $(srcdir)/keywords.h.in
                 $< > $@
 
 This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2018-17540, CVE-2019-10155, CVE-2021-41990, CVE-2021-41991, CVE-2021-45079
+  CVE-2018-17540, CVE-2019-10155, CVE-2021-41990, CVE-2021-41991, CVE-2021-45079,
+  CVE-2022-40617
