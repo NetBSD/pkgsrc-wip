@@ -63,6 +63,7 @@ FILES_SUBST+=		PKG_HOME=${GNUNET_DIR}
 post-extract:
 	${CP} ${FILESDIR}/gnunet.conf ${WRKSRC}/gnunet.conf
 	${CP} ${FILESDIR}/gnunet_user.conf ${WRKSRC}/gnunet_user.conf
+	${CP} ${FILESDIR}/README.pkgsrc.txt ${WRKSRC}/README.pkgsrc.txt
 
 SUBST_CLASSES+=			sysconfdir
 SUBST_STAGE.sysconfdir=		pre-configure
@@ -77,6 +78,8 @@ post-configure:
 	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}
 	${INSTALL_DATA} ${WRKSRC}/gnunet.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet.conf
 	${INSTALL_DATA} ${WRKSRC}/gnunet_user.conf ${DESTDIR}${PKG_SYSCONFDIR}/gnunet_user.conf
+	${MKDIR} ${DESTDIR}/share/doc/gnunet/
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc.txt ${DESTDIR}/share/doc/gnunet/README.pkgsrc.txt
 
 # All helpers have to be suid. fs helper must not be suid.
 # Some helpers and functionalities are only supported on
