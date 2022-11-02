@@ -5530,6 +5530,7 @@ SUBDIR+=	tcl-expect
 SUBDIR+=	tcl-fossil
 SUBDIR+=	tcl-itcl3
 SUBDIR+=	tcl-iwidgets
+SUBDIR+=	tclx
 SUBDIR+=	tcmplex-panteltje
 SUBDIR+=	tcprelay
 SUBDIR+=	tcpspy
