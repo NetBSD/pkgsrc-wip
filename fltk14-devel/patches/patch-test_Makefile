@@ -2,10 +2,10 @@ $NetBSD$
 
 Add note that GUI test programs are not executed automatically.
 
---- test/Makefile.orig	2020-07-16 10:25:51.000000000 +0000
+--- test/Makefile.orig	2022-10-30 10:46:08.000000000 +0000
 +++ test/Makefile
-@@ -195,6 +195,10 @@ GLALL = \
- 	shape$(EXEEXT)
+@@ -237,6 +237,10 @@ GLALL = \
+ 	unittests$(EXEEXT)
  
  all:	$(ALL) $(GLDEMOS)
 +	echo "-------------------------------------------"

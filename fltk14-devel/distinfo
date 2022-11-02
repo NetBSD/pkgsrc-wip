@@ -4,5 +4,5 @@ BLAKE2s (fltk-1.4.x-31ec6f623ab76d3f1107af9782237b8d7a089026.zip) = 629c8f5f0956
 SHA512 (fltk-1.4.x-31ec6f623ab76d3f1107af9782237b8d7a089026.zip) = f8b528073e690385eabc206fecaca6465a312f2173d8d2672f398dd8480bd7b4bddf5871eee255bcd3811564b646ef176795f1e6d27b09aaba8ba95003fd8b1e
 Size (fltk-1.4.x-31ec6f623ab76d3f1107af9782237b8d7a089026.zip) = 6955614 bytes
 SHA1 (patch-Makefile) = cbfbdb41dd4de6cb396780e336350eeee6fc7347
-SHA1 (patch-documentation_Makefile) = 560593c4165eb7aef1841d765cc206bfb87f483d
-SHA1 (patch-test_Makefile) = bcb866d62a4d5995a131dbe7467c4f483d8ae464
+SHA1 (patch-documentation_Makefile) = ce2872dae289672a8bc603e1c10225df8d06f126
+SHA1 (patch-test_Makefile) = 8e1acc118d7fa4de2b21001a19f681351f4f839b
