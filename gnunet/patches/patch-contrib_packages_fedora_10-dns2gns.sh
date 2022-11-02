@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix test portability.
+Sent upstream, upstream seems unwilling to fix this.
 
 --- contrib/packages/fedora/10-dns2gns.sh.orig	2022-11-01 19:42:47.417189244 +0100
 +++ contrib/packages/fedora/10-dns2gns.sh	2022-11-01 19:44:26.474856703 +0100
