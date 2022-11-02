@@ -1,0 +1,22 @@
+# $NetBSD$
+
+DISTNAME=	reprotest-0.7.22
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	sysutils python
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/reprotest/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://salsa.debian.org/reproducible-builds/reprotest
+COMMENT=	Build packages and check them for reproducibility
+LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-diffoscope>=134:../../sysutils/py-diffoscope
+DEPENDS+=	${PYPKGPREFIX}-distro>=0:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-rstr>=0:../../wip/py-rstr
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} reprotest reprotest-${PYVERSSUFFIX} || ${TRUE}
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
