@@ -1,0 +1,10 @@
+@comment $NetBSD$
+share/mbrola/voices/us1/README.txt
+share/mbrola/voices/us1/TEST/alice.pho
+share/mbrola/voices/us1/TEST/mbrola.pho
+share/mbrola/voices/us1/TEST/mbroli.ini
+share/mbrola/voices/us1/TEST/push.pho
+share/mbrola/voices/us1/TEST/xmas.pho
+share/mbrola/voices/us1/license.txt
+share/mbrola/voices/us1/us1
+share/mbrola/voices/us1/us1mrpa
