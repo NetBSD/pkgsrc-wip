@@ -15,6 +15,9 @@ ${PYSITELIB}/radicale/__main__.pyo
 ${PYSITELIB}/radicale/app/__init__.py
 ${PYSITELIB}/radicale/app/__init__.pyc
 ${PYSITELIB}/radicale/app/__init__.pyo
+${PYSITELIB}/radicale/app/base.py
+${PYSITELIB}/radicale/app/base.pyc
+${PYSITELIB}/radicale/app/base.pyo
 ${PYSITELIB}/radicale/app/delete.py
 ${PYSITELIB}/radicale/app/delete.pyc
 ${PYSITELIB}/radicale/app/delete.pyo
@@ -84,6 +87,7 @@ ${PYSITELIB}/radicale/log.pyo
 ${PYSITELIB}/radicale/pathutils.py
 ${PYSITELIB}/radicale/pathutils.pyc
 ${PYSITELIB}/radicale/pathutils.pyo
+${PYSITELIB}/radicale/py.typed
 ${PYSITELIB}/radicale/rights/__init__.py
 ${PYSITELIB}/radicale/rights/__init__.pyc
 ${PYSITELIB}/radicale/rights/__init__.pyo
@@ -108,6 +112,9 @@ ${PYSITELIB}/radicale/storage/__init__.pyo
 ${PYSITELIB}/radicale/storage/multifilesystem/__init__.py
 ${PYSITELIB}/radicale/storage/multifilesystem/__init__.pyc
 ${PYSITELIB}/radicale/storage/multifilesystem/__init__.pyo
+${PYSITELIB}/radicale/storage/multifilesystem/base.py
+${PYSITELIB}/radicale/storage/multifilesystem/base.pyc
+${PYSITELIB}/radicale/storage/multifilesystem/base.pyo
 ${PYSITELIB}/radicale/storage/multifilesystem/cache.py
 ${PYSITELIB}/radicale/storage/multifilesystem/cache.pyc
 ${PYSITELIB}/radicale/storage/multifilesystem/cache.pyo
@@ -144,6 +151,12 @@ ${PYSITELIB}/radicale/storage/multifilesystem/upload.pyo
 ${PYSITELIB}/radicale/storage/multifilesystem/verify.py
 ${PYSITELIB}/radicale/storage/multifilesystem/verify.pyc
 ${PYSITELIB}/radicale/storage/multifilesystem/verify.pyo
+${PYSITELIB}/radicale/storage/multifilesystem_nolock.py
+${PYSITELIB}/radicale/storage/multifilesystem_nolock.pyc
+${PYSITELIB}/radicale/storage/multifilesystem_nolock.pyo
+${PYSITELIB}/radicale/types.py
+${PYSITELIB}/radicale/types.pyc
+${PYSITELIB}/radicale/types.pyo
 ${PYSITELIB}/radicale/utils.py
 ${PYSITELIB}/radicale/utils.pyc
 ${PYSITELIB}/radicale/utils.pyo
@@ -163,5 +176,10 @@ ${PYSITELIB}/radicale/web/none.pyo
 ${PYSITELIB}/radicale/xmlutils.py
 ${PYSITELIB}/radicale/xmlutils.pyc
 ${PYSITELIB}/radicale/xmlutils.pyo
+share/doc/radicale/CHANGELOG.md
+share/doc/radicale/COPYING.md
+share/doc/radicale/DOCUMENTATION.md
+share/doc/radicale/README.md
 share/examples/radicale/config
+share/examples/radicale/radicale.wsgi
 share/examples/radicale/rights

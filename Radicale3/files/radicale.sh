@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: radicale.sh,v 1.1 2017/07/01 05:57:07 darcy Exp $
+# $NetBSD$
 #
 # PROVIDE: radicale
 # REQUIRE: DAEMON
@@ -13,26 +13,32 @@ rcvar=$name
 
 load_rc_config $name
 
-: ${radicale_user:=@RADICALE_USER@}
-: ${radicale_group:=@RADICALE_GROUP@}
-: ${radicale_pidfile:="@VARBASE@/run/${name}.pid"}
-: ${radicale_logfile:="@VARBASE@/log/${name}.log"}
-
-command="@PREFIX@/bin/radicale"
-command_args=" </dev/null >/dev/null 2>${radicale_logfile} & echo \$! >${radicale_pidfile}"
 command_interpreter="@PYTHONBIN@"
-required_files="@PKG_SYSCONFDIR@/radicale/config"
+
+task="@PREFIX@/bin/${name}"
+procname="${task}"
+pidfile="@VARBASE@/run/${name}/${name}.pid"
+
+command="@PREFIX@/sbin/daemonize"
+
+command_args="-a \
+    -p ${pidfile} \
+    -u @RADICALE_USER@ \
+    -e @RADICALE_LOGDIR@/${name}.log \
+    -o @RADICALE_LOGDIR@/daemonize.stdout \
+    ${task}"
+
+required_files="@PKG_SYSCONFDIR@/config"
 
 start_precmd="radicale_precmd"
 
 radicale_precmd()
 {
-    @TOUCH@ ${radicale_logfile} && \
-    @CHOWN@ ${radicale_user}:${radicale_group} ${radicale_logfile} && \
-    @CHMOD@ 0750 ${radicale_logfile} && \
-    @TOUCH@ ${radicale_pidfile} && \
-    @CHOWN@ ${radicale_user}:${radicale_group} ${radicale_pidfile} && \
-    @CHMOD@ 0750 ${radicale_pidfile}
+        if [ ! -e "@VARBASE@/run/${name}" ] ; then
+                install -d -o @RADICALE_USER@ -g @RADICALE_GROUP@ \
+		    -m 0750 "@VARBASE@/run/${name}"
+        fi
 }
 
+load_rc_config ${name}
 run_rc_command "$1"
