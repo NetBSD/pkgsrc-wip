@@ -4389,6 +4389,7 @@ SUBDIR+=	py-plex
 SUBDIR+=	py-plink
 SUBDIR+=	py-plotly
 SUBDIR+=	py-plottr
+SUBDIR+=	py-lsp-server
 SUBDIR+=	py-plucker
 SUBDIR+=	py-pluginbase
 SUBDIR+=	py-pmi
