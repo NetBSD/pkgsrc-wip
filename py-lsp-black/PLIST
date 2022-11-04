@@ -1,0 +1,13 @@
+@comment $NetBSD$
+${PYSITELIB}/pylsp_black/__init__.py
+${PYSITELIB}/pylsp_black/__init__.pyc
+${PYSITELIB}/pylsp_black/__init__.pyo
+${PYSITELIB}/pylsp_black/plugin.py
+${PYSITELIB}/pylsp_black/plugin.pyc
+${PYSITELIB}/pylsp_black/plugin.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

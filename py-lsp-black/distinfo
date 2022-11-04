@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (python-lsp-black-1.2.1.tar.gz) = c4a10eb6ae8554f15ac260b622e804576a54f7b9980da2194fb7e3498a050d1c
+SHA512 (python-lsp-black-1.2.1.tar.gz) = fe1e9b9f7fa149a49d12ec02e2845359e0189414ce5ff791149aadf7abe06cee0c305a70ab86e4e33969393a889e8a211cbbb443d147178755c8f4e5a93b8bac
+Size (python-lsp-black-1.2.1.tar.gz) = 5392 bytes

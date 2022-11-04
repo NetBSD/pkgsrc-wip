@@ -4116,6 +4116,7 @@ SUBDIR+=	py-loky
 SUBDIR+=	py-louie
 SUBDIR+=	py-louvain
 SUBDIR+=	py-lrparsing
+SUBDIR+=	py-lsp-black
 SUBDIR+=	py-lsp-jsonrpc
 SUBDIR+=	py-lsqfit
 SUBDIR+=	py-luminous
