@@ -4508,6 +4508,7 @@ SUBDIR+=	py-qalsadi
 SUBDIR+=	py-qclib
 SUBDIR+=	py-qcodes
 SUBDIR+=	py-qecalc
+SUBDIR+=	py-qdarkstyle
 SUBDIR+=	py-qequ
 SUBDIR+=	py-qeutil
 SUBDIR+=	py-qexpy
