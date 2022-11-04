@@ -1,4 +1,23 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/pkg/bin/bmake package"
-@comment TODO: 2. run "/usr/pkg/bin/bmake print-PLIST"
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rtree/__init__.py
+${PYSITELIB}/rtree/__init__.pyc
+${PYSITELIB}/rtree/__init__.pyo
+${PYSITELIB}/rtree/core.py
+${PYSITELIB}/rtree/core.pyc
+${PYSITELIB}/rtree/core.pyo
+${PYSITELIB}/rtree/exceptions.py
+${PYSITELIB}/rtree/exceptions.pyc
+${PYSITELIB}/rtree/exceptions.pyo
+${PYSITELIB}/rtree/finder.py
+${PYSITELIB}/rtree/finder.pyc
+${PYSITELIB}/rtree/finder.pyo
+${PYSITELIB}/rtree/index.py
+${PYSITELIB}/rtree/index.pyc
+${PYSITELIB}/rtree/index.pyo
+${PYSITELIB}/rtree/py.typed

@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	Rtree-0.9.4
+DISTNAME=	Rtree-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	geography python
-MASTER_SITES=	https://files.pythonhosted.org/packages/56/6f/f1e91001d5ad9fa9bed65875152f5a1c7955c5763168cae309546e6e9fda/
+MASTER_SITES=	${MASTER_SITE_PYPI:=R/Rtree/}
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://files.pythonhosted.org/packages/56/6f/f1e91001d5ad9fa9bed65875152f5a1c7955c5763168cae309546e6e9fda/
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	https://github.com/Toblerity/rtree
 COMMENT=	R-Tree spatial index for Python GIS
 LICENSE=	mit
 
