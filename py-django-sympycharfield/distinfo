@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (django-sympycharfield-0.2.tar.gz) = fd2830bde72d79734d0f82c217f2038b01032284
-SHA512 (django-sympycharfield-0.2.tar.gz) = a97760f3a9d707687242d006282533c0c05f37eb41d35e9918a59559944f2ebf712429293b453ec7e172719a6628fd529994c66a7cb092b8066dbdb2a79b9777
-Size (django-sympycharfield-0.2.tar.gz) = 4127 bytes
+BLAKE2s (django-sympycharfield-0.4.2.tar.gz) = b9e9708ed8e8d7def2e13f26dcf3eb29c0fb62ef588b653de35dd769493064b9
+SHA512 (django-sympycharfield-0.4.2.tar.gz) = 1feb8c9c2e11e0ffdeb88ab5b8deaea4bcf986fe12eefb004347bd7f31464e548f1ed72f75ad689dd4e0a96da7d23eeb53657e4ce773c841cce89fade3e65a67
+Size (django-sympycharfield-0.4.2.tar.gz) = 6555 bytes

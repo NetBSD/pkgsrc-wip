@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	django-sympycharfield-0.2
+DISTNAME=	django-sympycharfield-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www math python
-MASTER_SITES=	https://files.pythonhosted.org/packages/3b/f1/4a9fcd296161b810884ff32573c65dc090b68d4dc167f3d7c7bbe2ee7e9c/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sympycharfield/}
 
-MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/memoriadecalculo/django-sympycharfield
 COMMENT=	Django Char Field using Sympy
 LICENSE=	mit
