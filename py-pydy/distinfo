@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2015/08/01 22:21:54 jihbed Exp $
+$NetBSD$
 
-RMD160 (pydy-0.3.1.tar.gz) = 4c13e140ae4b3b677339000ab7862a8b0e508361
-SHA512 (pydy-0.3.1.tar.gz) = 7d0fbd5157dce78110b7146a575ca7e06e95f720bdd1c159e50553ed1fd1d157c633605ce9b09fb0bf93a6789dc5f74dbb1b0ff01e98be5ea9cd2135873d96fe
-Size (pydy-0.3.1.tar.gz) = 5302726 bytes
+BLAKE2s (pydy-0.6.0.tar.gz) = be3a3b49973e4d83e29b0f0f55c18dd154d1a0dd290c99175307e052bafda86b
+SHA512 (pydy-0.6.0.tar.gz) = c38ae4f5e7b974c7c71d81ae157dce1f567ea9d85140369ffe9eca90697681bcd2464898db66b399deeb65e2357e1adc329afaba1bbbdbedeb32c044793ca323
+Size (pydy-0.6.0.tar.gz) = 19117923 bytes

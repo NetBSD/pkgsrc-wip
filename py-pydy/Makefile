@@ -1,27 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	pydy-0.3.1
+DISTNAME=	pydy-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydy/}
 
-MAINTAINER=	jihbed.research@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pydy.org/
 COMMENT=	Python tool kit for multi-body dynamics
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-sympy>=0.1:../../math/py-sympy
-# Theano optional dependencie
-#DEPENDS+=	${PYPKGPREFIX}-Theano>=0.7.0:../../math/py-Theano
-
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.3.3:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-sympy>=1.5.1:../../math/py-sympy
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	27
-
-#py-cython optional dependencie
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.16.5
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
