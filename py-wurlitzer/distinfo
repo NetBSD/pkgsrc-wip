@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (wurlitzer-3.0.2.tar.gz) = 820e0fbbf8e50314b4640fa78ca76ec5d102e1163a7f414b9cdc697a7b36e123
+SHA512 (wurlitzer-3.0.2.tar.gz) = b0398699a15910511726053d32aa883fba249df9e7de393d645e4ac927d6ee9950fb459d27129d2806e39494245250b23ddf41acd349af514056dba1739cb1c8
+Size (wurlitzer-3.0.2.tar.gz) = 9846 bytes
