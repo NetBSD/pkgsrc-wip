@@ -4810,6 +4810,7 @@ SUBDIR+=	py-tex2pix
 SUBDIR+=	py-texext
 SUBDIR+=	py-texml
 SUBDIR+=	py-textblob
+SUBDIR+=	py-textdistance
 SUBDIR+=	py-textx
 SUBDIR+=	py-thLib
 SUBDIR+=	py-thermistor
