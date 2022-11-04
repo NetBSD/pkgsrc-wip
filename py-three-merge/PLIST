@@ -1,0 +1,12 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/three_merge/__init__.py
+${PYSITELIB}/three_merge/__init__.pyc
+${PYSITELIB}/three_merge/__init__.pyo
+${PYSITELIB}/three_merge/merge.py
+${PYSITELIB}/three_merge/merge.pyc
+${PYSITELIB}/three_merge/merge.pyo

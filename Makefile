@@ -4844,6 +4844,7 @@ SUBDIR+=	py-tranquil
 SUBDIR+=	py-transaction
 SUBDIR+=	py-translationstring
 SUBDIR+=	py-tree-sitter
+SUBDIR+=	py-three-merge
 SUBDIR+=	py-tribe
 SUBDIR+=	py-trie3
 SUBDIR+=	py-trimesh
