@@ -14,9 +14,18 @@ DEPENDS+=	${PYPKGPREFIX}-diffoscope>=134:../../sysutils/py-diffoscope
 DEPENDS+=	${PYPKGPREFIX}-distro>=0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-rstr>=0:../../wip/py-rstr
 
+REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-chroot \
+			reprotest/virt/autopkgtest-virt-lxc    \
+			reprotest/virt/autopkgtest-virt-lxd    \
+			reprotest/virt/autopkgtest-virt-null   \
+			reprotest/virt/autopkgtest-virt-qemu   \
+			reprotest/virt/autopkgtest-virt-schroot \
+			reprotest/virt/autopkgtest-virt-ssh
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} reprotest reprotest-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
