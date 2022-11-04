@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (qtconsole-5.4.0.tar.gz) = b60a6a64ffb2e74942f0cdd039af52a2c8a1f3869ffd9c837d8cfc0fdf6853fd
+SHA512 (qtconsole-5.4.0.tar.gz) = c25a381d8494c64d63e379c1dd5a44c1945e773b87b9a27f8494905e7eca24c6381ec5b9792d9a57ac41b14137ce238795a5ff8d83d1b6ddaa62603e7d9ab165
+Size (qtconsole-5.4.0.tar.gz) = 431119 bytes
