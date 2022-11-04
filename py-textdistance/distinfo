@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (textdistance-4.5.0.tar.gz) = beca3495b4c15709e9c61bd9cb3e7d7bfa69234e3198485e8c1fc8b48f3abfbd
+SHA512 (textdistance-4.5.0.tar.gz) = ffd06d9ad31ff875e1a3e7c186242c07bb89a0720d6ea8e531c5ba0eab846beb5e9e479324f8352db68bda067b20e483a150b2293130975145c0bd5d8773a1ba
+Size (textdistance-4.5.0.tar.gz) = 30927 bytes
