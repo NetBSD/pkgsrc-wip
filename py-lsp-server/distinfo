@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (python-lsp-server-1.6.0.tar.gz) = e30c1f3c90f14585c162ae726fd5236750f2e1ab28c7e6986e53381310a4e577
+SHA512 (python-lsp-server-1.6.0.tar.gz) = e4ab52f334fb1eece3458258ed39bf66eeb6056ed7e243be9c69ce2bac92792786df2fbc1d316133ac5523b44a57e7d89d4d6f18120c748e78ef20570a325c9b
+Size (python-lsp-server-1.6.0.tar.gz) = 85242 bytes
