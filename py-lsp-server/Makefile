@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	python-lsp-server-1.6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	category python
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
