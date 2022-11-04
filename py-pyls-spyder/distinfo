@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pyls-spyder-0.4.0.tar.gz) = ec3c1852d657dcbd961644cee971f33da4aaba023370cd91454e89cc37f38b50
+SHA512 (pyls-spyder-0.4.0.tar.gz) = 0231efb77875d164b365af1d1c0286ba2b5c002c4e34b8e128ac0e758edda962aa7d6dfe4a345ec43e226e3cd989575b3980f380237b6df174416bb3ef6b5c84
+Size (pyls-spyder-0.4.0.tar.gz) = 7427 bytes

@@ -1,0 +1,16 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyls_spyder/__init__.py
+${PYSITELIB}/pyls_spyder/__init__.pyc
+${PYSITELIB}/pyls_spyder/__init__.pyo
+${PYSITELIB}/pyls_spyder/plugin.py
+${PYSITELIB}/pyls_spyder/plugin.pyc
+${PYSITELIB}/pyls_spyder/plugin.pyo
+${PYSITELIB}/pyls_spyder/utils.py
+${PYSITELIB}/pyls_spyder/utils.pyc
+${PYSITELIB}/pyls_spyder/utils.pyo
