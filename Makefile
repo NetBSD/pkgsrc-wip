@@ -4715,6 +4715,7 @@ SUBDIR+=	py-spirack
 SUBDIR+=	py-spm1d
 SUBDIR+=	py-spotpy
 SUBDIR+=	py-sppy
+SUBDIR+=	py-spyder-kernels
 SUBDIR+=	py-spyse
 SUBDIR+=	py-sqlalchemy-json
 SUBDIR+=	py-sqlalchemy-searchable

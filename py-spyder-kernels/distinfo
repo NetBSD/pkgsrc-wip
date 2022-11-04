@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (spyder-kernels-2.4.0.tar.gz) = 9c20af5644d3bf294a4d3b0f9996a8b073bd2af3013e050bc2b7dfac3cc5011e
+SHA512 (spyder-kernels-2.4.0.tar.gz) = 9688ed905e309ee3c657ee5935f61f5dd045a92179aa9afd10c0c222de3e631943f2f3624ddb72ce3d89dc27fde50db20e4ddb847905d918580dd8f2ddbdacb6
+Size (spyder-kernels-2.4.0.tar.gz) = 73402 bytes
