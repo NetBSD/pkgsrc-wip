@@ -5,10 +5,10 @@
 #              Tue May 17 17:34:20 CDT 2022               #
 ###########################################################
 
-DISTNAME=	fasda-0.1.0.128
+DISTNAME=	fasda-0.1.0.132
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	532388f28d314bee24ccca26f8ad0d422a7d36a8
+GITHUB_TAG=	9cfb5108001812aa01ca8c9b282ae64f34d73337
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/fasda
