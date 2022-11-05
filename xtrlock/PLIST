@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/28 07:19:42 uhabel Exp $
-bin/xtrlock
-man/man1/xtrlock.1
