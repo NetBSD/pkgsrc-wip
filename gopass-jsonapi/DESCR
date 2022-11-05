@@ -1,0 +1,6 @@
+gopass-jsonapi enables communication with gopass via JSON messages.
+
+This is particularly useful for browser plugins like gopassbridge
+(https://github.com/gopasspw/gopassbridge) running gopass as
+a native app. More details can be found here:
+https://github.com/gopasspw/gopass-jsonapi/blob/master/docs/api.md
