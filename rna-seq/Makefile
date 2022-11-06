@@ -11,7 +11,7 @@ COMMENT=	Core tools needed for RNA-Seq analysis
 DEPENDS+=	fastq-trim>=0:../../biology/fastq-trim
 DEPENDS+=	fastqc>=0:../../biology/fastqc
 DEPENDS+=	biolibc-tools>=0:../../biology/biolibc-tools
-DEPENDS+=	gffread>=0:../../wip/gffread
+DEPENDS+=	gffread>=0:../../biology/gffread
 DEPENDS+=	kallisto>=0:../../biology/kallisto
 DEPENDS+=	hisat2>=0:../../biology/hisat2
 DEPENDS+=	samtools>=0:../../biology/samtools
