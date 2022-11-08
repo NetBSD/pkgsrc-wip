@@ -36,15 +36,18 @@ Provide defaults for the various NetBSD targets.
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
              "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
-@@ -265,6 +271,7 @@ impl Build {
+@@ -263,8 +269,10 @@ impl Build {
+             "mips64el-unknown-linux-muslabi64" => "linux64-mips64",
+             "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
++            "mipsel-unknown-netbsd" => "BSD-generic32",
              "powerpc-unknown-freebsd" => "BSD-generic32",
              "powerpc-unknown-linux-gnu" => "linux-ppc",
 +            "powerpc-unknown-netbsd" => "BSD-generic32",
              "powerpc64-unknown-freebsd" => "BSD-generic64",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
-@@ -274,6 +281,7 @@ impl Build {
+@@ -274,6 +282,7 @@ impl Build {
              "riscv64gc-unknown-linux-gnu" => "linux-generic64",
              "s390x-unknown-linux-gnu" => "linux64-s390x",
              "s390x-unknown-linux-musl" => "linux64-s390x",
