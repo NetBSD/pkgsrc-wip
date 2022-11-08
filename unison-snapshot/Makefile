@@ -1,11 +1,12 @@
 # $NetBSD: Makefile,v 1.142 2022/08/17 20:28:37 wiz Exp $
 
-DISTNAME=	unison-2.53.0
+# Not even an alpha leading to 2.53.1
+DISTNAME=	unison-2.53.0.60.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-#GITHUB_TAG=	f3f7972bdab2770ea3085fad06c7939c2233ff7c
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	b541f3607974fe6ac9032d9fc8a7c4109c7e6b4e
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/bcpierce00/unison
