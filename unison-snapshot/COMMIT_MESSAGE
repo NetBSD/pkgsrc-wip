@@ -1,6 +1,7 @@
 net/unison: Update to 2.53.0
 
 Change to lablgkt3.
+Drop MAKE_JOBS_SAFE because the issue was fixed upstream.
 
 ## Changes in 2.53.0
 

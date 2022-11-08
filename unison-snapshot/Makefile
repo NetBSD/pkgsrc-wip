@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2022/03/08 22:32:15 gdt Exp $
+# $NetBSD: Makefile,v 1.142 2022/08/17 20:28:37 wiz Exp $
 
 DISTNAME=	unison-2.53.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-GITHUB_TAG=	f3f7972bdab2770ea3085fad06c7939c2233ff7c
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	f3f7972bdab2770ea3085fad06c7939c2233ff7c
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
+HOMEPAGE=	https://github.com/bcpierce00/unison
+#HOMEPAGE+=	https://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 
@@ -15,7 +17,7 @@ USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if (${OCAML_USE_OPT_COMPILER} == "yes")
 MAKE_FLAGS+=	NATIVE=true
