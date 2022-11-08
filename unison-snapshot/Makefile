@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.32 2022/03/08 22:32:15 gdt Exp $
 
-# development version towards 2.53.0
-DISTNAME=	unison-2.52.91
+DISTNAME=	unison-2.53.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
