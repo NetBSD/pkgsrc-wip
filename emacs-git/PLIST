@@ -1823,6 +1823,8 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-button.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-button.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-capab.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-capab.elc
+share/emacs/${PKGVERSION}/lisp/erc/erc-common.el.gz
+share/emacs/${PKGVERSION}/lisp/erc/erc-common.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-compat.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-dcc.el.gz
