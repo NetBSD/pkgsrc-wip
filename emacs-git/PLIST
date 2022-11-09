@@ -2841,12 +2841,16 @@ share/emacs/${PKGVERSION}/lisp/net/eudc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudc.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-bbdb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-bbdb.elc
+share/emacs/${PKGVERSION}/lisp/net/eudcb-ecomplete.el.gz
+share/emacs/${PKGVERSION}/lisp/net/eudcb-ecomplete.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ldap.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ldap.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-macos-contacts.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-macos-contacts.elc
+share/emacs/${PKGVERSION}/lisp/net/eudcb-mailabbrev.el.gz
+share/emacs/${PKGVERSION}/lisp/net/eudcb-mailabbrev.elc
 share/emacs/${PKGVERSION}/lisp/net/eww.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eww.elc
 share/emacs/${PKGVERSION}/lisp/net/gnutls.el.gz
