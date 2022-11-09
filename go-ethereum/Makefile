@@ -18,6 +18,10 @@ do-build:
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${GO} run build/ci.go install ${GO_BUILD_PATTERN}
 
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/build/bin/geth \
+		${DESTDIR}${PREFIX}/bin/geth
+
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
