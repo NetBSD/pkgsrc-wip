@@ -5467,6 +5467,7 @@ SUBDIR+=	supercollider
 SUBDIR+=	superlfv
 SUBDIR+=	superlu
 SUBDIR+=	supermodel
+SUBDIR+=	supertuxkart
 SUBDIR+=	surf-git
 SUBDIR+=	surf1
 SUBDIR+=	suscan

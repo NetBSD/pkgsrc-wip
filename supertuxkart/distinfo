@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (SuperTuxKart-1.4-src.tar.xz) = 860086124a9b4bcbabae25f6fac2b5fd4c98d87c532b376dc89686e49ec8b10c
+SHA512 (SuperTuxKart-1.4-src.tar.xz) = e88f3fb5ccdb38d0ef75e92d73b43c5cc7a1f6c76ac9502033df099a00d6dc3e86b2c5442b806237d2420c44ada7dd23a2c90ecf94785a44d2348c933770a5ab
+Size (SuperTuxKart-1.4-src.tar.xz) = 650010456 bytes
+SHA1 (patch-src_io_rich_presence.cpp) = 05f8748977fc578e87d6b0a8e35d134c83ea4bc5
