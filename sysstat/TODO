@@ -10,4 +10,4 @@ make this platform specific
 
 - This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2007-3852, CVE-2018-19416, CVE-2018-19517, CVE-2019-16167,
-  CVE-2019-19725
+  CVE-2019-19725, CVE-2022-39377
