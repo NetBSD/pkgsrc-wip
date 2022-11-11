@@ -25,6 +25,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
+CXXFLAGS+=	-std=c++11
 
 post-extract:
 	${RM} ${WRKSRC}/bin/* ${WRKSRC}/obj/*.o ${WRKSRC}/obj/io/*.o
