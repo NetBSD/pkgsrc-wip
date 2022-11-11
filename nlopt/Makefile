@@ -10,11 +10,12 @@ HOMEPAGE=		https://nlopt.readthedocs.io/en/latest/
 COMMENT=		Nonlinear optimization library
 LICENSE=		gnu-lgpl-v2.1 OR mit
 
-USE_TOOLS+=		cmake
+USE_TOOLS+=		cmake pkg-config:run
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES+=		c c++
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../lang/guile20/buildlink3.mk"
-.include "../../math/octave/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
