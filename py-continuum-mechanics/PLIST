@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/continuum_mechanics/__init__.py
+${PYSITELIB}/continuum_mechanics/__init__.pyc
+${PYSITELIB}/continuum_mechanics/__init__.pyo
+${PYSITELIB}/continuum_mechanics/solids.py
+${PYSITELIB}/continuum_mechanics/solids.pyc
+${PYSITELIB}/continuum_mechanics/solids.pyo
+${PYSITELIB}/continuum_mechanics/tensor.py
+${PYSITELIB}/continuum_mechanics/tensor.pyc
+${PYSITELIB}/continuum_mechanics/tensor.pyo
+${PYSITELIB}/continuum_mechanics/vector.py
+${PYSITELIB}/continuum_mechanics/vector.pyc
+${PYSITELIB}/continuum_mechanics/vector.pyo
+${PYSITELIB}/continuum_mechanics/visualization.py
+${PYSITELIB}/continuum_mechanics/visualization.pyc
+${PYSITELIB}/continuum_mechanics/visualization.pyo

@@ -4156,6 +4156,7 @@ SUBDIR+=	py-mdanalysis
 SUBDIR+=	py-mdp
 SUBDIR+=	py-mdptoolbox
 SUBDIR+=	py-mdtraj
+SUBDIR+=	py-continuum_mechanics
 SUBDIR+=	py-meigo
 SUBDIR+=	py-memory_profiler
 SUBDIR+=	py-mendeleev

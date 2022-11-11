@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (continuum_mechanics-0.2.2.tar.gz) = 42922ed66fa668a8455a6788b40e4439da66a7956259265585c1705411b80d06
+SHA512 (continuum_mechanics-0.2.2.tar.gz) = b6ccfe40df55962089b7141ca5f2a2d6a17ae25fdaf539761972127ae4fee627aba38ee6f313a5fb0d3a7dbd1443ad6b37cd7c129e1e85c9b8c85f8769167460
+Size (continuum_mechanics-0.2.2.tar.gz) = 803647 bytes
