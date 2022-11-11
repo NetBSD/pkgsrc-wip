@@ -4550,6 +4550,7 @@ SUBDIR+=	py-qutip
 SUBDIR+=	py-qutrub
 SUBDIR+=	py-radontea
 SUBDIR+=	py-rainbownum
+SUBDIR+=	py-randomdict
 SUBDIR+=	py-ranger
 SUBDIR+=	py-raphrase
 SUBDIR+=	py-rasterio

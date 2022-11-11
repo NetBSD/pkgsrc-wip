@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (randomdict-0.2.0.tar.gz) = 3dc6dc9abfd17f77beba50a18a6e3d3c514bc9f1ebf712e41890847592a74271
+SHA512 (randomdict-0.2.0.tar.gz) = 6e84c993df31d2eb268ee67071d79f46625c8baab5ace2cd61842f683d0f642336888b6fe3afcd269421c577bfd49c7ec9ada63eae775072e17d4665ff3b197f
+Size (randomdict-0.2.0.tar.gz) = 1564 bytes
