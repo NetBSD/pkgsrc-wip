@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mathpad-1.2.0.tar.gz) = 5af0b5a41c7a8c612382195a4f3193135280489e27bdca3f055d522520ae9310
+SHA512 (mathpad-1.2.0.tar.gz) = f641ff697bda7011c22ddcaa52dad8c093b2ac860fbc32d01768d2d531591ab8bef6b7692d51ae4de0d447a5ae2ab7fc4fa1e4ea54f09f138a0879bb9076e111
+Size (mathpad-1.2.0.tar.gz) = 35136 bytes

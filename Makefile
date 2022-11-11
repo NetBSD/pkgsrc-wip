@@ -4142,6 +4142,7 @@ SUBDIR+=	py-maskouk-sqlite
 SUBDIR+=	py-math-braid
 SUBDIR+=	py-math-snappy
 SUBDIR+=	py-math3d
+SUBDIR+=	py-mathpad
 SUBDIR+=	py-mathjspy
 SUBDIR+=	py-mathopt
 SUBDIR+=	py-matplottheme
