@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (brain-mesh-builder-1.0.tar.gz) = 0dc3282ca814e4812bf351572a00614c626d25cdca55bfed098ec2ef0128d8a0
+SHA512 (brain-mesh-builder-1.0.tar.gz) = 3669a63047e91f0ed32ad803f48c9a94e34633af653ae84a3c652412248ff27fada7965bed7fb8ff66b4ba677bd83723fd65405f05d949e2353ec18af47b0c63
+Size (brain-mesh-builder-1.0.tar.gz) = 25799712 bytes
+SHA1 (patch-Makefile) = 45cd44b1be32ddc68b730650d457b378e982d8c5
+SHA1 (patch-inc_globals.h) = c0790ee6ea3f764a4cd034f52aee7cd5d151b064

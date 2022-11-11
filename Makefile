@@ -320,6 +320,7 @@ SUBDIR+=	bowtie
 SUBDIR+=	bowtie2
 SUBDIR+=	bpcscripts
 SUBDIR+=	bpytop
+SUBDIR+=	brain-mesh-builder
 SUBDIR+=	breakpad
 SUBDIR+=	breeze
 SUBDIR+=	breeze-gtk

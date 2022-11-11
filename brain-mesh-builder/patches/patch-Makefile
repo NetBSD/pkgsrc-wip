@@ -1,0 +1,86 @@
+$NetBSD$
+
+# Support package managers
+
+--- Makefile.orig	2021-04-15 21:30:36 UTC
++++ Makefile
+@@ -1,34 +1,59 @@
++# subdirs
++SRCDIR	= src
++INCDIR	= inc
++OBJDIR	= obj
++BINDIR	= bin
++
+ # Final executable
+-TARGET=dodri
++TARGET	= $(BINDIR)/dodri
+ 
+-# subdirs
+-SRCDIR = src
+-INCDIR = inc
+-OBJDIR = obj
+-BINDIR = bin
++# Using != runs the command immediately, so the actual flags appear
++# in the compile and link commands
++GM_CPP	!= GraphicsMagick++-config --cppflags
++GM_LD	!= GraphicsMagick++-config --ldflags --libs
+ 
+ # compiler rules
+-CC = g++ #-std=c++11
+-DEBUG = -g
+-OPT = -O3 -Wall
+-IMGMGK= -fno-strict-aliasing -pthread  `GraphicsMagick++-config --cppflags --ldflags --libs`
++# -pthread appears to be unused
++# Allow user to override default compiler and optional flags using make
++# arguments or environment variables
++CXX		?= g++
++CXXFLAGS	?= -O3 -Wall -fno-strict-aliasing
+ 
+-CFLAGS=  -I$(INCDIR) $(OPT) $(IMGMGK) 
++# Add required flags
++CXXFLAGS	+= -I$(INCDIR) $(GM_CPP)
++LDFLAGS		+= $(GM_LD)
+ 
+-SOURCES := $(wildcard $(SRCDIR)/*.cpp) $(wildcard $(SRCDIR)/io/*.cpp)
+-INCLUDES := $(wildcard $(INCDIR)/*.h)
+-OBJECTS := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o) 
++DEBUG	= -g
+ 
+-$(BINDIR)/$(TARGET): $(OBJECTS) $(INCLUDES)
+-	$(CC) $(OBJECTS) $(CFLAGS) -o $@
++SOURCES		:= $(wildcard $(SRCDIR)/*.cpp) $(wildcard $(SRCDIR)/io/*.cpp)
++INCLUDES	:= $(wildcard $(INCDIR)/*.h)
++OBJECTS		:= $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o) 
+ 
+-all: $(BINDIR)/$(TARGET) 
++# Default install tools, can be overridden by user
++MKDIR		?= mkdir
++INSTALL		?= install
++
++# Support staged installs.  Most package managers will provide
++# DESTDIR and PREFIX.
++DESTDIR		?= stagedir
++PREFIX		?= /usr/local
++
++all: $(TARGET) 
++
++$(TARGET): $(OBJECTS) $(INCLUDES)
++	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
++
+ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCLUDES) 
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CXX) $(CXXFLAGS) -c $< -o $@
+ 
+ .PHONY: 
+ clean:
+-	rm -f $(OBJECTS) $(BINDIR)/$(TARGET)
+-debug:	CFLAGS = -I$(INCDIR) $(IMGMGK) $(DEBUG) 
++	rm -f $(OBJECTS) $(TARGET)
+ 
++debug: CXXFLAGS = -I$(INCDIR) $(IMGMGK) $(DEBUG) 
++
+ debug: all 
++
++install: all
++	$(MKDIR) -p $(DESTDIR)$(PREFIX)/bin
++	$(INSTALL) -c $(TARGET) $(DESTDIR)$(PREFIX)/bin
