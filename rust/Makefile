@@ -655,7 +655,7 @@ stage0-bootstrap: install
 # and still depend on libstdc++.so.8.
 # Pull in compat80 on 9.x and newer.
 .if (!empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-    (!empty(MACHINE_PLATFORM:MNetBSD-*-sparc64))) \
+     !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)) \
     && empty(OS_VERSION:M8.*)
 BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
