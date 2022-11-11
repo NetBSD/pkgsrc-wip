@@ -306,6 +306,7 @@ share/zabbix/app/partials/monitoring.latest.filter.php
 share/zabbix/app/partials/monitoring.latest.subfilter.php
 share/zabbix/app/partials/monitoring.latest.view.html.php
 share/zabbix/app/partials/monitoring.problem.filter.php
+share/zabbix/app/partials/monitoring.problem.view.html.php
 share/zabbix/app/partials/popup.operations.php
 share/zabbix/app/partials/scheduledreport.formgrid.html.php
 share/zabbix/app/partials/scheduledreport.subscription.php
@@ -467,6 +468,7 @@ share/zabbix/app/views/monitoring.latest.view.php
 share/zabbix/app/views/monitoring.latest.view.refresh.php
 share/zabbix/app/views/monitoring.map.view.php
 share/zabbix/app/views/monitoring.problem.view.php
+share/zabbix/app/views/monitoring.problem.view.refresh.php
 share/zabbix/app/views/monitoring.web.view.php
 share/zabbix/app/views/monitoring.widget.actionlog.view.php
 share/zabbix/app/views/monitoring.widget.clock.view.php
