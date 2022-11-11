@@ -1,0 +1,2 @@
+This application provides display and control of Android devices connected via
+USB or [over TCP/IP](#tcpip-wireless). It does not require any _root_ access.
