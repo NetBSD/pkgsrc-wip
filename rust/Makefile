@@ -651,9 +651,12 @@ stage0-bootstrap: install
 
 ## Issues specific to: bootstrap AND NetBSD follow
 
-# rust i386 bootstraps are built for 8.0 and still depend on libstdc++.so.8.
+# rust i386 and sparc64 bootstraps are built for 8.0
+# and still depend on libstdc++.so.8.
 # Pull in compat80 on 9.x and newer.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) && empty(OS_VERSION:M8.*)
+.if (!empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
+    (!empty(MACHINE_PLATFORM:MNetBSD-*-sparc64))) \
+    && empty(OS_VERSION:M8.*)
 BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
