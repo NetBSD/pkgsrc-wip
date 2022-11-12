@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (belle-sip-1.4.2.tar.gz) = 35fa4b1566a278a3262eee358e032d1759f61e63
+BLAKE2s (belle-sip-1.4.2.tar.gz) = 2a32263bf0bc750cbcdeb920aa2a8023c40e307b2549c3d2bee8c9c431c2ca5f
 SHA512 (belle-sip-1.4.2.tar.gz) = 6ec370d0bf64de8bf59469ad2ec2656e419b7cf267de80d8f3640635533d0294e7e1d24cfbea16beab67235f041e3272fd540abf64b235022829222263d37a6a
 Size (belle-sip-1.4.2.tar.gz) = 765307 bytes
 SHA1 (patch-configure) = 96132595e6c9ceca2813b240085c1535b1ebcc48

@@ -2,7 +2,7 @@
 
 DISTNAME=	belle-sip-1.4.2
 CATEGORIES=	audio
-MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/belle-sip/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/linphone/belle-sip/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.linphone.org/technical-corner/belle-sip/overview
