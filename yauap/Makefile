@@ -3,7 +3,7 @@
 
 DISTNAME=	yauap-0.2.4
 CATEGORIES=	audio
-MASTER_SITES=	http://download.savannah.gnu.org/releases/yauap/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/yauap/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/yauap/index.html
