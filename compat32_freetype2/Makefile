@@ -3,7 +3,7 @@
 DISTNAME=	freetype-2.10.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
-MASTER_SITES+=	http://download.savannah.gnu.org/releases/freetype/
+MASTER_SITES+=	https://savannah.gnu.org/releases/freetype/
 EXTRACT_SUFX=	.tar.bz2
 ABI=		32
 PKGNAME=	compat${ABI}_${DISTNAME:S/-/2-/}
