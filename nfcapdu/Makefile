@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITLAB:=0xDRRB/}
 GITLAB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	lefinnois@lefinnois.net
-HOMEPAGE=	https://github.com/0xDRRB/nfcapdu/
+HOMEPAGE=	https://gitlab.com/0xDRRB/nfcapdu/
 COMMENT=	Command line tool to exchange APDUs with an RFID/NFC tag
 LICENSE=	gnu-lgpl-v3
 
