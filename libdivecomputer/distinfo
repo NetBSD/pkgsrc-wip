@@ -4,4 +4,4 @@ RMD160 (libdivecomputer-0.7.0.tar.gz) = 0ca07ef31b2d0b6619326e11b8078cbaf150c54c
 SHA512 (libdivecomputer-0.7.0.tar.gz) = 205f8f659c426266e47c0979b8a7e0e1b06d6db2965ab67bc1e8638b48efb8854549f5fa23610570563b0464a204b6e811caccdc2ef692ea68b039939cb41635
 Size (libdivecomputer-0.7.0.tar.gz) = 751538 bytes
 SHA1 (patch-configure.ac) = a5bdde33c3a091cd0e9e80d9128564a720af7f07
-SHA1 (patch-src_serial_posix.c) = 6096cbf2b1af48b9418670d43e6d4e4d5a75ba83
+SHA1 (patch-src_serial_posix.c) = 4ac8c2a35df5e54fb63b06fe9bbe56d4282fce46
