@@ -1,4 +1,4 @@
-nanosaur TODO:
+bugdom TODO:
 
 - I'm not certain about the LICENSE field
 - We depend on wip/mk/git-package.git because we need the Git submodules
