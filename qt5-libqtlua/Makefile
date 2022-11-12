@@ -3,7 +3,7 @@
 DISTNAME=	libqtlua-2.0
 PKGNAME=	qt5-${DISTNAME}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.savannah.gnu.org/releases/libqtlua/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/libqtlua/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/libqtlua/
