@@ -3,7 +3,7 @@
 DISTNAME=	pyformex-0.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	graphics math python
-MASTER_SITES=	http://download.savannah.gnu.org/releases/pyformex/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/pyformex/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyformex.berlios.de/
