@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.4 2010/04/27 05:22:20 guigui2 Exp $
 
-RMD160 (castget-2.0.1.tar.bz2) = 4a833a80d4fbc6779fb8236b5595124c5de3c6ef
+BLAKE2s (castget-2.0.1.tar.bz2) = f25cf44d1fd45282f5f5e59cc64c3e2f3ead9f61b69608bde0ffeaae161b39b5
 SHA512 (castget-2.0.1.tar.bz2) = c4559538fbd4805e6f68c986e7175ecebc2ebcc07f0292f5ae228f6629fdc202408815b0c27f507e89828cad417cbd4a428bc0a9a24df3b580e189f447c51df5
 Size (castget-2.0.1.tar.bz2) = 320226 bytes

@@ -2,7 +2,7 @@
 
 DISTNAME=	castget-2.0.1
 CATEGORIES=	audio www
-MASTER_SITES=	http://download.savannah.gnu.org/releases/castget/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/castget/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	netbsd@guigui2.net
