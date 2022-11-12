@@ -183,13 +183,14 @@ Suggested ready to import packages
 	o ispell-dictionaries
 	o marathon-tempus-irae
 	o matiec
-  o moonlight-qt
+	o moonlight-qt
+	o openjazz
 	o pear-Net_URL2
 	o phalanx [kamil]
 	o pnmcurve
 	o py-csp [kamil; some tests hang but it seems good enough; need for wip/py-uuid]
 	o py-jswebkit
-  o qbe
+	o qbe
 	o rar4
 	o send-pr
 	o tqsllib
