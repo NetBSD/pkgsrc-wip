@@ -5,16 +5,16 @@ VERS=		0.2
 
 DISTNAME=	${PROGNAME}-${VERS}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=0xDRRB/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=0xDRRB/}
+GITLAB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	lefinnois@lefinnois.net
-HOMEPAGE=	https://github.com/0xDRRB/chkugenids/
+HOMEPAGE=	https://gitlab.com/0xDRRB/chkugenids/
 COMMENT=	Command line tool to get info on USB device through /dev/ugenN.EE
 LICENSE=	2-clause-bsd
 
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${PROGNAME}-v${VERS}
 
 USE_LANGUAGES+=	c
 
