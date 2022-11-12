@@ -2,7 +2,7 @@
 
 DISTNAME=	aldo-0.7.7
 CATEGORIES=	ham
-MASTER_SITES=	http://download.savannah.gnu.org/releases/aldo/
+MASTER_SITES=	https://download.savannah.gnu.org/releases/aldo/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
