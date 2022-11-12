@@ -1,20 +1,21 @@
 # $NetBSD$
 
 PROGNAME=	mctcli
-VERS=		0.0.2
+VERS=		0.0.3
 
 DISTNAME=	${PROGNAME}-${VERS}
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=0xDRRB/}
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=0xDRRB/}
+#GITLAB_TAG=	v${PKGVERSION_NOREV}
+GITLAB_TAG=	313e5399d51d4b79b44d988a1f3f36fd20b8b7fa
 
 MAINTAINER=	lefinnois@lefinnois.net
-HOMEPAGE=	https://github.com/0xDRRB/mctcli/
+HOMEPAGE=	https://gitlab.com/0xDRRB/mctcli/
 COMMENT=	Simple tool for mapping and reading MIFARE Classic tags
 LICENSE=	gnu-lgpl-v3
 
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${PROGNAME}-${GITLAB_TAG}
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	gmake
