@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2014/11/21 06:01:35 jgoamakf Exp $
-
-RMD160 (biniou-1.0.9.tar.gz) = bc5b528014363259ac2cb19be131a653845cf227
-Size (biniou-1.0.9.tar.gz) = 23963 bytes
-SHA1 (patch-Makefile) = 2ff1f6d79335f96c7d5633132809da0bd070abc8
