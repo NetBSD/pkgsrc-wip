@@ -2,7 +2,7 @@
 
 DISTNAME=		man-db-2.7.5
 CATEGORIES=		misc
-MASTER_SITES=		http://download.savannah.gnu.org/releases/man-db/
+MASTER_SITES=		https://download.savannah.gnu.org/releases/man-db/
 EXTRACT_SUFX=		.tar.xz
 LICENSE=		gnu-gpl-v2 # or later
 

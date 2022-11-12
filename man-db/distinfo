@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.5 2005/09/28 06:41:27 rillig Exp $
 
-RMD160 (man-db-2.7.5.tar.xz) = 87c4d33bd03a818d72b40c74b578b6f692351697
+BLAKE2s (man-db-2.7.5.tar.xz) = 291efc4f62be9873aafdc4d116262182e9e4432ef7bee3c8cd8a28371ac162ed
 SHA512 (man-db-2.7.5.tar.xz) = 8e82fb437372261a2b33e1acb45b6322dac1864f13b20968d6a09b27edec795111c25bafcb7f6f3550784d4621eb4871f76d0275d7fa9e01644a5ced60666933
 Size (man-db-2.7.5.tar.xz) = 1505428 bytes
 SHA1 (patch-aa) = 99202bb1f378a0bf120284be507c2d87d8968df7
