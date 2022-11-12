@@ -887,7 +887,6 @@ SUBDIR+=	flag
 SUBDIR+=	flam3-svn
 SUBDIR+=	flang
 SUBDIR+=	flang-git
-SUBDIR+=	flashrom
 SUBDIR+=	flasm
 SUBDIR+=	flexdock
 SUBDIR+=	flexdump

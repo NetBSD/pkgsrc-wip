@@ -1,8 +1,0 @@
-flashrom is a utility for detecting, reading, writing, verifying and erasing
-flash chips. It is often used to flash BIOS/EFI/coreboot/firmware images
-in-system using a supported mainboard, but it also supports flashing of network
-cards (NICs), SATA controller cards, and other external devices which can
-program flash chips.
-It supports a wide range of flash chips (most commonly found in SOIC8, DIP8,
-SOIC16, WSON8, PLCC32, DIP32, TSOP32, and TSOP40 packages), which use various
-protocols such as LPC, FWH, parallel flash, or SPI.
