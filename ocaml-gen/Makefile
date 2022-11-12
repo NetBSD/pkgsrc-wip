@@ -15,6 +15,6 @@ LICENSE=	2-clause-bsd
 OCAML_USE_DUNE=		yes
 TEST_TARGET=		test
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

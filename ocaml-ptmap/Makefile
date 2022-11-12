@@ -15,5 +15,5 @@ LICENSE=	gnu-lgpl-v2.1
 BUILD_DEPENDS+=	ocaml-obuild-[0-9]*:../../wip/ocaml-obuild
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

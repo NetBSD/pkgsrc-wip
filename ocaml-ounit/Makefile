@@ -12,5 +12,5 @@ LICENSE=	mit
 
 OCAML_USE_OASIS=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -17,5 +17,5 @@ OCAML_USE_DUNE=	yes
 .include "../../devel/ocaml-fpath/buildlink3.mk"
 .include "../../devel/ocaml-astring/buildlink3.mk"
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

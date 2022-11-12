@@ -10,7 +10,7 @@ MAKE_JOBS_SAFE=		no
 post-install:
 	${RM} -r ${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../textproc/gdome2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libxslt?=  build
 .include "../../textproc/libxslt/buildlink3.mk"
