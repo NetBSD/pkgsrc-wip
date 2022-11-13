@@ -5235,6 +5235,7 @@ SUBDIR+=	rygel
 SUBDIR+=	s2tc
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
+SUBDIR+=	s5cmd
 SUBDIR+=	sabnzbd
 SUBDIR+=	sabnzbdplus
 SUBDIR+=	sacc-git
