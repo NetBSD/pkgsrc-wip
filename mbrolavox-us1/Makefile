@@ -16,7 +16,7 @@ WRKSRC=	${WRKDIR}/MBROLA-voices-master/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/numediart/MBROLA-voices
 COMMENT=	American English female voice for MBROLA
-LICENSE=	gnu-agpl-v3
+LICENSE=	no-commercial-use
 
 DEPENDS=	mbrola-[0-9]*:../../audio/mbrola
 
