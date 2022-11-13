@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.25 2021/03/19 17:37:03 bsiegert Exp $
 
 DISTNAME=	terraform-provider-aws-3.75.1
+PKGNAME=	${DISTNAME:S/aws/aws3/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-providers/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +14,8 @@ LICENSE=	mpl-2.0
 GO_BUILD_PATTERN=	.
 
 UNLIMIT_RESOURCES=	datasize virtualsize
+
+WRKSRC=	${WRKDIR}/${DISTNAME}
 
 TERRAFORM_PROVIDER_BIN=		terraform-provider-aws
 TERRAFORM_PROVIDER_NAMESPACE=	hashicorp
