@@ -1,0 +1,8 @@
+@comment $NetBSD$
+share/mbrola/voices/us3/README.txt
+share/mbrola/voices/us3/TEST/cslu.pho
+share/mbrola/voices/us3/TEST/diphone.pho
+share/mbrola/voices/us3/TEST/mbroli.ini
+share/mbrola/voices/us3/TEST/mike.pho
+share/mbrola/voices/us3/license.txt
+share/mbrola/voices/us3/us3

@@ -2376,6 +2376,7 @@ SUBDIR+=	mbox-importer
 SUBDIR+=	mbrola
 SUBDIR+=	mbrolavox-us1
 SUBDIR+=	mbrolavox-us2
+SUBDIR+=	mbrolavox-us3
 SUBDIR+=	mc-mp
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
