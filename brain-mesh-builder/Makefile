@@ -11,10 +11,10 @@
 #USE_XORG=	ice sm x11 xext
 #USE_GNOME=	libxml2
 
-DISTNAME=	brain-mesh-builder-1.0
+DISTNAME=	brain-mesh-builder-1.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hwm2746/}
-GITHUB_TAG=	v.${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/hwm2746/brain-mesh-builder
@@ -27,10 +27,5 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 CXXFLAGS+=	-std=c++11
 
-post-extract:
-	${RM} ${WRKSRC}/bin/* ${WRKSRC}/obj/*.o ${WRKSRC}/obj/io/*.o
-
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

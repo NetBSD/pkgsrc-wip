@@ -1,7 +1,17 @@
 $NetBSD$
 
-BLAKE2s (brain-mesh-builder-1.0.tar.gz) = 0dc3282ca814e4812bf351572a00614c626d25cdca55bfed098ec2ef0128d8a0
-SHA512 (brain-mesh-builder-1.0.tar.gz) = 3669a63047e91f0ed32ad803f48c9a94e34633af653ae84a3c652412248ff27fada7965bed7fb8ff66b4ba677bd83723fd65405f05d949e2353ec18af47b0c63
-Size (brain-mesh-builder-1.0.tar.gz) = 25799712 bytes
-SHA1 (patch-Makefile) = 45cd44b1be32ddc68b730650d457b378e982d8c5
-SHA1 (patch-inc_globals.h) = c0790ee6ea3f764a4cd034f52aee7cd5d151b064
+BLAKE2s (brain-mesh-builder-1.1.tar.gz) = 122811b4221702aad58ef5c5fd9f7fdd7fb73f1b703f9646d36192c05cb5a2b6
+SHA512 (brain-mesh-builder-1.1.tar.gz) = d71dbcde369313ccd0f86c571cd6c12f0b5babd096a5847097de8eb66c53e9e53dea74e1a9ea6656956113c529c14e07629a95dfe045cf38ed6e3e85e323f0e0
+Size (brain-mesh-builder-1.1.tar.gz) = 24984078 bytes
+SHA1 (patch-Makefile) = cd1fff26d79d2a0d6d4b3111817884a5a37dfb07
+SHA1 (patch-src_bead.cpp) = aa60fef2612162a9816db6b7e9fb11f46c2a7395
+SHA1 (patch-src_bead3d.cpp) = 31b2ad4c35837bd10a7c15bae4b27c000af27a7e
+SHA1 (patch-src_fnet.cpp) = 34fab18fed492330d9394a9fec0f7b1efc155ff9
+SHA1 (patch-src_fnet3d.cpp) = 53af1a86ebdbd76bab3c0eac8db32f19fbb5a9f1
+SHA1 (patch-src_img.cpp) = a8185f3ed69f931155ad23f434f5757a345b487b
+SHA1 (patch-src_img3d.cpp) = 4f392f65828ce02bf045f88d6b54c953bb075e11
+SHA1 (patch-src_io_bead3d__cmd.cpp) = 3f8804e8c3fd162fec01921797e3c18cc9b774c9
+SHA1 (patch-src_io_fnet3d__cmd.cpp) = abef664a141977b4e75f941e7ebe70c57001ed3e
+SHA1 (patch-src_io_img3d__cmd.cpp) = e5a0de3a074d835d9cbaf0f6601bb2010e36526b
+SHA1 (patch-src_matvec.cpp) = 5c7432545c7f1d3f60837d59ac40f862aad2520e
+SHA1 (patch-src_surface.cpp) = c118d5a10a5ad48888646440f71c0770f2d85506
