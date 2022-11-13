@@ -800,6 +800,7 @@ SUBDIR+=	es40-firmware
 SUBDIR+=	esbuild
 SUBDIR+=	esdl
 SUBDIR+=	espeak
+SUBDIR+=	espeak-ng
 SUBDIR+=	et
 SUBDIR+=	ethtool
 SUBDIR+=	etoile
