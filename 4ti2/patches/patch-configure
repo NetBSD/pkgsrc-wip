@@ -1,0 +1,67 @@
+$NetBSD$
+
+--- configure.orig	2015-12-12 05:23:45.000000000 +0000
++++ configure
+@@ -3467,7 +3467,7 @@ else
+   enable_fiber=no
+ fi
+ 
+- if  test x${enable_zsolve} == xyes ; then
++ if  test x${enable_zsolve} = xyes ; then
+   ENABLE_ZSOLVE_TRUE=
+   ENABLE_ZSOLVE_FALSE='#'
+ else
+@@ -3475,7 +3475,7 @@ else
+   ENABLE_ZSOLVE_FALSE=
+ fi
+ 
+- if  test x${enable_fiber} == xyes ; then
++ if  test x${enable_fiber} = xyes ; then
+   ENABLE_FIBER_TRUE=
+   ENABLE_FIBER_FALSE='#'
+ else
+@@ -23237,7 +23237,7 @@ $as_echo_n "checking for GMP >= $min_gmp
+ 
+ for GMP_HOME in ${GMP_HOME_PATH}
+   do
+-	if test "x$GMP_HOME" == "xDEFAULT" -o -r "$GMP_HOME/include/gmp.h"; then
++	if test "x$GMP_HOME" = "xDEFAULT" -o -r "$GMP_HOME/include/gmp.h"; then
+ 
+ 		if test "x$GMP_HOME" != "xDEFAULT" ; then
+ 			GMP_CFLAGS="-I${GMP_HOME}/include"
+@@ -23430,7 +23430,7 @@ Please make sure that GNU MP was configu
+ 4ti2 will be built without support for arbitrary-precision computations." >&2;}
+ fi
+ 
+-if test x${enable_groebner} == xyes ; then
++if test x${enable_groebner} = xyes ; then
+ # Check for GLPK.
+ 
+ DEFAULT_CHECKING_PATH="DEFAULT"
+@@ -23462,7 +23462,7 @@ $as_echo_n "checking for GLPK's glp_ API
+ 
+ for GLPK_HOME in ${GLPK_HOME_PATH}
+   do
+-	if test "x$GLPK_HOME" == "xDEFAULT" -o -r "$GLPK_HOME/include/glpk.h"; then
++	if test "x$GLPK_HOME" = "xDEFAULT" -o -r "$GLPK_HOME/include/glpk.h"; then
+ 
+ 		if test "x$GLPK_HOME" != "xDEFAULT" ; then
+ 			GLPK_CFLAGS="-I${GLPK_HOME}/include"
+@@ -23541,7 +23541,7 @@ LIBS=${BACKUP_LIBS}
+ 
+ 
+ fi
+- if  test x${enable_groebner} == xyes ; then
++ if  test x${enable_groebner} = xyes ; then
+   ENABLE_GROEBNER_TRUE=
+   ENABLE_GROEBNER_FALSE='#'
+ else
+@@ -23729,7 +23729,7 @@ fi
+ 
+ 
+ fi
+- if  test x${enable_swig} == xyes ; then
++ if  test x${enable_swig} = xyes ; then
+   ENABLE_SWIG_TRUE=
+   ENABLE_SWIG_FALSE='#'
+ else
