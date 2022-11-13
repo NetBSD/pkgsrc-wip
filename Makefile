@@ -5396,6 +5396,7 @@ SUBDIR+=	soju
 SUBDIR+=	solarus-zsdx
 SUBDIR+=	solvespace-git
 SUBDIR+=	songwrite2
+SUBDIR+=	sonic
 SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia
 SUBDIR+=	sops

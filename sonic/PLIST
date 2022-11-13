@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/sonic
+include/sonic.h
+lib/libsonic.a
+lib/libsonic.so
+lib/libsonic.so.0
+lib/libsonic.so.${PKGVERSION}

@@ -1,0 +1,18 @@
+$NetBSD$
+
+Let pkgsrc manage flags, &c.
+
+--- Makefile.orig	2022-11-06 22:53:06.509668654 +0000
++++ Makefile
+@@ -10,11 +10,7 @@ UNAME := $(shell uname)
+ ifeq ($(UNAME), Darwin)
+   SONAME=install_name
+ endif
+-#CFLAGS=-Wall -g -ansi -fPIC -pthread
+-CFLAGS=-Wall -O3 -ansi -fPIC -pthread
+ LIB_TAG=0.2.0
+-CC=gcc
+-PREFIX=/usr
+ LIBDIR=$(PREFIX)/lib
+ 
+ all: sonic libsonic.so.$(LIB_TAG) libsonic.a
