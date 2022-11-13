@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (brain-mesh-builder-1.1.tar.gz) = 122811b4221702aad58ef5c5fd9f7fdd7fb73f1b703f9646d36192c05cb5a2b6
 SHA512 (brain-mesh-builder-1.1.tar.gz) = d71dbcde369313ccd0f86c571cd6c12f0b5babd096a5847097de8eb66c53e9e53dea74e1a9ea6656956113c529c14e07629a95dfe045cf38ed6e3e85e323f0e0
 Size (brain-mesh-builder-1.1.tar.gz) = 24984078 bytes
-SHA1 (patch-Makefile) = cd1fff26d79d2a0d6d4b3111817884a5a37dfb07
+SHA1 (patch-Makefile) = e09b21f8d61a139379c3729a6064cc54a16ee3ed
 SHA1 (patch-src_bead.cpp) = aa60fef2612162a9816db6b7e9fb11f46c2a7395
 SHA1 (patch-src_bead3d.cpp) = 31b2ad4c35837bd10a7c15bae4b27c000af27a7e
 SHA1 (patch-src_fnet.cpp) = 34fab18fed492330d9394a9fec0f7b1efc155ff9

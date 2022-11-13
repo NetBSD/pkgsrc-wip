@@ -1,8 +1,8 @@
 $NetBSD$
 
-# Clean up and create bin and obj dirs
+# Create bin and obj dirs
 
---- Makefile.orig	2022-11-12 14:21:36 UTC
+--- Makefile.orig	2022-11-12 14:21:36.000000000 +0000
 +++ Makefile
 @@ -9,42 +9,48 @@ TARGET = $(BINDIR)/dodri
  
@@ -60,11 +60,12 @@ $NetBSD$
 +$(OBJDIR)/io:
 +	$(MKDIR) -p $(OBJDIR)/io
 +
-+$(TARGET): $(BINDIR) $(OBJDIR)/io $(OBJECTS) $(INCLUDES)
++$(TARGET): $(BINDIR) $(OBJECTS) $(INCLUDES)
  	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
  
- $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCLUDES)
+-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCLUDES)
 -	       $(CXX) $(CXXFLAGS) -c $< -o $@
++$(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCLUDES) $(OBJDIR)/io
 +	$(CXX) $(CXXFLAGS) -c $< -o $@
  
  .PHONY:
