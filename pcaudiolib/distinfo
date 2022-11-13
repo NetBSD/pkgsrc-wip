@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pcaudiolib-1.2.tar.gz) = 11dc27e944fb2edba51c0b4f1da100e7279e44e24821941e3fdd222c85b2da94
+SHA512 (pcaudiolib-1.2.tar.gz) = 803e8c36646f780b9e9a98600092af366ad47ecf9cb447b9b6c82b75eb316ee65674832fc0cbfa56ee4d508ae1d0f69890f5885817e6df3e2ecef54571b936d6
+Size (pcaudiolib-1.2.tar.gz) = 377066 bytes

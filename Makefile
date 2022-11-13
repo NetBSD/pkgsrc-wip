@@ -2820,6 +2820,7 @@ SUBDIR+=	oww-nox11
 SUBDIR+=	oxygen
 SUBDIR+=	oysttyer
 SUBDIR+=	ozymandns
+SUBDIR+=	pcaudiolib
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
 SUBDIR+=	p4
