@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:46 asau Exp $
-#
+# $NetBSD$
 
-DISTNAME=	m4ri-20111203
+DISTNAME=	m4ri-20200125
 CATEGORIES=	math
-MASTER_SITES=	http://m4ri.sagemath.org/downloads/
+MASTER_SITES=	https://bitbucket.org/malb/m4ri/downloads/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://m4ri.sagemath.org/
-COMMENT=	M4RI is a library for fast arithmetic with dense matrices over F2
+HOMEPAGE=	https://bitbucket.org/malb/m4ri
+COMMENT=	Library for fast arithmetic with dense matrices over F2
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
@@ -16,5 +15,9 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	m4ri.pc.in
 
-.include "../../graphics/png/buildlink3.mk"
+CONFIGURE_ARGS+=	--disable-png
+CONFIGURE_ARGS+=	--enable-openmp
+
+
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

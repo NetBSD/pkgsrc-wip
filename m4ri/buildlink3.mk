@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	m4ri
 M4RI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.m4ri+=	m4ri>=20111203
-BUILDLINK_PKGSRCDIR.m4ri?=	../../category/m4ri
+BUILDLINK_PKGSRCDIR.m4ri?=	../../wip/m4ri
 
 
 #.include "../../graphics/png/buildlink3.mk"
