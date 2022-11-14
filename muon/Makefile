@@ -1,15 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	muon-0.0.1
+PKGNAME=	muon-0.1.0
+DISTNAME=	${PKGNAME:S/muon-//}
 CATEGORIES=	devel
-GIT_REPO=	https://git.sr.ht/~lattis/muon
-GIT_BRANCH=	master
-GIT_REVISION=	6b8073be2501abf34f488c46f9eca9958d702f8a
+MASTER_SITES=	https://git.sr.ht/~lattis/muon/archive/
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~lattis/muon
 COMMENT=	Implementation of meson build system in c99 with minimal dependencies
 LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES=	c99
 
 TOOL_DEPENDS+=	samurai>=1.2:../../devel/samurai
 
@@ -30,6 +31,7 @@ SUBST_SED.flags2=	-e "s|@CFLAGS@|c_args+='${MESON_CFLAGS:S/ /@LF@/Wg}'|"
 SUBST_SED.flags2+=	-e "s|@LDFLAGS@|link_args+='${MESON_LDFLAGS:S/ /@LF@/Wg}'|"
 SUBST_SED.flags2+=	-e "s|@LF@|\\${.newline}|g"
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
 INSTALLATION_DIRS=	bin
 
 do-configure:
@@ -50,5 +52,4 @@ do-install:
 #.include "../../archivers/libarchive/buildlink3.mk"
 #.include "../../www/curl/buildlink3.mk"
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
