@@ -31,7 +31,7 @@ SUBST_SED.flags2=	-e "s|@CFLAGS@|c_args+='${MESON_CFLAGS:S/ /@LF@/Wg}'|"
 SUBST_SED.flags2+=	-e "s|@LDFLAGS@|link_args+='${MESON_LDFLAGS:S/ /@LF@/Wg}'|"
 SUBST_SED.flags2+=	-e "s|@LF@|\\${.newline}|g"
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin
 
 do-configure:
