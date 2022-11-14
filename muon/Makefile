@@ -14,23 +14,6 @@ USE_LANGUAGES=	c99
 
 TOOL_DEPENDS+=	samurai>=1.2:../../devel/samurai
 
-MESON_CFLAGS=	${CFLAGS:C/ /' c_args+='/Wg}
-MESON_LDFLAGS=	${LDFLAGS:S/ /' link_args+='/Wg}
-
-SUBST_CLASSES+=		flags1
-SUBST_STAGE.flags1=	pre-configure
-SUBST_MESSAGE.flags1=	Honor LDFLAGS in bootstrap.sh ...
-SUBST_FILES.flags1=	bootstrap.sh
-SUBST_SED.flags1=	-e 's, -o ,$$LDFLAGS -o,'
-
-SUBST_CLASSES+=		flags2
-SUBST_STAGE.flags2=	pre-configure
-SUBST_MESSAGE.flags2=	Honor CFLAGS and LDFLAGS in meson.build ...
-SUBST_FILES.flags2=	meson.build
-SUBST_SED.flags2=	-e "s|@CFLAGS@|c_args+='${MESON_CFLAGS:S/ /@LF@/Wg}'|"
-SUBST_SED.flags2+=	-e "s|@LDFLAGS@|link_args+='${MESON_LDFLAGS:S/ /@LF@/Wg}'|"
-SUBST_SED.flags2+=	-e "s|@LF@|\\${.newline}|g"
-
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin
 

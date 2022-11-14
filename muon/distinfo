@@ -3,4 +3,3 @@ $NetBSD$
 BLAKE2s (0.1.0.tar.gz) = 1783bc2a85e8558f4680b652bc66ae21b2cc9fed29f5f2d8d56880f914cf98d5
 SHA512 (0.1.0.tar.gz) = 54337fed8ae41bf2dca3cbb0a303a521b7750eb7e5b40ca1aeb0fc045ac82b163d77c7b06a6a790eb3feef6f8d10f2a6b7937f55cfb1404c70b429dd0899dd5f
 Size (0.1.0.tar.gz) = 472632 bytes
-SHA1 (patch-meson.build) = 38141a8c5a8e6429ac87cae1a9384a58ecd2134c
