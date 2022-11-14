@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nbval-0.9.6.tar.gz) = dc7733587f0c4e8148f233a7273cccc3286bd9a9b42ec94fd7e281d2c4cee75a
+SHA512 (nbval-0.9.6.tar.gz) = d4261fc30e197e7350c07504649f0230751b5ed746fe4626b92c5920032dc15abe47ad421c93f4762e93a8b6afcbca440ca006bfd1cdbcba37d131c4e6decaa7
+Size (nbval-0.9.6.tar.gz) = 60932 bytes

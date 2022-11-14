@@ -4255,6 +4255,7 @@ SUBDIR+=	py-napalm-nxos
 SUBDIR+=	py-nbclassic
 SUBDIR+=	py-nbimporter
 SUBDIR+=	py-nbsphinx
+SUBDIR+=	py-nbval
 SUBDIR+=	py-ncomb
 SUBDIR+=	py-ncpol2sdpa
 SUBDIR+=	py-ndjson
