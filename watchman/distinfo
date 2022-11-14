@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.10 2021/10/26 11:20:22 nia Exp $
+
+BLAKE2s (watchman-2022.11.07.00.tar.gz) = c0ff3ed5beb5f6b5e28e7607250ef56079302f5fe44c17cf693ad2ef239addb9
+SHA512 (watchman-2022.11.07.00.tar.gz) = 6a4272f7921282094353a9a24de5d4e38d57970840d5adecbd14911f2c6042a6c17386020722e2b9b3085eeeb341a6fdf00c8fdcb17eff1048f612fdad8c8b25
+Size (watchman-2022.11.07.00.tar.gz) = 3809889 bytes

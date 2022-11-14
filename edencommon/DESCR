@@ -1,0 +1,4 @@
+A shared library for Meta's source control filesystem tools (EdenFS
+and Watchman) This contains various utility libraries common between
+EdenFS and Watchman as well as utilities for clients of EdenFS or
+Watchman.
