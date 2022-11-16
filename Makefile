@@ -5581,6 +5581,7 @@ SUBDIR+=	termshark
 SUBDIR+=	terraform
 SUBDIR+=	terraform-docs
 SUBDIR+=	terraform-provider-archive
+SUBDIR+=	terraform-provider-aws
 SUBDIR+=	terraform-provider-aws-modules-http
 SUBDIR+=	terraform-provider-aws3
 SUBDIR+=	terraform-provider-cassandra
