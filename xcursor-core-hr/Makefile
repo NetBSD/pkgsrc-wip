@@ -25,8 +25,8 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} ./build.sh
 
 do-install:
-	 cd ${WRKSRC} && ${PAX} -wr core-hr									\
-	 ${DESTDIR}${PREFIX}/share/icons
+	cd ${WRKSRC} && ${PAX} -wr core-hr								\
+	${DESTDIR}${PREFIX}/share/icons
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/index.theme								\
