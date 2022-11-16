@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/ximaging
+lib/X11/app-defaults/XImaging
+man/man1/ximaging.1
