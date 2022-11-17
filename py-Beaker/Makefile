@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2015/07/15 17:54:20 thomasklausner Exp $
+# $NetBSD$
 
 DISTNAME=	Beaker-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-EGG_NAME=	${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Beaker/}
 
-MAINTAINER=	jkuittinen@users.sourceforge.net
-HOMEPAGE=	http://beaker.groovie.org/
-COMMENT=	Beaker is a web session and general caching library
-
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://beaker.readthedocs.io/
+COMMENT=	Session and caching library with WSGI middleware
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/${EGG_NAME}
+USE_LANGUAGES=  # none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
