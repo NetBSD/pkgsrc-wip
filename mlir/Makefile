@@ -11,7 +11,8 @@ HOMEPAGE=	http://mlir.llvm.org/
 COMMENT=	Multi-Level Intermediate Representation
 LICENSE=	apache-2.0
 
-EXTRACT_ELEMENTS=	${DISTNAME}/cmake
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_ELEMENTS+=	${DISTNAME}/cmake
 EXTRACT_ELEMENTS+=	${DISTNAME}/mlir
 WRKSRC=			${WRKDIR}/${DISTNAME}/mlir
 

@@ -22,9 +22,11 @@ CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCLANG_DIR=${BUILDLINK_PREFIX.clang}/lib/cmake/clang
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=YES
+# As of 15.0.5, shared libraries are problematic: building executes
+# `flang-new` which is linked against not yet installed shared libraries.
+#CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=YES
 
-REPLACE_BASH=	tools/f18/flang
+REPLACE_BASH=	tools/f18/flang-to-external-fc.in
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
