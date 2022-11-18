@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	MoonlightSrc-4.1.0
-PKGNAME=	moonlight-qt-4.1.0
+DISTNAME=	MoonlightSrc-4.3.1
+PKGNAME=	moonlight-qt-4.3.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=moonlight-stream/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
