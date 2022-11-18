@@ -20,6 +20,17 @@ CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-xsm
 
+PLIST_SRC=	PLIST.common
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
+PLIST_SRC+=		PLIST.bsd
+.elif ${OPSYS} == "Linux"
+PLIST_SRC+=		PLIST.linux
+CONFIGURE_ARGS+=	--enable-linux-syscalls
+.endif
+
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
