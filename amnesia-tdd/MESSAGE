@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD$
+
+This package provides only the game engine. In order to play the game,
+please purchase a copy of Amnesia: The Dark Descent, and install the data
+files to the following directory:
+
+	${PREFIX}/share/amnesia-tdd
+
+===========================================================================
