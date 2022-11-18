@@ -4012,6 +4012,7 @@ SUBDIR+=	py-import-linter
 SUBDIR+=	py-imread
 SUBDIR+=	py-imreg-dft
 SUBDIR+=	py-influxdb
+SUBDIR+=	py-innerscope
 SUBDIR+=	py-inspyred
 SUBDIR+=	py-instant
 SUBDIR+=	py-ioTPy

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (innerscope-0.5.1.tar.gz) = 20110e1be21c623fdc746415fa4f91063ca816822f35cc7fb196bc55ded030a6
+SHA512 (innerscope-0.5.1.tar.gz) = ffacbba793ba0cd957eec9aee2c7014a3128f82933ee5d40e59cc84a69588a6b4c393a050b5b6be0cee7c22bc2ca0475e7072d8082621fea854f2b72b02b0011
+Size (innerscope-0.5.1.tar.gz) = 35118 bytes
