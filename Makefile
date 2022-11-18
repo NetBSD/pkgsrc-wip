@@ -4317,6 +4317,7 @@ SUBDIR+=	py-opensimplex
 SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-optlang
+SUBDIR+=	py-opt-einsum
 SUBDIR+=	py-orderedset
 SUBDIR+=	py-ore-algebra
 SUBDIR+=	py-orjson

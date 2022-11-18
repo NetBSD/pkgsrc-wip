@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (opt_einsum-3.3.0.tar.gz) = 101b91f03caca9aba2330b562e42b442c39d5bdc35e85e2c846498d2d61d4468
+SHA512 (opt_einsum-3.3.0.tar.gz) = f34c58bd3aa4a15794cfc604167c0e3175b9826da2a2449bb48ea5c3095f8215e3f990daec51e77e505a03204201694df1a09360ee51b8a4a793b9844d9c2d5e
+Size (opt_einsum-3.3.0.tar.gz) = 73951 bytes
