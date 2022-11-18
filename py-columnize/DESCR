@@ -1,0 +1,6 @@
+In showing a long lists, sometimes one would prefer to see the value arranged
+aligned in columns. Some examples include listing methods of an object,
+listing debugger commands, or showing a numeric array with data aligned.
+
+This is a Python module to format a simple (i.e. not nested) list into
+aligned columns. A string with embedded newline characters is returned.

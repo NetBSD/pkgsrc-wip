@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/columnize/__init__.py
+${PYSITELIB}/columnize/__init__.pyc
+${PYSITELIB}/columnize/__init__.pyo
+${PYSITELIB}/columnize/__main__.py
+${PYSITELIB}/columnize/__main__.pyc
+${PYSITELIB}/columnize/__main__.pyo
+${PYSITELIB}/columnize/version.py
+${PYSITELIB}/columnize/version.pyc
+${PYSITELIB}/columnize/version.pyo

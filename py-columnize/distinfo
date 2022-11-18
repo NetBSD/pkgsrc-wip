@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (columnize-0.3.11.tar.gz) = d1ce06a747f85615d79c47c4c80f2ba612bfecb2b7293adfd611c84a397624c5
+SHA512 (columnize-0.3.11.tar.gz) = aba1b911c57ac6f237460889d3da6dcfbedac3d42165dd99dc1798f3e2e767a3b895c4266fe82e5b35dfe43af7bff8e778f85bf9c71b10e8b13417e015779432
+Size (columnize-0.3.11.tar.gz) = 18776 bytes

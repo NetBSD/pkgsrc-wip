@@ -3612,6 +3612,7 @@ SUBDIR+=	py-colored-traceback
 SUBDIR+=	py-coloredlogs
 SUBDIR+=	py-colormath
 SUBDIR+=	py-colorpy
+SUBDIR+=	py-columnize
 SUBDIR+=	py-commisery
 SUBDIR+=	py-complexsystems
 SUBDIR+=	py-compyle
