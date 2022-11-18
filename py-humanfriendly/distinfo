@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (humanfriendly-8.2.tar.gz) = ff93f58bfa41e5a1e9ccf588771c6b249f681dd7
-SHA512 (humanfriendly-8.2.tar.gz) = 123d8592e6613a70421740648bb8998733b118927a0bd6182af848612e46eec8e35cae95168219c9b7672bed8e18e1c4a493a80248eabe47f8a4cb1813c8b591
-Size (humanfriendly-8.2.tar.gz) = 358747 bytes
+BLAKE2s (humanfriendly-10.0.tar.gz) = 1eef488037d461dd31eb367ca3b8995fd31b1c9101e9bc1f6243727ea77984f2
+SHA512 (humanfriendly-10.0.tar.gz) = 496700bcea1dabf003c938558bf807fabb41b71192f69622979dd9e243dda9b4b06c5ac8f65cef217df85ebadf99099dc22b50d63216791a569be11081d267d6
+Size (humanfriendly-10.0.tar.gz) = 360702 bytes

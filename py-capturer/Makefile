@@ -10,7 +10,7 @@ HOMEPAGE=	https://capturer.readthedocs.io/
 COMMENT=	Easily capture stdout/stderr of the current process and subprocesses
 LICENSE=	mit
 
-#DEPENDS+=	py-humanfriendly>=8.0:../../wip/py-humanfriendly
+DEPENDS+=	py-humanfriendly>=10.0:../../wip/py-humanfriendly
 
 USE_LANGUAGES=	# none
 
