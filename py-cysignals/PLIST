@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/cysignals-CSI${PYVERSSUFFIX}
+bin/cysignals-CSI
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,13 +12,10 @@ ${PYSITELIB}/cysignals/alarm.so
 ${PYSITELIB}/cysignals/cysignals_config.h
 ${PYSITELIB}/cysignals/macros.h
 ${PYSITELIB}/cysignals/memory.pxd
-${PYSITELIB}/cysignals/memory.pxi
 ${PYSITELIB}/cysignals/pselect.so
-${PYSITELIB}/cysignals/pxi_warning.h
 ${PYSITELIB}/cysignals/pysignals.pxd
 ${PYSITELIB}/cysignals/pysignals.so
 ${PYSITELIB}/cysignals/signals.pxd
-${PYSITELIB}/cysignals/signals.pxi
 ${PYSITELIB}/cysignals/signals.so
 ${PYSITELIB}/cysignals/struct_signals.h
 ${PYSITELIB}/cysignals/tests.so

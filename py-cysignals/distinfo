@@ -1,6 +1,5 @@
 $NetBSD$
 
-RMD160 (cysignals-1.9.0.tar.gz) = 017b79dc98583e723cd3640cdde58d010449cc80
-SHA512 (cysignals-1.9.0.tar.gz) = cb1bef5295542b89ddcb453cea536aa81b5560890161f4e98775a51a57bc0aeb35b5d8394a3c7eeab7d78fcaa288b49a1c050fa34cd4d7f08169439073cd0d60
-Size (cysignals-1.9.0.tar.gz) = 93335 bytes
-SHA1 (patch-setup.py) = 7cab766be977698f516202a6b06f9c86802f0b00
+BLAKE2s (cysignals-1.11.2.tar.gz) = 353e4a9074a805a2526fba9ecad3ab83c376828c1e416cbfbb649e9f22437b43
+SHA512 (cysignals-1.11.2.tar.gz) = 8f02ed2cb9c454e3b4e5cf186ccacb8eeb1dc9e30b1643085c603e0ef41d4ebb91d303188251acb76e0566d924ac00ef134646c92e96f36abfeeaa7a8dd33797
+Size (cysignals-1.11.2.tar.gz) = 99014 bytes
