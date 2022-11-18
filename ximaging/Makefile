@@ -11,6 +11,12 @@ HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Image browser and viewer for Unix - X/Motif
 LICENSE=	mit
 
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !${OPSYS:M*BSD}
+USE_TOOLS+=	gmake
+.endif
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	lib/X11/app-defaults
 
