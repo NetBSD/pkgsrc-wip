@@ -3476,6 +3476,7 @@ SUBDIR+=	py-automata
 SUBDIR+=	py-autorandr
 SUBDIR+=	py-avocado-framework
 SUBDIR+=	py-awesome-slugify
+SUBDIR+=	py-awkward
 SUBDIR+=	py-awslogs
 SUBDIR+=	py-azure-common
 SUBDIR+=	py-azure-core

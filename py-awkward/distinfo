@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (awkward-1.10.2.tar.gz) = bcabd2d375b82cf21793a84962ca5ba3f8120f0b83ba95322007f513145382ab
+SHA512 (awkward-1.10.2.tar.gz) = c73d02d9e405a88d59024fa0f76dec87ebf2b3b07ea65a147154eb7d35bde04f388b191f0ea4ca10addc3f372baa0afd4f44a422475d73eec3471749778788ab
+Size (awkward-1.10.2.tar.gz) = 1674870 bytes
