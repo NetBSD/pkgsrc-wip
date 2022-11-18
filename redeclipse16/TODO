@@ -1,0 +1,4 @@
+redeclipse16 TODO:
+
+- enable coexisting with games/redeclipse (probably by installing
+  bin/redeclipse16 and share/redeclipse16)
