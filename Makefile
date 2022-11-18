@@ -3483,6 +3483,7 @@ SUBDIR+=	py-azure-core
 SUBDIR+=	py-azure-identity
 SUBDIR+=	py-azure-storage-blob
 SUBDIR+=	py-b3j0f.aop
+SUBDIR+=	py-backoff
 SUBDIR+=	py-backports-datetime-fromisoformat
 SUBDIR+=	py-backports.csv
 SUBDIR+=	py-backports.entry_points_selectable
