@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (palettable-3.3.0.tar.gz) = 3c5616dd0e5bc09cf975007065e628750dc2a83c
+BLAKE2s (palettable-3.3.0.tar.gz) = a9a370ad2ffef532256f854fb1024a9ec83dcf3da816bf7c3b220f02a715f3b7
 SHA512 (palettable-3.3.0.tar.gz) = 6689b009d3a7face36c0d3eaf2bee6a5e8f364f25f30e06924ec61d730c95921ef37cfc857a93b07a772a7b347e805ae8139f056478378a6c8669f853d5df810
 Size (palettable-3.3.0.tar.gz) = 105475 bytes
