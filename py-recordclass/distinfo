@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (recordclass-0.18.0.1.tar.gz) = edab66a96cece89ebf58920791c7c47fd8198995ee59565357bf16163121e898
+SHA512 (recordclass-0.18.0.1.tar.gz) = 6106b9693a94f56be190468f6191211b0d89fdd6fe5cf7f57a389382aa7fe25b8b89ffd3d922f6624adf1276afbc8471778c94dfca5c224fe87c0c6898429783
+Size (recordclass-0.18.0.1.tar.gz) = 1274061 bytes

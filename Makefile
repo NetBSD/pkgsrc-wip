@@ -4573,6 +4573,7 @@ SUBDIR+=	py-rebound
 SUBDIR+=	py-rebound3
 SUBDIR+=	py-recluse
 SUBDIR+=	py-recommonmark
+SUBDIR+=	py-recordclass
 SUBDIR+=	py-redbaron
 SUBDIR+=	py-redis-cluster
 SUBDIR+=	py-reducer

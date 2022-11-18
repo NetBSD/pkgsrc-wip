@@ -1,0 +1,10 @@
+Recordclass library provide record-like classes that do not by default
+participate in cyclic garbage collection (CGC) mechanism, but support
+only reference counting mechanism for garbage collection. The instances
+of such classes havn't PyGC_Head prefix in the memory, which decrease
+their size and have a little faster path for the instance allocation
+and deallocation. This may make sense in cases where it is necessary to
+limit the size of the objects as much as possible, provided that they
+will never be part of references cycles in the application. For example,
+when an object represents a record with fields with values of simple
+types by convention (int, float, str, date/time/datetime, timedelta, etc.).
