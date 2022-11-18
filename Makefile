@@ -6116,6 +6116,7 @@ SUBDIR+=	xoreos
 SUBDIR+=	xoreos-tools
 SUBDIR+=	xorgxrdp
 SUBDIR+=	xoscope
+SUBDIR+=	xosview2
 SUBDIR+=	xournalpp-git
 SUBDIR+=	xpaint
 SUBDIR+=	xpde
