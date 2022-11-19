@@ -11,11 +11,15 @@ HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Image browser and viewer for Unix - X/Motif
 LICENSE=	mit
 
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if !${OPSYS:M*BSD}
-USE_TOOLS+=	gmake
-.endif
+MAKE_FLAGS+=	CC?=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	CFLAGS+="-fopenmp -DENABLE_OMP"
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS+="-fopenmp -pthread"
+MAKE_FLAGS+=	PNG_LIBS=-lpng16
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	APPLRESDIR=${PREFIX}/lib/X11/app-defaults
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	lib/X11/app-defaults
