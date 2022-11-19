@@ -243,6 +243,7 @@ SUBDIR+=	avr-gdb
 SUBDIR+=	avra
 SUBDIR+=	avrdude
 SUBDIR+=	aws-iam-authenticator
+SUBDIR+=	aws-nuke
 SUBDIR+=	axe
 SUBDIR+=	axel
 SUBDIR+=	axpbox-git
