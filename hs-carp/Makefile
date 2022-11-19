@@ -21,6 +21,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/carp-header-parse
 .include "../../textproc/hs-blaze-markup/buildlink3.mk"
 .include "../../textproc/hs-edit-distance/buildlink3.mk"
 .include "../../wip/hs-cmark/buildlink3.mk"
-.include "../../wip/hs-open-browser/buildlink3.mk"
+.include "../../www/hs-open-browser/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
