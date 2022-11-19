@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/aws-nuke
+share/doc/aws-nuke/README.md
+share/examples/aws-nuke/custom-example.yaml
+share/examples/aws-nuke/example.yaml
