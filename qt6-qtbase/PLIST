@@ -214,6 +214,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_unix_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_wasm_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_win_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventloop_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfactorycacheregistration_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfactoryloader_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfile_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfiledevice_p.h
@@ -324,6 +325,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtemporaryfile_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtextstream_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qthread_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qthreadpool_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimer_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimerinfo_unix_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimezoneprivate_data_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimezoneprivate_p.h
@@ -2806,9 +2808,7 @@ qt6/lib/cmake/Qt6/config.tests/static_link_order/main.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp
 qt6/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp
-qt6/lib/cmake/Qt6/libexec/qt-internal-ninja.bat.in
 qt6/lib/cmake/Qt6/libexec/qt-internal-ninja.in
-qt6/lib/cmake/Qt6/libexec/qt-internal-strip.bat.in
 qt6/lib/cmake/Qt6/libexec/qt-internal-strip.in
 qt6/lib/cmake/Qt6/modulecppexports.h.in
 qt6/lib/cmake/Qt6/modulecppexports_p.h.in
@@ -3842,6 +3842,3 @@ qt6/plugins/tls/libqcertonlybackend.so
 qt6/plugins/tls/libqopensslbackend.so
 qt6/plugins/xcbglintegrations/libqxcb-egl-integration.so
 qt6/plugins/xcbglintegrations/libqxcb-glx-integration.so
-@pkgdir qt6/lib/cmake/Qt6/macos
-@pkgdir qt6/lib/cmake/Qt6/ios
-@pkgdir qt6/lib/cmake/Qt6/QtBuildInternals/QtStandaloneTestTemplateProject

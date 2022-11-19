@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (qtcharts-everywhere-src-6.4.0.tar.xz) = 53b3bd83374447162787138056adb0351d4541f6df349d4cd89706fc5e86fb2d
-SHA512 (qtcharts-everywhere-src-6.4.0.tar.xz) = 63f231d553fad0f5801c4abeeae0864dba3160c703e49be2ef49e7484d979621b27544408c59c903e8ac89bdf5aae6472f9e8b1d49f50951db257b52c5e60947
-Size (qtcharts-everywhere-src-6.4.0.tar.xz) = 4387060 bytes
+BLAKE2s (qtcharts-everywhere-src-6.4.1.tar.xz) = 3ed8a6b7755defcea3cf94fa9be1beaeff66382c50394751d0fcb4fdf799fe36
+SHA512 (qtcharts-everywhere-src-6.4.1.tar.xz) = 82464182f28cb9ff68cd39ee5fe7bd44c892abde25a6d3f8b1e1a6f49bb83638ab646978b5f8341fc63edde4d4b27dba98a9775083662bb764bc52f4f2bb87e9
+Size (qtcharts-everywhere-src-6.4.1.tar.xz) = 4387128 bytes

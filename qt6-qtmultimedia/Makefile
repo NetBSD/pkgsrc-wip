@@ -10,12 +10,16 @@ CONFIGURE_ARGS+=	-no-alsa
 
 .include "options.mk"
 
+# the pulseaudio option must come after the gstreamer option
+CONFIGURE_ARGS+=	-pulseaudio
+
 .include "../../wip/qt6-qtbase/Makefile.common"
 
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Multimedia.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6MultimediaWidgets.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6SpatialAudio.pc
 
+.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtdeclarative/buildlink3.mk"

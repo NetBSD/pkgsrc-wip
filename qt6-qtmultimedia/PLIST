@@ -71,6 +71,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsaudiosource_
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsaudioutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsiupointer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediadevices_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmediafoundation_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmfdefs_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsmultimediautils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qwindowsresampler_p.h

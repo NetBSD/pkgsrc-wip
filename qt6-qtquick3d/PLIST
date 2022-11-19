@@ -607,10 +607,17 @@ qt6/qml/QtQuick3D/Helpers/designer/DebugViewSection.qml
 qt6/qml/QtQuick3D/Helpers/designer/DebugViewSpecifics.qml
 qt6/qml/QtQuick3D/Helpers/designer/GridGeometrySection.qml
 qt6/qml/QtQuick3D/Helpers/designer/GridGeometrySpecifics.qml
+qt6/qml/QtQuick3D/Helpers/designer/HeightFieldGeometrySection.qml
+qt6/qml/QtQuick3D/Helpers/designer/HeightFieldGeometrySpecifics.qml
 qt6/qml/QtQuick3D/Helpers/designer/IdComboBox.qml
+qt6/qml/QtQuick3D/Helpers/designer/InstanceModelSection.qml
+qt6/qml/QtQuick3D/Helpers/designer/InstanceModelSpecifics.qml
+qt6/qml/QtQuick3D/Helpers/designer/InstanceRepeaterSection.qml
+qt6/qml/QtQuick3D/Helpers/designer/InstanceRepeaterSpecifics.qml
 qt6/qml/QtQuick3D/Helpers/designer/LookAtNodeSection.qml
 qt6/qml/QtQuick3D/Helpers/designer/LookAtNodeSpecifics.qml
 qt6/qml/QtQuick3D/Helpers/designer/NodeSection.qml
+qt6/qml/QtQuick3D/Helpers/designer/Repeater3DSection.qml
 qt6/qml/QtQuick3D/Helpers/designer/WasdControllerSection.qml
 qt6/qml/QtQuick3D/Helpers/designer/WasdControllerSpecifics.qml
 qt6/qml/QtQuick3D/Helpers/designer/helpers.metainfo
@@ -686,6 +693,8 @@ qt6/qml/QtQuick3D/Particles3D/designer/NodeSection.qml
 qt6/qml/QtQuick3D/Particles3D/designer/NodeSpecifics.qml
 qt6/qml/QtQuick3D/Particles3D/designer/Particle3DSection.qml
 qt6/qml/QtQuick3D/Particles3D/designer/Particle3DSpecifics.qml
+qt6/qml/QtQuick3D/Particles3D/designer/ParticleCustomShape3DSection.qml
+qt6/qml/QtQuick3D/Particles3D/designer/ParticleCustomShape3DSpecifics.qml
 qt6/qml/QtQuick3D/Particles3D/designer/ParticleEmitter3DSection.qml
 qt6/qml/QtQuick3D/Particles3D/designer/ParticleEmitter3DSpecifics.qml
 qt6/qml/QtQuick3D/Particles3D/designer/ParticleModelShape3DSection.qml
@@ -791,6 +800,7 @@ qt6/qml/QtQuick3D/designer/BufferInputSpecifics.qml
 qt6/qml/QtQuick3D/designer/BufferSection.qml
 qt6/qml/QtQuick3D/designer/BufferSpecifics.qml
 qt6/qml/QtQuick3D/designer/CameraSection.qml
+qt6/qml/QtQuick3D/designer/CubeMapTextureSpecifics.qml
 qt6/qml/QtQuick3D/designer/CustomCameraSpecifics.qml
 qt6/qml/QtQuick3D/designer/CustomMaterialSection.qml
 qt6/qml/QtQuick3D/designer/CustomMaterialSpecifics.qml
@@ -842,6 +852,8 @@ qt6/qml/QtQuick3D/designer/SetUniformValueSpecifics.qml
 qt6/qml/QtQuick3D/designer/ShaderSection.qml
 qt6/qml/QtQuick3D/designer/ShaderSpecifics.qml
 qt6/qml/QtQuick3D/designer/ShadowSection.qml
+qt6/qml/QtQuick3D/designer/SpecularGlossyMaterialSection.qml
+qt6/qml/QtQuick3D/designer/SpecularGlossyMaterialSpecifics.qml
 qt6/qml/QtQuick3D/designer/SpotLightSection.qml
 qt6/qml/QtQuick3D/designer/SpotLightSpecifics.qml
 qt6/qml/QtQuick3D/designer/TextureInputSection.qml
@@ -935,6 +947,7 @@ qt6/qml/QtQuick3D/designer/images/texture@2x.png
 qt6/qml/QtQuick3D/designer/images/view3D.png
 qt6/qml/QtQuick3D/designer/images/view3D16.png
 qt6/qml/QtQuick3D/designer/images/view3D@2x.png
+qt6/qml/QtQuick3D/designer/propertyGroups.json
 qt6/qml/QtQuick3D/designer/quick3d.metainfo
 qt6/qml/QtQuick3D/designer/source/custom_material_default_shader.frag
 qt6/qml/QtQuick3D/designer/source/effect_default_shader.frag

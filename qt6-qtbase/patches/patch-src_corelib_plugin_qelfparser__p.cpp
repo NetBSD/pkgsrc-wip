@@ -3,7 +3,7 @@ $NetBSD$
 * Support older ELFOSABI_LINUX that has been replaced with ELFOSABI_GNU.
   Needed on NetBSD 9.
 
---- src/corelib/plugin/qelfparser_p.cpp.orig	2022-09-19 10:23:04.000000000 +0000
+--- src/corelib/plugin/qelfparser_p.cpp.orig	2022-11-03 12:40:18.000000000 +0000
 +++ src/corelib/plugin/qelfparser_p.cpp
 @@ -20,6 +20,11 @@
  #  error "Need ELF header to parse plugins."

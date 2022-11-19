@@ -1,8 +1,7 @@
 # $NetBSD: options.mk,v 1.8 2021/07/16 13:33:02 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qt6-qtmultimedia
-PKG_SUPPORTED_OPTIONS=		gstreamer pulseaudio
-PKG_SUGGESTED_OPTIONS=		pulseaudio
+PKG_SUPPORTED_OPTIONS=		gstreamer
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,11 +20,4 @@ CONFIGURE_ARGS+=	-gstreamer
 PLIST.gstreamer=	yes
 .else
 CONFIGURE_ARGS+=	-no-gstreamer
-.endif
-
-.if !empty(PKG_OPTIONS:Mpulseaudio)
-CONFIGURE_ARGS+=	-pulseaudio
-.include "../../audio/pulseaudio/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	-no-pulseaudio
 .endif
