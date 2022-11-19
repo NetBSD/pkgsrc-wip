@@ -1687,7 +1687,6 @@ SUBDIR+=	hs-newtype
 SUBDIR+=	hs-non-negative
 SUBDIR+=	hs-numeric-prelude
 SUBDIR+=	hs-numeric-quest
-SUBDIR+=	hs-open-browser
 SUBDIR+=	hs-pango
 SUBDIR+=	hs-parallel
 SUBDIR+=	hs-parallel-io
