@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	docker-cli-20.10.17
+DISTNAME=	docker-cli-20.10.21
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=docker/}
 GITHUB_PROJECT=	cli
@@ -13,6 +13,13 @@ LICENSE=	apache-2.0
 
 GO_DIST_BASE=	cli-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/docker/cli
+
+GO_BUILD_PATTERN+=	-ldflags ' \
+			-X github.com/docker/cli/cli/version.Version=${PKGVERSION_NOREV} \
+			-X github.com/docker/cli/cli/version.GitCommit= \
+			-X github.com/docker/cli/cli/version.BuildTime= \
+			-X github.com/docker/cli/cli/version.PlatformName='
+GO_BUILD_PATTERN+=	${GO_SRCPATH}/...
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
