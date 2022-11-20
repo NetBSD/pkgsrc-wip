@@ -528,6 +528,7 @@ SUBDIR+=	conkeror
 SUBDIR+=	conky
 SUBDIR+=	consul
 SUBDIR+=	contacts
+SUBDIR+=	convertall
 SUBDIR+=	cool-retro-term-git
 SUBDIR+=	cops
 SUBDIR+=	copytape

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ConvertAll/convertall-0.8.0.tar.gz) = 601c38bb575055e2a84f347901852d3847ce299bc802d30773424fec875a25a5
+SHA512 (ConvertAll/convertall-0.8.0.tar.gz) = 7ddb323db4efc52288c2f077cb121a674da6db873e090488c117c68f0a2383936259017bf068d61ab8784c947f454b16e430fbf77b3d2d10b781bdaaa2b8d690
+Size (ConvertAll/convertall-0.8.0.tar.gz) = 281055 bytes
