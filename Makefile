@@ -4810,6 +4810,7 @@ SUBDIR+=	py-telegram-bot
 SUBDIR+=	py-telepathy
 SUBDIR+=	py-teng
 SUBDIR+=	py-teradata
+SUBDIR+=	py-term-background
 SUBDIR+=	py-test-datadir
 SUBDIR+=	py-test-html
 SUBDIR+=	py-test-metadata
