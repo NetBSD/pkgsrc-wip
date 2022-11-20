@@ -3330,6 +3330,7 @@ SUBDIR+=	proplib
 SUBDIR+=	proselint
 SUBDIR+=	proton-bridge
 SUBDIR+=	prover9
+SUBDIR+=	proxify
 SUBDIR+=	proxychains
 SUBDIR+=	proxychains-ng
 SUBDIR+=	proxyknife
