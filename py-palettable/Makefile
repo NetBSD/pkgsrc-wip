@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/palettable/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://jiffyclub.github.io/palettable/
-COMMENT=	Python library of color palettes for Python
+COMMENT=	Palettable is a library of color palettes for Python
 LICENSE=	mit
 
 .include "../../lang/python/egg.mk"
