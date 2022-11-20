@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/mitmrelay
+bin/proxify
+bin/replay
