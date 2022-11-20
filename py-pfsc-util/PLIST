@@ -1,0 +1,14 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pfsc_util/__init__.py
+${PYSITELIB}/pfsc_util/__init__.pyc
+${PYSITELIB}/pfsc_util/__init__.pyo
+${PYSITELIB}/pfsc_util/imports.py
+${PYSITELIB}/pfsc_util/imports.pyc
+${PYSITELIB}/pfsc_util/imports.pyo
+${PYSITELIB}/pfsc_util/scan.py
+${PYSITELIB}/pfsc_util/scan.pyc
+${PYSITELIB}/pfsc_util/scan.pyo

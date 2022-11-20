@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pfsc-util-0.22.8.tar.gz) = a9ec577e133ec7f69abcf0c523d9de3bbb3b574544fe390a22ae5f3c338f7cf4
+SHA512 (pfsc-util-0.22.8.tar.gz) = a92bc97b828a7b2c5a4fce472820782ec47da5f1874bbbe7b18812125df045048e8fdc54963cada9013ca416f8962107548811b6eebad3a401a3e988223129ef
+Size (pfsc-util-0.22.8.tar.gz) = 7747 bytes

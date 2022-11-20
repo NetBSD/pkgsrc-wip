@@ -4393,6 +4393,7 @@ SUBDIR+=	py-pipfile
 SUBDIR+=	py-piquant
 SUBDIR+=	py-pithos
 SUBDIR+=	py-pixiedust
+SUBDIR+=	py-pfsc-util
 SUBDIR+=	py-plac
 SUBDIR+=	py-plete
 SUBDIR+=	py-plex
