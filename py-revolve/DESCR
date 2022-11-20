@@ -1,0 +1,11 @@
+The adjoint computation of an unsteady nonlinear primal function requires
+the full primal trajectory in reverse temporal order. Storing this can exceed
+the available memory. In that case, Checkpointing can be used to store the
+state only at carefully selected points in time. From there, the forward
+computation can be restarted to recompute lost sections of the trajectory
+when they are needed during the adjoint computation. This is always a
+tradeoff between memory and runtime. The classic and provably optimal way
+to do this for a known number of time steps is Revolve, and there are other
+algorithms for optimal online checkpointing if the number of steps is unknown
+a priori, or for multistage checkpointing if there are multiple layers of
+storage, e.g. memory and hard drive.

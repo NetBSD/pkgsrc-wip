@@ -4596,6 +4596,7 @@ SUBDIR+=	py-resampy
 SUBDIR+=	py-resonance
 SUBDIR+=	py-restkit
 SUBDIR+=	py-retrying
+SUBDIR+=	py-revolve
 SUBDIR+=	py-rf
 SUBDIR+=	py-rfc3987
 SUBDIR+=	py-rfc6555
