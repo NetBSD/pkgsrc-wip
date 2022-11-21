@@ -57,6 +57,7 @@ REPLACE_FILES.rc+=	src/cmd/venti/srv/tester
 EGDIR=		${PREFIX}/share/examples/profile.d
 CONF_FILES+=	${EGDIR}/plan9.sh \
 		${PKG_SYSCONFDIR}/profile.d/plan9.sh
+DOCDIR=		${PREFIX}/share/doc/plan9
 
 SUBST_CLASSES+=		cc
 SUBST_STAGE.cc=		pre-configure
@@ -86,8 +87,7 @@ INSTALLATION_DIRS+=	share/pixmaps
 
 do-configure:
 	${RUN}${ECHO} "CC9='${CC}'" >> ${WRKSRC}/LOCAL.config
-	${RUN}${ECHO} "CC9FLAGS='${CFLAGS:S,-I${PREFIX}/include,,}'" \
-	  >> ${WRKSRC}/LOCAL.config
+	${RUN}${ECHO} "CC9FLAGS='${CFLAGS}'" >> ${WRKSRC}/LOCAL.config
 	${RUN}${ECHO} "LDFLAGS='${LDFLAGS}'" >> ${WRKSRC}/LOCAL.config
 	${RUN}${ECHO} "FONTSRV=fontsrv"	>> ${WRKSRC}/LOCAL.config
 .if !empty(PKG_OPTIONS:Mx11)
@@ -110,20 +110,20 @@ post-build:
 .endfor
 
 do-install:
-	# Move everything to the PLAN9 target.
+# Move everything to the PLAN9 target.
 	${RUN}cd ${WRKSRC} && ${PAX} -rw -pm . ${PLAN9_BUILD}
-	# Rename hard-coded paths and builds mans.
+# Rename hard-coded paths and builds mans.
 	${RUN}cd ${PLAN9_BUILD} &&			\
-	  ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ./INSTALL -c
+	  ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${SH} ./INSTALL -c
 .for f in CHANGES LICENSE README.md
 	${RUN}cd ${PLAN9_BUILD} &&			\
-	  ${PAX} -rw -pm ${f} ${DESTDIR}${PREFIX}/share/doc/plan9
+	  ${PAX} -rw -pm ${f} ${DESTDIR}${DOCDIR}
 .endfor
 	${INSTALL_SCRIPT} ${PLAN9_BUILD}/plan9.sh	\
 	  ${DESTDIR}${PREFIX}/share/examples/profile.d
-	# Delete installation files and other leftovers.
+# Delete installation files and other leftovers.
 	${RUN}${FIND} ${PLAN9_BUILD} -maxdepth 1 -type f ! -name rcmain -delete
-	# Avoid 'executable bit is set on non-executable file'
+# Avoid 'executable bit is set on non-executable file'
 .for x in bclib mimetype
 	${RUN}${FIND} ${PLAN9_BUILD}/lib 		\
 	  -type f -name ${x} -exec ${CHMOD} -x '{}' \;
