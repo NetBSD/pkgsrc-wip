@@ -26,8 +26,8 @@ SUBST_CLASSES+=		readme
 SUBST_MESSAGE.readme=	replacing paths in pkgsrc README file
 SUBST_STAGE.readme=	pre-configure
 SUBST_FILES.readme=	README.pkgsrc
-SUBST_SED.readme=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.readme+=	-e 's,@HONK_DATA@,${HONK_DATA},g'
+SUBST_VARS.readme=	PREFIX
+SUBST_VARS.readme+=	HONK_DATA
 
 BUILD_DEFS+=	VARBASE
 HONK_USER?=	honk
