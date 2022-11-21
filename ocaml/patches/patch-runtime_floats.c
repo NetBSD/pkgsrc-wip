@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-runtime_floats.c,v 1.1 2022/05/24 18:25:38 jaapb Exp $
 
 math.h on NetBSD 9 only declares copysign if _NETBSD_SOURCE is defined
 (implicitly or explicitly).  However copysign is specified by POSIX

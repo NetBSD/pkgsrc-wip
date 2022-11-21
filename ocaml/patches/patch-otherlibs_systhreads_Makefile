@@ -1,42 +1,13 @@
 $NetBSD$
 
-Use BSD_INSTALL_* instead of mkdir
-Honor LDFLAGS.
-
---- otherlibs/systhreads/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
+--- otherlibs/systhreads/Makefile.orig	2022-10-12 13:53:13.000000000 +0000
 +++ otherlibs/systhreads/Makefile
-@@ -30,6 +30,7 @@ NATIVE_CPPFLAGS = \
-   -DNATIVE_CODE -DTARGET_$(ARCH) -DMODEL_$(MODEL) -DSYS_$(SYSTEM)
- 
- LIBS = -nostdlib -I $(ROOTDIR)/stdlib -I $(ROOTDIR)/otherlibs/$(UNIXLIB)
-+LDOPTS = -ldopt "$(LDFLAGS)"
- 
- CAMLC=$(BEST_OCAMLC) $(LIBS)
- CAMLOPT=$(BEST_OCAMLOPT) $(LIBS)
-@@ -66,7 +67,7 @@ all: lib$(LIBNAME).$(A) $(LIBNAME).cma $
- allopt: lib$(LIBNAME)nat.$(A) $(LIBNAME).cmxa $(CMIFILES)
- 
- lib$(LIBNAME).$(A): $(BYTECODE_C_OBJS)
--	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LIBS)
-+	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LIBS) $(LDOPTS)
- 
- lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OBJS)
- 	$(MKLIB_CMD) -o $(LIBNAME)nat $^
-@@ -74,7 +75,7 @@ lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OB
- $(LIBNAME).cma: $(THREADS_BCOBJS)
- ifeq "$(UNIX_OR_WIN32)" "unix"
- 	$(MKLIB) -o $(LIBNAME) -ocamlc '$(CAMLC)' -cclib -lunix -linkall \
--	  $(PTHREAD_CAML_LIBS) $^
-+	  $(PTHREAD_CAML_LIBS) $(LDOPTS) $^
- # TODO: Figure out why -cclib -lunix is used here.
- # It may be because of the threadsUnix module which is deprecated.
- # It may hence be good to figure out whether this module shouldn't be
-@@ -122,7 +123,7 @@ install:
+@@ -118,7 +118,7 @@ install:
+ 	  $(INSTALL_PROG) dllthreads$(EXT_DLL) "$(INSTALL_STUBLIBDIR)"; \
  	fi
  	$(INSTALL_DATA) libthreads.$(A) "$(INSTALL_LIBDIR)"
- 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) libthreads.$(A)
--	mkdir -p "$(INSTALL_THREADSLIBDIR)"
+-	$(MKDIR) "$(INSTALL_THREADSLIBDIR)"
 +	$(BSD_INSTALL_LIB_DIR) "$(INSTALL_THREADSLIBDIR)"
  	$(INSTALL_DATA) \
- 	  $(CMIFILES) threads.cma \
+ 	  $(CMIFILES) threads.cma META \
  	  "$(INSTALL_THREADSLIBDIR)"

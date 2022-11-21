@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.57 2022/05/24 18:25:38 jaapb Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte

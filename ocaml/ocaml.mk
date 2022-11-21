@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.31 2022/02/14 11:37:48 wiz Exp $
+# $NetBSD: ocaml.mk,v 1.1 2022/05/24 18:25:38 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 # It should be included by every package that uses OCaml.
@@ -28,14 +28,14 @@
 # OCAML_SITELIBDIR
 
 .if !defined(OCAML_MK)
-OCAML_MK= # defined
+OCAML_MK=	# defined
 
 # Text relocations errors when building packages that use
 # ocamlfind on i386.
 MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
-.include "../../wip/ocaml/native.mk"
+.include "../../lang/ocaml/native.mk"
 
 
 _PKG_VARS.ocaml=	\
@@ -77,10 +77,10 @@ OCAML_USE_TOPKG?=	no
 # Default value of OCAML_USE_DUNE
 OCAML_USE_DUNE?=	no
 
-OCAML_TOPKG_NAME?=	${PKGBASE:S/^ocaml-//}
-OCAML_TOPKG_DOCDIR?=	${PREFIX}/share/doc
-OCAML_TOPKG_FLAGS?=	# empty
-OCAML_TOPKG_TARGETS?=	# empty
+OCAML_TOPKG_NAME?=		${PKGBASE:S/^ocaml-//}
+OCAML_TOPKG_DOCDIR?=		${PREFIX}/share/doc
+OCAML_TOPKG_FLAGS?=		# empty
+OCAML_TOPKG_TARGETS?=		# empty
 OCAML_TOPKG_OPTIONAL_TARGETS?=	# empty
 OCAML_TOPKG_NATIVE_TARGETS?=	# empty
 
@@ -105,7 +105,7 @@ OCAML_USE_OASIS=	yes
 #
 .if ${OCAML_USE_OASIS} == "yes"
 OCAML_USE_FINDLIB=	yes
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--destdir "${DESTDIR}"
 CONFIGURE_ARGS+=	--prefix "${PREFIX}"
 # Force use of native code compiler according to setting
@@ -143,8 +143,8 @@ OPAM_INSTALL_DIR?=	.
 
 # Value for OCAML_SITELIBDIR
 OCAML_SITELIBDIR=	lib/ocaml/site-lib
-MAKE_ENV+=	OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
-PLIST_SUBST+=	OCAML_SITELIB="${OCAML_SITELIBDIR}"
+MAKE_ENV+=		OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
+PLIST_SUBST+=		OCAML_SITELIB="${OCAML_SITELIBDIR}"
 
 PRINT_PLIST_AWK+=	{ gsub(/^.+\.cmx/, "$${PLIST.ocaml-opt}&") }
 PRINT_PLIST_AWK+=	{ gsub(/^.+\.a$$/, "$${PLIST.ocaml-opt}&") }
@@ -173,9 +173,9 @@ OCAML_FINDLIB_REGISTER?=	yes
 pre-configure:
 	${RUN} cd ${WRKSRC} && ocamlfind ocamlc -linkpkg -package oasis.dynrun -o setup setup.ml && ${RM} setup.cmo setup.cmi
 
-OASIS_EXEC=./setup
+OASIS_EXEC=	./setup
 .else
-OASIS_EXEC=ocaml setup.ml
+OASIS_EXEC=	ocaml setup.ml
 .endif
 
 # Redefine configure target
@@ -203,7 +203,7 @@ do-build:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ocaml pkg/pkg.ml build ${OCAML_TOPKG_FLAGS}
 
-.endif # topkg
+.endif # ${OCAML_USE_TOPKG} == "yes"
 
 #
 # opam targets
@@ -218,13 +218,14 @@ do-install:
 		-destdir ${DESTDIR} \
 		-prefix ${PREFIX} \
 		-libdir ${PREFIX}/${OCAML_SITELIBDIR} \
+		-mandir ${PREFIX}/${PKGMANDIR} \
 		-docdir ${OCAML_TOPKG_DOCDIR}/$$i \
 		-stublibsdir ${PREFIX}/${OCAML_SITELIBDIR}/stublibs \
 		-bindir ${PREFIX}/bin \
 		${OPAM_INSTALL_DIR}/$$i.install; \
 	done
 
-.endif # opam
+.endif # ${OCAML_USE_OPAM} == "yes"
 
 #
 # dune targets
@@ -244,7 +245,7 @@ do-build:
 		${DUNE_BUILD_FLAGS} ${DUNE_BUILD_TARGETS}
 .endif
 
-.endif # dune
+.endif # ${OCAML_USE_DUNE} == "yes"
 
 # Add dependency on ocaml.
 .include "../../lang/ocaml/buildlink3.mk"

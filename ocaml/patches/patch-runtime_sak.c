@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-runtime_sak.c,v 1.1 2022/05/24 18:25:38 jaapb Exp $
 
 Explicit cast to int to eliminate warning
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/12/09 10:33:04 jaapb Exp $
+# $NetBSD: options.mk,v 1.6 2022/05/24 18:25:38 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml
 PKG_SUPPORTED_OPTIONS=	pic flambda

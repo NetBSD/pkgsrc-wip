@@ -1,15 +1,13 @@
 $NetBSD$
 
-Honor LDFLAGS.
-
---- ocamldoc/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
+--- ocamldoc/Makefile.orig	2022-10-12 13:53:13.000000000 +0000
 +++ ocamldoc/Makefile
-@@ -77,7 +77,7 @@ INCLUDES=$(INCLUDES_DEP) $(INCLUDES_NODE
- COMPFLAGS=$(INCLUDES) -absname -w +a-4-9-41-42-44-45-48-70 -warn-error +A \
+@@ -66,7 +66,7 @@ COMPFLAGS = \
+   -g $(INCLUDES) -absname -w +a-4-9-41-42-44-45-48-70 -warn-error +A \
    -safe-string -strict-sequence -strict-formats -bin-annot -principal
  
--LINKFLAGS=$(INCLUDES) -nostdlib
-+LINKFLAGS=$(INCLUDES) -nostdlib -cclib "$(LDFLAGS)"
+-LINKFLAGS = -g $(INCLUDES)
++LINKFLAGS = -g $(INCLUDES) -cclib "$(LDFLAGS)" # JPB: remove -g?
  
  CMOFILES=\
    odoc_config.cmo \

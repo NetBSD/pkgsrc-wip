@@ -1,8 +1,6 @@
 $NetBSD$
 
-Install manpages with correct suffix
-
---- api_docgen/ocamldoc/Makefile.orig	2022-02-21 15:57:25.000000000 +0000
+--- api_docgen/ocamldoc/Makefile.orig	2022-10-12 13:53:12.000000000 +0000
 +++ api_docgen/ocamldoc/Makefile
 @@ -19,7 +19,7 @@ include ../../ocamldoc/Makefile.best_oca
  vpath %.mli ../../stdlib $(DOC_COMPILERLIBS_DIRS)  $(DOC_STDLIB_DIRS)
@@ -23,7 +21,7 @@ Install manpages with correct suffix
  
  build/latex/ifocamldoc.tex: | build/latex
 @@ -60,7 +60,7 @@ build/libref/%.odoc: build/%.mld | build
- 	$(OCAMLDOC_RUN) $(DOC_STDLIB_INCLUDES) -text $< -dump  $@
+ 	$(OCAMLDOC_RUN) -hide-warnings $(DOC_STDLIB_INCLUDES) -text $< -dump  $@
  
  ALL_COMPILED_DOC=$(ALL_DOC:%=build/%.odoc)
 -build/man/Stdlib.3o: $(ALL_COMPILED_DOC) | build/man

@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.141 2020/12/26 08:36:18 nia Exp $
+# $NetBSD: Makefile,v 1.147 2022/10/23 13:09:30 he Exp $
 
 .include "Makefile.common"
-
-#CONFIGURE_ENV+=		disable_x11=yes
 
 TEST_PROGRAM=		ocamltest
 MAKE_JOBS_SAFE=		no
@@ -26,6 +24,16 @@ BUILD_TARGET=		world.opt
 .else
 CONFIGURE_ARGS+=	--disable-native-compiler
 BUILD_TARGET=		world
+.endif
+
+# configure: error: fma does not work, enable emulation with --enable-imprecise-c99-float-ops
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
+CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && (${OPSYS_VERSION} < 99999)
+# fma(3) was added for powerpc between 9.99.98 and 9.99.99
+CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 .endif
 
 # This is needed because ${WRKSRC}/build/partial-install.sh uses
