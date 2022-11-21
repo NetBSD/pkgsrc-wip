@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (honk-0.9.8.tgz) = c83fe0a5c93d88f6d13264242048c4682b534cf0c66423bf28714f33827cbfe1
+SHA512 (honk-0.9.8.tgz) = f32be393698eb3b3ae72d223814eee2a15af3e892ab4b9140314da3ce96d4b4582a8b73c3fa5adede34a4d9d9b2cfc8d7dbb933d516eba8e3820d125c217a354
+Size (honk-0.9.8.tgz) = 511957 bytes

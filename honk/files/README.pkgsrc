@@ -1,0 +1,83 @@
+$NetBSD$
+
+Adapted from OpenBSD ports, probably needs some further adjustments.
+
+Initial configuration
+=====================
+
+honk expects to be fronted by a TLS terminating reverse proxy.
+Make sure to pass the Host header for nginx(8)
+	proxy_set_header Host $http_host;
+
+Setup
+=====
+
+Please see @PREFIX@/share/doc/honk
+
+honk(8)
+-------
+
+honk# doas -su _honk
+honk$ umask 077; cd @HONK_DATA@ && honk init
+listenaddr: localhost:31337
+servername: honk.example.com
+honk$ touch @HONK_DATA@/savedinbox.json
+honk$ exit
+
+add to /etc.rc.conf:
+honk=YES
+if pkg rc.d file was symlinked into /etc/rc.d:
+/etc/rc.d/honk start
+
+Honk at https://honk.example.com
+
+Customization
+=============
+
+Site CSS may be overridden by creating a views/local.css file in the
+@HONK_DATA@/honk directory. Site JS may similarly be included by creating
+views/local.js. A restart is required after changes.
+
+e.g. add this snippet to open all links in honks in new tabs.
+
+function adjusttargets() {
+        var els = document.querySelectorAll("p.content a")
+        for (var i = 0; i < els.length; i++) {
+                var e = els[i]
+                e.target = "_blank"
+        }
+}
+document.addEventListener('DOMContentLoaded', adjusttargets, false);
+
+Maintenance
+===========
+
+The cleanup [days] command exists to purge old external data, by default 30
+days. This removes unreferenced, unsaved posts and attachments. It does not
+remove any original content.
+
+honk# crontab -eu _honk
+
+# crontab(5)
+MAILTO=root
+@daily @PREFIX@/bin/honk cleanup
+
+Database Upgrade
+================
+
+If you are upgrading from a version before 0.9.7, you will need to upgrade
+the database format:
+
+Stop the old honk process.
+# /etc/rc.d/honk stop
+
+Backup the database.
+honk# doas -su _honk
+honk$ umask 077; cd @HONK_DATA@ && honk backup `date +backup-%F`
+
+Perform the upgrade with the upgrade command.
+honk$ honk upgrade
+honk$ exit
+
+Restart.
+# /etc/rc.d/honk start
