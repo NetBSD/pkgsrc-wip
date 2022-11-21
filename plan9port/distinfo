@@ -1,13 +1,10 @@
 $NetBSD$
 
-RMD160 (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = dcd35a7564d1c0569383a6d9782a6c64de10ccac
-SHA512 (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = e3e2f66c854304702f10568a3ae8990f62b6b66872f0bb6b9e3f629ff5616e82ce2c88331ec58f27d1c9cf9fda6c7d0cb072e7a746ed0ce94dc600918efda964
-Size (plan9port-20200622-95ab1308b410ad8547e38e47ec4a36f560dcece5.tar.gz) = 23445330 bytes
-SHA1 (patch-INSTALL) = 677acd580efcd7c5e6d75e3c43d41a384e291918
-SHA1 (patch-include_u.h) = d8681e7c663f9dd6da46d0af2eb33a8e1b014fbd
-SHA1 (patch-src_cmd_devdraw_mkwsysrules.sh) = 7418cfbedafa74145c4c3395fe11b2bb3b6b50ef
+BLAKE2s (plan9port-20220912-ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb.tar.gz) = bea5a32cd2108acca093437e3afe346b6d82eed652fa067a42c444157c9c84ce
+SHA512 (plan9port-20220912-ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb.tar.gz) = 12889ca91d04cb623d44efb39196dca7591b4fb81f06e6b47bb07aae7aeff054191353ff44c8fd75c56505a42102c1ad7eb058e428b59c0d098c76df0ce6b7d4
+Size (plan9port-20220912-ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb.tar.gz) = 23407448 bytes
+SHA1 (patch-INSTALL) = c57b8248b52f4f2143c6b2d67226fb3e0ccfe8a1
+SHA1 (patch-bin_9c) = d446c161e23621c2002f4c6b098b31eb0c4f5e4a
+SHA1 (patch-bin_9l) = e6daeac87657ed3e25e0f0db403d973f60d544d2
+SHA1 (patch-src_cmd_devdraw_mkwsysrules.sh) = b81252ff054868622e07e743e436ddaad540b9e0
 SHA1 (patch-src_cmd_rio_mkfile) = b2584bf14a71efb7af4bebba763035d21b38a194
-SHA1 (patch-src_libthread_NetBSD-386-asm.s) = 474ee6eaf11115b31b1abf4e1536eceab4b5e0c7
-SHA1 (patch-src_libthread_NetBSD-power-asm.s) = 516705bd9d87e4c4010b7eff2add38a9ec1abbda
-SHA1 (patch-src_libthread_NetBSD.c) = 88a67788c005fd0bb7df3a6b205577f6a7377949
-SHA1 (patch-src_libthread_sysofiles.sh) = 3ec847f2ab77bfc44d6ed679b62eb035dc5b19ea
