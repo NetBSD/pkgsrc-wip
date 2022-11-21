@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	toot-0.28.0
+DISTNAME=	toot-0.29.0
 CATEGORIES=	chat www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toot/}
 
-MAINTAINER=	nia.alarie@gmail.com
+MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://github.com/ihabunek/toot
 COMMENT=	Command line client for the Mastodon social network API
 LICENSE=	gnu-gpl-v3

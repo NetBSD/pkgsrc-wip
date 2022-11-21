@@ -1,9 +1,13 @@
-toot is a command line microblogging client for interacting with Mastodon
-instances on the distributed social network known as the 'Fediverse'.
+toot is a command line and curses client for interacting with instances
+on the distributed social network known as 'the Fediverse' using the
+Mastodon.social API.
 
-It supports regular and two-factor authentication, and has commands for
-showing an account's timeline, searching, posting 'toots' (messages),
-uploading images or video files, and following and unfollowing, muting
-and unmuting, and blocking and unblocking accounts.
+Supported features:
+* Regular and two-factor authentication
+* Posting, replying, deleting, favouriting, reblogging & pinning statuses
+* Media uploads, spoiler text, sensitive content
+* Searching by account or hash tag
+* Following, muting and blocking accounts
+* Simple switching between multiple Mastodon accounts
 
-toot also includes an experimental curses interface.
+

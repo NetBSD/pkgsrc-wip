@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (toot-0.28.0.tar.gz) = 34c149fd06bc7e6b2fca080c69db5183b91d0f23ed76ee10aa275f8a0c91d588
-SHA512 (toot-0.28.0.tar.gz) = cb9ff64506a7f9c246506ec62b3b0bf4ac6adfedca44801a111d66df3c74d1ed8e2f01791aa1f76ec2bc9a6bd44beb3afc0b84e78c10a87f3ddaa4ae3473814e
-Size (toot-0.28.0.tar.gz) = 38078 bytes
+BLAKE2s (toot-0.29.0.tar.gz) = 8a368ebcffe6f3bc2ae3a60c64acdcd4c9abacb7cde5e1050dfe0d5f1e665558
+SHA512 (toot-0.29.0.tar.gz) = dac3fd7e19d05f1e9d046f9c6512485efcd83504455431e9282217ecfdd76dbdd34a60a5cd10530f0d6e419047438dbdad590d14d516615725d8e6c827314aa4
+Size (toot-0.29.0.tar.gz) = 57122 bytes
