@@ -69,6 +69,7 @@ do-install:
 .endfor
 	${MKDIR} ${DESTDIR}/${EGDIR}
 	${MKDIR} ${DESTDIR}/${DOCDIR}
+	${MKDIR} ${DESTDIR}/${DOCDIR}/toys
 .for page in 1 3 5 8
 	${INSTALL_MAN} ${WRKSRC}/docs/honk.${page} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man${page}
 .endfor
@@ -77,7 +78,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/hfcs.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/honk_hfcs.1
 	${INSTALL_MAN} ${WRKSRC}/docs/intro.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/honk_intro.1
 	${INSTALL_MAN} ${WRKSRC}/docs/vim.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/honk_vim.3
-	${MKDIR} ${DESTDIR}/${DOCDIR}/toys
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}/README
 	${INSTALL_DATA} ${WRKSRC}/toys/README ${DESTDIR}${DOCDIR}/toys/README
 	cd ${WRKSRC} && ${PAX} -rw views ${DESTDIR}/${EGDIR}
