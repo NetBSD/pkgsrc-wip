@@ -22,6 +22,8 @@ USE_LANGUAGES+=	c c++
 BUILD_DIRS=	src
 INSTALL_TARGET=	system-install
 
+MAKE_FLAGS+=	APPNAME=${PKGBASE}
+MAKE_FLAGS+=	appsrcname=redeclipse
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
