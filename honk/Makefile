@@ -5,7 +5,7 @@ MASTER_SITES=	https://humungus.tedunangst.com/r/honk/d/
 EXTRACT_SUFX=	.tgz
 CATEGORIES=	www
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://humungus.tedunangst.com/r/honk
 COMMENT=	ActivityPub server with minimal setup and support costs
 LICENSE=	isc
