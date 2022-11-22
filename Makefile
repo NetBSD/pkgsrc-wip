@@ -5866,6 +5866,7 @@ SUBDIR+=	uget
 SUBDIR+=	uhd-git
 SUBDIR+=	ulfius
 SUBDIR+=	umix
+SUBDIR+=	umoci
 SUBDIR+=	umurmur
 SUBDIR+=	unagi
 SUBDIR+=	unarchiver-clt
