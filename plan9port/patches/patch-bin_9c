@@ -47,7 +47,7 @@ Let pkgsrc define its own compiler.
 +		-xCC \
 +		-fast \
 +		-errfmt \
-+		-erroff=none \
++		-erroff=%none \
 +	"
 +}
 +
