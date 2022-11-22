@@ -13,7 +13,6 @@ USE_TOOLS+=	pax
 
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 
-.include "../../mk/bsd.prefs.mk"
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
@@ -29,6 +28,8 @@ SUBST_FILES.readme=	README.pkgsrc
 SUBST_VARS.readme=	PREFIX
 SUBST_VARS.readme+=	HONK_DATA
 
+.include "../../mk/bsd.prefs.mk"
+
 BUILD_DEFS+=	VARBASE
 HONK_USER?=	honk
 HONK_GROUP?=	honk
@@ -37,15 +38,7 @@ HONK_DATA?=	${VARBASE}/chroot/honk
 PKG_GROUPS+=	${HONK_GROUP}
 PKG_USERS+=	${HONK_USER}:${HONK_GROUP}
 
-MAKE_ENV+=	"CGO_ENABLED=1"
-
-# ERROR: bin/autobonker: is not a Position Independent Executable
-# ERROR: bin/gettoken: is not a Position Independent Executable
-# ERROR: bin/saytheday: is not a Position Independent Executable
-# ERROR: bin/sprayandpray: is not a Position Independent Executable
-# ERROR: bin/wonkawonk: is not a Position Independent Executable
-# ERROR: bin/youvegothonks: is not a Position Independent Executable
-# Same for RELRO.
+# since we include go-module.mk after bsd.pref.mk:
 .for bin in autobonker gettoken saytheday sprayandpray wonkawonk youvegothonks
 CHECK_PIE_SKIP+=	bin/${bin}
 CHECK_RELRO_SKIP+=	bin/${bin}
