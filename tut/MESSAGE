@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+
+A sample configuration has been installed at ${PREFIX}/share/examples/tut.
+To configure tut, copy it to $XDG_CONFIG_HOME/tut/config.ini
+
+===========================================================================
