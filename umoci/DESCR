@@ -1,0 +1,7 @@
+umoci modifies Open Container images.
+
+umoci is a reference implementation of the OCI image specification and
+provides users with the ability to create, manipulate, and otherwise
+interact with container images. It is designed to be as small and
+unopinonated as possible, so as to act as a foundation for larger
+systems to be built on top of.
