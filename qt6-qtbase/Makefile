@@ -67,21 +67,7 @@ PLIST_VARS+=		egl
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "SunOS"
-.  if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
-.    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=		-platform solaris-g++-64
-.    else
-CONFIGURE_ARGS+=		-platform solaris-g++
-.    endif
-.  else
-.    if ${ABI:U} == "64"
-CONFIGURE_ARGS+=		-platform solaris-cc-64
-.    else
-CONFIGURE_ARGS+=		-platform solaris-cc
-.    endif
-.  endif
-.elif ${OPSYS} == "Interix"
+.if ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=		-platform interix-g++
 CFLAGS+=			-I/usr/local/include/bind
 LDFLAGS+=			-L/usr/local/lib/bind -lbind
