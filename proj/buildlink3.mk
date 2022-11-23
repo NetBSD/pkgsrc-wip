@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	proj
 PROJ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.proj+=	proj>=5.0.0
-BUILDLINK_ABI_DEPENDS.proj+=	proj>=5.0.0
-BUILDLINK_PKGSRCDIR.proj?=	../../geography/proj
+BUILDLINK_ABI_DEPENDS.proj+=	proj>=7.0.0
+BUILDLINK_PKGSRCDIR.proj?=	../../wip/proj
 .endif # PROJ_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-proj
