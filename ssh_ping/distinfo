@@ -1,0 +1,11 @@
+$NetBSD$
+
+BLAKE2s (github.com_montanaflynn_stats_@v_v0.6.6.mod) = f4fb3b6cb184ef08fcf25b3af7a74d8bc7c5061e9b973efe80e0d5464d1075a3
+SHA512 (github.com_montanaflynn_stats_@v_v0.6.6.mod) = f5dca41a517bf3f79fcdd2a0555fe6f190eea41d4947cc06436a5c6a691b585980a35fbc449c1322d136c43ae537324d6305bee40948c1f9cb8825686f7248ba
+Size (github.com_montanaflynn_stats_@v_v0.6.6.mod) = 46 bytes
+BLAKE2s (github.com_montanaflynn_stats_@v_v0.6.6.zip) = a38b162a5b62f33fa522b40b95e8c6869420979abbdaf870d4bbb1ec83a43d67
+SHA512 (github.com_montanaflynn_stats_@v_v0.6.6.zip) = 86287bb136f5b039964d1747d459ec2c1d488b6657e8502f30e797f3fd23f79c74e4e204bf46d4ea16c0d52edbec225ffd9aaeec16ef91c0cbe5552f8a359fdf
+Size (github.com_montanaflynn_stats_@v_v0.6.6.zip) = 73877 bytes
+BLAKE2s (ssh_ping-0.20221123-6c1e3e3090f8340c830195c981892863e395e913.tar.gz) = a2ceeb4ad81182a78bc2b03cc9a300628a269c971d4d2963ffaa1e40fd7c9733
+SHA512 (ssh_ping-0.20221123-6c1e3e3090f8340c830195c981892863e395e913.tar.gz) = cb511278a8e1106cda26f87c24fcef30f32a83aaf4d20a9b26dab699c4e1a1ef963333757b7dabebd9b0d5690fe0f804ed01369c332ef7a22cd9f896cfd78883
+Size (ssh_ping-0.20221123-6c1e3e3090f8340c830195c981892863e395e913.tar.gz) = 5944 bytes

@@ -1,0 +1,3 @@
+ssh_ping is a utility for measuring SSH session latency. It connects to a host
+over SSH, then repeatedly sends data to be echoed back for five seconds and
+measures statistics about the results.

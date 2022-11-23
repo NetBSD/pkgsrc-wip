@@ -5445,6 +5445,7 @@ SUBDIR+=	src
 SUBDIR+=	srecord
 SUBDIR+=	srvx
 SUBDIR+=	sselp
+SUBDIR+=	ssh_ping
 SUBDIR+=	ssh-chat
 SUBDIR+=	ssid
 SUBDIR+=	ssu
