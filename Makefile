@@ -4596,7 +4596,6 @@ SUBDIR+=	py-requests-cache
 SUBDIR+=	py-requirementslib
 SUBDIR+=	py-resampy
 SUBDIR+=	py-resonance
-SUBDIR+=	py-restkit
 SUBDIR+=	py-retrying
 SUBDIR+=	py-revolve
 SUBDIR+=	py-rf
