@@ -3482,6 +3482,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/c-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/c-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-awk.el.gz
@@ -3588,8 +3590,12 @@ share/emacs/${PKGVERSION}/lisp/progmodes/idlwave.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/idlwave.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/inf-lisp.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/inf-lisp.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/java-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/java-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/js.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/js.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/json-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/json-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ld-script.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ld-script.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/m4-mode.el.gz
@@ -3634,6 +3640,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/subword.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/subword.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/verilog-mode.el.gz
@@ -3931,6 +3939,8 @@ share/emacs/${PKGVERSION}/lisp/transient.el.gz
 share/emacs/${PKGVERSION}/lisp/transient.elc
 share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
 share/emacs/${PKGVERSION}/lisp/tree-widget.elc
+share/emacs/${PKGVERSION}/lisp/treesit.el.gz
+share/emacs/${PKGVERSION}/lisp/treesit.elc
 share/emacs/${PKGVERSION}/lisp/tutorial.el.gz
 share/emacs/${PKGVERSION}/lisp/tutorial.elc
 share/emacs/${PKGVERSION}/lisp/type-break.el.gz
