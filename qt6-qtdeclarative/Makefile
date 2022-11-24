@@ -32,6 +32,10 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6QuickTemplates2.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6QuickTest.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6QuickWidgets.pc
 
+# installs .cpp.o file that should not be there
+post-install:
+	${RUN} ${RM} -r ${DESTDIR}${QTPREFIX}/qml/Qt/test/controls/objects-Release
+
 .include "../../lang/python/tool.mk"
 .include "../../wip/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qt6-qtlanguageserver/buildlink3.mk"
