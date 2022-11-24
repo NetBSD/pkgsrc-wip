@@ -34,7 +34,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:build pkg-config
 
-# https://doc.qt.io/qt-5/supported-platforms.html
+# https://doc.qt.io/qt-6/supported-platforms.html
 GCC_REQD+=		9
 
 # Avoid failures to due 'register' usage in X11 headers.
