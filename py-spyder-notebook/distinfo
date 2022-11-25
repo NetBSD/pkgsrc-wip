@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (spyder-notebook-0.4.0.tar.gz) = 3e60af7e15a40c869f5e5c363c67c5cccc54def1f180b652a1bfb086079d939f
+SHA512 (spyder-notebook-0.4.0.tar.gz) = 766828a6767a41b430611e149dbfb9cfa95974a38928d4b470d45d231aa11ef22b85bd24cc1d41e0d8d76294a477177c025f284610351cf9455e62503f2582af
+Size (spyder-notebook-0.4.0.tar.gz) = 1910166 bytes

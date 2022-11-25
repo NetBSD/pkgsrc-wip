@@ -4727,6 +4727,7 @@ SUBDIR+=	py-spirack
 SUBDIR+=	py-spm1d
 SUBDIR+=	py-spotpy
 SUBDIR+=	py-sppy
+SUBDIR+=	py-spyder-notebook
 SUBDIR+=	py-spyder-kernels
 SUBDIR+=	py-spyder-vim
 SUBDIR+=	py-spyse

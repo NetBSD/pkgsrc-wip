@@ -1,0 +1,9 @@
+Spyder plugin to use Jupyter notebooks inside Spyder.
+Currently it supports basic functionality such as creating
+new notebooks, opening any notebook in your filesystem and
+saving notebooks at any location.
+
+You can also use Spyder's file switcher to easily switch
+between notebooks and open an IPython console connected to
+the kernel of a notebook to inspect its variables in the
+Variable Explorer.
