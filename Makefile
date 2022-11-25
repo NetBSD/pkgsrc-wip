@@ -5838,7 +5838,6 @@ SUBDIR+=	ttysnoop
 SUBDIR+=	ttytter
 SUBDIR+=	tuareg-mode
 SUBDIR+=	tudu
-SUBDIR+=	tut
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server
