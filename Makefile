@@ -4146,6 +4146,7 @@ SUBDIR+=	py-marshmallow
 SUBDIR+=	py-marshmallow-enum
 SUBDIR+=	py-maskouk-sqlite
 SUBDIR+=	py-math-braid
+SUBDIR+=	py-mathics-scanner
 SUBDIR+=	py-math-snappy
 SUBDIR+=	py-math3d
 SUBDIR+=	py-mathjspy
