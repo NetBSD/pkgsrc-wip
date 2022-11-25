@@ -5,15 +5,16 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cgen/}
 
-MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://github.com/inducer/cgen
-COMMENT=	C and Cxx source generation from an AST
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	http://documen.tician.de/cgen/
+COMMENT=	C/C++ source generation from an AST
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-pytools>=2015.1.2:../../wip/py-pytools
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-pytools-[0-9]*:../../wip/py-pytools
-
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.6
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
