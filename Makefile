@@ -4791,6 +4791,7 @@ SUBDIR+=	py-symcxx
 SUBDIR+=	py-symeig
 SUBDIR+=	py-symlens
 SUBDIR+=	py-sympad
+SUBDIR+=	py-sympy2c
 SUBDIR+=	py-symphysics
 SUBDIR+=	py-sympy-to-c
 SUBDIR+=	py-sympycore
