@@ -1,20 +1,20 @@
 # $NetBSD$
 
-DISTNAME=	mona-1.4-17
+DISTNAME=	mona-1.4-18
 CATEGORIES=	math
-MASTER_SITES=	https://www.brics.dk/mona/download/
+MASTER_SITES=	http://www.brics.dk/mona/download/
 
-MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	https://www.brics.dk/mona/
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	https://www.brics.dk/mona/index.html
 COMMENT=	Tool that translates formulas to finite-state automata
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/mona-1.4
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	bison
-MAKE_FILE=	makefile
 USE_LANGUAGES=	c c++
+MAKE_FILE=	makefile
+USE_LIBTOOL=	yes
+USE_TOOLS+=	bison flex
 
 .include "../../mk/bsd.pkg.mk"

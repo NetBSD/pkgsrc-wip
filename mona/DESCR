@@ -1,5 +1,8 @@
-MONA is a tool that translates formulas to finite-state automata.
-The formulas may express search patterns, temporal properties
-of reactive systems, parse tree constraints, etc. MONA analyses
-the automaton resulting from the compilation and prints out "valid" or a
-counter-example
+MONA implements decision procedures for the Weak Second-order Theory
+of One or Two successors (WS1S/WS2S). The theory of one successor,
+known as WS1S, is a fragment of arithmetic augmented with second-order
+quantification over finite sets of natural numbers. Its first-order terms
+denote just natural numbers. The theory has no addition, since that would
+make it undecidable, but it has a unary operation +1, known as the successo
+r function. WS2S is a generalization to tree structures. Since the theories are
+monadic second-order logics, we call our tool MONA
