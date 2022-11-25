@@ -3716,6 +3716,7 @@ SUBDIR+=	py-digraphtools
 SUBDIR+=	py-dimarray
 SUBDIR+=	py-diofant
 SUBDIR+=	py-discord.py
+SUBDIR+=	py-displaylang
 SUBDIR+=	py-distob
 SUBDIR+=	py-distributed
 SUBDIR+=	py-distutils-extra
