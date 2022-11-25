@@ -4730,6 +4730,7 @@ SUBDIR+=	py-sppy
 SUBDIR+=	py-spyder-notebook
 SUBDIR+=	py-spyder-kernels
 SUBDIR+=	py-spyder-terminal
+SUBDIR+=	py-spyder-unittest
 SUBDIR+=	py-spyder-vim
 SUBDIR+=	py-spyse
 SUBDIR+=	py-sqlalchemy-json
