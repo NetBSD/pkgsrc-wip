@@ -4267,6 +4267,7 @@ SUBDIR+=	py-neqsys
 SUBDIR+=	py-netcdf
 SUBDIR+=	py-netflowvizu
 SUBDIR+=	py-netmiko
+SUBDIR+=	py-neumann
 SUBDIR+=	py-neupy
 SUBDIR+=	py-neurolab
 SUBDIR+=	py-neuronpy

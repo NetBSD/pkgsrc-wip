@@ -1,0 +1,6 @@
+A Python Library for Applied Mathematics in Physical Sciences
+Neumann is a rapid prototyping platform focused on numerical
+calculations mainly corcerned with simulations of natural phenomena
+It provides a set of common functionalities and interfaces with a
+number of state-of-the-art open source packages to combine their
+power seamlessly under a single development environment

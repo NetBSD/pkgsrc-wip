@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (neumann-0.0.5.tar.gz) = 2c595ee5abf42ac930e48ce586f80c37ef8542bf33166370168f44e64ba780dc
+SHA512 (neumann-0.0.5.tar.gz) = e8380236166eb014888bf494a4946866de4d6d2200bec26affb6051482cb23764842c505c94846f48a221acb3378b4705e65347f0ed87ddacff7c5c95e869ac6
+Size (neumann-0.0.5.tar.gz) = 55752 bytes
