@@ -1,51 +1,35 @@
-# $NetBSD: Makefile,v 1.2 2015/02/19 18:01:20 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	cinnamon-desktop-5.2.0
-PKGREVISION=	1
+GITHUB_PROJECT=	cinnamon-desktop
+GITHUB_TAG=	refs/tags/master.mint21
+DISTNAME=	master.mint21
+VERSION=		4.0.0
+PKGNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
-GITHUB_PROJECT=	cinnamon-desktop
-GITHUB_TAG=	${PKGVERSION_NOREV}
-
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://github.com/linuxmint/cinnamon-desktop
+HOMEPAGE=	https://github.com/linuxmint/cinnamon-desktop/
 COMMENT=	Additional UI API for cinnamon
 LICENSE=	gnu-gpl-v2
 
-#USE_LIBTOOL=	yes
-#GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config automake autoreconf intltool msgfmt
+WRKSRC=			${WRKDIR}/cinnamon-desktop-master.mint21
 
-REPLACE_PYTHON=	install-scripts/meson_install_schemas.py \
-		files/usr/bin/cinnamon-desktop-migrate-mediakeys
-
-PKGCONFIG_OVERRIDE+=	libcinnamon-desktop/cinnamon-desktop.pc.in
-
-BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+USE_TOOLS+=	pkg-config intltool msgfmt
+USE_PKGLOCALEDIR=	yes
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcvc:${WRKSRC}/output/libcinnamon-desktop
 
-pre-install:
-	${CHMOD} +x ${WRKSRC}/install-scripts/meson_install_schemas.py
+REPLACE_PYTHON=	install-scripts/meson_install_schemas.py
 
-.include "../../devel/meson/build.mk"
-.include "../../devel/glib2/schemas.mk"
-.include "../../lang/python/application.mk"
-
-.include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/py-gobject3-common/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk""
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../sysutils/accountsservice/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

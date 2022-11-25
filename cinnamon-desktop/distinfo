@@ -1,8 +1,5 @@
 $NetBSD$
 
-SHA1 (cinnamon-desktop-5.2.0.tar.gz) = 036cb762f3be22038c65f707ab2d820848621621
-RMD160 (cinnamon-desktop-5.2.0.tar.gz) = 39ec168d6187805bddf53847e859012dc1eaa27a
-SHA512 (cinnamon-desktop-5.2.0.tar.gz) = c4b7dcfe16c77f3c8390e6f41322db8e3ca9e2858c0fcd7629b4844834feda7baadb3f54d9239831a0ded97b139ce3d2362f222829ac1513184d32c7480e808b
-Size (cinnamon-desktop-5.2.0.tar.gz) = 495118 bytes
-SHA1 (patch-libcinnamon-desktop_cdesktop-enums.h) = 741fb7618f235db9364f6e113fca400ddfdf7d98
-SHA1 (patch-schemas_org.cinnamon.desktop.session.gschema.xml.in) = 4233c0e1b14aa91f4d71221e661ea7bbb68863e6
+BLAKE2s (cinnamon-desktop/master.mint21.tar.gz) = 09e06929a077f27f6b58fe7f509f239d75aaffb0c22ce24c82ddb5f81bc9dc11
+SHA512 (cinnamon-desktop/master.mint21.tar.gz) = d86726d308b10370a145bde6a7292f52c1ab17637a84d5f4b665deaf9a29cd7d0ff8eec5c51d72ad08deec887994b40f77c15e2ffea2491ee5efb48ec841611d
+Size (cinnamon-desktop/master.mint21.tar.gz) = 501913 bytes
