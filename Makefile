@@ -4446,6 +4446,7 @@ SUBDIR+=	py-pseudopy
 SUBDIR+=	py-pseudorandom
 SUBDIR+=	py-psychopy
 SUBDIR+=	py-ptex
+SUBDIR+=	py-ptyx-mcq
 SUBDIR+=	py-ptpython
 SUBDIR+=	py-ptrace
 SUBDIR+=	py-ptyx
