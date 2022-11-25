@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ortho-0.3.3.tar.gz) = 7d6d641348f16b7b4298107ce842b61f402b424a118d2746528bdcbb4cff09f4
+SHA512 (ortho-0.3.3.tar.gz) = 2a948346f9dc058e5d20a4501c3a46675397e4e3fdf9b3c1a0c0dc6be5739d63465c6390a0326a0fcdb302794aa59922bf5d00009a0fdfddb05b0a99bcd9ed9c
+Size (ortho-0.3.3.tar.gz) = 245179 bytes

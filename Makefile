@@ -4331,6 +4331,7 @@ SUBDIR+=	py-orderedset
 SUBDIR+=	py-ore-algebra
 SUBDIR+=	py-orjson
 SUBDIR+=	py-orm
+SUBDIR+=	py-ortho
 SUBDIR+=	py-otb
 SUBDIR+=	py-othman
 SUBDIR+=	py-otp
