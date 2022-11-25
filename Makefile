@@ -4364,6 +4364,7 @@ SUBDIR+=	py-patool
 SUBDIR+=	py-pattyrn
 SUBDIR+=	py-pbfalcon
 SUBDIR+=	py-pcapy
+SUBDIR+=	py-pdf2image
 SUBDIR+=	py-pdfminer-six
 SUBDIR+=	py-pdfposter
 SUBDIR+=	py-pdoc3

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pdf2image-1.16.0.tar.gz) = 2944542a129b5674e3968c224ba1437d344ceb84a693ef7e63e77d425bdd1095
+SHA512 (pdf2image-1.16.0.tar.gz) = fc6512d8f5ec21b5199348b9d0070dd7b3c063ada33f7024b8d9296bf3776025c85bb50a23d8d2a4b7a544bcadcc810c413ab60ad2744b96a3a0cd4d72d478e5
+Size (pdf2image-1.16.0.tar.gz) = 11656 bytes

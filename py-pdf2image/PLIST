@@ -1,0 +1,21 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pdf2image/__init__.py
+${PYSITELIB}/pdf2image/__init__.pyc
+${PYSITELIB}/pdf2image/__init__.pyo
+${PYSITELIB}/pdf2image/exceptions.py
+${PYSITELIB}/pdf2image/exceptions.pyc
+${PYSITELIB}/pdf2image/exceptions.pyo
+${PYSITELIB}/pdf2image/generators.py
+${PYSITELIB}/pdf2image/generators.pyc
+${PYSITELIB}/pdf2image/generators.pyo
+${PYSITELIB}/pdf2image/parsers.py
+${PYSITELIB}/pdf2image/parsers.pyc
+${PYSITELIB}/pdf2image/parsers.pyo
+${PYSITELIB}/pdf2image/pdf2image.py
+${PYSITELIB}/pdf2image/pdf2image.pyc
+${PYSITELIB}/pdf2image/pdf2image.pyo
