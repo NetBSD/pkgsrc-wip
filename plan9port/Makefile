@@ -54,11 +54,6 @@ REPLACE_FILES.rc+=	src/cmd/upas/misc/remotemail
 REPLACE_FILES.rc+=	src/cmd/venti/srv/conf.rc
 REPLACE_FILES.rc+=	src/cmd/venti/srv/tester
 
-EGDIR=		${PREFIX}/share/examples/profile.d
-CONF_FILES+=	${EGDIR}/plan9.sh \
-		${PKG_SYSCONFDIR}/profile.d/plan9.sh
-DOCDIR=		${PREFIX}/share/doc/plan9
-
 SUBST_CLASSES+=		cc
 SUBST_STAGE.cc=		pre-configure
 SUBST_FILES.cc+=	INSTALL
@@ -67,16 +62,29 @@ SUBST_VARS.cc=		CC
 SUBST_MESSAGE.cc=	Defining preferred compiler.
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-build
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	src/cmd/devdraw/mkwsysrules.sh
 SUBST_FILES.prefix+=	plan9.sh acme.sh
 SUBST_VARS.prefix=	PREFIX
 SUBST_MESSAGE.prefix=	Replacing PREFIX placeholders.
 
-PLAN9_BUILD=		${DESTDIR}${PREFIX}/plan9
-INSTALL_ENV+=		PLAN9_TARGET=${PREFIX}/plan9
+PLAN9_TARGET=	${PREFIX}/plan9
+
+EGDIR=		${PREFIX}/share/examples/profile.d
+CONF_FILES+=	${EGDIR}/plan9.sh \
+		${PKG_SYSCONFDIR}/profile.d/plan9.sh
+DOCDIR=		${PREFIX}/share/doc/plan9
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/profile.d
+
+PLAN9_BUILD=		${DESTDIR}${PLAN_TARGET}
+INSTALL_ENV+=		PLAN9_TARGET=${PLAN_TARGET}
+
+.include "../../mk/bsd.prefs.mk"
+.if exists(/dev/kmem) && !empty${OPSYS:M*BSD}
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} kmem 2755
+SPECIAL_PERMS+=		${PLAN9_TARGET}/bin/auxstats ${SETUID_ROOT_PERMS}
+.endif
 
 INSTALLATION_DIRS+=	bin plan9 ${EGDIR}
 INSTALLATION_DIRS+=	share/doc/plan9
@@ -85,21 +93,23 @@ INSTALLATION_DIRS+=	share/pixmaps
 
 .include "options.mk"
 
+post-extract:
+.for s in acme.sh plan9.sh
+	${RUN}${CP} ${FILESDIR}/${s} ${WRKSRC}
+.endfor
+
 do-configure:
 	${RUN}${ECHO} "CC9='${CC}'" >> ${WRKSRC}/LOCAL.config
 	${RUN}${ECHO} "CC9FLAGS='${CFLAGS}'" >> ${WRKSRC}/LOCAL.config
 	${RUN}${ECHO} "LDFLAGS='${LDFLAGS}'" >> ${WRKSRC}/LOCAL.config
 	${RUN}${ECHO} "FONTSRV=fontsrv"	>> ${WRKSRC}/LOCAL.config
-.if !empty(PKG_OPTIONS:Mx11)
+.if ${OPSYS} == "Darwin"
+	${RUN}${ECHO} "WSYSTYPE='mac'" >> ${WRKSRC}/LOCAL.config
+.elif !empty(PKG_OPTIONS:Mx11)
 	${RUN}${ECHO} "WSYSTYPE='x11'" >> ${WRKSRC}/LOCAL.config
 .else
 	${RUN}${ECHO} "WSYSTYPE='nowsys'" >> ${WRKSRC}/LOCAL.config
 .endif
-
-post-configure:
-.for s in acme.sh plan9.sh
-	${RUN}${CP} ${FILESDIR}/${s} ${WRKSRC}
-.endfor
 
 do-build:
 	${RUN}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} ./INSTALL -b
@@ -115,6 +125,7 @@ do-install:
 # Rename hard-coded paths and builds mans.
 	${RUN}cd ${PLAN9_BUILD} &&			\
 	  ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${SH} ./INSTALL -c
+# Install docs and sample profile script.
 .for f in CHANGES LICENSE README.md
 	${RUN}cd ${PLAN9_BUILD} &&			\
 	  ${PAX} -rw -pm ${f} ${DESTDIR}${DOCDIR}
@@ -144,6 +155,7 @@ do-install:
 	${RUN}${CHMOD} -x ${PLAN9_BUILD}/man/fonts
 
 post-install:
+# Run acme as a standalone application.
 	${INSTALL_SCRIPT} ${WRKSRC}/acme.sh		\
 	  ${DESTDIR}${PREFIX}/bin/acme
 	${INSTALL_DATA} ${FILESDIR}/acme.desktop	\
