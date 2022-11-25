@@ -77,11 +77,11 @@ DOCDIR=		${PREFIX}/share/doc/plan9
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/profile.d
 
-PLAN9_BUILD=		${DESTDIR}${PLAN_TARGET}
-INSTALL_ENV+=		PLAN9_TARGET=${PLAN_TARGET}
+PLAN9_BUILD=		${DESTDIR}${PLAN9_TARGET}
+INSTALL_ENV+=		PLAN9_TARGET=${PLAN9_TARGET}
 
 .include "../../mk/bsd.prefs.mk"
-.if exists(/dev/kmem) && !empty${OPSYS:M*BSD}
+.if exists(/dev/kmem) && ${OPSYS:M*BSD}
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} kmem 2755
 SPECIAL_PERMS+=		${PLAN9_TARGET}/bin/auxstats ${SETUID_ROOT_PERMS}
 .endif
