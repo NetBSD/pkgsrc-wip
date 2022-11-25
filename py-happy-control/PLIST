@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/happy_control/Lie_tools.py
+${PYSITELIB}/happy_control/Lie_tools.pyc
+${PYSITELIB}/happy_control/Lie_tools.pyo
+${PYSITELIB}/happy_control/__init__.py
+${PYSITELIB}/happy_control/__init__.pyc
+${PYSITELIB}/happy_control/__init__.pyo
+${PYSITELIB}/happy_control/approximation_tools.py
+${PYSITELIB}/happy_control/approximation_tools.pyc
+${PYSITELIB}/happy_control/approximation_tools.pyo
+${PYSITELIB}/happy_control/fliess/lie_basis.pickle
+${PYSITELIB}/happy_control/fliess/moments_grading.pickle
+${PYSITELIB}/happy_control/nonlinear_moments/lie_basis.pickle
+${PYSITELIB}/happy_control/nonlinear_moments/moments_grading.pickle
+${PYSITELIB}/happy_control/shuffle_tools.py
+${PYSITELIB}/happy_control/shuffle_tools.pyc
+${PYSITELIB}/happy_control/shuffle_tools.pyo

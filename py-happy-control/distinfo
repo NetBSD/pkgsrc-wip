@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (happy_control-0.1.1.tar.gz) = a4ac3cce2bfb9e2b10ef20062ae956093068c36f6420ab9f28b8252234c5a6bd
+SHA512 (happy_control-0.1.1.tar.gz) = f3a23a60b04ca30a3239ced27fccbff147a812c76101b7f40eb4a0104d2dbb6359bc1db08c311090b93f17ff329ade007e0225a45e4648e7b95fc01b54d95fda
+Size (happy_control-0.1.1.tar.gz) = 1276027 bytes

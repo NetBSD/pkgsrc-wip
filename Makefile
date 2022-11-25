@@ -3954,6 +3954,7 @@ SUBDIR+=	py-gts
 SUBDIR+=	py-gvar
 SUBDIR+=	py-gwcs
 SUBDIR+=	py-gwsurrogate
+SUBDIR+=	py-happy-control
 SUBDIR+=	py-hal-cgp
 SUBDIR+=	py-halp
 SUBDIR+=	py-hamcrest
