@@ -1,29 +1,25 @@
-# $NetBSD: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	cinnamon-menus-5.2.0
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
+VERSION=	5.6.0
 GITHUB_PROJECT=	cinnamon-menus
-GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_TAG=	refs/tags/master.lmde5
+DISTNAME=	master.lmde5
+PKGNAME=	${GITHUB_PROJECT}-${VERSION}
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/linuxmint/cinnamon-menus
 COMMENT=	Additional UI API for cinnamon
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+WRKSRC=	${WRKDIR}/cinnamon-menus-master.lmde5
+
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool
-#USE_TOOLS+=	pkg-config automake autoreconf intltool msgfmt
-#GNU_CONFIGURE=	yes
 
-#PKGCONFIG_OVERRIDE+=	libmenu/libcinnamon-menu-3.0.pc.in
-
-#BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
-
-#pre-configure:
-#	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
-
-.include "../../devel/meson/build.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
