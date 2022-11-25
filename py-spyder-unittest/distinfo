@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (spyder_unittest-0.5.1.tar.gz) = 01589332530a88eedf774ae3e2865ffe28aac8f00f2837e801e508ee2bfdcc8c
+SHA512 (spyder_unittest-0.5.1.tar.gz) = c936f85ac855f6a877e464436cad9ad2013c689b708930a4d7d99a1b6c96863f17cb51ff6e07a30748edaa0aac42507321e3be5386236e65edee6f22de76064f
+Size (spyder_unittest-0.5.1.tar.gz) = 50927 bytes
