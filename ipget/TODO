@@ -1,0 +1,3 @@
+# github.com/lucas-clemente/quic-go/internal/qtls
+../.gopath/pkg/mod/github.com/lucas-clemente/quic-go@v0.27.1/internal/qtls/go119.go:6:13: cannot use "The version of quic-go you're using can't be built on Go 1.19 yet. For more details, please see https://github.com/lucas-clemente/quic-go/wiki/quic-go-and-Go-versions." (untyped string constant "The version of quic-go you're using can't be built on Go 1.19 yet. F...) as int value in variable declaration
+*** Error code 2
