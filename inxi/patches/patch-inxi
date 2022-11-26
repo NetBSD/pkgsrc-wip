@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- inxi.orig	2022-11-25 23:35:00.340304247 +0000
++++ inxi
+@@ -470,7 +470,7 @@ sub set_path {
+ 	my (@path);
+ 	# NOTE: recent Xorg's show error if you try /usr/bin/Xorg -version but work 
+ 	# if you use the /usr/lib/xorg-server/Xorg path.
+-	@paths = qw(/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin);
++	@paths = qw(/sbin /bin /usr/sbin /usr/bin /usr/pkg/bin /usr/pkg/sbin /usr/local/sbin /usr/local/bin);
+ 	@path = split(':', $ENV{'PATH'}) if $ENV{'PATH'};
+ 	# print "paths: @paths\nPATH: $ENV{'PATH'}\n";
+ 	# Create a difference of $PATH and $extra_paths and add that to $PATH:

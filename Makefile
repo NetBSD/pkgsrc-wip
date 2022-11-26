@@ -1802,6 +1802,7 @@ SUBDIR+=	input-mono-ttf
 SUBDIR+=	intel-gpu-tools
 SUBDIR+=	interbase-docs
 SUBDIR+=	intervaltree
+SUBDIR+=	inxi
 SUBDIR+=	io-base
 SUBDIR+=	io-blowfish
 SUBDIR+=	io-cgi

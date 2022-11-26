@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (inxi_3.3.01-1.orig.tar.gz) = 7fdec1fb64834b066fbab7ba4a5fdc53650b6e3add3158bbcd5a01386de5f152
+SHA512 (inxi_3.3.01-1.orig.tar.gz) = f5638dfbbe9696970a3075e10fe69fa88a9cefe5253c57a5ab18500edf18483c3929afd74ca4dd219f128472f9b4e090c8be857fbcdecd06c4bd705d47226826
+Size (inxi_3.3.01-1.orig.tar.gz) = 399932 bytes
+SHA1 (patch-inxi) = 871f4c8085dfa27e951898af343db5f01fd2d211
