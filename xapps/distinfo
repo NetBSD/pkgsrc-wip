@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (xapp-2.2.6.tar.gz) = d448c136ea55f898a8305eb05a9341e986fb15c1
-RMD160 (xapp-2.2.6.tar.gz) = 8102908fcb5d329d6ba6f2cb857b032fbc7ab401
-SHA512 (xapp-2.2.6.tar.gz) = e54790176d25ecae09ebd9a394ac72eaa2d21c392a33de145fd89cdbf0e7853573753fa2ecb8dcf36210dcbd543d1dc5401449d09f18e49b4a92932f7c188c79
-Size (xapp-2.2.6.tar.gz) = 243642 bytes
+BLAKE2s (xapp/master.mint21.tar.gz) = 4a0ec225f804333bf83ef53c5ac0956760b69c5b6f2cd5bcf10df17aad4abd70
+SHA512 (xapp/master.mint21.tar.gz) = 15ad0074d11216f9def8afc77d7baee1a67febc56ed7fc638cc8883a1abe5884c1a7def978e1c09fdd4d93a8e41ede454f09d1cc05fe37ed4164d3e967d3d53b
+Size (xapp/master.mint21.tar.gz) = 251877 bytes

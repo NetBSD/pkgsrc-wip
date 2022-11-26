@@ -1,41 +1,59 @@
-# $NetBSD: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
+# $NetBSD$
 
-DISTNAME=	xapp-2.2.6
+VERSION= 2.4.1
+GITHUB_PROJECT=	xapp
+GITHUB_TAG=	refs/tags/master.mint21
+DISTNAME=	master.mint21
+PKGNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
-GITHUB_PROJECT=	xapp
-GITHUB_TAG=	${PKGVERSION_NOREV}
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/linuxmint/xapp
 COMMENT=	Components which are common to multiple desktop environments
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+WRKSRC=		${WRKDIR}/xapp-master.mint21
 
-USE_TOOLS=		pkg-config intltool
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++ fortran
-WRKSRC=			${WRKDIR}/xapp-2.2.6
+USE_TOOLS=	bash pkg-config intltool gdbus-codegen
 USE_PKGLOCALEDIR=	yes
 
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+DEPENDS+=	inxi-[0-9]*:../../wip/inxi
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
-REPLACE_PYTHON+=	libxapp/g-codegen.py libxapp/install_generated_header.py makedoc schemas/meson_install_schemas.py
+# Adjust meson.build
+SUBST_CLASSES+=		meson
+SUBST_STAGE.meson=	pre-configure
+SUBST_MESSAGE.meson=	Fixing meson build
+SUBST_FILES.meson=	pygobject/meson.build
+SUBST_SED.meson=	-e 's,python3,python${PYVERSSUFFIX},g'
 
-.include "../../devel/meson/build.mk"
-.include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
-.include "../../devel/glib2/schemas.mk"
+# Adjust scripts
+SUBST_CLASSES+=		scripts
+SUBST_STAGE.scripts=	pre-configure
+SUBST_MESSAGE.scripts=	Fixing scripts
+SUBST_FILES.scripts=	scripts/upload-system-info
+SUBST_SED.scripts=	-e 's,/usr/bin/pastebin,${PREFIX}/pastebin,g'
+
+REPLACE_BASH+=	 scripts/xfce4-set-wallpaper  data/80xapp-gtk3-module.sh
+
+REPLACE_PYTHON+= scripts/pastebin scripts/upload-system-info status-applets/mate/mate-xapp-status-applet.py
+
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/py-gobject3/buildlink3.mk"
+.include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/vala/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libgnomekbd/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/vala/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
