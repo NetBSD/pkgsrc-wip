@@ -1168,7 +1168,6 @@ SUBDIR+=	gksu
 SUBDIR+=	gl2ps
 SUBDIR+=	gleam-stdlib
 SUBDIR+=	glib-java
-SUBDIR+=	glib2
 SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
