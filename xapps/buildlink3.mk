@@ -8,7 +8,7 @@ XAPP_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.xapp?=	build
 
 BUILDLINK_API_DEPENDS.xapp+=	xapp>=2.4.1
-BUILDLINK_PKGSRCDIR.xapp?=	../../category/xapps
+BUILDLINK_PKGSRCDIR.xapp?=	../../wip/xapps
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
