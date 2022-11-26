@@ -3356,6 +3356,7 @@ SUBDIR+=	pulseaudio-git
 SUBDIR+=	pulseaudio-qt
 SUBDIR+=	pure
 SUBDIR+=	purple-facebook
+SUBDIR+=	purple-teams-git
 SUBDIR+=	pwnat
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
