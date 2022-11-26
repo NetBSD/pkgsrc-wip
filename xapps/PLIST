@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/pastebin
+bin/pastebin3.10
 bin/upload-system-info
 bin/xfce4-set-wallpaper
 etc/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh
@@ -22,7 +22,7 @@ lib/girepository-1.0/XApp-1.0.typelib
 lib/gtk-3.0/modules/libxapp-gtk3-module.so
 lib/libxapp.so
 lib/libxapp.so.1
-lib/libxapp.so.2.4.1
+lib/libxapp.so.${PKGVERSION}
 lib/pkgconfig/xapp.pc
 ${PYSITELIB}/gi/overrides/XApp.py
 libexec/xapps/applet_constants.py

@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (xapp/master.mint21.tar.gz) = 4a0ec225f804333bf83ef53c5ac0956760b69c5b6f2cd5bcf10df17aad4abd70
 SHA512 (xapp/master.mint21.tar.gz) = 15ad0074d11216f9def8afc77d7baee1a67febc56ed7fc638cc8883a1abe5884c1a7def978e1c09fdd4d93a8e41ede454f09d1cc05fe37ed4164d3e967d3d53b
 Size (xapp/master.mint21.tar.gz) = 251877 bytes
+SHA1 (patch-scripts_meson.build) = 7fe7130a3bc0518dadfee2247c05caa2e8da3f79

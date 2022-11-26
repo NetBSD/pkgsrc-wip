@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION= 2.4.1
+VERSION=	2.4.1
 GITHUB_PROJECT=	xapp
 GITHUB_TAG=	refs/tags/master.mint21
 DISTNAME=	master.mint21
@@ -16,12 +16,13 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 WRKSRC=		${WRKDIR}/xapp-master.mint21
 
-USE_TOOLS=	bash pkg-config intltool gdbus-codegen
+USE_TOOLS=		bash pkg-config intltool gdbus-codegen
 USE_PKGLOCALEDIR=	yes
 
-PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
-DEPENDS+=	inxi-[0-9]*:../../wip/inxi
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+PYTHON_FOR_BUILD_ONLY=	yes
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+DEPENDS+=		inxi-[0-9]*:../../wip/inxi
+DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 # Adjust meson.build
 SUBST_CLASSES+=		meson
@@ -32,14 +33,18 @@ SUBST_SED.meson=	-e 's,python3,python${PYVERSSUFFIX},g'
 
 # Adjust scripts
 SUBST_CLASSES+=		scripts
-SUBST_STAGE.scripts=	pre-configure
+SUBST_STAGE.scripts=	post-extract
 SUBST_MESSAGE.scripts=	Fixing scripts
 SUBST_FILES.scripts=	scripts/upload-system-info
-SUBST_SED.scripts=	-e 's,/usr/bin/pastebin,${PREFIX}/pastebin,g'
+SUBST_SED.scripts=	-e 's,/usr/bin/pastebin,${PREFIX}/bin/pastebin${PYVERSSUFFIX},g'
 
-REPLACE_BASH+=	 scripts/xfce4-set-wallpaper  data/80xapp-gtk3-module.sh
+REPLACE_BASH+=	scripts/xfce4-set-wallpaper  data/80xapp-gtk3-module.sh
 
-REPLACE_PYTHON+= scripts/pastebin scripts/upload-system-info status-applets/mate/mate-xapp-status-applet.py
+REPLACE_PYTHON+=	scripts/pastebin${PYVERSSUFFIX} scripts/upload-system-info status-applets/mate/mate-xapp-status-applet.py
+
+post-extract:
+	${MV} ${WRKSRC}/scripts/pastebin \
+		${WRKSRC}/scripts/pastebin${PYVERSSUFFIX}
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
