@@ -23,6 +23,6 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/inxi ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN}	${WRKSRC}/inxi.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/inxi.1
 
 .include "../../mk/bsd.pkg.mk"
