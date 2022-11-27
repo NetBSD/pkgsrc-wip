@@ -251,6 +251,7 @@ SUBDIR+=	azureus
 SUBDIR+=	backintime
 SUBDIR+=	backplane
 SUBDIR+=	bagel
+SUBDIR+=	balance-tui
 SUBDIR+=	ballerburg
 SUBDIR+=	bamf
 SUBDIR+=	bamtools
