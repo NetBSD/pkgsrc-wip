@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	proj-data-1.8
+DISTNAME=	proj-data-1.9
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 
