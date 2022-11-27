@@ -4,7 +4,6 @@ DISTNAME=	plan9port-20220912
 CATEGORIES=	misc plan9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
 GITHUB_TAG=	ffbdd1aa20c8a20a8e9dcd3cec644b6dfa3c6acb
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://9fans.github.io/plan9port/
