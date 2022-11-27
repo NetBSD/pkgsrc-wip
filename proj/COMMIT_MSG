@@ -1,9 +1,38 @@
-geography/proj: Update to 8.1.1
+geography/proj: Update to 8.2.1
 
 This version withdraws proj_api.h.
 
 Upstream NEWS, less normal updates (e.g. EPSG database) and other
 housekeeping, bugfixes, minor improvements follows.
+
+8.2.1 Release Notes
+-------------------
+
+[pruned items only]
+
+8.2.0 Release Notes
+-------------------
+
+ Announcements
+ -------------
+
+ From PROJ 9.0.0 and onwards CMake will be the only build system bundled
+ with the PROJ package. As a consequence support for Autotools builds will
+ stop when the 8.2 branch of PROJ reaches end of life. We encourage
+ everyone to adjust their build workflows as soon as possible and report
+ any discrepancies discovered between Autotools and CMake builds.
+
+ Updates
+ -------
+
+ o Database layout modified to include "anchor" field to geodetic_datum and
+   vertical_datum tables, consequently database layout version is increased
+   to 1.2 (#2859)
+
+ o Add IAU_2015 CRS definitions (#2876)
+
+ o Added proj_trans_bounds() (#2882)
+
 
 8.1.1 Release Notes
 -------------------

@@ -1,10 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	proj-data-1.4
+DISTNAME=	proj-data-1.8
 CATEGORIES=	geography
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OSGeo/}
-GITHUB_PROJECT=	PROJ-data
-GITHUB_RELEASE=	1.4.0
+MASTER_SITES=	https://download.osgeo.org/proj/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://proj.org/

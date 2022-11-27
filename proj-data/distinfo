@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (proj-data-1.4.tar.gz) = 0531d9bd385d3a0beeb7ffd3c5aeb9f3f8d3f1a93de6210095623172d5a1edc0
-SHA512 (proj-data-1.4.tar.gz) = 9c3fdf2851ef003309ae62348be785abd31c15d15ceb28ea58804852e40e17cd0f5b45cf5ab788343111e12437c1bb446355a71cefc327ff175971b9a69f0e86
-Size (proj-data-1.4.tar.gz) = 581536964 bytes
+BLAKE2s (proj-data-1.8.tar.gz) = f9963bfc4add47dc620e7da133848232590fa990aadbd2aeb70a18a9fdea286a
+SHA512 (proj-data-1.8.tar.gz) = 884425c3bc09a39cb1b611264ccaa17940f4779f4e0d6023306f6b82622cdd0a2e5970a79018d499d323640acb72560789ef127ff4e0c712fa3679e5cfeb34bc
+Size (proj-data-1.8.tar.gz) = 586765549 bytes
