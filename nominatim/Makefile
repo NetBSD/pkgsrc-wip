@@ -2,6 +2,7 @@
 
 DISTNAME=	Nominatim-3.2.0
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://www.nominatim.org/release/
 EXTRACT_SUFX=	.tar.bz2
