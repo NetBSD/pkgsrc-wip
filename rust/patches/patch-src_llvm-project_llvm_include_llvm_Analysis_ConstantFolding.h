@@ -12,6 +12,6 @@ Fix SunOS CS conflict not handled by include/llvm-c/DataTypes.h
 +#undef CS
 +#endif
 +
+ #include <stdint.h>
+ 
  namespace llvm {
- class APInt;
- template <typename T> class ArrayRef;

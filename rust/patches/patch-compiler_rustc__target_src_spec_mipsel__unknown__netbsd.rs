@@ -4,13 +4,14 @@ Add target spec for NetBSD/mipsel.
 
 --- compiler/rustc_target/src/spec/mipsel_unknown_netbsd.rs.orig	2022-11-06 18:16:59.750850353 +0000
 +++ compiler/rustc_target/src/spec/mipsel_unknown_netbsd.rs	2022-11-06 18:14:10.846209169 +0000
-@@ -0,0 +1,19 @@
+@@ -0,0 +1,20 @@
 +use crate::abi::Endian;
 +use crate::spec::{Target, TargetOptions};
 +
 +pub fn target() -> Target {
 +    let mut base = super::netbsd_base::opts();
 +    base.max_atomic_width = Some(32);
++    base.cpu = "mips3".into();
 +
 +    Target {
 +	llvm_target: "mipsel-unknown-netbsd".into(),

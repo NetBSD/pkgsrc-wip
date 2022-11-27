@@ -5,15 +5,15 @@ Use @PREFIX@, not $ORIGIN in rpath.
 
 --- src/bootstrap/builder.rs.orig	2022-06-27 13:37:07.000000000 +0000
 +++ src/bootstrap/builder.rs
-@@ -743,7 +743,6 @@ impl<'a> Builder<'a> {
+@@ -742,7 +742,6 @@ impl<'a> Builder<'a> {
                  install::Clippy,
                  install::Miri,
                  install::Analysis,
 -                install::Src,
                  install::Rustc
              ),
-             Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest, run::BumpStage0),
-@@ -1702,7 +1701,7 @@ impl<'a> Builder<'a> {
+             Kind::Run => describe!(
+@@ -1706,7 +1705,7 @@ impl<'a> Builder<'a> {
                  Some("-Wl,-rpath,@loader_path/../lib")
              } else if !target.contains("windows") {
                  rustflags.arg("-Clink-args=-Wl,-z,origin");

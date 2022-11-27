@@ -1,9 +1,7 @@
 $NetBSD$
 
-Copy execinfo function definitions from openbsd's mod.rs.
-
---- vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2022-05-10 20:59:35.217463943 +0000
-+++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs
+--- vendor/libc-0.2.131/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2022-11-02 16:21:41.000000000 +0000
++++ vendor/libc-0.2.131/src/unix/bsd/netbsdlike/netbsd/mod.rs
 @@ -2971,6 +2971,22 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
