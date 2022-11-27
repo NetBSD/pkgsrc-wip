@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: distinfo,v 1.1 2022/11/26 15:08:20 gdt Exp $
 
 BLAKE2s (proj-data-1.9.tar.gz) = 86a544da9977a62d34cfa86c95740a6b8ee6c20fc3ba872784fa5b7e136d8903
 SHA512 (proj-data-1.9.tar.gz) = 25607137a32c65e906d3f4e64f5e6b0fd5882faf0c4bf458116c582e6438df38cc36e9b6e67498b7d63dceb863f31b3890f04bdb19a1287e6d902a7193221711

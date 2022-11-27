@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.1 2022/11/26 15:08:20 gdt Exp $
 
 DISTNAME=	proj-data-1.9
 CATEGORIES=	geography
