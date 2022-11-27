@@ -818,6 +818,7 @@ SUBDIR+=	eventviews
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	evince
+SUBDIR+=	ewm
 SUBDIR+=	exabgp4
 SUBDIR+=	exact-image
 SUBDIR+=	exhume

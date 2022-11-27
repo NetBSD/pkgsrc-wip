@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/ewm
+bin/swpb
+man/man1/ewm.1
