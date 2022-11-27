@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2019/02/27 14:29:58 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2022/11/27 13:30:45 gdt Exp $
 
-# Do not merge to pkgsrc without gdt approval; I have not yet
-# evaluated how much this will break.
-VERSION_BASE=	7.2.1
-VERSION_RC=
+VERSION_BASE=	8.1.1
+#VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
+#PKGREVISION=	0
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
@@ -17,12 +15,9 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://proj.org/
 COMMENT=	Cartographic projection software
+LICENSE=	mit
 
 .include "../../mk/bsd.prefs.mk"
-
-# \todo: Add pdf manual.
-
-LICENSE=		mit
 
 PREV_PKGPATH=		misc/proj
 
