@@ -1839,7 +1839,6 @@ SUBDIR+=	iosevka-slab-ttf
 SUBDIR+=	iosevka-ttf
 SUBDIR+=	ipamjfont
 SUBDIR+=	ipax0208font-ttf
-SUBDIR+=	ipget
 SUBDIR+=	ipsvd
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
