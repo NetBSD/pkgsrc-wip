@@ -10,6 +10,9 @@ HOMEPAGE=	https://github.com/ipfs/ipget/
 COMMENT=	Retrieve files over IPFS and save them locally
 LICENSE=	mit
 
+# does not support go 1.19 yet (as of 0.9.1)
+GO_VERSION_DEFAULT=	118
+
 USE_LANGUAGES=	# none
 
 .include "go-modules.mk"
