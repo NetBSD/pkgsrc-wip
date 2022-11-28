@@ -3644,8 +3644,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/subword.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/subword.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/ts-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/ts-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/typescript-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/typescript-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/verilog-mode.el.gz
