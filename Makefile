@@ -3963,7 +3963,6 @@ SUBDIR+=	py-gwcs
 SUBDIR+=	py-gwsurrogate
 SUBDIR+=	py-hal-cgp
 SUBDIR+=	py-halp
-SUBDIR+=	py-hamcrest
 SUBDIR+=	py-hamilton
 SUBDIR+=	py-hamnonlineng
 SUBDIR+=	py-hamopy
