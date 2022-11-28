@@ -32,6 +32,8 @@ PLIST_VARS+=		webkit x11
 PY_PATCHPLIST=		yes
 PYTHON_SELF_CONFLICT=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 SUBST_CLASSES+=		x11lib
 SUBST_STAGE.x11lib=	pre-configure
 SUBST_MESSAGE.x11lib=	Fixing rpath for X11 and pulseaudio libraries.
