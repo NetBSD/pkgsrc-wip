@@ -61,5 +61,5 @@ post-install:
 
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../wip/libtermkey/buildlink3.mk"
+.include "../../devel/libtermkey/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
