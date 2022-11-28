@@ -5170,7 +5170,6 @@ SUBDIR+=	rset
 SUBDIR+=	rsget
 SUBDIR+=	rslack
 SUBDIR+=	rsound
-SUBDIR+=	rspamd31
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
