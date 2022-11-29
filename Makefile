@@ -2193,6 +2193,7 @@ SUBDIR+=	libpusb
 SUBDIR+=	libqd
 SUBDIR+=	libquantum
 SUBDIR+=	libraw1394
+SUBDIR+=	libreddit
 SUBDIR+=	libre
 SUBDIR+=	librem
 SUBDIR+=	libreoffice-git
