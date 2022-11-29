@@ -558,6 +558,7 @@ SUBDIR+=	crispy-doom
 SUBDIR+=	crm114
 SUBDIR+=	cromagrally
 SUBDIR+=	cronolog-devel
+SUBDIR+=	cropsr
 SUBDIR+=	cross-binutils
 SUBDIR+=	crossguid
 SUBDIR+=	crossroads-io
