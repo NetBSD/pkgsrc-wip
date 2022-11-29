@@ -4707,7 +4707,6 @@ SUBDIR+=	py-smell
 SUBDIR+=	py-smi
 SUBDIR+=	py-smop
 SUBDIR+=	py-snakemake
-SUBDIR+=	py-snappy
 SUBDIR+=	py-snmp
 SUBDIR+=	py-sode
 SUBDIR+=	py-sofa
