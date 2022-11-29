@@ -5,6 +5,8 @@
 PKGNAME=	${PYPKGPREFIX}-qt5-${DISTNAME:S/_src//:tl}
 COMMENT=	QScintilla -- Python bindings
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../wip/py-sip6
+
 BUILD_DIRS=	Python
 PY_PATCHPLIST=	yes
 
@@ -20,11 +22,10 @@ pre-configure:
 do-build:
 	cd ${WRKSRC}/Python && ${CP} pyproject-qt5.toml pyproject.toml && sip-install
 
-DEPENDS+=       ${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
+DEPENDS+=       ${PYPKGPREFIX}-qt-builder-[0-9]*:../../wip/py-qt-builder
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../x11/py-sip5/buildlink3.mk"
 .include "../../wip/py-qt5/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=${PKGVERSION_NOREV}
 .include "../../wip/qt5-qscintilla/buildlink3.mk"
