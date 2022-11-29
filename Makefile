@@ -4552,6 +4552,7 @@ SUBDIR+=	py-qnet
 SUBDIR+=	py-qrng
 SUBDIR+=	py-qstylizer
 SUBDIR+=	py-qsymm
+SUBDIR+=	py-qt-builder
 SUBDIR+=	py-qt-thread-updater
 SUBDIR+=	py-qt5
 SUBDIR+=	py-qt5-qscintilla
