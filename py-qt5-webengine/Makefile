@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	PyQtWebEngine-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.5
+PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.6
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQtWebEngine/}
 
@@ -10,35 +10,21 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqtwebengine/
 COMMENT=	Python module for QtWebEngine (Chromium-based)
 LICENSE=	gnu-gpl-v3
 
-.include "../../lang/python/pyversion.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../wip/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../wip/py-qt-builder
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../wip/py-qt5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}/PyQt5
-CONFIGURE_ARGS+=	--pyqt-sipdir ${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
-CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
-CONFIGURE_ARGS+=	--sip ${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
-CONFIGURE_ARGS+=	--apidir ${PREFIX}/qt5/qsci${PYVERSSUFFIX}
-CONFIGURE_ARGS+=	--verbose
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
-PY_PATCHPLIST=		yes
-
-INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-                ${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
-
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../lang/python/extension.mk"
-.include "../../x11/py-sip/buildlink3.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
