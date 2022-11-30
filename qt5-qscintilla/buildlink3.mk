@@ -7,7 +7,7 @@ QT5_QSCINTILLA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=2.11.2
 BUILDLINK_ABI_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=2.11.5nb5
-BUILDLINK_PKGSRCDIR.qt5-qscintilla?=	../../x11/qt5-qscintilla
+BUILDLINK_PKGSRCDIR.qt5-qscintilla?=	../../wip/qt5-qscintilla
 
 .include "../../mk/bsd.fast.prefs.mk"
 
