@@ -11,6 +11,4 @@ PLIST_VARS+=		dbus
 PLIST.dbus=		yes
 .include "../../sysutils/dbus-python-common/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--no-python-dbus
 .endif
