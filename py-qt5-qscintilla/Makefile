@@ -6,26 +6,19 @@ PKGNAME=	${PYPKGPREFIX}-qt5-${DISTNAME:S/_src//:tl}
 COMMENT=	QScintilla -- Python bindings
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../wip/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../wip/py-qt-builder
 
-BUILD_DIRS=	Python
-PY_PATCHPLIST=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 
-MAKE_FLAGS+=		TARGET=Qsci.la TARGETD=Qsci.la TARGETL=Qsci.la
-INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
-LIBS+=			-lqscintilla2
-MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}\ ${LIBS:Q}
+WHEEL_NAME=	${DISTNAME:S/_src//}
 
-# Mumble, "USE_TOOLS+=qmake".
+post-extract:
+	cd ${WRKSRC} && ${CP} pyproject-qt5.toml pyproject.toml
+
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
-do-build:
-	cd ${WRKSRC}/Python && ${CP} pyproject-qt5.toml pyproject.toml && sip-install
-
-DEPENDS+=       ${PYPKGPREFIX}-qt-builder-[0-9]*:../../wip/py-qt-builder
-
 .include "../../lang/python/wheel.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../wip/py-qt5/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt5-qscintilla+=	qt5-qscintilla>=${PKGVERSION_NOREV}
 .include "../../wip/qt5-qscintilla/buildlink3.mk"
