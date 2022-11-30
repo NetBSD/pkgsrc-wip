@@ -4702,6 +4702,7 @@ SUBDIR+=	py-sima
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
 SUBDIR+=	py-singletonify
+SUBDIR+=	py-sip-qt5
 SUBDIR+=	py-sip6
 SUBDIR+=	py-sipvicious
 SUBDIR+=	py-smart-open
