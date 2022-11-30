@@ -16,16 +16,15 @@ COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11 fortran77
+USE_LANGUAGES=		c c++17 fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		cmake bison flex perl pkg-config
-# Due to gmake spaces in filenames, we must use gmake.  An example is
-# "resources/function_help/json/Date and Time".
-# Further, gmake expects files that contain a $ such as "$area" to
-# appear, unsurprisingly, as "$$area" on the RHS of dependency rules.
-# NetBSD make, expects "$$$$area".  While cmake 3.17 produced
-# "$$area", cmake 3.18 produces "$$$$area", perhaps only on NetBSD.
+# Building 3.28.1 fails with BSD make.  One issue seem to be a
+# difference of opinion about quoting of $, with gmake wanting
+# "$$area" vs bmake perhaps wanting "$$$$area".  Another is filenames
+# with spaces, which are \-quoted in Makefiles, but bmake sees them as
+# separate files.
 USE_TOOLS+=		gmake
 
 PLIST_SRC=		PLIST
