@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5_sip/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/PyQt5_sip/
 COMMENT=	Qt5 support for sip
-LICENSE=	sip-license
+LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 
