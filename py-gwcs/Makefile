@@ -13,8 +13,8 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../wip/py-astropy
-DEPENDS+=	${PYPKGPREFIX}-asdf>=2.9.2:../../wip/py-asdf
+DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../math/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-asdf>=2.9.2:../../math/py-asdf
 DEPENDS+=	${PYPKGPREFIX}-numpy>0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-asdf_wcs_schemas>0:../../wip/py-asdf_wcs_schemas
 DEPENDS+=	${PYPKGPREFIX}-asdf_astropy>=0.2.0:../../wip/py-asdf_astropy

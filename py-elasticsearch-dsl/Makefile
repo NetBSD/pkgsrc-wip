@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-elasticsearch>=7.0.0:../../wip/py-elasticsearch
+DEPENDS+=	${PYPKGPREFIX}-elasticsearch>=7.0.0:../../databases/py-elasticsearch
 
 USE_LANGUAGES=	# none
 

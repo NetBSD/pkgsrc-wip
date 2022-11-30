@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.1:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scikit-image>=0.15.0:../../math/py-scikit-image

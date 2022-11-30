@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-imapclient>=2.1.0:../../mail/py-imapclient
 DEPENDS+=	${PYPKGPREFIX}-dateparser>=1.1.1:../../time/py-dateparser
 DEPENDS+=	${PYPKGPREFIX}-mailsuite>=1.6.1:../../mail/py-mailsuite
-DEPENDS+=	${PYPKGPREFIX}-elasticsearch>=7:../../wip/py-elasticsearch
+DEPENDS+=	${PYPKGPREFIX}-elasticsearch>=7:../../databases/py-elasticsearch
 DEPENDS+=	${PYPKGPREFIX}-elasticsearch-dsl>=7.4.0:../../wip/py-elasticsearch-dsl
 DEPENDS+=	${PYPKGPREFIX}-kafka-python>=1.4.4:../../devel/py-kafka-python
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.31.1:../../misc/py-tqdm

@@ -14,7 +14,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.14:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../wip/py-astropy
+DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.2.1:../../graphics/py-Pillow
 DEPENDS+=	opencv-[0-9]*:../../graphics/opencv
