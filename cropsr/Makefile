@@ -16,6 +16,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
+DEPENDS+=	${PYPKGPREFIX}-argparse>=1.4.0:../../devel/py-argparse
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.3.5:../../math/py-pandas
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	CROPSR.py
