@@ -113,6 +113,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.25
 share/emacs/${PKGVERSION}/etc/NEWS.26
 share/emacs/${PKGVERSION}/etc/NEWS.27
 share/emacs/${PKGVERSION}/etc/NEWS.28
+share/emacs/${PKGVERSION}/etc/NEWS.29
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORG-NEWS
@@ -3248,6 +3249,8 @@ share/emacs/${PKGVERSION}/lisp/org/oc-basic.el.gz
 share/emacs/${PKGVERSION}/lisp/org/oc-basic.elc
 share/emacs/${PKGVERSION}/lisp/org/oc-biblatex.el.gz
 share/emacs/${PKGVERSION}/lisp/org/oc-biblatex.elc
+share/emacs/${PKGVERSION}/lisp/org/oc-bibtex.el.gz
+share/emacs/${PKGVERSION}/lisp/org/oc-bibtex.elc
 share/emacs/${PKGVERSION}/lisp/org/oc-csl.el.gz
 share/emacs/${PKGVERSION}/lisp/org/oc-csl.elc
 share/emacs/${PKGVERSION}/lisp/org/oc-natbib.el.gz
@@ -3302,6 +3305,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-crypt.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-crypt.elc
 share/emacs/${PKGVERSION}/lisp/org/org-ctags.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-ctags.elc
+share/emacs/${PKGVERSION}/lisp/org/org-cycle.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-cycle.elc
 share/emacs/${PKGVERSION}/lisp/org/org-datetree.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-datetree.elc
 share/emacs/${PKGVERSION}/lisp/org/org-duration.el.gz
@@ -3314,6 +3319,10 @@ share/emacs/${PKGVERSION}/lisp/org/org-faces.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-faces.elc
 share/emacs/${PKGVERSION}/lisp/org/org-feed.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-feed.elc
+share/emacs/${PKGVERSION}/lisp/org/org-fold-core.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-fold-core.elc
+share/emacs/${PKGVERSION}/lisp/org/org-fold.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-fold.elc
 share/emacs/${PKGVERSION}/lisp/org/org-footnote.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-footnote.elc
 share/emacs/${PKGVERSION}/lisp/org/org-goto.el.gz
@@ -3326,7 +3335,6 @@ share/emacs/${PKGVERSION}/lisp/org/org-indent.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-indent.elc
 share/emacs/${PKGVERSION}/lisp/org/org-inlinetask.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-inlinetask.elc
-share/emacs/${PKGVERSION}/lisp/org/org-install.el
 share/emacs/${PKGVERSION}/lisp/org/org-keys.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-keys.elc
 share/emacs/${PKGVERSION}/lisp/org/org-lint.el.gz
@@ -3347,6 +3355,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-num.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-num.elc
 share/emacs/${PKGVERSION}/lisp/org/org-pcomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-pcomplete.elc
+share/emacs/${PKGVERSION}/lisp/org/org-persist.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-persist.elc
 share/emacs/${PKGVERSION}/lisp/org/org-plot.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-plot.elc
 share/emacs/${PKGVERSION}/lisp/org/org-protocol.el.gz
