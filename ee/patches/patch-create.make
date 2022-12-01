@@ -64,7 +64,7 @@ Use local ncurses rather than ee's own implementation.
  
  curses :	ee.c
 -	cc ee.c -o ee \$(CFLAGS) -lcurses 
-+	cc ee.c -o ee \$(CFLAGS) \$(CFLAGS) \$(LDFLAGS) -lncurses
++	cc ee.c -o ee \$(CFLAGS) \$(LDFLAGS) -lncurses
  
  ee :	ee.o new_curse.o
  	cc -o ee ee.o new_curse.o \$(CFLAGS) 
