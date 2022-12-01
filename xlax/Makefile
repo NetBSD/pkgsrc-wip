@@ -43,7 +43,6 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"         # strlcpy()
-LDFLAGS+=   -lbsd
 .include "../../devel/libbsd/buildlink3.mk"
 .endif
 
