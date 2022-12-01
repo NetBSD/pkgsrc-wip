@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	bsdfetch-20221123
+DISTNAME=	bsdfetch-0.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jhx0/}
-GITHUB_TAG=	c75e286bec960d00f71cb166e59c2af7a71c8835
-DIST_SUBDIR=	${PKGNAME_NOREV}
+GITHUB_TAG=	9840c3153fcf49150ebcee94f527f4ebcc0b8c1b
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://github.com/jhx0/bsdfetch/
