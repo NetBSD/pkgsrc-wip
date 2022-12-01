@@ -51,12 +51,20 @@ Use local ncurses rather than ee's own implementation.
  fi
  
  # check if this is a SunOS system
-@@ -267,7 +240,7 @@ echo "all :	$TARGET" >> make.local
+@@ -261,13 +234,15 @@ echo "DEFINES =	$termio $terminfo_exists
+ echo "" >> make.local
+ echo "CFLAGS =	$HAS_UNISTD $HAS_STDARG $HAS_STDLIB $HAS_CTYPE $HAS_SYS_IOCTL $HAS_SYS_WAIT $five_lib $five_include $select_hdr $other_cflags $termcap_exists" >> make.local
+ echo "" >> make.local
++echo "LDFLAGS =	$LDFLAGS" >> make.local
++echo "" >> make.local
+ echo "" >> make.local
+ echo "all :	$TARGET" >> make.local
+ 
  cat  >> make.local << EOF
  
  curses :	ee.c
 -	cc ee.c -o ee \$(CFLAGS) -lcurses 
-+	cc ee.c -o ee \$(CFLAGS) \$(NCURSES_CFLAGS) \$(NCURSES_LDFLAGS) -lncurses
++	cc ee.c -o ee \$(CFLAGS) \$(CFLAGS) \$(LDFLAGS) -lncurses
  
  ee :	ee.o new_curse.o
  	cc -o ee ee.o new_curse.o \$(CFLAGS) 
