@@ -2,6 +2,7 @@
 
 DISTNAME=	PyQt5-5.15.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 
@@ -11,8 +12,9 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/intro
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../wip/py-sip6
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../wip/py-sip-qt5
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../wip/py-qt-builder
+
+DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../wip/py-sip-qt5
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
