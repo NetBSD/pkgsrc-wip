@@ -1,6 +1,6 @@
 $NetBSD$
 
-Use local ncurses rather then ee's own implementation.
+Use local ncurses rather than ee's own implementation.
 
 --- create.make.orig	2002-09-23 04:18:30.000000000 +0000
 +++ create.make
@@ -56,7 +56,7 @@ Use local ncurses rather then ee's own implementation.
  
  curses :	ee.c
 -	cc ee.c -o ee \$(CFLAGS) -lcurses 
-+	cc ee.c -o ee \$(CFLAGS) `@PREFIX@/bin/pkg-config --cflags --libs ncurses`
++	cc ee.c -o ee \$(CFLAGS) \$(NCURSES_CFLAGS) \$(NCURSES_LDFLAGS) -lncurses
  
  ee :	ee.o new_curse.o
  	cc -o ee ee.o new_curse.o \$(CFLAGS) 

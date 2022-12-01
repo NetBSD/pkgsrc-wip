@@ -12,14 +12,10 @@ HOMEPAGE=	https://www.ucl.ac.uk/~ccaabaa/is/unix/ee.htm
 COMMENT=	EasyEdit, a classic curses text editor
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes     # fixterm()
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths+=	create.make
-SUBST_VARS.paths=	PREFIX
-SUBST_MESSAGE.paths=	Setting default pkg-config's path.
+MAKE_FLAGS+=	NCURSES_CFLAGS=-I${BUILDLINK_PREFIX.ncurses}/include
+MAKE_FLAGS+=	NCURSES_LDFLAGS=-L${BUILDLINK_PREFIX.ncurses}/lib
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
