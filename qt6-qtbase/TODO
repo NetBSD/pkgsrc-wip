@@ -1,3 +1,0 @@
- - test builds for Darwin
- - remove unneeded stuff in makefiles from qt5
- - reuse prefix definition from ../qt6/Makefile.common
