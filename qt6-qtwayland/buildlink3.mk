@@ -16,8 +16,8 @@ BUILDLINK_LIBDIRS.qt6-qtwayland+=	qt6/plugins/wayland-shell-integration
 
 
 .include "../../devel/wayland/buildlink3.mk"
-.include "../../wip/qt6-qtbase/buildlink3.mk"
-.include "../../wip/qt6-qtdeclarative/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# QT6_QTWAYLAND_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-qt6-qtwayland

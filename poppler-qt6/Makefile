@@ -27,6 +27,6 @@ BUILD_DIRS=		qt6/src
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/poppler-qt6.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../wip/qt6-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
