@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	e6ef48a9d4e506755058cf8aadafaf6820228e17
-PKGNAME=	got-portable-${PKGVER}
-PKGVER=		0.77
+DISTNAME=	got-portable-${PKGVER}
+PKGVER=		0.79
 CATEGORIES=	devel
-MASTER_SITES=	https://repo.or.cz/got-portable.git/snapshot/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ThomasAdam/}
+GITHUB_TAG=	ba229487d6a55dee6ba3c2cc596cf0e589491ce9
 
 MAINTAINER=	vms@retrobsd.ddns.net
 HOMEPAGE=	https://gameoftrees.org/
@@ -19,13 +19,11 @@ ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	FreeBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
-USE_TOOLS+=		pkg-config autoconf automake autoreconf
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	yacc pkg-config autoconf
+USE_TOOLS+=	automake autoreconf
+GNU_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-
-shortdist=	"`${ECHO} ${DISTNAME} | ${CUT} -c 1-7`"
-WRKSRC=		${WRKDIR}/got-portable-${shortdist}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,10 +33,10 @@ pre-configure:
 .if ${OPSYS} == "Linux"
 # compatibility macros and functions for Linux.
 .include "../../devel/libbsd/buildlink3.mk"
-.include "../../devel/libmd/buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=	HB_PREFIX=${PREFIX}
 # define uuid library to use
 .include "../../devel/ossp-uuid/buildlink3.mk"
 .else
