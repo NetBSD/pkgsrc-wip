@@ -88,6 +88,7 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
+.include "../../lang/python/pyversion.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 ##.include "../../devel/qjson/buildlink3.mk"
