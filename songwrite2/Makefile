@@ -36,7 +36,7 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR} --prefix=${PREFIX}
 	${INSTALL_MAN} ${WRKSRC}/manpage/man1/songwrite2.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../print/evince3/buildlink3.mk"
+.include "../../print/evince/buildlink3.mk"
 DEPENDS+=	timidity-[0-9]*:../../audio/timidity
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 .include "../../graphics/cairo/buildlink3.mk"
