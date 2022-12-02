@@ -20,5 +20,5 @@ PYDISTUTILSPKG=	yes
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../x11/py-qt4/buildlink3.mk"
+#.include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
