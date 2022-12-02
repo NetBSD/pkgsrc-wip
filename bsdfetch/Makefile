@@ -15,6 +15,12 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-*
 ONLY_FOR_PLATFORM+=	OpenBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
+CFLAGS+=	-Wall -Wunused -Wextra
+CFLAGS+=	-Wshadow -pedantic
+
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+
 INSTALLATION_DIRS+=	bin
 
 do-install:
