@@ -2698,6 +2698,7 @@ SUBDIR+=	nullpop
 SUBDIR+=	num-utils
 SUBDIR+=	numactl
 SUBDIR+=	nuppelvideo
+SUBDIR+=	nushell
 SUBDIR+=	nuspell
 SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
