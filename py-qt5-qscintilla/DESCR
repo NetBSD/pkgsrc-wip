@@ -1,3 +1,0 @@
-This package contains python bindings for QScintilla
-(x11/qt5-qscintilla).  (Qscintilla is a Qt port of Neil Hodgson's
-scintilla(devel/scintilla) C++ editor control.)
