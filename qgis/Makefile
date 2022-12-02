@@ -31,7 +31,6 @@ PLIST_SRC=		PLIST
 
 DEPENDS+=		qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sip6-[0-9]*:../../wip/py-sip6
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sip-qt5-[0-9]*:../../wip/py-sip-qt5
 TOOL_DEPENDS+=		${PYPKGPREFIX}-qt-builder-[0-9]*:../../wip/py-qt-builder
 DEPENDS+=		${PYPKGPREFIX}-qt5-[0-9]*:../../wip/py-qt5
 DEPENDS+=		${PYPKGPREFIX}-qt5-qscintilla-[0-9]*:../../wip/py-qt5-qscintilla
