@@ -1,1 +1,3 @@
-The sip extension module provides support for the PyQt5 package.
+This packages contains a sip extension module, intended for use by
+x11/py-qt5.  (The sip module is used at runtime, rather than only at
+build time like sip.)
