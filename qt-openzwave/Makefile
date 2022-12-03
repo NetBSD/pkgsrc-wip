@@ -8,7 +8,7 @@ VERSION=	20200602.0
 DISTNAME=	qt-openzwave-${VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openzwave/}
 CATEGORIES=	comms
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenZWave/qt-openzwave
 COMMENT=	Daemon and MQTT interface for Z-Wave controller
 LICENSE=	gnu-lgpl-v3
