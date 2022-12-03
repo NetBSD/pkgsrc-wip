@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	fq-0.0.2
+DISTNAME=	fq-0.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wader/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,8 +10,9 @@ HOMEPAGE=	https://github.com/wader/fq/
 COMMENT=	jq for binary formats
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+GO_BUILD_PATTERN+=	.
 
 .include "go-modules.mk"
+
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
