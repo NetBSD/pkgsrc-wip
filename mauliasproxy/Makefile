@@ -7,9 +7,9 @@ CATEGORIES=	net
 MASTER_SITES=	https://mau.dev/tulir/mauliasproxy/-/archive/v${VERSION}/
 
 # (Feel more than free to improve the package without asking me.)
-MAINTAINER=	gdt@lexort.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://mau.dev/tulir/mauliasproxy/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Maunium Matrix room alias proxy
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	go
