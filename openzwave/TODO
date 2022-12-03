@@ -1,4 +1,6 @@
-- Send patches upstream.
+- Resolve github vs files on $MASTER_SITES.
+
+- Update to newer upstream
 
 - Resolve "configuration file" issue (etc contents should perhaps be
   in share)
