@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITLAB:=spritely/guile-goblins/-/archive/v${VERSION}/}
 
-MAINTAINER=	gdt@lexort.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://spritely.institute/goblins/
 COMMENT=	Distributed programming system with local transactions
 LICENSE=	apache-2.0
