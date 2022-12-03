@@ -1,8 +1,8 @@
 $NetBSD$
 
-RMD160 (dasht-2.2.0.tar.gz) = 06a64bbf6c8735a8160239998a6d66ebbd27bf22
-SHA512 (dasht-2.2.0.tar.gz) = c6f8963dda52fc590a1570e81256a8da0534cdec08d404c71437b475192145d2dd4c1445d343db4e1688ba57a373695243d8269c048181ac8bc4e873623c7cbd
-Size (dasht-2.2.0.tar.gz) = 23282 bytes
+BLAKE2s (dasht-2.4.0.tar.gz) = 2e8efba8cadfc49bf5df481f845aad5c0c6947b8b53fc8b9d0341b020b94cf74
+SHA512 (dasht-2.4.0.tar.gz) = 4810fa05df78179d268bd2d2bbe4d821ef7330e837aa1b76034edd79add34e4087d6a0983c34504f905adf0ccee9515c88e70cbe330cdc68c5be33deb12a3166
+Size (dasht-2.4.0.tar.gz) = 23957 bytes
 SHA1 (patch-bin_dasht) = d4d49432db853ffeeb7b1ff610da074d297be9d7
 SHA1 (patch-bin_dasht-docsets-install) = 544471842df43f8328bc187c0d2de78e335e731b
 SHA1 (patch-bin_dasht-docsets-remove) = e003e74fdf46a5756a8214bc3ddcf1a839ce1b96
