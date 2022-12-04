@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} build
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} install
