@@ -1,15 +1,15 @@
 # $NetBSD$
 
-DISTNAME=	bsa-2022.03.19
+DISTNAME=	bsa-2022.06.26
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Edilbert/}
 GITHUB_PROJECT=	BSA
-GITHUB_TAG=	2dcb832724cab15b452798cf1dbcc66ea73198b8
+GITHUB_TAG=	c79fe2ba896d94efa5fcea3549c62cdd88534435
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Edilbert/BSA
 COMMENT=	Cross-assembler for 6502-like processors
-#LICENSE=	unknown
+LICENSE=	public-domain
 
 USE_LANGUAGES=	c
 
