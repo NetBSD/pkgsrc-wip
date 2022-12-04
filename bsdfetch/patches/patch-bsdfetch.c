@@ -136,7 +136,7 @@ Stability and portability fixes.
  
  		temperature_size = sizeof(buf);
  		if(sysctlbyname(buf, &temperature, &temperature_size, NULL, 0) == -1)
-@@ -171,17 +179,14 @@ static void get_cpu() {
+@@ -171,19 +179,16 @@ static void get_cpu() {
  	if(sysctl(mib, 5, &sensors, &size, NULL, 0) < 0)
  		return;
  
@@ -150,11 +150,14 @@ Stability and portability fixes.
  static void get_loadavg() {
 -	char tmp[20] = {0};
 -	double *lavg = NULL;
--
--	lavg = malloc(sizeof(double) * 3);
 +	double lavg[3];
  
- 	(void)getloadavg(lavg, -1);
+-	lavg = malloc(sizeof(double) * 3);
+-
+-	(void)getloadavg(lavg, -1);
++	(void)getloadavg(lavg, 3);
+ 
+ 	_SILENT sprintf(tmp, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
  
 @@ -191,120 +196,45 @@ static void get_loadavg() {
  }
