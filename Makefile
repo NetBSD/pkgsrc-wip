@@ -1998,7 +1998,6 @@ SUBDIR+=	kubeconform
 SUBDIR+=	kubectx
 SUBDIR+=	kubepug
 SUBDIR+=	kubeval
-SUBDIR+=	kubo
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kustomize
