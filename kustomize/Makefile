@@ -5,7 +5,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes-sigs/}
 GITHUB_TAG=	kustomize/v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/kubernetes-sigs/kustomize
 COMMENT=	Customization of kubernetes YAML configurations
 LICENSE=	apache-2.0
