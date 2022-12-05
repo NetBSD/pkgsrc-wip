@@ -59,27 +59,29 @@ Stability and portability fixes.
  int color_flag = 1;
  
  static void die(int err_num, int line);
-@@ -95,57 +97,72 @@ static void show(const char *entry, cons
+@@ -95,57 +97,76 @@ static void show(const char *entry, cons
  }
  
  static void get_shell() {
 -	show("Shell", getenv("SHELL"));
 +	char *sh;
-+	char *lsh;
++	char *p;
++	const char c = '/';
 +	uid_t uid = geteuid();
 +	struct passwd *pw = getpwuid(uid);
-+	const char ch = '/';
 +
 +	if (getenv("SHELL")) {
 +		sh = getenv("SHELL");
 +	} else {
-+		if (!pw)
-+			die(errno, __LINE__);
-+		sh = pw->pw_shell;
++		if ((sh = getenv("SHELL")) == NULL || *sh == '\0') {
++			if (pw == NULL)
++				die(errno, __LINE__);
++			sh = pw->pw_shell;
++		}
 +	}
 +
-+	if ((lsh = strrchr(sh, ch)))
-+		sh = lsh + 1;
++	if ((p = strrchr(sh, c)) != NULL && *(p+1) != '\0')
++		sh = ++ p;
 +
 +	show("Shell", sh);
  }
@@ -93,10 +95,12 @@ Stability and portability fixes.
 +	if (getenv("USER")) {
 +		user = getenv("USER");
 +	} else {
-+		if (!pw)
-+			die(errno, __LINE__);
-+		user = pw->pw_name;
++		if ((user = getenv("USER")) == NULL || *user == '\0') {
++			if (pw == NULL)
++				die(errno, __LINE__);
++			user = pw->pw_name;
 +		}
++	}
 +
 +	show("User", user);
  }
@@ -114,10 +118,10 @@ Stability and portability fixes.
 -
 -	if(sysctlbyname("hw.ncpu", &num_cpu, &num_cpu_size, NULL, 0) == -1)
 -		die(errno, __LINE__);
- 
+-
 -#if defined(__NetBSD__)
 -	FILE *fc = NULL;
--
+ 
 -	fc = popen("awk 'BEGIN{FS=\":\"} /model name/ { print $2; exit }' "
 -                   "/proc/cpuinfo | sed -e 's/ @//' -e 's/^ *//g' -e 's/ *$//g' "
 -                   "| head -1 | tr -d '\\n'",
@@ -161,7 +165,7 @@ Stability and portability fixes.
  		if(sysctlbyname(buf, &temperature, &temperature_size, NULL, 0) == -1)
  			return;
  
-@@ -158,6 +175,7 @@ static void get_cpu() {
+@@ -158,6 +179,7 @@ static void get_cpu() {
  	int mib[5];
  	char temp[10] = {0};
  	size_t size = 0;
@@ -169,7 +173,7 @@ Stability and portability fixes.
  	struct sensor sensors;
  
  	mib[0] = CTL_HW;
-@@ -167,186 +185,104 @@ static void get_cpu() {
+@@ -167,186 +189,104 @@ static void get_cpu() {
  	mib[4] = 0;
  
  	size = sizeof(sensors);
@@ -188,13 +192,13 @@ Stability and portability fixes.
  static void get_loadavg() {
 -	char tmp[20] = {0};
 -	double *lavg = NULL;
+-
+-	lavg = malloc(sizeof(double) * 3);
 +	double lavg[3] = { 0.0 };
  
--	lavg = malloc(sizeof(double) * 3);
+-	(void)getloadavg(lavg, -1);
 +	(void)getloadavg(lavg, 3);
  
--	(void)getloadavg(lavg, -1);
--
 -	_SILENT sprintf(tmp, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
 +	_SILENT snprintf(tmp, tmp_size, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
  
@@ -363,11 +367,11 @@ Stability and portability fixes.
 -		die(errno, __LINE__);
 -#elif defined(__OpenBSD__) || defined(__DragonFly__)
 -	if(sysctlbyname("hw.physmem", &buf, &buf_size, NULL, 0) == -1)
-+	if (pgsize == -1 || pages == -1)
- 		die(errno, __LINE__);
+-		die(errno, __LINE__);
 -#elif defined(__NetBSD__)
 -	if(sysctlbyname("hw.physmem64", &buf, &buf_size, NULL, 0) == -1)
--		die(errno, __LINE__);
++	if (pgsize == -1 || pages == -1)
+ 		die(errno, __LINE__);
 -#endif
 +	else
 +		buff = (uint64_t)pgsize * (uint64_t)pages;
@@ -394,7 +398,7 @@ Stability and portability fixes.
  	if(gethostname(hostname, host_size_max) == -1)
  		die(errno, __LINE__);
  
-@@ -354,20 +290,12 @@ static void get_hostname() {
+@@ -354,20 +294,12 @@ static void get_hostname() {
  }
  
  static void get_arch() {
@@ -418,7 +422,7 @@ Stability and portability fixes.
  }
  
  static void get_sysinfo() {
-@@ -400,6 +328,10 @@ static void usage() {
+@@ -400,6 +332,10 @@ static void usage() {
  }
  
  int main(int argc, char **argv) {
