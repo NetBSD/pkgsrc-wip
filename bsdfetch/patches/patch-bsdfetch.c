@@ -33,7 +33,7 @@ Stability and portability fixes.
  #endif
  
  #define _PRG_NAME "bsdfetch"
-@@ -45,20 +54,13 @@
+@@ -45,20 +54,12 @@
  
  #define _SILENT (void)
  
@@ -51,15 +51,14 @@ Stability and portability fixes.
 -
  typedef unsigned int uint;
  
-+char tmp[256] = {0};
 +char buf[256] = {0};
-+size_t tmp_size = 0;
 +size_t buf_size = 0;
 +
++int ret = 0;
  int color_flag = 1;
  
  static void die(int err_num, int line);
-@@ -95,69 +97,89 @@ static void show(const char *entry, cons
+@@ -95,70 +96,96 @@ static void show(const char *entry, cons
  }
  
  static void get_shell() {
@@ -115,23 +114,23 @@ Stability and portability fixes.
 -	char tmp[100] = {0};
 -
 -	num_cpu_size = sizeof(num_cpu);
- 
+-
 -	if(sysctlbyname("hw.ncpu", &num_cpu, &num_cpu_size, NULL, 0) == -1)
-+	ncpu = sysconf(_SC_NPROCESSORS_ONLN);
-+	ncpu_max = sysconf(_SC_NPROCESSORS_CONF);
-+	if (ncpu_max <= 0 || ncpu <=0)
- 		die(errno, __LINE__);
- 
+-		die(errno, __LINE__);
+-
 -#if defined(__NetBSD__)
 -	FILE *fc = NULL;
--
+ 
 -	fc = popen("awk 'BEGIN{FS=\":\"} /model name/ { print $2; exit }' "
 -                   "/proc/cpuinfo | sed -e 's/ @//' -e 's/^ *//g' -e 's/ *$//g' "
 -                   "| head -1 | tr -d '\\n'",
 -                   "r");
 -	if (fc == NULL)
--		die(errno, __LINE__);
--
++	ncpu = sysconf(_SC_NPROCESSORS_ONLN);
++	ncpu_max = sysconf(_SC_NPROCESSORS_CONF);
++	if (ncpu_max <= 0 || ncpu <= 0)
+ 		die(errno, __LINE__);
+ 
 -	fgets(cpu_type, sizeof(cpu_type), fc);
 -	pclose(fc);
 -#else
@@ -147,9 +146,12 @@ Stability and portability fixes.
  	show("CPU", cpu_type);
  
 -	_SILENT sprintf(tmp, "%d", num_cpu);
-+	_SILENT snprintf(tmp, MAXCPUS, "%d of %d processors online", ncpu, ncpu_max);
++	ret = snprintf(buf, MAXCPUS, "%d of %d processors online", ncpu, ncpu_max);
++	if (ret < 0 || (size_t) ret >= MAXCPUS)
++		die(errno, __LINE__);
  
- 	show("Cores", tmp);
+-	show("Cores", tmp);
++	show("Cores", buf);
  
  #if defined(__FreeBSD__) || defined(__MidnightBSD__) || defined(__DragonFly__)
  	for(uint i = 0; i < num_cpu; i++) {
@@ -158,6 +160,7 @@ Stability and portability fixes.
 -		int temperature = 0;
 +		size_t temp_size = 0;
 +		int temp = 0;
++		int ret_t = 0;
  
 -		sprintf(buf, "dev.cpu.%d.temperature", i);
 +		temp_size = sizeof(buf);
@@ -168,11 +171,14 @@ Stability and portability fixes.
 +		if(sysctlbyname(buf, &temp, &temp_size, NULL, 0) == -1)
  			return;
  
- 		_SILENT fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
+-		_SILENT fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
++		ret_t = fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
  						COLOR_GREEN, COLOR_RESET,
  						COLOR_RED, i + 1, COLOR_RESET,
 -						(temperature * 0.1) - CELSIUS);
-+						(temp * 0.1) - CELSIUS);
++						(temp * 0.1) - CELSIUS;
++		if (ret_t < 0 || (size_t) ret_t >= temp_size)
++			die(errno, __LINE__);
  	}
  #elif defined(__OpenBSD__)
  	int mib[5];
@@ -180,9 +186,11 @@ Stability and portability fixes.
  	size_t size = 0;
 +	size_t temp_size = 0;
  	struct sensor sensors;
++	int ret_t = 0;
  
  	mib[0] = CTL_HW;
-@@ -167,186 +189,104 @@ static void get_cpu() {
+ 	mib[1] = HW_SENSORS;
+@@ -167,186 +194,115 @@ static void get_cpu() {
  	mib[4] = 0;
  
  	size = sizeof(sensors);
@@ -192,7 +200,9 @@ Stability and portability fixes.
  		return;
  
 -	_SILENT sprintf(temp, "%d °C", (int)((float)(sensors.value - 273150000) / 1E6));
-+	_SILENT snprintf(temp, temp_size, "%d °C", (int)((float)(sensors.value - 273150000) / 1E6));
++	ret_t = snprintf(temp, temp_size, "%d °C", (int)((float)(sensors.value - 273150000) / 1E6));
++	if (ret_t < 0 || (size_t) ret_t >= temp_size)
++		die(errno, __LINE__);
  
  	show("CPU Temp", temp);
  #endif
@@ -201,17 +211,20 @@ Stability and portability fixes.
  static void get_loadavg() {
 -	char tmp[20] = {0};
 -	double *lavg = NULL;
+-
+-	lavg = malloc(sizeof(double) * 3);
 +	double lavg[3] = { 0.0 };
  
--	lavg = malloc(sizeof(double) * 3);
+-	(void)getloadavg(lavg, -1);
 +	(void)getloadavg(lavg, 3);
  
--	(void)getloadavg(lavg, -1);
--
 -	_SILENT sprintf(tmp, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
-+	_SILENT snprintf(tmp, tmp_size, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
++	ret = snprintf(buf, buf_size, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
++	if (ret < 0 || (size_t) ret >= buf_size)
++		die(errno, __LINE__);
  
- 	show("Loadavg", tmp);
+-	show("Loadavg", tmp);
++	show("Loadavg", buf);
  }
  
  static void get_packages() {
@@ -225,9 +238,19 @@ Stability and portability fixes.
 -	  avoids parsing.
 -	*/
 -	f = popen("/usr/sbin/mport list | wc -l | tr -d \"\n \"", "r");
--	if(f == NULL)
--		die(errno, __LINE__);
--
++#if defined(__OpenBSD__) || defined(__NetBSD__)
++	f = popen("/usr/sbin/pkg_info", "r");
++#elif defined(__FreeBSD__) || ( __DragonFly__)
++	f = popen("/usr/sbin/pkg info", "r");
++#elif defined( __MidnightBSD__)
++	f = popen("/usr/sbin/mport list", "r");
++#else
++	fprintf(stderr, "Could not determine BSD variant\n");
++	die(errno, __LINE__);
++#endif
+ 	if(f == NULL)
+ 		die(errno, __LINE__);
+ 
 -	fgets(buf, sizeof(buf), f);
 -	pclose(f);
 -
@@ -286,17 +309,11 @@ Stability and portability fixes.
 -		Still, this works fine.
 -	*/
 -	f = popen("/usr/sbin/pkg_info | wc -l | tr -d \"\n \"", "r");
-+#if defined(__OpenBSD__) || defined(__NetBSD__)
-+	f = popen("/usr/sbin/pkg_info", "r");
-+#elif defined(__FreeBSD__) || ( __DragonFly__)
-+	f = popen("/usr/sbin/pkg info", "r");
-+#elif defined( __MidnightBSD__)
-+	f = popen("/usr/sbin/mport list", "r");
-+#else
-+	fprintf(stderr, "Could not determine BSD variant\n");
-+	die(errno, __LINE__);
-+#endif
- 	if(f == NULL)
+-	if(f == NULL)
++	while (fgets(buf, sizeof buf, f) != NULL)
++		if (strchr(buf, '\n') != NULL)
++			npkg++;
++	if (pclose(f) != 0)
  		die(errno, __LINE__);
  
 -	fgets(buf, sizeof(buf), f);
@@ -314,16 +331,13 @@ Stability and portability fixes.
 -	*/
 -	fp = popen("pkg list | wc -l | tr -d \"\n \"", "r");
 -	if (fp == NULL)
-+	while (fgets(buf, sizeof buf, f) != NULL)
-+		if (strchr(buf, '\n') != NULL)
-+			npkg++;
-+	if (pclose(f) != 0)
++	ret = snprintf(buf, buf_size, "%zu", npkg);
++	if (ret < 0 || (size_t) ret >= buf_size)
  		die(errno, __LINE__);
  
 -	fgets(buf, sizeof(buf), fp);
 -	pclose(fp);
 -
-+	snprintf(buf, buf_size, "%zu", npkg);
  	show("Packages", buf);
 -#endif
  }
@@ -331,7 +345,8 @@ Stability and portability fixes.
  static void get_uptime() {
 -	char buf[100] = {0};
  	int up = 0;
- 	int ret = 0;
+-	int ret = 0;
++	int res = 0;
  	int days = 0;
  	int hours = 0;
  	int minutes = 0;
@@ -343,7 +358,7 @@ Stability and portability fixes.
 -#endif
 -	ret = clock_gettime(CLOCK_UPTIME, &t);
 -	if(ret == -1)
-+	if ((ret = sysctlbyname("kern.boottime", &t, &tsz, NULL, 0)) == -1)
++	if ((res = sysctlbyname("kern.boottime", &t, &tsz, NULL, 0)) == -1)
  		die(errno, __LINE__);
  
 -	up = t.tv_sec;
@@ -355,7 +370,9 @@ Stability and portability fixes.
  	minutes = up / 60;
  
 -	_SILENT sprintf(buf, "%dd %dh %dm", days, hours, minutes);
-+	_SILENT snprintf(buf, buf_size, "%dd %dh %dm", days, hours, minutes);
++	ret = snprintf(buf, buf_size, "%dd %dh %dm", days, hours, minutes);
++	if (ret < 0 || (size_t) ret >= buf_size)
++		die(errno, __LINE__);
  
  	show("Uptime", buf);
  }
@@ -366,18 +383,18 @@ Stability and portability fixes.
  	unsigned long long mem = 0;
 -	char tmp[50] = {0};
 -	size_t buf_size = 0;
+-
+-	buf_size = sizeof(buf);
 +	const long pgsize = sysconf(_SC_PAGESIZE);
 +	const long pages = sysconf(_SC_PHYS_PAGES);
  
--	buf_size = sizeof(buf);
--
 -#if defined(__FreeBSD__) || defined(__MidnightBSD__)
 -	if(sysctlbyname("hw.realmem", &buf, &buf_size, NULL, 0) == -1)
--		die(errno, __LINE__);
--#elif defined(__OpenBSD__) || defined(__DragonFly__)
--	if(sysctlbyname("hw.physmem", &buf, &buf_size, NULL, 0) == -1)
 +	if (pgsize == -1 || pages == -1)
  		die(errno, __LINE__);
+-#elif defined(__OpenBSD__) || defined(__DragonFly__)
+-	if(sysctlbyname("hw.physmem", &buf, &buf_size, NULL, 0) == -1)
+-		die(errno, __LINE__);
 -#elif defined(__NetBSD__)
 -	if(sysctlbyname("hw.physmem64", &buf, &buf_size, NULL, 0) == -1)
 -		die(errno, __LINE__);
@@ -392,9 +409,12 @@ Stability and portability fixes.
 +		mem = buff / 1048576;
  
 -	_SILENT sprintf(tmp, "%llu MB", mem);
-+	_SILENT snprintf(tmp, tmp_size, "%llu MB", mem);
++	ret = snprintf(buf, buf_size, "%llu MB", mem);
++	if (ret < 0 || (size_t) ret >= buf_size)
++		die(errno, __LINE__);
  
- 	show("RAM", tmp);
+-	show("RAM", tmp);
++	show("RAM", buf);
  }
  
  static void get_hostname() {
@@ -407,7 +427,7 @@ Stability and portability fixes.
  	if(gethostname(hostname, host_size_max) == -1)
  		die(errno, __LINE__);
  
-@@ -354,20 +294,12 @@ static void get_hostname() {
+@@ -354,20 +310,12 @@ static void get_hostname() {
  }
  
  static void get_arch() {
@@ -431,12 +451,11 @@ Stability and portability fixes.
  }
  
  static void get_sysinfo() {
-@@ -400,6 +332,10 @@ static void usage() {
+@@ -400,6 +348,9 @@ static void usage() {
  }
  
  int main(int argc, char **argv) {
-+	
-+	tmp_size = sizeof(tmp);    
++
 +	buf_size = sizeof(buf);
 +
  	int is_a_tty = 0;
