@@ -114,23 +114,23 @@ Stability and portability fixes.
 -	char tmp[100] = {0};
 -
 -	num_cpu_size = sizeof(num_cpu);
--
--	if(sysctlbyname("hw.ncpu", &num_cpu, &num_cpu_size, NULL, 0) == -1)
--		die(errno, __LINE__);
--
--#if defined(__NetBSD__)
--	FILE *fc = NULL;
  
--	fc = popen("awk 'BEGIN{FS=\":\"} /model name/ { print $2; exit }' "
--                   "/proc/cpuinfo | sed -e 's/ @//' -e 's/^ *//g' -e 's/ *$//g' "
--                   "| head -1 | tr -d '\\n'",
--                   "r");
--	if (fc == NULL)
+-	if(sysctlbyname("hw.ncpu", &num_cpu, &num_cpu_size, NULL, 0) == -1)
 +	ncpu = sysconf(_SC_NPROCESSORS_ONLN);
 +	ncpu_max = sysconf(_SC_NPROCESSORS_CONF);
 +	if (ncpu_max <= 0 || ncpu <= 0)
  		die(errno, __LINE__);
  
+-#if defined(__NetBSD__)
+-	FILE *fc = NULL;
+-
+-	fc = popen("awk 'BEGIN{FS=\":\"} /model name/ { print $2; exit }' "
+-                   "/proc/cpuinfo | sed -e 's/ @//' -e 's/^ *//g' -e 's/ *$//g' "
+-                   "| head -1 | tr -d '\\n'",
+-                   "r");
+-	if (fc == NULL)
+-		die(errno, __LINE__);
+-
 -	fgets(cpu_type, sizeof(cpu_type), fc);
 -	pclose(fc);
 -#else
@@ -158,27 +158,27 @@ Stability and portability fixes.
 -		size_t temperature_size = 0;
 -		char buf[100] = {0};
 -		int temperature = 0;
+-
+-		sprintf(buf, "dev.cpu.%d.temperature", i);
 +		size_t temp_size = 0;
 +		int temp = 0;
 +		int ret_t = 0;
- 
--		sprintf(buf, "dev.cpu.%d.temperature", i);
++
 +		temp_size = sizeof(buf);
-+		snprintf(buf, temp_size, "dev.cpu.%d.temperature", i);
++		ret_t = snprintf(buf, temp_size, "dev.cpu.%d.temperature", i);
++		if (ret_t < 0 || (size_t) ret_t >= buf_size)
++			die(errno, __LINE__);
  
 -		temperature_size = sizeof(buf);
 -		if(sysctlbyname(buf, &temperature, &temperature_size, NULL, 0) == -1)
 +		if(sysctlbyname(buf, &temp, &temp_size, NULL, 0) == -1)
  			return;
  
--		_SILENT fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
-+		ret_t = fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
+ 		_SILENT fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
  						COLOR_GREEN, COLOR_RESET,
  						COLOR_RED, i + 1, COLOR_RESET,
 -						(temperature * 0.1) - CELSIUS);
 +						(temp * 0.1) - CELSIUS;
-+		if (ret_t < 0 || (size_t) ret_t >= temp_size)
-+			die(errno, __LINE__);
  	}
  #elif defined(__OpenBSD__)
  	int mib[5];
@@ -190,7 +190,7 @@ Stability and portability fixes.
  
  	mib[0] = CTL_HW;
  	mib[1] = HW_SENSORS;
-@@ -167,186 +194,115 @@ static void get_cpu() {
+@@ -167,186 +194,137 @@ static void get_cpu() {
  	mib[4] = 0;
  
  	size = sizeof(sensors);
@@ -205,55 +205,64 @@ Stability and portability fixes.
 +		die(errno, __LINE__);
  
  	show("CPU Temp", temp);
- #endif
- }
+-#endif
+-}
  
- static void get_loadavg() {
+-static void get_loadavg() {
 -	char tmp[20] = {0};
 -	double *lavg = NULL;
--
++#elif defined(__NetBSD__)
++	const char del[] = ".";
++	char *temp = "";
++	int ret_t = 0;
+ 
 -	lavg = malloc(sizeof(double) * 3);
-+	double lavg[3] = { 0.0 };
- 
--	(void)getloadavg(lavg, -1);
-+	(void)getloadavg(lavg, 3);
- 
--	_SILENT sprintf(tmp, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
-+	ret = snprintf(buf, buf_size, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
-+	if (ret < 0 || (size_t) ret >= buf_size)
++	FILE *f = NULL;
++	f = popen("/usr/sbin/envstat | awk '/cpu[0-9]/ {printf $3}'", "r");
++	if (f == NULL)
++		die(errno, __LINE__);
++
++	if (fgets(buf, buf_size, f) != NULL)
++		if ((temp = strtok(buf, del)) != NULL && *temp != '\0')
++	if (pclose(f) != 0)
 +		die(errno, __LINE__);
  
+-	(void)getloadavg(lavg, -1);
++	ret_t = snprintf(buf, buf_size, "%s °C", temp);
++	if (ret_t < 0 || (size_t) ret_t >= buf_size)
++		die(errno, __LINE__);
+ 
+-	_SILENT sprintf(tmp, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
++	show("CPU Temp", buf);
+ 
 -	show("Loadavg", tmp);
-+	show("Loadavg", buf);
++#endif
  }
  
- static void get_packages() {
+-static void get_packages() {
 -#if defined(__MidnightBSD__)
- 	FILE *f = NULL;
+-	FILE *f = NULL;
 -	char buf[10] = {0};
-+	size_t npkg = 0;
++static void get_loadavg() {
++	double lavg[3] = { 0.0 };
  
 -	/*
 -	  It might be better to use the mport stats functionality long term, but this
 -	  avoids parsing.
 -	*/
 -	f = popen("/usr/sbin/mport list | wc -l | tr -d \"\n \"", "r");
-+#if defined(__OpenBSD__) || defined(__NetBSD__)
-+	f = popen("/usr/sbin/pkg_info", "r");
-+#elif defined(__FreeBSD__) || ( __DragonFly__)
-+	f = popen("/usr/sbin/pkg info", "r");
-+#elif defined( __MidnightBSD__)
-+	f = popen("/usr/sbin/mport list", "r");
-+#else
-+	fprintf(stderr, "Could not determine BSD variant\n");
-+	die(errno, __LINE__);
-+#endif
- 	if(f == NULL)
+-	if(f == NULL)
++	(void)getloadavg(lavg, 3);
++
++	ret = snprintf(buf, buf_size, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
++	if (ret < 0 || (size_t) ret >= buf_size)
  		die(errno, __LINE__);
  
 -	fgets(buf, sizeof(buf), f);
 -	pclose(f);
--
++	show("Loadavg", buf);
++}
+ 
 -	show("Packages", buf);
 -#elif defined(__FreeBSD__)
 -	int numpkg = 0;
@@ -299,9 +308,11 @@ Stability and portability fixes.
 -	sprintf(buf, "%d", numpkg);
 -	show("Packages", buf);
 -#elif defined(__OpenBSD__) || defined(__NetBSD__)
--	FILE *f = NULL;
++static void get_packages() {
+ 	FILE *f = NULL;
 -	char buf[10] = {0};
--
++	size_t npkg = 0;
+ 
 -	/*
 -		This is a little hacky for the moment. I don't
 -		see another good solution to get the package
@@ -309,11 +320,17 @@ Stability and portability fixes.
 -		Still, this works fine.
 -	*/
 -	f = popen("/usr/sbin/pkg_info | wc -l | tr -d \"\n \"", "r");
--	if(f == NULL)
-+	while (fgets(buf, sizeof buf, f) != NULL)
-+		if (strchr(buf, '\n') != NULL)
-+			npkg++;
-+	if (pclose(f) != 0)
++#if defined(__OpenBSD__) || defined(__NetBSD__)
++	f = popen("/usr/sbin/pkg_info", "r");
++#elif defined(__FreeBSD__) || ( __DragonFly__)
++	f = popen("/usr/sbin/pkg info", "r");
++#elif defined( __MidnightBSD__)
++	f = popen("/usr/sbin/mport list", "r");
++#else
++	fprintf(stderr, "Could not determine BSD variant\n");
++	die(errno, __LINE__);
++#endif
+ 	if(f == NULL)
  		die(errno, __LINE__);
  
 -	fgets(buf, sizeof(buf), f);
@@ -331,13 +348,18 @@ Stability and portability fixes.
 -	*/
 -	fp = popen("pkg list | wc -l | tr -d \"\n \"", "r");
 -	if (fp == NULL)
-+	ret = snprintf(buf, buf_size, "%zu", npkg);
-+	if (ret < 0 || (size_t) ret >= buf_size)
++	while (fgets(buf, sizeof buf, f) != NULL)
++		if (strchr(buf, '\n') != NULL)
++			npkg++;
++	if (pclose(f) != 0)
  		die(errno, __LINE__);
  
 -	fgets(buf, sizeof(buf), fp);
 -	pclose(fp);
--
++	ret = snprintf(buf, buf_size, "%zu", npkg);
++	if (ret < 0 || (size_t) ret >= buf_size)
++		die(errno, __LINE__);
+ 
  	show("Packages", buf);
 -#endif
  }
@@ -390,14 +412,14 @@ Stability and portability fixes.
  
 -#if defined(__FreeBSD__) || defined(__MidnightBSD__)
 -	if(sysctlbyname("hw.realmem", &buf, &buf_size, NULL, 0) == -1)
-+	if (pgsize == -1 || pages == -1)
- 		die(errno, __LINE__);
+-		die(errno, __LINE__);
 -#elif defined(__OpenBSD__) || defined(__DragonFly__)
 -	if(sysctlbyname("hw.physmem", &buf, &buf_size, NULL, 0) == -1)
 -		die(errno, __LINE__);
 -#elif defined(__NetBSD__)
 -	if(sysctlbyname("hw.physmem64", &buf, &buf_size, NULL, 0) == -1)
--		die(errno, __LINE__);
++	if (pgsize == -1 || pages == -1)
+ 		die(errno, __LINE__);
 -#endif
 +	else
 +		buff = (uint64_t)pgsize * (uint64_t)pages;
@@ -427,7 +449,7 @@ Stability and portability fixes.
  	if(gethostname(hostname, host_size_max) == -1)
  		die(errno, __LINE__);
  
-@@ -354,20 +310,12 @@ static void get_hostname() {
+@@ -354,20 +332,12 @@ static void get_hostname() {
  }
  
  static void get_arch() {
@@ -451,7 +473,7 @@ Stability and portability fixes.
  }
  
  static void get_sysinfo() {
-@@ -400,6 +348,9 @@ static void usage() {
+@@ -400,6 +370,9 @@ static void usage() {
  }
  
  int main(int argc, char **argv) {
