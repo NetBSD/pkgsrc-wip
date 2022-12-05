@@ -1149,7 +1149,6 @@ SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	giggle
 SUBDIR+=	gimp-jxl
 SUBDIR+=	gin
-SUBDIR+=	git-crypt
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-extras
 SUBDIR+=	git-modes-git
