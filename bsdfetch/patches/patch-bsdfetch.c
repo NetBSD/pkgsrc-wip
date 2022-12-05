@@ -59,7 +59,7 @@ Stability and portability fixes.
  int color_flag = 1;
  
  static void die(int err_num, int line);
-@@ -95,57 +97,76 @@ static void show(const char *entry, cons
+@@ -95,69 +97,89 @@ static void show(const char *entry, cons
  }
  
  static void get_shell() {
@@ -115,23 +115,23 @@ Stability and portability fixes.
 -	char tmp[100] = {0};
 -
 -	num_cpu_size = sizeof(num_cpu);
--
--	if(sysctlbyname("hw.ncpu", &num_cpu, &num_cpu_size, NULL, 0) == -1)
--		die(errno, __LINE__);
--
--#if defined(__NetBSD__)
--	FILE *fc = NULL;
  
--	fc = popen("awk 'BEGIN{FS=\":\"} /model name/ { print $2; exit }' "
--                   "/proc/cpuinfo | sed -e 's/ @//' -e 's/^ *//g' -e 's/ *$//g' "
--                   "| head -1 | tr -d '\\n'",
--                   "r");
--	if (fc == NULL)
+-	if(sysctlbyname("hw.ncpu", &num_cpu, &num_cpu_size, NULL, 0) == -1)
 +	ncpu = sysconf(_SC_NPROCESSORS_ONLN);
 +	ncpu_max = sysconf(_SC_NPROCESSORS_CONF);
 +	if (ncpu_max <= 0 || ncpu <=0)
  		die(errno, __LINE__);
  
+-#if defined(__NetBSD__)
+-	FILE *fc = NULL;
+-
+-	fc = popen("awk 'BEGIN{FS=\":\"} /model name/ { print $2; exit }' "
+-                   "/proc/cpuinfo | sed -e 's/ @//' -e 's/^ *//g' -e 's/ *$//g' "
+-                   "| head -1 | tr -d '\\n'",
+-                   "r");
+-	if (fc == NULL)
+-		die(errno, __LINE__);
+-
 -	fgets(cpu_type, sizeof(cpu_type), fc);
 -	pclose(fc);
 -#else
@@ -153,19 +153,28 @@ Stability and portability fixes.
  
  #if defined(__FreeBSD__) || defined(__MidnightBSD__) || defined(__DragonFly__)
  	for(uint i = 0; i < num_cpu; i++) {
- 		size_t temperature_size = 0;
+-		size_t temperature_size = 0;
 -		char buf[100] = {0};
- 		int temperature = 0;
+-		int temperature = 0;
++		size_t temp_size = 0;
++		int temp = 0;
  
 -		sprintf(buf, "dev.cpu.%d.temperature", i);
--
- 		temperature_size = sizeof(buf);
-+		snprintf(buf, temperature_size, "dev.cpu.%d.temperature", i);
-+
- 		if(sysctlbyname(buf, &temperature, &temperature_size, NULL, 0) == -1)
++		temp_size = sizeof(buf);
++		snprintf(buf, temp_size, "dev.cpu.%d.temperature", i);
+ 
+-		temperature_size = sizeof(buf);
+-		if(sysctlbyname(buf, &temperature, &temperature_size, NULL, 0) == -1)
++		if(sysctlbyname(buf, &temp, &temp_size, NULL, 0) == -1)
  			return;
  
-@@ -158,6 +179,7 @@ static void get_cpu() {
+ 		_SILENT fprintf(stdout, " %s->%s %sCore [%d]:%s %.1f °C\n",
+ 						COLOR_GREEN, COLOR_RESET,
+ 						COLOR_RED, i + 1, COLOR_RESET,
+-						(temperature * 0.1) - CELSIUS);
++						(temp * 0.1) - CELSIUS);
+ 	}
+ #elif defined(__OpenBSD__)
  	int mib[5];
  	char temp[10] = {0};
  	size_t size = 0;
@@ -192,13 +201,13 @@ Stability and portability fixes.
  static void get_loadavg() {
 -	char tmp[20] = {0};
 -	double *lavg = NULL;
--
--	lavg = malloc(sizeof(double) * 3);
 +	double lavg[3] = { 0.0 };
  
--	(void)getloadavg(lavg, -1);
+-	lavg = malloc(sizeof(double) * 3);
 +	(void)getloadavg(lavg, 3);
  
+-	(void)getloadavg(lavg, -1);
+-
 -	_SILENT sprintf(tmp, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
 +	_SILENT snprintf(tmp, tmp_size, "%.2lf %.2lf %.2lf", lavg[0], lavg[1], lavg[2]);
  
@@ -367,11 +376,11 @@ Stability and portability fixes.
 -		die(errno, __LINE__);
 -#elif defined(__OpenBSD__) || defined(__DragonFly__)
 -	if(sysctlbyname("hw.physmem", &buf, &buf_size, NULL, 0) == -1)
--		die(errno, __LINE__);
--#elif defined(__NetBSD__)
--	if(sysctlbyname("hw.physmem64", &buf, &buf_size, NULL, 0) == -1)
 +	if (pgsize == -1 || pages == -1)
  		die(errno, __LINE__);
+-#elif defined(__NetBSD__)
+-	if(sysctlbyname("hw.physmem64", &buf, &buf_size, NULL, 0) == -1)
+-		die(errno, __LINE__);
 -#endif
 +	else
 +		buff = (uint64_t)pgsize * (uint64_t)pages;
