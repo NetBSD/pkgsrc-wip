@@ -137,6 +137,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
 
 ###
 ### Support using NextStep (Cocoa or GNUstep) windowing system
