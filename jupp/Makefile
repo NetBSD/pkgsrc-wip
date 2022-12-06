@@ -26,11 +26,11 @@ WRKSRC=		${WRKDIR}/jupp
 
 post-install:
 .for f in jmacs joe jpico jstar jupp
-	${INSTALL_DATA} ${WRKSRC}/docs/${f}.png								\
-    ${DESTDIR}${PREFIX}/share/pixmaps/
+	${INSTALL_DATA} ${WRKSRC}/docs/${f}.png					\
+		${DESTDIR}${PREFIX}/share/pixmaps/
 
-	${INSTALL_DATA} ${FILESDIR}/${f}.desktop							\
-    ${DESTDIR}${PREFIX}/share/applications/
+	${INSTALL_DATA} ${FILESDIR}/${f}.desktop				\
+		${DESTDIR}${PREFIX}/share/applications/
 .endfor
 
 .include "../../mk/curses.buildlink3.mk"
