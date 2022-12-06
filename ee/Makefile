@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 WRKSRC=	${WRKDIR}/easyedit-${PKGVERSION_NOREV}
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}								\
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}					\
 	${MAKE_PROGRAM:Q} ${MAKE_FLAGS} all
 
 do-install:

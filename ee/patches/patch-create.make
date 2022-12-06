@@ -1,6 +1,6 @@
 $NetBSD$
 
-Use local ncurses rather than ee's own implementation.
+Prefer local ncurses over ee's own implementation.
 
 --- create.make.orig	2002-09-23 04:18:30.000000000 +0000
 +++ create.make
@@ -37,20 +37,11 @@ Use local ncurses rather than ee's own implementation.
 -	curses="-DNCURSE"
 -	TARGET="ee"
 -fi
-+curses="-DNCURSE"
++curses=""
 +TARGET="curses"
  
  if [ -z "$termio" -a -z "$sgtty" ]
  then
-@@ -205,7 +178,7 @@ then
- 	fi
- 	
- 	TARGET="curses"
--	curses=""
-+	curses="-DNCURSE"
- fi
- 
- # check if this is a SunOS system
 @@ -261,13 +234,15 @@ echo "DEFINES =	$termio $terminfo_exists
  echo "" >> make.local
  echo "CFLAGS =	$HAS_UNISTD $HAS_STDARG $HAS_STDLIB $HAS_CTYPE $HAS_SYS_IOCTL $HAS_SYS_WAIT $five_lib $five_include $select_hdr $other_cflags $termcap_exists" >> make.local
