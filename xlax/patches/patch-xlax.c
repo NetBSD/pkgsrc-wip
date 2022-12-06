@@ -1,6 +1,7 @@
 $NetBSD$
 
-* Fix warning about int signedness mismatch.
+* Fix warnings about int signedness mismatch.
+* Fix warnings about int to pointer conversion. 
 * Use libbsd on Linux to support strlcpy().
 
 --- xlax.c.orig	2008-07-31 20:18:25.000000000 +0000
@@ -17,6 +18,15 @@ $NetBSD$
  #include "xlax.h"
  #include "vroot.h"
  
+@@ -50,7 +55,7 @@ XKeyEvent tmpevents[MAXEVENTS];
+ int tmpeventindex;
+ int tmpwindex;
+   
+-int 
++uintptr_t 
+   WindowIndex;
+ 
+ char *prefix="xlax:";
 @@ -70,7 +75,7 @@ XErrorEvent *myerr;
    XGetErrorText(mydisp, myerr->error_code, msg, 80);
    (void) fprintf(stderr, "%s\n", msg);
