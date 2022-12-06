@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kustomize-4.1.2
+DISTNAME=	kustomize-4.5.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes-sigs/}
 GITHUB_TAG=	kustomize/v${PKGVERSION_NOREV}
