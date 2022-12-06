@@ -18,11 +18,7 @@ MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	lib/X11/app-defaults
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing perl hashbang.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	mkxlax
-SUBST_SED.paths=	-e 's|/usr/bin/perl|${PERL5}|g'
+REPLACE_PERL+=	mkxlax
 
 post-patch:
 	${RUN} ${CP} ${FILESDIR}/stddef.h ${WRKSRC}
@@ -32,13 +28,13 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mkxlax ${DESTDIR}${PREFIX}/bin
 
 .for m in xlax mkxlax
-	${INSTALL_MAN} ${WRKSRC}/${m}.man 									\
-	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${m}.1
+	${INSTALL_MAN} ${WRKSRC}/${m}.man 				\
+	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${m}.1
 .endfor
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/xlax.ad 								\
-	${DESTDIR}${PREFIX}/lib/X11/app-defaults/Xlax
+	${INSTALL_DATA} ${FILESDIR}/xlax.ad 				\
+	  ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Xlax
 
 .include "../../mk/bsd.prefs.mk"
 
