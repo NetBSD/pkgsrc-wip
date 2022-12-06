@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	toot-0.29.0
+DISTNAME=	toot-0.30.1
 CATEGORIES=	chat www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toot/}
 
