@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/lgogdownloader
+man/man1/lgogdownloader.1

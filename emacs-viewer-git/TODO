@@ -1,0 +1,9 @@
+===> Building for emacs-viewer-0.0nb20221206
+cd /scratch/wip/emacs-viewer-git/work/emacs-viewer && dune build --release ./bin/main.exe
+File "dune-project", line 1, characters 11-14:
+1 | (lang dune 3.4)
+               ^^^
+Error: Version 3.4 of the dune language is not supported.
+Supported versions of this extension in version 3.4 of the dune language:
+- 1.0 to 1.12
+- 2.0 to 2.9
