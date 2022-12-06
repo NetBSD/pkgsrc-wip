@@ -1921,7 +1921,6 @@ SUBDIR+=	judy
 SUBDIR+=	julia
 SUBDIR+=	julius
 SUBDIR+=	junit
-SUBDIR+=	jupp
 SUBDIR+=	jython
 SUBDIR+=	k6
 SUBDIR+=	k9s
