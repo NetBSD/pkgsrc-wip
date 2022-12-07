@@ -64,6 +64,9 @@ CONFIGURE_ARGS+=	--enable-vendor
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
+# Ensure we use a bundled lzma rather than relying on finding one.
+MAKE_ENV+=		LZMA_API_STATIC=1
+
 # MacOS X 10.7 is the oldest supported version. See
 # ${WRKSRC}/src/bootstrap/lib.rs
 MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
