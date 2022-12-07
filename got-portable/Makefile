@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ThomasAdam/}
 GITHUB_TAG=	ba229487d6a55dee6ba3c2cc596cf0e589491ce9
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://gameoftrees.org/
 COMMENT=	Game of Trees version control system manipulating Git repo
 LICENSE=	isc

@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
 LICENSE=	original-bsd AND modified-bsd AND 2-clause-bsd

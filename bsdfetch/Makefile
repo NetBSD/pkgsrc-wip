@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jhx0/}
 GITHUB_TAG=	9840c3153fcf49150ebcee94f527f4ebcc0b8c1b
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/jhx0/bsdfetch/
 COMMENT=	BSD system information tool written in C
 LICENSE=	isc

@@ -5,7 +5,7 @@ CATEGORIES=	mail
 MASTER_SITES=	https://sehnsucht.multics.org/pub/pkgsrc/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vms@retrobsd.ddns.net
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://www.kermitproject.org/mm/
 COMMENT=	UNIX reimplementation of the TOPS-20 MM program
 LICENSE=	mit
