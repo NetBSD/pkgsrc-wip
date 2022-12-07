@@ -29,10 +29,10 @@ USE_BUILTIN.libbsd=	no
 .  else
 USE_BUILTIN.libbsd=	${IS_BUILTIN.libbsd}
 .    if defined(BUILTIN_PKG.libbsd) && \
-        !empty(IS_BUILTIN.libbsd:M[yY][eE][sS])
+        ${IS_BUILTIN.libbsd:M[yY][eE][sS]}
 USE_BUILTIN.libbsd=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libbsd}
-.        if !empty(USE_BUILTIN.libbsd:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libbsd:M[yY][eE][sS]}
 USE_BUILTIN.libbsd!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libbsd:Q}; then	\
 		${ECHO} yes;						\
