@@ -1,0 +1,17 @@
+$NetBSD: patch-Source_WebKit_CMakeLists.txt,v 1.2 2021/04/27 07:57:06 leot Exp $
+
+SunOS requires libsocket.
+
+--- Source/WebKit/CMakeLists.txt.orig	2021-03-25 13:27:32.000000000 +0000
++++ Source/WebKit/CMakeLists.txt
+@@ -362,6 +362,10 @@ if (UNIX)
+     endif ()
+ endif ()
+ 
++if (CMAKE_SYSTEM_NAME MATCHES "SunOS")
++    list(APPEND WebKit_LIBRARIES socket)
++endif ()
++
+ macro(ADD_WEBKIT_PREFIX_HEADER _target)
+     if (WebKit_USE_PREFIX_HEADER)
+         get_target_property(OLD_COMPILE_FLAGS ${_target} COMPILE_FLAGS)
