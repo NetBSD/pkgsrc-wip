@@ -5959,6 +5959,7 @@ SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
 SUBDIR+=	webdump-git
 SUBDIR+=	webhookd
+SUBDIR+=	webkit-gtk
 SUBDIR+=	webkit-gtk4
 SUBDIR+=	wendzelnntpd
 SUBDIR+=	weplab
