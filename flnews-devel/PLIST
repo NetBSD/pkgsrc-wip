@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/flnews
 ${PLIST.nls}lib/flnews/nls/de_DE.cat
+${PLIST.nls}lib/flnews/nls/fr_FR.cat
 man/man1/flnews.1
 ${PLIST.xdg}share/applications/flnews.desktop
 share/flnews/license.txt
