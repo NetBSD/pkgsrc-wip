@@ -5591,6 +5591,7 @@ SUBDIR+=	terraform-provider-local
 SUBDIR+=	terraform-provider-null
 SUBDIR+=	terraform-provider-postgresql
 SUBDIR+=	terraform-provider-random
+SUBDIR+=	terraform-provider-scaleway
 SUBDIR+=	terraform-provider-template
 SUBDIR+=	terraform-provider-tls
 SUBDIR+=	terraform013
