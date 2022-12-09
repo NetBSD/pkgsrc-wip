@@ -1,9 +1,10 @@
 # $NetBSD$
 
-PKGNAME=	sds-2.0.0
+DISTNAME=	sds-2.2
 CATEGORIES=	devel
-GIT_REPO=	https://github.com/antirez/sds
-GIT_REVISION=	fb463145c9c245636feb28b5aac0fc897e16f67e
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jcorporation/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://github.com/antirez/sds/
@@ -26,5 +27,4 @@ post-install:
 	cd ${WRKDIR} && ${INSTALL_DATA} libsds-2.pc \
             ${DESTDIR}${PREFIX}/lib/pkgconfig/libsds-2.pc
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
