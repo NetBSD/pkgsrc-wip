@@ -595,6 +595,7 @@ SUBDIR+=	cygwin-binutils
 SUBDIR+=	cyrus-imapd30
 SUBDIR+=	d-feet
 SUBDIR+=	d1x-rebirth
+SUBDIR+=	d2
 SUBDIR+=	d2x-rebirth
 SUBDIR+=	daligner
 SUBDIR+=	dangerzone
