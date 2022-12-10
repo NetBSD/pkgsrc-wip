@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	pyexpander-2.1.1
-PKGNAME=	${PYPKGPREFIX}-expander
+PKGNAME=	${PYPKGPREFIX}-expander-2.1.1
 CATEGORIES=	devel
 MASTER_SITES=	https://sourceforge.net/projects/pyexpander/files/
 
