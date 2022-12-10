@@ -1994,6 +1994,7 @@ SUBDIR+=	kstest
 SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	kubeconform
+SUBDIR+=	kubectl
 SUBDIR+=	kubectx
 SUBDIR+=	kubepug
 SUBDIR+=	kubeval
