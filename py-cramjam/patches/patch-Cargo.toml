@@ -5,20 +5,11 @@ Use of initialized Thread Local Storage with model initial-exec and dlopen is no
 +++ Cargo.toml
 @@ -13,8 +13,7 @@ readme = "README.md"
  crate-type = ["cdylib"]
- 
+
  [features]
 -default = ["mimallocator", "extension-module"]
 -mimallocator = ["mimalloc"]
 +default = ["extension-module"]
  extension-module = ["pyo3/extension-module"]
- 
+
  [profile.release]
-@@ -31,8 +30,3 @@ lz4 = "^1"
- flate2 = "^1"
- zstd = "0.9.0+zstd.1.5.0"
- numpy = "0.15"
--
--[dependencies.mimalloc]
--version = "0.1.24"
--default-features = false
--optional = true
