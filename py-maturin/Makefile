@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	maturin-0.13.6
+DISTNAME=	maturin-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maturin/}
