@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	locket-0.2.1
+DISTNAME=	locket-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/locket/}
