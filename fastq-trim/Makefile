@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	fastq-trim-0.1.1.16
+DISTNAME=	fastq-trim-0.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	58a016f250a9b785bfed574ce471ec7e23cdaa4a
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/Fastq-trim
