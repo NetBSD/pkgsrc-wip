@@ -100,7 +100,7 @@ PKGSRC_MAKE_ENV+=		EMACS=${FALSE:Q}
 # MySQL
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
+CONFIGURE_ARGS+=	--with-mysql
 LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
 .else
 CONFIGURE_ARGS+=	--without-mysql
