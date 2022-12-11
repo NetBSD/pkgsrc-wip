@@ -1,0 +1,5 @@
+The pypi tarfile does not have the tests in the package.
+The github tarfile does not have the PKG-INFO file, so builds fail.
+So in the meantime, do this dance of pulling PKG-INFO from pypi, and
+using github, as it is worthwhile to have tests
+
