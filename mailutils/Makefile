@@ -15,6 +15,13 @@ CONFLICTS+=	avenger-[0-9]*		# bin/dotlock
 USE_TOOLS+=	gmake yacc
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+INFO_FILES=	yes
+
+SUBST_CLASSES+=		iconv
+SUBST_STAGE.iconv=	pre-configure
+SUBST_MESSAGE.iconv=	Do not require lib/charset.alias.
+SUBST_FILES.iconv+=	lib/gnu/Makefile.in
+SUBST_SED.iconv=	-e '/need_charset_alias=/s|true|false|'
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -33,18 +40,16 @@ CONFIGURE_ARGS+=	--with-mail-spool=/var/mail
 CONFIGURE_ARGS+=	--enable-virtual-domains
 CONFIGURE_ARGS+=	--enable-mh
 
+.include "options.mk"
+
 PKG_DOCS=	AUTHORS ChangeLog NEWS README* THANKS TODO
 DOCDIR=		share/doc/${PKGBASE}
 
-SUBST_CLASSES+=		iconv
-SUBST_STAGE.iconv=	pre-configure
-SUBST_MESSAGE.iconv=	Do not require lib/charset.alias.
-SUBST_FILES.iconv+=	lib/gnu/Makefile.in
-SUBST_SED.iconv=	-e '/need_charset_alias=/s|true|false|'
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	CPPLAGS=${CPPLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
-.include "options.mk"
-
-INFO_FILES=		yes
 INSTALLATION_DIRS+=	${DOCDIR}
 
 post-install:

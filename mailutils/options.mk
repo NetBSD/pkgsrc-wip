@@ -88,7 +88,8 @@ CONFIGURE_ARGS+=    --without-gsasl
 # EmacsLisp
 .if !empty(PKG_OPTIONS:Memacs)
 .include "../../editors/emacs/modules.mk"
-BUILDLINK_API_DEPENDS.emacs+=	${_EMACS_REQD}:${_EMACS_PKGDIR}
+BUILDLINK_API_DEPENDS.emacs+=	${_EMACS_REQD}
+BUILDLINK_PKGSRCDIR.emacs?=	${_EMACS_PKGDIR}
 CONFIGURE_ENV+=			ac_cv_prog_EMACS=${EMACS_BIN:Q}
 PKGSRC_MAKE_ENV+=		EMACS=${EMACS:Q}
 CONFIGURE_ARGS+=    		--with-lispdir=${EMACS_LISPPREFIX:Q}
@@ -111,6 +112,7 @@ CONFIGURE_ARGS+=	--without-mysql
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-postgres
+LDFLAGS+=		${BUILDLINK_LDFLAGS.postgresql-lib}
 .else
 CONFIGURE_ARGS+=    	--without-postgres
 .endif
