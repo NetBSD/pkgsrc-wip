@@ -8,7 +8,6 @@ MASTER_SITES=	# empty
 MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Core tools needed for RNA-Seq analysis
 
-DEPENDS+=	parallel>=0:../../parallel/parallel
 DEPENDS+=	fastq-trim>=0:../../biology/fastq-trim
 DEPENDS+=	fastqc>=0:../../biology/fastqc
 DEPENDS+=	biolibc-tools>=0:../../biology/biolibc-tools
