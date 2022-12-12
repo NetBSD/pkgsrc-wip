@@ -42,7 +42,7 @@ TARGET:=	solaris-gcc
 .endif
 
 EGDIR=	${PREFIX}/share/examples/${PKGBASE}
-DOCDIR=	${PREFIX}/doc/${PKGBASE}
+DOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
 INSTALLATION_DIRS+=	bin lib ${EGDIR} ${DOCDOR}
 
@@ -69,8 +69,13 @@ post-install:
 		${DESTDIR}/${PREFIX}/bin/mm-sysprof
 	${RUN}cd ${WRKDIR}/mm/docs && 				\
 		${PAX} -rw . ${DESTDIR}${DOCDIR}
-	${RUN}cd ${WRKSRC}/samples &&				\
-		${PAX} -rw . ${DESTDIR}${EGDIR}
+.for f in samples/*
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EGDIR}
+.endfor
+	${INSTALL_DATA} ${FILESDIR}/sample-mm-conf ${DESTDIR}${EGDIR}
+	#Fix files permissions.
+	${RUN}${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libccmd.a
+	${RUN}${CHMOD} g-w ${DESTDIR}${PREFIX}/lib/mm/mmail.el
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
