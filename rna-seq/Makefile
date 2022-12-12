@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	rna-seq-1.0
-CATEGORIES=	meta-pkgs biology
+CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
 MAINTAINER=	bacon@NetBSD.org
@@ -16,7 +16,7 @@ DEPENDS+=	kallisto>=0:../../biology/kallisto
 DEPENDS+=	hisat2>=0:../../biology/hisat2
 DEPENDS+=	samtools>=0:../../biology/samtools
 DEPENDS+=	igv>=0:../../biology/igv
-DEPENDS+=	fasda>=0:../../wip/fasda
+DEPENDS+=	fasda>=0:../../biology/fasda
 
 META_PACKAGE=	yes
 
