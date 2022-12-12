@@ -66,6 +66,7 @@ post-install:
 		mv emacs-*.pdmp emacs.pdmp
 
 .include "../../wip/mk/git-package.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libimagequant/buildlink3.mk"
