@@ -1,17 +1,16 @@
 # $NetBSD$
 
-DISTNAME=	mm-0.96.0.15
+DISTNAME=	mm-0.96.0.14
 CATEGORIES=	mail
-MASTER_SITES=	https://sehnsucht.multics.org/pub/pkgsrc/distfiles/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://www.kermitproject.org/mm/
 COMMENT=	UNIX reimplementation of the TOPS-20 MM program
-LICENSE=	mit
+LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM+=	*-*-i386
-MKPIE_SUPPORTED=	no
+USE_TOOLS+=	pax
 
 MAKE_FLAGS+=	OPT=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
@@ -26,7 +25,7 @@ SUBST_FILES.paths+=	regex-0.12/configure
 SUBST_SED.paths=	-e 's|/usr/local|${PREFIX}|'
 
 SETUID_ROOT_PERMS=	${REAL_ROOT_USER} daemon 2551
-SPECIAL_PERMS+=		lib/mm/movemail
+SPECIAL_PERMS+=		lib/mm/movemail  ${SETUID_ROOT_PERMS}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,30 +34,43 @@ TARGET:=	${LOWER_OPSYS}
 .elif ${OPSYS} == Darwin
 TARGET:=	macosx
 .elif ${OPSYS} == SunOS
-TARGET:=	solaris
+.  if ${OPSYS_VERSION} <= 051000
+TARGET:=	solaris10
+.  else
+TARGET:=	solaris-gcc
+.  endif
 .endif
 
-INSTALLATION_DIRS+=	bin lib
+EGDIR=	${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=	${PREFIX}/doc/${PKGBASE}
+
+INSTALLATION_DIRS+=	bin lib ${EGDIR} ${DOCDOR}
 
 WRKSRC=	${WRKDIR}/mm/mm
 
 post-extract:
 	${RUN}${CHMOD} +x ${WRKSRC}/regex-0.12/configure
 
-
-.if ${OPSYS} != NetBSD
 pre-build:
 	${RUN}cd ${WRKDIR}/mm/ccmd && ${SETENV} ${MAKE_ENV}	\
-  	  ${MAKE_PROGRAM} ${TARGET}
-.endif
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${TARGET}
 
 do-build:
 	${RUN}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
-	  ${MAKE_PROGRAM} ${TARGET}
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${TARGET}
+
+pre-install:
+	${RUN}cd ${WRKDIR}/mm/ccmd && ${SETENV} ${MAKE_ENV} 	\
+		${INSTALL_ENV} ${MAKE_PROGRAM}			\
+		prefix=${DESTDIR}${PREFIX} install
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sys-prof			\
-	  ${DESTDIR}/${PREFIX}/bin/mm-sysprof
+		${DESTDIR}/${PREFIX}/bin/mm-sysprof
+	${RUN}cd ${WRKDIR}/mm/docs && 				\
+		${PAX} -rw . ${DESTDIR}${DOCDIR}
+	${RUN}cd ${WRKSRC}/samples &&				\
+		${PAX} -rw . ${DESTDIR}${EGDIR}
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

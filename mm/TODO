@@ -1,2 +1,0 @@
-* patch CCMD (C Command Interface) to compile on non-x86 targets.
-* make ccmd a standalone package 
