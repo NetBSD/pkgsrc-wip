@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2022/09/17 10:13:56 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
-.include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	119
+GOVERSSUFFIX=	120
+GO120_VERSION=	1.20rc1
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
@@ -17,6 +17,10 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
+
+# Minimum Go version for bootstrapping is 1.17.13.
+GOROOT_BOOTSTRAP=	${PREFIX}/118
+BUILD_DEPENDS+=		go118-[0-9]*:../../lang/go118
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
@@ -33,16 +37,19 @@ REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
-REPLACE_BASH+=	src/cmd/compile/internal/ssa/gen/cover.bash
+REPLACE_BASH+=	src/cmd/compile/internal/ssa/_gen/cover.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
 REPLACE_BASH+=	src/crypto/internal/boring/build.sh
+REPLACE_BASH+=	src/crypto/internal/boring/build-boring.sh
+REPLACE_BASH+=	src/crypto/internal/boring/build-goboring.sh
 REPLACE_BASH+=	src/go/doc/comment/mkstd.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
+REPLACE_BASH+=	src/runtime/race/mkcgo.sh
 REPLACE_BASH+=	src/syscall/mkall.sh
 REPLACE_BASH+=	src/syscall/mkerrors.sh
 REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
@@ -84,20 +91,8 @@ SUBST_SED.grplist=	-e 's,return getgrouplist.*,return 0;,'
 
 PLIST_SUBST+=	GOVERSSUFFIX=${GOVERSSUFFIX}
 
-PLIST_VARS+=	pty route
-
-.if ${OPSYS} != "SunOS"
-PLIST.pty=	yes
-.endif
-
-.if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
-PLIST.route=	yes
-.endif
-
 PRINT_PLIST_AWK+=	/^bin\/go${GOVERSSUFFIX}/ { print "bin/go$${GOVERSSUFFIX}"; next; }
 PRINT_PLIST_AWK+=	/^bin\/gofmt${GOVERSSUFFIX}/ { print "bin/gofmt$${GOVERSSUFFIX}"; next; }
-PRINT_PLIST_AWK+=	/internal\/pty\.a/ { printf "%s", "$${PLIST.pty}"; }
-PRINT_PLIST_AWK+=	/x\/net\/route\.a/ { printf "%s", "$${PLIST.route}"; }
 
 post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
