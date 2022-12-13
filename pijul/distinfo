@@ -801,4 +801,4 @@ Size (zeroize_derive-1.3.2.crate) = 10299 bytes
 BLAKE2s (zstd-seekable-0.1.7.crate) = 99afb3fcf14b502057ee808e8678d2b262cd6f867d65c257a6a8ec4c42e47b3a
 SHA512 (zstd-seekable-0.1.7.crate) = 319ea7c5651dd544ed4c43afb71abc9ee43d9a6fa881210bd24aa90211ba16c1450f961bd89fd70e9cb28582a31d5d49887da2eb81669d61617099165fdc742d
 Size (zstd-seekable-0.1.7.crate) = 65103 bytes
-SHA1 (patch-cargo-crates_pager-0.16.0_src_utils.rs) = 79c716a32fde87355e3cb6f874c14555d25fc50c
+SHA1 (patch-..vendor_pager-0.16.0_src_utils.rs) = 79c716a32fde87355e3cb6f874c14555d25fc50c
