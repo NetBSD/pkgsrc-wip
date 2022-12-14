@@ -1,26 +1,32 @@
-# $NetBSD: Makefile,v 1.1 2013/09/02 19:06:35 thomasklausner Exp $
+# $NetBSD$
 
-DISTNAME=		sais-nick-20060509
-PKGNAME=		${DISTNAME:S/-nick//}
-CATEGORIES=		games
-MASTER_SITES=		#
+DISTNAME=	sais-1.6.3
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kuroneko/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://zork.net/~nick/sais/
-COMMENT=		Strange Adventures in Infinite Space engine (SDL port)
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/kuroneko/sais/
+COMMENT=	Strange Adventures in Infinite Space
+LICENSE=	gnu-gpl-v3
 
-INSTALLATION_DIRS=	bin
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
-USE_LANGUAGES+=	c++
-USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/sais
-BUILD_TARGET=	sais
+CMAKE_INSTALL_PREFIX=	${PREFIX}/libexec/sais
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sais ${DESTDIR}${PREFIX}/bin
+INSTALLATION_DIRS+=	bin
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+post-build:
+	${ECHO} '#!/bin/sh' > ${WRKDIR}/strange
+	${ECHO} 'cd ${PREFIX}/libexec/sais && ./strange' >> ${WRKDIR}/strange
+	${CHMOD} 755 ${WRKDIR}/strange
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/strange ${DESTDIR}${PREFIX}/bin
+
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/physfs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
