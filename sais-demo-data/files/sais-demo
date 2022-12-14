@@ -1,3 +1,0 @@
-#!/bin/sh
-cd @PREFIX@/share/sais-demo-data
-@PREFIX@/bin/sais "$@"
