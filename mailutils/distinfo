@@ -5,3 +5,4 @@ SHA512 (mailutils-3.15.tar.gz) = 418d9a657caf583ae1b9060a9ea8dcb1bf88965af3cc6d1
 Size (mailutils-3.15.tar.gz) = 7453542 bytes
 SHA1 (patch-frm_frm.h) = 8ed8ae4b64b3b6b30d0572d06b35165b2e1d7e3e
 SHA1 (patch-lib_tcpwrap.c) = a0133dd8726ca08f5c194c583a638bb318f08a76
+SHA1 (patch-mh_mh__init.c) = 3ffa0200cf579e45f76a6c66f8d7192f88c51806

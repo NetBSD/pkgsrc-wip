@@ -11,8 +11,10 @@ PKG_SUGGESTED_OPTIONS=	gnutls gsasl gssapi
 
 .if exists(/usr/include/ndbm.h) && (${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
 PKG_SUGGESTED_OPTIONS+=	ndbm
-.else
+.elif exists(/usr/include/gdbm.h) || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	gdbm
+.else
+PKG_SUGGESTED_OPTIONS+=	bdb
 .endif
 
 PLIST_VARS+=		emacs guile nls python

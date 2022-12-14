@@ -55,6 +55,7 @@ INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
 #set-gid files should not be writable by anyone
 	${RUN}${CHMOD} -w ${DESTDIR}${PREFIX}/bin/dotlock
+	${RUN}${CHMOD} -w ${DESTDIR}${PREFIX}/sbin/mda
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|} 		\
 		${DESTDIR}${PREFIX}/${DOCDIR}
 
