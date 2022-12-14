@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://github.com/antirez/sds/
+HOMEPAGE=	https://github.com/jcorporation/sds/
 COMMENT=	Simple dynamic strings library for C
 LICENSE=	2-clause-bsd
 
