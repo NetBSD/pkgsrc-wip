@@ -2606,6 +2606,7 @@ SUBDIR+=	nemo
 SUBDIR+=	neomutt-git
 SUBDIR+=	neovim-git
 SUBDIR+=	neovim-qt
+SUBDIR+=	nessoundstudio
 SUBDIR+=	nestopia-rpi
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
