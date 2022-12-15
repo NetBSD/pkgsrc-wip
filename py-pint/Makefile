@@ -14,5 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# devel/py-setuptools_scm
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
