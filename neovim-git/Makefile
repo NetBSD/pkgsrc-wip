@@ -72,6 +72,6 @@ TEST_TARGET=	unittest functionaltest
 .include "../../wip/luv/buildlink3.mk"
 .include "../../wip/libunibilium/buildlink3.mk"
 .include "../../wip/libtermkey/buildlink3.mk"
-.include "../../wip/libvterm/buildlink3.mk"
+.include "../../devel/libvterm03/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
