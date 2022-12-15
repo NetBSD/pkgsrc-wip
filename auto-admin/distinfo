@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (auto-admin-0.7.14.tar.gz) = be88885332b64a679c17ee7d30fd1661e1f28760b19d4fa2a7f220bdcfd71a65
-SHA512 (auto-admin-0.7.14.tar.gz) = 9f7e8a58efc24e7029615e85f0390b35ec25e86e19dc15cb5440069b74003db1a18dccb4a987cb4ca98cbe8f5ca74d57efd91e2379ed8f5b43db819b4b934801
-Size (auto-admin-0.7.14.tar.gz) = 126191 bytes
+BLAKE2s (auto-admin-0.7.14.1-4aa5344399aa9c64bd43c1cbe39e5d316647dafe.tar.gz) = 1e95de936aeaa4fd6b6153c983a5a5963adbf678fdd91f7b321ae57e4c60d12c
+SHA512 (auto-admin-0.7.14.1-4aa5344399aa9c64bd43c1cbe39e5d316647dafe.tar.gz) = 65cfa5d83bc9a66a38c8865dae1bdf73ed0888256075aca6a9deef2fffcab04f73b8feab846af885a666a99052f0861dc1b00a5b92bc1d689db9819f8df3327d
+Size (auto-admin-0.7.14.1-4aa5344399aa9c64bd43c1cbe39e5d316647dafe.tar.gz) = 126193 bytes
