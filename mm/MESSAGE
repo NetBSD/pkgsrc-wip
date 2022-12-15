@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD$
-
-To configure mm, run ${PREFIX}/bin/mm-sysprof to enter the interactive
-setup.
-Then move the generated 'mm.conf' file to ${PREFIX}/pkg/lib/mm.
-
-===========================================================================
