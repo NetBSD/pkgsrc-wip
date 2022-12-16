@@ -73,7 +73,7 @@ pre-build:
 post-install:
 	${LN} -s ${PKG_SYSCONFDIR}/local_settings.py ${DESTDIR}${PREFIX}/${PYSITELIB}/graphite/
 
-.include "../../databases/py-carbon/Makefile.common"
+.include "../../wip/py-carbon/Makefile.common"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
