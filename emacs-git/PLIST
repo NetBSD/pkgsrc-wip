@@ -3531,6 +3531,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/cl-font-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cl-font-lock.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cmacexp.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cmacexp.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/cmake-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/cmake-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/compile.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/compile.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cperl-mode.el.gz
@@ -3587,6 +3589,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/gdb-mi.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/gdb-mi.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/glasses.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/glasses.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/go-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/go-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/grep.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/grep.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/gud.el.gz
@@ -3931,6 +3935,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/text-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/text-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/tildify.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/tildify.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/toml-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/toml-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/two-column.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/two-column.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/underline.el.gz
