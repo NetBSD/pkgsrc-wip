@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	xmakemol-5.16
+DISTNAME=	xmakemol-5.16h
 CATEGORIES=	biology
-MASTER_SITES=	http://savannah.nongnu.org/download/xmakemol/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/xmakemol/
@@ -11,17 +12,23 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
-
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
+USE_TOOLS+=	autoconf automake autoreconf
 
 REPLACE_PERL=	xmake_anim.pl
 
+ELEM_FILE=	${WRKSRC}/elements
+
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS='${CFLAGS} -DELEMENTS=\"${ELEM_FILE}\"'
+MAKE_FLAGS+=	CPPLAGS=${CPPLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+
 INSTALLATION_DIRS=	share/applications
 
+WRKSRC=	${WRKDIR}/${DISTNAME:S,h,,}
+
 post-extract:
-	     ${CP} ${FILESDIR}/xmakemol.desktop ${WRKSRC}
+	${CP} ${FILESDIR}/xmakemol.desktop ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/xmakemol.desktop \
