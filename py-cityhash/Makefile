@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cityhash-0.4.2
+DISTNAME=	cityhash-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	python-cityhash
 CATEGORIES=	devel
@@ -17,7 +17,9 @@ DEPENDS+=	cityhash-[0-9]*:../../textproc/cityhash
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.2:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/src
 do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py build_ext -i
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
 
 USE_LANGUAGES=	c c++
