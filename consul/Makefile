@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	consul-1.14.2
+DISTNAME=	consul-1.14.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
