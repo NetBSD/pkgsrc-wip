@@ -340,7 +340,6 @@ SUBDIR+=	bsa
 SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
 SUBDIR+=	bsdec2-image-upload
-SUBDIR+=	bsdfetch
 SUBDIR+=	bsfilter
 SUBDIR+=	bsh
 SUBDIR+=	bsnmp

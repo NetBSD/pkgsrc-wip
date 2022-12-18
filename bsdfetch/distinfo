@@ -1,8 +1,0 @@
-$NetBSD$
-
-BLAKE2s (bsdfetch-0.9-9840c3153fcf49150ebcee94f527f4ebcc0b8c1b.tar.gz) = ee4bd56abbdb8c5ef1159798bfdc3f18b535520facea300d69002ebd02813c91
-SHA512 (bsdfetch-0.9-9840c3153fcf49150ebcee94f527f4ebcc0b8c1b.tar.gz) = b62d956f25eacc2426743c09523e89ade002fadd44445aa5c2628425b10d45d0133354be765af17fac78a936436197a8de5b02efd9c670dcdcf9513f0b744bb3
-Size (bsdfetch-0.9-9840c3153fcf49150ebcee94f527f4ebcc0b8c1b.tar.gz) = 6794 bytes
-SHA1 (patch-Makefile) = 62812c29b42d05ad9a9b1b9cc263ec309a7a4771
-SHA1 (patch-bsdfetch.c) = 3a9f15df7d24d1538184a246cfd6d8cc90221b1c
-SHA1 (patch-sysctlbyname.c) = d00d3466cc3be82c7cf01ecfb6b5b12099adcc44
