@@ -1395,7 +1395,6 @@ SUBDIR+=	googlecl
 SUBDIR+=	gopass-jsonapi
 SUBDIR+=	gopher-validator-git
 SUBDIR+=	gorilla-audio
-SUBDIR+=	got-portable
 SUBDIR+=	gotify
 SUBDIR+=	goyq
 SUBDIR+=	gp-toric
