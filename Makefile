@@ -2151,7 +2151,6 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
 SUBDIR+=	libm4ri
 SUBDIR+=	libmapper
-SUBDIR+=	libmd
 SUBDIR+=	libmirisdr-git
 SUBDIR+=	libmobi-git
 SUBDIR+=	libmpg123
