@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (mgdiff.tar.gz) = 7c90e00f9646d41e5e822055340fa41440acaa5ec0352606ccec1e14b43188de
+SHA512 (mgdiff.tar.gz) = bf5ab4b2a9d42ff2edb73a6dda68a4d17d88f61c63f5ec8366cc49d372a56f3c6812d473a95d86bcb61680d1f91ce4ab7ad87a26748b45e2edd27b73044492a5
+Size (mgdiff.tar.gz) = 41187 bytes
+SHA1 (patch-Imakefile) = adb4de928befcb92c498a5dde513358c1fa244ba
+SHA1 (patch-mgdiff.c) = f2789be4b26b28391cd21cdf6eea4bbed62ebe06
+SHA1 (patch-rundiff.c) = 4ead16932bbf480d8da283b335a93418108926f2
