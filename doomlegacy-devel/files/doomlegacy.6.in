@@ -4,7 +4,7 @@
 .\" Copyright (c) 2019-2022 by Michael Baeuerle.
 .\" License: GNU Free Documentation License (GFDL)
 .\"
-.TH $NAME 6 2022-03-04 Unix "$NAME $VERSION manual"
+.TH $NAME 6 2022-12-19 Unix "$NAME $VERSION manual"
 .\"
 .\"
 .\"=============================================================================
@@ -85,6 +85,9 @@ Default: config.cfg
 .BI -deh " file [file ...]
 Load one or more DEH (DeHackEd) files or BEX files, which can change monster
 abilities and game text.
+.TP
+.BI -dehthing " name
+Supported DEH translations: legacy, boom, prboom, ee.
 .TP
 .BI -file " file [file ...]
 Set PWAD (Patch WAD) files to use.
