@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERS=		1.48.10
+VERS=		1.48.12
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1639
+SVNVERS=	1644
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -115,9 +115,9 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/doomlegacy.bin
 	${INSTALL_SCRIPT} ${WRKDIR}/doomlegacy				\
 		${DESTDIR}${PREFIX}/bin/doomlegacy
-	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/dogs.wad		\
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}_common/dogs.wad	\
 		${DESTDIR}${PREFIX}/${DOOMWADDIR}/dogs.wad
-	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/legacy.wad		\
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}_common/legacy.wad	\
 		${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 	cd ${WRKSRC} &&							\
 		${INSTALL_DATA} docs/legacy.css docs/whatsnew.html	\
