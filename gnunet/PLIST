@@ -62,6 +62,7 @@ etc/gnunet/gnunet_user.conf
 include/gnunet/compat.h
 include/gnunet/gnunet_error_codes.h
 include/gnunet/gettext.h
+include/gnunet/gnu_name_system_record_flags.h
 include/gnunet/gnu_name_system_record_types.h
 include/gnunet/gnunet_abd_service.h
 include/gnunet/gnunet_applications.h
@@ -121,6 +122,7 @@ include/gnunet/gnunet_microphone_lib.h
 include/gnunet/gnunet_mq_lib.h
 include/gnunet/gnunet_mst_lib.h
 include/gnunet/gnunet_my_lib.h
+include/gnunet/gnunet_mysql_compat.h
 include/gnunet/gnunet_mysql_lib.h
 include/gnunet/gnunet_namecache_plugin.h
 include/gnunet/gnunet_namecache_service.h
@@ -184,7 +186,6 @@ include/gnunet/gnunet_tun_lib.h
 include/gnunet/gnunet_uri_lib.h
 include/gnunet/gnunet_util_lib.h
 include/gnunet/gnunet_vpn_service.h
-include/gnunet/platform.h
 lib/gnunet/libexec/gnunet-cmds-helper
 lib/gnunet/libexec/gnunet-communicator-tcp
 lib/gnunet/libexec/gnunet-communicator-udp

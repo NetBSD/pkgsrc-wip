@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (gnunet-0.18.0.tar.gz) = 564fa228a308344f42ac15f1a058125707ee64dff70d0fcc608e55dc0e29d69b
-SHA512 (gnunet-0.18.0.tar.gz) = 73813d45b6c54df8db88cec8bdafaf3dc8c9abf419cd5e439b62aba0d3938f83ac4f517a4d11027f1020744808b0156dd6c93e806c30904764f2890b3cb9b022
-Size (gnunet-0.18.0.tar.gz) = 10592422 bytes
+BLAKE2s (gnunet-0.19.0.tar.gz) = 041e2e85d538eae183743b7ee25e6cd1f6bba679074c2ff70220426f8b8b3823
+SHA512 (gnunet-0.19.0.tar.gz) = be1f9c77e14172dae78a4f94254289e73123d840d0f090e70567223515adb8e2b937a52d925e1c44fd49a4bbbb0b943617f55606b9ceb22927b6de7d9470d966
+Size (gnunet-0.19.0.tar.gz) = 10613630 bytes
 SHA1 (patch-contrib_packages_fedora_10-dns2gns.sh) = b666e57a74d974e8cae25db28e55102e8a5c7463
 SHA1 (patch-src_include_gnunet_common.h) = 44a0f31cd3d7fa4df5491cf9cf2efa31e695cdb9
 SHA1 (patch-src_setu_gnunet-service-setu.c) = 2e6c8eb895544fe79e27edec85e37379ec9b3783

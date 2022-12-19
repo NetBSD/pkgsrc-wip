@@ -61,6 +61,7 @@ share/doc/gnunet/html/_sources/developers/subsystems/transport/transport.rst.txt
 share/doc/gnunet/html/_sources/developers/subsystems/vpnstack.rst.txt
 share/doc/gnunet/html/_sources/developers/tutorial.rst.txt
 share/doc/gnunet/html/_sources/developers/util/index.rst.txt
+share/doc/gnunet/html/_sources/gana/gnu_name_system_record_flags.rst.txt
 share/doc/gnunet/html/_sources/gana/gnu_name_system_record_types.rst.txt
 share/doc/gnunet/html/_sources/gana/gnunet_dht_block_types.rst.txt
 share/doc/gnunet/html/_sources/gana/gnunet_error_codes.rst.txt
@@ -196,6 +197,7 @@ share/doc/gnunet/html/developers/subsystems/transport/transport.html
 share/doc/gnunet/html/developers/subsystems/vpnstack.html
 share/doc/gnunet/html/developers/tutorial.html
 share/doc/gnunet/html/developers/util/index.html
+share/doc/gnunet/html/gana/gnu_name_system_record_flags.html
 share/doc/gnunet/html/gana/gnu_name_system_record_types.html
 share/doc/gnunet/html/gana/gnunet_dht_block_types.html
 share/doc/gnunet/html/gana/gnunet_error_codes.html

@@ -1,4 +1,12 @@
 @comment $NetBSD$
+share/gnunet/sql/datacache-0001.sql
+share/gnunet/sql/datacache-drop.sql
+share/gnunet/sql/datastore-0001.sql
+share/gnunet/sql/datastore-drop.sql
+share/gnunet/sql/namecache-0001.sql
+share/gnunet/sql/namecache-drop.sql
+share/gnunet/sql/namestore-0001.sql
+share/gnunet/sql/namestore-drop.sql
 lib/gnunet/libexec/gnunet-daemon-latency-logger
 lib/gnunet/libexec/gnunet-daemon-testbed-underlay
 lib/gnunet/libgnunet_plugin_datacache_sqlite.la

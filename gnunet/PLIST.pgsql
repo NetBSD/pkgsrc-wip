@@ -1,4 +1,5 @@
 @comment $NetBSD$
+share/gnunet/sql/versioning.sql
 lib/gnunet/libgnunet_plugin_datacache_postgres.la
 lib/gnunet/libgnunet_plugin_datastore_postgres.la
 lib/gnunet/libgnunet_plugin_namecache_postgres.la
