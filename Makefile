@@ -2050,7 +2050,6 @@ SUBDIR+=	libbfio
 SUBDIR+=	libbpg
 SUBDIR+=	libbrahe
 SUBDIR+=	libbs2b
-SUBDIR+=	libbsd
 SUBDIR+=	libbtctl
 SUBDIR+=	libc++
 SUBDIR+=	libc++-abi
