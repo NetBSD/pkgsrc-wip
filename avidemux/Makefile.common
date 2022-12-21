@@ -1,0 +1,33 @@
+# $NetBSD$
+# used by wip/avidemux-cli/Makefile
+# used by wip/avidemux-plugins/Makefile
+# used by wip/avidemux-qt/Makefile
+
+DISTNAME=	avidemux_2.8.1
+CATEGORIES?=	multimedia
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avidemux/}
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE?=	http://fixounet.free.fr/avidemux/
+LICENSE?=	gnu-gpl-v2
+
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+USE_CMAKE=	yes
+
+CONFIGURE_DIRS=	build
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${SHLIB_TYPE} == "dylib"
+SOEXT=		dylib
+.else
+SOEXT=		so
+.endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
+
+post-extract:
+	${RUN}${MKDIR} -p ${WRKSRC}/${CONFIGURE_DIRS}
+
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../wip/avidemux/options.mk"

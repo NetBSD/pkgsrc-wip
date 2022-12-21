@@ -1,0 +1,3 @@
+* Test on NetBSD
+* Validate the dependency logic
+* Remove spurious links from some libraries in avidemux-plugins

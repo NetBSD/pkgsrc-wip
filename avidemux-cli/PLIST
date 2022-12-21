@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/avidemux_cli
+include/avidemux/2.8/cli/ADM_UIs/ADM_UI_Cli6_export.h
+include/avidemux/2.8/cli/config.h
+lib/libADM_UI_Cli6.dylib
+lib/libADM_render6_cli.dylib

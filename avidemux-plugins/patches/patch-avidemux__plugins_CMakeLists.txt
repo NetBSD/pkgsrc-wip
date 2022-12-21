@@ -1,0 +1,18 @@
+$NetBSD$
+
+In case where both QT4 and Common plugins are enabled, VapourSynth is included
+twice.
+
+--- avidemux_plugins/CMakeLists.txt.orig	2022-09-17 13:59:17.000000000 +0000
++++ avidemux_plugins/CMakeLists.txt
+@@ -267,7 +267,9 @@ ENDIF(DO_COMMON)
+ ADD_SUBDIRECTORY(ADM_videoEncoder)
+ ADD_SUBDIRECTORY(ADM_videoFilters6)
+ IF(DO_QT4)
+-        add_subdirectory(ADM_demuxers/VapourSynth)
++	IF(NOT DO_COMMON)
++		add_subdirectory(ADM_demuxers/VapourSynth)
++	ENDIF(NOT DO_COMMON)
+     #    add_subdirectory(ADM_scriptEngines)
+         #IF(USE_OPENGL AND NOT WIN32)
+         IF(USE_OPENGL )
