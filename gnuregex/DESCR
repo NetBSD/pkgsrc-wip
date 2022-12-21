@@ -1,0 +1,5 @@
+GNU Regex is the regex subset of Gnulib, the GNU portability library.
+It offers an extension of the regex(3) API to allow more flexibility
+in the flavor of regular expressions.
+The GNU regex library is compliant with POSIX.2, except for
+internationalization features.

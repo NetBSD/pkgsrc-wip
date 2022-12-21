@@ -1,0 +1,23 @@
+$NetBSD$
+
+Use libtool to build shared ojects.
+
+--- Makefile.in.orig	1993-04-02 23:12:15.000000000 +0000
++++ Makefile.in
+@@ -45,11 +45,14 @@ SHELL = /bin/sh
+ 
+ subdirs = doc test
+ 
+-default all:: regex.o
++default all:: libgnuregex.a regex.o
+ .PHONY: default all
+ 
++libgnuregex.a: regex.o
++	${LIBTOOL} --mode=link --tag=CC ${CC} -o ${.TARGET:.a=.la} ${regex.o:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:12
++
+ regex.o: regex.c regex.h
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) -I. -I$(srcdir) -c $<
++	${LIBTOOL} --mode=compile --tag=CC $(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) -I. -I$(srcdir) -c $<
+ 
+ clean mostlyclean::
+ 	rm -f *.o
