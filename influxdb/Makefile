@@ -1,13 +1,13 @@
 # $NetBSD: Makefile,v 1.29 2021/12/09 17:50:16 bsiegert Exp $
 
-DISTNAME=	influxdb-2.5.0
+DISTNAME=	influxdb-2.6.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=influxdata/ui/releases/download/OSS-Master/}
 CATEGORIES=	databases
 GITHUB_PROJECT=	influxdb
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DIST_SUBDIR=	influxdata
+DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${PKGNAME_NOREV}${EXTRACT_SUFX}
 DISTFILES+=	build.tar.gz
 
@@ -20,11 +20,9 @@ LICENSE=	mit
 
 # XXX Building of libflux (Rust implementation of a Flux parser) makes references
 #     of ${FAKEHOMEDIR}/.cargo in influxd binary.
-CHECK_WRKREF=	no
+CHECK_WRKREF_SKIP=	sbin/influxd
 
 BUILD_DEPENDS+=	protobuf-[0-9]*:../../devel/protobuf
-
-USE_TOOLS=	pkg-config
 
 DATADIR=	${VARBASE}/lib/influxdb
 LOGDIR=		${VARBASE}/log/influxdb
@@ -56,24 +54,29 @@ INFLUX_GO_FLAGS+=	-X main.commit=${GITHUB_TAG}
 INFLUX_GO_FLAGS+=	-X main.branch=${PKGVERSION_NOREV}
 INFLUX_GO_FLAGS+=	-X main.buildstamp=pkgsrc
 
-PKG_CONFIG=		${WRKDIR}/.gopath/bin/pkg-config
+FLUX_PKG_CONFIG=	${WRKDIR}/.gopath/bin/pkg-config
 
-pre-build:
+.PHONY: go-pkg-config ui-assets
+go-pkg-config:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${GO} install -v github.com/influxdata/pkg-config
+
+ui-assets:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${GO} generate -tags "assets" ./static
 
 # XXX Remove TOOLS_DIR from path to avoid pkg-config being executed instead of
 #     Go pkg-config wrapper.
-do-build:
+do-build: go-pkg-config ui-assets
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		PKG_CONFIG=${PKG_CONFIG:Q} PATH=${PATH:S|${TOOLS_DIR}/bin||:Q} \
+		PKG_CONFIG=${FLUX_PKG_CONFIG:Q} \
+		PATH=${PATH:S|${TOOLS_DIR}/bin||:Q} \
 		${GO} build -ldflags "${INFLUX_GO_FLAGS}" \
 		-tags "assets,sqlite_foreign_keys,sqlite_json" ./cmd/influxd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/influxd ${DESTDIR}${PREFIX}/sbin/influxd
 
+.include "../../lang/rust/cargo.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
