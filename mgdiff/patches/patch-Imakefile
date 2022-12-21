@@ -4,7 +4,12 @@ Do not require libucb/SUNWscpu.
 
 --- Imakefile.orig	1994-05-19 02:01:00.000000000 +0000
 +++ Imakefile
-@@ -8,7 +8,6 @@ XMLIB = -lXm
+@@ -4,11 +4,10 @@
+ 
+ XCOMM Imakefile,v 2.0 1994/05/19 02:01:00 dan Exp
+ 
+-XMLIB = -lXm
++XMLIB =	${MOTIFLIB} -lm
  XCOMM
  XCOMM for Dell SVR4
  XCOMM
