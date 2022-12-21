@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	influx-cli-2.5.0
+DISTNAME=	influx-cli-2.6.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=influxdata/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
