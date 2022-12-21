@@ -39,15 +39,15 @@
 # the ultimate target to built for, as well as the
 # host the compiler is supposed to run on.
 # Rust's target designation
-#TARGET= 		armv7-unknown-netbsd-eabihf
-#TARGET= 		armv6-unknown-netbsd-eabihf
-#TARGET= 		sparc64-unknown-netbsd
-#TARGET= 		powerpc-unknown-netbsd
-#TARGET= 		aarch64-unknown-netbsd
-#TARGET= 		aarch64_be-unknown-netbsd
-#TARGET= 		i686-unknown-netbsd
-#TARGET= 		i586-unknown-netbsd
-#TARGET= 		mipsel-unknown-netbsd
+#TARGET=		armv7-unknown-netbsd-eabihf
+#TARGET=		armv6-unknown-netbsd-eabihf
+#TARGET=		sparc64-unknown-netbsd
+#TARGET=		powerpc-unknown-netbsd
+#TARGET=		aarch64-unknown-netbsd
+#TARGET=		aarch64_be-unknown-netbsd
+#TARGET=		i686-unknown-netbsd
+#TARGET=		i586-unknown-netbsd
+#TARGET=		mipsel-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}

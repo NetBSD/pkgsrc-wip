@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add mipsel-unknown-netbsd.
+
 --- vendor/valuable/no_atomic.rs.orig	2022-09-19 15:35:03.000000000 +0000
 +++ vendor/valuable/no_atomic.rs
 @@ -30,6 +30,7 @@ const NO_ATOMIC_64: &[&str] = &[

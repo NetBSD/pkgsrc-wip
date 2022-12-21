@@ -1,4 +1,4 @@
-# $NetBSD$
+$NetBSD$
 
 Add mips support.
 
