@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	regex-0.12
-PKGNAME=	${DISTNAME:S/^/gnu/}
+PKGNAME=	${DISTNAME:S/^/libgnu/}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnu.org/old-gnu/regex/
 
