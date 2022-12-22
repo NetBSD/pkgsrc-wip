@@ -7,11 +7,11 @@ search the directory containing the symlinks to -latomic.
 +++ compiler/rustc_target/src/spec/netbsd_base.rs
 @@ -1,12 +1,20 @@
 -use crate::spec::{cvs, RelroLevel, TargetOptions};
-+use crate::spec::{cvs, Cc, RelroLevel, LinkerFlavor, TargetOptions};
++use crate::spec::{cvs, Cc, Lld, RelroLevel, LinkerFlavor, TargetOptions};
  
  pub fn opts() -> TargetOptions {
 +    let pre_link_args = TargetOptions::link_args(
-+        LinkerFlavor::Unix(Cc::Yes),
++        LinkerFlavor::Gnu(Cc::Yes, Lld::No),
 +       &[
 +            // For the benefit of powerpc, when libatomic-links is installed,
 +            "-Wl,-L@PREFIX@/lib/libatomic".into(),
