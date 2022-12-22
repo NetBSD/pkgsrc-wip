@@ -30,6 +30,10 @@ else
 				# compatible with gcc7, apparently
 		i[3456]86*)	incadd="-I=/usr/include/gcc-7"
 				;;
+
+				# mips64 does soft-float
+		mips64*)	madd="-msoft-float"
+				;;
 	esac
 	# We build both for -8 and -9 due to ABI differences,
 	# so can't just test $gnuarch...  Yes, a vile hack.
@@ -42,6 +46,9 @@ fi
 who=$(basename $0 | sed -e 's/-wrap$//')
 
 args=""
+if [ ! -z "$madd" ]; then
+	args="$args $madd"
+fi
 
 # May need to add $linkadd before first -l or fist -L
 linkadd="-Wl,--sysroot=${root}/dest"
