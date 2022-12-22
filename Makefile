@@ -6064,6 +6064,7 @@ SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-garcon
 SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-power-manager
+SUBDIR+=	xfce4-settings
 SUBDIR+=	xfce4-thunar
 SUBDIR+=	xfce4-tumbler
 SUBDIR+=	xfce4-wm-dfbsd
