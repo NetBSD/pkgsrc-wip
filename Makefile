@@ -2108,6 +2108,7 @@ SUBDIR+=	libglade-java
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgnomekbd
+SUBDIR+=	libgnuregex
 SUBDIR+=	libgraphqlparser
 SUBDIR+=	libgrass5
 SUBDIR+=	libgravatar
