@@ -2241,6 +2241,7 @@ SUBDIR+=	libvpx-git
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
+SUBDIR+=	libxfce4util
 SUBDIR+=	libxml++3
 SUBDIR+=	libxtend
 SUBDIR+=	libyuv-git

@@ -1,0 +1,77 @@
+# $NetBSD: Makefile.common,v 1.73 2021/12/26 18:27:55 gutteridge Exp $
+#
+# used by archivers/xfce4-thunar-archive/Makefile
+# used by devel/xfce4-conf/Makefile
+# used by devel/xfce4-dev-tools/Makefile
+# used by editors/xfce4-mousepad/Makefile
+# used by mail/xfce4-mailwatch-plugin/Makefile
+# used by meta-pkgs/xfce4-extras/Makefile
+# used by misc/xfce4-calculator-plugin/Makefile
+# used by misc/xfce4-smartbookmark-plugin/Makefile
+# used by misc/xfce4-time-out-plugin/Makefile
+# used by misc/xfce4-weather-plugin/Makefile
+# used by multimedia/xfce4-mpc-plugin/Makefile
+# used by multimedia/xfce4-thunar-media-tags/Makefile
+# used by net/xfce4-wavelan-plugin/Makefile
+# used by sysutils/xfce4-appfinder/Makefile
+# used by sysutils/xfce4-battery-plugin/Makefile
+# used by sysutils/xfce4-cpugraph-plugin/Makefile
+# used by sysutils/xfce4-diskperf-plugin/Makefile
+# used by sysutils/xfce4-fsguard-plugin/Makefile
+# used by sysutils/xfce4-genmon-plugin/Makefile
+# used by sysutils/xfce4-mount-plugin/Makefile
+# used by sysutils/xfce4-netload-plugin/Makefile
+# used by sysutils/xfce4-power-manager/Makefile
+# used by sysutils/xfce4-systemload-plugin/Makefile
+# used by sysutils/xfce4-taskmanager/Makefile
+# used by sysutils/xfce4-thunar-vcs/Makefile
+# used by sysutils/xfce4-thunar/Makefile
+# used by sysutils/xfce4-verve-plugin/Makefile
+# used by sysutils/xfce4-xkb-plugin/Makefile
+# used by textproc/xfce4-dict/Makefile
+# used by time/xfce4-datetime-plugin/Makefile
+# used by time/xfce4-timer-plugin/Makefile
+# used by wm/xfce4-wm-themes/Makefile
+# used by wm/xfce4-wm/Makefile
+# used by x11/libxfce4ui/Makefile
+# used by x11/libxfce4util/Makefile
+# used by x11/xfce4-clipman-plugin/Makefile
+# used by x11/xfce4-dashboard/Makefile
+# used by x11/xfce4-desktop/Makefile
+# used by x11/xfce4-exo/Makefile
+# used by x11/xfce4-eyes-plugin/Makefile
+# used by x11/xfce4-garcon/Makefile
+# used by x11/xfce4-indicator-plugin/Makefile
+# used by x11/xfce4-notes-plugin/Makefile
+# used by x11/xfce4-notifyd/Makefile
+# used by x11/xfce4-panel/Makefile
+# used by x11/xfce4-places-plugin/Makefile
+# used by x11/xfce4-screenshooter/Makefile
+# used by x11/xfce4-session/Makefile
+# used by x11/xfce4-settings/Makefile
+# used by x11/xfce4-terminal/Makefile
+# used by x11/xfce4-tumbler/Makefile
+# used by x11/xfce4-whiskermenu-plugin/Makefile
+
+MASTER_SITES=		https://archive.xfce.org/src/xfce/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		youri@NetBSD.org
+HOMEPAGE=		https://www.xfce.org/
+LICENSE=		gnu-gpl-v2
+
+XFCE4_VERSION=		4.18.0
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config msgfmt msgmerge perl intltool xgettext
+
+XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
+
+CONFIGURE_ARGS.Darwin+=	--disable-visibility
+
+BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.50.0
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=    gtk3+>=3.22.0
+.include "../../x11/gtk3/buildlink3.mk"
