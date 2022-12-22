@@ -5763,6 +5763,7 @@ SUBDIR+=	torrentzip
 SUBDIR+=	torsocks-git
 SUBDIR+=	tortunnel
 SUBDIR+=	toxic-git
+SUBDIR+=	tpdne-dl
 SUBDIR+=	tpl
 SUBDIR+=	tpp
 SUBDIR+=	tqsllib
