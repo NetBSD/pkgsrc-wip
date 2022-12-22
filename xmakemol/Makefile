@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	xmakemol-5.16h
-CATEGORIES=	biology
+CATEGORIES=	biology x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
 EXTRACT_SUFX=	.tar.xz
 
@@ -17,6 +17,12 @@ USE_TOOLS+=	autoconf automake autoreconf
 REPLACE_PERL=	xmake_anim.pl
 
 ELEM_FILE=	${WRKSRC}/elements
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	xmakemol.1
+SUBST_VARS.paths=	PREFIX
+SUBST_MESSAGE.paths=	Replacing PREFIX placeholder.
 
 CONFIGURE_ARGS+=	--with-mesa
 CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_PREFIX.MesaLib}
