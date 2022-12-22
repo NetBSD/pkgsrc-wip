@@ -6056,6 +6056,7 @@ SUBDIR+=	xf86-video-scfb-dfbsd
 SUBDIR+=	xf86-video-virtualbox
 SUBDIR+=	xf86-video-wsfb-dfbsd
 SUBDIR+=	xf86rushproto
+SUBDIR+=	xfce4-conf
 SUBDIR+=	xfce4-tumbler
 SUBDIR+=	xfce4-wm-dfbsd
 SUBDIR+=	xfs
