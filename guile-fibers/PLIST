@@ -1,4 +1,44 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+guile/3.0/lib/guile/3.0/extensions/fibers-libevent.la
+guile/3.0/lib/guile/3.0/site-ccache/fibers.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/affinity.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/channels.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/conditions.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/config.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/counter.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/deque.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/events-impl.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/interrupts.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/io-wakeup.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/nameset.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/operations.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/posix-clocks.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/psq.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/repl.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/scheduler.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/stack.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/timers.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/web/server.go
+guile/3.0/lib/guile/3.0/site-ccache/web/server/fibers.go
+guile/3.0/share/guile/site/3.0/fibers.scm
+guile/3.0/share/guile/site/3.0/fibers/affinity.scm
+guile/3.0/share/guile/site/3.0/fibers/channels.scm
+guile/3.0/share/guile/site/3.0/fibers/conditions.scm
+guile/3.0/share/guile/site/3.0/fibers/config.scm
+guile/3.0/share/guile/site/3.0/fibers/counter.scm
+guile/3.0/share/guile/site/3.0/fibers/deque.scm
+guile/3.0/share/guile/site/3.0/fibers/events-impl.scm
+guile/3.0/share/guile/site/3.0/fibers/interrupts.scm
+guile/3.0/share/guile/site/3.0/fibers/io-wakeup.scm
+guile/3.0/share/guile/site/3.0/fibers/nameset.scm
+guile/3.0/share/guile/site/3.0/fibers/operations.scm
+guile/3.0/share/guile/site/3.0/fibers/posix-clocks.scm
+guile/3.0/share/guile/site/3.0/fibers/psq.scm
+guile/3.0/share/guile/site/3.0/fibers/repl.scm
+guile/3.0/share/guile/site/3.0/fibers/scheduler.scm
+guile/3.0/share/guile/site/3.0/fibers/stack.scm
+guile/3.0/share/guile/site/3.0/fibers/timers.scm
+guile/3.0/share/guile/site/3.0/fibers/web/server.scm
+guile/3.0/share/guile/site/3.0/web/server/fibers.scm
+guile/3.0/share/info/dir
+guile/3.0/share/info/fibers.info
