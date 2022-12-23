@@ -3,3 +3,7 @@ $NetBSD$
 BLAKE2s (fibers-1.2.0.tar.gz) = db16dec4d275d3ee43d4244a026860d39b313fec1960ffab74e0cf1a9a121d9c
 SHA512 (fibers-1.2.0.tar.gz) = b45f124a85fe1e5a94e46cfbbce3693ca86534861035c33b28aeb6aa09e96b5ae14e51a21bd74737d5657c33bf484c5be7c332392d1f251de12352c2a644b854
 Size (fibers-1.2.0.tar.gz) = 577727 bytes
+SHA1 (patch-Makefile.am) = f39c111c9e4f4fc4eca26ac8ada049806ecc6680
+SHA1 (patch-Makefile.in) = 3b42d05a5b52c0b9d440e97db6f35ecf53e7c16d
+SHA1 (patch-fibers_affinity-darwin.scm) = 418f7d807badfc55ef52a4b83c586316f5501c2b
+SHA1 (patch-fibers_affinity.scm) = f909af3b42bae286bfed10fbe610b77c3483e1e7
