@@ -6068,6 +6068,7 @@ SUBDIR+=	xfce4-power-manager
 SUBDIR+=	xfce4-settings
 SUBDIR+=	xfce4-thunar
 SUBDIR+=	xfce4-tumbler
+SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-dfbsd
 SUBDIR+=	xfs
 SUBDIR+=	xhyve
