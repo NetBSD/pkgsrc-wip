@@ -6,11 +6,11 @@ Avoid to (pre)allocate 1GB of memory on OpenBSD:
 
 From OpenBSD ports.
 
---- Source/JavaScriptCore/jit/ExecutableAllocator.cpp.orig	2020-08-12 09:17:53.000000000 +0000
+--- Source/JavaScriptCore/jit/ExecutableAllocator.cpp.orig	2022-09-14 11:58:10.356862300 +0000
 +++ Source/JavaScriptCore/jit/ExecutableAllocator.cpp
-@@ -93,7 +93,7 @@ static constexpr size_t maxIslandsPerReg
+@@ -112,7 +112,7 @@ static constexpr size_t fixedExecutableM
  #else
- static constexpr size_t fixedExecutableMemoryPoolSize = 128 * MB;
+ static constexpr size_t fixedExecutableMemoryPoolSize = 16 * MB;
  #endif
 -#elif CPU(X86_64)
 +#elif CPU(X86_64) && !OS(OPENBSD)
