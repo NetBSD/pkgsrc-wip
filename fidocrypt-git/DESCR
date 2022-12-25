@@ -1,0 +1,6 @@
+Fidocrypt is a technique by which a server can store a secret in
+the credential during U2F/FIDO/webauthn registration, and retrieve
+it again during signin. As long as the server erases its copy of
+the secret, and as long as the U2F device isn't badly designed,
+the secret cannot be retrieved again except by U2F/FIDO/webauthn
+signin with the device.

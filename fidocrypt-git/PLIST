@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/fidocrypt
+include/fidocrypt.h
+lib/libfidocrypt.a
+lib/libfidocrypt.so
+lib/libfidocrypt.so.0
+lib/libfidocrypt.so.${PKGVERSION}
+man/man1/fidocrypt.1
+man/man3/fido_assert_decrypt.3
+man/man3/fido_cred_encrypt.3
+man/man3/fidocrypt.3
