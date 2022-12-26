@@ -434,6 +434,8 @@ ${PYSITELIB}/dask/tests/test_cache.py
 ${PYSITELIB}/dask/tests/test_cache.pyc
 ${PYSITELIB}/dask/tests/test_callbacks.py
 ${PYSITELIB}/dask/tests/test_callbacks.pyc
+${PYSITELIB}/dask/tests/test_ci.py
+${PYSITELIB}/dask/tests/test_ci.pyc
 ${PYSITELIB}/dask/tests/test_cli.py
 ${PYSITELIB}/dask/tests/test_cli.pyc
 ${PYSITELIB}/dask/tests/test_compatibility.py
