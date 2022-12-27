@@ -10,8 +10,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sklearn/__check_build/__init__.py
 ${PYSITELIB}/sklearn/__check_build/__init__.pyc
 ${PYSITELIB}/sklearn/__check_build/_check_build.so
-${PYSITELIB}/sklearn/__check_build/setup.py
-${PYSITELIB}/sklearn/__check_build/setup.pyc
 ${PYSITELIB}/sklearn/__init__.py
 ${PYSITELIB}/sklearn/__init__.pyc
 ${PYSITELIB}/sklearn/_build_utils/__init__.py
@@ -35,8 +33,6 @@ ${PYSITELIB}/sklearn/_loss/link.py
 ${PYSITELIB}/sklearn/_loss/link.pyc
 ${PYSITELIB}/sklearn/_loss/loss.py
 ${PYSITELIB}/sklearn/_loss/loss.pyc
-${PYSITELIB}/sklearn/_loss/setup.py
-${PYSITELIB}/sklearn/_loss/setup.pyc
 ${PYSITELIB}/sklearn/_loss/tests/__init__.py
 ${PYSITELIB}/sklearn/_loss/tests/__init__.pyc
 ${PYSITELIB}/sklearn/_loss/tests/test_glm_distribution.py
@@ -82,8 +78,6 @@ ${PYSITELIB}/sklearn/cluster/_optics.py
 ${PYSITELIB}/sklearn/cluster/_optics.pyc
 ${PYSITELIB}/sklearn/cluster/_spectral.py
 ${PYSITELIB}/sklearn/cluster/_spectral.pyc
-${PYSITELIB}/sklearn/cluster/setup.py
-${PYSITELIB}/sklearn/cluster/setup.pyc
 ${PYSITELIB}/sklearn/cluster/tests/__init__.py
 ${PYSITELIB}/sklearn/cluster/tests/__init__.pyc
 ${PYSITELIB}/sklearn/cluster/tests/common.py
@@ -196,7 +190,6 @@ ${PYSITELIB}/sklearn/datasets/data/linnerud_physiological.csv
 ${PYSITELIB}/sklearn/datasets/data/wine_data.csv
 ${PYSITELIB}/sklearn/datasets/descr/__init__.py
 ${PYSITELIB}/sklearn/datasets/descr/__init__.pyc
-${PYSITELIB}/sklearn/datasets/descr/boston_house_prices.rst
 ${PYSITELIB}/sklearn/datasets/descr/breast_cancer.rst
 ${PYSITELIB}/sklearn/datasets/descr/california_housing.rst
 ${PYSITELIB}/sklearn/datasets/descr/covtype.rst
@@ -215,8 +208,6 @@ ${PYSITELIB}/sklearn/datasets/images/__init__.py
 ${PYSITELIB}/sklearn/datasets/images/__init__.pyc
 ${PYSITELIB}/sklearn/datasets/images/china.jpg
 ${PYSITELIB}/sklearn/datasets/images/flower.jpg
-${PYSITELIB}/sklearn/datasets/setup.py
-${PYSITELIB}/sklearn/datasets/setup.pyc
 ${PYSITELIB}/sklearn/datasets/tests/__init__.py
 ${PYSITELIB}/sklearn/datasets/tests/__init__.pyc
 ${PYSITELIB}/sklearn/datasets/tests/conftest.py
@@ -328,6 +319,8 @@ ${PYSITELIB}/sklearn/datasets/tests/data/svmlight_invalid_order.txt
 ${PYSITELIB}/sklearn/datasets/tests/data/svmlight_multilabel.txt
 ${PYSITELIB}/sklearn/datasets/tests/test_20news.py
 ${PYSITELIB}/sklearn/datasets/tests/test_20news.pyc
+${PYSITELIB}/sklearn/datasets/tests/test_arff_parser.py
+${PYSITELIB}/sklearn/datasets/tests/test_arff_parser.pyc
 ${PYSITELIB}/sklearn/datasets/tests/test_base.py
 ${PYSITELIB}/sklearn/datasets/tests/test_base.pyc
 ${PYSITELIB}/sklearn/datasets/tests/test_california_housing.py
@@ -376,8 +369,6 @@ ${PYSITELIB}/sklearn/decomposition/_sparse_pca.py
 ${PYSITELIB}/sklearn/decomposition/_sparse_pca.pyc
 ${PYSITELIB}/sklearn/decomposition/_truncated_svd.py
 ${PYSITELIB}/sklearn/decomposition/_truncated_svd.pyc
-${PYSITELIB}/sklearn/decomposition/setup.py
-${PYSITELIB}/sklearn/decomposition/setup.pyc
 ${PYSITELIB}/sklearn/decomposition/tests/__init__.py
 ${PYSITELIB}/sklearn/decomposition/tests/__init__.pyc
 ${PYSITELIB}/sklearn/decomposition/tests/test_dict_learning.py
@@ -467,8 +458,6 @@ ${PYSITELIB}/sklearn/ensemble/_voting.py
 ${PYSITELIB}/sklearn/ensemble/_voting.pyc
 ${PYSITELIB}/sklearn/ensemble/_weight_boosting.py
 ${PYSITELIB}/sklearn/ensemble/_weight_boosting.pyc
-${PYSITELIB}/sklearn/ensemble/setup.py
-${PYSITELIB}/sklearn/ensemble/setup.pyc
 ${PYSITELIB}/sklearn/ensemble/tests/__init__.py
 ${PYSITELIB}/sklearn/ensemble/tests/__init__.pyc
 ${PYSITELIB}/sklearn/ensemble/tests/test_bagging.py
@@ -515,8 +504,6 @@ ${PYSITELIB}/sklearn/externals/_arff.py
 ${PYSITELIB}/sklearn/externals/_arff.pyc
 ${PYSITELIB}/sklearn/externals/_lobpcg.py
 ${PYSITELIB}/sklearn/externals/_lobpcg.pyc
-${PYSITELIB}/sklearn/externals/_numpy_compiler_patch.py
-${PYSITELIB}/sklearn/externals/_numpy_compiler_patch.pyc
 ${PYSITELIB}/sklearn/externals/_packaging/__init__.py
 ${PYSITELIB}/sklearn/externals/_packaging/__init__.pyc
 ${PYSITELIB}/sklearn/externals/_packaging/_structures.py
@@ -536,8 +523,6 @@ ${PYSITELIB}/sklearn/feature_extraction/_stop_words.py
 ${PYSITELIB}/sklearn/feature_extraction/_stop_words.pyc
 ${PYSITELIB}/sklearn/feature_extraction/image.py
 ${PYSITELIB}/sklearn/feature_extraction/image.pyc
-${PYSITELIB}/sklearn/feature_extraction/setup.py
-${PYSITELIB}/sklearn/feature_extraction/setup.pyc
 ${PYSITELIB}/sklearn/feature_extraction/tests/__init__.py
 ${PYSITELIB}/sklearn/feature_extraction/tests/__init__.pyc
 ${PYSITELIB}/sklearn/feature_extraction/tests/test_dict_vectorizer.py
@@ -624,6 +609,8 @@ ${PYSITELIB}/sklearn/inspection/__init__.py
 ${PYSITELIB}/sklearn/inspection/__init__.pyc
 ${PYSITELIB}/sklearn/inspection/_partial_dependence.py
 ${PYSITELIB}/sklearn/inspection/_partial_dependence.pyc
+${PYSITELIB}/sklearn/inspection/_pd_utils.py
+${PYSITELIB}/sklearn/inspection/_pd_utils.pyc
 ${PYSITELIB}/sklearn/inspection/_permutation_importance.py
 ${PYSITELIB}/sklearn/inspection/_permutation_importance.pyc
 ${PYSITELIB}/sklearn/inspection/_plot/__init__.py
@@ -638,12 +625,12 @@ ${PYSITELIB}/sklearn/inspection/_plot/tests/test_boundary_decision_display.py
 ${PYSITELIB}/sklearn/inspection/_plot/tests/test_boundary_decision_display.pyc
 ${PYSITELIB}/sklearn/inspection/_plot/tests/test_plot_partial_dependence.py
 ${PYSITELIB}/sklearn/inspection/_plot/tests/test_plot_partial_dependence.pyc
-${PYSITELIB}/sklearn/inspection/setup.py
-${PYSITELIB}/sklearn/inspection/setup.pyc
 ${PYSITELIB}/sklearn/inspection/tests/__init__.py
 ${PYSITELIB}/sklearn/inspection/tests/__init__.pyc
 ${PYSITELIB}/sklearn/inspection/tests/test_partial_dependence.py
 ${PYSITELIB}/sklearn/inspection/tests/test_partial_dependence.pyc
+${PYSITELIB}/sklearn/inspection/tests/test_pd_utils.py
+${PYSITELIB}/sklearn/inspection/tests/test_pd_utils.pyc
 ${PYSITELIB}/sklearn/inspection/tests/test_permutation_importance.py
 ${PYSITELIB}/sklearn/inspection/tests/test_permutation_importance.pyc
 ${PYSITELIB}/sklearn/isotonic.py
@@ -663,6 +650,8 @@ ${PYSITELIB}/sklearn/linear_model/_coordinate_descent.py
 ${PYSITELIB}/sklearn/linear_model/_coordinate_descent.pyc
 ${PYSITELIB}/sklearn/linear_model/_glm/__init__.py
 ${PYSITELIB}/sklearn/linear_model/_glm/__init__.pyc
+${PYSITELIB}/sklearn/linear_model/_glm/_newton_solver.py
+${PYSITELIB}/sklearn/linear_model/_glm/_newton_solver.pyc
 ${PYSITELIB}/sklearn/linear_model/_glm/glm.py
 ${PYSITELIB}/sklearn/linear_model/_glm/glm.pyc
 ${PYSITELIB}/sklearn/linear_model/_glm/tests/__init__.py
@@ -698,8 +687,6 @@ ${PYSITELIB}/sklearn/linear_model/_stochastic_gradient.py
 ${PYSITELIB}/sklearn/linear_model/_stochastic_gradient.pyc
 ${PYSITELIB}/sklearn/linear_model/_theil_sen.py
 ${PYSITELIB}/sklearn/linear_model/_theil_sen.pyc
-${PYSITELIB}/sklearn/linear_model/setup.py
-${PYSITELIB}/sklearn/linear_model/setup.pyc
 ${PYSITELIB}/sklearn/linear_model/tests/__init__.py
 ${PYSITELIB}/sklearn/linear_model/tests/__init__.pyc
 ${PYSITELIB}/sklearn/linear_model/tests/test_base.py
@@ -752,8 +739,6 @@ ${PYSITELIB}/sklearn/manifold/_spectral_embedding.pyc
 ${PYSITELIB}/sklearn/manifold/_t_sne.py
 ${PYSITELIB}/sklearn/manifold/_t_sne.pyc
 ${PYSITELIB}/sklearn/manifold/_utils.so
-${PYSITELIB}/sklearn/manifold/setup.py
-${PYSITELIB}/sklearn/manifold/setup.pyc
 ${PYSITELIB}/sklearn/manifold/tests/__init__.py
 ${PYSITELIB}/sklearn/manifold/tests/__init__.pyc
 ${PYSITELIB}/sklearn/manifold/tests/test_isomap.py
@@ -774,7 +759,20 @@ ${PYSITELIB}/sklearn/metrics/_classification.py
 ${PYSITELIB}/sklearn/metrics/_classification.pyc
 ${PYSITELIB}/sklearn/metrics/_dist_metrics.pxd
 ${PYSITELIB}/sklearn/metrics/_dist_metrics.so
-${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction.so
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/__init__.py
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/__init__.pyc
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_argkmin.pxd
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_argkmin.so
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_base.pxd
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_base.so
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pxd
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.so
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_dispatcher.pyc
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.pxd
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.so
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.pxd
+${PYSITELIB}/sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.so
 ${PYSITELIB}/sklearn/metrics/_pairwise_fast.so
 ${PYSITELIB}/sklearn/metrics/_plot/__init__.py
 ${PYSITELIB}/sklearn/metrics/_plot/__init__.pyc
@@ -786,6 +784,8 @@ ${PYSITELIB}/sklearn/metrics/_plot/det_curve.py
 ${PYSITELIB}/sklearn/metrics/_plot/det_curve.pyc
 ${PYSITELIB}/sklearn/metrics/_plot/precision_recall_curve.py
 ${PYSITELIB}/sklearn/metrics/_plot/precision_recall_curve.pyc
+${PYSITELIB}/sklearn/metrics/_plot/regression.py
+${PYSITELIB}/sklearn/metrics/_plot/regression.pyc
 ${PYSITELIB}/sklearn/metrics/_plot/roc_curve.py
 ${PYSITELIB}/sklearn/metrics/_plot/roc_curve.pyc
 ${PYSITELIB}/sklearn/metrics/_plot/tests/__init__.py
@@ -798,18 +798,10 @@ ${PYSITELIB}/sklearn/metrics/_plot/tests/test_confusion_matrix_display.py
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_confusion_matrix_display.pyc
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_det_curve_display.py
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_det_curve_display.pyc
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_confusion_matrix.py
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_confusion_matrix.pyc
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_curve_common.py
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_curve_common.pyc
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_det_curve.py
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_det_curve.pyc
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_precision_recall.py
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_precision_recall.pyc
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_roc_curve.py
-${PYSITELIB}/sklearn/metrics/_plot/tests/test_plot_roc_curve.pyc
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_precision_recall_display.py
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_precision_recall_display.pyc
+${PYSITELIB}/sklearn/metrics/_plot/tests/test_predict_error_display.py
+${PYSITELIB}/sklearn/metrics/_plot/tests/test_predict_error_display.pyc
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_roc_curve_display.py
 ${PYSITELIB}/sklearn/metrics/_plot/tests/test_roc_curve_display.pyc
 ${PYSITELIB}/sklearn/metrics/_ranking.py
@@ -827,8 +819,6 @@ ${PYSITELIB}/sklearn/metrics/cluster/_supervised.py
 ${PYSITELIB}/sklearn/metrics/cluster/_supervised.pyc
 ${PYSITELIB}/sklearn/metrics/cluster/_unsupervised.py
 ${PYSITELIB}/sklearn/metrics/cluster/_unsupervised.pyc
-${PYSITELIB}/sklearn/metrics/cluster/setup.py
-${PYSITELIB}/sklearn/metrics/cluster/setup.pyc
 ${PYSITELIB}/sklearn/metrics/cluster/tests/__init__.py
 ${PYSITELIB}/sklearn/metrics/cluster/tests/__init__.pyc
 ${PYSITELIB}/sklearn/metrics/cluster/tests/test_bicluster.py
@@ -841,8 +831,6 @@ ${PYSITELIB}/sklearn/metrics/cluster/tests/test_unsupervised.py
 ${PYSITELIB}/sklearn/metrics/cluster/tests/test_unsupervised.pyc
 ${PYSITELIB}/sklearn/metrics/pairwise.py
 ${PYSITELIB}/sklearn/metrics/pairwise.pyc
-${PYSITELIB}/sklearn/metrics/setup.py
-${PYSITELIB}/sklearn/metrics/setup.pyc
 ${PYSITELIB}/sklearn/metrics/tests/__init__.py
 ${PYSITELIB}/sklearn/metrics/tests/__init__.pyc
 ${PYSITELIB}/sklearn/metrics/tests/test_classification.py
@@ -879,6 +867,8 @@ ${PYSITELIB}/sklearn/mixture/tests/test_mixture.py
 ${PYSITELIB}/sklearn/mixture/tests/test_mixture.pyc
 ${PYSITELIB}/sklearn/model_selection/__init__.py
 ${PYSITELIB}/sklearn/model_selection/__init__.pyc
+${PYSITELIB}/sklearn/model_selection/_plot.py
+${PYSITELIB}/sklearn/model_selection/_plot.pyc
 ${PYSITELIB}/sklearn/model_selection/_search.py
 ${PYSITELIB}/sklearn/model_selection/_search.pyc
 ${PYSITELIB}/sklearn/model_selection/_search_successive_halving.py
@@ -891,6 +881,8 @@ ${PYSITELIB}/sklearn/model_selection/tests/__init__.py
 ${PYSITELIB}/sklearn/model_selection/tests/__init__.pyc
 ${PYSITELIB}/sklearn/model_selection/tests/common.py
 ${PYSITELIB}/sklearn/model_selection/tests/common.pyc
+${PYSITELIB}/sklearn/model_selection/tests/test_plot.py
+${PYSITELIB}/sklearn/model_selection/tests/test_plot.pyc
 ${PYSITELIB}/sklearn/model_selection/tests/test_search.py
 ${PYSITELIB}/sklearn/model_selection/tests/test_search.pyc
 ${PYSITELIB}/sklearn/model_selection/tests/test_split.py
@@ -933,8 +925,6 @@ ${PYSITELIB}/sklearn/neighbors/_regression.py
 ${PYSITELIB}/sklearn/neighbors/_regression.pyc
 ${PYSITELIB}/sklearn/neighbors/_unsupervised.py
 ${PYSITELIB}/sklearn/neighbors/_unsupervised.pyc
-${PYSITELIB}/sklearn/neighbors/setup.py
-${PYSITELIB}/sklearn/neighbors/setup.pyc
 ${PYSITELIB}/sklearn/neighbors/tests/__init__.py
 ${PYSITELIB}/sklearn/neighbors/tests/__init__.pyc
 ${PYSITELIB}/sklearn/neighbors/tests/test_ball_tree.py
@@ -996,8 +986,6 @@ ${PYSITELIB}/sklearn/preprocessing/_label.py
 ${PYSITELIB}/sklearn/preprocessing/_label.pyc
 ${PYSITELIB}/sklearn/preprocessing/_polynomial.py
 ${PYSITELIB}/sklearn/preprocessing/_polynomial.pyc
-${PYSITELIB}/sklearn/preprocessing/setup.py
-${PYSITELIB}/sklearn/preprocessing/setup.pyc
 ${PYSITELIB}/sklearn/preprocessing/tests/__init__.py
 ${PYSITELIB}/sklearn/preprocessing/tests/__init__.pyc
 ${PYSITELIB}/sklearn/preprocessing/tests/test_common.py
@@ -1028,8 +1016,6 @@ ${PYSITELIB}/sklearn/semi_supervised/tests/test_label_propagation.py
 ${PYSITELIB}/sklearn/semi_supervised/tests/test_label_propagation.pyc
 ${PYSITELIB}/sklearn/semi_supervised/tests/test_self_training.py
 ${PYSITELIB}/sklearn/semi_supervised/tests/test_self_training.pyc
-${PYSITELIB}/sklearn/setup.py
-${PYSITELIB}/sklearn/setup.pyc
 ${PYSITELIB}/sklearn/svm/__init__.py
 ${PYSITELIB}/sklearn/svm/__init__.pyc
 ${PYSITELIB}/sklearn/svm/_base.py
@@ -1042,8 +1028,6 @@ ${PYSITELIB}/sklearn/svm/_liblinear.so
 ${PYSITELIB}/sklearn/svm/_libsvm.so
 ${PYSITELIB}/sklearn/svm/_libsvm_sparse.so
 ${PYSITELIB}/sklearn/svm/_newrand.so
-${PYSITELIB}/sklearn/svm/setup.py
-${PYSITELIB}/sklearn/svm/setup.pyc
 ${PYSITELIB}/sklearn/svm/tests/__init__.py
 ${PYSITELIB}/sklearn/svm/tests/__init__.pyc
 ${PYSITELIB}/sklearn/svm/tests/test_bounds.py
@@ -1096,6 +1080,8 @@ ${PYSITELIB}/sklearn/tests/test_naive_bayes.py
 ${PYSITELIB}/sklearn/tests/test_naive_bayes.pyc
 ${PYSITELIB}/sklearn/tests/test_pipeline.py
 ${PYSITELIB}/sklearn/tests/test_pipeline.pyc
+${PYSITELIB}/sklearn/tests/test_public_functions.py
+${PYSITELIB}/sklearn/tests/test_public_functions.pyc
 ${PYSITELIB}/sklearn/tests/test_random_projection.py
 ${PYSITELIB}/sklearn/tests/test_random_projection.pyc
 ${PYSITELIB}/sklearn/tree/__init__.py
@@ -1114,8 +1100,6 @@ ${PYSITELIB}/sklearn/tree/_tree.pxd
 ${PYSITELIB}/sklearn/tree/_tree.so
 ${PYSITELIB}/sklearn/tree/_utils.pxd
 ${PYSITELIB}/sklearn/tree/_utils.so
-${PYSITELIB}/sklearn/tree/setup.py
-${PYSITELIB}/sklearn/tree/setup.pyc
 ${PYSITELIB}/sklearn/tree/tests/__init__.py
 ${PYSITELIB}/sklearn/tree/tests/__init__.pyc
 ${PYSITELIB}/sklearn/tree/tests/test_export.py
@@ -1128,6 +1112,10 @@ ${PYSITELIB}/sklearn/utils/__init__.py
 ${PYSITELIB}/sklearn/utils/__init__.pyc
 ${PYSITELIB}/sklearn/utils/_arpack.py
 ${PYSITELIB}/sklearn/utils/_arpack.pyc
+${PYSITELIB}/sklearn/utils/_array_api.py
+${PYSITELIB}/sklearn/utils/_array_api.pyc
+${PYSITELIB}/sklearn/utils/_available_if.py
+${PYSITELIB}/sklearn/utils/_available_if.pyc
 ${PYSITELIB}/sklearn/utils/_bunch.py
 ${PYSITELIB}/sklearn/utils/_bunch.pyc
 ${PYSITELIB}/sklearn/utils/_cython_blas.pxd
@@ -1140,6 +1128,7 @@ ${PYSITELIB}/sklearn/utils/_fast_dict.pxd
 ${PYSITELIB}/sklearn/utils/_fast_dict.so
 ${PYSITELIB}/sklearn/utils/_heap.pxd
 ${PYSITELIB}/sklearn/utils/_heap.so
+${PYSITELIB}/sklearn/utils/_isfinite.so
 ${PYSITELIB}/sklearn/utils/_joblib.py
 ${PYSITELIB}/sklearn/utils/_joblib.pyc
 ${PYSITELIB}/sklearn/utils/_logistic_sigmoid.so
@@ -1149,6 +1138,8 @@ ${PYSITELIB}/sklearn/utils/_mocking.py
 ${PYSITELIB}/sklearn/utils/_mocking.pyc
 ${PYSITELIB}/sklearn/utils/_openmp_helpers.pxd
 ${PYSITELIB}/sklearn/utils/_openmp_helpers.so
+${PYSITELIB}/sklearn/utils/_param_validation.py
+${PYSITELIB}/sklearn/utils/_param_validation.pyc
 ${PYSITELIB}/sklearn/utils/_pprint.py
 ${PYSITELIB}/sklearn/utils/_pprint.pyc
 ${PYSITELIB}/sklearn/utils/_random.pxd
@@ -1156,6 +1147,8 @@ ${PYSITELIB}/sklearn/utils/_random.so
 ${PYSITELIB}/sklearn/utils/_readonly_array_wrapper.so
 ${PYSITELIB}/sklearn/utils/_seq_dataset.pxd
 ${PYSITELIB}/sklearn/utils/_seq_dataset.so
+${PYSITELIB}/sklearn/utils/_set_output.py
+${PYSITELIB}/sklearn/utils/_set_output.pyc
 ${PYSITELIB}/sklearn/utils/_show_versions.py
 ${PYSITELIB}/sklearn/utils/_show_versions.pyc
 ${PYSITELIB}/sklearn/utils/_sorting.pxd
@@ -1175,6 +1168,8 @@ ${PYSITELIB}/sklearn/utils/class_weight.py
 ${PYSITELIB}/sklearn/utils/class_weight.pyc
 ${PYSITELIB}/sklearn/utils/deprecation.py
 ${PYSITELIB}/sklearn/utils/deprecation.pyc
+${PYSITELIB}/sklearn/utils/discovery.py
+${PYSITELIB}/sklearn/utils/discovery.pyc
 ${PYSITELIB}/sklearn/utils/estimator_checks.py
 ${PYSITELIB}/sklearn/utils/estimator_checks.pyc
 ${PYSITELIB}/sklearn/utils/extmath.py
@@ -1193,8 +1188,6 @@ ${PYSITELIB}/sklearn/utils/optimize.py
 ${PYSITELIB}/sklearn/utils/optimize.pyc
 ${PYSITELIB}/sklearn/utils/random.py
 ${PYSITELIB}/sklearn/utils/random.pyc
-${PYSITELIB}/sklearn/utils/setup.py
-${PYSITELIB}/sklearn/utils/setup.pyc
 ${PYSITELIB}/sklearn/utils/sparsefuncs.py
 ${PYSITELIB}/sklearn/utils/sparsefuncs.pyc
 ${PYSITELIB}/sklearn/utils/sparsefuncs_fast.so
@@ -1206,6 +1199,8 @@ ${PYSITELIB}/sklearn/utils/tests/conftest.py
 ${PYSITELIB}/sklearn/utils/tests/conftest.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_arpack.py
 ${PYSITELIB}/sklearn/utils/tests/test_arpack.pyc
+${PYSITELIB}/sklearn/utils/tests/test_array_api.py
+${PYSITELIB}/sklearn/utils/tests/test_array_api.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_arrayfuncs.py
 ${PYSITELIB}/sklearn/utils/tests/test_arrayfuncs.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_class_weight.py
@@ -1242,6 +1237,8 @@ ${PYSITELIB}/sklearn/utils/tests/test_optimize.py
 ${PYSITELIB}/sklearn/utils/tests/test_optimize.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_parallel.py
 ${PYSITELIB}/sklearn/utils/tests/test_parallel.pyc
+${PYSITELIB}/sklearn/utils/tests/test_param_validation.py
+${PYSITELIB}/sklearn/utils/tests/test_param_validation.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_pprint.py
 ${PYSITELIB}/sklearn/utils/tests/test_pprint.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_random.py
@@ -1250,6 +1247,8 @@ ${PYSITELIB}/sklearn/utils/tests/test_readonly_wrapper.py
 ${PYSITELIB}/sklearn/utils/tests/test_readonly_wrapper.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_seq_dataset.py
 ${PYSITELIB}/sklearn/utils/tests/test_seq_dataset.pyc
+${PYSITELIB}/sklearn/utils/tests/test_set_output.py
+${PYSITELIB}/sklearn/utils/tests/test_set_output.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_shortest_path.py
 ${PYSITELIB}/sklearn/utils/tests/test_shortest_path.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_show_versions.py

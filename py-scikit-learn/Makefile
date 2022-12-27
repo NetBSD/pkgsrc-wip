@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2022/04/10 00:57:15 gutteridge Exp $
 
-DISTNAME=	scikit-learn-1.1.2
+DISTNAME=	scikit-learn-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
@@ -30,6 +30,12 @@ TEST_ENV+=PYTEST=py.test-${PYVERSSUFFIX}
 TEST_ENV+=PYTHONPATH=.
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TEST_ENV} gmake test
+
+
+SUBST_CLASSES+=         Makefile
+SUBST_STAGE.Makefile=	post-extract
+SUBST_FILES.Makefile=      Makefile
+SUBST_SED.Makefile=        -e 's| python | $${PYTHON} |g'
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
