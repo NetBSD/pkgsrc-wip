@@ -283,6 +283,7 @@ SUBDIR+=	bindgraph
 SUBDIR+=	binutils-gold-git
 SUBDIR+=	biolibc
 SUBDIR+=	biolibc-tools
+SUBDIR+=	bio-mocha
 SUBDIR+=	bioruby
 SUBDIR+=	bip
 SUBDIR+=	bitkeeper
