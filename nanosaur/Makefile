@@ -8,7 +8,7 @@ GIT_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://www.pangeasoft.net/nano/index.html
 COMMENT=	Source port of Nanosaur from Pangea Software
-LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0
+LICENSE=	cc-by-nc-sa-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
