@@ -7,8 +7,8 @@ GIT_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pangeasoft.net/otto/
-COMMENT=	Pangea Software’s Otto Matic
-LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0
+COMMENT=	Pangea Software's Otto Matic
+LICENSE=	cc-by-nc-sa-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
