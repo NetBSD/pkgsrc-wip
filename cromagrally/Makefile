@@ -7,7 +7,7 @@ GIT_REPO=	https://github.com/jorio/CroMagRally.git
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pangeasoft.net/cromag/
 COMMENT=	Source port of Cro-Mag Rally from Pangea Software
-LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0
+LICENSE=	cc-by-nc-sa-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
