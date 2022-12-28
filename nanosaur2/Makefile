@@ -8,7 +8,7 @@ GIT_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://jorio.itch.io/nanosaur2
 COMMENT=	Source port of Nanosaur 2: Hatchling from Pangea Software
-LICENSE=	cc-by-sa-v4.0 # XXX Actually it's cc-nc-by-sa-v4.0
+LICENSE=	cc-by-nc-sa-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
