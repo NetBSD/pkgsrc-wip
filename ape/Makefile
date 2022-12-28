@@ -5,7 +5,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	53b2d90786fecb1f2f335b353eecb5a596270baf
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/APE
 COMMENT=	Another Programmer's Editor
 LICENSE=	2-clause-bsd

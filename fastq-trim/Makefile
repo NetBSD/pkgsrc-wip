@@ -4,7 +4,7 @@ DISTNAME=	fastq-trim-0.1.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/Fastq-trim
 COMMENT=	Lightening fast sequence read trimmer
 LICENSE=	2-clause-bsd

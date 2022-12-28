@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	haplohseq
 GITHUB_TAG=	e4892945eced075a5bb98f208786cdf85eb3d82a
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/integrativecancergenomics/software/haplohseq
 COMMENT=	Identify regions of allelic imbalance
 LICENSE=	mit

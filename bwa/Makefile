@@ -6,7 +6,7 @@ PKGREVISION=	1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	http://bio-bwa.sourceforge.net/
 COMMENT=	Map low-divergent sequences against a large reference genome
 LICENSE=	gnu-gpl-v3

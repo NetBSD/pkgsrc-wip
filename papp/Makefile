@@ -10,7 +10,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	dbb485276b9b18f12cc0e90c221a4141617ec2a0
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/papp
 COMMENT=	Assembly Preprocessor
 LICENSE=	modified-bsd

@@ -13,7 +13,7 @@ DISTFILES+=	bio-mocha_1.16-20221221.tar.gz
 GITHUB_PROJECT=	bcftools
 GITHUB_TAG=	1.16
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://software.broadinstitute.org/software/mocha/
 COMMENT=	Bcftools plugin for mosaic chromosomal alteration analysis
 LICENSE=	mit

@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpertea/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://ccb.jhu.edu/software/stringtie/gff.shtml
 COMMENT=	GFF/GTF format conversions, filtering, FASTA extraction, etc
 LICENSE=	mit

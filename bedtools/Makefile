@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=arq5x/}
 GITHUB_PROJECT=	bedtools2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://bedtools.readthedocs.io/en/latest/
 COMMENT=	Swiss army knife for genome arithmetic
 LICENSE=	mit

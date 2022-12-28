@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/BenLangmead/bowtie2
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	gnu-gpl-v3

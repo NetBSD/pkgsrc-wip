@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	84cb894fdd1735a31981494f6ff890e00b3d24a4
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/webbrowser/
 COMMENT=	Proxy script for launching "best" available web browser
 LICENSE=	2-clause-bsd

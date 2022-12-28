@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	dfa8f2ff93779a5b54bdccf29f60c8072c73a069
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc-tools
 COMMENT=	High-performance bioinformatics tools based on biolibc
 LICENSE=	2-clause-bsd

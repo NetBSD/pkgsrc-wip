@@ -5,7 +5,7 @@ DISTNAME=	rna-seq-1.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 COMMENT=	Core tools needed for RNA-Seq analysis
 
 DEPENDS+=	fastq-trim>=0:../../biology/fastq-trim
