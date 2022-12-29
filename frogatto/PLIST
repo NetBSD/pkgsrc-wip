@@ -88,12 +88,12 @@ share/frogatto/data/gui-elements.cfg
 share/frogatto/data/gui.cfg
 share/frogatto/data/gui/null.cfg
 share/frogatto/data/languages.cfg
-share/frogatto/data/level/empty.cfg
-share/frogatto/data/level/kstest1.cfg
+share/frogatto/data/level/titlescreen.cfg
 share/frogatto/data/music.cfg
 share/frogatto/data/object_templates/bat.cfg
 share/frogatto/data/object_templates/controller.cfg
 share/frogatto/data/object_templates/fish.cfg
+share/frogatto/data/objects/dummy_player.cfg
 share/frogatto/data/objects/hud-elements/dummy_gui_object.cfg
 share/frogatto/data/preload.cfg
 share/frogatto/data/shaders.cfg
@@ -132,6 +132,7 @@ share/frogatto/images/slider_handle.svg
 share/frogatto/images/white2x2.png
 share/frogatto/images/window-icon-large.png
 share/frogatto/images/window-icon.png
+share/frogatto/modules/empty_test_module/module.cfg
 share/frogatto/modules/frogatto4/data/achievements.cfg
 share/frogatto/modules/frogatto4/data/backgrounds/air-stage1.cfg
 share/frogatto/modules/frogatto4/data/backgrounds/arcade.cfg
@@ -407,6 +408,8 @@ share/frogatto/modules/frogatto4/data/level/Unused/Test/test-forest-interior.cfg
 share/frogatto/modules/frogatto4/data/level/Unused/Test/test-fragment-shader.cfg
 share/frogatto/modules/frogatto4/data/level/Unused/Test/test-gate.cfg
 share/frogatto/modules/frogatto4/data/level/Unused/Test/test-gate2.cfg
+share/frogatto/modules/frogatto4/data/level/Unused/Test/test-liquids-mini-whitewater.cfg
+share/frogatto/modules/frogatto4/data/level/Unused/Test/test-liquids-whitewater.cfg
 share/frogatto/modules/frogatto4/data/level/Unused/Test/test-liquids.cfg
 share/frogatto/modules/frogatto4/data/level/Unused/Test/test-multiplayer.cfg
 share/frogatto/modules/frogatto4/data/level/Unused/Test/test-npc-turning.cfg
@@ -516,6 +519,7 @@ share/frogatto/modules/frogatto4/data/objects/effects/attaches/hp_bar_attache.cf
 share/frogatto/modules/frogatto4/data/objects/effects/attaches/legacy_particle_attache.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/attaches/light_source_attache.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/attaches/particle_attache.cfg
+share/frogatto/modules/frogatto4/data/objects/effects/attaches/particle_attache_slicer.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/attaches/particle_system_holder.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/attaches/shadow_attache.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/attaches/sprite_attache.cfg
@@ -634,6 +638,7 @@ share/frogatto/modules/frogatto4/data/objects/effects/silhouettes/silhouette_rin
 share/frogatto/modules/frogatto4/data/objects/effects/silhouettes/silhouette_star.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/solidity/heightmap_platform_controller.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/solidity/nonsecret_passage_controller.cfg
+share/frogatto/modules/frogatto4/data/objects/effects/solidity/platform_elimination_controller.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/solidity/secret_passage_controller.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/solidity/solid_area_controller.cfg
 share/frogatto/modules/frogatto4/data/objects/effects/sounds/sound_emitter_intermittent.cfg
@@ -1348,6 +1353,8 @@ share/frogatto/modules/frogatto4/data/objects/props/nutty-factory/bottle_acorn_b
 share/frogatto/modules/frogatto4/data/objects/props/nutty-factory/bottle_acorn_butter_ripe.cfg
 share/frogatto/modules/frogatto4/data/objects/props/nutty-factory/bottle_frogatto.cfg
 share/frogatto/modules/frogatto4/data/objects/props/ocean/coral_background1.cfg
+share/frogatto/modules/frogatto4/data/objects/props/ocean/coral_background2.cfg
+share/frogatto/modules/frogatto4/data/objects/props/ocean/coral_background3.cfg
 share/frogatto/modules/frogatto4/data/objects/props/seaside/decor/seaside_decor_fence1.cfg
 share/frogatto/modules/frogatto4/data/objects/props/seaside/decor/seaside_decor_fence2.cfg
 share/frogatto/modules/frogatto4/data/objects/props/seaside/decor/seaside_decor_fence3.cfg
@@ -1961,6 +1968,7 @@ share/frogatto/modules/frogatto4/images/liquids/water copy 1.png
 share/frogatto/modules/frogatto4/images/liquids/water copy 2.png
 share/frogatto/modules/frogatto4/images/liquids/water copy 3.png
 share/frogatto/modules/frogatto4/images/liquids/water copy 4.png
+share/frogatto/modules/frogatto4/images/liquids/water-texture-lights-opaque.png
 share/frogatto/modules/frogatto4/images/liquids/water-texture-lights.png
 share/frogatto/modules/frogatto4/images/liquids/water-texture.png
 share/frogatto/modules/frogatto4/images/liquids/water-texture2.png
@@ -4972,6 +4980,7 @@ share/frogatto/modules/frogatto4/sounds_wav/wingflap2.wav
 share/frogatto/modules/frogatto4/sounds_wav/wingflap3.wav
 share/frogatto/modules/frogatto4/sounds_wav/wingflap4.wav
 share/frogatto/modules/frogatto4/sounds_wav/wingflap5.wav
+share/frogatto/modules/frogatto4_dependant_test_module/module.cfg
 share/frogatto/modules/gui/data/classes/easing.cfg
 share/frogatto/modules/gui/data/classes/font.cfg
 share/frogatto/modules/gui/data/classes/gui.cfg

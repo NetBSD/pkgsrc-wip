@@ -93,6 +93,7 @@ do-install:
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
