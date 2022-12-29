@@ -9,7 +9,7 @@ COMMENT=	Server side focus component used in Jitsi Meet conferences
 DISTINFO_FILE=	${.CURDIR}/../../wip/jicofo/distinfo
 
 USE_TOOLS+=	bash:run unzip
-USE_JAVA2=	8
+USE_JAVA2=	17
 
 REPLACE_BASH=	resources/jicofo.sh
 
@@ -20,12 +20,8 @@ MAVEN_FLAGS+=	-Dassembly.skipAssembly=false
 MAVEN_FLAGS+=	-Djavax.net.ssl.trustStore=${WRKDIR}/keystore
 MAVEN_FLAGS+=	-Djavax.net.ssl.trustStorePassword=password
 
-EGDIR=		share/examples/jicofo
-CONF_FILES=	${EGDIR}/logging.properties \
-		${PKG_SYSCONFDIR}/jitsi/jicofo/logging.properties
-
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	share
 
 SUBST_CLASSES+=		java logging
 SUBST_STAGE.java=	post-configure
@@ -39,7 +35,7 @@ do-configure:
 	#XXX this assumes trusted CA certificates are in /etc/openssl/certs
 	cd ${WRKSRC} && \
 		for cert in /etc/openssl/certs/*.0; do \
-			/usr/pkg/java/openjdk11/bin/keytool -importcert \
+			/usr/pkg/java/openjdk17/bin/keytool -importcert \
 					-keystore ${WRKDIR}/keystore \
 					-noprompt -trustcacerts \
 					-storepass password -file "$$cert" \
@@ -53,11 +49,9 @@ do-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/jicofo \
 		${DESTDIR}${PREFIX}/share/jicofo-1.1-SNAPSHOT
 	cd ${DESTDIR}${PREFIX}/share && \
-		${UNZIP_CMD} ${WRKSRC}/target/jicofo-1.1-SNAPSHOT-archive.zip
+		${UNZIP_CMD} ${WRKSRC}/jicofo/target/jicofo-1.1-SNAPSHOT-archive.zip
 	${MV} ${DESTDIR}${PREFIX}/share/jicofo-1.1-SNAPSHOT \
 		${DESTDIR}${PREFIX}/share/jicofo
-	${MV} ${DESTDIR}${PREFIX}/share/jicofo/lib/logging.properties \
-		${DESTDIR}${PREFIX}/share/examples/jicofo/logging.properties
 	${LN} -sf ../share/jicofo/jicofo.sh \
 		${DESTDIR}${PREFIX}/bin/jicofo
 

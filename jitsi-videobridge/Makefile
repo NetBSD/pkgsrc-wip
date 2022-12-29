@@ -9,7 +9,7 @@ COMMENT=	WebRTC compatible video router or SFU
 DISTINFO_FILE=	${.CURDIR}/../../wip/jitsi-videobridge/distinfo
 
 USE_TOOLS+=	bash:run unzip
-USE_JAVA2=	8
+USE_JAVA2=	17
 
 REPLACE_BASH=	jvb/resources/jvb.sh
 
