@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	clipper_ver6.4
+DISTNAME=	clipper_ver6.4.2
 # clipper is too generic package name, go for polyclipping
 PKGNAME=	${DISTNAME:S/_ver/-/:S/clipper/polyclipping/}
 CATEGORIES=	graphics
