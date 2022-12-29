@@ -19,6 +19,7 @@ USE_LANGUAGES=		# none
 
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-shapely-[0-9]*:../../wip/py-shapely
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 
 pre-install:
 	find ${WRKSRC} -type f -name "*.orig" | xargs ${RM}
@@ -32,5 +33,4 @@ PLIST_SUBST+=	CMAKE_API=${CMAKE_API}
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../wip/libArcus/buildlink3.mk"
-.include "../../x11/py-qt5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
