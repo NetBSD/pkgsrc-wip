@@ -1,3 +1,0 @@
-Cluster-admin is a suite of tools for building and managing FreeBSD clusters.
-It automates the processing of creating a head node and compute nodes, and
-managing configuration and software after installation.

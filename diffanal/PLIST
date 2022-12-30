@@ -1,9 +1,0 @@
-@comment $NetBSD$
-bin/diffanal
-libexec/diffanal/abundance
-libexec/diffanal/fold-change
-libexec/diffanal/normalize
-man/man1/diffanal-abundance.1
-man/man1/diffanal-fold-change.1
-man/man1/diffanal-normalize.1
-man/man1/diffanal.1

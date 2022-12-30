@@ -1,3 +1,0 @@
-
-Some code is commented out by patches because it doesn't compile under GCC 4.4
-on CentOS.

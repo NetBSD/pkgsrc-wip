@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/23 18:33:44 outpaddling Exp $
-openmpi/bin/mpb-mpi
-openmpi/man/man1/mpb.1
-openmpi/share/libctl/specs/mpb.scm
-@pkgdir openmpi/lib

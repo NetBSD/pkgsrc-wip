@@ -1,7 +1,0 @@
-$NetBSD$
-
-RMD160 (bowtie-1.1.2.tar.gz) = 723f8cc273c6db3031c2dc4b8bd7fab70fbd78f2
-SHA512 (bowtie-1.1.2.tar.gz) = 81f8df4b292b70d57a545b3d485d166b92cdd68be144f7fe60215de1175a85c815c584559f647c097fc03eccfa24eff91c816a6db8b11ea162287a3a8e500701
-Size (bowtie-1.1.2.tar.gz) = 7831346 bytes
-SHA1 (patch-Makefile) = f38c82018fc458511bf40bb6baf0e6b1bd6c7faf
-SHA1 (patch-scripts_test_random__bowtie__tests.sh) = aaa2911d4b5e15082eb0857f00c8f53c4508688c
