@@ -5472,6 +5472,7 @@ SUBDIR+=	sylvan
 SUBDIR+=	symbolic++
 SUBDIR+=	symmetrica
 SUBDIR+=	symon
+SUBDIR+=	symphony-of-empires
 SUBDIR+=	sympol
 SUBDIR+=	sympow
 SUBDIR+=	syn68k

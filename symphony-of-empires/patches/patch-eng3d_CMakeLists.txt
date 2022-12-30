@@ -1,0 +1,31 @@
+$NetBSD$
+
+Use a normal linking directive, not the strange "dependency_*" subsystem.
+
+--- eng3d/CMakeLists.txt.orig	2022-12-25 14:57:14.000000000 -0800
++++ eng3d/CMakeLists.txt	2022-12-29 18:02:28.294270428 -0800
+@@ -135,15 +135,15 @@
+ ENDIF()
+ 
+ target_link_libraries(eng3d PUBLIC
+-	dependency_OpenGL
+-	dependency_GLEW
+-	dependency_SDL2
+-	dependency_SDL2_ttf
+-	dependency_tbb
+-	dependency_assimp
+-	dependency_glm
+-	dependency_lua
+-	dependency_zlib
++	GL
++	GLEW
++	SDL2
++	SDL2_ttf
++	tbb
++	assimp
++	#glm
++	lua5.4
++	z
+ )
+ 
+ #file(GLOB ENG3D_INCLUDES "${PROJECT_SOURCE_DIR}/src/*.hpp" "${PROJECT_SOURCE_DIR}/src/ui/*.hpp")

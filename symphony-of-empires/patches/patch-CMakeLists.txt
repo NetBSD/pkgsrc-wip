@@ -1,0 +1,26 @@
+$NetBSD$
+
+Don't use the "dependencies" subsystem at all.
+
+--- CMakeLists.txt.orig	2022-12-25 14:57:14.000000000 -0800
++++ CMakeLists.txt	2022-12-29 18:20:12.860011269 -0800
+@@ -80,7 +80,7 @@
+ # Dependencies
+ #
+ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+-add_subdirectory(dependencies)
++#add_subdirectory(dependencies)
+ 
+ #
+ # Compilation flags
+@@ -152,8 +152,8 @@
+ ENDIF()
+ 
+ target_link_libraries(SymphonyOfEmpires PRIVATE
+-	dependency_tbb
+-	dependency_lua
++	tbb
++	lua5.4
+ )
+ 
+ # Build stuff

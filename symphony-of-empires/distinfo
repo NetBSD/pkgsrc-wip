@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (symphony-of-empires-0.0.0-6b57ac88856f9a1a0633be081d0cad8ce4c1fd97.tar.gz) = 573c58c8ea7b33d42ee2e1b76b46bcefdeefc6fef39474bdd1fd5e481497ef6a
+SHA512 (symphony-of-empires-0.0.0-6b57ac88856f9a1a0633be081d0cad8ce4c1fd97.tar.gz) = 2e83f6652c50d88d775f777e23f60be500d1221199d4cc316d39fe2a60debedad2ad1e3d0ea9dce42b9d4795c52a4ac2ac15837ef9161b1653bac59d00d2ecc8
+Size (symphony-of-empires-0.0.0-6b57ac88856f9a1a0633be081d0cad8ce4c1fd97.tar.gz) = 218633336 bytes
+SHA1 (patch-CMakeLists.txt) = 86c51046c1999752c07a5f906955972096e5d481
+SHA1 (patch-eng3d_CMakeLists.txt) = 4490a286b1b6f4b5feada885a375ea93adc545dc
+SHA1 (patch-eng3d_src_utils.hpp) = edfcf59fc183c854f4e9a47f90d07fd2d35e37de
