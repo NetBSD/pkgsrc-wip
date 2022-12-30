@@ -1,7 +1,7 @@
 # $NetBSD$
 
-GO_MODULE_FILES+=	cdr.dev/slog/@v/v1.4.2-0.20220126003130-b94a5ff54f37.mod
-GO_MODULE_FILES+=	cdr.dev/slog/@v/v1.4.2-0.20220126003130-b94a5ff54f37.zip
+GO_MODULE_FILES+=	cdr.dev/slog/@v/v1.4.2-0.20221206192828-e4803b10ae17.mod
+GO_MODULE_FILES+=	cdr.dev/slog/@v/v1.4.2-0.20221206192828-e4803b10ae17.zip
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.2.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.102.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
@@ -66,7 +66,6 @@ GO_MODULE_FILES+=	github.com/!puerkito!bio/goquery/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/!puerkito!bio/goquery/@v/v1.8.0.zip
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/@v/v0.10.0.mod
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/@v/v0.10.0.zip
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/@v/v0.9.4.mod
 GO_MODULE_FILES+=	github.com/andybalholm/cascadia/@v/v1.3.1.mod
 GO_MODULE_FILES+=	github.com/andybalholm/cascadia/@v/v1.3.1.zip
 GO_MODULE_FILES+=	github.com/antihax/optional/@v/v1.0.0.mod
@@ -173,6 +172,7 @@ GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.4.3.mod
 GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.1.mod
 GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.2.mod
+GO_MODULE_FILES+=	github.com/golang/protobuf/@v/v1.5.2.zip
 GO_MODULE_FILES+=	github.com/golang/snappy/@v/v0.0.3.mod
 GO_MODULE_FILES+=	github.com/google/btree/@v/v0.0.0-20180813153112-4030bb1f1f0c.mod
 GO_MODULE_FILES+=	github.com/google/btree/@v/v1.0.0.mod
@@ -786,8 +786,8 @@ GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.1-2020.1.3.mod
 GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.1-2020.1.4.mod
 GO_MODULE_FILES+=	nhooyr.io/websocket/@v/v1.8.7.mod
 GO_MODULE_FILES+=	nhooyr.io/websocket/@v/v1.8.7.zip
-GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20221219053816-eb266649d2ed.mod
-GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20221219053816-eb266649d2ed.zip
+GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20221226181616-c04ce7d1b79f.mod
+GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20221226181616-c04ce7d1b79f.zip
 GO_MODULE_FILES+=	rsc.io/binaryregexp/@v/v0.2.0.mod
 GO_MODULE_FILES+=	rsc.io/quote/v3/@v/v3.1.0.mod
 GO_MODULE_FILES+=	rsc.io/sampler/@v/v1.3.0.mod
