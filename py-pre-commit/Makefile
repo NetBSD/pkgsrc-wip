@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-2.20.0
+DISTNAME=	pre_commit-2.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -18,9 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-nodeenv>=0.11.1:../../wip/py-nodeenv
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.0.8:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.10.0:../../devel/py-virtualenv
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
+.if ${_PYTHON_VERSION} == "37"
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 
