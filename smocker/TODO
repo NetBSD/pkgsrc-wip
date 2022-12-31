@@ -1,3 +1,4 @@
 - Not really tested, beware!
 - frontend currently broken, probably needs yarn-fu and distributing build
-  artifacts locally similar to e.g. databases/prometheus
+  artifacts locally similar to e.g. databases/prometheus or fetching them
+  from official release
