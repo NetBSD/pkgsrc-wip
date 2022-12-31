@@ -289,6 +289,7 @@ SUBDIR+=	bitlbee-purple
 SUBDIR+=	biz-ud-gothic-ttf
 SUBDIR+=	biz-ud-mincho-ttf
 SUBDIR+=	bkcrack
+SUBDIR+=	blackbox_exporter
 SUBDIR+=	blad
 SUBDIR+=	blast2go
 SUBDIR+=	bleachbit
