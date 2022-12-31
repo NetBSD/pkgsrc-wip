@@ -5886,6 +5886,7 @@ SUBDIR+=	vcsh
 SUBDIR+=	vdesk
 SUBDIR+=	vee
 SUBDIR+=	velero
+SUBDIR+=	venom
 SUBDIR+=	verbiste
 SUBDIR+=	vhdtool-git
 SUBDIR+=	video-trimmer
