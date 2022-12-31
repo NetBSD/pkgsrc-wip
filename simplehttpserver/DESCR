@@ -1,0 +1,3 @@
+SimpleHTTPserver is a go enhanced version of the well known python
+simplehttpserver with in addition a fully customizable TCP server, both
+supporting TLS.
