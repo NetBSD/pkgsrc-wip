@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/blackbox_exporter
+share/doc/blackbox_export/CONFIGURATION.md
+share/doc/blackbox_export/README.md
+share/examples/blackbox_export/blackbox.yml
