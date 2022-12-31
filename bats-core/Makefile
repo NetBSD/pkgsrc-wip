@@ -17,7 +17,7 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 USE_TOOLS+=		bash:run
 
-REPLACE_BASH+=		bin/bats libexec/bats-core/*
+REPLACE_BASH+=		bin/bats lib/bats-core/* libexec/bats-core/*
 
 do-install:
 	cd ${WRKSRC} && rm -f bin/bats.orig libexec/bats-core/bats.orig && \
