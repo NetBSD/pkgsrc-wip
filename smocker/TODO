@@ -1,0 +1,3 @@
+- Not really tested, beware!
+- frontend currently broken, probably needs yarn-fu and distributing build
+  artifacts locally similar to e.g. databases/prometheus
