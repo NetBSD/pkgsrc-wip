@@ -5305,6 +5305,7 @@ SUBDIR+=	simpa
 SUBDIR+=	simple-mtpfs
 SUBDIR+=	simple-scan
 SUBDIR+=	simplec
+SUBDIR+=	simplehttpserver
 SUBDIR+=	simulavr-git
 SUBDIR+=	singular
 SUBDIR+=	sipp
