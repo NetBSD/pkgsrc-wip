@@ -43,6 +43,3 @@ share/owntone/htdocs/index.html
 share/owntone/htdocs/mstile-150x150.png
 share/owntone/htdocs/safari-pinned-tab.svg
 share/owntone/htdocs/site.webmanifest
-@pkgdir var/run
-@pkgdir var/log
-@pkgdir var/cache/owntone

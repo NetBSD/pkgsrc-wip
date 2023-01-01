@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 OWNTONE_USER?=	owntone
 OWNTONE_GROUP?=	owntone
-PKG_GROUPS=     $(OWNTONE_USER)
-PKG_USERS=      $(OWNTONE_USER):$(OWNTONE_GROUP)
+PKG_GROUPS=	${OWNTONE_USER}
+PKG_USERS=	${OWNTONE_USER}:${OWNTONE_GROUP}
 
 RCD_SCRIPTS=	owntone
 
@@ -21,6 +21,7 @@ RCD_SCRIPTS=	owntone
 
 GNU_CONFIGURE=	yes
 
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	flex
 USE_TOOLS+=	bison
@@ -32,17 +33,18 @@ CONFIGURE_ARGS+=	--disable-install_systemd
 # Letting pkg-config find it didn't seem to work; and then
 # configure.ac tries to perform a link (reasonable really).
 
-LIBAV_CFLAGS+=		-I$(BUILDLINK_PREFIX.ffmpeg5)/include/ffmpeg5
-LIBAV_LIBS+=		$(BUILDLINK_PREFIX.ffmpeg5)/lib/ffmpeg5/libavformat.so
-LIBAV_LIBS+=		$(BUILDLINK_PREFIX.ffmpeg5)/lib/ffmpeg5/libavcodec.so
-LIBAV_LIBS+=		$(BUILDLINK_PREFIX.ffmpeg5)/lib/ffmpeg5/libavfilter.so
+LIBAV_CFLAGS+=		-I${BUILDLINK_PREFIX.ffmpeg5}/include/ffmpeg5
+LIBAV_LIBS+=		${BUILDLINK_PREFIX.ffmpeg5}/lib/ffmpeg5/libavformat.so
+LIBAV_LIBS+=		${BUILDLINK_PREFIX.ffmpeg5}/lib/ffmpeg5/libavcodec.so
+LIBAV_LIBS+=		${BUILDLINK_PREFIX.ffmpeg5}/lib/ffmpeg5/libavfilter.so
+LIBAV_LIBS+=		${BUILDLINK_PREFIX.ffmpeg5}/lib/ffmpeg5/libavutil.so
 # Help configure.ac find libdav1d
-LIBAV_LIBS+=		$(BUILDLINK_PREFIX.dav1d)/lib/libdav1d.so
+LIBAV_LIBS+=		${BUILDLINK_PREFIX.dav1d}/lib/libdav1d.so
 
-CONFIGURE_ENV+=		'LIBAV_CFLAGS=$(LIBAV_CFLAGS)'
-CONFIGURE_ENV+=		'LIBAV_LIBS=$(LIBAV_LIBS)'
+CONFIGURE_ENV+=		'LIBAV_CFLAGS=${LIBAV_CFLAGS}'
+CONFIGURE_ENV+=		'LIBAV_LIBS=${LIBAV_LIBS}'
 
-BUILDLINK_API_DEPENDS.libevent+=        libevent>=2.0.0
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.0
 #BUILDLINK_API_DEPENDS.protobuf-c=	protbuf-c>=1.3.3nb2
 
 .include "../../net/avahi/buildlink3.mk"
