@@ -1,1 +1,0 @@
-bin/neovim-ruby-host @PREFIX@/bin/neovim-ruby-host@RUBY_SUFFIX@

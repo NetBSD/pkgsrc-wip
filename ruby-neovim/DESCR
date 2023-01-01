@@ -1,3 +1,0 @@
-Ruby bindings for neovim
-
-This library provides Ruby support in neovim through it's msgpack-rpc API
