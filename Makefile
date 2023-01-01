@@ -2644,6 +2644,7 @@ SUBDIR+=	nios2-gdb
 SUBDIR+=	nitrogen
 SUBDIR+=	nix
 SUBDIR+=	nlopt
+SUBDIR+=	nmh
 SUBDIR+=	nncp
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
