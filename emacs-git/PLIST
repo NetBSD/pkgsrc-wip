@@ -3655,6 +3655,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/python.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/python.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ruby-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ruby-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/ruby-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/ruby-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/rust-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/rust-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/scheme.el.gz
