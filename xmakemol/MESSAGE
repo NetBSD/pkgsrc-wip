@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD$
-
-To use xmakemol, set the XM_ELEMENTS environmental variable as below:
-
-	export XM_ELEMENTS=${PREFIX}/share/xmakemol/elements
-
-===========================================================================
