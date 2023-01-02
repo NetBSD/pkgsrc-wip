@@ -2399,7 +2399,6 @@ SUBDIR+=	mfoc
 SUBDIR+=	mfoc-hardnested
 SUBDIR+=	mg-cvs
 SUBDIR+=	mg-lsh
-SUBDIR+=	mgdiff
 SUBDIR+=	mic-paren
 SUBDIR+=	michabo
 SUBDIR+=	microbiomeutil
