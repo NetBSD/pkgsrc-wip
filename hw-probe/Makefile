@@ -1,9 +1,10 @@
 # $NetBSD$
 
 DISTNAME=	hw-probe
-PKGNAME=	hw-probe-1.6beta
+PKGNAME=	hw-probe-1.6
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	http://bsd-hardware.info/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,9 +17,7 @@ DEPENDS+=	usbutil-[0-9]*:../../sysutils/usbutil
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 DEPENDS+=	smartmontools-[0-9]*:../../sysutils/smartmontools
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
-WRKSRC=		${WRKDIR}
+USE_TOOLS+=	perl:run
 
 REPLACE_PERL+=	hw-probe
 
@@ -27,6 +26,8 @@ USE_TOOLS+=	perl:run
 INSTALLATION_DIRS+=	bin
 
 NO_BUILD=	yes
+
+WRKSRC=	${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

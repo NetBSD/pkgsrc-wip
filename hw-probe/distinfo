@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (hw-probe-1.6beta/hw-probe) = 32d861cd2ca8f4c05d653362cb7fda2bef09c799
-SHA512 (hw-probe-1.6beta/hw-probe) = b41f78b96d68358efa6ac829bdc77cf09f0adaf3c39946795d89057caadea381fd1c5cb4742e41ad6292de39378705beae9e77a32d97d2ab1b20473ed6fedca3
-Size (hw-probe-1.6beta/hw-probe) = 515074 bytes
+BLAKE2s (hw-probe-1.6/hw-probe) = 6f79430b0714a091fb0fb8cd45de57727205c801d39d11341055e03f3b91ceea
+SHA512 (hw-probe-1.6/hw-probe) = 79c79f1f0d9e93a9a9aab11efd9439183bb82fee07dc2d0df169276a081f1ed07b082e64ec7e0d1f2793d0bc1c5424822062da21fcebff2b7017ef67732754bd
+Size (hw-probe-1.6/hw-probe) = 541466 bytes
