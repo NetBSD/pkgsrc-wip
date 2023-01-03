@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/18 13:11:17 ddeus Exp $
-info/asdf.info
-lib/clisp/dynmod/asdf.fas
-lib/clisp/dynmod/asdf.lisp
-share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/asdf.html
-share/examples/${PKGBASE}/source-registry.conf
-share/examples/${PKGBASE}/asdf-output-translations.conf

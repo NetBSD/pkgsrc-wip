@@ -479,7 +479,6 @@ SUBDIR+=	clic
 SUBDIR+=	clipmenu
 SUBDIR+=	cliquer
 SUBDIR+=	clisp
-SUBDIR+=	clisp-asdf
 SUBDIR+=	clisp-hg
 SUBDIR+=	clock-signal
 SUBDIR+=	clockspeed
