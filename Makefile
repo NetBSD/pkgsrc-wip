@@ -1531,6 +1531,7 @@ SUBDIR+=	hlint
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	honk
 SUBDIR+=	hoogle
+SUBDIR+=	hoverfly
 SUBDIR+=	howdoi
 SUBDIR+=	hpl
 SUBDIR+=	hplibunwind-git
