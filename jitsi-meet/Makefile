@@ -1,5 +1,7 @@
 # $NetBSD$
 
+.include "../../chat/jitsi-meet/Makefile.common"
+
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 
 USE_LANGUAGES+=	c++
@@ -34,5 +36,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/title.html \
 		${DESTDIR}${PREFIX}/share/examples/jitsi-meet/title.html
 
-.include "../../wip/jitsi-meet/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
