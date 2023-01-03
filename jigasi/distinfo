@@ -6,3 +6,4 @@ Size (jigasi/jigasi-1.1.tar.gz) = 278449 bytes
 BLAKE2s (jigasi/jigasi-java-deps-1.1.tar.gz) = dafa64d0ec62e74d8306fe7ca86a2204c9791dfd155452f8f129da4baa5c4e15
 SHA512 (jigasi/jigasi-java-deps-1.1.tar.gz) = 3db64ce903989fdc2be3440efecc423bf5578e8305ea5a6d572dcb47a4b3e6b99afc5fe7a03b550d07a667bc3e233d656ac4177a954eaa12cc26784e4c45e523
 Size (jigasi/jigasi-java-deps-1.1.tar.gz) = 91802308 bytes
+SHA1 (patch-jigasi.sh) = 229166dec00387ac0b8912b3ef145f68b46c2f17

@@ -49,6 +49,11 @@ SUBST_STAGE.java=	post-configure
 SUBST_FILES.java=	jigasi.sh
 SUBST_SED.java=		-e 's,exec java,exec ${JAVA_BINPREFIX}-java,'
 
+SUBST_CLASSES+=		logging
+SUBST_STAGE.logging=	post-configure
+SUBST_FILES.logging=	jigasi.sh
+SUBST_SED.logging=	-e 's,$$SCRIPT_DIR/lib/logging\.properties,${PKG_SYSCONFDIR}/logging.properties,'
+
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALLATION_DIRS+=	share/${GITHUB_PROJECT}/lib
