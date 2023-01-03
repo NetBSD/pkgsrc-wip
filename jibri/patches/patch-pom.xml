@@ -1,0 +1,14 @@
+$NetBSD$
+
+Disable -Werror
+
+--- pom.xml.orig	2023-01-03 10:53:43.935539973 +0000
++++ pom.xml
+@@ -215,7 +215,6 @@
+                                 <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                             </sourceDirs>
+                             <args>
+-                                <arg>-Werror</arg>
+                             </args>
+                         </configuration>
+                     </execution>

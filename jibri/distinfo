@@ -1,5 +1,9 @@
 $NetBSD$
 
+BLAKE2s (jibri/jibri-java-deps-8.0.tar.gz) = dd1b9f232b459294da0423b5bba6885b82decbbb38c97c0f8009936882633aff
+SHA512 (jibri/jibri-java-deps-8.0.tar.gz) = 235f8b2a9b77ccadc618c953b45958ab356c396235e27d3d4b8e9d0fbd68d00d9494d373deb5cf707aff23be49d60745144c37ae0561b12b79b1d4ada8f35b6a
+Size (jibri/jibri-java-deps-8.0.tar.gz) = 199453494 bytes
 BLAKE2s (jibri/v8.0.tar.gz) = 6e8bf591e6e75e14b13ef9c81865d43787866b102576fcc1416b7dbfffb87fd0
 SHA512 (jibri/v8.0.tar.gz) = 5d152c571c4eaaa45c26afe049daf1018d7bc650c0b663686c8869d7e371098824c9e63e013a3d84344f64beeb5d70c70fcd5997ddb29eea55e97cd1b706aef6
 Size (jibri/v8.0.tar.gz) = 74132 bytes
+SHA1 (patch-pom.xml) = 96aeb8fe308018c03ea5af21fe300d222efe9841
