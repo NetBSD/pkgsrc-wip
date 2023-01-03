@@ -6005,6 +6005,7 @@ SUBDIR+=	xbsql
 SUBDIR+=	xcape
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
+SUBDIR+=	xdiary
 SUBDIR+=	xdiskusage
 SUBDIR+=	xebece
 SUBDIR+=	xemacs-hg
