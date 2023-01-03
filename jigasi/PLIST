@@ -3,7 +3,10 @@ bin/jigasi
 share/doc/jigasi/README.md
 share/examples/jigasi/callstats-java-sdk.properties
 share/examples/jigasi/log4j2.xml
+share/examples/jigasi/logging.properties
 share/examples/jigasi/sip-communicator.properties
+share/jigasi/collect-dump-logs.sh
+share/jigasi/graceful_shutdown.sh
 share/jigasi/jigasi.sh
 share/jigasi/lib/jigasi.jar
 share/jigasi/lib/logging.properties
