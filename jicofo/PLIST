@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/jicofo
+share/examples/jicofo/jicofo.conf
 share/examples/jicofo/logging.properties
 share/jicofo/collect-dump-logs.sh
 share/jicofo/jicofo.bat

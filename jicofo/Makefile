@@ -32,6 +32,8 @@ REPLACE_BASH+=	resources/jicofo.sh
 
 EGDIR=			share/examples/jicofo
 PKG_SYSCONFSUBDIR=	jitsi/jicofo
+CONF_FILES+=		${EGDIR}/jicofo.conf \
+			${PKG_SYSCONFDIR}/jicofo.conf
 CONF_FILES+=		${EGDIR}/logging.properties \
 			${PKG_SYSCONFDIR}/logging.properties
 
@@ -50,6 +52,7 @@ MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${EGDIR} share/jicofo
 
+.PHONY: create-deps-file
 create-deps-file: build
 	#XXX disable offline mode for maven before using this rule
 	cd ${WRKSRC} && ${MVN} validate
@@ -71,6 +74,8 @@ do-install:
 		${DESTDIR}${PREFIX}/share/jicofo
 	${LN} -sf ../share/jicofo/jicofo.sh \
 		${DESTDIR}${PREFIX}/bin/jicofo
+	${INSTALL_DATA} ${WRKSRC}/jicofo-selector/src/main/resources/reference.conf \
+		${DESTDIR}${PREFIX}/${EGDIR}/jicofo.conf
 	${INSTALL_DATA} ${WRKSRC}/lib/logging.properties \
 		${DESTDIR}${PREFIX}/${EGDIR}/logging.properties
 	${INSTALL_SCRIPT} ${WRKSRC}/resources/collect-dump-logs.sh \
