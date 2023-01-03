@@ -1,5 +1,7 @@
 @comment $NetBSD$
 bin/jicofo
+share/examples/jicofo/logging.properties
+share/jicofo/collect-dump-logs.sh
 share/jicofo/jicofo.bat
 share/jicofo/jicofo.jar
 share/jicofo/jicofo.sh
@@ -52,8 +54,8 @@ share/jicofo/lib/jetty-util-11.0.10.jar
 share/jicofo/lib/jicoco-1.1-119-gc527d61.jar
 share/jicofo/lib/jicoco-config-1.1-119-gc527d61.jar
 share/jicofo/lib/jicoco-metrics-1.1-119-gc527d61.jar
-share/jicofo/lib/jicofo-common-1.1-SNAPSHOT.jar
-share/jicofo/lib/jicofo-selector-1.1-SNAPSHOT.jar
+share/jicofo/lib/jicofo-common-${PKGVERSION}.jar
+share/jicofo/lib/jicofo-selector-${PKGVERSION}.jar
 share/jicofo/lib/jitsi-metaconfig-1.0-9-g5e1b624.jar
 share/jicofo/lib/jitsi-utils-1.0-119-ga7b23ff.jar
 share/jicofo/lib/jitsi-xmpp-extensions-1.0-59-g76a5c13.jar
@@ -91,3 +93,4 @@ share/jicofo/lib/smack-tcp-4.4.6.jar
 share/jicofo/lib/smack-xmlparser-4.4.6.jar
 share/jicofo/lib/smack-xmlparser-stax-4.4.6.jar
 share/jicofo/lib/spotbugs-annotations-4.6.0.jar
+@pkgdir share/examples/jicofo
