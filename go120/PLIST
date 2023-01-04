@@ -323,6 +323,7 @@ go120/misc/cgo/testplugin/testdata/unnamed2/main.go
 go120/misc/cgo/testsanitizers/asan_test.go
 go120/misc/cgo/testsanitizers/cc_test.go
 go120/misc/cgo/testsanitizers/cshared_test.go
+go120/misc/cgo/testsanitizers/libfuzzer_test.go
 go120/misc/cgo/testsanitizers/msan_test.go
 go120/misc/cgo/testsanitizers/testdata/arena_fail.go
 go120/misc/cgo/testsanitizers/testdata/asan1_fail.go
@@ -341,6 +342,9 @@ go120/misc/cgo/testsanitizers/testdata/asan_unsafe_fail1.go
 go120/misc/cgo/testsanitizers/testdata/asan_unsafe_fail2.go
 go120/misc/cgo/testsanitizers/testdata/asan_unsafe_fail3.go
 go120/misc/cgo/testsanitizers/testdata/asan_useAfterReturn.go
+go120/misc/cgo/testsanitizers/testdata/libfuzzer1.go
+go120/misc/cgo/testsanitizers/testdata/libfuzzer2.c
+go120/misc/cgo/testsanitizers/testdata/libfuzzer2.go
 go120/misc/cgo/testsanitizers/testdata/msan.go
 go120/misc/cgo/testsanitizers/testdata/msan2.go
 go120/misc/cgo/testsanitizers/testdata/msan2_cmsan.go
@@ -1957,6 +1961,7 @@ go120/src/cmd/go/testdata/script/cover_dep_loop.txt
 go120/src/cmd/go/testdata/script/cover_dot_import.txt
 go120/src/cmd/go/testdata/script/cover_error.txt
 go120/src/cmd/go/testdata/script/cover_import_main_loop.txt
+go120/src/cmd/go/testdata/script/cover_main_import_path.txt
 go120/src/cmd/go/testdata/script/cover_mod_empty.txt
 go120/src/cmd/go/testdata/script/cover_modes.txt
 go120/src/cmd/go/testdata/script/cover_pattern.txt
@@ -5682,6 +5687,7 @@ go120/src/internal/poll/sendfile_linux.go
 go120/src/internal/poll/sendfile_solaris.go
 go120/src/internal/poll/sendfile_windows.go
 go120/src/internal/poll/sock_cloexec.go
+go120/src/internal/poll/sock_cloexec_accept.go
 go120/src/internal/poll/sockopt.go
 go120/src/internal/poll/sockopt_linux.go
 go120/src/internal/poll/sockopt_unix.go
@@ -6081,6 +6087,9 @@ go120/src/internal/types/testdata/fixedbugs/issue54405.go
 go120/src/internal/types/testdata/fixedbugs/issue56351.go
 go120/src/internal/types/testdata/fixedbugs/issue56425.go
 go120/src/internal/types/testdata/fixedbugs/issue56665.go
+go120/src/internal/types/testdata/fixedbugs/issue57155.go
+go120/src/internal/types/testdata/fixedbugs/issue57160.go
+go120/src/internal/types/testdata/fixedbugs/issue57486.go
 go120/src/internal/types/testdata/fixedbugs/issue6977.go
 go120/src/internal/types/testdata/spec/assignability.go
 go120/src/internal/types/testdata/spec/comparable.go
@@ -8291,6 +8300,8 @@ go120/src/syscall/syscall_illumos.go
 go120/src/syscall/syscall_js.go
 go120/src/syscall/syscall_linux.go
 go120/src/syscall/syscall_linux_386.go
+go120/src/syscall/syscall_linux_accept.go
+go120/src/syscall/syscall_linux_accept4.go
 go120/src/syscall/syscall_linux_amd64.go
 go120/src/syscall/syscall_linux_arm.go
 go120/src/syscall/syscall_linux_arm64.go
@@ -10968,6 +10979,8 @@ go120/test/fixedbugs/issue5698.go
 go120/test/fixedbugs/issue56990.go
 go120/test/fixedbugs/issue56990.out
 go120/test/fixedbugs/issue5704.go
+go120/test/fixedbugs/issue57184.go
+go120/test/fixedbugs/issue57309.go
 go120/test/fixedbugs/issue5753.go
 go120/test/fixedbugs/issue5755.dir/a.go
 go120/test/fixedbugs/issue5755.dir/main.go
