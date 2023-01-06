@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.80 2020/03/20 11:57:53 nia Exp $
 
-DISTNAME=	xpaint-3.1.3
+DISTNAME=	xpaint-3.1.4
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf automake autoreconf
 USE_TOOLS+=	bash gmake gunzip
 
 REPLACE_BASH=	share/bin/imgmerge share/bin/xpaint_ocr

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Suppport dirent(3) if defined.
+
 --- fileBrowser.c.orig	2021-01-21 22:38:23.000000000 +0100
 +++ fileBrowser.c	2021-05-19 10:27:34.463903000 +0200
 @@ -48,7 +48,7 @@
