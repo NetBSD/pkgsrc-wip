@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- dtools/xtmMsgSend.c.orig	1997-05-04 23:13:08.000000000 +0000
 +++ dtools/xtmMsgSend.c
-@@ -611,7 +611,7 @@ static Widget 
+@@ -37,6 +37,7 @@ static char SCCSID[] = "@(#) Module: xtm
+ 
+ #include <string.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <stdio.h>
+ #include <ctype.h>
+ 
+@@ -611,7 +612,7 @@ static Widget
                                                     &help_casc[ index ] );
  
      XtAddCallback( menuHelpBu[ index ], XmNactivateCallback, 
@@ -11,7 +21,7 @@ $NetBSD$
    }
  
    /* We can't do context sensitive help. */
-@@ -939,7 +939,7 @@ static Widget 
+@@ -939,7 +940,7 @@ static Widget
                                                     &help_casc[ index ] );
  
      XtAddCallback( menuHelpBu[ index ], XmNactivateCallback, 
@@ -20,7 +30,7 @@ $NetBSD$
    }
  
    /* We can't do context sensitive help. */
-@@ -1811,7 +1811,7 @@ static void 
+@@ -1811,7 +1812,7 @@ static void
    /* Code. */
  
    xtmHlDisplayHelp( send_ref -> appl_data_ref -> info_handle,

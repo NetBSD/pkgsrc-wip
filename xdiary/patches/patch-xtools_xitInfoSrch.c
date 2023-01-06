@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- xtools/xitInfoSrch.c.orig	1997-05-04 22:25:10.000000000 +0000
 +++ xtools/xitInfoSrch.c
-@@ -406,7 +406,7 @@ static Widget
+@@ -35,6 +35,7 @@ static char SCCSID[] = "@(#) Module: xit
+ --  Include files
+ ----------------------------------------------------------------------------*/
+ 
++#include <stdint.h>
+ #include <limits.h>
+ #include <stdio.h>
+ #include <ctype.h>
+@@ -406,7 +407,7 @@ static Widget
      gotoBu[ index ] = xitCreatePushButton( gotoRc, &goto_def[ index ] );
  
      XtAddCallback( gotoBu[ index ], XmNactivateCallback, 
@@ -11,7 +21,7 @@ $NetBSD$
    }
  
  
-@@ -663,7 +663,7 @@ static void 
+@@ -663,7 +664,7 @@ static void
  
  
    /* Select what to do. */

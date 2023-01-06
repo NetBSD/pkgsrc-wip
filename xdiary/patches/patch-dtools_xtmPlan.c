@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- dtools/xtmPlan.c.orig	1997-05-04 21:09:51.000000000 +0000
 +++ dtools/xtmPlan.c
-@@ -1004,7 +1004,7 @@ static Widget
+@@ -37,6 +37,7 @@ static char SCCSID[] = "@(#) Module: xtm
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <string.h>
+ #include <time.h>
+ #include <ctype.h>
+@@ -1004,7 +1005,7 @@ static Widget
  
      if( XmIsPushButton( menuFileBu[ index ] ) )
        XtAddCallback( menuFileBu[ index ], XmNactivateCallback, 
@@ -11,7 +21,7 @@ $NetBSD$
    }
  
    /* Create the control menu. */
-@@ -1019,10 +1019,10 @@ static Widget
+@@ -1019,10 +1020,10 @@ static Widget
  
      if( XmIsPushButton( menuCtrlBu[ index ] ) )
        XtAddCallback( menuCtrlBu[ index ], XmNactivateCallback, 
@@ -24,7 +34,7 @@ $NetBSD$
    }
  
    /* Create the options menu. */
-@@ -1035,7 +1035,7 @@ static Widget
+@@ -1035,7 +1036,7 @@ static Widget
  
      if( XmIsPushButton( menuOptBu[ index ] ) )
        XtAddCallback( menuOptBu[ index ], XmNactivateCallback, 
@@ -33,7 +43,7 @@ $NetBSD$
    }
  
    /* Create the help menu. */
-@@ -1048,7 +1048,7 @@ static Widget
+@@ -1048,7 +1049,7 @@ static Widget
  
      if( XmIsPushButton( menuHelpBu[ index ] ) )
        XtAddCallback( menuHelpBu[ index ], XmNactivateCallback, 
@@ -42,7 +52,7 @@ $NetBSD$
    }
  
    /* We can't do context sensitive help. */
-@@ -3434,7 +3434,7 @@ static void 
+@@ -3434,7 +3435,7 @@ static void
  
  
    /* Select what to do. */
@@ -51,7 +61,7 @@ $NetBSD$
  
      /* Instant update. */
      case 0:
-@@ -3583,7 +3583,7 @@ static void 
+@@ -3583,7 +3584,7 @@ static void
  
  
    /* Select what to do. */
@@ -60,7 +70,7 @@ $NetBSD$
  
      /* Close the window. */
      case 0:
-@@ -3609,7 +3609,7 @@ static void 
+@@ -3609,7 +3610,7 @@ static void
    /* Variables. */
    Boolean                 ok;
    int                     char_read;
@@ -69,7 +79,7 @@ $NetBSD$
    char                    calendar[ XTM_GL_MAX_CAL_NAME + 1 ];
    char                    *group_name;
    char                    *members_ref;
-@@ -3664,7 +3664,7 @@ static void 
+@@ -3664,7 +3665,7 @@ static void
      XtSetArg( args[ n ], XmNuserData, &user_data_ref ); n++;
      XtGetValues( calW, args, n );
  
@@ -78,7 +88,7 @@ $NetBSD$
  
      if( call_data -> set ) {
        if( ref_count < 1 ) 
-@@ -3710,7 +3710,7 @@ static void 
+@@ -3710,7 +3711,7 @@ static void
    /* Code. */
  
    /* About window? */
@@ -87,7 +97,7 @@ $NetBSD$
      xtmHlDisplayAboutWindow( plan_ref -> plannerW );
  
      return;
-@@ -3718,7 +3718,7 @@ static void 
+@@ -3718,7 +3719,7 @@ static void
  
    /* Use the standard help. */
    xtmHlDisplayHelp( plan_ref -> appl_data_ref -> info_handle,
@@ -96,7 +106,7 @@ $NetBSD$
                      planner_window_id, "" );
  
    return;
-@@ -3810,7 +3810,7 @@ static void 
+@@ -3810,7 +3811,7 @@ static void
  
  
    /* Select what to do. */

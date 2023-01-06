@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- xtools/XmUbTimeB.c.orig	1997-05-04 21:09:52.000000000 +0000
 +++ xtools/XmUbTimeB.c
-@@ -2159,7 +2159,7 @@ static void
+@@ -35,6 +35,7 @@ static char SCCSID[] = "@(#) Module: XmU
+ --  Include files
+ ----------------------------------------------------------------------------*/
+ 
++#include <stdint.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <X11/Intrinsic.h>
+@@ -2159,7 +2160,7 @@ static void
          /* For predefined actions, call common routine. 
             For other actions, register as callbacks directly. */
          if( ( items[ index ].proc != XmUbTB_NO_ACTION ) &&
@@ -11,7 +21,7 @@ $NetBSD$
            XtAddCallback( w, XmNactivateCallback, 
                           (XtCallbackProc) MenuItemActivatedCB, 
                           (XtPointer) items[ index ].proc );
-@@ -3366,51 +3366,51 @@ static void
+@@ -3366,51 +3367,51 @@ static void
    XtGetValues( pb, args, n );
  
    /* What to do depends on the selected action. */
@@ -74,7 +84,7 @@ $NetBSD$
        (void) XmUbTimeBoxSetStartDate( (Widget) tbox, 
                                        TimLocalTime( TimMakeTimeNow() ) );
        (void) XmUbTimeBoxSetStartTime( (Widget) tbox, 
-@@ -3425,9 +3425,9 @@ static void
+@@ -3425,9 +3426,9 @@ static void
    } /* switch */
  
    /* Set the keyboard focus to the most recently inserted text. */
@@ -86,7 +96,7 @@ $NetBSD$
        /* Set keyboard focus to the start time field. */
        if( tbox -> tbox.internal_children[ XmUbTB_CHILD_START_TIME ] != NULL )
          XmProcessTraversal( 
-@@ -3436,7 +3436,7 @@ static void
+@@ -3436,7 +3437,7 @@ static void
  
        break;
  
@@ -95,7 +105,7 @@ $NetBSD$
        /* Set keyboard focus to the start date field. */
        if( tbox -> tbox.internal_children[ XmUbTB_CHILD_START_DATE ] != NULL )
          XmProcessTraversal( 
-@@ -3445,7 +3445,7 @@ static void
+@@ -3445,7 +3446,7 @@ static void
  
        break;
  

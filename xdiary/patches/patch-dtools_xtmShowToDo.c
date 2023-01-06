@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- dtools/xtmShowToDo.c.orig	1997-05-04 21:26:20.000000000 +0000
 +++ dtools/xtmShowToDo.c
-@@ -665,10 +665,10 @@ static Widget
+@@ -37,6 +37,7 @@ static char SCCSID[] = "@(#) Module: xtm
+ 
+ #include <string.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <stdio.h>
+ 
+ #include <X11/Intrinsic.h>
+@@ -665,10 +666,10 @@ static Widget
  
      if( XmIsPushButton( menuCtrlBu[ index ] ) )
        XtAddCallback( menuCtrlBu[ index ], XmNactivateCallback, 
@@ -15,7 +25,7 @@ $NetBSD$
    }
  
  
-@@ -681,7 +681,7 @@ static Widget
+@@ -681,7 +682,7 @@ static Widget
                                                     &help_casc[ index ] );
  
      XtAddCallback( menuHelpBu[ index ], XmNactivateCallback, 
@@ -24,7 +34,7 @@ $NetBSD$
    }
  
    /* We can't do context sensitive help. */
-@@ -1189,7 +1189,7 @@ static void 
+@@ -1189,7 +1190,7 @@ static void
    custom_data_ref = show_ref -> appl_data_ref -> custom_data;
  
    /* Select what to do. */
@@ -33,7 +43,7 @@ $NetBSD$
  
      /* Display entry flags? */
      case 0:
-@@ -1402,7 +1402,7 @@ static void 
+@@ -1402,7 +1403,7 @@ static void
    /* Code. */
  
    xtmHlDisplayHelp( show_ref -> appl_data_ref -> info_handle,

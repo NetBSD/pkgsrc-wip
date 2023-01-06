@@ -1,5 +1,7 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- tools/System.c.orig	1997-05-07 20:15:47.000000000 +0000
 +++ tools/System.c
 @@ -102,8 +102,8 @@ void

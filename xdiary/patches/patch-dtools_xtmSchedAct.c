@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- dtools/xtmSchedAct.c.orig	1997-05-04 21:16:55.000000000 +0000
 +++ dtools/xtmSchedAct.c
-@@ -1967,7 +1967,7 @@ static Widget
+@@ -37,6 +37,7 @@ static char SCCSID[] = "@(#) Module: xtm
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <string.h>
+ 
+ #include <X11/Intrinsic.h>
+@@ -1967,7 +1968,7 @@ static Widget
  
      if( XmIsPushButton( menuPopupBu[ index ] ) )
        XtAddCallback( menuPopupBu[ index ], XmNactivateCallback, 
@@ -11,7 +21,7 @@ $NetBSD$
    }
  
    XtManageChildren( menuPopupBu, XtNumber( menuPopupBu ) );
-@@ -2106,7 +2106,7 @@ static void 
+@@ -2106,7 +2107,7 @@ static void
  
  
    /* Select what to do. */

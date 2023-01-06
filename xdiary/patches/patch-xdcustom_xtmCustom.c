@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- xdcustom/xtmCustom.c.orig	1997-05-04 22:02:16.000000000 +0000
 +++ xdcustom/xtmCustom.c
-@@ -231,8 +231,8 @@ static int
+@@ -39,6 +39,7 @@ static char SCCSID[] = "@(#) Module: xtm
+ #include <fcntl.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+@@ -231,8 +232,8 @@ static int
  --  Functions
  ----------------------------------------------------------------------------*/
  
@@ -13,7 +23,7 @@ $NetBSD$
  {
  
    /* Variables. */
-@@ -615,7 +615,7 @@ static Widget
+@@ -615,7 +616,7 @@ static Widget
                                                     &help_casc[ index ] );
  
      XtAddCallback( menuHelpBu[ index ], XmNactivateCallback, 
@@ -22,7 +32,7 @@ $NetBSD$
    }
  
    /* We can't do context sensitive help. */
-@@ -641,7 +641,7 @@ static Widget
+@@ -641,7 +642,7 @@ static Widget
                                               &do_cust_def[ index ] );
  
      XtAddCallback( doCustBu[ index ], XmNactivateCallback, 
@@ -31,7 +41,7 @@ $NetBSD$
  
    } /* loop */
  
-@@ -1451,7 +1451,7 @@ static void 
+@@ -1451,7 +1452,7 @@ static void
  
  
    /* Select what to do. */
@@ -40,7 +50,7 @@ $NetBSD$
  
      /* Calendar customization? */
      case 0:
-@@ -1578,7 +1578,7 @@ static void 
+@@ -1578,7 +1579,7 @@ static void
    /* Code. */
  
    /* About window? */
@@ -49,7 +59,7 @@ $NetBSD$
  
      Widget  tempW;
  
-@@ -1590,7 +1590,7 @@ static void 
+@@ -1590,7 +1591,7 @@ static void
  
    /* Use the standard help. */
    xtmHlDisplayHelp( appl_data_ref -> info_handle,

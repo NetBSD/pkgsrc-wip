@@ -12,9 +12,9 @@ LICENSE=	0-clause-bsd
 
 USE_IMAKE=	yes
 
-SUBST_CLASSES+=	cc
-SUBST_STAGE.cc=	pre-configure
-SUBST_FILES.cc=	XDiary.tmpl
+SUBST_CLASSES+=		cc
+SUBST_STAGE.cc=		pre-configure
+SUBST_FILES.cc=		XDiary.tmpl
 SUBST_VARS.cc=		CC
 SUBST_MESSAGE.cc=	Defining preferred compiler.
 

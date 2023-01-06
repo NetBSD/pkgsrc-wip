@@ -1,5 +1,7 @@
 $NetBSD$
 
+Provide a declaration of exit()
+
 --- xtools/xitError.c.orig	1995-02-18 14:11:29.000000000 +0000
 +++ xtools/xitError.c
 @@ -39,6 +39,7 @@ static char SCCSID[] = "@(#) Module: xit

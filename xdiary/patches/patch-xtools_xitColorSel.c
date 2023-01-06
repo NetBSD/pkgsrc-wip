@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- xtools/xitColorSel.c.orig	1997-05-04 13:13:45.000000000 +0000
 +++ xtools/xitColorSel.c
-@@ -302,7 +302,7 @@ Widget
+@@ -38,6 +38,7 @@ static char SCCSID[] = "@(#) Module: xit
+ --  Include files
+ ----------------------------------------------------------------------------*/
+ 
++#include <stdint.h>
+ #include <stdio.h>
+ 
+ #include <X11/Intrinsic.h>
+@@ -302,7 +303,7 @@ Widget
      XtManageChild( menuPb );
  
      XtAddCallback( menuPb, XmNactivateCallback, 

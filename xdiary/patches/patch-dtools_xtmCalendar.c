@@ -1,8 +1,18 @@
 $NetBSD$
 
+Avoid int to pointer conversion warnings
+
 --- dtools/xtmCalendar.c.orig	1997-05-04 21:09:55.000000000 +0000
 +++ dtools/xtmCalendar.c
-@@ -779,7 +779,7 @@ static Widget
+@@ -39,6 +39,7 @@ static char SCCSID[] = "@(#) Module: xtm
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <stdint.h>
+ #include <string.h>
+ #include <time.h>
+ #include <sys/types.h>
+@@ -779,7 +780,7 @@ static Widget
                                                     &help_casc[ index ] );
  
      XtAddCallback( menuHelpBu[ index ], XmNactivateCallback, 
@@ -11,7 +21,7 @@ $NetBSD$
    }
  
    /* We can't do context sensitive help. */
-@@ -1406,7 +1406,7 @@ static void 
+@@ -1406,7 +1407,7 @@ static void
    /* Code. */
  
    /* About window? */
@@ -20,7 +30,7 @@ $NetBSD$
      xtmHlDisplayAboutWindow( cal_ref -> calFormW );
  
      return;
-@@ -1414,7 +1414,7 @@ static void 
+@@ -1414,7 +1415,7 @@ static void
  
    /* Use the standard help. */
    xtmHlDisplayHelp( cal_ref -> appl_data_ref -> info_handle,
