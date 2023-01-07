@@ -1,0 +1,28 @@
+$NetBSD$
+
+Use go-ps to support NetBSD.
+
+Shared upstream via:
+
+ <https://github.com/mitchellh/go-ps/pull/59>
+
+--- go.sum.orig	2023-01-07 22:00:45.165215577 +0000
++++ go.sum
+@@ -458,6 +458,8 @@ github.com/hashicorp/golang-lru v0.5.4 h
+ github.com/hashicorp/golang-lru v0.5.4/go.mod h1:iADmTwqILo4mZ8BN3D2Q6+9jd8WM5uGBxy+E8yxSoD4=
+ github.com/homeport/dyff v1.5.6 h1:6PNzGM0azeYXs401RZSLyIUS4sIX+YY3WBEZ3bnzkiE=
+ github.com/homeport/dyff v1.5.6/go.mod h1:cMmplDz/DeUWPB4T/sD9GDpuTnMD2nk3rjn2f+5roEU=
++github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23 h1:bOKbKZULjNQbnK+xXLXXa42TlFYELUNoyUTym+8KDvM=
++github.com/iamleot/go-ps v1.0.1-0.20230107215528-c3e6d0630c23/go.mod h1:J4lOc8z8yJs6vUwklHw2XEIiT4z4C40KtWVN3nvg8Pg=
+ github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
+ github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
+ github.com/imdario/mergo v0.3.12/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH0dnCYA=
+@@ -536,8 +538,6 @@ github.com/matttproud/golang_protobuf_ex
+ github.com/matttproud/golang_protobuf_extensions v1.0.4/go.mod h1:BSXmuO+STAnVfrANrmjBb36TMTDstsz7MSK+HVaYKv4=
+ github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
+ github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
+-github.com/mitchellh/go-ps v1.0.0 h1:i6ampVEEF4wQFF+bkYfwYgY+F/uYJDktmvLPf7qIgjc=
+-github.com/mitchellh/go-ps v1.0.0/go.mod h1:J4lOc8z8yJs6vUwklHw2XEIiT4z4C40KtWVN3nvg8Pg=
+ github.com/mitchellh/go-wordwrap v1.0.1 h1:TLuKupo69TCn6TQSyGxwI1EblZZEsQ0vMlAFQflz0v0=
+ github.com/mitchellh/go-wordwrap v1.0.1/go.mod h1:R62XHJLzvMFRBbcrT7m7WgmE1eOyTSsCt+hzestvNj0=
+ github.com/mitchellh/hashstructure v1.1.0 h1:P6P1hdjqAAknpY/M1CGipelZgp+4y9ja9kmUZPXP+H0=
