@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/editorconfig-checker
+man/man1/editorconfig-checker.1

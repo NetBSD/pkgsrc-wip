@@ -1,0 +1,4 @@
+editorconfig-checker is a tool to check if your files consider your
+.editorconfig rules.  Most tools - like linters, for example -only test
+one filetype and need an extra configuration. This tool only needs your
+.editorconfig to check all files.
