@@ -1,0 +1,13 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	lwtools
+
+.if !defined(LWTOOLS_BUILDLINK3_MK)
+LWTOOLS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.lwtools+=	lwtools>=4.11
+BUILDLINK_PKGSRCDIR.lwtools?=	../../wip/lwtools
+
+.endif	# LWTOOLS_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-lwtools
