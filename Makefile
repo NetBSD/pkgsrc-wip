@@ -5277,6 +5277,7 @@ SUBDIR+=	shed
 SUBDIR+=	shell-fm
 SUBDIR+=	shellharden
 SUBDIR+=	shellinabox
+SUBDIR+=	shfmt
 SUBDIR+=	shotcut
 SUBDIR+=	shotwell
 SUBDIR+=	shoutcast
