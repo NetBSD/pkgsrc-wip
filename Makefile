@@ -745,6 +745,7 @@ SUBDIR+=	edbrowse
 SUBDIR+=	edelib
 SUBDIR+=	edencommon
 SUBDIR+=	edid-decode
+SUBDIR+=	editorconfig-checker
 SUBDIR+=	eduke32
 SUBDIR+=	efgallery
 SUBDIR+=	efivar
