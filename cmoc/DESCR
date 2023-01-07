@@ -1,0 +1,11 @@
+CMOC is a 6809-generating cross-compiler for a large subset of the C language.
+It generates assembly language code for the Motorola 6809 processor and
+targets the Tandy Color Computer, the Dragon computer, the Vectrex video game
+console, the Thomson MO and TO computers, and the OS-9 and FLEX operating
+systems. It runs under GNU/Linux and other Unix-like environments like Darwin
+and Cygwin. It requires the LWTOOLS assembler (lwasm) and linker, by William
+Astle.
+
+The most significant difference between CMOC and a complete C compiler is the
+absence of a complete C standard library. Floats are only usable under Color
+Basic. CMOC comes with a small library that serves as a starting kit.

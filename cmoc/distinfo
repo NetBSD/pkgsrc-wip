@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (cmoc-0.1.80.tar.gz) = ed2b8cae869db6c04623a641fbc502d88b3e9c154840eaa3058f3de8f2ed933c
+SHA512 (cmoc-0.1.80.tar.gz) = 9f64b91e69e77fe64e57ae37f953580e54b1bc9fedaa5ea08a691aadc4ffc01fdadae8a7c27b54ac9602c2103b8f71df7575ab8188839297e1edf249f1ccfc95
+Size (cmoc-0.1.80.tar.gz) = 751507 bytes

@@ -487,6 +487,7 @@ SUBDIR+=	clustershell
 SUBDIR+=	clutter-gst
 SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
+SUBDIR+=	cmoc
 SUBDIR+=	coccigrep
 SUBDIR+=	coccinelle
 SUBDIR+=	cockatrice
