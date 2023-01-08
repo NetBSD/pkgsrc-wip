@@ -2678,7 +2678,6 @@ SUBDIR+=	nuget-git
 SUBDIR+=	nullpop
 SUBDIR+=	num-utils
 SUBDIR+=	nuppelvideo
-SUBDIR+=	nushell
 SUBDIR+=	nuspell
 SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
