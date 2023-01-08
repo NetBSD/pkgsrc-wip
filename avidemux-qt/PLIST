@@ -1,6 +1,6 @@
 @comment $NetBSD$
-bin/Avidemux2.8
-bin/avidemux_jobs
+${PLIST.qt5}bin/avidemux3_jobs_qt5
+${PLIST.qt5}bin/avidemux3_qt5
 include/avidemux/2.8/qt5/ADM_UIs/ADM_QSettings.h
 include/avidemux/2.8/qt5/ADM_UIs/ADM_UIQT46_export.h
 include/avidemux/2.8/qt5/ADM_UIs/ADM_dialogFactoryQt4.h
@@ -11,9 +11,10 @@ include/avidemux/2.8/qt5/ADM_UIs/T_openGLFilter.h
 include/avidemux/2.8/qt5/ADM_openGL/ADM_openGL_export.h
 include/avidemux/2.8/qt5/ADM_openGL/ADM_openGl.h
 include/avidemux/2.8/qt5/config.h
-lib/libADM_UIQT56.dylib
-lib/libADM_openGLQT56.dylib
-lib/libADM_render6_QT5.dylib
+lib/libADM_UIQT56.${SOEXT}
+lib/libADM_openGLQT56.${SOEXT}
+lib/libADM_render6_QT5.${SOEXT}
+${PLIST.notdarwin}share/applications/org.avidemux.Avidemux.desktop
 share/avidemux6/qt5/i18n/avidemux_ca.qm
 share/avidemux6/qt5/i18n/avidemux_cs.qm
 share/avidemux6/qt5/i18n/avidemux_da.qm
@@ -60,3 +61,5 @@ share/avidemux6/qt5/i18n/qtbase_tr.qm
 share/avidemux6/qt5/i18n/qtbase_uk.qm
 share/avidemux6/qt5/i18n/qtbase_zh_CN.qm
 share/avidemux6/qt5/i18n/qtbase_zh_TW.qm
+${PLIST.notdarwin}share/icons/hicolor/128x128/apps/org.avidemux.Avidemux.png
+${PLIST.notdarwin}share/metainfo/org.avidemux.Avidemux.appdata.xml
