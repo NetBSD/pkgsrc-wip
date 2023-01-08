@@ -1,0 +1,6 @@
+lib/ADM_plugins6/audioDevices/libADM_av_audioCore.dylib
+lib/ADM_plugins6/videoEncoders/libADM_ve_ffVTEencH264.dylib
+lib/ADM_plugins6/videoEncoders/libADM_ve_ffVTEencHEVC.dylib
+lib/ADM_plugins6/videoEncoders/libADM_ve_x265_other.dylib
+lib/ADM_plugins6/videoEncoders/qt5/libADM_ve_x265_QT5.dylib
+

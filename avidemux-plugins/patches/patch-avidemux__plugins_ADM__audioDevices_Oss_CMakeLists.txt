@@ -1,0 +1,16 @@
+$NetBSD$
+
+Add -lossaudio for NetBSD.
+
+--- avidemux_plugins/ADM_audioDevices/Oss/CMakeLists.txt.orig	2022-09-17 13:59:17.000000000 +0000
++++ avidemux_plugins/ADM_audioDevices/Oss/CMakeLists.txt
+@@ -4,6 +4,9 @@ INCLUDE(av_plugin)
+ SET(ADM_av_oss_SRCS ADM_deviceoss.cpp)
+ 
+ ADD_AUDIO_DEVICE(ADM_av_oss  ${ADM_av_oss_SRCS})
++if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++    TARGET_LINK_LIBRARIES(ADM_av_oss ossaudio)
++endif()
+ include_directories(${OSS_INCLUDE_DIR})
+ INIT_AUDIO_DEVICE(ADM_av_oss)
+ INSTALL_AUDIO_DEVICE(ADM_av_oss)

@@ -3,4 +3,6 @@ $NetBSD$
 BLAKE2s (avidemux_2.8.1.tar.gz) = 6fb2f7f1f0686ac0fb60374e16347aaf1fdbc6f478369d564f27546ee69cb4aa
 SHA512 (avidemux_2.8.1.tar.gz) = c8df5c0d7f20fd9003560dee7cc0964ba810fc2786cefd525c09fd9f740339dd92a42989938ca48c16aca778ed5bd93a56572b0c6397fe04e47225cc109e7d75
 Size (avidemux_2.8.1.tar.gz) = 26126065 bytes
+SHA1 (patch-avidemux__plugins_ADM__audioDevices_Oss_ADM__deviceoss.cpp) = 20f346b953d61d8640c2c36e6731e2bef85fa845
+SHA1 (patch-avidemux__plugins_ADM__audioDevices_Oss_CMakeLists.txt) = 4f6bba0618e3015041a833c9eb1d87fede52b9e3
 SHA1 (patch-avidemux__plugins_CMakeLists.txt) = e7ad920a45a2906ba2c405d6083b80c503fb7cf9
