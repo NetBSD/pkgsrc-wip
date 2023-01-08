@@ -7,7 +7,7 @@ DISTNAME=	avidemux_2.8.1
 CATEGORIES?=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avidemux/}
 
-MAINTAINER?=	pkgsrc-users@NetBSD.org
+MAINTAINER?=	triaxx@NetBSD.org
 HOMEPAGE?=	http://fixounet.free.fr/avidemux/
 LICENSE?=	gnu-gpl-v2
 
@@ -20,11 +20,19 @@ CONFIGURE_DIRS=	build
 .include "../../mk/bsd.prefs.mk"
 
 .if ${SHLIB_TYPE} == "dylib"
-SOEXT=		dylib
+PLIST.dylib=		yes
+SOEXT=			dylib
 .else
-SOEXT=		so
+PLIST.so=		yes
+SOEXT=			so
 .endif
-PLIST_SUBST+=	SOEXT=${SOEXT}
+PLIST_SUBST+=		SOEXT=${SOEXT}
+PLIST_VARS+=		dylib so
+
+.if ${OPSYS} != "Darwin"
+PLIST.notdarwin=	yes
+PLIST_VARS+=		notdarwin
+.endif
 
 post-extract:
 	${RUN}${MKDIR} -p ${WRKSRC}/${CONFIGURE_DIRS}

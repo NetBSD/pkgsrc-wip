@@ -134,6 +134,13 @@ include/avidemux/2.8/ADM_coreImageLoader/ADM_imageLoader.h
 include/avidemux/2.8/ADM_coreJobs/ADM_coreJobs.h
 include/avidemux/2.8/ADM_coreJobs/ADM_coreJobs_export.h
 include/avidemux/2.8/ADM_coreJobs/sqlJobs.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVA/ADM_coreLibVA.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVA/ADM_coreLibVA_internal.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVAEnc/ADM_coreLibVA_bitstream.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVAEnc/ADM_coreLibVA_buffer.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVAEnc/ADM_coreLibVA_encodingContext.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVAEnc/ADM_coreLibVA_h264Encoding.h
+${PLIST.vaapi}include/avidemux/2.8/ADM_coreLibVAEnc/ADM_coreLibVA_hevcEncoding.h
 include/avidemux/2.8/ADM_coreMuxer/ADM_coreMuxer6_export.h
 include/avidemux/2.8/ADM_coreMuxer/ADM_coreMuxerFfmpeg.h
 include/avidemux/2.8/ADM_coreMuxer/ADM_muxer.h
@@ -203,6 +210,8 @@ include/avidemux/2.8/ADM_coreUtils/FFcodecContext_param.h
 include/avidemux/2.8/ADM_coreUtils/fourcc.h
 include/avidemux/2.8/ADM_coreUtils/prefs.h
 include/avidemux/2.8/ADM_coreUtils/prefs2_list.h
+${PLIST.vdpau}include/avidemux/2.8/ADM_coreVdpau/ADM_coreVdpau.h
+${PLIST.vdpau}include/avidemux/2.8/ADM_coreVdpau/ADM_coreVdpauInternal.h
 include/avidemux/2.8/ADM_coreVideoCodec/ADM_codec.h
 include/avidemux/2.8/ADM_coreVideoCodec/ADM_codecEmpty.h
 include/avidemux/2.8/ADM_coreVideoCodec/ADM_codecFFVP9.h
@@ -230,7 +239,6 @@ include/avidemux/2.8/ADM_coreVideoFilter/ADM_coreVideoFilterInternal.h
 include/avidemux/2.8/ADM_coreVideoFilter/ADM_filterCategory.h
 include/avidemux/2.8/ADM_coreVideoFilter/ADM_videoFilterBridge.h
 include/avidemux/2.8/ADM_coreVideoFilter/ADM_videoFilterCache.h
-include/avidemux/2.8/ADM_coreVideoToolbox/ADM_coreVideoToolbox.h
 include/avidemux/2.8/cmake/ADM_coreConfig.cmake
 include/avidemux/2.8/cmake/ADM_coreConfig.h.cmake
 include/avidemux/2.8/cmake/DeployQt5.cmake
@@ -373,6 +381,7 @@ include/avidemux/2.8/libavcodec/codec_desc.h
 include/avidemux/2.8/libavcodec/codec_id.h
 include/avidemux/2.8/libavcodec/codec_par.h
 include/avidemux/2.8/libavcodec/packet.h
+${PLIST.vaapi}include/avidemux/2.8/libavcodec/vaapi.h
 include/avidemux/2.8/libavcodec/vdpau.h
 include/avidemux/2.8/libavcodec/version.h
 include/avidemux/2.8/libavcodec/videotoolbox.h
@@ -413,11 +422,21 @@ include/avidemux/2.8/libpostproc/postprocess.h
 include/avidemux/2.8/libpostproc/version.h
 include/avidemux/2.8/libswscale/swscale.h
 include/avidemux/2.8/libswscale/version.h
-lib/libADM6avcodec.58.${SOEXT}
-lib/libADM6avformat.58.${SOEXT}
-lib/libADM6avutil.56.${SOEXT}
-lib/libADM6postproc.55.${SOEXT}
-lib/libADM6swscale.5.${SOEXT}
+${PLIST.dylib}lib/libADM6avcodec.58.dylib
+${PLIST.so}lib/libADM6avcodec.so
+${PLIST.so}lib/libADM6avcodec.so.58
+${PLIST.dylib}lib/libADM6avformat.58.dylib
+${PLIST.so}lib/libADM6avformat.so
+${PLIST.so}lib/libADM6avformat.so.58
+${PLIST.dylib}lib/libADM6avutil.56.dylib
+${PLIST.so}lib/libADM6avutil.so
+${PLIST.so}lib/libADM6avutil.so.56
+${PLIST.dylib}lib/libADM6postproc.55.dylib
+${PLIST.so}lib/libADM6postproc.so
+${PLIST.so}lib/libADM6postproc.so.55
+${PLIST.dylib}lib/libADM6swscale.5.dylib
+${PLIST.so}lib/libADM6swscale.so
+${PLIST.so}lib/libADM6swscale.so.5
 lib/libADM_audioParser6.${SOEXT}
 lib/libADM_core6.${SOEXT}
 lib/libADM_coreAudio6.${SOEXT}
@@ -429,6 +448,8 @@ lib/libADM_coreDemuxerMpeg6.${SOEXT}
 lib/libADM_coreImage6.${SOEXT}
 lib/libADM_coreImageLoader6.${SOEXT}
 lib/libADM_coreJobs.${SOEXT}
+${PLIST.vaapi}lib/libADM_coreLibVA6.${SOEXT}
+${PLIST.vaapi}lib/libADM_coreLibVAEnc6.${SOEXT}
 lib/libADM_coreMuxer6.${SOEXT}
 lib/libADM_coreScript.${SOEXT}
 lib/libADM_coreSocket6.${SOEXT}
@@ -436,9 +457,9 @@ lib/libADM_coreSqlLight3.${SOEXT}
 lib/libADM_coreSubtitles6.${SOEXT}
 lib/libADM_coreUI6.${SOEXT}
 lib/libADM_coreUtils6.${SOEXT}
+${PLIST.vdpau}lib/libADM_coreVDPAU6.${SOEXT}
 lib/libADM_coreVideoCodec6.${SOEXT}
 lib/libADM_coreVideoEncoder6.${SOEXT}
 lib/libADM_coreVideoFilter6.${SOEXT}
-lib/libADM_coreVideoToolbox6.${SOEXT}
 @pkgdir include/avidemux/2.8/cmake/sql
 @pkgdir include/avidemux/2.8/cmake/osx

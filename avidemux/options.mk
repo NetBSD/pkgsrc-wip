@@ -6,11 +6,12 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	qt
 PKG_OPTIONS_GROUP.qt=		qt4 qt5 qt6
 
 ################################################################################
-PKG_SUPPORTED_OPTIONS=		aften aom cli dca faac faad fdk-aac fontconfig \
-				freetype fribidi jack lame libvpx opencore-amr \
-				opus twolame vorbis x264 x265 xvid
+PKG_SUPPORTED_OPTIONS=		aften alsa aom cli dca faac faad fdk-aac \
+				fontconfig freetype fribidi jack lame libvpx \
+				opencore-amr opus oss pulseaudio twolame \
+				vorbis x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=		cli faac faad fontconfig freetype fribidi lame \
-				qt5 vorbis x264 x265 xvid
+				pulseaudio qt5 vorbis x264 x265 xvid
 
 PLIST_VARS+=			${PKG_SUPPORTED_OPTIONS} ${PKG_OPTIONS_GROUP.qt}
 
@@ -35,6 +36,13 @@ PLIST.aften=		yes
 .include "../../audio/aften/buildlink3.mk"
 .else
 CMAKE_ARGS+=		-DAFTEN:BOOL=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Malsa)
+PLIST.alsa=		yes
+.include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DALSA:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Maom)
@@ -135,6 +143,20 @@ PLIST.opus=		yes
 .include "../../audio/libopus/buildlink3.mk"
 .else
 CMAKE_ARGS+=		-DOPUS:BOOL=OFF -DOPUS_ENCODER:BOOL=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Moss)
+PLIST.oss=		yes
+.include "../../mk/oss.buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DOSS:BOOL=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+PLIST.pulseaudio=	yes
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DPULSEAUDIO:BOOL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt4)

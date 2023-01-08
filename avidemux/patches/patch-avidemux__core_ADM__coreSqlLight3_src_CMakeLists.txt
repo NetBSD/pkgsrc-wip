@@ -1,0 +1,18 @@
+$NetBSD$
+
+The libdl library seems to be only available on Linux.
+
+--- avidemux_core/ADM_coreSqlLight3/src/CMakeLists.txt.orig	2022-09-17 13:59:17.000000000 +0000
++++ avidemux_core/ADM_coreSqlLight3/src/CMakeLists.txt
+@@ -12,7 +12,11 @@ IF (APPLE)
+ ENDIF (APPLE)
+ 
+ IF (UNIX)
++    if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+ 	TARGET_LINK_LIBRARIES(ADM_coreSqlLight3 dl)
++    else()
++	target_link_libraries(ADM_coreSqlLight3 m)
++    endif()
+ ENDIF (UNIX)
+ 
+ INCLUDE_DIRECTORIES(../include ${SQLITE3_INCLUDEDIR})

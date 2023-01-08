@@ -1,0 +1,3 @@
+@comment $NetBSD$
+include/avidemux/2.8/ADM_coreVideoToolbox/ADM_coreVideoToolbox.h
+lib/libADM_coreVideoToolbox6.dylib
