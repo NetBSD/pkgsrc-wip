@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	1.0.2
-PKGNAME=	${DISTNAME:S/^/chartsrv-/}
+DISTNAME=	chartsrv-1.0.2
 CATEGORIES=	www
-MASTER_SITES=	https://git.sr.ht/~sircmpwn/chartsrv/archive/
+MASTER_SITES=	-https://git.sr.ht/~sircmpwn/chartsrv/archive/${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~sircmpwn/chartsrv/
@@ -11,8 +10,6 @@ COMMENT=	Daemon which renders SVG plots from Prometheus data
 LICENSE=	mit
 
 GO_BUILD_PATTERN+=	.
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "go-modules.mk"
 
