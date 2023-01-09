@@ -2144,6 +2144,7 @@ SUBDIR+=	libltc
 SUBDIR+=	libm4ri
 SUBDIR+=	libmapper
 SUBDIR+=	libmirisdr-git
+SUBDIR+=	libmixed
 SUBDIR+=	libmobi-git
 SUBDIR+=	libmpg123
 SUBDIR+=	libmpq
