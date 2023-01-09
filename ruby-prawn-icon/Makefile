@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	prawn-icon-2.5.0
+DISTNAME=	prawn-icon-3.1.0
 CATEGORIES=	print
 
 MAINTAINER=	charlotte@NetBSD.org
