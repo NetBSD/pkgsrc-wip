@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	asciidoctor-pdf-1.5.3
+DISTNAME=	asciidoctor-pdf-2.3.4
 CATEGORIES=	print
 
 MAINTAINER=	charlotte@NetBSD.org
@@ -10,11 +10,11 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=2.0.0:../../textproc/ruby-asciidoctor
 DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.1.0:../../devel/ruby-concurrent-ruby
-DEPENDS+=	${RUBY_PKGPREFIX}-prawn-icon>=2.5.0:../../wip/ruby-prawn-icon
-DEPENDS+=	${RUBY_PKGPREFIX}-prawn-svg>=0.30.0:../../wip/ruby-prawn-svg
+DEPENDS+=	${RUBY_PKGPREFIX}-prawn-icon>=3.0.0:../../wip/ruby-prawn-icon
+DEPENDS+=	${RUBY_PKGPREFIX}-prawn-svg>=0.32.0:../../wip/ruby-prawn-svg
 DEPENDS+=	${RUBY_PKGPREFIX}-prawn-table>=0.2.0:../../wip/ruby-prawn-table
 DEPENDS+=	${RUBY_PKGPREFIX}-prawn-templates>=0.1.0:../../wip/ruby-prawn-templates
-DEPENDS+=	${RUBY_PKGPREFIX}-prawn>=2.2.0:../../print/ruby-prawn
+DEPENDS+=	${RUBY_PKGPREFIX}-prawn>=2.4.0:../../print/ruby-prawn
 DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=1.0.0:../../textproc/ruby-safe_yaml
 DEPENDS+=	${RUBY_PKGPREFIX}-thread_safe>=0.3.0:../../misc/ruby-thread_safe
 DEPENDS+=	${RUBY_PKGPREFIX}-treetop>=1.6.0:../../wip/ruby-treetop16
