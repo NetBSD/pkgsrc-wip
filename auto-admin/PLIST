@@ -125,6 +125,7 @@ sbin/auto-pxe-installer-setup
 sbin/auto-pxe-node-discover
 sbin/auto-remove-from-group
 sbin/auto-remove-user
+sbin/auto-restart-services
 sbin/auto-restore-ownership
 sbin/auto-restore-pw
 sbin/auto-restore-user
