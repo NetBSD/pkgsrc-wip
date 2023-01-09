@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	prawn-svg-0.30.0
+DISTNAME=	prawn-svg-0.32.0
 CATEGORIES=	print
 
 MAINTAINER=	charlotte@NetBSD.org

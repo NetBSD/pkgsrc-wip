@@ -231,7 +231,6 @@ ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/calculate_charac
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/calculate_text_rendering_mode-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/cdesc-TextComponent.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/commands-i.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/find_referenced_element-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/normalize_length-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/parse-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/TextComponent/select_font-i.ri
@@ -242,7 +241,6 @@ ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Use/cdesc-Use.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Use/container%3f-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Use/parse-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Use/process_child_elements-i.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Use/referenced_element-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Viewport/apply-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Viewport/cdesc-Viewport.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/Elements/Viewport/container%3f-i.ri
@@ -359,9 +357,9 @@ ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/SVG/cdesc-SVG.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Prawn/cdesc-Prawn.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/cache.ri
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -492,6 +490,8 @@ ${GEM_LIBDIR}/spec/sample_svg/polygon01.svg
 ${GEM_LIBDIR}/spec/sample_svg/polyline01.svg
 ${GEM_LIBDIR}/spec/sample_svg/preserve-space.svg
 ${GEM_LIBDIR}/spec/sample_svg/quad01.svg
+${GEM_LIBDIR}/spec/sample_svg/radgrad01-bounding.svg
+${GEM_LIBDIR}/spec/sample_svg/radgrad01.svg
 ${GEM_LIBDIR}/spec/sample_svg/rect01.svg
 ${GEM_LIBDIR}/spec/sample_svg/rect02.svg
 ${GEM_LIBDIR}/spec/sample_svg/rotate_scale.svg
@@ -500,6 +500,8 @@ ${GEM_LIBDIR}/spec/sample_svg/scruffy_graph.svg
 ${GEM_LIBDIR}/spec/sample_svg/subfamilies.svg
 ${GEM_LIBDIR}/spec/sample_svg/subviewports.svg
 ${GEM_LIBDIR}/spec/sample_svg/subviewports2.svg
+${GEM_LIBDIR}/spec/sample_svg/svg_fill.svg
+${GEM_LIBDIR}/spec/sample_svg/text-decoration.svg
 ${GEM_LIBDIR}/spec/sample_svg/text_entities.svg
 ${GEM_LIBDIR}/spec/sample_svg/text_stroke.svg
 ${GEM_LIBDIR}/spec/sample_svg/transform.svg
@@ -513,6 +515,7 @@ ${GEM_LIBDIR}/spec/sample_svg/tspan04.svg
 ${GEM_LIBDIR}/spec/sample_svg/tspan05.svg
 ${GEM_LIBDIR}/spec/sample_svg/tspan91.svg
 ${GEM_LIBDIR}/spec/sample_svg/use.svg
+${GEM_LIBDIR}/spec/sample_svg/use_disordered.svg
 ${GEM_LIBDIR}/spec/sample_svg/viewbox.svg
 ${GEM_LIBDIR}/spec/sample_svg/viewport.svg
 ${GEM_LIBDIR}/spec/sample_svg/warning-radioactive.svg
