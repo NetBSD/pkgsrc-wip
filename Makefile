@@ -854,7 +854,6 @@ SUBDIR+=	fceux
 SUBDIR+=	fdm_materials
 SUBDIR+=	feathercoin
 SUBDIR+=	felt
-SUBDIR+=	fennel
 SUBDIR+=	festvox-awb
 SUBDIR+=	festvox-bdl
 SUBDIR+=	festvox-clb
