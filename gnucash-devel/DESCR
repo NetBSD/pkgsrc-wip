@@ -1,0 +1,21 @@
+GnuCash is a personal finance manager. A check-book like register
+GUI allows you to enter and track bank accounts, stocks, income
+and even currency trades. A full set of reports allow you to see
+the state of your finances. The interface is designed to be simple
+and easy to use, but is backed with double-entry accounting principles
+to ensure balanced books.  Features include:
+  - An easy-to-use interface.
+  - Scheduled Transactions
+  - Mortgage & Loan Repayment Druid
+  - Small Business Accounting Features
+  - OFX and Quicken File Import and HBCI Support
+  - Reconcile window with running reconciled and cleared balances
+  - Stock/Mutual Fund Portfolios
+  - Get Stock & Mutual Fund quotes from various web sites
+  - Reports
+  - Multiple Currencies & Currency Trading, Multi-Currency Handling
+  - Chart of Accounts
+  - Split Transactions
+  - Double Entry
+  - General Ledger
+  - International date handling, many different translations.
