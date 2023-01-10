@@ -15,11 +15,12 @@ SUBST_NOOP_OK.man-so=	yes
 # Don't regenerate any files in tools/.
 TOOLS_SCRIPT.perl=	exit 1
 
-CONFIGURE_ARGS+=	--with-docs=man
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-dev
+
+CONFIGURE_ARGS+=	--without-asciidoc
 CONFIGURE_ARGS+=	--without-snmp		# provided by sysutils/ups-nut-snmp
 CONFIGURE_ARGS+=	--without-nut_monitor	# not packaged
 
