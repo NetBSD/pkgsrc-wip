@@ -1,0 +1,8 @@
+  - Change naming so distfiles have dates.
+  - Publish distfiles so others can fetch them
+  - Fix multiple python versions
+    https://github.com/networkupstools/nut/issues/1792
+  - Check all patches and comment and send upstream
+  - Resolve manpage building
+  - Test forced shutdown and uncomment upsdrvctl shutdown
+ 
