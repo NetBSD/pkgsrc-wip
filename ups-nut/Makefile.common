@@ -1,13 +1,14 @@
 # $NetBSD: Makefile.common,v 1.12 2022/04/26 23:28:25 gdt Exp $
-# used by sysutils/ups-nut/Makefile
-# used by sysutils/ups-nut-cgi/Makefile
-# used by sysutils/ups-nut-snmp/Makefile
-# used by sysutils/ups-nut-usb/Makefile
-# used by sysutils/p5-UPS-Nut/Makefile
+# used by wip/ups-nut/Makefile
+# used by wip/ups-nut-cgi/Makefile
+# used by wip/ups-nut-snmp/Makefile
+# used by wip/ups-nut-usb/Makefile
+# used by wip/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.8.0.1
+DISTNAME=		nut-2.8.0.1.20230110
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
+#MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
+MASTER_SITES=		https://www.netbsd.org/~gdt/
 
 MAINTAINER?=		gdt@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
@@ -17,8 +18,8 @@ LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3
 NUT_USER?=		nut
 NUT_GROUP?=		nut
 
-DISTINFO_FILE=		${.CURDIR}/../../sysutils/ups-nut/distinfo
-PATCHDIR=		${.CURDIR}/../../sysutils/ups-nut/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/ups-nut/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/ups-nut/patches
 
 USE_TOOLS=		pkg-config
 USE_LIBTOOL=		yes

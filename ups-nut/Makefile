@@ -20,10 +20,15 @@ CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-dev
-# \todo Consider split package or option.
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--without-snmp		# provided by sysutils/ups-nut-snmp
 CONFIGURE_ARGS+=	--without-nut_monitor	# not packaged
+
+# \todo Consider split package or option.
+# Disable python2 to Workaround
+# https://github.com/networkupstools/nut/issues/1792 which upstream
+# declines to fix.
+CONFIGURE_ARGS+=	--without-python2
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 
 PKG_GROUPS_VARS+=	NUT_GROUP
 PKG_USERS_VARS+=	NUT_USER
