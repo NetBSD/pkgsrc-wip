@@ -5846,6 +5846,7 @@ SUBDIR+=	upmendex
 SUBDIR+=	upower
 SUBDIR+=	uprof
 SUBDIR+=	ups-monitor
+SUBDIR+=	ups-nut
 SUBDIR+=	uptimed
 SUBDIR+=	uqwk
 SUBDIR+=	urlwatch
