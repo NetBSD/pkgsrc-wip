@@ -4182,6 +4182,7 @@ SUBDIR+=	py-mol
 SUBDIR+=	py-monad
 SUBDIR+=	py-mongomock
 SUBDIR+=	py-monty
+SUBDIR+=	py-mopidy
 SUBDIR+=	py-mote
 SUBDIR+=	py-moya
 SUBDIR+=	py-mozInstall

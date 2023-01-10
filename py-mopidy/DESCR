@@ -1,0 +1,8 @@
+Mopidy plays music from local disk, Spotify, SoundCloud, Google
+Play Music, and more. You edit the playlist from any phone, tablet,
+or computer using a variety of MPD and web clients.
+
+Vanilla Mopidy only plays music from files and radio streams.
+Through extensions, Mopidy can play music from cloud services like
+Spotify, SoundCloud, and Google Play Music. With Mopidy's extension
+support, backends for new music sources can be easily added.
