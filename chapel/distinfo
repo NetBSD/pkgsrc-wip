@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (chapel-1.22.1.tar.gz) = fd7138025a7e736ee8b3e7c9dc127568540b90c5
-SHA512 (chapel-1.22.1.tar.gz) = 9c3b7a7ce55be65d77808839f3db8dea150108c612ee9b318402d62586042a0b85513cd9f0505b773383bb5f52e1fe4ee486b67168b315d9e93c7357dc612f8c
-Size (chapel-1.22.1.tar.gz) = 72025477 bytes
+BLAKE2s (chapel-1.29.0.tar.gz) = 7d3e22eb9c1c3c27d7dfd4e463084f840e628a9ed737cbe230a059696d4d219c
+SHA512 (chapel-1.29.0.tar.gz) = e2386a7741d37b2b797db0dd9848f82d17095120ac9d4c30b14265bc71ebee47fd1eefbc331b2fdff4c080747ec267ba9308c3b736f731680a13301f2d68c7d7
+Size (chapel-1.29.0.tar.gz) = 85858433 bytes
 SHA1 (patch-third-party_qthread_qthread-src_configure) = b6739163325fd4cf38a1e4703ee593191f6c8da3
