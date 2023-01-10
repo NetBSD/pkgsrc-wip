@@ -1,0 +1,10 @@
+Does not compile on NetBSD 10.99.2/amd64 with:
+
+In file included from /usr/include/sys/signal.h:112,
+                 from /usr/include/signal.h:45,
+                 from blink/blinkenlights.c:24:
+./blink/linux.h:461:6: error: expected ':', ',', ';', '}' or '__attribute__' before '.' token
+  461 |   u8 si_signo[4];
+      |      ^~~~~~~~
+
+Reported upstream as https://github.com/jart/blink/issues/24

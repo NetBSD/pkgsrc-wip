@@ -294,6 +294,7 @@ SUBDIR+=	blad
 SUBDIR+=	blast2go
 SUBDIR+=	bleachbit
 SUBDIR+=	blink
+SUBDIR+=	blink-git
 SUBDIR+=	blueprint-compiler
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez
