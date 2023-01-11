@@ -1,0 +1,9 @@
+Polars is a blazingly fast DataFrames library implemented in Rust
+using Apache Arrow Columnar Format as the memory model.
+
+* Lazy | eager execution
+* Multi-threaded
+* SIMD
+* Query optimization
+* Powerful expression API
+* Hybrid Streaming (larger than RAM datasets)

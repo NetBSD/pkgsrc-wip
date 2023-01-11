@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (polars-0.15.14.tar.gz) = 4c9f143a02f753eca9992a0bf376c34af04553fd2142e324186b6ad891c72c48
+SHA512 (polars-0.15.14.tar.gz) = 5664a563aaece0a906aa55acf66fcfdedfac5804ce4f024c04a1f0b51909bef86b93b953431c326ca0224b0ceb8f1da71c37609fe550acbb1d6b570ee8b9d023
+Size (polars-0.15.14.tar.gz) = 1290968 bytes
