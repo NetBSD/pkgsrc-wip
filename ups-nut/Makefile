@@ -16,15 +16,19 @@ SUBST_NOOP_OK.man-so=	yes
 TOOLS_SCRIPT.perl=	exit 1
 
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
-CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
+# should be /var/run
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
-CONFIGURE_ARGS+=	--with-dev
+# should be /var/run/nut
+CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
+# STATEDIR should be created at boot: /var/run/nut?
 
 CONFIGURE_ARGS+=	--without-asciidoc
+CONFIGURE_ARGS+=	--with-dev
 CONFIGURE_ARGS+=	--without-snmp		# provided by sysutils/ups-nut-snmp
+CONFIGURE_ARGS+=	--without-usb		# provided by sysutils/ups-nut-usb
 CONFIGURE_ARGS+=	--without-nut_monitor	# not packaged
 
-# \todo Consider split package or option.
+# \todo Move to split package.
 # Disable python2 to Workaround
 # https://github.com/networkupstools/nut/issues/1792 which upstream
 # declines to fix.
