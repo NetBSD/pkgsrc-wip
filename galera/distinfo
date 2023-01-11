@@ -6,6 +6,7 @@ Size (694d6ca47f5eec7873be99b7d6babccf633d1231.tar.gz) = 91929 bytes
 BLAKE2s (galera-26.4.13.tar.gz) = 54717494b2abda58deffeb91a73aff1948ec5d9a155438208c6d58cdcf61446c
 SHA512 (galera-26.4.13.tar.gz) = 34bd8eecf45efe8237256672eb164060ef4f8b9548b0da4392d6c45507f215d85272bf9fe883ec365ae8541051edc4c1a8b9f2d4bd9158100264bd824cc6cc61
 Size (galera-26.4.13.tar.gz) = 3587759 bytes
+SHA1 (patch-asio_asio_detail_impl_kqueue__reactor.ipp) = edbfcf032d102337362b248b306aad2da6cac609
 SHA1 (patch-cmake_crc32c.cmake) = f81ca80457b529cd72999c25c21cfa54def28a84
 SHA1 (patch-galerautils_SConscript) = 8c53d2d110bba19dda5c1dbda872492aa5010701
 SHA1 (patch-galerautils_src_gu__arch.h) = 317bac921afb5cf8134e2a93dbd6984d4018e750
