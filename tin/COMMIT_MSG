@@ -1,0 +1,90 @@
+news/tin: Update to 2.6.2
+
+Add upstream patch to fix build.
+
+-- 2.6.2 release 20221224 "Pittyvaich" --
+
+ 009) Florian Weimer <fweimer@redhat.com>
+      Thomas E. Dickey <dickey@invisible-island.net>
+      ADD. missing #include directives to improve C99 compatibility
+      FIX. aclocal.m4, configure
+
+ 008) Enrik Berkhan <enrik@tin.org>
+      BUG. remove alleged Y2K38 safety issues
+      ADD. ~ and $VAR expansion to tinrc option tls_ca_cert_file
+      ADD. simplify code and refactor to fix an unused variable complaint
+      ADD. pcre2 support (debian bug #999941, fedora bug #2128388)
+      ADD. NNTPS support based on libressl/GNUttls/OpenSSL (RFC 8143)
+      ADD. TLS connection info
+      ADD. switch from stdio to own buffer implementation
+      FIX. config.c, cook.c, feed.c, filter.c, group.c, init.c, lang.c, main.c
+           memory.c, misc.c, nntplib.c, nntps.c, options_menu.c, page.c, read.c
+           regex.c, save.c, screen.c, search.c, select.c, wildmat.c
+           autoconf.h[in], extern.h, nntplib.h, proto.h, tinrc.h, tin.h
+           tnntp.h, tnntps.h, tincfg.tbl, parsdate.y, configure[.in]
+           Makefile[.in], tin.1
+
+ 007) Dennis Preiser <dennis@d--p.de>
+      BUG. backward search for a non empty line got stuck in endless loop
+      BUG. reading a faulty mime article via NNTP could hang tin
+           (debian bug #1005024)
+      BUG. a long group name isn't shortened appropriately in group level
+      BUG. config changes via 'M'enu were not immediately active for
+           show_signatures, verbatim_handling, tex2iso_conf and
+           trim_article_body
+      BUG. after posting an article from selection or group level the cursor
+           remains visible in the lower left corner
+      ADD. tinrc.show_help_mail_sign
+      ADD. get $TMPDIR just once
+      ADD. option to remove SOFT HYPHENs (U+00AD) from non verbatim blocks of
+           articles in UTF-8 and using a UTF-8 locale
+      BUG. show actual help-key in txt_type_h_for_help
+      FIX. config.c, cook.c, debug.c, filter.c, group.c, init.c, lang.c, mail.c
+           misc.c, my_tmpfile.c, newsrc.c, options_menu.c, page.c, pgp.c
+           regex.c, rfc2046.c, refs.c, save.c, screen.c, search.c, select.c
+           thread.c, extern.h, proto.h, tin.h, tinrc.h, tincfg.tbl, tin.1
+           tin.5
+
+ 006) Thomas E. Dickey <dickey@invisible-island.net>
+      BUG. configure --with-included-gettext was non-functional since tin 2.4.2
+      ADD. update configure macros
+      FIX. aclocal.m4, intl/Makefile.in, intl/plural.c
+
+ 005) Urs Janssen <urs@tin.org>
+      ADD. config.guess, config.sub update
+      ADD. code cleanup; remove redundant condition and unused var;
+           add some missing casts and _Noreturn
+      ADD. ignore set but empty env.-vars
+      ADD. try harder when looking for keymap-file, try locale "suffixes"
+           from language[_territory[.codeset]][@modifier] with parts
+           stripped off in order: codeset, normalized codeset, territory,
+           modifier
+      ADD. guard against empty inews_prog and empty mm_charset in
+           !CHARSET_CONVERSION case
+      ADD. warn about some more nonsensical cmd.-line option combinations
+           -ow|-oz|-wz
+      ADD. exit early at -o when there are no postponed articles
+      ADD. reduce memory usage for xface
+      ADD. list of leap years from 2040 to 2068
+      ADD. restrict URL_REGEX to disallow non ascii chars in path
+      ADD. accept active file lines even without moderation flag
+      ADD. do not try NEXT again after an ERR_COMMAND response
+      ADD. ConnectionInfo page ('J')
+      ADD. update tin_atol() to new SI prefix names Ronna and Quetta
+      ADD. experimental MAXARTNUM extension
+      BUG. missing default tinrc.editor_format on first start
+      BUG. typo in man page
+      BUG. possible memleak in check_article_to_be_posted if article has
+           multiple To:, Followup-To: or Newsgroups:-headers
+      BUG. possible buffer overflow in find_reply_to_addr
+      BUG. f'up to an article without a message-id (possible in mailgroups)
+           crashes
+      BUG. hypothetic missing string termination
+      BUG. need to convert utf8pass to network charset unconditionally in
+           do_authinfo_sasl_plain
+      FIX. active.c, art.c, auth.c, config.c, filter.c, group.c, help.c
+           inews.c, init.c, keymap.c, lang.c, main.c, makecfg.c, mimetypes.c
+           misc.c, nntplib.c, options_menu.c, page.c, post.c, pgp.c, rfc1524.c
+           rfc2046.c, save.c, select.c, signal.c, string.c, thread.c, wildmat.c
+           xface.c, parsdate.y, extern.h, keymap.h, nntplib.h, proto.h, tin.h
+           tin.1, tin.5, config.guess, config.sub, configure[.in]

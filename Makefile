@@ -5706,6 +5706,7 @@ SUBDIR+=	tilda
 SUBDIR+=	tilix
 SUBDIR+=	timewarrior
 SUBDIR+=	timg
+SUBDIR+=	tin
 SUBDIR+=	tintin++
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
