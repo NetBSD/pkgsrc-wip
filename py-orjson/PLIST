@@ -9,4 +9,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE-APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE-MIT
 ${PYSITELIB}/orjson/__init__.py
 ${PYSITELIB}/orjson/__init__.pyc
+${PYSITELIB}/orjson/__init__.pyi
 ${PYSITELIB}/orjson/orjson.so
+${PYSITELIB}/orjson/py.typed
