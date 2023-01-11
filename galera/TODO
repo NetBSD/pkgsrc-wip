@@ -1,0 +1,41 @@
+In file included from /usr/include/wchar.h:61,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/bits/char_traits.h:40,
+                 from /usr/include/g++/string:40,
+                 from /scratch/wip/galera/work/galera-release_26.4.13/galerautils/src/gu_string_utils.hpp:6,
+                 from /scratch/wip/galera/work/galera-release_26.4.13/galerautils/src/gu_config.hpp:13,
+                 from /scratch/wip/galera/work/galera-release_26.4.13/galerautils/src/gu_asio.hpp:13,
+                 from /scratch/wip/galera/work/galera-release_26.4.13/galerautils/src/gu_asio_stream_engine.hpp:17,
+                 from /scratch/wip/galera/work/galera-release_26.4.13/galerautils/src/gu_asio_stream_engine.cpp:7:
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp: In constructor 'asio::detail::kqueue_reactor::kqueue_reactor(asio::execution_context&)':
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:53:3: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+   53 |   ASIO_KQUEUE_EV_SET(&events[0], interrupter_.read_descriptor(),
+      |   ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp: In member function 'virtual void asio::detail::kqueue_reactor::notify_fork(asio::execution_context::fork_event)':
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:101:5: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  101 |     ASIO_KQUEUE_EV_SET(&events[0], interrupter_.read_descriptor(),
+      |     ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:117:9: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  117 |         ASIO_KQUEUE_EV_SET(&events[0], state->descriptor_,
+      |         ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:119:9: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  119 |         ASIO_KQUEUE_EV_SET(&events[1], state->descriptor_,
+      |         ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp: In member function 'int asio::detail::kqueue_reactor::register_internal_descriptor(int, asio::detail::socket_type, asio::detail::kqueue_reactor::descriptor_state*&, asio::detail::reactor_op*)':
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:173:3: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  173 |   ASIO_KQUEUE_EV_SET(&events[0], descriptor, EVFILT_READ,
+      |   ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp: In member function 'void asio::detail::kqueue_reactor::start_op(int, asio::detail::socket_type, asio::detail::kqueue_reactor::descriptor_state*&, asio::detail::reactor_op*, bool, bool)':
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:226:9: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  226 |         ASIO_KQUEUE_EV_SET(&events[0], descriptor, EVFILT_READ,
+      |         ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:228:9: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  228 |         ASIO_KQUEUE_EV_SET(&events[1], descriptor, EVFILT_WRITE,
+      |         ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:249:7: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  249 |       ASIO_KQUEUE_EV_SET(&events[0], descriptor, EVFILT_READ,
+      |       ^~~~~~~~~~~~~~~~~~
+/scratch/wip/galera/work/galera-release_26.4.13/asio/asio/detail/impl/kqueue_reactor.ipp:251:7: error: invalid 'static_cast' from type 'intptr_t' {aka 'long int'} to type 'void*'
+  251 |       ASIO_KQUEUE_EV_SET(&events[1], descriptor, EVFILT_WRITE,
+      |       ^~~~~~~~~~~~~~~~~~
