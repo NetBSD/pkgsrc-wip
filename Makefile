@@ -1147,6 +1147,7 @@ SUBDIR+=	gifski
 SUBDIR+=	giggle
 SUBDIR+=	gimp-jxl
 SUBDIR+=	gin
+SUBDIR+=	git-branchless
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-extras
 SUBDIR+=	git-modes-git
