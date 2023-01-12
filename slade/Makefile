@@ -12,8 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-# Needs C++17 std::filesystem (>=GCC 8 according to documentation)
-GCC_REQD+=	8
+# Needs C++17 std::filesystem
+# GCC needs additional libraries for it before version 9
+GCC_REQD+=	9
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	pkg-config zip
 USE_CMAKE=	yes
