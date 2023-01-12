@@ -13,6 +13,7 @@ SHA1 (patch-galerautils_src_gu__arch.h) = 317bac921afb5cf8134e2a93dbd6984d4018e7
 SHA1 (patch-galerautils_src_gu__asio__socket__util.hpp) = bdbd2481f45f1ca9063944288e3933e56e863839
 SHA1 (patch-galerautils_src_gu__crc32c__arm64.c) = 8ed40c8e4c5824f762b8bfc64e65f2ea1827cd71
 SHA1 (patch-galerautils_src_gu__errno.h) = cb5ac99b3a77a865fe1c40b3553284ce795db003
+SHA1 (patch-galerautils_src_gu__fdesc.cpp) = d72f5142f32b602a20ac77275ef3d9bddaeb0ee9
 SHA1 (patch-galerautils_src_gu__limits.c) = 9d7a7315f17670fff836dfafd641196c2cdf51cc
 SHA1 (patch-galerautils_src_gu__resolver.cpp) = a057a5802d38cbf716a1a1a493ea5ae7e41eba09
 SHA1 (patch-galerautils_src_gu__system.h) = 9d0062df2878af8277a6fe2de072d5fefc297e4f
