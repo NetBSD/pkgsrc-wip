@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
-DISTNAME=	weewx-4.5.1
+DISTNAME=	weewx-4.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
@@ -8,7 +8,6 @@ MASTER_SITES=	https://weewx.com/downloads/released_versions/
 # See also
 # https://reviews.freebsd.org/file/data/wxlggqqqglli6l66usac/PHID-FILE-kucs3bj4stbb6iw4zpy5/D6324.diff
 
-# Do not make this package installable; email me if questions.
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://weewx.com/
 COMMENT=	Python-powered template engine and code-generator
@@ -22,7 +21,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	setup.cfg
 SUBST_VARS.paths=	PREFIX
 
-# 27 is still ok; see cheetsh comment
+# weewx might work with 27, but it causes pain with pkgsrc deps so just don't
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # These versions are probably higher than necessary, but there is little value
@@ -35,6 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.6.0:../../math/py-ephem
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-usb>=1.0.0:../../devel/py-usb
+
+REPLACE_PYTHON+=		util/i18n/i18n-report
 
 # \todo Decide whether to depend/patch, omit, or continue to ignore.
 CHECK_INTERPRETER_SKIP+=	weewx/util/init.d/weewx.lsb
