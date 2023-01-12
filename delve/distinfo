@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (delve-1.0.0.tar.gz) = 025340915ad977b3119316792ddae7c1f11ff2ca
-SHA512 (delve-1.0.0.tar.gz) = 128311bb7fd61b5b681c89060d7c0817da649fdbeef6367e627ca537ad4c3f07771d638e7e803c052c95bace8a7f5c8fb07feda1e06ce0ef34fd87143c29fece
-Size (delve-1.0.0.tar.gz) = 1573015 bytes
+BLAKE2s (delve-1.20.1.tar.gz) = dedfd816da050808cc3ad1528fbbf2d0f0a6ba33342276177f1f55688ccc93f1
+SHA512 (delve-1.20.1.tar.gz) = e3edca19ce989f39e42f380ae6ff70c331f17e0233b2c6a4e1f68090de2ec16a5cb9dd9300ae780eb017d48bd3b9bef0758f53a3ff212e15265372c62d0e384b
+Size (delve-1.20.1.tar.gz) = 9184789 bytes
