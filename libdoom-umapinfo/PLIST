@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/doom-umapinfo-cli
+include/libdoom-umapinfo-0/doom_umi.h
+lib/libdoom-umapinfo-${VERS}.a
+lib/libdoom-umapinfo.a
+lib/pkgconfig/libdoom-umapinfo-0.pc

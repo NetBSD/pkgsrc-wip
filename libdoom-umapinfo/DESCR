@@ -1,0 +1,8 @@
+This library provides a parser for Doom UMAPINFO data.
+
+The MAPINFO lump describes meta-data associated with levels (such as
+their name, music, sky texture, par time, etc.):
+https://doomwiki.org/wiki/MAPINFO
+
+Different Doom source ports have adopted different MAPINFO systems.
+UMAPINFO seeks to mitigate this problem by being a cross-port standard.
