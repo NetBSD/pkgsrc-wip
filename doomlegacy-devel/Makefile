@@ -96,6 +96,8 @@ SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 pre-configure:
+	${CP} ${FILESDIR}/umapinfo.c ${WRKSRC}/src
+	${CP} ${FILESDIR}/umapinfo.h ${WRKSRC}/src
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.sh ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}

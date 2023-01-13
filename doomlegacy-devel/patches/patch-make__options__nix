@@ -1,0 +1,16 @@
+$NetBSD$
+
+Add support for libdoom-umapinfo.
+
+--- make_options_nix.orig	2023-01-11 14:26:40.000000000 +0000
++++ make_options_nix
+@@ -79,6 +79,9 @@ HAVE_LIBZIP=1
+ # Optional, load with dlopen.
+ # HAVE_LIBZIP=3
+ 
++# Support for UMAPINFO lump needs libdoom-umapinfo.
++HAVE_LIBDOOM_UMAPINFO=0
++
+ # Extended nodes require zlib.
+ HAVE_ZLIB=1
+ # Optional, load with dlopen.

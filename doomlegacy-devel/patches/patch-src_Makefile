@@ -1,0 +1,31 @@
+$NetBSD$
+
+Add support for UMAPINFO.
+
+--- src/Makefile.orig	2023-01-11 14:26:40.000000000 +0000
++++ src/Makefile
+@@ -1281,6 +1281,14 @@ ifdef HAVE_ZLIB
+   endif
+ endif
+ 
++# LIBDOOM_UMAPINFO
++ifdef HAVE_LIBDOOM_UMAPINFO
++  OPTS+=-DHAVE_LIBDOOM_UMAPINFO=$(HAVE_LIBDOOM_UMAPINFO)
++  ifeq ($(HAVE_LIBDOOM_UMAPINFO), 1)
++    LIBS+=-ldoom-umapinfo
++  endif
++endif
++
+ 
+ # compiler and linker flags
+ CFLAGS+=$(WFLAGS)
+@@ -1354,7 +1362,8 @@ console.o command.o \
+ p_saveg.o \
+ tables.o info.o dstrings.o dehacked.o w_wad.o w_zip.o\
+ d_netcmd.o d_clisrv.o d_net.o d_netfil.o i_tcp.o \
+-d_items.o d_main.o
++d_items.o d_main.o \
++umapinfo.o
+ 
+ # combine all objs ( main, INTERFACE specific, asm, CDMUS )
+ OBJS:=$(addprefix $(O)/, $(SMIFOBJS) $(OPTOBJS) $(MOBJS))
