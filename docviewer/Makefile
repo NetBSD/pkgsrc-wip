@@ -1,9 +1,11 @@
 # $NetBSD$
 #
 
-DISTNAME=	docviewer-0.2.0
+DISTNAME=	docviewer-0.2.0.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	126197a9c11dad5ddcd1bcdfdbab4fcddf5d3e26
+
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Generic command to automatically select a document viewer
