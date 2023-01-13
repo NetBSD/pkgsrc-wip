@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	owntone-28.4
+VERSION=	28.5
+DISTNAME=	owntone-${VERSION}
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_GITHUB:=owntone/owntone-server/releases/download/28.4/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=owntone/owntone-server/releases/download/${VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

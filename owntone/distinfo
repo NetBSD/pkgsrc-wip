@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (owntone-28.4.tar.xz) = 10e2bfaae13c99eaa1c1b670bef9c86582ff9e9dfdeee3e017446c31e706f12c
-SHA512 (owntone-28.4.tar.xz) = 57010cbe9b1aec13ed7777c3a7d774a1391fc2a6a62b5bdb31d10107f196f4fbbb79f9899c8a23551913a3f43b7bd60362c89a89cbc3ad4352e377489068f608
-Size (owntone-28.4.tar.xz) = 1041340 bytes
+BLAKE2s (owntone-28.5.tar.xz) = 7d7e2b51dc08ab605d15ffcdecf892e044f480151cc17e0b24c93493dce65e68
+SHA512 (owntone-28.5.tar.xz) = 91fbc18e52b2e233f132c3cb245f84ee22a52c457b28e199fcf04d3b3d10da80c84fe1753917df54aecd053fbe18a427f2f088f94dea6cca00f2bb911f2446a5
+Size (owntone-28.5.tar.xz) = 1057644 bytes
