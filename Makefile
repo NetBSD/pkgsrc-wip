@@ -976,7 +976,6 @@ SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
-SUBDIR+=	galera
 SUBDIR+=	galib
 SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambas3
