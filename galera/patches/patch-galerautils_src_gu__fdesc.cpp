@@ -2,6 +2,7 @@ $NetBSD$
 
 NetBSD man page suggests ftruncate() before posix_fallocate().
 Also recognize NetBSD's errno if unsupported.
+https://github.com/codership/galera/pull/632
 
 --- galerautils/src/gu_fdesc.cpp.orig	2022-11-02 06:09:14.000000000 +0000
 +++ galerautils/src/gu_fdesc.cpp

@@ -1,6 +1,7 @@
 $NetBSD$
 
 NetBSD support.
+https://github.com/codership/galera/pull/632
 
 --- cmake/crc32c.cmake.orig	2022-11-02 06:09:14.000000000 +0000
 +++ cmake/crc32c.cmake

@@ -1,6 +1,7 @@
 $NetBSD$
 
 Fix build on NetBSD>=10.
+https://github.com/codership/galera/pull/632
 
 --- asio/asio/detail/impl/kqueue_reactor.ipp.orig	2022-11-02 06:09:14.000000000 +0000
 +++ asio/asio/detail/impl/kqueue_reactor.ipp

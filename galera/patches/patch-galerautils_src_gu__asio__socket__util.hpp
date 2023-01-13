@@ -1,6 +1,7 @@
 $NetBSD$
 
 NetBSD support.
+https://github.com/codership/galera/pull/632
 
 --- galerautils/src/gu_asio_socket_util.hpp.orig	2022-11-02 06:09:14.000000000 +0000
 +++ galerautils/src/gu_asio_socket_util.hpp
