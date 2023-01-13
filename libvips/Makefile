@@ -1,28 +1,30 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.13.3
+DISTNAME=	vips-8.14.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libvips/}
 GITHUB_PROJECT=	libvips
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	base@atomicules.co.uk
-HOMEPAGE=	https://jcupitt.github.io/libvips/
+HOMEPAGE=	https://libvips.github.io/libvips/
 COMMENT=	Libvips is a demand-driven, horizontally threaded image processing lib
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_LANGUAGES=		c c++
+PYTHON_FOR_BUILD_ONLY=  tool
 
 PKGCONFIG_OVERRIDE+=	vips-cpp.pc.in
 PKGCONFIG_OVERRIDE+=	vips.pc.in
 PKGCONFIG_OVERRIDE+=	vipsCC.pc.in
 
-
+.include "../../devel/meson/build.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
