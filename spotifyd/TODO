@@ -1,3 +1,5 @@
+This needs updating to 0.3.4 but I don't have a desktop NetBSD system at the moment. Only a server with not enough resources to build Rust projects. Plus that means no way to test the build.
+
 This package has known vulnerabilities, please investigate and fix if possible:
   CVE-2020-35711
 
