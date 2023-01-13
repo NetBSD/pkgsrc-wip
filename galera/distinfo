@@ -17,4 +17,5 @@ SHA1 (patch-galerautils_src_gu__fdesc.cpp) = d72f5142f32b602a20ac77275ef3d9bddae
 SHA1 (patch-galerautils_src_gu__limits.c) = 9d7a7315f17670fff836dfafd641196c2cdf51cc
 SHA1 (patch-galerautils_src_gu__resolver.cpp) = a057a5802d38cbf716a1a1a493ea5ae7e41eba09
 SHA1 (patch-galerautils_src_gu__system.h) = 9d0062df2878af8277a6fe2de072d5fefc297e4f
+SHA1 (patch-galerautils_src_gu__thread.cpp) = ffd3a19f004d23a805d512d633081add8060d208
 SHA1 (patch-gcs_src_gcs__spread.cpp) = ab3088ca2d5b12592bc51bc8c6221666f6319449
