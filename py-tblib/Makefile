@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ionelmc/python-tblib/
 COMMENT=	Serialization library for Exceptions and Tracebacks
 LICENSE=	modified-bsd
 
-
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 do-test:
