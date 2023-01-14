@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/ironwail
+libexec/ironwail
+share/ironwail/ironwail.pak
