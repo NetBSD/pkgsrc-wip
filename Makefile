@@ -1912,7 +1912,6 @@ SUBDIR+=	jsoncpp-git
 SUBDIR+=	jsonrpc-glib
 SUBDIR+=	judy
 SUBDIR+=	julia
-SUBDIR+=	julius
 SUBDIR+=	junit
 SUBDIR+=	jython
 SUBDIR+=	k6
