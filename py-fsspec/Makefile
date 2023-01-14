@@ -15,6 +15,7 @@ WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${FSSPEC_VERSION}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.14.1:../../devel/py-wrapt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
