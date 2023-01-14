@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/hmmlearn/hmmlearn
 COMMENT=	Algorithms for inference of Hidden Markov Models
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.21.5:../../math/py-numpy
 
 USE_LANGUAGES=	c c++ # none
