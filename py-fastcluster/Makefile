@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6:../../math/py-scipy
 # Tests Requires installing the package
 do-test:
