@@ -1,0 +1,7 @@
+Does not run correctly on big-endian systems.
+crc32 calculation is not correct on be systems
+when trying to decompress a bzip3 file and 
+when trying to compress a file it crashes on
+line 108 in libbzip3.c claiming it can't read
+the in_end variable. This is all happening
+on NetBSD sparc under qemu.
