@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	lci-${GITHUB_TAG}
-PKGNAME=	lci-${GITHUB_TAG:S/v//}
+DISTNAME=	lci-0.11.2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justinmeza/}
-GITHUB_TAG=	v0.11.2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	http://lolcode.org/
