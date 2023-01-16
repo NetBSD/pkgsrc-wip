@@ -62,7 +62,9 @@ post-install:
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/pyversion.mk"
 .include "../../x11/libxcb/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.15.8
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
