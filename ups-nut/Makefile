@@ -3,6 +3,7 @@
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Network UPS Tools
 
 SUBST_CLASSES+=		man-so

@@ -26,7 +26,7 @@ killpower()
 {
     if @PREFIX@/sbin/upsmon -K; then
 	echo "upskillpower: POWER OFF commanded"
-	echo TEST ONLY @PREFIX@/sbin/upsdrvctl shutdown
+	@PREFIX@/sbin/upsdrvctl shutdown
     fi
 }
 
