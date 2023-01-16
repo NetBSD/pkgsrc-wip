@@ -1,0 +1,3 @@
+This package contains the official JACK example clients and tools. These tools
+was initially provided by audio/jack. But their code have been moved to a
+dedicated repository.
