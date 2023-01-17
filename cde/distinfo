@@ -1,14 +1,9 @@
-$NetBSD: distinfo,v 1.7 2014/07/28 13:56:46 obache Exp $
+$NetBSD$
 
-RMD160 (cde-src-2.2.2.tar.gz) = df07b4c43fcfd0bdb3d3e4b95affbaced948fc94
-SHA512 (cde-src-2.2.2.tar.gz) = 34a43d998e42ad98062bbaf9bb764b4a60bea3e2b50e2f2753c3beb6081a0d0c422a3afd8cc34fdce910e223045b367776ef57439c1e8649ab7f24e27c526a3c
-Size (cde-src-2.2.2.tar.gz) = 60675335 bytes
-SHA1 (patch-lib_DtHelp_HelpXlate.c) = 225d9c31aacb316cc8f1241a60303a4fecd07e02
-SHA1 (patch-programs_dtlogin_dm.c) = 46a4312cac388a4484b6791297eb51fd29053afe
-SHA1 (patch-programs_dtlogin_dm.h) = 6b7aa8a5dcd105a0f07da509e02d6cf64cf16118
-SHA1 (patch-programs_dtmail_libDtMail_Common_Session.C) = 9806e5ed33c05923a72dcae8c86dbd687a8f54cc
-SHA1 (patch-programs_dtmail_libDtMail_RFC_RFCBodyPart.C) = c521649e21f8636184ef9e50a453036457e67a6c
-SHA1 (patch-programs_dtpdmd_manager.c) = c8b58c76744499b604d45249925f45746b611838
-SHA1 (patch-programs_dtprintinfo_libUI_MotifUI_Debug.c) = 829d03b1854a8c88fb88f1fcde53f298e5850f1c
-SHA1 (patch-programs_dtprintinfo_objects_PrintObj_ParseJobs.C) = 48538d434c9274a24aac5a1793e31d15a4d85f32
-SHA1 (patch-programs_dtsearchpath_libCliSrv_UnixEnv.C) = 6201314f1b092817124b9902632d6f7da9adbcac
+BLAKE2s (cde-2.5.1.tar.gz) = 33d94122ff02dbabc3ea246f2af18b12a3d05b48ade9137c9c6cfd685d1eb3a3
+SHA512 (cde-2.5.1.tar.gz) = cacb9a1df21eb9959886ec2f6816fe99ec585e7264f548a85b03990f0e7fbc2dc6fa440cfe5e9ad29281360c30789c1b9ef3f96e1a711bfd2157064c640e803e
+Size (cde-2.5.1.tar.gz) = 57543245 bytes
+SHA1 (patch-configure.ac) = 7730332dd970729872687757701454dd285a8100
+SHA1 (patch-programs_dtsearchpath_dtappg_Makefile.am) = b0a13e4b1b935c055736daa48302dafc1f9333c4
+SHA1 (patch-programs_dtterm_Makefile.am) = fb54156e1dd1c27a979c6aeb26e1679e1eb07ab6
+SHA1 (patch-programs_fontaliases_Makefile.am) = 97fe75753d788e9a9fa5c22191745f8714fd52ad

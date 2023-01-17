@@ -17,4 +17,16 @@ pidfile="@VARBASE@/dt/Xpid"
 extra_commands="reload"
 
 load_rc_config $name
+
+
+start_precmd=dtlogin_prestart
+
+dtlogin_prestart()
+{
+	if ! [ -f "@PREFIX@/etc/X11/Xwrapper.config" ]; then
+			echo "If dtlogin fails to start:"
+			echo "# echo allowed_users=anybody >> @PREFIX@/etc/X11/Xwrapper.config"
+	fi
+}
+
 run_rc_command "$1"

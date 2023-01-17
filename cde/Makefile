@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2014/07/29 13:14:55 obache Exp $
-#
-DISTNAME=	cde-src-2.2.2
-PKGNAME=	${DISTNAME:S/-src-/-/}
+# $NetBSD$
+
+DISTNAME=	cde-2.5.1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/files/src/}
 
 MAINTAINER=	jelle@jellehermsen.nl
 HOMEPAGE=	http://cdesktopenv.sourceforge.net/
@@ -11,92 +10,138 @@ COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison bdftopcf mkfontdir ksh awk:run
-BUILD_TARGET=	World
+USE_LIBTOOL=	yes
+USE_TOOLS+=	aclocal autoconf automake autoreconf
+USE_TOOLS+=	awk:run bdftopcf gettext gmake gzip ksh
+USE_TOOLS+=	lex msgfmt mkfontdir perl pkg-config yacc
 
-MAKE_JOBS_SAFE=	no
+PTHREAD_AUTO_VARS=	yes
+MAKE_JOBS_SAFE=		no
 
-DEPENDS+=	ast-ksh-[0-9]*:../../shells/ast-ksh
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/dt/lib
 
-WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
+.include "../../mk/bsd.fast.prefs.mk"
 
-PKG_SYSCONFSUBDIR=	dt
+DEPENDS+=	ksh93-[0-9]*:../../shells/ksh93
+DEPENDS+=	pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
+DEPENDS+=	font-adobe-75dpi-[0-9]*:../../fonts/font-adobe-75dpi
+DEPENDS+=	font-adobe-100dpi-[0-9]*:../../fonts/font-adobe-100dpi
+.if ${X11_TYPE} == "modular"
+DEPENDS+=	xrdb-[0-9]*:../../x11/xrdb
+DEPENDS+=	xset-[0-9]*:../../x11/xset
+.endif
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
-CFLAGS+=		-I${X11BASE}/include/X11
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/dt
+CONFIGURE_ENV+=		ac_cv_path_KSH=${PREFIX}/bin/ksh93
+CONFIGURE_ENV+=		GZIP=${GZIP_CMD:Q}
+CONFIGURE_ARGS+=	MAKE=${MAKE_PROGRAM:Q}
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/dt
 
-IMAKE_DEFINES+=		-DCplusplusCmd=${CXX}
-IMAKE_DEFINES+=		-DLibraryCplusplusCmd=${CXX}
-IMAKE_DEFINES+=		-DX11ProjectRoot=${X11BASE}
-IMAKE_DEFINES+=		-DProjectRoot=${PREFIX}
-IMAKE_DEFINES+=		-DTopMotifInclude=${MOTIFBASE}/include
-IMAKE_DEFINES+=		-DCDEProjectRoot=${PREFIX}/dt
-IMAKE_DEFINES+=		-DCdeInstallationTop=${PREFIX}/dt
-IMAKE_DEFINES+=		-DCdeConfigurationTop=${PKG_SYSCONFDIR}
-IMAKE_DEFINES+=		-DCdeLogfileTop=${VARBASE}/dt
-#IMAKE_DEFINES+=	-DTclLibrary=${BUILDLINK_PREFIX.tcl}/lib
-IMAKE_DEFINES+=		-DUseInstalledX11=YES
-#IMAKE_DEFINES+=	-DKornShell=${TOOLS_PATH.ksh}
-IMAKE_DEFINES+=		-DDtKornShell=${PREFIX}/dt/bin/dtksh
-BUILD_MAKE_FLAGS+=	BOOTSTRAPCFLAGS=${CFLAGS:Q}
-BUILD_MAKE_FLAGS+=	IMAKE_DEFINES=${IMAKE_DEFINES:Q}
-#MAKE_ENV+=		MFLAGS=KORNSHELL=${TOOLS_PATH.ksh}
+REPLACE_PERL+=	programs/dtinfo/tools/bin/ccdate
+REPLACE_AWK+=	programs/dtlogin/config/Xsession.src
 
-BUILD_DEFS+=		VARBASE
-OWN_DIRS+=		${VARBASE}/dt
-OWN_DIRS+=		${VARBASE}/dt/tmp
-OWN_DIRS+=		${VARBASE}/dt/appconfig/appmanager
-.for i in appmanager help icons types
-.  for j in C de_DE.ISO8859-1 es_ES.ISO8859-1 fr_FR.ISO8859-1 it_IT.ISO8859-1
-OWN_DIRS+=		${PKG_SYSCONFDIR}/appconfig/${i}/${j}
-.  endfor
-.endfor
-OWN_DIRS+=		${PKG_SYSCONFDIR}/config
-OWN_DIRS+=		${PKG_SYSCONFDIR}/config/Xsession.d
-BUILDLINK_PASSTHRU_DIRS+= ${PREFIX}/dt/lib
+REPLACE_INTERPRETER+=	dtksh
+REPLACE.dtksh.old=	.*/bin/dtksh
+REPLACE.dtksh.new=	${PREFIX}/bin/dtksh
+REPLACE_FILES.dtksh+=	programs/dthelp/dthelpgen/dthelpgen.dtsh
 
-SUBST_CLASSES+=		destdir
-SUBST_STAGE.destdir=	pre-configure
-SUBST_FILES.destdir=	admin/IntegTools/dbTools/installCDE.src
-SUBST_SED.destdir=	-e 's,-D / ,-D $$DESTDIR ,'
+REPLACE_INTERPRETER+=	tclsh
+REPLACE.tclsh.old=	.*/bin/tclsh
+REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
+REPLACE_FILES.tclsh+=	programs/dtdocbook/tcl/docbook.tcl
+
+.if !empty(USE_BUILTIN.iconv:M[nN][oO])
+SUBST_CLASSES+=		iconv
+SUBST_STAGE.iconv=	pre-configure
+SUBST_FILES.iconv+=	programs/dtmail/libDtMail/Common/Session.C
+SUBST_FILES.iconv+=	programs/dtmail/libDtMail/RFC/RFCBodyPart.C
+SUBST_SED.iconv=	-e 's!^[[:space:]]*const char .ip = (const char .) .bp!char *ip = *bp!'
+SUBST_MESSAGE.iconv=	Fix for GNU iconv.
+.endif
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	databases/*.udb databases/*.src
-SUBST_SED.paths=	-e 's,/usr/dt,${PREFIX}/dt,g'
+SUBST_FILES.paths+=	configure.ac
+SUBST_FILES.paths+=	startcde
+SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR
+SUBST_MESSAGE.paths=	Replacing path placeholders.
 
-SUBST_CLASSES+=		dtksh
-SUBST_STAGE.dtksh=	pre-configure
-SUBST_FILES.dtksh=	programs/dthelp/dthelpgen/dthelpgen.dtsh
-SUBST_SED.dtksh=	-e 's,/usr/dt/bin/dtksh,${PREFIX}/dt/bin/dtksh,g'
+MAKE_ENV+=	x_includes=${X11BASE}/include
+MAKE_FLAGS+=	YACC=${YACC:Q}
+MAKE_FLAGS+=	PERL=${PERL5:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
-SUBST_CLASSES+=		awk
-SUBST_STAGE.awk=	pre-configure
-SUBST_FILES.awk=	programs/dtlogin/config/Xreset.src
-SUBST_SED.awk=		-e 's, /bin/awk , ${AWK} ,g'
-
-RCD_SCRIPTS=		dtlogin
-
-do-install:
-	${RUN}cd ${WRKSRC}/admin/IntegTools/dbTools; \
-	${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ./installCDE -s ${WRKSRC}
-
-# LinkOtherIcons in confiRun
-#post-install:
-#.for i fphelp.t.pm help.t.pm paint.l.pm paint.m.pm paint.t.pm penpad.t.pm term.t.pm
-#	${LN} -s $i ${DESTDIR}${PREFIX}/dt/appconfig/icons/C/F${i}
-#.endfor
-
-# from databases/CDE-RUN.*
-SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtprintinfo ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtsession ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtterm ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtapppgather ${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtmail ${REAL_ROOT_USER} mail 2511
-SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtmailpr ${REAL_ROOT_USER} mail 2511
+SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtmail ${REAL_ROOT_USER} mail 2755
 
+RCD_SCRIPTS=	dtlogin
+
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=	${EGDIR}/pam.d/cde.conf \
+		${PKG_SYSCONFDIR}/pam.d/cde.conf
+.for i in .alias .dir
+CONF_FILES+=	${PREFIX}/dt/share/cde/fontaliases/fonts${i} \
+		${PKG_SYSCONFDIR}/dt/config/xfonts/C/fonts${i}
+.endfor
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/pam.d
+
+BUILD_DEFS+=	VARBASE
+OWN_DIRS+=	${VARBASE}/dt
+OWN_DIRS+=	${VARBASE}/spool/calendar
+OWN_DIRS+=	${VARBASE}/dt/appconfig/appmanager
+.for i in appmanager help icons types
+.  for j in C de_DE.ISO8859-1 es_ES.ISO8859-1 fr_FR.ISO8859-1 it_IT.ISO8859-1
+OWN_DIRS+=	${PKG_SYSCONFDIR}/appconfig/${i}/${j}
+.  endfor
+.endfor
+OWN_DIRS+=	${PKG_SYSCONFDIR}/dt/config
+OWN_DIRS+=	${PKG_SYSCONFDIR}/dt/config/Xsession.d
+OWN_DIRS+=	${PKG_SYSCONFDIR}/dt/config/xfonts/C
+
+INSTALLATION_DIRS+=	bin share/doc/${PKGBASE}
+INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
+
+post-extract:
+	${RUN}${CP} ${FILESDIR}/startcde.sh ${WRKSRC}/startcde
+
+pre-configure:
+	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
+
+post-install:
+	${RUN}${FIND} ${DESTDIR}${PREFIX}/dt -type f -perm -111 -exec	\
+		${SH} -c '${STRIP} --strip-unneeded {} > /dev/null 2>&1' \;
+	${INSTALL_DATA} ${WRKSRC}/lib/pam/libpam/pam.conf		\
+		${DESTDIR}${EGDIR}/pam.d/cde.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/startcde ${DESTDIR}${PREFIX}/bin
+.for f in CONTRIBUTORS COPYING HISTORY README.md
+	${RUN}${MV} ${DESTDIR}${PREFIX}/dt/${f}					\
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+.endfor
+
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXdmcp/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXau/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
-#.include "../../lang/tcl/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../textproc/opensp/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
