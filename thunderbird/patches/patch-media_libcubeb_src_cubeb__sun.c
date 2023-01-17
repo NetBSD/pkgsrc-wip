@@ -505,7 +505,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__sun.c,v 1.1 2020/09/03 15:26:22 ryoon E
  }
  
 @@ -743,8 +721,8 @@ static struct cubeb_ops const sun_ops = 
-   .stream_reset_default_device = NULL,
+ //  .stream_reset_default_device = NULL,
    .stream_get_position = sun_stream_get_position,
    .stream_get_latency = sun_stream_get_latency,
 +  .stream_get_input_latency = NULL,
