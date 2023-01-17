@@ -3210,8 +3210,10 @@ lib/thunderbird/chrome/devtools/skin/tooltips.css
 lib/thunderbird/chrome/devtools/skin/variables.css
 lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
-lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
-lib/thunderbird/chrome/en-US/locale/branding/brand.properties
+${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
+${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
@@ -3546,8 +3548,8 @@ lib/thunderbird/chrome/icons/default/default256.png
 lib/thunderbird/chrome/icons/default/default32.png
 lib/thunderbird/chrome/icons/default/default48.png
 lib/thunderbird/chrome/icons/default/default64.png
-lib/thunderbird/chrome/messenger/content/branding/about-background.png
-lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
+${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
 lib/thunderbird/chrome/messenger/content/branding/aboutDialog.css
@@ -5606,7 +5608,7 @@ lib/thunderbird/isp/SpamPal.sfd
 lib/thunderbird/liblgpllibs.so
 lib/thunderbird/libmozgtk.so
 lib/thunderbird/libmozsqlite3.so
-lib/thunderbird/libmozwayland.so
+${PLIST.wayland}lib/thunderbird/libmozwayland.so
 lib/thunderbird/librnp.so
 lib/thunderbird/libxul.so
 lib/thunderbird/localization/en-US/branding/brand.ftl
