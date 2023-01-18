@@ -180,20 +180,18 @@ CONFIGURE_ARGS+=	--without-png
 .endif
 
 .if !empty(PKG_OPTIONS:Mtree-sitter)
-# at least the following modes still have tree-sitter support
-# TODO: package the grammars and depend on them
-#share/emacs/${PKGVERSION}/lisp/progmodes/dockerfile-ts-mode.elc
-#share/emacs/${PKGVERSION}/lisp/progmodes/go-ts-mode.elc
-#share/emacs/${PKGVERSION}/lisp/progmodes/java-ts-mode.elc
-#share/emacs/${PKGVERSION}/lisp/progmodes/ruby-ts-mode.elc
-#share/emacs/${PKGVERSION}/lisp/progmodes/typescript-ts-mode.elc
 DEPENDS+=	tree-sitter-c-[0-9]*:../../textproc/tree-sitter-c
 DEPENDS+=	tree-sitter-cmake-[0-9]*:../../textproc/tree-sitter-cmake
 DEPENDS+=	tree-sitter-cpp-[0-9]*:../../textproc/tree-sitter-cpp
+DEPENDS+=	tree-sitter-dockerfile-[0-9]*:../../textproc/tree-sitter-dockerfile
+DEPENDS+=	tree-sitter-go-[0-9]*:../../textproc/tree-sitter-go
+DEPENDS+=	tree-sitter-java-[0-9]*:../../textproc/tree-sitter-java
 DEPENDS+=	tree-sitter-json-[0-9]*:../../textproc/tree-sitter-json
 DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
+DEPENDS+=	tree-sitter-ruby-[0-9]*:../../textproc/tree-sitter-ruby
 DEPENDS+=	tree-sitter-rust-[0-9]*:../../textproc/tree-sitter-rust
 DEPENDS+=	tree-sitter-toml-[0-9]*:../../textproc/tree-sitter-toml
+DEPENDS+=	tree-sitter-typescript-[0-9]*:../../textproc/tree-sitter-typescript
 DEPENDS+=	tree-sitter-yaml-[0-9]*:../../textproc/tree-sitter-yaml
 .include "../../textproc/tree-sitter/buildlink3.mk"
 .endif
