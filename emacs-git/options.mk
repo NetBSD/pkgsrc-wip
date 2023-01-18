@@ -2,7 +2,7 @@
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson svg xaw3d xml
+PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson svg tree-sitter xaw3d xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -22,7 +22,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # imagemagick is disabled because of stability/security
 # svg is omitted because it is rarely needed and heavyweight due to the rust dependency
 # xaw3d is omitted because it is only valid with xaw
-PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 jansson xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 jansson tree-sitter xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -177,6 +177,25 @@ CONFIGURE_ARGS+=	--without-jpeg
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-gif
 CONFIGURE_ARGS+=	--without-png
+.endif
+
+.if !empty(PKG_OPTIONS:Mtree-sitter)
+# at least the following modes still have tree-sitter support
+# TODO: package the grammars and depend on them
+#share/emacs/${PKGVERSION}/lisp/progmodes/dockerfile-ts-mode.elc
+#share/emacs/${PKGVERSION}/lisp/progmodes/go-ts-mode.elc
+#share/emacs/${PKGVERSION}/lisp/progmodes/java-ts-mode.elc
+#share/emacs/${PKGVERSION}/lisp/progmodes/ruby-ts-mode.elc
+#share/emacs/${PKGVERSION}/lisp/progmodes/typescript-ts-mode.elc
+DEPENDS+=	tree-sitter-c-[0-9]*:../../textproc/tree-sitter-c
+DEPENDS+=	tree-sitter-cmake-[0-9]*:../../textproc/tree-sitter-cmake
+DEPENDS+=	tree-sitter-cpp-[0-9]*:../../textproc/tree-sitter-cpp
+DEPENDS+=	tree-sitter-json-[0-9]*:../../textproc/tree-sitter-json
+DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
+DEPENDS+=	tree-sitter-rust-[0-9]*:../../textproc/tree-sitter-rust
+DEPENDS+=	tree-sitter-toml-[0-9]*:../../textproc/tree-sitter-toml
+DEPENDS+=	tree-sitter-yaml-[0-9]*:../../textproc/tree-sitter-yaml
+.include "../../textproc/tree-sitter/buildlink3.mk"
 .endif
 
 # Local Variables:
