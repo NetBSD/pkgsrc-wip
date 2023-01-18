@@ -1,16 +1,21 @@
 # $NetBSD$
 
+DISTNAME=		anura-0
 PKGNAME=		frogatto-0
 CATEGORIES=		games
-GIT_REPOSITORIES=	anura frogatto
+MASTER_SITES=		${MASTER_SITE_GITHUB:=anura-engine/}
+GITHUB_PROJECT=		anura
+GITHUB_TAG=		cdb63c9c7b500c1bdf61b405d659851c9903c101
 
-GIT_REPO.anura=		https://github.com/anura-engine/anura.git
-GIT_REVISION.anura=	e837e63ea88b8426dafd9414f0fdd7f30ab58102
-GIT_BRANCH.anura=	trunk
+FROGATTO_SHA=		ffea5dcfe0faad22c2840fb239cb6e9c6746b7d6
+IMGUI_SHA=		2379a8b3f21642f715a18749fbd0345c4acafa79
 
-GIT_REPO.frogatto=	https://github.com/frogatto/frogatto.git
-GIT_REVISION.frogatto=	8b0351854518af25b553c7fd50f6f2afb6d5e71b
-GIT_BRANCH.frogatto=	master
+FROGATTO=		${FROGATTO_SHA}.tar.gz
+IMGUI=			${IMGUI_SHA}.tar.gz
+DISTFILES+=		${DEFAULT_DISTFILES} ${FROGATTO} ${IMGUI}
+
+SITES.${FROGATTO}+=	${MASTER_SITE_GITHUB:=frogatto/}frogatto/archive/
+SITES.${IMGUI}+=	${MASTER_SITE_GITHUB:=anura-engine/}imgui/archive/
 
 MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	The Frogatto and Friends game
@@ -18,14 +23,15 @@ LICENSE=	modified-bsd AND mit AND zlib # XXX not true, + cc-by-v3.0 also
 
 USE_LANGUAGES=	c c++
 GCC_REQD+=	4.8
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pax pkg-config
 
 # Anura provides the game engine, which needs to be compiled. Frogatto is
 # simply the game data, no compiliation needed.
-WRKSRC=		${WRKDIR}/anura
+WRKSRC=		${WRKDIR}/anura-${GITHUB_TAG}
 
 CFLAGS+=	-Wno-sign-compare
 CFLAGS+=	-Wno-deprecated-declarations
+CFLAGS+=	-Wno-strict-aliasing
 
 .if "${OPSYS}" == "NetBSD"
 LDFLAGS+=	-lexecinfo
@@ -53,12 +59,10 @@ FROGATTO_DIRS+=	sounds_wav
 FROGATTO_FILES+=	master-config.cfg
 FROGATTO_FILES+=	module.cfg
 
-# The call to pax(1) from wip/mk/git-package.mk complains of file names that
-# are too long, related to the Xcode project in the MacOS directory. So, use
-# this opportunity to remove that and tons of other inessential files.
-post-fetch:
-	${RM} -rf ${WRKDIR}/anura/MacOS
-	${RM} -rf ${WRKDIR}/anura/vs2013
+# Imgui is a submodule of Anura.
+post-extract:
+	${RM} -rf ${WRKSRC}/imgui
+	${LN} -sf ${WRKDIR}/imgui-${IMGUI:S/.tar.gz//} ${WRKSRC}/imgui
 
 # Called frogatto-launcher on purpose to avoid conflict with source code repo
 # for Frogatto.
@@ -68,34 +72,37 @@ pre-configure:
 # Copy Frogatto's data into the Anura distribution, but install it as just
 # one complete "Frogatto."
 pre-install:
-	${MKDIR} ${WRKDIR}/anura/modules/frogatto4
-	for dir in ${FROGATTO_DIRS}; do										\
-		${MKDIR} ${WRKDIR}/anura/modules/frogatto4/$${dir};						\
-		cd ${WRKDIR}/frogatto/$${dir} && ${PAX} -r -w . ${WRKDIR}/anura/modules/frogatto4/$${dir};	\
+	${MKDIR} ${WRKSRC}/modules/frogatto4
+	for dir in ${FROGATTO_DIRS}; do											\
+		${MKDIR} ${WRKSRC}/modules/frogatto4/$${dir};								\
+		cd ${WRKDIR}/frogatto-${FROGATTO_SHA}/$${dir} && ${PAX} -r -w . ${WRKSRC}/modules/frogatto4/$${dir};	\
 	done
-	for file in ${FROGATTO_FILES}; do							\
-		${INSTALL_DATA} ${WRKDIR}/frogatto/$${file} ${WRKDIR}/anura/modules/frogatto4/$${file};	\
+	for file in ${FROGATTO_FILES}; do										\
+		${INSTALL_DATA} ${WRKDIR}/frogatto-${FROGATTO_SHA}/$${file} ${WRKSRC}/modules/frogatto4/$${file};	\
 	done
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/frogatto-launcher ${DESTDIR}${PREFIX}/bin/frogatto
-	${INSTALL_PROGRAM} ${WRKDIR}/anura/anura ${DESTDIR}${PREFIX}/libexec/frogatto/anura
-	for dir in ${ANURA_DIRS}; do										\
-		${MKDIR} ${DESTDIR}${PREFIX}/share/frogatto/$${dir};						\
-		cd ${WRKDIR}/anura/$${dir} && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/frogatto/$${dir};	\
+	${INSTALL_PROGRAM} ${WRKSRC}/anura ${DESTDIR}${PREFIX}/libexec/frogatto/anura
+	for dir in ${ANURA_DIRS}; do									\
+		${MKDIR} ${DESTDIR}${PREFIX}/share/frogatto/$${dir};					\
+		cd ${WRKSRC}/$${dir} && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/frogatto/$${dir};	\
 	done
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
