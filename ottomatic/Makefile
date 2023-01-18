@@ -2,8 +2,12 @@
 
 DISTNAME=	ottomatic-4.0.0
 CATEGORIES=	games
-GIT_REPO=	https://github.com/jorio/OttoMatic.git
-GIT_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
+GIT_TAG=	${PKGVERSION_NOREV} ${POMME}
+DISTFILES+=	${DEFAULT_DISTFILES} ${POMME}
+
+POMME=		b9ddab06cdc0b9e4a8085e50974213b6c9625436.tar.gz
+SITES.${POMME}=	${MASTER_SITE_GITHUB:=jorio/}Pomme/archive/
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://pangeasoft.net/otto/
@@ -12,11 +16,17 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pax pkg-config
+
+WRKSRC=			${WRKDIR}/OttoMatic-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/ottomatic/Data
+
+post-extract:
+	${RM} -rf ${WRKSRC}/extern/Pomme
+	${LN} -sf ${WRKDIR}/Pomme-${POMME:S/.tar.gz//} ${WRKSRC}/extern/Pomme
 
 pre-configure:
 	${SED} -e 's,@@PREFIX@@,${PREFIX},g' \
@@ -28,5 +38,4 @@ do-install:
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/ottomatic/Data)
 
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
