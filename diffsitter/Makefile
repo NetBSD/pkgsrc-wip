@@ -10,6 +10,9 @@ HOMEPAGE=	https://github.com/afnanenayet/diffsitter/
 COMMENT=	Tree-sitter based AST difftool to get meaningful semantic diffs
 LICENSE=	mit
 
+# so it finds the grammar files
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=			c c++
