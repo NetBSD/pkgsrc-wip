@@ -1,5 +1,3 @@
-* Fix building without -std=c99.
 * Make PAM support optional.
 * Add nls build option for supported locales.
-* MESSAGE.NetBSD -> README.NetBSD + README.pkgsrc
 * Testing required.

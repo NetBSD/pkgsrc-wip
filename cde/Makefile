@@ -66,7 +66,8 @@ SUBST_MESSAGE.iconv=	Fix for GNU iconv.
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	configure.ac
-SUBST_FILES.paths+=	startcde
+SUBST_FILES.paths+=	pkgsrc/startcde
+SUBST_FILES.paths+=	pkgsrc/README.*
 SUBST_FILES.paths+=	programs/dtlogin/Makefile.am
 SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR X11BASE
 SUBST_MESSAGE.paths=	Replacing path placeholders.
@@ -108,7 +109,11 @@ INSTALLATION_DIRS+=	bin share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
 
 post-extract:
-	${RUN}${CP} ${FILESDIR}/startcde.sh ${WRKSRC}/startcde
+	${RUN}${MKDIR} ${WRKSRC}/pkgsrc
+	${RUN}${CP} ${FILESDIR}/startcde.sh ${WRKSRC}/pkgsrc/startcde
+.for f in README.*
+	${RUN}${CP} ${FILESDIR}/${f} ${WRKSRC}/pkgsrc
+.endfor
 
 pre-configure:
 	${RUN}${CHMOD} u+w ${WRKDIR}/*
@@ -131,9 +136,13 @@ post-install:
 		${SH} -c '${STRIP} --strip-unneeded {} > /dev/null 2>&1' \;
 	${INSTALL_DATA} ${WRKSRC}/lib/pam/libpam/pam.conf		\
 		${DESTDIR}${EGDIR}/pam.d/cde.conf
-	${INSTALL_SCRIPT} ${WRKSRC}/startcde ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgsrc/startcde ${DESTDIR}${PREFIX}/bin
 .for f in CONTRIBUTORS COPYING HISTORY README.md
-	${RUN}${MV} ${DESTDIR}${PREFIX}/dt/${f}					\
+	${RUN}${MV} ${DESTDIR}${PREFIX}/dt/${f}				\
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+.endfor
+.for r in README.*
+	${INSTALL_DATA} ${WRKSRC}/pkgsrc/${r}				\
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 
