@@ -1,7 +1,5 @@
 * Fix building without -std=c99.
-* Address further potential hardcoded assumptions.
 * Make PAM support optional.
 * Add nls build option for supported locales.
-* Fix other PLIST warnings.
 * MESSAGE.NetBSD -> README.NetBSD + README.pkgsrc
 * Testing required.

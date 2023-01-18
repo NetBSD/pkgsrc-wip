@@ -5,7 +5,7 @@ You must register following information by hand.
 
 * /etc/rc.conf:
 rpcbind=YES
-rpcbind_flags="-wl"
+rpcbind_flags="-l"
 
 * /etc/inetd.conf:
 dtspcd		stream	tcp nowait	root	${PREFIX}/dt/bin/dtspcd dtspcd

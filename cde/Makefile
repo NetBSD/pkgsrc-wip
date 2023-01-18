@@ -4,7 +4,7 @@ DISTNAME=	cde-2.5.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cdesktopenv/files/src/}
 
-MAINTAINER=	jelle@jellehermsen.nl
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	http://cdesktopenv.sourceforge.net/
 COMMENT=	Common Desktop Environment
 LICENSE=	gnu-lgpl-v2
@@ -46,7 +46,7 @@ REPLACE_AWK+=	programs/dtlogin/config/Xsession.src
 
 REPLACE_INTERPRETER+=	dtksh
 REPLACE.dtksh.old=	.*/bin/dtksh
-REPLACE.dtksh.new=	${PREFIX}/bin/dtksh
+REPLACE.dtksh.new=	${PREFIX}/dt/bin/dtksh
 REPLACE_FILES.dtksh+=	programs/dthelp/dthelpgen/dthelpgen.dtsh
 
 REPLACE_INTERPRETER+=	tclsh
@@ -110,6 +110,19 @@ post-extract:
 	${RUN}${CP} ${FILESDIR}/startcde.sh ${WRKSRC}/startcde
 
 pre-configure:
+	${RUN}${CHMOD} u+w ${WRKDIR}/*
+	${RUN}for f in `${FIND} ${WRKSRC} -type f ! -path doc | ${XARGS} ${GREP} -l '/usr/bin/X11'`; do \
+		${ECHO} Replacing X11 binary path in $$f ; \
+		${SED} -e 's:/usr/bin/X11:${X11BASE}/bin:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
+	done
+	${RUN}for f in `${FIND} ${WRKSRC} -type f ! -path doc | ${XARGS} ${GREP} -l '/usr/dt'`; do \
+		${ECHO} Replacing CDE prefix in $$f ; \
+		${SED} -e 's:/usr/dt:${PREFIX}/dt:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
+	done
+	${RUN}for f in `${FIND} ${WRKSRC} -type f ! -path doc | ${XARGS} ${GREP} -l '/etc/dt'`; do \
+		${ECHO} Replacing CDE syscondir in $$f ; \
+		${SED} -e 's:/etc/dt:${PKG_SYSCONFDIR}/dt:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
+	done
 	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
