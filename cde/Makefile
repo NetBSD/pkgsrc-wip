@@ -67,7 +67,8 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	configure.ac
 SUBST_FILES.paths+=	startcde
-SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR
+SUBST_FILES.paths+=	programs/dtlogin/Makefile.am
+SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR X11BASE
 SUBST_MESSAGE.paths=	Replacing path placeholders.
 
 MAKE_ENV+=	x_includes=${X11BASE}/include
