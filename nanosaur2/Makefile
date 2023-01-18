@@ -2,8 +2,12 @@
 
 DISTNAME=	nanosaur2-2.1.0
 CATEGORIES=	games
-GIT_REPO=	https://github.com/jorio/Nanosaur2.git
-GIT_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTFILES+=	${DEFAULT_DISTFILES} ${POMME}
+
+POMME=		6e4ea042ba9e7e525d3930e45662be15605153c4.tar.gz
+SITES.${POMME}=	${MASTER_SITE_GITHUB:=jorio/}Pomme/archive/
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://jorio.itch.io/nanosaur2
@@ -12,11 +16,17 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pax pkg-config
+
+WRKSRC=		${WRKDIR}/Nanosaur2-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/nanosaur2/Data
+
+post-extract:
+	${RM} -rf ${WRKSRC}/extern/Pomme
+	${LN} -sf ${WRKDIR}/Pomme-${POMME:S/.tar.gz//} ${WRKSRC}/extern/Pomme
 
 pre-configure:
 	${SED} -e 's,@@PREFIX@@,${PREFIX},g' \
@@ -28,5 +38,4 @@ do-install:
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/nanosaur2/Data)
 
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
