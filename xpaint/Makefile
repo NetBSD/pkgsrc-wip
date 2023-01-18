@@ -32,15 +32,16 @@ SUBST_SED.ln=		-e 's|/usr/include/X11/Xaw3dxft|${WRKDIR}/.buildlink/include/X11/
 
 pre-install:
 	for file in ${WRKSRC}/bitmaps/toolicons/*.xpm.gz ; do \
-		${TOOLS_PLATFORM.gunzip} $$file ; \
+		${GUNZIP_CMD} $$file ; \
 	done
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../wip/libXaw3dXft/buildlink3.mk"
+.include "../../x11/libXaw3dXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
