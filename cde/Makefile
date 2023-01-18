@@ -112,15 +112,15 @@ post-extract:
 
 pre-configure:
 	${RUN}${CHMOD} u+w ${WRKDIR}/*
-	${RUN}for f in `${FIND} ${WRKSRC} -type f ! -path doc | ${XARGS} ${GREP} -l '/usr/bin/X11'`; do \
+	${RUN}for f in `${FIND} ${WRKSRC} -type f | ${XARGS} ${GREP} -l '/usr/bin/X11'`; do \
 		${ECHO} Replacing X11 binary path in $$f ; \
 		${SED} -e 's:/usr/bin/X11:${X11BASE}/bin:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
-	${RUN}for f in `${FIND} ${WRKSRC} -type f ! -path doc | ${XARGS} ${GREP} -l '/usr/dt'`; do \
+	${RUN}for f in `${FIND} ${WRKSRC} -type f | ${XARGS} ${GREP} -l '/usr/dt'`; do \
 		${ECHO} Replacing CDE prefix in $$f ; \
 		${SED} -e 's:/usr/dt:${PREFIX}/dt:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
-	${RUN}for f in `${FIND} ${WRKSRC} -type f ! -path doc | ${XARGS} ${GREP} -l '/etc/dt'`; do \
+	${RUN}for f in `${FIND} ${WRKSRC} -type f | ${XARGS} ${GREP} -l '/etc/dt'`; do \
 		${ECHO} Replacing CDE syscondir in $$f ; \
 		${SED} -e 's:/etc/dt:${PKG_SYSCONFDIR}/dt:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
@@ -150,6 +150,7 @@ post-install:
 .include "../../x11/libXt/buildlink3.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
