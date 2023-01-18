@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gospt-0.0.25
+DISTNAME=	gospt-0.0.28
 CATEGORIES=	audio
 MASTER_SITES=	-https://gitea.asdf.cafe/abs3nt/gospt/archive/v${PKGVERSION_NOREV}.tar.gz
 
