@@ -14,4 +14,7 @@ ttdbserver/1	stream	rpc/tcp wait	root	@PREFIX@/dt/bin/rpc.ttdbserver	rpc.ttdbser
 /etc/rpc:
 cmsd		100068	dtcalendar
 ttdbserver	100083	ttooltalk
+
+/etc/hosts
+127.0.0.1		localhost localhost.my.domain hostname 
 -----------------------------------------------------------------------

@@ -8,6 +8,7 @@ content:
 Section "Files"
     FontPath    "${PREFIX}/share/fonts/100dpi/"
     FontPath    "${PREFIX}/share/fonts/75dpi/"
+    FontPath    "${PREFIX}/dt/share/cde/fontaliases"
 EndSection
 
 Place the file inside either: 
@@ -30,6 +31,8 @@ To start the Common Desktop Environment,
 
 Or use the provided `@PREFIX@/bin/startcde' script.
 
+Your user should be part of the '@REAL_ROOT_GROUP@' group to allow CDE
+to create the required directories upon startup.
 -----------------------------------------------------------------------
 
 To start the Dt Login Manager,

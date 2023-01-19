@@ -3530,5 +3530,5 @@ share/doc/cde/HISTORY
 share/doc/cde/README.md
 share/doc/cde/README.netbsd
 share/doc/cde/README.pkgsrc
-share/examples/cde/pam.d/cde.conf
+share/examples/cde/pam.d/cde
 @pkgdir etc/dt/cde/fontaliases

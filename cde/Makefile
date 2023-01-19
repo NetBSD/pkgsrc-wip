@@ -15,9 +15,10 @@ USE_TOOLS+=	aclocal autoconf automake autoreconf
 USE_TOOLS+=	awk:run bdftopcf gettext gmake gzip ksh
 USE_TOOLS+=	lex msgfmt mkfontdir perl pkg-config yacc
 
-PTHREAD_AUTO_VARS=	yes
 MAKE_JOBS_SAFE=		no
 
+PTHREAD_AUTO_VARS=		yes
+BUILDLINK_TRANSFORM+=		rm:-pthread
 BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/dt/lib
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -69,7 +70,7 @@ SUBST_FILES.paths+=	configure.ac
 SUBST_FILES.paths+=	pkgsrc/startcde
 SUBST_FILES.paths+=	pkgsrc/README.*
 SUBST_FILES.paths+=	programs/dtlogin/Makefile.am
-SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR X11BASE
+SUBST_VARS.paths=	PKG_SYSCONFDIR PREFIX REAL_ROOT_GROUP VARBASE X11BASE
 SUBST_MESSAGE.paths=	Replacing path placeholders.
 
 MAKE_ENV+=	x_includes=${X11BASE}/include
@@ -84,26 +85,23 @@ SPECIAL_PERMS+=	${PREFIX}/dt/bin/dtmail ${REAL_ROOT_USER} mail 2755
 RCD_SCRIPTS=	dtlogin
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=	${EGDIR}/pam.d/cde.conf \
-		${PKG_SYSCONFDIR}/pam.d/cde.conf
+CONF_FILES+=	${EGDIR}/pam.d/cde \
+		${PKG_SYSCONFDIR}/pam.d/cde
 .for i in .alias .dir
 CONF_FILES+=	${PREFIX}/dt/share/cde/fontaliases/fonts${i} \
 		${PKG_SYSCONFDIR}/dt/config/xfonts/C/fonts${i}
 .endfor
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/pam.d
 
-BUILD_DEFS+=	VARBASE
-OWN_DIRS+=	${VARBASE}/dt
-OWN_DIRS+=	${VARBASE}/spool/calendar
-OWN_DIRS+=	${VARBASE}/dt/appconfig/appmanager
-.for i in appmanager help icons types
-.  for j in C de_DE.ISO8859-1 es_ES.ISO8859-1 fr_FR.ISO8859-1 it_IT.ISO8859-1
-OWN_DIRS+=	${PKG_SYSCONFDIR}/appconfig/${i}/${j}
-.  endfor
+BUILD_DEFS+=		VARBASE
+OWN_DIRS+=		${VARBASE}/dt
+.for d in dt/appconfig/appmanager dt/tmp spool/calendar
+OWN_DIRS+=		${VARBASE}/${d}
+OWN_DIRS_PERMS+=	${VARBASE}/${d} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0770
 .endfor
-OWN_DIRS+=	${PKG_SYSCONFDIR}/dt/config
-OWN_DIRS+=	${PKG_SYSCONFDIR}/dt/config/Xsession.d
-OWN_DIRS+=	${PKG_SYSCONFDIR}/dt/config/xfonts/C
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dt/config
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dt/config/Xsession.d
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dt/config/xfonts/C
 
 INSTALLATION_DIRS+=	bin share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}/pam.d
@@ -135,7 +133,7 @@ post-install:
 	${RUN}${FIND} ${DESTDIR}${PREFIX}/dt -type f -perm -111 -exec	\
 		${SH} -c '${STRIP} --strip-unneeded {} > /dev/null 2>&1' \;
 	${INSTALL_DATA} ${WRKSRC}/lib/pam/libpam/pam.conf		\
-		${DESTDIR}${EGDIR}/pam.d/cde.conf
+		${DESTDIR}${EGDIR}/pam.d/cde
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgsrc/startcde ${DESTDIR}${PREFIX}/bin
 .for f in CONTRIBUTORS COPYING HISTORY README.md
 	${RUN}${MV} ${DESTDIR}${PREFIX}/dt/${f}				\
