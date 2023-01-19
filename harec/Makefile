@@ -4,7 +4,7 @@ DISTNAME=	harec-0
 CATEGORIES=	lang
 GIT_REPO=	https://git.sr.ht/~sircmpwn/harec
 GIT_BRANCH=	master
-GIT_REVISION=	fba0a9b547a3462d65a45ec93f78a07da58beabf
+GIT_REVISION=	cfcc22785c94716c0e96be23081d8bfd1f6c0466
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://harelang.org/
@@ -20,12 +20,11 @@ CONFIGURE_ARGS+=	--mandir=${MANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${SHAREDIR}
 
-BUILD_DEPENDS+=		qbe-[0-9]*:../../wip/qbe
+# Requires QBE with support for 'blit' instruction, which is past 1.0
+BUILD_DEPENDS+=		qbe-git-[0-9]*:../../wip/qbe-git
 
-# XXX XXX XXX
-# >> Creating .build/config.mk... rt not supported for NetBSD
 do-configure:
-	${RUN} cd ${WRKSRC} && ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} ||:
+	${RUN} cd ${WRKSRC} && ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
