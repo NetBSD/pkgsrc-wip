@@ -192,7 +192,6 @@ Suggested ready to import packages
 	o pnmcurve
 	o py-csp [kamil; some tests hang but it seems good enough; need for wip/py-uuid]
 	o py-jswebkit
-	o qbe
 	o rar4
 	o send-pr
 	o tqsllib
