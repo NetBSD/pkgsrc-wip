@@ -1,0 +1,10 @@
+Powerline is a statusline plugin for vim, and provides statuslines
+and prompts for several other applications, including zsh, bash,
+tmux, IPython, Awesome, i3 and Qtile.
+
+* Extensible and feature rich, written in Python.
+* Stable and testable code base.
+* Support for prompts and statuslines in many applications.
+* Configuration and colorschemes written in JSON.
+* Fast and lightweight, with daemon support for even better
+  performance.

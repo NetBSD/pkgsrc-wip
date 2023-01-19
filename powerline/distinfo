@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (powerline-2.8.3.tar.gz) = a773ae77c9a607d9d2e08545c1abbb51ecd430761927229f61352b280f4dc1cd
+SHA512 (powerline-2.8.3.tar.gz) = fe0301d8a64827825ed5a1c9c91066299c198bc03d949e01241fa750d892a7f86029ab777ac991dfebf05d7a163a3fdd7cd44e2dea862562bc219c3566891455
+Size (powerline-2.8.3.tar.gz) = 368623 bytes

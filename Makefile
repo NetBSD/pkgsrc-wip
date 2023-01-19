@@ -3297,6 +3297,7 @@ SUBDIR+=	postfix-logwatch
 SUBDIR+=	postoffice
 SUBDIR+=	povray
 SUBDIR+=	powerdevil
+SUBDIR+=	powerline
 SUBDIR+=	powwow
 SUBDIR+=	ppp
 SUBDIR+=	ppr
