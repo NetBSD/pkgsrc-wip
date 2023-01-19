@@ -1,11 +1,5 @@
 @comment $NetBSD$
 bin/supertuxkart
-include/angelscript.h
-lib/cmake/Angelscript/AngelscriptConfig.cmake
-lib/cmake/Angelscript/AngelscriptConfigVersion.cmake
-lib/cmake/Angelscript/AngelscriptTargets-stkrelease.cmake
-lib/cmake/Angelscript/AngelscriptTargets.cmake
-lib/libangelscript.a
 share/applications/supertuxkart.desktop
 share/icons/hicolor/1024x1024/apps/supertuxkart.png
 share/icons/hicolor/128x128/apps/supertuxkart.png

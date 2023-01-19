@@ -20,6 +20,7 @@ USE_TOOLS+=	cmake pkg-config
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
 CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
 CMAKE_ARGS+=	-DUSE_SYSTEM_SQUISH=OFF
+CMAKE_ARGS+=	-DUSE_SYSTEM_ANGELSCRIPT=ON
 
 # Needs linux joystick support.
 CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
@@ -40,6 +41,7 @@ GCC_REQD+=	4.8
 .include "../../lang/python/tool.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../wip/angelscript/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/atomic64.mk"
