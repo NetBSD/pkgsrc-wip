@@ -1,4 +1,6 @@
-hare TODO!
+hare TODO:
 
-Doesn't work on NetBSD at all -- requires that we provide a NetBSD runtime
-for Hare, whatever that takes
+Build fails on NetBSD/amd64 9.3:
+
+- /bin/sh: Cannot execute ELF binary .bin/hare
+
