@@ -9,6 +9,8 @@ HOMEPAGE=	https://c9x.me/compile/
 COMMENT=	Compiler backend
 LICENSE=	mit
 
+CONFLICTS+=	qbe-git-[0-9]*
+
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
