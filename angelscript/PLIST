@@ -1,5 +1,8 @@
 @comment $NetBSD$
 include/angelscript.h
-lib/libangelscript.a
+lib/cmake/Angelscript/AngelscriptConfig.cmake
+lib/cmake/Angelscript/AngelscriptConfigVersion.cmake
+lib/cmake/Angelscript/AngelscriptTargets-noconfig.cmake
+lib/cmake/Angelscript/AngelscriptTargets.cmake
 lib/libangelscript.so
-lib/libangelscript.so.2.36.0
+lib/libangelscript.so.${PKGVERSION}

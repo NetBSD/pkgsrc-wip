@@ -1,8 +1,7 @@
 # $NetBSD$
 
-PKGNAME=	angelscript-${VERSION}
-DISTNAME=	angelscript_${VERSION}
-VERSION=	2.36.0
+DISTNAME=	angelscript_2.36.0
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	lang
 MASTER_SITES=	http://angelcode.com/angelscript/sdk/files/
 EXTRACT_SUFX=	.zip
@@ -12,18 +11,10 @@ HOMEPAGE=	https://angelcode.com/angelscript/
 COMMENT=	The AngelScript programming language
 LICENSE=	zlib
 
-WRKSRC=		${WRKDIR}/sdk
-USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake
-NO_CONFIGURE=	yes
-AUTO_MKDIRS=	yes
+WRKSRC=		${WRKDIR}/sdk/angelscript/projects/cmake
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 
-REAL_SOURCE_DIR=	${WRKSRC}/angelscript/projects/gnuc
-BUILD_DIRS+=		${REAL_SOURCE_DIR}
-INSTALL_DIRS+=		${REAL_SOURCE_DIR}
-
-INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
-INSTALL_MAKE_FLAGS+=	DESTDIR=${DESTDIR}
-INSTALL_TARGET=		install install_shared
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 .include "../../mk/bsd.pkg.mk"
