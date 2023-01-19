@@ -5002,6 +5002,7 @@ SUBDIR+=	pyzor
 SUBDIR+=	q
 SUBDIR+=	q2pro
 SUBDIR+=	qbe
+SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
 SUBDIR+=	qemu-git
 SUBDIR+=	qico
