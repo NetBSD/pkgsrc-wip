@@ -1,0 +1,35 @@
+$NetBSD: patch-Makefile.pre.in,v 1.1 2022/10/31 09:50:40 adam Exp $
+
+Do not build/install libpython3.so.
+Simplify _sysconfigdata to include only platform name.
+
+--- Makefile.pre.in.orig	2023-01-10 12:09:15.000000000 +0000
++++ Makefile.pre.in
+@@ -256,7 +256,7 @@ DIST=		$(DISTFILES) $(DISTDIRS)
+ LIBRARY=	@LIBRARY@
+ LDLIBRARY=      @LDLIBRARY@
+ BLDLIBRARY=     @BLDLIBRARY@
+-PY3LIBRARY=     @PY3LIBRARY@
++PY3LIBRARY=
+ DLLLIBRARY=	@DLLLIBRARY@
+ LDLIBRARYDIR=   @LDLIBRARYDIR@
+ INSTSONAME=	@INSTSONAME@
+@@ -1873,7 +1873,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+ 			if test -n "$(PY3LIBRARY)"; then \
+ 				$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
+ 			fi; \
+-		else	true; \
++		elif test -f $(INSTSONAME); then \
++			$(INSTALL_SHARED) $(INSTSONAME) $(DESTDIR)$(LIBDIR); \
+ 		fi; \
+ 	fi
+ 	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
+@@ -2146,7 +2147,7 @@ libinstall:	all $(srcdir)/Modules/xxmodu
+ 			esac; \
+ 		done; \
+ 	done
+-	$(INSTALL_DATA) `cat pybuilddir.txt`/_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH).py \
++	$(INSTALL_DATA) `cat pybuilddir.txt`/_sysconfigdata_$(MACHDEP).py \
+ 		$(DESTDIR)$(LIBDEST); \
+ 	$(INSTALL_DATA) $(srcdir)/LICENSE $(DESTDIR)$(LIBDEST)/LICENSE.txt
+ 	@ # Build PYC files for the 3 optimization levels (0, 1, 2)

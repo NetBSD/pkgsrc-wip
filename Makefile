@@ -4994,6 +4994,7 @@ SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	pystring
 SUBDIR+=	pythia6
+SUBDIR+=	python312-devel
 SUBDIR+=	pythoncad
 SUBDIR+=	pythontoolkit
 SUBDIR+=	pywm
