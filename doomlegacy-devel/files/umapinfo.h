@@ -13,7 +13,7 @@
 // GNU General Public License for more details.
 //
 // DESCRIPTION:
-//      Support maps with additional information in UMAPINFO format.
+//      Support for additional map information in UMAPINFO format.
 //
 //----------------------------------------------------------------------------
 
@@ -23,60 +23,71 @@
 #include "doomtype.h"
 
 
+// Entry for episode menu
 typedef struct
 {
-    int thing;    // Thing type
-    int special;  // Line special type
-    int tag;      // Sector tag
+    emenu_t    *next;
+
+    const char *patch;  // Used only if valid for all menu entries
+    const char *name;   // Episode name (used with HUD font without patch)
+    const char *key;    // Keyboard key
+} emenu_t;
+
+
+// Usable only for monsters that call A_BossDeath
+typedef struct
+{
+    bossaction_t *next;
+
+    int           thing;    // Thing type
+    int           special;  // Line special type
+    int           tag;      // Sector tag
 } bossaction_t;
 
 
-// UMAPINFO data for a single map
 typedef struct
 {
+    mapentry_t   *next;
+
+    const char   *author;
+    const char   *label;              // NULL: default, Empty: clear
+    const char   *levelname;
+    const char   *intertext;          // NULL: default, Empty: clear
+    const char   *intertextsecret;    // NULL: default, Empty: clear
+    const char   *interbackdrop;
+    const char   *intermusic;
+    const char   *nextmap;
+    const char   *nextsecret;
+    const char   *music;
+    const char   *skytexture;
+    const char   *levelpic;
+    const char   *endpic;
+    const char   *exitpic;
+    const char   *enterpic;
+    emenu_t      *emenu;              // Linked list
+    bossaction_t *bossactions;        // Linked list
     unsigned int  episode;
     unsigned int  map;
-
-    char         *levelname;
-    char         *label;
-    char         *intertext;
-    char         *intertextsecret;
-    char         *levelpic;
-    char         *nextmap;
-    char         *nextsecret;
-    char         *music;
-    char         *skytexture;
-    char         *endpic;
-    char         *exitpic;
-    char         *enterpic;
-    char         *interbackdrop;
-    char         *intermusic;
-    bossaction_t *bossactions;
-    unsigned int  numbossactions;
     unsigned int  partime;
-    boolean       nointermission;
+    boolean       emenu_clear;        // Clear all default episode menu entries
+    boolean       bossactions_clear;  // Clear all default boss actions
+    boolean       nointermission;     // Skip the 'level finished' screen
 } mapentry_t;
 
 
 typedef struct
 {
-  mapentry_t   *map;
-  unsigned int  mapnum;
+    mapentry_t *entry;  // Linked list
 } umapinfo_t;
 
 
+// Current UMAPINFO data
 extern umapinfo_t umapinfo;
 
 
+// Import UMAPINFO lump
+// If some keys are already present in current data, they are overwritten
 void UMI_LoadUMapInfoLump(lumpnum_t lumpnum);
-
-
-#if 0
-extern boolean EpiCustom;
-mapentry_t *G_LookupMapinfo(int episode, int map);
-
-boolean UMI_CheckField(char *str);
-#endif
 
 
 #endif  // UMAPINFO_H

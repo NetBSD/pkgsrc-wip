@@ -139,5 +139,6 @@ BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
 .include "../../audio/SDL_mixer/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../wip/libdoom-umapinfo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
