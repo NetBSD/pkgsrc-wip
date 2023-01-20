@@ -5,24 +5,36 @@
 #              Thu Nov  2 10:04:18 CDT 2017               #
 ###########################################################
 
-DISTNAME=	macs2-2.2.7.1
+DISTNAME=	MACS2-2.2.7.1
 PKGNAME=	${PYPKGPREFIX}-macs2-2.2.7.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taoliu/}
 GITHUB_PROJECT=	MACS
-GITHUB_TAG=     v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/macs2
 COMMENT=	Novel algorithm for identifying transcript factor binding sites
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+
+# Does not build with python > 3.9
+# PYTHON_VERSIONS_INCOMPATIBLE=	310 311
+
+# these files do not support python 3.11 in the 3.5 release
+post-extract:
+	${MV} ${WRKSRC}/MACS2/cPosValCalculation.c ${WRKSRC}
+	${RM} ${WRKSRC}/MACS2/*.c ${WRKSRC}/MACS2/*/*.c
+	cd ${WRKSRC} && cythonize-${PYVERSSUFFIX} ${WRKSRC}/MACS2/*.pyx ${WRKSRC}/MACS2/*/*.pyx
+	${MV} ${WRKSRC}/cPosValCalculation.c ${WRKSRC}/MACS2
+
 post-install:
 	${STRIP} \
-		${DESTDIR}${PYTHON_SITELIBDIR}/MACS2/*.so \
-		${DESTDIR}${PYTHON_SITELIBDIR}/MACS2/*/*.so
+		${DESTDIR}${PREFIX}/${PYSITELIB}/MACS2/*.so \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/MACS2/*/*.so
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-#.include "../../devel/py-cython/buildlink3.mk"
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
