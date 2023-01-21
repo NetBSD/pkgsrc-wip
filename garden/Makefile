@@ -1,23 +1,22 @@
 # $NetBSD$
 
-DISTNAME=	garden-1.0.9
-CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=garden/}
+DISTNAME=	garden-0.6.0
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=davvid/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://garden.sourceforge.net/drupal/
-COMMENT=	Vertical shoot-em-up with nontraditional elements
-LICENSE=	gnu-gpl-v3
+HOMEPAGE=	https://davvid.github.io/garden/
+COMMENT=	Grows and cultivates collections of Git trees
+LICENSE=	mit
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+.include "cargo-depends.mk"
 
-#DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
+INSTALLATION_DIRS=	bin
 
-# Patches can be omitted with
-#CFLAGS+=	-fgnu89-inline
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/garden \
+		${DESTDIR}${PREFIX}/bin
 
-.include "../../devel/allegro/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
