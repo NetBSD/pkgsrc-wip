@@ -23,4 +23,5 @@ DEPENDS+=	webbrowser>=0:../../wip/webbrowser
 
 META_PACKAGE=	yes
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
