@@ -29,10 +29,11 @@ post-extract:
 	cd ${WRKSRC} && cythonize-${PYVERSSUFFIX} ${WRKSRC}/MACS2/*.pyx ${WRKSRC}/MACS2/*/*.pyx
 	${MV} ${WRKSRC}/cPosValCalculation.c ${WRKSRC}/MACS2
 
-post-install:
-	${STRIP} \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/MACS2/*.so \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/MACS2/*/*.so
+# Fails on Darwin
+#post-install:
+#	${STRIP} \
+#		${DESTDIR}${PREFIX}/${PYSITELIB}/MACS2/*.so \
+#		${DESTDIR}${PREFIX}/${PYSITELIB}/MACS2/*/*.so
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
