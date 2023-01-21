@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.114 2022/10/26 10:31:38 wiz Exp $
 
-DISTNAME=		nmh-1.8-RC1
+DISTNAME=		nmh-1.8-RC2
 PKGNAME=		${DISTNAME:S/-RC/rc/}
 CATEGORIES=		mail
 MASTER_SITES=		https://download.savannah.nongnu.org/releases/nmh/
