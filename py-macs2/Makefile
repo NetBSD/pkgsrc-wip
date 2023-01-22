@@ -8,15 +8,15 @@ GITHUB_PROJECT=	MACS
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/macs2
-COMMENT=	Novel algorithm for identifying transcript factor binding sites
+HOMEPAGE=	https://github.com/macs3-project/MACS
+COMMENT=	Algorithm for identifying transcription factor binding sites
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 
-# these files do not support python 3.11 in the 3.5 release
+# Distributed .c files do not support python 3.11
 post-extract:
 	${MV} ${WRKSRC}/MACS2/cPosValCalculation.c ${WRKSRC}
 	${RM} ${WRKSRC}/MACS2/*.c ${WRKSRC}/MACS2/*/*.c
