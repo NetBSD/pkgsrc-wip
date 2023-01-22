@@ -1,8 +1,0 @@
-work/syncstorage-rs-0.13.1/Cargo.toml
-work/syncstorage-rs-0.13.1/syncserver-common/Cargo.toml
-work/syncstorage-rs-0.13.1/syncserver-db-common/Cargo.toml
-work/syncstorage-rs-0.13.1/syncserver-settings/Cargo.toml
-work/syncstorage-rs-0.13.1/syncserver/Cargo.toml
-work/syncstorage-rs-0.13.1/syncstorage-settings/Cargo.toml
-work/syncstorage-rs-0.13.1/tokenserver-common/Cargo.toml
-work/syncstorage-rs-0.13.1/tokenserver-settings/Cargo.toml
