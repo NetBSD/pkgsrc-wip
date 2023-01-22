@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	alertmanager-0.24.0
+DISTNAME=	alertmanager-0.25.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	sysutils
 GITHUB_TAG=	v${PKGVERSION_NOREV}
