@@ -3867,6 +3867,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/flyspell.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/flyspell.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/glyphless-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/glyphless-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/html-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/html-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/ispell.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/ispell.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/less-css-mode.el.gz

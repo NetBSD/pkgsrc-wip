@@ -185,6 +185,7 @@ DEPENDS+=	tree-sitter-cmake-[0-9]*:../../textproc/tree-sitter-cmake
 DEPENDS+=	tree-sitter-cpp-[0-9]*:../../textproc/tree-sitter-cpp
 DEPENDS+=	tree-sitter-dockerfile-[0-9]*:../../textproc/tree-sitter-dockerfile
 DEPENDS+=	tree-sitter-go-[0-9]*:../../textproc/tree-sitter-go
+DEPENDS+=	tree-sitter-html-[0-9]*:../../textproc/tree-sitter-html
 DEPENDS+=	tree-sitter-java-[0-9]*:../../textproc/tree-sitter-java
 DEPENDS+=	tree-sitter-json-[0-9]*:../../textproc/tree-sitter-json
 DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
