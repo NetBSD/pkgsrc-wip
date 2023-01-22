@@ -1078,7 +1078,6 @@ SUBDIR+=	gambatte-dev
 SUBDIR+=	gambit
 SUBDIR+=	gappa
 SUBDIR+=	garage
-SUBDIR+=	garden
 SUBDIR+=	gat
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
