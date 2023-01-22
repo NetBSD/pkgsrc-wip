@@ -15,7 +15,6 @@ CARGO_CRATE_DEPENDS+=	actix-tls-2.0.0
 CARGO_CRATE_DEPENDS+=	actix-utils-2.0.0
 CARGO_CRATE_DEPENDS+=	actix-web-3.3.3
 CARGO_CRATE_DEPENDS+=	actix-web-codegen-0.4.0
-CARGO_CRATE_DEPENDS+=	actix-web-httpauth-0.5.1
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18

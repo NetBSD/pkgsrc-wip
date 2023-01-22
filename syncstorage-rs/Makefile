@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	syncstorage-rs-0.11.0
+DISTNAME=	syncstorage-rs-0.13.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

@@ -1,18 +1,19 @@
-  = note: ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::UnrefSynchEvent(absl::lts_20210324::SynchEvent*) [clone .part.0]':
-          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:361: undefined reference to `absl::lts_20210324::base_internal::LowLevelAlloc::Free(void*)'
-          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::ForgetSynchEvent(std::atomic<long>*, long, long)':
-          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/mutex.cc:361: undefined reference to `absl::lts_20210324::base_internal::LowLevelAlloc::Free(void*)'
-          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::synchronization_internal::PerThreadSem::Post(absl::lts_20210324::base_internal::ThreadIdentity*)':
-          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/per_thread_sem.h:107: undefined reference to `AbslInternalPerThreadSemPost_lts_20210324'
-          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::synchronization_internal::PerThreadSem::Wait(absl::lts_20210324::synchronization_internal::KernelTimeout)':
-          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/per_thread_sem.h:112: undefined reference to `AbslInternalPerThreadSemWait_lts_20210324'
-          ld: /scratch/wip/syncstorage-rs/work/syncstorage-rs-0.11.0/target/release/deps/libgrpcio_sys-47e4d656499c9b98.rlib(mutex.cc.o): in function `absl::lts_20210324::synchronization_internal::GetOrCreateCurrentThreadIdentity()':
-          /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/create_thread_identity.h:51: undefined reference to `absl::lts_20210324::synchronization_internal::CreateThreadIdentity()'
-          ld: /scratch/wip/syncstorage-rs/work/vendor/grpcio-sys-0.9.1+1.38.0/grpc/third_party/abseil-cpp/absl/synchronization/internal/create_thread_identity.h:51: undefined reference to `absl::lts_20210324::synchronization_internal::CreateThreadIdentity()'
+error: failed to load manifest for workspace member `/scratch/wip/syncstorage-rs/work/syncstorage-rs-0.13.1/syncserver-settings`
 
-  = help: some `extern` functions couldn't be found; some native libraries may need to be installed or have their path specified
-  = note: use the `-l` flag to specify native libraries to link
-  = note: use the `cargo:rustc-link-lib` directive to specify the native libraries to link with Cargo (see https://doc.rust-lang.org/cargo/reference/build-scripts.html#cargorustc-link-libkindname)
+Caused by:
+  failed to load manifest for dependency `tokenserver-settings`
 
-error: build failed
-*** Error code 101
+Caused by:
+  failed to load manifest for dependency `tokenserver-common`
+
+Caused by:
+  failed to load manifest for dependency `syncserver-db-common`
+
+Caused by:
+  failed to load manifest for dependency `deadpool`
+
+Caused by:
+  failed to read `/scratch/wip/syncstorage-rs/work/syncstorage-rs-0.13.1/deadpool/Cargo.toml`
+
+Caused by:
+  No such file or directory (os error 2)
