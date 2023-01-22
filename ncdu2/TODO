@@ -1,0 +1,15 @@
+/scratch/wip/ncdu2/work/ncdu-2.2.2/src/ui.zig:387:49: error: expected type 'c_int', found 'u32'
+    _ = c.attr_set(styles[@enumToInt(s)].style().attr, @enumToInt(s)+1, null);
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/scratch/wip/ncdu2/work/ncdu-2.2.2/src/ui.zig:387:49: note: signed 32-bit int cannot represent all possible unsigned 32-bit values
+/scratch/wip/ncdu2/work/ncdu-2.2.2/zig-cache/o/7fe4dc68d56d09a5100d9c8ca0660e0d/cimport.zig:505:24: note: parameter type declared here
+pub extern fn attr_set(attr_t, c_short, ?*anyopaque) c_int;
+                       ^~~~~~
+referenced by:
+    draw: /scratch/wip/ncdu2/work/ncdu-2.2.2/src/browser.zig:782:7
+    handleEvent: /scratch/wip/ncdu2/work/ncdu-2.2.2/src/main.zig:527:31
+    remaining reference traces hidden; use '-freference-trace' to see all reference traces
+
+/scratch/wip/ncdu2/work/ncdu-2.2.2/src/ui.zig:137:28: error: root struct of file '.scratch.wip.ncdu2.work.ncdu-2.2.2.zig-cache.o.7fe4dc68d56d09a5100d9c8ca0660e0d.cimport' has no member named 'wcwidth'
+        const cp_width_ = c.wcwidth(cp);
+                          ~^~~~~~~~
