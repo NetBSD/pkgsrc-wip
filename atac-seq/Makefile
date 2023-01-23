@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	atac-seq-1.0
+DISTNAME=	atac-seq-1.1
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
