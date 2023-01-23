@@ -12,7 +12,6 @@ LICENSE=	public-domain # actually, dwtfywtpl
 TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DPC_JSONCPP_INCLUDEDIRS:PATH=${BUILDLINK_PREFIX.jsoncpp}/include/json
 
@@ -27,6 +26,7 @@ CXXFLAGS+=	-march=i586
 .endif
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../textproc/tinyxml2/buildlink3.mk"
 .include "../../www/htmlcxx/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
