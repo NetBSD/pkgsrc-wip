@@ -1111,5 +1111,5 @@ SHA1 (patch-ac) = 1f04dc44972a4f9d4aaff719341d91843ef379d1
 SHA1 (patch-ad) = c55d065053adeb8a716e2e4db91bcc4c393e1269
 SHA1 (patch-ba) = a00e0ed12537b39dea5a0aa059e0627761dc8974
 SHA1 (patch-bb) = d29e8f357ae17ee0ee1aa715ba2de663cf4ccfcb
-SHA1 (patch-syncserver-db-common_Cargo.toml) = 51d5747392be1949b8584890c20cd1e7932c2475
-SHA1 (patch-syncserver_Cargo.toml) = 79b5d6217662aaeec1c3eaab3a1113aac6eae7d2
+SHA1 (patch-syncserver-db-common_Cargo.toml) = 60d45662fbe43917948375aa70092f4b2ba8f909
+SHA1 (patch-syncserver_Cargo.toml) = 0e0b3df30b8e7dda46d3e15f201c5c5974fbb44e
