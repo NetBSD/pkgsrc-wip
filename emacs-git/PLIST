@@ -3501,6 +3501,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/c-ts-common.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/c-ts-common.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/c-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/c-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.el.gz
