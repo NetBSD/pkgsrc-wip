@@ -1,1 +1,3 @@
-Run the "best" available web browser using a default or user-provided list.
+Run the "best" available web browser from among all installed browsers
+using a default list or user-provided list.  The list can be specified
+via the command-line or an environment variable.
