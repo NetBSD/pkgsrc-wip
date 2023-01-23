@@ -5406,6 +5406,7 @@ SUBDIR+=	sselp
 SUBDIR+=	ssh-chat
 SUBDIR+=	ssh_ping
 SUBDIR+=	ssid
+SUBDIR+=	ssiv-git
 SUBDIR+=	ssu
 SUBDIR+=	st-term-git
 SUBDIR+=	stackdriver-collectd
