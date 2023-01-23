@@ -24,28 +24,40 @@
 
 
 // Entry for episode menu
-typedef struct
+typedef struct emenu_t emenu_t;
+struct emenu_t
 {
     emenu_t    *next;
 
     const char *patch;  // Used only if valid for all menu entries
     const char *name;   // Episode name (used with HUD font without patch)
     const char *key;    // Keyboard key
-} emenu_t;
+};
 
 
 // Usable only for monsters that call A_BossDeath
-typedef struct
+typedef struct bossaction_t bossaction_t;
+struct bossaction_t
 {
     bossaction_t *next;
 
-    int           thing;    // Thing type
-    int           special;  // Line special type
-    int           tag;      // Sector tag
-} bossaction_t;
+    unsigned int  thing;    // Thing type (index for table of specification)
+    unsigned int  special;  // Line special type
+    unsigned int  tag;      // Sector tag
+};
 
 
-typedef struct
+typedef enum tristate_t tristate_t;
+enum tristate_t
+{
+    disabled,  // Similar to false
+    enabled,   // Similar to true
+    unchanged  // Default behaviour
+};
+
+
+typedef struct mapentry_t mapentry_t;
+struct mapentry_t
 {
     mapentry_t   *next;
 
@@ -66,13 +78,16 @@ typedef struct
     const char   *enterpic;
     emenu_t      *emenu;              // Linked list
     bossaction_t *bossactions;        // Linked list
+    tristate_t    endgame;            // Can be undefined, false or true
     unsigned int  episode;
     unsigned int  map;
     unsigned int  partime;
     boolean       emenu_clear;        // Clear all default episode menu entries
     boolean       bossactions_clear;  // Clear all default boss actions
     boolean       nointermission;     // Skip the 'level finished' screen
-} mapentry_t;
+    boolean       endbunny;           // End game after level, show bunny
+    boolean       endcast;            // End game after lavel, show cast call
+};
 
 
 typedef struct
@@ -81,13 +96,28 @@ typedef struct
 } umapinfo_t;
 
 
-// Current UMAPINFO data
+// Current data
 extern umapinfo_t umapinfo;
 
 
-// Import UMAPINFO lump
-// If some keys are already present in current data, they are overwritten
+// Import and merge UMAPINFO lump into current data
+// If parts of the new data are already present, they overwrite the current data
 void UMI_LoadUMapInfoLump(lumpnum_t lumpnum);
+
+
+// Destory current data
+void UMI_DestroyUMapInfo(void);
+
+
+// Extract episode and map numbers from map name
+// For Doom 2 map names zero is returned for episode
+// Returns true on success (numbers are valid)
+boolean UMI_ParseMapName(const char *mapname, byte *episode, byte * map);
+
+
+// Search for UMAPINFO map entry that matches episode and map parameters
+// NULL is returned if nothing was found
+mapentry_t *UMI_LookupUMapInfo(byte episode, byte map);
 
 
 #endif  // UMAPINFO_H

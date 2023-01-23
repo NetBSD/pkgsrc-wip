@@ -1,13 +1,16 @@
 
-Part 24: Mid-texture rendering
-==============================
-[ ] Some mid-textures are rendered wrong in Pagodia
+Part 24: Middle-texture rendering
+=================================
+[ ] Some middle-textures are rendered wrong in Pagodia
     => Reported upstream in ticket #687
 
 
 Part 25: Add UMAPINFO support
 =============================
 [ ] Based on libdoom-umapinfo
+    => Module to parse and import data added
+    => Hooked in keys 'label', "levelname', 'next' and 'nextsecret'
+       The default prefix for 'levelname' does not work yet
 
 
 EOF

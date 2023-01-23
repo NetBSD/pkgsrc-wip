@@ -9,7 +9,7 @@ Add support for libdoom-umapinfo.
  # HAVE_LIBZIP=3
  
 +# Support for UMAPINFO lump needs libdoom-umapinfo.
-+HAVE_LIBDOOM_UMAPINFO=0
++HAVE_LIBDOOM_UMAPINFO=1
 +
  # Extended nodes require zlib.
  HAVE_ZLIB=1
