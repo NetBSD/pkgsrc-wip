@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2013/08/14 01:13:50 outpaddling Exp $
 
-DISTNAME=	webbrowser-0.3.0.1
+DISTNAME=	webbrowser-0.4.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	84cb894fdd1735a31981494f6ff890e00b3d24a4
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/webbrowser/
