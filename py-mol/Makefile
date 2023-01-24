@@ -35,7 +35,7 @@ USE_TOOLS+=	pkg-config
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../wip/glm/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
