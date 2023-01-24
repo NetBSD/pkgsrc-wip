@@ -1,0 +1,19 @@
+1.24.1
+
+Bugfix release
+
+1.24.0
+
+NumPy 1.24.0 is now available. The highlights of the release are:
+
+* New “dtype” and “casting” keywords for stacking functions.
+* New F2PY features and fixes.
+* Many new deprecations, check them out.
+* Many expired deprecations,
+
+The NumPy 1.24.0 release continues the ongoing work to improve the
+handling and promotion of dtypes, increase execution speed, and
+clarify the documentation. There are a large number of new and
+expired deprecations due to changes in dtype promotion and cleanups.
+It is the work of 177 contributors spread over 444 pull requests.
+The supported Python versions are 3.8-3.11.

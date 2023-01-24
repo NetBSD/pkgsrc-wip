@@ -1,0 +1,2 @@
+bin/f2py @PREFIX@/bin/f2py@PYVERSSUFFIX@
+bin/f2py3 @PREFIX@/bin/f2py@PYVERSSUFFIX@

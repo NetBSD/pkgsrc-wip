@@ -4288,6 +4288,7 @@ SUBDIR+=	py-numberjack
 SUBDIR+=	py-numdifftools
 SUBDIR+=	py-numericalunits
 SUBDIR+=	py-numpoly
+SUBDIR+=	py-numpy
 SUBDIR+=	py-numpy-quaternion
 SUBDIR+=	py-nupic
 SUBDIR+=	py-nxos
