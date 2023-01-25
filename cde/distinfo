@@ -9,5 +9,6 @@ SHA1 (patch-lib_DtMmdb_btree__berkeley_snprintf.c) = 93270c3217129086174c22b964e
 SHA1 (patch-programs_dtcm_libDtCmP_util.h) = 15f6d2595d30bbb1b432f4e557182e90dcd9803d
 SHA1 (patch-programs_dtlogin_Makefile.am) = 775e5417f7f0c38a70f6e3f85629940351ffad6a
 SHA1 (patch-programs_dtsearchpath_dtappg_Makefile.am) = b0a13e4b1b935c055736daa48302dafc1f9333c4
+SHA1 (patch-programs_dtsession_Makefile.am) = d946fb0335c1a7def4064e2c91cbf768b6ae599b
 SHA1 (patch-programs_dtterm_Makefile.am) = fb54156e1dd1c27a979c6aeb26e1679e1eb07ab6
 SHA1 (patch-programs_fontaliases_Makefile.am) = 97fe75753d788e9a9fa5c22191745f8714fd52ad

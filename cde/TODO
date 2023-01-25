@@ -1,3 +1,1 @@
-* Make PAM support optional.
-* Add nls build option for supported locales.
 * Testing required.
