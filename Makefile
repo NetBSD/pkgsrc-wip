@@ -4055,7 +4055,6 @@ SUBDIR+=	py-knnimpute
 SUBDIR+=	py-knockknock
 SUBDIR+=	py-krylov
 SUBDIR+=	py-krypy
-SUBDIR+=	py-kubernetes
 SUBDIR+=	py-lang-trans
 SUBDIR+=	py-lapack
 SUBDIR+=	py-larlib
