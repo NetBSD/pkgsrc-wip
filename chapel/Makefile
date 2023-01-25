@@ -61,6 +61,7 @@ SUBST_SED.penvperl=		-e "s,/usr/bin/env perl,${PERL5},g"
 CHECK_PORTABILITY_SKIP+=	third-party/libunwind/libunwind-src/configure
 CHECK_PORTABILITY_SKIP+=	third-party/libunwind/libunwind-src/tests/check-namespace.sh.in
 
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
