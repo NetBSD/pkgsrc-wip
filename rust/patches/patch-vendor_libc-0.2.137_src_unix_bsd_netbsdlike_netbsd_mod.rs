@@ -1,10 +1,8 @@
 $NetBSD$
 
-Replicate patch from un-versioned libc.
-
---- vendor/libc-0.2.126/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2022-12-12 18:23:58.000000000 +0000
-+++ vendor/libc-0.2.126/src/unix/bsd/netbsdlike/netbsd/mod.rs
-@@ -2840,7 +2840,12 @@ cfg_if! {
+--- vendor/libc-0.2.137/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-01-25 01:49:16.000000000 +0000
++++ vendor/libc-0.2.137/src/unix/bsd/netbsdlike/netbsd/mod.rs
+@@ -3044,7 +3044,12 @@ cfg_if! {
      } else if #[cfg(target_arch = "x86")] {
          mod x86;
          pub use self::x86::*;
