@@ -5248,7 +5248,6 @@ SUBDIR+=	sdd
 SUBDIR+=	sddm
 SUBDIR+=	sdict-tools
 SUBDIR+=	sdif-git
-SUBDIR+=	sds
 SUBDIR+=	seafile-client
 SUBDIR+=	seafile-gui
 SUBDIR+=	seafile-server

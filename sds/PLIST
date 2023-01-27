@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/sds.h
-lib/libsds.la
-lib/pkgconfig/libsds-2.pc
-share/doc/sds/README.md
