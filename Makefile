@@ -2889,7 +2889,6 @@ SUBDIR+=	p5-Data-DPath
 SUBDIR+=	p5-Data-DPath-Validator
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Types
-SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
 SUBDIR+=	p5-Egg-Plugin-Crypt-CBC
 SUBDIR+=	p5-Email-AddressParser
