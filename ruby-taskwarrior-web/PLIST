@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/task-web
+bin/task-web${RUBY_VER}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec

@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	taskwarrior-web-1.1.12
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +12,6 @@ LICENSE=	mit
 RUBYGEM_OPTIONS+=	--format-executable
 
 DEPENDS+=	${RUBY_PKGPREFIX}-activesupport32>=3.2.0:../../devel/ruby-activesupport32
-DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.8.0:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-parseconfig>=1.0.7:../../devel/ruby-parseconfig
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-flash3>=1.0.0:../../wip/ruby-rack-flash3
 DEPENDS+=	${RUBY_PKGPREFIX}-rinku:../../wip/ruby-rinku
