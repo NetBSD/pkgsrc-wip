@@ -231,7 +231,6 @@ lib/gnucash/libgnc-register-core.so
 lib/gnucash/libgnc-register-gnome.so
 lib/gnucash/libgnc-report.so
 lib/gnucash/libgncmod-backend-xml.so
-lib/gnucash/libgncmod-python.so
 lib/guile/3.0/site-ccache/gnucash/app-utils.go
 lib/guile/3.0/site-ccache/gnucash/app-utils/c-interface.go
 lib/guile/3.0/site-ccache/gnucash/app-utils/date-utilities.go
