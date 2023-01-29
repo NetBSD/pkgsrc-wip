@@ -1,6 +1,3 @@
-
-GlusterFS Version 7.1
-
 GlusterFS is a flexible, powerful, POSIX-compliant cluster filesystem
 that can scale to several petabytes.
 
@@ -12,4 +9,3 @@ of files. GlusterFS has a fully distributed design, with no single
 point of failure.
 
 Please visit http://www.gluster.org/glusterfs.php for more info.
-

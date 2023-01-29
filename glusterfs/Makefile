@@ -1,29 +1,42 @@
-DISTNAME=		glusterfs-7.1
-PKGREVISION=		1
-CATEGORIES=		filesystems
+# $NetBSD: Makefile,v 1.109 2022/06/30 11:18:23 nia Exp $
 
-DEPENDS+=		argp>=1.3:../../devel/argp
+DISTNAME=	glusterfs-10.3
+PKGREVISION=	9
+CATEGORIES=	filesystems
+MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
-MASTER_SITES=		http://bits.gluster.org/pub/gluster/glusterfs/src/
-EXTRACT_SUFX=		.tar.gz
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.gluster.org/
+COMMENT=	Cluster filesystem
+LICENSE=	gnu-gpl-v3
 
-MAINTAINER=		jhigh@NetBSD.org
-HOMEPAGE=		https://www.gluster.org/
-COMMENT=		Cluster filesystem
-LICENSE=		gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-
-USE_TOOLS+=		flex bison pkg-config bash 
-EXTRACT_USING?=		bsdtar
-
-LDADD+=			" -L${BUILDLINK_DIR}/lib -largp"
+USE_TOOLS+=		flex bison pkg-config bash autoconf autoreconf automake
 
 CONFIGURE_ARGS+=	--disable-fusermount
+CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--without-tcmalloc
 
+# While glusterfs never really supported 32bit platforms, older versions
+# tended to work. By now, it will die with SIGILL (executing ud2) on 32bit
+# (tested in i386) due to not being able to atomically update a 64bit value.
+BROKEN_ON_PLATFORM+=    *-*-earm*
+BROKEN_ON_PLATFORM+=    *-*-hppa
+BROKEN_ON_PLATFORM+=    *-*-i386
+BROKEN_ON_PLATFORM+=    *-*-m68000
+BROKEN_ON_PLATFORM+=    *-*-m68k
+BROKEN_ON_PLATFORM+=    *-*-mipseb
+BROKEN_ON_PLATFORM+=    *-*-mipsel
+BROKEN_ON_PLATFORM+=    *-*-powerpc
+BROKEN_ON_PLATFORM+=    *-*-riscv32
+BROKEN_ON_PLATFORM+=    *-*-sparc
+BROKEN_ON_PLATFORM+=    *-*-vax
+
+# Make sure we do not attept to link with -lfl
+# Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
-PYTHON_VERSIONS_ACCEPTED=	27 # only 2.x supported as of 3.8.x
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	events/src/glustereventsd.py
@@ -65,41 +78,33 @@ REPLACE_BASH+=		extras/geo-rep/get-gfid.sh
 REPLACE_BASH+=		extras/geo-rep/gsync-upgrade.sh
 REPLACE_BASH+=		extras/geo-rep/slave-upgrade.sh
 REPLACE_BASH+=		extras/peer_add_secret_pub.in
-REPLACE_BASH+=		extras/peer_add_secret_pub.in
 REPLACE_BASH+=		extras/post-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/pre-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/stop-all-gluster-processes.sh
+REPLACE_BASH+=		extras/thin-arbiter/setup-thin-arbiter.sh
 REPLACE_BASH+=		geo-replication/src/gverify.sh
 REPLACE_BASH+=		geo-replication/src/peer_gsec_create.in
 REPLACE_BASH+=		geo-replication/src/set_geo_rep_pem_keys.sh
 
-SUBST_CLASSES+=		urcu	
-SUBST_STAGE.urcu=	post-configure
-SUBST_FILES.urcu+=	libglusterfs/src/glusterfs/async.h	
-SUBST_SED.urcu=		-e "s,<urcu/wfcqueue.h>,<contrib/userspace-rcu/wfcqueue.h>,g"
-SUBST_SED.urcu=		-e "s,<urcu/wfstack.h>,<contrib/userspace-rcu/wfstack.h>,g"
+# Explicit substitution of bash
+CHECK_PORTABILITY_SKIP+=	extras/peer_add_secret_pub.in
+
 
 SUBST_CLASSES+=		mtab
 SUBST_STAGE.mtab=	post-build
-SUBST_FILES.mtab+=	doc/mount.glusterfs.8
-SUBST_FILES.mtab+=	libglusterfs/src/compat.h
-SUBST_FILES.mtab+=	xlators/mount/fuse/utils/mount.glusterfs.in
-SUBST_SED.mtab=		-e "s,/etc/mtab,/proc/mounts,g"
+SUBST_FILES.mtab=	doc/mount.glusterfs.8
+SUBST_FILES.mtab=	libglusterfs/src/compat.h
+SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs.in
+SUBST_SED.mtab=		-e "s,mtab,/proc/mounts,g"
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-build
-SUBST_FILES.etc+=	libglusterfs/src/logging.c
-SUBST_FILES.etc+=	extras/ocf/volume
-SUBST_FILES.etc+=	doc/glusterfsd.8
+SUBST_FILES.etc=	libglusterfs/src/logging.c
+SUBST_FILES.etc=	doc/glusterfsd.8
 SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
 
-SUBST_CLASSES+=		vol
-SUBST_STAGE.vol=	post-build
-SUBST_FILES.vol+=	extras/Makefile
-SUBST_SED.vol=		-e "/vol_DATA/s/glusterd.vol/glusterd.vol.sample/g"
-
-EGDIR=			${PREFIX}/etc/glusterfs
-CONF_FILES+=		${EGDIR}/glusterd.vol ${EGDIR}/glusterd.vol.sample
+#EGDIR=			${PREFIX}/etc/glusterfs
+#CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
 OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
 
@@ -110,39 +115,39 @@ PLIST_SUBST+=		VARBASE=${VARBASE}
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 PLIST_SUBST+=		GLUSTERFS_VERSION=${DISTNAME:S/glusterfs-//}
-
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
-#pre-build:
-#	#cd ${WRKSRC}/extras && 					\
-#	${ECHO} "glusterd.vol.sample: glusterd.vol" >> Makefile &&	\
-#	${ECHO} "	cp glusterd.vol glusterd.vol.sample" >> Makefile
+pre-build:
+	cd ${WRKSRC}/extras && 					\
+	${ECHO} "glusterd.vol.sample: glusterd.vol" >> Makefile &&	\
+	${ECHO} "	cp glusterd.vol glusterd.vol.sample" >> Makefile
 
 post-install:
 	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
 	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 
-LIBS+=	-L${BUILDLINK_PREFIX}/lib -largp
-
 # Debug
-#CFLAGS+=		-g
-#INSTALL_UNSTRIPPED=	yes
-#CONFIGURE_ARGS+=	--enable-debug
+CFLAGS+=		-g
+INSTALL_UNSTRIPPED=	yes
+CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
 #CFLAGS+=		-DGC_DEBUG
 #CFLAGS+=		-include gc.h
-#LIBS+=			-largp
+#LIBS+=			-lgc
+
+TOOL_DEPENDS+=	automake>=1.13:../../devel/automake
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.userspace-rcu+=	userspace-rcu>=0.12.1
 .include "../../devel/userspace-rcu/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/libuuid/buildlink3.mk"
 
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=	-lexecinfo

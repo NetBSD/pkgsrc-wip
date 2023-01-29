@@ -6,14 +6,6 @@
 # PROVIDE: glusterd
 # REQUIRE: rpcbind
 
-name="glusterd"
-rcvar=$name
-command="/usr/pkg/sbin/${name}"
-#start_precmd="glusterd_precmd"
-pidfile="/var/run/${name}.pid"
-command_args="-p ${pidfile}"
-required_files="/usr/pkg/etc/glusterfs/${name}.vol"
-
 $_rc_subr_loaded . /etc/rc.subr
 
 glusterd_precmd()
@@ -31,6 +23,14 @@ glusterd_precmd()
 		exit 1;
 	fi
 }
+
+name="glusterd"
+rcvar=$name
+command="/usr/pkg/sbin/${name}"
+#start_precmd="glusterd_precmd"
+pidfile="/var/run/${name}.pid"
+command_args="-p ${pidfile}"
+required_files="/usr/pkg/etc/glusterfs/${name}.vol"
 
 load_rc_config $name
 run_rc_command "$1"
