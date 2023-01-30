@@ -1,4 +1,8 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+bin/gnunet-service-dht-go
+bin/gnunet-service-gns-go
+bin/gnunet-service-revocation-go
+bin/peer_mockup
+bin/revoke-zonekey
+bin/vanityid
+bin/zonemaster-go
