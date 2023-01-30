@@ -1,0 +1,84 @@
+sysutils/sformat: Update to 3.7
+
+Switch to schilytools release.
+
+
+AN-2021-09-01:
+- sformat: Added support for gettext() based translations
+  The string "Jörg Schilling" is now separate and in a gettext() call.
+
+
+AN-2021-07-29:
+- sformat: changed open(..., 0) -> open(..., O_RDONLY) for z/OS
+
+  Thanks to a report from Matthew R. Wilson
+
+- sformat:checkmount.c: did use HAVE_SYS_MNTENT_H instead of
+  HAVE_SYS_MNTTAB_H as a result of a typo that was introduced with
+  the code to #include <sys/mnttab.h>.
+
+  Thanks to a report from Matthew R. Wilson
+
+
+AN-2018-10-30:
+- libschily: ovstrcpy() from various programs has been moved to libschily.
+  This affects smake, mkisofs, patch, ved, count, sformat
+
+
+AN-2018-05-25:
+- sformat: The man page used .cs that dos not work with GNU troff because
+  of a GNU troff bug. We no longer use this command for nroff. Note that
+  the GNU troff bug still applies if you try to print the man page.
+
+- sformat: History and Download sections have been added to the man page
+
+
+AN-2018-03-01:
+- sformat: A new option -randv has been added. This option behaves
+  similar to -randrw but does not write to the disk and thus is less
+  harmful to already impaired disks.
+
+- sformat: The random tests now use drand48(). This is needed in order
+  to get a sufficient coverage for modern large disks.
+
+
+AN-2017-09-25:
+- Sformat: The terminating condition for a manual sector size
+  question for Adaptec controllers has been corrected.
+
+
+AN-2016-01-25:
+- sformat: A new option scgopts=list has been introduced.
+
+
+AN-2015-11-26:
+- sformat: diskfmt.c now casts a computation to always result in a long long
+  printf() argument.
+
+
+AN-2015-11-21:
+- sformat: fixed a printf() format size problem on Minix3 32 bits.
+  Thanks to Heiko Eißfeldt for reporting.
+
+
+AN-2013-05-10
+- Include file reordering in sformat to avoid warnings on older platforms
+
+
+AN-2011-08-29:
+- sformat(1) now compiles and works on Win-DOS using the Microsoft compiler.
+
+
+AN-2011-08-10:
+- sformat now only sets up signal handlers for existing signals to support MSC
+
+
+AN-2009-12-29:
+- [...]
+  sformat/datio.c:
+  [...]
+  Do no longer shorten strings using strcpy()/wcscpy() as newer POSIX
+  versions claim that overlapping buffers cause undefined.
+  results and as the Solaris 64 bit libc starting with Build 125,.
+  implements strcpy() using SSE instructions and thus fails with
+  overlapping strings.
