@@ -1,4 +1,0 @@
-@comment $NetBSD$
-lib/gnunet/libgnunet_plugin_datastore_mysql.la
-lib/libgnunetmy.la
-lib/libgnunetmysql.la
