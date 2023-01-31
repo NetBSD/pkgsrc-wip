@@ -118,7 +118,7 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
-.include "../../wip/jose/buildlink3.mk"
+.include "../../textproc/jose/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
