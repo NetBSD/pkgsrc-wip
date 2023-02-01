@@ -1598,7 +1598,6 @@ SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-derive
 SUBDIR+=	hs-double-conversion
 SUBDIR+=	hs-dyre
-SUBDIR+=	hs-entropy
 SUBDIR+=	hs-event-list
 SUBDIR+=	hs-executable-path
 SUBDIR+=	hs-explicit-exception
