@@ -1652,7 +1652,6 @@ SUBDIR+=	hs-pathtype
 SUBDIR+=	hs-pcre-light
 SUBDIR+=	hs-pointedlist
 SUBDIR+=	hs-pointedlist03
-SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
