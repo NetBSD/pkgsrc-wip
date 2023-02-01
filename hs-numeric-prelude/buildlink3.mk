@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-numeric-prelude?=	../../wip/hs-numeric-prelude
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
-.include "../../wip/hs-storable-record/buildlink3.mk"
+.include "../../devel/hs-storable-record/buildlink3.mk"
 .include "../../devel/hs-utility-ht/buildlink3.mk"
 .endif	# HS_NUMERIC_PRELUDE_BUILDLINK3_MK
 
