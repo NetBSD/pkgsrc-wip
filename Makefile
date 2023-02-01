@@ -3213,7 +3213,6 @@ SUBDIR+=	pmk
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
-SUBDIR+=	pointfree
 SUBDIR+=	pointtools-git
 SUBDIR+=	poke
 SUBDIR+=	poke-git
