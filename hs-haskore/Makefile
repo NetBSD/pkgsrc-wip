@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 .include "../../wip/hs-data-accessor/buildlink3.mk"
 .include "../../wip/hs-event-list/buildlink3.mk"
 .include "../../wip/hs-haskell-src/buildlink3.mk"
-.include "../../wip/hs-HUnit/buildlink3.mk"
+.include "../../devel/hs-HUnit/buildlink3.mk"
 .include "../../wip/hs-markov-chain/buildlink3.mk"
 .include "../../wip/hs-midi/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"

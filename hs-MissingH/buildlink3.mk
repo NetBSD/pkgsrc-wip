@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-MissingH+=	hs-MissingH>=1.1.0
 BUILDLINK_ABI_DEPENDS.hs-MissingH+=	hs-MissingH>=1.1.0.1
 BUILDLINK_PKGSRCDIR.hs-MissingH?=	../../wip/hs-MissingH
 
-.include "../../wip/hs-HUnit/buildlink3.mk"
+.include "../../devel/hs-HUnit/buildlink3.mk"
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
 .include "../../wip/hs-hslogger/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
