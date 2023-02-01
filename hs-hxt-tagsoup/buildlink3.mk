@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-hxt-tagsoup+=	hs-hxt-tagsoup>=9.1.1
 BUILDLINK_ABI_DEPENDS.hs-hxt-tagsoup+=	hs-hxt-tagsoup>=9.1.1
 BUILDLINK_PKGSRCDIR.hs-hxt-tagsoup?=	../../wip/hs-hxt-tagsoup
 
-.include "../../wip/hs-hxt/buildlink3.mk"
+.include "../../textproc/hs-hxt/buildlink3.mk"
 .include "../../textproc/hs-hxt-charproperties/buildlink3.mk"
 .include "../../textproc/hs-hxt-unicode/buildlink3.mk"
 .include "../../textproc/hs-tagsoup/buildlink3.mk"

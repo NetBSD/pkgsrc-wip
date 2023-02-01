@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2013/10/01 01:34:26 phonohawk Exp $
-
-RMD160 (hxt-9.3.1.1.tar.gz) = 0c02f85c6dbdfb50bae1e0167a8f4174d7dde39b
-Size (hxt-9.3.1.1.tar.gz) = 228205 bytes
-SHA1 (patch-hxt.cabal) = 3650ce9c075f9636d30cd4a3371e9c33f3f39e2a

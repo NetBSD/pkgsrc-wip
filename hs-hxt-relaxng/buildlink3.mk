@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.hs-hxt-relaxng+=	hs-hxt-relaxng>=9.1.4
 BUILDLINK_ABI_DEPENDS.hs-hxt-relaxng+=	hs-hxt-relaxng>=9.1.4
 BUILDLINK_PKGSRCDIR.hs-hxt-relaxng?=	../../wip/hs-hxt-relaxng
 
-.include "../../wip/hs-hxt/buildlink3.mk"
+.include "../../textproc/hs-hxt/buildlink3.mk"
 .include "../../textproc/hs-hxt-charproperties/buildlink3.mk"
 .include "../../textproc/hs-hxt-regex-xmlschema/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"

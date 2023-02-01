@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.hs-hxt-curl+=	hs-hxt-curl>=9.1.1
 BUILDLINK_PKGSRCDIR.hs-hxt-curl?=	../../wip/hs-hxt-curl
 
 .include "../../wip/hs-curl/buildlink3.mk"
-.include "../../wip/hs-hxt/buildlink3.mk"
+.include "../../textproc/hs-hxt/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .endif	# HS_HXT_CURL_BUILDLINK3_MK
 

@@ -10,6 +10,6 @@ LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-curl/buildlink3.mk"
-.include "../../wip/hs-hxt/buildlink3.mk"
+.include "../../textproc/hs-hxt/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

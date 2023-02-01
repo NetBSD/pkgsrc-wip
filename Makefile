@@ -1620,7 +1620,6 @@ SUBDIR+=	hs-hothasktags
 SUBDIR+=	hs-hslogger-template
 SUBDIR+=	hs-http-attoparsec
 SUBDIR+=	hs-husk-scheme
-SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-curl
 SUBDIR+=	hs-hxt-relaxng
 SUBDIR+=	hs-hxt-tagsoup

@@ -9,7 +9,7 @@ COMMENT=	TagSoup parser for HXT
 LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-hxt/buildlink3.mk"
+.include "../../textproc/hs-hxt/buildlink3.mk"
 .include "../../textproc/hs-hxt-charproperties/buildlink3.mk"
 .include "../../textproc/hs-hxt-unicode/buildlink3.mk"
 .include "../../textproc/hs-tagsoup/buildlink3.mk"
