@@ -1670,7 +1670,6 @@ SUBDIR+=	hs-strict-io
 SUBDIR+=	hs-stringable
 SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-system-filepath
-SUBDIR+=	hs-tar
 SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-test-framework
 SUBDIR+=	hs-test-framework-hunit

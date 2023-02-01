@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-cabal-query?=	../../wip/hs-cabal-query
 .include "../../wip/hs-MissingH/buildlink3.mk"
 .include "../../wip/hs-derive/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-tar/buildlink3.mk"
+.include "../../archivers/hs-tar/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
 .endif	# HS_CABAL_QUERY_BUILDLINK3_MK
 
