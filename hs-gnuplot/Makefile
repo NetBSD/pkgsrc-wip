@@ -11,5 +11,5 @@ LICENSE=	modified-bsd
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-monoid-transformer/buildlink3.mk"
-.include "../../wip/hs-utility-ht/buildlink3.mk"
+.include "../../devel/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

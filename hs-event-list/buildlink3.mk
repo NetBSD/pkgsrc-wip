@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-event-list?=	../../wip/hs-event-list
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-utility-ht/buildlink3.mk"
+.include "../../devel/hs-utility-ht/buildlink3.mk"
 .endif	# HS_EVENT_LIST_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-event-list

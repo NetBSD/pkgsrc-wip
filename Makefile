@@ -1725,7 +1725,6 @@ SUBDIR+=	hs-time-w3c
 SUBDIR+=	hs-transformers-abort
 SUBDIR+=	hs-uconv
 SUBDIR+=	hs-unix-compat
-SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-vector-bytestring
 SUBDIR+=	hs-vector-space
 SUBDIR+=	hs-vte

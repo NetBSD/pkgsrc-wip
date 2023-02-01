@@ -13,5 +13,5 @@ LICENSE=	gnu-gpl-v3
 .include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
 .include "../../wip/hs-storable-record/buildlink3.mk"
-.include "../../wip/hs-utility-ht/buildlink3.mk"
+.include "../../devel/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

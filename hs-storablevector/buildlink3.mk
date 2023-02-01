@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.hs-storablevector?=		../../wip/hs-storablevector
 .include "../../wip/hs-non-negative/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
-.include "../../wip/hs-utility-ht/buildlink3.mk"
+.include "../../devel/hs-utility-ht/buildlink3.mk"
 .endif	# HS_STORABLEVECTOR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-storablevector

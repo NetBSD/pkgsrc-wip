@@ -10,5 +10,5 @@ LICENSE=	gnu-gpl-v3
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
-.include "../../wip/hs-utility-ht/buildlink3.mk"
+.include "../../devel/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
