@@ -12,6 +12,6 @@ LICENSE=	modified-bsd
 .include "../../wip/mk/haskell.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../wip/hs-OpenGL/buildlink3.mk"
-.include "../../wip/hs-StateVar/buildlink3.mk"
+.include "../../devel/hs-StateVar/buildlink3.mk"
 .include "../../wip/hs-Tensor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.hs-OpenGL?=		../../wip/hs-OpenGL
 .include "../../wip/hs-GLURaw/buildlink3.mk"
 .include "../../wip/hs-ObjectName/buildlink3.mk"
 .include "../../wip/hs-OpenGLRaw/buildlink3.mk"
-.include "../../wip/hs-StateVar/buildlink3.mk"
+.include "../../devel/hs-StateVar/buildlink3.mk"
 .include "../../wip/hs-Tensor/buildlink3.mk"
 .endif	# HS_OPENGL_BUILDLINK3_MK
 

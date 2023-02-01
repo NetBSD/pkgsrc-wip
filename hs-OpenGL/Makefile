@@ -13,6 +13,6 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-GLURaw/buildlink3.mk"
 .include "../../wip/hs-ObjectName/buildlink3.mk"
 .include "../../wip/hs-OpenGLRaw/buildlink3.mk"
-.include "../../wip/hs-StateVar/buildlink3.mk"
+.include "../../devel/hs-StateVar/buildlink3.mk"
 .include "../../wip/hs-Tensor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

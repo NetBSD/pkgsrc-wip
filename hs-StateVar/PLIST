@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/22 13:53:08 phonohawk Exp $
-lib/StateVar-${PKGVERSION}/${HASKELL_VERSION}/Data/StateVar.hi
-lib/StateVar-${PKGVERSION}/${HASKELL_VERSION}/Data/StateVar.p_hi
-lib/StateVar-${PKGVERSION}/${HASKELL_VERSION}/HSStateVar-${PKGVERSION}.o
-lib/StateVar-${PKGVERSION}/${HASKELL_VERSION}/libHSStateVar-${PKGVERSION}.a
-lib/StateVar-${PKGVERSION}/${HASKELL_VERSION}/libHSStateVar-${PKGVERSION}_p.a
-lib/StateVar-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/StateVar-${PKGVERSION}/LICENSE
