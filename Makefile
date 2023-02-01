@@ -1666,7 +1666,6 @@ SUBDIR+=	hs-semigroupoid-extras
 SUBDIR+=	hs-shake
 SUBDIR+=	hs-storablevector
 SUBDIR+=	hs-stream-fusion
-SUBDIR+=	hs-strict
 SUBDIR+=	hs-strict-io
 SUBDIR+=	hs-stringable
 SUBDIR+=	hs-stringtable-atom
