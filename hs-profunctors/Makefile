@@ -8,7 +8,7 @@ COMMENT=	Profunctors
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-comonad/buildlink3.mk"
+.include "../../math/hs-comonad/buildlink3.mk"
 .include "../../math/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-semigroupoids/buildlink3.mk"
 .include "../../devel/hs-tagged/buildlink3.mk"
