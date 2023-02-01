@@ -1595,7 +1595,6 @@ SUBDIR+=	hs-data-accessor-monads-fd
 SUBDIR+=	hs-data-accessor-mtl
 SUBDIR+=	hs-data-accessor-template
 SUBDIR+=	hs-dataenc
-SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-derive
 SUBDIR+=	hs-double-conversion
 SUBDIR+=	hs-dyre
