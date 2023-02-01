@@ -1136,7 +1136,6 @@ SUBDIR+=	ggobi
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
-SUBDIR+=	ghc
 SUBDIR+=	ghc-core
 SUBDIR+=	ghc68
 SUBDIR+=	ghc710
