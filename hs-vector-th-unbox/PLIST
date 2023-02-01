@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/27 12:24:06 phonohawk Exp $
-lib/vector-th-unbox-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Unboxed/Deriving.hi
-lib/vector-th-unbox-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Unboxed/Deriving.p_hi
-lib/vector-th-unbox-${PKGVERSION}/${HASKELL_VERSION}/HSvector-th-unbox-${PKGVERSION}.o
-lib/vector-th-unbox-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-th-unbox-${PKGVERSION}.a
-lib/vector-th-unbox-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-th-unbox-${PKGVERSION}_p.a
-lib/vector-th-unbox-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/vector-th-unbox-${PKGVERSION}/LICENSE

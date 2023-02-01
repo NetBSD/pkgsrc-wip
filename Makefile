@@ -1728,7 +1728,6 @@ SUBDIR+=	hs-unix-compat
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-vector-bytestring
 SUBDIR+=	hs-vector-space
-SUBDIR+=	hs-vector-th-unbox
 SUBDIR+=	hs-vte
 SUBDIR+=	hs-vty
 SUBDIR+=	hs-x11-extras
