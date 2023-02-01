@@ -1735,7 +1735,6 @@ SUBDIR+=	hs-wai
 SUBDIR+=	hs-warp
 SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-xdg-basedir
-SUBDIR+=	hs-xhtml
 SUBDIR+=	hs-xmobar
 SUBDIR+=	ht2html
 SUBDIR+=	html-xml-utils
