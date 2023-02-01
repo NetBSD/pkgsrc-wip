@@ -1558,7 +1558,6 @@ SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-arrow-list
 SUBDIR+=	hs-ascii
 SUBDIR+=	hs-attempt
-SUBDIR+=	hs-basic-prelude
 SUBDIR+=	hs-binary-strict
 SUBDIR+=	hs-bindings-DSL
 SUBDIR+=	hs-bindings-audiofile
