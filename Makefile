@@ -1521,7 +1521,6 @@ SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
 SUBDIR+=	hisat2
 SUBDIR+=	hisat2-simde
-SUBDIR+=	hlint
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	honk
 SUBDIR+=	hoogle
