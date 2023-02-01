@@ -9,7 +9,7 @@ COMMENT=	Collection of tools for processing XML with Haskell
 LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-hxt-charproperties/buildlink3.mk"
+.include "../../textproc/hs-hxt-charproperties/buildlink3.mk"
 .include "../../textproc/hs-hxt-regex-xmlschema/buildlink3.mk"
 .include "../../textproc/hs-hxt-unicode/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
