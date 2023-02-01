@@ -9,5 +9,5 @@ COMMENT=	Highligt Haskell source
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
-.include "../../wip/hs-haskell-lexer/buildlink3.mk"
+.include "../../devel/hs-haskell-lexer/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
