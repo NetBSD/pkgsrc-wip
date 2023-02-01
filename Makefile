@@ -1626,7 +1626,6 @@ SUBDIR+=	hs-hxt-curl
 SUBDIR+=	hs-hxt-regex-xmlschema
 SUBDIR+=	hs-hxt-relaxng
 SUBDIR+=	hs-hxt-tagsoup
-SUBDIR+=	hs-hxt-unicode
 SUBDIR+=	hs-hxt-xpath
 SUBDIR+=	hs-hxt-xslt
 SUBDIR+=	hs-iconv
