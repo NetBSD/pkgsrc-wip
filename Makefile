@@ -1663,7 +1663,6 @@ SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-rosezipper1
 SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroupoid-extras
-SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-shake
 SUBDIR+=	hs-simple-sendfile
 SUBDIR+=	hs-storable-record

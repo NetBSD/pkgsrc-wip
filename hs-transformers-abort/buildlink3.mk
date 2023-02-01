@@ -12,8 +12,8 @@ BUILDLINK_PKGSRCDIR.hs-transformers-abort?=	../../devel/hs-transformers-abort
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../wip/hs-failure/buildlink3.mk"
 .include "../../devel/hs-monad-control/buildlink3.mk"
-.include "../../math/hs-pointed/buildlink3.mk"
-.include "../../wip/hs-semigroupoids/buildlink3.mk"
+.include "../../devel/hs-pointed/buildlink3.mk"
+.include "../../math/hs-semigroupoids/buildlink3.mk"
 .include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../devel/hs-transformers-base/buildlink3.mk"
 .endif	# HS_TRANSFORMERS_ABORT_BUILDLINK3_MK

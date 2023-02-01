@@ -12,5 +12,5 @@ LICENSE=	modified-bsd
 .include "../../math/hs-comonad/buildlink3.mk"
 .include "../../math/hs-distributive/buildlink3.mk"
 .include "../../wip/hs-groupoids/buildlink3.mk"
-.include "../../wip/hs-semigroupoids/buildlink3.mk"
+.include "../../math/hs-semigroupoids/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

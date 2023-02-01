@@ -9,5 +9,5 @@ LICENSE=	modified-bsd
 
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-semigroupoids/buildlink3.mk"
+.include "../../math/hs-semigroupoids/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
