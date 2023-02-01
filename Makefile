@@ -1554,7 +1554,6 @@ SUBDIR+=	hs-OpenGLRaw
 SUBDIR+=	hs-QIO
 SUBDIR+=	hs-QuickCheck1
 SUBDIR+=	hs-ReadArgs
-SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-ansi-wl-pprint
