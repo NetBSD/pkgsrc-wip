@@ -1569,7 +1569,6 @@ SUBDIR+=	hs-cairo
 SUBDIR+=	hs-carp
 SUBDIR+=	hs-categories
 SUBDIR+=	hs-cautious-file
-SUBDIR+=	hs-cereal
 SUBDIR+=	hs-cgi
 SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
