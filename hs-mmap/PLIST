@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/24 05:27:50 phonohawk Exp $
-lib/mmap-${PKGVERSION}/${HASKELL_VERSION}/HSmmap-${PKGVERSION}.o
-lib/mmap-${PKGVERSION}/${HASKELL_VERSION}/System/IO/MMap.hi
-lib/mmap-${PKGVERSION}/${HASKELL_VERSION}/System/IO/MMap.p_hi
-lib/mmap-${PKGVERSION}/${HASKELL_VERSION}/libHSmmap-${PKGVERSION}.a
-lib/mmap-${PKGVERSION}/${HASKELL_VERSION}/libHSmmap-${PKGVERSION}_p.a
-lib/mmap-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/mmap-${PKGVERSION}/LICENSE

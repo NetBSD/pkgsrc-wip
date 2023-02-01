@@ -1636,7 +1636,6 @@ SUBDIR+=	hs-magic
 SUBDIR+=	hs-markov-chain
 SUBDIR+=	hs-midi
 SUBDIR+=	hs-mime
-SUBDIR+=	hs-mmap
 SUBDIR+=	hs-mmap4
 SUBDIR+=	hs-monad-peel
 SUBDIR+=	hs-monads-fd

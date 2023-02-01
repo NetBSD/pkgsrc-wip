@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.hs-hashed-storage?=		../../wip/hs-hashed-storage
 
 .include "../../wip/hs-dataenc/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
-.include "../../wip/hs-mmap/buildlink3.mk"
+.include "../../devel/hs-mmap/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
 .endif	# HS_HASHED_STORAGE_BUILDLINK3_MK
