@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.hs-HSH+=	hs-HSH>=2.0.3
 BUILDLINK_PKGSRCDIR.hs-HSH?=	../../wip/hs-HSH
 
 .include "../../wip/hs-MissingH/buildlink3.mk"
-.include "../../wip/hs-hslogger/buildlink3.mk"
+.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"

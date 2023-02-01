@@ -10,7 +10,7 @@ COMMENT=	Library of utility functions for Haskell programmers
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-HUnit/buildlink3.mk"
 .include "../../wip/hs-QuickCheck1/buildlink3.mk"
-.include "../../wip/hs-hslogger/buildlink3.mk"
+.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
