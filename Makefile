@@ -1604,7 +1604,6 @@ SUBDIR+=	hs-explicit-exception
 SUBDIR+=	hs-explicit-iomodes
 SUBDIR+=	hs-failure
 SUBDIR+=	hs-fclabels
-SUBDIR+=	hs-fingertree
 SUBDIR+=	hs-ghc-syb-utils
 SUBDIR+=	hs-gio
 SUBDIR+=	hs-glib
