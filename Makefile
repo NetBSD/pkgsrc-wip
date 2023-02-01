@@ -1618,7 +1618,6 @@ SUBDIR+=	hs-hinstaller
 SUBDIR+=	hs-hopenssl
 SUBDIR+=	hs-hothasktags
 SUBDIR+=	hs-hslogger-template
-SUBDIR+=	hs-html
 SUBDIR+=	hs-http-attoparsec
 SUBDIR+=	hs-http-types
 SUBDIR+=	hs-husk-scheme
