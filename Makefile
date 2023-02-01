@@ -1616,7 +1616,6 @@ SUBDIR+=	hs-haskore
 SUBDIR+=	hs-highlighting-kate
 SUBDIR+=	hs-hinstaller
 SUBDIR+=	hs-hopenssl
-SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hothasktags
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template

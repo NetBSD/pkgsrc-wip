@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
-.include "../../wip/hs-hostname/buildlink3.mk"
+.include "../../sysutils/hs-hostname/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../textproc/hs-regex-posix/buildlink3.mk"
 .include "../../textproc/hs-xml/buildlink3.mk"
