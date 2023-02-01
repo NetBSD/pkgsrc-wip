@@ -1523,7 +1523,6 @@ SUBDIR+=	hisat2
 SUBDIR+=	hisat2-simde
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	honk
-SUBDIR+=	hoogle
 SUBDIR+=	hoverfly
 SUBDIR+=	howdoi
 SUBDIR+=	hpl
