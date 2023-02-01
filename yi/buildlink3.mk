@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.yi+=	yi>=0.6.3
 BUILDLINK_ABI_DEPENDS.yi+=	yi>=0.6.3.0
 BUILDLINK_PKGSRCDIR.yi?=	../../wip/yi
 
-.include "../../wip/hs-Diff/buildlink3.mk"
+.include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../wip/hs-cautious-file/buildlink3.mk"
 .include "../../wip/hs-data-accessor/buildlink3.mk"
 .include "../../wip/hs-data-accessor-monads-fd/buildlink3.mk"

@@ -1534,7 +1534,6 @@ SUBDIR+=	hplibunwind-git
 SUBDIR+=	hpoj
 SUBDIR+=	hs-Boolean
 SUBDIR+=	hs-ConfigFile
-SUBDIR+=	hs-Diff
 SUBDIR+=	hs-GLURaw
 SUBDIR+=	hs-GLUT
 SUBDIR+=	hs-HCL
