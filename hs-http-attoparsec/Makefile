@@ -9,5 +9,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
-.include "../../wip/hs-http-types/buildlink3.mk"
+.include "../../www/hs-http-types/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
