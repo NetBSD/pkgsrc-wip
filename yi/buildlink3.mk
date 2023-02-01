@@ -28,7 +28,7 @@ BUILDLINK_PKGSRCDIR.yi?=	../../wip/yi
 .include "../../wip/hs-rosezipper1/buildlink3.mk"
 .include "../../devel/hs-split/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
-.include "../../wip/hs-unix-compat/buildlink3.mk"
+.include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .endif	# YI_BUILDLINK3_MK
 
