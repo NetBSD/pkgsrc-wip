@@ -1642,7 +1642,6 @@ SUBDIR+=	hs-monads-tf
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-network-bytestring
 SUBDIR+=	hs-network-conduit
-SUBDIR+=	hs-newtype
 SUBDIR+=	hs-non-negative
 SUBDIR+=	hs-numeric-prelude
 SUBDIR+=	hs-numeric-quest
