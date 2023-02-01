@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/24 21:46:56 szptvlfn Exp $
-lib/MemoTrie-${PKGVERSION}/${HASKELL_VERSION}/Data/MemoTrie.hi
-lib/MemoTrie-${PKGVERSION}/${HASKELL_VERSION}/Data/MemoTrie.p_hi
-lib/MemoTrie-${PKGVERSION}/${HASKELL_VERSION}/HSMemoTrie-${PKGVERSION}.o
-lib/MemoTrie-${PKGVERSION}/${HASKELL_VERSION}/libHSMemoTrie-${PKGVERSION}.a
-lib/MemoTrie-${PKGVERSION}/${HASKELL_VERSION}/libHSMemoTrie-${PKGVERSION}_p.a
-lib/MemoTrie-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/MemoTrie-${PKGVERSION}/COPYING

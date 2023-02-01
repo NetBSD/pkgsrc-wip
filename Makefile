@@ -1545,7 +1545,6 @@ SUBDIR+=	hs-HsHyperEstraier
 SUBDIR+=	hs-HsOpenSSL
 SUBDIR+=	hs-HsSVN
 SUBDIR+=	hs-Lucu
-SUBDIR+=	hs-MemoTrie
 SUBDIR+=	hs-MissingH
 SUBDIR+=	hs-MonadCatchIO-mtl
 SUBDIR+=	hs-NumInstances
