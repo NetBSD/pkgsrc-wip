@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.3 2013/01/15 13:03:13 phonohawk Exp $
-
-RMD160 (cabal-install-1.16.0.2.tar.gz) = 2e19f5086cbf7f4ea9c17bf804ec6da886cd2f51
-Size (cabal-install-1.16.0.2.tar.gz) = 201232 bytes

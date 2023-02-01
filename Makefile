@@ -367,7 +367,6 @@ SUBDIR+=	c-news
 SUBDIR+=	c2go
 SUBDIR+=	c2hs
 SUBDIR+=	c2rust
-SUBDIR+=	cabal-install
 SUBDIR+=	cacti-plugin-aggregate
 SUBDIR+=	cacti-plugin-monitor
 SUBDIR+=	cacti-plugin-realtime
