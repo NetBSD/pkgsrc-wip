@@ -1737,7 +1737,6 @@ SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-xdg-basedir
 SUBDIR+=	hs-xhtml
 SUBDIR+=	hs-xmobar
-SUBDIR+=	hs-yaml
 SUBDIR+=	ht2html
 SUBDIR+=	html-xml-utils
 SUBDIR+=	html2latex
