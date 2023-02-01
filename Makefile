@@ -1582,7 +1582,6 @@ SUBDIR+=	hs-comonad-transformers
 SUBDIR+=	hs-comonads-fd
 SUBDIR+=	hs-concrete-typerep
 SUBDIR+=	hs-containers-unicode-symbols
-SUBDIR+=	hs-contravariant
 SUBDIR+=	hs-control-monad-failure
 SUBDIR+=	hs-convertible
 SUBDIR+=	hs-convertible-ascii
