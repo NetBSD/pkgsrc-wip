@@ -1555,7 +1555,6 @@ SUBDIR+=	hs-QIO
 SUBDIR+=	hs-QuickCheck1
 SUBDIR+=	hs-ReadArgs
 SUBDIR+=	hs-Tensor
-SUBDIR+=	hs-ansi-wl-pprint
 SUBDIR+=	hs-arrow-list
 SUBDIR+=	hs-ascii
 SUBDIR+=	hs-attempt
