@@ -9,7 +9,6 @@ LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
-.include "../../wip/hs-haskeline/buildlink3.mk"
 .include "../../wip/hs-knob/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"

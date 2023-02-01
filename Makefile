@@ -1612,7 +1612,6 @@ SUBDIR+=	hs-groupoids
 SUBDIR+=	hs-gtk
 SUBDIR+=	hs-hashed-storage
 SUBDIR+=	hs-hashmap
-SUBDIR+=	hs-haskeline
 SUBDIR+=	hs-haskell-lexer
 SUBDIR+=	hs-haskell-src
 SUBDIR+=	hs-haskelldb

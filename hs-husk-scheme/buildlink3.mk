@@ -10,7 +10,6 @@ BUILDLINK_ABI_DEPENDS.hs-husk-scheme+=	hs-husk-scheme>=3.17
 BUILDLINK_PKGSRCDIR.hs-husk-scheme?=	../../wip/hs-husk-scheme
 
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
-.include "../../wip/hs-haskeline/buildlink3.mk"
 .include "../../wip/hs-knob/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"

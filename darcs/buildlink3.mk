@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../wip/hs-hashed-storage/buildlink3.mk"
-.include "../../wip/hs-haskeline/buildlink3.mk"
 .include "../../wip/hs-html/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../textproc/hs-parsec/buildlink3.mk"
