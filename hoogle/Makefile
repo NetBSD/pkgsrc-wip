@@ -28,5 +28,5 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../devel/hs-vector-algorithms/buildlink3.mk"
 .include "../../wip/hs-wai/buildlink3.mk"
-.include "../../wip/hs-warp/buildlink3.mk"
+.include "../../www/hs-warp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

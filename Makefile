@@ -1732,7 +1732,6 @@ SUBDIR+=	hs-vector-th-unbox
 SUBDIR+=	hs-vte
 SUBDIR+=	hs-vty
 SUBDIR+=	hs-wai
-SUBDIR+=	hs-warp
 SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-xdg-basedir
 SUBDIR+=	hs-xmobar
