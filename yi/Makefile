@@ -35,7 +35,7 @@ CONFIGURE_ARGS+= \
 .include "../../wip/hs-pointedlist03/buildlink3.mk"
 .include "../../wip/hs-pureMD5/buildlink3.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
-.include "../../wip/hs-regex-tdfa/buildlink3.mk"
+.include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../wip/hs-rosezipper1/buildlink3.mk"
 .include "../../devel/hs-split/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
