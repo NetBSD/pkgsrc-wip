@@ -1137,7 +1137,6 @@ SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
 SUBDIR+=	ghc-core
-SUBDIR+=	ghc68
 SUBDIR+=	ghc710
 SUBDIR+=	ghmm
 SUBDIR+=	ghostpcl-urwfonts-ttf
