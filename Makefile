@@ -599,7 +599,6 @@ SUBDIR+=	d2
 SUBDIR+=	d2x-rebirth
 SUBDIR+=	dangerzone
 SUBDIR+=	daphne
-SUBDIR+=	darcs
 SUBDIR+=	darcs-to-git
 SUBDIR+=	dart-git
 SUBDIR+=	dash-el
