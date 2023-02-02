@@ -1,6 +1,10 @@
 # $NetBSD: Makefile,v 1.2 2022/09/17 10:13:56 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
+# Minimum Go version for bootstrapping is 1.17.13.
+# Go 1.17 has some concurrency issues that have been fixed in 1.18.
+GO_BOOTSTRAP_REQD=	118
+.include "../../lang/go/bootstrap.mk"
 
 GOVERSSUFFIX=	120
 GO120_VERSION=	1.20
@@ -17,11 +21,6 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
-
-# Minimum Go version for bootstrapping is 1.17.13.
-# Go 1.17 has some concurrency issues that have been fixed in 1.18.
-GOROOT_BOOTSTRAP=	${PREFIX}/118
-BUILD_DEPENDS+=		go118-[0-9]*:../../lang/go118
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
