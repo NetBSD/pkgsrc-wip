@@ -3,7 +3,7 @@
 .include "../../lang/go/version.mk"
 
 GOVERSSUFFIX=	120
-GO120_VERSION=	1.20rc2
+GO120_VERSION=	1.20
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 
 # Minimum Go version for bootstrapping is 1.17.13.
+# Go 1.17 has some concurrency issues that have been fixed in 1.18.
 GOROOT_BOOTSTRAP=	${PREFIX}/118
 BUILD_DEPENDS+=		go118-[0-9]*:../../lang/go118
 

@@ -1347,7 +1347,6 @@ go120/src/cmd/cover/testdata/pkgcfg/a/a2.go
 go120/src/cmd/cover/testdata/pkgcfg/a/a_test.go
 go120/src/cmd/cover/testdata/pkgcfg/b/b.go
 go120/src/cmd/cover/testdata/pkgcfg/b/b_test.go
-go120/src/cmd/cover/testdata/pkgcfg/go.mod
 go120/src/cmd/cover/testdata/pkgcfg/main/main.go
 go120/src/cmd/cover/testdata/profile.cov
 go120/src/cmd/cover/testdata/test.go
@@ -1961,6 +1960,7 @@ go120/src/cmd/go/testdata/script/cover_dep_loop.txt
 go120/src/cmd/go/testdata/script/cover_dot_import.txt
 go120/src/cmd/go/testdata/script/cover_error.txt
 go120/src/cmd/go/testdata/script/cover_import_main_loop.txt
+go120/src/cmd/go/testdata/script/cover_list.txt
 go120/src/cmd/go/testdata/script/cover_main_import_path.txt
 go120/src/cmd/go/testdata/script/cover_mod_empty.txt
 go120/src/cmd/go/testdata/script/cover_modes.txt
@@ -2081,6 +2081,7 @@ go120/src/cmd/go/testdata/script/list_find.txt
 go120/src/cmd/go/testdata/script/list_find_nodeps.txt
 go120/src/cmd/go/testdata/script/list_gofile_in_goroot.txt
 go120/src/cmd/go/testdata/script/list_gomod_in_gopath.txt
+go120/src/cmd/go/testdata/script/list_goroot_symlink.txt
 go120/src/cmd/go/testdata/script/list_importmap.txt
 go120/src/cmd/go/testdata/script/list_issue_56509.txt
 go120/src/cmd/go/testdata/script/list_json_fields.txt
@@ -2101,7 +2102,6 @@ go120/src/cmd/go/testdata/script/list_std.txt
 go120/src/cmd/go/testdata/script/list_std_vendor.txt
 go120/src/cmd/go/testdata/script/list_swigcxx.txt
 go120/src/cmd/go/testdata/script/list_symlink.txt
-go120/src/cmd/go/testdata/script/list_symlink_dotdotdot.txt
 go120/src/cmd/go/testdata/script/list_symlink_internal.txt
 go120/src/cmd/go/testdata/script/list_symlink_issue35941.txt
 go120/src/cmd/go/testdata/script/list_symlink_vendor_issue14054.txt
@@ -6090,6 +6090,8 @@ go120/src/internal/types/testdata/fixedbugs/issue56665.go
 go120/src/internal/types/testdata/fixedbugs/issue57155.go
 go120/src/internal/types/testdata/fixedbugs/issue57160.go
 go120/src/internal/types/testdata/fixedbugs/issue57486.go
+go120/src/internal/types/testdata/fixedbugs/issue57500.go
+go120/src/internal/types/testdata/fixedbugs/issue57522.go
 go120/src/internal/types/testdata/fixedbugs/issue6977.go
 go120/src/internal/types/testdata/spec/assignability.go
 go120/src/internal/types/testdata/spec/comparable.go
@@ -10985,6 +10987,9 @@ go120/test/fixedbugs/issue5753.go
 go120/test/fixedbugs/issue5755.dir/a.go
 go120/test/fixedbugs/issue5755.dir/main.go
 go120/test/fixedbugs/issue5755.go
+go120/test/fixedbugs/issue57778.go
+go120/test/fixedbugs/issue57823.go
+go120/test/fixedbugs/issue57846.go
 go120/test/fixedbugs/issue5793.go
 go120/test/fixedbugs/issue5809.go
 go120/test/fixedbugs/issue5820.go
