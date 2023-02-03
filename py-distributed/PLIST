@@ -121,6 +121,8 @@ ${PYSITELIB}/distributed/deploy/spec.py
 ${PYSITELIB}/distributed/deploy/spec.pyc
 ${PYSITELIB}/distributed/deploy/ssh.py
 ${PYSITELIB}/distributed/deploy/ssh.pyc
+${PYSITELIB}/distributed/deploy/subprocess.py
+${PYSITELIB}/distributed/deploy/subprocess.pyc
 ${PYSITELIB}/distributed/deploy/utils.py
 ${PYSITELIB}/distributed/deploy/utils.pyc
 ${PYSITELIB}/distributed/diagnostics/__init__.py
