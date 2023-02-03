@@ -1,11 +1,22 @@
 @comment $NetBSD$
+include/blosc-export.h
+include/blosc.h
+lib/libblosc.a
+lib/libblosc.so
+lib/libblosc.so.1
+lib/libblosc.so.1.21.3
+lib/pkgconfig/blosc.pc
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/blosc/__init__.py
 ${PYSITELIB}/blosc/__init__.pyc
 ${PYSITELIB}/blosc/__init__.pyo
+${PYSITELIB}/blosc/_version.py
+${PYSITELIB}/blosc/_version.pyc
+${PYSITELIB}/blosc/_version.pyo
 ${PYSITELIB}/blosc/blosc_extension.so
 ${PYSITELIB}/blosc/test.py
 ${PYSITELIB}/blosc/test.pyc

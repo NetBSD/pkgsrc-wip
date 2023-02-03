@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2015/04/14 11:56:20 thomasklausner Exp $
 
-DISTNAME=	blosc-1.5.1
+DISTNAME=	blosc-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blosc/}
@@ -10,10 +10,21 @@ HOMEPAGE=	http://python-blosc.blosc.org/
 COMMENT=	Python wrapper for the Blosc compression library
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c
+USE_LANGUAGES+=	c
+USE_LANGUAGES+= c++
 
+USE_TOOLS+=	cmake
+USE_TOOLS+=	ninja
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-scikit-build>=0.15.0:../../wip/py-scikit-build
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 MAKE_ENV+=	BLOSC_DIR=${BUILDLINK_PREFIX.blosc}
-PYDISTUTILSPKG=	yes
+# Address an erron
+PYSETUPARGS+=	-DCMAKE_SKIP_RPATH:BOOL=YES
+
+do-test:
+	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} \
+	 -m blosc.test)
 
 .include "../../devel/blosc/buildlink3.mk"
 .include "../../lang/python/egg.mk"
