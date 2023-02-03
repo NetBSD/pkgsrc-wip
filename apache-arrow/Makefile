@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 # These packages are built within arrow, and it
 # looks difficult to decouple them
 # They come from ./cpp/thirdparty/versions.txt
-XSIMD=		8.1.0.tar.gz
+XSIMD=		9.0.1.tar.gz
 JEMALLOC=	jemalloc-5.3.0.tar.bz2
 
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
@@ -54,7 +54,7 @@ CONFIGURE_ENV+=	ARROW_XSIMD_URL=/${DISTDIR}/${XSIMD}
 CMAKE_ARGS+=	-DARROW_BUILD_TESTS=OFF
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.900.0.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
+	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.${APACHE_ARROW_VERSION:S/.//g}.0.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
 
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 # Needs gnu install for -v option
