@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	scikit-build-0.15.0
+DISTNAME=	scikit-build-0.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build/}

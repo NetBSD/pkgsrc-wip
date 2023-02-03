@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (scikit-build-0.15.0.tar.gz) = 351e69568df4b376370ff45be592b59c4d894347ddde34a7ebadf9fa135570a9
-SHA512 (scikit-build-0.15.0.tar.gz) = 4d9b1d06d48708ff4f2f5fa8c8f264c7ca85946d5842a1254930d9449d6b6386c17392473c3c85147f6573f7256c94c927962cb56fa23a90a5b442de8de8d727
-Size (scikit-build-0.15.0.tar.gz) = 268691 bytes
+BLAKE2s (scikit-build-0.16.6.tar.gz) = 8ada3929f7bc9c1ffa8bb2fd149acd4ebf554dbbe1dbf294e71fb9ee9a2ceb4c
+SHA512 (scikit-build-0.16.6.tar.gz) = f36a46845420b441ca158ea05bc20023238afdf81b2108554a52a4a2be0cb19ef6b2729997199d9a9d18841c8470df8f7e7a986a86e1172328f0963f3a015f3d
+Size (scikit-build-0.16.6.tar.gz) = 272201 bytes
 SHA1 (patch-skbuild_platform__specifics_platform__factory.py) = 76012616d989abdf55a827df88ed02f6490a5b3e
 SHA1 (patch-tests_test__platform.py) = 590e3162c82af9d3ee742df47c48853c4706d93b
