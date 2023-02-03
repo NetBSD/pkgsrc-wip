@@ -18,7 +18,8 @@ USE_TOOLS+=	ninja
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-scikit-build>=0.15.0:../../wip/py-scikit-build
 BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-MAKE_ENV+=	BLOSC_DIR=${BUILDLINK_PREFIX.blosc}
+MAKE_ENV+=USE_SYSTEM_BLOSC=1
+MAKE_ENV+=Blosc_ROOT=${BUILDLINK_PREFIX.blosc}
 # Address an erron
 PYSETUPARGS+=	-DCMAKE_SKIP_RPATH:BOOL=YES
 

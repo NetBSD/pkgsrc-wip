@@ -1,11 +1,4 @@
 @comment $NetBSD$
-include/blosc-export.h
-include/blosc.h
-lib/libblosc.a
-lib/libblosc.so
-lib/libblosc.so.1
-lib/libblosc.so.1.21.3
-lib/pkgconfig/blosc.pc
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
