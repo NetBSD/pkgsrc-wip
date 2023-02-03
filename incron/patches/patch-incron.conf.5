@@ -1,0 +1,47 @@
+$NetBSD$
+
+Do not hardcode system paths. This is pkgsrc-specific.
+
+--- incron.conf.5.orig	2023-02-03 02:31:41.398380716 +0000
++++ incron.conf.5
+@@ -1,8 +1,8 @@
+ .TH "incron.conf" "5" "0.5.10" "Lukas Jelinek" "incron documentation"
+ .SH "NAME"
+-/etc/incron.conf \- main config file for inotify cron (incron)
++@PKG_SYSCONFBASE@/incron.conf \- main config file for inotify cron (incron)
+ .SH "DESCRIPTION"
+-The file \fI/etc/incron.conf\fR contains default settings for the program
++The file \fI@PKG_SYSCONFBASE@/incron.conf\fR contains default settings for the program
+ .BR incrond.
+ Each line holds a single value pair in the form \fIoption\fR = \fIvalue\fR.
+ Comment lines must have a hash sign (#) in the first line.
+@@ -11,24 +11,24 @@ The valid configuration options are:
+ .TP 
+ \fBsystem_table_dir\fP
+ This directory is examined by incrond for system table files.
+-.BR Default : \fI/etc/incron.d\fR
++.BR Default : \fI@PKG_SYSCONFBASE@/incron.d\fR
+ .TP 
+ \fBuser_table_dir\fP
+ This directory is examined by incrond for user table files.
+-.BR Default : \fI/var/spool/incron\fR
++.BR Default : \fI@VARBASE@/spool/incron\fR
+ .TP 
+ \fBallowed_users\fP
+ This file contains users allowed to use incron.
+-.BR Default : \fI/etc/incron.allow\fR
++.BR Default : \fI@PKG_SYSCONFBASE@/incron.allow\fR
+ .TP 
+ \fBdenied_users\fP
+ This file contains users denied to use incron.
+-.BR Default : \fI/etc/incron.deny\fR
++.BR Default : \fI@PKG_SYSCONFBASE@/incron.deny\fR
+ .TP 
+ \fBlockfile_dir\fP
+ This directory is used for creating a lock avoiding to run multiple instances
+ of incrond.
+-.BR Default : \fI/var/run\fR
++.BR Default : \fI@VARBASE@/run\fR
+ .TP 
+ \fBlockfile_name\fP
+ This name (appended by '.pid') is used for creating a lock avoiding to run multiple instances of incrond.

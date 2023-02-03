@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/incrontab
+man/man1/incrontab.1
+man/man5/incron.conf.5
+man/man5/incrontab.5
+man/man8/incrond.8
+sbin/incrond
+share/examples/incron/incron.conf.example

@@ -1,0 +1,19 @@
+$NetBSD$
+
+Fix build on non-Linux systems. See files/glibc-compat.*
+
+--- Makefile.orig	2012-04-06 22:19:27.000000000 +0000
++++ Makefile
+@@ -26,6 +26,12 @@ PROGRAMS = incrond incrontab
+ INCROND_OBJ = icd-main.o incrontab.o inotify-cxx.o usertable.o strtok.o appinst.o incroncfg.o appargs.o
+ INCRONTAB_OBJ = ict-main.o incrontab.o inotify-cxx.o strtok.o incroncfg.o appargs.o
+ 
++CXXFLAGS += -include glibc-compat.h
++INCROND_OBJ += glibc-compat.o
++glibc-compat.o: glibc-compat.h glibc-compat.c
++.c.o:
++	$(CXX) -c $(CXXFLAGS) -o $@ $<
++
+ 
+ all:	$(PROGRAMS)
+ 

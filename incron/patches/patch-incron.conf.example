@@ -1,0 +1,53 @@
+$NetBSD$
+
+Do not hardcode system paths. This is pkgsrc-specific.
+
+--- incron.conf.example.orig	2023-02-02 19:43:38.785265088 +0000
++++ incron.conf.example
+@@ -8,7 +8,7 @@
+ # Parameter:   system_table_dir
+ # Meaning:     system table directory
+ # Description: This directory is examined by incrond for system table files.
+-# Default:     /etc/incron.d
++# Default:     @PKG_SYSCONFBASE@/incron.d
+ #
+ # Example:
+ # system_table_dir = /var/spool/incron.systables
+@@ -17,7 +17,7 @@
+ # Parameter:   user_table_dir
+ # Meaning:     user table directory
+ # Description: This directory is examined by incrond for user table files.
+-# Default:     /var/spool/incron
++# Default:     @VARBASE@/spool/incron
+ #
+ # Example:
+ # user_table_dir = /var/spool/incron.usertables
+@@ -26,16 +26,16 @@
+ # Parameter:   allowed_users
+ # Meaning:     allowed users list file
+ # Description: This file contains users allowed to use incron.
+-# Default:     /etc/incron.allow
++# Default:     @PKG_SYSCONFBASE@/incron.allow
+ #
+ # Example:
+-# allowed_users = /etc/incron/allow
++# allowed_users = @PKG_SYSCONFBASE@/incron/allow
+ 
+ 
+ # Parameter:   denied_users
+ # Meaning:     denied users list file
+ # Description: This file contains users denied to use incron.
+-# Default:     /etc/incron.deny
++# Default:     @PKG_SYSCONFBASE@/incron.deny
+ #
+ # Example:
+ # denied_users = /etc/incron/deny
+@@ -45,7 +45,7 @@
+ # Meaning:     application lock file directory
+ # Description: This directory is used for creating a lock avoiding to run
+ #              multiple instances of incrond.
+-# Default:     /var/run
++# Default:     @VARBASE@/run
+ #
+ # Example:
+ # lockfile_dir = /tmp

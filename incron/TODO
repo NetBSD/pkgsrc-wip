@@ -1,0 +1,35 @@
+<!-- -*- markdown -*- -->
+
+1. This doesn't properly work on NetBSD 9 due to the lack of
+   `NOTE_CLOSE_WRITE` support in `kqueue(2)`.
+2. When at least one user has an incrontab entry, `incrond` crashes on exit
+   by throwing `InotifyException` from `Inotify::Remove()` which is somehow
+   not caught by `main()`.
+
+   * I have no clue why it's not caught. `main()` does have a try...catch
+     block.
+   * The exception is thrown because `inotify_rm_watch(3)` returns
+     -1/EINVAL. This doesn't make any sense because chasing it with GDB
+     reveals that the libinotify worker thread does return 0 from
+     `worker_remove()`. Its direct caller, `process_command()`, looks fishy
+     because `worker_cmd *cmd` is shared by two threads in a rather unusual
+     manner, that is:
+
+     1. The kqueue thread (the caller of public API) first creates a
+        `worker_cmd`.
+     2. It then writes its pointer value to a pipe.
+     3. Wait for the completion with `ik_sem_wait()` in `compat.h`, which
+        locks a mutex and calls `pthread_cond_wait(3)`.
+     4. The worker thread is woken up when the pointer is written to the
+        pipe.
+     5. It reads the pointer value from the pipe, writes the result of the
+        command to the `worker_cmd`, then performs `ik_sem_post()` to
+        signal the completion by locking the mutex, calling
+        `pthread_cond_broadcast(3)`, and then unlocking it.
+     6. The caller is woken up, unlocks the mutex, then reads the
+        result. The result, though, appears to be corrupt.
+
+     So, the worker thread modifies the contents of `worker_cmd` before
+     locking the mutex. And the caller thread observes its contents after
+     unlocking the mutex. Is this really safe? I don't know, as I'm not an
+     expert in this area.

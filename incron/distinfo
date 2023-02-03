@@ -1,0 +1,15 @@
+$NetBSD$
+
+BLAKE2s (incron-0.5.10.tar.gz) = 303c2100d046848c38de70f4165388f5235ad0810c09e04e77d0788df27298ad
+SHA512 (incron-0.5.10.tar.gz) = 653817c35059b5305e059137eac78f21a7d32ccc03fc92ba282eab66ba5f3d2c83a1a571ebdcead8df3ed500a7fd30cfa46375c635450b08d2bd8d00dfe86df3
+Size (incron-0.5.10.tar.gz) = 203158 bytes
+SHA1 (patch-Makefile) = 049b672c11654b6b7de0f07080d4166e82fa31a3
+SHA1 (patch-appinst.cpp) = 6f8e10cfe16e9500fedfc69f117e976c6601205d
+SHA1 (patch-appinst.h) = c5069c66f7fe6f5f9f8004b39cca04cd67daa244
+SHA1 (patch-icd-main.cpp) = 1e8b98efd13358707a9463eafa7cd328d6fb7d78
+SHA1 (patch-ict-main.cpp) = d4e86b8e26c942f5324f22014a6bd44d5f73e7c9
+SHA1 (patch-incron.conf.5) = 0940d51beb00f5d978077234a79c9b9f542fa3f0
+SHA1 (patch-incron.conf.example) = ea6155eaa38c5ceaf4abf9f73dca4de3966cb173
+SHA1 (patch-incron.h) = f647b9c7011c76c91b643fd4f96394c30ac1f843
+SHA1 (patch-incroncfg.cpp) = c9c5bf41ef35f7cd0e0c02b546d5fa03800dfaca
+SHA1 (patch-inotify-cxx.h) = 44d06f77c6542dd4b29c005028f4107c15310fd7
