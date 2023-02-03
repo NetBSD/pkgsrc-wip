@@ -490,6 +490,8 @@ ${PYSITELIB}/dask/tests/test_utils.py
 ${PYSITELIB}/dask/tests/test_utils.pyc
 ${PYSITELIB}/dask/tests/test_utils_test.py
 ${PYSITELIB}/dask/tests/test_utils_test.pyc
+${PYSITELIB}/dask/tests/warning_aliases.py
+${PYSITELIB}/dask/tests/warning_aliases.pyc
 ${PYSITELIB}/dask/threaded.py
 ${PYSITELIB}/dask/threaded.pyc
 ${PYSITELIB}/dask/typing.py
