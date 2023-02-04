@@ -931,7 +931,6 @@ share/zabbix/include/classes/import/converters/CDefaultImportConverter.php
 share/zabbix/include/classes/import/converters/CImportConverterFactory.php
 share/zabbix/include/classes/import/converters/CImportDataNormalizer.php
 share/zabbix/include/classes/import/converters/CTemplateScreenConverter.php
-share/zabbix/include/classes/import/converters/CTransformImportConverter.php
 share/zabbix/include/classes/import/importers/CHostImporter.php
 share/zabbix/include/classes/import/importers/CImporter.php
 share/zabbix/include/classes/import/importers/CMapImporter.php
