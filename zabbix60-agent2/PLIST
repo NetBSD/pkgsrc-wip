@@ -1,0 +1,7 @@
+@comment $NetBSD$
+man/man8/zabbix_agent2.8
+sbin/zabbix_agent2
+share/examples/${PKGBASE}/zabbix_agent2.conf
+@pkgdir share/${PKGBASE}
+@pkgdir lib/modules
+@pkgdir etc/zabbix_agentd.conf.d
