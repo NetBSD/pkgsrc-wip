@@ -33,4 +33,4 @@ but the manpage says: no longer used by programs ... handled by PAM now
 - This package has known vulnerabilities, please investigate and fix
   if possible:
    CVE-2005-4890, CVE-2011-0721, CVE-2013-4235, CVE-2016-6252,
-   CVE-2017-12424, CVE-2018-7169, CVE-2019-19882
+   CVE-2017-12424, CVE-2018-7169, CVE-2019-19882, CVE-2023-0634
