@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (stravalib-1.1.0.tar.gz) = 7d7b674f7a7e4f94ad1ddfb7be893ffcba7452a94d0c9a7b185c3546e6ff7a37
+SHA512 (stravalib-1.1.0.tar.gz) = 59587fe10613d2e844a8819a9f043f0729ddc158450dafb56cdb550deaa2305985f750b2665da3a218611230b558f584a4acb2713bd7f1f878449fc47ef0beaf
+Size (stravalib-1.1.0.tar.gz) = 146966 bytes
