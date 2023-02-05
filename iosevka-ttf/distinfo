@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (super-ttc-iosevka-17.1.0.zip) = c2a2ef5f4e80b93c1c57422ee40e224b322ba92d7a818838aec03e924a58a2e2
-SHA512 (super-ttc-iosevka-17.1.0.zip) = 49b800e044a6c3f45c14bd85bc9784797220c1b7017adf4e4562371b4acdc214b34c871b4927f716dca48dbdc0e512ff364a774a197c3e467f8e083cd1154107
-Size (super-ttc-iosevka-17.1.0.zip) = 64393153 bytes
+BLAKE2s (super-ttc-iosevka-18.0.0.zip) = 2777e554ce1a854cc9749f326790fda5e6b8c8de779cf3dfef10e9c281e91663
+SHA512 (super-ttc-iosevka-18.0.0.zip) = 5334e48b177855c8f20757f1666750a1c0aed3091fec6b5fde406dc5cb928a78560e9b772f7dbb179a310d08674de953395c33b084b471f96827a94b387e9426
+Size (super-ttc-iosevka-18.0.0.zip) = 65205667 bytes
