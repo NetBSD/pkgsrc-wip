@@ -2,16 +2,19 @@
 
 DISTNAME=	vega_datasets-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	category python
+CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vega_datasets/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://github.com/altair-viz/vega_datasets
+HOMEPAGE=	https://github.com/altair-viz/vega_datasets
 COMMENT=	Python package for offline access to Vega datasets
 LICENSE=	mit
 
-#DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23.0:../../math/py-pandas
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.1:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.5.0:../../math/py-pandas
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.1:../../devel/py-test
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s --doctest-modules vega_datasets
 
 USE_LANGUAGES=	# none
 
