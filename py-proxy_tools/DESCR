@@ -1,0 +1,5 @@
+I'm just a proxy
+
+Loveingly extracted from werkzeug. A very useful proxy implementation,
+that I found to be useful outside the web context - hence the
+extraction.
