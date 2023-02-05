@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/moses-palmer/pystray
 COMMENT=	Create a system tray icon
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
