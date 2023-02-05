@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/r0x0r/pywebview
 COMMENT=	Lightweight wrapper around a webview component
 LICENSE=	2-clause-bsd
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-bottle-[0-9]*:../../www/py-bottle
 DEPENDS+=	${PYPKGPREFIX}-proxy_tools-[0-9]*:../../wip/py-proxy_tools
