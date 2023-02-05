@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (jsonpatch-1.32.tar.gz) = 194c83d81469bcecad8b20525317377c2ffed34bbeb60f642d8f401588c53b1c
+SHA512 (jsonpatch-1.32.tar.gz) = edd5d7433b1bd0513b9998c989778ae3ede47251aab2e19b7111fe5f6ae7fda75202df473f258cd13e73aae1f5908d85ec046c59d99ad8264a454a84a00bf75f
+Size (jsonpatch-1.32.tar.gz) = 20853 bytes
