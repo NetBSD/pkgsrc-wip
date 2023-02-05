@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pywebview-4.0.1.tar.gz) = 841f0fa7df91123f99481fd6deccaf63bf912d0c68238941b665d4a1a86142ac
+SHA512 (pywebview-4.0.1.tar.gz) = 193841e3ba692b7e16cac5d3daa56085e6579217e109fcbc7dbe96273f4c1585e55ace03c2f6cc513c8fa993480550b63205b6602e9e9bbcb53fb2f55aa6bd23
+Size (pywebview-4.0.1.tar.gz) = 390221 bytes
