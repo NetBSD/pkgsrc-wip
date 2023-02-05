@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (email-oauth2-proxy-2022.12.14.tar.gz) = 680b3632438331545860f2826fbc218f3e15b550aa448bf764ce7bbd1b1ed011
+SHA512 (email-oauth2-proxy-2022.12.14.tar.gz) = 82849e5ec58b0b9fa02af3f8c99d376888b795ede3fb9e0f85a40180a0d76fa59bbb6d7a2d4bc625eecbf1db99574b54748bf41126566a9f2b2eca90197801fe
+Size (email-oauth2-proxy-2022.12.14.tar.gz) = 55690 bytes
