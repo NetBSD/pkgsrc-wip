@@ -125,6 +125,7 @@ include/gnucash/gnc-quotes.hpp
 include/gnucash/gnc-rational-rounding.hpp
 include/gnucash/gnc-rational.hpp
 include/gnucash/gnc-recurrence.h
+include/gnucash/gnc-report-combo.h
 include/gnucash/gnc-report.h
 include/gnucash/gnc-session.h
 include/gnucash/gnc-splash.h
