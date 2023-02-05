@@ -1,3 +1,6 @@
+Ref.
+  https://bugs.launchpad.net/cloud-init/+bug/2006065
+
 Figure out how to install this thing.
  * Makefile insists on tests succeeding.
  * Makefile has no "install" target.
