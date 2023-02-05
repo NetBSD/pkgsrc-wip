@@ -16,11 +16,13 @@ WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${FSSPEC_VERSION}
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+
 TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.14.1:../../devel/py-wrapt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.18.3:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-vcr>=1.0.2:../../wip/py-test-vcr
+# TEST_DEPENDS+=	${PYPKGPREFIX}-s3fs>=2023.1.0:../../wip/py-s3fs
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s

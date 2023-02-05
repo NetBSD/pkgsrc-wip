@@ -2,8 +2,8 @@
 
 # Prefer pulling from github instead of pypi
 # so that we can run tests
-GITHUB_TAG=	2022.12.0
-GITHUB_PROJECT=fastparquet
+GITHUB_TAG=	2023.1.0
+GITHUB_PROJECT=	fastparquet
 DISTNAME=	fastparquet-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
@@ -17,8 +17,10 @@ COMMENT=	Python implementation of the parquet format,
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-cramjam>=2.3.0:../../wip/py-cramjam
@@ -26,6 +28,9 @@ DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.3.0:../../wip/py-fsspec
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
+TEST_DEPENDS+=	${PYPKGPREFIX}-rapidjson-[0-9]*:../../textproc/py-rapidjson
+TEST_DEPENDS+=	${PYPKGPREFIX}-orjson-[0-9]*:../../wip/py-orjson
 
 post-extract:
 	${CP} ${FILESDIR}/PKG-INFO ${WRKSRC}

@@ -1,12 +1,12 @@
 @comment $NetBSD$
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/INSTALLER
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/LICENSE
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/METADATA
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/RECORD
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/REQUESTED
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/WHEEL
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/direct_url.json
+${PYSITELIB}/fastparquet-2022.12.0.dist-info/top_level.txt
 ${PYSITELIB}/fastparquet/__init__.py
 ${PYSITELIB}/fastparquet/__init__.pyc
 ${PYSITELIB}/fastparquet/_version.py
