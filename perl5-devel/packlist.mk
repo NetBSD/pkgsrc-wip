@@ -28,7 +28,7 @@ _PERL5_PACKLIST_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 PERL5_USE_PACKLIST?=	yes
-.if !empty(PERL5_USE_PACKLIST:M[Yy][Ee][Ss])
+.if ${PERL5_USE_PACKLIST:tl} == yes
 # XXX: still experimental, but many packages already work
 #PERL5_PACKLIST?=	auto/${DISTNAME:C/-[0-9].*$//:C,-,/,g}/.packlist
 .endif

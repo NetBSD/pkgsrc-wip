@@ -10,7 +10,7 @@ CHECK_BUILTIN.pthread:=	yes
 CHECK_BUILTIN.pthread:=	no
 
 # By default, build with threads only if the threads are native.
-.if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
+.if ${USE_BUILTIN.pthread:tl} == yes
 PERL5_BUILD_THREADS_SUPPORT=	yes
 .else
 PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}

@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 _TOOLS_USE_PKGSRC.perl=	yes
 
 # do not change this LOCALBASE to PREFIX; that breaks the install of perl modules
-PERL5=		${LOCALBASE}/bin/perl
+PERL5=		${PREFIX}/bin/perl
 
 pkgbase := perl
 .include "../../mk/pkg-build-options.mk"
