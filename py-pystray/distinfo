@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pystray-0.19.4.tar.gz) = d320f81726f3b11c8deca5bf542950195b9257320941cbcaae2c627cbaef5411
+SHA512 (pystray-0.19.4.tar.gz) = b3adeb3c4efa1514a534446037a8d3dac3c1e68eec9d14026ae2840fd606c943af6861e1f8c28b87374b9fc130b1cbd87e9df27051c0ab131df2b71f0824867b
+Size (pystray-0.19.4.tar.gz) = 41421 bytes
