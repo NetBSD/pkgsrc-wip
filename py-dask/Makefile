@@ -42,6 +42,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} dask dask-${PYVERSSUFFIX}
+
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"

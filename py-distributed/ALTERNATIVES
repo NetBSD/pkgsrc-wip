@@ -1,0 +1,3 @@
+bin/dask-scheduler @PREFIX@/bin/dask-scheduler-@PYVERSSUFFIX@
+bin/dask-ssh @PREFIX@/bin/dask-ssh-@PYVERSSUFFIX@
+bin/dask-worker @PREFIX@/bin/dask-worker-@PYVERSSUFFIX@
