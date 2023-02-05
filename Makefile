@@ -1372,7 +1372,6 @@ SUBDIR+=	go-uuid-myesui
 SUBDIR+=	go-xid
 SUBDIR+=	go-zeroconf
 SUBDIR+=	go-zipexe
-SUBDIR+=	go120
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldendict
