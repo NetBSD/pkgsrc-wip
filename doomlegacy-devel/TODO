@@ -1,8 +1,9 @@
 
 Part 24: Middle-texture rendering
 =================================
-[ ] Some middle-textures are rendered wrong in Pagodia
+[X] Some middle-textures are rendered wrong in Pagodia
     => Reported upstream in ticket #687
+    => Fixed with SVN revision 1647
 
 
 Part 25: Add UMAPINFO support
