@@ -12,6 +12,8 @@ share/doc/lima/README.md
 share/doc/lima/ROADMAP.md
 share/doc/lima/SECURITY.md
 share/doc/lima/VERSION
+share/doc/lima/docs/deprecated.md
+share/doc/lima/docs/experimental.md
 share/doc/lima/docs/images/lima-logo-01.svg
 share/doc/lima/docs/images/lima-sequence-diagram.png
 share/doc/lima/docs/images/lima-sequence-diagram.puml
@@ -20,6 +22,7 @@ share/doc/lima/docs/mount.md
 share/doc/lima/docs/multi-arch.md
 share/doc/lima/docs/network.md
 share/doc/lima/docs/talks.md
+share/doc/lima/docs/vmtype.md
 share/doc/lima/examples
 share/lima/examples/README.md
 share/lima/examples/almalinux-8.yaml
@@ -41,6 +44,7 @@ share/lima/examples/docker.yaml
 share/lima/examples/experimental/9p.yaml
 share/lima/examples/experimental/opensuse-tumbleweed.yaml
 share/lima/examples/experimental/riscv64.yaml
+share/lima/examples/experimental/vz.yaml
 share/lima/examples/faasd.yaml
 share/lima/examples/fedora.yaml
 share/lima/examples/k3s.yaml
