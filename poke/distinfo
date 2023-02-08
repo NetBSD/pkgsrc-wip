@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (poke-2.4.tar.gz) = c96f12a5bd766bfd980f741e5d1f222b97711f13da8f86f1e6acdb422e7d9176
-SHA512 (poke-2.4.tar.gz) = 6fa1097a5cbbd4171b6a390934c5648b4c382b8b8c8dd4955bba82cb57107f67e23b39f2df2081904a02f457e6c5b2d10baed710da3ed4b9b9eab3f4127e12bc
-Size (poke-2.4.tar.gz) = 7372092 bytes
+BLAKE2s (poke-3.0.tar.gz) = c29e1eee92c0b63b2fef37a7e7b7ba1990999bfb130a8a3139ef771db121810a
+SHA512 (poke-3.0.tar.gz) = 5b786cdfae732a1f7196b0c4bf271c97f204f8fe9de9b34d92704f35150c8abfc2c080940d67efac63e3e82d0d4afe2fde4b75066faf9f4d1e9df6b6f62edb96
+Size (poke-3.0.tar.gz) = 7510801 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	poke-2.4
+DISTNAME=	poke-3.0
 CATEGORIES=	editors
 MASTER_SITES=	https://ftp.gnu.org/gnu/poke/
 
@@ -21,5 +21,4 @@ CONFIGURE_ARGS+=	--enable-mi
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
