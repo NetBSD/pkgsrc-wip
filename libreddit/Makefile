@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libreddit-0.24.1
+DISTNAME=	libreddit-0.29.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libreddit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
