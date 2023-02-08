@@ -1,0 +1,317 @@
+textproc/miller: update to miller-6.6.0
+
+v6.6.0
+======
+
+What's Changed
+
+Features
+
+  * mlr unspace verb by @johnkerl in #1167
+
+Bugfixes
+
+  * Add doc info on DSL code-comment syntax by @johnkerl in #1165
+  * Fix typos by @jwilk in #1135
+  * Fix typo in mlr put documentation by @johnkerl in #1140
+  * Fix #1146: bug in lo/hi limits for non-auto histogram by @johnkerl in #1157
+  * Fix #1102: empty-string field in single-column TSV should not be a schema-restart by @johnkerl in #1163
+  * Fix #1164: regression on CSV blank-line handling by @johnkerl in #1168
+
+Internal
+
+  * Bump github/codeql-action from 2.1.33 to 2.1.35 by @dependabot in #1137
+  * Bump actions/setup-go from 3.3.1 to 3.4.0 by @dependabot in #1136
+  * Bump github/codeql-action from 2.1.35 to 2.1.36 by @dependabot in #1143
+  * Bump actions/checkout from 3.1.0 to 3.2.0 by @dependabot in #1145
+  * Bump goreleaser/goreleaser-action from 3.2.0 to 4.1.0 by @dependabot in #1147
+  * Bump actions/setup-go from 3.4.0 to 3.5.0 by @dependabot in #1148
+  * Bump github/codeql-action from 2.1.36 to 2.1.37 by @dependabot in #1151
+  * Bump actions/cache from 3.0.11 to 3.2.0 by @dependabot in #1155
+  * Bump actions/cache from 3.2.0 to 3.2.1 by @dependabot in #1156
+  * Bump actions/cache from 3.2.1 to 3.2.2 by @dependabot in #1160
+  * Bump github.com/mattn/go-isatty from 0.0.16 to 0.0.17 by @dependabot in #1162
+
+v6.5.0
+======
+
+What's Changed
+
+Features:
+
+  * Restore the --jvquoteall flag by @johnkerl in #1083
+  * Restore --quote-all for CSV output by @johnkerl in #1084
+
+Bugfixes:
+
+  * Fix labels for mlr histogram --auto by @johnkerl in #1089
+  * Correctly support multiple regexes in mlr reshape -r by @johnkerl in #1091
+  * Check -- terminator on --mfrom by @johnkerl in #1098
+  * Type-safety in exec by @johnkerl in #1099
+  * Don't double-quote a CSV field only for having a leading space by @johnkerl in #1101
+
+Performance/memory-reduction:
+
+  * Use int8 for mvtype (memory reduction) by @johnkerl in #1130
+  * Exclude median from summary default by @johnkerl in #1131
+  * More mlrval size-reduction by @johnkerl in #1132
+  * Convert mlrval polymorphism from struct to unionish interface by @johnkerl in #1133
+
+Minor/internal:
+
+  * Account for varying mlr locations by @skitt in #1086
+  * Account for varying mlr locations, continued by @johnkerl in #1087
+  * [StepSecurity] ci: Harden GitHub Actions by @step-security-bot in #1107
+  * Bump github.com/pkg/profile from 1.6.0 to 1.7.0 by @dependabot in #1110
+  * Bump github/codeql-action from 2.1.28 to 2.1.33 by @dependabot in #1126
+  * Bump actions/cache from 3 to 3.0.11 by @dependabot in #1109
+  * Bump actions/upload-artifact from 3.1.0 to 3.1.1 by @dependabot in #1112
+  * Bump github.com/stretchr/testify from 1.8.0 to 1.8.1 by @dependabot in #1113
+  * Miller 6.5.0 by @johnkerl in #1134
+
+v5.10.4
+=======
+
+Miller 5 is long-gone; 6.0.0 was released almost a year ago. Yet issue #1108 reports a critical memory-corruption bug on 5.10.3;
+this fixes that.
+
+v6.4.0
+======
+
+What's Changed
+
+Major:
+
+  * mlr summary verb by @johnkerl in #1056
+  * feat: system/exec() function call ( #1043) by @forbesmyester in #1067 and #1071
+  * Support simplified sort-map-by-value in the DSL by @johnkerl in #1069
+  * mlr cat --filename / --filenum by @johnkerl in #1080
+  * Allow multi-line string literals in the DSL by @johnkerl in #1070
+
+Minor:
+
+  * Make PPRINT empty-string markers readable as such by @johnkerl in #1059
+  * Allow "\n" in mlr repl prompt by @johnkerl in #1058
+
+Bugfixes:
+
+  * [Docs] moving --xvright out of the FLATTEN-UNFLATTEN FLAGS section by @trantor in #1065
+  * Fix doc typo by @luzpaz in #1054
+  * Fix natsort of empty strings; support mlr sort -rt same as -tr by @johnkerl in #1068
+
+Internal:
+
+  * Reduce number of os.Exit callsites, part 1 of n by @johnkerl in #1055
+  * delete unreachable test code caused by os.Exit by @Abirdcfly in #1073
+  * Bump github.com/mattn/go-isatty from 0.0.14 to 0.0.16 by @dependabot in #1074
+
+v6.3.0
+======
+
+What's Changed
+
+Key feature: output colorization on Windows thanks to @tiesmaster:
+
+  * Enable ANSI escape-sequence processing on Windows by @tiesmaster in #1045
+  * Enable output colorization on Windows by default by @johnkerl in #1051
+
+Support for Latin-1:
+
+  * DSL functions and verbs for UTF-8 <-> Latin-1 by @johnkerl in #997
+
+Features:
+
+  * Re-use whitespace regexp in clean_whitespace by @johnkerl in #994
+  * Add line/column info for DSL runtime non-parse failures by @johnkerl in #998
+  * Allow x ** - y and x ** + y in the DSL grammar by @johnkerl in #1021
+  * Let + be an alias for then by @johnkerl in #1049
+
+Docs:
+
+  * helm/kubectl examples in webdocs by @johnkerl in #1005
+
+Bugfixes:
+
+  * Accept + in exponent of scientific-notation floating-point DSL literals by @johnkerl in #1020
+  * Fix ASCII vs UTF-8 in TSV writer by @johnkerl in #1023
+  * Avoid panic when the command line ends in 'then' by @johnkerl in #1033
+  * Fix panic on 'mlr sort -n' by @johnkerl in #1004
+  * Fix issue 1037 by @johnkerl in #1047
+  * Fix issue 1032 by @johnkerl in #1048
+
+Dependencies:
+
+  * Bump actions/cache from 2 to 3 by @dependabot in #1000
+  * Bump github.com/stretchr/testify from 1.7.1 to 1.7.2 by @dependabot in #1034
+  * Bump github.com/stretchr/testify from 1.7.2 to 1.7.3 by @dependabot in #1038
+  * Bump github.com/stretchr/testify from 1.7.3 to 1.7.4 by @dependabot in #1040
+  * Bump github.com/stretchr/testify from 1.7.4 to 1.7.5 by @dependabot in #1042
+  * Bump github.com/stretchr/testify from 1.7.5 to 1.8.0 by @dependabot in #1044
+  * Bump actions/upload-artifact from 2 to 3 by @dependabot in #1010
+  * Bump actions/setup-go from 2 to 3 by @dependabot in #1009
+  * Bump github.com/lestrrat-go/strftime from 1.0.5 to 1.0.6 by @dependabot in #1012
+  * Bump github/codeql-action from 1 to 2 by @dependabot in #1015
+  * Bump goreleaser/goreleaser-action from 2 to 3 by @dependabot in #1027
+
+v6.2.0
+======
+
+Overview
+
+The primary purpose of this release is to restore --tsvlite which, by its own, would merit a 6.1.1 bugfix release. But since a
+couple other new features are present as well, this is a 6.2.0 minor release.
+
+All the "Plans for 6.2.0" listed at https://github.com/johnkerl/miller/releases/tag/v6.1.0 are all still in-plan, but since this
+6.2.0 exists sooner than later, those issues are planned for a 6.3.0.
+
+Details
+
+PRs:
+
+  * Restore --tsvlite by @johnkerl in #984
+  * Let dhms2sec accept input like "8h" by @johnkerl in #983
+  * Use fixed OFMT for multi-platform regression-testing by @johnkerl in #988
+  * Bump github.com/stretchr/testify from 1.7.0 to 1.7.1 by @dependabot in #986
+  * gssub DSL function by @johnkerl in #989
+
+v6.1.0
+======
+
+Features
+
+Major features:
+
+  * Natural sort by @johnkerl in #932
+  * mlr split verb by @johnkerl in #898
+  * Make TSV finally true TSV by @johnkerl in #923
+  * Sliding window averages by @johnkerl in #894
+  * Implement shift-lead option for mlr step by @johnkerl in #893
+
+New DSL functions:
+
+  * New fmtifnum DSL function; make fmtnum/fmtifnum recursive over maps and arrays by @johnkerl in #946
+  * New unformat DSL function by @johnkerl in #871
+  * New format DSL function by @johnkerl in #869
+  * New concat DSL function for arrays by @johnkerl in #868
+
+DSL improvements:
+
+  * Support more Go regex patterns, like "\d" by @johnkerl in #974
+  * Include \U support in addition to \u for DSL Unicode string literals by @johnkerl in #917
+  * Support unicode literals in the Miller DSL by @johnkerl in #916
+  * Allow 0o... octal literals in the DSL by @johnkerl in #864
+
+New command-line flags:
+
+  * Add --left-keep-fields option for mlr join by @johnkerl in #967
+  * New --lazy-quotes flag for helping with malformed CSV by @johnkerl in #925
+
+REPL and on-line help:
+
+  * Let :resetblocks/:rb in the REPL take optional begin/main/end by @johnkerl in #924
+  * Add :resetblocks / :rb to REPL by @johnkerl in #920
+  * ?foo and ??foo for :help foo / :help find foo in the REPL by @johnkerl in #915
+
+Improvements and bugfixes
+
+  * Support Latin-1 supplement a0-ff as DSL string literals by @johnkerl in #957
+  * Fix "%%" in strptime; more test cases for strptime by @johnkerl in #951
+  * Support %F, %T, and more in strptime by @johnkerl in #944
+  * Fix handling of mlr nest abbrevs by @johnkerl in #937
+  * Add Inf and NaN literals to the DSL by @johnkerl in #933
+  * Boolean inference for issue 908 by @johnkerl in #931
+  * strptime %j format for 3-digit day in year by @johnkerl in #930
+  * Fix is_non_empty for absent case by @johnkerl in #928
+  * --nidx --fs x should be the same as --fs x --nidx by @johnkerl in #912
+  * Update default colorization by @johnkerl in #904
+  * Make is_null/is_not_null DSL functions include new JSON-null type by @johnkerl in #883
+  * Fix #853 by @johnkerl in #860
+
+Documentation
+
+  * New doc page: Parsing and formatting fields by @johnkerl in #973
+  * More doc material for :context in the REPL by @johnkerl in #966
+  * Fix typo in on-line help for splitax DSL function by @johnkerl in #964
+  * More doc-sites for the funct keyword by @johnkerl in #963
+  * Doc updates for funct keyword by @johnkerl in #961
+  * FAQ entry for #351 by @johnkerl in #958
+  * docs: add Poshi as a contributor for doc by @allcontributors in #956
+  * docs: add schragge as a contributor for doc by @allcontributors in #955
+  * FAQ entry for #285: carriage returns in field names by @johnkerl in #953
+  * Add --implicit-tsv-header as alias for --implicit-csv-header, etc by @johnkerl in #952
+  * Fix: multiple documentation tweaks by @Poshi in #949
+  * fix typo in reference-verbs.md by @zachvalenta in #945
+  * Add on mouse over permalink anchor for titles by @aborruso in #942
+  * Webdoc information on Unicode string literals by @johnkerl in #935
+  * 'mlr help function nonesuch' should not be silent by @johnkerl in #934
+  * Clarify strftime on-line help by @johnkerl in #929
+  * Expand on-line help for split* DSL functions by @johnkerl in #927
+  * On-line help for -s flag by @johnkerl in #926
+  * Multiple on-line-help issues from #908 by @johnkerl in #921
+  * Multiple on-line-help issues from #908 by @johnkerl in #913
+  * Fix operator-precedence doc table to match DSL grammar by @johnkerl in #911
+  * Fix multiple on-line-help issues from #907 by @johnkerl in #910
+  * Clarify source for printf-style formatting by @johnkerl in #895
+  * Fix #891 by @johnkerl in #892
+  * Improve mlr top documentation for #861 by @johnkerl in #875
+  * Continue #856 by @johnkerl in #865
+  * misspelling by @Gary-Armstrong in #863
+  * fix typo by @vapniks in #862
+  * Update installing-miller.md by @jauderho in #859
+  * Emit notes by @johnkerl in #858
+  * Conda/Docker install notes by @johnkerl in #857
+  * Fix typo: columnn -> column by @vapniks in #856
+  * Fix typo by @vapniks in #855
+  * Fix typo by @vapniks in #854
+  * A small typo by @aborruso in #846
+
+Code quality
+
+  * Code-dedupe logic for array slices and string slices by @johnkerl in #960
+  * Let mlr repl print empty strings by @johnkerl in #959
+  * Neaten strptime.go by @johnkerl in #950
+  * More dead code removal by @skitt in #905
+  * Remove unreachable code by @skitt in #903
+  * Use int64 wherever "64-bit integer" is assumed by @skitt in #902
+  * More of #884: types in enum-consts by @johnkerl in #887
+  * Clean up file output handler error handling by @skitt in #886
+  * Use raw strings to avoid escapes by @skitt in #885
+  * Specify constant types except with iota by @skitt in #884
+  * Mlrval arrayval from []Mlrval to []*Mlrval by @johnkerl in #880
+  * Append slices directly instead of looping by @skitt in #879
+  * Fix mlrmap.Equals FieldCount comparison by @skitt in #878
+  * Ensure regression-test has a binary to test by @skitt in #877
+  * Avoid assuming ./mlr is the mlr to test by @skitt in #876
+  * Update release.yml by @jauderho in #867
+  * Update .goreleaser.yml by @jauderho in #866
+  * Goreleaser binary names by @johnkerl in #852
+  * Add CodeQL support by @jauderho in #838
+
+New Contributors
+
+  * @vapniks made their first contribution in #854
+  * @Gary-Armstrong made their first contribution in #863
+  * @zachvalenta made their first contribution in #945
+  * @Poshi made their first contribution in #949
+
+v6.0.0
+======
+
+This is a significant release with many improvements to user experience, documentation, and performance.
+
+Please see What's new in Miller 6 for complete information.
+
+https://miller.readthedocs.io/en/latest/new-in-miller-6
+
+v5.10.3
+=======
+
+This release exists solely to resolve a Conda-build issue as discussed on #740. If you're not actively working on Conda packaging
+for Miller, this release has no added value for you above 5.10.2.
+
+Likewise, there's no Windows mlr.exe for this final (technical & specific) Miller 5.x release -- for Miller 6.0.0 (coming soon!)
+and above there will be mlr.exe as a reliably standard part of each release.
+
+Also note that the tarball is named miller-5.10.3.tar.gz, in contrast to mlr-5.10.2.tar.gz and likewise for all earlier releases.
+This is being done for forward compatibility with Miller 6.0.0 and beyond which will use names of the form miller-6.0.0.tar.gz, as
+proposed in #360.
