@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pipe-viewer-0.4.4
+DISTNAME=	pipe-viewer-0.4.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trizen/}
 
