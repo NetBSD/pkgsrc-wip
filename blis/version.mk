@@ -1,0 +1,5 @@
+# $NetBSD: version.mk,v 1.2 2021/03/25 23:22:35 thor Exp $
+
+BLIS_VERSION=	0.9.0
+PKGREVISION=	1
+BLIS_COMMIT=	dc5d00a6ce0350cd82859d8c24f23d98f205d8db
