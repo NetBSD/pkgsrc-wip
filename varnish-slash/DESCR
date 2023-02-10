@@ -1,0 +1,4 @@
+Two storage engines are provided by this project:
+
+- buddy: for in-memory, volatile storage
+- fellow: for persistent storage backed by flash memory / SSDs
