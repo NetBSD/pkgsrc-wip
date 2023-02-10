@@ -58,6 +58,8 @@ do-build:
 	cd ${WRKSRC} && ${MVN} package -DbuildSctp -DbuildNativeWrapper -DdeployNewJnilib
 
 do-install:
-	cd ${WRKSRC} && ${MVN} install -DbuildSctp -DbuildNativeWrapper -DdeployNewJnilib
+	${MKDIR} ${DESTDIR}${PREFIX}/share/jitsi-videobridge/lib
+	${CP} ${WRKSRC}/jniwrapper/native/target/jniwrapper-native-1.0-SNAPSHOT.jar \
+		${DESTDIR}${PREFIX}/share/jitsi-videobridge/lib/jniwrapper-native-1.0-SNAPSHOT.jar
 
 .include "../../mk/bsd.pkg.mk"
