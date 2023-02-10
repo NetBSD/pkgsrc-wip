@@ -1,0 +1,2 @@
+The jitsi-sctp project creates a JNI wrapper around the usrsctp lib and
+provides a set of Java classes to further flesh out a convenient Java SCTP API.

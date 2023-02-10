@@ -1,0 +1,68 @@
+$NetBSD$
+
+Fix building on NetBSD
+
+--- jniwrapper/native/pom.xml.orig	2022-07-19 21:46:43.000000000 +0000
++++ jniwrapper/native/pom.xml
+@@ -92,6 +92,31 @@
+             </properties>
+         </profile>
+         <profile>
++            <!-- This profile is activated when we're on NetBSD and defines the compiler args we'll use if we're
++            rebuilding the native jniwrapper -->
++            <id>netbsd-args</id>
++            <activation>
++                <os>
++                    <family>unix</family>
++                    <name>netbsd</name>
++                </os>
++            </activation>
++            <properties>
++                <libextension>so</libextension>
++                <linkStartOpts>
++                      -L${project.build.directory}/usrsctp-${project.version}/lib
++                      -shared
++                </linkStartOpts>
++                <linkEndOpts>
++                     -Wl,-Bstatic
++                     -lusrsctp
++                     -Wl,-Bdynamic
++                     -lpthread
++                </linkEndOpts>
++		<nativeLibDir>${os}-${os.arch}</nativeLibDir>
++            </properties>
++        </profile>
++        <profile>
+             <!-- for reasons I don't understand, depending on the JDK version,
+              sometimes ${java.home} ends in ../jre, and sometimes it doesn't.
+              Because the default jdkIncludePath is ${java.home}/../include,
+@@ -150,7 +175,7 @@
+                             <compilerProvider>generic</compilerProvider>
+                             <compilerStartOptions>
+                                 <compilerStartOption>
+-                                    -g -fPIC -std=c99 -O2 -Wall -Itarget/native/javah
++                                    -g -fPIC -std=c99 -O2 -Wall -Itarget/native/javah -I@JAVA_HOME@/include
+                                 </compilerStartOption>
+                             </compilerStartOptions>
+ 
+@@ -208,6 +233,20 @@
+                         <version>1.6.0</version>
+                         <executions>
+                             <execution>
++                                <id>deploy-jnilib-parent-directory</id>
++                                <phase>prepare-package</phase>
++                                <goals><goal>exec</goal></goals>
++                                <configuration>
++                                    <workingDirectory>${project.build.directory}</workingDirectory>
++				    <longModulepath>false</longModulepath>
++                                    <executable>mkdir</executable>
++                                    <arguments>
++                                        <argument>-p</argument>
++                                        <argument>${project.basedir}/src/main/resources/lib/${nativeLibDir}</argument>
++                                    </arguments>
++                                </configuration>
++                            </execution>
++                            <execution>
+                                 <id>deploy-jnilib</id>
+                                 <phase>prepare-package</phase>
+                                 <goals><goal>exec</goal></goals>

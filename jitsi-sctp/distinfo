@@ -1,0 +1,12 @@
+$NetBSD$
+
+BLAKE2s (jitsi-sctp-1.0-45bf9f296167f79a52cdc1b0e93bbfa4dc8c4976.tar.gz) = 0c20dbfa58377f9f7d1b9b65ec8dbe092a2c03dcf5a841b2cefa3b041ec7fdcc
+SHA512 (jitsi-sctp-1.0-45bf9f296167f79a52cdc1b0e93bbfa4dc8c4976.tar.gz) = b92bb5d6c78d30cf7980f64fe1c8f4c7c7b002cb5c86660c2e22640a30e46d62e50a1a47ca69a9cffa22f4d732d407a215b5800226438e79c76a6be23609149a
+Size (jitsi-sctp-1.0-45bf9f296167f79a52cdc1b0e93bbfa4dc8c4976.tar.gz) = 2208791 bytes
+BLAKE2s (jitsi-sctp-java-deps-1.0.tar.gz) = d1d827acf82c638f51415a9e89c8f2b52f3f576638671bd982c27128bce87ba8
+SHA512 (jitsi-sctp-java-deps-1.0.tar.gz) = 1937dad8c7c14b270f197db0e898c671b163972febb2b06a05aa4b9122074a9156332a70f96c0ae46c1935414db0194e4e5755da4e83048e090ebd195af024b9
+Size (jitsi-sctp-java-deps-1.0.tar.gz) = 31048490 bytes
+BLAKE2s (usrsctp-c1d6cb3bf4344e01e7d0b3157f4e7103d55b0fbf.tar.gz) = c4a068b591148f3096964f3295d8b811d4dd35c10211a094fbb8353a6cc70fa5
+SHA512 (usrsctp-c1d6cb3bf4344e01e7d0b3157f4e7103d55b0fbf.tar.gz) = 22482fd2db47a1c39491b2fa12d8968e2bee25e5e0ebfc3e912e33a03bf5d7a5bd48b7b5465b9a8e1e19016a680e2ad953b8cf4a1463a633925c0a3eb4288b8b
+Size (usrsctp-c1d6cb3bf4344e01e7d0b3157f4e7103d55b0fbf.tar.gz) = 773282 bytes
+SHA1 (patch-jniwrapper_native_pom.xml) = 6441665117ec81ba6c13d5cb8a03f49ccc9453dd

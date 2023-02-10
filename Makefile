@@ -1840,6 +1840,7 @@ SUBDIR+=	jigasi
 SUBDIR+=	jira-cli-git
 SUBDIR+=	jitsi
 SUBDIR+=	jitsi-meet
+SUBDIR+=	jitsi-sctp
 SUBDIR+=	jlibtool
 SUBDIR+=	jmol
 SUBDIR+=	jmtpfs
