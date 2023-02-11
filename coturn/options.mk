@@ -12,11 +12,11 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-.include "../../databases/mysql57-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
-.include "../../databases/postgresql94-client/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 DBLIBS+=	${BUILDLINK_PREFIX.postgresql-lib}
 CONFIGURE_ENV+=	POSTCFLAGS="-I${PREFIX}/include/postgresql"
 .endif
