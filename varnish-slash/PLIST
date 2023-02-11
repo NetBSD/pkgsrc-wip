@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/buddy_test
+bin/buddy_test_when
+bin/slashmap
+lib/varnish/vmods/libvmod_slash.la
+man/man1/slashmap.1
+man/man3/vmod_slash.3
+man/man7/slash-counters.7
+share/doc/slash/BSD-2-Clause
+share/doc/slash/COPYING
+share/doc/slash/LGPL-2.1
+share/doc/slash/README.rst
+share/doc/slash/vmod_slash.vcc

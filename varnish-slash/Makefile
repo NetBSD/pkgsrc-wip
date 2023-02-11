@@ -20,14 +20,15 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		RST2MAN=${PREFIX}/bin/rst2man-${PYVERSSUFFIX}
 CONFIGURE_ENV+=		VARNISHSRC=${VARNISHSRC}
 
-VARNISHSRC=		${WRKOBJDIR}/www/varnish/work/varnish-7.2.1
+VARNISHSRC=			${WRKOBJDIR}/www/varnish/work/varnish-7.2.1
+BUILDLINK_PASSTHRU_DIRS+=	${VARNISHSRC}
 
 LIBS.NetBSD+=		-lcurses
 
 .include "../../mk/bsd.prefs.mk"
 
-#${VARNISHSRC}:
-#	cd ../../www/varnish && make
+${VARNISHSRC}:
+	cd ../../www/varnish && ${RECURSIVE_MAKE} build
 
 pre-configure: ${VARNISHSRC}
 	cd ${WRKSRC} && ./bootstrap
