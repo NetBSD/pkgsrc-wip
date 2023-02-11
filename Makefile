@@ -434,6 +434,7 @@ SUBDIR+=	chezmoi
 SUBDIR+=	chezscheme
 SUBDIR+=	chezscheme-racket
 SUBDIR+=	chicken5
+SUBDIR+=	chirp
 SUBDIR+=	chkugenids
 SUBDIR+=	chntpw
 SUBDIR+=	choosefont
