@@ -12,7 +12,15 @@ LICENSE=	gnu-agpl-v3
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
+DEPENDS+=	daemonize-[0-9]*:../../sysutils/daemonize
+
+RCD_SCRIPTS=	libreddit
+
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=	${EGDIR}/libreddit.conf \
+		${PKG_SYSCONFDIR}/libreddit.conf
+
+INSTALLATION_DIRS=	bin share/examples/${PKGBASE}
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -20,6 +28,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/libreddit \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${FILESDIR}/libreddit.conf ${DESTDIR}${EGDIR}
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
