@@ -405,7 +405,6 @@ SUBDIR+=	cb2bib
 SUBDIR+=	ccnet-server
 SUBDIR+=	ccrypt
 SUBDIR+=	cddlib
-SUBDIR+=	cde
 SUBDIR+=	cdhit
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
