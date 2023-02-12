@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.47 2020/07/27 15:22:12 gdt Exp $
+
+BLAKE2s (Trac-1.5.4.dev0.tar.gz) = 7b47cfa5e3a893f35752e9e60ccbc1d7ac04f0a59923a0709c74f61fa3dbcf3c
+SHA512 (Trac-1.5.4.dev0.tar.gz) = b635a9b00f57a3d329cf49837ff439583c3da0b6558967a930e8dbb1a7ebecfe7d68c20a9b297c220f40c1aabf96ef1ddb845109e64093a82cbb9c5943fc15a0
+Size (Trac-1.5.4.dev0.tar.gz) = 6162221 bytes
