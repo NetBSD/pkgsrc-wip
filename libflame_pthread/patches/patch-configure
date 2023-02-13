@@ -1,0 +1,52 @@
+$NetBSD$
+
+Address portability issues.
+
+--- configure.orig	2023-01-25 23:44:27.000000000 +0000
++++ configure
+@@ -6904,6 +6904,9 @@ printf %s "checking for (guessing) OpenM
+ 				icc)
+ 			fla_c_openmp_flags='-openmp'
+ 		;;
++				cc)
++			fla_c_openmp_flags='-fopenmp'
++		;;
+ 				gcc)
+ 			fla_c_openmp_flags='-fopenmp'
+ 		;;
+@@ -7470,7 +7473,7 @@ printf "%s\n" "no" >&6; }
+ 	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for (guessing) appropriate ${CC_VENDOR} optimization flags" >&5
+ printf %s "checking for (guessing) appropriate ${CC_VENDOR} optimization flags... " >&6; }
+
+-	if test "$fla_enable_compiler_optimizations" == "yes" ; then
++	if test "$fla_enable_compiler_optimizations" = "yes" ; then
+
+ 				case ${CC_VENDOR} in
+ 						gcc)
+@@ -7589,7 +7592,7 @@ printf "%s\n" "no" >&6; }
+ 	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for (guessing) appropriate ${CC_VENDOR} warning flags" >&5
+ printf %s "checking for (guessing) appropriate ${CC_VENDOR} warning flags... " >&6; }
+
+-	if test "$fla_enable_compiler_warnings" == "yes" ; then
++	if test "$fla_enable_compiler_warnings" = "yes" ; then
+
+ 				case ${CC_VENDOR} in
+ 						gcc)
+@@ -7707,7 +7710,7 @@ printf "%s\n" "no" >&6; }
+ 	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for (guessing) appropriate ${CC_VENDOR} debug flags" >&5
+ printf %s "checking for (guessing) appropriate ${CC_VENDOR} debug flags... " >&6; }
+
+-	if test "$fla_enable_compiler_debug" == "yes" ; then
++	if test "$fla_enable_compiler_debug" = "yes" ; then
+
+ 				case ${CC_VENDOR} in
+ 						gcc)
+@@ -7826,7 +7829,7 @@ printf "%s\n" "no" >&6; }
+ 	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for (guessing) appropriate ${CC_VENDOR} profiling flags" >&5
+ printf %s "checking for (guessing) appropriate ${CC_VENDOR} profiling flags... " >&6; }
+
+-	if test "$fla_enable_compiler_profiling" == "yes" ; then
++	if test "$fla_enable_compiler_profiling" = "yes" ; then
+
+ 				case ${CC_VENDOR} in
+ 						gcc)
