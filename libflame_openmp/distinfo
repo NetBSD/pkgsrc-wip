@@ -1,7 +1,0 @@
-$NetBSD$
-
-BLAKE2s (libflame-5.2.0-edbd6eba8a2269b0e05d64d8b02aff778fa4a07a.tar.gz) = 50e035a38df39f99b1aa9b0a83dd3dbe6998ba1a415d7ab3f79f4dd40b76b594
-SHA512 (libflame-5.2.0-edbd6eba8a2269b0e05d64d8b02aff778fa4a07a.tar.gz) = 7880c6c4aeb60709fd14a64506b5830c192ae43fc672a7d9b205634bbd392b2857ea1db4b3bd242a800f98d776d840e45cafbb254a13f673a6c65bbb8045067b
-Size (libflame-5.2.0-edbd6eba8a2269b0e05d64d8b02aff778fa4a07a.tar.gz) = 19256160 bytes
-SHA1 (patch-configure) = 60c396fadc5873b0a3b0437f255962a706166a32
-SHA1 (patch-configure__tidsp) = 5cffd9736605ec0d6cf02466da62531ab1f12c16

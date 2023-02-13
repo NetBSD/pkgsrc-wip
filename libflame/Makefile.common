@@ -8,10 +8,11 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=flame/}
 WRKSRC=		${WRKDIR}/libflame-${GITHUB_TAG}
 LICENSE=	modified-bsd
 COMMENT=	Portable library for dense matrix computations
+DISTINFO_FILE=	${.CURDIR}/../../wip/libflame/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/libflame/patches
 
 CATEGORIES=	math
 
-CONFIGURE_SCRIPT=	./configure
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
 
