@@ -16,6 +16,7 @@ USE_TOOLS+=	pkg-config gmake makeinfo install-info
 
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
+CONFIGURE_ARGS+=	--disable-dispatch-no-threading
 CONFIGURE_ARGS+=	--enable-mi
 
 .include "../../devel/boehm-gc/buildlink3.mk"
