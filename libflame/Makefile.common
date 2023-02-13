@@ -1,0 +1,78 @@
+# $NetBSD: Makefile,v 1.39 2019/10/05 06:14:05 ryoon Exp $
+# used by wip/libflame_pthread/Makefile
+# used by wip/libflame_openmp/Makefile
+
+DISTNAME=	libflame-${LIBFLAME_VERSION}
+PKGNAME=	${LIBFLAME_VARIANT}-${LIBFLAME_VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=flame/}
+WRKSRC=		${WRKDIR}/libflame-${GITHUB_TAG}
+LICENSE=	modified-bsd
+COMMENT=	Portable library for dense matrix computations
+
+CATEGORIES=	math
+
+CONFIGURE_SCRIPT=	./configure
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		c c++ fortran
+
+USE_TOOLS=	perl
+USE_TOOLS+=	gmake
+USE_TOOLS+=	bash
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--includedir=${PREFIX}/include/${LIBFLAME_VARIANT}
+CONFIGURE_ARGS+=	--enable-max-arg-list-hack
+CONFIGURE_ARGS+=	--enable-cblas-interfaces
+CONFIGURE_ARGS+=	--enable-static-build
+CONFIGURE_ARGS+=	--enable-dynamic-build
+CONFIGURE_ARGS+=	--enable-verbose-make-output
+# CONFIGURE_ARGS+= --enable-autodetect-f77-ldflags
+# CONFIGURE_ARGS+= --enable-autodetect-f77-name-mangling
+# CONFIGURE_ARGS+= --enable-non-critical-code
+# CONFIGURE_ARGS+= --disable-builtin-blas
+CONFIGURE_ARGS+=	--enable-lapack2flame
+# CONFIGURE_ARGS+= --disable-external-lapack-for-subproblems
+# CONFIGURE_ARGS+= --disable-blas3-front-end-cntl-trees
+# CONFIGURE_ARGS+= --enable-supermatrix
+# CONFIGURE_ARGS+= --disable-gpu
+# CONFIGURE_ARGS+= --disable-vector-intrinsics
+# CONFIGURE_ARGS+= --enable-ldim-alignment
+# CONFIGURE_ARGS+= --enable-optimizations
+# CONFIGURE_ARGS+= --enable-warnings
+# CONFIGURE_ARGS+= --enable-debug
+# CONFIGURE_ARGS+= --disable-profiling
+# CONFIGURE_ARGS+= --enable-internal-error-checking=full
+# CONFIGURE_ARGS+= --disable-memory-leak-counter
+# CONFIGURE_ARGS+= --enable-blis-use-of-fla-malloc
+# CONFIGURE_ARGS+= --disable-goto-interfaces
+# CONFIGURE_ARGS+= --enable-portable-timer
+# CONFIGURE_ARGS+= --disable-windows-build
+# CONFIGURE_ARGS+= --disable-scc
+# CONFIGURE_ARGS+= --disable-tidsp
+
+.if ${LIBFLAME_VARIANT} == "libflame_openmp"
+CONFIGURE_ARGS+=	--enable-multithreading=openmp
+.elif ${LIBFLAME_VARIANT} == "libflame_pthread"
+CONFIGURE_ARGS+=	--enable-multithreading=pthreads
+.elif ${LIBFLAME_VARIANT} == "libflame"
+CONFIGURE_ARGS+=	--enable-multithreading=no
+.endif
+
+SUBST_CLASSES+=		libflame
+SUBST_STAGE.libflame=	pre-build
+SUBST_SED.libflame+=	-e "s|libflame|${LIBFLAME_VARIANT}|g"
+SUBST_FILES.libflame+=	Makefile
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-build
+SUBST_SED.python+=	-e "s|/usr/bin/env python|${PYTHONBIN}|g"
+SUBST_FILES.python+=	windows/build/gen-config-file.py
+SUBST_FILES.python+=	windows/build/gather-src-for-windows.py
+SUBST_FILES.python+=	windows/build/gen-check-rev-file.py
+SUBST_FILES.python+=	netlib-test/lapack-3.4.2/lapack_testing.py
+SUBST_FILES.python+=	build/flatten-headers.py
+
+PLIST_SRC=	${.CURDIR}/../../wip/libflame/PLIST
+PLIST_SUBST+=	LIBFLAME_VARIANT=${LIBFLAME_VARIANT}
+
+.include "../../wip/libflame/version.mk"
+.include "../../lang/python/tool.mk"

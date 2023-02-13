@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/${LIBFLAME_VARIANT}/FLAME.h
+lib/${LIBFLAME_VARIANT}.a
+lib/${LIBFLAME_VARIANT}.so
+lib/${LIBFLAME_VARIANT}.so.1
+lib/${LIBFLAME_VARIANT}.so.1.0.0

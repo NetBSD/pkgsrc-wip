@@ -1,0 +1,5 @@
+# $NetBSD: version.mk,v 1.2 2021/03/25 23:22:35 thor Exp $
+
+PKGREVISION=		1
+GITHUB_TAG=		edbd6eba8a2269b0e05d64d8b02aff778fa4a07a
+LIBFLAME_VERSION=	5.2.0
