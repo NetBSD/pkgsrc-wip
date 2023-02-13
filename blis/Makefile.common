@@ -10,13 +10,12 @@ MASTER_SITES=${MASTER_SITE_GITHUB:=flame/}
 LICENSE=	modified-bsd
 COMMENT=	Framework for instantiating BLAS libraries
 WRKSRC=${WRKDIR}/blis-${GITHUB_TAG}
+DISTINFO_FILE=      ${.CURDIR}/../../wip/blis/distinfo
 
 CATEGORIES=	math
 
-CONFIGURE_SCRIPT=	./configure
-HAS_CONFIGURE=		yes
-USE_LANGUAGES=		c c++ fortran
-
+HAS_CONFIGURE=	yes
+USE_LANGUAGES=	c c++ fortran
 USE_TOOLS=	perl
 USE_TOOLS+=	bash
 USE_TOOLS+=	gmake
