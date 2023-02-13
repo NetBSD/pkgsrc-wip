@@ -15,4 +15,6 @@ LICENSE=	gnu-agpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+USE_TOOLS+=	bison flex
+
 .include "../../mk/bsd.pkg.mk"
