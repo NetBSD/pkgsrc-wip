@@ -5145,6 +5145,7 @@ SUBDIR+=	runas
 SUBDIR+=	runcpm
 SUBDIR+=	runit
 SUBDIR+=	rust
+SUBDIR+=	rust-analyzer
 SUBDIR+=	rust-bindgen
 SUBDIR+=	rust-synapse-compress-state
 SUBDIR+=	rygel
