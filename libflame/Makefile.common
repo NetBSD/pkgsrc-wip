@@ -6,6 +6,8 @@ DISTNAME=	libflame-${LIBFLAME_VERSION}
 PKGNAME=	${LIBFLAME_VARIANT}-${LIBFLAME_VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flame/}
 WRKSRC=		${WRKDIR}/libflame-${GITHUB_TAG}
+MAINTAINER=	matthewd@fastmail.us
+HOMEPAGE=	https://github.com/flame/blis
 LICENSE=	modified-bsd
 COMMENT=	Portable library for dense matrix computations
 DISTINFO_FILE=	${.CURDIR}/../../wip/libflame/distinfo
