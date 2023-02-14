@@ -10,6 +10,8 @@ HOMEPAGE=	https://rust-analyzer.github.io/
 COMMENT=	LSP server for the Rust programming language
 LICENSE=	apache-2.0
 
+RUST_REQ=	1.66.0
+
 INSTALLATION_DIRS=	bin
 
 .include "cargo-depends.mk"
