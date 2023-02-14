@@ -1,0 +1,13 @@
+# $NetBSD$
+PKG_OPTIONS_VAR=	PKG_OPTIONS.confkerndev
+PKG_SUPPORTED_OPTIONS=	build32
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mbuild32)
+CONFKERNDEV_32TARGET=	i386
+.else
+CONFKERNDEV_32TARGET=
+.endif
+
+BUILD_TARGET+=	${CONFKERNDEV_32TARGET}

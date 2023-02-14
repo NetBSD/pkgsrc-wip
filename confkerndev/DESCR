@@ -1,0 +1,5 @@
+This tool allows you to disable drivers in a binary kernel file without
+recompiling from source. It browses the ELF file looking for the cfdata
+symbol and modifies the flag associated with the drivers specified on
+the command line.
+The way it works is quite similar to what OpenBSD's config command does.
