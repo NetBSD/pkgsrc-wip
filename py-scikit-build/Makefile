@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/scikit-build/scikit-build
 COMMENT=	Improved build system generator for Python C/C++/Fortran/Cython
 LICENSE=	mit
 
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+
 DEPENDS+=	${PYPKGPREFIX}-distro>=0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=28.0.0:../../devel/py-setuptools
