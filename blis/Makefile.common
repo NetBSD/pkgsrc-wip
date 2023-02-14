@@ -7,6 +7,8 @@ DISTNAME=blis
 PKGNAME=	${BLIS_VARIANT}-${BLIS_VERSION}
 GITHUB_TAG=${BLIS_COMMIT}
 MASTER_SITES=${MASTER_SITE_GITHUB:=flame/}
+MAINTAINER=	matthewd@fastmail.us
+HOMEPAGE=	https://github.com/flame/libflame
 LICENSE=	modified-bsd
 COMMENT=	Framework for instantiating BLAS libraries
 WRKSRC=${WRKDIR}/blis-${GITHUB_TAG}
