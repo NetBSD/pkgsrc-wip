@@ -3217,7 +3217,6 @@ SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointtools-git
-SUBDIR+=	poke
 SUBDIR+=	poke-git
 SUBDIR+=	polarssl11
 SUBDIR+=	polipo
