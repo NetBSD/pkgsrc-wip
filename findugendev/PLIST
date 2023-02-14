@@ -1,0 +1,3 @@
+@comment $NetBSD$
+man/man1/findugendev.1
+sbin/findugendev

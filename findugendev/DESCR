@@ -1,0 +1,7 @@
+findugendev scans /dev/ugenN.EE for device(s) and prints fullpath(s).
+Or display information on USB devices by reading all /dev/ugenN.EE entries
+one by one.
+
+The primary goal of this tool is to find the /dev/ugenN.EE entry
+corresponding to a USB device based on its IDs or textual information
+such as product name or serial number.

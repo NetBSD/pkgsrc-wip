@@ -880,6 +880,7 @@ SUBDIR+=	fidocrypt-git
 SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
+SUBDIR+=	findugendev
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-hg
