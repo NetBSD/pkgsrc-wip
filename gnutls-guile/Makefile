@@ -1,107 +1,24 @@
 # $NetBSD$
 
-DISTNAME=	gnutls-3.6.5
-CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.6/
-EXTRACT_SUFX=	.tar.xz
+PKGNAME=		gnutls-${DISTNAME}
+DISTNAME=		guile-3.7.11
+CATEGORIES=		security
+MASTER_SITES=		${MASTER_SITE_GITLAB:=gnutls/}
+GITLAB_PROJECT=		guile
+GITLAB_RELEASE=		v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnutls.org/
-COMMENT=	GNU Transport Layer Security library
-LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://gitlab.com/gnutls/gnutls-guile/
+COMMENT=		Guile bindings for the GnuTLS library
+LICENSE=		gnu-lgpl-v2.1 AND gnu-gpl-v3
 
-DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
-
-USE_LANGUAGES=			c c++
-USE_LIBTOOL=			yes
-USE_PKGLOCALEDIR=		yes
-USE_TOOLS+=			gmake gsed perl pkg-config bash automake autoconf autoreconf
-GNU_CONFIGURE=			yes
-# this library duplicates (and conflicts with) openssl
-CONFIGURE_ARGS+=		--disable-openssl-compatibility
-CONFIGURE_ARGS+=		--enable-guile
-CONFIGURE_ARGS+=		--disable-libdane
-CONFIGURE_ARGS+=		--without-idn
-CONFIGURE_ARGS+=		--without-tpm
-CONFIGURE_ARGS+=		--disable-valgrind-tests
-CONFIGURE_ARGS+=		--with-default-trust-store-file=${PREFIX}/share/mozilla-rootcerts/cacert.pem
-CONFIGURE_ARGS+=		--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
-CONFIGURE_ARGS+=		--enable-local-libopts
-# Assembler support is broken for SunOS in 3.2.9.
-CONFIGURE_ARGS.SunOS+=		--disable-hardware-acceleration
-CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
-CONFIGURE_ARGS+=		--host=${MACHINE_GNU_PLATFORM:Q}
-
-TEST_TARGET=		check
-
+GNU_CONFIGURE=		yes
+GUILE_NEED_BOOTSTRAP=	yes
+USE_TOOLS+=		pkg-config makeinfo
 INFO_FILES=		yes
+RELEASE_COMMIT=		1fbc46c7fda2bde6de583a5de241657d872aa006
+WRKSRC=			${WRKDIR}/guile-v${PKGVERSION_NOREV}-${RELEASE_COMMIT}
 
-REPLACE_BASH+=		tests/cert-tests/certtool
-REPLACE_BASH+=		tests/danetool.sh
-REPLACE_BASH+=		tests/fastopen.sh
-REPLACE_BASH+=		tests/gnutls-cli-debug.sh
-REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
-REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection
-REPLACE_BASH+=		tests/starttls.sh
-REPLACE_BASH+=		tests/suite/cbc-record-check.sh
-REPLACE_BASH+=		tests/suite/testcompat-main-openssl
-REPLACE_BASH+=		tests/suite/testcompat-main-polarssl
-REPLACE_BASH+=		tests/cert-tests/pkcs12-utf8
-
-REPLACE_PERL+=		doc/scripts/gdoc doc/scripts/sort2.pl
-
-PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
-PKGCONFIG_OVERRIDE+=	libdane/gnutls-dane.pc.in
-
-
-MAKE_ENV+=		RM=${RM:Q}
-MAKE_ENV+=		TZ=UTC
-
-SUBST_CLASSES+=			configure
-SUBST_SED.configure+=		-e 's,2.0 1.8,2.2 2.0 1.8,'
-SUBST_STAGE.configure=		pre-configure
-SUBST_FILES.configure+=		configure
-SUBST_MESSAGE.configure=	Fixing supported Guile versions
-
-# Might not be enough for guile bindings...
-SUBST_CLASSES+=		target
-SUBST_STAGE.target=	pre-configure
-SUBST_FILES.target+=	build-aux/config.guess
-SUBST_FILES.target+=	configure
-SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
-SUBST_MESSAGE.target=	Fixing target name.
-
-SUBST_CLASSES+=		shell
-SUBST_SED.shell+=	-e 's,define POSIX_SHELL .*,define POSIX_SHELL "'${TOOLS_PATH.bash}'",'
-SUBST_STAGE.shell=	post-configure
-SUBST_FILES.shell+=	config.h
-SUBST_MESSAGE.shell=	Fixing path to bash.
-
-EGDIR=		${PREFIX}/share/examples/gnutls
-
-INSTALLATION_DIRS=	${EGDIR} include/gnutls
-
-post-install:
-	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${DESTDIR}${EGDIR}
-
-.include "../../archivers/lzo/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/libcfg+/buildlink3.mk"
-# Avoid creating a fake zlib.pc, because if it does
-# gnutls will add a Requires.private for it in its .pc file
-CHECK_BUILTIN.zlib:=yes
-.include "../../devel/zlib/buildlink3.mk"
-# guile is useful for selftests, but bindings should be separate pkgs
-.include "../../lang/guile22/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=4.9
-.include "../../security/libtasn1/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.4.1
-.include "../../security/nettle/buildlink3.mk"
-BUILDLINK_API_DEPENDS.p11-kit+=	p11-kit>=0.23.1
-.include "../../security/p11-kit/buildlink3.mk"
-.include "../../textproc/libunistring/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../lang/guile30/module.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
