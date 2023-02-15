@@ -30,10 +30,7 @@ share/nanosaur/Data/Audio/TitleSong.aiff
 share/nanosaur/Data/Images/Boot1.tga
 share/nanosaur/Data/Images/Boot1Pro.tga
 share/nanosaur/Data/Images/Boot2.tga
-share/nanosaur/Data/Images/Charity1.tga
-share/nanosaur/Data/Images/Charity3.tga
 share/nanosaur/Data/Images/Help1.tga
-share/nanosaur/Data/Images/Help2.tga
 share/nanosaur/Data/Images/Infobar.tga
 share/nanosaur/Data/Images/Map.tga
 share/nanosaur/Data/Images/Shadow.tga
@@ -47,6 +44,7 @@ share/nanosaur/Data/Movies/Lose.mov
 share/nanosaur/Data/Movies/Win.mov
 share/nanosaur/Data/Skeletons/Deinon.3dmf
 share/nanosaur/Data/Skeletons/Deinon.skeleton.rsrc
+share/nanosaur/Data/Skeletons/DeinonTeethFix.3dmf
 share/nanosaur/Data/Skeletons/Diloph.3dmf
 share/nanosaur/Data/Skeletons/Diloph.skeleton.rsrc
 share/nanosaur/Data/Skeletons/Ptera.3dmf
