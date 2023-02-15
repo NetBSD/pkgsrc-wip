@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.6 2016/06/01 11:47:06 wiz Exp $
 
-RMD160 (opensmtpd-6.8.0p2.tar.gz) = 740a0904594f47caa1261b4be3bc7de8165678e7
+BLAKE2s (opensmtpd-6.8.0p2.tar.gz) = 2c4877e8f2de1ba710b3da2aea0129bb4a8746a8211d2c9763bac75043f58eb4
 SHA512 (opensmtpd-6.8.0p2.tar.gz) = 48f152b75575146fdd09bdf47123041ea62fefb6e5de33a69826bf91a2126a918f8db1caffadb2f142a1a21de8126d492de88cb65bdf169e61c0b22d3e78d290
 Size (opensmtpd-6.8.0p2.tar.gz) = 860189 bytes
 SHA1 (patch-contrib_libexec_mail.local_mail.local.c) = bec19540fa52c7c6596ab5923f3a67b334ddf168
@@ -10,3 +10,4 @@ SHA1 (patch-openbsd-compat_imsg-buffer.c) = 88ca16db5dd400de14dafe7cc35d40adfd45
 SHA1 (patch-openbsd-compat_imsg.c) = ef84b7883b75bfc726085dac67b7bead16029e20
 SHA1 (patch-smtpd_proxy.c) = 895d3e9532bf53dcdb7a52825043acacac51b378
 SHA1 (patch-smtpd_smtp__session.c) = 565b1df1a6d4d3c5ee786f4501c1cd73992f2d3e
+SHA1 (patch-usr.sbin_smtpd_queue__fs.c) = f3c7f867e6542a0b080acd2b6ce9f28efed1a5e6
