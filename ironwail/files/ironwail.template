@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD$
-# Launcher script for ironwail.
-#
-set -e
-cd @@PREFIX@@/share/ironwail && @@PREFIX@@/libexec/ironwail
