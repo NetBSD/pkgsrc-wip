@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	doxy2man-0.0.0.12
+DISTNAME=	doxy2man-0.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gsauthof/}
 GITHUB_PROJECT=	doxy2man
@@ -18,6 +18,8 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
+.include "../../lang/python/pyversion.mk"
+
 # Our asciidoc has no ".py" suffix.
 # Honor PREFIX when searching doxbook-xsl files
 SUBST_CLASSES+=		edit-pro
@@ -25,7 +27,7 @@ SUBST_STAGE.edit-pro=	pre-configure
 SUBST_MESSAGE.edit-pro=	Preparing main.pro file ...
 SUBST_FILES.edit-pro=	main.pro
 SUBST_SED.edit-pro=	-e 's,asciidoc\.py,asciidoc,g'
-SUBST_SED.edit-pro+=	-e 's,/usr/share/asciidoc,${PREFIX}/share/asciidoc,g'
+SUBST_SED.edit-pro+=	-e 's,/usr/share/asciidoc,${PREFIX}/${PYSITELIB}/asciidoc/resources,g'
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
