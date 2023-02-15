@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 .include "../../lang/python/pyversion.mk"
 
 # Our asciidoc has no ".py" suffix.
-# Honor PREFIX when searching doxbook-xsl files
+# Honor PREFIX when searching docbook-xsl files
 SUBST_CLASSES+=		edit-pro
 SUBST_STAGE.edit-pro=	pre-configure
 SUBST_MESSAGE.edit-pro=	Preparing main.pro file ...
