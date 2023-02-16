@@ -145,7 +145,6 @@ SUBDIR+=	am-utils-git
 SUBDIR+=	amavis-logwatch
 SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amlogic-meson-fwtools
-SUBDIR+=	amnesia-tdd
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	android-tools-adb
