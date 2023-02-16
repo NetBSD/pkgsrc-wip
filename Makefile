@@ -2402,7 +2402,6 @@ SUBDIR+=	monajat
 SUBDIR+=	mono
 SUBDIR+=	mono-git
 SUBDIR+=	mono-zeroconf
-SUBDIR+=	moonlight-qt
 SUBDIR+=	mop
 SUBDIR+=	mopac7
 SUBDIR+=	moregroupware
