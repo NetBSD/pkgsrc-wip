@@ -1,0 +1,49 @@
+Warning: this pkg is currently under construction. It was created as a
+copy of mail/cyrus-imap24. It cannot currently be expected that it can
+be built, let alone that it will work as expected. I plan to keep the
+pkg up to date here so that the progress is transparent. I am open to
+suggestions or active support.
+
+Done:
+
+- Make it build the most basic way
+
+- Make it install
+
+- Update PLIST (take care of ldap / http options)
+
+- Evaluation of the patches of the existing Cyrus-imap-pkgs and
+  their applicability for cyrus-imap 3
+
+- Review and adjustment of scripts / provided files (configuration
+  examples, man pages)
+
+- Performed first integration tests (client connection to IMAP,
+  authenticated via saslauthd with ldap)
+
+- Integrated documentation from source package into the package
+
+- Possibly create further patches for cyrus-imap 3 (especially with
+  regard to the newly added functions CalDAV / CardDAV), if necessary
+
+Next steps:
+
+- regenerate documentation at build time using Sphinx
+
+Bugs:
+
+- The way how the Dav-Patch is integrated. It is not a security patch
+  nor a patch that would be necessary to ensure the build.
+  In principle, it eliminates a functional deficiency, which may
+  not be a deficiency at all, but simply an implementation gap.
+  pkgsrc is therefore not the right place to deal with this problem,
+  I'm almost sure of that. Without this patch, the CalDAV / CardDAV
+  functionality cannot be used meaningfully for me, and in my
+  experience it will also be for most other users who want to
+  maintain a shared calendar, for example. I will definitely keep
+  an eye on what is going on upstream. In the meantime, I would like
+  to keep the patch here if there are no important reasons why.
+
+- Kerberos support, PostgreSQL and MySQL are currently not tested
+
+For questions, tips or offers of help you can contact me at mp@petermann-it.de
