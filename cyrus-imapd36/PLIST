@@ -114,6 +114,7 @@ libexec/pop3d
 libexec/pop3proxyd
 libexec/promstatsd
 libexec/proxyd
+${PLIST.ldap}libexec/ptloader
 libexec/smmapd
 libexec/sync_server
 libexec/timsieved
@@ -198,13 +199,15 @@ sbin/cyr_synclog
 sbin/cyr_userseen
 sbin/cyr_virusscan
 sbin/cyrdump
-sbin/dav_reconstruct
+${PLIST.http}sbin/dav_reconstruct
 sbin/deliver
 sbin/fetchnews
 sbin/ipurge
 sbin/mbexamine
 sbin/mbpath
 sbin/mbtool
+${PLIST.ldap}sbin/ptdump
+${PLIST.ldap}sbin/ptexpire
 sbin/quota
 sbin/reconstruct
 sbin/relocate_by_id
