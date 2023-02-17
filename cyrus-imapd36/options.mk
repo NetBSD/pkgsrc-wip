@@ -2,7 +2,7 @@
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
-PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap pcre snmp
+PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap pcre
 PKG_SUPPORTED_OPTIONS+=	mysql pgsql sqlite http
 PKG_SUGGESTED_OPTIONS=	pcre http ldap
 
@@ -69,14 +69,6 @@ CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 PLIST.ldap=		yes
 .else
 CONFIGURE_ARGS+=	--without-ldap
-.endif
-
-.if !empty(PKG_OPTIONS:Msnmp)
-.  include "../../net/net-snmp/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
-USE_TOOLS+=		perl:run
-.else
-CONFIGURE_ARGS+=	--without-snmp
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)

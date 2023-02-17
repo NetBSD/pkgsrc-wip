@@ -62,10 +62,20 @@ CONF_FILES+=		${EGDIR}/cyrus.conf ${PKG_SYSCONFDIR}/cyrus.conf
 RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 
-REPLACE_PERL+=		tools/rehash
+REPLACE_PERL+=		tools/arbitronsort.pl
+REPLACE_PERL+=		tools/compile_st.pl
 REPLACE_PERL+=		tools/config2header
+REPLACE_PERL+=		tools/config2rst
+REPLACE_PERL+=		tools/config2sample
+REPLACE_PERL+=		tools/fixsearchpath.pl
+REPLACE_PERL+=		tools/masssievec
+REPLACE_PERL+=		tools/mkimap
+REPLACE_PERL+=		tools/mknewsgroups
+REPLACE_PERL+=		tools/perl2rst
+REPLACE_PERL+=		tools/rehash
 REPLACE_PERL+=		imap/promdatagen
 REPLACE_PERL+=		perl/annotator/Daemon.pm
+REPLACE_PERL+=		perl/sieve/scripts/sieveshell.pl
 
 pre-build:
 	${RUN}${_ULIMIT_CMD}
