@@ -247,6 +247,9 @@ ${PYSITELIB}/chirp/drivers/ict7h.pyo
 ${PYSITELIB}/chirp/drivers/ict8.py
 ${PYSITELIB}/chirp/drivers/ict8.pyc
 ${PYSITELIB}/chirp/drivers/ict8.pyo
+${PYSITELIB}/chirp/drivers/icv80.py
+${PYSITELIB}/chirp/drivers/icv80.pyc
+${PYSITELIB}/chirp/drivers/icv80.pyo
 ${PYSITELIB}/chirp/drivers/icv86.py
 ${PYSITELIB}/chirp/drivers/icv86.pyc
 ${PYSITELIB}/chirp/drivers/icv86.pyo
@@ -256,9 +259,6 @@ ${PYSITELIB}/chirp/drivers/icw32.pyo
 ${PYSITELIB}/chirp/drivers/icx8x.py
 ${PYSITELIB}/chirp/drivers/icx8x.pyc
 ${PYSITELIB}/chirp/drivers/icx8x.pyo
-${PYSITELIB}/chirp/drivers/icx8x_ll.py
-${PYSITELIB}/chirp/drivers/icx8x_ll.pyc
-${PYSITELIB}/chirp/drivers/icx8x_ll.pyo
 ${PYSITELIB}/chirp/drivers/icx90.py
 ${PYSITELIB}/chirp/drivers/icx90.pyc
 ${PYSITELIB}/chirp/drivers/icx90.pyo
@@ -310,6 +310,9 @@ ${PYSITELIB}/chirp/drivers/kguv8e.pyo
 ${PYSITELIB}/chirp/drivers/kguv920pa.py
 ${PYSITELIB}/chirp/drivers/kguv920pa.pyc
 ${PYSITELIB}/chirp/drivers/kguv920pa.pyo
+${PYSITELIB}/chirp/drivers/kguv980p.py
+${PYSITELIB}/chirp/drivers/kguv980p.pyc
+${PYSITELIB}/chirp/drivers/kguv980p.pyo
 ${PYSITELIB}/chirp/drivers/kguv9dplus.py
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyc
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyo
@@ -346,6 +349,9 @@ ${PYSITELIB}/chirp/drivers/retevis_rb15.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.py
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.pyo
+${PYSITELIB}/chirp/drivers/retevis_rb28.py
+${PYSITELIB}/chirp/drivers/retevis_rb28.pyc
+${PYSITELIB}/chirp/drivers/retevis_rb28.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt1.py
 ${PYSITELIB}/chirp/drivers/retevis_rt1.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt1.pyo
@@ -424,6 +430,9 @@ ${PYSITELIB}/chirp/drivers/thuv1f.pyo
 ${PYSITELIB}/chirp/drivers/tk270.py
 ${PYSITELIB}/chirp/drivers/tk270.pyc
 ${PYSITELIB}/chirp/drivers/tk270.pyo
+${PYSITELIB}/chirp/drivers/tk3140.py
+${PYSITELIB}/chirp/drivers/tk3140.pyc
+${PYSITELIB}/chirp/drivers/tk3140.pyo
 ${PYSITELIB}/chirp/drivers/tk760.py
 ${PYSITELIB}/chirp/drivers/tk760.pyc
 ${PYSITELIB}/chirp/drivers/tk760.pyo
@@ -433,6 +442,9 @@ ${PYSITELIB}/chirp/drivers/tk760g.pyo
 ${PYSITELIB}/chirp/drivers/tk8102.py
 ${PYSITELIB}/chirp/drivers/tk8102.pyc
 ${PYSITELIB}/chirp/drivers/tk8102.pyo
+${PYSITELIB}/chirp/drivers/tk8160.py
+${PYSITELIB}/chirp/drivers/tk8160.pyc
+${PYSITELIB}/chirp/drivers/tk8160.pyo
 ${PYSITELIB}/chirp/drivers/tk8180.py
 ${PYSITELIB}/chirp/drivers/tk8180.pyc
 ${PYSITELIB}/chirp/drivers/tk8180.pyo
@@ -535,6 +547,7 @@ ${PYSITELIB}/chirp/settings.pyo
 ${PYSITELIB}/chirp/share/chirp.desktop
 ${PYSITELIB}/chirp/share/chirp.ico
 ${PYSITELIB}/chirp/share/chirp.png
+${PYSITELIB}/chirp/share/chirp.svg
 ${PYSITELIB}/chirp/share/chirpw.1
 ${PYSITELIB}/chirp/share/welcome_screen.png
 ${PYSITELIB}/chirp/sources/__init__.py
