@@ -9,4 +9,20 @@ for more detailed instructions on setting up or upgrading the environment
 before starting the Cyrus IMAP server.  In particular, several services
 may need to be added to /etc/services.
 
+For users upgrading from 3.0.x < 3.6.0:
+
+In version 3.6 mailboxes and user metadata directories are now organized
+on disk by UUID rather then by mailbox name. Compatibility with existing
+layouts by mailbox name is maintained by the IMAP server. In addition to
+that, tooling is provided to support migrations. 
+
+Optionally the default can be changed back to mailbox name by adding to
+imapd.conf:
+
+	mailbox_legacy_dirs: yes
+
+Please refer the 3.6.0 release notes for further details about migrations:
+
+	https://www.cyrusimap.org/imap/download/release-notes/3.6/x/3.6.0.html
+
 ===========================================================================
