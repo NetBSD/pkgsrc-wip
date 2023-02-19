@@ -5,7 +5,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	ruby sysutils
 EXTRACT_SUFX=	.gem
 
-MAINTAINER=	sevan@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rubygems.org/gems/iesd
 COMMENT=	Tool to customize OS X InstallESD
 LICENSE=	2-clause-bsd
