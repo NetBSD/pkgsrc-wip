@@ -6,3 +6,22 @@ nros: CVE-2021-41732 seems to be nothing according to the zeek developers:
 
 nros: how to get the package to find the python version that is
       PYTHON_VERSION_DEFAULT without adding lang/python/tool.mk ?
+
+On NetBSD 9.99.x build fails with:
+
+ [ 97%] Building C object src/CMakeFiles/zeek_objs.dir/modp_numtoa.c.o
+ In file included from /usr/include/stdio.h:595,
+                  from .../wip/zeek/work/zeek-4.0.4/src/modp_numtoa.c:7:
+ .../wip/zeek/work/zeek-4.0.4/src/modp_numtoa.c: In function 'modp_dtoa':
+ .../wip/zeek/work/zeek-4.0.4/src/modp_numtoa.c:174:30: error: 'DBL_DECIMAL_DIG' undeclared (first use in this function); did you
+  mean 'DECIMAL_DIG'?
+   174 |         sprintf(str, "%.*e", DBL_DECIMAL_DIG - 1, neg ? -value : value);
+       |                              ^~~~~~~~~~~~~~~
+ .../wip/zeek/work/zeek-4.0.4/src/modp_numtoa.c:174:30: note: each undeclared identifier is reported only once for each function
+ it appears in
+ .../wip/zeek/work/zeek-4.0.4/src/modp_numtoa.c: In function 'modp_dtoa2':
+ .../wip/zeek/work/zeek-4.0.4/src/modp_numtoa.c:274:30: error: 'DBL_DECIMAL_DIG' undeclared (first use in this function); did you
+  mean 'DECIMAL_DIG'?
+   274 |         sprintf(str, "%.*e", DBL_DECIMAL_DIG - 1, neg ? -value : value);
+       |                              ^~~~~~~~~~~~~~~
+ --- src/CMakeFiles/zeek_objs.dir/modp_numtoa.c.o ---
