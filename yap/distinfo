@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.26 2021/12/29 03:14:35 dholland Exp $
+
+BLAKE2s (YAP-6.3.4.tar.gz) = aadddd17e6f48cfc37a20009c3458591a0256380248d2ad8ad4cbb8860ee5a13
+SHA512 (YAP-6.3.4.tar.gz) = 67884b98bbc564f23f88cbb1462127a47f3d0602ac347d1c8b0857e5d8ebd9d0ca28770229a6beb52493c6c3256b6cdf8dad25ed2963c64102093f70c4c20a3a
+Size (YAP-6.3.4.tar.gz) = 11007893 bytes
+SHA1 (patch-H_absmi.h) = f930063ca281d7ab8df80e66b89cc38d810374c0
+SHA1 (patch-ad) = e3765c0d6729b4d531cdea59dc8e442055091d10
+SHA1 (patch-ae) = 2a2cb22ddfe9f4ef05eccbf942fbd16dcefbbaec
+SHA1 (patch-af) = a042950ee63fac0f5863c3caa3f7c07227c46b4b
+SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
+SHA1 (patch-packages_myddas_odbc_CMakeLists.txt) = 52746052cbe9423db33c42699bf0e429d6f7796d

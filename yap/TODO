@@ -1,0 +1,17 @@
+===> Building for yap-6.3.4
+[5/188] Building C object CMakeFiles/libYap.dir/C/arith1.c.o
+FAILED: CMakeFiles/libYap.dir/C/arith1.c.o 
+/scratch/lang/yap/work/.cwrapper/bin/gcc -DCOROUTINING=1 -DDEPTH_LIMIT=1 -DHAVE_CONFIG_H=1 -DRATIONAL_TREES=1 -DTABLING=1 -DTHREADED_CODE=1 -DUSE_MYDDAS=1 -DUSE_SYSTEM_MALLOC=1 -DUTF8PROC=1 -D_YAP_NOT_INSTALLED_=1 -DlibYap_EXPORTS -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/cmake-pkgsrc-build -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/H -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/include -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/os -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/OPTYap -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/utf8proc -I/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/JIT/HPP -I/usr/pkg/include -O2 -g -fPIC -D_FORTIFY_SOURCE=2 -fstack-clash-protection -I/usr/pkg/include -I/usr/include -I/usr/include/krb5 -fPIC -MD -MT CMakeFiles/libYap.dir/C/arith1.c.o -MF CMakeFiles/libYap.dir/C/arith1.c.o.d -o CMakeFiles/libYap.dir/C/arith1.c.o -c /scratch/lang/yap/work/yap-6.3-YAP-6.3.4/C/arith1.c
+/scratch/lang/yap/work/yap-6.3-YAP-6.3.4/C/arith1.c:384:1: error: conflicting types for 'popcount'
+  384 | popcount(Int inp USES_REGS) /* calculate the least significant bit for an integer */
+      | ^~~~~~~~
+In file included from /usr/include/string.h:98,
+                 from /scratch/lang/yap/work/yap-6.3-YAP-6.3.4/H/TermExt.h:282,
+                 from /scratch/lang/yap/work/yap-6.3-YAP-6.3.4/H/YapTags.h:366,
+                 from /scratch/lang/yap/work/yap-6.3-YAP-6.3.4/H/Yap.h:442,
+                 from /scratch/lang/yap/work/yap-6.3-YAP-6.3.4/C/arith1.c:228:
+/usr/include/strings.h:57:14: note: previous declaration of 'popcount' was here
+   57 | unsigned int popcount(unsigned int) __constfunc;
+      |              ^~~~~~~~
+[12/188] Building C object CMakeFiles/libYap.dir/C/absmi.c.o
+ninja: build stopped: subcommand failed.

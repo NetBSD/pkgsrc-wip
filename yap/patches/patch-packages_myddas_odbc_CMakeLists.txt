@@ -1,0 +1,23 @@
+$NetBSD$
+
+Do not set properties for undefined targets.
+
+--- packages/myddas/odbc/CMakeLists.txt.orig	2016-01-08 20:54:04.000000000 +0000
++++ packages/myddas/odbc/CMakeLists.txt
+@@ -21,9 +21,6 @@ add_definitions (-DMYDDAS_ODBC=1)
+ add_library (Yapodbc SHARED ${YAPODBC_SOURCES})
+ target_link_libraries(Yapodbc libYap ${ODBC_LIBRARIES})
+ include_directories (${ODBC_INCLUDE_DIRECTORIES} ..)
+-else()
+-  add_definitions (-DMYDDAS_ODBC=0)
+-  endif (ODBC_FOUND)
+ 
+ set_target_properties (Yapodbc PROPERTIES
+   POSITION_INDEPENDENT_CODE ON
+@@ -36,3 +33,6 @@ set_target_properties (Yapodbc PROPERTIE
+     LIBRARY DESTINATION ${libdir}
+     )
+ 
++else()
++  add_definitions (-DMYDDAS_ODBC=0)
++  endif (ODBC_FOUND)

@@ -6073,6 +6073,7 @@ SUBDIR+=	yad
 SUBDIR+=	yafray
 SUBDIR+=	yaggo
 SUBDIR+=	yakuake
+SUBDIR+=	yap
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
 SUBDIR+=	yder
