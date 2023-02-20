@@ -19,6 +19,12 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 
+# (NetBSD)/sparc64 systems fail to build libunwind,
+# a dependency of pkgsrc llvm, so use the internal one instead
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
+.endif
+
 # Bundle OpenSSL and curl into the cargo binary when producing
 # bootstraps on NetBSD.
 .if ${OPSYS} == "NetBSD" && ${BUILD_TARGET} == "dist"
