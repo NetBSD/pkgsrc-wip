@@ -2,7 +2,7 @@
 
 DISTNAME=	rns-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python # TODO: add primary category
+CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rns/}
 
 MAINTAINER=	gdt@NetBSD.org
