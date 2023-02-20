@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (lxmf-0.3.1.tar.gz) = 244d8188f803b762f26d44b7bdb03f6140ce93322f318d346d1620b809929c2c
+SHA512 (lxmf-0.3.1.tar.gz) = cc3d5bea069a61fc1b43dfe2ab112d080306ca4af55f88d6c86cd75e75c977ccc76bdc7634366957764f3e5c9201bb5a83a162b6b2ad984e235bdab7036ba7a0
+Size (lxmf-0.3.1.tar.gz) = 30485 bytes
