@@ -3310,6 +3310,7 @@ SUBDIR+=	py-PyPE
 SUBDIR+=	py-PySide2
 SUBDIR+=	py-PythonMagick
 SUBDIR+=	py-RXP
+SUBDIR+=	py-rns
 SUBDIR+=	py-Robinhood
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
