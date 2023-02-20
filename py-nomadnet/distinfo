@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nomadnet-0.3.5.tar.gz) = d4d0c501894342a8e6d9aed20d37e0e05f1228fcb85212d93502227b47467b23
+SHA512 (nomadnet-0.3.5.tar.gz) = 6ab205ad738cf8c0d6e2111ccf345641a67dcc84002da5612d6f63d54774facca690493cfc2c26961539deb0b6ca7d42b8d2634a18fd82632ffa10e265dea123
+Size (nomadnet-0.3.5.tar.gz) = 488810 bytes
