@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (docviewer-0.2.0.1-126197a9c11dad5ddcd1bcdfdbab4fcddf5d3e26.tar.gz) = 4173266e661e1f256d801fae8dfc387de515ac2d5b7266e50d07e25cd892a6a1
-SHA512 (docviewer-0.2.0.1-126197a9c11dad5ddcd1bcdfdbab4fcddf5d3e26.tar.gz) = 711899b766739e49abf0cc02b1f87c53d009e1ed851accd49dde54c86d520e09883d52a3a3ffa0896a68b4be2b92b19fbef6ebf2bdbc3f239645d1ec064b9a74
-Size (docviewer-0.2.0.1-126197a9c11dad5ddcd1bcdfdbab4fcddf5d3e26.tar.gz) = 2638 bytes
+BLAKE2s (docviewer-0.2.0.2-3bb75e957ebe00cf99d3893bc1f2ed9e647112da.tar.gz) = f568deaa3cec0c40a221b9c747e4c84b7afe0f138928e204048a301474cf2807
+SHA512 (docviewer-0.2.0.2-3bb75e957ebe00cf99d3893bc1f2ed9e647112da.tar.gz) = 64073cb84239a55f0afb33a58fa531ed1ca740690e563f1e82916a640e28e4eea7e4f0eedff9779c78a778afdaa42f8d2b99792988b6aaa2f96d37a346a2c582
+Size (docviewer-0.2.0.2-3bb75e957ebe00cf99d3893bc1f2ed9e647112da.tar.gz) = 2635 bytes
