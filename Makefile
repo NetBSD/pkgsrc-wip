@@ -4554,6 +4554,7 @@ SUBDIR+=	py-rtree
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-rxpy3
 SUBDIR+=	py-sabyenc
+SUBDIR+=	py-sbapp
 SUBDIR+=	py-sabyenc3
 SUBDIR+=	py-safersympify
 SUBDIR+=	py-safety
