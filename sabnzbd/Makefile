@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	sabnzbd-${DISTVERSION}
-DISTVERSION=	3.6.1
+DISTVERSION=	3.7.2
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sabnzbd/}
 GITHUB_PROJECT=	sabnzbd
@@ -53,6 +53,7 @@ SUBST_VARS.fix-paths=		PREFIX
 
 do-install:
 	${MKDIR} ${DESTDIR}/${PREFIX}/bin
+	cd ${WRKSRC} && find . -name '*.orig' -delete
 	cd ${WRKSRC} && pax -rw SABnzbd.py ${DESTDIR}/${PREFIX}/bin/
 	${MKDIR} ${DESTDIR}/${PREFIX}/${PYSITELIB}/
 	cd ${WRKSRC} && pax -rw -pmp sabnzbd ${DESTDIR}/${PREFIX}/${PYSITELIB}/

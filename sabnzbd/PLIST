@@ -139,6 +139,7 @@ share/sabnzbd/interfaces/Glitter/templates/static/javascripts/glitter.main.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/glitter.queue.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/jquery-3.5.1.min.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/jquery-ui.min.js
+share/sabnzbd/interfaces/Glitter/templates/static/javascripts/jquery.hotkeys.min.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/jquery.peity.min.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/knockout-3.5.1.min.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/knockout-extensions.js
@@ -158,6 +159,7 @@ share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/ru
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/sr.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/sv.js
 share/sabnzbd/interfaces/Glitter/templates/static/javascripts/momentjs_locale/zh-cn.js
+share/sabnzbd/interfaces/Glitter/templates/static/javascripts/search-query-parser.js
 share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Auto.css
 share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Light.css
 share/sabnzbd/interfaces/Glitter/templates/static/stylesheets/colorschemes/Night.css
