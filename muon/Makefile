@@ -7,7 +7,7 @@ MASTER_SITES=	https://git.sr.ht/~lattis/muon/archive/
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~lattis/muon
-COMMENT=	Implementation of meson build system in c99 with minimal dependencies
+COMMENT=	Implementation of meson build system in C99 with minimal dependencies
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c99
@@ -31,8 +31,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/output/muon \
 		${DESTDIR}${PREFIX}/bin/muon
 
-# Note: pkgconf library is included via hacks.mk
 #.include "../../archivers/libarchive/buildlink3.mk"
+.include "../../devel/pkgconf/buildlink3.mk"
 #.include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
