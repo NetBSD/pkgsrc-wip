@@ -1,0 +1,113 @@
+nmh: Update to 1.8
+
+Changes:
+===
+1.8
+===
+Welcome to nmh, the new version of the classic MH mail handling system.
+It's been nearly five years since the last release of nmh, and there have
+been a number of significant changes since that last release.  Long-time
+MH and nmh users should read carefully the NOTABLE CHANGES section, as
+there are some significant changes to nmh behavior.  Otherwise, please
+see the README and INSTALL files for help on getting started with nmh.
+
+This release is dedicated to Norman Z. Shapiro, co-designer of the MH
+Message Handling System.  MH is the predecessor of nmh.  Norm was an
+active supporter of nmh development until he passed away in October of
+2021.  We are most grateful to Norm for his stewardship of MH and nmh.
+    https://en.wikipedia.org/wiki/Norman_Shapiro
+
+For news of future releases, subscribe to the low-volume
+    https://lists.nongnu.org/mailman/listinfo/nmh-announce
+
+---------------
+NOTABLE CHANGES
+---------------
+
+- Support for Content-MD5 header fields, MIME content cache functionality,
+  and the message/partial MIME type have been removed.
+- Gmail OAuth2/XOAUTH support for desktop applications has been effectively
+  dropped, so nmh no longer supports it.  nmh support for Gmail API access
+  is experimental, please post to nmh-workers@nongnu.org if you'd like to
+  help with test and development.
+- repl(1) -convertargs now allows editing of the composition draft between
+  translation and any encoding of text content.  Because encoding can wrap
+  long lines, the use of a paragraph formatter has been removed from
+  mhn.defaults.
+
+------------
+NEW FEATURES
+------------
+
+- The default editor has been changed from 'vi' to 'prompter', to align with
+  historical practice and reduce packaging dependencies on external programs.
+- A new -checkbase64 switch has been added to mhfixmsg(1).
+- inc(1)/msgchk(1) now support STARTTLS for the POP protocol.
+- All TLS-supported protocols now will send the SNI (server name indicator)
+  TLS extension.
+- A new mh-format function %(ordinal) has been implemented to output the
+  appropriate ordinal suffix for numbers.  Example: "%(num 22)%(ordinal)"
+  will output "22nd".
+- show and mhl now decode more addresses in header fields.
+- Added warning from all programs that read the profile if the profile
+  contains a post entry, which is ignored, but does not contain a
+  postproc entry.  In other words, if you get this warning and want
+  to suppress it, your options include:
+  1) Remove your post profile entry.
+  2) Make your post profile entry a comment by prepending it with the #:
+     comment indicator.
+  3) Add a postproc entry that points to the post that you use.  That can
+     be viewed with "mhparam postproc".
+- scan(1) -file argument can be a Maildir directory.
+- Updated mhn.defaults to prefer mpv(1) over xv(1) and replace mpeg_play(1),
+  and to use it for all video types, not just video/mpeg.  And prefer all
+  other searched-for pdf viewers over acroread(1).
+- Added mhshow-suffix-video.mp4 to mhn.defaults, for use by mhshow(1) and
+  send(1).
+- Removed support from mhn.defaults for application/x-ivs and text/richtext.
+- Changed interpretation of argument to mhfixmsg(1) -decodeheaderfieldbodies
+  switch to specify character set of the decoded field bodies.
+- repl(1) -convertargs now allows editing of the composition draft between
+  translation and any encoding of text content.
+- install-mh(1) now enables the mh-draft(5) draft folder facility.
+
+-----------------
+OBSOLETE FEATURES
+-----------------
+
+- The generation and verification of a Content-MD5 field has been removed
+  without deprecation.  The related -check and -nocheck options now error.
+- The MIME content cache functionality has been mostly non-functional since
+  the development on nmh, and consequently all of the content caching code
+  and related switches (-cache/-rcache/-wcache) have been removed.
+- Support for generating and reassembling message/partial messages has been
+  removed; it seems that this has been broken since 1.5 and there is very
+  little support across MUAs.
+- Marked Gmail OAuth2/XOAUTH support as being unsupported.
+- Support for the MHPDEBUG environment variable was removed.  It was
+  deprecated in nmh 1.7.  The pick(1) -debug switch replaced it.
+- The 'libdir' mhparam(1) component was removed.  It was deprecated in
+  nmh 1.7, when it was replaced by a new 'libexecdir' component.
+
+---------
+BUG FIXES
+---------
+
+- Fixed bcc to work with sendmail/pipe, and better documented that dcc
+  doesn't work with it [Bug 55700].
+- An -attendee switch has been added to mhical(1), for use when more than one
+  (or zero) attendees match a user's mailbox.
+- Fixed inc(1) and %(me) function escape to not obey Local-Mailbox profile
+  component.
+- Fixed source charset in mhfixmsg textcharset verbose output.
+- Fixed mhfixmsg charset determination of content added with -reformat.
+- Fixed file descriptor leak in mhfixmsg when run on multiple input files.
+- Fixed mhfixmsg(1) -decodeheaderfilebodies to support mixed encoded/undecoded.
+- Fixed memory corruption in post(1) and inc(1) when using XOAUTH2,
+  with 4 or more entries in the oauth-authservice file.
+- Added alias expansion to From: address for use by sendfrom.
+- Removed extra space added before header field bodies by dist(1) to $mhdraft.
+- Fixed display of iCalendar object with multiple VEVENTS using a VTIMEZONE.
+- Fixed allowable encodings with MIME message types to get closer to RFC 2046.
+- Detect other files regardless of backup prefix [Bug #49476].
+- Copy if hard link by refile(1) or send(1) fails with EACESS [Bug 56575].
