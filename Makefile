@@ -1220,7 +1220,6 @@ SUBDIR+=	gnucash-devel
 SUBDIR+=	gnujump
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet-go
-SUBDIR+=	gnunet-gtk
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnutls-guile
 SUBDIR+=	go-amqp

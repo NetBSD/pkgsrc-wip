@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (gnunet-gtk-0.16.0.tar.gz) = 5ac4cfa1c6a3b67a940b96c47229aa707c17c5434ed3896de999a21fcd86c01b
-SHA512 (gnunet-gtk-0.16.0.tar.gz) = 478815504430e130c161b769ade2ad253d7c365a873bb42e619e926fe4550afd91e73a9a8a22f95ef0b0966d82c8addc81cc7c1d6e31ccba6704c594a8fae06c
-Size (gnunet-gtk-0.16.0.tar.gz) = 1566556 bytes
-SHA1 (patch-gnunet-conversation-gtk.patch) = 1ee128eaa029e989fcbf9c321cab1b181c43435e
