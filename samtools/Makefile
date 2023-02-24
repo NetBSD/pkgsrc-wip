@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2020/01/26 17:30:46 rillig Exp $
 
-DISTNAME=	samtools-1.15
+DISTNAME=	samtools-1.17
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 

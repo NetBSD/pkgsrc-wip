@@ -30,6 +30,7 @@ man/man1/samtools-cat.1
 man/man1/samtools-collate.1
 man/man1/samtools-consensus.1
 man/man1/samtools-coverage.1
+man/man1/samtools-cram-size.1
 man/man1/samtools-depad.1
 man/man1/samtools-depth.1
 man/man1/samtools-dict.1
@@ -49,7 +50,9 @@ man/man1/samtools-merge.1
 man/man1/samtools-mpileup.1
 man/man1/samtools-phase.1
 man/man1/samtools-quickcheck.1
+man/man1/samtools-reference.1
 man/man1/samtools-reheader.1
+man/man1/samtools-reset.1
 man/man1/samtools-rmdup.1
 man/man1/samtools-samples.1
 man/man1/samtools-sort.1
