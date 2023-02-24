@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.25 2021/03/19 17:37:03 bsiegert Exp $
 
-DISTNAME=	terraform-provider-aws-3.75.1
+DISTNAME=	terraform-provider-aws-3.76.1
 PKGNAME=	${DISTNAME:S/aws/aws3/}
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=terraform-providers/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
+GITHUB_PROJECT=	terraform-provider-aws
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
