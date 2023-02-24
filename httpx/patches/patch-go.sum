@@ -1,0 +1,17 @@
+$NetBSD$
+
+Use latest pebble version that supports NetBSD.
+
+--- go.sum.orig	2023-02-24 18:27:54.182385149 +0000
++++ go.sum
+@@ -47,8 +47,8 @@ github.com/cockroachdb/errors v1.9.1/go.
+ github.com/cockroachdb/logtags v0.0.0-20211118104740-dabe8e521a4f/go.mod h1:Vz9DsVWQQhf3vs21MhPMZpMGSht7O/2vFW2xusFUVOs=
+ github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b h1:r6VH0faHjZeQy818SGhaone5OnYfxFR/+AzdY3sf5aE=
+ github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b/go.mod h1:Vz9DsVWQQhf3vs21MhPMZpMGSht7O/2vFW2xusFUVOs=
+-github.com/cockroachdb/pebble v0.0.0-20230207164304-7d1e4ba7ffd0 h1:m2/PDCdtaaNbs1EujshCCTIiwp2WA8WDokNgtcHaLMA=
+-github.com/cockroachdb/pebble v0.0.0-20230207164304-7d1e4ba7ffd0/go.mod h1:Nb5lgvnQ2+oGlE/EyZy4+2/CxRh9KfvCXnag1vtpxVM=
++github.com/cockroachdb/pebble v0.0.0-20230223225144-bc4c9afe47a5 h1:m89BS8D26lZacQBXmz5jNCSnPAYpNPt3RrKjsGTsavs=
++github.com/cockroachdb/pebble v0.0.0-20230223225144-bc4c9afe47a5/go.mod h1:9lRMC4XN3/BLPtIp6kAKwIaHu369NOf2rMucPzipz50=
+ github.com/cockroachdb/redact v1.1.3 h1:AKZds10rFSIj7qADf0g46UixK8NNLwWTNdCIGS5wfSQ=
+ github.com/cockroachdb/redact v1.1.3/go.mod h1:BVNblN9mBWFyMyqK1k3AAiSxhvhfK2oOZZ2lK+dpvRg=
+ github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0/go.mod h1:4Zcjuz89kmFXt9morQgcfYZAYZ5n8WHjt81YYWIwtTM=
