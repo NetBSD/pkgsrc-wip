@@ -1,7 +1,7 @@
 # $NetBSD$
 
-VERSION=	0.8.1
-DISTNAME=	libdoom-umapinfo-${VERSION}
+VERSION=	1.0.0
+DISTNAME=	libdoom-umapinfo-${VERSION}rc1
 CATEGORIES=	games
 MASTER_SITES=	https://micha.freeshell.org/libdoom-umapinfo/src/
 
@@ -12,4 +12,5 @@ LICENSE=	2-clause-bsd
 
 PLIST_SUBST+=	VERS="${VERSION}"
 
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
