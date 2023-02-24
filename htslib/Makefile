@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	htslib-1.15
+DISTNAME=	htslib-1.17
 CATEGORIES=	biology
 # Github-generated distfiles are incomplete, use custom tarballs instead
 MASTER_SITES=	https://github.com/samtools/htslib/releases/download/${PKGVERSION_NOREV}/
