@@ -78,6 +78,9 @@ ${PYSITELIB}/pwnlib/commandline/errno.pyo
 ${PYSITELIB}/pwnlib/commandline/hex.py
 ${PYSITELIB}/pwnlib/commandline/hex.pyc
 ${PYSITELIB}/pwnlib/commandline/hex.pyo
+${PYSITELIB}/pwnlib/commandline/libcdb.py
+${PYSITELIB}/pwnlib/commandline/libcdb.pyc
+${PYSITELIB}/pwnlib/commandline/libcdb.pyo
 ${PYSITELIB}/pwnlib/commandline/main.py
 ${PYSITELIB}/pwnlib/commandline/main.pyc
 ${PYSITELIB}/pwnlib/commandline/main.pyo

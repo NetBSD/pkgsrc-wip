@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pwntools-4.8.0
+DISTNAME=	pwntools-4.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwntools/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://pwntools.com/
 COMMENT=	CTF framework and exploit development library
 LICENSE=	gnu-gpl-v3 AND 2-clause-bsd AND mit
 
+DEPENDS+=	${PYPKGPREFIX}-Socks-[0-9]*:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-capstone>=3.0.5:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-colored-traceback-[0-9]*:../../wip/py-colored-traceback
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
@@ -32,8 +33,8 @@ PYTHON_VERSIONED_DEPENDENCIES+=	packaging pip
 
 post-install:
 .for f in asm checksec common constgrep cyclic debug disablenx disasm elfdiff \
-    elfpatch errno hex main phd pwnstrip scramble shellcraft template unhex \
-    update version
+    elfpatch errno hex libcdb main phd pwnstrip scramble shellcraft template \
+    unhex update version
 	${RM} ${DESTDIR}${PREFIX}/bin/${f}
 .endfor
 	${MV} ${DESTDIR}${PREFIX}/bin/pwn ${DESTDIR}${PREFIX}/bin/pwn${PYVERSSUFFIX}
