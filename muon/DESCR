@@ -1,4 +1,4 @@
-muon is an implementation of the meson build system in c99 with minimal
+muon is an implementation of the meson build system in C99 with minimal
 dependencies.
 
 Non-features
