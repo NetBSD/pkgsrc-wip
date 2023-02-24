@@ -148,6 +148,10 @@ share/APE/Languages/Python/Macros/macros
 share/APE/Languages/Python/Macros/menu.txt
 share/APE/Languages/Python/language_opts
 share/APE/Languages/Python/syntax_highlighting
+share/APE/Languages/QTI-text/Macros/macros
+share/APE/Languages/QTI-text/Macros/menu.txt
+share/APE/Languages/QTI-text/language_opts
+share/APE/Languages/QTI-text/syntax_highlighting
 share/APE/Languages/R/Macros/macros
 share/APE/Languages/R/Macros/menu.txt
 share/APE/Languages/R/language_opts
