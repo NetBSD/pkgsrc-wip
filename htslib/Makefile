@@ -2,8 +2,8 @@
 
 DISTNAME=	htslib-1.17
 CATEGORIES=	biology
-# Github-generated distfiles are incomplete, use custom tarballs instead
-MASTER_SITES=	https://github.com/samtools/htslib/releases/download/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 OWNER=		bacon@NetBSD.org
@@ -13,6 +13,10 @@ LICENSE=	mit
 
 USE_TOOLS+=		autoconf automake autoreconf bash gmake perl
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-libcurl
+PKGCONFIG_OVERRIDE=	htslib.pc.in
+TEST_TARGET=		test
+MAKE_ENV+=		BUILT_TEST_PROGRAMS=''
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
@@ -20,11 +24,6 @@ SUBST_SED.version=	-e "s|m4_esyscmd_s(\[./version.sh 2>/dev/null\])|[${PKGVERSIO
 SUBST_FILES.version=	configure.ac
 
 REPLACE_PERL+=		test/*.pl
-
-CONFIGURE_ARGS+=	--enable-libcurl
-PKGCONFIG_OVERRIDE=	htslib.pc.in
-TEST_TARGET=		test
-MAKE_ENV+=		BUILT_TEST_PROGRAMS=''
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
