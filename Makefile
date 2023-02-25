@@ -487,6 +487,7 @@ SUBDIR+=	clisp-hg
 SUBDIR+=	clock-signal
 SUBDIR+=	clockspeed
 SUBDIR+=	cloud-nuke
+SUBDIR+=	cloudflared
 SUBDIR+=	clustershell
 SUBDIR+=	clutter-gst
 SUBDIR+=	cm-unicode-ttf
