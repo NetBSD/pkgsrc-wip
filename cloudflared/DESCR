@@ -1,0 +1,18 @@
+Contains the command-line client for Cloudflare Tunnel, a tunneling daemon
+that proxies traffic from the Cloudflare network to your origins. This
+daemon sits between Cloudflare network and your origin (e.g. a
+webserver). Cloudflare attracts client requests and sends them to you via
+this daemon, without requiring you to poke holes on your firewall --- your
+origin can remain as closed as possible. Extensive documentation can be
+found in the Cloudflare Tunnel section of the Cloudflare Docs. All usages
+related with proxying to your origins are available under cloudflared
+tunnel help.
+
+You can also use cloudflared to access Tunnel origins (that are protected
+with cloudflared tunnel) for TCP traffic at Layer 4 (i.e., not
+HTTP/websocket), which is relevant for use cases such as SSH, RDP,
+etc. Such usages are available under cloudflared access help.
+
+You can instead use WARP client to access private origins behind Tunnels
+for Layer 4 traffic without requiring cloudflared access commands on the
+client side.
