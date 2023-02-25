@@ -12,6 +12,9 @@ ${PYSITELIB}/pre_commit/__init__.pyo
 ${PYSITELIB}/pre_commit/__main__.py
 ${PYSITELIB}/pre_commit/__main__.pyc
 ${PYSITELIB}/pre_commit/__main__.pyo
+${PYSITELIB}/pre_commit/all_languages.py
+${PYSITELIB}/pre_commit/all_languages.pyc
+${PYSITELIB}/pre_commit/all_languages.pyo
 ${PYSITELIB}/pre_commit/clientlib.py
 ${PYSITELIB}/pre_commit/clientlib.pyc
 ${PYSITELIB}/pre_commit/clientlib.pyo
@@ -78,12 +81,12 @@ ${PYSITELIB}/pre_commit/git.pyo
 ${PYSITELIB}/pre_commit/hook.py
 ${PYSITELIB}/pre_commit/hook.pyc
 ${PYSITELIB}/pre_commit/hook.pyo
+${PYSITELIB}/pre_commit/lang_base.py
+${PYSITELIB}/pre_commit/lang_base.pyc
+${PYSITELIB}/pre_commit/lang_base.pyo
 ${PYSITELIB}/pre_commit/languages/__init__.py
 ${PYSITELIB}/pre_commit/languages/__init__.pyc
 ${PYSITELIB}/pre_commit/languages/__init__.pyo
-${PYSITELIB}/pre_commit/languages/all.py
-${PYSITELIB}/pre_commit/languages/all.pyc
-${PYSITELIB}/pre_commit/languages/all.pyo
 ${PYSITELIB}/pre_commit/languages/conda.py
 ${PYSITELIB}/pre_commit/languages/conda.pyc
 ${PYSITELIB}/pre_commit/languages/conda.pyo
@@ -108,9 +111,6 @@ ${PYSITELIB}/pre_commit/languages/fail.pyo
 ${PYSITELIB}/pre_commit/languages/golang.py
 ${PYSITELIB}/pre_commit/languages/golang.pyc
 ${PYSITELIB}/pre_commit/languages/golang.pyo
-${PYSITELIB}/pre_commit/languages/helpers.py
-${PYSITELIB}/pre_commit/languages/helpers.pyc
-${PYSITELIB}/pre_commit/languages/helpers.pyo
 ${PYSITELIB}/pre_commit/languages/lua.py
 ${PYSITELIB}/pre_commit/languages/lua.pyc
 ${PYSITELIB}/pre_commit/languages/lua.pyo
