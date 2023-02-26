@@ -12,7 +12,7 @@ LICENSE=	mit
 
 GO_BUILD_PATTERN+=	./cmd/nuclei
 
-WRKSRC=		${WRKDIR}/${PKGNAME}/v2
+WRKSRC=		${WRKDIR}/${DISTNAME}/v2
 
 .include "go-modules.mk"
 
