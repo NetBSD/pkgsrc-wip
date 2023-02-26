@@ -3721,7 +3721,6 @@ SUBDIR+=	py-eigency
 SUBDIR+=	py-eight2
 SUBDIR+=	py-einsteinpy
 SUBDIR+=	py-einsteinpy-geodesics
-SUBDIR+=	py-elastic-transport
 SUBDIR+=	py-elasticsearch-dsl
 SUBDIR+=	py-email-reply-parser
 SUBDIR+=	py-emcee
