@@ -8,10 +8,10 @@ Part 24: Middle-texture rendering
 
 Part 25: Add UMAPINFO support
 =============================
-[ ] Based on libdoom-umapinfo
+[X] Based on libdoom-umapinfo-1.0.0
     => Module to parse and import data added
-    => Hooked in keys 'label', "levelname', 'next' and 'nextsecret'
-       The default prefix for 'levelname' does not work yet
+[ ] Hook keys into game engine
+    => All keys except 'enterpic', "emenu' and 'bossactions' should work now
 
 
 EOF

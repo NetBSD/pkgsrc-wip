@@ -12,7 +12,7 @@ Add support for UMAPINFO.
  char            game_map_filename[MAX_WADPATH];      // an external wad filename
  
  
-@@ -2384,10 +2385,69 @@ void G_DoCompleted (void)
+@@ -2384,10 +2385,74 @@ void G_DoCompleted (void)
      automapactive = false;
  }
  
@@ -30,10 +30,15 @@ Add support for UMAPINFO.
 +    if (gamemapinfo)
 +    {
 +        const char *mapname = NULL;
++        int         i = 0;
 +
 +        // 'nextmap' or 'nextsecret' key overrides default behaviour
 +        if (secretexit && gamemapinfo->nextsecret)
++        {
 +            mapname = gamemapinfo->nextsecret;
++            for (i = 0; MAXPLAYERS > i; ++i)
++                players[i].didsecret = true;
++        }
 +        else if (gamemapinfo->nextmap)
 +            mapname = gamemapinfo->nextmap;
 +
@@ -48,6 +53,8 @@ Add support for UMAPINFO.
 +                UMI_ParseMapName(mapname, &e, &m);
 +                wminfo.epsd_next = e;
 +                wminfo.lev_next = m;
++                GenPrintf(EMSG_info, "UMAPINFO: Go to Episode %d, Map %d\n",
++                          wminfo.epsd_next, wminfo.lev_next);
 +            }
 +            wminfo.epsd_next--;
 +            wminfo.lev_next--;
@@ -55,8 +62,6 @@ Add support for UMAPINFO.
 +            if (wminfo.epsd_next != wminfo.epsd)
 +            {
 +                // Jump to different episode
-+                int  i;
-+
 +                for (i = 0; MAXPLAYERS > i; ++i)
 +                    players[i].didsecret = false;
 +            }
@@ -82,7 +87,25 @@ Add support for UMAPINFO.
      if (gamemode != doom2_commercial)
      {
          switch(gamemap)
-@@ -2436,7 +2496,7 @@ void G_Start_Intermission( void )
+@@ -2401,7 +2466,7 @@ void G_Start_Intermission( void )
+                 // also for heretic
+                 // disconnect from network
+                 CL_Reset();
+-                F_StartFinale();
++                F_StartFinale(secretexit);  // [MB] 2023-03-04: Parameter added
+                 return;
+             }
+             break; // [WDJ] 4/11/2012  map 8 is not secret level, and prboom and boom do not fall thru here.
+@@ -2421,7 +2486,7 @@ void G_Start_Intermission( void )
+             else
+             {
+                 CL_Reset();
+-                F_StartFinale();
++                F_StartFinale(secretexit);  // [MB] 2023-03-04: Parameter added
+                 return;
+             }
+         }
+@@ -2436,7 +2501,7 @@ void G_Start_Intermission( void )
      // go to next level
      // wminfo.lev_next is 0 biased, unlike gamemap
      wminfo.lev_next = gamemap;
@@ -91,7 +114,7 @@ Add support for UMAPINFO.
      // overwrite next level in some cases
      if (gamemode == doom2_commercial)
      {
-@@ -2490,6 +2550,21 @@ void G_Start_Intermission( void )
+@@ -2490,6 +2555,21 @@ void G_Start_Intermission( void )
                  wminfo.lev_next = 0; // wrap around in deathmatch
          }
      }
@@ -102,7 +125,7 @@ Add support for UMAPINFO.
 +        int e = wminfo.epsd_next + 1;
 +        int m = wminfo.lev_next + 1;
 +
-+        if (0 <= e && 256 > e && 0 < m && 256 > m)
++        if (0 <= e && 255u >= e && 0 < m && 255u >= m)
 +        {
 +            byte epsd = e;
 +            byte map  = m;
@@ -113,36 +136,29 @@ Add support for UMAPINFO.
  
      wminfo.maxkills = totalkills;
      wminfo.maxitems = totalitems;
-@@ -2566,6 +2641,22 @@ void G_NextLevel (void)
- 
- void G_DoWorldDone (void)
- {
-+    // [MB] 2023-01-22: Support for UMAPINFO added
-+    {
-+        int e = wminfo.epsd_next + 1;
-+        int m = wminfo.lev_next + 1;
-+
-+        if (0 <= e && 256 > e && 0 < m && 256 > m)
+@@ -2542,6 +2622,16 @@ void G_NextLevel (void)
+             if( gamemap == 30 )
+                 wminfo.lev_next = 0; // wrap around in deathmatch
+         }
++        // [MB] 2023-01-29: Support for UMAPINFO added
++        else if (gamemapinfo && gamemapinfo->endgame)
 +        {
-+            byte epsd = e;
-+            byte map  = m;
++            tristate_t end = gamemapinfo->endgame;
 +
-+            gameepisode = epsd;
-+            gamemap     = map;
-+            gamemapinfo = UMI_LookupUMapInfo(gameepisode, gamemap);
++            if( (end == unchanged && gamemap == 30) || end == enabled )
++                CL_Reset(); // end of game disconnect from server
++            gameaction = ga_nothing;
++            F_StartFinale(secretexit);  // [MB] 2023-03-04: Parameter added
 +        }
-+    }
-+
-     if( demoversion<129 )
-     {
-         gamemap = wminfo.lev_next+1;
-@@ -2880,6 +2971,9 @@ void G_InitNew (skill_e skill, const cha
-     playerdeadview = false;
-     automapactive  = false;
- 
-+    // [MB] 2023-01-22: Support for UMAPINFO added
-+    gamemapinfo    = UMI_LookupUMapInfo(gameepisode, gamemap);
-+
-     G_DoLoadLevel (resetplayer);
- }
- 
+         else
+         {
+             switch (gamemap)
+@@ -2557,7 +2647,7 @@ void G_NextLevel (void)
+                 if( gamemap == 30 )
+                     CL_Reset(); // end of game disconnect from server
+                 gameaction = ga_nothing;
+-                F_StartFinale ();
++                F_StartFinale (secretexit);  // [MB] 2023-03-04: Parameter added
+                 break;
+             }
+         }
