@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.16 2020/06/22 06:08:35 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2022/09/20 17:13:24 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
-PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw slang
-PKG_SUPPORTED_OPTIONS=		debug gpgme gssapi idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=		tokyocabinet notmuch lua
+PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
+PKG_SUPPORTED_OPTIONS=		tokyocabinet lmdb
+PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS+=		notmuch lua
 PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
 
@@ -17,14 +18,6 @@ CONFIGURE_ENV+=		ac_cv_path_KRB5CFGPATH=${KRB5_CONFIG}
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
-.endif
-
-###
-### Slang
-###
-.if !empty(PKG_OPTIONS:Mslang)
-.  include "../../devel/libslang/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .endif
 
 ###
@@ -84,7 +77,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
-REPLACE_PERL+=		contrib/samples/*.pl contrib/smime_keys
+REPLACE_PERL+=		*/*.pl contrib/smime_keys
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--smime
 PLIST.smime=		yes
@@ -95,7 +88,12 @@ CONFIGURE_ARGS+=	--disable-smime
 ###
 ### Header cache
 ###
-.if !empty(PKG_OPTIONS:Mtokyocabinet)
+.if !empty(PKG_OPTIONS:Mlmdb)
+.include "../../databases/lmdb/buildlink3.mk"
+CONFIGURE_ARGS+=	--lmdb
+CONFIGURE_ARGS+=	--disable-gdbm
+CONFIGURE_ARGS+=	--disable-bdb
+.elif !empty(PKG_OPTIONS:Mtokyocabinet)
 .include "../../databases/tokyocabinet/buildlink3.mk"
 CONFIGURE_ARGS+=	--tokyocabinet
 CONFIGURE_ARGS+=	--disable-gdbm
@@ -134,11 +132,8 @@ CFLAGS+=	-g
 ### gpgme support
 ###
 .if !empty(PKG_OPTIONS:Mgpgme)
-.  include "../../security/gpgme/buildlink3.mk"
 CONFIGURE_ARGS+=	--gpgme
-CONFIGURE_ARGS+=	--with-gpgme=${BUILDLINK_PREFIX.gpgme}
-.else
-CONFIGURE_ARGS+=	--disable-gpgme
+.include "../../security/gpgme/buildlink3.mk"
 .endif
 
 ###

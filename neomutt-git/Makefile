@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.67 2021/05/24 19:52:43 wiz Exp $
 
-DISTNAME=		neomutt-20201127
+DISTNAME=		neomutt-20230227
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
-GITHUB_TAG=		${PKGVERSION_NOREV}
+#GITHUB_TAG=		${PKGVERSION_NOREV}
 GIT_REPO=		https://github.com/neomutt/neomutt.git
 
 MAINTAINER=		wiz@NetBSD.org
@@ -17,7 +17,8 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		w3m-[0-9]*:../../www/w3m
 DEPENDS+=		mime-types-[0-9]*:../../misc/mime-types
 
-USE_TOOLS+=		msgfmt gmake perl:build
+USE_TOOLS+=		msgfmt gmake perl:build pkg-config
+CONFLICTS=		neomutt-[0-9]*
 
 HAS_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar
@@ -40,10 +41,18 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
 CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .endif
 
+SUBST_CLASSES+=			interpreter
+SUBST_STAGE.interpreter=	pre-configure
+SUBST_MESSAGE.interpreter=	Substituting /usr/bin/env python3 interpreter lines
+SUBST_FILES.interpreter=	contrib/oauth2/mutt_oauth2.py
+SUBST_FILES.interpreter+=	data/account-command/macos-keychain/keychain.py
+SUBST_SED.interpreter+=		-e "s,\#! */usr/bin/env *python3,\#!${PYTHONBIN},"
+
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
