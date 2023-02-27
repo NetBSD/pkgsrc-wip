@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (guile-reader-0.6.2.tar.gz) = a1d461c9dd5a7a8988d5db19d5c13a1c03d401f5
-SHA512 (guile-reader-0.6.2.tar.gz) = e592df26d204fe39917e31f3d2fe91de28788e02b03f01131a618dcba15b9d6218d61f09cd6162f42ca41f11f1bb3cc10aaa96f16b887fa0e086f57a7b4e28c3
-Size (guile-reader-0.6.2.tar.gz) = 670034 bytes
+BLAKE2s (guile-reader-0.6.3.tar.gz) = 8b39624b162b9515702faaf31b20e183c6d8542b7165a78f07ce39330210756f
+SHA512 (guile-reader-0.6.3.tar.gz) = 0f9f47ee5f24ebb79894863ac96d63b0c7d2801020a212c59d11c7685ff4006a646be988a696a9b623dc0e0605f46d4a9a8680bfabd299878e41eab92e75efd5
+Size (guile-reader-0.6.3.tar.gz) = 691612 bytes
