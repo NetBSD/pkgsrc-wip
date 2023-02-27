@@ -1,7 +1,7 @@
 # $NetBSD$
 
 VERSION=	1.0.0
-DISTNAME=	libdoom-umapinfo-${VERSION}rc1
+DISTNAME=	libdoom-umapinfo-${VERSION}rc2
 CATEGORIES=	games
 MASTER_SITES=	https://micha.freeshell.org/libdoom-umapinfo/src/
 
