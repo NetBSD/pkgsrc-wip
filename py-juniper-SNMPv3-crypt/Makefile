@@ -14,7 +14,7 @@ COMMENT=	Juniper crypto operations
 LICENSE=	mit
 
 EGG_NAME=	${GITHUB_PROJECT:S/-//g:S/${VER}/-${VER}/}
-WRKSRC=	${WRKDIR}/${GITHUB_PROJECT:S/-${VER}//}-416b694a24bef793d47ed6ec64f5649e5fd35c32
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT:S/-${VER}//}-416b694a24bef793d47ed6ec64f5649e5fd35c32
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
