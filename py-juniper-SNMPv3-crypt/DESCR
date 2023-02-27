@@ -1,0 +1,9 @@
+juniper SNMPv3 crypt
+
+This is python library to deal with hashing (md5 or sha1) and then
+encrypting SNMPv3 user profiles for Juniper devices. The hashing
+follows RFC 3414 for snmpv3 profiles.  The "9" encryption function
+is a port from Perl from https://metacpan.org/pod/Crypt::Juniper
+
+The encrypt function supports a seed in order to have idempotent
+encryption.

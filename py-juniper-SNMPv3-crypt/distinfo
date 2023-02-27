@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (juniper-SNMPv3-crypt-416b694-416b694.tar.gz) = 9761ccf28aa08b083681cb6dd1ccb53c637fde88ff866c54f17237552e9c4976
+SHA512 (juniper-SNMPv3-crypt-416b694-416b694.tar.gz) = 5575bf9f41e9e3e33b209542b7f004c338b0aef30bf56b1af3892c7e4f91bf37d90901173bfa577a3ba19add0e19a470159dd9a7ffca2b8c9469a9faa8aae204
+Size (juniper-SNMPv3-crypt-416b694-416b694.tar.gz) = 3630 bytes
