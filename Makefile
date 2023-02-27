@@ -2894,7 +2894,6 @@ SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
 SUBDIR+=	p5-MojoX-Log-Log4perl-Tiny
-SUBDIR+=	p5-Mojolicious-Plugin-OAuth2-Server
 SUBDIR+=	p5-MongoDB
 SUBDIR+=	p5-MooseX-Iterator
 SUBDIR+=	p5-MooseX-Role-BuildInstanceOf
