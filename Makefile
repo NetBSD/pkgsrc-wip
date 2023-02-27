@@ -4322,7 +4322,6 @@ SUBDIR+=	py-picture-to-gds
 SUBDIR+=	py-pillow
 SUBDIR+=	py-pinout
 SUBDIR+=	py-pint
-SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pipdeptree
 SUBDIR+=	py-pipenv
 SUBDIR+=	py-pipenv-setup
