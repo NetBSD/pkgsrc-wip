@@ -1,1 +1,20 @@
 @comment $NetBSD$
+guile/3.0/include/guile-reader/reader-config.h
+guile/3.0/include/guile-reader/reader-lib.h
+guile/3.0/include/guile-reader/reader.h
+guile/3.0/include/guile-reader/token-readers.h
+guile/3.0/lib/guile/3.0/site-ccache/system/documentation/c-snarf.go
+guile/3.0/lib/guile/3.0/site-ccache/system/documentation/output.go
+guile/3.0/lib/guile/3.0/site-ccache/system/reader.go
+guile/3.0/lib/guile/3.0/site-ccache/system/reader/compat.go
+guile/3.0/lib/guile/3.0/site-ccache/system/reader/confinement.go
+guile/3.0/lib/guile/3.0/site-ccache/system/reader/library.go
+guile/3.0/lib/libguile-reader.la
+guile/3.0/share/guile/site/3.0/system/documentation/c-snarf.scm
+guile/3.0/share/guile/site/3.0/system/documentation/output.scm
+guile/3.0/share/guile/site/3.0/system/reader.scm
+guile/3.0/share/guile/site/3.0/system/reader/compat.scm
+guile/3.0/share/guile/site/3.0/system/reader/confinement.scm
+guile/3.0/share/guile/site/3.0/system/reader/library.scm
+guile/3.0/share/info/dir
+guile/3.0/share/info/guile-reader.info

@@ -5,11 +5,11 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/guile-reader/
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://download.savannah.nongnu.org/releases/guile-reader/
+HOMEPAGE=	https://www.nongnu.org/guile-reader/
 COMMENT=	Extensible reader framework for GNU Guile
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake gsed pkg-config
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c
 
