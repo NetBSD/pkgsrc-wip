@@ -12,7 +12,7 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 
 DEPENDS+=	${PYPKGPREFIX}-rns>=0.4.6:../../wip/py-rns
 DEPENDS+=	${PYPKGPREFIX}-lxmf>=0.2.8:../../wip/py-lxmf
-DEPENDS+=	# TODO: kivy==2.1.0>=0
+DEPENDS+=	${PYPKGPREFIX}-kivy>=2.0.0:../../devel/py-kivy #2.1.0
 DEPENDS+=	# TODO: plyer>=0
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9:../../wip/py-pillow
 DEPENDS+=	${PYPKGPREFIX}-qrcode>=6:../../graphics/py-qrcode
