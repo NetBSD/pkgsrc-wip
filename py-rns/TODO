@@ -1,0 +1,5 @@
+  - resolve test failures
+  - read setup.py and package deps
+  - test connection to self over IP or ethernet
+  - test with apps
+  - test connection with RNode
