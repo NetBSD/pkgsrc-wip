@@ -2188,6 +2188,7 @@ SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
 SUBDIR+=	libxml++3
+SUBDIR+=	libxo
 SUBDIR+=	libxtend
 SUBDIR+=	libyuv-git
 SUBDIR+=	libzahl
