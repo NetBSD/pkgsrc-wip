@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD$
-# Launcher script for Cro-Mag Rally.
-set -e
-cd @@PREFIX@@/share/cromagrally && @@PREFIX@@/libexec/CroMagRally
