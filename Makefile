@@ -2699,7 +2699,6 @@ SUBDIR+=	openfodder
 SUBDIR+=	openfodder-data
 SUBDIR+=	openfortivpn
 SUBDIR+=	opengrok
-SUBDIR+=	openjazz
 SUBDIR+=	openjdk8-openjfx-hg
 SUBDIR+=	openlogos
 SUBDIR+=	opennurbs
