@@ -2744,7 +2744,6 @@ SUBDIR+=	osmo-sdr-git
 SUBDIR+=	osxinfo
 SUBDIR+=	otrtool
 SUBDIR+=	ots
-SUBDIR+=	ottomatic
 SUBDIR+=	outguess
 SUBDIR+=	overgod
 SUBDIR+=	overgrowth
