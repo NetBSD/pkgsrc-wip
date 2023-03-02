@@ -2517,6 +2517,7 @@ SUBDIR+=	natali
 SUBDIR+=	naturaldocs
 SUBDIR+=	nauty
 SUBDIR+=	navi2ch-current
+SUBDIR+=	navidrome
 SUBDIR+=	navit
 SUBDIR+=	navit-git
 SUBDIR+=	nbfc
