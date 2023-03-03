@@ -1,0 +1,12 @@
+$NetBSD$
+
+BLAKE2s (speed-dreams-src-base-2.2.3-r7616.tar.xz) = cfbff1100bc7708c23234c9bea5fb7fe3dd274ae3ab774ca15ef50b7e1d14730
+SHA512 (speed-dreams-src-base-2.2.3-r7616.tar.xz) = 19da190034f416a9a378b401884bd98d6e2302439fdf6c34d48277fa251aba3ba451a230298bbb09ca59d5a6be941225654d71154000cefb27e91c922c5527fc
+Size (speed-dreams-src-base-2.2.3-r7616.tar.xz) = 237940148 bytes
+SHA1 (patch-src_libs_portability_CMakeLists.txt) = 88a34fc717f2ba16016f025efe903be9e14accc9
+SHA1 (patch-src_libs_robottools_rthumandriver.cpp) = 6ae2c64a92527aea444063fb353fbda64cbb9e44
+SHA1 (patch-src_libs_tgf_CMakeLists.txt) = 3083ff5f7c9be4898f63a6f81148b7b983b6d305
+SHA1 (patch-src_libs_tgf_linuxspec.cpp) = 17c0d4c0c96de1e5a7db08fb989e18e41444c07e
+SHA1 (patch-src_modules_simu_simuv2.1_simu.cpp) = 9c74353507020c5fecb4552253fc02d690a58edf
+SHA1 (patch-src_modules_simu_simuv4_simu.cpp) = 7031e9d24a9680a6caffaad733424aac6791fa5b
+SHA1 (patch-src_tools_accc_ac3dload.cpp) = d5dcab7e3bdd9644fef8443891e6ca7de89a2b58

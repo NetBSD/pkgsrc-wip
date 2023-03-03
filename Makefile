@@ -5325,6 +5325,7 @@ SUBDIR+=	spcm
 SUBDIR+=	spe
 SUBDIR+=	spectacle
 SUBDIR+=	spectra
+SUBDIR+=	speed-dreams
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	spice-html5

@@ -1,0 +1,13 @@
+$NetBSD$
+
+The static version of libtgf also needs to link against expat.
+--- src/libs/tgf/CMakeLists.txt.orig	2022-08-01 21:18:33.842144114 -0700
++++ src/libs/tgf/CMakeLists.txt	2022-08-01 21:17:58.736560315 -0700
+@@ -43,6 +43,7 @@
+ 
+ IF(CMAKE_SKIP_RPATH OR CMAKE_SKIP_BUILD_RPATH)
+     SD_ADD_LIBRARY(tgf_static STATIC ${TGF_HEADERS} ${TGF_SOURCES})
++    ADD_EXPAT_LIBRARY(tgf_static)
+ ENDIF(CMAKE_SKIP_RPATH OR CMAKE_SKIP_BUILD_RPATH)
+ 
+ ADD_SDLIB_LIBRARY(tgf portability txml) # txml ignored if OPTION_3RDPARTY_EXPAT

@@ -1,0 +1,13 @@
+$NetBSD$
+
+Also build the static version of libportability. 
+--- src/libs/portability/CMakeLists.txt.orig	2022-08-01 20:58:48.758561962 -0700
++++ src/libs/portability/CMakeLists.txt	2022-08-01 20:59:05.885362333 -0700
+@@ -17,6 +17,7 @@
+ 
+ # Note: Headers needed for having them available in IDEs.
+ SD_ADD_LIBRARY(portability SHARED ${PORTABILITY_SOURCES} ${PORTABILITY_HEADERS})
++SD_ADD_LIBRARY(portability_static STATIC ${PORTABILITY_SOURCES} ${PORTABILITY_HEADERS})
+ 
+ # Might not work with GCC 4.5 or + (non-robot modules crash at 1st reload = after 1 dlclose) 
+ #SET_TARGET_PROPERTIES(portability PROPERTIES VERSION ${VERSION} SOVERSION 0.0.0)
