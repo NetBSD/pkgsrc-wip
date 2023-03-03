@@ -6075,6 +6075,7 @@ SUBDIR+=	yad
 SUBDIR+=	yafray
 SUBDIR+=	yaggo
 SUBDIR+=	yakuake
+SUBDIR+=	yamlfmt
 SUBDIR+=	yap
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
