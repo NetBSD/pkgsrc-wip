@@ -43,9 +43,6 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
 
-# https://github.com/erlang/otp/issues/6909
-CONFIGURE_ARGS.NetBSD+=	--disable-jit
-
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 
 REPLACE_INTERPRETER+=	escript
