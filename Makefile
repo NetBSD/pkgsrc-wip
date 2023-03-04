@@ -5172,6 +5172,7 @@ SUBDIR+=	samtools
 SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	sbc
+SUBDIR+= sbcl
 SUBDIR+=	sbcl-git
 SUBDIR+=	sblim-sfcc
 SUBDIR+=	scaleway-cli
