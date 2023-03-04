@@ -3224,6 +3224,7 @@ SUBDIR+=	polipo
 SUBDIR+=	polkit-kde-agent
 SUBDIR+=	polyclipping
 SUBDIR+=	polylib
+SUBDIR+=	polyml
 SUBDIR+=	polymul
 SUBDIR+=	ponyc
 SUBDIR+=	pooler
