@@ -11,4 +11,3 @@ BUILDLINK_PKGSRCDIR.polyml?=	../../lang/polyml
 .endif	# POLYML_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-polyml
-
