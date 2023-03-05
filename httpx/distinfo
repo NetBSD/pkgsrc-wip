@@ -1782,5 +1782,5 @@ Size (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 26 bytes
 BLAKE2s (httpx-1.2.7.tar.gz) = 403e4ca62bba21dadbd031bda050ff8467904b7c75bbabe0a08815f0b219de1d
 SHA512 (httpx-1.2.7.tar.gz) = 6458481c4bf9d0a2dba2762d1139af716af67e45c1e6aca19419ac4f527231350d8bc724fc2b0b91a17cd9015b54cb5873d30af68cfb72ce7ddc4a1f5155dcb8
 Size (httpx-1.2.7.tar.gz) = 1669372 bytes
-SHA1 (patch-go.mod) = 67c92ff42b0fe0e7fbe33d93ff864490784bcc05
-SHA1 (patch-go.sum) = 0451c131e216b772bf3ab52dab5b90604ff468d0
+SHA1 (patch-go.mod) = f7911f30d1298801a1c4154556c1120ca0cfab82
+SHA1 (patch-go.sum) = a82186e348851fbf943ff1dc0582d632d9859596

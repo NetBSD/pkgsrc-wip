@@ -2,6 +2,12 @@ $NetBSD$
 
 Use latest pebble version that supports NetBSD.
 
+Different version of it shared and merged upstream via:
+
+ <https://github.com/projectdiscovery/httpx/pull/1018>
+
+...and should be no longer needed in httpx-1.2.8.
+
 --- go.sum.orig	2023-02-24 18:27:54.182385149 +0000
 +++ go.sum
 @@ -47,8 +47,8 @@ github.com/cockroachdb/errors v1.9.1/go.
