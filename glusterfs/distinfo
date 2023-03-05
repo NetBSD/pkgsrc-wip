@@ -3,6 +3,6 @@ $NetBSD: distinfo,v 1.73 2021/10/26 10:25:29 nia Exp $
 BLAKE2s (glusterfs-10.3.tar.gz) = c2f9b5670d1df7a787e445207caa421a949f1fb98cafb587441925efe8d9e25a
 SHA512 (glusterfs-10.3.tar.gz) = af7c8a15db48196a5f7022e4da87ae8d8d43a12c8968b242f40fb43ea562d1d214e75b3a67800f8594c97847e15c01367b6d464964252551d6f8d3e93fb0f832
 Size (glusterfs-10.3.tar.gz) = 8283537 bytes
-SHA1 (patch-configure) = ab60e8108975d04b19e5846abb4c56965bcded91
-SHA1 (patch-configure.ac) = fff9e2e1c7bf9959188dc0cb35bf9a09dc14b67b
-SHA1 (patch-libglusterfs-src-glusterfs-dict.h) = 1e2d7c61adc773060b19ec0656c7dbfdab19b270
+SHA1 (patch-configure.ac_no_bash) = b188c9ea883677e4515ae0f48b6afffdc8b4c183
+SHA1 (patch-configure.ac_time_t) = 2bf7b3d6845216429d0064b4b5c47c9daf328c94
+SHA1 (patch-libglusterfs-src-glusterfs-dict.h) = ebfdfe6ffbdda3532d15fe108d4214b1e9596304

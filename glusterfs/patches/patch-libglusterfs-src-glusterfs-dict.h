@@ -1,12 +1,11 @@
 $NetBSD$
 
-Do not take for granted that __WORDSIZE is defined to distinguish 
-between 32 and 64 bit platforms. Instead use ULONG_MAX from <limits.h>
-which is mandated by ISO C99.
+Do not use __WORDSIZE as proxy for sizeof(time_t), since:
+ - __WORDSIZE is glibc (and thus Linux) only
+ - machine word size is a bad proxy for sizeof(time_t), e.g.
+   NetBSD on 32bit arch (i386) also has sizeof(time_t) == 8
 
-Still not a good solution, as __WORDSIZE is used as a proxy for sizeof(time_t),
-but some superficial tests indicate that sizeof(time_t) seems to track with
-machine word size on reasonably current platforms.
+Instead use configure to check sizeof(time_t) and use this.
 
 upstream bug https://github.com/gluster/glusterfs/issues/3942
 

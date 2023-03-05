@@ -1,11 +1,10 @@
 # $NetBSD: Makefile,v 1.109 2022/06/30 11:18:23 nia Exp $
 
 DISTNAME=	glusterfs-10.3
-PKGREVISION=	9
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	als@thangorodrim.ch
 HOMEPAGE=	https://www.gluster.org/
 COMMENT=	Cluster filesystem
 LICENSE=	gnu-gpl-v3
@@ -18,27 +17,23 @@ CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-tcmalloc
+# libtirpc not in pkgsrc (yet)
+CONFIGURE_ARGS+=        --without-libtirpc
 
-# While glusterfs never really supported 32bit platforms, older versions
-# tended to work. By now, it will die with SIGILL (executing ud2) on 32bit
-# (tested in i386) due to not being able to atomically update a 64bit value.
-BROKEN_ON_PLATFORM+=    *-*-earm*
-BROKEN_ON_PLATFORM+=    *-*-hppa
-BROKEN_ON_PLATFORM+=    *-*-i386
-BROKEN_ON_PLATFORM+=    *-*-m68000
-BROKEN_ON_PLATFORM+=    *-*-m68k
-BROKEN_ON_PLATFORM+=    *-*-mipseb
-BROKEN_ON_PLATFORM+=    *-*-mipsel
-BROKEN_ON_PLATFORM+=    *-*-powerpc
-BROKEN_ON_PLATFORM+=    *-*-riscv32
-BROKEN_ON_PLATFORM+=    *-*-sparc
-BROKEN_ON_PLATFORM+=    *-*-vax
+# Upstream glusterfs effectively dropped support for 32bit platforms
+# somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
+# internal bits went from 32 to 64 bits and atomic updates where done
+# on those - can't do that for 64bit values on a 32bit arch.
+# https://github.com/gluster/glusterfs/issues/702 proposed an explicit
+# drop of 32bit and eventually it just happened. See
+# https://github.com/gluster/glusterfs/issues/3911#issuecomment-1451711686
+# for a more detailed explanation.
+BROKEN_ON_PLATFORM=   ${LP32PLATFORMS}
 
 # Make sure we do not attept to link with -lfl
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
 
-REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	events/src/glustereventsd.py
 REPLACE_PYTHON+=	events/src/peer_eventsapi.py
 REPLACE_PYTHON+=	events/tools/eventsdash.py
@@ -48,35 +43,27 @@ REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
 REPLACE_PYTHON+=	extras/snap_scheduler/snap_scheduler.py
 REPLACE_PYTHON+=	geo-replication/src/peer_georep-sshkey.py.in
 REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.in
-REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.py
 REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.py.in
-REPLACE_PYTHON+=	geo-replication/syncdaemon/changelogagent.py
 REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncd.py
 REPLACE_PYTHON+=	geo-replication/syncdaemon/gsyncdstatus.py
 REPLACE_PYTHON+=	tools/gfind_missing_files/gfid_to_path.py
 REPLACE_PYTHON+=	tools/glusterfind/S57glusterfind-delete-post.py
 REPLACE_PYTHON+=	tools/glusterfind/glusterfind.in
-REPLACE_PYTHON+=	tools/glusterfind/src/__init__.py
 REPLACE_PYTHON+=	tools/glusterfind/src/brickfind.py
 REPLACE_PYTHON+=	tools/glusterfind/src/changelog.py
-REPLACE_PYTHON+=	tools/glusterfind/src/changelogdata.py
-REPLACE_PYTHON+=	tools/glusterfind/src/conf.py
-REPLACE_PYTHON+=	tools/glusterfind/src/libgfchangelog.py
 REPLACE_PYTHON+=	tools/glusterfind/src/main.py
 REPLACE_PYTHON+=	tools/glusterfind/src/nodeagent.py
-REPLACE_PYTHON+=	tools/glusterfind/src/utils.py
 
 REPLACE_BASH+=		extras/ganesha/ocf/ganesha_grace
 REPLACE_BASH+=		extras/ganesha/ocf/ganesha_mon
 REPLACE_BASH+=		extras/ganesha/ocf/ganesha_nfsd
-REPLACE_BASH+=		extras/ganesha/scripts/copy-export-ganesha.sh
 REPLACE_BASH+=		extras/ganesha/scripts/create-export-ganesha.sh
 REPLACE_BASH+=		extras/ganesha/scripts/dbus-send.sh
 REPLACE_BASH+=		extras/ganesha/scripts/ganesha-ha.sh
 REPLACE_BASH+=		extras/geo-rep/generate-gfid-file.sh
 REPLACE_BASH+=		extras/geo-rep/get-gfid.sh
 REPLACE_BASH+=		extras/geo-rep/gsync-upgrade.sh
-REPLACE_BASH+=		extras/geo-rep/slave-upgrade.sh
+REPLACE_BASH+=		extras/geo-rep/secondary-upgrade.sh
 REPLACE_BASH+=		extras/peer_add_secret_pub.in
 REPLACE_BASH+=		extras/post-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/pre-upgrade-script-for-quota.sh
@@ -92,16 +79,19 @@ CHECK_PORTABILITY_SKIP+=	extras/peer_add_secret_pub.in
 
 SUBST_CLASSES+=		mtab
 SUBST_STAGE.mtab=	post-build
-SUBST_FILES.mtab=	doc/mount.glusterfs.8
-SUBST_FILES.mtab=	libglusterfs/src/compat.h
-SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs.in
-SUBST_SED.mtab=		-e "s,mtab,/proc/mounts,g"
+SUBST_FILES.mtab+=	xlators/mount/fuse/utils/mount.glusterfs.in
+SUBST_SED.mtab+=	-e "s,mtab,/proc/mounts,g"
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-build
 SUBST_FILES.etc=	libglusterfs/src/logging.c
-SUBST_FILES.etc=	doc/glusterfsd.8
+SUBST_FILES.etc+=	doc/glusterfsd.8
 SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-configure
+SUBST_FILES.bash=	build-aux/pkg-version
+SUBST_SED.bash=		-e "s,/bin/bash,/usr/pkg/bin/bash,g"
 
 #EGDIR=			${PREFIX}/etc/glusterfs
 #CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
@@ -116,6 +106,10 @@ PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 PLIST_SUBST+=		GLUSTERFS_VERSION=${DISTNAME:S/glusterfs-//}
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
+
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 pre-build:
 	cd ${WRKSRC}/extras && 					\
@@ -134,8 +128,6 @@ CONFIGURE_ARGS+=	--enable-debug
 #CFLAGS+=		-DGC_DEBUG
 #CFLAGS+=		-include gc.h
 #LIBS+=			-lgc
-
-TOOL_DEPENDS+=	automake>=1.13:../../devel/automake
 
 .include "../../mk/bsd.prefs.mk"
 

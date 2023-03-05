@@ -1,0 +1,21 @@
+$NetBSD$
+
+Check for sizeof(time_t).
+
+upstream bugs
+ - (bash) https://github.com/gluster/glusterfs/issues/3940
+
+--- configure.ac.orig   2023-01-01 23:19:38.254216893 +0100
++++ configure.ac        2023-01-02 15:14:21.968041528 +0100
+@@ -544,6 +544,11 @@
+ AC_SUBST(SIZEOF_LONG)
+ AC_SUBST(SIZEOF_LONG_LONG)
+ 
++# size of time_t
++AC_CHECK_SIZEOF(time_t)
++SIZEOF_TIME_T=$ac_cv_sizeof_time_t
++AC_SUBST(SIZEOF_TIME_T)
++
+ # YACC needs a check
+ AC_PROG_YACC
+ if test "x${YACC}" = "xbyacc" -o "x${YACC}" = "xyacc" -o "x${YACC}" = "x"; then
