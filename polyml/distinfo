@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:51:48 nia Exp $
-
-BLAKE2s (polyml-5.9.tar.gz) = f28611281e1ebf90118a159f276cc19fbd161fe6bceacc58a02136b4f71e0e6f
-SHA512 (polyml-5.9.tar.gz) = e996cbe820216e854a50ba214f2a2a0291ee3279eb35be4126b6558bc1582732a236156fb8d0f548b31fca4a496db62ece83d902b6f5e72de64507fdef602e45
-Size (polyml-5.9.tar.gz) = 3764115 bytes
