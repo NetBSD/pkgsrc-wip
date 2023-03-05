@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.27 2022/12/21 11:51:21 wiz Exp $
 
 DISTNAME=	polyml-5.9
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=polyml/}
 GITHUB_PROJECT=	polyml
@@ -12,9 +11,6 @@ HOMEPAGE=	https://polyml.org/
 COMMENT=	Implementation of Standard ML
 
 # ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-sparc *-*-powerpc
-
-NOT_PAX_ASLR_SAFE+=	bin/poly
-NOT_PAX_MPROTECT_SAFE+=	bin/poly
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
