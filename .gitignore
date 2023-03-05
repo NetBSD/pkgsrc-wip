@@ -14,3 +14,10 @@ commit_wip.sh
 
 # CVS leftovers
 CVS
+
+# macOS files
+.DS_Store
+
+# make readme output
+README.html
+index.html
