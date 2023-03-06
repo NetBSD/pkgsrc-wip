@@ -5,7 +5,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/projectdiscovery/proxify
 COMMENT=	Swiss Army knife Proxy tool for HTTP/HTTPS
 LICENSE=	mit
