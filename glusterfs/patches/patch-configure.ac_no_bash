@@ -5,9 +5,9 @@ Defang bash 4.0 syntax in configure.
 upstream bugs
  - (bash) https://github.com/gluster/glusterfs/issues/3940
 
---- configure.ac.orig   2023-01-01 23:19:38.254216893 +0100
-+++ configure.ac        2023-01-02 15:14:21.968041528 +0100
-@@ -1896,10 +1901,10 @@
+--- configure.ac.orig   2022-09-20 12:24:29.568820624 +0200
++++ configure.ac        2023-03-06 22:45:21.897057433 +0100
+@@ -1896,10 +1896,10 @@
  echo "Building with LTO    : $LTO_BUILD"
  echo
  

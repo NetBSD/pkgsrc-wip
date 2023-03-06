@@ -9,16 +9,17 @@ HOMEPAGE=	https://www.gluster.org/
 COMMENT=	Cluster filesystem
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		flex bison pkg-config bash autoconf autoreconf automake
+DEPENDS+=	bash>=4:../../shells/bash
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	flex bison pkg-config bash autoconf autoreconf automake
 
 CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-tcmalloc
 # libtirpc not in pkgsrc (yet)
-CONFIGURE_ARGS+=        --without-libtirpc
+CONFIGURE_ARGS+=	--without-libtirpc
 
 # Upstream glusterfs effectively dropped support for 32bit platforms
 # somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=        --without-libtirpc
 # drop of 32bit and eventually it just happened. See
 # https://github.com/gluster/glusterfs/issues/3911#issuecomment-1451711686
 # for a more detailed explanation.
-BROKEN_ON_PLATFORM=   ${LP32PLATFORMS}
+BROKEN_ON_PLATFORM=	${LP32PLATFORMS}
 
 # Make sure we do not attept to link with -lfl
 # Only libfl.a is available, and libtool wants libfl.so
