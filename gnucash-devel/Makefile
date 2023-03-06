@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.327 2023/01/03 17:37:06 wiz Exp $
 
-DISTNAME=		gnucash-4.901
+DISTNAME=		gnucash-4.902
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -39,8 +39,8 @@ CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
 CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
 
-# test status as of 4.9
-# 22 test failures, 17 after "paxctl +m ${WRKSRC}/bin/*"
+# test status as of 4.902
+# 85% tests passed, 18 tests failed out of 124
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
@@ -56,10 +56,6 @@ INSTALLATION_DIRS=	share/examples/gnucash
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/environment
-.if ${OPSYS} == "NetBSD"
-# needed for JIT of guile30 as of guile30-3.0.7
-	/usr/sbin/paxctl +m ${DESTDIR}${PREFIX}/bin/gnucash
-.endif
 
 .include "options.mk"
 

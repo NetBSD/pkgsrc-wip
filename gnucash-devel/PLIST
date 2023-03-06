@@ -294,9 +294,8 @@ lib/guile/3.0/site-ccache/gnucash/reports.go
 lib/guile/3.0/site-ccache/gnucash/reports/cash-flow-calc.go
 lib/guile/3.0/site-ccache/gnucash/reports/example/average-balance.go
 lib/guile/3.0/site-ccache/gnucash/reports/example/daily-reports.go
-lib/guile/3.0/site-ccache/gnucash/reports/example/hello-world.go
 lib/guile/3.0/site-ccache/gnucash/reports/example/sample-graphs.go
-lib/guile/3.0/site-ccache/gnucash/reports/example/welcome-to-gnucash.go
+lib/guile/3.0/site-ccache/gnucash/reports/example/sample-report.go
 lib/guile/3.0/site-ccache/gnucash/reports/locale-specific/de_DE/taxtxf.go
 lib/guile/3.0/site-ccache/gnucash/reports/locale-specific/us/taxtxf.go
 lib/guile/3.0/site-ccache/gnucash/reports/standard/account-piecharts.go
@@ -1054,9 +1053,8 @@ share/guile/site/3.0/gnucash/reports.scm
 share/guile/site/3.0/gnucash/reports/cash-flow-calc.scm
 share/guile/site/3.0/gnucash/reports/example/average-balance.scm
 share/guile/site/3.0/gnucash/reports/example/daily-reports.scm
-share/guile/site/3.0/gnucash/reports/example/hello-world.scm
 share/guile/site/3.0/gnucash/reports/example/sample-graphs.scm
-share/guile/site/3.0/gnucash/reports/example/welcome-to-gnucash.scm
+share/guile/site/3.0/gnucash/reports/example/sample-report.scm
 share/guile/site/3.0/gnucash/reports/locale-specific/de_DE/taxtxf.scm
 share/guile/site/3.0/gnucash/reports/locale-specific/us/taxtxf.scm
 share/guile/site/3.0/gnucash/reports/standard/account-piecharts.scm
