@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (jack-example-tools/3.tar.gz) = c825e2d7961abdba50f4e8f43d9f392cdf06bb67b011c3335bd4495886e1a992
-SHA512 (jack-example-tools/3.tar.gz) = 2fe33c4fc294a4e4e2c0c271d5e2f28bac162939c25536902c772fcc919d2a0923fcefd27305f3fce283edfe043d2da7773b66988a1f14f8670d5cac90c8d7e9
-Size (jack-example-tools/3.tar.gz) = 125686 bytes
+BLAKE2s (jack-example-tools-4.tar.gz) = 8a85e1bc0c36847641a37edfc13cbc112ecd2ead6b8138904352139e85b80bd7
+SHA512 (jack-example-tools-4.tar.gz) = f3fbbf24d4bdcbca959da74793b44292883192f91675f6ee80f01f9ff5181fca052bea6725c5b8b93a1ecfe293f6dc1c14c49519c2b8b57d26202b224d53f0ed
+Size (jack-example-tools-4.tar.gz) = 125676 bytes
