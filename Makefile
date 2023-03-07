@@ -5826,7 +5826,6 @@ SUBDIR+=	vacuum
 SUBDIR+=	vagalume
 SUBDIR+=	vala-panel-appmenu
 SUBDIR+=	vale-current
-SUBDIR+=	valgrind
 SUBDIR+=	valgrind-netbsd
 SUBDIR+=	vamp
 SUBDIR+=	vamps
