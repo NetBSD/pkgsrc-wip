@@ -1019,7 +1019,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-22.3.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-23.0.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-65.5.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
@@ -1648,9 +1648,8 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_posixsubprocess.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_queue.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_random.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_sha1.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_sha256.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_sha2.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_sha3.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_sha512.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_socket.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_sqlite3.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ssl.so
@@ -1665,6 +1664,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_testmultiphase.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testsinglephase.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_typing.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_uuid.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_xxinterpchannels.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_xxsubinterpreters.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_xxtestfuzz.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_zoneinfo.so
@@ -2833,6 +2833,9 @@ lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.pyo
 lib/python${PY_VER_SUFFIX}/test/support/__init__.py
 lib/python${PY_VER_SUFFIX}/test/support/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/support/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/support/ast_helper.py
+lib/python${PY_VER_SUFFIX}/test/support/ast_helper.pyc
+lib/python${PY_VER_SUFFIX}/test/support/ast_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/support/asynchat.py
 lib/python${PY_VER_SUFFIX}/test/support/asynchat.pyc
 lib/python${PY_VER_SUFFIX}/test/support/asynchat.pyo
@@ -2888,6 +2891,9 @@ lib/python${PY_VER_SUFFIX}/test/test__opcode.pyo
 lib/python${PY_VER_SUFFIX}/test/test__osx_support.py
 lib/python${PY_VER_SUFFIX}/test/test__osx_support.pyc
 lib/python${PY_VER_SUFFIX}/test/test__osx_support.pyo
+lib/python${PY_VER_SUFFIX}/test/test__xxinterpchannels.py
+lib/python${PY_VER_SUFFIX}/test/test__xxinterpchannels.pyc
+lib/python${PY_VER_SUFFIX}/test/test__xxinterpchannels.pyo
 lib/python${PY_VER_SUFFIX}/test/test__xxsubinterpreters.py
 lib/python${PY_VER_SUFFIX}/test/test__xxsubinterpreters.pyc
 lib/python${PY_VER_SUFFIX}/test/test__xxsubinterpreters.pyo
@@ -4034,6 +4040,7 @@ lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/one/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/one/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/one/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/one/resource1.txt
+lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/subdirectory/subsubdir/resource.txt
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/two/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/two/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/data02/two/__init__.pyo
@@ -4057,6 +4064,9 @@ lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_compatibilty_files
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_contents.py
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_contents.pyc
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_contents.pyo
+lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_custom.py
+lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_custom.pyc
+lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_custom.pyo
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_files.py
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_files.pyc
 lib/python${PY_VER_SUFFIX}/test/test_importlib/resources/test_files.pyo
@@ -5100,6 +5110,9 @@ lib/python${PY_VER_SUFFIX}/test/test_warnings/__main__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_warnings/data/import_warning.py
 lib/python${PY_VER_SUFFIX}/test/test_warnings/data/import_warning.pyc
 lib/python${PY_VER_SUFFIX}/test/test_warnings/data/import_warning.pyo
+lib/python${PY_VER_SUFFIX}/test/test_warnings/data/package_helper.py
+lib/python${PY_VER_SUFFIX}/test/test_warnings/data/package_helper.pyc
+lib/python${PY_VER_SUFFIX}/test/test_warnings/data/package_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/test_warnings/data/stacklevel.py
 lib/python${PY_VER_SUFFIX}/test/test_warnings/data/stacklevel.pyc
 lib/python${PY_VER_SUFFIX}/test/test_warnings/data/stacklevel.pyo
@@ -5175,9 +5188,15 @@ lib/python${PY_VER_SUFFIX}/test/test_zipfile/_functools.pyo
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/_itertools.py
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/_itertools.pyc
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/_itertools.pyo
+lib/python${PY_VER_SUFFIX}/test/test_zipfile/_support.py
+lib/python${PY_VER_SUFFIX}/test/test_zipfile/_support.pyc
+lib/python${PY_VER_SUFFIX}/test/test_zipfile/_support.pyo
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/_test_params.py
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/_test_params.pyc
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/_test_params.pyo
+lib/python${PY_VER_SUFFIX}/test/test_zipfile/test_complexity.py
+lib/python${PY_VER_SUFFIX}/test/test_zipfile/test_complexity.pyc
+lib/python${PY_VER_SUFFIX}/test/test_zipfile/test_complexity.pyo
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/test_core.py
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/test_core.pyc
 lib/python${PY_VER_SUFFIX}/test/test_zipfile/test_core.pyo

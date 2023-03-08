@@ -6,9 +6,9 @@ Simplify _sysconfigdata to include only platform name.
 detect netcan/can.h on NetBSD
 Disable barrier to cross-compilation.
 
---- configure.orig	2022-10-24 17:35:39.000000000 +0000
+--- configure.orig	2023-03-07 21:48:18.000000000 +0000
 +++ configure
-@@ -3862,7 +3862,7 @@ fi
+@@ -3913,7 +3913,7 @@ fi
  $as_echo "\"$MACHDEP\"" >&6; }
  
  
@@ -17,8 +17,8 @@ Disable barrier to cross-compilation.
  	case "$host" in
  	*-*-linux*)
  		case "$host_cpu" in
-@@ -8066,7 +8066,7 @@ UNIVERSAL_ARCH_FLAGS=
- # tweak BASECFLAGS based on compiler and platform
+@@ -8642,7 +8642,7 @@ fi
+ 
  case $GCC in
  yes)
 -    CFLAGS_NODIST="$CFLAGS_NODIST -std=c11"
@@ -26,7 +26,7 @@ Disable barrier to cross-compilation.
  
  
  
-@@ -9564,6 +9564,17 @@ if test "x$ac_cv_type___uint128_t" = xye
+@@ -10185,6 +10185,17 @@ if test "x$ac_cv_type___uint128_t" = xye
  $as_echo "#define HAVE_GCC_UINT128_T 1" >>confdefs.h
  
  fi
@@ -44,7 +44,7 @@ Disable barrier to cross-compilation.
  
  
  # Sizes and alignments of various common basic types
-@@ -19684,10 +19695,10 @@ _ACEOF
+@@ -20695,10 +20706,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
@@ -57,7 +57,7 @@ Disable barrier to cross-compilation.
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -20535,7 +20546,7 @@ _ACEOF
+@@ -21546,7 +21557,7 @@ _ACEOF
  fi
  
  
@@ -66,7 +66,7 @@ Disable barrier to cross-compilation.
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
  $as_echo_n "checking LDVERSION... " >&6; }
-@@ -20588,11 +20599,7 @@ fi
+@@ -21599,11 +21610,7 @@ fi
  
  
  
