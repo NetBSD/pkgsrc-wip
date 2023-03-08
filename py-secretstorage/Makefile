@@ -13,7 +13,7 @@ COMMENT=	Module for securely storing passwords and secrets
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.0:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../devel/py-jeepney
+DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../sysutils/py-jeepney
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
