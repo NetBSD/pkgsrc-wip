@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (vorta-0.7.1.tar.gz) = e33c7a7361a0c6d4f1fdaeae4653ca607932fda2
-SHA512 (vorta-0.7.1.tar.gz) = d079ea0219a7e8d2578a36272787594e9557101fe8be6472e08ce86499f284daec83c3f442e5c3fa4c06de9ffd85cf030956479a592cd1c5f1483ca154c7a68b
-Size (vorta-0.7.1.tar.gz) = 408431 bytes
+BLAKE2s (vorta-0.8.10.tar.gz) = a8a27fcdcab67a98834f9df5373991a3627cc861132323cab0459b876c27c3cb
+SHA512 (vorta-0.8.10.tar.gz) = 3898f7acd7cc6cc5d4b4db32eadf4e00a1f4b1dec596b71f12c364f3c9a02f05fc9bcbe66dff6ce7b16f8b0cfc308b1d7362a82e84865d475278449888f27418
+Size (vorta-0.8.10.tar.gz) = 828939 bytes
