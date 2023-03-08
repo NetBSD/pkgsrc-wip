@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.2.0:../../graphics/py-pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.2.0:../../graphics/py-Pillow
 
 REPLACE_PYTHON+=	xmatchview-conifer.py
 REPLACE_PYTHON+=	xmatchview-hive.py
