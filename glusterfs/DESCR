@@ -8,6 +8,4 @@ GlusterFS provides striping and on-the-fly synchronous replication
 of files. GlusterFS has a fully distributed design, with no single
 point of failure.
 
-GlusterFS is currently 64bit only.
-
 Please visit http://www.gluster.org/ for more info.
