@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/apptainer.lima
 bin/docker.lima
+bin/kubectl.lima
 bin/lima
 bin/limactl
 bin/nerdctl.lima
@@ -9,6 +10,7 @@ share/doc/lima/LICENSE
 share/doc/lima/MAINTAINERS.md
 share/doc/lima/README.ja.md
 share/doc/lima/README.md
+share/doc/lima/README.zh.md
 share/doc/lima/ROADMAP.md
 share/doc/lima/SECURITY.md
 share/doc/lima/VERSION
