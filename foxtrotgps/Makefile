@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.2 2013/04/29 20:46:19 khorben Exp $
 
 DISTNAME=	foxtrotgps-1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	http://www.foxtrotgps.org/releases/
 
