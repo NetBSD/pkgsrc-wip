@@ -4089,6 +4089,7 @@ SUBDIR+=	py-mcerp
 SUBDIR+=	py-mcint
 SUBDIR+=	py-mcview
 SUBDIR+=	py-mdanalysis
+SUBDIR+=	py-mdformat
 SUBDIR+=	py-mdp
 SUBDIR+=	py-mdptoolbox
 SUBDIR+=	py-mdtraj
