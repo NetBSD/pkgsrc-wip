@@ -5,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lima-vm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/lima-vm/lima
 COMMENT=	Linux virtual machines for running containerd
 LICENSE=	apache-2.0
