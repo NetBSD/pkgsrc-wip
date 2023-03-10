@@ -9,10 +9,9 @@ HOMEPAGE=	https://www.gluster.org/
 COMMENT=	Cluster filesystem
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	bash>=4:../../shells/bash
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	flex bison pkg-config bash autoconf autoreconf automake
+USE_TOOLS+=	flex bison pkg-config bash:run autoconf autoreconf automake
 
 CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
