@@ -132,7 +132,7 @@ share/frogatto/images/slider_handle.svg
 share/frogatto/images/white2x2.png
 share/frogatto/images/window-icon-large.png
 share/frogatto/images/window-icon.png
-share/frogatto/modules/empty_test_module/module.cfg
+share/frogatto/modules/frogatto4/LICENSE
 share/frogatto/modules/frogatto4/data/achievements.cfg
 share/frogatto/modules/frogatto4/data/backgrounds/air-stage1.cfg
 share/frogatto/modules/frogatto4/data/backgrounds/arcade.cfg
@@ -4980,7 +4980,6 @@ share/frogatto/modules/frogatto4/sounds_wav/wingflap2.wav
 share/frogatto/modules/frogatto4/sounds_wav/wingflap3.wav
 share/frogatto/modules/frogatto4/sounds_wav/wingflap4.wav
 share/frogatto/modules/frogatto4/sounds_wav/wingflap5.wav
-share/frogatto/modules/frogatto4_dependant_test_module/module.cfg
 share/frogatto/modules/gui/data/classes/easing.cfg
 share/frogatto/modules/gui/data/classes/font.cfg
 share/frogatto/modules/gui/data/classes/gui.cfg
