@@ -1,7 +1,7 @@
 $NetBSD$
 
---- configure.orig	2017-06-02 19:25:44.000000000 +0200
-+++ configure	2020-04-01 21:30:46.000000000 +0200
+--- configure.orig	2023-03-10 20:31:04.000000000 +0100
++++ configure	2023-03-10 20:31:52.000000000 +0100
 @@ -21,10 +21,10 @@
  infodir='$(datarootdir)/info'
  mandir='$(datarootdir)/man'
@@ -14,6 +14,6 @@ $NetBSD$
 +#CPPFLAGS=
 +#CXXFLAGS='-Wall -W -O2'
 +#LDFLAGS=
+ LIBS=-lncurses
+ MAKEINFO=makeinfo
  
- # checking whether we are using GNU C++.
- /bin/sh -c "${CXX} --version" > /dev/null 2>&1 ||

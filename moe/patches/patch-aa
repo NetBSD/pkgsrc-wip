@@ -1,39 +1,30 @@
 $NetBSD$
 
---- Makefile.in.orig	2017-02-14 17:00:19.000000000 +0100
-+++ Makefile.in	2020-04-01 21:34:46.000000000 +0200
-@@ -1,11 +1,11 @@
+--- Makefile.in.orig	2023-03-10 20:23:22.000000000 +0100
++++ Makefile.in	2023-03-10 20:28:29.000000000 +0100
+@@ -1,10 +1,10 @@
  
  DISTNAME = $(pkgname)-$(pkgversion)
 -INSTALL = install
 -INSTALL_PROGRAM = $(INSTALL) -m 755
 -INSTALL_DATA = $(INSTALL) -m 644
 -INSTALL_DIR = $(INSTALL) -d -m 755
+-SHELL = /bin/sh
 +#INSTALL = install
 +#INSTALL_PROGRAM = $(INSTALL) -m 755
 +#INSTALL_DATA = $(INSTALL) -m 644
 +#INSTALL_DIR = $(INSTALL) -d -m 755
- LIBS = -lncurses
--SHELL = /bin/sh
 +#SHELL = /bin/sh
  CAN_RUN_INSTALLINFO = $(SHELL) -c "install-info --version" > /dev/null 2>&1
  
  edobjs = basic_buffer.o block.o buffer.o buffer_handle.o \
-@@ -73,7 +73,7 @@
+@@ -72,7 +72,8 @@
  	if [ ! -d "$(DESTDIR)$(bindir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(bindir)" ; fi
  	if [ ! -d "$(DESTDIR)$(sysconfdir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)" ; fi
  	$(INSTALL_PROGRAM) ./$(progname) "$(DESTDIR)$(bindir)/$(progname)"
--	$(INSTALL_DATA) $(VPATH)/$(pkgname)rc "$(DESTDIR)$(sysconfdir)/$(pkgname)rc"
-+	$(INSTALL_DATA) $(VPATH)/$(pkgname)rc "$(DESTDIR)$(prefix)/share/examples/moe/$(progname)rc"
+-	$(INSTALL_DATA) $(VPATH)/$(pkgname).conf "$(DESTDIR)$(sysconfdir)/$(pkgname).conf"
++	$(INSTALL_DATA) $(VPATH)/$(pkgname).conf "$(DESTDIR)/$(prefix)/share/examples/moe/$(pkgname).conf"
++
  
  install-bin-strip : all
  	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install-bin
-@@ -92,7 +92,7 @@
- install-man :
- 	if [ ! -d "$(DESTDIR)$(mandir)/man1" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(mandir)/man1" ; fi
- 	-rm -f "$(DESTDIR)$(mandir)/man1/$(progname).1"*
--	$(INSTALL_DATA) $(VPATH)/doc/$(progname).1 "$(DESTDIR)$(mandir)/man1/$(progname).1"
-+	$(INSTALL_MAN) $(VPATH)/doc/$(progname).1 "$(DESTDIR)$(mandir)/man1/$(progname).1"
- 
- install-man-compress : install-man
- 	lzip -v -9 "$(DESTDIR)$(mandir)/man1/$(progname).1"

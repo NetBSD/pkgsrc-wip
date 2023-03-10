@@ -2,4 +2,4 @@
 bin/moe
 info/moe.info
 man/man1/moe.1
-share/examples/moe/moerc
+share/examples/moe/moe.conf

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2015/05/08 20:18:18 gschwarz Exp $
 
-DISTNAME=	moe-1.9
+DISTNAME=	moe-1.13
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=moe/}
 EXTRACT_SUFX=	.tar.lz
@@ -20,18 +20,8 @@ MAKE_ENV+=		INSTALL_DIR=${MKDIR:Q}
 LDFLAGS+=		${BUILDLINK_LDADD.ncurses:Q}
 USE_LANGUAGES=		c++
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-# cf. https://lists.gnu.org/archive/html/bug-moe/2017-09/msg00000.html
-SUBST_CLASSES+= clang
-SUBST_STAGE.clang=	post-patch
-SUBST_FILES.clang=	window_vector.cc
-SUBST_MESSAGE.clang=	fixing code for clang incompatiblity
-SUBST_SED.clang=	-e "s/, 1, /, 1U, /"
-.endif
-
-CONF_FILES=		${PREFIX}/share/examples/moe/moerc \
-			${PKG_SYSCONFDIR}/moerc
+CONF_FILES=		${PREFIX}/share/examples/moe/moe.conf \
+			${PKG_SYSCONFDIR}/moe.conf
 INSTALL_TARGET=		install install-man
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGINFODIR} share/examples/moe
 
