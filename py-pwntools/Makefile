@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pwntools/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://pwntools.com/
 COMMENT=	CTF framework and exploit development library
 LICENSE=	gnu-gpl-v3 AND 2-clause-bsd AND mit
