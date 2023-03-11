@@ -4267,7 +4267,6 @@ SUBDIR+=	py-orm
 SUBDIR+=	py-ortho
 SUBDIR+=	py-otb
 SUBDIR+=	py-othman
-SUBDIR+=	py-otp
 SUBDIR+=	py-owslib
 SUBDIR+=	py-p4
 SUBDIR+=	py-p_tqdm
