@@ -1,8 +1,8 @@
 $NetBSD$
 
---- fido2/hid/netbsd.py.orig	2023-03-11 08:28:55.054680841 +0000
+--- fido2/hid/netbsd.py.orig	2023-03-11 13:39:42.733028371 +0000
 +++ fido2/hid/netbsd.py
-@@ -0,0 +1,151 @@
+@@ -0,0 +1,170 @@
 +# Copyright 2016 Google Inc. All Rights Reserved.
 +#
 +# Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,6 +22,7 @@ $NetBSD$
 +from __future__ import absolute_import
 +
 +import errno
++import logging
 +import os
 +import select
 +import struct
@@ -35,9 +36,12 @@ $NetBSD$
 +from ctypes import c_uint8
 +from ctypes import sizeof
 +from fcntl import ioctl
++from typing import Set
 +
 +from . import base
-+from . import linux
++
++
++logger = logging.getLogger(__name__)
 +
 +
 +USB_MAX_DEVNAMELEN = 16
@@ -84,73 +88,88 @@ $NetBSD$
 +USB_HID_SET_RAW = 0x80046802      # _IOW('h', 2, int)
 +
 +
-+FIDO_USAGE_PAGE = 0xf1d0
-+FIDO_USAGE_U2FHID = 0x01
++# Cache for continuously failing devices
++# XXX not thread-safe
++_failed_cache: Set[str] = set()
 +
 +
-+class NetBSDHidDevice(linux.LinuxHidDevice):
-+    """Implementation of HID device for NetBSD.
-+    """
++def list_descriptors():
++    stale = set(_failed_cache)
++    descriptors = []
 +
-+    @classmethod
-+    def _setup(cls, fd, path):
-+        devinfobuf = bytearray(sizeof(usb_device_info))
-+        ioctl(fd, USB_GET_DEVICE_INFO, devinfobuf, True)
-+        devinfo = usb_device_info.from_buffer(devinfobuf)
-+        ucrdbuf = bytearray(sizeof(usb_ctl_report_desc))
-+        ioctl(fd, USB_GET_REPORT_DESC, ucrdbuf, True)
-+        ucrd = usb_ctl_report_desc.from_buffer(ucrdbuf)
-+        descdata = bytearray(ucrd.ucrd_data[:ucrd.ucrd_size])
-+        desc = base.DeviceDescriptor()
-+        desc.path = path
-+        desc.vendor_id = devinfo.udi_vendorNo
-+        desc.vendor_string = devinfo.udi_vendor.decode('utf-8')
-+        desc.product_id = devinfo.udi_productNo
-+        desc.product_string = devinfo.udi_product.decode('utf-8')
-+        desc.serial_number = devinfo.udi_serial.decode('utf-8')
-+        linux.ParseReportDescriptor(descdata, desc)
-+        if desc.usage_page != FIDO_USAGE_PAGE:
-+            raise Exception('usage page != fido')
-+        if desc.usage != FIDO_USAGE_U2FHID:
-+            raise Exception('fido usage != u2fhid')
-+        ioctl(fd, USB_HID_SET_RAW, struct.pack('@i', 1))
-+        ping = bytearray(64)
-+        ping[0:7] = bytearray([0xff,0xff,0xff,0xff,0x81,0,1])
-+        for i in range(10):
-+            os.write(fd, ping)
-+            poll = select.poll()
-+            poll.register(fd, select.POLLIN)
-+            if poll.poll(100):
-+                os.read(fd, 64 + 1)
++    for i in range(100):
++        path = '/dev/uhid%d' % (i,)
++        stale.discard(path)
++        try:
++            desc = get_descriptor(path)
++        except OSError as e:
++            if e.errno == errno.ENOENT:
 +                break
-+        else:
-+            raise Exception('u2f ping timeout')
-+        return desc
++            if path not in _failed_cache:
++                logger.debug("Failed opening FIDO device %s", path,
++                    exc_info=True)
++                _failed_cache.add(path)
++            continue
++        except Exception:
++            if path not in _failed_cache:
++                logger.debug("Failed opening FIDO device %s", path,
++                    exc_info=True)
++                _failed_cache.add(path)
++            continue
++        descriptors.append(desc)
 +
-+    @classmethod
-+    def Enumerate(cls):
-+        for i in range(100):
-+            path = '/dev/uhid{}'.format(i)
-+            fd = None
-+            try:
-+                fd = os.open(path, os.O_RDWR|os.O_CLOEXEC)
-+                desc = cls._setup(fd, path)
-+            except OSError as e:
-+                if e.errno == errno.ENOENT:
++    _failed_cache.difference_update(stale)
++    return descriptors
++
++
++def get_descriptor(path):
++    fd = None
++    try:
++        fd = os.open(path, os.O_RDONLY|os.O_CLOEXEC)
++        devinfo = usb_device_info()
++        ioctl(fd, USB_GET_DEVICE_INFO, devinfo)
++        ucrd = usb_ctl_report_desc()
++        ioctl(fd, USB_GET_REPORT_DESC, ucrd)
++        report_desc = bytearray(ucrd.ucrd_data[:ucrd.ucrd_size])
++        maxin, maxout = base.parse_report_descriptor(report_desc)
++        vid = devinfo.udi_vendorNo
++        pid = devinfo.udi_productNo
++        try:
++            name = devinfo.udi_product.decode('utf-8')
++        except UnicodeDecodeError:
++            name = None
++        try:
++            serial = devinfo.udi_serial.decode('utf-8')
++        except UnicodeDecodeError:
++            serial = None
++        return base.HidDescriptor(path, vid, pid, maxin, maxout, name, serial)
++    finally:
++        if fd is not None:
++            os.close(fd)
++
++
++def open_connection(descriptor):
++    return NetBSDCtapHidConnection(descriptor);
++
++
++class NetBSDCtapHidConnection(base.FileCtapHidConnection):
++    def __init__(self, descriptor):
++        # XXX racy -- device can change identity now that it has been
++        # closed
++        super().__init__(descriptor)
++        try:
++            ioctl(self.handle, USB_HID_SET_RAW, struct.pack('@i', 1))
++            ping = bytearray(64)
++            ping[0:7] = bytearray([0xff,0xff,0xff,0xff,0x81,0,1])
++            for i in range(10):
++                self.write_packet(ping)
++                poll = select.poll()
++                poll.register(self.handle, select.POLLIN)
++                if poll.poll(100):
++                    self.read_packet()
 +                    break
-+                continue
-+            finally:
-+                if fd is not None:
-+                    os.close(fd)
-+            yield desc.ToPublicDict()
-+
-+    def __init__(self, path):
-+        base.HidDevice.__init__(self, path)
-+        self.dev = os.open(path, os.O_RDWR)
-+        self.desc = self._setup(self.dev, path)
-+
-+    def __del__(self):
-+        os.close(self.dev)
-+
-+    def Write(self, packet):
-+        os.write(self.dev, bytearray(packet))
++            else:
++                raise Exception('u2f ping timeout')
++        except Exception:
++            self.close()
++            raise
