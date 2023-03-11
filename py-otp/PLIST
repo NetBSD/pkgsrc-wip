@@ -10,6 +10,12 @@ ${PYSITELIB}/pyotp/__init__.pyo
 ${PYSITELIB}/pyotp/compat.py
 ${PYSITELIB}/pyotp/compat.pyc
 ${PYSITELIB}/pyotp/compat.pyo
+${PYSITELIB}/pyotp/contrib/__init__.py
+${PYSITELIB}/pyotp/contrib/__init__.pyc
+${PYSITELIB}/pyotp/contrib/__init__.pyo
+${PYSITELIB}/pyotp/contrib/steam.py
+${PYSITELIB}/pyotp/contrib/steam.pyc
+${PYSITELIB}/pyotp/contrib/steam.pyo
 ${PYSITELIB}/pyotp/hotp.py
 ${PYSITELIB}/pyotp/hotp.pyc
 ${PYSITELIB}/pyotp/hotp.pyo

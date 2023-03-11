@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pyotp-2.4.0.tar.gz) = 7e37d3f7bf0aa06dae2b127edf0f4fbd85cc35cf
-SHA512 (pyotp-2.4.0.tar.gz) = cb6d49d0b6880c6d7c5ef6337d1f0085609e1b66c693b1a9cf6604334af6456cd67dd0278836211edb91a81b5340cab51499cd47b2013d291c9cc9d59e4f31a5
-Size (pyotp-2.4.0.tar.gz) = 14789 bytes
+BLAKE2s (pyotp-2.8.0.tar.gz) = fe6d9d51dbda44979c1cb2a78b4f7ad460117683175bab29402699acbe8f29dd
+SHA512 (pyotp-2.8.0.tar.gz) = f4e6c857833c7c994a64586bb495b48935752d0fa9d90edbdcce899ebce10fc0ac13ab03c439ea81f1c0fcfc4adafbf2c42ee8c4fa4afdd662c30d5be164c9b2
+Size (pyotp-2.8.0.tar.gz) = 16873 bytes
