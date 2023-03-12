@@ -28,7 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-core-[0-9]*:../../devel/py-pyobjc-core
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa-[0-9]*:../../devel/py-pyobjc-framework-Cocoa
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-LaunchServices-[0-9]*:../../devel/py-pyobjc-framework-LaunchServices
 .else
-DEPENDS+=	${PYPKGPREFIX}-secretstorage-[0-9]*:../../wip/py-secretstorage
+DEPENDS+=	${PYPKGPREFIX}-secretstorage-[0-9]*:../../security/py-secretstorage
 .endif
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test

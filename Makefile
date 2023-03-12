@@ -4592,7 +4592,6 @@ SUBDIR+=	py-sdeint
 SUBDIR+=	py-sdnotify
 SUBDIR+=	py-sdt_metrics
 SUBDIR+=	py-secretpy
-SUBDIR+=	py-secretstorage
 SUBDIR+=	py-seeds
 SUBDIR+=	py-selection
 SUBDIR+=	py-selectolax

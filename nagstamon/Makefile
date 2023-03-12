@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-python-socks-[0-9]*:../../net/py-python-socks
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-gssapi-[0-9]*:../../security/py-requests-gssapi
-DEPENDS+=	${PYPKGPREFIX}-secretstorage-[0-9]*:../../wip/py-secretstorage
+DEPENDS+=	${PYPKGPREFIX}-secretstorage-[0-9]*:../../security/py-secretstorage
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/^n/N/}
 
