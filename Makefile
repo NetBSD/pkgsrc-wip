@@ -3763,7 +3763,6 @@ SUBDIR+=	py-fedmsg
 SUBDIR+=	py-fermilab
 SUBDIR+=	py-feyn
 SUBDIR+=	py-ffmpeg-normalize
-SUBDIR+=	py-fido2
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-fileinspector
 SUBDIR+=	py-fiona
