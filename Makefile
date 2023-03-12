@@ -1697,7 +1697,6 @@ SUBDIR+=	html-xml-utils
 SUBDIR+=	html2latex
 SUBDIR+=	htop-git
 SUBDIR+=	htslib
-SUBDIR+=	httpx
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
 SUBDIR+=	hungrycat
