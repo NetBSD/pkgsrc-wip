@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add NetBSD support.
+https://github.com/Yubico/python-fido2/pull/174
+
 --- fido2/hid/netbsd.py.orig	2023-03-11 13:39:42.733028371 +0000
 +++ fido2/hid/netbsd.py
 @@ -0,0 +1,170 @@

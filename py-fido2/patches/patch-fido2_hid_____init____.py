@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add NetBSD support.
+https://github.com/Yubico/python-fido2/pull/174
+
 --- fido2/hid/__init__.py.orig	2022-10-17 13:36:35.000000000 +0000
 +++ fido2/hid/__init__.py
 @@ -49,6 +49,8 @@ elif sys.platform.startswith("darwin"):

@@ -3,5 +3,5 @@ $NetBSD: distinfo,v 1.4 2021/10/26 11:17:45 nia Exp $
 BLAKE2s (fido2-1.1.0.tar.gz) = 92d590ca5ca32758eb40559447844a9eb53c1b22603cc91d5abddb940bfceb5a
 SHA512 (fido2-1.1.0.tar.gz) = 28446710cd2bf1d82ecc52a779cb535943c9ddf020958c6549167091cd8da72f8cd1ab2fd3a0aee0a6f34d61059bcd72ecc2f4504c9086b5c5815b63faaf5d17
 Size (fido2-1.1.0.tar.gz) = 243692 bytes
-SHA1 (patch-fido2_hid_____init____.py) = cbe9b8d3bcfb1852b64ae5cb430d42070255fafb
-SHA1 (patch-fido2_hid_netbsd.py) = 0b4eda2133b575a3e28fc8aa6aa5ad4ec666906f
+SHA1 (patch-fido2_hid_____init____.py) = cdc96645c972d5b7ad14b2fbc3b13ad607b6d1ca
+SHA1 (patch-fido2_hid_netbsd.py) = 330afb08ed955ddd739594a23155280d7967f59b
