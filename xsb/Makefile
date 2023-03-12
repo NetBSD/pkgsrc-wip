@@ -30,7 +30,7 @@ XSB_PREFIXDIR=	${DESTDIR}${PREFIX}/${XSB_VERSION_STR}
 XSB_PKGDIR=	${XSB_PREFIXDIR}/packages
 
 do-build:
-	cd ${WRKSRC} && ./makexsb fast package
+	cd ${WRKSRC} && ./makexsb fast packages
 
 # Regarding "XSB packages" : XSB makefile just copies the directories. The "XSB
 # package" makefiles do not have a proper install target. At present we are
@@ -47,7 +47,7 @@ REMOVE_P+=		${XSB_PREFIXDIR}/lib/prolog_db_doc/prolog_db_format.P
 REMOVE_P+=		${XSB_PREFIXDIR}/syslib/debugger_data.P
 
 do-install:
-	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install package && \
+	cd ${WRKSRC} && DESTDIR=${DESTDIR} ./makexsb install && \
 	rm -rf ${XSB_PKGDIR} ${REMOVE_P}
 
 .include "../../devel/pcre/buildlink3.mk"
