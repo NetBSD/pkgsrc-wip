@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	httpx-1.2.7
+DISTNAME=	httpx-1.2.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
