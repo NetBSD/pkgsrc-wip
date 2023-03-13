@@ -1,1 +1,0 @@
-Fails self-tests on NetBSD due to missing log2l() symbol.

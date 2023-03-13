@@ -25,8 +25,6 @@ REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
-USE_PKG_RESOURCES=	yes
-
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
@@ -46,20 +44,13 @@ BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework
 BLAS_C_INTERFACE=	yes
 CPPFLAGS+=		${BLAS_INCLUDES}
 
-# doesn't work because math.h contains both log2 and log2l
-# CPPFLAGS.NetBSD+=	-Dlog2l=log2
-
-.include "../../mk/bsd.prefs.mk"
-
 # Remove invalid __STDC_VERSION__ setting
 BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
-
-pre-install:
-	${RM} -f ${WRKSRC}/numpy/core/include/numpy/npy_common.h.orig
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py || ${TRUE}
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py3 || ${TRUE}
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/numpy/core/include/numpy/npy_common.h.orig
 
 do-test:
 	cd ${WRKDIR} && \

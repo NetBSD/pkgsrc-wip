@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.py-numpy?=		../../math/py-numpy
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.include "../../math/py-numpy/Makefile.make_env"
+.include "../../wip/py-numpy/make_env.mk"
 
 # Mimick the choice from Makefile. Or better store/load build choice?
 BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework

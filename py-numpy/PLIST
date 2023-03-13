@@ -202,7 +202,6 @@ ${PYSITELIB}/numpy/core/include/numpy/noprefix.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_1_7_deprecated_api.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_3kcompat.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_common.h
-${PYSITELIB}/numpy/core/include/numpy/npy_common.h.orig
 ${PYSITELIB}/numpy/core/include/numpy/npy_cpu.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_endian.h
 ${PYSITELIB}/numpy/core/include/numpy/npy_interrupt.h
