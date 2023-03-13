@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.101 2022/11/20 19:03:47 adam Exp $
 
-DISTNAME=	numpy-1.24.1
+DISTNAME=	numpy-1.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -46,12 +46,10 @@ BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework
 BLAS_C_INTERFACE=	yes
 CPPFLAGS+=		${BLAS_INCLUDES}
 
-.include "../../mk/bsd.prefs.mk"
+# doesn't work because math.h contains both log2 and log2l
+# CPPFLAGS.NetBSD+=	-Dlog2l=log2
 
-# numpy fails using the gold linker with:
-# fatal error: --sysroot=: must take a non-empty argument
-# Work around it on DragonFly by specifying the classic gnu linker
-MAKE_ENV.DragonFly+=	LDVER=ld.bfd
+.include "../../mk/bsd.prefs.mk"
 
 # Remove invalid __STDC_VERSION__ setting
 BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
