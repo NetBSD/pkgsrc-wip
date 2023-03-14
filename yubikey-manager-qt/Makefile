@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/yubikey-manager-qt
 USE_LANGUAGES=	c++
 
 MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
+# https://github.com/Yubico/yubikey-manager-qt/issues/342
+MAKE_ENV+=		SUBLIBS=-lpython${PYVERSSUFFIX}
 INSTALLATION_DIRS+=	bin
 
 pre-build:
