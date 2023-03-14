@@ -6084,7 +6084,6 @@ SUBDIR+=	you-get
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
-SUBDIR+=	yubikey-manager-qt
 SUBDIR+=	zabbix62-agent
 SUBDIR+=	zabbix62-frontend
 SUBDIR+=	zabbix62-java
