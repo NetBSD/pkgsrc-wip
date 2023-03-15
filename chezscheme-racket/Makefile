@@ -28,26 +28,26 @@ CHECK_PORTABILITY_SKIP=	src/cs/c/configure
 .include "../../mk/bsd.prefs.mk"
 
 # For now, we always build with threads support
-CHEZ_THREADED=t
+CHEZ_THREADED=	t
 
 .if ${MACHINE_ARCH} == i386
-CHEZ_ARCH=i3
+CHEZ_ARCH=	i3
 .elif ${MACHINE_ARCH} == x86_64
-CHEZ_ARCH=a6
+CHEZ_ARCH=	a6
 .elif ${MACHINE_ARCH} == aarch64
-CHEZ_ARCH=arm64
+CHEZ_ARCH=	arm64
 .endif
 
 .if ${OPSYS} == NetBSD
-CHEZ_OS=nb
+CHEZ_OS=	nb
 .elif ${OPSYS} == FreeBSD
-CHEZ_OS=fb
+CHEZ_OS=	fb
 .elif ${OPSYS} == OpenBSD
-CHEZ_OS=ob
+CHEZ_OS=	ob
 .elif ${OPSYS} == Linux
-CHEZ_OS=le
+CHEZ_OS=	le
 .elif ${OPSYS} == Darwin
-CHEZ_OS=osx
+CHEZ_OS=	osx
 .endif
 
 PLIST_SUBST+=		CHEZ_THREADED=${CHEZ_THREADED}
