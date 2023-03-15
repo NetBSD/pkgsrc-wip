@@ -1184,7 +1184,6 @@ SUBDIR+=	glulxe
 SUBDIR+=	gm2calc
 SUBDIR+=	gmap
 SUBDIR+=	gmetadom
-SUBDIR+=	gmic
 SUBDIR+=	gmm
 SUBDIR+=	gmp-ecm
 SUBDIR+=	gmpc-lyricsplugin
