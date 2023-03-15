@@ -1,8 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	racket-minimal-${DISTVERS}-src
-DISTVERS=	8.6
-PKGNAME=	chezscheme-racket-9.5.9.2
+DISTVERS=	8.7
+PKGNAME=	chezscheme-racket-9.5.9.8
 CATEGORIES=	lang
 MASTER_SITES=	https://download.racket-lang.org/releases/${DISTVERS}/installers/
 EXTRACT_SUFX=	.tgz
