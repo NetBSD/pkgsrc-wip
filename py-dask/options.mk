@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-dask
 PKG_SUPPORTED_OPTIONS=	cityhash cytoolz parquet graphviz psutil scipy skimage xarray sqlalchemy
 
-PKG_SUGGESTED_OPTIONS=	cityhash cytoolz parquet psutil scipy skimage xarray sqlalchemy
+PKG_SUGGESTED_OPTIONS=	cityhash cytoolz parquet psutil scipy xarray sqlalchemy
 
 .include "../../mk/bsd.options.mk"
 
