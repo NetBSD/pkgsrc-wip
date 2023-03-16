@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin-${PYVERSSUFFIX} pep517 \
-		build-wheel -i ${PREFIX}/bin/python3.10 --compatibility off \
+		build-wheel -i ${PREFIX}/bin/python${PYVERSSUFFIX} --compatibility off \
 		--offline
 
 # Test Requires install
