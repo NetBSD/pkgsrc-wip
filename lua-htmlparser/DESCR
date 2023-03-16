@@ -1,1 +1,1 @@
-Parse HTML text into a tree of elements with selectors.
+A lua module to parse HTML text into a tree of elements with selectors.
