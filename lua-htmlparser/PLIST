@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${LUA_LDIR}/htmlparser.lua
+${LUA_LDIR}/htmlparser/ElementNode.lua
+${LUA_LDIR}/htmlparser/voidelements.lua

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (lua-htmlparser-0.3.9.tar.gz) = 09e74487ec9e7b1d267179873c96edc99c382755e6e358ae9578d3f151262b04
+SHA512 (lua-htmlparser-0.3.9.tar.gz) = 457c9fffa275994b5c09729010dfa4cac7cfa1640917d077bb33f10e71623bb0883945cd28665432fcc58937f2c7d893f7e40c0e27b10daaf2a71d35dd734006
+Size (lua-htmlparser-0.3.9.tar.gz) = 15892 bytes
