@@ -230,6 +230,12 @@ ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1119/api-v1-jdl-dn-adult-cens
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1119/api-v1-jdl-dn-adult-census-l-2-s-act-.json.gz
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1119/api-v1-jdq-1119.json.gz
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1119/data-v1-dl-54002.arff.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1590/__init__.py
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1590/__init__.pyc
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1590/api-v1-jd-1590.json.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1590/api-v1-jdf-1590.json.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1590/api-v1-jdq-1590.json.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_1590/data-v1-dl-1595261.arff.gz
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_2/__init__.py
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_2/__init__.pyc
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_2/api-v1-jd-2.json.gz
@@ -285,6 +291,12 @@ ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_40966/api-v1-jdl-dn-miceprote
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_40966/api-v1-jdl-dn-miceprotein-l-2-s-act-.json.gz
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_40966/api-v1-jdq-40966.json.gz
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_40966/data-v1-dl-17928620.arff.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42074/__init__.py
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42074/__init__.pyc
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42074/api-v1-jd-42074.json.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42074/api-v1-jdf-42074.json.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42074/api-v1-jdq-42074.json.gz
+${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42074/data-v1-dl-21552912.arff.gz
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42585/__init__.py
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42585/__init__.pyc
 ${PYSITELIB}/sklearn/datasets/tests/data/openml/id_42585/api-v1-jd-42585.json.gz
@@ -1186,6 +1198,8 @@ ${PYSITELIB}/sklearn/utils/murmurhash.pxd
 ${PYSITELIB}/sklearn/utils/murmurhash.so
 ${PYSITELIB}/sklearn/utils/optimize.py
 ${PYSITELIB}/sklearn/utils/optimize.pyc
+${PYSITELIB}/sklearn/utils/parallel.py
+${PYSITELIB}/sklearn/utils/parallel.pyc
 ${PYSITELIB}/sklearn/utils/random.py
 ${PYSITELIB}/sklearn/utils/random.pyc
 ${PYSITELIB}/sklearn/utils/sparsefuncs.py
