@@ -190,6 +190,7 @@ ${PYSITELIB}/distributed/http/static/css/status.css
 ${PYSITELIB}/distributed/http/static/images/dask-logo.svg
 ${PYSITELIB}/distributed/http/static/images/fa-bars.svg
 ${PYSITELIB}/distributed/http/static/images/favicon.ico
+${PYSITELIB}/distributed/http/static/images/jupyter.svg
 ${PYSITELIB}/distributed/http/static/images/numpy.png
 ${PYSITELIB}/distributed/http/static/images/pandas.png
 ${PYSITELIB}/distributed/http/static/images/python.png
@@ -305,6 +306,10 @@ ${PYSITELIB}/distributed/shuffle/_disk.py
 ${PYSITELIB}/distributed/shuffle/_disk.pyc
 ${PYSITELIB}/distributed/shuffle/_limiter.py
 ${PYSITELIB}/distributed/shuffle/_limiter.pyc
+${PYSITELIB}/distributed/shuffle/_merge.py
+${PYSITELIB}/distributed/shuffle/_merge.pyc
+${PYSITELIB}/distributed/shuffle/_rechunk.py
+${PYSITELIB}/distributed/shuffle/_rechunk.pyc
 ${PYSITELIB}/distributed/shuffle/_scheduler_extension.py
 ${PYSITELIB}/distributed/shuffle/_scheduler_extension.pyc
 ${PYSITELIB}/distributed/shuffle/_shuffle.py
