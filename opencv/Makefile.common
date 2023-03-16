@@ -1,0 +1,56 @@
+# $NetBSD: Makefile.common,v 1.16 2022/12/01 13:39:03 jperkin Exp $
+# used by wip/opencv/Makefile
+# used by wip/opencv-contrib-face/Makefile
+#
+# DO NOT FORGET to regen wip/opencv-contrib-face/distinfo!
+
+OPENCV_VERSION=	4.7.0
+
+CATEGORIES=	graphics devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
+
+HOMEPAGE=	https://opencv.org/
+LICENSE=	modified-bsd
+
+PATCHDIR=	${.CURDIR}/../../wip/opencv/patches
+
+USE_LANGUAGES=		c c++11
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
+CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+
+CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
+CHECK_PORTABILITY_SKIP+=	cmake/templates/xcode-*
+
+CMAKE_ARGS+=		-DBUILD_JAVA=OFF
+CMAKE_ARGS+=		-DBUILD_PROTOBUF=OFF
+CMAKE_ARGS+=		-DCV_ENABLE_INTRINSICS=OFF # XXX: problematic
+CMAKE_ARGS+=		-DENABLE_CCACHE=OFF
+CMAKE_ARGS+=		-DOPENCV_GENERATE_SETUPVARS=OFF
+CMAKE_ARGS+=		-DPROTOBUF_UPDATE_FILES=ON
+CMAKE_ARGS+=		-DWITH_EIGEN=OFF
+CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
+# doesn't build on NetBSD with libva-2.17.0
+CMAKE_ARGS+=		-DWITH_VA=OFF
+#.include "../../multimedia/libva/buildlink3.mk"
+CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
+CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=address
+BUILDLINK_TRANSFORM+=	rm:-Werror=non-virtual-dtor
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+# Disable SSE/SSE2 to avoid build errors from missing _mm_pause.
+CMAKE_ARGS+=		-DCPU_BASELINE=""
+.endif
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../mk/atomic64.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../devel/cmake/build.mk"
