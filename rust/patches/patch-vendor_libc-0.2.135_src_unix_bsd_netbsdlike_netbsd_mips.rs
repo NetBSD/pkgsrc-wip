@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add target description for 32-bit mipsel-unknown-netbsd.
+
 --- vendor/libc-0.2.135/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2023-01-27 19:26:54.068036421 +0000
 +++ vendor/libc-0.2.135/src/unix/bsd/netbsdlike/netbsd/mips.rs
 @@ -0,0 +1,22 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add use of NetBSD mips target description.
+
 --- vendor/libc-0.2.135/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-01-25 01:49:16.000000000 +0000
 +++ vendor/libc-0.2.135/src/unix/bsd/netbsdlike/netbsd/mod.rs
 @@ -3027,7 +3027,12 @@ cfg_if! {

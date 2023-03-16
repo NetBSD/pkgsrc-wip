@@ -1,3 +1,5 @@
+$NetBSD$
+
 https://github.com/rust-lang/rust/issues/108426
 
 It reverts:

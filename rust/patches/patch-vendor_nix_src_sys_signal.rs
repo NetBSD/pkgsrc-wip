@@ -1,5 +1,7 @@
 $NetBSD$
 
+Narrow the conditional on mips to only apply to Linux.
+
 --- vendor/nix/src/sys/signal.rs.orig	2023-01-25 01:49:16.000000000 +0000
 +++ vendor/nix/src/sys/signal.rs
 @@ -864,7 +864,7 @@ mod sigevent {

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add mipsel-unknown-netbsd target as not having 64-bit atomics.
+
 --- vendor/crossbeam-epoch-0.9.11/no_atomic.rs.orig	2023-01-25 01:49:15.000000000 +0000
 +++ vendor/crossbeam-epoch-0.9.11/no_atomic.rs
 @@ -40,6 +40,7 @@ const NO_ATOMIC_64: &[&str] = &[
