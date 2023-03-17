@@ -5237,7 +5237,6 @@ SUBDIR+=	shellinabox
 SUBDIR+=	shotcut
 SUBDIR+=	shotwell
 SUBDIR+=	shoutcast
-SUBDIR+=	shoutrrr
 SUBDIR+=	showfont
 SUBDIR+=	showmesh
 SUBDIR+=	shtool
