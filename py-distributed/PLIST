@@ -1,7 +1,7 @@
 @comment $NetBSD$
-bin/dask-scheduler-3.10
-bin/dask-ssh-3.10
-bin/dask-worker-3.10
+bin/dask-scheduler-${PYVERSSUFFIX}
+bin/dask-ssh-${PYVERSSUFFIX}
+bin/dask-worker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
