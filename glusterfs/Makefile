@@ -18,8 +18,7 @@ CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-tcmalloc
-# libtirpc not in pkgsrc (yet)
-CONFIGURE_ARGS+=	--without-libtirpc
+
 
 # Upstream glusterfs effectively dropped support for 32bit platforms
 # somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
@@ -130,6 +129,11 @@ CONFIGURE_ARGS+=	--enable-debug
 #LIBS+=			-lgc
 
 .include "../../mk/bsd.prefs.mk"
+
+# only needed on Linux since glibc dropped RPC support
+.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS+=        --without-libtirpc
+.endif
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
