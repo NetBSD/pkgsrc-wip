@@ -1,0 +1,14 @@
+$NetBSD$
+
+Move to config files via the data mechanism out of /etc and
+into share/examples (where they will be copied to etc/
+during pkg install).
+
+--- doc/Makefile.am.orig	2023-03-16 21:19:58.827408077 +0100
++++ doc/Makefile.am	2023-03-16 21:20:56.494030533 +0100
+@@ -1,4 +1,4 @@
+-dist_sysconf_DATA	= netconfig bindresvport.blacklist 
++dist_data_DATA	= netconfig bindresvport.blacklist 
+ 
+ CLEANFILES	       = cscope.* *~
+ DISTCLEANFILES	       = Makefile.in
