@@ -2,7 +2,7 @@ $NetBSD$
 
 Add missing sums.
 
---- go.sum.orig	2023-01-01 21:56:36.000000000 +0000
+--- go.sum.orig	2023-03-02 03:37:58.000000000 +0000
 +++ go.sum
 @@ -1,4 +1,5 @@
  github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWRnGsAI=
@@ -10,15 +10,15 @@ Add missing sums.
  github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
  github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
  github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-@@ -10,6 +11,7 @@ github.com/felixge/fgprof v0.9.3 h1:VvyZ
- github.com/felixge/fgprof v0.9.3/go.mod h1:RdbpDgzqYVh/T9fPELJyV7EYJuHB55UTEULNun8eiPw=
+@@ -12,6 +13,7 @@ github.com/goccmack/gocc v0.0.0-20230228
+ github.com/goccmack/gocc v0.0.0-20230228185258-2292f9e40198/go.mod h1:DTh/Y2+NbnOVVoypCCQrovMPDKUGp4yZpSbWg5D0XIM=
  github.com/google/pprof v0.0.0-20211214055906-6f57359322fd h1:1FjCyPC+syAzJ5/2S8fqdZK1R22vvA0J7JZKcuOIQ7Y=
  github.com/google/pprof v0.0.0-20211214055906-6f57359322fd/go.mod h1:KgnwoLYCZ8IQu3XUZ8Nc/bM9CCZFOyjUNOSygVozoDg=
 +github.com/ianlancetaylor/demangle v0.0.0-20210905161508-09a460cdf81d h1:uGg2frlt3IcT7kbV6LEp5ONv4vmoO2FW4qSO+my/aoM=
  github.com/ianlancetaylor/demangle v0.0.0-20210905161508-09a460cdf81d/go.mod h1:aYm2/VgdVmcIU8iMfdMvDMsRAQjcfZSKFby6HOFvi/w=
  github.com/johnkerl/lumin v1.0.0 h1:CV34cHZOJ92Y02RbQ0rd4gA0C06Qck9q8blOyaPoWpU=
  github.com/johnkerl/lumin v1.0.0/go.mod h1:eLf5AdQOaLvzZ2zVy4REr/DSeEwG+CZreHwNLICqv9E=
-@@ -21,6 +23,8 @@ github.com/lestrrat-go/strftime v1.0.6 h
+@@ -23,6 +25,8 @@ github.com/lestrrat-go/strftime v1.0.6 h
  github.com/lestrrat-go/strftime v1.0.6/go.mod h1:f7jQKgV5nnJpYgdEasS+/y7EsTb8ykN2z68n3TtcTaw=
  github.com/mattn/go-isatty v0.0.17 h1:BTarxUcIeDqL27Mc+vyvdWYSL28zpIhv3RoTdsLMPng=
  github.com/mattn/go-isatty v0.0.17/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
@@ -27,7 +27,7 @@ Add missing sums.
  github.com/nine-lives-later/go-windows-terminal-sequences v1.0.4 h1:NC4H8hewgaktBqMI5yzy6L/Vln5/H7BEziyxaE2fX3Y=
  github.com/nine-lives-later/go-windows-terminal-sequences v1.0.4/go.mod h1:eUQxpEiJy001RoaLXrNa5+QQLYiEgmEafwWuA3ppJSo=
  github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
-@@ -31,7 +35,9 @@ github.com/pmezard/go-difflib v1.0.0 h1:
+@@ -33,7 +37,9 @@ github.com/pmezard/go-difflib v1.0.0 h1:
  github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
  github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
  github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=

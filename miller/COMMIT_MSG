@@ -1,4 +1,71 @@
-textproc/miller: update to miller-6.6.0
+textproc/miller: update to miller-6.7.0
+
+v6.7.0
+======
+
+New leftpad/rightpad DSL functions, unspace verb, and more
+
+Features
+
+  * New leftpad and rightpad DSL functions by @johnkerl in #1205
+  * mlr unspace verb by @johnkerl in #1167
+  * Support more backslashed special characters in DSL strings by @johnkerl in #1212
+  * Add --ofmte, --ofmtf, --ofmtg command-line flags by @johnkerl in #1206
+
+Documentation updates
+
+  * Fixed missing double quote in documentation sample by @Clindbergh in #1181
+  * Complete #1181 by @johnkerl in #1184
+  * Add doc info on DSL code-comment syntax by @johnkerl in #1165
+  * Fix typos by @jwilk in #1135
+  * Fix typo in mlr put documentation by @johnkerl in #1140
+
+Bug fixes
+
+  * Fix #1164: regression on CSV blank-line handling by @johnkerl in #1168
+  * Fix #1146: bug in lo/hi limits for non-auto histogram by @johnkerl in #1157
+  * Fix #1102: empty-string field in single-column TSV should not be a schema-restart by @johnkerl in #1163
+
+Minor changes
+
+  * Add Go LICENSE file by @skitt in #1171
+
+Dependency updates
+
+  * Bump github/codeql-action from 2.1.33 to 2.1.35 by @dependabot in #1137
+  * Bump actions/setup-go from 3.3.1 to 3.4.0 by @dependabot in #1136
+  * Bump github/codeql-action from 2.1.35 to 2.1.36 by @dependabot in #1143
+  * Bump actions/checkout from 3.1.0 to 3.2.0 by @dependabot in #1145
+  * Bump goreleaser/goreleaser-action from 3.2.0 to 4.1.0 by @dependabot in #1147
+  * Bump actions/setup-go from 3.4.0 to 3.5.0 by @dependabot in #1148
+  * Bump github/codeql-action from 2.1.36 to 2.1.37 by @dependabot in #1151
+  * Bump actions/cache from 3.0.11 to 3.2.0 by @dependabot in #1155
+  * Bump actions/cache from 3.2.0 to 3.2.1 by @dependabot in #1156
+  * Bump actions/cache from 3.2.1 to 3.2.2 by @dependabot in #1160
+  * Bump github.com/mattn/go-isatty from 0.0.16 to 0.0.17 by @dependabot in #1162
+  * Bump codespell-project/actions-codespell from bcf481f4d5cce7b92b65f05aebe8f552d4f1442c to
+    9c63fddd79f483308bfaea379a505dcd361b5d1d by @dependabot in #1172
+  * Bump actions/checkout from 3.2.0 to 3.3.0 by @dependabot in #1173
+  * Bump actions/cache from 3.2.2 to 3.2.3 by @dependabot in #1174
+  * Bump actions/upload-artifact from 3.1.1 to 3.1.2 by @dependabot in #1175
+  * Bump github/codeql-action from 2.1.37 to 2.1.38 by @dependabot in #1176
+  * Bump github/codeql-action from 2.1.38 to 2.1.39 by @dependabot in #1179
+  * Bump github/codeql-action from 2.1.39 to 2.2.1 by @dependabot in #1183
+  * Bump goreleaser/goreleaser-action from 4.1.0 to 4.1.1 by @dependabot in #1185
+  * Bump goreleaser/goreleaser-action from 4.1.1 to 4.2.0 by @dependabot in #1187
+  * Bump actions/cache from 3.2.3 to 3.2.4 by @dependabot in #1186
+  * Bump actions/cache from 3.2.4 to 3.2.5 by @dependabot in #1192
+  * Bump github/codeql-action from 2.2.1 to 2.2.3 by @dependabot in #1191
+  * Bump github/codeql-action from 2.2.3 to 2.2.4 by @dependabot in #1193
+  * Bump actions/cache from 3.2.5 to 3.2.6 by @dependabot in #1196
+  * Bump golang.org/x/sys from 0.0.0-20210326220804-49726bf1d181 to 0.1.0 in /cmd/experiments/cli_parser by @dependabot in #1203
+  * Bump github.com/stretchr/testify from 1.8.1 to 1.8.2 by @dependabot in #1208
+  * Bump github/codeql-action from 2.2.4 to 2.2.5 by @dependabot in #1207
+
+New Contributors
+
+  * @jwilk made their first contribution in #1135
+  * @Clindbergh made their first contribution in #1181
 
 v6.6.0
 ======

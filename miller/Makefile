@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.24 2022/12/31 19:09:50 fcambus Exp $
 
-DISTNAME=	miller-6.6.0
+DISTNAME=	miller-6.7.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnkerl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
