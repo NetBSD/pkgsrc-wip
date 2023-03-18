@@ -3011,6 +3011,7 @@ SUBDIR+=	panda
 SUBDIR+=	pangoterm
 SUBDIR+=	papp
 SUBDIR+=	parafly
+SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parole
 SUBDIR+=	parted
