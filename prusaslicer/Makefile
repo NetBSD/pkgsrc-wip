@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.5.0
+PKGVERSION=	2.5.1
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:S/rc/-rc/}
 CATEGORIES=	cad

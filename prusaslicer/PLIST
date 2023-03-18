@@ -471,6 +471,7 @@ share/PrusaSlicer/profiles/PrusaResearch/MK3S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK3_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/SL1S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/SL1_thumbnail.png
+share/PrusaSlicer/profiles/PrusaResearch/XL_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/mini.svg
 share/PrusaSlicer/profiles/PrusaResearch/mini_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/mk2.svg
@@ -481,6 +482,8 @@ share/PrusaSlicer/profiles/PrusaResearch/sl1.svg
 share/PrusaSlicer/profiles/PrusaResearch/sl1_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/sl1s.svg
 share/PrusaSlicer/profiles/PrusaResearch/sl1s_bed.stl
+share/PrusaSlicer/profiles/PrusaResearch/xl.svg
+share/PrusaSlicer/profiles/PrusaResearch/xl_bed.stl
 share/PrusaSlicer/profiles/RatRig.idx
 share/PrusaSlicer/profiles/RatRig.ini
 share/PrusaSlicer/profiles/RatRig/VC3_300_thumbnail.png
