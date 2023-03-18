@@ -774,6 +774,7 @@ SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
 SUBDIR+=	elixir-cross-ref
 SUBDIR+=	elk
+SUBDIR+=	elmerfem
 SUBDIR+=	elogind
 SUBDIR+=	elpa
 SUBDIR+=	elscreen-git
