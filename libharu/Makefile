@@ -1,42 +1,35 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:39 asau Exp $
-#
+# $NetBSD: Makefile,v 1.2 2021/12/28 19:22:04 adam Exp $
 
-DISTNAME=	libharu-2.2.1
+DISTNAME=	libharu-2.4.3
 CATEGORIES=	print
-MASTER_SITES=	http://libharu.org/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libharu/}
+GITHUB_TAG=	v2.4.3
+DIST_SUBDIR=	libharu
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/libharu/libharu/
+COMMENT=	Software library for generating PDF
 LICENSE=	zlib
 
-MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	http://libharu.org/
-COMMENT=	Library for generating PDF files
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libharu
-PKG_SUPPORTED_OPTIONS=	png zlib
-PKG_SUGGESTED_OPTIONS=	png zlib
+CMAKE_ARGS+=	-DLIBHPDF_STATIC=OFF
 
-.include "../../mk/bsd.options.mk"
+INSTALLATION_DIRS=	include lib
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/include/*.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/src/libhpdf.* ${DESTDIR}${PREFIX}/lib
 
-# Package-specific option-handling
+.include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKG_OPTIONS:Mpng)
-CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
+.if ${OPSYS} == "Darwin"
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -id ${PREFIX}/lib/libhpdf.dylib \
+	    ${DESTDIR}${PREFIX}/lib/libhpdf.dylib
 .endif
 
-.if !empty(PKG_OPTIONS:Mzlib)
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-.endif
-
-
-.if !empty(PKG_OPTIONS:Mzlib)
 .include "../../devel/zlib/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mpng)
 .include "../../graphics/png/buildlink3.mk"
-.endif
-
 .include "../../mk/bsd.pkg.mk"
