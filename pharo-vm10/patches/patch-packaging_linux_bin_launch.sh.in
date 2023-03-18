@@ -1,0 +1,17 @@
+$NetBSD$
+
+Add pkglibdir to LD_LIBRARY_PATH
+
+--- packaging/linux/bin/launch.sh.in.orig	2021-08-13 21:08:15.000000000 +0000
++++ packaging/linux/bin/launch.sh.in
+@@ -18,8 +18,8 @@ case "$BIN" in
+ *) PLUGINS="`pwd`/$BIN"
+ esac
+ 
+-if [ $(uname -s) = "OpenBSD" ]; then
+-  LD_LIBRARY_PATH="$PLUGINS:${LD_LIBRARY_PATH}" exec $GDB "$BIN/@VM_EXECUTABLE_NAME@" "$@"
++if [ $(uname -s) = "OpenBSD" -o $(uname -s) = "NetBSD" ]; then
++  LD_LIBRARY_PATH="$PLUGINS:@pkglibdir@:${LD_LIBRARY_PATH}" exec $GDB "$BIN/@VM_EXECUTABLE_NAME@" "$@"
+ fi
+ 
+ # On some linuxes there multiple versions of the C library.  If the image uses

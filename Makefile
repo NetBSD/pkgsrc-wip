@@ -3126,6 +3126,7 @@ SUBDIR+=	phantomjs
 SUBDIR+=	phantomjs2
 SUBDIR+=	pharo
 SUBDIR+=	pharo-vm
+SUBDIR+=	pharo-vm10
 SUBDIR+=	pharo10
 SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine

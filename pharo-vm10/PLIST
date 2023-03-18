@@ -1,0 +1,21 @@
+@comment $NetBSD$
+bin/pharo
+lib/pharo/libB2DPlugin.so
+lib/pharo/libBitBltPlugin.so
+lib/pharo/libDSAPrims.so
+lib/pharo/libFileAttributesPlugin.so
+lib/pharo/libFilePlugin.so
+lib/pharo/libFloatArrayPlugin.so
+lib/pharo/libJPEGReadWriter2Plugin.so
+lib/pharo/libJPEGReaderPlugin.so
+lib/pharo/libLargeIntegers.so
+lib/pharo/libLocalePlugin.so
+lib/pharo/libMiscPrimitivePlugin.so
+lib/pharo/libPharoVMCore.so
+lib/pharo/libSocketPlugin.so
+lib/pharo/libSqueakSSL.so
+lib/pharo/libSurfacePlugin.so
+lib/pharo/libTestLibrary.so
+lib/pharo/libUUIDPlugin.so
+lib/pharo/libUnixOSProcessPlugin.so
+lib/pharo/pharo
