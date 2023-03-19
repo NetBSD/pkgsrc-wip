@@ -1,10 +1,11 @@
 # $NetBSD$
 
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	lua-htmlparser-0.3.9
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//}
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msva/}
+GITHUB_PROJECT=	lua-htmlparser
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://msva.github.io/lua-htmlparser/
