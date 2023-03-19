@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	subfinder-2.5.6
+DISTNAME=	subfinder-2.5.7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
