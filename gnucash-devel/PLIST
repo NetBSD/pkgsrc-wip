@@ -990,6 +990,8 @@ share/gnucash/pixmaps/gnucash-icon.ico
 share/gnucash/pixmaps/gnucash_splash.png
 share/gnucash/pref_transformations.xml
 share/gnucash/tip_of_the_day.list
+share/gnucash/ui/accelerator-map
+share/gnucash/ui/accelerator-map-osx
 share/gnucash/ui/osx_accel_map
 share/guile/site/3.0/gnucash/app-utils.scm
 share/guile/site/3.0/gnucash/app-utils/c-interface.scm
