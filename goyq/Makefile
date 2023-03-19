@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mikefarah/}
 GITHUB_PROJECT=	yq
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://mikefarah.gitbook.io/yq/
 COMMENT=	Portable command-line YAML, JSON and XML processor
 LICENSE=	mit
