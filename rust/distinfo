@@ -126,6 +126,7 @@ SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 32ab8ea3809cd4f6fee9fc0d
 SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = 56621c10310914672a851cf5dfbf343a9ff4e1be
 SHA1 (patch-library_std_src_sys_unix_mod.rs) = f8669d680f169137ac2891af2977909619366a97
 SHA1 (patch-library_std_src_sys_unix_thread.rs) = 36a3085500ecbb34f8ecc08388c164da54bdf5d4
+SHA1 (patch-library_std_src_sys_unix_thread__parking_netbsd.rs) = c29eb1cf074766d34bd2b8c348ce29c6ae2ba163
 SHA1 (patch-src_bootstrap_bootstrap.py) = fdb4e2e7fd61ae10f4f4b06ef895a8ebf47fbf7a
 SHA1 (patch-src_bootstrap_builder.rs) = 98daac929d2bbc9c475c39d225d50d37491528a8
 SHA1 (patch-src_bootstrap_compile.rs) = 94b05db59b8bc50dce48537aeb72ba9ce293bb07
