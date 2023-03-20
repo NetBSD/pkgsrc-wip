@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	yq-4.32.1
+DISTNAME=	yq-4.32.2
 PKGNAME=	${DISTNAME:C/^/go/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikefarah/}
