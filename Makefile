@@ -2303,6 +2303,7 @@ SUBDIR+=	manatee
 SUBDIR+=	mapnik
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
+SUBDIR+=	marathon-trilogy
 SUBDIR+=	mark
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
