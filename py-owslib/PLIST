@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/05 22:07:56 jihbed Exp $
+@comment $NetBSD$
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,15 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/owslib/__init__.py
 ${PYSITELIB}/owslib/__init__.pyc
 ${PYSITELIB}/owslib/__init__.pyo
+${PYSITELIB}/owslib/catalogue/__init__.py
+${PYSITELIB}/owslib/catalogue/__init__.pyc
+${PYSITELIB}/owslib/catalogue/__init__.pyo
+${PYSITELIB}/owslib/catalogue/csw2.py
+${PYSITELIB}/owslib/catalogue/csw2.pyc
+${PYSITELIB}/owslib/catalogue/csw2.pyo
+${PYSITELIB}/owslib/catalogue/csw3.py
+${PYSITELIB}/owslib/catalogue/csw3.pyc
+${PYSITELIB}/owslib/catalogue/csw3.pyo
 ${PYSITELIB}/owslib/coverage/__init__.py
 ${PYSITELIB}/owslib/coverage/__init__.pyc
 ${PYSITELIB}/owslib/coverage/__init__.pyo
@@ -67,12 +76,18 @@ ${PYSITELIB}/owslib/feature/wfs200.pyo
 ${PYSITELIB}/owslib/fes.py
 ${PYSITELIB}/owslib/fes.pyc
 ${PYSITELIB}/owslib/fes.pyo
+${PYSITELIB}/owslib/fes2.py
+${PYSITELIB}/owslib/fes2.pyc
+${PYSITELIB}/owslib/fes2.pyo
 ${PYSITELIB}/owslib/fgdc.py
 ${PYSITELIB}/owslib/fgdc.pyc
 ${PYSITELIB}/owslib/fgdc.pyo
 ${PYSITELIB}/owslib/gm03.py
 ${PYSITELIB}/owslib/gm03.pyc
 ${PYSITELIB}/owslib/gm03.pyo
+${PYSITELIB}/owslib/gml.py
+${PYSITELIB}/owslib/gml.pyc
+${PYSITELIB}/owslib/gml.pyo
 ${PYSITELIB}/owslib/interfaces.py
 ${PYSITELIB}/owslib/interfaces.pyc
 ${PYSITELIB}/owslib/interfaces.pyo
@@ -106,6 +121,12 @@ ${PYSITELIB}/owslib/ogcapi/coverages.pyo
 ${PYSITELIB}/owslib/ogcapi/features.py
 ${PYSITELIB}/owslib/ogcapi/features.pyc
 ${PYSITELIB}/owslib/ogcapi/features.pyo
+${PYSITELIB}/owslib/ogcapi/maps.py
+${PYSITELIB}/owslib/ogcapi/maps.pyc
+${PYSITELIB}/owslib/ogcapi/maps.pyo
+${PYSITELIB}/owslib/ogcapi/processes.py
+${PYSITELIB}/owslib/ogcapi/processes.pyc
+${PYSITELIB}/owslib/ogcapi/processes.pyo
 ${PYSITELIB}/owslib/ogcapi/records.py
 ${PYSITELIB}/owslib/ogcapi/records.pyc
 ${PYSITELIB}/owslib/ogcapi/records.pyo
