@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.197 2020/09/29 16:45:16 gdt Exp $
 
-DISTNAME=	rustc-1.67.1-src
+DISTNAME=	rustc-1.68.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -210,49 +210,49 @@ BUILDLINK_TRANSFORM+=	opt:x86_64:arm64
 DISTFILES:=		${DEFAULT_DISTFILES}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		aarch64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		aarch64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-earmv6hf) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		arm-unknown-linux-gnueabihf
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		armv7-unknown-linux-gnueabihf
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -277,14 +277,14 @@ CONFIGURE_ARGS+=	--host=${RUST_ARCH}
 CONFIGURE_ARGS+=	--target=${RUST_ARCH}
 .endif
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH=		i586-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -304,14 +304,14 @@ pre-build-fix-paxctl:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.66.1
+RUST_STAGE0_VER=	1.67.1
 RUST_ARCH=		powerpc-unknown-netbsd
 
 # Cross-built against NetBSD 9.0
@@ -334,7 +334,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=		1.66.1
+RUST_STAGE0_VER=		1.67.1
 RUST_ARCH=			aarch64-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -343,7 +343,7 @@ SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=		1.66.1
+RUST_STAGE0_VER=		1.67.1
 RUST_ARCH=			aarch64_be-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -352,7 +352,7 @@ SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=		1.66.1
+RUST_STAGE0_VER=		1.67.1
 RUST_ARCH=			sparc64-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -362,7 +362,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=		1.66.1
+RUST_STAGE0_VER=		1.67.1
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -371,22 +371,22 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			armv6-unknown-netbsd-eabihf
-RUST_STAGE0_VER=		1.66.1
+RUST_STAGE0_VER=		1.67.1
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
-#.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make (makesum) || make(mdi)
-#RUST_ARCH=			mipsel-unknown-netbsd
-#RUST_STAGE0_VER=		1.66.1
-#RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-#RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-#DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-#SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
-#SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
-#.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH=			mipsel-unknown-netbsd
+RUST_STAGE0_VER=		1.67.1
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
+SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
+SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
+.endif
 
 # You may override RUST_BOOTSTRAP_PATH and RUST_ARCH in mk.conf
 # if you have a local bootstrap compiler.
@@ -420,8 +420,8 @@ SUBST_VARS.rpath=	PREFIX
 #
 
 CKSUM_CRATES+=	vendor/cc
-CKSUMS+=	209c8351f1db1e3ce2fdd2ac487dbe7849f5d3a7bfade054877270b6f4782232
-CKSUMS+=	8748c98b737dbaf391eafd3ff11396b071c23e5950226ab8fe736d8c140f8bb1
+CKSUMS+=	2403bbe39ff511ea5a517c0841d825173a4fdc8a0899c64282bba49127f0dc33
+CKSUMS+=	a8e8ff94141ffd6760f10e9359a206badc792ce068f3fed8a5b5e06ebe9a72a4
 
 CKSUM_CRATES+=	vendor/libc
 CKSUMS+=	107a4aa396b8383c66e0ace2f941450b4b69146558cdc4d9fbe33eeab51760f1
@@ -453,21 +453,14 @@ CKSUM_CRATES+=	vendor/crossbeam-utils
 CKSUMS+=	3314524d2afa0360c947455a6e6566fb54ebf909c99479ca3b7435741fd3293e
 CKSUMS+=	eaef167dea04efa811cf0d53de98feac6063ec2196eccd315d345ef86c551aaa
 
-CKSUM_CRATES+=	vendor/crossbeam-utils-0.8.8
-CKSUMS+=	71b5f78fd701ce604aa766dd3d825fa5bed774282aae4d6c31d7acb01b1b242f
-CKSUMS+=	e2253c519f2a9368f54dac633205eca786ec111a8f68c24eb8b17be68d84b0c8
-
 CKSUM_CRATES+=	vendor/crossbeam-utils-0.8.12
 CKSUMS+=	f58085b9d0666ccf62e0ae17fb5dae937c0a86fcc55dc0ae04ad8659e696a49c
 CKSUMS+=	ea445a2f85068957d0347fa384c8f9c7c2726a65e930f4352d1b10476cddd851
 
 CKSUM_CRATES+=	vendor/crossbeam-epoch-0.9.11
-#CKSUMS+=	f58085b9d0666ccf62e0ae17fb5dae937c0a86fcc55dc0ae04ad8659e696a49c
-#CKSUMS+=	ea445a2f85068957d0347fa384c8f9c7c2726a65e930f4352d1b10476cddd851
-
-CKSUM_CRATES+=	vendor/crossbeam-epoch-0.9.6
-CKSUMS+=	3529c0833bcd1e09a352d3bd1696d3666850c9b09fe2111bf1a783ec16a5f467
-CKSUMS+=	67fd5293c2f8d25fd2eaa4694198178c44e46e4db589fbf6f33459b200419e34
+CKSUM_CRATES+=	vendor/crossbeam-epoch
+CKSUMS+=	3314524d2afa0360c947455a6e6566fb54ebf909c99479ca3b7435741fd3293e
+CKSUMS+=	ce3527a0d3abf803e1d684e8b3d17f1871f235ea6d96dcd373b50adc0cf199c0
 
 CKSUM_CRATES+=	vendor/openssl-src
 CKSUMS+=	40cd1069246b552b04fcdfd13eb77b3a89194192f18c426b77377a78abbfd72f
