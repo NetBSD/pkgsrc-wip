@@ -1729,6 +1729,7 @@ SUBDIR+=	igal
 SUBDIR+=	igowin
 SUBDIR+=	igraph
 SUBDIR+=	igv
+SUBDIR+=	iir1
 SUBDIR+=	iisemulator
 SUBDIR+=	ilbc-rfc3951
 SUBDIR+=	ilohamail

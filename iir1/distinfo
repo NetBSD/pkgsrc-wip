@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (iir1/1.9.4.tar.gz) = a59f45a97bc566bddc1a4a84cbeafe178fcf1f60c6e3d704a90d305c2ed3d55b
+SHA512 (iir1/1.9.4.tar.gz) = e69b79ba48aa5d5ec2ddb0a31461ac4c15b0489df80fddc1f1f8adc143726fa189dc0dd94a0ed2bb7aa73712f953e27b345a762120ab2d10f54f57a868f0ea42
+Size (iir1/1.9.4.tar.gz) = 2115692 bytes
