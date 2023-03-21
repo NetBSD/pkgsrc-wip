@@ -95,7 +95,7 @@ do-build:
 		${ECHO} CC: $$i; \
 		${CC} -c -o ${WRKSRC}/build/$$k ${CFLAGS} ${WRKSRC}/$$i || exit 1; \
 	done
-	${CC} -o ${WRKSRC}/bin/brogue ${WRKSRC}/build/*.o ${LDFLAGS} -lncurses -lSDL -lGL -lz
+	${CC} -o ${WRKSRC}/bin/brogue ${WRKSRC}/build/*.o ${LDFLAGS} -lncurses -lSDL -lGL -lX11 -lm -lz
 
 do-install:
 	${INSTALL_GAME} ${WRKSRC}/bin/brogue ${DESTDIR}${PREFIX}/bin
