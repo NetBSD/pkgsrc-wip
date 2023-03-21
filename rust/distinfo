@@ -130,6 +130,7 @@ SHA1 (patch-library_std_src_sys_unix_thread__parking_netbsd.rs) = c29eb1cf074766
 SHA1 (patch-src_bootstrap_bootstrap.py) = fdb4e2e7fd61ae10f4f4b06ef895a8ebf47fbf7a
 SHA1 (patch-src_bootstrap_builder.rs) = 98daac929d2bbc9c475c39d225d50d37491528a8
 SHA1 (patch-src_bootstrap_compile.rs) = 94b05db59b8bc50dce48537aeb72ba9ce293bb07
+SHA1 (patch-src_bootstrap_install.rs) = 5b10a2706d67096791f25c723721cb4824fd584f
 SHA1 (patch-src_bootstrap_lib.rs) = f6918e0939b6fe63ae9b524d4c809375149efb15
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = 7abfabb6ec70df229a69355f8c76825610165c37
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = 67de0d9fc105ef7ea7a0d96fa25fc779c2b89024
