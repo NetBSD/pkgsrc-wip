@@ -7,6 +7,8 @@ EXTRACT_SUFX=	.zip
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	AdGuardHome
 
+PKGREVISION=	1
+
 FRONTEND=	${PKGNAME_NOREV}-frontend.tar.gz
 SITES.adguardhome-0.106.3-frontend.tar.gz= https://bbartlomiej-public.s3.eu-central-1.amazonaws.com/adguardhome/
 DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
@@ -30,9 +32,7 @@ CHECK_RELRO_SKIP+=	sbin/adguardhome
 #TOOL_DEPENDS+=	yarn>=1.22.5:../../devel/yarn
 USE_TOOLS+=	tar
 
-GO_VERSION_DEFAULT=	116
 TOOL_DEPENDS+=		packr>=2.8.1:../../devel/packr
-
 
 OWN_DIRS+=	libdata/adguardhome
 
