@@ -9,10 +9,10 @@ Use GLEW for GL extensions, works around a linking problem on NetBSD.
                    CPPFLAGS="$CPPFLAGS -D__DARWIN__ -F/System/Library/Frameworks -I/System/Library/Frameworks/OpenGL.framework/Headers"  ;; #(
    *-*-linux*) :
 -     SYS_GL_LIBS="-lGL -lpthread"  ;; #(
-+     SYS_GL_LIBS="-lGLEW -lpthread"  ;; #(
++     SYS_GL_LIBS="-lGLEW -lGL -lpthread"  ;; #(
    *) :
 -     SYS_GL_LIBS="-lGL"  ;;
-+     SYS_GL_LIBS="-lGLEW"  ;;
++     SYS_GL_LIBS="-lGLEW -lGL"  ;;
  esac
          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
