@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	dosbox-staging
-GITHUB_TAG=	v0.77.1
+GITHUB_TAG=	v0.80.1
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	emulators
@@ -33,10 +33,16 @@ MESON_ARGS+=	-Duse_sdl2_net=true
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/libatomic/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
+.include "../../net/libslirp/buildlink3.mk"
+.include "../../wip/iir1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
