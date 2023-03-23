@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.161 2022/07/11 23:03:51 wiz Exp $
 
-BLAKE2s (openssl-3.0.5.tar.gz) = 602d3fb7b23c1fd68b884560e3a6aa53510cba235d96f6aedcfab5fd4b1e1b4c
-SHA512 (openssl-3.0.5.tar.gz) = 782b0df3d0252468aa696bd74a3b661810499819c0df849aa9698ba0e06a845820dc856aac650fced4be234f1271e576d4317ac3ab1406cf0ffe087d695d20fe
-Size (openssl-3.0.5.tar.gz) = 15074407 bytes
+BLAKE2s (openssl-3.1.0.tar.gz) = 4403556d8d27dedd739a7ae5f33a371c92eadcd3238f84e9874f8cd34558ad92
+SHA512 (openssl-3.1.0.tar.gz) = 71cc75c7700f445c616e382b76263ad2e4072beec0232458baf3d9891b8b64a7ad0cac4b4d24b727b2b7dcd100c78606fd48eba98a67eccd5f336e3d626ca713
+Size (openssl-3.1.0.tar.gz) = 15525381 bytes
