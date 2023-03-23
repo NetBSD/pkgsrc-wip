@@ -1,11 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	v0.0.1-alpha+2023-03-22
+DISTNAME=	v0.0.1-alpha+2023-03-23
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epilys/}
 GITHUB_PROJECT=	gerb
-GITHUB_TAG=	v0.0.1-alpha+2023-03-22
+GITHUB_TAG=	v0.0.1-alpha+2023-03-23
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/epilys/gerb/
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/gerb-0.0.1-alpha-2023-03-22
+WRKSRC=		${WRKDIR}/gerb-0.0.1-alpha-2023-03-23
 
 USE_TOOLS+=	pkg-config
 
