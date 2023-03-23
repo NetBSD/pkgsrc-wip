@@ -9,7 +9,7 @@ OPENSSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.1.1
 BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=1.1.1pnb1
-BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
+BUILDLINK_PKGSRCDIR.openssl?=	../../wip/openssl3
 
 # Ensure that -lcrypt comes before -lcrypto when linking so that the
 # system crypt() routine is used.
