@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for UMAPINFO.
 
---- src/w_wad.c.orig	2023-02-26 17:42:27.000000000 +0000
+--- src/w_wad.c.orig	2023-02-10 15:51:01.000000000 +0000
 +++ src/w_wad.c
 @@ -109,6 +109,9 @@
  #include <unistd.h>
@@ -21,7 +21,7 @@ Add support for UMAPINFO.
 +    // [MB] 2023-01-10: Process UMAPINFO last for highest priority
 +    if ( EN_doom_etc )
 +    {
-+        // UMAPINFO is for Doom only (not seuitable for Heretic and Hexen)
++        // UMAPINFO is for Doom only (not suitable for Heretic and Hexen)
 +        W_Load_UMapInfoLumps( filenum );
 +    }
  

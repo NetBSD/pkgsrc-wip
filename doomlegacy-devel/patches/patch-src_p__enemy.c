@@ -1,8 +1,10 @@
 $NetBSD$
 
---- src/p_enemy.c.orig	2023-02-26 17:42:27.000000000 +0000
+Add support for UMAPINFO.
+
+--- src/p_enemy.c.orig	2023-02-10 15:51:01.000000000 +0000
 +++ src/p_enemy.c
-@@ -3401,6 +3401,66 @@ static state_t *P_FinalState(statenum_t
+@@ -3401,6 +3401,66 @@ static state_t *P_FinalState(statenum_t 
      return &states[state];
  }
  
@@ -69,7 +71,7 @@ $NetBSD$
  //
  // A_BossDeath
  // Possibly trigger special effects
-@@ -3412,13 +3472,73 @@ static state_t *P_FinalState(statenum_t
+@@ -3412,13 +3472,73 @@ static state_t *P_FinalState(statenum_t 
  // [WDJ]  Keen death does not have tests for mo->type and thus allows
  // Dehacked monsters to trigger Keen death and BossDeath effects.
  // Should duplicate that ability in Doom maps.
@@ -120,7 +122,7 @@ $NetBSD$
 +        {
 +            if( boss_type == umi_ba->thing)
 +            {
-+                // FIXME: Is this allowed for the xxxSoecialLine() functions?
++                // FIXME: Is this allowed for the xxxSpecialLine() functions?
 +                memset(&lineop, 0, sizeof(line_t));
 +                if (umi_ba->special > (unsigned int)SHRT_MAX)
 +                    continue;
