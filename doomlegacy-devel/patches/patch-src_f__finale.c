@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for UMAPINFO.
 
---- src/f_finale.c.orig	2023-01-10 10:38:38.000000000 +0000
+--- src/f_finale.c.orig	2023-02-26 17:42:28.000000000 +0000
 +++ src/f_finale.c
 @@ -75,8 +75,8 @@ int             finalecount;
  #define TEXTSPEED       3
@@ -85,15 +85,44 @@ Add support for UMAPINFO.
  {
     patch_t*  pic = W_CachePatchName( name, PU_CACHE );  // endian fix
     // Intercept some doom pictures that chex.wad left in (a young kids game).
-@@ -874,7 +899,10 @@ void F_Drawer (void)
+@@ -858,14 +883,14 @@ void F_Drawer (void)
+     // Draw to screen0, scaled
+     V_SetupDraw( 0 | V_SCALESTART | V_SCALEPATCH | V_CENTERHORZ );
+ 
+-    if (finalestage == 2)
++    if( finalestage == 2 )
+     {
+-        F_CastDrawer ();
++        F_CastDrawer();
+         return;
+     }
+ 
+-    if (!finalestage)
+-        F_TextWrite ();
++    if( !finalestage )
++        F_TextWrite();
+     else
+     {
+         if( gamemode == heretic )
+@@ -874,10 +899,13 @@ void F_Drawer (void)
          }
          else
          {
 -           switch (gameepisode)
 +           // [MB] 2023-02-05: Support for UMAPINFO added
-+           if (gamemapinfo && gamemapinfo->endpic)
++           if( gamemapinfo && gamemapinfo->endpic )
 +              F_Draw_interpic_Name( gamemapinfo->endpic );
-+           else switch (gameepisode)
++           else switch( gameepisode )
             {
              case 1:
-               if ( gamemode == ultdoom_retail || gamemode == chexquest1 )
+-              if ( gamemode == ultdoom_retail || gamemode == chexquest1 )
++              if( gamemode == ultdoom_retail || gamemode == chexquest1 )
+                 F_Draw_interpic_Name( text[CREDIT_NUM] );
+               else
+                 F_Draw_interpic_Name( text[HELP2_NUM] );
+@@ -894,5 +922,4 @@ void F_Drawer (void)
+            }
+         }
+     }
+-
+ }

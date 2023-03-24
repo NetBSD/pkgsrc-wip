@@ -10,8 +10,8 @@ Part 25: Add UMAPINFO support
 =============================
 [X] Based on libdoom-umapinfo-1.0.0
     => Module to parse and import data added
-[ ] Hook keys into game engine
-    => All keys except 'enterpic', "emenu' and 'bossactions' should work now
+[X] Hook keys into game engine
+    => All keys should work now, up to the limits of the engine
 
 
 EOF

@@ -1,4 +1,4 @@
-//----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 //
 // Copyright(C) 2023 by DooM Legacy Team
 //
@@ -15,7 +15,7 @@
 // DESCRIPTION:
 //      Support for additional map information in UMAPINFO format.
 //
-//----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // [MB] 2023-01-21: Support for Rev 2.2 added
 //      Description of UMAPINFO lump format:
@@ -42,9 +42,12 @@
 #include "z_zone.h"
 
 
-// UMAPINFO data in local format
-umapinfo_t umapinfo = { NULL };
+// Internal representation of UMAPINFO data (merged from PWADs)
+umapinfo_t umapinfo = { NULL, NULL, false };
 
+
+// -----------------------------------------------------------------------------
+// Memory management
 
 static void *UMI_Malloc(size_t memsize)
 {
@@ -59,49 +62,8 @@ static void UMI_Free(void *ptr)
 }
 
 
-static void UMI_InitMapEntry(mapentry_t *entry,
-                             unsigned int episode, unsigned int map)
-{
-    entry->next              = NULL;
-
-    entry->author            = NULL;
-    entry->label             = NULL;
-    entry->levelname         = NULL;
-    entry->intertext         = NULL;
-    entry->intertextsecret   = NULL;
-    entry->interbackdrop     = NULL;
-    entry->intermusic        = NULL;
-    entry->nextmap           = NULL;
-    entry->nextsecret        = NULL;
-    entry->music             = NULL;
-    entry->skytexture        = NULL;
-    entry->levelpic          = NULL;
-    entry->exitpic           = NULL;
-    entry->enterpic          = NULL;
-    entry->endpic            = NULL;
-    entry->emenu             = NULL;
-    entry->bossactions       = NULL;
-    entry->endgame           = unchanged;
-    entry->episode           = episode;
-    entry->map               = map;
-    entry->partime           = 0;
-    entry->emenu_clear       = false;
-    entry->bossactions_clear = false;
-    entry->nointermission    = false;
-    entry->endbunny          = false;
-    entry->endcast           = false;
-}
-
-
-static void UMI_InitBossActionEntry(bossaction_t *entry)
-{
-    entry->next    = NULL;
-
-    entry->thing   = 0;
-    entry->special = 0;
-    entry->tag     = 0;
-}
-
+// -----------------------------------------------------------------------------
+// Constructors and destructors
 
 static void UMI_InitEpisodeMenuEntry(emenu_t *entry)
 {
@@ -128,6 +90,16 @@ static void UMI_DestroyEpisodeMenu(emenu_t *entry)
 }
 
 
+static void UMI_InitBossActionEntry(bossaction_t *entry)
+{
+    entry->next    = NULL;
+
+    entry->thing   = 0;
+    entry->special = 0;
+    entry->tag     = 0;
+}
+
+
 static void UMI_DestroyBossActions(bossaction_t *entry)
 {
     while (NULL != entry)
@@ -137,6 +109,38 @@ static void UMI_DestroyBossActions(bossaction_t *entry)
         UMI_Free(entry);
         entry = tmp;
     }
+}
+
+
+static void UMI_InitMapEntry(mapentry_t *entry,
+                             unsigned int episode, unsigned int map)
+{
+    entry->next              = NULL;
+
+    entry->author            = NULL;
+    entry->label             = NULL;
+    entry->levelname         = NULL;
+    entry->intertext         = NULL;
+    entry->intertextsecret   = NULL;
+    entry->interbackdrop     = NULL;
+    entry->intermusic        = NULL;
+    entry->nextmap           = NULL;
+    entry->nextsecret        = NULL;
+    entry->music             = NULL;
+    entry->skytexture        = NULL;
+    entry->levelpic          = NULL;
+    entry->exitpic           = NULL;
+    entry->enterpic          = NULL;
+    entry->endpic            = NULL;
+    entry->bossactions       = NULL;
+    entry->endgame           = unchanged;
+    entry->episode           = episode;
+    entry->map               = map;
+    entry->partime           = 0;
+    entry->bossactions_clear = false;
+    entry->nointermission    = false;
+    entry->endbunny          = false;
+    entry->endcast           = false;
 }
 
 
@@ -161,13 +165,15 @@ static void UMI_DestroyMaps(mapentry_t *entry)
         UMI_Free((void*) entry->exitpic);
         UMI_Free((void*) entry->enterpic);
         UMI_Free((void*) entry->endpic);
-        UMI_DestroyEpisodeMenu(entry->emenu);
         UMI_DestroyBossActions(entry->bossactions);
         UMI_Free(entry);
         entry = tmp;
     }
 }
 
+
+// -----------------------------------------------------------------------------
+// Access functions for key values
 
 // On error, 0 is returned
 static unsigned int UMI_GetNumber(doom_umi1_ts_state state)
@@ -381,6 +387,9 @@ static void UMI_ReplaceMultiStringClear(doom_umi1_ts_state state,
 }
 
 
+// -----------------------------------------------------------------------------
+// Episode menu
+
 // Returns true on success
 static boolean UMI_PopulateEpisodeMenuEntry(doom_umi1_ts_state state,
                                             emenu_t *entry)
@@ -453,6 +462,7 @@ static boolean UMI_AppendEpisodeMenuEntry(doom_umi1_ts_state state,
             }
             else
             {
+                // Append episode menu entry to list
                 if (NULL == *em)
                     *em = entry;
                 else
@@ -470,6 +480,9 @@ static boolean UMI_AppendEpisodeMenuEntry(doom_umi1_ts_state state,
     return result;
 }
 
+
+// -----------------------------------------------------------------------------
+// Boss actions
 
 // Returns true on success
 static boolean UMI_PopulateBossActionEntry(doom_umi1_ts_state state,
@@ -498,6 +511,7 @@ static boolean UMI_PopulateBossActionEntry(doom_umi1_ts_state state,
 }
 
 
+// Returns true if identifier 'clear' was detected
 static boolean UMI_MergeBossAction(doom_umi1_ts_state state,
                                    bossaction_t** ba, size_t valcount)
 {
@@ -544,11 +558,49 @@ static boolean UMI_MergeBossAction(doom_umi1_ts_state state,
 }
 
 
+// -----------------------------------------------------------------------------
+// Import data
+
+// Check whether map entry object for episode/map already exists
+// If not, create an empty map entry object
+static mapentry_t *UMI_GetMapEntry(unsigned int episode, unsigned int map)
+{
+    mapentry_t *entry      = umapinfo.entry_first;
+    mapentry_t *entry_last = NULL;
+
+    while (NULL != entry)
+    {
+        entry_last = entry;
+        if (episode == entry->episode && map == entry->map)
+            break;
+
+        entry = entry->next;
+    }
+
+    if (NULL == entry)
+    {
+        // Not found, create new entry
+        entry = UMI_Malloc(sizeof(mapentry_t));
+        if (NULL != entry)
+        {
+            UMI_InitMapEntry(entry, episode, map);
+            if (NULL == umapinfo.entry_first)
+                umapinfo.entry_first = entry;
+            else
+                entry_last->next = entry;
+        }
+    }
+
+    return entry;
+}
+
+
 static void UMI_StoreKeyData(doom_umi1_ts_state state, mapentry_t *entry)
 {
-    size_t key      = 0;
-    int    retval   = doom_umi1_ts_key_read(state, NULL, &key);
-    size_t valcount = 0;
+    size_t  key      = 0;
+    int     retval   = doom_umi1_ts_key_read(state, NULL, &key);
+    size_t  valcount = 0;
+    boolean emc      = false;  // Episode menu clear request
 
     if (0 > retval)
     {
@@ -612,12 +664,12 @@ static void UMI_StoreKeyData(doom_umi1_ts_state state, mapentry_t *entry)
             UMI_ReplaceStringMax8(state, &entry->endpic);
             break;
         case DOOM_UMI1_KEY_EPISODE:
-            entry->emenu_clear =
-                UMI_AppendEpisodeMenuEntry(state, &entry->emenu, valcount);
+            // Associated with global episode list (not the map entry object)
+            emc = UMI_AppendEpisodeMenuEntry(state, &umapinfo.emenu, valcount);
             break;
         case DOOM_UMI1_KEY_BOSSACTION:
-            entry->bossactions_clear =
-                UMI_MergeBossAction(state, &entry->bossactions, valcount);
+            if (UMI_MergeBossAction(state, &entry->bossactions, valcount))
+                entry->bossactions_clear = true;
             break;
         case DOOM_UMI1_KEY_ENDGAME:
             entry->endgame = UMI_GetNumber(state) ? enabled : disabled;
@@ -638,38 +690,10 @@ static void UMI_StoreKeyData(doom_umi1_ts_state state, mapentry_t *entry)
             GenPrintf(EMSG_warn, "UMAPINFO: Unknown key ignored\n");
             break;
     }
-}
 
-
-static mapentry_t *UMI_GetMapEntry(unsigned int episode, unsigned int map)
-{
-    mapentry_t *entry      = umapinfo.entry_first;
-    mapentry_t *entry_last = NULL;
-
-    while (NULL != entry)
-    {
-        entry_last = entry;
-        if (episode == entry->episode && map == entry->map)
-            break;
-
-        entry = entry->next;
-    }
-
-    if (NULL == entry)
-    {
-        // Not found, create new entry
-        entry = UMI_Malloc(sizeof(mapentry_t));
-        if (NULL != entry)
-        {
-            UMI_InitMapEntry(entry, episode, map);
-            if (NULL == umapinfo.entry_first)
-                umapinfo.entry_first = entry;
-            else
-                entry_last->next = entry;
-        }
-    }
-
-    return entry;
+    // Store flag that default episode menu must be cleared
+    if (emc)
+       umapinfo.emenu_clear = true;
 }
 
 
@@ -728,6 +752,11 @@ static void UMI_ImportUMapInfo(umapinfo_t *umi, doom_umi1_handle data)
 }
 
 
+// -----------------------------------------------------------------------------
+// API
+
+// Import and merge UMAPINFO lump into current data
+// If parts of the new data are already present, they overwrite the current data
 void UMI_LoadUMapInfoLump(lumpnum_t lumpnum)
 {
     doom_umi1_handle  data = NULL; // libdoom-umapinfo UMAPINFO object handle
@@ -762,11 +791,18 @@ void UMI_LoadUMapInfoLump(lumpnum_t lumpnum)
 
 void UMI_DestroyUMapInfo(void)
 {
+    UMI_DestroyEpisodeMenu(umapinfo.emenu);
+    umapinfo.emenu       = NULL;
+    umapinfo.emenu_clear = false;
+
     UMI_DestroyMaps(umapinfo.entry_first);
     umapinfo.entry_first = NULL;
 }
 
 
+// Extract episode and map numbers from map name
+// For Doom 2 map names zero is returned for episode
+// Returns true on success (numbers are valid)
 boolean UMI_ParseMapName(const char *name, byte *episode, byte *map)
 {
     boolean      result = false;
@@ -795,6 +831,8 @@ boolean UMI_ParseMapName(const char *name, byte *episode, byte *map)
 }
 
 
+// Search for UMAPINFO map entry that matches episode and map parameters
+// NULL is returned if nothing was found
 mapentry_t *UMI_LookupUMapInfo(byte episode, byte map)
 {
     mapentry_t   *entry = umapinfo.entry_first;
@@ -821,60 +859,52 @@ mapentry_t *UMI_LookupUMapInfo(byte episode, byte map)
 }
 
 
-// The function S_AddMusic() will add a "d_" prefix
-const char* UMI_GetMusicLumpName(const char* name)
-{
-    if (('d' == name[0] || 'D' == name[0]) && '_' == name[1])
-        return &name[2];
-    else
-        return name;
-}
-
-
-// Called from: P_SetupLevel()
+// Load UMAPINFO data for current gameepisode/gamemap
 void UMI_Load_LevelInfo(void)
 {
     gamemapinfo = UMI_LookupUMapInfo(gameepisode, gamemap);
 
     // SMMU level info is replaced with UMAPINFO data, where possible
-    if (NULL != gamemapinfo)
+    if (gamemapinfo)
     {
-        // For now only used by COM_MapInfo_f() for the command "mapinfo"
+        // Key author is handled by WI_Draw_LF() and WI_Draw_EL()
+        // Also mapped to info_creator for COM_MapInfo_f()
         if (gamemapinfo->author)
             info_creator = gamemapinfo->author;
 
-        // label and levelname are handled by P_LevelName()
+        // Keys label and levelname are handled by P_LevelName()
 
-        // intertext and intertextsecret are handled by F_StartFinale()
+        // Keys intertext and intertextsecret are handled by F_StartFinale()
 
-        // interbackdrop is handled by F_StartFinale()
+        // Key interbackdrop is handled by F_StartFinale()
 
-        // intermusic is handled by WI_Ticker()
+        // Key intermusic is handled by WI_Ticker()
 
-        // nextmap and nextsecret are handled by G_DoUMapInfo()
+        // Keys nextmap and nextsecret are handled by G_DoUMapInfo()
 
+        // Key music is mapped to info_music
         if (gamemapinfo->music)
             info_music = UMI_GetMusicLumpName(gamemapinfo->music);
 
+        // Key skytexture is mapped to info_skyname
         if (gamemapinfo->skytexture)
             info_skyname = gamemapinfo->skytexture;
 
-        if (gamemapinfo->levelpic)
-            info_levelpic = gamemapinfo->levelpic;
+        // Key levelpic is handled by WI_Draw_LF() and WI_Draw_EL()
 
+        // Key exitpic is mapped to info_interpic
         if (gamemapinfo->exitpic)
             info_interpic = gamemapinfo->exitpic;
 
-        // FIXME: enterpic is not handled yet
+        // Key enterpic is handled by WI_Draw_ShowNextLoc()
 
-        // endpic is handled by F_Drawer()
+        // Key endpic is handled by F_Drawer()
 
-        // XXX emenu is not handled yet
+        // Key bossactions is handled by A_Bosstype_Death()
 
-        // XXX bossactions is not handled yet
+        // Key endgame is handled by G_NextLevel()
 
-        // endgame is handled by G_NextLevel()
-
+        // Key partime is mapped to info_partime
         if (gamemapinfo->partime)
         {
             if ((unsigned int) INT_MAX < gamemapinfo->partime)
@@ -887,11 +917,26 @@ void UMI_Load_LevelInfo(void)
 }
 
 
+// Strip "d_" prefix from lump name, if present
+// (because the function S_AddMusic() adds a "d_" prefix)
+// Returns a pointer into name
+const char* UMI_GetMusicLumpName(const char* name)
+{
+    if (('d' == name[0] || 'D' == name[0]) && '_' == name[1])
+        return &name[2];
+    else
+        return name;
+}
+
+
 #else  // HAVE_LIBDOOM_UMAPINFO
 
 
 #include "doomincl.h"
 
+
+// -----------------------------------------------------------------------------
+// API stubs (if libdoom-umapinfo is not available)
 
 void UMI_LoadUMapInfoLump(lumpnum_t lumpnum)
 {
@@ -922,5 +967,10 @@ void UMI_Load_LevelInfo(void)
     return;
 }
 
+
+const char* UMI_GetMusicLumpName(const char* name)
+{
+    return name;
+}
 
 #endif  // HAVE_LIBDOOM_UMAPINFO

@@ -1,4 +1,4 @@
-//----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 //
 // Copyright(C) 2023 by DooM Legacy Team
 //
@@ -15,7 +15,7 @@
 // DESCRIPTION:
 //      Support for additional map information in UMAPINFO format.
 //
-//----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 #ifndef UMAPINFO_H
 #define UMAPINFO_H
@@ -76,13 +76,11 @@ struct mapentry_t
     const char   *exitpic;
     const char   *enterpic;
     const char   *endpic;
-    emenu_t      *emenu;              // Linked list
     bossaction_t *bossactions;        // Linked list
     tristate_t    endgame;            // Can be undefined, false or true
     unsigned int  episode;
     unsigned int  map;
     unsigned int  partime;
-    boolean       emenu_clear;        // Clear all default episode menu entries
     boolean       bossactions_clear;  // Clear all default boss actions
     boolean       nointermission;     // Skip the 'level finished' screen
     boolean       endbunny;           // End game after level, show bunny
@@ -90,42 +88,35 @@ struct mapentry_t
 };
 
 
-typedef struct
+typedef struct umapinfo_t umapinfo_t;
+struct umapinfo_t
 {
     mapentry_t *entry_first;  // Linked list
-} umapinfo_t;
+
+    emenu_t    *emenu;        // Linked list
+    boolean     emenu_clear;  // Clear all default episode menu entries
+};
 
 
-// Current data (merged from PWADs)
 extern umapinfo_t umapinfo;
 
 
-// Import and merge UMAPINFO lump into current data
-// If parts of the new data are already present, they overwrite the current data
 void UMI_LoadUMapInfoLump(lumpnum_t lumpnum);
 
 
-// Destory current data
 void UMI_DestroyUMapInfo(void);
 
 
-// Extract episode and map numbers from map name
-// For Doom 2 map names zero is returned for episode
-// Returns true on success (numbers are valid)
 boolean UMI_ParseMapName(const char *mapname, byte *episode, byte * map);
 
 
-// Search for UMAPINFO map entry that matches episode and map parameters
-// NULL is returned if nothing was found
 mapentry_t *UMI_LookupUMapInfo(byte episode, byte map);
 
 
-// Returns the position after "D_" prefix (if present) or the start of name
-const char* UMI_GetMusicLumpName(const char* name);
-
-
-// Load UMAPINFO data for current gameepisode/gamemap
 void UMI_Load_LevelInfo(void);
+
+
+const char* UMI_GetMusicLumpName(const char* name);
 
 
 #endif  // UMAPINFO_H

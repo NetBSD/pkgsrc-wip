@@ -2,26 +2,32 @@ $NetBSD$
 
 Add support for UMAPINFO.
 
---- src/w_wad.c.orig	2023-01-10 10:38:38.711741654 +0000
+--- src/w_wad.c.orig	2023-02-26 17:42:27.000000000 +0000
 +++ src/w_wad.c
-@@ -118,6 +118,7 @@
- #include "d_netfil.h"
- #include "dehacked.h"
-   // DEH_LoadDehackedLump
-+#include "umapinfo.h"
- #include "r_defs.h"
- #include "i_system.h"
+@@ -109,6 +109,9 @@
+ #include <unistd.h>
+   // close, read, lseek
  
-@@ -589,6 +590,8 @@ int W_Load_WadFile ( const char * filena
++// [MB] 2023-03-19: Support for UMAPINFO added
++#include "doomstat.h"
++
+ #include "doomincl.h"
+ #include "w_wad.h"
+ #include "z_zone.h"
+@@ -589,6 +592,12 @@ int W_Load_WadFile ( const char * filena
  
      GenPrintf(EMSG_info, "Added file %s (%i lumps)\n", filenamebuf, numlumps);
      W_Load_DehackedLumps( filenum );
 +    // [MB] 2023-01-10: Process UMAPINFO last for highest priority
-+    W_Load_UMapInfoLumps( filenum );
++    if ( EN_doom_etc )
++    {
++        // UMAPINFO is for Doom only (not seuitable for Heretic and Hexen)
++        W_Load_UMapInfoLumps( filenum );
++    }
  
      return filenum;
  
-@@ -1378,6 +1381,25 @@ void W_Load_DehackedLumps( int wadnum )
+@@ -1378,6 +1387,25 @@ void W_Load_DehackedLumps( int wadnum )
      }
  }
  
