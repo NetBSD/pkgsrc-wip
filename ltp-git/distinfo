@@ -1,4 +1,3 @@
-$NetBSD: distinfo,v 1.2 2014/12/17 22:04:53 krytarowski Exp $
+$NetBSD$
 
 SHA1 (patch-testcases-kernel-fs-fs_di-fs_di) = 5e9344e91adc97be708f769d596b053683979739
-SHA1 (patch-testcases-network-stress-ssh-ssh-stress02-rmt) = 35726d037c3a0a1ef5a44560abd8817944c96b98

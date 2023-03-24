@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/01/10 20:19:03 thomasklausner Exp $
+# $NetBSD$
 
 DISTNAME=		ltp-0.0
 CATEGORIES=		devel
@@ -15,8 +15,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake aclocal autoconf automake autoreconf perl unzip zip
 
 PKGCONFIG_OVERRIDE+=	lib/ltp.pc.in
-REPLACE_PYTHON+=	execltp.in
-REPLACE_PERL+=		./testcases/kernel/containers/netns/netns_container_ftp.pl
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv

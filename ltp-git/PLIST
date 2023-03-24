@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/17 22:04:53 krytarowski Exp $
+@comment $NetBSD$
 IDcheck.sh
 Version
 bin/STPfailure_report.pl
@@ -1910,7 +1910,6 @@ testcases/bin/splice03
 testcases/bin/ssetmask01
 testcases/bin/ssh-stress01-rmt
 testcases/bin/ssh-stress02-rmt
-testcases/bin/ssh-stress02-rmt.orig
 testcases/bin/ssh-stress03-rmt
 testcases/bin/ssh01
 testcases/bin/ssh01_s1
