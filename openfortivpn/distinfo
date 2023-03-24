@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (openfortivpn-1.17.3.tar.gz) = d4a64d248b64ef5385341cf31f4819072c90ad474b1abff77c4a76d60f6c67bc
-SHA512 (openfortivpn-1.17.3.tar.gz) = 19fd9bdc7c3f75892b4b62bade59512be702c11a7d97c4273aa40b3bef9a884f9647b49f1615ba5d37e1987fb3a4625b37eb2cb1cc22277566d2b9a4a54d24e5
-Size (openfortivpn-1.17.3.tar.gz) = 167399 bytes
+BLAKE2s (openfortivpn-1.20.1.tar.gz) = 243b3780a232a223c71b2db130882a4cf8c5a194ee9f090dd7031f4ec4c5c87b
+SHA512 (openfortivpn-1.20.1.tar.gz) = d0298d7ff61a1374edb3da34d08766a40259f4140ed3c8954f559e8f8fb6c062c6cfe307f4b98d6093a96379808cc2b5f35ba400628b616184b87fa0670365d6
+Size (openfortivpn-1.20.1.tar.gz) = 167700 bytes

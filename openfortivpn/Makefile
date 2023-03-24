@@ -1,5 +1,5 @@
 # $NetBSD$
-DISTNAME=	openfortivpn-1.17.3
+DISTNAME=	openfortivpn-1.20.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adrienverge/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ USE_TOOLS+=		aclocal autoconf automake gmake pkg-config awk gsed
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 BUILD_DEFS+=		PKG_SYSCONFBASE
-CONF_FILES+=		${PREFIX}/share/examples/${PKGNAME}/config ${PKG_SYSCONFDIR}/openfortivpn/config
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/config ${PKG_SYSCONFDIR}/openfortivpn/config
 MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/openfortivpn \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
@@ -24,7 +24,7 @@ MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/openfortivpn \
 pre-configure:
 	set -e && cd ${WRKSRC} && ./autogen.sh
 post-install:
-	set -e && mkdir -p ${DESTDIR}${PREFIX}/share/examples/${PKGNAME} && \
-	mv ${DESTDIR}${PKG_SYSCONFBASE}/openfortivpn/config ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/config
+	set -e && mkdir -p ${DESTDIR}${PREFIX}/share/examples/${PKGBASE} && \
+	mv ${DESTDIR}${PKG_SYSCONFBASE}/openfortivpn/config ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/config
 
 .include "../../mk/bsd.pkg.mk"
