@@ -4,25 +4,26 @@ Rework interface statistics code from using kvm to using sysctl interface.
 
 --- src/libs/zbxsysinfo/netbsd/net.c.orig	2021-10-25 09:49:27.000000000 +0000
 +++ src/libs/zbxsysinfo/netbsd/net.c
-@@ -22,6 +22,9 @@
+@@ -22,14 +22,25 @@
  #include "zbxjson.h"
  #include "log.h"
  
+-static struct nlist kernel_symbols[] =
 +#include <net/route.h>
 +#include <net/if_dl.h>
 +
- static struct nlist kernel_symbols[] =
- {
- 	{"_ifnet", N_UNDF, 0, 0, 0},
-@@ -31,42 +34,91 @@ static struct nlist kernel_symbols[] =
- 
- #define IFNET_ID 0
- 
++static void get_rtaddrs(int, struct sockaddr *, struct sockaddr **);
++
 +static void
 +get_rtaddrs(int addrs, struct sockaddr *sa, struct sockaddr **rti_info)
-+{
+ {
+-	{"_ifnet", N_UNDF, 0, 0, 0},
+-	{"_tcbtable", N_UNDF, 0, 0, 0},
+-	{NULL, 0, 0, 0, 0}
+-};
 +	int i;
-+
+ 
+-#define IFNET_ID 0
 +	for (i = 0; i < RTAX_MAX; i++) {
 +		if (addrs & (1 << i)) {
 +			rti_info[i] = sa;
@@ -32,46 +33,44 @@ Rework interface statistics code from using kvm to using sysctl interface.
 +			rti_info[i] = NULL;
 +	}
 +}
-+
+ 
  static int	get_ifdata(const char *if_name,
  		zbx_uint64_t *ibytes, zbx_uint64_t *ipackets, zbx_uint64_t *ierrors, zbx_uint64_t *idropped,
- 		zbx_uint64_t *obytes, zbx_uint64_t *opackets, zbx_uint64_t *oerrors,
+@@ -37,12 +48,19 @@ static int	get_ifdata(const char *if_nam
  		zbx_uint64_t *tbytes, zbx_uint64_t *tpackets, zbx_uint64_t *terrors,
  		zbx_uint64_t *icollisions, char **error)
  {
 -	struct ifnet_head	head;
 -	struct ifnet		*ifp;
 -	struct ifnet		v;
-+	struct	if_msghdr *ifm;
-+	int	mib[6] = { CTL_NET, AF_ROUTE, 0, 0, NET_RT_IFLIST, 0 };
-+	char	*buf = NULL;
-+	char	*lim, *next;
-+	struct	rt_msghdr *rtm;
-+	struct	if_data *ifd = NULL;
-+	struct	sockaddr *sa, *rti_info[RTAX_MAX];
-+	struct	sockaddr_dl *sdl;
-+
-+	size_t	len = 0;
-+	size_t	olen = 0;
-+	int		ret = SYSINFO_RET_FAIL;
++	struct  if_msghdr *ifm;
++	int     mib[6] = { CTL_NET, AF_ROUTE, 0, 0, NET_RT_IFLIST, 0 };
++	static char *buf;
++	char    *lim, *next;
++	struct  rt_msghdr *rtm;
++	struct  if_data *ifd = NULL;
++	struct  sockaddr *sa, *rti_info[RTAX_MAX];
++	struct  sockaddr_dl *sdl;
  
 -	kvm_t	*kp;
--	int	ret = SYSINFO_RET_FAIL;
++	size_t  len = 0;
++	static size_t olen;
+ 	int	ret = SYSINFO_RET_FAIL;
 +	static char name[IFNAMSIZ];
  
  	if (NULL == if_name || '\0' == *if_name)
  	{
- 		*error = zbx_strdup(NULL, "Network interface name cannot be empty.");
--		return FAIL;
-+		ret = FAIL;
-+		goto out;
+@@ -50,32 +68,60 @@ static int	get_ifdata(const char *if_nam
+ 		return FAIL;
  	}
  
 -	if (NULL == (kp = kvm_open(NULL, NULL, NULL, O_RDONLY, NULL))) /* requires root privileges */
 -	{
 -		*error = zbx_strdup(NULL, "Cannot obtain a descriptor to access kernel virtual memory.");
--		return FAIL;
--	}
++	if (sysctl(mib, 6, NULL, &len, NULL, 0) == -1) {
++		*error = zbx_strdup(NULL, "Failed to read network interfaces data");
+ 		return FAIL;
+ 	}
  
 -	if (N_UNDF == kernel_symbols[IFNET_ID].n_type)
 -		if (0 != kvm_nlist(kp, &kernel_symbols[0]))
@@ -80,41 +79,42 @@ Rework interface statistics code from using kvm to using sysctl interface.
 -	if (N_UNDF != kernel_symbols[IFNET_ID].n_type)
 -	{
 -		int	len = sizeof(struct ifnet_head);
-+	if (sysctl(mib, 6, NULL, &len, NULL, 0) == -1) {
-+		*error = zbx_strdup(NULL, "Failed to read network interfaces data");
-+		ret = FAIL;
-+		goto out;
-+	}
- 
--		if (kvm_read(kp, kernel_symbols[IFNET_ID].n_value, &head, len) >= len)
--		{
--			len = sizeof(struct ifnet);
 +	if (len > olen) {
-+		free(buf);
++		if (buf)
++			free(buf);
 +		if ((buf = zbx_malloc(NULL, len)) == NULL) {
 +			*error = zbx_strdup(NULL, "Failed to allocate buffer for network interfaces data");
-+			ret = FAIL;
-+			goto out;
++			return FAIL;
 +		}
 +		olen = len;
 +	}
 +	if (sysctl(mib, 6, buf, &len, NULL, 0) == -1) {
 +		*error = zbx_strdup(NULL, "Failed to allocate buffer for network interfaces data");
-+		ret = FAIL;
-+		goto out;
++		return FAIL;
 +	}
-+
+ 
+-		if (kvm_read(kp, kernel_symbols[IFNET_ID].n_value, &head, len) >= len)
 +	lim = buf + len;
 +	for (next = buf; next < lim; next += rtm->rtm_msglen) {
 +		rtm = (struct rt_msghdr *)next;
 +		if ((rtm->rtm_version == RTM_VERSION) &&
-+				(rtm->rtm_type == RTM_IFINFO)) {
++			(rtm->rtm_type == RTM_IFINFO))
+ 		{
+-			len = sizeof(struct ifnet);
 +			ifm = (struct if_msghdr *)next;
 +			ifd = &ifm->ifm_data;
 +
 +			sa = (struct sockaddr *)(ifm + 1);
 +			get_rtaddrs(ifm->ifm_addrs, sa, rti_info);
-+
+ 
+-			/* if_ibytes;		total number of octets received */
+-			/* if_ipackets;		packets received on interface */
+-			/* if_ierrors;		input errors on interface */
+-			/* if_iqdrops;		dropped on input, this interface */
+-			/* if_obytes;		total number of octets sent */
+-			/* if_opackets;		packets sent on interface */
+-			/* if_oerrors;		output errors on interface */
+-			/* if_collisions;	collisions on csma interfaces */
 +			sdl = (struct sockaddr_dl *)rti_info[RTAX_IFP];
 +			if (sdl == NULL || sdl->sdl_family != AF_LINK) {
 +				continue;
@@ -124,10 +124,24 @@ Rework interface statistics code from using kvm to using sysctl interface.
 +				memcpy(name, sdl->sdl_data, IFNAMSIZ - 1);
 +			else if (sdl->sdl_nlen > 0)
 +				memcpy(name, sdl->sdl_data, sdl->sdl_nlen);
++			else
++				continue;
++
++			/* ibytes;		total number of octets received */
++			/* ipackets;		packets received on interface */
++			/* ierrors;		input errors on interface */
++			/* iqdrops;		dropped on input, this interface */
++			/* obytes;		total number of octets sent */
++			/* opackets;		packets sent on interface */
++			/* oerrors;		output errors on interface */
++			/* icollisions;		collisions on csma interfaces */
++			/* tbytes;              total (in+out) bytes */
++			/* tpackets;            total (in+out) packets */
++			/* terrors;             total (in+out) errors */
  
- 			/* if_ibytes;		total number of octets received */
- 			/* if_ipackets;		packets received on interface */
-@@ -100,42 +152,38 @@ static int	get_ifdata(const char *if_nam
+ 			if (ibytes)
+ 				*ibytes = 0;
+@@ -100,42 +146,39 @@ static int	get_ifdata(const char *if_nam
  			if (icollisions)
  				*icollisions = 0;
  
@@ -136,7 +150,32 @@ Rework interface statistics code from using kvm to using sysctl interface.
  			{
 -				if (kvm_read(kp, (u_long)ifp, &v, len) < len)
 -					break;
--
++				if (ibytes)
++					*ibytes += ifd->ifi_ibytes;
++				if (ipackets)
++					*ipackets += ifd->ifi_ipackets;
++				if (ierrors)
++					*ierrors += ifd->ifi_ierrors;
++				if (idropped)
++					*idropped += ifd->ifi_iqdrops;
++				if (obytes)
++					*obytes += ifd->ifi_obytes;
++				if (opackets)
++					*opackets += ifd->ifi_opackets;
++				if (oerrors)
++					*oerrors += ifd->ifi_oerrors;
++				if (tbytes)
++					*tbytes += ifd->ifi_ibytes +
++						ifd->ifi_obytes;
++				if (tpackets)
++					*tpackets += ifd->ifi_ipackets +
++						ifd->ifi_opackets;
++				if (terrors)
++					*terrors += ifd->ifi_ierrors +
++						ifd->ifi_oerrors;
++				if (icollisions)
++					*icollisions += ifd->ifi_collisions;
+ 
 -				if (0 == strcmp(if_name, v.if_xname))
 -				{
 -					if (ibytes)
@@ -163,37 +202,12 @@ Rework interface statistics code from using kvm to using sysctl interface.
 -						*icollisions += v.if_collisions;
 -					ret = SYSINFO_RET_OK;
 -				}
-+				if (ibytes)
-+					*ibytes += ifd->ifi_ibytes;
-+				if (ipackets)
-+					*ipackets += ifd->ifi_ipackets;
-+				if (ierrors)
-+					*ierrors += ifd->ifi_ierrors;
-+				if (idropped)
-+					*idropped += ifd->ifi_iqdrops;
-+				if (obytes)
-+					*obytes += ifd->ifi_obytes;
-+				if (opackets)
-+					*opackets += ifd->ifi_opackets;
-+				if (oerrors)
-+					*oerrors += ifd->ifi_oerrors;
-+				if (tbytes)
-+					*tbytes += ifd->ifi_ibytes + ifd->ifi_obytes;
-+				if (tpackets)
-+					*tpackets += ifd->ifi_ipackets + ifd->ifi_opackets;
-+				if (terrors)
-+					*terrors += ifd->ifi_ierrors + ifd->ifi_oerrors;
-+				if (icollisions)
-+					*icollisions += ifd->ifi_collisions;
-+				ret = SYSINFO_RET_OK;
-+				goto out;
++				return SYSINFO_RET_OK;
  			}
  		}
  	}
  
 -	kvm_close(kp);
-+out:
-+	free(buf);
  
  	if (SYSINFO_RET_FAIL == ret)
  	{
