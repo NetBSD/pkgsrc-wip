@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-tcmalloc
+# libtirpc not in pkgsrc (yet)
+CONFIGURE_ARGS+=	--without-libtirpc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 
