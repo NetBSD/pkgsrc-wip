@@ -2600,7 +2600,6 @@ SUBDIR+=	ngircd
 SUBDIR+=	nicotine+
 SUBDIR+=	nih-current
 SUBDIR+=	ninja-ide
-SUBDIR+=	nios2-gdb
 SUBDIR+=	nitrogen
 SUBDIR+=	nix
 SUBDIR+=	nlopt
