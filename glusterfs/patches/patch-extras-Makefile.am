@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-extras-Makefile.am,v 1.1 2023/03/28 01:10:53 gutteridge Exp $
 
 Move config file examples into datadir/config.
 

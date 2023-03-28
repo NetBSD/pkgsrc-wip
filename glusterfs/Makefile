@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.114 2023/03/16 03:28:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.116 2023/03/28 01:10:53 gutteridge Exp $
 
 DISTNAME=	glusterfs-10.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -79,7 +79,6 @@ REPLACE_BASH+=		geo-replication/src/set_geo_rep_pem_keys.sh
 # Explicit substitution of bash
 CHECK_PORTABILITY_SKIP+=	extras/peer_add_secret_pub.in
 
-
 SUBST_CLASSES+=		mtab
 SUBST_STAGE.mtab=	post-build
 SUBST_FILES.mtab+=	xlators/mount/fuse/utils/mount.glusterfs.in
@@ -94,7 +93,7 @@ SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	pre-configure
 SUBST_FILES.bash=	build-aux/pkg-version
-SUBST_SED.bash=		-e "s,/bin/bash,/usr/pkg/bin/bash,g"
+SUBST_SED.bash=		-e "s,/bin/bash,${BASH},g"
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/eventsconfig.json ${PKG_SYSCONFDIR}/glusterfs/eventsconfig.json
