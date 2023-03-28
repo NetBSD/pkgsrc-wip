@@ -9,7 +9,7 @@ Move config file examples into datadir/config.
  		  ganesha
  
 -confdir = $(sysconfdir)/glusterfs
-+confdir = $(datadir)/config
++confdir = $(datadir)
  if WITH_SERVER
  conf_DATA = glusterfs-logrotate gluster-rsyslog-7.2.conf gluster-rsyslog-5.8.conf \
  	    logger.conf.example glusterfs-georep-logrotate group-virt.example \
@@ -18,14 +18,14 @@ Move config file examples into datadir/config.
  endif
  
 -voldir = $(sysconfdir)/glusterfs
-+voldir = $(datadir)/config
++voldir = $(datadir)
  vol_DATA = thin-arbiter/thin-arbiter.vol
  if WITH_SERVER
  vol_DATA += glusterd.vol
  endif
  
 -scriptsdir = $(datadir)/glusterfs/scripts
-+scriptsdir = $(datadir)/scripts
++scriptsdir = $(datadir)/../../glusterfs/scripts
  scripts_SCRIPTS = thin-arbiter/setup-thin-arbiter.sh
  if WITH_SERVER
  scripts_SCRIPTS += post-upgrade-script-for-quota.sh \

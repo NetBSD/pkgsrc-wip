@@ -9,6 +9,6 @@ Move config file examples into datadir/config.
  
  if BUILD_EVENTS
 -scriptsdir = $(datadir)/glusterfs/scripts
-+scriptsdir = $(datadir)/scripts
++scriptsdir = $(datadir)/../../glusterfs/scripts
  scripts_SCRIPTS = eventsdash.py
  endif

@@ -9,7 +9,7 @@ Move config file examples into datadir/config.
  if BUILD_EVENTS
  eventspeerscriptdir = $(GLUSTERFS_LIBEXECDIR)
 -eventsconfdir = $(sysconfdir)/glusterfs
-+eventsconfdir = $(datadir)/config
++eventsconfdir = $(datadir)
  eventsconf_DATA = eventsconfig.json
  
  events_PYTHON += handlers.py

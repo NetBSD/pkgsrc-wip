@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--without-tcmalloc
 # libtirpc not in pkgsrc (yet)
 CONFIGURE_ARGS+=	--without-libtirpc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples/${PKGBASE}
 
 # Upstream glusterfs effectively dropped support for 32bit platforms
 # somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
@@ -96,7 +96,7 @@ SUBST_STAGE.bash=	pre-configure
 SUBST_FILES.bash=	build-aux/pkg-version
 SUBST_SED.bash=		-e "s,/bin/bash,/usr/pkg/bin/bash,g"
 
-EGDIR=		${PREFIX}/share/${PKGBASE}/config
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/eventsconfig.json ${PKG_SYSCONFDIR}/glusterfs/eventsconfig.json
 CONF_FILES+=	${EGDIR}/ganesha/ganesha-ha.conf.sample ${PKG_SYSCONFDIR}/glusterfs/ganesha/ganesha-ha.conf.sample
 CONF_FILES+=	${EGDIR}/gluster-rsyslog-5.8.conf ${PKG_SYSCONFDIR}/glusterfs/gluster-rsyslog-5.8.conf
@@ -113,8 +113,8 @@ CONF_FILES+=	${EGDIR}/group-samba ${PKG_SYSCONFDIR}/glusterfs/group-samba
 CONF_FILES+=	${EGDIR}/group-virt.example ${PKG_SYSCONFDIR}/glusterfs/group-virt.example
 CONF_FILES+=	${EGDIR}/logger.conf.example ${PKG_SYSCONFDIR}/glusterfs/logger.conf.example
 CONF_FILES+=	${EGDIR}/thin-arbiter.vol ${PKG_SYSCONFDIR}/glusterfs/thin-arbiter.vol
-OWN_DIRS+=		${PKG_SYSCONFDIR}/glusterfs
-OWN_DIRS+=		${PKG_SYSCONFDIR}/glusterfs/ganesha
+OWN_DIRS+=	${PKG_SYSCONFDIR}/glusterfs
+OWN_DIRS+=	${PKG_SYSCONFDIR}/glusterfs/ganesha
 
 OWN_DIRS+=		${VARBASE}/log/glusterfs
 BUILD_DEFS+=		VARBASE
@@ -150,11 +150,6 @@ CONFIGURE_ARGS+=	--enable-debug
 #LIBS+=			-lgc
 
 .include "../../mk/bsd.prefs.mk"
-
-# only needed on Linux since glibc dropped RPC support
-.if ${OPSYS} != "Linux"
-CONFIGURE_ARGS+=	--without-libtirpc
-.endif
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"

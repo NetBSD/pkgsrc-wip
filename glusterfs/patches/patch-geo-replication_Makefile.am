@@ -9,5 +9,5 @@ Move config file examples into datadir/config.
  EXTRA_DIST = gsyncd.conf.in
  
 -gsyncdconfdir = $(sysconfdir)/glusterfs/
-+gsyncdconfdir = $(datadir)/config/
++gsyncdconfdir = $(datadir)
  gsyncdconf_DATA = gsyncd.conf
