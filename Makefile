@@ -1127,7 +1127,6 @@ SUBDIR+=	genometools
 SUBDIR+=	genus2reduction
 SUBDIR+=	geodiff
 SUBDIR+=	geoloc
-SUBDIR+=	gerb
 SUBDIR+=	gerris
 SUBDIR+=	gerris-snapshot
 SUBDIR+=	getdns
