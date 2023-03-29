@@ -16,7 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27"
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 

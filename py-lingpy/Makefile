@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 
 .include "../../lang/python/pyversion.mk"
 
-.if "${PYPKGPREFIX}" == "py27"
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-pathlib>=1.0.1:../../devel/py-pathlib
 .endif
 

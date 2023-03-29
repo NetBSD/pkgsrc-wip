@@ -15,7 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=   27
 DEPENDS+=	${PYPKGPREFIX}-qiskit-terra>=0.15.2:../../wip/py-qiskit-terra
 DEPENDS+=	${PYPKGPREFIX}-qiskit-aer>=0.6.1:../../wip/py-qiskit-aer
 DEPENDS+=	${PYPKGPREFIX}-qiskit-ibmq-provider>=0.9.0:../../wip/py-qiskit-ibmq-provider
-DEPENDS+=	${PYPKGPREFIX}-qiskit-ignis>==0.4.0:../../wip/py-qiskit-ignis
+DEPENDS+=	${PYPKGPREFIX}-qiskit-ignis>=0.4.0:../../wip/py-qiskit-ignis
 DEPENDS+=	${PYPKGPREFIX}-qiskit-aqua>=0.7.5:../../wip/py-qiskit-aqua
 
 USE_LANGUAGES=	# none

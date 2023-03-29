@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-voluptuous>=0.9:../../wip/py-voluptuous
 
 .include "../../lang/python/pyversion.mk"
 
-.if "${PYPKGPREFIX}" == "py27"
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 .endif
 
