@@ -27,4 +27,4 @@ Size (lua-language-server-3.6.9.tar.gz) = 3293832 bytes
 BLAKE2s (luamake-3d8d1fde146da293240e86c1b99ff00a7d865ac0.tar.gz) = 75ce61e1480ad34fd22c69bb9622921931ca49e58c983ff84e0d4969663434cb
 SHA512 (luamake-3d8d1fde146da293240e86c1b99ff00a7d865ac0.tar.gz) = 475aa1313f89b6f55580f90107add967447fc6f1c3f0fe86bd70ccb6316a4443fe5f0fcae8da8f04132911acac3493052677619fd3898d219b0ed725336554a4
 Size (luamake-3d8d1fde146da293240e86c1b99ff00a7d865ac0.tar.gz) = 56393 bytes
-SHA1 (patch-make.lua) = faca9c2ce30ada8c1a44e1204e8f2396da1afeea
+SHA1 (patch-make.lua) = bde49318c89fdd43c24db60206fe14cbafc38848

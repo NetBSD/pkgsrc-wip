@@ -1,6 +1,6 @@
 @comment $NetBSD$
 bin/lua-language-server
-bin/main.lua
+share/lua-language-server/bin/lua-language-server
 share/lua-language-server/bin/main.lua
 share/lua-language-server/debugger.lua
 share/lua-language-server/locale/en-us/meta.lua
@@ -15,6 +15,7 @@ share/lua-language-server/locale/zh-cn/setting.lua
 share/lua-language-server/locale/zh-tw/meta.lua
 share/lua-language-server/locale/zh-tw/script.lua
 share/lua-language-server/locale/zh-tw/setting.lua
+share/lua-language-server/main.lua
 share/lua-language-server/meta/3rd/Cocos4.0/config.json
 share/lua-language-server/meta/3rd/Cocos4.0/library/cc/Action.lua
 share/lua-language-server/meta/3rd/Cocos4.0/library/cc/ActionCamera.lua

@@ -17,8 +17,8 @@ MAKE_FLAGS+=		CC=${CC:Q}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q} -fPIC
 MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
-USE_TOOLS+=	pax
-TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+USE_TOOLS+=		pax mktemp
+TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
 INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
@@ -48,20 +48,36 @@ post-extract:
 .for name rev url path in ${GITDEPS}
 	${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/3rd/${path}
 .endfor
-	cd ${WRKSRC}/3rd/luamake/3rd && ${RM} -rf bee.lua && ${LN} -s ${WRKDIR}/bee.lua-eff93259f6093645564aae1a530eb98e03e01677 bee.lua
+	cd ${WRKSRC}/3rd/luamake/3rd && \
+		${RM} -rf bee.lua && \
+		${LN} -s ${WRKDIR}/bee.lua-eff93259f6093645564aae1a530eb98e03e01677 bee.lua
+	${CP} ${FILESDIR}/lua-language-server ${WRKSRC}/lua-language-server
+
+.include "../../mk/bsd.prefs.mk"
+TMPPATH?=		/tmp
+DATADIR=		${PREFIX}/share/lua-language-server
+
+SUBST_CLASSES+=		wrapper
+SUBST_STAGE.wrapper=	pre-build
+SUBST_MESSAGE.wrapper=	Patching paths in lua-language-server wrapper script
+SUBST_FILES.wrapper=	lua-language-server
+SUBST_VARS.wrapper+=	TMPPATH
+SUBST_VARS.wrapper+=	MKTEMP
+SUBST_VARS.wrapper+=	DATADIR
 
 do-build:
 	ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/netbsd.ninja
-	cd ${WRKSRC} && ${MAKE_ENV} ./3rd/luamake/luamake -v
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./3rd/luamake/luamake -v
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/lua-language-server ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/main.lua ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/debugger.lua ${DESTDIR}${PREFIX}/share/lua-language-server
-	${INSTALL_DATA} ${WRKSRC}/main.lua ${DESTDIR}${PREFIX}/share/lua-language-server/bin
-	cd ${WRKSRC} && ${PAX} -rw locale ${DESTDIR}${PREFIX}/share/lua-language-server
-	cd ${WRKSRC} && ${PAX} -rw meta ${DESTDIR}${PREFIX}/share/lua-language-server
-	cd ${WRKSRC} && ${PAX} -rw script ${DESTDIR}${PREFIX}/share/lua-language-server
+	${INSTALL_SCRIPT} ${WRKSRC}/lua-language-server ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/lua-language-server ${DESTDIR}${DATADIR}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/main.lua ${DESTDIR}${DATADIR}/bin
+	${INSTALL_DATA} ${WRKSRC}/debugger.lua ${DESTDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/main.lua ${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && ${PAX} -rw locale ${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && ${PAX} -rw meta ${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && ${PAX} -rw script ${DESTDIR}${DATADIR}
 
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../lang/lua/module.mk"
