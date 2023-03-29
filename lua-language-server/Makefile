@@ -19,7 +19,7 @@ MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-# TODO: Maybe unbundle (some of) them?
+# TODO: Maybe unbundle (some of) them? (lls does build with them included though)
 GITDEPS+=		luamake 3d8d1fde146da293240e86c1b99ff00a7d865ac0 https://github.com/actboy168/luamake luamake
 GITDEPS+=		bee.lua c4e989a2e2dbed6c063aa0460a451cd795925a88 https://github.com/actboy168/bee.lua bee.lua
 GITDEPS+=		bee.lua eff93259f6093645564aae1a530eb98e03e01677 https://github.com/actboy168/bee.lua luamake/3rd/bee.lua
