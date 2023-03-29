@@ -11,7 +11,8 @@ COMMENT=	Compatibility shim providing selectable entry points
 LICENSE=	mit
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
+
+.if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 

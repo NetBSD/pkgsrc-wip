@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 .include "../../lang/python/egg.mk"
 
-.if ${_PYTHON_VERSION} == 27
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-mailcap-fix-[0-9]*:../../wip/py-mailcap-fix
 .endif
 

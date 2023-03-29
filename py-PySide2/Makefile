@@ -14,8 +14,6 @@ HOMEPAGE=	https://www.pyside.org/
 #LICENSE=	some kind of GPL
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-.endif
 .include "../../lang/python/egg.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtcharts/buildlink3.mk"

@@ -33,13 +33,13 @@ DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9.6:../../textproc/py-vobject
 .endif
 
 .if !empty(PKG_OPTIONS:Mini)
-.  if empty(_PYTHON_VERSION:M3*)
+.  if empty(PYTHON_VERSION:M3*)
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 .  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mcsv)
-.  if empty(_PYTHON_VERSION:M3*)
+.  if empty(PYTHON_VERSION:M3*)
 DEPENDS+=	${PYPKGPREFIX}-backports.csv>=1.0.6:../../wip/py-backports.csv
 PLIST.csv=	yes
 .  endif
