@@ -1,0 +1,54 @@
+# $NetBSD$
+
+DISTNAME=		lua-language-server-3.6.9
+PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
+CATEGORIES=		devel lua
+MASTER_SITES=		${MASTER_SITE_GITHUB:=sumneko/}
+GITHUB_PROJECT=		lua-language-server
+GITHUB_TAG=		${PKGVERSION_NOREV}
+
+MAINTAINER=		nikita@NetBSD.org
+HOMEPAGE=		https://github.com/sumneko/lua-language-server/
+COMMENT=		Language server for Lua
+LICENSE=		mit
+
+MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		CC=${CC}
+MAKE_FLAGS+=		CFLAGS="${CFLAGS} -fPIC"
+MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
+
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+
+# TODO: Maybe unbundle (some of) them?
+GITDEPS+=		luamake 3d8d1fde146da293240e86c1b99ff00a7d865ac0 https://github.com/actboy168/luamake luamake
+GITDEPS+=		bee.lua c4e989a2e2dbed6c063aa0460a451cd795925a88 https://github.com/actboy168/bee.lua bee.lua
+GITDEPS+=		bee.lua eff93259f6093645564aae1a530eb98e03e01677 https://github.com/actboy168/bee.lua luamake/3rd/bee.lua
+GITDEPS+=		json.lua b5f5e7b00091974ae2663c6db7ff9d4802bd1f3b https://github.com/actboy168/json.lua json.lua
+GITDEPS+=		EmmyLuaCodeStyle 66eeece38d6f53093347dbee8476820afe69f87f https://github.com/CppCXY/EmmyLuaCodeStyle EmmyLuaCodeStyle
+GITDEPS+=		lovr-docs 8900d79360c48b1a5fc957ec85f8333c4437cb45 https://github.com/bjornbytes/lovr-docs lovr-api
+GITDEPS+=		love-api 495ecc72d994f5d52fc21592dda9d16f4fd75ba1 https://github.com/love2d-community/love-api/ love-api
+GITDEPS+=		lpeglabel e25eb35666201b10dc2778d6147ea36a9f6e033d https://github.com/sqmedeiros/lpeglabel lpeglabel
+
+DISTFILES?=             	${DEFAULT_DISTFILES}
+.for name rev url path in ${GITDEPS}
+GITDEPS_DISTFILE:=		${name}-${rev}.tar.gz
+GITDEPS_DISTFILES:=		${GITDEPS_DISTFILES} ${GITDEPS_DISTFILE}
+SITES.${GITDEPS_DISTFILE}=	-${url}/archive/${rev}.tar.gz
+.endfor
+DISTFILES:=			${DISTFILES} ${GITDEPS_DISTFILES}
+
+post-extract:
+.for dir in EmmyLuaCodeStyle bee.lua json.lua love-api lovr-api lpeglabel luamake
+	${RMDIR} ${WRKSRC}/3rd/${dir}
+.endfor
+.for name rev url path in ${GITDEPS}
+	${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/3rd/${path}
+.endfor
+	cd ${WRKSRC}/3rd/luamake/3rd && ${RM} -rf bee.lua && ${LN} -s ${WRKDIR}/bee.lua-eff93259f6093645564aae1a530eb98e03e01677 bee.lua
+
+do-build:
+	ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/netbsd.ninja
+	cd ${WRKSRC} && ${MAKE_ENV} ./3rd/luamake/luamake -v
+
+.include "../../lang/lua/module.mk"
+.include "../../mk/bsd.pkg.mk"
