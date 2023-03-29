@@ -3,12 +3,12 @@
 DISTNAME=		lua-language-server-3.6.9
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=		devel lua
-MASTER_SITES=		${MASTER_SITE_GITHUB:=sumneko/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
 GITHUB_PROJECT=		lua-language-server
 GITHUB_TAG=		${PKGVERSION_NOREV}
 
 MAINTAINER=		nikita@NetBSD.org
-HOMEPAGE=		https://github.com/sumneko/lua-language-server/
+HOMEPAGE=		https://github.com/luals/lua-language-server/
 COMMENT=		Language server for Lua
 LICENSE=		mit
 
