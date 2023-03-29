@@ -50,5 +50,6 @@ do-build:
 	ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/netbsd.ninja
 	cd ${WRKSRC} && ${MAKE_ENV} ./3rd/luamake/luamake -v
 
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
