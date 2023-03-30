@@ -25,7 +25,7 @@ INSTALLATION_DIRS+=	bin
 
 # TODO: Maybe unbundle (some of) them? (lls does build with them included though)
 GITDEPS+=		luamake 915baa5a3141e3f45708b59a7bbc76d7a701d7fe https://github.com/actboy168/luamake luamake
-GITDEPS+=		bee.lua c4e989a2e2dbed6c063aa0460a451cd795925a88 https://github.com/actboy168/bee.lua bee.lua
+GITDEPS+=		bee.lua a8a503238ee998e5d2995323581bf8926bb49d3a https://github.com/actboy168/bee.lua bee.lua
 GITDEPS+=		bee.lua a8a503238ee998e5d2995323581bf8926bb49d3a https://github.com/actboy168/bee.lua luamake/bee.lua
 GITDEPS+=		json.lua be1d71ff7afe84942eb3f33b76c8bf75306c4635 https://github.com/actboy168/json.lua json.lua
 GITDEPS+=		EmmyLuaCodeStyle fab3d066e14cea1bf1ebe7927d1ceba098e78d12 https://github.com/CppCXY/EmmyLuaCodeStyle EmmyLuaCodeStyle
