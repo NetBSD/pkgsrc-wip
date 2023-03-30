@@ -1,0 +1,19 @@
+zf is an interactive commandline fuzzy finder that prioritizes matches on
+filenames. zf accepts newline separated strings on stdin and outputs the
+selected line on stdout. Use with a pipe, or io redirection. See the
+documentation for more details. zf is also packaged as an
+allocation-free library for fuzzy filtering.
+
+Features
+
+    designed for fuzzy matching file paths (but also works as a general purpose fuzzy finder)
+    refine search results with whitespace separated query terms
+    case insensitive unless the query contains uppercase letters (smartcase)
+    multiselect to output multiple selected lines
+    Zig and C libraries for the zf ranking algorithm
+
+zf aims to be simple:
+
+    no full-window interface
+    minimal config and options
+    sensible defaults
