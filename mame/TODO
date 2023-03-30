@@ -1,0 +1,15 @@
+https://github.com/mamedev/mame/issues/11049
+
+Compressing src/mame/layout/zodiac.lay...
+Compressing src/mame/layout/zoo.lay...
+.../emulators/mame/work/mame-mame0253/scripts/toolchain.lua:65: attempt to concatenate a nil value (field '?')
+stack traceback:
+        .../emulators/mame/work/mame-mame0253/scripts/toolchain.lua:65: in function 'androidToolchainRoot'
+        .../emulators/mame/work/mame-mame0253/scripts/toolchain.lua:494: in function 'toolchain'
+        ...atch/emulators/mame/work/mame-mame0253/scripts/genie.lua:1150: in main chunk
+        [C]: in upvalue 'builtin_dofile'
+        [string "premake = { }..."]:109: in function 'dofile'
+        [string "_WORKING_DIR        = os.getcwd()..."]:46: in function '_premake_main'
+gmake: *** [makefile:1424: build/projects/sdl/mame/gmake-netbsd/Makefile] Error 1
+gmake: *** Waiting for unfinished jobs....
+*** Error code 2
