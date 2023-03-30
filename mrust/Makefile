@@ -16,6 +16,7 @@ DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
 DEPENDS+=	mrust-libs>=${SNAPSTAMP}:../../wip/mrust-libs
 DEPENDS+=	mrust-rustc>=${SNAPSTAMP}:../../wip/mrust-rustc
 DEPENDS+=	mrust-cargo>=${SNAPSTAMP}:../../wip/mrust-cargo
+DEPENDS+=	mrust-rustclibs>=${SNAPSTAMP}:../../wip/mrust-rustclibs
 
 do-build:
 

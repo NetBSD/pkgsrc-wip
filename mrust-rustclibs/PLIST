@@ -1,0 +1,16 @@
+@comment $NetBSD$
+lib/mrust/rustc/liballoc.rlib
+lib/mrust/rustc/libcfg_if-0_1_10.rlib
+lib/mrust/rustc/libcfg_if-0_1_10_H3.rlib
+lib/mrust/rustc/libcompiler_builtins-0_1_45_H82.rlib
+lib/mrust/rustc/libcore.rlib
+lib/mrust/rustc/libhashbrown-0_11_0_H328.rlib
+lib/mrust/rustc/liblibc-0_2_95_H19.rlib
+lib/mrust/rustc/libpanic_abort.rlib
+lib/mrust/rustc/libpanic_unwind.rlib
+lib/mrust/rustc/librustc_demangle-0_1_19_H3.rlib
+lib/mrust/rustc/librustc_std_workspace_alloc-1_99_0.rlib
+lib/mrust/rustc/librustc_std_workspace_core-1_99_0.rlib
+lib/mrust/rustc/libstd.rlib
+lib/mrust/rustc/libstd_detect-0_1_5_H5.rlib
+lib/mrust/rustc/libunwind.rlib

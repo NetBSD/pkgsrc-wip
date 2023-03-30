@@ -5,6 +5,7 @@
 ### used by lang/mrust-libs/Makefile
 ### used by lang/mrust-rustc/Makefile
 ### used by lang/mrust-cargo/Makefile
+### used by lang/mrust-rustclibs/Makefile
 ### used by lang/mrust/Makefile
 #
 # used by wip/mrust-mrustc/Makefile
@@ -12,6 +13,7 @@
 # used by wip/mrust-libs/Makefile
 # used by wip/mrust-rustc/Makefile
 # used by wip/mrust-cargo/Makefile
+# used by wip/mrust-rustclibs/Makefile
 # used by wip/mrust/Makefile
 # used by (etc)
 

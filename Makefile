@@ -2452,6 +2452,7 @@ SUBDIR+=	mrust-llvm
 SUBDIR+=	mrust-minicargo
 SUBDIR+=	mrust-mrustc
 SUBDIR+=	mrust-rustc
+SUBDIR+=	mrust-rustclibs
 SUBDIR+=	msgpack-git
 SUBDIR+=	mst-bench
 SUBDIR+=	msworkbench
