@@ -47,6 +47,9 @@ MAKE_ENV+=	NOWERROR=1
 # on Darwin, avoid SDL2.framework
 MAKE_ENV+=	USE_LIBSDL=1
 
+# for c++ to get LLONG_MAX for luaconf.h
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
 # use pkgsrc libraries
 # boost-header's asio.hpp is not compatible as of mame-0.251/boost 1.81.0
 #MAKE_ENV+=	USE_SYSTEM_LIB_ASIO=1
