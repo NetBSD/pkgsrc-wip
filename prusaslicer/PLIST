@@ -469,6 +469,7 @@ share/PrusaSlicer/profiles/PrusaResearch/MK3MMU2_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK3SMMU2S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK3S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK3_thumbnail.png
+share/PrusaSlicer/profiles/PrusaResearch/MK4_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/SL1S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/SL1_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/XL_thumbnail.png
@@ -478,6 +479,8 @@ share/PrusaSlicer/profiles/PrusaResearch/mk2.svg
 share/PrusaSlicer/profiles/PrusaResearch/mk2_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/mk3.svg
 share/PrusaSlicer/profiles/PrusaResearch/mk3_bed.stl
+share/PrusaSlicer/profiles/PrusaResearch/mk4.svg
+share/PrusaSlicer/profiles/PrusaResearch/mk4_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/sl1.svg
 share/PrusaSlicer/profiles/PrusaResearch/sl1_bed.stl
 share/PrusaSlicer/profiles/PrusaResearch/sl1s.svg
@@ -508,6 +511,7 @@ share/PrusaSlicer/profiles/Snapmaker/A350_texture.svg
 share/PrusaSlicer/profiles/Snapmaker/A350_thumbnail.png
 share/PrusaSlicer/profiles/TriLAB.idx
 share/PrusaSlicer/profiles/TriLAB.ini
+share/PrusaSlicer/profiles/TriLAB/AQD_thumbnail.png
 share/PrusaSlicer/profiles/TriLAB/AQI_thumbnail.png
 share/PrusaSlicer/profiles/TriLAB/DQ2+FP2_thumbnail.png
 share/PrusaSlicer/profiles/TriLAB/DQ2+FP_thumbnail.png
