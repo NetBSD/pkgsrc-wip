@@ -5361,7 +5361,6 @@ SUBDIR+=	src
 SUBDIR+=	srecord
 SUBDIR+=	srvx
 SUBDIR+=	sselp
-SUBDIR+=	ssh-chat
 SUBDIR+=	ssh_ping
 SUBDIR+=	ssid
 SUBDIR+=	ssiv-git
