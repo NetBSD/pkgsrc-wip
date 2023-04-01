@@ -1092,6 +1092,7 @@ SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gauche-pib
 SUBDIR+=	gcalcli-git
 SUBDIR+=	gcc10-aux
+SUBDIR+=	gcc10-libjit
 SUBDIR+=	gcc10snapshot
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
