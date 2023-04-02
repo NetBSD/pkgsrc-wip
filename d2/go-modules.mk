@@ -295,5 +295,5 @@ GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.0-20190102054323-c2f93a96b099.mod
 GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.0.0-20190523083050-ea95bdfd59fc.mod
 GO_MODULE_FILES+=	nhooyr.io/websocket/@v/v1.8.7.mod
 GO_MODULE_FILES+=	nhooyr.io/websocket/@v/v1.8.7.zip
-GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20230318001724-cdc880b9efd6.mod
-GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20230318001724-cdc880b9efd6.zip
+GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20230320053557-dcb5aac7d972.mod
+GO_MODULE_FILES+=	oss.terrastruct.com/util-go/@v/v0.0.0-20230320053557-dcb5aac7d972.zip
