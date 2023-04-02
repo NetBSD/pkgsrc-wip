@@ -1,0 +1,3 @@
+@comment $NetBSD$
+share/u-boot/sifive_unleashed/installboot.plist
+share/u-boot/sifive_unleashed/u-boot-nodtb.bin

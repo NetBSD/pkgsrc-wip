@@ -21,6 +21,7 @@ cross-riscv64-none-elf/info/binutils.info
 cross-riscv64-none-elf/info/ctf-spec.info
 cross-riscv64-none-elf/info/gprof.info
 cross-riscv64-none-elf/info/ld.info
+cross-riscv64-none-elf/info/sframe-spec.info
 cross-riscv64-none-elf/lib/bfd-plugins/libdep.so
 cross-riscv64-none-elf/man/man1/riscv64-none-elf-addr2line.1
 cross-riscv64-none-elf/man/man1/riscv64-none-elf-ar.1

@@ -38,14 +38,15 @@ USE_TOOLS+=		bash gmake gsed makeinfo perl
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
+
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/config/nvptx/gen-opt.sh
-CHECK_PORTABILITY_SKIP+=        gcc/configure
+CHECK_PORTABILITY_SKIP+=	gcc/configure
 
 GNU_CONFIGURE_PREFIX=	${RISCV64ELF_PREFIX}
 
 CONFIGURE_ARGS+=	--target=riscv64-none-elf
-CONFIGURE_ARGS+=	--with-arch=rv64imafdc
+CONFIGURE_ARGS+=	--with-arch=rv64imafdc_zicsr_zifencei
 CONFIGURE_ARGS+=	--with-abi=lp64d
 CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--enable-tls
@@ -53,7 +54,6 @@ CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--without-isl
 CONFIGURE_ARGS+=	--disable-multilib
 CONFIGURE_ARGS+=	--disable-werror
-CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	--disable-threads
 CONFIGURE_ARGS+=	--disable-libatomic
 CONFIGURE_ARGS+=	--disable-libmudflap

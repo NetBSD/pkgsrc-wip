@@ -1,55 +1,6 @@
-### Root cause ###
-$CC is empty, so it can't understand the command passed to it and breaks the build with an error message.
+berte:
+If you are using bash-shell you may get an error during libgcc compilation. I haven't found a solution for this yet. 
 
-### Reproduciable ###
-YES
+Workaround:
 
-### Reproducible scenario ##
-- Initiate the compilation process by running the make command in the folder. 
-
-### Shell outputs  ###
-
-configuring in riscv64-none-elf/libgcc
-configure: creating cache ./config.cache
-checking build system type... x86_64--netbsd
-checking host system type... riscv64-none-elf
-checking for --enable-version-specific-runtime-libs... no
-checking for a BSD-compatible install... /usr/bin/install -c -o root -g wheel
-checking for gawk... /usr/bin/awk
-checking for riscv64-none-elf-ar... riscv64-none-elf-ar
-checking for riscv64-none-elf-lipo... riscv64-none-elf-lipo
-checking for riscv64-none-elf-nm... /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/nm
-checking for riscv64-none-elf-ranlib... riscv64-none-elf-ranlib
-checking for riscv64-none-elf-strip... riscv64-none-elf-strip
-checking whether ln -s works... yes
-checking for riscv64-none-elf-gcc... /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/xgcc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/ -nostdinc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/ -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/targ-include -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-12.2.0/newlib/libc/include -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/riscv64 -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/libnosys -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-12.2.0/libgloss/riscv64 -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/bin/ -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/lib/ -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/include -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/sys-include
-checking for suffix of object files... configure: error: in `/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgcc':
-configure: error: cannot compute suffix of object files: cannot compile
-See `config.log' for more details
-gmake[1]: *** [Makefile:13951: configure-target-libgcc] Error 1
-gmake[1]: Leaving directory '/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build'
-gmake: *** [Makefile:1027: all] Error 2
-*** Error code 2
-
-Stop.
-make[1]: stopped in /usr/pkgsrc/cross/riscv64-none-elf-gcc
-*** Error code 1
-
-Stop.
-make: stopped in /usr/pkgsrc/cross/riscv64-none-elf-gcc
-
-
-### Detail error message ###
-
-configure:3550: $? = 1
-configure:3539: /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/xgcc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/ -nostdinc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/ -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/targ-include -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-10.4.0/newlib/libc/include -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/riscv64 -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/libnosys -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-10.4.0/libgloss/riscv64 -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/bin/ -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/lib/ -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/include -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/sys-include    -qversion >&5
-xgcc: error: unrecognized command-line option '-qversion'; did you mean '--version'?
-xgcc: fatal error: no input files
-compilation terminated.
-configure:3550: $? = 1
-configure:3566: /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/xgcc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/ -nostdinc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/ -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/targ-include -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-10.4.0/newlib/libc/include -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/riscv64 -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/libnosys -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-10.4.0/libgloss/riscv64 -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/bin/ -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/lib/ -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/include -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/sys-include    -o conftest -g -O2   conftest.c  >&5
-exec: -march=rv64gc: not found
-configure:3569: $? = 1
-configure:3782: checking for suffix of object files
-configure:3804: /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/xgcc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/./gcc/ -nostdinc -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/ -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/newlib/targ-include -isystem /usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-10.4.0/newlib/libc/include -B/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/riscv64 -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/build/riscv64-none-elf/libgloss/libnosys -L/usr/pkgsrc/cross/riscv64-none-elf-gcc/work/gcc-10.4.0/libgloss/riscv64 -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/bin/ -B/usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/lib/ -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/include -isystem /usr/pkg/cross-riscv64-none-elf/riscv64-none-elf/sys-include    -c -g -O2  conftest.c >&5
-exec: -march=rv64gc: not found
+Using a shell program other than bash

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	binutils-2.39
+DISTNAME=	binutils-2.40
 PKGNAME=	cross-riscv64-none-elf-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	cross
@@ -24,16 +24,10 @@ CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 GNU_CONFIGURE_PREFIX=	${RISCV64ELF_PREFIX}
 
-CONFIGURE_ARGS+=	--target=riscv64-none-elf
-CONFIGURE_ARGS+=	--with-arch=rv64imafdc
-CONFIGURE_ARGS+=	--with-abi=lp64d
-CONFIGURE_ARGS+=	--disable-gdb
-CONFIGURE_ARGS+=	--with-guile=no
-CONFIGURE_ARGS+=	--disable-sim
-CONFIGURE_ARGS+=	--enable-tls
-CONFIGURE_ARGS+=	--disable-intl
-CONFIGURE_ARGS+=	--disable-werror
+
+CONFIGURE_ARGS+=	--disable-werror --target=riscv64-none-elf
 CONFIGURE_ARGS+=	--disable-nls
+
 INFO_FILES=		yes
 
 pre-configure:
