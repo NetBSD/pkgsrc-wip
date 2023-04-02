@@ -3,7 +3,7 @@
 DISTNAME=	marswm-0.3.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jzbor/}
-GITHUB_TAG=	cc6f85a80b91c9020aebac0e807b5fe76b141b85
+GITHUB_TAG=	a4092e1d978d1aece1750f68a2ac8edc646286a9
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/jzbor/marswm/
