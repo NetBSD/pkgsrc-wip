@@ -51,7 +51,10 @@ Add support for UMAPINFO.
 +    // suitable font (PrBoom uses STFxxx) to ensure that the proper name is
 +    // used. If the author field is set, it will also be shown.
 +    if (wbs->lastmapinfo && wbs->lastmapinfo->levelpic)
-+    {
+     {
+-        V_DrawTextB(P_LevelName(), (BASEVIDWIDTH - V_TextBWidth(P_LevelName()))/2, y);
+-        y += (5*V_TextBHeight(P_LevelName()))/4;
+-        V_DrawTextB("Finished", (BASEVIDWIDTH - V_TextBWidth("Finished"))/2, y);
 +        pp = W_CachePatchName(wbs->lastmapinfo->levelpic, PU_CACHE);
 +        pf = V_patch(pp);  // access patch fields
 +        x = (BASEVIDWIDTH - pf->width) / 2;
@@ -61,12 +64,9 @@ Add support for UMAPINFO.
 +
 +        x = (BASEVIDWIDTH - (V_patch(finished)->width)) / 2;
 +        V_DrawScaledPatch(x, y, finished);
-+    }
+     }
 +    else if (wbs->lastmapinfo && wbs->lastmapinfo->levelname)
-     {
--        V_DrawTextB(P_LevelName(), (BASEVIDWIDTH - V_TextBWidth(P_LevelName()))/2, y);
--        y += (5*V_TextBHeight(P_LevelName()))/4;
--        V_DrawTextB("Finished", (BASEVIDWIDTH - V_TextBWidth("Finished"))/2, y);
++    {
 +        const char * level_string = wbs->lastmapinfo->levelname;
 +
 +        x = (BASEVIDWIDTH - V_StringWidth(level_string)) / 2;
@@ -86,7 +86,7 @@ Add support for UMAPINFO.
 +
 +        x = (BASEVIDWIDTH - (V_patch(finished)->width)) / 2;
 +        V_DrawScaledPatch(x, y, finished);
-     }
++    }
 +    // Normal behaviour without UMAPINFO
      else
      {
@@ -136,7 +136,7 @@ Add support for UMAPINFO.
 -    // draw "Entering"
 -    if( FontBBaseLump )
 +    // [MB] 2023-03-12: Support for UMAPINFO added
-+    // See WI_Draw_LF() for additional notes.
++    // See WI_Draw_LF() for additional notes about levelpic
 +    if (wbs->nextmapinfo && wbs->nextmapinfo->levelpic)
      {
 -        const char * levname = P_LevelNameByNum(wbs->epsd+1, wbs->lev_next+1);
@@ -164,8 +164,7 @@ Add support for UMAPINFO.
 -        pf = V_patch( pp );  // access patch fields
 -        y += (5 * pf->height)/4;
 +        const char * level_string = wbs->nextmapinfo->levelname;
- 
--        V_DrawScaledPatch((BASEVIDWIDTH - pf->width)/2, y, pp);
++
 +        x = (BASEVIDWIDTH - (V_patch(entering)->width)) / 2;
 +        V_DrawScaledPatch(x, y, entering);
 +
@@ -173,7 +172,8 @@ Add support for UMAPINFO.
 +
 +        x = (BASEVIDWIDTH - V_StringWidth(level_string)) / 2;
 +        V_DrawString(x, y, V_WHITEMAP, level_string);
-+
+ 
+-        V_DrawScaledPatch((BASEVIDWIDTH - pf->width)/2, y, pp);
 +        if (wbs->nextmapinfo && wbs->nextmapinfo->author)
 +        {
 +            const char * author_string = wbs->nextmapinfo->author;
@@ -192,7 +192,7 @@ Add support for UMAPINFO.
 +        {
 +            const char * level_string = P_LevelNameByNum(wbs->epsd + 1,
 +                                                         wbs->lev_next + 1);
- 
++
 +            x = (BASEVIDWIDTH - V_TextBWidth("Entering")) / 2;
 +            V_DrawTextB("Entering", x, y);
 +
@@ -210,7 +210,7 @@ Add support for UMAPINFO.
 +            // draw level
 +            pp = lnames[wbs->lev_next];
 +            pf = V_patch(pp);  // access patch fields
-+
+ 
 +            y += (5 * pf->height) / 4;
 +
 +            x = (BASEVIDWIDTH - pf->width) / 2;
@@ -223,11 +223,18 @@ Add support for UMAPINFO.
  // [WDJ] Made more resistent to segfault.
  // Doom YAH draw
  //  n : YAH index
-@@ -958,6 +1084,13 @@ static void WI_Draw_ShowNextLoc(void)
+@@ -958,6 +1084,20 @@ static void WI_Draw_ShowNextLoc(void)
      if (cnt<=0)  // all removed no draw !!!
          return;
  
-+    // [MB] 2023-03-19: Support for UMAPINFO added
++    // [MB] 2023-04-01: Support for UMAPINFO added
++    if (wbs->lastmapinfo)
++    {
++        if ( (wbs->lastmapinfo->endgame == enabled) ||
++             (wbs->lastmapinfo->endbunny) ||
++             (wbs->lastmapinfo->endcast) )
++            return;
++    }
 +    if (wbs->nextmapinfo && wbs->nextmapinfo->enterpic)
 +    {
 +        strcpy(bgname, wbs->nextmapinfo->enterpic);
@@ -237,7 +244,28 @@ Add support for UMAPINFO.
      WI_Slam_Background();
  
      // draw animated background
-@@ -1977,7 +2110,6 @@ static void WI_checkForAccelerate(void)
+@@ -990,10 +1130,16 @@ static void WI_Draw_ShowNextLoc(void)
+     }
+ 
+     // draws which level you are entering..
+-    if ( EN_doom_etc
+-         && !((gamemode == doom2_commercial) && (wbs->lev_next == 30)) )
+-        WI_Draw_EL();
+-
++    if (EN_doom_etc)
++    {
++        boolean map30 = (gamemode == doom2_commercial) && (wbs->lev_next == 30);
++        boolean do_el = wbs->lastmapinfo
++                        && (wbs->lastmapinfo->endgame == disabled);
++
++        // [MB] 2023-04-02: Draw EL if UMAPINFO has disabled endgame
++        if (!map30 || do_el)
++            WI_Draw_EL();
++    }
+ }
+ 
+ // Called by WI_Drawer
+@@ -1977,7 +2123,6 @@ static void WI_checkForAccelerate(void)
  }
  
  
@@ -245,33 +273,7 @@ Add support for UMAPINFO.
  // Updates stuff each client tick.
  void WI_Ticker(void)
  {
-@@ -1986,11 +2118,21 @@ void WI_Ticker(void)
- 
-     if (bcnt == 1)
-     {
--        // intermission music
--        if ( gamemode == doom2_commercial )
--          S_ChangeMusic(mus_dm2int, true);
-+        // [MB] 2023-01-22: Support for UMAPINFO added
-+        if (gamemapinfo && gamemapinfo->intermusic)
-+        {
-+            const char *mus_umi = UMI_GetMusicLumpName(gamemapinfo->intermusic);
-+
-+            S_ChangeMusicName(mus_umi, true);
-+        }
-         else
--          S_ChangeMusic(mus_inter, true);
-+        {
-+            // intermission music
-+            if ( gamemode == doom2_commercial )
-+              S_ChangeMusic(mus_dm2int, true);
-+            else
-+              S_ChangeMusic(mus_inter, true);
-+        }
-     }
- 
-     WI_checkForAccelerate();
-@@ -2097,20 +2239,8 @@ void WI_Load_Data(void)
+@@ -2097,20 +2242,8 @@ void WI_Load_Data(void)
          if (wb_epsd == 3)
              strcpy(bgname,"INTERPIC");
      }
@@ -293,3 +295,18 @@ Add support for UMAPINFO.
  
      // UNUSED unsigned char *pic = screens[1];
      // if (gamemode == doom2_commercial)
+@@ -2333,6 +2466,14 @@ void WI_Start(wb_start_t * wb_start)
+         WI_Init_NetgameStats();
+         // wait_game_start_timer will be set by network
+     }
++    // [MB] 2023-03-29: Support for UMAPINFO added
++    else if( gamemapinfo && gamemapinfo->nointermission )
++    {
++        if ( gamemode == doom2_commercial )
++            WI_Init_NoState();
++        else
++            WI_Init_ShowNextLoc();
++    }
+     else
+         WI_Init_Stats();
+ }

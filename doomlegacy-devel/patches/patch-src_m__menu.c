@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for UMAPINFO.
 
---- src/m_menu.c.orig	2023-02-26 17:42:09.000000000 +0000
+--- src/m_menu.c.orig	2023-02-10 15:50:57.000000000 +0000
 +++ src/m_menu.c
-@@ -6300,6 +6300,83 @@ void M_Init (void)
+@@ -6300,6 +6300,88 @@ void M_Init (void)
      CV_RegisterVar(&cv_oof_2s);
  }
  
@@ -56,10 +56,15 @@ Add support for UMAPINFO.
 +        boolean  use_patches = true;
 +        uint16_t i;
 +
-+        // FIXME: This should check if the patches are valid too
++        // FIXME: This should check if patches are really usable
 +        for( i = 0; i < EpiDef.numitems; i++ )
-+            if( EpisodeMenu[i].patch == NULL )
++        {
++            if( EpisodeMenu[i].patch == NULL || EpisodeMenu[i].patch[0] == 0 )
++            {
 +                use_patches = false;
++                break;
++            }
++        }
 +
 +        GenPrintf(EMSG_debug, "UMAPINFO: Modified episode menu ");
 +        if( use_patches )
@@ -88,7 +93,7 @@ Add support for UMAPINFO.
  // Called once after gamemode has been determined, game dependent
  void M_Configure (void)
  {
-@@ -6382,6 +6459,9 @@ void M_Configure (void)
+@@ -6382,6 +6464,9 @@ void M_Configure (void)
            cv_nextmap.defaultvalue = "11";
            // We need to remove the fifth episode.
            EpiDef.numitems--;

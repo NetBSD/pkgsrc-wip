@@ -525,7 +525,7 @@ static boolean UMI_MergeBossAction(doom_umi1_ts_state state,
         *ba    = NULL;
         result = true;
     }
-    else if (DOOM_UMI1_TYPE_THING == type)
+    else
     {
         bossaction_t *entry = UMI_Malloc(sizeof(bossaction_t));
 
@@ -764,6 +764,10 @@ void UMI_LoadUMapInfoLump(lumpnum_t lumpnum)
 
     assert(0 <= len);
 
+    // libdoom-umapinfo needs a memory manager with realloc() equivalent
+    // The zone memory module currently does not provide such a function
+    //doom_umi1_i_register_mmanager(UMI_Realloc, UMI_Free);
+
     {
         int            retval  = DOOM_UMI1_ERROR_MEMORY;
         unsigned char *lump    = UMI_Malloc(len);
@@ -878,7 +882,7 @@ void UMI_Load_LevelInfo(void)
 
         // Key interbackdrop is handled by F_StartFinale()
 
-        // Key intermusic is handled by WI_Ticker()
+        // Key intermusic is handled by F_StartFinale()
 
         // Keys nextmap and nextsecret are handled by G_DoUMapInfo()
 
@@ -902,7 +906,8 @@ void UMI_Load_LevelInfo(void)
 
         // Key bossactions is handled by A_Bosstype_Death()
 
-        // Key endgame is handled by G_NextLevel()
+        // Key endgame is handled by G_NextLevel(), WI_Draw_ShowNextLoc(),
+        // F_Ticker() and WI_Draw_ShowNextLoc()
 
         // Key partime is mapped to info_partime
         if (gamemapinfo->partime)
@@ -913,12 +918,20 @@ void UMI_Load_LevelInfo(void)
                 info_partime = gamemapinfo->partime;
             pars_valid_bex = true;  // Abuse this flag for activation with PWAD
         }
+
+        // Key nointermission is handled by WI_Start()
+
+        // Key endcast is handled by G_NextLevel, F_Ticker() and
+        // WI_Draw_ShowNextLoc()
+
+        // Key endbunny is handled by G_NextLevel, F_Ticker() and
+        // WI_Draw_ShowNextLoc()
     }
 }
 
 
 // Strip "d_" prefix from lump name, if present
-// (because the function S_AddMusic() adds a "d_" prefix)
+// (because the function S_AddMusic() adds a "d_" prefix)
 // Returns a pointer into name
 const char* UMI_GetMusicLumpName(const char* name)
 {
@@ -933,6 +946,10 @@ const char* UMI_GetMusicLumpName(const char* name)
 
 
 #include "doomincl.h"
+#include "umapinfo.h"
+
+
+umapinfo_t umapinfo = { NULL, NULL, false };
 
 
 // -----------------------------------------------------------------------------
@@ -956,7 +973,7 @@ boolean UMI_ParseMapName(const char *mapname, byte *episode, byte * map)
 }
 
 
-mapentry_t *UMI_LookupUMapinfo(byte episode, byte map)
+mapentry_t *UMI_LookupUMapInfo(byte episode, byte map)
 {
     return NULL;
 }
@@ -968,7 +985,7 @@ void UMI_Load_LevelInfo(void)
 }
 
 
-const char* UMI_GetMusicLumpName(const char* name)
+const char* UMI_GetMusicLumpName(const char* name)
 {
     return name;
 }
