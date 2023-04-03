@@ -16,9 +16,19 @@ LICENSE=	gnu-gpl-v2
 CMAKE_CONFIGURE_ARGS+=	-DWITH_OpenMP:BOOLEAN=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DWITH_MPI:BOOLEAN=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DWITH_ELMERGUI:BOOLEAN=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PARAVIEW:BOOLEAN=TRUE
+#CMAKE_CONFIGURE_ARGS+=	-DELMER_INSTALL_LIB_DIR=${PREFIX}/lib
+
+DEPENDS+=	paraview-[0-9]*:../../wip/paraview
 
 WRKSRC=		${WRKDIR}/elmerfem-${DISTNAME}
 USE_LANGUAGES=	c c++ fortran
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	post-configure
+SUBST_MESSAGE.rpath=	Add RPATH
+SUBST_FILES.rpath=	${CMAKE_BUILD_DIR}/fem/src/CMakeFiles/Solver_TGT.dir/link.txt
+SUBST_SED.rpath=	"s|-O|-Wl,-R${PREFIX}/lib/elmersolver -O|"
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
