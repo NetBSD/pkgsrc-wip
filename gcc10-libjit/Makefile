@@ -52,6 +52,8 @@ UNLIMIT_RESOURCES+=	stacksize
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 
+INSTALLATION_DIRS=	lib
+
 .include "options.mk"
 
 ## For graphite support.
@@ -65,6 +67,7 @@ post-extract:
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--enable-languages=jit
+CONFIGURE_ARGS+=	--without-static-standard-libraries
 CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--enable-host-shared
 CONFIGURE_ARGS.NetBSD+=	--with-gnu-ld --with-ld=/usr/bin/ld
@@ -88,7 +91,7 @@ pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 do-install:
-	${INSTALL_LIB} ${OBJDIR}/gcc/libgccjit.so* ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/${OBJDIR}/gcc/libgccjit.so* ${DESTDIR}${PREFIX}/lib
 
 CHECK_BUILTIN.zlib:= yes
 .include "../../devel/zlib/builtin.mk"

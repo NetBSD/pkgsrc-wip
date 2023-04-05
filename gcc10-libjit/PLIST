@@ -1,2 +1,4 @@
 @comment $NetBSD$
-lib/libgcc-jit.so
+lib/libgccjit.so
+lib/libgccjit.so.0
+lib/libgccjit.so.0.0.1
