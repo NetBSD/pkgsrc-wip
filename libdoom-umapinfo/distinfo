@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libdoom-umapinfo-1.0.0rc3.tar.gz) = c5b2398777876f60c3e4329bc634cb2c8c94fec4ecb9c26adf27c33ec45e48e2
-SHA512 (libdoom-umapinfo-1.0.0rc3.tar.gz) = 0fe563582612b643789a2125301e9b6079328177ac162bb2aa2c1cdb13c4fa64d8a3af4de8fd14b577e2180dd3172fee6c203026d3f8b8d3e31b7efc6974f9ed
-Size (libdoom-umapinfo-1.0.0rc3.tar.gz) = 276878 bytes
+BLAKE2s (libdoom-umapinfo-1.0.0rc4.tar.gz) = 74166456d77ef6b1d2f08e663d11a90b9f3024307c165aa674c9cb62696b8fb8
+SHA512 (libdoom-umapinfo-1.0.0rc4.tar.gz) = 8d7fe5da82f3533548afd024a93920fe5969f3c8ceab653199152a2717cc667377ba13f749792a352d2e22555e31caa478caeae35bee39c7e6c3bcac59ccb88a
+Size (libdoom-umapinfo-1.0.0rc4.tar.gz) = 269737 bytes
