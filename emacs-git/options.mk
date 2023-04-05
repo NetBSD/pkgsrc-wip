@@ -2,7 +2,7 @@
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson libotf libwebp svg tree-sitter xaw3d xml
+PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson libgccjit libotf libwebp svg tree-sitter xaw3d xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -22,7 +22,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # imagemagick is disabled because of stability/security
 # svg is omitted because it is rarely needed and heavyweight due to the rust dependency
 # xaw3d is omitted because it is only valid with xaw
-PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
+PKG_SUGGESTED_OPTIONS=	dbus libgccjit gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -43,6 +43,17 @@ CONFIGURE_ARGS+=	--without-dbus
 .  include "../../textproc/jansson/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-json
+.endif
+
+###
+### Support libgccjit
+###
+.if !empty(PKG_OPTIONS:Mlibgccjit)
+CONFIGURE_ARGS+=	--with-native-compilation
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc10-libjit}/gcc10/lib
+GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
+        ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
+.  include "../../wip/gcc10-libjit/buildlink3.mk"
 .endif
 
 ###
@@ -221,4 +232,3 @@ DEPENDS+=	tree-sitter-yaml-[0-9]*:../../textproc/tree-sitter-yaml
 # mode: outline-minor
 # outline-regexp: "\\(.[ \t]*\\(if\\|endif\\|else\\|elif\\|include.*options\\|PKG_SUGGES\\)\\)\\|### .\\|# Local"
 # End:
-
