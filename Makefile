@@ -898,6 +898,7 @@ SUBDIR+=	firefox69-2019Q4
 SUBDIR+=	firehose
 SUBDIR+=	flag
 SUBDIR+=	flam3-svn
+SUBDIR+=	flameshot
 SUBDIR+=	flang
 SUBDIR+=	flang-git
 SUBDIR+=	flasm
