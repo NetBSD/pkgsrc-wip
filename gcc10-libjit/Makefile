@@ -87,11 +87,11 @@ MAKE_FLAGS+=		CXXFLAGS=${CXXFLAGS:Q}
 
 BUILD_TARGET=		all-gcc
 
+INSTALL_DIRS=		${WRKSRC}/${OBJDIR}/gcc
+INSTALL_TARGET=		jit.install-common jit.install-info
+
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/${OBJDIR}/gcc/libgccjit.so* ${DESTDIR}${PREFIX}/lib
 
 CHECK_BUILTIN.zlib:= yes
 .include "../../devel/zlib/builtin.mk"
