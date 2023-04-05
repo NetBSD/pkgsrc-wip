@@ -10,3 +10,6 @@
     Maybe some can be removed after sendmail binaries are no longer installed
 [X] Remove BROKEN_FOR_PLATFORM
     - OpenBSD-*-* (not tested yet)
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2023-29323
