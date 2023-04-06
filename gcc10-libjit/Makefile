@@ -32,8 +32,6 @@ USE_TOOLS.NetBSD+=	gsed
 
 # /usr/bin/ld: ./../intl/libintl.a(bindtextdom.o): relocation R_X86_64_32 against symbol `libintl_nl_default_dirname' can not be used when making a shared object; recompile with -fPIC
 CFLAGS+=	-fPIC
-# ld: /usr/lib/libstdc++.a(eh_globals.o): relocation R_X86_64_TPOFF32 against `_ZZN12_GLOBAL__N_110get_globalEvE6global' can not be used when making a shared object; recompile with -fPIC
-CXXFLAGS+=	-fPIC
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no

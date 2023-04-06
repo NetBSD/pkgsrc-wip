@@ -56,7 +56,7 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 
 .  for _libdir_ in ${_OPSYS_LIB_DIRS}
 .    if exists(${_libdir_})
-BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so
+BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so 2> /dev/null
 BASE_LIBGCC_MATCH_STRING!=	${ECHO} ${BASE_LIBGCC} ${GCC10_DIST_VERSION} | \
 				${AWK} -f ../../mk/scripts/larger_symbol_version.awk
 .      if ${BASE_LIBGCC_MATCH_STRING:Mnewer}
