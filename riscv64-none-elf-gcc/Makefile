@@ -45,25 +45,41 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure
 
 GNU_CONFIGURE_PREFIX=	${RISCV64ELF_PREFIX}
 
-CONFIGURE_ARGS+=	--target=riscv64-none-elf
-CONFIGURE_ARGS+=	--with-arch=rv64imafdc_zicsr_zifencei
-CONFIGURE_ARGS+=	--with-abi=lp64d
-CONFIGURE_ARGS+=	--enable-languages=c,c++
-CONFIGURE_ARGS+=	--enable-tls
-CONFIGURE_ARGS+=	--with-newlib
-CONFIGURE_ARGS+=	--without-isl
-CONFIGURE_ARGS+=	--disable-multilib
-CONFIGURE_ARGS+=	--disable-werror
-CONFIGURE_ARGS+=	--disable-threads
-CONFIGURE_ARGS+=	--disable-libatomic
-CONFIGURE_ARGS+=	--disable-libmudflap
-CONFIGURE_ARGS+=	--disable-libssp
-CONFIGURE_ARGS+=	--disable-libquadmath
-CONFIGURE_ARGS+=	--disable-libgomp
-CONFIGURE_ARGS+=	--disable-libstdcxx-pch
-CONFIGURE_ARGS+=	--disable-nls
-
-CONFIGURE_ARGS+=	--disable-bootstrap
+CONFIGURE_ARGS+= --target=riscv64-none-elf
+CONFIGURE_ARGS+= --enable-languages=c,c++
+CONFIGURE_ARGS+= --with-abi=lp64d
+CONFIGURE_ARGS+= --with-newlib
+CONFIGURE_ARGS+= --disable-libgomp
+CONFIGURE_ARGS+= --enable-obsolete
+CONFIGURE_ARGS+= --enable-secureplt
+CONFIGURE_ARGS+= --disable-werror
+CONFIGURE_ARGS+= --with-system-zlib
+CONFIGURE_ARGS+= --enable-nls
+CONFIGURE_ARGS+= --without-included-gettext
+CONFIGURE_ARGS+= --disable-libunwind-exceptions
+CONFIGURE_ARGS+= --enable-checking=release
+CONFIGURE_ARGS+= --with-gcc-major-version-only
+CONFIGURE_ARGS+= --disable-esp
+CONFIGURE_ARGS+= --enable-lto
+CONFIGURE_ARGS+= --disable-libstdcxx-pch
+CONFIGURE_ARGS+= --enable-poison-system-directories
+CONFIGURE_ARGS+= --disable-bootstrap
+CONFIGURE_ARGS+= --enable-__cxa_atexit
+CONFIGURE_ARGS+= --enable-clocale=gnu
+CONFIGURE_ARGS+= --disable-multilib
+CONFIGURE_ARGS+= --disable-fixed-point
+CONFIGURE_ARGS+= --disable-libssp
+CONFIGURE_ARGS+= --disable-libada
+CONFIGURE_ARGS+= --disable-cet
+CONFIGURE_ARGS+= --disable-systemtap
+CONFIGURE_ARGS+= --disable-valgrind-annotations
+CONFIGURE_ARGS+= --disable-vtable-verify
+CONFIGURE_ARGS+= --disable-libvtv
+CONFIGURE_ARGS+= --without-zstd
+CONFIGURE_ARGS+= --without-isl
+CONFIGURE_ARGS+= --disable-libsanitizer
+CONFIGURE_ARGS+= --enable-default-pie
+CONFIGURE_ARGS+= --enable-default-ssp
 
 INFO_FILES=		yes
 
