@@ -50,10 +50,10 @@ CONFIGURE_ARGS+=	--without-json
 ###
 .if !empty(PKG_OPTIONS:Mlibgccjit)
 CONFIGURE_ARGS+=	--with-native-compilation
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc10-libjit}/gcc10/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc12-libjit}/gcc12/lib
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
         ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
-.  include "../../lang/gcc10-libjit/buildlink3.mk"
+.  include "../../lang/gcc12-libjit/buildlink3.mk"
 .endif
 
 ###
