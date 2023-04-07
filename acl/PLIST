@@ -5,6 +5,7 @@ bin/setfacl
 include/acl/libacl.h
 include/sys/acl.h
 lib/libacl.la
+lib/pkgconfig/libacl.pc
 man/man1/chacl.1
 man/man1/getfacl.1
 man/man1/setfacl.1
@@ -26,6 +27,7 @@ man/man3/acl_equiv_mode.3
 man/man3/acl_error.3
 man/man3/acl_extended_fd.3
 man/man3/acl_extended_file.3
+man/man3/acl_extended_file_nofollow.3
 man/man3/acl_free.3
 man/man3/acl_from_mode.3
 man/man3/acl_from_text.3
@@ -47,12 +49,15 @@ man/man3/acl_to_any_text.3
 man/man3/acl_to_text.3
 man/man3/acl_valid.3
 man/man5/acl.5
-share/doc/acl/CHANGES.gz
+share/doc/acl/CHANGES
 share/doc/acl/COPYING
 share/doc/acl/COPYING.LGPL
 share/doc/acl/PORTING
-share/doc/acl/README
+share/doc/acl/extensions.txt
+share/doc/acl/libacl.txt
 share/locale/de/LC_MESSAGES/acl.mo
+share/locale/en@boldquot/LC_MESSAGES/acl.mo
+share/locale/en@quot/LC_MESSAGES/acl.mo
 share/locale/es/LC_MESSAGES/acl.mo
 share/locale/fr/LC_MESSAGES/acl.mo
 share/locale/gl/LC_MESSAGES/acl.mo

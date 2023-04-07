@@ -1,14 +1,14 @@
 # $NetBSD$
 
-BUILDLINK_TREE+=	linux-acl
+BUILDLINK_TREE+=	acl
 
-.if !defined(LINUX_ACL_BUILDLINK3_MK)
-LINUX_ACL_BUILDLINK3_MK:=
+.if !defined(ACL_BUILDLINK3_MK)
+ACL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.linux-acl+=	linux-acl>=2.2.52
-BUILDLINK_PKGSRCDIR.linux-acl?=		../../wip/linux-acl
+BUILDLINK_API_DEPENDS.acl+=	acl>=2.2.52
+BUILDLINK_PKGSRCDIR.acl?=	../../devel/acl
 
-.include "../../wip/linux-attr/buildlink3.mk"
-.endif	# LINUX_ACL_BUILDLINK3_MK
+.include "../../sysutils/attr/buildlink3.mk"
+.endif	# ACL_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-linux-acl
+BUILDLINK_TREE+=	-acl
