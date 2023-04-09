@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	chapel-1.29.0
+DISTNAME=	chapel-1.30.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chapel-lang/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -27,6 +27,8 @@ MAKE_ENV+=		CHPL_HOST_COMPILER=gnu
 # llvm 15 not supported yet as of 1.29.0
 MAKE_ENV+=		CHPL_LLVM=none
 
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/chapel/1.30/compiler
+
 USE_LANGUAGES=	c c++ fortran
 
 PLIST_SUBST+=		VERSION=${PKGVERSION_NOREV:R}
@@ -45,13 +47,17 @@ REPLACE_SH+=		util/printchplenv
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+REPLACE_PERL+=		modules/dists/fixDistDocs.perl
+
 REPLACE_PYTHON+=	util/chplenv/*.py
 REPLACE_PYTHON+=	util/chplenv/third-party-pkgs
 REPLACE_PYTHON+=	util/config/*.py
+REPLACE_PYTHON+=	util/config/generate-copyright
+REPLACE_PYTHON+=	util/config/generate-license
+REPLACE_PYTHON+=	util/config/generate-reservedSymbolNames
 REPLACE_PYTHON+=	util/config/update-if-different
+REPLACE_PYTHON+=	util/config/write-git-sha
 REPLACE_PYTHON+=	util/printchplenv
-
-REPLACE_PERL+=		modules/dists/fixDistDocs.perl
 
 SUBST_CLASSES+=			penvperl
 SUBST_STAGE.penvperl=		pre-install
