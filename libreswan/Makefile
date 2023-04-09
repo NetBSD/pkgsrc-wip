@@ -11,8 +11,9 @@
 
 GITHUB_PROJECT=	libreswan
 DISTNAME=	libreswan
-PKGNAME=	libreswan-4.9nb2
-GITHUB_TAG=	00c483c7e2e970ba4bc4a972b204d8ca9cb595fa
+# this is really a pre-5.0 snapshot and >all 4.x
+PKGNAME=	libreswan-4.9nb3
+GITHUB_TAG=	87b84cc19b90a4e046f28568cc2738835800398a
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${GITHUB_PROJECT}/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
