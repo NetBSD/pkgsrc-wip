@@ -2,7 +2,7 @@
 
 BUILDLINK_TREE+=	gnuradio-monolithic
 
-.if !defined(GNURADIO_CORE_BUILDLINK3_MK)
+.if !defined(GNURADIO_MONOLITHIC_BUILDLINK3_MK)
 GNURADIO_MONOLITHIC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-monolithic+=	gnuradio-core>=3.10.2

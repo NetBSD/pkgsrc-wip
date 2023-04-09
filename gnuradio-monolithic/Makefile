@@ -148,15 +148,15 @@ BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.6.0
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 
-TOOL_DEPENDS+=      tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
+TOOL_DEPENDS+=	tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 
 #CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFDIR}/gnuradio-runtime.conf
 #CONF_FILES+=	${EGDIR}/gr-audio-jack.conf	${PKG_SYSCONFDIR}/gr-audio-jack.conf
 #CONF_FILES+=	${EGDIR}/gr-audio-portaudio.conf ${PKG_SYSCONFDIR}/gr-audio-portaudio.conf
 #CONF_FILES+=	${EGDIR}/gr-audio.conf		${PKG_SYSCONFDIR}/gr-audio.conf
 
-CMAKE_ARGS+=      -DENABLE_GR_VIDEO_SDL=ON
-CMAKE_ARGS+=      -DSDL_INCLUDE_DIR=${PREFIX}/include/SDL
+CMAKE_ARGS+=	-DENABLE_GR_VIDEO_SDL=ON
+CMAKE_ARGS+=	-DSDL_INCLUDE_DIR=${PREFIX}/include/SDL
 
 # Take care CONF_FILES stuff (The same code in Nocore.mk)
 #post-install:
