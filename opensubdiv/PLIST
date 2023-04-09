@@ -61,6 +61,8 @@ ${PLIST.opengl}include/opensubdiv/osd/glXFBEvaluator.h
 ${PLIST.opengl}include/opensubdiv/osd/glslPatchShaderSource.h
 include/opensubdiv/osd/mesh.h
 include/opensubdiv/osd/nonCopyable.h
+include/opensubdiv/osd/ompEvaluator.h
+include/opensubdiv/osd/ompKernel.h
 include/opensubdiv/osd/opengl.h
 include/opensubdiv/osd/tbbEvaluator.h
 include/opensubdiv/osd/tbbKernel.h
