@@ -39,9 +39,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-DISTINFO_FILE=	${.CURDIR}/../../ham/gnuradio-core/distinfo
-PATCHDIR=	${.CURDIR}/../../ham/gnuradio-core/patches
-
 # see CMakeLists.txt GR_PYTHON_MIN_VERSION
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
@@ -86,6 +83,12 @@ CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2
 CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2
+#MAKE_ARGS+=	-DCMAKE_MAN_PATH=${PREFIX}/man
+CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
+CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
+CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
+
+CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
 CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
