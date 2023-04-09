@@ -1,0 +1,15 @@
+@comment $NetBSD$
+lib/glusterfs/10.3/cloudsync-plugins/cloudsynccvlt.a
+lib/glusterfs/10.3/cloudsync-plugins/cloudsynccvlt.la
+lib/glusterfs/10.3/cloudsync-plugins/cloudsynccvlt.so
+lib/glusterfs/10.3/xlator/features/cloudsync.a
+lib/glusterfs/10.3/xlator/features/cloudsync.la
+lib/glusterfs/10.3/xlator/features/cloudsync.so
+lib/systemd/system/glusterd.service
+lib/systemd/system/glustereventsd.service
+lib/systemd/system/gluster-ta-volume.service
+lib/systemd/system/glusterfssharedstorage.service
+libexec/glusterfs/mount-shared-storage.sh
+sbin/mount.glusterfs
+share/glusterfs/scripts/control-cpu-load.sh
+share/glusterfs/scripts/control-mem.sh

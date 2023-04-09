@@ -18,10 +18,10 @@ CONFIGURE_ARGS+=	--disable-fusermount
 CONFIGURE_ARGS+=	--disable-fuse-notifications
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--without-tcmalloc
-# libtirpc not in pkgsrc (yet)
-CONFIGURE_ARGS+=	--without-libtirpc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples/${PKGBASE}
+# libtirpc not in pkgsrc (yet)
+CONFIGURE_ARGS+=	--without-libtirpc
 
 # Upstream glusterfs effectively dropped support for 32bit platforms
 # somewhere between 8.2 (works on e.g. NetBSD/i386) and 10.3 as various
@@ -135,9 +135,6 @@ pre-build:
 	${ECHO} "glusterd.vol.sample: glusterd.vol" >> Makefile &&	\
 	${ECHO} "	cp glusterd.vol glusterd.vol.sample" >> Makefile
 
-post-install:
-	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
-	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 
 # Debug
 CFLAGS+=		-g
@@ -150,6 +147,16 @@ CONFIGURE_ARGS+=	--enable-debug
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Linux"
+post-install:
+	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount.glusterfs \
+	    ${DESTDIR}/${PREFIX}/sbin/mount.glusterfs
+.else
+post-install:
+	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
+	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
+.endif
+
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
@@ -157,6 +164,10 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.userspace-rcu+=	userspace-rcu>=0.12.1
 .include "../../devel/userspace-rcu/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--disable-linux-io_uring
+.include "../../devel/acl/buildlink3.mk"
+.endif
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 

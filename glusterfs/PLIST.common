@@ -326,9 +326,7 @@ sbin/glusterd
 sbin/glustereventsd
 sbin/glusterfs
 sbin/glusterfsd
-sbin/mount_glusterfs
 sbin/snap_scheduler.py
-sbin/umountd
 share/doc/glusterfs/benchmarking/README
 share/doc/glusterfs/benchmarking/glfs-bm.c
 share/doc/glusterfs/benchmarking/launch-script.sh
