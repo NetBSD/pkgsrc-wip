@@ -2,7 +2,7 @@
 bin/nscde
 bin/nscde_fvwmclnt
 etc/xdg/menus/nscde-applications.menu
-lib/NsCDE/NetBSD_amd64/XOverrideFontCursor.so
+lib/NsCDE/${OPSYS}_${UNAME_M}/XOverrideFontCursor.so
 lib/NsCDE/fvwm-modules/FvwmScript
 lib/NsCDE/python/Globals.py
 lib/NsCDE/python/MiscFun.py
@@ -50,8 +50,8 @@ lib/NsCDE/scripts/WsPgMgr
 libexec/NsCDE/FvwmScripts/GWM
 libexec/NsCDE/FvwmScripts/Notifier
 libexec/NsCDE/FvwmScripts/Splash
-libexec/NsCDE/NetBSD_amd64/colorpicker
-libexec/NsCDE/NetBSD_amd64/fpclock
+libexec/NsCDE/${OPSYS}_${UNAME_M}/colorpicker
+libexec/NsCDE/${OPSYS}_${UNAME_M}/fpclock
 libexec/NsCDE/acpimgr
 libexec/NsCDE/appfinder
 libexec/NsCDE/backdropmgr
