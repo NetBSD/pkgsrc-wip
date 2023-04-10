@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	vips-8.14.1
+DISTNAME=	vips-8.14.2
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libvips/}
@@ -17,9 +17,9 @@ USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_LANGUAGES=		c c++
 PYTHON_FOR_BUILD_ONLY=  tool
 
-PKGCONFIG_OVERRIDE+=	vips-cpp.pc.in
-PKGCONFIG_OVERRIDE+=	vips.pc.in
-PKGCONFIG_OVERRIDE+=	vipsCC.pc.in
+PKGCONFIG_OVERRIDE_STAGE=   pre-install
+PKGCONFIG_OVERRIDE+=        output/meson-private/vips-cpp.pc
+PKGCONFIG_OVERRIDE+=        output/meson-private/vips.pc
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
