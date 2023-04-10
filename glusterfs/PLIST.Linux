@@ -1,4 +1,5 @@
 @comment $NetBSD$
+include/glusterfs/gf-io-uring.h
 lib/glusterfs/10.3/cloudsync-plugins/cloudsynccvlt.a
 lib/glusterfs/10.3/cloudsync-plugins/cloudsynccvlt.la
 lib/glusterfs/10.3/cloudsync-plugins/cloudsynccvlt.so
