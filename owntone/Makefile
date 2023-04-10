@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	28.5
+VERSION=	28.6
 DISTNAME=	owntone-${VERSION}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=owntone/owntone-server/releases/download/${VERSION}/}

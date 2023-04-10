@@ -1,3 +1,5 @@
+"GNU gperf not found, but it's output appears to be present."
+
 it's using /usr/pkg/* for things like pid and db; not sure
 if that's correct.
 
