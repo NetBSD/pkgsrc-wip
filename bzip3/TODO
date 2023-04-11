@@ -5,3 +5,6 @@ when trying to compress a file it crashes on
 line 108 in libbzip3.c claiming it can't read
 the in_end variable. This is all happening
 on NetBSD sparc under qemu.
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2023-29415, CVE-2023-29416, CVE-2023-29418, CVE-2023-29419, CVE-2023-29420, CVE-2023-29421
