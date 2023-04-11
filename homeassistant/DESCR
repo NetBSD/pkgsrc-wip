@@ -1,0 +1,7 @@
+This is a package that, for the moment, does nothing, but depends on
+packages required when installing Home Assistant in a virtual
+environment.  Eventually, it will contain scripts to manage building
+and using Home Assistant in that environment
+
+(This package exists because it is too hard to package Home Assistant,
+because almost all dependencies are exact.)
