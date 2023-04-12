@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.13 2023/04/12 15:52:46 wiz Exp $
 
-BLAKE2s (libpaper-2.0.11.tar.gz) = f920bd7469137eb0614c8bf78fb60d5d004e2b25852ab9f23b45572ce3b0bad2
-SHA512 (libpaper-2.0.11.tar.gz) = 129d18a91992d8ec85a2f20cf67e66458fdf6ca9acbe07e820cd34063a03b1bc9835f2d70ad9766e9e02e1ff693a595a8fd11776c0152f379e31da5506b5785c
-Size (libpaper-2.0.11.tar.gz) = 1304618 bytes
-SHA1 (patch-tests_run-test) = d89ac4bb474049c3ea1a7f327d4176499e3217a4
+BLAKE2s (libpaper-2.0.12.tar.gz) = fedc1f178ef05a1b886edf091df32de011bbe8409487e947ee7e3e1d52fd7134
+SHA512 (libpaper-2.0.12.tar.gz) = edea8758894eb4b36d7164623d34ae7721a903d7fccaf3a0a40b598e901699b8d2754cb02be9a289494de46e3d30463806c3d85a9d701947218bb7146cf05af4
+Size (libpaper-2.0.12.tar.gz) = 1304598 bytes
