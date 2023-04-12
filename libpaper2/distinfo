@@ -3,3 +3,4 @@ $NetBSD: distinfo,v 1.13 2023/04/12 15:52:46 wiz Exp $
 BLAKE2s (libpaper-2.0.11.tar.gz) = f920bd7469137eb0614c8bf78fb60d5d004e2b25852ab9f23b45572ce3b0bad2
 SHA512 (libpaper-2.0.11.tar.gz) = 129d18a91992d8ec85a2f20cf67e66458fdf6ca9acbe07e820cd34063a03b1bc9835f2d70ad9766e9e02e1ff693a595a8fd11776c0152f379e31da5506b5785c
 Size (libpaper-2.0.11.tar.gz) = 1304618 bytes
+SHA1 (patch-tests_run-test) = d89ac4bb474049c3ea1a7f327d4176499e3217a4

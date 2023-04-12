@@ -1,0 +1,15 @@
+$NetBSD$
+
+https://github.com/rrthomas/libpaper/commit/1e04ef9475bbf53eec859aada5e7202cd1ed8d30
+
+--- tests/run-test.orig	2023-04-12 15:37:18.000000000 +0000
++++ tests/run-test
+@@ -55,7 +55,7 @@ paper_test() {
+     # 1. Convert backslashes to forward slashes
+     # 2. Compress multiple slashes (from relocated paths on some systems)
+     # 3. Remove prefix of name of 'paper' executable
+-    sed -e 's|\\|/|g' -e 's|/\+|/|g' -e 's|^.*/paper:|paper:|g' < "$basename-output.txt" > "$basename-output-fixed.txt"
++    sed -e 's|\\|/|g' -e 's|//|/|g' -e 's|^.*/paper:|paper:|g' < "$basename-output.txt" > "$basename-output-fixed.txt"
+     $DIFF -u "$expected_file" "$basename-output-fixed.txt"
+ }
+ 
