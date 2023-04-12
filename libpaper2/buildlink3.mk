@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: buildlink3.mk,v 1.4 2023/04/12 15:52:46 wiz Exp $
 
 BUILDLINK_TREE+=	libpaper
 
