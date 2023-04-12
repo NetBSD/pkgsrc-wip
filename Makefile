@@ -2308,7 +2308,6 @@ SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
 SUBDIR+=	marathon-trilogy
 SUBDIR+=	mark
-SUBDIR+=	marswm
 SUBDIR+=	marsyas
 SUBDIR+=	mashpodder
 SUBDIR+=	masscan
