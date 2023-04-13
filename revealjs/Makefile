@@ -20,7 +20,7 @@ SUBST_FILES.path=	test/examples/*.html
 
 SUBST_SED.path=		-e "s|href=\"\.\.\/\.\.\/|href=\"${INSTALL_DIR}${PKGNAME}/|"
 SUBST_SED.path+=	-e   "s|src=\"\.\.\/\.\.\/|src=\"${INSTALL_DIR}${PKGNAME}/|"
-SUBST_SED.path+=	-e "s|src: \'\.\.\/\.\.\/|src: \'${INSTALL_DIR}${PKGNAME}/|"
+SUBST_SED.path+=	-e "s|src: '\.\.\/\.\.\/|src: '${INSTALL_DIR}${PKGNAME}/|"
 
 do-install:
 	mkdir ${DESTDIR}${PREFIX}/share/revealjs/
