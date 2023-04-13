@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/12 15:52:46 wiz Exp $
+@comment $NetBSD$
 bin/paper
 bin/paper.bin
+bin/paperconf
+bin/paperconf.bin
 include/paper.h
 lib/libpaper.la
 man/man1/paper.1
