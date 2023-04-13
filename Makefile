@@ -2131,7 +2131,6 @@ SUBDIR+=	libostree
 SUBDIR+=	libowl-av
 SUBDIR+=	libpafe
 SUBDIR+=	libpano12
-SUBDIR+=	libpaper2
 SUBDIR+=	libpar2
 SUBDIR+=	libpare
 SUBDIR+=	libparsifal
