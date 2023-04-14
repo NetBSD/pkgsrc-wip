@@ -925,7 +925,6 @@ SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
-SUBDIR+=	four-bar-rs
 SUBDIR+=	fox
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fpc
