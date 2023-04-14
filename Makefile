@@ -2741,6 +2741,7 @@ SUBDIR+=	ophcrack
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	oranchelo-icon-theme
+SUBDIR+=	oras
 SUBDIR+=	orbifolder
 SUBDIR+=	orcania
 SUBDIR+=	org-caldav-git
