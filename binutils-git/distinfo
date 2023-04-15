@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.50 2023/01/14 20:11:04 fcambus Exp $
+
+BLAKE2s (binutils-20230414-463b1a1ad2c573252b16465ab13cbb4f21975b6a.tar.gz) = d386398e10aec5ee38fd8db94d036a61e105c96a8bbf2f1ee4104fdc7a61610d
+SHA512 (binutils-20230414-463b1a1ad2c573252b16465ab13cbb4f21975b6a.tar.gz) = cedf976d4a5db04fc0e123b7b9317b6f4be2f186a382cddfd29c9d7662b7af1dbbe8361222b8d16457255ba7a3eac49b00c84679999c294bf6473ed7f1255301
+Size (binutils-20230414-463b1a1ad2c573252b16465ab13cbb4f21975b6a.tar.gz) = 63627105 bytes
+SHA1 (patch-bfd_cache.c) = e2d96bad350552eacdffa83532f9dc9e15ee9be9
+SHA1 (patch-gold_Makefile.in) = e01d973f9625a1653851f796c123efec37102fbd
+SHA1 (patch-gold_options.h) = 03816bbf157d781820d96a4d3af0885dc2bbbaa9
+SHA1 (patch-gold_system.h) = 9b4130b5315763daa66e0a91a8be6d1df0d10344
+SHA1 (patch-gold_testsuite_Makefile.in) = 24ede750675829281436d728d77073638f58d6b9
+SHA1 (patch-include_safe-ctype.h) = 66e636f8200ff5e9b4bfa0a5aee13cd072a23887
+SHA1 (patch-ld_Makefile.am) = fe5f8e199cbd7dd51359ebbedb970daf2224a5fb
+SHA1 (patch-ld_Makefile.in) = 972cbb5df0cd6f82d56c2a8f0339a5762d814423
+SHA1 (patch-ld_configure.tgt) = 3008239d2efa6e3a0c8e4e07c910aef12aa412c4
+SHA1 (patch-ld_emulparams_aarch64nbsd.sh) = 6489e5996eefdb8ba66c73d7425443109d47e6a9
+SHA1 (patch-ld_emulparams_aarch64nbsdb.sh) = 9980f3ca8cb7cac1b56c71c482b691fa2f7659a1
+SHA1 (patch-ld_emulparams_armelf__nbsd__eabi.sh) = 464b0957f95a1a8ba6a92ee0091b929d9c980470
+SHA1 (patch-ld_emulparams_armelf__nbsd__eabihf.sh) = 972678f6bab6e910fe7ac29c6c06f1a438d308a0
+SHA1 (patch-ld_emulparams_armelfb__nbsd__eabi.sh) = 67a519cac8986ab2520861bbd1100782295637d2
+SHA1 (patch-ld_emulparams_armelfb__nbsd__eabihf.sh) = 6f58d6aa6d601544d9ad00a9ac4fdc704390a42c
