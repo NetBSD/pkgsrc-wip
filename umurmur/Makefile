@@ -5,7 +5,7 @@ PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=umurmur/}
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://umurmur.net/
 COMMENT=	Mumble (murmur) server for embedded systems
 LICENSE=	modified-bsd
