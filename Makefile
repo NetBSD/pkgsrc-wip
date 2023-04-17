@@ -3046,6 +3046,7 @@ SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbzx
 SUBDIR+=	pcaudiolib
 SUBDIR+=	pcem
+SUBDIR+=	pcmanfm-qt
 SUBDIR+=	pcp
 SUBDIR+=	pcsx2
 SUBDIR+=	pdb2ldif
