@@ -2295,6 +2295,7 @@ SUBDIR+=	lxqt-openssh-askpass
 SUDBIR+=	lxqt-policykit
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-runner
+SUBDIR+=	lxqt-sudo
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri

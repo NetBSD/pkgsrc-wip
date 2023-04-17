@@ -1,0 +1,5 @@
+security/lxqt-sudo: update to 1.3.0
+
+lxqt-sudo-1.3.0 / 2023-04-15
+=============================
+ * Added support for doas(1) backend.
