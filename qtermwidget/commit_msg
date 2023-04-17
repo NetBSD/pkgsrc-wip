@@ -1,0 +1,6 @@
+x11/qtermwidget: update to 1.3.0
+
+qtermwidget-1.3.0 / 2023-04-15
+===============================
+ * Fixed a problem in switching the color scheme between dark and light.
+ * Prevented a crash on splitting the terminal under `kwin_wayland`
