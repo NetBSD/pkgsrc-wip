@@ -12,5 +12,6 @@ LICENSE=	2-clause-bsd
 
 PLIST_SUBST+=	VERS="${VERSION}"
 
-.include "../../devel/meson/build.mk"
+.include "../../wip/muon/build.mk"
+
 .include "../../mk/bsd.pkg.mk"
