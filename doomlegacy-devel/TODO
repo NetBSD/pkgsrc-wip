@@ -13,5 +13,15 @@ Part 25: Add UMAPINFO support
 [X] Hook keys into game engine
     => All keys should work now, up to the limits of the engine
 
+=> Created upstream feature request ticket #100
+
+
+Part 26: Incorrect voodoo doll behaviour
+========================================
+[X] Player stuck in Solar Struggle (map E3M6)
+    Voodoo doll transfers damage to the player, but seems to not take thrust
+    (is not pushed away e.g. from an explosion as expected).
+    => Reported upstream in ticket #688
+
 
 EOF
