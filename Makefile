@@ -3046,6 +3046,7 @@ SUBDIR+=	parole
 SUBDIR+=	parted
 SUBDIR+=	partonevolution
 SUBDIR+=	passepartout
+SUBDIR+=	pavucontrol-qt
 SUBDIR+=	paxmirabilis
 SUBDIR+=	paxtest
 SUBDIR+=	payara41
