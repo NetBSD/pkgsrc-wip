@@ -2293,6 +2293,7 @@ SUBDIR+=	lxqt-config
 SUBDIR+=	lxqt-globalkeys
 SUBDIR+=	lxqt-notificationd
 SUBDIR+=	lxqt-openssh-askpass
+SUBDIR+=	lxqt-panel
 SUDBIR+=	lxqt-policykit
 SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxqt-qtplugin
