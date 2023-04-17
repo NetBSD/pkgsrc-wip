@@ -1,0 +1,5 @@
+x11/lxqt-admin: update to 1.3.0
+
+lxqt-admin-1.3.0 / 2023-04-15
+==============================
+ * Used more specific icons for lxqt-admin-time and lxqt-admin-user.
