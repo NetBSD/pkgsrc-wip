@@ -5213,6 +5213,7 @@ SUBDIR+=	scmail
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scrc
+SUBDIR+=	screengrab
 SUBDIR+=	scrcpy
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scummvm-bass
