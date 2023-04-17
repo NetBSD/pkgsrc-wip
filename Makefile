@@ -2143,6 +2143,7 @@ SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libqd
+SUBDIR+=	libqtxdg
 SUBDIR+=	libquantum
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
