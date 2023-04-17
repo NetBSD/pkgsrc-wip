@@ -1,0 +1,5 @@
+security/lxqt-openssh-askpass: update to 1.3.0
+
+lxqt-openssh-askpass-1.3.0 / 2023-04-15
+========================================
+ * Bumped the version to 1.3.0.
