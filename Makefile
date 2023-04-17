@@ -2288,6 +2288,7 @@ SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-admin
 SUBDIR+=	lxqt-archiver
 SUBDIR+=	lxqt-build-tools
+SUBDIR+=	lxqt-notificationd
 SUDBIR+=	lxqt-policykit
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-themes
