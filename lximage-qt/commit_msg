@@ -1,0 +1,8 @@
+graphics/lximage-qt: update to 1.3.0
+
+lximage-qt-1.3.0 / 2023-04-15
+==============================
+ * Added a note on `kimageformats` to README.
+ * Typo fixes.
+ * Corrected duplicate names in a ui file.
+ * Changed the app icon to SVG.
