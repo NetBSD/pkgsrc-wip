@@ -2042,6 +2042,7 @@ SUBDIR+=	libfixposix
 SUBDIR+=	libflame
 SUBDIR+=	libflame_openmp
 SUBDIR+=	libflame_pthread
+SUBDIR+=	libfm-qt
 SUBDIR+=	libfolks
 SUBDIR+=	libfplll
 SUBDIR+=	libfreefare
