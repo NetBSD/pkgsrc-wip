@@ -1,0 +1,5 @@
+x11/qtxdg-tools: update to 3.11.0
+
+qtxdg-tools-3.11.0 / 2023-04-15
+===============================
+ * Updated for libqtxdg-3.11.
