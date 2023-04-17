@@ -27,33 +27,35 @@ do-configure: muon-configure
 muon-configure:
 .for d in ${CONFIGURE_DIRS}
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} muon setup \
-	    --prefix ${PREFIX} \
-	    --libdir lib \
-	    --libexecdir libexec \
-	    --mandir ${PKGMANDIR} \
-	    --sysconfdir ${PKG_SYSCONFDIR} \
-	    --buildtype=plain ${MUON_ARGS} . output
+		-Dprefix=${PREFIX} \
+		-Dlibdir=lib \
+		-Dlibexecdir=libexec \
+		-Dmandir=${PKGMANDIR} \
+		-Dsysconfdir=${PKG_SYSCONFDIR} \
+		-Dbuildtype=plain \
+		${MUON_ARGS} \
+		output
 .endfor
 
 do-build: muon-build
 muon-build:
 .for d in ${BUILD_DIRS}
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} \
-	    samu -j ${_MAKE_JOBS_N:U1} -C output
+		samu -j ${_MAKE_JOBS_N:U1} -C output
 .endfor
 
 do-install: muon-install
 muon-install:
 .for d in ${INSTALL_DIRS}
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-	    samu -j ${_MAKE_JOBS_N:U1} -C output install
+		muon -C output install
 .endfor
 
 do-test: muon-test
 muon-test:
 .for d in ${TEST_DIRS}
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} \
-	    samu -j ${_MAKE_JOBS_N:U1} -C output test
+		muon -C output test
 .endfor
 
 _VARGROUPS+=		muon
