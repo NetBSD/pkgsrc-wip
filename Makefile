@@ -2285,6 +2285,7 @@ SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt-build-tools
 SUBDIR+=	lxqt-qtplugin
+SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
 SUBDIR+=	mac-icon-standard
