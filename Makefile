@@ -2298,6 +2298,7 @@ SUDBIR+=	lxqt-policykit
 SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxqt-qtplugin
 SUBDIR+=	lxqt-runner
+SUBDIR+=	lxqt-session
 SUBDIR+=	lxqt-sudo
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
