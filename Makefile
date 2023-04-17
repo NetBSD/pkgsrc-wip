@@ -4441,7 +4441,6 @@ SUBDIR+=	py-pykit-sci
 SUBDIR+=	py-pykit-shared
 SUBDIR+=	py-pylint-venv
 SUBDIR+=	py-pylith
-SUBDIR+=	py-pylons
 SUBDIR+=	py-pyls-spyder
 SUBDIR+=	py-pymatgen
 SUBDIR+=	py-pymbolic
