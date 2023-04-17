@@ -4988,6 +4988,7 @@ SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qt6-qtwayland
 SUBDIR+=	qtaccountsservice
+SUBDIR+=	qterminal
 SUBDIR+=	qtermwidget
 SUBDIR+=	qtile
 SUBDIR+=	qtractor
