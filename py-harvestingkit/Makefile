@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=3.6.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04.9:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-htmlparser>=0.0.2:../../wip/py-htmlparser
-DEPENDS+=	${PYPKGPREFIX}-httpretty>=0.8.14:../../wip/py-httpretty
+DEPENDS+=	${PYPKGPREFIX}-httpretty>=0.8.14:../../www/py-httpretty
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3.2:../../www/py-beautifulsoup4
 
 WRKSRC=		${WRKDIR}/HarvestingKit-0.6.6

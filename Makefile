@@ -3956,7 +3956,6 @@ SUBDIR+=	py-htmlparser
 SUBDIR+=	py-htseq
 SUBDIR+=	py-http-prompt
 SUBDIR+=	py-httpie-jwt-auth
-SUBDIR+=	py-httpretty
 SUBDIR+=	py-hug
 SUBDIR+=	py-hugo
 SUBDIR+=	py-humanfriendly
