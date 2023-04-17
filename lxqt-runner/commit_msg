@@ -1,0 +1,6 @@
+x11/lxqt-runner: update to 1.3.0
+
+lxqt-runner-1.3.0 / 2023-04-15
+===============================
+ * Updated VirtualBox icons for license compatibility.
+ * Made the window frameless explicitly (for Wayland).
