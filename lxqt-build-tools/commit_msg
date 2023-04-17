@@ -1,0 +1,5 @@
+devel/lxqt-build-tools: update to 0.13.0
+
+lxqt-build-tools-0.13.0 / 2023-04-15
+====================================
+ * Bumped minimum compatibility level to C++17.
