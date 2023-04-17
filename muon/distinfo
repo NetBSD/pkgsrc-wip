@@ -3,3 +3,6 @@ $NetBSD$
 BLAKE2s (muon-0.2.0/0.2.0.tar.gz) = 8de947544673e3a26b6569866ba40802de80fd36229b8bc1454ced55b698356b
 SHA512 (muon-0.2.0/0.2.0.tar.gz) = b2e90048756bdc26bdea24fe227a87ad4d0e57176e217e22ea492a55229c62e2a70243f60af1e162e2dde8468fdda9662a32ea5cfadd69fab95a83499efa077b
 Size (muon-0.2.0/0.2.0.tar.gz) = 510533 bytes
+BLAKE2s (muon-0.2.0/man.tar.gz) = cdd8868cb2a23a86d2969c7e73f5bd853927955b61d299fdc0159bfe2e1f80cd
+SHA512 (muon-0.2.0/man.tar.gz) = e1ef67ae1e03ca843f839bef9eee04a6a8aee7e3b7ecf13ea95aff992f390884da146d8386ea75ea3d6c3a9aca96acf61a5c743fdfab9745539eab20d838d068
+Size (muon-0.2.0/man.tar.gz) = 7131 bytes
