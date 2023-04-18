@@ -1,8 +1,0 @@
-x11/lxqt-session: update to 1.3.0
-
-lxqt-session-1.3.0 / 2023-04-15
-================================
- * Added support for procps-ng >= 4.0.0.
- * Use timer based checking for window manager and tray.
- * Disable crashing calls on Wayland.
- * Fixed typos.

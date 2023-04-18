@@ -1,6 +1,0 @@
-x11/lxqt-config: update to 1.3.0
-
-lxqt-config-1.3.0 / 2023-04-15
-===============================
- * Fixed potential segfault when loading keyboard layout settings.
- * lxqt-config-monitor: More header file inclusion for libkscreen 5.26.90.

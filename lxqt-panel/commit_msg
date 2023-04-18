@@ -1,9 +1,0 @@
-x11/lxqt-panel: update to 1.3.0
-
-lxqt-panel-1.3.0 / 2023-04-15
-==============================
- * Removed redundant classes from `VolumeButton` in volume plugin.
- * Fixed typos.
- * Added nullity check for quicklaunch placeholder.
- * Fixed the seconds shown by the clock widget.
- * Enable DOM plugin by default.
