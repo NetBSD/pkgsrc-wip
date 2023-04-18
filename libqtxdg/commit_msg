@@ -1,6 +1,0 @@
-x11/libqtxdg: update to 3.11.0
-
-libqtxdg-3.11.0 / 2023-04-15
-============================
- * Fixed file association with symlink desktop entries.
- * Fixed typos.

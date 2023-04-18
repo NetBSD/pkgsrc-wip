@@ -1,5 +1,0 @@
-x11/lxqt-qtplugin: update to 1.3.0
-
-lxqt-qtplugin-1.3.0 / 2023-04-15
-=================================
- * Bumped the version to 1.3.0 and updated the dependencies.
