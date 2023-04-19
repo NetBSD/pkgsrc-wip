@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	auto-admin-0.7.15.6
+DISTNAME=	auto-admin-0.7.15.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	3bd38ef293c157584f3d5be672daf44c78dff4e5
+GITHUB_TAG=	fdc6e1c25b5b308ffab240a1cc3dc19196b4d939
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/auto-admin
@@ -17,5 +17,12 @@ DEPENDS+=	pkg_install>=0:../../pkgtools/pkg_install
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_SED.prefix+=	-e 's|%%PREFIX%%|${PREFIX}|g'
+SUBST_SED.prefix+=	-e 's|%%PKGSRCDIR%%|${PKGSRCDIR}|g'
+SUBST_FILES.prefix+=	User-scripts/auto-pkgsrc-prefix
+SUBST_FILES.prefix+=	User-scripts/auto-pkgsrc-dir
 
 .include "../../mk/bsd.pkg.mk"
