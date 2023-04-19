@@ -10,6 +10,10 @@ HOMEPAGE=	https://github.com/outpaddling/auto-admin
 COMMENT=	Portable tools for automating systems management
 LICENSE=	2-clause-bsd
 
+# auto-pkgsrc-prefix looks for pkg_add, which isn't guaranteed to be
+# installed on NetBSD
+DEPENDS+=	pkg_install>=0:../../pkgtools/pkg_install
+
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
