@@ -18,6 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sentry-sdk-[0-9]*:../../devel/py-sentry-sdk
 DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
