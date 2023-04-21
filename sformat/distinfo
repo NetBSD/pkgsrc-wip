@@ -1,7 +1,0 @@
-$NetBSD$
-
-BLAKE2s (2023-01-12.tar.gz) = 14493310db8fe55fcb16f4b13cb6a4bb45ace541254c35e5b4d6d3fb178fc640
-SHA512 (2023-01-12.tar.gz) = a1eb37d5df8d2298ba4da6ccbf4bb937da13e8d9e4d7a8420b4d54a319c028c682e76a85c800d57a35d5f4b81a51b19600bbc2edb94641fa5e721ae23134ce15
-Size (2023-01-12.tar.gz) = 5895061 bytes
-SHA1 (patch-sformat_datio.c) = d1e1a8fa8906f69ae183fcee07a0d2d695c0e015
-SHA1 (patch-sformat_sformat.1) = bd125a26de0412af23198eb26419ac8333ab6a2f

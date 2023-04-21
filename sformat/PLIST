@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/sformat
-man/man8/sformat.8
-share/examples/sformat/sformat.dat
