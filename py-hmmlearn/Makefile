@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hmmlearn-0.2.8
+DISTNAME=	hmmlearn-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hmmlearn/}

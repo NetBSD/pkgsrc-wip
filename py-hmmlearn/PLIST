@@ -1,4 +1,5 @@
 @comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -9,7 +10,11 @@ ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/hmmlearn/__init__.py
 ${PYSITELIB}/hmmlearn/__init__.pyc
+${PYSITELIB}/hmmlearn/_emissions.py
+${PYSITELIB}/hmmlearn/_emissions.pyc
 ${PYSITELIB}/hmmlearn/_hmmc.so
+${PYSITELIB}/hmmlearn/_kl_divergence.py
+${PYSITELIB}/hmmlearn/_kl_divergence.pyc
 ${PYSITELIB}/hmmlearn/_utils.py
 ${PYSITELIB}/hmmlearn/_utils.pyc
 ${PYSITELIB}/hmmlearn/_version.py
@@ -36,11 +41,19 @@ ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm_multisequence.py
 ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm_multisequence.pyc
 ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm_new.py
 ${PYSITELIB}/hmmlearn/tests/test_gmm_hmm_new.pyc
+${PYSITELIB}/hmmlearn/tests/test_kl_divergence.py
+${PYSITELIB}/hmmlearn/tests/test_kl_divergence.pyc
 ${PYSITELIB}/hmmlearn/tests/test_multinomial_hmm.py
 ${PYSITELIB}/hmmlearn/tests/test_multinomial_hmm.pyc
 ${PYSITELIB}/hmmlearn/tests/test_poisson_hmm.py
 ${PYSITELIB}/hmmlearn/tests/test_poisson_hmm.pyc
 ${PYSITELIB}/hmmlearn/tests/test_utils.py
 ${PYSITELIB}/hmmlearn/tests/test_utils.pyc
+${PYSITELIB}/hmmlearn/tests/test_variational_categorical.py
+${PYSITELIB}/hmmlearn/tests/test_variational_categorical.pyc
+${PYSITELIB}/hmmlearn/tests/test_variational_gaussian.py
+${PYSITELIB}/hmmlearn/tests/test_variational_gaussian.pyc
 ${PYSITELIB}/hmmlearn/utils.py
 ${PYSITELIB}/hmmlearn/utils.pyc
+${PYSITELIB}/hmmlearn/vhmm.py
+${PYSITELIB}/hmmlearn/vhmm.pyc
