@@ -38,4 +38,8 @@ GO_SRCPATH=	github.com/goplus/gop
 
 .include "../../lang/go/go-package.mk"
 .include "../../wip/go-qiniu-x/buildlink3.mk"
+#.include "../../wip/go-goplus-c2go/buildlink3.mk"
+#.include "../../wip/go-goplus-gox/buildlink3.mk"
+#.include "../../wip/go-goplus-libc/buildlink3.mk"
+#.include "../../wip/go-goplus-mod/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
