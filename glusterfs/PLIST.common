@@ -85,6 +85,7 @@ include/glusterfs/rpc/rpc-transport.h
 include/glusterfs/rpc/rpcsvc-common.h
 include/glusterfs/rpc/rpcsvc.h
 include/glusterfs/rpc/xdr-common.h
+include/glusterfs/rpc/xdr-custom.h
 include/glusterfs/rpc/xdr-generic.h
 include/glusterfs/rpc/xdr-rpc.h
 include/glusterfs/rpc/xdr-rpcclnt.h
