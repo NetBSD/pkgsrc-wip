@@ -4,3 +4,4 @@ man/man1/alacritty-msg.1
 man/man1/alacritty.1
 share/applications/Alacritty.desktop
 share/examples/alacritty/alacritty.yml
+share/icons/hicolor/scalable/apps/alacritty-term.svg

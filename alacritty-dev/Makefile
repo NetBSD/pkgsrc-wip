@@ -45,7 +45,8 @@ SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-INSTALLATION_DIRS=	bin share/applications share/examples/alacritty ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin share/applications share/examples/alacritty \
+			${PKGMANDIR}/man1 share/icons/hicolor/scalable/apps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty \
@@ -58,6 +59,8 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty-msg.1
 	${INSTALL_DATA} ${WRKSRC}/extra/linux/Alacritty.desktop \
                  ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
@@ -68,4 +71,5 @@ do-install:
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .endif
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
