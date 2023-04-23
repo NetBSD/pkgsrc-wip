@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.5 2022/05/23 09:55:27 pin Exp $
 
-BLAKE2s (elvish-0.20.0-66a4c590eb5002ab560f5498e8c6cf1f3d3b401f.tar.gz) = d59a7f12d0b61a3d1641452ecd7cc05d1fcfb7db92d409b28d9be928e4160d2e
-SHA512 (elvish-0.20.0-66a4c590eb5002ab560f5498e8c6cf1f3d3b401f.tar.gz) = ccea314c9cafcf79843a38bddd20e29feed4f80cf422b0da1c0fddd665987fa5a4ad0e44410ce162525ec7b51ced64f5d90644c51378e0588715ac4cd8069276
-Size (elvish-0.20.0-66a4c590eb5002ab560f5498e8c6cf1f3d3b401f.tar.gz) = 831839 bytes
+BLAKE2s (elvish-0.20.0-25a1a7be282a4f7da65aea91edf75434db9466a0.tar.gz) = fd6d833fa7505a2058de9642dbb99426887845fe358e1a1b48b598521bd1e4de
+SHA512 (elvish-0.20.0-25a1a7be282a4f7da65aea91edf75434db9466a0.tar.gz) = 6776a666ea3a8bdd7e34278b584446892b2a64b978b87168731cb230d3387a754d53efc1ab027d99db6b6e48c5faf31d7ff4de8a00219c92ed8ea1e81ba5a625
+Size (elvish-0.20.0-25a1a7be282a4f7da65aea91edf75434db9466a0.tar.gz) = 833158 bytes
 BLAKE2s (github.com_creack_pty_@v_v1.1.15.mod) = 19b33a84ea62506eb4da7226657fea56d1c17f128a045f166d91db907c32c93e
 SHA512 (github.com_creack_pty_@v_v1.1.15.mod) = b825d82c81fd02f7dc8be5be8d4f0e3b9bf39a75e453857ab3f4d8d17129d2214f6b4dddd18cd613cb4d29dbd5adc59f43c1f65d218e7f3b67f0a8e33e62f5a6
 Size (github.com_creack_pty_@v_v1.1.15.mod) = 38 bytes
@@ -24,12 +24,6 @@ Size (github.com_mattn_go-isatty_@v_v0.0.17.mod) = 104 bytes
 BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.17.zip) = f1b8a76d5b6e1434d868835c2c46afec18fc5db2cae9c2b3a6edc88ac034770c
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.17.zip) = efdef08d523a70fde5c01c95d0ea50070425c0f6dd2302a5d0e2aa674ac54e24cdc1c6e0643fee91034570bbb7d9d77b6e196d9f07f640f861a02ca614dd39b3
 Size (github.com_mattn_go-isatty_@v_v0.0.17.zip) = 8935 bytes
-BLAKE2s (github.com_sourcegraph_go-lsp_@v_v0.0.0-20200429204803-219e11d77f5d.mod) = 56c97384103a3c2e4b657afad20e60793e33fa0e0b0eaf1d69ce7b0273e5fb92
-SHA512 (github.com_sourcegraph_go-lsp_@v_v0.0.0-20200429204803-219e11d77f5d.mod) = fbdd2c9031fffbe3b14c6ac9a270640c10d4e2a999c18d761d4a4519da7ebf0a69c89d47dfce0b81b7f10e5eaf86ff04c7f81897433b62cab28f82ed0ad9dbbb
-Size (github.com_sourcegraph_go-lsp_@v_v0.0.0-20200429204803-219e11d77f5d.mod) = 46 bytes
-BLAKE2s (github.com_sourcegraph_go-lsp_@v_v0.0.0-20200429204803-219e11d77f5d.zip) = b38107d461fd6d0fb4adc873f7b59ab0f8d91a5d581851cdd6b80e8d321009e8
-SHA512 (github.com_sourcegraph_go-lsp_@v_v0.0.0-20200429204803-219e11d77f5d.zip) = e33767d3a807a3da0f811edff6cd55b74618c8ea347ffb1bf0247d1ca3cff49a9f9155eed806856e7d7067b99a4af5e4daff5e6493d8b5da6677ffcbc6617e55
-Size (github.com_sourcegraph_go-lsp_@v_v0.0.0-20200429204803-219e11d77f5d.zip) = 22448 bytes
 BLAKE2s (github.com_sourcegraph_jsonrpc2_@v_v0.2.0.mod) = e2f00f0b8ce6d8ae8c39f756e79119459d80211829de06aa4395527bba361798
 SHA512 (github.com_sourcegraph_jsonrpc2_@v_v0.2.0.mod) = bd57233e889c63b5105cbf68a5aff6ea98f227002242e3862098ce51c543b05edc66b63ac0efbeef2f8a5c4ea15febf8015029dd8afdf23254ddb77b00229463
 Size (github.com_sourcegraph_jsonrpc2_@v_v0.2.0.mod) = 93 bytes
@@ -51,3 +45,9 @@ Size (golang.org_x_sys_@v_v0.5.0.mod) = 33 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.5.0.zip) = 14721a3d09811a734c38cfc706c39707130d6e7a1c6f7fb75dcc20ba1a9646dc
 SHA512 (golang.org_x_sys_@v_v0.5.0.zip) = f3773070316c0069017ff4e03e2cc1a4ccac7e77d76b1352f68c7afec19ac7c794102692b42ae0e3a9e54673746a2a327035db14eae6b4d7d4bfc854cd64934e
 Size (golang.org_x_sys_@v_v0.5.0.zip) = 1886681 bytes
+BLAKE2s (pkg.nimblebun.works_go-lsp_@v_v1.1.0.mod) = b7d270d17baaec92ea8c1f8d90142e5d97909c5a5756a7ca1b626c4a366d04d1
+SHA512 (pkg.nimblebun.works_go-lsp_@v_v1.1.0.mod) = 3769f19ea9c56aea802d0f2ca88f89edb2effed900894a88424b6385335a0d4fd93a183a56ca5ca8317e312291a423e5e7180c81246c5d13d6aa5317df2740eb
+Size (pkg.nimblebun.works_go-lsp_@v_v1.1.0.mod) = 43 bytes
+BLAKE2s (pkg.nimblebun.works_go-lsp_@v_v1.1.0.zip) = 755a17195ebea4c5381923f9db51425ab700e34a310311c29beb433e4eee3730
+SHA512 (pkg.nimblebun.works_go-lsp_@v_v1.1.0.zip) = f18672a8b65529412a7494b978f290ab878f820a1926fc24b121a89f021a73170b9ad2e3f9e87edae35745e13e1f44cf32943891de85408142cfe6406da15276
+Size (pkg.nimblebun.works_go-lsp_@v_v1.1.0.zip) = 45971 bytes
