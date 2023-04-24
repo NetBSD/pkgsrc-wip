@@ -2281,6 +2281,7 @@ SUBDIR+=	lwc
 SUBDIR+=	lwtools
 SUBDIR+=	lxdm
 SUBDIR+=	lxmusic
+SUBDIR+=	lxqt-panel-dev
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
 SUBDIR+=	mac-icon-standard
