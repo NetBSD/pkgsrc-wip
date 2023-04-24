@@ -4,9 +4,9 @@ Narrow the conditional on mips to only apply to Linux.
 
 --- vendor/nix/src/sys/signal.rs.orig	2023-01-25 01:49:16.000000000 +0000
 +++ vendor/nix/src/sys/signal.rs
-@@ -864,7 +864,7 @@ mod sigevent {
+@@ -1069,7 +1069,7 @@ mod sigevent {
                  SigevNotify::SigevThreadId{..} => libc::SIGEV_THREAD_ID,
-                 #[cfg(all(target_os = "linux", target_env = "gnu", not(target_arch = "mips")))]
+                 #[cfg(all(target_os = "linux", target_env = "uclibc"))]
                  SigevNotify::SigevThreadId{..} => libc::SIGEV_THREAD_ID,
 -                #[cfg(any(all(target_os = "linux", target_env = "musl"), target_arch = "mips"))]
 +                #[cfg(all(target_os = "linux", target_env = "musl", target_arch = "mips"))]

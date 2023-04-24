@@ -5,13 +5,13 @@ https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_increment
 
 --- src/tools/cargo/src/cargo/core/profiles.rs.orig	2018-10-24 20:01:28.000000000 +0000
 +++ src/tools/cargo/src/cargo/core/profiles.rs
-@@ -720,6 +720,9 @@ impl Profile {
-             debuginfo: Some(2),
+@@ -686,6 +686,9 @@ impl Profile {
+             debuginfo: DebugInfo::Explicit(2),
              debug_assertions: true,
              overflow_checks: true,
-+            #[cfg(target_arch = "sparc64")]
-+            incremental: false,
-+            #[cfg(not(target_arch = "sparc64"))]
++	    #[cfg(target_arch = "sparc64")]
++	    incremental: false,
++	    #[cfg(not(target_arch = "sparc64"))]
              incremental: true,
              ..Profile::default()
          }

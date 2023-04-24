@@ -1,8 +1,8 @@
 $NetBSD$
 
---- vendor/libc-0.2.137/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
-+++ vendor/libc-0.2.137/src/unix/bsd/netbsdlike/netbsd/mod.rs
-@@ -3025,6 +3025,23 @@ extern "C" {
+--- vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
++++ vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs
+@@ -3049,6 +3049,22 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
  
@@ -22,17 +22,16 @@ $NetBSD$
 +    ) -> *mut *mut ::c_char;
 +}
 +
-+
  cfg_if! {
      if #[cfg(target_arch = "aarch64")] {
          mod aarch64;
-@@ -3044,7 +3061,12 @@ cfg_if! {
+@@ -3068,7 +3084,12 @@ cfg_if! {
      } else if #[cfg(target_arch = "x86")] {
          mod x86;
          pub use self::x86::*;
 +    } else if #[cfg(target_arch = "mips")] {
-+        mod mips;
-+        pub use self::mips::*;
++	mod mips;
++	pub use self:;mips::*;
      } else {
 -        // Unknown target_arch
 +        // Unknown target_arch, this should error out
