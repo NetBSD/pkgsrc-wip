@@ -3806,7 +3806,6 @@ SUBDIR+=	py-freetype-py
 SUBDIR+=	py-frida
 SUBDIR+=	py-frida-tools
 SUBDIR+=	py-fssa
-SUBDIR+=	py-fsspec
 SUBDIR+=	py-functions
 SUBDIR+=	py-furo
 SUBDIR+=	py-fwarp

@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (fsspec-2023.3.0.tar.gz) = 1bf24ab4d71e97f434e9dbfa51478ecf213b2f3ccb8b2473dfa7513db8afe3ae
-SHA512 (fsspec-2023.3.0.tar.gz) = 7c21eb60932267fe73dea3672d2e9b2d71fb3df26aedec9d109109168b91605602903518337563c00ae8b7d82212211ca569d3a91adb840eefd41eecab33c3ec
-Size (fsspec-2023.3.0.tar.gz) = 352352 bytes

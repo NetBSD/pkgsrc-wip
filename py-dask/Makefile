@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-partd>=0.3.10:../../wip/py-partd
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-distributed>=2022.12.0:../../wip/py-distributed
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.1.1:../../wip/py-cloudpickle
-DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.7.1:../../wip/py-fsspec
+DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.7.1:../../sysutils/py-fsspec
 DEPENDS+=	${PYPKGPREFIX}-zict>=2.1.0:../../wip/py-zict
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2

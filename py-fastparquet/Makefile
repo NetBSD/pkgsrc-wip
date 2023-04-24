@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_s
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-cramjam>=2.3.0:../../wip/py-cramjam
-DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.3.0:../../wip/py-fsspec
+DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.3.0:../../sysutils/py-fsspec
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
