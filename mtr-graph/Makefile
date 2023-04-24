@@ -1,15 +1,15 @@
 # $NetBSD$
 
 CATEGORIES=	net
-PKGBASE=	mtr
-PKGVERSION=	0.85.99
-PKGREVISION=	12
-PKGNAME=	${PKGBASE}-graph-${PKGVERSION}
+PKGBASE=	mtr085
+PKGVERSION=	119
+PKGREVISION=	13
+PKGNAME=	${PKGBASE}-${PKGVERSION}
 DISTNAME=	${PKGBASE}-${GITHUB_HASH}
 MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITHUB_HASH}/
 WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITHUB_HASH}
 
-GITHUB_HASH=	8506092
+GITHUB_HASH=	0cfc159
 GITHUB_USER=	yvs2014
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,8 +17,7 @@ HOMEPAGE=	https://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS=	mtr-[0-9]*
-CONFLICTS+=	mtr-current-[0-9]*
+CONFLICTS=	mtr-*
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf autoreconf automake
