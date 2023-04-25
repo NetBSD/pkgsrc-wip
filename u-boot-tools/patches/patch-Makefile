@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use the native compiler for building tools.
+
+--- Makefile.orig	2023-04-03 20:38:50.000000000 +0000
++++ Makefile
+@@ -824,7 +824,7 @@ UBOOTINCLUDE    := \
+ 	-I$(srctree)/arch/$(ARCH)/include \
+ 	-include $(srctree)/include/linux/kconfig.h
+ 
+-NOSTDINC_FLAGS += -nostdinc -isystem $(shell $(CC) -print-file-name=include)
++# NOSTDINC_FLAGS += -nostdinc -isystem $(shell $(CC) -print-file-name=include)
+ 
+ # FIX ME
+ cpp_flags := $(KBUILD_CPPFLAGS) $(PLATFORM_CPPFLAGS) $(UBOOTINCLUDE) \

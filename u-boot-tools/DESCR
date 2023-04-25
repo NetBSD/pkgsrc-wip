@@ -1,0 +1,8 @@
+This directory contains the source code for U-Boot, a boot loader for
+Embedded boards based on PowerPC, ARM, MIPS and several other
+processors, which can be installed in a boot ROM and used to
+initialize and test the hardware or to download and run application
+code.
+
+This package installs only the U-Boot tools, e.g., mkimage for making
+boot scripts.

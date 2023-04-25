@@ -5781,6 +5781,7 @@ SUBDIR+=	u-boot-nanopi-r2s
 SUBDIR+=	u-boot-orangepi-pc2
 SUBDIR+=	u-boot-pinebook-crust
 SUBDIR+=	u-boot-sifive-unleashed
+SUBDIR+=	u-boot-tools
 SUBDIR+=	u-boot-visionfive2
 SUBDIR+=	uTox-git
 SUBDIR+=	uade
