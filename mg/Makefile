@@ -34,5 +34,5 @@ SUBST_SED.path+=	-e "s|/usr/share/doc|${PREFIX}/share/doc|g"
 .if !empty(MACHINE_PLATFORM:MLinux-*-*)
 .include "../../devel/libbsd/buildlink3.mk"
 .endif
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
