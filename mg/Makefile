@@ -29,7 +29,6 @@ SUBST_MESSAGE.path=	Adjusting path.
 SUBST_FILES.path=	GNUmakefile mg.1
 SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/share/doc|${PREFIX}/share/doc|g"
-SUBST_SED.path+=	-e "s|/usr/bin/pkg-config|pkg-config|g"
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MLinux-*-*)
