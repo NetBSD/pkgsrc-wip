@@ -9,3 +9,5 @@ Need to figure out ALSA so mpd mode can be tested.
 
 Config file should be installed into share/examples/owntone and
 installed using CONF_FILES
+
+Build and install web interface (separate package?).
