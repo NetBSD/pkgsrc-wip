@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://invent.kde.org/libraries/polkit-qt-1/-/archive/v0.114.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://projects.kde.org/projects/kdesupport/polkit-qt-1
+HOMEPAGE=	https://invent.kde.org/libraries/polkit-qt-1
 COMMENT=	Qt5 Wrapper around PolicyKit
 LICENSE=	gnu-lgpl-v2.1
 
