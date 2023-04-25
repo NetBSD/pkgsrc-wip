@@ -995,6 +995,7 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.de
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.el_GR
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.eo
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.es
+share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.fa
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.fr
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.he
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.it
