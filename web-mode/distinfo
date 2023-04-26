@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (web-mode-17.2.1.tar.gz) = 6d41510de4e8653a84aee2643747042efa88cee35aaa5494efbb6782bfcc83d7
+SHA512 (web-mode-17.2.1.tar.gz) = bfd68cae6a79f9a77b512c94cdb1ce0ffedb763ee741c4c5b1e59caaedf46b40ee2920dce5d1023689b9382d4573975f5d397fc9fc96232deb558d0952d7beef
+Size (web-mode-17.2.1.tar.gz) = 155440 bytes
