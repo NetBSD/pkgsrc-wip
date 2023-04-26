@@ -106,9 +106,9 @@ BUILD_TARGET?=		dist
 BUILD_TARGET?=		build
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || \
     !empty(TARGET:Marmv[67]-unknown-netbsd-eabihf) || \
     !empty(TARGET:Mmipsel-unknown-netbsd)
 # Bootstrapping on NetBSD/powerpc requires no debug-info from rustc
@@ -125,7 +125,7 @@ CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 .endif
 
 # Only build the ARM target on/for this host, due to resource constraints
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf)
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf}
 CONFIGURE_ARGS+=	--set llvm.targets="ARM"
 .endif
 # When cross-building for ARM on X86, X86 needs to go along due
@@ -134,7 +134,7 @@ CONFIGURE_ARGS+=	--set llvm.targets="ARM"
 CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 # Same for mips:
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
+.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel}
 CONFIGURE_ARGS+=	--set llvm.targets="Mips"
 .endif
 .if !empty(TARGET:Mmipsel-unknown-netbsd)
@@ -197,7 +197,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 # breaks linking, see https://github.com/rust-lang/rust/issues/81790.  Until
 # this can be located (proving difficult!) we just force it.
 #
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 BUILDLINK_TRANSFORM+=	opt:x86_64:arm64
 .endif
 
@@ -209,49 +209,49 @@ BUILDLINK_TRANSFORM+=	opt:x86_64:arm64
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		aarch64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MDarwin-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		x86_64-apple-darwin
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		aarch64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-earmv6hf) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-earmv6hf} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		arm-unknown-linux-gnueabihf
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-earmv7hf} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		armv7-unknown-linux-gnueabihf
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-i386} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		i686-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		x86_64-unknown-linux-gnu
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -263,7 +263,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # are built on.  If you wish to target Oracle Solaris you'll need to create an
 # x86_64-sun-solaris bootstrap and comment out the overrides.
 #
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
@@ -276,14 +276,14 @@ CONFIGURE_ARGS+=	--build=${RUST_ARCH}
 CONFIGURE_ARGS+=	--host=${RUST_ARCH}
 CONFIGURE_ARGS+=	--target=${RUST_ARCH}
 .endif
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MFreeBSD-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH:=		x86_64-unknown-freebsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH=		i586-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -303,14 +303,14 @@ pre-build-fix-paxctl:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/cargo
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.68.2
 RUST_ARCH=		powerpc-unknown-netbsd
 
@@ -333,7 +333,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .  endif
 
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=		1.68.2
 RUST_ARCH=			aarch64-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -342,7 +342,7 @@ DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64eb} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=		1.68.2
 RUST_ARCH=			aarch64_be-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -351,7 +351,7 @@ DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=		1.68.2
 RUST_ARCH=			sparc64-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -360,7 +360,7 @@ DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv7hf} || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			armv7-unknown-netbsd-eabihf
 RUST_STAGE0_VER=		1.68.2
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -369,7 +369,7 @@ DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv6hf} || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			armv6-unknown-netbsd-eabihf
 RUST_STAGE0_VER=		1.68.2
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -378,7 +378,7 @@ DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make (makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			mipsel-unknown-netbsd
 RUST_STAGE0_VER=		1.68.2
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -662,17 +662,17 @@ stage0-bootstrap: install
 # rust i386 and sparc64 bootstraps are built for 8.0
 # and still depend on libstdc++.so.8.
 # Pull in compat80 on 9.x and newer.
-.if (!empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-     !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)) \
+.if (${MACHINE_PLATFORM:MNetBSD-*-i386} || \
+     ${MACHINE_PLATFORM:MNetBSD-*-sparc64}) \
     && empty(OS_VERSION:M8.*)
 BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
 .include "../../mk/atomic64.mk"
 # This is for when we build natively:
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-mipsel}
 # Make libatomic library available via a unique directory:
 DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
