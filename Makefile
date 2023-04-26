@@ -2471,7 +2471,6 @@ SUBDIR+=	mtop
 SUBDIR+=	mtpaint
 SUBDIR+=	mtpaint-git
 SUBDIR+=	mtpfs
-SUBDIR+=	mtr-current
 SUBDIR+=	mtr-graph
 SUBDIR+=	mtrack
 SUBDIR+=	mtrxmath
