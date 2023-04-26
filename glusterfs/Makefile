@@ -166,7 +166,7 @@ BUILDLINK_API_DEPENDS.userspace-rcu+=	userspace-rcu>=0.12.1
 .include "../../devel/userspace-rcu/buildlink3.mk"
 .if ${OPSYS} == "Linux"
 .include "../../devel/liburing/buildlink3.mk"
-.include "../../devel/acl/buildlink3.mk"
+.include "../../sysutils/acl/buildlink3.mk"
 .endif
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
