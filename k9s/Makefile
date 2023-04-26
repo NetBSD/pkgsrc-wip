@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	k9s-0.25.18
+DISTNAME=	k9s-0.27.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=derailed/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,6 @@ GO_BUILD_PATTERN+=	-ldflags ' \
 			-X github.com/derailed/k9s/cmd.version=${GITHUB_TAG} \
 			-X github.com/derailed/k9s/cmd.commit= \
 			-X github.com/derailed/k9s/cmd.date='
-#GO_BUILD_PATTERN+=	.
 
 .include "go-modules.mk"
 
