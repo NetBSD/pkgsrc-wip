@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	shellharden-4.1.1
+DISTNAME=	shellharden-4.3.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anordal/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	shells

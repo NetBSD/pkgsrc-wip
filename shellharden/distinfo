@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (shellharden-4.1.1.tar.gz) = 541386c92294d310abbcf045f0692a946d567c14
-SHA512 (shellharden-4.1.1.tar.gz) = 994c08c7ee228e4d76c307a2117df4667bbc66cd1d794d43c8be7356faf8c1611b6cb297d17768b4e228e77b24f2c4d2148d08cac341e861f49e9fc0dbd813a0
-Size (shellharden-4.1.1.tar.gz) = 183147 bytes
+BLAKE2s (shellharden-4.3.0.tar.gz) = d16b3bdfdd8b961ab4265a20b3a501d0f82702a275555293febb117e9418d0dc
+SHA512 (shellharden-4.3.0.tar.gz) = b03303a179cc6aa16224c138444b6d2a7b0f697a9f5f736761e0aa36bb03893aad1707bc4df6bb2d59da698104289a4189353cbf123bbdd9b6de15f1206edfa8
+Size (shellharden-4.3.0.tar.gz) = 191795 bytes
