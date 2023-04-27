@@ -1,7 +1,6 @@
 $NetBSD$
 
-BLAKE2s (gzdoom/g4.8.2.tar.gz) = df424df1b3dffefb8bd9642eaefe5fa1322e99c9e14c338771aad1bab41b7824
-SHA512 (gzdoom/g4.8.2.tar.gz) = 5f94aca016e87c8284b41d5c3beaeb752a4201e4562a528375addc976c7d7163d23a4885a223e4377856a2b75b71179efa80e99baf3edfe87fa19cf1e8bbfa42
-Size (gzdoom/g4.8.2.tar.gz) = 24247668 bytes
-SHA1 (patch-src_d__main.cpp) = 74b13c286d6dc1509a37cf66d54bdf149e379d43
+BLAKE2s (gzdoom/g4.10.0.tar.gz) = 178ae2f7f527c8523141b340866718055286a5248c52dbb1ac7d4f79993d8057
+SHA512 (gzdoom/g4.10.0.tar.gz) = fd2f6e34aaa59e3d153de6359211082398878dae3d396ab55fc736f94e1378d5e03193d7912a29a531cf1dc255d30af63ad1c6472784e3745db6ac4a3a9e6fe6
+Size (gzdoom/g4.10.0.tar.gz) = 24319337 bytes
 SHA1 (patch-src_gameconfigfile.cpp) = 4c30c413e7d4bc3b25e940f8d5cb7e5dabbc8092
