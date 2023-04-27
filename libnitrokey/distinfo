@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libnitrokey-3.8.tar.gz) = d7c2b3c779809b63028c7f1f927f4b8c108d6616cdf00a09ab0c5354e5095eae
+SHA512 (libnitrokey-3.8.tar.gz) = 30f966eed77aa75057b096d18f8e88d6be28a376dfc1888e44aff80347e031a16755d30acf1bca196acc5b922778d90627ac71cba22f5cb002ba3ec058939c90
+Size (libnitrokey-3.8.tar.gz) = 118197 bytes
