@@ -2377,7 +2377,6 @@ SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
 SUBDIR+=	mightymike
 SUBDIR+=	miktex
-SUBDIR+=	miller
 SUBDIR+=	milou
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
