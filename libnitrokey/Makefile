@@ -16,10 +16,6 @@ USE_TOOLS+=	pkg-config
 .include "options.mk"
 # libudev-devd
 
-# These tests do not require any device to be connected
-# -DCOMPILE_OFFLINE_TESTS=ON
-# catch2
-
 # actual hardware tests
 #   1. require a connected Nitrokey
 #   2. may kill data on your Nitrokey
