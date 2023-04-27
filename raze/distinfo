@@ -1,6 +1,9 @@
 $NetBSD$
 
-BLAKE2s (Raze/1.5.0.tar.gz) = 4fb17a904893cb5a0e68614d6024f13f3a40f837943741b2ea22dece272b4dfc
-SHA512 (Raze/1.5.0.tar.gz) = 6686e0d0a8e73b676eaa3df45d8be6c0100e7732b916d572caeff5b1a3b6caef1a4e733ea98ce63cc23f3fca079e94eab8a08f563eb1f48c2ec3615bfbdc5719
-Size (Raze/1.5.0.tar.gz) = 15553911 bytes
-SHA1 (patch-source_core_gameconfigfile.cpp) = d147437dd1729dccb1a92a5d446bb08784352778
+BLAKE2s (Raze/1.7.1.tar.gz) = da763806144771cdc20c55e253613de3e66f195b30d9f99bfda8ca3478832e89
+SHA512 (Raze/1.7.1.tar.gz) = 379148c2aee9ca37ddba70b75233e6db05f46c1fc99624c65adada399858dbd3141b1f5240cec2cf86e731eaa44d283136af791d4eefc9421c9fb244be084b4d
+Size (Raze/1.7.1.tar.gz) = 18722339 bytes
+SHA1 (patch-libraries_ZVulkan_CMakeLists.txt) = 7600c20a8a421686bceeb3ad0623ac1a7c329bb3
+SHA1 (patch-source_common_console_c__console.h) = 08232b557703523e36228592d211fe8ad423b14c
+SHA1 (patch-source_common_platform_posix_sdl_i__system.cpp) = aa7e0edaa0166b2760910ad2f14461e5cd940a69
+SHA1 (patch-source_games_blood_src_nnexts.cpp) = d8c393d104c933944313cbf36ff5bb5d3d24f666
