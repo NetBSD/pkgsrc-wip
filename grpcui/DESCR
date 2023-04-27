@@ -1,0 +1,2 @@
+grpcui is a command-line tool that lets you interact with gRPC servers via a
+browser. It's sort of like Postman, but for gRPC APIs instead of REST.
