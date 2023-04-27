@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.py-pynitrokey
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libnitrokey
 
 PKG_SUPPORTED_OPTIONS+=		doc tests
 
