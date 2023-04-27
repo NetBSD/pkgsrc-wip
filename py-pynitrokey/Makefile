@@ -29,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-fido2-[0-9]*:../../security/py-fido2
-#DEPENDS+=	libnitrokey-[0-9]*:../../security/libnitrokey
+DEPENDS+=	libnitrokey-[0-9]*:../../security/libnitrokey
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
