@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.51 2023/04/17 09:22:04 adam Exp $
+
+BLAKE2s (pynitrokey-0.4.36.tar.gz) = 39b8b78340bf0eb3aea2b8d93643c879326e31a41940a5d11d0a27002c65abc5
+SHA512 (pynitrokey-0.4.36.tar.gz) = 0bda495e64a9d52f1ca3d6fce89f0758ab589697bf3d2e5bfd1a1582e51b16d8efb68f0277fb17776cb5d3028a1b37b356744262a972bfd02bf16895a84b4a48
+Size (pynitrokey-0.4.36.tar.gz) = 283395 bytes
