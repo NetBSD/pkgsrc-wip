@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/raptor
+share/doc/raptor/README.md
+share/examples/raptor/SETUP(ADLIB).INI
+share/examples/raptor/SETUP(MIDI).INI

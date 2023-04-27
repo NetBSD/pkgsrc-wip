@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (raptor-0.8.0.tar.gz) = 4f0dd22a68391fa196d2a928ca3673c1781e10d5b54dd7f2f7d5d1526144ac9d
+SHA512 (raptor-0.8.0.tar.gz) = e7d74b2a54054e08c314ea78113081f3dca5ce0bd4e9e849bd1ccfd98a6122047f7f444dd5e37921dcd27f838952de8a6de12298cd59e5124af6142a4b08f5e5
+Size (raptor-0.8.0.tar.gz) = 20664443 bytes
