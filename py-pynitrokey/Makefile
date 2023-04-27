@@ -37,9 +37,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 
-#post-install:
-#	cd ${DESTDIR}${PREFIX}/bin && \
-#        ${MV} pip-audit pip-audit-${PYVERSSUFFIX} || ${TRUE}
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+        ${MV} nitropy nitropy-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
