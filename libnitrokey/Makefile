@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Nitrokey/}
 GITHUB_PROJECT=	libnitrokey
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/Nitrokey/libnitrokey/
 COMMENT=	Library to communicate with Nitrokey devices
 LICENSE=	gnu-lgpl-v3

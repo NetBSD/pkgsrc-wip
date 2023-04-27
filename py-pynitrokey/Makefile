@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynitrokey/}
 #GITHUB_PROJECT=	pynitrokey
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/pynitrokey/
 COMMENT=	Python library for Nitrokey devices
 LICENSE=	apache-2.0 AND mit
