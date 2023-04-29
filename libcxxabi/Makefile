@@ -27,7 +27,7 @@ CMAKE_ARG_PATH=	${WRKSRC}
 USE_LANGUAGES=	c c++17
 USE_CMAKE=	yes
 SSP_SUPPORTED=	no
-GCC_REQD+=	10	# must be in sync with libcxx
+GCC_REQD+=	12	# must be in sync with libcxx
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 

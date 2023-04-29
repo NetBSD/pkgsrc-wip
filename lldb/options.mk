@@ -9,5 +9,6 @@ PKG_SUPPORTED_OPTIONS+=	tests
 .if ${PKG_OPTIONS:Mtests}
 CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=ON
 .else
+# py-lit, py-psutil, lld
 CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 .endif
