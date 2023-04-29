@@ -1,4 +1,0 @@
-@comment $NetBSD$
-libexec/git-core/git-cinnabar
-libexec/git-core/git-remote-hg
-share/doc/git-cinnabar/README.md
