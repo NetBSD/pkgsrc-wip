@@ -70,6 +70,8 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
 CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 .  endif
 
+.include "options.mk"
+
 .  if ${OPSYS_VERSION} < 99922
 # lacks ptrace(2) PT_STOP
 PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
