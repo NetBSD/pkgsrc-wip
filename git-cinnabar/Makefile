@@ -10,13 +10,18 @@ HOMEPAGE=	https://github.com/glandium/git-cinnabar/
 COMMENT=	Remote helper to use mercurial repositories with git
 LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
+.include "cargo-depends.mk"
+
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 
-.include "cargo-depends.mk"
+#do-build:
+#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE}
+
 .include "../../lang/rust/cargo.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
