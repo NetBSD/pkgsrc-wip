@@ -1,0 +1,17 @@
+$NetBSD: patch-source_API_CMakeLists.txt,v 1.6 2022/08/12 08:54:31 pin Exp $
+
+Fix finding libxml2's includes.
+
+--- source/API/CMakeLists.txt.orig	2022-06-22 16:46:24.000000000 +0000
++++ source/API/CMakeLists.txt
+@@ -15,6 +15,10 @@ if(LLDB_ENABLE_LUA)
+   set(lldb_lua_wrapper ${lua_bindings_dir}/LLDBWrapLua.cpp)
+ endif()
+ 
++if(LIBXML2_FOUND)
++  include_directories(SYSTEM ${LIBXML2_INCLUDE_DIR})
++endif()
++
+ add_lldb_library(liblldb SHARED ${option_framework}
+   SBAddress.cpp
+   SBAttachInfo.cpp
