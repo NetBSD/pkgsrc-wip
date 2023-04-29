@@ -1,0 +1,234 @@
+===> Building for libcxxabi-16.0.2
+[  5%] Copying CXXABI header __cxxabi_config.h
+[  5%] Copying CXXABI header cxxabi.h
+[  5%] Built target generate-cxxabi-headers
+[  7%] Building CXX object src/CMakeFiles/cxxabi_static_objects.dir/cxa_aux_runtime.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/cxxabi_static_objects.dir/cxa_default_handlers.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/cxxabi_shared_objects.dir/cxa_default_handlers.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/cxxabi_shared_objects.dir/cxa_aux_runtime.cpp.o
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:479,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:38: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   23 |     : public integral_constant<bool, __is_nothrow_assignable(_Tp, _Arg)> {};
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:38: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:72: error: template argument 2 is invalid
+   23 |     : public integral_constant<bool, __is_nothrow_assignable(_Tp, _Arg)> {};
+      |                                                                        ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:76: error: expected primary-expression before ',' token
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                                            ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:82: error: expected primary-expression before ')' token
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                                                  ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:49: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:482,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_copy_assignable.h:27:11: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 |           __is_nothrow_assignable(
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_copy_assignable.h:29:71: error: template argument 2 is invalid
+   29 |               __add_lvalue_reference_t<typename add_const<_Tp>::type>)> {};
+      |                                                                       ^
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:484,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:22:38: error: there are no arguments to '__is_nothrow_constructible' that depend on a template parameter, so a declaration of '__is_nothrow_constructible' must be available [-fpermissive]
+   22 |     : public integral_constant<bool, __is_nothrow_constructible(_Tp)>
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:22:69: error: template argument 2 is invalid
+   22 |     : public integral_constant<bool, __is_nothrow_constructible(_Tp)>
+      |                                                                     ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:27:90: error: expected primary-expression before ')' token
+   27 | inline constexpr bool is_nothrow_default_constructible_v = __is_nothrow_constructible(_Tp);
+      |                                                                                          ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:27:60: error: there are no arguments to '__is_nothrow_constructible' that depend on a template parameter, so a declaration of '__is_nothrow_constructible' must be available [-fpermissive]
+   27 | inline constexpr bool is_nothrow_default_constructible_v = __is_nothrow_constructible(_Tp);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:486,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_move_assignable.h:27:11: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 |           __is_nothrow_assignable(__add_lvalue_reference_t<_Tp>, __add_rvalue_reference_t<_Tp>)> {
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_move_assignable.h:27:96: error: template argument 2 is invalid
+   27 |           __is_nothrow_assignable(__add_lvalue_reference_t<_Tp>, __add_rvalue_reference_t<_Tp>)> {
+      |                                                                                                ^
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:479,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:38: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   23 |     : public integral_constant<bool, __is_nothrow_assignable(_Tp, _Arg)> {};
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:38: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:72: error: template argument 2 is invalid
+   23 |     : public integral_constant<bool, __is_nothrow_assignable(_Tp, _Arg)> {};
+      |                                                                        ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:76: error: expected primary-expression before ',' token
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                                            ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:82: error: expected primary-expression before ')' token
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                                                  ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:49: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:482,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_copy_assignable.h:27:11: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 |           __is_nothrow_assignable(
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_copy_assignable.h:29:71: error: template argument 2 is invalid
+   29 |               __add_lvalue_reference_t<typename add_const<_Tp>::type>)> {};
+      |                                                                       ^
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:484,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:22:38: error: there are no arguments to '__is_nothrow_constructible' that depend on a template parameter, so a declaration of '__is_nothrow_constructible' must be available [-fpermissive]
+   22 |     : public integral_constant<bool, __is_nothrow_constructible(_Tp)>
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:22:69: error: template argument 2 is invalid
+   22 |     : public integral_constant<bool, __is_nothrow_constructible(_Tp)>
+      |                                                                     ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:27:90: error: expected primary-expression before ')' token
+   27 | inline constexpr bool is_nothrow_default_constructible_v = __is_nothrow_constructible(_Tp);
+      |                                                                                          ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:27:60: error: there are no arguments to '__is_nothrow_constructible' that depend on a template parameter, so a declaration of '__is_nothrow_constructible' must be available [-fpermissive]
+   27 | inline constexpr bool is_nothrow_default_constructible_v = __is_nothrow_constructible(_Tp);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:486,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/new:97,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_aux_runtime.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_move_assignable.h:27:11: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 |           __is_nothrow_assignable(__add_lvalue_reference_t<_Tp>, __add_rvalue_reference_t<_Tp>)> {
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_move_assignable.h:27:96: error: template argument 2 is invalid
+   27 |           __is_nothrow_assignable(__add_lvalue_reference_t<_Tp>, __add_rvalue_reference_t<_Tp>)> {
+      |                                                                                                ^
+--- src/CMakeFiles/cxxabi_static_objects.dir/cxa_aux_runtime.cpp.o ---
+*** [src/CMakeFiles/cxxabi_static_objects.dir/cxa_aux_runtime.cpp.o] Error code 1
+
+make[2]: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+--- src/CMakeFiles/cxxabi_shared_objects.dir/all ---
+*** [src/CMakeFiles/cxxabi_shared_objects.dir/all] Error code 6
+
+make[1]: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:479,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_default_handlers.cpp:12:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:38: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   23 |     : public integral_constant<bool, __is_nothrow_assignable(_Tp, _Arg)> {};
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:38: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:23:72: error: template argument 2 is invalid
+   23 |     : public integral_constant<bool, __is_nothrow_assignable(_Tp, _Arg)> {};
+      |                                                                        ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:76: error: expected primary-expression before ',' token
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                                            ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:82: error: expected primary-expression before ')' token
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                                                  ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_assignable.h:27:49: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 | inline constexpr bool is_nothrow_assignable_v = __is_nothrow_assignable(_Tp, _Arg);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:482,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_default_handlers.cpp:12:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_copy_assignable.h:27:11: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 |           __is_nothrow_assignable(
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_copy_assignable.h:29:71: error: template argument 2 is invalid
+   29 |               __add_lvalue_reference_t<typename add_const<_Tp>::type>)> {};
+      |                                                                       ^
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:484,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_default_handlers.cpp:12:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:22:38: error: there are no arguments to '__is_nothrow_constructible' that depend on a template parameter, so a declaration of '__is_nothrow_constructible' must be available [-fpermissive]
+   22 |     : public integral_constant<bool, __is_nothrow_constructible(_Tp)>
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:22:69: error: template argument 2 is invalid
+   22 |     : public integral_constant<bool, __is_nothrow_constructible(_Tp)>
+      |                                                                     ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:27:90: error: expected primary-expression before ')' token
+   27 | inline constexpr bool is_nothrow_default_constructible_v = __is_nothrow_constructible(_Tp);
+      |                                                                                          ^
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_default_constructible.h:27:60: error: there are no arguments to '__is_nothrow_constructible' that depend on a template parameter, so a declaration of '__is_nothrow_constructible' must be available [-fpermissive]
+   27 | inline constexpr bool is_nothrow_default_constructible_v = __is_nothrow_constructible(_Tp);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/type_traits:486,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:381,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_default_handlers.cpp:12:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_move_assignable.h:27:11: error: there are no arguments to '__is_nothrow_assignable' that depend on a template parameter, so a declaration of '__is_nothrow_assignable' must be available [-fpermissive]
+   27 |           __is_nothrow_assignable(__add_lvalue_reference_t<_Tp>, __add_rvalue_reference_t<_Tp>)> {
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_nothrow_move_assignable.h:27:96: error: template argument 2 is invalid
+   27 |           __is_nothrow_assignable(__add_lvalue_reference_t<_Tp>, __add_rvalue_reference_t<_Tp>)> {
+      |                                                                                                ^
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__algorithm/copy.h:16,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__memory/uninitialized_algorithms.h:13,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__memory/ranges_uninitialized_algorithms.h:22,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/memory:896,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_default_handlers.cpp:13:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__iterator/segmented_iterator.h:72:46: error: template argument '(sizeof (_Tp) * 0)' involves template parameter(s)
+   72 | struct __has_specialization<_Tp, sizeof(_Tp) * 0> : true_type {};
+      |                                  ~~~~~~~~~~~~^~~
+In file included from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__assert:13,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/exception:79,
+                 from /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/src/cxa_default_handlers.cpp:12:
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_swappable.h: In instantiation of 'std::_LIBCPP_ABI_NAMESPACE::__swap_result_t<_Tp> std::_LIBCPP_ABI_NAMESPACE::swap(_Tp&, _Tp&) [with _Tp = std::_LIBCPP_ABI_NAMESPACE::__shared_weak_count*; std::_LIBCPP_ABI_NAMESPACE::__swap_result_t<_Tp> = void]':
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__memory/shared_ptr.h:806:43:   required from here
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__type_traits/is_swappable.h:48:26: error: 'value' is not a member of 'std::_LIBCPP_ABI_NAMESPACE::is_nothrow_move_assignable<std::_LIBCPP_ABI_NAMESPACE::__shared_weak_count*>'
+   48 | swap(_Tp& __x, _Tp& __y) _NOEXCEPT_(is_nothrow_move_constructible<_Tp>::value &&
+      |                          ^~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__utility/pair.h: In instantiation of 'std::_LIBCPP_ABI_NAMESPACE::pair< <template-parameter-1-1>, <template-parameter-1-2> >& std::_LIBCPP_ABI_NAMESPACE::pair< <template-parameter-1-1>, <template-parameter-1-2> >::operator=(std::_LIBCPP_ABI_NAMESPACE::__conditional_t<(std::_LIBCPP_ABI_NAMESPACE::is_move_assignable<_Tp>::value && std::_LIBCPP_ABI_NAMESPACE::is_move_assignable<_T2>::value), std::_LIBCPP_ABI_NAMESPACE::pair< <template-parameter-1-1>, <template-parameter-1-2> >, std::_LIBCPP_ABI_NAMESPACE::__nat>&&) [with _T1 = long unsigned int; _T2 = long unsigned int; std::_LIBCPP_ABI_NAMESPACE::__conditional_t<(std::_LIBCPP_ABI_NAMESPACE::is_move_assignable<_Tp>::value && std::_LIBCPP_ABI_NAMESPACE::is_move_assignable<_T2>::value), std::_LIBCPP_ABI_NAMESPACE::pair< <template-parameter-1-1>, <template-parameter-1-2> >, std::_LIBCPP_ABI_NAMESPACE::__nat> = std::_LIBCPP_ABI_NAMESPACE::pair<long unsigned int, long unsigned int>]':
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__functional/hash.h:263:9:   required from '_Size std::_LIBCPP_ABI_NAMESPACE::__murmur2_or_cityhash<_Size, 64>::operator()(const void*, _Size) [with _Size = long unsigned int]'
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__functional/hash.h:330:47:   required from 'size_t std::_LIBCPP_ABI_NAMESPACE::__scalar_hash<_Tp, 2>::operator()(_Tp) const [with _Tp = std::_LIBCPP_ABI_NAMESPACE::_PairT; size_t = long unsigned int]'
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__functional/hash.h:388:24:   required from here
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__utility/pair.h:327:9: error: 'value' is not a member of 'std::_LIBCPP_ABI_NAMESPACE::is_nothrow_move_assignable<long unsigned int>'
+  327 |         _NOEXCEPT_(is_nothrow_move_assignable<first_type>::value &&
+      |         ^~~~~~~~~~
+/usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/../libcxx/include/__utility/pair.h:327:9: error: 'value' is not a member of 'std::_LIBCPP_ABI_NAMESPACE::is_nothrow_move_assignable<long unsigned int>'
+  327 |         _NOEXCEPT_(is_nothrow_move_assignable<first_type>::value &&
+      |         ^~~~~~~~~~
+--- src/CMakeFiles/cxxabi_static_objects.dir/cxa_default_handlers.cpp.o ---
+*** [src/CMakeFiles/cxxabi_static_objects.dir/cxa_default_handlers.cpp.o] Error code 1
+
+make[2]: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+2 errors
+
+make[2]: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+--- src/CMakeFiles/cxxabi_static_objects.dir/all ---
+*** [src/CMakeFiles/cxxabi_static_objects.dir/all] Error code 2
+
+make[1]: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+2 errors
+
+make[1]: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+*** [all] Error code 2
+
+make: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+1 error
+
+make: stopped in /usr/work/wip/libcxxabi/work/libcxxabi-16.0.2.src/build
+*** Error code 2
+
+Stop.
+make[1]: stopped in /usr/pkgsrc/wip/libcxxabi
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/libcxxabi
