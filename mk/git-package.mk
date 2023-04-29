@@ -212,6 +212,7 @@ _GIT_CMD.checkout.${repo}= \
 	: "XXX: The revision of the submodules is not correct";		\
 	${_GIT_CMDLINE.${repo}} -C "$$extractdir" submodule update --recursive
 
+# TODO: can result in "pax: File name too long for ustar"
 # Create the cached archive from the checked out repository
 _GIT_CMD.create_archive.${repo}= \
 	if [ ! -f "$$archive" -o  "$${rev_before-unknown}" != "$${rev_after-unknown}" ]; then \
