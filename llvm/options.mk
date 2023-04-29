@@ -12,7 +12,7 @@ PRINT_PLIST_AWK+=		{if ($$0 ~ /libLLVM${tgt}/) {$$0 = "$${PLIST.${tgt}}" $$0;}}
 PRINT_PLIST_AWK+=		{if ($$0 ~ /libLLVMExegesis${tgt}/) {$$0 = "$${PLIST.${tgt}}" $$0;}}
 .endfor
 
-PKG_SUPPORTED_OPTIONS+=		terminfo z3
+PKG_SUPPORTED_OPTIONS+=		terminfo z3 tests
 
 # Terminfo is used for colour output, only enable it by default if terminfo
 # is builtin to avoid unnecessary dependencies which could cause bootstrap
