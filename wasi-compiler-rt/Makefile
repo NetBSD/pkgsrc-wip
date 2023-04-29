@@ -11,8 +11,8 @@ HOMEPAGE=	https://compiler-rt.llvm.org/
 COMMENT=	LLVM runtime libraries for WASI/WebAssembly
 LICENSE=	apache-2.0
 
-PATCHDIR=	${.CURDIR}/../../lang/compiler-rt/patches
-DISTINFO_FILE=	${.CURDIR}/../../lang/compiler-rt/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/compiler-rt/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/compiler-rt/distinfo
 
 NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 
