@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.41 2023/03/05 17:26:09 he Exp $
+
+BLAKE2s (cmake-16.0.2.src.tar.xz) = b3a0254d351be3405bc9ddee87475873d230ce0f987e936ca4e0ce729640464b
+SHA512 (cmake-16.0.2.src.tar.xz) = ce4bd6eddda6cfeeee8523d248b107114189c09e4aae478902798d14fc8fa2bfe316d0bcec44c5d4c36c77484fe6f6a7f0fb758dcd13edbeb322095fc1f6a7a6
+Size (cmake-16.0.2.src.tar.xz) = 9000 bytes
+BLAKE2s (llvm-16.0.2.src.tar.xz) = ab7422859589315e51d265f45e6125d77044c7f29048c8fde9aea24636819232
+SHA512 (llvm-16.0.2.src.tar.xz) = eec0525aab96bb6ae9707ff16bcad23da6323a8816c9428c31ed37b004c95dd8c058be886b57e88ac0e8f7a8b56e05d7aecc10f59bae4a9fa056b06066b19b30
+Size (llvm-16.0.2.src.tar.xz) = 56146144 bytes
+SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
+SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
+SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
+SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
+SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
+SHA1 (patch-lib_Support_BLAKE3-blake3__impl.h) = 29624dc764c747b247dbde19e9d186a853b59134
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = a83f0bc8a188bcf4e70ccc6b253637ce0af8345d
