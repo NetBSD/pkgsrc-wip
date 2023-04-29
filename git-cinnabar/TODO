@@ -1,7 +1,0 @@
-=> Bootstrap dependency digest>=20211023: found digest-20220214
-=> Fetching curl-sys-0.4.61+curl-8.0.1.crate
-Trying [2600:9000:211a:1a00:c:7ed3:240:93a1]:443 ...
-Requesting https://crates.io/api/v1/crates/curl-sys/8.0.1/download
-ftp: Error retrieving file `404 Not Found'
-fetch: Unable to fetch expected file curl-sys-0.4.61+curl-8.0.1.crate
-

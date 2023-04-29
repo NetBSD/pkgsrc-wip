@@ -27,6 +27,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.15
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.6
 CARGO_CRATE_DEPENDS+=	cstr-0.2.10
 CARGO_CRATE_DEPENDS+=	curl-sys-0.4.61+curl-8.0.1
+SITES.curl-sys-0.4.61+curl-8.0.1.crate+= ${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.61+curl-8.0.1/download}
 CARGO_CRATE_DEPENDS+=	derivative-2.2.0
 CARGO_CRATE_DEPENDS+=	derive_more-0.99.17
 CARGO_CRATE_DEPENDS+=	digest-0.10.6
