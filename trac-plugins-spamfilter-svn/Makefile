@@ -7,7 +7,7 @@ PKGNAME=	trac-plugins-spamfilter-0.3.2pre${SVNREV}
 PKGREVISION=	1
 CATEGORIES=	www
 
-MAINTAINER=	roy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac.edgewall.org/wiki/SpamFilter
 COMMENT=	Spam Filter plugin for Trac
 

@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	-https://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	roy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trac-hacks.org/wiki/FullBlogNotificationPlugin
 COMMENT=	E-mail Notification for the FullBlog plugin for Trac
 
