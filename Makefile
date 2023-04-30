@@ -5741,7 +5741,6 @@ SUBDIR+=	trac-plugins-SensitiveTickets-svn
 SUBDIR+=	trac-plugins-TimingAndEstimation-svn
 SUBDIR+=	trac-plugins-screenshots
 SUBDIR+=	trac-plugins-spamfilter-svn
-SUBDIR+=	trac-trunk
 SUBDIR+=	trackballs
 SUBDIR+=	tracy
 SUBDIR+=	translate-toolkit
