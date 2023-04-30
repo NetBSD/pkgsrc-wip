@@ -1755,7 +1755,6 @@ SUBDIR+=	incron
 SUBDIR+=	inetdxtra
 SUBDIR+=	influx-cli
 SUBDIR+=	influxdb
-SUBDIR+=	info2man
 SUBDIR+=	infraarcana
 SUBDIR+=	inicpp
 SUBDIR+=	initware-git
