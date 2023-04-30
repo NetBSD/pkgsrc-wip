@@ -6106,6 +6106,7 @@ SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	yabar
 SUBDIR+=	yad
+SUBDIR+=	yaegi
 SUBDIR+=	yafray
 SUBDIR+=	yaggo
 SUBDIR+=	yakuake
