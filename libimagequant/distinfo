@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.30 2023/04/27 06:06:19 wiz Exp $
+
+BLAKE2s (libimagequant-4.1.1.tar.gz) = aea4963d9a19f3008ab2fe978eabc6435b6bc8cfda111e9a66416d878d8942db
+SHA512 (libimagequant-4.1.1.tar.gz) = c91d82bbc2a9942e98489bb79cac8a1c3ce6b3f8a9a0829e7915d327e6aade766279680a6ff59804f152e86e098b2547df243331b3882900e6815694a999bcdd
+Size (libimagequant-4.1.1.tar.gz) = 86232 bytes
