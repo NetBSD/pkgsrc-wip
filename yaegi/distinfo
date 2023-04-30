@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (yaegi-0.15.1.tar.gz) = 768b685cdeafd26f747c07c5eab1d688e4c630c117a7eb48730ef0bf11387a14
+SHA512 (yaegi-0.15.1.tar.gz) = e827b370b1f1a7453de02ffa54768372a64730cbde7b09d505e44bdd9d8290de5550e56fcacfdce022a1d4103d26f0cab5104c032d95145036cf09079de20d10
+Size (yaegi-0.15.1.tar.gz) = 2216861 bytes
