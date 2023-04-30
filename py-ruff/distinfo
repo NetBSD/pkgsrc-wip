@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ruff-0.0.263.tar.gz) = 74abdc072683346c6f4b7c86c19f857f91790e1912d0c32e5fc7a2631bae472a
+SHA512 (ruff-0.0.263.tar.gz) = 341733f5d14a4e83976d84ea27bdcb0f8e2e790c2725c352be2cd582e02dc4b89d221d2f92d4547807fd015cccee64af4f6b4d4ea5ceb7a39aea1af902f9d8e0
+Size (ruff-0.0.263.tar.gz) = 1032792 bytes

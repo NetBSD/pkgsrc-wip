@@ -4572,6 +4572,7 @@ SUBDIR+=	py-rpncalc
 SUBDIR+=	py-rql
 SUBDIR+=	py-rst2html5
 SUBDIR+=	py-rtree
+SUBDIR+=	py-ruff
 SUBDIR+=	py-ruffus
 SUBDIR+=	py-rxpy3
 SUBDIR+=	py-sabyenc
