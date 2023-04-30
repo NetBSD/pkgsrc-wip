@@ -10,6 +10,8 @@ HOMEPAGE=	https://pngquant.org/lib/
 COMMENT=	High-quality conversion of RGBA images to 8-bit indexed-color
 LICENSE=	gnu-gpl-v3
 
+.include "cargo-depends.mk"
+
 #INSTALLATION_DIRS=	include lib
 
 #do-install:
