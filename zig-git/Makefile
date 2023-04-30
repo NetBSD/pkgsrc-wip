@@ -14,7 +14,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	bash:run
 USE_LANGUAGES=	c c++14
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+.include "options.mk"
+
 CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
 # avoid full-cu-features available to build host,
 # in other words ensure that we run everywhere
@@ -29,8 +30,10 @@ UNLIMIT_RESOURCES=	stacksize
 
 # \todo: There is currently an issue building this as a PIE
 MKPIE_SUPPORTED=	no
+CHECK_PIE_SKIP=		bin/zig
 # RELRO checks fail for this package at the moment
 RELRO_SUPPORTED=	no
+CHECK_RELRO_SKIP=	bin/zig
 
 CONFLICTS+=		zig-[0-9]*
 
