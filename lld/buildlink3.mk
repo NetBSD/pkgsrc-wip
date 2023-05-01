@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	lld
 .if !defined(LLD_BUILDLINK3_MK)
 LLD_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.lld+=	lld>=9.0.1
+BUILDLINK_API_DEPENDS.lld+=	lld>=16.0.0
 BUILDLINK_PKGSRCDIR.lld?=	../../wip/lld
 
 .include "../../wip/llvm/buildlink3.mk"
