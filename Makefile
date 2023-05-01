@@ -847,6 +847,7 @@ SUBDIR+=	facedetect
 SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
+SUBDIR+=	fallout1-ce
 SUBDIR+=	famsa
 SUBDIR+=	farsi-ttf
 SUBDIR+=	fasda

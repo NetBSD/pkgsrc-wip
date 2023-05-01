@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (fallout1-ce-1.0.0.tar.gz) = b88c7c1e78dc43760c1a3e9e25f8596f3892af62d35649cc4064d00ed1657e6f
+SHA512 (fallout1-ce-1.0.0.tar.gz) = cc68a2e8760851aa8f12bccfb7086eac60c27f77899ef1d08e05f2909eea90645892296b6b2aa8c5e0fd77deced434281bbca32afcd94e0c4c98c3192dc25969
+Size (fallout1-ce-1.0.0.tar.gz) = 3812123 bytes
+SHA1 (patch-CMakeLists.txt) = 9cb2cb26448929fa0d20358253d861a00cbb2da8
