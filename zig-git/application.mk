@@ -25,7 +25,7 @@ ZIGCPUMODE?=		-Dcpu=baseline
 ZIGBUILDARGS?=
 ZIGTESTARGS?=
 
-BUILD_DEPENDS+=		zig-[0-9]*:../../lang/zig
+BUILD_DEPENDS+=		zig-git-[0-9]*:../../wip/zig-git
 USE_LANGUAGES=		c
 
 #MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKSRC}/tmp

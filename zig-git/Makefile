@@ -28,6 +28,10 @@ BUILDLINK_TRANSFORM+=		rm:-Werror
 
 UNLIMIT_RESOURCES=	stacksize
 
+DEPENDS+=	llvm>=16.0.0:../../wip/llvm
+DEPENDS+=	lld>=16.0.0:../../wip/lld
+DEPENDS+=	clang>=16.0.0:../../wip/clang
+
 # \todo: There is currently an issue building this as a PIE
 MKPIE_SUPPORTED=	no
 CHECK_PIE_SKIP=		bin/zig

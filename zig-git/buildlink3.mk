@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	zig-git
 .if !defined(ZIG_GIT_BUILDLINK3_MK)
 ZIG_GIT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.zig-git+=	zig>=0.10.1
-BUILDLINK_ABI_DEPENDS.zig-git+=	zig>=0.10.1
+BUILDLINK_API_DEPENDS.zig-git+=	zig-git>=0.11.0
+BUILDLINK_ABI_DEPENDS.zig-git+=	zig-git>=0.11.0
 BUILDLINK_PKGSRCDIR.zig-git?=	../../wip/zig-git
 
 pkgbase := zig-git
