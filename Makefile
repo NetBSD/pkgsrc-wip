@@ -848,6 +848,7 @@ SUBDIR+=	fairymax
 SUBDIR+=	fakenes
 SUBDIR+=	fala
 SUBDIR+=	fallout1-ce
+SUBDIR+=	fallout2-ce
 SUBDIR+=	famsa
 SUBDIR+=	farsi-ttf
 SUBDIR+=	fasda
