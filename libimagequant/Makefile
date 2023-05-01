@@ -10,15 +10,23 @@ HOMEPAGE=	https://pngquant.org/lib/
 COMMENT=	High-quality conversion of RGBA images to 8-bit indexed-color
 LICENSE=	gnu-gpl-v3
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/imagequant-sys
+
 .include "cargo-depends.mk"
 
-#INSTALLATION_DIRS=	include lib
+INSTALLATION_DIRS=	include lib/pkg-config
 
-#do-install:
-#	${INSTALL_DATA} ${WRKSRC}/libimagequant.h \
-#		${DESTDIR}${PREFIX}/include/libimagequant.h
-#	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-#		${WRKSRC}/libimagequant.la ${DESTDIR}${PREFIX}/lib
+post-build:
+	cd ${WRKSRC} && \
+        ${SED} 's|@PREFIX@|$(PREFIX)|;s|@VERSION@|$(VERSION)|' < imagequant.pc.in > imagequant.pc
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/libimagequant.h \
+		${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/imagequant.pc \
+		${DESTDIR}${PREFIX}/lib/pkg-config
+	${INSTALL_LIB} ${WRKSRC}/../target/release/libimagequant_sys.a \
+		${DESTDIR}${PREFIX}/lib/libimagequant.a
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
