@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add file for NetBSD/mips in mips32 variant.
+
 --- vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2023-04-23 15:53:16.504282187 +0000
 +++ vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mips.rs
 @@ -0,0 +1,22 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add execinfo / backtrace stuff for NetBSD, and handle NetBSD/mips.
+
 --- vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
 +++ vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs
 @@ -3049,6 +3049,22 @@ extern "C" {
