@@ -20,6 +20,7 @@ CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
 # avoid full-cu-features available to build host,
 # in other words ensure that we run everywhere
 CMAKE_ARGS+=	-DZIG_TARGET_MCPU=baseline
+CMAKE_ARGS+=	-DZIG_PIE=ON
 
 REPLACE_BASH+=	lib/libcxxabi/src/demangle/cp-to-llvm.sh
 
@@ -31,13 +32,6 @@ UNLIMIT_RESOURCES=	stacksize
 DEPENDS+=	llvm>=16.0.0:../../wip/llvm
 DEPENDS+=	lld>=16.0.0:../../wip/lld
 DEPENDS+=	clang>=16.0.0:../../wip/clang
-
-# \todo: There is currently an issue building this as a PIE
-MKPIE_SUPPORTED=	no
-CHECK_PIE_SKIP=		bin/zig
-# RELRO checks fail for this package at the moment
-RELRO_SUPPORTED=	no
-CHECK_RELRO_SKIP=	bin/zig
 
 CONFLICTS+=		zig-[0-9]*
 
