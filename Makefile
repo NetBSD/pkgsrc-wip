@@ -4279,6 +4279,7 @@ SUBDIR+=	py-odeviz
 SUBDIR+=	py-okasha
 SUBDIR+=	py-okpy
 SUBDIR+=	py-ontopy
+SUBDIR+=	py-openai
 SUBDIR+=	py-openastro
 SUBDIR+=	py-openopt
 SUBDIR+=	py-opensimplex
