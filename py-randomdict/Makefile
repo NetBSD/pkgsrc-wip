@@ -12,5 +12,4 @@ COMMENT=	Python dictionaries with O(1) random element access
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
