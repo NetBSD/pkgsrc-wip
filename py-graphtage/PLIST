@@ -54,6 +54,9 @@ ${PYSITELIB}/graphtage/printer.pyo
 ${PYSITELIB}/graphtage/progress.py
 ${PYSITELIB}/graphtage/progress.pyc
 ${PYSITELIB}/graphtage/progress.pyo
+${PYSITELIB}/graphtage/pydiff.py
+${PYSITELIB}/graphtage/pydiff.pyc
+${PYSITELIB}/graphtage/pydiff.pyo
 ${PYSITELIB}/graphtage/search.py
 ${PYSITELIB}/graphtage/search.pyc
 ${PYSITELIB}/graphtage/search.pyo
