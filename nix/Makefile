@@ -50,6 +50,10 @@ CONFIGURE_ENV+=		BOOST_ROOT=${BUILDLINK_PREFIX.boost-libs}/lib
 #   /usr/bin/ld: error: undefined symbol: SHA512_Update
 MAKE_FLAGS+=	libutil_ALLOW_UNDEFINED=yes
 
+# sqlite3_error_offset(), https://www.sqlite.org/releaselog/3_38_0.html
+# base sqlite3 at 2023-05-03 is on 3.26.0
+PREFER.sqlite3=      pkgsrc
+
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 # verbose build
