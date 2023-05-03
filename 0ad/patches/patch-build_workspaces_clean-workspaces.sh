@@ -1,7 +1,8 @@
 $NetBSD$
 
---- build/workspaces/clean-workspaces.sh.orig	2015-08-19 01:30:09.000000000 +0000
-+++ build/workspaces/clean-workspaces.sh
+
+--- -build/workspaces/clean-workspaces.sh.orig	2022-08-21 14:46:47.000000000 +0200
++++ build/workspaces/clean-workspaces.sh	2023-05-03 20:01:25.557929713 +0200
 @@ -3,7 +3,7 @@
  # Some of our makefiles depend on GNU make, so we set some sane defaults if MAKE
  # is not set.
@@ -11,10 +12,10 @@ $NetBSD$
      MAKE=${MAKE:="gmake"}
      ;;
    * )
-@@ -37,7 +37,7 @@ fi
+@@ -64,7 +64,7 @@
+ echo "Removing generated stub and test files..."
  
- echo "Removing generated test files..."
- 
+ find ../../source -name "stub_*.cpp" -type f -exec rm {} \;
 -find ../../source -name "test_*.cpp" -type f -not -name "test_setup.cpp" -exec rm {} \;
 +find ../../source -name "test_*.cpp" -type f ! -name "test_setup.cpp" -exec rm {} \;
  

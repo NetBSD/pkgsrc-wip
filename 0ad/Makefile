@@ -19,6 +19,13 @@ USE_TOOLS+=	gmake perl bash pkg-config
 DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
 DEPENDS+=	premake5-[0-9]*:../../devel/premake5
 
+SUBST_CLASSES+=         	sysincludedir
+SUBST_MESSAGE.sysincludedir=	Fixing "/usr/local" path assumption
+SUBST_STAGE.sysincludedir=	pre-configure
+SUBST_FILES.sysincludedir=	build/premake/extern_libs5.lua
+SUBST_FILES.sysincludedir=	build/premake/premake5.lua
+SUBST_SED.sysincludedir+=	-e "s,/usr/local/,${PREFIX},g"
+
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
 	${RUN} cd ${WRKSRC}/build/workspaces && ./update-workspaces.sh \
@@ -48,6 +55,7 @@ do-build:
 .include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
+.include "../../lang/rust/rust.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"

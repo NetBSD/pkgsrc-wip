@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (0ad-0.0.25b-alpha-unix-data.tar.xz) = c56cc4b51f13323521318204aa69dd1cb5dd010f
-RMD160 (0ad-0.0.25b-alpha-unix-data.tar.xz) = ae04e2c7d0c3e6ca4607b244608f2329c202e12b
-SHA512 (0ad-0.0.25b-alpha-unix-data.tar.xz) = d6bbe484acb7fbd507d303f5c75f8a2ccbaf8fe9dd30ff408b082f170bfd96eb9235db1b710c15656ef465b44fa5597679a694515e0c153a35fe24c0915f29f1
-Size (0ad-0.0.25b-alpha-unix-data.tar.xz) = 1249684600 bytes
+BLAKE2s (0ad-0.0.26-alpha-unix-data.tar.xz) = ff2ad01dfdb3bfbd5f4f3f38301930e18a572e86aafe2239a083e5a9c3f29cac
+SHA512 (0ad-0.0.26-alpha-unix-data.tar.xz) = 8fe29fce68737d5b7001c8c2a7198766583b22556129cd2d927823da9b2c58f224fb1207f35bd03abea9380cf24d00ab6257b0dba86ce3ad1f357d7006f051d6
+Size (0ad-0.0.26-alpha-unix-data.tar.xz) = 1351511480 bytes
