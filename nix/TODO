@@ -1,11 +1,9 @@
-* patch:
-  - code in next release will have moved to
-    src/libexpr/primops/fetchTree.cc , check if <sys/wait.h> is still
-    required.
+c++ -o src/libstore/s3-binary-cache-store.o -c src/libstore/s3-binary-cache-store.cc -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5  -O3  -fPIC -g -Wno-deprecated-declarations -Werror=switch -g -Wall -include config.h -std=c++2a -I src -I/usr/pkg/include -I /usr/pkg/include/rapidcheck -I/usr/pkg/include -I/usr/pkg/include/libcpuid -I/usr/pkg/include -I/usr/pkg/include -DREADLINE -I/usr/pkg/include -O2 -I/usr/pkg/include/rapidcheck -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5 -I src/libutil -I src/libstore -I src/libstore/build -DNIX_PREFIX=\"/usr/pkg\" -DNIX_STORE_DIR=\"/nix/store\" -DNIX_DATA_DIR=\"/usr/pkg/share\" -DNIX_STATE_DIR=\"/nix/var/nix\" -DNIX_LOG_DIR=\"/nix/var/log/nix\" -DNIX_CONF_DIR=\"/usr/pkg/etc/nix\" -DNIX_BIN_DIR=\"/usr/pkg/bin\" -DNIX_MAN_DIR=\"/usr/pkg/man\" -DLSOF=\"lsof\" -Werror=switch-enum -MMD -MF src/libstore/.s3-binary-cache-store.o.dep -MP
+c++ -o src/libstore/sqlite.o -c src/libstore/sqlite.cc -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5  -O3  -fPIC -g -Wno-deprecated-declarations -Werror=switch -g -Wall -include config.h -std=c++2a -I src -I/usr/pkg/include -I /usr/pkg/include/rapidcheck -I/usr/pkg/include -I/usr/pkg/include/libcpuid -I/usr/pkg/include -I/usr/pkg/include -DREADLINE -I/usr/pkg/include -O2 -I/usr/pkg/include/rapidcheck -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5 -I src/libutil -I src/libstore -I src/libstore/build -DNIX_PREFIX=\"/usr/pkg\" -DNIX_STORE_DIR=\"/nix/store\" -DNIX_DATA_DIR=\"/usr/pkg/share\" -DNIX_STATE_DIR=\"/nix/var/nix\" -DNIX_LOG_DIR=\"/nix/var/log/nix\" -DNIX_CONF_DIR=\"/usr/pkg/etc/nix\" -DNIX_BIN_DIR=\"/usr/pkg/bin\" -DNIX_MAN_DIR=\"/usr/pkg/man\" -DLSOF=\"lsof\" -Werror=switch-enum -MMD -MF src/libstore/.sqlite.o.dep -MP
+src/libstore/sqlite.cc: In static member function 'static void nix::SQLiteError::throw_(sqlite3*, nix::hintformat&&)':
+src/libstore/sqlite.cc:27:18: error: 'sqlite3_error_offset' was not declared in this scope; did you mean 'sqlite3_str_reset'?
+   27 |     int offset = sqlite3_error_offset(db);
+      |                  ^~~~~~~~~~~~~~~~~~~~
+      |                  sqlite3_str_reset
+gmake: *** [mk/patterns.mk:3: src/libstore/sqlite.o] Error 1
 
-* port to NetBSD?
-  There is a high probability that in addition to packaging, supported platforms
-  must be tested and non-supported (like NetBSD host) ported to and maintained.
-
-* dependencies:
-  needs https://github.com/anrieff/libcpuid
