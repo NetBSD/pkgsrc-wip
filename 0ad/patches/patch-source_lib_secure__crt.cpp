@@ -11,18 +11,3 @@ $NetBSD$
  // return length [in characters] of a string, not including the trailing
  // null character. to protect against access violations, only the
  // first <max_len> characters are examined; if the null character is
-@@ -126,10 +126,13 @@
- 	WARN_IF_PTR_LEN(max_len);
- 
- 	size_t len;
-+#if defined(__NetBSD__)
-+	len = wcsnlen(str, max_len);
-+#else
- 	for(len = 0; len < max_len; len++)
- 		if(*str++ == '\0')
- 			break;
--
-+#endif
- 	return len;
- }
- #endif // !OS_UNIX
