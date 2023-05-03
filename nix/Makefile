@@ -4,7 +4,7 @@ DISTNAME=		nix-2.15.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NixOS/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://github.com/NixOS/nix/
 COMMENT=		Purely functional package manager
 LICENSE=		gnu-lgpl-v2.1
