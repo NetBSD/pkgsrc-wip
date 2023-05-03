@@ -19,12 +19,29 @@ USE_TOOLS+=	gmake perl bash pkg-config
 DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
 DEPENDS+=	premake5-[0-9]*:../../devel/premake5
 
-SUBST_CLASSES+=         	sysincludedir
+SUBST_CLASSES+=			sysincludedir
 SUBST_MESSAGE.sysincludedir=	Fixing "/usr/local" path assumption
 SUBST_STAGE.sysincludedir=	pre-configure
 SUBST_FILES.sysincludedir=	build/premake/extern_libs5.lua
-SUBST_FILES.sysincludedir=	build/premake/premake5.lua
+SUBST_FILES.sysincludedir+=	build/premake/premake5.lua
 SUBST_SED.sysincludedir+=	-e "s,/usr/local/,${PREFIX},g"
+
+# thanks to Guix:
+# 0ad only builds fine with a specific version of mozjs
+# (version 78.6 for 0ad-0.0.25).
+# Here we change the error in case of version mismatch to a warning,
+# and add some minor compatibility fixes.
+SUBST_CLASSES+=		mozjs
+SUBST_MESSAGE.mozjs=	Fixing mozjs version error
+SUBST_STAGE.mozjs=	pre-configure
+SUBST_FILES.mozjs=	source/scriptinterface/ScriptTypes.h
+SUBST_SED.mozjs+=	-e "s,\#error Your compiler is trying to use,\#warning Your compiler is trying to use,g"
+
+SUBST_CLASSES+=		mozjs2
+SUBST_MESSAGE.mozjs2=	Fixing mozjs version error
+SUBST_STAGE.mozjs2=	pre-configure
+SUBST_FILES.mozjs2+=	source/scriptinterface/ScriptContext.cpp
+SUBST_SED.mozjs2+=	-e "s|JS::PrepareZoneForGC(|JS::PrepareZoneForGC(m_cx, |g"
 
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
@@ -55,7 +72,6 @@ do-build:
 .include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
-.include "../../lang/rust/rust.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"

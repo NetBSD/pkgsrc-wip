@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- source/lib/sysdep/os/unix/uvm.cpp.orig	2017-07-28 19:57:26 UTC
 +++ source/lib/sysdep/os/unix/uvm.cpp
 @@ -40,7 +40,7 @@ namespace vm {

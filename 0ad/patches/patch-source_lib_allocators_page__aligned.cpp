@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- source/lib/allocators/page_aligned.cpp.orig	2017-07-28 19:57:26 UTC
 +++ source/lib/allocators/page_aligned.cpp
 @@ -49,7 +49,7 @@ static const int mmap_flags = MAP_PRIVATE|MAP_ANONYMOU

@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- libraries/source/nvtt/src/src/nvcore/Debug.cpp.orig	2021-02-28 23:45:14 UTC
 +++ libraries/source/nvtt/src/src/nvcore/Debug.cpp
 @@ -628,6 +628,9 @@ namespace 
