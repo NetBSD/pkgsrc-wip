@@ -18,7 +18,6 @@ SHA1 (patch-libraries_source_spidermonkey_build.sh) = 34225c82659cc236bff076301d
 SHA1 (patch-source_graphics_TextureConverter.cpp) = d4e3920cd507468adc37dc92e27e6cbb50b5c5e2
 SHA1 (patch-source_lib_allocators_page__aligned.cpp) = c25054afd543a1a90530964a63b2b692b1687765
 SHA1 (patch-source_lib_secure__crt.cpp) = 1e56aa627c8f2343884968ab4ebd4b4eec73b777
-SHA1 (patch-source_lib_sysdep_os_unix_uvm.cpp) = 8c460a6ff1049dcf4f6709a1e25f0f3debc10ee8
 SHA1 (patch-source_network_StunClient.cpp) = 6267d44c3d0345d3e47c19746f105657ba984876
 SHA1 (patch-source_scriptinterface_ScriptTypes.h) = f2351c637ba7ed7a36b4399b6e89a0d8281c9ad4
 SHA1 (patch-source_third__party_mikktspace_weldmesh.cpp) = 35df7dd5d5d2aa784ef03599a47cc69982ebe332
