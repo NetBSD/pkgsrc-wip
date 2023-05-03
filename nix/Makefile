@@ -125,12 +125,12 @@ pre-configure:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/rapidcheck/buildlink3.mk"
 .include "../../sysutils/libcpuid/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../textproc/lowdown/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../wip/rapidcheck/buildlink3.mk"
 #.include "../../wip/aws-sdk-cpp/buildlink3.mk" # Needs some source fixes
 .include "../../mk/bsd.pkg.mk"
