@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl bash pkg-config
 
 DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
-DEPENDS+=	premake5-[0-9]*:../../wip/premake5
+DEPENDS+=	premake5-[0-9]*:../../devel/premake5
 
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
@@ -56,5 +56,4 @@ do-build:
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
