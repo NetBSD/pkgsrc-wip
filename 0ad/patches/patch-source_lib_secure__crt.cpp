@@ -1,8 +1,8 @@
 $NetBSD$
 
---- source/lib/secure_crt.cpp.orig	2015-01-24 00:22:12.000000000 +0000
-+++ source/lib/secure_crt.cpp
-@@ -112,7 +112,7 @@ STATUS_ADD_DEFINITIONS(secureCrtStatusDe
+--- source/lib/secure_crt.cpp.orig	2022-08-21 14:45:19.000000000 +0200
++++ source/lib/secure_crt.cpp	2023-05-03 23:36:26.329771228 +0200
+@@ -113,7 +113,7 @@
  // self-test and the t* defines (needed for test).
  #if EMULATE_SECURE_CRT
  
@@ -11,3 +11,18 @@ $NetBSD$
  // return length [in characters] of a string, not including the trailing
  // null character. to protect against access violations, only the
  // first <max_len> characters are examined; if the null character is
+@@ -126,10 +126,13 @@
+ 	WARN_IF_PTR_LEN(max_len);
+ 
+ 	size_t len;
++#if defined(__NetBSD__)
++	len = wcsnlen(str, max_len);
++#else
+ 	for(len = 0; len < max_len; len++)
+ 		if(*str++ == '\0')
+ 			break;
+-
++#endif
+ 	return len;
+ }
+ #endif // !OS_UNIX

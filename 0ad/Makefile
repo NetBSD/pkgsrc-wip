@@ -55,9 +55,11 @@ do-configure:
 		--without-pch \
 		--disable-atlas
 
+# ${_MAKE_JOBS_N}
+
 do-build:
 	${RUN} cd ${WRKSRC} && \
-		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N} \
+		${GMAKE} config=release verbose=1 -j 1 \
 		-C build/workspaces/gcc
 
 .include "../../audio/libvorbis/buildlink3.mk"
