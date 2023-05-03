@@ -1,9 +1,44 @@
-c++ -o src/libstore/s3-binary-cache-store.o -c src/libstore/s3-binary-cache-store.cc -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5  -O3  -fPIC -g -Wno-deprecated-declarations -Werror=switch -g -Wall -include config.h -std=c++2a -I src -I/usr/pkg/include -I /usr/pkg/include/rapidcheck -I/usr/pkg/include -I/usr/pkg/include/libcpuid -I/usr/pkg/include -I/usr/pkg/include -DREADLINE -I/usr/pkg/include -O2 -I/usr/pkg/include/rapidcheck -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5 -I src/libutil -I src/libstore -I src/libstore/build -DNIX_PREFIX=\"/usr/pkg\" -DNIX_STORE_DIR=\"/nix/store\" -DNIX_DATA_DIR=\"/usr/pkg/share\" -DNIX_STATE_DIR=\"/nix/var/nix\" -DNIX_LOG_DIR=\"/nix/var/log/nix\" -DNIX_CONF_DIR=\"/usr/pkg/etc/nix\" -DNIX_BIN_DIR=\"/usr/pkg/bin\" -DNIX_MAN_DIR=\"/usr/pkg/man\" -DLSOF=\"lsof\" -Werror=switch-enum -MMD -MF src/libstore/.s3-binary-cache-store.o.dep -MP
-c++ -o src/libstore/sqlite.o -c src/libstore/sqlite.cc -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5  -O3  -fPIC -g -Wno-deprecated-declarations -Werror=switch -g -Wall -include config.h -std=c++2a -I src -I/usr/pkg/include -I /usr/pkg/include/rapidcheck -I/usr/pkg/include -I/usr/pkg/include/libcpuid -I/usr/pkg/include -I/usr/pkg/include -DREADLINE -I/usr/pkg/include -O2 -I/usr/pkg/include/rapidcheck -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/include -I/usr/include/readline -I/usr/pkg/include/sodium -I/usr/include/krb5 -I src/libutil -I src/libstore -I src/libstore/build -DNIX_PREFIX=\"/usr/pkg\" -DNIX_STORE_DIR=\"/nix/store\" -DNIX_DATA_DIR=\"/usr/pkg/share\" -DNIX_STATE_DIR=\"/nix/var/nix\" -DNIX_LOG_DIR=\"/nix/var/log/nix\" -DNIX_CONF_DIR=\"/usr/pkg/etc/nix\" -DNIX_BIN_DIR=\"/usr/pkg/bin\" -DNIX_MAN_DIR=\"/usr/pkg/man\" -DLSOF=\"lsof\" -Werror=switch-enum -MMD -MF src/libstore/.sqlite.o.dep -MP
-src/libstore/sqlite.cc: In static member function 'static void nix::SQLiteError::throw_(sqlite3*, nix::hintformat&&)':
-src/libstore/sqlite.cc:27:18: error: 'sqlite3_error_offset' was not declared in this scope; did you mean 'sqlite3_str_reset'?
-   27 |     int offset = sqlite3_error_offset(db);
-      |                  ^~~~~~~~~~~~~~~~~~~~
-      |                  sqlite3_str_reset
-gmake: *** [mk/patterns.mk:3: src/libstore/sqlite.o] Error 1
-
+src/libmain/shared.cc: In constructor 'nix::RunPager::RunPager()':
+src/libmain/shared.cc:457:5: error: lvalue required as left operand of assignment
+  457 |     stdout = fcntl(STDOUT_FILENO, F_DUPFD_CLOEXEC, 0);
+      |     ^~~~~~
+src/libmain/shared.cc: In destructor 'nix::RunPager::~RunPager()':
+src/libmain/shared.cc:468:18: error: invalid conversion from 'FILE*' to 'int' [-fpermissive]
+  468 |             dup2(stdout, STDOUT_FILENO);
+      |                  ^~~~~~
+      |                  |
+      |                  FILE*
+In file included from /usr/work/wip/nix/work/.buildlink/include/boost/config/stdlib/libstdcpp3.hpp:79,
+                 from /usr/work/wip/nix/work/.buildlink/include/boost/config.hpp:48,
+                 from /usr/work/wip/nix/work/.buildlink/include/boost/config/workaround.hpp:41,
+                 from /usr/work/wip/nix/work/.buildlink/include/boost/detail/workaround.hpp:8,
+                 from /usr/work/wip/nix/work/.buildlink/include/boost/format.hpp:19,
+                 from src/libutil/fmt.hh:4,
+                 from src/libutil/error.hh:21,
+                 from src/libutil/experimental-features.hh:5,
+                 from src/libutil/config.hh:11,
+                 from src/libstore/globals.hh:5,
+                 from src/libmain/shared.cc:1:
+/usr/include/unistd.h:104:11: note:   initializing argument 1 of 'int dup2(int, int)'
+  104 | int  dup2(int, int);
+      |           ^~~
+gmake: *** [mk/patterns.mk:3: src/libmain/shared.o] Error 1
+gmake: *** Waiting for unfinished jobs....
+In file included from /usr/include/wchar.h:67,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/iterator:64,
+                 from /usr/include/g++/bits/ranges_algobase.h:36,
+                 from /usr/include/g++/bits/ranges_uninitialized.h:36,
+                 from /usr/include/g++/memory:69,
+                 from src/libutil/ref.hh:4,
+                 from src/libutil/types.hh:4,
+                 from src/libutil/suggestions.hh:5,
+                 from src/libutil/error.hh:18,
+                 from src/libmain/stack.cc:1:
+src/libmain/shared.hh:99:9: error: declaration of '__sF' as array of references
+   99 |     int stdout;
+      |         ^~~~~~
+gmake: *** [mk/patterns.mk:3: src/libmain/stack.o] Error 1
+*** Error code 2
