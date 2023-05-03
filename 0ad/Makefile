@@ -24,7 +24,7 @@ SUBST_MESSAGE.sysincludedir=	Fixing "/usr/local" path assumption
 SUBST_STAGE.sysincludedir=	pre-configure
 SUBST_FILES.sysincludedir=	build/premake/extern_libs5.lua
 SUBST_FILES.sysincludedir+=	build/premake/premake5.lua
-SUBST_SED.sysincludedir+=	-e "s,/usr/local/,${PREFIX},g"
+SUBST_SED.sysincludedir+=	-e "s,/usr/local/,${PREFIX}/,g"
 
 # thanks to Guix:
 # 0ad only builds fine with a specific version of mozjs
