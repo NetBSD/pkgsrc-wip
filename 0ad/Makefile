@@ -15,6 +15,9 @@ GCC_REQD+=	7
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake perl bash pkg-config
+TOOL_DEPENDS+=	python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
 DEPENDS+=	premake5-[0-9]*:../../devel/premake5
@@ -55,11 +58,9 @@ do-configure:
 		--without-pch \
 		--disable-atlas
 
-# ${_MAKE_JOBS_N}
-
 do-build:
 	${RUN} cd ${WRKSRC} && \
-		${GMAKE} config=release verbose=1 -j 1 \
+		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N} \
 		-C build/workspaces/gcc
 
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -74,6 +75,7 @@ do-build:
 .include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
