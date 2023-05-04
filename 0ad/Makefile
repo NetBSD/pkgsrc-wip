@@ -64,7 +64,6 @@ CFLAGS+=	-msse
 
 .include "options.mk"
 
-# TODO: needs "wx"
 # nvtt, notes from gentoo:
 # Build bundled NVTT
 # nvtt is abandoned upstream and 0ad has forked it and added fixes.
@@ -146,5 +145,6 @@ do-install:
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
