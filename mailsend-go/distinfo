@@ -1,5 +1,17 @@
 $NetBSD$
 
-RMD160 (mailsend-go-v1.0.10.tar.gz) = 7c5e3c307d2bdc28655d2910155ae7da097075e1
-SHA512 (mailsend-go-v1.0.10.tar.gz) = 552916acc7fbcbe44c02c9dbecb66710ba3ddfba7afc466f0000ed1c919c886bdd16750f57abafb5a5e3ca92335cbb243b02f7cd41f0d41874cc43175b5970d9
-Size (mailsend-go-v1.0.10.tar.gz) = 237159 bytes
+BLAKE2s (gopkg.in_alexcesaro_quotedprintable.v3_@v_v3.0.0-20150716171945-2caba252f4dc.mod) = 4f37e4c01a4eae869b11c8c055dff014af5be2ca6d84acda22bef05b92b6eca3
+SHA512 (gopkg.in_alexcesaro_quotedprintable.v3_@v_v3.0.0-20150716171945-2caba252f4dc.mod) = 569c3dd48ed6428aa08baee2f13e9cb11428f68d04ecff4a27c8d15123d1379e5e6c5a1c772dd9f09e7f49148592fae24ed64317ff14040755dccb54c57da05d
+Size (gopkg.in_alexcesaro_quotedprintable.v3_@v_v3.0.0-20150716171945-2caba252f4dc.mod) = 46 bytes
+BLAKE2s (gopkg.in_alexcesaro_quotedprintable.v3_@v_v3.0.0-20150716171945-2caba252f4dc.zip) = 087b733995c4e01e692262b5a9dc8a2bd5176800800724f9844d586031230393
+SHA512 (gopkg.in_alexcesaro_quotedprintable.v3_@v_v3.0.0-20150716171945-2caba252f4dc.zip) = a6c647b7550450c400b8fa0400cb868596e55ef784edc258b6fa37fe0c72bd3c2c05e6b870dbbb8d80facb581d934523e113d16b99a5a1d8e0f4ecaeec814b8e
+Size (gopkg.in_alexcesaro_quotedprintable.v3_@v_v3.0.0-20150716171945-2caba252f4dc.zip) = 14184 bytes
+BLAKE2s (gopkg.in_gomail.v2_@v_v2.0.0-20160411212932-81ebce5c23df.mod) = 0b88596ec6713d5b9a89e5c0bbcdd218a0b9fced431d83996a37bb85cde150b7
+SHA512 (gopkg.in_gomail.v2_@v_v2.0.0-20160411212932-81ebce5c23df.mod) = 545f42205191069b9b22fe7eea431c7ff2e22e5f605ee898b6e283810a0fd0a70f4376471c752588629460272a0cfb820bfac1cea60de8d8bdaa608cf17b067e
+Size (gopkg.in_gomail.v2_@v_v2.0.0-20160411212932-81ebce5c23df.mod) = 26 bytes
+BLAKE2s (gopkg.in_gomail.v2_@v_v2.0.0-20160411212932-81ebce5c23df.zip) = 27b467268eb8646e451fb6d54916aa9d82a9f8d10fcaee74fac4c8d64ad8bfb7
+SHA512 (gopkg.in_gomail.v2_@v_v2.0.0-20160411212932-81ebce5c23df.zip) = f3c91deed973913cc46767e7a9202768ee64d2d315a7494dd7ad40674df5b4e4b9abd6eefabab80d9ca822a557c59459b5e651d307f39eca7c0e500d618e3ee2
+Size (gopkg.in_gomail.v2_@v_v2.0.0-20160411212932-81ebce5c23df.zip) = 22966 bytes
+BLAKE2s (mailsend-go-1.0.10.tar.gz) = 70dba5f1b433dc12575e9a908e6750b77ea099ebc70004bfcc0ddbda1272e62f
+SHA512 (mailsend-go-1.0.10.tar.gz) = 552916acc7fbcbe44c02c9dbecb66710ba3ddfba7afc466f0000ed1c919c886bdd16750f57abafb5a5e3ca92335cbb243b02f7cd41f0d41874cc43175b5970d9
+Size (mailsend-go-1.0.10.tar.gz) = 237159 bytes
