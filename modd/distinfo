@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (modd-v0.8.tar.gz) = f163b5bb8fafd10ca125ce25f92ef86bd5c9f28d
+BLAKE2s (modd-v0.8.tar.gz) = 7513fed7afe0fa140382bbcae74cdb4e46064e5e1b14cfd272adcf3b6ef241ac
 SHA512 (modd-v0.8.tar.gz) = b8617ab2527474533b69a254606034b33ea9353d27fc25b7c8bdbe68600363ede43d3cecb2d03d5ec073631bb5357651f3e8e2c04d653db32a8fde63f4fae9c9
 Size (modd-v0.8.tar.gz) = 4984260 bytes
