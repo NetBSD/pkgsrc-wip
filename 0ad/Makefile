@@ -15,12 +15,13 @@ GCC_REQD+=	7
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake perl bash pkg-config pax tar
-TOOL_DEPENDS+=	python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DEPENDS+=	0ad-data-${PKGVERSION}:../../wip/0ad-data
-DEPENDS+=	premake5-[0-9]*:../../devel/premake5
+DEPENDS+=		0ad-data-${PKGVERSION}:../../wip/0ad-data
+BUILD_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
+BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+TOOL_DEPENDS+=		python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 
 SUBST_CLASSES+=			sysincludedir
 SUBST_MESSAGE.sysincludedir=	Fixing "/usr/local" path assumption

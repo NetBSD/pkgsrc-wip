@@ -15,7 +15,6 @@ SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_FUStringBuilder.hpp) =
 SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_Platforms.h) = 6887cca8e6ff1765a6b666bd595f8bcb41c2a90f
 SHA1 (patch-libraries_source_spidermonkey_build.sh) = 34225c82659cc236bff076301dd52adca9888f92
 SHA1 (patch-source_lib_allocators_page__aligned.cpp) = c25054afd543a1a90530964a63b2b692b1687765
-SHA1 (patch-source_lib_secure__crt.cpp) = 1eaa9eb892d75e6a2533dc031675615138550e51
 SHA1 (patch-source_maths_tests_test__Bound.h) = 8d6b79199d86dabdddf3dca68eed2d252ef9a649
 SHA1 (patch-source_network_StunClient.cpp) = 6267d44c3d0345d3e47c19746f105657ba984876
 SHA1 (patch-source_scriptinterface_ScriptTypes.h) = f2351c637ba7ed7a36b4399b6e89a0d8281c9ad4
