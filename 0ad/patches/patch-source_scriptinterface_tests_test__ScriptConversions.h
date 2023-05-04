@@ -1,3 +1,6 @@
+$NetBSD$
+
+
 --- source/scriptinterface/tests/test_ScriptConversions.h.orig	2023-05-04 01:07:22.308333403 +0200
 +++ source/scriptinterface/tests/test_ScriptConversions.h	2023-05-04 01:07:53.059298729 +0200
 @@ -208,7 +208,7 @@

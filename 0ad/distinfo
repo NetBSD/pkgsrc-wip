@@ -18,6 +18,6 @@ SHA1 (patch-source_lib_allocators_page__aligned.cpp) = c25054afd543a1a90530964a6
 SHA1 (patch-source_maths_tests_test__Bound.h) = 8d6b79199d86dabdddf3dca68eed2d252ef9a649
 SHA1 (patch-source_network_StunClient.cpp) = 6267d44c3d0345d3e47c19746f105657ba984876
 SHA1 (patch-source_scriptinterface_ScriptTypes.h) = f2351c637ba7ed7a36b4399b6e89a0d8281c9ad4
-SHA1 (patch-source_scriptinterface_tests_test__ScriptConversions.h) = 4531fd80325fe98c5d3d21d8e0f2c36a6f7890a3
+SHA1 (patch-source_scriptinterface_tests_test__ScriptConversions.h) = d415a86d59f50daa5acd594265f026e88b5a37b9
 SHA1 (patch-source_third__party_mikktspace_weldmesh.cpp) = 35df7dd5d5d2aa784ef03599a47cc69982ebe332
 SHA1 (patch-source_third__party_tinygettext_include_tinygettext_iconv.hpp) = 9778a9729202a95a5b5ec3f66419d31aa9b423b9

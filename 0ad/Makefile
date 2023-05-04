@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
 GCC_REQD+=	7
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake perl bash pkg-config pax tar
+USE_TOOLS+=	gmake perl bash pkg-config pax tar cmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
