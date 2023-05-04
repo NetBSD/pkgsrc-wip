@@ -9,3 +9,9 @@ CONFIGURE_TESTS?=		--with-tests
 .else
 CONFIGURE_TESTS?=		--without-tests
 .endif
+
+.if ${PKG_OPTIONS:Meditor}
+CONFIGURE_EDITOR?=
+.else
+CONFIGURE_EDITOR?=		--disable-atlas
+.endif

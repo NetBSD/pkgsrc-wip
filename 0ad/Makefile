@@ -49,10 +49,13 @@ SUBST_SED.mozjs2+=	-e "s|JS::PrepareZoneForGC(|JS::PrepareZoneForGC(m_cx, |g"
 
 DATADIR=	${PREFIX}/share/${PKGBASE}
 
+INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	lib/${PKGBASE}
 INSTALLATION_DIRS+=	${DATADIR}
 INSTALLATION_DIRS+=	${DATADIR}/mods/public
 INSTALLATION_DIRS+=	${DATADIR}/mods/mod
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/pixmaps
 
 .include "options.mk"
 
@@ -65,20 +68,14 @@ do-configure:
 		--with-system-premake5 \
 		--with-system-mozjs \
 		--without-pch \
-		--disable-atlas \
-		${CONFIGURE_TESTS}
+		${CONFIGURE_EDITOR} ${CONFIGURE_TESTS}
 
 # TODO: needs "wx"
 # nvtt, notes from gentoo:
 # Build bundled NVTT
 # nvtt is abandoned upstream and 0ad has forked it and added fixes.
 # Use their copy. bug #768930
-# --with-system-nvtt \
-# options:
-# tests:
-# --without-tests
-#  editor:
-# --disable-atlas
+# --with-system-nvtt
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
