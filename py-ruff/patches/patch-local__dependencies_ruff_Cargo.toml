@@ -1,0 +1,35 @@
+$NetBSD$
+
+Provide unpublished crate.
+
+--- local_dependencies/ruff/Cargo.toml.orig	1970-01-01 00:00:00.000000000 +0000
++++ local_dependencies/ruff/Cargo.toml
+@@ -21,7 +21,7 @@ ruff_python_ast = { path = "../ruff_pyth
+ ruff_python_semantic = { path = "../ruff_python_semantic" }
+ ruff_python_stdlib = { path = "../ruff_python_stdlib" }
+ ruff_rustpython = { path = "../ruff_rustpython" }
+-ruff_text_size = { git = "https://github.com/charliermarsh/RustPython.git", rev = "c3147d2c1524ebd0e90cf1c2938d770314fd5a5a" }
++ruff_text_size = { path = "../../ruff_text_size" }
+ 
+ annotate-snippets = { version = "0.9.1", features = ["color"] }
+ anyhow = { version = "1.0.69" }
+@@ -37,7 +37,7 @@ ignore = { version = "0.4.20" }
+ imperative = { version = "1.0.4" }
+ is-macro = { version = "0.2.2" }
+ itertools = { version = "0.10.5" }
+-libcst = { git = "https://github.com/charliermarsh/LibCST", rev = "80e4c1399f95e5beb532fdd1e209ad2dbb470438" }
++libcst = { path = "../../LibCST-80e4c1399f95e5beb532fdd1e209ad2dbb470438" }
+ log = { version = "0.4.17" }
+ natord = { version = "1.0.9" }
+ nohash-hasher = { version = "0.2.0" }
+@@ -53,8 +53,8 @@ quick-junit = { version = "0.3.2" }
+ regex = { version = "1.7.1" }
+ result-like = { version = "0.4.6" }
+ rustc-hash = { version = "1.1.0" }
+-rustpython-common = { git = "https://github.com/charliermarsh/RustPython.git", rev = "c3147d2c1524ebd0e90cf1c2938d770314fd5a5a" }
+-rustpython-parser = { git = "https://github.com/charliermarsh/RustPython.git", rev = "c3147d2c1524ebd0e90cf1c2938d770314fd5a5a" }
++rustpython-common = { version = "0.2.0" }
++rustpython-parser = { version = "0.2.0" }
+ schemars = { version = "0.8.12" }
+ semver = { version = "1.0.16" }
+ serde = { version = "1.0.152", features = ["derive"] }

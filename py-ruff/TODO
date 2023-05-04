@@ -1,15 +1,9 @@
 * Building wheel...
 Running `maturin-3.11 pep517 build-wheel -i /usr/pkg/bin/python3.11 --compatibility off`
-error: failed to get `ruff_text_size` as a dependency of package `ruff_cli v0.0.264 (/scratch/wip/py-ruff/work/ruff-0.0.264/crates/ruff_cli)`
-
-Caused by:
-  failed to load source for dependency `ruff_text_size`
-
-Caused by:
-  Unable to update https://github.com/charliermarsh/RustPython.git?rev=c3147d2c1524ebd0e90cf1c2938d770314fd5a5a#c3147d2c
-
-Caused by:
-  can't checkout from 'https://github.com/charliermarsh/RustPython.git': you are in the offline mode (--offline)
+error: no matching package named `rustc-hash` found
+location searched: registry `crates-io`
+required by package `ruff_cli v0.0.264 (/scratch/wip/py-ruff/work/ruff-0.0.264/crates/ruff_cli)`
+As a reminder, you're using offline mode (--offline) which can sometimes cause surprising resolution failures, if this error is too confusing you may wish to retry without the offline flag.
 💥 maturin failed
   Caused by: Cargo metadata failed. Does your crate compile with `cargo build`?
   Caused by: `cargo metadata` exited with an error: 

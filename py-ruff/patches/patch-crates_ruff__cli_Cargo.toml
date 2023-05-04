@@ -1,0 +1,15 @@
+$NetBSD$
+
+Provide unpublished crate.
+
+--- crates/ruff_cli/Cargo.toml.orig	1970-01-01 00:00:00.000000000 +0000
++++ crates/ruff_cli/Cargo.toml
+@@ -26,7 +26,7 @@ ruff = { path = "../../local_dependencie
+ ruff_cache = { path = "../../local_dependencies/ruff_cache" }
+ ruff_diagnostics = { path = "../../local_dependencies/ruff_diagnostics" }
+ ruff_python_ast = { path = "../../local_dependencies/ruff_python_ast" }
+-ruff_text_size = { git = "https://github.com/charliermarsh/RustPython.git", rev = "c3147d2c1524ebd0e90cf1c2938d770314fd5a5a" }
++ruff_text_size = { path = "../../ruff_text_size" }
+ 
+ annotate-snippets = { version = "0.9.1", features = ["color"] }
+ anyhow = { version = "1.0.69" }

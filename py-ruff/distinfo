@@ -1038,3 +1038,5 @@ Size (yansi-0.5.1.crate) = 16525 bytes
 BLAKE2s (yansi-term-0.1.2.crate) = 2813445385a77c8a145f5e18e9f21db4290e5676c82e8b3f8581e65e1e101135
 SHA512 (yansi-term-0.1.2.crate) = ba720e36487871427aaa7139e8aeaf5b2b3f2d1df4798d7e238e323dc3d3220f12202e223f74339201be3466848c372dc1712e1842e5cd6bd51c3dedf76c9ff6
 Size (yansi-term-0.1.2.crate) = 14342 bytes
+SHA1 (patch-crates_ruff__cli_Cargo.toml) = d204477e860437ba4475c393fcc6f6714837cb26
+SHA1 (patch-local__dependencies_ruff_Cargo.toml) = 3bac00cacdbc71a3f36c8e5a6d6d06a83f2cfa7c
