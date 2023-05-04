@@ -5,7 +5,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bats-core/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		iku.iwasa@gmail.com
+MAINTAINER=		iquiw@NetBSD.org
 HOMEPAGE=		https://github.com/bats-core/bats-core
 COMMENT=		Bash Automated Testing System
 LICENSE=		mit

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ekalinin/}
 GITHUB_PROJECT=	nodeenv
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://ekalinin.github.io/nodeenv/
 COMMENT=	Node.js virtual environment
 LICENSE=	modified-bsd

@@ -4,7 +4,7 @@ DISTNAME=	browserpass-native-3.1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=browserpass/}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://github.com/browserpass/browserpass-native
 COMMENT=	Browserpass native client app
 LICENSE=	isc

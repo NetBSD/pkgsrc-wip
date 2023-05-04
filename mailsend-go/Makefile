@@ -5,7 +5,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=muquit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://github.com/muquit/mailsend-go
 COMMENT=	Multi-platform command line tool to send mail via SMTP protocol
 LICENSE=	mit

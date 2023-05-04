@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=terrastruct/}
 GITHUB_PROJECT=	d2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://d2lang.com/
 COMMENT=	Modern diagram scripting language that turns text to diagrams
 LICENSE=	mpl-2.0

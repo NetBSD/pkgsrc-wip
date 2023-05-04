@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=cue-lang/}
 GITHUB_PROJECT=	cue
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://cuelang.org/
 COMMENT=	Validate and define text-based and dynamic configuration
 LICENSE=	apache-2.0

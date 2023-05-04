@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_PROJECT=	packer
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://www.packer.io/
 COMMENT=	Tool for creating identical machine images for multiple platforms
 LICENSE=	mpl-2.0

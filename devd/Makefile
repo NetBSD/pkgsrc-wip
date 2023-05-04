@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=cortesi/}
 GITHUB_PROJECT=	devd
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://github.com/cortesi/devd
 COMMENT=	Local webserver for developers
 

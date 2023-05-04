@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=go-task/}
 GITHUB_PROJECT=	task
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://taskfile.dev/
 COMMENT=	Task-runner / simpler Make alternative written in Go
 LICENSE=	mit
