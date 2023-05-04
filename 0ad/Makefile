@@ -63,8 +63,9 @@ do-configure:
 		--with-system-mozjs \
 		--with-system-nvtt \
 		--without-pch \
-		--atlas
+		--disable-atlas
 
+# TODO: needs "wx"
 # options:
 # tests:
 # --without-tests
@@ -79,7 +80,8 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
-	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
+	# atlas:
+	# ${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
 	# missing:
 	# libnvcore.a libnvimage.so libnvmath.so libnvtt.so
 	# TODO: all of these should be .so.
@@ -91,7 +93,8 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.png ${DESTDIR}${PREFIX}/share/pixmaps
-.for d in config l10n tests tools
+	# if atlas?: + tools
+.for d in config l10n tests
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw ${d} ${DESTDIR}${DATADIR}
 .endfor
 	${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
