@@ -37,13 +37,7 @@ CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 LUA_VERSIONS_ACCEPTED=	53
 
-REPLACE_PERL+=		*.pl
 REPLACE_PERL+=		*/*.pl
-REPLACE_PERL+=		*/*/*.pl
-REPLACE_PERL+=		*/*/*/*.pl
-REPLACE_PERL+=		*/*/*/*/*.pl
-REPLACE_PERL+=		*/*/*/*/*/*.pl
-REPLACE_PERL+=		scripts/sed-sources
 
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	*/*.py
@@ -53,7 +47,6 @@ REPLACE_PYTHON+=	*/*/*/*/*.py
 REPLACE_PYTHON+=	*/*/*/*/*/*.py
 REPLACE_PYTHON+=	*/*/*/*/*/*/*.py
 REPLACE_PYTHON+=	*/*/*/*/*/*/*/*.py
-REPLACE_PYTHON+=	scripts/shush
 
 TEST_TARGET=		check-lldb
 #TEST_TARGET=		check-lldb-unit # doesn't work in standalone build
