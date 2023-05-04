@@ -120,6 +120,8 @@ do-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 #.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
