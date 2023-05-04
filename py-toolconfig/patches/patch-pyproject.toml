@@ -1,6 +1,7 @@
 $NetBSD$
 
 Convert to pdm-pep517 replacement, pdm-backend.
+https://github.com/bagel897/pytoolconfig/issues/14
 
 --- pyproject.toml.orig	2023-01-04 21:38:24.718939300 +0000
 +++ pyproject.toml
