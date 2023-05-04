@@ -1,9 +1,0 @@
-# $NetBSD$
-# used by wip/0ad-data/Makefile
-
-DISTVERSION=	0ad-0.0.26-alpha-unix
-CATEGORIES=	games
-MASTER_SITES=	http://releases.wildfiregames.com/
-EXTRACT_SUFX=	.tar.xz
-
-HOMEPAGE=	https://play0ad.com/
