@@ -1352,7 +1352,6 @@ SUBDIR+=	go-pool
 SUBDIR+=	go-prealloc
 SUBDIR+=	go-procfs
 SUBDIR+=	go-properties-map
-SUBDIR+=	go-protobuf-go
 SUBDIR+=	go-ps
 SUBDIR+=	go-python
 SUBDIR+=	go-qiniu-x
