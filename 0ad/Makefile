@@ -54,6 +54,8 @@ INSTALLATION_DIRS+=	${DATADIR}
 INSTALLATION_DIRS+=	${DATADIR}/mods/public
 INSTALLATION_DIRS+=	${DATADIR}/mods/mod
 
+.include "options.mk"
+
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
 	${RUN} cd ${WRKSRC}/build/workspaces && ./update-workspaces.sh \
@@ -62,11 +64,16 @@ do-configure:
 		--libdir=${PREFIX}/lib/${PKGBASE} \
 		--with-system-premake5 \
 		--with-system-mozjs \
-		--with-system-nvtt \
 		--without-pch \
-		--disable-atlas
+		--disable-atlas \
+		${CONFIGURE_TESTS}
 
 # TODO: needs "wx"
+# nvtt, notes from gentoo:
+# Build bundled NVTT
+# nvtt is abandoned upstream and 0ad has forked it and added fixes.
+# Use their copy. bug #768930
+# --with-system-nvtt \
 # options:
 # tests:
 # --without-tests
@@ -111,7 +118,7 @@ do-install:
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
+#.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
 .include "../../lang/python/tool.mk"
