@@ -21,6 +21,6 @@ INSTALLATION_DIRS+=	${DATADIR_0AD}
 NO_BUILD=	yes
 
 do-install:
-	${RUN} cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${DATADIR_0AD}
+	${RUN} cd ${WRKSRC}/binaries/data && ${PAX} -rw . ${DESTDIR}${DATADIR_0AD}
 
 .include "../../mk/bsd.pkg.mk"

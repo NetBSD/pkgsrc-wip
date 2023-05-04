@@ -14,15 +14,14 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
 GCC_REQD+=	7
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake perl bash pkg-config pax tar cmake
+USE_TOOLS+=	cmake bash gmake pax perl pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# TODO: maybe move into extra distfile instead of separate package?
 DEPENDS+=		0ad-data-${PKGVERSION}:../../wip/0ad-data
 BUILD_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 TOOL_DEPENDS+=		python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
+TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 SUBST_CLASSES+=			sysincludedir
 SUBST_MESSAGE.sysincludedir=	Fixing "/usr/local" path assumption
@@ -55,8 +54,13 @@ INSTALLATION_DIRS+=	lib/${PKGBASE}
 INSTALLATION_DIRS+=	${DATADIR}
 INSTALLATION_DIRS+=	${DATADIR}/mods/public
 INSTALLATION_DIRS+=	${DATADIR}/mods/mod
+INSTALLATION_DIRS+=	${DATADIR}/config
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
+
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=	-msse
+.endif
 
 .include "options.mk"
 
@@ -88,7 +92,15 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
 .if !empty(PKG_OPTIONS:Meditor)
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libAtlasUI.a ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	# why? you have the rpath. don't produce nonsense?
+	${PREFIX}/bin/patchelf --force-rpath --set-rpath \
+		${PREFIX}/lib/${PKGBASE}:${PREFIX}/lib \
+		${DESTDIR}${PREFIX}/bin/ActorEditor
+	${PREFIX}/bin/patchelf --replace-needed \
+		"../../../binaries/system/libAtlasUI.so" libAtlasUI.so \
+		${DESTDIR}${PREFIX}/bin/ActorEditor
+	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} \
+		libAtlasUI.so libAtlasObject.a ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endif
 	# TODO: all of these should be .so.
 	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libatlas.a \
@@ -98,18 +110,19 @@ do-install:
 		libsimulation2.a libtinygettext.a libCollada.so \
 		libnvcore.so libnvimage.so libnvmath.so libnvtt.so \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	# hack. figure out where to set the rpath in the cmake build of the bundled nvtt.
+.for f in libnvcore libnvimage libnvmath libnvtt
+	${PREFIX}/bin/patchelf \
+		--force-rpath \
+		--set-rpath ${PREFIX}/lib/${PKGBASE}:${PREFIX}/lib \
+		${DESTDIR}${PREFIX}/lib/${PKGBASE}/${f}.so
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.png ${DESTDIR}${PREFIX}/share/pixmaps
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw l10n ${DESTDIR}${DATADIR}
 .if !empty(PKG_OPTIONS:Mtests)
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw config tests ${DESTDIR}${DATADIR}
 .endif
-.if !empty(PKG_OPTIONS:Meditor)
-	cd ${WRKSRC}/binaries/data && ${PAX} -rw tools ${DESTDIR}${DATADIR}
-.endif
-	#${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
-	#${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${DESTDIR}${DATADIR}/mods/mod --no-same-permissions
-
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

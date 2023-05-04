@@ -1,6 +1,9 @@
 @comment $NetBSD$
 bin/0ad
+${PLIST.editor}bin/ActorEditor
 bin/pyrogenesis
+${PLIST.editor}lib/0ad/libAtlasObject.a
+${PLIST.editor}lib/0ad/libAtlasUI.so
 lib/0ad/libCollada.so
 lib/0ad/libatlas.a
 lib/0ad/libengine.a
