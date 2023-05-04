@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
 GCC_REQD+=	7
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake perl bash pkg-config
+USE_TOOLS+=	gmake perl bash pkg-config pax tar
 TOOL_DEPENDS+=	python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -46,22 +46,57 @@ SUBST_STAGE.mozjs2=	pre-configure
 SUBST_FILES.mozjs2+=	source/scriptinterface/ScriptContext.cpp
 SUBST_SED.mozjs2+=	-e "s|JS::PrepareZoneForGC(|JS::PrepareZoneForGC(m_cx, |g"
 
+DATADIR=	${PREFIX}/share/${PKGBASE}
+
+INSTALLATION_DIRS+=	lib/${PKGBASE}
+INSTALLATION_DIRS+=	${DATADIR}
+INSTALLATION_DIRS+=	${DATADIR}/mods/public
+INSTALLATION_DIRS+=	${DATADIR}/mods/mod
+
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
 	${RUN} cd ${WRKSRC}/build/workspaces && ./update-workspaces.sh \
 		--bindir=${PREFIX}/bin \
-		--datadir=${PREFIX}/share/${PKGBASE} \
+		--datadir=${DATADIR} \
 		--libdir=${PREFIX}/lib/${PKGBASE} \
 		--with-system-premake5 \
 		--with-system-mozjs \
 		--with-system-nvtt \
 		--without-pch \
-		--disable-atlas
+		--atlas
+
+# options:
+# tests:
+# --without-tests
+#  editor:
+# --disable-atlas
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N} \
 		-C build/workspaces/gcc
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
+	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
+	# missing:
+	# libnvcore.a libnvimage.so libnvmath.so libnvtt.so
+	# TODO: all of these should be .so.
+	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libatlas.a libAtlasUI.a \
+		libengine.a libgladwrapper.a libglooxwrapper.a libgraphics.a \
+		libgui.a liblobby.a liblowlevel.a libmocks_real.a libmocks_test.a \
+		libmongoose.a libnetwork.a librlinterface.a libscriptinterface.a \
+		libsimulation2.a libtinygettext.a libCollada.so \
+		${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.png ${DESTDIR}${PREFIX}/share/pixmaps
+.for d in config l10n tests tools
+	cd ${WRKSRC}/binaries/data && ${PAX} -rw ${d} ${DESTDIR}${DATADIR}
+.endfor
+	${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
+	${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${DESTDIR}${DATADIR}/mods/mod --no-same-permissions
+
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
