@@ -82,7 +82,7 @@ do-configure:
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N} \
+		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N:U1} \
 		-C build/workspaces/gcc
 
 do-install:
@@ -102,9 +102,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.png ${DESTDIR}${PREFIX}/share/pixmaps
 	# if atlas?: + tools
-.for d in config l10n tests
+.for d in config l10n
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw ${d} ${DESTDIR}${DATADIR}
 .endfor
+.if ${PKG_OPTIONS:Mtests}
+	cd ${WRKSRC}/binaries/data && ${PAX} -rw tests ${DESTDIR}${DATADIR}
+.endif
 	${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
 	${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${DESTDIR}${DATADIR}/mods/mod --no-same-permissions
 
