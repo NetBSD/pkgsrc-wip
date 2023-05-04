@@ -10,11 +10,30 @@ HOMEPAGE=	https://github.com/bageljrkhanofemus/pytoolconfig
 COMMENT=	Python tool configuration
 LICENSE=	gnu-lgpl-v3
 
-# needs py-pdm to build
+DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=1.4.4:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-tabulate>=0.8.9:../../textproc/py-tabulate
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=4.5.0:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.991:../../lang/py-mypy
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
+.endif
+.if ${PYTHON_VERSION} < 308
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
+.endif
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
