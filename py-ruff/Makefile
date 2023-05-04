@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	ruff-0.0.263
-CATEGORIES=	devel
+DISTNAME=	ruff-0.0.264
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,10 +10,15 @@ COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14.10:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14.10:../../devel/py-maturin
 TOOL_DEPENDS+=	rust-[0-9]*:../../lang/rust
 
-USE_LANGUAGES=	# none
+CARGO_WRKSRC=	${WRKSRC}/crates/ruff_cli
+MAKE_ENV+=	CARGO_NET_OFFLINE=true
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "cargo-depends.mk"
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
