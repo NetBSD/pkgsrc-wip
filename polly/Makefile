@@ -16,7 +16,7 @@ DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../wip/llvm
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++14
+USE_LANGUAGES=		c c++17
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
