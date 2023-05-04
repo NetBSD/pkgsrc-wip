@@ -1,16 +1,18 @@
-⚠️ Warning: specify [package.metadata.maturin] name in Cargo.toml is deprecated, use module-name in [tool.maturin] section in pyproject.toml instead
-🍹 Building a mixed python/rust project
-🔗 Found bin bindings
-📡 Using build options bindings from pyproject.toml
-error: package `ruff_cli v0.0.263 (/scratch/devel/py-ruff/work/ruff-0.0.263/crates/ruff_cli)` cannot be built because it requires rustc 1.69 or newer, while the currently active rustc version is 1.68.2
+* Building wheel...
+Running `maturin-3.11 pep517 build-wheel -i /usr/pkg/bin/python3.11 --compatibility off`
+error: failed to get `ruff_text_size` as a dependency of package `ruff_cli v0.0.264 (/scratch/wip/py-ruff/work/ruff-0.0.264/crates/ruff_cli)`
 
+Caused by:
+  failed to load source for dependency `ruff_text_size`
+
+Caused by:
+  Unable to update https://github.com/charliermarsh/RustPython.git?rev=c3147d2c1524ebd0e90cf1c2938d770314fd5a5a#c3147d2c
+
+Caused by:
+  can't checkout from 'https://github.com/charliermarsh/RustPython.git': you are in the offline mode (--offline)
 💥 maturin failed
-  Caused by: Failed to build a native library through cargo
-  Caused by: Cargo build finished with "exit status: 101": `"cargo" "rustc" "--release" "--manifest-path" "/scratch/devel/py-ruff/work/ruff-0.0.263/crates/ruff_cli/Cargo.toml" "--message-format" "json" "--bin" "ruff" "--" "-C" "link-arg=-s"`
+  Caused by: Cargo metadata failed. Does your crate compile with `cargo build`?
+  Caused by: `cargo metadata` exited with an error: 
 Error: command ['maturin-3.11', 'pep517', 'build-wheel', '-i', '/usr/pkg/bin/python3.11', '--compatibility', 'off'] returned non-zero exit status 1
 
 ERROR Backend subprocess exited when trying to invoke build_wheel
-*** Error code 1
-
-
-Also, there should be a cargo-depends.mk instead of downloading during crates build.
