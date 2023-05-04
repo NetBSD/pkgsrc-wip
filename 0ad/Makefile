@@ -47,7 +47,7 @@ SUBST_STAGE.mozjs2=	pre-configure
 SUBST_FILES.mozjs2+=	source/scriptinterface/ScriptContext.cpp
 SUBST_SED.mozjs2+=	-e "s|JS::PrepareZoneForGC(|JS::PrepareZoneForGC(m_cx, |g"
 
-DATADIR=	${PREFIX}/share/${PKGBASE}
+DATADIR=		${PREFIX}/share/${PKGBASE}
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	lib/${PKGBASE}
@@ -58,6 +58,13 @@ INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 
 .include "options.mk"
+
+# TODO: needs "wx"
+# nvtt, notes from gentoo:
+# Build bundled NVTT
+# nvtt is abandoned upstream and 0ad has forked it and added fixes.
+# Use their copy. bug #768930
+# --with-system-nvtt
 
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
@@ -70,13 +77,6 @@ do-configure:
 		--without-pch \
 		${CONFIGURE_EDITOR} ${CONFIGURE_TESTS}
 
-# TODO: needs "wx"
-# nvtt, notes from gentoo:
-# Build bundled NVTT
-# nvtt is abandoned upstream and 0ad has forked it and added fixes.
-# Use their copy. bug #768930
-# --with-system-nvtt
-
 do-build:
 	${RUN} cd ${WRKSRC} && \
 		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N:U1} \
@@ -85,25 +85,28 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
-	# atlas:
-	# ${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
-	# missing:
-	# libnvcore.a libnvimage.so libnvmath.so libnvtt.so
+.if ${PKG_OPTIONS:Meditor}
+	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libAtlasUI.a ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+.endif
 	# TODO: all of these should be .so.
 	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libatlas.a libAtlasUI.a \
 		libengine.a libgladwrapper.a libglooxwrapper.a libgraphics.a \
 		libgui.a liblobby.a liblowlevel.a libmocks_real.a libmocks_test.a \
 		libmongoose.a libnetwork.a librlinterface.a libscriptinterface.a \
 		libsimulation2.a libtinygettext.a libCollada.so \
+		libnvcore.so libnvimage.so libnvmath.so libnvtt.so \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.png ${DESTDIR}${PREFIX}/share/pixmaps
-	# if atlas?: + tools
 .for d in config l10n
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw ${d} ${DESTDIR}${DATADIR}
 .endfor
 .if ${PKG_OPTIONS:Mtests}
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw tests ${DESTDIR}${DATADIR}
+.endif
+.if ${PKG_OPTIONS:Meditor}
+	cd ${WRKSRC}/binaries/data && ${PAX} -rw tools ${DESTDIR}${DATADIR}
 .endif
 	${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
 	${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${DESTDIR}${DATADIR}/mods/mod --no-same-permissions
