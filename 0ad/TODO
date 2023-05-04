@@ -1,25 +1,31 @@
 [X] Fix iconv mismatch in tinygettext
-[ ] Create PLIST
+[x] Create PLIST
+[ ] Create PLIST for options
+[ ] Build with options
 
-In file included from /usr/pkg/include/mozjs-78/js/TraceKind.h:12:0,
-                 from /usr/pkg/include/mozjs-78/jspubtd.h:18,
-                 from ../../../source/scriptinterface/ScriptTypes.h:62,
-                 from ../../../source/scriptinterface/ScriptContext.h:21,
-                 from ../../../source/scriptinterface/ScriptContext.cpp:20:
-/usr/pkg/include/mozjs-78/js/TypeDecls.h:55:21: note: class type 'JS::Zone' is incomplete
- class JS_PUBLIC_API Zone;
-                     ^~~~
-gmake[3]: *** [scriptinterface.make:138: obj/scriptinterface_Release/ScriptContext.o] Error 1
-
-------------
-
-
-Linking test
-g++ -o "../../../binaries/system/test" obj/test_Release/test_Camera.o obj/test_Release/test_Color.o obj/test_Release/test_LOSTexture.o obj/test_Release/test_MapGenerator.o obj/test_Release/test_MeshManager.o obj/test_Release/test_ShaderManager.o obj/test_Release/test_Terrain.o obj/test_Release/test_TextureConverter.o obj/test_Release/test_TextureManager.o obj/test_Release/test_CGUIText.o obj/test_Release/test_GuiManager.o obj/test_Release/test_ParseString.o obj/test_Release/test_DynamicArena.o obj/test_Release/test_adapters.o obj/test_Release/test_allocators.o obj/test_Release/test_archive_zip.o obj/test_Release/test_trace.o obj/test_Release/test_vfs_real_path.o obj/test_Release/test_vfs_tree.o obj/test_Release/test_vfs_util.o obj/test_Release/test_posix.o obj/test_Release/test_rtl.o obj/test_Release/test_sysdep.o obj/test_Release/test_adts.o obj/test_Release/test_bits.o obj/test_Release/test_byte_order.o obj/test_Release/test_cache_adt.o obj/test_Release/test_fnv_hash.o obj/test_Release/test_lib.o obj/test_Release/test_path.o obj/test_Release/test_path_util.o obj/test_Release/test_rand.o obj/test_Release/test_regex.o obj/test_Release/test_secure_crt.o obj/test_Release/test_wchar.o obj/test_Release/test_tex.o obj/test_Release/test_Bound.o obj/test_Release/test_BoundingSphere.o obj/test_Release/test_Brush.o obj/test_Release/test_Fixed.o obj/test_Release/test_FixedVector2D.o obj/test_Release/test_FixedVector3D.o obj/test_Release/test_MD5.o obj/test_Release/test_Matrix3d.o obj/test_Release/test_Sqrt.o obj/test_Release/test_Net.o obj/test_Release/test_NetMessage.o obj/test_Release/test_StunClient.o obj/test_Release/test_CmdLineArgs.o obj/test_Release/test_XMBData.o obj/test_Release/test_RelaxNG.o obj/test_Release/test_XMLWriter.o obj/test_Release/test_Xeromyces.o obj/test_Release/stub_impl_hack.o obj/test_Release/test_CColor.o obj/test_Release/test_CLogger.o obj/test_Release/test_CStr.o obj/test_Release/test_ConfigDB.o obj/test_Release/test_Future.o obj/test_Release/test_Hashing.o obj/test_Release/test_Hotkeys.o obj/test_Release/test_Mod.o obj/test_Release/test_ModIo.o obj/test_Release/test_TaskManager.o obj/test_Release/test_fmt.o obj/test_Release/test_test.o obj/test_Release/test_FunctionWrapper.o obj/test_Release/test_ScriptConversions.o obj/test_Release/test_ScriptInterface.o obj/test_Release/test_CinemaManager.o obj/test_Release/test_CommandQueue.o obj/test_Release/test_HierPathfinder.o obj/test_Release/test_ObstructionManager.o obj/test_Release/test_Pathfinder.o obj/test_Release/test_Position.o obj/test_Release/test_RangeManager.o obj/test_Release/test_TerritoryManager.o obj/test_Release/test_scripts.o obj/test_Release/test_CmpTemplateManager.o obj/test_Release/test_ComponentManager.o obj/test_Release/test_EntityMap.o obj/test_Release/test_ParamNode.o obj/test_Release/test_SerializeTemplates.o obj/test_Release/test_Serializer.o obj/test_Release/test_Simulation2.o obj/test_Release/test_root.o obj/test_Release/test_setup.o obj/test_Release/test_pkcs5_pbkdf5.o obj/test_Release/test_Preprocessor.o    -L../../../binaries/system -L../../../../../../../../pkg/lib -L../../../../../../../../X11R7/lib -Wl,--no-undefined -Wl,--as-needed -Wl,-z,relro -Wl,-rpath,/usr/pkg/lib/0ad -Wl,-R/usr/pkg/lib -Wl,-rpath,/usr/X11R7/lib -pthread -Wl,--start-group ../../../binaries/system/libnetwork.a ../../../binaries/system/librlinterface.a ../../../binaries/system/libtinygettext.a ../../../binaries/system/liblobby.a ../../../binaries/system/libglooxwrapper.a ../../../binaries/system/libsimulation2.a ../../../binaries/system/libscriptinterface.a ../../../binaries/system/libengine.a ../../../binaries/system/libgraphics.a ../../../binaries/system/libatlas.a ../../../binaries/system/libgui.a ../../../binaries/system/liblowlevel.a ../../../binaries/system/libgladwrapper.a ../../../binaries/system/libmongoose.a ../../../binaries/system/libmocks_test.a -lSDL2 -lpng16 -lmozjs-78 -lxml2 -lboost_filesystem -lboost_system -lenet -lcurl -licui18n -licuuc -licudata -lsodium -lfmt -lfreetype -lbz2 -lopenal -lvorbisfile -lnvcore -lnvmath -lnvimage -lnvtt -lgloox -lresolv -lidn -lgnutls -lz -lminiupnpc -lX11 -lexecinfo -lrt -Wl,--end-group
-gmake[2]: Leaving directory '/usr/work/wip/0ad/work/0ad-0.0.26-alpha/build/workspaces/gcc'
-===> Installing for 0ad-0.0.26.alpha
-=> Generating pre-install file lists
-gmake: Makefile: No such file or directory
-gmake: *** No rule to make target 'Makefile'.  Stop.
-*** Error code 2
+=> Generating post-install file lists
+=> Checking file-check results for 0ad-0.0.26.alpha
+=> Checking for non-existent script interpreters in 0ad-0.0.26.alpha
+=> Checking file permissions in 0ad-0.0.26.alpha
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libatlas.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libengine.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libgladwrapper.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libglooxwrapper.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libgraphics.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libgui.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/liblobby.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/liblowlevel.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libmocks_real.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libmocks_test.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libmongoose.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libnetwork.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/librlinterface.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libscriptinterface.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libsimulation2.a: executable bit is set on non-executable file.
+warning: /usr/work/wip/0ad/work/.destdir/usr/pkg/lib/0ad/libtinygettext.a: executable bit is set on non-executable file.
+0 errors and 16 warnings.
+=> Checking for PIE in 0ad-0.0.26.alpha
+=> Checking for RELRO in 0ad-0.0.26.alpha
+=> Checking for missing run-time search paths in 0ad-0.0.26.alpha
+ERROR: lib/0ad/libnvmath.so: missing library: libnvcore.so
 

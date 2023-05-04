@@ -1,6 +1,6 @@
 # $NetBSD$
 PKG_OPTIONS_VAR=	PKG_OPTIONS.0ad
-PKG_SUPPORTED_OPTIONS+=	tests
+PKG_SUPPORTED_OPTIONS+=	tests editor
 
 .include "../../mk/bsd.options.mk"
 

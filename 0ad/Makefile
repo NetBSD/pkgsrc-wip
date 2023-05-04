@@ -18,6 +18,7 @@ USE_TOOLS+=	gmake perl bash pkg-config pax tar cmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# TODO: maybe move into extra distfile instead of separate package?
 DEPENDS+=		0ad-data-${PKGVERSION}:../../wip/0ad-data
 BUILD_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
@@ -85,12 +86,12 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
-.if ${PKG_OPTIONS:Meditor}
+.if !empty(PKG_OPTIONS:Meditor)
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libAtlasUI.a ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endif
 	# TODO: all of these should be .so.
-	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libatlas.a libAtlasUI.a \
+	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libatlas.a \
 		libengine.a libgladwrapper.a libglooxwrapper.a libgraphics.a \
 		libgui.a liblobby.a liblowlevel.a libmocks_real.a libmocks_test.a \
 		libmongoose.a libnetwork.a librlinterface.a libscriptinterface.a \
@@ -99,17 +100,15 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/build/resources/0ad.png ${DESTDIR}${PREFIX}/share/pixmaps
-.for d in config l10n
-	cd ${WRKSRC}/binaries/data && ${PAX} -rw ${d} ${DESTDIR}${DATADIR}
-.endfor
-.if ${PKG_OPTIONS:Mtests}
-	cd ${WRKSRC}/binaries/data && ${PAX} -rw tests ${DESTDIR}${DATADIR}
+	cd ${WRKSRC}/binaries/data && ${PAX} -rw l10n ${DESTDIR}${DATADIR}
+.if !empty(PKG_OPTIONS:Mtests)
+	cd ${WRKSRC}/binaries/data && ${PAX} -rw config tests ${DESTDIR}${DATADIR}
 .endif
-.if ${PKG_OPTIONS:Meditor}
+.if !empty(PKG_OPTIONS:Meditor)
 	cd ${WRKSRC}/binaries/data && ${PAX} -rw tools ${DESTDIR}${DATADIR}
 .endif
-	${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
-	${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${DESTDIR}${DATADIR}/mods/mod --no-same-permissions
+	#${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${DESTDIR}${DATADIR}/mods/public --no-same-permissions
+	#${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${DESTDIR}${DATADIR}/mods/mod --no-same-permissions
 
 
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -121,7 +120,6 @@ do-install:
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-#.include "../../graphics/nvidia-texture-tools/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
