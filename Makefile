@@ -3016,7 +3016,6 @@ SUBDIR+=	p6-uri
 SUBDIR+=	p6-xml-writer
 SUBDIR+=	p6-zef
 SUBDIR+=	pack
-SUBDIR+=	packer
 SUBDIR+=	packmol
 SUBDIR+=	pacman
 SUBDIR+=	pact_broker-client
