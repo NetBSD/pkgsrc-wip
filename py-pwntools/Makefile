@@ -17,7 +17,9 @@ DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=3.0:../../devel/py-intervaltree
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.0.0:../../devel/py-mako
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.15.2:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-psutil>=3.3.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pyelftools>=0.2.4:../../devel/py-pyelftools
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.0:../../textproc/py-pygments
@@ -29,7 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers-[0-9]*:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-unicorn>=1.0.2:../../emulators/py-unicorn
 
-PYTHON_VERSIONED_DEPENDENCIES+=	packaging pip
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for f in asm checksec common constgrep cyclic debug disablenx disasm elfdiff \
@@ -40,6 +42,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pwn ${DESTDIR}${PREFIX}/bin/pwn${PYVERSSUFFIX}
 	${MV} ${DESTDIR}${PREFIX}/pwntools-doc ${DESTDIR}${PREFIX}/${PYSITELIB}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
