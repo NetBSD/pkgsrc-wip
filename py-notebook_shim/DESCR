@@ -1,2 +1,0 @@
-This project provides a way for JupyterLab and other frontends to switch to
-Jupyter Server for their Python Web application backend.

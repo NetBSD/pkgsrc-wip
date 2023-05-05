@@ -17,8 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.6.1:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab_server>=2.10:../../wip/py-jupyterlab_server
-DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=1.16:../../wip/py-jupyter_server
-DEPENDS+=	${PYPKGPREFIX}-nbclassic>0:../../wip/py-nbclassic
+DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=1.16:../../www/py-jupyter_server
+DEPENDS+=	${PYPKGPREFIX}-nbclassic>0:../../www/py-nbclassic
 DEPENDS+=	${PYPKGPREFIX}-notebook>0:../../www/py-notebook
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.1:../../textproc/py-jinja2
 DEPENDS+=	npm>0:../../lang/npm
