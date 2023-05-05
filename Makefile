@@ -4969,6 +4969,7 @@ SUBDIR+=	pythontoolkit
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q
+SUBDIR+=	q-dns
 SUBDIR+=	q2pro
 SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
