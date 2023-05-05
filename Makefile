@@ -4577,7 +4577,6 @@ SUBDIR+=	py-scanless
 SUBDIR+=	py-schema
 SUBDIR+=	py-scholarmetrics
 SUBDIR+=	py-scikit-aero
-SUBDIR+=	py-scikit-build
 SUBDIR+=	py-scikit-glpk
 SUBDIR+=	py-scikit-learn
 SUBDIR+=	py-scikit-monaco

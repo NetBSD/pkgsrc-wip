@@ -16,8 +16,8 @@ USE_LANGUAGES+= c++
 USE_TOOLS+=	cmake
 USE_TOOLS+=	ninja
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-scikit-build>=0.15.0:../../wip/py-scikit-build
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build>=0.15.0:../../devel/py-scikit-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 MAKE_ENV+=USE_SYSTEM_BLOSC=1
 MAKE_ENV+=Blosc_ROOT=${BUILDLINK_PREFIX.blosc}
 # Address an erron
