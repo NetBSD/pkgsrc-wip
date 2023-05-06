@@ -4070,7 +4070,6 @@ SUBDIR+=	py-louvain
 SUBDIR+=	py-lrparsing
 SUBDIR+=	py-lsp-black
 SUBDIR+=	py-lsp-jsonrpc
-SUBDIR+=	py-lsp-server
 SUBDIR+=	py-lsqfit
 SUBDIR+=	py-luminous
 SUBDIR+=	py-lxmf
