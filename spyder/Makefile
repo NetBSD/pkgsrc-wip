@@ -6,10 +6,8 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=s/spyder/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.org/project/spyder/
-COMMENT=	Scientific PYthon Development EnviRonment, an alternative t>
+COMMENT=	Scientific Python Development Environment
 LICENSE=	mit
-
-USE_TOOLS+=	bash
 
 DEPENDS+=	${PYPKGPREFIX}-pickleshare>=0.4:../../databases/py-pickleshare
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.17.2:../../editors/py-jedi
@@ -20,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=2.2.0:../../wip/py-cloudpickle
 DEPENDS+=	${PYPKGPREFIX}-cookiecutter>=2.1.1:../../devel/py-cookiecutter
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.5.0:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-pyls-spyder>=0.4.0:../../wip/py-pyls-spyder
-DEPENDS+=	${PYPKGPREFIX}-lsp-server>=1.5.0:../../wip/py-lsp-server
+DEPENDS+=	${PYPKGPREFIX}-lsp-server>=1.5.0:../../lang/py-lsp-server
 DEPENDS+=	${PYPKGPREFIX}-lsp-black>=1.2.1:../../wip/py-lsp-black
 DEPENDS+=	${PYPKGPREFIX}-spyder-kernels>=2.4.0:../../wip/py-spyder-kernels
 DEPENDS+=	${PYPKGPREFIX}-textdistance>=4.2.0:../../wip/py-textdistance
@@ -50,9 +48,10 @@ DEPENDS+=	${PYPKGPREFIX}-rtree>=1.0.1:../../wip/py-rtree
 DEPENDS+=	${PYPKGPREFIX}-nbconvert-[0-9]*:../../www/py-nbconvert
 DEPENDS+=	${PYPKGPREFIX}-pylint-venv>=2.1.1:../../wip/py-pylint-venv
 
+USE_TOOLS+=	bash
 
-REPLACE_BASH+=	spyder/plugins/ipythonconsole/scripts/conda-activate.sh \
-		spyder/utils/check-git.sh
+REPLACE_BASH+=	spyder/plugins/ipythonconsole/scripts/conda-activate.sh
+REPLACE_BASH+=	spyder/utils/check-git.sh
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

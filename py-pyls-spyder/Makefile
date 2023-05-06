@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/spyder-ide/pyls-spyder
 COMMENT=	Spyder extensions for the python-lsp-server
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-lsp-server>=1.0.1:../../wip/py-lsp-server
+DEPENDS+=	${PYPKGPREFIX}-lsp-server>=1.0.1:../../lang/py-lsp-server
 
 USE_LANGUAGES=	# none
 
