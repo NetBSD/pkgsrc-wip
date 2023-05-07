@@ -10,3 +10,5 @@ As a reminder, you're using offline mode (--offline) which can sometimes cause s
 Error: command ['maturin-3.11', 'pep517', 'build-wheel', '-i', '/usr/pkg/bin/python3.11', '--compatibility', 'off'] returned non-zero exit status 1
 
 ERROR Backend subprocess exited when trying to invoke build_wheel
+
+Likely related to https://github.com/PyO3/maturin/issues/1442
