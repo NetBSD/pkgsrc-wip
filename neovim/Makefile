@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.6 2023/04/25 23:36:19 nikita Exp $
 
-DISTNAME=	neovim-0.10.0.9ded4c1
+DISTNAME=	neovim-0.10.0.fa1baa9
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
-GITHUB_TAG=	9ded4c127599b821d0875db9d63049b5970437a4
+GITHUB_TAG=	fa1baa9a47cdb3eed17d48b6011a164d4009d2ee
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/neovim/neovim/
