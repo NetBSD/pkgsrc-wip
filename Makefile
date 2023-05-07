@@ -785,7 +785,6 @@ SUBDIR+=	emacs-git
 SUBDIR+=	emacs-nox11-git
 SUBDIR+=	emacs-pr-el
 SUBDIR+=	emacs-session
-SUBDIR+=	emacs-snapshot
 SUBDIR+=	emacs-viewer-git
 SUBDIR+=	emacs-w3m-cvs
 SUBDIR+=	email-oauth2-proxy
