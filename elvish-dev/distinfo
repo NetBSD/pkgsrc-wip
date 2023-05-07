@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.5 2022/05/23 09:55:27 pin Exp $
 
-BLAKE2s (elvish-0.20.0-dad9269af58c38dcb32bccab99a94d865845f54a.tar.gz) = 7f61708a8b5de3bec6daf5ad9502bfde18e22971cfe1d39a00e3b8330dfb138e
-SHA512 (elvish-0.20.0-dad9269af58c38dcb32bccab99a94d865845f54a.tar.gz) = c44b51fd0d76b1a5368013112edd3a9e57a4e68cd093512d530ae77873aae7bbd91a8c43611737c7ac68557609a3b36390f0e10c9c27012fbc090f9f81b534b5
-Size (elvish-0.20.0-dad9269af58c38dcb32bccab99a94d865845f54a.tar.gz) = 832938 bytes
+BLAKE2s (elvish-0.20.0-6ecc2b306c37e80d016d3166d2705bc6bb2f0108.tar.gz) = a4d9c1249c40656424b5e4690b43a9d99daabc503293e72e2906c757c681f83c
+SHA512 (elvish-0.20.0-6ecc2b306c37e80d016d3166d2705bc6bb2f0108.tar.gz) = 688c9f319de18aff8ee24efa428328712b1eb6bbd9588310a818bef8dcf77c1cfbe8cc9a0c2f66550e453e7dac08331ee754711add6ccfeba1e287d7800562d3
+Size (elvish-0.20.0-6ecc2b306c37e80d016d3166d2705bc6bb2f0108.tar.gz) = 834307 bytes
 BLAKE2s (github.com_creack_pty_@v_v1.1.15.mod) = 19b33a84ea62506eb4da7226657fea56d1c17f128a045f166d91db907c32c93e
 SHA512 (github.com_creack_pty_@v_v1.1.15.mod) = b825d82c81fd02f7dc8be5be8d4f0e3b9bf39a75e453857ab3f4d8d17129d2214f6b4dddd18cd613cb4d29dbd5adc59f43c1f65d218e7f3b67f0a8e33e62f5a6
 Size (github.com_creack_pty_@v_v1.1.15.mod) = 38 bytes
@@ -36,6 +36,12 @@ Size (go.etcd.io_bbolt_@v_v1.3.7.mod) = 280 bytes
 BLAKE2s (go.etcd.io_bbolt_@v_v1.3.7.zip) = 9f8d18c61f0e2a3151ad04b767af6aef104000a5fc1c92b28ca5413ebcfafe67
 SHA512 (go.etcd.io_bbolt_@v_v1.3.7.zip) = 0e383f9324a2e612c40d20b5827fec9c708113b18dc7b1eebefa24567f1145f2312901e212198f01c8b989ee320e2b232c1f59268d26ee147daaaf4f9f22f88a
 Size (go.etcd.io_bbolt_@v_v1.3.7.zip) = 144183 bytes
+BLAKE2s (golang.org_x_sync_@v_v0.1.0.mod) = 0524d428f3fcb8a923eb2717aacc5f3b26a68c2b9ac636b9505d1820d6b32ede
+SHA512 (golang.org_x_sync_@v_v0.1.0.mod) = a9dd073f69c5be1153aaab6e84dd3bb1610a0df8b9882ca4c486c6625d4b5201e5032f86e5014421358dff564d93c4e67f20e5fd1d21ed5e259ddfbc90af43c0
+Size (golang.org_x_sync_@v_v0.1.0.mod) = 25 bytes
+BLAKE2s (golang.org_x_sync_@v_v0.1.0.zip) = d1335f3d760020e71a3969929907042a8fbc79a70187b6fb48661efb3263555e
+SHA512 (golang.org_x_sync_@v_v0.1.0.zip) = c50824f1a2198a75381a52680888cf2032c2110e13ee528cf4c3c5959f57ae3903a351c162847138d81fb45124c471c5a569ee6dfa0837681eb9e088bc8810dd
+Size (golang.org_x_sync_@v_v0.1.0.zip) = 27781 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.0.0-20220811171246-fbc7d0a398ab.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.0.0-20220811171246-fbc7d0a398ab.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.0.0-20220811171246-fbc7d0a398ab.mod) = 33 bytes
