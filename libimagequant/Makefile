@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	include lib/pkg-config
 
 post-build:
 	cd ${WRKSRC} && \
-        ${SED} 's|@PREFIX@|$(PREFIX)|;s|@VERSION@|$(VERSION)|' < imagequant.pc.in > imagequant.pc
+        ${SED} 's|@PREFIX@|${PREFIX}|;s|@VERSION@|${VERSION}|' < imagequant.pc.in > imagequant.pc
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libimagequant.h \
