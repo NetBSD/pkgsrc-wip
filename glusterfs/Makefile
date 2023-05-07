@@ -3,7 +3,7 @@
 DISTNAME=	glusterfs-10.4
 # PKGREVISION=	2
 CATEGORIES=	filesystems
-MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
+MASTER_SITES=	https://bits.gluster.org/pub/gluster/glusterfs/src/
 
 MAINTAINER=	als@thangorodrim.ch
 HOMEPAGE=	https://www.gluster.org/
