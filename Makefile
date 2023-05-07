@@ -2088,7 +2088,6 @@ SUBDIR+=	libi2pd
 SUBDIR+=	libical2
 SUBDIR+=	libifstat
 SUBDIR+=	libilbc
-SUBDIR+=	libimagequant
 SUBDIR+=	libimobiledevice
 SUBDIR+=	libinput
 SUBDIR+=	libinstpatch
