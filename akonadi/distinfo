@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (akonadi-22.08.1.tar.xz) = 717484171c5ed625cbf3ce80b539f64eb1eefebc6051f98abd448b7aaef22409
 SHA512 (akonadi-22.08.1.tar.xz) = cb98c8c73f09b8d143c7a5fbbada54636f0e3cf394f437e91470075f6d9ab4303894f9658eef4aa415049a30ee2555a90185471cdd2f3922f478ff47f6abc170
 Size (akonadi-22.08.1.tar.xz) = 1631044 bytes
+SHA1 (patch-src_server_storage_dbconfigmysql.cpp) = 3180ed9ee77de010984b7106008e9d065b93c26c
