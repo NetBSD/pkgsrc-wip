@@ -2041,6 +2041,7 @@ SUBDIR+=	libeps
 SUBDIR+=	libevdev
 SUBDIR+=	libevhtp
 SUBDIR+=	libexact
+SUBDIR+=	libfido2
 SUBDIR+=	libfirm-git
 SUBDIR+=	libfixposix
 SUBDIR+=	libflame
