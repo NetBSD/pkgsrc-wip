@@ -4081,6 +4081,7 @@ SUBDIR+=	py-magnitude
 SUBDIR+=	py-mahotas
 SUBDIR+=	py-mailcap-fix
 SUBDIR+=	py-mailingstats
+SUBDIR+=	py-mailmanclient
 SUBDIR+=	py-mailq
 SUBDIR+=	py-mapcode
 SUBDIR+=	py-mappy
