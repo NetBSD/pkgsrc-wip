@@ -3681,6 +3681,7 @@ SUBDIR+=	py-dj-static
 SUBDIR+=	py-django-audiofield
 SUBDIR+=	py-django-crispy-forms
 SUBDIR+=	py-django-gitrevision
+SUBDIR+=	py-django-gravatar2
 SUBDIR+=	py-django-helmholtz
 SUBDIR+=	py-django-idmap
 SUBDIR+=	py-django-js-reverse
