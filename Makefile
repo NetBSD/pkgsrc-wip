@@ -4273,6 +4273,7 @@ SUBDIR+=	py-okpy
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openai
 SUBDIR+=	py-openastro
+SUBDIR+=	py-openid
 SUBDIR+=	py-openopt
 SUBDIR+=	py-opensimplex
 SUBDIR+=	py-opentmm
