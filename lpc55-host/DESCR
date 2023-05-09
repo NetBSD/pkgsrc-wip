@@ -1,0 +1,27 @@
+lpc55 provides tooling around the LPC55.
+
+Goals
+
+    demystify the LPC55 ROM bootloader (at least for people who know Rust), by
+        modeling "protected flash" settings and other sparsely documented data
+	as Rust types
+        implementing its protocol, removing leftover details for older chips
+        clarifying the cryptographic details
+    unify
+        NXP's elftosb, blhost and spsdk projects
+        molejar's pyMBoot
+        ergonomic corresponding TOML-based config files
+    library-first (independent of CLI), and an HTTP interface
+    support for non-file based signing keys (via PKCS #11 URIs)
+
+Examples:
+
+    lpc55 info
+    lpc55 reboot
+
+Examples from inside repository (which includes example binaries, certificates,
+configurations):
+
+    lpc55 fingerprint-certificates example-cfgs/example-cfg.toml
+    lpc55 sign-fw example-cfgs/example-cfg.toml
+    lpc55 assemble-sb example-cfgs/example-cfg.toml

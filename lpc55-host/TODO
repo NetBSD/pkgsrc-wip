@@ -1,0 +1,12 @@
+port hidapi to more systems (NetBSD):
+
+error: failed to run custom build command for `hidapi v2.1.1`
+
+Caused by:
+  process didn't exit successfully: `/usr/work/sysutils/lpc55-host/work/lpc55-0.2.1/target/release/build/hidapi-b13865d5a8751da8/build-script-build` (exit status: 101)
+  --- stderr
+  thread 'main' panicked at 'Unsupported target os for hidapi-rs', /usr/work/sysutils/lpc55-host/work/vendor/hidapi-2.1.1/build.rs:41:9
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+*** Error code 101
+
