@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/libimagequant.h
+lib/libimagequant.a
+lib/pkg-config/imagequant.pc
