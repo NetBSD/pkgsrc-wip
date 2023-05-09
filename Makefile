@@ -3678,6 +3678,7 @@ SUBDIR+=	py-divisi2
 SUBDIR+=	py-divmod-epsilon
 SUBDIR+=	py-dj-database-url
 SUBDIR+=	py-dj-static
+SUBDIR+=	py-django-allauth
 SUBDIR+=	py-django-audiofield
 SUBDIR+=	py-django-crispy-forms
 SUBDIR+=	py-django-gitrevision
