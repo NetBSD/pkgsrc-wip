@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.3.0:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-JWT>=1.7:../../textproc/py-JWT
-#        "python3-openid >= 3.0.8",
+DEPENDS+=	${PYPKGPREFIX}-openid>=3.0.8:../../wip/py-openid
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
