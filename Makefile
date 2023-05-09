@@ -3687,6 +3687,7 @@ SUBDIR+=	py-django-helmholtz
 SUBDIR+=	py-django-idmap
 SUBDIR+=	py-django-js-reverse
 SUBDIR+=	py-django-jsonfield
+SUBDIR+=	py-django-mailman3
 SUBDIR+=	py-django-markwhat
 SUBDIR+=	py-django-mathjax
 SUBDIR+=	py-django-nose
