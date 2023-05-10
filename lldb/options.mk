@@ -21,27 +21,34 @@ CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 .  if ${OPSYS} == "NetBSD"
 .    if exists(/usr/include/panel.h)
 CMAKE_ARGS+=	-DLLDB_ENABLE_CURSES=1
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=1
 .    else
 .include "../../devel/ncurses/buildlink3.mk"
 .      if exists(${BUILDLINK_PREFIX.ncurses}/include/panel.h)
 CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=1
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=1
 .      else
 CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=0
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=0
 .      endif
 .    endif
 CMAKE_ARGS+=	-DLLDB_ENABLE_CURSES=0
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=0
 .  endif
 
 .  if ${OPSYS} != "NetBSD"
 .include "../../devel/ncurses/buildlink3.mk"
 .    if exists(${BUILDLINK_PREFIX.ncurses}/include/panel.h)
 CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=1
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=1
 .    else
 CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=0
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=0
 .    endif
 .  endif
 
 .else
 
 CMAKE_ARGS+=	-DLLDB_ENABLE_CURSES=0
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=0
 .endif
