@@ -53,7 +53,7 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1 # Do not test clang compile
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
 CMAKE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS=OFF
 
-CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
+CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
@@ -69,7 +69,7 @@ post-extract:
 .if ${OPSYS} != "Darwin"
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${PREFIX}/lib/clang/${PKGVERSION_NOREV}/lib/wasi/libclang_rt.builtins-wasm32.a
+	  ${DESTDIR}${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
 .endif
 
 ABI=			# 32
