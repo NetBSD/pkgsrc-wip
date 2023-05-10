@@ -83,4 +83,6 @@ post-extract:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+# TODO: sync the readline option with other llvm packages
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

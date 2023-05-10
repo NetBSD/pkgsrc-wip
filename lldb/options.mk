@@ -16,7 +16,6 @@ CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 
 .if ${PKG_OPTIONS:Mcurses}
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 
 .  if ${OPSYS} == "NetBSD"
 .    if exists(/usr/include/panel.h)
@@ -32,8 +31,6 @@ CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=0
 CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=0
 .      endif
 .    endif
-CMAKE_ARGS+=	-DLLDB_ENABLE_CURSES=0
-CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=0
 .  endif
 
 .  if ${OPSYS} != "NetBSD"
