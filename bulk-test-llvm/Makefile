@@ -1,0 +1,49 @@
+# $NetBSD: Makefile,v 1.5 2022/12/07 15:37:02 wiz Exp $
+
+DISTNAME=	bulk-test-llvm-20211207
+CATEGORIES=	meta-pkgs
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+
+MAINTAINER=	nia@NetBSD.org
+COMMENT=	Meta-package for testing LLVM
+
+META_PACKAGE=	yes
+
+RESTRICTED=		Just for test build purposes
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+
+# All of these (primarily leaf) packages depend on LLVM.
+# Feel free to add one if you care about it not breaking.
+# The current list is mostly arbitrary, resulting from a grep of the
+# pkgsrc tree.
+
+.include "../../lang/python/pyversion.mk"
+
+BUILD_DEPENDS+=		clang-[0-9]*:../../wip/clang
+#BUILD_DEPENDS+=		creduce-[0-9]*:../../devel/creduce
+BUILD_DEPENDS+=		cvise-[0-9]*:../../devel/cvise
+BUILD_DEPENDS+=		firefox-[0-9]*:../../www/firefox
+BUILD_DEPENDS+=		firefox-esr-[0-9]*:../../www/firefox-esr
+BUILD_DEPENDS+=		include-what-you-use-[0-9]*:../../wip/include-what-you-use
+BUILD_DEPENDS+=		polly-[0-9]*:../../wip/polly
+BUILD_DEPENDS+=		qtcreator-[0-9]*:../../editors/qtcreator
+BUILD_DEPENDS+=		libcxx-[0-9]*:../../wip/libcxx
+BUILD_DEPENDS+=		libcxxabi-[0-9]*:../../wip/libcxxabi
+BUILD_DEPENDS+=		libunwind-[0-9]*:../../wip/libunwind
+BUILD_DEPENDS+=		lld-[0-9]*:../../wip/lld
+BUILD_DEPENDS+=		lldb-[0-9]*:../../wip/lldb
+BUILD_DEPENDS+=		mozjs78-[0-9]*:../../lang/mozjs78
+BUILD_DEPENDS+=		opencl-clang-[0-9]*:../../parallel/opencl-clang
+BUILD_DEPENDS+=		openmp-[0-9]*:../../wip/openmp
+BUILD_DEPENDS+=		pocl-[0-9]*:../../parallel/pocl
+BUILD_DEPENDS+=		${PYPKGPREFIX}-llvmlite-[0-9]*:../../devel/py-llvmlite
+BUILD_DEPENDS+=		rust-[0-9]*:../../lang/rust
+BUILD_DEPENDS+=		seamonkey-[0-9]*:../../www/seamonkey
+BUILD_DEPENDS+=		spirv-llvm-translator-[0-9]*:../../parallel/spirv-llvm-translator
+BUILD_DEPENDS+=		thunderbird-[0-9]*:../../mail/thunderbird
+BUILD_DEPENDS+=		woboq_codebrowser-[0-9]*:../../devel/woboq_codebrowser
+BUILD_DEPENDS+=		zig-[0-9]*:../../lang/zig
+
+.include "../../mk/bsd.pkg.mk"
