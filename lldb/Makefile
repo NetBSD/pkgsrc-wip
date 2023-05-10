@@ -56,15 +56,11 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-.  if exists(/usr/include/panel.h)
-CMAKE_ARGS+=	LLDB_ENABLE_CURSES=1
-.  else
-CMAKE_ARGS+=	LLDB_ENABLE_CURSES=0
-.  endif
+PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
 .include "options.mk"
 
+.if ${OPSYS} == "NetBSD"
 .  if ${OPSYS_VERSION} < 99922
 # lacks ptrace(2) PT_STOP
 PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
@@ -87,6 +83,4 @@ post-extract:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
