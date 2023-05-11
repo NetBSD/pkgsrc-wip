@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	simplehttpserver-0.0.5
+DISTNAME=	simplehttpserver-0.0.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
