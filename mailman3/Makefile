@@ -40,12 +40,33 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
 BUILD_DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
 
+BUILD_DEFS+=		VARBASE
+
 SUBST_CLASSES+=		fhs
 SUBST_STAGE.fhs=	pre-configure
 SUBST_FILES.fhs=	src/mailman/config/mailman.cfg
 SUBST_FILES.fhs+=	src/mailman/core/initialize.py
 SUBST_MESSAGE.fhs=	Fixing default paths
 SUBST_VARS.fhs=		PKG_SYSCONFDIR PREFIX VARBASE
+
+#.include "../../mk/bsd.prefs.mk"
+
+MAILMAN_USER?=		mailman
+MAILMAN_GROUP?=		mailman
+
+PKG_GROUPS_VARS+=	MAILMAN_GROUP
+PKG_USERS_VARS+=	MAILMAN_USER
+
+PKG_GROUPS=		${MAILMAN_GROUP}
+PKG_USERS=		${MAILMAN_USER}:${MAILMAN_GROUP}
+
+PKG_GECOS.${MAILMAN_USER}=	Mailman user
+PKG_SHELL.${MAILMAN_USER}=	${SH}
+
+OWN_DIRS_PERMS+=	${VARBASE}/lib/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 770
+OWN_DIRS_PERMS+=	${VARBASE}/log/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 770
+OWN_DIRS_PERMS+=	${VARBASE}/spool/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 775
+OWN_DIRS_PERMS+=	${VARBASE}/spool/lock/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 775
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
