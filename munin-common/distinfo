@@ -8,5 +8,6 @@ SHA1 (patch-Makefile) = f3fd52b56fcddda3efca61453c23243fac35568a
 SHA1 (patch-Makefile.config) = aeaae9374c58c6baf1901ddb9b55a8fac77cf30c
 SHA1 (patch-common_Build.PL) = 7d7f5afde978d0e5641f931d3f2585651ff40c1a
 SHA1 (patch-common_lib_Munin_Common_Defaults.pm) = 09b464d828e12da26d8f41916eb876863b4b4cb3
+SHA1 (patch-plugins-node.d.netbsd-irqstats) = 05251b15a26fb449278fe865bb676f2ef28f2188
 SHA1 (patch-plugins_node.d.sunos_if__.in) = 9fe08aebbd759c6fc374e8a43740d28ec8004c90
 SHA1 (patch-plugins_node.d.sunos_if__err__.in) = e905228aa8c5c0d1c3a4d9562d550a0d8c0fbd4c

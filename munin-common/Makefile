@@ -2,7 +2,7 @@
 #
 
 PKGNAME=	${DISTNAME:S/munin/munin-common/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Common components between a munin node and master
 
 .include "../../sysutils/munin-common/Makefile.common"
