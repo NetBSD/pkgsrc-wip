@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.35 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (cmake-16.0.2.src.tar.xz) = b3a0254d351be3405bc9ddee87475873d230ce0f987e936ca4e0ce729640464b
-SHA512 (cmake-16.0.2.src.tar.xz) = ce4bd6eddda6cfeeee8523d248b107114189c09e4aae478902798d14fc8fa2bfe316d0bcec44c5d4c36c77484fe6f6a7f0fb758dcd13edbeb322095fc1f6a7a6
-Size (cmake-16.0.2.src.tar.xz) = 9000 bytes
-BLAKE2s (lldb-16.0.2.src.tar.xz) = ab6c6816ae4f7b0eb0f73f6b65975655f9cee27bdf59b2ba149392622c350cfe
-SHA512 (lldb-16.0.2.src.tar.xz) = 86bcfbdd5752406706118c1d48cca188b7ddb553f093d50da47c57cf489e2c6d7ffa5b9a65bc5626114a58096bc1b5a3d235def64d27f2e1a07683a984d05e75
-Size (lldb-16.0.2.src.tar.xz) = 10379116 bytes
+BLAKE2s (cmake-16.0.3.src.tar.xz) = e3399f12ca1772ddb70ac856c9a3a57bcd073511ccabb8fa0fbb136ab527bde6
+SHA512 (cmake-16.0.3.src.tar.xz) = 01dd624f5276910760f15062f1f3abf68c6ab66c02a4b683ee739663d3f67c47420d8ce47d79e47144edc6bfcc390ffe37bd01d787186607421e3be7288c8569
+Size (cmake-16.0.3.src.tar.xz) = 9004 bytes
+BLAKE2s (lldb-16.0.3.src.tar.xz) = 33bc5e556ca128f757257b4ebdc5e7d1220420f7cd80c7f69455c1a3a09ab2e5
+SHA512 (lldb-16.0.3.src.tar.xz) = 0ea264f371a79975d9c5c406b8b4cef0c42e957bc37d09a29adbd1c1a683499f3a52bc7361b902ed0c654f1abb8818434af75962ba3ae518989d515c97436759
+Size (lldb-16.0.3.src.tar.xz) = 10378608 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 773d420c3fd2c9b4af6af9d42c5778e96a1ae52b
 SHA1 (patch-source_API_CMakeLists.txt) = 23a7b24632f937a4541863aff6a7591255cafe40
 SHA1 (patch-source_Host_netbsd_HostNetBSD.cpp) = 8c19657d90ffea176b1297331fd23a8b565c6f1d

@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.80 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (clang-16.0.2.src.tar.xz) = 64e677e3ebc5b78c62278b5f2842f32fd3ca94cbb90fa3faf152f58dc970bc8d
-SHA512 (clang-16.0.2.src.tar.xz) = 320d39303432f11f0079f0de62b8807a4b3439b2000564844765401557c77f8ab3be2f578bbe586cd2ea4c03128f06f8dbccc3df7984a3d747e2681e98b219f1
-Size (clang-16.0.2.src.tar.xz) = 20354708 bytes
-BLAKE2s (cmake-16.0.2.src.tar.xz) = b3a0254d351be3405bc9ddee87475873d230ce0f987e936ca4e0ce729640464b
-SHA512 (cmake-16.0.2.src.tar.xz) = ce4bd6eddda6cfeeee8523d248b107114189c09e4aae478902798d14fc8fa2bfe316d0bcec44c5d4c36c77484fe6f6a7f0fb758dcd13edbeb322095fc1f6a7a6
-Size (cmake-16.0.2.src.tar.xz) = 9000 bytes
+BLAKE2s (clang-16.0.3.src.tar.xz) = 053b254572cfa38f64afffe1f076e184475fc2e47bff71b6ef5195ded70cb19f
+SHA512 (clang-16.0.3.src.tar.xz) = 3db2806f1f5155c9df377f0e4b47f200814a2ca84ffd9eda7edafa3a85de76af92b3413388be48918432c5d0592d7d07f2618064ef7e7be7c97c9b29793829b8
+Size (clang-16.0.3.src.tar.xz) = 20355248 bytes
+BLAKE2s (cmake-16.0.3.src.tar.xz) = e3399f12ca1772ddb70ac856c9a3a57bcd073511ccabb8fa0fbb136ab527bde6
+SHA512 (cmake-16.0.3.src.tar.xz) = 01dd624f5276910760f15062f1f3abf68c6ab66c02a4b683ee739663d3f67c47420d8ce47d79e47144edc6bfcc390ffe37bd01d787186607421e3be7288c8569
+Size (cmake-16.0.3.src.tar.xz) = 9004 bytes
 SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 02533d1de2c92a431d9c5d4567f348deff056b99
 SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
 SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = 39d72a7f6cb9d0780c9fb79de6d032f320cccce3

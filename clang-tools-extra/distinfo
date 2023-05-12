@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.17 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (clang-16.0.2.src.tar.xz) = 64e677e3ebc5b78c62278b5f2842f32fd3ca94cbb90fa3faf152f58dc970bc8d
-SHA512 (clang-16.0.2.src.tar.xz) = 320d39303432f11f0079f0de62b8807a4b3439b2000564844765401557c77f8ab3be2f578bbe586cd2ea4c03128f06f8dbccc3df7984a3d747e2681e98b219f1
-Size (clang-16.0.2.src.tar.xz) = 20354708 bytes
-BLAKE2s (clang-tools-extra-16.0.2.src.tar.xz) = 1ef948c35e5b230949252f7613c81cc1389ddb181ea46b95bcfd140214b7de94
-SHA512 (clang-tools-extra-16.0.2.src.tar.xz) = 8bd8d8dd81b44773a80be176de16dc7cf6958d08c75fe29b44d5c7fd630fd6483a997e00418dffde166816b6b265d5d6aff1973fb56e40dc812dca1ac326559c
-Size (clang-tools-extra-16.0.2.src.tar.xz) = 3151972 bytes
-BLAKE2s (cmake-16.0.2.src.tar.xz) = b3a0254d351be3405bc9ddee87475873d230ce0f987e936ca4e0ce729640464b
-SHA512 (cmake-16.0.2.src.tar.xz) = ce4bd6eddda6cfeeee8523d248b107114189c09e4aae478902798d14fc8fa2bfe316d0bcec44c5d4c36c77484fe6f6a7f0fb758dcd13edbeb322095fc1f6a7a6
-Size (cmake-16.0.2.src.tar.xz) = 9000 bytes
+BLAKE2s (clang-16.0.3.src.tar.xz) = 053b254572cfa38f64afffe1f076e184475fc2e47bff71b6ef5195ded70cb19f
+SHA512 (clang-16.0.3.src.tar.xz) = 3db2806f1f5155c9df377f0e4b47f200814a2ca84ffd9eda7edafa3a85de76af92b3413388be48918432c5d0592d7d07f2618064ef7e7be7c97c9b29793829b8
+Size (clang-16.0.3.src.tar.xz) = 20355248 bytes
+BLAKE2s (clang-tools-extra-16.0.3.src.tar.xz) = 3c23d5411abf36b3fb84f04a5d7d63878cbe623e2b1fc024837c0ef4abd8d224
+SHA512 (clang-tools-extra-16.0.3.src.tar.xz) = 83d5196b88eaa9fdd1ea75353b59318c64cd002942c68653a81cd40288c5b01b9d6fadabac6a397cd06b955b8413d8940006af723d77cc4035bd9c139189f164
+Size (clang-tools-extra-16.0.3.src.tar.xz) = 3151820 bytes
+BLAKE2s (cmake-16.0.3.src.tar.xz) = e3399f12ca1772ddb70ac856c9a3a57bcd073511ccabb8fa0fbb136ab527bde6
+SHA512 (cmake-16.0.3.src.tar.xz) = 01dd624f5276910760f15062f1f3abf68c6ab66c02a4b683ee739663d3f67c47420d8ce47d79e47144edc6bfcc390ffe37bd01d787186607421e3be7288c8569
+Size (cmake-16.0.3.src.tar.xz) = 9004 bytes
