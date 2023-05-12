@@ -907,6 +907,7 @@ SUBDIR+=	flameshot
 SUBDIR+=	flang
 SUBDIR+=	flang-git
 SUBDIR+=	flasm
+SUBDIR+=	fldiff
 SUBDIR+=	flexdock
 SUBDIR+=	flexdump
 SUBDIR+=	flim

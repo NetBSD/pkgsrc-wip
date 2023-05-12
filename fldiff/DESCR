@@ -1,0 +1,4 @@
+A graphical diff program that shows the differences between two
+files/directories, or a file/directory and a CVS or Subversion repository.
+
+It is inspired by xdiff (Motif-based) and xxdiff (Qt-based).

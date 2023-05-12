@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/fldiff
+man/man1/fldiff.1
+share/doc/fldiff/COPYING
+share/doc/fldiff/fldiff.jpg
+share/doc/fldiff/index.html
