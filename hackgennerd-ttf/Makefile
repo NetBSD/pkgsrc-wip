@@ -1,13 +1,13 @@
 # $NetBSD$
 
-PKGNAME=	hackgennerd-ttf-2.8.0
+PKGNAME=	hackgennerd-ttf-2.9.0
 DISTNAME=	HackGen_NF_v${PKGVERSION_NOREV}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yuru7/}
 GITHUB_PROJECT=	HackGen
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.ccom
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://github.com/yuru7/HackGen
 COMMENT=	Japanese programming font, composed of Hack, GenJyuu-Gothic and Nerd
 LICENSE=	ofl-v1.1
