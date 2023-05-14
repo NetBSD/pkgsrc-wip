@@ -6528,9 +6528,9 @@ lib/libvtkWebGLExporter-pv${PV_VER}.so
 lib/libvtkWebGLExporter-pv${PV_VER}.so.1
 lib/libvtkWebGLExporter-pv${PV_VER}.so.${PV_VER}
 lib/libvtkWebGLExporterCS.a
-lib/libvtkWrappingPythonCore3.11-pv${PV_VER}.so
-lib/libvtkWrappingPythonCore3.11-pv${PV_VER}.so.1
-lib/libvtkWrappingPythonCore3.11-pv${PV_VER}.so.${PV_VER}
+lib/libvtkWrappingPythonCore${PYVERSSUFFIX}-pv${PV_VER}.so
+lib/libvtkWrappingPythonCore${PYVERSSUFFIX}-pv${PV_VER}.so.1
+lib/libvtkWrappingPythonCore${PYVERSSUFFIX}-pv${PV_VER}.so.${PV_VER}
 lib/libvtkWrappingTools-pv${PV_VER}.so
 lib/libvtkWrappingTools-pv${PV_VER}.so.1
 lib/libvtkWrappingTools-pv${PV_VER}.so.${PV_VER}
