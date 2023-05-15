@@ -2125,7 +2125,7 @@ ${PLIST.RISCV}lib/libLLVMRISCVCodeGen.a
 ${PLIST.RISCV}lib/libLLVMRISCVDesc.a
 ${PLIST.RISCV}lib/libLLVMRISCVDisassembler.a
 ${PLIST.RISCV}lib/libLLVMRISCVInfo.a
-lib/libLLVMRISCVTargetMCA.a
+${PLIST.RISCV}lib/libLLVMRISCVTargetMCA.a
 lib/libLLVMRemarks.a
 lib/libLLVMRuntimeDyld.a
 lib/libLLVMScalarOpts.a
