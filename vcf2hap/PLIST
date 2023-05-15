@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/vcf2hap
-man/man1/vcf2hap.1

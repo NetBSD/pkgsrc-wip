@@ -16,7 +16,7 @@ DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
 DEPENDS+=	tex-uptex-base-[0-9]*:../../wip/tex-uptex-base
 DEPENDS+=	tex-uptex-fonts-[0-9]*:../../wip/tex-uptex-fonts
-DEPENDS+=	upmendex-[0-9]*:../../wip/upmendex
+DEPENDS+=	upmendex-[0-9]*:../../textproc/upmendex
 DEPENDS+=	web2c>=2020:../../print/web2c
 
 TEX_FORMATS+=	"uptex uptex - uptex.ini\\neuptex euptex language.def *euptex.ini\\n"
