@@ -1,8 +1,0 @@
-This is a fork of UAE, the Ubiquitous Amiga Emulator, with an emulation core
-based on WinUAE. It attempts to bring many of the great features of WinUAE
-to non-Windows platforms.
-
-This package provides fs-uae-launcher and fs-uae-arcade, which as packages
-overlap 99% and don't need to be separated.
-
-For the actual emulator, see fs-uae-dev.

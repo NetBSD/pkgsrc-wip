@@ -11,7 +11,7 @@ COMMENT=	Semantic grep for the C language
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	coccinelle-[0-9]*:../../wip/coccinelle
+DEPENDS+=	coccinelle-[0-9]*:../../devel/coccinelle
 
 USE_LANGUAGES=	# none
 

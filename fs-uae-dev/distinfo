@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.10 2015/06/22 16:21:18 rhialto Exp $
-
-RMD160 (fs-uae-2.9.7dev2.tar.gz) = de40371818b351de947332d25ddcb47083520997
-SHA512 (fs-uae-2.9.7dev2.tar.gz) = 8204e26bfd6f824520c44b14008f0df2800d042b44f0603b1a455f323ca46232e5d8b90e3026dd5ead5f83722731d2ef581c46d6efd4624c8ac97df13b621f91
-Size (fs-uae-2.9.7dev2.tar.gz) = 5042147 bytes
-SHA1 (patch-libfsemu_src_ml_x11.c) = c491fd844b08d23744a138890c0b370307dd84c2
-SHA1 (patch-manymouse_x11__xinput2.c) = 9b2891d1ce62affb694ac11b2386115799ed6fa9
-SHA1 (patch-src_od-fs_bsdsocket__posix.cpp) = 48ac2f90004b2f9442daa58ed725548f5cbe3fec
-SHA1 (patch-src_support_socket.cpp) = d98e257397ec21b7da9471fb0f26d5b9282002d7

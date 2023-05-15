@@ -21,7 +21,7 @@ BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 .include "../../print/evince3/buildlink3.mk"
 .include "../../audio/libmusicbrainz/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../wip/clutter-gst/buildlink3.mk"
+.include "../../multimedia/clutter-gst/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../graphics/clutter/buildlink3.mk"
 .include "../../lang/gjs/buildlink3.mk"

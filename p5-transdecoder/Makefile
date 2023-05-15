@@ -27,7 +27,7 @@ SUBST_SED.path+=	-e 's|$$FindBin::RealBin/util|${PREFIX}/libexec/TransDecoder/ut
 SUBST_FILES.path+=	${WRKSRC}/TransDecoder*
 SUBST_FILES.path+=	${WRKSRC}/util/*.pl
 
-DEPENDS=	cdhit>=4.6.8:../../wip/cdhit \
+DEPENDS=	cdhit>=4.6.8:../../biology/cdhit \
 		p5-URI>=0:../../www/p5-URI
 
 USE_TOOLS=	perl
