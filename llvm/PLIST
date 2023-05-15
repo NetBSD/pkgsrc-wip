@@ -1967,7 +1967,7 @@ lib/cmake/llvm/LLVMConfig.cmake
 lib/cmake/llvm/LLVMConfigExtensions.cmake
 lib/cmake/llvm/LLVMConfigVersion.cmake
 lib/cmake/llvm/LLVMDistributionSupport.cmake
-lib/cmake/llvm/LLVMExports-release.cmake
+lib/cmake/llvm/LLVMExports-${RELEASE_TYPE}.cmake
 lib/cmake/llvm/LLVMExports.cmake
 lib/cmake/llvm/LLVMExternalProjectUtils.cmake
 lib/cmake/llvm/LLVMInstallSymlink.cmake

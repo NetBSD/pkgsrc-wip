@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	llvm
 LLVM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=16
-BUILDLINK_PKGSRCDIR.llvm?=	../../wip/llvm
+BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
 

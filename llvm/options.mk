@@ -12,7 +12,7 @@ PRINT_PLIST_AWK+=		{if ($$0 ~ /libLLVM${tgt}/) {$$0 = "$${PLIST.${tgt}}" $$0;}}
 PRINT_PLIST_AWK+=		{if ($$0 ~ /libLLVMExegesis${tgt}/) {$$0 = "$${PLIST.${tgt}}" $$0;}}
 .endfor
 
-PKG_SUPPORTED_OPTIONS+=		terminfo z3 tests
+PKG_SUPPORTED_OPTIONS+=		terminfo z3 tests debug
 
 # Terminfo is used for colour output, only enable it by default if terminfo
 # is builtin to avoid unnecessary dependencies which could cause bootstrap
@@ -74,7 +74,15 @@ CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 CMAKE_ARGS+=	-DLLVM_ENABLE_Z3_SOLVER=ON
 .endif
 
-.if !empty(PGK_OPTIONS:Mtests)
+.if !empty(PKG_OPTIONS:Mdebug)
+RELEASE_TYPE?=	debug
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+.else
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+RELEASE_TYPE?=	release
+.endif
+
+.if !empty(PKG_OPTIONS:Mtests)
 # requires "unittes" ?
 CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=ON
 .else
