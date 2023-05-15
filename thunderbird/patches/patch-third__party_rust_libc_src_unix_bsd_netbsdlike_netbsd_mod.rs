@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2023/02/05 09:05:29 he Exp $
 
 --- third_party/rust/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2020-08-28 21:33:54.000000000 +0000
 +++ third_party/rust/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs

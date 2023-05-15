@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.4 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.5 2023/02/05 09:05:29 he Exp $
 
 --- ipc/chromium/src/base/message_pump_libevent.cc.orig	2020-08-28 21:32:41.000000000 +0000
 +++ ipc/chromium/src/base/message_pump_libevent.cc

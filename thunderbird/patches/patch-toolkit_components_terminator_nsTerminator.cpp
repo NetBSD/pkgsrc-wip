@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.3 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.4 2023/02/05 09:05:29 he Exp $
 
 --- toolkit/components/terminator/nsTerminator.cpp.orig	2020-08-28 21:33:46.000000000 +0000
 +++ toolkit/components/terminator/nsTerminator.cpp

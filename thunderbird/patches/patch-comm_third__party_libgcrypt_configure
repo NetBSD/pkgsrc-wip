@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-comm_third__party_libgcrypt_configure,v 1.1 2023/02/05 09:05:29 he Exp $
 
 --- comm/third_party/libgcrypt/configure.orig	2022-12-20 00:50:23.000000000 +0000
 +++ comm/third_party/libgcrypt/configure

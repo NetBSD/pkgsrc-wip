@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2022/12/27 20:08:45 abs Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2023/02/05 09:05:28 he Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -106,12 +106,12 @@ CONFIGURE_ARGS+=	--disable-updater
 # RLBox WASM sandbox
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 # For wasm-ld command
-BUILD_DEPENDS+=		lld-[0-9]*:../../devel/lld
-.include "../../lang/wasi-libc/buildlink3.mk"
-.include "../../lang/wasi-libcxx/buildlink3.mk"
+BUILD_DEPENDS+=		lld-[0-9]*:../../wip/lld
+.include "../../wip/wasi-libc/buildlink3.mk"
+.include "../../wip/wasi-libcxx/buildlink3.mk"
 # NB the exact versions of the clang and wasi-compiler-rt dependencies must
 # be kept in sync, or build failures will occur due to path mismatches.
-.include "../../lang/wasi-compiler-rt/buildlink3.mk"
+.include "../../wip/wasi-compiler-rt/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-wasi-sysroot=${PREFIX}/wasi
 CONFIGURE_ENV+=		WASM_CC=${PREFIX}/bin/clang
 CONFIGURE_ENV+=		WASM_CXX=${PREFIX}/bin/clang++
@@ -207,7 +207,7 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.53
 BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
-.include "../../lang/clang/buildlink3.mk"
+.include "../../wip/clang/buildlink3.mk"
 RUST_REQ=	1.41.0
 .include "../../lang/rust/rust.mk"
 # webrtc option requires internal libvpx

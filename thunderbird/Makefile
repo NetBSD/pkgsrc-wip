@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.289 2023/01/03 17:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.295 2023/05/06 19:09:37 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		102.6.1
+PKGREVISION=	3
+TB_VER=		102.8.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -33,9 +34,6 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}
 NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}-bin
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
-
-# Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
-BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -87,7 +85,7 @@ pre-configure:
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
-	${_ULIMIT_CMD} cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
+	${_ULIMIT_CMD} cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${_MAKE_JOBS_N:U1}
 
 MOZILLA=	thunderbird
 MOZILLA_NAME=	${PKGBASE}

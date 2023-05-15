@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.89 2023/02/16 18:17:33 he Exp $
 bin/thunderbird
 lib/thunderbird/actors/AboutHttpsOnlyErrorChild.jsm
 lib/thunderbird/actors/AboutHttpsOnlyErrorParent.jsm
@@ -32,6 +32,7 @@ lib/thunderbird/actors/FormHistoryParent.jsm
 lib/thunderbird/actors/InlineSpellCheckerChild.jsm
 lib/thunderbird/actors/InlineSpellCheckerParent.jsm
 lib/thunderbird/actors/KeyPressEventModelCheckerChild.jsm
+${PLIST.debug}lib/thunderbird/actors/LayoutDebugChild.jsm
 lib/thunderbird/actors/LinkClickHandlerChild.jsm
 lib/thunderbird/actors/LinkClickHandlerParent.jsm
 lib/thunderbird/actors/LinkHandlerChild.jsm
@@ -3212,11 +3213,11 @@ lib/thunderbird/chrome/devtools/skin/webconsole.css
 lib/thunderbird/chrome/devtools/skin/widgets.css
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.dtd
 ${PLIST.nobranding}lib/thunderbird/chrome/en-US/locale/branding/brand.properties
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
-${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.dtd
 lib/thunderbird/chrome/en-US/locale/en-US/alerts/alert.properties
 lib/thunderbird/chrome/en-US/locale/en-US/autoconfig/autoconfig.properties
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.dtd
+${PLIST.branding}lib/thunderbird/chrome/en-US/locale/en-US/branding/brand.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-alarms.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog-attendees.properties
 lib/thunderbird/chrome/en-US/locale/en-US/calendar/calendar-event-dialog.dtd
@@ -3549,7 +3550,7 @@ lib/thunderbird/chrome/icons/default/default32.png
 lib/thunderbird/chrome/icons/default/default48.png
 lib/thunderbird/chrome/icons/default/default64.png
 ${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-background.png
-${PLIST.nobranding}lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
+lib/thunderbird/chrome/messenger/content/branding/about-logo.svg
 lib/thunderbird/chrome/messenger/content/branding/about-wordmark.svg
 lib/thunderbird/chrome/messenger/content/branding/about.png
 lib/thunderbird/chrome/messenger/content/branding/aboutDialog.css
@@ -3592,6 +3593,7 @@ lib/thunderbird/chrome/messenger/content/messenger/about-support/accounts.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/calendars.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/chat.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/export.js
+lib/thunderbird/chrome/messenger/content/messenger/about-support/libs.js
 lib/thunderbird/chrome/messenger/content/messenger/about3Pane.js
 lib/thunderbird/chrome/messenger/content/messenger/about3Pane.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/aboutAddonsExtra.js
@@ -5503,6 +5505,7 @@ lib/thunderbird/components/calPeriod.js
 lib/thunderbird/components/calRecurrenceRule.js
 lib/thunderbird/components/calTimezone.js
 lib/thunderbird/components/components.manifest
+${PLIST.debug}lib/thunderbird/components/startupRecorder.js
 lib/thunderbird/contentaccessible/ImageDocument.css
 lib/thunderbird/contentaccessible/TopLevelImageDocument.css
 lib/thunderbird/contentaccessible/TopLevelVideoDocument.css
@@ -6434,6 +6437,7 @@ lib/thunderbird/modules/ircServices.jsm
 lib/thunderbird/modules/ircUtils.jsm
 lib/thunderbird/modules/ircWatchMonitor.jsm
 lib/thunderbird/modules/jsProtoHelper.jsm
+${PLIST.debug}lib/thunderbird/modules/jsTestProtocol.jsm
 lib/thunderbird/modules/jsaccount/JSAccountUtils.jsm
 lib/thunderbird/modules/jsaccount/JaBaseUrl.jsm
 lib/thunderbird/modules/jsaccount/TestJaMsgProtocolInfoComponent.jsm
@@ -6637,6 +6641,7 @@ lib/thunderbird/modules/remotepagemanager/RemotePageManagerChild.jsm
 lib/thunderbird/modules/remotepagemanager/RemotePageManagerParent.jsm
 lib/thunderbird/modules/sax.jsm
 lib/thunderbird/modules/sax/sax.js
+${PLIST.debug}lib/thunderbird/modules/services-automation/ServicesAutomation.jsm
 lib/thunderbird/modules/services-common/async.js
 lib/thunderbird/modules/services-common/hawkclient.js
 lib/thunderbird/modules/services-common/hawkrequest.js

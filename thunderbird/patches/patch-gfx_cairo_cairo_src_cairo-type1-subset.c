@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_cairo_cairo_src_cairo-type1-subset.c,v 1.1 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-gfx_cairo_cairo_src_cairo-type1-subset.c,v 1.2 2023/02/05 09:05:29 he Exp $
 
 --- gfx/cairo/cairo/src/cairo-type1-subset.c.orig	2020-08-28 21:32:36.000000000 +0000
 +++ gfx/cairo/cairo/src/cairo-type1-subset.c

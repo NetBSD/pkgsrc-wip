@@ -1,0 +1,17 @@
+Assertion failure: i < NUM_TEST_EV_ROOTS (Could not find built-in EV root), at /usr/work/mail/thunderbird/work/thunderbird-102.8.0/security/certverifier/ExtendedValidation.cpp:1246
+[ImapModuleLoader] Using nsImapService.cpp
+[NntpModuleLoader] Using NntpService.jsm
+[Pop3ModuleLoader] Using Pop3Service.jsm
+#01: aom_iwht4x4_16_add_sse2[/usr/pkg/lib/thunderbird/libxul.so +0x36a1f85]
+#02: void std::vector<std::vector<unsigned char, std::allocator<unsigned char> > const*, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > const*> >::_M_realloc_insert<std::vector<unsigned char, std::allocator<unsigned char> > const* co[/usr/pkg/lib/thunderbird/libxul.so +0x780c386]
+#03: std::__throw_bad_alloc()[/usr/pkg/lib/thunderbird/libxul.so +0x3caed12]
+#04: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::c[/usr/pkg/lib/thunderbird/libxul.so +0x3cbf755]
+#05: std::__throw_bad_alloc()[/usr/pkg/lib/thunderbird/libxul.so +0x3ca997f]
+#06: std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<ch[/usr/pkg/lib/thunderbird/libxul.so +0x4253304]
+#07: std::function<void (bool&&)>::operator()(bool&&) const[/usr/pkg/lib/thunderbird/libxul.so +0x4204e98]
+#08: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::c[/usr/pkg/lib/thunderbird/libxul.so +0x3cbe986]
+#09: PR_Select[/usr/pkg/lib/nspr/libnspr4.so +0x2a2f6]
+#10: __libc_thr_exit[/usr/lib/libpthread.so.1 +0xd2df]
+#11: _lwp_exit[/usr/lib/libc.so.12 +0x9b800]
+[1]   Segmentation fault (core dumped) /usr/pkg/lib/thunderbird/thunderbird "${@}"
+
