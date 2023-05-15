@@ -1,0 +1,50 @@
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: glxtest: DRM device has no render node (t=2.47243) [GFX1-]: glxtest: DRM device has no render node
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+[GLX] window 14d has VisualID 0x20
+GL_VENDOR: Intel
+mVendor: Intel
+GL_RENDERER: Mesa Intel(R) HD Graphics 5500 (BDW GT2)
+mRenderer: Unknown
+mIsMesa: 1
+[Parent 5791, GLXVsyncThread] WARNING: robust_buffer_access_behavior marked as unsupported: file /usr/work/www/firefox102/work/firefox-102.11.0/gfx/gl/GLContextFeatures.cpp:630
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Initializing context 0x780ee35f6d80 surface 0x0 on display 0x780eeb875000
+[Parent 5791, Renderer] WARNING: robust_buffer_access_behavior marked as unsupported: file /usr/work/www/firefox102/work/firefox-102.11.0/gfx/gl/GLContextFeatures.cpp:630
+[Parent 16464, IPC Launch #1] WARNING: Problem closing fd: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/chromium/src/base/process_util_posix.cc:184
+[Parent 16464, IPC Launch #1] WARNING: Problem closing fd: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/chromium/src/base/process_util_posix.cc:184
+[Socket 16464, Main Thread] WARNING: 'NS_FAILED(rv)', file /usr/work/www/firefox102/work/firefox-102.11.0/netwerk/protocol/http/nsHttpHandler.cpp:339
+[Parent 5791, Main Thread] WARNING: Can't get nsINetworkLinkService.: file /usr/work/www/firefox102/work/firefox-102.11.0/dom/media/VideoUtils.cpp:1020
+[Parent 5791, Main Thread] WARNING: Can't get nsINetworkLinkService.: file /usr/work/www/firefox102/work/firefox-102.11.0/dom/media/VideoUtils.cpp:1020
+[2023-05-15T20:54:52Z WARN  webrender::device::gl] Missing optimized shader source for gpu_cache_update
+[Parent 18407, IPC Launch #1] WARNING: Problem closing fd: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/chromium/src/base/process_util_posix.cc:184
+[Parent 18407, IPC Launch #1] WARNING: Problem closing fd: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/chromium/src/base/process_util_posix.cc:184
+Assertion failure: i < NUM_TEST_EV_ROOTS (Could not find built-in EV root), at /usr/work/www/firefox102/work/firefox-102.11.0/security/certverifier/ExtendedValidation.cpp:1246
+#01: void std::__introsort_loop<unsigned short*, long, __gnu_cxx::__ops::_Iter_less_iter>(unsigned short*, unsigned short*, long, __gnu_cxx::__ops::_Iter_less_iter)[/usr/pkg/lib/firefox102/libxul.so +0x8ec3026]
+#02: std::vector<unsigned char, std::allocator<unsigned char> >::_M_erase(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::al[/usr/pkg/lib/firefox102/libxul.so +0x8f364a6]
+#03: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::a[/usr/pkg/lib/firefox102/libxul.so +0x33b3a0c]
+#04: std::__throw_bad_alloc()[/usr/pkg/lib/firefox102/libxul.so +0x33abf5a]
+#05: std::__throw_bad_alloc()[/usr/pkg/lib/firefox102/libxul.so +0x339ec9a]
+#06: std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<ch[/usr/pkg/lib/firefox102/libxul.so +0x3c19e53]
+#07: std::function<void (unsigned int&&)>::operator()(unsigned int&&) const[/usr/pkg/lib/firefox102/libxul.so +0x3ba6f84]
+#08: std::function<void (unsigned int&&)>::operator()(unsigned int&&) const[/usr/pkg/lib/firefox102/libxul.so +0x3ba6fe3]
+#09: std::function<void (unsigned int&&)>::operator()(unsigned int&&) const[/usr/pkg/lib/firefox102/libxul.so +0x3ba7592]
+#10: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >& std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allo[/usr/pkg/lib/firefox102/libxul.so +0x33c807e]
+#11: PR_Select[/usr/pkg/lib/nspr/libnspr4.so +0x2a2f6]
+#12: __libc_thr_exit[/usr/lib/libpthread.so.1 +0xd2df]
+#13: _lwp_exit[/usr/lib/libc.so.12 +0x9b800]
+[Socket 16464, IPC I/O Child] WARNING: [DDAC20A42371DFB6.1794589F47B2F83A]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Socket 16464, IPC I/O Child] WARNING: [DDAC20A42371DFB6.1794589F47B2F83A]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+[Child 18407, IPC I/O Child] WARNING: [31EFD23C31F9CB3E.4331ED07FB629BAE]: Ignoring message 'EVENT_MESSAGE' to peer 1.1 due to a missing broker: file /usr/work/www/firefox102/work/firefox-102.11.0/ipc/glue/NodeController.cpp:350
+Exiting due to channel error.
+[Socket 16464, Main Thread] WARNING: Shutting down Socket process early due to a crash!: file /usr/work/www/firefox102/work/firefox-102.11.0/netwerk/ipc/SocketProcessChild.cpp:177
+[1]   Segmentation fault (core dumped) /usr/pkg/lib/firefox102/firefox102 "${@}"
+

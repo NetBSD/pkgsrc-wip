@@ -1,0 +1,32 @@
+$NetBSD$
+
+rust-bindgen upstream (#2338 and #2319), Self
+Updates the bundled rust-bindgen crate to be compatible
+with Clang/LLVM 16.
+
+clang: Detect anonymous items explicitly, rather than relying on empty names.
+In Clang 16, anonymous items may return names like `(anonymous union at ...)`
+rather than emoty names.
+The right way to detect them is using clang_Cursor_isAnonymous.
+Fixes https://github.com/rust-lang/rust-bindgen/issues/2312
+Closes https://github.com/rust-lang/rust-bindgen/pull/2316
+
+ir: Don't crash with built-in unexposed types from libclang.
+This fixes https://github.com/rust-lang/rust-bindgen/issues/2325
+
+The issue is that `__bf16` is not exposed at all by libclang, which
+causes us to crash. It's a bit of a shame libclang doesn't expose it but
+there's no rust equivalent I think, so this should be ok for now.
+
+Unfortunately no test because the header crashes older clang versions.
+
+--- Cargo.toml.orig	2023-05-13 01:11:33.156937081 +0200
++++ Cargo.toml	2023-05-13 01:12:30.660636037 +0200
+@@ -116,6 +116,7 @@
+ packed_simd = { package = "packed_simd_2", git = "https://github.com/hsivonen/packed_simd", rev="f38664024b29d44c506431eada7c112629bb1aa9" }
+ midir = { git = "https://github.com/mozilla/midir.git", rev = "4c11f0ffb5d6a10de4aff40a7b81218b33b94e6f" }
+ minidump_writer_linux = { git = "https://github.com/rust-minidump/minidump-writer.git", rev = "75ada456c92a429704691a85e1cb42fef8cafc0d" }
++bindgen = { path = "third_party/rust/bindgen" }
+ 
+ # Patch mio 0.6 to use winapi 0.3 and miow 0.3, getting rid of winapi 0.2.
+ # There is not going to be new version of mio 0.6, mio now being >= 0.7.11.
