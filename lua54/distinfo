@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2022/03/06 07:46:10 nia Exp $
-
-BLAKE2s (lua-5.4.6-rc1.tar.gz) = 00c28c837b3b582bcc6fbd7e4e0f08c26fc1bf18a4cbf1c12e85bfa43e494f0c
-SHA512 (lua-5.4.6-rc1.tar.gz) = d90c6903355ee1309cb0d92a8a024522ff049091a117ea21efb585b5de35776191cd67d17a65b18c2f9d374795b7c944f047576f0e3fe818d094b26f0e4845c5
-Size (lua-5.4.6-rc1.tar.gz) = 363329 bytes
-SHA1 (patch-src_Makefile) = 01f6e222c3c72e12162e2c1032b8c7ef95ffe79b
