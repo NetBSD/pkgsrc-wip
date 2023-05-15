@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/googleapis/python-bigquery
 COMMENT=	Google BigQuery API client library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-proto-plus>=1.11.0:../../wip/py-proto-plus
+DEPENDS+=	${PYPKGPREFIX}-proto-plus>=1.11.0:../../devel/py-proto-plus
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=1.22.4:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-cloud-core>=1.4.3:../../wip/py-google-cloud-core
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.13.0:../../devel/py-protobuf
