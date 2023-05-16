@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.4 2013/05/24 18:22:57 wiz Exp $
+bin/proxy
+include/proxy.h
+lib/libproxy.so
+lib/libproxy.so.1
+lib/libproxy.so.1.0.0
+lib/pkgconfig/libproxy-1.0.pc
+share/cmake/Modules/Findlibproxy.cmake

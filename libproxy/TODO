@@ -1,0 +1,8 @@
+../src/backend/plugins/pacrunner-duktape/pacrunner-duktape.c: In function 'dns_resolve':
+../src/backend/plugins/pacrunner-duktape/pacrunner-duktape.c:55:12: error: 'INET6_ADDRSTRLEN' undeclared (first use in this function)
+   55 |   char tmp[INET6_ADDRSTRLEN + 1];
+      |            ^~~~~~~~~~~~~~~~
+../src/backend/plugins/pacrunner-duktape/pacrunner-duktape.c:55:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/backend/plugins/pacrunner-duktape/pacrunner-duktape.c:55:8: warning: unused variable 'tmp' [-Wunused-variable]
+   55 |   char tmp[INET6_ADDRSTRLEN + 1];
+      |        ^~~
