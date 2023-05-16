@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-highline>=1.6:../../devel/ruby-highline
 DEPENDS+=	${RUBY_PKGPREFIX}-backports-[0-9]*:../../devel/ruby-backports
 DEPENDS+=	${RUBY_PKGPREFIX}-launchy>=2.1:../../misc/ruby-launchy
 DEPENDS+=	${RUBY_PKGPREFIX}-gh>=0.13:../../wip/ruby-gh
-DEPENDS+=	${RUBY_PKGPREFIX}-typhoeus>=0.6.8:../../wip/ruby-typhoeus
+DEPENDS+=	${RUBY_PKGPREFIX}-typhoeus>=0.6.8:../../www/ruby-typhoeus
 DEPENDS+=	${RUBY_PKGPREFIX}-pusher-client>=0.4:../../wip/ruby-pusher-client
 
 OVERRIDE_GEMSPEC+=	faraday>=0.9
