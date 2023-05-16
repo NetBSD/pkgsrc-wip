@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2015/08/14 23:11:53 jihbed Exp $
-
-BLAKE2s (why3-1.4.0.tar.gz) = b636eb7ca304d9c9873fd8c76bbd3ed28ea9924b4afe6c33c3b56b419d8a9bac
-SHA512 (why3-1.4.0.tar.gz) = b492f08a3c7073782b143a4849c47766b12045ad53c56aa8d251fd5b6bc1863ddebe260c99b3ddb27c4e1e1e9ab986c8b02286ec24f4c30f99f81f5f13fdc90a
-Size (why3-1.4.0.tar.gz) = 6306524 bytes
