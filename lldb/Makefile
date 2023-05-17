@@ -16,10 +16,6 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang
 DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
-
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++14
 GCC_REQD+=		7
 PY_PATCHPLIST=		yes
@@ -70,11 +66,9 @@ PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
 # Not yet ported, so avoid wasting time trying...
 NOT_FOR_PLATFORM+=	NetBSD-*-powerpc
 
-post-extract:
-	${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
-.include "../../mk/atomic64.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/clang/buildlink3.mk"
 .include "../../wip/llvm/buildlink3.mk"
@@ -83,6 +77,7 @@ post-extract:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 # TODO: sync the readline option with other llvm packages
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

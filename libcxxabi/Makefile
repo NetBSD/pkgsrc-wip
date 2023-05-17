@@ -21,11 +21,8 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}
 
 USE_LANGUAGES=	c c++17
-USE_CMAKE=	yes
 SSP_SUPPORTED=	no
 GCC_REQD+=	12	# must be in sync with libcxx
 
@@ -38,15 +35,15 @@ CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
 .if !empty(CC_VERSION:Mgcc-[0-9].*) || !empty(CC_VERSION:Mgcc-10.*)
 # Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
-CXXFLAGS+=		-std=c++17 -D_LIBCPP_STD_VER=17
+CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
 post-extract:
-	${MKDIR} ${WRKSRC}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 # TODO: not sure what should create this and with which contents
 	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
 
+.include "../../devel/cmake/build.mk"
 .include "../../wip/libunwind/buildlink3.mk"
 .include "../../wip/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

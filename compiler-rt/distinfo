@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.23 2023/03/03 09:53:14 wiz Exp $
 
-BLAKE2s (cmake-16.0.3.src.tar.xz) = e3399f12ca1772ddb70ac856c9a3a57bcd073511ccabb8fa0fbb136ab527bde6
-SHA512 (cmake-16.0.3.src.tar.xz) = 01dd624f5276910760f15062f1f3abf68c6ab66c02a4b683ee739663d3f67c47420d8ce47d79e47144edc6bfcc390ffe37bd01d787186607421e3be7288c8569
-Size (cmake-16.0.3.src.tar.xz) = 9004 bytes
-BLAKE2s (compiler-rt-16.0.3.src.tar.xz) = dad39e8f7f8103cc4e16638b106af9bdfb144b0517ec10f49079855f5f2dceff
-SHA512 (compiler-rt-16.0.3.src.tar.xz) = 29f41b282f4dc46d75588ba639925695c9cd1413e2a6f2001cdf9a187e3c9183a4b2dd4c43eb861684fc1ecb428143affcb83665b05b13a7c37d28eadef3fbec
-Size (compiler-rt-16.0.3.src.tar.xz) = 2359672 bytes
+BLAKE2s (cmake-16.0.4.src.tar.xz) = 5a7717df91090665eb73bd06a64a26013efe6f0750b09fbe6979505bae34754a
+SHA512 (cmake-16.0.4.src.tar.xz) = 942f10a5d1e3e48768d62a2595f8670872069ab2065871c786a435ae23108fb263e8c3db906dca0e68aeb8aad00f62f7604cd2f41da9e00f574b6021f846bb9d
+Size (cmake-16.0.4.src.tar.xz) = 9012 bytes
+BLAKE2s (compiler-rt-16.0.4.src.tar.xz) = 55f412ee2c620ef249c65779d63b0431b3fae0d6f8d941cf78d0a043d594a050
+SHA512 (compiler-rt-16.0.4.src.tar.xz) = 52266daa9f0d4eb31f352587291ac14ddb4133170bccb40ebbbcc73ffa29d94528887eca5fd3486e8cd8ab9647b75375c40f8a25f4eb2b88dc5dac0306faffc3
+Size (compiler-rt-16.0.4.src.tar.xz) = 2358756 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
 SHA1 (patch-lib_asan_CMakeLists.txt) = f91335b88c8c28a25d7dfada85769f799660f82a
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = 708b4def299a1cc47fca3c48f70745f8528c0fb8
