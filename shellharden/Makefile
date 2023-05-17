@@ -12,10 +12,5 @@ LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	c
 
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/shellharden ${DESTDIR}${PREFIX}/bin
-
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
