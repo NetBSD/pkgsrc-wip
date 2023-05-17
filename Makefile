@@ -1516,7 +1516,6 @@ SUBDIR+=	higan
 SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
 SUBDIR+=	hisat2
-SUBDIR+=	hisat2-simde
 SUBDIR+=	homeassistant
 SUBDIR+=	honggfuzz-git
 SUBDIR+=	honk
