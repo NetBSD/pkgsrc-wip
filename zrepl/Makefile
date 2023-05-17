@@ -1,8 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	zrepl
-GITHUB_TAG=	refs/tags/v0.5.0
-DISTNAME=	v0.5.0
+GITHUB_TAG=	refs/tags/v0.6.0
+DISTNAME=	v0.6.0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zrepl/}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/zrepl/zrepl/
 COMMENT=	One-stop ZFS backup & replication solution
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X github.com/zrepl/zrepl/version.zreplVersion=${DISTNAME:S,^v,,}'
