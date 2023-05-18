@@ -1,11 +1,10 @@
 $NetBSD$
 
-# Add resource limits for SLURM
-# Upstream is considering a scheduler-independent approach to this feature
+# Better task limit control under slurm
 
---- pipelines/canu/Defaults.pm.orig	2018-06-22 08:20:52.000000000 +0000
+--- pipelines/canu/Defaults.pm.orig	2018-10-22 16:47:31 UTC
 +++ pipelines/canu/Defaults.pm
-@@ -812,6 +812,16 @@ sub setDefaults () {
+@@ -917,6 +917,16 @@ sub setDefaults () {
      setDefault("gridEngineArraySubmitID",             undef, "Grid engine configuration, not documented");
      setDefault("gridEngineJobID",                     undef, "Grid engine configuration, not documented");
  

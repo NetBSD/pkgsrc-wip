@@ -2,8 +2,9 @@
 
 DISTNAME=	canu-2.2
 CATEGORIES=	biology java
-MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+# Github-generaged files are incomplete
+MASTER_SITES=	https://github.com/marbl/canu/releases/download/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://canu.readthedocs.io/
@@ -21,12 +22,12 @@ SUBST_SED.optimize+=	-e 's|-O4||g'
 SUBST_SED.optimize+=	-e 's|-funroll-loops||g'
 SUBST_SED.optimize+=	-e 's|-fexpensive-optimizations||g'
 SUBST_SED.optimize+=	-e 's|-finline-functions||g'
-SUBST_FILES.optimize+=	${WRKSRC}/Makefile
+SUBST_FILES.optimize+=	Makefile
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
 SUBST_SED.perl+=	-e 's|$$FindBin::RealBin/../lib/site_perl|${PREFIX}/${SITE_PERL_REL}|g'
-SUBST_FILES.perl+=	${WRKSRC}/pipelines/canu.pl
+SUBST_FILES.perl+=	pipelines/canu.pl
 
 REPLACE_PERL+=	bogart/*.pl
 REPLACE_PERL+=	pipelines/*.pl
@@ -51,7 +52,7 @@ USE_TOOLS+=	gmake pax perl
 WRKSRC=		${WRKDIR}/canu-${PKGVERSION_NOREV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
 
-TMP_INST=		${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
+TMP_INST=		${WRKSRC}/build
 SITE_PERL_REL=		lib/perl5/site_perl
 JAVAJARDIR=		share/java/classes
 INSTALLATION_DIRS=	bin ${JAVAJARDIR}
@@ -59,10 +60,10 @@ INSTALLATION_DIRS=	bin ${JAVAJARDIR}
 post-extract:
 	${CHMOD} -R g-w ${WRKDIR}
 
+# Upstream does not want to use lib/perl5/site_perl
 post-build:
 	${MKDIR} ${TMP_INST}/lib/perl5
 	${MV} ${TMP_INST}/lib/site_perl ${TMP_INST}/lib/perl5
-	${RM} -f ${TMP_INST}/bin/canu.defaults
 
 do-install:
 	cd ${TMP_INST}/bin && ${PAX} -wr * ${DESTDIR}${PREFIX}/bin
