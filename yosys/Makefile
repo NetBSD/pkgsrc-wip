@@ -2,7 +2,7 @@
 
 GITHUB_PROJECT=	yosys
 GITHUB_TAG=	refs/tags/${DISTNAME}
-DISTNAME=	yosys-0.22
+DISTNAME=	yosys-0.29
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=YosysHQ/}
 
@@ -34,6 +34,8 @@ SUBST_FILES.python3+=	tests/realmath/run-test.sh
 SUBST_FILES.python3+=	tests/rpc/exec.ys
 SUBST_FILES.python3+=	tests/rpc/run-test.sh
 SUBST_FILES.python3+=	tests/share/run-test.sh
+SUBST_FILES.python3+=	tests/xprop/run-test.sh
+SUBST_FILES.python3+=	tests/xprop/generate.py
 
 SUBST_CLASSES+=		python
 SUBST_MESSAGE.python=	Fixing shellbang references to python3.
@@ -60,6 +62,9 @@ BUILDLINK_TRANSFORM=	rm:-ldl
 
 do-configure:
 	${RUN} ${ECHO} 'CONFIG := ${YOSYS_CONFIG}' > ${WRKSRC}/Makefile.conf
+
+# pkgsrc verilog isn't new enough
+#TEST_DEPENDS+=		iverilog-[0-9]*:../../cad/iverilog
 
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/tcl/buildlink3.mk"
