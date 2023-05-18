@@ -423,6 +423,8 @@ ${PYSITELIB}/pynitrokey/nethsm/client/paths/health_state/__init__.pyc
 ${PYSITELIB}/pynitrokey/nethsm/client/paths/health_state/get.py
 ${PYSITELIB}/pynitrokey/nethsm/client/paths/health_state/get.pyc
 ${PYSITELIB}/pynitrokey/nethsm/client/paths/health_state/get.pyi
+${PYSITELIB}/pynitrokey/nethsm/client/paths/info/__init__.pyc
+${PYSITELIB}/pynitrokey/nethsm/client/paths/info/get.pyc
 ${PYSITELIB}/pynitrokey/nethsm/client/paths/info/__init__.py
 ${PYSITELIB}/pynitrokey/nethsm/client/paths/info/__init__.pyc
 ${PYSITELIB}/pynitrokey/nethsm/client/paths/info/get.py

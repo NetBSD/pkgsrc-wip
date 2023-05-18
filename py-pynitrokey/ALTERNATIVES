@@ -1,0 +1,1 @@
+bin/nitropy @PREFIX@/bin/nitropy-${PYVERSSUFFIX}
