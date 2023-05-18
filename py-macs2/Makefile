@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 
 # Distributed .c files do not support python > 3.9
