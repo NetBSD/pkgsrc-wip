@@ -42,7 +42,7 @@ REPLACE_PERL+=	fastq-utilities/*.pl
 REPLACE_PERL+=	*.pl
 
 # May work on other 64-bit processors, but untested
-ONLY_FOR_PLATFORM=	*-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-aarch64
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
