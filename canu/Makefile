@@ -71,5 +71,6 @@ do-install:
 	cd ${TMP_INST}/share && ${PAX} -wr * ${DESTDIR}${PREFIX}/share
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/simde/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
