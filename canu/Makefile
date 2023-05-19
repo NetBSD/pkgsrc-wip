@@ -59,8 +59,16 @@ do-install:
 	cd ${TMP_INST}/lib/perl5 && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib/perl5
 	cd ${TMP_INST}/share && ${PAX} -wr * ${DESTDIR}${PREFIX}/share
 
+.include "../../mk/bsd.prefs.mk"
+
+# Xcode supports -Xpreprocessor -fopenmp, but does not supply OpenMP libs
+# parallel/openmp installs an entire llvm
+# Maybe a libomp package would suffice?
+.if ${OPSYS} == Darwin
+.include "../../parallel/openmp/buildlink3.mk"
+.endif
+
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/simde/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
