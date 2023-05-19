@@ -45,7 +45,7 @@ MAKE_ENV+=	DESTDIR=${WRKSRC}
 TMP_INST=		${WRKSRC}/build
 SITE_PERL_REL=		lib/perl5/site_perl
 JAVAJARDIR=		share/java/classes
-INSTALLATION_DIRS=	bin ${JAVAJARDIR}
+INSTALLATION_DIRS=	bin lib/perl5 ${JAVAJARDIR}
 
 post-extract:
 	${CHMOD} -R g-w ${WRKDIR}
