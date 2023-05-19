@@ -48,6 +48,7 @@ USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_JAVA2=	8
 USE_TOOLS+=	gmake pax perl
+GCC_REQD+=	12
 
 WRKSRC=		${WRKDIR}/canu-${PKGVERSION_NOREV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
@@ -73,4 +74,5 @@ do-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/simde/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
