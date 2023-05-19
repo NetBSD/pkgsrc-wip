@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Disable Darwin clang block since pkgsrc provides a workaround
+# Portability
 
 --- Makefile.orig	2021-08-04 00:21:51.000000000 +0000
 +++ Makefile
@@ -19,7 +19,7 @@ $NetBSD$
    endif
  
    ifeq ($(BUILDJEMALLOC), 1)
-@@ -497,25 +497,6 @@ endef
+@@ -497,27 +497,8 @@ endef
  ifeq (${OSTYPE}, Darwin)
    $(foreach suffix,mp-9 9  mp-8 8  mp-7 7,$(eval $(call TEST_COMPILER,${suffix})))
  
@@ -42,9 +42,13 @@ $NetBSD$
 -     $(error unsupported compiler)
 -  endif
 -
-   CXXFLAGS += -fopenmp -pthread -fPIC -m64 -Wno-format
-   LDFLAGS  += -fopenmp -pthread -lm
+-  CXXFLAGS += -fopenmp -pthread -fPIC -m64 -Wno-format
+-  LDFLAGS  += -fopenmp -pthread -lm
++  CXXFLAGS += -std=c++11 -Xpreprocessor -fopenmp -pthread -fPIC -m64 -Wno-format
++  LDFLAGS  += -L${PREFIX}/lib -lomp -pthread -lm
  endif
+ 
+ 
 @@ -559,11 +540,45 @@ else
    #LDFLAGS   += -lprofiler
  
