@@ -14,22 +14,13 @@ BUILD_DEPENDS+=	cargo-c>=0.9.19:../../devel/cargo-c
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/imagequant-sys
 
+PKGCONFIG_OVERRIDE=		${DESTDIR}${PREFIX}/lib/pkgconfig/imagequant.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-install
+
 .include "cargo-depends.mk"
-
-INSTALLATION_DIRS=	include lib/pkg-config
-
-post-build:
-	cd ${WRKSRC} && \
-	${SED} 's|@PREFIX@|${PREFIX}|;s|@VERSION@|${VERSION}|' < imagequant.pc.in > imagequant.pc
 
 do-install:
 	cd ${WRKSRC} && ${RUN} cargo cinstall --destdir=${DESTDIR} --prefix=${PREFIX} --libdir=${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/libimagequant.h \
-		${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/imagequant.pc \
-		${DESTDIR}${PREFIX}/lib/pkg-config
-	${INSTALL_LIB} ${WRKSRC}/../target/release/libimagequant_sys.a \
-		${DESTDIR}${PREFIX}/lib/libimagequant.a
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

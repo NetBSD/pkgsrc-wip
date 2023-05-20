@@ -4,5 +4,4 @@ lib/libimagequant.a
 lib/libimagequant.so
 lib/libimagequant.so.0
 lib/libimagequant.so.0.0.0
-lib/pkg-config/imagequant.pc
 lib/pkgconfig/imagequant.pc
