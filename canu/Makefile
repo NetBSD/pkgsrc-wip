@@ -54,6 +54,8 @@ post-extract:
 	${CP} ${FILESDIR}/cpuid_arm.c ${WRKSRC}/utility/src/parasail/cpuid.c
 .elif ${MACHINE_ARCH} == "powerpc64"
 	${CP} ${FILESDIR}/cpuid_ppc.c ${WRKSRC}/utility/src/parasail/cpuid.c
+.elif ${MACHINE_ARCH} != "amd64"
+	${CP} ${FILESDIR}/cpuid_any.c ${WRKSRC}/utility/src/parasail/cpuid.c
 .endif
 
 # Upstream does not want to use lib/perl5/site_perl
