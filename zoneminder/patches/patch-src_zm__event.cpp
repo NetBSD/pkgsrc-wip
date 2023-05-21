@@ -70,7 +70,7 @@ Avoid sendfile code when sendfile doesn't exist.
          "INSERT INTO Frames ( EventId, FrameId, Type, TimeStamp, Delta, Score )"
 -        " VALUES ( %" PRIu64 ", %d, '%s', from_unixtime( %ld ), %s%ld.%02ld, %d )",
 -        id, frames, frame_type_names[frame_type], timestamp.tv_sec, delta_time.positive?"":"-", delta_time.sec, delta_time.fsec, score);
-+        " VALUES ( %" PRIu64 ", %d, '%s', from_unixtime( %jd ), %s%ld.%02jd, %d )",
++        " VALUES ( %" PRIu64 ", %d, '%s', from_unixtime( %jd ), %s%jd.%02ld, %d )",
 +        id, frames, frame_type_names[frame_type], (intmax_t) timestamp.tv_sec, delta_time.positive?"":"-", (intmax_t) delta_time.sec, delta_time.fsec, score);
      db_mutex.lock();
      if ( mysql_query(&dbconn, sql) ) {

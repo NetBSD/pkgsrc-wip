@@ -16,7 +16,7 @@ time types
          } else {
            if ( have_output ) printf( "%c", separator );
 -          printf( "%ld.%02ld", timestamp.tv_sec, timestamp.tv_usec/10000 );
-+          printf( "%ld.%02ld", timestamp.tv_sec, (long) timestamp.tv_usec/10000 );
++          printf( "%jd.%02ld", (intmax_t) timestamp.tv_sec, (long) timestamp.tv_usec/10000 );
            have_output = true;
          }
        }
