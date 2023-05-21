@@ -1,0 +1,16 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	cskk
+
+.if !defined(CSKK_BUILDLINK3_MK)
+CSKK_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.cskk+=	cskk>=3.0.0
+BUILDLINK_PKGSRCDIR.cskk?=	../../wip/cskk
+
+BUILDLINK_LIBDIRS.cskk+=	lib/cskk
+BUILDLINK_RPATHDIRS.cskk+=	lib/cskk
+
+.endif	# CSKK_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-cskk
