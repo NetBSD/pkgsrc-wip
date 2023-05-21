@@ -1,0 +1,3 @@
+Dependency loop: libproxy -> libsoup -> glib-networking -> libproxy
+
+https://github.com/libproxy/libproxy/issues/225
