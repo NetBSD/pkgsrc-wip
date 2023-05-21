@@ -10,7 +10,7 @@ HOMEPAGE=	https://fastapi.tiangolo.com/
 COMMENT=	High performance, easy to learn, fast to code, ready for production
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-dantic>=1.8.0:../../wip/py-dantic
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.8.0:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-starlette>=0.13.6:../../wip/py-starlette
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
