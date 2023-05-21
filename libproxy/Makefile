@@ -22,6 +22,9 @@ REPLACE_BASH+=	data/check-code-style
 REPLACE_BASH+=	data/install-git-hook.sh
 REPLACE_BASH+=	data/pre-commit-hook
 
+# see libsoup comment below
+MESON_ARGS+=	-Dtests=false
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
@@ -29,7 +32,9 @@ REPLACE_BASH+=	data/pre-commit-hook
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/libduktape/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../net/libsoup3/buildlink3.mk"
+# needed for tests, but causes dependency loop via
+# libsoup3 -> glib-networking -> libproxy
+#.include "../../net/libsoup3/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
