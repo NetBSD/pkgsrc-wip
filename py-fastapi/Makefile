@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastapi/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://fastapi.tiangolo.com/
-COMMENT=	High performance, easy to learn, fast to code, ready for production
+COMMENT=	Modern, fast (high-performance), web framework
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.8.0:../../devel/py-pydantic
