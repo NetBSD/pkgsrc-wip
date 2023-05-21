@@ -8,6 +8,8 @@ LIBPROXY_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.2.3
 BUILDLINK_ABI_DEPENDS.libproxy+=	libproxy>=0.4.11
 BUILDLINK_PKGSRCDIR.libproxy?=		../../wip/libproxy
+
+.include "../../devel/glib2/buildlink3.mk"
 .endif # LIBPROXY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libproxy
