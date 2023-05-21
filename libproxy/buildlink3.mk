@@ -9,6 +9,9 @@ BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.2.3
 BUILDLINK_ABI_DEPENDS.libproxy+=	libproxy>=0.4.11
 BUILDLINK_PKGSRCDIR.libproxy?=		../../wip/libproxy
 
+# before version 0.5, the header file was directly in include/proxy.h
+BUILDLINK_FNAME_TRANSFORM.libproxy+=	-e s,include/libproxy,include,
+
 .include "../../devel/glib2/buildlink3.mk"
 .endif # LIBPROXY_BUILDLINK3_MK
 

@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	bash:build pkg-config
 
-PKGCONFIG_OVERRIDE+=	bindings/csharp/libproxy-sharp-1.0.pc.cmake
-PKGCONFIG_OVERRIDE+=	libproxy/libproxy-1.0.pc.in
+PKGCONFIG_OVERRIDE+=		output/meson-private/libproxy-1.0.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 TEST_TARGET=	test
 
