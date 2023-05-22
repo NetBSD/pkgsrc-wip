@@ -1,0 +1,43 @@
+breaks qt5-qtbase:
+In file included from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/glib-typeof.h:44,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/gatomic.h:30,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/gthread.h:34,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/gasyncqueue.h:34,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib.h:34,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gobject/gbinding.h:30,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib-object.h:24,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/gioenums.h:30,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/giotypes.h:30,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/gio.h:28,
+                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/proxy.h:29,
+                 from main.cpp:2:
+/usr/include/g++/type_traits:56:3: error: template with C linkage
+   56 |   template<typename _Tp, _Tp __v>
+      |   ^~~~~~~~
+In file included from main.cpp:2:
+/scratch/x11/qt5-qtbase/work/.buildlink/include/proxy.h:26:1: note: 'extern "C"' linkage started here
+   26 | extern "C" {
+      | ^~~~~~~~~~
+
+and qt6-qtbase:
+In file included from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qtmetamacros.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/../../src/corelib/global/qnamespace.h:13,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qnamespace.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/../../src/corelib/text/qbytearray.h:9,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qbytearray.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/../../src/corelib/text/qstringview.h:8,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qstringview.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/../../src/corelib/text/qchar.h:656,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qchar.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/../../src/corelib/text/qstring.h:14,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qstring.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtNetwork/../../src/network/kernel/qhostaddress.h:10,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtNetwork/qhostaddress.h:1,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/src/network/kernel/qnetworkproxy.h:8,
+                 from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/src/network/kernel/qnetworkproxy_libproxy.cpp:5:
+/scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/../../src/corelib/kernel/qtmetamacros.h:45:20: error: expected unqualified-id before 'public'
+   45 | # define Q_SIGNALS public QT_ANNOTATE_ACCESS_SPECIFIER(qt_signal)
+      |                    ^~~~~~
+
+
+https://github.com/libproxy/libproxy/issues/226
