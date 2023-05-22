@@ -1,23 +1,25 @@
-breaks qt5-qtbase:
-In file included from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/glib-typeof.h:44,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/gatomic.h:30,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/gthread.h:34,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib/gasyncqueue.h:34,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib.h:34,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gobject/gbinding.h:30,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/glib-object.h:24,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/gioenums.h:30,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/giotypes.h:30,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/gio.h:28,
-                 from /scratch/x11/qt5-qtbase/work/.buildlink/include/proxy.h:29,
-                 from main.cpp:2:
-/usr/include/g++/type_traits:56:3: error: template with C linkage
-   56 |   template<typename _Tp, _Tp __v>
-      |   ^~~~~~~~
-In file included from main.cpp:2:
-/scratch/x11/qt5-qtbase/work/.buildlink/include/proxy.h:26:1: note: 'extern "C"' linkage started here
-   26 | extern "C" {
-      | ^~~~~~~~~~
+breaks qt5-qtbase
+
+In file included from ../../include/QtCore/qobjectdefs.h:1,
+                 from ../../include/QtCore/../../src/corelib/kernel/qobject.h:46,
+                 from ../../include/QtCore/qobject.h:1,
+                 from ../../include/QtCore/../../src/corelib/io/qiodevice.h:45,
+                 from ../../include/QtCore/qiodevice.h:1,
+                 from ../../include/QtNetwork/../../src/network/socket/qabstractsocket.h:44,
+                 from ../../include/QtNetwork/qabstractsocket.h:1,
+                 from ../../include/QtNetwork/../../src/network/kernel/qhostaddress.h:48,
+                 from ../../include/QtNetwork/qhostaddress.h:1,
+                 from kernel/qnetworkproxy.h:44,
+                 from kernel/qnetworkproxy_libproxy.cpp:41:
+../../include/QtCore/../../src/corelib/kernel/qobjectdefs.h:93:20: error: expected unqualified-id before 'public'
+   93 | # define Q_SIGNALS public QT_ANNOTATE_ACCESS_SPECIFIER(qt_signal)
+      |                    ^~~~~~
+../../include/QtCore/../../src/corelib/kernel/qobjectdefs.h:89:22: note: in expansion of macro 'Q_SIGNALS'
+   89 | #     define signals Q_SIGNALS
+      |                      ^~~~~~~~~
+/scratch/x11/qt5-qtbase/work/.buildlink/include/glib-2.0/gio/gdbusintrospection.h:157:25: note: in expansion of macro 'signals'
+  157 |   GDBusSignalInfo     **signals;
+      |                         ^~~~~~~
 
 and qt6-qtbase:
 In file included from /scratch/x11/qt6-qtbase/work/qtbase-everywhere-src-6.5.0/include/QtCore/qtmetamacros.h:1,
