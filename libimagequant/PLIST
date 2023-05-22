@@ -1,7 +1,0 @@
-@comment $NetBSD$
-include/libimagequant.h
-lib/libimagequant.a
-lib/libimagequant.so
-lib/libimagequant.so.0
-lib/libimagequant.so.0.0.0
-lib/pkgconfig/imagequant.pc
