@@ -1,0 +1,27 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/17 08:31:30 wiz Exp $
+
+* create shared library
+* Use PRIVATE instead of PUBLIC keyword since we use
+  dynamic linking and don't want -lgumbo if requesting
+  linkage to litehtml via cmake.
+
+--- CMakeLists.txt.orig	2023-05-18 23:55:10.000000000 +0000
++++ CMakeLists.txt
+@@ -143,7 +143,7 @@ set(TEST_LITEHTML
+ set(PROJECT_LIB_VERSION ${PROJECT_MAJOR}.${PROJECT_MINOR}.0)
+ set(PROJECT_SO_VERSION ${PROJECT_MAJOR})
+ 
+-add_library(${PROJECT_NAME} ${SOURCE_LITEHTML})
++add_library(${PROJECT_NAME} SHARED ${SOURCE_LITEHTML})
+ set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_LIB_VERSION} SOVERSION ${PROJECT_SO_VERSION})
+ 
+ set_target_properties(${PROJECT_NAME} PROPERTIES
+@@ -160,7 +160,7 @@ target_include_directories(${PROJECT_NAM
+ target_include_directories(${PROJECT_NAME} PRIVATE include/${PROJECT_NAME})
+ 
+ # Gumbo
+-target_link_libraries(${PROJECT_NAME} PUBLIC gumbo)
++target_link_libraries(${PROJECT_NAME} PRIVATE gumbo)
+ 
+ # install and export
+ install(TARGETS ${PROJECT_NAME}

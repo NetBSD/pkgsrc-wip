@@ -1,0 +1,12 @@
+0.8
+
+fix: render_test._/"acid1.htm" test fails on x86 architecture
+
+0.7
+
+    Many changes to improve rendering of inline and block elements.
+    Improved rendering performance
+    litehtml now passes Acid1 test
+    Removed some legacy code
+    Refactoring to make code more clean
+    Added additional rendering tests

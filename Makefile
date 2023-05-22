@@ -2222,6 +2222,7 @@ SUBDIR+=	linuxtv-dvb-apps
 SUBDIR+=	lire
 SUBDIR+=	lissac
 SUBDIR+=	litecoin
+SUBDIR+=	litehtml
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
 SUBDIR+=	lld
