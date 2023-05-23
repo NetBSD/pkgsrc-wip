@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Respect env
+
 --- Makefile.orig	2018-06-18 00:15:09 UTC
 +++ Makefile
 @@ -1,14 +1,23 @@
