@@ -1,39 +1,42 @@
 # Introduction
 
 This is a local pkgsrc README for the zoneminder package.  It attempts
-not to duplicate the upstream documentation.
+not to duplicate the upstream documentation.  (Arguably, some of this
+should be pushed upstream.)
 
 # jpeg implementation
 
-ZoneMinder benefits dramatically from using libjpeg-turbo.  Consider
-setting that as default in mk.conf, and rebuilding *everything*, via
-`JPEG_DEFAULT=libjpeg-turbo`.
+ZoneMinder claims to benefit dramatically from using libjpeg-turbo.
+Consider setting that as default in mk.conf
+`JPEG_DEFAULT=libjpeg-turbo` and then *everything*.
 
-# Initial database creation
+# MySQL configuration and initial database creation
 
-To get ZoneMinder started a MySQL database is required.
+(It seems that zoneminder only works with MySQL.)
 
-First, create a MySQL user "zmuser":
+Condider adding `bind-address=127.0.0.1` to `etc/my.conf`, if you are
+using mysql only for zoneminder and do not want it accessible from the
+network.
 
-echo "create user 'zmuser'@'localhost' identified by 'zmpass';" | mysql -u root
 
-The default password is "zmpass".  You may change this to something else, and
-update ZM_DB_PASS in ${PKG_SYSCONFDIR}/zm.conf.
+See upstream instructions at
+https://zoneminder.readthedocs.io/en/1.32.3/installationguide/ubuntu.html
+which are for Ubuntu, but seem mostly generic.
 
-Create the initial database via:
+Specifically, see "Step 5: Configure the ZoneMinder Database".
 
-  mysql -u root < ${PREFIX}/share/zoneminder/db/zm_create.sql
+The default password is "zmpass".  You may (probably should) change
+this to something else, and update ZM_DB_PASS in
+${PKG_SYSCONFDIR}/zm.conf.
 
-Assign rights to the "zmuser" user via:
+# Other setup
 
-  echo "grant all on * to 'zmuser';" | mysql -u root zm
+See "Step 6: Set permissions", and use APACHE_GROUP.
 
-# Upgrading from previous versions
-
-Upgrade a database from an older version of ZoneMinder via:
-
-  zmupdate.pl -u root [-p <password>]
-
+See "Step 9: Edit Timezone in PHP".  Otherwise, access to streams will
+fail.  See https://github.com/ZoneMinder/ZoneMinder/issues/1552 for
+more information.
+ 
 # web setup
 
 To enable the web interface via Apache, add the following line to httpd.conf:
@@ -44,15 +47,26 @@ PHP may log warnings if the PHP date.timezone configuration is not
 set.  Consider assigning a default system time zone to date.timezone
 in ${PKG_SYSCONFDIR}/php.ini.  [This paragraph might be old advice.]
 
+# Upgrading from previous versions
+
+Upgrade a database from an older version of ZoneMinder via:
+
+  zmupdate.pl -u root [-p <password>]
+
+NB: Before doing this ensure that $prefix/etc/conf.d exists.
+Zoneminder 1.32 will attempt to remove config from the database and
+place it in e.g. `/usr/pkg/etc/conf.d/zmcustom.conf`.
+
 # Shared memory
 
-With 1.30, zoneminder tries to use a shm filesystem to store files
-that are then mmap'd, instead of system V shm.
+Zoneminder tries to use a shm filesystem to store files that are then
+mmap'd.  (1.28 used SysV shm but that is no longer relevant.)
 
-On NetBSD, the default might be /dev/shm but the right place is
-/var/shm.  This can be changed in Options in the web interface.
+On NetBSD, the compiled default might be /dev/shm but the right place
+is /var/shm.  This can be changed in Options in the web interface.
 
-One might need a lot of space, or to turn the buffer down to fewer frames.
+(One might need a lot of space, or to turn the buffer down to fewer
+frames; this is not about pkgsrc.)
 
 Somtimes, the shm file can get into a bad state and be zero length.
 This might be a bad error path during camera timeouts; it seems to

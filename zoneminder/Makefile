@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
 VERSION=	1.32.3
-PKGREVISION=	1
+PKGREVISION=	2
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -27,10 +27,13 @@ LICENSE=	gnu-gpl-v2
 # NetBSD tar: Invalid header, starting valid header search.
 EXTRACT_USING=	gtar
 
-# ZoneMinder 1.29.0 seems to work fine on at least PHP 5.6 and 7.4.
-# Under PHP 8.0 it is logging at Error level type errors out of skin.js.
-# Under PHP 8.1 it is logging at Panic level that strftime is deprecated.
-PHP_VERSIONS_ACCEPTED=	56 74
+# ZoneMinder 1.30 seems to work fine on at least PHP 7.4.
+# ZoneMinder 1.32 with PHP 7.4 does not appear to have PHP-related problems.
+# Under PHP 8.0 <1.30 was logging at Error level type errors out of skin.js.
+# Under PHP 8.1 <1.30 was logging at Panic level that strftime is deprecated.
+#
+# Therefore 74 is the standard approach and it is \todo to try higher.
+PHP_VERSIONS_ACCEPTED=	74
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zoneminder
 PKG_SUPPORTED_OPTIONS=	apache
@@ -48,18 +51,19 @@ USE_TOOLS+=	gmake perl pkg-config
 # dependency, absent some reason that it is so heavyweight that it
 # should be an option.
 
-# MIME::Entity is needed from p5-MIME-tools
-# LWP::UserAgent is needed from p5-libwww
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
+# MIME::Entity is needed from p5-MIME-tools
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-SFTP-Foreign-[0-9]*:../../net/p5-Net-SFTP-Foreign
 DEPENDS+=	p5-PHP-Serialization-[0-9]*:../../devel/p5-PHP-Serialization
+DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../wip/p5-Sys-MemInfo
 DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
 #DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
+# LWP::UserAgent is needed from p5-libwww
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 # \todo: Decide to drop CONFIGURE_ARGS, validating that each has been
@@ -89,6 +93,7 @@ CONFIGURE_ARGS+=	--with-cgidir=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 CMAKE_ARGS+=		-DZM_CGIDIR=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+# TODO cmake localstate?
 CMAKE_ARGS+=		-DZM_RUNDIR=${VARBASE}/run/zm
 CMAKE_ARGS+=		-DZM_SOCKDIR=${VARBASE}/run/zm
 CMAKE_ARGS+=		-DZM_TMPDIR=${VARBASE}/tmp/zm
@@ -102,6 +107,7 @@ PTHREAD_AUTO_VARS=	yes
 CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg2}
 CONFIGURE_ENV+=		PATH_FFMPEG=${BUILDLINK_PREFIX.ffmpeg2}/bin/ffmpeg2
 CONFIGURE_ENV+=		OPT_FFMPEG=yes
+# TODO cmake?
 
 .if ${OPSYS} == "Darwin"
 SOEXT=	dylib
@@ -124,7 +130,7 @@ CONFIGURE_ARGS+=	--enable-mmap=no
 # constant macros from stdint.h, but these are only defined under C++ if
 # __STDC_CONSTANT_MACROS is requested, so we have to do that on behalf
 # of ffmpeg.  Failure to do so causes configure time failures, and
-# build failures complaining about UINT64_C not being defined.
+# build failures complaining about UINT64_T not being defined.
 CFLAGS+=		-D__STDC_CONSTANT_MACROS
 
 # Since MySQL uses openssl, use the same library instead of defaulting to
@@ -132,7 +138,7 @@ CFLAGS+=		-D__STDC_CONSTANT_MACROS
 CONFIGURE_ENV+=		ZM_SSL_LIB=openssl
 CMAKE_ARGS+=		-DGNUTLS_LIBRARIES=""
 
-# Make sure cmake doesn't think libgcrypt is available (We have OpenSSL)
+# Make sure cmake doesn't think libgcrypt is available (we use OpenSSL).
 CMAKE_ARGS+=		-DGCRYPT_LIBRARIES=""
 
 # Control where run-time state (PID file and sockets) get stored.
@@ -203,13 +209,13 @@ REPLACE_PERL+=	zmconfgen.pl.in
 #
 # The intention of zmsystemctl.pl is to use bin/pkexec to allow the
 # apache user to start and stop the ZoneMinder services on operating
-# systems using systemd and newer versions of Polkit than Pkgsrc
+# systems using systemd and newer versions of Polkit than pkgsrc
 # currently has.
 #
-# If the base OS doesn't use systemd (E.g. anything not Linux), this
+# If the base OS doesn't use systemd (e.g. anything not Linux), this
 # file shouldn't be used anyway.
 #
-# In Pkgsrc we ignore the potentially absent pkexec interpreter in
+# In pkgsrc we ignore the potentially absent pkexec interpreter in
 # this file.  If the base OS uses systemd, it probably also has pkexec
 # in its base installation.
 #
@@ -250,7 +256,11 @@ SUBST_MESSAGE.files=	Fixing ZoneMinder configuration file for Apache.
 PLIST_VARS+=		rcd
 
 .if ${INIT_SYSTEM} == "rc.d"
+# \todo Figure out if this is really for pkgsrc rc.d, and maybe write one for
+# files/
 PLIST.rcd=		yes
+# \todo fix
+#RCD_SCRIPTS+=		zoneminder
 .endif
 PRINT_PLIST_AWK+=	{ gsub(/^.+\/examples\/rc.d/, "$${PLIST.rcd}&"); }
 

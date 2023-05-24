@@ -1,18 +1,23 @@
 1) for (some subset of final point releases):
 
-  update to newer upstream
+   update to newer upstream
 
-  validate that it actually runs
+   validate that it actually runs
 
-  push to pkgsrc
+   push to pkgsrc
 
-2) evaluate patches and push upstream
+2) After updating to the current release
 
-3) 1.32 notes:
+   File bugs upstream and add URLs
 
-  https://github.com/ZoneMinder/zoneminder/releases/tag/1.32.0
-  https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
+3) 1.32
 
-  new deps: pecl-apcu, file-slurp, format-human-bytes
+   https://github.com/ZoneMinder/zoneminder/releases/tag/1.32.0
+   https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
 
-  merge apache config
+   new deps: pecl-apcu, file-slurp, format-human-bytes
+   hoist deps to pkgsrc: wip/p5-Sys-MemInfo
+
+   Figure out apache config in terms of what is installed, whether we
+   want to $include it, why there is a config file from pkgsrc, etc.
+     work/zoneminder-1.32.3/misc/apache.conf
