@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	aea98dcf93f5d124c007a1607752bc8f5dfb62f9
 
-MAINTAINER=	bacon@NetBSD.org
+OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/fasda
 COMMENT=	Fast and simple differential analysis
 LICENSE=	2-clause-bsd
