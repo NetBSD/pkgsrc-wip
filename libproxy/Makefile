@@ -22,8 +22,6 @@ REPLACE_BASH+=	data/check-code-style
 REPLACE_BASH+=	data/install-git-hook.sh
 REPLACE_BASH+=	data/pre-commit-hook
 
-#MESON_ARGS+=	-Dtests=false
-
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
