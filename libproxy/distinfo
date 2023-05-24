@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.25 2023/05/22 20:28:28 wiz Exp $
-
-BLAKE2s (libproxy-0.5.1.tar.gz) = 6f353a17805d8eba6c2c5c7a3b2879dbb1ac64e1f9ef43bdcf51c42d050b36cb
-SHA512 (libproxy-0.5.1.tar.gz) = 830e4bb1879c6afd1fbebc24de2ca75a597096a8eadb45dd3965b9f8121110039379342facebddce1b679a9b6ceb065089f0fbe38b55411a2c53ac36ef979ab7
-Size (libproxy-0.5.1.tar.gz) = 59939 bytes
-SHA1 (patch-src_backend_plugins_pacrunner-duktape_meson.build) = 680f14bb54f7d030a322dad08e30535e78f4cd92
