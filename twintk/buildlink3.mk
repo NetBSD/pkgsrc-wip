@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	twintk
 .if !defined(TWINTK_BUILDLINK3_MK)
 TWINTK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.twintk+=	twintk>=0.9.4.23
+BUILDLINK_API_DEPENDS.twintk+=	twintk>=0.9.4.27
 BUILDLINK_PKGSRCDIR.twintk?=	../../wip/twintk
 .endif	# TWINTK_BUILDLINK3_MK
 
