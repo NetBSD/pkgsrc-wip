@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	libpare
 .if !defined(LIBPARE_BUILDLINK3_MK)
 LIBPARE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libpare+=	libpare>=1.1.1
+BUILDLINK_API_DEPENDS.libpare+=	libpare>=1.1.1.11
 BUILDLINK_PKGSRCDIR.libpare?=	../../wip/libpare
 BUILDLINK_DEPMETHOD.libpare?=	build
 .endif	# LIBPARE_BUILDLINK3_MK
