@@ -1,16 +1,16 @@
 # $NetBSD$
 
-BUILDLINK_DEPMETHOD.py38-cymem?=	build
+BUILDLINK_DEPMETHOD.py-cymem?=	build
 
-BUILDLINK_TREE+=	py38-cymem
+BUILDLINK_TREE+=	py-cymem
 
-.if !defined(PY38_CYMEM_BUILDLINK3_MK)
-PY38_CYMEM_BUILDLINK3_MK:=
+.if !defined(PY_CYMEM_BUILDLINK3_MK)
+PY_CYMEM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.py38-cymem+=	py38-cymem>=2.0.5
-BUILDLINK_PKGSRCDIR.py38-cymem?=	../../wip/py-cymem
+BUILDLINK_API_DEPENDS.py-cymem+=	${PYPKGPREFIX}-cymem>=2.0.5
+BUILDLINK_PKGSRCDIR.py-cymem?=	../../wip/py-cymem
 
 .include "../../devel/py-cython/buildlink3.mk"
-.endif	# PY38_CYMEM_BUILDLINK3_MK
+.endif	# PY_CYMEM_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-py38-cymem
+BUILDLINK_TREE+=	-py-cymem
