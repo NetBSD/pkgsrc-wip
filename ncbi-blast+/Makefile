@@ -66,6 +66,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
