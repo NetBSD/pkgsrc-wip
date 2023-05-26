@@ -49,21 +49,19 @@ USE_TOOLS+=	gmake perl pkg-config
 # configuration.  We take the view that if an installation can be
 # reasonably configured to use a module, that module should be a
 # dependency, absent some reason that it is so heavyweight that it
-# should be an option.
-
+# should be an option.  zoneminder discourages building from source
+# and does not appear to document the list of dependencies
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+DEPENDS+=	p5-PHP-Serialization-[0-9]*:../../devel/p5-PHP-Serialization
+DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
 DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
-# MIME::Entity is needed from p5-MIME-tools
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-SFTP-Foreign-[0-9]*:../../net/p5-Net-SFTP-Foreign
-DEPENDS+=	p5-PHP-Serialization-[0-9]*:../../devel/p5-PHP-Serialization
-DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../wip/p5-Sys-MemInfo
-DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
+DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
 #DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
-# LWP::UserAgent is needed from p5-libwww
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 # \todo: Decide to drop CONFIGURE_ARGS, validating that each has been
@@ -174,6 +172,7 @@ DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 .endif
 
 # \todo Somehow, this permission setup still fails.
@@ -184,6 +183,10 @@ OWN_DIRS_PERMS+=	${ZM_CACHE}/temp ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/events ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CMAKE_ARGS+=		-DZM_CONTENTDIR=${ZM_CACHE}
+
+# \todo Set "web cachedir"
+# -DZM_CACHEDIR=?
+
 
 # ZoneMinder scripts needing Perl $PATH patching AND interpreter patching
 ZM_REPLACE_PERL+=	scripts/zmaudit.pl.in

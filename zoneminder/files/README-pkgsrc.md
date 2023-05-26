@@ -4,11 +4,20 @@ This is a local pkgsrc README for the zoneminder package.  It attempts
 not to duplicate the upstream documentation.  (Arguably, some of this
 should be pushed upstream.)
 
-# jpeg implementation
+# pkgsrc-specific notes
+
+## Choice of jpeg implementation
 
 ZoneMinder claims to benefit dramatically from using libjpeg-turbo.
 Consider setting that as default in mk.conf
 `JPEG_DEFAULT=libjpeg-turbo` and then *everything*.
+
+## User and Group
+
+zoneminder uses APACHE_USER and APACHE_GROUP.  These are www by
+default, but people set them to fpm for use with nginx and php_fpm.
+It is important that apache, zoneminder, and any existing directories
+all agree.
 
 # MySQL configuration and initial database creation
 
@@ -17,7 +26,6 @@ Consider setting that as default in mk.conf
 Condider adding `bind-address=127.0.0.1` to `etc/my.conf`, if you are
 using mysql only for zoneminder and do not want it accessible from the
 network.
-
 
 See upstream instructions at
 https://zoneminder.readthedocs.io/en/1.32.3/installationguide/ubuntu.html
@@ -37,15 +45,26 @@ See "Step 9: Edit Timezone in PHP".  Otherwise, access to streams will
 fail.  See https://github.com/ZoneMinder/ZoneMinder/issues/1552 for
 more information.
  
-# web setup
+# Web setup
 
-To enable the web interface via Apache, add the following line to httpd.conf:
+See "Step 7: Configure Apache correctly", but edit the apache config
+file instead of using the not-in-pkgsrc a2enmod command.
 
-  Include ${PREFIX}/share/examples/zoneminder/apache/zoneminder.conf
+mod_cgid is a hard requirement.  zm appears to work without rewrite
+and expire.  headers is default on.  Enabling a zoneminder apache
+module does not make sense.
 
-PHP may log warnings if the PHP date.timezone configuration is not
-set.  Consider assigning a default system time zone to date.timezone
-in ${PKG_SYSCONFDIR}/php.ini.  [This paragraph might be old advice.]
+Perhaps, one needs to use prefork instead of event. \todo Validate.
+
+Zoneminder installs
+${PREFIX}/share/examples/zoneminder/apache/zoneminder.conf, which does
+two things:
+  - aliases /zm to the zm main dir and /zm/cgi-bin/ to the zm cgi directory
+  - allows those paths to 127.0.0.1
+Either `Include` this, copy/modify and `Include`, or insert into
+httpd.conf.  (You will need to adjust the IP acl if you want
+off-machine access; this should be addressed upstream but does not
+seem to be.)
 
 # Upgrading from previous versions
 
