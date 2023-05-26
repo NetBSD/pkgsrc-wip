@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.11 2019/08/11 13:18:00 wiz Exp $
 
-DISTNAME=	ncbi-blast-2.13.0+-src
+DISTNAME=	ncbi-blast-2.14.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
 PKGREVISION=	1
 CATEGORIES=	biology

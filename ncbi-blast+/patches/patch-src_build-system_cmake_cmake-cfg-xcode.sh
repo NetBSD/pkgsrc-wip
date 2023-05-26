@@ -1,15 +1,21 @@
 $NetBSD$
 
-# Portability
+# sh portability
 
---- src/build-system/cmake/cmake-cfg-xcode.sh.orig	2021-06-10 11:54:05.800996703 +0000
+--- src/build-system/cmake/cmake-cfg-xcode.sh.orig	2023-05-26 12:05:14.109542442 +0000
 +++ src/build-system/cmake/cmake-cfg-xcode.sh
-@@ -218,7 +218,7 @@ CMAKE_ARGS="$CMAKE_ARGS -DBUILD_SHARED_L
- 
+@@ -249,12 +249,12 @@ CMAKE_ARGS="$CMAKE_ARGS -DBUILD_SHARED_L
  if [ -z "$BUILD_ROOT" ]; then
-   BUILD_ROOT=CMake-${CC_NAME}${CC_VERSION}
--  if [ "$BUILD_SHARED_LIBS" == "ON" ]; then
-+  if [ "$BUILD_SHARED_LIBS" = "ON" ]; then
-     BUILD_ROOT="$BUILD_ROOT"-DLL
+   if [ -z "$BUILD_TYPE" ]; then
+     BUILD_ROOT=CMake-${CC_NAME}${CC_VERSION}
+-    if [ "$BUILD_SHARED_LIBS" == "ON" ]; then
++    if [ "$BUILD_SHARED_LIBS" = "ON" ]; then
+       BUILD_ROOT="$BUILD_ROOT"-DLL
+     fi
+   else
+     BUILD_ROOT=CMake-${CC_NAME}${CC_VERSION}-${BUILD_TYPE}
+-    if [ "$BUILD_SHARED_LIBS" == "ON" ]; then
++    if [ "$BUILD_SHARED_LIBS" = "ON" ]; then
+       BUILD_ROOT="$BUILD_ROOT"DLL
+     fi
    fi
- fi
