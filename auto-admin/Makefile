@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix+=	-e 's|/usr/pkg|${PREFIX}|g'
 SUBST_SED.prefix+=	-e 's|/usr/pkgsrc|${PKGSRCDIR}|g'
 SUBST_FILES.prefix+=	User-scripts/auto-pkgsrc-prefix
