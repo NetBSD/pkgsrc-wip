@@ -2685,7 +2685,6 @@ SUBDIR+=	opencascade-git
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
 SUBDIR+=	openclonk
-SUBDIR+=	openconnect
 SUBDIR+=	opencv
 SUBDIR+=	opencv-contrib-face
 SUBDIR+=	opendchub
