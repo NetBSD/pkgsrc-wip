@@ -20,5 +20,5 @@ CONFIGURE_ARGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 CONFIGURE_ARGS+=	PREFIX="${PREFIX}"
 CONFIGURE_ARGS+=	SBINDIR="${SBINDIR}"
 
-.include "../../wip/libdivecomputer/buildlink3.mk"
+.include "../../misc/libdivecomputer/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
