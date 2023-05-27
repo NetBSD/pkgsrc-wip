@@ -1,8 +1,9 @@
 @comment $NetBSD$
 bin/auto-c2man
-bin/auto-gen-get-set
 bin/auto-gen-get-set-opaque
+bin/auto-gen-get-set-transparent
 bin/auto-script2man
 man/man1/auto-c2man.1
-man/man1/auto-gen-get-set.1
+man/man1/auto-gen-get-set-opaque.1
+man/man1/auto-gen-get-set-transparent.1
 man/man1/auto-script2man.1
