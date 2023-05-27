@@ -2004,7 +2004,6 @@ SUBDIR+=	libdbglog
 SUBDIR+=	libdbh2
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
-SUBDIR+=	libdivecomputer
 SUBDIR+=	libdjconsole
 SUBDIR+=	libdoom-umapinfo
 SUBDIR+=	libdrm-dfbsd

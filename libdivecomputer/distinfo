@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (libdivecomputer-0.7.0.tar.gz) = 0ca07ef31b2d0b6619326e11b8078cbaf150c54c
-SHA512 (libdivecomputer-0.7.0.tar.gz) = 205f8f659c426266e47c0979b8a7e0e1b06d6db2965ab67bc1e8638b48efb8854549f5fa23610570563b0464a204b6e811caccdc2ef692ea68b039939cb41635
-Size (libdivecomputer-0.7.0.tar.gz) = 751538 bytes
-SHA1 (patch-src_serial_posix.c) = e98b2f18f128e03b887ab1922c35003180641c17
