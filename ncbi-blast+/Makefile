@@ -11,6 +11,9 @@ HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
 
+# Nobody does bioinformatics on 32-bit processors anymore
+ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
+
 # Fix "undefined _ThreadRuneLocale" error on FreeBSD 10.0
 # Fix "unknown options" in configure
 SUBST_CLASSES+=		configure
