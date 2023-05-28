@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	puremagic-1.11
+DISTNAME=	puremagic-1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=cdgriffith/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/puremagic/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cdgriffith/puremagic
