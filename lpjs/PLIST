@@ -1,15 +1,16 @@
 @comment $NetBSD$
-bin/lpjs-create-script
-bin/lpjs-jobs
-bin/lpjs-menu
-bin/lpjs-nodes
-bin/lpjs-sim
-bin/lpjs-submit
+bin/lpjs
 lib/liblpjs.a
+libexec/lpjs/jobs
+libexec/lpjs/lpjs-create-script
+libexec/lpjs/menu
+libexec/lpjs/nodes
+libexec/lpjs/sim
+libexec/lpjs/submit
 man/man1/lpjs-nodes.1
+sbin/lpjs-admin
 sbin/lpjs-banner
 sbin/lpjs-chaperone
-sbin/lpjs-config
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
