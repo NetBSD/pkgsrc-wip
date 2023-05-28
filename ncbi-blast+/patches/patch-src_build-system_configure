@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_build-system_configure,v 1.4 2023/05/28 22:48:27 bacon Exp $
 
 # Avert missing --with-libiconv-prefix option
 

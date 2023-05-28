@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_util_checksum_farmhash_farmhash.cc,v 1.1 2023/05/28 22:48:27 bacon Exp $
 
 Ensure bswap_32() and bswap_64() gets defined on NetBSD.
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/05/28 22:48:27 bacon Exp $
 
 DISTNAME=	ncbi-blast-2.14.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-CATEGORIES=	biology
+CATEGORIES=	wip biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
 
@@ -61,7 +61,9 @@ CONFIGURE_ARGS+=	--without-openmp
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
+	${FIND} ${DESTDIR}${PREFIX} -name '\.cvs*' -exec rm -rf '{}' \;
+	${FIND} ${DESTDIR}${PREFIX} -name '\.subversion*' -exec rm -rf '{}' \;
+	${FIND} ${DESTDIR}${PREFIX} -name '\.git*' -exec rm -rf '{}' \;
 .if ${OPSYS} != Darwin
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 .endif

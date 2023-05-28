@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.5 2023/05/28 22:48:27 bacon Exp $
 bin/blast_formatter
 bin/blast_report
 bin/blastdb_aliastool
@@ -608,12 +608,10 @@ include/ncbi-tools++/ncbi_random_macro.h
 include/ncbi-tools++/ncbi_source_ver.h
 include/ncbi-tools++/ncbiconf.h
 include/ncbi-tools++/ncbiconf_unix.h
-include/ncbi-tools++/objects/access/.gitignore
 include/ncbi-tools++/objects/access/Link_set.hpp
 include/ncbi-tools++/objects/access/Link_set_.hpp
 include/ncbi-tools++/objects/access/NCBI_Access_module.hpp
 include/ncbi-tools++/objects/access/access__.hpp
-include/ncbi-tools++/objects/biblio/.gitignore
 include/ncbi-tools++/objects/biblio/Affil.hpp
 include/ncbi-tools++/objects/biblio/Affil_.hpp
 include/ncbi-tools++/objects/biblio/ArticleId.hpp
@@ -676,7 +674,6 @@ include/ncbi-tools++/objects/biblio/Title_.hpp
 include/ncbi-tools++/objects/biblio/biblio__.hpp
 include/ncbi-tools++/objects/biblio/biblio_macros.hpp
 include/ncbi-tools++/objects/biblio/citation_base.hpp
-include/ncbi-tools++/objects/biotree/.gitignore
 include/ncbi-tools++/objects/biotree/BioTreeContainer.hpp
 include/ncbi-tools++/objects/biotree/BioTreeContainer_.hpp
 include/ncbi-tools++/objects/biotree/DistanceMatrix.hpp
@@ -695,7 +692,6 @@ include/ncbi-tools++/objects/biotree/NodeSet.hpp
 include/ncbi-tools++/objects/biotree/NodeSet_.hpp
 include/ncbi-tools++/objects/biotree/Node_.hpp
 include/ncbi-tools++/objects/biotree/biotree__.hpp
-include/ncbi-tools++/objects/blast/.gitignore
 include/ncbi-tools++/objects/blast/Blas_get_searc_resul_reply.hpp
 include/ncbi-tools++/objects/blast/Blas_get_searc_resul_reply_.hpp
 include/ncbi-tools++/objects/blast/Blas_get_searc_resul_reque.hpp
@@ -825,7 +821,6 @@ include/ncbi-tools++/objects/blast/blast__.hpp
 include/ncbi-tools++/objects/blast/blastclient.hpp
 include/ncbi-tools++/objects/blast/blastclient_.hpp
 include/ncbi-tools++/objects/blast/names.hpp
-include/ncbi-tools++/objects/blastdb/.gitignore
 include/ncbi-tools++/objects/blastdb/Blast_db_mask_info.hpp
 include/ncbi-tools++/objects/blastdb/Blast_db_mask_info_.hpp
 include/ncbi-tools++/objects/blastdb/Blast_db_metadata.hpp
@@ -841,7 +836,6 @@ include/ncbi-tools++/objects/blastdb/Blast_mask_list_.hpp
 include/ncbi-tools++/objects/blastdb/NCBI_BlastDL_module.hpp
 include/ncbi-tools++/objects/blastdb/blastdb__.hpp
 include/ncbi-tools++/objects/blastdb/defline_extra.hpp
-include/ncbi-tools++/objects/blastxml/.gitignore
 include/ncbi-tools++/objects/blastxml/BlastOutput.hpp
 include/ncbi-tools++/objects/blastxml/BlastOutput_.hpp
 include/ncbi-tools++/objects/blastxml/Hit.hpp
@@ -856,7 +850,6 @@ include/ncbi-tools++/objects/blastxml/Parameters_.hpp
 include/ncbi-tools++/objects/blastxml/Statistics.hpp
 include/ncbi-tools++/objects/blastxml/Statistics_.hpp
 include/ncbi-tools++/objects/blastxml/blastxml__.hpp
-include/ncbi-tools++/objects/blastxml2/.gitignore
 include/ncbi-tools++/objects/blastxml2/BlastOutput2.hpp
 include/ncbi-tools++/objects/blastxml2/BlastOutput2_.hpp
 include/ncbi-tools++/objects/blastxml2/BlastXML2.hpp
@@ -887,7 +880,6 @@ include/ncbi-tools++/objects/blastxml2/Statistics_.hpp
 include/ncbi-tools++/objects/blastxml2/Target.hpp
 include/ncbi-tools++/objects/blastxml2/Target_.hpp
 include/ncbi-tools++/objects/blastxml2/blastxml2__.hpp
-include/ncbi-tools++/objects/cdd/.gitignore
 include/ncbi-tools++/objects/cdd/Algorithm_type.hpp
 include/ncbi-tools++/objects/cdd/Algorithm_type_.hpp
 include/ncbi-tools++/objects/cdd/Align_annot.hpp
@@ -956,7 +948,6 @@ include/ncbi-tools++/objects/cdd/Update_align_.hpp
 include/ncbi-tools++/objects/cdd/Update_comment.hpp
 include/ncbi-tools++/objects/cdd/Update_comment_.hpp
 include/ncbi-tools++/objects/cdd/cdd__.hpp
-include/ncbi-tools++/objects/cn3d/.gitignore
 include/ncbi-tools++/objects/cn3d/Cn3d_GL_matrix.hpp
 include/ncbi-tools++/objects/cn3d/Cn3d_GL_matrix_.hpp
 include/ncbi-tools++/objects/cn3d/Cn3d_backbone_label_style.hpp
@@ -999,7 +990,6 @@ include/ncbi-tools++/objects/cn3d/Cn3d_view_settings.hpp
 include/ncbi-tools++/objects/cn3d/Cn3d_view_settings_.hpp
 include/ncbi-tools++/objects/cn3d/NCBI_Cn3d_module.hpp
 include/ncbi-tools++/objects/cn3d/cn3d__.hpp
-include/ncbi-tools++/objects/coords/.gitignore
 include/ncbi-tools++/objects/coords/HGVS_Coordinate.hpp
 include/ncbi-tools++/objects/coords/HGVS_Coordinate_.hpp
 include/ncbi-tools++/objects/coords/HGVS_Coordinate_Set.hpp
@@ -1010,7 +1000,6 @@ include/ncbi-tools++/objects/dbsnp/primary_track/dbsnp.grpc.pb.h
 include/ncbi-tools++/objects/dbsnp/primary_track/dbsnp.pb.h
 include/ncbi-tools++/objects/dbsnp/primary_track/impl/snpptis_impl.hpp
 include/ncbi-tools++/objects/dbsnp/primary_track/snpptis.hpp
-include/ncbi-tools++/objects/docsum/.gitignore
 include/ncbi-tools++/objects/docsum/Assay.hpp
 include/ncbi-tools++/objects/docsum/Assay_.hpp
 include/ncbi-tools++/objects/docsum/Assembly.hpp
@@ -1037,7 +1026,6 @@ include/ncbi-tools++/objects/docsum/Rs_.hpp
 include/ncbi-tools++/objects/docsum/Ss.hpp
 include/ncbi-tools++/objects/docsum/Ss_.hpp
 include/ncbi-tools++/objects/docsum/docsum__.hpp
-include/ncbi-tools++/objects/entrez2/.gitignore
 include/ncbi-tools++/objects/entrez2/E2Reply.hpp
 include/ncbi-tools++/objects/entrez2/E2Reply_.hpp
 include/ncbi-tools++/objects/entrez2/E2Request.hpp
@@ -1116,7 +1104,6 @@ include/ncbi-tools++/objects/entrez2/NCBI_Entrez2_module.hpp
 include/ncbi-tools++/objects/entrez2/entrez2__.hpp
 include/ncbi-tools++/objects/entrez2/entrez2_client.hpp
 include/ncbi-tools++/objects/entrez2/entrez2_client_.hpp
-include/ncbi-tools++/objects/entrezgene/.gitignore
 include/ncbi-tools++/objects/entrezgene/Entrezgene.hpp
 include/ncbi-tools++/objects/entrezgene/Entrezgene_.hpp
 include/ncbi-tools++/objects/entrezgene/Entrezgene_Set.hpp
@@ -1135,7 +1122,6 @@ include/ncbi-tools++/objects/entrezgene/Other_source_.hpp
 include/ncbi-tools++/objects/entrezgene/Xtra_Terms.hpp
 include/ncbi-tools++/objects/entrezgene/Xtra_Terms_.hpp
 include/ncbi-tools++/objects/entrezgene/entrezgene__.hpp
-include/ncbi-tools++/objects/featdef/.gitignore
 include/ncbi-tools++/objects/featdef/FeatDef.hpp
 include/ncbi-tools++/objects/featdef/FeatDefGroupSet.hpp
 include/ncbi-tools++/objects/featdef/FeatDefGroupSet_.hpp
@@ -1150,7 +1136,6 @@ include/ncbi-tools++/objects/featdef/FeatMolType.hpp
 include/ncbi-tools++/objects/featdef/FeatMolType_.hpp
 include/ncbi-tools++/objects/featdef/NCBI_FeatDef_module.hpp
 include/ncbi-tools++/objects/featdef/featdef__.hpp
-include/ncbi-tools++/objects/gbproj/.gitignore
 include/ncbi-tools++/objects/gbproj/AbstractProjectItem.hpp
 include/ncbi-tools++/objects/gbproj/AbstractProjectItem_.hpp
 include/ncbi-tools++/objects/gbproj/DummyObsoleteType.hpp
@@ -1181,7 +1166,6 @@ include/ncbi-tools++/objects/gbproj/ViewMemento_.hpp
 include/ncbi-tools++/objects/gbproj/gbproj__.hpp
 include/ncbi-tools++/objects/gbproj/gbproj_export.h
 include/ncbi-tools++/objects/gbproj/igbproject.hpp
-include/ncbi-tools++/objects/gbseq/.gitignore
 include/ncbi-tools++/objects/gbseq/GBAltSeqData.hpp
 include/ncbi-tools++/objects/gbseq/GBAltSeqData_.hpp
 include/ncbi-tools++/objects/gbseq/GBAltSeqItem.hpp
@@ -1220,7 +1204,6 @@ include/ncbi-tools++/objects/gbseq/GBXref.hpp
 include/ncbi-tools++/objects/gbseq/GBXref_.hpp
 include/ncbi-tools++/objects/gbseq/NCBI_GBSeq_module.hpp
 include/ncbi-tools++/objects/gbseq/gbseq__.hpp
-include/ncbi-tools++/objects/general/.gitignore
 include/ncbi-tools++/objects/general/Date.hpp
 include/ncbi-tools++/objects/general/Date_.hpp
 include/ncbi-tools++/objects/general/Date_std.hpp
@@ -1244,7 +1227,6 @@ include/ncbi-tools++/objects/general/general__.hpp
 include/ncbi-tools++/objects/general/general_exception.hpp
 include/ncbi-tools++/objects/general/general_macros.hpp
 include/ncbi-tools++/objects/general/uoconv.hpp
-include/ncbi-tools++/objects/genesbyloc/.gitignore
 include/ncbi-tools++/objects/genesbyloc/GBL_Data.hpp
 include/ncbi-tools++/objects/genesbyloc/GBL_Data_.hpp
 include/ncbi-tools++/objects/genesbyloc/GBL_Gene.hpp
@@ -1253,7 +1235,6 @@ include/ncbi-tools++/objects/genesbyloc/GBL_Reply.hpp
 include/ncbi-tools++/objects/genesbyloc/GBL_Reply_.hpp
 include/ncbi-tools++/objects/genesbyloc/NCBI_GenesByLoc_module.hpp
 include/ncbi-tools++/objects/genesbyloc/genesbyloc__.hpp
-include/ncbi-tools++/objects/genomecoll/.gitignore
 include/ncbi-tools++/objects/genomecoll/GCClientRequest.hpp
 include/ncbi-tools++/objects/genomecoll/GCClientRequest_.hpp
 include/ncbi-tools++/objects/genomecoll/GCClientResponse.hpp
@@ -1325,7 +1306,6 @@ include/ncbi-tools++/objects/genomecoll/gencoll_client__.hpp
 include/ncbi-tools++/objects/genomecoll/genome_collection__.hpp
 include/ncbi-tools++/objects/genomecoll/genomic_collections_cli.hpp
 include/ncbi-tools++/objects/genomecoll/genomic_collections_cli_.hpp
-include/ncbi-tools++/objects/homologene/.gitignore
 include/ncbi-tools++/objects/homologene/HG_Alignment.hpp
 include/ncbi-tools++/objects/homologene/HG_AlignmentSet.hpp
 include/ncbi-tools++/objects/homologene/HG_AlignmentSet_.hpp
@@ -1354,7 +1334,6 @@ include/ncbi-tools++/objects/homologene/HG_Stats.hpp
 include/ncbi-tools++/objects/homologene/HG_Stats_.hpp
 include/ncbi-tools++/objects/homologene/HomoloGene_module.hpp
 include/ncbi-tools++/objects/homologene/homologene__.hpp
-include/ncbi-tools++/objects/id1/.gitignore
 include/ncbi-tools++/objects/id1/Entry_complexities.hpp
 include/ncbi-tools++/objects/id1/Entry_complexities_.hpp
 include/ncbi-tools++/objects/id1/ID1SeqEntry_info.hpp
@@ -1375,7 +1354,6 @@ include/ncbi-tools++/objects/id1/NCBI_ID1Access_module.hpp
 include/ncbi-tools++/objects/id1/id1__.hpp
 include/ncbi-tools++/objects/id1/id1_client.hpp
 include/ncbi-tools++/objects/id1/id1_client_.hpp
-include/ncbi-tools++/objects/id2/.gitignore
 include/ncbi-tools++/objects/id2/ID2S_Reply_Get_Chunk.hpp
 include/ncbi-tools++/objects/id2/ID2S_Reply_Get_Chunk_.hpp
 include/ncbi-tools++/objects/id2/ID2S_Reply_Get_Split_Info.hpp
@@ -1436,7 +1414,6 @@ include/ncbi-tools++/objects/id2/id2_client.hpp
 include/ncbi-tools++/objects/id2/id2_client_.hpp
 include/ncbi-tools++/objects/id2/id2processor.hpp
 include/ncbi-tools++/objects/id2/id2processor_interface.hpp
-include/ncbi-tools++/objects/insdseq/.gitignore
 include/ncbi-tools++/objects/insdseq/INSDAltSeqData.hpp
 include/ncbi-tools++/objects/insdseq/INSDAltSeqData_.hpp
 include/ncbi-tools++/objects/insdseq/INSDAltSeqItem.hpp
@@ -1475,7 +1452,6 @@ include/ncbi-tools++/objects/insdseq/INSDXref.hpp
 include/ncbi-tools++/objects/insdseq/INSDXref_.hpp
 include/ncbi-tools++/objects/insdseq/INSD_INSDSeq_module.hpp
 include/ncbi-tools++/objects/insdseq/insdseq__.hpp
-include/ncbi-tools++/objects/macro/.gitignore
 include/ncbi-tools++/objects/macro/AECRParse_action.hpp
 include/ncbi-tools++/objects/macro/AECRParse_action_.hpp
 include/ncbi-tools++/objects/macro/AECR_action.hpp
@@ -1836,14 +1812,12 @@ include/ncbi-tools++/objects/macro/Word_substitution_set_.hpp
 include/ncbi-tools++/objects/macro/Xref_type.hpp
 include/ncbi-tools++/objects/macro/Xref_type_.hpp
 include/ncbi-tools++/objects/macro/macro__.hpp
-include/ncbi-tools++/objects/medlars/.gitignore
 include/ncbi-tools++/objects/medlars/Medlars_entry.hpp
 include/ncbi-tools++/objects/medlars/Medlars_entry_.hpp
 include/ncbi-tools++/objects/medlars/Medlars_record.hpp
 include/ncbi-tools++/objects/medlars/Medlars_record_.hpp
 include/ncbi-tools++/objects/medlars/NCBI_Medlars_module.hpp
 include/ncbi-tools++/objects/medlars/medlars__.hpp
-include/ncbi-tools++/objects/medline/.gitignore
 include/ncbi-tools++/objects/medline/DocRef.hpp
 include/ncbi-tools++/objects/medline/DocRef_.hpp
 include/ncbi-tools++/objects/medline/Medline_entry.hpp
@@ -1860,7 +1834,6 @@ include/ncbi-tools++/objects/medline/Medline_si.hpp
 include/ncbi-tools++/objects/medline/Medline_si_.hpp
 include/ncbi-tools++/objects/medline/NCBI_Medline_module.hpp
 include/ncbi-tools++/objects/medline/medline__.hpp
-include/ncbi-tools++/objects/mim/.gitignore
 include/ncbi-tools++/objects/mim/Mim_allelic_variant.hpp
 include/ncbi-tools++/objects/mim/Mim_allelic_variant_.hpp
 include/ncbi-tools++/objects/mim/Mim_author.hpp
@@ -1892,7 +1865,6 @@ include/ncbi-tools++/objects/mim/mim__.hpp
 include/ncbi-tools++/objects/misc/error_codes.hpp
 include/ncbi-tools++/objects/misc/sequence_macros.hpp
 include/ncbi-tools++/objects/misc/sequence_util_macros.hpp
-include/ncbi-tools++/objects/mla/.gitignore
 include/ncbi-tools++/objects/mla/Error_val.hpp
 include/ncbi-tools++/objects/mla/Error_val_.hpp
 include/ncbi-tools++/objects/mla/Mla_back.hpp
@@ -1909,7 +1881,6 @@ include/ncbi-tools++/objects/mla/Title_type_.hpp
 include/ncbi-tools++/objects/mla/mla__.hpp
 include/ncbi-tools++/objects/mla/mla_client.hpp
 include/ncbi-tools++/objects/mla/mla_client_.hpp
-include/ncbi-tools++/objects/mmdb1/.gitignore
 include/ncbi-tools++/objects/mmdb1/Atom.hpp
 include/ncbi-tools++/objects/mmdb1/Atom_.hpp
 include/ncbi-tools++/objects/mmdb1/Atom_id.hpp
@@ -1971,7 +1942,6 @@ include/ncbi-tools++/objects/mmdb1/Residue_graph_pntr_.hpp
 include/ncbi-tools++/objects/mmdb1/Residue_id.hpp
 include/ncbi-tools++/objects/mmdb1/Residue_id_.hpp
 include/ncbi-tools++/objects/mmdb1/mmdb1__.hpp
-include/ncbi-tools++/objects/mmdb2/.gitignore
 include/ncbi-tools++/objects/mmdb2/Alternate_conformation_id.hpp
 include/ncbi-tools++/objects/mmdb2/Alternate_conformation_id_.hpp
 include/ncbi-tools++/objects/mmdb2/Alternate_conformation_ids.hpp
@@ -2018,7 +1988,6 @@ include/ncbi-tools++/objects/mmdb2/T_mesh_.hpp
 include/ncbi-tools++/objects/mmdb2/Triangles.hpp
 include/ncbi-tools++/objects/mmdb2/Triangles_.hpp
 include/ncbi-tools++/objects/mmdb2/mmdb2__.hpp
-include/ncbi-tools++/objects/mmdb3/.gitignore
 include/ncbi-tools++/objects/mmdb3/Align_stats.hpp
 include/ncbi-tools++/objects/mmdb3/Align_stats_.hpp
 include/ncbi-tools++/objects/mmdb3/Atom_pntrs.hpp
@@ -2095,7 +2064,6 @@ include/ncbi-tools++/objects/mmdb3/Trans_matrix_.hpp
 include/ncbi-tools++/objects/mmdb3/Transform.hpp
 include/ncbi-tools++/objects/mmdb3/Transform_.hpp
 include/ncbi-tools++/objects/mmdb3/mmdb3__.hpp
-include/ncbi-tools++/objects/ncbimime/.gitignore
 include/ncbi-tools++/objects/ncbimime/Biostruc_align.hpp
 include/ncbi-tools++/objects/ncbimime/Biostruc_align_.hpp
 include/ncbi-tools++/objects/ncbimime/Biostruc_align_seq.hpp
@@ -2116,7 +2084,6 @@ include/ncbi-tools++/objects/ncbimime/NCBI_Mime_module.hpp
 include/ncbi-tools++/objects/ncbimime/Ncbi_mime_asn1.hpp
 include/ncbi-tools++/objects/ncbimime/Ncbi_mime_asn1_.hpp
 include/ncbi-tools++/objects/ncbimime/ncbimime__.hpp
-include/ncbi-tools++/objects/objprt/.gitignore
 include/ncbi-tools++/objects/objprt/NCBI_ObjPrt_module.hpp
 include/ncbi-tools++/objects/objprt/PrintForm.hpp
 include/ncbi-tools++/objects/objprt/PrintFormBlock.hpp
@@ -2139,7 +2106,6 @@ include/ncbi-tools++/objects/objprt/TemplateName_.hpp
 include/ncbi-tools++/objects/objprt/UserFormat.hpp
 include/ncbi-tools++/objects/objprt/UserFormat_.hpp
 include/ncbi-tools++/objects/objprt/objprt__.hpp
-include/ncbi-tools++/objects/omssa/.gitignore
 include/ncbi-tools++/objects/omssa/MSBioseq.hpp
 include/ncbi-tools++/objects/omssa/MSBioseqSet.hpp
 include/ncbi-tools++/objects/omssa/MSBioseqSet_.hpp
@@ -2226,7 +2192,6 @@ include/ncbi-tools++/objects/omssa/NameValue.hpp
 include/ncbi-tools++/objects/omssa/NameValue_.hpp
 include/ncbi-tools++/objects/omssa/OMSSA_module.hpp
 include/ncbi-tools++/objects/omssa/omssa__.hpp
-include/ncbi-tools++/objects/pcassay/.gitignore
 include/ncbi-tools++/objects/pcassay/NCBI_PCAssay_module.hpp
 include/ncbi-tools++/objects/pcassay/PC_AnnotatedXRef.hpp
 include/ncbi-tools++/objects/pcassay/PC_AnnotatedXRef_.hpp
@@ -2261,7 +2226,6 @@ include/ncbi-tools++/objects/pcassay/PC_RealMinMax_.hpp
 include/ncbi-tools++/objects/pcassay/PC_ResultType.hpp
 include/ncbi-tools++/objects/pcassay/PC_ResultType_.hpp
 include/ncbi-tools++/objects/pcassay/pcassay__.hpp
-include/ncbi-tools++/objects/pcassay2/.gitignore
 include/ncbi-tools++/objects/pcassay2/NCBI_PCAssay2_module.hpp
 include/ncbi-tools++/objects/pcassay2/PC_AnnotatedXRef.hpp
 include/ncbi-tools++/objects/pcassay2/PC_AnnotatedXRef_.hpp
@@ -2290,7 +2254,6 @@ include/ncbi-tools++/objects/pcassay2/PC_RealMinMax_.hpp
 include/ncbi-tools++/objects/pcassay2/PC_ResultType.hpp
 include/ncbi-tools++/objects/pcassay2/PC_ResultType_.hpp
 include/ncbi-tools++/objects/pcassay2/pcassay2__.hpp
-include/ncbi-tools++/objects/pcsubstance/.gitignore
 include/ncbi-tools++/objects/pcsubstance/NCBI_PCSubstance_module.hpp
 include/ncbi-tools++/objects/pcsubstance/PC_AtomInt.hpp
 include/ncbi-tools++/objects/pcsubstance/PC_AtomInt_.hpp
@@ -2371,7 +2334,6 @@ include/ncbi-tools++/objects/pcsubstance/PC_Urn_.hpp
 include/ncbi-tools++/objects/pcsubstance/PC_XRefData.hpp
 include/ncbi-tools++/objects/pcsubstance/PC_XRefData_.hpp
 include/ncbi-tools++/objects/pcsubstance/pcsubstance__.hpp
-include/ncbi-tools++/objects/proj/.gitignore
 include/ncbi-tools++/objects/proj/NCBI_Project_module.hpp
 include/ncbi-tools++/objects/proj/Projdesc.hpp
 include/ncbi-tools++/objects/proj/Projdesc_.hpp
@@ -2384,7 +2346,6 @@ include/ncbi-tools++/objects/proj/Project_id_.hpp
 include/ncbi-tools++/objects/proj/Project_item.hpp
 include/ncbi-tools++/objects/proj/Project_item_.hpp
 include/ncbi-tools++/objects/proj/proj__.hpp
-include/ncbi-tools++/objects/pub/.gitignore
 include/ncbi-tools++/objects/pub/NCBI_Pub_module.hpp
 include/ncbi-tools++/objects/pub/Pub.hpp
 include/ncbi-tools++/objects/pub/Pub_.hpp
@@ -2394,14 +2355,12 @@ include/ncbi-tools++/objects/pub/Pub_set.hpp
 include/ncbi-tools++/objects/pub/Pub_set_.hpp
 include/ncbi-tools++/objects/pub/pub__.hpp
 include/ncbi-tools++/objects/pub/pub_macros.hpp
-include/ncbi-tools++/objects/pubmed/.gitignore
 include/ncbi-tools++/objects/pubmed/NCBI_PubMed_module.hpp
 include/ncbi-tools++/objects/pubmed/Pubmed_entry.hpp
 include/ncbi-tools++/objects/pubmed/Pubmed_entry_.hpp
 include/ncbi-tools++/objects/pubmed/Pubmed_url.hpp
 include/ncbi-tools++/objects/pubmed/Pubmed_url_.hpp
 include/ncbi-tools++/objects/pubmed/pubmed__.hpp
-include/ncbi-tools++/objects/remap/.gitignore
 include/ncbi-tools++/objects/remap/NCBI_Remap_module.hpp
 include/ncbi-tools++/objects/remap/RMReply.hpp
 include/ncbi-tools++/objects/remap/RMReply_.hpp
@@ -2422,7 +2381,6 @@ include/ncbi-tools++/objects/remap/Remap_result_.hpp
 include/ncbi-tools++/objects/remap/remap__.hpp
 include/ncbi-tools++/objects/remap/remap_client.hpp
 include/ncbi-tools++/objects/remap/remap_client_.hpp
-include/ncbi-tools++/objects/scoremat/.gitignore
 include/ncbi-tools++/objects/scoremat/BlockProperty.hpp
 include/ncbi-tools++/objects/scoremat/BlockProperty_.hpp
 include/ncbi-tools++/objects/scoremat/CoreBlock.hpp
@@ -2449,7 +2407,6 @@ include/ncbi-tools++/objects/scoremat/Site_annot_.hpp
 include/ncbi-tools++/objects/scoremat/Site_annot_set.hpp
 include/ncbi-tools++/objects/scoremat/Site_annot_set_.hpp
 include/ncbi-tools++/objects/scoremat/scoremat__.hpp
-include/ncbi-tools++/objects/seq/.gitignore
 include/ncbi-tools++/objects/seq/Align_def.hpp
 include/ncbi-tools++/objects/seq/Align_def_.hpp
 include/ncbi-tools++/objects/seq/Annot_descr.hpp
@@ -2550,7 +2507,6 @@ include/ncbi-tools++/objects/seq/seqlocinfo.hpp
 include/ncbi-tools++/objects/seq/seqport_util.hpp
 include/ncbi-tools++/objects/seq/so_map.hpp
 include/ncbi-tools++/objects/seq/sofa_type.hpp
-include/ncbi-tools++/objects/seqalign/.gitignore
 include/ncbi-tools++/objects/seqalign/Dense_diag.hpp
 include/ncbi-tools++/objects/seqalign/Dense_diag_.hpp
 include/ncbi-tools++/objects/seqalign/Dense_seg.hpp
@@ -2591,7 +2547,6 @@ include/ncbi-tools++/objects/seqalign/Std_seg_.hpp
 include/ncbi-tools++/objects/seqalign/seqalign__.hpp
 include/ncbi-tools++/objects/seqalign/seqalign_exception.hpp
 include/ncbi-tools++/objects/seqalign/seqalign_macros.hpp
-include/ncbi-tools++/objects/seqblock/.gitignore
 include/ncbi-tools++/objects/seqblock/EMBL_General_module.hpp
 include/ncbi-tools++/objects/seqblock/EMBL_block.hpp
 include/ncbi-tools++/objects/seqblock/EMBL_block_.hpp
@@ -2620,7 +2575,6 @@ include/ncbi-tools++/objects/seqblock/SP_block.hpp
 include/ncbi-tools++/objects/seqblock/SP_block_.hpp
 include/ncbi-tools++/objects/seqblock/seqblock__.hpp
 include/ncbi-tools++/objects/seqblock/seqblock_macros.hpp
-include/ncbi-tools++/objects/seqcode/.gitignore
 include/ncbi-tools++/objects/seqcode/NCBI_SeqCode_module.hpp
 include/ncbi-tools++/objects/seqcode/Seq_code_set.hpp
 include/ncbi-tools++/objects/seqcode/Seq_code_set_.hpp
@@ -2631,7 +2585,6 @@ include/ncbi-tools++/objects/seqcode/Seq_code_type_.hpp
 include/ncbi-tools++/objects/seqcode/Seq_map_table.hpp
 include/ncbi-tools++/objects/seqcode/Seq_map_table_.hpp
 include/ncbi-tools++/objects/seqcode/seqcode__.hpp
-include/ncbi-tools++/objects/seqedit/.gitignore
 include/ncbi-tools++/objects/seqedit/NCBI_SeqEdit_module.hpp
 include/ncbi-tools++/objects/seqedit/SeqEdit_Cmd.hpp
 include/ncbi-tools++/objects/seqedit/SeqEdit_Cmd_.hpp
@@ -2680,7 +2633,6 @@ include/ncbi-tools++/objects/seqedit/SeqEdit_Cmd_SetDescr_.hpp
 include/ncbi-tools++/objects/seqedit/SeqEdit_Id.hpp
 include/ncbi-tools++/objects/seqedit/SeqEdit_Id_.hpp
 include/ncbi-tools++/objects/seqedit/seqedit__.hpp
-include/ncbi-tools++/objects/seqfeat/.gitignore
 include/ncbi-tools++/objects/seqfeat/BinomialOrgName.hpp
 include/ncbi-tools++/objects/seqfeat/BinomialOrgName_.hpp
 include/ncbi-tools++/objects/seqfeat/BioSource.hpp
@@ -2801,7 +2753,6 @@ include/ncbi-tools++/objects/seqfeat/Variation_ref.hpp
 include/ncbi-tools++/objects/seqfeat/Variation_ref_.hpp
 include/ncbi-tools++/objects/seqfeat/seqfeat__.hpp
 include/ncbi-tools++/objects/seqfeat/seqfeat_macros.hpp
-include/ncbi-tools++/objects/seqloc/.gitignore
 include/ncbi-tools++/objects/seqloc/Giimport_id.hpp
 include/ncbi-tools++/objects/seqloc/Giimport_id_.hpp
 include/ncbi-tools++/objects/seqloc/NCBI_Seqloc_module.hpp
@@ -2837,7 +2788,6 @@ include/ncbi-tools++/objects/seqloc/Textseq_id.hpp
 include/ncbi-tools++/objects/seqloc/Textseq_id_.hpp
 include/ncbi-tools++/objects/seqloc/seqloc__.hpp
 include/ncbi-tools++/objects/seqloc/seqloc_macros.hpp
-include/ncbi-tools++/objects/seqres/.gitignore
 include/ncbi-tools++/objects/seqres/Byte_graph.hpp
 include/ncbi-tools++/objects/seqres/Byte_graph_.hpp
 include/ncbi-tools++/objects/seqres/Int_graph.hpp
@@ -2848,7 +2798,6 @@ include/ncbi-tools++/objects/seqres/Real_graph_.hpp
 include/ncbi-tools++/objects/seqres/Seq_graph.hpp
 include/ncbi-tools++/objects/seqres/Seq_graph_.hpp
 include/ncbi-tools++/objects/seqres/seqres__.hpp
-include/ncbi-tools++/objects/seqset/.gitignore
 include/ncbi-tools++/objects/seqset/Bioseq_set.hpp
 include/ncbi-tools++/objects/seqset/Bioseq_set_.hpp
 include/ncbi-tools++/objects/seqset/NCBI_Seqset_module.hpp
@@ -2858,7 +2807,6 @@ include/ncbi-tools++/objects/seqset/gb_release_file.hpp
 include/ncbi-tools++/objects/seqset/seqset__.hpp
 include/ncbi-tools++/objects/seqset/seqset_exception.hpp
 include/ncbi-tools++/objects/seqset/seqset_macros.hpp
-include/ncbi-tools++/objects/seqsplit/.gitignore
 include/ncbi-tools++/objects/seqsplit/ID2S_Bioseq_Ids.hpp
 include/ncbi-tools++/objects/seqsplit/ID2S_Bioseq_Ids_.hpp
 include/ncbi-tools++/objects/seqsplit/ID2S_Bioseq_Info.hpp
@@ -2915,7 +2863,6 @@ include/ncbi-tools++/objects/seqsplit/ID2S_Split_Info.hpp
 include/ncbi-tools++/objects/seqsplit/ID2S_Split_Info_.hpp
 include/ncbi-tools++/objects/seqsplit/NCBI_Seq_split_module.hpp
 include/ncbi-tools++/objects/seqsplit/seqsplit__.hpp
-include/ncbi-tools++/objects/seqtable/.gitignore
 include/ncbi-tools++/objects/seqtable/BVector_data.hpp
 include/ncbi-tools++/objects/seqtable/BVector_data_.hpp
 include/ncbi-tools++/objects/seqtable/CommonBytes_table.hpp
@@ -2942,7 +2889,6 @@ include/ncbi-tools++/objects/seqtable/Seq_table_.hpp
 include/ncbi-tools++/objects/seqtable/impl/delta_cache.hpp
 include/ncbi-tools++/objects/seqtable/seq_table_exception.hpp
 include/ncbi-tools++/objects/seqtable/seqtable__.hpp
-include/ncbi-tools++/objects/seqtest/.gitignore
 include/ncbi-tools++/objects/seqtest/NCBI_SeqTest_module.hpp
 include/ncbi-tools++/objects/seqtest/SeqTestResults.hpp
 include/ncbi-tools++/objects/seqtest/SeqTestResults_.hpp
@@ -2951,7 +2897,6 @@ include/ncbi-tools++/objects/seqtest/Seq_test_result_.hpp
 include/ncbi-tools++/objects/seqtest/Seq_test_result_set.hpp
 include/ncbi-tools++/objects/seqtest/Seq_test_result_set_.hpp
 include/ncbi-tools++/objects/seqtest/seqtest__.hpp
-include/ncbi-tools++/objects/submit/.gitignore
 include/ncbi-tools++/objects/submit/Contact_info.hpp
 include/ncbi-tools++/objects/submit/Contact_info_.hpp
 include/ncbi-tools++/objects/submit/NCBI_Submit_module.hpp
@@ -2961,7 +2906,6 @@ include/ncbi-tools++/objects/submit/Submit_block.hpp
 include/ncbi-tools++/objects/submit/Submit_block_.hpp
 include/ncbi-tools++/objects/submit/submit__.hpp
 include/ncbi-tools++/objects/submit/submit_macros.hpp
-include/ncbi-tools++/objects/taxon1/.gitignore
 include/ncbi-tools++/objects/taxon1/NCBI_Taxon1_module.hpp
 include/ncbi-tools++/objects/taxon1/Taxon1_data.hpp
 include/ncbi-tools++/objects/taxon1/Taxon1_data_.hpp
@@ -2980,7 +2924,6 @@ include/ncbi-tools++/objects/taxon1/Taxon2_data_.hpp
 include/ncbi-tools++/objects/taxon1/local_taxon.hpp
 include/ncbi-tools++/objects/taxon1/taxon1.hpp
 include/ncbi-tools++/objects/taxon1/taxon1__.hpp
-include/ncbi-tools++/objects/taxon3/.gitignore
 include/ncbi-tools++/objects/taxon3/NCBI_Taxon3_module.hpp
 include/ncbi-tools++/objects/taxon3/SequenceOfInt.hpp
 include/ncbi-tools++/objects/taxon3/SequenceOfInt_.hpp
@@ -3004,14 +2947,12 @@ include/ncbi-tools++/objects/taxon3/cached_taxon3.hpp
 include/ncbi-tools++/objects/taxon3/itaxon3.hpp
 include/ncbi-tools++/objects/taxon3/taxon3.hpp
 include/ncbi-tools++/objects/taxon3/taxon3__.hpp
-include/ncbi-tools++/objects/tinyseq/.gitignore
 include/ncbi-tools++/objects/tinyseq/NCBI_TSeq_module.hpp
 include/ncbi-tools++/objects/tinyseq/TSeq.hpp
 include/ncbi-tools++/objects/tinyseq/TSeqSet.hpp
 include/ncbi-tools++/objects/tinyseq/TSeqSet_.hpp
 include/ncbi-tools++/objects/tinyseq/TSeq_.hpp
 include/ncbi-tools++/objects/tinyseq/tinyseq__.hpp
-include/ncbi-tools++/objects/trackmgr/.gitignore
 include/ncbi-tools++/objects/trackmgr/NCBI_TrackManager_module.hpp
 include/ncbi-tools++/objects/trackmgr/TMgr_ACL_AccessLevel.hpp
 include/ncbi-tools++/objects/trackmgr/TMgr_ACL_AccessLevel_.hpp
@@ -3170,14 +3111,12 @@ include/ncbi-tools++/objects/trackmgr/trackmgr_client.hpp
 include/ncbi-tools++/objects/trackmgr/trackmgr_client_.hpp
 include/ncbi-tools++/objects/trackmgr/trackmgr_export.h
 include/ncbi-tools++/objects/trackmgr/trackset_client.hpp
-include/ncbi-tools++/objects/valerr/.gitignore
 include/ncbi-tools++/objects/valerr/NCBI_ValErrors_module.hpp
 include/ncbi-tools++/objects/valerr/ValidErrItem.hpp
 include/ncbi-tools++/objects/valerr/ValidErrItem_.hpp
 include/ncbi-tools++/objects/valerr/ValidError.hpp
 include/ncbi-tools++/objects/valerr/ValidError_.hpp
 include/ncbi-tools++/objects/valerr/valerr__.hpp
-include/ncbi-tools++/objects/valid/.gitignore
 include/ncbi-tools++/objects/valid/Comment_rule.hpp
 include/ncbi-tools++/objects/valid/Comment_rule_.hpp
 include/ncbi-tools++/objects/valid/Comment_set.hpp
@@ -3196,7 +3135,6 @@ include/ncbi-tools++/objects/valid/Phrase_list_.hpp
 include/ncbi-tools++/objects/valid/Severity_level.hpp
 include/ncbi-tools++/objects/valid/Severity_level_.hpp
 include/ncbi-tools++/objects/valid/valid__.hpp
-include/ncbi-tools++/objects/variation/.gitignore
 include/ncbi-tools++/objects/variation/NCBI_VariationPackage_module.hpp
 include/ncbi-tools++/objects/variation/VariantPlacement.hpp
 include/ncbi-tools++/objects/variation/VariantPlacement_.hpp
@@ -3207,7 +3145,6 @@ include/ncbi-tools++/objects/variation/VariationMethod.hpp
 include/ncbi-tools++/objects/variation/VariationMethod_.hpp
 include/ncbi-tools++/objects/variation/Variation_.hpp
 include/ncbi-tools++/objects/variation/variation__.hpp
-include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/.gitignore
 include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/Error.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/Error_.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/NCBI_search_by_rsid_module.hpp
@@ -3216,7 +3153,6 @@ include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/Placement_.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/SearchByRsIdReply.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/SearchByRsIdReply_.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/search_by_rsid/search_by_rsid__.hpp
-include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/.gitignore
 include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/DbsnpTooltipData.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/DbsnpTooltipData_.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/DbsnpTooltipSection.hpp
@@ -3229,7 +3165,6 @@ include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/DbsnpTooltipSe
 include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/DbsnpTooltipServiceReply_.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/NCBI_dbsnp_tooltips_module.hpp
 include/ncbi-tools++/objects/variation_libs/dbsnp/tooltip_service/dbsnp_tooltip_service__.hpp
-include/ncbi-tools++/objects/varrep/.gitignore
 include/ncbi-tools++/objects/varrep/AaInterval.hpp
 include/ncbi-tools++/objects/varrep/AaInterval_.hpp
 include/ncbi-tools++/objects/varrep/AaLocation.hpp
@@ -3619,7 +3554,6 @@ include/ncbi-tools++/objtools/eutils/api/esearch.hpp
 include/ncbi-tools++/objtools/eutils/api/espell.hpp
 include/ncbi-tools++/objtools/eutils/api/esummary.hpp
 include/ncbi-tools++/objtools/eutils/api/eutils.hpp
-include/ncbi-tools++/objtools/eutils/efetch/.gitignore
 include/ncbi-tools++/objtools/eutils/efetch/Abs.hpp
 include/ncbi-tools++/objtools/eutils/efetch/Abs_.hpp
 include/ncbi-tools++/objtools/eutils/efetch/Abstract.hpp
@@ -4318,7 +4252,6 @@ include/ncbi-tools++/objtools/eutils/efetch/Year.hpp
 include/ncbi-tools++/objtools/eutils/efetch/Year_.hpp
 include/ncbi-tools++/objtools/eutils/efetch/efetch__.hpp
 include/ncbi-tools++/objtools/eutils/efetch/efetch_module.hpp
-include/ncbi-tools++/objtools/eutils/egquery/.gitignore
 include/ncbi-tools++/objtools/eutils/egquery/EGQueryResult.hpp
 include/ncbi-tools++/objtools/eutils/egquery/EGQueryResult_.hpp
 include/ncbi-tools++/objtools/eutils/egquery/Result.hpp
@@ -4327,14 +4260,12 @@ include/ncbi-tools++/objtools/eutils/egquery/ResultItem_.hpp
 include/ncbi-tools++/objtools/eutils/egquery/Result_.hpp
 include/ncbi-tools++/objtools/eutils/egquery/egquery__.hpp
 include/ncbi-tools++/objtools/eutils/egquery/egquery_module.hpp
-include/ncbi-tools++/objtools/eutils/ehistory/.gitignore
 include/ncbi-tools++/objtools/eutils/ehistory/EHistoryItem.hpp
 include/ncbi-tools++/objtools/eutils/ehistory/EHistoryItem_.hpp
 include/ncbi-tools++/objtools/eutils/ehistory/EHistoryResult.hpp
 include/ncbi-tools++/objtools/eutils/ehistory/EHistoryResult_.hpp
 include/ncbi-tools++/objtools/eutils/ehistory/ehistory__.hpp
 include/ncbi-tools++/objtools/eutils/ehistory/ehistory_module.hpp
-include/ncbi-tools++/objtools/eutils/einfo/.gitignore
 include/ncbi-tools++/objtools/eutils/einfo/DbInfo.hpp
 include/ncbi-tools++/objtools/eutils/einfo/DbInfo_.hpp
 include/ncbi-tools++/objtools/eutils/einfo/DbList.hpp
@@ -4351,7 +4282,6 @@ include/ncbi-tools++/objtools/eutils/einfo/LinkList_.hpp
 include/ncbi-tools++/objtools/eutils/einfo/Link_.hpp
 include/ncbi-tools++/objtools/eutils/einfo/einfo__.hpp
 include/ncbi-tools++/objtools/eutils/einfo/einfo_module.hpp
-include/ncbi-tools++/objtools/eutils/elink/.gitignore
 include/ncbi-tools++/objtools/eutils/elink/ELinkResult.hpp
 include/ncbi-tools++/objtools/eutils/elink/ELinkResult_.hpp
 include/ncbi-tools++/objtools/eutils/elink/FirstChars.hpp
@@ -4388,14 +4318,12 @@ include/ncbi-tools++/objtools/eutils/elink/Url.hpp
 include/ncbi-tools++/objtools/eutils/elink/Url_.hpp
 include/ncbi-tools++/objtools/eutils/elink/elink__.hpp
 include/ncbi-tools++/objtools/eutils/elink/elink_module.hpp
-include/ncbi-tools++/objtools/eutils/epost/.gitignore
 include/ncbi-tools++/objtools/eutils/epost/EPostResult.hpp
 include/ncbi-tools++/objtools/eutils/epost/EPostResult_.hpp
 include/ncbi-tools++/objtools/eutils/epost/InvalidIdList.hpp
 include/ncbi-tools++/objtools/eutils/epost/InvalidIdList_.hpp
 include/ncbi-tools++/objtools/eutils/epost/epost__.hpp
 include/ncbi-tools++/objtools/eutils/epost/epost_module.hpp
-include/ncbi-tools++/objtools/eutils/esearch/.gitignore
 include/ncbi-tools++/objtools/eutils/esearch/ESearchResult.hpp
 include/ncbi-tools++/objtools/eutils/esearch/ESearchResult_.hpp
 include/ncbi-tools++/objtools/eutils/esearch/ErrorList.hpp
@@ -4414,14 +4342,12 @@ include/ncbi-tools++/objtools/eutils/esearch/WarningList.hpp
 include/ncbi-tools++/objtools/eutils/esearch/WarningList_.hpp
 include/ncbi-tools++/objtools/eutils/esearch/esearch__.hpp
 include/ncbi-tools++/objtools/eutils/esearch/esearch_module.hpp
-include/ncbi-tools++/objtools/eutils/espell/.gitignore
 include/ncbi-tools++/objtools/eutils/espell/ESpellResult.hpp
 include/ncbi-tools++/objtools/eutils/espell/ESpellResult_.hpp
 include/ncbi-tools++/objtools/eutils/espell/SpelledQuery.hpp
 include/ncbi-tools++/objtools/eutils/espell/SpelledQuery_.hpp
 include/ncbi-tools++/objtools/eutils/espell/espell__.hpp
 include/ncbi-tools++/objtools/eutils/espell/espell_module.hpp
-include/ncbi-tools++/objtools/eutils/esummary/.gitignore
 include/ncbi-tools++/objtools/eutils/esummary/DocSum.hpp
 include/ncbi-tools++/objtools/eutils/esummary/DocSum_.hpp
 include/ncbi-tools++/objtools/eutils/esummary/ESummaryResult.hpp
@@ -4430,7 +4356,6 @@ include/ncbi-tools++/objtools/eutils/esummary/Item.hpp
 include/ncbi-tools++/objtools/eutils/esummary/Item_.hpp
 include/ncbi-tools++/objtools/eutils/esummary/esummary__.hpp
 include/ncbi-tools++/objtools/eutils/esummary/esummary_module.hpp
-include/ncbi-tools++/objtools/eutils/uilist/.gitignore
 include/ncbi-tools++/objtools/eutils/uilist/IdList.hpp
 include/ncbi-tools++/objtools/eutils/uilist/IdList_.hpp
 include/ncbi-tools++/objtools/eutils/uilist/uilist__.hpp
