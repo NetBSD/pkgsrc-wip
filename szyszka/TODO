@@ -1,0 +1,6 @@
+Gsk-Message: 15:20:22.391: Failed to realize renderer of type 'GskGLRenderer' for surface 'GdkX11Toplevel': libEGL not available
+
+thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Error { domain: gdk-pixbuf-error-quark, code: 3, message: "Unrecognized image file format" }', src/help_function.rs:344:58
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Exception: szyszka exited with 101
+[tty 2]:1:1: szyszka
