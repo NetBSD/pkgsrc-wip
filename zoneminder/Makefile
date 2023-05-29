@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
 VERSION=	1.32.3
-PKGREVISION=	3
+PKGREVISION=	4
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -285,7 +285,7 @@ SUBST_SED.script-path=		-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bi
 # Substitute configured path in pkgsrc-provided apache config.
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	pre-configure
-SUBST_FILES.files=	zoneminder.conf
+SUBST_FILES.files=	httpd-zoneminder.conf
 SUBST_SED.files=	-e "s|@ZM_HTTPD_ROOT@|${PREFIX}/${ZM_HTTPD_ROOT}|g"
 SUBST_SED.files+=	-e "s|@ZM_HTTPD_CGIBIN@|${PREFIX}/${ZM_HTTPD_CGIBIN}|g"
 SUBST_MESSAGE.files=	Fixing ZoneMinder configuration file for Apache.
@@ -309,7 +309,7 @@ PRINT_PLIST_AWK+=	{ gsub(/^.+\/examples\/rc.d/, "$${PLIST.rcd}&"); }
 # Pretend our apache config is part of the distribution.
 # Avoid conflict with C++20 <version> - intertwined with patch-CMakeLists.txt
 post-extract:
-	${CP} ${FILESDIR}/zoneminder.conf ${WRKSRC}/zoneminder.conf
+	${CP} ${FILESDIR}/httpd-zoneminder.conf ${WRKSRC}/httpd-zoneminder.conf
 	${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
 
 # Omit patchfiles from PLIST if present.  The pre-configure step below
@@ -331,7 +331,7 @@ CONF_FILES+=		${PREFIX}/${EGDIR}/config/zm.conf ${PKG_SYSCONFDIR}/zm/zm.conf
 INSTALLATION_DIRS+=	bin share/examples/rc.d share/zoneminder/db
 INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/zoneminder.conf ${DESTDIR}${PREFIX}/${EGDIR}/apache/zoneminder.conf
+	${INSTALL_DATA} ${WRKSRC}/httpd-zoneminder.conf ${DESTDIR}${PREFIX}/${EGDIR}/apache/httpd-zoneminder.conf
 	${INSTALL_DATA} ${WRKSRC}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
 .if ${INIT_SYSTEM} == "rc.d"
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder

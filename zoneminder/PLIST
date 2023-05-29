@@ -6055,7 +6055,7 @@ man/man8/zoneminder-zmx10.pl.8
 share/applications/zoneminder.desktop
 share/doc/zoneminder/README-pkgsrc.md
 ${PLIST.rcd}share/examples/rc.d/zoneminder
-share/examples/zoneminder/apache/zoneminder.conf
+share/examples/zoneminder/apache/httpd-zoneminder.conf
 share/examples/zoneminder/config/zm.conf
 share/zoneminder/db/test.monitor.sql
 share/zoneminder/db/triggers.sql
