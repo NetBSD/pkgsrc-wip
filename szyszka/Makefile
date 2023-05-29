@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk4}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.MesaLib}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.MesaLib}/lib
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk4/buildlink3.mk"
