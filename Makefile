@@ -4837,7 +4837,6 @@ SUBDIR+=	py-vegas
 SUBDIR+=	py-venusian
 SUBDIR+=	py-verilog
 SUBDIR+=	py-version-control-tools-hg
-SUBDIR+=	py-versioneer
 SUBDIR+=	py-vespa
 SUBDIR+=	py-virtualenv-clone
 SUBDIR+=	py-vis
