@@ -3,8 +3,13 @@ security/zoneminder: Update to 1.32.3
 Welcome to 2018.
 
 Packaging changes:
-  Upstream removed zmf; drop patch.
-  Depend on mp4v2.
+
+  - Change config to etc/zm from etc, and provide etc/zm/conf.d, because
+    migration from 1.30 writes there.
+  - Rototill hard the cmake build options, and try to document what
+    must be set as path configuration.
+  - Upstream removed zmf; drop patch.
+  - Depend on mp4v2.
 
 Upstream NEWS:
 
@@ -38,14 +43,14 @@ Upstream NEWS:
 
     Support for Redhat el6 distros and clones has been removed
 
-Upstream upgrade notes:
+Upstream upgrade notes (tweaked for pkgsrc):
 
     The upgrade scripts will take longer than normal to run,
-    especially if you have many events
+    especially if you have many events.
 
     Your previous settings on the Options -> Paths tab have been moved
-    into the file zmcustom.conf which is typically found under
-    /etc/zm/conf.d
+    into the file zmcustom.conf which is found under
+    ${PKGSYSCONFDIR}/etc/zm/conf.d
 
     Consider migrating your events folder from the former bind mount
     method to the new method under Options -> Storage
@@ -53,9 +58,6 @@ Upstream upgrade notes:
     You should no longer have symbolic links in your webroot
     folder. This resolves a long standing security issue.
 
-    The Apache config file has changed. This config file may or may
-    not update automatically. This depends on what distro you are
-    running and how you installed ZoneMinder. Please refer to the
-    documentation for your distro to learn what specific steps are
-    required.
+    The Apache config file has changed.  Hand merge it and review your
+    web setup.
 
