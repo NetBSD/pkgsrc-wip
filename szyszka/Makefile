@@ -43,4 +43,5 @@ do-install:
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
