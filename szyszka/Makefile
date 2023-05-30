@@ -17,6 +17,23 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk4}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.MesaLib}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.MesaLib}/lib
 
+INSTALLATION_DIRS=	bin libexec/szyszka
+
+.include "../../mk/bsd.prefs.mk"
+
+# This is a workaround for PR#57445. When resolved this do-install and wrapper
+# should # be removed and the binary just installed into PREFIX/bin
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/szyszka ${DESTDIR}${PREFIX}/libexec/szyszka
+.if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
+	${INSTALL_SCRIPT} ${FILESDIR}/szyszka.sh ${DESTDIR}${PREFIX}/bin/szyszka
+.else
+	${ECHO} '#!/bin/sh' > ${DESTDIR}${PREFIX}/bin/szyszka
+	${ECHO} '${PREFIX}/libexec/szyszka/szyszka "$$@"' >> \
+		${DESTDIR}${PREFIX}/bin/szyszka
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/szyszka
+.endif
+
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk4/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
