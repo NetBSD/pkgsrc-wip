@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/jfmutil
-share/texmf-dist/scripts/jfmutil/jfmutil.pl
