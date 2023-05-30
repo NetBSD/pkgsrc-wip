@@ -16,12 +16,10 @@
    https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
 
    new deps: pecl-apcu, file-slurp, format-human-bytes
-   hoist deps to pkgsrc: wip/p5-Sys-MemInfo
 
-   There is a concept of a git submodule for CakePHP-Enum-Behavior,
-   and that upstream has not yet accepted a needed change.  However it
-   has also not been rejected.
-   https://github.com/zoneminder/CakePHP-Enum-Behavior
-   https://github.com/asper/CakePHP-Enum-Behavior
-   https://github.com/asper/CakePHP-Enum-Behavior/pull/8
- 
+   Install conf.d/zmpaths.conf setting the paths we set, because that
+   seems necessary.
+
+   Resolve zmc startup hang (zmdc expects zmc to exit, but it doesn't??).
+
+   Resolve nph-zms vs zms, and zms lockup on events view.

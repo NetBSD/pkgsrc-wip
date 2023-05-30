@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
 VERSION=	1.32.3
-PKGREVISION=	4
+PKGREVISION=	5
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -15,9 +15,11 @@ GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-# Submodules as per ZoneMinder's .gitmodules file
-# \todo Add CakePHP-Enum-Behavior.
-GITHUB_SUBMODULES=	FriendsOfCake crud v3.0.10 web/api/app/Plugin/Crud
+# Submodules as per ZoneMinder's .gitmodules file, except that crud is no longer
+# at ZoneMinder so we use FriendsOfCake instead.
+# \todo Consider 3.0 vs v3.0.10, as the .gitmodules points to 3.0.
+GITHUB_SUBMODULES+=	FriendsOfCake crud v3.0.10 web/api/app/Plugin/Crud
+GITHUB_SUBMODULES+=	ZoneMinder CakePHP-Enum-Behavior master web/api/app/Plugin/CakePHP-Enum-Behavior
 
 MAINTAINER=	dsainty@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
@@ -80,33 +82,33 @@ CMAKE_ARGS+=		-DZM_RUNDIR=${VARBASE}/run/zm
 # should just be removed.
 OWN_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
+# NB: Startup script must create /var/run/zm.
 CMAKE_ARGS+=		-DZM_SOCKDIR=${VARBASE}/run/zm
-# \todo Consider /tmp vs /var/tmp.  For now, guess that it should
-# persist.
+# Choose /var/tmp for now.  \todo Revisit.
 CMAKE_ARGS+=		-DZM_TMPDIR=${VARBASE}/tmp/zm
+OWN_DIRS_PERMS+=	${VARBASE}/tmp/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CMAKE_ARGS+=		-DZM_LOGDIR=${VARBASE}/log/zm
-OWN_DIRS_PERMS+=	${VARBASE/log/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+OWN_DIRS_PERMS+=	${VARBASE}/log/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # \todo Define this per-OS; /var/shm is for NetBSD
 ZM_SHM=			/var/shm
 CMAKE_ARGS+=		-DZM_PATH_MAP=${ZM_SHM}
 
-# ZM wants both a "cache" directory and a "content" directory; the
-# latter seems to fit "/var/db".
+# Cache directory is for js files to be served.  For now, use
+# /var/cache/zoneminder.  \todo Consider /tmp/zm instead.
 ZM_CACHE=		${VARBASE}/cache/zoneminder
 CMAKE_ARGS+=		-DZM_CACHEDIR=${ZM_CACHE}
 OWN_DIRS_PERMS+=	${ZM_CACHE} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
+# Storage of events; this should persist and is hence in /var/db.
+# \todo Understand how and why /images is used.
 ZM_CONTENT=		${VARBASE}/db/zoneminder
 CMAKE_ARGS+=		-DZM_CONTENTDIR=${ZM_CONTENT}
-OWN_DIRS_PERMS+=	${ZM_CONTENT} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
+OWN_DIRS_PERMS+=	${ZM_CONTENT} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CMAKE_ARGS+=		-DZM_DIR_EVENTS=${ZM_CONTENT}/events
-OWN_DIRS_PERMS+=	${ZM_CONTENT}/events ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+OWN_DIRS_PERMS+=	${ZM_CONTENT}/events ${APACHE_USER} ${APACHE_GROUP} 775
 CMAKE_ARGS+=		-DZM_DIR_IMAGES=${ZM_CONTENT}/images
-OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${REAL_ROOT_USER} ${APACHE_GROUP} 775
-
-# \todo Figure out temp - not in docs.
-OWN_DIRS_PERMS+=	${ZM_CONTENT}/temp ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${APACHE_USER} ${APACHE_GROUP} 775
 
 ## Dependencies other than perl and php.
 
@@ -184,6 +186,7 @@ DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-SFTP-Foreign-[0-9]*:../../net/p5-Net-SFTP-Foreign
 DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
+DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 # All perl scripts need interpreter patching (REPLACE_PERL), while a large
@@ -337,11 +340,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder
 .endif
 	${INSTALL_DATA} ${WRKSRC}/db/*.sql ${DESTDIR}${PREFIX}/share/zoneminder/db/
-	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events || ${TRUE}
-	rmdir ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images || ${TRUE}
-	${LN} -s ${ZM_CONTENT}/temp ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/temp
-	${LN} -s ${ZM_CONTENT}/events ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/events
-	${LN} -s ${ZM_CONTENT}/images ${DESTDIR}${PREFIX}/${ZM_HTTPD_ROOT:Q}/images
 	${INSTALL_DATA} files/README-pkgsrc.md ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../mk/dlopen.buildlink3.mk"

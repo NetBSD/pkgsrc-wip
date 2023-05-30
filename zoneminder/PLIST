@@ -7498,7 +7498,6 @@ ${ZM_HTTPD_ROOT}/css/bootstrap.min.css.map
 ${ZM_HTTPD_ROOT}/css/overlay.css
 ${ZM_HTTPD_ROOT}/css/reset.css
 ${ZM_HTTPD_ROOT}/css/spinner.css
-${ZM_HTTPD_ROOT}/events
 ${ZM_HTTPD_ROOT}/fonts/MaterialIcons-Regular.eot
 ${ZM_HTTPD_ROOT}/fonts/MaterialIcons-Regular.ttf
 ${ZM_HTTPD_ROOT}/fonts/MaterialIcons-Regular.woff
@@ -7512,7 +7511,6 @@ ${ZM_HTTPD_ROOT}/fonts/license.md
 ${ZM_HTTPD_ROOT}/graphics/favicon.ico
 ${ZM_HTTPD_ROOT}/graphics/spinner.png
 ${ZM_HTTPD_ROOT}/graphics/transparent.png
-${ZM_HTTPD_ROOT}/images
 ${ZM_HTTPD_ROOT}/includes/Control.php
 ${ZM_HTTPD_ROOT}/includes/Event.php
 ${ZM_HTTPD_ROOT}/includes/Filter.php
@@ -7867,7 +7865,6 @@ ${ZM_HTTPD_ROOT}/skins/classic/views/video.php
 ${ZM_HTTPD_ROOT}/skins/classic/views/watch.php
 ${ZM_HTTPD_ROOT}/skins/classic/views/zone.php
 ${ZM_HTTPD_ROOT}/skins/classic/views/zones.php
-${ZM_HTTPD_ROOT}/temp
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-core-1.6.0-compat.js
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-core-compat.js.URL
 ${ZM_HTTPD_ROOT}/tools/mootools/mootools-core.js
