@@ -63,10 +63,24 @@ PKG_USERS=		${MAILMAN_USER}:${MAILMAN_GROUP}
 PKG_GECOS.${MAILMAN_USER}=	Mailman user
 PKG_SHELL.${MAILMAN_USER}=	${SH}
 
+FILES_SUBST+=		MAILMAN_USER=${MAILMAN_USER}
+FILES_SUBST+=		MAILMAN_GROUP=${MAILMAN_GROUP}
+
+RCD_SCRIPTS=		mailman3
+
 OWN_DIRS_PERMS+=	${VARBASE}/lib/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 770
 OWN_DIRS_PERMS+=	${VARBASE}/log/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 770
 OWN_DIRS_PERMS+=	${VARBASE}/spool/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 775
 OWN_DIRS_PERMS+=	${VARBASE}/spool/lock/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 775
+
+EGDIR=			share/examples/mailman3
+CONF_FILES_PERMS=	${EGDIR}/mailman.cfg ${PKG_SYSCONFDIR}/mailman.cfg \
+                        ${REAL_ROOT_USER} ${MAILMAN_GROUP} 0640
+
+INSTALLATION_DIRS+=	${EGDIR}
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/mailman.cfg ${DESTDIR}${PREFIX}/${EGDIR}/mailman.cfg
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
