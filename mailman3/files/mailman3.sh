@@ -32,11 +32,6 @@ mailman_prestart() {
 	fi
 }
 
-#required_files="%%PREFIX%%/${name}/etc/${name}.cfg"
-#pidfile="%%PREFIX%%/${name}/master.pid"
-
-#command_args="-C ${mailman_config}"
-
 mailman_doit()
 {
 	LANG=en_US.UTF-8 @SU@ -m @MAILMAN_USER@ -c "${command} ${command_args} ${rc_arg}"
@@ -48,9 +43,3 @@ if [ -f /etc/rc.subr ]; then
 else
 	mailman_doit "$1"
 fi
-
-
-#: ${mailman_enable:=NO}
-#: ${mailman_config="%%PREFIX%%/mailman/etc/mailman.cfg"}
-
-
