@@ -2,50 +2,39 @@ $NetBSD$
 
 # Respect env
 
---- Makefile.orig	2023-05-30 11:51:18.000000000 +0000
+--- Makefile.orig	2021-08-24 14:00:31.000000000 +0000
 +++ Makefile
-@@ -2,10 +2,12 @@ DIR_INC := ./inc
- DIR_SRC := ./src
- DIR_OBJ := ./obj
+@@ -7,6 +7,8 @@ BINDIR ?= $(PREFIX)/bin
+ INCLUDE_DIRS ?=
+ LIBRARY_DIRS ?=
  
--PREFIX ?= /usr/local
--BINDIR ?= $(PREFIX)/bin
--INCLUDE_DIRS ?=
--LIBRARY_DIRS ?=
-+PREFIX	?= /usr/local
-+BINDIR	?= $(PREFIX)/bin
-+INCLUDE_DIRS	?=
-+LIBRARY_DIRS	?=
-+
 +STRIP	?= strip
- 
++
  SRC := $(wildcard ${DIR_SRC}/*.cpp)
  OBJ := $(patsubst %.cpp,${DIR_OBJ}/%.o,$(notdir ${SRC}))
-@@ -15,15 +17,19 @@ TARGET := fastp
+ 
+@@ -15,13 +17,17 @@ TARGET := fastp
  BIN_TARGET := ${TARGET}
  
  CXX ?= g++
--CXXFLAGS := -std=c++11 -pthread -g -O3 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir)) ${CXXFLAGS}
+-CXXFLAGS := -std=c++11 -g -O3 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir)) ${CXXFLAGS}
 +# Optional flags that the user can override by setting CXXFLAGS in the
 +# env or make argument
 +CXXFLAGS ?= -g -O3
 +# Required flags
 +CXXFLAGS += -std=c++11 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir))
- LIBS := -lisal -ldeflate -lpthread
- STATIC_FLAGS := -static -Wl,--no-as-needed -pthread
+ LIBS := -lz -lpthread
 -LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS) $(LD_FLAGS)
-+# Append required flags to standard LDFLAGS from env
 +LDFLAGS += $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS)
- STATIC_LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(STATIC_FLAGS) $(LIBS) $(STATIC_LD_FLAGS)
  
--
+ 
  ${BIN_TARGET}:${OBJ}
 -	$(CXX) $(OBJ) -o $@ $(LD_FLAGS)
 +	$(CXX) $(OBJ) -o $@ $(LDFLAGS)
  
- static:${OBJ}
- 	$(CXX) $(OBJ) -o ${BIN_TARGET} $(STATIC_LD_FLAGS)
-@@ -49,6 +55,12 @@ make_obj_dir:
+ ${DIR_OBJ}/%.o:${DIR_SRC}/%.cpp make_obj_dir
+ 	$(CXX) -c $< -o $@ $(CXXFLAGS)
+@@ -43,6 +49,12 @@ make_obj_dir:
  		mkdir $(DIR_OBJ) ; \
  	fi
  
