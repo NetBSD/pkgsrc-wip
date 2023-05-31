@@ -20,5 +20,7 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libdeflate/buildlink3.mk"
+# Need to finish isa-l package before fastp can be updated
+# .include "../../wip/isa-l/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
