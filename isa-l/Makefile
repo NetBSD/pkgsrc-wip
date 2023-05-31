@@ -5,12 +5,6 @@
 #              Wed May 31 10:55:57 CDT 2023               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-# Unknown tool: USE_TOOLS=	libtool:keepla
-#USE_LDCONFIG=	yes
-
 DISTNAME=	isa-l-2.30.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
@@ -19,24 +13,20 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/01org/isa-l
 COMMENT=	Intel(R) Intelligent Storage Acceleration Libray
-# Check this
 LICENSE=	modified-bsd
 
-ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-powerpc64le *-*-powerpc64 *-*-powerpc
+# From FreeBSD port.  Upstream seems to indicate that it should
+# work on any platform, though.
+# ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-powerpc64 *-*-powerpc
 
 DEPENDS=	yasm>0:../../devel/yasm
 
-# Just assuming C and C++: Adjust this!
-USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake autoreconf gmake
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -if
 
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
