@@ -1,9 +1,0 @@
-@comment $NetBSD$
-bin/udevadm
-etc/udev/udev.conf
-include/udev.h
-lib/udev/rules.d/60-drm.rules
-lib/udev/rules.d/60-evdev.rules
-lib/udev/rules.d/60-input-id.rules
-sbin/udevd
-share/pkgconfig/udev.pc
