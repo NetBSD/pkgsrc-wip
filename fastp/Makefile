@@ -21,6 +21,5 @@ post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/fastp
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/libdeflate/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
