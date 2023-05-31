@@ -1,5 +1,7 @@
 # $NetBSD$
 
+# 0.22.0 is the last release that doesn't depend on the non-portable
+# Intel isa-l library
 DISTNAME=	fastp-0.22.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenGene/}
