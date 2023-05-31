@@ -19,6 +19,11 @@ LICENSE=	modified-bsd
 # work on any platform, though.
 # ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-powerpc64 *-*-powerpc
 
+SUBST_CLASSES+=	lt
+SUBST_STAGE.lt=	post-configure
+SUBST_SED.lt=	-e 's|--mode=compile|--tag=CC --mode=compile|g'
+SUBST_FILES.lt=	Makefile
+
 DEPENDS=	yasm>0:../../devel/yasm
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
@@ -27,6 +32,6 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -if
+	(cd ${WRKSRC} && autoreconf -if)
 
 .include "../../mk/bsd.pkg.mk"

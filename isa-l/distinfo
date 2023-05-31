@@ -5,4 +5,3 @@ SHA512 (isa-l-2.30.0.tar.gz) = d3ecfb7326097534b06a74b584100336509525ae7cadc6112
 Size (isa-l-2.30.0.tar.gz) = 649389 bytes
 SHA1 (patch-igzip_igzip.c) = bccd90c8460ceb3c5c11ac4278e1bb7b26431d0a
 SHA1 (patch-igzip_igzip__inflate.c) = 8c1b0bc4711d4a2be63d8c063e917b50c1237a5f
-SHA1 (patch-make.inc) = 6f7ca4206f26633a46fd974c7ffea39d3fba1f0e
