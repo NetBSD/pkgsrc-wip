@@ -1781,6 +1781,7 @@ SUBDIR+=	ircII-current
 SUBDIR+=	ironpython
 SUBDIR+=	irrxml
 SUBDIR+=	irssi-otr
+SUBDIR+=	isa-l
 SUBDIR+=	ised
 SUBDIR+=	islamic-menus
 SUBDIR+=	ispell-dictionaries

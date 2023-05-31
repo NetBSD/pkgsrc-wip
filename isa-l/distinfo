@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (isa-l-2.30.0.tar.gz) = 5e6b9b199aaa6b8ac2b5b2f812508541057167d31a9b104df7fe2a60df7f58d7
+SHA512 (isa-l-2.30.0.tar.gz) = d3ecfb7326097534b06a74b584100336509525ae7cadc6112d0c27e3d8704f3810e18f583d3cc33fa266bfec96db023607622b22ddbf17988ec4bf1bb3b3b9b2
+Size (isa-l-2.30.0.tar.gz) = 649389 bytes
