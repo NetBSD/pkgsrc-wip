@@ -1,3 +1,7 @@
+$NetBSD$
+
+# Make sure main() returns a value
+
 --- src/main.cpp.orig	2021-10-19 02:19:29 UTC
 +++ src/main.cpp
 @@ -1,4 +1,5 @@

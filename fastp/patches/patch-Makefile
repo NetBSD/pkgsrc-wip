@@ -1,6 +1,10 @@
---- Makefile.orig	2021-10-19 02:19:29 UTC
+$NetBSD$
+
+# Respect env
+
+--- Makefile.orig	2023-05-30 11:51:18.000000000 +0000
 +++ Makefile
-@@ -2,11 +2,13 @@ DIR_INC := ./inc
+@@ -2,10 +2,12 @@ DIR_INC := ./inc
  DIR_SRC := ./src
  DIR_OBJ := ./obj
  
@@ -12,12 +16,11 @@
 +BINDIR	?= $(PREFIX)/bin
 +INCLUDE_DIRS	?=
 +LIBRARY_DIRS	?=
- 
-+STRIP	?= strip
 +
++STRIP	?= strip
+ 
  SRC := $(wildcard ${DIR_SRC}/*.cpp)
  OBJ := $(patsubst %.cpp,${DIR_OBJ}/%.o,$(notdir ${SRC}))
- 
 @@ -15,15 +17,19 @@ TARGET := fastp
  BIN_TARGET := ${TARGET}
  
@@ -42,13 +45,14 @@
  
  static:${OBJ}
  	$(CXX) $(OBJ) -o ${BIN_TARGET} $(STATIC_LD_FLAGS)
-@@ -49,6 +55,11 @@ make_obj_dir:
+@@ -49,6 +55,12 @@ make_obj_dir:
  		mkdir $(DIR_OBJ) ; \
  	fi
  
 +# Respect DESTDIR for staged installs (used by most package managers)
  install:
 -	install $(TARGET) $(BINDIR)/$(TARGET)
++	mkdir $(DESTDIR)$(BINDIR)
 +	install $(TARGET) $(DESTDIR)$(BINDIR)/$(TARGET)
  	@echo "Installed."
 +
