@@ -1,12 +1,11 @@
 # $NetBSD$
 
-VERSION=	1.2.0
+VERSION=	1.3.1
 GITHUB_PROJECT=	fibers
 DISTNAME=	fibers-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wingo/}
 GITHUB_RELEASE=	v${VERSION}
-PKGREVISION=	1
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/wingo/fibers/

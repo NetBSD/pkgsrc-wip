@@ -17,6 +17,7 @@ guile/3.0/lib/guile/3.0/site-ccache/fibers/psq.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/repl.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/scheduler.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/stack.go
+guile/3.0/lib/guile/3.0/site-ccache/fibers/timer-wheel.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/timers.go
 guile/3.0/lib/guile/3.0/site-ccache/fibers/web/server.go
 guile/3.0/lib/guile/3.0/site-ccache/web/server/fibers.go
@@ -37,6 +38,7 @@ guile/3.0/share/guile/site/3.0/fibers/psq.scm
 guile/3.0/share/guile/site/3.0/fibers/repl.scm
 guile/3.0/share/guile/site/3.0/fibers/scheduler.scm
 guile/3.0/share/guile/site/3.0/fibers/stack.scm
+guile/3.0/share/guile/site/3.0/fibers/timer-wheel.scm
 guile/3.0/share/guile/site/3.0/fibers/timers.scm
 guile/3.0/share/guile/site/3.0/fibers/web/server.scm
 guile/3.0/share/guile/site/3.0/web/server/fibers.scm
