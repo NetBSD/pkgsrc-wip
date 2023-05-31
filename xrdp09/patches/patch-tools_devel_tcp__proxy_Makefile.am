@@ -1,0 +1,13 @@
+$NetBSD$
+
+configure script decides whether libdl is required.
+
+--- tools/devel/tcp_proxy/Makefile.am.orig	2023-05-22 14:41:56.000000000 +0000
++++ tools/devel/tcp_proxy/Makefile.am
+@@ -9,5 +9,4 @@ tcp_proxy_SOURCES = \
+   main.c
+ 
+ tcp_proxy_LDADD = \
+-  $(top_builddir)/common/libcommon.la \
+-  -ldl
++  $(top_builddir)/common/libcommon.la

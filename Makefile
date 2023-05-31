@@ -5937,6 +5937,7 @@ SUBDIR+=	xplugd
 SUBDIR+=	xpopple
 SUBDIR+=	xqf
 SUBDIR+=	xrdp
+SUBDIR+=	xrdp09
 SUBDIR+=	xsb
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp

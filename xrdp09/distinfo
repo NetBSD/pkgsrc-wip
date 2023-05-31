@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (xrdp-0.9.22.1.tar.gz) = 09d56f9d668190084b44c6561e2f5bb0c6caf04aa5918c19327b78e277dbeebb
+SHA512 (xrdp-0.9.22.1.tar.gz) = 247816e5d6b5223f60d47fd831c3dfb3114d98b38890cfc27b142bc3defd590b86a13bf6e0b9cd2aab25b50256ebe4ee4c360f5ec23255c323d391bcd4be5a19
+Size (xrdp-0.9.22.1.tar.gz) = 778873 bytes
+SHA1 (patch-configure.ac) = 8dc92c52beb3eb95d8619a8dbe08ddb636917aa2
+SHA1 (patch-tools_devel_tcp__proxy_Makefile.am) = 565e5a60c77a3b42d1e94ec94054d1cc5ffd73b9

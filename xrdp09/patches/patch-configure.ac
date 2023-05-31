@@ -1,0 +1,33 @@
+$NetBSD$
+
+Fix nonportable shell syntax.
+
+--- configure.ac.orig	2023-05-22 14:41:56.000000000 +0000
++++ configure.ac
+@@ -414,7 +414,7 @@ fi
+ fi
+ 
+ AC_PATH_XTRA
+-if test "x$no_x" == "xyes"; then
++if test "x$no_x" = "xyes"; then
+   AC_MSG_ERROR([please install libx11-dev or libX11-devel])
+ fi
+ 
+@@ -434,7 +434,7 @@ AC_CHECK_HEADER([X11/extensions/Xrandr.h
+ CFLAGS="$save_CFLAGS"
+ 
+ # perform unit tests if libcheck found
+-if test "x$ensure_tests_deps" == "xyes"; then
++if test "x$ensure_tests_deps" = "xyes"; then
+     PKG_CHECK_MODULES([CHECK], [check >= 0.10.0],
+         [perform_unit_tests=yes],
+         [AC_MSG_ERROR([please install check, the unit test framework])])
+@@ -444,7 +444,7 @@ else
+         [perform_unit_tests=no])
+ fi
+ 
+-if test "x$perform_unit_tests" == "xyes"; then
++if test "x$perform_unit_tests" = "xyes"; then
+     AC_MSG_NOTICE([libcheck found, unit tests will be performed])
+ else
+     AC_MSG_NOTICE([libcheck not found, unit tests will be skipped])
