@@ -4369,7 +4369,6 @@ SUBDIR+=	py-ptyx
 SUBDIR+=	py-ptyx-mcq
 SUBDIR+=	py-pulp
 SUBDIR+=	py-pulsar
-SUBDIR+=	py-puremagic
 SUBDIR+=	py-pweave
 SUBDIR+=	py-pwntools
 SUBDIR+=	py-py4j

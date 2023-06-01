@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-argparse-manpage-[0-9]*:../../devel/py-argparse-manpage
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-puremagic-[0-9]*:../../wip/py-puremagic
+DEPENDS+=	${PYPKGPREFIX}-puremagic-[0-9]*:../../sysutils/py-puremagic
 DEPENDS+=	${PYPKGPREFIX}-pdf>=3.8.0:../../textproc/py-pdf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-datafiles>=0:../../devel/py-test-datafiles
