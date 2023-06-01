@@ -263,6 +263,7 @@ SUBDIR+=	bashtop
 SUBDIR+=	basic-stats
 SUBDIR+=	bastard
 SUBDIR+=	bats-core
+SUBDIR+=	be
 SUBDIR+=	beast
 SUBDIR+=	beignet
 SUBDIR+=	belle-sip
