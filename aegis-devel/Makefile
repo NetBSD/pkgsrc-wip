@@ -33,7 +33,7 @@ DEPENDS+=		ImageMagick>=6.4.8.3:../../graphics/ImageMagick
 DEPENDS+=		libxml2>=1.8.17:../../textproc/libxml2
 DEPENDS+=		png2ico>=20021208:../../wip/png2ico
 DEPENDS+=		pngcrush>=1.6.17:../../graphics/pngcrush
-DEPENDS+=		${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=		${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 .if ${OPSYS} != "NetBSD"
 # on NetBSD rcs is in the base set. others?
 DEPENDS+=		rcs>=5.7:../../devel/rcs
