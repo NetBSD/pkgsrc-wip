@@ -19,10 +19,25 @@ PYSETUPSUBDIR=	python
 
 USE_LANGUAGES=	c c++
 BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+BUILD_DEPENDS+=      ${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytest-lazy-fixture>=0.6.3:../../devel/py-pytest-lazy-fixture
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 USE_TOOLS=	cmake gmake pkg-config
+
+MAKE_ENV+=	VERBOSE=1
+MAKE_ENV+=	PYARROW_PARALLEL=${_MAKE_JOBS_N}
+WHEELFILE?= ${WRKSRC}/python/dist/*.whl
+
+# libarrow_python.so: ORIGIN Doesn't get passed through correclty
+SUBST_CLASSES+=         origin
+SUBST_STAGE.origin=     pre-configure
+SUBST_FILES.origin=     python/CMakeLists.txt
+SUBST_SED.origin=       -e 's|\\$$ORIGIN|${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/pyarrow|g'
+do-build:
+	${RUN} cd ${WRKSRC}/python && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build_ext --build-type=relwithdebinfo bdist_wheel
 
 do-test:
 	# Build the extension inplace, and run tests directly.  Otherwise
@@ -36,5 +51,5 @@ MAKE_ENV+=	PYARROW_WITH_DATASET=1
 .include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
 .include "../../wip/apache-arrow/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
