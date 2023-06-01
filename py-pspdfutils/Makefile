@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pspdfutils-3.0.1
+DISTNAME=	pspdfutils-3.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pspdfutils/}
