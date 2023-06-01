@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.54 2023/04/14 04:32:44 wiz Exp $
+# $NetBSD$
 
-DISTNAME=	psutils-3.0
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+DISTNAME=	pspdfutils-3.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	print python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pspdfutils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rrthomas/psutils/
-COMMENT=	Utilities for manipulating PostScript documents
+HOMEPAGE=	https://github.com/rrthomas/psutils
+COMMENT=	Manipulate PDF and PostScript documents
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-argparse-manpage-[0-9]*:../../devel/py-argparse-manpage
