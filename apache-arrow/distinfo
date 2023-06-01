@@ -3,9 +3,9 @@ $NetBSD$
 BLAKE2s (9.0.1.tar.gz) = a785e1ad5fd5df76c95e7cf9a6eadeb86ffbc46ea4342f49f19381434bd0f78c
 SHA512 (9.0.1.tar.gz) = ed56287f608ccdf5bc5d5fc2918e313e7c4cecdd9ef2c9993a72ea900d9ff662c57ac5326c7a809eb11505c6f39d4599f3f161b97b6e03c65783b824b8d700d2
 Size (9.0.1.tar.gz) = 215065 bytes
-BLAKE2s (apache-arrow-11.0.0.tar.gz) = ee159d17a2ce4daea917a054e5f3faed538042fe80f4bb7bea0246adeb61f9f8
-SHA512 (apache-arrow-11.0.0.tar.gz) = 46df4fb5a703d38d0a74fde9838e9f9702b24b442cb225517516c335a5ab18955699000bf0b2fc7d1698ada6d2e890ba3860933b6280f5160b0fce8a07484d0e
-Size (apache-arrow-11.0.0.tar.gz) = 19956186 bytes
+BLAKE2s (apache-arrow-12.0.0.tar.gz) = f62dfc339d31f4bc19a70fe09184d81cf27ec21c0e45c7412e37ab87aeec985c
+SHA512 (apache-arrow-12.0.0.tar.gz) = f815be4fb20b6001ba5525270765fe239b5468708a7be34b93b60ee0ce63464727d183c9756fbc33bffd199019e1f06a7fddd306ce8388435cea7771070a2ca9
+Size (apache-arrow-12.0.0.tar.gz) = 20159048 bytes
 BLAKE2s (jemalloc-5.3.0.tar.bz2) = 285e6145b9d3b575b1ec5cfdae8af40b461149085f001839d64685c0d56e2689
 SHA512 (jemalloc-5.3.0.tar.bz2) = 22907bb052096e2caffb6e4e23548aecc5cc9283dce476896a2b1127eee64170e3562fa2e7db9571298814a7a2c7df6e8d1fbe152bd3f3b0c1abec22a2de34b1
 Size (jemalloc-5.3.0.tar.bz2) = 736023 bytes

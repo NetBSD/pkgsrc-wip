@@ -42,7 +42,7 @@ MAKE_ENV+=	PYARROW_WITH_PARQUET=1
 .if !empty(PKG_OPTIONS:Mpython)
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
-CMAKE_ARGS+=	-DARROW_PYTHON=ON
+CMAKE_ARGS+=	-DPython3_EXECUTABLE=${PYTHONBIN}
 .endif
 
 .if !empty(PKG_OPTIONS:Msnappy)
