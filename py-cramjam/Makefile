@@ -20,12 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
-.include "cargo-depends.mk"
-
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin-${PYVERSSUFFIX} pep517 \
-		build-wheel -i ${PREFIX}/bin/python${PYVERSSUFFIX} --compatibility off \
-		--offline
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin-${PYVERSSUFFIX} build --offline
 
 # Test Requires install
 do-test:
@@ -33,7 +29,10 @@ do-test:
 
 WHEELFILE=		${WRKSRC}/target/wheels/*.whl
 
-.include "../../lang/rust/cargo.mk"
+.include "cargo-depends.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
