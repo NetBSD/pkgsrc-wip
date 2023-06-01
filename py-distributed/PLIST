@@ -86,6 +86,8 @@ ${PYSITELIB}/distributed/dashboard/components/__init__.py
 ${PYSITELIB}/distributed/dashboard/components/__init__.pyc
 ${PYSITELIB}/distributed/dashboard/components/nvml.py
 ${PYSITELIB}/distributed/dashboard/components/nvml.pyc
+${PYSITELIB}/distributed/dashboard/components/rmm.py
+${PYSITELIB}/distributed/dashboard/components/rmm.pyc
 ${PYSITELIB}/distributed/dashboard/components/scheduler.py
 ${PYSITELIB}/distributed/dashboard/components/scheduler.pyc
 ${PYSITELIB}/distributed/dashboard/components/shared.py
@@ -99,6 +101,8 @@ ${PYSITELIB}/distributed/dashboard/export_tool.py
 ${PYSITELIB}/distributed/dashboard/export_tool.pyc
 ${PYSITELIB}/distributed/dashboard/scheduler.py
 ${PYSITELIB}/distributed/dashboard/scheduler.pyc
+${PYSITELIB}/distributed/dashboard/templates/__init__.py
+${PYSITELIB}/distributed/dashboard/templates/__init__.pyc
 ${PYSITELIB}/distributed/dashboard/templates/performance_report.html
 ${PYSITELIB}/distributed/dashboard/theme.yaml
 ${PYSITELIB}/distributed/dashboard/utils.py
@@ -145,6 +149,8 @@ ${PYSITELIB}/distributed/diagnostics/progress_stream.py
 ${PYSITELIB}/distributed/diagnostics/progress_stream.pyc
 ${PYSITELIB}/distributed/diagnostics/progressbar.py
 ${PYSITELIB}/distributed/diagnostics/progressbar.pyc
+${PYSITELIB}/distributed/diagnostics/rmm.py
+${PYSITELIB}/distributed/diagnostics/rmm.pyc
 ${PYSITELIB}/distributed/diagnostics/task_stream.py
 ${PYSITELIB}/distributed/diagnostics/task_stream.pyc
 ${PYSITELIB}/distributed/diagnostics/websocket.py
@@ -155,6 +161,8 @@ ${PYSITELIB}/distributed/distributed-schema.yaml
 ${PYSITELIB}/distributed/distributed.yaml
 ${PYSITELIB}/distributed/event.py
 ${PYSITELIB}/distributed/event.pyc
+${PYSITELIB}/distributed/exceptions.py
+${PYSITELIB}/distributed/exceptions.pyc
 ${PYSITELIB}/distributed/http/__init__.py
 ${PYSITELIB}/distributed/http/__init__.pyc
 ${PYSITELIB}/distributed/http/health.py
@@ -183,10 +191,16 @@ ${PYSITELIB}/distributed/http/scheduler/prometheus/semaphore.py
 ${PYSITELIB}/distributed/http/scheduler/prometheus/semaphore.pyc
 ${PYSITELIB}/distributed/http/scheduler/prometheus/stealing.py
 ${PYSITELIB}/distributed/http/scheduler/prometheus/stealing.pyc
+${PYSITELIB}/distributed/http/static/__init__.py
+${PYSITELIB}/distributed/http/static/__init__.pyc
+${PYSITELIB}/distributed/http/static/css/__init__.py
+${PYSITELIB}/distributed/http/static/css/__init__.pyc
 ${PYSITELIB}/distributed/http/static/css/base.css
 ${PYSITELIB}/distributed/http/static/css/gpu.css
 ${PYSITELIB}/distributed/http/static/css/individual-cluster-map.css
 ${PYSITELIB}/distributed/http/static/css/status.css
+${PYSITELIB}/distributed/http/static/images/__init__.py
+${PYSITELIB}/distributed/http/static/images/__init__.pyc
 ${PYSITELIB}/distributed/http/static/images/dask-logo.svg
 ${PYSITELIB}/distributed/http/static/images/fa-bars.svg
 ${PYSITELIB}/distributed/http/static/images/favicon.ico
@@ -195,11 +209,15 @@ ${PYSITELIB}/distributed/http/static/images/numpy.png
 ${PYSITELIB}/distributed/http/static/images/pandas.png
 ${PYSITELIB}/distributed/http/static/images/python.png
 ${PYSITELIB}/distributed/http/static/individual-cluster-map.html
+${PYSITELIB}/distributed/http/static/js/__init__.py
+${PYSITELIB}/distributed/http/static/js/__init__.pyc
 ${PYSITELIB}/distributed/http/static/js/anime.min.js
 ${PYSITELIB}/distributed/http/static/js/individual-cluster-map.js
 ${PYSITELIB}/distributed/http/static/js/reconnecting-websocket.min.js
 ${PYSITELIB}/distributed/http/statics.py
 ${PYSITELIB}/distributed/http/statics.pyc
+${PYSITELIB}/distributed/http/templates/__init__.py
+${PYSITELIB}/distributed/http/templates/__init__.pyc
 ${PYSITELIB}/distributed/http/templates/base.html
 ${PYSITELIB}/distributed/http/templates/call-stack.html
 ${PYSITELIB}/distributed/http/templates/exceptions.html
@@ -342,6 +360,8 @@ ${PYSITELIB}/distributed/versions.py
 ${PYSITELIB}/distributed/versions.pyc
 ${PYSITELIB}/distributed/widgets/__init__.py
 ${PYSITELIB}/distributed/widgets/__init__.pyc
+${PYSITELIB}/distributed/widgets/templates/__init__.py
+${PYSITELIB}/distributed/widgets/templates/__init__.pyc
 ${PYSITELIB}/distributed/widgets/templates/client.html.j2
 ${PYSITELIB}/distributed/widgets/templates/cluster.html.j2
 ${PYSITELIB}/distributed/widgets/templates/computation.html.j2
