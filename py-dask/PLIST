@@ -14,6 +14,8 @@ ${PYSITELIB}/dask/__init__.py
 ${PYSITELIB}/dask/__init__.pyc
 ${PYSITELIB}/dask/__main__.py
 ${PYSITELIB}/dask/__main__.pyc
+${PYSITELIB}/dask/_compatibility.py
+${PYSITELIB}/dask/_compatibility.pyc
 ${PYSITELIB}/dask/_version.py
 ${PYSITELIB}/dask/_version.pyc
 ${PYSITELIB}/dask/array/NUMPY_LICENSE.txt
@@ -351,6 +353,8 @@ ${PYSITELIB}/dask/dataframe/tests/test_indexing.py
 ${PYSITELIB}/dask/dataframe/tests/test_indexing.pyc
 ${PYSITELIB}/dask/dataframe/tests/test_merge_column_and_index.py
 ${PYSITELIB}/dask/dataframe/tests/test_merge_column_and_index.pyc
+${PYSITELIB}/dask/dataframe/tests/test_methods.py
+${PYSITELIB}/dask/dataframe/tests/test_methods.pyc
 ${PYSITELIB}/dask/dataframe/tests/test_multi.py
 ${PYSITELIB}/dask/dataframe/tests/test_multi.pyc
 ${PYSITELIB}/dask/dataframe/tests/test_numeric.py
