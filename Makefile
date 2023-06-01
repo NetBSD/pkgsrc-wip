@@ -5429,7 +5429,6 @@ SUBDIR+=	systemc
 SUBDIR+=	systemsettings
 SUBDIR+=	sysvinit
 SUBDIR+=	syx
-SUBDIR+=	szyszka
 SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	ta-lib
