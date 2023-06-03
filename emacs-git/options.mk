@@ -209,12 +209,16 @@ CONFIGURE_ARGS+=	--without-png
 .endif
 
 .if !empty(PKG_OPTIONS:Mtree-sitter)
+DEPENDS+=	tree-sitter-bash-[0-9]*:../../textproc/tree-sitter-bash
 DEPENDS+=	tree-sitter-c-[0-9]*:../../textproc/tree-sitter-c
+DEPENDS+=	tree-sitter-c-sharp-[0-9]*:../../textproc/tree-sitter-c-sharp
 DEPENDS+=	tree-sitter-cmake-[0-9]*:../../textproc/tree-sitter-cmake
 DEPENDS+=	tree-sitter-cpp-[0-9]*:../../textproc/tree-sitter-cpp
+DEPENDS+=	tree-sitter-css-[0-9]*:../../textproc/tree-sitter-css
 DEPENDS+=	tree-sitter-dockerfile-[0-9]*:../../textproc/tree-sitter-dockerfile
 DEPENDS+=	tree-sitter-elixir-[0-9]*:../../textproc/tree-sitter-elixir
 DEPENDS+=	tree-sitter-go-[0-9]*:../../textproc/tree-sitter-go
+# go-mod - no proper release
 DEPENDS+=	tree-sitter-heex-[0-9]*:../../textproc/tree-sitter-heex
 DEPENDS+=	tree-sitter-html-[0-9]*:../../textproc/tree-sitter-html
 DEPENDS+=	tree-sitter-java-[0-9]*:../../textproc/tree-sitter-java
@@ -223,6 +227,7 @@ DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
 DEPENDS+=	tree-sitter-ruby-[0-9]*:../../textproc/tree-sitter-ruby
 DEPENDS+=	tree-sitter-rust-[0-9]*:../../textproc/tree-sitter-rust
 DEPENDS+=	tree-sitter-toml-[0-9]*:../../textproc/tree-sitter-toml
+DEPENDS+=	tree-sitter-tsx-[0-9]*:../../textproc/tree-sitter-tsx
 DEPENDS+=	tree-sitter-typescript-[0-9]*:../../textproc/tree-sitter-typescript
 DEPENDS+=	tree-sitter-yaml-[0-9]*:../../textproc/tree-sitter-yaml
 .include "../../textproc/tree-sitter/buildlink3.mk"
