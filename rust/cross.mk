@@ -16,7 +16,6 @@
 #CROSS_ROOT=		/u/evbarm-armv6hf
 #CROSS_ROOT=		/u/sparc64
 #CROSS_ROOT=		/u/macppc
-#CROSS_ROOT=		/u/9.0-macppc
 #CROSS_ROOT=		/u/evbarm64
 #CROSS_ROOT=		/u/evbarm64eb
 #CROSS_ROOT=		/u/i386
