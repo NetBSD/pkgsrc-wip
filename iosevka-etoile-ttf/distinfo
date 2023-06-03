@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (super-ttc-iosevka-etoile-24.0.0.zip) = 8382fde4d83fcc7b2fd6887d0906b8d5d615850a50eb1ba7d6be8a5078d7b313
-SHA512 (super-ttc-iosevka-etoile-24.0.0.zip) = d66d40c770765221bd69029d5ad0cb6abf0d309ff0793e5b8666ab68b4aab00cdc5e7a05aedcbd032eaaa25e53b2d9f969739c13b44afae313fa93889ec948d2
-Size (super-ttc-iosevka-etoile-24.0.0.zip) = 51739510 bytes
+BLAKE2s (super-ttc-iosevka-etoile-24.1.0.zip) = 8c0402bf29dab723371ba2ea7cdeafa1ddff8fd6616890e2014bc1f3112d45c9
+SHA512 (super-ttc-iosevka-etoile-24.1.0.zip) = b0eaadc2a05e0b5d60e76fa274310d5eb113bf14081eb31bce6d733ef8861eece8c311d974975963e4069bfca7d2e449b281c0c412c8a646f878ddc4eb26cacc
+Size (super-ttc-iosevka-etoile-24.1.0.zip) = 51570318 bytes
