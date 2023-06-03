@@ -2225,3 +2225,4 @@ ${PYSITELIB}/mailman/version.py
 ${PYSITELIB}/mailman/version.pyc
 ${PYSITELIB}/mailman/version.pyo
 share/examples/mailman3/mailman.cfg
+share/examples/mailman3/crontab.sample

@@ -46,6 +46,7 @@ SUBST_CLASSES+=		fhs
 SUBST_STAGE.fhs=	pre-configure
 SUBST_FILES.fhs=	src/mailman/config/mailman.cfg
 SUBST_FILES.fhs+=	src/mailman/core/initialize.py
+SUBST_FILES.fhs+=	crontab.sample
 SUBST_MESSAGE.fhs=	Fixing default paths
 SUBST_VARS.fhs=		PKG_SYSCONFDIR PREFIX VARBASE
 
@@ -79,8 +80,12 @@ CONF_FILES_PERMS=	${EGDIR}/mailman.cfg ${PKG_SYSCONFDIR}/mailman.cfg \
 
 INSTALLATION_DIRS+=	${EGDIR}
 
+post-patch:
+	${CP} ${FILESDIR}/crontab.sample ${WRKSRC}/crontab.sample
+
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/mailman.cfg ${DESTDIR}${PREFIX}/${EGDIR}/mailman.cfg
+	${INSTALL_DATA} ${WRKSRC}/crontab.sample ${DESTDIR}${PREFIX}/${EGDIR}/crontab.sample
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
