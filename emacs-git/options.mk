@@ -218,7 +218,7 @@ DEPENDS+=	tree-sitter-css-[0-9]*:../../textproc/tree-sitter-css
 DEPENDS+=	tree-sitter-dockerfile-[0-9]*:../../textproc/tree-sitter-dockerfile
 DEPENDS+=	tree-sitter-elixir-[0-9]*:../../textproc/tree-sitter-elixir
 DEPENDS+=	tree-sitter-go-[0-9]*:../../textproc/tree-sitter-go
-# go-mod - no proper release
+DEPENDS+=	tree-sitter-go-mod-[0-9]*:../../textproc/tree-sitter-go-mod
 DEPENDS+=	tree-sitter-heex-[0-9]*:../../textproc/tree-sitter-heex
 DEPENDS+=	tree-sitter-html-[0-9]*:../../textproc/tree-sitter-html
 DEPENDS+=	tree-sitter-java-[0-9]*:../../textproc/tree-sitter-java
