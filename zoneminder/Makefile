@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
 VERSION=	1.32.3
-PKGREVISION=	5
+PKGREVISION=	6
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -180,6 +180,7 @@ DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-PHP-Serialization-[0-9]*:../../devel/p5-PHP-Serialization
 DEPENDS+=	p5-Sys-Mmap-[0-9]*:../../devel/p5-Sys-Mmap
 DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
@@ -238,6 +239,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 
 ## WEB
 

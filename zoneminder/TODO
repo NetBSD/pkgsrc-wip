@@ -13,9 +13,9 @@
 3) 1.32
 
    https://github.com/ZoneMinder/zoneminder/releases/tag/1.32.0
-   https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
 
-   new deps: pecl-apcu, file-slurp, format-human-bytes
+   https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
+   [I believe all items in this checklist have been dealt with.]
 
    Install conf.d/zmpaths.conf setting the paths we set, because that
    seems necessary.
