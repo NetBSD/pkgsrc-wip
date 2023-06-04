@@ -50,8 +50,6 @@ SUBST_FILES.fhs+=	crontab.sample
 SUBST_MESSAGE.fhs=	Fixing default paths
 SUBST_VARS.fhs=		PKG_SYSCONFDIR PREFIX VARBASE
 
-#.include "../../mk/bsd.prefs.mk"
-
 MAILMAN_USER?=		mailman
 MAILMAN_GROUP?=		mailman
 
@@ -76,7 +74,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/lock/mailman ${MAILMAN_USER} ${MAILMAN_GROUP} 
 
 EGDIR=			share/examples/mailman3
 CONF_FILES_PERMS=	${EGDIR}/mailman.cfg ${PKG_SYSCONFDIR}/mailman.cfg \
-                        ${REAL_ROOT_USER} ${MAILMAN_GROUP} 0640
+			${REAL_ROOT_USER} ${MAILMAN_GROUP} 0640
 
 INSTALLATION_DIRS+=	${EGDIR}
 
