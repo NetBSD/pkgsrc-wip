@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (leocad-21.06.tar.gz) = fe510e60bddeba5b5ba7fe4f196fd86c6927b0ed826443052edc9f0546861e71
-SHA512 (leocad-21.06.tar.gz) = 6cc868d3da15f9fe003a70d3a8ebaf2b4e6562a8728652cb7fc9e3ab5ddd9a90c5e433fd4d37cc9f972dc314399b4edb34fe5d9cd47ad63bf7c5d71e04e3c662
-Size (leocad-21.06.tar.gz) = 2213955 bytes
+BLAKE2s (leocad-23.03.tar.gz) = 2196b8b6963e36894937a15ad9db7e8c917678215419c404e1b25240293e23b4
+SHA512 (leocad-23.03.tar.gz) = cacc98fe3e9797bd3d3a9c0ca7b0d5c1f4230810fff8c0a196d30e395419b2db5db1e27ac7e9f28da68de9cedfa6c2ab90d31b3970dcfc3c925948a673ef2547
+Size (leocad-23.03.tar.gz) = 2226953 bytes
 SHA1 (patch-common_lc__application.h) = 759bfb463074d0a9a585610dec09ef444c16ebe5
 SHA1 (patch-common_lc__collapsiblewidget.h) = 091d47c6777ead7720e4f9b566a6fdc17b5edf03
 SHA1 (patch-common_lc__edgecolordialog.cpp) = 9db39fda3ed607029d2bbc1041cd8be92b5f2c22

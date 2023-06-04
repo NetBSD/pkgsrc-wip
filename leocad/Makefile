@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		leocad-21.06
+DISTNAME=		leocad-23.03
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=leozide/}
 GITHUB_PROJECT=		leocad
