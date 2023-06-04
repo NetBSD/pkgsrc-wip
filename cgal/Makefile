@@ -1,11 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	CGAL-5.1
+DISTNAME=	CGAL-5.5.2
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CGAL/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reinoud@NetBSD.org
@@ -19,16 +18,6 @@ CMAKE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 REPLACE_SH+=	scripts/cgal_create_CMakeLists
 REPLACE_SH+=	scripts/cgal_create_cmake_script
-
-# SUBST_CLASSES+=		wrkdir
-# SUBST_FILES.wrkdir+=	src/CGAL/CMakeFiles/Export/lib/cmake/CGAL/*.cmake
-# SUBST_FILES.wrkdir+=	config/CGALConfig.cmake
-# SUBST_MESSAGE.wrkdir=	Removing wrkdir from installed cmake files.
-# SUBST_SED.wrkdir=	-e "s|${WRKDIR}/.buildlink|${PREFIX}|g"
-# SUBST_STAGE.wrkdir=	pre-install
-
-# pre-install:
-#	 find ${WRKSRC} -name \*.orig -exec rm {} \;
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
