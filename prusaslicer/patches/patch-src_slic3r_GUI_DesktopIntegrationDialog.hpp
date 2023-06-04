@@ -2,7 +2,7 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/DesktopIntegrationDialog.hpp.orig	2021-12-17 14:00:02.000000000 +0000
+--- src/slic3r/GUI/DesktopIntegrationDialog.hpp.orig	2023-06-02 13:41:15.000000000 +0000
 +++ src/slic3r/GUI/DesktopIntegrationDialog.hpp
 @@ -1,4 +1,4 @@
 -#ifdef __linux__
@@ -10,7 +10,7 @@ Treat NetBSD like Linux.
  #ifndef slic3r_DesktopIntegrationDialog_hpp_
  #define slic3r_DesktopIntegrationDialog_hpp_
  
-@@ -36,4 +36,4 @@ private:
+@@ -42,4 +42,4 @@ private:
  } // namespace Slic3r
  
  #endif // slic3r_DesktopIntegrationDialog_hpp_

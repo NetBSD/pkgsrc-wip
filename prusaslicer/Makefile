@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.5.2
+PKGVERSION=	2.6.0-beta4
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:S/rc/-rc/}
 CATEGORIES=	cad
@@ -51,21 +51,23 @@ CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 .include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../math/cgal/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
+.include "../../security/heimdal/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
+.include "../../wip/cgal/buildlink3.mk"
+.include "../../wip/nanosvg/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
 .include "../../wip/opencascade-git/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/wxGTK31/buildlink3.mk"
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 

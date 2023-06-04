@@ -2,12 +2,13 @@ $NetBSD$
 
 pthread_setname_np takes 3 arguments on NetBSD.
 
---- src/libslic3r/Thread.cpp.orig	2022-08-19 14:41:23.000000000 +0000
+--- src/libslic3r/Thread.cpp.orig	2023-06-02 13:41:15.000000000 +0000
 +++ src/libslic3r/Thread.cpp
-@@ -157,6 +157,36 @@ std::optional<std::string> get_current_t
+@@ -160,7 +160,37 @@ std::optional<std::string> get_current_t
  	return std::nullopt;
  }
  
+-#else
 +#else // __APPLE__
 +
 +#ifdef __NetBSD__
@@ -38,10 +39,11 @@ pthread_setname_np takes 3 arguments on NetBSD.
 +	return std::string(pthread_getname_np(pthread_self(), buf, 16) == 0 ? buf : "");
 +}
 +
- #else
++#else // __NetBSD__
  
  // posix
-@@ -184,7 +214,9 @@ std::optional<std::string> get_current_t
+ bool set_thread_name(std::thread &thread, const char *thread_name)
+@@ -187,7 +217,9 @@ std::optional<std::string> get_current_t
  	return std::string(pthread_getname_np(pthread_self(), buf, 16) == 0 ? buf : "");
  }
  

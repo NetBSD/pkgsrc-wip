@@ -2,10 +2,10 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/UnsavedChangesDialog.hpp.orig	2021-12-17 14:00:02.000000000 +0000
+--- src/slic3r/GUI/UnsavedChangesDialog.hpp.orig	2023-06-02 13:41:15.000000000 +0000
 +++ src/slic3r/GUI/UnsavedChangesDialog.hpp
-@@ -44,7 +44,7 @@ class ModelNode
-     wxString            m_old_color;
+@@ -48,7 +48,7 @@ class ModelNode
+     wxString            m_mod_color;
      wxString            m_new_color;
  
 -#ifdef __linux__
@@ -13,7 +13,7 @@ Treat NetBSD like Linux.
      wxIcon              get_bitmap(const wxString& color);
  #else
      wxBitmap            get_bitmap(const wxString& color);
-@@ -53,7 +53,7 @@ class ModelNode
+@@ -57,7 +57,7 @@ class ModelNode
  public:
  
      bool        m_toggle {true};
@@ -21,4 +21,4 @@ Treat NetBSD like Linux.
 +#if defined(__linux__) || defined(__NetBSD__)
      wxIcon      m_icon;
      wxIcon      m_old_color_bmp;
-     wxIcon      m_new_color_bmp;
+     wxIcon      m_mod_color_bmp;
