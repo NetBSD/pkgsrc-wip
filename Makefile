@@ -2508,6 +2508,7 @@ SUBDIR+=	nanomath
 SUBDIR+=	nanopack
 SUBDIR+=	nanoplot
 SUBDIR+=	nanostat
+SUBDIR+=	nanosvg
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	nary
 SUBDIR+=	natali

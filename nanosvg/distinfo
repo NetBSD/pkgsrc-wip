@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nanosvg-20221222.tar.gz) = 06bb25af51f760cd77a08d263b8d7197e1a76a1ab17465df3d5dd9453d14b646
+SHA512 (nanosvg-20221222.tar.gz) = a9b62cdc54c1803907da8d3553a71451a5a19588b951c32e3765e9d620a1dacb618d768e4df8f3dbf507518a6ce8fcfde5d8e8f5edcfccc975c1ad57e3e7f22c
+Size (nanosvg-20221222.tar.gz) = 298209 bytes

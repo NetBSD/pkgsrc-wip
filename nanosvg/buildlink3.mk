@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	nanosvg
+
+.if !defined(NANOSVG_BUILDLINK3_MK)
+NANOSVG_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.nanosvg+=	nanosvg>=20221222
+BUILDLINK_DEPMETHOD.nanosvg?=	build
+BUILDLINK_PKGSRCDIR.nanosvg?=	../../wip/nanosvg
+
+.endif	# NANOSVG_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-nanosvg
