@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (python3-openid-3.2.0.tar.gz) = f9beb853142bf1b86183121eef78c8471ea5f0f6457f48e0f77f36147b0f790d
-SHA512 (python3-openid-3.2.0.tar.gz) = 54412820fef21928e1bf30d16c9bc73d454e9ff41df028a12047c08abdb4c2c9e1d9053daebab8b0327cb0fe0f67e364c2506a47509fef6db5bff42f8399b799
-Size (python3-openid-3.2.0.tar.gz) = 305600 bytes
