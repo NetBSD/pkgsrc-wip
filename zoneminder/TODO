@@ -1,4 +1,4 @@
-1) for (some subset of final point releases):
+1) for (stable final point releases):
 
    update to newer upstream
 
@@ -17,9 +17,10 @@
    https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
    [I believe all items in this checklist have been dealt with.]
 
-   Install conf.d/zmpaths.conf setting the paths we set, because that
-   seems necessary.
+   Consider installing conf.d/zmpaths.conf setting the paths we set,
+   because that seems necessary.
 
    Resolve zmc startup hang (zmdc expects zmc to exit, but it doesn't??).
 
-   Resolve nph-zms vs zms, and zms lockup on events view.
+   Resolve nph-zms vs zms, or decide it's an upstream choice that this
+   package doesn't need to address.
