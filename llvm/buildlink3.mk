@@ -53,6 +53,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-lib
 BUILDLINK_FILES.llvm+=		bin/llvm-libtool-darwin
 BUILDLINK_FILES.llvm+=		bin/llvm-link
 BUILDLINK_FILES.llvm+=		bin/llvm-lipo
+BUILDLINK_FILES.llvm+=		bin/llvm-lit
 BUILDLINK_FILES.llvm+=		bin/llvm-lto
 BUILDLINK_FILES.llvm+=		bin/llvm-lto2
 BUILDLINK_FILES.llvm+=		bin/llvm-mc

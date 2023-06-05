@@ -42,6 +42,7 @@ bin/llvm-lib
 bin/llvm-libtool-darwin
 bin/llvm-link
 bin/llvm-lipo
+bin/llvm-lit
 bin/llvm-lto
 bin/llvm-lto2
 bin/llvm-mc
@@ -389,9 +390,9 @@ include/llvm/BinaryFormat/ELFRelocs/RISCV.def
 include/llvm/BinaryFormat/ELFRelocs/Sparc.def
 include/llvm/BinaryFormat/ELFRelocs/SystemZ.def
 include/llvm/BinaryFormat/ELFRelocs/VE.def
+include/llvm/BinaryFormat/ELFRelocs/Xtensa.def
 include/llvm/BinaryFormat/ELFRelocs/i386.def
 include/llvm/BinaryFormat/ELFRelocs/x86_64.def
-include/llvm/BinaryFormat/ELFRelocs/Xtensa.def
 include/llvm/BinaryFormat/GOFF.h
 include/llvm/BinaryFormat/MachO.def
 include/llvm/BinaryFormat/MachO.h
@@ -626,9 +627,9 @@ include/llvm/CodeGen/WinEHFuncInfo.h
 include/llvm/Config/AsmParsers.def
 include/llvm/Config/AsmPrinters.def
 include/llvm/Config/Disassemblers.def
+include/llvm/Config/TargetExegesis.def
 include/llvm/Config/TargetMCAs.def
 include/llvm/Config/Targets.def
-include/llvm/Config/TargetExegesis.def
 include/llvm/Config/abi-breaking.h
 include/llvm/Config/llvm-config.h
 include/llvm/DWARFLinker/DWARFLinker.h
@@ -1164,8 +1165,8 @@ include/llvm/IR/StructuralHash.h
 include/llvm/IR/SymbolTableListTraits.h
 include/llvm/IR/TrackingMDRef.h
 include/llvm/IR/Type.h
-include/llvm/IR/TypedPointerType.h
 include/llvm/IR/TypeFinder.h
+include/llvm/IR/TypedPointerType.h
 include/llvm/IR/Use.h
 include/llvm/IR/UseListOrder.h
 include/llvm/IR/User.h
@@ -1742,9 +1743,9 @@ include/llvm/Transforms/Instrumentation/ControlHeightReduction.h
 include/llvm/Transforms/Instrumentation/DataFlowSanitizer.h
 include/llvm/Transforms/Instrumentation/GCOVProfiler.h
 include/llvm/Transforms/Instrumentation/HWAddressSanitizer.h
-include/llvm/Transforms/Instrumentation/KCFI.h
 include/llvm/Transforms/Instrumentation/InstrOrderFile.h
 include/llvm/Transforms/Instrumentation/InstrProfiling.h
+include/llvm/Transforms/Instrumentation/KCFI.h
 include/llvm/Transforms/Instrumentation/MemProfiler.h
 include/llvm/Transforms/Instrumentation/MemorySanitizer.h
 include/llvm/Transforms/Instrumentation/PGOInstrumentation.h

@@ -1,10 +1,10 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-BLAKE2s (cmake-15.0.6.src.tar.xz) = 6d91c537ea78e56d2621d703d6d20d9b4f52281b80520e5003bb8ea402ad8236
-SHA512 (cmake-15.0.6.src.tar.xz) = a078b9b426515414dae41c8732d7cd955e8ddc9638b4ba9c7dd0925db68e5ea760096f08fd7e1cb9d55b6d73da75f9b4318a2fac36d7aa64f47536ac383b3edc
-Size (cmake-15.0.6.src.tar.xz) = 6972 bytes
-BLAKE2s (llvm-project-15.0.6.src.tar.xz) = e536674d9320568a7bee3c26c01c5531d3c6b53e300daa75ae9ba9abde8036fc
-SHA512 (llvm-project-15.0.6.src.tar.xz) = 3311d85f4e02610af52f06e83c8c6d2b93950d24324b831b7afc47c39a20a546d39683a14e1a315da87d226379042de900a3f36a0351053547482af9035ab949
-Size (llvm-project-15.0.6.src.tar.xz) = 112074576 bytes
+BLAKE2s (cmake-16.0.5.src.tar.xz) = 80080250c1a03f7adfe5908afc66f57e337a23d93bf80fe97ed6d84253a7c908
+SHA512 (cmake-16.0.5.src.tar.xz) = 0b81399c872dc886f486568537dab7033de347ba9ea68243db7df6f5651b22c5e3034a5a505185e076de2091b0d8721d35136450d1e1d1ab821bfdd6c5992df2
+Size (cmake-16.0.5.src.tar.xz) = 9000 bytes
+BLAKE2s (mlir-16.0.5.src.tar.xz) = 788d4230a81b73af73428b2665dbb88569f999e7e3a0cade1093f759a17278bc
+SHA512 (mlir-16.0.5.src.tar.xz) = 237a305a11366666587b3f2e69975f0ae11969bb93f1801ed1bee26fabfcff36bdbac9a3747ff691fe4874a9ee7ca10d8524f956abcb49e153565a916555c600
+Size (mlir-16.0.5.src.tar.xz) = 4555632 bytes
 SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 528ffcd98d35b22c168b228daca28af319a47c5c
-SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = db2768503c7e7b89bd99801d1eba588f23ac0b04
+SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 668c55c4a056badf43add0bce3fadc07837336d9

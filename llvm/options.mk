@@ -20,7 +20,7 @@ PKG_SUPPORTED_OPTIONS+=		terminfo z3 tests debug
 CHECK_BUILTIN.terminfo:=	yes
 .include "../../mk/terminfo.builtin.mk"
 CHECK_BUILTIN.terminfo:=	no
-.if ${USE_BUILTIN.terminfo:M[yY][eE][sS]}
+.if ${USE_BUILTIN.terminfo:tl} == yes
 PKG_SUGGESTED_OPTIONS+=		terminfo
 .endif
 

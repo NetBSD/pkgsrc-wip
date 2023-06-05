@@ -2,12 +2,12 @@ $NetBSD$
 
 Install mlir-tblgen.
 
---- tools/mlir-tblgen/CMakeLists.txt.orig	2022-09-26 08:58:32.000000000 +0000
+--- tools/mlir-tblgen/CMakeLists.txt.orig	2023-06-04 18:58:02.000000000 +0000
 +++ tools/mlir-tblgen/CMakeLists.txt
 @@ -35,5 +35,6 @@ target_link_libraries(mlir-tblgen
    PRIVATE
    MLIRSupportIndentedOstream
-   MLIRTableGen)
+   MLIRTblgenLib)
 +install(TARGETS mlir-tblgen DESTINATION bin)
  
  mlir_check_all_link_libraries(mlir-tblgen)
