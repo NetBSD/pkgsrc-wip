@@ -82,6 +82,16 @@ then one could use the event MPM.
 After you figure it out, please send patches to add an nginx config
 file.  Likely one would use php_fpm; Makefile guesses so.
 
+# Problems not clearly attributed
+
+In theory `zmpkg.pl start` should start everything.  In practice, the
+first `zmdc.pl start` invocation does start the daemon but then fails
+to exit, hanging the startup process.  While there is an attempt to
+avoid this in `zmpkg.pl`, it is likely necessary to kill the hanging
+start script, and thus to write a script to do so, to enable reliable
+starting.  This is likely an upstream issue, to be debugged after
+pkgsrc is up to date.
+
 # Upgrading from previous versions
 
 As always, backup everything, diff all configs from upstream before
@@ -110,8 +120,6 @@ set some.
 
 pkgsrc changed the config dir from /usr/pkg/etc to /usr/pkg/etc/zm, so
 you should move zm.conf.
-
-There are mumblings that one should not have symlinks in the webroot.
 
 When editing in conf.d, beware zmcustom.conf~ which might or might not
 also be read.
