@@ -791,7 +791,6 @@ share/zabbix/include/classes/helpers/CElasticsearchHelper.php
 share/zabbix/include/classes/helpers/CEncryptHelper.php
 share/zabbix/include/classes/helpers/CHintBoxHelper.php
 share/zabbix/include/classes/helpers/CHousekeepingHelper.php
-share/zabbix/include/classes/helpers/CHtml.php
 share/zabbix/include/classes/helpers/CMaintenanceHelper.php
 share/zabbix/include/classes/helpers/CMapHelper.php
 share/zabbix/include/classes/helpers/CMathHelper.php
@@ -842,6 +841,7 @@ share/zabbix/include/classes/html/CFormGrid.php
 share/zabbix/include/classes/html/CFormList.php
 share/zabbix/include/classes/html/CHorList.php
 share/zabbix/include/classes/html/CHostAvailability.php
+share/zabbix/include/classes/html/CHtmlEntity.php
 share/zabbix/include/classes/html/CHtmlPage.php
 share/zabbix/include/classes/html/CHtmlPageHeader.php
 share/zabbix/include/classes/html/CIFrame.php
@@ -1274,7 +1274,6 @@ share/zabbix/items.php
 share/zabbix/js/browsers.js
 share/zabbix/js/chkbxrange.js
 share/zabbix/js/class.base-component.js
-share/zabbix/js/class.bbcode.js
 share/zabbix/js/class.browsertab.js
 share/zabbix/js/class.calendar.js
 share/zabbix/js/class.cdate.js
