@@ -5957,6 +5957,7 @@ SUBDIR+=	yauap
 SUBDIR+=	yaupspe
 SUBDIR+=	yder
 SUBDIR+=	yersinia
+SUBDIR+=	yet-another-cloudwatch-exporter
 SUBDIR+=	yi
 SUBDIR+=	yoda
 SUBDIR+=	yosys
