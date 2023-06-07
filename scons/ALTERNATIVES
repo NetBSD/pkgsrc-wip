@@ -1,3 +1,0 @@
-bin/scons @PREFIX@/bin/scons-@PYVERSSUFFIX@
-bin/scons-configure-cache @PREFIX@/bin/scons-configure-cache-@PYVERSSUFFIX@
-bin/sconsign @PREFIX@/bin/sconsign-@PYVERSSUFFIX@

@@ -5166,7 +5166,6 @@ SUBDIR+=	scintilla
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scmail
-SUBDIR+=	scons
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scrc
