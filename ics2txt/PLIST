@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/ics2tree
+bin/ics2tsv
+bin/tsv2agenda
+bin/tsv2ics
+man/man1/ics2tsv.1
+man/man1/tsv2agenda.1
+man/man1/tsv2ics.1

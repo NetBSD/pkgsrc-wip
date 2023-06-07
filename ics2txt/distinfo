@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2021/10/07 14:35:14 nia Exp $
+
+BLAKE2s (ics2txt-v1.1.tgz) = b30c61db51e5f41e938980d88d5df646a81103e284293697a74477a29285d489
+SHA512 (ics2txt-v1.1.tgz) = a59a1e4f6218bd9e0adc7f197d3994487c9cbb6d6b0c6f38c6282196bcad2a1666c702cc21a6d93a4872c063bf4705825e4744f21b7284116d5058ada6377a59
+Size (ics2txt-v1.1.tgz) = 12390 bytes
+SHA1 (patch-tsv2agenda.c) = ab08b8442492ba890f69906cd00a2ed5dd5fbdc6
