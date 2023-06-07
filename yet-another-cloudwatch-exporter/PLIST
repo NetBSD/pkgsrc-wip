@@ -1,0 +1,25 @@
+@comment $NetBSD$
+bin/yace
+share/doc/yet-another-cloudwatch-exporter/README.md
+share/doc/yet-another-cloudwatch-exporter/configuration.md
+share/doc/yet-another-cloudwatch-exporter/embedding.md
+share/doc/yet-another-cloudwatch-exporter/feature_flags.md
+share/doc/yet-another-cloudwatch-exporter/installation.md
+share/examples/yet-another-cloudwatch-exporter/alb.yml
+share/examples/yet-another-cloudwatch-exporter/appstream.yml
+share/examples/yet-another-cloudwatch-exporter/backup.yml
+share/examples/yet-another-cloudwatch-exporter/dx.yml
+share/examples/yet-another-cloudwatch-exporter/ebs.yml
+share/examples/yet-another-cloudwatch-exporter/ec2.yml
+share/examples/yet-another-cloudwatch-exporter/elb.yml
+share/examples/yet-another-cloudwatch-exporter/es.yml
+share/examples/yet-another-cloudwatch-exporter/kafka.yml
+share/examples/yet-another-cloudwatch-exporter/kinesis.yml
+share/examples/yet-another-cloudwatch-exporter/lambda.yml
+share/examples/yet-another-cloudwatch-exporter/mq.yml
+share/examples/yet-another-cloudwatch-exporter/ngw.yml
+share/examples/yet-another-cloudwatch-exporter/nlb.yml
+share/examples/yet-another-cloudwatch-exporter/rds.yml
+share/examples/yet-another-cloudwatch-exporter/s3.yml
+share/examples/yet-another-cloudwatch-exporter/usage.yml
+share/examples/yet-another-cloudwatch-exporter/vpn.yml

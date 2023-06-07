@@ -1,0 +1,3 @@
+YACE, or yet another cloudwatch exporter, is a Prometheus exporter for
+AWS CloudWatch metrics. It is written in Go and uses the official AWS
+SDK.
