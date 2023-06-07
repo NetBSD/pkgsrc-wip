@@ -1,7 +1,7 @@
 # $NetBSD$
 
 PKGVERSION=	2.6.0-beta4
-PKGNAME=	prusaslicer-${PKGVERSION}
+PKGNAME=	prusaslicer-${PKGVERSION:S/-beta/beta/}
 DISTNAME=	PrusaSlicer-${PKGVERSION:S/rc/-rc/}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
