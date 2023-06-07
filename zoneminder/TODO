@@ -24,3 +24,5 @@
 
    Resolve nph-zms vs zms, or decide it's an upstream choice that this
    package doesn't need to address.
+
+   Add packages need for onvif to work.
