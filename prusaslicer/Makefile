@@ -67,7 +67,7 @@ CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/wxGTK31/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 
