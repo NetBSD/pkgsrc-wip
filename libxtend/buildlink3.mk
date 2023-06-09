@@ -5,7 +5,7 @@ BUILDLINK_TREE+=		libxtend
 .if !defined(LIBXTEND_BUILDLINK3_MK)
 LIBXTEND_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libxtend+=	libxtend>=0.1.7.21
+BUILDLINK_API_DEPENDS.libxtend+=	libxtend>=0.1.7.23
 BUILDLINK_PKGSRCDIR.libxtend?=		../../wip/libxtend
 .endif	# LIBXTEND_BUILDLINK3_MK
 
