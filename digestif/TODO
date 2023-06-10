@@ -1,0 +1,7 @@
+# digestif
+/usr/pkg/bin/lua5.4: /usr/pkg/share/lua/5.4/digestif/langserver.lua:15: attempt to call a nil value (field 'encode_empty_table_as_object')
+stack traceback:
+        /usr/pkg/share/lua/5.4/digestif/langserver.lua:15: in main chunk
+        [C]: in function 'require'
+        ...pkg/lib/luarocks/rocks-5.4/digestif/0.5.1-1/bin/digestif:5: in main chunk
+        [C]: in ?

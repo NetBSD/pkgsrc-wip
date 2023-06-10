@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (digestif-0.5.1.tar.gz) = d6df5f7dd8ce894f5de664f19e8debb06363983f90938647ef885b6f7baf1593
+SHA512 (digestif-0.5.1.tar.gz) = cf20a0474dc9572fb4cfe415e9137f40d6ebf492dbaefca63f2c2cb257ff27400043e333acc2efc64590718e85c5996bb0e92b7fdc513a2b01794c928cd603c3
+Size (digestif-0.5.1.tar.gz) = 653570 bytes
