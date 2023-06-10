@@ -1,12 +1,11 @@
 # $NetBSD$
 
-PKGVERSION=	2.6.0-beta4
-PKGNAME=	prusaslicer-${PKGVERSION:S/-beta/beta/}
-DISTNAME=	PrusaSlicer-${PKGVERSION:S/rc/-rc/}
+PKGVERSION=	2.6.0rc1
+DISTNAME=	PrusaSlicer-${PKGVERSION:C/(beta|rc)/-\1/}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
 GITHUB_PROJECT=	PrusaSlicer
-GITHUB_TAG=	version_${PKGVERSION:S/rc/-rc/}
+GITHUB_TAG=	version_${PKGVERSION:C/(beta|rc)/-\1/}
 # Needed, else we strip the 'v' and look for "ersion".
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 

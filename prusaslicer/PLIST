@@ -674,6 +674,14 @@ share/PrusaSlicer/profiles/TriLAB/DQXL_thumbnail.png
 share/PrusaSlicer/profiles/TriLAB/aq_bed.stl
 share/PrusaSlicer/profiles/TriLAB/aqp_bed.stl
 share/PrusaSlicer/profiles/TriLAB/dq2_bed.stl
+share/PrusaSlicer/profiles/Trimaker.idx
+share/PrusaSlicer/profiles/Trimaker.ini
+share/PrusaSlicer/profiles/Trimaker/CosmosII_bed.stl
+share/PrusaSlicer/profiles/Trimaker/Cosmos_II_thumbnail.png
+share/PrusaSlicer/profiles/Trimaker/NPC_thumbnail.png
+share/PrusaSlicer/profiles/Trimaker/NebulaCloud.svg
+share/PrusaSlicer/profiles/Trimaker/NebulaCloud_bed.stl
+share/PrusaSlicer/profiles/Trimaker/Nebula_thumbnail.png
 share/PrusaSlicer/profiles/Ultimaker.idx
 share/PrusaSlicer/profiles/Ultimaker.ini
 share/PrusaSlicer/profiles/Ultimaker/ULTIMAKER2_thumbnail.png
