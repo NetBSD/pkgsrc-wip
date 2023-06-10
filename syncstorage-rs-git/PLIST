@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/syncserver
+share/doc/syncstorage-rs/Makefile
+share/doc/syncstorage-rs/README.md
+share/examples/syncstorage-rs/local.example.toml
