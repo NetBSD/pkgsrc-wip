@@ -41,6 +41,7 @@ do-install:
 	# 'Makefile' has logic how to start this
 	${INSTALL_PROGRAM} ${WRKSRC}/Makefile ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
 	${INSTALL_PROGRAM} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
+	${INSTALL_PROGRAM} ${WRKSRC}/docs/config.md ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
 	${INSTALL_PROGRAM} ${WRKSRC}/config/local.example.toml ${DESTDIR}${PREFIX}/share/examples/syncstorage-rs
 
 .include "../../lang/rust/cargo.mk"

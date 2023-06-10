@@ -2,4 +2,5 @@
 bin/syncserver
 share/doc/syncstorage-rs/Makefile
 share/doc/syncstorage-rs/README.md
+share/doc/syncstorage-rs/config.md
 share/examples/syncstorage-rs/local.example.toml
