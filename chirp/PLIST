@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/12/07 14:02:20 gdt Exp $
+@comment $NetBSD$
 bin/chirp
 bin/chirpc
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -187,6 +187,9 @@ ${PYSITELIB}/chirp/drivers/gmrsv2.pyo
 ${PYSITELIB}/chirp/drivers/h777.py
 ${PYSITELIB}/chirp/drivers/h777.pyc
 ${PYSITELIB}/chirp/drivers/h777.pyo
+${PYSITELIB}/chirp/drivers/hf90.py
+${PYSITELIB}/chirp/drivers/hf90.pyc
+${PYSITELIB}/chirp/drivers/hf90.pyo
 ${PYSITELIB}/chirp/drivers/hg_uv98.py
 ${PYSITELIB}/chirp/drivers/hg_uv98.pyc
 ${PYSITELIB}/chirp/drivers/hg_uv98.pyo
@@ -286,6 +289,9 @@ ${PYSITELIB}/chirp/drivers/idrp.pyo
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118.py
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyc
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyo
+${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.py
+${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.pyc
+${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.pyo
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.py
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyc
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyo
@@ -328,6 +334,9 @@ ${PYSITELIB}/chirp/drivers/leixen.pyo
 ${PYSITELIB}/chirp/drivers/lt725uv.py
 ${PYSITELIB}/chirp/drivers/lt725uv.pyc
 ${PYSITELIB}/chirp/drivers/lt725uv.pyo
+${PYSITELIB}/chirp/drivers/mml_jc8810.py
+${PYSITELIB}/chirp/drivers/mml_jc8810.pyc
+${PYSITELIB}/chirp/drivers/mml_jc8810.pyo
 ${PYSITELIB}/chirp/drivers/mursv1.py
 ${PYSITELIB}/chirp/drivers/mursv1.pyc
 ${PYSITELIB}/chirp/drivers/mursv1.pyo
@@ -376,12 +385,12 @@ ${PYSITELIB}/chirp/drivers/retevis_rt87.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt98.py
 ${PYSITELIB}/chirp/drivers/retevis_rt98.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt98.pyo
-${PYSITELIB}/chirp/drivers/rfinder.py
-${PYSITELIB}/chirp/drivers/rfinder.pyc
-${PYSITELIB}/chirp/drivers/rfinder.pyo
 ${PYSITELIB}/chirp/drivers/rh5r_v2.py
 ${PYSITELIB}/chirp/drivers/rh5r_v2.pyc
 ${PYSITELIB}/chirp/drivers/rh5r_v2.pyo
+${PYSITELIB}/chirp/drivers/tdh8.py
+${PYSITELIB}/chirp/drivers/tdh8.pyc
+${PYSITELIB}/chirp/drivers/tdh8.pyo
 ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.py
 ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.pyc
 ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.pyo
@@ -520,15 +529,26 @@ ${PYSITELIB}/chirp/drivers/wouxun_common.pyo
 ${PYSITELIB}/chirp/drivers/yaesu_clone.py
 ${PYSITELIB}/chirp/drivers/yaesu_clone.pyc
 ${PYSITELIB}/chirp/drivers/yaesu_clone.pyo
-${PYSITELIB}/chirp/elib_intl.py
-${PYSITELIB}/chirp/elib_intl.pyc
-${PYSITELIB}/chirp/elib_intl.pyo
 ${PYSITELIB}/chirp/errors.py
 ${PYSITELIB}/chirp/errors.pyc
 ${PYSITELIB}/chirp/errors.pyo
 ${PYSITELIB}/chirp/import_logic.py
 ${PYSITELIB}/chirp/import_logic.pyc
 ${PYSITELIB}/chirp/import_logic.pyo
+${PYSITELIB}/chirp/locale/de/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/el/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/en_US/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/es/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/fr/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/hu/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/it/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/nl/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/ru/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/tr_TR/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/uk_UA/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/zh_CN/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/logger.py
 ${PYSITELIB}/chirp/logger.pyc
 ${PYSITELIB}/chirp/logger.pyo
@@ -586,6 +606,9 @@ ${PYSITELIB}/chirp/util.pyo
 ${PYSITELIB}/chirp/wxui/__init__.py
 ${PYSITELIB}/chirp/wxui/__init__.pyc
 ${PYSITELIB}/chirp/wxui/__init__.pyo
+${PYSITELIB}/chirp/wxui/__main__.py
+${PYSITELIB}/chirp/wxui/__main__.pyc
+${PYSITELIB}/chirp/wxui/__main__.pyo
 ${PYSITELIB}/chirp/wxui/bankedit.py
 ${PYSITELIB}/chirp/wxui/bankedit.pyc
 ${PYSITELIB}/chirp/wxui/bankedit.pyo
