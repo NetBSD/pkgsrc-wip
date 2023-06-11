@@ -1,6 +1,7 @@
 # $NetBSD$
 
 PKGVERSION=	2.6.0rc1
+PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(beta|rc)/-\1/}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
@@ -11,7 +12,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 MAINTAINER=	stix@stix.id.au
 HOMEPAGE=	https://www.prusa3d.com/prusaslicer/
-COMMENT=	Converts STL models into gcode for 3d printing
+COMMENT=	Converts 3D models into G-code for 3D printing
 LICENSE=	gnu-agpl-v3
 
 ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
