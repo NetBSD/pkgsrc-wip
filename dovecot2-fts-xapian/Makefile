@@ -1,9 +1,8 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	fts-xapian
-DISTNAME=	1.4.4
+DISTNAME=	1.5.5
 PKGNAME=	dovecot2-fts-xapian-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grosjo/}
 DIST_SUBDIR=	dovecot2-fts-xapian
