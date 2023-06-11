@@ -4939,6 +4939,7 @@ SUBDIR+=	qiew
 SUBDIR+=	qira
 SUBDIR+=	qlcplus
 SUBDIR+=	qmc2
+SUBDIR+=	qmediamanager
 SUBDIR+=	qn-x11
 SUBDIR+=	qrint
 SUBDIR+=	qrq
