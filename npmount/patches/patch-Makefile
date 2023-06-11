@@ -1,0 +1,15 @@
+$NetBSD$
+
+# Missing dir
+
+--- Makefile.orig	2023-06-09 15:40:06.000000000 +0000
++++ Makefile
+@@ -163,7 +163,7 @@ realclean: clean
+ # Install all target files (binaries, libraries, docs, etc.)
+ 
+ install: all
+-	${MKDIR} -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${MANDIR}/man1
++	${MKDIR} -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${MANDIR}/man1 ${DESTDIR}${PREFIX}/etc
+ 	${INSTALL} -s -m 0755 ${BIN} ${DESTDIR}${PREFIX}/bin
+ 	${INSTALL} -m 0644 Man/*.1 ${DESTDIR}${MANDIR}/man1
+ 	${INSTALL} -m 0644 npmount.conf ${DESTDIR}${PREFIX}/etc/npmount.conf.sample

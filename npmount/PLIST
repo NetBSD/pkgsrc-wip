@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/npmount
+etc/npmount.conf.sample
+man/man1/npmount.1

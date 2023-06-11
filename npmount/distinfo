@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (npmount-0.1.1.tar.gz) = f24c2be7fb4cd32350ba3cde26cedad061b83c9d1c1ba8334adce27c4c0d0ec5
+SHA512 (npmount-0.1.1.tar.gz) = b6241f27a15a4c0f2e8c5f24f3a9a93ce2df5ebd015088a58e9d64e343165762c3b0e484a35536bef782cb1738b9577aed691009e3e4c715d4ee5dd6dd7d4f97
+Size (npmount-0.1.1.tar.gz) = 6773 bytes
+SHA1 (patch-Makefile) = c00c0b1fc7f1a178ee5daa4b69042d9a6187b010

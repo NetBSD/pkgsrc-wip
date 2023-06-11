@@ -2616,6 +2616,7 @@ SUBDIR+=	noto-cjk
 SUBDIR+=	noto-sans-cjk-ttf
 SUBDIR+=	noto-serif-cjk-ttf
 SUBDIR+=	noto-ttf
+SUBDIR+=	npmount
 SUBDIR+=	nq
 SUBDIR+=	nqp
 SUBDIR+=	nrg4iso
