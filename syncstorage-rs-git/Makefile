@@ -3,7 +3,7 @@
 DISTNAME=	syncstorage-rs-0.13.6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
-GIT_REPO=       https://github.com/mozilla-services/syncstorage-rs.git
+GIT_REPO=	https://github.com/mozilla-services/syncstorage-rs.git
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mozilla-services/syncstorage-rs/
@@ -12,9 +12,8 @@ LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-#unpackaged:
-#pyfxa==0.7.7
-#tokenlib==2.0.0
+DEPENDS+=	${PYPKGPREFIX}-FxA-[0-9]*:../../www/py-FxA
+DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
 
 .include "cargo-depends.mk"
 

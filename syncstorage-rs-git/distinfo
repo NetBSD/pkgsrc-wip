@@ -1164,5 +1164,5 @@ Size (ws2_32-sys-0.2.1.crate) = 4697 bytes
 BLAKE2s (yaml-rust-0.4.5.crate) = 65c7c0fe708cb682959e36fbb03b09a35b09d529e5c87364107f5985940a1404
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
-SHA1 (patch-syncserver-db-common_Cargo.toml) = e0589b54d5a98ea87c233ba1fa86dde7c908a0e0
-SHA1 (patch-syncstorage-spanner_Cargo.toml) = c7893f2a629ee95761aa81b96bcbc6f9ffe536b3
+SHA1 (patch-syncserver-db-common_Cargo.toml) = 1f40a94f1e61f2d6db61157411cc1ed67e2b336a
+SHA1 (patch-syncstorage-spanner_Cargo.toml) = e5d092a9fd918a30df42ea4553b73f6271b3bc38

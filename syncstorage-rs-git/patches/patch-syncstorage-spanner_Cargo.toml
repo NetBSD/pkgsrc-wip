@@ -1,5 +1,7 @@
 $NetBSD$
 
+Let pkgsrc provide the file instead of running git to fetch.
+
 --- syncstorage-spanner/Cargo.toml.orig	2023-06-10 19:04:16.000000000 +0000
 +++ syncstorage-spanner/Cargo.toml
 @@ -10,7 +10,7 @@ cadence = "0.26"

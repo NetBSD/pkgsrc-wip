@@ -1,5 +1,7 @@
 $NetBSD$
 
+Let pkgsrc provide the file instead of running git to fetch.
+
 --- syncserver-db-common/Cargo.toml.orig	2023-06-10 19:04:16.000000000 +0000
 +++ syncserver-db-common/Cargo.toml
 @@ -8,7 +8,7 @@ backtrace = "0.3.61"
