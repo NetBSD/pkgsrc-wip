@@ -17,8 +17,5 @@ USE_CMAKE=	yes
 # Requires stubs-32.h on CentOS, not provided by pkgsrc
 CMAKE_ARGS+=	-DSKIP_PORTABILITY_TEST=ON
 
-# Required for boost as of pkgsrc-2020Q1.
-CFLAGS+=	-Wno-old-style-cast
-
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
