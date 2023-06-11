@@ -5,9 +5,10 @@
 #              Sun Jun 11 07:48:06 CDT 2023               #
 ###########################################################
 
-DISTNAME=	npmount-0.1.1
+DISTNAME=	npmount-0.1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	61db68f8c8f14eeb7798b06578a34512c1a5574f
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/npmount
