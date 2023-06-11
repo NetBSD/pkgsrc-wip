@@ -1,0 +1,35 @@
+** libs                                                                                                                               
+gcc -I"/usr/pkg/lib/R/include" -DNDEBUG -I../inst/include -I'/usr/pkg/lib/R/library/testthat/include' -I/usr/pkg/include -I/usr/includ
+e -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr/pkg/include/
+freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -fpic  -O2 -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/inc
+lude -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr/pkg/inclu
+de/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -c init_nloptr.c -o init_nloptr.o                                       
+
+gcc -I"/usr/pkg/lib/R/include" -DNDEBUG -I../inst/include -I'/usr/pkg/lib/R/library/testthat/include' -I/usr/pkg/include -I/usr/includ
+e -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr/pkg/include/
+freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -fpic  -O2 -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/include -I/usr/inc
+lude -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr/pkg/inclu
+de/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -c nloptr.c -o nloptr.o                                                 
+
+c++ -std=gnu++11 -I"/usr/pkg/lib/R/include" -DNDEBUG -I../inst/include -I'/usr/pkg/lib/R/library/testthat/include' -I/usr/pkg/include 
+-I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr
+/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -fpic  -O2 -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/inclu
+de -I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/
+usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -c test-C-API.cpp -o test-C-API.o                          
+
+c++ -std=gnu++11 -I"/usr/pkg/lib/R/include" -DNDEBUG -I../inst/include -I'/usr/pkg/lib/R/library/testthat/include' -I/usr/pkg/include 
+-I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/usr
+/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -fpic  -O2 -fPIC -D_FORTIFY_SOURCE=2 -pthread -I/usr/pkg/inclu
+de -I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/X11R7/include -I/
+usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -I/usr/include/krb5  -c test-runner.cpp -o test-runner.o                        
+
+c++ -std=gnu++11 -shared -Wl,-R/usr/pkg/lib/R/lib -L/usr/pkg/lib/R/lib -Wl,-zrelro -L/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -Wl,-R/usr
+/pkg/lib -pthread -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -o nloptr.so init_nloptr.o nloptr.o test-C-API.o test-runner.o -llapack -lblas
+ -lblas -L/usr/pkg/gcc10/lib/gcc/x86_64--netbsd/10.4.0 -L/usr/pkg/gcc10/lib -Wl,-R/usr/pkg/gcc10//lib/. -Wl,-R/usr/pkg/gcc10/lib/. -lg
+fortran -lm -lquadmath -lpthread nlopt/lib/libnlopt.a -Wl,-R/usr/pkg/lib/R/lib -L/usr/pkg/lib/R/lib -lR                               
+g++: error: nlopt/lib/libnlopt.a: No such file or directory
+*** Error code 1
+
+Stop.
+make: stopped in /tmp/math/R-nloptr/work/nloptr/src
+
