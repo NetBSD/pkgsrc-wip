@@ -631,6 +631,7 @@ SUBDIR+=	denise
 SUBDIR+=	depsolver
 SUBDIR+=	deskcribe
 SUBDIR+=	desktop-data-model
+SUBDIR+=	desktop-installer
 SUBDIR+=	desmume
 SUBDIR+=	despotify-svn
 SUBDIR+=	detab
