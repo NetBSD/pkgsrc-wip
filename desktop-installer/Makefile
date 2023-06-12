@@ -26,7 +26,7 @@ SUBST_FILES.tk=	NetBSD/XDM/xdmshutdown
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
-DEPENDS=	auto-admin>=0.7.16:../../sysutils/auto-admin
+DEPENDS=	auto-admin>=0.7.16:../../wip/auto-admin
 
 .include "../../mk/bsd.prefs.mk"
 
