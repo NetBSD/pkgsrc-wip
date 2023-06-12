@@ -18,12 +18,8 @@ share/desktop-installer/MATE/xinitrc
 share/desktop-installer/OTHER/xinitrc
 share/desktop-installer/SDDM/sddm.conf
 share/desktop-installer/WMAKER/xinitrc
-share/desktop-installer/XDM/GiveConsole
 share/desktop-installer/XDM/Xsetup_0
-share/desktop-installer/XDM/Xstartup
-share/desktop-installer/XDM/beastie.xpm
-share/desktop-installer/XDM/bsd_background.jpg
+share/desktop-installer/XDM/netbsd-background.jpg
 share/desktop-installer/XDM/xdmshutdown
 share/desktop-installer/XFCE4/xinitrc
 share/desktop-installer/Xdefaults-xterm
-share/desktop-installer/splash.bmp

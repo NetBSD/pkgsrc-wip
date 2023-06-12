@@ -5,10 +5,10 @@
 #              Sun Jun 11 07:07:13 CDT 2023               #
 ###########################################################
 
-DISTNAME=	desktop-installer-0.8.0.12
+DISTNAME=	desktop-installer-0.8.0.13
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	38168c83a09fb567ed1330f2c459c4333927e616
+GITHUB_TAG=	9012e97dbbc48801cc73b842145e1cb902b89cee
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://acadix.biz/desktop-installer.php
@@ -20,8 +20,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 SUBST_CLASSES+=	tk
 SUBST_STAGE.tk=	pre-configure
-SUBST_SED.tk=	-e 's|/usr/local/bin/wish8.7|${PREFIX}/bin/wish|g'
-SUBST_FILES.tk=	Data/XDM/xdmshutdown
+SUBST_SED.tk=	-e 's|/usr/pkg/bin/wish|${PREFIX}/bin/wish|g'
+SUBST_FILES.tk=	NetBSD/XDM/xdmshutdown
 
 USE_TOOLS+=	pax
 NO_BUILD=	yes
@@ -38,6 +38,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
 	${MKDIR} ${DESTDIR}${DATADIR}
 	cd ${WRKSRC}/Data && pax -rw . ${DESTDIR}${DATADIR}
+	cd ${WRKSRC}/NetBSD && pax -rw XDM ${DESTDIR}${DATADIR}
 
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
