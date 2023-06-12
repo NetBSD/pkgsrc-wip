@@ -40,5 +40,7 @@ do-install:
 	cd ${WRKSRC}/Common && pax -rw . ${DESTDIR}${DATADIR}
 	cd ${WRKSRC}/NetBSD && pax -rw XDM ${DESTDIR}${DATADIR}
 
-.include "../../x11/tk/buildlink3.mk"
+# Binary package is behind pkgsrc, and tcl build fails
+# Run pkgin install tk so that XDM buttons will work
+# .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
