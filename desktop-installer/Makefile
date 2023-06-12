@@ -5,10 +5,10 @@
 #              Sun Jun 11 07:07:13 CDT 2023               #
 ###########################################################
 
-DISTNAME=	desktop-installer-0.8.0.13
+DISTNAME=	desktop-installer-0.8.0.14
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	9012e97dbbc48801cc73b842145e1cb902b89cee
+GITHUB_TAG=	69373ee69e0687b46f9ce8fd8a842b6bf4f6ee50
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://acadix.biz/desktop-installer.php
@@ -37,7 +37,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/Doc/${PKGBASE}.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
 	${MKDIR} ${DESTDIR}${DATADIR}
-	cd ${WRKSRC}/Data && pax -rw . ${DESTDIR}${DATADIR}
+	cd ${WRKSRC}/Common && pax -rw . ${DESTDIR}${DATADIR}
 	cd ${WRKSRC}/NetBSD && pax -rw XDM ${DESTDIR}${DATADIR}
 
 .include "../../x11/tk/buildlink3.mk"
