@@ -5,10 +5,10 @@
 #              Sun Jun 11 07:07:13 CDT 2023               #
 ###########################################################
 
-DISTNAME=	desktop-installer-0.8.0.14
+DISTNAME=	desktop-installer-0.8.0.15
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	69373ee69e0687b46f9ce8fd8a842b6bf4f6ee50
+GITHUB_TAG=	6553007e5836fbe9f81fba3100b353f9f89071e9
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://acadix.biz/desktop-installer.php
