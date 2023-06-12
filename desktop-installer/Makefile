@@ -5,10 +5,10 @@
 #              Sun Jun 11 07:07:13 CDT 2023               #
 ###########################################################
 
-DISTNAME=	desktop-installer-0.8.0.18
+DISTNAME=	desktop-installer-0.8.0.19
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	af8498e13ac7982ddf59346812a58c3b899ab434
+GITHUB_TAG=	46f0b9259521c4abcb25608029cc662408c4626b
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://acadix.biz/desktop-installer.php
@@ -26,6 +26,8 @@ SUBST_FILES.tk=	NetBSD/XDM/xdmshutdown
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
+DEPENDS=	auto-admin>=0.7.16:../../sysutils/auto-admin
+
 .include "../../mk/bsd.prefs.mk"
 
 DATADIR=		${PREFIX}/share/${PKGBASE}
@@ -40,7 +42,4 @@ do-install:
 	cd ${WRKSRC}/Common && pax -rw . ${DESTDIR}${DATADIR}
 	cd ${WRKSRC}/NetBSD && pax -rw XDM ${DESTDIR}${DATADIR}
 
-# Binary package is behind pkgsrc, and tcl build fails
-# Run pkgin install tk so that XDM buttons will work
-# .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
