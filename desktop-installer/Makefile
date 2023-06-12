@@ -5,10 +5,10 @@
 #              Sun Jun 11 07:07:13 CDT 2023               #
 ###########################################################
 
-DISTNAME=	desktop-installer-0.8.0.19
+DISTNAME=	desktop-installer-0.8.0.20
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	46f0b9259521c4abcb25608029cc662408c4626b
+GITHUB_TAG=	e3528d97b446fdec46006b033448abed8005dcbc
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://acadix.biz/desktop-installer.php
@@ -36,7 +36,7 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1 share/${PKGBASE}
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/${PKGBASE} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/battery-shutdown.sh ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/Doc/${PKGBASE}.man \
+	${INSTALL_MAN} ${WRKSRC}/NetBSD/${PKGBASE}.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
 	${MKDIR} ${DESTDIR}${DATADIR}
 	cd ${WRKSRC}/Common && pax -rw . ${DESTDIR}${DATADIR}
