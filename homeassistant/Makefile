@@ -1,13 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	homeassistant-0.00
+PKGNAME=	homeassistant-0.01
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.home-assistant.io/
 COMMENT=	Meta-package for prereqs for Home Assistant
-
-# Revisit when it becomes nontrivial.
 LICENSE=	modified-bsd
 
 META_PACKAGE=	yes
@@ -45,8 +43,21 @@ DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 
-# gfortran, arbitrarily pinned to gcc7 for now
-DEPENDS+=	gcc7-[0-9]*:../../lang/gcc7
+.include "../../mk/bsd.prefs.mk"
+
+
+# Depend on fortran, because HA will use it at pip-install time.
+#.include "../../mk/compiler/gfortran.mk"
+
+# Hack around gfortran issues.
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-9].*)
+# \todo Consider forcing 10 always for now.
+FORTRAN_VERSION=10
+.else
+FORTRAN_VERSION=7
+.endif
+BUILDLINK_DEPMETHOD.gcc${FORTRAN_VERSION}=	full
+.include "../../lang/gcc${FORTRAN_VERSION}/buildlink3.mk"
 
 RUST_RUNTIME=	yes
 .include "../../lang/rust/rust.mk"
@@ -61,7 +72,10 @@ RUST_RUNTIME=	yes
 #
 # ffmpeg4 installs to /usr/pkg/lib/ffmpeg4, but pkg_alternatives does
 # not provide library links.  A strategy that works is to symlink from
-# /usr/pkg/lib, and a strategy that might work is to PKG_CONFIG_PATH.
+# /usr/pkg/lib, and a strategy that might work is to set
+# PKG_CONFIG_PATH.
+#
+#   export PKG_CONFIG_PATH=/usr/pkg/lib/ffmpeg4/pkgconfig
 #
 # ffmpeg's pkgconfig files have "-Wl,-rpath,/usr/pkg/lib/ffmpeg4/lib",
 # but PyAV's setup.py is buggy and looks at flags to see if they are
