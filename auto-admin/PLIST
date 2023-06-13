@@ -15,6 +15,7 @@ bin/auto-octet-to-hex
 bin/auto-pkg-branch
 bin/auto-pkg-latest
 bin/auto-pkgsrc-branch
+bin/auto-pkgsrc-checkout
 bin/auto-pkgsrc-delete-all
 bin/auto-pkgsrc-dir
 bin/auto-pkgsrc-prefix
