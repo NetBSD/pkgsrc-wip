@@ -20,5 +20,5 @@ post-install:
 	${MKDIR} ${DESTDIR}${EGDIR}
 	${MV} ${DESTDIR}${PREFIX}/etc/npmount.conf.sample ${DESTDIR}${EGDIR}
 
-.include "../../devel/libxtend/buildlink3.mk"
+.include "../../wip/libxtend/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
