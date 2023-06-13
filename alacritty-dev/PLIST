@@ -2,6 +2,7 @@
 bin/alacritty
 man/man1/alacritty-msg.1
 man/man1/alacritty.1
+man/man5/alacritty-bindings.5
+man/man5/alacritty.5
 share/applications/Alacritty.desktop
-share/examples/alacritty/alacritty.yml
 share/icons/hicolor/scalable/apps/alacritty-term.svg
