@@ -11,6 +11,8 @@ COMMENT=	Infrastructure meta-package to develop on Aegis
 
 META_PACKAGE=		yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+
 .include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=		aegis>=4.24:../../devel/aegis
@@ -46,6 +48,5 @@ DEPENDS+=		tardy>=1.17:../../wip/tardy
 DEPENDS+=		zlib>=1.1.4:../../devel/zlib
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
