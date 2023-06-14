@@ -7,9 +7,10 @@
 
 # Unknown tool: USE_TOOLS=	gl
 
-DISTNAME=	qmediamanager-0.1.0
+DISTNAME=	qmediamanager-0.1.0.4
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	43beed25031d0839739c589780455f258e331729
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/qmediamanager
@@ -19,13 +20,18 @@ LICENSE=	2-clause-bsd
 DEPENDS=	npmount>0:../../wip/npmount
 DEPENDS+=	auto-admin>=0.7.16:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
-DEPENDS+=	qt6-qttools-${QTVERSION}{,nb[0-9]*}:../../devel/qt6-qttools
+DEPENDS+=	qt6-qttools>0:../../devel/qt6-qttools
 
 USE_LANGUAGES=	c c++
 
+INSTALLATION_DIRS=	bin man/man1
+
+do-configure:
+	(cd ${WRKSRC} && ${PREFIX}/qt6/bin/qmake)
+
 do-install:
 	${INSTALL} -c ${WRKSRC}/qmediamanager ${DESTDIR}${PREFIX}/bin
-	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${DESTDIR}${MANPREFIX}/man/man1
+	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${DESTDIR}${PREFIX}/man/man1
 
 .include "../../devel/libxtend/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
