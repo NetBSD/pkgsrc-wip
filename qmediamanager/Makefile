@@ -8,7 +8,7 @@
 # Unknown tool: USE_TOOLS=	gl
 
 DISTNAME=	qmediamanager-0.1.0.4
-CATEGORIES=	deskutils
+CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	43beed25031d0839739c589780455f258e331729
 
@@ -22,6 +22,11 @@ DEPENDS+=	auto-admin>=0.7.16:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
 DEPENDS+=	qt6-qttools>0:../../devel/qt6-qttools
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
+SUBST_FILES.prefix=	misc.h
+
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin man/man1
@@ -31,7 +36,7 @@ do-configure:
 
 do-install:
 	${INSTALL} -c ${WRKSRC}/qmediamanager ${DESTDIR}${PREFIX}/bin
-	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${DESTDIR}${PREFIX}/man/man1
+	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libxtend/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
