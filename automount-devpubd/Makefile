@@ -5,10 +5,10 @@
 #              Wed Jun 14 07:16:37 CDT 2023               #
 ###########################################################
 
-DISTNAME=	automount-devpubd-0.0.0.144
+DISTNAME=	automount-devpubd-0.0.0.145
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	f1e45ee13f009afc1932a342ea4b1e60c2b99136
+GITHUB_TAG=	96d4011b89d8c05b7e1938d970329f4ecca3cd73
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/automount-devpubd/
