@@ -13,6 +13,11 @@ LICENSE=	2-clause-bsd
 EGDIR=		${PREFIX}/share/examples/npmount
 CONF_FILES=	${EGDIR}/npmount.conf.sample ${PREFIX}/etc/npmount.conf
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
+SUBST_FILES.prefix=	npmount.c
+
 SPECIAL_PERMS+=		bin/npmount ${SETUID_ROOT_PERMS}
 INSTALLATION_DIRS=	bin
 
