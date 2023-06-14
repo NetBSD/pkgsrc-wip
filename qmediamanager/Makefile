@@ -7,10 +7,10 @@
 
 # Unknown tool: USE_TOOLS=	gl
 
-DISTNAME=	qmediamanager-0.1.0.4
+DISTNAME=	qmediamanager-0.1.0.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	43beed25031d0839739c589780455f258e331729
+GITHUB_TAG=	d3e10ac467a88679ad805a562e98a143a016166c
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/qmediamanager
