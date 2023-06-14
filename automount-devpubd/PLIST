@@ -1,0 +1,4 @@
+@comment $NetBSD$
+sbin/automount
+share/automount-devpubd/03-automount
+share/examples/automount-devpubd/automount.conf.sample

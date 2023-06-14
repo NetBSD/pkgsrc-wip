@@ -227,6 +227,7 @@ SUBDIR+=	auto-admin
 SUBDIR+=	auto-complete-git
 SUBDIR+=	auto-complete-mode
 SUBDIR+=	auto-dev
+SUBDIR+=	automount-devpubd
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
 SUBDIR+=	autossh
