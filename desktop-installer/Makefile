@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	desktop-installer-0.8.0.28
+DISTNAME=	desktop-installer-0.8.0.29
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	5e1fa65b8eece006dc0773a563ec965523c17908
+GITHUB_TAG=	2e31ee762fac6922154c7cf123d948fb0ccde64f
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/desktop-installer/tree/master/NetBSD
@@ -23,7 +23,7 @@ NO_BUILD=	yes
 
 CHECK_INTERPRETER_SKIP+=	share/desktop-installer/XDM/xdmshutdown
 
-DEPENDS=	auto-admin>=0.7.13:../../sysutils/auto-admin
+DEPENDS=	auto-admin>=0.7.16.11:../../sysutils/auto-admin
 
 .include "../../mk/bsd.prefs.mk"
 
