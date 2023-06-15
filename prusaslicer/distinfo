@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.6.0-rc1.tar.gz) = 3c4d606aa2adff49a7b7e8d308af5cee40141b3f404e768a317cfecd374ea43f
-SHA512 (PrusaSlicer-2.6.0-rc1.tar.gz) = 3a3650fbec0bb44c1ed390810d32746e8853cd9eca67a5c522ec6c50e954d0866538ef062b4f13a638b29930faafcf42704feaf58a7946cd4215475f754c1ef9
-Size (PrusaSlicer-2.6.0-rc1.tar.gz) = 56413475 bytes
+BLAKE2s (PrusaSlicer-2.6.0-rc2.tar.gz) = 8104d24f309020e4a75e45af8dd0ca217aafaf125b9db203d1b3027148b00c85
+SHA512 (PrusaSlicer-2.6.0-rc2.tar.gz) = 789d04a6c4e6eccec46374398bc056013dc593045f20737a1570406894851c77fec664f4d9a99b98f6051fc08db9a0bc2d7d5d35b80d1b4661f1e6e1dcd0e120
+Size (PrusaSlicer-2.6.0-rc2.tar.gz) = 56424950 bytes
 SHA1 (patch-CMakeLists.txt) = 33eb39d85ba7b33226f2cc022250872c3ffa28d8
 SHA1 (patch-cmake_modules_FindOpenVDB.cmake) = 4f2afc423a70fe60617b33ff7f26859b39775faa
 SHA1 (patch-src_CMakeLists_txt) = fe61037cd75fe49f7de593986c864222dac0ca44
@@ -42,7 +42,7 @@ SHA1 (patch-src_slic3r_GUI_OpenGLManager.cpp) = 594d8a99824fead23010cdbf8f97d8ba
 SHA1 (patch-src_slic3r_GUI_OptionsGroup.cpp) = c413f24a9a50069b93bdd611b95fa85ccab45567
 SHA1 (patch-src_slic3r_GUI_Plater.cpp) = a9c45bac6bf524b411882f3eedc859401e8a1a35
 SHA1 (patch-src_slic3r_GUI_Preferences.cpp) = 522ee0f2b024836b2b1d5521f0d368c3dd2c24c5
-SHA1 (patch-src_slic3r_GUI_PresetComboBoxes.cpp) = 89654aa2e0384b35b61a19a22399683e7f4417ae
+SHA1 (patch-src_slic3r_GUI_PresetComboBoxes.cpp) = ae083491bb2b1228c0f666fdc36b1b3ca4008c3c
 SHA1 (patch-src_slic3r_GUI_PresetComboBoxes.hpp) = 0c84c1b706a1f4e00f60c1677c7edf53845d4467
 SHA1 (patch-src_slic3r_GUI_PrintHostDialogs.cpp) = bbdd89d236b4596f009616e553d601d3e032114c
 SHA1 (patch-src_slic3r_GUI_RemovableDriveManager.cpp) = 413499908128be48106d5fd6aea5d413bb959b35
