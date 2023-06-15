@@ -1,2 +1,0 @@
-automount(8) is a devpubd(8) based automounter for NetBSD.  It supports
-most popular filesystems: NTFS/FAT/exFAT/EXT2/EXT3/EXT4/UFS/ISO9660.
