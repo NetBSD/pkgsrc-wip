@@ -1,0 +1,4 @@
+@comment $NetBSD$
+sbin/devpub-mount
+share/devpub-mount/03-devpub-mount
+share/examples/devpub-mount/devpub-mount.conf.sample
