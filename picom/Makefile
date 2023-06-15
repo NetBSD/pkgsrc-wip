@@ -20,10 +20,14 @@ USE_LANGUAGES=		c c++
 MESON_ARGS+=		-Dwith_docs=true
 REPLACE_SH+=		bin/picom-trans
 PYTHON_FOR_BUILD_ONLY=	tool
-INSTALLATION_DIRS+=	share/examples/picom
+INSTALLATION_DIRS+=	share/examples/picom share/examples/picom/xdg/autostart
+
+CONF_FILES+=	share/examples/picom/xdg/autostart/picom.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/picom.desktop
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/picom.sample.conf ${DESTDIR}${PREFIX}/share/examples/picom/picom.sample.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/autostart/picom.desktop ${DESTDIR}${PREFIX}/share/examples/picom/xdg/autostart
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
