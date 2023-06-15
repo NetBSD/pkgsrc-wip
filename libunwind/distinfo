@@ -1,12 +1,12 @@
 $NetBSD: distinfo,v 1.32 2023/01/12 22:47:25 wiz Exp $
 
-BLAKE2s (cmake-16.0.5.src.tar.xz) = 80080250c1a03f7adfe5908afc66f57e337a23d93bf80fe97ed6d84253a7c908
-SHA512 (cmake-16.0.5.src.tar.xz) = 0b81399c872dc886f486568537dab7033de347ba9ea68243db7df6f5651b22c5e3034a5a505185e076de2091b0d8721d35136450d1e1d1ab821bfdd6c5992df2
-Size (cmake-16.0.5.src.tar.xz) = 9000 bytes
-BLAKE2s (libcxx-16.0.5.src.tar.xz) = 9e09d6983de8e13f00f874d511e9c9914d551d4a6a6c7654a8eb42da6d18cfa8
-SHA512 (libcxx-16.0.5.src.tar.xz) = 4eb8d2ae38a825adbd9d9cd78bbfb11e72f38e30f660aaecd7a196b625a94c070cd22df068dccb325d292233012b4d014410e65f3c7c74715b1898f56497ede6
-Size (libcxx-16.0.5.src.tar.xz) = 3652428 bytes
-BLAKE2s (libunwind-16.0.5.src.tar.xz) = fefcf43e1085f447d0121bdb1fd5a574e6ee619e0424949d4d28757bdfe0f0d8
-SHA512 (libunwind-16.0.5.src.tar.xz) = 67b40163c14a5f475e011470c222ed9740f35f47498cd169d74afe28f8f6000952d1d329f421c151e7b15a3bfe1ea3f0496ec2ce2c7d231a747710d7636f8295
-Size (libunwind-16.0.5.src.tar.xz) = 115036 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (libcxx-16.0.6.src.tar.xz) = 4ad216b6f725c6b3207f76a0b1bcdb2ef46bfcf9cef8cbe289b3c89632fcbf3d
+SHA512 (libcxx-16.0.6.src.tar.xz) = d5ccadcceb67815ad0537ec82d40fd52b0ac5e5b37acba8951d92d2f16f7e19adf517d7249f0fca448c9f60a740c63ddfe23630e519148e8d8f37693614830db
+Size (libcxx-16.0.6.src.tar.xz) = 3655520 bytes
+BLAKE2s (libunwind-16.0.6.src.tar.xz) = a34c9ff82a3d889c4b9278bca3a96429f285dd38961d49309570bc60600e5fb6
+SHA512 (libunwind-16.0.6.src.tar.xz) = abc1463bbebd771832c5da34aeb1dfe4c168b90c8257abfcfda573f495359b5968a2169f528dbf8276ed0b9bc1c42f27f4b4383d335d6e6416b6a536074b3f3f
+Size (libunwind-16.0.6.src.tar.xz) = 115032 bytes
 SHA1 (patch-src_CMakeLists.txt) = a8ac316fddf0d71c75d7f64695335a6f4842fead

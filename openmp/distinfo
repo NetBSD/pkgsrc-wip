@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.17 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-16.0.5.src.tar.xz) = 80080250c1a03f7adfe5908afc66f57e337a23d93bf80fe97ed6d84253a7c908
-SHA512 (cmake-16.0.5.src.tar.xz) = 0b81399c872dc886f486568537dab7033de347ba9ea68243db7df6f5651b22c5e3034a5a505185e076de2091b0d8721d35136450d1e1d1ab821bfdd6c5992df2
-Size (cmake-16.0.5.src.tar.xz) = 9000 bytes
-BLAKE2s (openmp-16.0.5.src.tar.xz) = ce073ecb25e179ce43b5bd73485be34cd01fd1c866bc698f7dd5140def49bd74
-SHA512 (openmp-16.0.5.src.tar.xz) = 88517ba4bc2088526e22847ae0031581c255fe89f8f43fc0a8cd83a929e0e2c62178b061fbb4273d7b23916f2300009d271dc4167a98c25d2084b6ff4da1f7ca
-Size (openmp-16.0.5.src.tar.xz) = 1278476 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (openmp-16.0.6.src.tar.xz) = bc49274c640b7d2e7ae931f2a6731917c5e7caa762b04067fd2bc6f2946ff601
+SHA512 (openmp-16.0.6.src.tar.xz) = b68b60bd10ae6df3853513c163d6d6dc040cdcd4b48802002cd0da24d3c3bc88002e432012081beff15e887fb12b71ef0932f89f21229a80c61568c1643460fc
+Size (openmp-16.0.6.src.tar.xz) = 1278072 bytes
 SHA1 (patch-runtime_src_kmp__runtime.cpp) = 70f4396d4c1631fbd74692ef26b22d08675da547
