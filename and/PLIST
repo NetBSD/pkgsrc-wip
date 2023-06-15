@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
-man/man5/and.conf.5
-man/man5/and.priorities.5
-man/man8/and.8
-sbin/and
-share/examples/and/and.conf
-share/examples/and/and.priorities
