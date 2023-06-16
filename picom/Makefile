@@ -35,6 +35,7 @@ post-install:
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"
+BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=21.3.7
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
