@@ -5,10 +5,10 @@
 #              Wed Jun 14 07:16:37 CDT 2023               #
 ###########################################################
 
-DISTNAME=	devpub-mount-0.0.0.7
+DISTNAME=	devpub-mount-0.0.0.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	bb6cae761e845b127aef92c8dd8862e734e7ce94
+GITHUB_TAG=	9a27b3df9a9d71f405da59288d43da090221af94
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/devpub-mount/
