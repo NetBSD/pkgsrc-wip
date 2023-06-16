@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (devpub-mount-0.0.0.5-22a208b6126f4f35b3af7cd04bfbe51b3b78453e.tar.gz) = 63c909abe2b1e64aa6862e46a117ff57e182466a02b72903a8d8dffef85dc443
-SHA512 (devpub-mount-0.0.0.5-22a208b6126f4f35b3af7cd04bfbe51b3b78453e.tar.gz) = bfc0da724e595656abb859e1f175b1d12057ede14f8b9c30e8aa6d6d193947dc0a9a3b51c3890046f684aad4eb3c4561569dbd57275c43a72909fc9d8c58abb9
-Size (devpub-mount-0.0.0.5-22a208b6126f4f35b3af7cd04bfbe51b3b78453e.tar.gz) = 2352 bytes
+BLAKE2s (devpub-mount-0.0.0.7-bb6cae761e845b127aef92c8dd8862e734e7ce94.tar.gz) = 339d95d3fc5aa98880f16afd0c216ecf7938c1ed7cbeb8659eecb81c6edfe94d
+SHA512 (devpub-mount-0.0.0.7-bb6cae761e845b127aef92c8dd8862e734e7ce94.tar.gz) = adf2f790d6fd278417e7a37664de9d03cb19232896c29ff49e4862ecaf2eb827e80c3ebef645567289eb7b9e91f7d5ee7ff799d602d661a8df0f64bb541560ba
+Size (devpub-mount-0.0.0.7-bb6cae761e845b127aef92c8dd8862e734e7ce94.tar.gz) = 3189 bytes

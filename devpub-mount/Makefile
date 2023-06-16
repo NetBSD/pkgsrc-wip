@@ -5,10 +5,10 @@
 #              Wed Jun 14 07:16:37 CDT 2023               #
 ###########################################################
 
-DISTNAME=	devpub-mount-0.0.0.5
+DISTNAME=	devpub-mount-0.0.0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	22a208b6126f4f35b3af7cd04bfbe51b3b78453e
+GITHUB_TAG=	bb6cae761e845b127aef92c8dd8862e734e7ce94
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/devpub-mount/
@@ -22,12 +22,13 @@ EGDIR=		${PREFIX}/share/examples/devpub-mount
 
 CONF_FILES=	${EGDIR}/devpub-mount.conf.sample ${PREFIX}/etc/devpub-mount.conf
 
-INSTALLATION_DIRS=	sbin share/examples/devpub-mount share/devpub-mount
+INSTALLATION_DIRS=	sbin share/examples/devpub-mount share/devpub-mount ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/devpub-mount ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/devpub-mount.conf \
 		${DESTDIR}${EGDIR}/devpub-mount.conf.sample
 	${INSTALL_DATA} ${WRKSRC}/03-devpub-mount ${DESTDIR}${DATADIR}
+	${INSTALL_MAN} ${WRKSRC}/Man/*.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
