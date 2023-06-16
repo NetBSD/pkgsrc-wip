@@ -1,22 +1,19 @@
 # $NetBSD: Makefile,v 1.8 2015/09/07 19:16:42 jonthn Exp $
 
-DISTNAME=	Bear-2.1.1
+DISTNAME=	Bear-3.1.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rizsotto/}
-GITHUB_PROJECT=	Bear
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rizsotto/Bear
-COMMENT=	Bear is a tool to generate compilation database
+COMMENT=	Tool to generate compilation database
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	pkg-config
 
-SUBST_CLASSES+=			py_interpreter
-SUBST_STAGE.py_interpreter=	post-extract
-SUBST_FILES.py_interpreter+=	bear/main.py.in
-SUBST_SED.py_interpreter=	-e "s,/usr/bin/env python,${PYTHONBIN},g"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,5 +23,12 @@ PLIST_SUBST+=	LIBEXT=dylib
 PLIST_SUBST+=	LIBEXT=so
 .endif
 
+.include "../../devel/googletest/buildlink3.mk"
+.include "../../devel/spdlog/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../net/grpc/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
