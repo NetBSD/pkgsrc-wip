@@ -4545,6 +4545,7 @@ SUBDIR+=	py-sas7bdat
 SUBDIR+=	py-sasa
 SUBDIR+=	py-sbapp
 SUBDIR+=	py-scalpy
+SUBDIR+=	py-scan-build
 SUBDIR+=	py-scanapi
 SUBDIR+=	py-scanless
 SUBDIR+=	py-schema

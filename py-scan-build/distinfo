@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (scan-build-2.0.20.tar.gz) = 0b192e9b43298bf4c708d9fe0ea20e77e9929138db7ab6f8821f0fc43c8d45fd
+SHA512 (scan-build-2.0.20.tar.gz) = 96d183bf74cce73600caaf8e3dd4728f52ead1d5f62b75b2a44201e927a58ad58b1665d838464a156f2c384dd3320167338904181ff05ebc60575ed11c9ec2d0
+Size (scan-build-2.0.20.tar.gz) = 46386 bytes

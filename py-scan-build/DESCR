@@ -1,0 +1,5 @@
+A package designed to wrap a build so that all calls to gcc/clang
+are intercepted and logged into a compilation database and/or piped
+to the clang static analyzer. Includes intercept-build tool, which
+logs the build, as well as scan-build tool, which logs the build
+and runs the clang static analyzer on it.

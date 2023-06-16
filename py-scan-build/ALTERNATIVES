@@ -1,0 +1,7 @@
+bin/analyze-build @PREFIX@/bin/analyze-build-@PYVERSSUFFIX@
+bin/analyze-c++ @PREFIX@/bin/analyze-c++-@PYVERSSUFFIX@
+bin/analyze-cc @PREFIX@/bin/analyze-cc-@PYVERSSUFFIX@
+bin/intercept-build @PREFIX@/bin/intercept-build-@PYVERSSUFFIX@
+bin/intercept-c++ @PREFIX@/bin/intercept-c++-@PYVERSSUFFIX@
+bin/intercept-cc @PREFIX@/bin/intercept-cc-@PYVERSSUFFIX@
+bin/scan-build @PREFIX@/bin/scan-build-@PYVERSSUFFIX@
