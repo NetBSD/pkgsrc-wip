@@ -14,6 +14,17 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-FxA-[0-9]*:../../www/py-FxA
 DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
+# for tokenserver
+DEPENDS+=	${PYPKGPREFIX}-boto>=2.49.0:../../net/py-boto
+DEPENDS+=	${PYPKGPREFIX}-hawkauthlib>=2.0.0:../../security/py-hawkauthlib
+DEPENDS+=	${PYPKGPREFIX}-mysqlclient>=2.1.1:../../databases/py-mysqlclient
+#pyramid==2.0.1
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.46:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-testfixtures>=0:../../wip/py-testfixtures
+DEPENDS+=	${PYPKGPREFIX}-tokenlib>=2.0.0:../../security/py-tokenlib
+DEPENDS+=	${PYPKGPREFIX}-BrowserID>=0.14.0:../../www/py-BrowserID
+
+CARGO_ARGS+=	build --release ${DEFAULT_CARGO_ARGS} --no-default-features --features=syncstorage-db/mysql
 
 .include "cargo-depends.mk"
 
@@ -30,7 +41,8 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
-INSTALLATION_DIRS=	bin share/doc/syncstorage-rs share/examples/syncstorage-rs
+INSTALLATION_DIRS+=	bin share/doc/syncstorage-rs share/examples/syncstorage-rs
+INSTALLATION_DIRS+=	lib/tokenserver
 
 post-extract:
 	mv ${WRKDIR}/deadpool* ${WRKDIR}/deadpool
@@ -38,10 +50,11 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/syncserver ${DESTDIR}${PREFIX}/bin
 	# 'Makefile' has logic how to start this
-	${INSTALL_PROGRAM} ${WRKSRC}/Makefile ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
-	${INSTALL_PROGRAM} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
-	${INSTALL_PROGRAM} ${WRKSRC}/docs/config.md ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
-	${INSTALL_PROGRAM} ${WRKSRC}/config/local.example.toml ${DESTDIR}${PREFIX}/share/examples/syncstorage-rs
+	${INSTALL_DATA} ${WRKSRC}/Makefile ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
+	${INSTALL_DATA} ${WRKSRC}/docs/config.md ${DESTDIR}${PREFIX}/share/doc/syncstorage-rs
+	${INSTALL_DATA} ${WRKSRC}/config/local.example.toml ${DESTDIR}${PREFIX}/share/examples/syncstorage-rs
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/tokenserver/*.* ${DESTDIR}${PREFIX}/lib/tokenserver
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/clang/buildlink3.mk"
