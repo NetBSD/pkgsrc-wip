@@ -14,6 +14,7 @@ DEPENDS=	npmount>0:../../wip/npmount
 DEPENDS+=	devpub-mount>0:../../wip/devpub-mount
 DEPENDS+=	auto-admin>=0.7.17:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
+# Maybe use qt5/6 options.  See net/wireshark.
 DEPENDS+=	qt5-qttools>0:../../x11/qt5-qttools
 
 SUBST_CLASSES+=		prefix
