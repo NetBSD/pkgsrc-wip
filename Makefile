@@ -4411,6 +4411,7 @@ SUBDIR+=	py-pypol
 SUBDIR+=	py-pypot
 SUBDIR+=	py-pyqu
 SUBDIR+=	py-pyquante
+SUBDIR+=	py-pyramid
 SUBDIR+=	py-pyrit
 SUBDIR+=	py-pyrr
 SUBDIR+=	py-pysal
