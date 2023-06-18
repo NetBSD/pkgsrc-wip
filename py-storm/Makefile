@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-timeline>=0.0.7../../devel/py-timeline
 TEST_DEPENDS+=	${PYPKGPREFIX}-transaction>=1.0.0:../../wip/py-transaction
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.component>=4.6.2../../devel/py-zope.component
-TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeConfiguration>=4.4.0../../devel/py-ZopeConfiguration
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.configuration>=4.4.0../../devel/py-zope.configuration
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.1.2../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeSecurity>=5.1.1../../wip/py-zopeSecurity
 
