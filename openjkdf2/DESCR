@@ -1,0 +1,5 @@
+OpenJKDF2 is a function-by-function reimplementation of the game
+engine for "Dark Forces 2" in C.
+
+OpenJKDF2 does *not* include any original game assets; a valid copy
+of JKDF2 is *required*

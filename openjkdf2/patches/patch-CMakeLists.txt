@@ -1,0 +1,107 @@
+$NetBSD$
+
+* Defining _XOPEN_SOURCE means that some dirent.h definitions are omitted,
+  but they are used by the engine. So omit the definition.
+* Use the pkgsrc libraries instead of compiling 3rd party sources.
+
+--- CMakeLists.txt.orig	2023-06-16 02:36:07.000000000 +0000
++++ CMakeLists.txt
+@@ -31,11 +31,12 @@ set(PLAT_WASM FALSE CACHE BOOL "Emscript
+ set(PLAT_HOOKS FALSE CACHE BOOL "Hook DLL target")
+ set(PLAT_MSVC FALSE CACHE BOOL "Windows 64-bit MSVC")
+ set(PLAT_ANDROID_ARM64 FALSE CACHE BOOL "Android AArch64")
++set(PLAT_PKGSRC FALSE CACHE BOOL "Target pkgsrc")
+ set(PLAT_AUTO FALSE CACHE BOOL "Target the host OS")
+ 
+ # Set PLAT_AUTO if a platform isn't specifically selected
+ if(NOT PLAT_LINUX_32 AND NOT PLAT_LINUX_64 AND NOT PLAT_MACOS AND NOT PLAT_MACOS_X86_64 AND NOT PLAT_MINGW_X86_64 AND NOT PLAT_WASM AND NOT PLAT_HOOKS)
+-    set(PLAT_AUTO TRUE)
++#    set(PLAT_AUTO TRUE)
+ endif()
+ 
+ # Internal targets: Stuff like OpenGL vs D3D, OpenAL vs null sound, etc
+@@ -105,7 +106,7 @@ if(PLAT_LINUX_32)
+     message( STATUS "Targeting Linux 32-bit" )
+     set(BIN_NAME "openjkdf2")
+     
+-    add_definitions(-D_XOPEN_SOURCE=500)
++#    add_definitions(-D_XOPEN_SOURCE=500)
+     add_definitions(-D_DEFAULT_SOURCE)
+ 
+     set(TARGET_USE_PHYSFS TRUE)
+@@ -135,7 +136,7 @@ elseif(PLAT_LINUX_64)
+     set(BIN_NAME "openjkdf2")
+ 
+     add_definitions(-DARCH_64BIT)
+-    add_definitions(-D_XOPEN_SOURCE=500)
++#    add_definitions(-D_XOPEN_SOURCE=500)
+     add_definitions(-D_DEFAULT_SOURCE)
+ 
+     set(TARGET_USE_PHYSFS TRUE)
+@@ -365,6 +366,37 @@ elseif(PLAT_MSVC)
+     set(TARGET_COMPILE_FREEGLUT TRUE)
+ 
+     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /std:c11")
++elseif(PLAT_PKGSRC)
++    message( STATUS "Targeting pkgsrc" )
++    set(BIN_NAME "openjkdf2")
++
++    add_compile_definitions(SDL2_RENDER)
++    add_compile_definitions(STDSOUND_OPENAL)
++    if(PLAT_PKGSRC64)
++        add_definitions(-DARCH_64BIT)
++    endif()
++#    add_definitions(-D_XOPEN_SOURCE=500)
++    add_definitions(-D_DEFAULT_SOURCE)
++    add_definitions(-DLINUX)
++    add_definitions(-DPLATFORM_LINUX)
++    add_definitions(-DPLATFORM_NO_CACERT_BLOB)
++
++    set(TARGET_USE_PHYSFS TRUE)
++    set(TARGET_USE_LIBSMACKER TRUE)
++    set(TARGET_USE_LIBSMUSHER TRUE)
++    set(TARGET_USE_SDL2 TRUE)
++    set(TARGET_USE_OPENGL TRUE)
++    set(TARGET_USE_OPENAL TRUE)
++    set(TARGET_POSIX TRUE)
++    set(TARGET_PKGSRC TRUE)
++    set(TARGET_NO_BLOBS TRUE)
++    set(TARGET_CAN_JKGM TRUE)
++    set(OPENJKDF2_NO_ASAN TRUE)
++    
++    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -std=c11 -fshort-wchar -Wno-implicit-function-declaration -Wno-unused-variable -Wno-parentheses ")
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fshort-wchar -Wno-implicit-function-declaration -Wno-unused-variable -Wno-parentheses ")
++    add_link_options(-fshort-wchar)
++
+ endif()
+ 
+ if(NOT CMAKE_BUILD_TYPE)
+@@ -373,7 +405,7 @@ endif()
+ 
+ # CMake module paths
+ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules")
+-if(TARGET_LINUX OR TARGET_MACOS OR PLAT_MSVC OR TARGET_ANDROID)
++if(TARGET_LINUX OR TARGET_MACOS OR PLAT_MSVC OR TARGET_ANDROID OR TARGET_PKGSRC)
+     list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules_linux")
+ endif()
+ 
+@@ -478,7 +510,7 @@ if(TARGET_MACOS)
+     endif()
+ endif()
+ 
+-if(TARGET_LINUX)
++if(TARGET_LINUX OR TARGET_PKGSRC)
+     find_package(PkgConfig REQUIRED)
+     pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+     include_directories(${GTK3_INCLUDE_DIRS})
+@@ -727,6 +759,10 @@ elseif(TARGET_MACOS)
+     # macOS post-build packaging
+     #
+     include(cmake_modules/postcompile_macos.cmake)
++elseif(TARGET_PKGSRC)
++    target_link_libraries(${BIN_NAME} PRIVATE -lm -lpng -lz -lSDL2 -lSDL2_mixer -lGL -lGLEW -lopenal)
++    target_link_libraries(${BIN_NAME} PRIVATE nlohmann_json::nlohmann_json)
++    target_link_libraries(${BIN_NAME} PRIVATE ${GTK3_LIBRARIES})
+ else()
+     message(FATAL_ERROR "Unknown target! Cannot continue.")
+ endif()

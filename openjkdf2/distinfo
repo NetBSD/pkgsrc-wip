@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (OpenJKDF2-0.9.0.tar.gz) = 1735b8ea81e78d5ed0ba4bd0da0e0da532f6ba81a6c03bea16f09d0641d99acf
+SHA512 (OpenJKDF2-0.9.0.tar.gz) = ec811efdbf2b4921b1dd54db999eb8c1e61c83dbab64c4d4f08b880763f497f310cedd953323d6d7efa086dc805db1653ca76502c874438b4e5fe0dbe959674f
+Size (OpenJKDF2-0.9.0.tar.gz) = 22839937 bytes
+SHA1 (patch-CMakeLists.txt) = 865ba339b1d3e56c629fcd688910ba0d322d7f54
+SHA1 (patch-cmake__modules_config__platform__deps.cmake) = 7b2a7c8da9a94ae800d1f760023ee008de89e8c8
+SHA1 (patch-cmake__modules_precompile__globals.cmake) = b814ddadf736a991f3b68f74c3ad1b7b740bd417
+SHA1 (patch-cmake__modules_version.cmake) = fef21be451065a62382a4970149fa4bdfdea17a8
+SHA1 (patch-src_jk.h) = 5e1182ebe845cf23521e698acbea3e44a0438260
