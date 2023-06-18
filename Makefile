@@ -5544,6 +5544,7 @@ SUBDIR+=	thawab
 SUBDIR+=	thcrut
 SUBDIR+=	theama
 SUBDIR+=	thedarkmod
+SUBDIR+=	theforceengine
 SUBDIR+=	thepeg
 SUBDIR+=	thunderbird
 SUBDIR+=	thunderbird68-enigmail

@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (TheForceEngine-1.09.200.tar.gz) = 331302749e1c47cb936d7a36f718688de4bfa636048044edad76d4d28f8c6eee
+SHA512 (TheForceEngine-1.09.200.tar.gz) = 3382a36cc5790107073e906d2f451cf216d9408760118f0578f6af630adb6d70207d838756270b7fc8015de4eae54b1b71ff62d06a6aa68f4a9f9afd8897833a
+Size (TheForceEngine-1.09.200.tar.gz) = 20559146 bytes
+SHA1 (patch-TheForceEngine_TFE__DarkForces_darkForcesMain.cpp) = 9ef01755114c1e1112cb3ee70952fa2fd06c1efe
+SHA1 (patch-TheForceEngine_TFE__System_CrashHandler_crashHandlerLinux.cpp) = 0a44e0141e508365e25c7b5577360175a1f36d9d
+SHA1 (patch-TheForceEngine_TFE__System_system.cpp) = 9443243c036b8d5676818dc76ae44c0aea557df3
+SHA1 (patch-TheForceEngine_TFE__System_types.h) = 9ac18c31c65faf41572d8452bf6a9f22adddffe1
+SHA1 (patch-TheForceEngine_main.cpp) = db84d34d7a0ec84020441ae82bacda4185d62e3b
