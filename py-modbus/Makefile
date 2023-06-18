@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2.0.4:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-pep8>=1.7.0:../../devel/py-pep8
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.4.0:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.4.0:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.1.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.2.3:../../security/py-asn1

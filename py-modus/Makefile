@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pep8>=1.7.0:../../devel/py-pep8
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.4:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-click>=6.7:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.10:../../devel/py-prompt_toolkit
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.4.0:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.4.0:../../devel/py-zope.interface
 DEPENDS+= 	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.2.3:../../security/py-asn1

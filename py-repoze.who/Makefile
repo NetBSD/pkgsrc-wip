@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.repoze.org/
 COMMENT=	Identification and authentication framework for WSGI
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose

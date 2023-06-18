@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.zope.org/Products/ZODB
 COMMENT=	Transaction management for Python
 LICENSE=	zpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.1:../../devel/py-zope.interface
 
 WRKSRC=		${WRKDIR}/transaction-1.1.1
 USE_LANGUAGES=	# none

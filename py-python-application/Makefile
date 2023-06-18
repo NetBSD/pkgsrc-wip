@@ -10,7 +10,7 @@ HOMEPAGE=	https://ag-projects.com/
 COMMENT=	Basic building blocks for python applications
 LICENSE=	gnu-lgpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.4.1
 
