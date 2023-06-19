@@ -15,7 +15,7 @@ DEPENDS+=	devpub-mount>0:../../wip/devpub-mount
 DEPENDS+=	auto-admin>=0.7.17:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
 # Maybe use qt5/6 options.  See net/wireshark.
-DEPENDS+=	qt5-qttools>0:../../x11/qt5-qttools
+DEPENDS+=	qt6-qttools>0:../../devel/qt6-qttools
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -27,12 +27,12 @@ USE_LANGUAGES=	c c++
 INSTALLATION_DIRS=	bin man/man1
 
 do-configure:
-	(cd ${WRKSRC} && ${PREFIX}/qt5/bin/qmake)
+	(cd ${WRKSRC} && ${PREFIX}/qt6/bin/qmake)
 
 do-install:
 	${INSTALL} -c ${WRKSRC}/qmediamanager ${DESTDIR}${PREFIX}/bin
 	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libxtend/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
