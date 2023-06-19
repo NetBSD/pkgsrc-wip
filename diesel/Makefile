@@ -23,5 +23,5 @@ do-install:
 .include "../../lang/rust/cargo.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../databases/mariadb106-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
