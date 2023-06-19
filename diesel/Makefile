@@ -16,6 +16,10 @@ USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/diesel \
+		${DESTDIR}${PREFIX}/bin
+
 .include "../../lang/rust/cargo.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
