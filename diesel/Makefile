@@ -16,9 +16,8 @@ USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
-DEPENDS+=	postgresql15-[0-9]*:../../databases/postgresql15
-
 .include "../../lang/rust/cargo.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../databases/mariadb106-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
