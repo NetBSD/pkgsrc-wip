@@ -648,6 +648,7 @@ SUBDIR+=	diablo
 SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-freedict-eng-ara
 SUBDIR+=	dict-freedict-eng-fra
+SUBDIR+=	diesel
 SUBDIR+=	digestif
 SUBDIR+=	digitemp
 SUBDIR+=	dillo-devel
