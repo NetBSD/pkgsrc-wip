@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/mopac
+bin/mopac-makpol
+bin/mopac-param
+lib/libmopac.so
+lib/libmopac.so.1

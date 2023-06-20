@@ -2412,6 +2412,7 @@ SUBDIR+=	mono
 SUBDIR+=	mono-git
 SUBDIR+=	mono-zeroconf
 SUBDIR+=	mop
+SUBDIR+=	mopac
 SUBDIR+=	mopac7
 SUBDIR+=	moregroupware
 SUBDIR+=	morse

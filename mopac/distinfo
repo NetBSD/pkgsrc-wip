@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mopac-22.0.6.tar.gz) = 8e8c3e1a696f6c8b5cca182bd216415b95907688d6b5007790cecdf5c43c1108
+SHA512 (mopac-22.0.6.tar.gz) = 52810891ba2cfddf067f672aad7e242752fcb724e5c98dfc80409a8d6598ca0ee93c6698a92fabc6be57cf6fe0829b970589a754ca86e08ccb9be9556b8fcfc4
+Size (mopac-22.0.6.tar.gz) = 15785203 bytes
