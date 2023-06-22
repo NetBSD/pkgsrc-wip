@@ -1,12 +1,13 @@
 # $NetBSD: Makefile,v 1.1 2023/02/05 13:25:26 bsiegert Exp $
 
+GO121_VERSION=	1.21rc2
 .include "../../lang/go/version.mk"
 # Minimum Go version for bootstrapping is 1.17.13.
 # Go 1.17 has some concurrency issues that have been fixed in 1.18.
 GO_BOOTSTRAP_REQD=	118
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	120
+GOVERSSUFFIX=	121
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
@@ -32,12 +33,15 @@ REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/cgo/fortran/test.bash
 REPLACE_BASH+=	misc/wasm/go_js_wasm_exec
+REPLACE_BASH+=	misc/wasm/go_wasip1_wasm_exec
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
 REPLACE_BASH+=	src/cmd/compile/internal/ssa/_gen/cover.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
+REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/plan9/mkall.sh
+REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/plan9/mkerrors.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
 REPLACE_BASH+=	src/crypto/internal/boring/build.sh
@@ -45,6 +49,7 @@ REPLACE_BASH+=	src/crypto/internal/boring/build-boring.sh
 REPLACE_BASH+=	src/crypto/internal/boring/build-goboring.sh
 REPLACE_BASH+=	src/go/doc/comment/mkstd.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
+REPLACE_BASH+=	src/cmp.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
