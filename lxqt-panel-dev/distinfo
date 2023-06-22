@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2023/04/18 11:59:59 pin Exp $
-
-SHA1 (patch-autostart_CMakeLists.txt) = 7c14eb2f2c29b2bcee8833d7d02fc4e1b5a37e57
-SHA1 (patch-menu_CMakeLists.txt) = 7df6026d93be779d2ed05e6ac937ddbcbbaa1d8f
-SHA1 (patch-panel_CMakeLists.txt) = 15531e68fa1939a793e6abcecb7ca714488142b7
