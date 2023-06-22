@@ -4,7 +4,7 @@
 #
 # PROVIDE: upskillpower
 # REQUIRE: mountcritremote
-# BEFORE: upsdriver altq downinterfaces 
+# BEFORE: upsdriver altqd downinterfaces 
 # KEYWORD: shutdown
 
 # This script shuts off power, if upsmon has decided to shutdown
