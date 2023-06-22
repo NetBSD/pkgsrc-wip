@@ -2,3 +2,4 @@
   - Resolve manpage building
   - Test forced shutdown and uncomment upsdrvctl shutdown
  
+  - Document why altqd is in files/upskillpower.sh
