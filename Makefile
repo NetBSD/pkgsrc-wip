@@ -394,6 +394,7 @@ SUBDIR+=	cardpeek
 SUBDIR+=	carla
 SUBDIR+=	cartago
 SUBDIR+=	casady-fonts
+SUBDIR+=	cask
 SUBDIR+=	castget
 SUBDIR+=	cataclysm-dda
 SUBDIR+=	cataclysm-dda-sdl
