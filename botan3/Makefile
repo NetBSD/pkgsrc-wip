@@ -1,19 +1,24 @@
 # $NetBSD$
 
-DISTNAME=	Botan-3.0.0-alpha0
-PKGNAME=	${DISTNAME:S/n/n3/:S/-alpha0//:tl}
+DISTNAME=	Botan-3.0.0
+PKGNAME=	${DISTNAME:S/Botan/botan3/}
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	nros@NetBSD.org
 HOMEPAGE=	https://botan.randombit.net/
-COMMENT=	Portable, easy to use, and efficient C++ crypto library
+COMMENT=	Portable, easy to use, and efficient C++ crypto library (v3)
 LICENSE=	2-clause-bsd
+
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
+# actually, 11, but that version is not in pkgsrc
+# GCC_REQD+=		11
+GCC_REQD+=		12
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -40,20 +45,17 @@ CONFIGURE_ARGS+=	--cc-bin=${CXX} --cc=clang
 CONFIGURE_ARGS+=	--cc=gcc
 .endif
 
-PLIST_VARS+=		x86
 .if ${MACHINE_ARCH} == "x86_64"
-PLIST.x86=		yes
 CONFIGURE_ARGS+=	--cpu=amd64
 .elif ${MACHINE_ARCH} == "i386"
-PLIST.x86=		yes
 CONFIGURE_ARGS+=	--cpu=i386
 .elif ${MACHINE_ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--cpu=ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_ARGS+=	--cpu=ppc64
-.elif !empty(MACHINE_ARCH:Maarch64*)
+.elif ${MACHINE_ARCH:Maarch64*}
 CONFIGURE_ARGS+=	--cpu=arm64
-.elif !empty(MACHINE_ARCH:Mearm*)
+.elif ${MACHINE_ARCH:Mearm*}
 CONFIGURE_ARGS+=	--cpu=arm32
 .endif
 
@@ -62,8 +64,6 @@ MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
 TEST_TARGET=	check
-
-DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"

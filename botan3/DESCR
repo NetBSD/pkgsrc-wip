@@ -8,4 +8,5 @@ cryptographic tasks to be completed with just a few lines of code.
 Assembly optimizations for common CPUs, including x86, x86-64, and
 PowerPC, offers further speedups for critical tasks such as SHA-1
 hashing and multiple precision integer operations.
-This package tracks version 3 for Botan.
+
+This package contains major version 3 of the library.
