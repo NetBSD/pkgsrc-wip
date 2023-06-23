@@ -1,2 +1,5 @@
-Fails to build
-https://github.com/cask/cask/issues/588
+Downloads files from ELPA and MELPA during build and install -
+provide them instead, to avoid network traffic after fetch stage..
+
+Installs a symlink to files in $HOME as bin/cask, so package
+doesn't work outside the build environment.

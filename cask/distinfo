@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cask-0.8.8.tar.gz) = 599f4264ec464e6700a341305f05b98fb4dcd68373c0aad080d0cb76bbd0d34a
-SHA512 (cask-0.8.8.tar.gz) = 2708fa431dc17cb5d4fe56f0c73c3089a213d8ff0bca19091ab4ebf26c4e416c0a500a980daa424bf16b54d0e72b004762f5260329189eb4f8e803de38bc0ace
-Size (cask-0.8.8.tar.gz) = 348574 bytes
+BLAKE2s (cask-0.9.0.tar.gz) = fdfa6cc5c9af361f9a209376e9dd19d481ff447ad564439df7bd704325f7fc4e
+SHA512 (cask-0.9.0.tar.gz) = 9e1e9eb0146504fc3ff2dc5358edc59b8157948df4698c7fbec14c28720458cd28b0b9ef9dc34b23a615e5b0a8ef843f9a9bdd9f7030aef797fa3df7864ae46a
+Size (cask-0.9.0.tar.gz) = 280606 bytes

@@ -1,2 +1,10 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+Cask can be likened to venv or maven for Emacs Lisp development,
+although, as with all things emacs, is decidedly less sophisticated
+(but no less arcane).
+
+Cask provisions dependencies within a sandbox via a user-defined
+"Cask" file analogous to requirements-dev.txt or pom.xml.
+
+Cask does not absolve you of having to learn emacs's command flags.
+Cask only constructs the sandbox, one for each version of emacs
+you choose to test.
