@@ -6008,6 +6008,7 @@ SUBDIR+=	zodiac
 SUBDIR+=	zoneminder
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
+SUBDIR+=	qtfm
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB

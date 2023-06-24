@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (qtfm/6.2.1.tar.gz) = a4dca92f14120fb7c7e70e67e0343145527798ed9d6460d3dec445197ac7f4e9
+SHA512 (qtfm/6.2.1.tar.gz) = 911c90a6f9bcfe539aaacf3476d660116f2dc18821b23cc420615be649bbffd530abf640ebf77d80ee85b61779e4844e0bc10f8fd3f3b0686366e6b5372f9f2c
+Size (qtfm/6.2.1.tar.gz) = 410958 bytes
