@@ -1,0 +1,13 @@
+Fossil is a distributed software control system that includes a
+whole palette of useful companion software: for example, bug
+tracking and a wiki.
+
+It allows autosyncing with an upstream before a commit.  fossil is
+a single standalone executable, using bandwidth efficient transfers
+over HTTP. It includes its own HTTP server for providing the
+repository, if needed.
+
+The repository is kept in a sqlite database, only updated with
+atomic commits, which can be checked by fossil itself for consistency.
+
+This package contains the old major version 1, needed by cvs2fossil.

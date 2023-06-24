@@ -923,6 +923,7 @@ SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
+SUBDIR+=	fossil1
 SUBDIR+=	fox
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fpc

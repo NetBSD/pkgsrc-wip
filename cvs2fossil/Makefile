@@ -9,7 +9,7 @@ HOMEPAGE=	https://wiki.NetBSD.org/github/
 COMMENT=	Tool to convert from CVS to fossil
 #LICENSE=	2-clause-bsd AND mit
 
-DEPENDS+=	fossil-[0-9]*:../../devel/fossil
+DEPENDS+=	fossil1-[0-9]*:../../wip/fossil1
 
 WRKSRC=		${WRKDIR}/cvs2fossil
 

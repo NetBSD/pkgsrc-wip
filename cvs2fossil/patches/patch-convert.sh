@@ -30,12 +30,14 @@ Adapt example for pkgsrc paths.
 +time 02-vendorbranches $db
 +time 03-branchtime $db
  rm -f $fossil
- fossil new -A root --date-override "$oldest" $fossil
+-fossil new -A root --date-override "$oldest" $fossil
++fossil1 new -A root --date-override "$oldest" $fossil
  project=eeb7e06236b08dc4b57b6ab3b957fe5756c64f5b
  sqlite3 $fossil 'UPDATE config SET value="'$project'" WHERE name="project-code"'
  initial=$(sqlite3 $fossil 'SELECT uuid FROM blob WHERE rid=1')
 -TMPDIR=. time 04-commit/04-commit -b $initial $db $fossil
 +TMPDIR=. time 04-commit -b $initial $db $fossil
  du -h $fossil
- time fossil rebuild --noverify $fossil
+-time fossil rebuild --noverify $fossil
++time fossil1 rebuild --noverify $fossil
  #TMPDIR=. time sqlite3 $fossil 'pragma synchronous=off; pragma journal_mode=off; vacuum'
