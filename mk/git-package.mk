@@ -85,7 +85,7 @@
 #
 # Keywords: git github
 
-BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
+TOOL_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 
 # Defaults for package-settable variables
 DISTFILES?=		# empty
@@ -249,5 +249,5 @@ _PKG_VARS.git+=		${varbase}.${repo}
 _SYS_VARS.git+=		${varbase}.${repo}
 .  endfor
 .endfor
-_DEF_VARS.git+=		BUILD_DEPENDS USE_TOOLS WARNINGS _GIT_DISTDIR _GIT_CHECKOUT_FLAGS
+_DEF_VARS.git+=		TOOL_DEPENDS USE_TOOLS WARNINGS _GIT_DISTDIR _GIT_CHECKOUT_FLAGS
 _USE_VARS.git+=		PKGBASE DISTDIR WRKDIR PREFIX _GIT_PKGVERSION

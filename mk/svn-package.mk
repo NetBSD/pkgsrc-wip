@@ -50,7 +50,7 @@
 #
 # Keywords: svn subversion
 
-BUILD_DEPENDS+=		subversion-base-[0-9]*:../../devel/subversion-base
+TOOL_DEPENDS+=		subversion-base-[0-9]*:../../devel/subversion-base
 
 # Defaults for package-settable variables
 DISTFILES?=		# empty
@@ -172,7 +172,7 @@ _VARGROUPS+=		svn
 _USER_VARS.svn+=	CHECKOUT_DATE
 _PKG_VARS.svn+=		SVN_REPO SVN_REVISION SVN_EXTRACTDIR SVN_REPOSITORIES
 _SYS_VARS.svn+=		DISTFILES PKGREVISION
-_DEF_VARS.svn+=		USE_TOOLS WRKSRC BUILD_DEPENDS
+_DEF_VARS.svn+=		USE_TOOLS WRKSRC TOOL_DEPENDS
 _DEF_VARS.svn+=		_SVN_DISTDIR _SVN_CONFIG_DIR
 _USE_VARS.svn+=		DISTDIR PKGBASE WRKDIR PREFIX
 .for repo in ${SVN_REPOSITORIES}

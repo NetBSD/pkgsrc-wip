@@ -61,7 +61,7 @@
 #
 # Keywords: fossil
 
-BUILD_DEPENDS+=		fossil-[0-9]*:../../devel/fossil
+TOOL_DEPENDS+=		fossil-[0-9]*:../../devel/fossil
 
 DISTFILES?=		# empty
 .if defined(CHECKOUT_DATE)
@@ -175,4 +175,4 @@ _SYS_VARS.fossil+=	${varbase}.${repo}
 .  endfor
 .endfor
 _USE_VARS.fossil+=	DISTNAME PKGBASE PKGNAME WRKDIR PREFIX DISTDIR
-_IGN_VARS.fossil+=	BUILD_DEPENDS
+_IGN_VARS.fossil+=	TOOL_DEPENDS

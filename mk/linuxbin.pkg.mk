@@ -208,7 +208,7 @@ MESSAGE_SUBST+=		EMULDIR=${EMULDIR:Q} EMULSUBDIR=${EMULSUBDIR:Q} \
 
 PLIST_SRC?=		${WRKDIR}/PLIST_DYNAMIC
 RPM2PKG?=		${PREFIX}/sbin/rpm2pkg
-BUILD_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
+TOOL_DEPENDS+=		rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
 .for temp in ${RPMIGNOREPATH}
 RPM2PKGARGS+=		-i ${temp:Q}
