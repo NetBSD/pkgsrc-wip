@@ -16,7 +16,7 @@ PKG_SUGGESTED_OPTIONS=	filter-design
 
 .if !empty(PKG_OPTIONS:Mninja-build)
 CMAKE_ARGS+=	-GNinja
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 do-build:
 	(cd ${WRKSRC}/build; ninja)

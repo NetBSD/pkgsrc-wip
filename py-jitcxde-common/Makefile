@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/neurophysik/jitcxde_common
 COMMENT=	Common code for JiTC*DE
 #LICENSE=	# TODO: (see mk/license.mk)
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 #DEPENDS+=	${PYPKGPREFIX}-symengine>=0.3.1.dev0:../../category/py-symengine
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 

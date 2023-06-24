@@ -10,14 +10,14 @@ HOMEPAGE=	https://altair-viz.github.io/
 COMMENT=	Altair: A declarative statistical visualization library for Python
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-black>=20.8:../../textproc/py-black
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
-BUILD_DEPENDS+=		${PYPKGPREFIX}-ipython>=0:../../devel/py-ipython
-BUILD_DEPENDS+=		${PYPKGPREFIX}-flake8>=3.3.0:../../devel/py-flake8
-BUILD_DEPENDS+=		${PYPKGPREFIX}-typing-extensions>=4.0.1:../../devel/py-typing-extensions
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
-BUILD_DEPENDS+=		${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-BUILD_DEPENDS+=		${PYPKGPREFIX}-recommonmark>=0.6.0:../../wip/py-recommonmark
+TOOL_DEPENDS+=		${PYPKGPREFIX}-black>=20.8:../../textproc/py-black
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
+TOOL_DEPENDS+=		${PYPKGPREFIX}-ipython>=0:../../devel/py-ipython
+TOOL_DEPENDS+=		${PYPKGPREFIX}-flake8>=3.3.0:../../devel/py-flake8
+TOOL_DEPENDS+=		${PYPKGPREFIX}-typing-extensions>=4.0.1:../../devel/py-typing-extensions
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=		${PYPKGPREFIX}-recommonmark>=0.6.0:../../wip/py-recommonmark
 DEPENDS+=		${PYPKGPREFIX}-entrypoints>=0.3:../../devel/py-entrypoints
 DEPENDS+=		${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 DEPENDS+=		${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema

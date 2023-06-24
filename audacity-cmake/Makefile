@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 # AND cc-by-v3.0-license
 
 WRKSRC=		${WRKDIR}/audacity-${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config msgfmt msgmerge

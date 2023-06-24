@@ -12,7 +12,7 @@ HOMEPAGE=	https://sourceforge.net/projects/lmdbg/
 COMMENT=	Stacktracing library similar to glibc backtrace(3)
 LICENSE=	mit
 
-BUILD_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
+TOOL_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
 
 ONLY_FOR_COMPILER=	gcc icc
 NOT_FOR_PLATFORM=	Darwin-*-*

@@ -10,7 +10,7 @@ HOMEPAGE=	http://smspower.org/
 COMMENT=	Meka is a multi-machine 8 bit emulator
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	nasm>=2.0:../../devel/nasm
+TOOL_DEPENDS+=	nasm>=2.0:../../devel/nasm
 
 BUILD_TARGET=	exe
 

@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=	rhythmbox>=0.11.6:../../audio/rhythmbox
+TOOL_DEPENDS+=	rhythmbox>=0.11.6:../../audio/rhythmbox
 
 INSTALLATION_DIRS=	share/pidgin-rhythmbox
 

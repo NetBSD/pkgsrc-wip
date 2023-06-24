@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	# none
 USE_TOOLS+=	intltool
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 
 DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3

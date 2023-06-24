@@ -10,7 +10,7 @@ MAINTAINER=		carton@Ivy.NET
 HOMEPAGE=		http://openscep.othello.ch/
 COMMENT=		CA glue for Cisco SCEP
 
-BUILD_DEPENDS+=		w3m>=0.5.1:../../www/w3m
+TOOL_DEPENDS+=		w3m>=0.5.1:../../www/w3m
 
 
 .include "../../mk/bsd.prefs.mk"

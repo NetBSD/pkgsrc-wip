@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == i386
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
 
 YESTERDAY!=	expr `date +%s` - 86399

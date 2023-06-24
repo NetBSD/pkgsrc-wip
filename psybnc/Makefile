@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=	${WRKDIR}/psybnc
 
-BUILD_DEPENDS+=		glib-[0-9]*:../../devel/glib
+TOOL_DEPENDS+=		glib-[0-9]*:../../devel/glib
 
 USE_TOOLS+=	gmake
 

@@ -13,9 +13,9 @@ COMMENT=	Perl interface to Plucene
 DEPENDS+=	p5-PathTools>=1.2:../../devel/p5-PathTools
 DEPENDS+=	p5-Plucene>=1.09:../../wip/p5-Plucene
 DEPENDS+=	p5-Time-Piece-Range>=1.0:../../wip/p5-Time-Piece-Range
-BUILD_DEPENDS+=	p5-File-Find-Rule>=0.10:../../devel/p5-File-Find-Rule
-BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
-BUILD_DEPENDS+=	p5-Test-Class>=0.03:../../devel/p5-Test-Class
+TOOL_DEPENDS+=	p5-File-Find-Rule>=0.10:../../devel/p5-File-Find-Rule
+TOOL_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
+TOOL_DEPENDS+=	p5-Test-Class>=0.03:../../devel/p5-Test-Class
 
 
 PERL5_MODULE_TYPE=	Module::Build

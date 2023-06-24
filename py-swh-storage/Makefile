@@ -10,7 +10,7 @@ HOMEPAGE=	https://forge.softwareheritage.org/diffusion/DSTO/
 COMMENT=	Software Heritage storage manager
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.2:../../www/py-flask
 #DEPENDS+=	${PYPKGPREFIX}-psycopg2>=0:../../databases/py-psycopg2

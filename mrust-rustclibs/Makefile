@@ -129,8 +129,8 @@ do-install:
 			${DESTDIR}${RUSTCLIBS};				\
 	    done )
 
-BUILD_DEPENDS+=	mrust-rustc>=${SNAPSTAMP}:../../wip/mrust-rustc
-BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
+TOOL_DEPENDS+=	mrust-rustc>=${SNAPSTAMP}:../../wip/mrust-rustc
+TOOL_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
 
 ##.include "../../devel/libatomic/buildlink3.mk"
 ##.include "../../mk/dlopen.buildlink3.mk"

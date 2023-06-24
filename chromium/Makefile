@@ -23,16 +23,16 @@ CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/polly/lib/External/isl/configure
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
-BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
-BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-BUILD_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-BUILD_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-BUILD_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
-BUILD_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
-#BUILD_DEPENDS+=	clang-[0-9]*:../../lang/clang # clang-format
+TOOL_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
+TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+TOOL_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+TOOL_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
+#TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang # clang-format
 
 PYTHON_VERSIONS_ACCEPTED=	27 # python3 not supported.
 

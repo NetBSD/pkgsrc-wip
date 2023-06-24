@@ -26,10 +26,10 @@ SUBST_STAGE.prefix=	post-patch
 SUBST_SED.prefix=	-e "s|/usr|${PREFIX}|g"
 SUBST_SED.prefix+=	-e "s|/local||1"
 
-BUILD_DEPENDS+=	gkrellm>=2.2:../../sysutils/gkrellm
+TOOL_DEPENDS+=	gkrellm>=2.2:../../sysutils/gkrellm
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../wip/xmms2/buildlink3.mk"
-BUILD_DEPENDS+=	gtk2+>=2.6.0:../../x11/gtk2
+TOOL_DEPENDS+=	gtk2+>=2.6.0:../../x11/gtk2
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

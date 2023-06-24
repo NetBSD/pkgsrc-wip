@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/projectmesa/mesa
 COMMENT=	Agent-based modeling (ABM) in Python 3+
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.3:../../devel/py-coverage
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.8.4:../../devel/py-flake8
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.1:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.3:../../devel/py-coverage
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.8.4:../../devel/py-flake8
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.1:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.4.4:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-cookiecutter>=1.7.2:../../devel/py-cookiecutter
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2.4:../../math/py-networkx

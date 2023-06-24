@@ -16,9 +16,9 @@ USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-BUILD_DEPENDS+=	log4cxx-[0-9]*:../../devel/log4cxx
+TOOL_DEPENDS+=	log4cxx-[0-9]*:../../devel/log4cxx
 # or lzmalib?
-BUILD_DEPENDS+=	lzma-[0-9]*:../../archivers/lzma
+TOOL_DEPENDS+=	lzma-[0-9]*:../../archivers/lzma
 
 .include "options.mk"
 

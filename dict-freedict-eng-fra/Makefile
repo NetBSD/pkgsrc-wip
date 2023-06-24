@@ -17,7 +17,7 @@ DICTSRCNAME=	${DISTNAME}
 USE_TOOLS+=		gzip
 
 DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
-BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
+TOOL_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
 
 DICTD_DB_DIR=		${PREFIX}/share/dictd
 INSTALLATION_DIRS+=	${DICTD_DB_DIR}

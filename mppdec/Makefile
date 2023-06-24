@@ -27,7 +27,7 @@ MAKE_FILE=		Makefile.nol
 
 # see TODO
 # .if ${MACHINE_ARCH} == "i386"
-# BUILD_DEPENDS+=		nasm>=0.0:../../devel/nasm
+# TOOL_DEPENDS+=		nasm>=0.0:../../devel/nasm
 # .endif
 
 INSTALLATION_DIRS=	bin

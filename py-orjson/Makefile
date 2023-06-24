@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ijl/orjson
 COMMENT=	Fast, correct Python JSON library
 LICENSE=	apache-2.0 OR mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

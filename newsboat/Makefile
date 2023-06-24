@@ -17,7 +17,7 @@ USE_CURSES=	wide
 
 REPLACE_PERL+=	txt2h.pl
 
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_TARGET=		all doc
 FAKE_NCURSES=		yes
 

@@ -20,6 +20,6 @@ BUILD_MAKE_FLAGS+=LDFLAGS=-L=${LDFLAGS}
 
 MAKE_ENV+=	prefix=${PREFIX}
 
-BUILD_DEPENDS+=	ldc>1.0:../../wip/ldc
+TOOL_DEPENDS+=	ldc>1.0:../../wip/ldc
 
 .include "../../mk/bsd.pkg.mk"

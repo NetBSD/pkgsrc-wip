@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS=	xmlto-[0-9]*:../../textproc/xmlto
 
 PKGCONFIG_OVERRIDE+=	libgamemusic.pc.in
 

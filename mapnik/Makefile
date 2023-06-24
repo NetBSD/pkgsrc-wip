@@ -14,7 +14,7 @@ HOMEPAGE=	https://mapnik.org/
 COMMENT=	Toolkit for mapping applications
 
 NO_CONFIGURE=		yes
-BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
+TOOL_DEPENDS+=		scons>=0.96:../../devel/scons
 DEPENDS+=		dejavu-ttf>=2.19:../../fonts/dejavu-ttf
 USE_LANGUAGES=		c c++
 

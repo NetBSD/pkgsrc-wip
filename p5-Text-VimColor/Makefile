@@ -10,8 +10,8 @@ HOMEPAGE=		https://metacpan.org/release/Text-VimColor
 COMMENT=		Syntax color text in HTML or XML using Vim
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
-BUILD_DEPENDS+=		p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
+TOOL_DEPENDS+=		p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
+TOOL_DEPENDS+=		p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
 
 DEPENDS+=		p5-Path-Class>=0.02:../../devel/p5-Path-Class
 DEPENDS+=		p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir

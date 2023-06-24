@@ -37,7 +37,7 @@ CMAKE_ARGS+=	-DENABLE_SPOTIFY_BLOB=OFF \
 		-DBUILD_WERROR=OFF
 
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake \
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake \
 		pkgconf>=0.9.10:../../devel/pkgconf
 
 DEPENDS+=	qt4-tiff>=4.5.0:../../x11/qt4-tiff \

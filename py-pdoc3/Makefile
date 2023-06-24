@@ -10,7 +10,7 @@ HOMEPAGE=	https://pdoc3.github.io/pdoc/
 COMMENT=	Auto-generate API documentation for Python projects
 LICENSE=	gnu-agpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.5.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.5.0:../../devel/py-setuptools_scm
 
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.1.3:../../devel/py-mako
 

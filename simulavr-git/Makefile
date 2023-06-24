@@ -9,8 +9,8 @@ HOMEPAGE=		https://www.nongnu.org/simulavr/
 COMMENT=		Simulator for Atmel AVR microcontrollers
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-BUILD_DEPENDS+=		avr-libc-[0-9]*:../../wip/avr-libc
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		avr-libc-[0-9]*:../../wip/avr-libc
 
 GIT_FLAGS?=		--depth 1
 
@@ -75,7 +75,7 @@ post-install:
 .include "../../wip/avr-gcc/buildlink3.mk"
 #.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
-# See above BUILD_DEPENDS
+# See above TOOL_DEPENDS
 #.include "../../wip/avr-libc/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"

@@ -18,8 +18,8 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
+TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=       ${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy

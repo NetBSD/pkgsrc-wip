@@ -10,7 +10,7 @@ HOMEPAGE=	https://projects.gnome.org/	# XXX
 COMMENT=	Personal social data server
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

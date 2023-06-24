@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.phpunit.de/
 COMMENT=	PHP regression testing framework for unit tests
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpunit-[0-9]*:../../wip/pear-channel-phpunit
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpunit-[0-9]*:../../wip/pear-channel-phpunit
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-PHP_CodeCoverage>=1.2.7:../../wip/pear-PHP_CodeCoverage
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-PHP_Timer>=1.0.4:../../wip/pear-PHP_Timer

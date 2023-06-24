@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-distlib:../../devel/py-distlib
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib:../../devel/py-distlib
 
 DEPENDS+=	${PYPKGPREFIX}-pint:../../wip/py-pint
 DEPENDS+=	${PYPKGPREFIX}-pytz:../../time/py-pytz

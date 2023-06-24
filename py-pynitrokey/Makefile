@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.org/project/pynitrokey/
 COMMENT=	Python library for Nitrokey devices
 LICENSE=	apache-2.0 AND mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit>=3.8.0:../../devel/py-flit
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit>=3.8.0:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-frozendict-[0-9]*:../../devel/py-frozendict

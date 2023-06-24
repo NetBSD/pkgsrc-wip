@@ -15,7 +15,7 @@ DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
 DEPENDS+=	${PYPKGPREFIX}-anytree-[0-9]*:../../devel/py-anytree
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 

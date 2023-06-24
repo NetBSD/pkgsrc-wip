@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
-BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
+TOOL_DEPENDS+=		scons-[0-9]*:../../devel/scons
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS+=	bin share/applications share/pixmaps
 

@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config gsed
 
-BUILD_DEPENDS+=  gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+TOOL_DEPENDS+=  gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 PYTHON_VERSIONS_ACCEPTED=	27
 

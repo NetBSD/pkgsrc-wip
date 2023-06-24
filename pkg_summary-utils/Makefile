@@ -18,7 +18,7 @@ DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
-BUILD_DEPENDS+=	mk-configure>=0.24.0:../../devel/mk-configure
+TOOL_DEPENDS+=	mk-configure>=0.24.0:../../devel/mk-configure
 
 CONFLICTS+=	awk-pkgsrc-dewey-[0-9]*
 CONFLICTS+=	pkg_src_summary-[0-9]*

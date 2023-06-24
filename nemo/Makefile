@@ -26,8 +26,8 @@ USE_CMAKE=		yes
 
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	gvfs-[0-9]*:../../sysutils/gvfs
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
-BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 REPLACE_PYTHON=	data/merge_action_strings \

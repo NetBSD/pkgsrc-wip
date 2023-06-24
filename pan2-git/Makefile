@@ -10,8 +10,8 @@ HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK3 and GTK2
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		gnome-common>=3.6.0nb1:../../devel/gnome-common
-BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=		gnome-common>=3.6.0nb1:../../devel/gnome-common
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 USE_TOOLS+=		autoconf automake gettext-m4 gmake perl pkg-config
 USE_LIBTOOL=		yes

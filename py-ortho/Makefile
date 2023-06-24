@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-sympy>=1.9:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.6.2:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-seaborn>=0.9.0:../../graphics/py-seaborn

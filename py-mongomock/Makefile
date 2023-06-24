@@ -12,7 +12,7 @@ COMMENT=	Fake pymongo stub for testing simple MongoDB-dependent code
 
 DEPENDS+=	${PYPKGPREFIX}-bson>=0.5.10:../../devel/py-bson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=5.4.5:../../devel/py-pbr
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=5.4.5:../../devel/py-pbr
 
 
 USE_LANGUAGES=	# none

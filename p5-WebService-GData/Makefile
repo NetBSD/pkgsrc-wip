@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 DEPENDS+=	p5-JSON>=2:../../converters/p5-JSON
 DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
-BUILD_DEPENDS+=	p5-Test-Mock-LWP>=0.05:../../devel/p5-Test-Mock-LWP
+TOOL_DEPENDS+=	p5-Test-Mock-LWP>=0.05:../../devel/p5-Test-Mock-LWP
 
 PERL5_PACKLIST=		auto/WebService/GData/.packlist
 

@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS+=		clisp x11
 # Select Lisp backend
 .if !empty(PKG_OPTIONS:Mclisp)
 FASL=			fas
-BUILD_DEPENDS+=		clisp>=2.41:../../lang/clisp
+TOOL_DEPENDS+=		clisp>=2.41:../../lang/clisp
 CONFIGURE_ARGS+=	--with-lisp=clisp
 .endif
 .if !empty(PKG_OPTIONS:Msbcl)

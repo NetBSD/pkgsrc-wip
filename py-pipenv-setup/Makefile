@@ -10,12 +10,12 @@ HOMEPAGE=	https://github.com/Madoshakalaka/pipenv-setup
 COMMENT=	Sync Pipfile/Pipfile.lock to setup.py
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.10:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0.7.0:../../devel/py-test-mypy
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-datadir>=1.3.1:../../devel/py-test-datadir
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
-BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=3.20.1:../../devel/py-tox
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.10:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0.7.0:../../devel/py-test-mypy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-datadir>=1.3.1:../../devel/py-test-datadir
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
+TOOL_DEPENDS+=	${PYPKGPREFIX}-tox>=3.20.1:../../devel/py-tox
 DEPENDS+=	${PYPKGPREFIX}-pipfile>=0.0.2:../../wip/py-pipfile
 DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.3:../../comms/py-colorama

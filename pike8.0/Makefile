@@ -18,8 +18,8 @@ CHECK_SSP=	no
 # so leaving SSP enabled causes problems.
 SSP_SUPPORTED=	no
 
-BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
-BUILD_DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
+TOOL_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
+TOOL_DEPENDS+=		pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	src/configure

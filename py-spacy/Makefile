@@ -15,7 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=     gmake 
 
 
-BUILD_DEPENDS+= ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+= ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 #.include "../../devel/py-setuptools/buildlink3.mk"
 .include "../../wip/py-cymem/buildlink3.mk"

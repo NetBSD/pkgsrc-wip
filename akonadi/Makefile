@@ -9,7 +9,7 @@ LICENSE=	gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	kdesignerplugin-[0-9]*:../../x11/kdesignerplugin
 
 CMAKE_ARGS+=	-DMYSQLD_EXECUTABLE="${PREFIX}/sbin/mysqld"

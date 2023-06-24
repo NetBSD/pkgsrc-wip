@@ -28,8 +28,8 @@ MESON_ARGS+=		-Dbash_completion=false
 PKGCONFIG_OVERRIDE+=	lib/colorhug/colorhug.pc.in
 PKGCONFIG_OVERRIDE+=	lib/colord/colord.pc.in
 
-BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
-BUILD_DEPENDS+=	docbook-xsl-ns-[0-9]*:../../wip/docbook-xsl-ns
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+TOOL_DEPENDS+=	docbook-xsl-ns-[0-9]*:../../wip/docbook-xsl-ns
 
 .include "options.mk"
 

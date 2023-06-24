@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-swh-core>=0.10.0:../../wip/py-swh-core

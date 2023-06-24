@@ -42,7 +42,7 @@ TODAY!=			${DATE} -u +'%Y%m%d'
 GCC_REQD=		4.4
 FLEX_REQD=		2.5.35
 DEPENDS+=		gettext-tools>=0.17:../../devel/gettext-tools
-BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
+TOOL_DEPENDS+=		help2man>=1.36:../../converters/help2man
 
 # XXX Force use of pkgsrc's flex on NetBSD to prevent build failure.
 .if ${OPSYS} == "NetBSD"

@@ -19,7 +19,7 @@ PERL5_PACKLIST=	auto/MojoX/Log/Log4perl/Tiny/.packlist
 
 PERL5_MODULE_TYPE=	Module::Build
 
-BUILD_DEPENDS+=		p5-Module-Build-Tiny-[0-9]*:../../devel/p5-Module-Build-Tiny
+TOOL_DEPENDS+=		p5-Module-Build-Tiny-[0-9]*:../../devel/p5-Module-Build-Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

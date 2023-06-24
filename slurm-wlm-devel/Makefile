@@ -13,7 +13,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
+TOOL_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

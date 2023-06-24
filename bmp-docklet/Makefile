@@ -18,5 +18,5 @@ USE_TOOLS+=		intltool pkg-config
 USE_PKGLOCALEDIR=	YES
 
 .include "../../audio/bmp/buildlink3.mk"
-# XXX Should we use BUILD_DEPENDS instead?
+# XXX Should we use TOOL_DEPENDS instead?
 .include "../../mk/bsd.pkg.mk"

@@ -11,7 +11,7 @@ HOMEPAGE=	http://git.chise.org/elisp/flim/
 COMMENT=	Emacs lisp library for message representation/encoding
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
+TOOL_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/flim \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}

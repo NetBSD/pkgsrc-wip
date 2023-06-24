@@ -14,7 +14,7 @@ COMMENT=	Syncthing discovery server
 LICENSE=	mit
 
 EXTRACT_USING=		bsdtar
-BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
+TOOL_DEPENDS+=		go-[0-9]*:../../lang/go
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c # and go
 GO_SRCPATH=		github.com/syncthing/syncthing

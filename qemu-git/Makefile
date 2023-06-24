@@ -20,7 +20,7 @@ FAKE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
-BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
+TOOL_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure

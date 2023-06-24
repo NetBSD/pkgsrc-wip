@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	zlib/zlib.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
-BUILD_DEPENDS+=	jam>=2.5.2:../../devel/jam
+TOOL_DEPENDS+=	jam>=2.5.2:../../devel/jam
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} \

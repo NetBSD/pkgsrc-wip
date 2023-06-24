@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config perl gmake autoconf213
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
+TOOL_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 

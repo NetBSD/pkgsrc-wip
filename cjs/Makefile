@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-profiler
 
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/mozjs78/buildlink3.mk"

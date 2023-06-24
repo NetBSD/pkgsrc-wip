@@ -71,7 +71,7 @@ PLIST.gdbserver=	YES
 .endif
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
+TOOL_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 
 check-base:
 	${RUN}${_ULIMIT_CMD} cd ${TEST_DIRS} && ${TEST_MAKE_CMD} -j1 check TESTS="gdb.base/*.exp"

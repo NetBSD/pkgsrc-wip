@@ -19,9 +19,9 @@ MAKE_FLAGS+=	LIBDIR=${LIBDIR}
 MAKE_FLAGS+=	MANDIR=${MANDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-BUILD_DEPENDS+=		harec-[0-9]*:../../wip/harec
-BUILD_DEPENDS+=		qbe>=1.1:../../lang/qbe
-BUILD_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
+TOOL_DEPENDS+=		harec-[0-9]*:../../wip/harec
+TOOL_DEPENDS+=		qbe>=1.1:../../lang/qbe
+TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 pre-configure:
 	${RUN} ${CP} -f ${FILESDIR}/config.mk ${WRKSRC}

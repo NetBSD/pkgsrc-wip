@@ -36,7 +36,7 @@ CONFIGURE_ARGS=	--enable-kernel-pfkey \
 		--enable-cmd \
 		--with-group=wheel
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"

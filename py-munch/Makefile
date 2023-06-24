@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Infinidat/munch
 COMMENT=	Dot-accessible dictionary (a la JavaScript objects)
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=3.0:../../devel/py-pbr
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=3.0:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 
 USE_LANGUAGES=	# none

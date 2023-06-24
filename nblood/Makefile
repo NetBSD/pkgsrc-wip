@@ -23,7 +23,7 @@ MAKE_ENV+=	prefix=${PREFIX}
 MAKE_FILE=	GNUmakefile
 
 
-BUILD_DEPENDS=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS=	nasm-[0-9]*:../../devel/nasm
 
 BUILD_MAKE_FLAGS+=	LTO=0 RELEASE=1 USE_LIBVPX=0
 

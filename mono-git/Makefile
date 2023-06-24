@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.mono-project.com/
 COMMENT=	Open source ECMA CLI, C# and .NET implementation
 LICENSE=	mit AND gnu-gpl-v2 AND gnu-lgpl-v2 AND apache-2.0
 
-BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 CONFLICTS=	pnet-[0-9]* mcsim-[0-9]* lc-[0-9]*
 ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR} PLATFORM=
 WRKSRC=		${WRKDIR}/mono

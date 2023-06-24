@@ -13,7 +13,7 @@ HOMEPAGE=	http://freetengwar.sourceforge.net/
 COMMENT=	Family of fonts covering J. R. R. Tolkien's Tengwar script
 LICENSE=	gnu-gpl-v3
 
-#BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
+#TOOL_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

@@ -32,7 +32,7 @@ BUILDLINK_TRANSFORM+=	opt:-std=c++20:-std=c++2a
 # Required for generating a man page.
 # TODO: Pandoc is not portable enough, because GHC isn't. We should
 # probably put a pre-generated man page in ${FILESDIR}.
-BUILD_DEPENDS+=	pandoc-[0-9]*:../../converters/pandoc
+TOOL_DEPENDS+=	pandoc-[0-9]*:../../converters/pandoc
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALL_MAKE_FLAGS+=	bindir=${PREFIX:Q}/bin

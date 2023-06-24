@@ -83,17 +83,17 @@ BUILDLINK_DEPMETHOD.perl+=	full
 
 .if ${PKGPATH} != devel/p5-Module-Build && \
     (${PERL5_MODULE_TYPE} == "Module::Build")
-BUILD_DEPENDS+=		p5-Module-Build>=0.42050:../../devel/p5-Module-Build
+TOOL_DEPENDS+=		p5-Module-Build>=0.42050:../../devel/p5-Module-Build
 .endif
 
 .if ${PKGPATH} != devel/p5-Module-Build-Tiny && \
     (${PERL5_MODULE_TYPE} == "Module::Build::Tiny")
-BUILD_DEPENDS+=		p5-Module-Build-Tiny>=0.23:../../devel/p5-Module-Build-Tiny
+TOOL_DEPENDS+=		p5-Module-Build-Tiny>=0.23:../../devel/p5-Module-Build-Tiny
 .endif
 
 .if ${PKGPATH} != devel/p5-Module-Install && \
     (${PERL5_MODULE_TYPE} == "Module::Install")
-BUILD_DEPENDS+=		p5-Module-Install>=0.91:../../devel/p5-Module-Install
+TOOL_DEPENDS+=		p5-Module-Install>=0.91:../../devel/p5-Module-Install
 .endif
 
 

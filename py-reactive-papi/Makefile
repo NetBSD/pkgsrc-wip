@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.reactivemarkets.com/
 COMMENT=	Reactive Platform flatbuffer api
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 

@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/miracl/MIRACL
 COMMENT=	Multiprecision Integer and Rational Arithmetic C/C++ Library
 
 INSTALLATION_DIRS+=	include/${DISTNAME}
-#BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+#TOOL_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 EXTRACT_OPTS_ZIP+=	-j -aa -L -d ${DISTNAME}
 

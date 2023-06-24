@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freenet.org.nz/python/pywm/
 COMMENT=		Window manager in Python
 
-BUILD_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
+TOOL_DEPENDS=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

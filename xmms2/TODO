@@ -1,6 +1,6 @@
 - Support every possible plugin (src/plugins).
 	# Done with the exception of neuros-cooler-media and sc68.
-	# BUILD_DEPENDS+=	sc68>=2.3.0:../../wip/sc68
+	# TOOL_DEPENDS+=	sc68>=2.3.0:../../wip/sc68
 	# Those need to be packaged.
 - Test coreaudio, mac plugins on Darwin.
 - Test waveout plugin on Interix.

@@ -12,7 +12,7 @@ HOMEPAGE=	http://scipy.org/scipy/scikits/wiki/AnnWrapper
 COMMENT=	Approximate Nearest Neighbor library wrapper for Numpy
 LICENSE=	gnu-lgpl-v3
 
-BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
+TOOL_DEPENDS+=	swig-[0-9]*:../../devel/swig
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.2.dev-r803, uses ConfigParser
 

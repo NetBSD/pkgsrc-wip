@@ -9,8 +9,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-BUILD_DEPENDS+=	sassc-[0-9]*:../../www/sassc
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+TOOL_DEPENDS+=	sassc-[0-9]*:../../www/sassc
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

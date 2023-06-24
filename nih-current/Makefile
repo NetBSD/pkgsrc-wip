@@ -17,7 +17,7 @@ DEPENDS+=	pkg_summary-utils>=0.66.0:../../pkgtools/pkg_summary-utils
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 DEPENDS+=	pkg_install>=20100915:../../pkgtools/pkg_install
 
-BUILD_DEPENDS+=		mk-configure>=0.21.0:../../devel/mk-configure
+TOOL_DEPENDS+=		mk-configure>=0.21.0:../../devel/mk-configure
 
 CONFLICTS=		pkg_status-[0-9]*
 SUPERSEDES=		pkgnih-[0-9]*

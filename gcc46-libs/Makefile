@@ -23,7 +23,7 @@ USE_TOOLS+=	pax
 NO_BUILD=		yes
 
 ## Depend on exactly ${GCC46_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC46_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc46
+TOOL_DEPENDS+=		${GCC_PKGNAME}-${GCC46_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc46
 
 .include "../../mk/bsd.prefs.mk"
 

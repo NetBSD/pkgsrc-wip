@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.ezcomponents.org/docs/tutorials/ConsoleTools
 COMMENT=	Tools to build applications that run on a computer console
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-ezc-[0-9]*:../../wip/pear-channel-ezc
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-ezc-[0-9]*:../../wip/pear-channel-ezc
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Base>=1.8:../../wip/pear-Base
 
 .include "../../lang/php/pear.mk"

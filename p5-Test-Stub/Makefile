@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Test-Stub
 COMMENT=	Simple stubbing library for Perl5
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=	# empty
 

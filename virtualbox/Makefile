@@ -17,9 +17,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
-BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-BUILD_DEPENDS+=	kbuild-[0-9]*:../../devel/kbuild
-BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
+TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=	kbuild-[0-9]*:../../devel/kbuild
+TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
@@ -36,7 +36,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 .if ${OPSYS} == "Linux"
 # Required by Linux build
-BUILD_DEPENDS+=	makeself-[0-9]*:../../archivers/makeself
+TOOL_DEPENDS+=	makeself-[0-9]*:../../archivers/makeself
 .endif
 
 SUBST_CLASSES+=		paths

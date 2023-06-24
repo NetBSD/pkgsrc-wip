@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-profile
 CONFIGURE_ARGS+=	--enable-add-ons=linuxthreads
 CONFIGURE_ARGS+=	--with-headers=${PREFIX}/include
 
-BUILD_DEPENDS+=	linux-kernel-headers-[0-9]*:../../wip/linux-kernel-headers
+TOOL_DEPENDS+=	linux-kernel-headers-[0-9]*:../../wip/linux-kernel-headers
 
 post-extract:
 	(cd ${WRKDIR} && ${MV} linuxthreads ${WRKDIR}/${DISTNAME})

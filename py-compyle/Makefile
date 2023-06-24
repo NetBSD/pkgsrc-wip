@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pypr/compyle
 COMMENT=	Execute a subset of Python on HPC platforms
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.1.3:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-pytools-[0-9]*:../../wip/py-pytools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.5:../../devel/py-test

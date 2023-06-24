@@ -46,7 +46,7 @@ SUBST_SED.xdg+=		-e 's,/etc/xdg,${PKG_SYSCONFDIR}/xdg,g'
 REPLACE_PYTHON+=	src/bin/exactness/exactness_play.in
 REPLACE_PYTHON+=	src/bin/exactness/exactness_record.in
 
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

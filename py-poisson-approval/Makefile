@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/francois-durand/poisson_approval
 COMMENT=	Poisson Approval studies the Poisson Game of Approval Voting
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	# TODO: pytest-runner>=0
+TOOL_DEPENDS+=	# TODO: pytest-runner>=0
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.4.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.2.2:../../graphics/py-matplotlib
 DEPENDS+=	# TODO: python-ternary>=0

@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freenet.org.nz/python/pySpeex/
 COMMENT=		Speex bindings for Python; see speex package for details
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0:../../lang/py-pyrex
+TOOL_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0:../../lang/py-pyrex
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

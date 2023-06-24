@@ -10,7 +10,7 @@ HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Useful functionalities for horde
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Horde_Url-[0-9]*:../../wip/pear-Horde_Url
 
 .include "../../lang/php/pear.mk"

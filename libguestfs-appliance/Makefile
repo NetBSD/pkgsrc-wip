@@ -11,7 +11,7 @@ HOMEPAGE=	http://libguestfs.org/guestfs-building.1.html\#using-a-prebuilt-binary
 COMMENT=	Fixed appliance binaries for libguestfs
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
+TOOL_DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 
 EXTRACT_USING=	bsdtar
 NO_CONFIGURE=	yes

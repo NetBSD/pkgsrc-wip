@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/agronholm/apscheduler
 COMMENT=	In-process task scheduler with Cron-like capabilities
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=2.1:../../time/py-tzlocal

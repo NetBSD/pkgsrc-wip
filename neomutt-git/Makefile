@@ -11,10 +11,10 @@ HOMEPAGE=		https://www.neomutt.org/
 COMMENT=		Fork of mutt with integrated community patches
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
-BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=		w3m-[0-9]*:../../www/w3m
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		w3m-[0-9]*:../../www/w3m
 DEPENDS+=		mime-types-[0-9]*:../../misc/mime-types
 
 USE_TOOLS+=		msgfmt gmake perl:build pkg-config

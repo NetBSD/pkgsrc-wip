@@ -11,8 +11,8 @@ HOMEPAGE=	https://community.kde.org/Alkimia/libalkimia
 COMMENT=	Common finance routines for kde4 applications
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=		automoc4>=0.9.83:../../devel/automoc4
-#BUILD_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=		automoc4>=0.9.83:../../devel/automoc4
+#TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

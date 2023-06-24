@@ -9,7 +9,7 @@ COMMENT=	Worker for the buildbot CI system
 
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.9.0:../../net/py-twisted
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none

@@ -18,7 +18,7 @@ PKGREVISION=		3
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-pinebook/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-pinebook/patches
 
-BUILD_DEPENDS+=		crust-firmware-[0-9]*:../../sysutils/crust-firmware
+TOOL_DEPENDS+=		crust-firmware-[0-9]*:../../sysutils/crust-firmware
 
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i_a64/bl31.bin ${WRKSRC}

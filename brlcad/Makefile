@@ -57,13 +57,13 @@ PKGCONFIG_OVERRIDE+=	src/other/libz/zlib.pc.in
 # What else?
 NOT_PAX_MPROTECT_SAFE+=	brlcad/bin/mged
 
-BUILD_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
-# BUILD_DEPENDS+=	lemon-[0-9]*:../../devel/lemon # built in
-# BUILD_DEPENDS+=	re2c-[0-9]*:../../devel/re2c # built in
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # for xsltproc
-BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	astyle-[0-9]*:../../devel/astyle
+# TOOL_DEPENDS+=	lemon-[0-9]*:../../devel/lemon # built in
+# TOOL_DEPENDS+=	re2c-[0-9]*:../../devel/re2c # built in
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # for xsltproc
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
+TOOL_DEPENDS+=	swig-[0-9]*:../../devel/swig
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 # brlcad builds intermediate tools and uses it to process files to be built
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib

@@ -22,8 +22,8 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_PROGRAM} bin/Supermodel ${DESTDIR}${PREFIX}/bin/Supermodel
 
-BUILD_DEPENDS+=		glu-[0-9]*:../../graphics/glu
+TOOL_DEPENDS+=		glu-[0-9]*:../../graphics/glu
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-BUILD_DEPENDS+=		MesaLib-[0-9]*:../../graphics/MesaLib
+TOOL_DEPENDS+=		MesaLib-[0-9]*:../../graphics/MesaLib
 .include "../../mk/bsd.pkg.mk"

@@ -10,7 +10,7 @@ HOMEPAGE=	https://forge.softwareheritage.org/diffusion/DCORE/
 COMMENT=	Software Heritage core utilities
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2.7:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml

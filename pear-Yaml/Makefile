@@ -9,7 +9,7 @@ HOMEPAGE=	https://symfony.com/components
 COMMENT=	Symfony2 Yaml Component
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-symfony2-[0-9]*:../../wip/pear-channel-symfony
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-symfony2-[0-9]*:../../wip/pear-channel-symfony
 
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"

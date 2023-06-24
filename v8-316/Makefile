@@ -10,7 +10,7 @@ COMMENT=		V8 JavaScript Engine
 HOMEPAGE=		http://code.google.com/p/v8
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
+TOOL_DEPENDS+=		${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake:run

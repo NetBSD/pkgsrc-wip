@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/blambright/qstylizer/
 COMMENT=	Qt Stylesheet Generator for PyQt/PySide
 LICENSE=	mit
 
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=0:../../devel/py-pbr
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=0:../../devel/py-pbr
 DEPENDS+=		${PYPKGPREFIX}-inflection-[0-9]*:../../textproc/py-inflection
 DEPENDS+=		${PYPKGPREFIX}-tinycss2-[0-9]*:../../textproc/py-tinycss2
 

@@ -16,8 +16,8 @@ LICENSE=	mpl-2.0
 WRKSRC=			${WRKDIR}/tilix-1.9.3
 USE_PKGLOCALEDIR=	yes
 
-BUILD_DEPENDS+=	dub-*:../../wip/dub
-BUILD_DEPENDS+= po4a-*:../../textproc/po4a
+TOOL_DEPENDS+=	dub-*:../../wip/dub
+TOOL_DEPENDS+= po4a-*:../../textproc/po4a
 
 USE_TOOLS+=	pkg-config
 

@@ -28,7 +28,7 @@ LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		jabberd2-[0-9]*
 
-BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 TOOL_DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
 
 WRKSRC=			${WRKDIR}/jabberd-${GITHUB_TAG}/jabberd14

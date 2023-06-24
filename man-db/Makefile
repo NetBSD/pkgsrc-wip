@@ -21,7 +21,7 @@ DEPENDS+=		groff-[0-9]*:../../textproc/groff
 .endif
 
 .if !exists(/usr/bin/yacc)
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+TOOL_DEPENDS+=		bison-[0-9]*:../../devel/bison
 .endif
 
 

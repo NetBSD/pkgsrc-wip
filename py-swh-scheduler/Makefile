@@ -10,7 +10,7 @@ HOMEPAGE=	https://forge.softwareheritage.org/diffusion/DSCH/
 COMMENT=	Software Heritage Scheduler
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-celery>=4.3:../../net/py-celery
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click

@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.basho.com/products_riak_overview.php
 COMMENT=		Distributed, highly available data store
 LICENSE=		apache-2.0
 
-BUILD_DEPENDS+=		git-base-[0-9]*:../../devel/git-base
+TOOL_DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

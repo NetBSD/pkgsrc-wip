@@ -24,6 +24,6 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/dub ${DESTDIR}${PREFIX}/bin
 
-BUILD_DEPENDS+=	ldc>1.0:../../wip/ldc
+TOOL_DEPENDS+=	ldc>1.0:../../wip/ldc
 
 .include "../../mk/bsd.pkg.mk"

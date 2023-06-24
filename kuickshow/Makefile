@@ -13,7 +13,7 @@ HOMEPAGE=	https://extragear.kde.org/
 COMMENT=	Very fast and comfortable imageviewer (KDE4)
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++

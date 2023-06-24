@@ -34,11 +34,11 @@ WRKSRC=		${WRKDIR}/src/github.com/influxdata/chronograf
 USE_TOOLS+=	gmake curl
 USE_LANGUAGES+=	c c++
 
-BUILD_DEPENDS+=		go110-1.10.*:../../lang/go110
-BUILD_DEPENDS+=		py27-gyp-[0-9]*:../../devel/gyp
-BUILD_DEPENDS+=		python27-2.7.*:../../lang/python27
-BUILD_DEPENDS+=		npm-6.*.*:../../lang/npm
-BUILD_DEPENDS+=		yarn-1.7.*:../../devel/yarn
+TOOL_DEPENDS+=		go110-1.10.*:../../lang/go110
+TOOL_DEPENDS+=		py27-gyp-[0-9]*:../../devel/gyp
+TOOL_DEPENDS+=		python27-2.7.*:../../lang/python27
+TOOL_DEPENDS+=		npm-6.*.*:../../lang/npm
+TOOL_DEPENDS+=		yarn-1.7.*:../../devel/yarn
 
 # go language executables don't have SSP support
 CHECK_SSP_SKIP=	bin/*

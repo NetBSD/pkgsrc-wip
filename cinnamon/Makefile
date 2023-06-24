@@ -99,7 +99,7 @@ DEPENDS+=	gnome-icon-theme-[0-9]*:../../graphics/gnome-icon-theme
 DEPENDS+=	mate-polkit-[0-9]*:../../security/mate-polkit
 DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
 DEPENDS+=	muffin>=4.6.2:../../wip/muffin
-BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/schemas.mk"

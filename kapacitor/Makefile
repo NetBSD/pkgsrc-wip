@@ -22,7 +22,7 @@ EXTRACT_DIR.${KAPACITOR_DISTNAME}=	${WRKDIR}/src/github.com/influxdata
 WRKSRC=		${WRKDIR}/src/github.com/influxdata/kapacitor
 USE_TOOLS+=	gmake
 
-BUILD_DEPENDS+=			go110-1.10.*:../../lang/go110
+TOOL_DEPENDS+=			go110-1.10.*:../../lang/go110
 
 # go language executables don't have SSP support
 CHECK_SSP_SKIP=	bin/*

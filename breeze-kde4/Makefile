@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v3
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/breeze/distinfo
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config perl
 

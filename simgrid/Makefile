@@ -20,7 +20,7 @@ USE_TOOLS+=	perl
 
 PKGSRC_FORTRAN=	gfortran
 
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 .include "../../devel/libf2c/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"

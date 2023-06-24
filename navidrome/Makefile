@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/navidrome/navidrome/
 COMMENT=	Modern Music Server and Streamer compatible with Subsonic/Airsonic
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm
+TOOL_DEPENDS+=	npm-[0-9]*:../../lang/npm
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config

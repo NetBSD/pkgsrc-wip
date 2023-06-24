@@ -11,7 +11,7 @@ COMMENT=	FormValidator for Catalyst
 
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Data-FormValidator>=0:../../textproc/p5-Data-FormValidator
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Catalyst/Plugin/FormValidator/.packlist

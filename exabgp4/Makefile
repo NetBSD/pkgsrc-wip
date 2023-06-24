@@ -24,7 +24,7 @@ WRKSRC=			${WRKDIR}/exabgp-${VERSION}
 #USE_TOOLS+=		perl:run
 
 #PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-BUILD_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 REPLACE_PERL+=		etc/exabgp/examples/dynamic-1.pl
 REPLACE_PERL+=		etc/exabgp/examples/watchdog-1.pl

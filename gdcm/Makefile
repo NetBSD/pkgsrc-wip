@@ -21,7 +21,7 @@ CMAKE_ARGS+=	-DGDCM_USE_SYSTEM_OPENJPEG=ON
 CMAKE_ARGS+=	-DGDCM_INSTALL_MAN_DIR=man
 CMAKE_ARGS+=	-DGDCM_MANPAGES_USE_NONET:BOOL=TRUE
 
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 SUBST_CLASSES+=		docbook
 SUBST_MESSAGE.docbook=	Fix docbook URLs.

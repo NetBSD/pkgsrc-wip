@@ -10,7 +10,7 @@ HOMEPAGE=		http://lamp.epfl.ch/~schinz/scsh_packages/
 COMMENT=		SCSH installation library for third-party libraries
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
+TOOL_DEPENDS+=		scsh>=0.6:../../shells/scsh
 
 
 NO_BUILD=		yes

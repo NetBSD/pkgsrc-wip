@@ -9,9 +9,9 @@ HOMEPAGE=	https://mpv.io/
 COMMENT=	Video player based on MPlayer and mplayer2 (git version)
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
-BUILD_DEPENDS+=	waf>=1.8.4:../../devel/waf
+TOOL_DEPENDS+=	waf>=1.8.4:../../devel/waf
 
 GIT_REPOSITORIES=	mpv
 GIT_REPO.mpv=		https://github.com/mpv-player/mpv.git

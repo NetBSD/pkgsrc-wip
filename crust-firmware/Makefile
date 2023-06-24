@@ -17,7 +17,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake yacc flex
 
-BUILD_DEPENDS+=	cross-or1k-none-elf-gcc-[0-9]*:../../cross/or1k-none-elf-gcc
+TOOL_DEPENDS+=	cross-or1k-none-elf-gcc-[0-9]*:../../cross/or1k-none-elf-gcc
 
 MAKE_FLAGS+=	CROSS_COMPILE=${PREFIX}/cross-or1k-none-elf/bin/or1k-none-elf-
 

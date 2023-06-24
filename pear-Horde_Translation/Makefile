@@ -10,7 +10,7 @@ HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Translation wrappers
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
 
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/willu47/amply
 COMMENT=	Allows you to load and manipulate AMPL/GLPK data as Python
 LICENSE=	eclipse-license
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 

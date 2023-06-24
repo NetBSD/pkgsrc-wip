@@ -13,7 +13,7 @@ COMMENT=	Library for configuring and customizing font access
 #LICENSE=	x11?
 
 # https://bugs.freedesktop.org/show_bug.cgi?id=101280
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt

@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	dbus-glib<0.71
 CONFLICTS+=	py27-dbus<0.71
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt pkg-config

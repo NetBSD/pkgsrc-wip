@@ -32,12 +32,12 @@ PLIST_VARS+=		doc
 PLIST.doc=		yes
 TEXINFO_REQD=		4.9
 USE_TOOLS+=		texi2html makeinfo
-BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
+TOOL_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
+TOOL_DEPENDS+=		tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+TOOL_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
 .  if ${OPSYS} == "DragonFly"
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+TOOL_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .  endif
 CONFIGURE_ARGS+=	--enable-doc
 .else

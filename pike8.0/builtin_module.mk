@@ -41,7 +41,7 @@ MAINTAINER=	william@welliver.org
 HOMEPAGE=	https://pike.lysator.liu.se/
 COMMENT=	${MODULENAME} module for Pike ${PIKEVERSUFFIX}
 
-BUILD_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
+TOOL_DEPENDS+=		pkgconf-[0-9]*:../../devel/pkgconf
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++

@@ -22,7 +22,7 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-BUILD_DEPENDS+=	lld-[0-9]*:../../wip/lld
+TOOL_DEPENDS+=	lld-[0-9]*:../../wip/lld
 
 # Workaround for header conflicts
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include

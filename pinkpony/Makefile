@@ -12,7 +12,7 @@ HOMEPAGE=	http://code.google.com/p/pink-pony/
 COMMENT=	Pink Pony is a 3D racing game with ponies!
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+TOOL_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 WRKSRC=		${WRKDIR}/pink-pony
 USE_LANGUAGES=	c c++

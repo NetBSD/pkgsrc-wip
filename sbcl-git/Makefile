@@ -42,14 +42,14 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Use "clisp -ansi -on-error abort" to make the build more reproducible,
 # per Christophe Rhodes:
 SBCL_BOOT_SYSTEM=	clisp -norc -ansi -on-error abort
-BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+TOOL_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 UNLIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == clisp
-BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+TOOL_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 UNLIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == sbcl
 # Get bootstrap version:
-BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
+TOOL_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
 .endif
 
 SUBST_CLASSES+=			fix-paths

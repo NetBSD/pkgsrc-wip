@@ -24,8 +24,8 @@ CMAKE_ARGS+=	-DNO_PTEX:BOOL=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=	doxygen>=1.8.9.1:../../devel/doxygen
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+TOOL_DEPENDS+=	doxygen>=1.8.9.1:../../devel/doxygen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE:PATH=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 .include "../../lang/python/pyversion.mk"
 PLIST.doc=	yes

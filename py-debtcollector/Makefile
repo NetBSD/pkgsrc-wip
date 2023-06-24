@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
 
 USE_LANGUAGES=	# none
 

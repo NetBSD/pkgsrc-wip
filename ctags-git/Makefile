@@ -10,7 +10,7 @@ HOMEPAGE=	https://ctags.io/
 COMMENT=	Maintained ctags implementation
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 USE_TOOLS=		aclocal autoreconf autoconf automake autoheader
 USE_TOOLS+=		bash gmake perl pkg-config
 

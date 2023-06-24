@@ -17,7 +17,7 @@ PLIST_VARS+=		doc openssl
 ### may not be wanted under certain circumstances.
 ###
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=		asciidoc>=8.3.3:../../textproc/asciidoc
+TOOL_DEPENDS+=		asciidoc>=8.3.3:../../textproc/asciidoc
 CONFIGURE_ARGS+=	--enable-asciidoc
 PLIST.doc=		yes
 .else

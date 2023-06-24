@@ -20,13 +20,13 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=/man
 
 .if !exists(/usr/bin/lex)
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
+TOOL_DEPENDS+=		flex-[0-9]*:../../devel/flex
 LEX=			${PREFIX}/bin/flex -8
 MAKE_ENV+=		LEX=${LEX:Q}
 .endif
 
 .if !exists(/usr/bin/yacc)
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+TOOL_DEPENDS+=	bison-[0-9]*:../../devel/bison
 YACC=		${PREFIX}/bin/bison -y
 MAKE_ENV+=	YACC=${YACC:Q}
 .endif

@@ -8,7 +8,7 @@ MAINTAINER=	noud4@users.sourceforge.net
 HOMEPAGE=	http://pear.phpunit.de/
 COMMENT=	Convenience wrapper for Symfony\'s Finder component
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpunit-[0-9]*:../../wip/pear-channel-phpunit
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpunit-[0-9]*:../../wip/pear-channel-phpunit
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-fDOMDocument>=1.3.1:../../wip/pear-fDOMDocument
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Finder>=2.2.0:../../wip/pear-Finder
 

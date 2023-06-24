@@ -11,7 +11,7 @@ COMMENT=		Desktop calculator for GNOME
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbolic
-BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 CONFLICTS+=		gcalctool-[0-9]*
 

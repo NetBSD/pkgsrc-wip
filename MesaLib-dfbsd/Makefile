@@ -76,9 +76,9 @@ MESON_ARGS+=		-Dglx-read-only-text=true
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
-BUILD_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+TOOL_DEPENDS+=		${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 # needed to build vulkan support
-BUILD_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+TOOL_DEPENDS+=		${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 .include "../../lang/python/tool.mk"
 

@@ -66,8 +66,8 @@ CONF_FILES+=		${EGDIR}/cinnamon-settings-daemon-a11y-keyboard.desktop \
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
 
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
-BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../print/cups-base/buildlink3.mk"

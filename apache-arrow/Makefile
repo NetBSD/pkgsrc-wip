@@ -57,7 +57,7 @@ CMAKE_ARGS+=	-DARROW_BUILD_TESTS=OFF
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.${APACHE_ARROW_VERSION:S/.//g}.0.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
 
-BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 # Needs gnu install for -v option
 .if ${OPSYS} == "NetBSD"
 TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils

@@ -14,7 +14,7 @@ USE_TOOLS+=		automake autoconf autoreconf
 USE_LANGUAGES=		c c++17
 GNU_CONFIGURE=		yes
 
-BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 PKGCONFIG_OVERRIDE+=	src/libexpr/nix-expr.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmain/nix-main.pc.in
@@ -91,9 +91,9 @@ PKG_USERS+=	nixbld${i}:nixbld
 # SUBST_STAGE.docbook2=		pre-configure
 # SUBST_SED.docbook2+=		-e 's,http://docbook.org/xml/5.0/rng/docbook.rng,${PREFIX}/share/xsl/docbook,g'
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	jq-[0-9]*:../../devel/jq
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	jq-[0-9]*:../../devel/jq
 
 # Linux is supported, FreeBSD support is experimental.
 # macOS is probably supported.

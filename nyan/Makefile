@@ -9,7 +9,7 @@ MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	Modding API with a typesafe hierarchical key-value database
 LICENSE=	gnu-lgpl-v3
 
-BUILD_DEPENDS+=	flex-[0-9]*:../../devel/flex
+TOOL_DEPENDS+=	flex-[0-9]*:../../devel/flex
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

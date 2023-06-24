@@ -127,7 +127,7 @@ post-extract:
 # XXX For now, we use the fip_create and aml_encrypt_gxb binaries
 # from Hardkernel.
 #
-BUILD_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
+TOOL_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
 post-build:
 	cp ${WRKSRC}/u-boot.bin ${WRKSRC}/bl33.bin
 

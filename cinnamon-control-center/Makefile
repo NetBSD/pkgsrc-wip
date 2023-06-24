@@ -28,8 +28,8 @@ MAKE_DIRS=		${PKG_SYSCONFDIR}/menus
 CONF_FILES=	share/examples/menus/cinnamoncc.menu \
 		${PKG_SYSCONFDIR}/menus/cinnamoncc.menu
 
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
-BUILD_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 #DEPENDS+=	cheese-[0-9]*:../../graphics/cheese

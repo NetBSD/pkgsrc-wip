@@ -12,8 +12,8 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/er-dict
 COMMENT=	DICTD data for Estonian-Russian dictionary
 
-BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
-BUILD_DEPENDS+=		metamail>=1.10.2:../../mail/metamail
+TOOL_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
+TOOL_DEPENDS+=		metamail>=1.10.2:../../mail/metamail
 DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 
 DICTD_DB_DIR=		${PREFIX}/share/dictd

@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/simonsobs/symlens
 COMMENT=	Symbolic Mode Coupling
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	# TODO: pytest-runner>=0
+TOOL_DEPENDS+=	# TODO: pytest-runner>=0
 TEST_DEPENDS+=	# TODO: pytest>=0
 
 USE_LANGUAGES=	# none

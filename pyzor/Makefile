@@ -15,7 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sphinx
 
 USE_TOOLS+=	gmake
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 REPLACE_PYTHON=	scripts/pyzor scripts/pyzord
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}

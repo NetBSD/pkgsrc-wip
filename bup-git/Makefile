@@ -16,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # actually a TEST_DEPENDS
-BUILD_DEPENDS+=	rsync>=3.0:../../net/rsync
-BUILD_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
+TOOL_DEPENDS+=	rsync>=3.0:../../net/rsync
+TOOL_DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-fuse-bindings
 

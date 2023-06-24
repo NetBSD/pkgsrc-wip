@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Alien/FFI/.packlist
 
-BUILD_DEPENDS+=	p5-Test2-Suite>=0:../../devel/p5-Test2-Suite
+TOOL_DEPENDS+=	p5-Test2-Suite>=0:../../devel/p5-Test2-Suite
 
 DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
 

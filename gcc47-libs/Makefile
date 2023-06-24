@@ -24,7 +24,7 @@ NO_BUILD=	yes
 CHECK_SHLIBS=	no
 
 ## Depend on exactly ${GCC47_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC47_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc47
+TOOL_DEPENDS+=		${GCC_PKGNAME}-${GCC47_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc47
 
 .include "../../mk/bsd.prefs.mk"
 

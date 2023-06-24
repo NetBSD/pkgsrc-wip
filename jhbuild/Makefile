@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	tests/libhello/libhello.pc.in
 
 CHECK_PORTABILITY_SKIP=	configure
 
-BUILD_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
+TOOL_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure

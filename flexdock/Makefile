@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Swing windowing and docking framework
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 USE_LANGUAGES=	# none
 USE_JAVA=	run
 AUTO_MKDIRS=	yes

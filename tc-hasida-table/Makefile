@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	perl
 REPLACE_PERL=	hasida-table
-# BUILD_DEPENDS+=	ghostscript-cidfonts-ryumin-[0-9]*:../../fonts/ghostscript-cidfonts-ryumin
+# TOOL_DEPENDS+=	ghostscript-cidfonts-ryumin-[0-9]*:../../fonts/ghostscript-cidfonts-ryumin
 # BUILD_ENV+=	PKG_OPTIONS.ghostscript+=disable-compile-inits
 
 # .if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits) && \

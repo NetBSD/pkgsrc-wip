@@ -16,6 +16,6 @@ USE_TOOLS=	gmake
 USE_LANGUAGES+=	c++
 USE_LANGUAGES+=	c
 USE_LANGUAGES+=	fortran
-BUILD_DEPENDS+=	git-base>=1.0:../../devel/git-base
+TOOL_DEPENDS+=	git-base>=1.0:../../devel/git-base
 
 .include "../../mk/bsd.pkg.mk"

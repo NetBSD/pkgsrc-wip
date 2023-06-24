@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.9.3:../../textproc/py-xlrd
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 USE_LANGUAGES=	# none
 

@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 PLASMAVER=	5.12.5
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config

@@ -14,7 +14,7 @@ EXTRACT_USING=	gtar
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=	tolua++-[0-9]*:../../wip/tolua++
+TOOL_DEPENDS+=	tolua++-[0-9]*:../../wip/tolua++
 
 CMAKE_ARGS+=	-DENABLE_DEV=ON
 CMAKE_ARGS+=	-DWANT_METASERVER=OFF

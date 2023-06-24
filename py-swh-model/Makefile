@@ -10,7 +10,7 @@ HOMEPAGE=	https://forge.softwareheritage.org/diffusion/DMOD/
 COMMENT=	Software Heritage data model
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2.7:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.41.5:../../devel/py-hypothesis

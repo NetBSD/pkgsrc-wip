@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1.1.1 2011/11/08 01:42:14 tnn2 Exp $
 #
-BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
 
 PKGNAME=		${DISTNAME:S/XtreemFS/xtreemfs-server/}
 

@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Exception-Base
 COMMENT=	Exception::Base
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Unit-Lite>=0.12:../../wip/p5-Test-Unit-Lite
+TOOL_DEPENDS+=	p5-Test-Unit-Lite>=0.12:../../wip/p5-Test-Unit-Lite
 
 PERL5_PACKLIST=	auto/Exception/Base/.packlist
 

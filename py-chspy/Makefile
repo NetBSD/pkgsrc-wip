@@ -10,7 +10,7 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/5d/6f/fbeb848039fdcaaad8736f4b
 COMMENT=	Cubic Hermite splines
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.5.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.5.0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	# TODO: symengine>=0
 
 USE_LANGUAGES=	# none

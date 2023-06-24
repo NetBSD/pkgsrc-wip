@@ -14,9 +14,9 @@ DEPENDS+=		p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=		p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 DEPENDS+=		p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 
-BUILD_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
-BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=		p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
+TOOL_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TOOL_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=		p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
 
 PERL5_PACKLIST=		auto/HTTP/BrowserDetect/.packlist
 

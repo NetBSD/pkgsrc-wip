@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jgraph/jgraphx
 COMMENT=	Java Swing diagramming (graph visualisation) library
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
 
 

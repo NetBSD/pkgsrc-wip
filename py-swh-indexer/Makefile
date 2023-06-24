@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4.13:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-ld>=2.0.3:../../wip/py-ld

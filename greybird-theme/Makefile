@@ -17,7 +17,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake
 
-BUILD_DEPENDS+=	sassc-[0-9]*:../../www/sassc
+TOOL_DEPENDS+=	sassc-[0-9]*:../../www/sassc
 DEPENDS+=	gtk2-engines-murrine-[0-9]*:../../x11/gtk2-engines-murrine
 
 post-extract:

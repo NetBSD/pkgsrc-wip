@@ -12,9 +12,9 @@ HOMEPAGE=	https://github.com/rstudio/rstudio/tarball/v0.95.265/
 COMMENT=	Integrated Development Environment (IDE) for R
 LICENSE=	gnu-agpl-v3
 
-BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
-BUILD_DEPENDS+=		gwt-2.4.0:../../www/gwt
-BUILD_DEPENDS+=		gin-1.5:../../wip/gin
+TOOL_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=		gwt-2.4.0:../../www/gwt
+TOOL_DEPENDS+=		gin-1.5:../../wip/gin
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.

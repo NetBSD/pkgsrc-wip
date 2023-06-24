@@ -9,7 +9,7 @@ HOMEPAGE=	https://pear.cakephp.org/
 COMMENT=	CodeSniffer rules for checking code against the CakePHP coding standards
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-cakephp-[0-9]*:../../wip/pear-channel-cakephp
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-cakephp-[0-9]*:../../wip/pear-channel-cakephp
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-PHP_CodeSniffer>=1.4.4:../../wip/pear-PHP_CodeSniffer
 
 .include "../../lang/php/pear.mk"

@@ -7,9 +7,9 @@ PKGNAME=	linux-kernel${LINUX_VERSION}-${LINUX_VERSION}
 COMMENT=	The Linux kernel
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		linux-module-init-tools-[0-9]*:../../wip/linux-module-init-tools
+TOOL_DEPENDS+=		linux-module-init-tools-[0-9]*:../../wip/linux-module-init-tools
 # This means that old linux-modutils aren't available for other kernel
-#BUILD_DEPENDS+=	linux-modutils-[0-9]*:../../wip/linux-modutils
+#TOOL_DEPENDS+=	linux-modutils-[0-9]*:../../wip/linux-modutils
 
 # Don't let the Linux kernel get accidently deinstalled.
 # XXX todo: fix pkg_info to not be so noisy about this

@@ -15,7 +15,7 @@ HOMEPAGE=	https://github.com/python-visualization/branca/
 COMMENT=	Generate complex HTML+JS pages with Python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	py37-setuptools>=50.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	py37-setuptools>=50.0:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-python37>=0:../../lang/python37
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2

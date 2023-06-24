@@ -14,7 +14,7 @@ COMMENT=	Source port of the Descent 1 engine
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
+TOOL_DEPENDS+=		${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
 SCONS=			${PREFIX}/bin/scons
 SCONS_ARGS+=		-C ${WRKSRC}
 SCONS_ARGS+=		DESTDIR=${DESTDIR}

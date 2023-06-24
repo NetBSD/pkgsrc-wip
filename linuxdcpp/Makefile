@@ -17,7 +17,7 @@ USE_TOOLS+=		pkg-config pax
 
 PTHREAD_OPTS+=		native
 NO_CONFIGURE=		yes
-BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
+TOOL_DEPENDS+=		scons>=0.96:../../devel/scons
 
 LDFLAGS+=		${X11_LDFLAGS}
 

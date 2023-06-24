@@ -7,7 +7,7 @@ PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 USE_LANGUAGES+=	c++
 USE_TOOLS+=	gmake tar
 
-BUILD_DEPENDS+=	npm-[0-9]*:../../lang/npm
+TOOL_DEPENDS+=	npm-[0-9]*:../../lang/npm
 
 BUILD_TARGET=	compile
 INSTALL_TARGET=	deploy source-package

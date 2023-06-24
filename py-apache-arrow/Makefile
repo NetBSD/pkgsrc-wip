@@ -18,9 +18,9 @@ LICENSE=	apache-2.0
 PYSETUPSUBDIR=	python
 
 USE_LANGUAGES=	c c++
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-BUILD_DEPENDS+=      ${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=      ${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytest-lazy-fixture>=0.6.3:../../devel/py-pytest-lazy-fixture

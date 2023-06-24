@@ -14,7 +14,7 @@ CONFIGURE_ENV+=		CYGWIN_TARGET=${CYGWIN_TARGET:Q}
 
 PATH:=			${PREFIX}/cross/bin:${PATH}
 
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+TOOL_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
 .  if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS=		# reset

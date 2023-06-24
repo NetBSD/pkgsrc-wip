@@ -11,7 +11,7 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/alphaomega-technology/Equation
 COMMENT=	General Equation Parser and Evaluator
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.2:../../math/py-numpy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.2:../../math/py-numpy
 
 USE_LANGUAGES=	# none
 

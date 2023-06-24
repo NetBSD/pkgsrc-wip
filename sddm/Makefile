@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/sddm/sddm
 COMMENT=	QML based X11 and Wayland display manager
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

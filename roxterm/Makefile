@@ -20,8 +20,8 @@ USE_TOOLS+=	pkg-config gsed gmake
 TOOLS_PLATFORM.gsed=	#empty
 .endif
 
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=		libxslt>=1.0.20:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		libxslt>=1.0.20:../../textproc/libxslt
 
 CONFIGURE_ENV+=	ac_cv_prog_HAVE_PO4A=no
 

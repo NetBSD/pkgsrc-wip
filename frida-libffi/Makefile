@@ -37,7 +37,7 @@ pre-build:
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 TEST_TARGET=	check
 TEST_ENV=
-BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
+TOOL_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 .endif
 
 # patch-aj uses m68k_sync_icache(2)

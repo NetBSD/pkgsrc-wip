@@ -10,7 +10,7 @@ HOMEPAGE=	https://zmap.io/
 COMMENT=	Network scanner that scales to Internet-wide network studies
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	gengetopt-[0-9]*:../../devel/gengetopt
+TOOL_DEPENDS+=	gengetopt-[0-9]*:../../devel/gengetopt
 
 USE_CMAKE=	yes
 USE_TOOLS+=	yacc

@@ -20,7 +20,7 @@ USE_GNU_READLINE=	yes
 # Wide arch support, although no native machine code generation (only byte-code, JIT).
 
 # X11 bindings
-BUILD_DEPENDS+=		clisp-new-clx>=2.43:../../x11/clisp-new-clx
+TOOL_DEPENDS+=		clisp-new-clx>=2.43:../../x11/clisp-new-clx
 CONFIGURE_ARGS=		-l clisp
 CONFIGURE_ARGS+=	-d ${WRKSRC}/dump/
 CONFIGURE_ARGS+=	--with-clfswm ${WRKSRC}

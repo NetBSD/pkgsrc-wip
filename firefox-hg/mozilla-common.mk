@@ -14,7 +14,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
+TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 # Enable Google widevine CDM. This requires external libwidevinecdm.so.
 #CONFIGURE_ARGS+=	--enable-eme=widevine

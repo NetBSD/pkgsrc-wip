@@ -16,8 +16,8 @@ DEPENDS+=		mplayer-[0-9]*:../../multimedia/mplayer
 DEPENDS+=		ogmtools-[0-9]*:../../multimedia/ogmtools
 DEPENDS+=		vorbis-tools-[0-9]*:../../audio/vorbis-tools
 DEPENDS+=		gocr-[0-9]*:../../graphics/gocr
-BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
-BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
+TOOL_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
+TOOL_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	SED_PROG=${PREFIX}/bin/gsed

@@ -21,7 +21,7 @@ AUTOCONF_REQD=		2.62
 
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
-BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png

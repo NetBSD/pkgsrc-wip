@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.backplane.com/
 COMMENT=		Innovative RDBMS database by Matthew Dillon
 
-BUILD_DEPENDS+=		dxmake>=0:../../wip/dxmake
+TOOL_DEPENDS+=		dxmake>=0:../../wip/dxmake
 
 
 .include "../../mk/bsd.prefs.mk"

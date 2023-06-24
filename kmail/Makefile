@@ -9,7 +9,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	akonadi-import-wizard>=${KAPPSVER}:../../wip/akonadi-import-wizard
 DEPENDS+=	kmail-account-wizard>=${KAPPSVER}:../../wip/kmail-account-wizard
 DEPENDS+=	mbox-importer>=${KAPPSVER}:../../wip/mbox-importer

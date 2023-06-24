@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/UUID
 COMMENT=	DCE compatible Universally Unique Identifier library for Perl
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Devel-CheckLib>=1.02:../../devel/p5-Devel-CheckLib
+TOOL_DEPENDS+=	p5-Devel-CheckLib>=1.02:../../devel/p5-Devel-CheckLib
 
 PERL5_PACKLIST=	auto/UUID/.packlist
 

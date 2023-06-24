@@ -16,7 +16,7 @@ USE_TOOLS+=	aclocal autoheader autoconf automake bash pkg-config
 USE_LANGUAGES=	c c++
 
 # for xxd
-BUILD_DEPENDS+=	vim-[0-9]*:../../editors/vim
+TOOL_DEPENDS+=	vim-[0-9]*:../../editors/vim
 
 GNU_CONFIGURE=		YES
 CONFIG_SHELL=		${BASH}

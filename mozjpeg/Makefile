@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/mozilla/mozjpeg/
 COMMENT=	Mozilla JPEG Encoder Project
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
 WRKSRC=		${WRKDIR}/mozjpeg
 

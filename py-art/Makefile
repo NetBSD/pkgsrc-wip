@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/sepandhaghighi/art
 COMMENT=	ASCII Art Library For Python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.1:../../devel/py-coverage
-BUILD_DEPENDS+=	${PYPKGPREFIX}-codecov>=2.0.15:../../wip/py-codecov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-vulture>=1.0:../../devel/py-vulture
-BUILD_DEPENDS+=	${PYPKGPREFIX}-bandit>=1.5.1:../../security/py-bandit
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docstyle>=3.0.0:../../wip/py-docstyle
+TOOL_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.1:../../devel/py-coverage
+TOOL_DEPENDS+=	${PYPKGPREFIX}-codecov>=2.0.15:../../wip/py-codecov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-vulture>=1.0:../../devel/py-vulture
+TOOL_DEPENDS+=	${PYPKGPREFIX}-bandit>=1.5.1:../../security/py-bandit
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docstyle>=3.0.0:../../wip/py-docstyle
 
 USE_LANGUAGES=	# none
 

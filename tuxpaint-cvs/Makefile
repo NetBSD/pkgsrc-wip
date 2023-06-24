@@ -10,7 +10,7 @@ COMMENT=	Drawing program for small children
 # program itself is gnu-gpl-v2, other licenses are packaged fonts
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND public-domain AND modified-bsd
 
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 CVS_ROOT.tuxpaint=	:pserver:anonymous@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint
 CVS_REPOSITORIES=	tuxpaint

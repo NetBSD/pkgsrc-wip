@@ -17,7 +17,7 @@ PLIST_VARS+=	java kde4 gtk3
 .include "../../mk/java-vm.mk"
 USE_JAVA=		yes
 USE_JAVA2=		yes
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-ant-home=${PREFIX}
 
 DEPENDS+=		hsqldb18-[0-9]*:../../databases/hsqldb18

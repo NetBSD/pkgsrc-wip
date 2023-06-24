@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

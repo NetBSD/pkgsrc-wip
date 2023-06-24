@@ -19,7 +19,7 @@ CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 PKGCONFIG_OVERRIDE+=	extensions/tpl-extensions.pc.in
 PKGCONFIG_OVERRIDE+=	telepathy-logger/telepathy-logger-0.1.pc.in
 
-BUILD_DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.7

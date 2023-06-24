@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=		timidity-[0-9]*:../../audio/timidity
 # Docs say this is needed, but it builds fine without
-#BUILD_DEPENDS+=	docbook2X-[0-9]*:../../wip/docbook2X
+#TOOL_DEPENDS+=	docbook2X-[0-9]*:../../wip/docbook2X
 
 OPENXCOM_BASE=		${PREFIX}/share/games/${PKGBASE}
 OPENXCOM_DATA=		${OPENXCOM_BASE}/data

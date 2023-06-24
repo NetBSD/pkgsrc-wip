@@ -12,7 +12,7 @@ LICENSE=		modified-bsd
 GIT_REPOSITORIES=	stmd
 GIT_REPO.stmd=		https://github.com/jgm/stmd.git
 
-BUILD_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
+TOOL_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
 
 WRKSRC=			${WRKDIR}/stmd
 USE_TOOLS+=		gmake

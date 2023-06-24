@@ -8,7 +8,7 @@ COMMENT=	Waterfall Plugin for the buildbot CI system
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../wip/py-buildbot
-BUILD_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../wip/py-buildbot-pkg
+TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../wip/py-buildbot-pkg
 
 USE_LANGUAGES=	# none
 

@@ -105,9 +105,9 @@ do-install:
 			${DESTDIR}${PREFIX}/bin )
 
 
-BUILD_DEPENDS+=		mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
-BUILD_DEPENDS+=		mrust-libs>=${SNAPSTAMP}:../../wip/mrust-libs
-##BUILD_DEPENDS+=	cmake>=3.18.2:../../devel/cmake
+TOOL_DEPENDS+=		mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
+TOOL_DEPENDS+=		mrust-libs>=${SNAPSTAMP}:../../wip/mrust-libs
+##TOOL_DEPENDS+=	cmake>=3.18.2:../../devel/cmake
 
 
 ##.include "../../devel/libatomic/buildlink3.mk"

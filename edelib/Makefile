@@ -37,12 +37,12 @@ REPLACE_SH+=	autogen.sh configure \
 		test/abicheck.sh tools/geniconmap
 .else
 # doxygen doesn't build from pkgsrc on Solaris now - handle this better later
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 .endif
 
 .include "options.mk"
 
-BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
+TOOL_DEPENDS+=	jam-[0-9]*:../../devel/jam
 
 .include "../../mk/fam.buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

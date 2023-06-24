@@ -6,10 +6,10 @@
 PKGNAME?=	erlang-${DISTNAME}
 
 .if defined(REBAR3_BUILD)
-BUILD_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
+TOOL_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
 REBAR=		${PREFIX}/bin/rebar3
 .else
-BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
+TOOL_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 .endif
 
 USE_TOOLS+=	gmake pax

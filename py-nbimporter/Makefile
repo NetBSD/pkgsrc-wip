@@ -10,7 +10,7 @@ Homepage=	https://github.com/grst/nbimporter/
 COMMENT=	Import IPython notebooks as modules
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

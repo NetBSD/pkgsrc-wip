@@ -34,5 +34,5 @@ pre-configure:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILD_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
+TOOL_DEPENDS+=	gnome-common-[0-9]*:../../devel/gnome-common
 .include "../../mk/bsd.pkg.mk"

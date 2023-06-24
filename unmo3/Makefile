@@ -14,7 +14,7 @@ HOMEPAGE=		https://www.un4seen.com/mo3.html
 COMMENT=		MO3 decoder
 LICENSE=		no-profit
 
-BUILD_DEPENDS+=		upx>=1.24:../../archivers/upx
+TOOL_DEPENDS+=		upx>=1.24:../../archivers/upx
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86

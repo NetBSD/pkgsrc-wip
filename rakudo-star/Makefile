@@ -9,7 +9,7 @@ HOMEPAGE=	https://rakudo.org/
 COMMENT=	Perl 6 reference implementation
 LICENSE=	artistic-2.0
 
-BUILD_DEPENDS+=	MoarVM>=2020.10:../../devel/MoarVM
+TOOL_DEPENDS+=	MoarVM>=2020.10:../../devel/MoarVM
 
 .include "../../mk/bsd.prefs.mk"
 

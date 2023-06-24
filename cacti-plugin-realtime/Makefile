@@ -18,7 +18,7 @@ NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/realtime
 
 EXTRACT_USING=		gtar
-BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
+TOOL_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
 DEPENDS+=		cacti>=0.8.7:../../net/cacti
 
 USE_TOOLS+=		gtar

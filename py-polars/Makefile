@@ -9,7 +9,7 @@ HOMEPAGE=	https://www.pola.rs/
 COMMENT=	Lightning-fast DataFrame library
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=		27

@@ -9,8 +9,8 @@ HOMEPAGE=	http://safekeep.sourceforge.net/
 COMMENT=	Centralized and easy to use backup application
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake

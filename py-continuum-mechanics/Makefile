@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/nicoguaro/continuum_mechanics
 COMMENT=	Utilities for doing calculations in continuum mechanics
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGRPEFIX}-test-runner>=5.2:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGRPEFIX}-test-runner>=5.2:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-sympy>=1.3:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9.3:../../math/py-scipy

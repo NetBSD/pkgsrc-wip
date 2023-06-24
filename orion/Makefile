@@ -11,8 +11,8 @@ COMMENT=		Orion - a window manager for X written in Scheme
 #
 # XXX; This is just nasty.
 #
-BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
-BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
+TOOL_DEPENDS+=		scsh>=0.6:../../shells/scsh
+TOOL_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
 DEPENDS+=		sunterlib-*:../../wip/sunterlib
 DEPENDS+=		scx-*:../../wip/scx
 

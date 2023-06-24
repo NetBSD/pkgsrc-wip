@@ -11,7 +11,7 @@ HOMEPAGE=	https://hotdoc.github.io/
 COMMENT=	API documentation system
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 #DEPENDS+=	${PYPKGPREFIX}-cchardet-[0-9]*:../../devel/py-cchardet
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2

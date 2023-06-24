@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/mpdavis/python-jose/
 COMMENT=	JOSE implementation in Python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=0:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=0:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0.16.0:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-rsa>=4.6:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.4.8:../../security/py-asn1

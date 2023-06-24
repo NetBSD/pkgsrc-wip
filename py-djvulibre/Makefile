@@ -10,8 +10,8 @@ HOMEPAGE=	https://jwilk.net/software/python-djvulibre
 COMMENT=	Python bindings for the DjVuLibre library
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_TOOLS+=	pkg-config
 

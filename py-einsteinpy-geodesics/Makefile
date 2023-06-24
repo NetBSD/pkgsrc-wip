@@ -12,20 +12,20 @@ LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
-BUILD_DEPENDS+=	${PYPKGPREFIX}-isort>=4.3.21:../../devel/py-isort
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.782:../../devel/py-codestyle
-BUILD_DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.6.0:../../lang/py-mypy
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0.8.0:../../devel/py-test-doctestplus
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mpl>=0.11:../../devel/py-test-mpl
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0:../../devel/py-test-mypy
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-remotedata>=0:../../devel/py-test-remotedata
-BUILD_DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.12:../../textproc/py-alabaster
-BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
-BUILD_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../wip/py-black
+TOOL_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
+TOOL_DEPENDS+=	${PYPKGPREFIX}-isort>=4.3.21:../../devel/py-isort
+TOOL_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.782:../../devel/py-codestyle
+TOOL_DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.6.0:../../lang/py-mypy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.2:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0.8.0:../../devel/py-test-doctestplus
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-mpl>=0.11:../../devel/py-test-mpl
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0:../../devel/py-test-mypy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-remotedata>=0:../../devel/py-test-remotedata
+TOOL_DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.12:../../textproc/py-alabaster
+TOOL_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../wip/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none

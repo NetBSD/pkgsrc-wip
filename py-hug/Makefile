@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-falcon>=2.0.0:../../devel/py-falcon
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.24.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock

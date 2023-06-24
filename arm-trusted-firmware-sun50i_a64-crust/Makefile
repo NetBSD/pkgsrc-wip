@@ -32,7 +32,7 @@ BUILD_TARGET=	bl31
 SSP_SUPPORTED=		no
 FORTIFY_SUPPORTED=	no
 
-BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
+TOOL_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/${PLATFORM}

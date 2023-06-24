@@ -11,7 +11,7 @@ HOMEPAGE=	https://userbase.kde.org/Kronometer
 COMMENT=	Stopwatch application by KDE
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_CMAKE=		yes
 USE_TOOLS=		msgmerge

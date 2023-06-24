@@ -10,7 +10,7 @@ HOMEPAGE=	https://pdepend.org/
 COMMENT=	PHP_Depend design quality metrics for PHP packages
 LICENSE=	original-bsd
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-pdepend-[0-9]*:../../wip/pear-channel-pdepend
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-pdepend-[0-9]*:../../wip/pear-channel-pdepend
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 
 # XXX option pecl/imagick

@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c++ c
 
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 .include "../../graphics/freetype2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

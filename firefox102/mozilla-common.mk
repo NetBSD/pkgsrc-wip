@@ -113,7 +113,7 @@ CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 # RLBox WASM sandbox
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 # For wasm-ld command
-BUILD_DEPENDS+=		lld-[0-9]*:../../wip/lld
+TOOL_DEPENDS+=		lld-[0-9]*:../../wip/lld
 .include "../../wip/wasi-libc/buildlink3.mk"
 .include "../../wip/wasi-libcxx/buildlink3.mk"
 # NB the exact versions of the clang and wasi-compiler-rt dependencies must

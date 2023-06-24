@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 #DEPENDS+=	ksysguard>=${PLASMAVER}:../../wip/ksysguard
 DEPENDS+=	kmenuedit>=${PLASMAVER}:../../wip/kmenuedit
 DEPENDS+=	polkit-kde-agent>=${PLASMAVER}:../../wip/polkit-kde-agent

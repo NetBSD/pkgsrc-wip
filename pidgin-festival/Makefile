@@ -11,7 +11,7 @@ HOMEPAGE=	http://pidgin-festival.sourceforge.net/
 COMMENT=	Pidgin plugin that interfaces with festival
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=		festival-[0-9]*:../../audio/festival
 WRKSRC=			${WRKDIR}/pidgin-festival-2.4
 GNU_CONFIGURE=		yes

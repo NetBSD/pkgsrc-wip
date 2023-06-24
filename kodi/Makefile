@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
-BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 EXTRACT_USING=	gtar
 

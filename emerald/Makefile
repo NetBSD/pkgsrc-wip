@@ -27,5 +27,5 @@ PKGCONFIG_OVERRIDE+=	libengine/emeraldengine.pc.in
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 .include "../../mk/bsd.pkg.mk"

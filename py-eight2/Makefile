@@ -12,7 +12,7 @@ LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=2.1:../../time/py-tzlocal
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.15.8:../../time/py-arrow

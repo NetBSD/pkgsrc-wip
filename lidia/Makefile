@@ -16,12 +16,12 @@ USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--with-arithmetic=gmp
 
-#BUILD_DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
+#TOOL_DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} != "NetBSD")
-BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
+TOOL_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}

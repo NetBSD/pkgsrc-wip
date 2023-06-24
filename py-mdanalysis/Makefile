@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # also needs unpackaged GridDataFormats
 # TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # also needs unpackaged MDAnalysisTests for tests
 
 USE_LANGUAGES=	c c++

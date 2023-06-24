@@ -16,9 +16,9 @@ DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-HTTP-Exception-[0-9]*:../../wip/p5-HTTP-Exception
 
-BUILD_DEPENDS+=	p5-CGI-PSGI-[0-9]*:../../www/p5-CGI-PSGI
-BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
-BUILD_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
+TOOL_DEPENDS+=	p5-CGI-PSGI-[0-9]*:../../www/p5-CGI-PSGI
+TOOL_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+TOOL_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Dispatch/.packlist

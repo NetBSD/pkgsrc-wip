@@ -13,8 +13,8 @@ HOMEPAGE=	http://ariamaestosa.sourceforge.net/
 COMMENT=	Open-source (GPL) midi tracker/editor
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND public-domain
 
-BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
-BUILD_DEPENDS+=		irrxml-1.2:../../wip/irrxml
+TOOL_DEPENDS+=		scons-[0-9]*:../../devel/scons
+TOOL_DEPENDS+=		irrxml-1.2:../../wip/irrxml
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++

@@ -11,8 +11,8 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Exporter-Tidy-[0-9]*:../../wip/p5-Exporter-Tidy
 DEPENDS+=		p5-IO-Capture-[0-9]*:../../devel/p5-IO-Capture
-BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=		p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TOOL_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=		p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/OptArgs/.packlist

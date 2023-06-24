@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/tomtom-international/hopic
 COMMENT=	Generic jenkins shared pipeline alternative
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0<8.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-commisery>=0.5<1:../../wip/py-commisery

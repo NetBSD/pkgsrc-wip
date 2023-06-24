@@ -13,7 +13,7 @@ LICENSE=	isc
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32:../../devel/py-wheel
 
 USE_LANGUAGES=	# none

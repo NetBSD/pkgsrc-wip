@@ -10,7 +10,7 @@ HOMEPAGE=	https://phpmd.org/
 COMMENT=	PHP Mess Detector
 LICENSE=	original-bsd
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpmd-[0-9]*:../../wip/pear-channel-phpmd
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-phpmd-[0-9]*:../../wip/pear-channel-phpmd
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-PHP_Depend>=1.1.0:../../wip/pear-PHP_Depend
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 

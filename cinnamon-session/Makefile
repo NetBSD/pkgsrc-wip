@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config intltool msgfmt
 
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 LDFLAGS.SunOS+=	-lsocket
 

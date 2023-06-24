@@ -52,7 +52,7 @@ SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
 SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
 .endif
 
-BUILD_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
+TOOL_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
 
 REPLACE_PERL+=	doc/texi2pod.pl
 REPLACE_SH+=	configure version.sh

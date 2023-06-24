@@ -10,7 +10,7 @@ HOMEPAGE=	http://qmc2.arcadehits.net/wordpress/
 COMMENT=	Multi-platform GUI front end for MAME and MESS
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+TOOL_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 WRKSRC=		${WRKDIR}/qmc2
 USE_LANGUAGES=	c c++

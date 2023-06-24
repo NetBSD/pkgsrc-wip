@@ -10,8 +10,8 @@ PKG_OPTIONS_GROUP.ssl=		gnutls openssl polarssl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 CONFIGURE_ARGS+=	--enable-docs=yes
 .else
 CONFIGURE_ARGS+=	--enable-docs=no
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--with-ssl=no
 
 .if !empty(PKG_OPTIONS:Mpopt)
 .include "../../devel/popt/buildlink3.mk"
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 CONFIGURE_ARGS+=	--enable-tools=yes
 .else
 CONFIGURE_ARGS+=	--enable-tools=no

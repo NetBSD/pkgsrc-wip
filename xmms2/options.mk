@@ -81,7 +81,7 @@ WITHOUT_PLUGINS+=	flac
 .endif
 
 .if !empty(PKG_OPTIONS:Mgamin)
-BUILD_DEPENDS+=		gamin-[0-9]*:../../sysutils/gamin
+TOOL_DEPENDS+=		gamin-[0-9]*:../../sysutils/gamin
 PLIST.gamin=		yes
 .else
 WITHOUT_PLUGINS+=	gamin
@@ -137,7 +137,7 @@ WITHOUT_PLUGINS+=	mms
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmpg123)
-BUILD_DEPENDS+=	libmpg123>=1.5.1:../../wip/libmpg123
+TOOL_DEPENDS+=	libmpg123>=1.5.1:../../wip/libmpg123
 .include "../../wip/libmpg123/buildlink3.mk"
 PLIST.libmpg123=	yes
 .else
@@ -187,7 +187,7 @@ WITHOUT_PLUGINS+=	pulse
 .endif
 
 .if !empty(PKG_OPTIONS:Mpyrex)
-BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
+TOOL_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 PYTHON_VERSIONS_ACCEPTED=	27 # py-pyrex
 .include "../../lang/python/extension.mk"
 PY_PATCHPLIST=		yes
@@ -256,7 +256,7 @@ WITHOUT_PLUGINS+=	tremor
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
-BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
+TOOL_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 #PLIST.valgrind=	yes
 .endif
 

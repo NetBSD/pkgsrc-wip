@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++

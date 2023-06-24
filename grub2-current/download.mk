@@ -10,9 +10,9 @@
 PKG_SKIP_REASON+=	"skipping bzr package in bulk build"
 .endif
 
-BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
-BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
-BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
+TOOL_DEPENDS+=		bzr>=1.0:../../devel/bzr
+TOOL_DEPENDS+=		rsync>=3.0:../../net/rsync
+TOOL_DEPENDS+=		autogen>=5.9:../../devel/autogen
 
 BZR_REPOSITORY=		bzr://bzr.savannah.gnu.org/grub/trunk/grub
 BZR_REVISION=		5148

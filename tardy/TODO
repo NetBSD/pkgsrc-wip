@@ -9,5 +9,5 @@
 
 * add option 'testing' to mk/defaults/options.description
   Does not seem to be quite the right way to handle this.
-  Better would be per-phase DEPENDS variables, like there already are in BUILD_DEPENDS and
+  Better would be per-phase DEPENDS variables, like there already are in TOOL_DEPENDS and
   DEPENDS. 

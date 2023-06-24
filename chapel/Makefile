@@ -10,7 +10,7 @@ HOMEPAGE=	https://chapel-lang.org/
 COMMENT=	The Chapel programming language
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 USE_TOOLS=		bash:run pkg-config gmake perl
 USE_LIBTOOL=		yes

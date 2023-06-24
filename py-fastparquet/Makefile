@@ -17,9 +17,9 @@ COMMENT=	Python implementation of the parquet format,
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas

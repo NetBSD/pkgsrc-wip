@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	Powerful libraries for creating business diagrams
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

@@ -20,7 +20,7 @@ NEWS_DIR=	${PREFIX}/news
 
 #USE_TOOLS+=	xmake
 
-BUILD_DEPENDS+=	xmake>=1.06:../../devel/xmake
+TOOL_DEPENDS+=	xmake>=1.06:../../devel/xmake
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/XMakefile.inc

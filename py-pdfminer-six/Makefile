@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/pdfminer/pdfminer.six
 COMMENT=	PDF parser and analyzer
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
-BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
+TOOL_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
 DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.4:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.9.2:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.2.2:../../devel/py-sortedcontainers

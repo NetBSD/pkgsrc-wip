@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.freedict.org/ar/
 COMMENT=	Dict package for English-Arabic Freedict dictionary
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
+TOOL_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
 DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 
 DICTSRCNAME=	${DISTNAME:S/freedict-//S/-0.0.2//}

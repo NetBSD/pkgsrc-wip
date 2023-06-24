@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/OpenVisualCloud/SVT-VP9/
 COMMENT=	VP9 encoder
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}

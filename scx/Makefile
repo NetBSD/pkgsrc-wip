@@ -17,8 +17,8 @@ CONFIGURE_ARGS+=	--with-scsh-includes=${PREFIX}/include
 #
 # XXX Nasty quick hack. so sue me for wanting to get orion to work asap ;)
 #
-BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
-BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
+TOOL_DEPENDS+=		scsh>=0.6:../../shells/scsh
+TOOL_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
 
 do-install:
 	cd ${WRKSRC}; \

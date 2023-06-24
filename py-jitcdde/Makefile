@@ -10,7 +10,7 @@ HOMEPAGE=	http://github.com/neurophysik/jitcdde
 COMMENT=	Just-in-Time Compilation for Delay Differential Equations
 #LICENSE=	# TODO: (see mk/license.mk)
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-jitcxde-common-1.5.2:../../wip/py-jitcxde-common
 
 

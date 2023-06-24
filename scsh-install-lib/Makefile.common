@@ -8,8 +8,8 @@
 # XXX: This should actually be moved to shells/scsh/Makefile.common or
 #       something
 #
-BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
-BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
+TOOL_DEPENDS+=		scsh>=0.6:../../shells/scsh
+TOOL_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
 
 NO_BUILD=		yes
 

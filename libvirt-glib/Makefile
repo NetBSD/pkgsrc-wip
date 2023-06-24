@@ -10,7 +10,7 @@ HOMEPAGE=	https://libvirt.org/
 COMMENT=	GLib-friendly libvirt wrapper
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool

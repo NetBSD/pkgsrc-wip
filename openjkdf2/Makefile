@@ -14,7 +14,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+= ${PYPKGPREFIX}-cogapp-[0-9]*:../../devel/py-cogapp
+TOOL_DEPENDS+= ${PYPKGPREFIX}-cogapp-[0-9]*:../../devel/py-cogapp
 
 CMAKE_ARGS+=	-DPLAT_PKGSRC:BOOL=TRUE
 CMAKE_ARGS+=	-DPLAT_PKGSRC64:BOOL=FALSE

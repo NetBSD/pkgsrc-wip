@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	cflags gtk3 jpeg jp2v2 webp intl tiff man
 USE_TOOLS+=		gmake pkg-config
 
-BUILD_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
+TOOL_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"

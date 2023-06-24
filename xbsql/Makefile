@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		SQL frontend for DB4 (DBF) files with xbase
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+TOOL_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 
 USE_PKGLOCALEDIR=	yes

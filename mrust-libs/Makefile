@@ -106,8 +106,8 @@ do-install:
 
 ##	    for ff in lib*.rlib lib*.rlib.[ho]* *build build*.txt; do	\
 
-BUILD_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
-BUILD_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
+TOOL_DEPENDS+=	mrust-mrustc>=${SNAPSTAMP}:../../wip/mrust-mrustc
+TOOL_DEPENDS+=	mrust-minicargo>=${SNAPSTAMP}:../../wip/mrust-minicargo
 
 .include "../../devel/libatomic/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

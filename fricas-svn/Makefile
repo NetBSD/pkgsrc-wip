@@ -11,7 +11,7 @@ HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 LICENSE=		modified-bsd
 
-BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
+TOOL_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

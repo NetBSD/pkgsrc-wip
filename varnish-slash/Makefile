@@ -11,8 +11,8 @@ HOMEPAGE=	https://gitlab.com/uplex/varnish/slash
 COMMENT=	Storage Engines for Varnish-Cache
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		aclocal autoconf automake gmake m4 pkg-config

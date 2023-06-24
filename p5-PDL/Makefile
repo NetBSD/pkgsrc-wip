@@ -21,9 +21,9 @@ DEPENDS+=	p5-Inline-C-[0-9]*:../../devel/p5-Inline-C
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Module-Compile-[0-9]*:../../devel/p5-Module-Compile
 DEPENDS+=	p5-Pod-Parser-[0-9]*:../../textproc/p5-Pod-Parser
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/PDL/.packlist
 MAKE_JOBS_SAFE=		no

@@ -10,7 +10,7 @@ HOMEPAGE=	https://pear.horde.org/
 COMMENT=	Interface dealing with alarms
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Horde_Date-[0-9]*:../../wip/pear-Horde_Date
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Horde_Exception-[0-9]*:../../wip/pear-Horde_Exception
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Horde_Translation-[0-9]*:../../wip/pear-Horde_Translation

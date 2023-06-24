@@ -22,7 +22,7 @@ LICENSE=	mit
 #     of ${FAKEHOMEDIR}/.cargo in influxd binary.
 CHECK_WRKREF_SKIP=	sbin/influxd
 
-BUILD_DEPENDS+=	protobuf-[0-9]*:../../devel/protobuf
+TOOL_DEPENDS+=	protobuf-[0-9]*:../../devel/protobuf
 
 DATADIR=	${VARBASE}/lib/influxdb
 LOGDIR=		${VARBASE}/log/influxdb

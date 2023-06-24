@@ -2,8 +2,8 @@
 
 .include "Makefile.common"
 
-BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl

@@ -20,7 +20,7 @@ EMACS_MODULES=		base
 # Instead of USE_TOOLS+=, avoid to conflict with autoconf
 USE_TOOLS=		aclocal automake autoconf gmake makeinfo
 GNU_CONFIGURE=		YES
-BUILD_DEPENDS+=		web2c-[0-9]*:../../print/web2c
+TOOL_DEPENDS+=		web2c-[0-9]*:../../print/web2c
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 

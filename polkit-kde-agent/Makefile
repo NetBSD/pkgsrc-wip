@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 

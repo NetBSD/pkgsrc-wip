@@ -11,7 +11,7 @@ HOMEPAGE=	https://live.gnome.org/Rygel
 COMMENT=	UPnP AV MediaServer that allows sharing audio, video, and pictures
 LICENSE=	gnu-lgpl-v2
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

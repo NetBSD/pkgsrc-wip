@@ -26,7 +26,7 @@ SITES.${TELEGRAF_DEPENDENCIES}= https://bitbucket.org/hww3/influxdb/downloads/
 
 USE_TOOLS+=	gmake curl
 
-BUILD_DEPENDS+=			go110-1.10.*:../../lang/go110
+TOOL_DEPENDS+=			go110-1.10.*:../../lang/go110
 
 # go language executables don't have SSP support
 CHECK_SSP_SKIP=	bin/*

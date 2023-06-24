@@ -11,7 +11,7 @@ HOMEPAGE=		https://cvsweb.NetBSD.org/bsdweb.cgi/src/external/historical/nawk/dis
 COMMENT=		NetBSD version of AWK
 #LICENSE=		mit/bsd?
 
-BUILD_DEPENDS+=		mk-configure>0.19.0:../../devel/mk-configure
+TOOL_DEPENDS+=		mk-configure>0.19.0:../../devel/mk-configure
 
 USE_TOOLS+=		yacc lex
 

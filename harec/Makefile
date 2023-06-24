@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--mandir=${MANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sharedir=${SHAREDIR}
 
-BUILD_DEPENDS+=		qbe>=1.1*:../../lang/qbe
+TOOL_DEPENDS+=		qbe>=1.1*:../../lang/qbe
 
 do-configure:
 	${RUN} cd ${WRKSRC} && ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}

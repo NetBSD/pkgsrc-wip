@@ -29,5 +29,5 @@ INSTALL_ENV+=	PREFIX=${PREFIX}
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../wip/mupen64plus/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-BUILD_DEPENDS+=	cpuflags>=1.42:../../devel/cpuflags
+TOOL_DEPENDS+=	cpuflags>=1.42:../../devel/cpuflags
 .include "../../mk/bsd.pkg.mk"

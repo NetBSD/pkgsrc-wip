@@ -31,8 +31,8 @@ TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		nasm>=1.1:../../devel/nasm
-BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
+TOOL_DEPENDS+=		nasm>=1.1:../../devel/nasm
+TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
 # For rustc/cargo detection

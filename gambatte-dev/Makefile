@@ -11,7 +11,7 @@ HOMEPAGE=	http://gambatte.sourceforge.net/
 COMMENT=	Game Boy Color emulator
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+TOOL_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -9,8 +9,8 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	https://metacpan.org/release/Catalyst-Engine-Apache
 COMMENT=	Catalyst Apache Engines
 
-BUILD_DEPENDS+=	p5-Catalyst-Runtime>=5.50:../../www/p5-Catalyst-Runtime
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Catalyst-Runtime>=5.50:../../www/p5-Catalyst-Runtime
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=	auto/Catalyst/Engine/Apache/.packlist
 

@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ripple/rippled
 COMMENT=	Ripple peer-to-peer network daemon
 #LICENSE=	# TODO: (see mk/license.mk)
 
-BUILD_DEPENDS+=	scons>=0.96.91:../../devel/scons
+TOOL_DEPENDS+=	scons>=0.96.91:../../devel/scons
 DEPENDS+=	openssl>=1.0.1f:../../security/openssl
 
 USE_LANGUAGES=	c c++

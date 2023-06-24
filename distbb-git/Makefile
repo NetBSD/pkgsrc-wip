@@ -19,7 +19,7 @@ DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
-BUILD_DEPENDS+=	mk-configure>=0.21:../../devel/mk-configure
+TOOL_DEPENDS+=	mk-configure>=0.21:../../devel/mk-configure
 
 WRKSRC=			${WRKDIR}/distbb
 

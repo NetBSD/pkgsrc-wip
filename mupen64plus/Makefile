@@ -11,7 +11,7 @@ HOMEPAGE=	http://code.google.com/p/mupen64plus/
 COMMENT=	Cross-platform plugin-based N64 emulator
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	cpuflags>=1.42:../../devel/cpuflags
+TOOL_DEPENDS+=	cpuflags>=1.42:../../devel/cpuflags
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake pkg-config
 USE_LIBTOOL=	yes

@@ -8,7 +8,7 @@ MAKE_JOBS_SAFE=	no
 
 LICENSE=	mit
 
-BUILD_DEPENDS+=	Canna-server>=${CANNA_VERSION}:../../wip/canna-server
+TOOL_DEPENDS+=	Canna-server>=${CANNA_VERSION}:../../wip/canna-server
 
 EVAL_PREFIX+=	CANNASERVERBINDIR=Canna-server
 .for cmd in MERGE FORCPP FORSORT SPLITWORD MERGEWORD CRXGRAM CRXDIC CRFREQ KPDIC

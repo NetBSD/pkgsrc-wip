@@ -15,10 +15,10 @@ USE_TOOLS+=	gmake bash
 .if defined(MLTON_BOOT) && ${MLTON_BOOT} == "mlton"
 BUILD_TARGET=	all
 .else # use SML/NJ
-BUILD_DEPENDS+=	smlnj-[0-9]*:../../lang/smlnj
+TOOL_DEPENDS+=	smlnj-[0-9]*:../../lang/smlnj
 BUILD_TARGET=	smlnj-mlton all
 .endif
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
 GIT_REPOSITORIES=	mlton
 GIT_REPO.mlton=		https://github.com/MLton/mlton.git

@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/boringssl
 
 .include "../../lang/go/version.mk"
 
-BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
+TOOL_DEPENDS+=	${GO_PACKAGE_DEP}
 
 USE_TOOLS+=		cmake perl
 USE_LANGUAGES+=		c gnu++11

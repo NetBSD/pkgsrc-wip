@@ -17,7 +17,7 @@ RESTRICTED=		No redistribution in altered form
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
+TOOL_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

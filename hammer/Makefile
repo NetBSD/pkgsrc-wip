@@ -11,7 +11,7 @@ HOMEPAGE=		https://github.com/UpstandingHackers/hammer
 COMMENT=		Parser combinator library in C
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
+TOOL_DEPENDS+=		scons-[0-9]*:../../devel/scons
 
 USE_LANGUAGES=		c c++
 EXTRACT_USING=		bsdtar

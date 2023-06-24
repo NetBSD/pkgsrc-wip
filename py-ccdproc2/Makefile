@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/astropy/ccdproc/
 COMMENT=	Astropy coordinated package for CCD data recution in astronomy
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy

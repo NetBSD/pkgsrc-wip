@@ -101,7 +101,7 @@ CONFIGURE_ARGS.MirBSD+=		--disable-runtime-cpu-detect
 
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
 .if !empty(MACHINE_PLATFORM:MSunOS-5.10*)
-BUILD_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
+TOOL_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
 TOOLS_PLATFORM.tr=	${PREFIX}/bin/gtr
 .endif
 

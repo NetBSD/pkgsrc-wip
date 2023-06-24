@@ -15,7 +15,7 @@ GIT_REPOSITORIES=	lmdbg
 GIT_REPO.lmdbg=		https://github.com/cheusov/lmdbg.git
 .include "../../wip/mk/git-package.mk"
 
-BUILD_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
+TOOL_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
 DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
