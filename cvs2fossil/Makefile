@@ -9,6 +9,8 @@ HOMEPAGE=	https://wiki.NetBSD.org/github/
 COMMENT=	Tool to convert from CVS to fossil
 #LICENSE=	2-clause-bsd AND mit
 
+DEPENDS+=	fossil-[0-9]*:../../devel/fossil
+
 WRKSRC=		${WRKDIR}/cvs2fossil
 
 INSTALLATION_DIRS+=	libexec/cvs2fossil
