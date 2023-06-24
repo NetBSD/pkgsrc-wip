@@ -582,6 +582,7 @@ SUBDIR+=	cut-and-run
 SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs2darcs
+SUBDIR+=	cvs2fossil
 SUBDIR+=	cvsanaly
 SUBDIR+=	cvsnt
 SUBDIR+=	cvstrac

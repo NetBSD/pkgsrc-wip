@@ -1,0 +1,6 @@
+@comment $NetBSD$
+libexec/cvs2fossil/01-import
+libexec/cvs2fossil/02-vendorbranches
+libexec/cvs2fossil/03-branchtime
+libexec/cvs2fossil/04-commit
+share/examples/cvs2fossil/convert.sh

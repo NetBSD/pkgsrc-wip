@@ -1,0 +1,2 @@
+This tool converts a CVS repository into a fossil repository.  It
+can be exported to git and other formats.
