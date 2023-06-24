@@ -3,6 +3,7 @@ $NetBSD$
 BLAKE2s (cvs2fossil-20140502.tar.gz) = 275555dc446eedb1c50bbb446391e72dac23fea5b55b078fba54a53d5fad11e2
 SHA512 (cvs2fossil-20140502.tar.gz) = dc5f64c5af0fe6a35143244c2858dcccd4ad2131fb5e375132ffc9071dfcff8984fdbb9664f774238ddd2c14c5155686e2c99962753131a3f5cd2f58f0d19a3d
 Size (cvs2fossil-20140502.tar.gz) = 1258545 bytes
+SHA1 (patch-01-import_main.c) = 6177f632e9a7213e9aff911e28ac04378102fae5
 SHA1 (patch-04-commit_main.c) = a7afef765fca714dfe672ab7207789d91cd839c8
 SHA1 (patch-common_common.h) = 625959ee61513df52696987c9fba2abb83c91262
-SHA1 (patch-convert.sh) = 732fe531076784dd09ab5a90771581784c288e43
+SHA1 (patch-convert.sh) = fd8d6ec9875f4ac250985fcc0ba01589b507c401
