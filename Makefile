@@ -583,6 +583,7 @@ SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs2darcs
 SUBDIR+=	cvs2fossil
+SUBDIR+=	cvs2hg
 SUBDIR+=	cvsanaly
 SUBDIR+=	cvsnt
 SUBDIR+=	cvstrac
