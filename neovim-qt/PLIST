@@ -2,7 +2,8 @@
 bin/nvim-qt
 share/applications/nvim-qt.desktop
 share/icons/hicolor/192x192/apps/nvim-qt.png
-share/nvim-qt/runtime/README.md
+share/icons/hicolor/scalable/apps/nvim-qt.svg
+share/nvim-qt/LICENSE
 share/nvim-qt/runtime/doc/nvim_gui_shim.txt
 share/nvim-qt/runtime/doc/tags
 share/nvim-qt/runtime/plugin/nvim_gui_shim.vim

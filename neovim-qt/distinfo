@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (neovim-qt/v0.2.16.1.tar.gz) = a346e40da583c42ba6f1736d3e50060924eb0416
-SHA512 (neovim-qt/v0.2.16.1.tar.gz) = 63910b0416103f8c4f2450a07d4790c2b7fd26e2ba324445a20700a12d1dc3cb6fb06c674f3a1173348dad5c2256e8018167765306ca33ad94bc176bf5e4e45c
-Size (neovim-qt/v0.2.16.1.tar.gz) = 1069176 bytes
+BLAKE2s (neovim-qt/staging.tar.gz) = feed65c23a2f3834deaf09ccda63d5672423a72b5b6559e61b5965efc0e7d034
+SHA512 (neovim-qt/staging.tar.gz) = f06195db0ad2d6e3e35b9b9d1319cb259ea0a5db4e3139698fd03ba11defd9b6dbd5061a152e2a29288b5ce0a9fd144d6b366cca2187b7b320c22a22e580be43
+Size (neovim-qt/staging.tar.gz) = 1077099 bytes
