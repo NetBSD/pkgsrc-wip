@@ -6009,6 +6009,7 @@ SUBDIR+=	zoneminder
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
 SUBDIR+=	qtfm
+SUBDIR+=	xtitle
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB

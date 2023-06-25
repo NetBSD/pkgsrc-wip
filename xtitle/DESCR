@@ -1,0 +1,2 @@
+xtitle outputs the title of the active window and continues to output it
+as it changes if the *snoop* mode is on.
