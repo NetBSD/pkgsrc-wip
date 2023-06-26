@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.freetype,v 1.2 2009/12/30 12:26:55 moubctez Exp $
-${PKGNAME}/bin/d.font.freetype
-${PKGNAME}/bin/d.text.freetype
-${PKGNAME}/docs/html/d.font.freetype.html
-${PKGNAME}/docs/html/d.text.freetype.html
-${PKGNAME}/etc/freetypecap
-${PKGNAME}/man/man1/d.font.freetype.1
-${PKGNAME}/man/man1/d.text.freetype.1

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
-bin/pype.py-${PYVERSSUFFIX}
-${PYSITELIB}/pype/configuration.py
-${PYSITELIB}/pype/parsers.py
-${PYSITELIB}/pype/readme.txt
-${PYSITELIB}/pype/__init__.py
