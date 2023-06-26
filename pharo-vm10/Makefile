@@ -4,7 +4,7 @@ PHAROVM_VER=	10.0.5
 PHAROVM_HASH=	2757766
 
 DISTNAME=	PharoVM-${PHAROVM_VER}-${PHAROVM_HASH}-Linux-x86_64-c-src
-PKGNAME=	pharo-vm-${PHAROVM_VER}
+PKGNAME=	pharo-vm10-${PHAROVM_VER}
 CATEGORIES=	lang
 MASTER_SITES=	http://files.pharo.org/vm/pharo-spur64-headless/Linux-x86_64/source/
 EXTRACT_SUFX=	.zip
