@@ -1,0 +1,4 @@
+  - package py-yattr and depend on it
+
+  - update py-wxWidgets to use modern wxWidgets (or add a wrapper for
+    modern, really)
