@@ -1,16 +1,13 @@
 # $NetBSD: Makefile,v 1.93 2023/03/11 01:56:41 gdt Exp $
 
-# https://github.com/wxWidgets/wxWidgets/archive/refs/tags/v3.2.2.1.tar.gz
-VERSION=	3.2.2.1
-DISTNAME=	v${VERSION}
+# https://files.pythonhosted.org/packages/aa/64/d749e767a8ce7bdc3d533334e03bb1106fc4e4803d16f931fada9007ee13/wxPython-4.2.1.tar.gz
+VERSION=	4.2.1
+DISTNAME=	wxPython-${VERSION}
+# PKGNAME is py-wxWidgets instead of py-wxPython, for historical reasons.
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-${VERSION}
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
-GITHUB_PROJECT=	wxWidgets
-GITHUB_TAG=	refs/tags/v${VERSION}
-# Except. one can distribute a static binary without source.
-# \todo Consider adding this (regrettably boutique) license.
-LICENSE=	gnu-lgpl-v3
+MASTER_SITES=	${MASTER_SITE_PYPI:=aa/64/d749e767a8ce7bdc3d533334e03bb1106fc4e4803d16f931fada9007ee13/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gdt@NetBSD.org
 # \todo Resolve: 2 forks, different, ?
