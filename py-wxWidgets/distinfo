@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.9 2021/10/26 11:34:20 nia Exp $
 
-BLAKE2s (wxPython-src-2.8.12.0.tar.bz2) = a0bd6cfd33bba7c475fe99aeab6a69bf40e7e543a8f1887da3f1927b519f2737
-SHA512 (wxPython-src-2.8.12.0.tar.bz2) = b4087bfcc769ef3f690c77a0b5c3ee0bf8ca1d434577dfe0f7af6a8b24040dc1724dc03bdca73f00be62c1070a9590e3e88e24093c93e8a49aeb384b3418feba
-Size (wxPython-src-2.8.12.0.tar.bz2) = 31156191 bytes
+BLAKE2s (v3.2.2.1.tar.gz) = 10d566c548dca7bbddf8b899eeef6d7028ecd17394e1bdd80f4725dfc9c54159
+SHA512 (v3.2.2.1.tar.gz) = 8ff645fe7ee97bf6358b3619efd737ef8f9eb0235ca481e921a64d451c45eb9671ee4e2807fea285153bc0bb434266234f6f4ab15f396bb8290f262fa879e9b3
+Size (v3.2.2.1.tar.gz) = 24320746 bytes
 SHA1 (patch-aa) = 62a8f5cc148c13948be6add01ddf64f63343f024
 SHA1 (patch-ab) = 5bc9ebcf10d7bd3479199c4820d566d83e501439
 SHA1 (patch-ac) = 9f8d72d987306301c82b03aba6e447a77ff98fdc

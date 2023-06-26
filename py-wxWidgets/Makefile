@@ -1,15 +1,21 @@
 # $NetBSD: Makefile,v 1.93 2023/03/11 01:56:41 gdt Exp $
 
-VERSION=	2.8.12.0
-DISTNAME=	wxPython-src-${VERSION}
+# https://github.com/wxWidgets/wxWidgets/archive/refs/tags/v3.2.2.1.tar.gz
+VERSION=	3.2.2.1
+DISTNAME=	v${VERSION}
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-${VERSION}
-PKGREVISION=	23
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
+GITHUB_PROJECT=	wxWidgets
+GITHUB_TAG=	refs/tags/v${VERSION}
+# Except. one can distribute a static binary without source.
+# \todo Consider adding this (regrettably boutique) license.
+LICENSE=	gnu-lgpl-v3
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
+# \todo Resolve: 2 forks, different, ?
 HOMEPAGE=	https://wxpython.org/
+#HOMEPAGE=	https://www.wxwidgets.org/
 COMMENT=	Python bindings for wxWidgets
 
 WRKSRC=		${WRKDIR}/wxPython-src-${VERSION}/wxPython
@@ -19,7 +25,8 @@ USE_TOOLS+=	gmake pkg-config
 # previous name of the package
 CONFLICTS+=			${PYPKGPREFIX}-wxWindows-[0-9]*
 PYTHON_SELF_CONFLICT=		yes
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.8.12.0
+# \todo Assess, but for now steer to 3.
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # no scripts to avoid conflicts
 #PYSETUPBUILDARGS+=	NO_SCRIPTS=1
@@ -52,6 +59,7 @@ PLIST_SUBST+=	EGG_INFODIR2=${EGG_NAME2}-py${PYVERSSUFFIX}.egg-info
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
-.include "../../x11/wxGTK28-contrib/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
+# \todo Why?
+#.include "../../x11/wxGTK30-contrib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
