@@ -5605,7 +5605,6 @@ SUBDIR+=	twemproxy
 SUBDIR+=	twin-environment
 SUBDIR+=	twinkle
 SUBDIR+=	twintk
-SUBDIR+=	twitim
 SUBDIR+=	twitmail
 SUBDIR+=	twittering-mode-git
 SUBDIR+=	txt2tags
