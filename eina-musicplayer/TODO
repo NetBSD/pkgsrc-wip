@@ -1,3 +1,0 @@
-Buildlink to libindicate when it is packaged (currently doesn't build).
-Dumps core when adding files.
-Various warnings/errors during build and execution.

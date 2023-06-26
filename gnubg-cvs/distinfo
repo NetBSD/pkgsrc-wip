@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2009/07/21 04:42:08 phonohawk Exp $
-
-SHA1 (patch-aa) = 764bad4d793bcae7026cf116d72bb32be9bc0973
-SHA1 (patch-ab) = edc8a147dd8be716756501d6988df69e15238378
-SHA1 (patch-ac) = b4f49cb86bdc780bad51da87e69f9756fcc50dc7
-SHA1 (patch-ad) = 6066dc18439031b2e61f755b4fb5cec31f8ec9e7

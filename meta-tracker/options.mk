@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
 PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca libsecret gnome
 PKG_OPTIONS_OPTIONAL_GROUPS=	video
-PKG_OPTIONS_GROUP.video=	gstreamer xine
+PKG_OPTIONS_GROUP.video=	xine
 PKG_SUPPORTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
 PKG_SUPPORTED_OPTIONS+=		rss evolution firefox # thunderbird -- broken?
 PKG_SUPPORTED_OPTIONS+=		nautilus
@@ -11,7 +11,6 @@ PKG_SUPPORTED_OPTIONS+=		mp3 taglib xmp
 
 PKG_SUGGESTED_OPTIONS+=		hal unac enca libsecret gnome
 PKG_SUGGESTED_OPTIONS+=		pdf xps gif jpeg tiff vorbis flac html gsf playlist
-PKG_SUGGESTED_OPTIONS+=		-gstreamer
 PKG_SUGGESTED_OPTIONS+=		rss evolution firefox # thunderbird
 PKG_SUGGESTED_OPTIONS+=		mp3 taglib xmp
 # XXX pbulk complains:
@@ -26,15 +25,7 @@ PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS} mplayer totem
 PLIST.mplayer=	yes
 PLIST.totem=	yes
 
-.if !empty(PKG_OPTIONS:Mgstreamer)
-PLIST.gstreamer=	yes
-#CONFIGURE_ARGS+=	--enable-gstreamer-tagreadbin
-#CONFIGURE_ARGS+=	--enable-gstreamer-helix
-CONFIGURE_ARGS+=	--enable-generic-media-extractor=gstreamer
-CONFIGURE_ARGS+=	--with-gstreamer-backend
-
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mxine)
+.if !empty(PKG_OPTIONS:Mxine)
 PLIST.xine=		yes
 .include "../../multimedia/xine-lib/buildlink3.mk"
 PLIST.mplayer=		yes
@@ -84,7 +75,7 @@ PLIST.gnome=		yes
 CONFIGURE_ARGS+=	--enable-icon
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../wip/gnome-keyring/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 #.include "../../x11/gnome-panel/buildlink3.mk" # XXX remove this when we have gnome-panel3
 .include "../../x11/gtk2/buildlink3.mk"
 .else

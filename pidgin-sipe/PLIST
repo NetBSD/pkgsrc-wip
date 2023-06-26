@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2013/07/06 16:56:24 othyro Exp $
-lib/purple-2/libsipe.la
-share/pixmaps/pidgin/protocols/16/sipe.png
-share/pixmaps/pidgin/protocols/22/sipe.png
-share/pixmaps/pidgin/protocols/24/sipe.png
-share/pixmaps/pidgin/protocols/32/sipe.png
-share/pixmaps/pidgin/protocols/48/sipe.png
-share/pixmaps/pidgin/protocols/scalable/sipe.svg

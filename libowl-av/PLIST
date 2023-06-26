@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 17:34:02 jihbed Exp $
-include/libowl-av/owl-audio-player.h
-include/libowl-av/owl-tag-reader.h
-include/libowl-av/owl-video-widget.h
-lib/libowl-av.la
-lib/pkgconfig/libowl-av.pc
-share/vala/vapi/libowl-av.vapi
