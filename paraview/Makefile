@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ParaView-v5.11.0
+DISTNAME=	ParaView-v5.11.1
 PKGNAME=	${DISTNAME:S/ParaView-v/paraview-/1}
 CATEGORIES=	math
 MASTER_SITES=	https://www.paraview.org/files/v5.11/

@@ -7024,6 +7024,7 @@ ${PYSITELIB}/vtkmodules/vtkWebGLExporter.so
 ${PYSITELIB}/vtkmodules/web/__init__.py
 ${PYSITELIB}/vtkmodules/web/camera.py
 ${PYSITELIB}/vtkmodules/web/dataset_builder.py
+${PYSITELIB}/vtkmodules/web/errors.py
 ${PYSITELIB}/vtkmodules/web/protocols.py
 ${PYSITELIB}/vtkmodules/web/query_data_model.py
 ${PYSITELIB}/vtkmodules/web/render_window_serializer.py
