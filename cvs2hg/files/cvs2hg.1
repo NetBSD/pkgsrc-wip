@@ -71,7 +71,7 @@ To convert the NetBSD src repository, if you have developer access, do:
 .Bd -literal -offset indent
 export REPO=src
 export LOGIN=username
-rsync -aS --delete -e ssh "$USERNAME"@cvs.NetBSD.org::cvsroot/"$REPO" "$REPO"-rsync
+rsync -aS --delete -e ssh "$LOGIN"@cvs.NetBSD.org::cvsroot/"$REPO" "$REPO"-rsync
 cvs2hg "$REPO"-rsync/"$REPO" "$REPO"
 .Ed
 .Pp
