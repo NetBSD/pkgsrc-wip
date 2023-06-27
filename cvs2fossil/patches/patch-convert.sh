@@ -4,7 +4,7 @@ Adapt script for pkgsrc paths, make arguments available from command line.
 
 --- convert.sh.orig	2011-02-15 18:57:40.000000000 +0000
 +++ convert.sh
-@@ -1,18 +1,29 @@
+@@ -1,18 +1,34 @@
  #!/bin/sh
  
 -# Sample conversion script
@@ -13,15 +13,20 @@ Adapt script for pkgsrc paths, make arguments available from command line.
  
 -db=/home/joerg/repo/src-new
 -repo=/home/joerg/repo/netbsd/src
++USAGE="usage: $0 [-m] source-cvs-rsync-path target-path"
 +strip=""
-+if [ "$#" > 1 ] && [ "$1" = -m ]
-+then
-+	shift
-+	strip=-m
-+fi
++while getopts m f
++do
++    case $f in
++        m)      strip=-m;;
++        \?)     echo "$USAGE" >&2; exit 1;;
++    esac
++done
++shift $((OPTIND - 1))
++
 +if [ "$#" != 2 ]
 +then
-+	echo usage: $0 [-m] source-cvs-rsync-path target-path >&2
++	echo "$USAGE" >&2
 +	exit 1
 +fi
 +
@@ -39,7 +44,7 @@ Adapt script for pkgsrc paths, make arguments available from command line.
  oldest=$(echo 'SELECT datetime(r.date,"-1 second") FROM revision r ORDER BY r.date LIMIT 1;' | sqlite3 $db)
  
  #
-@@ -35,14 +46,25 @@ oldest=$(echo 'SELECT datetime(r.date,"-
+@@ -35,14 +51,25 @@ oldest=$(echo 'SELECT datetime(r.date,"-
  #  revision IN (SELECT revision.id FROM revision WHERE date > "1998-05-01");
  #EOF
  
@@ -64,7 +69,7 @@ Adapt script for pkgsrc paths, make arguments available from command line.
  #TMPDIR=. time sqlite3 $fossil 'pragma synchronous=off; pragma journal_mode=off; vacuum'
 +
 +echo Checking for possible problems
-+99-warnings $db
++99-warnings $db || true
 +echo End of warnings
 +
 +echo Checking for timewarp issues

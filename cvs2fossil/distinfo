@@ -6,4 +6,4 @@ Size (cvs2fossil-20140502.tar.gz) = 1258545 bytes
 SHA1 (patch-01-import_main.c) = 6177f632e9a7213e9aff911e28ac04378102fae5
 SHA1 (patch-04-commit_main.c) = a7afef765fca714dfe672ab7207789d91cd839c8
 SHA1 (patch-common_common.h) = 625959ee61513df52696987c9fba2abb83c91262
-SHA1 (patch-convert.sh) = 6dcce41772d1ce9440d20094268c28e73d9cf022
+SHA1 (patch-convert.sh) = 2cb7abefb9888c5b99e85d18e135be7e53557bbb
