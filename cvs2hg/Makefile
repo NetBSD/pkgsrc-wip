@@ -10,6 +10,7 @@ LICENSE=		2-clause-bsd
 
 DEPENDS+=		cvs2fossil-[0-9]*:../../wip/cvs2fossil
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
+DEPENDS+=		git-filter-repo-[0-9]*:../../devel/git-filter-repo
 DEPENDS+=		${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 DEPENDS+=		${PYPKGPREFIX}-hg-git-[0-9]*:../../devel/py-hg-git
 

@@ -35,6 +35,7 @@
 .Nd convert CVS repository to Mercurial
 .Sh SYNOPSIS
 .Nm
+.Op Fl m Ar mailmap
 .Ar source
 .Ar destination
 .Sh DESCRIPTION
@@ -66,13 +67,25 @@ and finally
 .Ar destination Ns Pa .hg ,
 the Mercurial repository created from the git one by
 .Xr hg 1 .
+.Pp
+You can pass a
+.Xr gitmailmap 5
+file for creating proper author information using the
+.Fl m
+flag.
 .Sh EXAMPLES
 To convert the NetBSD src repository, if you have developer access, do:
 .Bd -literal -offset indent
 export REPO=src
 export LOGIN=username
 rsync -aS --delete -e ssh "$LOGIN"@cvs.NetBSD.org::cvsroot/"$REPO" "$REPO"-rsync
-cvs2hg "$REPO"-rsync/"$REPO" "$REPO"
+cvs2hg -m .mailmap "$REPO"-rsync/"$REPO" "$REPO"
+.Ed
+where
+.Pa .mailmap
+consists of lines like this:
+.Bd -literal
+Thomas Klausner <wiz@NetBSD.org> <wiz>
 .Ed
 .Pp
 The conversion is in
