@@ -25,7 +25,7 @@ do-build:
 	cd ${WRKSRC} && ./build.sh
 
 do-install:
-.for file in 01-import 02-vendorbranches 03-branchtime 04-commit
+.for file in 01-import 02-vendorbranches 03-branchtime 04-commit 99-warnings
 	${INSTALL_PROGRAM} ${WRKSRC}/${file}/${file} ${DESTDIR}${PREFIX}/libexec/cvs2fossil
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/convert.sh ${DESTDIR}${PREFIX}/bin/cvs2fossil

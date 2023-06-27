@@ -39,7 +39,7 @@ Adapt script for pkgsrc paths, make arguments available from command line.
  oldest=$(echo 'SELECT datetime(r.date,"-1 second") FROM revision r ORDER BY r.date LIMIT 1;' | sqlite3 $db)
  
  #
-@@ -35,14 +46,17 @@ oldest=$(echo 'SELECT datetime(r.date,"-
+@@ -35,14 +46,25 @@ oldest=$(echo 'SELECT datetime(r.date,"-
  #  revision IN (SELECT revision.id FROM revision WHERE date > "1998-05-01");
  #EOF
  
@@ -62,3 +62,11 @@ Adapt script for pkgsrc paths, make arguments available from command line.
 -time fossil rebuild --noverify $fossil
 +time fossil1 rebuild --noverify $fossil
  #TMPDIR=. time sqlite3 $fossil 'pragma synchronous=off; pragma journal_mode=off; vacuum'
++
++echo Checking for possible problems
++99-warnings $db
++echo End of warnings
++
++echo Checking for timewarp issues
++fossil1 test-timewarp-list --detail -R $fossil
++echo End of timewarp issues
