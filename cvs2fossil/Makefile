@@ -13,7 +13,7 @@ DEPENDS+=	fossil1-[0-9]*:../../wip/fossil1
 
 WRKSRC=		${WRKDIR}/cvs2fossil
 
-INSTALLATION_DIRS+=	bin libexec/cvs2fossil
+INSTALLATION_DIRS+=	bin libexec/cvs2fossil ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	convert.sh
@@ -29,5 +29,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${file}/${file} ${DESTDIR}${PREFIX}/libexec/cvs2fossil
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/convert.sh ${DESTDIR}${PREFIX}/bin/cvs2fossil
+	${INSTALL_DATA} ${FILESDIR}/cvs2fossil.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

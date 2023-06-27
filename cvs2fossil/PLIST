@@ -5,3 +5,4 @@ libexec/cvs2fossil/02-vendorbranches
 libexec/cvs2fossil/03-branchtime
 libexec/cvs2fossil/04-commit
 libexec/cvs2fossil/99-warnings
+man/man1/cvs2fossil.1
