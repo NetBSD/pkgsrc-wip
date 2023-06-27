@@ -39,7 +39,7 @@ Adapt script for pkgsrc paths, make arguments available from command line.
  oldest=$(echo 'SELECT datetime(r.date,"-1 second") FROM revision r ORDER BY r.date LIMIT 1;' | sqlite3 $db)
  
  #
-@@ -35,14 +46,14 @@ oldest=$(echo 'SELECT datetime(r.date,"-
+@@ -35,14 +46,17 @@ oldest=$(echo 'SELECT datetime(r.date,"-
  #  revision IN (SELECT revision.id FROM revision WHERE date > "1998-05-01");
  #EOF
  
@@ -50,6 +50,9 @@ Adapt script for pkgsrc paths, make arguments available from command line.
  rm -f $fossil
 -fossil new -A root --date-override "$oldest" $fossil
 +fossil1 new -A root --date-override "$oldest" $fossil
++# this is a random value used to identify repository groups in
++# fossil. it will complain if you try to pull/push changes across
++# different projects. Use the same value for incremental runs.
  project=eeb7e06236b08dc4b57b6ab3b957fe5756c64f5b
  sqlite3 $fossil 'UPDATE config SET value="'$project'" WHERE name="project-code"'
  initial=$(sqlite3 $fossil 'SELECT uuid FROM blob WHERE rid=1')
