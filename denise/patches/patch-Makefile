@@ -2,9 +2,9 @@ $NetBSD$
 
 Fix installation directories, and use of install command.
 
---- Makefile.orig	2022-06-27 19:02:54.000000000 +0000
+--- Makefile.orig	2023-04-21 20:52:47.000000000 +0000
 +++ Makefile
-@@ -14,7 +14,8 @@ shaderFolder := shader
+@@ -15,7 +15,8 @@ shaderFolder := shader
  imgFolder := img
  soundFolder := sounds
  
@@ -14,7 +14,7 @@ Fix installation directories, and use of install command.
  #prefix ?= $(HOME)/.local
  
  include data/Makefile
-@@ -256,7 +258,7 @@ ifeq ($(platform),macosx)
+@@ -275,7 +276,7 @@ ifeq ($(platform),macosx)
  else ifeq ($(platform),windows)
  	$(strip $(compiler) -o out/$(name) $(objects) $(link))
  else ifeq ($(platform),BSD)
@@ -23,17 +23,12 @@ Fix installation directories, and use of install command.
  
  	$(strip $(compiler) -o out/$(loname) $(objects) $(link))
  else
-@@ -319,12 +321,7 @@ install: ## Install
- 	fi
- 	install -m 644 data/img/$(loname).png $(prefix)/share/icons/$(loname).png
- 	install -m 644 data/$(loname).desktop $(prefix)/share/applications/$(loname).desktop
--	@echo "Install file associations? [y/n]"; \
--	read line; if [ $$line = "y" ]; then \
--	    install -m 644 data/application-x-$(loname).xml $(prefix)/share/mime/packages/application-x-$(loname).xml; \
+@@ -367,8 +368,6 @@ uninstall: ## Unistall
+ 	if [ -f $(prefix)/share/applications/$(loname).desktop ]; then rm $(prefix)/share/applications/$(loname).desktop; fi
+ 	if [ -f $(prefix)/share/mime/packages/application-x-$(loname).xml ]; then \
+ 		rm $(prefix)/share/mime/packages/application-x-$(loname).xml; \
 -	    if [ $(shell which update-mime-database) ]; then update-mime-database $(prefix)/share/mime; fi; \
 -	    if [ $(shell which update-desktop-database) ]; then update-desktop-database $(prefix)/share/applications; fi; \
--	fi
-+	    install -m 644 data/application-x-$(loname).xml $(prefix)/share/mime/packages/application-x-$(loname).xml;
- 	install -m 644 data/$(translationFolder)/* $(prefix)/share/$(loname)/$(translationFolder)
- 	install -m 644 data/$(dataFolder)/* $(prefix)/share/$(loname)/$(dataFolder)
- 	install -m 644 data/$(fontFolder)/*.ttf $(prefix)/share/$(loname)/$(fontFolder)
+ 	fi
+ 	if [ -d $(prefix)/share/$(loname) ]; then rm -rf $(prefix)/share/$(loname); fi
+     endif
