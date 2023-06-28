@@ -2349,7 +2349,6 @@ SUBDIR+=	micropolis
 SUBDIR+=	microsynteny-tools
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
-SUBDIR+=	mightymike
 SUBDIR+=	miktex
 SUBDIR+=	milou
 SUBDIR+=	milter-greylist-devel
