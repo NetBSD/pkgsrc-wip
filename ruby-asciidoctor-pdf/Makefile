@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	asciidoctor-pdf-2.3.4
+DISTNAME=	asciidoctor-pdf-2.3.8
 CATEGORIES=	print
 
 MAINTAINER=	charlotte@NetBSD.org

@@ -467,8 +467,6 @@ ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/Section/cdesc-Section.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/Section/first_section_of_part%3f-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/Section/numbered_title-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/Asciidoctor/cdesc-Asciidoctor.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/File/absolute_path%3f-c.ri
-${GEM_HOME}/doc/${GEM_NAME}/ri/File/cdesc-File.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/FormattedString/cdesc-FormattedString.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/FormattedString/eql%3f-i.ri
 ${GEM_HOME}/doc/${GEM_NAME}/ri/FormattedString/fragments-i.ri

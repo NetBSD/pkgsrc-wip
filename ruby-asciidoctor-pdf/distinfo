@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (asciidoctor-pdf-2.3.4.gem) = b1fed71e34a86465d8eb02cfb3c8491435f7995f
-RMD160 (asciidoctor-pdf-2.3.4.gem) = 7b8d3c7991c458799cd50e40bf023491ccf2bd68
-SHA512 (asciidoctor-pdf-2.3.4.gem) = 06aad7d90f2efdde3b90c4bbf5cb4ef489f490a7862c80f5cd507e215eb8af01b90779cc6f7318565eb757de83829760d90275259ddfefe3fe40ef7fbfa75a33
-Size (asciidoctor-pdf-2.3.4.gem) = 2269696 bytes
+BLAKE2s (asciidoctor-pdf-2.3.8.gem) = 1bf50c9695681c7534acb624b0c17864ccea7adbc418543d570a0eec8af0c67d
+SHA512 (asciidoctor-pdf-2.3.8.gem) = 39c9537efa7e82616e4a796dd9c75ef0fe74aee4e724a7237aa06584f5d40ba721d3b6f791daeb5b15da92b364b890c355114047483d93379c29e5452b1e44e9
+Size (asciidoctor-pdf-2.3.8.gem) = 2270720 bytes
