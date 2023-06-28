@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 24, 2023
+.Dd June 28, 2023
 .Dt CVS2HG 1
 .Os
 .Sh NAME
@@ -35,6 +35,7 @@
 .Nd convert CVS repository to Mercurial
 .Sh SYNOPSIS
 .Nm
+.Op Fl f Ar fixup-sql-script
 .Op Fl m Ar mailmap
 .Ar source
 .Ar destination
@@ -73,6 +74,11 @@ You can pass a
 file for creating proper author information using the
 .Fl m
 flag.
+You can pass an SQL fixup script for
+.Xr cvs2fossil
+using the
+.Fl f
+flag.
 .Sh EXAMPLES
 To convert the NetBSD src repository, if you have developer access, do:
 .Bd -literal -offset indent
@@ -96,7 +102,3 @@ and
 .Pa src.git ,
 respectively.
 You can delete them after the conversion.
-.Sh BUGS
-There is no way to provide an
-.Pa authormap
-file to convert Unix user names to email addresses.
