@@ -1,0 +1,88 @@
+#!/bin/sh
+
+set -e
+
+USAGE="usage: $0 [-f fixup-sql-script] [-m] source-cvs-rsync-path target-path"
+fixup=""
+strip=""
+while getopts f:m f
+do
+    case $f in
+	f)      fixup="$OPTARG";;
+        m)      strip=-m;;
+        \?)     echo "$USAGE" >&2; exit 1;;
+    esac
+done
+shift $((OPTIND - 1))
+
+if [ -n "$fixup" ] && [ ! -f "$fixup" ]
+then
+	echo "\"$fixup\" not found" >&2
+	exit 1
+fi
+
+if [ "$#" != 2 ]
+then
+	echo "$USAGE" >&2
+	exit 1
+fi
+
+PATH=@PREFIX@/libexec/cvs2fossil:$PATH
+db="$2"
+repo="$1"
+fossil="$db.fossil"
+
+#
+# If you want the module name itself to be skipped, add -m.
+# Instead of e.g. src/bin/... as path, this will create only bin/...
+#
+time 01-import "$strip" "$db" "$repo"
+oldest=$(echo 'SELECT datetime(r.date,"-1 second") FROM revision r ORDER BY r.date LIMIT 1;' | sqlite3 "$db")
+
+#
+# Check output of "fossil test-timewarp-list --detail" and compare with
+# SELECT revision.date, file.path, revision.revision
+# FROM branchpoints, branches, revision, file
+# WHERE branchpoints.branch=branches.id AND
+#       branchpoints.revision=revision.id AND
+#       branchpoints.file=file.id AND
+#       branches.symbol=XXX
+# ORDER BY revision.date DESC
+#
+# The following command can be used to fix up "cvs add" commands on "broken-branch"
+# matching the timewarp list above. This can be be used if they disturbed the automic
+# branch time computation.
+#
+#sqlite3 $db << EOF
+#DELETE FROM branchpoints WHERE
+#  branch IN (SELECT id FROM branches WHERE symbol="broken-branch") AND
+#  revision IN (SELECT revision.id FROM revision WHERE date > "1998-05-01");
+#EOF
+if [ -n "$fixup" ]
+then
+	echo "Fixing up SQL issues"
+	sqlite3 "$db" < "$fixup"
+fi
+
+time 02-vendorbranches "$db"
+time 03-branchtime "$db"
+rm -f "$fossil"
+fossil1 new -A root --date-override "$oldest" "$fossil"
+# this is a random value used to identify repository groups in
+# fossil. it will complain if you try to pull/push changes across
+# different projects. Use the same value for incremental runs.
+# project=eeb7e06236b08dc4b57b6ab3b957fe5756c64f5b
+# sqlite3 $fossil 'UPDATE config SET value="'$project'" WHERE name="project-code"'
+initial=$(sqlite3 "$fossil" 'SELECT uuid FROM blob WHERE rid=1')
+TMPDIR=. time 04-commit -b "$initial" "$db" "$fossil"
+du -h "$fossil"
+time fossil1 rebuild --noverify "$fossil"
+#TMPDIR=. time sqlite3 $fossil 'pragma synchronous=off; pragma journal_mode=off; vacuum'
+
+echo Checking for possible problems
+99-warnings "$db" || true
+echo End of warnings
+
+echo Checking for timewarp issues
+fossil1 test-timewarp-list --detail -R "$fossil"
+echo End of timewarp issues
