@@ -762,3 +762,4 @@ Size (winnow-0.3.6.crate) = 176641 bytes
 BLAKE2s (wyz-0.5.1.crate) = dc39cd7a740b1e5bc6799cf3f502684350913a83f457249d2c868ede49ad0849
 SHA512 (wyz-0.5.1.crate) = 15d86c167145c90e3fbabcefd11754fb1cb835896e32d1bb7f4b027e5b2092f5fdbdca4062c129bc38e655cb87c6a3f4e181747ee25d89db5e01fb1fcac18fe9
 Size (wyz-0.5.1.crate) = 18790 bytes
+SHA1 (patch-.._vendor_openssl-src_111.26.0+1.1.1u_src_lib.rs) = 614576904a7c4d88f814130badc24e1dd1865789

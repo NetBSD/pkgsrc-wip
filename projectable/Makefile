@@ -1,5 +1,6 @@
 # $NetBSD$
 
+# Do not import. Requires Rust-1.70 or higher
 DISTNAME=	projectable-1.2.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dzfrias/}
@@ -12,7 +13,7 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	pkg-config perl gmake
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
