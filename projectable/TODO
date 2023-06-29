@@ -1,0 +1,103 @@
+https://github.com/dzfrias/projectable/issues/16
+
+error: failed to run custom build command for `openssl-sys v0.9.88`
+
+Caused by:
+  process didn't exit successfully: `/usr/pkgsrc/wip/projectable/work/projectable-1.2.0/target/release/build/openssl-sys-9774f3ac53ec23c7/build-script-main` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-env-changed=X86_64_UNKNOWN_NETBSD_OPENSSL_NO_VENDOR
+  X86_64_UNKNOWN_NETBSD_OPENSSL_NO_VENDOR unset
+  cargo:rerun-if-env-changed=OPENSSL_NO_VENDOR
+  OPENSSL_NO_VENDOR unset
+  cargo:rerun-if-env-changed=CC_x86_64-unknown-netbsd
+  CC_x86_64-unknown-netbsd = None
+  cargo:rerun-if-env-changed=CC_x86_64_unknown_netbsd
+  CC_x86_64_unknown_netbsd = None
+  cargo:rerun-if-env-changed=HOST_CC
+  HOST_CC = None
+  cargo:rerun-if-env-changed=CC
+  CC = Some("gcc")
+  cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-netbsd
+  CFLAGS_x86_64-unknown-netbsd = None
+  cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_netbsd
+  CFLAGS_x86_64_unknown_netbsd = None
+  cargo:rerun-if-env-changed=HOST_CFLAGS
+  HOST_CFLAGS = None
+  cargo:rerun-if-env-changed=CFLAGS
+  CFLAGS = Some("-pipe -O2 -fPIC -D_FORTIFY_SOURCE=2 -I/usr/pkg/include -I/usr/include")
+  cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+  CRATE_CC_NO_DEFAULTS = None
+  DEBUG = Some("false")
+  CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+  cargo:rerun-if-env-changed=AR_x86_64-unknown-netbsd
+  AR_x86_64-unknown-netbsd = None
+  cargo:rerun-if-env-changed=AR_x86_64_unknown_netbsd
+  AR_x86_64_unknown_netbsd = None
+  cargo:rerun-if-env-changed=HOST_AR
+  HOST_AR = None
+  cargo:rerun-if-env-changed=AR
+  AR = None
+  cargo:rerun-if-env-changed=ARFLAGS_x86_64-unknown-netbsd
+  ARFLAGS_x86_64-unknown-netbsd = None
+  cargo:rerun-if-env-changed=ARFLAGS_x86_64_unknown_netbsd
+  ARFLAGS_x86_64_unknown_netbsd = None
+  cargo:rerun-if-env-changed=HOST_ARFLAGS
+  HOST_ARFLAGS = None
+  cargo:rerun-if-env-changed=ARFLAGS
+  ARFLAGS = None
+  cargo:rerun-if-env-changed=RANLIB_x86_64-unknown-netbsd
+  RANLIB_x86_64-unknown-netbsd = None
+  cargo:rerun-if-env-changed=RANLIB_x86_64_unknown_netbsd
+  RANLIB_x86_64_unknown_netbsd = None
+  cargo:rerun-if-env-changed=HOST_RANLIB
+  HOST_RANLIB = None
+  cargo:rerun-if-env-changed=RANLIB
+  RANLIB = None
+  cargo:rerun-if-env-changed=RANLIBFLAGS_x86_64-unknown-netbsd
+  RANLIBFLAGS_x86_64-unknown-netbsd = None
+  cargo:rerun-if-env-changed=RANLIBFLAGS_x86_64_unknown_netbsd
+  RANLIBFLAGS_x86_64_unknown_netbsd = None
+  cargo:rerun-if-env-changed=HOST_RANLIBFLAGS
+  HOST_RANLIBFLAGS = None
+  cargo:rerun-if-env-changed=RANLIBFLAGS
+  RANLIBFLAGS = None
+  running cd "/usr/pkgsrc/wip/projectable/work/projectable-1.2.0/target/release/build/openssl-sys-73293c510d814956/out/openssl-build/build/src" && AR="ar" CC="gcc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/usr/pkgsrc/wip/projectable/work/projectable-1.2.0/target/release/build/openssl-sys-73293c510d814956/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-dso" "no-shared" "no-ssl3" "no-unit-test" "no-comp" "no-zlib" "no-zlib-dynamic" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "BSD-x86_64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-m64" "-pipe" "-O2" "-fPIC" "-D_FORTIFY_SOURCE=2" "-I/usr/pkg/include" "-I/usr/include"
+  Configuring OpenSSL version 1.1.1u (0x1010115fL) for BSD-x86_64
+  Using os-specific seed configuration
+  Creating configdata.pm
+  Creating Makefile
+
+  **********************************************************************
+  ***                                                                ***
+  ***   OpenSSL has been successfully configured                     ***
+  ***                                                                ***
+  ***   If you encounter a problem while building, please open an    ***
+  ***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+  ***   and include the output from the following command:           ***
+  ***                                                                ***
+  ***       perl configdata.pm --dump                                ***
+  ***                                                                ***
+  ***   (If you are new to OpenSSL, you might want to consult the    ***
+  ***   'Troubleshooting' section in the INSTALL file first)         ***
+  ***                                                                ***
+  **********************************************************************
+  running cd "/usr/pkgsrc/wip/projectable/work/projectable-1.2.0/target/release/build/openssl-sys-73293c510d814956/out/openssl-build/build/src" && "make" "depend"
+  running cd "/usr/pkgsrc/wip/projectable/work/projectable-1.2.0/target/release/build/openssl-sys-73293c510d814956/out/openssl-build/build/src" && MAKEFLAGS="-j --jobserver-fds=5,6 --jobserver-auth=5,6" "make" "build_libs"
+
+  --- stderr
+  make: illegal argument to -j -- must be positive integer!
+  thread 'main' panicked at '
+
+
+  Error building OpenSSL:
+      Command: cd "/usr/pkgsrc/wip/projectable/work/projectable-1.2.0/target/release/build/openssl-sys-73293c510d814956/out/openssl-build/build/src" && MAKEFLAGS="-j --jobserver-fds=5,6 --jobserver-auth=5,6" "make" "build_libs"
+      Exit status: exit status: 2
+
+
+      ', /usr/pkgsrc/wip/projectable/work/vendor/openssl-src-111.26.0+1.1.1u/src/lib.rs:506:13
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+*** Error code 101
+
+Stop.
+make[1]: stopped
