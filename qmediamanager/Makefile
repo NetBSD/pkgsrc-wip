@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS=	npmount>0:../../wip/npmount
 DEPENDS+=	devpub-mount>0:../../wip/devpub-mount
-DEPENDS+=	auto-admin>=0.7.17:../../sysutils/auto-admin
+DEPENDS+=	auto-admin>=0.7.17.8:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
 # Maybe use qt5/6 options.  See net/wireshark.
 DEPENDS+=	qt6-qttools>0:../../devel/qt6-qttools
