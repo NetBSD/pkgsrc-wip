@@ -31,6 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-wxPython>=4:../../x11/py-wxPython
 
 .include "../../lang/python/pyversion.mk"
 
@@ -45,7 +46,4 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.4.0:../../devel/py-importlib-res
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
-
-# wxWidgets needs a big update
-#.include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
