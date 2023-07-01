@@ -16,7 +16,6 @@ COMMENT=	The V Programming Language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
-USE_TOOLS+=	libtool
 
 MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	local=1
@@ -44,17 +43,13 @@ pre-configure:
 
 SUBST_CLASSES+=		hashbang
 SUBST_STAGE.hashbang=	pre-install
-SUBST_FILES.hashbang+=	cmd/tools/git_pre_commit_hook.vsh
-SUBST_FILES.hashbang+=	cmd/tools/install_binaryen.vsh
-SUBST_FILES.hashbang+=	cmd/tools/install_wabt.vsh
+SUBST_FILES.hashbang+=	cmd/tools/*.vsh
 SUBST_SED.hashbang=	-e '1s,\#!.*,\#!${INSTALLDIR}/v,'
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
-#SUBST_STAGE.prefix=	pre-build
 SUBST_FILES.prefix+=	vlib/builtin/builtin_d_gcboehm.c.v
 SUBST_VARS.prefix=	PREFIX
-#SUBST_SHOW_DIFF.prefix = yes
 
 # Maybe not all of this is needed, but the upstream simply uses
 # the whole source tree.
