@@ -19,6 +19,7 @@ CONF_FILES=	${EGDIR}/devpub-mount.conf.sample ${PREFIX}/etc/devpub-mount.conf
 
 INSTALLATION_DIRS=	sbin share/examples/devpub-mount share/devpub-mount ${PKGMANDIR}/man8
 
+# FIXME: Install /libexec/devpubd-hooks/03-devpub-mount?
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/devpub-mount ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/devpub-mount.conf \
