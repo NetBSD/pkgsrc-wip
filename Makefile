@@ -3233,6 +3233,7 @@ SUBDIR+=	powerline
 SUBDIR+=	powwow
 SUBDIR+=	ppp
 SUBDIR+=	ppr
+SUBDIR+=	ppsspp
 SUBDIR+=	praat
 SUBDIR+=	preload
 SUBDIR+=	premake

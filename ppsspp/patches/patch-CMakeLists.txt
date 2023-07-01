@@ -1,0 +1,17 @@
+$NetBSD$
+
+Several functions are hidden behind _NETBSD_SOURCE.
+
+--- CMakeLists.txt.orig	2023-05-22 07:27:43.000000000 -0700
++++ CMakeLists.txt	2023-06-29 00:17:35.378577080 -0700
+@@ -13,6 +13,10 @@
+ 
+ add_definitions(-D__STDC_CONSTANT_MACROS)
+ 
++if(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
++  add_definitions(-D_NETBSD_SOURCE)
++endif()
++
+ # Include AppleClang and Clang.
+ if(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
+ 	set(CLANG ON)
