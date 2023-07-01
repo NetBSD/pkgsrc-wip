@@ -1,11 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	vlang-weekly-${VER}
-VER=		2022.19
+#DISTNAME=	vlang-weekly-${VER}
+DISTNAME=	vlang-${VER}
+#VER=		2023.26
+VER=		0.3.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vlang/}
 GITHUB_PROJECT=	v
-GITHUB_TAG=	weekly.${VER}
+#GITHUB_TAG=	weekly.${VER}
+GITHUB_TAG=	${VER}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://vlang.io/
@@ -13,9 +16,13 @@ COMMENT=	The V Programming Language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+USE_TOOLS+=	libtool
 
 MAKE_FILE=	GNUmakefile
 MAKE_FLAGS+=	local=1
+#MAKE_ENV+=	VFLAGS="-gc none"
+
+DEPENDS+=	boehm-gc>=8:../../devel/boehm-gc
 
 # vc is the bootstrap compiler and needs updates along with vlang.
 # Search https://github.com/vlang/v/releases for the commit ID that
@@ -23,12 +30,31 @@ MAKE_FLAGS+=	local=1
 # Then search in https://github.com/vlang/vc/commits/master for the
 # commit that mentions the abbreviated above commit in its commit
 # message.
-GITHUB_SUBMODULES+=	vlang vc     a298ad7069f6333ef8ab59a616654fc74e04c847 vc
+GITHUB_SUBMODULES+=	vlang vc     330f701607e1073da284d36824a453c47dc2830c vc
 # tccbin is the dummy branch thirdparty-unknown-unknown and needs no updates.
 GITHUB_SUBMODULES+=	vlang tccbin de82a130c282c03eac3ccd442b995a5174e865ec thirdparty/tcc
 
 INSTALLDIR=		${PREFIX}/libexec/vlang
 INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	include/vlang
+INSTALLATION_DIRS+=	lib/vlang
+
+pre-configure:
+	cd ${WRKSRC}/vlib/term/termios && cp termios_freebsd.c.v termios_netbsd.c.v
+
+SUBST_CLASSES+=		hashbang
+SUBST_STAGE.hashbang=	pre-install
+SUBST_FILES.hashbang+=	cmd/tools/git_pre_commit_hook.vsh
+SUBST_FILES.hashbang+=	cmd/tools/install_binaryen.vsh
+SUBST_FILES.hashbang+=	cmd/tools/install_wabt.vsh
+SUBST_SED.hashbang=	-e '1s,\#!.*,\#!${INSTALLDIR}/v,'
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+#SUBST_STAGE.prefix=	pre-build
+SUBST_FILES.prefix+=	vlib/builtin/builtin_d_gcboehm.c.v
+SUBST_VARS.prefix=	PREFIX
+#SUBST_SHOW_DIFF.prefix = yes
 
 # Maybe not all of this is needed, but the upstream simply uses
 # the whole source tree.
@@ -43,6 +69,7 @@ do-install:
 	#cp -r ${WRKSRC}/tutorials ${DESTDIR}${INSTALLDIR}
 	rm ${DESTDIR}${INSTALLDIR}/vlib/sync/sync_default.c.v.orig
 	rm ${DESTDIR}${INSTALLDIR}/vlib/builtin/cfns.c.v.orig
+	rm ${DESTDIR}${INSTALLDIR}/vlib/builtin/builtin_d_gcboehm.c.v.orig
 	# Remove tests:
 	rm -rf ${DESTDIR}${INSTALLDIR}/vlib/*/tests
 	rm -rf ${DESTDIR}${INSTALLDIR}/vlib/*/*/tests

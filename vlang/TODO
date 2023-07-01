@@ -17,3 +17,10 @@ vtest.8479168851317294636.tmp.c:(.text+0x1f877): undefined reference to `pthread
 ...
 
 I patched it out. Should be upstreamed somehow, cleanly.
+
+TODO: several tests fail with signal 11: segmentation fault, possibly
+      related to signals:
+      0x728055aa21a0 <__sigtramp_siginfo_2> at /usr/lib/libc.so.12
+
+Summary for testing vlib: 59 failed, 1420 passed, 19 skipped, 1498 total. Runtime: 549385 ms, on 5 parallel jobs.
+Summary for building examples: 41 failed, 116 passed, 17 skipped, 174 total. Runtime: 37395 ms, on 5 parallel jobs.
