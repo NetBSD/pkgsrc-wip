@@ -1,12 +1,10 @@
 # $NetBSD: Makefile,v 1.75 2022/11/02 19:39:52 bsiegert Exp $
 
-# Important: UI has to be manually built when updating. See instructions below.
-
-DISTNAME=	prometheus-2.37.1
-MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
-PKGREVISION=	3
+DISTNAME=	prometheus-2.45.0
+PKGNAME=	${DISTNAME:S/prometheus/prometheus-lts/}
+# XXX: We need to mix tag and release, not supported via mk/fetch/github.mk.
+MASTER_SITES=	-https://github.com/prometheus/prometheus/archive/refs/tags/v2.45.0.tar.gz
 CATEGORIES=	databases
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://prometheus.io/
@@ -15,28 +13,9 @@ LICENSE=	apache-2.0
 
 .include "go-modules.mk"
 
-# How to rebuild UI after bumping version:
-# 1. install lang/npm
-# 2. comment out the DISTFILES=... line
-# 3. run "make distinfo extract update-ui"
-# 4. publish the resulting distfile on MASTER_SITE_LOCAL
-# 5. uncomment the DISTFILES=... line and regen distinfo
-.PHONY: update-ui
-update-ui:
-	cd ${WRKSRC}/web/ui &&							\
-	npm install &&								\
-	npm run build &&							\
-	${CHMOD} -x static/react/favicon.ico static/react/manifest.json &&	\
-	cd ../../.. &&								\
-	${TOOLS_PLATFORM.tar} -czf ${REACT_UI_DIST} ${DISTNAME}/web/ui/static/react &&		\
-	${CP} ${REACT_UI_DIST} ${DISTDIR}/${REACT_UI_DIST} &&			\
-	${ECHO} "UI built. Run this command:" &&				\
-	${ECHO} "# scp ${DISTDIR}/${REACT_UI_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
-
-REACT_UI_DIST=		${DISTNAME}-react-ui.tar.gz
-SITES.${REACT_UI_DIST}=	${MASTER_SITE_LOCAL}
-# comment out this when running make update-ui
-DISTFILES=		${DEFAULT_DISTFILES} ${REACT_UI_DIST}
+PROMETHEUS_WEB_UI=		prometheus-web-ui-2.45.0.tar.gz
+SITES.${PROMETHEUS_WEB_UI}=	https://github.com/prometheus/prometheus/releases/download/v2.45.0/
+DISTFILES=			${DEFAULT_DISTFILES} ${PROMETHEUS_WEB_UI}
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/prometheus/prometheus
@@ -81,6 +60,10 @@ INSTALLATION_DIRS+=	${EXAMPLE_DIR} ${WEBUI_DIR}
 .for f in ${EXAMPLE_FILES}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+post-extract:
+	${CHMOD} -x ${WRKDIR}/static/react/favicon.ico ${WRKDIR}/static/react/manifest.json
+	${CP} -R ${WRKDIR}/static/react ${WRKSRC}/web/ui/static
 
 do-build:
 .for f in prometheus promtool
