@@ -14,7 +14,7 @@ LICENSE=	eclipse-license
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-iso8601>=0.1.12:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-paho-mqtt>=1.4.0:../../wip/py-paho-mqtt
+DEPENDS+=	${PYPKGPREFIX}-paho-mqtt>=1.4.0:../../net/py-paho-mqtt
 
 USE_LANGUAGES=	# none
 
