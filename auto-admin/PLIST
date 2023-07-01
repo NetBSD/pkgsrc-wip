@@ -12,6 +12,7 @@ bin/auto-hex-to-octet
 bin/auto-image2dev
 bin/auto-insert-line
 bin/auto-localbase
+bin/auto-media-format
 bin/auto-octet-to-hex
 bin/auto-pkg-branch
 bin/auto-pkg-latest
@@ -105,7 +106,6 @@ sbin/auto-lock-local-pw
 sbin/auto-lock-user
 sbin/auto-mark-install-from-source
 sbin/auto-mark-package-critical
-sbin/auto-media-format
 sbin/auto-mount-any
 sbin/auto-mount-noautos
 sbin/auto-network-config
