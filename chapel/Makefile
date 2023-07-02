@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	chapel-1.30.0
+DISTNAME=	chapel-1.31.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chapel-lang/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -24,8 +24,9 @@ TEST_TARGET=		check
 
 # TODO: detect clang and set to 'clang' instead
 MAKE_ENV+=		CHPL_HOST_COMPILER=gnu
-# llvm 15 not supported yet as of 1.29.0
-MAKE_ENV+=		CHPL_LLVM=none
+MAKE_ENV+=		CHPL_TARGET_COMPILER=gnu
+# TODO: llvm 15 is supported yet as of 1.31, use it
+MAKE_ENV+=             CHPL_LLVM=none
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/chapel/1.30/compiler
 
