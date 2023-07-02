@@ -1382,6 +1382,7 @@ SUBDIR+=	gotify
 SUBDIR+=	goyq
 SUBDIR+=	gp-toric
 SUBDIR+=	gpak
+SUBDIR+=	gping
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
