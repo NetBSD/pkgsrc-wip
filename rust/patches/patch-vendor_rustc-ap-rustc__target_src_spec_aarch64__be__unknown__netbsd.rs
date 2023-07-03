@@ -1,3 +1,8 @@
+diff -git a/rust/patches/patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs b/rust/patches/patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs
+index 98a1d9cb7b..e69de29bb2 100644
+-- a/rust/patches/patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs
++++ b/rust/patches/patchvendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs
+@@ 1,27 +0,0 @@
 $NetBSD$
 
 Add aarch64_be NetBSD target.
