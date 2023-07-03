@@ -18,8 +18,8 @@ do-install:
 
 GO_BUILD_PATTERN=	.
 
-post-patch:
-	cd ${WRKSRC}/tun && ${LN} -sf tun_openbsd.go tun_netbsd.go
+pre-patch:
+	cd ${WRKSRC}/tun && ${CP} tun_openbsd.go tun_netbsd.go
 
 .include "go-modules.mk"
 

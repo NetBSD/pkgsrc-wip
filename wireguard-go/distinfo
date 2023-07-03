@@ -29,3 +29,4 @@ SHA512 (wireguard-go-0.0.20220316.tar.xz) = 82b53210502e01d454a62a1a7694f57b2f72
 Size (wireguard-go-0.0.20220316.tar.xz) = 110444 bytes
 SHA1 (patch-ipc_uapi__bsd.go) = 028dd8415c52abb844ee1e8b234cc13872e697e3
 SHA1 (patch-ipc_uapi__unix.go) = 8b0c917db05bfb94f446cf6b68b5c4ac655ebd9f
+SHA1 (patch-tun_tun__netbsd.go) = 0a9b925b520f7b6169e37dd8afa42c04ab2b0b6e
