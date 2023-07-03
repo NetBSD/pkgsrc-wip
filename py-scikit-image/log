@@ -1,0 +1,34 @@
+0.21.0
+
+Highlights
+
+    Last release to support Python 3.8
+    Unified API for PRNGs
+
+New Features
+
+    Implement Fisher vectors in scikit-image (#5349).
+    Add support for y-dimensional shear to the AffineTransform (#6752).
+
+
+0.20.0
+
+With this release, many of the functions in skimage.measure now
+support anisotropic images with different voxel spacings.
+
+Many performance improvements were made, such as support for
+footprint decomposition in skimage.morphology
+
+Four new gallery examples were added to the documentation, including
+the new interactive example "Track solidification of a metallic
+alloy".
+
+This release completes the transition to a more flexible channel_axis
+parameter for indicating multi-channel images, and includes several
+other deprecations that make the API more consistent and expressive.
+
+Finally, in preparation for the removal of distutils in the upcoming
+Python 3.12 release, we replaced our build system with meson and
+a static pyproject.toml specification.
+
+This release supports Python 3.8--3.11.

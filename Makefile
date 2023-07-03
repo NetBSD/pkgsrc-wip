@@ -4531,6 +4531,7 @@ SUBDIR+=	py-schema
 SUBDIR+=	py-scholarmetrics
 SUBDIR+=	py-scikit-aero
 SUBDIR+=	py-scikit-glpk
+SUBDIR+=	py-scikit-image
 SUBDIR+=	py-scikit-monaco
 SUBDIR+=	py-scikit-nano
 SUBDIR+=	py-scikits-bvp_solver
