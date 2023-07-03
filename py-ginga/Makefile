@@ -31,7 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-exifread>=2.3.2:../../graphics/py-exifread
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4.15:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-astroquery>=0.3.5:../../wip/py-astroquery
-DEPENDS+=	${PYPKGPREFIX}-photutils>0:../../wip/py-photutils
+DEPENDS+=	${PYPKGPREFIX}-photutils>0:../../math/py-photutils
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-cairo>0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-qt5>0:../../x11/py-qt5
