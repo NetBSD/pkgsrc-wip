@@ -6,6 +6,7 @@ Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
 BLAKE2s (compiler-rt-16.0.6.src.tar.xz) = 347c0c1e7d13ab026bc18d21a892047cf75039f940f58d32a2b365f51f5f3aa6
 SHA512 (compiler-rt-16.0.6.src.tar.xz) = 852e2105facb12ea0943aa24e0c220f76671ad76dfe7d07b8164c3a1d8360670ca565a2b6dd590722b974e16a2adf3c466fdabdfd3bb3ebbd005162c8ac4406c
 Size (compiler-rt-16.0.6.src.tar.xz) = 2358240 bytes
+SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
 SHA1 (patch-lib_asan_CMakeLists.txt) = f91335b88c8c28a25d7dfada85769f799660f82a
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = 708b4def299a1cc47fca3c48f70745f8528c0fb8
