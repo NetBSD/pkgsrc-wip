@@ -16,6 +16,7 @@ SHA1 (patch-src_libslic3r_Platform.hpp) = 5626058616d04396bff6c8550951d04fe03249
 SHA1 (patch-src_libslic3r_SupportSpotsGenerator.cpp) = 332b8c8f0b4b7157d856bf0424e7c92a8a950f49
 SHA1 (patch-src_libslic3r_Thread.cpp) = 8aa488b933baa97132058f88a82eef8db73ab2f5
 SHA1 (patch-src_occt__wrapper_CMakeLists.txt) = 2e11271757bcc76f3832c8fd27943f3ef97136f1
+SHA1 (patch-src_slic3r_CMakeLists.txt) = 443efdac84f6b60f6016abaf034d40b80f5c1560
 SHA1 (patch-src_slic3r_GUI_BitmapCache.cpp) = 9a464bcb09589e12de70ce57cda17f526df33b9b
 SHA1 (patch-src_slic3r_GUI_ConfigWizard.cpp) = 01e405fe0f743d3f8e2d76b987b51ff862ae6f97
 SHA1 (patch-src_slic3r_GUI_ConfigWizard.hpp) = 6eed54e08497ec1dc6fea33263ab65d2d7e0dc0d
