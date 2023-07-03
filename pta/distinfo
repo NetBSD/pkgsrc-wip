@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pta-0.1.tar.gz) = ae2709f561aebcdb84916ed38aaabb8ac580a3442f556b50107d5aa77a3ca7ee
+SHA512 (pta-0.1.tar.gz) = 12a85f42a4063a40af928f25a2b9e9a61588e830d0057db42d26d629ce2cda4d8344b4ba5b585b7798a01237bb34d9652a359be7c95953e31c2d80fe2af4f9ea
+Size (pta-0.1.tar.gz) = 19943 bytes

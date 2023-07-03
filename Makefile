@@ -2,6 +2,8 @@
 
 COMMENT=	Work-in-progress packages
 
+SUBDIR+=	pta
+SUBDIR+=	retawq
 SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2

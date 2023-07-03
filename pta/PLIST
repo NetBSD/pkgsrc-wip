@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/pta
+man/man1/pta.1
+man/man5/pta-accounts.5
+man/man5/pta-journal.5
+man/man7/pta-glossary.7
+share/examples/pta/accounts.example.de
+share/examples/pta/accounts.example.en
+share/examples/pta/journal.example.en

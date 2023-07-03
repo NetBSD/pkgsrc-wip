@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (retawq-0.2.6c.tar.gz) = 9887f76ab546844f5221045aae00ad6e7b28fc43d2740ce3e7da6ad809f8f011
+SHA512 (retawq-0.2.6c.tar.gz) = 555f61460decf3108e85f0d0153d281a7b9a9fd2474563fcf47145bf969025ffcfad6d5dc0ae946bde11bdf880cc26ceb5cde3194194a1cbbaadc4a672a094f8
+Size (retawq-0.2.6c.tar.gz) = 393321 bytes
