@@ -23,6 +23,8 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gping \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/gping.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gping.1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/libgit2/buildlink3.mk"
