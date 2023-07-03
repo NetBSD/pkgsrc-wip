@@ -17,7 +17,7 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/gping-be060c10d0f99ba07f951ed2a1c5d605abe3a2af
 
 USE_TOOLS+=		pkg-config
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 do-install:
