@@ -2,8 +2,7 @@
 
 COMMENT=	Work-in-progress packages
 
-SUBDIR+=	pta
-SUBDIR+=	retawq
+
 SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
@@ -3269,6 +3268,7 @@ SUBDIR+=	prusaslicer
 SUBDIR+=	psh
 SUBDIR+=	psybnc
 SUBDIR+=	pt-ttf
+SUBDIR+=	pta
 SUBDIR+=	ptlib
 SUBDIR+=	ptpd
 SUBDIR+=	pts
@@ -4985,6 +4985,7 @@ SUBDIR+=	reone
 SUBDIR+=	repeatmasker
 SUBDIR+=	reproc
 SUBDIR+=	resin
+SUBDIR+=	retawq
 SUBDIR+=	revealjs
 SUBDIR+=	revelation
 SUBDIR+=	reviewdog
