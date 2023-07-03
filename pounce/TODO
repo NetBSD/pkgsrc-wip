@@ -1,0 +1,4 @@
+* Options: Palaver support requires additional dependencies (libcurl and
+  sqlite3), but pounce-notify doesn't. Should they be options and/or
+  defaults?
+* Create rc.d script for pounce

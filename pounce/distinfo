@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (pounce-3.1.tar.gz) = ac2d8b0d66e0c1a0a2eb4bae8a00d5c3096cc4e474e304adfa5c9dbc1df56e6c
+SHA512 (pounce-3.1.tar.gz) = b2c2481e152368080e6ce9b3be2d7920eb4cac630dabb994e31170fb44977e2235c0ff30a7f08e826a329da69371a3ff2dae33831cb93b18655f98fc6569da7d
+Size (pounce-3.1.tar.gz) = 50801 bytes
+SHA1 (patch-configure) = 6ab09c4c61d5877fb91e944e6b672a35194c10cd

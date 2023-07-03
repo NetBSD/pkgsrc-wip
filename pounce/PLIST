@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/calico
+bin/pounce
+${PLIST.pounce-notify}bin/pounce-notify
+${PLIST.palaver}bin/pounce-palaver
+man/man1/calico.1
+${PLIST.pounce-notify}man/man1/pounce-notify.1
+${PLIST.palaver}man/man1/pounce-palaver.1
+man/man1/pounce.1

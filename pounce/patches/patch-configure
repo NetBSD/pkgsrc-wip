@@ -1,0 +1,18 @@
+$NetBSD$
+
+Add NetBSD support
+
+--- configure.orig	2023-07-02 04:19:49.706748744 +0000
++++ configure
+@@ -57,6 +57,11 @@ case "$(uname)" in
+ 		config libtls
+ 		defvar OPENSSL_BIN openssl exec_prefix /bin/openssl
+ 		;;
++	(NetBSD)
++		cflags "-D'explicit_bzero(b,l)=explicit_memset((b),0,(l))'"
++		config libtls
++		defstr OPENSSL_BIN /usr/bin/openssl
++		;;
+ 	(*)
+ 		config libtls
+ 		defvar OPENSSL_BIN openssl exec_prefix /bin/openssl
