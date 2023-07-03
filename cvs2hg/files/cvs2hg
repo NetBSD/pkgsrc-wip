@@ -55,7 +55,7 @@ then
 fi
 SRC="$1"
 BASE="$2"
-cvs2fossil "$fixup" -m "$SRC" "$BASE"
+cvs2fossil -m "$SRC" $fixup "$BASE"
 # creates "$BASE" and "$BASE".fossil, but we don't need "$BASE"
 rm -f "$BASE"
 # convert to git
