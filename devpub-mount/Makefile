@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	devpub-mount-0.1.0.2
+DISTNAME=	devpub-mount-0.1.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	ae4b4ae3b86bc051caa837baf22ec9f334673c99
+GITHUB_TAG=	3c722e67807210c1d1acfc10e9ccc017b015865f
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/devpub-mount/
