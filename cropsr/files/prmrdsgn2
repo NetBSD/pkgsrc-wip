@@ -1,0 +1,7 @@
+#!/bin/sh
+# $NetBSD$
+
+LIBEXEC=@PREFIX@/libexec
+PRMRDSGN2=${LIBEXEC}/cropsr/prmrdsgn2.py
+
+exec ${PRMRDSGN2} ${*}

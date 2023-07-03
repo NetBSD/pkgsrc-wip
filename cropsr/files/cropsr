@@ -1,0 +1,7 @@
+#!/bin/sh
+# $NetBSD$
+
+LIBEXEC=@PREFIX@/libexec
+CROPSR=${LIBEXEC}/cropsr/CROPSR.py
+
+exec ${CROPSR} ${*}
