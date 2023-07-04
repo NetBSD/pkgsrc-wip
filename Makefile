@@ -2414,6 +2414,7 @@ SUBDIR+=	mozjpeg
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
+SUBDIR+=	mpc
 SUBDIR+=	mpc-el
 SUBDIR+=	mpdecimal
 SUBDIR+=	mpg123-jack

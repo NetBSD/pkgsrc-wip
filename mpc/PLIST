@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/mpc.h
+info/mpc.info
+lib/libmpc.la
