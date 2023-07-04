@@ -49,7 +49,7 @@
 #TARGET=		i686-unknown-netbsd
 #TARGET=		i586-unknown-netbsd
 #TARGET=		mipsel-unknown-netbsd
-#TARGET= 		riscv64gc-unknown-netbsd
+#TARGET=		riscv64gc-unknown-netbsd
 #
 #SCRIPTS=		${WRKDIR}/scripts
 #CONFIGURE_ARGS+=	--host=${TARGET}

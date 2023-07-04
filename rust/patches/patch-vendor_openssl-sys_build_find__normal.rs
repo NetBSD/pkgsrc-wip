@@ -1,5 +1,7 @@
 $NetBSD: patch-vendor_openssl-sys_build_find__normal.rs,v 1.1 2023/06/19 14:46:47 bsiegert Exp $
 
+Patch against homebrew hack.
+
 --- vendor/openssl-sys/build/find_normal.rs.orig	2023-05-31 21:44:49.000000000 +0000
 +++ vendor/openssl-sys/build/find_normal.rs
 @@ -72,23 +72,6 @@ fn resolve_with_wellknown_location(dir:

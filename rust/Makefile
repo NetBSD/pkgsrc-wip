@@ -64,10 +64,11 @@ CONFIGURE_ARGS+=	--enable-vendor
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
-# Ensure we use a bundled lzma rather than relying on finding one, and avoid
-# xz being buildlinked if it's pulled in via dependencies.
-BUILDLINK_FILES_CMD.xz=	${TRUE}
-MAKE_ENV+=		LZMA_API_STATIC=1
+# Rust builds some bundled components with strict version requirements, ensure
+# that any conflicting packages pulled in via dependencies are not buildlinked.
+BUILDLINK_FILES_CMD.libssh2=	${TRUE}
+BUILDLINK_FILES_CMD.xz=		${TRUE}
+MAKE_ENV+=			LZMA_API_STATIC=1
 
 # MacOS X 10.7 is the oldest supported version. See
 # ${WRKSRC}/src/bootstrap/lib.rs

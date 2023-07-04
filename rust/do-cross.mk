@@ -39,7 +39,7 @@ G_TGT.arm64=		aarch64--netbsd
 G_TGT.arm64_be=		aarch64_be--netbsd
 G_TGT.i386=		i486--netbsdelf
 G_TGT.mipsel=		mipsel--netbsd
-G_TGT.riscv64		riscv64--netbsd
+G_TGT.riscv64=		riscv64--netbsd
 
 # Mapping to rust's TARGET specification
 TGT.armv7=		armv7-unknown-netbsd-eabihf
