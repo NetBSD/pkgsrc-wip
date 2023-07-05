@@ -11,12 +11,10 @@ HOMEPAGE=	https://github.com/relan/exfat
 COMMENT=	FUSE file-system and utilities for exFAT file systems
 LICENSE=	gnu-gpl-v2
 
-
-USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoheader automake autoreconf gmake pkg-config
 
-post-patch:
+pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/fuse.buildlink3.mk"
