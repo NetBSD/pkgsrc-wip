@@ -1,0 +1,16 @@
+@comment $NetBSD$
+man/man8/dumpexfat.8
+man/man8/exfatattrib.8
+man/man8/exfatfsck.8
+man/man8/exfatlabel.8
+man/man8/mkexfatfs.8
+man/man8/mount.exfat-fuse.8
+sbin/dumpexfat
+sbin/exfatattrib
+sbin/exfatfsck
+sbin/exfatlabel
+sbin/fsck.exfat
+sbin/mkexfatfs
+sbin/mkfs.exfat
+sbin/mount.exfat
+sbin/mount.exfat-fuse

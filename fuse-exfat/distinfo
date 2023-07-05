@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (fuse-exfat-1.4.0.tar.gz) = 327585eaa7b56a05fe24b339bd0a9bd95f9d1e11348104ff17f06c8c33ac08bd
+SHA512 (fuse-exfat-1.4.0.tar.gz) = 70a951c878e3eb9173c8bc24908da1a64e4e83990b4ae3bb53a9f20e9d618f30ef7e93e818f0387fe9a76a87c8ba970aa2d8728c386865fe658d76c1bee830ae
+Size (fuse-exfat-1.4.0.tar.gz) = 62390 bytes
+SHA1 (patch-configure.ac) = ff8ebb0672020434db45d477898d7656fbd8ab12
+SHA1 (patch-libexfat__Makefile.am) = a1a4a6c83eac6364fef0ad4fe1fa788feececf91
+SHA1 (patch-libexfat__nbpartutil.c) = 24b4062543afc864230e28cd667ada06a3a35052
+SHA1 (patch-libexfat__nbpartutil.h) = 0e87652c054314eabeafc1cbed76cbe0a933735e

@@ -962,6 +962,7 @@ SUBDIR+=	fswatch
 SUBDIR+=	ft8-lib
 SUBDIR+=	ftpsesame
 SUBDIR+=	fuse-cryfs
+SUBDIR+=	fuse-exfat
 SUBDIR+=	fuse-google-drive-git
 SUBDIR+=	fuse-mp3fs
 SUBDIR+=	fuse-smbnetfs
