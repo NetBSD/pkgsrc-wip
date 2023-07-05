@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	libzippp-v6.0-1.9.2
+DISTNAME=	libzippp-v6.1-1.9.2
 PKGNAME=	${DISTNAME:C/-[0-9].*//:S,-v,-,}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ctabin/}
@@ -12,13 +12,15 @@ COMMENT=	Libzip c++ wrapper
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/libzippp-${DISTNAME}
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DLIBZIPPP_ENABLE_ENCRYPTION=ON
+CMAKE_ARGS+=	-DLIBZIPPP_CMAKE_CONFIG_MODE=ON
+CMAKE_ARGS+=	-DLIBZIPPP_GNUINSTALLDIRS=ON
 
-CMAKE_USE_GNU_INSTALL_DIRS=	NO
+PKGCONFIG_OVERRIDE=	libzippp.pc.in
 
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
 @comment $NetBSD$
 include/libzippp/libzippp.h
+lib/cmake/libzippp/libzipppConfig.cmake
+lib/cmake/libzippp/libzipppConfigVersion.cmake
+lib/cmake/libzippp/libzipppTargets-release.cmake
+lib/cmake/libzippp/libzipppTargets.cmake
 lib/libzippp.so
-share/libzippp/libzipppConfig.cmake
-share/libzippp/libzipppConfigVersion.cmake
-share/libzippp/libzipppTargets-release.cmake
-share/libzippp/libzipppTargets.cmake
+lib/pkgconfig/libzippp.pc

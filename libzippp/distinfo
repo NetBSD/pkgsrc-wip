@@ -1,7 +1,6 @@
 $NetBSD$
 
-BLAKE2s (libzippp-v6.0-1.9.2.tar.gz) = e3ac2524221972db52396b13cc707e2e26225a19ebd79adeddaa8b493253e384
-SHA512 (libzippp-v6.0-1.9.2.tar.gz) = 030dd6cb84ac3d8f5c201b3e7a181882c86323a8420fc91521b8f7a53908fc1e31cd8a057f2cca6aa0091434e48f3fc5603a927cc42677d1f5e7b55e79af28af
-Size (libzippp-v6.0-1.9.2.tar.gz) = 33198 bytes
-SHA1 (patch-CMakeLists.txt) = 871bb6a10ae774d56211b22cf12e43539f00f8de
-SHA1 (patch-Config.cmake.in) = 11b068c2134955cf502bff800b22dfdb4380baac
+BLAKE2s (libzippp-v6.1-1.9.2.tar.gz) = 7c8e1c69905fc4865898d3d4cc80b613743480009de98d165841e9af40a8bccc
+SHA512 (libzippp-v6.1-1.9.2.tar.gz) = 895e3d773719953b04f2cfa96dfba30fd75ae1567961f5b69137f63291e80a12e3bf75e041a2b371a34f42670ad6deb02d32f6f74d0d6a1a36fd8531cee765d9
+Size (libzippp-v6.1-1.9.2.tar.gz) = 34285 bytes
+SHA1 (patch-CMakeLists.txt) = b84eb979ab5fff927660d0f0a3a5e1c48b4a3402

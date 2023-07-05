@@ -1,24 +1,15 @@
 $NetBSD$
 
-* Use cmake files installed by libzip instead of FindLIBZIP.cmake
+* Fix typos
 
---- CMakeLists.txt.orig	2021-08-03 09:01:25.000000000 +0000
+--- CMakeLists.txt.orig	2023-04-30 19:12:15.000000000 +0000
 +++ CMakeLists.txt
-@@ -22,7 +22,7 @@ option(LIBZIPPP_ENABLE_ENCRYPTION "Build
- 
- list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
- 
--find_package(LIBZIP MODULE REQUIRED)
-+find_package(libzip REQUIRED)
- 
- add_library(libzippp "src/libzippp.cpp")
- add_library(libzippp::libzippp ALIAS libzippp) # Convenience alias
-@@ -93,7 +93,7 @@ if(LIBZIPPP_INSTALL)
-   )
- 
-   install(
--    FILES ${PROJECT_CONFIG_FILE} ${PROJECT_VERSION_FILE} cmake/FindLIBZIP.cmake
-+    FILES ${PROJECT_CONFIG_FILE} ${PROJECT_VERSION_FILE}
-     DESTINATION ${configInstallDestination}
-   )
- 
+@@ -152,7 +152,7 @@ if(LIBZIPPP_INSTALL)
+     )
+     configure_file(libzippp.pc.in generated/libzippp.pc @ONLY)
+     install(
+-      FILES ${CMAKE_CURRENT_BINARYDIR}/generated/libzipp.pc
++      FILES ${CMAKE_CURRENT_BINARY_DIR}/generated/libzippp.pc
+       DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
+     )
+   endif()
