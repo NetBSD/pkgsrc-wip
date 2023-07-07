@@ -1,6 +1,8 @@
 @comment $NetBSD$
 bin/nitrogen
 man/man1/nitrogen.1
+share/appdata/nitrogen.appdata.xml
+share/applications/nitrogen.desktop
 share/icons/hicolor/128x128/apps/nitrogen.png
 share/icons/hicolor/16x16/actions/wallpaper-centered.png
 share/icons/hicolor/16x16/actions/wallpaper-scaled.png

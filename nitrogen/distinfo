@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (nitrogen-1.5.2.tar.gz) = 4280ae4b6a8f25da6177d3d21547d9e1d9f33a20
-SHA512 (nitrogen-1.5.2.tar.gz) = f4fdafcecb946f6918220f7562a69eb5223d4303c9bf3df4adb5dedfd8d402ee4f3fd3b1692875ede545d3e03f0ca88fa475206a839bb36677fa008a33e99551
-Size (nitrogen-1.5.2.tar.gz) = 307356 bytes
+BLAKE2s (nitrogen-1.6.1.tar.gz) = edba4484ab8d70af5f4e5c14a007230be501be21aa75528b91f9aec56c6be508
+SHA512 (nitrogen-1.6.1.tar.gz) = c150cfc875354dbcc1d465f20f87940e48795e4bf9a910920ec323fcd3829745fc6a5b8feb1ec939dc48b2662d37592cf1f3be274edfd6dd2d8b38ddc4543973
+Size (nitrogen-1.6.1.tar.gz) = 108795 bytes
