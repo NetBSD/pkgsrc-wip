@@ -4974,7 +4974,6 @@ SUBDIR+=	realvnc
 SUBDIR+=	recidivm
 SUBDIR+=	recoll
 SUBDIR+=	recutils
-SUBDIR+=	redeclipse16
 SUBDIR+=	redfang
 SUBDIR+=	reduze
 SUBDIR+=	reflectionhle
