@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 28, 2023
+.Dd July 8, 2023
 .Dt CVS2FOSSIL 1
 .Os
 .Sh NAME
@@ -37,6 +37,7 @@
 .Nm
 .Op Fl m
 .Op Fl f Ar fixup-sql-script
+.Op Fl s Ar merge-limit-seconds
 .Ar source
 .Ar destination
 .Sh DESCRIPTION
@@ -76,6 +77,21 @@ i.e. when converting
 .Pa foo/bar/*
 the path names in the result will start with
 .Pa bar .
+.It Fl s Ar merge-limit-seconds
+Some CVS operations take longer because of network speed or number and
+size of files involved.
+Thus, RCS dates of files belonging to one commit may have different
+time stamps.
+For this reason,
+.Nm
+merges changes to files that have the same commit message but slightly
+varying time stamps into one commit.
+The
+.Ar merge-limit-seconds
+argument specifies the maximum number of seconds two commits may be
+apart (using the RCS date of the change) before they are seen as two
+separate commits.
+The default is 600 seconds (10 minutes).
 .El
 .Sh WARNINGS
 These warnings usually indicate that some manual changes were done
