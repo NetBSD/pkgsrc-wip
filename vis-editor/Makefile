@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
 GITHUB_PROJECT=		vis
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		erig@erig.me
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/martanne/vis/
 COMMENT=		Vim like text editor
 LICENSE=		isc
@@ -45,8 +45,6 @@ SUBST_SED.binary-names+=	-e 's,vis-\(menu\),vis-editor-\1,g'
 
 LUA_VERSIONS_ACCEPTED=	52 53 54
 
-.include "options.mk"
-
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/vis ${DESTDIR}${PREFIX}/bin/vis-editor
 	${MV} ${DESTDIR}${PREFIX}/bin/vis-open ${DESTDIR}${PREFIX}/bin/vis-editor-open
@@ -61,6 +59,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-digraph.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-editor-digraph.1
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-menu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-editor-menu.1
 
+.include·"../../devel/ncursesw/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../devel/libtermkey/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -4,7 +4,7 @@ DISTNAME=	pta-0.1
 CATEGORIES=	finance
 MASTER_SITES=	https://mandoc.bsd.lv/pta/release/
 
-MAINTAINER=	mk@asdfghasdfgh.de
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mandoc.bsd.lv/pta/release/
 COMMENT=	Reads and writes bookkeeping journals
 LICENSE=	isc
