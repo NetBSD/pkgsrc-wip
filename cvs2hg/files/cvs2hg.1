@@ -37,6 +37,7 @@
 .Nm
 .Op Fl f Ar fixup-sql-script
 .Op Fl m Ar mailmap
+.Op Fl s Ar merge-limit-seconds
 .Ar source
 .Ar destination
 .Sh DESCRIPTION
@@ -69,15 +70,20 @@ and finally
 the Mercurial repository created from the git one by
 .Xr hg 1 .
 .Pp
+You can pass an SQL fixup script for
+.Xr cvs2fossil 1
+using the
+.Fl f
+flag.
 You can pass a
 .Xr gitmailmap 5
 file for creating proper author information using the
 .Fl m
 flag.
-You can pass an SQL fixup script for
-.Xr cvs2fossil
+You can pass a merge time limit in seconds to
+.Xr cvs2fossil 1
 using the
-.Fl f
+.Fl s
 flag.
 .Sh EXAMPLES
 To convert the NetBSD src repository, if you have developer access, do:

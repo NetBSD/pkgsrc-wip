@@ -34,7 +34,8 @@ set -e
 USAGE="usage: $0 [-f fixup-sql-script] [-m mailmap] source-cvs-rsync-path target-path"
 fixup=""
 mailmap=""
-while getopts f:m: f
+merge_limit_seconds=""
+while getopts f:m:s: f
 do
     case $f in
 	f)      fixup="-f$OPTARG";;
@@ -43,6 +44,7 @@ do
 		    /*);;
 		    *) mailmap="../$OPTARG";;
 		esac;;
+	s)	merge_limit_seconds="-s$OPTARG";;
         \?)     echo "$USAGE" >&2; exit 1;;
     esac
 done
@@ -55,7 +57,7 @@ then
 fi
 SRC="$1"
 BASE="$2"
-cvs2fossil -m "$SRC" $fixup "$BASE"
+cvs2fossil -m $fixup $merge_limit_seconds "$SRC" "$BASE"
 # creates "$BASE" and "$BASE".fossil, but we don't need "$BASE"
 rm -f "$BASE"
 # convert to git
