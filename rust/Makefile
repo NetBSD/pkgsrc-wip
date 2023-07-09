@@ -175,8 +175,8 @@ CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/dox.sh
 # PR is open for this.)  \todo Understand and fix.
 #
 # If we aren't on 9-current, and are on 8.x or 9.x, avoid parallel.
-# \todo Consider avoiding setting this on netbsd-9 past the fix.
-.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099957
+# Release 9.x and 9.1 or later is OK.
+.  if ${OPSYS} == "NetBSD" && 090999 < ${OPSYS_VERSION} && ${OPSYS_VERSION} < 090900
 MAKE_JOBS_SAFE?=	no
 .  endif
 
