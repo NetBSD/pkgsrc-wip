@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/gping
-man/man1/gping.1
