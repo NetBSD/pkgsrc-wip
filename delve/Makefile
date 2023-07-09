@@ -17,7 +17,7 @@ GO_DIST_BASE=		${DISTNAME}
 ONLY_FOR_PLATFORM=	Linux-*-* Darwin-*-* FreeBSD-*-*
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/dlv ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/dlv ${DESTDIR}${PREFIX}/bin/
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
