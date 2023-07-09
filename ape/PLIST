@@ -24,6 +24,10 @@ share/APE/Languages/C++/Macros/macros
 share/APE/Languages/C++/Macros/menu.txt
 share/APE/Languages/C++/language_opts
 share/APE/Languages/C++/syntax_highlighting
+share/APE/Languages/C++_header/Macros/macros
+share/APE/Languages/C++_header/Macros/menu.txt
+share/APE/Languages/C++_header/language_opts
+share/APE/Languages/C++_header/syntax_highlighting
 share/APE/Languages/C/Macros/macros
 share/APE/Languages/C/Macros/menu.txt
 share/APE/Languages/C/language_opts
