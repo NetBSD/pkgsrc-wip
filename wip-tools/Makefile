@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	wip-tools-0.1.0.20
+DISTNAME=	wip-tools-0.1.0.21
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	3097e54ad595e6d44ff1171dfe0dad9e667fd921
+GITHUB_TAG=	06d2be1a9f345865f7dc72927b89f717a6a45282
 GITHUB_PROJECT=	pkgsrc-wip-tools
 
 OWNER=		bacon@NetBSD.org
