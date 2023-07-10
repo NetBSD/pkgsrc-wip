@@ -31,21 +31,27 @@
 #
 set -e
 
-USAGE="usage: $0 [-f fixup-sql-script] [-m mailmap] source-cvs-rsync-path target-path"
+USAGE="usage: $0 [-a authormap | -m mailmap] [-f fixup-sql-script] source-cvs-rsync-path target-path"
+authormap=""
 fixup=""
 mailmap=""
 merge_limit_seconds=""
-while getopts f:m:s: f
+while getopts a:f:m:s: f
 do
     case $f in
-	f)      fixup="-f$OPTARG";;
-        m)      mailmap=$OPTARG
-		case "$mailmap" in
-		    /*);;
-		    *) mailmap="../$OPTARG";;
-		esac;;
-	s)	merge_limit_seconds="-s$OPTARG";;
-        \?)     echo "$USAGE" >&2; exit 1;;
+	a) authormap="$OPTARG"
+	   case "$authormap" in
+	       /*);;
+	       *) authormap="../$OPTARG";;
+	   esac;;
+	f) fixup="-f$OPTARG";;
+        m) mailmap=$OPTARG
+	   case "$mailmap" in
+	       /*);;
+	       *) mailmap="../$OPTARG";;
+	   esac;;
+	s) merge_limit_seconds="-s$OPTARG";;
+        \?) echo "$USAGE" >&2; exit 1;;
     esac
 done
 shift $((OPTIND - 1))
@@ -55,6 +61,12 @@ then
 	echo "$USAGE" >&2
 	exit 1
 fi
+if [ -n "$authormap" ] && [ -n "$mailmap" ]
+then
+	echo "Please use only one of -a and -m" >&2
+	exit 1
+fi
+
 SRC="$1"
 BASE="$2"
 cvs2fossil -m $fixup $merge_limit_seconds "$SRC" "$BASE"
@@ -72,3 +84,12 @@ then
 fi
 # convert to hg
 hg --config extensions.hggit= clone "$BASE".git "$BASE".hg
+if [ -f "$authormap" ]
+then
+	AUTHORMAP="/tmp/authormap.$$"
+	sed -E "s/(.*)=/\1 <\1>=/" "$authormap" > "$AUTHORMAP"
+	hg convert --authormap="$AUTHORMAP" "$BASE.hg" "$BASE.rewrite.hg"
+	#rm "$AUTHORMAP"
+	mv "$BASE.hg" "$BASE.hg.old"
+	mv "$BASE.rewrite.hg" "$BASE.hg"
+fi

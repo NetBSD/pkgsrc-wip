@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 28, 2023
+.Dd July 10, 2023
 .Dt CVS2HG 1
 .Os
 .Sh NAME
@@ -35,8 +35,8 @@
 .Nd convert CVS repository to Mercurial
 .Sh SYNOPSIS
 .Nm
+.Op Fl a Ar mailmap | Fl m Ar mailmap
 .Op Fl f Ar fixup-sql-script
-.Op Fl m Ar mailmap
 .Op Fl s Ar merge-limit-seconds
 .Ar source
 .Ar destination
@@ -70,41 +70,58 @@ and finally
 the Mercurial repository created from the git one by
 .Xr hg 1 .
 .Pp
-You can pass an SQL fixup script for
+.Nm
+supports the following flags:
+.Bl -tag -width 10n
+.It Fl a Ar mailmap
+Pass a
+.Xr hg 1
+authormap file for creating proper author information using
+.Xr hg 1 Cm convert .
+The file should consist of lines of the format:
+.Dl login=Full Name <email@address>
+.It Fl f Ar fixup-sql-script
+Pass an SQL fixup script for
 .Xr cvs2fossil 1
-using the
+for its
 .Fl f
 flag.
-You can pass a
+.It Fl m Ar mailmap
+Pass a
 .Xr gitmailmap 5
-file for creating proper author information using the
-.Fl m
-flag.
-You can pass a merge time limit in seconds to
-.Xr cvs2fossil 1
-using the
-.Fl s
-flag.
+file for creating proper author information using
+.Xr git-filter-repo 1 .
+The file chould consist of lines of the format:
+.Dl Full Name <email@address> <login>
+.It Fl s Ar merge-limit-seconds
+Pass a merge time limit in seconds to
+.Xr cvs2fossil 1 .
+.El
 .Sh EXAMPLES
-To convert the NetBSD src repository, if you have developer access, do:
+To convert the
+.Nx
+src repository, if you have developer access, do:
 .Bd -literal -offset indent
 export REPO=src
 export LOGIN=username
 rsync -aS --delete -e ssh "$LOGIN"@cvs.NetBSD.org::cvsroot/"$REPO" "$REPO"-rsync
-cvs2hg -m .mailmap "$REPO"-rsync/"$REPO" "$REPO"
-.Ed
-where
-.Pa .mailmap
-consists of lines like this:
-.Bd -literal
-Thomas Klausner <wiz@NetBSD.org> <wiz>
+cvs2hg -a authormap "$REPO"-rsync/"$REPO" "$REPO"
 .Ed
 .Pp
-The conversion is in
+The conversion output is in
 .Pa src.hg .
 The intermediate fossil and git directories are
 .Pa src.fossil
 and
 .Pa src.git ,
 respectively.
+If you use
+.Fl a
+or
+.Fl m
+there will be another
+.Pa src.hg.old
+or
+.Pa src.git.old
+directory, respectively.
 You can delete them after the conversion.
