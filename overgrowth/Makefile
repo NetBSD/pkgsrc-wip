@@ -3,8 +3,8 @@
 DISTNAME=	overgrowth-0.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dressupgeekout/}
-# 'charlotte-netbsd' branch:
-GITHUB_TAG=	506fd955a2edf881109edd16961964e5bb33e126
+# 'charlotte_netbsd_2023-rebased' branch:
+GITHUB_TAG=	da1545e3e2215a73720abf39be0325f144690166
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://overgrowth.wolfire.com/
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/overgrowth-${GITHUB_TAG}/Projects
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_CMAKE=	yes
 
 # Out-of-tree build is required.
