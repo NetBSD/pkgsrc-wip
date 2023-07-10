@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kubepug-1.4.0
+DISTNAME=	kubepug-1.5.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rikatz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
