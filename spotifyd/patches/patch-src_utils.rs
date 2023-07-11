@@ -1,6 +1,8 @@
 $NetBSD$
 
---- src/utils.rs.orig	2021-12-07 20:10:37.000000000 +0000
+Allow building on NetBSD.
+
+--- src/utils.rs.orig	2023-04-20 21:37:30.000000000 +0000
 +++ src/utils.rs
 @@ -1,7 +1,7 @@
  use log::trace;
