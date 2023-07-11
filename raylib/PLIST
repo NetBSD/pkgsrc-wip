@@ -1,8 +1,0 @@
-@comment $NetBSD$
-include/raylib.h
-include/raymath.h
-include/rlgl.h
-lib/cmake/raylib/raylib-config-version.cmake
-lib/cmake/raylib/raylib-config.cmake
-lib/libraylib.a
-lib/pkgconfig/raylib.pc
