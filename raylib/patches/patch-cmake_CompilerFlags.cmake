@@ -1,6 +1,7 @@
 $NetBSD$
 
 Allow for static linking.
+
 --- cmake/CompilerFlags.cmake.orig	2021-04-26 09:00:33.000000000 -0700
 +++ cmake/CompilerFlags.cmake	2021-05-01 01:51:08.410299439 -0700
 @@ -77,3 +77,7 @@

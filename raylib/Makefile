@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	raylib-4.0.0
+DISTNAME=	raylib-4.5.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raysan5/}
 

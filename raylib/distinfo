@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (raylib-4.0.0.tar.gz) = ad968c719acd6487e15c90a3be400072e107143f788a281f8679bfcd5987eed7
-SHA512 (raylib-4.0.0.tar.gz) = e9ffab14ab902e3327202e68ca139209ff24100dab62eb03fef50adf363f81e2705d81e709c58cf1514e68e6061c8963555bd2d00744daacc3eb693825fc3417
-Size (raylib-4.0.0.tar.gz) = 30985161 bytes
-SHA1 (patch-cmake_CompilerFlags.cmake) = f60c352caee5fe59fb6176399bc522f850c4c26f
+BLAKE2s (raylib-4.5.0.tar.gz) = bfa42173281fc489cb2789ee8d280be33cbbf7f8f091ebaf302fe367fd1a5c38
+SHA512 (raylib-4.5.0.tar.gz) = a959abbb577a8951251a469d6505093fd20988444dcf055e26cb0b484ef4024211b2cca45187accbd465c56bc50e02d450b6f7f7cfde2cdaedcdce422f80dcbc
+Size (raylib-4.5.0.tar.gz) = 31937534 bytes
+SHA1 (patch-cmake_CompilerFlags.cmake) = 032bac016e3d9ce44644a9d5f9b0c9652b3405b8
