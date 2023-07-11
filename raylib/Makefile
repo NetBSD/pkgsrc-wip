@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	raylib-4.5.0
-CATEGORIES=	lang
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raysan5/}
 
 MAINTAINER=	charlotte@NetBSD.org
