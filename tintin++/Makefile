@@ -14,4 +14,5 @@ WRKSRC=		${WRKDIR}/tt/src
 GNU_CONFIGURE=	yes
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
