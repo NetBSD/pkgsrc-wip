@@ -35,7 +35,8 @@
 .Nd convert CVS repository to Mercurial
 .Sh SYNOPSIS
 .Nm
-.Op Fl a Ar mailmap
+.Op Fl a Ar authormap
+.Op Fl b Ar brachmap
 .Op Fl f Ar fixup-sql-script
 .Op Fl s Ar merge-limit-seconds
 .Ar source
@@ -75,13 +76,20 @@ file, if provided.
 .Nm
 supports the following flags:
 .Bl -tag -width 10n
-.It Fl a Ar mailmap
+.It Fl a Ar authormap
 Pass a
 .Xr hg 1
 authormap file for creating proper author information using
 .Xr hg 1 Cm convert .
 The file should consist of lines of the format:
 .Dl login=Full Name <email@address>
+.It Fl b Ar branchmap
+Pass a
+.Xr hg 1
+branchmap file for renaming branches using
+.Xr hg 1 Cm convert .
+The file should consist of lines of the format:
+.Dl old_branch_name new_branch_name
 .It Fl f Ar fixup-sql-script
 Pass an SQL fixup script for
 .Xr cvs2fossil 1
@@ -100,7 +108,7 @@ src repository, if you have developer access, do:
 export REPO=src
 export LOGIN=username
 rsync -aS --delete -e ssh "$LOGIN"@cvs.NetBSD.org::cvsroot/"$REPO" "$REPO"-rsync
-cvs2hg -a authormap "$REPO"-rsync/"$REPO" "$REPO"
+cvs2hg -a authormap -b branchmap -s 300 "$REPO"-rsync/"$REPO" "$REPO"
 .Ed
 .Pp
 The conversion output is in

@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env python3
 #
-#	$NetBSD$
+# $NetBSD$
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -29,47 +29,75 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-set -e
 
-USAGE="usage: $0 [-a authormap] [-f fixup-sql-script] source-cvs-rsync-path target-path"
-authormap=""
-fixup=""
-merge_limit_seconds=""
-while getopts a:f:s: f
-do
-    case $f in
-	a) authormap="$OPTARG"
-	   case "$authormap" in
-	       /*);;
-	       *) authormap="../$OPTARG";;
-	   esac;;
-	f) fixup="-f$OPTARG";;
-	s) merge_limit_seconds="-s$OPTARG";;
-        \?) echo "$USAGE" >&2; exit 1;;
-    esac
-done
-shift $((OPTIND - 1))
+import argparse
+import os
+from pathlib import Path
+import subprocess
 
-if [ "$#" != 2 ]
-then
-	echo "$USAGE" >&2
-	exit 1
-fi
 
-SRC="$1"
-BASE="$2"
-cvs2fossil -m $fixup $merge_limit_seconds "$SRC" "$BASE"
-# creates "$BASE" and "$BASE".fossil, but we don't need "$BASE"
-rm -f "$BASE"
+def file_path(path):
+    '''Check if argument is a valid file path.'''
+    if Path(path).is_file():
+        return str(Path(path).resolve())
+    raise argparse.ArgumentTypeError(f"{path} is not a valid file path")
+
+
+def dir_path(path):
+    '''Check if argument is a valid directory path.'''
+    if Path(path).is_dir():
+        return str(Path(path).resolve())
+    raise argparse.ArgumentTypeError(f"{path} is not a valid directory path")
+
+
+parser = argparse.ArgumentParser(description='Convert CVS repository ' +
+                                 'to Mercurial')
+parser.add_argument('-a', dest='authormap', type=file_path,
+                    help='use %(dest)s to map UNIX logins to names ' +
+                    'and email addresses')
+parser.add_argument('-b', dest='branchmap', type=file_path,
+                    help='use %(dest)s to rename branches')
+parser.add_argument('-f', dest='fixup_sql_script', type=file_path,
+                    help='run %(dest)s on fossil database to fix problems')
+parser.add_argument('-s', dest='merge_limit', type=int,
+                    help='pass %(dest)s to cvs2fossil ' +
+                    '(merge window time in seconds)')
+parser.add_argument('source', type=dir_path,
+                    help='source CVS repository master')
+# may not exist yet, can't use dir_path
+parser.add_argument('destination', type=str,
+                    help='base name of target Mercurial repository')
+args = parser.parse_args()
+
+run_args = ['cvs2fossil']
+if args.fixup_sql_script:
+    run_args += ['-f', args.fixup_sql_script]
+if args.merge_limit:
+    run_args += ['-s', str(args.merge_limit)]
+run_args += [args.source, args.destination]
+
+# convert to fossil using cvs2fossil
+subprocess.run(run_args, check=True)
+# cvs2fossil creates {args.destination} and {args.destination}.fossil,
+# but we don't need the former
+os.remove(args.destination)
 # export from fossil
-fossil1 export -R "$BASE".fossil > "$BASE".fossil.export
+with open(f'{args.destination}.fossil.export', 'wb') as output:
+    subprocess.run(['fossil1', 'export', '-R', f'{args.destination}.fossil'],
+                   stdout=output, check=True)
 # import to hg
-hg init "$BASE".hg
-hg -R "$BASE".hg --config extensions.fastimport= fastimport "$BASE".fossil.export
-# fix author names
-if [ -f "$authormap" ]
-then
-	hg convert --authormap="$authormap" "$BASE.hg" "$BASE.rewrite.hg"
-	mv "$BASE.hg" "$BASE.hg.old"
-	mv "$BASE.rewrite.hg" "$BASE.hg"
-fi
+subprocess.run(['hg', 'init', f'{args.destination}.hg'], check=True)
+subprocess.run(['hg', '-R', f'{args.destination}.hg', '--config',
+                'extensions.fastimport=', 'fastimport',
+                f'{args.destination}.fossil.export'], check=True)
+# fix author or branch names
+if args.authormap or args.branchmap:
+    run_args = ['hg', 'convert']
+    if args.authormap:
+        run_args.append(f'--authormap={args.authormap}')
+    if args.branchmap:
+        run_args.append(f'--branchmap={args.branchmap}')
+    run_args += [f'{args.destination}.hg', f'{args.destination}.rewrite.hg']
+    subprocess.run(run_args, check=True)
+    os.rename(f'{args.destination}.hg', f'{args.destination}.hg.old')
+    os.rename(f'{args.destination}.rewrite.hg', f'{args.destination}.hg')

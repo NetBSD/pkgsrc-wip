@@ -17,6 +17,7 @@ USE_LANGUAGES=		# empty
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+REPLACE_PYTHON+=		cvs2hg
 
 post-extract:
 	${CP} ${FILESDIR}/cvs2hg ${WRKSRC}
@@ -30,5 +31,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/cvs2hg ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${FILESDIR}/cvs2hg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
