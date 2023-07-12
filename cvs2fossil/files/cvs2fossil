@@ -38,7 +38,7 @@ fossil="$db.fossil"
 # If you want the module name itself to be skipped, add -m.
 # Instead of e.g. src/bin/... as path, this will create only bin/...
 #
-time 01-import "$strip" "$db" "$repo"
+time 01-import $strip "$db" "$repo"
 oldest=$(echo 'SELECT datetime(r.date,"-1 second") FROM revision r ORDER BY r.date LIMIT 1;' | sqlite3 "$db")
 
 #
