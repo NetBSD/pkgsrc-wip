@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd July 10, 2023
+.Dd July 12, 2023
 .Dt CVS2HG 1
 .Os
 .Sh NAME
@@ -35,7 +35,7 @@
 .Nd convert CVS repository to Mercurial
 .Sh SYNOPSIS
 .Nm
-.Op Fl a Ar mailmap | Fl m Ar mailmap
+.Op Fl a Ar mailmap
 .Op Fl f Ar fixup-sql-script
 .Op Fl s Ar merge-limit-seconds
 .Ar source
@@ -47,8 +47,7 @@ is a script to convert a
 repository to
 .Xr hg 1
 using
-.Xr cvs2fossil 1 ,
-.Xr git 1 ,
+.Xr cvs2fossil 1
 and
 .Xr hg 1 .
 .Pp
@@ -59,16 +58,19 @@ checkout).
 will create
 .Ar destination Ns Pa .fossil
 (the fossil conversion created by
-.Xr cvs2fossil 1 ) ,
-.Ar destination Ns Pa .git
-(the git conversion created via the
+.Xr cvs2fossil 1 ) .
+.Xr fossil 1
+will create a
 .Xr git 1
-fast-import file exported by
-.Xr fossil 1 ) ,
-and finally
-.Ar destination Ns Pa .hg ,
-the Mercurial repository created from the git one by
-.Xr hg 1 .
+fast-import file
+.Ar destination Ns Pa .fossil.export
+which will be converted into the Mercurial repository
+.Ar destination Ns Pa .hg
+by
+.Xr hg 1.
+.Xr hg 1
+will also be used to update the author information using an authormap
+file, if provided.
 .Pp
 .Nm
 supports the following flags:
@@ -86,13 +88,6 @@ Pass an SQL fixup script for
 for its
 .Fl f
 flag.
-.It Fl m Ar mailmap
-Pass a
-.Xr gitmailmap 5
-file for creating proper author information using
-.Xr git-filter-repo 1 .
-The file chould consist of lines of the format:
-.Dl Full Name <email@address> <login>
 .It Fl s Ar merge-limit-seconds
 Pass a merge time limit in seconds to
 .Xr cvs2fossil 1 .
@@ -110,18 +105,13 @@ cvs2hg -a authormap "$REPO"-rsync/"$REPO" "$REPO"
 .Pp
 The conversion output is in
 .Pa src.hg .
-The intermediate fossil and git directories are
+The intermediate fossil directory is
 .Pa src.fossil
-and
-.Pa src.git ,
-respectively.
+and the corresponsing fast-import file
+.Pa src.fossil.export .
 If you use
 .Fl a
-or
-.Fl m
 there will be another
 .Pa src.hg.old
-or
-.Pa src.git.old
 directory, respectively.
 You can delete them after the conversion.

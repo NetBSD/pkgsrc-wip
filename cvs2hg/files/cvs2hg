@@ -31,12 +31,11 @@
 #
 set -e
 
-USAGE="usage: $0 [-a authormap | -m mailmap] [-f fixup-sql-script] source-cvs-rsync-path target-path"
+USAGE="usage: $0 [-a authormap] [-f fixup-sql-script] source-cvs-rsync-path target-path"
 authormap=""
 fixup=""
-mailmap=""
 merge_limit_seconds=""
-while getopts a:f:m:s: f
+while getopts a:f:s: f
 do
     case $f in
 	a) authormap="$OPTARG"
@@ -45,11 +44,6 @@ do
 	       *) authormap="../$OPTARG";;
 	   esac;;
 	f) fixup="-f$OPTARG";;
-        m) mailmap=$OPTARG
-	   case "$mailmap" in
-	       /*);;
-	       *) mailmap="../$OPTARG";;
-	   esac;;
 	s) merge_limit_seconds="-s$OPTARG";;
         \?) echo "$USAGE" >&2; exit 1;;
     esac
@@ -61,35 +55,21 @@ then
 	echo "$USAGE" >&2
 	exit 1
 fi
-if [ -n "$authormap" ] && [ -n "$mailmap" ]
-then
-	echo "Please use only one of -a and -m" >&2
-	exit 1
-fi
 
 SRC="$1"
 BASE="$2"
 cvs2fossil -m $fixup $merge_limit_seconds "$SRC" "$BASE"
 # creates "$BASE" and "$BASE".fossil, but we don't need "$BASE"
 rm -f "$BASE"
-# convert to git
-git init "$BASE".git
-fossil1 export --git -R "$BASE".fossil | (cd "$BASE".git && git fast-import)
-if [ -n "$mailmap" ]
-then
-	git clone -b trunk "$BASE.git" "$BASE.rewrite.git"
-	(cd "$BASE.rewrite.git" && git filter-repo --force --mailmap "$mailmap")
-	mv "$BASE.git" "$BASE.git.old"
-	mv "$BASE.rewrite.git" "$BASE.git"
-fi
-# convert to hg
-hg --config extensions.hggit= clone "$BASE".git "$BASE".hg
+# export from fossil
+fossil1 export -R "$BASE".fossil > "$BASE".fossil.export
+# import to hg
+hg init "$BASE".hg
+hg -R "$BASE".hg --config extensions.fastimport= fastimport "$BASE".fossil.export
+# fix author names
 if [ -f "$authormap" ]
 then
-	AUTHORMAP="/tmp/authormap.$$"
-	sed -E "s/(.*)=/\1 <\1>=/" "$authormap" > "$AUTHORMAP"
-	hg convert --authormap="$AUTHORMAP" "$BASE.hg" "$BASE.rewrite.hg"
-	#rm "$AUTHORMAP"
+	hg convert --authormap="$authormap" "$BASE.hg" "$BASE.rewrite.hg"
 	mv "$BASE.hg" "$BASE.hg.old"
 	mv "$BASE.rewrite.hg" "$BASE.hg"
 fi

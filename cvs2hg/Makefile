@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		cvs2hg-1.0
+PKGNAME=		cvs2hg-2.0
 CATEGORIES=		devel scm
 
 MAINTAINER=		wiz@NetBSD.org
@@ -9,10 +9,8 @@ COMMENT=		Convert CVS repository to Mercurial
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		cvs2fossil-[0-9]*:../../wip/cvs2fossil
-DEPENDS+=		git-base-[0-9]*:../../devel/git-base
-DEPENDS+=		git-filter-repo-[0-9]*:../../devel/git-filter-repo
 DEPENDS+=		${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
-DEPENDS+=		${PYPKGPREFIX}-hg-git-[0-9]*:../../devel/py-hg-git
+DEPENDS+=		${PYPKGPREFIX}-hg-fastimport-[0-9]*:../../devel/py-hg-fastimport
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty
