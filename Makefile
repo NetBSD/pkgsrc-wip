@@ -3146,7 +3146,6 @@ SUBDIR+=	pidgin-status-to-twitter
 SUBDIR+=	pidgin-twitterstatus
 SUBDIR+=	piedock
 SUBDIR+=	piglit-git
-SUBDIR+=	pika-backup
 SUBDIR+=	pike
 SUBDIR+=	pike-Gettext
 SUBDIR+=	pike-Gz
