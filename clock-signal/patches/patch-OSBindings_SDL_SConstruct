@@ -1,9 +1,5 @@
-$NetBSD$
-
-Let scons inherit the build environment.
-
---- OSBindings/SDL/SConstruct.orig	2021-12-19 14:35:27.000000000 -0800
-+++ OSBindings/SDL/SConstruct	2022-01-28 17:52:43.025087118 -0800
+--- OSBindings/SDL/SConstruct.orig	2023-05-15 07:01:38.000000000 -0700
++++ OSBindings/SDL/SConstruct	2023-07-11 20:16:48.339990466 -0700
 @@ -1,4 +1,5 @@
  import glob
 +import os
@@ -19,12 +15,3 @@ Let scons inherit the build environment.
  
  # Determine compiler and linker flags for SDL.
  env.ParseConfig('sdl2-config --cflags')
-@@ -140,5 +141,8 @@
- # Add additional libraries to link against.
- env.Append(LIBS = ['libz', 'pthread', 'GL'])
- 
-+# XXX XXX XXX FIXME
-+env.Append(RPATH = ['/usr/pkg/lib', '/usr/X11R7/lib',])
-+
- # Build target.
- env.Program(target = 'clksignal', source = SOURCES)
