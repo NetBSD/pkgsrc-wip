@@ -1,16 +1,16 @@
 @comment $NetBSD$
 bin/binstall
-bin/lndir
-bin/lorder
 bin/mbmake
-bin/mkdep
-bin/tsort
+bin/mlndir
+bin/mlorder
+bin/mmkdep
+bin/mtsort
 man/man1/binstall.1
-man/man1/lndir.1
-man/man1/lorder.1
 man/man1/mbmake.1
-man/man1/mkdep.1
-man/man1/tsort.1
+man/man1/mlndir.1
+man/man1/mlorder.1
+man/man1/mmkdep.1
+man/man1/mtsort.1
 share/mbmake/PSD12.make.txt
 share/mbmake/adler32.h
 share/mbmake/bsd.cfwrap.mk
