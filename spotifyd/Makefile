@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	base@atomicules.co.uk
-HOMEPAGE=	https://github.com/Spotifyd/spotifyd/
+HOMEPAGE=	https://spotifyd.rs/
 COMMENT=	Open source Spotify client running as a UNIX daemon
 LICENSE=	gnu-gpl-v3
 
