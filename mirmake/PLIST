@@ -1,12 +1,12 @@
 @comment $NetBSD$
-bin/binstall
 bin/mbmake
+bin/minstall
 bin/mlndir
 bin/mlorder
 bin/mmkdep
 bin/mtsort
-man/man1/binstall.1
 man/man1/mbmake.1
+man/man1/minstall.1
 man/man1/mlndir.1
 man/man1/mlorder.1
 man/man1/mmkdep.1

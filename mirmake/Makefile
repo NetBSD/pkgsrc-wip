@@ -42,12 +42,14 @@ SUBST_MESSAGE.paths=	Include pkgsrc PREFIX in searched paths.
 
 SUBST_CLASSES+=		bins
 SUBST_STAGE.bins=	pre-configure
-SUBST_FILES.bins=	dist/scripts/Build.sh dist/scripts/Copy.sh \
-			dist/src/share/mk/bsd.lib.mk dist/src/share/mk/sys.mk
+SUBST_FILES.bins=	dist/scripts/Build.sh dist/scripts/Copy.sh	\
+			dist/scripts/sys.mk.ed dist/src/share/mk/sys.mk	\
+			dist/src/share/mk/bsd.lib.mk
 .for i in lndir lorder mkdep tsort
 SUBST_FILES.bins+=	dist/src/usr.bin/m${i}/*
 .endfor
 SUBST_MESSAGE.bins=	Resolving conflicts with native tools
+SUBST_SED.bins+=	-e 's|binstall|minstall|g'
 SUBST_SED.bins+=	-e 's|lndir|mlndir|g'
 SUBST_SED.bins+=	-e 's|lorder|mlorder|g'
 SUBST_SED.bins+=	-e 's|mkdep|mmkdep|g'
@@ -72,18 +74,18 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 MAKE_ENV+=	OVERRIDE_MKSH=${MKSH}
 
 post-extract:
-	${RUN}cd ${WRKSRC}/dist/src/usr.bin && \
-		for i in lndir tsort;  do  \
-			${MV} $$i/$$i.c $$i/m$$i.c; \
-			${MV} $$i/$$i.1 $$i/m$$i.1; \
-			${MV} $$i m$$i; \
+	${RUN}cd ${WRKSRC}/dist/src/usr.bin &&		\
+		for i in lndir tsort;  do		\
+			${MV} $$i/$$i.c $$i/m$$i.c;	\
+			${MV} $$i/$$i.1 $$i/m$$i.1;	\
+			${MV} $$i m$$i;			\
 	done && \
-		for i in lorder mkdep ;  do  \
-			${MV} $$i/$$i.sh $$i/m$$i.sh; \
-			${MV} $$i/$$i.1 $$i/m$$i.1; \
-			${MV} $$i m$$i; \
+		for i in lorder mkdep ;  do		\
+			${MV} $$i/$$i.sh $$i/m$$i.sh;	\
+			${MV} $$i/$$i.1 $$i/m$$i.1;	\
+			${MV} $$i m$$i;			\
 	done
-	${RUN}cd ${WRKSRC}/dist/scripts && \
+	${RUN}cd ${WRKSRC}/dist/scripts &&		\
 		${MV} mkdep.sh.ed mmkdep.sh.ed
 
 do-build:
