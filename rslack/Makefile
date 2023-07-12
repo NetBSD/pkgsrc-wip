@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rslack-0.2.4
+DISTNAME=	rslack-0.3.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kohbis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,14 +14,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin
-
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rslack \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
