@@ -4,6 +4,5 @@ BLAKE2s (cvs2fossil-20140502.tar.gz) = 275555dc446eedb1c50bbb446391e72dac23fea5b
 SHA512 (cvs2fossil-20140502.tar.gz) = dc5f64c5af0fe6a35143244c2858dcccd4ad2131fb5e375132ffc9071dfcff8984fdbb9664f774238ddd2c14c5155686e2c99962753131a3f5cd2f58f0d19a3d
 Size (cvs2fossil-20140502.tar.gz) = 1258545 bytes
 SHA1 (patch-01-import_main.c) = 6177f632e9a7213e9aff911e28ac04378102fae5
-SHA1 (patch-04-commit_main.c) = 01eee277568a00178969c279ba46e89189fecb76
+SHA1 (patch-04-commit_main.c) = edd8f7d4ee3e1f8e3784c8ad035a5a5a7d371a4e
 SHA1 (patch-common_common.h) = 625959ee61513df52696987c9fba2abb83c91262
-SHA1 (patch-convert.sh) = 2cb7abefb9888c5b99e85d18e135be7e53557bbb

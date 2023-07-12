@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add missing header.
+Add -s option to set merge window timeframe in seconds.
 
 --- 04-commit/main.c.orig	2014-05-02 21:04:50.000000000 +0000
 +++ 04-commit/main.c
