@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=		cvs2hg-2.0
+PKGNAME=		cvs2hg-2.1
 CATEGORIES=		devel scm
 
 MAINTAINER=		wiz@NetBSD.org

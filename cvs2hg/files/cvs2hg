@@ -69,7 +69,7 @@ parser.add_argument('destination', type=str,
                     help='base name of target Mercurial repository')
 args = parser.parse_args()
 
-run_args = ['cvs2fossil']
+run_args = ['cvs2fossil', '-m']
 if args.fixup_sql_script:
     run_args += ['-f', args.fixup_sql_script]
 if args.merge_limit:
