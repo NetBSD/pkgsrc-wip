@@ -5022,7 +5022,6 @@ SUBDIR+=	rpm5
 SUBDIR+=	rsem
 SUBDIR+=	rset
 SUBDIR+=	rsget
-SUBDIR+=	rslack
 SUBDIR+=	rsound
 SUBDIR+=	rsstail
 SUBDIR+=	rst-mode
