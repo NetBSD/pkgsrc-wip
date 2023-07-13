@@ -12,7 +12,7 @@ LICENSE=	original-bsd
 GIT_REPOSITORIES=	rpki
 GIT_REPO.rpki=		git@github.com:dragonresearch/rpki.net.git
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
 
 USE_TOOLS+=	perl python
 

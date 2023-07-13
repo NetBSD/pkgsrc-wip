@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pagepart/chinup
 COMMENT=	Python Facebook Graph API client
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
 
 USE_LANGUAGES=	# none
 

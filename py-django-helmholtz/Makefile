@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
-#
 
 DISTNAME=	Helmholtz-0.1.0
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME:S/H/h/}
@@ -11,7 +10,7 @@ HOMEPAGE=	http://www.dbunic.cnrs-gif.fr/helmholtz/
 COMMENT=	Framework for creating neuroscience databases
 LICENSE=	cecill-2.1
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
 
 WRKSRC=		${WRKDIR}/Helmholtz-0.1.0
 

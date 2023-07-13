@@ -10,7 +10,7 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/d/dj-static/
 COMMENT=	Serve production static files with Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
 
 USE_LANGUAGES=	# none
 

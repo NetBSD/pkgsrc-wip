@@ -11,7 +11,7 @@ HOMEPAGE=	https://bitbucket.org/tkhyn/django-idmap
 COMMENT=	Identity mapper for the Django ORM
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
 
 USE_LANGUAGES=	# none
 
