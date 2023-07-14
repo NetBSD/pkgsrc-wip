@@ -1,0 +1,59 @@
+Sort out cross compilation issues, which build the internal LLVM.
+This currently fails with
+
+-- Installing: /usr/pkgsrc/wip/rust/work/rustc-1.71.0-src/build/x86_64-unknown-netbsd/llvm/bin/llvm-tblgen
+CMake Error at utils/TableGen/cmake_install.cmake:50 (file):
+  file RPATH_CHANGE could not write new RPATH:
+
+    $ORIGIN/../lib
+
+  to the file:
+
+    /usr/pkgsrc/wip/rust/work/rustc-1.71.0-src/build/x86_64-unknown-netbsd/llvm/bin/llvm-tblgen
+
+  The current RPATH is:
+
+    /usr/pkg/lib
+
+  which does not contain:
+
+    $ORIGIN/../lib:
+
+  as was expected.
+Call Stack (most recent call first):
+  cmake_install.cmake:63 (include)
+
+I suspect we are running afoul of cwrapper, which tends to drop arguments
+which contains relative paths.  work/.work.log has as the two last entries
+
+[*] c++ -O2 ... -o ../../bin/llvm-reduce '-Wl,-rpath,$ORIGIN/../lib:'
+
+while the last line has
+
+<.> /usr/pkgsrc/wip/rust/work/.gcc/bin/g++ ... \
+	-o ../../bin/llvm-reduce ../../lib/libLLVMAArch64AsmParser.a ...
+
+i.e. the entry with $ORIGIN is dropped by cwrappers.
+
+This is evidently done by e.g.
+
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/llvm-tblgen" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/llvm-tblgen")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/llvm-tblgen"
+         OLD_RPATH "\$ORIGIN/../lib:"
+         NEW_RPATH "$ORIGIN/../lib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/pkgsrc/wip/rust/work/.tools/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/llvm-tblgen")
+    endif()
+  endif()
+
+which is replicate in lots of cmake_install.cmake files which have been
+dropped in the target build tree, i.e.
+
+work/rustc-1.71.0-src/build/x86_64-unknown-netbsd/llvm/build/...
+
+In all there are some 80 files mentioning RPATH_CHANGE.
+
+It is not self-evident where this is coming from, it looks like
+the cmake_install.cmake files are automatically generated.
