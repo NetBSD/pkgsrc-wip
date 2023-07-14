@@ -28,11 +28,12 @@ Handle earmv[67]hf for NetBSD.
              kernel = 'linux-androideabi'
          else:
              kernel += 'eabihf'
+-    elif cputype in {'armv7l', 'armv8l'}:
 +    elif cputype in {'armv6hf', 'earmv6hf'}:
 +        cputype = 'armv6'
 +        if kernel == 'unknown-netbsd':
 +            kernel += '-eabihf'
-     elif cputype in {'armv7l', 'armv8l'}:
++    elif cputype in {'armv7l', 'earmv7hf', 'armv8l'}:
          cputype = 'armv7'
          if kernel == 'linux-android':
              kernel = 'linux-androideabi'
