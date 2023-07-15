@@ -1321,6 +1321,7 @@ go121/src/cmd/compile/internal/types2/util.go
 go121/src/cmd/compile/internal/types2/util_test.go
 go121/src/cmd/compile/internal/types2/validtype.go
 go121/src/cmd/compile/internal/types2/version.go
+go121/src/cmd/compile/internal/types2/version_test.go
 go121/src/cmd/compile/internal/walk/assign.go
 go121/src/cmd/compile/internal/walk/builtin.go
 go121/src/cmd/compile/internal/walk/closure.go
@@ -2120,6 +2121,7 @@ go121/src/cmd/go/testdata/script/cover_test_race_issue56370.txt
 go121/src/cmd/go/testdata/script/cover_var_init_order.txt
 go121/src/cmd/go/testdata/script/cpu_profile_twice.txt
 go121/src/cmd/go/testdata/script/devnull.txt
+go121/src/cmd/go/testdata/script/dist_list_missing.txt
 go121/src/cmd/go/testdata/script/doc.txt
 go121/src/cmd/go/testdata/script/embed.txt
 go121/src/cmd/go/testdata/script/embed_brackets.txt
@@ -3553,6 +3555,7 @@ go121/src/cmd/vendor/golang.org/x/sys/unix/ioctl_unsigned.go
 go121/src/cmd/vendor/golang.org/x/sys/unix/ioctl_zos.go
 go121/src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 go121/src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
+go121/src/cmd/vendor/golang.org/x/sys/unix/mremap.go
 go121/src/cmd/vendor/golang.org/x/sys/unix/pagesize_unix.go
 go121/src/cmd/vendor/golang.org/x/sys/unix/pledge_openbsd.go
 go121/src/cmd/vendor/golang.org/x/sys/unix/ptrace_darwin.go
@@ -3870,6 +3873,8 @@ go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/bools/bools.go
 go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/buildtag/buildtag.go
 go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/buildtag/buildtag_old.go
 go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/cgocall/cgocall.go
+go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/cgocall/cgocall_go120.go
+go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/cgocall/cgocall_go121.go
 go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/composite/composite.go
 go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/composite/whitelist.go
 go121/src/cmd/vendor/golang.org/x/tools/go/analysis/passes/copylock/copylock.go
@@ -5393,6 +5398,7 @@ go121/src/go/types/util.go
 go121/src/go/types/util_test.go
 go121/src/go/types/validtype.go
 go121/src/go/types/version.go
+go121/src/go/types/version_test.go
 go121/src/hash/adler32/adler32.go
 go121/src/hash/adler32/adler32_test.go
 go121/src/hash/crc32/crc32.go
@@ -5654,6 +5660,7 @@ go121/src/internal/abi/abi_test.s
 go121/src/internal/abi/compiletype.go
 go121/src/internal/abi/export_test.go
 go121/src/internal/abi/funcpc.go
+go121/src/internal/abi/funcpc_gccgo.go
 go121/src/internal/abi/map.go
 go121/src/internal/abi/stack.go
 go121/src/internal/abi/stub.s
@@ -5942,6 +5949,7 @@ go121/src/internal/pkgbits/sync.go
 go121/src/internal/pkgbits/syncmarker_string.go
 go121/src/internal/platform/supported.go
 go121/src/internal/platform/zosarch.go
+go121/src/internal/platform/zosarch_test.go
 go121/src/internal/poll/copy_file_range_linux.go
 go121/src/internal/poll/errno_unix.go
 go121/src/internal/poll/errno_windows.go
@@ -6441,6 +6449,9 @@ go121/src/internal/types/testdata/fixedbugs/issue60542.go
 go121/src/internal/types/testdata/fixedbugs/issue60556.go
 go121/src/internal/types/testdata/fixedbugs/issue60562.go
 go121/src/internal/types/testdata/fixedbugs/issue60688.go
+go121/src/internal/types/testdata/fixedbugs/issue60906.go
+go121/src/internal/types/testdata/fixedbugs/issue60933.go
+go121/src/internal/types/testdata/fixedbugs/issue60946.go
 go121/src/internal/types/testdata/fixedbugs/issue6977.go
 go121/src/internal/types/testdata/spec/assignability.go
 go121/src/internal/types/testdata/spec/comparable.go
@@ -6548,6 +6559,7 @@ go121/src/log/syslog/syslog_unix.go
 go121/src/make.bash
 go121/src/make.bat
 go121/src/make.rc
+go121/src/maps/example_test.go
 go121/src/maps/maps.go
 go121/src/maps/maps.s
 go121/src/maps/maps_test.go
@@ -8533,6 +8545,7 @@ go121/src/runtime/zcallback_windows.go
 go121/src/runtime/zcallback_windows.s
 go121/src/runtime/zcallback_windows_arm.s
 go121/src/runtime/zcallback_windows_arm64.s
+go121/src/slices/example_test.go
 go121/src/slices/slices.go
 go121/src/slices/slices_test.go
 go121/src/slices/sort.go
@@ -10163,6 +10176,7 @@ go121/test/fixedbugs/bug512.go
 go121/test/fixedbugs/bug513.go
 go121/test/fixedbugs/bug514.go
 go121/test/fixedbugs/bug515.go
+go121/test/fixedbugs/bug516.go
 go121/test/fixedbugs/gcc101994.go
 go121/test/fixedbugs/gcc61204.go
 go121/test/fixedbugs/gcc61244.go
@@ -11533,6 +11547,14 @@ go121/test/fixedbugs/issue6036.go
 go121/test/fixedbugs/issue6055.go
 go121/test/fixedbugs/issue60582.go
 go121/test/fixedbugs/issue60601.go
+go121/test/fixedbugs/issue60945.dir/a.go
+go121/test/fixedbugs/issue60945.dir/b.go
+go121/test/fixedbugs/issue60945.go
+go121/test/fixedbugs/issue60982.go
+go121/test/fixedbugs/issue60990.go
+go121/test/fixedbugs/issue60991.go
+go121/test/fixedbugs/issue61127.go
+go121/test/fixedbugs/issue61187.go
 go121/test/fixedbugs/issue6131.go
 go121/test/fixedbugs/issue6140.go
 go121/test/fixedbugs/issue6247.go

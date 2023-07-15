@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2023/02/05 13:25:26 bsiegert Exp $
 
-GO121_VERSION=	1.21rc2
+GO121_VERSION=	1.21rc3
 .include "../../lang/go/version.mk"
 # Minimum Go version for bootstrapping is 1.17.13.
 # Go 1.17 has some concurrency issues that have been fixed in 1.18.
