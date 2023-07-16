@@ -7,13 +7,11 @@
 # from before and after, and do a recursive PKGREVISION
 # bump if necessary
 
-DISTNAME=	protobuf-22.3
-PKGNAME=	${DISTNAME:S/protobuf-/protobuf-3./}
+DISTNAME=	protobuf-23.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 GITHUB_PROJECT=	protobuf
-# attention, does not match version above!
-GITHUB_RELEASE=	v${PKGVERSION_NOREV:S/3.//}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/protocolbuffers/protobuf
@@ -29,9 +27,6 @@ CMAKE_ARGS+=		-Dprotobuf_BUILD_TESTS=OFF
 
 # the [[ command will skip a test that would otherwise run
 CHECK_PORTABILITY_SKIP+=	src/google/protobuf/compiler/zip_output_unittest.sh
-
-# configure: error: *** A compiler with support for C++11 language features is required.
-GCC_REQD+=	4.8
 
 .include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk"
