@@ -3252,6 +3252,7 @@ SUBDIR+=	prometheus-lts
 SUBDIR+=	promtail
 SUBDIR+=	proplib
 SUBDIR+=	proselint
+SUBDIR+=	protobuf
 SUBDIR+=	proton-bridge
 SUBDIR+=	prover9
 SUBDIR+=	proxify
