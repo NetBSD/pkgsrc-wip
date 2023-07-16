@@ -4329,6 +4329,7 @@ SUBDIR+=	py-projectq
 SUBDIR+=	py-promise
 SUBDIR+=	py-property-manager
 SUBDIR+=	py-propyte
+SUBDIR+=	py-protobuf
 SUBDIR+=	py-proxy_tools
 SUBDIR+=	py-psamm
 SUBDIR+=	py-pseudopy
