@@ -1,7 +1,6 @@
 # $NetBSD$
 DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 PKGNAME=	${PYPKGPREFIX}-apache-arrow-${APACHE_ARROW_VERSION}
-EGG_NAME=	pyarrow-${APACHE_ARROW_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
 
@@ -15,21 +14,19 @@ LICENSE=	apache-2.0
 .include "../../wip/apache-arrow/options.mk"
 .include "../../wip/apache-arrow/version.mk"
 
-PYSETUPSUBDIR=	python
-
 USE_LANGUAGES=	c c++
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=      ${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-pytest-lazy-fixture>=0.6.3:../../devel/py-pytest-lazy-fixture
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-fixture
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 USE_TOOLS=	cmake gmake pkg-config
 
 MAKE_ENV+=	VERBOSE=1
 MAKE_ENV+=	PYARROW_PARALLEL=${_MAKE_JOBS_N}
-WHEELFILE?= ${WRKSRC}/python/dist/*.whl
+WHEELFILE?=	${WRKSRC}/python/dist/pyarrow-${APACHE_ARROW_VERSION}-cp${_PYTHON_VERSION}-cp${_PYTHON_VERSION}-linux_x86_64.whl
 
 # libarrow_python.so: ORIGIN Doesn't get passed through correclty
 SUBST_CLASSES+=         origin
