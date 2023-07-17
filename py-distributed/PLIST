@@ -239,6 +239,8 @@ ${PYSITELIB}/distributed/http/worker/prometheus/__init__.py
 ${PYSITELIB}/distributed/http/worker/prometheus/__init__.pyc
 ${PYSITELIB}/distributed/http/worker/prometheus/core.py
 ${PYSITELIB}/distributed/http/worker/prometheus/core.pyc
+${PYSITELIB}/distributed/itertools.py
+${PYSITELIB}/distributed/itertools.pyc
 ${PYSITELIB}/distributed/lock.py
 ${PYSITELIB}/distributed/lock.pyc
 ${PYSITELIB}/distributed/metrics.py
@@ -336,6 +338,8 @@ ${PYSITELIB}/distributed/shuffle/_worker_extension.py
 ${PYSITELIB}/distributed/shuffle/_worker_extension.pyc
 ${PYSITELIB}/distributed/sizeof.py
 ${PYSITELIB}/distributed/sizeof.pyc
+${PYSITELIB}/distributed/spans.py
+${PYSITELIB}/distributed/spans.pyc
 ${PYSITELIB}/distributed/spill.py
 ${PYSITELIB}/distributed/spill.pyc
 ${PYSITELIB}/distributed/stealing.py
