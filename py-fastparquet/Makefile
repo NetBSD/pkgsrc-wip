@@ -2,7 +2,7 @@
 
 # Prefer pulling from github instead of pypi
 # so that we can run tests
-GITHUB_TAG=	2023.4.0
+GITHUB_TAG=	2023.7.0
 GITHUB_PROJECT=	fastparquet
 DISTNAME=	fastparquet-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
