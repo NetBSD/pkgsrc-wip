@@ -408,20 +408,20 @@ lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
 lib/libarrow.so.1200
-lib/libarrow.so.1200.0.0
+lib/libarrow.so.1200.1.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
 lib/libarrow_acero.so.1200
-lib/libarrow_acero.so.1200.0.0
+lib/libarrow_acero.so.1200.1.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
 lib/libarrow_dataset.so.1200
-lib/libarrow_dataset.so.1200.0.0
+lib/libarrow_dataset.so.1200.1.0
 lib/libparquet.a
 lib/libparquet.so
 lib/libparquet.so.1200
-lib/libparquet.so.1200.0.0
+lib/libparquet.so.1200.1.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -431,8 +431,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.1200.0.0-gdb.py
+share/arrow/gdb/libarrow.so.1200.1.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20230507/lib
+@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20230703/lib

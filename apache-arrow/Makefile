@@ -54,8 +54,9 @@ CONFIGURE_ENV+=	ARROW_XSIMD_URL=/${DISTDIR}/${XSIMD}
 # To enable tests, devel/googletest needs -fPIE removed
 CMAKE_ARGS+=	-DARROW_BUILD_TESTS=OFF
 
+# Fix this version expansion as we have to
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.${APACHE_ARROW_VERSION:S/.//g}.0.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
+	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.${APACHE_ARROW_VERSION:C/\..*//g}00.${APACHE_ARROW_VERSION:C/[0-9]*\.[0-9]*\.//1}.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 # Needs gnu install for -v option
