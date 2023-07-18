@@ -4576,6 +4576,7 @@ SUBDIR+=	py-sfepy
 SUBDIR+=	py-sfg
 SUBDIR+=	py-shapely
 SUBDIR+=	py-shedskin
+SUBDIR+=	py-shodan
 SUBDIR+=	py-shp
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-shutilwhich
