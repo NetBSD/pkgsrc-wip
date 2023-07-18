@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	libpthread-stubs-0.4
+DISTNAME=	libpthread-stubs-0.5
 CATEGORIES=	x11
 MASTER_SITES=	https://xcb.freedesktop.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xcb.freedesktop.org/

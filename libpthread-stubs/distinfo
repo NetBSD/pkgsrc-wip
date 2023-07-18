@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (libpthread-stubs-0.4.tar.bz2) = d831b5b0370e88f752c454c4bb96c7bf2a240f10
-SHA512 (libpthread-stubs-0.4.tar.bz2) = 0fec563f3833b84311b32cb13a4fd9832aeb0204c65b1541bf453d5d35693b2267c3cee656e00a4b8533b07a8f6320ca5c3672dcf8ab047cdac8628154c08954
-Size (libpthread-stubs-0.4.tar.bz2) = 57565 bytes
+BLAKE2s (libpthread-stubs-0.5.tar.xz) = fcd25b4fa71cb96f54ac748716d8d5b9af8569c419e77d335d13a6b8ba506a00
+SHA512 (libpthread-stubs-0.5.tar.xz) = a24f7c40dcaf5f6ca0085972117fed5ad0851f6fc1972fdab799d27236afaaa4f7baa93e40532f93984d313d94456819aaf4ec8f8d1bbb2e5c4fc76c31891d82
+Size (libpthread-stubs-0.5.tar.xz) = 56980 bytes
