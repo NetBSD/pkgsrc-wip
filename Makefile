@@ -485,6 +485,7 @@ SUBDIR+=	clustershell
 SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	cmoc
+SUBDIR+=	cmvnd-fonts
 SUBDIR+=	coccigrep
 SUBDIR+=	cockatrice
 SUBDIR+=	cockatrice-server
