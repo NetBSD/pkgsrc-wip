@@ -1,23 +1,26 @@
 # $NetBSD$
 
-BASERVER=	4.6.0
+BASERVER=	5.0.2
 DISTNAME=	basercms-${BASERVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baserproject/}
 GITHUB_PROJECT=	basercms
-GITHUB_TAG=	${DISTNAME}
+GITHUB_TAG=	${BASERVER}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://basercms.net/
 COMMENT=	Easy to use Content Management System for Japan/Japanese
 LICENSE=	mit
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.6.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.6.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.6.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.6.0:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.6.0:../../archivers/php-zip
+PHP_VERSIONS_ACCEPTED=	81 82
+
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.1.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.1.0:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.1.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=8.1.0:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.1.0:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=8.1.0:../../archivers/php-zip
 
 WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_LANGUAGES=		# none
