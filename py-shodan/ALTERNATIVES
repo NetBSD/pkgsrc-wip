@@ -1,0 +1,1 @@
+bin/shodan @PREFIX@/bin/shodan@PYVERSSUFFIX@

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.10 2023/05/26 20:00:17 adam Exp $
+
+BLAKE2s (shodan-1.29.1.tar.gz) = e53a68bdc152a2de5c1cb4e85aeeb23bf55781457d3ed7d6f2624a3a594c0bfd
+SHA512 (shodan-1.29.1.tar.gz) = d12483a669e5f89aa3712190fa75f68d6a259739548f6b150131506c72a07ad520c1e85ff0dc98c02124ccab1868cb77534f7e36d76594373957aee0efbdba1d
+Size (shodan-1.29.1.tar.gz) = 55823 bytes
