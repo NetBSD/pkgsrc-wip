@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Ensure proper terminal output
+
 --- multiqc/multiqc.py.orig	2023-05-11 13:19:10 UTC
 +++ multiqc/multiqc.py
 @@ -24,7 +24,13 @@ from urllib.request import urlopen

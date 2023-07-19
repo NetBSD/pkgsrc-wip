@@ -9,7 +9,7 @@
 # Unconverted and partially converted FreeBSD port syntax:
 
 # Need to package these deps
-# RUN_DEPENDS=	${PYNUMPY} \
+# RUN_DEPENDS=	
 #		${PYPKGPREFIX}-rich-click>0:devel/py-rich-click@${PY_FLAVOR}
 #		${PYPKGPREFIX}-lzstring>0:archivers/py-lzstring@${PY_FLAVOR}
 #		${PYPKGPREFIX}-spectra>=0.0.10:graphics/py-spectra@${PY_FLAVOR}
@@ -38,14 +38,11 @@ DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-colormath>0:../../wip/py-colormath
 
 post-patch:
-	@${RM} ${WRKSRC}/multiqc/utils/config.py.orig
+	${RM} ${WRKSRC}/multiqc/utils/config.py.orig
 
 # Verify that we shouldn't use distutils.mk or extensions.mk instead.
 .include "../../lang/python/egg.mk"
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 # Based on USES=python.  Check this.
-.include "../../lang/python/application.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
+# .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
