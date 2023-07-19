@@ -2,7 +2,6 @@
 
 COMMENT=	Work-in-progress packages
 
-
 SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
@@ -38,6 +37,7 @@ SUBDIR+=	PayloadsAllTheThings
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	Qweyboard
+SUBDIR+=	R
 SUBDIR+=	R-BiocGenerics
 SUBDIR+=	R-C50
 SUBDIR+=	R-MySQL
@@ -1099,10 +1099,10 @@ SUBDIR+=	gcc9snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
-SUBDIR+=	gdb
 SUBDIR+=	gdb-git
 SUBDIR+=	gdb5
 SUBDIR+=	gdb6
+SUBDIR+=	gdb8
 SUBDIR+=	gdcm
 SUBDIR+=	gde
 SUBDIR+=	gdk-pixbuf-jxl
@@ -2370,6 +2370,7 @@ SUBDIR+=	mintotp
 SUBDIR+=	minuit2
 SUBDIR+=	miracl
 SUBDIR+=	mirage
+SUBDIR+=	mirmake
 SUBDIR+=	miro
 SUBDIR+=	mistserver
 SUBDIR+=	mixer.tk
@@ -4478,6 +4479,7 @@ SUBDIR+=	py-recordclass
 SUBDIR+=	py-redbaron
 SUBDIR+=	py-redis-cluster
 SUBDIR+=	py-reducer
+SUBDIR+=	py-referencing
 SUBDIR+=	py-registry
 SUBDIR+=	py-releases
 SUBDIR+=	py-remctl
