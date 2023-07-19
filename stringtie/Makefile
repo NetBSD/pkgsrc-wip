@@ -14,8 +14,8 @@ HOMEPAGE=	http://www.ccb.jhu.edu/software/stringtie/
 COMMENT=	Transcript assembly and quantification for RNA-seq
 LICENSE=	mit
 
-TEST_DEPENDS=	bash:../../shells/bash \
-		curl:../../www/curl
+TEST_DEPENDS=	bash>0:../../shells/bash \
+		curl>0:../../www/curl
 TEST_TARGET=	test
 
 USE_LANGUAGES=	c c++
@@ -27,4 +27,5 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stringtie ${DESTDIR}${PREFIX}/bin
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
