@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/auerlab/fasda
 COMMENT=	Fast and simple differential analysis
 LICENSE=	2-clause-bsd
 
+DEPENDS=	stringtie>0:../../wip/stringtie
+
 LDFLAGS.SunOS+=	-lresolv
 
 pre-build:
