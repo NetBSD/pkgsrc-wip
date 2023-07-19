@@ -12,7 +12,7 @@ GITHUB_TAG=	0480a776c8a0b9c05cba4037084f74c5f8c042f6
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/cmvnd/fonts/
-COMMENT=	Set of bitmap fonts inspired by artwiz
+COMMENT=	Tiny bitmap fonts
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
