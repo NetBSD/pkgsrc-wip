@@ -4132,6 +4132,7 @@ SUBDIR+=	py-msumastro
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-multimethods
 SUBDIR+=	py-multiprocess
+SUBDIR+=	py-multiqc
 SUBDIR+=	py-multitasking
 SUBDIR+=	py-multivar-horner
 SUBDIR+=	py-munch
