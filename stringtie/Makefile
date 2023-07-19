@@ -5,14 +5,6 @@
 #              Wed Jul 19 07:41:21 CDT 2023               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-# TEST_DEPENDS=	bash:shells/bash \
-#		curl:ftp/curl
-# Unknown tool: USE_TOOLS=	compiler:c++11-lang
-#TEST_TARGET=	test
-
 DISTNAME=	stringtie-2.1.1
 CATEGORIES=	biology
 MASTER_SITES=	http://ccb.jhu.edu/software/stringtie/dl/
@@ -21,6 +13,10 @@ OWNER=		bacon@NetBSD.org
 HOMEPAGE=	http://www.ccb.jhu.edu/software/stringtie/
 COMMENT=	Transcript assembly and quantification for RNA-seq
 LICENSE=	mit
+
+TEST_DEPENDS=	bash:../../shells/bash \
+		curl:../../www/curl
+TEST_TARGET=	test
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
