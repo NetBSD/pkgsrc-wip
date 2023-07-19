@@ -5328,6 +5328,7 @@ SUBDIR+=	stracciatella
 SUBDIR+=	stratagus
 SUBDIR+=	stress
 SUBDIR+=	stress-ng
+SUBDIR+=	stringtie
 SUBDIR+=	strongswan
 SUBDIR+=	structure
 SUBDIR+=	stumpwm
