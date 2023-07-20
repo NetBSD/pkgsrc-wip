@@ -18,7 +18,9 @@ DEPENDS+=	samtools>=0:../../biology/samtools
 DEPENDS+=	igv>=0:../../biology/igv
 DEPENDS+=	fasda>=0:../../wip/fasda
 DEPENDS+=	webbrowser>=0:../../wip/webbrowser
+DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
 
 META_PACKAGE=	yes
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
