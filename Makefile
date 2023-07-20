@@ -4605,6 +4605,7 @@ SUBDIR+=	py-spark
 SUBDIR+=	py-sparse
 SUBDIR+=	py-spatialdata
 SUBDIR+=	py-spatious
+SUBDIR+=	py-spectra
 SUBDIR+=	py-spectral
 SUBDIR+=	py-speex
 SUBDIR+=	py-speview
