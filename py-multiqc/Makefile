@@ -5,12 +5,6 @@
 #              Wed Jul 19 15:14:18 CDT 2023               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-# Need to package these deps
-#		${PYPKGPREFIX}-lzstring>0:archivers/py-lzstring@${PY_FLAVOR}
-
 DISTNAME=	multiqc-1.14
 PKGNAME=	${PYPKGPREFIX}-multiqc-1.14
 CATEGORIES=	biology
@@ -34,6 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=10:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../wip/py-rich-click
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../wip/py-spectra
+DEPENDS+=	${PYPKGPREFIX}-lzstring>0:../../wip/py-lzstring
 
 post-patch:
 	${RM} ${WRKSRC}/multiqc/multiqc.py.orig
