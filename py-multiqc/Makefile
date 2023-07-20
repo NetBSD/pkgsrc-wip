@@ -10,7 +10,6 @@
 
 # Need to package these deps
 #		${PYPKGPREFIX}-lzstring>0:archivers/py-lzstring@${PY_FLAVOR}
-#		${PYPKGPREFIX}-spectra>=0.0.10:graphics/py-spectra@${PY_FLAVOR}
 
 DISTNAME=	multiqc-1.14
 PKGNAME=	${PYPKGPREFIX}-multiqc-1.14
@@ -34,6 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rich>=10:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../wip/py-rich-click
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
+DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../wip/py-spectra
 
 post-patch:
 	${RM} ${WRKSRC}/multiqc/multiqc.py.orig
