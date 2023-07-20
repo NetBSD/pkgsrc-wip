@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (capturer-3.0.tar.gz) = 3e94d2501b99e51ee89422daaaca9d6c14f4a7a9
+BLAKE2s (capturer-3.0.tar.gz) = 87b37d47022216d5d780f731213d44076f5329a4c0d47ee96c505dc4132d9a83
 SHA512 (capturer-3.0.tar.gz) = 3c83c0eade27380304347bdc93df392b2cb84c084e50693993dcca5fd572b8f92d31de43b4a2ddd0a0e8c7eb097629127e86a4860918c507d13b0e2979a04098
 Size (capturer-3.0.tar.gz) = 18146 bytes
