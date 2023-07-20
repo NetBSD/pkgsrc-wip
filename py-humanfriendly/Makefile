@@ -10,10 +10,9 @@ HOMEPAGE=	https://humanfriendly.readthedocs.io/
 COMMENT=	Human friendly output for text interfaces using Python
 LICENSE=	mit
 
+# FIXME: Circular dep with py-capturer
 TEST_DEPENDS+=	${PYPKGPREFIX}-capturer>=2.1:../../wip/py-capturer
 TEST_DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=2.0:../../wip/py-coloredlogs
-
-USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
