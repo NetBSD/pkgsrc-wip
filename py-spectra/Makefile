@@ -15,6 +15,8 @@ HOMEPAGE=	https://pypi.python.org/pypi/spectra
 COMMENT=	Color scales and color conversion made easy for Python
 LICENSE=	mit
 
+DEPENDS=	${PYPKGPREFIX}-colormath>=3.0.0:../../wip/py-colormath
+
 TEST_DEPENDS=	${PYPKGPREFIX}-nose>0:../../devel/py-nose
 
 do-test:
