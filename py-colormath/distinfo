@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (colormath-2.1.1.tar.gz) = 71dd664780423b2875ce41ccd365ce59d3f89318
-SHA512 (colormath-2.1.1.tar.gz) = 56c798108963fbaa377fdc6ebf426acdece5d77d39d748a3a87bfb62965f727c7075810bb17aa81f61d884fc0536c4e0cac7be22fa36d730eff21d7aa2a6c608
-Size (colormath-2.1.1.tar.gz) = 39048 bytes
+BLAKE2s (colormath-3.0.0.tar.gz) = 2076721b972a1c05f64976559db7abdb8f79192b8e5df04b96ad1e112b9d0d4e
+SHA512 (colormath-3.0.0.tar.gz) = 12d1ab931000dadb087fdf7e56280690ff51a299e976347026703eac83373edcacd3310255fd52e05d842aab54d4f7d3ed19deda8db4b78574a7273f1c8cc058
+Size (colormath-3.0.0.tar.gz) = 39761 bytes
