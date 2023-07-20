@@ -4500,6 +4500,7 @@ SUBDIR+=	py-rf
 SUBDIR+=	py-rfc3987
 SUBDIR+=	py-rfc6555
 SUBDIR+=	py-riccipy
+SUBDIR+=	py-rich-click
 SUBDIR+=	py-rigidbodysimulator
 SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-rns
