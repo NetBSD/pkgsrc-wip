@@ -25,10 +25,10 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-yaml>=4:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rich>=10:../../comms/py-rich
-DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../wip/py-rich-click
+DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../devel/py-rich-click
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../wip/py-spectra
-DEPENDS+=	${PYPKGPREFIX}-lzstring>0:../../wip/py-lzstring
+DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../graphics/py-spectra
+DEPENDS+=	${PYPKGPREFIX}-lzstring>0:../../archivers/py-lzstring
 
 post-patch:
 	${RM} ${WRKSRC}/multiqc/multiqc.py.orig
