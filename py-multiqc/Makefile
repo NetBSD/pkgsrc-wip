@@ -9,8 +9,6 @@
 # Unconverted and partially converted FreeBSD port syntax:
 
 # Need to package these deps
-# RUN_DEPENDS=	
-#		${PYPKGPREFIX}-rich-click>0:devel/py-rich-click@${PY_FLAVOR}
 #		${PYPKGPREFIX}-lzstring>0:archivers/py-lzstring@${PY_FLAVOR}
 #		${PYPKGPREFIX}-spectra>=0.0.10:graphics/py-spectra@${PY_FLAVOR}
 
@@ -24,21 +22,21 @@ HOMEPAGE=	https://pypi.python.org/pypi/multiqc
 COMMENT=	Aggregate bioinformatics analysis reports across samples and tools
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=3.5:../../wip/py-coloredlogs
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=2.1.1:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-networkx>=2.5.1:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-coloredlogs-[0-9]*:../../wip/py-coloredlogs
+DEPENDS+=	${PYPKGPREFIX}-future>0.14.0:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.2.1:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.5:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3<3:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
-DEPENDS+=	${PYPKGPREFIX}-colormath>0:../../wip/py-colormath
+DEPENDS+=	${PYPKGPREFIX}-yaml>=4:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-rich>=10:../../comms/py-rich
+DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../wip/py-rich-click
+DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 
 post-patch:
-	${RM} ${WRKSRC}/multiqc/utils/config.py.orig
+	${RM} ${WRKSRC}/multiqc/multiqc.py.orig
 
 # Verify that we shouldn't use distutils.mk or extensions.mk instead.
 .include "../../lang/python/egg.mk"
