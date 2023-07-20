@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bw_web_v2023.4.2.tar.gz) = b3f574ed071e32d4160ac21bfca33c76d7b3671b27b02f52fd3d32de1dfa1e4e
+SHA512 (bw_web_v2023.4.2.tar.gz) = 3c2202c40cacbb50f5a1479a9e8d6c2e55140e8f1f871f98d93480fc17affeafd7d2eb6e0955c3477d090d89ab4c67e9e701a7b5fc6c5492ca451b9338692fd9
+Size (bw_web_v2023.4.2.tar.gz) = 10412200 bytes

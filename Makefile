@@ -5684,6 +5684,7 @@ SUBDIR+=	vanitygen
 SUBDIR+=	varnish-modules
 SUBDIR+=	varnish-slash
 SUBDIR+=	vault
+SUBDIR+=	vaultwarden-web_vault
 SUBDIR+=	vcflib
 SUBDIR+=	vcftools
 SUBDIR+=	vcg
