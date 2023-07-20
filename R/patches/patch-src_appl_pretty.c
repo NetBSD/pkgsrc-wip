@@ -1,3 +1,7 @@
+$NetBSD$
+
+gettext-0.22 API change
+
 --- src/appl/pretty.c.orig	2023-03-23 23:02:02.000000000 +0000
 +++ src/appl/pretty.c	2023-07-20 06:48:51.271243263 +0000
 @@ -45,10 +45,10 @@

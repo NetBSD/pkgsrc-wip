@@ -1,3 +1,7 @@
+$NetBSD$
+
+gettext-0.22 API change
+
 --- src/extra/tre/regerror.c.orig	2018-09-25 08:46:40.000000000 +0000
 +++ src/extra/tre/regerror.c	2023-07-20 06:58:53.519846262 +0000
 @@ -22,7 +22,11 @@
