@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-macs2>=0:../../wip/py-macs2
 DEPENDS+=	fasda>=0:../../wip/fasda
 DEPENDS+=	peak-classifier>=0:../../wip/peak-classifier
 DEPENDS+=	webbrowser>=0:../../wip/webbrowser
+DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
 
 META_PACKAGE=	yes
 
