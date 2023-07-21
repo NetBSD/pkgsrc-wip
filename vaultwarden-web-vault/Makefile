@@ -10,13 +10,14 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	zilti@NetBSD.org
 HOMEPAGE=	https://github.com/dani-garcia/bw_web_builds
-COMMENT=	This is the Bitwarden web vault with the patches to make it work with security/vaultwarden
+COMMENT=	Bitwarden web vault with the patches to make it work with security/vaultwarden
 
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/web-vault
 NO_BUILD=	yes
 GENERATE_PLIST=	yes
+USE_TOOLS=	pax
 
 APACHE_USER?=		nginx
 APACHE_GROUP?=		nginx
@@ -25,10 +26,10 @@ PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
 PKG_USERS_VARS=		APACHE_USER
 PKG_GROUPS_VARS=	APACHE_GROUP
 
-INSTALLATION_DIRS=	share/vaultwarden-web_vault
+INSTALLATION_DIRS=	share/vaultwarden-web-vault
 PKG_DESTDIR_SUPPORT=	destdir
 
 do-install:
-	cd ${WRKSRC} && cp -r . ${DESTDIR}${PREFIX}${INSTALLATION_DIRS};
+	${PAX} -wr ${WRKSRC} ${DESTDIR}${PREFIX}${INSTALLATION_DIRS};
 
 .include "../../mk/bsd.pkg.mk"
