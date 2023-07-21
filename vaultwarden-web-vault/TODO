@@ -1,1 +1,14 @@
 Make this actually work; this is just an intermediary commit.
+
+Figure out how this relates to the web server that is optional in
+security/vaultwarden.  Probably there should be only one way to get a
+web server, or there should be a way to get original vs patched in a
+parallel way.  The answer might be adding this package and dropping
+the web server from security/vaultwarden, but I don't want to jump to
+conclusions in a TODO entry.
+
+Adjust DESCR to make it clear that this is downloading precompiled js,
+vs building the bits to be downloaded from source.  I'm not saying
+that is terrible, but this is pkgsrc not pkgbin so users should
+understand that from DESCR.  Or if I'm confused and that's not what's
+going on, add enough text to unconfuse people like me :-)
