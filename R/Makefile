@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
+CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
@@ -146,30 +147,6 @@ SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
-
-SUBST_CLASSES+=		libintl
-SUBST_STAGE.libintl=	pre-configure
-SUBST_SED.libintl=	-e "s,<libintl.h>,<gettext/libintl.h>,g"
-SUBST_FILES.libintl=	\
-	src/library/stats/src/approx.c  \
-	src/library/stats/src/bandwidths.c  \
-	src/library/stats/src/complete_cases.c  \
-	src/library/stats/src/cov.c  \
-	src/library/stats/src/deriv.c  \
-	src/library/stats/src/distn.c  \
-	src/library/stats/src/fourier.c  \
-	src/library/stats/src/integrate.c  \
-	src/library/stats/src/ksmooth.c  \
-	src/library/stats/src/lm.c  \
-	src/library/stats/src/loglin.c  \
-	src/library/stats/src/lowess.c  \
-	src/library/stats/src/model.c  \
-	src/library/stats/src/optim.c  \
-	src/library/stats/src/optimize.c  \
-	src/library/stats/src/rcont.c  \
-	src/library/stats/src/smooth.c \
-	src/library/stats/src/stats.h
-
 
 BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
