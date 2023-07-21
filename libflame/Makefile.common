@@ -21,7 +21,8 @@ USE_LANGUAGES=		c c++ fortran
 USE_TOOLS=	perl
 USE_TOOLS+=	gmake
 USE_TOOLS+=	bash
-
+CC=gcc
+CFLAGS+=-march=native
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--includedir=${PREFIX}/include/${LIBFLAME_VARIANT}
 CONFIGURE_ARGS+=	--enable-max-arg-list-hack
@@ -33,14 +34,16 @@ CONFIGURE_ARGS+=	--enable-verbose-make-output
 # CONFIGURE_ARGS+= --enable-autodetect-f77-name-mangling
 # CONFIGURE_ARGS+= --enable-non-critical-code
 # CONFIGURE_ARGS+= --disable-builtin-blas
+#CONFIGURE_ARGS+=	--enable-lapack2flash
 CONFIGURE_ARGS+=	--enable-lapack2flame
-# CONFIGURE_ARGS+= --disable-external-lapack-for-subproblems
+CONFIGURE_ARGS+=	--enable-legacy-lapack
+CONFIGURE_ARGS+= --disable-external-lapack-for-subproblems
 # CONFIGURE_ARGS+= --disable-blas3-front-end-cntl-trees
-# CONFIGURE_ARGS+= --enable-supermatrix
+CONFIGURE_ARGS+= --enable-supermatrix
 # CONFIGURE_ARGS+= --disable-gpu
-# CONFIGURE_ARGS+= --disable-vector-intrinsics
+CONFIGURE_ARGS+= --enable-vector-intrinsics=sse
 # CONFIGURE_ARGS+= --enable-ldim-alignment
-# CONFIGURE_ARGS+= --enable-optimizations
+CONFIGURE_ARGS+= --enable-optimizations
 # CONFIGURE_ARGS+= --enable-warnings
 # CONFIGURE_ARGS+= --enable-debug
 # CONFIGURE_ARGS+= --disable-profiling
@@ -74,6 +77,7 @@ SUBST_FILES.python+=	windows/build/gen-check-rev-file.py
 SUBST_FILES.python+=	netlib-test/lapack-3.4.2/lapack_testing.py
 SUBST_FILES.python+=	build/flatten-headers.py
 
+REPLACE_BASH+=	src/map/common/lapacksrc/scripts/regen-files.sh
 PLIST_SRC=	${.CURDIR}/../../wip/libflame/PLIST
 PLIST_SUBST+=	LIBFLAME_VARIANT=${LIBFLAME_VARIANT}
 
