@@ -33,9 +33,6 @@ DEPENDS+=	${PYPKGPREFIX}-lzstring>0:../../archivers/py-lzstring
 post-patch:
 	${RM} ${WRKSRC}/multiqc/multiqc.py.orig
 
-# Verify that we shouldn't use distutils.mk or extensions.mk instead.
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-# Based on USES=python.  Check this.
-# .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
