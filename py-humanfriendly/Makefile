@@ -2,7 +2,7 @@
 
 DISTNAME=	humanfriendly-10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/humanfriendly/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
