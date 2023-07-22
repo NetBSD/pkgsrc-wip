@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/capturer/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://capturer.readthedocs.io/
 COMMENT=	Easily capture stdout/stderr of the current process and subprocesses
 LICENSE=	mit

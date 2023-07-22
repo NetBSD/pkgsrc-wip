@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/humanfriendly/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://humanfriendly.readthedocs.io/
 COMMENT=	Human friendly output for text interfaces using Python
 LICENSE=	mit

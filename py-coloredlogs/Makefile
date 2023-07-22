@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coloredlogs/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://coloredlogs.readthedocs.io/en/latest/
 COMMENT=	Colored terminal output for Python's logging module
 LICENSE=	mit
