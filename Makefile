@@ -4818,6 +4818,7 @@ SUBDIR+=	py-vdirsyncer-git
 SUBDIR+=	py-vega_datasets
 SUBDIR+=	py-vegas
 SUBDIR+=	py-venusian
+SUBDIR+=	py-verboselogs
 SUBDIR+=	py-verilog
 SUBDIR+=	py-version-control-tools-hg
 SUBDIR+=	py-vespa
