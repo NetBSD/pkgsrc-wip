@@ -1,12 +1,12 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	cyclone-bootstrap
-GITHUB_TAG=	v0.35.0
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	cyclone-${DISTNAME:S,^v,,}
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justinethier/}
+GITHUB_PROJECT=	cyclone-bootstrap
+GITHUB_TAG=	v0.35.0
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
