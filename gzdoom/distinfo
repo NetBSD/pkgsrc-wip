@@ -3,4 +3,6 @@ $NetBSD$
 BLAKE2s (gzdoom/g4.10.0.tar.gz) = 178ae2f7f527c8523141b340866718055286a5248c52dbb1ac7d4f79993d8057
 SHA512 (gzdoom/g4.10.0.tar.gz) = fd2f6e34aaa59e3d153de6359211082398878dae3d396ab55fc736f94e1378d5e03193d7912a29a531cf1dc255d30af63ad1c6472784e3745db6ac4a3a9e6fe6
 Size (gzdoom/g4.10.0.tar.gz) = 24319337 bytes
+SHA1 (patch-src_common_console_c__console.h) = 887fa404253f20e92f798120e4a1dcf9fed4c4c7
+SHA1 (patch-src_common_platform_posix_sdl_i__system.cpp) = fef2eb02c0a30bfe9b9a1b7b55b0bb1d9b45c3ed
 SHA1 (patch-src_gameconfigfile.cpp) = 4c30c413e7d4bc3b25e940f8d5cb7e5dabbc8092

@@ -13,13 +13,7 @@ share/doc/gzdoom/licenses/lgpl.txt
 share/doc/gzdoom/rh-log.txt
 share/doc/gzdoom/skins.txt
 share/games/doom/brightmaps.pk3
-share/games/doom/fm_banks/GENMIDI-readme.txt
 share/games/doom/fm_banks/GENMIDI.GS.wopl
-share/games/doom/fm_banks/fmmidi-readme.txt
-share/games/doom/fm_banks/fmmidi.wopn
-share/games/doom/fm_banks/gems-fmlib-gmize-readme.txt
-share/games/doom/fm_banks/gems-fmlib-gmize.wopn
-share/games/doom/fm_banks/gs-by-papiezak-and-sneakernets-readme.txt
 share/games/doom/fm_banks/gs-by-papiezak-and-sneakernets.wopn
 share/games/doom/game_support.pk3
 share/games/doom/game_widescreen_gfx.pk3
