@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use c++20 to fix compilation errors.
+
+--- jfbuild/kenbuild/Makefile.orig	2023-03-21 20:06:35.000000000 +0000
++++ jfbuild/kenbuild/Makefile
+@@ -33,7 +33,7 @@ CXX?=g++
+ RC?=windres
+ 
+ GAMECFLAGS=-g -W -Wall -fno-strict-aliasing -std=c99
+-GAMECXXFLAGS=-g -W -Wall -fno-exceptions -fno-rtti -std=c++98
++GAMECXXFLAGS=-g -W -Wall -fno-exceptions -fno-rtti -std=c++20
+ GAMECPPFLAGS=-I$(SRC) -I$(ENGINEINC)
+ GAMELDFLAGS=
+ 

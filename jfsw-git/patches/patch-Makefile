@@ -3,18 +3,26 @@ $NetBSD$
 Set LIBS for BSD.
 Add LDFLAGS so that the X11 library paths can be used.
 
---- Makefile.orig	2021-12-26 20:11:15.000000000 +0000
+--- Makefile.orig	2023-03-21 20:06:13.000000000 +0000
 +++ Makefile
-@@ -233,10 +233,10 @@ endif
- all: sw$(EXESUFFIX) build$(EXESUFFIX)
+@@ -48,7 +48,7 @@ CXX?=g++
+ RC?=windres
  
- sw$(EXESUFFIX): $(GAMEOBJS) $(ELIB)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
--	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) -Wl,-Map=$@.map
-+	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(GAMELIBS) $(PKGSRCLDFLAGS) -Wl,-Map=$@.map
+ OURCFLAGS=-g -W -Wall -fno-strict-aliasing -std=c99
+-OURCXXFLAGS=-g -W -Wall -fno-exceptions -fno-rtti -std=c++98
++OURCXXFLAGS=-g -W -Wall -fno-exceptions -fno-rtti -std=c++20
+ OURCPPFLAGS=-I$(SRC) -I$(ENGINEINC) -I$(MACTROOT) -I$(AUDIOLIBROOT)/include
+ OURLDFLAGS=
  
- build$(EXESUFFIX): $(EDITOROBJS) $(ELIB)/$(EDITORLIB) $(ELIB)/$(ENGINELIB)
--	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) -Wl,-Map=$@.map
-+	$(CXX) $(CXXFLAGS) $(OURCXXFLAGS) $(OURCFLAGS) -o $@ $^ $(LIBS) $(PKGSRCLDFLAGS) -Wl,-Map=$@.map
+@@ -235,9 +235,11 @@ $(AUDIOLIBROOT)/%:
  
- include Makefile.deps
+ sw$(EXESUFFIX): $(GAMEOBJS) $(ENGINEROOT)/$(ENGINELIB) $(AUDIOLIBROOT)/$(JFAUDIOLIB)
+ 	$(CXX) $(CPPFLAGS) $(OURCPPFLAGS) $(CXXFLAGS) $(OURCXXFLAGS) -o $@ $^ $(LDFLAGS) $(OURLDFLAGS)
++	$(CXX) $(CPPFLAGS) $(OURCPPFLAGS) $(CXXFLAGS) $(OURCXXFLAGS) -o $@ $^ $(LDFLAGS) $(OURLDFLAGS) $(PKGSRCLDFLAGS)
  
+ build$(EXESUFFIX): $(EDITOROBJS) $(ENGINEROOT)/$(EDITORLIB) $(ENGINEROOT)/$(ENGINELIB)
+ 	$(CXX) $(CPPFLAGS) $(OURCPPFLAGS) $(CXXFLAGS) $(OURCXXFLAGS) -o $@ $^ $(LDFLAGS) $(OURLDFLAGS)
++	$(CXX) $(CPPFLAGS) $(OURCPPFLAGS) $(CXXFLAGS) $(OURCXXFLAGS) -o $@ $^ $(LDFLAGS) $(OURLDFLAGS) $(PKGSRCLDFLAGS)
+ 
+ # RULES
+ $(SRC)/%.$o: $(SRC)/%.c

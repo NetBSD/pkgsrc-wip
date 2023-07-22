@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use c++20 to fix compilation errors.
+
+--- jfbuild/Makefile.orig	2023-03-21 20:06:35.000000000 +0000
++++ jfbuild/Makefile
+@@ -39,7 +39,7 @@ HOSTCC?=$(CC)
+ HOSTCXX?=$(CXX)
+ 
+ OURCFLAGS=-g -W -Wall -fno-strict-aliasing -std=c99
+-OURCXXFLAGS=-g -W -Wall -fno-exceptions -fno-rtti -std=c++98
++OURCXXFLAGS=-g -W -Wall -fno-exceptions -fno-rtti -std=c++20
+ OURCPPFLAGS=-I$(INC) -I$(SRC) -I$(LIBSQUISH)
+ OURLDFLAGS=
+ 
