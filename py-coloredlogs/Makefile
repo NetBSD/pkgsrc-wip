@@ -2,7 +2,7 @@
 
 DISTNAME=	coloredlogs-15.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	comms python
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coloredlogs/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
