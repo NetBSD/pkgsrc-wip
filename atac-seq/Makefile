@@ -24,5 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
 
 META_PACKAGE=	yes
 
+# Inherited from py-macs2 dep
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
