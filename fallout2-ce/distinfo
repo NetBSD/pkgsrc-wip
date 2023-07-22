@@ -3,4 +3,8 @@ $NetBSD$
 BLAKE2s (fallout2-ce-1.2.0.tar.gz) = c85ba055636caa0727e2c6f1f35b16226ffbd7c911fb9bf16ee564ea7d201f16
 SHA512 (fallout2-ce-1.2.0.tar.gz) = 14cf2ea47290c586984fc8f95039f6ec13241d4db13b43b52ab9049cd8cd7f36f0ccfa51038effc13589106067dd6e44ed8504622ea142fb83a4d07e0fe5fd85
 Size (fallout2-ce-1.2.0.tar.gz) = 3276828 bytes
+BLAKE2s (fpattern-1.9.tar.gz) = 1cd0c39597a3c3584c8233081cc240a0da28a73ca6cffdc8d5255f7caecddfc5
+SHA512 (fpattern-1.9.tar.gz) = f8d847a56b652bc53d52f04eba46c39b87b3746d694eb1070463fce2f4f7410894aa6f9acd6c13a0ab1fb28fa0912a0a27c1f4fa27755d74499519b77597f71e
+Size (fpattern-1.9.tar.gz) = 9822 bytes
 SHA1 (patch-CMakeLists.txt) = e27029016a9a2d20c3dde4eda10afa44e0ff25f7
+SHA1 (patch-third__party_fpattern_CMakeLists.txt) = 41f91ba14eab70d35b457e805cb89d357becd941

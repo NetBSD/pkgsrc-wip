@@ -1,0 +1,30 @@
+$NetBSD$
+
+Don't download fpattern at build time.
+
+--- third_party/fpattern/CMakeLists.txt.orig	2023-02-09 19:13:05.000000000 +0000
++++ third_party/fpattern/CMakeLists.txt
+@@ -1,14 +1,14 @@
+ include(FetchContent)
+ 
+-FetchContent_Declare(fpattern
+-    GIT_REPOSITORY "https://github.com/Loadmaster/fpattern"
+-    GIT_TAG "v1.9"
+-)
+-
+-FetchContent_GetProperties(fpattern)
+-if (NOT fpattern_POPULATED)
+-    FetchContent_Populate(fpattern)
+-endif()
++#FetchContent_Declare(fpattern
++#    GIT_REPOSITORY "https://github.com/Loadmaster/fpattern"
++#    GIT_TAG "v1.9"
++#)
++#
++#FetchContent_GetProperties(fpattern)
++#if (NOT fpattern_POPULATED)
++#    FetchContent_Populate(fpattern)
++#endif()
+ 
+ if(MSVC)
+     set(CMAKE_DEBUG_POSTFIX "d")
