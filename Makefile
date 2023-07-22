@@ -3180,6 +3180,7 @@ SUBDIR+=	pkg_conflicts
 SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
+SUBDIR+=	pkgchkxx
 SUBDIR+=	pkgmanager
 SUBDIR+=	plank
 SUBDIR+=	plantri
