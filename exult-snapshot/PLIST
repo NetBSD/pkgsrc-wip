@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/expack
 bin/exult
+bin/ipack
 man/man1/expack.1
 man/man1/exult_studio.1
 man/man1/ipack.1
