@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/humanfriendly/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://humanfriendly.readthedocs.io/
+HOMEPAGE=	https://pypi.org/project/humanfriendly/
 COMMENT=	Human friendly output for text interfaces using Python
 LICENSE=	mit
 

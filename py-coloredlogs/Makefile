@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coloredlogs/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://coloredlogs.readthedocs.io/en/latest/
+HOMEPAGE=	https://pypi.org/project/coloredlogs/
 COMMENT=	Colored terminal output for Python's logging module
 LICENSE=	mit
 
