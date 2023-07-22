@@ -5,3 +5,5 @@ SHA512 (cyclone-bootstrap/v0.35.0.tar.gz) = 9aabae2bdcccdf6873780947c41a3230b80a
 Size (cyclone-bootstrap/v0.35.0.tar.gz) = 3955837 bytes
 SHA1 (patch-Makefile) = 3b1405ff54738ac53808f1f4e2e2a8d3f458f75d
 SHA1 (patch-Makefile.config) = 8838e7b3ac7b22452b798ab043ad94fe33ac4822
+SHA1 (patch-scheme_base.c) = 4d14cefb5e155e7cda6688740478329b118bce9b
+SHA1 (patch-scheme_base.sld) = b9aaeb494572eb4fddecf25d30eae7cafe77163f
