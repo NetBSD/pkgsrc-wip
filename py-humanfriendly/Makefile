@@ -11,7 +11,11 @@ COMMENT=	Human friendly output for text interfaces using Python
 LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-capturer>=2.1:../../wip/py-capturer
-TEST_DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=2.0:../../wip/py-coloredlogs
+TEST_DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=15.0.1:../../wip/py-coloredlogs
+TEST_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.15:../../textproc/py-docutils
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.7:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.4.0:../../devel/py-test-cov
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
