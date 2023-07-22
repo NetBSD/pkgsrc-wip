@@ -1,0 +1,4 @@
+M2R2 converts a markdown file including reStructuredText (rst) markups to a
+valid rst format.
+
+M2R2 is a fork of m2r. Every m2r config should work out of the box.

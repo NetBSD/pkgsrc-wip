@@ -4028,6 +4028,7 @@ SUBDIR+=	py-lxmf
 SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-lzma
 SUBDIR+=	py-lzstring
+SUBDIR+=	py-m2r2
 SUBDIR+=	py-macs2
 SUBDIR+=	py-macs3
 SUBDIR+=	py-magnitude
