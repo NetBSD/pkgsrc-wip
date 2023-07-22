@@ -12,7 +12,9 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-humanfriendly>=8.0:../../wip/py-humanfriendly
 
-USE_LANGUAGES=	# none
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.2:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.4:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.4.0:../../devel/py-test-cov 
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
