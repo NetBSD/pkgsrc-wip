@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pkgchkxx-0.1
+DISTNAME=	pkgchkxx-0.1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
 GITHUB_RELEASE=	${DISTNAME}
