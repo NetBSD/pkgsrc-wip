@@ -10,11 +10,6 @@
 
 #NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc powerpcspe
 #NOT_FOR_ARCHS_REASON=	Requires 64-bit processor
-#.if !exists(/usr/include/omp.h)
-#BROKEN=		requires OpenMP support that is missing on this architecture
-#.endif
-# Unknown tool: USE_TOOLS=	compiler:c++11-lang
-# Unknown tool: USE_TOOLS=	localbase:ldflags
 
 DISTNAME=	STAR-2.7.10b
 PKGNAME=	rna-STAR-2.7.10b
@@ -27,8 +22,6 @@ HOMEPAGE=	https://github.com/alexdobin/STAR
 COMMENT=	Spliced Transcripts Alignment to a Reference
 LICENSE=	gnu-gpl-v3
 
-# Best guess translation of REINPLACE above.  Replace 1 with a
-# meaningful name.  Assuming pre-configure: Change if necessary.
 SUBST_CLASSES+=		htslib
 SUBST_STAGE.htslib=	pre-configure
 SUBST_SED.htslib+=	-e 's|"htslib/htslib/sam.h"|<htslib/sam.h>|g'
@@ -42,10 +35,9 @@ SUBST_FILES.htslib+=	bam_cat.c
 SUBST_FILES.htslib+=	bam_cat.h
 SUBST_FILES.htslib+=	signalFromBAM.h
 
-# Test and change if necessary.
-MAKE_JOBS_SAFE=	no
+# May work on other 64-bit processors, but untested
+ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-aarch64 *-*-powerpc64
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
@@ -67,12 +59,10 @@ SUBST_CLASSES+=		openmp
 SUBST_SED.openmp=	-e 's|-fopenmp|-Xpreprocessor &|g'
 SUBST_STAGE.openmp=	pre-configure
 SUBST_FILES.openmp=	Makefile
-LDFLAGS  += -L${PREFIX}/lib -lomp -pthread -lm
+LDFLAGS+= 		-L${PREFIX}/lib -lomp -pthread -lm
 .include "../../parallel/openmp/buildlink3.mk"
 .endif
 
-# Convert any _DEPENDS above that have a buildlink3.mk
 .include "../../biology/htslib/buildlink3.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
