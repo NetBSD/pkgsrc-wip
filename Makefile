@@ -5007,6 +5007,7 @@ SUBDIR+=	rk
 SUBDIR+=	rlottie
 SUBDIR+=	rmilter
 SUBDIR+=	rna-seq
+SUBDIR+=	rna-star
 SUBDIR+=	rnc-mode
 SUBDIR+=	rng-tools
 SUBDIR+=	rnp

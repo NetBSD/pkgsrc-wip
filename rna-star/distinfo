@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (STAR-2.7.10b.tar.gz) = ae5b1c236c1b5975d60277dbd5634661a4598e6f3f906f3d6b582b403edb58d3
+SHA512 (STAR-2.7.10b.tar.gz) = c4e94fd19f2a8145c38d59b39d91af16b53af63da2d77275445b9aeadfd287e3d2749829352a034e45e4352c64884275fa5b7b2ed28b95bf47cac3183b0d74aa
+Size (STAR-2.7.10b.tar.gz) = 12443703 bytes
+SHA1 (patch-Makefile) = 6bf4600d222a89a95e1cc9e038226a8e419fc0e8
+SHA1 (patch-SpliceGraph.cpp) = 17f5b819985914d075cc15ef67f9b1625a1a6ca3
+SHA1 (patch-SuffixArrayFuns.cpp) = 219abac0885e2e710e634335228baadf16138429
+SHA1 (patch-bamSortByCoordinate.cpp) = 8c3db8dff990c3ff69be02fc86a4b7a8bed17bd6
+SHA1 (patch-opal_opal.cpp) = 69334ba211d2b371fcf96f86fb842d3e67acc9c0
