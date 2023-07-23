@@ -51,7 +51,6 @@ USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 MAKE_FLAGS=	HTSLIB=''
-CXXFLAGS+=	-std=c++11
 
 INSTALLATION_DIRS=	bin
 
