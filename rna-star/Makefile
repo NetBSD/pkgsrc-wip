@@ -5,14 +5,8 @@
 #              Sun Jul 23 10:47:07 CDT 2023               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc powerpcspe
-#NOT_FOR_ARCHS_REASON=	Requires 64-bit processor
-
 DISTNAME=	STAR-2.7.10b
-PKGNAME=	rna-STAR-2.7.10b
+PKGNAME=	rna-star-2.7.10b
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexdobin/}
 GITHUB_PROJECT=	STAR
