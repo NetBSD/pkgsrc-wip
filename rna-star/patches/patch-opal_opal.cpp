@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Portability to modern C++ compilers
+
 --- opal/opal.cpp.orig	2021-11-26 16:14:46 UTC
 +++ opal/opal.cpp
 @@ -5,10 +5,8 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Portability
+
 --- bamSortByCoordinate.cpp.orig	2021-11-26 16:17:37 UTC
 +++ bamSortByCoordinate.cpp
 @@ -64,7 +64,7 @@ void bamSortByCoordinate (Parameters &P, ReadAlignChun

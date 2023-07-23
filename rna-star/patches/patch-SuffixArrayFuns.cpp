@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Drop obsolete modifier for c++17 compat
+
 --- SuffixArrayFuns.cpp.orig	2023-07-21 15:26:07 UTC
 +++ SuffixArrayFuns.cpp
 @@ -15,7 +15,7 @@ uint compareSeqToGenome(Genome &mapGen, char** s2, uin

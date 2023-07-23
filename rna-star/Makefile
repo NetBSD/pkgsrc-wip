@@ -34,13 +34,13 @@ SUBST_STAGE.htslib=	pre-configure
 SUBST_SED.htslib+=	-e 's|"htslib/htslib/sam.h"|<htslib/sam.h>|g'
 SUBST_SED.htslib+=	-e 's|"htslib/htslib/kstring.h"|<htslib/kstring.h>|g'
 SUBST_SED.htslib+=	-e 's|"htslib/htslib/bgzf.h"|<htslib/bgzf.h>|g'
-SUBST_FILES.htslib+=	${WRKSRC}/BAMfunctions.cpp
-SUBST_FILES.htslib+=	${WRKSRC}/IncludeDefine.h
-SUBST_FILES.htslib+=	${WRKSRC}/STAR.cpp
-SUBST_FILES.htslib+=	${WRKSRC}/bamRemoveDuplicates.cpp
-SUBST_FILES.htslib+=	${WRKSRC}/bam_cat.c
-SUBST_FILES.htslib+=	${WRKSRC}/bam_cat.h
-SUBST_FILES.htslib+=	${WRKSRC}/signalFromBAM.h
+SUBST_FILES.htslib+=	BAMfunctions.cpp
+SUBST_FILES.htslib+=	IncludeDefine.h
+SUBST_FILES.htslib+=	STAR.cpp
+SUBST_FILES.htslib+=	bamRemoveDuplicates.cpp
+SUBST_FILES.htslib+=	bam_cat.c
+SUBST_FILES.htslib+=	bam_cat.h
+SUBST_FILES.htslib+=	signalFromBAM.h
 
 # Test and change if necessary.
 MAKE_JOBS_SAFE=	no
@@ -56,6 +56,15 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/STAR ${DESTDIR}${PREFIX}/bin
+
+.include "../../mk/bsd.prefs.mk"
+
+# Xcode supports -Xpreprocessor -fopenmp, but does not supply OpenMP libs
+# parallel/openmp installs an entire llvm
+# Maybe a libomp package would suffice?
+.if ${OPSYS} == Darwin
+.include "../../parallel/openmp/buildlink3.mk"
+.endif
 
 # Convert any _DEPENDS above that have a buildlink3.mk
 .include "../../biology/htslib/buildlink3.mk"
