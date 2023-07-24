@@ -1,3 +1,7 @@
+$NetBSD$
+
+# Portability
+
 --- src/Bootstrap.h.orig	2020-04-01 16:56:42 UTC
 +++ src/Bootstrap.h
 @@ -1,6 +1,7 @@

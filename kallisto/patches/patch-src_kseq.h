@@ -1,3 +1,7 @@
+$NetBSD$
+
+# Portability
+
 --- src/kseq.h.orig	2019-11-04 16:28:52 UTC
 +++ src/kseq.h
 @@ -32,6 +32,9 @@

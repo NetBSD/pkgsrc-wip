@@ -19,7 +19,7 @@ SUBST_STAGE.test=	pre-configure
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
-CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON
+CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 INSTALLATION_DIRS+=	${DATADIR}
 
 DATADIR=		${PREFIX}/share/kallisto
