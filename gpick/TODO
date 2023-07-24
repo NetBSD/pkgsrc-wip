@@ -1,0 +1,1 @@
+Fails to link, does not find symbols from lua despite linking against it.
