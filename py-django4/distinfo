@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (Django-4.2.3.tar.gz) = 9935bab31e2880caf8c0c59b731261f28eabd845fdfaac61bc38a82efb8dc467
+SHA512 (Django-4.2.3.tar.gz) = 33c84a3fe16f8188a2c8090177d6bfd235004271ee1cee9c840e33dd22f60e0d54276c0dbc4127faaba82ae7d6a219a07c5638b19c701c3f36db238d2aae33f0
+Size (Django-4.2.3.tar.gz) = 10419003 bytes
