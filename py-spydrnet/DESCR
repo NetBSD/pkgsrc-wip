@@ -1,0 +1,7 @@
+A flexible framework for analyzing and transforming netlists. Built to fill an
+important gap in FPGA research and reliability.
+
+SpyDrNet can be used to create netlists from scratch. Because it is a low-level
+framework, manual netlist creation can be tedious (much like writting a high
+level application in assembly). To assist in rapid productivity, parsers and
+composers are provided for common netlist formats.
