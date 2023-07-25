@@ -23,7 +23,7 @@ NO_BUILD=	yes
 
 CHECK_INTERPRETER_SKIP+=	share/desktop-installer/XDM/xdmshutdown
 
-DEPENDS=	auto-admin>=0.7.16.11:../../sysutils/auto-admin
+DEPENDS=	auto-admin>=0.7.18:../../sysutils/auto-admin
 
 .include "../../mk/bsd.prefs.mk"
 
