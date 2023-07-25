@@ -5370,6 +5370,7 @@ SUBDIR+=	suse15_gcc
 SUBDIR+=	suse15_glibc-locale-base
 SUBDIR+=	sushi
 SUBDIR+=	suwidgets
+SUBDIR+=	suxus
 SUBDIR+=	svgalib
 SUBDIR+=	svkbd
 SUBDIR+=	svnup
