@@ -1,0 +1,6 @@
+U-Boot is a bootloader for embedded boards based on PowerPC, ARM, MIPS and
+several other processors, which can be installed in a boot ROM and used to
+initialize and test the hardware or to download and run application code.
+
+This package provides Collabora's U-Boot for the rk3588-based Rock 5B from
+Radxa.
