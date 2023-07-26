@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/spyder-ide/qtawesome
 COMMENT=	Iconic fonts in PyQt and PySide applications
 LICENSE=	mit
 
-PYTHON_VERSIONS_ACCEPTED=	3110 310 39 38 37
-
 DEPENDS+=	${PYPKGPREFIX}-QtPy>=2.2.0:../../wip/py-qtpy
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
