@@ -3,10 +3,10 @@
 # Don't bother committing this.  I'm adding new features almost every
 # time I convert a port.
 
-DISTNAME=	fbsd2pkg-0.6.0.4
+DISTNAME=	fbsd2pkg-0.6.0.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	09f6552093416e4a09bc6bdfdc0bf7125dec5c22
+GITHUB_TAG=	e5296bc83e10bc2f5a66df212c6c2d306f47ed7e
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
