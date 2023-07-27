@@ -59,7 +59,14 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-digraph.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-editor-digraph.1
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-menu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vis-editor-menu.1
 
-.include·"../../devel/ncursesw/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.include "../../mk/curses.buildlink3.mk"
+.else
+.include "../../devel/ncursesw/buildlink3.mk"
+.endif
+
 .include "../../lang/lua/buildlink3.mk"
 .include "../../devel/libtermkey/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
