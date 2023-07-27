@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD$
+
+If PPSSPP seems to crash often (especially while launching a game), try
+disabling ASLR:
+
+    sysctl -w security.pax.aslr.enabled=0
+
+===========================================================================
