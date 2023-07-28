@@ -23,9 +23,9 @@ COMMENT=	Python library to facilitate programmatic analysis of sequence data
 LICENSE=	gnu-gpl-v3
 
 DEPENDS=	${PYPKGPREFIX}-pysam>0:../../wip/py-pysam \
-		${PKGNAMEPREFIX}matplotlib>=1.4.3:../../graphics/py-matplotlib
+		${PYPKGPREFIX}-matplotlib>=1.4.3:../../graphics/py-matplotlib
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}scipy>1.5.0:../../math/py-scipy \
+TEST_DEPENDS=	${PYPKGPREFIX}-scipy>1.5.0:../../math/py-scipy \
 		${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas \
 		${PYPKGPREFIX}-matplotlib>=1.4:../../graphics/py-matplotlib
 
