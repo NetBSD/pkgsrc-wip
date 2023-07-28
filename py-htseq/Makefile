@@ -22,12 +22,14 @@ HOMEPAGE=	https://pypi.python.org/project/htseq/
 COMMENT=	Python library to facilitate programmatic analysis of sequence data
 LICENSE=	gnu-gpl-v3
 
-DEPENDS=	${PYPKGPREFIX}-pysam>0:../../wip/py-pysam \
-		${PYPKGPREFIX}-matplotlib>=1.4.3:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-pysam>0:../../wip/py-pysam
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.4.3:../../graphics/py-matplotlib
 
-TEST_DEPENDS=	${PYPKGPREFIX}-scipy>1.5.0:../../math/py-scipy \
-		${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas \
-		${PYPKGPREFIX}-matplotlib>=1.4:../../graphics/py-matplotlib
+TEST_DEPENDS=	${PYPKGPREFIX}-scipy>1.5.0:../../math/py-scipy
+TEST_DEPENDS=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
+TEST_DEPENDS=	${PYPKGPREFIX}-matplotlib>=1.4:../../graphics/py-matplotlib
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
