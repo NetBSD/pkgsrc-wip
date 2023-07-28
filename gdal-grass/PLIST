@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
-lib/gdalplugins/gdal_GRASS.so
-lib/gdalplugins/ogr_GRASS.so
-share/gdal/grass/etc/datum.table
-share/gdal/grass/etc/ellipse.table
