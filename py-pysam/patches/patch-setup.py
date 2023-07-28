@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Portability
+# Cannot use BSD make
 
 --- setup.py.orig	2017-04-19 05:48:10 UTC
 +++ setup.py

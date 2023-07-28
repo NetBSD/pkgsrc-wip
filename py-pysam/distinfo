@@ -1,7 +1,6 @@
 $NetBSD$
 
-RMD160 (pysam/v0.16.0.1.tar.gz) = 7a980c0bd6edac6bdd9103db0fc6f540b0db6619
-SHA512 (pysam/v0.16.0.1.tar.gz) = 5cebb9f3bc8dc6186a629e91423a3c8cb802af6529b943fcd880e056661ec6ee2a00de789cf144c9e40b9d1ef2459c0e06ce27a1b9eab8e2875d2087f275af28
-Size (pysam/v0.16.0.1.tar.gz) = 3294073 bytes
-SHA1 (patch-cy__build.py) = 1bb61fc7fcdfbb9305150ff437ba614f57b3756e
-SHA1 (patch-setup.py) = 368c4b99c1f8103d34096145f7badd9310736554
+BLAKE2s (pysam-0.21.0.tar.gz) = 6aa54861ae9e5f32643ab3c8599d342d2b2ee68d589372ceb6ea968521f8661c
+SHA512 (pysam-0.21.0.tar.gz) = e42355ee02e5b6a8dbd4e94e46e7a70ce4f8e3d3d8c17440d34e420b0fa4730dce60a74078098a2d7d34a26110d694e59178c38de431b9c61d46b1e5d32ded19
+Size (pysam-0.21.0.tar.gz) = 4052537 bytes
+SHA1 (patch-setup.py) = be715207431b0fbafe4e87cf4cdc8ad81dffb31e
