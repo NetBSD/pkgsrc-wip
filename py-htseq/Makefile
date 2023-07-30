@@ -26,17 +26,14 @@ DEPENDS+=	${PYPKGPREFIX}-pysam>0:../../wip/py-pysam
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.4.3:../../graphics/py-matplotlib
 
 TEST_DEPENDS=	${PYPKGPREFIX}-scipy>1.5.0:../../math/py-scipy
-TEST_DEPENDS=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
-TEST_DEPENDS=	${PYPKGPREFIX}-matplotlib>=1.4:../../graphics/py-matplotlib
+TEST_DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
+TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.4:../../graphics/py-matplotlib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 
-# Verify that we shouldn't use distutils.mk or extensions.mk instead.
+# Inherited from py-matplotlib
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
