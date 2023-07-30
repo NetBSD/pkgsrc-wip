@@ -16,8 +16,14 @@ USE_LANGUAGES=	c c++17
 USE_TOOLS+=	pkg-config
 .include "../../lang/python/tool.mk"
 
+# There's a crash that consistently happens whenever PPSSPPSDL exits, but
+# only when built with GCC. Works fine with Clang, though.
+BUILD_DEPENDS+=	clang-[0-9]*:../../lang/clang
+
 ONLY_FOR_PLATFORM=	*-*-*arm* *-*-x86_64 *-*-i386
 
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CLANGBASE:Q}/bin/clang
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CLANGBASE:Q}/bin/clang++
 CMAKE_ARGS+=	-DUSE_DISCORD=OFF
 CMAKE_ARGS+=	-DUSE_SYSTEM_FFMPEG=ON
 CMAKE_ARGS+=	-DUSE_SYSTEM_LIBPNG=ON
@@ -29,6 +35,7 @@ CMAKE_ARGS+=	-DUSE_SYSTEM_ZSTD=ON
 
 NOT_PAX_MPROTECT_SAFE+=	bin/PPSSPPSDL
 
+.include "../../mk/compiler/clang.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

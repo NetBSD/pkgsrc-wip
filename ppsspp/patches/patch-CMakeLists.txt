@@ -1,9 +1,10 @@
 $NetBSD$
 
-Several functions are hidden behind _NETBSD_SOURCE.
+* Several functions are hidden behind _NETBSD_SOURCE.
+* Deal with a failure specific to Clang.
 
 --- CMakeLists.txt.orig	2023-05-22 07:27:43.000000000 -0700
-+++ CMakeLists.txt	2023-06-29 00:17:35.378577080 -0700
++++ CMakeLists.txt	2023-07-29 23:46:33.678325802 -0700
 @@ -13,6 +13,10 @@
  
  add_definitions(-D__STDC_CONSTANT_MACROS)
@@ -15,3 +16,11 @@ Several functions are hidden behind _NETBSD_SOURCE.
  # Include AppleClang and Clang.
  if(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
  	set(CLANG ON)
+@@ -336,6 +340,7 @@
+ 		add_definitions(-Wno-nullability-completeness)
+ 		add_definitions(-Wno-tautological-pointer-compare)
+ 		add_definitions(-Wno-deprecated-register)
++		add_definitions(-Wno-c++11-narrowing)
+ 	endif()
+ 
+ 	if(USE_ASAN)
