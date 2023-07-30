@@ -3016,6 +3016,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-integration.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-integration.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-message.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-message.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-rclone.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-rclone.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
