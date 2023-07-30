@@ -5,13 +5,6 @@
 #              Thu Jul 27 18:40:57 CDT 2023               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#post-install:
-#	${STRIP} ${DESTDIR}${PYTHON_SITELIBDIR}/HTSeq/_StepVector.cpython-39.so
-#	${STRIP} ${DESTDIR}${PYTHON_SITELIBDIR}/HTSeq/_HTSeq.cpython-39.so
-
 DISTNAME=	HTSeq-2.0.3
 PKGNAME=	${PYPKGPREFIX}-HTSeq-2.0.3
 CATEGORIES=	biology
