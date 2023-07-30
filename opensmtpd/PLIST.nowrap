@@ -1,0 +1,5 @@
+@comment $NetBSD$
+sbin/mailq
+sbin/makemap
+sbin/newaliases
+sbin/sendmail

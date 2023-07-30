@@ -2,9 +2,9 @@ $NetBSD$
 
 Install the configuration file in the example directory.
 
---- mk/smtpd/Makefile.am.orig	2016-02-02 07:40:06.000000000 +0000
+--- mk/smtpd/Makefile.am.orig	2023-06-27 14:04:37.000000000 +0000
 +++ mk/smtpd/Makefile.am
-@@ -162,17 +162,16 @@ $(CONFIGFILES): $(CONFIGFILES_IN)
+@@ -164,19 +164,17 @@ $(CONFIGFILES): $(CONFIGFILES_IN)
  
  # smtpd.conf
  # newaliases makemap
@@ -16,6 +16,7 @@ Install the configuration file in the example directory.
 +	$(MKDIR_P) $(DESTDIR)$(EXAMPLE_DIR)
  	$(MKDIR_P) $(DESTDIR)$(bindir)
  	$(MKDIR_P) $(DESTDIR)$(mandir)/$(mansubdir)5
+ 	$(MKDIR_P) $(DESTDIR)$(mandir)/$(mansubdir)7
  	$(MKDIR_P) $(DESTDIR)$(mandir)/$(mansubdir)8
  
 -	@if [ ! -f $(DESTDIR)$(sysconfdir)/smtpd.conf ]; then			\
@@ -23,7 +24,8 @@ Install the configuration file in the example directory.
 -	else									\
 -		echo "$(DESTDIR)$(sysconfdir)/smtpd.conf already exists, install will not overwrite"; \
 -	fi
-+	$(INSTALL) -m 644 smtpd.conf.out $(DESTDIR)$(EXAMPLE_DIR)/smtpd.conf
- 
+-
++	$(INSTALL) -m 644 smtpd.conf.out	$(DESTDIR)$(EXAMPLE_DIR)/smtpd.conf
  	$(INSTALL) -m 644 aliases.5.out		$(DESTDIR)$(mandir)/$(mansubdir)5/aliases.5
  	$(INSTALL) -m 644 forward.5.out		$(DESTDIR)$(mandir)/$(mansubdir)5/forward.5
+ 	$(INSTALL) -m 644 table.5.out		$(DESTDIR)$(mandir)/$(mansubdir)5/table.5

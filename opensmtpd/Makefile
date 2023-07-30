@@ -1,8 +1,7 @@
 # $NetBSD$
 
-VERSION=	6.8.0p2
+VERSION=	7.3.0p1
 DISTNAME=	opensmtpd-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -11,18 +10,18 @@ HOMEPAGE=	https://www.opensmtpd.org/
 COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 
-CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
-CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]* postfix-[0-9]*
-
 BUILD_DEFS+=	VARBASE
 
-USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config yacc
+USE_TOOLS+=	awk pkg-config yacc
 USE_TOOLS+=	automake aclocal autoheader autoconf
+
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 SMTPD_HOME=	${VARBASE}/chroot/smtpd
 OWN_DIRS=	${SMTPD_HOME}
+
+PLIST_SRC=	PLIST.common
 
 PKG_GROUPS=		_smtpd _smtpq
 PKG_USERS=		_smtpd:_smtpd _smtpq:_smtpq
@@ -31,32 +30,58 @@ PKG_HOME._smtpd=	${SMTPD_HOME}
 PKG_GECOS._smtpq=	OpenSMTPD pseudo-user
 PKG_HOME._smtpq=	${SMTPD_HOME}
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
 USE_DB185=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/smtpd
 CONFIGURE_ARGS+=	--with-mantype=man
 CONFIGURE_ARGS+=	--with-libssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--with-path-CAfile=${SSLCERTS}/ca-certificates.crt
+CONFIGURE_ARGS+=	--with-path-empty=${VARBASE}/empty
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/spool/mail
+.else
+CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/mail
+.endif
+CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
+#CONFIGURE_ARGS+=	--with-bundled-libtls	# required for OpenSSL 3+
 CONFIGURE_ARGS+=	--with-table-db
+CONFIGURE_ARGS+=	--with-pie
+
+.include "options.mk"
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
-EXAMPLEDIR=	${PREFIX}/share/examples/opensmtpd
-CONF_FILES=	${EXAMPLEDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
-
-MAKE_DIRS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+EGDIR=		${PREFIX}/share/examples/opensmtpd
+CONF_FILES+=	${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd/smtpd.conf
+CONF_FILES+=	${EGDIR}/aliases ${PKG_SYSCONFDIR}/smtpd/aliases
 
 RCD_SCRIPTS=	opensmtpd
 
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/mailer.conf
-SUBST_VARS.paths=	PREFIX
-SUBST_STAGE.paths=	pre-configure
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} _smtpq 2555
+SPECIAL_PERMS+=		sbin/smtpctl ${SETUID_ROOT_PERMS}
 
-SUBST_CLASSES+=			exampledir
-SUBST_STAGE.exampledir=		pre-configure
-SUBST_MESSAGE.exampledir=	Fixing exampledir path
-SUBST_FILES.exampledir=		mk/smtpd/Makefile.am
-SUBST_SED.exampledir+=		-e 's,@EXAMPLE_DIR@,${EXAMPLEDIR},'
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/smtpd
+MAKE_DIRS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 070
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	${WRKDIR}/mailer.conf
+SUBST_VARS.prefix=	PREFIX
+SUBST_MESSAGE.prefix=	Replacing PREFIX placeholders.
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Replacing hard-coded paths.
+SUBST_FILES.paths+=	mk/smtpd/Makefile.am usr.sbin/smtpd/smtpd.conf	\
+			usr.sbin/smtpd/smtpd.8 usr.sbin/smtpd/smtpd.conf.5 \
+			usr.sbin/smtpd/aliases.5 usr.sbin/smtpd/makemap.8 \
+			usr.sbin/smtpd/newaliases.8
+SUBST_SED.paths+=	-e "s:/etc/mail:${PKG_SYSCONFDIR}/smtpd:g"
+SUBST_SED.paths+=	-e "s:/usr/local/etc:${PKG_SYSCONFDIR}/smtpd:g"
+SUBST_SED.paths+=	-e "s:@EXAMPLE_DIR@:${EGDIR}:g"
+SUBST_SED.paths+=	-e "s:/etc/ssl:${SSLDIR}:g"
 
 post-extract:
 	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
@@ -68,13 +93,20 @@ pre-configure:
 	cd ${WRKSRC} && ${TOOLS_CMD.autoheader}
 	cd ${WRKSRC} && ${TOOLS_CMD.automake} --foreign --add-missing --copy
 
-post-install:
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
-		${DESTDIR}${EXAMPLEDIR}/mailer.conf
+.PHONY: install-aliases
+install-aliases:
+	${INSTALL_DATA} ${WRKSRC}/etc/aliases ${DESTDIR}${EGDIR}
 
+.if ${OPSYS} == "Linux"
+.  include "../../devel/libbsd/buildlink3.mk"
+.endif
 .include "../../databases/db5/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libasr/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+# OpenSSL 3+ may require building with bundled libtls
+# instead of pkgsrc LibreTLS
+#.include "../../security/openssl/buildlink3.mk"
+.include "../../security/libretls/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix build on DragonFly
+
 --- usr.sbin/smtpd/queue_fs.c.orig	2020-12-24 13:42:14.000000000 +0000
 +++ usr.sbin/smtpd/queue_fs.c
 @@ -16,6 +16,17 @@
