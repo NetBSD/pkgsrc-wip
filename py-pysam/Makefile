@@ -15,6 +15,11 @@ HOMEPAGE=	https://github.com/pysam-developers/pysam
 COMMENT=	Python module for reading, manipulating and writing genomic data sets
 LICENSE=	mit
 
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_SED.rpath=	-e 's|@rpath|${PREFIX}/${PYSITELIB}/pysam|g'
+SUBST_FILES.rpath=	cy_build.py
+
 USE_TOOLS+=	gmake
 MAKE_ENV+=	HTSLIB_MODE=external \
 		HTSLIB_LIBRARY_DIR=${PREFIX}/lib \
@@ -23,9 +28,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib.netbsd-9.3-amd64-cpython-310/pysa
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PYSITELIB}/pysam
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/${PYSITELIB}/pysam/lib*.so
 
 .include "../../lang/python/egg.mk"
 .include "../../biology/htslib/buildlink3.mk"
