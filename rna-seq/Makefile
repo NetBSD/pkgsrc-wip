@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	rna-seq-1.2.1
+DISTNAME=	rna-seq-1.2.2
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -14,6 +14,7 @@ DEPENDS+=	biolibc-tools>0:../../wip/biolibc-tools
 DEPENDS+=	gffread>0:../../biology/gffread
 DEPENDS+=	kallisto>0:../../biology/kallisto
 DEPENDS+=	hisat2>0:../../biology/hisat2
+DEPENDS+=	rna-star>0:../../wip/rna-star
 DEPENDS+=	samtools>0:../../biology/samtools
 DEPENDS+=	igv>0:../../biology/igv
 DEPENDS+=	fasda>0:../../wip/fasda
