@@ -53,7 +53,7 @@ SUBST_CLASSES+=		openmp
 SUBST_SED.openmp=	-e 's|-fopenmp|-Xpreprocessor &|g'
 SUBST_STAGE.openmp=	pre-configure
 SUBST_FILES.openmp=	Makefile
-LDFLAGS+= 		-L${PREFIX}/lib -lomp -pthread -lm
+LDFLAGS+= 		-L${PREFIX}/lib -lomp -lm
 .include "../../parallel/openmp/buildlink3.mk"
 .endif
 
