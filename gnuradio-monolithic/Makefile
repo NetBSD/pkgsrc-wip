@@ -40,7 +40,7 @@ DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 # see CMakeLists.txt GR_PYTHON_MIN_VERSION
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scipy
 
 # three digit version number for shared library ex 3.10.2.0 -> 3.10.2
 PKGVER_MICRO=	${PKGVERSION_NOREV:C/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\3/}

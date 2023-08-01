@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../mypkg/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-colorlog>=6.6.0:../../wip/py-colorlog
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 

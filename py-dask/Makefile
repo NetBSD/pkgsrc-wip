@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=       ${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer

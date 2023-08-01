@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 pre-configure:
 	${LN} -f -s ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython

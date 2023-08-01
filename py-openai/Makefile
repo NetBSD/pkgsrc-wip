@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/openai ${DESTDIR}${PREFIX}/bin/openai-${PYVERSSUFFIX}

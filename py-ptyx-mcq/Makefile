@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/wxgeo/ptyx
 COMMENT=	Python precompiler for LaTeX
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-pdf2image>=1.16.0:../../wip/py-pdf2image

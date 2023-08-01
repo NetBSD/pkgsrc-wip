@@ -11,7 +11,7 @@ COMMENT=	Infrastructure meta-package to develop on Aegis
 
 META_PACKAGE=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../mk/bsd.prefs.mk"
 

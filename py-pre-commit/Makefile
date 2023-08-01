@@ -10,7 +10,7 @@ HOMEPAGE=	https://pre-commit.com/
 COMMENT=	Framework for managing and maintaining multi-language pre-commit hook
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # not supported
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
 DEPENDS+=	${PYPKGPREFIX}-identify>=1.0.0:../../wip/py-identify

@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/mopidy ${DESTDIR}${PREFIX}/bin/mopidy-${PYVERSSUFFIX} || ${TRUE}
