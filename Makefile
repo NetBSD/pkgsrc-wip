@@ -5917,6 +5917,7 @@ SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xssp
+SUBDIR+=	xt
 SUBDIR+=	xtags
 SUBDIR+=	xtensor
 SUBDIR+=	xtitle
