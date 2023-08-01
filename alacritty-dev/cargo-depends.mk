@@ -1,6 +1,7 @@
 # $NetBSD$
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
+CARGO_CRATE_DEPENDS+=	ahash-0.8.3
 CARGO_CRATE_DEPENDS+=	android-activity-0.4.1
 CARGO_CRATE_DEPENDS+=	android-properties-0.2.2
 CARGO_CRATE_DEPENDS+=	anstream-0.3.2
