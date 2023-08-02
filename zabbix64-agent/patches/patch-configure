@@ -1,60 +1,60 @@
-$NetBSD: patch-configure,v 1.1 2020/11/03 22:46:23 otis Exp $
+$NetBSD: patch-configure,v 1.2 2023/08/02 22:46:23 otis Exp $
 
 Fix bash-ism.
 
---- configure.orig	2022-03-02 19:06:50.761881804 +0900
-+++ configure	2022-03-02 19:06:46.903210187 +0900
-@@ -8802,7 +8802,7 @@ fi
- rm -f core conftest.err conftest.$ac_objext \
+--- ./configure.orig	2023-07-31 09:26:03.884829780 +0000
++++ ./configure
+@@ -9645,7 +9645,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.beam \
      conftest$ac_exeext conftest.$ac_ext
  
 -            if test "$found_mysql_tls" == "yes"; then
 +            if test "$found_mysql_tls" = "yes"; then
  
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for TLS ciphersuites in MySQL library" >&5
- $as_echo_n "checking for TLS ciphersuites in MySQL library... " >&6; }
-@@ -15087,7 +15087,7 @@ $as_echo "$as_me: WARNING: proceeding wi
+ 	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for TLS ciphersuites in MySQL library" >&5
+ printf %s "checking for TLS ciphersuites in MySQL library... " >&6; }
+@@ -16730,7 +16730,7 @@ printf "%s\n" "$as_me: WARNING: proceedi
  		if test "x$enable_static" = "xyes"; then
  			LIBPCRE_LIBS=" $LIBPCRE_LIBS -lpthread"
  		elif test "x$enable_static_libs" = "xyes"; then
 -			if test "x$static_linking_support" == "xno"; then
 +			if test "x$static_linking_support" = "xno"; then
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
- $as_echo "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
+ printf "%s\n" "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
  
-@@ -15496,7 +15496,7 @@ $as_echo "$as_me: WARNING: proceeding wi
+@@ -17153,7 +17153,7 @@ printf "%s\n" "$as_me: WARNING: proceedi
  		if test "x$enable_static" = "xyes"; then
  			LIBPCRE2_LIBS=" $LIBPCRE2_LIBS -lpthread"
  		elif test "x$enable_static_libs" = "xyes"; then
 -			if test "x$static_linking_support" == "xno"; then
 +			if test "x$static_linking_support" = "xno"; then
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
- $as_echo "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
+ printf "%s\n" "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
  
-@@ -15913,7 +15913,7 @@ $as_echo "$as_me: WARNING: proceeding wi
+@@ -17584,7 +17584,7 @@ printf "%s\n" "$as_me: WARNING: proceedi
  		if test "x$enable_static" = "xyes"; then
  			LIBPCRE_LIBS=" $LIBPCRE_LIBS -lpthread"
  		elif test "x$enable_static_libs" = "xyes"; then
 -			if test "x$static_linking_support" == "xno"; then
 +			if test "x$static_linking_support" = "xno"; then
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
- $as_echo "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
+ printf "%s\n" "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
  
-@@ -16327,7 +16327,7 @@ $as_echo "$as_me: WARNING: proceeding wi
+@@ -18012,7 +18012,7 @@ printf "%s\n" "$as_me: WARNING: proceedi
  		if test "x$enable_static" = "xyes"; then
  			LIBPCRE_LIBS=" $LIBPCRE_LIBS -lpthread"
  		elif test "x$enable_static_libs" = "xyes"; then
 -			if test "x$static_linking_support" == "xno"; then
 +			if test "x$static_linking_support" = "xno"; then
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
- $as_echo "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
+ printf "%s\n" "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
  
-@@ -16754,7 +16754,7 @@ $as_echo "$as_me: WARNING: proceeding wi
+@@ -18453,7 +18453,7 @@ printf "%s\n" "$as_me: WARNING: proceedi
  		if test "x$enable_static" = "xyes"; then
  			LIBPCRE2_LIBS=" $LIBPCRE2_LIBS -lpthread"
  		elif test "x$enable_static_libs" = "xyes"; then
 -			if test "x$static_linking_support" == "xno"; then
 +			if test "x$static_linking_support" = "xno"; then
- 				{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
- $as_echo "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
+ 				{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: compiler has no direct suppor for static linkage" >&5
+ printf "%s\n" "$as_me: WARNING: compiler has no direct suppor for static linkage" >&2;}
  
