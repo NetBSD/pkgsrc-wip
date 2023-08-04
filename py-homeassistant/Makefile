@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.03
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.04
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -34,10 +34,13 @@ META_PACKAGE=	yes
 
 ## PYTHON
 
-# Building HA in a venv requires virtualenv and thus python.
+# HA 2023.8 only works with Python 3.11
+PYTHON_VERSIONS_ACCEPTED=311
 .include "../../lang/python/pyversion.mk"
+
+# Building HA in a venv requires virtualenv
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
-  That
+
 # Include sqlite3 because the rest of the world thinks that is part of
 # python.  (HA can use sqlite3 in recorder, but even if that isn't
 # configured, it attempts to use sqlite3.  Just provide it rather than
