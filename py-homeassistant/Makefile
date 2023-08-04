@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	homeassistant-0.01
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.02
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
