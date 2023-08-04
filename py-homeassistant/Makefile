@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.02
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.03
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -10,48 +10,49 @@ LICENSE=	modified-bsd
 
 META_PACKAGE=	yes
 
-# This package intends to set up for the union of reasonable Home
-# Assistant (HA) installations within a venv, erring on the side of
-# depending on more rather than less.  The vast majority of HA
-# components (integrations, or the core) are just python, often
-# depending on another python module.  These build straightforwardly
-# with "bin/pip install".  However, some modules depend on C
-# libraries, some depend on Fortran, and some use rust to build.  This
-# package is primarily intended to ease those issues.
+# This package is currently tuned for and tested on NetBSD 9 amd64 and
+# is probably ok on NetBSD 10.
 
-# This package is currently tuned for NetBSD 9.
+# Home Assistant (HA) upstream pins exact dependencies as a general
+# practice, and this is incompatible with packaging systems.  Thus,
+# this package does not actually install the python package
+# homeasssistant.  Instead, it has dependencies so that after
+# installing it, trying to build homeassistant in a venv it can
+# succeed.  HA has many optional modules, so there is no one set of
+# dependencies; we steer towards the union of reasonable
+# installations, erring on the side of depending on more rather than
+# less.
 
-# The set of packages wrapping libraries is currently:
-#   - cryptography (http for SSL)
-#   - postgresql (standard approach for database)
-#   - sqlite3 (testing approach for database)
-#   - av and numpy (stream component, which is part of default config)
-#   - PIL (needed by 8 components)
-# and build tools
-#   - pkg-config
-#   - rust (for cryptography in the venv)
-#   - gfortran (for numpy in the venv)
+# Despite depending on programs as build tools, record a full
+# dependency so that "pkgin ar" after installing this package will not
+# remove e.g. the rust compiler.
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
+# The vast majority of HA components are just python (perhaps a chain
+# of dependencies) and build straightforwardly with "bin/pip install";
+# these are therefore not addressed here.
+
+
+## PYTHON
+
+# Building HA in a venv requires virtualenv and thus python.  That
+# includes sqlite3 because the rest of the world thinks that is part
+# of python.
+
+.include "../../lang/python/pyversion.mk"
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-# \todo In lieu of https://pypi.org/project/ha-av/ or
-# https://pypi.org/project/av/ we just depend on ffmpeg4.
-DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-.include "../../mk/bsd.prefs.mk"
+## BUILD TOOLS
 
+# Builds in the venv will use pkg-config, and invoke rust and gfortran.
+# NB: One must add gfortran's bindir to the PATH for the venv build.
+DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 
-# Depend on fortran, because HA will use it at pip-install time.
-#.include "../../mk/compiler/gfortran.mk"
+RUST_RUNTIME=	yes		# record a dependency
+.include "../../lang/rust/rust.mk"
 
-# Hack around gfortran issues.
+# FORTRAN: choose the version that matches the base  compiler.
 .if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-9].*)
-# \todo Consider forcing 10 always for now.
 FORTRAN_VERSION=10
 .else
 FORTRAN_VERSION=7
@@ -59,12 +60,38 @@ FORTRAN_VERSION=7
 BUILDLINK_DEPMETHOD.gcc${FORTRAN_VERSION}=	full
 .include "../../lang/gcc${FORTRAN_VERSION}/buildlink3.mk"
 
-RUST_RUNTIME=	yes
-.include "../../lang/rust/rust.mk"
-.include "../../lang/python/pyversion.mk"
+
+## LIBRARIES
+# These are in the order that HA tries to install them when started in
+# a venv that more or less only has homeassistant's dependencies
+# installed.
+
+# \todo Sort these properly.
+DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+
+# HA installs Pillow, and it depends on a lot of image libraries.
+# Rather than open-coding that set, just depend on Pillow even if the
+# install is wasted.  Hope that our version and HA's version are close
+# enough.
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+
+# The standard approach for recorder is to use pgsql.  (The testing
+# approach is sqlite3, and that's depended on above.  It seems sqlite3
+# is needed even if recorded is not configured to use it, but we
+# choose not to fight that.)  HA uses this via SQLAlchemy.
 .include "../../mk/pgsql.buildlink3.mk"
 
-### NEEDED WORKAROUNDS
+# \todo In lieu of https://pypi.org/project/ha-av/ or
+# https://pypi.org/project/av/ we just depend on ffmpeg4.
+DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
+
+DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
+
+.include "../../mk/bsd.prefs.mk"
+
+
+## NEEDED WORKAROUNDS
 # \todo Hoist these somehow to a script or fix upstream.
 # This section describes workarounds to enable the venv to build.
 
@@ -83,7 +110,7 @@ RUST_RUNTIME=	yes
 # This is a bug in PyAV.  \todo File a fix.
 
 ## cryptography
-# As of 40, the build fails to find openssl on NetBSD 9, likely a bug.
+# As of 41, the build fails to find openssl on NetBSD 9, likely a bug.
 # https://docs.rs/openssl/latest/openssl/#automatic advises
 #   export OPENSSL_DIR=/usr
 
