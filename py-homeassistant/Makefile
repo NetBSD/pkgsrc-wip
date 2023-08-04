@@ -34,12 +34,14 @@ META_PACKAGE=	yes
 
 ## PYTHON
 
-# Building HA in a venv requires virtualenv and thus python.  That
-# includes sqlite3 because the rest of the world thinks that is part
-# of python.
-
+# Building HA in a venv requires virtualenv and thus python.
 .include "../../lang/python/pyversion.mk"
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
+  That
+# Include sqlite3 because the rest of the world thinks that is part of
+# python.  (HA can use sqlite3 in recorder, but even if that isn't
+# configured, it attempts to use sqlite3.  Just provide it rather than
+# trying to resolve.)
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 ## BUILD TOOLS
@@ -61,14 +63,23 @@ BUILDLINK_DEPMETHOD.gcc${FORTRAN_VERSION}=	full
 .include "../../lang/gcc${FORTRAN_VERSION}/buildlink3.mk"
 
 
-## LIBRARIES
+## LIBRARIES needed to build modules that must be installed before HA runs
+
+# mjpeg needs numpy but does not install it
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+
+# The standard approach for recorder is to use pgsql.  HA uses this,
+# like all databases, via SQLAlchemy, but it does not install
+# psycopg2, which of course expects pgsql libs.
+.include "../../mk/pgsql.buildlink3.mk"
+
+## LIBRARIES needed when HA first runs
 # These are in the order that HA tries to install them when started in
 # a venv that more or less only has homeassistant's dependencies
 # installed.
 
 # \todo Sort these properly.
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 # HA installs Pillow, and it depends on a lot of image libraries.
 # Rather than open-coding that set, just depend on Pillow even if the
@@ -76,20 +87,16 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 # enough.
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
-# The standard approach for recorder is to use pgsql.  (The testing
-# approach is sqlite3, and that's depended on above.  It seems sqlite3
-# is needed even if recorded is not configured to use it, but we
-# choose not to fight that.)  HA uses this via SQLAlchemy.
-.include "../../mk/pgsql.buildlink3.mk"
 
-# \todo In lieu of https://pypi.org/project/ha-av/ or
-# https://pypi.org/project/av/ we just depend on ffmpeg4.
+# HA builds ha-ffmpeg, likely as a dependency of ha-av.  Ensure ffmpeg
+# libs are present, as this seems sufficient.
 DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
 
+# \todo Explain what's really needed. In addition to crypto libs, this
+# depends on cffi.
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 
 .include "../../mk/bsd.prefs.mk"
-
 
 ## NEEDED WORKAROUNDS
 # \todo Hoist these somehow to a script or fix upstream.
