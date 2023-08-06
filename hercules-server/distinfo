@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (hercules-server-2023.07.12.tar.gz) = 4198825cd25736295f1e3167f1cb1e49aa5d56b39faf9d3b600472747f447a89
+SHA512 (hercules-server-2023.07.12.tar.gz) = c772743e2fbf5503bd4f790cf216eba1974df30bdc5bdbeb509467fe40d0700a70edd3e5af7018027b894d60b9ba17dec533c4586daa5f3f1e030d380eaf4fd4
+Size (hercules-server-2023.07.12.tar.gz) = 19648208 bytes

@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/char-server
+bin/login-server
+bin/map-server
