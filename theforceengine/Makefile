@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	TheForceEngine-1.09.200
+DISTNAME=	TheForceEngine-1.09.410
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luciusDXL/}
 
@@ -19,6 +19,7 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/devIL/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/rtaudio/buildlink3.mk"

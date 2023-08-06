@@ -1,10 +1,11 @@
 $NetBSD$
 
-BLAKE2s (TheForceEngine-1.09.200.tar.gz) = 331302749e1c47cb936d7a36f718688de4bfa636048044edad76d4d28f8c6eee
-SHA512 (TheForceEngine-1.09.200.tar.gz) = 3382a36cc5790107073e906d2f451cf216d9408760118f0578f6af630adb6d70207d838756270b7fc8015de4eae54b1b71ff62d06a6aa68f4a9f9afd8897833a
-Size (TheForceEngine-1.09.200.tar.gz) = 20559146 bytes
+BLAKE2s (TheForceEngine-1.09.410.tar.gz) = 3c887717a31901405113a307875f10277b9e96ba303ba716be29981da104029b
+SHA512 (TheForceEngine-1.09.410.tar.gz) = fa474401d6864dd5f626653be417d739891b648f636268cf9604853c00b418c8d4dca455e1729206694a843ff0160ca0e9fe49a34cc881e2dda7dd90d33313b4
+Size (TheForceEngine-1.09.410.tar.gz) = 20586983 bytes
 SHA1 (patch-TheForceEngine_TFE__DarkForces_darkForcesMain.cpp) = 9ef01755114c1e1112cb3ee70952fa2fd06c1efe
-SHA1 (patch-TheForceEngine_TFE__System_CrashHandler_crashHandlerLinux.cpp) = 0a44e0141e508365e25c7b5577360175a1f36d9d
+SHA1 (patch-TheForceEngine_TFE__DarkForces_vueLogic.cpp) = 4205d9bb4726091890138263b34f688de9064d30
+SHA1 (patch-TheForceEngine_TFE__FileSystem_CMakeLists.txt) = 95880228de4eef163b448cd5f4c515dbc74bb660
 SHA1 (patch-TheForceEngine_TFE__System_system.cpp) = 9443243c036b8d5676818dc76ae44c0aea557df3
 SHA1 (patch-TheForceEngine_TFE__System_types.h) = 9ac18c31c65faf41572d8452bf6a9f22adddffe1
-SHA1 (patch-TheForceEngine_main.cpp) = db84d34d7a0ec84020441ae82bacda4185d62e3b
+SHA1 (patch-TheForceEngine_main.cpp) = 251196f327d4a6b728dc3f9171969a9166287c1f

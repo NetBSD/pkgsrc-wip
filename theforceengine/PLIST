@@ -1,5 +1,7 @@
 @comment $NetBSD$
 bin/theforceengine
+share/TheForceEngine/Captions/README.txt
+share/TheForceEngine/Captions/subtitles.txt
 share/TheForceEngine/Documentation/internal/darkforces-manual.pdf
 share/TheForceEngine/Documentation/markdown/Credits.md
 share/TheForceEngine/Documentation/markdown/TheForceEngine.md
@@ -25,6 +27,11 @@ share/TheForceEngine/Mods/TFE/AdjustableHud/HudStatusRightAddon.bm
 share/TheForceEngine/Mods/TFE/AdjustableHud/HudStatusRightAddon.png
 share/TheForceEngine/Shaders/blit.frag
 share/TheForceEngine/Shaders/blit.vert
+share/TheForceEngine/Shaders/bloom.vert
+share/TheForceEngine/Shaders/bloomDownsample.frag
+share/TheForceEngine/Shaders/bloomMerge.frag
+share/TheForceEngine/Shaders/bloomThreshold.frag
+share/TheForceEngine/Shaders/filter.h
 share/TheForceEngine/Shaders/gpu_render_modelHologram.frag
 share/TheForceEngine/Shaders/gpu_render_modelHologram.vert
 share/TheForceEngine/Shaders/gpu_render_modelSolid.frag
@@ -40,6 +47,7 @@ share/TheForceEngine/Shaders/grid2d.frag
 share/TheForceEngine/Shaders/grid2d.vert
 share/TheForceEngine/Shaders/grid3d.frag
 share/TheForceEngine/Shaders/grid3d.vert
+share/TheForceEngine/Shaders/lighting.h
 share/TheForceEngine/Shaders/line2d.frag
 share/TheForceEngine/Shaders/line2d.vert
 share/TheForceEngine/Shaders/line3d.frag
@@ -50,6 +58,7 @@ share/TheForceEngine/Shaders/overlay.frag
 share/TheForceEngine/Shaders/overlay.vert
 share/TheForceEngine/Shaders/quad2d.frag
 share/TheForceEngine/Shaders/quad2d.vert
+share/TheForceEngine/Shaders/textureSampleFunc.h
 share/TheForceEngine/Shaders/tri2dColor.frag
 share/TheForceEngine/Shaders/tri2dColor.vert
 share/TheForceEngine/Shaders/tri2dTextured.frag
