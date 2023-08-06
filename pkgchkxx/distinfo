@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (pkgchkxx-0.1.4.tar.gz) = 63e61a3d33bc962590c2db9a911ade8cea2d35aa49b2e271f360d13e423dbff7
-SHA512 (pkgchkxx-0.1.4.tar.gz) = a8489391e12ed851a5a2a9f4482ebbc9f04f11e3d47b308171fbc6f827d37711bd18c0c4fa7225c12b84cb0fdc06b86bfd17b3a3721d2266c8626e3915da8d67
-Size (pkgchkxx-0.1.4.tar.gz) = 523134 bytes
+BLAKE2s (pkgchkxx-0.1.5.tar.gz) = e4d4d62412c5301d4f77187a4e14b447f763b450ecb70c952afd4b95f03806b3
+SHA512 (pkgchkxx-0.1.5.tar.gz) = a1c6d783fef0cb87cbc08adb74b64bb9b7b2403344c8b7bfbea31ddfedf93e1974d95ded8fb6c46e46f556b31affedffa553ead4b97998ce71e1d2459563fe8e
+Size (pkgchkxx-0.1.5.tar.gz) = 523613 bytes
