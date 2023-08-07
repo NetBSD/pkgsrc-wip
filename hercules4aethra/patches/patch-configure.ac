@@ -1,0 +1,29 @@
+$NetBSD: patch-configure.ac,v 1.2 2021/12/19 19:08:20 rhialto Exp $
+
+- Avoid -march=xxx because it makes binaries nonportable.
+- Fix suffix of helper libraries.
+
+--- configure.ac.orig	2021-12-18 14:28:12.000000000 +0000
++++ configure.ac
+@@ -2853,7 +2853,8 @@ if test "$hc_cv_auto_optimize" = "yes"; 
+     if test "$hc_cv_is_intel_x86_arch" = "yes"; then
+ 
+         # Set CPU type
+-        hc_cv_optimization_flags="$hc_cv_optimization_flags -march=$hc_cv_intel_cpu_type"
++	# Don't do this: it makes binaries unportable.
++        #hc_cv_optimization_flags="$hc_cv_optimization_flags -march=$hc_cv_intel_cpu_type"
+ 
+         # Dynamically inline small block string operations
+         # (subroutine calls still made for large area calls)
+@@ -3074,9 +3075,9 @@ test  "$hc_cv_is_mingw"    =  "yes"  && 
+ #------------------------------------------------------#
+ 
+ if test "$hc_cv_opt_debug" = "yes"; then
+-  hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}d
++  hc_cv_pkg_lib_suffix=d_pic
+ else
+-  hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}
++  hc_cv_pkg_lib_suffix=_pic
+ fi
+ 
+ AC_CACHE_SAVE()

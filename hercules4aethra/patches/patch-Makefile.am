@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.2 2021/12/19 19:08:20 rhialto Exp $
+
+- Build dynamic modules only dynamic (-shared), not also static.
+
+--- Makefile.am.orig	2021-12-18 14:28:12.000000000 +0000
++++ Makefile.am
+@@ -144,7 +144,7 @@ dyndev_SRC =  \
+ #                    to Windows DLLs
+ #-----------------------------------------------------------------
+ 
+-XSTATIC =
++XSTATIC = -shared
+ DYNSRC  =
+ 
+ DYNMOD_LD_FLAGS =   \
