@@ -21,6 +21,8 @@ CXXFLAGS+=	`sdl2-config --cflags`
 LIBS+=		`sdl2-config --libs`
 LIBS+=		-lSDL2_mixer
 LIBS+=		${X11_LDFLAGS}
+LIBS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LIBS+=		-L${PREFIX}/lib
 
 DEPENDS+=	openfodder-data-1.7.0:../../wip/openfodder-data
 
