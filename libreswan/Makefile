@@ -1,31 +1,14 @@
 # $NetBSD$
 
-# Libreswan is built using GNU Make.  It does not use autoconf.
+# Libreswan is built using GNU Make (it does not use autoconf).
 #
 # Configuration parameters can be found in mk/config.mk and OS
 # specific overides in mk/default/*.mk (for instance,
 # mk/default/netbsd.mk).
 
-#DISTNAME=	libreswan-4.9
-#MASTER_SITES=	https://download.libreswan.org/
-
-GITHUB_PROJECT=	libreswan
-DISTNAME=	libreswan
-
-# This is a pre-5.0 snapshot taken from mainline.  It includes the CVE
-# fixes in v4.10 and v4.11.
-#
-# The version number 4.9 in the below is topologically correct.  It is
-# the point where the v4.x maintenance branch was created (both v4.10
-# and v4.11 were drawn from that branch).
-#
-# If this were Fedora I'd be using something like libreswan-v4.9~1324
-# (that's a tilda).  Perhaps 4.11nb5.1324 would be better?
-
-PKGNAME=	libreswan-4.9nb3
-GITHUB_TAG=	87b84cc19b90a4e046f28568cc2738835800398a
-MASTER_SITES=	${MASTER_SITE_GITHUB:=${GITHUB_PROJECT}/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+DISTNAME=	libreswan-4.12
+PKGREVISION=	1
+MASTER_SITES=	https://download.libreswan.org/
 
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
