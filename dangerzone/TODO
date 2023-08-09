@@ -1,1 +1,4 @@
 - package missing PySide2 dependency
+
+This package has known vulnerabilities, please investigate and fix if possible:
+  CVE-2023-39342
