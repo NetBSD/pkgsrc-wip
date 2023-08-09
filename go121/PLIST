@@ -36,7 +36,6 @@ go121/bin/gofmt
 go121/codereview.cfg
 go121/doc/asm.html
 go121/doc/go1.17_spec.html
-go121/doc/go1.21.html
 go121/doc/go_mem.html
 go121/doc/go_spec.html
 go121/doc/godebug.md
@@ -2176,6 +2175,7 @@ go121/src/cmd/go/testdata/script/get_update_wildcard.txt
 go121/src/cmd/go/testdata/script/get_vcs_error_message.txt
 go121/src/cmd/go/testdata/script/get_vendor.txt
 go121/src/cmd/go/testdata/script/get_with_git_trace.txt
+go121/src/cmd/go/testdata/script/go_badcmd.txt
 go121/src/cmd/go/testdata/script/go_version.txt
 go121/src/cmd/go/testdata/script/godebug_default.txt
 go121/src/cmd/go/testdata/script/godebug_unknown.txt
@@ -6452,6 +6452,7 @@ go121/src/internal/types/testdata/fixedbugs/issue60688.go
 go121/src/internal/types/testdata/fixedbugs/issue60906.go
 go121/src/internal/types/testdata/fixedbugs/issue60933.go
 go121/src/internal/types/testdata/fixedbugs/issue60946.go
+go121/src/internal/types/testdata/fixedbugs/issue61486.go
 go121/src/internal/types/testdata/fixedbugs/issue6977.go
 go121/src/internal/types/testdata/spec/assignability.go
 go121/src/internal/types/testdata/spec/comparable.go
