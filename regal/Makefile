@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/StyraInc/regal
-COMMENT=	Regal is a linter for Rego
+COMMENT=	Linter for Rego
 LICENSE=	apache-2.0
 
 GO_BUILD_PATTERN+=	-ldflags ' \
