@@ -4975,7 +4975,6 @@ SUBDIR+=	recutils
 SUBDIR+=	redfang
 SUBDIR+=	reduze
 SUBDIR+=	reflectionhle
-SUBDIR+=	regal
 SUBDIR+=	regexxer
 SUBDIR+=	regula
 SUBDIR+=	relaydb
