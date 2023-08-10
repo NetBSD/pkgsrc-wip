@@ -1,4 +1,3 @@
 PPSSPP TODO:
 
 - audio problems on NetBSD
-- unclear if ASLR needs to be disabled at build-time as well as runtime
