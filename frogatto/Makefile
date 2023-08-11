@@ -1,11 +1,12 @@
 # $NetBSD$
 
-DISTNAME=		anura-0
-PKGNAME=		frogatto-4.28
+FROGATTO_VERSION=	4.0.2
+DISTNAME=		anura-${FROGATTO_VERSION}
+PKGNAME=		frogatto-${FROGATTO_VERSION}
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_GITHUB:=dressupgeekout/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=anura-engine/}
 GITHUB_PROJECT=		anura
-GITHUB_TAG=		cdb63c9c7b500c1bdf61b405d659851c9903c101
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
 COMMENT=	The Frogatto and Friends game
@@ -17,15 +18,11 @@ GITHUB_SUBMODULES+=	\
 # The Frogatto data files aren't actually a submodule of Anura, but they need
 # to end up "inside" the Anura source anyway, so this works well.
 GITHUB_SUBMODULES+=	\
-	dressupgeekout frogatto dressupgeekout-${PKGVERSION_NOREV} modules/frogatto4
+	frogatto frogatto ${GITHUB_TAG} modules/frogatto4
 
 USE_LANGUAGES=	c c++
 GCC_REQD+=	4.8
 USE_TOOLS+=	gmake pax pkg-config
-
-# Anura provides the game engine, which needs to be compiled. Frogatto is
-# simply the game data, no compiliation needed.
-WRKSRC=		${WRKDIR}/anura-${GITHUB_TAG}
 
 CFLAGS+=	-Wno-sign-compare
 CFLAGS+=	-Wno-deprecated-declarations
@@ -70,13 +67,15 @@ pre-configure:
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/frogatto ${DESTDIR}${PREFIX}/bin/frogatto
 	${INSTALL_PROGRAM} ${WRKSRC}/anura ${DESTDIR}${PREFIX}/libexec/frogatto/anura
-	for dir in ${ANURA_DIRS}; do							\
-		${MKDIR} ${ANURA_SHARE_DEST}/$${dir};					\
-		cd ${WRKSRC}/$${dir} && ${PAX} -r -w . ${ANURA_SHARE_DEST}/$${dir};	\
+	for dir in ${ANURA_DIRS}; do				\
+		${MKDIR} ${ANURA_SHARE_DEST}/$${dir};		\
+		cd ${WRKSRC}/$${dir};				\
+		${PAX} -r -w . ${ANURA_SHARE_DEST}/$${dir};	\
 	done
-	for dir in ${FROGATTO_DIRS}; do										\
-		${MKDIR} ${FROGATTO_MODULE_DEST}/$${dir};							\
-		cd ${WRKSRC}/modules/frogatto4/$${dir} && ${PAX} -r -w . ${FROGATTO_MODULE_DEST}/$${dir};	\
+	for dir in ${FROGATTO_DIRS}; do				\
+		${MKDIR} ${FROGATTO_MODULE_DEST}/$${dir};	\
+		cd ${WRKSRC}/modules/frogatto4/$${dir};		\
+		${PAX} -r -w . ${FROGATTO_MODULE_DEST}/$${dir};	\
 	done
 	for file in ${FROGATTO_FILES}; do							\
 		${INSTALL_DATA} ${WRKSRC}/modules/frogatto4/$${file} ${FROGATTO_MODULE_DEST};	\
