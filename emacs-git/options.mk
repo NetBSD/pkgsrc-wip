@@ -8,7 +8,6 @@ PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson libgccjit libotf libweb
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
 PKG_OPTIONS_GROUP.window-system=	x11 nextstep
 
-
 PKG_OPTIONS_OPTIONAL_GROUPS+=		toolkit
 PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
 #  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk2,
@@ -111,7 +110,6 @@ CONFIGURE_ARGS+=	--without-ns
 ### Support SVG
 ###
 .  if !empty(PKG_OPTIONS:Msvg)
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--without-rsvg
@@ -179,7 +177,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 APPLICATIONS_DIR=	Applications
 PLIST_SRC+=		PLIST.cocoa
 CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
-CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs.pdmp
+CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/libexec/Emacs.pdmp
 .  else
 .include "../../x11/gnustep-gui/buildlink3.mk"
 MAKE_FILE=		Makefile

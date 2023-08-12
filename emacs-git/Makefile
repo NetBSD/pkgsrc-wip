@@ -68,6 +68,7 @@ post-install:
 .include "../../wip/mk/git-package.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
