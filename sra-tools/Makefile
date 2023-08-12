@@ -11,24 +11,16 @@
 #LICENSE_COMB=		multi
 #LICENSE_FILE_PD=	${WRKSRC}/LICENSE
 #LICENSE_DISTFILES_LGPL21+ =
-## Untested on other platforms, aarch64 support was recently added upstream
-# BUILD_DEPENDS=	bash:shells/bash
-# LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
-#		libhdf5.so:science/hdf5 \
-#		libepoll-shim.so:devel/libepoll-shim \
-#		libzstd.so:archivers/zstd
 #USE_LDCONFIG=	${PREFIX}/lib64
 #USE_JAVA=	yes
-## Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
+# Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
 #JAVA_VERSION=	17+
-#OPTIONS_DEFINE=	EXAMPLES
-#SHEBANG_GLOB=	*.sh
 
 DISTNAME=	sra-tools-3.0.6
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	50f8b65d775f183ea3a179ba5650789a44697a25
-GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 6da72e8 vdb/ncbi-vdb
+GITHUB_TAG=	de3d50d111874171766fd017c8cbcf92a9009263
+GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 802ae6e ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
@@ -40,11 +32,11 @@ LICENSE=	public-domain
 # MAKE_JOBS_SAFE=	no
 
 # Upstream explicitly supports specific platforms
+# Untested on other platforms, aarch64 support was recently added upstream
 ONLY_FOR_PLATFORM=	 *-*-aarch64 *-*-x86_64
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison cmake
+USE_TOOLS+=	bash bison cmake
 
 # The config.c and file-path.posix.cpp reinplaces follow
 # static patches.  Run "make clean patch" before updating
@@ -67,8 +59,7 @@ SUBST_FILES.submoddir+=	${WRKSRC}/CMakeLists.txt
 # FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
 # I don't know which is which, so you'll have to finish.
 # Add bash, etc. to USE_TOOLS if used below.
-# 
-REPLACE_SH=	*.sh
+REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh
 
 USE_CMAKE=	yes
 # Check this
@@ -86,8 +77,11 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
 	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
 
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/hdf5/buildlink3.mk"
+.include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 # CentOS doesn't have zlib in the base, so uncomment if needed.
 # .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
