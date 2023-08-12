@@ -1,0 +1,21 @@
+1. fix following problem
+
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for 'Matrix' in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/tmp/math/R-Matrix/work/.destdir/usr/pkg/lib/R/library/00LOCK-Matrix/00new/Matrix/libs/Matrix.so':
+  /tmp/math/R-Matrix/work/.destdir/usr/pkg/lib/R/library/00LOCK-Matrix/00new/Matrix/libs/Matrix.so: Undefined PLT symbol "cholmod_metis" (symnum = 224)
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing '/tmp/math/R-Matrix/work/.destdir/usr/pkg/lib/R/library/Matrix'
+*** Error code 1
+
+Stop.
+make[1]: stopped in /export/CHROOT/usr/pkgsrc-cvs/math/R-Matrix
+*** Error code 1
+
+
+2. Clean up nasty patching

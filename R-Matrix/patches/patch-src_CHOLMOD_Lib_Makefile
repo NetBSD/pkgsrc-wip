@@ -1,0 +1,19 @@
+$NetBSD$
+
+../Core/cholmod_aat.c:32:10: fatal error: cholmod_internal.h: No such file or directory
+   32 | #include "cholmod_internal.h"
+      |          ^~~~~~~~~~~~~~~~~~~~
+
+/tmp/math/R-Matrix/work/Matrix/src/AMD/Include/amd.h
+
+--- src/CHOLMOD/Lib/Makefile.orig	2023-07-03 22:28:32.000000000 +0900
++++ src/CHOLMOD/Lib/Makefile	2023-08-11 18:33:51.529429471 +0900
+@@ -2,6 +2,8 @@
+ # CHOLOMD/Lib/Makefile: for compiling the CHOLMOD library
+ #===============================================================================
+ 
++ALL_CFLAGS=	-I../Include -I../../SuiteSparse_config/ -I@PREFIX@/lib/R/include \
++	-I../../AMD/Include -I../../COLAMD/Include
+ default: lib
+ 
+ PKG_CPPFLAGS = -I../../AMD/Include -I../../AMD/Source \

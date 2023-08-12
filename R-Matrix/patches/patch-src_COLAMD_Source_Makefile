@@ -1,0 +1,33 @@
+$NetBSD$
+
+1.
+gcc -I.  -I/usr/pkg/include -I/usr/include -c colamd.c -o colamd.o
+colamd.c:639:10: fatal error: colamd.h: No such file or directory
+  639 | #include "colamd.h"
+      |          ^~~~~~~~~~
+compilation terminated.
+*** Error code 1
+
+Stop.
+make[2]: stopped in /tmp/math/R-Matrix/work/Matrix/src/COLAMD/Source
+*** Error code 1
+
+
+2.
+
+gcc -I../Include  -I/usr/pkg/include -I/usr/include -c colamd.c -o colamd.o
+In file included from colamd.c:639:
+../Include/colamd.h:130:10: fatal error: SuiteSparse_config.h: No such file or directory
+  130 | #include "SuiteSparse_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+
+--- src/COLAMD/Source/Makefile.orig	2023-07-03 22:28:32.000000000 +0900
++++ src/COLAMD/Source/Makefile	2023-08-12 06:48:34.881403633 +0900
+@@ -1,5 +1,7 @@
+ PKG_CPPFLAGS = -I../Include -I../../SuiteSparse_config
+ 
++CFLAGS=	-I../Include -I../../SuiteSparse_config
++ALL_CFLAGS=	-I../Include -I../../SuiteSparse_config
+ LIB = ../../COLAMD.a
+ 
+ lib: $(LIB)

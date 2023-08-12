@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (R/Matrix_1.6-0.tar.gz) = d2c0cce711b17106c82915f0cbe9cd840229e6a7c10b27ff5635d37701c9627a
+SHA512 (R/Matrix_1.6-0.tar.gz) = 149dac84af950a81dde86421c262fe052fafa8c6945498fc5bfe888d9e33e63bbe41264f0e9ea576beabe7ff06da82f04fc70c46c6b7ad9d928664c99a10ebd3
+Size (R/Matrix_1.6-0.tar.gz) = 2058479 bytes
+SHA1 (patch-src_AMD_Source_Makefile) = a70361eb7baea6054416db55b261450083404fdf
+SHA1 (patch-src_CHOLMOD_Lib_Makefile) = 9da67f17d1e83b061265932fcd8d2cf7819270c7
+SHA1 (patch-src_COLAMD_Source_Makefile) = b610a56e216256b636c200e202de8faa1dfc7a24
