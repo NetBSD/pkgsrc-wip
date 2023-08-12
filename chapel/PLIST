@@ -143,13 +143,6 @@ lib/chapel/${VERSION}/third-party/gasnet/Makefile.include
 lib/chapel/${VERSION}/third-party/gasnet/Makefile.setup
 lib/chapel/${VERSION}/third-party/gmp/Makefile
 lib/chapel/${VERSION}/third-party/gmp/Makefile.include
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/include/gmp.h
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/lib/libgmp.la
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/lib/pkgconfig/gmp.pc
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/share/info/dir
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/share/info/gmp.info
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/share/info/gmp.info-1
-lib/chapel/${VERSION}/third-party/gmp/install/netbsd64-amd64-unknown-gnu-none/share/info/gmp.info-2
 lib/chapel/${VERSION}/third-party/hwloc/Makefile
 lib/chapel/${VERSION}/third-party/hwloc/Makefile.include
 lib/chapel/${VERSION}/third-party/jemalloc/Makefile

@@ -23,10 +23,10 @@ CONFIG_SHELL=		bash
 TEST_TARGET=		check
 
 # TODO: detect clang and set to 'clang' instead
-MAKE_ENV+=		CHPL_HOST_COMPILER=gnu
-MAKE_ENV+=		CHPL_TARGET_COMPILER=gnu
+MAKE_ENV+=	CHPL_HOST_COMPILER=gnu
+MAKE_ENV+=	CHPL_TARGET_COMPILER=gnu
 # TODO: llvm 15 is supported yet as of 1.31, use it
-MAKE_ENV+=             CHPL_LLVM=none
+MAKE_ENV+=	CHPL_LLVM=none
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/chapel/1.30/compiler
 
