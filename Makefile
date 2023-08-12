@@ -5306,6 +5306,7 @@ SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	squirrelmail-compatibility
 SUBDIR+=	squirrelmail-vlogin
+SUBDIR+=	sra-tools
 SUBDIR+=	src
 SUBDIR+=	srecord
 SUBDIR+=	srvx
