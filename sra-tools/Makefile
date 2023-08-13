@@ -85,6 +85,10 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
 	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
+	# FIXME: Build is detecting Java somehow
+	${RM} -rf ${DESTDIR}${PREFIX}/jar
+	${RM} -rf ${DESTDIR}${PREFIX}/share/examples-java
+	${RM} -rf ${DESTDIR}${PREFIX}/share/javadoc
 
 # Shouldn't epoll bl3 check this?
 .if ${OPSYS} != Linux
