@@ -1,0 +1,5 @@
+#!/bin/sh
+# $NetBSD$
+# Launcher script for wipegame.
+set -e
+cd @@PREFIX@@/share/wipeout-rewrite && @@PREFIX@@/libexec/wipegame
