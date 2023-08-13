@@ -11,14 +11,14 @@
 #LICENSE_COMB=		multi
 #LICENSE_FILE_PD=	${WRKSRC}/LICENSE
 #LICENSE_DISTFILES_LGPL21+ =
-#USE_LDCONFIG=	${PREFIX}/lib64
+#USE_LDCONFIG=		${PREFIX}/lib64
 # Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
-#JAVA_VERSION=	17+
+#JAVA_VERSION=		17+
 
-DISTNAME=	sra-tools-3.0.6
-CATEGORIES=	biology
-MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	de3d50d111874171766fd017c8cbcf92a9009263
+DISTNAME=		sra-tools-3.0.6
+CATEGORIES=		biology
+MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=		de3d50d111874171766fd017c8cbcf92a9009263
 GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 802ae6e ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
@@ -32,7 +32,7 @@ LICENSE=	public-domain
 
 # Upstream explicitly supports specific platforms
 # Untested on other platforms, aarch64 support was recently added upstream
-ONLY_FOR_PLATFORM=	 *-*-aarch64 *-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
@@ -45,17 +45,17 @@ USE_JAVA2=	17
 SUBST_CLASSES+=		etcdir
 SUBST_STAGE.etcdir=	pre-configure
 SUBST_SED.etcdir+=	-e 's|"/etc/ncbi"|"${PREFIX}/etc/ncbi"|g'
-SUBST_FILES.etcdir+=	${WRKSRC}/ncbi-vdb/libs/kfg/config.c
+SUBST_FILES.etcdir+=	ncbi-vdb/libs/kfg/config.c
 
 SUBST_CLASSES+=		binpath
 SUBST_STAGE.binpath=	pre-configure
 SUBST_SED.binpath+=	-e 's|/usr/local/bin|${PREFIX}/bin|g'
-SUBST_FILES.binpath+=	${WRKSRC}/tools/external/driver-tool/file-path.posix.cpp
+SUBST_FILES.binpath+=	tools/external/driver-tool/file-path.posix.cpp
 
 SUBST_CLASSES+=		submoddir
 SUBST_STAGE.submoddir=	pre-configure
 SUBST_SED.submoddir+=	-e 's|/../ncbi-vdb|/ncbi-vdb|g'
-SUBST_FILES.submoddir+=	${WRKSRC}/CMakeLists.txt
+SUBST_FILES.submoddir+=	CMakeLists.txt
 
 # FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
 # I don't know which is which, so you'll have to finish.
@@ -66,6 +66,8 @@ USE_CMAKE=	yes
 # Check this
 CMAKE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+
+EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 # FIXME: Check for libstdc++-static on Linux
 pre-configure:
@@ -87,8 +89,10 @@ post-install:
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
+# FIXME: cmake is not finding this
+.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
