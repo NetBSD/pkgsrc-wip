@@ -4586,6 +4586,7 @@ SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
 SUBDIR+=	py-singletonify
 SUBDIR+=	py-sipvicious
+SUBDIR+=	py-slixmpp
 SUBDIR+=	py-smart-open
 SUBDIR+=	py-smcp
 SUBDIR+=	py-smell

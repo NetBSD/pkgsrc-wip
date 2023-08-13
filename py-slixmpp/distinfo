@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (slixmpp-1.8.4.tar.gz) = dbf0a787f0ecb57bdeff7c9b37764d3246fa923986c5d327aae5364ee376f12f
+SHA512 (slixmpp-1.8.4.tar.gz) = afa82670e4cb2c904503a6ef652d3f2ecd59732a18eef05b85e0a55f15112685ecc1b50951b3f717a211d1c9069a4e7c65d913454426441f56688ff05a5c0921
+Size (slixmpp-1.8.4.tar.gz) = 546263 bytes
