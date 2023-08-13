@@ -1,8 +1,8 @@
 $NetBSD$
 
-# libstdc++-static is not standard nor easy to install on Alma Linux
+# static standard libs are not standard nor easy to install on Alma Linux
 
---- build/env.cmake.orig	2023-08-13 13:33:25.870195377 +0000
+--- build/env.cmake.orig	2023-08-13 18:06:02.445968665 +0000
 +++ build/env.cmake
 @@ -555,7 +555,7 @@ endfunction()
  function(MakeLinksExe target install_via_driver)

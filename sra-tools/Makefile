@@ -66,6 +66,7 @@ USE_CMAKE=	yes
 # Check this
 CMAKE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl	# ncbi-vdb/CMakeLists.posix.txt
 
 EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
@@ -93,6 +94,7 @@ post-install:
 .endif
 
 .include "../../devel/cmake/build.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
