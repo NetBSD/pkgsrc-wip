@@ -81,19 +81,23 @@ pre-configure:
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
-	#${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
-	#${MKDIR} ${DESTDIR}${EXAMPLESDIR}
-	#${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
-	#${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
-	#${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
-	#${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
+	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
+	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
+	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
+	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
+	${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
+	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
 
 # Shouldn't epoll bl3 check this?
 .if ${OPSYS} != Linux
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 
+# Triggers openjdk install on Linux even if installed via Yum
+# FIXME: Should we just build without Java to avoid these issues?
+.if ${OPSYS} == NetBSD
 .include "../../mk/java-vm.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
