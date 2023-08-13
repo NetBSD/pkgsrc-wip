@@ -81,20 +81,21 @@ pre-configure:
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
-	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
-	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
-	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
-	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
-	${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
-	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
+	#${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
+	#${MKDIR} ${DESTDIR}${EXAMPLESDIR}
+	#${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
+	#${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
+	#${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
+	#${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
 
 # Shouldn't epoll bl3 check this?
 .if ${OPSYS} != Linux
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 
-.include "../../devel/cmake/build.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
