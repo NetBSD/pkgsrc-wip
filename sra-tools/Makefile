@@ -69,8 +69,13 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
+.include "../../mk/bsd.prefs.mk"
+
 # FIXME: Check for libstdc++-static on Linux
 pre-configure:
+.if ${OPSYS} == NetBSD
+	${RM} ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
+.endif
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON .. && make
 
 post-install:
@@ -81,8 +86,6 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
 	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
-
-.include "../../mk/bsd.prefs.mk"
 
 # Shouldn't epoll bl3 check this?
 .if ${OPSYS} != Linux
