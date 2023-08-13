@@ -77,9 +77,15 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/examples-java ${DESTDIR}${EXAMPLESDIR}/java
 	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
 
+.include "../../mk/bsd.prefs.mk"
+
+# Shouldn't epoll bl3 check this?
+.if ${OPSYS} != Linux
+.include "../../devel/libepoll-shim/buildlink3.mk"
+.endif
+
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
-.include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 # CentOS doesn't have zlib in the base, so uncomment if needed.
