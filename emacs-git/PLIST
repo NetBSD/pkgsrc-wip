@@ -281,6 +281,7 @@ share/emacs/${PKGVERSION}/etc/gnus/gnus-setup.ast
 share/emacs/${PKGVERSION}/etc/gnus/news-server.ast
 share/emacs/${PKGVERSION}/etc/grep.txt
 share/emacs/${PKGVERSION}/etc/images/README
+share/emacs/${PKGVERSION}/etc/images/alt.pbm
 share/emacs/${PKGVERSION}/etc/images/attach.pbm
 share/emacs/${PKGVERSION}/etc/images/attach.xpm
 share/emacs/${PKGVERSION}/etc/images/back-arrow.pbm
@@ -302,6 +303,7 @@ share/emacs/${PKGVERSION}/etc/images/contact.pbm
 share/emacs/${PKGVERSION}/etc/images/contact.xpm
 share/emacs/${PKGVERSION}/etc/images/copy.pbm
 share/emacs/${PKGVERSION}/etc/images/copy.xpm
+share/emacs/${PKGVERSION}/etc/images/ctrl.pbm
 share/emacs/${PKGVERSION}/etc/images/custom/README
 share/emacs/${PKGVERSION}/etc/images/custom/down-pushed.pbm
 share/emacs/${PKGVERSION}/etc/images/custom/down-pushed.xpm
@@ -466,6 +468,7 @@ share/emacs/${PKGVERSION}/etc/images/help.pbm
 share/emacs/${PKGVERSION}/etc/images/help.xpm
 share/emacs/${PKGVERSION}/etc/images/home.pbm
 share/emacs/${PKGVERSION}/etc/images/home.xpm
+share/emacs/${PKGVERSION}/etc/images/hyper.pbm
 share/emacs/${PKGVERSION}/etc/images/icons/README
 share/emacs/${PKGVERSION}/etc/images/icons/allout-widgets/dark-bg/closed.png
 share/emacs/${PKGVERSION}/etc/images/icons/allout-widgets/dark-bg/closed.xpm
@@ -536,6 +539,8 @@ share/emacs/${PKGVERSION}/etc/images/info.pbm
 share/emacs/${PKGVERSION}/etc/images/info.xpm
 share/emacs/${PKGVERSION}/etc/images/jump-to.pbm
 share/emacs/${PKGVERSION}/etc/images/jump-to.xpm
+share/emacs/${PKGVERSION}/etc/images/last-page.pbm
+share/emacs/${PKGVERSION}/etc/images/last-page.xpm
 share/emacs/${PKGVERSION}/etc/images/left-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/left-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/left.svg
@@ -607,6 +612,7 @@ share/emacs/${PKGVERSION}/etc/images/mail/save.xpm
 share/emacs/${PKGVERSION}/etc/images/mail/send.pbm
 share/emacs/${PKGVERSION}/etc/images/mail/send.xpm
 share/emacs/${PKGVERSION}/etc/images/mail/spam.xpm
+share/emacs/${PKGVERSION}/etc/images/meta.pbm
 share/emacs/${PKGVERSION}/etc/images/mh-logo.pbm
 share/emacs/${PKGVERSION}/etc/images/mh-logo.xpm
 share/emacs/${PKGVERSION}/etc/images/mpc/README
@@ -679,6 +685,7 @@ share/emacs/${PKGVERSION}/etc/images/search.pbm
 share/emacs/${PKGVERSION}/etc/images/search.xpm
 share/emacs/${PKGVERSION}/etc/images/separator.pbm
 share/emacs/${PKGVERSION}/etc/images/separator.xpm
+share/emacs/${PKGVERSION}/etc/images/shift.pbm
 share/emacs/${PKGVERSION}/etc/images/show.pbm
 share/emacs/${PKGVERSION}/etc/images/show.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/README
@@ -751,6 +758,7 @@ share/emacs/${PKGVERSION}/etc/images/splash.pbm
 share/emacs/${PKGVERSION}/etc/images/splash.png
 share/emacs/${PKGVERSION}/etc/images/splash.svg
 share/emacs/${PKGVERSION}/etc/images/splash.xpm
+share/emacs/${PKGVERSION}/etc/images/super.pbm
 share/emacs/${PKGVERSION}/etc/images/symbols/README
 share/emacs/${PKGVERSION}/etc/images/symbols/check-mark_16.pbm
 share/emacs/${PKGVERSION}/etc/images/symbols/check-mark_16.svg
@@ -2355,6 +2363,8 @@ share/emacs/${PKGVERSION}/lisp/image/wallpaper.el.gz
 share/emacs/${PKGVERSION}/lisp/image/wallpaper.elc
 share/emacs/${PKGVERSION}/lisp/imenu.el.gz
 share/emacs/${PKGVERSION}/lisp/imenu.elc
+share/emacs/${PKGVERSION}/lisp/indent-aux.el.gz
+share/emacs/${PKGVERSION}/lisp/indent-aux.elc
 share/emacs/${PKGVERSION}/lisp/indent.el.gz
 share/emacs/${PKGVERSION}/lisp/indent.elc
 share/emacs/${PKGVERSION}/lisp/info-look.el.gz
@@ -3844,6 +3854,8 @@ share/emacs/${PKGVERSION}/lisp/term.elc
 share/emacs/${PKGVERSION}/lisp/term/AT386.el.gz
 share/emacs/${PKGVERSION}/lisp/term/AT386.elc
 share/emacs/${PKGVERSION}/lisp/term/README
+share/emacs/${PKGVERSION}/lisp/term/android-win.el.gz
+share/emacs/${PKGVERSION}/lisp/term/android-win.elc
 share/emacs/${PKGVERSION}/lisp/term/bobcat.el.gz
 share/emacs/${PKGVERSION}/lisp/term/bobcat.elc
 share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
@@ -4031,6 +4043,8 @@ share/emacs/${PKGVERSION}/lisp/tool-bar.el.gz
 share/emacs/${PKGVERSION}/lisp/tool-bar.elc
 share/emacs/${PKGVERSION}/lisp/tooltip.el.gz
 share/emacs/${PKGVERSION}/lisp/tooltip.elc
+share/emacs/${PKGVERSION}/lisp/touch-screen.el.gz
+share/emacs/${PKGVERSION}/lisp/touch-screen.elc
 share/emacs/${PKGVERSION}/lisp/transient.el.gz
 share/emacs/${PKGVERSION}/lisp/transient.elc
 share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
