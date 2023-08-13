@@ -71,7 +71,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 # FIXME: Check for libstdc++-static on Linux
 pre-configure:
-	cd ${WRKSRC}/ncbi-vdb/build && cmake .. && make
+	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON .. && make
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
