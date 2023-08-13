@@ -10,5 +10,7 @@ SHA1 (patch-build_env.cmake) = 14add56e66e5578fd0d51ce55329285e0981ac4e
 SHA1 (patch-ncbi-vdb_interfaces_os_bsd_byteswap.h) = 2ecc80bca4dd3b0c28b20d1a82c2a315d29bb02c
 SHA1 (patch-ncbi-vdb_interfaces_os_bsd_endian.h) = fa522758b0a122f5da8b3ddc2b98fff1c1d82e33
 SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = 00fc8af348db6a6fe213c4023fc6e8e46c34cf2c
+SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
 SHA1 (patch-tools_external_driver-tool_build-version.cpp) = ec194aad65c86035c1fee0fe42722faf06af17fe
 SHA1 (patch-tools_external_driver-tool_build-version.hpp) = 0d50aba6b3fe1086cf0562c935f114bb117ac195
+SHA1 (patch-tools_external_driver-tool_sratools.cpp) = 2d097a61b01dca48dbefdf51369252b2f8a2ca10

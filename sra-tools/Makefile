@@ -12,8 +12,6 @@
 #LICENSE_FILE_PD=	${WRKSRC}/LICENSE
 #LICENSE_DISTFILES_LGPL21+ =
 #USE_LDCONFIG=		${PREFIX}/lib64
-# Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
-#JAVA_VERSION=		17+
 
 DISTNAME=		sra-tools-3.0.6
 CATEGORIES=		biology
@@ -36,8 +34,9 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
-USE_JAVA=	yes
-USE_JAVA2=	17
+# USE_JAVA=	yes
+# Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
+# USE_JAVA2=	17
 
 # The config.c and file-path.posix.cpp reinplaces follow
 # static patches.  Run "make clean patch" before updating
