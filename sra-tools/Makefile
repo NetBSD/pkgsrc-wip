@@ -12,7 +12,6 @@
 #LICENSE_FILE_PD=	${WRKSRC}/LICENSE
 #LICENSE_DISTFILES_LGPL21+ =
 #USE_LDCONFIG=	${PREFIX}/lib64
-#USE_JAVA=	yes
 # Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
 #JAVA_VERSION=	17+
 
@@ -37,6 +36,8 @@ ONLY_FOR_PLATFORM=	 *-*-aarch64 *-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
+USE_JAVA=	yes
+USE_JAVA2=	17
 
 # The config.c and file-path.posix.cpp reinplaces follow
 # static patches.  Run "make clean patch" before updating
@@ -64,12 +65,14 @@ REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh
 USE_CMAKE=	yes
 # Check this
 CMAKE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
+CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
+# FIXME: Check for libstdc++-static on Linux
 pre-configure:
 	cd ${WRKSRC}/ncbi-vdb/build && cmake .. && make
 
 post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${DISTVERSION}
+	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
 	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
 	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
@@ -88,6 +91,4 @@ post-install:
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
