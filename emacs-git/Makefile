@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/emacs
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_TOOLS+=	autoconf automake bash:build gm4 gmake gsed gzip makeinfo
-# if test -n "${ndk_commands//\n }"
+# https://debbugs.gnu.org/cgi/bugreport.cgi?bug=65292
 CONFIG_SHELL+=	bash
 # for example, Mac OS X 10.6.1 has 2.61 which fails
 AUTOCONF_REQD+=	2.65
