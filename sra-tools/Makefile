@@ -41,11 +41,6 @@ SUBST_STAGE.submoddir=	pre-configure
 SUBST_SED.submoddir+=	-e 's|/../ncbi-vdb|/ncbi-vdb|g'
 SUBST_FILES.submoddir+=	CMakeLists.txt
 
-SUBST_CLASSES+=		srarpath
-SUBST_STAGE.srarpath=	post-configure
-SUBST_SED.srarpath+=	-e 's|@rpath|${PREFIX}/lib|g'
-SUBST_FILES.srarpath+=	cmake-pkgsrc-build/ngs/ngs-sdk/CMakeFiles/*/link.txt
-
 REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh */*/*/*/*.sh
 
 USE_CMAKE=	yes
@@ -57,18 +52,27 @@ EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == Darwin
+SUBST_CLASSES+=		srarpath
+SUBST_STAGE.srarpath=	post-configure
+SUBST_SED.srarpath+=	-e 's|@rpath|${PREFIX}/lib|g'
+SUBST_FILES.srarpath+=	cmake-pkgsrc-build/ngs/ngs-sdk/CMakeFiles/*/link.txt
+.endif
+
 pre-configure:
 .if ${OPSYS} == NetBSD
 	# Incorrect code found before bsd/byteswap.h
 	#ifndef __NetBSD__ doesn't help
-	${RM} ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
+	${RM} -f ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
 .endif
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
+.if ${OPSYS} == Darwin
 	# Unsure how to prevent cmake from generating @rpath in the first place
 	# No instances of @rpath or -install_name in any files before configure
 	for f in ${WRKSRC}/ncbi-vdb/build/libs/ncbi-vdb/CMakeFiles/*/link.txt; do \
 		${SED} -e 's|@rpath|${PREFIX}/lib|g' $${f} > $${f}.tmp && ${MV} -f $${f}.tmp $${f}; \
 	done
+.endif
 	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
 post-install:

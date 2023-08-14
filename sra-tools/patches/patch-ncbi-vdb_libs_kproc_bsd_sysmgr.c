@@ -1,6 +1,6 @@
 $NetBSD$
 
-# NetBSD: Add pthread_main_np() implementation
+# pthread_main_np() for NetBSD
 
 --- ncbi-vdb/libs/kproc/bsd/sysmgr.c.orig	2023-08-12 23:35:46.000000000 +0000
 +++ ncbi-vdb/libs/kproc/bsd/sysmgr.c
@@ -16,7 +16,7 @@ $NetBSD$
 +
 +// This should be initialized to pthread_self() at the start of main()
 +// If the thread ID of this thread is the same, then this is the main thread
-+extern pthread_t _thr_main;
++pthread_t _thr_main;
 +
 +int	pthread_main_np(void)
 +
