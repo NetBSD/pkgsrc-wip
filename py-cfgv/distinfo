@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cfgv-3.3.1.tar.gz) = 219b0b0b1fc3930ba5479982bda837021811efbf0838acef68d7ea21af8f8a08
-SHA512 (cfgv-3.3.1.tar.gz) = b9b81e6d3d280102deba2a503ca98b3e4fa1a666d5519733fc16426e4e832b3dddfc27f70aa4d9e996bc5a4f40c5ec984f1711a1fe87d12e57733736ee6e9a26
-Size (cfgv-3.3.1.tar.gz) = 7864 bytes
+BLAKE2s (cfgv-3.4.0.tar.gz) = a74ce904c13457944bec752b8c07a2f461ce6568a8ee43dbf9d0e627560afd16
+SHA512 (cfgv-3.4.0.tar.gz) = a3897739ec5be016c02d4fc1fbf2c860302376cabbb03e24a27c69e8a293e0798c4df5fa843aeab2627b853c2ae7e81f23a18e53217cbdd36467d1392980b3ba
+Size (cfgv-3.4.0.tar.gz) = 7114 bytes
