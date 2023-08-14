@@ -5,14 +5,6 @@
 #              Sat Aug 12 11:25:27 CDT 2023               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#LICENSE_COMB=		multi
-#LICENSE_FILE_PD=	${WRKSRC}/LICENSE
-#LICENSE_DISTFILES_LGPL21+ =
-#USE_LDCONFIG=		${PREFIX}/lib64
-
 DISTNAME=		sra-tools-3.0.6
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
@@ -22,11 +14,7 @@ GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 802ae6e ncbi-vdb
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
 COMMENT=	NCBI's toolkit for handling data in INSDC Sequence Read Archives
-# Check this
-LICENSE=	public-domain
-
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
+LICENSE=	public-domain AND gnu-lgpl-v2.1
 
 # Upstream explicitly supports specific platforms
 # Untested on other platforms, aarch64 support was recently added upstream
@@ -34,9 +22,6 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
-# USE_JAVA=	yes
-# Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
-# USE_JAVA2=	17
 
 # The config.c and file-path.posix.cpp reinplaces follow
 # static patches.  Run "make clean patch" before updating
@@ -56,13 +41,14 @@ SUBST_STAGE.submoddir=	pre-configure
 SUBST_SED.submoddir+=	-e 's|/../ncbi-vdb|/ncbi-vdb|g'
 SUBST_FILES.submoddir+=	CMakeLists.txt
 
-# FreeBSD's SHEBANG_FILES may include bash, perl, python, etc.
-# I don't know which is which, so you'll have to finish.
-# Add bash, etc. to USE_TOOLS if used below.
-REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh
+SUBST_CLASSES+=		srarpath
+SUBST_STAGE.srarpath=	post-configure
+SUBST_SED.srarpath+=	-e 's|@rpath|${PREFIX}/lib|g'
+SUBST_FILES.srarpath+=	cmake-pkgsrc-build/ngs/ngs-sdk/CMakeFiles/*/link.txt
+
+REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh */*/*/*/*.sh
 
 USE_CMAKE=	yes
-# Check this
 CMAKE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl	# ncbi-vdb/CMakeLists.posix.txt
@@ -71,12 +57,19 @@ EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 .include "../../mk/bsd.prefs.mk"
 
-# FIXME: Check for libstdc++-static on Linux
 pre-configure:
 .if ${OPSYS} == NetBSD
+	# Incorrect code found before bsd/byteswap.h
+	#ifndef __NetBSD__ doesn't help
 	${RM} ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
 .endif
-	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON .. && make
+	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
+	# Unsure how to prevent cmake from generating @rpath in the first place
+	# No instances of @rpath or -install_name in any files before configure
+	for f in ${WRKSRC}/ncbi-vdb/build/libs/ncbi-vdb/CMakeFiles/*/link.txt; do \
+		${SED} -e 's|@rpath|${PREFIX}/lib|g' $${f} > $${f}.tmp && ${MV} -f $${f}.tmp $${f}; \
+	done
+	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
@@ -95,16 +88,11 @@ post-install:
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 
-# Triggers openjdk install on Linux even if installed via Yum
-# FIXME: Should we just build without Java to avoid these issues?
-# .if ${OPSYS} == NetBSD
-# .include "../../mk/java-vm.mk"
-# .endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-# FIXME: cmake is not finding this
+# FIXME: cmake is not actually finding this
 .include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
