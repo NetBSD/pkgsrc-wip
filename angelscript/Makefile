@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	angelscript_2.36.0
+DISTNAME=	angelscript_2.36.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	lang
 MASTER_SITES=	http://angelcode.com/angelscript/sdk/files/
