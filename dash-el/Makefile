@@ -1,21 +1,28 @@
 # $NetBSD$
 
-DISTNAME=	dash.el-2.19.0
+DISTNAME=	dash.el-2.19.1
 PKGNAME=	${DISTNAME:C/\.el//}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magnars/}
+GITHUB_PROJECT=	dash.el
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/magnars/dash.el/releases/tag/ # TODO: check
+HOMEPAGE=	${MASTER_SITE_GITHUB:=magnars/}
 COMMENT=	Modern list api for Emacs. No 'cl required
 LICENSE=	gnu-gpl-v3
 
-NO_BUILD=	yes
+INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/dash
 
-INSTALLATION_DIRS=	${PREFIX}/share/emacs/site-lisp/dash
+do-build:
+	${EMACS_BIN} --no-init-file --no-site-file -batch \
+		-f batch-byte-compile ${WRKSRC}/dash.el
 
 do-install:
-	${INSTALL} ${WRKSRC}/dash.el ${DESTDIR}${PREFIX}/share/emacs/site-lisp/dash
+	${INSTALL_DATA} ${WRKSRC}/dash.el \
+		${DESTDIR}${EMACS_LISPPREFIX}/dash
+	${INSTALL_DATA} ${WRKSRC}/dash.elc \
+		${DESTDIR}${EMACS_LISPPREFIX}/dash
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
