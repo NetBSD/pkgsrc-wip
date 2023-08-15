@@ -1,8 +1,8 @@
 $NetBSD$
 
-# pthread_main_np() for NetBSD
+# Add NetBSD pthread_main_np() stand-in
 
---- ncbi-vdb/libs/kproc/bsd/sysmgr.c.orig	2023-08-12 23:35:46.000000000 +0000
+--- ncbi-vdb/libs/kproc/bsd/sysmgr.c.orig	2023-08-15 12:41:59.000000000 +0000
 +++ ncbi-vdb/libs/kproc/bsd/sysmgr.c
 @@ -30,6 +30,23 @@
  #include <pthread.h>
@@ -16,12 +16,12 @@ $NetBSD$
 +
 +// This should be initialized to pthread_self() at the start of main()
 +// If the thread ID of this thread is the same, then this is the main thread
-+pthread_t _thr_main;
++pthread_t _ncbi_thr_main;
 +
 +int	pthread_main_np(void)
 +
 +{
-+    return pthread_equal(pthread_self(), _thr_main);
++    return pthread_equal(pthread_self(), _ncbi_thr_main);
 +}
 +#endif
 +

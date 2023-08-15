@@ -8,8 +8,8 @@
 DISTNAME=		sra-tools-3.0.6
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=		de3d50d111874171766fd017c8cbcf92a9009263
-GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 802ae6e ncbi-vdb
+GITHUB_TAG=		984f1493e8612cd59a269569bf8c06e25e4e604c
+GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 38972fc ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
