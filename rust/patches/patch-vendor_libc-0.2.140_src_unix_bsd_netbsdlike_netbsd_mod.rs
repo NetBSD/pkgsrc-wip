@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add support for NetBSD/mipsel and NetBSD/riscv64.
+Also try to enable backtrace support.
+
 --- vendor/libc-0.2.140/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-07-12 05:06:31.000000000 +0000
 +++ vendor/libc-0.2.140/src/unix/bsd/netbsdlike/netbsd/mod.rs
 @@ -3111,6 +3111,22 @@ extern "C" {
