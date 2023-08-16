@@ -2,8 +2,8 @@ $NetBSD$
 
 Add DragonFly.
 
---- ppi.c.orig	2022-05-07 20:29:58.000000000 +0000
-+++ ppi.c
+--- src/ppi.c.orig	2022-05-07 20:29:58.000000000 +0000
++++ src/ppi.c
 @@ -32,7 +32,7 @@
  #include <unistd.h>
  #include <errno.h>

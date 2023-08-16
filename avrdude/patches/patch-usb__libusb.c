@@ -2,9 +2,9 @@ $NetBSD$
 
 Work around AVRISP mkII initial sync stalls on NetBSD.
 
---- usb_libusb.c.orig	2022-05-07 20:29:58.000000000 +0000
-+++ usb_libusb.c
-@@ -313,6 +313,17 @@ static void usbdev_close(union filedescr
+--- src/usb_libusb.c.orig	2022-05-07 20:29:58.000000000 +0000
++++ src/usb_libusb.c
+@@ -301,6 +301,17 @@ static void usbdev_close(union filedescr
    if (udev == NULL)
      return;
  

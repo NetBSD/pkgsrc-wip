@@ -1,1 +1,4 @@
-Must be tested.
+[X] Test CMake build
+[X] Fix option "doc"
+    texinfo.tex not found
+[ ] Test with real hardware
