@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	master
-PKGNAME=	${PYPKGPREFIX}-picture-to-gds-0.1
+PKGNAME=	${PYPKGPREFIX}-picture-to-gds-0.2
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ourfool/picture-to-gds/archive/}
 
