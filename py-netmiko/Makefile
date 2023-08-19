@@ -14,9 +14,13 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSUFFIX=${PYVERSUFFIX}
 
-DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.13.0:../../security/py-paramiko
-DEPENDS+=	${PYPKGPREFIX}-scp>=0.10.0:../../net/py-scp
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+#DEPENDS+=	${PYPKGPREFIX}-ntc-templates>=2.9.5:../../wip/py-ntc-templates
+
+DEPENDS+=	${PYPKGPREFIX}-paramiko>=2.9.5:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-serial>=3.3:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-scp>=0.13.6:../../net/py-scp
+DEPENDS+=	${PYPKGPREFIX}-textfsm>=1.1.3:../../textproc/py-textfsm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
