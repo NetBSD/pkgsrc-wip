@@ -22,6 +22,9 @@ DEPENDS+=	peak-classifier>0:../../wip/peak-classifier
 DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
 DEPENDS+=	webbrowser>0:../../wip/webbrowser
 DEPENDS+=	curl>0:../../www/curl
+DEPENDS+=	lz4>0:../../archivers/lz4
+DEPENDS+=	xz>0:../../archivers/xz
+DEPENDS+=	zstd>0:../../archivers/zstd
 
 META_PACKAGE=	yes
 
