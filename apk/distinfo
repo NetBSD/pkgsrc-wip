@@ -1,7 +1,0 @@
-$NetBSD$
-
-BLAKE2s (apk-tools-v3.0.0_pre0.tar.gz) = 5c478a2faf7cd4ba3955d33a4d6455e01cae7589c46bf24588a8ec8072e94d5b
-SHA512 (apk-tools-v3.0.0_pre0.tar.gz) = c31fcdc0b39b6e954a8e8e66398c9356d68a220def2c4370b57cdc1ad9df161fa637f896be0f7ebbc0dcd0b0e6043113d95641a331a4be2654f578529b0f3220
-Size (apk-tools-v3.0.0_pre0.tar.gz) = 2784013 bytes
-SHA1 (patch-src_apk__defines.h) = 02f08a2fbef8b426d8d81282b5c64712ce0811af
-SHA1 (patch-src_io.c) = 1d6870162ef79c663f84f05dff4e185ba8b41192

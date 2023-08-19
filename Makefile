@@ -168,6 +168,7 @@ SUBDIR+=	apache-log4j
 SUBDIR+=	ape
 SUBDIR+=	apel-git
 SUBDIR+=	apinger
+SUBDIR+=	apk-tools
 SUBDIR+=	apple-codesign
 SUBDIR+=	apstget
 SUBDIR+=	apvlv

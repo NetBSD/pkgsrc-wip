@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD$
-
-Using apk-tools will create and use the following directory:
-	/etc/apk
-
-which means you need to create/use /etc/apk/repositories to add new
-repository(s).
-===========================================================================
