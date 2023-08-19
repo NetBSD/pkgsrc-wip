@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (netmiko-1.4.0.tar.gz) = e84a83818f7e8e43ef0f3b9d9aa7cccf1cebcd8b
-SHA512 (netmiko-1.4.0.tar.gz) = 4a9295774040401610b8055e8a78657980a6f65ab269d9a93c94b7c6884c4ddf42aebe9be2e296d8259c80effd1dbf04f39fc1fb5adde922b11aa2f481c5432d
-Size (netmiko-1.4.0.tar.gz) = 44312 bytes
+BLAKE2s (netmiko-4.2.0.tar.gz) = 233031fa26fcdd99acfe86fa3fbaeea75fe4c79d7b3332744489f4010fcb5cc3
+SHA512 (netmiko-4.2.0.tar.gz) = 65d18bb66ac2f9fb8b3656190d3afe5c257299cd622edee34ac8f35087c16153ccfd5233f75d2528d112da46d8f8644f8af31c4c4d8dd33593081f4edd5cbf7b
+Size (netmiko-4.2.0.tar.gz) = 137352 bytes
