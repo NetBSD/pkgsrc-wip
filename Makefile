@@ -859,7 +859,6 @@ SUBDIR+=	fetchmail
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg-git
-SUBDIR+=	ffmpegthumbs
 SUBDIR+=	fftjet
 SUBDIR+=	fftw-mpich
 SUBDIR+=	fftw-openmpi

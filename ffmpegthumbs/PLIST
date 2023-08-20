@@ -1,6 +1,0 @@
-@comment $NetBSD$
-qt5/plugins/ffmpegthumbs.so
-share/config.kcfg/ffmpegthumbnailersettings5.kcfg
-share/kservices5/ffmpegthumbs.desktop
-share/metainfo/org.kde.ffmpegthumbs.metainfo.xml
-share/qlogging-categories5/ffmpegthumbs.categories
