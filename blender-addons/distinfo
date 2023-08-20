@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (blender-addons-3.5.0.tar.gz) = 20de2167531b89fc28ead802ab694f7aac37e5f0f306320cf2f5f59d0d47d6f5
+SHA512 (blender-addons-3.5.0.tar.gz) = 6d82f54757bdccfccd0cb7339caa0c4c1273d0354916f11bc537dfca775a093197edd50708baaa001d971153ce1cb58a6df51b259ce231d7431cd0c0f87290b1
+Size (blender-addons-3.5.0.tar.gz) = 3378466 bytes
+BLAKE2s (blender-blender-addons-contrib-v3.5.0.tar.gz) = 0dfb6f2256c8a881a855dfc02414ee4dbde7cceb03d78d9d085dea71e8d793dc
+SHA512 (blender-blender-addons-contrib-v3.5.0.tar.gz) = a9444d679b19e60085a7a994a2578c8be1cc7b3247d15478165133b03ccb62e9eb7363a0ec18359e3432e1c535422321fd7ce3bdafa9cd1e14dee2b3bf4905aa
+Size (blender-blender-addons-contrib-v3.5.0.tar.gz) = 900071 bytes
