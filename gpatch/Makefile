@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	patch-2.7.6
+DISTNAME=	gpatch-2.7.6
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.gnu.org/gnu/patch/
 
