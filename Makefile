@@ -2303,7 +2303,6 @@ SUBDIR+=	microsynteny-tools
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
 SUBDIR+=	miktex
-SUBDIR+=	milou
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
