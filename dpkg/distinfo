@@ -1,7 +1,0 @@
-$NetBSD$
-
-BLAKE2s (dpkg/1.21.22.tar.gz) = 69290c9995bf7a3cd895c422edf97d890230285a554f1d60f7fcddce7363c2e8
-SHA512 (dpkg/1.21.22.tar.gz) = fd58d8338be8e16d14f866fc76298b474fc0e9676fa860a2ea91469f681dd845066b02fbbe585104459735b03a58ea7b6203b26c41f4f200dcef8f62d0382870
-Size (dpkg/1.21.22.tar.gz) = 7964689 bytes
-SHA1 (patch-configure.ac) = e6fe9c72f08674ff0d530e407340992c9aa94b18
-SHA1 (patch-dselect_Makefile.am) = 9d44d967ff7baa26260948ccdfebe690041bc979
