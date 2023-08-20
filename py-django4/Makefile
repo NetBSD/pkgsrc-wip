@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Django-4.2.3
+DISTNAME=	Django-4.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
