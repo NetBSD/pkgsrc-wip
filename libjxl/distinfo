@@ -1,11 +1,8 @@
 $NetBSD$
 
-BLAKE2s (libjxl-0.6.1.tar.gz) = 81ffdea0d94c7a0e0640fd87d90babe817b4ca0215c29c3eb45eaba07f2479dd
-SHA512 (libjxl-0.6.1.tar.gz) = 302935d722160b0b288ac63301f9e95caf82eccf6ad76c4f4da6316a0314ee3562115932b1ceacb0d02708de0a07788992d3478cae73af0b90193f5769f9fb52
-Size (libjxl-0.6.1.tar.gz) = 16953185 bytes
-SHA1 (patch-CMakeLists.txt) = 037a77f2c258424fcc75f7eff2b75ae4cc150b19
-SHA1 (patch-deps.sh) = 7886018fe8f79f692865c852b2755e4b16a3ee72
+BLAKE2s (libjxl-0.8.2.tar.gz) = d76b602ecf1714635d063d52cda1389936181f239c108b44f54f1279718bd8a7
+SHA512 (libjxl-0.8.2.tar.gz) = 769f102c46755d11a705ce47ae9e2ef49627ae708f416693bf1293aeeb713934baf4466e45b9c70b04ec1fc8b4a00d5ca7688c8ca03f0a91c9a15252c522a887
+Size (libjxl-0.8.2.tar.gz) = 1612062 bytes
+SHA1 (patch-deps.sh) = 5dcdb36e97f612d921d5bf95211ba19dc57a389a
 SHA1 (patch-lib_jxl_base_os__macros.h) = 083d97beeec362271fa1ce515204332f1d8938e6
-SHA1 (patch-plugins_gdk-pixbuf_CMakeLists.txt) = 1f73463f206d92e3f4a5ead0ffc8d99257ca6677
-SHA1 (patch-plugins_gimp_CMakeLists.txt) = fda9e3f42bf71848bb7348219ae06839f0f1c93c
-SHA1 (patch-tools_cpu_os__specific.cc) = 8cdd77ae04ad80e09c4e46ef1de29ba71cebc0b7
+SHA1 (patch-plugins_gdk-pixbuf_CMakeLists.txt) = 6aac2ff940087d453ddcd74f2a18436ca0146508

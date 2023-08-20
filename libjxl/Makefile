@@ -13,7 +13,10 @@ CMAKE_ARGS+=	-DJPEGXL_VERSION=${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_BROTLI=ON
 CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_GTEST=ON
 CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_HWY=ON
+CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_LCMS2=ON
 CMAKE_ARGS+=	-DJPEGXL_ENABLE_SJPEG=OFF
+CMAKE_ARGS+=	-DJPEGXL_ENABLE_SKCMS=OFF
+CMAKE_ARGS+=	-DJPEGXL_ENABLE_PLUGINS=OFF
 
 REPLACE_BASH=	deps.sh
 
@@ -24,13 +27,14 @@ PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 # The dependencies installed using deps.sh should be packaged
 # and buildlink3ed instead:
 # lodepng, sjpeg, skcms
-pre-configure:
-	cd ${WRKSRC} && ./deps.sh
+#pre-configure:
+#	cd ${WRKSRC} && ./deps.sh
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libhighway/buildlink3.mk"

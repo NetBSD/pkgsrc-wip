@@ -1,5 +1,2 @@
 Some dependencies need to be packaged and used before this can be
 imported.
-
-This package has known vulnerabilities, please investigate and fix if possible:
-  CVE-2023-0645, CVE-2023-35790

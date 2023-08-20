@@ -7,7 +7,7 @@ COMMENT=	JpegXL GDK pixbuf loader
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_TOOLS+=	bash pkg-config
+USE_TOOLS+=	bash pkg-config realpath
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
@@ -22,6 +22,12 @@ SUBST_MESSAGE.gpt=	Fixing path to gdk-pixbuf-thumbnailer
 SUBST_FILES.gpt=	plugins/gdk-pixbuf/jxl.thumbnailer
 SUBST_SED.gpt=		-e 's,/usr,${PREFIX},g'
 
+CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+# TODO:
+# The dependencies installed using deps.sh should be packaged
+# and buildlink3ed 
+# the next version 0.9 depends on lcms2 instead of skcms
 pre-configure:
 	cd ${WRKSRC} && ./deps.sh
 

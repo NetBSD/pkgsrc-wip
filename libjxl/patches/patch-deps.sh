@@ -2,9 +2,9 @@ $NetBSD$
 
 * don't require git
 
---- deps.sh.orig	2021-10-04 18:02:44.000000000 +0000
+--- deps.sh.orig	2023-08-18 15:54:41.998155227 +0000
 +++ deps.sh
-@@ -57,16 +57,6 @@ download_github() {
+@@ -59,17 +59,6 @@ download_github() {
  
  
  main() {
@@ -15,9 +15,10 @@ $NetBSD$
 -  git submodule update --init --recursive
 -
 -EOF
--    git -C "${MYDIR}" submodule update --init --recursive
+-    git -C "${MYDIR}" submodule update --init --recursive --depth 1 --recommend-shallow
 -    return 0
 -  fi
- 
+-
    # Sources downloaded from a tarball.
+   download_github third_party/brotli google/brotli
    download_github third_party/highway google/highway
