@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/gpatch
+lib/charset.alias
+share/man/man1/gpatch.1

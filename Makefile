@@ -1370,6 +1370,7 @@ SUBDIR+=	gotify
 SUBDIR+=	goyq
 SUBDIR+=	gp-toric
 SUBDIR+=	gpak
+SUBDIR+=	gpatch
 SUBDIR+=	gpick
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsdrive

@@ -1,0 +1,12 @@
+This is GNU patch, which applies diff files to original files.
+
+This version of patch has many changes made by the Free Software Foundation.
+They add support for:
+ * handling arbitrary binary data and large files
+ * the unified context diff format that GNU diff can produce
+ * merging into files instead of creating reject files
+ * making GNU Emacs-style backup files
+ * improved interaction with RCS and SCCS
+ * the GNU conventions for option parsing and configuring and compilation.
+ * better POSIX compliance
+They also fix some bugs.
