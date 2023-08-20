@@ -1,13 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	apk-tools-v3.0.0_pre0
+DISTNAME=	apk-tools-v3.0.0_pre0nb2
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	misc
 MASTER_SITES=	https://nishi.e3t.cc/
 
 MAINTAINER=	nishi@nishi.boats
 HOMEPAGE=	https://git.alpinelinux.org/apk-tools/
-COMMENT=	Alpine Package Manager Tools
+COMMENT=	Alpine Package Keeper Tools
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/apk-tools
