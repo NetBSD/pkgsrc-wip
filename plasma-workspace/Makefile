@@ -15,7 +15,7 @@ DEPENDS+=	kactivitymanagerd>=${PLASMAVER}:../../wip/kactivitymanagerd
 #DEPENDS+=	kde-cli-tools>=${PLASMAVER}:../../wip/kde-cli-tools
 #DEPENDS+=	kwin>=${PLASMAVER}:../../wip/kwin
 DEPENDS+=	kwin>=5.12.5:../../wip/kwin
-DEPENDS+=	milou>=${PLASMAVER}:../../wip/milou
+DEPENDS+=	milou>=${PLASMAVER}:../../sysutils/milou
 DEPENDS+=	plasma-integration>=${PLASMAVER}:../../wip/plasma-integration
 
 USE_TOOLS+=	gmake msgmerge pkg-config
