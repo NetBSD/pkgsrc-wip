@@ -5336,6 +5336,7 @@ SUBDIR+=	swftools
 SUBDIR+=	swift
 SUBDIR+=	swift-git
 SUBDIR+=	swig4
+SUBDIR+=	swinehub
 SUBDIR+=	swisseph
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid

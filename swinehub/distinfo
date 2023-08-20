@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (swinehub-1.501.tar.gz) = 95856dc918a866b6e0b82326286aa25ce57f28216c43d138958fee2bf039e4d8
+SHA512 (swinehub-1.501.tar.gz) = 392e16c9efefd95318a7c470577dab2160a32e9a2e30d2c7747cc942efd7ecb396c423dea2bc6badcdb90de670b34ebdd9bc510a44252b02610be1e0efefdd3d
+Size (swinehub-1.501.tar.gz) = 65063 bytes
+SHA1 (patch-GNUmakefile.in) = 325d2b3a4071720f0e56d89ca8b4f722041dbe0b

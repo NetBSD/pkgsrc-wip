@@ -1,0 +1,7 @@
+@comment $NetBSD$
+var/swinehub/auth
+var/swinehub/authz
+var/swinehub/htdocs/icon.png
+var/swinehub/htdocs/script.js
+var/swinehub/htdocs/style.css
+var/swinehub/swinehub.cgi

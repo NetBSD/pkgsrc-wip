@@ -1,0 +1,33 @@
+===========================================================================
+$NetBSD$
+
+To use SwineHub with Apache HTTPd, load them:
+  1. mod_dav_svn
+  2. mod_authz_svn
+
+and their dependencies.
+
+And write following lines to the config:
+
+DocumentRoot /usr/pkg/var/swinehub/htdocs
+<Directory /usr/pkg/var/swinehub/htdocs>
+	Request all granted
+</Directory>
+<Directory /usr/pkg/var/swinehub/swinehub.cgi>
+	Request all granted
+</Directory>
+ScriptAlias /sw /usr/pkg/var/swinehub/swinehub.cgi
+<Location /svn>
+        DAV svn
+        SVNParentPath /var/svn
+        SVNListParentPath on
+        AuthType Basic
+        AuthName "EEE++ tEam repositories"
+        AuthUserFile /usr/pkg/var/swinehub/auth
+	AuthzSVNAccessFile /usr/pkg/var/swinehub/authz
+        <LimitExcept GET PROPFIND OPTIONS REPORT>
+                Require valid-user
+        </LimitExcept>
+</Location>
+
+===========================================================================
