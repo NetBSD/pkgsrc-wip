@@ -1,0 +1,14 @@
+$NetBSD$
+
+This is NetBSD, not Linux.
+
+--- configure.ac.orig	2023-08-19 23:28:56.961018994 +0000
++++ configure.ac
+@@ -98,7 +98,6 @@ DPKG_LIB_Z
+ DPKG_LIB_BZ2
+ DPKG_LIB_LZMA
+ DPKG_LIB_ZSTD
+-DPKG_LIB_SELINUX
+ AS_IF([test "x$build_dselect" = "xyes"], [
+   DPKG_LIB_CURSES
+ ])

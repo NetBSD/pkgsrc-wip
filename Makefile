@@ -686,6 +686,7 @@ SUBDIR+=	dovecot2-fts-xapian
 SUBDIR+=	downtimed
 SUBDIR+=	doxy2man
 SUBDIR+=	dpic
+SUBDIR+=	dpkg
 SUBDIR+=	dps8m
 SUBDIR+=	dragbox-git
 SUBDIR+=	driftctl
