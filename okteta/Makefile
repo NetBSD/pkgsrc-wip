@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.35 2021/04/21 13:24:34 adam Exp $
 
-DISTNAME=	okteta-0.26.6
+DISTNAME=	okteta-0.26.12
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_KDE:=okteta/0.26.6/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=okteta/0.26.12/src/}
 
 HOMEPAGE=	https://kde.org/applications/utilities/okteta/
 COMMENT=	Hex Editor
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-USE_TOOLS+=	msgmerge
+USE_TOOLS+=	msgmerge pkg-config
 
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
