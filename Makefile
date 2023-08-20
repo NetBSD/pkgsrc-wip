@@ -1857,7 +1857,6 @@ SUBDIR+=	kea
 SUBDIR+=	kea-git
 SUBDIR+=	keama-git
 SUBDIR+=	kermit
-SUBDIR+=	kfind
 SUBDIR+=	kgamma5
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
