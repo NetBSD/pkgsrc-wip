@@ -5278,7 +5278,6 @@ SUBDIR+=	stacks
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
 SUBDIR+=	starfighter
-SUBDIR+=	stern
 SUBDIR+=	stksolver
 SUBDIR+=	stmd-git
 SUBDIR+=	stmpclean
