@@ -1,1 +1,16 @@
-Still need to get the distinfo, modules, and attempt compilation.
+Compiling fails due to an unknown reason.
+Errors:
+
+core/array_map.go:73:9: undefined: TYPE
+core/array_map.go:277:9: undefined: TYPE
+core/array_vector.go:70:9: undefined: TYPE
+core/buffer.go:34:9: undefined: TYPE
+core/buffered_reader.go:35:9: undefined: TYPE
+core/channel.go:36:9: undefined: TYPE
+core/data.go:25:14: undefined: linter_allData
+core/data.go:28:15: undefined: linter_jokerData
+core/data.go:31:14: undefined: linter_cljxData
+core/data.go:34:15: undefined: linter_cljData
+core/data.go:34:15: too many errors
+
+*** Error Code 1

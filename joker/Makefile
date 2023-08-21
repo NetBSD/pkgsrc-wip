@@ -15,7 +15,7 @@ INSTALLATION_DIRS+=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/joker ${DESTDIR}${PREFIX}/bin
 
-# .include "go-modules.mk"
+.include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
