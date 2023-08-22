@@ -27,6 +27,7 @@ man/man8/smtpctl.8
 man/man8/smtpd.8
 sbin/smtpctl
 sbin/smtpd
+share/doc/opensmtpd/README.pkgsrc
 share/examples/opensmtpd/aliases
 ${PLIST.mailwrapper}share/examples/opensmtpd/mailer.conf
 ${PLIST.pam}share/examples/opensmtpd/pam.d/smtp

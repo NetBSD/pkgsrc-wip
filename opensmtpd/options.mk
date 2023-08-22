@@ -49,8 +49,8 @@ pam-install:
 # the historical name.
 #
 .if !empty(PKG_OPTIONS:Mmailwrapper)
-post-install: install-aliases pam-install
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
+post-install: doc-install pam-install
+	${INSTALL_DATA} ${WRKSRC}/mailer.conf \
 		${DESTDIR}${EGDIR}/mailer.conf
 	${RUN}${LN} -sf ${PREFIX}/sbin/smtpctl \
 		${DESTDIR}${PREFIX}/libexec/opensmtpd/makemap
@@ -62,7 +62,7 @@ PLIST.mailwrapper=	yes
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 CONFLICTS+=	esmtp>=1.2 nullmailer-[0-9]* postfix-[0-9]* qmail-[0-9]*
 
-post-install: install-aliases pam-install
+post-install: doc-install pam-install
 .  for i in mailq makemap newaliases sendmail
 	${RUN}${LN} -sf ${PREFIX}/sbin/smtpctl	\
 		${DESTDIR}${PREFIX}/sbin/${i}
