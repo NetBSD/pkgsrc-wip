@@ -1,0 +1,4 @@
+#!/bin/sh
+# $NetBSD$
+set -e
+cd @@PREFIX@@/share/SDL2_testgamecontroller && @@PREFIX@@/libexec/testjoystick

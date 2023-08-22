@@ -78,6 +78,7 @@ SUBDIR+=	R-wellknown
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
+SUBDIR+=	SDL2_testgamecontroller
 SUBDIR+=	SNAP
 SUBDIR+=	SOGo5
 SUBDIR+=	SOPE5

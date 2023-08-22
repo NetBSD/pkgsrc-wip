@@ -1,0 +1,4 @@
+This package provides the game controller test application from SDL. You can
+plug in a joystick or gamepad to validate its functionality. The program
+also will generate a controller database mapping string for you, which is
+usually necessary in order to get SDL-based apps to recognize your device.

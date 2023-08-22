@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/controllermap
+bin/testgamecontroller
+bin/testjoystick
+libexec/controllermap
+libexec/testgamecontroller
+libexec/testjoystick
+share/SDL2_testgamecontroller/axis.bmp
+share/SDL2_testgamecontroller/button.bmp
+share/SDL2_testgamecontroller/controllermap.bmp
+share/SDL2_testgamecontroller/controllermap_back.bmp
+share/SDL2_testgamecontroller/icon.bmp
+share/SDL2_testgamecontroller/sample.bmp
