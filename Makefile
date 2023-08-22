@@ -5674,6 +5674,7 @@ SUBDIR+=	virt-manager
 SUBDIR+=	virtualbox
 SUBDIR+=	virtualbox-svn
 SUBDIR+=	virtualjaguar-git
+SUBDIR+=	virtualxt
 SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vis-editor
