@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sbapp-0.5.2
+DISTNAME=	sbapp-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python # TODO: add primary category
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sbapp/}
