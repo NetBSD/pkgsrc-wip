@@ -1,0 +1,24 @@
+If you get errors like:
+
+    [...] error: array subscript 0 is outside array bounds [...]
+
+use the workaround from this bug ticket:
+<https://gcc.gnu.org/bugzilla/show_bug.cgi?id=105523>
+
+    --param=min-pagesize=0
+
+The optimization for size is worse compared with GCC 10, even with -Oz.
+If the code uses interrupt handlers use:
+
+    -mcall-prologues
+
+The defaults for branch cost and reorder algorithm may produce larger code.
+Sometimes the following options give better results:
+
+    -mbranch-cost=10
+    -freorder-blocks-algorithm=stc
+
+Do not use type int for 8-Bit values. Even for static functions the optimizer
+may not detect that the additional bits will always be zero.
+
+(Optimization for size tested with ATtiny88)
