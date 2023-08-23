@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.2.0
+PKGVERSION=	2.2.1
 DISTNAME=	s5cmd-v${PKGVERSION}
 PKGNAME=	s5cmd-${PKGVERSION}
 CATEGORIES=	net
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-DEPENDS+=	go>=1.17:../../lang/go
+DEPENDS+=	go>=1.19:../../lang/go
 
 .include "go-modules.mk"
 # .include "../../mk/bsd.prefs.mk"
