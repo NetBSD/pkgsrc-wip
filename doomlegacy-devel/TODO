@@ -12,6 +12,7 @@ Part 25: Add UMAPINFO support
     => Module to parse and import data added
 [X] Hook keys into game engine
     => All keys should work now, up to the limits of the engine
+[X] Add support for "\n" line breaks in key "intertext".
 
 => Created upstream feature request ticket #100
 

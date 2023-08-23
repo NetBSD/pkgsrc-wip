@@ -225,17 +225,26 @@ static char *UMI_GetQString(doom_umi1_ts_state state, size_t *len)
 
 
 // Accept only printable ASCII characters. Others are replaced with '?'
-// If parameter 'multiline' is true, LF control characters are accepted too
+// If parameter 'multiline' is true:
+// - LF control characters are accepted too
+// - Escape sequences "\n" are converted to SP LF
 static void UMI_ConvertToASCII(char *str, size_t length, boolean multiline)
 {
     size_t i = 0;
 
     for (i = 0; length > i; ++i)
     {
-       if (multiline && 0x0A == str[i])
-           continue;
+        if (multiline && 0x0A == str[i])
+            continue;
 
-       if (0x20 > str[i] || 0x7E < str[i])
+        if (0 < i && 0x5C == str[i - 1u] && 'n' == str[i])
+        {
+            str[i - 1u] = ' ';
+            str[i] = 0x0A;
+            continue;
+        }
+
+        if (0x20 > str[i] || 0x7E < str[i])
             str[i] = '?';
     }
 }
