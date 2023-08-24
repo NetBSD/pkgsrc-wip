@@ -14,15 +14,15 @@ No eventfd on NetBSD 9 and older, fix build
  #include <poll.h>
  #include <sys/ioctl.h>
  
-@@ -97,6 +99,7 @@ void DMABufSurface::GlobalRefAdd() {
+@@ -147,6 +149,7 @@ void DMABufSurface::GlobalRefAdd() {
  }
  
  void DMABufSurface::GlobalRefCountCreate() {
 +#ifndef __NetBSD__
-   MOZ_ASSERT(!mGlobalRefCountFd);
-   mGlobalRefCountFd = eventfd(0, EFD_CLOEXEC | EFD_NONBLOCK | EFD_SEMAPHORE);
-   if (mGlobalRefCountFd < 0) {
-@@ -106,6 +109,7 @@ void DMABufSurface::GlobalRefCountCreate
+   LOGDMABUFREF(("DMABufSurface::GlobalRefCountCreate UID %d", mUID));
+   MOZ_DIAGNOSTIC_ASSERT(!mGlobalRefCountFd);
+   // Create global ref count initialized to 0,
+@@ -159,6 +162,7 @@ void DMABufSurface::GlobalRefCountCreate
      mGlobalRefCountFd = 0;
      return;
    }

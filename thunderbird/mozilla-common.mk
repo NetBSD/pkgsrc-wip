@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2023/02/05 09:05:28 he Exp $
+# $NetBSD: mozilla-common.mk,v 1.7 2023/07/09 19:02:07 abs Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -7,14 +7,13 @@
 .include "../../mk/bsd.prefs.mk"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	311
 
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
+USE_TOOLS+=		pkg-config perl gmake unzip zip
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 USE_LANGUAGES+=		c c++
@@ -106,12 +105,12 @@ CONFIGURE_ARGS+=	--disable-updater
 # RLBox WASM sandbox
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 # For wasm-ld command
-TOOL_DEPENDS+=		lld-[0-9]*:../../wip/lld
-.include "../../wip/wasi-libc/buildlink3.mk"
-.include "../../wip/wasi-libcxx/buildlink3.mk"
+TOOL_DEPENDS+=		lld-[0-9]*:../../devel/lld
+.include "../../lang/wasi-libc/buildlink3.mk"
+.include "../../lang/wasi-libcxx/buildlink3.mk"
 # NB the exact versions of the clang and wasi-compiler-rt dependencies must
 # be kept in sync, or build failures will occur due to path mismatches.
-.include "../../wip/wasi-compiler-rt/buildlink3.mk"
+.include "../../lang/wasi-compiler-rt/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-wasi-sysroot=${PREFIX}/wasi
 CONFIGURE_ENV+=		WASM_CC=${PREFIX}/bin/clang
 CONFIGURE_ENV+=		WASM_CXX=${PREFIX}/bin/clang++
@@ -119,11 +118,11 @@ CONFIGURE_ENV+=		WASM_CXX=${PREFIX}/bin/clang++
 CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 .endif
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
-SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
+#SUBST_CLASSES+=			fix-paths
+#SUBST_STAGE.fix-paths=		pre-configure
+#SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+#SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
+#SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
@@ -207,7 +206,7 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.53
 BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
-.include "../../wip/clang/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
 RUST_REQ=	1.41.0
 .include "../../lang/rust/rust.mk"
 # webrtc option requires internal libvpx

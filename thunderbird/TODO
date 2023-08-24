@@ -1,17 +1,40 @@
-Assertion failure: i < NUM_TEST_EV_ROOTS (Could not find built-in EV root), at /usr/work/mail/thunderbird/work/thunderbird-102.8.0/security/certverifier/ExtendedValidation.cpp:1246
-[ImapModuleLoader] Using nsImapService.cpp
-[NntpModuleLoader] Using NntpService.jsm
-[Pop3ModuleLoader] Using Pop3Service.jsm
-#01: aom_iwht4x4_16_add_sse2[/usr/pkg/lib/thunderbird/libxul.so +0x36a1f85]
-#02: void std::vector<std::vector<unsigned char, std::allocator<unsigned char> > const*, std::allocator<std::vector<unsigned char, std::allocator<unsigned char> > const*> >::_M_realloc_insert<std::vector<unsigned char, std::allocator<unsigned char> > const* co[/usr/pkg/lib/thunderbird/libxul.so +0x780c386]
-#03: std::__throw_bad_alloc()[/usr/pkg/lib/thunderbird/libxul.so +0x3caed12]
-#04: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::c[/usr/pkg/lib/thunderbird/libxul.so +0x3cbf755]
-#05: std::__throw_bad_alloc()[/usr/pkg/lib/thunderbird/libxul.so +0x3ca997f]
-#06: std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<ch[/usr/pkg/lib/thunderbird/libxul.so +0x4253304]
-#07: std::function<void (bool&&)>::operator()(bool&&) const[/usr/pkg/lib/thunderbird/libxul.so +0x4204e98]
-#08: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::c[/usr/pkg/lib/thunderbird/libxul.so +0x3cbe986]
-#09: PR_Select[/usr/pkg/lib/nspr/libnspr4.so +0x2a2f6]
-#10: __libc_thr_exit[/usr/lib/libpthread.so.1 +0xd2df]
-#11: _lwp_exit[/usr/lib/libc.so.12 +0x9b800]
-[1]   Segmentation fault (core dumped) /usr/pkg/lib/thunderbird/thunderbird "${@}"
+Still does not build:
 
+/usr/pkgsrc/wip/thunderbird/work/.cwrapper/bin/c++ -std=gnu++17 -o ../../../dist/bin/xpcshell -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-strong -I/usr/pkg/include -I/usr/include -I/usr/pkg/include/nspr -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/ffmpeg4 -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -fno-sized-deallocation -fno-aligned-new -O2 -I/usr/pkg/include -I/usr/include -I/usr/pkg/include/nspr -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/ffmpeg4 -I/usr/pkg/include/freetype2 -I/usr/pkg/include/harfbuzz -fno-exceptions -Dunix -fPIC -DPIC -fno-rtti -ffunction-sections -fdata-sections -fno-exceptions -fno-math-errno -pthread -pipe -gdwarf-4 -O2 -fomit-frame-pointer -funwind-tables  /usr/pkgsrc/wip/thunderbird/work/build/js/xpconnect/shell/xpcshell.list    -lpthread -Wl,-R/usr/pkg/lib/thunderbird -Wl,-zrelro -L/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -Wl,-R/usr/pkg/lib -L/usr/pkg/lib/nspr -Wl,-R/usr/pkg/lib/nspr -L/usr/pkg/lib/nss -Wl,-R/usr/pkg/lib/nss -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -L/usr/pkg/lib/ffmpeg4 -Wl,-R/usr/pkg/lib/ffmpeg4 -Wl,-z,noexecstack -Wl,-z,text -Wl,-z,relro -Wl,-z,nocopyreloc -Wl,-Bsymbolic-functions -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-rpath-link,/usr/pkgsrc/wip/thunderbird/work/build/dist/bin -Wl,-rpath-link,/usr/pkg/lib   -Wl,--export-dynamic -pie ../../../toolkit/library/build/libxul.so -L/usr/pkg/lib/nspr -Wl,-R/usr/pkg/lib/nspr -lplds4 -lplc4 -lnspr4 -L/usr/pkg/lib -lgdk-3 -lpangocairo-1.0 -lharfbuzz -lpango-1.0 -latk-1.0 -lgtk-3 -lcairo-gobject -lgdk_pixbuf-2.0 -lgio-2.0 -lcairo -lglib-2.0 -lintl -Wl,-R/usr/pkg/lib -lgobject-2.0
+ld: ../../../toolkit/library/build/libxul.so: undefined reference to `ld: ../../toolkit/library/build/libxul.so: undefined reference to `malloc_usable_sizemalloc_usable_size'
+
+However, work/build/config.log contains:
+
+INFO: checking for malloc_usable_size... 
+DEBUG: Creating `/tmp/conftest.p_ow_n0u.c` with content:
+DEBUG: | /* Override any gcc2 internal prototype to avoid an error.  */
+DEBUG: | /* We use char because int might match the return type of a gcc2
+DEBUG: |     builtin and then its argument prototype would still apply.  */
+DEBUG: | char malloc_usable_size();
+DEBUG: | int
+DEBUG: | main(void)
+DEBUG: | {
+DEBUG: | malloc_usable_size();
+DEBUG: |   ;
+DEBUG: |   return 0;
+DEBUG: | }
+DEBUG: Executing: `/usr/pkgsrc/wip/thunderbird/work/.cwrapper/bin/gcc -std=gnu99 /tmp/conftest.p_ow_n0u.c`
+DEBUG: The command returned non-zero exit status 1.
+DEBUG: Its error output was:
+DEBUG: | ld: /tmp//ccQbPi0w.o: in function `main':
+DEBUG: | conftest.p_ow_n0u.c:(.text+0xa): undefined reference to `malloc_usable_size'
+INFO: no
+ 
+But it's apparently despite this check still being used unconditionally.  What gives?
+
+Our <malloc.h> contains
+
+size_t malloc_usable_size(const void *);
+
+but our libc.so doesn't define it, only
+
+: {67} nm -op /lib/libc.so | grep usable_si
+/lib/libc.so:000000000012134c T __je_malloc_usable_size
+: {68} 
+
+How to deal?

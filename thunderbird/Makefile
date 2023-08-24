@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.295 2023/05/06 19:09:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.296 2023/08/14 05:24:48 wiz Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-PKGREVISION=	3
-TB_VER=		102.8.0
+#PKGREVISION=	3
+TB_VER=		115.1.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +17,7 @@ USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	# empty
 PLIST_SRC+=	${PLIST_SRC_DFLT}
+GCC_REQD+=	8
 
 DEPENDS+=	libotr-[0-9]*:../../chat/libotr
 
@@ -35,6 +36,9 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}-bin
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
 
+# Workaround for https://bugs.llvm.org/show_bug.cgi?id=46366
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-fexperimental-new-pass-manager
+
 .include "../../mk/bsd.prefs.mk"
 
 CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/chrome/toolkit/content/global/buildconfig.html
@@ -50,8 +54,8 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/chrome/messenger/content/messenger/build
 CKSUM_CRATES+=	third_party/rust/libc
 
 # patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs
-CKSUMS+=	cb1560bf8ffcc7b2726a27b433efac90e726292960626f3064bd2c6b7f861a55
-CKSUMS+=	1159c20556ff4f50b7140ef4e7f5ac63e3098d9117784794c944228fa7460efb
+CKSUMS+=	107a4aa396b8383c66e0ace2f941450b4b69146558cdc4d9fbe33eeab51760f1
+CKSUMS+=	3aa5bbc6bec675641c8cb02342022256435ea4f958bfa3832344dba6847ba5ea
 
 #CKSUM_CRATES+=	third_party/rust/getrandom
 
@@ -78,9 +82,9 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
-	cd ${WRKSRC}${MOZILLA_DIR} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
-	cd ${WRKSRC}${MOZILLA_DIR}/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+#	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+#	cd ${WRKSRC}${MOZILLA_DIR} && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
+#	cd ${WRKSRC}${MOZILLA_DIR}/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf-2.13
 	touch ${WRKSRC}/.mozconfig
 
 do-build:
