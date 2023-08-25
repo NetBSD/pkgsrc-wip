@@ -16,7 +16,9 @@
 //      Support for additional map information in UMAPINFO format.
 //
 // -----------------------------------------------------------------------------
-
+//
+// [MB] 2023-08-25: Register zone memory as libdoom-umapinfo memory manager
+//
 // [MB] 2023-01-21: Support for Rev 2.2 added
 //      Description of UMAPINFO lump format:
 //      https://doomwiki.org/wiki/UMAPINFO
@@ -47,11 +49,44 @@ umapinfo_t umapinfo = { NULL, NULL, false };
 
 
 // -----------------------------------------------------------------------------
-// Memory management
+// C-style API for memory management
 
 static void *UMI_Malloc(size_t memsize)
 {
     return Z_Malloc(memsize, PU_STATIC, 0);
+}
+
+
+static void *UMI_Realloc(void *ptr_old, size_t memsize_new)
+{
+    void *ptr_new = Z_Malloc(memsize_new, PU_STATIC, 0);
+
+    if (NULL != ptr_new)
+    {
+        if (NULL != ptr_old)
+        {
+            int memsize_tmp = Z_Datasize(ptr_old);
+
+            if (0 > memsize_tmp)
+            {
+                Z_Free(ptr_new);
+                ptr_new = NULL;
+            }
+            else
+            {
+                // Data of type int must fit into size_t
+                size_t memsize_old = memsize_tmp;
+
+                if (memsize_new < memsize_old)
+                    memcpy(ptr_new, ptr_old, memsize_new);
+                else
+                    memcpy(ptr_new, ptr_old, memsize_old);
+                Z_Free(ptr_old);
+            }
+        }
+    }
+
+    return ptr_new;
 }
 
 
@@ -774,8 +809,7 @@ void UMI_LoadUMapInfoLump(lumpnum_t lumpnum)
     assert(0 <= len);
 
     // libdoom-umapinfo needs a memory manager with realloc() equivalent
-    // The zone memory module currently does not provide such a function
-    //doom_umi1_i_register_mmanager(UMI_Realloc, UMI_Free);
+    doom_umi1_register_mmanager(UMI_Realloc, UMI_Free);
 
     {
         int            retval  = DOOM_UMI1_ERROR_MEMORY;

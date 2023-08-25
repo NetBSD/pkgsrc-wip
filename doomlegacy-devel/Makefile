@@ -133,12 +133,13 @@ do-install:
 # Ensure that at least the shareware Episode 1 of Doom is available
 DEPENDS+=		doom1-[0-9]*:../../games/doom1
 
-BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.3
+BUILDLINK_API_DEPENDS.zlib+=			zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.7
+BUILDLINK_API_DEPENDS.SDL_mixer+=		SDL_mixer>=1.2.7
 .include "../../audio/SDL_mixer/buildlink3.mk"
-BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.10
+BUILDLINK_API_DEPENDS.SDL+=			SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libdoom-umapinfo+=	libdoom-umapinfo>=1.0.0rc5
 .include "../../wip/libdoom-umapinfo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

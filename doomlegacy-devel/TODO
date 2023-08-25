@@ -13,6 +13,7 @@ Part 25: Add UMAPINFO support
 [X] Hook keys into game engine
     => All keys should work now, up to the limits of the engine
 [X] Add support for "\n" line breaks in key "intertext".
+[X] Use Doom zone memory as libdoom-umapinfo memory manager
 
 => Created upstream feature request ticket #100
 
@@ -23,6 +24,14 @@ Part 26: Incorrect voodoo doll behaviour
     Voodoo doll transfers damage to the player, but seems to not take thrust
     (is not pushed away e.g. from an explosion as expected).
     => Reported upstream in ticket #688
+    No fix required. Vanilla behaviour can be configured via menu.
+
+
+Part 27: Some bossactions are not Vanilla-compatible
+====================================================
+[X] Player stuck in Atonement (map 01)
+    => Reported upstream in ticket #690
+    Proposed patch may break existing WAD files.
 
 
 EOF
