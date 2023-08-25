@@ -5258,6 +5258,7 @@ SUBDIR+=	splix
 SUBDIR+=	spot
 SUBDIR+=	spread4
 SUBDIR+=	spyder
+SUBDIR+=	sqlc
 SUBDIR+=	sqlux
 SUBDIR+=	squeak5
 SUBDIR+=	squeak5-vm
