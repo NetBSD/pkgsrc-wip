@@ -16,16 +16,15 @@ HOMEPAGE=	https://github.com/ncbi/sra-tools
 COMMENT=	NCBI's toolkit for handling data in INSDC Sequence Read Archives
 LICENSE=	public-domain AND gnu-lgpl-v2.1
 
-# Upstream explicitly supports specific platforms
-# Untested on other platforms, aarch64 support was recently added upstream
+# Upstream only supports specific platforms
 ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
 
-# The config.c and file-path.posix.cpp reinplaces follow
+# The config.c and file-path.posix.cpp substs follow
 # static patches.  Run "make clean patch" before updating
-# those patches so this reinplace does not get added to them.
+# those patches so this subst does not get added to them.
 SUBST_CLASSES+=		etcdir
 SUBST_STAGE.etcdir=	pre-configure
 SUBST_SED.etcdir+=	-e 's|"/etc/ncbi"|"${PREFIX}/etc/ncbi"|g'
@@ -61,14 +60,14 @@ SUBST_FILES.srarpath+=	cmake-pkgsrc-build/ngs/ngs-sdk/CMakeFiles/*/link.txt
 
 pre-configure:
 .if ${OPSYS} == NetBSD
-	# Incorrect code found before bsd/byteswap.h
-	#ifndef __NetBSD__ doesn't help
+	# Incorrect gcc/x86_64/byteswap.h found before correct bsd/byteswap.h
+	# Adding #ifndef __NetBSD__ to gcc/x86_64/byteswap.h doesn't work
 	${RM} -f ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
 .endif
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
 .if ${OPSYS} == Darwin
-	# Unsure how to prevent cmake from generating @rpath in the first place
-	# No instances of @rpath or -install_name in any files before configure
+	# Unsure how to prevent cmake from emitting @rpath in the first place
+	# No instances of @rpath or -install_name in any files before cmake
 	for f in ${WRKSRC}/ncbi-vdb/build/libs/ncbi-vdb/CMakeFiles/*/link.txt; do \
 		${SED} -e 's|@rpath|${PREFIX}/lib|g' $${f} > $${f}.tmp && ${MV} -f $${f}.tmp $${f}; \
 	done
@@ -82,13 +81,12 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
 	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
-	# FIXME: Build is detecting Java somehow
+	# FIXME: Can we prevent build from detecting java?
 	${RM} -rf ${DESTDIR}${PREFIX}/jar
 	${RM} -rf ${DESTDIR}${PREFIX}/share/examples-java
 	${RM} -rf ${DESTDIR}${PREFIX}/share/javadoc
 
-# Shouldn't epoll bl3 check this?
-.if ${OPSYS} != Linux
+.if ${OPSYS} != Linux && defined(OPSYS_HAS_KQUEUE)
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .endif
 
@@ -97,6 +95,4 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-# FIXME: cmake is not actually finding this
-.include "../../security/mbedtls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
