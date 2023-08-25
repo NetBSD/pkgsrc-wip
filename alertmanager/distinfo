@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.33 2022/07/21 19:12:58 tnn Exp $
 
-BLAKE2s (alertmanager-0.25.0.tar.gz) = 3acf5dad758b982c9a93ac90c117457ac9985d598bd685aed3aef7d9f46dfaa5
-SHA512 (alertmanager-0.25.0.tar.gz) = 5628592694b684f5dd2097232720b472fbcfd474546da5270214c2d3c2c146aefd322e0432bb8de4606133dd27d0cfdacc6eb500a8b0bac55cd7023645cc0d1f
-Size (alertmanager-0.25.0.tar.gz) = 2167761 bytes
+BLAKE2s (alertmanager-0.25.1.tar.gz) = 93c329237affda5e9ca8cd9498ad8a2833e620f39e4a979562789db4090a873e
+SHA512 (alertmanager-0.25.1.tar.gz) = 2489a61b6e28d132e00f5906ffdcb50261c728210371d6a8696f19ecdc0055befb35e88f170b99e9cae7030818736c955ce870c2b5b63eeb5e324ba17c412f0c
+Size (alertmanager-0.25.1.tar.gz) = 2168044 bytes
 BLAKE2s (cloud.google.com_go_@v_v0.100.2.mod) = 6b0f28a5b451457b741799da390ec9083b3f23e5a178b3a0b457603c1398b34e
 SHA512 (cloud.google.com_go_@v_v0.100.2.mod) = 510c4bd48b8d3cd45b69b5f46729e8ce34d52255848d2b0856410c621c5dd3b302df607ac71dcd2bf29aacbe3087233d9452c71d78649de9330d3d3ad556c7a9
 Size (cloud.google.com_go_@v_v0.100.2.mod) = 531 bytes
