@@ -41,8 +41,8 @@ MKPIE_SUPPORTED=	no	# Temporary fix
 # Resolve a conflict with libproj by moving libs to a subdir
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
-# pkglint warning
-# CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
+# pkglint warning, but build fails on NetBSD without it
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
 WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
 .include "../../mk/bsd.prefs.mk"
@@ -69,6 +69,7 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX} -name '\.git*' -exec rm -rf '{}' \;
 .if ${OPSYS} != Darwin
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
+	${RM} -rf ${WRKDIR}/.home
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
