@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.57 2023/01/29 21:16:48 ryoon Exp $
 
-VERSION=	20230611
+VERSION=	20230823
 DISTNAME=	chirp-${VERSION}
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
@@ -17,8 +17,8 @@ MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
 #   https://chirp.danplanet.com/issues/8067
 #   https://chirp.danplanet.com/news/15
 
-MAINTAINER=	dbj@NetBSD.org
-#MAINTAINER+=	gdt@NetBSD.org
+MAINTAINER+=	gdt@NetBSD.org
+#MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://chirp.danplanet.com/
 COMMENT=	Tool for programming Amateur Radio HTs
 LICENSE=	gnu-gpl-v3

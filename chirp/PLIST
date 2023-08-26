@@ -292,6 +292,9 @@ ${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyo
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.py
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.pyc
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.pyo
+${PYSITELIB}/chirp/drivers/kenwood_d7.py
+${PYSITELIB}/chirp/drivers/kenwood_d7.pyc
+${PYSITELIB}/chirp/drivers/kenwood_d7.pyo
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.py
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyc
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyo
@@ -490,6 +493,9 @@ ${PYSITELIB}/chirp/drivers/uv6r.pyo
 ${PYSITELIB}/chirp/drivers/uvb5.py
 ${PYSITELIB}/chirp/drivers/uvb5.pyc
 ${PYSITELIB}/chirp/drivers/uvb5.pyo
+${PYSITELIB}/chirp/drivers/uvk5.py
+${PYSITELIB}/chirp/drivers/uvk5.pyc
+${PYSITELIB}/chirp/drivers/uvk5.pyo
 ${PYSITELIB}/chirp/drivers/vgc.py
 ${PYSITELIB}/chirp/drivers/vgc.pyc
 ${PYSITELIB}/chirp/drivers/vgc.pyo
@@ -569,6 +575,7 @@ ${PYSITELIB}/chirp/share/chirp.ico
 ${PYSITELIB}/chirp/share/chirp.png
 ${PYSITELIB}/chirp/share/chirp.svg
 ${PYSITELIB}/chirp/share/chirpw.1
+${PYSITELIB}/chirp/share/plus-icon.png
 ${PYSITELIB}/chirp/share/welcome_screen.png
 ${PYSITELIB}/chirp/sources/__init__.py
 ${PYSITELIB}/chirp/sources/__init__.pyc
@@ -579,6 +586,9 @@ ${PYSITELIB}/chirp/sources/base.pyo
 ${PYSITELIB}/chirp/sources/dmrmarc.py
 ${PYSITELIB}/chirp/sources/dmrmarc.pyc
 ${PYSITELIB}/chirp/sources/dmrmarc.pyo
+${PYSITELIB}/chirp/sources/przemienniki.py
+${PYSITELIB}/chirp/sources/przemienniki.pyc
+${PYSITELIB}/chirp/sources/przemienniki.pyo
 ${PYSITELIB}/chirp/sources/radioreference.py
 ${PYSITELIB}/chirp/sources/radioreference.pyc
 ${PYSITELIB}/chirp/sources/radioreference.pyo
@@ -589,9 +599,9 @@ ${PYSITELIB}/chirp/stock_configs/AU NZ UHF Citizens Band.csv
 ${PYSITELIB}/chirp/stock_configs/DE Freenet Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/EU LPD and PMR Channels.csv
 ${PYSITELIB}/chirp/stock_configs/FR Marine VHF Channels.csv
-${PYSITELIB}/chirp/stock_configs/KDR444.csv
-${PYSITELIB}/chirp/stock_configs/NOAA Weather Alert.csv
+${PYSITELIB}/chirp/stock_configs/PL Calling Frequencies and Simplex.csv
 ${PYSITELIB}/chirp/stock_configs/SE Jaktradio 155MHz.csv
+${PYSITELIB}/chirp/stock_configs/SE NO KDR444.csv
 ${PYSITELIB}/chirp/stock_configs/UK Business Radio Simple Light Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/US 60 meter channels (Center).csv
 ${PYSITELIB}/chirp/stock_configs/US 60 meter channels (Dial).csv
@@ -600,6 +610,7 @@ ${PYSITELIB}/chirp/stock_configs/US Calling Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/US FRS and GMRS Channels.csv
 ${PYSITELIB}/chirp/stock_configs/US MURS Channels.csv
 ${PYSITELIB}/chirp/stock_configs/US Marine VHF Channels.csv
+${PYSITELIB}/chirp/stock_configs/US NOAA Weather Alert.csv
 ${PYSITELIB}/chirp/util.py
 ${PYSITELIB}/chirp/util.pyc
 ${PYSITELIB}/chirp/util.pyo
