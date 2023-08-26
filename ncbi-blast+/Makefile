@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2023/05/28 22:48:27 bacon Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/14 05:23:51 wiz Exp $
 
-DISTNAME=	ncbi-blast-2.14.0+-src
+DISTNAME=	ncbi-blast-2.14.1+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-CATEGORIES=	wip biology
+CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
 
@@ -10,6 +10,8 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
+
+USE_CXX_FEATURES+=	c++17
 
 # Nobody does bioinformatics on 32-bit processors anymore
 ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
@@ -39,7 +41,8 @@ MKPIE_SUPPORTED=	no	# Temporary fix
 # Resolve a conflict with libproj by moving libs to a subdir
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
+# pkglint warning
+# CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
 WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
 .include "../../mk/bsd.prefs.mk"
