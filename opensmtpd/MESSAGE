@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD$
-
-Sample configuration files have been installed at ${PKG_SYSCONFDIR}/smtpd.
-
-Check the README available at ${DOCDIR}.
-
-===========================================================================
