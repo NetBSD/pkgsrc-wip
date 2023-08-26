@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-r
 TOOL_DEPENDS+=	${PYPKGPREFIX}-twine>=0:../../net/py-twine
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=0:../../devel/py-intervaltree
-DEPENDS+=	${PYPKGPREFIX}-json5>=0:../../wip/py-json5
+DEPENDS+=	${PYPKGPREFIX}-json5>=0:../../textproc/py-json5
 DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.4.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=0:../../misc/py-tqdm
