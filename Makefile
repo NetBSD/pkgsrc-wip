@@ -2325,7 +2325,6 @@ SUBDIR+=	mintotp
 SUBDIR+=	minuit2
 SUBDIR+=	miracl
 SUBDIR+=	mirage
-SUBDIR+=	mirmake
 SUBDIR+=	miro
 SUBDIR+=	mistserver
 SUBDIR+=	mixer.tk
