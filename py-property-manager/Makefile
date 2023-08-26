@@ -10,10 +10,9 @@ HOMEPAGE=	https://property-manager.readthedocs.io
 COMMENT=	Useful property variants for Python programming
 LICENSE=	mit
 
-DEPENDS+=	#${PYPKGPREFIX}-humanfriendly>=8.0:../../wip/py-humanfriendly
-DEPENDS+=	#${PYPKGPREFIX}-verboselogs>=1.1:../../wip/py-verboselogs
-
-TEST_DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=5.0:../../wip/py-coloredlogs
+DEPENDS+=	#${PYPKGPREFIX}-humanfriendly>=8.0:../../textproc/py-humanfriendly
+DEPENDS+=	#${PYPKGPREFIX}-verboselogs>=1.1:../../devel/py-verboselogs
+TEST_DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=5.0:../../devel/py-coloredlogs
 
 
 USE_LANGUAGES=	# none

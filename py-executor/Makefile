@@ -12,9 +12,9 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=3.5:../../wip/py-coloredlogs
-DEPENDS+=	${PYPKGPREFIX}-humanfriendly>=8.0:../../wip/py-humanfriendly
-DEPENDS+=	${PYPKGPREFIX}-property-manager>=3.0:../../wip/py-humanfriendly
+DEPENDS+=	${PYPKGPREFIX}-coloredlogs>=3.5:../../devel/py-coloredlogs
+DEPENDS+=	${PYPKGPREFIX}-humanfriendly>=8.0:../../textproc/py-humanfriendly
+DEPENDS+=	${PYPKGPREFIX}-property-manager>=3.0:../../wip/py-property-manager
 
 USE_LANGUAGES=	# none
 
