@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.5.2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.1:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-ansicolors>=1.1.8:../../wip/py-ansicolors
-DEPENDS+=	${PYPKGPREFIX}-humanfriendly>=8.2:../../wip/py-humanfriendly
+DEPENDS+=	${PYPKGPREFIX}-humanfriendly>=8.2:../../textproc/py-humanfriendly
 DEPENDS+=	${PYPKGPREFIX}-yaspin>=1.0.0:../../wip/py-yaspin
 
 USE_LANGUAGES=	c++
