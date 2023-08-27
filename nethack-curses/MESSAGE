@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD$
+
+You can run the curses NetHack by simply typing: "nethack curses".
+It assumes a terminal with a black background.
+
+===========================================================================
