@@ -58,4 +58,5 @@ BUILD_TARGET_OPSYS=	netbsd
 
 BUILD_TARGET=	${BUILD_TARGET_OPSYS}${BUILD_TARGET_OPTIONS:ts}
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
