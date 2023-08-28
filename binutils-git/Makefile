@@ -6,7 +6,7 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=bminor/}
 GITHUB_PROJECT= binutils-gdb
 GITHUB_TAG=     463b1a1ad2c573252b16465ab13cbb4f21975b6a
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/binutils/
 COMMENT=	GNU binary utilities
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
