@@ -1,13 +1,14 @@
 # $NetBSD$
 #
 
-DISTNAME=	atac-seq-1.2.1
+DISTNAME=	atac-seq-1.2.2
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
 OWNER=		bacon@NetBSD.org
 COMMENT=	Core tools needed for ATAC-Seq analysis
 
+DEPENDS+=	sra-tools>0:../../wip/sra-tools
 DEPENDS+=	fastq-trim>0:../../wip/fastq-trim
 DEPENDS+=	fastqc>0:../../biology/fastqc
 DEPENDS+=	biolibc-tools>0:../../wip/biolibc-tools
