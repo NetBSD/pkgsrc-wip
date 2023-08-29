@@ -1,8 +1,7 @@
 $NetBSD$
 
-Move to config files via the data mechanism out of /etc and
-into share/examples (where they will be copied to etc/
-during pkg install).
+Move config files /etc and into share/examples
+(use CONF_FILES instead).
 
 --- doc/Makefile.am.orig	2023-03-16 21:19:58.827408077 +0100
 +++ doc/Makefile.am	2023-03-16 21:20:56.494030533 +0100
