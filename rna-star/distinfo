@@ -8,3 +8,4 @@ SHA1 (patch-SharedMemory.cpp) = e4b97d68ddeb7ed2c7da66378f253ff4cd42abee
 SHA1 (patch-SoloBarcode.cpp) = a939a97cadd05b1ec6b6dfcddb469acd5072b0e8
 SHA1 (patch-SuffixArrayFuns.cpp) = b7c623c02277fdfc2bd9d6fa8068afafeb46b1cf
 SHA1 (patch-bamSortByCoordinate.cpp) = e91a4ac9f04beb29c95c7bfbb5d89c5bf41aca41
+SHA1 (patch-opal_opal.cpp) = e41a9981fbaf43d18264fc4ac13163501aac93bb
