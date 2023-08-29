@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	rna-seq-1.2.2
+DISTNAME=	rna-seq-1.2.3
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
