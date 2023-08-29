@@ -1,35 +1,36 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	u-boot
-GITHUB_TAG=	refs/tags/v2023.04
-DISTNAME=	v2023.04
-PKGNAME=	${GITHUB_PROJECT}-tools-${DISTNAME:S,^v,,}
+UBOOT_VERSION=	2023.07
+DISTNAME=	u-boot-${UBOOT_VERSION}
+PKGNAME=	u-boot-tools-${UBOOT_VERSION:S/-/./}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=u-boot/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+MASTER_SITES?=	ftp://ftp.denx.de/pub/u-boot/
+EXTRACT_SUFX?=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/u-boot/u-boot/
-COMMENT=	U-Boot tools
+HOMEPAGE=	https://www.denx.de/wiki/U-Boot
+COMMENT=	Das U-Boot, the Universal Boot Loader (tools)
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
-BUILD_TARGET=	defconfig oldconfig tools-only
+BUILD_TARGET=	defconfig tools-only
+MAKE_ENV+=	HOSTLDLIBS=-L${PREFIX}/lib
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	tools/Makefile
-SUBST_VARS.prefix=	PREFIX
-
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL} ${WRKSRC}/tools/dumpimage ${DESTDIR}${PREFIX}/bin
 	${INSTALL} ${WRKSRC}/tools/mkimage ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/doc/dumpimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/mkimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+do-test:
+	${WRKSRC}/tools/dumpimage -h
+	${WRKSRC}/tools/mkimage -h
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,3 +1,5 @@
 @comment $NetBSD$
 bin/dumpimage
 bin/mkimage
+man/man1/dumpimage.1
+man/man1/mkimage.1
