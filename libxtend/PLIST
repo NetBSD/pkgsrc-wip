@@ -7,6 +7,7 @@ include/xtend/dsv-rvs.h
 include/xtend/dsv.h
 include/xtend/fast-file-accessors.h
 include/xtend/fast-file-mutators.h
+include/xtend/fast-file-private.h
 include/xtend/fast-file-rvs.h
 include/xtend/fast-file.h
 include/xtend/file.h
