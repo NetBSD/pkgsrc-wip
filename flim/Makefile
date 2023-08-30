@@ -11,7 +11,7 @@ HOMEPAGE=	http://git.chise.org/elisp/flim/
 COMMENT=	Emacs lisp library for message representation/encoding
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-TOOL_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
+BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/flim \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
@@ -34,6 +34,10 @@ MAKEFLAGS.xemacs+=	XEMACS=${EMACS_BIN} \
 
 EMACS_MODULES=		base
 EMACS_BUILDLINK=	# empty
+
+post-patch:
+	${RM} -f ${WRKSRC}/hmac-def.el
+	${RM} -f ${WRKSRC}/hex-utile.el
 
 post-build:
 	cd ${WRKSRC}; for i in mime-en mime-ja; do			\
@@ -58,11 +62,11 @@ post-install:
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
 	done
 
-.include "../../wip/emacs-git/modules.mk"
+.include "../../editors/emacs/modules.mk"
 
 .if (${EMACS_FLAVOR} != "xemacs")
-BUILDLINK_API_DEPENDS.apel+=	apel>=10.7
-.include "../../wip/apel-git/buildlink3.mk"
+BUILDLINK_API_DEPENDS.apel+=	apel>=10.8
+.include "../../devel/apel/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

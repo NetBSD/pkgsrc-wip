@@ -7,11 +7,11 @@ BUILDLINK_TREE+=	flim
 FLIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flim+=	${EMACS_PKGNAME_PREFIX}flim>=1.14
-BUILDLINK_PKGSRCDIR.flim?=	../../devel/flim
+BUILDLINK_PKGSRCDIR.flim?=	../../local-mef/flim-git
 
 BUILDLINK_CONTENTS_FILTER.flim=	${EGREP} '.*\.el$$|.*\.elc$$'
 
-.include "../../wip/apel-git/buildlink3.mk"
+.include "../../devel/apel/buildlink3.mk"
 .endif # FLIM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-flim
