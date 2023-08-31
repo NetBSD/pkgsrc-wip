@@ -21,11 +21,11 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0.8.0:../../devel/py-test-doctestplus
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-mpl>=0.11:../../devel/py-test-mpl
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-mypy>=0:../../devel/py-test-mypy
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-remotedata>=0:../../devel/py-test-remotedata
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-remotedata>=0:../../net/py-test-remotedata
 TOOL_DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.12:../../textproc/py-alabaster
 TOOL_DEPENDS+=	${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.5:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../wip/py-black
+TOOL_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
