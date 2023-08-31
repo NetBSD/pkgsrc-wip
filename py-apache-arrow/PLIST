@@ -42,6 +42,7 @@ ${PYSITELIB}/pyarrow/_generated_version.pyc
 ${PYSITELIB}/pyarrow/_hdfs.pyx
 ${PYSITELIB}/pyarrow/_hdfsio.pyx
 ${PYSITELIB}/pyarrow/_hdfsio.so
+${PYSITELIB}/pyarrow/_json.pxd
 ${PYSITELIB}/pyarrow/_json.pyx
 ${PYSITELIB}/pyarrow/_json.so
 ${PYSITELIB}/pyarrow/_orc.pxd
@@ -91,11 +92,11 @@ ${PYSITELIB}/pyarrow/hdfs.py
 ${PYSITELIB}/pyarrow/hdfs.pyc
 ${PYSITELIB}/pyarrow/include/arrow/acero/accumulation_queue.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/aggregate_node.h
+${PYSITELIB}/pyarrow/include/arrow/acero/api.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/asof_join_node.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/benchmark_util.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/bloom_filter.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/exec_plan.h
-${PYSITELIB}/pyarrow/include/arrow/acero/groupby.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/hash_join.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/hash_join_dict.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/hash_join_node.h
@@ -427,9 +428,11 @@ ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/bignum.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/cached-powers.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/diy-fp.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/double-conversion.h
+${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/double-to-string.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/fast-dtoa.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/fixed-dtoa.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/ieee.h
+${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/string-to-double.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/strtod.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/double-conversion/utils.h
 ${PYSITELIB}/pyarrow/include/arrow/vendored/pcg/pcg_extras.hpp
