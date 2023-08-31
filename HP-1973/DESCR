@@ -1,0 +1,13 @@
+I love the HP-45 calculator. It's beautiful on the outside, but I
+wanted to show people that it's beautiful on the inside, too. So, as a
+coding and retrocomputing challenge I decided to rewrite an earlier,
+terminal-based simulator of mine in Python (but with standalone
+executables), with a GUI. As with all such 'just a few days on this'
+projects it spiralled out of control, and the result is HP-1973.
+
+It not only runs (included) ROM code from the HP-45, but also the
+HP-35 and the HP-80. You can select which calculator you wish to use
+when the application starts, and also have the option to choose
+between multiple ROM versions for a given calculator (with warnings if
+a ROM is known to contain bugs). In total, six calculator-ROM
+variations are included.

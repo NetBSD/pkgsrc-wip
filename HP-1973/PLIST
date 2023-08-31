@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/HP1973.py
+share/hp1973_calcs.json
+share/hp1973_help.json
+share/hp1973_prefs_linux.json
+share/hp1973_prefs_macos.json
+share/hp1973_prefs_windows.json
+@pkgdir share/HP1973
