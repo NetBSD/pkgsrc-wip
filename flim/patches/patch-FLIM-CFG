@@ -1,0 +1,14 @@
+$NetBSD$
+
+sync to  lexical-binding
+
+--- /tmp/wip/flim/work/flim-1.14.9/./FLIM-CFG	2006-12-21 02:40:42.000000000 +0900
++++ ././FLIM-CFG	2018-07-29 22:48:22.272294473 +0900
+@@ -13,6 +13,7 @@
+     (progn
+       (add-to-list 'default-load-path LISPDIR)
+       (add-to-list 'load-path LISPDIR)
++      (add-to-list 'load-path (expand-file-name "emu" LISPDIR))
+       (add-to-list 'load-path (expand-file-name "apel" LISPDIR))))
+ 
+ (if (boundp 'VERSION_SPECIFIC_LISPDIR)
