@@ -49,7 +49,7 @@ post-build:
 
 do-install: plist
 	cd ${WRKSRC};							\
-	grep -v '^@' ${PLIST} | grep -E '/site-(|packages/)lisp/flim/' | \
+	${GREP} -v '^@' ${PLIST} | ${EGREP} '/site-(packages/)?lisp/flim/' | \
 	while read file; do						\
 		file=$$( basename $$file );				\
 		${INSTALL_DATA} $$file					\
