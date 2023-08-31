@@ -1,6 +1,6 @@
 # $NetBSD$
 
-GITHUB_TAG=	2023.7.0
+GITHUB_TAG=	2023.8.1
 DISTNAME=	dask-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	dask
@@ -21,19 +21,22 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=       ${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
-DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas>=1.0:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-partd>=0.3.10:../../wip/py-partd
-DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-distributed>=2023.6.0:../../wip/py-distributed
-DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.1.1:../../wip/py-cloudpickle
+DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.5.0:../../wip/py-cloudpickle
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.7.1:../../sysutils/py-fsspec
-DEPENDS+=	${PYPKGPREFIX}-zict>=2.1.0:../../wip/py-zict
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-partd>=1.2.0:../../wip/py-partd
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-toolz>=0.10.0:../../devel/py-toolz
+DEPENDS+=	${PYPKGPREFIX}-distributed>=${GITHUB_TAG}:../../wip/py-distributed
+# Optional Dependencies
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.21:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.3:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-zict>=2.1.0:../../wip/py-zict
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.6.0*:../../devel/py-multipledispatch
