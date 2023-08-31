@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2023.7.0
+DISTNAME=	distributed-2023.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 GITHUB_PROJECT=	distributed
@@ -18,14 +18,19 @@ TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=       ${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.0.1:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=2.2.0:../../wip/py-cloudpickle
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-psutil>=5.0:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
-DEPENDS+=	${PYPKGPREFIX}-tornado>=6.0.3:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-tblib>=1.7.0:../../wip/py-tblib
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-locket>=1.0.0:../../wip/py-locket
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.7.2:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.0.5:../../devel/py-sortedcontainers
+DEPENDS+=	${PYPKGPREFIX}-tblib>=1.6.0:../../wip/py-tblib
+DEPENDS+=	${PYPKGPREFIX}-toolz>=0.10.0:../../devel/py-toolz
+DEPENDS+=	${PYPKGPREFIX}-tornado>=6.0.4:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.24.3:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-zict>=3.0.0:../../wip/py-zict
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-lz4>=3.1.10:../../archivers/py-lz4
 TEST_DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
