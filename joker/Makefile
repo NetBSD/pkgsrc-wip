@@ -7,7 +7,7 @@ GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		kevin.bloom@posteo.net
 HOMEPAGE=		https://joker-lang.org/
-COMMENT=		Small dialect of Clojure and Clojure(Script) linter
+COMMENT=		Clojure dialect and linter
 LICENSE=		epl-v1.0
 
 GO_BUILD_PATTERN=	.
