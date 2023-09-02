@@ -2,6 +2,7 @@
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.8.3
+CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.4
 CARGO_CRATE_DEPENDS+=	android-activity-0.4.1
 CARGO_CRATE_DEPENDS+=	android-properties-0.2.2
 CARGO_CRATE_DEPENDS+=	anstream-0.3.2
@@ -157,8 +158,8 @@ CARGO_CRATE_DEPENDS+=	raw-window-handle-0.5.2
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.3
-CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
-CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
+CARGO_CRATE_DEPENDS+=	regex-automata-0.3.6
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.7.4
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.0
 CARGO_CRATE_DEPENDS+=	rustix-0.37.19
 CARGO_CRATE_DEPENDS+=	ryu-1.0.13
