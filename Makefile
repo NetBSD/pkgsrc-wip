@@ -2499,7 +2499,6 @@ SUBDIR+=	netbsd-pf
 SUBDIR+=	netbsd-x11-i386
 SUBDIR+=	netclasses
 SUBDIR+=	netdata-git
-SUBDIR+=	nethack-curses
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
