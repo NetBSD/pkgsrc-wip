@@ -1,10 +1,6 @@
-$NetBSD$
-
-sync to  lexical-binding
-
 $NetBSD: patch-ab,v 1.1 2003/04/13 04:16:18 uebayasi Exp $
 
-Add missing directory entry
+Add direntry
 
 --- mime-en.texi.orig	Wed Oct  9 00:50:05 2002
 +++ mime-en.texi
