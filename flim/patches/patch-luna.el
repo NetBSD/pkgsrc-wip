@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./luna.el	2005-07-06 11:09:04.000000000 +0900
-+++ ././luna.el	2020-09-05 16:02:39.899396201 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/luna.el	2005-07-06 11:09:04.000000000 +0900
++++ ./luna.el	2023-08-31 08:29:38.593059572 +0900
 @@ -1,4 +1,4 @@
 -;;; luna.el --- tiny OOP system kernel
 +;;; luna.el --- tiny OOP system kernel  -*- lexical-binding: t -*-
@@ -79,7 +79,17 @@ sync to  lexical-binding
  
  
  ;; Return the index number of SLOT-NAME in CLASS.
-@@ -230,8 +228,8 @@
+@@ -220,6 +218,9 @@
+ ;;; @ instance (entity)
+ ;;;
+ 
++(defvar luna-next-methods nil)
++(defvar luna-current-method-arguments nil)
++
+ (defmacro luna-class-name (entity)
+   "Return class-name of the ENTITY."
+   `(aref ,entity 0))
+@@ -230,8 +231,8 @@
  (defmacro luna-get-obarray (entity)
    `(aref ,entity 1))
  
@@ -90,7 +100,7 @@ sync to  lexical-binding
  
  (defmacro luna-slot-index (entity slot-name)
    `(luna-class-slot-index (luna-find-class (luna-class-name ,entity))
-@@ -249,12 +247,13 @@
+@@ -249,12 +250,13 @@
    `(luna-class-find-functions (luna-find-class (luna-class-name ,entity))
  			      ,service))
  
@@ -107,7 +117,18 @@ sync to  lexical-binding
  	luna-current-method
  	luna-previous-return-value)
      (while (and luna-next-methods
-@@ -307,10 +306,11 @@
+@@ -269,10 +271,6 @@
+ 		    t))))
+     luna-previous-return-value))
+ 
+-(eval-when-compile
+-  (defvar luna-next-methods nil)
+-  (defvar luna-current-method-arguments nil))
+-
+ (defun luna-call-next-method ()
+   "Call the next method in the current method function.
+ A method function that has :around qualifier should call this function
+@@ -307,10 +305,11 @@
  ;;;
  
  ;; Find a method of ENTITY that handles MESSAGE, and call it with

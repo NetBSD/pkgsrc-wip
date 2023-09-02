@@ -39,11 +39,12 @@ post-patch:
 	${RM} -f ${WRKSRC}/hmac-def.el
 	${RM} -f ${WRKSRC}/hex-utile.el
 
+pre-configure:
+	${MKDIR} -p ${WRKDIR}/.home/.emacs.d/elpa
+	find ${WRKSRC} -name \*orig | xargs rm
+
 post-build:
 	cd ${WRKSRC}; for i in mime-en mime-ja; do			\
-		${RM} -f $${i}.info*;					\
-		${CP} $${i}.texi $${i}.texi.orig;			\
-		${PREFIX}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
 		makeinfo --force --no-validate $${i}.texi;		\
 	done
 

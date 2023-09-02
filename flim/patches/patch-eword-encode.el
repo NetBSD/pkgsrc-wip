@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./eword-encode.el	2007-09-06 16:48:50.000000000 +0900
-+++ ././eword-encode.el	2020-09-05 16:02:39.899126931 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/eword-encode.el	2007-09-06 16:48:50.000000000 +0900
++++ ./eword-encode.el	2023-08-31 08:29:38.589006246 +0900
 @@ -1,4 +1,4 @@
 -;;; eword-encode.el --- RFC 2047 based encoded-word encoder for GNU Emacs
 +;;; eword-encode.el --- RFC 2047 based encoded-word encoder for GNU Emacs  -*- lexical-binding: t -*-
@@ -37,7 +37,7 @@ sync to  lexical-binding
      (eword-encode-unstructured-field-body)))
  
  ;;; @ encoded-text encoder
-@@ -88,126 +88,75 @@
+@@ -88,126 +88,64 @@
    (let ((text (encoded-text-encode-string string encoding mode)))
      (if text
  	(concat "=?" (upcase (symbol-name charset)) "?"
@@ -130,18 +130,6 @@ sync to  lexical-binding
  (defmacro ew-rword-type (rword)
 -  (` (car (cdr (cdr (cdr (, rword)))))))
 +  `(car (cdr (cdr (cdr ,rword)))))
- 
-+(unless (and (boundp 'mule-version)
-+	     (null (string< mule-version "6.0"))
-+	     (fboundp 'detect-mime-charset-string))
- (defun ew-find-charset-rule (charsets)
-   (if charsets
-       (let* ((charset (find-mime-charset-by-charsets charsets))
- 	     (encoding
- 	      (cdr (or (assq charset mime-header-charset-encoding-alist)
- 		       (cons charset mime-header-default-charset-encoding)))))
--	(list charset encoding))))
-+	(list charset encoding)))))
 +
 +(defun ew-find-string-rule (string)
 +  (let ((charset (detect-mime-charset-string string)))
@@ -149,6 +137,14 @@ sync to  lexical-binding
 +	  (cdr (or (assq charset mime-header-charset-encoding-alist)
 +		   (cons nil mime-header-default-charset-encoding))))))
  
+-(defun ew-find-charset-rule (charsets)
+-  (if charsets
+-      (let* ((charset (find-mime-charset-by-charsets charsets))
+-	     (encoding
+-	      (cdr (or (assq charset mime-header-charset-encoding-alist)
+-		       (cons charset mime-header-default-charset-encoding)))))
+-	(list charset encoding))))
+-
 -;; [tomo:2002-11-05] The following code is a quick-fix for emacsen
 -;; which is not depended on the Mule model.  We should redesign
 -;; `eword-encode-split-string' to avoid to depend on the Mule model.
@@ -207,7 +203,7 @@ sync to  lexical-binding
  
  (defun ew-space-process (seq)
    (let (prev a ac b c cc)
-@@ -227,30 +176,19 @@
+@@ -227,30 +165,19 @@
  		       (setq prev (cons
  				   (cons (concat (car a)(car b)(car c))
  					 (cdr a))
@@ -245,7 +241,7 @@ sync to  lexical-binding
  
  
  ;;; @ length
-@@ -263,16 +201,13 @@
+@@ -263,16 +190,13 @@
  	ret)
      (setq ret
  	  (cond ((string-equal encoding "B")
@@ -267,7 +263,7 @@ sync to  lexical-binding
  
  
  ;;; @ encode-string
-@@ -286,35 +221,27 @@
+@@ -286,35 +210,27 @@
        (if (null ret)
  	  (cond ((and (setq string (car rword))
  		      (or (<= (setq len (+ (length string) column)) 76)
@@ -312,7 +308,7 @@ sync to  lexical-binding
  	      (t
  	       (setq string (car rword))
  	       (let* ((p 0) np
-@@ -325,12 +252,10 @@
+@@ -325,12 +241,10 @@
  			       ;;(setq np (char-next-index (sref string p) p))
  			       (setq nstr (substring string 0 np))
  			       (setq ret (tm-eword::encoded-word-length
@@ -327,7 +323,7 @@ sync to  lexical-binding
  		   (setq str nstr
  			 p np))
  		 (if (string-equal str "")
-@@ -346,12 +271,8 @@
+@@ -346,12 +260,8 @@
  			  (ew-rword-encoding rword)
  			  str
  			  (ew-rword-type rword)))
@@ -342,7 +338,7 @@ sync to  lexical-binding
  
  (defun eword-encode-rword-list (column rwl)
    (let (ret dest str ew-f pew-f folded-points)
-@@ -360,23 +281,20 @@
+@@ -360,23 +270,20 @@
        (if (and pew-f ew-f)
  	  (setq rwl (cons '(" ") rwl)
  		pew-f nil)
@@ -370,7 +366,7 @@ sync to  lexical-binding
  			 (setq i (1- i))))
  		(setq s (substring dest i)
  		      r-column (length s)
-@@ -384,17 +302,13 @@
+@@ -384,17 +291,13 @@
  		(when (setq ret (ew-encode-rword-1 r-column rwl))
  		  (setq dest r-dest
  			column r-column)
@@ -392,7 +388,7 @@ sync to  lexical-binding
  
  
  ;;; @ converter
-@@ -410,65 +324,44 @@
+@@ -410,65 +313,44 @@
  	     (setq dest
  		   (append dest
  			   (list
@@ -471,7 +467,7 @@ sync to  lexical-binding
  	      (t
  	       (setq dest
  		     (if (or (eq pname 'spaces)
-@@ -479,11 +372,9 @@
+@@ -479,11 +361,9 @@
  			      (list
  			       (list (concat (car (car (last dest)))
  					     (cdr token))
@@ -485,7 +481,7 @@ sync to  lexical-binding
      dest))
  
  (defun eword-encode-phrase-route-addr-to-rword-list (phrase-route-addr)
-@@ -496,36 +387,31 @@
+@@ -496,36 +376,31 @@
          ;;   )
  	(setq dest (eword-encode-phrase-to-rword-list phrase))
  	(if dest
@@ -527,7 +523,7 @@ sync to  lexical-binding
      dest))
  
  (defsubst eword-encode-mailboxes-to-rword-list (mboxes)
-@@ -577,8 +463,7 @@
+@@ -577,8 +452,7 @@
  		    (let ((elt (car in-reply-to)))
  		      (if (eq (car elt) 'phrase)
  			  (eword-encode-phrase-to-rword-list (cdr elt))
@@ -537,7 +533,7 @@ sync to  lexical-binding
        (setq in-reply-to (cdr in-reply-to)))
      dest))
  
-@@ -586,6 +471,9 @@
+@@ -586,6 +460,9 @@
  ;;; @ application interfaces
  ;;;
  
@@ -547,7 +543,7 @@ sync to  lexical-binding
  (defvar eword-encode-default-start-column 10
    "Default start column if it is omitted.")
  
-@@ -604,8 +492,7 @@
+@@ -604,8 +481,7 @@
    (car (eword-encode-rword-list
  	(or column eword-encode-default-start-column)
  	(eword-encode-addresses-to-rword-list
@@ -557,7 +553,7 @@ sync to  lexical-binding
  
  (defun eword-encode-in-reply-to (string &optional column)
    "Encode header field STRING as In-Reply-To field, and return the result.
-@@ -620,8 +507,7 @@
+@@ -620,8 +496,7 @@
  Optional argument COLUMN is start-position of the field."
    (car (eword-encode-rword-list
  	(or column eword-encode-default-start-column)
@@ -567,7 +563,7 @@ sync to  lexical-binding
  
  (defun eword-encode-unstructured-field-body (string &optional column)
    "Encode header field STRING as unstructured field, and return the result.
-@@ -630,6 +516,81 @@
+@@ -630,6 +505,81 @@
  	(or column eword-encode-default-start-column)
  	(eword-encode-split-string string 'text))))
  
@@ -649,7 +645,7 @@ sync to  lexical-binding
  ;;;###autoload
  (defun mime-encode-field-body (field-body field-name)
    "Encode FIELD-BODY as FIELD-NAME, and return the result.
-@@ -655,13 +616,13 @@
+@@ -655,13 +605,13 @@
  	(setq method-alist (cdr method-alist)))
        ret)))
  (defalias 'eword-encode-field-body 'mime-encode-field-body)
@@ -665,7 +661,7 @@ sync to  lexical-binding
  
  (defsubst eword-find-field-encoding-method (field-name)
    (setq field-name (downcase field-name))
-@@ -672,11 +633,9 @@
+@@ -672,11 +622,9 @@
  	       (str (car pair)))
  	  (if (and (stringp str)
  		   (string= field-name (downcase str)))
@@ -679,7 +675,7 @@ sync to  lexical-binding
  
  ;;;###autoload
  (defun mime-encode-header-in-buffer (&optional code-conversion)
-@@ -715,7 +674,8 @@
+@@ -715,7 +663,8 @@
  				   default-cs)))
  			  (encode-coding-region bbeg end cs)))))))))))
  (defalias 'eword-encode-header 'mime-encode-header-in-buffer)

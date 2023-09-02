@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./mime-conf.el	2005-07-06 11:09:04.000000000 +0900
-+++ ././mime-conf.el	2020-09-05 16:02:39.900236870 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/mime-conf.el	2005-07-06 11:09:04.000000000 +0900
++++ ./mime-conf.el	2023-08-31 08:29:38.602782237 +0900
 @@ -1,4 +1,4 @@
 -;;; mime-conf.el --- mailcap parser and MIME playback configuration
 +;;; mime-conf.el --- mailcap parser and MIME playback configuration  -*- lexical-binding: t -*-
@@ -141,6 +141,19 @@ sync to  lexical-binding
  
  
  ;;;###autoload
+@@ -203,9 +190,9 @@
+ SITUATION is an association-list about information of entity.  Its key
+ may be:
+ 
+-	'type		primary media-type
+-	'subtype	media-subtype
+-	'filename	filename
++	\\='type		primary media-type
++	\\='subtype	media-subtype
++	\\='filename	filename
+ 	STRING		parameter of Content-Type field"
+   (let ((i 0)
+ 	(len (length mtext))
 @@ -213,58 +200,52 @@
  	dest)
      (while (< i len)

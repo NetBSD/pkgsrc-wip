@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./mime-def.el	2007-09-06 17:04:09.000000000 +0900
-+++ ././mime-def.el	2020-09-05 16:02:39.900365807 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/mime-def.el	2007-09-06 17:04:09.000000000 +0900
++++ ./mime-def.el	2023-08-31 08:29:38.604422981 +0900
 @@ -1,4 +1,4 @@
 -;;; mime-def.el --- definition module about MIME -*- coding: iso-8859-4; -*-
 +;;; mime-def.el --- definition module about MIME -*- lexical-binding: t -*-
@@ -29,7 +29,17 @@ sync to  lexical-binding
    "*Alist to specify field encoding method.
  Its key is field-name, value is encoding method.
  
-@@ -142,8 +141,14 @@
+@@ -130,9 +129,6 @@
+ (defsubst regexp-or (&rest args)
+   (concat "\\(" (mapconcat (function identity) args "\\|") "\\)"))
+ 
+-(or (fboundp 'char-int)
+-    (defalias 'char-int 'identity))
+-
+ 
+ ;;; @ MIME constants
+ ;;;
+@@ -142,8 +138,14 @@
  (defconst mime-token-regexp
    (concat "[^" mime-tspecial-char-list "\000-\040]+"))
  (defconst mime-attribute-char-regexp
@@ -45,7 +55,7 @@ sync to  lexical-binding
  	  "]"))
  
  (defconst mime-charset-regexp
-@@ -151,7 +156,8 @@
+@@ -151,7 +153,8 @@
  	  "*'%"				; should not include "%"?
  	  "]+"))
  
@@ -55,7 +65,7 @@ sync to  lexical-binding
  ;; (defconst mime-language-regexp "[A-Za-z]+\\(-[A-Za-z]+\\)*")
  (defconst mime-language-regexp "[-A-Za-z]+")
  
-@@ -275,7 +281,8 @@
+@@ -275,7 +278,8 @@
  
  (make-variable-buffer-local 'mime-message-structure)
  
@@ -65,7 +75,7 @@ sync to  lexical-binding
  
  
  ;;; @ for mel-backend
-@@ -294,9 +301,7 @@
+@@ -294,9 +298,7 @@
  	   `((defun ,name ,args
  	       ,@rest
  	       (funcall (mel-find-function ',name ,(car (last args)))
@@ -76,7 +86,7 @@ sync to  lexical-binding
  
  (put 'mel-define-service 'lisp-indent-function 'defun)
  
-@@ -310,10 +315,8 @@
+@@ -310,10 +312,8 @@
  	  (while (and rest
  		      (progn
  			(require (car rest))
@@ -89,7 +99,7 @@ sync to  lexical-binding
  	  f))))
  
  (defsubst mel-copy-method (service src-backend dst-backend)
-@@ -323,8 +326,7 @@
+@@ -323,8 +323,7 @@
      (when f
        (setq sym (intern dst-backend oa))
        (or (fboundp sym)
@@ -99,7 +109,7 @@ sync to  lexical-binding
         
  (defsubst mel-copy-backend (src-backend dst-backend)
    (let ((services mel-service-list))
-@@ -338,8 +340,7 @@
+@@ -338,8 +337,7 @@
  Each parent must be backend name (string)."
    (cons 'progn
  	(mapcar (lambda (parent)
@@ -109,7 +119,7 @@ sync to  lexical-binding
  		parents)))
  
  (defmacro mel-define-method (name args &rest body)
-@@ -380,8 +381,7 @@
+@@ -380,19 +378,25 @@
  	 (class (nth 1 specializer)))
      `(progn
         (define-function ,function
@@ -117,15 +127,16 @@ sync to  lexical-binding
 -       )))
 +	 (intern ,class ,(intern (format "%s-obarray" name)))))))
  
- (defvar base64-dl-module
-   (if (and (fboundp 'base64-encode-string)
-@@ -390,9 +390,23 @@
-     (if (fboundp 'dynamic-link)
- 	(let ((path (expand-file-name "base64.so" exec-directory)))
- 	  (and (file-exists-p path)
+-(defvar base64-dl-module
+-  (if (and (fboundp 'base64-encode-string)
+-	   (subrp (symbol-function 'base64-encode-string)))
+-      nil
+-    (if (fboundp 'dynamic-link)
+-	(let ((path (expand-file-name "base64.so" exec-directory)))
+-	  (and (file-exists-p path)
 -	       path)
 -	  ))))
-+	       path)))))
++(defvar base64-dl-module nil)
  
 +(defsubst mime-charset-decode-string (string charset &optional lbt)
 +  "Decode the STRING as MIME CHARSET.

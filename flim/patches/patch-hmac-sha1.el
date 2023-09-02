@@ -1,21 +1,21 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./hmac-sha1.el	2005-07-06 11:09:04.000000000 +0900
-+++ ././hmac-sha1.el	2020-09-05 16:02:39.899264499 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/hmac-sha1.el	2005-07-06 11:09:04.000000000 +0900
++++ ./hmac-sha1.el	2023-08-31 08:29:38.591676336 +0900
 @@ -1,4 +1,4 @@
 -;;; hmac-sha1.el --- Compute HMAC-SHA1.
 +;;; hmac-sha1.el --- Compute HMAC-SHA1.  -*- lexical-binding: t -*-
  
  ;; Copyright (C) 1999, 2001  Free Software Foundation, Inc.
  
-@@ -64,19 +64,11 @@
+@@ -64,19 +64,10 @@
  ;;; Code:
  
  (eval-when-compile (require 'hmac-def))
 -(require 'hex-util)			; (decode-hex-string STRING)
- (require 'sha1)				; expects (sha1 STRING)
+-(require 'sha1)				; expects (sha1 STRING)
  
 -;; To share *.elc files between Emacs w/ and w/o DL patch,
 -;; this check must be done at load-time.

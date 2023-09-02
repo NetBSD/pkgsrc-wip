@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./sasl.el	2005-07-06 11:09:05.000000000 +0900
-+++ ././sasl.el	2020-09-05 16:02:39.902101886 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/sasl.el	2005-07-06 11:09:05.000000000 +0900
++++ ./sasl.el	2023-08-31 08:29:38.619410439 +0900
 @@ -1,4 +1,4 @@
 -;;; sasl.el --- SASL client framework
 +;;; sasl.el --- SASL client framework  -*- lexical-binding: t -*-
@@ -51,6 +51,31 @@ sync to  lexical-binding
  
  (defvar sasl-unique-id-function #'sasl-unique-id-function)
  
+@@ -185,18 +197,18 @@
+   ;; Don't use microseconds from (current-time), they may be unsupported.
+   ;; Instead we use this randomly inited counter.
+   (setq sasl-unique-id-char
+-	(% (1+ (or sasl-unique-id-char (logand (random t) (1- (lsh 1 20)))))
++	(% (1+ (or sasl-unique-id-char (logand (random t) (1- (ash 1 20)))))
+ 	   ;; (current-time) returns 16-bit ints,
+ 	   ;; and 2^16*25 just fits into 4 digits i base 36.
+ 	   (* 25 25)))
+-  (let ((tm (current-time)))
++  (let ((tm (floor (float-time))))
+     (concat
+      (sasl-unique-id-number-base36
+-      (+ (car   tm)
+-	 (lsh (% sasl-unique-id-char 25) 16)) 4)
++      (+ (/ tm 65536)
++	 (ash (% sasl-unique-id-char 25) 16)) 4)
+      (sasl-unique-id-number-base36
+-      (+ (nth 1 tm)
+-	 (lsh (/ sasl-unique-id-char 25) 16)) 4))))
++      (+ (% tm 65536)
++	 (ash (/ sasl-unique-id-char 25) 16)) 4))))
+ 
+ (defun sasl-unique-id-number-base36 (num len)
+   (if (if (< len 0)
 @@ -204,14 +216,13 @@
  	(= len 0))
        ""

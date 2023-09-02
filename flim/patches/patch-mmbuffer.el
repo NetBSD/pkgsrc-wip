@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./mmbuffer.el	2005-07-06 11:09:04.000000000 +0900
-+++ ././mmbuffer.el	2020-09-05 16:02:39.901364499 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/mmbuffer.el	2005-07-06 11:09:04.000000000 +0900
++++ ./mmbuffer.el	2023-08-31 08:29:38.613469028 +0900
 @@ -1,4 +1,4 @@
 -;;; mmbuffer.el --- MIME entity module for binary buffer
 +;;; mmbuffer.el --- MIME entity module for binary buffer  -*- lexical-binding: t -*-

@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./smtp.el	2006-09-24 09:40:58.000000000 +0900
-+++ ././smtp.el	2020-09-05 16:02:39.902356053 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/smtp.el	2006-09-24 09:40:58.000000000 +0900
++++ ./smtp.el	2023-08-31 08:29:38.622738962 +0900
 @@ -1,4 +1,4 @@
 -;;; smtp.el --- basic functions to send mail with SMTP server
 +;;; smtp.el --- basic functions to send mail with SMTP server  -*- lexical-binding: t -*-
@@ -19,14 +19,13 @@ sync to  lexical-binding
    :type '(choice (const nil) string)
    :group 'smtp)
  
-@@ -98,17 +98,15 @@
+@@ -98,17 +98,14 @@
    :type 'boolean
    :group 'smtp-extensions)
  
 -(defcustom smtp-use-starttls-ignore-error nil
 -  "If non-nil, do not use STARTTLS if STARTTLS is not available."
-+(defcustom smtp-use-gnutls (and (fboundp 'gnutls-available-p)
-+				(gnutls-available-p))
++(defcustom smtp-use-gnutls (gnutls-available-p)
 +  "If non-nil, use built-in GnuTLS for STARTTLS."
    :type 'boolean
    :group 'smtp-extensions)
@@ -43,7 +42,18 @@ sync to  lexical-binding
    :group 'smtp-extensions)
  
  (defcustom smtp-use-sasl nil
-@@ -186,8 +184,7 @@
+@@ -145,8 +142,8 @@
+ `open-network-stream' and should return a process object.
+ Here is an example:
+ 
+-\(setq smtp-open-connection-function
+-      #'(lambda (name buffer host service)
++(setq smtp-open-connection-function
++      #\\='(lambda (name buffer host service)
+ 	  (let ((process-connection-type nil))
+ 	    (start-process name buffer \"ssh\" \"-C\" host
+ 			   \"nc\" host service))))
+@@ -186,8 +183,7 @@
  
  (defun smtp-package-buffer-internal-size (package)
    "Return the size of PACKAGE, an integer."
@@ -53,7 +63,7 @@ sync to  lexical-binding
      (let ((size
  	   (+ (buffer-size)
  	      ;; Add one byte for each change-of-line
-@@ -245,14 +242,14 @@
+@@ -245,14 +241,14 @@
    "Return user's fully qualified domain name."
    (if smtp-fqdn
        smtp-fqdn
@@ -73,7 +83,7 @@ sync to  lexical-binding
  
  (defun smtp-find-connection (buffer)
    "Find the connection delivering to BUFFER."
-@@ -268,7 +265,8 @@
+@@ -268,7 +264,8 @@
  
  (eval-and-compile
    (autoload 'starttls-open-stream "starttls")
@@ -83,7 +93,7 @@ sync to  lexical-binding
  
  (defun smtp-open-connection (buffer server service)
    "Open a SMTP connection for a service to a host.
-@@ -276,9 +274,18 @@
+@@ -276,9 +273,18 @@
  BUFFER is the buffer to associate with the connection.  SERVER is name
  of the host to connect to.  SERVICE is name of the service desired."
    (let ((process
@@ -104,7 +114,7 @@ sync to  lexical-binding
      (when process
        (setq connection (smtp-make-connection process server service))
        (set-process-filter process 'smtp-process-filter)
-@@ -341,7 +348,7 @@
+@@ -341,7 +347,7 @@
  	t)
      (smtp-error)))
  
@@ -113,7 +123,7 @@ sync to  lexical-binding
  
  ;;;###autoload
  (defun smtp-send-buffer (sender recipients buffer)
-@@ -357,24 +364,22 @@
+@@ -357,24 +363,22 @@
  	      (or smtp-server
  		  (error "`smtp-server' not defined"))))
  	   (package
@@ -150,7 +160,7 @@ sync to  lexical-binding
  
  (defun smtp-submit-package (package)
    (unwind-protect
-@@ -399,7 +404,7 @@
+@@ -399,7 +403,7 @@
  	(smtp-primitive-rcptto package)
  	(smtp-primitive-data package))
      (let ((connection (smtp-find-connection (current-buffer))))
@@ -159,7 +169,7 @@ sync to  lexical-binding
  	(condition-case nil
  	    (smtp-primitive-quit package)
  	  (smtp-error))
-@@ -412,10 +417,6 @@
+@@ -412,10 +416,6 @@
  BUFFER may be a buffer or a buffer name which contains mail message."
    (let ((servers
  	 (smtp-find-server recipients))
@@ -170,7 +180,7 @@ sync to  lexical-binding
  	server package)
        (while (car servers)
  	(setq server (caar servers))
-@@ -426,25 +427,29 @@
+@@ -426,25 +426,29 @@
  			   (mapconcat 'concat recipients ">,<"))))
  	(setq package
  	      (smtp-make-package sender recipients buffer))
@@ -208,7 +218,7 @@ sync to  lexical-binding
    (let* ((connection
  	  (smtp-find-connection (current-buffer)))
  	 (response
-@@ -452,7 +457,7 @@
+@@ -452,7 +456,7 @@
      (if (/= (car response) 220)
  	(smtp-response-error response))))
  
@@ -217,7 +227,7 @@ sync to  lexical-binding
    (let* ((connection
  	  (smtp-find-connection (current-buffer)))
  	 response)
-@@ -471,7 +476,7 @@
+@@ -471,7 +475,7 @@
  		     extensions))
  		 (cdr response)))))
  
@@ -226,7 +236,7 @@ sync to  lexical-binding
    (let* ((connection
  	  (smtp-find-connection (current-buffer)))
  	 response)
-@@ -480,7 +485,7 @@
+@@ -480,7 +484,7 @@
      (if (/= (car response) 250)
  	(smtp-response-error response))))
  
@@ -235,7 +245,7 @@ sync to  lexical-binding
    (let* ((connection
  	  (smtp-find-connection (current-buffer)))
  	 (mechanisms
-@@ -518,7 +523,11 @@
+@@ -518,7 +522,11 @@
  	  (smtp-response-error response)) ;Bogus server?
  	(if (/= (car response) 334)
  	    (smtp-response-error response))
@@ -248,7 +258,7 @@ sync to  lexical-binding
  	(setq step (sasl-next-step client step))
  	(smtp-send-command
  	 connection
-@@ -531,16 +540,21 @@
+@@ -531,16 +539,21 @@
  ;;;     connection (sasl-client-decoder client))
      ))
  
@@ -272,7 +282,7 @@ sync to  lexical-binding
  
  (defun smtp-primitive-mailfrom (package)
    (let* ((connection
-@@ -555,7 +569,7 @@
+@@ -555,7 +568,7 @@
      ;; SIZE --- Message Size Declaration (RFC1870)
      (if (and smtp-use-size
  	     (assq 'size extensions))
@@ -281,7 +291,7 @@ sync to  lexical-binding
      ;; 8BITMIME --- 8bit-MIMEtransport (RFC1652)
      (if (and smtp-use-8bitmime
  	     (assq '8bitmime extensions))
-@@ -563,7 +577,7 @@
+@@ -563,7 +576,7 @@
      (smtp-send-command
       connection
       (if extension
@@ -290,7 +300,7 @@ sync to  lexical-binding
         (format "MAIL FROM:<%s>" sender)))
      (setq response (smtp-read-response connection))
      (if (/= (car response) 250)
-@@ -590,8 +604,7 @@
+@@ -590,8 +603,7 @@
      (setq response (smtp-read-response connection))
      (if (/= (car response) 354)
  	(smtp-response-error response))
@@ -300,7 +310,7 @@ sync to  lexical-binding
        (goto-char (point-min))
        (while (not (eobp))
  	(smtp-send-data
-@@ -602,7 +615,7 @@
+@@ -602,7 +614,7 @@
      (if (/= (car response) 250)
  	(smtp-response-error response))))
  
@@ -309,7 +319,7 @@ sync to  lexical-binding
    (let* ((connection
  	  (smtp-find-connection (current-buffer)))
  	 response)
-@@ -614,8 +627,7 @@
+@@ -614,8 +626,7 @@
  ;;; @ low level process manipulating function
  ;;;
  (defun smtp-process-filter (process output)
@@ -319,7 +329,7 @@ sync to  lexical-binding
      (goto-char (point-max))
      (insert output)))
  
-@@ -663,12 +675,11 @@
+@@ -663,12 +674,11 @@
      response))
  
  (defun smtp-send-command (connection command)
@@ -337,7 +347,7 @@ sync to  lexical-binding
        (goto-char (point-max))
        (setq command (concat command "\r\n"))
        (insert command)
-@@ -683,9 +694,7 @@
+@@ -683,9 +693,7 @@
  	(encoder
  	 (smtp-connection-encoder-internal connection)))
      ;; Escape "." at start of a line.
@@ -348,7 +358,7 @@ sync to  lexical-binding
      (if encoder
  	(setq data (funcall encoder data)))
      (process-send-string process data)))
-@@ -698,13 +707,10 @@
+@@ -698,13 +706,10 @@
  	addr-regexp
  	(smtp-address-buffer (generate-new-buffer " *smtp-mail*")))
      (unwind-protect
@@ -364,7 +374,7 @@ sync to  lexical-binding
  		    (buffer-substring-no-properties header-start header-end)))
  	  (goto-char (point-min))
  	  ;; RESENT-* fields should stop processing of regular fields.
-@@ -729,11 +735,11 @@
+@@ -729,11 +734,11 @@
  	  (erase-buffer)
  	  (insert " " simple-address-list "\n")
  	  ;; newline --> blank

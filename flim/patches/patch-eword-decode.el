@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./eword-decode.el	2005-12-25 19:45:52.000000000 +0900
-+++ ././eword-decode.el	2020-09-05 16:02:39.898948422 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/eword-decode.el	2005-12-25 19:45:52.000000000 +0900
++++ ./eword-decode.el	2023-08-31 08:29:38.587163972 +0900
 @@ -1,4 +1,4 @@
 -;;; eword-decode.el --- RFC 2047 based encoded-word decoder for GNU Emacs
 +;;; eword-decode.el --- RFC 2047 based encoded-word decoder for GNU Emacs  -*- lexical-binding: t -*-
@@ -578,7 +578,32 @@ sync to  lexical-binding
  
  (defun eword-lexical-analyze (string &optional start must-unfold)
    "Return lexical analyzed list corresponding STRING.
-@@ -783,18 +770,15 @@
+@@ -763,18 +750,17 @@
+ characters encoded as encoded-words or invalid \"raw\" format.
+ \"Raw\" non us-ascii characters are regarded as variable
+ `default-mime-charset'."
+-  (let ((key (substring string (or start 0)))
++  (let ((key (substring-no-properties string start))
+ 	ret cell)
+-    (set-text-properties 0 (length key) nil key)
+     (if (setq ret (assoc key eword-lexical-analyze-cache))
+ 	(cdr ret)
+-      (setq ret (eword-lexical-analyze-internal key 0 must-unfold))
+-      (setq eword-lexical-analyze-cache
++      (setq ret (eword-lexical-analyze-internal key 0 must-unfold)
++	    eword-lexical-analyze-cache
+ 	    (cons (cons key ret)
+ 		  eword-lexical-analyze-cache))
+-      (if (cdr (setq cell (nthcdr eword-lexical-analyze-cache-max
+-				  eword-lexical-analyze-cache)))
+-	  (setcdr cell nil))
++      (when (cdr (setq cell (nthcdr eword-lexical-analyze-cache-max
++				    eword-lexical-analyze-cache)))
++	(setcdr cell nil))
+       ret)))
+ 
+ (defun eword-decode-token (token)
+@@ -783,18 +769,15 @@
      (cond ((eq type 'quoted-string)
  	   (std11-wrap-as-quoted-string value))
  	  ((eq type 'comment)
@@ -605,7 +630,7 @@ sync to  lexical-binding
  	  (t value))))
  
  (defun eword-extract-address-components (string &optional start)
-@@ -809,10 +793,8 @@
+@@ -809,10 +792,8 @@
  			   (std11-unfold-string string) start
  			   'must-unfold))))
           (phrase  (std11-full-name-string structure))

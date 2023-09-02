@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./sha1.el	2005-07-06 11:09:05.000000000 +0900
-+++ ././sha1.el	2020-09-05 16:02:39.902173976 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/sha1.el	2005-07-06 11:09:05.000000000 +0900
++++ ./sha1.el	2023-08-31 08:29:38.620927012 +0900
 @@ -1,4 +1,4 @@
 -;;; sha1.el --- SHA1 Secure Hash Algorithm.
 +;;; sha1.el --- SHA1 Secure Hash Algorithm.  -*- lexical-binding: t -*-

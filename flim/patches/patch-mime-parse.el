@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./mime-parse.el	2020-09-05 13:48:06.215015344 +0900
-+++ ././mime-parse.el	2020-09-05 16:02:39.901141091 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/mime-parse.el	2023-09-02 12:45:03.684120507 +0900
++++ ./mime-parse.el	2023-08-31 08:29:38.610505135 +0900
 @@ -1,4 +1,4 @@
 -;;; mime-parse.el --- MIME message parser
 +;;; mime-parse.el --- MIME message parser  -*- lexical-binding: t -*-
@@ -25,7 +25,7 @@ sync to  lexical-binding
  
  (autoload 'mime-entity-body-buffer "mime")
  (autoload 'mime-entity-body-start-point "mime")
-@@ -37,6 +41,131 @@
+@@ -37,6 +41,132 @@
  ;;; @ lexical analyzer
  ;;;
  
@@ -80,12 +80,12 @@ sync to  lexical-binding
 +		      r0
 +		      ,@(let* ((count (1+ (max tag ?\\)))
 +			       (result (make-vector count '(write-repeat r0))))
-+			  (aset result tag '(break))
 +			  (aset result ?\\ `((write "\\\\")
 +					     (read r0)
 +					     ,wrt
 +					     (repeat)))
 +			  (aset result ?\" '((write "\\\"") (repeat)))
++			  (aset result tag '(break))
 +			  (mapcar 'identity result)))
 +		     (write-repeat r0))
 +		    (write "\")")
@@ -150,14 +150,15 @@ sync to  lexical-binding
 +  "Specify CCL-program symbol for `mime-lexical-analyze'.
 +When nil, do not use CCL.
 +See docstring of `std11-ccl-lexical-analyzer' for details of CCL-program.
-+If you modify `mime-lexical-analyzer', set this variable to nil or prepare corresponding CCL-program."
++If you modify `mime-lexical-analyzer', set this variable to nil
++or prepare corresponding CCL-program."
 +  :group 'mime
 +  :type '(choice symbol (const :tag "Do not use CCL." nil)))
 +
  (defcustom mime-lexical-analyzer
    '(std11-analyze-quoted-string
      std11-analyze-domain-literal
-@@ -70,22 +199,27 @@
+@@ -70,22 +200,27 @@
  
  (defun mime-lexical-analyze (string)
    "Analyze STRING as lexical tokens of MIME."
@@ -201,7 +202,7 @@ sync to  lexical-binding
  
  
  ;;; @ field parser
-@@ -103,11 +237,7 @@
+@@ -103,11 +238,7 @@
                  (delete-region (point)(- (point) 3)))))
      (setq text (buffer-string))
      (when charset
@@ -214,16 +215,16 @@ sync to  lexical-binding
      (when language
        (put-text-property 0 (length text) 'mime-language language text))
      text))
-@@ -122,7 +252,7 @@
+@@ -122,7 +253,7 @@
                                   (concat mime-attribute-char-regexp "+")))
                 (goto-char (match-end 0)))
               (not (eobp)))
 -      (insert (prog1 (format "%%%02X" (char-int (char-after)))
-+      (insert (prog1 (format "%%%02X" (char-int (following-char)))
++      (insert (prog1 (format "%%%02X" (following-char))
                  (delete-region (point)(1+ (point))))))
      (buffer-string)))
  
-@@ -237,7 +367,211 @@
+@@ -237,12 +368,216 @@
  
  ;;; for compatibility with flim-1_13-rfc2231 API.
  (defalias 'mime-parse-parameters-from-list 'mime-decode-parameters)
@@ -436,7 +437,13 @@ sync to  lexical-binding
  
  (defun mime-parse-parameters (tokens)
    "Parse TOKENS as MIME parameter values.
-@@ -294,8 +628,7 @@
+ Return a property list, which is a list of the form
+-\(PARAMETER-NAME1 VALUE1 PARAMETER-NAME2 VALUE2...)."
++(PARAMETER-NAME1 VALUE1 PARAMETER-NAME2 VALUE2...)."
+   (let (params attribute)
+     (while (and tokens
+ 		(eq (car (car tokens)) 'tspecials)
+@@ -294,8 +629,7 @@
  If Content-Type field is not found, return nil."
    (let ((field-body (std11-field-body "Content-Type")))
      (if field-body
@@ -446,7 +453,7 @@ sync to  lexical-binding
  
  
  ;;; @@ Content-Disposition
-@@ -321,8 +654,7 @@
+@@ -321,8 +655,7 @@
  If Content-Disposition field is not found, return nil."
    (let ((field-body (std11-field-body "Content-Disposition")))
      (if field-body
@@ -456,7 +463,7 @@ sync to  lexical-binding
  
  
  ;;; @@ Content-Transfer-Encoding
-@@ -345,8 +677,7 @@
+@@ -345,8 +678,7 @@
  If Content-Transfer-Encoding field is not found, return nil."
    (let ((field-body (std11-field-body "Content-Transfer-Encoding")))
      (if field-body
@@ -466,7 +473,7 @@ sync to  lexical-binding
  
  
  ;;; @@ Content-ID / Message-ID
-@@ -360,10 +691,13 @@
+@@ -360,10 +692,13 @@
  ;;;###autoload
  (defun mime-uri-parse-cid (string)
    "Parse STRING as cid URI."
@@ -484,7 +491,7 @@ sync to  lexical-binding
  
  
  ;;; @ message parser
-@@ -470,12 +804,8 @@
+@@ -470,12 +805,8 @@
  	    body-start (point-min)))
      (save-restriction
        (narrow-to-region header-start header-end)
@@ -499,7 +506,7 @@ sync to  lexical-binding
      (luna-make-entity representation-type
  		      :location (current-buffer)
  		      :content-type content-type
-@@ -485,8 +815,7 @@
+@@ -485,8 +816,7 @@
  		      :header-start header-start
  		      :header-end header-end
  		      :body-start body-start

@@ -1,25 +1,30 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./mel-q.el	2005-07-06 11:09:04.000000000 +0900
-+++ ././mel-q.el	2020-09-05 16:02:39.899931560 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/mel-q.el	2005-07-06 11:09:04.000000000 +0900
++++ ./mel-q.el	2023-08-31 08:29:38.599294148 +0900
 @@ -1,4 +1,4 @@
 -;;; mel-q.el --- Quoted-Printable encoder/decoder.
 +;;; mel-q.el --- Quoted-Printable encoder/decoder.  -*- lexical-binding: t -*-
  
  ;; Copyright (C) 1995,96,97,98,99,2000,2001 Free Software Foundation, Inc.
  
-@@ -31,7 +31,7 @@
-   ;; XXX: should provide char-list instead of string-to-char-list.
-   ;; XXx: and also the macro `as-binary-process' should be provided
-   ;; XXx: by the module "pces" which will be loaded by way of "poem".
+@@ -26,12 +26,7 @@
+ ;;; Code:
+ 
+ (require 'mime-def)
+-(require 'path-util)
+-(eval-when-compile
+-  ;; XXX: should provide char-list instead of string-to-char-list.
+-  ;; XXx: and also the macro `as-binary-process' should be provided
+-  ;; XXx: by the module "pces" which will be loaded by way of "poem".
 -  (require 'poem))
-+  (require 'pces))
++(require 'pces)
  
  
  ;;; @ Quoted-Printable encoder
-@@ -40,7 +40,8 @@
+@@ -40,7 +35,8 @@
  (defsubst quoted-printable-quote-char (character)
    (concat
     "="
@@ -29,7 +34,7 @@ sync to  lexical-binding
     (char-to-string (aref quoted-printable-hex-chars (logand character 15)))))
  
  (defun quoted-printable-internal-encode-region (start end)
-@@ -58,9 +59,9 @@
+@@ -58,9 +54,9 @@
  	    (forward-char)
  	    (setq col 0))
  	   (t
@@ -41,7 +46,7 @@ sync to  lexical-binding
  		   (eq (char-after (1+ (point))) ?\n))
  	      (forward-char)
  	      (insert "=\n")
-@@ -71,7 +72,7 @@
+@@ -71,7 +67,7 @@
  		   (eq (char-after (1+  (point))) ?r)
  		   (eq (char-after (+ 2 (point))) ?o)
  		   (eq (char-after (+ 3 (point))) ?m)
@@ -50,9 +55,13 @@ sync to  lexical-binding
  	      (delete-region (point)(1+ (point)))
  	      (insert "=46")		; moved to ?r.
  	      (forward-char 4)		; skip "rom ".
-@@ -113,8 +114,7 @@
+@@ -112,9 +108,11 @@
+ 	(replace-match "")))))
  
  
++(declare-function exec-installed-p "path-util"
++		  (file &optional paths suffixes))
++
  (defvar quoted-printable-internal-encoding-limit
 -  (if (and (featurep 'xemacs)(featurep 'mule))
 -      0
@@ -60,7 +69,7 @@ sync to  lexical-binding
      (require 'path-util)
      (if (exec-installed-p "mmencode")
  	1000
-@@ -173,8 +173,20 @@
+@@ -173,8 +171,20 @@
  (defsubst quoted-printable-hex-char-to-num (chr)
    (cond ((<= ?a chr) (+ (- chr ?a) 10))
  	((<= ?A chr) (+ (- chr ?A) 10))
@@ -83,7 +92,7 @@ sync to  lexical-binding
  
  (defun quoted-printable-internal-decode-region (start end)
    (save-excursion
-@@ -186,20 +198,21 @@
+@@ -186,20 +196,21 @@
  	 ((eolp)
  	  ;; unfold soft line break.
  	  (delete-region (1- (point))(1+ (point))))
@@ -111,7 +120,7 @@ sync to  lexical-binding
  	     (delete-region (1- (point))(+ 2 (point))))))
  	 (t
  	  ;; invalid encoding.
-@@ -295,33 +308,33 @@
+@@ -295,33 +306,33 @@
  `phrase'."
    (let ((specials (cdr (or (assq mode q-encoding-special-chars-alist)
  			   (assq 'phrase q-encoding-special-chars-alist)))))

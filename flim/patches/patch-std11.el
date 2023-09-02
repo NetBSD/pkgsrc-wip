@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./std11.el	2005-11-13 10:04:36.000000000 +0900
-+++ ././std11.el	2020-09-05 16:02:39.902584770 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/std11.el	2005-11-13 10:04:36.000000000 +0900
++++ ./std11.el	2023-08-31 08:29:38.624627921 +0900
 @@ -1,4 +1,4 @@
 -;;; std11.el --- STD 11 functions for GNU Emacs
 +;;; std11.el --- STD 11 functions for GNU Emacs  -*- lexical-binding: t -*-
@@ -21,7 +21,7 @@ sync to  lexical-binding
  
  ;;; @ fetch
  ;;;
-@@ -54,8 +54,7 @@
+@@ -54,21 +54,18 @@
      (goto-char (point-min))
      (let ((case-fold-search t))
        (if (re-search-forward (concat "^" name ":[ \t]*") nil t)
@@ -31,23 +31,27 @@ sync to  lexical-binding
  
  ;;;###autoload
  (defun std11-narrow-to-header (&optional boundary)
-@@ -64,11 +63,12 @@
-   (narrow-to-region
-    (goto-char (point-min))
-    (if (re-search-forward
+-  "Narrow to the message header.
++  "Narrow to the message header when needed.
+ If BOUNDARY is not nil, it is used as message header separator."
+-  (narrow-to-region
+-   (goto-char (point-min))
+-   (if (re-search-forward
 -	(concat "^\\(" (regexp-quote (or boundary "")) "\\)?$")
-+	(if boundary
-+	    (concat "^\\(" (regexp-quote boundary) "\\)?$")
-+	  "^$")
- 	nil t)
-        (match-beginning 0)
+-	nil t)
+-       (match-beginning 0)
 -     (point-max)
 -     )))
-+     (point-max))))
++  (goto-char (point-min))
++  (when (re-search-forward
++	 (if boundary (concat "^\\(" (regexp-quote boundary) "\\)?$")
++	   "^$")
++	 nil t)
++    (narrow-to-region (point-min) (match-beginning 0))))
  
  ;;;###autoload
  (defun std11-field-body (name &optional boundary)
-@@ -77,8 +77,7 @@
+@@ -77,8 +74,7 @@
    (save-excursion
      (save-restriction
        (inline (std11-narrow-to-header boundary)
@@ -57,7 +61,7 @@ sync to  lexical-binding
  
  (defun std11-find-field-body (field-names &optional boundary)
    "Return the first found field-body specified by FIELD-NAMES
-@@ -90,15 +89,13 @@
+@@ -90,15 +86,13 @@
        (let ((case-fold-search t)
  	    field-name)
  	(catch 'tag
@@ -76,7 +80,7 @@ sync to  lexical-binding
  
  (defun std11-field-bodies (field-names &optional default-value boundary)
    "Return list of each field-bodies of FIELD-NAMES of the message header
-@@ -117,11 +114,9 @@
+@@ -117,11 +111,9 @@
  	  (if (re-search-forward (concat "^" field-name ":[ \t]*") nil t)
  	      (setcar d-rest
  		      (buffer-substring-no-properties
@@ -90,7 +94,7 @@ sync to  lexical-binding
  	dest))))
  
  (defun std11-header-string (regexp &optional boundary)
-@@ -136,11 +131,9 @@
+@@ -136,11 +128,9 @@
  	  (while (re-search-forward std11-field-head-regexp nil t)
  	    (setq field
  		  (buffer-substring (match-beginning 0) (std11-field-end)))
@@ -105,7 +109,7 @@ sync to  lexical-binding
  
  (defun std11-header-string-except (regexp &optional boundary)
    "Return string of message header fields not matched by REGEXP.
-@@ -155,10 +148,8 @@
+@@ -155,10 +145,8 @@
  	    (setq field
  		  (buffer-substring (match-beginning 0) (std11-field-end)))
  	    (if (not (string-match regexp field))
@@ -118,7 +122,7 @@ sync to  lexical-binding
  
  (defun std11-collect-field-names (&optional boundary)
    "Return list of all field-names of the message header in current buffer.
-@@ -172,30 +163,33 @@
+@@ -172,30 +160,34 @@
  	  (setq name (buffer-substring-no-properties
  		      (match-beginning 0)(1- (match-end 0))))
  	  (or (member name dest)
@@ -133,7 +137,8 @@ sync to  lexical-binding
  ;;;
  
 +(defcustom std11-unfold-strip-leading-tab t
-+  "When non-nil, `std11-unfold-string' strips leading TAB, which is mainly added by incorrect folding."
++  "When non-nil, `std11-unfold-string' strips leading TAB, which is
++mainly added by incorrect folding."
 +  :group 'news
 +  :group 'mail
 +  :type 'boolean)
@@ -166,7 +171,7 @@ sync to  lexical-binding
  
  
  ;;; @ quoted-string
-@@ -205,18 +199,13 @@
+@@ -205,18 +197,13 @@
    (let (dest
  	(i 0)
  	(b 0)
@@ -191,7 +196,7 @@ sync to  lexical-binding
  
  (defconst std11-non-qtext-char-list '(?\" ?\\ ?\r ?\n))
  
-@@ -231,18 +220,14 @@
+@@ -231,18 +218,14 @@
    (let (dest
  	(b 0)
  	(i 0)
@@ -217,7 +222,7 @@ sync to  lexical-binding
  
  (defun std11-strip-quoted-string (string)
    "Strip quoted-string STRING."
-@@ -251,14 +236,142 @@
+@@ -251,14 +234,144 @@
  	     (let ((max (1- len)))
  	       (and (eq (aref string 0) ?\")
  		    (eq (aref string max) ?\")
@@ -274,13 +279,13 @@ sync to  lexical-binding
 +		      r0
 +		      ,@(let* ((count (1+ (max tag ?\\)))
 +			       (result (make-vector count '(write-repeat r0))))
-+			  (aset result tag '(break))
 +			  (aset result ?\\ `((write "\\\\")
 +					     (read r0)
 +					     ,wrt
 +					     (repeat)))
 +			  (aset result ?\" '((write "\\\"")
 +					     (repeat)))
++			  (aset result tag '(break))
 +			  (mapcar 'identity result)))
 +		     (write-repeat r0))
 +		    (write "\")")
@@ -351,10 +356,12 @@ sync to  lexical-binding
 +    'std11-default-ccl-lexical-analyzer)
 +  "Specify CCL-program symbol for `std11-lexical-analyze'.
 +When nil, do not use CCL.
-+CCL-program returns a string which expresses a cons.
-+When cons's cdr is non-nil, CCL-program succeeds in analyzing and car is analyzed result.
-+When cdr is nil,CCL-program fails in analyzing.
-+If you modify `std11-lexical-analyzer', set this variable to nil or prepare corresponding CCL-program."
++
++CCL-program returns a string which expresses a cons.  When cons's
++cdr is non-nil, CCL-program succeeds in analyzing and car is
++analyzed result.  When cdr is nil, CCL-program fails in analyzing.
++If you modify `std11-lexical-analyzer', set this variable to nil
++or prepare corresponding CCL-program."
 +  :group 'news
 +  :group 'mail
 +  :type '(choice symbol (const :tag "Do not use CCL." nil)))

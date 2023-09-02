@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./qmtp.el	2005-07-06 11:09:05.000000000 +0900
-+++ ././qmtp.el	2020-09-05 16:02:39.901653957 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/qmtp.el	2005-07-06 11:09:05.000000000 +0900
++++ ./qmtp.el	2023-08-31 08:29:38.616972354 +0900
 @@ -1,4 +1,4 @@
 -;;; qmtp.el --- basic functions to send mail with QMTP server
 +;;; qmtp.el --- basic functions to send mail with QMTP server  -*- lexical-binding: t -*-

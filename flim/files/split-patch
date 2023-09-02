@@ -1,0 +1,43 @@
+#!/usr/pkg/bin/perl
+use strict;
+my @lines = '';
+my $DIR   = '/tmp/patches';
+my $patch;
+my $next_patch;
+
+if ( -d $DIR) { print "$DIR already exist, deleting\n"; system ('rm -rf /tmp/patches'); }
+
+mkdir ($DIR);
+while(<>) {
+#        +++ ./FLIM-CFG  2023-08-31 08:29:38.576546360 +0900
+    if (/Only in/) { next;}
+    if (m,^diff -ur /tmp/W/\S*/flim/work/flim-[0-9.]+/(\S+),) {
+#	print STDERR  $_;
+# 	push (@lines, $_);
+	$patch = $next_patch;
+ 	my $file  = $1;
+ 	   $file  =~ s/\.\///;
+ 	   $file  =~ s/\//_/g;
+
+	$next_patch = sprintf("%s/patch-%s", $DIR, $file);
+#	print STDERR $patch,"\n";
+	if (@lines && $patch) {
+	open (PATCH, "> $patch") || print STDERR " problem opening to write: %s: $!\n", $patch;
+	print PATCH '$NetBSD$'."\n\n";
+	print PATCH " flim-1_14-wl branch at 2023-08-08\n\n";
+	print PATCH @lines;
+	close(PATCH);
+	@lines = ();
+	}
+    } else {
+	push (@lines, $_);
+    }
+}
+__END__
+cd /export/git-work/flimdiff -ur /tmp/W/devel/flim/work/flim-1.14.9/ ./  >! /tmp/diff
+cd /tmp
+perl /export/git-work/perl/split-patch < /tmp/diff
+rsync -avH /tmp/patches/ /PATH/TO/wip/flim/patches/
+
+
+  235  2023-09-02 12:12  diff -ur /tmp/W/wip/flim/work/flim-1.14.9/ ./  |& > /tmp/diff

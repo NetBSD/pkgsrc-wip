@@ -1,9 +1,9 @@
 $NetBSD$
 
-sync to  lexical-binding
+ flim-1_14-wl branch at 2023-08-08
 
---- /tmp/wip/flim/work/flim-1.14.9/./mel.el	2007-06-18 19:58:54.000000000 +0900
-+++ ././mel.el	2020-09-05 16:02:39.900137733 +0900
+--- /tmp/W/devel/flim/work/flim-1.14.9/mel.el	2007-06-18 19:58:54.000000000 +0900
++++ ./mel.el	2023-08-31 08:29:38.601973143 +0900
 @@ -1,4 +1,4 @@
 -;;; mel.el --- A MIME encoding/decoding library.
 +;;; mel.el --- A MIME encoding/decoding library.  -*- lexical-binding: t -*-
@@ -76,7 +76,7 @@ sync to  lexical-binding
    (let ((coding-system-for-write 'binary)
  	jka-compr-compression-info-list jam-zcat-filename-list)
      (write-region start end filename)))
-@@ -142,86 +145,126 @@
+@@ -142,86 +145,134 @@
  			    'identity)
  (mel-define-method-function (mime-decode-string string (nil "binary"))
  			    'identity)
@@ -100,7 +100,9 @@ sync to  lexical-binding
 +(defvar mel-b-builtin t)
 +
 +(defcustom mel-b-builtin-garbage-strategy 'asis
-+  "When non-nil, base64 decoder functions handle non-encoded garbage.  When value is asis decoders keep garbage and when value is discard decoders delete garbage."
++"When non-nil, base64 decoder functions handle non-encoded
++garbage.  When value is asis decoders keep garbage and when value
++is discard decoders delete garbage."
 +  :group 'mime
 +  :type '(choice (const :tag "Keep as is" asis)
 +		 (const :tag "Discard" discard)
@@ -146,7 +148,9 @@ sync to  lexical-binding
 -			(concat "\\`" B-encoded-text-regexp "\\'"))
 -		      string)
 +(defun mel-b-builtin-decode-string (string)
-+  "Decode base64 encoded STRING with garbage handling.  Garbage handling strategy is decided by `mel-b-builtin-garbage-strategy'.  Return decoded string."
++  "Decode base64 encoded STRING with garbage handling.
++Garbage handling strategy is decided by `mel-b-builtin-garbage-strategy'.
++Return decoded string."
 +  (if (null mel-b-builtin-garbage-strategy)
 +      (base64-decode-string string)
 +    (condition-case error
@@ -175,7 +179,8 @@ sync to  lexical-binding
 +(mel-define-method-function (mime-encode-region start end (nil "base64"))
 +			    'base64-encode-region)
 +(defun mel-b-builtin-decode-region (start end)
-+  "Decode base64 encoded region between START and END with garbage handling.  Garbage handling strategy is decided by `mel-b-builtin-garbage-strategy'."
++  "Decode base64 encoded region between START and END with garbage handling.
++Garbage handling strategy is decided by `mel-b-builtin-garbage-strategy'."
 +  (if (null mel-b-builtin-garbage-strategy)
 +      (base64-decode-region start end)
 +    (condition-case error
@@ -243,7 +248,9 @@ sync to  lexical-binding
 -       (progn
 -	 (require 'path-util)
 -	 (module-installed-p 'mel-b-ccl))))
--
++(declare-function module-installed-p "path-util"
++		  (module &optional paths))
+ 
  (defvar mel-q-ccl-module
 -  (and (featurep 'mule)
 -       (progn
@@ -265,7 +272,7 @@ sync to  lexical-binding
  
  ;;; @ region
  ;;;
-@@ -232,9 +275,7 @@
+@@ -232,9 +283,7 @@
  ENCODING must be string."
    (interactive
     (list (region-beginning)(region-end)
@@ -276,7 +283,7 @@ sync to  lexical-binding
    (funcall (mel-find-function 'mime-encode-region encoding) start end))
  
  
-@@ -244,9 +285,7 @@
+@@ -244,9 +293,7 @@
  ENCODING must be string."
    (interactive
     (list (region-beginning)(region-end)
@@ -287,7 +294,7 @@ sync to  lexical-binding
    (funcall (mel-find-function 'mime-decode-region encoding)
  	   start end))
  
-@@ -299,7 +338,7 @@
+@@ -299,7 +346,7 @@
      (while (< i len)
        (setq chr (aref string i))
        (if (or (Q-encoding-printable-char-p chr mode)
@@ -296,7 +303,7 @@ sync to  lexical-binding
  	  (setq l (+ l 1))
  	(setq l (+ l 3)))
        (setq i (+ i 1)))
-@@ -314,9 +353,7 @@
+@@ -314,9 +361,7 @@
    "Insert file FILENAME encoded by ENCODING format."
    (interactive
     (list (read-file-name "Insert encoded file: ")
@@ -307,7 +314,7 @@ sync to  lexical-binding
    (funcall (mel-find-function 'mime-insert-encoded-file encoding)
  	   filename))
  
-@@ -328,9 +365,7 @@
+@@ -328,9 +373,7 @@
    (interactive
     (list (region-beginning)(region-end)
  	 (read-file-name "Write decoded region to file: ")
