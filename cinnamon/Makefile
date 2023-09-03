@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.1 2015/02/19 21:21:12 jihbed Exp $
 
 DISTNAME=	cinnamon-4.6.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxmint/}
 GITHUB_PROJECT=	Cinnamon
@@ -97,7 +97,7 @@ DEPENDS+=	gnome-themes-standard>=3.20.0:../../graphics/gnome-themes-standard
 DEPENDS+=	gnome-icon-theme-[0-9]*:../../graphics/gnome-icon-theme
 #DEPENDS+=	gnome-terminal->=3.0.0:../../cinnamon/gnome-terminal
 DEPENDS+=	mate-polkit-[0-9]*:../../security/mate-polkit
-DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 DEPENDS+=	muffin>=4.6.2:../../wip/muffin
 TOOL_DEPENDS+=	gettext-m4>=0.14.6:../../devel/gettext-m4
 
