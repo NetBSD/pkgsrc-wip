@@ -2741,6 +2741,7 @@ man/man3/OSSL_CMP_MSG_get_bodytype.3
 man/man3/OSSL_CMP_MSG_http_perform.3
 man/man3/OSSL_CMP_MSG_it.3
 man/man3/OSSL_CMP_MSG_read.3
+man/man3/OSSL_CMP_MSG_update_recipNonce.3
 man/man3/OSSL_CMP_MSG_update_transactionID.3
 man/man3/OSSL_CMP_MSG_write.3
 man/man3/OSSL_CMP_P10CR.3
