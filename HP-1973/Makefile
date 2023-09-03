@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		https://sarahkmarr.com/retrohp1973.html
 COMMENT=		HP-45 emulator
-#LICENSE=		generic-nonlicense
+LICENSE=		generic-nonlicense
 
 RESTRICTED=		No hosting permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
