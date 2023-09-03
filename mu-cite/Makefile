@@ -16,10 +16,10 @@ SUBST_MESSAGE.dest=	replacing for dest-dir
 SUBST_SED.dest=		-e 's|@@PREFIX@@|${DESTDIR}${PREFIX}|'
 SUBST_FILES.dest+=	Makefile
 
-.include "../../wip/emacs-git/modules.mk"
+.include "../../editors/emacs/modules.mk"
 
 DEPENDS+=		flim-[0-9]*:../../devel/flim
-DEPENDS+=		bbdb2-[0-9]*:../../misc/bbdb2
+DEPENDS+=		bbdb-[0-9]*:../../misc/bbdb3
 MAKE_DIRS+=		${PREFIX}/share/doc/mu-cite
 AUTO_MKDIRS=		yes
 
