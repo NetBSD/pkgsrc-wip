@@ -4,3 +4,4 @@ BLAKE2s (libreswan-4.12.tar.gz) = 397c455b67e112d0407b2b6e0fbe1f6e4bec4422c747a5
 SHA512 (libreswan-4.12.tar.gz) = 3a7f5ea5d97da357a8979a8807694a316d42ccc5f9c7b5867041abf2b9316ff8428f24cf307b6b6073c191896c0417f137abf78f9903aecde5e1ee1182577ce0
 Size (libreswan-4.12.tar.gz) = 3718440 bytes
 SHA1 (patch-lib_libswan_x509.c) = 5f660e6186232be02c4c8ecadb905fcb5a1801be
+SHA1 (patch-programs_pluto_kernel_pfkeyv2.c) = 1daad00223d30d409b62a2d4dc932f6d1f91f9d6

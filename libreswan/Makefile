@@ -7,7 +7,7 @@
 # mk/default/netbsd.mk).
 
 DISTNAME=	libreswan-4.12
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	https://download.libreswan.org/
 
 CATEGORIES=	security
