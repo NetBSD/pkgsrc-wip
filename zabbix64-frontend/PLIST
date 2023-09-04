@@ -1669,6 +1669,7 @@ share/zabbix/widgets/tophosts/views/widget.view.php
 share/zabbix/widgets/trigover/Widget.php
 share/zabbix/widgets/trigover/actions/WidgetView.php
 share/zabbix/widgets/trigover/assets/js/class.widget.js
+share/zabbix/widgets/trigover/includes/ViewHelper.php
 share/zabbix/widgets/trigover/includes/WidgetForm.php
 share/zabbix/widgets/trigover/manifest.json
 share/zabbix/widgets/trigover/partials/table.left.php

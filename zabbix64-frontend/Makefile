@@ -22,20 +22,21 @@ BUILD_DEFS+=		APACHE_GROUP APACHE_USER
 PKG_GROUPS_VARS+=	${APACHE_GROUP}
 PKG_USERS_VARS=		${APACHE_USER}
 
-DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=7.4.0:../../math/php-bcmath
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.4.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=7.4.0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.4.0:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=7.4.0:../../databases/php-ldap
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.4.0:../../converters/php-mbstring
+PHP_VERSIONS_ACCEPTED=	80 81 82
+
+DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=8.0.0:../../math/php-bcmath
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.0.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=8.0.0:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=8.0.0:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.0.0:../../converters/php-mbstring
 .if ${ZABBIX_DB_TYPE} == "mysql"
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.4.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=8.0.0:../../databases/php-mysqli
 .endif
 .if ${ZABBIX_DB_TYPE} == "pgsql"
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=7.4.0:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=8.0.0:../../databases/php-pgsql
 .endif
-DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=7.4.0:../../net/php-sockets
-DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=7.4.0:../../devel/php-sysvsem
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=8.0.0:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=8.0.0:../../devel/php-sysvsem
 
 INSTALLATION_DIRS+=	${EGDIR} share/zabbix
 
