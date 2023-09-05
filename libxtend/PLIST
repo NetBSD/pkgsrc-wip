@@ -22,11 +22,11 @@ lib/libxtend.a
 lib/libxtend.so
 lib/libxtend.so.2
 lib/libxtend.so.2.0
+man/man3/_xt_ff_fillbuff.3
 man/man3/csv_read_field.3
 man/man3/csv_read_field_malloc.3
 man/man3/csv_skip_field.3
 man/man3/csv_skip_rest_of_line.3
-man/man3/difftimeofday.3
 man/man3/digits.3
 man/man3/double_cmp.3
 man/man3/dsv_line_copy.3
@@ -86,6 +86,7 @@ man/man3/tsv_read_field_malloc.3
 man/man3/tsv_skip_field.3
 man/man3/tsv_skip_rest_of_line.3
 man/man3/xt_daemonize.3
+man/man3/xt_difftimeofday.3
 man/man3/xt_dprintf.3
 man/man3/xt_factorial.3
 man/man3/xt_fast_cp.3
@@ -94,7 +95,6 @@ man/man3/xt_fd_purge.3
 man/man3/xt_ff_close.3
 man/man3/xt_ff_close_raw.3
 man/man3/xt_ff_dopen.3
-man/man3/xt_ff_fillbuff.3
 man/man3/xt_ff_get_buff.3
 man/man3/xt_ff_get_buff_ae.3
 man/man3/xt_ff_get_buff_index.3
