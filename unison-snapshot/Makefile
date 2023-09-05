@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.142 2022/08/17 20:28:37 wiz Exp $
 
 # 2.53.3.beyond
-DISTNAME=	unison-2.53.3.0.50
+DISTNAME=	unison-2.53.3.0.51
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	9056d581efdc17dda13e08b6868032f4f6e4445d
+GITHUB_TAG=	3d524c47345d4d792fc716d01903cdda3e089e80
 
 
 MAINTAINER=	gdt@NetBSD.org
@@ -40,6 +40,8 @@ INSTALLATION_DIRS+=	share/doc/unison
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/unison ${DESTDIR}${PREFIX}/bin
+	# gross hack for now
+	${INSTALL_PROGRAM} ${WRKSRC}/src/unison-gui ${DESTDIR}${PREFIX}/bin || ${TRUE}
 	${INSTALL_MAN} ${WRKSRC}/src/COPYING ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/CONTRIBUTING.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/INSTALL.md ${DESTDIR}${PREFIX}/share/doc/unison
