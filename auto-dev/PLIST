@@ -2,6 +2,7 @@
 bin/auto-c2man
 bin/auto-gen-get-set-opaque
 bin/auto-gen-get-set-transparent
+bin/auto-man2man
 bin/auto-script2man
 man/man1/auto-c2man.1
 man/man1/auto-gen-get-set-opaque.1
