@@ -27,7 +27,7 @@ SUBST_SED.allno=	s,true,false,
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../wip/libevdev/buildlink3.mk"
 .include "../../wip/libinput/buildlink3.mk"
-.include "../../wip/libudev/buildlink3.mk"
+.include "../../sysutils/libudev/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"

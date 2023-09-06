@@ -24,5 +24,5 @@ CONFIGURE_ARGS+=	--enable-udev
 
 .include "../../x11/modular-xorg-server/options.mk"
 
-.include "../../wip/libudev/buildlink3.mk"
+.include "../../sysutils/libudev/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

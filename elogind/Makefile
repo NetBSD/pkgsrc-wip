@@ -21,6 +21,6 @@ USE_TOOLS+=		m4
 
 PKGCONFIG_OVERRIDE+=	src/libelogind/libelogind.pc.in
 
-.include "../../wip/libudev/buildlink3.mk"
+.include "../../sysutils/libudev/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

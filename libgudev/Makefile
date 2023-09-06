@@ -14,7 +14,7 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	gudev-1.0.pc.in
 
-.include "../../wip/libudev/buildlink3.mk"
+.include "../../sysutils/libudev/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

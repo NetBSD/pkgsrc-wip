@@ -24,7 +24,7 @@ REPLACE_FILES.env-python=	tools/libinput-*.py
 
 .include "../../lang/python/tool.mk"
 .include "../../wip/libevdev/buildlink3.mk"
-.include "../../wip/libudev/buildlink3.mk"
+.include "../../sysutils/libudev/buildlink3.mk"
 .include "../../wip/mtdev/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
