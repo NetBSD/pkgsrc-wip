@@ -147,7 +147,7 @@ lib/libcrypto.so.3
 lib/libssl.a
 lib/libssl.so
 lib/libssl.so.3
-lib/ossl-modules/legacy.so
+lib/ossl-modules/legacy.${SOEXT}
 lib/pkgconfig/libcrypto.pc
 lib/pkgconfig/libssl.pc
 lib/pkgconfig/openssl.pc

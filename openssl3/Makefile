@@ -38,11 +38,13 @@ CONFIGURE_ARGS+=	no-async
 PLIST_VARS+=		devcrypto afalg
 # the AF_ALG engine is supported only on Linux, where it
 # is used instead of the BSD /dev/crypto engine.
-.if ${OPSYS} == "Linux" && !exists(/dev/crypto)
+.if ${OPSYS} == "Linux"
 PLIST.afalg=		yes
-.else
-CONFIGURE_ARGS+=	no-afalgeng
+.endif
+.if exists(/dev/crypto)
 PLIST.devcrypto=	yes
+.else
+CONFIGURE_ARGS+=	no-devcryptoeng
 .endif
 
 # Fix 64-bit build on at least Mac OS X Snow Leopard
