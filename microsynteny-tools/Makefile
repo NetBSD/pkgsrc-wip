@@ -5,10 +5,10 @@
 #              Sun Mar  6 18:38:30 CST 2022               #
 ###########################################################
 
-DISTNAME=	microsynteny-tools-0.1.0.173
+DISTNAME=	microsynteny-tools-0.1.0.175
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	34ea792d9c334dd9dd3cd2e0d22849981f592809
+GITHUB_TAG=	c471264f8df1fd73621973737d74f4f48e8eb9d1
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
