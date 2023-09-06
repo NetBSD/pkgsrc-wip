@@ -136,8 +136,9 @@ include/openssl/x509_vfy.h
 include/openssl/x509err.h
 include/openssl/x509v3.h
 include/openssl/x509v3err.h
+${PLIST.afalg}lib/engines-3/afalg.${SOEXT}
 lib/engines-3/capi.${SOEXT}
-lib/engines-3/devcrypto.${SOEXT}
+${PLIST.devcrypto}lib/engines-3/devcrypto.${SOEXT}
 lib/engines-3/loader_attic.${SOEXT}
 lib/engines-3/padlock.${SOEXT}
 lib/libcrypto.a

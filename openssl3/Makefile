@@ -35,6 +35,16 @@ MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	no-async
 .endif
 
+PLIST_VARS+=		devcrypto afalg
+# the AF_ALG engine is supported only on Linux, where it
+# is used instead of the BSD /dev/crypto engine.
+.if ${OPSYS} == "Linux" && !exists(/dev/crypto)
+PLIST.afalg=		yes
+.else
+CONFIGURE_ARGS+=	no-afalgeng
+PLIST.devcrypto=	yes
+.endif
+
 # Fix 64-bit build on at least Mac OS X Snow Leopard
 .if ${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ENV+=		KERNEL_BITS=${ABI}
