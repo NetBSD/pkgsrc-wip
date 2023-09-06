@@ -3896,7 +3896,6 @@ SUBDIR+=	py-julio
 SUBDIR+=	py-juniper-SNMPv3-crypt
 SUBDIR+=	py-junit-xml
 SUBDIR+=	py-junos-netconify
-SUBDIR+=	py-jupyterlab
 SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-kabuki
 SUBDIR+=	py-karta
