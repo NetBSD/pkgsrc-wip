@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.6.0
+PKGVERSION=	2.6.1
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -29,16 +29,18 @@ BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
 
 .include "../../mk/bsd.prefs.mk"
 
-CMAKE_ARGS+=	-DSLIC3R_WX_STABLE:BOOL=TRUE
 CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 #CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS:STRING=-g
 
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libepoll-shim/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

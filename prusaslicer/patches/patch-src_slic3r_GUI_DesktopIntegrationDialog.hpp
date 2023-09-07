@@ -2,15 +2,18 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/DesktopIntegrationDialog.hpp.orig	2023-06-02 13:41:15.000000000 +0000
+--- src/slic3r/GUI/DesktopIntegrationDialog.hpp.orig	2023-09-06 06:42:26.000000000 +0000
 +++ src/slic3r/GUI/DesktopIntegrationDialog.hpp
-@@ -1,4 +1,4 @@
+@@ -2,7 +2,7 @@
+ ///|/
+ ///|/ PrusaSlicer is released under the terms of the AGPLv3 or higher
+ ///|/
 -#ifdef __linux__
 +#if defined(__linux__) || defined(__NetBSD__)
  #ifndef slic3r_DesktopIntegrationDialog_hpp_
  #define slic3r_DesktopIntegrationDialog_hpp_
  
-@@ -42,4 +42,4 @@ private:
+@@ -46,4 +46,4 @@ private:
  } // namespace Slic3r
  
  #endif // slic3r_DesktopIntegrationDialog_hpp_
