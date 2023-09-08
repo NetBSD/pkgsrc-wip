@@ -35,6 +35,12 @@ share/PrusaSlicer/icons/add_text_modifier.svg
 share/PrusaSlicer/icons/add_text_negative.svg
 share/PrusaSlicer/icons/add_text_part.svg
 share/PrusaSlicer/icons/advanced_plus.svg
+share/PrusaSlicer/icons/align_horizontal_center.svg
+share/PrusaSlicer/icons/align_horizontal_left.svg
+share/PrusaSlicer/icons/align_horizontal_right.svg
+share/PrusaSlicer/icons/align_vertical_bottom.svg
+share/PrusaSlicer/icons/align_vertical_center.svg
+share/PrusaSlicer/icons/align_vertical_top.svg
 share/PrusaSlicer/icons/arrange.svg
 share/PrusaSlicer/icons/attention.svg
 share/PrusaSlicer/icons/browse.svg
@@ -225,6 +231,7 @@ share/PrusaSlicer/icons/sla_printer.svg
 share/PrusaSlicer/icons/sla_supports.svg
 share/PrusaSlicer/icons/sla_view_original.svg
 share/PrusaSlicer/icons/sla_view_processed.svg
+share/PrusaSlicer/icons/snap.svg
 share/PrusaSlicer/icons/splashscreen-gcodepreview.jpg
 share/PrusaSlicer/icons/splashscreen.jpg
 share/PrusaSlicer/icons/split_object_SMALL.svg
@@ -567,6 +574,20 @@ share/PrusaSlicer/profiles/Jubilee.ini
 share/PrusaSlicer/profiles/Jubilee/Jubilee_bed.stl
 share/PrusaSlicer/profiles/Jubilee/Jubilee_texture.svg
 share/PrusaSlicer/profiles/Jubilee/Jubilee_thumbnail.png
+share/PrusaSlicer/profiles/LNL3D.idx
+share/PrusaSlicer/profiles/LNL3D.ini
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D3_VULCAN_bed.stl
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D3_VULCAN_texture.svg
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D3_VULCAN_thumbnail.png
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D3_bed.stl
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D3_texture.svg
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D3_thumbnail.png
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D5_bed.stl
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D5_texture.svg
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D5_thumbnail.png
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D6_bed.stl
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D6_texture.svg
+share/PrusaSlicer/profiles/LNL3D/LNL3D_D6_thumbnail.png
 share/PrusaSlicer/profiles/LulzBot.idx
 share/PrusaSlicer/profiles/LulzBot.ini
 share/PrusaSlicer/profiles/LulzBot/MINI_AERO_thumbnail.png
@@ -583,6 +604,11 @@ share/PrusaSlicer/profiles/MakerGear/MAKERGEAR_M3_SE_thumbnail.png
 share/PrusaSlicer/profiles/MakerGear/MAKERGEAR_M3_thumbnail.png
 share/PrusaSlicer/profiles/MakerGear/MAKERGEAR_MICRO_thumbnail.png
 share/PrusaSlicer/profiles/MakerGear/MAKERGEAR_U1_thumbnail.png
+share/PrusaSlicer/profiles/PapapiuLab.idx
+share/PrusaSlicer/profiles/PapapiuLab.ini
+share/PrusaSlicer/profiles/PapapiuLab/Papapiu_N1S_Bed.stl
+share/PrusaSlicer/profiles/PapapiuLab/Papapiu_N1S_thumbnail.png
+share/PrusaSlicer/profiles/PapapiuLab/Papapiu_N1_Texture.png
 share/PrusaSlicer/profiles/Print4Taste.idx
 share/PrusaSlicer/profiles/Print4Taste.ini
 share/PrusaSlicer/profiles/Print4Taste/MC2.0_bed.stl
@@ -602,6 +628,7 @@ share/PrusaSlicer/profiles/PrusaResearch/MK3SMMU2S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK3S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK3_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/MK4IS_thumbnail.png
+share/PrusaSlicer/profiles/PrusaResearch/MK4IS_thumbnail_v2.png
 share/PrusaSlicer/profiles/PrusaResearch/MK4_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/SL1S_thumbnail.png
 share/PrusaSlicer/profiles/PrusaResearch/SL1_thumbnail.png
@@ -656,6 +683,38 @@ share/PrusaSlicer/profiles/Snapmaker/A250_thumbnail.png
 share/PrusaSlicer/profiles/Snapmaker/A350_bed.stl
 share/PrusaSlicer/profiles/Snapmaker/A350_texture.svg
 share/PrusaSlicer/profiles/Snapmaker/A350_thumbnail.png
+share/PrusaSlicer/profiles/Sovol.idx
+share/PrusaSlicer/profiles/Sovol.ini
+share/PrusaSlicer/profiles/Sovol/SV01 PRO_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV01_BLTouch_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV01_bed.stl
+share/PrusaSlicer/profiles/Sovol/SV01_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV01_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV02_BLTouch_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV02_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV02_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV03_BLTouch_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV03_bed.stl
+share/PrusaSlicer/profiles/Sovol/SV03_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV03_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV04 Copy Mode_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV04 Dual Mode_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV04 Mirror Mode_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV04 Single Mode 01_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV04 Single Mode 02_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV04_bed.stl
+share/PrusaSlicer/profiles/Sovol/SV04_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV04_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV05_bed.stl
+share/PrusaSlicer/profiles/Sovol/SV05_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV05_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV06 PLUS_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/SV06PLUS_bed.stl
+share/PrusaSlicer/profiles/Sovol/SV06PLUS_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV06_bed.stl
+share/PrusaSlicer/profiles/Sovol/SV06_texture.svg
+share/PrusaSlicer/profiles/Sovol/SV06_thumbnail.png
+share/PrusaSlicer/profiles/Sovol/Sovol.ini
 share/PrusaSlicer/profiles/Templates.idx
 share/PrusaSlicer/profiles/Templates.ini
 share/PrusaSlicer/profiles/TriLAB.idx
