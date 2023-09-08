@@ -1,11 +1,10 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	EternalTerminal
-GITHUB_TAG=	et-v${PKGVERSION_NOREV}
-
-DISTNAME=	et-6.1.11
+DISTNAME=	et-6.2.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MisterTea/}
+GITHUB_PROJECT=	EternalTerminal
+GITHUB_TAG=	et-v${PKGVERSION_NOREV}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,15 +18,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
 GCC_REQD+=	9  # uses std::filesystem
-#LIBS+=		-lstdc++fs
-
-#.include "../../mk/bsd.prefs.mk"
-#PKGSRC_COMPILER=                clang
-#CLANGBASE=                      ${PREFIX}
-#.include "../../lang/llvm/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.llvm=       build
-#.include "../../lang/clang/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.clang=      build
 
 CMAKE_ARGS+=	-DDISABLE_VCPKG=ON
 CMAKE_ARGS+=	-DDISABLE_TELEMETRY=ON
@@ -49,6 +39,9 @@ PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8_libbase.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8_libplatform.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/vcpkg/ports/v8/v8_monolith.pc.in
 
+.include "../../security/openssl/buildlink3.mk"
+.include "../../devel/catch2/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../devel/cxxopts/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
