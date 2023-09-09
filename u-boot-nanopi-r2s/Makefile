@@ -24,3 +24,4 @@ post-extract:
 
 .include "../../sysutils/arm-trusted-firmware-rk3328/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
+.include "../../mk/bsd.pkg.mk"
