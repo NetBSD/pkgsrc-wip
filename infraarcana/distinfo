@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-RMD160 (ia-v20.0.tar.bz2) = fdce0894e41d05f94b2fb5bb5752131ebba1675b
-SHA512 (ia-v20.0.tar.bz2) = 6714304245a1c4018575f9c2f7674262a39cfbbc1a3a0fb5d5535c332b4c7bb06fa67eaeb85fc7b99ea0211948c2610c7b7f9b2f10dbe10d2eddfa4a866acdda
-Size (ia-v20.0.tar.bz2) = 42440247 bytes
+BLAKE2s (ia-v22.0.0.tar.bz2) = 8a0b08f86b30534ef40e8b77c4669e89fda23c0d3df60427a8f98763b3537a4f
+SHA512 (ia-v22.0.0.tar.bz2) = 0640c6ac7adfcf01c03d369892a2fa5140effbc1ffbf1305ed054737f4ada22e879ba270abfab372192ff630037774796cb5a1d17e18b32ef4b1bceb70164a83
+Size (ia-v22.0.0.tar.bz2) = 59277183 bytes
 SHA1 (patch-CMakeLists.txt) = d48980a86d8e77739eebd8efaf67694eb36959ea

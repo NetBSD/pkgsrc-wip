@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.1 2015/08/19 19:42:29 yhardy Exp $
 
-DISTNAME=	ia-v20.0
-PKGNAME=	infraarcana-20.0
+DISTNAME=	ia-v22.0.0
+PKGNAME=	infraarcana-${DISTNAME:S/ia-v//}
 CATEGORIES=	games
-MASTER_SITES=	https://gitlab.com/martin-tornqvist/ia/-/archive/v20.0/
+MASTER_SITES=	https://gitlab.com/martin-tornqvist/ia/-/archive/${DISTNAME:S/ia-//}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +13,6 @@ LICENSE=	cc-by-nc-sa-v3.0-license
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_GAMESGROUP=	yes
 
@@ -27,5 +26,6 @@ post-install:
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
