@@ -1,7 +1,6 @@
 $NetBSD$
 
-RMD160 (openfodder/1.6.0.tar.gz) = 828f2c2f4d40451738075f201b76f60c5728a85d
-SHA512 (openfodder/1.6.0.tar.gz) = d0e77ff16e1e2aa7f758350a9813f59dcf3db766a197850192c955ab6b6d53d6de89276540a1bc84588b8b33be22f0921c38ab76f08fea863711f9697e75b75a
-Size (openfodder/1.6.0.tar.gz) = 1421940 bytes
+BLAKE2s (openfodder/1.8.0.tar.gz) = 3356f92fa4f6b95676f03906706fc4b049351cda650016a4bd5a4796bdc9d38a
+SHA512 (openfodder/1.8.0.tar.gz) = 8638d7e4433d03f2881e819632cbf66b7cf312ab50e81d430bb52a96284ccf3edeea68d3729dfad652040ff87d645f4ba56c5e362867524738fe26b6572b27c9
+Size (openfodder/1.8.0.tar.gz) = 1470661 bytes
 SHA1 (patch-Source_ResourceMan.cpp) = 9d825f5ce9d94fb10708315e533878f17433b893
-SHA1 (patch-Source_Utils_SimplexIslands.hpp) = fa32683d975ddfbbb7adf2fb9147defb8f5df57e
