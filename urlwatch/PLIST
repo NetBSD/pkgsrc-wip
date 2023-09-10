@@ -11,8 +11,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/urlwatch/__init__.py
 ${PYSITELIB}/urlwatch/__init__.pyc
-${PYSITELIB}/urlwatch/browser.py
-${PYSITELIB}/urlwatch/browser.pyc
 ${PYSITELIB}/urlwatch/cli.py
 ${PYSITELIB}/urlwatch/cli.pyc
 ${PYSITELIB}/urlwatch/command.py
