@@ -11,7 +11,7 @@ HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES=	c++17
 
 # Nobody does bioinformatics on 32-bit processors anymore
 ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
