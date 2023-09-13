@@ -1,22 +1,11 @@
 $NetBSD$
 
-* Several functions are hidden behind _NETBSD_SOURCE.
 * Deal with a failure specific to Clang.
+* Work around missing fseeko64() et al.
 
---- CMakeLists.txt.orig	2023-05-22 07:27:43.000000000 -0700
-+++ CMakeLists.txt	2023-07-29 23:46:33.678325802 -0700
-@@ -13,6 +13,10 @@
- 
- add_definitions(-D__STDC_CONSTANT_MACROS)
- 
-+if(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
-+  add_definitions(-D_NETBSD_SOURCE)
-+endif()
-+
- # Include AppleClang and Clang.
- if(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
- 	set(CLANG ON)
-@@ -336,6 +340,7 @@
+--- CMakeLists.txt.orig	2023-09-09 06:14:53.000000000 -0700
++++ CMakeLists.txt	2023-09-11 19:54:24.624246614 -0700
+@@ -356,6 +356,7 @@
  		add_definitions(-Wno-nullability-completeness)
  		add_definitions(-Wno-tautological-pointer-compare)
  		add_definitions(-Wno-deprecated-register)
@@ -24,3 +13,13 @@ $NetBSD$
  	endif()
  
  	if(USE_ASAN)
+@@ -425,7 +426,9 @@
+ 		endif()
+ 		add_definitions(-D_XOPEN_SOURCE=700)
+ 		add_definitions(-D_XOPEN_SOURCE_EXTENDED -D__BSD_VISIBLE=1 -D_BSD_SOURCE -D_DEFAULT_SOURCE)
++		if(NOT ${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
+ 		add_definitions(-D_LARGEFILE64_SOURCE=1 -D_FILE_OFFSET_BITS=64)
++		endif()
+ 		if(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
+ 			add_definitions(-D_NETBSD_SOURCE)
+ 		endif()
