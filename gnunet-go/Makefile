@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		gnunet-go-0.1.40
+DISTNAME=		gnunet-go-0.1.42
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bfix/}
 CATEGORIES=		net
 GITHUB_TAG=		v${PKGVERSION_NOREV}
