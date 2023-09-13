@@ -12,7 +12,8 @@ LICENSE=	public-domain # actually, dwtfywtpl
 USE_LANGUAGES=	c
 USE_TOOLS+=	autoconf automake pkg-config
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-sixel
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
