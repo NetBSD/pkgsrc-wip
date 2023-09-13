@@ -7,8 +7,8 @@ NCBI_BLAST+_BUILDLINK3_MK:=
 
 USE_CXX_FEATURES=			c++17
 
-BUILDLINK_API_DEPENDS.ncbi-blast++=	ncbi-blast+>=2.14.0
-BUILDLINK_ABI_DEPENDS.ncbi-blast++=	ncbi-blast+>=2.14.0nb1
+BUILDLINK_API_DEPENDS.ncbi-blast++=	ncbi-blast+>=2.14.1
+BUILDLINK_ABI_DEPENDS.ncbi-blast++=	ncbi-blast+>=2.14.1
 BUILDLINK_PKGSRCDIR.ncbi-blast+?=	../../wip/ncbi-blast+
 
 .endif	# NCBI_BLAST+_BUILDLINK3_MK
