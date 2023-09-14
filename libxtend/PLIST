@@ -22,7 +22,9 @@ lib/libxtend.a
 lib/libxtend.so
 lib/libxtend.so.2
 lib/libxtend.so.2.0
-man/man3/_xt_ff_fillbuff.3
+man/man3/_xt_ff_pclose.3
+man/man3/_xt_ff_raw_close.3
+man/man3/_xt_ff_raw_open.3
 man/man3/libxtend.3
 man/man3/xt_csv_read_field.3
 man/man3/xt_csv_read_field_malloc.3
@@ -62,7 +64,6 @@ man/man3/xt_fast_cp.3
 man/man3/xt_fclose.3
 man/man3/xt_fd_purge.3
 man/man3/xt_ff_close.3
-man/man3/xt_ff_close_raw.3
 man/man3/xt_ff_dopen.3
 man/man3/xt_ff_get_buff.3
 man/man3/xt_ff_get_buff_ae.3
@@ -78,8 +79,6 @@ man/man3/xt_ff_get_start_ptr_ae.3
 man/man3/xt_ff_getc.3
 man/man3/xt_ff_gets.3
 man/man3/xt_ff_open.3
-man/man3/xt_ff_open_raw.3
-man/man3/xt_ff_pclose.3
 man/man3/xt_ff_popen.3
 man/man3/xt_ff_printf.3
 man/man3/xt_ff_putc.3
