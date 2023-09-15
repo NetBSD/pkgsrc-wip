@@ -3115,6 +3115,7 @@ SUBDIR+=	pilemc-svn
 SUBDIR+=	pinball
 SUBDIR+=	pinentry-dmenu
 SUBDIR+=	pinkpony
+SUBDIR+=	pint
 SUBDIR+=	pioneer
 SUBDIR+=	pipe-viewer
 SUBDIR+=	pipes-c
