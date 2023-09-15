@@ -1,4 +1,3 @@
-===> extract-message [s5cmd-2.2.1] ===> Extracting for s5cmd-2.2.1
 # $NetBSD$
 
 GO_MODULE_FILES+=	github.com/!vivid!cortex/ewma/@v/v1.2.0.mod
@@ -26,8 +25,8 @@ GO_MODULE_FILES+=	github.com/hashicorp/go-multierror/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/hashicorp/go-multierror/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/iancoleman/strcase/@v/v0.0.0-20191112232945-16388991a334.mod
 GO_MODULE_FILES+=	github.com/iancoleman/strcase/@v/v0.0.0-20191112232945-16388991a334.zip
-GO_MODULE_FILES+=	github.com/igungor/gofakes3/@v/v0.0.14.mod
-GO_MODULE_FILES+=	github.com/igungor/gofakes3/@v/v0.0.14.zip
+GO_MODULE_FILES+=	github.com/igungor/gofakes3/@v/v0.0.15.mod
+GO_MODULE_FILES+=	github.com/igungor/gofakes3/@v/v0.0.15.zip
 GO_MODULE_FILES+=	github.com/jmespath/go-jmespath/@v/v0.4.0.mod
 GO_MODULE_FILES+=	github.com/jmespath/go-jmespath/@v/v0.4.0.zip
 GO_MODULE_FILES+=	github.com/jmespath/go-jmespath/internal/testify/@v/v1.5.1.mod
