@@ -5,6 +5,7 @@ DISTNAME=	wanderlust
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/wanderlust/wl-2.15.9.${DATE}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
+GITHUB_PROJECT=	wanderlust
 GITHUB_TAG=	1389dcec6e3242948682eb3e3ce8ead8be2772d8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
