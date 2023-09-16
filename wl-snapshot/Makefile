@@ -1,10 +1,11 @@
 # $NetBSD: Makefile,v 1.14 2022/06/05 02:36:41 mef Exp $
 
-DISTNAME=	wl-0.2023.09.10
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+DISTNAME=	wanderlust-0.2023.09.10
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/wanderlust-/wl-/}
+PKGREVISION=	1
 CATEGORIES=	mail
-#ASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wl-beta/}
-MASTER_SITES=	ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
+GITHUB_TAG=	1389dcec6e3242948682eb3e3ce8ead8be2772d8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
@@ -12,7 +13,7 @@ COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 LICENSE=	gnu-gpl-v2
 
 #SE_TOOLS+=	patch
-WRKSRC=		${WRKDIR}/wanderlust
+WRKSRC=		${WRKDIR}/wanderlust-${GITHUB_TAG}
 
 BUILD_TARGET=	all info
 INSTALL_TARGET=	install install-info
