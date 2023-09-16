@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	scaleway-cli-2.14.0
+DISTNAME=	scaleway-cli-2.21.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scaleway/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
