@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
-CONFIGURE_ENV+=		MESON_RSP_THRESHOLD=262144
+ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
 .if defined(PKGSRC_USE_SSP)
 # do not add flags to everything

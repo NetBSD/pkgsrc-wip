@@ -25,7 +25,7 @@ Add NetBSD support.
                       mode);
      if (fd == -1) {
 -#ifndef CONFIG_DARWIN
-+#ifndef CONFIG_LINUX
++#ifdef CONFIG_LINUX
          if (errno == EPERM && (flags & O_NOATIME)) {
              /*
               * The client passed O_NOATIME but we lack permissions to honor it.
