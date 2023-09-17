@@ -1,9 +1,6 @@
 $NetBSD$
 
-BLAKE2s (docker-cli-20.10.21.tar.gz) = fa7a3d96c553dc6ed6aa93c695ee679988a89a8fe5204b04ff956c79bdfeb41a
-SHA512 (docker-cli-20.10.21.tar.gz) = 951100d75c833e1c844203fe86d73d25c3164eba4fce87cc05a0ac3691851fc5341c3b32ce3814dd61bd3700d8e8e1d045a7a5651c6dc5ddc0a39c58db9bd7b3
-Size (docker-cli-20.10.21.tar.gz) = 7633967 bytes
+BLAKE2s (docker-cli-24.0.6.tar.gz) = 347bf06e59bdab352a4b3a4b1c61d0bc1a103f8e275d8e8dfc6cb80d38248aef
+SHA512 (docker-cli-24.0.6.tar.gz) = 55c56ae08eb314cce5f4c93544c6748586eadb3abe502d39d4d297e14d274af37346b38695a20a91dcfe51d3d35a77ddd7aa69d170b525e5e6ba345161869cd8
+Size (docker-cli-24.0.6.tar.gz) = 6244014 bytes
 SHA1 (patch-cli-plugins_manager_manager__unix.go) = 2d17cd8c7dc958e14d23cef6e619c4d798cad5a7
-SHA1 (patch-vendor_github.com_docker_docker_pkg_system_rm.go) = 1454da2929e6d3f652d13c22b8749e8228860e3b
-SHA1 (patch-vendor_github.com_moby_sys_mount_flags__unix.go) = 6ccfaaf4d229737cb8548108fb8d21e23007bcea
-SHA1 (patch-vendor_github.com_moby_sys_mount_mount__unix.go) = cd46a687646f65b57b9eb88eca497718e00a6dcf
