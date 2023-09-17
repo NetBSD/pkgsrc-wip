@@ -79,6 +79,8 @@ PLIST.virtfs-proxy-helper=	yes
 CONFIGURE_ARGS+=		--enable-virtfs
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=		--enable-virtfs
+.elif ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=		--enable-virtfs
 .else
 CONFIGURE_ARGS+=		--disable-virtfs
 .endif
