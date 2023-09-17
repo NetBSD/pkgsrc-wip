@@ -9,7 +9,7 @@ PLIST_VARS+=	mew
 
 # xemacs-packages contain mew (but not mew-nntp)
 .if (${EMACS_FLAVOR} == "xemacs")
-PLIST.mew =	yes
+PLIST.mew=	yes
 .elif !empty(PKG_OPTIONS:Memacs-w3m-mew)
 .include "../../mail/mew/buildlink3.mk"
 PLIST.mew=	yes

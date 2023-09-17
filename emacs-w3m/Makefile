@@ -2,14 +2,13 @@
 
 DISTNAME=	emacs-w3m-1.4.5
 CATEGORIES=	www
-MASTER_SITES=	${HOMEPAGE}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emacs-w3m/}
-
 GITHUB_TAG=	329cfcfc0448a45a0779ded7b51332a343d02a18
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
+LICENSE=	gnu-gpl-v2
 
 #NSTALLATION_DIRS=	${ETCDIR}
 
@@ -21,20 +20,21 @@ DEPENDS+=	w3m{,-img}>=0.5.1nb2:../../www/w3m
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-emacs=${EMACS_BIN:Q}
 CONFIGURE_ARGS+=	--with-icondir=${ICONDIR}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 BUILD_TARGET=		default
 INSTALL_TARGET=		${INSTALL_TARGET.${EMACS_FLAVOR}}
 #AKE_FLAGS=		prefix=${DESTDIR}${PREFIX} ICONDIR=${DESTDIR}${ICONDIR}
 PLIST_SUBST+=		ETCDIR=${ETCDIR:Q}
 
-WRKSRC=      ${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
+WRKSRC=	${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
 
-#SUBST_CLASSES+=			fix-icondir
+#SUBST_CLASSES+=		fix-icondir
 #SUBST_STAGE.fix-icondir=	pre-configure
 #SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
 #SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g'
-#SUBST_SED.fix-icondir+=		-e 's|images/w3m|w3m|g'
+#SUBST_SED.fix-icondir+=	-e 's|images/w3m|w3m|g'
 
-EMACS_BUILDLINK=		# defined
+EMACS_BUILDLINK=		# empty
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 \
 				emacs28 emacs28nox \
 				xemacs215 xemacs215nox xemacs214 xemacs214nox
@@ -66,10 +66,10 @@ ETCDIR.xemacs=		lib/xemacs/site-packages/etc/w3m
 pre-configure:
 	(cd ${WRKSRC}; autoconf)
 
-#j.post-install:
-#j.	for f in ${DOCUMENTS}; do \
-#j.		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/${}; \
-#j.	done
+post-install:
+	for f in ${DOCUMENTS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/emacs-w3m/; \
+	done
 
 .include "options.mk"
 

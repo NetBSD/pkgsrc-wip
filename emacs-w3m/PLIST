@@ -1,4 +1,11 @@
 @comment $NetBSD$
+info/emacs-w3m-ja.info.gz
+info/emacs-w3m.info.gz
+share/emacs-w3m/COPYING
+share/emacs-w3m/ChangeLog
+share/emacs-w3m/ChangeLog.1
+share/emacs-w3m/README
+share/emacs-w3m/README.ja
 share/emacs-w3m/icons/antenna-up.png
 share/emacs-w3m/icons/antenna-up.xpm
 share/emacs-w3m/icons/back-disabled.png
@@ -376,5 +383,3 @@ ${EMACS_LISPPREFIX}/w3m/w3m-weather.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.elc
 ${EMACS_LISPPREFIX}/w3m/w3m.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m.elc
-share/info/emacs-w3m-ja.info.gz
-share/info/emacs-w3m.info.gz
