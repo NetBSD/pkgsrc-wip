@@ -1,0 +1,9 @@
+rq (Rego Query) is inspired by jq, and aims to offer a similar set of
+capabilities oriented around running Rego queries. In the long run, rq
+is intended to make it as easy as possible to utilize Rego both
+interactively as a shell command, and within shell scripts. Though it
+is already possible to use Rego in this way with via opa eval using the
+official opa command, rq is intended to be easier and simpler to use
+specifically in a shell context, and has additional convenience
+features to support this use case, such as more input and output
+formats, syntax highlighted output, and so on.
