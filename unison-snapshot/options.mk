@@ -2,7 +2,8 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk
-PKG_SUGGESTED_OPTIONS=	lablgtk
+# upstream makefiles are broken for now
+#PKG_SUGGESTED_OPTIONS=	lablgtk
 
 .include "../../mk/bsd.options.mk"
 
