@@ -1,0 +1,11 @@
+WARNING
+
+This version of CROPSR (v0.0.0.44) apparently has serious internal
+bugs.  For example, while the internal test case can be replicated by
+running the program on the sample data provided, most predicted
+binding sites lack the appopriate constraints, i.e., an adjacent NGG
+sequence.
+
+Upstream has been notified and have potentially fixed the bugs.  As a
+result, this package will be updated when those fixes have been
+verified.
