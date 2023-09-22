@@ -2,7 +2,7 @@
 bin/unison
 ${PLIST.gtk3}bin/unison-gui
 man/man1/unison.1
-share/doc/unison/COPYING
 share/doc/unison/CONTRIBUTING.md
+share/doc/unison/COPYING
 share/doc/unison/INSTALL.md
 share/doc/unison/NEWS.md
