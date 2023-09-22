@@ -776,6 +776,12 @@ share/emacs/${PKGVERSION}/etc/images/symbols/cross_circle_16.pbm
 share/emacs/${PKGVERSION}/etc/images/symbols/cross_circle_16.svg
 share/emacs/${PKGVERSION}/etc/images/symbols/cross_circle_fill_16.pbm
 share/emacs/${PKGVERSION}/etc/images/symbols/cross_circle_fill_16.svg
+share/emacs/${PKGVERSION}/etc/images/symbols/dot_large_16.pbm
+share/emacs/${PKGVERSION}/etc/images/symbols/dot_large_16.svg
+share/emacs/${PKGVERSION}/etc/images/symbols/dot_medium_16.pbm
+share/emacs/${PKGVERSION}/etc/images/symbols/dot_medium_16.svg
+share/emacs/${PKGVERSION}/etc/images/symbols/dot_small_16.pbm
+share/emacs/${PKGVERSION}/etc/images/symbols/dot_small_16.svg
 share/emacs/${PKGVERSION}/etc/images/symbols/heart_16.pbm
 share/emacs/${PKGVERSION}/etc/images/symbols/heart_16.svg
 share/emacs/${PKGVERSION}/etc/images/symbols/heart_fill_16.pbm
@@ -3694,6 +3700,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/json-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/json-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ld-script.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ld-script.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/lua-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/lua-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/m4-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/m4-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/make-mode.el.gz

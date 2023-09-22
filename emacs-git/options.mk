@@ -221,6 +221,7 @@ DEPENDS+=	tree-sitter-heex-[0-9]*:../../textproc/tree-sitter-heex
 DEPENDS+=	tree-sitter-html-[0-9]*:../../textproc/tree-sitter-html
 DEPENDS+=	tree-sitter-java-[0-9]*:../../textproc/tree-sitter-java
 DEPENDS+=	tree-sitter-json-[0-9]*:../../textproc/tree-sitter-json
+DEPENDS+=	tree-sitter-lua-[0-9]*:../../textproc/tree-sitter-lua
 DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
 DEPENDS+=	tree-sitter-ruby-[0-9]*:../../textproc/tree-sitter-ruby
 DEPENDS+=	tree-sitter-rust-[0-9]*:../../textproc/tree-sitter-rust
