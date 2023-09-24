@@ -1,9 +1,9 @@
 $NetBSD$
 
-Add file for NetBSD/mips in mips32 variant.
+Add support for NetBSD/mipsel (needs mips32).
 
---- vendor/libc-0.2.139/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2023-04-23 16:08:32.294600810 +0000
-+++ vendor/libc-0.2.139/src/unix/bsd/netbsdlike/netbsd/mips.rs
+--- vendor/libc-0.2.146/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2023-07-14 09:16:55.357761685 +0000
++++ vendor/libc-0.2.146/src/unix/bsd/netbsdlike/netbsd/mips.rs
 @@ -0,0 +1,22 @@
 +use PT_FIRSTMACH;
 +

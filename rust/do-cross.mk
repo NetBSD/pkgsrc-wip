@@ -12,7 +12,7 @@ SHORT_TARGETS+=		powerpc
 SHORT_TARGETS+=		arm64
 SHORT_TARGETS+=		arm64_be
 SHORT_TARGETS+=		i386
-SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
+#SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
 SHORT_TARGETS+=		riscv64
 
 # Conditional local overrides of ROOT.* variables:

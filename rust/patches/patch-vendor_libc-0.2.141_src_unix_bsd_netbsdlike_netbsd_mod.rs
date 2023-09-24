@@ -1,11 +1,11 @@
 $NetBSD$
 
-Add support for NetBSD/mipsel and NetBSD/riscv64.
-Also try to enable backtrace support.
+Add execinfo / backtrace stuff for NetBSD, and handle NetBSD/mips
+and NetBSD/riscv64.
 
---- vendor/libc-0.2.143/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-07-12 05:06:31.000000000 +0000
-+++ vendor/libc-0.2.143/src/unix/bsd/netbsdlike/netbsd/mod.rs
-@@ -3153,6 +3153,22 @@ extern "C" {
+--- vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
++++ vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/mod.rs
+@@ -3049,6 +3049,23 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
  
@@ -25,10 +25,11 @@ Also try to enable backtrace support.
 +    ) -> *mut *mut ::c_char;
 +}
 +
++
  cfg_if! {
      if #[cfg(target_arch = "aarch64")] {
          mod aarch64;
-@@ -3172,7 +3188,15 @@ cfg_if! {
+@@ -3068,7 +3085,15 @@ cfg_if! {
      } else if #[cfg(target_arch = "x86")] {
          mod x86;
          pub use self::x86::*;
@@ -41,7 +42,7 @@ Also try to enable backtrace support.
      } else {
 -        // Unknown target_arch
 +        // Unknown target_arch, this should error out
-+        mod unknown;
-+        pub use self::unknown::*;
++	mod unknown;
++	pub use self::unknown::*;
      }
  }

@@ -1,10 +1,10 @@
 $NetBSD$
 
-Add support for NetBSD/riscv64.
+Spec for riscv64.
 
---- vendor/libc-0.2.143/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-14 09:17:03.907579820 +0000
-+++ vendor/libc-0.2.143/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
-@@ -0,0 +1,22 @@
+--- vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-02 18:40:59.815126792 +0000
++++ vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/riscv64.rs	2023-07-02 18:38:40.729445691 +0000
+@@ -0,0 +1,24 @@
 +use PT_FIRSTMACH;
 +
 +pub type c_long = i64;
@@ -22,6 +22,8 @@ Add support for NetBSD/riscv64.
 +        pub const _ALIGNBYTES: usize = 8 - 1;
 +    }
 +}
++
++// pub const _MAX_PAGE_SHIFT: u32 = 12;
 +
 +pub const PT_GETREGS: ::c_int = PT_FIRSTMACH + 0;
 +pub const PT_SETREGS: ::c_int = PT_FIRSTMACH + 1;

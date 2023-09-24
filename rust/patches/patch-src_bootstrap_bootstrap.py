@@ -16,15 +16,7 @@ Handle earmv[67]hf for NetBSD.
  
      # Consider the direct transformation first and then the special cases
      if kernel in kerneltype_mapper:
-@@ -323,6 +327,7 @@ def default_build_triple(verbose):
-     cputype_mapper = {
-         'BePC': 'i686',
-         'aarch64': 'aarch64',
-+        'aarch64eb': 'aarch64',
-         'amd64': 'x86_64',
-         'arm64': 'aarch64',
-         'i386': 'i686',
-@@ -361,10 +366,16 @@ def default_build_triple(verbose):
+@@ -362,10 +366,16 @@ def default_build_triple(verbose):
              kernel = 'linux-androideabi'
          else:
              kernel += 'eabihf'
