@@ -2,6 +2,8 @@ $NetBSD$
 
 Add support for NetBSD.
 
+Shared via <https://github.com/nektos/act/pull/2023>.
+
 --- pkg/container/docker_auth.go.orig	2023-09-23 11:36:33.000000000 +0000
 +++ pkg/container/docker_auth.go
 @@ -1,4 +1,4 @@
