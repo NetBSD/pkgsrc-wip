@@ -98,6 +98,7 @@ SUBDIR+=	acl
 SUBDIR+=	acme-client
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
+SUBDIR+=	act
 SUBDIR+=	actionlint
 SUBDIR+=	actor-framework
 SUBDIR+=	ad2vcf
