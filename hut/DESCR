@@ -1,0 +1,19 @@
+A CLI tool for [sr.ht].
+
+## Usage
+
+Run `hut init` to get started. Read the man page to learn about all commands.
+
+Available Commands:
+  builds      Use the builds API
+  export      Exports your account data
+  git         Use the git API
+  graphql     Execute a GraphQL query
+  help        Help about any command
+  hg          Use the hg API
+  init        Initialize hut
+  lists       Use the lists API
+  meta        Use the meta API
+  pages       Use the pages API
+  paste       Use the paste API
+  todo        Use the todo API
