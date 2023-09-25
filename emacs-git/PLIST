@@ -1063,6 +1063,8 @@ share/emacs/${PKGVERSION}/lisp/avoid.el.gz
 share/emacs/${PKGVERSION}/lisp/avoid.elc
 share/emacs/${PKGVERSION}/lisp/battery.el.gz
 share/emacs/${PKGVERSION}/lisp/battery.elc
+share/emacs/${PKGVERSION}/lisp/bind-key.el.gz
+share/emacs/${PKGVERSION}/lisp/bind-key.elc
 share/emacs/${PKGVERSION}/lisp/bindings.el.gz
 share/emacs/${PKGVERSION}/lisp/bindings.elc
 share/emacs/${PKGVERSION}/lisp/bookmark.el.gz
@@ -4125,8 +4127,6 @@ share/emacs/${PKGVERSION}/lisp/url/url-vars.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-vars.elc
 share/emacs/${PKGVERSION}/lisp/url/url.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url.elc
-share/emacs/${PKGVERSION}/lisp/use-package/bind-key.el.gz
-share/emacs/${PKGVERSION}/lisp/use-package/bind-key.elc
 share/emacs/${PKGVERSION}/lisp/use-package/use-package-bind-key.el.gz
 share/emacs/${PKGVERSION}/lisp/use-package/use-package-bind-key.elc
 share/emacs/${PKGVERSION}/lisp/use-package/use-package-core.el.gz
