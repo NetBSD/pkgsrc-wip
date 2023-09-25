@@ -1,4 +1,4 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.1 2022/04/05 18:48:57 bacon Exp $
 bin/fasta_clipping_histogram.pl
 bin/fasta_formatter
 bin/fasta_nucleotide_changer

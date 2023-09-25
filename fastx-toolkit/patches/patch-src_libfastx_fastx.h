@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_libfastx_fastx.h,v 1.1 2022/04/05 18:48:57 bacon Exp $
 
 # Limit packing to this one structure to avoid compatibility issues
 

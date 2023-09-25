@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_fasta__formatter_fasta__formatter.cpp,v 1.1 2022/04/05 18:48:57 bacon Exp $
 
 # Silence compile error
 

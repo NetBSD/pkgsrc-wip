@@ -1,6 +1,7 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.2 2022/06/28 11:31:00 wiz Exp $
 
 DISTNAME=	fastx-toolkit-0.0.14.6
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agordon/}
 GITHUB_PROJECT=	fastx_toolkit
@@ -23,5 +24,5 @@ REPLACE_BASH+=	scripts/fastx_nucleotide_distribution_line_graph.sh
 pre-configure:
 	${RUN} cd ${WRKSRC} && autoreconf -vif
 
-.include "../../wip/libgtextutils/buildlink3.mk"
+.include "../../devel/libgtextutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
