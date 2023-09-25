@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (sphinxcontrib-svg2pdfconverter-1.1.1.tar.gz) = 11efce678471e05123717b135268b2f7c8d6b358
-SHA512 (sphinxcontrib-svg2pdfconverter-1.1.1.tar.gz) = 7f06da4373eed8673fc4cd4598a00a7d529adcec7a40649bf79c5b8d5b363455c8a83286e58d783edcba27114ac4687fd15a4be37ec95e331e9abd22bd3cd4b7
-Size (sphinxcontrib-svg2pdfconverter-1.1.1.tar.gz) = 5185 bytes
+BLAKE2s (sphinxcontrib-svg2pdfconverter-1.2.2.tar.gz) = d2fbdfc0d7ad2fb038e39f951c9adea04949b66d8c65fd232e5b17d5e18d7822
+SHA512 (sphinxcontrib-svg2pdfconverter-1.2.2.tar.gz) = 9c46c8c42a7173afd59395c63684a1c4a97789bd1d02deb29dcabb2fad23961a9ab2628ec60e3af6c625dbf856fa06d87d9f42226689418d5df6af8bae841ab2
+Size (sphinxcontrib-svg2pdfconverter-1.2.2.tar.gz) = 5516 bytes
