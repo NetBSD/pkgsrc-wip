@@ -1,0 +1,14 @@
+$NetBSD$
+
+BLAKE2s (w3c-httpd-3.0A.tar.gz) = 85d732e34520765e698eaf010517e2fe216e7222c03fdb56dff23d4e796e4df5
+SHA512 (w3c-httpd-3.0A.tar.gz) = 173c697d3ba40e5591f371d8c9b8c356ca4a3ba7cc7dca5da64c6b2b826f28ad842e55a19212300a970d13259b9d6df92d61149c34bbf79e9327e6078108fcc1
+Size (w3c-httpd-3.0A.tar.gz) = 627144 bytes
+SHA1 (patch-BUILD) = c9e554686482d520c3921e977cc40fba446a6077
+SHA1 (patch-BUILD.SH) = e1dcfa5f3f7c7d2f0f949843f2cfeca94a383818
+SHA1 (patch-Daemon_Implementation_CommonMakefile) = c3ac2fcd8fdf91d189ff29c9549b1b4103716456
+SHA1 (patch-Daemon_Implementation_HTDaemon.c) = 7efbc52583a7e3d2273e565bac10277feeda925a
+SHA1 (patch-Daemon_Implementation_HTgc.c) = 6c3a5efc249f20ac3d01a62a999f397a262b9d68
+SHA1 (patch-Library_Implementation_HTFile.h) = 04adb1925db938e3b7ec6e8f2006cb4e5c3e313f
+SHA1 (patch-Library_Implementation_HTString.c) = 089c9060f3184240ed60a28c274d145e98aa64ef
+SHA1 (patch-Library_Implementation_HTString.h) = 3c695c5e35f176ef3ba18c5d13917e0c19c51b76
+SHA1 (patch-Library_Implementation_HTTCP.c) = ef8fa14d048e53ee399dd9313504ccc91be42f3f

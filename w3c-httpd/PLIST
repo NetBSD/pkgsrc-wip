@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/cgiparse
+bin/cgiutils
+bin/htadm
+bin/htimage
+bin/httpd
+lib/libwww.a

@@ -1,0 +1,14 @@
+$NetBSD$
+
+Adding NetBSD target.
+
+--- BUILD.orig	2023-09-26 14:04:46.783172503 +0000
++++ BUILD
+@@ -57,6 +57,7 @@ if ($UNAME == "AIX")    	setenv WWW_MACH
+ if ($UNAME == "OSF1")   	setenv WWW_MACH	osf1
+ if ($UNAME == "BSD/386")	setenv WWW_MACH	unix
+ if ($UNAME == "Linux")		setenv WWW_MACH	linux
++if ($UNAME == "NetBSD")		setenv WWW_MACH	netbsd
+ if ($UNAME == "A/UX")		setenv WWW_MACH	aux
+ if ($UNAME == "SMP_DC.SOx")	setenv WWW_MACH	pyramid
+ if ($UNAME == "uts") then

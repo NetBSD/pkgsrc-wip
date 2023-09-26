@@ -1,0 +1,4 @@
+This is a small upgrade release of the CERN server (a.k.a. W3C
+httpd). It includes a set of bug fixes and some improvements. The
+release comes ASIS - that is - there is _no_ support available. Take
+it or leave it :-)

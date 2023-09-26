@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fixed syntax error.
+
+--- Daemon/Implementation/CommonMakefile.orig	1996-06-21 19:35:05.000000000 +0000
++++ Daemon/Implementation/CommonMakefile
+@@ -160,7 +160,7 @@ everything : inc $(PROD) htadm htimage c
+ PURIFY_CACHE = /home2/frystyk/purify-cache
+ 
+ PURIFY = purify \
+-	-logfile=$(HOME)/purify.log
++	-logfile=$(HOME)/purify.log \
+ 	-cache-dir=$(PURIFY_CACHE)
+ 
+ #
