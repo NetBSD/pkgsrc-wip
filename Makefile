@@ -909,6 +909,7 @@ SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
 SUBDIR+=	forgejo
 SUBDIR+=	fossil1
+SUBDIR+=	four-bar-rs
 SUBDIR+=	fox
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fpc
