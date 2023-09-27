@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
+@comment $NetBSD$
 ${PYSITELIB}/chm/__init__.py
 ${PYSITELIB}/chm/__init__.pyc
 ${PYSITELIB}/chm/__init__.pyo
@@ -9,4 +9,10 @@ ${PYSITELIB}/chm/chm.pyo
 ${PYSITELIB}/chm/chmlib.py
 ${PYSITELIB}/chm/chmlib.pyc
 ${PYSITELIB}/chm/chmlib.pyo
-${PYSITELIB}/chm/extra.so
+${PYSITELIB}/chm/extra.py
+${PYSITELIB}/chm/extra.pyc
+${PYSITELIB}/chm/extra.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
