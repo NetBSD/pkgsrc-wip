@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (desktop-installer-0.8.2.tar.gz) = 005d2d68117a0f43e90a1f57d8d9a48c3920e5cd66871da188e73c966762307c
-SHA512 (desktop-installer-0.8.2.tar.gz) = 18d419a18bbc4e9b06e60969105acb096916b84767b0bc932f09043f700a0ec30f8fbb0fd8e550b2570e443c2fe2d0199d087eac82761abf038d31d58de29587
-Size (desktop-installer-0.8.2.tar.gz) = 232716 bytes
+BLAKE2s (desktop-installer-0.8.2.9-0993e562d8fd0e274d83f3affd654934b66d42c3.tar.gz) = 752b7bea924324276f3615ec9db8d54d6f6a476af0314d8f05ee4f1e137730ef
+SHA512 (desktop-installer-0.8.2.9-0993e562d8fd0e274d83f3affd654934b66d42c3.tar.gz) = 61a4ddb07af72007da88f97bb8e6e9cb499918e8b4f2d6283ac8bcd04f593324bbb03d8bb784ef3f3a1b7c90e13872bbd89bf05f60a65f22715096ca8ec0706e
+Size (desktop-installer-0.8.2.9-0993e562d8fd0e274d83f3affd654934b66d42c3.tar.gz) = 1664372 bytes

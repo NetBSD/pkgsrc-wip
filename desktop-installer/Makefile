@@ -1,8 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	desktop-installer-0.8.2
+DISTNAME=	desktop-installer-0.8.2.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	0993e562d8fd0e274d83f3affd654934b66d42c3
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/desktop-installer/tree/master/NetBSD
