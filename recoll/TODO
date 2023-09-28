@@ -1,5 +1,32 @@
-When pressing "Start Indexing now", it fails. On the console it says:
-Shared object "libxapian.so.22" not found
+Build stops at
 
-Looks like missing rpath
-[wiz 2013-04-16]
+--- recollindex ---
+ld: ./.libs/librecoll.a(mimetype.o): in function `mimetype(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, RclConfig*, bool, MedocUtils::PathStat const&)':
+/scratch/wip/recoll/work/recoll-1.35.0/index/mimetype.cpp:187: undefined reference to `pxattr::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, pxattr::flags, pxattr::nspace)'
+ld: ./.libs/librecoll.a(mh_text.o): in function `MimeHandlerText::set_document_file_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+/scratch/wip/recoll/work/recoll-1.35.0/internfile/mh_text.cpp:74: undefined reference to `pxattr::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, pxattr::flags, pxattr::nspace)'
+--- recollqt ---
+--- .obj/advshist.o ---
+In file included from advshist.cpp:24:
+../query/dynconf.h: In member function 'virtual bool RclSListEntry::decode(const string&)':
+../query/dynconf.h:75:9: error: 'base64_decode' was not declared in this scope; did you mean 'rk_base64_decode'?
+   75 |         base64_decode(enc, value);
+      |         ^~~~~~~~~~~~~
+      |         rk_base64_decode
+../query/dynconf.h: In member function 'virtual bool RclSListEntry::encode(std::string&)':
+../query/dynconf.h:79:9: error: 'base64_encode' was not declared in this scope; did you mean 'rk_base64_encode'?
+   79 |         base64_encode(value, enc);
+      |         ^~~~~~~~~~~~~
+      |         rk_base64_encode
+--- .obj/guiutils.o ---
+In file included from guiutils.cpp:37:
+../query/dynconf.h: In member function 'virtual bool RclSListEntry::decode(const string&)':
+../query/dynconf.h:75:9: error: 'base64_decode' was not declared in this scope; did you mean 'rk_base64_decode'?
+   75 |         base64_decode(enc, value);
+      |         ^~~~~~~~~~~~~
+      |         rk_base64_decode
+../query/dynconf.h: In member function 'virtual bool RclSListEntry::encode(std::string&)':
+../query/dynconf.h:79:9: error: 'base64_encode' was not declared in this scope; did you mean 'rk_base64_encode'?
+   79 |         base64_encode(value, enc);
+      |         ^~~~~~~~~~~~~
+      |         rk_base64_encode

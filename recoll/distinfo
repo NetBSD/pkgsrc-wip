@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.2 2012/06/14 07:29:13 thomasklausner Exp $
 
-RMD160 (recoll-1.17.3.tar.gz) = 85a84f4f9e19b4126b3eff35faf91ba3b8a1a66a
-Size (recoll-1.17.3.tar.gz) = 1757278 bytes
-SHA1 (patch-utils_pathut.cpp) = b19083b616e334b1e613a3621be86fcbadfc82ab
+BLAKE2s (recoll-1.35.0.tar.gz) = ea04fb056b3b0d8d3f0cc1d64932f842268d19d246952d9947bf2516fc2395ae
+SHA512 (recoll-1.35.0.tar.gz) = 35dcbfb650251b00f2c7654dc7617bf24f7e480955121821c55e0d31c6ec4fa041f8f99e64afa12ad4ead725c366084d7d727dbdcee875b93bbc858a6229d236
+Size (recoll-1.35.0.tar.gz) = 3121862 bytes
