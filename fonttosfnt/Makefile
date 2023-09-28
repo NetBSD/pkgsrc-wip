@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2012/09/28 23:21:48 asau Exp $
 
-DISTNAME=	fonttosfnt-1.2.2
+DISTNAME=	fonttosfnt-1.2.3
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	https://xorg.freedesktop.org/
