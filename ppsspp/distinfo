@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (ppsspp-1.16.1.tar.xz) = 00935eb6400ddfbf90154d35e459da3d8a39d11a220b4fc1430f524397105fb6
-SHA512 (ppsspp-1.16.1.tar.xz) = ad67739060730875fe5cb321d82f562bfa9cf8d6f130013e89d77bd4b7a1daa3efeaf3f6ad846efaaa5ae5a2ef4308a24228548f35f19c51f5ec044ea9052dd3
-Size (ppsspp-1.16.1.tar.xz) = 50656184 bytes
+BLAKE2s (ppsspp-1.16.4.tar.xz) = b0fb8591d020409fb6a3366fac82c279b990b8801698e77eed70ac2cf52c5cce
+SHA512 (ppsspp-1.16.4.tar.xz) = 6364bb821a456409c9ee20eb589d761aef02d7756063bd5faa035b856ca551db0675a65767a9ad09dc8eba5fda6ede8ea3eb384b6770570bd4925e11b8c05ac5
+Size (ppsspp-1.16.4.tar.xz) = 51110488 bytes
 SHA1 (patch-CMakeLists.txt) = 57b05b75bff349d929e1242478dbc766c1c6bd49
 SHA1 (patch-Core_HLE_proAdhoc.cpp) = 36173e947964545f97eb3405be0666ce7c8ad09e
 SHA1 (patch-ppsspp_config.h) = 26ab11265c16d97904613b8b73ccf85f6258a5b1
