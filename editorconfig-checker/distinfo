@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.3 2022/09/17 11:03:56 leot Exp $
 
-BLAKE2s (editorconfig-checker-2.7.0.tar.gz) = 9107e16f38a42a473b06626c07f0c031fa525bfe2c65562dae985cb2642e774b
-SHA512 (editorconfig-checker-2.7.0.tar.gz) = 697a0863d4ffa7de498654a266d0e09d71dca8975afec6150ae9131e030fffabd3e4bc7ddf60fc6411d91d7e91c359c1737ad35d02a08acda7ddc320b0d4bd5d
-Size (editorconfig-checker-2.7.0.tar.gz) = 500127 bytes
+BLAKE2s (editorconfig-checker-2.7.1.tar.gz) = 08718aab426cdc8063661f18d590e465bc95d0b256827fddef823d21a0c17ee3
+SHA512 (editorconfig-checker-2.7.1.tar.gz) = b5f4d84224536026207e667fc516f9fc833bdd802dcd548a796960494b51a3b70c472b1815002ae99bb865c57394988f580214f3578840659b7d781147fc2613
+Size (editorconfig-checker-2.7.1.tar.gz) = 500884 bytes
 BLAKE2s (github.com_baulk_chardet_@v_v0.1.0.mod) = d0ebce676627261e80628c296525693d1f5f5b65ce50e64f8f1c690d46619862
 SHA512 (github.com_baulk_chardet_@v_v0.1.0.mod) = 6fec208cbd149326efc110f700759d994a6ce98f1f0405c480864b0efec12958fd15f945c03506e4e40c9831cb39100d9a01d23f2a83ae3ac71873026cf82eef
 Size (github.com_baulk_chardet_@v_v0.1.0.mod) = 41 bytes
