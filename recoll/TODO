@@ -1,11 +1,5 @@
-Build stops at
+Build stops with
 
---- recollindex ---
-ld: ./.libs/librecoll.a(mimetype.o): in function `mimetype(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, RclConfig*, bool, MedocUtils::PathStat const&)':
-/scratch/wip/recoll/work/recoll-1.35.0/index/mimetype.cpp:187: undefined reference to `pxattr::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, pxattr::flags, pxattr::nspace)'
-ld: ./.libs/librecoll.a(mh_text.o): in function `MimeHandlerText::set_document_file_impl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
-/scratch/wip/recoll/work/recoll-1.35.0/internfile/mh_text.cpp:74: undefined reference to `pxattr::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, pxattr::flags, pxattr::nspace)'
---- recollqt ---
 --- .obj/advshist.o ---
 In file included from advshist.cpp:24:
 ../query/dynconf.h: In member function 'virtual bool RclSListEntry::decode(const string&)':
