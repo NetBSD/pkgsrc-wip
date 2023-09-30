@@ -123,6 +123,7 @@ sbin/auto-password-status
 sbin/auto-ports-branch
 sbin/auto-ports-checkout
 sbin/auto-ports-setup
+sbin/auto-ports-wip-checkout
 sbin/auto-power-manager
 sbin/auto-print-make-variable
 sbin/auto-print-timezone
@@ -169,3 +170,5 @@ sbin/auto-wifi-failover
 sbin/auto-write-cache-toggle
 sbin/auto-xdm-toggle
 share/auto-admin/ipfw-rules.sh
+share/auto-admin/local_early
+share/auto-admin/rc.local_early
