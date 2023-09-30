@@ -27,13 +27,41 @@ DEPENDS+=	${PYPKGPREFIX}-rarfile-[0-9]*:../../archivers/py-rarfile
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:run pkg-config unzip:run
 
-#CONFIGURE_ARGS+=	--disable-python-module
 CONFIGURE_ARGS+=	--with-aspell=${BUILDLINK_PREFIX.aspell}/bin/aspell
 CONFIGURE_ARGS+=	--with-file-command=${BUILDLINK_PREFIX.file}/bin/file
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/recoll
+
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py
+REPLACE_PERL+=		filters/rclimg
+
+SUBST_CLASSES+=		base64
+SUBST_SED.base64+=	-e "s/base64.h/recoll_base64.h/"
+SUBST_MESSAGE.base64=	Renaming file to avoid conflict with krb5/base64.h
+SUBST_STAGE.base64=	pre-configure
+SUBST_FILES.base64+=	qtgui/xmltosd.cpp
+SUBST_FILES.base64+=	qtgui/ssearch_w.cpp
+SUBST_FILES.base64+=	rcldb/searchdatatox.cpp
+SUBST_FILES.base64+=	rcldb/searchdataxml.cpp
+SUBST_FILES.base64+=	rcldb/searchdata.cpp
+SUBST_FILES.base64+=	Makefile.in
+#SUBST_FILES.base64+=	Makefile.am
+SUBST_FILES.base64+=	utils/fileudi.cpp
+SUBST_FILES.base64+=	utils/mimeparse.cpp
+SUBST_FILES.base64+=	utils/mimeparse.h
+SUBST_FILES.base64+=	query/docseqhist.cpp
+SUBST_FILES.base64+=	query/recollq.cpp
+SUBST_FILES.base64+=	query/dynconf.h
+SUBST_FILES.base64+=	query/dynconf.cpp
+
+pre-configure:
+	${MV} ${WRKSRC}/utils/base64.h ${WRKSRC}/utils/recoll_base64.h
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

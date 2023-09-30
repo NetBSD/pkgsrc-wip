@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix build on NetBSD, from upstream.
+
 --- utils/pxattr.cpp.orig	2023-05-12 08:19:26.000000000 +0000
 +++ utils/pxattr.cpp
 @@ -27,14 +27,6 @@
