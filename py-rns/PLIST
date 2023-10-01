@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/ir
 bin/rncp
 bin/rnid
 bin/rnodeconf
@@ -136,6 +137,9 @@ ${PYSITELIB}/RNS/Link.pyo
 ${PYSITELIB}/RNS/Packet.py
 ${PYSITELIB}/RNS/Packet.pyc
 ${PYSITELIB}/RNS/Packet.pyo
+${PYSITELIB}/RNS/Resolver.py
+${PYSITELIB}/RNS/Resolver.pyc
+${PYSITELIB}/RNS/Resolver.pyo
 ${PYSITELIB}/RNS/Resource.py
 ${PYSITELIB}/RNS/Resource.pyc
 ${PYSITELIB}/RNS/Resource.pyo
@@ -148,6 +152,9 @@ ${PYSITELIB}/RNS/Transport.pyo
 ${PYSITELIB}/RNS/Utilities/__init__.py
 ${PYSITELIB}/RNS/Utilities/__init__.pyc
 ${PYSITELIB}/RNS/Utilities/__init__.pyo
+${PYSITELIB}/RNS/Utilities/ir.py
+${PYSITELIB}/RNS/Utilities/ir.pyc
+${PYSITELIB}/RNS/Utilities/ir.pyo
 ${PYSITELIB}/RNS/Utilities/rncp.py
 ${PYSITELIB}/RNS/Utilities/rncp.pyc
 ${PYSITELIB}/RNS/Utilities/rncp.pyo
