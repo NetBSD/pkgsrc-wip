@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (mdformat-0.7.16.tar.gz) = cbcacf9a84e923e5cac355c41276c1fb243a2cf3d0cec4e177b8048aff1b055b
-SHA512 (mdformat-0.7.16.tar.gz) = 867cb9fbdf362476b0ee9661cb0d39ad9874cf391f30b429dc77f32a95e7d4f0f8630e3478e6b5fdb52cfa54e08c500f1c3945cd45e467daf8fd6146780ce929
-Size (mdformat-0.7.16.tar.gz) = 28390 bytes
+BLAKE2s (mdformat-0.7.17.tar.gz) = 4b1660fb1a1f22628f986527e2a8f66a3b39651a331f9094aea22c5c5c512ee1
+SHA512 (mdformat-0.7.17.tar.gz) = eec41a25ed04724228773f45515d73382cee5259e834ac74730c6f78a526baff86769d4d09458a06c9c30a5319ae25d61f3d6bd4117a650be162f83accaf9de3
+Size (mdformat-0.7.17.tar.gz) = 36305 bytes
