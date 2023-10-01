@@ -1207,7 +1207,6 @@ share/zabbix/include/translateDefines.inc.php
 share/zabbix/include/triggers.inc.php
 share/zabbix/include/users.inc.php
 share/zabbix/include/validate.inc.php
-share/zabbix/include/views/configuration.copy.elements.php
 share/zabbix/include/views/configuration.graph.edit.php
 share/zabbix/include/views/configuration.graph.list.php
 share/zabbix/include/views/configuration.host.discovery.edit.php
@@ -1234,7 +1233,6 @@ share/zabbix/include/views/inventory.host.view.php
 share/zabbix/include/views/js/common.init.js.php
 share/zabbix/include/views/js/common.item.edit.js.php
 share/zabbix/include/views/js/common.template.edit.js.php
-share/zabbix/include/views/js/configuration.copy.elements.js.php
 share/zabbix/include/views/js/configuration.graph.edit.js.php
 share/zabbix/include/views/js/configuration.graph.list.js.php
 share/zabbix/include/views/js/configuration.host.discovery.edit.js.php
