@@ -36,8 +36,7 @@ CONFIGURE_ARGS+=	--with-file-command=${BUILDLINK_PREFIX.file}/bin/file
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/recoll
 
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py
 REPLACE_PERL+=		filters/rclimg
 
@@ -68,6 +67,7 @@ pre-configure:
 .include "../../devel/chmlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # not found by configure even when enabled
