@@ -5,6 +5,9 @@
 PKGNAME=	${DISTNAME:S/-/-agent-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
+PATCHDIR=	"../../wip/zabbix64-server/patches"
+DISTINFO_FILE=	"../../wip/zabbix64-server/distinfo"
+
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-agent-[0-9]*
 

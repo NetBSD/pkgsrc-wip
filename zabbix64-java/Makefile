@@ -5,6 +5,9 @@
 PKGNAME=	${DISTNAME:S/-/-java-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
+PATCHDIR=	"../../wip/zabbix64-server/patches"
+DISTINFO_FILE=	"../../wip/zabbix64-server/distinfo"
+
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-java

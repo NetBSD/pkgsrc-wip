@@ -5,6 +5,9 @@
 PKGNAME=	${DISTNAME:S/-/-proxy-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
+PATCHDIR=	"../../wip/zabbix64-server/patches"
+DISTINFO_FILE=	"../../wip/zabbix64-server/distinfo"
+
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
 
