@@ -30,6 +30,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:run pkg-config unzip:run
 
+CONFIGURE_ARGS+=	--enable-recollq
 CONFIGURE_ARGS+=	--with-aspell=${BUILDLINK_PREFIX.aspell}/bin/aspell
 CONFIGURE_ARGS+=	--with-file-command=${BUILDLINK_PREFIX.file}/bin/file
 
@@ -70,7 +71,7 @@ pre-configure:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-# not found by configure even when enabled
+# not found by configure even when included
 #.include "../../sysutils/fam/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"

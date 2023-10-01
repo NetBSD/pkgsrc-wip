@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/recoll
 bin/recollindex
+bin/recollq
 ${PYSITELIB}/Recoll-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/Recoll-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
 ${PYSITELIB}/Recoll-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
