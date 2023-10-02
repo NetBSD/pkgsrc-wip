@@ -3,7 +3,7 @@ man/man8/wendzelnntpadm.8
 man/man8/wendzelnntpd.8
 sbin/wendzelnntpadm
 sbin/wendzelnntpd
-share/doc/wendzelnntpd/AUTHOR
+share/doc/wendzelnntpd/AUTHORS
 share/doc/wendzelnntpd/CHANGELOG
 share/doc/wendzelnntpd/HISTORY
 share/doc/wendzelnntpd/INSTALL

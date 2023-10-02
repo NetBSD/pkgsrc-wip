@@ -6,7 +6,7 @@ Do not initialize sqlite3 database.
 
 --- Makefile.orig	2021-04-17 20:18:01.000000000 +0000
 +++ Makefile
-@@ -102,41 +102,42 @@ install : bin/wendzelnntpd bin/wendzelnn
+@@ -105,41 +105,42 @@ install : bin/wendzelnntpd bin/wendzelnn
  	if [ ! -d $(DESTDIR)/share ]; then install -d -m 0755 $(DESTDIR)/share; fi
  	if [ ! -d $(DESTDIR)/share/doc ]; then install -d -m 0755 $(DESTDIR)/share/doc; fi
  	if [ ! -d $(DESTDIR)/share/doc/wendzelnntpd ]; then install -d -m 0755 $(DESTDIR)/share/doc/wendzelnntpd; fi

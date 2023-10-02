@@ -1,17 +1,21 @@
 # $NetBSD$
 
-DISTNAME=	v2.1.3
-PKGNAME=	wendzelnntpd-${DISTNAME:S/v//}
-CATEGORIES=	news
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wendzelnntpd/}
+#DISTNAME=		v2.1.3
+#PKGNAME=		wendzelnntpd-${DISTNAME:S/v//}
+DISTNAME=		wendzelnntpd-2.1.4git
+CATEGORIES=		news
+#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wendzelnntpd/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=cdpxe/}
+#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=		02817771a801e8704171799c92a9ff66efeaacb6
 
-MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/wendzelnntpd
-COMMENT=	Free Usenet server with SQL backend and RBAC
-LICENSE=	gnu-gpl-v3
+MAINTAINER=		micha@NetBSD.org
+HOMEPAGE=		https://sourceforge.net/projects/wendzelnntpd
+COMMENT=		Free Usenet server with SQL backend and RBAC
+LICENSE=		gnu-gpl-v3
 
-USE_TOOLS+=	bison flex gmake
-USE_FEATURES=	err regcomp snprintf
+USE_TOOLS+=		bison flex gmake
+USE_FEATURES=		err regcomp snprintf
 
 BUILD_DEFS+=		VARBASE
 
@@ -35,9 +39,10 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/news/wendzelnntpd \
 CONF_FILES_PERMS=	${FAKECDIR}/wendzelnntpd.conf \
 			${PKG_SYSCONFDIR}/wendzelnntpd.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
-WRKSRC=			${WRKDIR}/cdpxe-WendzelNNTPd-17d557d
+WRKSRC=			${WRKDIR}/WendzelNNTPd-02817771a801e8704171799c92a9ff66efeaacb6
 
 CONFIGURE_ENV+=		MYSQL=NO
+CONFIGURE_ENV+=		POSTGRES=NO
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		FAKECDIR=${FAKECDIR}
 CONFIGURE_ENV+=		DESTDIR=${DESTDIR}
