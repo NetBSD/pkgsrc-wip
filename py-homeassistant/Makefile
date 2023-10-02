@@ -57,14 +57,8 @@ RUST_RUNTIME=	yes		# record a dependency
 .include "../../lang/rust/rust.mk"
 
 # FORTRAN: choose the version that matches the base  compiler.
-.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-9].*)
-FORTRAN_VERSION=10
-.else
-FORTRAN_VERSION=7
-.endif
-BUILDLINK_DEPMETHOD.gcc${FORTRAN_VERSION}=	full
-.include "../../lang/gcc${FORTRAN_VERSION}/buildlink3.mk"
-
+USE_LANGUAGES+=	fortran77
+.include "../../mk/compiler/gfortran.mk"
 
 ## LIBRARIES needed to build modules that must be installed before HA runs
 
