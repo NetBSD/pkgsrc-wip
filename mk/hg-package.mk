@@ -43,7 +43,6 @@
 # Keywords: hg mercurial
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-mercurial>=0.9:../../devel/py-mercurial
-TOOL_DEPENDS+=		mozilla-rootcerts-openssl>=2.6:../../security/mozilla-rootcerts-openssl
 
 # Defaults for package-settable variables
 DISTFILES?=		# empty
