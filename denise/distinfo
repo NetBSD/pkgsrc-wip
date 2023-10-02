@@ -5,3 +5,4 @@ SHA512 (denise/v2.0.tar.bz2) = aa320950721ec924a05b7ff40d0bd4901a597a699f94cd583
 Size (denise/v2.0.tar.bz2) = 16324313 bytes
 SHA1 (patch-Makefile) = 2050b7b562345d9fc0290732bbf49734dcc06591
 SHA1 (patch-driver_Makefile) = a3179f48c86f3819f0ef7108d6466859dbd585a5
+SHA1 (patch-emulation_tools_socket.cpp) = 3d3fe88b3b51f95962fe068b1ea5375a048fd4b4
