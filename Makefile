@@ -4913,7 +4913,6 @@ SUBDIR+=	realpath
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	recidivm
-SUBDIR+=	recoll
 SUBDIR+=	recutils
 SUBDIR+=	redfang
 SUBDIR+=	reduze
