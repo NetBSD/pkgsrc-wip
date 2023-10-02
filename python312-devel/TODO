@@ -1,2 +1,0 @@
-Handle problem that files for two optimization levels are installed
-but pkgsrc only supports one of them.
