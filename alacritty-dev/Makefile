@@ -3,7 +3,7 @@
 DISTNAME=	alacritty-0.13.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	a58fb39b68caa34b073f66911c0ac6945f56eac2
+GITHUB_TAG=	ace987f343649ae98e5fb63cf825414855ccd86e
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/alacritty/alacritty
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/alacritty-a58fb39b68caa34b073f66911c0ac6945f56eac2
+WRKSRC=			${WRKDIR}/alacritty-ace987f343649ae98e5fb63cf825414855ccd86e
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
