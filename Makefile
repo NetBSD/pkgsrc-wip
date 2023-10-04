@@ -3604,7 +3604,6 @@ SUBDIR+=	py-django-sympycharfield
 SUBDIR+=	py-django-templatetag-sugar
 SUBDIR+=	py-django-uuidfield
 SUBDIR+=	py-django-webpack-loader
-SUBDIR+=	py-django4
 SUBDIR+=	py-djangopypi2
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-dlib
