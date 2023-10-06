@@ -2,8 +2,8 @@ $NetBSD$
 
 Spec for riscv64.
 
---- vendor/libc/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-02 20:13:26.244972364 +0000
-+++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/riscv64.rs  2023-07-02 20:13:26.244972364 +0000
+--- vendor/libc/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-10-06 16:39:21.061468733 +0000
++++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
 @@ -0,0 +1,24 @@
 +use PT_FIRSTMACH;
 +
