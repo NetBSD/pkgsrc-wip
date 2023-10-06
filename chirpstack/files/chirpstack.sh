@@ -24,7 +24,7 @@ start_postcmd="chirpstack_postcmd"
 
 chirpstack_postcmd()
 {
-  mkdir -p @VARBASE@/run
+	mkdir -p @VARBASE@/run
 	echo $! > ${pidfile}
 }
 
