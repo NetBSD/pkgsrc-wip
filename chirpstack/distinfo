@@ -1437,3 +1437,4 @@ Size (chirpstack/yasna-0.5.2.crate) = 34859 bytes
 BLAKE2s (chirpstack/zeroize-1.6.0.crate) = f2055440b7c90a2a0ebd0997466b65fc1f83ae7af9f346740346de90c914e36a
 SHA512 (chirpstack/zeroize-1.6.0.crate) = 9ebc81c10516440476b5c198dd4ff0d284a0a37cee11a2cdfb5a1995f95b72d05beb827483b16e8b764f720fbcf30a5e5d8b1517cfbbf572bcb27c2efb18393b
 Size (chirpstack/zeroize-1.6.0.crate) = 19049 bytes
+SHA1 (patch-chirpstack_configuration_chirpstack.toml) = 0b84fe878505754dadb18d0448b212d9b294a876
