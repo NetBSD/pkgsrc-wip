@@ -1849,6 +1849,7 @@ SUBDIR+=	kallisto
 SUBDIR+=	kamailio
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapacitor
+SUBDIR+=	kapow
 SUBDIR+=	kawa
 SUBDIR+=	kcgi
 SUBDIR+=	kde-baseapps4
