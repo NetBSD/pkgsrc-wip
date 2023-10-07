@@ -1,7 +1,7 @@
 @comment $NetBSD$
-bin/ir
 bin/rncp
 bin/rnid
+bin/rnir
 bin/rnodeconf
 bin/rnpath
 bin/rnprobe
@@ -152,15 +152,15 @@ ${PYSITELIB}/RNS/Transport.pyo
 ${PYSITELIB}/RNS/Utilities/__init__.py
 ${PYSITELIB}/RNS/Utilities/__init__.pyc
 ${PYSITELIB}/RNS/Utilities/__init__.pyo
-${PYSITELIB}/RNS/Utilities/ir.py
-${PYSITELIB}/RNS/Utilities/ir.pyc
-${PYSITELIB}/RNS/Utilities/ir.pyo
 ${PYSITELIB}/RNS/Utilities/rncp.py
 ${PYSITELIB}/RNS/Utilities/rncp.pyc
 ${PYSITELIB}/RNS/Utilities/rncp.pyo
 ${PYSITELIB}/RNS/Utilities/rnid.py
 ${PYSITELIB}/RNS/Utilities/rnid.pyc
 ${PYSITELIB}/RNS/Utilities/rnid.pyo
+${PYSITELIB}/RNS/Utilities/rnir.py
+${PYSITELIB}/RNS/Utilities/rnir.pyc
+${PYSITELIB}/RNS/Utilities/rnir.pyo
 ${PYSITELIB}/RNS/Utilities/rnodeconf.py
 ${PYSITELIB}/RNS/Utilities/rnodeconf.pyc
 ${PYSITELIB}/RNS/Utilities/rnodeconf.pyo
