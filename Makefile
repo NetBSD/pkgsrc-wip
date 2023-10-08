@@ -1134,6 +1134,7 @@ SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	giggle
 SUBDIR+=	gin
 SUBDIR+=	git-bug
+SUBDIR+=	git-cinnabar
 SUBDIR+=	git-docs-html
 SUBDIR+=	git-extras
 SUBDIR+=	git-modes-git
