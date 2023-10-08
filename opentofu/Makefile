@@ -1,0 +1,36 @@
+# $NetBSD: Makefile,v 1.16 2021/01/27 13:35:58 leot Exp $
+
+.include "../../wip/terraform/version.mk"
+
+# XXX: Delete all these `alpha` kludge once a stable release is released!
+DISTNAME=	opentofu-${OPENTOFU_VERSION}
+PKGNAME=	${DISTNAME:S/-alpha/alpha/}
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
+GITHUB_TAG=	v${PKGVERSION_NOREV:S/alpha/-alpha/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.terraform.io/
+COMMENT=	Infrastructure orchestration tool
+LICENSE=	mpl-2.0
+
+#GO_BUILD_PATTERN=	.
+
+SUBST_CLASSES+=			providers-prefix
+SUBST_STAGE.providers-prefix=	pre-configure
+SUBST_MESSAGE.providers-prefix=	Honor providers installed via pkgsrc
+SUBST_FILES.providers-prefix=	cmd/tofu/provider_source.go
+SUBST_VARS.providers-prefix=	PREFIX
+
+WRKSRC=	${WRKDIR}/${DISTNAME}
+
+# Do not install auxiliary programs
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/loggraphdiff
+	${RM} ${DESTDIR}${PREFIX}/bin/main
+	${RM} ${DESTDIR}${PREFIX}/bin/protobuf-compile
+
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
+.include "../../mk/bsd.pkg.mk"
