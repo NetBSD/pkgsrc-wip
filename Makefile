@@ -1495,6 +1495,7 @@ SUBDIR+=	hercules4aethra
 SUBDIR+=	heroes
 SUBDIR+=	herwig
 SUBDIR+=	hey
+SUBDIR+=	hg-git-devel
 SUBDIR+=	hgsubversion
 SUBDIR+=	higan
 SUBDIR+=	higgsbounds
