@@ -1,6 +1,16 @@
 # $NetBSD$
 
 GO_MODULE_FILES+=	git.schwanenlied.me/yawning/x448.git/@v/v0.0.0-20170617130356-01b048fb03d6.mod
+GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.10.9.mod
+GO_MODULE_FILES+=	github.com/!adguard!team/golibs/@v/v0.10.9.zip
+GO_MODULE_FILES+=	github.com/aead/chacha20/@v/v0.0.0-20180709150244-8b13a72661da.mod
+GO_MODULE_FILES+=	github.com/aead/chacha20/@v/v0.0.0-20180709150244-8b13a72661da.zip
+GO_MODULE_FILES+=	github.com/aead/poly1305/@v/v0.0.0-20180717145839-3fee0db0b635.mod
+GO_MODULE_FILES+=	github.com/aead/poly1305/@v/v0.0.0-20180717145839-3fee0db0b635.zip
+GO_MODULE_FILES+=	github.com/ameshkov/dnscrypt/v2/@v/v2.2.7.mod
+GO_MODULE_FILES+=	github.com/ameshkov/dnscrypt/v2/@v/v2.2.7.zip
+GO_MODULE_FILES+=	github.com/ameshkov/dnsstamps/@v/v1.0.3.mod
+GO_MODULE_FILES+=	github.com/ameshkov/dnsstamps/@v/v1.0.3.zip
 GO_MODULE_FILES+=	github.com/cisco/go-hpke/@v/v0.0.0-20210215210317-01c430f1f302.mod
 GO_MODULE_FILES+=	github.com/cisco/go-hpke/@v/v0.0.0-20221026214622-55155e0d96c6.mod
 GO_MODULE_FILES+=	github.com/cisco/go-hpke/@v/v0.0.0-20221026214622-55155e0d96c6.zip
