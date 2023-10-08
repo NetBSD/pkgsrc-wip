@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	proxify-0.0.8
+DISTNAME=	proxify-0.0.12
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -2,3 +2,4 @@
 bin/mitmrelay
 bin/proxify
 bin/replay
+bin/swaggergen
