@@ -1962,7 +1962,6 @@ SUBDIR+=	libcpu
 SUBDIR+=	libcsplit
 SUBDIR+=	libcthreads
 SUBDIR+=	libcuba
-SUBDIR+=	libcue
 SUBDIR+=	libcxx
 SUBDIR+=	libcxxabi
 SUBDIR+=	libdbglog

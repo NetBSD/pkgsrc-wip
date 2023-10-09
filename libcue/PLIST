@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/07 14:49:04 ishit Exp $
-include/libcue-1.4/libcue/cd.h
-include/libcue-1.4/libcue/cdtext.h
-include/libcue-1.4/libcue/libcue.h
-include/libcue-1.4/libcue/rem.h
-include/libcue-1.4/libcue/time.h
-lib/libcue.la
-lib/pkgconfig/libcue.pc
