@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	pkgchkxx-0.1.6
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -19,12 +20,12 @@ CONFIGURE_ARGS+=	--disable-doxygen
 
 # These are runtime dependencies and therefore must not contain references
 # to ${WRKDIR}.
+CONFIGURE_ARGS+=	BMAKE=${MAKE}
 CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkgconf
 CONFIGURE_ARGS+=	PKG_CONFIG_LIBDIR=	# empty
 CONFIGURE_ARGS+=	PKG_CONFIG_PATH=	# empty
 CONFIGURE_ENV+=		XARGS=/usr/bin/xargs
 
-DEPENDS+=	bmake>=20200524:../../devel/bmake
 DEPENDS+=	pkg_install>=20211115:../../pkgtools/pkg_install
 DEPENDS+=	pkgconf>=1.9.4:../../devel/pkgconf
 
