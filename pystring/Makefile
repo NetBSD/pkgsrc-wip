@@ -1,9 +1,9 @@
 # $NetBSD$
 
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=	pystring-1.1.3
+DISTNAME=	pystring-1.1.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=imageworks/}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/imageworks/pystring/
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
+
+MAKE_ENV+=	LIBDIR=${PREFIX}/lib
 
 INSTALLATION_DIRS+=	include/pystring lib
 

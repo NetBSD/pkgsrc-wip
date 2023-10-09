@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	pystring
 PYSTRING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pystring+=	pystring>=1.1.3
+BUILDLINK_ABI_DEPENDS.pystring+=	pystring>=1.1.4
 BUILDLINK_PKGSRCDIR.pystring?=		../../wip/pystring
 .endif	# PYSTRING_BUILDLINK3_MK
 
