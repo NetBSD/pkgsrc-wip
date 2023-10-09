@@ -118,6 +118,7 @@ sbin/auto-nfs-client-setup
 sbin/auto-nfs-restart
 sbin/auto-nfs-server-setup
 sbin/auto-os-release
+sbin/auto-os-variant
 sbin/auto-ostype
 sbin/auto-package-installed
 sbin/auto-passwd-user-expiration
