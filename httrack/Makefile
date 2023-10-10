@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.28 2013/07/09 14:10:18 noud4 Exp $
-#
 
 DISTNAME=	httrack-3.49.2
 CATEGORIES=	www
@@ -13,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-L${WRKSRC}/src/.libs/
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bash:run gmake
@@ -32,4 +30,5 @@ SUBST_SED.path=		-e "s|/usr/share/httrack/|${PREFIX}/share/httrack/|"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
