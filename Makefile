@@ -265,6 +265,7 @@ SUBDIR+=	belle-sip
 SUBDIR+=	bertini
 SUBDIR+=	bfgminer
 SUBDIR+=	bicon
+SUBDIR+=	bifrost
 SUBDIR+=	bigdft
 SUBDIR+=	bijiben
 SUBDIR+=	bindgraph
