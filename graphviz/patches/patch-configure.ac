@@ -1,0 +1,87 @@
+$NetBSD: patch-configure.ac,v 1.12 2023/01/23 13:44:02 micha Exp $
+
+Use the same path for all platforms in pkgsrc.
+Use lua from pkgsrc.
+
+--- configure.ac.orig	2023-01-06 05:16:50.000000000 +0000
++++ configure.ac
+@@ -92,8 +92,7 @@ if test -z "$LIBPOSTFIX"; then
+   case "${host_os}" in
+     *linux* )
+       case "${host_cpu}" in
+-        aarch64 | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 | e2k )
+-          LIBPOSTFIX="64"
++        aarch64* | powerpc64 | powerpc64le | s390x | x86_64 | sparc64 | mips64* | riscv64 | e2k )
+           INTGOSIZE=64
+           ;;
+       esac
+@@ -101,7 +100,6 @@ if test -z "$LIBPOSTFIX"; then
+     *solaris* )
+       case "${host_cpu}" in
+         x86_64 | sparc64 )
+-          LIBPOSTFIX="/64"
+           INTGOSIZE=64
+           ;;
+       esac
+@@ -858,7 +856,7 @@ else
+ 	            if test "x$?" = "x0" ; then
+                         LUA_INCLUDES="$LUA_CFLAGS "`$PKG_CONFIG --cflags lua$l`
+                         LUA_LIBS="$LUA_LFLAGS "`$PKG_CONFIG --libs lua$l`
+-		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKG_CONFIG --variable=V lua`"
++		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKG_CONFIG --variable=V lua`"
+ 
+ 		        pkgconfig_lualib_found=`$PKG_CONFIG --exists lualib$l 2>/dev/null`
+ 		        if test  "x$?" = "x0"; then
+@@ -879,7 +877,7 @@ else
+ 	        echo
+                 LUA_INCLUDES=`$LUACONFIG --include`
+                 LUA_LIBS=`$LUACONFIG --libs`
+-	        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/5.0"
++	        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/5.0"
+             fi
+         fi
+ 
+@@ -2053,43 +2051,6 @@ fi
+ AM_CONDITIONAL(WITH_QUARTZ, [test "x$use_quartz" = "xYes"])
+ 
+ dnl -----------------------------------
+-dnl INCLUDES and LIBS for PLATFORMSDK
+-
+-AC_ARG_WITH(platformsdkincludedir,
+-  [AS_HELP_STRING([--with-platformsdkincludedir=DIR],[use Platform SDK (Windows) includes from DIR])],
+-  [PLATFORMSDKINCLUDE=$withval])
+-
+-AC_ARG_WITH(platformsdklibdir,
+-  [AS_HELP_STRING([--with-platformsdklibdir=DIR],[use Platform SDK (Windows) libraries from DIR])],
+-  [PLATFORMSDKLIB=$withval])
+-
+-AC_SUBST([PLATFORMSDKINCLUDE])
+-AC_SUBST([PLATFORMSDKLIB])
+-
+-dnl -----------------------------------
+-dnl INCLUDES and LIBS for GDI+
+-
+-AC_ARG_WITH(gdiplus,
+-  [AS_HELP_STRING([--with-gdiplus=no],[GDI+ framework (Windows)])],
+-  [], [with_gdiplus=no])
+-
+-if test "x$with_gdiplus" != "xyes"; then
+-  use_gdiplus="No (disabled by default - Windows only)"
+-else
+-  if test -f "$PLATFORMSDKINCLUDE\GdiPlus.h" -a -f "$PLATFORMSDKLIB\GdiPlus.lib"; then
+-    use_gdiplus="Yes"
+-    AC_DEFINE_UNQUOTED(HAVE_GDIPLUS,1,[Define if you have the GDI+ framework for Windows])
+-    GDIPLUS_HEADS=`cd "$PLATFORMSDKINCLUDE" && echo GdiPlus*.h`
+-    GDIPLUS_CFLAGS=''
+-    GDIPLUS_LIBS=''
+-    AC_SUBST([GDIPLUS_HEADS])
+-    AC_SUBST([GDIPLUS_CFLAGS])
+-    AC_SUBST([GDIPLUS_LIBS])
+-  else
+-    use_gdiplus="No (missing headers)"
+-    AC_MSG_WARN(--with-gdiplus requires valid --with-platformsdkincludedir and --with-platformsdklibdir.)
+-  fi
+-fi
+ AM_CONDITIONAL(WITH_GDIPLUS, [test "x$use_gdiplus" = "xYes"])
+ 
+ dnl -----------------------------------

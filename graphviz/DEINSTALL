@@ -1,0 +1,9 @@
+# $NetBSD: DEINSTALL,v 1.2 2009/05/17 12:55:52 sno Exp $
+
+: ${PKG_PREFIX=@PREFIX@}
+
+case ${STAGE} in
+DEINSTALL)
+	${RM} ${PKG_PREFIX}/lib/graphviz/config6
+	;;
+esac
