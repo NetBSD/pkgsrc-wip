@@ -3,10 +3,10 @@
 DISTNAME=	alacritty-0.13.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	e1859e80f6196da6f52aacf8829c039378e13275
+GITHUB_TAG=	b4130ddf24d9612cce4cb043e9b15acc086369a1
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://github.com/alacritty/alacritty
+HOMEPAGE=	https://alacritty.org/
 COMMENT=	Cross-platform, GPU-accelerated terminal emulator
 LICENSE=	apache-2.0
 
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/alacritty-e1859e80f6196da6f52aacf8829c039378e13275
+WRKSRC=			${WRKDIR}/alacritty-b4130ddf24d9612cce4cb043e9b15acc086369a1
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
@@ -70,6 +70,12 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/alacritty.5
 	${INSTALL_MAN} ${WRKSRC}/extra/man/alacritty-bindings.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/alacritty-bindings.5
+
+# This package is kept up-to-date for personal use and I don't need Wayland.
+# If someone wishes to build it with Wayland support comment out the these lines.
+# If someone wishes to build only for Wayalnd use, replace 'x11' with 'wayland'.
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		x11
 
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
