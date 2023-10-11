@@ -1,0 +1,4 @@
+This should use go-modules.mk to get its go sources, right now it
+downloads them during the build.
+
+But the main part of the build is run via Python.
