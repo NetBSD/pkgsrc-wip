@@ -1892,6 +1892,7 @@ SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	kubeconform
 SUBDIR+=	kubectl
+SUBDIR+=	kubectl-ingress-nginx
 SUBDIR+=	kubectx
 SUBDIR+=	kubepug
 SUBDIR+=	kubeval
