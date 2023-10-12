@@ -286,7 +286,7 @@ RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-i386} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.72.0
+RUST_STAGE0_VER=	1.72.1
 RUST_ARCH=		i586-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -306,14 +306,14 @@ pre-build-fix-paxctl:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.72.0
+RUST_STAGE0_VER=	1.72.1
 RUST_ARCH=		x86_64-unknown-netbsd
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=	rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.72.0
+RUST_STAGE0_VER=	1.72.1
 RUST_ARCH=		powerpc-unknown-netbsd
 
 # Cross-built against NetBSD 9.0
@@ -336,7 +336,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=		1.72.0
+RUST_STAGE0_VER=		1.72.1
 RUST_ARCH=			aarch64-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -345,7 +345,7 @@ SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-aarch64eb} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=		1.72.0
+RUST_STAGE0_VER=		1.72.1
 RUST_ARCH=			aarch64_be-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -354,7 +354,7 @@ SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-sparc64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=		1.72.0
+RUST_STAGE0_VER=		1.72.1
 RUST_ARCH=			sparc64-unknown-netbsd
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
@@ -364,7 +364,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-earmv7hf} || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			armv7-unknown-netbsd-eabihf
-RUST_STAGE0_VER=		1.72.0
+RUST_STAGE0_VER=		1.72.1
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -373,7 +373,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-earmv6hf} || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			armv6-unknown-netbsd-eabihf
-RUST_STAGE0_VER=		1.72.0
+RUST_STAGE0_VER=		1.72.1
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -382,7 +382,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .endif
 #.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make (makesum) || make(mdi)
 #RUST_ARCH=			mipsel-unknown-netbsd
-#RUST_STAGE0_VER=		1.72.0
+#RUST_STAGE0_VER=		1.72.1
 #RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 #RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 #DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -391,7 +391,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 #.endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-riscv64} || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=			riscv64gc-unknown-netbsd
-RUST_STAGE0_VER=		1.72.0
+RUST_STAGE0_VER=		1.72.1
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -698,7 +698,8 @@ TOOL_DEPENDS+=	compat80>=0:../../emulators/compat80
 # This is for when we build natively:
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || \
     ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
-    ${MACHINE_PLATFORM:MNetBSD-*-mipsel}
+    ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-riscv64}
 # Make libatomic library available via a unique directory:
 DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
