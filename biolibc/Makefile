@@ -24,5 +24,5 @@ MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
 
-.include "../../devel/libxtend/buildlink3.mk"
+.include "../../wip/libxtend/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
