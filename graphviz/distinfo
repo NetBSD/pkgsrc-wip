@@ -6,5 +6,7 @@ Size (graphviz-9.0.0.tar.xz) = 21412796 bytes
 SHA1 (patch-config_config__perl.pl) = 430acb7d7ee3e149de0af9832c5a29602884f83e
 SHA1 (patch-configure.ac) = 80e303d6a9b95c5bb732677a0f1f63d209b39856
 SHA1 (patch-lib_gvc_Makefile.am) = 180b45f810e5bb3948509d50b5be3b159b38a78f
+SHA1 (patch-lib_gvpr_actions.c) = 5307d2c543127e4d90330699be65b529ed34bdf1
+SHA1 (patch-lib_gvpr_compile.c) = 497909cf6819052319cf7e77f92666227c4b821d
 SHA1 (patch-plugin_gs_gvloadimage__gs.c) = 982ac1db252e3224633069db956c5dc803cd5ea9
 SHA1 (patch-plugin_xlib_gvdevice__xlib.c) = 05d1549db3b9221f5bcb947173034775b0df7c6c

@@ -69,12 +69,13 @@ ${PLIST.gd}lib/graphviz/libgvplugin_gd.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gdk.la
 ${PLIST.ghostscript}${PLIST.x11}lib/graphviz/libgvplugin_gs.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
+lib/graphviz/libgvplugin_kitty.la
 lib/graphviz/libgvplugin_neato_layout.la
 lib/graphviz/libgvplugin_pango.la
 ${PLIST.poppler}lib/graphviz/libgvplugin_poppler.la
 ${PLIST.quartz}lib/graphviz/libgvplugin_quartz.la
 ${PLIST.svg}lib/graphviz/libgvplugin_rsvg.la
-lib/graphviz/libgvplugin_vt100.la
+lib/graphviz/libgvplugin_vt.la
 lib/graphviz/libgvplugin_webp.la
 ${PLIST.x11}lib/graphviz/libgvplugin_xlib.la
 ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
