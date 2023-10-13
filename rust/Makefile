@@ -13,7 +13,7 @@ LICENSE=	mit OR apache-2.0
 CONFLICTS+=	rust-bin-[0-9]*
 
 # LLVM requires gcc7, follow suit.  Also, uses -std=c++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=      c++17
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++17
