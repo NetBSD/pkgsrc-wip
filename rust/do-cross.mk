@@ -13,8 +13,6 @@ SHORT_TARGETS+=		arm64
 SHORT_TARGETS+=		arm64_be
 SHORT_TARGETS+=		i386
 SHORT_TARGETS+=		riscv64
-
-# can't find -latomic(!) late in the build:
 SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
 
 # Conditional local overrides of ROOT.* variables:
