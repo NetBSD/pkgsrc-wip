@@ -621,6 +621,7 @@ SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
 SUBDIR+=	deforaos-probe
+SUBDIR+=	deja-dup
 SUBDIR+=	deluge
 SUBDIR+=	delve
 SUBDIR+=	dendrite

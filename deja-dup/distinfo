@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (deja-dup-45.1.tar.bz2) = f4777fc180a9219c52badd2a9ee053489bb4868ca885c2f6b869b4800400e2c7
+SHA512 (deja-dup-45.1.tar.bz2) = 23e308ceaea784cb10ae64440165ff51ae8549eba1928d8170d539b67b2f44eb39c0dd6838d8f14365234f8760d23138919a4ffbc093eb6cbc4a1fafa1554831
+Size (deja-dup-45.1.tar.bz2) = 1030153 bytes
+SHA1 (patch-app_RestoreFileTester.vala) = 0e88b7b31ce0331b6a182eb295fad451a2a2db11
