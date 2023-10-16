@@ -1,0 +1,12 @@
+#!/bin/sh
+
+HERE="$(cd "$(dirname "$0")" && pwd -P)"
+DATA=$HERE/../share/virtualxt
+CONFIG=$($HERE/virtualxt --locate)
+
+mkdir -p $CONFIG/boot
+if [ ! -f $CONFIG/boot/elks.img ]; then
+    cp $DATA/boot/elks.img $CONFIG/boot/
+fi
+
+exec "$HERE/virtualxt" -a "$CONFIG/boot/elks.img" "$@"
