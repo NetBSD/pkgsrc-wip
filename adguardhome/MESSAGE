@@ -5,5 +5,5 @@ all interfaces and all IP addresses on port TCP/3000.
 Accessing any local IP address with a web browser over http://YOUR_IP:3000
 will allow you to configure it.
 
-After first run configuration will be saved in ${PKG_SYSCONFDIR}.
+After first run configuration will be saved in ${PKG_SYSCONFDIR}. 
 ===========================================================================

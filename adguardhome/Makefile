@@ -1,16 +1,13 @@
 # $NetBSD$
 
-DISTNAME=	adguardhome-0.106.3
+DISTNAME=	adguardhome-0.107.28
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdguardTeam/}
-EXTRACT_SUFX=	.zip
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	AdGuardHome
 
-PKGREVISION=	1
-
 FRONTEND=	${PKGNAME_NOREV}-frontend.tar.gz
-SITES.adguardhome-0.106.3-frontend.tar.gz= https://bbartlomiej-public.s3.eu-central-1.amazonaws.com/adguardhome/
+SITES.adguardhome-0.107.28-frontend.tar.gz= https://bbartlomiej-public.s3.eu-central-1.amazonaws.com/adguardhome/
 DISTFILES=	${DEFAULT_DISTFILES} ${FRONTEND}
 
 MAINTAINER=	bbartlomiej@gmail.com
@@ -29,10 +26,8 @@ CHECK_RELRO_SKIP+=	sbin/adguardhome
 # would get downloaded bypassing pkgsrc fetch model.
 #TOOL_DEPENDS+=	npm>=6.14:../../lang/npm
 #TOOL_DEPENDS+=	nodejs>=10.16:../../lang/nodejs
-#TOOL_DEPENDS+=	yarn>=1.22.5:../../devel/yarn
-USE_TOOLS+=	tar
 
-TOOL_DEPENDS+=		packr>=2.8.1:../../devel/packr
+USE_TOOLS+=	tar
 
 OWN_DIRS+=	libdata/adguardhome
 
@@ -43,8 +38,7 @@ PKG_SYSCONFSUBDIR=	adguardhome
 RCD_SCRIPTS+=		adguardhome
 
 do-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} generate ./main.go
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build --ldflags="-s -w -X github.com/AdguardTeam/AdGuardHome/internal/version.version=${DISTNAME:S,^v,,} -X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release -X github.com/AdGuardTeam/AdGuardHome/internal/version..goarm=${GOARM}"
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO} build --ldflags="-s -w -X github.com/AdguardTeam/AdGuardHome/internal/version.version=v${PKGVERSION_NOREV} -X github.com/AdGuardTeam/AdGuardHome/internal/version..channel=release -X github.com/AdGuardTeam/AdGuardHome/internal/version..goarm=${GOARM}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/AdGuardHome ${DESTDIR}${PREFIX}/sbin/adguardhome
@@ -52,10 +46,8 @@ do-install:
 .PHONY: generate-frontend
 generate-frontend:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client ci
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn --cwd client2 install
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npm --prefix client run build-prod
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn --cwd client2 build
-	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${PKGVERSION_NOREV}/build AdGuardHome-${PKGVERSION_NOREV}/build2
+	cd ${WRKDIR} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz AdGuardHome-${PKGVERSION_NOREV}/build
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
 .include "../../mk/bsd.prefs.mk"
