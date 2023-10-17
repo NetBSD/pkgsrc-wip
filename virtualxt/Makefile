@@ -19,6 +19,7 @@ USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin share/virtualxt/bios share/virtualxt/boot
 BUILD_TARGET=		sdl2-frontend
+CFLAGS+=		-DVXT_VERSION_RELEASE
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 post-extract:
