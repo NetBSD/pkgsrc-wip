@@ -1,0 +1,4 @@
+LLM based AI is really good at interpreting the output of commands and
+returning the results in CLI friendly text formats like Markdown. Mods
+is a simple tool that makes it super easy to use AI on the command line
+and in your pipelines. Mods works with OpenAI and LocalAI.
