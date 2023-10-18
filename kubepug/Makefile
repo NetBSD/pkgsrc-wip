@@ -1,12 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	kubepug-1.5.0
+DISTNAME=	kubepug-1.7.1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rikatz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kubepug/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rikatz/kubepug
+HOMEPAGE=	https://github.com/kubepug/kubepug
 COMMENT=	Kubernetes PreUpGrade (Checker)
 LICENSE=	apache-2.0
 
