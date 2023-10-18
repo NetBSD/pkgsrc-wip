@@ -10,10 +10,6 @@ HOMEPAGE=	https://github.com/charmbracelet/mods
 COMMENT=	AI on the command line
 LICENSE=	mit
 
-#GO_BUILD_PATTERN+=	-ldflags ' \
-#			-X sigs.k8s.io/release-utils/version.gitVersion=${GITHUB_TAG}'
-#GO_BUILD_PATTERN+=	.
-
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
