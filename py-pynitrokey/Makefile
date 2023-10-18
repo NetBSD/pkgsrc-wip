@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pynitrokey-0.4.36
+DISTNAME=	pynitrokey-0.4.40
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S,py,,}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynitrokey/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynitrokey/}
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://pypi.org/project/pynitrokey/
 COMMENT=	Python library for Nitrokey devices
-LICENSE=	apache-2.0 AND mit
+LICENSE=	apache-2.0 OR mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit>=3.8.0:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
