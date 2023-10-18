@@ -2348,6 +2348,7 @@ SUBDIR+=	mnogosearch
 SUBDIR+=	modd
 SUBDIR+=	modglue
 SUBDIR+=	modplugplay
+SUBDIR+=	mods
 SUBDIR+=	modular-xorg-server-dfbsd
 SUBDIR+=	modular-xorg-server-dfbsd-meson
 SUBDIR+=	modular-xorg-server-linux
