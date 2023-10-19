@@ -146,6 +146,9 @@ ${PYSITELIB}/buildbot/data/masters.pyo
 ${PYSITELIB}/buildbot/data/patches.py
 ${PYSITELIB}/buildbot/data/patches.pyc
 ${PYSITELIB}/buildbot/data/patches.pyo
+${PYSITELIB}/buildbot/data/projects.py
+${PYSITELIB}/buildbot/data/projects.pyc
+${PYSITELIB}/buildbot/data/projects.pyo
 ${PYSITELIB}/buildbot/data/properties.py
 ${PYSITELIB}/buildbot/data/properties.pyc
 ${PYSITELIB}/buildbot/data/properties.pyo
@@ -228,6 +231,15 @@ ${PYSITELIB}/buildbot/db/migrations/alembic.ini
 ${PYSITELIB}/buildbot/db/migrations/versions/059_2021-09-07_alembic_initial.py
 ${PYSITELIB}/buildbot/db/migrations/versions/059_2021-09-07_alembic_initial.pyc
 ${PYSITELIB}/buildbot/db/migrations/versions/059_2021-09-07_alembic_initial.pyo
+${PYSITELIB}/buildbot/db/migrations/versions/060_2023-04-15_add_builder_projects.py
+${PYSITELIB}/buildbot/db/migrations/versions/060_2023-04-15_add_builder_projects.pyc
+${PYSITELIB}/buildbot/db/migrations/versions/060_2023-04-15_add_builder_projects.pyo
+${PYSITELIB}/buildbot/db/migrations/versions/061_2023-06-03_add_builder_description_format.py
+${PYSITELIB}/buildbot/db/migrations/versions/061_2023-06-03_add_builder_description_format.pyc
+${PYSITELIB}/buildbot/db/migrations/versions/061_2023-06-03_add_builder_description_format.pyo
+${PYSITELIB}/buildbot/db/migrations/versions/062_2023-06-03_add_project_description_format.py
+${PYSITELIB}/buildbot/db/migrations/versions/062_2023-06-03_add_project_description_format.pyc
+${PYSITELIB}/buildbot/db/migrations/versions/062_2023-06-03_add_project_description_format.pyo
 ${PYSITELIB}/buildbot/db/migrations/versions/__init__.py
 ${PYSITELIB}/buildbot/db/migrations/versions/__init__.pyc
 ${PYSITELIB}/buildbot/db/migrations/versions/__init__.pyo
@@ -237,6 +249,9 @@ ${PYSITELIB}/buildbot/db/model.pyo
 ${PYSITELIB}/buildbot/db/pool.py
 ${PYSITELIB}/buildbot/db/pool.pyc
 ${PYSITELIB}/buildbot/db/pool.pyo
+${PYSITELIB}/buildbot/db/projects.py
+${PYSITELIB}/buildbot/db/projects.pyc
+${PYSITELIB}/buildbot/db/projects.pyo
 ${PYSITELIB}/buildbot/db/schedulers.py
 ${PYSITELIB}/buildbot/db/schedulers.pyc
 ${PYSITELIB}/buildbot/db/schedulers.pyo
@@ -378,6 +393,9 @@ ${PYSITELIB}/buildbot/process/measured_service.pyo
 ${PYSITELIB}/buildbot/process/metrics.py
 ${PYSITELIB}/buildbot/process/metrics.pyc
 ${PYSITELIB}/buildbot/process/metrics.pyo
+${PYSITELIB}/buildbot/process/project.py
+${PYSITELIB}/buildbot/process/project.pyc
+${PYSITELIB}/buildbot/process/project.pyo
 ${PYSITELIB}/buildbot/process/properties.py
 ${PYSITELIB}/buildbot/process/properties.pyc
 ${PYSITELIB}/buildbot/process/properties.pyo
@@ -535,6 +553,9 @@ ${PYSITELIB}/buildbot/scripts/checkconfig.pyo
 ${PYSITELIB}/buildbot/scripts/cleanupdb.py
 ${PYSITELIB}/buildbot/scripts/cleanupdb.pyc
 ${PYSITELIB}/buildbot/scripts/cleanupdb.pyo
+${PYSITELIB}/buildbot/scripts/copydb.py
+${PYSITELIB}/buildbot/scripts/copydb.pyc
+${PYSITELIB}/buildbot/scripts/copydb.pyo
 ${PYSITELIB}/buildbot/scripts/create_master.py
 ${PYSITELIB}/buildbot/scripts/create_master.pyc
 ${PYSITELIB}/buildbot/scripts/create_master.pyo
@@ -625,6 +646,7 @@ ${PYSITELIB}/buildbot/spec/types/log.raml
 ${PYSITELIB}/buildbot/spec/types/logchunk.raml
 ${PYSITELIB}/buildbot/spec/types/master.raml
 ${PYSITELIB}/buildbot/spec/types/patch.raml
+${PYSITELIB}/buildbot/spec/types/project.raml
 ${PYSITELIB}/buildbot/spec/types/rootlink.raml
 ${PYSITELIB}/buildbot/spec/types/scheduler.raml
 ${PYSITELIB}/buildbot/spec/types/sourcedproperties.raml
@@ -901,6 +923,9 @@ ${PYSITELIB}/buildbot/test/fakedb/logs.pyo
 ${PYSITELIB}/buildbot/test/fakedb/masters.py
 ${PYSITELIB}/buildbot/test/fakedb/masters.pyc
 ${PYSITELIB}/buildbot/test/fakedb/masters.pyo
+${PYSITELIB}/buildbot/test/fakedb/projects.py
+${PYSITELIB}/buildbot/test/fakedb/projects.pyc
+${PYSITELIB}/buildbot/test/fakedb/projects.pyo
 ${PYSITELIB}/buildbot/test/fakedb/row.py
 ${PYSITELIB}/buildbot/test/fakedb/row.pyc
 ${PYSITELIB}/buildbot/test/fakedb/row.pyo
@@ -979,6 +1004,9 @@ ${PYSITELIB}/buildbot/test/integration/test_custom_buildstep.pyo
 ${PYSITELIB}/buildbot/test/integration/test_customservices.py
 ${PYSITELIB}/buildbot/test/integration/test_customservices.pyc
 ${PYSITELIB}/buildbot/test/integration/test_customservices.pyo
+${PYSITELIB}/buildbot/test/integration/test_download_secret_to_worker.py
+${PYSITELIB}/buildbot/test/integration/test_download_secret_to_worker.pyc
+${PYSITELIB}/buildbot/test/integration/test_download_secret_to_worker.pyo
 ${PYSITELIB}/buildbot/test/integration/test_graphql.py
 ${PYSITELIB}/buildbot/test/integration/test_graphql.pyc
 ${PYSITELIB}/buildbot/test/integration/test_graphql.pyo
@@ -1383,6 +1411,9 @@ ${PYSITELIB}/buildbot/util/queue.pyo
 ${PYSITELIB}/buildbot/util/raml.py
 ${PYSITELIB}/buildbot/util/raml.pyc
 ${PYSITELIB}/buildbot/util/raml.pyo
+${PYSITELIB}/buildbot/util/render_description.py
+${PYSITELIB}/buildbot/util/render_description.pyc
+${PYSITELIB}/buildbot/util/render_description.pyo
 ${PYSITELIB}/buildbot/util/runprocess.py
 ${PYSITELIB}/buildbot/util/runprocess.pyc
 ${PYSITELIB}/buildbot/util/runprocess.pyo
