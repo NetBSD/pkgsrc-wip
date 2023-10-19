@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	influxdb-5.3.0
+DISTNAME=	influxdb-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/influxdb/}
