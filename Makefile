@@ -1688,7 +1688,6 @@ SUBDIR+=	i2pd-git
 SUBDIR+=	i3-git
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
-SUBDIR+=	ic
 SUBDIR+=	ical2pcal
 SUBDIR+=	icecat
 SUBDIR+=	ices
