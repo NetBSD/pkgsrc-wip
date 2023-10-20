@@ -28,7 +28,6 @@ SUBDIR+=	OpenGLUT
 SUBDIR+=	OpenJK-git
 SUBDIR+=	OpenLara
 SUBDIR+=	OpenTESArena
-SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
 SUBDIR+=	PatternPaint
 SUBDIR+=	PayloadsAllTheThings
