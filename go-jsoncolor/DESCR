@@ -1,3 +1,0 @@
-jsoncolor is a drop-in replacement for encoding/json's
-Marshal and MarshalIndent functions and Encoder type
-which produce colorized output using fatih's color package

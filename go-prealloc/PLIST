@@ -1,7 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/https:/github.com/golangci/prealloc.a
-gopkg/src/https:/github.com/golangci/prealloc/LICENSE
-gopkg/src/https:/github.com/golangci/prealloc/README.md
-gopkg/src/https:/github.com/golangci/prealloc/import.go
-gopkg/src/https:/github.com/golangci/prealloc/prealloc.go
-gopkg/src/https:/github.com/golangci/prealloc/prealloc_test.go

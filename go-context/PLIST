@@ -1,7 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/getlantern/context.a
-gopkg/src/github.com/getlantern/context/LICENSE
-gopkg/src/github.com/getlantern/context/README.md
-gopkg/src/github.com/getlantern/context/context.go
-gopkg/src/github.com/getlantern/context/context_test.go
-gopkg/src/github.com/getlantern/context/gotrack.go

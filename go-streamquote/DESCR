@@ -1,4 +1,0 @@
-This package provides a streaming version of strconv.Quote.
-It allows you to quote the data in an io.Reader and write
-it out to an io.Writer without having to store the entire
-input and the entire output in memory

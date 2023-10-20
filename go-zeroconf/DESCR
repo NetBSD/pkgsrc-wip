@@ -1,4 +1,0 @@
-ZeroConf is a pure Golang library that employs Multicast DNS-SD for
-* browsing and resolving services in your network
-* registering own services
-in the local network.

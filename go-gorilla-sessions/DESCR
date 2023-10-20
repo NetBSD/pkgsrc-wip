@@ -1,2 +1,0 @@
-Package gorilla/sessions provides cookie and filesystem
-sessions and infrastructure for custom session backends.

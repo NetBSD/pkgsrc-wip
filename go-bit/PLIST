@@ -1,8 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/eaburns/bit.a
-gopkg/src/github.com/eaburns/bit/AUTHORS
-gopkg/src/github.com/eaburns/bit/LICENSE
-gopkg/src/github.com/eaburns/bit/README.md
-gopkg/src/github.com/eaburns/bit/bit.go
-gopkg/src/github.com/eaburns/bit/bit_test.go
-gopkg/src/github.com/eaburns/bit/gok.sh

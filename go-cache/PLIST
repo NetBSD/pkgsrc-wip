@@ -1,9 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/patrickmn/go-cache.a
-gopkg/src/github.com/patrickmn/go-cache/CONTRIBUTORS
-gopkg/src/github.com/patrickmn/go-cache/LICENSE
-gopkg/src/github.com/patrickmn/go-cache/README.md
-gopkg/src/github.com/patrickmn/go-cache/cache.go
-gopkg/src/github.com/patrickmn/go-cache/cache_test.go
-gopkg/src/github.com/patrickmn/go-cache/sharded.go
-gopkg/src/github.com/patrickmn/go-cache/sharded_test.go

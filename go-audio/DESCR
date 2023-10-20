@@ -1,3 +1,0 @@
-audio is a generic Go package designed
-to define a common interface to analyze
-and/or process audio data.

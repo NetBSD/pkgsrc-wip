@@ -1,9 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/Jeffail/gabs.a
-gopkg/src/github.com/Jeffail/gabs/LICENSE
-gopkg/src/github.com/Jeffail/gabs/README.md
-gopkg/src/github.com/Jeffail/gabs/gabs.go
-gopkg/src/github.com/Jeffail/gabs/gabs_logo.png
-gopkg/src/github.com/Jeffail/gabs/gabs_test.go
-gopkg/src/github.com/Jeffail/gabs/go.mod
-gopkg/src/github.com/Jeffail/gabs/migration.md

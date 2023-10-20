@@ -1,6 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/xeonx/timeago.a
-gopkg/src/github.com/xeonx/timeago/LICENSE
-gopkg/src/github.com/xeonx/timeago/README.md
-gopkg/src/github.com/xeonx/timeago/timeago.go
-gopkg/src/github.com/xeonx/timeago/timeago_test.go

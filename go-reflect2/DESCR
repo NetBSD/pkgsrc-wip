@@ -1,1 +1,0 @@
-Reflect api that avoids runtime reflect.Value cost

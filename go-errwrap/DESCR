@@ -1,3 +1,0 @@
-errwrap is a package for Go that formalizes the pattern
-of wrapping errors and checking if an error contains
-another error.

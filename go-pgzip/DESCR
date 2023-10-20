@@ -1,7 +1,0 @@
-Go parallel gzip compression/decompression. This is a fully gzip
-compatible drop in replacement for "compress/gzip". This will split
-compression into blocks that are compressed in parallel. This can
-be useful for compressing big amounts of data. The gzip decompression
-is modified so it decompresses ahead of the current reader. This means
-that reads will be non-blocking if the decompressor can keep ahead of your
-code reading from it. CRC calculation also takes place in a separate goroutine.

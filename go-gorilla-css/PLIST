@@ -1,7 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/gorilla/css/scanner.a
-gopkg/src/github.com/gorilla/css/LICENSE
-gopkg/src/github.com/gorilla/css/README.md
-gopkg/src/github.com/gorilla/css/scanner/doc.go
-gopkg/src/github.com/gorilla/css/scanner/scanner.go
-gopkg/src/github.com/gorilla/css/scanner/scanner_test.go

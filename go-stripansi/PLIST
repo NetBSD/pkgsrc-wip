@@ -1,5 +1,0 @@
-@comment $NetBSD$
-gopkg/pkg/${GO_PLATFORM}/github.com/acarl005/stripansi.a
-gopkg/src/github.com/acarl005/stripansi/LICENSE
-gopkg/src/github.com/acarl005/stripansi/README.md
-gopkg/src/github.com/acarl005/stripansi/stripansi.go
