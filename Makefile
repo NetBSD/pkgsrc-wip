@@ -32,7 +32,6 @@ SUBDIR+=	PPower4
 SUBDIR+=	PatternPaint
 SUBDIR+=	PayloadsAllTheThings
 SUBDIR+=	PyBabelFish
-SUBDIR+=	Pythonol
 SUBDIR+=	Qweyboard
 SUBDIR+=	R
 SUBDIR+=	R-BiocGenerics
