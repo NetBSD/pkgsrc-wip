@@ -12,7 +12,7 @@ LICENSE=	mit OR apache-2.0
 
 CONFLICTS+=	rust-bin-[0-9]*
 
-# LLVM requires gcc7, follow suit.  Also, uses -std=c++17
+# LLVM uses -std=c++17
 USE_CXX_FEATURES+=      c++17
 
 USE_GCC_RUNTIME=	yes
@@ -77,7 +77,8 @@ MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 MAKE_ENV.SunOS+=	AR=gar
 
-UNLIMIT_RESOURCES+=	cputime stacksize datasize virtualsize
+#UNLIMIT_RESOURCES+=	cputime stacksize datasize virtualsize
+UNLIMIT_RESOURCES+=	cputime stacksize datasize
 
 TEST_TARGET=	check
 
