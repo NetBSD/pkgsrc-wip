@@ -1,0 +1,29 @@
+$NetBSD$
+
+Add NetBSD support.
+
+--- CMakeLists.txt.orig 2022-11-23 19:53:55.000000000 +0000
++++ CMakeLists.txt
+@@ -395,6 +395,12 @@ if(APPLE)
+     add_definitions("-DCS_DEFAULT_USER_PLUGINDIR=\"${DEFAULT_USER_PLUGINDIR}\"")
+ endif()
+
++if(CMAKE_SYSTEM_NAME MATCHES "NetBSD")
++     set(NETBSD YES)
++else()
++     set(NETBSD NO)
++endif()
++
+ # LINUX definition
+ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+     set(LINUX YES)
+@@ -1230,7 +1236,9 @@ if(LINUX)
+       list(APPEND libcsound_LIBS ${LIBRT_LIBRARY})
+       message(STATUS "  ADDING LIBRT LIBRARY: ${LIBRT_LIBRARY}.")
+     endif()
++endif()
+
++if(LINUX OR NETBSD)
+     find_library(LIBEXECINFO_LIBRARY execinfo)
+
+     if(LIBEXECINFO_LIBRARY)

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.13 2021/10/26 09:58:51 nia Exp $
+
+BLAKE2s (csound-6.18.1.tar.gz) = 2ac0b7c3bb2d00befb27ef8f6fef5eab0f6408f4839bd29082b369aa07fae828
+SHA512 (csound-6.18.1.tar.gz) = 4ea4dccb36017c96482389a8d139f6f55c79c5ceb9cc34e6d2bfabcb930b4833d0301be4a4b21929db27b2d8ce30754b5c5867acd2ea5a849135e1b8d1506acf
+Size (csound-6.18.1.tar.gz) = 31925161 bytes
+SHA1 (patch-installer_macosx_release-build-azure.sh) = 23f21df0fca0fa38129b2940c6c91b8d6c279784
