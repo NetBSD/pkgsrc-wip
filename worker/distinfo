@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (worker-4.12.1.tar.zst) = 394264a3428c5efce48b9d2049f0c051d616cb11fb404958a483b70cf8717f44
+SHA512 (worker-4.12.1.tar.zst) = 8ee028b4018607c36c5baa4426780a4ff292f49bebb8b93b1669ed09a3b026d1700ef8c8d73cf847b66b7b43c95caf8765ad1afe9aeebfc616e4fb8c9a84e87d
+Size (worker-4.12.1.tar.zst) = 1351314 bytes
