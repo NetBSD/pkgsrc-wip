@@ -9,7 +9,7 @@ Add NetBSD and DragonFlyBSD support.
       */
      lt = time(NULL);
 -#ifndef LINUX
-+#if·!defined(LINUX)·&&·!defined(__NetBSD__)·&&·!defined(__DragonFly__)
++#if !defined(LINUX) && !defined(__NetBSD__) && !defined(__DragonFly__)
      {
        struct tm *date_ptr;
        char      *date;

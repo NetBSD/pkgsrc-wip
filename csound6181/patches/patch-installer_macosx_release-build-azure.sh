@@ -1,6 +1,6 @@
 $NetBSD: patch-installer_macosx_release-build-azure.sh,v 1.1 2020/10/10 14:02:37 mef Exp $
 
-ERROR: [check-portability.awk]
+Portability fix.
 
 --- installer/macosx/release-build-azure.sh.orig	2020-08-13 23:03:03.000000000 +0000
 +++ installer/macosx/release-build-azure.sh

@@ -9,7 +9,7 @@ Add NetBSD and DragonFlyBSD support.
  #ifdef PIPES
  # if defined(SGI) || defined(LINUX) || defined(__BEOS__) || defined(NeXT) ||  \
 -     defined(__MACH__)
-+     defined(__MACH__) ||·defined(__NetBSD__)·||·defined(__DragonFly__)
++     defined(__MACH__) || defined(__NetBSD__) || defined(__DragonFly__)
  #  define _popen popen
  #  define _pclose pclose
  # endif

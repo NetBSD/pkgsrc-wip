@@ -1,13 +1,40 @@
 $NetBSD$
 
+On Darwin, don't build as a framework.
 Add NetBSD support.
 
---- CMakeLists.txt.orig 2022-11-23 19:53:55.000000000 +0000
+--- CMakeLists.txt.orig	2022-11-23 19:53:55.000000000 +0000
 +++ CMakeLists.txt
+@@ -357,14 +357,14 @@ endif()
+ 
+ # Set plugins install directory
+ if(USE_DOUBLE)
+-    if(APPLE)
++    if(FALSE)
+         set(CSOUNDLIB "CsoundLib64")
+         set(PLUGIN_INSTALL_DIR "${CS_FRAMEWORK_DEST}/${CSOUNDLIB}.framework/Versions/${APIVERSION}/Resources/Opcodes64")
+     else()
+         set(CSOUNDLIB "csound64")
+     endif()
+ else()
+-    if(APPLE)
++    if(FALSE)
+         set(CSOUNDLIB "CsoundLib")
+         set(PLUGIN_INSTALL_DIR "${CS_FRAMEWORK_DEST}/${CSOUNDLIB}.framework/Versions/${APIVERSION}/Resources/Opcodes")
+     else()
+@@ -373,7 +373,7 @@ else()
+ endif()
+ 
+ # set default user plugin directory
+-if(APPLE)
++if(FALSE)
+     if(BUILD_INSTALLER)
+        	set(CS_FRAMEWORK_FULL_PATH "/Library/Frameworks/${CSOUNDLIB}.framework/Versions/${APIVERSION}/Resources/Opcodes64")
+     else()
 @@ -395,6 +395,12 @@ if(APPLE)
      add_definitions("-DCS_DEFAULT_USER_PLUGINDIR=\"${DEFAULT_USER_PLUGINDIR}\"")
  endif()
-
+ 
 +if(CMAKE_SYSTEM_NAME MATCHES "NetBSD")
 +     set(NETBSD YES)
 +else()
@@ -17,13 +44,40 @@ Add NetBSD support.
  # LINUX definition
  if(CMAKE_SYSTEM_NAME MATCHES "Linux")
      set(LINUX YES)
+@@ -405,7 +411,7 @@ endif()
+ 
+ 
+ 
+-if(LINUX)
++if(UNIX)
+     set(DEFAULT_OPCODEDIR "${PLUGIN_INSTALL_DIR}")
+     add_definitions("-DCS_DEFAULT_PLUGINDIR=\"${DEFAULT_OPCODEDIR}\"")
+     # dir relative to $HOME
+@@ -1112,7 +1118,7 @@ if(INIT_STATIC_MODULES)
+     set_target_properties(${CSOUNDLIB} PROPERTIES COMPILE_FLAGS "-DINIT_STATIC_MODULES")
+ endif()
+ 
+-if(APPLE)
++if(FALSE)
+     set_target_properties(${CSOUNDLIB} PROPERTIES FRAMEWORK YES)
+     set_target_properties(${CSOUNDLIB} PROPERTIES FRAMEWORK_VERSION "${APIVERSION}")
+     set_target_properties(${CSOUNDLIB} PROPERTIES PUBLIC_HEADER
+@@ -1132,7 +1138,7 @@ endif()
+ # NB - this was moved here as it needs some VARS defined above
+ # for setting up the framework
+ function(make_plugin libname srcs)
+-    if(APPLE)
++    if(FALSE)
+         add_library(${libname} SHARED ${srcs})
+     else()
+         add_library(${libname} MODULE ${srcs})
 @@ -1230,7 +1236,9 @@ if(LINUX)
        list(APPEND libcsound_LIBS ${LIBRT_LIBRARY})
        message(STATUS "  ADDING LIBRT LIBRARY: ${LIBRT_LIBRARY}.")
      endif()
 +endif()
-
+ 
 +if(LINUX OR NETBSD)
      find_library(LIBEXECINFO_LIBRARY execinfo)
-
+ 
      if(LIBEXECINFO_LIBRARY)

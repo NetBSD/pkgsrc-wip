@@ -8,9 +8,8 @@ Port to NetBSD and DragonFly.
  #if defined(ANDROID) || (!defined(LINUX) && !defined(SGI) && \
                           !defined(__HAIKU__) && !defined(__BEOS__) && \
                           !defined(__MACH__) && !defined(__EMSCRIPTEN__))
-+·························!defined(__MACH__)·&&·!defined(__EMSCRIPTEN__)·&&·\
-+·························!defined(__NetBSD__)·&&·!defined(__DragonFly__))
++                         !defined(__MACH__) && !defined(__EMSCRIPTEN__) && \
++                         !defined(__NetBSD__) && !defined(__DragonFly__))
  static char *signal_to_string(int sig)
  {
      switch(sig) {
-
