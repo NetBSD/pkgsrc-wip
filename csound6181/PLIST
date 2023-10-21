@@ -43,6 +43,7 @@ lib/csound/plugins64-6.0/libosc.so
 lib/csound/plugins64-6.0/libpadsynth.so
 lib/csound/plugins64-6.0/libpvsops.so
 lib/csound/plugins64-6.0/librtauhal.so
+lib/csound/plugins64-6.0/librtjack.so
 lib/csound/plugins64-6.0/libscansyn.so
 lib/csound/plugins64-6.0/libsignalflowgraph.so
 lib/csound/plugins64-6.0/libstdutil.so
@@ -50,8 +51,8 @@ lib/csound/plugins64-6.0/libtrigenvsegs.so
 lib/csound/plugins64-6.0/liburandom.so
 lib/libcsnd6.6.0.dylib
 lib/libcsnd6.dylib
-lib/libcsound64.so
-lib/libcsound64.so.6.0
+lib/libcsound64.6.0.dylib
+lib/libcsound64.dylib
 share/cmake/Csound/FindCsound.cmake
 share/locale/de/LC_MESSAGES/csound6.mo
 share/locale/en_US/LC_MESSAGES/csound6.mo
