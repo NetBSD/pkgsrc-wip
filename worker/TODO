@@ -1,4 +1,1 @@
-- Get other dependencies besides the basic ones, namely Xft and Lua 
-support, to work.
-
 - Possibly split into options.
