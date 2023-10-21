@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	runas-0.1.1.1
+DISTNAME=	runas-0.1.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	runas
-GITHUB_TAG=	9085c95453af514be3d3bffb8e8d13320b2a5a2e
+GITHUB_TAG=	456bc48d3147531020f7d0100b9c49026514c79c
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/runas

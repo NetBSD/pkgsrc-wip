@@ -1,3 +1,5 @@
 @comment $NetBSD$
+bin/asroot
 bin/runas
+man/man1/asroot.1
 man/man1/runas.1
