@@ -21,6 +21,17 @@ TOOL_DEPENDS+=		gettext-tools>=0:../../devel/gettext-tools
 BUILD_TARGET=		all
 FAKE_NCURSES=		yes
 
+
+SUBST_CLASSES+=		  makefile
+SUBST_STAGE.makefile=     pre-configure 
+SUBST_FILES.makefile=     Makefile
+SUBST_MESSAGE.makefile=   Fixing Makefile
+SUBST_SED.makefile=	  -e 's,/usr/local,${PREFIX},g'
+SUBST_SED.makefile+=	  -e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.makefile+=	  -e 's,^CPPFLAGS *= ,CPPFLAGS += ,'
+SUBST_SED.makefile+=	  -e 's,^LDFLAGS *= ,LDFLAGS += ,'
+
+
 # The program tries to compile gettext if it does not find it 
 # It checks environment variables, so we have to set them
 MAKE_ENV+=	GETTEXT_LIB_DIR=${BUILDLINK_PREFIX.gettext-lib:Q}/lib
@@ -31,7 +42,9 @@ MAKE_ENV+=	GETTEXT_BIN_DIR=${TOOLBASE:Q}/bin
 
 
 #Not sure if this is useful
-#INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR}
+# INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR}
+# In the meanwhile...
+# INSTALLATION_DIRS_FROM_PLIST= yes
 
 
 .include "../../mk/bsd.prefs.mk"
@@ -45,8 +58,11 @@ SUBST_SED.makefile=	-e 's/^ifneq.*//; s/^endif.*//'
 .endif
 
 
+post-build:
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GMAKE} newsboat
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/newsboat \
+	${INSTALL_PROGRAM} ${WRKSRC}/newsboat \
 		${DESTDIR}${PREFIX}/bin
 
 

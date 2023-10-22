@@ -342,4 +342,5 @@ Size (windows_x86_64_msvc-0.48.0.crate) = 671422 bytes
 BLAKE2s (xdg-2.5.2.crate) = 0f174fa5ab3c513b691bf1bf0a4cb628e25bc0f9a2af9700ec21c07cfe8f8609
 SHA512 (xdg-2.5.2.crate) = 12c7f42d2afd63d8d196511fa069519a0c495fc2555c87c059b96b46d7e2a2c51c31836c48fb329806d312a45a2fd67b4243793aa91e2139e2aa3f05230b2edd
 Size (xdg-2.5.2.crate) = 14394 bytes
-SHA1 (patch-config.sh) = 05f1096af3b5ea2aa2678a8bc3a914ded7435bc8
+SHA1 (patch-Makefile) = 3885ea9915232ff2a47af4e7b13630d759edc26b
+SHA1 (patch-newsboat.cpp) = a2fbce6f0bbb851066dd50de361b956253025a84

@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- Makefile.orig	2023-10-22 15:00:06.184455003 +0000
++++ Makefile
+@@ -56,7 +56,7 @@ FILTERLIB_OUTPUT=libfilter.a
+ NEWSBOAT=newsboat
+ NEWSBOAT_SRCS:=$(shell cat mk/newsboat.deps)
+ NEWSBOAT_OBJS:=$(patsubst %.cpp,%.o,$(NEWSBOAT_SRCS))
+-NEWSBOAT_LIBS=-lboat -lnewsboat -lfilter -lpthread -lrsspp -ldl
++NEWSBOAT_LIBS=-lboat -lnewsboat -lfilter ${PTHREAD_LDFLAGS} -lrsspp ${DL_LDFLAGS}
+ 
+ RSSPPLIB_SRCS=$(sort $(wildcard rss/*.cpp))
+ RSSPPLIB_OBJS=$(patsubst rss/%.cpp,rss/%.o,$(RSSPPLIB_SRCS))
+@@ -65,7 +65,7 @@ RSSPPLIB_OUTPUT=librsspp.a
+ PODBOAT=podboat
+ PODBOAT_SRCS:=$(shell cat mk/podboat.deps)
+ PODBOAT_OBJS:=$(patsubst %.cpp,%.o,$(PODBOAT_SRCS))
+-PODBOAT_LIBS=-lboat -lnewsboat -lfilter -lpthread -ldl
++PODBOAT_LIBS=-lboat -lnewsboat -lfilter ${PTHREAD_LDFLAGS} ${DL_LDFLAGS}
+ 
+ TEST_SRCS:=$(wildcard test/*.cpp test/test_helpers/*.cpp)
+ TEST_OBJS:=$(patsubst %.cpp,%.o,$(TEST_SRCS))
