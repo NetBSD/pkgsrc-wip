@@ -14,6 +14,7 @@ bin/pkg-mkpatch
 bin/pkg-patch-vi
 bin/pkg-reinstall
 bin/pkg-remake
+bin/pkg-show-depends
 bin/pkg-vuln
 bin/pkgsrc-add-license
 bin/pkgsrc-make
