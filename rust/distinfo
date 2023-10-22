@@ -130,6 +130,7 @@ SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = e1b2eb2f0b3cf1c
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = cb011fc19957883c01725797f7c85ed1b20f96f1
 SHA1 (patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h) = 39d76e6659143d154ae690ac70781b698a2023d8
 SHA1 (patch-src_llvm-project_llvm_lib_Support_BLAKE3_blake3__impl.h) = 67e93f198258a5b59580be20ff47ce58b146c5d5
+SHA1 (patch-src_llvm-project_llvm_lib_Target_PowerPC_PPCISelLowering.cpp) = b68197c1486a4dc40154b3b23dfd55d44048a2d2
 SHA1 (patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp) = 2587c2f4d11ad8f75bf8a16de625135b26bacc15
 SHA1 (patch-src_tools_cargo_src_cargo_core_profiles.rs) = e1af7fde97416e0a269ee34efd37f4f47fcf7a95
 SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 60713699c968f3e389f486e796009d31a5048906
