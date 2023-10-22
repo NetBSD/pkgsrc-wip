@@ -15,16 +15,16 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
+#PKGCONFIG_OVERRIDE+=	pkgconfig/worker.pc.in
 
 REPLACE_BASH+=		scripts/*.sh scripts/*r
 REPLACE_PYTHON+=	scripts/*.py
 USE_TOOLS+=		bash:run
 
-# Should this be an option instead?
-.include "../../x11/libXft/buildlink3.mk"
+.include "options.mk"
+
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

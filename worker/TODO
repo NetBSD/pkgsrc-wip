@@ -1,1 +1,2 @@
-- Possibly split into options.
+- Test the build with the options I've added, aside from Xft and Lua
+- Import AVFS and make it ready for pkgsrc
