@@ -10,7 +10,6 @@ include/polly/CodeGen/IslNodeBuilder.h
 include/polly/CodeGen/LoopGenerators.h
 include/polly/CodeGen/LoopGeneratorsGOMP.h
 include/polly/CodeGen/LoopGeneratorsKMP.h
-include/polly/CodeGen/PPCGCodeGeneration.h
 include/polly/CodeGen/PerfMonitor.h
 include/polly/CodeGen/RuntimeDebugBuilder.h
 include/polly/CodeGen/Utils.h
@@ -46,7 +45,6 @@ include/polly/Support/GICHelper.h
 include/polly/Support/ISLOStream.h
 include/polly/Support/ISLOperators.h
 include/polly/Support/ISLTools.h
-include/polly/Support/LinkGPURuntime.h
 include/polly/Support/SCEVAffinator.h
 include/polly/Support/SCEVValidator.h
 include/polly/Support/ScopHelper.h

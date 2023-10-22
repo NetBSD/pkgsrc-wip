@@ -47,6 +47,5 @@ post-extract:
 	${LN} -f -s ${WRKDIR}/${LIBCXXABI} ${WRKDIR}/libcxxabi
 
 .include "../../devel/cmake/build.mk"
-.include "../../wip/libcxxabi/buildlink3.mk"
 .include "../../wip/libunwind/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

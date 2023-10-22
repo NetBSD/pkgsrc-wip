@@ -30,9 +30,6 @@ PKG_SUGGESTED_OPTIONS+=		terminfo
 PKG_SUGGESTED_OPTIONS+=	llvm-target-sparc
 .elif ${MACHINE_ARCH:Mpowerpc*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-powerpc
-.elif ${MACHINE_ARCH} == aarch64
-PKG_SUGGESTED_OPTIONS+=	llvm-target-aarch64
-PKG_SUGGESTED_OPTIONS+=	llvm-target-webassembly
 .elif ${MACHINE_ARCH:Mearm*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-arm
 .elif ${MACHINE_ARCH:M*mips*}

@@ -11,17 +11,22 @@ HOMEPAGE=	http://flang.llvm.org/
 COMMENT=	Fortran compiler targeting LLVM
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++17
-USE_TOOLS+=	bash:run gmake
+USE_CXX_FEATURES+=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash:run gmake
+GCC_REQD+=		12
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DFLANG_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=	-DCLANG_DIR=${BUILDLINK_PREFIX.clang}/lib/cmake/clang
-# As of 15.0.5, shared libraries are problematic: building executes
-# `flang-new` which is linked against not yet installed shared libraries.
-#CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=YES
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=YES
 
 REPLACE_BASH=	tools/f18/flang-to-external-fc.in
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../wip/clang/buildlink3.mk"

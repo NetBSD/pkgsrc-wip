@@ -4,10 +4,10 @@ Sync SunOS default defines with a working reality.
 NetBSD __float128, needed to build anything with base libstdc++
 which assumes __float128.
 
---- lib/Basic/Targets/OSTargets.h.orig	2019-08-01 08:49:35.000000000 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2023-10-03 06:37:35.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -436,12 +436,22 @@ protected:
-     Builder.defineMacro("__ELF__");
+@@ -425,12 +425,22 @@ protected:
+     Builder.defineMacro("__unix__");
      if (Opts.POSIXThreads)
        Builder.defineMacro("_REENTRANT");
 +    if (this->HasFloat128)
@@ -29,8 +29,8 @@ which assumes __float128.
    }
  };
  
-@@ -610,22 +620,15 @@ protected:
-     Builder.defineMacro("__ELF__");
+@@ -628,22 +638,15 @@ protected:
+     DefineStd(Builder, "unix", Opts);
      Builder.defineMacro("__svr4__");
      Builder.defineMacro("__SVR4");
 -    // Solaris headers require _XOPEN_SOURCE to be set to 600 for C99 and

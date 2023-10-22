@@ -21,7 +21,6 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-
 USE_LANGUAGES=	c c++17
 SSP_SUPPORTED=	no
 GCC_REQD+=	12	# must be in sync with libcxx
@@ -41,9 +40,11 @@ CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 post-extract:
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 # TODO: not sure what should create this and with which contents
-	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
+	${CP} ${PREFIX}/include/c++/v1/__config_site \
+		${WRKDIR}/${LIBCXX}/include/__config_site
 
 .include "../../devel/cmake/build.mk"
+.include "../../wip/libcxx/buildlink3.mk"
 .include "../../wip/libunwind/buildlink3.mk"
 .include "../../wip/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
