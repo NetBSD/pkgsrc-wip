@@ -3,7 +3,7 @@
 DISTNAME=	alacritty-0.13.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	b4130ddf24d9612cce4cb043e9b15acc086369a1
+GITHUB_TAG=	d66db480cfc8a8e3965358199ae8e247a433dffb
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://alacritty.org/
@@ -11,12 +11,11 @@ COMMENT=	Cross-platform, GPU-accelerated terminal emulator
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/alacritty-b4130ddf24d9612cce4cb043e9b15acc086369a1
+WRKSRC=			${WRKDIR}/alacritty-d66db480cfc8a8e3965358199ae8e247a433dffb
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
@@ -77,6 +76,7 @@ post-install:
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		x11
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
