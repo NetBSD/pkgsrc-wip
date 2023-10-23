@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	lima-0.15.0
+DISTNAME=	lima-0.18.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lima-vm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -44,7 +44,9 @@ do-build:
 
 do-install:
 	${RUN} cd ${WRKSRC}/_output && ${PAX} -rw bin ${DESTDIR}${PREFIX}
-	${RUN} cd ${WRKSRC}/_output && ${PAX} -rw share ${DESTDIR}${PREFIX}
+	${RUN} cd ${WRKSRC}/_output/share/man && ${PAX} -rw man1 ${DESTDIR}${PREFIX}/${PKGMANDIR}
+	${RUN} cd ${WRKSRC}/_output/share/doc && ${PAX} -rw lima ${DESTDIR}${PREFIX}/share/doc
+	${RUN} cd ${WRKSRC}/_output/share && ${PAX} -rw lima ${DESTDIR}${PREFIX}/share
 
 .include "go-modules.mk"
 
