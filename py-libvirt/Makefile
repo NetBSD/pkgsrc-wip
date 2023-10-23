@@ -10,8 +10,6 @@ HOMEPAGE=	https://libvirt.org/sources/python/
 COMMENT=	libvirt python library
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 USE_TOOLS+=	pkg-config
 
 .include "../../wip/libvirt/buildlink3.mk"

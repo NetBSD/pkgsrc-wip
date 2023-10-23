@@ -9,8 +9,6 @@ HOMEPAGE=		https://github.com/path64/debugger
 COMMENT=		X86/x86_64 debugger with the goal to drop-in replace gdb
 LICENSE=		2-clause-bsd
 
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 GIT_REPOSITORIES=	debugger
 GIT_REPO.debugger=	https://github.com/path64/debugger.git
 WRKSRC=			${WRKDIR}/debugger

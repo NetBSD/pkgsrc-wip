@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-qt5>=4.4:../../x11/py-qt5
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # Actually, these hurt more than they help.
 # anki comes with its own version of the two, and if the pkgsrc versions
 # are newer, it might break

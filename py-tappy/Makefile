@@ -11,8 +11,6 @@ HOMEPAGE=	http://tappy.sourceforge.net/
 COMMENT=	Tidal analysis program in python
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
-
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.8.3

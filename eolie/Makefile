@@ -17,7 +17,6 @@ _TOOLS_USE_PKGSRC.msgfmt=       yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=   27
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=3.7.9:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.36.1:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.1:../../time/py-dateutil
 

@@ -15,16 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.pydb
-PKG_SUPPORTED_OPTIONS=		pyreadline
-PKG_SUGGESTED_OPTIONS=		pyreadline
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty (PKG_OPTIONS:Mpyreadline)
-DEPENDS+=		${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 CONFIGURE_ARGS+=	--enable-pyreadline
-.endif
 
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=	27 # py-ipython

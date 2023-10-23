@@ -11,7 +11,6 @@ COMMENT=	Workflow modelling app
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-paste>=1.7.4:../../www/py-paste
 
 USE_LANGUAGES=	# none

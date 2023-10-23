@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://othman.ojuba.org/
 COMMENT=	Library providing access to Quranic text with a fast search index
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
 WRKSRC=		${WRKDIR}/othman-0.2.7
 
 USE_PKGLOCALEDIR=	yes

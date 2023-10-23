@@ -10,7 +10,6 @@ HOMEPAGE=		http://superduper.net/index.py?page=pypod
 COMMENT=		Python tools for manipluating iPod data
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=		${PYPKGPREFIX}-mad>=0.5.0:../../audio/py-mad
 
 PYDISTUTILSPKG=		yes

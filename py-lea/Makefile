@@ -10,8 +10,6 @@ HOMEPAGE=	https://bitbucket.org/piedenis/lea
 COMMENT=	Discrete probability distributions in Python
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
-
 WRKSRC=		${WRKDIR}/lea-2.1.2
 
 USE_LANGUAGES=	# none

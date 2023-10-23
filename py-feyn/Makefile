@@ -11,8 +11,6 @@ HOMEPAGE=	http://projects.hepforge.org/pyfeyn/
 COMMENT=	Easy-to-use Python library to help physicists draw Feynman diagrams
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.3.2
 PYTHON_VERSIONED_DEPENDENCIES=	X
 

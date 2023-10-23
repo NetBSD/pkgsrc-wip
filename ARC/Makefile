@@ -36,7 +36,6 @@ DEPENDS+=	blat>=3.5:../../biology/blat
 DEPENDS+=	SPAdes>=3.8.2:../../biology/SPAdes
 DEPENDS+=	bowtie2>=2.2.9:../../biology/bowtie2
 DEPENDS+=	${PYPKGPREFIX}-biopython>=1.63b:../../biology/py-biopython
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=${PY_DISTVERSION}:../../databases/py-sqlite3
 
 INSTALLATION_DIRS+=	share/doc/ARC share/examples/ARC
 NONEXECUTABLE_FILES+=	test_data/clean test_data/runarc

@@ -13,8 +13,6 @@ HOMEPAGE=	https://ranger.github.io/
 COMMENT=	VIM-inspired filemanager for the console
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-
 BUILD_TARGET=	compile
 
 CHECK_PORTABILITY_SKIP+=	examples/rifle_sxiv.sh

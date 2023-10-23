@@ -12,7 +12,6 @@ LICENSE=	public-domain
 
 USE_TOOLS+=	gmake:run
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../wip/py27-virtualenv
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 

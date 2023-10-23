@@ -13,7 +13,6 @@ COMMENT=	PDFfit2 - real space structure refinement program
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-diffpy-structure-[0-9]*:../../wip/py-diffpy-structure
-DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 VERSION=	1.0-r3067-20090410
 USE_LANGUAGES=	c c++

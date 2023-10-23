@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.1 2013/09/11 05:10:05 phonohawk Exp $
-#
 
 DISTNAME=	percol-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +23,6 @@ post-install:
 		${DESTDIR}${PREFIX}/${PYSITELIB}/percol/rc.py
 
 DEPENDS+=	cmigemo-[0-9]*:../../textproc/cmigemo
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-pymigemo-[0-9]*:../../wip/py-pymigemo
 
 .include "../../wip/python/distutils.mk"

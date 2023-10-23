@@ -10,7 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://thwab.ojuba.org/
 COMMENT=	Thawab Arabic/Islamic encyclopedia system
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-Whoosh>=2.5.7:../../textproc/py-Whoosh
 DEPENDS+=	${PYPKGPREFIX}-othman>=0.2.7:../../wip/py-othman
 DEPENDS+=	${PYPKGPREFIX}-okasha>=0.2.4:../../wip/py-okasha

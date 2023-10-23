@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.11 2014/01/25 10:45:28 thomasklausner Exp $
-#
 
 DISTNAME=		xbelmark.py
 PKGNAME=		xbelmark-20040924
@@ -11,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://0pointer.de/lennart/projects/xbelmark/
 COMMENT=		XBEL XML bookmarks to readable HTML converter
 LICENSE=		gnu-gpl-v2
-
-DEPENDS=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		YES

@@ -11,7 +11,6 @@ COMMENT=	Database-backed versions of the standard networkx graph classes
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0.15:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.11:../../math/py-networkx
 
 USE_LANGUAGES=	# none

@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.4 2012/10/07 16:22:53 asau Exp $
-#
 
 DISTNAME=	s3cmd-0.9.9.91
 PKGREVISION=	1
@@ -10,8 +9,6 @@ MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://s3tools.org/s3cmd/
 COMMENT=	Tool for copying files to/from Amazon S3
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure

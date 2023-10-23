@@ -37,8 +37,6 @@ REPLACE_PYTHON+=		gnucash/python/pycons/*.py
 PY_PATCHPLIST=			yes
 PLIST_SRC+=			PLIST.python
 
-# /usr/pkg/share/gnucash/python/pycons/console.py imports readline
-DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 # /usr/pkg/share/gnucash/python/init.py imports gi
 DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 

@@ -35,7 +35,6 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.28.1<5:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0<4.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-bottle>=0.12.8<0.13:../../www/py-bottle
 DEPENDS+=	${PYPKGPREFIX}-pluginbase>=0.5:../../vegan/py-pluginbase
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0<3.0.0:../../time/py-dateutil
 
 .include "../../mk/bsd.prefs.mk"

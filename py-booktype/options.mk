@@ -25,6 +25,5 @@ PLIST.pgsql=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 PLIST.sqlite=	yes
 .endif

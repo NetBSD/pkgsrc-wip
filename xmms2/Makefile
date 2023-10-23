@@ -12,8 +12,6 @@ HOMEPAGE=	http://xmms2.org/wiki/Main_Page
 COMMENT=	Audio player featuring a client-server model
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 AND modified-bsd # possibly more?
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		perl:build pkg-config
 USE_LANGUAGES=		c c++

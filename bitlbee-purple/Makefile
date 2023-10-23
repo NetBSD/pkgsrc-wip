@@ -13,7 +13,6 @@ LICENSE=		gnu-gpl-v2
 
 TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 TOOL_DEPENDS+=		w3m-[0-9]*:../../www/w3m
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

@@ -9,8 +9,6 @@ HOMEPAGE=	https://github.com/harelba/q/
 COMMENT=	Command line tool for direct SQL-like queries on CSVs/TSVs
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of q-1.5.0

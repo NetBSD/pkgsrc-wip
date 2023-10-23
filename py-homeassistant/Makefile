@@ -41,12 +41,6 @@ PYTHON_VERSIONS_ACCEPTED=311
 # Building HA in a venv requires virtualenv
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
-# Include sqlite3 because the rest of the world thinks that is part of
-# python.  (HA can use sqlite3 in recorder, but even if that isn't
-# configured, it attempts to use sqlite3.  Just provide it rather than
-# trying to resolve.)
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
 ## BUILD TOOLS
 
 # Builds in the venv will use pkg-config, and invoke rust and gfortran.

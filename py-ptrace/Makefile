@@ -11,8 +11,6 @@ HOMEPAGE=	https://bitbucket.org/haypo/python-ptrace/wiki/Home
 COMMENT=	Python binding of ptrace
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
-
 ONLY_FOR_PLATFORM=	FreeBSD-*-x86_64  FreeBSD-*-i386 Linux-*-*
 
 post-extract:

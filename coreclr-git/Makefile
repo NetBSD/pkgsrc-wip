@@ -12,8 +12,6 @@ HOMEPAGE=	https://github.com/dotnet/coreclr
 COMMENT=	The .NET Core runtime and the base library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pax
 # We need to set CMake this way to get defined CMAKE_ARGS

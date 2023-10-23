@@ -29,7 +29,6 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TOOL_DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 TOOL_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 #TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang # clang-format

@@ -10,8 +10,6 @@ HOMEPAGE=	https://zeek.org/
 COMMENT=	Passive network traffic analyzer
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
 GCC_REQD+=	7
 USE_LANGUAGES=	c c++17
 USE_CMAKE=	yes

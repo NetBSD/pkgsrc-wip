@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3 AND 2-clause-bsd AND mit
 DEPENDS+=	${PYPKGPREFIX}-Socks-[0-9]*:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-capstone>=3.0.5:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-colored-traceback-[0-9]*:../../wip/py-colored-traceback
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=3.0:../../devel/py-intervaltree
 DEPENDS+=	${PYPKGPREFIX}-mako>=1.0.0:../../devel/py-mako

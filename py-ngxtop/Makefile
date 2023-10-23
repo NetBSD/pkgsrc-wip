@@ -12,8 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=       ${PYPKGPREFIX}-docopt>=0.6.2:../../devel/py-docopt
 DEPENDS+=       ${PYPKGPREFIX}-tabulate>=0.8.3:../../textproc/py-tabulate
-DEPENDS+=       ${PYPKGPREFIX}-curses>=2.7.16:../../devel/py-curses
-DEPENDS+=       ${PYPKGPREFIX}-sqlite3>=2.7.16:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}-${GITHUB_TAG}

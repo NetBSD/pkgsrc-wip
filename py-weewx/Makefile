@@ -26,7 +26,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # These versions are probably higher than necessary, but there is little value
 # in testing with versions older than are in pkgsrc.
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=2.7.16:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow6
 # cheetah lacks versioned dependencies; omit 2.7 as unhelpful
 DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.0.0:../../devel/py-cheetah3

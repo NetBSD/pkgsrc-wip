@@ -12,7 +12,6 @@ COMMENT=	Some utilities for Thermodynamics and Thermochemistry
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
 WRKSRC=		${WRKDIR}/thermopy-0.3
 USE_LANGUAGES=	# none

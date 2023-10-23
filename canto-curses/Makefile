@@ -18,8 +18,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYDISTUTILSPKG=			YES
 
 DEPENDS+=	canto-next-[0-9]*:../../wip/canto-daemon
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

@@ -10,7 +10,6 @@ HOMEPAGE=	http://bleachbit.sourceforge.net/
 COMMENT=	Bleachbit is a privacy and cleaning tool
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-notify>=0.2.1:../../sysutils/py-notify
 
