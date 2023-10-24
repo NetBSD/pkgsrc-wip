@@ -5520,6 +5520,7 @@ SUBDIR+=	varnish-modules
 SUBDIR+=	varnish-slash
 SUBDIR+=	vault
 SUBDIR+=	vaultwarden-web-vault
+SUBDIR+=	vcf-split
 SUBDIR+=	vcflib
 SUBDIR+=	vcftools
 SUBDIR+=	vcg
