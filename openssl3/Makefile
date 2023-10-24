@@ -3,7 +3,7 @@
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-3.1.2
+DISTNAME=	openssl-3.1.4
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
