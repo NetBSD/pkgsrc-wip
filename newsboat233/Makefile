@@ -22,6 +22,13 @@ BUILD_TARGET=		all
 FAKE_NCURSES=		yes
 
 
+
+USE_GNU_ICONV=		yes
+
+
+
+
+
 SUBST_CLASSES+=		  makefile
 SUBST_STAGE.makefile=     pre-configure 
 SUBST_FILES.makefile=     Makefile
