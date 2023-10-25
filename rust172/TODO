@@ -1,5 +1,0 @@
-
-Build bootstrap with
-  --static-libgcc --static-libstdc++
-
-Need to figure out where those options need to go...

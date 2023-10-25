@@ -4945,7 +4945,6 @@ SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runas
 SUBDIR+=	runcpm
-SUBDIR+=	rust172
 SUBDIR+=	rust173
 SUBDIR+=	rust-analyzer
 SUBDIR+=	rust-synapse-compress-state
