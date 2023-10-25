@@ -4430,7 +4430,6 @@ SUBDIR+=	py-sofa
 SUBDIR+=	py-solpy
 SUBDIR+=	py-sortedcollections
 SUBDIR+=	py-spacy
-SUBDIR+=	py-spake2
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spams
 SUBDIR+=	py-spark
