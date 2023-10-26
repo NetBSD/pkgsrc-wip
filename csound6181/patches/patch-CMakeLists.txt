@@ -5,7 +5,15 @@ Add NetBSD support.
 
 --- CMakeLists.txt.orig	2022-11-23 19:53:55.000000000 +0000
 +++ CMakeLists.txt
-@@ -357,14 +357,14 @@ endif()
+@@ -1,7 +1,6 @@
+ cmake_minimum_required(VERSION 3.5)
+ 
+ # silence RPATH cmake warning
+-set(CMAKE_MACOSX_RPATH 1)
+ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+ 
+ 
+@@ -357,14 +356,14 @@ endif()
  
  # Set plugins install directory
  if(USE_DOUBLE)
@@ -22,7 +30,7 @@ Add NetBSD support.
          set(CSOUNDLIB "CsoundLib")
          set(PLUGIN_INSTALL_DIR "${CS_FRAMEWORK_DEST}/${CSOUNDLIB}.framework/Versions/${APIVERSION}/Resources/Opcodes")
      else()
-@@ -373,7 +373,7 @@ else()
+@@ -373,7 +372,7 @@ else()
  endif()
  
  # set default user plugin directory
@@ -31,7 +39,7 @@ Add NetBSD support.
      if(BUILD_INSTALLER)
         	set(CS_FRAMEWORK_FULL_PATH "/Library/Frameworks/${CSOUNDLIB}.framework/Versions/${APIVERSION}/Resources/Opcodes64")
      else()
-@@ -395,6 +395,12 @@ if(APPLE)
+@@ -395,6 +394,12 @@ if(APPLE)
      add_definitions("-DCS_DEFAULT_USER_PLUGINDIR=\"${DEFAULT_USER_PLUGINDIR}\"")
  endif()
  
@@ -44,7 +52,7 @@ Add NetBSD support.
  # LINUX definition
  if(CMAKE_SYSTEM_NAME MATCHES "Linux")
      set(LINUX YES)
-@@ -405,7 +411,7 @@ endif()
+@@ -405,7 +410,7 @@ endif()
  
  
  
@@ -53,7 +61,7 @@ Add NetBSD support.
      set(DEFAULT_OPCODEDIR "${PLUGIN_INSTALL_DIR}")
      add_definitions("-DCS_DEFAULT_PLUGINDIR=\"${DEFAULT_OPCODEDIR}\"")
      # dir relative to $HOME
-@@ -1112,7 +1118,7 @@ if(INIT_STATIC_MODULES)
+@@ -1112,7 +1117,7 @@ if(INIT_STATIC_MODULES)
      set_target_properties(${CSOUNDLIB} PROPERTIES COMPILE_FLAGS "-DINIT_STATIC_MODULES")
  endif()
  
@@ -62,15 +70,14 @@ Add NetBSD support.
      set_target_properties(${CSOUNDLIB} PROPERTIES FRAMEWORK YES)
      set_target_properties(${CSOUNDLIB} PROPERTIES FRAMEWORK_VERSION "${APIVERSION}")
      set_target_properties(${CSOUNDLIB} PROPERTIES PUBLIC_HEADER
-@@ -1132,7 +1138,7 @@ endif()
- # NB - this was moved here as it needs some VARS defined above
- # for setting up the framework
- function(make_plugin libname srcs)
--    if(APPLE)
-+    if(FALSE)
-         add_library(${libname} SHARED ${srcs})
-     else()
-         add_library(${libname} MODULE ${srcs})
+@@ -1145,6 +1150,7 @@ function(make_plugin libname srcs)
+     endwhile()
+ 
+     set_target_properties(${libname} PROPERTIES
++        INSTALL_NAME_DIR "${PLUGIN_INSTALL_DIR}"
+         RUNTIME_OUTPUT_DIRECTORY ${BUILD_PLUGINS_DIR}
+         LIBRARY_OUTPUT_DIRECTORY ${BUILD_PLUGINS_DIR}
+         ARCHIVE_OUTPUT_DIRECTORY ${BUILD_PLUGINS_DIR})
 @@ -1230,7 +1236,9 @@ if(LINUX)
        list(APPEND libcsound_LIBS ${LIBRT_LIBRARY})
        message(STATUS "  ADDING LIBRT LIBRARY: ${LIBRT_LIBRARY}.")

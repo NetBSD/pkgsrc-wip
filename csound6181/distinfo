@@ -3,7 +3,7 @@ $NetBSD: distinfo,v 1.13 2021/10/26 09:58:51 nia Exp $
 BLAKE2s (csound-6.18.1.tar.gz) = 2ac0b7c3bb2d00befb27ef8f6fef5eab0f6408f4839bd29082b369aa07fae828
 SHA512 (csound-6.18.1.tar.gz) = 4ea4dccb36017c96482389a8d139f6f55c79c5ceb9cc34e6d2bfabcb930b4833d0301be4a4b21929db27b2d8ce30754b5c5867acd2ea5a849135e1b8d1506acf
 Size (csound-6.18.1.tar.gz) = 31925161 bytes
-SHA1 (patch-CMakeLists.txt) = 85502db4ea5c73b2b13b1a10b429350a18bf8bdc
+SHA1 (patch-CMakeLists.txt) = 09e27c0e936aba60d663db53720a17d07a96378c
 SHA1 (patch-Engine_linevent.c) = b141da5b28d775f44f5804a08c22371be0cad3aa
 SHA1 (patch-Frontends_csound_csound_main.c) = 871863a02e8b1a27b06a1a7cbc4b46b0f56f4149
 SHA1 (patch-InOut_libsnd.c) = d02c8d78beb4b762308f614650451c18ba0f6187
