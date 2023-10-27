@@ -10,5 +10,6 @@ SHA1 (patch-InOut_libsnd.c) = d02c8d78beb4b762308f614650451c18ba0f6187
 SHA1 (patch-InOut_winEPS.c) = bf81045e5ca55ad516794fe8cc81090ed52cb5f3
 SHA1 (patch-Opcodes_cpumeter.c) = d1b80026b3f0ea203a1055553bb4bd43c7a1dde1
 SHA1 (patch-Opcodes_wavegde.h) = a94da3b1cf6bf5497c6b0ccc15bd9e1e554146d5
+SHA1 (patch-Top_csmodule.c) = 0481b898f954e427ea5cb65dea401584480c2511
 SHA1 (patch-Top_threads.c) = 1c296a92b62561428f5dd010834d6858ff83e481
 SHA1 (patch-installer_macosx_release-build-azure.sh) = 2d7d273b91ef72ea093ecc11fee6c6b36200fd0e

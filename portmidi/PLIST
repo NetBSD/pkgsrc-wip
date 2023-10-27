@@ -1,0 +1,12 @@
+@comment $NetBSD$
+include/pmutil.h
+include/portmidi.h
+include/porttime.h
+lib/cmake/PortMidi/PortMidiConfig.cmake
+lib/cmake/PortMidi/PortMidiConfigVersion.cmake
+lib/cmake/PortMidi/PortMidiTargets-release.cmake
+lib/cmake/PortMidi/PortMidiTargets.cmake
+lib/libportmidi.2.0.3.dylib
+lib/libportmidi.2.dylib
+lib/libportmidi.dylib
+lib/pkgconfig/portmidi.pc
