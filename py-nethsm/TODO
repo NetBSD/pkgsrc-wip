@@ -1,0 +1,9 @@
+=> Checking file-check results for py311-nethsm-0.4.0
+ERROR: ************************************************************
+ERROR: The following files are in the PLIST but not in /scratch/security/py-nethsm/work/.destdir/usr/pkg:
+ERROR:         /scratch/security/py-nethsm/work/.destdir/usr/pkg/lib/python3.11/site-packages/nethsm/client/paths/info/__init__.pyc
+ERROR:         /scratch/security/py-nethsm/work/.destdir/usr/pkg/lib/python3.11/site-packages/nethsm/client/paths/info/__init__.pyo
+ERROR: ************************************************************
+ERROR: The following files are in /scratch/security/py-nethsm/work/.destdir/usr/pkg but not in the PLIST:
+ERROR:         /scratch/security/py-nethsm/work/.destdir/usr/pkg/lib/python3.11/site-packages/nethsm/client/paths/info/__pycache__/__init__.cpython-311.opt-1.pyc
+ERROR:         /scratch/security/py-nethsm/work/.destdir/usr/pkg/lib/python3.11/site-packages/nethsm/client/paths/info/__pycache__/__init__.cpython-311.pyc
