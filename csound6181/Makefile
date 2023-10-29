@@ -38,8 +38,8 @@ post-install:
 
 .include "options.mk"
 
-.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../portmidi/buildlink3.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/liblo/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
