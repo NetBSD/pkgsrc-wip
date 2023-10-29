@@ -1,43 +1,51 @@
 # $NetBSD$
 
-DISTNAME=	pynitrokey-0.4.40
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S,py,,}
+DISTNAME=	pynitrokey-0.4.41
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynitrokey/}
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/pynitrokey/
+HOMEPAGE=	https://github.com/Nitrokey/pynitrokey
 COMMENT=	Python library for Nitrokey devices
 LICENSE=	apache-2.0 OR mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit>=3.8.0:../../devel/py-flit
-DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-frozendict-[0-9]*:../../devel/py-frozendict
-DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
-DEPENDS+=	${PYPKGPREFIX}-protobuf-[0-9]*:../../devel/py-protobuf
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-scard-[0-9]*:../../devel/py-scard
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-libusb1-[0-9]*:../../devel/py-libusb1
-DEPENDS+=	${PYPKGPREFIX}-nkdfu-[0-9]*:../../sysutils/py-nkdfu
-#DEPENDS+=	${PYPKGPREFIX}-spsdk-[0-9]*:../../devel/py-spsdk
-DEPENDS+=	${PYPKGPREFIX}-tlv8-[0-9]*:../../devel/py-tlv8
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
-DEPENDS+=	${PYPKGPREFIX}-fido2-[0-9]*:../../security/py-fido2
 DEPENDS+=	libnitrokey-[0-9]*:../../security/libnitrokey
-DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-certifi>=14.5.14:../../security/py-certifi
+DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-click>=8.0:../../devel/py-click
+#TODO: click-aliases
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=41.0.4:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
+DEPENDS+=	${PYPKGPREFIX}-fido2>=1.1.2:../../security/py-fido2
+DEPENDS+=	${PYPKGPREFIX}-frozendict>=2.3.4:../../devel/py-frozendict
+DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
+#TODO: nethsm
+DEPENDS+=	${PYPKGPREFIX}-nkdfu-[0-9]*:../../sysutils/py-nkdfu
+DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.17.3:../../devel/py-protobuf
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-semver-[0-9]*:../../wip/py-semver
+DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+#DEPENDS+=	${PYPKGPREFIX}-spsdk>=1.11.0:../../devel/py-spsdk
+DEPENDS+=	${PYPKGPREFIX}-tlv8-[0-9]*:../../devel/py-tlv8
+DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
-
-# Only supports python 3.9 or higher.
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+DEPENDS+=	${PYPKGPREFIX}-usb-[0-9]*:../../devel/py-usb
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+REPLACE_PYTHON+=	pynitrokey/start/usb_strings.py
+REPLACE_PYTHON+=	pynitrokey/start/upgrade_by_passwd.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
         ${MV} nitropy nitropy-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
