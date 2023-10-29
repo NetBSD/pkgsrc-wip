@@ -15,14 +15,14 @@ DEPENDS+=	libnitrokey-[0-9]*:../../security/libnitrokey
 DEPENDS+=	${PYPKGPREFIX}-certifi>=14.5.14:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0:../../devel/py-click
-#TODO: click-aliases
+DEPENDS+=	${PYPKGPREFIX}-click-aliases-[0-9]*:../../devel/py-click-aliases
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=41.0.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-fido2>=1.1.2:../../security/py-fido2
 DEPENDS+=	${PYPKGPREFIX}-frozendict>=2.3.4:../../devel/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
-#TODO: nethsm
+DEPENDS+=	${PYPKGPREFIX}-nethsm-[0-9]*:../../wip/py-nethsm
 DEPENDS+=	${PYPKGPREFIX}-nkdfu-[0-9]*:../../sysutils/py-nkdfu
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.17.3:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
