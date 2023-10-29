@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (portaudio-19.7.0.tar.gz) = 8f8d504ba2ae9560f9d60d0f98d3842119919dce9cdf1cdcb31e0bbfd8d040db
+SHA512 (portaudio-19.7.0.tar.gz) = 7e347a174109b661a685bcd617cc8fe00929c6fbf28f142fd7709a8ddbb9b5ed6e805be6647a44b4b9441b79e3474561de6f8e351b4ffc024952ed3e0e27ac1c
+Size (portaudio-19.7.0.tar.gz) = 1462961 bytes

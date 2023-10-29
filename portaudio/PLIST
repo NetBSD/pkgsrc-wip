@@ -1,0 +1,12 @@
+@comment $NetBSD$
+include/pa_mac_core.h
+include/portaudio.h
+lib/cmake/portaudio/portaudioConfig.cmake
+lib/cmake/portaudio/portaudioConfigVersion.cmake
+lib/cmake/portaudio/portaudioTargets-debug.cmake
+lib/cmake/portaudio/portaudioTargets.cmake
+lib/libportaudio.a
+lib/libportaudio.dylib
+lib/pkgconfig/portaudio-2.0.pc
+share/doc/portaudio/LICENSE.txt
+share/doc/portaudio/README.md
