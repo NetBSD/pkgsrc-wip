@@ -3,8 +3,8 @@
 PHARO_VER=	11.0
 PHARO_MAJOR=	${PHARO_VER:C/\..*//}
 PHARO_PATCH=	0
-PHARO_BUILD=	704
-PHARO_SHA=	7e0219e
+PHARO_BUILD=	713
+PHARO_SHA=	05938f2
 PHARO_ARCH=	64bit
 
 DISTNAME=	Pharo${PHARO_MAJOR}-SNAPSHOT.build.${PHARO_BUILD}.sha.${PHARO_SHA}.arch.${PHARO_ARCH}
@@ -18,7 +18,7 @@ HOMEPAGE=	https://pharo.org/
 COMMENT=	Pure object-oriented programming language and a powerful environment
 LICENSE=	mit AND apache-2.0
 
-DEPENDS+=	pharo-vm-[0-9]*:../../wip/pharo-vm
+DEPENDS+=	pharo-vm10-[0-9]*:../../wip/pharo-vm10
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

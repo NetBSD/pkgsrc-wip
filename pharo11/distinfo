@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (Pharo11-SNAPSHOT.build.704.sha.7e0219e.arch.64bit.zip) = b6732ed8b4c5b009334886f1d17bdc21509a946ca0a1d6f4199f463c9b4fe50a
-SHA512 (Pharo11-SNAPSHOT.build.704.sha.7e0219e.arch.64bit.zip) = 595170fb1f0e1ce442b1eb9d592ab01c1fc8dc20586e03b91043c3a9a25698c77c076c38a492f936001cd6abc4e682b7ca3ec29b188fef743ef7684dfe8c3ab1
-Size (Pharo11-SNAPSHOT.build.704.sha.7e0219e.arch.64bit.zip) = 23404677 bytes
+BLAKE2s (Pharo11-SNAPSHOT.build.713.sha.05938f2.arch.64bit.zip) = 6429848adf5b134b302f57bb3977cc0078b80e5a9f38f36649dae27da6bf92e5
+SHA512 (Pharo11-SNAPSHOT.build.713.sha.05938f2.arch.64bit.zip) = 9ac8d4d3bacb831502ffd070f22e79fd0005b68b6512c1f617daf021dce48a81a2d2fb9dc4d4f4162de0abe9ad321984e85cc7c68ab5836cb59f462f0a7cd467
+Size (Pharo11-SNAPSHOT.build.713.sha.05938f2.arch.64bit.zip) = 23166791 bytes
