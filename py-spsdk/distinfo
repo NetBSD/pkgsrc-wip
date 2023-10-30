@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (spsdk-2.0.0.tar.gz) = baa23e4d06bfa2e911671071b504411560ea4c3d09b499551162cefc3b8c737a
+SHA512 (spsdk-2.0.0.tar.gz) = 7ab1a9f96835aca507f34ef37ed7659df14c734e15d47c62dbac6ceb519bf9a8a15bf9000a14d3d1dcd43a8d237df6ae6dbaeecf7175f0bc8de349d683c85abc
+Size (spsdk-2.0.0.tar.gz) = 775677 bytes
