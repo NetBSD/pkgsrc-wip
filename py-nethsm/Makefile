@@ -2,11 +2,11 @@
 
 DISTNAME=	nethsm-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security
+CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nethsm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/nethsm/
+HOMEPAGE=	https://github.com/Nitrokey/nethsm-sdk-py
 COMMENT=	Python Library to manage NetHSM(s)
 LICENSE=	apache-2.0
 
