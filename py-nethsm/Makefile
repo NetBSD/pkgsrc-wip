@@ -16,5 +16,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+IGNORE_INFO_DIRS=	${PYSITELIB}/nethsm/client/paths/info
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
