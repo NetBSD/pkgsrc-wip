@@ -50,7 +50,7 @@ DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 RUST_RUNTIME=	yes		# record a dependency
 .include "../../lang/rust/rust.mk"
 
-# FORTRAN: choose the version that matches the base  compiler.
+# FORTRAN
 USE_LANGUAGES+=	fortran77
 .include "../../mk/compiler/gfortran.mk"
 
@@ -65,11 +65,10 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 .include "../../mk/pgsql.buildlink3.mk"
 
 ## LIBRARIES needed when HA first runs
-# These are in the order that HA tries to install them when started in
-# a venv that more or less only has homeassistant's dependencies
-# installed.
+# These are intended to be in the order that HA tries to install them
+# when started in a venv that more or less only has homeassistant's
+# dependencies installed.
 
-# \todo Sort these properly.
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 # HA installs Pillow, and it depends on a lot of image libraries.
@@ -78,13 +77,12 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 # enough.
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
-
 # HA builds ha-ffmpeg, likely as a dependency of ha-av.  Ensure ffmpeg
-# libs are present, as this seems sufficient.
+# libs are present.
+# \todo Reconsider ffmpeg6 vs 4.
 DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
 
-# \todo Explain what's really needed. In addition to crypto libs, this
-# depends on cffi.
+# As with Pillow, just depend on the python module HA will build.
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 
 .include "../../mk/bsd.prefs.mk"
