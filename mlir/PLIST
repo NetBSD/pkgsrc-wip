@@ -533,6 +533,7 @@ include/mlir/Dialect/LLVMIR/ROCDLOpsDialect.cpp.inc
 include/mlir/Dialect/LLVMIR/ROCDLOpsDialect.h.inc
 include/mlir/Dialect/LLVMIR/ROCDLOpsTypes.cpp.inc
 include/mlir/Dialect/LLVMIR/ROCDLOpsTypes.h.inc
+include/mlir/Dialect/LLVMIR/Transforms/AddComdats.h
 include/mlir/Dialect/LLVMIR/Transforms/LegalizeForExport.h
 include/mlir/Dialect/LLVMIR/Transforms/OptimizeForNVVM.h
 include/mlir/Dialect/LLVMIR/Transforms/Passes.h
