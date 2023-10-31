@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (stockmonkey-2.9409.tar.gz) = 43acf7f7a56ab9c296bb65129ab75f5c71944dfb1379303022b072773c6a40f3
+SHA512 (stockmonkey-2.9409.tar.gz) = 4b77ae67b1f83c96f23196f8f013d0ef378be53cd61b1c9a0406f14fffc62a9320e56c48b5f67e4facaab70a85fa2fa9673729d34e207d2142eb485bf968eddc
+Size (stockmonkey-2.9409.tar.gz) = 76692 bytes
