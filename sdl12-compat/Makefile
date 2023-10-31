@@ -20,7 +20,10 @@ PKGCONFIG_OVERRIDE+=	sdl12_compat.pc.in
 SUBST_CLASSES+=			install_name
 SUBST_STAGE.install_name=	post-configure
 SUBST_FILES.install_name=	CMakeFiles/SDL.dir/link.txt
-SUBST_SED.install_name=		-e 's|@rpath|${PREFIX}/lib|g'
+# With cmake policy CMP0068, @rpath is generated
+# SUBST_SED.install_name=		-e 's|@rpath|${PREFIX}/lib|g'
+# With cmake policy CMP0068 disabled, no directory is generated
+SUBST_SED.install_name=		-e 's|-install_name libSDL-1.2.0.dylib|-install_name ${PREFIX}/lib/libSDL-1.2.0.dylib|g'
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
