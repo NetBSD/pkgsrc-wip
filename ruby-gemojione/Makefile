@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gemojione-3.3.0
+DISTNAME=	gemojione-4.3.3
 PKGREVISION=	1
 CATEGORIES=	textproc
 
