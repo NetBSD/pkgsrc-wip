@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (github-markup-1.7.0.gem) = f9a5707929458e655e74644dc6c4e2c8cf78c6fa
-SHA512 (github-markup-1.7.0.gem) = 25c9908403c52a8d511788698b6992248768db0da93a87e48ae077d41719957dd0c1ca9146980f98cc038d3d6ed18446463bc6bde3808a8c9f096e8b284125d1
-Size (github-markup-1.7.0.gem) = 30720 bytes
+BLAKE2s (github-markup-4.0.2.gem) = 528ab6630514a22fec5cffe6c766ce43a3e58ffe4bb286fdaa8c7375dd6f2d9c
+SHA512 (github-markup-4.0.2.gem) = 5ab1a1ab0c08cbb89e51cc389402082133e1d00f9a3c1d2f96256e73391404278a9e6f7b6257234f73ef43de0e78a9bcab969375385cea61b9ca8a3cacdca9b6
+Size (github-markup-4.0.2.gem) = 34816 bytes

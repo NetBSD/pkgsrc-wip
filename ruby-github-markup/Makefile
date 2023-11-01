@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	github-markup-1.7.0
+DISTNAME=	github-markup-4.0.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

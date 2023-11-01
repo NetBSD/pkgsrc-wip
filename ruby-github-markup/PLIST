@@ -1,10 +1,13 @@
 @comment $NetBSD$
 bin/github-markup
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.dockerignore
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.kick
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Dockerfile
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/HISTORY.md
 ${GEM_LIBDIR}/LICENSE
@@ -14,6 +17,7 @@ ${GEM_LIBDIR}/bin/github-markup
 ${GEM_LIBDIR}/github-markup.gemspec
 ${GEM_LIBDIR}/lib/github-markup.rb
 ${GEM_LIBDIR}/lib/github/commands/pod2html
+${GEM_LIBDIR}/lib/github/commands/pod62html
 ${GEM_LIBDIR}/lib/github/commands/rest2html
 ${GEM_LIBDIR}/lib/github/markup.rb
 ${GEM_LIBDIR}/lib/github/markup/command_implementation.rb
@@ -33,6 +37,8 @@ ${GEM_LIBDIR}/test/markups/README.creole
 ${GEM_LIBDIR}/test/markups/README.creole.html
 ${GEM_LIBDIR}/test/markups/README.directives.rst
 ${GEM_LIBDIR}/test/markups/README.directives.rst.html
+${GEM_LIBDIR}/test/markups/README.hidetitle.asciidoc
+${GEM_LIBDIR}/test/markups/README.hidetitle.asciidoc.html
 ${GEM_LIBDIR}/test/markups/README.litcoffee
 ${GEM_LIBDIR}/test/markups/README.litcoffee.html
 ${GEM_LIBDIR}/test/markups/README.markdown
@@ -47,18 +53,18 @@ ${GEM_LIBDIR}/test/markups/README.pod
 ${GEM_LIBDIR}/test/markups/README.pod.html
 ${GEM_LIBDIR}/test/markups/README.rdoc
 ${GEM_LIBDIR}/test/markups/README.rdoc.html
-${GEM_LIBDIR}/test/markups/README.rmd
-${GEM_LIBDIR}/test/markups/README.rmd.html
 ${GEM_LIBDIR}/test/markups/README.rst
 ${GEM_LIBDIR}/test/markups/README.rst.html
 ${GEM_LIBDIR}/test/markups/README.rst.txt
 ${GEM_LIBDIR}/test/markups/README.rst.txt.html
 ${GEM_LIBDIR}/test/markups/README.textile
 ${GEM_LIBDIR}/test/markups/README.textile.html
+${GEM_LIBDIR}/test/markups/README.toc.asciidoc
+${GEM_LIBDIR}/test/markups/README.toc.asciidoc.html
 ${GEM_LIBDIR}/test/markups/README.toc.rst
 ${GEM_LIBDIR}/test/markups/README.toc.rst.html
 ${GEM_LIBDIR}/test/markups/README.txt
 ${GEM_LIBDIR}/test/markups/README.txt.html
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.6.0/extensions
-@pkgdir lib/ruby/gems/2.6.0/build_info
+@pkgdir lib/ruby/gems/3.2.0/plugins
+@pkgdir lib/ruby/gems/3.2.0/extensions
