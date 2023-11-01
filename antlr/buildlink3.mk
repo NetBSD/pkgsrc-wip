@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	antlr
+
+.if !defined(ANTLR_BUILDLINK3_MK)
+ANTLR_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.antlr+=	antlr>=2.7.7
+BUILDLINK_PKGSRCDIR.antlr?=	../../wip/antlr
+.endif	# ANTLR_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-antlr
