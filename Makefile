@@ -1447,7 +1447,6 @@ SUBDIR+=	hs-convertible
 SUBDIR+=	hs-convertible-ascii
 SUBDIR+=	hs-convertible-text
 SUBDIR+=	hs-core
-SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-cryptohash
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-data-accessor
