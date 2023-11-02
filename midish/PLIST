@@ -1,0 +1,4 @@
+@comment $NetBSD$
+@comment TODO: to fill this file with the file listing:
+@comment TODO: 1. run "/Users/mk/pkgsrc/pkg-2023Q3/bin/bmake package"
+@comment TODO: 2. run "/Users/mk/pkgsrc/pkg-2023Q3/bin/bmake print-PLIST"
