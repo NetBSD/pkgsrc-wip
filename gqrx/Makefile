@@ -4,6 +4,7 @@ VERSION=	2.14.4
 
 # https://github.com/csete/gqrx/archive/v2.14.4.tar.gz
 DISTNAME=	gqrx-${VERSION}
+PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=csete/}
 GITHUB_TAG=	v${VERSION}
