@@ -1491,7 +1491,6 @@ SUBDIR+=	hs-hxt-xslt
 SUBDIR+=	hs-iconv
 SUBDIR+=	hs-io-storage
 SUBDIR+=	hs-irc
-SUBDIR+=	hs-json
 SUBDIR+=	hs-knob
 SUBDIR+=	hs-largeword
 SUBDIR+=	hs-lazy-io
