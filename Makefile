@@ -1360,7 +1360,6 @@ SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	hashcat-utils
 SUBDIR+=	haskell-mode
-SUBDIR+=	hasktags
 SUBDIR+=	hawk
 SUBDIR+=	hawknl
 SUBDIR+=	haxe

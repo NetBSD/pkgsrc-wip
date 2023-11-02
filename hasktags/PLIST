@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/19 12:36:29 szptvlfn Exp $
-bin/hasktags
-share/doc/${PKGNAME}/LICENSE
