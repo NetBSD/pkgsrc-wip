@@ -10,7 +10,6 @@ include/google/protobuf/arena.h
 include/google/protobuf/arena_align.h
 include/google/protobuf/arena_allocation_policy.h
 include/google/protobuf/arena_cleanup.h
-include/google/protobuf/arena_config.h
 include/google/protobuf/arenastring.h
 include/google/protobuf/arenaz_sampler.h
 include/google/protobuf/compiler/allowlists/allowlist.h
@@ -120,11 +119,14 @@ include/google/protobuf/compiler/rust/naming.h
 include/google/protobuf/compiler/scc.h
 include/google/protobuf/compiler/subprocess.h
 include/google/protobuf/compiler/zip_writer.h
+include/google/protobuf/cpp_features.pb.h
+include/google/protobuf/cpp_features.proto
 include/google/protobuf/descriptor.h
 include/google/protobuf/descriptor.pb.h
 include/google/protobuf/descriptor.proto
 include/google/protobuf/descriptor_database.h
 include/google/protobuf/descriptor_legacy.h
+include/google/protobuf/descriptor_visitor.h
 include/google/protobuf/duration.pb.h
 include/google/protobuf/duration.proto
 include/google/protobuf/dynamic_message.h
@@ -134,6 +136,7 @@ include/google/protobuf/endian.h
 include/google/protobuf/explicitly_constructed.h
 include/google/protobuf/extension_set.h
 include/google/protobuf/extension_set_inl.h
+include/google/protobuf/feature_resolver.h
 include/google/protobuf/field_access_listener.h
 include/google/protobuf/field_mask.pb.h
 include/google/protobuf/field_mask.proto
@@ -148,6 +151,8 @@ include/google/protobuf/generated_message_util.h
 include/google/protobuf/has_bits.h
 include/google/protobuf/implicit_weak_message.h
 include/google/protobuf/inlined_string_field.h
+include/google/protobuf/internal_message_util.h
+include/google/protobuf/internal_visibility.h
 include/google/protobuf/io/coded_stream.h
 include/google/protobuf/io/gzip_stream.h
 include/google/protobuf/io/io_win32.h
@@ -184,6 +189,7 @@ include/google/protobuf/parse_context.h
 include/google/protobuf/port.h
 include/google/protobuf/port_def.inc
 include/google/protobuf/port_undef.inc
+include/google/protobuf/raw_ptr.h
 include/google/protobuf/reflection.h
 include/google/protobuf/reflection_internal.h
 include/google/protobuf/reflection_mode.h
