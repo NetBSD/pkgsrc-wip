@@ -1494,7 +1494,6 @@ SUBDIR+=	hs-irc
 SUBDIR+=	hs-knob
 SUBDIR+=	hs-largeword
 SUBDIR+=	hs-lazy-io
-SUBDIR+=	hs-magic
 SUBDIR+=	hs-markov-chain
 SUBDIR+=	hs-midi
 SUBDIR+=	hs-mime
