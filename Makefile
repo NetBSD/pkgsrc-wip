@@ -4930,6 +4930,7 @@ SUBDIR+=	ruby-rbpdf
 SUBDIR+=	ruby-rbpdf-font
 SUBDIR+=	ruby-request_store
 SUBDIR+=	ruby-review
+SUBDIR+=	ruby-rexml
 SUBDIR+=	ruby-rinku
 SUBDIR+=	ruby-roadie
 SUBDIR+=	ruby-roadie-rails52
