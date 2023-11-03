@@ -4916,6 +4916,7 @@ SUBDIR+=	ruby-multi_xml
 SUBDIR+=	ruby-mustache-sinatra
 SUBDIR+=	ruby-mustache0
 SUBDIR+=	ruby-net-http-pipeline
+SUBDIR+=	ruby-octicons
 SUBDIR+=	ruby-passenger
 SUBDIR+=	ruby-prawn-icon
 SUBDIR+=	ruby-prawn-svg
