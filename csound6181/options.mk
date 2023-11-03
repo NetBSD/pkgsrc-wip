@@ -35,7 +35,6 @@ CMAKE_ARGS+=		-DUSE_JACK=OFF
 PLIST_VARS+=		portaudio
 .if !empty(PKG_OPTIONS:Mportaudio)
 .include "../portaudio/buildlink3.mk"
-.include "../portmidi/buildlink3.mk"
 CMAKE_ARGS+=		-DUSE_PORTAUDIO=ON
 CMAKE_ARGS+=		-DCMAKE_INCLUDE_PATH=${BUILDLINK_PREFIX.portaudio}/include/portaudio2
 CMAKE_ARGS+=		-DCMAKE_LIBRARY_PATH=${BUILDLINK_PREFIX.portaudio}/lib/portaudio2
