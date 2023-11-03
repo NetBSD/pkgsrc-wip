@@ -5,7 +5,7 @@ DISTNAME=	portmidi-2.0.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PortMidi/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mk@asdfghasdfgh.de
 HOMEPAGE=	https://github.com/PortMidi/portmidi/
 COMMENT=	Cross Plattform MIDI IO
 #LICENSE=	# TODO: (see mk/license.mk)
