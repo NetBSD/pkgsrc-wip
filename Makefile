@@ -4935,6 +4935,7 @@ SUBDIR+=	ruby-rinku
 SUBDIR+=	ruby-roadie
 SUBDIR+=	ruby-roadie-rails52
 SUBDIR+=	ruby-roo-xls
+SUBDIR+=	ruby-rss
 SUBDIR+=	ruby-sanitize
 SUBDIR+=	ruby-sdl2
 SUBDIR+=	ruby-simple-navigation
