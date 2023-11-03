@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	identify-2.5.30
+DISTNAME=	identify-2.5.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/identify/}
@@ -16,5 +16,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} identify-cli identify-cli-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
