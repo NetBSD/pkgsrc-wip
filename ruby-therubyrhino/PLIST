@@ -1,0 +1,41 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/rhino.rb
+${GEM_LIBDIR}/lib/rhino/context.rb
+${GEM_LIBDIR}/lib/rhino/deprecations.rb
+${GEM_LIBDIR}/lib/rhino/error.rb
+${GEM_LIBDIR}/lib/rhino/object.rb
+${GEM_LIBDIR}/lib/rhino/rhino_ext.rb
+${GEM_LIBDIR}/lib/rhino/ruby.rb
+${GEM_LIBDIR}/lib/rhino/ruby/access.rb
+${GEM_LIBDIR}/lib/rhino/ruby/attribute_access.rb
+${GEM_LIBDIR}/lib/rhino/ruby/default_access.rb
+${GEM_LIBDIR}/lib/rhino/version.rb
+${GEM_LIBDIR}/lib/rhino/wormhole.rb
+${GEM_LIBDIR}/spec/rhino/access_spec.rb
+${GEM_LIBDIR}/spec/rhino/context_spec.rb
+${GEM_LIBDIR}/spec/rhino/deprecations_spec.rb
+${GEM_LIBDIR}/spec/rhino/error_spec.rb
+${GEM_LIBDIR}/spec/rhino/integration/bar.js
+${GEM_LIBDIR}/spec/rhino/integration/foo.js
+${GEM_LIBDIR}/spec/rhino/integration/index.js
+${GEM_LIBDIR}/spec/rhino/integration/loop.js
+${GEM_LIBDIR}/spec/rhino/integration/loop/element1.js
+${GEM_LIBDIR}/spec/rhino/integration/loop/element2.js
+${GEM_LIBDIR}/spec/rhino/integration_spec.rb
+${GEM_LIBDIR}/spec/rhino/redjs_spec.rb
+${GEM_LIBDIR}/spec/rhino/rhino_ext_spec.rb
+${GEM_LIBDIR}/spec/rhino/ruby_spec.rb
+${GEM_LIBDIR}/spec/rhino/wormhole_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/therubyrhino.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.2.0/plugins
+@pkgdir lib/ruby/gems/3.2.0/extensions
