@@ -4734,7 +4734,6 @@ SUBDIR+=	pympress
 SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
-SUBDIR+=	pystring
 SUBDIR+=	pythia6
 SUBDIR+=	pythoncad
 SUBDIR+=	pywm
