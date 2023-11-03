@@ -4939,6 +4939,7 @@ SUBDIR+=	ruby-sdl2
 SUBDIR+=	ruby-simple-navigation
 SUBDIR+=	ruby-sinatra-simple-navigation
 SUBDIR+=	ruby-sinatra1
+SUBDIR+=	ruby-sprockets-helpers
 SUBDIR+=	ruby-sqlite3
 SUBDIR+=	ruby-table_print
 SUBDIR+=	ruby-taskwarrior-web

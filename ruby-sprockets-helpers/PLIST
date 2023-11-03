@@ -1,0 +1,38 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Appraisals
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/gemfiles/sprockets_2.0.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.1.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.2.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.3.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.4.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.5.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.6.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.7.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.8.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_2.9.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_3.0.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_3.1.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_3.2.gemfile
+${GEM_LIBDIR}/gemfiles/sprockets_4.0.gemfile
+${GEM_LIBDIR}/lib/sinatra/sprockets-helpers.rb
+${GEM_LIBDIR}/lib/sinatra/sprockets/helpers.rb
+${GEM_LIBDIR}/lib/sprockets-helpers.rb
+${GEM_LIBDIR}/lib/sprockets/helpers.rb
+${GEM_LIBDIR}/lib/sprockets/helpers/asset_path.rb
+${GEM_LIBDIR}/lib/sprockets/helpers/base_path.rb
+${GEM_LIBDIR}/lib/sprockets/helpers/file_path.rb
+${GEM_LIBDIR}/lib/sprockets/helpers/manifest_path.rb
+${GEM_LIBDIR}/lib/sprockets/helpers/settings.rb
+${GEM_LIBDIR}/lib/sprockets/helpers/version.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/sprockets-helpers_spec.rb
+${GEM_LIBDIR}/sprockets-helpers.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.2.0/plugins
+@pkgdir lib/ruby/gems/3.2.0/extensions
