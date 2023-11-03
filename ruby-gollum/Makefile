@@ -8,12 +8,21 @@ HOMEPAGE=	https://github.com/gollum/gollum
 COMMENT=	Simple, Git-powered wiki with a sweet API and local frontend
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-gemojione>=3.2<4:../../wip/ruby-gemojione
-DEPENDS+=	${RUBY_PKGPREFIX}-gollum-lib>=4.2.10<4.3:../../wip/ruby-gollum-lib
-DEPENDS+=	${RUBY_PKGPREFIX}-kramdown1>=1.9.0<1.10:../../wip/ruby-kramdown1
-DEPENDS+=	${RUBY_PKGPREFIX}-mustache0>=0.99.5<1:../../wip/ruby-mustache0
-DEPENDS+=	${RUBY_PKGPREFIX}-sinatra1>=1.4.4<2:../../wip/ruby-sinatra1
+DEPENDS+=	${RUBY_PKGPREFIX}-gollum-lib>=6.0<7:../../wip/ruby-gollum-lib
+DEPENDS+=	${RUBY_PKGPREFIX}-kramdown>=2.3<3:../../textproc/ruby-kramdown
+DEPENDS+=	${RUBY_PKGPREFIX}-kramdown-parser-gfm>=1.1.0<1.2:../../textproc/ruby-kramdown-parser-gfm
+DEPENDS+=	${RUBY_PKGPREFIX}-sinatra>=3.0<4:../../www/ruby-sinatra
+DEPENDS+=	${RUBY_PKGPREFIX}-sinatra-contrib>=3.0<4:../../www/ruby-sinatra-contrib
+DEPENDS+=	${RUBY_PKGPREFIX}-mustache-sinatra>=2.0<3:../../wip/ruby-mustache-sinatra
 DEPENDS+=	${RUBY_PKGPREFIX}-useragent>=0.16.2<0.17:../../wip/ruby-useragent
+DEPENDS+=	${RUBY_PKGPREFIX}-gemojione>=4.1<5:../../wip/ruby-gemojione
+DEPENDS+=	${RUBY_PKGPREFIX}-octicons>=19.0<20:../../wip/ruby-octicons
+DEPENDS+=	${RUBY_PKGPREFIX}-sprockets>=4.1<5:../../misc/ruby-sprockets
+DEPENDS+=	${RUBY_PKGPREFIX}-sprockets-helpers>=1.2<2:../../wip/ruby-sprockets-helpers
+DEPENDS+=	${RUBY_PKGPREFIX}-rss>=0.2.9<0.3:../../wip/ruby-rss
+DEPENDS+=	${RUBY_PKGPREFIX}-therubyrhino>=2.1.0<2.2.0:../../wip/ruby-therubyrhino
+DEPENDS+=	${RUBY_PKGPREFIX}-webrick>=1.7<2:../../www/ruby-webrick
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.8<2:../../devel/ruby-i18n
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

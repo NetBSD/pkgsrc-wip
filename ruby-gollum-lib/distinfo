@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (gollum-lib-4.2.10.gem) = b35e89a0b6fe0b89a5f9eb81db15a3768acd8da6
-SHA512 (gollum-lib-4.2.10.gem) = 029a02f9239c598fe8d7bd702037599527744a1a8cda023d8222b999045786fbe58152dc3bfbe12110c05afb98c40bc52dc29a4a3eebdf57e0f4ad23efd22155
-Size (gollum-lib-4.2.10.gem) = 49152 bytes
+BLAKE2s (gollum-lib-5.2.4.gem) = 394a06ea28028dc7d60a6813e50d8152e9862d6be9089f4e157aab719c294bf9
+SHA512 (gollum-lib-5.2.4.gem) = 774c2775a7c664e7dc880a48ce390580cd3412a6939e808ebde17e851dba180b160420927f0c7bccf7edc16d12b3d879bc66ef1d4e1cf6be8c16571fee811ae1
+Size (gollum-lib-5.2.4.gem) = 52736 bytes
