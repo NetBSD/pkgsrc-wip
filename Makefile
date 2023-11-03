@@ -4948,6 +4948,7 @@ SUBDIR+=	ruby-taskwarrior-web
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-termit
 SUBDIR+=	ruby-therubyracer
+SUBDIR+=	ruby-therubyrhino_jar
 SUBDIR+=	ruby-travis
 SUBDIR+=	ruby-treetop16
 SUBDIR+=	ruby-trollop
