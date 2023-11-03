@@ -1,0 +1,24 @@
+@comment $NetBSD$
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/mustache/sinatra.rb
+${GEM_LIBDIR}/lib/mustache/sinatra/helpers.rb
+${GEM_LIBDIR}/lib/mustache/sinatra/version.rb
+${GEM_LIBDIR}/mustache-sinatra.gemspec
+${GEM_LIBDIR}/spec/normal_usage_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/views/index.mustache
+${GEM_LIBDIR}/spec/views/index.rb
+${GEM_LIBDIR}/spec/views/layout.mustache
+${GEM_LIBDIR}/spec/views/layout.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.2.0/plugins
+@pkgdir lib/ruby/gems/3.2.0/extensions

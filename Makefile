@@ -4913,6 +4913,7 @@ SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-kramdown1
 SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-multi_xml
+SUBDIR+=	ruby-mustache-sinatra
 SUBDIR+=	ruby-mustache0
 SUBDIR+=	ruby-net-http-pipeline
 SUBDIR+=	ruby-passenger
