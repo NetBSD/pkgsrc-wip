@@ -5,8 +5,8 @@
 #              Fri Feb 11 19:03:05 CST 2022               #
 ###########################################################
 
-DISTNAME=	dna_features_viewer-3.1.0
-PKGNAME=	${PYPKGPREFIX}-dna-features-viewer-3.1.0
+DISTNAME=	dna_features_viewer-3.1.3
+PKGNAME=	${PYPKGPREFIX}-dna-features-viewer-3.1.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dna-features-viewer/}
 
