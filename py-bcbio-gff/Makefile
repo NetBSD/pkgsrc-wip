@@ -5,8 +5,8 @@
 #              Fri Feb 11 18:52:13 CST 2022               #
 ###########################################################
 
-DISTNAME=	bcbio-gff-0.6.9
-PKGNAME=	${PYPKGPREFIX}-bcbio-gff-0.6.9
+DISTNAME=	bcbio-gff-0.7.0
+PKGNAME=	${PYPKGPREFIX}-bcbio-gff-0.7.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcbio-gff/}
 
