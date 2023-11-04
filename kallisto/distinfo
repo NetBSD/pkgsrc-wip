@@ -12,3 +12,4 @@ SHA1 (patch-ext_bifrost_src_strict__fstream.hpp) = a4eab7784c3502fcc79ba0c87d31a
 SHA1 (patch-src_Bootstrap.h) = 29a07a6fbaedf4387b70afb3b2caeb1a9b17f8e8
 SHA1 (patch-src_CMakeLists.txt) = 33d0e3cf985d2e400315788d3ee1c74987a6ebee
 SHA1 (patch-src_kseq.h) = 034e65bdcf5d3851b4e3d65afd06843bdff0d8a9
+SHA1 (patch-src_main.cpp) = 65c9af813f558cebd6086a95b56a499aab02e566
