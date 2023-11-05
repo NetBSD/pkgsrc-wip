@@ -1,4 +1,5 @@
-TeX Live package database.
+Empty TeX Live package database.
 
-Complete information about a TeX Live installation is stored in
-this database.
+This database is needed for some programs, such as texdoc. However,
+since pkgsrc packages are not managed by the texlive installation
+this database can be empty.
