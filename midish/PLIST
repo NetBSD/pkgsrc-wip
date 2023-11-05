@@ -1,4 +1,11 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/Users/mk/pkgsrc/pkg-2023Q3/bin/bmake package"
-@comment TODO: 2. run "/Users/mk/pkgsrc/pkg-2023Q3/bin/bmake print-PLIST"
+bin/midish
+bin/smfplay
+bin/smfrec
+man/man1/midish.1
+man/man1/smfplay.1
+man/man1/smfrec.1
+share/doc/midish/README
+share/doc/midish/manual.html
+share/examples/midish/midishrc
+share/examples/midish/sample.sng
