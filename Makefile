@@ -957,6 +957,7 @@ SUBDIR+=	fuse-cryfs
 SUBDIR+=	fuse-exfat
 SUBDIR+=	fuse-google-drive-git
 SUBDIR+=	fuse-mp3fs
+SUBDIR+=	fuse-s3fs
 SUBDIR+=	fuse-smbnetfs
 SUBDIR+=	fuse-squashfuse
 SUBDIR+=	fuse-zip
