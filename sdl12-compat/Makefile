@@ -17,8 +17,8 @@ CONFLICTS+=	SDL-[0-9]*
 
 PKGCONFIG_OVERRIDE+=	sdl12_compat.pc.in
 
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/SDL/*.orig
+#post-install:
+#	${RM} ${DESTDIR}${PREFIX}/include/SDL/*.orig
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"

@@ -27,7 +27,7 @@ LIBS+=	-ltcl -lSDL -lGl -lpthread
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../wip/sdl12-compat/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
