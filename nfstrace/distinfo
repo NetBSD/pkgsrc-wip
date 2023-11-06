@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (nfstrace-0.4.3.2.tar.gz) = 4049c5d99a2b3a2ee8576c2790631a5206bbebf221ea82e672715c3bde4eadfb
+SHA512 (nfstrace-0.4.3.2.tar.gz) = 944078c0a836f617ab94096dee115fd7dcc4f6bc57d774a5ec29e9b77e5b61eddb367b7d79c4e616d2d23b7eddb64a436889099f5957d6d8af02e4fa781cf924
+Size (nfstrace-0.4.3.2.tar.gz) = 18527081 bytes
