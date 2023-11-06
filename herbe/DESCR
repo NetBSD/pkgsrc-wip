@@ -1,1 +1,2 @@
-Daemon-less notifications without D-Bus
+herbe is a daemon-less notifications program that doesn't require
+D-Bus.

@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (herbe/1.0.0.tar.gz) = 726f956b4b21a0d74a19a044c0b4831fec44efd9fe999638da01cc0f15ee3f1a
 SHA512 (herbe/1.0.0.tar.gz) = 3f49de25fd92194d1354054c207616343d9c21a9d82c6c4e3316ebc5228c0bd90650621438d14cd4730135f328c0438ef054a2b6843f3bd4d15f9cb47a22df12
 Size (herbe/1.0.0.tar.gz) = 4974 bytes
-SHA1 (patch-Makefile) = ca9b213b4b9a8d9fe2b756764fa6f5aff39cd0d1
+SHA1 (patch-Makefile) = e5eb2dc188594e1ce51fed02b112c347de6d59f6

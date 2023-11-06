@@ -2,10 +2,14 @@ $NetBSD$
 
 --- Makefile.orig	2020-08-23 11:35:19.000000000 +0000
 +++ Makefile
-@@ -1,4 +1,5 @@
+@@ -1,6 +1,7 @@
 -CFLAGS = -Wall -Wextra -pedantic -lX11 -lXft -I/usr/include/freetype2 -pthread
-+CFLAGS = -Wall -Wextra -pedantic -I/usr/X11R7/include -L/usr/X11R7/lib \
-+-lX11 -lXft -I/usr/X11R7/include/freetype2 -pthread
++CFLAGS += -Wall -Wextra -pedantic -I${X11BASE}/include -L${X11BASE}/lib \
++-lX11 -lXft -I${X11BASE}/include/freetype2 -pthread $(LDFLAGS)
  
- PREFIX ?= /usr/local
- CC ?= cc
+-PREFIX ?= /usr/local
++PREFIX ?= ${PREFIX}
+-CC ?= cc
++CC ?= ${CC:Q}
+ 
+ all: herbe

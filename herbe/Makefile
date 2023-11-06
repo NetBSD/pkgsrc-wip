@@ -15,6 +15,7 @@ LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/herbe-1.0.0
 
-.include "../../mk/bsd.pkg.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
