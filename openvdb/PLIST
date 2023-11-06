@@ -156,7 +156,6 @@ include/openvdb/util/Util.h
 include/openvdb/util/logging.h
 include/openvdb/version.h
 lib/cmake/OpenVDB/FindBlosc.cmake
-lib/cmake/OpenVDB/FindIlmBase.cmake
 lib/cmake/OpenVDB/FindJemalloc.cmake
 lib/cmake/OpenVDB/FindLog4cplus.cmake
 lib/cmake/OpenVDB/FindOpenEXR.cmake
@@ -168,5 +167,5 @@ lib/cmake/OpenVDB/OpenVDBMayaSetup.cmake
 lib/cmake/OpenVDB/OpenVDBUtils.cmake
 lib/libopenvdb.a
 lib/libopenvdb.so
-lib/libopenvdb.so.10.1
+lib/libopenvdb.so.11.0
 lib/libopenvdb.so.${PKGVERSION}
