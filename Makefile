@@ -307,7 +307,6 @@ SUBDIR+=	bonnie++-current
 SUBDIR+=	boost-asynchronous
 SUBDIR+=	boost-libs-2017Q1
 SUBDIR+=	boost-mp11
-SUBDIR+=	boost-poly_collection
 SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	bore
