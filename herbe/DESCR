@@ -1,2 +1,5 @@
-herbe is a daemon-less notifications program that doesn't require
-D-Bus.
+herbe is a daemon-less notification program that doesn't require
+D-Bus. herbe can fire simple text desktop notifications
+from anywhere for anything. It can be killed simply by sending the
+SIGKILL signal or by waiting 5 seconds. herbe can even be used for
+desktop notifications for www/qutebrowser as well.

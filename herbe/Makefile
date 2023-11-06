@@ -1,5 +1,8 @@
 # $NetBSD$
 
+# herbe does not contain a man page see below for info
+# https://github.com/dudik/herbe/blob/1.0.0/README.md
+
 DISTNAME=	herbe-1.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dudik/}
