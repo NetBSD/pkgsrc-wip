@@ -1,4 +1,5 @@
 @comment $NetBSD$
+bin/din
 share/applications/din.desktop
 share/din/factory/2600
 share/din/factory/2600.help.tcl
@@ -501,4 +502,3 @@ share/din/factory/word_space.crv
 share/din/factory/write-svg.help.tcl
 share/icons/hicolor/scalable/apps/din.svg
 share/pixmaps/din.png
-@pkgdir bin

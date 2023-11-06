@@ -10,22 +10,24 @@ COMMENT=	Open source cross-platform sound synthesizer
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf autoreconf automake pkg-config gmake
+USE_TOOLS+=	automake autoconf autoreconf pkg-config gmake
 GNU_CONFIGURE=	yes
-CXXFLAGS+=	-std=c++11 -E
 
-LIBS+=		-ltcl -lSDL -lGL -lpthread
-LIBS.Darwin+=	-lSDLmain -lSDL -Wl,-framework,Cocoa
+CXXFLAGS+=	-std=c++20
 
-pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf -fvi || ${ECHO} Ignore the warnings from autoreconf
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+LIBS+=	-ltcl -lpthread -lSDLmain -lSDL -framework Cocoa -framework OpenGL
+.else
+LIBS+=	-ltcl -lSDL -lGl -lpthread
+.endif
 
 .include "options.mk"
 
-#.include "../../devel/boost-libs/buildlink3.mk"
-#.include "../../wip/rtaudio/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
-.include "../../wip/sdl12-compat/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
