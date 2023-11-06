@@ -310,7 +310,6 @@ SUBDIR+=	boost-mp11
 SUBDIR+=	boost-poly_collection
 SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
-SUBDIR+=	boost-yap
 SUBDIR+=	bore
 SUBDIR+=	boringssl
 SUBDIR+=	bowtie2
