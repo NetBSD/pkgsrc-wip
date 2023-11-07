@@ -4941,6 +4941,7 @@ SUBDIR+=	ruby-rss
 SUBDIR+=	ruby-sanitize
 SUBDIR+=	ruby-sdl2
 SUBDIR+=	ruby-simple-navigation
+SUBDIR+=	ruby-sinatra-contrib2
 SUBDIR+=	ruby-sinatra-simple-navigation
 SUBDIR+=	ruby-sinatra1
 SUBDIR+=	ruby-sinatra2
