@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/dudik/herbe/
 COMMENT=	Daemon-less notifications without D-Bus
 LICENSE=	mit
 
-MAKE_FLAGS+=	CC=${CC}
+MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 DOC_DIR=	${PREFIX}/share/doc/herbe
