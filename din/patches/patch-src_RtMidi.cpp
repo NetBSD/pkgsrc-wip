@@ -8,7 +8,7 @@ Use process scheduling from NetBSD instead of pthread.
        return;
  
    while ( jack_ringbuffer_write_space(data->buff) < sizeof(nBytes) + size )
-+#if defined(__NetBSD__) || defined(__APPLE__)
++#if defined(__NetBSD__) || defined(__APPLE__)
 +      sched_yield();
 +#else
        pthread_yield();
