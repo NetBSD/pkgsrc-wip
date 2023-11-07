@@ -11,7 +11,7 @@ COMMENT=	Modern, fast (high-performance), web framework
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.8.0:../../devel/py-pydantic
-DEPENDS+=	${PYPKGPREFIX}-starlette>=0.13.6:../../wip/py-starlette
+#DEPENDS+=	${PYPKGPREFIX}-starlette>=0.13.6:../../wip/py-starlette
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
