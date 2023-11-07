@@ -2842,6 +2842,7 @@ SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parole
 SUBDIR+=	parted
+SUBDIR+=	partio
 SUBDIR+=	partonevolution
 SUBDIR+=	passepartout
 SUBDIR+=	passphrase-git

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (partio-1.17.1.tar.gz) = f0db32ffc432da3bc2b537cc495ece05716606f85c21d55d3a8607d1d3e372c6
+SHA512 (partio-1.17.1.tar.gz) = 5dbbd988c76a26ac6f3024e29ed12f37f7995daf211e065b9ffaf185c6203be7d9de48bd62b5955d2f5444af72fb3306ea5a0f3501cb0a49a26f157bb09ec6bc
+Size (partio-1.17.1.tar.gz) = 338461 bytes
+SHA1 (patch-CMakeLists.txt) = 1ce993c14887ca6d1434364f18cc6e4167306e8f
