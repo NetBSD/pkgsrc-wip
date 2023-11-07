@@ -15,11 +15,12 @@ LICENSE=	mit
 MAKE_FLAGS+=	CC=${CC}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
-DOC_DIR=	${DESTDIR}/${PREFIX}/share/doc/herbe
+DOC_DIR=	${PREFIX}/share/doc/herbe
+
+INSTALLATION_DIRS+=	${DOC_DIR}
+
 pre-install:
-	mkdir -p ${DOC_DIR}
-	cp ${WRKSRC}/README.md ${DOC_DIR}
-	chmod 644 ${DOC_DIR}/README.md
+	${INSTALL_MAN} ${WRKSRC}/README.md ${DESTDIR}${DOC_DIR}
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
