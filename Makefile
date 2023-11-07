@@ -4925,6 +4925,7 @@ SUBDIR+=	ruby-prawn-templates
 SUBDIR+=	ruby-pusher-client
 SUBDIR+=	ruby-rack-flash3
 SUBDIR+=	ruby-rack-protection1
+SUBDIR+=	ruby-rack-protection2
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-rbpdf
 SUBDIR+=	ruby-rbpdf-font
