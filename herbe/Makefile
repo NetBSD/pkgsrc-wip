@@ -19,7 +19,7 @@ DOC_DIR=	${PREFIX}/share/doc/herbe
 
 INSTALLATION_DIRS+=	${DOC_DIR}
 
-pre-install:
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/README.md ${DESTDIR}${DOC_DIR}
 
 .include "../../graphics/freetype2/buildlink3.mk"
