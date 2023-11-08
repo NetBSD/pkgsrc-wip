@@ -30,5 +30,5 @@ LIBS+=		-ljack
 ###
 .if !empty(PKG_OPTIONS:Mcoreaudio)
 CXXFLAGS+=	-D__MACOSX_CORE__
-LIBS+=		-framework OpenGL -framework CoreMIDI -framework CoreAudio -framework CoreFoundation
+LIBS+=		-framework CoreMIDI -framework CoreAudio -framework CoreFoundation
 .endif
