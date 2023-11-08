@@ -1376,7 +1376,6 @@ SUBDIR+=	helm
 SUBDIR+=	hengband
 SUBDIR+=	hepmc
 SUBDIR+=	hepmcvisual
-SUBDIR+=	herbe
 SUBDIR+=	hercules-server
 SUBDIR+=	hercules4aethra
 SUBDIR+=	heroes
