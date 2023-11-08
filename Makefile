@@ -5340,7 +5340,6 @@ SUBDIR+=	tex-relsize-doc
 SUBDIR+=	tex-setspace-doc
 SUBDIR+=	tex-texlive-ja-doc
 SUBDIR+=	tex-uptex-doc
-SUBDIR+=	texlive-tlpdb
 SUBDIR+=	textile-mode
 SUBDIR+=	tflint
 SUBDIR+=	tftp-hpa

@@ -1,5 +1,0 @@
-Empty TeX Live package database.
-
-This database is needed for some programs, such as texdoc. However,
-since pkgsrc packages are not managed by the texlive installation
-this database can be empty.
