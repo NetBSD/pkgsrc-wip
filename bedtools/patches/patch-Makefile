@@ -1,0 +1,54 @@
+$NetBSD$
+
+# Portability, respect env
+
+--- Makefile.orig	2023-11-08 15:05:30.454330622 +0000
++++ Makefile
+@@ -4,7 +4,7 @@
+ # (c) 2009 Aaron Quinlan
+ # ==========================
+ 
+-SHELL := /bin/bash -e
++SHELL := /bin/sh -e
+ 
+ VERSION_FILE=./src/utils/version/version_git.h
+ RELEASED_VERSION_FILE=./src/utils/version/version_release.txt
+@@ -21,7 +21,7 @@ OBJ_DIR	= obj
+ BIN_DIR	= bin
+ SRC_DIR	= src
+ 
+-CXX     = g++
++CXX     ?= g++
+ 
+ PYTHON ?= $(shell python --version >/dev/null 2>&1 && echo "python" || echo python3)
+ 
+@@ -43,7 +43,7 @@ endif
+ BT_LDFLAGS =
+ BT_LIBS    = -lz -lm -lbz2 -llzma -lpthread
+ 
+-prefix ?= /usr/local
++PREFIX ?= /usr/local
+ 
+ SUBDIRS = $(SRC_DIR)/annotateBed \
+ 		  $(SRC_DIR)/bamToBed \
+@@ -158,7 +158,7 @@ $(CCPREFIX) $(CC_WRAPPER) $(CXX) $(ALL_C
+ @mv -f $*.Td $*.d
+ endef
+ 
+-$(OBJ_DIR)/%.d: ;
++$(OBJ_DIR)/%.d: $(OBJ_DIR);
+ .PRECIOUS: $(OBJ_DIR)/%.d
+ 
+ -include $(patsubst %.o,%.d,$(BUILT_OBJECTS))
+@@ -200,9 +200,9 @@ $(BIN_DIR)/intersectBed: | $(BIN_DIR)
+ .PHONY: all
+ 
+ install: all
+-	mkdir -p $(DESTDIR)$(prefix)/bin
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	for file in bin/* ; do \
+-		cp -f $$file $(DESTDIR)$(prefix)/bin; \
++		cp -f $$file $(DESTDIR)$(PREFIX)/bin; \
+ 	done
+ 
+ print_banner:
