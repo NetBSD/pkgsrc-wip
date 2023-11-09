@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	libxc
 .if !defined(LIBXC_BUILDLINK3_MK)
 LIBXC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libxc+=	libxc>=1.0
+BUILDLINK_API_DEPENDS.libxc+=	libxc>=6.2.2
 BUILDLINK_PKGSRCDIR.libxc?=	../../wip/libxc
 .endif	# LIBXC_BUILDLINK3_MK
 

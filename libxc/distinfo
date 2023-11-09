@@ -1,4 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2009/12/05 21:06:58 jihbed Exp $
 
-RMD160 (libxc-1.0-alpha.tar.gz) = c1f8eb81f6c5fe4a2863312f3c60da0d0a04d32e
-Size (libxc-1.0-alpha.tar.gz) = 255041 bytes
+BLAKE2s (libxc-6.2.2.tar.gz) = d24430f514120c9c770d686f28991bbeda8f54256f73ac281e623931007f08e7
+SHA512 (libxc-6.2.2.tar.gz) = 20a87d9ce0c947ba99a67551c84e3233bbf27f0b342fd18a029fcb51b5007426b5b080874fddb25b710f263e465b126b4048f0c606fde108cf4d1397f39493c5
+Size (libxc-6.2.2.tar.gz) = 64297852 bytes
