@@ -13,8 +13,8 @@ HOMEPAGE=	https://cairographics.org/
 COMMENT=	Vector graphics library with cross-device output support
 LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 
-DISTINFO_FILE=	${.CURDIR}/../../graphics/cairo/distinfo
-PATCHDIR=	${.CURDIR}/../../graphics/cairo/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/cairo/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/cairo/patches
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
@@ -29,4 +29,3 @@ CPPFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
-.include "../../devel/glib2/buildlink3.mk"

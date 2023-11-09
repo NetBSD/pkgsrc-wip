@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	x11 xcb
 PKG_SUPPORTED_OPTIONS+=	quartz
 PKG_SUGGESTED_OPTIONS+=	quartz
 .else
-#PKG_SUGGESTED_OPTIONS=	x11 xcb
+PKG_SUGGESTED_OPTIONS=	x11 xcb
 .endif
 
 .include "../../mk/bsd.options.mk"
