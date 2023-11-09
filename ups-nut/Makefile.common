@@ -5,7 +5,7 @@
 # used by wip/ups-nut-usb/Makefile
 # used by wip/p5-UPS-Nut/Makefile
 
-DISTNAME=		nut-2.8.0.1.20230126.0
+DISTNAME=		nut-2.8.1.0.20231109.0
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES=		https://www.netbsd.org/~gdt/
@@ -46,6 +46,6 @@ NUT_DATADIR=		${PREFIX}/share/nut
 NUT_DOCDIR=		${PREFIX}/share/doc/nut
 NUT_DRVDIR=		${PREFIX}/libexec/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
-# Should be run
+# \todo Change to /var/run rather than /var/db
 NUT_STATEDIR?=		${VARBASE}/db/nut
 NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin

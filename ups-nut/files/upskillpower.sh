@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upskillpower.sh,v 1.1 2023/01/08 01:14:23 gdt Exp $
+# $NetBSD: upskillpower.sh,v 1.2 2023/06/22 05:31:07 wiz Exp $
 #
 # PROVIDE: upskillpower
 # REQUIRE: mountcritremote
