@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/nonstd/optional.hpp
+lib/cmake/optional-lite/optional-lite-config-version.cmake
+lib/cmake/optional-lite/optional-lite-config.cmake
+lib/cmake/optional-lite/optional-lite-targets.cmake

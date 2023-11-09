@@ -1,0 +1,2 @@
+A single-file header-only version of a C++17-like optional,
+a nullable object for C++98, C++11 and later.

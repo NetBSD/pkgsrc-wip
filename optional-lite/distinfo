@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (optional-lite-3.5.0.tar.gz) = 08a00aad3ece56c154c0b80d78755aab598fad2ec238c6db4f8e299eaada2d46
+SHA512 (optional-lite-3.5.0.tar.gz) = e578d391bc95e2a5302b4b02e0b17659026b2743fc5c1e16cd83f6227fa9b5990fa3fa23e808a4ea0f5bdafbf80834b0c462d563ab615907f113ee5a09ae88f5
+Size (optional-lite-3.5.0.tar.gz) = 50846 bytes
