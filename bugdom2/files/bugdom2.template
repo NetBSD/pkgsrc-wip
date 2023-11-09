@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $NetBSD$
+# Launcher script for bugdom2.
+#
+set -e
+cd @@PREFIX@@/share/bugdom2 && @@PREFIX@@/libexec/Bugdom2
