@@ -2246,6 +2246,7 @@ SUBDIR+=	mopac
 SUBDIR+=	mopac7
 SUBDIR+=	moregroupware
 SUBDIR+=	morse
+SUBDIR+=	mosh
 SUBDIR+=	mothur
 SUBDIR+=	motion
 SUBDIR+=	motti
