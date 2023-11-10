@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=martanne/}
 GITHUB_PROJECT=		vis
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		mk@asdfghasdfgh.de
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/martanne/vis/
 COMMENT=		Vim like text editor
 LICENSE=		isc

@@ -4,7 +4,7 @@ DISTNAME=	midish-1.3.3
 CATEGORIES=	audio
 MASTER_SITES=	https://midish.org/
 
-MAINTAINER=	mk@asdfghasdfgh.de
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://midish.org/
 COMMENT=	Open-source MIDI sequencer/filter
 LICENSE=	isc
