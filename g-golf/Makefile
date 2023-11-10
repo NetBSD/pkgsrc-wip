@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config makeinfo
 
+CONFIGURE_ARGS+=	--with-guile-site=yes
+
 TEXINFO_REQD=	6
 INFO_FILES=	yes
 
