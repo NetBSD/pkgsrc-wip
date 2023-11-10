@@ -17,7 +17,7 @@ PORTMIDI_BUILDLINK3_MK:=
 # XXX	BUILDLINK_DEPMETHOD.portmidi?=	build
 
 BUILDLINK_API_DEPENDS.portmidi+=	portmidi>=2.0.4
-BUILDLINK_PKGSRCDIR.portmidi?=	../../wip/portmidi
+BUILDLINK_PKGSRCDIR.portmidi?=		../../wip/portmidi
 .endif	# PORTMIDI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-portmidi
