@@ -23,7 +23,6 @@ lib/pkgconfig/libnutclientstub.pc
 lib/pkgconfig/libnutscan.pc
 lib/pkgconfig/libupsclient.pc
 ${PYSITELIB}/PyNUT.py
-${PYSITELIB}/setup.py
 ${PYSITELIB}/test_nutclient.py
 libexec/nut/al175
 libexec/nut/apcsmart
