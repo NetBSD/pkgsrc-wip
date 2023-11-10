@@ -970,6 +970,7 @@ SUBDIR+=	fvwm-crystal
 SUBDIR+=	fxrays
 SUBDIR+=	fxt
 SUBDIR+=	fynedesk
+SUBDIR+=	g-golf
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-rssgrab

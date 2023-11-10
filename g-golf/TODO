@@ -1,0 +1,4 @@
+  - resolve installation path (in chosen guile vs separate)
+  - package guile-lib for guile 3, or flip it
+  - test and make work
+  

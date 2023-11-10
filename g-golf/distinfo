@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (g-golf-0.8.0-rc-2.tar.gz) = e023cdf1d7231baee3901be1648195317dec4cfb6b93ea4f21dc7d6145788492
+SHA512 (g-golf-0.8.0-rc-2.tar.gz) = 144481b39a47188f579c740eac2230951f3e14cf0a07618aa03325a55fb0ad0f0ddafde6738c81a6390b71a587bb09f4256589451e42eb697dd07918483af201
+Size (g-golf-0.8.0-rc-2.tar.gz) = 1639008 bytes
