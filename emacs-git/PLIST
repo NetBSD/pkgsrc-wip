@@ -1672,8 +1672,12 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-common.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-common.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-run.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-run.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.el.gz
