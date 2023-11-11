@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/PortMidi/portmidi/
 COMMENT=	Cross Plattform MIDI IO
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
