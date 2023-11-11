@@ -6,26 +6,50 @@ the things not built.
 
 --- CMakeLists.txt.orig	2023-07-02 02:16:37.000000000 +0000
 +++ CMakeLists.txt
-@@ -119,10 +119,6 @@ set(OpenGL_GL_PREFERENCE GLVND)
+@@ -37,6 +37,9 @@ set(PARTIO_VERSION_MAJOR "1")
+ 
+ option(PARTIO_GTEST_ENABLED "Enable GTest for tests" OFF)
+ option(PARTIO_ORIGIN_RPATH "Enable ORIGIN rpath in the installed libraries" OFF)
++option(PARTIO_BUILD_LIB "Build PARTIO library" OFF)
++option(PARTIO_BUILD_PY "Build PARTIO python bindings" OFF)
++
+ 
+ if(WIN32 OR APPLE)
+     option(PARTIO_USE_GLVND "Use GLVND for OpenGL" OFF)
+@@ -118,11 +121,14 @@ endif()
+ set(OpenGL_GL_PREFERENCE GLVND)
  
  ## Search for useful libraries
- find_package(Threads REQUIRED)
+-find_package(Threads REQUIRED)
 -find_package(GLUT REQUIRED)
 -find_package(OpenGL REQUIRED)
--find_package(PythonInterp REQUIRED)
--find_package(PythonLibs REQUIRED)
++if(PARTIO_BUILD_PY)
++find_library(PARTIO_LIBRARY NAMES partio REQUIRED)
++find_path(PARTIO_INCLUDE_DIR NAMES Partio.h REQUIRED)
+ find_package(PythonInterp REQUIRED)
+ find_package(PythonLibs REQUIRED)
++endif()
++if(PARTIO_BUILD_LIB)
++find_package(Threads REQUIRED)
  find_package(ZLIB)
  if (ZLIB_FOUND)
      add_definitions(-DPARTIO_USE_ZLIB)
-@@ -135,9 +131,9 @@ set(PARTIO_LIBRARIES partio ${ZLIB_LIBRA
+@@ -132,12 +138,16 @@ endif()
  
+ # Make modules able to see partio library
+ set(PARTIO_LIBRARIES partio ${ZLIB_LIBRARY})
+-
++endif()
  ## Traverse subdirectories
++if(PARTIO_BUILD_LIB)
  add_subdirectory(src/lib)
 -add_subdirectory(src/tools)
--add_subdirectory(src/py)
--add_subdirectory(src/doc)
++endif()
 +#add_subdirectory(src/tools)
-+#add_subdirectory(src/py)
++if(PARTIO_BUILD_PY)
+ add_subdirectory(src/py)
+-add_subdirectory(src/doc)
++endif()
 +#add_subdirectory(src/doc)
  
  if (${PARTIO_GTEST_ENABLED})

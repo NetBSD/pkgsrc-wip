@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${PYSITELIB}/_partio.so
+${PYSITELIB}/partio.py
+share/swig/partio.i

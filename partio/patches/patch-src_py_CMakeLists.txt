@@ -1,0 +1,18 @@
+$NetBSD$
+
+Use pkgsrc partio when building module.
+
+--- src/py/CMakeLists.txt.orig	2023-07-02 02:16:37.000000000 +0000
++++ src/py/CMakeLists.txt
+@@ -48,9 +48,9 @@ target_include_directories(
+     partio_mod
+     PRIVATE
+         ${PYTHON_INCLUDE_DIRS}
+-        ${CMAKE_SOURCE_DIR}/src/lib
++        ${PARTIO_INCLUDE_DIR}
+ )
+-target_link_libraries(partio_mod PRIVATE ${PYTHON_LIBRARIES} partio)
++target_link_libraries(partio_mod PRIVATE ${PYTHON_LIBRARIES} ${PARTIO_LIBRARY})
+ 
+ set(PYTHON_DEST "${CMAKE_INSTALL_LIBDIR}/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages" )
+ 

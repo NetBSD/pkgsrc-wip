@@ -1,0 +1,19 @@
+# $NetBSD$
+# used by wip/py-partio/Makefile
+
+DISTNAME=		partio-1.17.1
+CATEGORIES=		graphics
+MASTER_SITES=		${MASTER_SITE_GITHUB:=wdas/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://www.disneyanimation.com/open-source/partio/
+LICENSE=		modified-bsd
+
+PATCHDIR=		${.CURDIR}/../../wip/partio/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/partio/distinfo
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14

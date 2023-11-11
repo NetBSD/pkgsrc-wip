@@ -4098,6 +4098,7 @@ SUBDIR+=	py-parsedmarc
 SUBDIR+=	py-parserutils
 SUBDIR+=	py-parsy
 SUBDIR+=	py-partd
+SUBDIR+=	py-partio
 SUBDIR+=	py-parver
 SUBDIR+=	py-patch
 SUBDIR+=	py-patch-ng
