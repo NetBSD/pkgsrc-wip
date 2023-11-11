@@ -1,0 +1,3 @@
+Works, but only import the next version into pkgsrc-current 
+it includes fixes for the confidential parts of the source.
+https://github.com/wdas/partio/issues/104

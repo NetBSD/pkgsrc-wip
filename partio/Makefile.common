@@ -17,3 +17,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
+
+# https://github.com/wdas/partio/issues/104
+RESTRICTED=		Includes the word confidential in the some files
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
