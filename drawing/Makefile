@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD$
 
 DISTNAME=	drawing-1.0.2
 PKGREVISION=	1
