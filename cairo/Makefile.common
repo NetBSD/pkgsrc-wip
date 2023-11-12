@@ -16,16 +16,14 @@ LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 DISTINFO_FILE=	${.CURDIR}/../../wip/cairo/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/cairo/patches
 
+USE_CC_FEATURES=	c99
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-
-USE_CC_FEATURES=	c99
-
 PKGCONFIG_OVERRIDE+=	src/cairo.pc.in
 PKGCONFIG_OVERRIDE+=	src/cairo-features.pc.in
 
 # For snprintf() and ctime_r()
-CPPFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"

@@ -48,8 +48,8 @@ PTHREAD_CFLAGS.MirBSD=	-fhonour-copts
 # point the necessary updates to X were applied. I'm assuming this is
 # old enough that nobody's going to care.
 #
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*) && \
-    empty(MACHINE_PLATFORM:MNetBSD-5.99.*) && \
+.if ${MACHINE_PLATFORM:MNetBSD-5.*} && \
+    !${MACHINE_PLATFORM:MNetBSD-5.99.*} && \
     ${X11_TYPE} == "native"
 SUBST_CLASSES+=		pixman
 SUBST_STAGE.pixman=	post-build

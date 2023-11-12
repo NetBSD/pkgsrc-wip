@@ -11,19 +11,21 @@ PKG_SUGGESTED_OPTIONS=	x11 xcb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		x11 xcb quartz
+PLIST_VARS+=	x11 xcb quartz
 
 ###
 ### X11 and XCB support (XCB implies X11)
 ###
 .if !empty(PKG_OPTIONS:Mx11) || !empty(PKG_OPTIONS:Mxcb)
-PLIST.x11=		yes
+PLIST.x11=	yes
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 
 .  if !empty(PKG_OPTIONS:Mxcb)
-PLIST.xcb=		yes
+PLIST.xcb=	yes
 .    include "../../x11/libxcb/buildlink3.mk"
 .  endif
 .endif
@@ -39,6 +41,6 @@ PLIST.xcb=		yes
 # fonts in MacOS X system-default paths too so sticking with it will
 # not be a problem.
 .if !empty(PKG_OPTIONS:Mquartz)
-PLIST.quartz=		yes
-WARNINGS+=		"You have enabled Quartz backend. No fonts installed with pkgsrc will be found."
+PLIST.quartz=	yes
+WARNINGS+=	"You have enabled Quartz backend. No fonts installed with pkgsrc will be found."
 .endif

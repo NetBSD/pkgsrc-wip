@@ -2,14 +2,22 @@
 
 .include "../../wip/cairo/Makefile.common"
 
-TEST_TARGET=			check
+TEST_TARGET=	check
 
 MESON_ARGS+=	-Dglib=disabled
 
-PKGCONFIG_OVERRIDE_STAGE=       post-build
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
 
 .include "options.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+# see meson.build for systems that support cairo-trace
+PLIST_VARS+=	trace
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+PLIST.trace=	yes
+.endif
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
