@@ -4958,6 +4958,7 @@ SUBDIR+=	ruby-travis
 SUBDIR+=	ruby-treetop16
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-twitter-text1
+SUBDIR+=	ruby-uglifier4
 SUBDIR+=	ruby-useragent
 SUBDIR+=	ruby-vegas
 SUBDIR+=	ruby-versionomy
