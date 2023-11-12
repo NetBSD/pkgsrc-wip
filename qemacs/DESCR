@@ -1,2 +1,18 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+qemacs - a small but powerful UNIX editor with many features
+that even big editors lack.
+
+QEmacs is a text editor targeted at embedded systems or debugging.
+Although it is very small, it has some very interesting features that
+even big editors lack:
+- Full screen editor with an Emacs look and feel with all common Emacs
+features.
+- Can edit huge files
+- Full Unicode support
+- Various syntax modes for common programming langauges
+- Shell mode: full color VT100 terminal emulation so your shell works
+exactly as you expect
+- Input methods for most languages, including Chinese.
+- Binary and hexadecimal in place editing mode
+- Works on any VT100 terminal without termcap. UTF-8 VT100 support
+included with double width glyphs.
+- X11 support
