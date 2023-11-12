@@ -4903,7 +4903,6 @@ SUBDIR+=	ruby-github-markup
 SUBDIR+=	ruby-gitlab
 SUBDIR+=	ruby-gitlab-grit
 SUBDIR+=	ruby-gollum
-SUBDIR+=	ruby-gollum-grit_adapter
 SUBDIR+=	ruby-gollum-lib
 SUBDIR+=	ruby-gollum-rugged_adapter
 SUBDIR+=	ruby-htmlentities
