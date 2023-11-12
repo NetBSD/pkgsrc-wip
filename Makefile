@@ -4909,7 +4909,6 @@ SUBDIR+=	ruby-htmlentities
 SUBDIR+=	ruby-httparty
 SUBDIR+=	ruby-iesd
 SUBDIR+=	ruby-kakasi
-SUBDIR+=	ruby-kramdown1
 SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-multi_xml
 SUBDIR+=	ruby-mustache-sinatra
