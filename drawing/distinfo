@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2022/06/11 12:26:55 nia Exp $
-
-BLAKE2s (drawing-1.0.2.tar.gz) = 081bce8ab8e07812591c5cef232db1d11d61b11cdd5b624c9df21e785c866952
-SHA512 (drawing-1.0.2.tar.gz) = 61e3e2764832de6ed997bd6f72a63154fae332da76b12ede848b9c1e9d850ba46cf9ebdf16dd1b4d52827b5ec4e877aca03877d0557a2a2635279598992832d6
-Size (drawing-1.0.2.tar.gz) = 14407277 bytes
-SHA1 (patch-data_com.github.maoschanz.drawing.gschema.xml) = 39214639fc05ba98c763c483fd2dcf5e3080106d
