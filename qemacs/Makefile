@@ -11,9 +11,10 @@ HOMEPAGE=	https://github.com/qemacs/qemacs/
 COMMENT=	Quick Emacs
 LICENSE=	mit
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+USE_LANGUAGES=		c
+USE_TOOLS+=		gmake
 
 .include "options.mk"
 

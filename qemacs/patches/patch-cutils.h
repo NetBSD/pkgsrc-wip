@@ -1,5 +1,8 @@
 $NetBSD$
 
+Remove unused functions. These cause a compiler error on NetBSD
+but don't have an issue on Darwin or Linux.
+
 --- cutils.h.orig	2023-03-09 11:57:59.000000000 +0000
 +++ cutils.h
 @@ -394,6 +394,7 @@ static inline void put_u8(uint8_t *tab, 

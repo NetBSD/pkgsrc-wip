@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use fwrite on NetBSD as well.
+
 --- tty.c.orig	2023-03-09 11:57:59.000000000 +0000
 +++ tty.c
 @@ -87,7 +87,7 @@ typedef uint32_t TTYChar;

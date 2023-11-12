@@ -1,4 +1,7 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+${PLIST.html}bin/html2png
+bin/qe
+bin/qemacs
+man/man1/qe.1
+share/qe/kmaps
+share/qe/ligatures

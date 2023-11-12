@@ -1,5 +1,8 @@
 $NetBSD$
 
+Added NetBSD support. The main reason for this is that it prevents
+DLLIBS from getting set to "-ldl" in the Makefile.
+
 --- configure.orig	2023-03-09 11:57:59.000000000 +0000
 +++ configure
 @@ -115,6 +115,14 @@ case $targetos in
