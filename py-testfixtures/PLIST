@@ -17,6 +17,9 @@ ${PYSITELIB}/testfixtures/compat.pyo
 ${PYSITELIB}/testfixtures/components.py
 ${PYSITELIB}/testfixtures/components.pyc
 ${PYSITELIB}/testfixtures/components.pyo
+${PYSITELIB}/testfixtures/datetime.py
+${PYSITELIB}/testfixtures/datetime.pyc
+${PYSITELIB}/testfixtures/datetime.pyo
 ${PYSITELIB}/testfixtures/django.py
 ${PYSITELIB}/testfixtures/django.pyc
 ${PYSITELIB}/testfixtures/django.pyo
@@ -50,9 +53,6 @@ ${PYSITELIB}/testfixtures/shouldwarn.pyo
 ${PYSITELIB}/testfixtures/sybil.py
 ${PYSITELIB}/testfixtures/sybil.pyc
 ${PYSITELIB}/testfixtures/sybil.pyo
-${PYSITELIB}/testfixtures/tdatetime.py
-${PYSITELIB}/testfixtures/tdatetime.pyc
-${PYSITELIB}/testfixtures/tdatetime.pyo
 ${PYSITELIB}/testfixtures/tempdirectory.py
 ${PYSITELIB}/testfixtures/tempdirectory.pyc
 ${PYSITELIB}/testfixtures/tempdirectory.pyo
@@ -61,9 +61,6 @@ ${PYSITELIB}/testfixtures/tests/__init__.pyc
 ${PYSITELIB}/testfixtures/tests/__init__.pyo
 ${PYSITELIB}/testfixtures/tests/configparser-read.txt
 ${PYSITELIB}/testfixtures/tests/configparser-write.txt
-${PYSITELIB}/testfixtures/tests/conftest.py
-${PYSITELIB}/testfixtures/tests/conftest.pyc
-${PYSITELIB}/testfixtures/tests/conftest.pyo
 ${PYSITELIB}/testfixtures/tests/directory-contents.txt
 ${PYSITELIB}/testfixtures/tests/sample1.py
 ${PYSITELIB}/testfixtures/tests/sample1.pyc
@@ -71,6 +68,9 @@ ${PYSITELIB}/testfixtures/tests/sample1.pyo
 ${PYSITELIB}/testfixtures/tests/sample2.py
 ${PYSITELIB}/testfixtures/tests/sample2.pyc
 ${PYSITELIB}/testfixtures/tests/sample2.pyo
+${PYSITELIB}/testfixtures/tests/sample3.py
+${PYSITELIB}/testfixtures/tests/sample3.pyc
+${PYSITELIB}/testfixtures/tests/sample3.pyo
 ${PYSITELIB}/testfixtures/tests/test_compare.py
 ${PYSITELIB}/testfixtures/tests/test_compare.pyc
 ${PYSITELIB}/testfixtures/tests/test_compare.pyo
@@ -116,6 +116,9 @@ ${PYSITELIB}/testfixtures/tests/test_log_capture.pyo
 ${PYSITELIB}/testfixtures/tests/test_logcapture.py
 ${PYSITELIB}/testfixtures/tests/test_logcapture.pyc
 ${PYSITELIB}/testfixtures/tests/test_logcapture.pyo
+${PYSITELIB}/testfixtures/tests/test_mappingcomparison.py
+${PYSITELIB}/testfixtures/tests/test_mappingcomparison.pyc
+${PYSITELIB}/testfixtures/tests/test_mappingcomparison.pyo
 ${PYSITELIB}/testfixtures/tests/test_mock.py
 ${PYSITELIB}/testfixtures/tests/test_mock.pyc
 ${PYSITELIB}/testfixtures/tests/test_mock.pyo
@@ -140,6 +143,9 @@ ${PYSITELIB}/testfixtures/tests/test_replacer.pyo
 ${PYSITELIB}/testfixtures/tests/test_roundcomparison.py
 ${PYSITELIB}/testfixtures/tests/test_roundcomparison.pyc
 ${PYSITELIB}/testfixtures/tests/test_roundcomparison.pyo
+${PYSITELIB}/testfixtures/tests/test_sequencecomparison.py
+${PYSITELIB}/testfixtures/tests/test_sequencecomparison.pyc
+${PYSITELIB}/testfixtures/tests/test_sequencecomparison.pyo
 ${PYSITELIB}/testfixtures/tests/test_should_raise.py
 ${PYSITELIB}/testfixtures/tests/test_should_raise.pyc
 ${PYSITELIB}/testfixtures/tests/test_should_raise.pyo
