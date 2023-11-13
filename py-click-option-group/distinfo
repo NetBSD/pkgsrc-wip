@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (click-option-group-0.5.3.tar.gz) = 3495861b9c2c8ce936fb154517b2539e1cb572d32814ac2e621a6d95170875fa
-SHA512 (click-option-group-0.5.3.tar.gz) = 99023efeb7a187172f2eed55b91879fa5888d82db7a76a3f930a13d6ba4d2b3b37d6adf24e895eadb61551bc2ca8f0249703cc0db1355aa3c68f493a1435ed5c
-Size (click-option-group-0.5.3.tar.gz) = 10792 bytes
+BLAKE2s (click-option-group-0.5.6.tar.gz) = 8de215304ed7bdb9a277327fdc680878d09ad76ce033153892dfa796d724e41f
+SHA512 (click-option-group-0.5.6.tar.gz) = 7ac321a0c2dedcacf9b0383cb6b1ae6f7dd0ec6855e4f88cd4817ddece0c2c043c8b10fab04a41aefce38f871075a793bdc7b000f3b99adc7d93a3b6f0cf9884
+Size (click-option-group-0.5.6.tar.gz) = 16517 bytes
