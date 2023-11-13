@@ -20,6 +20,7 @@ bin/auto-pkgsrc-branch
 bin/auto-pkgsrc-checkout
 bin/auto-pkgsrc-delete-all
 bin/auto-pkgsrc-dir
+bin/auto-pkgsrc-make
 bin/auto-pkgsrc-non-removable
 bin/auto-pkgsrc-prefix
 bin/auto-pkgsrc-remote-x11
