@@ -1,13 +1,26 @@
 # $NetBSD: Makefile,v 1.154 2023/01/29 21:14:37 ryoon Exp $
 
-.include "../../wip/cairo/Makefile.common"
+DISTNAME=	cairo-1.18.0
+CATEGORIES=	graphics
+MASTER_SITES=	https://cairographics.org/releases/
+EXTRACT_SUFX=	.tar.xz
 
-TEST_TARGET=	check
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://cairographics.org/
+COMMENT=	Vector graphics library with cross-device output support
+LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 
-MESON_ARGS+=	-Dglib=disabled
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+
+# For snprintf() and ctime_r()
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
 
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
+
+SUPERSEDES+=	cairo-gobject-[0-9]*
 
 .include "options.mk"
 
@@ -19,7 +32,11 @@ PLIST_VARS+=	trace
 PLIST.trace=	yes
 .endif
 
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../archivers/lzo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.14.0
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # include?

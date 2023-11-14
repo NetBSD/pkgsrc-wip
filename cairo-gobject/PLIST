@@ -1,6 +1,0 @@
-@comment $NetBSD$
-include/cairo/cairo-gobject.h
-lib/libcairo-gobject.so
-lib/libcairo-gobject.so.2
-lib/libcairo-gobject.so.2.11800.0
-lib/pkgconfig/cairo-gobject.pc
