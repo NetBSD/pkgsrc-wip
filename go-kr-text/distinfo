@@ -1,6 +1,0 @@
-$NetBSD$
-
-RMD160 (go-kr-text-0.1.0.tar.gz) = b4c17a2072f4153de6e6c98f715a8d737073fe19
-SHA512 (go-kr-text-0.1.0.tar.gz) = bac4ad4e21c16838f79aeacf7c71d706794ae2921dfd4817f10583ae4ba650279be69996524a77b555ad3858170118682bbe1fd643a60201e59805afd1ee551e
-Size (go-kr-text-0.1.0.tar.gz) = 8686 bytes
-SHA1 (patch-mc_mc.go) = f45108233e044de68f75c6bc5d0e72b01897d5e0
