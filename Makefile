@@ -365,7 +365,6 @@ SUBDIR+=	cacti-plugin-rrdclean
 SUBDIR+=	cacti-plugin-settings
 SUBDIR+=	cacti-plugin-thold
 SUBDIR+=	cacti-plugin-weathermap
-SUBDIR+=	cairo
 SUBDIR+=	cairo-dingbat-ttf
 SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
