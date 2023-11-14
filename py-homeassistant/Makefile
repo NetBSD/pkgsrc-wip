@@ -34,8 +34,9 @@ META_PACKAGE=	yes
 
 ## PYTHON
 
-# HA 2023.8 only works with Python 3.11
-PYTHON_VERSIONS_ACCEPTED=311
+# HA 2023.8 requires Python 3.11
+# Guess that 3.12 is ok.
+PYTHON_VERSIONS_ACCEPTED=311 312
 .include "../../lang/python/pyversion.mk"
 
 # Building HA in a venv requires virtualenv
