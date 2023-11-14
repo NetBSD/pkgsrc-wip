@@ -6,9 +6,9 @@
 # specific overides in mk/default/*.mk (for instance,
 # mk/default/netbsd.mk).
 
-DISTNAME=	libreswan-5.0pre0.20230808
+DISTNAME=	libreswan-5.0pre0.20231114
 GITHUB_PROJECT=	libreswan
-GITHUB_TAG=	08dc9d0da33e3f5e88c836c8d2eacbb32a27275b
+GITHUB_TAG=	7e22ac55b67f4b6f7ac921e058b0e231b2eab47a
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${GITHUB_PROJECT}/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
