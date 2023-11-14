@@ -18,10 +18,10 @@ ${PLIST.x11}include/cairo/cairo-xlib-xrender.h
 ${PLIST.x11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
 ${PLIST.trace}lib/cairo/libcairo-fdr.so
+${PLIST.trace}lib/cairo/libcairo-trace.so
 lib/libcairo-gobject.so
 lib/libcairo-gobject.so.2
 lib/libcairo-gobject.so.2.11800.0
-${PLIST.trace}lib/cairo/libcairo-trace.so
 lib/libcairo-script-interpreter.so
 lib/libcairo-script-interpreter.so.2
 lib/libcairo-script-interpreter.so.2.11800.0

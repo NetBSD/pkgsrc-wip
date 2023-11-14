@@ -5,6 +5,5 @@ SHA512 (cairo-1.18.0.tar.xz) = 6366c7d5e3fd3e12df2edc43aa4ed4c3a517de2ef0b1b3b30
 Size (cairo-1.18.0.tar.xz) = 33761148 bytes
 SHA1 (patch-meson.build) = 3187c754af123be69e1b5651165f6310c8786558
 SHA1 (patch-test_pdf-structure.c) = dd3e5ee2cdbc19e77c2d5a60dab98195ecbe82bb
-SHA1 (patch-util_cairo-gobject_cairo-gobject.h) = 1785bbef6bcab4781bf89e1b986a7eb96e5f2b64
 SHA1 (patch-util_cairo-missing_getline.c) = a1068a37113b162ccfe14d7f1bd0baa9df7e5530
 SHA1 (patch-util_meson.build) = 344d29f84114b441bbfede8b77d7a2d02d756ce4

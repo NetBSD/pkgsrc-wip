@@ -369,7 +369,6 @@ SUBDIR+=	cairo
 SUBDIR+=	cairo-dingbat-ttf
 SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-dock-plugins
-SUBDIR+=	cairo-gobject
 SUBDIR+=	cairo-java
 SUBDIR+=	calypso-git
 SUBDIR+=	canna
