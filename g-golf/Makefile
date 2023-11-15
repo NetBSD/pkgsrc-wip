@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://ftp.gnu.org/gnu/g-golf/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://ftp.gnu.org/gnu/g-golf/
+HOMEPAGE=	https://www.gnu.org/software/g-golf/
 COMMENT=	Guile Object Library for GNOME
 LICENSE=	gnu-lgpl-v3
 
@@ -33,5 +33,5 @@ TEST_DEPENDS+=	gtk3+>=3:../../x11/gtk3
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../lang/guile30/buildlink3.mk"
+.include "../../lang/guile22/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
