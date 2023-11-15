@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-BLAKE2s (cmake-17.0.4.src.tar.xz) = 6d3fbd085d4904f424ced977eaf239708e5f3dd11ba880b461eecc5bbddef7f9
-SHA512 (cmake-17.0.4.src.tar.xz) = bddfa97e6d1866a571d036490321099593063be33c38be1c6d117ea26d311876526d13760dc63155d3a7ea460f9c3de6da9911bdebeb286964ccdab377085a28
-Size (cmake-17.0.4.src.tar.xz) = 8712 bytes
-BLAKE2s (flang-17.0.4.src.tar.xz) = 5e6091298656f817b99ba5b72712de04e48d8b9ac87fa8f9b8f3b72768e166dc
-SHA512 (flang-17.0.4.src.tar.xz) = 2b0d70d3d506f35f5d837f7fbd032b6a5502dab73596696c32977b725f9a227921be94fc465ffdd97b962b44e6c24f0ed90a65ee284003bade5b6145986a2e6b
-Size (flang-17.0.4.src.tar.xz) = 2762368 bytes
-BLAKE2s (runtimes-17.0.4.src.tar.xz) = d47c6ff3744931f14a588cfd26b05c5d90a6d1d1fdaf6bc8b165e97c834ec21b
-SHA512 (runtimes-17.0.4.src.tar.xz) = 42bfd1f3f80a9345078f8eaef4667ad799acd39be0b6873251124eecccf9bd22c9188702cb2cbb471dc3e0b5957dda5d5906ff5a7166d76aee35a25210b2331d
-Size (runtimes-17.0.4.src.tar.xz) = 6244 bytes
+BLAKE2s (cmake-17.0.5.src.tar.xz) = 5c7b379a31f1de5b643afd7ea4ddc007cb176464f7f6c67903391a9d973c5320
+SHA512 (cmake-17.0.5.src.tar.xz) = 3ef19c40975e18ba38862d0e5cc5db15f269f7705b8a9f37e39467eda0424b56ee0e390f94809972be41513074aa4dac997c668280e94e6d7b1ada088f75d73e
+Size (cmake-17.0.5.src.tar.xz) = 8712 bytes
+BLAKE2s (flang-17.0.5.src.tar.xz) = 7a11e63a4a1a6dd7db7cfc9f1b79a1cd3148922a118dfa3b47fbb0e3c5b9ff09
+SHA512 (flang-17.0.5.src.tar.xz) = a41a19b7fee0000bcd3ce8257c41597f97e4d7b461523d79a67e947f87e04832f31c62f4d63a1ddeef3ca0d047e80965a73db0b05e9c8f37e845fdbffdb30b11
+Size (flang-17.0.5.src.tar.xz) = 2762656 bytes
+BLAKE2s (runtimes-17.0.5.src.tar.xz) = d6c83b93e6f9ce8ee88b419a99d45b12fc61f0d8f837d8318a155393e49a816e
+SHA512 (runtimes-17.0.5.src.tar.xz) = d66436cf33bc6eb0bd3630d8c903df9250f30be09a41e6127e55cd23e6b66abdcd96dc796552b406cd752842ffbf9a939e71664571132bf1e5208cbf2728c72d
+Size (runtimes-17.0.5.src.tar.xz) = 6244 bytes

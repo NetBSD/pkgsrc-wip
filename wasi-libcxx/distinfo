@@ -1,13 +1,16 @@
 $NetBSD: distinfo,v 1.8 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
-SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
-Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
-BLAKE2s (libcxx-16.0.6.src.tar.xz) = 4ad216b6f725c6b3207f76a0b1bcdb2ef46bfcf9cef8cbe289b3c89632fcbf3d
-SHA512 (libcxx-16.0.6.src.tar.xz) = d5ccadcceb67815ad0537ec82d40fd52b0ac5e5b37acba8951d92d2f16f7e19adf517d7249f0fca448c9f60a740c63ddfe23630e519148e8d8f37693614830db
-Size (libcxx-16.0.6.src.tar.xz) = 3655520 bytes
-BLAKE2s (libcxxabi-16.0.6.src.tar.xz) = 62b0fea4aa05c44ecf34f188f8aec8fc1a41bc34ff42fdc3831eb515c31a282c
-SHA512 (libcxxabi-16.0.6.src.tar.xz) = 5f49ad34d5d00a3cd5ca92c8570b0cd77123a818456fe30a3fab7c14a2fe134ada5215466f729c9e1da12a38a9e2b2254b80775bda2986c505a2cad5af5cb70e
-Size (libcxxabi-16.0.6.src.tar.xz) = 573564 bytes
+BLAKE2s (cmake-17.0.5.src.tar.xz) = 5c7b379a31f1de5b643afd7ea4ddc007cb176464f7f6c67903391a9d973c5320
+SHA512 (cmake-17.0.5.src.tar.xz) = 3ef19c40975e18ba38862d0e5cc5db15f269f7705b8a9f37e39467eda0424b56ee0e390f94809972be41513074aa4dac997c668280e94e6d7b1ada088f75d73e
+Size (cmake-17.0.5.src.tar.xz) = 8712 bytes
+BLAKE2s (libcxx-17.0.5.src.tar.xz) = be9462fbcdf7c996343e10d1b60a0246e69eb27e4b78f4df693721a5e9bf60fa
+SHA512 (libcxx-17.0.5.src.tar.xz) = 9a699a59b3ef6a5cfb190b9109d5a409048b969b8c6e25c088404b24716d0de1d1cbf3afea3c77afab269107b7917263014c26e3322f2ec259fd9fc1ebf3add2
+Size (libcxx-17.0.5.src.tar.xz) = 3955896 bytes
+BLAKE2s (libcxxabi-17.0.5.src.tar.xz) = 5fe41ea35aadadac441e13bde5f351acb634d208e276ad2279b5c20da26f79bc
+SHA512 (libcxxabi-17.0.5.src.tar.xz) = 646724280e5e197d1275bd42d27b72e23390791f80317ff89d15849b8b43857a27e58f7522ac6a5e86707523cdf6e193bd724510b807c0e44f95e122c64b8c62
+Size (libcxxabi-17.0.5.src.tar.xz) = 575600 bytes
+BLAKE2s (runtimes-17.0.5.src.tar.xz) = d6c83b93e6f9ce8ee88b419a99d45b12fc61f0d8f837d8318a155393e49a816e
+SHA512 (runtimes-17.0.5.src.tar.xz) = d66436cf33bc6eb0bd3630d8c903df9250f30be09a41e6127e55cd23e6b66abdcd96dc796552b406cd752842ffbf9a939e71664571132bf1e5208cbf2728c72d
+Size (runtimes-17.0.5.src.tar.xz) = 6244 bytes
 SHA1 (patch-libcxx_include_CMakeLists.txt) = ca1d4f8dbc99bbcfdad6a0bd389f973a48a938d7
 SHA1 (patch-libcxxabi_src_CMakeLists.txt) = ccd70bb5902b31a6bb989521e9a5f50fe0a4021d

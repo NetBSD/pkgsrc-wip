@@ -7,14 +7,12 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2023-10-03 06:37:35.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2023-11-14 08:22:39.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
-@@ -66,6 +66,26 @@ void solaris::Linker::ConstructJob(Compi
-                                    const char *LinkingOutput) const {
+@@ -68,6 +68,25 @@ void solaris::Linker::ConstructJob(Compi
    const bool IsPIE = getPIE(Args, getToolChain());
    ArgStringList CmdArgs;
-+  const Driver &D = getToolChain().getDriver();
-+
+ 
 +  // XXX: assumes pkgsrc layout
 +  std::string LibPath = llvm::sys::path::parent_path(D.getInstalledDir()).str();
 +  LibPath += "/lib/";
@@ -33,10 +31,11 @@ Test removing -Bdynamic for golang.
 +  default:
 +    llvm_unreachable("Unsupported architecture");
 +  }
- 
++
    // Demangle C++ names in errors
    CmdArgs.push_back("-C");
-@@ -84,7 +104,6 @@ void solaris::Linker::ConstructJob(Compi
+ 
+@@ -85,7 +104,6 @@ void solaris::Linker::ConstructJob(Compi
      CmdArgs.push_back("-Bstatic");
      CmdArgs.push_back("-dn");
    } else {
@@ -44,7 +43,7 @@ Test removing -Bdynamic for golang.
      if (Args.hasArg(options::OPT_shared)) {
        CmdArgs.push_back("-shared");
      }
-@@ -106,9 +125,9 @@ void solaris::Linker::ConstructJob(Compi
+@@ -107,9 +125,9 @@ void solaris::Linker::ConstructJob(Compi
                     options::OPT_r)) {
      if (!Args.hasArg(options::OPT_shared))
        CmdArgs.push_back(
@@ -56,7 +55,7 @@ Test removing -Bdynamic for golang.
  
      const Arg *Std = Args.getLastArg(options::OPT_std_EQ, options::OPT_ansi);
      bool HaveAnsi = false;
-@@ -123,7 +142,7 @@ void solaris::Linker::ConstructJob(Compi
+@@ -124,7 +142,7 @@ void solaris::Linker::ConstructJob(Compi
      // Use values-Xc.o for -ansi, -std=c*, -std=iso9899:199409.
      if (HaveAnsi || (LangStd && !LangStd->isGNUMode()))
        values_X = "values-Xc.o";
@@ -65,12 +64,10 @@ Test removing -Bdynamic for golang.
  
      const char *values_xpg = "values-xpg6.o";
      // Use values-xpg4.o for -std=c90, -std=gnu90, -std=iso9899:199409.
-@@ -152,15 +171,6 @@ void solaris::Linker::ConstructJob(Compi
- 
-   if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs,
-                    options::OPT_r)) {
--    if (getToolChain().ShouldLinkCXXStdlib(Args))
--      getToolChain().AddCXXStdlibLibArgs(Args, CmdArgs);
+@@ -158,13 +176,6 @@ void solaris::Linker::ConstructJob(Compi
+         getToolChain().AddCXXStdlibLibArgs(Args, CmdArgs);
+       CmdArgs.push_back("-lm");
+     }
 -    if (Args.hasArg(options::OPT_fstack_protector) ||
 -        Args.hasArg(options::OPT_fstack_protector_strong) ||
 -        Args.hasArg(options::OPT_fstack_protector_all)) {
@@ -81,7 +78,7 @@ Test removing -Bdynamic for golang.
      // LLVM support for atomics on 32-bit SPARC V8+ is incomplete, so
      // forcibly link with libatomic as a workaround.
      if (getToolChain().getTriple().getArch() == llvm::Triple::sparc) {
-@@ -168,12 +178,19 @@ void solaris::Linker::ConstructJob(Compi
+@@ -172,11 +183,13 @@ void solaris::Linker::ConstructJob(Compi
        CmdArgs.push_back("-latomic");
        CmdArgs.push_back(getAsNeededOption(getToolChain(), false));
      }
@@ -89,6 +86,7 @@ Test removing -Bdynamic for golang.
 -    CmdArgs.push_back("-lc");
 -    if (!Args.hasArg(options::OPT_shared)) {
 -      CmdArgs.push_back("-lgcc");
+-    }
 +    
 +    // This specifically uses -Wl to avoid CMake parsing it and trying to
 +    // feed "-zdefaultextract" back into clang, which doesn't support the
@@ -96,16 +94,10 @@ Test removing -Bdynamic for golang.
 +    CmdArgs.push_back("-Wl,-zdefaultextract");
 +    AddRunTimeLibs(getToolChain(), D, CmdArgs, Args);
 +    CmdArgs.push_back(Args.MakeArgString(LibPath + "libunwind.a"));
-+    if (D.CCCIsCXX()) {
-+      if (getToolChain().ShouldLinkCXXStdlib(Args))
-+        getToolChain().AddCXXStdlibLibArgs(Args, CmdArgs);
-       CmdArgs.push_back("-lm");
-     }
-+    CmdArgs.push_back("-lc");
      const SanitizerArgs &SA = getToolChain().getSanitizerArgs(Args);
      if (NeedsSanitizerDeps) {
        linkSanitizerRuntimeDeps(getToolChain(), CmdArgs);
-@@ -192,17 +209,7 @@ void solaris::Linker::ConstructJob(Compi
+@@ -195,17 +208,7 @@ void solaris::Linker::ConstructJob(Compi
        CmdArgs.push_back("-znow");
    }
  
@@ -124,7 +116,7 @@ Test removing -Bdynamic for golang.
  
    getToolChain().addProfileRTLibs(Args, CmdArgs);
  
-@@ -232,26 +239,9 @@ Solaris::Solaris(const Driver &D, const
+@@ -235,26 +238,9 @@ Solaris::Solaris(const Driver &D, const
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
  
@@ -154,7 +146,7 @@ Test removing -Bdynamic for golang.
  }
  
  SanitizerMask Solaris::getSupportedSanitizers() const {
-@@ -273,6 +263,31 @@ Tool *Solaris::buildAssembler() const {
+@@ -276,6 +262,31 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -186,7 +178,7 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
-@@ -305,38 +320,20 @@ void Solaris::AddClangSystemIncludeArgs(
+@@ -308,38 +319,20 @@ void Solaris::AddClangSystemIncludeArgs(
      return;
    }
  

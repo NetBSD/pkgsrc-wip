@@ -1,14 +1,14 @@
 $NetBSD: distinfo,v 1.17 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (clang-17.0.4.src.tar.xz) = 1a66acd19ff073f17a4b809861bd1758a73bccd1ef477c381cd4dee3453f7015
-SHA512 (clang-17.0.4.src.tar.xz) = b014170e46660229733718244a85ba46f7b5c205d33640fd1ffdbe5256d356684c98d810767b6615895f6471ced0118415ea552464ec24ad5915fbf3b9cb6438
-Size (clang-17.0.4.src.tar.xz) = 21576540 bytes
-BLAKE2s (clang-tools-extra-17.0.4.src.tar.xz) = b32e0907cd7925aa361f98a03b689d937b4bacb2413d014c94850a93455bf839
-SHA512 (clang-tools-extra-17.0.4.src.tar.xz) = 5cd8cf96768cb44306ecf8c2ea31373e173b4f0781aeac16d463da8862a56d1fa771d20bddda56af938c102c2b0b56f3584d37c238d6d32a891dd8a24fe65471
-Size (clang-tools-extra-17.0.4.src.tar.xz) = 3269996 bytes
-BLAKE2s (cmake-17.0.4.src.tar.xz) = 6d3fbd085d4904f424ced977eaf239708e5f3dd11ba880b461eecc5bbddef7f9
-SHA512 (cmake-17.0.4.src.tar.xz) = bddfa97e6d1866a571d036490321099593063be33c38be1c6d117ea26d311876526d13760dc63155d3a7ea460f9c3de6da9911bdebeb286964ccdab377085a28
-Size (cmake-17.0.4.src.tar.xz) = 8712 bytes
-BLAKE2s (runtimes-17.0.4.src.tar.xz) = d47c6ff3744931f14a588cfd26b05c5d90a6d1d1fdaf6bc8b165e97c834ec21b
-SHA512 (runtimes-17.0.4.src.tar.xz) = 42bfd1f3f80a9345078f8eaef4667ad799acd39be0b6873251124eecccf9bd22c9188702cb2cbb471dc3e0b5957dda5d5906ff5a7166d76aee35a25210b2331d
-Size (runtimes-17.0.4.src.tar.xz) = 6244 bytes
+BLAKE2s (clang-17.0.5.src.tar.xz) = 2e18cec9e98da7972af22b6ea8ee9ea8c13ba902fcd2470d0eccf577cf34541d
+SHA512 (clang-17.0.5.src.tar.xz) = 0854e3d1a09265c7ee248914a1d8ab11f62233639a7a03711b06edd864a78c8d08fe3b67ef46148c053ea0e230db98398466ce368081794682bd56f3d3ad093d
+Size (clang-17.0.5.src.tar.xz) = 21574748 bytes
+BLAKE2s (clang-tools-extra-17.0.5.src.tar.xz) = 74281a91dbb9c5073b13da0474078c1968c95962029773c65a10398d7a629184
+SHA512 (clang-tools-extra-17.0.5.src.tar.xz) = e9e91f085a210b776f6ec588f13f5383b1ba480959f4a133f98fbb3a1239d4a317c87c5c827192024e11643818c39d2ffdd5ed7cd52068932ad901e74bff3537
+Size (clang-tools-extra-17.0.5.src.tar.xz) = 3270140 bytes
+BLAKE2s (cmake-17.0.5.src.tar.xz) = 5c7b379a31f1de5b643afd7ea4ddc007cb176464f7f6c67903391a9d973c5320
+SHA512 (cmake-17.0.5.src.tar.xz) = 3ef19c40975e18ba38862d0e5cc5db15f269f7705b8a9f37e39467eda0424b56ee0e390f94809972be41513074aa4dac997c668280e94e6d7b1ada088f75d73e
+Size (cmake-17.0.5.src.tar.xz) = 8712 bytes
+BLAKE2s (runtimes-17.0.5.src.tar.xz) = d6c83b93e6f9ce8ee88b419a99d45b12fc61f0d8f837d8318a155393e49a816e
+SHA512 (runtimes-17.0.5.src.tar.xz) = d66436cf33bc6eb0bd3630d8c903df9250f30be09a41e6127e55cd23e6b66abdcd96dc796552b406cd752842ffbf9a939e71664571132bf1e5208cbf2728c72d
+Size (runtimes-17.0.5.src.tar.xz) = 6244 bytes
