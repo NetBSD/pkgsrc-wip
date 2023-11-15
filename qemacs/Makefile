@@ -13,6 +13,7 @@ LICENSE=	mit
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--enable-plugins
 USE_LANGUAGES=		c
 USE_TOOLS+=		gmake
 
