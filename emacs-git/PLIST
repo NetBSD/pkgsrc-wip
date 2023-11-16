@@ -1551,6 +1551,8 @@ share/emacs/${PKGVERSION}/lisp/color.el.gz
 share/emacs/${PKGVERSION}/lisp/color.elc
 share/emacs/${PKGVERSION}/lisp/comint.el.gz
 share/emacs/${PKGVERSION}/lisp/comint.elc
+share/emacs/${PKGVERSION}/lisp/completion-preview.el.gz
+share/emacs/${PKGVERSION}/lisp/completion-preview.elc
 share/emacs/${PKGVERSION}/lisp/completion.el.gz
 share/emacs/${PKGVERSION}/lisp/completion.elc
 share/emacs/${PKGVERSION}/lisp/composite.el.gz
