@@ -1,0 +1,16 @@
+$NetBSD$
+
+Don't build singleheader version of simduft.
+The singleheader is not installed and not
+building it removes dependecy on python.
+
+--- CMakeLists.txt.orig	2023-11-15 22:34:03.000000000 +0000
++++ CMakeLists.txt
+@@ -33,7 +33,6 @@ option(SIMDUTF_ICONV "Whether to use ico
+ set(SIMDUTF_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ add_subdirectory(src)
+-add_subdirectory(singleheader)
+ 
+ if (SIMDUTF_TESTS)
+   message(STATUS "The tests are enabled.")

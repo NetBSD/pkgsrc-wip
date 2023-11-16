@@ -1,0 +1,21 @@
+@comment $NetBSD$
+include/simdutf.h
+include/simdutf/avx512.h
+include/simdutf/common_defs.h
+include/simdutf/compiler_check.h
+include/simdutf/encoding_types.h
+include/simdutf/error.h
+include/simdutf/implementation.h
+include/simdutf/internal/isadetection.h
+include/simdutf/portability.h
+include/simdutf/simdutf_version.h
+lib/cmake/simdutf/simdutf-config-version.cmake
+lib/cmake/simdutf/simdutf-config.cmake
+lib/cmake/simdutf/simdutfTargets-release.cmake
+lib/cmake/simdutf/simdutfTargets.cmake
+lib/libsimdutf.so
+lib/libsimdutf.so.${PKGVERSION}
+lib/libsimdutf.so.5
+lib/pkgconfig/simdutf.pc
+share/doc/simdutf/LICENSE-APACHE
+share/doc/simdutf/LICENSE-MIT
