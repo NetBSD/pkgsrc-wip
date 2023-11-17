@@ -3420,6 +3420,7 @@ SUBDIR+=	py-cyksuid
 SUBDIR+=	py-cymem
 SUBDIR+=	py-cysignals
 SUBDIR+=	py-cython-blis
+SUBDIR+=	py-cython-legacy
 SUBDIR+=	py-cythongsl
 SUBDIR+=	py-da
 SUBDIR+=	py-dana
