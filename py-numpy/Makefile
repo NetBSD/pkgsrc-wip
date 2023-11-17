@@ -51,6 +51,7 @@ LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 BLAS_ACCEPTED=		${_BLAS_TYPES} accelerate.framework
 BLAS_C_INTERFACE=	yes
 CPPFLAGS+=		${BLAS_INCLUDES}
+LDFLAGS+=		${CBLAS_LIBS} ${LAPACK_LIBS}
 
 # Remove invalid __STDC_VERSION__ setting
 BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
@@ -61,14 +62,8 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} f2py f2py-${PYVERSSUFFIX} || ${TRUE}
 
-# since this overrides the build target, it needs to request the necessary dependencies
-TOOL_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
-do-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} \
-		-m build --wheel --skip-dependency-check --no-isolation \
-		-Csetup-args=-Dblas=${BLAS_PC} -Csetup-args=-Dlapack=${LAPACKE_PC}
-# as of 1.24.2
-# 29 failed, 26625 passed, 1481 skipped, 1307 deselected, 35 xfailed, 2 xpassed, 40 warnings
+# as of 1.26.1
+# 28 failed, 38180 passed, 200 skipped, 1304 deselected, 33 xfailed, 1 xpassed, 52 warnings
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
