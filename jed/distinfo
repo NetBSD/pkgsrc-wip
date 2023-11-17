@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.15 2021/10/26 10:21:31 nia Exp $
+
+BLAKE2s (jed-0.99-19.tar.bz2) = 5d9d89262f4aa31a8a181064d9c0a4c373c3d727ff731feaf7db5fbfb1701bd1
+SHA512 (jed-0.99-19.tar.bz2) = db8a30284f9b8e3e2c5d1a600eeb7af29c9f943a5c23d7c74fce926e0b0252f54805e214670e7c9357ce0e6918ad67cba2769a523979bfbd285328f94fff747c
+Size (jed-0.99-19.tar.bz2) = 884198 bytes
