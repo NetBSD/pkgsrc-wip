@@ -14,14 +14,10 @@ PLIST_VARS+=	html
 ### Support x11
 ###
 .if !empty(PKG_OPTIONS:Mx11)
-.include "../../x11/libX11/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-x11
 CONFIGURE_ARGS+=	--enable-html
 CONFIGURE_ARGS+=	--enable-png
 PLIST.html=            yes
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-x11
-CONFIGURE_ARGS+=	--disable-html
-CONFIGURE_ARGS+=	--disable-png
 .endif
