@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/macs3-project/MACS
 COMMENT=	Algorithm for identifying transcription factor binding sites
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-0.*:../../wip/py-cython-legacy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
