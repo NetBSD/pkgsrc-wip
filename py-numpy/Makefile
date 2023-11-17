@@ -61,6 +61,10 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} f2py f2py-${PYVERSSUFFIX} || ${TRUE}
 
+do-build:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} \
+		-m build --wheel --skip-dependency-check --no-isolation \
+		-Csetup-args=-Dblas=${BLAS_PC} -Csetup-args=-Dlapack=${LAPACKE_PC}
 # as of 1.24.2
 # 29 failed, 26625 passed, 1481 skipped, 1307 deselected, 35 xfailed, 2 xpassed, 40 warnings
 do-test:
