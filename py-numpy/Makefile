@@ -61,6 +61,8 @@ pre-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} f2py f2py-${PYVERSSUFFIX} || ${TRUE}
 
+# since this overrides the build target, it needs to request the necessary dependencies
+TOOL_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
 do-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} \
 		-m build --wheel --skip-dependency-check --no-isolation \
