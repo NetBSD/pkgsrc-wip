@@ -4,6 +4,7 @@ DISTNAME=	fastcluster-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastcluster/}
+PKGREVISION=	1
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	http://danifold.net/fastcluster.html
@@ -12,7 +13,8 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+= 	${PYPKGPREFIX}-setuptools>=68.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6:../../math/py-scipy
 # Tests Requires installing the package
 do-test:
@@ -20,7 +22,6 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests/vectortest.py
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests/nantest.py
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
