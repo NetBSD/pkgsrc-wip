@@ -12,7 +12,7 @@ COMMENT=	Visualization tool for genomic datasets
 LICENSE=	mit
 
 USE_JAVA=	yes
-USE_JAVA2=	9	# Actually needs java 11
+USE_JAVA2=	11
 USE_TOOLS+=	pax
 NO_BUILD=	yes
 
