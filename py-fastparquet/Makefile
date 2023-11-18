@@ -2,7 +2,7 @@
 
 # Prefer pulling from github instead of pypi
 # so that we can run tests
-GITHUB_TAG=	2023.7.0
+GITHUB_TAG=	2023.10.1
 GITHUB_PROJECT=	fastparquet
 DISTNAME=	fastparquet-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,8 +21,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.0:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.20:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.5.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-cramjam>=2.3.0:../../wip/py-cramjam
 DEPENDS+=	${PYPKGPREFIX}-fsspec>=2022.3.0:../../sysutils/py-fsspec
 
