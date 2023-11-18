@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=		2.6.2
+VERSION=		2.7.0
 PKGVERSION_NOREV=	${VERSION}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		pyrus-cramjam-${VERSION}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin-${PYVERSSUFFIX} build --offline
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin-${PYVERSSUFFIX} build -i ${PYTHONBIN} --offline --manifest-path cramjam-python/Cargo.toml
 
 # Test Requires install
 do-test:
