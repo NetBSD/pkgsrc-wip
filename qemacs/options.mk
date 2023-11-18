@@ -20,4 +20,6 @@ CONFIGURE_ARGS+=	--enable-png
 PLIST.html=            yes
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-x11
 .endif
