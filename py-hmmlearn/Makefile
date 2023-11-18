@@ -4,7 +4,7 @@ DISTNAME=	hmmlearn-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hmmlearn/}
-
+PKGREVISION=	1
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/hmmlearn/hmmlearn
