@@ -4580,7 +4580,6 @@ SUBDIR+=	py-tils
 SUBDIR+=	py-timeago
 SUBDIR+=	py-timeline
 SUBDIR+=	py-tinyarray
-SUBDIR+=	py-tinydb
 SUBDIR+=	py-tklsystem
 SUBDIR+=	py-tldr
 SUBDIR+=	py-tmatrix
