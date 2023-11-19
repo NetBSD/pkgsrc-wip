@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.10 2021/11/22 18:34:57 adam Exp $
 
-DISTNAME=	orjson-3.8.5
+DISTNAME=	orjson-3.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orjson/}
@@ -17,7 +17,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} maturin-${PYVERSSUFFIX} build
 
-WHEELFILE=	${DISTNAME}/target/wheels/*.whl
+WHEELFILE=	${WRKSRC}/target/wheels/*.whl
 
 .include "cargo-depends.mk"
 .include "../../lang/python/pyversion.mk"
