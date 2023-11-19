@@ -2674,6 +2674,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/lrt.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/misc-lang.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/misc-lang.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/pakistan.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/pakistan.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/persian.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/philippine.el.gz
