@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 # TODO Also needs pyarrow
 DEPENDS+=	${PYPKGPREFIX}-fastparquet-[0-9]*:../../wip/py-fastparquet
 .  if ${OPSYS} != "NetBSD"
-DEPENDS+=	${PYPKGPREFIX}-apache-arrow>7.0:../../wip/py-apache-arrow
+DEPENDS+=	${PYPKGPREFIX}-apache-arrow>14.0.1:../../wip/py-apache-arrow
 .  endif
 .endif
 
