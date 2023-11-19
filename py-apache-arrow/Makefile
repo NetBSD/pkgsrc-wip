@@ -3,7 +3,7 @@ DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 PKGNAME=	${PYPKGPREFIX}-apache-arrow-${APACHE_ARROW_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
-
+DISTINFO_FILE=      ${.CURDIR}/../../wip/apache-arrow/distinfo
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://arrow.apache.org/
@@ -18,6 +18,9 @@ USE_LANGUAGES=	c c++
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+
+DEPENDS+=	apache-arrow>=${APACHE_ARROW_VERSION}:../../wip/apache-arrow
+
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-fixture
@@ -33,6 +36,7 @@ SUBST_CLASSES+=         origin
 SUBST_STAGE.origin=     pre-configure
 SUBST_FILES.origin=     python/CMakeLists.txt
 SUBST_SED.origin=       -e 's|\\$$ORIGIN|${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/pyarrow|g'
+
 do-build:
 	${RUN} cd ${WRKSRC}/python && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build_ext --build-type=relwithdebinfo bdist_wheel
 

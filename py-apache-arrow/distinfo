@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (apache-arrow-13.0.0.tar.gz) = aa96f6ef2b0298fc299d5f37eab5ad4122843b5d036cca9762289f92fc885f25
-SHA512 (apache-arrow-13.0.0.tar.gz) = 3314d79ef20ac2cfc63f2c16fafb30c3f6187c10c6f5ea6ff036f6db766621d7c65401d85bf1e979bd0ecf831fbb0a785467642792d6bf77016f9807243c064e
-Size (apache-arrow-13.0.0.tar.gz) = 20542669 bytes
