@@ -1,6 +1,9 @@
 @comment $NetBSD$
 bin/arrow-file-to-stream
 bin/arrow-stream-to-file
+bin/parquet-dump-schema
+bin/parquet-reader
+bin/parquet-scan
 include/arrow/acero/accumulation_queue.h
 include/arrow/acero/aggregate_node.h
 include/arrow/acero/api.h
@@ -97,6 +100,7 @@ include/arrow/dataset/file_ipc.h
 include/arrow/dataset/file_json.h
 include/arrow/dataset/file_orc.h
 include/arrow/dataset/file_parquet.h
+include/arrow/dataset/parquet_encryption_config.h
 include/arrow/dataset/partition.h
 include/arrow/dataset/pch.h
 include/arrow/dataset/plan.h
@@ -109,6 +113,7 @@ include/arrow/device.h
 include/arrow/extension/fixed_shape_tensor.h
 include/arrow/extension_type.h
 include/arrow/filesystem/api.h
+include/arrow/filesystem/azurefs.h
 include/arrow/filesystem/filesystem.h
 include/arrow/filesystem/gcsfs.h
 include/arrow/filesystem/hdfs.h
@@ -181,7 +186,6 @@ include/arrow/testing/future_util.h
 include/arrow/testing/generator.h
 include/arrow/testing/gtest_compat.h
 include/arrow/testing/gtest_util.h
-include/arrow/testing/json_integration.h
 include/arrow/testing/matchers.h
 include/arrow/testing/pch.h
 include/arrow/testing/random.h
@@ -223,7 +227,6 @@ include/arrow/util/bpacking_simd256_generated.h
 include/arrow/util/bpacking_simd512_generated.h
 include/arrow/util/byte_size.h
 include/arrow/util/byte_stream_split.h
-include/arrow/util/bytes_view.h
 include/arrow/util/cancel.h
 include/arrow/util/checked_cast.h
 include/arrow/util/compare.h
@@ -270,6 +273,7 @@ include/arrow/util/simd.h
 include/arrow/util/small_vector.h
 include/arrow/util/sort.h
 include/arrow/util/spaced.h
+include/arrow/util/span.h
 include/arrow/util/stopwatch.h
 include/arrow/util/string.h
 include/arrow/util/string_builder.h
@@ -333,6 +337,7 @@ include/parquet/arrow/reader.h
 include/parquet/arrow/schema.h
 include/parquet/arrow/test_util.h
 include/parquet/arrow/writer.h
+include/parquet/benchmark_util.h
 include/parquet/bloom_filter.h
 include/parquet/bloom_filter_reader.h
 include/parquet/column_page.h
@@ -356,6 +361,7 @@ include/parquet/encryption/local_wrap_kms_client.h
 include/parquet/encryption/test_encryption_util.h
 include/parquet/encryption/test_in_memory_kms.h
 include/parquet/encryption/two_level_cache_with_expiration.h
+include/parquet/encryption/type_fwd.h
 include/parquet/exception.h
 include/parquet/file_reader.h
 include/parquet/file_writer.h
@@ -389,7 +395,6 @@ lib/cmake/Arrow/ArrowTargets.cmake
 lib/cmake/Arrow/FindBrotliAlt.cmake
 lib/cmake/Arrow/FindGLOG.cmake
 lib/cmake/Arrow/FindSnappyAlt.cmake
-lib/cmake/Arrow/FindThriftAlt.cmake
 lib/cmake/Arrow/Findlz4Alt.cmake
 lib/cmake/Arrow/Findre2Alt.cmake
 lib/cmake/Arrow/Findutf8proc.cmake
@@ -403,27 +408,28 @@ lib/cmake/ArrowDataset/ArrowDatasetConfig.cmake
 lib/cmake/ArrowDataset/ArrowDatasetConfigVersion.cmake
 lib/cmake/ArrowDataset/ArrowDatasetTargets-release.cmake
 lib/cmake/ArrowDataset/ArrowDatasetTargets.cmake
+lib/cmake/Parquet/FindThriftAlt.cmake
 lib/cmake/Parquet/ParquetConfig.cmake
 lib/cmake/Parquet/ParquetConfigVersion.cmake
 lib/cmake/Parquet/ParquetTargets-release.cmake
 lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
-lib/libarrow.so.1300
-lib/libarrow.so.1300.0.0
+lib/libarrow.so.1400
+lib/libarrow.so.1400.1.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
-lib/libarrow_acero.so.1300
-lib/libarrow_acero.so.1300.0.0
+lib/libarrow_acero.so.1400
+lib/libarrow_acero.so.1400.1.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
-lib/libarrow_dataset.so.1300
-lib/libarrow_dataset.so.1300.0.0
+lib/libarrow_dataset.so.1400
+lib/libarrow_dataset.so.1400.1.0
 lib/libparquet.a
 lib/libparquet.so
-lib/libparquet.so.1300
-lib/libparquet.so.1300.0.0
+lib/libparquet.so.1400
+lib/libparquet.so.1400.1.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -433,8 +439,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.1300.0.0-gdb.py
+share/arrow/gdb/libarrow.so.1400.1.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20230721/lib
+@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20231028/lib

@@ -18,7 +18,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.41:../../devel/py-wheel
 
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.2:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-locket>=0.2.1:../../wip/py-locket
-DEPENDS+=	${PYPKGPREFIX}-blosc>=0.2.1:../../wip/py-blosc
+DEPENDS+=	${PYPKGPREFIX}-blosc2>=2.3.1:../../wip/py-blosc2
 DEPENDS+=	${PYPKGPREFIX}-zmq>=0.2.1:../../net/py-zmq
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.3.0:../../math/py-pandas

@@ -43,6 +43,7 @@ CMAKE_ARGS+=	-DARROW_BUILD_UTILITIES=ON
 CMAKE_ARGS+=	-DARROW_CSV=ON
 CMAKE_ARGS+=	-DARROW_ACERO=ON
 CMAKE_ARGS+=	-DARROW_DATASET=ON
+CMAKE_ARGS+=	-DPARQUET_BUILD_EXECUTABLES=ON
 
 # For finding deps
 CMAKE_ARGS+=	-Dxsimd_SOURCE=BUNDLED
@@ -70,9 +71,9 @@ TOOLS_PATH.install=	${PREFIX}/bin/ginstall
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/gflags/buildlink3.mk"
+# .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/flatbuffers/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
-# .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../net/grpc/buildlink3.mk"
