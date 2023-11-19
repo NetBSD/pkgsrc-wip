@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2023.8.1
+DISTNAME=	distributed-2023.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 GITHUB_PROJECT=	distributed
@@ -37,7 +37,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=2.28.1:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
-TEST_DEPENDS+=	${PYPKGPREFIX}-dask-2022.9.1{,nb*}:../../wip/py-dask
+TEST_DEPENDS+=	${PYPKGPREFIX}-dask-2022.11.0{,nb*}:../../wip/py-dask
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets>=7.7.0:../../www/py-ipywidgets
 
 USE_LANGUAGES=	# none
