@@ -1,7 +1,0 @@
-@comment $NetBSD$
-${PLIST.html}bin/html2png
-bin/qe
-bin/qemacs
-man/man1/qe.1
-share/qe/kmaps
-share/qe/ligatures
