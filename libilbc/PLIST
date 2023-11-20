@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/10 22:33:01 yhardy Exp $
-include/ilbc.h
-lib/libilbc.so
-lib/libilbc.so.2
-lib/libilbc.so.${PKGVERSION}
-lib/pkgconfig/libilbc.pc
