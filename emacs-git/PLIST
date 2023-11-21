@@ -391,6 +391,7 @@ share/emacs/${PKGVERSION}/etc/images/gnus/followup.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/followup.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/fuwo.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/fuwo.xpm
+share/emacs/${PKGVERSION}/etc/images/gnus/gnus-pointer.svg
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus-pointer.xbm
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus-pointer.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus.png
