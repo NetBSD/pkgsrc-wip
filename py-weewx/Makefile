@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.24 2019/04/26 14:12:35 maya Exp $
 
-DISTNAME=	weewx-4.9.1
+DISTNAME=	weewx-4.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
@@ -26,8 +26,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # These versions are probably higher than necessary, but there is little value
 # in testing with versions older than are in pkgsrc.
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow6
-# cheetah lacks versioned dependencies; omit 2.7 as unhelpful
+DEPENDS+=	${PYPKGPREFIX}-sqlite3>=2.7.16:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.0.0:../../devel/py-cheetah3
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-ephem>=3.7.6.0:../../math/py-ephem
