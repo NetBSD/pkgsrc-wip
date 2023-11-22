@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.25 2023/05/08 19:24:46 yhardy Exp $
+
+BLAKE2s (streamlink-6.3.1.tar.gz) = ca329c1183ec0348615ef28ac39636dd922d8ff1279c5940405912c38cb073d7
+SHA512 (streamlink-6.3.1.tar.gz) = a1e50688acd3b99efd20c1ff1d3bda03cb6e6b5566484d29372bc6d08ee4115f8ad2edea2f0a90f5de105edb52689781892f413f4af3d836cdd9e9a364006610
+Size (streamlink-6.3.1.tar.gz) = 699073 bytes
+SHA1 (patch-build__backend_onbuild.py) = bb629b2eec33852fe97901458238f1bbe09568e7
+SHA1 (patch-setup.py) = 3fe1a417ba929a95956dd9d70e470fb0e289d718
