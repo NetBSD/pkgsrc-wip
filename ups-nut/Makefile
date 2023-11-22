@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/11/09 16:41:15 gdt Exp $
+# $NetBSD: Makefile,v 1.75 2023/11/22 18:14:42 gdt Exp $
 
 .include "Makefile.common"
 
@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=	--without-nut_monitor	# not yet packaged
 # https://github.com/networkupstools/nut/issues/1792 which upstream
 # declines to fix.
 CONFIGURE_ARGS+=	--without-python2
+# Force only our chosen python3 (same reason as above).
+CONFIGURE_ARGS+=	--with-python3=${PYTHONBIN}
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 # \todo Move to split package.
 
