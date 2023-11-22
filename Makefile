@@ -5085,6 +5085,7 @@ SUBDIR+=	slicot
 SUBDIR+=	slideml
 SUBDIR+=	slime
 SUBDIR+=	slowhttptest
+SUBDIR+=	slumber
 SUBDIR+=	slune
 SUBDIR+=	slurm-wlm-devel
 SUBDIR+=	sm-change_ldappass
