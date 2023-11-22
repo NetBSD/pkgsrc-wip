@@ -50,6 +50,7 @@ ${PYSITELIB}/streamlink/plugin/api/__init__.pyc
 ${PYSITELIB}/streamlink/plugin/api/__init__.pyo
 ${PYSITELIB}/streamlink/plugin/api/http_session.py
 ${PYSITELIB}/streamlink/plugin/api/http_session.pyc
+${PYSITELIB}/streamlink/plugin/api/http_session.pyi
 ${PYSITELIB}/streamlink/plugin/api/http_session.pyo
 ${PYSITELIB}/streamlink/plugin/api/useragents.py
 ${PYSITELIB}/streamlink/plugin/api/useragents.pyc
@@ -288,6 +289,9 @@ ${PYSITELIB}/streamlink/plugins/mrtmk.pyo
 ${PYSITELIB}/streamlink/plugins/n13tv.py
 ${PYSITELIB}/streamlink/plugins/n13tv.pyc
 ${PYSITELIB}/streamlink/plugins/n13tv.pyo
+${PYSITELIB}/streamlink/plugins/nasaplus.py
+${PYSITELIB}/streamlink/plugins/nasaplus.pyc
+${PYSITELIB}/streamlink/plugins/nasaplus.pyo
 ${PYSITELIB}/streamlink/plugins/nhkworld.py
 ${PYSITELIB}/streamlink/plugins/nhkworld.pyc
 ${PYSITELIB}/streamlink/plugins/nhkworld.pyo
@@ -742,6 +746,7 @@ ${PYSITELIB}/streamlink_cli/output/http.pyo
 ${PYSITELIB}/streamlink_cli/output/player.py
 ${PYSITELIB}/streamlink_cli/output/player.pyc
 ${PYSITELIB}/streamlink_cli/output/player.pyo
+${PYSITELIB}/streamlink_cli/py.typed
 ${PYSITELIB}/streamlink_cli/streamrunner.py
 ${PYSITELIB}/streamlink_cli/streamrunner.pyc
 ${PYSITELIB}/streamlink_cli/streamrunner.pyo
