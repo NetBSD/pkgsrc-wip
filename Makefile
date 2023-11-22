@@ -4603,6 +4603,7 @@ SUBDIR+=	py-tree-sitter
 SUBDIR+=	py-tribe
 SUBDIR+=	py-trie3
 SUBDIR+=	py-trimesh
+SUBDIR+=	py-trio-websocket
 SUBDIR+=	py-trollius
 SUBDIR+=	py-trottersuzuki
 SUBDIR+=	py-trufflehog3

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (trio-websocket-0.11.1.tar.gz) = c7df483adcc0fc99eb9935ac143bae70833b4e7de6c9901688cef0502d97ea72
+SHA512 (trio-websocket-0.11.1.tar.gz) = 893d0288292265701d8053ca7f33f345c146d97f44fb4a53adda280a701b3b89987e1b37e9229fb17b6dc72b600892dfe36fe8fd9d81dbf5208752e928c0dbfd
+Size (trio-websocket-0.11.1.tar.gz) = 26511 bytes
