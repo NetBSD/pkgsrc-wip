@@ -3,9 +3,9 @@ $NetBSD$
 Do not inject X11 LDFLAGS, pkgsrc handles that.
 Fixes PR pkg/53688.
 
---- configure.ac.orig	2020-01-31 17:00:50.659618322 +0000
+--- configure.ac.orig	2023-11-22 07:31:31.461496400 +0000
 +++ configure.ac
-@@ -1549,7 +1549,8 @@ ac_link="$ac_link $LD_SWITCH_SYSTEM"
+@@ -2263,7 +2263,8 @@ ac_link="$ac_link $LD_SWITCH_SYSTEM"
  ## LD_SWITCH_SYSTEM_TEMACS.
  case "$opsys" in
    netbsd|openbsd)
