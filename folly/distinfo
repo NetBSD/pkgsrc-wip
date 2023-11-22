@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (folly-2023.11.20.00.tar.gz) = 1b75f0452a75aca70e2a97d224bab657eed4b52264c89a2459c270fbedd35a7e
+SHA512 (folly-2023.11.20.00.tar.gz) = 3b2f8a32065c7867a46cd14983029808ad578bc38153e55674ffd965eece84836b4ee58034c33b33cac6f6b966d13331dc309ad45e2b7e9edb5a47c146781043
+Size (folly-2023.11.20.00.tar.gz) = 3945184 bytes
+SHA1 (patch-CMake_folly-deps.cmake) = 3b6aad5f0f1b1cd223b9f5c25cee65c7001097dd
+SHA1 (patch-folly_Memory.h) = c5faa5ff1652ab1d206e466841a0ad71818d2b84
+SHA1 (patch-folly_Subprocess.cpp) = eade5cb85ecb73ffa1232252ce2a99bc2df44cd2
+SHA1 (patch-folly_experimental_EnvUtil.cpp) = 2017f085ebd8b59148bca3df1418891d4c973af1

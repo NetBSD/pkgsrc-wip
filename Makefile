@@ -905,6 +905,7 @@ SUBDIR+=	fnaify-extralibs
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fogleman-craft
+SUBDIR+=	folly
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
 SUBDIR+=	forgejo
