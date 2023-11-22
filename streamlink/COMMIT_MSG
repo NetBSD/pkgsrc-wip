@@ -1,0 +1,147 @@
+multimedia/streamlink: update to streamlink-6.3.1
+
+Changelog:
+
+= streamlink 6.3.1 (2023-10-26)
+
+Patch release:
+
+- Fixed plugins:
+  - welt: rewritten plugin
+- Build: fixed tests when running from sdist
+
+
+= streamlink 6.3.0 (2023-10-25)
+
+Release highlights:
+
+- Added: warning log message when skipping HLS segments between
+    playlist reloads
+- Refactored: internals of segmented stream implementations (base
+    classes, HLS, DASH)
+  - Added: base `Segment` dataclass and made segmented streams
+    inherit from it
+  - Moved: modules into sub-packages (import paths of public APIs
+    remain the same)
+  - Renamed: various non-public HLS class methods/attributes and
+    functions
+  - Removed: `Sequence` segment wrapper from HLS implementation
+- Fixed: DASH manifest not respecting the `minBufferTime`
+- Fixed: URL matchers of HLS/DASH protocol plugins
+- Fixed: bandwidth parsing issue in HLS multivariant playlists
+- Fixed plugins:
+  - dlive: fixed live streams and fixed VODs
+  - goodgame: rewritten plugin using goodgame API v4
+  - mitele: updated gbx API calls from v2 to v3
+  - twitch: fixed error handling of geo-restricted or inaccessible
+    streams
+- Removed plugins:
+  - ntv: static stream URLs
+  - vlive: offline
+- Build: dropped `versioningit` build-requirement when building from
+  sdist tarball (version string has always been built-in while
+  `versioningit` performed a no-op)
+- Packaging: added missing shell completions build-script to sdist
+- Docs: clarified section about building from source (sdist/git vs.
+    GitHub tarballs)
+
+
+= streamlink 6.2.1 (2023-10-03)
+
+Patch release:
+
+- Added: official support for Python 3.12
+- Fixed plugins: goodgame, nos, pandalive, wwenetwork
+- Build: added custom setuptools build-backend override which fixes
+    issues with building Windows-specific wheels
+
+
+= streamlink 6.2.0 (2023-09-14)
+
+Release highlights:
+
+- Added: `--player-env` CLI argument
+- Added: OpenSSL version to debug log output
+- Updated: segmented stream internals and typing
+- Updated: internal HLS tag parsing setup and parser state
+- Fixed: HLS streams not ending on playlist reload with endlist tag
+    and no new segments
+- Fixed: missing file encoding when writing a log file
+- Added plugins: piaulizaportal
+- Fixed plugins: hiplayer, nicolive, pluto
+- Docs: added list of supported metadata variables for each plugin
+
+
+= streamlink 6.1.0 (2023-08-16)
+
+Release highlights:
+
+- Added: `--hls-segment-queue-threshold` for being able to configure
+    when to stop HLS streams early on missing segments
+- Fixed: config file parsing issues and made parsing argument values
+    more strict
+- Fixed: race condition when reading and validating the FFmpeg
+    version string
+- Fixed plugins: atresplayer
+- Docs: added code examples for the removal of
+    `Streamlink.{g,s}et_plugin_option`
+- Build: fixed entry-points config issues with setuptools `68.1.0`
+
+
+= streamlink 6.0.1 (2023-08-02)
+
+Patch release:
+
+- Added: missing `options` argument to `Streamlink.streams()`
+- Fixed: migration docs and the `6.0.0` changelog of the
+    `Streamlink.{g,s}et_plugin_option()` removal
+- Fixed plugins: huya
+- Docs: updated build-dependencies and the furo theme
+
+
+= streamlink 6.0.0 (2023-07-20)
+
+Breaking changes:
+
+- BREAKING: dropped support for Python 3.7
+- BREAKING: turned `--player` CLI argument into a player-path-only
+    argument
+  Its value won't be interpreted as a command line string anymore,
+    so paths with whitespace don't require additional quotation.
+    Custom player arguments now always need to be set via `--player-args`.
+- BREAKING: removed deprecated `{filename}` variable from `--player-args`
+- BREAKING/API: removed support for the deprecated
+    `Plugin.can_handle_url()` / `Plugin.priority()` classmethods
+- BREAKING/API: removed deprecated compatibility wrapper for the `Plugin`
+    constructor
+- BREAKING/API: removed `Streamlink.{g,s}et_plugin_option()`
+- BREAKING/API: removed deprecated global plugin arguments
+- BREAKING/API: removed deprecated `streamlink.plugin.api.validate.text`
+- BREAKING/API: fixed/changed signatures of `HTTPStream`, `HLSStream` and
+    `HLSStream.parse_variant_playlist()`
+- BREAKING/packaging: new signing key `44448A298D5C3618`
+
+Release highlights:
+
+- Added: experimental `streamlink.webbrowser` API for extracting data
+    from websites using the system's Chromium-based web browser
+  See the `--webbrowser`, `--webbrowser-executable` and related CLI
+    arguments for more
+- Added: client-integrity token support to Twitch plugin using the
+    `streamlink.webbrowser` API (currently only used as a fallback
+    when acquiring the access token fails)
+- Added: `{playertitleargs}` variable to `--player-args`
+- Added: `with_{video,audio}_only` parameters to
+    `DASHStream.parse_manifest()`
+- Changed: HLS streams to stop early on missing `EXT-X-ENDLIST` tag
+    when polling the playlist doesn't yield new segments for twice
+    its targetduration value
+- Fixed: regex of optional protocol plugin parameters
+- Fixed plugins: lrt, mediavitrina, mitele, NRK, pluzz, rtvs,
+    showroom, turkuvaz, vimeo, youtube
+- Docs: added migrations page for further guidance on resolving
+    breaking changes
+- Docs: split up, updated and improved API docs
+- Build: moved project metadata to pyproject.toml (PEP621)
+- Dependencies: added `trio`, `trio-websocket` and
+    `typing-extensions`, and removed `importlib_metadata`
