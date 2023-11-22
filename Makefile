@@ -4976,6 +4976,7 @@ SUBDIR+=	sailor
 SUBDIR+=	salmon
 SUBDIR+=	samhain
 SUBDIR+=	samtools
+SUBDIR+=	sapling
 SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	sbc

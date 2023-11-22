@@ -1,0 +1,6 @@
+Sapling SCM is a cross-platform, highly scalable, Git-compatible
+source control system.
+
+It aims to provide both user-friendly and powerful interfaces for
+users, as well as extreme scalability to deal with repositories
+containing many millions of files and many millions of commits.
