@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	hut-0.3.0
+DISTNAME=	hut-0.4.0
 CATEGORIES=	devel
 MASTER_SITES=	https://git.sr.ht/~emersion/hut/refs/download/v${PKGVERSION_NOREV}/
 
