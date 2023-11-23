@@ -1,0 +1,18 @@
+$NetBSD$
+
+Use the platform appropriate dlopen flags and libraries.
+
+--- libraries/ZVulkan/CMakeLists.txt.orig	2023-10-26 19:18:50.000000000 +0000
++++ libraries/ZVulkan/CMakeLists.txt
+@@ -188,9 +188,9 @@ if(WIN32)
+ 	add_definitions(-DUNICODE -D_UNICODE)
+ else()
+ 	set(ZVULKAN_SOURCES ${ZVULKAN_SOURCES} ${ZVULKAN_UNIX_SOURCES})
+-	set(ZVULKAN_LIBS ${CMAKE_DL_LIBS} -ldl)
++	set(ZVULKAN_LIBS ${CMAKE_DL_LIBS} ${DL_LIBS})
+ 	add_definitions(-DUNIX -D_UNIX)
+-	add_link_options(-pthread)
++	add_link_options(-pthread ${DL_LDFLAGS})
+ endif()
+ 
+ if(MSVC)
