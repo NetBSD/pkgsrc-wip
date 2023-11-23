@@ -2,11 +2,11 @@
 
 DISTNAME=	slack-term-0.5.0
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=erroneousboat/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jpbruinsslot/}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/erroneousboat/slack-term
+HOMEPAGE=	https://github.com/jpbruinsslot/slack-term
 COMMENT=	Slack client for your terminal
 LICENSE=	mit
 
