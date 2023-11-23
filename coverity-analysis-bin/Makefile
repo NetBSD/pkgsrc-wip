@@ -1,25 +1,29 @@
 # $NetBSD$
 
-DISTNAME=	cov-analysis-netbsd64-2022.06
-PKGNAME=	coverity-analysis-bin-2022.06
+https://scan.coverity.com/download/cxx/linux64
+DISTNAME=	cov-analysis-linux64-2023.6.2
+PKGNAME=	coverity-analysis-bin-2023.06.02
 CATEGORIES=	devel
 MASTER_SITES=	# http://scan.coverity.com/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://scan.coverity.com/
-COMMENT=	Static Analysis for Java, C/C++, C\#, JavaScript, Ruby, or Python
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Static Analysis for Java, C/C++, C\#, JavaScript, PHP, Python, or Ruby
+#LICENSE=	./coverity-license
 
-WRKSRC=		${WRKDIR}/cov-analysis-netbsd64-2022.6.0
+#WRKSRC=		${WRKDIR}/cov-analysis-linux64-2022.6.0
 INSTALLATION_DIRS+=	${PREFIX}/coverity
 
-ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
-NOT_FOR_PLATFORM=	NetBSD-[0-4].*.*-x86_64
+EMUL_PLATFORMS=		linux-x86_64
+EMUL_MODULES.linux=	base
+
+#ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
+#NOT_FOR_PLATFORM=	NetBSD-[0-4].*.*-x86_64
 # pre-built binaries without RELRO
 CHECK_RELRO_SUPPORTED=	no
 
 USE_TOOLS+=		pax
-EXTRACT_USING=		bsdtar
+#EXTRACT_USING=		bsdtar
 
 do-build:
 
