@@ -2,6 +2,13 @@ multimedia/streamlink: update to streamlink-6.4.0
 
 Changelog:
 
+= streamlink 6.4.1 (2023-11-22)
+
+Patch release:
+
+- Fixed: libxml2 2.12.0 compatibility
+
+
 = streamlink 6.4.0 (2023-11-21)
 
 Release highlights:
