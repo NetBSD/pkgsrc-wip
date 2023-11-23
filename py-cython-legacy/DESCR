@@ -1,3 +1,7 @@
+This package is a stop-gap for cython-dependent packages incompatible
+with cython 3.0.x.  It should be removed as soon as all dependent
+packages can be migrated to 3.0.x.
+
 The Cython language makes writing C extensions for the Python language
 as easy as Python itself. Cython is a source code translator based on
 the well-known Pyrex, but supports more cutting edge functionality and
