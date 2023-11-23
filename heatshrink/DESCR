@@ -1,0 +1,3 @@
+heatshrink is a data compression/decompression library for embedded/real-time
+systems witrh memory usage as low as 50 bytes, incremental, bouded CPU use,
+static or dynamic memory allocation and released under the ISC license.

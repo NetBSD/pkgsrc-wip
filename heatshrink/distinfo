@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (heatshrink-0.4.1.tar.gz) = d9d9b4514d60f634ac230cc4261dd1073dc59e4583dc0b99ea15775d99ae6468
+SHA512 (heatshrink-0.4.1.tar.gz) = bb9610b963da0762b1ac21d0907f3801b525431abff495b66cadc244a2b2b334441de2b14442b722bfeb56cb4459fe4021eae0d0454f9e26a80e6efa11f079d2
+Size (heatshrink-0.4.1.tar.gz) = 36945 bytes
+SHA1 (patch-Makefile) = 850722f138ff33828cee09e745ed8b3482abf878

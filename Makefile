@@ -1379,6 +1379,7 @@ SUBDIR+=	haze
 SUBDIR+=	hcloud
 SUBDIR+=	hdparm
 SUBDIR+=	heaptrack
+SUBDIR+=	heatshrink
 SUBDIR+=	heimdall
 SUBDIR+=	helm
 SUBDIR+=	hengband

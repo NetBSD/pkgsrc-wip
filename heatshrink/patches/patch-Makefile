@@ -1,0 +1,27 @@
+$NetBSD$
+
+Use $DESTDIR for installation.
+
+--- Makefile.orig	2015-11-01 15:52:39.000000000 +0000
++++ Makefile
+@@ -65,13 +65,13 @@ INSTALL ?=	install
+ RM ?=		rm
+ 
+ install: libraries heatshrink
+-	${INSTALL} -c heatshrink ${PREFIX}/bin/
+-	${INSTALL} -c libheatshrink_static.a ${PREFIX}/lib/
+-	${INSTALL} -c libheatshrink_dynamic.a ${PREFIX}/lib/
+-	${INSTALL} -c heatshrink_common.h ${PREFIX}/include/
+-	${INSTALL} -c heatshrink_config.h ${PREFIX}/include/
+-	${INSTALL} -c heatshrink_encoder.h ${PREFIX}/include/
+-	${INSTALL} -c heatshrink_decoder.h ${PREFIX}/include/
++	${INSTALL} -c heatshrink ${DESTDIR}/${PREFIX}/bin/
++	${INSTALL} -c libheatshrink_static.a ${DESTDIR}/${PREFIX}/lib/
++	${INSTALL} -c libheatshrink_dynamic.a ${DESTDIR}/${PREFIX}/lib/
++	${INSTALL} -c heatshrink_common.h ${DESTDIR}/${PREFIX}/include/
++	${INSTALL} -c heatshrink_config.h ${DESTDIR}/${PREFIX}/include/
++	${INSTALL} -c heatshrink_encoder.h ${DESTDIR}/${PREFIX}/include/
++	${INSTALL} -c heatshrink_decoder.h ${DESTDIR}/${PREFIX}/include/
+ 
+ uninstall:
+ 	${RM} -f ${PREFIX}/lib/libheatshrink_static.a
