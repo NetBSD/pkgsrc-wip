@@ -184,7 +184,6 @@ SUBDIR+=	arduino-builder
 SUBDIR+=	arduino-ctags
 SUBDIR+=	argouml
 SUBDIR+=	argtable2
-SUBDIR+=	argyllcms
 SUBDIR+=	aribas
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	arm-eabi-binutils
