@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nessoundstudio-0.2.2
+DISTNAME=	nessoundstudio-0.3.1
 CATEGORIES=	audio
 MASTER_SITES=	https://sourceforge.net/projects/nessoundstudio/files/
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://sourceforge.net/projects/nessoundstudio/
 COMMENT=	NES music player and composing system
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/nessoundstudio-0.2
+WRKSRC=		${WRKDIR}/nessoundstudio-0.3
 USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	bin

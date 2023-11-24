@@ -1,3 +1,3 @@
 NES sound studio is a music player and composing system which lets
-you write music files and play them back on its own internal
-emulator.
+you write music files and play them back on a NES emulator using cc65
+to compile the music file.
