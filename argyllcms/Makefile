@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	Argyll_V2.0.1_src
+DISTNAME=	Argyll_V3.0.2_src
 PKGNAME=	${DISTNAME:S/_V/cms-/:S/_src$//:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	zlib/zlib.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
-TOOL_DEPENDS+=	jam>=2.5.2:../../devel/jam
+BUILD_DEPENDS+=	jam>=2.5.2:../../devel/jam
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} DESTDIR=${DESTDIR} PREFIX=${PREFIX} \
@@ -35,9 +35,6 @@ do-install:
 		${MAKE_ENV} jam -q -fJambase ${_MAKE_JOBS} install
 	${MV} ${DESTDIR}${PREFIX}/bin/License.txt \
 		${DESTDIR}${PREFIX}/share/argyll/
-
-#post-install:
-#	${STRIP} ${DESTDIR}${PREFIX}/bin/*
 
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"

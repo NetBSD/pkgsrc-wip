@@ -3,7 +3,7 @@ as Open Source. It supports accurate ICC profile creation for
 scanners, cameras and film recorders, and calibration and profiling
 of displays and RGB & CMYK printers. Device Link can be created
 with a wide variety of advanced options, including specialized
-Video calibration standards  and 3dLuts. Spectral sample data is
+Video calibration standards and 3dLuts. Spectral sample data is
 supported, allowing a selection of illuminants observer types, and
 paper fluorescent whitener additive compensation. Profiles can also
 incorporate source specific gamut mappings for perceptual and
