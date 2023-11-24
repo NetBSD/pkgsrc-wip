@@ -17,6 +17,7 @@ HOMEPAGE=		https://www.jedsoft.org/jed/
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=		--with-slang=${PREFIX}
 
 LIBS.SunOS+=		-lnsl -lresolv
 
@@ -26,8 +27,6 @@ CONF_FILES=		${EGDIR}/jed.conf ${PREFIX}/etc/jed.conf
 INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
-	${RMDIR} ${DESTDIR}${PREFIX}/share/jed/bin
-	${RMDIR} ${DESTDIR}${PREFIX}/share/jed/lib/tm
 	${INSTALL_DATA} ${WRKSRC}/lib/jed.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/libslang2/buildlink3.mk"

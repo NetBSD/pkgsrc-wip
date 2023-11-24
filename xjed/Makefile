@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.17 2013/04/06 03:45:12 rodent Exp $
 #
-PKGNAME=		xjed-0.99.16
+PKGNAME=		xjed-0.99.19
 PKGREVISION=		1
 
-.include "../../editors/jed/Makefile.common"
+#.include "../../editors/jed/Makefile.common"
+.include "../jed/Makefile.common"
 COMMENT=		Extensible folding editor + Emacs/WordStar/EDT emulations, X11 version
 
 CONFLICTS=		jed-[0-9]*
@@ -28,4 +29,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
