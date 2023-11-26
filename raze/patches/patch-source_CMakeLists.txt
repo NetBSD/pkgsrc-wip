@@ -1,0 +1,17 @@
+$NetBSD$
+
+There are many warnings with the pre-compiled headers. Since raze
+sometimes generates a segmentation fault on startup, rather disable
+this optimization. See also hacks.mk.
+
+--- source/CMakeLists.txt.orig	2023-11-12 13:35:34.000000000 +0000
++++ source/CMakeLists.txt
+@@ -1292,7 +1292,7 @@ list( REMOVE_ITEM GAME_NONPCH_SOURCES ${
+ 
+ add_executable( ${PROJECT_NAME} WIN32 MACOSX_BUNDLE ${GAME_SOURCES} )
+ 
+-target_precompile_headers( ${PROJECT_NAME} PRIVATE g_pch.h )
++#target_precompile_headers( ${PROJECT_NAME} PRIVATE g_pch.h )
+ 
+ #set_source_files_properties( ${FASTMATH_SOURCES} PROPERTIES COMPILE_FLAGS ${DEM_FASTMATH_FLAG} )
+ set_source_files_properties( common/engine/sc_man.cpp PROPERTIES OBJECT_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h" )

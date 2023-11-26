@@ -1,5 +1,7 @@
 $NetBSD$
 
+Use namespace std for max.
+
 --- source/games/blood/src/nnexts.cpp.orig	2023-01-07 18:45:29.000000000 +0000
 +++ source/games/blood/src/nnexts.cpp
 @@ -4203,12 +4203,12 @@ bool condCheckSector(DBloodActor* aCond,

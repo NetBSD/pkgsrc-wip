@@ -1,6 +1,3 @@
 @comment $NetBSD$
 bin/raze
-include/discord_register.h
-include/discord_rpc.h
-lib/libdiscord-rpc.a
 share/games/raze/raze.pk3

@@ -1,9 +1,16 @@
 $NetBSD$
 
-BLAKE2s (Raze/1.7.1.tar.gz) = da763806144771cdc20c55e253613de3e66f195b30d9f99bfda8ca3478832e89
-SHA512 (Raze/1.7.1.tar.gz) = 379148c2aee9ca37ddba70b75233e6db05f46c1fc99624c65adada399858dbd3141b1f5240cec2cf86e731eaa44d283136af791d4eefc9421c9fb244be084b4d
-Size (Raze/1.7.1.tar.gz) = 18722339 bytes
+BLAKE2s (Raze/1.8.1.tar.gz) = 8abfa0b3e59a7f761a5b06710a31ccba73d7a77497465e95195f2a604b3a17fc
+SHA512 (Raze/1.8.1.tar.gz) = 60e9f2499d4605bda30a6328fee0fdbcb9e543f9601a62a24fea21dcd2f6a601ffbaf972efd4af7103717af006a2dff3aae3b5fa522542867d8c187c16fd91de
+Size (Raze/1.8.1.tar.gz) = 18326513 bytes
 SHA1 (patch-libraries_ZVulkan_CMakeLists.txt) = 7600c20a8a421686bceeb3ad0623ac1a7c329bb3
-SHA1 (patch-source_common_console_c__console.h) = 08232b557703523e36228592d211fe8ad423b14c
-SHA1 (patch-source_common_platform_posix_sdl_i__system.cpp) = aa7e0edaa0166b2760910ad2f14461e5cd940a69
-SHA1 (patch-source_games_blood_src_nnexts.cpp) = d8c393d104c933944313cbf36ff5bb5d3d24f666
+SHA1 (patch-source_CMakeLists.txt) = 6307c68b08138bddafc5ecfea2f550c1e1c68699
+SHA1 (patch-source_common_audio_music_i__music.h) = bee5cefbc98fff6464ff829223c0d710c5b3207b
+SHA1 (patch-source_common_engine_palettecontainer.cpp) = e9b8a76dae41ab9e5e0f79f56bfe1e783626cd7d
+SHA1 (patch-source_common_objects_autosegs.cpp) = a3d568441d4c13543a36ef43a168153ec9e37c97
+SHA1 (patch-source_common_objects_autosegs.h) = 26b7e4ca2de35d260a10596a421f5bd91bd17565
+SHA1 (patch-source_common_textures_bitmap.h) = 46857773c2ef73c6ce56861e173521d3fcb59c36
+SHA1 (patch-source_common_utility_engineerrors.cpp) = 09e9dc7330094e8584e6d55647ef794f0f865a83
+SHA1 (patch-source_common_utility_palette.cpp) = d9085817ae0a6ffa9e0c9e839a8f569d3de76699
+SHA1 (patch-source_core_gameconfigfile.cpp) = 46ddce26760e50cf90375a66835557b9d33ea0b5
+SHA1 (patch-source_games_blood_src_nnexts.cpp) = 09c29fdae8228dc82555f722b3907355bd1b3106
