@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	fts-xapian
-DISTNAME=	1.5.5
-PKGNAME=	dovecot2-fts-xapian-${DISTNAME}
+DISTNAME=	${GITHUB_PROJECT}-1.5.7
+PKGNAME=	dovecot2-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grosjo/}
-DIST_SUBDIR=	dovecot2-fts-xapian
+GITHUB_PROJECT=	fts-xapian
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	otis@NetBSD.org
 HOMEPAGE=	https://github.com/grosjo/fts-xapian
