@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	terraform-provider-postgresql-1.11.2
+DISTNAME=	terraform-provider-postgresql-1.21.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cyrilgdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
