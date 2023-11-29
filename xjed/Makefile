@@ -2,9 +2,9 @@
 #
 PKGNAME=		xjed-0.99.19
 PKGREVISION=		1
+LICENSE=		gnu-gpl-v2
 
-#.include "../../editors/jed/Makefile.common"
-.include "../jed/Makefile.common"
+.include "../../editors/jed/Makefile.common"
 COMMENT=		Extensible folding editor + Emacs/WordStar/EDT emulations, X11 version
 
 CONFLICTS=		jed-[0-9]*
@@ -13,8 +13,8 @@ CONFIGURE_ARGS+=	--with-x
 
 BUILD_TARGET=		xjed
 
-MESSAGE_SRC=		${.CURDIR}/../jed/MESSAGE
-PLIST_SRC=		${.CURDIR}/../jed/PLIST
+MESSAGE_SRC=		${.CURDIR}/../../editorsjed/MESSAGE
+PLIST_SRC=		${.CURDIR}/../../editors/jed/PLIST
 PLIST_SRC+=		${.CURDIR}/PLIST.xjed
 
 .include "../../mk/bsd.prefs.mk"

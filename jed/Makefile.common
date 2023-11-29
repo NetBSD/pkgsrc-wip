@@ -17,7 +17,7 @@ HOMEPAGE=		https://www.jedsoft.org/jed/
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=		--with-slang=${PREFIX}
+CONFIGURE_ARGS+=	--with-slang=${PREFIX}
 
 LIBS.SunOS+=		-lnsl -lresolv
 

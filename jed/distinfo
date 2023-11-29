@@ -3,8 +3,8 @@ $NetBSD: distinfo,v 1.15 2021/10/26 10:21:31 nia Exp $
 BLAKE2s (jed-0.99-19.tar.bz2) = 5d9d89262f4aa31a8a181064d9c0a4c373c3d727ff731feaf7db5fbfb1701bd1
 SHA512 (jed-0.99-19.tar.bz2) = db8a30284f9b8e3e2c5d1a600eeb7af29c9f943a5c23d7c74fce926e0b0252f54805e214670e7c9357ce0e6918ad67cba2769a523979bfbd285328f94fff747c
 Size (jed-0.99-19.tar.bz2) = 884198 bytes
-SHA1 (patch-autoconf_configure.ac) = d8a2c75708a89dfae9ab9d4a6053d9e41bce0c59
-SHA1 (patch-src_Makefile.in) = 301002f36dadea78a59b8edec9391bedf58bb3cb
-SHA1 (patch-src_config.hin) = ebb2179fd2e1246d5bd7978a67af660ad5ae6fd3
-SHA1 (patch-src_jprocess.c) = 3011a03bfff56071cb0448bccd8c903a8343c7e4
-SHA1 (patch-src_pty.c) = fc954f310187482ddf8ce65c601448d33926958f
+SHA1 (patch-autoconf_configure.ac) = df7be1bddbd1a4ed1f40e2a4523a7c39a2af3a9d
+SHA1 (patch-src_Makefile.in) = 94379d3acdc5f922485eb2a071dc89ff7a1224cf
+SHA1 (patch-src_config.hin) = c0e5858d9e6539b55c5a3f72342cbde06e3247c5
+SHA1 (patch-src_jprocess.c) = 576950628d199709e77e525295d4cd4542fcdf72
+SHA1 (patch-src_pty.c) = 7333060954757643fe2bc800f9de87e5861c2014

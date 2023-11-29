@@ -1,5 +1,7 @@
 $NetBSD$
 
+Only do the I_PUSH stuff if it's defined.
+
 --- src/pty.c.orig	2009-12-14 02:12:55.000000000 +0000
 +++ src/pty.c
 @@ -19,10 +19,12 @@

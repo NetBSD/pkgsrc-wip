@@ -1,5 +1,7 @@
 $NetBSD: $
 
+If not FreeBSD, don't use PTY
+
 --- src/jprocess.c.orig	2004-03-18 16:39:02.000000000 +0000
 +++ src/jprocess.c	2004-03-18 16:39:57.000000000 +0000
 @@ -58,8 +58,10 @@

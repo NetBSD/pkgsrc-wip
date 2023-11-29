@@ -1,5 +1,7 @@
 $NetBSD$
 
+Remove Undefined of HAVE_SYS_STROPTS_H
+
 --- src/config.hin.orig	2023-11-29 01:54:22.766379393 +0000
 +++ src/config.hin
 @@ -35,6 +35,9 @@
