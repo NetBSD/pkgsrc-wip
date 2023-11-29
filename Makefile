@@ -351,7 +351,6 @@ SUBDIR+=	bup-git
 SUBDIR+=	busybox
 SUBDIR+=	bwa
 SUBDIR+=	byzanz
-SUBDIR+=	bzip3
 SUBDIR+=	c-graph
 SUBDIR+=	c-news
 SUBDIR+=	c2go

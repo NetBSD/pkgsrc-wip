@@ -1,7 +1,0 @@
-$NetBSD$
-
-BLAKE2s (bzip3-1.2.2.tar.xz) = 30f6cf255467f3f325c33cef4ed51e59a9ff87b5626e47e89bc890c122ce0abc
-SHA512 (bzip3-1.2.2.tar.xz) = 476876f3949ac285e86625a9a83741308910ddce5b9449c0ca02b41d9c336f759b9702f2ce6b61243f1fde59a9ef8cf926fb2e94911828d5f39e207319bf522d
-Size (bzip3-1.2.2.tar.xz) = 275872 bytes
-SHA1 (patch-include_common.h) = c336c316caa51a51077daa27b7f8ad8f705a7192
-SHA1 (patch-include_libsais.h) = af71664a332de9728cb3f58cdf8611a7f15e07fb
