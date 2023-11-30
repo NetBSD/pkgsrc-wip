@@ -254,6 +254,7 @@ SUBDIR+=	bashtop
 SUBDIR+=	basic-stats
 SUBDIR+=	bastard
 SUBDIR+=	bats-core
+SUBDIR+=	bazel
 SUBDIR+=	be
 SUBDIR+=	beast
 SUBDIR+=	bedtools
