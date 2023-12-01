@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (apache-arrow-14.0.1.tar.gz) = d841ca7299f8ea118e9b55826c34a353ee995936c6a88da001de149992274381
+SHA512 (apache-arrow-14.0.1.tar.gz) = 31d19f0ca80349f63db74bae813256b47907f85725a9bf01ef6f32406e79828ebb4701faedb52696b6a5b3bb89ad4e136485fd5eb35d396dd42147c11d4d2713
+Size (apache-arrow-14.0.1.tar.gz) = 20968461 bytes
+SHA1 (patch-python_setup.py) = e86d168938701b53607d98060b17320c44a33b5e

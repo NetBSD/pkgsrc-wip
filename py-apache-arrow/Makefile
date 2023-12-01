@@ -3,7 +3,6 @@ DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 PKGNAME=	${PYPKGPREFIX}-apache-arrow-${APACHE_ARROW_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
-DISTINFO_FILE=      ${.CURDIR}/../../wip/apache-arrow/distinfo
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://arrow.apache.org/
