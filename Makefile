@@ -57,6 +57,7 @@ SUBDIR+=	R-getopt
 SUBDIR+=	R-gmp
 SUBDIR+=	R-graph
 SUBDIR+=	R-httpcode
+SUBDIR+=	R-listenv
 SUBDIR+=	R-lsei
 SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
