@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/03/01 14:59:36 cheusov Exp $
+# $NetBSD$
 
 PKGNAME=	dict-client-2.0.0
 CATEGORIES=	textproc
@@ -21,8 +21,6 @@ TOOL_DEPENDS+=		mk-configure>=0.38.2:../../devel/mk-configure
 CONFIGURE_TARGET=	configure-dict
 BUILD_TARGET=		all-dict
 INSTALL_TARGET=		install-dict
-
-#CONF_FILES=		dict.conf   ${PKG_SYSCONFDIR}/dict.conf
 
 .include "../../devel/mk-configure/mk-c.mk"
 .include "../../devel/libmaa/buildlink3.mk"
