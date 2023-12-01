@@ -66,6 +66,7 @@ SUBDIR+=	R-np
 SUBDIR+=	R-npsurv
 SUBDIR+=	R-oai
 SUBDIR+=	R-optparse
+SUBDIR+=	R-parallelly
 SUBDIR+=	R-rgbif
 SUBDIR+=	R-signal
 SUBDIR+=	R-triebeard
