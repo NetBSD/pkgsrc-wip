@@ -11,12 +11,14 @@ LICENSE=	gnu-gpl-v2
 GIT_REPOSITORIES=	dictd
 GIT_REPO.dictd=		https://github.com/cheusov/dictd.git
 
+USE_TOOLS+=		yacc lex
+TOOL_DEPENDS+=		mk-configure>=0.38.2:../../devel/mk-configure
+
 WRKSRC=			${WRKDIR}/dictd
 EGDIR=			${PREFIX}/share/examples/dict
 
 CONF_FILES=		${EGDIR}/dict.conf \
 			${PKG_SYSCONFDIR}/dict.conf
-TOOL_DEPENDS+=		mk-configure>=0.38.2:../../devel/mk-configure
 
 CONFIGURE_TARGET=	configure-dict
 BUILD_TARGET=		all-dict
