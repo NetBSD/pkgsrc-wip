@@ -50,6 +50,7 @@ SUBDIR+=	R-crul
 SUBDIR+=	R-cubature
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-easySVG
+SUBDIR+=	R-elevatr
 SUBDIR+=	R-entropy
 SUBDIR+=	R-fitdistrplus
 SUBDIR+=	R-foreach
