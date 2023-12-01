@@ -71,6 +71,7 @@ SUBDIR+=	R-optparse
 SUBDIR+=	R-parallelly
 SUBDIR+=	R-rgbif
 SUBDIR+=	R-signal
+SUBDIR+=	R-slippymath
 SUBDIR+=	R-triebeard
 SUBDIR+=	R-tuneR
 SUBDIR+=	R-urltools
