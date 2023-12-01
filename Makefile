@@ -53,6 +53,7 @@ SUBDIR+=	R-easySVG
 SUBDIR+=	R-entropy
 SUBDIR+=	R-fitdistrplus
 SUBDIR+=	R-foreach
+SUBDIR+=	R-future
 SUBDIR+=	R-getopt
 SUBDIR+=	R-gmp
 SUBDIR+=	R-graph

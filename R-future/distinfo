@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (R/future_1.33.0.tar.gz) = 86992fa86cddece7117a2b5c575ca148d09419d8aaf58980cd3f568e604dac0e
+SHA512 (R/future_1.33.0.tar.gz) = c4b32e90bc122f51f09d2c60821da92dad65b021c04aabc996c0c6689cefb3a5c5bf70e8863cf5123ce77e97ba52f33e23763dfa9ed317d7b094f6e2c9ce86a2
+Size (R/future_1.33.0.tar.gz) = 347394 bytes
