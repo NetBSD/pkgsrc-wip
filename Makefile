@@ -641,6 +641,7 @@ SUBDIR+=	dfam
 SUBDIR+=	dhcpd-snmp
 SUBDIR+=	diablo
 SUBDIR+=	dict-client-current
+SUBDIR+=	dict-server-current
 SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-freedict-eng-ara
 SUBDIR+=	dict-freedict-eng-fra

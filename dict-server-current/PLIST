@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.9 2014/03/11 14:05:17 jperkin Exp $
+bin/dictfmt
+bin/dictfmt_index2suffix
+bin/dictfmt_index2word
+bin/dictunformat
+bin/dictzip
+man/man1/dictfmt.1
+man/man1/dictfmt_index2suffix.1
+man/man1/dictfmt_index2word.1
+man/man1/dictunformat.1
+man/man1/dictzip.1
+man/man8/dictd.8
+sbin/dictd
+share/examples/dictd/dictd.conf
+share/examples/dictd/dictd1.conf
+share/examples/dictd/dictd2.conf
+share/examples/dictd/dictd3.conf
+share/examples/dictd/dictd4.conf
+share/examples/dictd/dictd_complex.conf
+share/examples/dictd/dictd_mime.conf
+share/examples/dictd/dictd_site.txt
+share/examples/dictd/dictd_virtual.conf
