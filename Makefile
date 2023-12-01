@@ -69,6 +69,7 @@ SUBDIR+=	R-npsurv
 SUBDIR+=	R-oai
 SUBDIR+=	R-optparse
 SUBDIR+=	R-parallelly
+SUBDIR+=	R-progressr
 SUBDIR+=	R-rgbif
 SUBDIR+=	R-signal
 SUBDIR+=	R-slippymath
