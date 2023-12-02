@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.6.1
+PKGVERSION=	2.7.0
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -18,11 +18,12 @@ LICENSE=	gnu-agpl-v3
 ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
 
 # Uses std::to_chars_result from <charconv> which is actually gcc8+.
-GCC_REQD+=	10
-USE_LANGUAGES=	c c++17
-USE_TOOLS+=	cmake gmake pkg-config:run
-USE_CMAKE=	yes
-ICON_THEMES=	yes
+GCC_REQD+=		10
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+USE_TOOLS+=		cmake gmake pkg-config:run
+USE_CMAKE=		yes
+ICON_THEMES=		yes
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
@@ -31,6 +32,11 @@ BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
 
 CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 #CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS:STRING=-g
+
+# CMake goes looking for this binary. Make it happy.
+pre-configure:
+	${LN} -s ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
+	${LN} -s ${PREFIX}/bin/bgcode ${BUILDLINK_DIR}/bin/
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
@@ -62,6 +68,7 @@ CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/cereal/buildlink3.mk"
 .include "../../wip/cgal/buildlink3.mk"
+.include "../../wip/libbgcode/buildlink3.mk"
 .include "../../wip/nanosvg/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
 .include "../../wip/opencascade-git/buildlink3.mk"
