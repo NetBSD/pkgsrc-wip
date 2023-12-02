@@ -1,8 +1,12 @@
 @comment $NetBSD$
 bin/heatshrink
-include/heatshrink_common.h
-include/heatshrink_config.h
-include/heatshrink_decoder.h
-include/heatshrink_encoder.h
-lib/libheatshrink_dynamic.a
-lib/libheatshrink_static.a
+include/heatshrink/heatshrink_common.h
+include/heatshrink/heatshrink_config.h
+include/heatshrink/heatshrink_decoder.h
+include/heatshrink/heatshrink_encoder.h
+lib/cmake/heatshrink/heatshrinkConfig.cmake
+lib/cmake/heatshrink/heatshrinkConfigVersion.cmake
+lib/cmake/heatshrink/heatshrinkTargets-noconfig.cmake
+lib/cmake/heatshrink/heatshrinkTargets.cmake
+lib/libheatshrink.a
+lib/libheatshrink_dynalloc.a
