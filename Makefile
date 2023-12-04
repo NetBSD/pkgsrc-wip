@@ -62,6 +62,7 @@ SUBDIR+=	R-graph
 SUBDIR+=	R-httpcode
 SUBDIR+=	R-listenv
 SUBDIR+=	R-lsei
+SUBDIR+=	R-marmap
 SUBDIR+=	R-mclust
 SUBDIR+=	R-mpfr
 SUBDIR+=	R-nloptr
