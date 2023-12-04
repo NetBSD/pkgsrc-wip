@@ -1,0 +1,6 @@
+shells/oksh: Update oksh to 7.4
+
+- Remove broken special handling of test -t
+- consistently escape control characters when displaying file name
+  completions, even when there are multiple matches
+- added kefir compiler support
