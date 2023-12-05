@@ -1,12 +1,12 @@
 # $NetBSD$
 
-.include "../../wip/zabbix64-server/Makefile.common"
+.include "${.CURDIR}/../../wip/zabbix64-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-agent-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-PATCHDIR=	"../../wip/zabbix64-server/patches"
-DISTINFO_FILE=	"../../wip/zabbix64-server/distinfo"
+PATCHDIR=	${.CURDIR}/../../wip/zabbix64-server/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/zabbix64-server/distinfo
 
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-agent-[0-9]*

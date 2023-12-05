@@ -73,7 +73,7 @@ post-install:
 	cd ${WRKSRC}/misc/${MISCDIR}; \
 		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/misc/${MISCDIR}
 .endfor
-	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/Makefile*
+	${FIND} ${DESTDIR:Q}${PREFIX}/share/${PKGBASE} -name 'Makefile*' -delete
 
 .include "options.mk"
 

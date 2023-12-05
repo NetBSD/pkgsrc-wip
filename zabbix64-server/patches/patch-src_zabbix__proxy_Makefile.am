@@ -1,0 +1,12 @@
+$NetBSD$
+
+Install config file into component's example directory.
+
+--- src/zabbix_proxy/Makefile.am.orig	2023-11-30 12:30:23.699499293 +0000
++++ src/zabbix_proxy/Makefile.am
+@@ -139,4 +139,4 @@ install-data-hook:
+ 	$(MKDIR_P) "$(DESTDIR)$(PROXY_CONFIG_FILE).d"
+ 	$(MKDIR_P) "$(DESTDIR)$(EXTERNAL_SCRIPTS_PATH)"
+ 	$(MKDIR_P) "$(DESTDIR)$(LOAD_MODULE_PATH)"
+-	test -f "$(DESTDIR)$(PROXY_CONFIG_FILE)" || cp "../../conf/zabbix_proxy.conf" "$(DESTDIR)$(PROXY_CONFIG_FILE)"
++	$(INSTALL_DATA) "../../conf/zabbix_proxy.conf" "$(DESTDIR)/${PREFIX}/share/examples/%%PKGBASE%%"

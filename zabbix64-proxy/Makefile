@@ -1,12 +1,12 @@
 # $NetBSD$
 
-.include "../../wip/zabbix64-server/Makefile.common"
+.include "${.CURDIR}/../../wip/zabbix64-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-proxy-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Enterprise-class Monitoring Solution for Everyone
 
-PATCHDIR=	"../../wip/zabbix64-server/patches"
-DISTINFO_FILE=	"../../wip/zabbix64-server/distinfo"
+PATCHDIR=	${.CURDIR}/../../wip/zabbix64-server/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/zabbix64-server/distinfo
 
 CONFLICTS+=	zabbix-[0-9]*
 CONFLICTS+=	zabbix-proxy-[0-9]*
@@ -61,7 +61,7 @@ pre-configure:
 post-install:
 	cd ${WRKSRC}/database/${ZABBIX_DB_TYPE}; \
 		${PAX} -rw . ${DESTDIR}${PREFIX}/share/${PKGBASE}/
-	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/Makefile*
+	${FIND} ${DESTDIR:Q}${PREFIX}/share/${PKGBASE} -name 'Makefile*' -delete
 	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/data.sql
 	${RM} ${DESTDIR}${PREFIX}/share/${PKGBASE}/images.sql
 	${MV} ${DESTDIR}${PREFIX}/bin/zabbix_js \

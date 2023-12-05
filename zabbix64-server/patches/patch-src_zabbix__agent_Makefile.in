@@ -1,0 +1,15 @@
+$NetBSD$
+
+Install config file into component's example directory.
+
+--- src/zabbix_agent/Makefile.in.orig	2023-11-30 12:30:44.895642730 +0000
++++ src/zabbix_agent/Makefile.in
+@@ -1162,7 +1162,7 @@ uninstall-am: uninstall-sbinPROGRAMS
+ install-data-hook:
+ 	$(MKDIR_P) "$(DESTDIR)$(AGENT_CONFIG_FILE).d"
+ 	$(MKDIR_P) "$(DESTDIR)$(LOAD_MODULE_PATH)"
+-	test -f "$(DESTDIR)$(AGENT_CONFIG_FILE)" || cp "../../conf/zabbix_agentd.conf" "$(DESTDIR)$(AGENT_CONFIG_FILE)"
++	$(INSTALL_DATA) "../../conf/zabbix_agentd.conf" "$(DESTDIR)/${PREFIX}/share/examples/%%PKGBASE%%"
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
