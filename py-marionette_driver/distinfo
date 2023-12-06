@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (marionette_driver-3.1.0.tar.gz) = 66536f9bdc2c85f8e5fc758d07211b4beac1c3f6991f3611c408f53b768fcb52
-SHA512 (marionette_driver-3.1.0.tar.gz) = 95d5040f392cda3df5a56bec28470b8671e0520a2efdd85e89ac0fadbf1908e0e4b99fc698122a793138e60bc564787e6be07493e1d0d64d6d2a89816c4345d3
-Size (marionette_driver-3.1.0.tar.gz) = 40123 bytes
+BLAKE2s (marionette_driver-3.4.0.tar.gz) = d45bbe9fa4c388792813293a57a230304059f247f7b195133c0976d2310f30ec
+SHA512 (marionette_driver-3.4.0.tar.gz) = 0d0c632dc3d62ac155bd279e48865a886c963c31cf4bc557f4f4447bfe8e9db296b50d4efb8eafa0b8afc0190a69b0fa07bed6e7215ee594f6edf3a4a5445b4d
+Size (marionette_driver-3.4.0.tar.gz) = 40730 bytes

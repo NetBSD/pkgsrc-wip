@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	marionette_driver-3.1.0
+DISTNAME=	marionette_driver-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/marionette_driver/}
