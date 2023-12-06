@@ -1,5 +1,8 @@
 $NetBSD$
 
+BLAKE2s (opencascade-7.6.3.tar.gz) = 2d456a342d1016b46aafd4aaab7725aa63137c9dea758a1aba5fca734fc9fcad
+SHA512 (opencascade-7.6.3.tar.gz) = 0709ea71b7a9c0010a6f1fd988f3a8cdba74ef400dad1b74323c1b0785c60346a48d47ec8be7df7b72682686a3843b3e28c11eef7fec2a3a7b593629a8857eda
+Size (opencascade-7.6.3.tar.gz) = 48214346 bytes
 SHA1 (patch-CMakeLists.txt) = 0aed9c33580f915de7ff0c2800a78d00d655edc4
 SHA1 (patch-adm_cmake_occt__macros.cmake) = 132c73f4208796af25f7363e3792e825887ac3aa
 SHA1 (patch-src_DrawResources_InitEnvironment.tcl) = 436803f7b8f3e72b0c62a8df7a3b76babf9aecaf
