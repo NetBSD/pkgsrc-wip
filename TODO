@@ -110,7 +110,8 @@ Suggested package updates
 	o pike-7.8.700
 	o py-PyPE-2.9
 	o py-etmtk-3.2.31
-	o py-nethsm-0.5.0
+	o py-nethsm-1.0.0
+	o py-pynitrokey-0.4.43
 	o py-rpyc-3.2.1
 	o py-smop-0.29
 	o py-testfixtures-7.0.0
