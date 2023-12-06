@@ -2526,7 +2526,6 @@ SUBDIR+=	openbox-themes-extra
 SUBDIR+=	openbsc
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
-SUBDIR+=	opencascade
 SUBDIR+=	opencascade-git
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
