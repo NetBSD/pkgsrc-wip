@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mozprofile-2.5.0
+DISTNAME=	mozprofile-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://files.pythonhosted.org/packages/0b/39/39c8237a511a26effc53020b801e452a04cf52c2c9d9b71dcc21262903ef/
