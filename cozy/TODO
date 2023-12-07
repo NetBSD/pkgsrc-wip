@@ -1,0 +1,30 @@
+Falls during startup with:
+
+['/usr/pkg/bin/com.github.geigi.cozy']
+23:49:34 [MainThread  ] [applicatio] [INFO ]  ('netbsd', '10.99.10', '')
+23:49:34 [MainThread  ] [applicatio] [INFO ]  Starting up cozy 1.2.1
+23:49:34 [MainThread  ] [db        ] [INFO ]  SQLite version: 3.43.0
+23:49:34 [Thread-1 (ru] [peewee.sql] [INFO ]  writer received shutdown request, exiting.
+23:49:34 [MainThread  ] [applicatio] [INFO ]  libhandy version: 1
+Traceback (most recent call last):
+  File "/usr/pkg/lib/python3.11/site-packages/cozy/application.py", line 99, in do_activate
+    self.app_controller = AppController(self, main_window_builder, self.ui)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.11/site-packages/cozy/architecture/singleton.py", line 5, in __call__
+    cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.11/site-packages/cozy/app_controller.py", line 52, in __init__
+    self.whats_new_window: WhatsNewWindow = WhatsNewWindow()
+                                            ^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.11/site-packages/cozy/ui/widgets/whats_new_window.py", line 36, in __init__
+    self._fill_window()
+  File "/usr/pkg/lib/python3.11/site-packages/cozy/ui/widgets/whats_new_window.py", line 54, in _fill_window
+    last_launched_version = version.parse(self.app_settings.last_launched_version)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.11/site-packages/packaging/version.py", line 54, in parse
+    return Version(version)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/pkg/lib/python3.11/site-packages/packaging/version.py", line 200, in __init__
+    raise InvalidVersion(f"Invalid version: '{version}'")
+packaging.version.InvalidVersion: Invalid version: 'None'
+handle exception
