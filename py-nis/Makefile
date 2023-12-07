@@ -13,9 +13,16 @@ HOMEPAGE=	https://github.com/niclasr/python-nis/
 COMMENT=	NIS python module
 LICENSE=	python-software-foundation
 
+USE_TOOLS+=	pkg-config
+
 CMAKE_USE_GNU_INSTALL_DIRS=	no
 PY_PATCHPLIST=			yes
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/extension.mk"
+.if ${OPSYS} == "Linux"
+.  if ${GLIBC_VERSION:C/[0-9]\.//g} > 31
+.include "../../wip/libnsl/buildlink3.mk"
+.  endif
+.endif
 .include "../../mk/bsd.pkg.mk"
