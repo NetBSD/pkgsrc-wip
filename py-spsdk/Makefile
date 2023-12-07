@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/NXPmicro/spsdk
 COMMENT=	Open Source Secure Provisioning SDK for NXP MCU/MPU
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1crypto>=1.2:../../security/py-asn1crypto
 DEPENDS+=	${PYPKGPREFIX}-astunparse>=1.6:../../devel/py-astunparse
 DEPENDS+=	# TODO: bincopy>=17.14.5
@@ -37,6 +37,8 @@ DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.17:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	# TODO: sly<0.6>=0
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
+# TODO: check if needed
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0:../../devel/py-importlib-metadata
 
 USE_LANGUAGES=	# none
 
