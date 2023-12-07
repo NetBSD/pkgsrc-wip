@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pynitrokey-0.4.41
+DISTNAME=	pynitrokey-0.4.43
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynitrokey/}
@@ -20,9 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography>=41.0.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-fido2>=1.1.2:../../security/py-fido2
-DEPENDS+=	${PYPKGPREFIX}-frozendict>=2.3.4:../../devel/py-frozendict
 DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
-DEPENDS+=	${PYPKGPREFIX}-nethsm-[0-9]*:../../wip/py-nethsm
+DEPENDS+=	${PYPKGPREFIX}-nethsm>=1.0.0:../../wip/py-nethsm
 DEPENDS+=	${PYPKGPREFIX}-nkdfu-[0-9]*:../../sysutils/py-nkdfu
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.17.3:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
@@ -32,7 +31,6 @@ DEPENDS+=	${PYPKGPREFIX}-spsdk>=1.11.0:../../wip/py-spsdk
 DEPENDS+=	${PYPKGPREFIX}-tlv8-[0-9]*:../../devel/py-tlv8
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3.0:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-usb-[0-9]*:../../devel/py-usb
 
 USE_LANGUAGES=	# none
