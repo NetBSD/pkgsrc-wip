@@ -4027,6 +4027,7 @@ SUBDIR+=	py-nilearn
 SUBDIR+=	py-nimfa
 SUBDIR+=	py-nipy
 SUBDIR+=	py-nipy-data
+SUBDIR+=	py-nis
 SUBDIR+=	py-nlib
 SUBDIR+=	py-node-semver
 SUBDIR+=	py-nodeenv
