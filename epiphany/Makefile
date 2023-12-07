@@ -24,7 +24,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_API_DEPENDS.libdazzle+=	libdazzle>=3.35.3
 .include "../../devel/libdazzle/buildlink3.mk"
-.include "../../wip/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gcr/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"

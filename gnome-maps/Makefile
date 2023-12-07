@@ -21,7 +21,7 @@ USE_TOOLS+=		pkg-config
 .include "../../geography/geocode-glib/buildlink3.mk"
 .include "../../chat/libfolks/buildlink3.mk"
 .include "../../devel/libgee/buildlink3.mk"
-.include "../../devel/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../geography/geoclue/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../lang/gjs/buildlink3.mk"

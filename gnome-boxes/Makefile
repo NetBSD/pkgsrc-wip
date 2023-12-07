@@ -26,7 +26,7 @@ pre-configure:
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../wip/libgudev/buildlink3.mk"
-.include "../../devel/libhandy1/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../sysutils/spice-gtk/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../sysutils/gnome-tracker/buildlink3.mk"
