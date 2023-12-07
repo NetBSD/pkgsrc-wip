@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libnsl-2.0.1.tar.xz) = 810a995551643cb81410a718a0771ee27c4866d65c99267081183ef4b68e197b
+SHA512 (libnsl-2.0.1.tar.xz) = 0ffdf15b4380fc89bf11f4f64b74ed999099c0ab3ee39cafd52f933a5000f9b1ed3987c8c13533a7cd92474aadd4cc9909a2e1eabc9143f0cb11746385e5fc57
+Size (libnsl-2.0.1.tar.xz) = 281892 bytes

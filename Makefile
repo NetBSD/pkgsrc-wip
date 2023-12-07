@@ -1950,6 +1950,7 @@ SUBDIR+=	libnfc
 SUBDIR+=	libnfo
 SUBDIR+=	libnl
 SUBDIR+=	libnl1
+SUBDIR+=	libnls
 SUBDIR+=	libntfs
 SUBDIR+=	libode
 SUBDIR+=	liboglappth
