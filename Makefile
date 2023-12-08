@@ -3279,6 +3279,7 @@ SUBDIR+=	py-bibtexparser3
 SUBDIR+=	py-bicho
 SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
+SUBDIR+=	py-bincopy
 SUBDIR+=	py-biofrills
 SUBDIR+=	py-bitsets
 SUBDIR+=	py-blake2

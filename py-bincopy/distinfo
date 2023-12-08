@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (bincopy-20.0.0.tar.gz) = 5bba3d3a098068daf0dda6f7b99f046d88ec85feb437af07c539b33ee8c036ac
+SHA512 (bincopy-20.0.0.tar.gz) = 05cc54684c951ac209fa25ebdc2f60566ef93248cfa298439a2a4f6a4174e02f47476573aa580ae2d1e4b8e16e91ee8c4fee2097c375ca2c079dbbb0602b6153
+Size (bincopy-20.0.0.tar.gz) = 750646 bytes
