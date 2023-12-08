@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (commentjson-0.9.0.tar.gz) = 81fa065f5b5a9336899d85c330fc7b7f2d015bcdce4d970c3f317bf58010dc6b
+SHA512 (commentjson-0.9.0.tar.gz) = 2eeffade32185a82e023d7b5f96efb18cf1c70581c3946b0f285f9a5e1b8ea6219d22aa6478c40d049d040f19108bf1949a443cf64728282fa472d434e9259c5
+Size (commentjson-0.9.0.tar.gz) = 8653 bytes

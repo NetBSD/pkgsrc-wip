@@ -3389,6 +3389,7 @@ SUBDIR+=	py-colorcet
 SUBDIR+=	py-colored-traceback
 SUBDIR+=	py-colorpy
 SUBDIR+=	py-columnize
+SUBDIR+=	py-commentjson
 SUBDIR+=	py-commisery
 SUBDIR+=	py-complexsystems
 SUBDIR+=	py-compyle
