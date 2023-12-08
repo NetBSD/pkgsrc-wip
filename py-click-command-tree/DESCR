@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+click-command-tree
+==================
+
+`click-command-tree` is a [click](https://github.com/pallets/click) plugin to show the command tree of your CLI
+
+Installation
+------------
+
+```
+pip install click-command-tree
+```
+
+Tested against Python 3.4, 3.5, and 3.6 and click >= 5.0
+
+Example
+-------
+
+```python
+from pkg_resources import iter_entry_points
+
+...
