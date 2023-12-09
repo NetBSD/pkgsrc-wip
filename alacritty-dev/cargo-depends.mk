@@ -53,6 +53,7 @@ CARGO_CRATE_DEPENDS+=	crc32fast-1.3.2
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.8
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.16
 CARGO_CRATE_DEPENDS+=	crossfont-0.5.2
+CARGO_CRATE_DEPENDS+=	crossfont-0.6.0
 CARGO_CRATE_DEPENDS+=	cursor-icon-1.1.0
 CARGO_CRATE_DEPENDS+=	dirs-5.0.1
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.4.1
