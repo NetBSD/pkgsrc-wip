@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nessoundstudio-0.3.1
+DISTNAME=	nessoundstudio-0.3.2
 CATEGORIES=	audio
 MASTER_SITES=	https://sourceforge.net/projects/nessoundstudio/files/
 
