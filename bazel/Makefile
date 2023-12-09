@@ -17,8 +17,7 @@ EXTRACT_SUFX=	.zip
 .else
 DISTNAME=	bazel-6.4.0-dist-netbsd
 PKGNAME=	${DISTNAME:S/-dist-netbsd//}
-#MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITES=	https://www.ryoon.net/~ryoon/bazel/20231130/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 .endif
 CATEGORIES=	devel
 
@@ -44,7 +43,10 @@ REPLACE_BASH+=	scripts/*.sh
 REPLACE_BASH+=	tools/*.sh
 REPLACE_BASH+=	tools/*/*.sh
 
-MAKE_ENV+=	EXTRA_BAZEL_ARGS="--tool_java_runtime_version=local_jdk"
+EXTRA_BAZEL_ARGS+=	--tool_java_runtime_version=local_jdk
+#EXTRA_BAZEL_ARGS+=	--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+#EXTRA_BAZEL_ARGS+=	--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
+MAKE_ENV+=	EXTRA_BAZEL_ARGS=${EXTRA_BAZEL_ARGS:Q}
 
 INSTALLATION_DIRS+=	bin
 
@@ -53,7 +55,7 @@ do-patch:
 
 pre-configure:
 	${FIND} ${WRKSRC} | ${GREP} '\.orig$$' | xargs ${RM}
-	# TODO: Honor environment variables
+	# Do not use wrapped toolchain after installation
 	${RM} -r ${WRKDIR}/.cwrapper
 
 do-build:

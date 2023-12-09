@@ -7,7 +7,7 @@ $NetBSD$
  # define HAVE_PROCSTAT
  # define STANDARD_JAVABASE "/usr/local/openjdk8"
 +#elif defined(__NetBSD__)
-+# define STANDARD_JAVABASE "/usr/pkg/java/openjdk17"
++# define STANDARD_JAVABASE "/usr/pkg/java/openjdk11"
  #elif defined(__OpenBSD__)
  # define STANDARD_JAVABASE "/usr/local/jdk-17"
  #else

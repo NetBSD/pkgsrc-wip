@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (bazel-6.4.0-dist-netbsd.tar.gz) = 7ea455aa75176cea36f261671b827b433d0ffb15acb653740d867757c213e5b2
-SHA512 (bazel-6.4.0-dist-netbsd.tar.gz) = 71b2fe9ebd635b4d7fd69a50e4ef8897154016e3e3d400c2bf0eda0e1bc56006d75518de971760fd8c35576832cd33a0d6e62b89d052d872e005280d72a9464d
-Size (bazel-6.4.0-dist-netbsd.tar.gz) = 198661276 bytes
+BLAKE2s (bazel-6.4.0-dist-netbsd.tar.gz) = b334d922c89eaaa175e211be15efce81712c744a9fbfd78ab83a0263c139796d
+SHA512 (bazel-6.4.0-dist-netbsd.tar.gz) = 0a974c72ac6f5d1ad0804c01653677cd88d3e7666e1f1588836d5b405dc5e2edbbbd66b191b49808855d79d4712de24bedff9fe2f24b60506a869da4e5b84c10
+Size (bazel-6.4.0-dist-netbsd.tar.gz) = 198661237 bytes
 SHA1 (patch-distdir__deps.bzl) = 83dead7d5c7374ae7ada4feec5ec3bbd18d9112b
 SHA1 (patch-scripts_bootstrap_buildenv.sh) = 7590cf62b1b7abe722addeddd3d4f0595ebc2a1f
 SHA1 (patch-scripts_packages_BUILD) = 9cbd73caefe9f7b1b23cbbedf3657ee849d4dfdc
@@ -11,7 +11,7 @@ SHA1 (patch-src_BUILD) = cd8858313bec19f56c148944eea0962c9ef83d98
 SHA1 (patch-src_conditions_BUILD) = 5e099200f294e5905a09d323d95161784586e91c
 SHA1 (patch-src_conditions_BUILD.tools) = aec0d6cb07d19229a0e29827b4716c35816c4a7e
 SHA1 (patch-src_main_cpp_BUILD) = f14c549105eeba47593842569822fb2f65a01479
-SHA1 (patch-src_main_cpp_blaze__util__bsd.cc) = dda2e930455ff85a207779f14ec8ee677e99adc7
+SHA1 (patch-src_main_cpp_blaze__util__bsd.cc) = 1495bac14b4644e5317c4866bcfa2941eb99af34
 SHA1 (patch-src_main_java_com_google_devtools_build_lib_analysis_ShellConfiguration.java) = 2030b61056c3919b68dfa22a133e2c66f14ad3c7
 SHA1 (patch-src_main_java_com_google_devtools_build_lib_analysis_config_AutoCpuConverter.java) = 2e4158f0c25afab27abf4316f0580ba99cbbd1eb
 SHA1 (patch-src_main_java_com_google_devtools_build_lib_bazel_repository_LocalConfigPlatformFunction.java) = fb8e2c15b99af685daffa23577da09223fc8cd4b
@@ -44,7 +44,7 @@ SHA1 (patch-third__party_abseil-cpp_netbsd-sunos.patch) = c9ff33d2c331312736db8f
 SHA1 (patch-third__party_grpc_netbsd-config.patch) = ea14e800a118a3541356c00df5d8edb1aed309fa
 SHA1 (patch-third__party_zstd-jni_zstd-jni.BUILD) = 338d636638b429da3f8a695cc15010174651dd23
 SHA1 (patch-tools_cpp_BUILD.static.bsd) = af9e8cf9f2f069bc4264f4ab3e57aa1e8686946a
-SHA1 (patch-tools_cpp_bsd__cc__toolchain__config.bzl) = 369dbfe8b29749cb8aa7dff66dd6cadc8a7190b9
+SHA1 (patch-tools_cpp_bsd__cc__toolchain__config.bzl) = afde4de9ac788a615429b39fa7b297551963cc34
 SHA1 (patch-tools_cpp_cc__configure.bzl) = 24cd5bb7b7a09d12853a7b19a8c41b875a51a30f
 SHA1 (patch-tools_cpp_lib__cc__configure.bzl) = 02a5c867e61f7f59fa2fd61e70548c25448aa366
 SHA1 (patch-tools_cpp_unix__cc__configure.bzl) = a5d181c89fd032e02032d27d0189a8db6a936de4
