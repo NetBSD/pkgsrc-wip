@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opencascade
 OPENCASCADE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencascade+=	opencascade>=7.0.0
-BUILDLINK_PKGSRCDIR.opencascade?=	../../wip/opencascade-git
+BUILDLINK_PKGSRCDIR.opencascade?=	../../wip/opencascade
 
 BUILDLINK_INCDIRS.opencascade+=		include/opencascade
 CMAKE_ARGS+=				-DOCC_INCLUDE_DIR=${BUILDLINK_PREFIX.opencascade}/include/opencascade
