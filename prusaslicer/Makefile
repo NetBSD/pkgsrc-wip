@@ -71,7 +71,7 @@ pre-configure:
 .include "../../wip/libbgcode/buildlink3.mk"
 .include "../../wip/nanosvg/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
-.include "../../wip/opencascade-git/buildlink3.mk"
+.include "../../wip/opencascade/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
