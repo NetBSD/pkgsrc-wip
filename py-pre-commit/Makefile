@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pre_commit-3.5.0
+DISTNAME=	pre_commit-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pre_commit/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pre-commit.com/
 COMMENT=	Framework for managing and maintaining multi-language pre-commit hook
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # upstream dropped support
 
 DEPENDS+=	${PYPKGPREFIX}-cfgv>=2.0.0:../../wip/py-cfgv
 DEPENDS+=	${PYPKGPREFIX}-identify>=1.0.0:../../wip/py-identify
@@ -25,5 +25,5 @@ REPLACE_PYTHON=	pre-commit.py
 REPLACE_BASH=	pre_commit/resources/hook-tmpl
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
