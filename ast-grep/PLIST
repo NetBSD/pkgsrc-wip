@@ -1,3 +1,2 @@
 @comment $NetBSD$
-bin/ast-grep
 bin/sg
