@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:46 asau Exp $
-#
+# $NetBSD$
 
-DISTNAME=	opencascade-7.6.3
-PKGREVISION=	1
+DISTNAME=	opencascade-7.7.0
 CATEGORIES=	cad
 MASTER_SITES=	-http://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=refs/tags/V${PKGVERSION_NOREV:S/./_/g};sf=tgz
 
@@ -10,26 +8,27 @@ MAINTAINER=	stix@stix.id.au
 HOMEPAGE=	http://www.opencascade.org/
 COMMENT=	Software development platform for 3D CAD CAM CAE
 LICENSE=	gnu-lgpl-v2.1
+
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
+USE_TOOLS+=	bash:run
 WRKSRC=		${WRKDIR}/occt-V${PKGVERSION_NOREV:S/./_/g}
 
-USE_CMAKE=	yes
-USE_TOOLS+=	bash
-USE_LANGUAGES=	c c++
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
-REPLACE_BASH+=	adm/templates/*
-REPLACE_BASH+=	*
+CMAKE_ARGS+=	-DUSE_FREETYPE=ON
+CMAKE_ARGS+=	-DUSE_EIGEN=ON
+CMAKE_ARGS+=	-DUSE_RAPIDJSON=ON
+CMAKE_ARGS+=	-DBUILD_DOC_Overview=OFF
 
-CHECK_PORTABILITY_SKIP+=	samples/qt/*
+REPLACE_BASH+=	adm/templates/draw.sh
 
+CXXFLAGS.SunOS+=		-DSOLARIS=1
+LDFLAGS.SunOS+=			-lnsl
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
-# Required for proper alloca(3) support on NetBSD
-BUILDLINK_TRANSFORM+=		opt:-std=c++0x:-std=gnu++11
-LDFLAGS+=			-lexecinfo
-CMAKE_ARGS=			-DINSTALL_DIR_SCRIPT=${DISTNAME}.script
 
-# HACK
 post-install:
-	${RUN} chmod go-w ${DESTDIR}${PREFIX}/bin/*
 	${RUN} rm -f ${DESTDIR}${PREFIX}/share/opencascade/resources/DrawResources/InitEnvironment.tcl.orig
 
 SUBST_CLASSES+=			cmakebinletter
@@ -38,6 +37,27 @@ SUBST_MESSAGE.cmakebinletter=	Fixing $$OCCT_INSTALL_BIN_LETTER in cmake files
 SUBST_FILES.cmakebinletter=	${DESTDIR}${PREFIX}/lib/cmake/opencascade/*.cmake
 SUBST_SED.cmakebinletter=	-e 's/\\$${OCCT_INSTALL_BIN_LETTER}//g'
 
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
+.include "../../mk/compiler.mk"
+
+.if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
+	(defined(ABI) && ${ABI} == "64")
+.  if !empty(PKGSRC_COMPILER:Mclang)
+OCCT_CUSTOM_COMPILER_DRIVER=	custom_clang_64.sh
+.  else
+OCCT_CUSTOM_COMPILER_DRIVER=	custom_gcc_64.sh
+.  endif
+.else
+.  if !empty(PKGSRC_COMPILER:Mclang)
+OCCT_CUSTOM_COMPILER_DRIVER=	custom_clang_32.sh
+.  else
+OCCT_CUSTOM_COMPILER_DRIVER=	custom_gcc_32.sh
+.  endif
+.endif
+
+PLIST_SUBST=	OCCT_CUSTOM_COMPILER_DRIVER=${OCCT_CUSTOM_COMPILER_DRIVER:Q}
+
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
+.include "../../textproc/rapidjson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
