@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (memray-1.11.0.tar.gz) = ae38b72a2f3d637f14e0b6401ff5dafeef4a94a2d3e86908689af40b4738e72d
+SHA512 (memray-1.11.0.tar.gz) = 0647655c129950f71eeed97124378d693c9f6a001ae42fbaa7ca1c01f9c01f768f52eeceb9d7fa42f3f12a6bd09bdd87c367e09b90cc494f9935f41759dab239
+Size (memray-1.11.0.tar.gz) = 1060236 bytes
+SHA1 (patch-Makefile) = 5fba7c44efe7e16f6c77821eef107d7ee27e0a59
+SHA1 (patch-setup.py) = 2e6e90750a413f3e737b70c972062705e7f789f4

@@ -1,0 +1,3 @@
+Does not officially support NetBSD.
+Patches to fake NetBSD as Linux started, but needs C++ fixes now
+(memalign, template issue)

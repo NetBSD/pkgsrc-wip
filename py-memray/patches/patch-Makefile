@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix unportable test(1) operator.
+
+--- Makefile.orig	2023-12-04 20:06:55.000000000 +0000
++++ Makefile
+@@ -135,7 +135,7 @@ gh-pages:  ## Publish documentation on G
+ 	$(eval GIT_REMOTE := $(shell git remote get-url $(UPSTREAM_GIT_REMOTE)))
+ 	$(eval COMMIT_HASH := $(shell git rev-parse HEAD))
+ 	touch $(HTMLDIR)/.nojekyll
+-	@echo -n "Documentation ready, push to $(GIT_REMOTE)? [Y/n] " && read ans && [ $${ans:-Y} == Y ]
++	@echo -n "Documentation ready, push to $(GIT_REMOTE)? [Y/n] " && read ans && [ $${ans:-Y} = Y ]
+ 	git init $(HTMLDIR)
+ 	GIT_DIR=$(HTMLDIR)/.git GIT_WORK_TREE=$(HTMLDIR) git add -A
+ 	GIT_DIR=$(HTMLDIR)/.git git commit -m "Documentation for commit $(COMMIT_HASH)"
