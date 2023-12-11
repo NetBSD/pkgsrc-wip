@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.04
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.05
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -44,8 +44,10 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 ## BUILD TOOLS
 
-# Builds in the venv will use pkg-config, and invoke rust and gfortran.
+# Builds in the venv will use cmake, pkg-config, and invoke rust and
+# gfortran.									      
 # NB: One must add gfortran's bindir to the PATH for the venv build.
+DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 
 RUST_RUNTIME=	yes		# record a dependency
