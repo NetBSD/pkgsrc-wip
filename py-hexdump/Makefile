@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	hexdump-3.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hexdump/}
 EXTRACT_SUFX=	.zip
