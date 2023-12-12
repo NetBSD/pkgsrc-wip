@@ -3730,6 +3730,7 @@ SUBDIR+=	py-hdfs
 SUBDIR+=	py-helio
 SUBDIR+=	py-hepcrawl
 SUBDIR+=	py-hessianfree
+SUBDIR+=	py-hexdump
 SUBDIR+=	py-hfk
 SUBDIR+=	py-hg-git-devel
 SUBDIR+=	py-hgapi

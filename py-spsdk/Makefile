@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-crcmod>=0:../../security/py-crcmod
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.4.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-deepmerge>=0:../../wip/py-deepmerge
 DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.15.1:../../textproc/py-fastjsonschema
-DEPENDS+=	# TODO: hexdump<3.4>=0
+DEPENDS+=	${PYPKGPREFIX}-hexdump>=0:../../wip/py-hexdump
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
 DEPENDS+=	# TODO: libusbsio>=2.1.11
 DEPENDS+=	# TODO: oscrypto<1.4>=0
