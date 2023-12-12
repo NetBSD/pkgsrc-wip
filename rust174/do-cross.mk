@@ -53,7 +53,7 @@ TGT.mipsel=		mipsel-unknown-netbsd
 TGT.riscv64=		riscv64gc-unknown-netbsd
 
 # Optional target tweak for bootstrap files
-TT.powerpc=		powerpc-unknown-netbsd90
+#TT.powerpc=		powerpc-unknown-netbsd90
 
 WRKDIR=		${.CURDIR}/work
 SCRIPTS=	${WRKDIR}/scripts

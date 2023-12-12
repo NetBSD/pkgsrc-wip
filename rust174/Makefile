@@ -27,6 +27,8 @@ BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-*arm*
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-aarch64
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-sparc64
+BROKEN_ON_PLATFORM+=	NetBSD-8.*-powerpc
+BROKEN_ON_PLATFORM+=	NetBSD-8.*-i386
 
 HAS_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
@@ -76,6 +78,10 @@ MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 MAKE_ENV.SunOS+=	AR=gar
+
+# Debugging of crate resolution
+# Annoyingly, this makes the powerpc build succeed...
+#MAKE_ENV+=		RUSTC_LOG=rustc_metadata
 
 #UNLIMIT_RESOURCES+=	cputime stacksize datasize virtualsize
 UNLIMIT_RESOURCES+=	cputime stacksize datasize
@@ -315,25 +321,14 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.73.0
-RUST_ARCH=		powerpc-unknown-netbsd
+RUST_ARCH=		powerpc-unknown-netbsd-nb1
 
 # Cross-built against NetBSD 9.0
-.  if empty(OS_VERSION:M8.*) || make(distinfo) || make(makesum) || make(mdi)
-RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.xz
-RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.xz
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
-.  endif
-
-# Cross-built against NetBSD 8.0
-#.  if !empty(OS_VERSION:M8.*) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-#RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-#DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
-#SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
-#SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
-#.  endif
 
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
