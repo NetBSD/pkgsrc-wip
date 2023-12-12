@@ -26,7 +26,8 @@ DEPENDS+=	${PYPKGPREFIX}-deepmerge>=0:../../wip/py-deepmerge
 DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.15.1:../../textproc/py-fastjsonschema
 DEPENDS+=	${PYPKGPREFIX}-hexdump>=0:../../wip/py-hexdump
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-DEPENDS+=	# TODO: libusbsio>=2.1.11
+# libusbsio is a Linux/macOS/Windows-specific library
+#DEPENDS+=	libusbsio>=2.1.11:../../wip/libusbsio
 DEPENDS+=	# TODO: oscrypto<1.4>=0
 DEPENDS+=	# TODO: pylink-square>=1.0
 DEPENDS+=	# TODO: pyocd-pemicro>=1.1.5

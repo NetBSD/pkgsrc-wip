@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (libusbsio-2.1.11-src.zip) = fcbb1f071f1ad0c8b4cf27f76c6b9263e06070a57d1f58841cfc3411bff2b47c
+SHA512 (libusbsio-2.1.11-src.zip) = 200717be44cdb2bb7cc7eeba29afb6aed8a88a72e7664377c1abf8c1d1f88f7de1ed05c9a7d6c960ae53e4b9420889c252d51fd807b1534396430004138518a0
+Size (libusbsio-2.1.11-src.zip) = 2534221 bytes
+SHA1 (patch-makefile) = 7ce4ea8c1fa8025dd98cb7f96bea579d1244b9d5

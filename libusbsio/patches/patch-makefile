@@ -1,0 +1,14 @@
+$NetBSD$
+
+XXX: handle everything like Linux. Of course, this doesn't work.
+
+--- makefile.orig	2023-12-12 18:22:44.704028197 +0000
++++ makefile
+@@ -11,6 +11,7 @@ CXX = g++
+ AR = ar -rcs
+ UNAME := $(shell uname)
+ UNAME_M := $(shell uname -m)
++UNAME=Linux
+ 
+ VPATH := src
+ SRCS := lpcusbsio.c hid.c

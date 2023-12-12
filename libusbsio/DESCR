@@ -1,0 +1,12 @@
+The USB serial I/O library (LIBUSBSIO) is a library and associated
+API provided for programmers to develop host-side applications to
+communicate with serial I/O devices connected to via the USB bridge
+on LPC-Link2 and MCU-Link debug probes on supported NXP microcontroller
+evaluation boards. The standalone MCU-Link Pro debug probe is also
+supported. The LIBUSBIO library converts all API calls into USB
+messages which are transferred to the debug probe, which in turn
+communicates a target devices via I2C, SPI or GPIO interfaces. To
+make the USB device install free on host systems, LPCUSBSIO uses
+USB-HID class as the transport mechanism. The LIBUSBSIO library
+may also be used with the MCUXpresso SEC provisioning tools and
+the NXP Secure Provisioning SDK.

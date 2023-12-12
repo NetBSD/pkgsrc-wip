@@ -2019,6 +2019,7 @@ SUBDIR+=	libunwind
 SUBDIR+=	libunwind-git
 SUBDIR+=	liburing
 SUBDIR+=	libusbmuxd
+SUBDIR+=	libusbsio
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
