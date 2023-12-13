@@ -10,10 +10,3 @@
 
   It's a weak dependency / suggested package.  If libreswan is
   using syslog, say, it isn't needed.
-
-  During install, libreswan creates logrotate.d and then installs
-  a logrotate file.  It doesn't install the file in examples
-  (which begs the question where).
-
-- fix handling of config files - install into share/examples/libreswan
-  and use CONF_FILES
