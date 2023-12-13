@@ -12,3 +12,13 @@ $NetBSD$
  #include <QPoint>
  #include <QResizeEvent>
  #include <QScrollBar>
+@@ -36,7 +37,8 @@
+ #include <QtDebug>
+ #include <QtGlobal>
+ 
+-#include <gsl/gsl_util>
++#include <gsl/narrow>
++#include <gsl/util>
+ #include <memory>
+ 
+ #define EMIT_EVENT_0(name)                                       \

@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	nedit-ng
-GITHUB_TAG=	refs/tags/2020.1
 DISTNAME=	2020.1
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eteran/}
+GITHUB_PROJECT=	nedit-ng
+GITHUB_TAG=	refs/tags/2020.1
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,8 +16,9 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	bison
 BISON_REQD=	3.0
-USE_CMAKE=	yes
 USE_LANGUAGES=	c++
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/c++gsl/buildlink3.mk"
