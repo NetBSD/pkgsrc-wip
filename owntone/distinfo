@@ -1,7 +1,5 @@
 $NetBSD$
 
-BLAKE2s (owntone-28.6.tar.xz) = 3dd03ef0d1e224fec4bbc3b762d0e37cbc924d0fea41d4eda716e6062b489520
-SHA512 (owntone-28.6.tar.xz) = 9dfda8af99467f7df7d0c7c4cc6bf95a4c0ef8b36587257811f34d6bc7cc565d6f6f8dacc911481985d582d84dce5dbaab12461292bc86c162af26bdfe8c78e2
-Size (owntone-28.6.tar.xz) = 1057232 bytes
-SHA1 (patch-src_outputs_raop.c) = 4f695e2a6a3e8e94dd0aa3fa8b54617b94f62911
-SHA1 (patch-src_outputs_rtp_common.c) = 5408269a4c54e9a3663a951bdaa2eaa4e3f88c11
+BLAKE2s (owntone-28.8.tar.xz) = 2e64fb80bf6e85250bb39bb65647903c40d4c77dad4b667e8431e0200f83526f
+SHA512 (owntone-28.8.tar.xz) = a4c01cd9ec55107c30a140366cfe9f00b0092d56629960e2372f0b14272b9b1145e84bb7e56d51d251dab7ae926c0cc36d3a83a0c2953e2e3ef96635bfefaff1
+Size (owntone-28.8.tar.xz) = 1058048 bytes
