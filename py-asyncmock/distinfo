@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (asyncmock-0.4.2.tar.gz) = 4fa1130c7afb60a3624144c6ef1fecfe9cb62dc594c740c1910c0bae6618fa43
+SHA512 (asyncmock-0.4.2.tar.gz) = b421849eda8edddd9e5d12b90ed3544ae164b890deff4052d5be252d65b9ad11ee32a45250de1e103fc84d5de06bf05d76aacaa4b907b1b784ccc18135674959
+Size (asyncmock-0.4.2.tar.gz) = 3191 bytes

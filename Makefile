@@ -3240,6 +3240,7 @@ SUBDIR+=	py-astropy5
 SUBDIR+=	py-astroquery
 SUBDIR+=	py-astroscrappy
 SUBDIR+=	py-async
+SUBDIR+=	py-asyncmock
 SUBDIR+=	py-asynctest
 SUBDIR+=	py-atmark
 SUBDIR+=	py-atmos

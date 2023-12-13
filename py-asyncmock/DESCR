@@ -1,0 +1,9 @@
+Awaitable mocks for async code.
+
+Not recommended for new projects!
+
+Mock 4.0+ (included within Python 3.8+) now includes an awaitable
+mock mock.AsyncMock.
+
+The package specifically only extends mock and not any other part
+of unittest.
