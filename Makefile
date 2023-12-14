@@ -5654,7 +5654,6 @@ SUBDIR+=	wings
 SUBDIR+=	winwrangler
 SUBDIR+=	wip-tools
 SUBDIR+=	wipeout-rewrite
-SUBDIR+=	wireguard-go
 SUBDIR+=	wireless-tools
 SUBDIR+=	wireshark2
 SUBDIR+=	wise2
