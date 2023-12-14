@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.7.0.tar.gz) = e6f2f3c46f61560f9a9480e70275c99acbff57daba501b922847a986ba16b366
-SHA512 (PrusaSlicer-2.7.0.tar.gz) = 787ba0a9c773a1cf0bf96f311cda13ba5c6354a36d893cfd2c1d0694b5cc438a6c8e0b88b34608d7dee049153c08a75ab419518e287b3a815e64f33b8b84dbe6
-Size (PrusaSlicer-2.7.0.tar.gz) = 64973946 bytes
+BLAKE2s (PrusaSlicer-2.7.1.tar.gz) = 16debd3190831580b52cc7ea25f140562c9d12c41a6b3c04dda76472e2507273
+SHA512 (PrusaSlicer-2.7.1.tar.gz) = 20037164b8a8853e2f30a5ed613e0da1d02d6fa581c21ef67a51e90af3c33a98eb75e0b3a203adfb8ed7bc67f32de7ea598f3f0ab9c68341738db0c1c1974b3d
+Size (PrusaSlicer-2.7.1.tar.gz) = 64975776 bytes
 SHA1 (patch-CMakeLists.txt) = 33eb39d85ba7b33226f2cc022250872c3ffa28d8
 SHA1 (patch-cmake_modules_FindOpenVDB.cmake) = 4f2afc423a70fe60617b33ff7f26859b39775faa
 SHA1 (patch-src_CMakeLists_txt) = 24e0b8e6512b2a3f84204b03d8161aca903748a1
