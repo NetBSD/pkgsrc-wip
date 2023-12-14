@@ -7,7 +7,7 @@ MASTER_SITES=	https://sourceforge.net/projects/ruby-fast-colonization/files/
 MAINTAINER=	zara.mage@yahoo.com
 HOMEPAGE=	https://sourceforge.net/projects/ruby-fast-colonization/
 COMMENT=	A Colonization game	
-LICENSE=	modified-bsd
+LICENSE=	GPLv2	
 
 WRKSRC=		${WRKDIR}/ruby-fast-colonization
 USE_LANGUAGES= 	ruby	
