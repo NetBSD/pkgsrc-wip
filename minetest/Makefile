@@ -13,7 +13,7 @@ DISTFILES+=		minetest.tar.gz
 DISTFILES+=		irrlicht.tar.gz
 IRRLICHT_VERSION=	1.9.0mt13
 SITES.minetest.tar.gz=	\
--https://github.com/minetest/minetest/archive/${PKGVERSION_NOREV}.tar.gz
+	-https://github.com/minetest/minetest/archive/${PKGVERSION_NOREV}.tar.gz
 SITES.irrlicht.tar.gz=	\
 	-https://github.com/minetest/irrlicht/archive/${IRRLICHT_VERSION}.tar.gz
 
