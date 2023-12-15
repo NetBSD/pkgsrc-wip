@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.10/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ekiga.net/
 COMMENT=	Portable Windows Libary
 # modified-bsd stands for Spencer's regex license, quite similar

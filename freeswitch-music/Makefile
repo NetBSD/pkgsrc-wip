@@ -7,7 +7,7 @@ MASTER_SITES=	http://files.freeswitch.org/
 DIST_SUBDIR=	freeswitch
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	darcy@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FreeSwitch Music - All Bitrates
 LICENSE=	mpl-1.1
 
