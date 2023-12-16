@@ -951,7 +951,6 @@ SUBDIR+=	frida-capstone
 SUBDIR+=	frida-glib2
 SUBDIR+=	frida-gum
 SUBDIR+=	frida-libffi
-SUBDIR+=	fritzbox_exporter
 SUBDIR+=	frobby
 SUBDIR+=	frobtads
 SUBDIR+=	frogatto

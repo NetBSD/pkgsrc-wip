@@ -1,3 +1,0 @@
-@comment $NetBSD$
-bin/fritzbox_exporter
-share/doc/fritzbox_exporter/README.md
