@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/dte
+man/man1/dte.1
+man/man5/dte-syntax.5
+man/man5/dterc.5
+share/applications/dte.desktop
+share/bash-completion/completions/dte
+share/metainfo/dte.appdata.xml
