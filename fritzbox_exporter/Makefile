@@ -1,8 +1,9 @@
 # $NetBSD: Makefile,v 1.18 2015/09/13 07:33:05 thomasklausner Exp $
 
-PKGNAME=	fritzbox_exporter-1.1.0
-CATEGORIES=	games
-GIT_REPO=	https://github.com/ndecker/fritzbox_exporter.git
+DISTNAME=	fritzbox_exporter-1.1.0
+CATEGORIES=	sysutils
+MASTER_SITES+=	${MASTER_SITE_GITHUB:=ndecker/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ndecker/fritzbox_exporter
@@ -33,5 +34,4 @@ post-install:
 .include "go-modules.mk"
 
 .include "../../lang/go/go-module.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
