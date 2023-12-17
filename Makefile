@@ -2704,7 +2704,6 @@ SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
 SUBDIR+=	p5-Google-API-Client
-SUBDIR+=	p5-Gtk2-Spell
 SUBDIR+=	p5-HTML-Formatter
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
