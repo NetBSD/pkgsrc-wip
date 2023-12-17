@@ -1283,6 +1283,7 @@ SUBDIR+=	gr-fcdproplus
 SUBDIR+=	gr-fcdproplus-git
 SUBDIR+=	gr-gsm
 SUBDIR+=	grabtitle-git
+SUBDIR+=	grafana
 SUBDIR+=	gramscii
 SUBDIR+=	grandr
 SUBDIR+=	granite
