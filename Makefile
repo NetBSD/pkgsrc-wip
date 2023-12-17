@@ -5136,6 +5136,7 @@ SUBDIR+=	snallygaster-git
 SUBDIR+=	snark
 SUBDIR+=	sndio
 SUBDIR+=	snes9express
+SUBDIR+=	snmp_exporter
 SUBDIR+=	socklog
 SUBDIR+=	softether
 SUBDIR+=	softflowd

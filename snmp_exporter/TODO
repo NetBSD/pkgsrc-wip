@@ -1,0 +1,6 @@
+Fails to link against libnetsnmp, and I can't find the magic values
+to pass to GO_BUILD_PATTERN:
+
+# github.com/prometheus/snmp_exporter/generator
+/usr/pkg/go121/pkg/tool/netbsd_amd64/link: running gcc failed: exit status 1
+ld: cannot find -lnetsnmp: No such file or directory
