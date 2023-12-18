@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# aerc
+
+[![builds.sr.ht status](https://builds.sr.ht/~rjarry/aerc.svg)](https://builds.sr.ht/~rjarry/aerc)
+[![GitHub macOS CI status](https://github.com/rjarry/aerc/actions/workflows/macos.yml/badge.svg)](https://github.com/rjarry/aerc/actions/workflows/macos.yml)
+
+[aerc](https://sr.ht/~rjarry/aerc/) is an email client for your terminal.
+
+This is a fork of [the original aerc](https://git.sr.ht/~sircmpwn/aerc)
+by Drew DeVault.
+
+A short demonstration can be found on [https://aerc-mail.org/](https://aerc-mail.org/)
+
+Join the IRC channel: [#aerc on irc.libera.chat](http://web.libera.chat/?channels=aerc&uio=d4)
+for end-user support, and development.
+
+## Usage
+
+On its first run, aerc will copy the default config files to `~/.config/aerc`
+on Linux or `~/Library/Preferences/aerc` on MacOS (or `$XDG_CONFIG_HOME/aerc` if set)
+and show the account configuration wizard.
+...
