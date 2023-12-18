@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ast-grep-0.14.2
+DISTNAME=	ast-grep-0.15.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ast-grep/}
 
