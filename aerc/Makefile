@@ -18,10 +18,10 @@ USE_LANGUAGES=	c go
 TOOL_DEPENDS+=	go118>=1.18.0:../../lang/go118
 TOOL_DEPENDS+=	scdoc:../../textproc/scdoc
 
-REPLACE_INTERPRETER+=	env
-REPLACE.env.old=	.*/bin/env
-REPLACE.env.new=	${PREFIX}/bin/env
-REPLACE_FILES.env=	contrib/carddav-query
-REPLACE_FILES.env=	filters/show-ics-details.py
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	.*/usr/bin/env python3
+REPLACE.python.new=	${PREFIX}/bin/python3.11
+REPLACE_FILES.python+=	contrib/carddav-query
+REPLACE_FILES.python+=	filters/show-ics-details.py
 
 .include "../../mk/bsd.pkg.mk"

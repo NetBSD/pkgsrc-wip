@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- GNUmakefile.orig	2023-12-18 12:58:29.074685927 +0000
++++ GNUmakefile
+@@ -6,7 +6,7 @@ BINDIR ?= $(PREFIX)/bin
+ SHAREDIR ?= $(PREFIX)/share/aerc
+ LIBEXECDIR ?= $(PREFIX)/libexec/aerc
+ MANDIR ?= $(PREFIX)/share/man
+-GO ?= go
++GO ?= go118
+ GOFLAGS ?= $(shell contrib/goflags.sh)
+ BUILD_OPTS ?= -trimpath
+ GO_LDFLAGS :=
