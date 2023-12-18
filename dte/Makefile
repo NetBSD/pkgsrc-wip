@@ -18,6 +18,4 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
-.include "../../mk/curses.buildlink3.mk"
-.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
