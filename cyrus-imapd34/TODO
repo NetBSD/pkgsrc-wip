@@ -1,0 +1,35 @@
+The latest cyrus-imapd package in pkgsrc currently is in the 2.4.x series.
+In order to upgrade to 3.8.x (the latest stable series), it is necessary
+to upgrade through 3.2.x, 3.4.x, or 3.6.x. But the 3.6.x series and later
+have dropped support for upgrading from prior to 3.0.x. So, we need a 3.2.x
+or 3.4.x series package as an intermediate step. This package aims to fill
+that need.
+
+Done:
+
+- Built based on mp@petermann-it.de's work in wip on the cyrus-imapd30
+  and cyrus-imapd36 packages.
+- Tested on a SmartOS (Illumos) dev system and then a system with active
+  users with various clients. Tested configurations included Kerberos and
+  sasldb authentication and tcp_wrappers support.
+
+Next steps:
+
+- Is it possible to obtain cyrus.conf and imapd.conf from the work
+  directory work/.destdir/opt/local/share/examples/cyrus-imapd instead
+  of having identical copies in files?
+- Consider mving binaries from /opt/local/{bin,sbin,libexec} to
+  /opt/local/cyrus, as cyrus-imapd24 does.
+- cyradm script ends up with the #!/build/dir/.tools/bin/sh as the
+  interpreter path, which doesn't work.
+- ./configure ends up with an argument:
+  -htmldir=/var/tmp/pkgsrc-build/wip/cyrus-imapd34/work/.destdir/opt/local/share/doc/cyrus-imapd
+- ./configure ends up with both --without-sqlite and --with-sqline=/opt/local
+- Make sure the package creates the cyrus user
+- Add SMF config
+
+Bugs:
+
+- Kerberos support, PostgreSQL and MySQL are currently not tested
+
+For questions, tips or offers of help you can contact me at mp@petermann-it.de

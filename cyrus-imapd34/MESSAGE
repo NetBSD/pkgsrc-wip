@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: $
+
+Please refer to:
+
+	${PREFIX}/share/doc/cyrus-imapd/imap/installing.html
+
+for more detailed instructions on setting up or upgrading the environment
+before starting the Cyrus IMAP server.
+
+For users upgrading from < 3.0.x:
+
+The mailbox format has changed, so an upgrade process is required. You can
+upgrade by replicating to a new server or shut down the existing server
+and upgrade in place.
+
+Please refer the 3.4.x migration instructions for more details on upgrading:
+
+	https://www.cyrusimap.org/3.4/imap/download/upgrade.html
+
+===========================================================================

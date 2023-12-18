@@ -1,0 +1,5 @@
+$NetBSD: $
+
+BLAKE2s (cyrus-imapd-3.4.6.tar.gz) = 71eca246ebfab6233eb443de9d801289e5a00833bde1ecf69043257f997c7c9b
+SHA512 (cyrus-imapd-3.4.6.tar.gz) = 7df520e4c01afb2660b9e814c3dd3e0f0d055a0e237c350cd548bd2d90a5311f4f3e12a5f2e69b114814def9541ad78cb16a16b70dd6b9478636c64eaefb0c72
+Size (cyrus-imapd-3.4.6.tar.gz) = 13288546 bytes
