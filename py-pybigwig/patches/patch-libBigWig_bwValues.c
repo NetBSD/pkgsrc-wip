@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Resolve conflict with macro in standard headers on FreeBSD
+
 --- libBigWig/bwValues.c.orig	2023-12-16 13:51:54 UTC
 +++ libBigWig/bwValues.c
 @@ -5,7 +5,7 @@

@@ -17,5 +17,6 @@ LICENSE=	mit
 
 .include "../../lang/python/egg.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../math/py-numpy/buildlink3.mk"
+#.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
