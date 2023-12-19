@@ -1,5 +1,8 @@
 $NetBSD$
 
+* GCC 10.5.0 with -isystem, absolute path and symlink generates unexpected
+  .d file when -MD is specified. Bazel would not accept such .d files.
+
 --- tools/cpp/bsd_cc_toolchain_config.bzl.orig	2023-12-05 16:43:07.613565028 +0000
 +++ tools/cpp/bsd_cc_toolchain_config.bzl
 @@ -56,7 +56,7 @@ all_link_actions = [
@@ -19,7 +22,7 @@ $NetBSD$
 +    if is_bsd and not (cpu == "netbsd"):
          cxx_builtin_include_directories = ["/usr/lib/clang", "/usr/local/include", "/usr/include"]
 +    elif (cpu == "netbsd"):
-+        cxx_builtin_include_directories = ["/usr/pkg/include", "/usr/include"]
++        cxx_builtin_include_directories = ["@PREFIX@/lib/clang", "@PREFIX@/include", "/usr/include"]
      else:
          cxx_builtin_include_directories = []
  
@@ -30,7 +33,7 @@ $NetBSD$
              tool_path(name = "cpp", path = "/usr/bin/cpp"),
              tool_path(name = "dwp", path = "/usr/bin/dwp"),
 -            tool_path(name = "gcc", path = "/usr/bin/clang"),
-+            tool_path(name = "gcc", path = "/usr/bin/gcc"),
++            tool_path(name = "gcc", path = "/usr/bin/clang"),
              tool_path(name = "gcov", path = "/usr/bin/gcov"),
              tool_path(name = "ld", path = "/usr/bin/ld"),
              tool_path(name = "nm", path = "/usr/bin/nm"),
@@ -43,7 +46,7 @@ $NetBSD$
 +            tool_path(name = "ar", path = "/usr/bin/ar"),
 +            tool_path(name = "cpp", path = "/usr/bin/cpp"),
 +            tool_path(name = "dwp", path = "/usr/bin/dwp"),
-+            tool_path(name = "gcc", path = "/usr/bin/gcc"),
++            tool_path(name = "gcc", path = "@PREFIX@/bin/clang"),
 +            tool_path(name = "gcov", path = "/usr/bin/gcov"),
 +            tool_path(name = "ld", path = "/usr/bin/ld"),
 +            tool_path(name = "nm", path = "/usr/bin/nm"),

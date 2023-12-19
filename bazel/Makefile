@@ -43,10 +43,15 @@ REPLACE_BASH+=	scripts/*.sh
 REPLACE_BASH+=	tools/*.sh
 REPLACE_BASH+=	tools/*/*.sh
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Setting PREFIX
+SUBST_FILES.prefix+=	tools/cpp/bsd_cc_toolchain_config.bzl
+SUBST_VARS.prefix+=	PREFIX
+
 EXTRA_BAZEL_ARGS+=	--tool_java_runtime_version=local_jdk
-#EXTRA_BAZEL_ARGS+=	--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
-#EXTRA_BAZEL_ARGS+=	--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR}
-MAKE_ENV+=	EXTRA_BAZEL_ARGS=${EXTRA_BAZEL_ARGS:Q}
+EXTRA_BAZEL_ARGS+=	--subcommands
+MAKE_ENV+=		EXTRA_BAZEL_ARGS=${EXTRA_BAZEL_ARGS:Q}
 
 INSTALLATION_DIRS+=	bin
 
@@ -68,6 +73,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/output/bazel \
 		${DESTDIR}${PREFIX}/bin
 
+# GCC generates unexpected .d files when -MD is specified.
+.include "../../lang/clang/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
