@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (pyBigWig-0.3.22.tar.gz) = 05ef15d553161285b2268b7d84774797276740c79772c559dea82c3d20e81e03
+SHA512 (pyBigWig-0.3.22.tar.gz) = e1974f43a0cb1f7f1f010e130971ca3c1ec6882071a2617002ee6ec441820daf3c1f5ef930f9cc3662bd320279a50e04765c0bf8ee040eb0e7c857f966c86c40
+Size (pyBigWig-0.3.22.tar.gz) = 73864 bytes
+SHA1 (patch-libBigWig_bwValues.c) = a180ebf1e84dea7074b79318b4f1ce445df376d5
