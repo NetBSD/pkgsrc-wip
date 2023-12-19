@@ -1,10 +1,10 @@
 # $NetBSD$
 
 DISTNAME=	0.16.0
-CATEGORIES=	# TODO: add primary category
+CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org
+MAINTAINER=	kevin.bloom@posteo.net
 HOMEPAGE=	https://git.sr.ht/~rjarry/aerc/archive/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
@@ -18,10 +18,11 @@ USE_LANGUAGES=	c go
 TOOL_DEPENDS+=	go118>=1.18.0:../../lang/go118
 TOOL_DEPENDS+=	scdoc:../../textproc/scdoc
 
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	.*/usr/bin/env python3
-REPLACE.python.new=	${PREFIX}/bin/python3.11
-REPLACE_FILES.python+=	contrib/carddav-query
-REPLACE_FILES.python+=	filters/show-ics-details.py
+REPLACE_PYTHON+=	contrib/carddav-query
+REPLACE_PYTHON+=	filters/show-ics-details.py
+.include "../../lang/python/application.mk"
 
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
