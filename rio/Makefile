@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rio-0.0.30
+DISTNAME=	rio-0.0.33
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raphamorim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,6 +23,9 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 .if ${OPSYS} != "Darwin"
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxkbcommon}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxkbcommon}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.fontconfig}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
 .endif
@@ -43,8 +46,14 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rio \
 		${DESTDIR}${PREFIX}/bin
 
+.if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
+DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
+.endif
+
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
