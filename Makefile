@@ -2856,6 +2856,7 @@ SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
 SUBDIR+=	pan2-git
 SUBDIR+=	panda
+SUBDIR+=	pango
 SUBDIR+=	pangoterm
 SUBDIR+=	papp
 SUBDIR+=	parafly
