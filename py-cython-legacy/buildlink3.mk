@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-cython
 PY_CYTHON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-cython+=	${PYPKGPREFIX}-cython>=0.12.1
-BUILDLINK_PKGSRCDIR.py-cython?=		../../devel/py-cython
+BUILDLINK_PKGSRCDIR.py-cython?=		../../wip/py-cython-legacy
 .endif	# PY_CYTHON_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-cython

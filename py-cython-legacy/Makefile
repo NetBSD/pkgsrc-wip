@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.84 2023/07/05 12:29:28 adam Exp $
 
 DISTNAME=	Cython-0.29.36
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}-legacy
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
 
@@ -17,8 +17,6 @@ REPLACE_PYTHON+=	cython.py
 
 USE_PKG_RESOURCES=	yes
 
-# for test only
-#USE_LANGUAGES=	c c++
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} runtests.py
 
