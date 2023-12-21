@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.15 2021/10/26 10:43:55 nia Exp $
+
+BLAKE2s (Enigma-1.30-src.tar.gz) = 56acf6668b2c38bc76871da0b2167b1628e32c4a569ad3042fa06b154e7f14cd
+SHA512 (Enigma-1.30-src.tar.gz) = d13bd7a3518ad281e053f7510a59dd9442bd4f23923e7e0a756a1f0abeece11780d53a15c717deb94da6872f38abe67a8b8adf24a483a66ab011901953d9fa97
+Size (Enigma-1.30-src.tar.gz) = 78948320 bytes

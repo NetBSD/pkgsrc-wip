@@ -1,0 +1,17 @@
+Upgrade candidate, but fails running convert on the png files
+
+convert -density 112x112 -units PixelsPerCentimeter -crop 60x60+0+0 /scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_rotor.png ac_rotor.png
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_pearl_white.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_pearl_white.png' @ error/convert.c/ConvertImageCommand/3362.
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_marble_black.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_marble_black.png' @ error/convert.c/ConvertImageCommand/3362.
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_horse.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_horse.png' @ error/convert.c/ConvertImageCommand/3362.
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_pearl_black.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_pearl_black.png' @ error/convert.c/ConvertImageCommand/3362.
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_bug.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_bug.png' @ error/convert.c/ConvertImageCommand/3362.
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_marble_white.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_marble_white.png' @ error/convert.c/ConvertImageCommand/3362.
+convert: unable to read image data `/scratch/games/enigma/work/Enigma-1.30/doc/reference/images/../../../data/gfx48/ac_marble_glass.png' @ error/constitute.c/ReadImage/991.
+convert: no images defined `ac_marble_glass.png' @ error/convert.c/ConvertImageCommand/3362.
