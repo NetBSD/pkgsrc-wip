@@ -8,8 +8,8 @@ GITHUB_PROJECT=	MACS
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/macs2
-COMMENT=	Novel algorithm for identifying transcript factor binding sites
+HOMEPAGE=	https://github.com/macs3-project/MACS
+COMMENT=	Peak caller aimed at transcription factor binding sites
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0:../../wip/py-hmmlearn
