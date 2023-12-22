@@ -1,6 +1,8 @@
 # $NetBSD$
 #
 
+# Update minor version when adding or removing dependencies
+# Update revision for all other changes
 DISTNAME=	atac-seq-1.2.2
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
