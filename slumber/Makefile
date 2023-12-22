@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	slumber-0.8.0
+DISTNAME=	slumber-0.11.0
 # Do not import, requires Rust-1.74 to build.
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
