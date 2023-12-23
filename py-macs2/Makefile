@@ -12,8 +12,7 @@ HOMEPAGE=	https://github.com/macs3-project/MACS
 COMMENT=	Algorithm for identifying transcription factor binding sites
 LICENSE=	modified-bsd
 
-# TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-0.*:../../wip/py-cython-legacy
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-3.*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 # Requires new python features
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
@@ -21,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 
 # Distributed .c files do not support python > 3.9
-post-patch:
+pre-configure:
 	${MV} ${WRKSRC}/MACS2/cPosValCalculation.c ${WRKSRC}
 	${RM} -f ${WRKSRC}/MACS2/*.c ${WRKSRC}/MACS2/*/*.c
 	cd ${WRKSRC} && ${CYTHONIZE} ${WRKSRC}/MACS2/*.pyx
