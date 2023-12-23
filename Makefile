@@ -1937,7 +1937,6 @@ SUBDIR+=	libjingle
 SUBDIR+=	libjxl
 SUBDIR+=	libkml
 SUBDIR+=	libksysguard
-SUBDIR+=	liblas
 SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
 SUBDIR+=	libm4ri
