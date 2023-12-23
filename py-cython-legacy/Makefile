@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.84 2023/07/05 12:29:28 adam Exp $
 
 DISTNAME=	Cython-0.29.36
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}-legacy
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:}-legacy-${VERSION}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://cython.org/
 COMMENT=	C-Extensions for Python
 LICENSE=	apache-1.1
