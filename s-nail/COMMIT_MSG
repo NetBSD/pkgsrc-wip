@@ -1,0 +1,34 @@
+s-nail: updated s-nail to 14.9.24
+
+14.9.23 -> 14.9.24:
+- Release tarball might be in --format=pax
+- Again honour MTA arguments passed after the "--" command line
+  "option" in non-send-only mode (broken since at least v14.9.12).
+- Support Microsoft IMAP servers.
+- Fix crash due to crafted emails.
+- Fix *expandargv*#419=restrict (broken since v14.9.0).
+- Fix a bug from nail 10.08 as of 2004-06-28 that leads to
+  crashes when some file cannot be loaded.
+  And while here fix one file-close overshoot of mine in since
+  v14.9.16, that would cause panics in debug-enabled code.
+- Deal with argc==0 aka CVE-2021-4034.
+
+14.9.22 -> 14.9.23;
+- VAL_RANDOM=getentropy was broken.
+- An unset *mta-bcc-ok*#482 could cause partial Bcc: content
+  to be written to Cc: or To:.
+- Date offset calculation was wrong for timezones which use
+  a negative adjustment for "is daylight saving time active".
+- Continue searching MIME handler sources if the first found one
+  is not applicable in current context.
+- Fixed `vexpr'#303 shift operators broken for "optimization".
+- Fixed `date-utc' subcommand which used two "dutc_month"
+  instead of one plus "dutc_day".
+- Temporarily set an unset $LESS to portable "RI" not "RXi".
+- A couple of SIGALARM / alarm(2) fixes for the -keepalive-
+  variable series.
+- We drop inherited effective IDs upon startup.
+- mimeview now also asks for text/ parts whether an action
+  shall be applied.  And if there is no plain part we may
+  use the rich one if possible.
+- *pipe-TYPE/SUBTYPE*#503 now support type-markers.
