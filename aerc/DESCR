@@ -1,23 +1,21 @@
-TODO: Adjust the following lines from README.md
+aerc is an email client that runs in your terminal. It's highly
+efficient and extensible, perfect for the discerning hacker. Check
+out the screencast above to get an idea of how it's used.
 
-# aerc
+Some of its more interesting features include:
 
-[![builds.sr.ht status](https://builds.sr.ht/~rjarry/aerc.svg)](https://builds.sr.ht/~rjarry/aerc)
-[![GitHub macOS CI status](https://github.com/rjarry/aerc/actions/workflows/macos.yml/badge.svg)](https://github.com/rjarry/aerc/actions/workflows/macos.yml)
-
-[aerc](https://sr.ht/~rjarry/aerc/) is an email client for your terminal.
-
-This is a fork of [the original aerc](https://git.sr.ht/~sircmpwn/aerc)
-by Drew DeVault.
-
-A short demonstration can be found on [https://aerc-mail.org/](https://aerc-mail.org/)
-
-Join the IRC channel: [#aerc on irc.libera.chat](http://web.libera.chat/?channels=aerc&uio=d4)
-for end-user support, and development.
-
-## Usage
-
-On its first run, aerc will copy the default config files to `~/.config/aerc`
-on Linux or `~/Library/Preferences/aerc` on MacOS (or `$XDG_CONFIG_HOME/aerc` if set)
-and show the account configuration wizard.
-...
+- Editing emails in an embedded terminal tmux-style, allowing you
+  to check on incoming emails and reference other threads while you
+  compose your replies
+- Render HTML emails with an interactive terminal web browser,
+  highlight patches with diffs, and browse with an embedded less
+  session
+- First-class support for working with git & email
+- Open a new tab with a terminal emulator and a shell running for
+  easy access to nearby git repos for parallel work
+- Support for multiple accounts, with IMAP, Maildir, Notmuch, Mbox
+  and JMAP backends.
+- Asynchronous IMAP and JMAP support ensures
+- Efficient network usage
+- Email threading (with and/or without IMAP server support).
+- PGP signing, encryption and verification using GNUpg.

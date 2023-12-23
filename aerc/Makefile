@@ -1,22 +1,29 @@
 # $NetBSD$
 
 DISTNAME=	0.16.0
+PKGNAME=	aerc-${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
+DIST_SUBDIR=	aerc
 
 MAINTAINER=	kevin.bloom@posteo.net
 HOMEPAGE=	https://git.sr.ht/~rjarry/aerc/archive/
-COMMENT=	terminal email client written in Go
+COMMENT=	Terminal email client written in Go
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR}/aerc-0.16.0
+TOOL_DEPENDS+=	go118>=1.18.0:../../lang/go118
+TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
+
+WRKSRC=		${WRKDIR}/aerc-0.16.0
 
 USE_TOOLS+=	gmake
 #MAKE_FILE=	GNUmakefile
-USE_LANGUAGES=	c go
+USE_LANGUAGES=	c
 
-TOOL_DEPENDS+=	go118>=1.18.0:../../lang/go118
-TOOL_DEPENDS+=	scdoc:../../textproc/scdoc
+INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
+INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
 
 REPLACE_PYTHON+=	contrib/carddav-query
 REPLACE_PYTHON+=	filters/show-ics-details.py
@@ -32,8 +39,8 @@ do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
 	    GOPATH=${WRKDIR}/.gopath ${GO} build -o aerc
 
-#do-install:
-#	cd ${WRKSRC} && ${GMAKE} install
+do-install:
+	cd ${WRKSRC} && ${GMAKE} ${INSTALL_MAKE_FLAGS} install
 
 .include "go-modules.mk"
 
