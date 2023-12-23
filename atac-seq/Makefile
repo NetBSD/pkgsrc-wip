@@ -3,7 +3,7 @@
 
 # Update minor version when adding or removing dependencies
 # Update revision for all other changes
-DISTNAME=	atac-seq-1.2.2
+DISTNAME=	atac-seq-1.3
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -19,7 +19,7 @@ DEPENDS+=	bwa>0:../../biology/bwa
 DEPENDS+=	bowtie2>0:../../biology/bowtie2
 DEPENDS+=	samtools>0:../../biology/samtools
 DEPENDS+=	igv>0:../../biology/igv
-DEPENDS+=	${PYPKGPREFIX}-macs3>0:../../wip/py-macs3
+DEPENDS+=	${PYPKGPREFIX}-macs2>0:../../wip/py-macs2
 DEPENDS+=	fasda>0:../../wip/fasda
 DEPENDS+=	peak-classifier>0:../../wip/peak-classifier
 DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
