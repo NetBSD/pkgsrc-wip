@@ -496,9 +496,6 @@ ${PYSITELIB}/streamlink/plugins/vkplay.pyo
 ${PYSITELIB}/streamlink/plugins/vtvgo.py
 ${PYSITELIB}/streamlink/plugins/vtvgo.pyc
 ${PYSITELIB}/streamlink/plugins/vtvgo.pyo
-${PYSITELIB}/streamlink/plugins/wasd.py
-${PYSITELIB}/streamlink/plugins/wasd.pyc
-${PYSITELIB}/streamlink/plugins/wasd.pyo
 ${PYSITELIB}/streamlink/plugins/webtv.py
 ${PYSITELIB}/streamlink/plugins/webtv.pyc
 ${PYSITELIB}/streamlink/plugins/webtv.pyo

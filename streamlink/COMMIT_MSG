@@ -1,6 +1,24 @@
-multimedia/streamlink: update to streamlink-6.4.0
+multimedia/streamlink: update to streamlink-6.5.0
 
 Changelog:
+
+== streamlink 6.5.0 (2023-12-16)
+
+Release highlights:
+
+- Fixed: `UserWarning` being emitted by recent `pycountry` releases when
+  parsing certain language codes
+- Fixed: trace logging setup in `WebsocketClient` implementation
+- Updated plugins:
+  - btv: switched to HLS multivariant playlists
+  - gulli: rewritten plugin
+  - twitch: removed/disabled `--twitch-disable-reruns`
+  - twitch: enabled `check_streams` HLS option, to ensure early stream
+            availability without querying the delayed Twitch API
+  - twitch: removed unnecessary Twitch API error messages for offline channels
+  - wasd: removed plugin
+- Build: added support for `versioningit >=3.0.0`, with backward compatibility
+
 
 = streamlink 6.4.1 (2023-11-22)
 
