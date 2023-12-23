@@ -12,8 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-sklearn-pandas>0:../../math/py-sklearn-pandas
-DEPENDS+=	${PYPKGPREFIX}-scipy>0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.16:../../math/py-scikit-learn
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>0:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-scipy>0.19:../../math/py-scipy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
 
 USE_LANGUAGES=	c c++
@@ -24,4 +25,6 @@ do-test:
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+# Testing only: Should not be necessary
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
