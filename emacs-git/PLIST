@@ -295,6 +295,8 @@ share/emacs/${PKGVERSION}/etc/images/checked.svg
 share/emacs/${PKGVERSION}/etc/images/checked.xpm
 share/emacs/${PKGVERSION}/etc/images/close.pbm
 share/emacs/${PKGVERSION}/etc/images/close.xpm
+share/emacs/${PKGVERSION}/etc/images/commit.pbm
+share/emacs/${PKGVERSION}/etc/images/commit.xpm
 share/emacs/${PKGVERSION}/etc/images/connect-to-url.pbm
 share/emacs/${PKGVERSION}/etc/images/connect-to-url.xpm
 share/emacs/${PKGVERSION}/etc/images/connect.pbm
@@ -385,6 +387,8 @@ share/emacs/${PKGVERSION}/etc/images/ezimage/unlock.pbm
 share/emacs/${PKGVERSION}/etc/images/ezimage/unlock.xpm
 share/emacs/${PKGVERSION}/etc/images/fwd-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/fwd-arrow.xpm
+share/emacs/${PKGVERSION}/etc/images/gen-changelog.pbm
+share/emacs/${PKGVERSION}/etc/images/gen-changelog.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/README
 share/emacs/${PKGVERSION}/etc/images/gnus/followup.pbm
@@ -538,6 +542,8 @@ share/emacs/${PKGVERSION}/etc/images/index.pbm
 share/emacs/${PKGVERSION}/etc/images/index.xpm
 share/emacs/${PKGVERSION}/etc/images/info.pbm
 share/emacs/${PKGVERSION}/etc/images/info.xpm
+share/emacs/${PKGVERSION}/etc/images/ins-changelog.pbm
+share/emacs/${PKGVERSION}/etc/images/ins-changelog.xpm
 share/emacs/${PKGVERSION}/etc/images/jump-to.pbm
 share/emacs/${PKGVERSION}/etc/images/jump-to.xpm
 share/emacs/${PKGVERSION}/etc/images/last-page.pbm
@@ -547,6 +553,8 @@ share/emacs/${PKGVERSION}/etc/images/left-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/left.svg
 share/emacs/${PKGVERSION}/etc/images/letter.pbm
 share/emacs/${PKGVERSION}/etc/images/letter.xpm
+share/emacs/${PKGVERSION}/etc/images/load-changelog.pbm
+share/emacs/${PKGVERSION}/etc/images/load-changelog.xpm
 share/emacs/${PKGVERSION}/etc/images/lock-broken.pbm
 share/emacs/${PKGVERSION}/etc/images/lock-broken.xpm
 share/emacs/${PKGVERSION}/etc/images/lock-ok.pbm
@@ -866,6 +874,8 @@ share/emacs/${PKGVERSION}/etc/images/up-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/up-node.pbm
 share/emacs/${PKGVERSION}/etc/images/up-node.xpm
 share/emacs/${PKGVERSION}/etc/images/up.svg
+share/emacs/${PKGVERSION}/etc/images/view-diff.pbm
+share/emacs/${PKGVERSION}/etc/images/view-diff.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-in.pbm
 share/emacs/${PKGVERSION}/etc/images/zoom-in.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.pbm
