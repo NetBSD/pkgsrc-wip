@@ -43,5 +43,6 @@ do-install:
 
 .include "../../mk/blas.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/simde/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
