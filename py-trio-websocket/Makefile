@@ -12,6 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-trio>=0.14:../../devel/py-trio
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=0.14:../../www/py-wsproto
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
