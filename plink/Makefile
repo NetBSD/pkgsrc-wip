@@ -5,15 +5,14 @@
 #              Mon Aug 28 18:05:44 CDT 2017               #
 ###########################################################
 
-DISTNAME=	plink-${PORTVERSION}
-PKGREVISION=	1
+DISTNAME=	plink-1.9b6.17
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrchang/}
 GITHUB_PROJECT=	plink-ng
-GITHUB_TAG=	00aaeb53d3edd569c93bd60e7bcd27ced4cd8fdb
+GITHUB_TAG=	79b2df8cffce480148b7d2197e4981bfeff3a3c0
 
 MAINTAINER=	bacon@NetBSD.org
-#HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
+HOMEPAGE=	https://www.cog-genomics.org/plink/
 COMMENT=	Whole genome association analysis toolset
 LICENSE=	gnu-gpl-v2
 
@@ -30,7 +29,6 @@ CXXFLAGS+=	-DDYNAMIC_ZLIB -I${PREFIX}/include ${BLAS_INCLUDES}
 MAKE_FLAGS+=	ZLIB=-lz BLASFLAGS="-L${PREFIX}/lib ${LAPACK_LIBS} ${CBLAS_LIBS}  -lpthread"
 INSTALL_TARGET=	install-strip
 
-PORTVERSION=	1.90b4
 BLAS_ACCEPTED=	openblas_pthread
 
 BLAS_C_INTERFACE=	yes

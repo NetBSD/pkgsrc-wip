@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (plink-1.90b4-00aaeb53d3edd569c93bd60e7bcd27ced4cd8fdb.tar.gz) = e5ae2e4ec8a4685e0ab6e5afa6dff5c5ed0ddb36
-SHA512 (plink-1.90b4-00aaeb53d3edd569c93bd60e7bcd27ced4cd8fdb.tar.gz) = 48edbac63ebbaa1f7ee5bb287fbed43b4052c4e15a76fb2299a9dfe71a580feb6a10cf4da57d2b314af68dc1886d462476aa9d8a440c817e23be7f9a09729c65
-Size (plink-1.90b4-00aaeb53d3edd569c93bd60e7bcd27ced4cd8fdb.tar.gz) = 2566557 bytes
+BLAKE2s (plink-1.9b6.17-79b2df8cffce480148b7d2197e4981bfeff3a3c0.tar.gz) = 3c4201041b1dddd25cdb8460f92168b867383412a86d8d57fb04f0feeb42a94d
+SHA512 (plink-1.9b6.17-79b2df8cffce480148b7d2197e4981bfeff3a3c0.tar.gz) = c80092a40cdef65099a7d9cf673ce155b74b8233d4eb6496130d83e0d846d0e85656f0389fb083226393f80a0f31ca91bd3c8eae47dcc2fd4e897e5f80b523a6
+Size (plink-1.9b6.17-79b2df8cffce480148b7d2197e4981bfeff3a3c0.tar.gz) = 3015223 bytes
