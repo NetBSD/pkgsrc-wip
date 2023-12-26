@@ -5190,6 +5190,7 @@ SUBDIR+=	src
 SUBDIR+=	srecord
 SUBDIR+=	srvx
 SUBDIR+=	sselp
+SUBDIR+=	ssh-audit
 SUBDIR+=	ssh_ping
 SUBDIR+=	ssid
 SUBDIR+=	ssiv-git
