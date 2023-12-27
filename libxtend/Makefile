@@ -20,7 +20,4 @@ INSTALL_TARGET=	install-strip
 
 MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
 
-pre-build:
-	cd ${WRKSRC} && ${MAKE} depend
-
 .include "../../mk/bsd.pkg.mk"
