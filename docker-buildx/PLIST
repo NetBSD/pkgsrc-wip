@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/docker-compose
+lib/docker/cli-plugins/docker-compose

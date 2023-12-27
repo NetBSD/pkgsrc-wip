@@ -1,0 +1,11 @@
+buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
+
+Key features:
+
+- Familiar UI from docker build
+- Full BuildKit capabilities with container driver
+- Multiple builder instance support
+- Multi-node builds for cross-platform images
+- Compose build support
+- High-level build constructs (bake)
+- In-container driver support (both Docker and Kubernetes)

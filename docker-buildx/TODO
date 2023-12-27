@@ -1,0 +1,6 @@
+On NetBSD build fails with:
+
+# github.com/moby/buildkit/cmd/buildkitd/config
+vendor/github.com/moby/buildkit/cmd/buildkitd/config/gcpolicy_unix.go:23:20: undefined: syscall.Statfs
+vendor/github.com/moby/buildkit/cmd/buildkitd/config/gcpolicy_unix.go:26:23: st.Bsize undefined (type syscall.Statfs_t has no field or method Bsize)
+vendor/github.com/moby/buildkit/cmd/buildkitd/config/gcpolicy_unix.go:26:41: st.Blocks undefined (type syscall.Statfs_t has no field or method Blocks)
