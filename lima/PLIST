@@ -18,6 +18,7 @@ man/man1/limactl-delete.1
 man/man1/limactl-disk-create.1
 man/man1/limactl-disk-delete.1
 man/man1/limactl-disk-list.1
+man/man1/limactl-disk-resize.1
 man/man1/limactl-disk-unlock.1
 man/man1/limactl-disk.1
 man/man1/limactl-edit.1
@@ -75,10 +76,12 @@ share/lima/templates/docker-rootful.yaml
 share/lima/templates/docker.yaml
 share/lima/templates/experimental/9p.yaml
 share/lima/templates/experimental/armv7l.yaml
+share/lima/templates/experimental/gentoo.yaml
 share/lima/templates/experimental/net-user-v2.yaml
 share/lima/templates/experimental/opensuse-tumbleweed.yaml
 share/lima/templates/experimental/riscv64.yaml
 share/lima/templates/experimental/rke2.yaml
+share/lima/templates/experimental/u7s.yaml
 share/lima/templates/experimental/virtiofs-linux.yaml
 share/lima/templates/experimental/vnc.yaml
 share/lima/templates/experimental/vz.yaml
