@@ -13,8 +13,5 @@ DEPENDS=	stringtie>0:../../wip/stringtie
 
 LDFLAGS.SunOS+=	-lresolv
 
-pre-build:
-	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
-
 .include "../../wip/biolibc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
