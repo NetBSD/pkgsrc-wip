@@ -686,6 +686,7 @@ SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook-xsl-ns
 SUBDIR+=	docbook2X
 SUBDIR+=	docdiff
+SUBDIR+=	docker-buildx
 SUBDIR+=	docker-cli
 SUBDIR+=	docker-compose
 SUBDIR+=	docker-compose-cli
