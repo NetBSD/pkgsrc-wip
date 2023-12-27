@@ -123,7 +123,7 @@ Additions:
 
 Improvements:
 - Updated Unicode support to version 13.
-- Bound Ctrl+c to `copy -k copy` by default.
+- Bound Ctrl+c to `copy -k` by default.
 - Re-introduced built-in support for rxvt Ctrl/Alt/Shift key
   combinations.
 - Fixed the handling of optional capture groups in `errorfmt`
