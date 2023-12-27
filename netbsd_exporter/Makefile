@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	0.9.1
+DISTNAME=	0.9.3
 PKGNAME=	netbsd_exporter-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://forge.petermann-it.de/mpeterma/netbsd_exporter/archive/

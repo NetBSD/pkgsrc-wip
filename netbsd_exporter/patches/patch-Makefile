@@ -2,18 +2,18 @@ $NetBSD$
 
 Allow overriding installation paths.
 
---- Makefile.orig	2023-12-26 23:36:07.919447859 +0000
+--- Makefile.orig	2023-12-27 17:56:57.000000000 +0000
 +++ Makefile
 @@ -2,6 +2,8 @@ CC=cc
  CFLAGS=-Wall -Wextra
  TARGET=netbsd_exporter
- VERSION=0.9.1
+ 
 +PREFIX?=/usr
 +MANDIR?=share/man
- 
  PACKAGE=$(TARGET)-$(VERSION).tar.gz
  
-@@ -22,7 +24,9 @@ dist:	$(TARGET)
+ all: $(TARGET)
+@@ -21,7 +23,9 @@ dist:	$(TARGET)
  	(cd dist;tar -cvf ../$(PACKAGE) .)
  
  install: $(TARGET)

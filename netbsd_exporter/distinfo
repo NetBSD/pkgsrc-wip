@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (netbsd_exporter/0.9.1.tar.gz) = b45ce4560ab3125040c7fd6f8106864877948b69510812b017acb17389d626f6
-SHA512 (netbsd_exporter/0.9.1.tar.gz) = c5944a16665d636d3367b4b474caf9302aae9d6086530538510b1e3d3537897cc3b3c80035b7733e1b45af34d84375c5adbf661acf3c9bbaa69d25680042fe9a
-Size (netbsd_exporter/0.9.1.tar.gz) = 4882 bytes
-SHA1 (patch-Makefile) = 9fbce6d6ad41cff2655024b6efb4b0defa3d00db
+BLAKE2s (netbsd_exporter/0.9.3.tar.gz) = d7238b830d6b70b560b2d71d132356b62960a095286b27663136ef6f350600a2
+SHA512 (netbsd_exporter/0.9.3.tar.gz) = 25e1799638a9649b5230f49e794db6be4117f4348ba3b5457892c958216b4d603c0e1c42d7db4098bba1459d5d89c885dc344750355bfa975480d918716ab48f
+Size (netbsd_exporter/0.9.3.tar.gz) = 4921 bytes
+SHA1 (patch-Makefile) = 4a1714436a125ec03485a24424f41476798fcfde
