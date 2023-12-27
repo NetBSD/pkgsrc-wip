@@ -14,7 +14,4 @@ HOMEPAGE=	https://github.com/outpaddling/cut-and-run
 COMMENT=	Split a text file into segments and process in parallel
 LICENSE=	2-clause-bsd
 
-pre-build:
-	cd ${WRKSRC} && make depend
-
 .include "../../mk/bsd.pkg.mk"

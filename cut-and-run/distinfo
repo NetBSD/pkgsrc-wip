@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (cut-and-run-0.0.1.tar.gz) = ca60d86f3cfafcebba11d701f135f02236b6be02
+BLAKE2s (cut-and-run-0.0.1.tar.gz) = 63241ddc8bf447aceb94e6122a4b86e343d0b11528102a036af41932725b0610
 SHA512 (cut-and-run-0.0.1.tar.gz) = 60e59a39a6bbc0dc4910db192b307959f68d8ee8e90a4b33debd55d34aa7f62d36aa4011d6dad7f3ea3052fdd488ce9c7fe1769575ce290bd8a766f96336d135
 Size (cut-and-run-0.0.1.tar.gz) = 7089 bytes
