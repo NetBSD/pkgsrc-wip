@@ -1,0 +1,9 @@
+Jazz^2 Resurrection is reimplementation of the game Jazz Jackrabbit
+2 released in 1998. Supports various versions of the game (Shareware
+Demo, Holiday Hare '98, The Secret Files and Christmas Chronicles).
+Also, it partially supports some features of JJ2+ extension and
+MLLE. This repository contains fully rewritten game in C++ with
+better performance and many improvements.
+
+This package provides the game engine only. The game data files should
+be copied to ~/.local/share/Jazz2-Resurrection/Source/

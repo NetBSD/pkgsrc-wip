@@ -1706,6 +1706,7 @@ SUBDIR+=	java-swt
 SUBDIR+=	java-tritonus-share
 SUBDIR+=	java-vorbisspi
 SUBDIR+=	java-xmlrpc
+SUBDIR+=	jazz2-resurrection
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jedit

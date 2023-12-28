@@ -1,0 +1,14 @@
+$NetBSD$
+
+BLAKE2s (jazz2-native/2.4.0.tar.gz) = 265ab9f572cae873e984a617dbf8ca03224e07fa3939ccfc10646e5f7aa890f8
+SHA512 (jazz2-native/2.4.0.tar.gz) = 631e2e1f2dcfef9dbedea1fbf68d7bb251bd1517f004db98a91211da5f5eb9b1dbd59a853cff51b4ad33f278f34d9078bc9bece0a60b06eba0c010186fa7fa79
+Size (jazz2-native/2.4.0.tar.gz) = 3064319 bytes
+SHA1 (patch-README.md) = 7c6095d5a4e3fb0cda732a7711005ea371470b0a
+SHA1 (patch-Sources_Jazz2_ContentResolver.cpp) = 2c1501a734dcb537ae763b398839f5b11fd98982
+SHA1 (patch-Sources_Jazz2_PreferencesCache.cpp) = e5ea1ab6d7ec3545b047b1a1702be5e748e16175
+SHA1 (patch-Sources_Shared_IO_FileSystem.cpp) = 4859c217b3fa79fdd840c08e1f0250decdfde80a
+SHA1 (patch-Sources_Shared_IO_FileSystem.h) = d397236e507d27de196c319e6bf89e4c4c1be0d0
+SHA1 (patch-Sources_nCine_Threading_PosixThread.cpp) = f4797af2ef34a6547c8345c8df48631fc616580e
+SHA1 (patch-Sources_nCine_Threading_Thread.h) = ed55f14f2506e186a9e6977b3a6d0bfe4a737ac8
+SHA1 (patch-cmake_FindGLFW.cmake) = 0c7607a7097adec9995551919df2ece6b3ab818f
+SHA1 (patch-cmake_Findlibopenmpt.cmake) = 74f4287e04be80c7e781177ee80eb41438bf9eab
