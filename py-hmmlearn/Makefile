@@ -20,11 +20,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
 USE_LANGUAGES=	c c++
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} --capture=no
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py develop
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest --capture=no
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-# Testing only: Should not be necessary
-.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
