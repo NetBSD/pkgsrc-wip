@@ -21,7 +21,8 @@ USE_LANGUAGES=	c c++
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py develop
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest --capture=no
+	# cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest --capture=no
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} --capture=no
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
