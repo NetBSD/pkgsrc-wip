@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/hmmlearn/hmmlearn
 COMMENT=	Algorithms for inference of Hidden Markov Models
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.16:../../math/py-scikit-learn
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>0:../../graphics/py-matplotlib
@@ -19,12 +18,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 
+# 2023-12-29: Tests currently fail due to known upstream issues
 do-test:
+	# setup.py builds directly to prefix by default, so we need to build
+	# again within the project for pytest to work
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py develop
-	# cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest --capture=no
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} --capture=no
 
-.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
