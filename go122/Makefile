@@ -1,14 +1,12 @@
 # $NetBSD: Makefile,v 1.2 2023/12/08 14:57:37 bsiegert Exp $
 
+GO122_VERSION=	1.22rc1
 .include "../../lang/go/version.mk"
-# Minimum Go version for bootstrapping is 1.17.13.
-# Go 1.17 has some concurrency issues that have been fixed in 1.18.
-GO_BOOTSTRAP_REQD=	118
+GO_BOOTSTRAP_REQD=	120
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	121
+GOVERSSUFFIX=	122
 
-PKGREVISION=	1
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}
 CATEGORIES=	lang
@@ -30,8 +28,6 @@ GOROOT_FINAL=		${PREFIX}/go${GOVERSSUFFIX}
 INSTALLATION_DIRS=	bin go${GOVERSSUFFIX}
 
 REPLACE_BASH+=	lib/time/update.bash
-REPLACE_BASH+=	misc/arm/a
-REPLACE_BASH+=	misc/cgo/fortran/test.bash
 REPLACE_BASH+=	misc/wasm/go_js_wasm_exec
 REPLACE_BASH+=	misc/wasm/go_wasip1_wasm_exec
 REPLACE_BASH+=	src/all.bash
@@ -39,7 +35,6 @@ REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
 REPLACE_BASH+=	src/cmd/compile/internal/ssa/_gen/cover.bash
-REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/plan9/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/plan9/mkerrors.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
@@ -60,7 +55,6 @@ REPLACE_BASH+=	src/syscall/mkall.sh
 REPLACE_BASH+=	src/syscall/mkerrors.sh
 REPLACE_BASH+=	src/syscall/mksysnum_plan9.sh
 
-REPLACE_PERL+=	src/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/syscall/*.pl
 
