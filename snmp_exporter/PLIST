@@ -1,5 +1,0 @@
-@comment $NetBSD$
-bin/generator
-bin/snmp_exporter
-share/doc/snmp_exporter/README.md
-share/examples/snmp_exporter/snmp.yml

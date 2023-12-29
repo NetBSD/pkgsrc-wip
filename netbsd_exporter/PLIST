@@ -1,3 +1,0 @@
-@comment $NetBSD$
-libexec/netbsd_exporter
-man/man8/netbsd_exporter.8
