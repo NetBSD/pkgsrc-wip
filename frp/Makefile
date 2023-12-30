@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	frp-0.48.0
+DISTNAME=	frp-0.53.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fatedier/}
 CATEGORIES=	net
 DIST_SUBDIR=    ${PKGBASE}
@@ -16,8 +16,10 @@ GO_BUILD_PATTERN=	${GO_SRCPATH}/cmd/frps ${GO_SRCPATH}/cmd/frpc
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 RCD_SCRIPTS+=		frps
 
-CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/frp/frpc.ini.sample \
-			${DESTDIR}${PREFIX}/share/examples/frp/frps.ini.sample
+CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/frp/frpc.example.toml \
+			${DESTDIR}${PREFIX}/share/examples/frp/frpc.full.example.toml \
+			${DESTDIR}${PREFIX}/share/examples/frp/frps.example.toml \
+			${DESTDIR}${PREFIX}/share/examples/frp/frps.full.example.toml
 
 BUILD_DEFS+=		FRP_USER FRP_GROUP
 
@@ -43,8 +45,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/frpc ${DESTDIR}${PREFIX}/sbin
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/frpc_full.ini ${DESTDIR}${PREFIX}/share/examples/frp/frpc.ini.sample
-	${INSTALL_DATA} ${WRKSRC}/conf/frps_full.ini ${DESTDIR}${PREFIX}/share/examples/frp/frps.ini.sample
+	${INSTALL_DATA} ${WRKSRC}/conf/frpc.toml ${DESTDIR}${PREFIX}/share/examples/frp/frpc.example.toml
+	${INSTALL_DATA} ${WRKSRC}/conf/frpc_full_example.toml ${DESTDIR}${PREFIX}/share/examples/frp/frpc.full.example.toml
+	${INSTALL_DATA} ${WRKSRC}/conf/frps.toml ${DESTDIR}${PREFIX}/share/examples/frp/frps.example.toml
+	${INSTALL_DATA} ${WRKSRC}/conf/frps_full_example.toml ${DESTDIR}${PREFIX}/share/examples/frp/frps.full.example.toml
 
 .include "go-modules.mk"
 

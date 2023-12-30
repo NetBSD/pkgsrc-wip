@@ -1,5 +1,8 @@
 @comment $NetBSD$
 sbin/frpc
 sbin/frps
-share/examples/frp/frpc.ini.sample
-share/examples/frp/frps.ini.sample
+share/examples/frp/frpc.example.toml
+share/examples/frp/frpc.full.example.toml
+share/examples/frp/frps.example.toml
+share/examples/frp/frps.full.example.toml
+@pkgdir libexec
