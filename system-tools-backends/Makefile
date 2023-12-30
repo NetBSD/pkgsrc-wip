@@ -1,10 +1,9 @@
 # $NetBSD: Makefile,v 1.5 2015/04/10 12:26:52 krytarowski Exp $
-#
 
 DISTNAME=		system-tools-backends-2.10.2
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/system-tools-backends/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/system-tools-backends/2.10/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://system-tools-backends.freedesktop.org/
