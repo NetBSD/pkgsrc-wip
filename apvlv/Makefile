@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.8 2012/09/24 16:56:38 asau Exp $
-#
 
 DISTNAME=	apvlv-0.1.5
 CATEGORIES=	print
@@ -21,7 +20,8 @@ SUBST_MESSAGE.cmakelists=	Fixing CMakeLists.txt
 SUBST_FILES.cmakelists=		CMakeLists.txt
 SUBST_SED.cmakelists+=		-e 's,share/man,${PKGMANDIR},g'
 
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

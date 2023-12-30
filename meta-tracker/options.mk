@@ -95,7 +95,8 @@ CONFIGURE_ARGS+=	--enable-libgxps
 PLIST.pdf=		yes
 CONFIGURE_ARGS+=	--enable-poppler
 .include "../../print/poppler-includes/buildlink3.mk"
-.include "../../print/poppler-glib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
+.include "../../print/poppler/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgif)
