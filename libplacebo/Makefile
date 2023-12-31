@@ -9,6 +9,9 @@ FAST_FLOAT_H=		fast_float.h
 SITES.${FAST_FLOAT_H}=	https://github.com/fastfloat/fast_float/releases/download/v6.0.0/
 DISTFILES=		${DEFAULT_DISTFILES} ${FAST_FLOAT_H}
 
+# Needed for fast_float.h that is an unversioned distfile
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.videolan.org/videolan/libplacebo
 COMMENT=	GPU-accelerated image/video processing primitives and shaders
