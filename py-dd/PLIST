@@ -4,6 +4,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/dd/CUDD_LICENSE
 ${PYSITELIB}/dd/__init__.py
 ${PYSITELIB}/dd/__init__.pyc
 ${PYSITELIB}/dd/__init__.pyo
@@ -47,6 +48,7 @@ ${PYSITELIB}/dd/buddy_.pxd
 ${PYSITELIB}/dd/c_sylvan.pxd
 ${PYSITELIB}/dd/cudd.c
 ${PYSITELIB}/dd/cudd.pyx
+${PYSITELIB}/dd/cudd.so
 ${PYSITELIB}/dd/cudd_zdd.c
 ${PYSITELIB}/dd/cudd_zdd.pyx
 ${PYSITELIB}/dd/dddmp.py

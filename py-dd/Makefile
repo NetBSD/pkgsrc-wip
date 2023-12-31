@@ -12,5 +12,9 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-astutils>=0.0.5:../../wip/py-astutils
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.0:../../devel/py-cython
+
+USE_LANGUAGES+=	c c++
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
