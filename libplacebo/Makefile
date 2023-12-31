@@ -12,6 +12,15 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-glad2-[0-9]*:../../wip/py-glad2
 
+MESON_ARGS+=	-Ddemos=false
+MESON_ARGS+=	-Ddovi=disabled
+MESON_ARGS+=	-Dglslang=disabled
+MESON_ARGS+=	-Dlcms=enabled
+MESON_ARGS+=	-Dopengl=enabled
+MESON_ARGS+=	-Dshaderc=disabled
+MESON_ARGS+=	-Dvulkan=disabled
+MESON_ARGS+=	-Dxxhash=enabled
+
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES=	c c++
