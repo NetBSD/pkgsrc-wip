@@ -1,20 +1,10 @@
-FAILED: src/libplacebo.so.338.p/convert.cc.o 
-c++ -Isrc/libplacebo.so.338.p -Isrc -I../src -Isrc/include -I../src/include -Isrc/opengl/include -I../src/opengl/include -Isrc/shaders -Isrc/opengl/include/glad -I/usr/pkg/include -I/usr/pkg/include/libdrm -I/usr/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c++20 -Wundef -Wshadow -Wparentheses -Wpointer-arith -fno-math-errno -O2 -g -fstack-clash-protection -g -fPIC -pthread -DPL_HAVE_PTHREAD -DPTHREAD_HAS_SETCLOCK -MD -MQ src/libplacebo.so.338.p/convert.cc.o -MF src/libplacebo.so.338.p/convert.cc.o.d -o src/libplacebo.so.338.p/convert.cc.o -c ../src/convert.cc
-../src/convert.cc: In instantiation of 'bool {anonymous}::from_chars(pl_str, T&, Args ...) [with T = float; Args = {}; pl_str = pl_str]':
-../src/convert.cc:114:1:   required from here
-../src/convert.cc:83:23: error: static assertion failed: <fast_float/fast_float.h> is required, but not found. Please run `git submodule update --init` or provide <fast_float/fast_float.h>
-   83 |         static_assert(!is_fp, "<fast_float/fast_float.h> is required, but not " \
-      |                       ^~~~~~
-../src/convert.cc:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   95 | }
-      | ^
-../src/convert.cc: In instantiation of 'bool {anonymous}::from_chars(pl_str, T&, Args ...) [with T = double; Args = {}; pl_str = pl_str]':
-../src/convert.cc:115:1:   required from here
-../src/convert.cc:83:23: error: static assertion failed: <fast_float/fast_float.h> is required, but not found. Please run `git submodule update --init` or provide <fast_float/fast_float.h>
-   83 |         static_assert(!is_fp, "<fast_float/fast_float.h> is required, but not " \
-      |                       ^~~~~~
-../src/convert.cc:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   95 | }
-      | ^
-[45/61] Compiling C object src/libplacebo.so.338.p/meson-generated_.._renderer.c.o
-
+[57/61] Compiling C object src/libplacebo.so.338.p/vulkan_stubs.c.o
+FAILED: src/libplacebo.so.338.p/vulkan_stubs.c.o
+gcc -Isrc/libplacebo.so.338.p -Isrc -I../src -Isrc/include -I../src/include -I../3rdparty/fast_float/include -Isrc/opengl/include -I../src/opengl/include -Isrc/shaders -Isrc/opengl/include/glad -I/usr/pkg/include -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -I/usr/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wundef -Wshadow -Wparentheses -Wpointer-arith -fno-math-errno -D_ISOC99_SOURCE -D_ISOC11_SOURCE -D_GNU_SOURCE -U__STRICT_ANSI__ -Wmissing-prototypes -Wno-sign-compare -Wno-unused-parameter -Wno-missing-field-initializers -Wno-type-limits -Werror=implicit-function-declaration -Werror=incompatible-pointer-types -Wundef -Wshadow -Wparentheses -Wpointer-arith -fno-math-errno -O2 -pipe -O2 -march=haswell -fPIC -pthread -DPL_HAVE_PTHREAD -DPTHREAD_HAS_SETCLOCK -DPL_EXPORT -MD -MQ src/libplacebo.so.338.p/vulkan_stubs.c.o -MF src/libplacebo.so.338.p/vulkan_stubs.c.o.d -o src/libplacebo.so.338.p/vulkan_stubs.c.o -c ../src/vulkan/stubs.c
+In file included from ../src/vulkan/stubs.c:21:
+../src/include/libplacebo/vulkan.h:21:10: fatal error: vulkan/vulkan.h: No such file or directory
+   21 | #include <vulkan/vulkan.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+[60/61] Compiling C object src/libplacebo.so.338.p/opengl_gpu_pass.c.o
+ninja: build stopped: subcommand failed.
