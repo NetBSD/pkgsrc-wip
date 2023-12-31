@@ -5,6 +5,10 @@ PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://code.videolan.org/videolan/libplacebo/-/archive/v${PKGVERSION}/
 
+FAST_FLOAT_H=		fast_float.h
+SITES.${FAST_FLOAT_H}=	https://github.com/fastfloat/fast_float/releases/download/v6.0.0/
+DISTFILES=		${DEFAULT_DISTFILES} ${FAST_FLOAT_H}
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.videolan.org/videolan/libplacebo
 COMMENT=	GPU-accelerated image/video processing primitives and shaders
@@ -23,7 +27,13 @@ MESON_ARGS+=	-Dxxhash=enabled
 
 USE_TOOLS+=	pkg-config
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
+
+# Populate <fast_float/fast_float.h>
+pre-configure:
+	${MKDIR} ${WRKSRC}/3rdparty/fast_float/include/fast_float
+	${MV} ${WRKDIR}/fast_float.h ${WRKSRC}/3rdparty/fast_float/include/fast_float
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/xxhash/buildlink3.mk"
