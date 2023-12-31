@@ -3,7 +3,7 @@
 DISTNAME=	libplacebo-v6.338.1
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	multimedia
-MASTER_SITES=	https://code.videolan.org/videolan/libplacebo/-/archive/v${PKGVERSION}/
+MASTER_SITES=	https://code.videolan.org/videolan/libplacebo/-/archive/v${PKGVERSION_NOREV}/
 
 FAST_FLOAT_H=		fast_float.h
 SITES.${FAST_FLOAT_H}=	https://github.com/fastfloat/fast_float/releases/download/v6.0.0/
