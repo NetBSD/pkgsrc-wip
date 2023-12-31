@@ -1,0 +1,6 @@
+dd is a package for working with binary decision diagrams that includes both a
+pure Python implementation and Cython bindings to C libraries (CUDD, Sylvan,
+BuDDy). The Python and Cython modules implement the same API, so the same user
+code runs with both. All the standard operations on BDDs are available,
+including dynamic variable reordering using sifting, garbage collection,
+dump/load from files, plotting, and a parser of quantified Boolean expressions.
