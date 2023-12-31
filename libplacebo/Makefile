@@ -25,6 +25,7 @@ MESON_ARGS+=	-Dglslang=disabled
 MESON_ARGS+=	-Dlcms=enabled
 MESON_ARGS+=	-Dopengl=enabled
 MESON_ARGS+=	-Dshaderc=disabled
+# doesn't work
 MESON_ARGS+=	-Dvulkan=disabled
 MESON_ARGS+=	-Dxxhash=enabled
 
@@ -33,6 +34,10 @@ USE_TOOLS+=		pkg-config
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
+
+PKGCONFIG_OVERRIDE+=	output/meson-private/libplacebo.pc
+
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 # Populate <fast_float/fast_float.h>
 pre-configure:
