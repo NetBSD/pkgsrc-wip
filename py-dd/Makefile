@@ -11,10 +11,10 @@ COMMENT=	Binary decision diagrams in Python, wrappers of CUDD, Sylvan, BuDDy
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-astutils>=0.0.5:../../wip/py-astutils
-
 BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.0:../../devel/py-cython
-
 USE_LANGUAGES+=	c c++
+
+ALL_ENV=	DD_FETCH=1 DD_CUDD=1
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

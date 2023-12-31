@@ -1,8 +1,4 @@
-1. These two envrionment variables are required. Need a way to add them to Makefile
-
-	DD_FETCH=1 DD_CUDD=1
-
-2. There is ssl.SSLCertVerificationError when the build tries to download cudd.
+There is ssl.SSLCertVerificationError when the build tries to download cudd.
 Have worked around by doing the following in work/dd-0.6.0:
 
 	 wget --content-disposition https://sourceforge.net/projects/cudd-mirror/files/cudd-3.0.0.tar.gz/download
