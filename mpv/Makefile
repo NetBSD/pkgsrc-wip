@@ -85,6 +85,7 @@ post-install:
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../wip/libplacebo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
