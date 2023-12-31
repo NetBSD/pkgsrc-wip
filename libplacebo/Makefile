@@ -28,7 +28,8 @@ MESON_ARGS+=	-Dshaderc=disabled
 MESON_ARGS+=	-Dvulkan=disabled
 MESON_ARGS+=	-Dxxhash=enabled
 
-USE_TOOLS+=	pkg-config
+PYTHON_FOR_BUILD_ONLY=	yes
+USE_TOOLS+=		pkg-config
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
