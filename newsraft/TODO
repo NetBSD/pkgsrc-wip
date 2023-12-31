@@ -1,0 +1,5 @@
+port grisha/gumbo-parser (https://codeberg.org/grisha/gumbo-parser)
+build .
+COMMIT_MSG
+DESCR
+test
