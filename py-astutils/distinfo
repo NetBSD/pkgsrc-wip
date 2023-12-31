@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (astutils-0.0.5.tar.gz) = d8acc6c49dd5093c76b2df26226faa404cbc48e150bb73cb60d320a56ad83009
+SHA512 (astutils-0.0.5.tar.gz) = 54bddf902430c1161928d7da898f762c7db8682e6b537fbcb26829e75db58760e5368d07d29b6f01d72eb091ed69585134960193ea27ce479c12281efca1d5f1
+Size (astutils-0.0.5.tar.gz) = 9118 bytes

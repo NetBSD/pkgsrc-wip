@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/astutils/__init__.py
+${PYSITELIB}/astutils/__init__.pyc
+${PYSITELIB}/astutils/__init__.pyo
+${PYSITELIB}/astutils/_version.py
+${PYSITELIB}/astutils/_version.pyc
+${PYSITELIB}/astutils/_version.pyo
+${PYSITELIB}/astutils/ast.py
+${PYSITELIB}/astutils/ast.pyc
+${PYSITELIB}/astutils/ast.pyo
+${PYSITELIB}/astutils/ply.py
+${PYSITELIB}/astutils/ply.pyc
+${PYSITELIB}/astutils/ply.pyo

@@ -1,0 +1,8 @@
+Bare essentials for building abstract syntax trees (AST) and Python
+`lex`-`yacc` ([PLY](https://github.com/dabeaz/ply)) parsers.
+
+The package includes:
+
+- two classes for tree nodes: `Terminal`, `Operator`
+- a `Lexer` and `Parser` class, and a helper function to erase and
+  rewrite the table files.
