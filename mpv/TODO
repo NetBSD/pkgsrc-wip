@@ -1,0 +1,7 @@
+Currently fails in configure phase with:
+
+```
+Run-time dependency libplacebo found: NO (tried pkgconfig)
+```
+
+Package libplacebo!
