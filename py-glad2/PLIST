@@ -1,5 +1,5 @@
 @comment $NetBSD$
-bin/glad
+bin/glad${PYVERSSUFFIX}
 ${PYSITELIB}/glad/__init__.py
 ${PYSITELIB}/glad/__init__.pyc
 ${PYSITELIB}/glad/__init__.pyo

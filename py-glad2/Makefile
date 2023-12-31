@@ -16,5 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/glad ${DESTDIR}${PREFIX}/bin/glad${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
