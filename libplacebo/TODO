@@ -1,0 +1,7 @@
+Configure fails with:
+
+```
+Library version found: NO
+
+src/opengl/include/glad/meson.build:11:2: ERROR: Problem encountered: glad (required: >= 2.0, found: none) was not found in PYTHONPATH or `3rdparty`. Please run `git submodule update --init` followed by `meson --wipe`.
+```
