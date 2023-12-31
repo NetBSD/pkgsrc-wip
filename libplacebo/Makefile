@@ -10,6 +10,8 @@ HOMEPAGE=	https://code.videolan.org/videolan/libplacebo
 COMMENT=	GPU-accelerated image/video processing primitives and shaders
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	${PYPKGPREFIX}-glad2-[0-9]*:../../wip/py-glad2
+
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES=	c c++
