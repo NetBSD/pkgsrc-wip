@@ -39,5 +39,6 @@ pre-configure:
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
