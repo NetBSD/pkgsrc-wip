@@ -1,1 +1,70 @@
 Fails to build due:
+
+   Compiling exr v1.71.0
+error[E0425]: cannot find value `BIOCSETIF` in this scope
+  --> .../pkgsrc/wip/py-mitmproxy_rs/work/vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs:79:29
+   |
+79 |         try_ioctl!(self.fd, BIOCSETIF, &mut self.ifreq);
+   |                             ^^^^^^^^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+1  + use crate::phy::sys::bpf::libc::BIOCSETIF;
+   |
+1  + use libc::BIOCSETIF;
+   |
+
+error[E0425]: cannot find value `BIOCIMMEDIATE` in this scope
+   --> .../pkgsrc/wip/py-mitmproxy_rs/work/vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs:107:29
+    |
+107 |         try_ioctl!(self.fd, BIOCIMMEDIATE, &mut bufsize as *mut libc::c_int);
+    |                             ^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+1   + use crate::phy::sys::bpf::libc::BIOCIMMEDIATE;
+    |
+1   + use libc::BIOCIMMEDIATE;
+    |
+
+error[E0425]: cannot find value `BIOCGBLEN` in this scope
+   --> .../pkgsrc/wip/py-mitmproxy_rs/work/vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs:108:29
+    |
+108 |         try_ioctl!(self.fd, BIOCGBLEN, &mut bufsize as *mut libc::c_int);
+    |                             ^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+1   + use crate::phy::sys::bpf::libc::BIOCGBLEN;
+    |
+1   + use libc::BIOCGBLEN;
+    |
+
+error[E0425]: cannot find value `BPF_HDRLEN` in this scope
+   --> .../pkgsrc/wip/py-mitmproxy_rs/work/vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs:121:35
+    |
+121 |             if len == -1 || len < BPF_HDRLEN as isize {
+    |                                   ^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find value `BPF_HDRLEN` in this scope
+   --> .../pkgsrc/wip/py-mitmproxy_rs/work/vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs:129:25
+    |
+129 |                 &buffer[BPF_HDRLEN] as *const u8 as *const libc::c_void,
+    |                         ^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find value `BPF_HDRLEN` in this scope
+   --> .../pkgsrc/wip/py-mitmproxy_rs/work/vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs:130:23
+    |
+130 |                 len - BPF_HDRLEN,
+    |                       ^^^^^^^^^^ not found in this scope
+
+   Compiling gif v0.12.0
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `smoltcp` (lib) due to 6 previous errors
+warning: build failed, waiting for other jobs to finish...
+💥 maturin failed
+  Caused by: Failed to build a native library through cargo
+  Caused by: Cargo build finished with "exit status: 101": `PYO3_ENVIRONMENT_SIGNATURE="cpython-3.11-64bit" PYO3_PYTHON="/usr/pkg/bin/python3.11" PYTHON_SYS_EXECUTABLE="/usr/pkg/bin/python3.11" "cargo" "rustc" "--message-format" "json-render-diagnostics" "--manifest-path" ".../pkgsrc/wip/py-mitmproxy_rs/work/mitmproxy_rs-0.5.1/mitmproxy-rs/Cargo.toml" "--release" "--lib"`
+Error: command ['maturin-3.11', 'pep517', 'build-wheel', '-i', '/usr/pkg/bin/python3.11', '--compatibility', 'off'] returned non-zero exit status 1
+
+ERROR Backend subprocess exited when trying to invoke build_wheel
