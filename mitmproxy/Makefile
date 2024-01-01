@@ -9,7 +9,7 @@ HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive console program for inspecting and editing traffic flows
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-aioquic_mitmproxy>=0.9.21:../../wip/py-aioquic_mitmproxy # TODO
+#DEPENDS+=	${PYPKGPREFIX}-aioquic_mitmproxy>=0.9.21:../../wip/py-aioquic_mitmproxy # TODO
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-h2>=4.1:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-hyperframe>=6.0:../../www/py-hyperframe
 DEPENDS+=	${PYPKGPREFIX}-kaitaistruct>=0.10:../../devel/py-kaitaistruct
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.8:../../databases/py-ldap3
-DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.4:../../wip/py-mitmproxy_rs # TODO
+#DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.4:../../wip/py-mitmproxy_rs # TODO
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=22.1:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.6.0:../../x11/py-pyperclip
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.3:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-urwid-mitmproxy>=2.1.1:../../wip/py-urwid-mitmproxy # TODO
+#DEPENDS+=	${PYPKGPREFIX}-urwid-mitmproxy>=2.1.1:../../wip/py-urwid-mitmproxy # TODO
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=1.0:../../www/py-wsproto
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 
