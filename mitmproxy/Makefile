@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.6.0:../../x11/py-pyperclip
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.3:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
-#DEPENDS+=	${PYPKGPREFIX}-urwid-mitmproxy>=2.1.1:../../wip/py-urwid-mitmproxy # TODO
+DEPENDS+=	${PYPKGPREFIX}-urwid-mitmproxy>=2.1.1:../../wip/py-urwid-mitmproxy
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=1.0:../../www/py-wsproto
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 
