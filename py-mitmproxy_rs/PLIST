@@ -1,1 +1,24 @@
 @comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
+${PYSITELIB}/mitmproxy_rs/__init__.py
+${PYSITELIB}/mitmproxy_rs/__init__.pyc
+${PYSITELIB}/mitmproxy_rs/__init__.pyi
+${PYSITELIB}/mitmproxy_rs/__init__.pyo
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/__init__.py
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/__init__.pyc
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/__init__.pyo
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_macos.py
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_macos.pyc
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_macos.pyo
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_rs.py
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_rs.pyc
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_rs.pyo
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.py
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.pyc
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.pyo
+${PYSITELIB}/mitmproxy_rs/mitmproxy_rs.abi3.so
+${PYSITELIB}/mitmproxy_rs/py.typed
