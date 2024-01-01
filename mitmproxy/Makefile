@@ -39,12 +39,11 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 # TODO / XXX: only for Python 3.10!
 #DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3:../../devel/py-typing-extensions
 
-SUBST_CLASSES+=			setuppyversions
-SUBST_STAGE.setuppyversions=	pre-configure
-SUBST_MESSAGE.setuppyversions=	Avoid too strict version requirements
-SUBST_FILES.setuppyversions=	setup.py
-SUBST_SED.setuppyversions+=	-E -e '/[>=]=/ s/, *(<|!=)[^"]+//g'
-SUBST_SED.setuppyversions+=	-E -e '/==[0-9.]+",/ s/==/>=/g'
+SUBST_CLASSES+=				pyprojecttomlversions
+SUBST_STAGE.pyprojecttomlversions=	pre-configure
+SUBST_MESSAGE.pyprojecttomlversions=	Avoid too strict version requirements
+SUBST_FILES.pyprojecttomlversions=	pyproject.toml
+SUBST_SED.pyprojecttomlversions+=	-E -e '/[>=]=/ s/, *<[0-9.]+(",|;)/\1/g'
 
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
