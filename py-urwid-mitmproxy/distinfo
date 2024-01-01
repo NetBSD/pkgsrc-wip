@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.24 2023/12/11 10:07:09 wiz Exp $
+
+BLAKE2s (urwid-mitmproxy-2.1.2.1.tar.gz) = 3cae2d3851f7cb6d74a8a02f3b606f0269196ad1511ae287efea7dd2a739e9a3
+SHA512 (urwid-mitmproxy-2.1.2.1.tar.gz) = 490530b8078ad30350e2e1863fed9acf7e07e87ba2bdc5febb5e6100e8bbb47aa89bfce64a8ba8c2450a1a5a1a18e775d812e6be1675c416d62cfadaacb4485d
+Size (urwid-mitmproxy-2.1.2.1.tar.gz) = 634423 bytes
