@@ -4239,6 +4239,7 @@ SUBDIR+=	py-pykit-shared
 SUBDIR+=	py-pylint-venv
 SUBDIR+=	py-pylith
 SUBDIR+=	py-pyls-spyder
+SUBDIR+=	py-pylsqpack
 SUBDIR+=	py-pymatgen
 SUBDIR+=	py-pymbolic
 SUBDIR+=	py-pymdown-extensions
