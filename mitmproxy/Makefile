@@ -23,7 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-kaitaistruct>=0.10:../../devel/py-kaitaistruct
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.8:../../databases/py-ldap3
 #DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.4:../../wip/py-mitmproxy_rs # TODO
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=22.1:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.14:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-publicsuffix2>=2.20190812:../../www/py-publicsuffix2
@@ -63,6 +62,9 @@ USE_LANGUAGES=			# none
 # Only for Python >=3.10
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
