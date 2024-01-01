@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-h2>=4.1:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-hyperframe>=6.0:../../www/py-hyperframe
 DEPENDS+=	${PYPKGPREFIX}-kaitaistruct>=0.10:../../devel/py-kaitaistruct
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.8:../../databases/py-ldap3
-#DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.4:../../wip/py-mitmproxy_rs # TODO
+DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.4:../../wip/py-mitmproxy_rs
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.14:../../devel/py-protobuf
