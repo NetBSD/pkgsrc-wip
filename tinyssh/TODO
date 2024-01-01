@@ -1,0 +1,6 @@
+- Don't run regression tests in the pkgsrc build target (but do build them)
+- Do run regression tests in the pkgsrc test target
+- Add option to link with libsodium, making sure that disabling the option works
+- Decide whether to enable the libsodium option by default (probably yes)
+- Actually try running it
+- Add an rc.d script

@@ -1,0 +1,10 @@
+tinysshd is a minimalistic SSH server which implements only a subset of
+SSHv2 features.
+
+* tinysshd supports only secure cryptography
+* tinysshd doesn't implement older crypto
+* tinysshd doesn't implement unsafe features
+* tinysshd doesn't have features such as: SSH1 protocol, compression,
+  port forwarding, agent forwarding, X11 forwarding...
+* tinysshd doesn't use dynamic memory allocation (no allocation
+  failures, etc.)

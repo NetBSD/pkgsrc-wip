@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/tinysshd
+bin/tinysshd-makekey
+bin/tinysshd-printkey
+man/man8/tinysshd-makekey.8
+man/man8/tinysshd-printkey.8
+man/man8/tinysshd.8
+man/man8/tinysshnoneauthd.8
