@@ -1979,7 +1979,6 @@ SUBDIR+=	libpar2
 SUBDIR+=	libpare
 SUBDIR+=	libparsifal
 SUBDIR+=	libpatterns
-SUBDIR+=	libplacebo
 SUBDIR+=	libplist2
 SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
