@@ -1,0 +1,10 @@
+libplacebo: Import libplacebo-6.338.1 as multimedia/libplacebo
+
+libplacebo is, in a nutshell, the core rendering algorithms and ideas
+of mpv rewritten as an independent library. As of today, libplacebo
+contains a large assortment of video processing shaders, focusing on
+both quality and performance.
+
+Packaged in pkgsrc-wip by <leot> and <wiz>.
+
+This will be needed for multimedia/mpv.
