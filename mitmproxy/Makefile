@@ -46,8 +46,8 @@ REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
 USE_LANGUAGES=			# none
 
-# Only for Python >=3.9
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+# Only for Python >=3.10
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
