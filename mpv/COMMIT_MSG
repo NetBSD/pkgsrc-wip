@@ -3,6 +3,7 @@ mpv: Update to 0.37.0
 pkgsrc changes:
 - Remove bits that were applied upstream in patch-osdep_threads-posix.h
 - Adjust patch-osdep_threads.c logic to patch-osdep_threads-posix.h
+- Add dependency to libplacebo (thanks to <wiz> for help in packaging!)
 
 Changes:
 0.37.0
