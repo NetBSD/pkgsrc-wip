@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (aioquic_mitmproxy-0.9.21.1.tar.gz) = c53244465d5c6221ee54a9ebc33f6731eadce851df8af960c577bdec51b499af
+SHA512 (aioquic_mitmproxy-0.9.21.1.tar.gz) = 8499685f0d16b2ea0844b15e5b6ed77813b0af0f5e418cb7bb609fbb1386e71f3160a3b23e989050159e03e67cb2fdc3b76d9377fecad02964777e1d2398a6a5
+Size (aioquic_mitmproxy-0.9.21.1.tar.gz) = 154797 bytes
