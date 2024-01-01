@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=g/glad2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Dav1dde/glad
-COMMENT=	Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator based on the official specifications
+COMMENT=	Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
