@@ -4883,7 +4883,6 @@ SUBDIR+=	roundcube-plugin-carddav
 SUBDIR+=	roundcube-skin-mvision2
 SUBDIR+=	routersploit
 SUBDIR+=	roxterm
-SUBDIR+=	rpcemu
 SUBDIR+=	rpki-git
 SUBDIR+=	rpm5
 SUBDIR+=	rq
