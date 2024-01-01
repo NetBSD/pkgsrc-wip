@@ -1,5 +1,4 @@
-port grisha/gumbo-parser (https://codeberg.org/grisha/gumbo-parser)
-build .
+docs/example
 COMMIT_MSG
-DESCR
 test
+merge wip/gumbo-parser in -current

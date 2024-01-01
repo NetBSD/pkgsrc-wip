@@ -1,23 +1,9 @@
-TODO: Adjust the following lines from README.md
+newsraft is a feed reader with a ncurses user interface. It is
+greatly inspired by newsboat and tries to be its lightweight
+counterpart. newsraft supports parallel downloads, section-based
+feeds grouping, opening links in any program, viewing news from all
+feeds with explore mode, automatic updates for feeds and sections,
+multiple actions key bindings, support for feed generating scripts,
+text search by news titles, and interactive interface for viewing
+news content.
 
-## Description
-
-Newsraft is a [feed reader](https://en.wikipedia.org/wiki/News_aggregator) with
-[ncurses](https://en.wikipedia.org/wiki/Ncurses) user interface. It is greatly
-inspired by [Newsboat](https://www.newsboat.org) and tries to be its lightweight
-counterpart. Notable design differences between these projects are listed in the
-[doc/project-goals.md](https://codeberg.org/newsraft/newsraft/src/branch/main/doc/project-goals.md).
-
-![Newsraft in action](doc/newsraft.png)
-
-## Features
-
-* Parallel downloads
-* Section-based feeds grouping
-* Opening links in any program
-* Viewing news from all feeds with explore mode
-* Automatic updates for feeds and sections
-* Multiple actions key bindings
-* Support for feed generating scripts
-* Text search by news titles
-...
