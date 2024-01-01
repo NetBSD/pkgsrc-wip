@@ -86,7 +86,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-cli ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-server ${DESTDIR}${PREFIX}/bin/
-	cd ${WRKDIR}/linux/${DISTNAME}/public && \
+	cd ${WRKDIR}/linux/grafana-${GITHUB_TAG}/public && \
 		${PAX} -rw . ${DESTDIR}${PUBLICDIR}
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/

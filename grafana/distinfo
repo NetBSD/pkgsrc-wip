@@ -12448,7 +12448,5 @@ BLAKE2s (xorm.io_core_@v_v0.7.3.zip) = 5c41003b538f900e8fe8e018035ea37178453012f
 SHA512 (xorm.io_core_@v_v0.7.3.zip) = 55a07d5a03f8eff5b6dc735c31516070fcea93039d541907a7254e89c57b68f43196afc64df924b7ec26bd74de7983b145f6466b8b5005e8fd52cc8f696bf48e
 Size (xorm.io_core_@v_v0.7.3.zip) = 31222 bytes
 SHA1 (patch-conf_sample.ini) = 1bccc24213f598a618b062a04877b7d375973ccf
-SHA1 (patch-go.mod) = 5c9832a95b5afdbabec5fc21efb86d91f709452f
-SHA1 (patch-go.sum) = bef3ccec2f3e3a78cc4d31023c7dc252af342605
 SHA1 (patch-pkg_build_cmd.go) = 6d550f8413fb3752c558d46f691f8f7d862cd7fa
 SHA1 (patch-pkg_cmd_grafana-server_commands_flags.go) = f10afd19305f50f1f6199c56d35f2c122cdb8689
