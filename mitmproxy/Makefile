@@ -48,6 +48,14 @@ SUBST_MESSAGE.pyprojecttomlversions=	Avoid too strict version requirements
 SUBST_FILES.pyprojecttomlversions=	pyproject.toml
 SUBST_SED.pyprojecttomlversions+=	-E -e '/[>=]=/ s/, *<[0-9.]+(",|;)/\1/g'
 
+# XXX: This is very dirty and fragile!
+SUBST_CLASSES+=			urwid_mitmproxy
+SUBST_STAGE.urwid_mitmproxy=	pre-configure
+SUBST_MESSAGE.urwid_mitmproxy=	Avoid conflicts with urwid
+SUBST_FILES.urwid_mitmproxy+=	mitmproxy/tools/console/*.py
+SUBST_FILES.urwid_mitmproxy+=	mitmproxy/tools/console/*/*.py
+SUBST_SED.urwid_mitmproxy+=	-e 's/urwid/urwid_mitmproxy/g'
+
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
 USE_LANGUAGES=			# none
@@ -55,9 +63,6 @@ USE_LANGUAGES=			# none
 # Only for Python >=3.10
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
