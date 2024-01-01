@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (python-omega-0.1.2.tar.gz) = 0f78f750b1af9ba3dd292dc298aeb1a261ec82e5e622cf3fab37f4e009f881e5
+SHA512 (python-omega-0.1.2.tar.gz) = 3894fbf6f5b9a7f2d3567d366b49d27871a227dd92bf5c89b5e3f48b15500607a037cf515aa9516a87fa35d59f2978471400fc521519be2e5a4015382e6e9d3e
+Size (python-omega-0.1.2.tar.gz) = 54619 bytes

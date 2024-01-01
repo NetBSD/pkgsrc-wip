@@ -1,0 +1,4 @@
+Omega is a framework designed to help you build parsers for text and binary
+data. It creates a recursive-descent/Parsing-Expression-Grammar parser given
+a description of the file-format in the concise Omega language, but if your
+file-format can't be described in pure Omega, it's easy to extend with Python.
