@@ -1,6 +1,0 @@
-py-glad2: Import py-glad2-2.0.4 as graphics/py-glad2
-
-Vulkan/GL/GLES/EGL/GLX/WGL Loader-Generator based on the official
-specifications for multiple languages.
-
-Packaged in pkgsrc-wip by <wiz> and <leot>.
