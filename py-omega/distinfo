@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (omega-0.3.1.tar.gz) = c00974f882269e23ff992d5b205ac304babc6bd676d02ac32e162a3a2d16086f
+SHA512 (omega-0.3.1.tar.gz) = e478584daa09e4f4d1f57033ea43a87d08fbf057e70b31c891fced9401eedd778bef88567103da1626b02528d583c424e615c0d471cdbed34c0828840fb0b87e
+Size (omega-0.3.1.tar.gz) = 200132 bytes

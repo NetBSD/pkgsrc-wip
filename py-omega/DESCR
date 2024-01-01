@@ -1,0 +1,2 @@
+A package of symbolic algorithms using binary decision diagrams (BDDs) for
+synthesizing implementations from temporal logic specifications.
