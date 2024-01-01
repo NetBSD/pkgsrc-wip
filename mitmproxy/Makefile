@@ -36,8 +36,11 @@ DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=1.0:../../www/py-wsproto
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 
-# TODO / XXX: only for Python 3.10!
-#DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3:../../devel/py-typing-extensions
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3:../../devel/py-typing-extensions
+.endif
 
 SUBST_CLASSES+=				pyprojecttomlversions
 SUBST_STAGE.pyprojecttomlversions=	pre-configure
