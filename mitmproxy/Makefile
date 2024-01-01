@@ -1,16 +1,15 @@
 # $NetBSD: Makefile,v 1.45 2023/10/23 06:37:49 wiz Exp $
 
-DISTNAME=	mitmproxy-8.1.1
-PKGREVISION=	2
+DISTNAME=	mitmproxy-10.1.6
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive console program for inspecting and editing traffic flows
 LICENSE=	mit
 
+# TODO: review all depends and eventually add not packaged one
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
