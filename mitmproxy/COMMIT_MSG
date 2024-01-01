@@ -1,0 +1,158 @@
+mitmproxy: Update to 10.1.6
+
+TODO: this is very WIP, beware!
+
+pkgsrc changes:
+- TODO
+
+Changes:
+## 14 December 2023: mitmproxy 10.1.6
+* Fix compatibility with Windows Schannel clients, which previously got
+  confused by CA and leaf certificate sharing the same Subject Key Identifier.
+* Change keybinding for exporting flow from "e" to "x" to avoid conflict with "edit" keybinding.
+* Fix bug where response flows from HAR files had incorrect `content-length` headers
+* Improved handling for `allow_hosts`/`ignore_hosts` options in WireGuard mode.
+* Fix a bug where TCP connections were not closed properly.
+* DNS resolution is now exempted from `ignore_hosts` in WireGuard Mode.
+* Fix case sensitivity of URL added to blocklist
+* Fix a bug where logging was stopped prematurely during shutdown.
+* For plaintext traffic, `ignore_hosts` now also takes HTTP/1 host headers into account.
+* Fix empty cookie attributes being set to `Key=` instead of `Key`
+* Scripts with relative paths are now loaded relative to the config file and not where the command is ran
+* Fix `mitmweb` splitter becoming drag and drop.
+* Enhance documentation and add alert log messages when stream_large_bodies and modify_body are set
+* Subject Alternative Names are now represented as `cryptography.x509.GeneralNames` instead of `list[str]`
+  across the codebase. This fixes a regression introduced in mitmproxy 10.1.1 related to punycode domain encoding.
+
+
+## 14 November 2023: mitmproxy 10.1.5
+* Remove stray `replay-extra` from CLI status bar.
+
+
+## 13 November 2023: mitmproxy 10.1.4
+* Fix a hang/freeze in the macOS distributions when doing TLS negotiation.
+* Update savehar addon to fix creating corrupt har files caused by empty response content
+* Update savehar addon to handle scenarios where "path" key in cookie
+  attrs dict is missing.
+* Add `server_replay_extra` option to serverplayback to define behaviour
+  when replayable response is missing.
+
+
+## 04 November 2023: mitmproxy 10.1.3
+* Fix a bug introduced in mitmproxy 10.1.2 where mitmweb would fail to establish
+  a WebSocket connection. Affected users may need to clear their browser cache
+  or hard-reload mitmweb (Ctrl+Shift+R).
+
+
+## 03 November 2023: mitmproxy 10.1.2
+* Add a raw hex stream contentview.
+* Add a contentview for DNS-over-HTTPS.
+* Replaced standalone mitmproxy binaries on macOS with an app bundle
+  that contains the mitmproxy/mitmweb/mitmdump CLI tools.
+  This change was necessary to support macOS code signing requirements.
+  Homebrew remains the recommended installation method.
+* Fix certificate generation to work with strict mode OpenSSL 3.x clients
+* Fix path() documentation that the return value might include the query string
+* mitmproxy now officially supports Python 3.12.
+* Fix root-relative URLs so that mitmweb can run in subdirectories.
+* Add an optional parameter(ldap search filter key) to ProxyAuth-LDAP.
+* Fix a regression when using the proxyauth addon with clients that (rightfully) reuse connections.
+
+
+## 27 September 2023: mitmproxy 10.1.1
+* Fix certificate generation for punycode domains.
+* Fix a bug that would crash mitmweb when opening options.
+
+
+## 24 September 2023: mitmproxy 10.1.0
+* Add support for reading HAR files using the existing flow loading APIs, e.g. `mitmproxy -r example.har`.
+* Add support for writing HAR files using the `save.har` command and the `hardump` option for mitmdump.
+* Packaging changes:
+  - `mitmproxy-rs` does not depend on a protobuf compiler being available anymore,
+    we're now also providing a working source distribution for all platforms.
+  - On macOS, `mitmproxy-rs` now depends on `mitmproxy-macos`. We only provide binary wheels for this package because
+    it contains a code-signed system extension. Building from source requires a valid Apple Developer Id, see CI for
+    details.
+  - On Windows, `mitmproxy-rs` now depends on `mitmproxy-windows`. We only provide binary wheels for this package to
+    simplify our deployment process, see CI for how to build from source.
+* Increase maximum dump file size accepted by mitmweb
+
+
+## 04 August 2023: mitmproxy 10.0.0
+* Add experimental support for HTTP/3 and QUIC.
+* ASGI/WSGI apps can now listen on all ports for a specific hostname. 
+  This makes it simpler to accept both HTTP and HTTPS.
+* Add `replay.server.add` command for adding flows to server replay buffer
+* Remove string escaping in raw view.
+* Updating `Request.port` now also updates the Host header if present.
+  This aligns with `Request.host`, which already does this.
+* Fix editing of multipart HTTP requests from the CLI.
+* Add documentation on using Magisk module for intercepting traffic in Android production builds.
+* Fix a bug where the direction indicator in the message stream view would be in the wrong direction.
+* Fix a bug where peername would be None in tls_passthrough script, which would make it not working.
+* the `esc` key can now be used to exit the current view
+* focus-follow shortcut will now work in flow view context too.
+* Fix a bug where a server connection timeout would cause requests to be issued with a wrong SNI in reverse proxy mode.
+* The `server_replay_nopop` option has been renamed to `server_replay_reuse` to avoid confusing double-negation.
+* Add zstd to valid gRPC encoding schemes.
+* For reverse proxy directly accessed via IP address, the IP address is now included
+  as a subject in the generated certificate.
+* Enable legacy SSL connect when connecting to server if the `ssl_insecure` flag is set.
+* Change wording in the http-reply-from-proxy.py example
+* Added option to specify an elliptic curve for key exchange between mitmproxy <-> server
+* Add "Prettier" code linting tool to mitmweb.
+* When logging exceptions, provide the entire exception object to log handlers
+* mitmproxy now requires Python 3.10 or above.
+
+### Breaking Changes
+* The `onboarding_port` option has been removed. The onboarding app now responds
+  to all requests for the hostname specified in `onboarding_host`.
+* `connection.Client` and `connection.Server` now accept keyword arguments only.
+  This is a breaking change for custom addons that use these classes directly.
+
+## 02 November 2022: mitmproxy 9.0.1
+* The precompiled binaries now ship with OpenSSL 3.0.7, which resolves CVE-2022-3602 and CVE-2022-3786.
+* Performance and stability improvements for WireGuard mode.
+* Fix a bug where the standalone Linux binaries would require libffi to be installed.
+* Hard exit when mitmproxy cannot write logs, fixes endless loop when parent process exits.
+* Fix a permission error affecting the Docker images.
+
+
+## 28 October 2022: mitmproxy 9.0.0
+### Major Features
+* Add Raw UDP support.
+* Add WireGuard mode to enable transparent proxying via WireGuard.
+* Add DTLS support. 
+* Add a quick help bar to mitmproxy.
+
+### Deprecations
+* Deprecate `add_log` event hook. Users should use the builtin `logging` module instead.
+* Deprecate `mitmproxy.ctx.log` in favor of Python's builtin `logging` module.
+  
+### Breaking Changes
+ * The `mode` option is now a list of server specs instead of a single spec.
+   The CLI interface is unaffected, but users may need to update their `config.yaml`.
+
+### Full Changelog
+* Mitmproxy binaries now ship with Python 3.11.
+* One mitmproxy instance can now spawn multiple proxy servers.
+* Add syntax highlighting to JSON and msgpack content view.
+* Add MQTT content view.
+* Setting `connection_strategy` to `lazy` now also disables early 
+  upstream connections to fetch TLS certificate details.
+* Fix order of event hooks on startup.
+* Include server information in bind/listen errors.
+* Include information about lazy connection_strategy in related errors.
+* Fix `tls_version_server_min` and `tls_version_server_max` options.
+* Added Magisk module generation for Android onboarding.
+* Update Linux binary builder to Ubuntu 20.04, bumping the minimum glibc version to 2.31.
+* Add "Save filtered" button in mitmweb.
+* Render application/prpc content as gRPC/Protocol Buffers
+* Mitmweb now supports `content_view_lines_cutoff`.
+* Fix a mitmweb crash when scrolling down the flow list.
+* Add HTTP/3 binary frame content view.
+* Fix mitmweb not properly opening a browser and being stuck on some Linux.
+* Fix race condition when updating mitmweb WebSocket connections that are closing.
+* Fix mitmweb crash when using filters.
+* Fix missing default port when starting a browser.
+* Add docs for transparent mode on Windows.
