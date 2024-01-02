@@ -23,9 +23,9 @@ LICENSE=	sendmail-license
 #DISTINFO_FILE=	${.CURDIR}/../../mail/sendmail/distinfo
 #FILESDIR=	${.CURDIR}/../../mail/sendmail/files
 #PATCHDIR=	${.CURDIR}/../../mail/sendmail/patches
-DISTINFO_FILE=	${.CURDIR}/../../hauke/sendmail8_18/distinfo
-FILESDIR=	${.CURDIR}/../../hauke/sendmail8_18/files
-PATCHDIR=	${.CURDIR}/../../hauke/sendmail8_18/patches
+DISTINFO_FILE=	${.CURDIR}/../../wip/sendmail818/distinfo
+FILESDIR=	${.CURDIR}/../../wip/sendmail818/files
+PATCHDIR=	${.CURDIR}/../../wip/sendmail818/patches
 
 USE_LANGUAGES=	c99
 
