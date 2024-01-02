@@ -1,3 +1,1 @@
-- Currently it only build by manually applying the patches in patches/
-- Review patches/*.xxx, they were only build-tested but are likely wrong
-- Properly patch such files
+- Review patches/* they were only build-tested but are likely wrong

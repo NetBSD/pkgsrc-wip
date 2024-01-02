@@ -1,7 +1,11 @@
 $NetBSD$
 
---- ./vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs.orig	2024-01-01 23:09:33.311396101 +0000
-+++ ./vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs
+Add support for NetBSD.
+
+XXX: likely incorrect, double-check!
+
+--- ../vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs.orig	2024-01-01 23:09:33.311396101 +0000
++++ ../vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs
 @@ -9,24 +9,24 @@ use crate::phy::Medium;
  use crate::wire::ETHERNET_HEADER_LEN;
  

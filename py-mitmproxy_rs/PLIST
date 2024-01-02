@@ -3,7 +3,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
 ${PYSITELIB}/mitmproxy_rs/__init__.py
 ${PYSITELIB}/mitmproxy_rs/__init__.pyc
 ${PYSITELIB}/mitmproxy_rs/__init__.pyi

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	mitmproxy_rs-0.5.1
+DISTNAME=	mitmproxy_rs-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
