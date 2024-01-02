@@ -3,9 +3,9 @@ $NetBSD$
 BLAKE2s (wsjtx-2.5.4.tgz) = 67169293348ef4176ec9a709cde87488df716fd92af0a701b46f76f0216691db
 SHA512 (wsjtx-2.5.4.tgz) = c4092d03af3346f0244d942c3db693f5d2c1ed7a2ec9077ded039b7d162e15abdaf09dcb9997d1833d25c366eb03a0dab6114313d423e7e2c9ff37d965261efc
 Size (wsjtx-2.5.4.tgz) = 25369854 bytes
-SHA1 (patch-CMakeLists.txt) = ca70c05d38ce8b8a350c6dba1275e9e7b52c59eb
-SHA1 (patch-CMake_Modules_FindUsb.cmake) = 733ea44a5b854ed10aec4ac6df9826c868938eba
-SHA1 (patch-Radio.cpp) = 97cfb0996325cc3462fa436a107eafc2495c23c0
+SHA1 (patch-CMakeLists.txt) = 169df91b79455e7ac6e036210edddd0440822fde
+SHA1 (patch-CMake_Modules_FindUsb.cmake) = 6c9edbce838731a026d682ddd0a1174bbceb4e89
+SHA1 (patch-Radio.cpp) = a798fbf75deb3cd49c6a15cd1e74530bb955ee23
 SHA1 (patch-hamlib.patch) = 8d5cec646b0fe317a41da3ed66a299ea1510c87f
-SHA1 (patch-widgets_FrequencyDeltaLineEdit.cpp) = 1fa3841592263c93ca89986ebe07bee46376cfd0
-SHA1 (patch-widgets_FrequencyLineEdit.cpp) = f6b8cccafdabab51057d216972e7184f06e0f685
+SHA1 (patch-widgets_FrequencyDeltaLineEdit.cpp) = 61adc842a3b8fae64d9a4110bed1f8d209d3e5d7
+SHA1 (patch-widgets_FrequencyLineEdit.cpp) = a70cf22461eb6a54fcf052079c7e5de6e4085313

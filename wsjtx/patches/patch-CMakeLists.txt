@@ -1,0 +1,51 @@
+$NetBSD$
+
+From FreeBSD ports 2.5.4
+
+--- wsjtx/CMakeLists.txt.orig	2021-11-03 19:53:01.000000000 -0400
++++ CMakeLists.txt	2021-12-31 07:53:05.900792000 -0500
+@@ -41,7 +41,7 @@
+ endif ()
+ 
+ if (POLICY CMP0075)
+-  cmake_policy (SET CMP0075 NEW) # honour CMAKE_REQUIRED_LIBRARIES in config checks
++  cmake_policy (SET CMP0075 NEW) # honour CMAKE_REQUIRED_LIBRARIES in config che,cks
+ endif ()
+ 
+ project (wsjtx
+@@ -867,7 +867,7 @@
+ # OpenMP
+ #
+ find_package (OpenMP)
+-
++set (OpenMP_C_FLAGS "-fopenmp")
+ #
+ # fftw3 single precision library
+ #
+@@ -884,7 +884,7 @@
+ check_type_size (CACHE_ALL HAMLIB_OLD_CACHING)
+ check_symbol_exists (rig_set_cache_timeout_ms "hamlib/rig.h" HAVE_HAMLIB_CACHING)
+ 
+-find_package (Usb REQUIRED)
++#find_package (Usb REQUIRED)
+ 
+ #
+ # Qt5 setup
+@@ -914,7 +914,7 @@
+ #
+ set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
+ 
+-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wall -Wextra -fexceptions -frtti")
++set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -fexceptions -frtti")
+ 
+ if (NOT APPLE)
+   set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-pragmas")
+@@ -1160,7 +1160,7 @@
+ target_link_libraries (encode77 wsjt_fort wsjt_cxx)
+ 
+ add_executable (wsprsim ${wsprsim_CSRCS})
+-target_link_libraries (wsprsim ${LIBM_LIBRARIES})
++target_link_libraries (wsprsim "-lm")
+ 
+ add_executable (jt4code lib/jt4code.f90)
+ target_link_libraries (jt4code wsjt_fort wsjt_cxx)
