@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mitmproxy/mitmproxy-rs
-COMMENT=	mitmproxy's Rust bits
+COMMENT=	Mitmproxy's Rust bits
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
