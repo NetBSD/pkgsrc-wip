@@ -1,8 +1,12 @@
 # $NetBSD$
 
-DISTNAME=	wsjtx-2.3.1
+DISTNAME=	wsjtx-2.5.4
 CATEGORIES=	ham
-MASTER_SITES=	https://physics.princeton.edu/pulsar/k1jt/
+#MASTER_SITES=	https://physics.princeton.edu/pulsar/k1jt/
+#MASTER_SITES=	https://downloads.sourceforge.net/project/wsjt/wsjtx-2.5.4/
+MASTER_SITES=	https://sourceforge.net/projects/wsjt/files/wsjtx-2.5.4/wsjtx-2.5.4.tgz/
+# for 2.6.1
+#ASTER_SITES=	https://wsjt.sourceforge.io/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +16,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++ fortran
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake tar
 USE_LIBTOOL=	yes
 
 DEPENDS+=	qt5-qttranslations-[0-9]*:../../x11/qt5-qttranslations
@@ -22,7 +26,7 @@ CMAKE_ARGS+=	-D CMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX}
 CMAKE_ARGS+=	-DWSJT_SKIP_MANPAGES=ON
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${PREFIX}/qt5
 CMAKE_ARGS+=	-DWSJT_GENERATE_DOCS=OFF
-CMAKE_ARGS+=	-DLDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
+CMAKE_ARGS+=	-DLDFLAGS='-lusb-1.0 -L${PREFIX}/lib -lfftwf'
 CMAKE_ARGS+=	-DFortran_FLAGS+='-L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLDFLAGS=-'Wl,-rpath-link=-lusb-1.0 -L${PREFIX}/lib'
 CMAKE_ARGS+=	-DLIBUSB_CFLAGS='-I ${PREFIX}/include/libusb-1.0 -lusb-1.0 -L${PREFIX}/lib'
@@ -33,6 +37,17 @@ CMAKE_ARGS+=	-DQt5Test_DIR=${PREFIX}/qt5/lib/cmake/Qt5Test
 #IBUSB_CFLAGS+=	-lusb-1.0 -L${PREFIX}/lib
 LDFLAGS+=	${COMPILER_RPATH_FLAG}=-lusb-1.0 -L${PREFIX}/lib
 MAKE_ENV+=	AM_LDFLAGS='-lusb-1.0 -L${PREFIX}/lib'
+
+#   27  tar zxvf  ../../distfiles/wsjtx-2.5.4.tgz wsjtx-2.5.4/src/wsjtx.tgz
+#   28  mv wsjtx-2.5.4/src/wsjtx.tgz ../../distfiles/wsjtx-src-2.5.4.tgz
+
+pre-patch:
+	(cd ${WRKDIR};  \
+	tar zxf ${DISTDIR}/${DISTNAME}.tgz wsjtx-2.5.4/src/wsjtx.tgz ; \
+	tar zxf wsjtx-2.5.4/src/wsjtx.tgz ;\
+	)
+
+WRKSRC=		${WRKDIR}/wsjtx
 
 # debug only (checking log)
 #AKE_JOBS_SAFE=	no
