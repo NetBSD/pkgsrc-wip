@@ -2,11 +2,11 @@ $NetBSD$
 
 Add support for NetBSD.
 
-XXX: likely incorrect, double-check!
+Shared upstream via <https://github.com/smoltcp-rs/smoltcp/pull/883>.
 
---- ../vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs.orig	2024-01-01 23:09:33.311396101 +0000
+--- ../vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs.orig	2006-07-24 01:21:28.000000000 +0000
 +++ ../vendor/smoltcp-0.10.0/src/phy/sys/bpf.rs
-@@ -9,24 +9,24 @@ use crate::phy::Medium;
+@@ -9,16 +9,16 @@ use crate::phy::Medium;
  use crate::wire::ETHERNET_HEADER_LEN;
  
  /// set interface
@@ -22,12 +22,12 @@ XXX: likely incorrect, double-check!
 +#[cfg(any(target_os = "macos", target_os = "netbsd", target_os = "openbsd"))]
  const BIOCIMMEDIATE: libc::c_ulong = 0x80044270;
  /// set bpf_hdr struct size
- #[cfg(target_os = "macos")]
+-#[cfg(target_os = "macos")]
++#[cfg(any(target_os = "macos", target_os = "netbsd"))]
  const SIZEOF_BPF_HDR: usize = 18;
  /// set bpf_hdr struct size
--#[cfg(target_os = "openbsd")]
-+#[cfg(any(target_os = "netbsd", target_os = "openbsd"))]
- const SIZEOF_BPF_HDR: usize = 24;
+ #[cfg(target_os = "openbsd")]
+@@ -26,7 +26,7 @@ const SIZEOF_BPF_HDR: usize = 24;
  /// The actual header length may be larger than the bpf_hdr struct due to aligning
  /// see https://github.com/openbsd/src/blob/37ecb4d066e5566411cc16b362d3960c93b1d0be/sys/net/bpf.c#L1649
  /// and https://github.com/apple/darwin-xnu/blob/8f02f2a044b9bb1ad951987ef5bab20ec9486310/bsd/net/bpf.c#L3580
@@ -36,12 +36,12 @@ XXX: likely incorrect, double-check!
  const BPF_HDRLEN: usize = (((SIZEOF_BPF_HDR + ETHERNET_HEADER_LEN) + mem::align_of::<u32>() - 1)
      & !(mem::align_of::<u32>() - 1))
      - ETHERNET_HEADER_LEN;
-@@ -170,7 +170,7 @@ mod test {
-     }
+@@ -164,7 +164,7 @@ mod test {
+     use super::*;
  
      #[test]
--    #[cfg(target_os = "openbsd")]
-+    #[cfgany((target_os = "netbsd", target_os = "openbsd"))]
+-    #[cfg(target_os = "macos")]
++    #[cfg(any(target_os = "macos", target_os = "netbsd"))]
      fn test_aligned_bpf_hdr_len() {
-         assert_eq!(26, BPF_HDRLEN);
+         assert_eq!(18, BPF_HDRLEN);
      }
