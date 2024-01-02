@@ -5155,7 +5155,6 @@ SUBDIR+=	songwrite2
 SUBDIR+=	sonic
 SUBDIR+=	sonic-visualiser
 SUBDIR+=	sophia
-SUBDIR+=	sops
 SUBDIR+=	spacefm
 SUBDIR+=	spai
 SUBDIR+=	spamassassin-cvs
