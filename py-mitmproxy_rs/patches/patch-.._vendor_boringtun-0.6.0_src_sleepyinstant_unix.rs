@@ -2,6 +2,8 @@ $NetBSD$
 
 Add support for NetBSD.
 
+Shared upstream via <https://github.com/cloudflare/boringtun/pull/386>.
+
 --- ../vendor/boringtun-0.6.0/src/sleepyinstant/unix.rs.orig	2024-01-01 23:15:11.332028854 +0000
 +++ ../vendor/boringtun-0.6.0/src/sleepyinstant/unix.rs
 @@ -3,9 +3,9 @@ use std::time::Duration;
