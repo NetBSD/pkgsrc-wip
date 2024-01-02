@@ -1,5 +1,10 @@
 games/minetest: update minetest to 5.8.0
 
+Update prepared in wip by Kevin Bloom
+
+Added buildlink3 for textproc/jsoncpp to prevent build error when
+building on a system that has jsoncpp installed.
+
 Deprecations and compatibility notes
 - Minetest Game is no longer the default game and will no longer be
   shipped by Minetest. If you want it back, install it by using the

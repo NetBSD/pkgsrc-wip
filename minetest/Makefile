@@ -70,6 +70,7 @@ post-extract:
 #.include "../../graphics/irrlicht/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/jsoncpp/buildlink3.mk"
 #.if ${PLATFORM_SUPPORTS_LUAJIT} != "no"
 #.include "../../lang/LuaJIT2/buildlink3.mk"
 #.endif
