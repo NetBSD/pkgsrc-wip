@@ -1,5 +1,8 @@
 editors/dte: update dte to version 1.11.1
 
+Packaging changes:
+- Removed requirement for terminfo and curses as upstream now uses
+  their own built-in support for terminals.
 
 Changes from 1.11.0 -> 1.11.1:
 
