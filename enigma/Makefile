@@ -17,20 +17,16 @@ TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoconf autoheader automake gmake
+USE_TOOLS+=		aclocal autoconf autoheader automake gmake texi2html pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-system-enet
 
 WRKSRC=	${WRKDIR}/${DISTNAME:S/eni/Eni/:S/-src//}
-
-#CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-configure:
 	cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
-#	cd ${WRKSRC} && autoheader && aclocal -I m4 && automake --add-missing --foreign --copy && autoconf
-#	cd ${WRKSRC}/lib-src/enet && autoheader && aclocal -I m4 && automake --add-missing --foreign --copy && autoconf
-#	cd ${WRKSRC}/lib-src/zipios++ && aclocal && automake --add-missing --foreign --copy && autoconf
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
@@ -43,6 +39,7 @@ BUILDLINK_API_DEPENDS.png+=		png>=1.2.7
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/enet/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
