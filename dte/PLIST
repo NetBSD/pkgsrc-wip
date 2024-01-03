@@ -1,8 +1,12 @@
 @comment $NetBSD$
+@comment
+@comment X11 related files aren't installed when on Darwin:
+@comment https://gitlab.com/craigbarnes/dte/-/blob/v1.11.1/GNUmakefile#L44
+@comment
 bin/dte
 man/man1/dte.1
 man/man5/dte-syntax.5
 man/man5/dterc.5
-share/applications/dte.desktop
+${PLIST.notdarwin}share/applications/dte.desktop
 share/bash-completion/completions/dte
-share/metainfo/dte.appdata.xml
+${PLIST.notdarwin}share/metainfo/dte.appdata.xml
