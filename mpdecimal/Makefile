@@ -17,6 +17,7 @@ TEST_TARGET=	check_local
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	CC=gcc CXX=g++
+CONFIGURE_ARGS+=	CC=gcc CXX=g++ LDFLAGS="-Wl,-R${PREFIX}/lib" LDXXFLAGS="-Wl,-R${PREFIX}/lib"
+
 
 .include "../../mk/bsd.pkg.mk"
