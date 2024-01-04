@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-sysctl-[0-9]*:../../devel/py-sysctl
 
 USE_LANGUAGES=	# none
 
