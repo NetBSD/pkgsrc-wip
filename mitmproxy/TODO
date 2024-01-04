@@ -1,0 +1,1 @@
+- Update to 10.2.0 (this also avoid having a forked aioquic only for mitmproxy!)
