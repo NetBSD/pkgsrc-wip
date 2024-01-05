@@ -86,8 +86,6 @@ share/applications/emacs-mail.desktop
 share/applications/emacs.desktop
 share/applications/emacsclient-mail.desktop
 share/applications/emacsclient.desktop
-share/emacs/${PKGREVISION}/lisp/progmodes/etags-regen.el.gz
-share/emacs/${PKGREVISION}/lisp/progmodes/etags-regen.elc
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
 share/emacs/${PKGVERSION}/etc/COPYING
@@ -3673,6 +3671,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/elixir-ts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/elixir-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/erts-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/erts-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/etags-regen.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/etags-regen.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/etags.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/etags.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/executable.el.gz
