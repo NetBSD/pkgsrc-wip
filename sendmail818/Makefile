@@ -8,7 +8,7 @@ CONFLICTS+=	esmtp>=1.2
 
 .include "options.mk"
 #.include "../../mail/sendmail/Makefile.common"
-.include "../../hauke/sendmail8_18/Makefile.common"
+.include "../../wip/sendmail8_18/Makefile.common"
 
 USE_TOOLS+=	pax
 
