@@ -4,7 +4,7 @@
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.3.1
+DISTNAME=	R-4.3.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -170,6 +170,9 @@ fix-darwin-install-name:
 		install_name_tool -id $${libdir}/$${libname} $${lib};	\
 	done
 .endif
+
+post-install:
+	${RM}	${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
