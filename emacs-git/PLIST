@@ -86,6 +86,8 @@ share/applications/emacs-mail.desktop
 share/applications/emacs.desktop
 share/applications/emacsclient-mail.desktop
 share/applications/emacsclient.desktop
+share/emacs/${PKGREVISION}/lisp/progmodes/etags-regen.el.gz
+share/emacs/${PKGREVISION}/lisp/progmodes/etags-regen.elc
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/CALC-NEWS
 share/emacs/${PKGVERSION}/etc/COPYING
