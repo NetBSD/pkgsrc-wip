@@ -1,4 +1,4 @@
-(math/R) Updated 4.2.l to 4.3.2
+(math/R) Updated 4.2.3 to 4.3.2
 
 - pkgsrc side change
   strtoi function now conflicts with NetBSD function. Renaming R' side one
