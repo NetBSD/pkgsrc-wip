@@ -5,7 +5,7 @@ CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aircrack-ng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/aircrack-ng/aircrack-ng/
+HOMEPAGE=	https://www.aircrack-ng.org/
 COMMENT=	WiFi security auditing tools suite
 LICENSE=	gnu-gpl-v3
 
