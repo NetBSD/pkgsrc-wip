@@ -150,10 +150,10 @@ SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
 SUBST_CLASSES+=		strtoi
 SUBST_STAGE.strtoi=	pre-configure
-
-SUBST_FILES.strtoi= 	\
+SUBST_MESSAGE.strtoi=	Renaming strtoi to strtoiR to avoid conflict
+SUBST_FILES.strtoi=	\
 	tests/reg-tests-1d.R \
-	doc/NEWS.3	 \
+	doc/NEWS.3 \
 	doc/html/NEWS.2.html \
 	doc/html/NEWS.3.html \
 	doc/NEWS.2 \
@@ -171,7 +171,6 @@ SUBST_FILES.strtoi= 	\
 	src/main/character.c
 
 SUBST_SED.strtoi=	-e "s,strtoi,strtoiR,g"
-
 
 BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
