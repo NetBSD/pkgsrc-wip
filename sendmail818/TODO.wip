@@ -1,0 +1,32 @@
+(This is TODO.wip, because the pkgsrc entry has one.  pkglint says
+that's a bug, but the guide doesn't.)
+
+* Not a todo, but pkglint in wip does not appear to show more than
+  pkglint in pkgsrc.  There's a lot so I could have missed
+  something.  -gdt
+
+* Minimize diffs to pksrc, especially not commenting out and repeating
+  lines.
+
+* Probably do not comment out the proper MASTER_SITES, where this
+  would be but isn't for some reason, and presumably future versions
+  will be again.  Certainly, if they remain, an explanatory comment is
+  needed.
+
+* Probably not rename patches.  Or, perhaps with pkgsrc $MAINTAINER,
+  adjust patch names in pkgsrc as a change-patch-names-only commit, to
+  catch up to current conventions, so that reading diffs is
+  reasonable.
+
+* Create COMMIT_MSG with:
+
+  - Explanation of upstream release status (snapshot dir?) -- this
+    doesn't seem to be a regular release, but it's hard for me to
+    figure out.
+
+  - Packaging changes section, including discussion of blocklist
+    status relative to pkgsrc.  (I am really unclear on what's going
+    on here and why.)
+
+  - Summary of upstream NEWS.
+  
