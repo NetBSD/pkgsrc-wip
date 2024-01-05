@@ -2,6 +2,9 @@ s-nail: updated s-nail to 14.9.24
 
 Update prepared in wip by Kevin Bloom.
 
+Packaging updates:
+- removed unneeded patch in favor of MAKE_FLAGS
+
 14.9.23 -> 14.9.24:
 - Release tarball might be in --format=pax
 - Again honour MTA arguments passed after the "--" command line

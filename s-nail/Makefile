@@ -4,7 +4,7 @@ DISTNAME=		s-nail-14.9.24
 CATEGORIES=		mail
 MASTER_SITES=		https://www.sdaoden.eu/downloads/
 
-MAINTAINER=		jgw@sdf.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.sdaoden.eu/code.html
 COMMENT=		BSD mail utility with MIME extensions
 LICENSE=		original-bsd AND osl AND mpl-1.1
@@ -12,7 +12,10 @@ LICENSE=		original-bsd AND osl AND mpl-1.1
 MAKE_FILE=		makefile
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+MAKE_FLAGS+=		VAL_PREFIX=${PREFIX}
 MAKE_FLAGS+=		VAL_MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=		VAL_SYSCONFDIR=${EGDIR}
+MAKE_FLAGS+=		OPT_AUTOCC=no
 BUILD_MAKE_FLAGS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 
