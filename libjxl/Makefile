@@ -5,33 +5,30 @@ COMMENT=	JpegXL reference codec
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-USE_TOOLS+=	bash pkg-config realpath
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DJPEGXL_VERSION=${PKGVERSION_NOREV}
 CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_BROTLI=ON
-CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_GTEST=ON
 CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_HWY=ON
 CMAKE_ARGS+=	-DJPEGXL_FORCE_SYSTEM_LCMS2=ON
+CMAKE_ARGS+=	-DJPEGXL_ENABLE_DOXYGEN=OFF
+CMAKE_ARGS+=	-DJPEGXL_ENABLE_JPEGLI=OFF
 CMAKE_ARGS+=	-DJPEGXL_ENABLE_SJPEG=OFF
 CMAKE_ARGS+=	-DJPEGXL_ENABLE_SKCMS=OFF
 CMAKE_ARGS+=	-DJPEGXL_ENABLE_PLUGINS=OFF
+# test are run during the build stage
+CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
 REPLACE_BASH=	deps.sh
 
 PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl.pc.in
+PKGCONFIG_OVERRIDE+=	lib/jxl/libjxl_cms.pc.in
 PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 
-# TODO:
-# The dependencies installed using deps.sh should be packaged
-# and buildlink3ed instead:
-# lodepng, sjpeg, skcms
-#pre-configure:
-#	cd ${WRKSRC} && ./deps.sh
-
 .include "../../archivers/brotli/buildlink3.mk"
-.include "../../devel/googletest/buildlink3.mk"
+.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"

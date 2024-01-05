@@ -1,2 +1,1 @@
-Some dependencies need to be packaged and used before this can be
-imported.
+Don't link correctly on SunOS, missing __extendhfdf2
