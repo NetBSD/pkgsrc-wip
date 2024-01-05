@@ -148,6 +148,31 @@ SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
+SUBST_CLASSES+=		strtoi
+SUBST_STAGE.strtoi=	pre-configure
+
+SUBST_FILES.strtoi= 	\
+	tests/reg-tests-1d.R \
+	doc/NEWS.3	 \
+	doc/html/NEWS.2.html \
+	doc/html/NEWS.3.html \
+	doc/NEWS.2 \
+	doc/NEWS.3.Rd \
+	doc/NEWS.2.Rd \
+	src/include/Internal.h \
+	src/library/base/man/hexmode.Rd \
+	src/library/base/man/octmode.Rd \
+	src/library/base/man/strtoi.Rd \
+	src/library/base/R/octhex.R \
+	src/library/base/R/version.R \
+	src/library/base/R/character.R \
+	src/gnuwin32/Rdll.hide \
+	src/main/names.c \
+	src/main/character.c
+
+SUBST_SED.strtoi=	-e "s,strtoi,strtoiR,g"
+
+
 BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
 # failed to convert strong functions and variables: Invalid type identifier
