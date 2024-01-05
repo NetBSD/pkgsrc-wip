@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.11 2021/10/26 10:14:25 nia Exp $
+
+BLAKE2s (cmocka-1.1.7.tar.xz) = 319b75e3a0ed138f512913cd4e130d1dc977763a5d25f7378392ca28396a2955
+SHA512 (cmocka-1.1.7.tar.xz) = fe451893474dce1270e12af707a9a8fe1f0217e1782b4e1a67d25dadf56ff4a5e7dbc9ba4431f774aedffa46a40a28a6a0488df24feefb2f93e90fd2369c2c88
+Size (cmocka-1.1.7.tar.xz) = 84064 bytes
+SHA1 (patch-CompilerChecks.cmake) = 08052e3fac8c3c850bfa9a96c2fa30fde377dd95
+SHA1 (patch-include_cmocka.h) = bfde5dbac32b37d1cd31fa1f1b452ce163b0cf53
