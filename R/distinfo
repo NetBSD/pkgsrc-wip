@@ -5,5 +5,3 @@ SHA512 (R-4.3.2.tar.gz) = 125114357f20d4a3248aee86727768d1dc15e07e44353f8a68fe2e
 Size (R-4.3.2.tar.gz) = 35039225 bytes
 SHA1 (patch-configure.ac) = 56a92d2d75ecdad45c06ca05ebc260af83a5a0ea
 SHA1 (patch-m4_R.m4) = 76a280dc2aeea2eb0e473ae770f636d00314d68a
-SHA1 (patch-src_extr_tre_tre-internal.h) = 476807e45f82e350ae30d91fe7a7ad94b1a555b3
-SHA1 (patch-src_main_character.c) = e5edd0ec0686a98c7792103e7a7ac5166bf8d5d4
