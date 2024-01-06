@@ -11,8 +11,10 @@ LICENSE=		original-bsd AND osl AND mpl-1.1
 
 MAKE_FILE=		makefile
 
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MAKE_FLAGS+=		VAL_PREFIX=${PREFIX}
 MAKE_FLAGS+=		VAL_MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=		VAL_SYSCONFDIR=${EGDIR}
 MAKE_FLAGS+=		OPT_AUTOCC=no
 
 .include "../../devel/libidn2/buildlink3.mk"

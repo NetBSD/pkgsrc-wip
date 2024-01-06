@@ -1,5 +1,5 @@
 @comment $NetBSD$
 bin/s-nail
-etc/s-nail.rc
 libexec/s-nail-dotlock
 man/man1/s-nail.1
+share/examples/s-nail/s-nail.rc
