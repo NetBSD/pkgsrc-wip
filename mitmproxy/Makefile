@@ -9,7 +9,7 @@ HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive console program for inspecting and editing traffic flows
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-aioquic>=0.9.24:../../wip/py-aioquic
+DEPENDS+=	${PYPKGPREFIX}-aioquic>=0.9.24:../../www/py-aioquic
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
