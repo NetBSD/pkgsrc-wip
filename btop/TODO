@@ -1,3 +1,6 @@
-Does not compile on NetBSD.
+- Compiles and runs on NetBSD.
+- Needs fixes on some of the memory stats shown.
+- Needs some testing and verification done on features / funtions working in NetBSD.
 
 https://github.com/aristocratos/btop/issues/301
+https://github.com/aristocratos/btop/pull/703
