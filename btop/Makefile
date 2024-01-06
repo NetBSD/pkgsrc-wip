@@ -11,10 +11,6 @@ HOMEPAGE=	https://github.com/aristocratos/btop
 COMMENT=	Colorful TTY resource monitor
 LICENSE=	apache-2.0
 
-# This package points to the latest commit in git.
-# When moving to pkgsrc-current, this section can be removed.
-CONFLICTS=	btop-[0-9]*
-
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 
 USE_LANGUAGES=	c c++
