@@ -1,7 +1,8 @@
 mitmproxy: Update to 10.2.1
 
 pkgsrc changes:
-- TODO
+- Adjust SUBST-fu in order to address dependencies versions in pyproject.toml,
+  not setup.py (per upstream usage)
 
 Changes:
 ## 06 January 2024: mitmproxy 10.2.1
