@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-pylsqpack>=0.3.3:../../wip/py-pylsqpack
+DEPENDS+=	${PYPKGPREFIX}-pylsqpack>=0.3.3:../../www/py-pylsqpack
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=22:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=23.1.0:../../security/py-service_identity
