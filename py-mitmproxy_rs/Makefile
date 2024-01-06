@@ -2,7 +2,7 @@
 
 DISTNAME=	mitmproxy_rs-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www python
+CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
