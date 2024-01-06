@@ -3185,7 +3185,6 @@ SUBDIR+=	py-aioconsole
 SUBDIR+=	py-aioh2
 SUBDIR+=	py-aiohttp-jinja2
 SUBDIR+=	py-aioopenssl
-SUBDIR+=	py-aioquic
 SUBDIR+=	py-aiosasl
 SUBDIR+=	py-aioxmpp
 SUBDIR+=	py-aipy
