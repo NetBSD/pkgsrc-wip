@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/aiortc/aioquic
 COMMENT=	Fork of aioquic with adjustments for mitmproxy
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-pylsqpack>=0.3.3:../../wip/py-pylsqpack
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=22:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=23.1.0:../../security/py-service_identity
 
-# Only for Python 3.x
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"

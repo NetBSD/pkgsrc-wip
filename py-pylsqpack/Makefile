@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/aiortc/pylsqpack
 COMMENT=	Python wrapper for the ls-qpack QPACK library
 LICENSE=	modified-bsd
 
-# Only for Python 3.x
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
