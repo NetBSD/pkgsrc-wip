@@ -1,6 +1,8 @@
 mitmproxy: Update to 10.2.1
 
 pkgsrc changes:
+- Switch to non-versioned py-OpenSSL. mitmproxy now needs Rust-y bits also for
+  mitmproxy_rs. Possibly avoiding Rust py-cryptography no longer helps.
 - Adjust SUBST-fu in order to address dependencies versions in pyproject.toml,
   not setup.py (per upstream usage)
 
