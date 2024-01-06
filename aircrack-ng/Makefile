@@ -21,6 +21,6 @@ pre-configure:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
-.include "../../wip/cmocka/buildlink3.mk"
+.include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
