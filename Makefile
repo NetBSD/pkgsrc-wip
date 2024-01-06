@@ -2234,7 +2234,6 @@ SUBDIR+=	miracl
 SUBDIR+=	mirage
 SUBDIR+=	miro
 SUBDIR+=	mistserver
-SUBDIR+=	mitmproxy
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 SUBDIR+=	mk-configure-current
