@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.6.0:../../x11/py-pyperclip
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.3:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-urwid-mitmproxy>=2.1.1:../../wip/py-urwid-mitmproxy
+DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.1:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=1.0:../../www/py-wsproto
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 
@@ -42,19 +42,20 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3:../../devel/py-typing-extensions
 .endif
 
+# Forked urwid-mitmproxy-2.1.2.1 contains patches for Windows. They should be
+# not needed in pkgsrc and this spare us some kludges and maintainance due
+# forked urwid.
+SUBST_CLASSES+=		urwid
+SUBST_STAGE.urwid=	pre-configure
+SUBST_MESSAGE.urwid=	Use non-forked urwid
+SUBST_FILES.urwid=	pyproject.toml
+SUBST_SED.urwid+=	-e 's/urwid-mitmproxy/urwid/g'
+
 SUBST_CLASSES+=				pyprojecttomlversions
 SUBST_STAGE.pyprojecttomlversions=	pre-configure
 SUBST_MESSAGE.pyprojecttomlversions=	Avoid too strict version requirements
 SUBST_FILES.pyprojecttomlversions=	pyproject.toml
 SUBST_SED.pyprojecttomlversions+=	-E -e '/[>=]=/ s/, *<[0-9.]+(",|;)/\1/g'
-
-# XXX: This is very dirty and fragile!
-SUBST_CLASSES+=			urwid_mitmproxy
-SUBST_STAGE.urwid_mitmproxy=	pre-configure
-SUBST_MESSAGE.urwid_mitmproxy=	Avoid conflicts with urwid
-SUBST_FILES.urwid_mitmproxy+=	mitmproxy/tools/console/*.py
-SUBST_FILES.urwid_mitmproxy+=	mitmproxy/tools/console/*/*.py
-SUBST_SED.urwid_mitmproxy+=	-e 's/urwid/urwid_mitmproxy/g'
 
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
