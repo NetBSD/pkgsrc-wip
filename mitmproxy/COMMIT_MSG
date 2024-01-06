@@ -1,4 +1,4 @@
-mitmproxy: Update to 10.1.6
+mitmproxy: Update to 10.2.1
 
 TODO: this is very WIP, beware!
 
@@ -6,6 +6,12 @@ pkgsrc changes:
 - TODO
 
 Changes:
+## 06 January 2024: mitmproxy 10.2.1
+* Fix a regression introduced in mitmproxy 10.2.0: WireGuard servers
+  now bind to all interfaces again.
+* Remove stale reference to ctx.log in addon documentation.
+* Fix a bug where a traceback is shown during shutdown.
+
 ## 04 January 2024: mitmproxy 10.2.0
 * Local Redirect Mode is now officially available on macOS and Windows.
   See the linked blog posts for details.

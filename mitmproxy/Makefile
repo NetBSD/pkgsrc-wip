@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.45 2023/10/23 06:37:49 wiz Exp $
 
-DISTNAME=	mitmproxy-10.2.0
+DISTNAME=	mitmproxy-10.2.1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
