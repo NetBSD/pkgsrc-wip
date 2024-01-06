@@ -34,11 +34,14 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
-CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 CONFIGURE_ARGS+=	--enable-long-double=no
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 .if ${OPSYS} != "Linux"
@@ -102,6 +105,14 @@ CONFIGURE_ENV+=		LIBnn=lib
 SHAREMODE=		644
 
 CONFIGURE_ARGS.Darwin+=	--disable-openmp
+
+# Temporary fix for deprecated function ATSFontFindFromName() in R 4.2.0
+# Newer R versions should eliminate this function and obsolete this hack
+# https://trac.macports.org/ticket/66095
+# Darwin 21 corresponds to macOS 12
+.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} > 21
+MAKE_ENV.Darwin+= MACOSX_DEPLOYMENT_TARGET="12.0"
+.endif
 
 # R_PAPERSIZE can be: A4, Letter, Legal, Executive
 .if defined(PAPERSIZE)
@@ -195,6 +206,7 @@ fix-darwin-install-name:
 	done
 .endif
 
+# remove orig version left out
 post-install:
 	${RM}	${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
 
