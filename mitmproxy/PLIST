@@ -420,9 +420,6 @@ ${PYSITELIB}/mitmproxy/net/server_spec.pyo
 ${PYSITELIB}/mitmproxy/net/tls.py
 ${PYSITELIB}/mitmproxy/net/tls.pyc
 ${PYSITELIB}/mitmproxy/net/tls.pyo
-${PYSITELIB}/mitmproxy/net/udp.py
-${PYSITELIB}/mitmproxy/net/udp.pyc
-${PYSITELIB}/mitmproxy/net/udp.pyo
 ${PYSITELIB}/mitmproxy/options.py
 ${PYSITELIB}/mitmproxy/options.pyc
 ${PYSITELIB}/mitmproxy/options.pyo

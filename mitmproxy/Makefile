@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.45 2023/10/23 06:37:49 wiz Exp $
 
-DISTNAME=	mitmproxy-10.1.6
+DISTNAME=	mitmproxy-10.2.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
@@ -9,19 +9,19 @@ HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive console program for inspecting and editing traffic flows
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-aioquic_mitmproxy>=0.9.21:../../wip/py-aioquic_mitmproxy
+DEPENDS+=	${PYPKGPREFIX}-aioquic>=0.9.24:../../wip/py-aioquic
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=38.0:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=39.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.1:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.11:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=4.1:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-hyperframe>=6.0:../../www/py-hyperframe
 DEPENDS+=	${PYPKGPREFIX}-kaitaistruct>=0.10:../../devel/py-kaitaistruct
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.8:../../databases/py-ldap3
-DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.4:../../wip/py-mitmproxy_rs
+DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.5.1:../../wip/py-mitmproxy_rs
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.14:../../devel/py-protobuf

@@ -6,6 +6,17 @@ pkgsrc changes:
 - TODO
 
 Changes:
+## 04 January 2024: mitmproxy 10.2.0
+* Local Redirect Mode is now officially available on macOS and Windows.
+  See the linked blog posts for details.
+* UDP streams are now backed by a new implementation in mitmproxy_rs.
+  This represents a major API change as UDP traffic is now exposed as
+  streams instead of a callback for each packet.
+* Fix a regression from mitmproxy 10.1.6 where ignore_hosts would
+  terminate requests instead of forwarding them.
+* ignore_hosts now waits for the entire HTTP headers if it suspects the
+  connection to be HTTP.
+
 ## 14 December 2023: mitmproxy 10.1.6
 * Fix compatibility with Windows Schannel clients, which previously got
   confused by CA and leaf certificate sharing the same Subject Key Identifier.
