@@ -1744,7 +1744,6 @@ SUBDIR+=	judy
 SUBDIR+=	julia
 SUBDIR+=	junit
 SUBDIR+=	jython
-SUBDIR+=	k6
 SUBDIR+=	k9s
 SUBDIR+=	kacst-one
 SUBDIR+=	kacst-ttf
