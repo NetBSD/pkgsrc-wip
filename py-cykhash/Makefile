@@ -16,6 +16,5 @@ COMMENT=	Cython equivalent to khash-sets/maps
 LICENSE=	mit
 
 .include "../../lang/python/wheel.mk"
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
