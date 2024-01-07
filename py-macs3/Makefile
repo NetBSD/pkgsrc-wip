@@ -12,10 +12,14 @@ HOMEPAGE=	https://github.com/macs3-project/MACS
 COMMENT=	Peak caller aimed at transcription factor binding sites
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0:../../math/py-hmmlearn
+# cykhash>=2.0,<3.0
+DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3:../../math/py-hmmlearn \
+		${PYPKGPREFIX}-cykhash>=2.0:../../wip/py-cykhash
+TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/simde/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
