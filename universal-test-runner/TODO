@@ -1,0 +1,5 @@
+- is PyPi a better source for the distfile?
+- are dependencies (build, tool, runtime) complete and accurate?
+- which packages does `bin/t` conflict with?
+- prefix package name with `py-`?
+- either prevent self-conflict with multiple versions of python, or mark as such

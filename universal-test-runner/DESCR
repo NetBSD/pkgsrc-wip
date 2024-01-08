@@ -1,0 +1,9 @@
+The Universal Test Runner is a zero-configuration, language-aware way to
+run unit tests in any project. It installs a command, `t`, which will
+determine how to run your test suite (and then run it).
+
+If you're working on a JS project, it runs `[your package manager here]
+test`. You've run `pytest` in this folder before? `pytest` it is. Rust
+project? `cargo test` coming right up. Is also clever about running all
+your `go` module tests (regardless of how they're organized). No matter
+the command, all args are passed directly into the test runner.

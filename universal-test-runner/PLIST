@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/t
+bin/universal-test-runner
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/universal_test_runner/__init__.py
+${PYSITELIB}/universal_test_runner/__init__.pyc
+${PYSITELIB}/universal_test_runner/__init__.pyo
+${PYSITELIB}/universal_test_runner/cli.py
+${PYSITELIB}/universal_test_runner/cli.pyc
+${PYSITELIB}/universal_test_runner/cli.pyo
+${PYSITELIB}/universal_test_runner/context.py
+${PYSITELIB}/universal_test_runner/context.pyc
+${PYSITELIB}/universal_test_runner/context.pyo
+${PYSITELIB}/universal_test_runner/matchers.py
+${PYSITELIB}/universal_test_runner/matchers.pyc
+${PYSITELIB}/universal_test_runner/matchers.pyo
+${PYSITELIB}/universal_test_runner/runner.py
+${PYSITELIB}/universal_test_runner/runner.pyc
+${PYSITELIB}/universal_test_runner/runner.pyo
