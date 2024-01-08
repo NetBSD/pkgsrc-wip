@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/xavdid/universal-test-runner/
 COMMENT=	Language-agnostic, zero-configuration test invoker
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=0:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
 
