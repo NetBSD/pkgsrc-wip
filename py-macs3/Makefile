@@ -20,7 +20,8 @@ TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 USE_TOOLS+=	bash perl:test
 REPLACE_BASH=	test/cmdlinetest* test/prockreport test/*.py test/pyprofile*
 
-do-test:
+do-test: install
+	${RM} -rf ${WRKSRC}/temp
 	(cd ${WRKSRC}/test && ./cmdlinetest tag)
 
 .include "../../lang/python/wheel.mk"
