@@ -17,6 +17,12 @@ DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3:../../math/py-hmmlearn \
 		${PYPKGPREFIX}-cykhash>=2.0:../../wip/py-cykhash
 TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
+USE_TOOLS+=	bash perl:test
+REPLACE_BASH=	test/cmdlinetest* test/prockreport test/*.py test/pyprofile*
+
+do-test:
+	(cd ${WRKSRC}/test && ./cmdlinetest tag)
+
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
