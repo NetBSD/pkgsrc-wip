@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.12 2021/02/01 16:54:00 tpaul Exp $
 
-DISTNAME=	terraform-provider-github-4.12.1
+DISTNAME=	terraform-provider-github-5.43.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=integrations/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
