@@ -5416,6 +5416,7 @@ SUBDIR+=	tintin++
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
+SUBDIR+=	tinygo
 SUBDIR+=	tinylogin
 SUBDIR+=	tinyssh
 SUBDIR+=	tipp10
