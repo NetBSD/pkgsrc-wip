@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 # cykhash>=2.0,<3.0
 DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3:../../math/py-hmmlearn \
-		${PYPKGPREFIX}-cykhash>=2.0:../../wip/py-cykhash
+		${PYPKGPREFIX}-cykhash>=2.0:../../devel/py-cykhash
 TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 USE_TOOLS+=	bash perl:test
