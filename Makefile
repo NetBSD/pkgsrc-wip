@@ -1285,6 +1285,7 @@ SUBDIR+=	gpatch
 SUBDIR+=	gpick
 SUBDIR+=	gplbasic
 SUBDIR+=	gpsdrive
+SUBDIR+=	gptfdisk
 SUBDIR+=	gpx2shp
 SUBDIR+=	gqrx
 SUBDIR+=	gr-fcdproplus
