@@ -46,7 +46,7 @@ DEPENDS+=	# TODO: p5-Encode>=0
 DEPENDS+=	# TODO: p5-Email-Sender-Simple>=1.300032
 DEPENDS+=	# TODO: p5-Pod-Usage>=0
 DEPENDS+=	p5-Email-Simple>=0:../../mail/p5-Email-Simple
-DEPENDS+=	p5-DBIx-Simple>=1.35:../../wip/p5-DBIx-Simple
+DEPENDS+=	p5-DBIx-Simple>=1.35:../../databases/p5-DBIx-Simple
 DEPENDS+=	p5-File-ShareDir>=0:../../devel/p5-File-ShareDir
 TEST_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 TEST_DEPENDS+=	p5-Test-Output>=0:../../devel/p5-Test-Output
