@@ -1,3 +1,5 @@
 @comment $NetBSD$
 bin/newsraft
 man/man1/newsraft.1
+share/examples/newsraft/config
+share/examples/newsraft/feeds

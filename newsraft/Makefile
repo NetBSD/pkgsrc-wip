@@ -2,7 +2,7 @@
 
 DISTNAME=	newsraft-0.22
 CATEGORIES=	news
-MASTER_SITES=	https://codeberg.org/newsraft/newsraft
+MASTER_SITES=	https://codeberg.org/newsraft/newsraft/
 
 MAINTAINER=	kevin.bloom@posteo.net
 HOMEPAGE=	https://codeberg.org/newsraft
@@ -27,11 +27,16 @@ DEPENDS+=	sqlite3>=3.36.0:../../databases/sqlite3
 DEPENDS+=	yajl>=2.1.0:../../devel/yajl
 TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
-INSTALLATION_DIRS+=	bin man/man1
+EGDIR=			${PREFIX}/share/examples/newsraft
+
+INSTALLATION_DIRS+=	bin man/man1 share/examples/newsraft
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/newsraft ${DESTDIR}${PREFIX}/bin && \
-	${INSTALL_MAN} ${WRKSRC}/doc/newsraft.1 ${DESTDIR}${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/newsraft.1 \
+		${DESTDIR}${PKGMANDIR}/man1 && \
+	${CP} ${WRKSRC}/doc/examples/config ${DESTDIR}${EGDIR} && \
+	${CP} ${WRKSRC}/doc/examples/feeds ${DESTDIR}${EGDIR}
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
