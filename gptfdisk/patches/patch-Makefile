@@ -1,0 +1,26 @@
+$NetBSD$
+
+NetBSD target added
+
+--- Makefile.orig	2022-04-14 23:17:12.000000000 +0000
++++ Makefile
+@@ -34,6 +34,8 @@ ifeq ($(origin TARGET),undefined)
+     TARGET=windows
+   else ifeq ($(DETECTED_OS),FreeBSD)
+     TARGET=freebsd
++  else ifeq ($(DETECTED_OS),NetBSD)
++    TARGET=netbsd
+   else ifeq ($(DETECTED_OS),SunOS)
+     TARGET=solaris
+   endif
+@@ -124,6 +126,10 @@ else ifeq ($(TARGET),freebsd)
+   CXXFLAGS+=-O2 -Wall -D_FILE_OFFSET_BITS=64 -I /usr/local/include
+   LDFLAGS+=-L/usr/local/lib
+   LDLIBS+=-luuid #-licuio
++else ifeq ($(TARGET),netbsd)
++  CXXFLAGS+=-O2 -Wall -D_FILE_OFFSET_BITS=64
++  LDFLAGS+=-L/usr/pkg/lib
++  LDLIBS+=-luuid
+ else ifeq ($(TARGET),macos)
+   FATBINFLAGS=-arch x86_64 -arch arm64 -mmacosx-version-min=10.9
+   THINBINFLAGS=-arch x86_64 -mmacosx-version-min=10.9

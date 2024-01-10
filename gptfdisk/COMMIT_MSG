@@ -1,0 +1,6 @@
+sysutils/gptfdisk: Add gdisk / gptfdisk and friends 1.0.9 - tested on amd64 and Darwin (MacOS 14)
+
+Minor changes to the original to get things compiling and pkgsrc linting. sprintf / unused warnings on Darwin are in original.
+
+Per https://www.rodsbooks.com/gdisk/
+GPT fdisk (consisting of the gdisk, cgdisk, sgdisk, and fixparts programs) is a set of text-mode partitioning tools for Linux, FreeBSD, macOS, and Windows. The gdisk, cgdisk, and sgdisk programs work on Globally Unique Identifier (GUID) Partition Table (GPT) disks, rather than on the older (and once more common) Master Boot Record (MBR) partition tables. The fixparts program repairs certain types of damage to MBR disks and enables changing partition types from primary to logical and vice-versa.
