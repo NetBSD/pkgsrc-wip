@@ -10,7 +10,8 @@ HOMEPAGE=	https://mdformat.rtfd.io/
 COMMENT=	CommonMark compliant Markdown formatter
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=1.0.0:../../textproc/py-markdown-it-py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -19,6 +20,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6.0:../../devel/py-importlib-metadata
+.endif
+
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
 USE_LANGUAGES=	# none
