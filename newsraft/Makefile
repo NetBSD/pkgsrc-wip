@@ -11,7 +11,7 @@ LICENSE=	isc
 
 WRKSRC=	${WRKDIR}/newsraft
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config pax
 USE_LANGUAGES=	c
 MAKE_FILE=	makefile
 
@@ -34,9 +34,8 @@ INSTALLATION_DIRS+=	bin man/man1 share/examples/newsraft
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/newsraft ${DESTDIR}${PREFIX}/bin && \
 	${INSTALL_MAN} ${WRKSRC}/doc/newsraft.1 \
-		${DESTDIR}${PKGMANDIR}/man1 && \
-	${CP} ${WRKSRC}/doc/examples/config ${DESTDIR}${EGDIR} && \
-	${CP} ${WRKSRC}/doc/examples/feeds ${DESTDIR}${EGDIR}
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
+	cd ${WRKSRC}/doc/examples && ${PAX} -wr . ${DESTDIR}${EGDIR}
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
