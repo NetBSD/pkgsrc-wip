@@ -10,14 +10,16 @@ HOMEPAGE=	https://neonmodem.com/
 COMMENT=	Neon modem overdrive
 LICENSE=	gnu-gpl-v3
 
-INSTALLATION_DIRS=	bin
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+
+INSTALLATION_DIRS=	bin share/doc/neonmodem
 USE_TOOLS+=		itstool gdbus-codegen perl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/neonmodem \
 		${DESTDIR}${PREFIX}/bin
-
-DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+	${INSTALL_DATA} ${WRKSRC}/README.md \
+		${DESTDIR}${PREFIX}/share/doc/neonmodem
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
