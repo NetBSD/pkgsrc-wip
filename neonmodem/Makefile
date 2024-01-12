@@ -17,6 +17,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/neonmodem \
 		${DESTDIR}${PREFIX}/bin
 
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
