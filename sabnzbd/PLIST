@@ -19,7 +19,9 @@ ${PYSITELIB}/sabnzbd/emailer.py
 ${PYSITELIB}/sabnzbd/encoding.py
 ${PYSITELIB}/sabnzbd/filesystem.py
 ${PYSITELIB}/sabnzbd/getipaddress.py
+${PYSITELIB}/sabnzbd/happyeyeballs.py
 ${PYSITELIB}/sabnzbd/interface.py
+${PYSITELIB}/sabnzbd/internetspeed.py
 ${PYSITELIB}/sabnzbd/lang.py
 ${PYSITELIB}/sabnzbd/misc.py
 ${PYSITELIB}/sabnzbd/newsunpack.py
@@ -47,8 +49,6 @@ ${PYSITELIB}/sabnzbd/utils/checkdir.py
 ${PYSITELIB}/sabnzbd/utils/diskspeed.py
 ${PYSITELIB}/sabnzbd/utils/file_extension.py
 ${PYSITELIB}/sabnzbd/utils/getperformance.py
-${PYSITELIB}/sabnzbd/utils/happyeyeballs.py
-${PYSITELIB}/sabnzbd/utils/internetspeed.py
 ${PYSITELIB}/sabnzbd/utils/kronos.py
 ${PYSITELIB}/sabnzbd/utils/pathbrowser.py
 ${PYSITELIB}/sabnzbd/utils/pybonjour.py
@@ -96,6 +96,8 @@ share/sabnzbd/interfaces/Config/templates/staticcfg/bootstrap/fonts/glyphicons-h
 share/sabnzbd/interfaces/Config/templates/staticcfg/bootstrap/fonts/glyphicons-halflings-regular.svg
 share/sabnzbd/interfaces/Config/templates/staticcfg/bootstrap/fonts/glyphicons-halflings-regular.ttf
 share/sabnzbd/interfaces/Config/templates/staticcfg/bootstrap/js/bootstrap.min.js
+share/sabnzbd/interfaces/Config/templates/staticcfg/css/Auto.css
+share/sabnzbd/interfaces/Config/templates/staticcfg/css/Night.css
 share/sabnzbd/interfaces/Config/templates/staticcfg/css/chartist.min.css
 share/sabnzbd/interfaces/Config/templates/staticcfg/css/login.css
 share/sabnzbd/interfaces/Config/templates/staticcfg/css/style.css
