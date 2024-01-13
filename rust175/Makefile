@@ -411,13 +411,14 @@ TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
 .endif
 
-SUBST_CLASSES+=		rpath
-SUBST_STAGE.rpath=	pre-configure
-SUBST_FILES.rpath+=	compiler/rustc_codegen_ssa/src/back/linker.rs
-SUBST_FILES.rpath+=	compiler/rustc_target/src/spec/base/netbsd.rs
-SUBST_FILES.rpath+=	src/bootstrap/src/core/build_steps/compile.rs
-SUBST_FILES.rpath+=	src/bootstrap/bootstrap.py
-SUBST_VARS.rpath=	PREFIX
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix+=	compiler/rustc_codegen_ssa/src/back/linker.rs
+SUBST_FILES.prefix+=	compiler/rustc_target/src/spec/base/netbsd.rs
+SUBST_FILES.prefix+=	src/bootstrap/src/core/build_steps/compile.rs
+SUBST_FILES.prefix+=	src/bootstrap/src/core/builder.rs
+SUBST_FILES.prefix+=	src/bootstrap/bootstrap.py
+SUBST_VARS.prefix=	PREFIX
 
 #
 # Generate list of subst entries for various .cargo-checksum.json files.  These
