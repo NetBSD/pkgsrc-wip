@@ -19,6 +19,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 # \todo Consider 3.0 vs v3.0.10, as the .gitmodules points to 3.0.
 GITHUB_SUBMODULES+=	FriendsOfCake crud v3.0.10 web/api/app/Plugin/Crud
 GITHUB_SUBMODULES+=	ZoneMinder CakePHP-Enum-Behavior master web/api/app/Plugin/CakePHP-Enum-Behavior
+GITHUB_SUBMODULES+=	ZoneMinder RtspServer master dep/RtspServer
 
 MAINTAINER=	dsainty@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org
