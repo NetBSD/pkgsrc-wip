@@ -1,28 +1,26 @@
-1) for (stable final point releases):
+* 1.36
 
-   update to newer upstream
+  - Merge patches forward
+  - Add missing dependencies
+  - Compilation/PLIST
 
-   validate that it actually runs
+  - Add 1.34 release notes to COMMIT_MSG
+  - Add 1.36 release notes to COMMIT_MSG
+    + https://github.com/ZoneMinder/zoneminder/releases/tag/1.36.33
 
-   push to pkgsrc
+  - Stray items from 1.32, not clear if they are present still or not
 
-2) After updating to the current release
+    + Consider installing conf.d/zmpaths.conf setting the paths we set,
+      because that seems necessary.
+
+    + Resolve zmc startup hang (zmdc expects zmc to exit, but it
+      doesn't??).
+
+    + Resolve nph-zms vs zms, or decide it's an upstream choice that
+      this package doesn't need to address.
+
+  - Test and find new issues
+
+* After becoming current
 
    File bugs upstream and add URLs
-
-3) 1.32
-
-   https://github.com/ZoneMinder/zoneminder/releases/tag/1.32.0
-
-   https://github.com/ZoneMinder/zoneminder/issues/2078#issuecomment-395094624
-   [I believe all items in this checklist have been dealt with.]
-
-   Consider installing conf.d/zmpaths.conf setting the paths we set,
-   because that seems necessary.
-
-   Resolve zmc startup hang (zmdc expects zmc to exit, but it doesn't??).
-
-   Resolve nph-zms vs zms, or decide it's an upstream choice that this
-   package doesn't need to address.
-
-   Add packages need for onvif to work.

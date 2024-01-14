@@ -1,63 +1,76 @@
-security/zoneminder: Update to 1.32.3
+security/zoneminder: Update to 1.36.33
 
-Welcome to 2018.
 
 Packaging changes:
 
-  - Change config to etc/zm from etc, and provide etc/zm/conf.d, because
-    migration from 1.30 writes there.
-  - Rototill hard the cmake build options, and try to document what
-    must be set as path configuration.
-  - Upstream removed zmf; drop patch.
-  - Depend on mp4v2.
+  + 1.36
+
+
+  + 1.32
+
+    - Change config to etc/zm from etc, and provide etc/zm/conf.d, because
+      migration from 1.30 writes there.
+    - Rototill hard the cmake build options, and try to document what
+      must be set as path configuration.
+    - Upstream removed zmf; drop patch.
+    - Depend on mp4v2.
 
 Upstream NEWS:
 
-    A re-worked web console, compared to the previous 1.30.4 release
+  + 1.36:
 
-    record to mp4 container
+    \todo
 
-    record audio
+  + 1.34
 
-    support for php 7.x
+    \todo
 
-    Arbitrary website as a non-recordable, interactive monitor.
+  + 1.32
 
-    Updated Montage Review
+    - A re-worked web console, compared to the previous 1.30.4 release
 
-    Options-> Paths moved into config files under conf.d folder
+    - record to mp4 container
 
-    Multiple storage paths are supported. See Options -> Storage
+    - record audio
 
-    The old method of bind mounting the event folder is no longer needed nor recommended
+    - support for php 7.x
 
-    Additional system statistics on the web console
+    - Arbitrary website as a non-recordable, interactive monitor.
 
-    Raspberry pi OMX hardware h264 decoder support
+    - Updated Montage Review
 
-    Event thumbnails play video on mouseover
+    - Options-> Paths moved into config files under conf.d folder
 
-    Drag and drop sorting of monitors
+    - Multiple storage paths are supported. See Options -> Storage
 
-    Scalability improvements
+    - The old method of bind mounting the event folder is no longer needed nor recommended
 
-    Support for Redhat el6 distros and clones has been removed
+    - Additional system statistics on the web console
+
+    - Raspberry pi OMX hardware h264 decoder support
+
+    - Event thumbnails play video on mouseover
+
+    - Drag and drop sorting of monitors
+
+    - Scalability improvements
+
+    - Support for Redhat el6 distros and clones has been removed
 
 Upstream upgrade notes (tweaked for pkgsrc):
 
-    The upgrade scripts will take longer than normal to run,
-    especially if you have many events.
+    - The upgrade scripts will take longer than normal to run,
+      especially if you have many events.
 
-    Your previous settings on the Options -> Paths tab have been moved
-    into the file zmcustom.conf which is found under
-    ${PKGSYSCONFDIR}/etc/zm/conf.d
+    - Your previous settings on the Options -> Paths tab have been
+      moved into the file zmcustom.conf which is found under
+      ${PKGSYSCONFDIR}/etc/zm/conf.d
 
-    Consider migrating your events folder from the former bind mount
-    method to the new method under Options -> Storage
+    - Consider migrating your events folder from the former bind mount
+      method to the new method under Options -> Storage
 
-    You should no longer have symbolic links in your webroot
-    folder. This resolves a long standing security issue.
+    - You should no longer have symbolic links in your webroot
+      folder. This resolves a long standing security issue.
 
-    The Apache config file has changed.  Hand merge it and review your
-    web setup.
-
+    - The Apache config file has changed.  Hand merge it and review
+      your web setup.
