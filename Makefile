@@ -5860,6 +5860,7 @@ SUBDIR+=	zlua
 SUBDIR+=	zmap
 SUBDIR+=	zodiac
 SUBDIR+=	zoneminder
+SUBDIR+=	zoneminder132
 SUBDIR+=	zpaq
 SUBDIR+=	zrepl
 
