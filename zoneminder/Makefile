@@ -117,17 +117,15 @@ OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${APACHE_USER} ${APACHE_GROUP} 775
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
-# This should probably be ffmpeg4 at least.
-# \todo Try higher versions with 1.32.
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .if ${OPSYS} == "Darwin"
 SOEXT=	dylib
 .else
 SOEXT=	so
 .endif
-.for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE
-CMAKE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg2}/include/ffmpeg2
-CMAKE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg2}/lib/ffmpeg2/lib${lib:tl}.${SOEXT}
+.for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE SWRESAMPLE
+CMAKE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg6}/include/ffmpeg6
+CMAKE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg6/lib${lib:tl}.${SOEXT}
 .endfor
 # This is somewhat awkward.  ffmpeg's libavformat/avformat.h requires
 # constant macros from stdint.h, but these are only defined under C++ if
@@ -198,26 +196,6 @@ DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-
-# All perl scripts need interpreter patching (REPLACE_PERL), while a large
-# subset also need an include PATH line modified (ZM_REPLACE_PERL).
-ZM_REPLACE_PERL+=	scripts/zmaudit.pl.in
-ZM_REPLACE_PERL+=	scripts/zmcamtool.pl.in
-ZM_REPLACE_PERL+=	scripts/zmcontrol.pl.in
-ZM_REPLACE_PERL+=	scripts/zmdc.pl.in
-ZM_REPLACE_PERL+=	scripts/zmfilter.pl.in
-REPLACE_PERL+=		scripts/zmonvif-probe.pl.in
-ZM_REPLACE_PERL+=	scripts/zmpkg.pl.in
-ZM_REPLACE_PERL+=	scripts/zmstats.pl.in
-REPLACE_PERL+=		scripts/zmsystemctl.pl.in
-ZM_REPLACE_PERL+=	scripts/zmtelemetry.pl.in
-ZM_REPLACE_PERL+=	scripts/zmtrack.pl.in
-ZM_REPLACE_PERL+=	scripts/zmtrigger.pl.in
-ZM_REPLACE_PERL+=	scripts/zmupdate.pl.in
-ZM_REPLACE_PERL+=	scripts/zmvideo.pl.in
-ZM_REPLACE_PERL+=	scripts/zmwatch.pl.in
-ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
-REPLACE_PERL+=		${ZM_REPLACE_PERL}
 
 # \todo Still necessary?
 # SUBST_CLASSES+=			systemd-perl
