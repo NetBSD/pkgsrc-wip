@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.42 2019/06/18 12:36:59 gdt Exp $
 
 VERSION=	1.32.3
-PKGREVISION=	8
+PKGREVISION=	9
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -181,6 +181,7 @@ DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Class-Std-[0-9]*:../../devel/p5-Class-Std
 DEPENDS+=	p5-Class-Std-Fast-[0-9]*:../../devel/p5-Class-Std-Fast
+DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-Data-UUID-[0-9]*:../../devel/p5-Data-UUID
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
@@ -192,6 +193,7 @@ DEPENDS+=	p5-IO-Socket-Multicast-[0-9]*:../../net/p5-IO-Socket-Multicast
 DEPENDS+=	p5-Net-SFTP-Foreign-[0-9]*:../../net/p5-Net-SFTP-Foreign
 DEPENDS+=	p5-SOAP-WSDL-[0-9]*:../../net/p5-SOAP-WSDL
 DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
+DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
