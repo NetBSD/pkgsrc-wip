@@ -9,31 +9,32 @@ to use SYS_gettid.
 
 Fix time types (sizes).
 
---- src/zm_logger.cpp.orig	2018-12-08 14:22:36.000000000 +0000
+--- src/zm_logger.cpp.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_logger.cpp
-@@ -464,12 +464,12 @@ void Logger::logPrint( bool hex, const c
+@@ -439,13 +439,13 @@ void Logger::logPrint(bool hex, const ch
  
      subtractTime( &timeVal, &logStart );
  
 -    snprintf( timeString, sizeof(timeString), "%ld.%03ld", timeVal.tv_sec, timeVal.tv_usec/1000 );
-+    snprintf( timeString, sizeof(timeString), "%jd.%03ld", (intmax_t) timeVal.tv_sec, timeVal.tv_usec/1000 );
++    snprintf( timeString, sizeof(timeString), "%jd.%03ld", (intmax_t) timeVal.tv_sec, (long) timeVal.tv_usec/1000 );
    } else {
  #endif
      char *timePtr = timeString;
-     timePtr += strftime(timePtr, sizeof(timeString), "%x %H:%M:%S", localtime(&timeVal.tv_sec));
+     tm now_tm = {};
+     timePtr += strftime(timePtr, sizeof(timeString), "%x %H:%M:%S", localtime_r(&timeVal.tv_sec, &now_tm));
 -    snprintf(timePtr, sizeof(timeString)-(timePtr-timeString), ".%06ld", timeVal.tv_usec);
-+    snprintf(timePtr, sizeof(timeString)-(timePtr-timeString), ".%06jd", (intmax_t) timeVal.tv_usec);
++    snprintf(timePtr, sizeof(timeString)-(timePtr-timeString), ".%06ld", (long) timeVal.tv_usec);
  #if 0
    }
  #endif
-@@ -548,8 +548,8 @@ void Logger::logPrint( bool hex, const c
-           "INSERT INTO Logs "
-           "( TimeKey, Component, ServerId, Pid, Level, Code, Message, File, Line )"
-          " VALUES "
--         "( %ld.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
--         timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString, file, line
-+         "( %jd.%06jd, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
-+         (intmax_t) timeVal.tv_sec, (intmax_t) timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString, file, line
-          );
-       if ( mysql_query(&dbconn, sql) ) {
-         Level tempDatabaseLevel = mDatabaseLevel;
+@@ -534,8 +534,8 @@ void Logger::logPrint(bool hex, const ch
+           "INSERT INTO `Logs` "
+           "( `TimeKey`, `Component`, `ServerId`, `Pid`, `Level`, `Code`, `Message`, `File`, `Line` )"
+           " VALUES "
+-          "( %ld.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
+-          timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
++          "( %jd.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
++          (intmax_t) timeVal.tv_sec, (long) timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
+           );
+       dbQueue.push(std::move(sql_string));
+     } else {

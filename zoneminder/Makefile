@@ -46,6 +46,9 @@ USE_TOOLS+=	gmake perl pkg-config
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=true
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
+# \todo Necesary? Correct?
+CMAKE_ARGS+=	-DMANPAGE_DEST_PREFIX=${PKGMANDIR}
+
 ## PATHS
 
 # zoneminder has a dizzying array of variables for various paths.

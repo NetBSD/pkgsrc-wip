@@ -4,26 +4,18 @@ Avoid assuming linux on arm.  For now, assume neon.
 
 Fix time types (sizes).
 
---- src/zm_utils.cpp.orig	2018-12-08 14:22:36.000000000 +0000
+--- src/zm_utils.cpp.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_utils.cpp
-@@ -26,7 +26,7 @@
- #include <stdarg.h>
- #include <fcntl.h> /* Definition of AT_* constants */
- #include <sys/stat.h>
--#if defined(__arm__)
-+#if defined(__arm__) && defined(__linux__)
- #include <sys/auxv.h>
- #endif
+@@ -183,7 +183,7 @@ std::string TimevalToString(timeval tv) 
+     return "";
+   }
  
-@@ -305,6 +305,7 @@ void hwcaps_detect() {
-     Debug(1,"Detected a x86\\x86-64 processor");
-   } 
- #elif defined(__arm__)
-+#  if defined(__linux__)
-   // ARM processor in 32bit mode
-   // To see if it supports NEON, we need to get that information from the kernel
-   unsigned long auxval = getauxval(AT_HWCAP);
-@@ -314,6 +315,10 @@ void hwcaps_detect() {
+-  return stringtf("%s.%06ld", tm_buf.data(), tv.tv_usec);
++  return stringtf("%s.%06ld", tm_buf.data(), (long) tv.tv_usec);
+ }
+ 
+ /* Detect special hardware features, such as SIMD instruction sets */
+@@ -238,6 +238,10 @@ void HwCapsDetect() {
    } else {
      Debug(1,"Detected ARM (AArch32) processor");
    }
@@ -34,12 +26,3 @@ Fix time types (sizes).
  #elif defined(__aarch64__)
    // ARM processor in 64bit mode
    // Neon is mandatory, no need to check for it
-@@ -397,7 +402,7 @@ char *timeval_to_string( struct timeval 
-   nowtime = tv.tv_sec;
-   nowtm = localtime(&nowtime);
-   strftime(tmbuf, sizeof tmbuf, "%Y-%m-%d %H:%M:%S", nowtm);
--  snprintf(buf, sizeof buf, "%s.%06ld", tmbuf, tv.tv_usec);
-+  snprintf(buf, sizeof buf, "%s.%06jd", tmbuf, (intmax_t) tv.tv_usec);
-   return buf;
- }
- 

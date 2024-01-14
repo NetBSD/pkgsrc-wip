@@ -3,21 +3,16 @@ $NetBSD$
 Only include local sendfile header if there is sendfile support, to
 avoid #error for no sendfile implementation.
 
---- src/zm_eventstream.cpp.orig	2018-12-08 14:22:36.000000000 +0000
+--- src/zm_eventstream.cpp.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_eventstream.cpp
-@@ -39,12 +39,14 @@
- #include "zm_storage.h"
- #include "zm_monitor.h"
+@@ -43,8 +43,8 @@ const std::string EventStream::StreamMod
  
-+#if HAVE_SENDFILE
- #include "zm_sendfile.h"
-+#endif
+ bool EventStream::loadInitialEventData(int monitor_id, time_t event_time) {
+   std::string sql = stringtf("SELECT `Id` FROM `Events` WHERE "
+-                             "`MonitorId` = %d AND unix_timestamp(`EndDateTime`) > %ld "
+-                             "ORDER BY `Id` ASC LIMIT 1", monitor_id, event_time);
++                             "`MonitorId` = %d AND unix_timestamp(`EndDateTime`) > %jd "
++                             "ORDER BY `Id` ASC LIMIT 1", monitor_id, (intmax_t) event_time);
  
- bool EventStream::loadInitialEventData( int monitor_id, time_t event_time ) {
-   static char sql[ZM_SQL_SML_BUFSIZ];
- 
--  snprintf(sql, sizeof(sql), "SELECT Id FROM Events WHERE MonitorId = %d AND unix_timestamp(EndTime) > %ld ORDER BY Id ASC LIMIT 1", monitor_id, event_time);
-+  snprintf(sql, sizeof(sql), "SELECT Id FROM Events WHERE MonitorId = %d AND unix_timestamp(EndTime) > %jd ORDER BY Id ASC LIMIT 1", monitor_id, (intmax_t) event_time);
- 
-   if ( mysql_query(&dbconn, sql) ) {
-     Error("Can't run query: %s", mysql_error(&dbconn));
+   MYSQL_RES *result = zmDbFetch(sql.c_str());
+   if (!result)
