@@ -218,20 +218,12 @@ ZM_REPLACE_PERL+=	scripts/zmwatch.pl.in
 ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
 REPLACE_PERL+=		${ZM_REPLACE_PERL}
 
-# The intention of zmsystemctl.pl is to use bin/pkexec to allow the
-# apache user to start and stop the ZoneMinder services on operating
-# systems using systemd and adequately recent Polkit.  Rather than
-# trying to express dependencies, we just let it be and hope that it
-# will work in environments where it can.  In other environments, we
-# hope that no one runs the command.
-CHECK_INTERPRETER_SKIP+=	bin/zmsystemctl.pl
-
-# \todo Why isn't this just REPLACE_PERL?
-SUBST_CLASSES+=			systemd-perl
-SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
-SUBST_STAGE.systemd-perl=	pre-configure
-SUBST_FILES.systemd-perl=	scripts/zmsystemctl.pl.in
-SUBST_SED.systemd-perl=		-e 's|/usr/bin/perl|${PERL5}|g'
+# \todo Still necessary?
+# SUBST_CLASSES+=			systemd-perl
+# SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
+# SUBST_STAGE.systemd-perl=	pre-configure
+# SUBST_FILES.systemd-perl=	scripts/zmsystemctl.pl.in
+# SUBST_SED.systemd-perl=		-e 's|/usr/bin/perl|${PERL5}|g'
 
 ## PHP
 
