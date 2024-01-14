@@ -9,7 +9,7 @@ https://github.com/ZoneMinder/zoneminder/commit/417421b1d869d1b71c8ec1a1e3b082fc
 
 --- src/zm_comms.h.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_comms.h
-@@ -22,18 +22,27 @@
+@@ -22,18 +22,30 @@
  
  #include "zm_exception.h"
  #include "zm_logger.h"
@@ -23,6 +23,9 @@ https://github.com/ZoneMinder/zoneminder/commit/417421b1d869d1b71c8ec1a1e3b082fc
  #include <sys/un.h>
  #include <unistd.h>
 -#include <vector>
++
++#include <errno.h>
++#include <string.h>
 +
 +/* \todo Validate this addition. */
 +#include <stdlib.h>
