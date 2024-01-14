@@ -29,6 +29,5 @@ SHA1 (patch-src_zm_comms_h) = e9e25dced4ad54aa118f153fbd3390d1eb525e65
 SHA1 (patch-src_zm_logger_cpp) = aed07139cd8adc11c7b43d4fefc24bc158b5617c
 SHA1 (patch-src_zm_remote_camera_h) = 87da3e6326df5f9ab3c98fed5c7c9bae20cd6dc5
 SHA1 (patch-src_zm_signal_cpp) = af9625702518648b8d62ed20d0d52c1a2a27841a
-SHA1 (patch-src_zm_thread_cpp) = 165a1e38eb76f5cfe72606b1071177e619d73fe6
 SHA1 (patch-src_zmc_cpp) = 1499eb3e2d92372a0dea036f22f429efeefe4d95
 SHA1 (patch-src_zmu.cpp) = c2097766ecd0707728d29353ffaf590b234d8902

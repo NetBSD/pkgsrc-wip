@@ -38,7 +38,6 @@ PKG_SUGGESTED_OPTIONS=		apache
 
 ## MAIN BUILD
 
-# As of 1.32, ZoneMinder has removed autoconf support.
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl pkg-config
@@ -154,7 +153,7 @@ LIBS+=		-lexecinfo
 
 PERL5_REQD+=		5.6.0
 
-# \todo Thoroughly review and rototill this section. 
+# \todo Thoroughly review and rototill this section.
 #
 # Arrange for module.mk to perform its magic here on top of the non-Perl
 # build tasks.
@@ -214,7 +213,7 @@ ZM_REPLACE_PERL+=	scripts/zmupdate.pl.in
 ZM_REPLACE_PERL+=	scripts/zmvideo.pl.in
 ZM_REPLACE_PERL+=	scripts/zmwatch.pl.in
 ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
-REPLACE_PERL+=	${ZM_REPLACE_PERL}
+REPLACE_PERL+=		${ZM_REPLACE_PERL}
 
 # The intention of zmsystemctl.pl is to use bin/pkexec to allow the
 # apache user to start and stop the ZoneMinder services on operating
