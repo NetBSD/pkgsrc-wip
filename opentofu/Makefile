@@ -2,12 +2,10 @@
 
 .include "../../wip/terraform/version.mk"
 
-# XXX: Delete all these `alpha` kludge once a stable release is released!
 DISTNAME=	opentofu-${OPENTOFU_VERSION}
-PKGNAME=	${DISTNAME:S/-alpha/alpha/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opentofu/}
-GITHUB_TAG=	v${PKGVERSION_NOREV:S/alpha/-alpha/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.terraform.io/
@@ -21,8 +19,6 @@ SUBST_STAGE.providers-prefix=	pre-configure
 SUBST_MESSAGE.providers-prefix=	Honor providers installed via pkgsrc
 SUBST_FILES.providers-prefix=	cmd/tofu/provider_source.go
 SUBST_VARS.providers-prefix=	PREFIX
-
-WRKSRC=	${WRKDIR}/${DISTNAME}
 
 # Do not install auxiliary programs
 post-install:
