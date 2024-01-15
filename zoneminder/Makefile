@@ -43,12 +43,12 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl pkg-config
 
+# Place man pages following pkgsrc norms, rather than share/man.
+CMAKE_ARGS+=	-DZM_MANPAGE_DEST_PREFIX=${PREFIX}/${PKGMANDIR}
+
 # For now, lean to debugging.
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=true
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
-
-# \todo Necesary? Correct?
-CMAKE_ARGS+=	-DMANPAGE_DEST_PREFIX=${PKGMANDIR}
 
 ## PATHS
 
@@ -155,21 +155,16 @@ LIBS+=		-lexecinfo
 
 PERL5_REQD+=		5.6.0
 
-# \todo Thoroughly review and rototill this section.
-#
-# Arrange for module.mk to perform its magic here on top of the non-Perl
-# build tasks.
-#
 # Set ZM_PERL_MM_PARMS in order to inhibit NO_PACKLIST
 #
-#PERL5_CONFIGURE=	no
-#PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
-#PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/proxy
-#PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/modules
-#PERL5_PACKLIST=	auto/ZoneMinder/.packlist
+PERL5_CONFIGURE=	no
+PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
+PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/proxy
+PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/modules
+#PERL5_PACKLIST=		auto/ZoneMinder/.packlist
 #PERL5_PACKLIST+=	auto/ONVIF/.packlist
 #CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
-#.include "../../lang/perl5/module.mk"
+.include "../../lang/perl5/module.mk"
 
 # ZoneMinder discourages building from source and does not appear to
 # document the list of dependencies.  We take the view that if an
