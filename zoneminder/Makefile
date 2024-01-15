@@ -37,6 +37,14 @@ PKG_SUGGESTED_OPTIONS=		apache
 
 .include "../../mk/bsd.options.mk"
 
+## NOTES
+
+# ZoneMinder discourages building from source and does not appear to
+# document the list of dependencies.  We take the view that if an
+# installation can be reasonably configured to use a module, that
+# module should be a dependency, absent some reason that it is so
+# heavyweight that it should be an option.
+
 ## MAIN BUILD
 
 USE_CMAKE=	yes
@@ -150,17 +158,17 @@ PERL5_REQD+=		5.6.0
 PERL5_CONFIGURE=	no
 .include "../../lang/perl5/module.mk"
 
-# ZoneMinder discourages building from source and does not appear to
-# document the list of dependencies.  We take the view that if an
-# installation can be reasonably configured to use a module, that
-# module should be a dependency, absent some reason that it is so
-# heavyweight that it should be an option.
+# Override perl detection so proper perl path is in installed binaries.
+CMAKE_ARGS+=	-DPERL_EXECUTABLE=${PREFIX}/bin/perl
+
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Class-Std-[0-9]*:../../devel/p5-Class-Std
 DEPENDS+=	p5-Class-Std-Fast-[0-9]*:../../devel/p5-Class-Std-Fast
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=	p5-Data-Entropy-[0-9]*:../../devel/p5-Data-Entropy
+DEPENDS+=	p5-Data-Float-[0-9]*:../../devel/p5-Data-Float
 DEPENDS+=	p5-Data-UUID-[0-9]*:../../devel/p5-Data-UUID
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
@@ -171,15 +179,11 @@ DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-IO-Socket-Multicast-[0-9]*:../../net/p5-IO-Socket-Multicast
 DEPENDS+=	p5-Net-SFTP-Foreign-[0-9]*:../../net/p5-Net-SFTP-Foreign
 DEPENDS+=	p5-SOAP-WSDL-[0-9]*:../../net/p5-SOAP-WSDL
+DEPENDS+=	p5-Crypt-Eksblowfish-[0-9]*:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-
-## PERL
-
-# Override perl detection so proper perl path is in installed binaries.
-CMAKE_ARGS+=	-DPERL_EXECUTABLE=${PREFIX}/bin/perl
 
 # A large subset of perl scripts set PATH explicitly and need to patched.
 # See "PATH FIXUPS" below.
@@ -200,13 +204,15 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 
 ## PHP
 
-# \todo Verify 74 and check higher versions.
-PHP_VERSIONS_ACCEPTED=	74
+# 1.36 runs ok with 74 on NetBSD.  Someone said it works with 82 on GNU/Linux.
+# Be expansive until proven wrong.
+PHP_VERSIONS_ACCEPTED=	74 80 81 82 83
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 
@@ -233,6 +239,13 @@ DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
 DEPENDS+=	${PHP_PKG_PREFIX}-fpm-[0-9]*:../../www/php-fpm
 .endif
+
+## MYSQL
+
+# 1.36 works with mysql56 on NetBSD
+# 1.36 works with mariadb 11.2 on GNU/Linux
+# Likely, all versions in pkgsrc are ok.
+.include "../../mk/mysql.buildlink3.mk"
 
 ## PATH FIXUPS
 
@@ -291,9 +304,6 @@ PRINT_PLIST_AWK+=	/.orig$$/ { next; }
 pre-configure:
 	${FIND} ${WRKSRC} -name "*.pm*.orig" -type f | ${XARGS} ${RM} -f
 
-
-# \todo Review if the cmake build now supports installation.
-# \todo Document the symlink game with ZM_CONTENT.
 EGDIR=			share/examples/${PKGBASE}
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/config ${EGDIR}/apache
@@ -311,7 +321,6 @@ post-install:
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 # \todo Consider graphics/libv4l.
