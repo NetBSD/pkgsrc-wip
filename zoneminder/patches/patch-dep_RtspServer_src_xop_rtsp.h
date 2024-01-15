@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add NetBSD to BSD conditional.
+
+\todo File upstream PR.
+
 --- dep/RtspServer/src/xop/rtsp.h.orig	2024-01-14 21:21:34.574730494 +0000
 +++ dep/RtspServer/src/xop/rtsp.h
 @@ -51,7 +51,7 @@ public:

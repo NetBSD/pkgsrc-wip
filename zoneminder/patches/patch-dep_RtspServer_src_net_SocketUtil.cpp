@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add NetBSD to BSD conditional.
+
+\todo File upstream PR.
+
 --- dep/RtspServer/src/net/SocketUtil.cpp.orig	2024-01-14 21:17:15.225438102 +0000
 +++ dep/RtspServer/src/net/SocketUtil.cpp
 @@ -23,7 +23,7 @@ bool SocketUtil::Bind(SOCKET sockfd, std

@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add NetBSD to BSD conditional.
+
+\todo File upstream PR.
+
 --- src/zm_packet.h.orig	2024-01-14 21:29:59.095197872 +0000
 +++ src/zm_packet.h
 @@ -32,7 +32,7 @@ extern "C" {

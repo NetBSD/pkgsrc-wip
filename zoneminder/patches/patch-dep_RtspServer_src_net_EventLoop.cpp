@@ -1,5 +1,9 @@
 $NetBSD$
 
+Add NetBSD to BSD conditional.
+
+\todo File upstream PR.
+
 --- dep/RtspServer/src/net/EventLoop.cpp.orig	2024-01-14 21:16:28.747478445 +0000
 +++ dep/RtspServer/src/net/EventLoop.cpp
 @@ -60,7 +60,7 @@ void EventLoop::Loop()
