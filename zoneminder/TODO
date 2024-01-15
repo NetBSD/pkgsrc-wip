@@ -1,23 +1,14 @@
 * 1.36
 
-  - Merge patches forward
-  - Add missing dependencies
-  - Compilation/PLIST
+  - Rototill/check files/README-pkgsrc.md.
 
-  - Add 1.34 release notes to COMMIT_MSG
-  - Add 1.36 release notes to COMMIT_MSG
-    + https://github.com/ZoneMinder/zoneminder/releases/tag/1.36.33
+  - Test with pkgsrc-default php and mysql(maria).
 
-  - Stray items from 1.32, not clear if they are present still or not
+  - Consider installing conf.d/zmpaths.conf setting the paths we set,
+    because that seems necessary.
 
-    + Consider installing conf.d/zmpaths.conf setting the paths we set,
-      because that seems necessary.
-
-    + Resolve zmc startup hang (zmdc expects zmc to exit, but it
-      doesn't??).
-
-    + Resolve nph-zms vs zms, or decide it's an upstream choice that
-      this package doesn't need to address.
+  - Check/resolve zmc startup hang (zmdc expects zmc to exit, but it
+    doesn't??).
 
   - Test and find new issues
 
