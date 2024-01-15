@@ -192,6 +192,26 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
+# All perl scripts need interpreter patching (REPLACE_PERL), while a large
+# subset also need an include PATH line modified (ZM_REPLACE_PERL).
+ZM_REPLACE_PERL+=	scripts/zmaudit.pl.in
+ZM_REPLACE_PERL+=	scripts/zmcamtool.pl.in
+ZM_REPLACE_PERL+=	scripts/zmcontrol.pl.in
+ZM_REPLACE_PERL+=	scripts/zmdc.pl.in
+ZM_REPLACE_PERL+=	scripts/zmfilter.pl.in
+REPLACE_PERL+=		scripts/zmonvif-probe.pl.in
+ZM_REPLACE_PERL+=	scripts/zmpkg.pl.in
+ZM_REPLACE_PERL+=	scripts/zmstats.pl.in
+REPLACE_PERL+=		scripts/zmsystemctl.pl.in
+ZM_REPLACE_PERL+=	scripts/zmtelemetry.pl.in
+ZM_REPLACE_PERL+=	scripts/zmtrack.pl.in
+ZM_REPLACE_PERL+=	scripts/zmtrigger.pl.in
+ZM_REPLACE_PERL+=	scripts/zmupdate.pl.in
+ZM_REPLACE_PERL+=	scripts/zmvideo.pl.in
+ZM_REPLACE_PERL+=	scripts/zmwatch.pl.in
+ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
+REPLACE_PERL+=	${ZM_REPLACE_PERL}
+
 # \todo Still necessary?
 # SUBST_CLASSES+=			systemd-perl
 # SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
