@@ -571,7 +571,7 @@ do-install:
 SUBST_CLASSES+=		destdir
 SUBST_STAGE.destdir=	post-install
 SUBST_FILES.destdir=	${DESTDIR}${PREFIX}/lib/rustlib/manifest-*
- SUBST_SED.destdir=	-e 's|file:${DESTDIR}${PREFIX}|file:${PREFIX}|'
+SUBST_SED.destdir=	-e 's|file:${DESTDIR}${PREFIX}|file:${PREFIX}|'
 
 GENERATE_PLIST+=	${FIND} ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			${SED} -e 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
