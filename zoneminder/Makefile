@@ -127,13 +127,8 @@ SOEXT=	so
 CMAKE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg6}/include/ffmpeg6
 CMAKE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg6/lib${lib:tl}.${SOEXT}
 .endfor
-# This is somewhat awkward.  ffmpeg's libavformat/avformat.h requires
-# constant macros from stdint.h, but these are only defined under C++ if
-# __STDC_CONSTANT_MACROS is requested, so we have to do that on behalf
-# of ffmpeg.  Failure to do so causes configure time failures, and
-# build failures complaining about UINT64_T not being defined.
-CFLAGS+=		-D__STDC_CONSTANT_MACROS
 
+# \todo Revisit this and see if there is a better way.
 # MySQL uses openssl.  Force zoneminder not to choose otherwise by
 # finding libraries that are present but not buildlinked.
 CMAKE_ARGS+=		-DGNUTLS_LIBRARIES=""
@@ -144,26 +139,15 @@ CMAKE_ARGS+=		-DGCRYPT_LIBRARIES=""
 # \todo Convert to cmake.
 # CONFIGURE_ARGS.Darwin+=	ac_cv_func_sendfile=no ac_cv_header_sys_sendfile_h=no
 
-# \todo After finding execinfo.h, cmake looks for and fails to find
-# "backtrace".
-# \todo Explain why we don't just depend on devel/libexecinfo.
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=		-lexecinfo
-.endif
+# \todo Depend on execinfo, because cmake looks for it.
 
 ## PERL
 
 PERL5_REQD+=		5.6.0
 
-# Set ZM_PERL_MM_PARMS in order to inhibit NO_PACKLIST
-#
+# zoneminder's build system will build modules, and there is far more
+# than perl, so tell the perl module code not to take over the build.
 PERL5_CONFIGURE=	no
-PERL5_CONFIGURE_DIRS=	${WRKSRC}/scripts/ZoneMinder
-PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/proxy
-PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/modules
-#PERL5_PACKLIST=		auto/ZoneMinder/.packlist
-#PERL5_PACKLIST+=	auto/ONVIF/.packlist
-#CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
 .include "../../lang/perl5/module.mk"
 
 # ZoneMinder discourages building from source and does not appear to
@@ -192,40 +176,31 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Number-Bytes-Human-[0-9]*:../../textproc/p5-Number-Bytes-Human
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
-# All perl scripts need interpreter patching (REPLACE_PERL), while a large
-# subset also need an include PATH line modified (ZM_REPLACE_PERL).
-ZM_REPLACE_PERL+=	scripts/zmaudit.pl.in
-ZM_REPLACE_PERL+=	scripts/zmcamtool.pl.in
-ZM_REPLACE_PERL+=	scripts/zmcontrol.pl.in
-ZM_REPLACE_PERL+=	scripts/zmdc.pl.in
-ZM_REPLACE_PERL+=	scripts/zmfilter.pl.in
-REPLACE_PERL+=		scripts/zmonvif-probe.pl.in
-ZM_REPLACE_PERL+=	scripts/zmpkg.pl.in
-ZM_REPLACE_PERL+=	scripts/zmstats.pl.in
-REPLACE_PERL+=		scripts/zmsystemctl.pl.in
-ZM_REPLACE_PERL+=	scripts/zmtelemetry.pl.in
-ZM_REPLACE_PERL+=	scripts/zmtrack.pl.in
-ZM_REPLACE_PERL+=	scripts/zmtrigger.pl.in
-ZM_REPLACE_PERL+=	scripts/zmupdate.pl.in
-ZM_REPLACE_PERL+=	scripts/zmvideo.pl.in
-ZM_REPLACE_PERL+=	scripts/zmwatch.pl.in
-ZM_REPLACE_PERL+=	scripts/zmx10.pl.in
-REPLACE_PERL+=	${ZM_REPLACE_PERL}
+## PERL
 
-# \todo Still necessary?
-# SUBST_CLASSES+=			systemd-perl
-# SUBST_MESSAGE.systemd-perl=	Adjusting systemd pkexec perl.
-# SUBST_STAGE.systemd-perl=	pre-configure
-# SUBST_FILES.systemd-perl=	scripts/zmsystemctl.pl.in
-# SUBST_SED.systemd-perl=		-e 's|/usr/bin/perl|${PERL5}|g'
+# Override perl detection so proper perl path is in installed binaries.
+CMAKE_ARGS+=	-DPERL_EXECUTABLE=${PREFIX}/bin/perl
+
+# A large subset of perl scripts set PATH explicitly and need to patched.
+# See "PATH FIXUPS" below.
+ZM_PERL_PATH=	scripts/zmaudit.pl.in
+ZM_PERL_PATH+=	scripts/zmcamtool.pl.in
+ZM_PERL_PATH+=	scripts/zmcontrol.pl.in
+ZM_PERL_PATH+=	scripts/zmdc.pl.in
+ZM_PERL_PATH+=	scripts/zmfilter.pl.in
+ZM_PERL_PATH+=	scripts/zmpkg.pl.in
+ZM_PERL_PATH+=	scripts/zmstats.pl.in
+ZM_PERL_PATH+=	scripts/zmtelemetry.pl.in
+ZM_PERL_PATH+=	scripts/zmtrack.pl.in
+ZM_PERL_PATH+=	scripts/zmtrigger.pl.in
+ZM_PERL_PATH+=	scripts/zmupdate.pl.in
+ZM_PERL_PATH+=	scripts/zmvideo.pl.in
+ZM_PERL_PATH+=	scripts/zmwatch.pl.in
+ZM_PERL_PATH+=	scripts/zmx10.pl.in
 
 ## PHP
 
-# ZoneMinder 1.32 with PHP 7.4 does not appear to have PHP-related problems.
-# Under PHP 8.0 <1.30 was logging at Error level type errors out of skin.js.
-# Under PHP 8.1 <1.30 was logging at Panic level that strftime is deprecated.
-#
-# Therefore 74 is the standard approach and it is \todo to try higher.
+# \todo Verify 74 and check higher versions.
 PHP_VERSIONS_ACCEPTED=	74
 
 .include "../../lang/php/phpversion.mk"
@@ -261,24 +236,21 @@ DEPENDS+=	${PHP_PKG_PREFIX}-fpm-[0-9]*:../../www/php-fpm
 
 ## PATH FIXUPS
 
-# Patch the db creation script so that default paths installed in the
-# db match how we have configured the package.
-SUBST_CLASSES+=			dbpaths-path
-SUBST_MESSAGE.dbpaths-path=	Adjusting default paths in configuration.
-SUBST_STAGE.dbpaths-path=	pre-configure
-SUBST_FILES.dbpaths-path=	db/zm_create.sql.in
-SUBST_SED.dbpaths-path=		-e 's|/usr/local/bin/|${PREFIX}/bin/|g'
-SUBST_SED.dbpaths-path+=	-e 's|/usr/bin|${PREFIX}/bin|g'
-SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
+# \todo Verify that this is truly no longer necessary with 1.36.
+# # Patch the db creation script for the cgi bin path.
+# SUBST_CLASSES+=			dbpaths-path
+# SUBST_MESSAGE.dbpaths-path=	Adjusting default paths in configuration.
+# SUBST_STAGE.dbpaths-path=	pre-configure
+# SUBST_FILES.dbpaths-path=	db/zm_create.sql.in
+# SUBST_SED.dbpaths-path+=	-e 's|/cgi-bin/nph-zms|/zm/cgi-bin/nph-zms|g'
 
-# In most perl scripts, set the path to include $prefix/bin, rather
-# than looking in /usr/local/bin, so that mysql, sudo, and so on are
-# found.  (Scripts are in ZM_REPLACE_PERL rather than just
-# REPLACE_PERL if they should get this substitution.)
+# Remediate idiom in perl scripts to set PATH, by adding ${PREFIX}/bin.
+# \todo Some scripts use zmconf to get a PATH and perhaps a change
+# towards that should be filed upstream.
 SUBST_CLASSES+=			script-path
 SUBST_MESSAGE.script-path=	Adjusting paths in scripts.
 SUBST_STAGE.script-path=	pre-configure
-SUBST_FILES.script-path=	${ZM_REPLACE_PERL}
+SUBST_FILES.script-path=	${ZM_PERL_PATH}
 SUBST_SED.script-path=		-e "s|^\\([\$$]ENV{PATH} *= *'\\).*';\$$|\\1${PREFIX}/bin:/bin:/usr/bin';|g"
 
 # Substitute configured path in pkgsrc-provided apache config.
@@ -287,18 +259,17 @@ SUBST_STAGE.files=	pre-configure
 SUBST_FILES.files=	httpd-zoneminder.conf
 SUBST_SED.files=	-e "s|@ZM_HTTPD_ROOT@|${PREFIX}/${ZM_HTTPD_ROOT}|g"
 SUBST_SED.files+=	-e "s|@ZM_HTTPD_CGIBIN@|${PREFIX}/${ZM_HTTPD_CGIBIN}|g"
-SUBST_MESSAGE.files=	Fixing ZoneMinder configuration file for Apache.
+SUBST_MESSAGE.files=	Setting paths in Apache configuration file.
 
 ## INIT SCRIPTS
 
-# \todo Figure out if this is really for pkgsrc rc.d, and maybe write one for
-# files/
-
+# \todo This script appears Linuxy rather than written for
+# NetBSD/pkgsrc-rcd.  Understand, and then adjust or replace.
 PLIST_VARS+=		rcd
 
 .if ${INIT_SYSTEM} == "rc.d"
 PLIST.rcd=		yes
-# \todo fix
+# \todo Hold installation until validated
 #RCD_SCRIPTS+=		zoneminder
 .endif
 PRINT_PLIST_AWK+=	{ gsub(/^.+\/examples\/rc.d/, "$${PLIST.rcd}&"); }
