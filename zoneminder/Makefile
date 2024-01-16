@@ -14,12 +14,13 @@ GITHUB_PROJECT=	${NAME_DIST}
 GITHUB_TYPE=	tag
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-# Submodules as per ZoneMinder's .gitmodules file, except that crud is no longer
-# at ZoneMinder so we use FriendsOfCake instead.
-# \todo Consider 3.0 vs v3.0.10, as the .gitmodules points to 3.0.
-GITHUB_SUBMODULES+=	FriendsOfCake crud v3.0.10 web/api/app/Plugin/Crud
-GITHUB_SUBMODULES+=	ZoneMinder CakePHP-Enum-Behavior master web/api/app/Plugin/CakePHP-Enum-Behavior
-GITHUB_SUBMODULES+=	ZoneMinder RtspServer master dep/RtspServer
+## Submodules (from ZoneMinder's .gitmodules file)
+# We use a specific commit on each branch, to avoid distfile versioning woes
+# and to meet pkgsrc expectations that a fixed version is fixed software. 
+# Beware that RtspServer might get updates and should be checked.
+GITHUB_SUBMODULES+=	FriendsOfCake crud 14292374ccf1328f2d5db20897bd06f99ba4d938 web/api/app/Plugin/Crud
+GITHUB_SUBMODULES+=	ZoneMinder CakePHP-Enum-Behavior ea90c0cd7f6e24333a90885e563b5d30b793db29 web/api/app/Plugin/CakePHP-Enum-Behavior
+GITHUB_SUBMODULES+=	ZoneMinder RtspServer 055d81fe1293429e496b19104a9ed3360755a440 dep/RtspServer
 
 MAINTAINER=	dsainty@NetBSD.org
 #MAINTAINER+=	gdt@NetBSD.org

@@ -1,17 +1,17 @@
 $NetBSD: distinfo,v 1.12 2018/07/14 15:03:57 gdt Exp $
 
-BLAKE2s (FriendsOfCake-crud-v3.0.10.tar.gz) = e04238f274c6ce5b27f4a106630ef224fe6cb61a8172d32474e8660af7adea81
-SHA512 (FriendsOfCake-crud-v3.0.10.tar.gz) = 2f60557f2c783bb448e06c1ca40b536a1d7d5f3caf0626fa6716a28f808492d4799e238f16c022571be96921105b074b6763920fd7b9cc77b76d17ceadae2040
-Size (FriendsOfCake-crud-v3.0.10.tar.gz) = 72960 bytes
+BLAKE2s (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 8877bf6718ecfe3cba2515629418fe5addc60cf8ce4650526b39db6a234922ad
+SHA512 (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = da58528686baf05385ad08079f965bce10eba6d599133ab773e9ab1f9e4b7d82cf5431b4b773317b90effb16e0b026a029bdfabe08a9ef1a5e9b94e7a1c2ea9e
+Size (FriendsOfCake-crud-14292374ccf1328f2d5db20897bd06f99ba4d938.tar.gz) = 73086 bytes
 BLAKE2s (ZoneMinder-1.36.33.tar.gz) = 693d5a07ce03b6e97fd402170e05cc89cf2885a9a33215fc66e8615a12e90802
 SHA512 (ZoneMinder-1.36.33.tar.gz) = 7afd25d3fa5dd170bad552332dab5425b664e41d430f1514f2b038ec7391dae6fab165050b541cad50a6904341f77605fde845cc02e4d7ee10f42650cb9e8707
 Size (ZoneMinder-1.36.33.tar.gz) = 11501221 bytes
-BLAKE2s (ZoneMinder-CakePHP-Enum-Behavior-master.tar.gz) = 618af60eff56f659a700ff3bc9a3721c1b5a1ba8d15bc2a4213a4022297553bc
-SHA512 (ZoneMinder-CakePHP-Enum-Behavior-master.tar.gz) = fa51aa34749cf0e7c9c484c4d65718696230291780df1bac9a5ca8144a230d5cdfdf2ff2fae413248a09ddd14615dbe88b111713e11173aa9d9078c5b3c9064c
-Size (ZoneMinder-CakePHP-Enum-Behavior-master.tar.gz) = 3506 bytes
-BLAKE2s (ZoneMinder-RtspServer-master.tar.gz) = 8a15c1a1f61b218137721b040c96051f5dc3de3078829f28ae7f971c30095eed
-SHA512 (ZoneMinder-RtspServer-master.tar.gz) = 80f7310d08f8a32f31f332a221e7b63f09246f4c507846082f691936a180d213d10fc5f9a27bbc31a06b89bb0bbf547e476e8d9fad09980d32d97f7fef5c66b8
-Size (ZoneMinder-RtspServer-master.tar.gz) = 1396607 bytes
+BLAKE2s (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 4639184438becb1c33450a00e213fca9d11e92b7f2545fb701f40a664c716764
+SHA512 (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 75f2188e548b98191c8df82fb76e918f3bda9788f541449df8fa92449ad19aa0b9c13420dd91c760e08a4d31956ad51602242ab97e3bd4460f01e99f49992453
+Size (ZoneMinder-CakePHP-Enum-Behavior-ea90c0cd7f6e24333a90885e563b5d30b793db29.tar.gz) = 3504 bytes
+BLAKE2s (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 0feba45357a746173378193be365b164061cc9f20e84210ecfe9e991ad9971e4
+SHA512 (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 2f3bbd449269cba5afda3135e54cca114342956da3ce8fbfb05533ec7b1c3f75767d8b5f3d9b415254ad7b39817bc343b0790c591ef3cc64d2863819ab3a7551
+Size (ZoneMinder-RtspServer-055d81fe1293429e496b19104a9ed3360755a440.tar.gz) = 1396623 bytes
 SHA1 (patch-CMakeLists.txt) = dca040058ec7b389474dff9853c46f65fd5626da
 SHA1 (patch-dep_RtspServer_src_net_EventLoop.cpp) = bf1fe79c2ba1d602adf8895f29f61f7b961eece3
 SHA1 (patch-dep_RtspServer_src_net_Socket.h) = 789e90da4bfc15d6d43d942718538385cb6dfade
