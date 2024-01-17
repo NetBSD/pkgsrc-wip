@@ -1,5 +1,7 @@
 xvkbd: updated xvkdb to version 4.1
 
+Prepared in wip by Kevin Bloom
+
 4.0 -> 4.1:
 - Fixed slow start up
 - Fixed duplicate definition problem of variable appres.
