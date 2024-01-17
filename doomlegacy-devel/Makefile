@@ -1,8 +1,8 @@
 # $NetBSD$
 
-VERS=		1.48.12
+VERS=		1.48.14
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1648
+SVNVERS=	1666
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -96,8 +96,6 @@ SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 pre-configure:
-	${CP} ${FILESDIR}/umapinfo.c ${WRKSRC}/src
-	${CP} ${FILESDIR}/umapinfo.h ${WRKSRC}/src
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.sh ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
@@ -139,7 +137,5 @@ BUILDLINK_API_DEPENDS.SDL_mixer+=		SDL_mixer>=1.2.7
 .include "../../audio/SDL_mixer/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL+=			SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libdoom-umapinfo+=	libdoom-umapinfo>=1.0.0rc5
-.include "../../wip/libdoom-umapinfo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
