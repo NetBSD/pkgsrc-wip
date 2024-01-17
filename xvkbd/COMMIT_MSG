@@ -1,0 +1,42 @@
+xvkbd: updated xvkdb to version 4.1
+
+4.0 -> 4.1:
+- Fixed slow start up
+- Fixed duplicate definition problem of variable appres.
+
+3.9 -> 4.0
+- Improvements related to Word Completion:
+   - English word list with frequency information will be installed by
+     default
+   - xvkbd can now "learn" the recently used words
+   - completion panel can be integrated into the xvkbd's main window,
+     when Integrate Completion Panel? on the Property panel set on.
+   - xvkbd will insert blank (' ') automatically between words,
+     when Insert Blank after Completion? on the Property panel set on.
+  - Modifier "Super" (keysym Super_L and Super_R) is now supported,
+    although it is not on the supplied keyboard layouts.
+  - Fixed bug with modifiers
+  - To build, "./configure" may be used instead of "xmkmf".
+
+3.8 -> 3.9
+- Fixed modifiers not working with -text
+
+
+3.7 -> 3.8
+- Fixed issues with hardware cap locks effecting software keyboard
+- Fixed bug where having keyboard layout other than Default selected
+  would cause text to be lost.
+- Fixed bug with German keymap generated y instead of z after shift
+  key is pressed.
+- Fixed random X error
+
+3.6 -> 3.7
+- Fixed right click
+
+3.5 -> 3.6
+- New -utf16 option
+- Keyboard layout selected with "Change Keyboard Layout..." will
+  be kept when xvkbd is used next time.
+- Caps Lock now works better for some of the keyboard layouts
+  containing non-ASCII keys.
+- Improved Hebrew keyboard layout
