@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	crispy-doom-5.12.0
+DISTNAME=	crispy-doom-6.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -77,6 +77,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/applications/crispy-hexen.desktop
 	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.Setup.desktop \
 		${DESTDIR}${PREFIX}/share/applications/crispy-setup.desktop
+	${MV} ${DESTDIR}${PREFIX}/share/applications/io.github.fabiangreffrath.Strife.desktop \
+		${DESTDIR}${PREFIX}/share/applications/crispy-strife.desktop
 	${MV} ${DESTDIR}${PREFIX}/share/applications/screensavers/io.github.fabiangreffrath.Doom_Screensaver.desktop \
 		${DESTDIR}${PREFIX}/share/applications/screensavers/crispy-doom_Screensaver.desktop
 	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Doom.metainfo.xml \
@@ -85,6 +87,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-heretic.metainfo.xml
 	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Hexen.metainfo.xml \
 		${DESTDIR}${PREFIX}/share/metainfo/crispy-hexen.metainfo.xml
+	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.Strife.metainfo.xml \
+		${DESTDIR}${PREFIX}/share/metainfo/crispy-strife.metainfo.xml
 .if defined(PLIST.sysv)
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/default.cfg.4 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-default.cfg.4
@@ -92,6 +96,8 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-heretic.cfg.4
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/hexen.cfg.4 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-hexen.cfg.4
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/strife.cfg.4 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man4/crispy-strife.cfg.4
 .else
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/default.cfg.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-default.cfg.5
@@ -99,6 +105,8 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-heretic.cfg.5
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/hexen.cfg.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-hexen.cfg.5
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/strife.cfg.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/crispy-strife.cfg.5
 .endif
 
 BUILDLINK_API_DEPENDS.SDL2_mixer+=	SDL2_mixer>=2.0.2
