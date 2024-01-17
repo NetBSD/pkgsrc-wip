@@ -205,17 +205,23 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 
 ## PHP
 
-# 1.36 runs ok with 74 on NetBSD.  Someone said it works with 82 on GNU/Linux.
-# Be expansive until proven wrong.
-PHP_VERSIONS_ACCEPTED=	74 80 81 82 83
+# 1.36 (NetBSD/amd64) works with 74 81 82
+# 83: PHP Fatal error:  Uncaught TypeError: flock(): Argument #1 ($stream) must be of type resource, false given in /usr/pkg/share/zoneminder/htdocs/includes/functions.php:2244
+# In 2022, upstream warned against 82.
+# php-apcu fails with 56, but upstream might support it.
+PHP_VERSIONS_INCOMPATIBLE= 56 83
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
+
+# json is core >= 8 (and we reject 56)
+.if !empty(PKG_PHP_VERSION:M74)
+DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+.endif
 
 ## WEB
 
