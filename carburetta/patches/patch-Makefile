@@ -4,10 +4,12 @@ Do not overwrite $CC from environment with specific compiler.
 Honor CPPFLAGS, CFLAGS and LDFLAGS for build.
 Honor DESTDIR and PREFIX for install.
 
---- Makefile.orig	2021-04-09 12:00:52.000000000 +0000
+--- Makefile.orig	2023-07-14 09:48:48.000000000 +0000
 +++ Makefile
-@@ -1,8 +1,8 @@
+@@ -1,10 +1,8 @@
 -CC=gcc
+-#CC=clang
+-CXXFLAGS=-Wall
 +# Modified version for pkgsrc
  
 -OUT = build/linux
@@ -18,7 +20,7 @@ Honor DESTDIR and PREFIX for install.
  
  SOURCES = $(filter-out src/tokens_generated_scanners.c,$(wildcard $(SRC)/*.c))
  OBJECTS = $(patsubst $(SRC)/%.c,$(INTERMEDIATE)/%.o,$(SOURCES))
-@@ -12,10 +12,10 @@ all: $(OUT)/carburetta $(OUT)/calc $(OUT
+@@ -19,10 +17,10 @@ all: $(OUT)/carburetta $(OUT)/calc $(OUT
  
  $(INTERMEDIATE)/%.o: $(SRC)/%.c
  	@mkdir -p $(@D)
@@ -31,7 +33,7 @@ Honor DESTDIR and PREFIX for install.
  
  $(INTERMEDIATE)/calc/calc.c: $(OUT)/carburetta examples/calc/calc.cbrt
  	mkdir -p $(@D)
-@@ -30,13 +30,13 @@ $(INTERMEDIATE)/template_scan/template_s
+@@ -37,13 +35,13 @@ $(INTERMEDIATE)/template_scan/template_s
  	$(OUT)/carburetta examples/template_scan/template_scan.cbrt --c $(INTERMEDIATE)/template_scan/template_scan.c
  
  $(OUT)/calc: $(INTERMEDIATE)/calc/calc.c
@@ -46,9 +48,9 @@ Honor DESTDIR and PREFIX for install.
 -	$(CC) -o $(OUT)/template_scan $(INTERMEDIATE)/template_scan/template_scan.c
 +	$(CC) $(CPPFLAGS) $(CFLAGS) -o $(OUT)/template_scan $(INTERMEDIATE)/template_scan/template_scan.c
  
- .PHONY: clean
- clean:
-@@ -44,8 +44,8 @@ clean:
+ .PRECIOUS: $(INTERMEDIATE)/tester/%.c
+ $(INTERMEDIATE)/tester/%.c: tester/%.cbrt
+@@ -71,11 +69,11 @@ clean:
  
  .PHONY: install
  install: all
@@ -59,3 +61,6 @@ Honor DESTDIR and PREFIX for install.
  uninstall:
 -	rm /usr/local/bin/carburetta
 +	rm $(DESTDIR)$(PREFIX)/bin/carburetta
+ 
+ .PHONY: test
+ test: all

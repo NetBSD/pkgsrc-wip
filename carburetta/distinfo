@@ -1,7 +1,7 @@
 $NetBSD$
 
-BLAKE2s (carburetta-v0.8.6.tar.gz) = cde6d8d8381f53355692b40ddc9d6f79ca0119e8426fdc79cc446c717a8a19f5
-SHA512 (carburetta-v0.8.6.tar.gz) = 7d3191d00792201536a20120409019d73d3a209bf46f429490340d7092817450f388d2848f3304c57312e748dda737fb204d7ba73075a0da1c43bb0b6ccef1c4
-Size (carburetta-v0.8.6.tar.gz) = 184945 bytes
-SHA1 (patch-Makefile) = 1040284f70a944a041f312bacb34df9bf0719737
+BLAKE2s (carburetta-v0.8.20.tar.gz) = 49fffd09031c5c5d441188a7c82d784043cb6c91101b33955db2219879986aac
+SHA512 (carburetta-v0.8.20.tar.gz) = dc5b78b3c0050eadb1d731789f381b8795230965416f74f650c89f1a9a29b8a36fd5b9c8d9bfa4f65c56559afe08ebbe69b3b4ea46e38d14d0b16d95d7d6501d
+Size (carburetta-v0.8.20.tar.gz) = 264453 bytes
+SHA1 (patch-Makefile) = 70ee97ca145ef3cd42fc56165884539d91ae6e73
 SHA1 (patch-src_temp__output.c) = 2534236b8c2537011646e8fa4342ddf88ee24ceb

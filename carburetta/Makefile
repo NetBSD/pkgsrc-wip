@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	carburetta-v0.8.6
+DISTNAME=	carburetta-v0.8.20
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kingletbv/}
@@ -11,9 +11,11 @@ HOMEPAGE=	https://carburetta.com/
 COMMENT=	Fused scanner parser generator
 LICENSE=	apache-2.0
 
+MAKE_JOBS_SAFE=	no
+
 USE_TOOLS=	gmake
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/doc/carburetta
