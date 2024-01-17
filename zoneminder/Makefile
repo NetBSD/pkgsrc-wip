@@ -218,10 +218,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 
-# json is core >= 8 (and we reject 56)
-.if !empty(PKG_PHP_VERSION:M74)
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-.endif
+.include "../../lang/php/json.mk"
 
 ## WEB
 
