@@ -1,0 +1,110 @@
+graphics/graphviz: Update to 9.0.0
+
+## 9.0.0 - 2023-09-11
+
+### Added
+
+- On non-Windows platforms, new -Tkitty and -Tkittyz output formats are
+  available that render to the Kitty terminal emulator’s graphvics
+  protocol.
+- HTML/CSS-style 3 letter hex colors are supported. Each R/G/B letter
+  is duplicated to form a 6 letter hex color. E.g. #09c is equivalent
+  to #0099cc. #2377
+
+### Changed
+
+- Breaking: The definition of adjmatrix_t is no longer exposed in public
+  headers.
+- Breaking: The upper limit for minimum edge length
+  (Agedgeinfo_t.minlen) has been expanded from USHRT_MAX to INT_MAX.
+  #2413
+- Breaking: The libcdt macros DTTREEMATCH, DTTREESEARCH, dtvnext,
+  dtvcount, dtvhere, and dtcharhash have been removed.
+- Breaking: The libcgraph macros AGHEADPOINTER, AGRIGHTPOINTER,
+  AGLEFTPOINTER, FIRSTNREF, NEXTNREF, PREVNREF, LASTNREF, NODEOF,
+  FIRSTOUTREF, LASTOUTREF, FIRSTINREF, NEXTEREF, and PREVEREF have been
+  removed.
+- Breaking: The libcgraph types Agnoderef_t and Agedgeref_t have been
+  removed.
+- Breaking: The libcgraph function agflatten has been removed.
+- Breaking: The Agdesc_s.flatlock field has been removed.
+- Breaking: The str parameter from gvPluginList has been removed.
+- Breaking: The definition of the elist_append and alloc_elist macros
+  have been changed to use newer allocation functions. Users were/are
+  not expected to call these macros.
+- The functions ageqedge, agtail, aghead, agopp, agmkout, and agmkin
+  have been reintroduced. These were previously removed in Graphviz
+  3.0.0. #2433
+- Breaking: The first parameter dt to the makef and freef callbacks
+  defined in cdt.h has been removed.
+- Gvedit now identifies itself with organization name “Graphviz” and
+  application name “gvedit” when reading and writing Qt-based settings.
+  It would previously use organization name “Trolltech” and application
+  name “MDI Example”. If you have existing settings under the old
+  identification, Gvedit will attempt to migrate them to the new
+  identification the first time it reads then writes settings. #2383
+- Breaking: gvprintf is now tagged with
+  __attribute__((format(printf, …))) when compiling with Clang or GCC.
+  This enables the compiler to spot more misuses of this function. #2373
+- Breaking: The hashf and eventf members of Dtdisc_t have been removed.
+  Correspondingly, the hshf and evf parameters to the DTDISC macro have
+  been removed. Also the _DTHSH macro has been removed.
+- Breaking: The Dtdata_t.minp field has been removed.
+- The print functionality of the macOS Graphviz app scales the graph to
+  fit the output page size.
+- Breaking: The libcdt containers Dtbag, Dthash, Dtlist, Dtorder,
+  Dtdeque, and Dtstack have been removed.
+- Breaking: The libcdt dtappend and dtattach macros have been removed.
+- Support for Lua 5.0 has been removed. Building the Graphviz Lua
+  bindings now requires Lua ≥ 5.1.
+- Breaking: The Dt_t* parameter to the callback for dtwalk has been
+  removed.
+- Breaking: The POINTS_PER_PC macro has been removed.
+- Breaking: The INITIAL_XDOT_CAPACITY macro has been removed.
+- Breaking: The type parameter to dtdisc has been removed.
+- Breaking: The h parameter to dtstrhash has been removed.
+- In addition to Guile 2.0 and Guile 2.2, Guile 3.0 is now supported by
+  the Graphviz Guile bindings.
+- Breaking: The concept of “memory allocator discipline” has been
+  removed, along with the type Agmemdisc_t and fields Agdisc_t.mem and
+  Agdstate_t.mem.
+- Breaking: The agcallbacks function and Agclos_t.callbacks_enabled have
+  been removed.
+- Breaking: pack_info.doSplines is now a C99 bool. Correspondingly, the
+  doSplines parameter to shiftGraphs is now a C99 bool.
+
+### Fixed
+
+- Processing large graphs that induce ranks containing more than 46340
+  (floor(√INT_MAX)) nodes no longer results in an integer overflow
+  during crossing matrix allocation. Ranks of up to floor(√SIZE_MAX)
+  nodes are now supported.
+- Double arrow head types like invdot and onormalonormal once again
+  display correctly. This was a regression in Graphviz 8.0.1. #2406
+- The lvee and rvee edge arrow shapes are slighty incorrect for
+  penwidths > 1. #2399
+- Small gap between lcurve or rcurve arrow shaft and node. #2426
+- Failure of arrowhead and arrowtail to respect penwidth #372
+- Fixed also for the normal and inv edge arrow shapes when using the l
+  or r arrow shape modifiers.
+- Slightly improved for the normal and inv edge arrow shapes when not
+  using any arrow shape modifier.
+- Fixed also for the crow and vee edge arrow shapes and record based
+  nodes.
+- Various incorrect calls to gvprintf have been corrected. On some
+  platforms like x86-64, these problems were benign thanks to
+  coincidences in the Application Binary Interface (ABI).
+  On other platforms, these problems may have caused stack corruption
+  and crashes. #2373
+- The font dictionary is now initialized even if a configuration file is
+  not found. Previously this situation could lead to a crash when using
+  Graphviz programmatically. This problem was present as least as far
+  back as Graphviz 2.38.0. #1520
+- Breaking: The vt100 output format has been renamed to vt. This fixes
+  a problem where it was not discoverable on macOS. #2429
+- Escape sequences like \" are recognized in strings and double
+  escaping (producing \\") is avoided. #2397
+- The Autotools build system no longer uses headers and libraries from
+  the --prefix path given on the command line. This previously caused
+  cross-compilation to incorrectly pick up host headers and libraries.
+  #2442
