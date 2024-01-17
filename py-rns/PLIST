@@ -230,6 +230,7 @@ ${PYSITELIB}/RNS/vendor/ifaddr/_win32.pyo
 ${PYSITELIB}/RNS/vendor/ifaddr/niwrapper.py
 ${PYSITELIB}/RNS/vendor/ifaddr/niwrapper.pyc
 ${PYSITELIB}/RNS/vendor/ifaddr/niwrapper.pyo
+${PYSITELIB}/RNS/vendor/ifaddr/py.typed
 ${PYSITELIB}/RNS/vendor/platformutils.py
 ${PYSITELIB}/RNS/vendor/platformutils.pyc
 ${PYSITELIB}/RNS/vendor/platformutils.pyo
