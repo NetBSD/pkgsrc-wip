@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rio-0.0.33
+DISTNAME=	rio-0.0.34
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=raphamorim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -40,6 +40,9 @@ SUBST_FILES.rtld=	../vendor/x11-dl-*/src/link.rs
 SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 .endif
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+
 INSTALLATION_DIRS=	bin
 
 do-install:
@@ -50,6 +53,8 @@ do-install:
 DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
 .endif
 
+.include "../../lang/python/batteries-included.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
