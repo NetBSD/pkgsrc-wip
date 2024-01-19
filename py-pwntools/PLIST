@@ -522,6 +522,8 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/connect.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/dupio.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/forkexit.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/kill.asm
@@ -530,6 +532,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/loader.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/loader_append.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/open.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/readn.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/socket.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/android/stage.asm
@@ -1017,6 +1020,8 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/connect.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/dupio.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/forkexit.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/kill.asm
@@ -1025,6 +1030,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/loader.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/loader_append.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/open.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/readn.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/socket.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/aarch64/linux/stage.asm
@@ -1519,7 +1525,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/connectstager.asm
-${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/dup.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/dupio.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/egghunter.asm
@@ -1546,6 +1552,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/readn.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/readptr.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/recvsize.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/setregid.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/setreuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/android/socket.asm
@@ -2040,7 +2047,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/connectstager.asm
-${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/dup.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/dupio.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/egghunter.asm
@@ -2067,6 +2074,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/readn.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/readptr.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/recvsize.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/setregid.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/setreuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/linux/socket.asm
@@ -2562,6 +2570,15 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/setregs.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/strcpy.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/strlen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/trap.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/__doc__
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/cmd.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/getexport.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/getprocaddress.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/kernel32base.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/ntdllbase.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/peb.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/teb.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/amd64/windows/winexec.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/amd64/xor.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/__doc__
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/__doc__
@@ -2570,6 +2587,8 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/dir.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/dupio.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/egghunter.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/forkbomb.asm
@@ -2577,6 +2596,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/forkexit.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/open_file.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/syscall.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/android/syscalls/__doc__
@@ -3064,6 +3084,8 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/dir.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/dupio.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/egghunter.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/forkbomb.asm
@@ -3071,6 +3093,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/forkexit.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/open_file.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/syscall.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/arm/linux/syscalls/__doc__
@@ -4066,6 +4089,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/readfile.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/readn.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/recvsize.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/setregid.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/setreuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/android/socket.asm
@@ -4597,6 +4621,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/readfile.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/readn.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/recvsize.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/setregid.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/setreuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/i386/linux/socket.asm
@@ -5110,6 +5135,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/listen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/readfile.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/stager.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/android/syscall.asm
@@ -5605,6 +5631,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/kill.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/killparent.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/listen.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/readfile.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/stager.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/mips/linux/syscall.asm
@@ -7047,7 +7074,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/connectstager.asm
-${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/dup.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/dupio.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/findpeer.asm
@@ -7063,6 +7090,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/loader_append.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/readfile.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/readn.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/recvsize.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/stage.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/android/stager.asm
@@ -7552,7 +7580,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/cat.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/cat2.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/connect.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/connectstager.asm
-${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/dup.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/dupio.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/dupsh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/echo.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/findpeer.asm
@@ -7568,6 +7596,7 @@ ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/loader_append.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/readfile.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/readn.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/recvsize.asm
+${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/setresuid.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/sh.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/stage.asm
 ${PYSITELIB}/pwnlib/shellcraft/templates/thumb/linux/stager.asm
@@ -8194,16 +8223,16 @@ ${PYSITELIB}/pwnlib/util/web.pyo
 ${PYSITELIB}/pwnlib/version.py
 ${PYSITELIB}/pwnlib/version.pyc
 ${PYSITELIB}/pwnlib/version.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-pwntools.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pwntools-doc/CHANGELOG.md
 ${PYSITELIB}/pwntools-doc/CONTRIBUTING.md
 ${PYSITELIB}/pwntools-doc/DOCKER.md
 ${PYSITELIB}/pwntools-doc/LICENSE-pwntools.txt
 ${PYSITELIB}/pwntools-doc/README.md
+${PYSITELIB}/pwntools-doc/SECURITY.md
 ${PYSITELIB}/pwntools-doc/TESTING.md
-${PYSITELIB}/pwntools-doc/requirements.txt
