@@ -1,0 +1,95 @@
+beebox-03@makoto 09:30:04/240121(..wip/R-arrow)% make clean && make package
+===> Cleaning for R-arrow-14.0.0.2
+=> Bootstrap dependency digest>=20211023: found digest-20220214
+=> Checksum BLAKE2s OK for R/arrow_14.0.0.2.tar.gz
+=> Checksum SHA512 OK for R/arrow_14.0.0.2.tar.gz
+===> Installing dependencies for R-arrow-14.0.0.2
+==========================================================================
+The following variables will affect the build process of this package,
+R-arrow-14.0.0.2.  Their current value is shown below:
+
+        * PKGSRC_BLAS_TYPES = netlib openblas openblas_pthread openblas_openmp
+
+Based on these variables, the following variables have been set:
+
+        * BLAS_INCLUDES (not defined)
+        * BLAS_LIBS = -lblas
+        * BLAS_PC = blas
+        * BLAS_TYPE = netlib
+        * CBLAS_LIBS (not defined)
+        * CBLAS_PC (not defined)
+        * LAPACKE_LIBS (not defined)
+        * LAPACKE_PC (not defined)
+        * LAPACK_LIBS = -llapack -lblas
+        * LAPACK_PC = lapack
+
+You may want to abort the process now with CTRL-C and change the value
+of variables in the first group before continuing.  Be sure to run
+`/usr/bin/make clean' after the changes.
+==========================================================================
+=> Tool dependency mktools-[0-9]*: found mktools-20220614
+=> Tool dependency bash-[0-9]*: found bash-5.2.21nb1
+=> Tool dependency pkgconf-[0-9]*: found pkgconf-1.9.4nb1
+=> Tool dependency cwrappers>=20150314: found cwrappers-20220403
+=> Tool dependency checkperms>=1.1: found checkperms-1.12
+=> Full dependency R-assertthat>=0.2.1: found R-assertthat-0.2.1nb1
+=> Full dependency R-bit64>=0.9.7: found R-bit64-4.0.5
+=> Full dependency R-glue>=1.7.0: found R-glue-1.7.0
+=> Full dependency R-purrr>=1.0.1: found R-purrr-1.0.1
+=> Full dependency R-rlang>=1.0.0: found R-rlang-1.1.1nb1
+=> Full dependency R-tidyselect>=1.0.0: found R-tidyselect-1.2.0
+=> Full dependency R-vctrs>=0.6.3: found R-vctrs-0.6.3nb1
+=> Full dependency R>=4.2.0nb1: found R-4.3.2
+===> Skipping vulnerability checks.
+WARNING: No /usr/pkg/pkgdb/pkg-vulnerabilities file found.
+WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities'.
+===> Overriding tools for R-arrow-14.0.0.2
+===> Extracting for R-arrow-14.0.0.2
+===> Patching for R-arrow-14.0.0.2
+===> Creating toolchain wrappers for R-arrow-14.0.0.2
+===> Configuring for R-arrow-14.0.0.2
+=> Generating pkg-config files for builtin xz package.
+=> Checking for portability problems in extracted files
+===> Building for R-arrow-14.0.0.2
+===> Installing for R-arrow-14.0.0.2
+=> Generating pre-install file lists
+=> Creating installation directories
+* installing *source* package 'arrow' ...
+** package 'arrow' successfully unpacked and MD5 sums checked
+** using staged installation
+*** pkg-config found.
+*** Found local C++ source: 'tools/cpp'
+*** Building libarrow from source
+    For build options and troubleshooting, see the install guide:
+    https://arrow.apache.org/docs/r/articles/install.html
+**** cmake: /usr/pkg/bin/cmake
+**** arrow 
+
+(infinite loop ?, following is with MAKE_ENV+=      ARROW_R_DEV=true)
+
+
+**** arrow with SOURCE_DIR='tools/cpp' BUILD_DIR='/tmp/RtmpNRziWn/file1915fbd7d0a' DEST_DIR='libarrow/arrow-14.0.0' CMAKE='/usr/pkg/bin/cmake' EXTRA_CMAKE_FLAGS='' CC='gcc' CXX='c++ -std=gnu++17' LDFLAGS='-Wl,-zrelro -L/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -Wl,-R/usr/pkg/lib -pthread -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib' N_JOBS='NA' ARROW_S3='OFF' ARROW_GCS='OFF'
+++ pwd
++ : /tmp/W/wip/R-arrow/work/arrow
++ : tools/cpp
++ : /tmp/RtmpNRziWn/file1915fbd7d0a
++ : libarrow/arrow-14.0.0
++ : /usr/pkg/bin/cmake
+++ cd tools/cpp
+++ pwd
++ SOURCE_DIR=/tmp/W/wip/R-arrow/work/arrow/tools/cpp
+++ mkdir -p libarrow/arrow-14.0.0
+++ cd libarrow/arrow-14.0.0
+++ pwd
++ DEST_DIR=/tmp/W/wip/R-arrow/work/arrow/libarrow/arrow-14.0.0
++ '[' NA = '' ']'
++ '[' '' '!=' '' ']'
++ '[' '' = false ']'
++ ARROW_DEFAULT_PARAM=OFF
++ case "$CXX" in
++ mkdir -p /tmp/RtmpNRziWn/file1915fbd7d0a
++ pushd /tmp/RtmpNRziWn/file1915fbd7d0a
+/tmp/RtmpNRziWn/file1915fbd7d0a /tmp/W/wip/R-arrow/work/arrow
++ /usr/pkg/bin/cmake -DARROW_BOOST_USE_SHARED=OFF -DARROW_BUILD_TESTS=OFF -DARROW_BUILD_SHARED=OFF -DARROW_BUILD_STATIC=ON -DARROW_ACERO=ON -DARROW_COMPUTE=ON -DARROW_CSV=ON -DARROW_DATASET=ON -DARROW_DEPENDENCY_SOURCE=AUTO -DAWSSDK_SOURCE= -DARROW_FILESYSTEM=ON -DARROW_GCS=OFF -DARROW_JEMALLOC=OFF -DARROW_MIMALLOC=ON -DARROW_JSON=ON -DARROW_PARQUET=ON -DARROW_S3=OFF -DARROW_WITH_BROTLI=OFF -DARROW_WITH_BZ2=OFF -DARROW_WITH_LZ4=ON -DARROW_WITH_RE2=ON -DARROW_WITH_SNAPPY=ON -DARROW_WITH_UTF8PROC=ON -DARROW_WITH_ZLIB=OFF -DARROW_WITH_ZSTD=OFF -DARROW_VERBOSE_THIRDPARTY_BUILD=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_FIND_DEBUG_MODE=OFF -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_INSTALL_PREFIX=/tmp/W/wip/R-arrow/work/arrow/libarrow/arrow-14.0.0 -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON -DCMAKE_UNITY_BUILD=OFF -Dxsimd_SOURCE= -Dzstd_SOURCE= -G 'Unix Makefiles' /tmp/W/wip/R-arrow/work/arrow/tools/cpp
+-- Building using CMake version: 3.28.1
+
