@@ -5,11 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.0.193
+DISTNAME=	lpjs-0.0.0.196
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	6e07ef63048a6dc3c5c5f6ad898e642c872aee0b
+GITHUB_TAG=	db8fe53b2f0772a961de8af09b6f07c6d63df26b
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
