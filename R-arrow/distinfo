@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (R/arrow_14.0.0.2.tar.gz) = 237dff35e704ca1ec91c4117d680680eadf81989f631032f6540841c95540f62
+SHA512 (R/arrow_14.0.0.2.tar.gz) = 25b5ecbb682c52f907caa5dae853dc416105c4ce62ae0b743c7bd8ca5915ab738b89c6543297e8c9859182f9bd41147cefbc179e1a2eab64002dff3d0cbe3eef
+Size (R/arrow_14.0.0.2.tar.gz) = 4263864 bytes
