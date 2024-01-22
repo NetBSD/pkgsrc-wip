@@ -4106,6 +4106,7 @@ SUBDIR+=	py-p4
 SUBDIR+=	py-p_tqdm
 SUBDIR+=	py-paegan
 SUBDIR+=	py-pafy
+SUBDIR+=	py-paho-mqtt
 SUBDIR+=	py-paida
 SUBDIR+=	py-palettable
 SUBDIR+=	py-pam
