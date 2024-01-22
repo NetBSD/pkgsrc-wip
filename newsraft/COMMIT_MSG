@@ -1,4 +1,4 @@
-newsraft: import news/newsraft 0.22
+news/newsraft: add newsraft version 0.22
 
 Prepared in wip by Kevin Bloom.
 

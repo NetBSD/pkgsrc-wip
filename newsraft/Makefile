@@ -15,13 +15,9 @@ USE_TOOLS+=	pkg-config pax
 USE_LANGUAGES=	c
 MAKE_FILE=	makefile
 
-# According to the documentation, these are runtime
-# depends as well.
 DEPENDS+=	curl>=7.87.0:../../www/curl
 DEPENDS+=	expat>=2.4.8:../../textproc/expat
-# TODO: this is the Google version we need
-# https://codeberg.org/grisha/gumbo-parser without only in wip
-DEPENDS+=	gumbo-parser>=0.11.0:../../wip/gumbo-parser
+DEPENDS+=	gumbo-parser>=0.11.0:../../www/gumbo-parser
 DEPENDS+=	ncursesw>=6.2:../../devel/ncursesw
 DEPENDS+=	sqlite3>=3.36.0:../../databases/sqlite3
 DEPENDS+=	yajl>=2.1.0:../../devel/yajl
