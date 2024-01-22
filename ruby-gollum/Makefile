@@ -21,7 +21,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sprockets3>=3.7<4:../../wip/ruby-sprockets3
 DEPENDS+=	${RUBY_PKGPREFIX}-sass>=3.5<4:../../www/ruby-sass
 DEPENDS+=	${RUBY_PKGPREFIX}-uglifier4>=4.2<5:../../wip/ruby-uglifier4
 DEPENDS+=	${RUBY_PKGPREFIX}-sprockets-helpers>=1.2<2:../../wip/ruby-sprockets-helpers
-DEPENDS+=	${RUBY_PKGPREFIX}-rss>=0.2.9:../../wip/ruby-rss
 DEPENDS+=	${RUBY_PKGPREFIX}-therubyrhino>=2.1.0<2.2.0:../../wip/ruby-therubyrhino
 DEPENDS+=	${RUBY_PKGPREFIX}-webrick>=1.7<2:../../www/ruby-webrick
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.8<2:../../devel/ruby-i18n
