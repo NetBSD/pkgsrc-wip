@@ -5176,7 +5176,6 @@ SUBDIR+=	spidermonkey31
 SUBDIR+=	splix
 SUBDIR+=	spot
 SUBDIR+=	spread4
-SUBDIR+=	sptui
 SUBDIR+=	spyder
 SUBDIR+=	sqlc
 SUBDIR+=	sqlux
