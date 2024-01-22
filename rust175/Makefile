@@ -13,10 +13,9 @@ LICENSE=	mit OR apache-2.0
 CONFLICTS+=	rust-bin-[0-9]*
 
 # LLVM uses -std=c++17
-USE_CXX_FEATURES+=      c++17
-
+USE_CXX_FEATURES+=	c++17
 USE_GCC_RUNTIME=	yes
-USE_LANGUAGES=		c c++17
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash grep gmake perl:build pkg-config
 
