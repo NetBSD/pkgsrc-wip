@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2021/11/06 16:40:06 rhialto Exp $
 
-DISTNAME=	xemu-0.0.2023.07.03
+DISTNAME=	xemu-0.0.2023.12.20
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lgblgblgb/}
 GITHUB_PROJECT=	xemu
-GITHUB_TAG=	2bdb979f1a1d7e61eeb163cdc1c9de1d1356e0be
+GITHUB_TAG=	8aa261c07ec7c2f9820e99f9c8fb1930fd42e86a
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/lgblgblgb/xemu
@@ -12,6 +12,7 @@ COMMENT=	Emulators of various machines, incl the MEGA65
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	bash gmake pkg-config
+USE_TOOLS+=	grep sed tr cut dirname pwd uname date
 USE_LANGUAGES+=	c
 
 REPLACE_BASH+=	build/configure/configure
