@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.05
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.06
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -87,6 +87,10 @@ DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
 
 # As with Pillow, just depend on the python module HA will build.
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
+
+# ONVIF needs onvif-zeep-async
+DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 .include "../../mk/bsd.prefs.mk"
 
