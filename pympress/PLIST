@@ -1,11 +1,11 @@
 @comment $NetBSD$
-bin/pympress
-${PYSITELIB}/pympress-${PKGVERSION}-py3.8.egg-info/PKG-INFO
-${PYSITELIB}/pympress-${PKGVERSION}-py3.8.egg-info/SOURCES.txt
-${PYSITELIB}/pympress-${PKGVERSION}-py3.8.egg-info/dependency_links.txt
-${PYSITELIB}/pympress-${PKGVERSION}-py3.8.egg-info/entry_points.txt
-${PYSITELIB}/pympress-${PKGVERSION}-py3.8.egg-info/requires.txt
-${PYSITELIB}/pympress-${PKGVERSION}-py3.8.egg-info/top_level.txt
+bin/pympress-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pympress/__init__.py
 ${PYSITELIB}/pympress/__init__.pyc
 ${PYSITELIB}/pympress/__init__.pyo
@@ -21,6 +21,12 @@ ${PYSITELIB}/pympress/builder.pyo
 ${PYSITELIB}/pympress/config.py
 ${PYSITELIB}/pympress/config.pyc
 ${PYSITELIB}/pympress/config.pyo
+${PYSITELIB}/pympress/deck.py
+${PYSITELIB}/pympress/deck.pyc
+${PYSITELIB}/pympress/deck.pyo
+${PYSITELIB}/pympress/dialog.py
+${PYSITELIB}/pympress/dialog.pyc
+${PYSITELIB}/pympress/dialog.pyo
 ${PYSITELIB}/pympress/document.py
 ${PYSITELIB}/pympress/document.pyc
 ${PYSITELIB}/pympress/document.pyo
@@ -57,7 +63,13 @@ ${PYSITELIB}/pympress/share/locale/cs/LC_MESSAGES/pympress.mo
 ${PYSITELIB}/pympress/share/locale/de/LC_MESSAGES/pympress.mo
 ${PYSITELIB}/pympress/share/locale/es/LC_MESSAGES/pympress.mo
 ${PYSITELIB}/pympress/share/locale/fr/LC_MESSAGES/pympress.mo
+${PYSITELIB}/pympress/share/locale/hi/LC_MESSAGES/pympress.mo
+${PYSITELIB}/pympress/share/locale/it/LC_MESSAGES/pympress.mo
+${PYSITELIB}/pympress/share/locale/ja/LC_MESSAGES/pympress.mo
 ${PYSITELIB}/pympress/share/locale/pl/LC_MESSAGES/pympress.mo
+${PYSITELIB}/pympress/share/locale/zh_CN/LC_MESSAGES/pympress.mo
+${PYSITELIB}/pympress/share/locale/zh_HANT/LC_MESSAGES/pympress.mo
+${PYSITELIB}/pympress/share/locale/zh_TW/LC_MESSAGES/pympress.mo
 ${PYSITELIB}/pympress/share/pixmaps/eraser.png
 ${PYSITELIB}/pympress/share/pixmaps/marker_1.png
 ${PYSITELIB}/pympress/share/pixmaps/marker_2.png
@@ -75,8 +87,11 @@ ${PYSITELIB}/pympress/share/pixmaps/pympress-32.png
 ${PYSITELIB}/pympress/share/pixmaps/pympress-48.png
 ${PYSITELIB}/pympress/share/pixmaps/pympress-64.png
 ${PYSITELIB}/pympress/share/pixmaps/pympress.png
+${PYSITELIB}/pympress/share/xml/autoplay.glade
 ${PYSITELIB}/pympress/share/xml/content.glade
+${PYSITELIB}/pympress/share/xml/deck.glade
 ${PYSITELIB}/pympress/share/xml/highlight.glade
+${PYSITELIB}/pympress/share/xml/layout_dialog.glade
 ${PYSITELIB}/pympress/share/xml/media_overlay.glade
 ${PYSITELIB}/pympress/share/xml/menu_bar.xml
 ${PYSITELIB}/pympress/share/xml/presenter.glade
@@ -94,5 +109,5 @@ ${PYSITELIB}/pympress/ui.pyo
 ${PYSITELIB}/pympress/util.py
 ${PYSITELIB}/pympress/util.pyc
 ${PYSITELIB}/pympress/util.pyo
-share/applications/pympress.desktop
+share/applications/io.github.pympress.desktop
 share/pixmaps/pympress.png

@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pympress/pympress-1.6.1.tar.gz) = ddee8edcf6e1b82c08ef34cd228557e1bd155e62
-SHA512 (pympress/pympress-1.6.1.tar.gz) = 4598bcd0506ae4004b10c6168880d8470f4377f70a821c934b56354090b289ef181e1162d88d82434fb2daa2d9660373f57074391ce49f63c7ba180a5cdb7191
-Size (pympress/pympress-1.6.1.tar.gz) = 204655 bytes
+BLAKE2s (pympress-1.8.5.tar.gz) = 32d13ce187ffff559e237687e3b2e4b1b2cf7eab62ef1d627295b83b11f99a83
+SHA512 (pympress-1.8.5.tar.gz) = e110d99935a43f7b4b36581993247c8f44cb214759a98017f8d49f9aadcb998528787154a0c6e53d39c1da650df8a314513af06482b1dc145ea020dd278f4aea
+Size (pympress-1.8.5.tar.gz) = 260295 bytes
