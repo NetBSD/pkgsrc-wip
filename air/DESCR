@@ -1,0 +1,3 @@
+Air is yet another live-reloading command line utility for developing Go
+applications. Run air in your project root directory, leave it alone,
+and focus on your code.

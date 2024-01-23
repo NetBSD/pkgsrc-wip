@@ -124,6 +124,7 @@ SUBDIR+=	afflib
 SUBDIR+=	afl-cov
 SUBDIR+=	agile
 SUBDIR+=	ags
+SUBDIR+=	air
 SUBDIR+=	aircrack-ng
 SUBDIR+=	alac_decoder
 SUBDIR+=	alacritty-dev
