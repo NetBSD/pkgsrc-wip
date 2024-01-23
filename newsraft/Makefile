@@ -35,6 +35,6 @@ do-install:
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
-.include "../../wip/gumbo-parser/buildlink3.mk"
+.include "../../www/gumbo-parser/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
