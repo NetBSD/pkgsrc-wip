@@ -5851,6 +5851,7 @@ SUBDIR+=	zbackup
 SUBDIR+=	zdbsp
 SUBDIR+=	zed
 SUBDIR+=	zeek
+SUBDIR+=	zellij
 SUBDIR+=	zero-epwing-git
 SUBDIR+=	zetacoin
 SUBDIR+=	zf
