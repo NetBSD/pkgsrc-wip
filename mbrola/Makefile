@@ -7,7 +7,6 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=numediart/}
 GITHUB_PROJECT=	MBROLA
 GITHUB_TAG=	refs/tags/3.3
 DIST_SUBDIR=	${GITHUB_PROJECT}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/numediart/MBROLA/
