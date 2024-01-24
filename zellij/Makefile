@@ -12,7 +12,7 @@ LICENSE=	mit
 
 # wasmer only supports 64bits systems.
 # https://github.com/wasmerio/wasmer/issues/4244#issuecomment-1751365804
-#ONLY_FOR_PLATFORM=      ${LP64PLATFORMS}
+ONLY_FOR_PLATFORM=      ${LP64PLATFORMS}
 
 .include "cargo-depends.mk"
 
