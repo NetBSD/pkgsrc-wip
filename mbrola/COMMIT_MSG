@@ -2,7 +2,7 @@ audio/mbrola: Update mbrola to 3.3
 
 Packaged in wip by adr
 
-MBROLA is now an open source project, this port replace the old x86
+MBROLA is now an open source project, this port replaces the old x86
 binary one
 
 First open source release
