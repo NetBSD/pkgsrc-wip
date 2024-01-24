@@ -1,0 +1,1 @@
+bin/pympress @PREFIX@/bin/pympress-@PYVERSSUFFIX@
