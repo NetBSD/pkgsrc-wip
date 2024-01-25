@@ -1,0 +1,34 @@
+$NetBSD$
+
+Change all instances of 'qgo' qith 'q5go' to match actual program
+(leftover from the old Qt3 version of qGo).
+
+Use PREFIX instead of hard-coded value for icon.
+
+--- templates/qgo.desktop.orig	2024-01-24 23:59:28.907139104 +0000
++++ templates/qgo.desktop
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Comment=qgo
+-Exec=qgo
+-Icon=/usr/share/qGo/pics/Bowl.png
++Comment=q5go
++Exec=q5go
++Icon=@PREFIX@/share/q5Go/pics/Bowl.png
+ MimeType=text/plain;text/sfg;Application
+-Name=qgo
++Name=q5go
+ GenericName=Go
+-Name[fr]=qgo
++Name[fr]=q5go
+ GenericName[ar]=??
+ GenericName[bg]=??
+ GenericName[br]=c'hoari
+@@ -36,4 +36,4 @@ X-KDE-SubstituteUID=false
+ X-KDE-Username=
+ X-DCOP-ServiceType=Multi
+ Categories=Qt;KDE;Game;BoardGame;
+-X-KDE-StartupNotify=true
+\ No newline at end of file
++X-KDE-StartupNotify=true

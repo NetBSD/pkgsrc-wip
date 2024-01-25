@@ -1,0 +1,68 @@
+games/q5go: Update to 2.1.3
+
+Update prepared in wip by Aicaya Maro.
+
+Packaging changes:
+ * Install desktop file and icon.
+
+Upstream changes:
+
+ => 2.1.3 (2022-05-04)
+
+This is a minor update. The two most visible changes are an added
+autoplay feature for viewing SGF files, and more support for KataGo's
+ruleset feature.
+
+ => 2.1.2 (2021-07-12)
+
+This is a bugfix release to fix an issue when saving SGF files in
+locales where a comma is used instead of a decimal point.
+
+ => 2.1.1 (2021-04-11)
+
+This is a minor update to version 2.1 to also allow the maximum board
+size in AI vs AI play.
+
+ => 2.1 (2021-04-02)
+
+This is primarily a relatively small bugfix release. These are the major
+user-visible changes in 2.1:
+
+ * A number of crashes in odd situations were fixed (such as analyzing
+   games with komi values like 650, or handling invalid server messages).
+ * It is now possible to copy/paste positions in Edit mode.
+ * The batch analysis dialog has a new button to enqueue an entire
+   directory of SGF files.
+ * Engine games now allow board sizes up to 52.
+
+ => 2.0 (2020-10-14)
+
+These are the major user-visible changes in 2.0:
+
+ * Pattern search is now available, similar to Kombilo. Use the settings
+   dialog to create a suitable database. Unfortunately existing Kombilo
+   databases can't be used for this because of 32/64 bit compatibility
+   issues.
+ * Database load times are reduced, and threading was added so that the
+   user interface remains responsive.
+ * Multiple online games can now be observed in a single window with
+   clickable previews to switch between them. The old mode of one game
+   per window is still available.
+ * There is a new "Tip of the day" dialog on startup, which displays
+   features that are maybe not easily discoverable. It can be disabled.
+ * There are several new high resolution wood textures for the board to
+   choose from.
+ * When playing engines that are capable of analysis, the evaluation is
+   now collected during the game and can be displayed live.
+ * Engine configuration now allows engines to be unrestricted in board
+   size and komi, catching up with improvements in KataGo over Leela
+   Zero.
+ * Some GTP bugs were fixed, which may improve compatibility with certain
+   engines.
+ * Window titles can now be overriden in the settings, which should help
+   with streaming setups.
+ * Performance improvements for the screen updates should now make it
+   feasible to turn off quiet mode when online, which allows the server
+   to send live player and game updates.
+ * There is a new option to highlight the user's own chat messages in a
+   different color.
