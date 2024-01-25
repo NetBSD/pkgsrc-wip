@@ -33,5 +33,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/lpjs/config.sample ${DESTDIR}${EGDIR}
 
 .include "../../wip/libxtend/buildlink3.mk"
-.include "../../security/munge/buildlink3.mk"
+.include "../../wip/munge/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
