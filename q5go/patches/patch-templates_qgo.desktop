@@ -15,7 +15,7 @@ Use PREFIX instead of hard-coded value for icon.
 -Icon=/usr/share/qGo/pics/Bowl.png
 +Comment=q5go
 +Exec=q5go
-+Icon=@PREFIX@/share/q5Go/pics/Bowl.png
++Icon=@PREFIX@/share/q5go/pics/Bowl.png
  MimeType=text/plain;text/sfg;Application
 -Name=qgo
 +Name=q5go

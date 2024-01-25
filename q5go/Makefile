@@ -17,6 +17,11 @@ CONFIGURE_DIRS=	build
 
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
+SUBST_CLASSES+=		dirs
+SUBST_STAGE.dirs=	pre-configure
+SUBST_FILES.dirs=	templates/qgo.desktop
+SUBST_VARS.dirs+=	PREFIX
+
 do-configure:
 	${MKDIR} ${WRKSRC}/build
 	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake ../src/q5go.pro PREFIX=${PREFIX}
