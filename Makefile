@@ -4250,6 +4250,7 @@ SUBDIR+=	py-pymdown-extensions
 SUBDIR+=	py-pymigemo
 SUBDIR+=	py-pymvpa
 SUBDIR+=	py-pynest2d
+SUBDIR+=	py-pynetbox
 SUBDIR+=	py-pynfo
 SUBDIR+=	py-pynitrokey
 SUBDIR+=	py-pynn
