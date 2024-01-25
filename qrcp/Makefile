@@ -1,12 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	qrcp
-GITHUB_TAG=	refs/tags/0.11.1
 DISTNAME=	0.11.1
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+PKGNAME=	qrcp-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=claudiodangelis/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+DIST_SUBDIR=	qrcp
+GITHUB_TAG=	refs/tags/0.11.1
 
 MAINTAINER=	kevin.bloom@posteo.net
 HOMEPAGE=	https://github.com/claudiodangelis/qrcp/
