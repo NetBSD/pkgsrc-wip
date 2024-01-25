@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pynetbox-7.3.3.tar.gz) = 8be837bbd6075f4eb4bb5789da5db97154f0a6a53ea8fab4bf7b542a29b034d1
+SHA512 (pynetbox-7.3.3.tar.gz) = 6429ef378dbae875a26ee80cc9e7868ae0812f6758249410447f65b033eb61de7679d83d6925ec866af2ee3aa7ccddd380a997751912a7073553030ffe01c79c
+Size (pynetbox-7.3.3.tar.gz) = 64602 bytes
