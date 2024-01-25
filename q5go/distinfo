@@ -3,4 +3,4 @@ $NetBSD: distinfo,v 1.3 2021/10/26 10:44:21 nia Exp $
 BLAKE2s (q5go-2.1.3.tar.gz) = 088b638a4b60405f84609371697e27209e1b53fc6df7ef03d3ef2d965c099595
 SHA512 (q5go-2.1.3.tar.gz) = 1c46e3bef54047147ea6436f2258a5583d42128ee48749840d3891d804dcafc453e95c919c32f30c310bd69d4a6a04ac3e1b58abefa93faff1f77eee0f68de16
 Size (q5go-2.1.3.tar.gz) = 8412437 bytes
-SHA1 (patch-templates_qgo.desktop) = 5f175f528b9ce5f519cb765e6848e08c307703fd
+SHA1 (patch-templates_qgo.desktop) = 02c177bb60449b11feaa5c688c5cec5c6e49e663
