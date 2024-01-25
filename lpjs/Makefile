@@ -16,6 +16,8 @@ HOMEPAGE=	https://github.com/outpaddling/LPJS/
 COMMENT=	Lightweight, Portable Job Scheduler
 LICENSE=	2-clause-bsd
 
+DEPENDS=	auto-admin>0:../../wip/auto-admin
+
 LDFLAGS.SunOS=	-lresolv -lsocket -lnsl
 
 EGDIR=		${PREFIX}/share/examples/lpjs
