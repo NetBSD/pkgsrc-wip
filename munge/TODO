@@ -1,0 +1,2 @@
+Set var/log/munge, var/run/munge, and etc/munge/munge.key to daemon:daemon
+
