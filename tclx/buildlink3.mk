@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	tclx
 .if !defined(TCLX_BUILDLINK3_MK)
 TCLX_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tclx+=	tclx>=tclx-8.4.4
-BUILDLINK_ABI_DEPENDS.tclx+=	tclx>=tclx-8.4.4
+BUILDLINK_API_DEPENDS.tclx+=	tclx>=8.6.3
+BUILDLINK_ABI_DEPENDS.tclx+=	tclx>=8.6.3
 BUILDLINK_PKGSRCDIR.tclx?=	../../lang/tclx
 
 .include "../../lang/tcl/buildlink3.mk"
