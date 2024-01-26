@@ -4,4 +4,4 @@ include/sonic.h
 lib/libsonic.a
 lib/libsonic.so
 lib/libsonic.so.0
-lib/libsonic.so.${PKGVERSION}
+lib/libsonic.so.0.3.0
