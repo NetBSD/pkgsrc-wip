@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (munge-0.5.14.tar.xz) = 787fcc12744476616849e4c05351407f308bbe51
-SHA512 (munge-0.5.14.tar.xz) = 742c9f2c1cf9f5b070f91fc6b9e74c5f2712c385bce6820c400e884fb6d78f86dea7ebe8e3918d056bf72e746a6af5481a1a8d9f0834a28836da90a42b4eb166
-Size (munge-0.5.14.tar.xz) = 439776 bytes
-SHA1 (patch-src_etc_Makefile.in) = e4fafc069a162371a6f0f76db94e4590c22f52c7
+BLAKE2s (munge-0.5.15.tar.xz) = c726fcd7a7f457cb8136657721776b0001b661cff175ca9cb9b6f36063957450
+SHA512 (munge-0.5.15.tar.xz) = 266af1cf2df30f6bd7338527bd69736c0cf91e7390e7bbeea9a225af4829d456907be77a1e77ecef4716f2fff634d144d4b3d5cc3d0afc12f5c2d1acfd6974e1
+Size (munge-0.5.15.tar.xz) = 459468 bytes
+SHA1 (patch-src_etc_Makefile.in) = fbf4e59810c97e4c70353ec435867bebf2bd39bd

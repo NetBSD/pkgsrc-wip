@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.23 2020/01/18 21:50:41 jperkin Exp $
 
-DISTNAME=	munge-0.5.14
+DISTNAME=	munge-0.5.15
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -14,15 +14,12 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
-OWN_DIRS=	${VARBASE}/lib/munge
-OWN_DIRS+=	${VARBASE}/log/munge
-OWN_DIRS+=	${VARBASE}/run/munge
+OWN_DIRS=	${PREFIX}/var/lib/munge
+OWN_DIRS+=	${PREFIX}/var/log/munge
+OWN_DIRS+=	${PREFIX}/var/run/munge
 OWN_DIRS+=	etc/munge
-
-BUILD_DEFS+=	VARBASE
 
 RCD_SCRIPTS+=	munge
 

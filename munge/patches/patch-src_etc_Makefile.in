@@ -1,10 +1,10 @@
 $NetBSD$
 
-# pkgsrc hierarchy
+# Conform to pkgsrc
 
---- src/etc/Makefile.in.orig	2020-02-01 00:21:19.726062417 +0000
+--- src/etc/Makefile.in.orig	2024-01-26 00:52:18.921858783 +0000
 +++ src/etc/Makefile.in
-@@ -286,6 +286,7 @@ sbindir = @sbindir@
+@@ -291,6 +291,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
@@ -12,19 +12,18 @@ $NetBSD$
  sysconfigdir = @sysconfigdir@
  systemdunitdir = @systemdunitdir@
  sysvinitddir = @sysvinitddir@
-@@ -598,13 +599,13 @@ install-data-hook: install-dirs install-
+@@ -602,12 +603,12 @@ install-data-hook: install-dirs install-
  uninstall-local: uninstall-dirs uninstall-logrotate uninstall-pkgconfig uninstall-systemd uninstall-sysvinit
  
  install-dirs:
 -	$(MKDIR_P) -m 0700 '$(DESTDIR)$(sysconfdir)/munge'
-+	$(MKDIR_P) -m 0700 '$(DESTDIR)$(sysconfexampledir)/munge'
++	$(MKDIR_P) -m 0700 '$(DESTDIR)$(sysconfexampledir = $(prefix)/share/examples)/munge'
  	$(MKDIR_P) -m 0711 '$(DESTDIR)$(localstatedir)/lib/munge'
  	$(MKDIR_P) -m 0700 '$(DESTDIR)$(localstatedir)/log/munge'
- 	$(MKDIR_P) -m 0755 '$(DESTDIR)$(runstatedir)/munge'
  
  uninstall-dirs:
 -	rmdir '$(DESTDIR)$(sysconfdir)/munge' 2>/dev/null || :
-+	rmdir '$(DESTDIR)$(sysconfexampledir)/munge' 2>/dev/null || :
++	rmdir '$(DESTDIR)$(sysconfexampledir = $(prefix)/share/examples)/munge' 2>/dev/null || :
  	rmdir '$(DESTDIR)$(localstatedir)/lib/munge' 2>/dev/null || :
  	rmdir '$(DESTDIR)$(localstatedir)/log/munge' 2>/dev/null || :
  	rmdir '$(DESTDIR)$(runstatedir)/munge' 2>/dev/null || :
