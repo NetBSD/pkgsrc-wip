@@ -21,4 +21,3 @@ lib/tclx8.6/stringfile.tcl
 lib/tclx8.6/tcllib.tcl
 lib/tclx8.6/tclx.tcl
 man/mann/TclX.n
-@pkgdir bin
