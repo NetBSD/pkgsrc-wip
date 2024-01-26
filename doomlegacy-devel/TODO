@@ -10,11 +10,12 @@ Part 27: Some bossactions are not Vanilla-compatible
     Proposed patch may break existing WAD files.
 
 
-Part 28: Some bossactions are not Vanilla-compatible
-====================================================
-[X] Flats are rendered wrong for some viewfit settings
-    => Reported upstream in bug ticket #692
+Part 28: Viewfit setting "Fit_Height" does not work correctly
+=============================================================
+[X] Flats are rendered wrong
     Setting "Fit_Width" and "Stretch" are not affected.
+    => Reported upstream in bug ticket #692
+    => Fixed with SVN revision 1667
 
 
 EOF
