@@ -14,6 +14,9 @@ sbin/lpjs-chaperone
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
+share/lpjs/Launchd/README
+share/lpjs/Launchd/org.pkgsrc.lpjs_compd.plist
+share/lpjs/Launchd/org.pkgsrc.lpjs_dispatchd.plist
 share/lpjs/Systemd/lpjs_compd.service
 share/lpjs/Systemd/lpjs_compd.sysconfig
 share/lpjs/Systemd/lpjs_dispatchd.service
