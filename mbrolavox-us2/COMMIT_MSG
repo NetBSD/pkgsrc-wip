@@ -1,6 +1,0 @@
-audio/mbrolavox-us2: adapt to mbrola-3.3
-
-Packaged in wip by adr
-
-Adapt the package to the updated mbrola and follow the pkgsrc
-guide respect to repositories without tags or releases (21.2.3.2)
