@@ -1,6 +1,6 @@
 $NetBSD$
 
-Add NetBSD target and check for _LITTLE_ENDIAN
+Add NetBSD support and check for _LITTLE_ENDIAN
 
 --- Misc/common.h.orig	2019-12-17 16:05:14.000000000 +0000
 +++ Misc/common.h
@@ -9,7 +9,7 @@ Add NetBSD target and check for _LITTLE_ENDIAN
  #endif
  
 -#if defined(__GLIBC__)
-+#if defined(__GLIBC__) || defined(TARGET_OS_NETBSD)
++#if defined(__GLIBC__) || defined(__NetBSD__)
  #include <endian.h>
  #undef BIG_ENDIAN
  #undef LITTLE_ENDIAN
