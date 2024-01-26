@@ -13,7 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/numediart/MBROLA-voices
 COMMENT=	British English male voice for MBROLA
 # the particular license of this voice is included in ${DESTDIR}${MHOME}${VOX}
-LICENSE=	no-commercial-use
+LICENSE=	mbrola-voices-license
 
 DEPENDS=	mbrola-[0-9]*:../../audio/mbrola
 
