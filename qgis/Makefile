@@ -73,6 +73,9 @@ CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 CMAKE_ARGS+=		-DWITH_DRACO=FALSE
 # \todo Understand and probably add.
 CMAKE_ARGS+=		-DWITH_3D=FALSE
+# \todo Resolve minizip shadowing zip, and minizip needing to be bl3d
+# because qgis seems to -lminizip.
+CMAKE_ARGS+=		-DWITH_SPATIALITE=FALSE
 
 # Server support is WIP; it has merely been tested that regular use
 # has not been broken.
@@ -105,6 +108,14 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
+# \todo Does qgis properly depend on minizip, or is this a bug in
+# libspatialite's bl3?
+#.include "../../archivers/minizip/buildlink3.mk"
+# \todo Does qgis properly depend on librrtopo, or is this a bug in
+# libspatialite's bl3?
+#.include "../../geography/librttopo/buildlink3.mk"
+#.include "../../geography/libspatialite/buildlink3.mk"
+
 .include "../../lang/python/pyversion.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
@@ -121,7 +132,6 @@ pre-configure:
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../geography/libspatialite/buildlink3.mk"
 .include "../../geography/spatialindex/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
