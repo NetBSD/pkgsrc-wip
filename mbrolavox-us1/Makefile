@@ -9,11 +9,14 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=numediart/}
 GITHUB_PROJECT=	MBROLA-voices
 GITHUB_TAG=	fe05a0ccef6a941207fd6aaad0b31294a1f93a51
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/numediart/MBROLA-voices
-COMMENT=	British English male voice for MBROLA
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://github.com/numediart/MBROLA-voices
+COMMENT=		British English male voice for MBROLA
 # the particular license of this voice is included in ${DESTDIR}${MHOME}${VOX}
-LICENSE=	mbrola-voices-license
+LICENSE=		mbrola-voices-license
+RESTRICTED=		Commercial distribution not allowed without permission from the authors
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 DEPENDS=	mbrola-[0-9]*:../../audio/mbrola
 
