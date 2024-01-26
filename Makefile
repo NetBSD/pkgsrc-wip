@@ -4791,6 +4791,7 @@ SUBDIR+=	qemu-virtfs-netbsd
 SUBDIR+=	qico
 SUBDIR+=	qiew
 SUBDIR+=	qira
+SUBDIR+=	qgis
 SUBDIR+=	qlcplus
 SUBDIR+=	qmc2
 SUBDIR+=	qmediamanager

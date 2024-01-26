@@ -1,0 +1,6 @@
+  - summarize upstream changes
+  - fix build - missing libs
+  - go over upstream's dependency list and cross-check
+  - comment patches, or improve comments
+  - file bugs upstream
+  - test with various data sources on at least NetBSD 10 amd64
