@@ -5,7 +5,6 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=espeak-ng/}
 GITHUB_PROJECT=	espeak-ng
 GITHUB_TAG=	refs/tags/1.51
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/espeak-ng/espeak-ng/
@@ -13,7 +12,7 @@ COMMENT=	Open source speech synthesizer
 LICENSE=	gnu-gpl-v3 AND apache-2.0 AND 2-clause-bsd AND unicode
 
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
@@ -32,6 +31,12 @@ CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
 PKGCONFIG_OVERRIDE+=	espeak-ng.pc.in
 
 DEPENDS+=	mbrola-[0-9]*:../../audio/mbrola
+
+SUBST_CLASSES+=		mbrola
+SUBST_STAGE.mbrola=	pre-configure
+SUBST_FILES.mbrola=	src/libespeak-ng/synth_mbrola.c
+SUBST_SED.mbrola=	-e s,/usr/share/mbrola/%s/%s,${PREFIX}/share/mbrola/voices/%s/%s,g
+SUBST_MESSAGE.mbrola=	Fixing hardcoded mbrola path.
 
 # Makefile.am: error: required file './AUTHORS' not found
 pre-configure:
