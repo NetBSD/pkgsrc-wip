@@ -1307,6 +1307,7 @@ SUBDIR+=	groovy
 SUBDIR+=	grpc-java
 SUBDIR+=	grpcui
 SUBDIR+=	grsync
+SUBDIR+=	grub2
 SUBDIR+=	grub2-current
 SUBDIR+=	gscan2pdf
 SUBDIR+=	gsdpdf
