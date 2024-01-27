@@ -941,6 +941,7 @@ SUBDIR+=	freedict-tools-xsl
 SUBDIR+=	freedup
 SUBDIR+=	freedup16
 SUBDIR+=	freefem++
+SUBDIR+=	freefilesync
 SUBDIR+=	freegish-git
 SUBDIR+=	freej
 SUBDIR+=	freem
