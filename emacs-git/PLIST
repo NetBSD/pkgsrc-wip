@@ -4256,6 +4256,8 @@ share/emacs/${PKGVERSION}/lisp/version.el.gz
 share/emacs/${PKGVERSION}/lisp/version.elc
 share/emacs/${PKGVERSION}/lisp/view.el.gz
 share/emacs/${PKGVERSION}/lisp/view.elc
+share/emacs/${PKGVERSION}/lisp/visual-wrap.el.gz
+share/emacs/${PKGVERSION}/lisp/visual-wrap.elc
 share/emacs/${PKGVERSION}/lisp/w32-fns.el.gz
 share/emacs/${PKGVERSION}/lisp/w32-fns.elc
 share/emacs/${PKGVERSION}/lisp/w32-vars.el.gz
