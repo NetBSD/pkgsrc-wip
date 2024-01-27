@@ -52,6 +52,13 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/munge/systemd.sysconfig
 .endif
 
+.if ${OPSYS} == Darwin
+post-install:
+	${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
+	${INSTALL_DATA} ${FILESDIR}/*.plist \
+		${DESTDIR}${PREFIX}/share/munge/Launchd
+.endif
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
