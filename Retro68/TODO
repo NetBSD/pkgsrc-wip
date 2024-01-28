@@ -1,0 +1,12 @@
+In file included from /usr/include/amd64/endian.h:3,
+                 from /usr/include/sys/types.h:98,
+                 from /tmp/wip/Retro68/work/Retro68-2019.8.2/libelf/include/libelf.h:33,
+                 from /tmp/wip/Retro68/work/Retro68-2019.8.2/libelf/src/elf32_getchdr.c:33:
+/usr/include/sys/endian.h:179: note: this is the location of the previous definition
+  179 | #define le64toh(x) htole64(x)
+      | 
+/tmp/wip/Retro68/work/Retro68-2019.8.2/ResourceFiles/ResourceFile.cc:13:10: fatal error: hfs.h: No such file or directory
+   13 | #include "hfs.h"
+      |          ^~~~~~~
+compilation terminated.
+

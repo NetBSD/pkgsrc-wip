@@ -1,0 +1,23 @@
+todo:  Adjust the following lines from README.md
+
+Retro68
+=======
+
+A GCC-based cross-compilation environment for 68K and PowerPC Macs.
+Why? Because there is no decent C++17 Compiler targeting Apple's System 6.
+If that's not a sufficient reason for you, I'm sure you will find
+something more useful elsewhere.
+
+If you are crazy enough to try it out, please say hello at
+wolfgang.thaller@gmx.net.
+
+Installing/Building
+-------------------
+
+### Prerequisites
+
+- Linux, Mac OS X or Windows (via Cygwin)
+- boost
+- CMake 3.9 or later
+- GCC dependencies: GMP 4.2+, MPFR 2.3.1+ and MPC 0.8.0+
+...
