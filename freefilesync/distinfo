@@ -3,3 +3,7 @@ $NetBSD$
 BLAKE2s (FreeFileSync_13.3_Source.zip) = 87a8f21885e35484b9c9c278da49b6a6ce939656de0c4ac9e035c365003f5173
 SHA512 (FreeFileSync_13.3_Source.zip) = 0c9a30fca42722ea37a303b0e3cb27fb61cb8586ed075cd6758df27f2687b2e39669c23c76985e3e72c98586bee17be2e31f5c644371cf566c3ebfad4e4800bd
 Size (FreeFileSync_13.3_Source.zip) = 2756885 bytes
+SHA1 (patch-.._.._zen_guid.h) = 69038b3c58315421e8fd4c6047814d2da47591c9
+SHA1 (patch-.._.._zen_serialize.h) = a688aa376f1a532d1c81fb0329cea848a1b3c4ff
+SHA1 (patch-.._.._zen_socket.h) = 202f1f6eecbb78a24ca3c1a29f3f53520304a5c9
+SHA1 (patch-application.cpp) = 099b2d1f632553b8646efbfbd277c9f619eecffd

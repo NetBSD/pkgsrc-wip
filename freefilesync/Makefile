@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	FreeFileSync_13.3_Source
+PKGNAME=	freefilesync-13.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://freefilesync.org/download/
 EXTRACT_SUFX=	.zip
