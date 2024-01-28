@@ -1,4 +1,1 @@
-github.com/arduino/arduino-cli/i18n
-# github.com/arduino/arduino-cli/i18n
-i18n/detect.go:24:9: undefined: getLocaleIdentifier
-*** Error code 1
+functional testing
