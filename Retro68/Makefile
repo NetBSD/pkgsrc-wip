@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=autc04/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/autc04/Retro68/
 COMMENT=	M68k emulation
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
@@ -21,7 +21,7 @@ CPPFLAGS+=	-Iinclude/libhfs
 SUBST_CLASSES=		equal-test
 SUBST_STAGE.equal-test=	pre-configure
 SUBST_SED.equal-test=	'-e s," == "," = " ,'
-SUBST_FILES.equal-test= \
+SUBST_FILES.equal-test=	\
 	binutils/binutils/testsuite/binutils-all/dlltool.exp \
 	binutils/binutils/testsuite/binutils-all/objcopy.exp \
 	binutils/gas/testsuite/lib/gas-defs.exp \
