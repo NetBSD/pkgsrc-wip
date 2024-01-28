@@ -1,21 +1,23 @@
 # $NetBSD$
 
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=	Retro68-2019.8.2
-CATEGORIES=	emulators
+VERSION=	2019.8.2
+DISTNAME=	Retro68-${VERSION}
+CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=autc04/}
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/autc04/Retro68/
-COMMENT=	M68k emulation
+COMMENT=	M68k cross compiler environment
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++ fortran
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+#RKSRC=		${WRKDIR}/${DISTNAME}
 CPPFLAGS+=	-Iinclude/libhfs
+CFLAGS+=	-Ihfsutils/libhfs
 
 # check-portability
 SUBST_CLASSES=		equal-test
