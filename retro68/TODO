@@ -1,43 +1,2190 @@
-In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/alloca.h:11,
-                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:9:
-/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/reent.h:13:10: fatal error: _ansi.h: No such file or directory
-   13 | #include <_ansi.h>
-      |          ^~~~~~~~~
-compilation terminated.
+
+SX2@makoto 07:49:36/240131(..wip/retro68)% make distinfo  && make clean && make || make |& tee /tmp/log                              
+
+
+
+=> Bootstrap dependency digest>=20211023: found digest-20220214
+===> Skipping vulnerability checks.
+WARNING: No /usr/pkg/pkgdb/pkg-vulnerabilities file found.
+WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities'.
+===> Building for Retro68-2019.8.2
+[  3%] Built target LaunchAPPLCommon
+[  3%] Building CXX object PEFTools/CMakeFiles/MakePEF.dir/MakePEF.cc.o
+[  6%] Built target ResourceFiles
+[  8%] Built target TestLaunchAPPLCommon
+[  8%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/MakeExecutable.cc.o
+[ 10%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/LaunchMethod.cc.o
+[ 10%] Building CXX object ConvertObj/CMakeFiles/ConvertObj.dir/ConvertObj.cc.o
+[ 11%] Building CXX object PEFTools/CMakeFiles/MakeImport.dir/MakeImport.cc.o
+[ 11%] Building CXX object ResourceFiles/CMakeFiles/ResInfo.dir/ResInfo.cc.o
+[ 10%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/LaunchAPPL.cc.o
+[ 85%] Built target ELF
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/reent.h:15,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:6,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/_types.h:168:5: error: 'wint_t' does not name a type
+  168 |     wint_t __wch;
+      |     ^~~~~~
+In file included from /usr/include/stdarg.h:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:22,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/sys/ansi.h:38:20: error: conflicting declaration 'typedef __uint32_t __gid_t'
+   38 | typedef __uint32_t __gid_t; /* group id */
+      |                    ^~~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/reent.h:15,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:6,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/_types.h:61:24: note: previous declaration as 'typedef short unsigned int __gid_t'
+   61 | typedef unsigned short __gid_t;
+      |                        ^~~~~~~
+In file included from /usr/include/stdarg.h:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:22,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/sys/ansi.h:47:20: error: conflicting declaration 'typedef __uint32_t __uid_t'
+   47 | typedef __uint32_t __uid_t; /* user id */
+      |                    ^~~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/reent.h:15,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:6,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/_types.h:58:24: note: previous declaration as 'typedef short unsigned int __uid_t'
+   58 | typedef unsigned short __uid_t;
+      |                        ^~~~~~~
+In file included from /usr/include/stdarg.h:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:22,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/sys/ansi.h:49:20: error: conflicting declaration 'typedef __uint64_t __fsfilcnt_t'
+   49 | typedef __uint64_t __fsfilcnt_t; /* fs file count */
+      |                    ^~~~~~~~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/reent.h:15,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:6,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/_types.h:40:20: note: previous declaration as 'typedef __uint32_t __fsfilcnt_t'
+   40 | typedef __uint32_t __fsfilcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:28:9: error: '__gnuc_va_list' does not name a type; did you mean '__va_list'?
+   28 | typedef __gnuc_va_list va_list;
+      |         ^~~~~~~~~~~~~~
+      |         __va_list
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:89:1: error: 'wint_t' does not name a type
+   89 | wint_t btowc (int);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:90:12: error: 'wint_t' was not declared in this scope
+   90 | int wctob (wint_t);
+      |            ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:91:1: error: 'size_t' does not name a type
+   91 | size_t mbrlen (const char *__restrict, size_t, mbstate_t *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:68:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+   67 | #include <xlocale.h>
+  +++ |+#include <cstddef>
+   68 | #endif
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:92:1: error: 'size_t' does not name a type
+   92 | size_t mbrtowc (wchar_t *__restrict, const char *__restrict, size_t,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:92:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:94:1: error: 'size_t' does not name a type
+   94 | size_t _mbrtowc_r (struct _reent *, wchar_t * , const char * ,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:94:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:98:1: error: 'size_t' does not name a type
+   98 | size_t mbsnrtowcs (wchar_t *__restrict, const char **__restrict,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:98:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:101:1: error: 'size_t' does not name a type
+  101 | size_t _mbsnrtowcs_r (struct _reent *, wchar_t * , const char ** ,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:101:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:103:1: error: 'size_t' does not name a type
+  103 | size_t mbsrtowcs (wchar_t *__restrict, const char **__restrict, size_t,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:103:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:105:1: error: 'size_t' does not name a type
+  105 | size_t _mbsrtowcs_r (struct _reent *, wchar_t * , const char ** , size_t, mbstate_t *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:105:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:106:1: error: 'size_t' does not name a type
+  106 | size_t wcrtomb (char *__restrict, wchar_t, mbstate_t *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:106:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:107:1: error: 'size_t' does not name a type
+  107 | size_t _wcrtomb_r (struct _reent *, char * , wchar_t, mbstate_t *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:107:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:109:1: error: 'size_t' does not name a type
+  109 | size_t wcsnrtombs (char *__restrict, const wchar_t **__restrict,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:109:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:112:1: error: 'size_t' does not name a type
+  112 | size_t _wcsnrtombs_r (struct _reent *, char * , const wchar_t ** ,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:112:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:114:1: error: 'size_t' does not name a type
+  114 | size_t wcsrtombs (char *__restrict, const wchar_t **__restrict,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:114:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:116:1: error: 'size_t' does not name a type
+  116 | size_t _wcsrtombs_r (struct _reent *, char * , const wchar_t ** ,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:116:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:132:1: error: 'size_t' does not name a type
+  132 | size_t wcscspn (const wchar_t *, const wchar_t *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:132:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:133:1: error: 'size_t' does not name a type
+  133 | size_t  wcsftime (wchar_t *__restrict, size_t,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:133:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:139:1: error: 'size_t' does not name a type
+  139 | size_t wcslcat (wchar_t *, const wchar_t *, size_t);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:139:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:140:1: error: 'size_t' does not name a type
+  140 | size_t wcslcpy (wchar_t *, const wchar_t *, size_t);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:140:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:141:1: error: 'size_t' does not name a type
+  141 | size_t wcslen (const wchar_t *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:141:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:143:52: error: 'size_t' has not been declared
+  143 | int wcsncasecmp (const wchar_t *, const wchar_t *, size_t);
+      |                                                    ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:146:33: error: 'size_t' has not been declared
+  146 |      const wchar_t *__restrict, size_t);
+      |                                 ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:147:48: error: 'size_t' has not been declared
+  147 | int wcsncmp (const wchar_t *, const wchar_t *, size_t);
+      |                                                ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:149:33: error: 'size_t' has not been declared
+  149 |      const wchar_t *__restrict, size_t);
+      |                                 ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:152:33: error: 'size_t' has not been declared
+  152 |      const wchar_t *__restrict, size_t);
+      |                                 ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:153:1: error: 'size_t' does not name a type
+  153 | size_t wcsnlen (const wchar_t *, size_t);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:153:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:157:1: error: 'size_t' does not name a type
+  157 | size_t wcsspn (const wchar_t *, const wchar_t *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:157:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:171:1: error: 'size_t' does not name a type
+  171 | size_t wcsxfrm (wchar_t *__restrict, const wchar_t *__restrict,
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:171:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:175:61: error: 'size_t' has not been declared
+  175 | extern int wcsncasecmp_l (const wchar_t *, const wchar_t *, size_t, locale_t);
+      |                                                             ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:177:8: error: 'size_t' does not name a type
+  177 | extern size_t wcsxfrm_l (wchar_t *__restrict, const wchar_t *__restrict, size_t,
+      |        ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:177:8: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:184:45: error: 'size_t' has not been declared
+  184 | wchar_t *wmemchr (const wchar_t *, wchar_t, size_t);
+      |                                             ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:185:48: error: 'size_t' has not been declared
+  185 | int wmemcmp (const wchar_t *, const wchar_t *, size_t);
+      |                                                ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:187:6: error: 'size_t' has not been declared
+  187 |      size_t);
+      |      ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:188:48: error: 'size_t' has not been declared
+  188 | wchar_t *wmemmove (wchar_t *, const wchar_t *, size_t);
+      |                                                ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:193:39: error: 'size_t' has not been declared
+  193 | wchar_t *wmemset (wchar_t *, wchar_t, size_t);
+      |                                       ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:227:1: error: 'wint_t' does not name a type
+  227 | wint_t fgetwc (__FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:229:1: error: 'wint_t' does not name a type
+  229 | wint_t fputwc (wchar_t, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:234:1: error: 'wint_t' does not name a type
+  234 | wint_t getwc (__FILE *);
+      | ^~~~~~
+[ 86%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Launcher.cc.o
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:235:1: error: 'wint_t' does not name a type
+  235 | wint_t getwchar (void);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:236:1: error: 'wint_t' does not name a type
+  236 | wint_t putwc (wchar_t, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:237:1: error: 'wint_t' does not name a type
+  237 | wint_t putwchar (wchar_t);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:238:1: error: 'wint_t' does not name a type
+  238 | wint_t ungetwc (wint_t wc, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:240:1: error: 'wint_t' does not name a type
+  240 | wint_t _fgetwc_r (struct _reent *, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:241:1: error: 'wint_t' does not name a type
+  241 | wint_t _fgetwc_unlocked_r (struct _reent *, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:244:1: error: 'wint_t' does not name a type
+  244 | wint_t _fputwc_r (struct _reent *, wchar_t, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:245:1: error: 'wint_t' does not name a type
+  245 | wint_t _fputwc_unlocked_r (struct _reent *, wchar_t, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:249:1: error: 'wint_t' does not name a type
+  249 | wint_t _getwc_r (struct _reent *, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:250:1: error: 'wint_t' does not name a type
+  250 | wint_t _getwc_unlocked_r (struct _reent *, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:251:1: error: 'wint_t' does not name a type
+  251 | wint_t _getwchar_r (struct _reent *ptr);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:252:1: error: 'wint_t' does not name a type
+  252 | wint_t _getwchar_unlocked_r (struct _reent *ptr);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:253:1: error: 'wint_t' does not name a type
+  253 | wint_t _putwc_r (struct _reent *, wchar_t, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:254:1: error: 'wint_t' does not name a type
+  254 | wint_t _putwc_unlocked_r (struct _reent *, wchar_t, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:255:1: error: 'wint_t' does not name a type
+  255 | wint_t _putwchar_r (struct _reent *, wchar_t);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:256:1: error: 'wint_t' does not name a type
+  256 | wint_t _putwchar_unlocked_r (struct _reent *, wchar_t);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:257:1: error: 'wint_t' does not name a type
+  257 | wint_t _ungetwc_r (struct _reent *, wint_t wc, __FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:271:38: error: 'size_t' has not been declared
+  271 | __FILE *open_wmemstream (wchar_t **, size_t *);
+      |                                      ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:273:58: error: 'size_t' has not been declared
+  273 | __FILE *_open_wmemstream_r (struct _reent *, wchar_t **, size_t *);
+      |                                                          ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:285:36: error: 'size_t' has not been declared
+  285 | int swprintf (wchar_t *__restrict, size_t,
+      |                                    ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:288:4: error: '__gnuc_va_list' has not been declared
+  288 |    __VALIST);
+      |    ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:289:37: error: 'size_t' has not been declared
+  289 | int vswprintf (wchar_t *__restrict, size_t,
+      |                                     ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:290:31: error: '__gnuc_va_list' has not been declared
+  290 |    const wchar_t *__restrict, __VALIST);
+      |                               ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:291:42: error: '__gnuc_va_list' has not been declared
+  291 | int vwprintf (const wchar_t *__restrict, __VALIST);
+      |                                          ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:296:46: error: 'size_t' has not been declared
+  296 | int _swprintf_r (struct _reent *, wchar_t *, size_t, const wchar_t *, ...);
+      |                                              ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:297:63: error: '__gnuc_va_list' has not been declared
+  297 | int _vfwprintf_r (struct _reent *, __FILE *, const wchar_t *, __VALIST);
+      |                                                               ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:298:47: error: 'size_t' has not been declared
+  298 | int _vswprintf_r (struct _reent *, wchar_t *, size_t, const wchar_t *, __VALIST);
+      |                                               ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:298:72: error: '__gnuc_va_list' has not been declared
+  298 | int _vswprintf_r (struct _reent *, wchar_t *, size_t, const wchar_t *, __VALIST);
+      |                                                                        ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:299:52: error: '__gnuc_va_list' has not been declared
+  299 | int _vwprintf_r (struct _reent *, const wchar_t *, __VALIST);
+      |                                                    ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:307:4: error: '__gnuc_va_list' has not been declared
+  307 |    __VALIST);
+      |    ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:309:4: error: '__gnuc_va_list' has not been declared
+  309 |    __VALIST);
+      |    ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:310:41: error: '__gnuc_va_list' has not been declared
+  310 | int vwscanf (const wchar_t *__restrict, __VALIST);
+      |                                         ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:316:62: error: '__gnuc_va_list' has not been declared
+  316 | int _vfwscanf_r (struct _reent *, __FILE *, const wchar_t *, __VALIST);
+      |                                                              ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:317:69: error: '__gnuc_va_list' has not been declared
+  317 | int _vswscanf_r (struct _reent *, const wchar_t *, const wchar_t *, __VALIST);
+      |                                                                     ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:318:51: error: '__gnuc_va_list' has not been declared
+  318 | int _vwscanf_r (struct _reent *, const wchar_t *, __VALIST);
+      |                                                   ^~~~~~~~
+In file included from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/cwchar:141:11: error: 'wint_t' has not been declared in '::'
+  141 |   using ::wint_t;
+      |           ^~~~~~
+/usr/include/g++/cwchar:143:11: error: 'btowc' has not been declared in '::'
+  143 |   using ::btowc;
+      |           ^~~~~
+/usr/include/g++/cwchar:144:11: error: 'fgetwc' has not been declared in '::'
+  144 |   using ::fgetwc;
+      |           ^~~~~~
+/usr/include/g++/cwchar:146:11: error: 'fputwc' has not been declared in '::'
+  146 |   using ::fputwc;
+      |           ^~~~~~
+/usr/include/g++/cwchar:151:11: error: 'getwc' has not been declared in '::'
+  151 |   using ::getwc;
+      |           ^~~~~
+/usr/include/g++/cwchar:152:11: error: 'getwchar' has not been declared in '::'
+  152 |   using ::getwchar;
+      |           ^~~~~~~~
+/usr/include/g++/cwchar:153:11: error: 'mbrlen' has not been declared in '::'
+  153 |   using ::mbrlen;
+      |           ^~~~~~
+/usr/include/g++/cwchar:154:11: error: 'mbrtowc' has not been declared in '::'
+  154 |   using ::mbrtowc;
+      |           ^~~~~~~
+/usr/include/g++/cwchar:156:11: error: 'mbsrtowcs' has not been declared in '::'
+  156 |   using ::mbsrtowcs;
+      |           ^~~~~~~~~
+/usr/include/g++/cwchar:157:11: error: 'putwc' has not been declared in '::'
+  157 |   using ::putwc;
+      |           ^~~~~
+/usr/include/g++/cwchar:158:11: error: 'putwchar' has not been declared in '::'
+  158 |   using ::putwchar;
+      |           ^~~~~~~~
+/usr/include/g++/cwchar:163:11: error: 'ungetwc' has not been declared in '::'
+  163 |   using ::ungetwc;
+      |           ^~~~~~~
+/usr/include/g++/cwchar:178:11: error: 'wcrtomb' has not been declared in '::'
+  178 |   using ::wcrtomb;
+      |           ^~~~~~~
+/usr/include/g++/cwchar:183:11: error: 'wcscspn' has not been declared in '::'
+  183 |   using ::wcscspn;
+      |           ^~~~~~~
+/usr/include/g++/cwchar:184:11: error: 'wcsftime' has not been declared in '::'
+  184 |   using ::wcsftime;
+      |           ^~~~~~~~
+/usr/include/g++/cwchar:185:11: error: 'wcslen' has not been declared in '::'
+  185 |   using ::wcslen;
+      |           ^~~~~~
+/usr/include/g++/cwchar:189:11: error: 'wcsrtombs' has not been declared in '::'
+  189 |   using ::wcsrtombs;
+      |           ^~~~~~~~~
+/usr/include/g++/cwchar:190:11: error: 'wcsspn' has not been declared in '::'
+  190 |   using ::wcsspn;
+      |           ^~~~~~
+/usr/include/g++/cwchar:198:11: error: 'wcsxfrm' has not been declared in '::'
+  198 |   using ::wcsxfrm;
+      |           ^~~~~~~
+In file included from /usr/include/g++/bits/exception_ptr.h:38,
+                 from /usr/include/g++/exception:147,
+                 from /usr/include/g++/ios:39,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/cxxabi_init_exception.h:63:32: error: 'size_t' was not declared in this scope; did you mean 'std::size_t'?
+   63 |       __cxa_allocate_exception(size_t) _GLIBCXX_NOTHROW;
+      |                                ^~~~~~
+      |                                std::size_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:268:26: note: 'std::size_t' declared here
+  268 |   typedef __SIZE_TYPE__  size_t;
+      |                          ^~~~~~
+In file included from /usr/include/g++/exception:147,
+                 from /usr/include/g++/ios:39,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/exception_ptr.h: In function 'std::__exception_ptr::exception_ptr std::make_exception_ptr(_Ex)':
+/usr/include/g++/bits/exception_ptr.h:195:67: error: '__cxxabiv1::__cxa_allocate_exception' cannot be used as a function
+  195 |       void* __e = __cxxabiv1::__cxa_allocate_exception(sizeof(_Ex));
+      |                                                                   ^
+In file included from /usr/include/g++/ios:40,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/char_traits.h: At global scope:
+/usr/include/g++/bits/char_traits.h:482:15: error: 'wint_t' does not name a type
+  482 |       typedef wint_t            int_type;
+      |               ^~~~~~
+/usr/include/g++/bits/char_traits.h:577:26: error: 'int_type' does not name a type
+  577 |       to_char_type(const int_type& __c) _GLIBCXX_NOEXCEPT
+      |                          ^~~~~~~~
+/usr/include/g++/bits/char_traits.h:580:33: error: 'int_type' does not name a type
+  580 |       static _GLIBCXX_CONSTEXPR int_type
+      |                                 ^~~~~~~~
+/usr/include/g++/bits/char_traits.h:585:25: error: 'int_type' does not name a type
+  585 |       eq_int_type(const int_type& __c1, const int_type& __c2) _GLIBCXX_NOEXCEPT
+      |                         ^~~~~~~~
+/usr/include/g++/bits/char_traits.h:585:47: error: 'int_type' does not name a type
+  585 |       eq_int_type(const int_type& __c1, const int_type& __c2) _GLIBCXX_NOEXCEPT
+      |                                               ^~~~~~~~
+/usr/include/g++/bits/char_traits.h:588:33: error: 'int_type' does not name a type
+  588 |       static _GLIBCXX_CONSTEXPR int_type
+      |                                 ^~~~~~~~
+/usr/include/g++/bits/char_traits.h:592:33: error: 'int_type' does not name a type
+  592 |       static _GLIBCXX_CONSTEXPR int_type
+      |                                 ^~~~~~~~
+/usr/include/g++/bits/char_traits.h: In static member function 'static constexpr std::size_t std::char_traits<wchar_t>::length(const char_type*)':
+/usr/include/g++/bits/char_traits.h:523:9: error: 'wcslen' was not declared in this scope
+  523 |  return wcslen(__s);
+      |         ^~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h: At global scope:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:195:55: error: 'size_t' has not been declared
+  195 | int setvbuf (FILE *__restrict, char *__restrict, int, size_t);
+      |                                                       ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:206:57: error: '__gnuc_va_list' has not been declared
+  206 | int vfprintf (FILE *__restrict, const char *__restrict, __VALIST)
+      |                                                         ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:208:28: error: '__gnuc_va_list' has not been declared
+  208 | int vprintf (const char *, __VALIST)
+      |                            ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:210:57: error: '__gnuc_va_list' has not been declared
+  210 | int vsprintf (char *__restrict, const char *__restrict, __VALIST)
+      |                                                         ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:223:1: error: 'size_t' does not name a type
+  223 | size_t fread (void *__restrict, size_t _size, size_t _n, FILE *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:80:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+   79 | #include <sys/stdio.h>
+  +++ |+#include <cstddef>
+   80 | 
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:224:1: error: 'size_t' does not name a type
+  224 | size_t fwrite (const void *__restrict , size_t _size, size_t _n, FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:224:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:266:33: error: 'size_t' has not been declared
+  266 | int snprintf (char *__restrict, size_t, const char *__restrict, ...)
+      |                                 ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:268:34: error: 'size_t' has not been declared
+  268 | int vsnprintf (char *__restrict, size_t, const char *__restrict, __VALIST)
+      |                                  ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:268:66: error: '__gnuc_va_list' has not been declared
+  268 | int vsnprintf (char *__restrict, size_t, const char *__restrict, __VALIST)
+      |                                                                  ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:270:56: error: '__gnuc_va_list' has not been declared
+  270 | int vfscanf (FILE *__restrict, const char *__restrict, __VALIST)
+      |                                                        ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:272:27: error: '__gnuc_va_list' has not been declared
+  272 | int vscanf (const char *, __VALIST)
+      |                           ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:274:62: error: '__gnuc_va_list' has not been declared
+  274 | int vsscanf (const char *__restrict, const char *__restrict, __VALIST)
+      |                                                              ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:286:28: error: 'size_t' has not been declared
+  286 | char * asniprintf (char *, size_t *, const char *, ...)
+      |                            ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:288:37: error: 'size_t' has not been declared
+  288 | char * asnprintf (char *__restrict, size_t *__restrict, const char *__restrict, ...)
+      |                                     ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:306:24: error: 'size_t' has not been declared
+  306 | int sniprintf (char *, size_t, const char *, ...)
+      |                        ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:308:40: error: '__gnuc_va_list' has not been declared
+  308 | int vasiprintf (char **, const char *, __VALIST)
+      |                                        ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:310:29: error: 'size_t' has not been declared
+  310 | char * vasniprintf (char *, size_t *, const char *, __VALIST)
+      |                             ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:310:53: error: '__gnuc_va_list' has not been declared
+  310 | char * vasniprintf (char *, size_t *, const char *, __VALIST)
+      |                                                     ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:312:28: error: 'size_t' has not been declared
+  312 | char * vasnprintf (char *, size_t *, const char *, __VALIST)
+      |                            ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:312:52: error: '__gnuc_va_list' has not been declared
+  312 | char * vasnprintf (char *, size_t *, const char *, __VALIST)
+      |                                                    ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:314:35: error: '__gnuc_va_list' has not been declared
+  314 | int vdiprintf (int, const char *, __VALIST)
+      |                                   ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:316:38: error: '__gnuc_va_list' has not been declared
+  316 | int vfiprintf (FILE *, const char *, __VALIST)
+      |                                      ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:318:37: error: '__gnuc_va_list' has not been declared
+  318 | int vfiscanf (FILE *, const char *, __VALIST)
+      |                                     ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:320:29: error: '__gnuc_va_list' has not been declared
+  320 | int viprintf (const char *, __VALIST)
+      |                             ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:322:28: error: '__gnuc_va_list' has not been declared
+  322 | int viscanf (const char *, __VALIST)
+      |                            ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:324:38: error: '__gnuc_va_list' has not been declared
+  324 | int vsiprintf (char *, const char *, __VALIST)
+      |                                      ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:326:43: error: '__gnuc_va_list' has not been declared
+  326 | int vsiscanf (const char *, const char *, __VALIST)
+      |                                           ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:328:25: error: 'size_t' has not been declared
+  328 | int vsniprintf (char *, size_t, const char *, __VALIST)
+      |                         ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:328:47: error: '__gnuc_va_list' has not been declared
+  328 | int vsniprintf (char *, size_t, const char *, __VALIST)
+      |                                               ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:377:36: error: 'size_t' has not been declared
+  377 | FILE * fmemopen (void *__restrict, size_t, const char *__restrict);
+      |                                    ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:380:33: error: 'size_t' has not been declared
+  380 | FILE * open_memstream (char **, size_t *);
+      |                                 ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:381:44: error: '__gnuc_va_list' has not been declared
+  381 | int vdprintf (int, const char *__restrict, __VALIST)
+      |                                            ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:398:48: error: 'size_t' has not been declared
+  398 | char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
+      |                                                ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:400:57: error: 'size_t' has not been declared
+  400 | char * _asnprintf_r (struct _reent *, char *__restrict, size_t *__restrict, const char *__restrict, ...)
+      |                                                         ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:427:56: error: 'size_t' has not been declared
+  427 | FILE * _fmemopen_r (struct _reent *, void *__restrict, size_t, const char *__restrict);
+      |                                                        ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:437:1: error: 'size_t' does not name a type
+  437 | size_t _fread_r (struct _reent *, void *__restrict, size_t _size, size_t _n, FILE *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:437:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:438:1: error: 'size_t' does not name a type
+  438 | size_t _fread_unlocked_r (struct _reent *, void *__restrict, size_t _size, size_t _n, FILE *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:438:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:446:1: error: 'size_t' does not name a type
+  446 | size_t _fwrite_r (struct _reent *, const void *__restrict, size_t _size, size_t _n, FILE *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:446:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:447:1: error: 'size_t' does not name a type
+  447 | size_t _fwrite_unlocked_r (struct _reent *, const void *__restrict, size_t _size, size_t _n, FILE *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:447:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:457:53: error: 'size_t' has not been declared
+  457 | FILE * _open_memstream_r (struct _reent *, char **, size_t *);
+      |                                                     ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:475:44: error: 'size_t' has not been declared
+  475 | int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
+      |                                            ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:477:53: error: 'size_t' has not been declared
+  477 | int _snprintf_r (struct _reent *, char *__restrict, size_t, const char *__restrict, ...)
+      |                                                     ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:487:60: error: '__gnuc_va_list' has not been declared
+  487 | int _vasiprintf_r (struct _reent *, char **, const char *, __VALIST)
+      |                                                            ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:489:48: error: 'size_t' has not been declared
+  489 | char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __VALIST)
+      |                                                ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:489:72: error: '__gnuc_va_list' has not been declared
+  489 | char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __VALIST)
+      |                                                                        ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:491:47: error: 'size_t' has not been declared
+  491 | char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __VALIST)
+      |                                               ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:491:71: error: '__gnuc_va_list' has not been declared
+  491 | char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __VALIST)
+      |                                                                       ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:493:59: error: '__gnuc_va_list' has not been declared
+  493 | int _vasprintf_r (struct _reent *, char **, const char *, __VALIST)
+      |                                                           ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:495:55: error: '__gnuc_va_list' has not been declared
+  495 | int _vdiprintf_r (struct _reent *, int, const char *, __VALIST)
+      |                                                       ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:497:64: error: '__gnuc_va_list' has not been declared
+  497 | int _vdprintf_r (struct _reent *, int, const char *__restrict, __VALIST)
+      |                                                                ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:499:58: error: '__gnuc_va_list' has not been declared
+  499 | int _vfiprintf_r (struct _reent *, FILE *, const char *, __VALIST)
+      |                                                          ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:501:57: error: '__gnuc_va_list' has not been declared
+  501 | int _vfiscanf_r (struct _reent *, FILE *, const char *, __VALIST)
+      |                                                         ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:503:77: error: '__gnuc_va_list' has not been declared
+  503 | int _vfprintf_r (struct _reent *, FILE *__restrict, const char *__restrict, __VALIST)
+      |                                                                             ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:505:76: error: '__gnuc_va_list' has not been declared
+  505 | int _vfscanf_r (struct _reent *, FILE *__restrict, const char *__restrict, __VALIST)
+      |                                                                            ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:507:49: error: '__gnuc_va_list' has not been declared
+  507 | int _viprintf_r (struct _reent *, const char *, __VALIST)
+      |                                                 ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:509:48: error: '__gnuc_va_list' has not been declared
+  509 | int _viscanf_r (struct _reent *, const char *, __VALIST)
+      |                                                ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:511:58: error: '__gnuc_va_list' has not been declared
+  511 | int _vprintf_r (struct _reent *, const char *__restrict, __VALIST)
+      |                                                          ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:513:57: error: '__gnuc_va_list' has not been declared
+  513 | int _vscanf_r (struct _reent *, const char *__restrict, __VALIST)
+      |                                                         ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:515:58: error: '__gnuc_va_list' has not been declared
+  515 | int _vsiprintf_r (struct _reent *, char *, const char *, __VALIST)
+      |                                                          ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:517:63: error: '__gnuc_va_list' has not been declared
+  517 | int _vsiscanf_r (struct _reent *, const char *, const char *, __VALIST)
+      |                                                               ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:519:45: error: 'size_t' has not been declared
+  519 | int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __VALIST)
+      |                                             ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:519:67: error: '__gnuc_va_list' has not been declared
+  519 | int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __VALIST)
+      |                                                                   ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:521:54: error: 'size_t' has not been declared
+  521 | int _vsnprintf_r (struct _reent *, char *__restrict, size_t, const char *__restrict, __VALIST)
+      |                                                      ^~~~~~
+In file included from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:521:86: error: '__gnuc_va_list' has not been declared
+  521 | int _vsnprintf_r (struct _reent *, char *__restrict, size_t, const char *__restrict, __VALIST)
+      |                                                                                      ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:523:77: error: '__gnuc_va_list' has not been declared
+  523 | int _vsprintf_r (struct _reent *, char *__restrict, const char *__restrict, __VALIST)
+      |                                                                             ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:525:82: error: '__gnuc_va_list' has not been declared
+  525 | int _vsscanf_r (struct _reent *, const char *__restrict, const char *__restrict, __VALIST)
+      |                                                                                  ^~~~~~~~
+In file included from /usr/include/g++/cstdio:42,
+                 from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:531:30: error: 'size_t' has not been declared
+  531 | ssize_t __getdelim (char **, size_t *, int, FILE *);
+      |                              ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:532:29: error: 'size_t' has not been declared
+  532 | ssize_t __getline (char **, size_t *, FILE *);
+      |                             ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:542:1: error: 'size_t' does not name a type
+  542 | size_t fread_unlocked (void *__restrict, size_t _size, size_t _n, FILE *__restrict);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:542:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:543:1: error: 'size_t' does not name a type
+  543 | size_t fwrite_unlocked (const void *__restrict , size_t _size, size_t _n, FILE *);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/stdio.h:543:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+In file included from /usr/include/g++/bits/c++locale.h:48,
+                 from /usr/include/g++/bits/localefwd.h:40,
+                 from /usr/include/g++/ios:41,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/cstdio:113:11: error: 'fread' has not been declared in '::'
+  113 |   using ::fread;
+      |           ^~~~~
+/usr/include/g++/cstdio:119:11: error: 'fwrite' has not been declared in '::'
+  119 |   using ::fwrite;
+      |           ^~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/unistd.h:4,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/pthread.h:25,
+                 from /usr/include/g++/bits/gthr-posix.h:35,
+                 from /usr/include/g++/bits/gthr.h:148,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/ios_base.h:39,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:32:1: error: 'size_t' does not name a type
+   32 | size_t confstr (int __name, char *__buf, size_t __len);
+      | ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:1:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+  +++ |+#include <cstddef>
+    1 | #ifndef _SYS_UNISTD_H
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:102:30: error: 'size_t' has not been declared
+  102 | char *  getcwd (char *__buf, size_t __size);
+      |                              ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:104:35: error: 'size_t' has not been declared
+  104 | int getdomainname  (char *__name, size_t __len);
+      |                                   ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:107:29: error: 'size_t' has not been declared
+  107 | int     getentropy (void *, size_t);
+      |                             ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:186:39: error: 'size_t' has not been declared
+  186 | ssize_t pread (int __fd, void *__buf, size_t __nbytes, off_t __offset);
+      |                                       ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:187:46: error: 'size_t' has not been declared
+  187 | ssize_t pwrite (int __fd, const void *__buf, size_t __nbytes, off_t __offset);
+      |                                              ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:189:54: error: 'size_t' has not been declared
+  189 | _READ_WRITE_RETURN_TYPE read (int __fd, void *__buf, size_t __nbyte);
+      |                                                      ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:199:15: error: 'ptrdiff_t' was not declared in this scope; did you mean 'std::ptrdiff_t'?
+  199 | void *  sbrk (ptrdiff_t __incr);
+      |               ^~~~~~~~~
+      |               std::ptrdiff_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:269:28: note: 'std::ptrdiff_t' declared here
+  269 |   typedef __PTRDIFF_TYPE__ ptrdiff_t;
+      |                            ^~~~~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/unistd.h:4,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/pthread.h:25,
+                 from /usr/include/g++/bits/gthr-posix.h:35,
+                 from /usr/include/g++/bits/gthr.h:148,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/ios_base.h:39,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:212:32: error: 'size_t' has not been declared
+  212 | int sethostname (const char *, size_t);
+      |                                ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:237:33: error: 'size_t' has not been declared
+  237 | int     ttyname_r (int, char *, size_t);
+      |                                 ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:245:61: error: 'size_t' has not been declared
+  245 | _READ_WRITE_RETURN_TYPE write (int __fd, const void *__buf, size_t __nbyte);
+      |                                                             ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:300:33: error: 'size_t' has not been declared
+  300 |  int gethostname (char *__name, size_t __len);
+      |                                 ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:314:51: error: 'size_t' has not been declared
+  314 |                           char *__restrict __buf, size_t __buflen);
+      |                                                   ^~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/unistd.h:319:53: error: 'size_t' has not been declared
+  319 |                             char *__restrict __buf, size_t __buflen);
+      |                                                     ^~~~~~
+In file included from /usr/include/g++/bits/gthr.h:148,
+                 from /usr/include/g++/ext/atomicity.h:35,
+                 from /usr/include/g++/bits/ios_base.h:39,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/gthr-posix.h:102:1: error: 'pthread_once' was not declared in this scope; did you mean 'pthread_once_t'?
+  102 | __gthrw(pthread_once)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:102:1: error: 'pthread_once' was not declared in this scope; did you mean 'pthread_once_t'?
+  102 | __gthrw(pthread_once)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:103:1: error: 'pthread_getspecific' was not declared in this scope
+  103 | __gthrw(pthread_getspecific)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:103:1: error: 'pthread_getspecific' was not declared in this scope
+  103 | __gthrw(pthread_getspecific)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:104:1: error: 'pthread_setspecific' was not declared in this scope
+  104 | __gthrw(pthread_setspecific)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:104:1: error: 'pthread_setspecific' was not declared in this scope
+  104 | __gthrw(pthread_setspecific)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:106:1: error: 'pthread_create' was not declared in this scope
+  106 | __gthrw(pthread_create)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:106:1: error: 'pthread_create' was not declared in this scope
+  106 | __gthrw(pthread_create)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:107:1: error: 'pthread_join' was not declared in this scope; did you mean 'pthread_t'?
+  107 | __gthrw(pthread_join)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:107:1: error: 'pthread_join' was not declared in this scope; did you mean 'pthread_t'?
+  107 | __gthrw(pthread_join)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:108:1: error: 'pthread_equal' was not declared in this scope; did you mean 'thread_local'?
+  108 | __gthrw(pthread_equal)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:108:1: error: 'pthread_equal' was not declared in this scope; did you mean 'thread_local'?
+  108 | __gthrw(pthread_equal)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:109:1: error: 'pthread_self' was not declared in this scope; did you mean 'pthread_key_t'?
+  109 | __gthrw(pthread_self)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:109:1: error: 'pthread_self' was not declared in this scope; did you mean 'pthread_key_t'?
+  109 | __gthrw(pthread_self)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:110:1: error: 'pthread_detach' was not declared in this scope
+  110 | __gthrw(pthread_detach)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:110:1: error: 'pthread_detach' was not declared in this scope
+  110 | __gthrw(pthread_detach)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:112:1: error: 'pthread_cancel' was not declared in this scope; did you mean 'pthread_once_t'?
+  112 | __gthrw(pthread_cancel)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:112:1: error: 'pthread_cancel' was not declared in this scope; did you mean 'pthread_once_t'?
+  112 | __gthrw(pthread_cancel)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:114:1: error: 'sched_yield' was not declared in this scope
+  114 | __gthrw(sched_yield)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:114:1: error: 'sched_yield' was not declared in this scope
+  114 | __gthrw(sched_yield)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:116:1: error: 'pthread_mutex_lock' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  116 | __gthrw(pthread_mutex_lock)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:116:1: error: 'pthread_mutex_lock' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  116 | __gthrw(pthread_mutex_lock)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:117:1: error: 'pthread_mutex_trylock' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  117 | __gthrw(pthread_mutex_trylock)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:117:1: error: 'pthread_mutex_trylock' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  117 | __gthrw(pthread_mutex_trylock)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:121:1: error: 'pthread_mutex_unlock' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  121 | __gthrw(pthread_mutex_unlock)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:121:1: error: 'pthread_mutex_unlock' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  121 | __gthrw(pthread_mutex_unlock)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:122:1: error: 'pthread_mutex_init' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  122 | __gthrw(pthread_mutex_init)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:122:1: error: 'pthread_mutex_init' was not declared in this scope; did you mean 'pthread_mutex_t'?
+  122 | __gthrw(pthread_mutex_init)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:123:1: error: 'pthread_mutex_destroy' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  123 | __gthrw(pthread_mutex_destroy)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:123:1: error: 'pthread_mutex_destroy' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  123 | __gthrw(pthread_mutex_destroy)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:125:1: error: 'pthread_cond_init' was not declared in this scope; did you mean 'pthread_cond_t'?
+  125 | __gthrw(pthread_cond_init)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:125:1: error: 'pthread_cond_init' was not declared in this scope; did you mean 'pthread_cond_t'?
+  125 | __gthrw(pthread_cond_init)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:126:1: error: 'pthread_cond_broadcast' was not declared in this scope; did you mean 'pthread_condattr_t'?
+  126 | __gthrw(pthread_cond_broadcast)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:126:1: error: 'pthread_cond_broadcast' was not declared in this scope; did you mean 'pthread_condattr_t'?
+  126 | __gthrw(pthread_cond_broadcast)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:127:1: error: 'pthread_cond_signal' was not declared in this scope; did you mean 'pthread_cond_t'?
+  127 | __gthrw(pthread_cond_signal)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:127:1: error: 'pthread_cond_signal' was not declared in this scope; did you mean 'pthread_cond_t'?
+  127 | __gthrw(pthread_cond_signal)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:128:1: error: 'pthread_cond_wait' was not declared in this scope; did you mean 'pthread_cond_t'?
+  128 | __gthrw(pthread_cond_wait)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:128:1: error: 'pthread_cond_wait' was not declared in this scope; did you mean 'pthread_cond_t'?
+  128 | __gthrw(pthread_cond_wait)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:129:1: error: 'pthread_cond_timedwait' was not declared in this scope; did you mean 'pthread_condattr_t'?
+  129 | __gthrw(pthread_cond_timedwait)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:129:1: error: 'pthread_cond_timedwait' was not declared in this scope; did you mean 'pthread_condattr_t'?
+  129 | __gthrw(pthread_cond_timedwait)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:130:1: error: 'pthread_cond_destroy' was not declared in this scope; did you mean 'pthread_condattr_t'?
+  130 | __gthrw(pthread_cond_destroy)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:130:1: error: 'pthread_cond_destroy' was not declared in this scope; did you mean 'pthread_condattr_t'?
+  130 | __gthrw(pthread_cond_destroy)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:132:1: error: 'pthread_key_create' was not declared in this scope; did you mean 'pthread_key_t'?
+  132 | __gthrw(pthread_key_create)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:132:1: error: 'pthread_key_create' was not declared in this scope; did you mean 'pthread_key_t'?
+  132 | __gthrw(pthread_key_create)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:133:1: error: 'pthread_key_delete' was not declared in this scope; did you mean 'pthread_key_t'?
+  133 | __gthrw(pthread_key_delete)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:133:1: error: 'pthread_key_delete' was not declared in this scope; did you mean 'pthread_key_t'?
+  133 | __gthrw(pthread_key_delete)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:134:1: error: 'pthread_mutexattr_init' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  134 | __gthrw(pthread_mutexattr_init)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:134:1: error: 'pthread_mutexattr_init' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  134 | __gthrw(pthread_mutexattr_init)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:135:1: error: 'pthread_mutexattr_settype' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  135 | __gthrw(pthread_mutexattr_settype)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:135:1: error: 'pthread_mutexattr_settype' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  135 | __gthrw(pthread_mutexattr_settype)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:136:1: error: 'pthread_mutexattr_destroy' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  136 | __gthrw(pthread_mutexattr_destroy)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h:136:1: error: 'pthread_mutexattr_destroy' was not declared in this scope; did you mean 'pthread_mutexattr_t'?
+  136 | __gthrw(pthread_mutexattr_destroy)
+      | ^~~~~~~
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_active_p()':
+/usr/include/g++/bits/gthr-posix.h:186:51: error: 'PTHREAD_MUTEX_INITIALIZER' was not declared in this scope
+  186 |   static pthread_mutex_t __gthread_active_mutex = PTHREAD_MUTEX_INITIALIZER;
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/g++/bits/gthr-posix.h:187:49: error: 'PTHREAD_ONCE_INIT' was not declared in this scope
+  187 |   static pthread_once_t __gthread_active_once = PTHREAD_ONCE_INIT;
+      |                                                 ^~~~~~~~~~~~~~~~~
+/usr/include/g++/bits/gthr-posix.h:201:57: error: '__gthrw_pthread_mutex_lock' cannot be used as a function
+  201 |    __gthrw_(pthread_mutex_lock) (&__gthread_active_mutex);
+      |                                                         ^
+/usr/include/g++/bits/gthr-posix.h:202:69: error: '__gthrw_pthread_once' cannot be used as a function
+  202 |    __gthrw_(pthread_once) (&__gthread_active_once, __gthread_trigger);
+      |                                                                     ^
+/usr/include/g++/bits/gthr-posix.h:203:59: error: '__gthrw_pthread_mutex_unlock' cannot be used as a function
+  203 |    __gthrw_(pthread_mutex_unlock) (&__gthread_active_mutex);
+      |                                                           ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_create(__gthread_t*, void* (*)(void*), void*)':
+/usr/include/g++/bits/gthr-posix.h:666:68: error: '__gthrw_pthread_create' cannot be used as a function
+  666 |   return __gthrw_(pthread_create) (__threadid, NULL, __func, __args);
+      |                                                                    ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_join(__gthread_t, void**)':
+/usr/include/g++/bits/gthr-posix.h:672:57: error: '__gthrw_pthread_join' cannot be used as a function
+  672 |   return __gthrw_(pthread_join) (__threadid, __value_ptr);
+      |                                                         ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_detach(__gthread_t)':
+/usr/include/g++/bits/gthr-posix.h:678:46: error: '__gthrw_pthread_detach' cannot be used as a function
+  678 |   return __gthrw_(pthread_detach) (__threadid);
+      |                                              ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_equal(__gthread_t, __gthread_t)':
+/usr/include/g++/bits/gthr-posix.h:684:45: error: '__gthrw_pthread_equal' cannot be used as a function
+  684 |   return __gthrw_(pthread_equal) (__t1, __t2);
+      |                                             ^
+/usr/include/g++/bits/gthr-posix.h: In function '__gthread_t __gthread_self()':
+/usr/include/g++/bits/gthr-posix.h:690:34: error: '__gthrw_pthread_self' cannot be used as a function
+  690 |   return __gthrw_(pthread_self) ();
+      |                                  ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_yield()':
+/usr/include/g++/bits/gthr-posix.h:696:33: error: '__gthrw_sched_yield' cannot be used as a function
+  696 |   return __gthrw_(sched_yield) ();
+      |                                 ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_once(__gthread_once_t*, void (*)())':
+/usr/include/g++/bits/gthr-posix.h:703:50: error: '__gthrw_pthread_once' cannot be used as a function
+  703 |     return __gthrw_(pthread_once) (__once, __func);
+      |                                                  ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_key_create(__gthread_key_t*, void (*)(void*))':
+/usr/include/g++/bits/gthr-posix.h:711:53: error: '__gthrw_pthread_key_create' cannot be used as a function
+  711 |   return __gthrw_(pthread_key_create) (__key, __dtor);
+      |                                                     ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_key_delete(__gthread_key_t)':
+/usr/include/g++/bits/gthr-posix.h:717:45: error: '__gthrw_pthread_key_delete' cannot be used as a function
+  717 |   return __gthrw_(pthread_key_delete) (__key);
+      |                                             ^
+/usr/include/g++/bits/gthr-posix.h: In function 'void* __gthread_getspecific(__gthread_key_t)':
+/usr/include/g++/bits/gthr-posix.h:723:46: error: '__gthrw_pthread_getspecific' cannot be used as a function
+  723 |   return __gthrw_(pthread_getspecific) (__key);
+      |                                              ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_setspecific(__gthread_key_t, const void*)':
+/usr/include/g++/bits/gthr-posix.h:729:53: error: '__gthrw_pthread_setspecific' cannot be used as a function
+  729 |   return __gthrw_(pthread_setspecific) (__key, __ptr);
+      |                                                     ^
+/usr/include/g++/bits/gthr-posix.h: In function 'void __gthread_mutex_init_function(__gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:736:48: error: '__gthrw_pthread_mutex_init' cannot be used as a function
+  736 |     __gthrw_(pthread_mutex_init) (__mutex, NULL);
+      |                                                ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_mutex_destroy(__gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:743:52: error: '__gthrw_pthread_mutex_destroy' cannot be used as a function
+  743 |     return __gthrw_(pthread_mutex_destroy) (__mutex);
+      |                                                    ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_mutex_lock(__gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:752:49: error: '__gthrw_pthread_mutex_lock' cannot be used as a function
+  752 |     return __gthrw_(pthread_mutex_lock) (__mutex);
+      |                                                 ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_mutex_trylock(__gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:761:52: error: '__gthrw_pthread_mutex_trylock' cannot be used as a function
+  761 |     return __gthrw_(pthread_mutex_trylock) (__mutex);
+      |                                                    ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_mutex_unlock(__gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:782:51: error: '__gthrw_pthread_mutex_unlock' cannot be used as a function
+  782 |     return __gthrw_(pthread_mutex_unlock) (__mutex);
+      |                                                   ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_recursive_mutex_init_function(__gthread_recursive_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:797:54: error: '__gthrw_pthread_mutexattr_init' cannot be used as a function
+  797 |       __r = __gthrw_(pthread_mutexattr_init) (&__attr);
+      |                                                      ^
+/usr/include/g++/bits/gthr-posix.h:800:10: error: 'PTHREAD_MUTEX_RECURSIVE' was not declared in this scope
+  800 |          PTHREAD_MUTEX_RECURSIVE);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/g++/bits/gthr-posix.h:800:33: error: '__gthrw_pthread_mutexattr_settype' cannot be used as a function
+  800 |          PTHREAD_MUTEX_RECURSIVE);
+      |                                 ^
+/usr/include/g++/bits/gthr-posix.h:802:54: error: '__gthrw_pthread_mutex_init' cannot be used as a function
+  802 |  __r = __gthrw_(pthread_mutex_init) (__mutex, &__attr);
+      |                                                      ^
+/usr/include/g++/bits/gthr-posix.h:804:52: error: '__gthrw_pthread_mutexattr_destroy' cannot be used as a function
+  804 |  __r = __gthrw_(pthread_mutexattr_destroy) (&__attr);
+      |                                                    ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_cond_broadcast(__gthread_cond_t*)':
+/usr/include/g++/bits/gthr-posix.h:856:50: error: '__gthrw_pthread_cond_broadcast' cannot be used as a function
+  856 |   return __gthrw_(pthread_cond_broadcast) (__cond);
+      |                                                  ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_cond_signal(__gthread_cond_t*)':
+/usr/include/g++/bits/gthr-posix.h:862:47: error: '__gthrw_pthread_cond_signal' cannot be used as a function
+  862 |   return __gthrw_(pthread_cond_signal) (__cond);
+      |                                               ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_cond_wait(__gthread_cond_t*, __gthread_mutex_t*)':
+/usr/include/g++/bits/gthr-posix.h:868:54: error: '__gthrw_pthread_cond_wait' cannot be used as a function
+  868 |   return __gthrw_(pthread_cond_wait) (__cond, __mutex);
+      |                                                      ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_cond_timedwait(__gthread_cond_t*, __gthread_mutex_t*, const __gthread_time_t*)':
+/usr/include/g++/bits/gthr-posix.h:875:74: error: '__gthrw_pthread_cond_timedwait' cannot be used as a function
+  875 |   return __gthrw_(pthread_cond_timedwait) (__cond, __mutex, __abs_timeout);
+      |                                                                          ^
+/usr/include/g++/bits/gthr-posix.h: In function 'int __gthread_cond_destroy(__gthread_cond_t*)':
+/usr/include/g++/bits/gthr-posix.h:888:48: error: '__gthrw_pthread_cond_destroy' cannot be used as a function
+  888 |   return __gthrw_(pthread_cond_destroy) (__cond);
+      |                                                ^
+In file included from /usr/include/g++/cstdlib:75,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/stdlib.h: At global scope:
+/usr/include/stdlib.h:92:8: error: 'size_t' does not name a type
+   92 | extern size_t __mb_cur_max;
+      |        ^~~~~~
+/usr/include/stdlib.h:45:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+   44 | #include <machine/ansi.h>
+  +++ |+#include <cstddef>
+   45 | 
+/usr/include/stdlib.h:96:1: error: '__dead' does not name a type
+   96 | __dead  void _Exit(int);
+      | ^~~~~~
+/usr/include/stdlib.h:97:1: error: '__dead' does not name a type
+   97 | __dead  void abort(void);
+      | ^~~~~~
+/usr/include/stdlib.h:98:1: error: '__constfunc' does not name a type
+   98 | __constfunc int abs(int);
+      | ^~~~~~~~~~~
+/usr/include/stdlib.h:106:43: error: 'size_t' has not been declared
+  106 | void *bsearch(const void *, const void *, size_t, size_t,
+      |                                           ^~~~~~
+/usr/include/stdlib.h:106:51: error: 'size_t' has not been declared
+  106 | void *bsearch(const void *, const void *, size_t, size_t,
+      |                                                   ^~~~~~
+/usr/include/stdlib.h:109:14: error: 'size_t' was not declared in this scope; did you mean 'std::size_t'?
+  109 | void *calloc(size_t, size_t);
+      |              ^~~~~~
+      |              std::size_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:268:26: note: 'std::size_t' declared here
+  268 |   typedef __SIZE_TYPE__  size_t;
+      |                          ^~~~~~
+In file included from /usr/include/g++/cstdlib:75,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/stdlib.h:109:22: error: 'size_t' was not declared in this scope; did you mean 'std::size_t'?
+  109 | void *calloc(size_t, size_t);
+      |                      ^~~~~~
+      |                      std::size_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:268:26: note: 'std::size_t' declared here
+  268 |   typedef __SIZE_TYPE__  size_t;
+      |                          ^~~~~~
+In file included from /usr/include/g++/cstdlib:75,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/stdlib.h:109:28: error: expression list treated as compound expression in initializer [-fpermissive]
+  109 | void *calloc(size_t, size_t);
+      |                            ^
+/usr/include/stdlib.h:111:1: error: '__dead' does not name a type
+  111 | __dead  void exit(int);
+      | ^~~~~~
+/usr/include/stdlib.h:113:1: error: '__aconst' does not name a type
+  113 | __aconst char *getenv(const char *);
+      | ^~~~~~~~
+/usr/include/stdlib.h:114:1: error: '__constfunc' does not name a type
+  114 | __constfunc long
+      | ^~~~~~~~~~~
+/usr/include/stdlib.h:117:14: error: 'size_t' was not declared in this scope; did you mean 'std::size_t'?
+  117 | void *malloc(size_t);
+      |              ^~~~~~
+      |              std::size_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:268:26: note: 'std::size_t' declared here
+  268 |   typedef __SIZE_TYPE__  size_t;
+      |                          ^~~~~~
+In file included from /usr/include/g++/cstdlib:75,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/stdlib.h:118:21: error: 'size_t' has not been declared
+  118 | void  qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+      |                     ^~~~~~
+/usr/include/stdlib.h:118:29: error: 'size_t' has not been declared
+  118 | void  qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+      |                             ^~~~~~
+/usr/include/stdlib.h:120:23: error: 'size_t' has not been declared
+  120 | void *realloc(void *, size_t);
+      |                       ^~~~~~
+/usr/include/stdlib.h:121:28: error: 'size_t' has not been declared
+  121 | void *reallocarray(void *, size_t, size_t);
+      |                            ^~~~~~
+/usr/include/stdlib.h:121:36: error: 'size_t' has not been declared
+  121 | void *reallocarray(void *, size_t, size_t);
+      |                                    ^~~~~~
+/usr/include/stdlib.h:133:26: error: 'size_t' has not been declared
+  133 | int  mblen(const char *, size_t);
+      |                          ^~~~~~
+/usr/include/stdlib.h:134:1: error: 'size_t' does not name a type
+  134 | size_t  mbstowcs(wchar_t * __restrict, const char * __restrict, size_t);
+      | ^~~~~~
+/usr/include/stdlib.h:134:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/usr/include/stdlib.h:136:60: error: 'size_t' has not been declared
+  136 | int  mbtowc(wchar_t * __restrict, const char * __restrict, size_t);
+      |                                                            ^~~~~~
+/usr/include/stdlib.h:137:1: error: 'size_t' does not name a type
+  137 | size_t  wcstombs(char * __restrict, const wchar_t * __restrict, size_t);
+      | ^~~~~~
+/usr/include/stdlib.h:137:1: note: 'size_t' is defined in header '<cstddef>'; did you forget to '#include <cstddef>'?
+/usr/include/stdlib.h:235:21: error: 'size_t' was not declared in this scope; did you mean 'std::size_t'?
+  235 | void *aligned_alloc(size_t, size_t);
+      |                     ^~~~~~
+      |                     std::size_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:268:26: note: 'std::size_t' declared here
+  268 |   typedef __SIZE_TYPE__  size_t;
+      |                          ^~~~~~
+In file included from /usr/include/g++/cstdlib:75,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/stdlib.h:235:29: error: 'size_t' was not declared in this scope; did you mean 'std::size_t'?
+  235 | void *aligned_alloc(size_t, size_t);
+      |                             ^~~~~~
+      |                             std::size_t
+In file included from /usr/include/g++/bits/c++config.h:7,
+                 from /usr/include/g++/iostream:38,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/x86_64/c++config.h:268:26: note: 'std::size_t' declared here
+  268 |   typedef __SIZE_TYPE__  size_t;
+      |                          ^~~~~~
+In file included from /usr/include/g++/cstdlib:75,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/stdlib.h:235:35: error: expression list treated as compound expression in initializer [-fpermissive]
+  235 | void *aligned_alloc(size_t, size_t);
+      |                                   ^
+/usr/include/stdlib.h:237:1: error: '__dead' does not name a type
+  237 | __dead void quick_exit(int);
+      | ^~~~~~
+/usr/include/stdlib.h:247:29: error: expected initializer before '__RENAME'
+  247 | int  unsetenv(const char *) __RENAME(__unsetenv13);
+      |                             ^~~~~~~~
+/usr/include/stdlib.h:251:30: error: 'size_t' has not been declared
+  251 | int  posix_memalign(void **, size_t, size_t);
+      |                              ^~~~~~
+/usr/include/stdlib.h:251:38: error: 'size_t' has not been declared
+  251 | int  posix_memalign(void **, size_t, size_t);
+      |                                      ^~~~~~
+/usr/include/stdlib.h:364:26: error: conflicting declaration 'typedef struct _locale* locale_t'
+  364 | typedef struct _locale  *locale_t;
+      |                          ^~~~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wchar.h:67,
+                 from /usr/include/g++/cwchar:44,
+                 from /usr/include/g++/bits/postypes.h:40,
+                 from /usr/include/g++/iosfwd:40,
+                 from /usr/include/g++/ios:38,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/xlocale.h:10:28: note: previous declaration as 'typedef struct __locale_t* locale_t'
+   10 | typedef struct __locale_t *locale_t;
+      |                            ^~~~~~~~
+In file included from /usr/include/g++/cstdlib:77,
+                 from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/std_abs.h:52:11: error: 'abs' has not been declared in '::'
+   52 |   using ::abs;
+      |           ^~~
+In file included from /usr/include/g++/ext/string_conversions.h:41,
+                 from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/cstdlib:130:11: error: 'abort' has not been declared in '::'
+  130 |   using ::abort;
+      |           ^~~~~
+/usr/include/g++/cstdlib:146:11: error: 'exit' has not been declared in '::'
+  146 |   using ::exit;
+      |           ^~~~
+/usr/include/g++/cstdlib:148:11: error: 'getenv' has not been declared in '::'
+  148 |   using ::getenv;
+      |           ^~~~~~
+/usr/include/g++/cstdlib:149:11: error: 'labs' has not been declared in '::'
+  149 |   using ::labs;
+      |           ^~~~
+/usr/include/g++/cstdlib:154:11: error: 'mbstowcs' has not been declared in '::'
+  154 |   using ::mbstowcs;
+      |           ^~~~~~~~
+/usr/include/g++/cstdlib:160:11: error: 'quick_exit' has not been declared in '::'
+  160 |   using ::quick_exit;
+      |           ^~~~~~~~~~
+/usr/include/g++/cstdlib:171:11: error: 'wcstombs' has not been declared in '::'
+  171 |   using ::wcstombs;
+      |           ^~~~~~~~
+/usr/include/g++/cstdlib:206:11: error: '_Exit' has not been declared in '::'
+  206 |   using ::_Exit;
+      |           ^~~~~
+/usr/include/g++/cstdlib:242:22: error: '_Exit' has not been declared in '__gnu_cxx'
+  242 |   using ::__gnu_cxx::_Exit;
+      |                      ^~~~~
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h: In function 'std::string std::__cxx11::to_string(float)':
+/usr/include/g++/bits/basic_string.h:6675:20: error: no matching function for call to '__to_xstring<std::string>(int (*)(char*, int, const char*, int), const int&, const char [3], float&)'
+ 6675 |         "%f", __val);
+      |                    ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6675:20: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6675 |         "%f", __val);
+      |                    ^
+/usr/include/g++/bits/basic_string.h: In function 'std::string std::__cxx11::to_string(double)':
+/usr/include/g++/bits/basic_string.h:6684:20: error: no matching function for call to '__to_xstring<std::string>(int (*)(char*, int, const char*, int), const int&, const char [3], double&)'
+ 6684 |         "%f", __val);
+      |                    ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6684:20: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6684 |         "%f", __val);
+      |                    ^
+/usr/include/g++/bits/basic_string.h: In function 'std::string std::__cxx11::to_string(long double)':
+/usr/include/g++/bits/basic_string.h:6693:21: error: no matching function for call to '__to_xstring<std::string>(int (*)(char*, int, const char*, int), const int&, const char [4], long double&)'
+ 6693 |         "%Lf", __val);
+      |                     ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6693:21: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6693 |         "%Lf", __val);
+      |                     ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(int)':
+/usr/include/g++/bits/basic_string.h:6741:22: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), long unsigned int, const wchar_t [3], int&)'
+ 6741 |          L"%d", __val); }
+      |                      ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6741:22: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6741 |          L"%d", __val); }
+      |                      ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(unsigned int)':
+/usr/include/g++/bits/basic_string.h:6747:22: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), long unsigned int, const wchar_t [3], unsigned int&)'
+ 6747 |          L"%u", __val); }
+      |                      ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6747:22: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6747 |          L"%u", __val); }
+      |                      ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(long int)':
+/usr/include/g++/bits/basic_string.h:6752:23: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), long unsigned int, const wchar_t [4], long int&)'
+ 6752 |          L"%ld", __val); }
+      |                       ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6752:23: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6752 |          L"%ld", __val); }
+      |                       ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(long unsigned int)':
+/usr/include/g++/bits/basic_string.h:6758:23: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), long unsigned int, const wchar_t [4], long unsigned int&)'
+ 6758 |          L"%lu", __val); }
+      |                       ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6758:23: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6758 |          L"%lu", __val); }
+      |                       ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(long long int)':
+/usr/include/g++/bits/basic_string.h:6764:24: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), long unsigned int, const wchar_t [5], long long int&)'
+ 6764 |          L"%lld", __val); }
+      |                        ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6764:24: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6764 |          L"%lld", __val); }
+      |                        ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(long long unsigned int)':
+/usr/include/g++/bits/basic_string.h:6770:24: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), long unsigned int, const wchar_t [5], long long unsigned int&)'
+ 6770 |          L"%llu", __val); }
+      |                        ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6770:24: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6770 |          L"%llu", __val); }
+      |                        ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(float)':
+/usr/include/g++/bits/basic_string.h:6778:22: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), const int&, const wchar_t [3], float&)'
+ 6778 |          L"%f", __val);
+      |                      ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6778:22: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6778 |          L"%f", __val);
+      |                      ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(double)':
+/usr/include/g++/bits/basic_string.h:6787:22: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), const int&, const wchar_t [3], double&)'
+ 6787 |          L"%f", __val);
+      |                      ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6787:22: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6787 |          L"%f", __val);
+      |                      ^
+/usr/include/g++/bits/basic_string.h: In function 'std::wstring std::__cxx11::to_wstring(long double)':
+/usr/include/g++/bits/basic_string.h:6796:23: error: no matching function for call to '__to_xstring<std::wstring>(int (*)(wchar_t*, int, const wchar_t*, int), const int&, const wchar_t [4], long double&)'
+ 6796 |          L"%Lf", __val);
+      |                       ^
+In file included from /usr/include/g++/bits/basic_string.h:6557,
+                 from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ext/string_conversions.h:99:5: note: candidate: 'template<class _String, class _CharT> _String __gnu_cxx::__to_xstring(int (*)(_CharT*, std::size_t, const _CharT*, __va_list_tag*), std::size_t, const _CharT*, ...)'
+   99 |     __to_xstring(int (*__convf) (_CharT*, std::size_t, const _CharT*,
+      |     ^~~~~~~~~~~~
+/usr/include/g++/ext/string_conversions.h:99:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/g++/string:55,
+                 from /usr/include/g++/bits/locale_classes.h:40,
+                 from /usr/include/g++/bits/ios_base.h:41,
+                 from /usr/include/g++/ios:42,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_string.h:6796:23: note:   mismatched types 'std::size_t' {aka 'long unsigned int'} and 'int'
+ 6796 |          L"%Lf", __val);
+      |                       ^
+In file included from /usr/include/g++/ios:43,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/streambuf: In instantiation of 'class std::basic_streambuf<wchar_t>':
+/usr/include/g++/bits/streambuf.tcc:160:25:   required from here
+/usr/include/g++/streambuf:133:48: error: no type named 'int_type' in 'std::basic_streambuf<wchar_t>::traits_type' {aka 'struct std::char_traits<wchar_t>'}
+  133 |       typedef typename traits_type::int_type   int_type;
+      |                                                ^~~~~~~~
+In file included from /usr/include/g++/cwctype:50,
+                 from /usr/include/g++/bits/locale_facets.h:39,
+                 from /usr/include/g++/bits/basic_ios.h:37,
+                 from /usr/include/g++/ios:44,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h: At global scope:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:30:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   30 | int iswalpha (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:31:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   31 | int iswalnum (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:33:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   33 | int iswblank (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:35:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   35 | int iswcntrl (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:36:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   36 | int iswctype (wint_t, wctype_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:36:31: error: expected primary-expression before ')' token
+   36 | int iswctype (wint_t, wctype_t);
+      |                               ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:36:31: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:37:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   37 | int iswdigit (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:38:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   38 | int iswgraph (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:39:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   39 | int iswlower (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:40:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   40 | int iswprint (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:41:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   41 | int iswpunct (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:42:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   42 | int iswspace (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:43:15: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   43 | int iswupper (wint_t);
+      |               ^~~~~~
+      |               ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:44:16: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   44 | int iswxdigit (wint_t);
+      |                ^~~~~~
+      |                ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:45:1: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+   45 | wint_t towctrans (wint_t, wctrans_t);
+      | ^~~~~~
+      | ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:46:1: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+   46 | wint_t towupper (wint_t);
+      | ^~~~~~
+      | ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:47:1: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+   47 | wint_t towlower (wint_t);
+      | ^~~~~~
+      | ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:52:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   52 | extern int iswalpha_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:52:40: error: expected primary-expression before ')' token
+   52 | extern int iswalpha_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:52:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:53:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   53 | extern int iswalnum_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:53:40: error: expected primary-expression before ')' token
+   53 | extern int iswalnum_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:53:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:54:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   54 | extern int iswblank_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:54:40: error: expected primary-expression before ')' token
+   54 | extern int iswblank_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:54:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:55:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   55 | extern int iswcntrl_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:55:40: error: expected primary-expression before ')' token
+   55 | extern int iswcntrl_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:55:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:56:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   56 | extern int iswctype_l (wint_t, wctype_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:56:40: error: expected primary-expression before ',' token
+   56 | extern int iswctype_l (wint_t, wctype_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:56:50: error: expected primary-expression before ')' token
+   56 | extern int iswctype_l (wint_t, wctype_t, locale_t);
+      |                                                  ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:56:50: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:57:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   57 | extern int iswdigit_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:57:40: error: expected primary-expression before ')' token
+   57 | extern int iswdigit_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:57:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:58:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   58 | extern int iswgraph_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:58:40: error: expected primary-expression before ')' token
+   58 | extern int iswgraph_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:58:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:59:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   59 | extern int iswlower_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:59:40: error: expected primary-expression before ')' token
+   59 | extern int iswlower_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:59:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:60:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   60 | extern int iswprint_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:60:40: error: expected primary-expression before ')' token
+   60 | extern int iswprint_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:60:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:61:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   61 | extern int iswpunct_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:61:40: error: expected primary-expression before ')' token
+   61 | extern int iswpunct_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:61:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:62:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   62 | extern int iswspace_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:62:40: error: expected primary-expression before ')' token
+   62 | extern int iswspace_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:62:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:63:24: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   63 | extern int iswupper_l (wint_t, locale_t);
+      |                        ^~~~~~
+      |                        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:63:40: error: expected primary-expression before ')' token
+   63 | extern int iswupper_l (wint_t, locale_t);
+      |                                        ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:63:40: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:64:25: error: 'wint_t' was not declared in this scope; did you mean 'ino_t'?
+   64 | extern int iswxdigit_l (wint_t, locale_t);
+      |                         ^~~~~~
+      |                         ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:64:41: error: expected primary-expression before ')' token
+   64 | extern int iswxdigit_l (wint_t, locale_t);
+      |                                         ^
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:64:41: error: expression list treated as compound expression in initializer [-fpermissive]
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:65:8: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+   65 | extern wint_t towctrans_l (wint_t, wctrans_t, locale_t);
+      |        ^~~~~~
+      |        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:66:8: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+   66 | extern wint_t towupper_l (wint_t, locale_t);
+      |        ^~~~~~
+      |        ino_t
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/wctype.h:67:8: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+   67 | extern wint_t towlower_l (wint_t, locale_t);
+      |        ^~~~~~
+      |        ino_t
+In file included from /usr/include/g++/bits/locale_facets.h:39,
+                 from /usr/include/g++/bits/basic_ios.h:37,
+                 from /usr/include/g++/ios:44,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/cwctype:84:11: error: 'wint_t' has not been declared in '::'
+   84 |   using ::wint_t;
+      |           ^~~~~~
+/usr/include/g++/cwctype:101:11: error: 'towctrans' has not been declared in '::'
+  101 |   using ::towctrans;
+      |           ^~~~~~~~~
+/usr/include/g++/cwctype:102:11: error: 'towlower' has not been declared in '::'
+  102 |   using ::towlower;
+      |           ^~~~~~~~
+/usr/include/g++/cwctype:103:11: error: 'towupper' has not been declared in '::'
+  103 |   using ::towupper;
+      |           ^~~~~~~~
+In file included from /usr/include/g++/bits/locale_facets.h:41,
+                 from /usr/include/g++/bits/basic_ios.h:37,
+                 from /usr/include/g++/ios:44,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/ctype_base.h:48:31: error: '_CTYPE_U' was not declared in this scope
+   48 |     static const mask upper = _CTYPE_U;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:49:31: error: '_CTYPE_L' was not declared in this scope
+   49 |     static const mask lower = _CTYPE_L;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:50:31: error: '_CTYPE_A' was not declared in this scope
+   50 |     static const mask alpha = _CTYPE_A;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:51:31: error: '_CTYPE_D' was not declared in this scope
+   51 |     static const mask digit = _CTYPE_D;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:52:32: error: '_CTYPE_X' was not declared in this scope
+   52 |     static const mask xdigit = _CTYPE_X;
+      |                                ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:53:31: error: '_CTYPE_S' was not declared in this scope
+   53 |     static const mask space = _CTYPE_S;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:54:31: error: '_CTYPE_R' was not declared in this scope
+   54 |     static const mask print = _CTYPE_R;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:55:31: error: '_CTYPE_G' was not declared in this scope
+   55 |     static const mask graph = _CTYPE_G;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:56:31: error: '_CTYPE_C' was not declared in this scope
+   56 |     static const mask cntrl = _CTYPE_C;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:57:31: error: '_CTYPE_P' was not declared in this scope
+   57 |     static const mask punct = _CTYPE_P;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:58:31: error: '_CTYPE_A' was not declared in this scope
+   58 |     static const mask alnum = _CTYPE_A | _CTYPE_D;
+      |                               ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:58:42: error: '_CTYPE_D' was not declared in this scope
+   58 |     static const mask alnum = _CTYPE_A | _CTYPE_D;
+      |                                          ^~~~~~~~
+/usr/include/g++/bits/ctype_base.h:60:31: error: '_CTYPE_BL' was not declared in this scope
+   60 |     static const mask blank = _CTYPE_BL;
+      |                               ^~~~~~~~~
+In file included from /usr/include/g++/bits/basic_ios.h:37,
+                 from /usr/include/g++/ios:44,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/locale_facets.h:1200:7: error: 'wint_t' does not name a type; did you mean 'ino_t'?
+ 1200 |       wint_t                    _M_widen[1 + static_cast<unsigned char>(-1)];
+      |       ^~~~~~
+      |       ino_t
+In file included from /usr/include/g++/ios:44,
+                 from /usr/include/g++/ostream:38,
+                 from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/bits/basic_ios.h: In instantiation of 'class std::basic_ios<wchar_t>':
+/usr/include/g++/bits/basic_ios.tcc:181:25:   required from here
+/usr/include/g++/bits/basic_ios.h:77:54: error: no type named 'int_type' in 'struct std::char_traits<wchar_t>'
+   77 |       typedef typename _Traits::int_type             int_type;
+      |                                                      ^~~~~~~~
+In file included from /usr/include/g++/iostream:39,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/ostream: In instantiation of 'class std::basic_ostream<wchar_t>':
+/usr/include/g++/bits/ostream.tcc:382:25:   required from here
+/usr/include/g++/ostream:63:44: error: no type named 'int_type' in 'struct std::char_traits<wchar_t>'
+   63 |       typedef typename _Traits::int_type   int_type;
+      |                                            ^~~~~~~~
+In file included from /usr/include/g++/iostream:40,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:1:
+/usr/include/g++/istream: In instantiation of 'class std::basic_istream<wchar_t>':
+/usr/include/g++/istream:663:27:   required from here
+/usr/include/g++/istream:63:44: error: no type named 'int_type' in 'struct std::char_traits<wchar_t>'
+   63 |       typedef typename _Traits::int_type   int_type;
+      |                                            ^~~~~~~~
+/usr/include/g++/istream:673:5: error: template-id 'ignore<>' for 'std::basic_istream<wchar_t>& std::basic_istream<wchar_t>::ignore(...)' does not match any template declaration
+  673 |     basic_istream<wchar_t>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/g++/istream:673:5: note: saw 1 'template<>', need 2 for specializing a member function template
+/usr/include/g++/istream: In instantiation of 'class std::basic_istream<wchar_t>::sentry':
+/usr/include/g++/bits/istream.tcc:1074:25:   required from here
+/usr/include/g++/istream:697:43: error: no type named 'int_type' in 'struct std::char_traits<wchar_t>'
+  697 |       typedef typename _Traits::int_type  __int_type;
+      |                                           ^~~~~~~~~~
+/usr/include/g++/istream: In instantiation of 'class std::basic_iostream<wchar_t>':
+/usr/include/g++/bits/istream.tcc:1093:25:   required from here
+/usr/include/g++/istream:833:44: error: no type named 'int_type' in 'struct std::char_traits<wchar_t>'
+  833 |       typedef typename _Traits::int_type   int_type;
+      |                                            ^~~~~~~~
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:5:
+/usr/include/g++/fstream: In instantiation of 'class std::basic_filebuf<wchar_t>':
+/usr/include/g++/bits/fstream.tcc:1092:25:   required from here
+/usr/include/g++/fstream:100:48: error: no type named 'int_type' in 'std::basic_filebuf<wchar_t>::traits_type' {aka 'struct std::char_traits<wchar_t>'}
+  100 |       typedef typename traits_type::int_type   int_type;
+      |                                                ^~~~~~~~
+/usr/include/g++/fstream: In instantiation of 'class std::basic_ifstream<wchar_t>':
+/usr/include/g++/bits/fstream.tcc:1093:25:   required from here
+/usr/include/g++/fstream:498:48: error: no type named 'int_type' in 'std::basic_ifstream<wchar_t>::traits_type' {aka 'struct std::char_traits<wchar_t>'}
+  498 |       typedef typename traits_type::int_type   int_type;
+      |                                                ^~~~~~~~
+/usr/include/g++/fstream: In instantiation of 'class std::basic_ofstream<wchar_t>':
+/usr/include/g++/bits/fstream.tcc:1094:25:   required from here
+/usr/include/g++/fstream:759:48: error: no type named 'int_type' in 'std::basic_ofstream<wchar_t>::traits_type' {aka 'struct std::char_traits<wchar_t>'}
+  759 |       typedef typename traits_type::int_type   int_type;
+      |                                                ^~~~~~~~
+/usr/include/g++/fstream: In instantiation of 'class std::basic_fstream<wchar_t>':
+/usr/include/g++/bits/fstream.tcc:1095:25:   required from here
+/usr/include/g++/fstream:1022:48: error: no type named 'int_type' in 'std::basic_fstream<wchar_t>::traits_type' {aka 'struct std::char_traits<wchar_t>'}
+ 1022 |       typedef typename traits_type::int_type   int_type;
+      |                                                ^~~~~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc: In function 'int get(const ch (&)[n])':
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:58:18: error: there are no arguments to 'abort' that depend on a template parameter, so a declaration of 'abort' must be available [-fpermissive]
+   58 |         default: abort();
+      |                  ^~~~~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:58:18: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc: In instantiation of 'int get(const ch (&)[n]) [with ch = char; int n = 2]':
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:89:5:   required from here
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:58:23: error: 'abort' was not declared in this scope
+   58 |         default: abort();
+      |                  ~~~~~^~
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc: In instantiation of 'int get(const ch (&)[n]) [with ch = char; int n = 4]':
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:96:60:   required from here
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:58:23: error: 'abort' was not declared in this scope
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc: In instantiation of 'int get(const ch (&)[n]) [with ch = char; int n = 1]':
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:168:33:   required from here
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:58:23: error: 'abort' was not declared in this scope
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc: In instantiation of 'int get(const ch (&)[n]) [with ch = unsigned char; int n = 4]':
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:245:55:   required from here
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:58:23: error: 'abort' was not declared in this scope
 gmake[2]: *** [PEFTools/CMakeFiles/MakePEF.dir/build.make:76: PEFTools/CMakeFiles/MakePEF.dir/MakePEF.cc.o] Error 1
 gmake[1]: *** [CMakeFiles/Makefile2:349: PEFTools/CMakeFiles/MakePEF.dir/all] Error 2
 gmake[1]: *** Waiting for unfinished jobs....
-[ 85%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/LaunchMethod.cc.o
-[ 86%] Linking CXX executable TestLaunchAPPLCommon
-[ 87%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/SegmentMap.cc.o
-[ 87%] Built target TestLaunchAPPLCommon
-[ 87%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/LdScript.cc.o
-[ 88%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/Reloc.cc.o
-[ 89%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Launcher.cc.o
-[ 89%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Utilities.cc.o
-[ 90%] Linking CXX executable ConvertObj
+[ 86%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Utilities.cc.o
+[ 87%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Executor.cc.o
+[ 87%] Linking CXX executable MakeImport
+[ 87%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/MiniVMac.cc.o
+[ 87%] Built target MakeImport
+[ 88%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/SSH.cc.o
+[ 89%] Linking CXX executable ConvertObj
+[ 90%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/StreamBasedLauncher.cc.o
+[ 90%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Serial.cc.o
 [ 90%] Built target ConvertObj
-[ 91%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Executor.cc.o
-[ 91%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/Symbol.cc.o
-[ 92%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/Symtab.cc.o
+[ 91%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/TCP.cc.o
+[ 92%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/SharedFile.cc.o
 [ 93%] Linking CXX executable ResInfo
 [ 93%] Built target ResInfo
-[ 94%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/Section.cc.o
-[ 94%] Building CXX object Elf2Mac/CMakeFiles/Elf2Mac.dir/Object.cc.o
-[ 94%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/MiniVMac.cc.o
-[ 94%] Linking CXX executable MakeImport
-[ 95%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/SSH.cc.o
-[ 95%] Built target MakeImport
-[ 96%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/StreamBasedLauncher.cc.o
-/tmp/wip/retro68/work/Retro68-2019.8.2/Elf2Mac/Section.cc: In member function 'void Section::FixRelocs(bool)':
-/tmp/wip/retro68/work/Retro68-2019.8.2/Elf2Mac/Section.cc:218:24: warning: 'relocBase' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  218 |         rela.relocBase = relocBase;
-      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~
-[ 96%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/Serial.cc.o
-[ 97%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/TCP.cc.o
-[ 98%] Building CXX object LaunchAPPL/Client/CMakeFiles/LaunchAPPL.dir/SharedFile.cc.o
-[ 99%] Linking CXX executable Elf2Mac
-[ 99%] Built target Elf2Mac
 /tmp/wip/retro68/work/Retro68-2019.8.2/LaunchAPPL/Client/SharedFile.cc: In member function 'virtual void SharedFileStream::write(const void*, size_t)':
 /tmp/wip/retro68/work/Retro68-2019.8.2/LaunchAPPL/Client/SharedFile.cc:51:13: error: 'ofstream' is not a member of 'fs'; did you mean 'std::ofstream'?
    51 |         fs::ofstream out(shared_directory / "in_channel_1", std::ios::binary);
@@ -81,4 +2228,3 @@ make[1]: stopped in /export/CHROOT/usr/pkgsrc/wip/retro68
 
 Stop.
 make: stopped in /export/CHROOT/usr/pkgsrc/wip/retro68
-SX2@makoto 07:32:32/240131(..wip/retro68)%
