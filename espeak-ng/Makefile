@@ -23,7 +23,7 @@ USE_LANGUAGES=	c c++
 
 # -D_NETBSD_SOURCE for mkstemp in /usr/include/stdlib.h
 .if ${OPSYS} == "NetBSD"
-CFLAGS+=	-D_NETBSD_SOURCE -DOS_NETBSD
+CFLAGS+=	-D_NETBSD_SOURCE
 .endif
 
 CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
