@@ -99,6 +99,9 @@ PKGCONFIG_OVERRIDE+=	gcc/libffi/libffi.pc.in
 PKGCONFIG_OVERRIDE+=	gcc/zlib/contrib/minizip/minizip.pc.in
 PKGCONFIG_OVERRIDE+=	gcc/zlib/zlib.pc.in
 
+pre-configure:
+	cp -p ${PKGDIR}/files/PEFBinaryFormat.h ${WRKSRC}/PEFTools/
+
 .include "../../devel/cmake/build.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libhfs/buildlink3.mk"
