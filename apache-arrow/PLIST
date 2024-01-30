@@ -8,6 +8,7 @@ include/arrow/acero/accumulation_queue.h
 include/arrow/acero/aggregate_node.h
 include/arrow/acero/api.h
 include/arrow/acero/asof_join_node.h
+include/arrow/acero/backpressure_handler.h
 include/arrow/acero/benchmark_util.h
 include/arrow/acero/bloom_filter.h
 include/arrow/acero/exec_plan.h
@@ -23,8 +24,10 @@ include/arrow/acero/query_context.h
 include/arrow/acero/schema_util.h
 include/arrow/acero/task_util.h
 include/arrow/acero/test_nodes.h
+include/arrow/acero/time_series_util.h
 include/arrow/acero/tpch_node.h
 include/arrow/acero/type_fwd.h
+include/arrow/acero/unmaterialized_table.h
 include/arrow/acero/util.h
 include/arrow/acero/visibility.h
 include/arrow/api.h
@@ -56,6 +59,8 @@ include/arrow/buffer_builder.h
 include/arrow/builder.h
 include/arrow/c/abi.h
 include/arrow/c/bridge.h
+include/arrow/c/dlpack.h
+include/arrow/c/dlpack_abi.h
 include/arrow/c/helpers.h
 include/arrow/chunk_resolver.h
 include/arrow/chunked_array.h
@@ -68,6 +73,7 @@ include/arrow/compute/cast.h
 include/arrow/compute/exec.h
 include/arrow/compute/expression.h
 include/arrow/compute/function.h
+include/arrow/compute/function_options.h
 include/arrow/compute/kernel.h
 include/arrow/compute/key_hash.h
 include/arrow/compute/key_map.h
@@ -204,6 +210,7 @@ include/arrow/util/async_util.h
 include/arrow/util/base64.h
 include/arrow/util/basic_decimal.h
 include/arrow/util/benchmark_util.h
+include/arrow/util/binary_view_util.h
 include/arrow/util/bit_block_counter.h
 include/arrow/util/bit_run_reader.h
 include/arrow/util/bit_stream_utils.h
@@ -222,11 +229,7 @@ include/arrow/util/bpacking_avx2.h
 include/arrow/util/bpacking_avx512.h
 include/arrow/util/bpacking_default.h
 include/arrow/util/bpacking_neon.h
-include/arrow/util/bpacking_simd128_generated.h
-include/arrow/util/bpacking_simd256_generated.h
-include/arrow/util/bpacking_simd512_generated.h
 include/arrow/util/byte_size.h
-include/arrow/util/byte_stream_split.h
 include/arrow/util/cancel.h
 include/arrow/util/checked_cast.h
 include/arrow/util/compare.h
@@ -240,9 +243,11 @@ include/arrow/util/crc32.h
 include/arrow/util/debug.h
 include/arrow/util/decimal.h
 include/arrow/util/delimiting.h
+include/arrow/util/dict_util.h
 include/arrow/util/dispatch.h
 include/arrow/util/double_conversion.h
 include/arrow/util/endian.h
+include/arrow/util/float16.h
 include/arrow/util/formatting.h
 include/arrow/util/functional.h
 include/arrow/util/future.h
@@ -254,6 +259,7 @@ include/arrow/util/io_util.h
 include/arrow/util/iterator.h
 include/arrow/util/key_value_metadata.h
 include/arrow/util/launder.h
+include/arrow/util/list_util.h
 include/arrow/util/logging.h
 include/arrow/util/macros.h
 include/arrow/util/map.h
@@ -415,21 +421,21 @@ lib/cmake/Parquet/ParquetTargets-release.cmake
 lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
-lib/libarrow.so.1400
-lib/libarrow.so.1400.1.0
+lib/libarrow.so.1500
+lib/libarrow.so.1500.0.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
-lib/libarrow_acero.so.1400
-lib/libarrow_acero.so.1400.1.0
+lib/libarrow_acero.so.1500
+lib/libarrow_acero.so.1500.0.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
-lib/libarrow_dataset.so.1400
-lib/libarrow_dataset.so.1400.1.0
+lib/libarrow_dataset.so.1500
+lib/libarrow_dataset.so.1500.0.0
 lib/libparquet.a
 lib/libparquet.so
-lib/libparquet.so.1400
-lib/libparquet.so.1400.1.0
+lib/libparquet.so.1500
+lib/libparquet.so.1500.0.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -439,8 +445,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.1400.1.0-gdb.py
+share/arrow/gdb/libarrow.so.1500.0.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20231028/lib
+@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20231221/lib
