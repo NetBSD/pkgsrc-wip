@@ -13,8 +13,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c
 USE_TOOLS=		gmake
-CFLAGS+=		-Wall -O3 -Wno-unused-function -ansi -fPIC -pthread
-CFLAGS+=		-Wl,-rpath=${PREFIX}/lib
-CHECK_SHLIBS_SKIP=	bin/sonic
+CFLAGS+=		-Wall -Wno-unused-function -ansi -fPIC -pthread
+CFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+MAKE_FLAGS+=		PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
