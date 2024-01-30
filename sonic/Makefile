@@ -15,7 +15,6 @@ USE_LANGUAGES=		c
 USE_TOOLS=		gmake
 CFLAGS+=		-Wall -O3 -Wno-unused-function -ansi -fPIC -pthread
 CFLAGS+=		-Wl,-rpath=${PREFIX}/lib
-MAKE_FLAGS=		PACKAGING=YES
 CHECK_SHLIBS_SKIP=	bin/sonic
 
 .include "../../mk/bsd.pkg.mk"
