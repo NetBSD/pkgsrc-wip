@@ -1,40 +1,23 @@
 $NetBSD$
 
-Let pkgsrc manage flags, &c.
+Preserve PREFIX
 
 --- Makefile.orig	2023-10-12 22:32:47.000000000 +0000
 +++ Makefile
-@@ -11,6 +11,7 @@
+@@ -11,13 +11,13 @@
  # speech recognition.
  #USE_SPECTROGRAM=1
  
-+ifndef PACKAGING
- PREFIX=/usr
- 
+-PREFIX=/usr
+-
  UNAME := $(shell uname)
-@@ -18,6 +19,13 @@ ifeq ($(UNAME), Darwin)
-   PREFIX=/usr/local
+ ifeq ($(UNAME), Darwin)
+-  PREFIX=/usr/local
++  PREFIX?=/usr/local
  endif
  
-+#CFLAGS=-Wall -Wno-unused-function -g -ansi -fPIC -pthread
-+CFLAGS ?= -O3
-+CFLAGS += -Wall -Wno-unused-function -ansi -fPIC -pthread
-+
-+CC=gcc
-+endif
++PREFIX?=/usr
 +
  BINDIR=$(PREFIX)/bin
  LIBDIR=$(PREFIX)/lib
  INCDIR=$(PREFIX)/include
-@@ -35,11 +43,6 @@ ifeq ($(UNAME), Darwin)
-   LIB_TAG=
- endif
- 
--#CFLAGS=-Wall -Wno-unused-function -g -ansi -fPIC -pthread
--CFLAGS ?= -O3
--CFLAGS += -Wall -Wno-unused-function -ansi -fPIC -pthread
--
--CC=gcc
- 
- # Set NO_MALLOC=1 as a parameter to make to compile Sonic with static buffers
- # instead of calling malloc.  This is usefule primarily on microcontrollers.
