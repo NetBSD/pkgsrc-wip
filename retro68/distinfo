@@ -4,6 +4,7 @@ BLAKE2s (Retro68-2019.8.2.tar.gz) = 1d81caea9babe5882b9bf1549cc84c0c9ada3b2bccf2
 SHA512 (Retro68-2019.8.2.tar.gz) = 1d70e6248f915d6947ea95ea7f47d903b94115f582612ecfe4392692f26c855c77b0980088388f4ea2d3d2f11e943b4a568037611aa489b9556ae04751e71ccf
 Size (Retro68-2019.8.2.tar.gz) = 175241148 bytes
 SHA1 (patch-LaunchAPPL_Client_MiniVMac.cc) = fa1425a368d204d0fbd172f92c457c2a7526c0be
+SHA1 (patch-PEFTools_CMakeLists.txt) = 38a30fff70258812f535815e59b962c21d9cd81b
 SHA1 (patch-PEFTools_MakePEF.cc) = f3f4e71db8d73f98c5e32e6ed1abd09b9535b56f
 SHA1 (patch-ResourceFiles_ResourceFile.cc) = ea73eedfddb408169eb82beef7af132ee99096ef
 SHA1 (patch-gcc_newlib_libc_include___ansi.h) = 8943735eb0a8a9f5143c29b58b45d4bf4a523b21

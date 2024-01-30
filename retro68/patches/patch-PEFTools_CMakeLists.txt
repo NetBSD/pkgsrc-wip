@@ -1,0 +1,18 @@
+$NetBSD$
+
+In file included from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/alloca.h:11,
+                 from /tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/MakePEF.cc:9:
+/tmp/wip/retro68/work/Retro68-2019.8.2/PEFTools/../gcc/newlib/libc/include/sys/reent.h:13:10: fatal error: _ansi.h: No such file or directory
+   13 | #include <_ansi.h>
+      |          ^~~~~~~~~
+
+--- PEFTools/CMakeLists.txt.orig	2019-08-24 19:56:10.000000000 +0900
++++ PEFTools/CMakeLists.txt	2024-01-31 07:41:43.190879598 +0900
+@@ -2,6 +2,7 @@ find_package(Boost COMPONENTS filesystem
+ 
+ add_executable(MakePEF MakePEF.cc rs6000.h PEF.h)
+ target_include_directories(MakePEF PRIVATE ${CMAKE_INSTALL_PREFIX}/include)
++target_include_directories(MakePEF PRIVATE "../gcc/newlib/libc/include")
+ 
+ add_executable(MakeImport MakeImport.cc PEF.h)
+ target_link_libraries(MakeImport ResourceFiles ${Boost_LIBRARIES})
