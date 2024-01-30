@@ -6,7 +6,4 @@ Size (Retro68-2019.8.2.tar.gz) = 175241148 bytes
 SHA1 (patch-LaunchAPPL_Client_MiniVMac.cc) = fa1425a368d204d0fbd172f92c457c2a7526c0be
 SHA1 (patch-PEFTools_CMakeLists.txt) = 38a30fff70258812f535815e59b962c21d9cd81b
 SHA1 (patch-ResourceFiles_ResourceFile.cc) = ea73eedfddb408169eb82beef7af132ee99096ef
-SHA1 (patch-gcc_newlib_libc_include_alloca.h) = f1697a380b247c4e1a9a305c3456c9fd59b879f9
-SHA1 (patch-gcc_newlib_libc_include_sys_config.h) = b3cee661db099935895c97768477d17d1ca4fdce
-SHA1 (patch-gcc_newlib_libc_include_sys_features.h) = f4784803a1acfcf7d0acf13ba41988a83a7fe7e1
 SHA1 (patch-libelf_src_config.h) = 1a5d86716b8aaf16daaa1e17612b691c0afa32cb
