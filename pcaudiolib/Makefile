@@ -16,6 +16,20 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	automake autoconf autoreconf pkg-config
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-netbsd
+.else
+CONFIGURE_ARGS+=	--without-netbsd
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-coreaudio
+.else
+CONFIGURE_ARGS+=	--without-coreaudio
+.endif
+
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
 SUBST_CLASSES+=         oss

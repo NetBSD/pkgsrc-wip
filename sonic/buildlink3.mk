@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	sonic
 .if !defined(SONIC_BUILDLINK3_MK)
 SONIC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.sonic+=	sonic>=0.2.0
-BUILDLINK_ABI_DEPENDS.sonic+=	sonic>=0.2.0
+BUILDLINK_API_DEPENDS.sonic+=	sonic>=0.0.0.225
+BUILDLINK_ABI_DEPENDS.sonic+=	sonic>=0.0.0.225
 BUILDLINK_PKGSRCDIR.sonic?=	../../audio/sonic
 
 .endif # SONIC_BUILDLINK3_MK

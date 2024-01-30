@@ -10,8 +10,8 @@ Add Sun audio support
  		return object;
 -
 +#else
-+#if defined(_SUNAUDIO)       
-+	if ((object = create_sun_object(device, application_name, description)) != NULL)
++#if defined(__NetBSD__)       
++	if ((object = create_netbsd_object(device, application_name, description)) != NULL)
 +		return object;
  #else
  	if ((object = create_pulseaudio_object(device, application_name, description)) != NULL)

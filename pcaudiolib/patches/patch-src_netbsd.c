@@ -1,11 +1,9 @@
 $NetBSD$
 
-Add Sun audio support
-
---- src/sun.c.orig	2024-01-26 01:42:30.586543911 +0000
-+++ src/sun.c
-@@ -0,0 +1,195 @@
-+/* Sun Output.
+--- src/netbsd.c.orig	2024-01-30 01:47:27.652017641 +0000
++++ src/netbsd.c
+@@ -0,0 +1,198 @@
++/* Netbsd Output.
 + *
 + * Based on Oss Output by Reece H. Dunn
 + *
@@ -37,7 +35,7 @@ Add Sun audio support
 +#include <sys/ioctl.h>
 +#include <unistd.h>
 +
-+struct sun_object
++struct netbsd_object
 +{
 +	struct audio_object vtable;
 +	int fd;
@@ -46,15 +44,15 @@ Add Sun audio support
 +
 +};
 +
-+#define to_sun_object(object) container_of(object, struct sun_object, vtable)
++#define to_netbsd_object(object) container_of(object, struct netbsd_object, vtable)
 +
 +int
-+sun_object_open(struct audio_object *object,
++netbsd_object_open(struct audio_object *object,
 +                enum audio_object_format format,
 +                uint32_t rate,
 +                uint8_t channels)
 +{
-+	struct sun_object *self = to_sun_object(object);
++	struct netbsd_object *self = to_netbsd_object(object);
 +		
 +	if (self->fd != -1)
 +		return EEXIST;
@@ -62,10 +60,10 @@ Add Sun audio support
 +	struct aformat_sun
 +	{
 +		int audio_object_format;
-+		int sun_format;
-+		int sun_precision;
++		int netbsd_format;
++		int netbsd_precision;
 +	};
-+	struct aformat_sun aformat_sun_tbl[] = {
++	struct aformat_sun aformat_netbsd_tbl[] = {
 +		{AUDIO_OBJECT_FORMAT_ALAW, AUDIO_ENCODING_ALAW, 8},
 +		{AUDIO_OBJECT_FORMAT_ULAW, AUDIO_ENCODING_ULAW, 8},
 +		{AUDIO_OBJECT_FORMAT_S8, AUDIO_ENCODING_SLINEAR, 8},
@@ -92,57 +90,60 @@ Add Sun audio support
 +		{AUDIO_OBJECT_FORMAT_U32BE, AUDIO_ENCODING_ULINEAR_BE, 32},
 +		{AUDIO_OBJECT_FORMAT_ADPCM, AUDIO_ENCODING_ADPCM, 8},
 +	};
-+#define SUNFORMATS (sizeof(aformat_sun_tbl)/sizeof(aformat_sun_tbl[0]))
++#define NETBSDFORMATS (sizeof(aformat_netbsd_tbl)/sizeof(aformat_netbsd_tbl[0]))
 +	int i;
-+	for(i=0; i < SUNFORMATS; i++)
-+		if(aformat_sun_tbl[i].audio_object_format == format)
++	for(i=0; i < NETBSDFORMATS; i++)
++		if(aformat_netbsd_tbl[i].audio_object_format == format)
 +			break;
-+	if(i >= SUNFORMATS)
++	if(i >= NETBSDFORMATS)
 +		return EINVAL;
 +
-+	int data;
 +	audio_info_t audioinfo;
 +	if ((self->fd = open(self->device ? self->device : "/dev/audio", O_WRONLY, 0)) == -1)
 +		return errno;
-+	AUDIO_INITINFO(&audioinfo);
++	if (ioctl(self->fd, AUDIO_GETINFO, &audioinfo) == -1)
++		goto error;
 +	audioinfo.play.sample_rate = rate;
 +	audioinfo.play.channels = channels;
-+	audioinfo.play.precision = aformat_sun_tbl[i].sun_precision;
-+	audioinfo.play.encoding = aformat_sun_tbl[i].sun_format;	
++	audioinfo.play.precision = aformat_netbsd_tbl[i].netbsd_precision;
++	audioinfo.play.encoding = aformat_netbsd_tbl[i].netbsd_format;
++	/* Use the high and low water marks to achieve the desired latency (LATENCY is in ms) */
++	audioinfo.hiwat = (rate * channels * audioinfo.play.precision * LATENCY) / (1000 * audioinfo.blocksize);
++	audioinfo.lowat = (audioinfo.hiwat * 70) / 100;
 +	if (ioctl(self->fd, AUDIO_SETINFO, &audioinfo) == -1)
 +		goto error;
++	ioctl(self->fd, AUDIO_GETINFO, &audioinfo);
 +	return 0;
 +error:
-+	data = errno;
 +	close(self->fd);
 +	self->fd = -1;
-+	return data;
++	return errno;
 +}
 +
 +void
-+sun_object_close(struct audio_object *object)
++netbsd_object_close(struct audio_object *object)
 +{
-+	struct sun_object *self = to_sun_object(object);
++	struct netbsd_object *self = to_netbsd_object(object);
 +
-+	if (self->fd == -1) {
++	if (self->fd != -1) {
 +		close(self->fd);
 +		self->fd = -1;
 +	}
 +}
 +
 +void
-+sun_object_destroy(struct audio_object *object)
++netbsd_object_destroy(struct audio_object *object)
 +{
-+	struct sun_object *self = to_sun_object(object);
++	struct netbsd_object *self = to_netbsd_object(object);
 +
 +	free(self->device);
 +	free(self);
 +}
 +
 +int
-+sun_object_drain(struct audio_object *object)
++netbsd_object_drain(struct audio_object *object)
 +{
-+	struct sun_object *self = to_sun_object(object);
++	struct netbsd_object *self = to_netbsd_object(object);
 +
 +	if (ioctl(self->fd, AUDIO_DRAIN, NULL) == -1)
 +		return errno;
@@ -150,21 +151,21 @@ Add Sun audio support
 +}
 +
 +int
-+sun_object_flush(struct audio_object *object)
++netbsd_object_flush(struct audio_object *object)
 +{
-+	struct sun_object *self = to_sun_object(object);
++	struct netbsd_object *self = to_netbsd_object(object);
 +
-+	if (ioctl(self->fd, AUDIO_FLUSH, NULL) == -1)
++       	if (ioctl(self->fd, AUDIO_FLUSH, NULL) == -1)
 +		return errno;
 +	return 0;
 +}
 +
 +int
-+sun_object_write(struct audio_object *object,
++netbsd_object_write(struct audio_object *object,
 +                 const void *data,
 +                 size_t bytes)
 +{
-+	struct sun_object *self = to_sun_object(object);
++	struct netbsd_object *self = to_netbsd_object(object);
 +
 +	if (write(self->fd, data, bytes) == -1)
 +		return errno;
@@ -172,31 +173,31 @@ Add Sun audio support
 +}
 +
 +const char *
-+sun_object_strerror(struct audio_object *object,
++netbsd_object_strerror(struct audio_object *object,
 +                    int error)
 +{
 +	return strerror(error);
 +}
 +
 +struct audio_object *
-+create_sun_object(const char *device,
++create_netbsd_object(const char *device,
 +                  const char *application_name,
 +                  const char *description)
 +{
-+	struct sun_object *self = malloc(sizeof(struct sun_object));
++	struct netbsd_object *self = malloc(sizeof(struct netbsd_object));
 +	if (!self)
 +		return NULL;
 +
 +	self->fd = -1;
 +	self->device = device ? strdup(device) : NULL;
 +
-+	self->vtable.open = sun_object_open;
-+	self->vtable.close = sun_object_close;
-+	self->vtable.destroy = sun_object_destroy;
-+	self->vtable.write = sun_object_write;
-+	self->vtable.drain = sun_object_drain;
-+	self->vtable.flush = sun_object_flush;
-+	self->vtable.strerror = sun_object_strerror;
++	self->vtable.open = netbsd_object_open;
++	self->vtable.close = netbsd_object_close;
++	self->vtable.destroy = netbsd_object_destroy;
++	self->vtable.write = netbsd_object_write;
++	self->vtable.drain = netbsd_object_drain;
++	self->vtable.flush = netbsd_object_flush;
++	self->vtable.strerror = netbsd_object_strerror;
 +
 +	return &self->vtable;
 +}

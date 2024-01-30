@@ -3,8 +3,8 @@ $NetBSD$
 BLAKE2s (pcaudiolib-1.2.tar.gz) = 11dc27e944fb2edba51c0b4f1da100e7279e44e24821941e3fdd222c85b2da94
 SHA512 (pcaudiolib-1.2.tar.gz) = 803e8c36646f780b9e9a98600092af366ad47ecf9cb447b9b6c82b75eb316ee65674832fc0cbfa56ee4d508ae1d0f69890f5885817e6df3e2ecef54571b936d6
 Size (pcaudiolib-1.2.tar.gz) = 377066 bytes
-SHA1 (patch-Makefile.am) = 880ffb94a684952451b40aa34db94300119cbeeb
-SHA1 (patch-configure.ac) = 88238b7703d6ced3f7ed0934d507364d174941c3
-SHA1 (patch-src_audio.c) = b15ab14dac93cf10a282e488a17585f2999e58fe
-SHA1 (patch-src_audio__priv.h) = d9712a2d0a66e4f4f96ca8f8de4020beeffac828
-SHA1 (patch-src_sun.c) = f6f83d11f39f8c6d43894210813dcd5f551aa8a4
+SHA1 (patch-Makefile.am) = 3b43eb33eedcc72e5db3fd979b1ed063027e35fa
+SHA1 (patch-configure.ac) = b63548a43ba29e090533d1465917241afdfcfc06
+SHA1 (patch-src_audio.c) = 60151f3351d2edba425f2e83947c1177bde46c50
+SHA1 (patch-src_audio__priv.h) = 7c99cffc279d31b00deadd0a4690627bd7331863
+SHA1 (patch-src_netbsd.c) = b188ed04fef7aa55a5e41c5c8d54aa7c9cdb69db
