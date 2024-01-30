@@ -26,17 +26,19 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 USE_TOOLS=	cmake gmake pkg-config
 
-MAKE_ENV+=	VERBOSE=1
 MAKE_ENV+=	PYARROW_PARALLEL=${_MAKE_JOBS_N}
 WHEELFILE?=	${WRKSRC}/python/dist/pyarrow-${APACHE_ARROW_VERSION}-cp${_PYTHON_VERSION}-cp${_PYTHON_VERSION}-linux_x86_64.whl
 
 # libarrow_python.so: ORIGIN Doesn't get passed through correclty
-SUBST_CLASSES+=         origin
-SUBST_STAGE.origin=     pre-configure
-SUBST_FILES.origin=     python/CMakeLists.txt
-SUBST_SED.origin=       -e 's|\\$$ORIGIN|${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/pyarrow|g'
+SUBST_CLASSES+=		origin
+SUBST_STAGE.origin=	pre-configure
+SUBST_FILES.origin=	python/CMakeLists.txt
+SUBST_SED.origin=	-e 's|\\$$ORIGIN|${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/pyarrow|g'
 
+CONFIGURE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
+MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 do-build:
+	${RM} -rf ${WRKSRC}/python/.eggs
 	${RUN} cd ${WRKSRC}/python && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build_ext --build-type=relwithdebinfo bdist_wheel
 
 do-test:

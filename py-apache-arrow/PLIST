@@ -31,6 +31,7 @@ ${PYSITELIB}/pyarrow/_dataset_parquet.pxd
 ${PYSITELIB}/pyarrow/_dataset_parquet.pyx
 ${PYSITELIB}/pyarrow/_dataset_parquet.so
 ${PYSITELIB}/pyarrow/_dataset_parquet_encryption.pyx
+${PYSITELIB}/pyarrow/_dlpack.pxi
 ${PYSITELIB}/pyarrow/_feather.pyx
 ${PYSITELIB}/pyarrow/_feather.so
 ${PYSITELIB}/pyarrow/_flight.pyx
@@ -109,6 +110,7 @@ ${PYSITELIB}/pyarrow/include/arrow/acero/accumulation_queue.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/aggregate_node.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/api.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/asof_join_node.h
+${PYSITELIB}/pyarrow/include/arrow/acero/backpressure_handler.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/benchmark_util.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/bloom_filter.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/exec_plan.h
@@ -124,8 +126,10 @@ ${PYSITELIB}/pyarrow/include/arrow/acero/query_context.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/schema_util.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/task_util.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/test_nodes.h
+${PYSITELIB}/pyarrow/include/arrow/acero/time_series_util.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/tpch_node.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/type_fwd.h
+${PYSITELIB}/pyarrow/include/arrow/acero/unmaterialized_table.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/util.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/visibility.h
 ${PYSITELIB}/pyarrow/include/arrow/api.h
@@ -157,6 +161,8 @@ ${PYSITELIB}/pyarrow/include/arrow/buffer_builder.h
 ${PYSITELIB}/pyarrow/include/arrow/builder.h
 ${PYSITELIB}/pyarrow/include/arrow/c/abi.h
 ${PYSITELIB}/pyarrow/include/arrow/c/bridge.h
+${PYSITELIB}/pyarrow/include/arrow/c/dlpack.h
+${PYSITELIB}/pyarrow/include/arrow/c/dlpack_abi.h
 ${PYSITELIB}/pyarrow/include/arrow/c/helpers.h
 ${PYSITELIB}/pyarrow/include/arrow/chunk_resolver.h
 ${PYSITELIB}/pyarrow/include/arrow/chunked_array.h
@@ -169,6 +175,7 @@ ${PYSITELIB}/pyarrow/include/arrow/compute/cast.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/exec.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/expression.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/function.h
+${PYSITELIB}/pyarrow/include/arrow/compute/function_options.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/kernel.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/key_hash.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/key_map.h
@@ -341,6 +348,7 @@ ${PYSITELIB}/pyarrow/include/arrow/util/async_util.h
 ${PYSITELIB}/pyarrow/include/arrow/util/base64.h
 ${PYSITELIB}/pyarrow/include/arrow/util/basic_decimal.h
 ${PYSITELIB}/pyarrow/include/arrow/util/benchmark_util.h
+${PYSITELIB}/pyarrow/include/arrow/util/binary_view_util.h
 ${PYSITELIB}/pyarrow/include/arrow/util/bit_block_counter.h
 ${PYSITELIB}/pyarrow/include/arrow/util/bit_run_reader.h
 ${PYSITELIB}/pyarrow/include/arrow/util/bit_stream_utils.h
@@ -359,11 +367,7 @@ ${PYSITELIB}/pyarrow/include/arrow/util/bpacking_avx2.h
 ${PYSITELIB}/pyarrow/include/arrow/util/bpacking_avx512.h
 ${PYSITELIB}/pyarrow/include/arrow/util/bpacking_default.h
 ${PYSITELIB}/pyarrow/include/arrow/util/bpacking_neon.h
-${PYSITELIB}/pyarrow/include/arrow/util/bpacking_simd128_generated.h
-${PYSITELIB}/pyarrow/include/arrow/util/bpacking_simd256_generated.h
-${PYSITELIB}/pyarrow/include/arrow/util/bpacking_simd512_generated.h
 ${PYSITELIB}/pyarrow/include/arrow/util/byte_size.h
-${PYSITELIB}/pyarrow/include/arrow/util/byte_stream_split.h
 ${PYSITELIB}/pyarrow/include/arrow/util/cancel.h
 ${PYSITELIB}/pyarrow/include/arrow/util/checked_cast.h
 ${PYSITELIB}/pyarrow/include/arrow/util/compare.h
@@ -377,9 +381,11 @@ ${PYSITELIB}/pyarrow/include/arrow/util/crc32.h
 ${PYSITELIB}/pyarrow/include/arrow/util/debug.h
 ${PYSITELIB}/pyarrow/include/arrow/util/decimal.h
 ${PYSITELIB}/pyarrow/include/arrow/util/delimiting.h
+${PYSITELIB}/pyarrow/include/arrow/util/dict_util.h
 ${PYSITELIB}/pyarrow/include/arrow/util/dispatch.h
 ${PYSITELIB}/pyarrow/include/arrow/util/double_conversion.h
 ${PYSITELIB}/pyarrow/include/arrow/util/endian.h
+${PYSITELIB}/pyarrow/include/arrow/util/float16.h
 ${PYSITELIB}/pyarrow/include/arrow/util/formatting.h
 ${PYSITELIB}/pyarrow/include/arrow/util/functional.h
 ${PYSITELIB}/pyarrow/include/arrow/util/future.h
@@ -391,6 +397,7 @@ ${PYSITELIB}/pyarrow/include/arrow/util/io_util.h
 ${PYSITELIB}/pyarrow/include/arrow/util/iterator.h
 ${PYSITELIB}/pyarrow/include/arrow/util/key_value_metadata.h
 ${PYSITELIB}/pyarrow/include/arrow/util/launder.h
+${PYSITELIB}/pyarrow/include/arrow/util/list_util.h
 ${PYSITELIB}/pyarrow/include/arrow/util/logging.h
 ${PYSITELIB}/pyarrow/include/arrow/util/macros.h
 ${PYSITELIB}/pyarrow/include/arrow/util/map.h
@@ -734,6 +741,9 @@ ${PYSITELIB}/pyarrow/tests/test_dataset_encryption.pyo
 ${PYSITELIB}/pyarrow/tests/test_deprecations.py
 ${PYSITELIB}/pyarrow/tests/test_deprecations.pyc
 ${PYSITELIB}/pyarrow/tests/test_deprecations.pyo
+${PYSITELIB}/pyarrow/tests/test_dlpack.py
+${PYSITELIB}/pyarrow/tests/test_dlpack.pyc
+${PYSITELIB}/pyarrow/tests/test_dlpack.pyo
 ${PYSITELIB}/pyarrow/tests/test_exec_plan.py
 ${PYSITELIB}/pyarrow/tests/test_exec_plan.pyc
 ${PYSITELIB}/pyarrow/tests/test_exec_plan.pyo
