@@ -1,6 +1,6 @@
 $NetBSD$
 
-Add Sun audio support
+Add NetBSD native audio support
 
 --- src/audio.c.orig	2017-01-08 13:01:50.000000000 +0000
 +++ src/audio.c

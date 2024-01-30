@@ -1,6 +1,6 @@
 $NetBSD$
 
-Add sun.c to the source list when Sun audio is enabled
+Add netbsd.c to the source list when NetBSD native audio is enabled
 
 --- Makefile.am.orig	2018-03-14 09:47:45.000000000 +0000
 +++ Makefile.am

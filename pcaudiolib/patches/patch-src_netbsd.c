@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add NetBSD native audio support
+
 --- src/netbsd.c.orig	2024-01-30 01:47:27.652017641 +0000
 +++ src/netbsd.c
 @@ -0,0 +1,198 @@
