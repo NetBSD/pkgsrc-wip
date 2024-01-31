@@ -31,6 +31,9 @@ include/litehtml/el_text.h
 include/litehtml/el_title.h
 include/litehtml/el_tr.h
 include/litehtml/element.h
+include/litehtml/flex_item.h
+include/litehtml/flex_line.h
+include/litehtml/formatting_context.h
 include/litehtml/html.h
 include/litehtml/html_tag.h
 include/litehtml/iterators.h
@@ -40,7 +43,14 @@ include/litehtml/master_css.h
 include/litehtml/media_query.h
 include/litehtml/num_cvt.h
 include/litehtml/os_types.h
+include/litehtml/render_block.h
+include/litehtml/render_block_context.h
+include/litehtml/render_flex.h
+include/litehtml/render_image.h
+include/litehtml/render_inline.h
+include/litehtml/render_inline_context.h
 include/litehtml/render_item.h
+include/litehtml/render_table.h
 include/litehtml/string_id.h
 include/litehtml/style.h
 include/litehtml/stylesheet.h
