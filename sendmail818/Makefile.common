@@ -8,10 +8,9 @@
 
 DISTNAME=	sendmail.${DIST_VERS}
 CATEGORIES=	mail
-#MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
-#MASTER_SITES+=	ftp://ftp.sendmail.org/pub/sendmail/past-releases/
-#MASTER_SITES+=	ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/
-MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/snapshots/
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
+MASTER_SITES+=	ftp://ftp.sendmail.org/pub/sendmail/past-releases/
+MASTER_SITES+=	ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/
 
 # John has timed out?
 #OWNER?=		jnemeth@NetBSD.org
@@ -29,7 +28,7 @@ PATCHDIR=	${.CURDIR}/../../wip/sendmail818/patches
 
 USE_LANGUAGES=	c99
 
-DIST_VERS=	8.18.0.9
+DIST_VERS=	8.18.1
 
 MAKE_ENV+=	BSD_BINOWN=${BINOWN} BSD_BINGRP=${BINGRP} \
 		BSD_MANOWN=${MANOWN} BSD_MANGRP=${MANGRP} \
