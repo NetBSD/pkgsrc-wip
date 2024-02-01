@@ -4832,7 +4832,6 @@ SUBDIR+=	rawdog
 SUBDIR+=	rawgl
 SUBDIR+=	rawgl-git
 SUBDIR+=	raze
-SUBDIR+=	rbw
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rdsn-git
 SUBDIR+=	rdup
