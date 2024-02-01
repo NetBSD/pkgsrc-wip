@@ -7,4 +7,4 @@ SHA1 (patch-Makefile.am) = 98b94b9187db8c10980081fb2db54f4305734a71
 SHA1 (patch-configure.ac) = f5cfa55793b644572ccb3d26ae82d2699204e894
 SHA1 (patch-src_audio.c) = c249bf6b0efe3f6b9a6166b3ab7857314d73e297
 SHA1 (patch-src_audio__priv.h) = d38ff94692362e8e801c9a7f671b8ac46bdf8b21
-SHA1 (patch-src_netbsd.c) = 3dd7341aedbb8da43ab93436cd6522a0d162af83
+SHA1 (patch-src_netbsd.c) = 96ff1f35bbcee8107b33166a4daad902c9a1e1b9

@@ -2,9 +2,9 @@ $NetBSD$
 
 Add NetBSD native audio support
 
---- src/netbsd.c.orig	2024-01-30 01:47:27.652017641 +0000
+--- src/netbsd.c.orig	2024-01-30 02:16:50.046541412 +0000
 +++ src/netbsd.c
-@@ -0,0 +1,198 @@
+@@ -0,0 +1,193 @@
 +/* Netbsd Output.
 + *
 + * Based on Oss Output by Reece H. Dunn
@@ -103,18 +103,13 @@ Add NetBSD native audio support
 +	audio_info_t audioinfo;
 +	if ((self->fd = open(self->device ? self->device : "/dev/audio", O_WRONLY, 0)) == -1)
 +		return errno;
-+	if (ioctl(self->fd, AUDIO_GETINFO, &audioinfo) == -1)
-+		goto error;
++	AUDIO_INITINFO(&audioinfo);
 +	audioinfo.play.sample_rate = rate;
 +	audioinfo.play.channels = channels;
 +	audioinfo.play.precision = aformat_netbsd_tbl[i].netbsd_precision;
 +	audioinfo.play.encoding = aformat_netbsd_tbl[i].netbsd_format;
-+	/* Use the high and low water marks to achieve the desired latency (LATENCY is in ms) */
-+	audioinfo.hiwat = (rate * channels * audioinfo.play.precision * LATENCY) / (1000 * audioinfo.blocksize);
-+	audioinfo.lowat = (audioinfo.hiwat * 70) / 100;
 +	if (ioctl(self->fd, AUDIO_SETINFO, &audioinfo) == -1)
 +		goto error;
-+	ioctl(self->fd, AUDIO_GETINFO, &audioinfo);
 +	return 0;
 +error:
 +	close(self->fd);
