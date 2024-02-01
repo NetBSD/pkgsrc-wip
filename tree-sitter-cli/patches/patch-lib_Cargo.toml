@@ -1,0 +1,28 @@
+$NetBSD$
+
+Workaround unpublished crates.
+
+--- lib/Cargo.toml.orig	2024-01-29 19:58:37.726146718 +0000
++++ lib/Cargo.toml
+@@ -29,15 +29,17 @@ wasm = ["wasmtime", "wasmtime-c-api"]
+ regex = "1.9.1"
+ 
+ [dependencies.wasmtime]
+-git = "https://github.com/bytecodealliance/wasmtime"
+-rev = "fa6fcd946b8f6d60c2d191a1b14b9399e261a76d"
++#git = "https://github.com/bytecodealliance/wasmtime"
++#rev = "fa6fcd946b8f6d60c2d191a1b14b9399e261a76d"
++path = "../../vendor/wasmtime-fa6fcd946b8f6d60c2d191a1b14b9399e261a76d"
+ optional = true
+ default-features = false
+ features = ["cranelift"]
+ 
+ [dependencies.wasmtime-c-api]
+-git = "https://github.com/bytecodealliance/wasmtime"
+-rev = "fa6fcd946b8f6d60c2d191a1b14b9399e261a76d"
++#git = "https://github.com/bytecodealliance/wasmtime"
++#rev = "fa6fcd946b8f6d60c2d191a1b14b9399e261a76d"
++path = "../../vendor/wasmtime-fa6fcd946b8f6d60c2d191a1b14b9399e261a76d"
+ optional = true
+ package = "wasmtime-c-api-impl"
+ default-features = false
