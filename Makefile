@@ -82,7 +82,6 @@ SUBDIR+=	R-urltools
 SUBDIR+=	R-wellknown
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
-SUBDIR+=	Retro68
 SUBDIR+=	RigelEngine
 SUBDIR+=	SDL2_testgamecontroller
 SUBDIR+=	SNAP
