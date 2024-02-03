@@ -78,9 +78,6 @@ ${PYSITELIB}/distributed/comm/__init__.pyo
 ${PYSITELIB}/distributed/comm/addressing.py
 ${PYSITELIB}/distributed/comm/addressing.pyc
 ${PYSITELIB}/distributed/comm/addressing.pyo
-${PYSITELIB}/distributed/comm/asyncio_tcp.py
-${PYSITELIB}/distributed/comm/asyncio_tcp.pyc
-${PYSITELIB}/distributed/comm/asyncio_tcp.pyo
 ${PYSITELIB}/distributed/comm/core.py
 ${PYSITELIB}/distributed/comm/core.pyc
 ${PYSITELIB}/distributed/comm/core.pyo
@@ -192,6 +189,9 @@ ${PYSITELIB}/distributed/diagnostics/__init__.pyo
 ${PYSITELIB}/distributed/diagnostics/cluster_dump.py
 ${PYSITELIB}/distributed/diagnostics/cluster_dump.pyc
 ${PYSITELIB}/distributed/diagnostics/cluster_dump.pyo
+${PYSITELIB}/distributed/diagnostics/cudf.py
+${PYSITELIB}/distributed/diagnostics/cudf.pyc
+${PYSITELIB}/distributed/diagnostics/cudf.pyo
 ${PYSITELIB}/distributed/diagnostics/eventstream.py
 ${PYSITELIB}/distributed/diagnostics/eventstream.pyc
 ${PYSITELIB}/distributed/diagnostics/eventstream.pyo
