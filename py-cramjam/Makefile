@@ -1,14 +1,11 @@
 # $NetBSD$
 
-VERSION=		2.7.0
-PKGVERSION_NOREV=	${VERSION}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
-DISTNAME=		pyrus-cramjam-${VERSION}
-PKGNAME=		${PYPKGPREFIX}-cramjam-${VERSION}
-WHEEL_NAME=		cramjam-${VERSION}
-GITHUB_PROJECT=		pyrus-cramjam
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GITHUB:=milesgranger/}
+VERSION=	2.8.1
+DISTNAME=	cramjam-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-cramjam-${VERSION}
+WHEEL_NAME=	cramjam-${VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cramjam/}
 
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://github.com/milesgranger/pyrus-cramjam
@@ -25,7 +22,7 @@ do-build:
 
 # Test Requires install
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s cramjam-python/tests
 
 WHEELFILE=		${WRKSRC}/target/wheels/*.whl
 
