@@ -1,6 +1,6 @@
 # $NetBSD$
 
-GITHUB_TAG=	2023.11.0
+GITHUB_TAG=	2024.1.1
 DISTNAME=	dask-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 GITHUB_PROJECT=	dask
@@ -18,8 +18,8 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-TOOL_DEPENDS+=       ${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-TOOL_DEPENDS+=       ${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
 DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=1.5.0:../../wip/py-cloudpickle
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
@@ -39,8 +39,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-TEST_DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.6.0*:../../devel/py-multipledispatch
-TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.6.0*:../../devel/py-importlib-metadata
+TEST_DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.6.0:../../devel/py-multipledispatch
+TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.6.0:../../devel/py-importlib-metadata
 TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
 # TEST_DEPENDS+=	${PYPKGPREFIX}-s3fs>=2022*:../../wip/py-s3fs
 # TEST_DEPENDS+=	${PYPKGPREFIX}-sparse>=0.11.2:../../wip/py-sparse

@@ -329,6 +329,9 @@ ${PYSITELIB}/dask/compatibility.pyo
 ${PYSITELIB}/dask/config.py
 ${PYSITELIB}/dask/config.pyc
 ${PYSITELIB}/dask/config.pyo
+${PYSITELIB}/dask/conftest.py
+${PYSITELIB}/dask/conftest.pyc
+${PYSITELIB}/dask/conftest.pyo
 ${PYSITELIB}/dask/context.py
 ${PYSITELIB}/dask/context.pyc
 ${PYSITELIB}/dask/context.pyo
@@ -352,6 +355,9 @@ ${PYSITELIB}/dask/dataframe/_pyarrow.pyo
 ${PYSITELIB}/dask/dataframe/_pyarrow_compat.py
 ${PYSITELIB}/dask/dataframe/_pyarrow_compat.pyc
 ${PYSITELIB}/dask/dataframe/_pyarrow_compat.pyo
+${PYSITELIB}/dask/dataframe/_testing.py
+${PYSITELIB}/dask/dataframe/_testing.pyc
+${PYSITELIB}/dask/dataframe/_testing.pyo
 ${PYSITELIB}/dask/dataframe/accessor.py
 ${PYSITELIB}/dask/dataframe/accessor.pyc
 ${PYSITELIB}/dask/dataframe/accessor.pyo
@@ -728,6 +734,9 @@ ${PYSITELIB}/dask/tests/test_system.pyo
 ${PYSITELIB}/dask/tests/test_threaded.py
 ${PYSITELIB}/dask/tests/test_threaded.pyc
 ${PYSITELIB}/dask/tests/test_threaded.pyo
+${PYSITELIB}/dask/tests/test_tokenize.py
+${PYSITELIB}/dask/tests/test_tokenize.pyc
+${PYSITELIB}/dask/tests/test_tokenize.pyo
 ${PYSITELIB}/dask/tests/test_traceback.py
 ${PYSITELIB}/dask/tests/test_traceback.pyc
 ${PYSITELIB}/dask/tests/test_traceback.pyo
