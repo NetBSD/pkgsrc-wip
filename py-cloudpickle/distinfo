@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (cloudpickle-2.2.1.tar.gz) = de150c0f85fcb18d92bc7c0be8ac6664d2ae6f65dfccd2ce246e0a7e5cb29371
-SHA512 (cloudpickle-2.2.1.tar.gz) = a0174a382d531180704a90a4da4f83e1d1c90ebf4ad181778bed073763bf43104b7049ced12abc360948343d105a4390cb514585a1b493217a53a5b2c45cfde6
-Size (cloudpickle-2.2.1.tar.gz) = 60800 bytes
+BLAKE2s (cloudpickle-3.0.0.tar.gz) = 4c034397be918388c0e3d0232aebcd480468bb28397e1caa4817c7bf078d8e37
+SHA512 (cloudpickle-3.0.0.tar.gz) = c20b5674a710a6011bedecaf1adfc9f85e74b0b61f89b44c93624f4c73a6c1b9f81ab8f82cbc386d637a990b152dacc48ef8abc9c7718ef2e252e504d4b76773
+Size (cloudpickle-3.0.0.tar.gz) = 21231 bytes
