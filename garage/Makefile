@@ -5,7 +5,7 @@ PKGNAME=	garage-${DISTNAME:S,^v,,}
 CATEGORIES=	www
 MASTER_SITES=	https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/
 
-MAINTAINER=	wernery@greenbaum.cloud
+MAINTAINER=	jhonas.wernery@mnxsolutions.com
 HOMEPAGE=	https://git.deuxfleurs.fr/Deuxfleurs
 COMMENT=	S3-compatible object store for small self-hosted deployments
 LICENSE=	gnu-agpl-v3
