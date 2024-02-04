@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (dnaio-1.2.0.tar.gz) = 798b8c22234423de1c9f088cb5bc2b8b6a5fd2999b1021dfa07d1bab2d1fe48e
+SHA512 (dnaio-1.2.0.tar.gz) = 049d97e73c327b2370fa5500a4fbe3a560eed24d37e1203553a8427dc7c17efc1c6efcbd46e7dd1291fc0ebe2e2d830d6184d3d7bd150c873472505093d3752d
+Size (dnaio-1.2.0.tar.gz) = 58225 bytes
