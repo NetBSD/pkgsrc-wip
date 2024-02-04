@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (opendbx-1.4.6.tar.gz) = f3a069a5b1e3ac347d87dacc21744ce4b01ce4822f39c23cc35d14612224ca74
+SHA512 (opendbx-1.4.6.tar.gz) = dd6d53d29157057dbf4e273fd82c7694e8bc626d3409d6ab9c25627a0fec96418326550fa8004b5341facdc4cd8aae12516224e8bb84e2562482885780ff0e55
+Size (opendbx-1.4.6.tar.gz) = 587514 bytes
