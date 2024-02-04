@@ -1,0 +1,19 @@
+@comment $NetBSD$
+bin/odbx-sql
+include/odbx.h
+include/opendbx/api
+include/opendbx/api.h
+lib/libopendbx.la
+lib/libopendbxplus.la
+lib/opendbx/libmysqlbackend.la
+lib/opendbx/libpgsqlbackend.la
+lib/opendbx/libsqlite3backend.la
+lib/pkgconfig/opendbx.pc
+lib/pkgconfig/opendbxplus.pc
+share/locale/de/LC_MESSAGES/opendbx-utils.mo
+share/locale/de/LC_MESSAGES/opendbx.mo
+share/locale/en@quot/LC_MESSAGES/opendbx-utils.mo
+share/locale/en@quot/LC_MESSAGES/opendbx.mo
+share/opendbx/keywords
+@pkgdir man/man3
+@pkgdir man/man1
