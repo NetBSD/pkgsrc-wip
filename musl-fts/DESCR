@@ -1,0 +1,2 @@
+Implements the fts(3) functions fts_open, fts_read, fts_children,
+fts_set and fts_close, which are missing in musl libc.

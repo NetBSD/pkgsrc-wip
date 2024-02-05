@@ -2335,6 +2335,7 @@ SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
 SUBDIR+=	musl
+SUBDIR+=	musl-fts
 SUBDIR+=	mutter
 SUBDIR+=	mutter-linux
 SUBDIR+=	muttprint

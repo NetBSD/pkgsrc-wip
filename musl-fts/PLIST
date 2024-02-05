@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/fts.h
+lib/libfts.la
+lib/pkgconfig/musl-fts.pc

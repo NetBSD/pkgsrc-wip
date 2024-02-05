@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (musl-fts-1.2.7.tar.gz) = 17995fb2cf3fe4287ab0d9f4f0047e72dd18537d35fc9c6da737576edb545cb3
+SHA512 (musl-fts-1.2.7.tar.gz) = 949f73b9406b06bd8712c721b4ec89afcb37d4eaef5666cccf3712242d3a57fc0acf3ca994934e0f57c1e92f40521a9370132a21eb6d1957415a83c76bf20feb
+Size (musl-fts-1.2.7.tar.gz) = 19336 bytes
