@@ -1,0 +1,4 @@
+ - Test across OSes
+ - Implement options (fim author's request)
+ - Check dependencies and configure output with fim author (per his
+   request)
