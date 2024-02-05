@@ -888,6 +888,7 @@ SUBDIR+=	fidocrypt-git
 SUBDIR+=	filepp
 SUBDIR+=	filerunner
 SUBDIR+=	filevercmp
+SUBDIR+=	fim
 SUBDIR+=	findugendev
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf

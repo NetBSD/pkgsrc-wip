@@ -1,0 +1,23 @@
+@comment $NetBSD$
+bin/fim
+bin/fimgs
+man/man1/fim.1
+man/man1/fimgs.1
+man/man5/fimrc.5
+share/doc/fim/AUTHORS
+share/doc/fim/BUGS
+share/doc/fim/ChangeLog
+share/doc/fim/FAQ.TXT
+share/doc/fim/FIM.TXT
+share/doc/fim/FIM.html
+share/doc/fim/NEWS
+share/doc/fim/NEWS.in
+share/doc/fim/README
+share/doc/fim/README.FIRST
+share/doc/fim/README.md
+share/doc/fim/TODO
+share/doc/fim/VERSION
+share/doc/fim/fim.man.html
+share/doc/fim/fimgs.man.html
+share/doc/fim/fimrc
+share/doc/fim/fimrc.man.html

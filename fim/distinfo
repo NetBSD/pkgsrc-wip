@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (fim-0.6-rc2.tar.bz2) = b5086e241df1d9afd083ea1bd59756fbce3da658bd490e58feb4ced959c4c339
+SHA512 (fim-0.6-rc2.tar.bz2) = 0bf14b1f31f5fce8df0f31b6b72d63df9186b92b94c0f4787945f4750b4e100b2af55adc860e8d427e90026aedf6dd15fc7a373d718cf029b671c7887191ee7e
+Size (fim-0.6-rc2.tar.bz2) = 718903 bytes
+SHA1 (patch-configure.ac) = c7197d5c9900ed9dda357448008d67ae7d48a050

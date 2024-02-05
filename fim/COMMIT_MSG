@@ -1,0 +1,4 @@
+graphics/fim: Import fim-0.6rc2 from wip
+
+Lightweight universal image viewer, aiming to be a highly customizable
+and scriptable for users who are comfortable with software vim and mutt.
