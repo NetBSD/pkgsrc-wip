@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	opendbxplus.pc.in
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../databases/mariadb106-client/buildlink3.mk"
-.include "../../databases/postgresql16-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
