@@ -1,0 +1,15 @@
+$NetBSD$
+
+crypto.so is missing in this makefile but exists in GNUmakefile.
+
+--- util-src/makefile.orig	2024-02-04 18:14:44.266419142 +0000
++++ util-src/makefile
+@@ -7,7 +7,7 @@ TARGET?=../util/
+ 
+ ALL=encodings.so hashes.so net.so pposix.so signal.so table.so \
+     ringbuffer.so time.so poll.so compat.so strbitop.so \
+-    struct.so
++    struct.so crypto.so
+ 
+ .ifdef $(RANDOM)
+ ALL+=crand.so

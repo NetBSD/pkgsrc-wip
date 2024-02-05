@@ -1,0 +1,35 @@
+$NetBSD: patch-makefile,v 1.2 2022/05/08 21:24:12 khorben Exp $
+
+Fix installation directories and scripts
+
+--- makefile.orig	2022-03-08 12:34:39.594708341 +0000
++++ makefile
+@@ -6,7 +6,7 @@ CONFIG = $(DESTDIR)$(SYSCONFDIR)
+ MODULES = $(DESTDIR)$(LIBDIR)/prosody/modules
+ SOURCE = $(DESTDIR)$(LIBDIR)/prosody
+ DATA = $(DESTDIR)$(DATADIR)
+-MAN = $(DESTDIR)$(PREFIX)/share/man
++MAN = $(DESTDIR)$(PREFIX)/man
+ 
+ INSTALLEDSOURCE = $(LIBDIR)/prosody
+ INSTALLEDCONFIG = $(SYSCONFDIR)
+@@ -33,7 +33,9 @@ all: prosody.install prosodyctl.install 
+ install-etc: prosody.cfg.lua.install
+ 	$(MKDIR) $(CONFIG)
+ 	$(MKDIR) $(CONFIG)/certs
+-	test -f $(CONFIG)/prosody.cfg.lua || $(INSTALL_DATA) prosody.cfg.lua.install $(CONFIG)/prosody.cfg.lua
++	$(INSTALL_DATA) certs/GNUmakefile certs/localhost.cnf $(CONFIG)/certs
++	$(INSTALL_DATA) certs/makefile certs/openssl.cnf $(CONFIG)/certs
++	$(INSTALL_DATA) prosody.cfg.lua.install $(CONFIG)/prosody.cfg.lua
+ .if $(EXCERTS) == "yes"
+ 	$(INSTALL_DATA) certs/localhost.crt certs/localhost.key $(CONFIG)/certs
+ 	$(INSTALL_DATA) certs/example.com.crt certs/example.com.key $(CONFIG)/certs
+@@ -63,7 +65,7 @@ install-util: util/encodings.so util/enc
+ 	$(MKDIR) $(SOURCE)/util
+ 	$(INSTALL_DATA) util/*.lua $(SOURCE)/util
+ 	$(MAKE) install -C util-src
+-	$(INSTALL_DATA) util/*.so $(SOURCE)/util
++	$(INSTALL_EXEC) util/*.so $(SOURCE)/util
+ 	$(MKDIR) $(SOURCE)/util/sasl
+ 	$(INSTALL_DATA) util/sasl/*.lua $(SOURCE)/util/sasl
+ 	$(MKDIR) $(SOURCE)/util/human

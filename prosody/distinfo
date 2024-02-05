@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (patch-makefile) = 8971d0a898ca7bf38f0d79322e2d0c381334c37c
+SHA1 (patch-prosody.cfg.lua.dist) = a1e4636abe4f2caa82d13ed8564b5b785dc8595a
+SHA1 (patch-util-src_crypto.c) = c4ec55329d2b73e86c9fd5d2d710679a298170bf
+SHA1 (patch-util-src_makefile) = 769516300e4ad966aedb09a2ce9e92e887a2dace
+SHA1 (patch-util-src_pposix.c) = a43388153f301d2507a936312e0ebf7da067a438
