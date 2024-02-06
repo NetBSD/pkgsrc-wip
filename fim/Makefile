@@ -11,29 +11,25 @@ HOMEPAGE=	https://www.nongnu.org/fbi-improved/
 COMMENT=	Lightweight universal image viewer
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake flex bison	# won't work with other
-USE_TOOLS+=	perl bash:run
+.include "../../mk/bsd.prefs.mk"
+
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config gmake flex bison perl bash:run
 # for patched configure.ac, remove when upstreamed
-USE_TOOLS+=	aclocal autoheader autoconf automake
-USE_LANGUAGES=	c c++
+USE_TOOLS+=		aclocal autoheader autoconf automake
+USE_LANGUAGES=		c c++
+#USE_CXX_FEATURES+=	c++11	# starting with fim-0.7
 
-REPLACE_PERL+=	doc/vim2html.pl
-REPLACE_BASH+=	src/fimgs
+REPLACE_PERL+=		doc/vim2html.pl
+REPLACE_BASH+=		src/fimgs
 
-TEST_TARGET=	tests
+TEST_TARGET=		tests
 
 # for patched configure.ac, remove when upstreamed
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
-.include "../../devel/SDL2/buildlink3.mk"
+.include "options.mk"
+
 .include "../../devel/readline/buildlink3.mk"	# needs GNU
-.include "../../graphics/aalib/buildlink3.mk"
-.include "../../graphics/giflib/buildlink3.mk"
-.include "../../graphics/libcaca/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -2,3 +2,5 @@
  - Implement options (fim author's request)
  - Check dependencies and configure output with fim author (per his
    request)
+ - libufraw is supported but not yet packaged
+ - Add or correct unregistered options
