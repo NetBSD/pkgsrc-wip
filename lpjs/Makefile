@@ -5,11 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.0.265
+DISTNAME=	lpjs-0.0.0.269
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	b24fc4bfd5128712ab6e53ced28e5162cf249834
+GITHUB_TAG=	b2f582e4973314b6fbf49e041eaedfb23b1fbdc9
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -18,6 +18,9 @@ LICENSE=	2-clause-bsd
 
 DEPENDS=	auto-admin>0:../../wip/auto-admin
 
+# Force install with full debug info until release
+CFLAGS+=	-g
+MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes
 LDFLAGS.SunOS=	-lresolv -lsocket -lnsl
 
 EGDIR=		${PREFIX}/share/examples/lpjs
