@@ -1,1 +1,3 @@
 Don't link correctly on SunOS, missing __extendhfdf2
+The above is fixed in gcc 14. see:
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=113700
