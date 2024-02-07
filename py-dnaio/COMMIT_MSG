@@ -1,0 +1,5 @@
+biology/py-dnaio: Update to 1.2.0
+
+Numerous bug fixes and enhancements since 0.9.1
+Changes: https://github.com/marcelm/dnaio/tags
+Reported by: portscout
