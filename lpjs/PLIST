@@ -1,8 +1,8 @@
 @comment $NetBSD$
 bin/lpjs
 lib/liblpjs.a
+libexec/lpjs/create-script
 libexec/lpjs/jobs
-libexec/lpjs/lpjs-create-script
 libexec/lpjs/menu
 libexec/lpjs/nodes
 libexec/lpjs/sim
