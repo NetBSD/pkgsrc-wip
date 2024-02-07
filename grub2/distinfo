@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v$
+$NetBSD: distinfo,v 1.12 2021/10/26 11:19:39 nia Exp $
 
 BLAKE2s (grub-2.12.tar.xz) = 6d20361f04dc5145fa17b4ba299d240cbe8d5a3efddd0484a879c3e2cf8f5836
 SHA512 (grub-2.12.tar.xz) = 761c060a4c3da9c0e810b0ea967e3ebc66baa4ddd682a503ae3d30a83707626bccaf49359304a16b3a26fc4435fe6bea1ee90be910c84de3c2b5485a31a15be3

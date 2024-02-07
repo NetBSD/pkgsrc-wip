@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/05/09 12:17:52 triaxx Exp $
+# $NetBSD: options.mk,v 1.5 2023/06/06 12:42:19 riastradh Exp $
 #
 
 #
@@ -9,8 +9,8 @@
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grub2
-PKG_SUPPORTED_OPTIONS=	debug freetype fuse
-PKG_SUGGESTED_OPTIONS=	freetype fuse
+PKG_SUPPORTED_OPTIONS=	debug freetype fuse grub-efi
+PKG_SUGGESTED_OPTIONS=	freetype
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,22 +25,22 @@ CONFIGURE_ARGS+=	--enable-mm-debug
 CONFIGURE_ARGS+=	--disable-mm-debug
 .endif
 
-# ###
-# ### FreeType support
-# ###
+###
+### FreeType support
+###
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+=	--enable-grub-mkfont
 PLIST.freetype=		yes
-BUILD_DEPENDS+=		dejavu-ttf>=2.34nb1:../../fonts/dejavu-ttf
-BUILD_DEPENDS+=		unifont-[0-9]*:../../fonts/unifont
+TOOL_DEPENDS+=		dejavu-ttf>=2.34nb1:../../fonts/dejavu-ttf
+TOOL_DEPENDS+=		unifont-[0-9]*:../../fonts/unifont
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-grub-mkfont
 .endif
 
-# ###
-# ### FUSE support
-# ###
+###
+### FUSE support
+###
 .if !empty(PKG_OPTIONS:Mfuse)
 CONFIGURE_ARGS+=	--enable-grub-mount
 PLIST.fuse=		yes
@@ -48,3 +48,25 @@ PLIST.fuse=		yes
 .else
 CONFIGURE_ARGS+=	--disable-grub-mount
 .endif
+
+#
+# The configure script sets the variables `target_cpu' and `platform', which
+# are used for the location of the library directory.  The following mimics
+# the configure script's behavior for i386 and x86_64.
+#
+GRUB_TARGET_CPU=	${MACHINE_ARCH}
+.if ${LOWER_VENDOR} == "apple" || !empty(PKG_OPTIONS:Mgrub-efi)
+GRUB_PLATFORM=		efi
+.else
+.  if !defined(GRUB_PLATFORM)
+GRUB_PLATFORM=		pc
+.  endif
+.endif
+.if ${GRUB_TARGET_CPU} == "x86_64" && ${GRUB_PLATFORM} == "pc"
+GRUB_TARGET_CPU=	i386
+.endif
+PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
+PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
+PLIST_VARS+=		efi
+PLIST_VARS+=		pc
+PLIST.${GRUB_PLATFORM}=	yes

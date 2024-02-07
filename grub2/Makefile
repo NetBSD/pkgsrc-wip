@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/05/24 19:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/12 13:23:32 wiz Exp $
 
 DISTNAME=		grub-2.12
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -14,9 +14,6 @@ LICENSE=		gnu-gpl-v3
 
 TOOL_DEPENDS+=		help2man>=1.36:../../converters/help2man
 
-GCC_REQD+=		4.4
-FLEX_REQD+=		2.5.35
-
 CONFLICTS=		grub-[0-9]*
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
@@ -26,9 +23,6 @@ MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
 SSP_SUPPORTED=		no
 
-# kernel.img in grub-core sometimes doesn't exist for the 'install' rule
-MAKE_JOBS_SAFE=		no
-
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake flex bison gettext:run gawk pkg-config
 
@@ -36,43 +30,35 @@ USE_TOOLS+=		gmake flex bison gettext:run gawk pkg-config
 PYTHON_FOR_BUILD_ONLY=	tool
 
 GNU_CONFIGURE=		yes
+#CONFIGURE_ARGS+=	AWK=/usr/pkg/bin/gawk
+#CONFIGURE_ARGS+=	YACC=/usr/pkg/bin/bison
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-efiemu
 CONFIGURE_ARGS+=	--disable-grub-emu-sdl
 CONFIGURE_ARGS+=	--disable-grub-emu-pci
 CONFIGURE_ARGS+=	--disable-werror
-
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
-
-MAKE_FLAGS+=	BUILD_LDFLAGS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS+=		-Wno-unused-value
-
-post-configure:
-	touch work/${DISTNAME}/grub-core/extra_deps.lst
-
-#post-build:
-#cd ${WRKSRC}/grub-core && ${GMAKE} kernel.img
+MAKE_FLAGS+=		BUILD_LDFLAGS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 #
-# The configure script sets the variables `target_cpu' and `platform', which
-# are used for the location of the library directory.  The following mimics
-# the configure script's behavior for i386 and x86_64.
+# Build requirements, taken from the INSTALL file in GRUB's distribution:
 #
-GRUB_TARGET_CPU=	${MACHINE_ARCH}
-.if ${LOWER_VENDOR} == "apple"
-GRUB_PLATFORM=		efi
-.else
-GRUB_PLATFORM=		pc
-.endif
-.if ${GRUB_TARGET_CPU} == "x86_64" && ${GRUB_PLATFORM} == "pc"
-GRUB_TARGET_CPU=	i386
-.endif
-PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
-PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
+# - GCC >= 4.1.3	(in fact >= 4.4 is required for a successful build)
+# - Flex >= 2.5.35
+# - gettext >= 0.17	(the need for >= 0.17 seems to only concern msgfmt)
+#
+# Additionnaly, help2man is required to generate the manual pages.
+#
+GCC_REQD+=		4.4
+FLEX_REQD+=		2.5.35
+
+CONFIGURE_ARGS+=	--target=${GRUB_TARGET_CPU}
+CONFIGURE_ARGS+=	--with-platform=${GRUB_PLATFORM}
 
 #
 # Unset ABI to prevent pkgsrc's gcc wrapper from messing with -m flags.
@@ -103,6 +89,10 @@ CONF_FILES_PERMS+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file} ${REAL_ROOT_USER} 
 .endfor
 CONF_FILES+=		${EGDIR}/README ${PKG_SYSCONFDIR}/README
 CONF_FILES+=		${EGDIR}/default.conf.sample ${PKG_SYSCONFDIR}/default.conf
+
+post-extract:
+	[ -f  ${WRKSRC}/grub-core/extra_deps.lst ] || \
+	touch ${WRKSRC}/grub-core/extra_deps.lst
 
 post-install: do-install-custom-config
 
@@ -148,7 +138,13 @@ SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
 
+#
+# Includes.
+#
 .include "options.mk"
+
+# build needs 'strip' for build, and this setting removes it
+INSTALL_UNSTRIPPED=no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
