@@ -754,6 +754,7 @@ SUBDIR+=	edid-decode
 SUBDIR+=	editorconfig-checker
 SUBDIR+=	eduke32
 SUBDIR+=	efgallery
+SUBDIR+=	efibootmgr
 SUBDIR+=	efivar
 SUBDIR+=	efl
 SUBDIR+=	efltk

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (efibootmgr-18.tar.bz2) = 19958abaefd6251da42172cb5e8a74389df21dc6cfab2e776e74eb0505e6f5e9
+SHA512 (efibootmgr-18.tar.bz2) = 59112a3da3bad782ae893e1390f5a371474392f9779a2769a9d56335760b611b5330fe57b46e8d858d237786230162a0947261769c02c960549be6c1f6a5f4a6
+Size (efibootmgr-18.tar.bz2) = 40439 bytes
+SHA1 (patch-src_efi.c) = 2809fb2a33819a25bc3aaf96adccdc28d43bcf0c
