@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (plasma-integration-5.24.6.tar.xz) = a499984ec63707a0b7c7542b883ceea83b813fa23d2d2f94c857f53a9b80af17
-SHA512 (plasma-integration-5.24.6.tar.xz) = 9ed2e42d5705f8680321377635b204bf06548869e661ea1c42b07dc12ac707f57e5287c987d50d9e31a61ab4e751841a307f1db0a377ca332e1fb602cc9bca56
-Size (plasma-integration-5.24.6.tar.xz) = 83748 bytes
+BLAKE2s (plasma-integration-5.27.10.tar.xz) = f30fa68deef7c059487d2ef6f84d1b7bc5318cf9d4f6c9a4e0478d1455d93f02
+SHA512 (plasma-integration-5.27.10.tar.xz) = a69b65cbf5cbabdb53359adb067ed673bf5582c1768aba7a6f5377f17369f95e9646e23bbac3efa0d67e12cc3705e6411e4d1a1fea1da9243937965573d12f4b
+Size (plasma-integration-5.27.10.tar.xz) = 89832 bytes

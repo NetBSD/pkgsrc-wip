@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (layer-shell-qt-5.24.6.tar.xz) = 50b7b0734cd0ae1f279e13f4e15c892dd79ca42537764576692dca23d39ed62b
-SHA512 (layer-shell-qt-5.24.6.tar.xz) = 28d4f4f82981a55c29cdbc0232920a4d5226c2c816b6b6ea0d3ef5fe0a1809d7911ab61417b25e6b31d17b9cb39ebd5ced3a741f59cf2b95126f821474eae75a
-Size (layer-shell-qt-5.24.6.tar.xz) = 17888 bytes
+BLAKE2s (layer-shell-qt-5.27.10.tar.xz) = abe900594ac9d68cf30f7cceaa07a5ca3e840baa3bc46248c50ed18c1840ca67
+SHA512 (layer-shell-qt-5.27.10.tar.xz) = 2e160d4ab4aedb090c4d7bd0de7edd7ecbffb7fbdfc4c64d621bef477616b06075b4482fde73ca5f79c1e0755aa7275a1b8a5ed2d6a0aedc56a3164e577b44fe
+Size (layer-shell-qt-5.27.10.tar.xz) = 18444 bytes

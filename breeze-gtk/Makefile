@@ -14,8 +14,12 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+pre-configure:
+	ln -s ${PREFIX}/share/color-schemes ${BUILDLINK_DIR}/share/color-schemes
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../wip/breeze/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

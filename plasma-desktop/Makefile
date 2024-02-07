@@ -58,7 +58,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/baloo5/buildlink3.mk"
-.include "../../wip/libksysguard/buildlink3.mk"
+.include "../../sysutils/libksysguard/buildlink3.mk"
 .include "../../wip/systemsettings/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"

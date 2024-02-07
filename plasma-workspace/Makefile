@@ -70,6 +70,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../devel/kpeople/buildlink3.mk"
 .include "../../devel/krunner/buildlink3.mk"
 .include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../graphics/prison/buildlink3.mk"
 .include "../../math/cln/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
@@ -85,7 +86,7 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/taskmanagerrulesrc \
 .include "../../x11/kactivities-stats/buildlink3.mk"
 .include "../../wip/kscreenlocker/buildlink3.mk"
 .include "../../x11/libkscreen/buildlink3.mk"
-.include "../../wip/libksysguard/buildlink3.mk"
+.include "../../sysutils/libksysguard/buildlink3.mk"
 .include "../../x11/kdelibs4support/buildlink3.mk"	# for Solid/PowerManagement
 .include "../../x11/kxmlgui/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
