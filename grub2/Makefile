@@ -30,8 +30,6 @@ USE_TOOLS+=		gmake flex bison gettext:run gawk pkg-config
 PYTHON_FOR_BUILD_ONLY=	tool
 
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	AWK=/usr/pkg/bin/gawk
-#CONFIGURE_ARGS+=	YACC=/usr/pkg/bin/bison
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-efiemu
 CONFIGURE_ARGS+=	--disable-grub-emu-sdl
