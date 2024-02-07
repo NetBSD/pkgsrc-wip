@@ -2,7 +2,7 @@
 
 DISTNAME=	cutadapt-4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	biology
+CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
 
 MAINTAINER=	bacon@NetBSD.org
@@ -12,6 +12,10 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.6.0:../../devel/py-xopen
 DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.10.0:../../wip/py-dnaio
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xopen
+
+USE_PKG_RESOURCES=	yes
 
 PYTHON_SELF_CONFLICT=	yes
 
