@@ -11,11 +11,11 @@ HOMEPAGE=	http://code.google.com/p/pygr/
 COMMENT=	Pygr graph database for bioinformatics
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
+DEPENDS+=	${PYPKGPREFIX}-mysqlclient-[0-9]*:../../databases/py-mysqlclient
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_ACCEPTED=	27 # py-mysqldb, py-pyrex
+PYTHON_VERSIONS_ACCEPTED=	27 # py-pyrex
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../lang/python/egg.mk"

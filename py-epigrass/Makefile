@@ -10,14 +10,12 @@ HOMEPAGE=	https://pypi.python.org/pypi/epigrass/
 COMMENT=	Epidemiological Geo-Referenced Analysis and Simulation System
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	# none
-
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-mysqldb>=1.2.3:../../databases/py-mysqldb
+DEPENDS+=	${PYPKGPREFIX}-mysqlclient>=1.2.3:../../databases/py-mysqlclient
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.7:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-redis>=2.8.0:../../databases/py-redis
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-mysqldb
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

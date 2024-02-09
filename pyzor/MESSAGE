@@ -5,7 +5,7 @@ In order to use the pyzord daemon, you'll need to choose a database backend
 and install the respective package for it:
 
   - ${PYPKGPREFIX}-gdbm (databases/py-gdbm) for GDBM (the default)
-  - ${PYPKGPREFIX}-mysqldb (databases/py-mysqldb) for MySQL support
+  - ${PYPKGPREFIX}-mysqlclient (databases/py-mysqlclient) for MySQL support
   - ${PYPKGPREFIX}-redis-py (databases/py-redis-py) for Redis support
 
 ===========================================================================

@@ -9,13 +9,12 @@ HOMEPAGE=	http://tools.libresoft.es/cvsanaly
 COMMENT=	Source code management tool analyzer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
+DEPENDS+=	${PYPKGPREFIX}-mysqlclient-[0-9]*:../../databases/py-mysqlclient
 DEPENDS+=	git>=1.7.0.5:../../devel/git
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	27 # py-mysqldb
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

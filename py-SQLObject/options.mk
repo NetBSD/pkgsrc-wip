@@ -9,8 +9,7 @@ PKG_SUGGESTED_OPTIONS=	psycopg2
 PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
-PYTHON_VERSIONS_ACCEPTED=	27 # py-mysqldb
+DEPENDS+=	${PYPKGPREFIX}-mysqlclient-[0-9]*:../../databases/py-mysqlclient
 PLIST.mysql=	yes
 .endif
 
