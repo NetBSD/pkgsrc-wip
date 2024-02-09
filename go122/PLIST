@@ -37,7 +37,6 @@ go122/bin/gofmt
 go122/codereview.cfg
 go122/doc/asm.html
 go122/doc/go1.17_spec.html
-go122/doc/go1.22.html
 go122/doc/go_mem.html
 go122/doc/go_spec.html
 go122/doc/godebug.md
@@ -237,6 +236,7 @@ go122/src/cmd/api/testdata/src/issue21181/p/p.go
 go122/src/cmd/api/testdata/src/issue21181/p/p_amd64.go
 go122/src/cmd/api/testdata/src/issue21181/p/p_generic.go
 go122/src/cmd/api/testdata/src/issue29837/p/README
+go122/src/cmd/api/testdata/src/issue64958/p/p.go
 go122/src/cmd/api/testdata/src/pkg/p1/golden.txt
 go122/src/cmd/api/testdata/src/pkg/p1/p1.go
 go122/src/cmd/api/testdata/src/pkg/p2/golden.txt
@@ -341,7 +341,6 @@ go122/src/cmd/cgo/internal/test/cgo_stubs_android_test.go
 go122/src/cmd/cgo/internal/test/cgo_test.go
 go122/src/cmd/cgo/internal/test/cgo_thread_lock.go
 go122/src/cmd/cgo/internal/test/cgo_unix_test.go
-go122/src/cmd/cgo/internal/test/cgo_windows_test.go
 go122/src/cmd/cgo/internal/test/cthread_unix.c
 go122/src/cmd/cgo/internal/test/cthread_windows.c
 go122/src/cmd/cgo/internal/test/gcc68255.go
@@ -444,6 +443,8 @@ go122/src/cmd/cgo/internal/test/issue9510.go
 go122/src/cmd/cgo/internal/test/issue9510a/a.go
 go122/src/cmd/cgo/internal/test/issue9510b/b.go
 go122/src/cmd/cgo/internal/test/linux_ppc64le_test.go
+go122/src/cmd/cgo/internal/test/seh_internal_windows_test.go
+go122/src/cmd/cgo/internal/test/seh_windows_test.go
 go122/src/cmd/cgo/internal/test/setgid2_linux.go
 go122/src/cmd/cgo/internal/test/setgid_linux.go
 go122/src/cmd/cgo/internal/test/sigaltstack.go
@@ -2148,6 +2149,7 @@ go122/src/cmd/go/testdata/script/cover_pkgall_multiple_mains.txt
 go122/src/cmd/go/testdata/script/cover_pkgall_runtime.txt
 go122/src/cmd/go/testdata/script/cover_runs.txt
 go122/src/cmd/go/testdata/script/cover_statements.txt
+go122/src/cmd/go/testdata/script/cover_swig.txt
 go122/src/cmd/go/testdata/script/cover_sync_atomic_import.txt
 go122/src/cmd/go/testdata/script/cover_test_localpkg_filepath.txt
 go122/src/cmd/go/testdata/script/cover_test_pkgselect.txt
@@ -2180,6 +2182,7 @@ go122/src/cmd/go/testdata/script/generate_bad_imports.txt
 go122/src/cmd/go/testdata/script/generate_env.txt
 go122/src/cmd/go/testdata/script/generate_goroot_PATH.txt
 go122/src/cmd/go/testdata/script/generate_invalid.txt
+go122/src/cmd/go/testdata/script/generate_workspace.txt
 go122/src/cmd/go/testdata/script/get_404_meta.txt
 go122/src/cmd/go/testdata/script/get_insecure.txt
 go122/src/cmd/go/testdata/script/get_insecure_no_longer_supported.txt
@@ -2216,6 +2219,7 @@ go122/src/cmd/go/testdata/script/install_cmd_gobin.txt
 go122/src/cmd/go/testdata/script/install_cross_gobin.txt
 go122/src/cmd/go/testdata/script/install_dep_version.txt
 go122/src/cmd/go/testdata/script/install_goroot_targets.txt
+go122/src/cmd/go/testdata/script/install_modcacherw_issue64282.txt
 go122/src/cmd/go/testdata/script/install_move_not_stale.txt
 go122/src/cmd/go/testdata/script/install_msan_and_race_and_asan_require_cgo.txt
 go122/src/cmd/go/testdata/script/install_rebuild_removed.txt
@@ -6272,6 +6276,22 @@ go122/src/internal/trace/v2/resources.go
 go122/src/internal/trace/v2/testdata/README.md
 go122/src/internal/trace/v2/testdata/cmd/gotraceraw/main.go
 go122/src/internal/trace/v2/testdata/cmd/gotracevalidate/main.go
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/0cb1786dee0f090b
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/1e45307d5b2ec36d
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/2b05796f9b2fc48d
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/2b9be9aebe08d511
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/344331b314da0b08
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/365d7b5b633b3f97
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/4d9ddc909984e871
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/56f073e57903588c
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/9d6ee7d3ddf8d566
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/aeb749b6bc317b66
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/closing-unknown-region
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/d478e18d2d6756b7
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/d91203cd397aa0bc
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/invalid-proc-state
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/large-id
+go122/src/internal/trace/v2/testdata/fuzz/FuzzReader/malformed-timestamp
 go122/src/internal/trace/v2/testdata/generate.go
 go122/src/internal/trace/v2/testdata/generators/go122-confuse-seq-across-generations.go
 go122/src/internal/trace/v2/testdata/generators/go122-create-syscall-reuse-thread-id.go
@@ -6301,6 +6321,7 @@ go122/src/internal/trace/v2/testdata/testprog/many-start-stop.go
 go122/src/internal/trace/v2/testdata/testprog/stacks.go
 go122/src/internal/trace/v2/testdata/testprog/stress-start-stop.go
 go122/src/internal/trace/v2/testdata/testprog/stress.go
+go122/src/internal/trace/v2/testdata/testprog/wait-on-pipe.go
 go122/src/internal/trace/v2/testdata/tests/go122-annotations-stress.test
 go122/src/internal/trace/v2/testdata/tests/go122-annotations.test
 go122/src/internal/trace/v2/testdata/tests/go122-confuse-seq-across-generations.test
@@ -7083,8 +7104,6 @@ go122/src/net/http/cgi/child_test.go
 go122/src/net/http/cgi/host.go
 go122/src/net/http/cgi/host_test.go
 go122/src/net/http/cgi/integration_test.go
-go122/src/net/http/cgi/plan9_test.go
-go122/src/net/http/cgi/posix_test.go
 go122/src/net/http/client.go
 go122/src/net/http/client_test.go
 go122/src/net/http/clientserver_test.go
@@ -11877,6 +11896,7 @@ go122/test/fixedbugs/issue64565.out
 go122/test/fixedbugs/issue64606.go
 go122/test/fixedbugs/issue64715.go
 go122/test/fixedbugs/issue64715.out
+go122/test/fixedbugs/issue64826.go
 go122/test/fixedbugs/issue6500.go
 go122/test/fixedbugs/issue6513.dir/a.go
 go122/test/fixedbugs/issue6513.dir/b.go
