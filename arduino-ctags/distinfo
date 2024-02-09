@@ -1,9 +1,8 @@
 $NetBSD$
 
-RMD160 (arduino-ctags-5.8.11.zip) = a4bc68c4ff05129f463fb17d2319239afc805a5d
-SHA512 (arduino-ctags-5.8.11.zip) = c52ec982e843ab1b489168258619bb87825f7c413ea1c15389db6449572d30403199c840b1c0391b20387b3e22e9bffaaea8b11f4b124160b1fea9112f7c8aad
-Size (arduino-ctags-5.8.11.zip) = 561013 bytes
-SHA1 (patch-Makefile.in) = dd99efd0e1ae7af4faf86728f20a527e5c680981
+BLAKE2s (arduino-ctags-5.8.tar.gz) = 75b7b29e2df7117f25d489f7c5ab292644658f538d8b4ee240e0d680016d52e8
+SHA512 (arduino-ctags-5.8.tar.gz) = 6375077dfd983e98862773dfe6213bd41cd17d99260e39e97f99eff7d7f363f6d6a61582994382c69f0e3dfa7da88c1640a5bc037adbcc526e07f86dbd4f3646
+Size (arduino-ctags-5.8.tar.gz) = 489712 bytes
 SHA1 (patch-c.c) = b4b8ca5c9a1004731b42bbcd68eb4d4ece642eb1
 SHA1 (patch-debug.h) = 6be59bdad9d9b3251164bf7db1ee56c4e6ace4f6
 SHA1 (patch-eiffel.c) = 3a3ddeff8d43f4c5ec28cd23720305615716f88f

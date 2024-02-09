@@ -1,3 +1,4 @@
 @comment $NetBSD$
+arduino15/packages/builtin/tools/ctags/5.8-arduino11/ctags
 bin/arduino-ctags
 man/man1/arduino-ctags.1
