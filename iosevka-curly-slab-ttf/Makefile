@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	iosevka-curly-slab-ttf-28.0.7
+PKGNAME=	iosevka-curly-slab-ttf-28.1.0
 DISTNAME=	SuperTTC-IosevkaCurlySlab-${PKGVERSION_NOREV}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
