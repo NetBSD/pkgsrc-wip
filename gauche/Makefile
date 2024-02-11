@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.76 2021/07/24 14:50:42 yhardy Exp $
 #
 
-DISTNAME=	Gauche-0.9.10
+DISTNAME=	Gauche-0.9.14
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=shirok/Gauche/releases/download/release0_9_14/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	enami@NetBSD.org
@@ -22,13 +22,14 @@ CONFIGURE_ARGS+=	--with-slib=${LOCALBASE}/share/slib
 CONFIGURE_ARGS+=	--enable-threads=pthreads
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+BUILD_MAKE_FLAGS+=	XLIBS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 
 USE_LANGUAGES=	c c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake gzip makeinfo
 TEST_TARGET=	check
 INFO_FILES=	yes
-TEXINFO_REQD=	5.0
+TEXINFO_REQD+=	5.0
 
 # refer %install in ${WRKSRC}/Gauche.spec
 INSTALL_TARGET=	install-pkg install-doc
@@ -44,4 +45,5 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/mbedtls3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

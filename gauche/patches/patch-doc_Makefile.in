@@ -1,0 +1,17 @@
+$NetBSD$
+
+Work around core dump when building documentation.
+
+--- doc/Makefile.in.orig	2024-01-25 23:46:19.000000000 +0000
++++ doc/Makefile.in
+@@ -12,8 +12,8 @@ MANPAGES = gosh.1 gauche-config.1 gauche
+ EXTRACTED = gauche-refe.texi gauche-refj.texi \
+ 	    gauche-deve.texi gauche-devj.texi
+ CONFIG_GENERATED = Makefile $(MANPAGES)
+-@CROSS_COMPILING_no@GOSH = $(top_builddir)/src/gosh -q -ftest
+-@CROSS_COMPILING_yes@GOSH = $(BUILD_GOSH) -q
++@CROSS_COMPILING_no@GOSH = env $(top_builddir)/src/gosh -q -ftest
++@CROSS_COMPILING_yes@GOSH = env $(BUILD_GOSH) -q
+ INSTALL      = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTDIR    = $(top_srcdir)/mkinstalldirs

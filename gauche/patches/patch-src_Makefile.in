@@ -1,0 +1,17 @@
+$NetBSD$
+
+Work around core dump when building static library.
+
+--- src/Makefile.in.orig	2024-02-09 21:56:09.396069311 +0000
++++ src/Makefile.in
+@@ -96,8 +96,8 @@ PRECOMP   = $(top_srcdir)/lib/tools/prec
+ 
+ # Gosh command used to build static library.  In case of cross compiling
+ # we can't use freshly built gosh.
+-@CROSS_COMPILING_no@STATIC_GOSH  = $(top_builddir)/src/gosh -ftest
+-@CROSS_COMPILING_yes@STATIC_GOSH = $(BUILD_GOSH)
++@CROSS_COMPILING_no@STATIC_GOSH  = env $(top_builddir)/src/gosh -ftest
++@CROSS_COMPILING_yes@STATIC_GOSH = env $(BUILD_GOSH)
+ 
+ # MbedTLS internal switch (see ext/tls/tls.ac).  Need this for static
+ # library build.
