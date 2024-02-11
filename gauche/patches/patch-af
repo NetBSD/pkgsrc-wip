@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.7 2016/10/13 00:30:13 enami Exp $
+
+Honor pkgsrc LDFLAGS.
+
+--- ext/dbm/Makefile.in.orig	2016-01-09 11:15:43.000000000 +0000
++++ ext/dbm/Makefile.in
+@@ -16,6 +16,8 @@ XCLEANFILES = dbm--gdbm.c gdbm.sci \
+               dbm--odbm.c odbm.sci \
+               ndbm-makedb ndbm-suffixes.h
+ 
++XLDFLAGS = $(GDBM_LDFLAGS)
++
+ all : $(LIBFILES)
+ 
+ gdbm_OBJECTS   = dbm--gdbm.$(OBJEXT)
