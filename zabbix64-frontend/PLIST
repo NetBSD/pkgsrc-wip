@@ -1385,6 +1385,8 @@ share/zabbix/locale/ja/LC_MESSAGES/frontend.mo
 share/zabbix/locale/ja/LC_MESSAGES/frontend.po
 share/zabbix/locale/ka/LC_MESSAGES/frontend.mo
 share/zabbix/locale/ka/LC_MESSAGES/frontend.po
+share/zabbix/locale/kk/LC_MESSAGES/frontend.mo
+share/zabbix/locale/kk/LC_MESSAGES/frontend.po
 share/zabbix/locale/ko/LC_MESSAGES/frontend.mo
 share/zabbix/locale/ko/LC_MESSAGES/frontend.po
 share/zabbix/locale/lt/LC_MESSAGES/frontend.mo
