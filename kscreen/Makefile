@@ -16,6 +16,7 @@ USE_TOOLS+=	msgmerge
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kxmlgui/buildlink3.mk"
 .include "../../x11/plasma-framework/buildlink3.mk"
+.include "../../wip/layer-shell-qt/buildlink3.mk"
 .include "../../x11/libkscreen/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
