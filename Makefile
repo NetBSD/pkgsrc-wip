@@ -328,7 +328,6 @@ SUBDIR+=	brain-mesh-builder
 SUBDIR+=	breakpad
 SUBDIR+=	breeze
 SUBDIR+=	breeze-gtk
-SUBDIR+=	breeze-kde4
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	briskmenu
