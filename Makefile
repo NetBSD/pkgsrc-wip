@@ -1796,7 +1796,6 @@ SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
 SUBDIR+=	kstest
-SUBDIR+=	ksysguard
 SUBDIR+=	ktjet
 SUBDIR+=	kubeconform
 SUBDIR+=	kubectl
