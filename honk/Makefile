@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	honk-0.9.8
-MASTER_SITES=	https://humungus.tedunangst.com/r/honk/d/
+DISTNAME=	honk-1.2.1
+MASTER_SITES=	${HOMEPAGE}/d/
 EXTRACT_SUFX=	.tgz
 CATEGORIES=	www
 
@@ -12,7 +12,6 @@ LICENSE=	isc
 USE_TOOLS+=	pax
 
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
-
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
@@ -39,7 +38,7 @@ PKG_GROUPS+=	${HONK_GROUP}
 PKG_USERS+=	${HONK_USER}:${HONK_GROUP}
 
 # since we include go-module.mk after bsd.pref.mk:
-.for bin in autobonker gettoken saytheday sprayandpray wonkawonk youvegothonks
+.for bin in autobonker gettoken saytheday sprayandpray youvegothonks
 CHECK_PIE_SKIP+=	bin/${bin}
 CHECK_RELRO_SKIP+=	bin/${bin}
 .endfor
@@ -54,7 +53,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/honk ${DESTDIR}${PREFIX}/bin/
-.for bin in autobonker saytheday sprayandpray youvegothonks gettoken wonkawonk
+.for bin in autobonker saytheday sprayandpray youvegothonks gettoken
 	${INSTALL_PROGRAM} ${WRKSRC}/toys/${bin} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for page in 1 3 5 7 8
@@ -67,7 +66,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/honk.${page} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man${page}
 .endfor
 	# activitypub.7, hfcs.1, intro.1, vim.3 are potential collision candidates.
-	${INSTALL_MAN} ${WRKSRC}/docs/activitypub.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/honk_actitiypub.7
+	${INSTALL_MAN} ${WRKSRC}/docs/activitypub.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/honk_activitypub.7
 	${INSTALL_MAN} ${WRKSRC}/docs/hfcs.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/honk_hfcs.1
 	${INSTALL_MAN} ${WRKSRC}/docs/intro.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/honk_intro.1
 	${INSTALL_MAN} ${WRKSRC}/docs/vim.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/honk_vim.3

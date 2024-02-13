@@ -4,7 +4,6 @@ bin/gettoken
 bin/honk
 bin/saytheday
 bin/sprayandpray
-bin/wonkawonk
 bin/youvegothonks
 man/man1/honk.1
 man/man1/honk_hfcs.1
@@ -12,7 +11,7 @@ man/man1/honk_intro.1
 man/man3/honk.3
 man/man3/honk_vim.3
 man/man5/honk.5
-man/man7/honk_actitiypub.7
+man/man7/honk_activitypub.7
 man/man8/honk.8
 share/doc/honk/README
 share/doc/honk/README.pkgsrc
@@ -22,6 +21,7 @@ share/examples/honk/views/about.html
 share/examples/honk/views/account.html
 share/examples/honk/views/chatter.html
 share/examples/honk/views/combos.html
+share/examples/honk/views/emus.html
 share/examples/honk/views/funzone.html
 share/examples/honk/views/header.html
 share/examples/honk/views/hfcs.html
@@ -31,10 +31,11 @@ share/examples/honk/views/honkform.html
 share/examples/honk/views/honkfrags.html
 share/examples/honk/views/honkpage.html
 share/examples/honk/views/honkpage.js
+share/examples/honk/views/icon.png
 share/examples/honk/views/login.html
+share/examples/honk/views/mastodon.css
+share/examples/honk/views/misc.js
 share/examples/honk/views/msg.html
 share/examples/honk/views/onts.html
-share/examples/honk/views/pleroma.css
 share/examples/honk/views/style.css
-share/examples/honk/views/wonk.js
 share/examples/honk/views/xzone.html
