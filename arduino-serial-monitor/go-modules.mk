@@ -1,0 +1,19 @@
+# $NetBSD$
+
+GO_MODULE_FILES+=	github.com/arduino/pluggable-monitor-protocol-handler/@v/v0.9.2.mod
+GO_MODULE_FILES+=	github.com/arduino/pluggable-monitor-protocol-handler/@v/v0.9.2.zip
+GO_MODULE_FILES+=	github.com/creack/goselect/@v/v0.1.2.mod
+GO_MODULE_FILES+=	github.com/creack/goselect/@v/v0.1.2.zip
+GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
+GO_MODULE_FILES+=	github.com/hashicorp/errwrap/@v/v1.0.0.mod
+GO_MODULE_FILES+=	github.com/hashicorp/errwrap/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/hashicorp/errwrap/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/hashicorp/go-multierror/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/hashicorp/go-multierror/@v/v1.1.1.zip
+GO_MODULE_FILES+=	github.com/picohive/go-serial/@v/v1.6.1.mod
+GO_MODULE_FILES+=	github.com/picohive/go-serial/@v/v1.6.1.zip
+GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20220722155223-a9213eeb770e.mod
+GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20220722155223-a9213eeb770e.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220829200755-d48e67d00261.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220829200755-d48e67d00261.zip
