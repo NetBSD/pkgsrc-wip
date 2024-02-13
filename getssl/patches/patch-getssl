@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use pkgsrc paths.
+
+--- getssl.orig	2024-02-13 22:44:17.358381116 +0000
++++ getssl
+@@ -341,7 +341,7 @@ SKIP_HTTP_TOKEN_CHECK="false"
+ SSLCONF="$(openssl version -d 2>/dev/null| cut -d\" -f2)/openssl.cnf"
+ TOKEN_USER_ID=""
+ USE_SINGLE_ACL="false"
+-WORKING_DIR_CANDIDATES=("/etc/getssl" "${PROGDIR}/conf" "${PROGDIR}/.getssl" "${HOME}/.getssl")
++WORKING_DIR_CANDIDATES=("@PKG_SYSCONFDIR@/getssl" "${PROGDIR}/conf" "${PROGDIR}/.getssl" "${HOME}/.getssl")
+ 
+ # Variables used when validating using a DNS entry
+ VALIDATE_VIA_DNS=""             # Set this to "true" to enable DNS validation

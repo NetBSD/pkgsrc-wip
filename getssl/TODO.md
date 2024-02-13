@@ -1,0 +1,4 @@
+- Add `USE_TOOLS+=openssl:run` and probably other commands also relied on
+- Change installation to `USE_TOOLS+=gmake` to get the helper scripts too?
+- Turn off the auto-update feature
+- Anything else someone who actually uses this would notice

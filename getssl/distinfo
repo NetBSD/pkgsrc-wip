@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (getssl-2.48.tar.gz) = ac2800d61378f785127d43fdc054ad31d3c7b50456de5a001e965e7e1d0c16c3
+SHA512 (getssl-2.48.tar.gz) = c1b3e8556a0df3c0a23b12dde2add335aece5ddfdb8678bb87ce0ebae8acdb909b337770c3a01d5439b61887e3ce30f5e3d90cdaa9355e22ba4c96fe1066cfcd
+Size (getssl-2.48.tar.gz) = 146649 bytes
+SHA1 (patch-getssl) = d1a8005dddd8ce4ced577c27e45782d7079086f0

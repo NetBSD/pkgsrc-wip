@@ -1,0 +1,14 @@
+Obtain SSL certificates from the letsencrypt.org ACME server. Suitable
+for automating the process on remote servers. Features:
+
+- Bash - It runs on virtually all unix machines
+- Get certificates for remote servers (script doesn't need to run on the
+  server itself)
+- Runs as a daily cron - so certificates will be automatically renewed
+- Checks certificates are correctly loaded
+- Extensively configurable
+- Supports http and dns challenges
+- Simple and easy to use
+- Detailed debug info
+- Reload services
+- ACME v1 and V2
