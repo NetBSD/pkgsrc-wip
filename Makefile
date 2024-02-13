@@ -133,6 +133,7 @@ SUBDIR+=	aldo
 SUBDIR+=	aldumb
 SUBDIR+=	alertmanager
 SUBDIR+=	alive
+SUBDIR+=	alire
 SUBDIR+=	alsa-lib-git
 SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-plugins-jack
