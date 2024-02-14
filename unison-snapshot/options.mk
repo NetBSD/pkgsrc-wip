@@ -1,9 +1,9 @@
 # $NetBSD: options.mk,v 1.6 2022/03/13 15:07:13 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
-# upstream makefiles are broken for now
-PKG_SUPPORTED_OPTIONS=	# lablgtk
-PKG_SUGGESTED_OPTIONS=	# lablgtk
+PKG_SUPPORTED_OPTIONS=	lablgtk
+# ocaml-cairo is broken
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 

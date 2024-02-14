@@ -1,12 +1,12 @@
 # $NetBSD: Makefile,v 1.142 2022/08/17 20:28:37 wiz Exp $
 
 # 2.53.3.beyond
-DISTNAME=	unison-2.53.3.0.52
+DISTNAME=	unison-2.53.3.0.53
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	d9bb5734b802b23e1ca3553fdeb8e2d15d45e0ac
+GITHUB_TAG=	1c7922bb9d34ff694e7aa33a69ca0009bd82cc98
 
 
 MAINTAINER=	gdt@NetBSD.org
@@ -17,6 +17,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
+ALL_ENV+=	PREFIX=${PREFIX}
+ALL_ENV+=	MANDIR=${PREFIX}/man
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../lang/ocaml/ocaml.mk"
@@ -32,21 +34,21 @@ MAKE_FLAGS+=	NATIVE=false
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-TEST_TARGET=		test
+# \todo
+#   add fsmonitor option, needing python and libinotify, or forcing it off
 
-INSTALLATION_DIRS=	bin
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+# Unison does not install non-man docs
 INSTALLATION_DIRS+=	share/doc/unison
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/unison ${DESTDIR}${PREFIX}/bin
-	# gross hack for now
-	${INSTALL_PROGRAM} ${WRKSRC}/src/unison-gui ${DESTDIR}${PREFIX}/bin || ${TRUE}
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/src/COPYING ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/CONTRIBUTING.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/INSTALL.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/man/unison.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	# \todo See fsmonitor above.
+	${RM} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/bin/fsmonitor.py
+
+TEST_TARGET=		test
 
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
