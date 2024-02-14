@@ -7,6 +7,7 @@ share/doc/cyclone/C-Interface-Notes.md
 share/doc/cyclone/Development.md
 share/doc/cyclone/Garbage-Collection-Using-Lazy-Sweeping.md
 share/doc/cyclone/Garbage-Collector.md
+share/doc/cyclone/Garbage-Collector-Revised-2022.md
 share/doc/cyclone/Multithreaded-Development.md
 share/doc/cyclone/Release-Checklist.md
 share/doc/cyclone/Scheme-Language-Compliance.md
@@ -78,6 +79,7 @@ share/doc/cyclone/images/benchmarks/kvw.png
 share/doc/cyclone/images/benchmarks/lazy-sweep-benchmark-times.png
 share/doc/cyclone/images/benchmarks/lazy-sweep.png
 share/doc/cyclone/images/build-thumb.png
+share/doc/cyclone/images/campfire.jpg
 share/doc/cyclone/images/compiler.dia
 share/doc/cyclone/images/compiler.png
 share/doc/cyclone/images/cyclone-contribs.png
