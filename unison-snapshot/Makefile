@@ -46,7 +46,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/INSTALL.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/share/doc/unison
 	# \todo See fsmonitor above.
-	${RM} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/bin/fsmonitor.py
+	${RM} ${DESTDIR}${PREFIX}/bin/fsmonitor.py
 
 TEST_TARGET=		test
 
