@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (lightgbm-4.3.0.tar.gz) = 18b661e5ac3f5eaca67a6b2e5024fd7bccce6385f7ef41a7903497d7c481b38c
+SHA512 (lightgbm-4.3.0.tar.gz) = 5deeac11b74d9a34bba4f649555741e1fb3fe65b94082441f9725cb4c3cbe022ec94641444e976dfb5e412595db89ba1e91569a72f1fcfa55d41dd07e4c9bd8f
+Size (lightgbm-4.3.0.tar.gz) = 1694675 bytes
