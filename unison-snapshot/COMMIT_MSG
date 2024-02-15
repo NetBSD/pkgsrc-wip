@@ -1,0 +1,24 @@
+net/unison: Update to 2.53.4
+
+packaging changes:
+  use upstream's 'make install'
+  bin/unison is always TUI
+  bin/unison-gui is GUI, but installed only if built with lablgtk
+
+## Changes in 2.53.4
+
+Released 2024-02-17
+
+  * Improved and simplified makefiles. Please review your build scripts
+    for changed build goals, input variables and build artifact names.
+    See INSTALL.md for details.
+  * opam build uses the makefile build system.
+  * Various fixes in Windows and Cygwin builds.
+  * Preferences "force", "prefer" and related "partial" preferences now
+    work slightly differently with values "newer" and "older". Previously,
+    if mtimes in both replicas were equal then always the second root
+    propagated to the first root (possibly reverting user changes). It
+    is now made explicit that "newer" and "older" only work when mtimes
+    are different.
+  * Cleanups in documentation.
+  * Bugfixes, minor improvements, cleanups.
