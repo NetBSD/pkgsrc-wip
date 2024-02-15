@@ -30,44 +30,50 @@ DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	lz4>0:../../archivers/lz4
 DEPENDS+=	xz>0:../../archivers/xz
 DEPENDS+=	zstd>0:../../archivers/zstd
+DEPENDS+=	nano>0:../../editors/nano
+DEPENDS+=	parallel>0:../../parallel/parallel
+DEPENDS+=	csvkit>0:../../textproc/csvkit
+DEPENDS+=	miller>0:../../textproc/miller
+DEPENDS+=	bwa>0:../../biology/bwa
+DEPENDS+=	bowtie2>0:../../biology/bowtie2
+DEPENDS+=	bedtools>0:../../biology/bedtools
+DEPENDS+=	bamtools>0:../../wip/bamtools
+DEPENDS+=	${PYPKGPREFIX}-cutadapt-[0-9]*:../../biology/py-cutadapt
+DEPENDS+=	seqtk>0:../../biology/seqtk
+DEPENDS+=	datamash>0:../../wip/datamash
+DEPENDS+=	bcftools>0:../../biology/bcftools
+DEPENDS+=	subread>0:../../wip/subread
+DEPENDS+=	Trimmomatic>0:../../biology/trimmomatic
+DEPENDS+=	ncbi-blast+>0:../../biology/ncbi-blast+
+DEPENDS+=	cdhit>0:../../biology/cdhit
+DEPENDS+=	${PYPKGPREFIX}-biopython-[0-9]*:../../biology/py-biopython
+# DEPENDS+=	>0:../../
 
 # Allow pkg build on non-amd64 systems until sra-tools supports them
 .if ${MACHINE_ARCH} == amd64 || ${MACHINE_ARCH} == aarch64
-DEPENDS+=   sra-tools>0:biology/sra-tools
+DEPENDS+=   sra-tools>0:../../biology/sra-tools
 .endif
 
 META_PACKAGE=	yes
 
+# Fetch fails, permission denied
+# DEPENDS+=	readseq>0:../../wip/readseq
+# Build fails, need simde?
+# DEPENDS+=	minimap2>0:../../biology/minimap2
+# Build fails (Darwin)
+# DEPENDS+=	${PYPKGPREFIX}-pysam-[0-9]*:../../wip/py-pysam
+# Fetch fails, needs update
+# DEPENDS+=	freebayes>0:../../wip/freebayes
+
 # FreeBSD port depends:
-#                 nano>0:editors/nano \
-#                 parallel>0:sysutils/parallel \
 #                 seqkit>0:biology/seqkit \
 #                 csvtk>0:science/csvtk \
-#                 ${PYTHON_PKGNAMEPREFIX}csvkit>0:textproc/py-csvkit@${PY_FLAVOR} \
-#                 miller>0:textproc/miller \
 #                 ncbi-entrez-direct>0:biology/ncbi-entrez-direct \
-#                 readseq>0:biology/readseq \
 #                 snpeff>0:biology/snpeff \
 #                 picard-tools>0:biology/picard-tools \
 #                 bbmap>0:biology/bbmap \
-#                 minimap2>0:biology/minimap2 \
-#                 bwa>0:biology/bwa \
-#                 bowtie2>0:biology/bowtie2 \
 #                 emboss>0:biology/emboss \
-#                 bedtools>0:biology/bedtools \
-#                 bamtools>0:biology/bamtools \
-#                 ${PYTHON_PKGNAMEPREFIX}cutadapt>0:biology/py-cutadapt@${PY_FLAVOR} \
-#                 seqtk>0:biology/seqtk \
-#                 datamash>0:textproc/datamash \
-#                 bcftools>0:biology/bcftools \
-#                 subread>0:biology/subread \
-#                 trimmomatic>0:biology/trimmomatic \
 #                 picard-tools>0:biology/picard-tools \
-#                 ncbi-blast+>0:biology/ncbi-blast+ \
-#                 cd-hit>0:biology/cd-hit \
-#                 ${PYTHON_PKGNAMEPREFIX}biopython>0:biology/py-biopython@${PY_FLAVOR} \
-#                 ${PYTHON_PKGNAMEPREFIX}pysam>0:biology/py-pysam@${PY_FLAVOR} \
-#                 freebayes>0:biology/freebayes \
 #                 p5-Net-SSLeay>0:security/p5-Net-SSLeay \
 #                 bioawk>0:biology/bioawk \
 #                 vt>0:biology/vt \
