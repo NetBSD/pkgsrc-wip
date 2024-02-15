@@ -287,6 +287,7 @@ SUBDIR+=	bio-mocha
 SUBDIR+=	biolibc
 SUBDIR+=	biolibc-tools
 SUBDIR+=	bioruby
+SUBDIR+=	biostar-tools
 SUBDIR+=	bip
 SUBDIR+=	bitkeeper
 SUBDIR+=	bitlbee-purple
