@@ -48,6 +48,7 @@ DEPENDS+=	ncbi-blast+>0:../../biology/ncbi-blast+
 DEPENDS+=	cdhit>0:../../biology/cdhit
 DEPENDS+=	${PYPKGPREFIX}-biopython-[0-9]*:../../biology/py-biopython
 DEPENDS+=	readseq>0:../../wip/readseq
+DEPENDS+=	minimap2>0:../../biology/minimap2
 # DEPENDS+=	>0:../../
 
 # Allow pkg build on non-amd64 systems until sra-tools supports them
@@ -57,8 +58,6 @@ DEPENDS+=   sra-tools>0:../../biology/sra-tools
 
 META_PACKAGE=	yes
 
-# Build fails, need simde?
-# DEPENDS+=	minimap2>0:../../biology/minimap2
 # Build fails (Darwin)
 # DEPENDS+=	${PYPKGPREFIX}-pysam-[0-9]*:../../wip/py-pysam
 # Fetch fails, needs update
