@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/10/14 18:12:12 asau Exp $
+$NetBSD$
 
-RMD160 (readseq.tar.Z) = b66795ca91b942096a0af8724e16a1d79a75c9ce
-SHA512 (readseq.tar.Z) = 28ccb6ad719246dd4a4911dcb75408dccfb885ecbb931daa10fcfc1cd64bff4f64d3630607f9440da11503767886ab894dbf5478f80922f47b2c161068fc0e6a
-Size (readseq.tar.Z) = 75281 bytes
-SHA1 (patch-aa) = 16af1514f15dc612886dac68262e09d6031083fb
-SHA1 (patch-readseq.c) = d41772f54da20e08638b0e4cdf2b6c841f4a8fe1
-SHA1 (patch-ureadseq.c) = eabaf4e1f1d6a923b8d102fdc64bcee45c127c28
+BLAKE2s (readseq-2.1.19/readseq.jar) = cf04d9ae46fd396ac9e50479210049d9bb08de23ab906c7e5fc4d765a6f1fef1
+SHA512 (readseq-2.1.19/readseq.jar) = e22281882183249e6742a578e137347af9d937787e91e9db788fa6dbc9c47426b164853fe709cb7245e94940bc5c6f73b27153eda0d627cb15d4e1e56136a4d0
+Size (readseq-2.1.19/readseq.jar) = 767702 bytes

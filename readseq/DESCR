@@ -1,6 +1,3 @@
-readseq is a widely used tool to convert various sequence
-data formats written by D.G. Gilbert at Indiana University,
-Bloomington. Besides the interconversion to make the
-sequences palatable for a specific application, readseq
-can be used to extract the raw sequence from any supported
-database format.
+Sequence reading library developed by the Ribosomal Database Project.
+It can handle genbank, embl, fasta, fastq, sff and sto files, can
+read from files or streams, and can handle indexing files.

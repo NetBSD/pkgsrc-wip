@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/14 18:13:59 asau Exp $
+@comment $NetBSD$
 bin/readseq
-share/doc/readseq/Formats
-share/doc/readseq/Readme
-share/doc/readseq/Readseq.help
+share/java/classes/readseq/readseq.jar
