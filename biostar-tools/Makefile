@@ -1,16 +1,15 @@
 # $NetBSD$
 #
 
-DISTNAME=	biostar-tools
+PKGNAME=	biostar-tools-1.10.1
 CATEGORIES=	biology meta-pkgs
-MASTER_SITES=	# empty
 
 OWNER=		bacon@NetBSD.org
 COMMENT=	Meta-package for Biostar Handbook tools
 
 WWW=            https://www.biostarhandbook.com
 
-LICENSE=        BSD2CLAUSE
+LICENSE=        modified-bsd
 
 # For a current list see http://data.biostarhandbook.com/install/conda.txt.
 # Also included are some programs not listed above, but mentioned in the text.
@@ -51,19 +50,13 @@ DEPENDS+=	readseq>0:../../wip/readseq
 DEPENDS+=	minimap2>0:../../biology/minimap2
 # DEPENDS+=	>0:../../
 
-# Allow pkg build on non-amd64 systems until sra-tools supports them
-.if ${MACHINE_ARCH} == amd64 || ${MACHINE_ARCH} == aarch64
-DEPENDS+=   sra-tools>0:../../biology/sra-tools
-.endif
-
-META_PACKAGE=	yes
-
 # Build fails (Darwin)
 # DEPENDS+=	${PYPKGPREFIX}-pysam-[0-9]*:../../wip/py-pysam
 # Fetch fails, needs update
 # DEPENDS+=	freebayes>0:../../wip/freebayes
 
-# FreeBSD port depends:
+# FreeBSD port depends that still need to be added to pkgsrc.
+# Add to pkgsrc-wip, test, add to DEPENDS above, and remove below.
 #                 seqkit>0:biology/seqkit \
 #                 csvtk>0:science/csvtk \
 #                 ncbi-entrez-direct>0:biology/ncbi-entrez-direct \
@@ -87,11 +80,28 @@ META_PACKAGE=	yes
 #                 ${PYTHON_PKGNAMEPREFIX}pywgsim>0:biology/py-pywgsim@${PY_FLAVOR} \
 #                 sam2pairwise>0:biology/sam2pairwise \
 #                 bamutil>0:biology/bamutil \
-#                 ${PYTHON_PKGNAMEPREFIX}deepTools>0:biology/py-deeptools@${PY_FLAVOR} \
+#                 ${PYTHON_PKGNAMEPREFIX}deepTools>0:biology/py-deeptools@${PY_FLAVOR}
 
-# do-install:
-# 	@${MKDIR} ${STAGEDIR}${PREFIX}/bin
-# 	${INSTALL_SCRIPT} ${WRKDIR}/biostar-shell ${STAGEDIR}${PREFIX}/bin
+# Allow pkg build on non-amd64 systems until sra-tools supports them
+.if ${MACHINE_ARCH} == x86_64 || ${MACHINE_ARCH} == aarch64
+DEPENDS+=   sra-tools>0:../../biology/sra-tools
+.endif
+
+NO_BUILD=		yes
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_SED.prefix+=	-e 's|%%PREFIX%%|${PREFIX}|g'
+SUBST_FILES.prefix=	${WRKDIR}/biostar-shell
+
+INSTALLATION_DIRS=	bin
+
+pre-patch:
+	${MKDIR} ${WRKSRC}
+	${CP} ${FILESDIR}/biostar-shell.in ${WRKDIR}/biostar-shell
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/biostar-shell ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
