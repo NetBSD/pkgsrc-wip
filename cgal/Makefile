@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	CGAL-5.5.2
+DISTNAME=	CGAL-5.6
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CGAL/}
@@ -12,9 +12,11 @@ HOMEPAGE=	https://www.cgal.org/
 COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++14
-CMAKE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 REPLACE_SH+=	scripts/cgal_create_CMakeLists
 REPLACE_SH+=	scripts/cgal_create_cmake_script
