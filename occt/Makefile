@@ -1,12 +1,14 @@
 # $NetBSD$
 
 DISTNAME=	opencascade-7.7.0
+PKGNAME=	${DISTNAME:S/opencascade/occt/}
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	-http://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=refs/tags/V${PKGVERSION_NOREV:S/./_/g};sf=tgz
 
-MAINTAINER=	stix@stix.id.au
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opencascade.org/
-COMMENT=	Software development platform for 3D CAD CAM CAE
+COMMENT=	Boundary Representation modeling toolkit and 3D geometry library
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++

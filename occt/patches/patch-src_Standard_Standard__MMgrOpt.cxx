@@ -9,7 +9,7 @@ Add NetBSD support.
  #endif
      
 -#if defined(IRIX) || defined(__sgi) || defined(SOLARIS) || defined(__sun) || defined(__linux__) || defined(__FreeBSD__) || defined(__ANDROID__)
-+#if defined(IRIX) || defined(__sgi) || defined(SOLARIS) || defined(__sun) || defined(__linux__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__ANDROID__)
++#if defined(IRIX) || defined(__sgi) || defined(SOLARIS) || defined(__sun) || defined(__linux__) || defined(__FreeBSD__) || defined(__ANDROID__) || defined(__NetBSD__) 
      if ((myMMap = open ("/dev/zero", O_RDWR)) < 0) {
        if ((myMMap = open ("/dev/null", O_RDWR)) < 0){
          myMMap = 0;

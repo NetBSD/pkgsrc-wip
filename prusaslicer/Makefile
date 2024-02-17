@@ -35,8 +35,8 @@ CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
 
 # CMake goes looking for this binary. Make it happy.
 pre-configure:
-	${LN} -s ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
-	${LN} -s ${PREFIX}/bin/bgcode ${BUILDLINK_DIR}/bin/
+	${LN} -sf ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
+	${LN} -sf ${PREFIX}/bin/bgcode ${BUILDLINK_DIR}/bin/
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
@@ -71,7 +71,7 @@ pre-configure:
 .include "../../wip/libbgcode/buildlink3.mk"
 .include "../../wip/nanosvg/buildlink3.mk"
 .include "../../wip/nlopt/buildlink3.mk"
-.include "../../wip/opencascade/buildlink3.mk"
+.include "../../wip/occt/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
