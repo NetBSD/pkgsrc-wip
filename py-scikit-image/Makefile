@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.16 2023/07/03 17:31:43 wiz Exp $
 
-DISTNAME=	scikit_image-0.21.0
+DISTNAME=	scikit_image-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
