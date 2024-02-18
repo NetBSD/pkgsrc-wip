@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	ParaView-v5.11.1
+DISTNAME=	ParaView-v5.11.2
 PKGNAME=	${DISTNAME:S/ParaView-v/paraview-/1}
 CATEGORIES=	math
 MASTER_SITES=	https://www.paraview.org/files/v5.11/
@@ -12,6 +12,7 @@ COMMENT=	VTK-based Data Analysis and Visualization Application
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++ fortran
+FORCE_CXX_STD+=		c++14
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
