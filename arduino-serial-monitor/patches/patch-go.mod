@@ -6,7 +6,7 @@ $NetBSD$
  
  go 1.18
  
-+replace go.bug.st/serial v1.4.1 => github.com/picohive/go-serial v1.6.1
++replace go.bug.st/serial v1.4.1 => github.com/picohive/go-serial v1.6.2
 +
  require (
  	github.com/arduino/pluggable-monitor-protocol-handler v0.9.2

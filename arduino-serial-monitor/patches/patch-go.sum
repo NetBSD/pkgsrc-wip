@@ -2,7 +2,7 @@ $NetBSD$
 
 --- go.sum.orig	2023-02-09 08:37:09.000000000 +0000
 +++ go.sum
-@@ -9,6 +9,10 @@ github.com/hashicorp/errwrap v1.1.0 h1:O
+@@ -9,6 +9,12 @@ github.com/hashicorp/errwrap v1.1.0 h1:O
  github.com/hashicorp/errwrap v1.1.0/go.mod h1:YH+1FKiLXxHSkmPseP+kNlulaMuP3n2brvKWEqk/Jc4=
  github.com/hashicorp/go-multierror v1.1.1 h1:H5DkEtf6CXdFp0N0Em5UCwQpXMWke8IA0+lD48awMYo=
  github.com/hashicorp/go-multierror v1.1.1/go.mod h1:iw975J/qwKPdAO1clOe2L8331t/9/fmwbPZ6JB6eMoM=
@@ -10,10 +10,12 @@ $NetBSD$
 +github.com/picohive/go-serial v1.6.0/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
 +github.com/picohive/go-serial v1.6.1 h1:xS0kGjdOSHt+MVzU37fFGCnrcVrhVdjtN7twhCjrTuA=
 +github.com/picohive/go-serial v1.6.1/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
++github.com/picohive/go-serial v1.6.2 h1:NVVZMe7dIAOR84eVkmMXsDbfuNbVooaq7oeQaP7Dgd0=
++github.com/picohive/go-serial v1.6.2/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
  github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
  github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
  go.bug.st/serial v1.4.1 h1:AwYUNixVf90XymNeJaUkMrPp+GZQe3RMFQmpVdHIUK8=
-@@ -17,4 +21,6 @@ golang.org/x/exp v0.0.0-20220722155223-a
+@@ -17,4 +23,6 @@ golang.org/x/exp v0.0.0-20220722155223-a
  golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e/go.mod h1:Kr81I6Kryrl9sr8s2FK3vxD90NdsKWRuOIl2O4CvYbA=
  golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a h1:dGzPydgVsqGcTRVwiLJ1jVbufYwmzD3LfVPLKsKg+0k=
  golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
