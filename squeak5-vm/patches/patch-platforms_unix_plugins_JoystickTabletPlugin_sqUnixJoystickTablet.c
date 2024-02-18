@@ -1,16 +1,16 @@
 $NetBSD$
 
---- platforms/unix/plugins/JoystickTabletPlugin/sqUnixJoystickTablet.c.orig	2022-06-02 14:10:44.000000000 +0000
+--- platforms/unix/plugins/JoystickTabletPlugin/sqUnixJoystickTablet.c.orig	2023-12-18 14:41:18.000000000 +0000
 +++ platforms/unix/plugins/JoystickTabletPlugin/sqUnixJoystickTablet.c
-@@ -29,6 +29,7 @@
- /* Author: davidf@afeka.ac.il
-  */
+@@ -32,6 +32,7 @@
+ 
+ #include "sq.h"
  
 +#if __linux__
  #include <assert.h>
- #include <limits.h>
- #include <stdio.h>
-@@ -354,3 +355,41 @@ int tabletResultSize(void)
+ #include <stdint.h>
+ #include <sys/ioctl.h>
+@@ -348,6 +349,44 @@ int tabletRead(int cursorIndex, int resu
    return 0;
  }
  
@@ -52,3 +52,6 @@ $NetBSD$
 +  return 0;
 +}
 +#endif	/* __linux__ */
+ int tabletResultSize(void)
+ {
+   return 0;

@@ -1,16 +1,15 @@
 $NetBSD$
 
-BLAKE2s (opensmalltak-vm-202206021410.tar.gz) = 5dad73622373eaab242b869751e20e8b402c846d8c892d64b5b5dae8ef18f8c6
-SHA512 (opensmalltak-vm-202206021410.tar.gz) = a72b221eb76178d8d80134b58523bddb5ae480d1497a4b1cbd7079268b9687f3ddf06e391557abcb2e8ec0db972ebbb9529affea8eed41753252ac986abc3905
-Size (opensmalltak-vm-202206021410.tar.gz) = 54790671 bytes
-SHA1 (patch-platforms_Cross_plugins_SqueakFFIPrims_sqFFIPlugin.c) = 6422c6e53716f5ad009235b7b3ae728ae1ef554f
+BLAKE2s (opensmalltak-vm-202312181441.tar.gz) = 35efe327e9d0e8673573744a0d1ef3d6f415ccf8816bb5dbfc1278d537f60f1a
+SHA512 (opensmalltak-vm-202312181441.tar.gz) = d253d01e33fceaaf5713e96e747e877458272e78469b776c2e57c28e1429a2797954535857694d06ec96d4e054743d67bc57bc73d19d107c7fb5753df422e0c8
+Size (opensmalltak-vm-202312181441.tar.gz) = 55030856 bytes
+SHA1 (patch-platforms_Cross_plugins_SqueakFFIPrims_sqFFIPlugin.c) = 7c2b933ca02d032f76e076f6b9f98510a06af12e
 SHA1 (patch-platforms_unix_config_bin.squeak.sh.in) = eca83ca07948b5abce150bd4be4b5a7a8e1630eb
 SHA1 (patch-platforms_unix_config_configure.ac) = 465b211778a8d70bc2d030f0e8987f0e48edc1c2
 SHA1 (patch-platforms_unix_config_make.cfg.in) = d3bc685372bf4104f2b3db78625681e26c0c29d9
 SHA1 (patch-platforms_unix_config_make.ext.in) = d9fcf9124568ffac544d9bb388883647f4d01e26
 SHA1 (patch-platforms_unix_config_squeak.sh.in) = 29b074f629fd773a6d14acdd28d5f0054f2ee59d
-SHA1 (patch-platforms_unix_plugins_JoystickTabletPlugin_sqUnixJoystickTablet.c) = 039d233d6f51462a08c05449b82d983cfe1825e0
-SHA1 (patch-platforms_unix_plugins_SerialPlugin_sqUnixSerial.c) = 3e84fbb1a22ea899d8f61bd220c2407e73c1ef06
+SHA1 (patch-platforms_unix_plugins_JoystickTabletPlugin_sqUnixJoystickTablet.c) = ceef9fe35b14024543816246bb69d91962f42108
 SHA1 (patch-platforms_unix_plugins_SqueakSSL_openssl__overlay.h) = f66f067c8876a3c0a22d8728a65c3e8811411b31
 SHA1 (patch-platforms_unix_vm-display-X11_acinclude.m4) = 6fe2caffdcafa00185102d79dbb1dd50c3c814ee
 SHA1 (patch-platforms_unix_vm_include__ucontext.h) = ef722fe06ac5e565e9303a7467cbee1b23f9d0bd
