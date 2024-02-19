@@ -4,7 +4,7 @@ DISTNAME=  	falcons-eye2-0.1.1
 CATEGORIES=	games	
 MASTER_SITES=	https://sourceforge.net/projects/falcons-eye2/files/
 
-MAINTAINER=	zara.mage@yahoo.com
+MAINTAINER=	goon.mage@yahoo.com
 HOMEPAGE=	https://sourceforge.net/projects/falcons-eye2/
 COMMENT=	A 3D Falcon's Eye nethack game 
 LICENSE=	Nethack General Public License	
