@@ -4,7 +4,7 @@ DISTNAME=  	ROMBlast-0.1.9
 CATEGORIES=	devel	
 MASTER_SITES=	https://sourceforge.net/projects/romblast/files/
 
-MAINTAINER=	zara.mage@yahoo.com
+MAINTAINER=	goon.mage@yahoo.com
 HOMEPAGE=	https://sourceforge.net/projects/romblast/
 COMMENT=	A ROM utility 
 LICENSE=	GPLv2	
