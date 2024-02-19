@@ -4807,7 +4807,6 @@ SUBDIR+=	qlcplus
 SUBDIR+=	qmc2
 SUBDIR+=	qmediamanager
 SUBDIR+=	qn-x11
-SUBDIR+=	qrcp
 SUBDIR+=	qrint
 SUBDIR+=	qrq
 SUBDIR+=	qstat
