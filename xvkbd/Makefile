@@ -7,17 +7,18 @@ MASTER_SITES=	http://t-sato.in.coocan.jp/xvkbd/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://t-sato.in.coocan.jp/xvkbd/
-COMMENT=	The xvkbd is a virtual (graphical) keyboard program for X
+COMMENT=	Virtual (graphical) keyboard program for X
 LICENSE=	gnu-gpl-v2
 
 USE_IMAKE=	yes
 
-MAKE_FLAGS+=	SHAREDIR=${PREFIX}/share/xvkbd
+MAKE_FLAGS+=		SHAREDIR=${PREFIX}/share/xvkbd
 INSTALL_MAKE_FLAGS+=	SHAREDIR=${PREFIX}/share/xvkbd
 
 INSTALLATION_DIRS+=	share/xvkbd
 
 .include "../../mk/xaw.buildlink3.mk"
+BUILD_DEFS+=		XAW_TYPE
 .if ${XAW_TYPE} == "standard"
 SUBST_CLASSES+=		xaw
 SUBST_STAGE.xaw=	pre-configure
