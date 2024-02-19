@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=  	squeak3-03.7.7	
-CATEGORIES=	devel	
+CATEGORIES=	lang	
 MASTER_SITES=	https://sourceforge.net/projects/squeak3/files/
 
 MAINTAINER=	goon.mage@yahoo.com
