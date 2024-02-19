@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.libArcus?=		../../wip/libArcus
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/protobuf/buildlink3.mk"
-.include "../../x11/py-sip/buildlink3.mk"
+.include "../../wip/py-sip4/buildlink3.mk"
 .endif	# LIBARCUS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libArcus

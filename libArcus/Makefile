@@ -15,6 +15,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD+=	c++14
 
 SUBST_CLASSES+=		sip
 SUBST_STAGE.sip=	pre-configure
@@ -26,5 +27,5 @@ PY_PATCHPLIST=	YES
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/protobuf/buildlink3.mk"
-.include "../../x11/py-sip/buildlink3.mk"
+.include "../../wip/py-sip4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
