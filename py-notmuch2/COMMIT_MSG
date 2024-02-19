@@ -1,0 +1,5 @@
+mail/py-notmuch2: Add notmuch-0.38.2 python bindings
+
+Pythonic bindings for the notmuch mail indexer. This module makes the
+functionality of the notmuch library (https://notmuchmail.org) available
+to python using CFFI.

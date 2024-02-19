@@ -4072,6 +4072,7 @@ SUBDIR+=	py-notify-cli
 SUBDIR+=	py-notify-dev
 SUBDIR+=	py-notify-events
 SUBDIR+=	py-notify-py
+SUBDIR+=	py-notmuch2
 SUBDIR+=	py-nox
 SUBDIR+=	py-nphelper
 SUBDIR+=	py-nptdms
