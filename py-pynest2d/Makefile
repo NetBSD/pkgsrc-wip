@@ -32,5 +32,5 @@ SUBST_SED.fix-paths=		-e "s,@prefix@,${PREFIX},g"
 PY_PATCHPLIST=YES
 .include "../../lang/python/extension.mk"
 .include "../../wip/libnest2d-ultimaker/buildlink3.mk"
-.include "../../x11/py-sip/buildlink3.mk"
+.include "../../wip/py-sip4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
