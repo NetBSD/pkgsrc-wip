@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk
-# ocaml-cairo is broken
+# ocaml-lablgtk3 is broken
 PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
