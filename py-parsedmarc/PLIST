@@ -1,11 +1,10 @@
 @comment $NetBSD$
 bin/parsedmarc-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/parsedmarc/__init__.py
 ${PYSITELIB}/parsedmarc/__init__.pyc
 ${PYSITELIB}/parsedmarc/__init__.pyo
@@ -18,6 +17,12 @@ ${PYSITELIB}/parsedmarc/elastic.pyo
 ${PYSITELIB}/parsedmarc/kafkaclient.py
 ${PYSITELIB}/parsedmarc/kafkaclient.pyc
 ${PYSITELIB}/parsedmarc/kafkaclient.pyo
+${PYSITELIB}/parsedmarc/log.py
+${PYSITELIB}/parsedmarc/log.pyc
+${PYSITELIB}/parsedmarc/log.pyo
+${PYSITELIB}/parsedmarc/loganalytics.py
+${PYSITELIB}/parsedmarc/loganalytics.pyc
+${PYSITELIB}/parsedmarc/loganalytics.pyo
 ${PYSITELIB}/parsedmarc/mail/__init__.py
 ${PYSITELIB}/parsedmarc/mail/__init__.pyc
 ${PYSITELIB}/parsedmarc/mail/__init__.pyo
@@ -36,7 +41,11 @@ ${PYSITELIB}/parsedmarc/mail/mailbox_connection.pyo
 ${PYSITELIB}/parsedmarc/resources/__init__.py
 ${PYSITELIB}/parsedmarc/resources/__init__.pyc
 ${PYSITELIB}/parsedmarc/resources/__init__.pyo
-${PYSITELIB}/parsedmarc/resources/dbip-country-lite.mmdb
+${PYSITELIB}/parsedmarc/resources/dbip/README.md
+${PYSITELIB}/parsedmarc/resources/dbip/__init__.py
+${PYSITELIB}/parsedmarc/resources/dbip/__init__.pyc
+${PYSITELIB}/parsedmarc/resources/dbip/__init__.pyo
+${PYSITELIB}/parsedmarc/resources/dbip/dbip-country-lite.mmdb
 ${PYSITELIB}/parsedmarc/s3.py
 ${PYSITELIB}/parsedmarc/s3.pyc
 ${PYSITELIB}/parsedmarc/s3.pyo
