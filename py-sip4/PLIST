@@ -1,0 +1,10 @@
+@comment $NetBSD$
+bin/sip${PYVERSSUFFIX}
+${PYINC}/sip.h
+${PYSITELIB}/sip-${PKGVERSION}.dist-info/INSTALLER
+${PYSITELIB}/sip-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/sip-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/sip.pyi
+${PYSITELIB}/sip.so
+${PYSITELIB}/sipconfig.py
+${PYSITELIB}/sipdistutils.py
