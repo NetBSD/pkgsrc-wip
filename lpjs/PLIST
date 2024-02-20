@@ -11,6 +11,7 @@ man/man1/lpjs-nodes.1
 sbin/lpjs-admin
 sbin/lpjs-banner
 sbin/lpjs-chaperone
+sbin/lpjs-reset-queue
 sbin/lpjs-restart
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
