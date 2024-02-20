@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
 EXTRACT_SUFX=	.tar.tar
 EXTRACT_CMD=	${TAR} xzf $$extract_file
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	goon.mage@yahoo.com	
 HOMEPAGE=	http://desmume.sourceforge.net/
 COMMENT=	Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
