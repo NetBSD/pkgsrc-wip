@@ -28,6 +28,7 @@ man/man1/checkvpw.1
 man/man1/dumpvuser.1
 man/man1/listvdomain.1
 man/man1/vadduser.1
+man/man1/vaddusers.1
 man/man1/vauthenticate.1
 man/man1/vchattr.1
 man/man1/vchforwards.1

@@ -1,16 +1,17 @@
 $NetBSD$
 
-BLAKE2s (vmailmgr-0.97-1.src.rpm) = 7d123e15f2e42edcafc780f157fe636706770be32142d43ee7b981e4b0cd42b8
-SHA512 (vmailmgr-0.97-1.src.rpm) = b8a4518a1b182a56f5db9f9a982dd35b574bb08a3fc00f58e36a85ecad2f77f22a3f392d8739be0fb67bbafe250ec6c01b8d8c44e6dee8c8d1f1b95c12d450e5
-Size (vmailmgr-0.97-1.src.rpm) = 637291 bytes
+BLAKE2s (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 6e83ecea2a0defebd20323fbe9833dc1d4e63e8e2d4c6d904c9558ba32cc9a59
+SHA512 (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 9d717b4b9ae763509d8192c40167606acdc56622d8f9351c763140f5b2573d6c2c1364c33003e1649d2b0d628aadab03690ade20f9e3210c5b44a89237bdd62b
+Size (vmailmgr-526d53c1d0e604ec29ada61b79485ceeb8b978cd-526d53c1d0e604ec29ada61b79485ceeb8b978cd.tar.gz) = 191933 bytes
 SHA1 (patch-Makefile.am) = 2170216e56600228e70f237a15f482421741e2d0
-SHA1 (patch-Makefile.in) = 77d418acd00895d7747fccd8e298c88cc66190fc
 SHA1 (patch-authenticate_Makefile.am) = 70882f5912b7ea2e5e4ca32b8132f16bb541c454
 SHA1 (patch-cgi_Makefile.am) = 5cab84302883fbaf7477def403ec0025cd9e7eb4
+SHA1 (patch-commands_Makefile.am) = ee2506f4b6da96492e8dc753870a720a3b7c5ae1
 SHA1 (patch-commands_vdeliver.cc) = cbbd24e3a82ea18efc69097913279f4e1d1f715b
+SHA1 (patch-doc_Makefile.am) = c49c927ad8d19ab67f60a21535f0576cd4d8403e
 SHA1 (patch-lib_fdbuf_fdbuf.h) = 49df77596e79033a1667316636a7cc7c9e7c4086
+SHA1 (patch-lib_mergelib.sh) = 59cdc1e5896331195f1d693a7cad4f7f6f7ec8e4
 SHA1 (patch-lib_misc_response.h) = dd36666436fc11ea6dc6efde625f3b5ba9809922
-SHA1 (patch-lib_misc_server.cc) = 368077d018036afb68e23390ebfc382dcea1394a
 SHA1 (patch-lib_vpwtable_cdb__write.cc) = 37ec16e5c3ba97a50cfad26adbe78f433526a68a
 SHA1 (patch-lib_vpwtable_gdbm__del.cc) = 26b9325bc921ae24e5833dbe04c5b9753c52c18d
 SHA1 (patch-lib_vpwtable_gdbm__exists.cc) = 08d7bc89f01c804befd42d52e6df3bc0e42e6f41

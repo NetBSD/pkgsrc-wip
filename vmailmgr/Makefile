@@ -1,23 +1,23 @@
 # $NetBSD$
 
-DISTNAME=		vmailmgr-0.97-1.src.rpm
-PKGNAME=		${DISTNAME:S/-1.src.rpm$//}
+DISTNAME=		vmailmgr-${GITHUB_TAG}
+PKGNAME=		vmailmgr-0.97.0.20150901
 CATEGORIES=		mail
-MASTER_SITES=		${HOMEPAGE}current/
-EXTRACT_SUFX=		# none
-EXTRACT_CMD=		${TAR} xzf $${extract_file} && ${TAR} xzf ${PKGNAME_NOREV}.tar.gz
+MASTER_SITES=		${MASTER_SITE_GITHUB:=bruceg/}
+GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/vmailmgr/
 COMMENT=		Manage multiple mail domains on a single qmail host
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoconf213 automake14 gmake perl tar
+USE_TOOLS+=		autoconf automake gmake perl sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+post-extract:
+	cd ${WRKSRC}/lib/config && ${SH} build-config.sh
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i

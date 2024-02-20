@@ -1,0 +1,16 @@
+$NetBSD$
+
+Fix typo, spotted on Ubuntu via "install: will not overwrite
+just-created vadduser.1"
+
+--- commands/Makefile.am.orig	2024-02-20 20:06:05.979521962 +0000
++++ commands/Makefile.am
+@@ -4,7 +4,7 @@ bin_SCRIPTS = vaddalias vconf2dir
+ noinst_HEADERS = vcommand.h
+ 
+ noinst_PODS = \
+-	dumpvuser.pod listvdomain.pod vadduser.pod vadduser.pod vchattr.pod \
++	dumpvuser.pod listvdomain.pod vadduser.pod vaddusers.pod vchattr.pod \
+ 	vchforwards.pod vdeliver.pod vdeluser.pod \
+ 	vpasswd.pod vpasswds.pod vrehash.pod vsetup.pod vupgrade.pod
+ noinst_HTMLS = $(noinst_PODS:.pod=.html)
