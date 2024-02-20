@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.in.orig	2024-02-20 03:29:16.187148576 +0000
++++ Makefile.in
+@@ -82,7 +82,7 @@ W3M = @W3M@
+ cgidir = @cgidir@
+ phpdir = @phpdir@
+ pythonlibdir = @pythonlibdir@
+-@WANTPYTHON_TRUE@SUBDIRS = python php lib authenticate commands daemon cgi doc scripts
++@WANTPYTHON_TRUE@SUBDIRS = php lib authenticate commands daemon cgi doc scripts
+ @WANTPYTHON_FALSE@SUBDIRS = php lib authenticate commands daemon cgi doc scripts
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

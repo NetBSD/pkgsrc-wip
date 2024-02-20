@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- Makefile.am.orig	2004-03-15 17:58:59.000000000 +0000
++++ Makefile.am
+@@ -1,7 +1,7 @@
+ if WANTPYTHON
+-SUBDIRS = python php lib authenticate commands daemon cgi doc scripts
++SUBDIRS = lib authenticate commands daemon cgi doc scripts
+ else
+-SUBDIRS = php lib authenticate commands daemon cgi doc scripts
++SUBDIRS = lib authenticate commands daemon cgi doc scripts
+ endif
+ 
+ dist-hook:

@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- authenticate/Makefile.am.orig	2024-02-20 03:24:52.209991167 +0000
++++ authenticate/Makefile.am
+@@ -1,5 +1,5 @@
+ bin_PROGRAMS = checkvpw vauthenticate
+-authlib_PROGRAMS = authvmailmgr
++#authlib_PROGRAMS = authvmailmgr
+ authlibdir = ${prefix}/lib/courier-imap/libexec/authlib/
+ 
+ noinst_PODS = checkvpw.pod vauthenticate.pod
+@@ -25,8 +25,8 @@ INCLUDES = $(CIINCLUDES) -I../lib
+ checkvpw_SOURCES = checkvpw.cc authvlib.cc authvlib.h
+ checkvpw_LDADD = ../lib/libvmailmgr.a
+ 
+-authvmailmgr_SOURCES = authvmailmgr.cc authvlib.cc authvlib.h
+-authvmailmgr_LDADD = ../lib/libvmailmgr.a -L../lib/courier-authlib -lauthmod
++#authvmailmgr_SOURCES = authvmailmgr.cc authvlib.cc authvlib.h
++#authvmailmgr_LDADD = ../lib/libvmailmgr.a -L../lib/courier-authlib -lauthmod
+ 
+ vauthenticate_SOURCES = vauthenticate.cc authvlib.cc authvlib.h
+ vauthenticate_LDADD = ../lib/libvmailmgr.a
