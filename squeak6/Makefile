@@ -8,8 +8,8 @@ SQUEAK_SOURCES=	SqueakV60.sources
 DISTNAME=	Squeak${SQUEAK_VERSION}-${IMAGE_VERSION}-${IMAGE_ARCH}
 PKGNAME=	squeak6-${SQUEAK_VERSION}.${IMAGE_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	http://files.squeak.org/${SQUEAK_VERSION}/${DISTNAME}/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	http://sourceforge.net/projects/squeak6/
+### EXTRACT_SUFX=	.zip
 DISTFILES=	${DEFAULT_DISTFILES} ${SQUEAK_SOURCES}.gz
 
 SITES.${SQUEAK_SOURCES}.gz=	http://files.squeak.org/sources_files/
