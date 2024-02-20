@@ -1,29 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	harec-0
+PKGNAME=	harec-0.24.0
+DISTNAME=	${PKGVERSION_NOREV}
 CATEGORIES=	lang
-GIT_REPO=	https://git.sr.ht/~sircmpwn/harec
-GIT_BRANCH=	master
-GIT_REVISION=	cfcc22785c94716c0e96be23081d8bfd1f6c0466
+MASTER_SITES=	https://git.sr.ht/~sircmpwn/harec/archive/
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://harelang.org/
 COMMENT=	Hare language bootstrap compiler
 LICENSE=	gnu-gpl-v3
 
+WRKSRC=		${WRKDIR}/${PKGNAME}
+
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--bindir=${BINDIR}
-CONFIGURE_ARGS+=	--libdir=${LIBDIR}
-CONFIGURE_ARGS+=	--mandir=${MANDIR}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--sharedir=${SHAREDIR}
-
-TOOL_DEPENDS+=		qbe>=1.1*:../../lang/qbe
+TOOL_DEPENDS+=		qbe>=1.2:../../lang/qbe
 
 do-configure:
-	${RUN} cd ${WRKSRC} && ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+	${RUN} cp ${FILESDIR}/config.mk ${WRKSRC}/config.mk
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
