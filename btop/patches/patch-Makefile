@@ -2,10 +2,10 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- Makefile.orig	2024-01-02 15:54:52.000000000 +0000
+--- Makefile.orig	2024-02-18 13:25:11.000000000 +0000
 +++ Makefile
-@@ -166,6 +166,12 @@ else ifeq ($(PLATFORM_LC),openbsd)
- 	override ADDFLAGS += -lkvm
+@@ -146,6 +146,12 @@ else ifeq ($(PLATFORM_LC),openbsd)
+ 	override ADDFLAGS += -lkvm -static-libstdc++
  	export MAKE = gmake
  	SU_GROUP := wheel
 +else ifeq ($(PLATFORM_LC),netbsd)

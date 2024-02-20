@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-01-06 07:32:32.704371129 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-02-20 04:23:40.288593132 +0000
 +++ src/netbsd/btop_collect.cpp
 @@ -0,0 +1,1284 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
@@ -209,7 +209,7 @@ Add support for NetBSD.
 +	string cpuName;
 +	string cpuHz;
 +	bool has_battery = true;
-+	tuple<int, long, string> current_bat;
++	tuple<int, float, long, string> current_bat;
 +
 +	const array<string, 10> time_names = {"user", "nice", "system", "idle"};
 +
@@ -392,8 +392,8 @@ Add support for NetBSD.
 +		return core_map;
 +	}
 +
-+	auto get_battery() -> tuple<int, long, string> {
-+		if (not has_battery) return {0, 0, ""};
++	auto get_battery() -> tuple<int, float, long, string> {
++		if (not has_battery) return {0, 0.0, 0, ""};
 +
 +		long seconds = -1;
 +		uint32_t percent = -1;
@@ -424,7 +424,7 @@ Add support for NetBSD.
 +			}
 +		}
 +
-+		return {percent, seconds, status};
++		return {percent, 0.0, seconds, status};
 +	}
 +
 +	auto collect(bool no_update) -> cpu_info & {
@@ -626,9 +626,9 @@ Add support for NetBSD.
 +  		mem.stats.at("free") = Shared::totalMem - memActive - memWire;
 +
 +		if (show_swap) {
-+			int total = uvmexp.swpages * Shared::pageSize;
++			uint64_t total = uvmexp.swpages * Shared::pageSize;
 +			mem.stats.at("swap_total") = total;
-+			int swapped = uvmexp.swpginuse * Shared::pageSize;
++			uint64_t swapped = uvmexp.swpginuse * Shared::pageSize;
 +			mem.stats.at("swap_used") = swapped;
 +			mem.stats.at("swap_free") = total - swapped;
 +		}
