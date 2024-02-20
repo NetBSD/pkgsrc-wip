@@ -5,7 +5,7 @@ DISTNAME=	squirrel_${PKGVERSION_NOREV:S/./_/g}_stable
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrel/}
 
-MAINTAINER=	charlotte@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squirrel-lang.org/
 COMMENT=	The Squirrel programming language
 LICENSE=	mit
