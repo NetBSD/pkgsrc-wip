@@ -5,7 +5,7 @@ DISTNAME=	desmume-release-0.9.13
 PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume2/}
-EXTRACT_SUFX=	.tar.tar
+### EXTRACT_SUFX=	.tar.tar
 EXTRACT_CMD=	${TAR} xzf $$extract_file
 
 MAINTAINER=	goon.mage@yahoo.com	
