@@ -1,15 +1,15 @@
 # $NetBSD: Makefile,v 1.16 2015/04/19 15:10:39 othyro Exp $
 #
 
-DISTNAME=	desmume-0.9.10
+DISTNAME=	desmume-release-0.9.13
 PKGREVISION=	1
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume2/}
 EXTRACT_SUFX=	.tar.tar
 EXTRACT_CMD=	${TAR} xzf $$extract_file
 
 MAINTAINER=	goon.mage@yahoo.com	
-HOMEPAGE=	http://desmume.sourceforge.net/
+HOMEPAGE=	http://desmume2.sourceforge.net/
 COMMENT=	Nintendo DS emulator
 LICENSE=	gnu-gpl-v2
 
