@@ -1,5 +1,7 @@
 $NetBSD$
 
+Patch from FreeBSD ports.
+
 --- lib/vpwtable/gdbm_put.cc.orig	2024-02-20 03:21:52.065572565 +0000
 +++ lib/vpwtable/gdbm_put.cc
 @@ -25,9 +25,9 @@ bool vpwtable::put(const vpwentry* vpw,

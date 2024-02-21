@@ -1,7 +1,9 @@
 $NetBSD$
 
-Fix typo, spotted on Ubuntu via "install: will not overwrite
-just-created vadduser.1"
+Fix typo in list of .pod files, spotted on Ubuntu via "install: will not
+overwrite just-created vadduser.1"
+
+Avoid "warning: ignoring prerequisites on suffix rule definition"
 
 --- commands/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
 +++ commands/Makefile.am

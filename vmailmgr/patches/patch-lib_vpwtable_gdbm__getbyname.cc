@@ -1,5 +1,7 @@
 $NetBSD$
 
+Patch from FreeBSD ports.
+
 --- lib/vpwtable/gdbm_getbyname.cc.orig	2024-02-20 03:21:36.626537464 +0000
 +++ lib/vpwtable/gdbm_getbyname.cc
 @@ -24,7 +24,7 @@ vpwentry* vpwtable::getbyname(const myst

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Follow hier(7).
+
 --- cgi/Makefile.am.orig	2024-02-20 03:25:23.776012371 +0000
 +++ cgi/Makefile.am
 @@ -1,5 +1,6 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix warnings.
+
 --- lib/fdbuf/fdbuf.h.orig	2024-02-20 03:19:48.448432259 +0000
 +++ lib/fdbuf/fdbuf.h
 @@ -21,6 +21,7 @@

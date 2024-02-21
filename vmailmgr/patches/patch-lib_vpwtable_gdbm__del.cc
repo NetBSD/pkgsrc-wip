@@ -1,5 +1,7 @@
 $NetBSD$
 
+Patch from FreeBSD ports.
+
 --- lib/vpwtable/gdbm_del.cc.orig	2024-02-20 03:20:54.978827529 +0000
 +++ lib/vpwtable/gdbm_del.cc
 @@ -23,7 +23,7 @@ bool vpwtable::del(const mystring& name)

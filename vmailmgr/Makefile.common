@@ -1,0 +1,40 @@
+# $NetBSD$
+#
+# used by wip/vmailmgr/Makefile
+# used by wip/vmailmgr-courier-imap/Makefile
+# used by wip/vmailmgr-php/Makefile
+# used by wip/vmailmgr-python/Makefile
+
+DISTNAME=		vmailmgr-${GITHUB_TAG}
+VERSION=		0.97.0.20150901
+CATEGORIES=		mail
+MASTER_SITES=		${MASTER_SITE_GITHUB:=bruceg/}
+GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
+
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://untroubled.org/vmailmgr/
+COMMENT=		Manage multiple mail domains on a single qmail host
+LICENSE=		gnu-gpl-v2
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoconf automake gmake perl sh
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ENV+=		ac_cv_path_W3M=
+CONFIGURE_ENV+=		ac_cv_path_LYNX=
+
+PATCHDIR=		${.CURDIR}/../../wip/vmailmgr/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/vmailmgr/distinfo
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_FILES.version=	configure.ac
+SUBST_VARS.version=	PKGVERSION
+
+post-extract:
+	cd ${WRKSRC}/lib/config && ${SH} build-config.sh
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i

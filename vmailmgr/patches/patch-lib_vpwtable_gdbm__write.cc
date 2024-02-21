@@ -1,5 +1,7 @@
 $NetBSD$
 
+Patch from FreeBSD ports.
+
 --- lib/vpwtable/gdbm_write.cc.orig	2024-02-20 03:22:19.220947617 +0000
 +++ lib/vpwtable/gdbm_write.cc
 @@ -22,8 +22,8 @@

@@ -1,5 +1,7 @@
 $NetBSD$
 
+Patch from FreeBSD ports.
+
 --- commands/vdeliver.cc.orig	2024-02-20 03:26:27.764197339 +0000
 +++ commands/vdeliver.cc
 @@ -262,7 +262,7 @@ void inject(mystring sender, mystring re
