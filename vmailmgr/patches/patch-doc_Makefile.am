@@ -2,21 +2,9 @@ $NetBSD$
 
 Avoid "warning: ignoring prerequisites on suffix rule definition"
 
-Skip building non-manpage docs.
-
 --- doc/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
 +++ doc/Makefile.am
-@@ -30,7 +30,8 @@ TEXI2PDF = texi2pdf --clean --quiet
- TEXI2INFO = texi2any --info --no-split --number-sections
- TEXI2TXT = texi2any --plaintext
- 
--all: $(noinst_HTMLS) $(noinst_PDFS) $(noinst_TXTS) $(noinst_MISC)
-+#all: $(noinst_HTMLS) $(noinst_PDFS) $(noinst_TXTS) $(noinst_MISC)
-+all: $(man_MANS)
- 
- dist-hook:
- 	touch $(distdir)/*.html
-@@ -43,15 +44,15 @@ ChangeLog.html: ../ChangeLog
+@@ -43,15 +43,15 @@ ChangeLog.html: ../ChangeLog
  NEWS.html: ../NEWS
  	$(NEWS2HTML) $< >$@
  

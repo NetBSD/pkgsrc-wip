@@ -1,6 +1,7 @@
 $NetBSD$
 
 Don't build python, php, or courier-imap by default.
+Remove unused text-browser checks.
 
 --- configure.ac.orig	2015-09-01 16:03:21.000000000 +0000
 +++ configure.ac
@@ -10,7 +11,7 @@ Don't build python, php, or courier-imap by default.
  AC_CONFIG_SRCDIR([lib/mergelib.sh])
  AM_INIT_AUTOMAKE
  
-@@ -55,19 +55,34 @@ AC_PATH_PROG(RM, rm)
+@@ -55,34 +55,34 @@ AC_PATH_PROG(RM, rm)
  AC_PATH_PROG(MKDIR, mkdir)
  AC_PATH_PROG(LN, ln)
  
@@ -40,12 +41,26 @@ Don't build python, php, or courier-imap by default.
 +phpdir='${prefix}/share/vmailmgr/php'
  AC_SUBST(phpdir)
 +AM_CONDITIONAL(WANTPHP, test "$USE_PHP" != no)
-+
+ 
+-AC_PATH_PROG(W3M, w3m)
+-AC_PATH_PROG(LYNX, lynx)
+-if test "x$W3M" != x; then
+-  echo Using w3m to format html pages.
+-  HTML2TXT="w3m -dump"
+-elif test "x$LYNX" != x; then
+-  echo Using lynx to format html pages.
+-  HTML2TXT="lynx -dump -nolist"
+-else
+-  echo "Can't find either w3m or lynx, building the plain text"
+-  echo "documentation files will fail."
+-  HTML2TXT="false"
+-fi
+-AC_SUBST(HTML2TXT)
 +USE_COURIER=no
 +AC_ARG_ENABLE(courier-imap,
 +[  --enable-courier-imap   Install Courier-IMAP authenticator.],
 +USE_COURIER=$enableval)
 +AM_CONDITIONAL(WANTCOURIER, test "$USE_COURIER" != no)
  
- AC_PATH_PROG(W3M, w3m)
- AC_PATH_PROG(LYNX, lynx)
+ TODAY=`date +%Y-%m-%d`
+ POD2MAN="pod2man --release='vmailmgr ${VERSION}' --center='VMailMgr Tools Documentation' --date='${TODAY}'"

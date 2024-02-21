@@ -2,6 +2,7 @@
 #
 # used by wip/vmailmgr/Makefile
 # used by wip/vmailmgr-courier-imap/Makefile
+# used by wip/vmailmgr-docs/Makefile
 # used by wip/vmailmgr-php/Makefile
 # used by wip/vmailmgr-python/Makefile
 
@@ -22,8 +23,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake gmake perl sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ENV+=		ac_cv_path_W3M=
-CONFIGURE_ENV+=		ac_cv_path_LYNX=
 
 PATCHDIR=		${.CURDIR}/../../wip/vmailmgr/patches
 DISTINFO_FILE=		${.CURDIR}/../../wip/vmailmgr/distinfo
