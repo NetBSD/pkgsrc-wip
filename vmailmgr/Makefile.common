@@ -1,6 +1,7 @@
 # $NetBSD$
 #
 # used by wip/vmailmgr/Makefile
+# used by wip/vmailmgr-cgi/Makefile
 # used by wip/vmailmgr-courier-imap/Makefile
 # used by wip/vmailmgr-docs/Makefile
 # used by wip/vmailmgr-php/Makefile

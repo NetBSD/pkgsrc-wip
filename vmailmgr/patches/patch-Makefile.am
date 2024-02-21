@@ -1,19 +1,22 @@
 $NetBSD$
 
-Build python and php as their own packages.
+Build cgi, php, and python as their own packages.
 
 --- Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
 +++ Makefile.am
-@@ -1,7 +1,9 @@
-+SUBDIRS = lib authenticate commands daemon cgi doc scripts
+@@ -1,7 +1,12 @@
++SUBDIRS = lib authenticate commands daemon scripts
++if WANTCGI
++SUBDIRS += cgi
++endif
++if WANTPHP
++SUBDIRS += php
++endif
  if WANTPYTHON
 -SUBDIRS = python php lib authenticate commands daemon cgi doc scripts
 -else
 -SUBDIRS = php lib authenticate commands daemon cgi doc scripts
 +SUBDIRS += python
-+endif
-+if WANTPHP
-+SUBDIRS += php
  endif
  
  dist-hook:

@@ -1,0 +1,8 @@
+@comment $NetBSD$
+libexec/cgi-bin/listvdomain
+libexec/cgi-bin/vaddalias
+libexec/cgi-bin/vadduser
+libexec/cgi-bin/vchattr
+libexec/cgi-bin/vchforwards
+libexec/cgi-bin/vdeluser
+libexec/cgi-bin/vpasswd

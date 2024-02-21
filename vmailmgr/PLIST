@@ -17,13 +17,6 @@ bin/vpasswds
 bin/vrehash
 bin/vsetup
 bin/vupgrade
-libexec/cgi-bin/listvdomain
-libexec/cgi-bin/vaddalias
-libexec/cgi-bin/vadduser
-libexec/cgi-bin/vchattr
-libexec/cgi-bin/vchforwards
-libexec/cgi-bin/vdeluser
-libexec/cgi-bin/vpasswd
 man/man1/checkvpw.1
 man/man1/dumpvuser.1
 man/man1/listvdomain.1

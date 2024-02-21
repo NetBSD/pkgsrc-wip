@@ -1,6 +1,6 @@
 $NetBSD$
 
-Don't build python, php, or courier-imap by default.
+Don't build courier-imap, cgi, php, or python by default.
 Remove unused text-browser checks.
 
 --- configure.ac.orig	2015-09-01 16:03:21.000000000 +0000
@@ -11,7 +11,7 @@ Remove unused text-browser checks.
  AC_CONFIG_SRCDIR([lib/mergelib.sh])
  AM_INIT_AUTOMAKE
  
-@@ -55,34 +55,34 @@ AC_PATH_PROG(RM, rm)
+@@ -55,34 +55,42 @@ AC_PATH_PROG(RM, rm)
  AC_PATH_PROG(MKDIR, mkdir)
  AC_PATH_PROG(LN, ln)
  
@@ -61,6 +61,24 @@ Remove unused text-browser checks.
 +[  --enable-courier-imap   Install Courier-IMAP authenticator.],
 +USE_COURIER=$enableval)
 +AM_CONDITIONAL(WANTCOURIER, test "$USE_COURIER" != no)
++
++USE_CGI=no
++AC_ARG_ENABLE(cgi,
++[  --enable-cgi            Install CGI programs.],
++USE_CGI=$enableval)
++cgidir='${prefix}/libexec/cgi-bin'
++AC_SUBST(cgidir)
++AM_CONDITIONAL(WANTCGI, test "$USE_CGI" != no)
  
  TODAY=`date +%Y-%m-%d`
  POD2MAN="pod2man --release='vmailmgr ${VERSION}' --center='VMailMgr Tools Documentation' --date='${TODAY}'"
+@@ -117,9 +125,6 @@ dnl Checks for library functions.
+ AC_CHECK_FUNCS(gethostname gettimeofday mkdir putenv rmdir socket)
+ AC_CHECK_FUNCS(srandom random crypt strcasestr)
+ 
+-cgidir='${prefix}/cgi-bin'
+-AC_SUBST(cgidir)
+-
+ AC_CONFIG_HEADERS([config.h])
+ AC_CONFIG_FILES(Makefile
+ 	cgi/Makefile
