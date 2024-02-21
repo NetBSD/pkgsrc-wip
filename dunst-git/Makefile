@@ -47,6 +47,7 @@ INSTALLATION_DIRS+=	share/dunst
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
