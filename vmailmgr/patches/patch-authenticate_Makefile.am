@@ -1,6 +1,6 @@
 $NetBSD$
 
---- authenticate/Makefile.am.orig	2024-02-20 03:24:52.209991167 +0000
+--- authenticate/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
 +++ authenticate/Makefile.am
 @@ -1,5 +1,5 @@
  bin_PROGRAMS = checkvpw vauthenticate
@@ -9,7 +9,19 @@ $NetBSD$
  authlibdir = ${prefix}/lib/courier-imap/libexec/authlib/
  
  noinst_PODS = checkvpw.pod vauthenticate.pod
-@@ -25,8 +25,8 @@ INCLUDES = $(CIINCLUDES) -I../lib
+@@ -17,9 +17,9 @@ docs: $(noinst_HTMLS) $(man_MANS)
+ dist-hook:
+ 	touch $(distdir)/*.html $(distdir)/*.[123456789]
+ 
+-.pod.1: ../configure.ac
++.pod.1:
+ 	$(POD2MAN) --section=1 $< >$@
+-.pod.html: ../configure.ac
++.pod.html:
+ 	$(POD2HTML) $< >$@
+ 
+ AM_CPPFLAGS = -I../lib
+@@ -27,8 +27,8 @@ AM_CPPFLAGS = -I../lib
  checkvpw_SOURCES = checkvpw.cc authvlib.cc authvlib.h
  checkvpw_LDADD = ../lib/libvmailmgr.a
  
