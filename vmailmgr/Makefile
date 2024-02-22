@@ -1,31 +1,17 @@
 # $NetBSD$
 
-.include "../../wip/vmailmgr/Makefile.common"
+.include "../../wip/vmailmgr/version.mk"
 
-PKGNAME=		vmailmgr-${VERSION}
+PKGNAME=	vmailmgr-${VERSION}
+CATEGORIES=	mail
 
-CONFIGURE_ARGS+=	--disable-cgi
-CONFIGURE_ARGS+=	--disable-courier-imap
-CONFIGURE_ARGS+=	--disable-php
-CONFIGURE_ARGS+=	--disable-python
+DEPENDS+=	vmailmgr-base>=${VERSION}:../../wip/vmailmgr-base
+DEPENDS+=	vmailmgr-cgi>=${VERSION}:../../wip/vmailmgr-cgi
+DEPENDS+=	vmailmgr-courier-imap>=${VERSION}:../../wip/vmailmgr-courier-imap
+DEPENDS+=	vmailmgr-docs>=${VERSION}:../../wip/vmailmgr-docs
+DEPENDS+=	vmailmgr-php>=${VERSION}:../../wip/vmailmgr-php
+DEPENDS+=	vmailmgr-python>=${VERSION}:../../wip/vmailmgr-python
 
-# for vmailmgr.7, without building the heavier docs
-# copy-paste-changed from ../../mk/build/build.mk:
-post-build:
-.for dir in doc
-	${RUN}${_ULIMIT_CMD}						\
-	cd ${WRKSRC} && cd ${dir} &&					\
-	${BUILD_MAKE_CMD} man
-.endfor
-
-# copy-paste-changed from ../../mk/install/install.mk:
-post-install:
-.for dir in doc
-	${RUN} ${_ULIMIT_CMD}						\
-	cd ${WRKSRC} && cd ${dir} &&					\
-	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} 			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
-			-f ${MAKE_FILE} install-man
-.endfor
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

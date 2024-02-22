@@ -1,14 +1,15 @@
 # $NetBSD$
 #
-# used by wip/vmailmgr/Makefile
+# used by wip/vmailmgr-base/Makefile
 # used by wip/vmailmgr-cgi/Makefile
 # used by wip/vmailmgr-courier-imap/Makefile
 # used by wip/vmailmgr-docs/Makefile
 # used by wip/vmailmgr-php/Makefile
 # used by wip/vmailmgr-python/Makefile
 
+.include "../../wip/vmailmgr/version.mk"
+
 DISTNAME=		vmailmgr-${GITHUB_TAG}
-VERSION=		0.97.0.20150901
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bruceg/}
 GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
@@ -25,8 +26,8 @@ USE_TOOLS+=		autoconf automake gmake perl sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-PATCHDIR=		${.CURDIR}/../../wip/vmailmgr/patches
-DISTINFO_FILE=		${.CURDIR}/../../wip/vmailmgr/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/vmailmgr-base/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/vmailmgr-base/distinfo
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
