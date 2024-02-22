@@ -4,6 +4,19 @@ Avoid "warning: ignoring prerequisites on suffix rule definition"
 
 --- doc/Makefile.am.orig	2015-09-01 16:03:21.000000000 +0000
 +++ doc/Makefile.am
+@@ -7,10 +7,10 @@ noinst_TXTS = HOWTO.txt FAQ.txt \
+ 	record-format.txt
+ noinst_PODS = vmailmgr.pod
+ noinst_MISC = FAQ.info FAQ.pdf HOWTO.info HOWTO.pdf \
+-	configuration.info translation.pdf translation.ps
++	configuration.info
+ EXTRA_DIST = ChangeLog-pre-vmailmgr ChangeLog-pre-0.70 \
+ 	changelog2html.pl news2html.pl \
+-	YEAR2000 translation.fig \
++	YEAR2000 \
+ 	$(man_MANS) \
+ 	$(noinst_PODS) \
+ 	$(noinst_TEXINFOS) \
 @@ -31,6 +31,7 @@ TEXI2INFO = texi2any --info --no-split -
  TEXI2TXT = texi2any --plaintext
  

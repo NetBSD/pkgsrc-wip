@@ -7,7 +7,6 @@ PKGNAME=		vmailmgr-docs-${VERSION}
 BUILD_TARGET=		docs
 BUILD_DIRS+=		. authenticate
 
-TOOL_DEPENDS+=		fig2dev-[0-9]*:../../print/fig2dev
 TOOL_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 TOOL_DEPENDS+=		tex-texinfo-[0-9]*:../../print/tex-texinfo
 

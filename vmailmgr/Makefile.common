@@ -22,6 +22,7 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
 USE_TOOLS+=		autoconf automake gmake perl sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -41,6 +42,11 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	authenticate/checkvpw.pod doc/HOWTO.texi
 SUBST_SED.prefix=	-e 's|/usr/bin|${PREFIX}/bin|g'
+
+SUBST_CLASSES+=		unused
+SUBST_STAGE.unused=	pre-configure
+SUBST_FILES.unused=	lib/courier-authlib/*.c lib/courier-authlib/*.h
+SUBST_SED.unused=	-e 's|\(.*rcsid\[\]=.*;\)$$|// \1|g'
 
 SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	pre-configure

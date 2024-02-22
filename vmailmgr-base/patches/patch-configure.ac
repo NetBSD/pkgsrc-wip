@@ -11,7 +11,7 @@ Remove unused text-browser checks.
  AC_CONFIG_SRCDIR([lib/mergelib.sh])
  AM_INIT_AUTOMAKE
  
-@@ -55,34 +55,42 @@ AC_PATH_PROG(RM, rm)
+@@ -55,38 +55,48 @@ AC_PATH_PROG(RM, rm)
  AC_PATH_PROG(MKDIR, mkdir)
  AC_PATH_PROG(LN, ln)
  
@@ -71,8 +71,16 @@ Remove unused text-browser checks.
 +AM_CONDITIONAL(WANTCGI, test "$USE_CGI" != no)
  
  TODAY=`date +%Y-%m-%d`
- POD2MAN="pod2man --release='vmailmgr ${VERSION}' --center='VMailMgr Tools Documentation' --date='${TODAY}'"
-@@ -117,9 +125,6 @@ dnl Checks for library functions.
+-POD2MAN="pod2man --release='vmailmgr ${VERSION}' --center='VMailMgr Tools Documentation' --date='${TODAY}'"
+-POD2HTML="pod2html --noindex"
++AC_PATH_PROG(POD2MAN,pod2man)
++POD2MAN="$POD2MAN --release='vmailmgr ${VERSION}' --center='VMailMgr Tools Documentation' --date='${TODAY}'"
++AC_PATH_PROG(POD2HTML,pod2html)
++POD2HTML="$POD2HTML --noindex"
+ SUFFIXES="$SUFFIXES .1 .5 .7 .8 .pod .html .texi .txt .ps .fig .sgml .py .pyc .pyo"
+ AC_SUBST(POD2MAN)
+ AC_SUBST(POD2HTML)
+@@ -117,9 +127,6 @@ dnl Checks for library functions.
  AC_CHECK_FUNCS(gethostname gettimeofday mkdir putenv rmdir socket)
  AC_CHECK_FUNCS(srandom random crypt strcasestr)
  
