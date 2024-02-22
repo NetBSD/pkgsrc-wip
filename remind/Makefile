@@ -35,6 +35,6 @@ post-install:
 		${INSTALL_DATA} COPYRIGHT \
 			${DESTDIR}${PREFIX}/share/doc/remind
 
-#.include "../../graphics/cairo/buildlink3.mk"
-#.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/p5-cairo/buildlink3.mk"
+.include "../../devel/p5-pango/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
