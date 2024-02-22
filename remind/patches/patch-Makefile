@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- Makefile.orig	2024-02-04 18:10:19.000000000 +0000
++++ Makefile
+@@ -9,8 +9,8 @@ all: src/Makefile
+ 	@echo "*                 *"
+ 	@echo "*******************"
+ 	@echo ""
+-	@cd src && $(MAKE) all LANGDEF=$(LANGDEF)
+-	@$(MAKE) -C rem2pdf -f Makefile.top
++	@$(MAKE) -C src all LANGDEF=$(LANGDEF)
++	@$(MAKE) -C rem2pdf -f Makefile.top
+ install:
+ 	@echo ""
+ 	@echo "**********************************"

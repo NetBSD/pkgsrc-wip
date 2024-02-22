@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.18 2021/10/26 11:24:36 nia Exp $
+
+BLAKE2s (remind-04.02.09.tar.gz) = aec167d393f428dd197c08f517dd7e06fa1db115e2bf6d24f019a457261bc661
+SHA512 (remind-04.02.09.tar.gz) = e501e9d8894782f11838d3be5bcebe1e3eda21d6638d69c321b6afc594c0308d3070b1697eabe7160584f82573879345f1b91c460dcaff5ed2b5568821fcc504
+Size (remind-04.02.09.tar.gz) = 515231 bytes
+SHA1 (patch-Makefile) = 3201e7131b72d2c059c07334a9b98ccb89b526a8
+SHA1 (patch-src_Makefile.in) = dceb05191425ae92d1df24841ee22e3adcdb3cb4
+SHA1 (patch-src_custom.h) = 2441b01ec8e4349c1c5768ac4f351f54a4628f74
+SHA1 (patch-src_funcs.c) = 28563f7cc9c62866ab23253827fb663c8cf82dc3
