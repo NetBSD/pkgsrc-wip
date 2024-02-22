@@ -1,5 +1,6 @@
 # $NetBSD$
-DISTNAME=	openfortivpn-1.20.1
+
+DISTNAME=	openfortivpn-1.21.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adrienverge/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
