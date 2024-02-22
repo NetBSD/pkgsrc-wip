@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	bsdtar
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	perl:run autoconf
+USE_TOOLS+=	perl:run
 
 USE_FEATURES=	glob
 
@@ -34,6 +34,21 @@ post-install:
 			${DESTDIR}${PREFIX}/share/doc/remind; \
 		${INSTALL_DATA} COPYRIGHT \
 			${DESTDIR}${PREFIX}/share/doc/remind
+
+		${INSTALL_SCRIPT} ${WRKSRC}/rem2pdf/bin/rem2pdf \
+			${DESTDIR}${PREFIX}/bin/rem2pdf
+
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_MAN} ${WRKSRC}/rem2pdf/blib/man1/rem2pdf.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+		${INSTALL_MAN} ${WRKSRC}/rem2pdf/blib/man3/Remind\::* \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+
+		# TODO: interpreter of script ("#!perl") must be changed...
+		#${INSTALL_SCRIPT} ${WRKSRC}/rem2html/rem2html \
+		#${DESTDIR}${PREFIX}/bin/rem2html
 
 .include "../../graphics/p5-cairo/buildlink3.mk"
 .include "../../devel/p5-pango/buildlink3.mk"

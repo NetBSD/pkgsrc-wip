@@ -1,12 +1,20 @@
 @comment $NetBSD$
 bin/rem
+bin/rem2pdf
 bin/rem2ps
 bin/remind
 bin/tkremind
+lib/perl5/Remind/PDF.pm
+lib/perl5/Remind/PDF/Entry.pm
+lib/perl5/darwin-thread-multi-2level/auto/Remind/PDF/.packlist
+lib/perl5/darwin-thread-multi-2level/perllocal.pod
 man/man1/rem.1
+man/man1/rem2pdf.1
 man/man1/rem2ps.1
 man/man1/remind.1
 man/man1/tkremind.1
+man/man3/Remind::PDF.3
+man/man3/Remind::PDF::Entry.3
 share/doc/remind/COPYRIGHT
 share/doc/remind/README.UNIX
 share/doc/remind/WHATSNEW
