@@ -42,8 +42,6 @@ include/graphviz/cgraph.h
 include/graphviz/color.h
 include/graphviz/geom.h
 include/graphviz/graphviz_version.h
-include/graphviz/gv.cpp
-include/graphviz/gv.i
 include/graphviz/gvc.h
 include/graphviz/gvcext.h
 include/graphviz/gvcjob.h
@@ -92,7 +90,6 @@ lib/libcdt.la
 lib/libcgraph.la
 lib/libgvc.la
 lib/libgvpr.la
-lib/liblab_gamut.la
 lib/libpathplan.la
 lib/libxdot.la
 ${PLIST.lua}lib/lua/gv.so
@@ -102,7 +99,6 @@ lib/pkgconfig/libcdt.pc
 lib/pkgconfig/libcgraph.pc
 lib/pkgconfig/libgvc.pc
 lib/pkgconfig/libgvpr.pc
-lib/pkgconfig/liblab_gamut.pc
 lib/pkgconfig/libpathplan.pc
 lib/pkgconfig/libxdot.pc
 ${PLIST.tcl}${PLIST.x11}lib/tcl${TCL_BASEVER}/graphviz/libgdtclft.la
