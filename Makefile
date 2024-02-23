@@ -4268,7 +4268,6 @@ SUBDIR+=	py-pynn
 SUBDIR+=	py-pyon
 SUBDIR+=	py-pyphant
 SUBDIR+=	py-pypi-browser
-SUBDIR+=	py-pypi-cli
 SUBDIR+=	py-pypol
 SUBDIR+=	py-pypot
 SUBDIR+=	py-pyqu
