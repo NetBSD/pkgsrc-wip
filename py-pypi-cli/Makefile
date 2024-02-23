@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.1 2015/02/14 13:24:00 jihbed Exp $
 
-DISTNAME=	pypi-cli-0.4.0
+DISTNAME=	pypi-cli-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypi-cli/}
