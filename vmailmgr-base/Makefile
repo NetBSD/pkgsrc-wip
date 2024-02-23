@@ -9,6 +9,8 @@ CONFIGURE_ARGS+=	--disable-courier-imap
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
 
+.include "options.mk"
+
 # for vmailmgr.7, without building the heavier docs
 # copy-paste-changed from ../../mk/build/build.mk:
 post-build:

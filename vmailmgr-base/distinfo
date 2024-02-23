@@ -26,5 +26,5 @@ SHA1 (patch-lib_vpwtable_gdbm__del.cc) = 9eb35e3d6daaf55aaefdaf7fec33a500e51d785
 SHA1 (patch-lib_vpwtable_gdbm__exists.cc) = c819d6fb8d410b83faf113d639620dcb44d7ba2d
 SHA1 (patch-lib_vpwtable_gdbm__getbyname.cc) = 6a74f8a8398b6344116d1ded1553a0e795dc809c
 SHA1 (patch-lib_vpwtable_gdbm__put.cc) = 26e9c45bba56cb22fcf17d4a61daef3803ddc752
-SHA1 (patch-lib_vpwtable_gdbm__write.cc) = 5cb4a746cbc82d4d3524114d334752b603bfa2a3
+SHA1 (patch-lib_vpwtable_gdbm__write.cc) = 5d5bbdc6369292aab87225ba525e81a194aa0d70
 SHA1 (patch-python_Makefile.am) = b1991252f66714b31709a50029fb8c85cd277d79
