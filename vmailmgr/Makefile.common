@@ -16,7 +16,7 @@ GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/vmailmgr/
-COMMENT=		Manage multiple mail domains on a single qmail host
+COMMENT=		Virtual domain manager for qmail
 LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
@@ -46,7 +46,7 @@ SUBST_SED.prefix=	-e 's|/usr/bin|${PREFIX}/bin|g'
 SUBST_CLASSES+=		unused
 SUBST_STAGE.unused=	pre-configure
 SUBST_FILES.unused=	lib/courier-authlib/*.c lib/courier-authlib/*.h
-SUBST_SED.unused=	-e 's|\(.*rcsid\[\]=.*;\)$$|// \1|g'
+SUBST_SED.unused=	-e 's|\(.*rcsid\[]=.*;\)$$|// \1|g'
 
 SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	pre-configure

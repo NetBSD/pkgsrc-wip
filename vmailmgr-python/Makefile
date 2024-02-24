@@ -2,7 +2,7 @@
 
 .include "../../wip/vmailmgr/Makefile.common"
 
-PKGNAME=		vmailmgr-python-${VERSION}
+PKGNAME=		vmailmgr-${PYPKGPREFIX}-${VERSION}
 
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
@@ -16,6 +16,8 @@ SUBST_CLASSES+=		pyversion
 SUBST_STAGE.pyversion=	pre-configure
 SUBST_FILES.pyversion=	configure.ac python/Makefile.am
 SUBST_VARS.pyversion=	PYTHONBIN
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
