@@ -4,6 +4,11 @@
 
 PKGNAME=		vmailmgr-docs-${VERSION}
 
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://untroubled.org/vmailmgr/
+COMMENT=		Virtual domain manager for qmail (docs)
+LICENSE=		gnu-gpl-v2
+
 BUILD_TARGET=		docs
 BUILD_DIRS+=		. authenticate
 

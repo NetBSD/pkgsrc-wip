@@ -4,6 +4,11 @@
 
 PKGNAME=		php-vmailmgr-${VERSION}
 
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://untroubled.org/vmailmgr/
+COMMENT=		Virtual domain manager for qmail (PHP bindings)
+LICENSE=		gnu-gpl-v2
+
 DEPENDS+=		php-[0-9]*:${PHPPKGSRCDIR}
 
 CONFIGURE_ARGS+=	--enable-php

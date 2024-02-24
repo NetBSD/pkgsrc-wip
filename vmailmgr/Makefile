@@ -8,6 +8,7 @@ CATEGORIES=	mail
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://untroubled.org/vmailmgr/
 COMMENT=	Virtual domain manager for qmail
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	vmailmgr-base>=${VERSION}:../../wip/vmailmgr-base
 DEPENDS+=	vmailmgr-cgi>=${VERSION}:../../wip/vmailmgr-cgi

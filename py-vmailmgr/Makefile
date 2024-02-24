@@ -4,6 +4,11 @@
 
 PKGNAME=		py-vmailmgr-${VERSION}
 
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://untroubled.org/vmailmgr/
+COMMENT=		Virtual domain manager for qmail (Python bindings)
+LICENSE=		gnu-gpl-v2
+
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
 

@@ -4,6 +4,11 @@
 
 PKGNAME=		vmailmgr-base-${VERSION}
 
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://untroubled.org/vmailmgr/
+COMMENT=		Virtual domain manager for qmail (base package)
+LICENSE=		gnu-gpl-v2
+
 CONFIGURE_ARGS+=	--disable-cgi
 CONFIGURE_ARGS+=	--disable-courier-imap
 CONFIGURE_ARGS+=	--disable-php

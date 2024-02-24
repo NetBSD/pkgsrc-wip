@@ -1,6 +1,5 @@
 # TODO
 
-- Give each package its own DESCR and COMMENT
 - Add separate package for daemon?
 
 ## Python

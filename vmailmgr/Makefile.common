@@ -14,11 +14,6 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bruceg/}
 GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
 
-MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://untroubled.org/vmailmgr/
-COMMENT=		Virtual domain manager for qmail
-LICENSE=		gnu-gpl-v2
-
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=		c c++
