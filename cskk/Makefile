@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cskk-3.0.0
+DISTNAME=	cskk-3.1.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naokiri/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,9 +13,6 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	cargo-c-[0-9]*:../../devel/cargo-c
 
 .include "cargo-depends.mk"
-
-SITES.cargo-c-0.9.16+cargo-0.68.crate+=		${MASTER_SITE_CRATESIO:S,^,-,:=cargo-c/0.9.16+cargo-0.68/download}
-SITES.curl-sys-0.4.59+curl-7.86.0.crate+=	${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.59+curl-7.86.0/download}
 
 INSTALLATION_DIRS=	include/cskk lib/cskk lib/pkgconfig share/libcskk
 
