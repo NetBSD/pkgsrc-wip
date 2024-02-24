@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (cue-v0.7.0.tar.gz) = 11bc3ed112f188c72a745cfac1877e45492c37c4358246ba9ff9aa2f7fe151c0
-SHA512 (cue-v0.7.0.tar.gz) = 471ebc4ac81dfc0df42d8e8bd5e858b8a2f958c909ccd0b391ed4af669e7eba3908bcde63ca21973f072e35f66d307180fb3fc43627eb4de6385011bcf48aed1
-Size (cue-v0.7.0.tar.gz) = 1504772 bytes
+BLAKE2s (cue-v0.7.1.tar.gz) = 4235688e4f56d36df3ff7cabc74f451db91ad88f029193548ef89b3d0f47287e
+SHA512 (cue-v0.7.1.tar.gz) = 445a93e15650cd7042cad1adaa11cab8a6b9a0bcb41f4f8f9cbe5865de7df6ba0b832c50bb639e8eb45fc6de15bca0a60242fb080bc15e971b97545b14900131
+Size (cue-v0.7.1.tar.gz) = 1504921 bytes
 BLAKE2s (cuelabs.dev_go_oci_ociregistry_@v_v0.0.0-20231103182354-93e78c079a13.mod) = 158bebd8715bf1eb98710cf10be9123b466b740422584727a1b18b9b1fd763e8
 SHA512 (cuelabs.dev_go_oci_ociregistry_@v_v0.0.0-20231103182354-93e78c079a13.mod) = 7421659f0eea2d4e6ec6e07d3f4407a3bbbdbf8cb7c4c69a801c9dbd27153f78cce95f32e2dbdc901b51f9cc6598e3cb442612b51b54e6d36ad0fb6eeae18eb0
 Size (cuelabs.dev_go_oci_ociregistry_@v_v0.0.0-20231103182354-93e78c079a13.mod) = 530 bytes
