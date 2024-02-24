@@ -1,8 +1,9 @@
 $NetBSD$
 
-Don't depend on git
+- Don't depend on git
+- fix PLIST issue with macOS cp(1)
 
---- Makefile.orig	2024-01-09 08:58:20.546074821 +0000
+--- Makefile.orig	2023-09-21 06:03:16.000000000 +0000
 +++ Makefile
 @@ -281,7 +281,7 @@ endif
  # Build the Go compiler.
@@ -13,3 +14,12 @@ Don't depend on git
  test: wasi-libc check-nodejs-version
  	CGO_CPPFLAGS="$(CGO_CPPFLAGS)" CGO_CXXFLAGS="$(CGO_CXXFLAGS)" CGO_LDFLAGS="$(CGO_LDFLAGS)" $(GO) test $(GOTESTFLAGS) -timeout=20m -buildmode exe -tags "byollvm osusergo" ./builder ./cgo ./compileopts ./compiler ./interp ./transform .
  
+@@ -846,7 +846,7 @@ endif
+ 	@cp -rp lib/mingw-w64/mingw-w64-crt/def-include                 build/release/tinygo/lib/mingw-w64/mingw-w64-crt
+ 	@cp -rp lib/mingw-w64/mingw-w64-crt/lib-common/api-ms-win-crt-* build/release/tinygo/lib/mingw-w64/mingw-w64-crt/lib-common
+ 	@cp -rp lib/mingw-w64/mingw-w64-crt/lib-common/kernel32.def.in  build/release/tinygo/lib/mingw-w64/mingw-w64-crt/lib-common
+-	@cp -rp lib/mingw-w64/mingw-w64-headers/crt/                    build/release/tinygo/lib/mingw-w64/mingw-w64-headers
++	@cp -rp lib/mingw-w64/mingw-w64-headers/crt                    build/release/tinygo/lib/mingw-w64/mingw-w64-headers
+ 	@cp -rp lib/mingw-w64/mingw-w64-headers/defaults/include        build/release/tinygo/lib/mingw-w64/mingw-w64-headers/defaults
+ 	@cp -rp lib/nrfx/*                   build/release/tinygo/lib/nrfx
+ 	@cp -rp lib/picolibc/newlib/libc/ctype       build/release/tinygo/lib/picolibc/newlib/libc
