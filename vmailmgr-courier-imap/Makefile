@@ -3,6 +3,7 @@
 .include "../../wip/vmailmgr/Makefile.common"
 
 PKGNAME=		vmailmgr-courier-imap-${VERSION}
+CATEGORIES=		mail security
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/vmailmgr/

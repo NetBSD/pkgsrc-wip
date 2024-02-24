@@ -10,7 +10,6 @@
 .include "../../wip/vmailmgr/version.mk"
 
 DISTNAME=		vmailmgr-${GITHUB_TAG}
-CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=bruceg/}
 GITHUB_TAG=		526d53c1d0e604ec29ada61b79485ceeb8b978cd
 

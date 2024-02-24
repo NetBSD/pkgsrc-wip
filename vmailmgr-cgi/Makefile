@@ -3,6 +3,7 @@
 .include "../../wip/vmailmgr/Makefile.common"
 
 PKGNAME=		vmailmgr-cgi-${VERSION}
+CATEGORIES=		mail www
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/vmailmgr/

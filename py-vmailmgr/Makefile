@@ -3,6 +3,7 @@
 .include "../../wip/vmailmgr/Makefile.common"
 
 PKGNAME=		py-vmailmgr-${VERSION}
+CATEGORIES=		mail python
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/vmailmgr/
