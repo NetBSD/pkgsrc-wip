@@ -2,9 +2,9 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/Utils/WifiScanner.cpp.orig	2023-11-23 14:51:47.000000000 +0000
+--- src/slic3r/Utils/WifiScanner.cpp.orig	2024-02-23 10:58:40.000000000 +0000
 +++ src/slic3r/Utils/WifiScanner.cpp
-@@ -19,7 +19,7 @@
+@@ -17,7 +17,7 @@
  #include "WifiScannerMac.h"
  #endif 
  
@@ -13,10 +13,3 @@ Treat NetBSD like Linux.
  #include <dbus/dbus.h> /* Pull in all of D-Bus headers. */
  #endif //__linux__
  
-@@ -457,4 +457,4 @@ std::string WifiScanner::get_psk(const s
-     }
-     return {};
- }
--} // Slic3r
-\ No newline at end of file
-+} // Slic3r

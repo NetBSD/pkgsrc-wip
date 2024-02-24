@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.7.1.tar.gz) = 16debd3190831580b52cc7ea25f140562c9d12c41a6b3c04dda76472e2507273
-SHA512 (PrusaSlicer-2.7.1.tar.gz) = 20037164b8a8853e2f30a5ed613e0da1d02d6fa581c21ef67a51e90af3c33a98eb75e0b3a203adfb8ed7bc67f32de7ea598f3f0ab9c68341738db0c1c1974b3d
-Size (PrusaSlicer-2.7.1.tar.gz) = 64975776 bytes
+BLAKE2s (PrusaSlicer-2.7.2-rc1.tar.gz) = add092ea2f5a8537fd90d509c02b40228e71d72b48efea29c4ef56b7d2673fc3
+SHA512 (PrusaSlicer-2.7.2-rc1.tar.gz) = eb2a3d16d0d53c0c623abcdfe7000e59fd21b4140ecd549e988f09c88d0a8f036fc69359bf89125d87309f805b66b985ababf45147d77b5b0df9e0acedb6cdb7
+Size (PrusaSlicer-2.7.2-rc1.tar.gz) = 64909450 bytes
 SHA1 (patch-CMakeLists.txt) = 33eb39d85ba7b33226f2cc022250872c3ffa28d8
 SHA1 (patch-cmake_modules_FindOpenVDB.cmake) = 4f2afc423a70fe60617b33ff7f26859b39775faa
 SHA1 (patch-src_CMakeLists_txt) = 24e0b8e6512b2a3f84204b03d8161aca903748a1
@@ -57,6 +57,6 @@ SHA1 (patch-src_slic3r_GUI_wxExtensions.cpp) = f36725675ad69d0f3a68183a8719ca4ba
 SHA1 (patch-src_slic3r_GUI_wxExtensions.hpp) = aa5bd2f325452cb2d9c2cef1dd50f37a149d7b6a
 SHA1 (patch-src_slic3r_Utils_FontConfigHelp.hpp) = 8027a1bc90a7f0ad1b53787a25f1e8a28c343ba2
 SHA1 (patch-src_slic3r_Utils_Serial.cpp) = 77dbb4e3526e932c04b8020b6f808278d1319bdb
-SHA1 (patch-src_slic3r_Utils_WifiScanner.cpp) = fbc26c4c6c48b8923b2427730351df55c1e05cfe
+SHA1 (patch-src_slic3r_Utils_WifiScanner.cpp) = a7c8d6dfb43ddaca651df13b487b43dd51b32719
 SHA1 (patch-src_slic3r_Utils_WxFontUtils.cpp) = cc033a04f3219b0f4229344e14d44be63192db60
 SHA1 (patch-tests_fff__print_test__data.cpp) = 588e2a7ea980d82b7bb43eb7522b639101d0a337
