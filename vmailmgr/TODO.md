@@ -2,4 +2,12 @@
 
 - Give each package its own DESCR and COMMENT
 - Add separate package for daemon?
-- [FreeBSD's vmailmgr port just before deletion](https://github.com/freebsd/freebsd-ports/tree/635ccfbf59522ddd44cd9283b321e2d9b3bc9876/mail/vmailmgr)
+
+## Python
+
+- `.pyc` and `.pyo`:
+    - 2.x generates both?
+    - 3.x generates neither?
+- loading and calling these installed modules
+    - Works with 2.x
+    - Can it also work with 3.x?

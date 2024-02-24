@@ -2,14 +2,14 @@
 
 .include "../../wip/vmailmgr/Makefile.common"
 
-PKGNAME=		vmailmgr-php-${VERSION}
+PKGNAME=		php-vmailmgr-${VERSION}
+
+DEPENDS+=		php-[0-9]*:${PHPPKGSRCDIR}
 
 CONFIGURE_ARGS+=	--enable-php
 
 BUILD_DIRS=		php
 INSTALL_DIRS=		php
-
-DEPENDS+=		php-[0-9]*:${PHPPKGSRCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/${INSTALL_DIRS}/vmail.features \

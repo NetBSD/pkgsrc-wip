@@ -10,7 +10,7 @@ BUILD_DIRS+=		. authenticate
 TOOL_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 TOOL_DEPENDS+=		tex-texinfo-[0-9]*:../../print/tex-texinfo
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	share/doc/vmailmgr
 
 do-install:
 	cd ${WRKSRC}; \

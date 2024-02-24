@@ -2,7 +2,7 @@
 
 .include "../../wip/vmailmgr/Makefile.common"
 
-PKGNAME=		vmailmgr-${PYPKGPREFIX}-${VERSION}
+PKGNAME=		py-vmailmgr-${VERSION}
 
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}

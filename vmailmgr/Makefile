@@ -13,10 +13,9 @@ DEPENDS+=	vmailmgr-base>=${VERSION}:../../wip/vmailmgr-base
 DEPENDS+=	vmailmgr-cgi>=${VERSION}:../../wip/vmailmgr-cgi
 DEPENDS+=	vmailmgr-courier-imap>=${VERSION}:../../wip/vmailmgr-courier-imap
 DEPENDS+=	vmailmgr-docs>=${VERSION}:../../wip/vmailmgr-docs
-DEPENDS+=	vmailmgr-php>=${VERSION}:../../wip/vmailmgr-php
-DEPENDS+=	vmailmgr-${PYPKGPREFIX}>=${VERSION}:../../wip/vmailmgr-python
+DEPENDS+=	php-vmailmgr>=${VERSION}:../../wip/php-vmailmgr
+DEPENDS+=	py-vmailmgr>=${VERSION}:../../wip/py-vmailmgr
 
 META_PACKAGE=	yes
 
-.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

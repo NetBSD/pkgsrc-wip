@@ -1,11 +1,11 @@
 # $NetBSD$
 #
+# used by wip/php-vmailmgr/Makefile
+# used by wip/py-vmailmgr/Makefile
 # used by wip/vmailmgr-base/Makefile
 # used by wip/vmailmgr-cgi/Makefile
 # used by wip/vmailmgr-courier-imap/Makefile
 # used by wip/vmailmgr-docs/Makefile
-# used by wip/vmailmgr-php/Makefile
-# used by wip/vmailmgr-python/Makefile
 
 .include "../../wip/vmailmgr/version.mk"
 
