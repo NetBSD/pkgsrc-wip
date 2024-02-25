@@ -762,6 +762,7 @@ SUBDIR+=	efgallery
 SUBDIR+=	efibootmgr
 SUBDIR+=	efivar
 SUBDIR+=	efl
+SUBDIR+=	eflite
 SUBDIR+=	efltk
 SUBDIR+=	eic
 SUBDIR+=	eiskaltdcpp
