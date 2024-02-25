@@ -666,6 +666,7 @@ SUBDIR+=	dillo-devel
 SUBDIR+=	ding
 SUBDIR+=	dionysus
 SUBDIR+=	discident-glib
+SUBDIR+=	discordo
 SUBDIR+=	dispred
 SUBDIR+=	disque
 SUBDIR+=	distbb-git
