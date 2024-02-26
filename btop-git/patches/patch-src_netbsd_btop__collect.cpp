@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-02-24 10:09:12.152243490 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-02-24 10:19:36.470949441 +0000
 +++ src/netbsd/btop_collect.cpp
 @@ -0,0 +1,1282 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
@@ -153,7 +153,7 @@ Add support for NetBSD.
 +		}
 +
 +		size = sizeof(totalMem);
-+		if (sysctlbyname("hw.physmem", &totalMem, &size, nullptr, 0) < 0) {
++		if (sysctlbyname("hw.physmem64", &totalMem, &size, nullptr, 0) < 0) {
 +			Logger::warning("Could not get memory size");
 +		}
 +
