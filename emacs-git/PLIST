@@ -297,6 +297,8 @@ share/emacs/${PKGVERSION}/etc/images/close.pbm
 share/emacs/${PKGVERSION}/etc/images/close.xpm
 share/emacs/${PKGVERSION}/etc/images/commit.pbm
 share/emacs/${PKGVERSION}/etc/images/commit.xpm
+share/emacs/${PKGVERSION}/etc/images/conceal.pbm
+share/emacs/${PKGVERSION}/etc/images/conceal.svg
 share/emacs/${PKGVERSION}/etc/images/connect-to-url.pbm
 share/emacs/${PKGVERSION}/etc/images/connect-to-url.xpm
 share/emacs/${PKGVERSION}/etc/images/connect.pbm
@@ -681,6 +683,8 @@ share/emacs/${PKGVERSION}/etc/images/redo.pbm
 share/emacs/${PKGVERSION}/etc/images/redo.xpm
 share/emacs/${PKGVERSION}/etc/images/refresh.pbm
 share/emacs/${PKGVERSION}/etc/images/refresh.xpm
+share/emacs/${PKGVERSION}/etc/images/reveal.pbm
+share/emacs/${PKGVERSION}/etc/images/reveal.svg
 share/emacs/${PKGVERSION}/etc/images/right-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/right-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/right.svg
@@ -3035,6 +3039,8 @@ share/emacs/${PKGVERSION}/lisp/net/telnet.el.gz
 share/emacs/${PKGVERSION}/lisp/net/telnet.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-adb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-adb.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-androidsu.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-androidsu.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-archive.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-archive.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.el.gz
