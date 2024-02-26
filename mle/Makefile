@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=adsr/}
 GITHUB_RELEASE=	v1.7.2
 GITHUB_PROJECT=	mle
 
-MAINTAINER=	kevin.bloom@posteo.net
+MAINTAINER=	ktnb@posteo.net
 HOMEPAGE=	https://github.com/adsr/mle/
 COMMENT=	Termbox-based text editor
 LICENSE=	apache-2.0
