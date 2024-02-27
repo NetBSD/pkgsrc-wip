@@ -2,3 +2,4 @@ $NetBSD$
 
 SHA1 (patch-Userland_Libraries_LibCore_Environment.cpp) = e73bbb399803231f36f2bdf43d7c49810a3cdb2b
 SHA1 (patch-Userland_Libraries_LibGfx_EdgeFlagPathRasterizer.h) = 2c3e46cdd49aaea673a99d7a72b8b0ae2fd2380e
+SHA1 (patch-Userland_Libraries_LibJS_Heap_BlockAllocator.cpp) = 4d1074c79d67da28d1d16a69b90bf37386188227
