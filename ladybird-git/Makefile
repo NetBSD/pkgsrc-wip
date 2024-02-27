@@ -15,12 +15,17 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++20
 GCC_REQD+=		12
 
-#WRKSRC=		${WRKDIR}/serenity/Ladybird
+CMAKE_ARGS+=		-S Ladybird
+# build broken with make
+CMAKE_GENERATOR=	ninja
 
-CMAKE_ARGS+=	-S Ladybird
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/cmake-pkgsrc-build/lib
 
-# assumes directories exist before they do
-MAKE_JOBS_SAFE=	no
+SUBST_CLASSES+=		fontpath
+SUBST_FILES.fontpath+=	Userland/Libraries/LibCore/StandardPaths.cpp
+SUBST_SED.fontpath+=	-e "s,/usr/local/share/fonts,${PREFIX}/share/fonts,"
+SUBST_MESSAGE.fontpath=	Fixing path to fonts.
+SUBST_STAGE.fontpath=	pre-build
 
 .include "../../devel/cmake/build.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
