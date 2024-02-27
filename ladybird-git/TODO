@@ -1,0 +1,16 @@
+Downloads files during build:
+-- Found Python3: /usr/pkg/bin/python3.11 (found version "3.11.8") found components: Interpreter
+-- Removing outdated /scratch/wip/ladybird-git/work/serenity/Ladybird/cmake-pkgsrc-build/Lagom/../caches/CLDR for version 44.1.0
+-- Downloading file cldr.zip from https://github.com/unicode-org/cldr-json/releases/download/44.1.0/cldr-44.1.0-json-modern.zip
+-- Downloading file adobe-icc-profiles.zip from https://download.adobe.com/pub/adobe/iccprofiles/win/AdobeICCProfilesCS4Win_end-user.zip
+-- Removing outdated /scratch/wip/ladybird-git/work/serenity/Ladybird/cmake-pkgsrc-build/Lagom/../caches/CACERT for version 2023-12-12
+-- Downloading file cacert-2023-12-12.pem from https://curl.se/ca/cacert-2023-12-12.pem
+-- Removing outdated /scratch/wip/ladybird-git/work/serenity/Ladybird/cmake-pkgsrc-build/Lagom/../caches/UCD for version 15.1.0
+-- Downloading file UCD.zip from https://www.unicode.org/Public/15.1.0/ucd/UCD.zip
+-- Downloading file emoji-test.txt from https://www.unicode.org/Public/emoji/15.1/emoji-test.txt
+-- Downloading file IdnaMappingTable.txt from https://www.unicode.org/Public/idna/15.1.0/IdnaMappingTable.txt
+-- Downloading file public_suffix_list.dat from https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
+-- Downloading file commonmark.spec.json from https://spec.commonmark.org/0.30/spec.json
+
+Build fails early, see
+https://github.com/SerenityOS/serenity/issues/23375
