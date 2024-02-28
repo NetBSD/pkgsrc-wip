@@ -14,16 +14,12 @@ LICENSE=	apache-2.0
 WRKSRC=		${WRKDIR}/overgrowth-${GITHUB_TAG}/Projects
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
-USE_CMAKE=	yes
-
-# Out-of-tree build is required.
-CONFIGURE_DIRS+=	${WRKDIR}/build
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DENABLE_RAD_TELEMETRY=OFF
 CMAKE_ARGS+=	-DBUILD_OGDA=OFF
 CMAKE_ARGS+=	-DAUX_DATA=${PREFIX}/share/overgrowth
-CMAKE_ARG_PATH=	${WRKSRC}
+#CMAKE_ARG_PATH=	${WRKSRC}
 
 INSTALLATION_DIRS+=	bin
 
@@ -34,6 +30,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/build/Overgrowth ${DESTDIR}${PREFIX}/bin/Overgrowth
 	${INSTALL_PROGRAM} ${WRKDIR}/build/OvergrowthWorker ${DESTDIR}${PREFIX}/bin/OvergrowthWorker
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
