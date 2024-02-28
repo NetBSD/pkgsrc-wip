@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	kcgi-0.13.0
+DISTNAME=	kcgi-0.13.3
 CATEGORIES=	www
 MASTER_SITES=	https://kristaps.bsd.lv/kcgi/snapshots/
 EXTRACT_SUFX=	.tgz
