@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=	p5-Shell-Command-[0-9]*:../../wip/p5-Shell-Command
 TOOL_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
-TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-ronn-[0-9]*:../../devel/ruby-ronn
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_LANGUAGES=		c
