@@ -9,3 +9,6 @@ heap and perform major collections without "stopping the world".
 Cyclone is written entirely in the latest R7RS Scheme language
 standard, and the intent is to support as much of that language as
 possible.
+
+This package provides the compiled C sources for Cyclone. It is
+used to compile the bootstrap Cyclone compiler.

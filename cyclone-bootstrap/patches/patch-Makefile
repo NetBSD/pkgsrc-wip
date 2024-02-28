@@ -1,8 +1,9 @@
 $NetBSD$
 
-Use pkgsrc libtommath (internally named libcyclonebn).
+1) Use pkgsrc libtommath (internally named libcyclonebn).
+2) Install cyclone as cyclone-bootstrap.
 
---- Makefile.orig	2021-04-06 03:32:12.000000000 +0000
+--- Makefile.orig	2024-02-14 02:29:41.000000000 +0000
 +++ Makefile
 @@ -8,8 +8,8 @@ include Makefile.config
  
@@ -15,7 +16,7 @@ Use pkgsrc libtommath (internally named libcyclonebn).
  CYC_LIBS = $(CYC_RT_LIB) $(CYC_BN_LIB)
  
  COBJ = scheme/base \
-@@ -94,8 +94,8 @@ $(CYC_RT_LIB): runtime.c include/cyclone
+@@ -101,8 +101,8 @@ $(CYC_RT_LIB): runtime.c include/cyclone
  	  $(CREATE_LIBRARY_COMMAND) $(CREATE_LIBRARY_FLAGS) $(LIBRARY_OUTPUT_FILE) runtime.o gc.o ffi.o mstreams.o hashset.o
  	  $(RANLIB_COMMAND)
  
@@ -26,7 +27,7 @@ Use pkgsrc libtommath (internally named libcyclonebn).
  
  cyclone: $(CFILES) $(COBJECTS) $(C_SHARED_OBJECTS) $(CYC_LIBS)
  	$(CC) cyclone.c $(CFLAGS) -c -o cyclone.o
-@@ -166,7 +166,7 @@ install:
+@@ -179,12 +179,12 @@ install:
  #install-libs:
  	$(MKDIR) $(DESTDIR)$(LIBDIR)
  	$(INSTALL) -m0644 $(CYC_RT_LIB) $(DESTDIR)$(LIBDIR)/
@@ -35,9 +36,21 @@ Use pkgsrc libtommath (internally named libcyclonebn).
  #install-cyclone:
  	$(MKDIR) $(DESTDIR)$(BINDIR)
  	$(MKDIR) $(DESTDIR)$(DATADIR)/scheme/cyclone
-@@ -191,7 +191,7 @@ install:
- 	$(INSTALL) -m0755 icyc $(DESTDIR)$(BINDIR)/
- 	$(INSTALL) -m0755 winds $(DESTDIR)$(BINDIR)/
+ 	$(MKDIR) $(DESTDIR)$(DATADIR)/srfi
+-	$(INSTALL) -m0755 cyclone $(DESTDIR)$(BINDIR)/
++	$(INSTALL) -m0755 cyclone $(DESTDIR)$(BINDIR)/cyclone-bootstrap
+ 	$(INSTALL) -m0644 scheme/*.o $(DESTDIR)$(DATADIR)/scheme
+ 	$(INSTALL) -m0644 scheme/cyclone/*.o $(DESTDIR)$(DATADIR)/scheme/cyclone
+ 	$(INSTALL) -m0644 srfi/*.o $(DESTDIR)$(DATADIR)/srfi
+@@ -200,11 +200,10 @@ install:
+ 	$(MKDIR) $(DESTDIR)$(DATADIR)/srfi
+ 	$(MKDIR) $(DESTDIR)$(DATADIR)/srfi/list-queues
+ 	$(MKDIR) $(DESTDIR)$(DATADIR)/srfi/sorting
+-	$(INSTALL) -m0755 cyclone $(DESTDIR)$(BINDIR)/
+-	$(INSTALL) -m0755 icyc $(DESTDIR)$(BINDIR)/
+-	$(INSTALL) -m0755 winds $(DESTDIR)$(BINDIR)/
++	$(INSTALL) -m0755 cyclone $(DESTDIR)$(BINDIR)/cyclone-bootstrap
++	$(INSTALL) -m0755 icyc $(DESTDIR)$(BINDIR)/icyc-bootstrap
  	$(INSTALL) -m0644 $(CYC_RT_LIB) $(DESTDIR)$(LIBDIR)/
 -	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
 +#	$(INSTALL) -m0644 $(CYC_BN_LIB) $(DESTDIR)$(LIBDIR)/
