@@ -5082,6 +5082,7 @@ SUBDIR+=	sendmail818
 SUBDIR+=	sendmailX
 SUBDIR+=	sent
 SUBDIR+=	seqtk
+SUBDIR+=	sequoia-sq
 SUBDIR+=	serendipity
 SUBDIR+=	serious-engine-tfe-git
 SUBDIR+=	serious-engine-tse-git
