@@ -1,0 +1,5 @@
+qrcp: update to qrcp version 0.11.2
+
+Prepared in wip by Kevin Bloom.
+
+Upstream now requires go 1.18
