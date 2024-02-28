@@ -1,6 +1,15 @@
 @comment $NetBSD$
 bin/vcsh
 man/man1/vcsh.1
+share/bash-completion/completions/vcsh
+share/doc/vcsh/INSTALL.md
 share/doc/vcsh/README.md
-share/doc/vcsh/hooks
-share/zsh/vendor-completions/_vcsh
+share/doc/vcsh/changelog
+share/doc/vcsh/error_codes.md
+share/doc/vcsh/sample_hooks/post-init-add-origin
+share/doc/vcsh/sample_hooks/post-init-setup-mr
+share/doc/vcsh/sample_hooks/post-merge-unclobber
+share/doc/vcsh/sample_hooks/pre-merge-unclobber
+share/licenses/vcsh/CONTRIBUTORS
+share/licenses/vcsh/LICENSE.md
+share/zsh/site-functions/_vcsh
