@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc
 
-MAINTAINER=	kevin.bloom@posteo.net
+MAINTAINER=	ktnb@posteo.net
 HOMEPAGE=	https://git.sr.ht/~rjarry/aerc/archive/
 COMMENT=	Terminal email client written in Go
 LICENSE=	mit
