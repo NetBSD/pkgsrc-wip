@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-02-28 16:37:10.878578423 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-02-29 19:35:48.098045920 +0000
 +++ src/netbsd/btop_collect.cpp
 @@ -0,0 +1,1326 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
