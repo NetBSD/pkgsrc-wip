@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/sopwith
+share/applications/sopwith.desktop
+share/doc/sdl-sopwith/origdoc.txt
+share/icons/hicolor/128x128/apps/sopwith.png
+man/man5/sopwith.cfg.5
+man/man6/sopwith.6
