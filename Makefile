@@ -2886,7 +2886,6 @@ SUBDIR+=	paxtest
 SUBDIR+=	payara41
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pbzx
-SUBDIR+=	pcaudiolib
 SUBDIR+=	pcem
 SUBDIR+=	pcp
 SUBDIR+=	pdb2ldif
