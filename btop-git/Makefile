@@ -11,12 +11,11 @@ HOMEPAGE=	https://github.com/aristocratos/btop
 COMMENT=	Colorful TTY resource monitor
 LICENSE=	apache-2.0
 
-DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GCC_REQD+=	10
 CXXFLAGS+=	-DNDEBUG
+LDFLAGS.NetBSD+=-lprop
 
 MAKE_ARGS=	STRIP=true VERBOSE=true
 
