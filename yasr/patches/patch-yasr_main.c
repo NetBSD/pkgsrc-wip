@@ -15,7 +15,7 @@ Fix a bug speaking a char when cursor-right is input after space
  static int cpid;
  static int size, wsize;
  static int master, slave;
-@@ -307,23 +305,10 @@ is_separator (int ch)
+@@ -307,23 +305,13 @@ is_separator (int ch)
  static int
  getkey_buf ()
  {
@@ -24,7 +24,7 @@ Fix a bug speaking a char when cursor-right is input after space
    wchar_t ch;
    int key;
    int result;
--
+ 
 -  s1 = size;
 -  s2 = sizeof (wchar_t);
 -  b1 = (char *) buf;
@@ -36,11 +36,13 @@ Fix a bug speaking a char when cursor-right is input after space
 -    if (!s1)
 -      return ch;
 -  }
-+ 
++  result = mbtowc(&ch, buf, size);
++  if (result == size && result != -1)
++    return (int)ch;
    key = (int) buf[0];
    if (size > 1)
    {
-@@ -361,6 +346,7 @@ getinput ()
+@@ -361,6 +349,7 @@ getinput ()
      finish (0);
    }
    key = getkey_buf ();
@@ -48,7 +50,7 @@ Fix a bug speaking a char when cursor-right is input after space
    if (key == ui.disable)
    {
      if (ui.disabled)
-@@ -561,8 +547,10 @@ static char *bytes_left_start;
+@@ -561,8 +550,10 @@ static char *bytes_left_start;
  static void
  read_buf (int leave)
  {
@@ -61,16 +63,14 @@ Fix a bug speaking a char when cursor-right is input after space
    if (bytes_left)
    {
      memcpy (buf, bytes_left_start, bytes_left);
-@@ -578,17 +566,16 @@ read_buf (int leave)
+@@ -578,19 +569,17 @@ read_buf (int leave)
    buf[size] = 0;
    bytes_left = 0;
    b1 = (char *) buf;
 -  b2 = (char *) (wide_buf + leave);
 +  b2 = wide_buf + leave;
    if (leave)
--    memcpy (wide_buf, wide_buf + wsize - leave,
-+    memcpy (wide_buf
-+	    , wide_buf + wsize - leave,
+     memcpy (wide_buf, wide_buf + wsize - leave,
  	    sizeof (wchar_t) * (wsize - leave));
    s1 = size;
 -  s2 = (255 - leave) * sizeof (wchar_t);
@@ -82,9 +82,12 @@ Fix a bug speaking a char when cursor-right is input after space
 +    i = mbtowc (b2, b1, s1);
 +    if (i == -1)
      {
-       if (errno == EINVAL)	/* incomplete sequence at end of buffer */
+-      if (errno == EINVAL)	/* incomplete sequence at end of buffer */
++      if (errno == EILSEQ)	/* incomplete sequence at end of buffer */
        {
-@@ -599,10 +586,13 @@ read_buf (int leave)
+ 	break;
+       }
+@@ -599,10 +588,13 @@ read_buf (int leave)
        b1++;
        s1--;
      }
@@ -99,7 +102,7 @@ Fix a bug speaking a char when cursor-right is input after space
    wide_buf[wsize] = 0;
  }
  
-@@ -1253,6 +1243,7 @@ getoutput ()
+@@ -1253,6 +1245,7 @@ getoutput ()
        tts.oflag = oldoflag;
      }
    }
@@ -107,7 +110,7 @@ Fix a bug speaking a char when cursor-right is input after space
    if (ch == 13 || ch == 10 || ch == 32)
    {
      tts_flush ();
-@@ -1268,7 +1259,8 @@ getoutput ()
+@@ -1268,7 +1261,8 @@ getoutput ()
    {
      tts_flush ();
    }
@@ -117,7 +120,7 @@ Fix a bug speaking a char when cursor-right is input after space
    {
      tts.oflag = stathit = 0;
      oldcr = win->cr;
-@@ -1470,17 +1462,6 @@ main (int argc, char *argv[])
+@@ -1470,17 +1464,6 @@ main (int argc, char *argv[])
    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
    textdomain (GETTEXT_PACKAGE);
    strcpy (charmap, nl_langinfo (CODESET));

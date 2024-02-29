@@ -10,11 +10,13 @@ BUILDLINK_ABI_DEPENDS.espeak-ng+=	espeak-ng>=1.51
 BUILDLINK_PKGSRCDIR.espeak-ng?=		../../audio/espeak-ng
 BUILDLINK_INCDIRS.espeak-ng?=		include/espeak-ng
 
-#.include "../../mk/pkg-build-options.mk"
-#
-#.if ${PKG_BUILD_OPTIONS.espeak-ng:Malsa}
-#.  include "../../audio/alsa-lib/buildlink3.mk"
-#.endif
+.include "../../audio/pcaudiolib/buildlink3.mk"
+
+pkgbase := espeak-ng
+.include "../../mk/pkg-build-options.mk"
+.if !empty(PKG_BUILD_OPTIONS.espeak-ng:Msonic)
+.  include "../../audio/sonic/buildlink3.mk"
+.endif
 
 .endif # ESPEAK_NG_BUILDLINK3_MK
 
