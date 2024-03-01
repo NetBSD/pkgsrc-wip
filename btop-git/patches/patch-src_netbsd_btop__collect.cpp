@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-02-29 19:35:48.098045920 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-02-29 19:36:45.450039416 +0000
 +++ src/netbsd/btop_collect.cpp
-@@ -0,0 +1,1326 @@
+@@ -0,0 +1,1416 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
 +
 +   Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,13 +49,10 @@ Add support for NetBSD.
 +#include <sys/siginfo.h>
 +#include <sys/proc.h>
 +#include <sys/types.h>
-+//#include <sys/user.h>
 +#include <sys/param.h>
 +#include <sys/ucred.h>
 +#include <sys/mount.h>
 +#include <sys/vmmeter.h>
-+//#include <sys/limits.h>
-+//#include <sys/sensors.h>
 +#include <sys/disk.h>
 +#include <vector>
 +#include <kvm.h>
@@ -271,38 +268,131 @@ Add support for NetBSD.
 +
 +	bool get_sensors() {
 +		got_sensors = false;
-+//		if (Config::getB("show_coretemp") and Config::getB("check_temp")) {
-+//			if (get_sensor(string("cpu0") , SENSOR_TEMP, 0) > 0) {
-+//				got_sensors = true;
-+//				current_cpu.temp_max = 100; // we don't have this info
-+//			} else {
-+//				Logger::warning("Could not get temp sensor");
-+//			}
-+//		}
++		prop_dictionary_t dict;
++
++		int fd = open(_PATH_SYSMON, O_RDONLY);
++		if (fd == -1) {
++			Logger::warning("failed to open " + string(_PATH_SYSMON));
++			return got_sensors;
++		}
++
++		if (prop_dictionary_recv_ioctl(fd, ENVSYS_GETDICTIONARY, &dict) != 0) {
++			if (fd != -1) {
++				close(fd);
++			}
++			Logger::warning("failed to open envsys dict");
++			return got_sensors;
++		}
++
++		if (prop_dictionary_count(dict) == 0) {
++			if (fd != -1) {
++				close(fd);
++			}
++			Logger::warning("no drivers registered for envsys");
++			return got_sensors;
++		}
++
++		prop_object_t fields_array = prop_dictionary_get(prop_dictionary_t(dict), "acpitz0");
++		if (prop_object_type(fields_array) != PROP_TYPE_ARRAY) {
++			if (fd != -1) {
++				close(fd);
++			}
++			Logger::warning("unknown device 'acpitz0'");
++			return got_sensors;
++		}
++
++		if (Config::getB("show_coretemp") and Config::getB("check_temp")) {
++			got_sensors = true;
++		}
 +		return got_sensors;
 +	}
 +
 +#define MUKTOC(v) ((v - 273150000) / 1000000.0)
 +
 +	void update_sensors() {
-+//		int temp = 0;
-+//		int p_temp = 0;
-+//
-+//		temp = get_sensor(string("cpu0"), 0);
-+//		if (temp > -1) {
-+//			temp = MUKTOC(temp);
-+//			p_temp = temp;
-+//			for (int i = 0; i < Shared::coreCount; i++) {
-+//				if (cmp_less(i + 1, current_cpu.temp.size())) {
-+//					current_cpu.temp.at(i + 1).push_back(temp);
-+//					if (current_cpu.temp.at(i + 1).size() > 20)
-+//						current_cpu.temp.at(i + 1).pop_front();
-+//				}
-+//			}
-+//			current_cpu.temp.at(0).push_back(p_temp);
-+//			if (current_cpu.temp.at(0).size() > 20)
-+//				current_cpu.temp.at(0).pop_front();
-+//		}
++		int64_t current_temp = -1;
++		current_cpu.temp_max = 95;
++		prop_dictionary_t dict, fields, props;
++
++		int fd = open(_PATH_SYSMON, O_RDONLY);
++		if (fd == -1) {
++			Logger::warning("failed to open " + string(_PATH_SYSMON));
++			return;
++		}
++
++		if (prop_dictionary_recv_ioctl(fd, ENVSYS_GETDICTIONARY, &dict) != 0) {
++			if (fd != -1) {
++				close(fd);
++			}
++			Logger::warning("failed to open envsys dict");
++			return;
++		}
++
++		if (prop_dictionary_count(dict) == 0) {
++			if (fd != -1) {
++				close(fd);
++			}
++			Logger::warning("no drivers registered for envsys");
++			return;
++		}
++
++		prop_object_t fields_array = prop_dictionary_get(prop_dictionary_t(dict), "acpitz0");
++		if (prop_object_type(fields_array) != PROP_TYPE_ARRAY) {
++			if (fd != -1) {
++				close(fd);
++			}
++			Logger::warning("unknown device 'acpitz0'");
++			return;
++		}
++
++		prop_object_iterator_t fields_iter = prop_array_iterator(prop_array_t(fields_array));
++		if (fields_iter == NULL) {
++			if (fd != -1) {
++				close(fd);
++			}
++			return;
++		}
++
++		string prop_description = "no description";
++		while ((fields = (prop_dictionary_t) prop_object_iterator_next(prop_object_iterator_t(fields_iter))) != NULL) {
++			props = (prop_dictionary_t) prop_dictionary_get(fields, "device-properties");
++			if (props != NULL) continue;
++
++			prop_object_t cur_value = prop_dictionary_get(fields, "cur-value");
++			prop_object_t max_value = prop_dictionary_get(fields, "max-value");
++			prop_object_t description = prop_dictionary_get(fields, "description");
++
++			if (description == NULL || cur_value == NULL) {
++				continue;
++			}
++
++
++			prop_description = prop_string_cstring(prop_string_t(description));
++
++			if (prop_description == "temperature") {
++				current_temp = prop_number_integer_value(prop_number_t(cur_value));
++				current_cpu.temp_max = MUKTOC(prop_number_integer_value(prop_number_t(max_value)));
++			}
++		}
++
++		prop_object_iterator_release(fields_iter);
++		prop_object_release(dict);
++
++		if (current_temp > -1) {
++			current_temp = MUKTOC(current_temp);
++			for (int i = 0; i < Shared::coreCount; i++) {
++				if (cmp_less(i + 1, current_cpu.temp.size())) {
++					current_cpu.temp.at(i + 1).push_back(current_temp);
++					if (current_cpu.temp.at(i + 1).size() > 20) {
++						current_cpu.temp.at(i + 1).pop_front();
++					}
++				}
++			}
++			current_cpu.temp.at(0).push_back(current_temp);
++			if (current_cpu.temp.at(0).size() > 20) {
++				current_cpu.temp.at(0).pop_front();
++			}
++		}
 +
 +	}
 +
@@ -364,8 +454,8 @@ Add support for NetBSD.
 +
 +		prop_dictionary_t dict, fields, props;
 +
-+		int64_t totalCharge = 0;
-+		int64_t totalCapacity = 0;
++		int64_t total_charge = 0;
++		int64_t total_capacity = 0;
 +
 +		int fd = open(_PATH_SYSMON, O_RDONLY);
 +		if (fd == -1) {
@@ -392,8 +482,8 @@ Add support for NetBSD.
 +			return {0, 0.0, 0, ""};
 +		}
 +
-+		prop_object_t fieldsArray = prop_dictionary_get(prop_dictionary_t(dict), "acpibat0");
-+		if (prop_object_type(fieldsArray) != PROP_TYPE_ARRAY) {
++		prop_object_t fields_array = prop_dictionary_get(prop_dictionary_t(dict), "acpibat0");
++		if (prop_object_type(fields_array) != PROP_TYPE_ARRAY) {
 +			if (fd != -1) {
 +				close(fd);
 +			}
@@ -402,8 +492,8 @@ Add support for NetBSD.
 +			return {0, 0.0, 0, ""};
 +		}
 +
-+		prop_object_iterator_t fieldsIter = prop_array_iterator(prop_array_t(fieldsArray));
-+		if (fieldsIter == NULL) {
++		prop_object_iterator_t fields_iter = prop_array_iterator(prop_array_t(fields_array));
++		if (fields_iter == NULL) {
 +			if (fd != -1) {
 +				close(fd);
 +			}
@@ -412,22 +502,22 @@ Add support for NetBSD.
 +		}
 +
 +		/* only assume battery is not present if explicitly stated */
-+		bool isBattery = false;
-+		int64_t isPresent = 1;
-+		int64_t curCharge = 0;
-+		int64_t maxCharge = 0;
++		bool is_battery = false;
++		int64_t is_present = 1;
++		int64_t cur_charge = 0;
++		int64_t max_charge = 0;
 +		string status = "unknown";
 +		string prop_description = "no description";
 +
-+		while ((fields = (prop_dictionary_t) prop_object_iterator_next(prop_object_iterator_t(fieldsIter))) != NULL) {
++		while ((fields = (prop_dictionary_t) prop_object_iterator_next(prop_object_iterator_t(fields_iter))) != NULL) {
 +			props = (prop_dictionary_t) prop_dictionary_get(fields, "device-properties");
 +			if (props != NULL) continue;
 +
-+			prop_object_t curValue = prop_dictionary_get(fields, "cur-value");
-+			prop_object_t maxValue = prop_dictionary_get(fields, "max-value");
++			prop_object_t cur_value = prop_dictionary_get(fields, "cur-value");
++			prop_object_t max_value = prop_dictionary_get(fields, "max-value");
 +			prop_object_t description = prop_dictionary_get(fields, "description");
 +
-+			if (description == NULL || curValue == NULL) {
++			if (description == NULL || cur_value == NULL) {
 +				continue;
 +			}
 +
@@ -435,33 +525,33 @@ Add support for NetBSD.
 +			prop_description = prop_string_cstring(prop_string_t(description));
 +
 +			if (prop_description == "charge") {
-+				if (maxValue == NULL) {
++				if (max_value == NULL) {
 +					continue;
 +				}
-+				curCharge = prop_number_integer_value(prop_number_t(curValue));
-+				maxCharge = prop_number_integer_value(prop_number_t(maxValue));
++				cur_charge = prop_number_integer_value(prop_number_t(cur_value));
++				max_charge = prop_number_integer_value(prop_number_t(max_value));
 +			}
 +
 +			if (prop_description == "present") {
-+				isPresent = prop_number_integer_value(prop_number_t(curValue));
++				is_present = prop_number_integer_value(prop_number_t(cur_value));
 +			}
 +
 +			if (prop_description == "charging") {
 +				status = prop_description;
 +				string charging_type = prop_string_cstring(prop_string_t(prop_dictionary_get(fields, "type")));
-+				isBattery = charging_type == "Battery charge" ? true : false;
++				is_battery = charging_type == "Battery charge" ? true : false;
 +			}
 +
-+			if (isBattery && isPresent) {
-+				totalCharge += curCharge;
-+				totalCapacity += maxCharge;
++			if (is_battery && is_present) {
++				total_charge += cur_charge;
++				total_capacity += max_charge;
 +			}
 +		}
 +
-+		prop_object_iterator_release(fieldsIter);
++		prop_object_iterator_release(fields_iter);
 +		prop_object_release(dict);
 +
-+		uint32_t percent = ((double)totalCharge / (double)totalCapacity) * 100.0;
++		uint32_t percent = ((double)total_charge / (double)total_capacity) * 100.0;
 +
 +		if (percent == 100) {
 +			status = "full";
