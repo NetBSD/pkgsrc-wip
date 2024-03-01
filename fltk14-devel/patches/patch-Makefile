@@ -1,30 +1,27 @@
 $NetBSD$
 
 Remove tests from directory list.
-Add target "test" to build test programs.
+Add rule to build tests.
 
---- Makefile.orig	2016-09-30 11:33:14.000000000 +0000
+--- Makefile.orig	2024-03-01 13:00:43.000000000 +0000
 +++ Makefile
 @@ -16,7 +16,7 @@
  
  include makeinclude
  
--DIRS = $(IMAGEDIRS) $(LIBDECORDIR) src $(CAIRODIR) fluid test documentation
-+DIRS = $(IMAGEDIRS) $(LIBDECORDIR) src $(CAIRODIR) fluid documentation
+-DIRS = $(IMAGEDIRS) $(LIBDECORDIR) src $(CAIRODIR) $(FLUIDDIR) fltk-options test \
++DIRS = $(IMAGEDIRS) $(LIBDECORDIR) src $(CAIRODIR) $(FLUIDDIR) fltk-options \
+        documentation
  
  all: makeinclude fltk-config
- 	for dir in $(DIRS); do\
-@@ -24,6 +24,14 @@ all: makeinclude fltk-config
+@@ -25,6 +25,11 @@ all: makeinclude fltk-config
  		(cd $$dir; $(MAKE) $(MFLAGS)) || exit 1;\
  	done
  
++# [pkgsrc] Build only for "make test"
 +test: makeinclude
-+	dir=test;\
-+	echo "=== making $$dir ===";\
-+	if test ! -f $$dir/makedepend; then\
-+		touch $$dir/makedepend;\
-+	fi;\
-+	(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
++	echo "=== making test ===";\
++	(cd test; $(MAKE) $(MFLAGS)) || exit 1;\
 +
  install: makeinclude
  	-mkdir -p $(DESTDIR)$(bindir)
