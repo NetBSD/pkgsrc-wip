@@ -31,6 +31,9 @@ ${PYSITELIB}/fastparquet/dataframe.pyo
 ${PYSITELIB}/fastparquet/encoding.py
 ${PYSITELIB}/fastparquet/encoding.pyc
 ${PYSITELIB}/fastparquet/encoding.pyo
+${PYSITELIB}/fastparquet/evolve.py
+${PYSITELIB}/fastparquet/evolve.pyc
+${PYSITELIB}/fastparquet/evolve.pyo
 ${PYSITELIB}/fastparquet/json.py
 ${PYSITELIB}/fastparquet/json.pyc
 ${PYSITELIB}/fastparquet/json.pyo
