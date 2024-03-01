@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/qFlipper
+bin/qFlipper-cli
+lib/qFlipper/plugins/libflipperproto0.so
+lib/udev/rules.d/42-flipperzero.rules
+share/applications/qFlipper.desktop
+share/icons/hicolor/512x512/apps/qFlipper.png

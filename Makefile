@@ -4798,6 +4798,7 @@ SUBDIR+=	q
 SUBDIR+=	q-dns
 SUBDIR+=	q2pro
 SUBDIR+=	q5go
+SUBDIR+=	qFlipper
 SUBDIR+=	qbe-git
 SUBDIR+=	qcdloop
 SUBDIR+=	qemu-git

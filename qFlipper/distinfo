@@ -1,0 +1,17 @@
+$NetBSD$
+
+BLAKE2s (qFlipper/1.3.3.tar.gz) = c8be1624ec51d3e47f512db50bbdf0395dcf45889893083f7c1960479e794085
+SHA512 (qFlipper/1.3.3.tar.gz) = 55f19517982dbcc52f586bafd1c6f3d9acc9c81c29e3f42bc4e4d2f09c962b976bfb97406e20c7a126b9f555b2e6b6e420fa94cd97b07877d00ef74e425e6751
+Size (qFlipper/1.3.3.tar.gz) = 1290922 bytes
+BLAKE2s (qFlipper/nanopb-nanopb-0.4.8.tar.gz) = 0e2a8c346c19cf6289cd2fd19bc0dc1403aed944bde7fe2a9ffdbdbc811b906b
+SHA512 (qFlipper/nanopb-nanopb-0.4.8.tar.gz) = 635577498dfbfb46fd64b8ec83b2a4a9b03b57c665f3c9f67d35c272810c0330b0e9011d7c0e43623e9da74d6ee3a4c1f012878e2bff7e1a7e57fb7c0857ad42
+Size (qFlipper/nanopb-nanopb-0.4.8.tar.gz) = 1163452 bytes
+BLAKE2s (qFlipper/pbatard-libwdi-v1.5.0.tar.gz) = 5ef573fc4d1d2e9277182b8811950ed243f8e384396012b39014ede735f79686
+SHA512 (qFlipper/pbatard-libwdi-v1.5.0.tar.gz) = a70dbf1652228d2fc27968b76c0b92a737c29a3ad6dbc4494a0f6ebd39a539f5155c02e4aaeb437a3b4ba017e61e5e297776163ae94b838a753d467de37b7c0c
+Size (qFlipper/pbatard-libwdi-v1.5.0.tar.gz) = 287250 bytes
+SHA1 (patch-application_applicationupdater.cpp) = ea464b7a20501f147ad3a0b2ee231f6d0485ef08
+SHA1 (patch-application_screencanvas.cpp) = 9482bb31801b5ea6dd44b412f4273c775fca8d24
+SHA1 (patch-backend_flipperzero_helper_deviceinfohelper.cpp) = d75fbfcc4f9f2d2196f852852a085a7e77510d94
+SHA1 (patch-backend_flipperzero_protobufsession.cpp) = 663dc1dfd0f00492301ca5e3c8a877d8650b5659
+SHA1 (patch-backend_flipperzero_utility_storageinforefreshoperation.cpp) = f3da50513cd85bb6dd0f0b247fa47669ab66ffff
+SHA1 (patch-dfu_dfusedevice.cpp) = 971a0b12516d08ddb965f870238ce201bd181ea2
