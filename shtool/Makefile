@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=shtool/}
 
 MAINTAINER=	shozp@directbox.com
-HOMEPAGE=	ftp://ftp.gnu.org/gnu/shtool/
+HOMEPAGE=	https://www.gnu.org/software/shtool/
 COMMENT=	Small but very stable and portable shell scripts into a single shell tool
 LICENSE=	gnu-gpl-v2
 
