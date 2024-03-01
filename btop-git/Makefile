@@ -13,10 +13,10 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-GCC_REQD+=	10
-CXXFLAGS+=	-DNDEBUG
+GCC_REQD+=	10 # needs --std=c++20
 
-MAKE_ARGS=	STRIP=true VERBOSE=true
+CXXFLAGS+=	-DNDEBUG
+MAKE_ENV+=	STATIC=true STRIP=true VERBOSE=true
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

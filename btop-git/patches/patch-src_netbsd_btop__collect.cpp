@@ -2,7 +2,7 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-02-29 19:36:45.450039416 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-03-01 12:39:33.067157726 +0000
 +++ src/netbsd/btop_collect.cpp
 @@ -0,0 +1,1416 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
@@ -359,7 +359,7 @@ Add support for NetBSD.
 +			if (props != NULL) continue;
 +
 +			prop_object_t cur_value = prop_dictionary_get(fields, "cur-value");
-+			prop_object_t max_value = prop_dictionary_get(fields, "max-value");
++			prop_object_t max_value = prop_dictionary_get(fields, "critical-max");
 +			prop_object_t description = prop_dictionary_get(fields, "description");
 +
 +			if (description == NULL || cur_value == NULL) {
