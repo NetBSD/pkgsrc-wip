@@ -2,7 +2,7 @@
 
 DISTNAME=	complexity-1.10
 CATEGORIES=	nih
-MASTER_SITES=	https://ftp.gnu.org/gnu/complexity/
+MASTER_SITES=	${MASTER_SITE_GNU:=complexity/}
 EXTRACT_SUFX=	.tar.xz
 LICENSE=	gnu-gpl-v3
 

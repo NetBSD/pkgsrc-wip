@@ -2,7 +2,7 @@
 
 DISTNAME=	motti-3.1.0
 CATEGORIES=	games
-MASTER_SITES=	http://ftp.gnu.org/gnu/motti/
+MASTER_SITES=	${MASTER_SITE_GNU:=motti/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://www.gnu.org/software/motti/

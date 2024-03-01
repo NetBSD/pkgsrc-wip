@@ -3,7 +3,7 @@
 DISTNAME=	patch-2.7.6
 PKGNAME=	g${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://ftp.gnu.org/gnu/patch/
+MASTER_SITES=	${MASTER_SITE_GNU:=patch/}
 
 MAINTAINER=	nishi@nishi.boats
 HOMEPAGE=	https://savannah.gnu.org/projects/patch/

@@ -5,7 +5,7 @@ PKG_VER=	0.8.0rc2
 DISTNAME=	g-golf-${DIST_VER}
 PKGNAME=	g-golf-${PKG_VER}
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.gnu.org/gnu/g-golf/
+MASTER_SITES=	${MASTER_SITE_GNU:=g-golf/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/g-golf/

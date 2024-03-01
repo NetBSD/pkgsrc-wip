@@ -4,7 +4,7 @@
 DISTNAME=		parted-1.6.23
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://ftp.gnu.org/gnu/parted/
+MASTER_SITES=		${MASTER_SITE_GNU:=parted/}
 LICENSE=		gnu-gpl-v3
 
 MAINTAINER=		reed@reedmedia.net

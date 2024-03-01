@@ -2,7 +2,7 @@
 
 DISTNAME=	gnujump-1.0.8
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.gnu.org/gnu/gnujump/
+MASTER_SITES=	${MASTER_SITE_GNU:=gnujump/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://gnujump.es.gnu.org/index.php/Main_Page

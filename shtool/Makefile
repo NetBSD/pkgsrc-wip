@@ -2,7 +2,7 @@
 
 DISTNAME=	shtool-2.0.8
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.gnu.org/gnu/shtool/
+MASTER_SITES=	${MASTER_SITE_GNU:=shtool/}
 
 MAINTAINER=	shozp@directbox.com
 HOMEPAGE=	ftp://ftp.gnu.org/gnu/shtool/

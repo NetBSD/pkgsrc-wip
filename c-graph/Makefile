@@ -2,7 +2,7 @@
 
 DISTNAME=	c-graph-2.0.1
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.gnu.org/gnu/c-graph/
+MASTER_SITES=	${MASTER_SITE_GNU:=c-graph/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://www.gnu.org/software/c-graph/
