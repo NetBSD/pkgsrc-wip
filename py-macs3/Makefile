@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3:../../math/py-hmmlearn
+DEPENDS+=	${PYPKGPREFIX}-hmmlearn>=0.3:../../wip/py-hmmlearn
 # cykhash>=2.0,<3.0
 DEPENDS+=	${PYPKGPREFIX}-cykhash>=2.0:../../devel/py-cykhash
 TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
