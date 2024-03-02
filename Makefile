@@ -2190,6 +2190,7 @@ SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
 SUBDIR+=	mdpress
 SUBDIR+=	mediawiki-mode
+SUBDIR+=	megacmd
 SUBDIR+=	meka-git
 SUBDIR+=	melonds
 SUBDIR+=	memdump
