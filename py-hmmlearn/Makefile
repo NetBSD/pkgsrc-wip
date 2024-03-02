@@ -21,6 +21,7 @@ USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
+# hmmlearn-0.3.2: Some tests still fail
 do-test:
 	# setup.py builds directly to prefix by default, so we need to build
 	# again within the project for pytest to work
