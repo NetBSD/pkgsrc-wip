@@ -5,4 +5,4 @@ SHA512 (btop-1.2.13.20240301-c6fbfd1e27c27cfe89b2e272c0419e57193ea8c5.tar.gz) = 
 Size (btop-1.2.13.20240301-c6fbfd1e27c27cfe89b2e272c0419e57193ea8c5.tar.gz) = 1145548 bytes
 SHA1 (patch-Makefile) = 851febd30b48556be117091f806c2939af23ce38
 SHA1 (patch-src_btop.cpp) = 60c805d6a5343d2e46f8f7cb0b03059426871fe9
-SHA1 (patch-src_netbsd_btop__collect.cpp) = 9d7924f00345c28187e1eb5e75bf85ddb31d7baa
+SHA1 (patch-src_netbsd_btop__collect.cpp) = 4b2e4b5b55a736729ae22da8fc954f39836d0fa8

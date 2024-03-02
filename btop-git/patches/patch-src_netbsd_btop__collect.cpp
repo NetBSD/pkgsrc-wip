@@ -2,9 +2,9 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-03-01 12:39:33.067157726 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-03-01 14:23:27.335179971 +0000
 +++ src/netbsd/btop_collect.cpp
-@@ -0,0 +1,1416 @@
+@@ -0,0 +1,1436 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
 +
 +   Licensed under the Apache License, Version 2.0 (the "License");
@@ -269,6 +269,16 @@ Add support for NetBSD.
 +	bool get_sensors() {
 +		got_sensors = false;
 +		prop_dictionary_t dict;
++		prop_object_t fields_array;
++		// List of common thermal sensors in NetBSD.
++		const string sensors[6] = {
++			"acpitz0",
++			"acpitz1",
++			"coretemp0",
++			"coretemp1",
++			"thinkpad0",
++			"amdzentemp0"
++		};
 +
 +		int fd = open(_PATH_SYSMON, O_RDONLY);
 +		if (fd == -1) {
@@ -292,12 +302,20 @@ Add support for NetBSD.
 +			return got_sensors;
 +		}
 +
-+		prop_object_t fields_array = prop_dictionary_get(prop_dictionary_t(dict), "acpitz0");
++		// Search through a known list of sensors and break the loop on finding the first.
++		for(const string &sensor : sensors) {
++			fields_array = prop_dictionary_get(prop_dictionary_t(dict), sensor.c_str());
++			if (prop_object_type(fields_array) != PROP_TYPE_ARRAY) {
++				Logger::warning("unknown device " + sensor);
++			} else {
++				Cpu::cpu_sensor = sensor;
++				break;
++			}
++		}
 +		if (prop_object_type(fields_array) != PROP_TYPE_ARRAY) {
 +			if (fd != -1) {
 +				close(fd);
 +			}
-+			Logger::warning("unknown device 'acpitz0'");
 +			return got_sensors;
 +		}
 +
@@ -336,12 +354,12 @@ Add support for NetBSD.
 +			return;
 +		}
 +
-+		prop_object_t fields_array = prop_dictionary_get(prop_dictionary_t(dict), "acpitz0");
++		prop_object_t fields_array = prop_dictionary_get(prop_dictionary_t(dict), Cpu::cpu_sensor.c_str());
 +		if (prop_object_type(fields_array) != PROP_TYPE_ARRAY) {
 +			if (fd != -1) {
 +				close(fd);
 +			}
-+			Logger::warning("unknown device 'acpitz0'");
++			Logger::warning("unknown device " + Cpu::cpu_sensor);
 +			return;
 +		}
 +
@@ -371,7 +389,9 @@ Add support for NetBSD.
 +
 +			if (prop_description == "temperature") {
 +				current_temp = prop_number_integer_value(prop_number_t(cur_value));
-+				current_cpu.temp_max = MUKTOC(prop_number_integer_value(prop_number_t(max_value)));
++				if (max_value != NULL) {
++					current_cpu.temp_max = MUKTOC(prop_number_integer_value(prop_number_t(max_value)));
++				}
 +			}
 +		}
 +

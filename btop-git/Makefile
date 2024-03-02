@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake
 GCC_REQD+=	10 # needs --std=c++20
 
 CXXFLAGS+=	-DNDEBUG
-MAKE_ENV+=	STATIC=true STRIP=true VERBOSE=true
+MAKE_ENV+=	STRIP=true VERBOSE=true
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
