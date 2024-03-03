@@ -82,8 +82,7 @@ MAKE_ENV.SunOS+=	AR=gar
 # Annoyingly, this makes the powerpc build succeed...
 #MAKE_ENV+=		RUSTC_LOG=rustc_metadata
 
-#UNLIMIT_RESOURCES+=	cputime stacksize datasize virtualsize
-UNLIMIT_RESOURCES+=	cputime stacksize datasize
+UNLIMIT_RESOURCES+=	cputime stacksize datasize virtualsize
 
 TEST_TARGET=	check
 
