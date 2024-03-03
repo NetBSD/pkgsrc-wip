@@ -1,0 +1,5 @@
+Tool to build and unpack [littlefs](https://github.com/ARMmbed/littlefs) images.
+Based off of [mkspiffs](https://github.com/igrr/mkspiffs) by Ivan Grokhotkov.
+This package provides binaries built with the following configuration:
+mklittlefs-esp32: configuration compatible with the Espressif ESP32
+mklittlefs-generic: configuration using the default parameters

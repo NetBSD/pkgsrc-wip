@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (littlefs-2.5.1.tar.gz) = 0f83f6481078e7ea4ad38074bffdf93e3dd72d2c9c7df7237c99fcda163a2f08
+SHA512 (littlefs-2.5.1.tar.gz) = e494b2cee9aca4756815bb0529e3abd842bda478c5343a2360e5afec5d63eb4652fb275f029d9a127e0ea6cc82a4a59619f5076655c57a63d491e469488c5db0
+Size (littlefs-2.5.1.tar.gz) = 133561 bytes
+BLAKE2s (mklittlefs-3.2.0.tar.gz) = 212a5395ade91ac1aa69a4e320f2183d9c624aa300f2cc061f02fc271509b938
+SHA512 (mklittlefs-3.2.0.tar.gz) = fc566d2d8c1f7faabaebb6edd9b5cd3f12c1690085b35d074737382b897342fe654cce7802db15c5954c009b6be3e75a69ec382b11baa850ef2ebdfa3aff7a78
+Size (mklittlefs-3.2.0.tar.gz) = 44245 bytes
