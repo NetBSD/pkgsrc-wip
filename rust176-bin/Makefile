@@ -32,6 +32,9 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
 ONLY_FOR_PLATFORM+=	NetBSD-*-riscv64
 ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
+# Illumos, jperkin@ provided binaries
+ONLY_FOR_PLATFORM+=	SunOS-*-x86_64
+
 NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
 CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
@@ -180,6 +183,17 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
+
+# Illumos:
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	x86_64-unknown-illumos
+DN:=		${DISTNAME}
+EXTRACT_SUFX=	.tar.gz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+.endif
+
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
