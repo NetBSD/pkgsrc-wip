@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c
 USE_TOOLS=	pkg-config msgfmt xgettext
 
+#REMOVE!!!!!!!!!!!!!!!
+CFLAGS+=	"-ggdb"
+
 .include "../../devel/meson/build.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
