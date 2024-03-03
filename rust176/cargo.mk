@@ -102,9 +102,9 @@ do-cargo-install:
 .PHONY: do-cargo-post-install-darwin-fix-rpath
 post-install: do-cargo-post-install-darwin-fix-rpath
 do-cargo-post-install-darwin-fix-rpath:
-	${RUN} cd ${DESTDIR};                                                           \
-	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do     \
-	  install_name_tool -id /$$i $$i;                                               \
+	${RUN} cd ${DESTDIR};								\
+	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do	\
+	  install_name_tool -id /$$i $$i;						\
 	done
 .endif
 
