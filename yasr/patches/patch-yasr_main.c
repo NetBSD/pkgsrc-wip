@@ -183,15 +183,48 @@ Remove the enforcing of UTF-8
    wide_buf[wsize] = 0;
  }
  
-@@ -1253,6 +1259,7 @@ getoutput ()
+@@ -1108,7 +1114,7 @@ getoutput ()
+ #ifdef TERMTEST
+   (void) printf ("size=%d buf=%s\n", size, buf);
+ #endif
+-
++  
+   if (!size)
+   {
+     finish (0);
+@@ -1253,8 +1259,9 @@ getoutput ()
        tts.oflag = oldoflag;
      }
    }
+-  if (ch == 13 || ch == 10 || ch == 32)
+-  {
 +
-   if (ch == 13 || ch == 10 || ch == 32)
-   {
++
++  if (ch == 13 || ch == 10){
      tts_flush ();
-@@ -1470,17 +1477,6 @@ main (int argc, char *argv[])
+   }
+   if (size > 1)
+@@ -1264,10 +1271,6 @@ getoutput ()
+     else
+       return;
+   }
+-  else if (ch == 32 || ch == 13)
+-  {
+-    tts_flush ();
+-  }
+   if (tts.oflag || kbuf[0] == 13 || kbuf[0] == 3 || ui.silent)
+   {
+     tts.oflag = stathit = 0;
+@@ -1288,7 +1291,7 @@ getoutput ()
+     case 1:			/* cursor moved right one character */
+       if ((realchar (win->row[win->cr][win->cc - 1].wchar) == kbuf[0] &&
+ 	   realchar (oldch) != kbuf[0]) ||
+-	  ((y_isblank (oldch) && kbuf[0] == 32)))
++		  ((y_isblank (oldch) && kbuf[0] == 32)))
+       {
+ 	break;
+       }
+@@ -1470,17 +1473,6 @@ main (int argc, char *argv[])
    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
    textdomain (GETTEXT_PACKAGE);
    strcpy (charmap, nl_langinfo (CODESET));

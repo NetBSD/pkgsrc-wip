@@ -5,7 +5,15 @@ Fix comment's alignment.
 
 --- yasr/tts.c.orig	2023-04-08 21:22:57.000000000 +0000
 +++ yasr/tts.c
-@@ -674,21 +674,22 @@ tts_saychar (wchar_t ch)
+@@ -412,7 +412,6 @@ tts_out_w (wchar_t *buf, int len)
+   char *p;
+   int i;
+   int xml = 0;			/* what's this? */
+-
+   if (!len)
+     return;
+   if (tts.synth == TTS_SPEECHD)
+@@ -674,21 +673,22 @@ tts_saychar (wchar_t ch)
        tts_printf_ll ("CHAR %c\r\n", ch);
  #else
      else if (ch < 0x80)
@@ -35,7 +43,7 @@ Fix comment's alignment.
        iconv (cd, &cin, &l1, &cout, &l2);
        iconv_close (cd);
        *cout = 0;
-@@ -704,7 +705,8 @@ tts_saychar (wchar_t ch)
+@@ -704,7 +704,8 @@ tts_saychar (wchar_t ch)
      return;
    }
    if (!synth[tts.synth].charoff)
