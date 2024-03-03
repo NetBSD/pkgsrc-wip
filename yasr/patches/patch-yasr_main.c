@@ -60,7 +60,7 @@ Remove the enforcing of UTF-8
    if (size <= 0)
    {
      finish (0);
-@@ -533,19 +523,19 @@ oldgulp (unsigned char *buf, int *size, 
+@@ -533,41 +523,44 @@ oldgulp (unsigned char *buf, int *size, 
      if (ep)
      {
        n = buf + *size - *ep;
@@ -84,7 +84,11 @@ Remove the enforcing of UTF-8
    buf[*size] = '\0';
    return ((char *) (buf + os));
  }
-@@ -556,18 +546,19 @@ oldgulp (unsigned char *buf, int *size, 
+ 
+ #endif
+ 
+-/*!
++/*
  function reads portion of data into buf and converts
  to wide string, leaving 'leave' character in wide_buf;
  */
@@ -96,21 +100,24 @@ Remove the enforcing of UTF-8
  {
 -  char *b1, *b2;
 -  size_t s1, s2;
+-  if (bytes_left)
+-  {
+-    memcpy (buf, bytes_left_start, bytes_left);
 +  int mbcharsize;
-+  char *bmb;
-+  wchar_t *bwc;
++  char *bmb, tmpch[BUF_MAX];
++  wchar_t *bwc, tmpwc[WIDE_BUF_MAX];
 +  size_t smb;
 +
-   if (bytes_left)
--  {
-     memcpy (buf, bytes_left_start, bytes_left);
--  }
++  if (bytes_left){
++    memcpy (tmpch, bytes_left_start, bytes_left);
++    memcpy (buf, tmpch, bytes_left);
+   }
 -  size = read (master, buf + bytes_left, 255 - bytes_left - leave);
 +  size = read (master, buf + bytes_left, BUF_MAX - bytes_left - 1);
    if (size < 0)
    {
      perror ("read");
-@@ -577,32 +568,44 @@ read_buf (int leave)
+@@ -577,32 +570,45 @@ read_buf (int leave)
    size += bytes_left;
    buf[size] = 0;
    bytes_left = 0;
@@ -128,9 +135,10 @@ Remove the enforcing of UTF-8
 -    if (iconv (ih_inp, &b1, &s1, &b2, &s2) == (size_t) -1)
 +  bmb = buf;
 +  bwc = wide_buf + leave;
-+  if (leave != 0 && leave < wsize)
-+    //memcpy (wide_buf, wide_buf + wsize - leave, sizeof (wchar_t) * leave);
-+    wmemcpy (wide_buf, wide_buf + wsize - leave, leave);
++  if (leave != 0 && leave < wsize){
++    memcpy (tmpwc, wide_buf + wsize - leave, sizeof (wchar_t) * leave);
++    memcpy (wide_buf, tmpwc, sizeof (wchar_t) * leave);
++  }
 +  smb = size;
 +  wsize = 0;
 +  while (smb > 0 && wsize < (WIDE_BUF_MAX - 1))
@@ -175,7 +183,7 @@ Remove the enforcing of UTF-8
    wide_buf[wsize] = 0;
  }
  
-@@ -1253,6 +1256,7 @@ getoutput ()
+@@ -1253,6 +1259,7 @@ getoutput ()
        tts.oflag = oldoflag;
      }
    }
@@ -183,7 +191,7 @@ Remove the enforcing of UTF-8
    if (ch == 13 || ch == 10 || ch == 32)
    {
      tts_flush ();
-@@ -1470,17 +1474,6 @@ main (int argc, char *argv[])
+@@ -1470,17 +1477,6 @@ main (int argc, char *argv[])
    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
    textdomain (GETTEXT_PACKAGE);
    strcpy (charmap, nl_langinfo (CODESET));
