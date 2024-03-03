@@ -1,0 +1,15 @@
+news/newsraft: Update to 0.23
+
+- set limits to feeds/sections with curly brackets in feeds config
+- add system notifications via notification-command setting
+- add pager-width setting, set it to 100
+- add sorting to feeds menu
+- add shift-west, shift-east and shift-reset actions
+- remove items-count-limit setting
+- remove initial-unread-first-sorting setting
+- remove toggle-unread-first-sorting action
+- merge foreground and background color settings
+- bind toggle-explore-mode action to tab (^I)
+- bind scroll down to select-next, bind scroll up to select-prev
+- fix ignoring search query when marking items read/unread
+- fix poor termination after invalid terminal size
