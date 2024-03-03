@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (arduino-cli-0.35.2.tar.gz) = 6f4e586757f2b834a9e4edce1ad636bf12d7df06e88474d250ea431b82789e5a
-SHA512 (arduino-cli-0.35.2.tar.gz) = b03429969c41c4dd24cd6fbcb76a9cf02f984c4b4dfd72c286b40c42a3cbfc65d8bc861bbc6449f94454ce738aa09f9032b46a02ca95ed9ab9f13dd3daf6df1f
-Size (arduino-cli-0.35.2.tar.gz) = 10420486 bytes
+BLAKE2s (arduino-cli-0.35.3.tar.gz) = d9ae8e10f71cfd08a08aa9810990f09efd28c1186893a6cd39a5bd18afa736df
+SHA512 (arduino-cli-0.35.3.tar.gz) = 9bd1c4fa8ce85cfbe0f6d862484cea0fd1751ba2074d3f025aada274032e66c20102423e3260625c0079c20fc2a5c94f76c0e7e2b3740c4dfdf70d40714d227d
+Size (arduino-cli-0.35.3.tar.gz) = 10420371 bytes
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
 Size (cloud.google.com_go_@v_v0.26.0.mod) = 27 bytes
