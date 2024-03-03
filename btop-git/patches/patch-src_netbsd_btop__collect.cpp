@@ -2,10 +2,11 @@ $NetBSD$
 
 Add support for NetBSD.
 
---- src/netbsd/btop_collect.cpp.orig	2024-03-01 14:23:27.335179971 +0000
+--- src/netbsd/btop_collect.cpp.orig	2024-03-03 12:19:49.439968982 +0000
 +++ src/netbsd/btop_collect.cpp
-@@ -0,0 +1,1436 @@
+@@ -0,0 +1,1414 @@
 +/* Copyright 2021 Aristocratos (jakob@qvantnet.com)
++   Copyright 2024 Santhosh Raju (fox@NetBSD.org)
 +
 +   Licensed under the Apache License, Version 2.0 (the "License");
 +   you may not use this file except in compliance with the License.
@@ -189,18 +190,6 @@ Add support for NetBSD.
 +		Mem::old_uptime = system_uptime();
 +		Mem::collect();
 +	}
-+
-+	//* RAII wrapper for kvm_openfiles
-+	class kvm_openfiles_wrapper {
-+		kvm_t* kd = nullptr;
-+	public:
-+		kvm_openfiles_wrapper(const char* execf, const char* coref, const char* swapf, int flags, char* err) {
-+			this->kd = kvm_openfiles(execf, coref, swapf, flags, err);
-+		}
-+		~kvm_openfiles_wrapper() { kvm_close(kd); }
-+		auto operator()() -> kvm_t* { return kd; }
-+	};
-+
 +}  // namespace Shared
 +
 +namespace Cpu {
@@ -928,17 +917,6 @@ Add support for NetBSD.
 +	bool rescale = true;
 +	uint64_t timestamp = 0;
 +
-+	//* RAII wrapper for getifaddrs
-+	class getifaddr_wrapper {
-+		struct ifaddrs *ifaddr;
-+
-+	public:
-+		int status;
-+		getifaddr_wrapper() { status = getifaddrs(&ifaddr); }
-+		~getifaddr_wrapper() { freeifaddrs(ifaddr); }
-+		auto operator()() -> struct ifaddrs * { return ifaddr; }
-+	};
-+
 +	auto collect(bool no_update) -> net_info & {
 +		auto &net = current_net;
 +		auto &config_iface = Config::getS("net_iface");
@@ -948,10 +926,10 @@ Add support for NetBSD.
 +
 +		if (not no_update and errors < 3) {
 +			//? Get interface list using getifaddrs() wrapper
-+			getifaddr_wrapper if_wrap{};
-+			if (if_wrap.status != 0) {
++			IfAddrsPtr if_addrs {};
++			if (if_addrs.get_status() != 0) {
 +				errors++;
-+				Logger::error("Net::collect() -> getifaddrs() failed with id " + to_string(if_wrap.status));
++				Logger::error("Net::collect() -> getifaddrs() failed with id " + to_string(if_addrs.get_status()));
 +				redraw = true;
 +				return empty_net;
 +			}
@@ -963,7 +941,7 @@ Add support for NetBSD.
 +			string ipv4, ipv6;
 +
 +			//? Iteration over all items in getifaddrs() list
-+			for (auto *ifa = if_wrap(); ifa != nullptr; ifa = ifa->ifa_next) {
++			for (auto *ifa = if_addrs.get(); ifa != nullptr; ifa = ifa->ifa_next) {
 +				if (ifa->ifa_addr == nullptr) continue;
 +				family = ifa->ifa_addr->sa_family;
 +				const auto &iface = ifa->ifa_name;
@@ -1250,8 +1228,8 @@ Add support for NetBSD.
 +
 +			int count = 0;
 +			char buf[_POSIX2_LINE_MAX];
-+			Shared::kvm_openfiles_wrapper kd(nullptr, nullptr, nullptr, KVM_NO_FILES, buf);
-+			const struct kinfo_proc2* kprocs = kvm_getproc2(kd(), KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2), &count);
++			Shared::KvmPtr kd {kvm_openfiles(nullptr, nullptr, nullptr, KVM_NO_FILES, buf)};
++			const struct kinfo_proc2* kprocs = kvm_getproc2(kd.get(), KERN_PROC_ALL, 0, sizeof(struct kinfo_proc2), &count);
 +
 +			for (int i = 0; i < count; i++) {
 +				const struct kinfo_proc2* kproc = &kprocs[i];
@@ -1278,7 +1256,7 @@ Add support for NetBSD.
 +						continue;
 +					}
 +					new_proc.name = kproc->p_comm;
-+					char** argv = kvm_getargv2(kd(), kproc, 0);
++					char** argv = kvm_getargv2(kd.get(), kproc, 0);
 +					if (argv) {
 +						for (int i = 0; argv[i] and cmp_less(new_proc.cmd.size(), 1000); i++) {
 +							new_proc.cmd += argv[i] + " "s;
