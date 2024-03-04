@@ -25,7 +25,7 @@ USE_TOOLS.NetBSD+=	gsed
 
 MKPIE_SUPPORTED=	no
 
-CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
+CHECK_RELRO_SKIP+=	${GCC_PKGNAME}-gnat/lib/*
 
 .include "../../mk/bsd.prefs.mk"
 
