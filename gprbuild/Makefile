@@ -32,6 +32,7 @@ GCC_REQD+=	13
 
 OBJDIR=		${WRKDIR}/build
 BOOTSTRAPDIR=	${WRKDIR}/bootstrap
+CGPRDIR=	${WRKDIR}/.home
 
 PRECONFIGURE_ENV=	${CONFIGURE_ENV}
 POSTCONFIGURE_ENV=	${CONFIGURE_ENV}
@@ -49,11 +50,17 @@ CONFIGURE_ARGS+=	SOURCE_DIR=${WRKSRC}
 
 BUILD_DIRS=		${OBJDIR}
 MAKE_FILE=		${WRKSRC}/Makefile
-BUILD_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${PKGDIR}/files/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
+BUILD_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
 
 INSTALL_DIRS=		${OBJDIR}
-INSTALL_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${PKGDIR}/files/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
-INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${PKGDIR}/files/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
+INSTALL_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
+INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
+
+SUBST_CLASSES+=		buildlink
+SUBST_STAGE.buildlink=	pre-configure
+SUBST_FILES.buildlink=	../.home/buildlink.cgpr
+SUBST_MESSAGE.buildlink=Set work directory path in config project
+SUBST_SED.buildlink=	-e 's,@WRKDIR@,${WRKDIR},g'
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
@@ -66,6 +73,7 @@ post-patch:
 	${RUN} cd ${PKGDIR} \
 	&& ${PATCH} -d ${WRKSRC} -E -p0 -F0 <files/patch-gpr_src_put_resource_usage__unix.adb
 .endif
+	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${CGPRDIR}/
 
 pre-configure:
 	${RUN} ${MKDIR} ${BOOTSTRAPDIR}
@@ -84,6 +92,6 @@ post-configure:
 	./configure \
 	    --prefix=${WRKDIR}/.buildlink \
 	&& set -x ; env ${MAKE_ENV} \
-	${MAKE_PROGRAM} all install GPROPTS='--config=${PKGDIR}/files/buildlink.cgpr'
+	${MAKE_PROGRAM} all install GPROPTS='--config=${CGPRDIR}/buildlink.cgpr'
 
 .include "../../mk/bsd.pkg.mk"
