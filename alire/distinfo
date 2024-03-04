@@ -1,13 +1,13 @@
 $NetBSD$
 
-BLAKE2s (alire-2.0.0.tar.gz) = 3007620776346e821b18fc293c2c3819f296d411270b5ca0943225ffb5f4aacc
-SHA512 (alire-2.0.0.tar.gz) = 02740884625791cb1af2492b9953926de89677020f8209de356a91934c60bfb73792824064d0ada6067d1000f2acf8fa2edaf0f87e54870a40dc0c81702070f2
-Size (alire-2.0.0.tar.gz) = 923553 bytes
+BLAKE2s (alire-2.0.0-rc1.tar.gz) = 8f9dee72c3ae67863dc69e5bfa8e39283602fe9ed1269344e8c39ec29c6657e2
+SHA512 (alire-2.0.0-rc1.tar.gz) = ca9f5746f8dba08a7f17a3e99d42889774360461162da20eb88552c5167f7ba26241fbcdf5ef70949fb56312b342f0d89efdcdc2f138095a345bbaa01f6169ab
+Size (alire-2.0.0-rc1.tar.gz) = 962681 bytes
 SHA1 (patch-alire.gpr) = 571c790ca413b971dd5d676ced8188ed1761b687
 SHA1 (patch-alire__common.gpr) = e1cba2d47d48557b3002ad1f8ced0a5ba6af69f2
 SHA1 (patch-alr.gpr) = 5068ad3dc2efef1aa33dbc57debea6e872f9f70f
 SHA1 (patch-alr__env.gpr) = ec6b800d341aff7cf308457f0dda60bb5cc6a508
 SHA1 (patch-src_alire_alire-platforms.ads) = 49c9173a337855e143c4388ca4510054006d4f11
 SHA1 (patch-src_alire_os__netbsd_alire-check__absolute__path.adb) = f7893dabd3d51d64c708aa690d0c46136ffebc67
-SHA1 (patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb) = b2e1ca596d451a365a7cc567447a1590eb8325d7
-SHA1 (patch-src_alire_os__netbsd_alire-platforms-folders__netbsd.adb) = 8d1b95a40e5073ce090d8e5b715f1192170a5966
+SHA1 (patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb) = 735f37293b1c7fb6c0d95445f879e00da8e624b5
+SHA1 (patch-src_alire_os__netbsd_alire-platforms-folders__netbsd.adb) = 9b294ef8f2cf109fb8a9687561fc0c03e84fad84

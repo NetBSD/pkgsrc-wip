@@ -1,9 +1,9 @@
-$NetBSD: patch-src_alire_os__netbsd_alire-platforms-folders__netbsd.adb,v 1.0 2023/12/27 22:00:00 dkazankov Exp $
+$NetBSD: patch-src_alire_os__netbsd_alire-platforms-folders__netbsd.adb,v 1.1 2024/03/04 23:00:00 dkazankov Exp $
 
 Add NetBSD support
 
---- /dev/null	2023-12-27 21:54:28.155585723 +0200
-+++ src/alire/os_netbsd/alire-platforms-folders__netbsd.adb	2023-10-19 18:04:21.000000000 +0300
+--- /dev/null	2024-03-04 23:32:58.950570486 +0200
++++ src/alire/os_netbsd/alire-platforms-folders__netbsd.adb	2024-03-04 23:27:09.298953043 +0200
 @@ -0,0 +1,34 @@
 +with Ada.Directories;
 +
@@ -17,13 +17,13 @@ Add NetBSD support
 +   -- Cache --
 +   -----------
 +
-+   function Cache return Absolute_Path is (Common.XDG_Cache_Folder);
++   function Cache return Absolute_Path is (Common.XDG_Data_Home);
 +
 +   -----------
 +   -- Config--
 +   -----------
 +
-+   function Config return Absolute_Path is (Common.XDG_Config_Folder);
++   function Config return Absolute_Path is (Common.XDG_Config_Home);
 +
 +   ----------
 +   -- Home --

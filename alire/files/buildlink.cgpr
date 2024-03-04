@@ -12,7 +12,7 @@ configuration project default is
    
    for Symbolic_Link_Supported use "true";
    for Library_Major_Minor_Id_Supported use "true";
-   for Library_Builder  use "/usr/pkgsrc/wip/alire/work/.buildlink/libexec/gprbuild/gprlib";
+   for Library_Builder  use "@WRKDIR@/.buildlink/libexec/gprbuild/gprlib";
    for Library_Support  use "full";
    for Shared_Library_Prefix use "lib";
    for Shared_Library_Minimum_Switches use ("-shared");
@@ -26,16 +26,16 @@ configuration project default is
    for Library_Encapsulated_Options use ("-shared", "-static-libgcc");
    
    for Toolchain_Version ("Ada") use "GNAT 13.2.0";
-   for Runtime_Dir       ("Ada") use "/usr/pkgsrc/wip/alire/work/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0";
+   for Runtime_Dir       ("Ada") use "@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0";
 
    package Builder is
       for Executable_Suffix use "";
    end Builder;
 
    package Compiler is
-      for Driver                   ("Ada") use "/usr/pkgsrc/wip/alire/work/.gcc/bin/gcc";
-      for Driver              ("C") use "/usr/pkgsrc/wip/alire/work/.gcc/bin/gcc";
-      for Driver              ("C++") use "/usr/pkgsrc/wip/alire/work/.gcc/bin/g++";
+      for Driver                   ("Ada") use "@WRKDIR@/.gcc/bin/gcc";
+      for Driver              ("C") use "@WRKDIR@/.gcc/bin/gcc";
+      for Driver              ("C++") use "@WRKDIR@/.gcc/bin/g++";
       for Language_Kind            ("Ada") use "unit_based";
       for Dependency_Kind          ("Ada") use "ALI_File";
       for Leading_Required_Switches        ("Ada") use
@@ -70,7 +70,7 @@ configuration project default is
            "   Dot_Replacement => ""%d"");";
       for Config_File_Unique    ("Ada") use "False";
       for Leading_Required_Switches ("Ada") use
-        Compiler'Leading_Required_Switches ("Ada") & ("--RTS=/usr/pkgsrc/wip/alire/work/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+        Compiler'Leading_Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
         
       for Leading_Required_Switches   ("C") use
          ("-c", "-x", "c") & Compiler'Leading_Required_Switches ("C");
@@ -113,9 +113,9 @@ configuration project default is
    package Binder is
       for Objects_Path_File     ("Ada") use "ADA_PRJ_OBJECTS_FILE";
       for Driver         ("Ada") use
-          "/usr/pkgsrc/wip/alire/work/.buildlink/libexec/gprbuild/gprbind";
+          "@WRKDIR@/.buildlink/libexec/gprbuild/gprbind";
       for Required_Switches ("Ada") use
-        Binder'Required_Switches ("Ada") & ("--RTS=/usr/pkgsrc/wip/alire/work/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+        Binder'Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
    end Binder;
    
    package Linker is

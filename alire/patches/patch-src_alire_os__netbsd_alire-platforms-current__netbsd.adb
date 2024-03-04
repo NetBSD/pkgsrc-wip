@@ -1,10 +1,10 @@
-$NetBSD: patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb,v 1.0 2023/12/27 22:00:00 dkazankov Exp $
+$NetBSD: patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb, v 1.1 2024/03/04 23:00:00 dkazankov Exp $
 
 Add NetBSD support
 
---- /dev/null	2023-12-27 21:54:28.155585723 +0200
-+++ src/alire/os_netbsd/alire-platforms-current__netbsd.adb	2023-12-27 21:51:57.420839908 +0200
-@@ -0,0 +1,34 @@
+--- /dev/null	2024-03-04 23:32:58.950570486 +0200
++++ src/alire/os_netbsd/alire-platforms-current__netbsd.adb	2024-03-04 23:47:58.197854852 +0200
+@@ -0,0 +1,40 @@
 +
 +package body Alire.Platforms.Current is
 +
@@ -14,8 +14,8 @@ Add NetBSD support
 +   -- Detected_Distribution --
 +   ---------------------------
 +
-+   function Detected_Distribution return Platforms.Distributions is
-+      (Platforms.Distro_Unknown);
++   function Detected_Distribution return Platforms.Distributions
++   is (Platforms.Distribution_Unknown);
 +
 +   -----------------------
 +   -- Distribution_Root --
@@ -37,5 +37,11 @@ Add NetBSD support
 +
 +   function Operating_System return Alire.Platforms.Operating_Systems
 +   is (Alire.Platforms.NetBSD);
++
++   ----------------
++   -- Initialize --
++   ----------------
++
++   procedure Initialize is null;
 +
 +end Alire.Platforms.Current;

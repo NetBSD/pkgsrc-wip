@@ -13,25 +13,33 @@ USE_LANGUAGES=	ada
 
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=	${PKGNAME}
+DISTNAME=	${PKGNAME}-rc1
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-GITHUB_TAG=	v${ALIRE_VERSION}-beta1
+GITHUB_TAG=	v${ALIRE_VERSION}-rc1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alire-project/}
 
 USE_TOOLS+=	git
 
-NO_CONFIGURE=	yes
+#NO_CONFIGURE=	yes
 
 GCC_REQD+=	13
 .include "../../wip/gcc13-gnat/gcc.mk"
 
 .include "../../wip/gprbuild/buildlink3.mk"
 
+CGPRDIR=	${WRKDIR}/.home
+
+SUBST_CLASSES+=		buildlink
+SUBST_STAGE.buildlink=	post-configure
+SUBST_FILES.buildlink=	../.home/buildlink.cgpr
+SUBST_MESSAGE.buildlink=Set work directory path in config project
+SUBST_SED.buildlink=	-e 's,@WRKDIR@,${WRKDIR},g'
+
 MAKE_ENV+=		ALIRE_OS=netbsd
 MAKE_PROGRAM=		gprbuild
 MAKE_FILE=		alr_env
 MAKE_FLAGS=		-j0 -p -P
-BUILD_MAKE_FLAGS=	--config=${PKGDIR}/files/buildlink.cgpr
+BUILD_MAKE_FLAGS=	--config=${CGPRDIR}/buildlink.cgpr
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
@@ -47,6 +55,9 @@ post-extract:
 	&& git checkout tags/${GITHUB_TAG} -f \
 	&& git submodule init \
 	&& git submodule update
+
+pre-configure:
+	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${CGPRDIR}/
 
 do-build:
 	${RUN} \
