@@ -2,7 +2,6 @@
 
 DISTNAME=	megacmd-1.6.3
 CATEGORIES=	net
-#PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=meganz/}
 GITHUB_PROJECT=	MEGAcmd
 GITHUB_TAG=	${PKGVERSION_NOREV}_Linux
@@ -25,22 +24,27 @@ REPLACE_SH=		src/client/mega-*
 CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM -std=c++17
 BUILDLINK_TRANSFORM+=	rm:-std=c++11
 
-EGDIR=		${PREFIX}/share/examples/megacmd
-CONF_FILES=	${EGDIR}/megacmd_completion.sh ${PKG_SYSCONFDIR}/bash_completion.d/megacmd_completion.sh
-
-#INSTALLATION_DIRS=	${EGDIR}
-#MAKE_DIRS=		${PKG_SYSCONFDIR}/bash_completion.d
-
-CONFIGURE_ARGS=	--disable-examples --disable-java --disable-php \
-		--disable-python --disable-chat --without-freeimage \
-		--without-termcap --without-ffmpeg --without-libraw \
-		--without-libzen --without-libmediainfo \
-		--without-rt --enable-gcc-hardening
+CONFIGURE_ARGS=	--disable-examples \
+		--disable-java \
+		--disable-php \
+		--disable-python \
+		--disable-chat \
+		--without-freeimage \
+		--without-termcap \
+		--without-ffmpeg \
+		--without-libraw \
+		--without-libzen \
+		--without-libmediainfo \
+		--enable-gcc-hardening
 
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd_completion.sh \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd
 
 
 .include "../../databases/sqlite3/buildlink3.mk"

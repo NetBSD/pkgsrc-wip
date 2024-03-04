@@ -127,4 +127,4 @@ include/megaapi.h
 include/megaapi_impl.h
 lib/libmega.la
 lib/pkgconfig/libmega.pc
-share/examples/megacmd/megacmd_completion.sh
+share/bash-completion/completions/megacmd
