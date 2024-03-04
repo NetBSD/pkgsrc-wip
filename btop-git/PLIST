@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/btop
+man/man1/btop.1
 share/applications/btop.desktop
 share/btop/README.md
 share/btop/themes/HotPurpleTrafficLight.theme
@@ -33,3 +34,4 @@ share/btop/themes/tomorrow-night.theme
 share/btop/themes/whiteout.theme
 share/icons/hicolor/48x48/apps/btop.png
 share/icons/hicolor/scalable/apps/btop.svg
+share/man/man1/btop.1
