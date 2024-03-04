@@ -26,7 +26,7 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
 .  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
 # Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
-GCC_REQD=	12
+GCC_REQD+=	12
 .  endif
 .endif
 
