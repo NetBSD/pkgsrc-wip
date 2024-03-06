@@ -27,11 +27,11 @@ GCC_REQD+=	13
 
 .include "../../wip/gprbuild/buildlink3.mk"
 
-CGPRDIR=	${WRKDIR}/.home
+CGPRDIR=	${WRKDIR}
 
 SUBST_CLASSES+=		buildlink
 SUBST_STAGE.buildlink=	post-configure
-SUBST_FILES.buildlink=	../.home/buildlink.cgpr
+SUBST_FILES.buildlink=	../buildlink.cgpr
 SUBST_MESSAGE.buildlink=Set work directory path in config project
 SUBST_SED.buildlink=	-e 's,@WRKDIR@,${WRKDIR},g'
 
