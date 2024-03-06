@@ -89,8 +89,7 @@ _DEF_VARS.gcc=	\
 	_GCC_PREFIX _GCC_REQD _GCC_STRICTEST_REQD _GCC_SUBPREFIX \
 	_GCC_TEST_DEPENDS _GCC_NEEDS_A_FORTRAN _GCC_VARS _GCC_VERSION \
 	_GCC_VERSION_STRING \
-#	_GCC_ADA _GCC_GMK _GCC_GLK _GCC_GBD _GCC_CHP _GCC_GLS _GCC_GNT _GCC_PRP \
-	_GCC_GMK _GCC_GLK _GCC_GBD _GCC_CHP _GCC_GLS _GCC_GNT _GCC_PRP \
+	_GCC_ADA _GCC_GMK _GCC_GLK _GCC_GBD _GCC_CHP _GCC_GLS _GCC_GNT _GCC_PRP \
 	_IGNORE_GCC \
 	_IS_BUILTIN_GCC \
 	_LANGUAGES.gcc \
@@ -98,7 +97,7 @@ _DEF_VARS.gcc=	\
 	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
 	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
-	_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT \
+_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT \
 	_PKGSRC_GCC_VERSION \
 	_USE_GCC_SHLIB _USE_PKGSRC_GCC \
 	_WRAP_EXTRA_ARGS.CC \
@@ -248,6 +247,7 @@ GCC_REQD+=	8
 # If the Ada language is requested, force lang/gcc6-aux to be selected
 _NEED_GCC_AUX?=no
 .if !empty(USE_LANGUAGES:Mada)
+#GCC_REQD+=	20160822
 _NEED_GCC_AUX=yes
 .endif
 
@@ -327,6 +327,33 @@ _GCC_VERSION=	0
 .  endif
 .endif
 _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
+
+.if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[01].*)
+# A lot of packages attempt to do this as a workaround for a
+# well-intentioned default in XCode 12+, but it's a common cause of
+# build failures on old versions of Darwin which use gcc and don't
+# understand this syntax.
+#
+# Note that pkgsrc also sets this flag itself for Darwin+clang.
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
+.endif
+
+.if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[012].*)
+# Added in GCC 4.3
+BUILDLINK_TRANSFORM+=	rm:-Wvla
+.endif
+
+.if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.0.*)
+# Added in GCC 4.3
+BUILDLINK_TRANSFORM+=	rm:-Wc++-compat
+BUILDLINK_TRANSFORM+=	rm:-Wno-c++-compat
+.endif
+
+.if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[0-8].*)
+COMPILER_HAS_C11?=	no
+.else
+COMPILER_HAS_C11?=	yes
+.endif
 
 .for _version_ in ${_C_STD_VERSIONS}
 _C_STD_FLAG.${_version_}?=	-std=${_version_}
@@ -459,8 +486,11 @@ _NEED_GCC10=	yes
 _NEED_GCC12?=	no
 .for _pattern_ in ${_GCC12_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
+# XXX: pin to a version when NetBSD switches to gcc12
+.    if ${OPSYS} == "NetBSD"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
+.    endif
 .    if ${ALLOW_NEWER_COMPILER:tl} != "yes"
 PKG_FAIL_REASON+=	"Package requires at least gcc 12 to build"
 .    endif
@@ -470,14 +500,24 @@ _NEED_GCC12=	yes
 _NEED_GCC13?=	no
 .for _pattern_ in ${_GCC13_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
+# XXX: pin to a version when NetBSD switches to gcc13
+.    if ${OPSYS} == "NetBSD"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
+.    endif
 .    if ${ALLOW_NEWER_COMPILER:tl} != "yes"
 PKG_FAIL_REASON+=	"Package requires at least gcc 13 to build"
 .    endif
 _NEED_GCC13=	yes
 .  endif
 .endfor
+#_NEED_GCC_AUX?=	no
+#.for _pattern_ in ${_GCC_AUX_PATTERNS}
+#.  if !empty(_GCC_REQD:M${_pattern_})
+#_NEED_GCC_AUX=	yes
+#_NEED_NEWER_GCC=NO
+#.  endif
+#.endfor
 .if !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC7:M[nN][oO]) && \
     !empty(_NEED_GCC8:M[nN][oO]) && !empty(_NEED_GCC9:M[nN][oO]) && \
     !empty(_NEED_GCC10:M[nN][oO]) && !empty(_NEED_GCC12:M[nN][oO]) && \
@@ -585,7 +625,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC13:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
-.elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
+.elif !empty(_NEED_GCC6_AUX:M[yY][eE][sS])
+#LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
 LANGUAGES.gcc=	c c++ ada
 .elif !empty(_NEED_GCC10_AUX:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 ada
@@ -922,14 +963,11 @@ _GCC_LIBDIRS=	${_GCC_ARCHDIR}
 _GCC_LIBDIRS+=	${_GCC_PREFIX}lib${LIBABISUFFIX}
 .  endif
 _GCC_LDFLAGS=	# empty
-#.if ${_NEED_GCC_AUX:tl} == yes
-#_GCC_LDFLAGS+=-L${_GCC_ARCHDIR}/adalib
-#ADA_INCLUDE_PATH=${_GCC_ARCHDIR}/adainclude
-#.endif
 .  for _dir_ in ${_GCC_LIBDIRS:N*not_found*}
 _GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 .  endfor
 .endif
+
 LDFLAGS+=	${_GCC_LDFLAGS}
 
 # Point the variables that specify the compiler to the installed
@@ -989,6 +1027,7 @@ F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran${GCC_VERSION_SUFFIX}
 PKG_FC:=	${_GCC_FC}
 PKGSRC_FORTRAN?=	gfortran
 .endif
+#.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}ada)
 .if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatls)
 _GCC_VARS+=	ADA GMK GLK GBD CHP PRP GLS GNT
 _GCC_ADA=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}ada
