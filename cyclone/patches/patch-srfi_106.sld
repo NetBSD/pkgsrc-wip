@@ -7,6 +7,8 @@ AI_V4MAPPED and is the recommended behaviour by the author of SRFI-106:
 
 https://srfi-email.schemers.org/srfi-106/msg/2762553/
 
+Merged upstream in commit 706f7ef2a85aaa0b4ec13ce0139ff8e7dd9b9f10.
+
 --- srfi/106.sld.orig	2024-02-14 02:31:23.000000000 +0000
 +++ srfi/106.sld
 @@ -388,7 +388,7 @@
