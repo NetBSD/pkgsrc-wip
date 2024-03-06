@@ -32,7 +32,7 @@ GCC_REQD+=	13
 
 OBJDIR=		${WRKDIR}/build
 BOOTSTRAPDIR=	${WRKDIR}/bootstrap
-CGPRDIR=	${WRKDIR}/.home
+CGPRDIR=	${WRKDIR}
 
 PRECONFIGURE_ENV=	${CONFIGURE_ENV}
 POSTCONFIGURE_ENV=	${CONFIGURE_ENV}
@@ -58,7 +58,7 @@ INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP 
 
 SUBST_CLASSES+=		buildlink
 SUBST_STAGE.buildlink=	pre-configure
-SUBST_FILES.buildlink=	../.home/buildlink.cgpr
+SUBST_FILES.buildlink=	../buildlink.cgpr
 SUBST_MESSAGE.buildlink=Set work directory path in config project
 SUBST_SED.buildlink=	-e 's,@WRKDIR@,${WRKDIR},g'
 
