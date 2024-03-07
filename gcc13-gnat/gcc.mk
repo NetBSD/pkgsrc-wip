@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.264 2023/12/27 11:25:00 dkazankov Exp $
+# $NetBSD: gcc.mk,v 1.273 2024/03/07 12:00:00 dkazankov Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -155,15 +155,34 @@ GCC_REQD+=	2.8.0
 
 #
 # Most of the time, GCC adds support for features of new C and C++
-# standards incrementally, so USE_CXX_FEATURES=	c++XX is for
-# establishing an idealistic baseline, usually based on compiler
-# versions shipped with NetBSD.
+# standards incrementally; we define USE_CXX_FEATURES=c++XX as
+# intending to require a compiler that fully supports the standard.
+# We tend towards a gcc version shipped with a NetBSD release, because
+# those are known to work well, and because it is simpler to limit
+# selection to fewer versions.  This tendency is much stronger for C++
+# versions, and less so for c11.
+#
+# Thus we tend to:
+#   - gcc 4.8, shipped with NetBSD 7 
+#   - gcc 5, shipped with NetBSD 8
+#   - gcc 7, shipped with NetBSD 9
+#   - gcc 10, shipped with NetBSD 10
+#
+# Other systems have different versions, and we note a few:
+#
+#  - gcc 8, shipped with Enterprise Linux 8
 #
 # Resources:
 # https://gcc.gnu.org/projects/cxx-status.html
 # https://gcc.gnu.org/wiki/C11Status
 # https://gcc.gnu.org/c99status.html
 #
+
+.if !empty(USE_CXX_FEATURES:Mc++23)
+# GCC 11 is the first version to support -std=c++23,
+# but it was never packaged for pkgsrc, so use GCC 12 instead.
+GCC_REQD+=	12
+.endif
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
 # GCC 10 is chosen because it is planned to be shipped with NetBSD 10,
@@ -206,14 +225,24 @@ GCC_REQD+=	5
 GCC_REQD+=	3
 .endif
 
+# 4.9 supports c11; don't reject it by rounding up to 5
 .if !empty(USE_CC_FEATURES:Mc11)
 GCC_REQD+=	4.9
 .endif
 
+.if !empty(USE_CC_FEATURES:Mc17)
+# See http://mail-index.netbsd.org/pkgsrc-users/2024/01/02/msg038697.html
+# Actually gcc-9.x is enough, but it is not in any NetBSD
+# base system, thus for convenience
+GCC_REQD+=	10.0
+.endif
+
+# Don't round to gcc 5.
 .if !empty(USE_CXX_FEATURES:Munique_ptr)
 GCC_REQD+=	4.9
 .endif
 
+# Don't round to gcc 5.
 .if !empty(USE_CXX_FEATURES:Mregex)
 GCC_REQD+=	4.9
 .endif
@@ -239,15 +268,14 @@ GCC_REQD+=	10
 GCC_REQD+=	10
 .endif
 
+# Don't round to gcc10.
 .if !empty(USE_CXX_FEATURES:Mcharconv)
 GCC_REQD+=	8
 .endif
 
-# Only one compiler defined here supports Ada: lang/gcc6-aux
-# If the Ada language is requested, force lang/gcc6-aux to be selected
+# If the Ada language is requested, force use of aux/gnat comilers
 _NEED_GCC_AUX?=no
 .if !empty(USE_LANGUAGES:Mada)
-#GCC_REQD+=	20160822
 _NEED_GCC_AUX=yes
 .endif
 
@@ -511,6 +539,7 @@ PKG_FAIL_REASON+=	"Package requires at least gcc 13 to build"
 _NEED_GCC13=	yes
 .  endif
 .endfor
+# AUX patterns really don't work starting from gcc10-aux
 #_NEED_GCC_AUX?=	no
 #.for _pattern_ in ${_GCC_AUX_PATTERNS}
 #.  if !empty(_GCC_REQD:M${_pattern_})
@@ -538,7 +567,7 @@ _NEED_GCC12=	yes
 _NEED_GCC13=	yes
 .endif
 
-# We have fixed set of Ada compilers
+# We have fixed set of Ada compilers and languages them provided. So we try to find best possible variant
 _NEED_GCC6_AUX?=no
 _NEED_GCC10_AUX?=no
 _NEED_GCC13_GNAT?=no
@@ -625,8 +654,10 @@ LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC13:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
-.elif !empty(_NEED_GCC6_AUX:M[yY][eE][sS])
+#.elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 #LANGUAGES.gcc=	c c++ fortran fortran77 objc ada
+.elif !empty(_NEED_GCC6_AUX:M[yY][eE][sS])
+# gcc6-aux doesn't provide some languages
 LANGUAGES.gcc=	c c++ ada
 .elif !empty(_NEED_GCC10_AUX:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 ada
@@ -1027,7 +1058,7 @@ F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gfortran${GCC_VERSION_SUFFIX}
 PKG_FC:=	${_GCC_FC}
 PKGSRC_FORTRAN?=	gfortran
 .endif
-#.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}ada)
+#GNAT doesn't provide 'ada' but always provides 'gnatls' - inspired by gprbuild
 .if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatls)
 _GCC_VARS+=	ADA GMK GLK GBD CHP PRP GLS GNT
 _GCC_ADA=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}ada
@@ -1070,6 +1101,7 @@ PKGSRC_CHP?=	gnatchop
 PKGSRC_PRP?=	gnatprep
 PKGSRC_GLS?=	gnatls
 PKGSRC_GNT?=	gnat
+# This is really useful var for gnatmake
 GNATMAKE=	${_GCC_GMK}
 .endif
 _COMPILER_STRIP_VARS+=	${_GCC_VARS}
