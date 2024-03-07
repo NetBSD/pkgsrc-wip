@@ -23,6 +23,8 @@ info/eglot.info.gz
 info/eieio.info.gz
 info/eintr.info.gz
 info/elisp.info.gz
+info/elisp_type_hierarchy.jpg
+info/elisp_type_hierarchy.txt
 info/emacs-gnutls.info.gz
 info/emacs-mime.info.gz
 info/emacs.info.gz
