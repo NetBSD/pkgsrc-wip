@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.17 2023/08/14 05:25:25 wiz Exp $
 
 DISTNAME=	uncrustify-0.78.1
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uncrustify/}
 GITHUB_TAG=	${DISTNAME}
