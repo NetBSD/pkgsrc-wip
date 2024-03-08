@@ -1,6 +1,0 @@
-Tested on NetBSD-10_RC3, NetBSD-9 amd64, works.
-
-Todo:
-1) Check async issue, not sync with enabled librt
-2) COMMIT_MSG
-
