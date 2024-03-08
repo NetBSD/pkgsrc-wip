@@ -1,27 +1,20 @@
 # $NetBSD: Makefile,v 1.0 2023/12/11 11:20:00 dkazankov Exp $
 
-.include "version.mk"
-PKGNAME=gprbuild-${GPRBUILD_VERSION}
-
+DISTNAME=	gprbuild-24.0.0
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
+MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
 HOMEPAGE=	https://github.com/AdaCore/gprbuild
-COMMENT=	GPRbuild build system
+COMMENT=	GPRbuild build system for Ada
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c ada
 
-.include "../../mk/bsd.prefs.mk"
-
-DISTNAME=	${PKGNAME}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	xmlada-${GPRBUILD_VERSION}${EXTRACT_SUFX}
-DISTFILES+=	gprconfig_kb-${GPRBUILD_VERSION}${EXTRACT_SUFX}
-GITHUB_TAG=	v${GPRBUILD_VERSION}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
-
-SITES.xmlada-${GPRBUILD_VERSION}${EXTRACT_SUFX}=	-${MASTER_SITE_GITHUB:=AdaCore/}xmlada/archive/${GITHUB_TAG}${EXTRACT_SUFX}
-SITES.gprconfig_kb-${GPRBUILD_VERSION}${EXTRACT_SUFX}=	-${MASTER_SITE_GITHUB:=AdaCore/}gprconfig_kb/archive/${GITHUB_TAG}${EXTRACT_SUFX}
+DISTFILES+=	xmlada-${PKGVERSION_NOREV}${EXTRACT_SUFX}
+DISTFILES+=	gprconfig_kb-${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 USE_TOOLS+=	gmake patch
 
@@ -65,9 +58,11 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} bin libexec share \( -type f -or -type l \) -print | ${SORT};
 
+.include "../../mk/bsd.prefs.mk"
+
 post-patch:
 	${RUN} cd ${PKGDIR} \
-	&& ${PATCH} -d ${WRKDIR}/xmlada-${GPRBUILD_VERSION} -E -p0 -F0 <files/patch-Makefile.in
+	&& ${PATCH} -d ${WRKDIR}/xmlada-${PKGVERSION_NOREV} -E -p0 -F0 <files/patch-Makefile.in
 .if ${MACHINE_PLATFORM:MNetBSD-*-*}
 	${RUN} cd ${PKGDIR} \
 	&& ${PATCH} -d ${WRKSRC} -E -p0 -F0 <files/patch-gpr_src_put_resource_usage__unix.adb
@@ -81,12 +76,12 @@ pre-configure:
 	${SHELL} ${WRKSRC}/bootstrap.sh \
 	    --prefix=${WRKDIR}/.buildlink \
 	    --srcdir=${WRKSRC} \
-	    --with-xmlada=${WRKDIR}/xmlada-${GPRBUILD_VERSION} \
-	    --with-kb=${WRKDIR}/gprconfig_kb-${GPRBUILD_VERSION}
+	    --with-xmlada=${WRKDIR}/xmlada-${PKGVERSION_NOREV} \
+	    --with-kb=${WRKDIR}/gprconfig_kb-${PKGVERSION_NOREV}
 	${RUN} ${MKDIR} ${OBJDIR}
 
 post-configure:
-	${RUN} cd ${WRKDIR}/xmlada-${GPRBUILD_VERSION} \
+	${RUN} cd ${WRKDIR}/xmlada-${PKGVERSION_NOREV} \
 	&& set -x ; env ${POSTCONFIGURE_ENV} \
 	./configure \
 	    --prefix=${WRKDIR}/.buildlink \
@@ -94,3 +89,5 @@ post-configure:
 	${MAKE_PROGRAM} all install GPROPTS='--config=${CGPRDIR}/buildlink.cgpr'
 
 .include "../../mk/bsd.pkg.mk"
+SITES.xmlada-${PKGVERSION_NOREV}${EXTRACT_SUFX}=	-${MASTER_SITE_GITHUB:=AdaCore/}xmlada/archive/${GITHUB_TAG}${EXTRACT_SUFX}
+SITES.gprconfig_kb-${PKGVERSION_NOREV}${EXTRACT_SUFX}=	-${MASTER_SITE_GITHUB:=AdaCore/}gprconfig_kb/archive/${GITHUB_TAG}${EXTRACT_SUFX}
