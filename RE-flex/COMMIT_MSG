@@ -1,0 +1,30 @@
+devel/RE-flex: Update to v3.5.1
+
+Dec 10, 2021: 3.1.0 improved buffering mechanism with reduced buffer sizes; faster columno() for long lines; fix CP-1251 table typo.
+Feb 20, 2022: 3.2.0 new %option ctorinit; faster compilation of regular expressions to tables and direct code DFAs; refactored SIMD source code to enable AVX2 and AVX512BW optimizations in multi-version matcher code; updated Windows binary file opening.
+Feb 23, 2022: 3.2.1 regression bug in 3.2.0 fix.
+Mar 13, 2022: 3.2.2 minor improvements.
+Apr 2, 2022: 3.2.3 fixed C++17 compliance and dso build.
+Apr 29, 2022: 3.2.4 new %begin directive; new --batch=SIZE option argument.
+Apr 30, 2022: 3.2.5 minor correction.
+May 6, 2022: 3.2.6 improved fuzzy matcher.
+May 10, 2022: 3.2.7 improved fuzzy matcher, see also https://github.com/Genivia/FuzzyMatcher.
+Jul 6, 2022: 3.2.8 minor update to correct a lexer file parsing issue in the reflex code generator tool.
+Aug 12, 2022: 3.2.9 add cmake rules for Windows builds.
+Aug 21, 2022: 3.2.10 bug fix in regular expression converter.
+Aug 29, 2022: 3.2.11 new lua2lisp transpiler example with Bison complete symbols and locations.
+Jan 6, 2023: 3.2.12 regression bug fix in trailing context pattern matching, e.g. xy and x/x patterns collided when they should not; updated yaml parser example.
+Jan 24, 2023: 3.3.0 overall update; corrected a problem with Unicode characters in regex patterns adjacent to curly braces; permit cxx extension in FSM filename output.
+Mar 6, 2023: 3.3.1 for consistency include NAME in default header file name, tables file name, and graphs file name when option --prefix is specified.
+Mar 17, 2023: 3.3.2 fix a performance issue with case-insensitive pattern construction.
+May 28, 2023: 3.3.3 fix yyrestart dropping the first character; faster Matcher::find().
+May 31, 2023: 3.3.4 fix Matcher::find() initialization issue in 3.3.3.
+Jun 12, 2023: 3.3.5 improve source code output of lexer class definitions.
+Jul 11, 2023: 3.3.6 faster Matcher::find(); improved --stdout to include tables.
+Jul 17, 2023: 3.3.7 faster Matcher::find().
+Aug 4, 2023: 3.3.8 minor update to sync up the code base with the ugrep project.
+Aug 16, 2023: 3.3.9 fix avx512bw compilation error; new LineMatcher matching engine.
+Sep 16, 2023: 3.4.0 fix FuzzyMatcher::DEL flag when this is the only flag selected; fix FuzzyMatcher::matches() bug that incorrectly matched an extra character before the end of the input; optimize find(); updated saving the FSM pred[] hashes to a file, which has changed; increase default buffer size REFLEX_BUFSZ to 128K for best throughput performance.
+Sep 25, 2023: 3.4.1 make word boundaries \b, \B, \< and \> applicable anywhere in a pattern.
+Oct 7, 2023: 3.5.0 updated to Unicode 15.1; clarify . (dot) with %unicode enabled, which is a catch-all pattern; update \X to match only valid Unicode characters.
+Nov 5, 2023: 3.5.1 minor improvements.
