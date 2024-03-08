@@ -23,7 +23,6 @@ USE_TOOLS+=	git
 #NO_CONFIGURE=	yes
 
 GCC_REQD+=	13
-.include "../../mk/compiler/gcc.mk"
 
 .include "../../wip/gprbuild/buildlink3.mk"
 

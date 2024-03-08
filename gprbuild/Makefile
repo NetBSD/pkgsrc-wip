@@ -28,7 +28,6 @@ USE_TOOLS+=	gmake patch
 HAS_CONFIGURE=	yes
 
 GCC_REQD+=	13
-.include "../../mk/compiler/gcc.mk"
 
 OBJDIR=		${WRKDIR}/build
 BOOTSTRAPDIR=	${WRKDIR}/bootstrap
