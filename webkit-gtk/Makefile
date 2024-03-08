@@ -151,7 +151,8 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/harfbuzz-icu/buildlink3.mk"
 .include "../../fonts/woff2/buildlink3.mk"
-.include "../../graphics/cairo-gobject/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
