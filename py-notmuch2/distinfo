@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (notmuch-0.38.2.tar.xz) = 8706c2b8b8cce95b32e3d80c921c8a50739aaabd5a082dbed858629497bba845
 SHA512 (notmuch-0.38.2.tar.xz) = fcf5cd927d2acff1a3632c8a4790d4115320cd3ca0d7f61955789a060e363d196c6be64e0e98c883e9918f6b5032a72150977d5f80f9c890f9bd3ab8ed5d8154
 Size (notmuch-0.38.2.tar.xz) = 805268 bytes
-SHA1 (patch-__notmuch__config.py) = 682c1052c255f54385c695ae8eaa666bea02b2b5
+SHA1 (patch-bindings_python-cffi___notmuch__config.py) = 556084c6451cab7b090b21b951238363cebe07fd

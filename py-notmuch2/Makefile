@@ -19,9 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# wheel.mk does not handle this
-#PYSETUPSUBDIR=	bindings/python-cffi
-WRKSRC=		${WRKDIR}/${DISTNAME}/bindings/python-cffi
+PYSETUPSUBDIR=	bindings/python-cffi
 
 .include "../../mail/notmuch/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
