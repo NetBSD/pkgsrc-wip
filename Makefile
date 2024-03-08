@@ -6,6 +6,7 @@ SUBDIR+=	2048-c
 SUBDIR+=	3dsconv
 SUBDIR+=	4ti2
 SUBDIR+=	7z-bin
+SUBDIR+=	8bc
 SUBDIR+=	8cc-git
 SUBDIR+=	ARC
 SUBDIR+=	Aseprite

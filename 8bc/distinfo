@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (8bc/version_2.tar.gz) = c97fe274635600552f7dbed401443c0ca5b191816465f85ba609a77e4cb21afb
+SHA512 (8bc/version_2.tar.gz) = 1bc072c4d16ce11d1801abb8b004fbf6f309fc926192de92dc21f4558eb93aaa01d284471082044863e00915022e3a88f4c334b750e6515940d7c30f6354c0ab
+Size (8bc/version_2.tar.gz) = 53049 bytes
+SHA1 (patch-doc_8bc.ms) = ab0caef025b6731f507bc6b33799699e4d9f9888

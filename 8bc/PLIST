@@ -1,0 +1,18 @@
+@comment $NetBSD$
+bin/8bc
+bin/pal
+libexec/8bc1
+man/man1/8bc.1
+man/man1/pal.1
+share/8bc/brt.pal
+share/doc/8bc/8bc.pdf
+share/doc/8bc/8bc.txt
+share/examples/8bc/dump.b
+share/examples/8bc/echo.b
+share/examples/8bc/fibonacci.b
+share/examples/8bc/gcd.b
+share/examples/8bc/hello.b
+share/examples/8bc/multiply.b
+share/examples/8bc/numbers.b
+share/examples/8bc/sort.b
+share/examples/8bc/words.b

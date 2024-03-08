@@ -1,0 +1,5 @@
+lang/8bc: Add 8bc version 2
+
+8bc is a B compiler for the PDP-8.  It compiles standard B for the
+PDP-8/E or later computers with or without an EAE.  Programs are
+compiled to BIN formatted tapes with an entry point at 0200.

@@ -1,0 +1,12 @@
+Authors:
+  Douglas Jones <jones@cs.uiowa.edu>  -- built basic bits
+  Rich Coon <coon@convexw.convex.com> -- added enough handle OS/278
+  Bernhard Baehr <b.baehr@madsack.de> -- patch to correct checksum
+
+Copyright Notice:
+  I wrote this and gave it away for free; if you want to make changes
+  and give away the result for free, that's fine with me.  If you can
+  fix it enough that you can sell it, ok, but don't put any limits on
+  the purchaser's right to do the same.  All the above aside, if you
+  improve it or fix any bugs, it would be nice if you told me and
+  offered me a copy of the new version.
