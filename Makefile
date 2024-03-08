@@ -5836,6 +5836,7 @@ SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xssp
 SUBDIR+=	xtags
+SUBDIR+=	xtensa-lx106-elf-gcc10
 SUBDIR+=	xtensor
 SUBDIR+=	xtitle
 SUBDIR+=	xtl-quant-stack
