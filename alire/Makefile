@@ -23,17 +23,17 @@ USE_TOOLS+=	git
 #NO_CONFIGURE=	yes
 
 GCC_REQD+=	13
-.include "../../wip/gcc13-gnat/gcc.mk"
+.include "../../mk/compiler/gcc.mk"
 
 .include "../../wip/gprbuild/buildlink3.mk"
 
 CGPRDIR=	${WRKDIR}
 
-SUBST_CLASSES+=		buildlink
-SUBST_STAGE.buildlink=	post-configure
-SUBST_FILES.buildlink=	../buildlink.cgpr
-SUBST_MESSAGE.buildlink=Set work directory path in config project
-SUBST_SED.buildlink=	-e 's,@WRKDIR@,${WRKDIR},g'
+SUBST_CLASSES+=			buildlink
+SUBST_STAGE.buildlink=		post-configure
+SUBST_FILES.buildlink=		../buildlink.cgpr
+SUBST_MESSAGE.buildlink=	Set work directory path in config project
+SUBST_VARS.buildlink=		WRKDIR
 
 MAKE_ENV+=		ALIRE_OS=netbsd
 MAKE_PROGRAM=		gprbuild

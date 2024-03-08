@@ -28,7 +28,7 @@ USE_TOOLS+=	gmake patch
 HAS_CONFIGURE=	yes
 
 GCC_REQD+=	13
-.include "../../wip/gcc13-gnat/gcc.mk"
+.include "../../mk/compiler/gcc.mk"
 
 OBJDIR=		${WRKDIR}/build
 BOOTSTRAPDIR=	${WRKDIR}/bootstrap
@@ -56,11 +56,11 @@ INSTALL_DIRS=		${OBJDIR}
 INSTALL_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
 INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
 
-SUBST_CLASSES+=		buildlink
-SUBST_STAGE.buildlink=	pre-configure
-SUBST_FILES.buildlink=	../buildlink.cgpr
-SUBST_MESSAGE.buildlink=Set work directory path in config project
-SUBST_SED.buildlink=	-e 's,@WRKDIR@,${WRKDIR},g'
+SUBST_CLASSES+=			buildlink
+SUBST_STAGE.buildlink=		pre-configure
+SUBST_FILES.buildlink=		../buildlink.cgpr
+SUBST_MESSAGE.buildlink=	Set work directory path in config project
+SUBST_VARS.buildlink=		WRKDIR
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
