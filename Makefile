@@ -81,6 +81,7 @@ SUBDIR+=	R-triebeard
 SUBDIR+=	R-tuneR
 SUBDIR+=	R-urltools
 SUBDIR+=	R-wellknown
+SUBDIR+=	RE-flex
 SUBDIR+=	Radicale3
 SUBDIR+=	ReZound
 SUBDIR+=	RigelEngine
