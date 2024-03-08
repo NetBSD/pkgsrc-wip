@@ -592,10 +592,10 @@ PKG_FAIL_REASON+=	"Package requires fortran compiler"
 .  endif
 .  if ${_NEED_GCC6_AUX:tl} == "yes" && ${_NEED_GCC6:tl} != "yes"
 _NEED_GCC6_AUX=no
-.endif
+.  endif
 .  if ${_NEED_GCC10_AUX:tl} == "yes" && ${_NEED_GCC10:tl} != "yes"
 _NEED_GCC10_AUX=no
-.endif
+.  endif
 .  if ${_NEED_GCC13_GNAT:tl} == "yes" && ${_NEED_GCC13:tl} != "yes"
 _NEED_GCC13_GNAT=no
 .  endif
