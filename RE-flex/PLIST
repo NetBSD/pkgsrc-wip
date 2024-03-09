@@ -831,8 +831,10 @@ ${PLIST.examples}share/RE-flex/examples/lua.y
 ${PLIST.examples}share/RE-flex/examples/minic.l
 ${PLIST.examples}share/RE-flex/examples/minic.y
 ${PLIST.examples}share/RE-flex/examples/mmap.l
+${PLIST.examples}share/RE-flex/examples/moo.l
 ${PLIST.examples}share/RE-flex/examples/pdefs.l
 ${PLIST.examples}share/RE-flex/examples/ptokens.l
+${PLIST.examples}share/RE-flex/examples/rawk.l
 ${PLIST.examples}share/RE-flex/examples/readline.l
 ${PLIST.examples}share/RE-flex/examples/reflexexample10.l
 ${PLIST.examples}share/RE-flex/examples/reflexexample11.lxx
