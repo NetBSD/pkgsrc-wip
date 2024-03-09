@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		aclocal autoconf autoheader automake pkg-config
+USE_TOOLS+=		aclocal autoconf autoheader automake m4 pkg-config
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
