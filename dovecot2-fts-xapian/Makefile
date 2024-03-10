@@ -9,7 +9,7 @@ GITHUB_TAG=		${PKGVERSION_NOREV}
 
 MAINTAINER=		otis@NetBSD.org
 HOMEPAGE=		https://github.com/grosjo/fts-xapian
-COMMENT=		FTS plugin for Dovecot
+COMMENT=		Full text search plugin for Dovecot
 LICENSE=		gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
