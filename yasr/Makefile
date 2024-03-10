@@ -14,8 +14,19 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c
 USE_TOOLS=	pkg-config msgfmt xgettext
 
-#REMOVE!!!!!!!!!!!!!!!
-CFLAGS+=	"-ggdb"
+# Replace bash with sh in configuration example
+SUBST_CLASSES+=		use-sh
+SUBST_STAGE.use-sh=	pre-configure
+SUBST_MESSAGE.use-sh=	Use sh instead of bash
+SUBST_FILES.use-sh=	yasr/yasr.conf
+SUBST_SED.use-sh=	-e 's,/bin/bash,/bin/sh,'
+
+# Fix eflite path in configuration example
+SUBST_CLASSES+=			fix-eflite
+SUBST_STAGE.fix-eflite=		pre-configure
+SUBST_MESSAGE.fix-eflite=	Fix eflite path
+SUBST_FILES.fix-eflite=		yasr/yasr.conf
+SUBST_SED.fix-eflite=		-e 's,/usr/local/bin/eflite,${PREFIX}/bin/eflite,'
 
 .include "../../devel/meson/build.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
