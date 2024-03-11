@@ -1742,7 +1742,6 @@ SUBDIR+=	jmol
 SUBDIR+=	jmtpfs
 SUBDIR+=	jobd
 SUBDIR+=	john-jumbo
-SUBDIR+=	joker
 SUBDIR+=	joomla
 SUBDIR+=	jpgtn
 SUBDIR+=	jpicedt
