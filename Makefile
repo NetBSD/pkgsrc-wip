@@ -815,7 +815,6 @@ SUBDIR+=	err113
 SUBDIR+=	es40-cvs
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
-SUBDIR+=	espeak-ng
 SUBDIR+=	et
 SUBDIR+=	ethtool
 SUBDIR+=	etoile
