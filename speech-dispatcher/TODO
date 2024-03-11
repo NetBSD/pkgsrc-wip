@@ -1,0 +1,9 @@
+=> Checking for missing run-time search paths in speech-dispatcher-0.11.5
+ERROR: libexec/speech-dispatcher-modules/sd_baratinoo: missing library: libbaratinoo.so
+ERROR: libexec/speech-dispatcher-modules/sd_kali: missing library: libKAnalyse.so
+ERROR: libexec/speech-dispatcher-modules/sd_kali: missing library: libKParle.so
+ERROR: libexec/speech-dispatcher-modules/sd_kali: missing library: libKali.so
+ERROR: libexec/speech-dispatcher-modules/sd_kali: missing library: libKGlobal.so
+ERROR: libexec/speech-dispatcher-modules/sd_kali: missing library: libKTrans.so
+ERROR: libexec/speech-dispatcher-modules/sd_voxin: missing library: libvoxin.so
+*** Error code 1
