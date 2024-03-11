@@ -12,7 +12,14 @@ info/spd-say.info
 info/speech-dispatcher-cs.info
 info/speech-dispatcher.info
 info/ssip.info
+lib/libKAnalyse.so
+lib/libKGlobal.so
+lib/libKParle.so
+lib/libKTrans.so
+lib/libKali.so
+lib/libbaratinoo.so
 lib/libspeechd.la
+lib/libvoxin.so
 lib/pkgconfig/speech-dispatcher.pc
 ${PYSITELIB}/speechd/__init__.py
 ${PYSITELIB}/speechd/__init__.pyc

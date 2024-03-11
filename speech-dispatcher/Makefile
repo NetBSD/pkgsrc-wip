@@ -46,19 +46,12 @@ CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/clients/emacs.conf \
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/speechd.conf \
 		${PKG_SYSCONFDIR}/speechd.conf
 
-PLIST_VARS+=	espeak
-
 MODULES=	baratinoo.conf cicero.conf dtk-generic.conf epos-generic.conf \
 		festival.conf flite.conf kali.conf \
 		llia_phon-generic.conf mary-generic.conf mimic3-generic.conf \
-		swift-generic.conf voxin.conf
-.if ${OPSYS} != "Darwin"
-# espeak officially says it does not support macOS:
-# https://github.com/rhdunn/espeak/issues/78
-MODULES+=	espeak-mbrola-generic.conf espeak-ng-mbrola.conf espeak-ng-mbrola-generic.conf \
+		swift-generic.conf voxin.conf \
+		espeak-mbrola-generic.conf espeak-ng-mbrola.conf espeak-ng-mbrola-generic.conf \
 		espeak-ng.conf espeak.conf
-PLIST.espeak=	yes
-.endif
 
 .for module in ${MODULES}
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/${module} \
@@ -69,12 +62,13 @@ REPLACE_PYTHON+=	src/api/python/speechd_config/spd-conf
 
 # temporary fix for GLib 2.68 breakage
 # # https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1963
-CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.66.0
+#CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
+#BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.66.0
 
-.if ${OPSYS} != "Darwin"
+post-install:
+	${INSTALL_LIB} ${WRKSRC}/src/modules/*so ${DESTDIR}${PREFIX}/lib
+
 .include "../../audio/espeak-ng/buildlink3.mk"
-.endif
 .include "../../audio/flite/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
