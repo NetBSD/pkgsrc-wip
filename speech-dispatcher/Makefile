@@ -73,7 +73,7 @@ CXXFLAGS+=		-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.66.0
 
 .if ${OPSYS} != "Darwin"
-.include "../../audio/espeak/buildlink3.mk"
+.include "../../audio/espeak-ng/buildlink3.mk"
 .endif
 .include "../../audio/flite/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"

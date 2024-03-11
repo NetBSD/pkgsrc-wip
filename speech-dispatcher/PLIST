@@ -39,7 +39,8 @@ lib/speech-dispatcher/spd_libao.la
 libexec/speech-dispatcher-modules/sd_baratinoo
 libexec/speech-dispatcher-modules/sd_cicero
 libexec/speech-dispatcher-modules/sd_dummy
-${PLIST.espeak}libexec/speech-dispatcher-modules/sd_espeak
+libexec/speech-dispatcher-modules/sd_espeak-ng
+libexec/speech-dispatcher-modules/sd_espeak-ng-mbrola
 libexec/speech-dispatcher-modules/sd_festival
 libexec/speech-dispatcher-modules/sd_flite
 libexec/speech-dispatcher-modules/sd_generic
