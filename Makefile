@@ -5855,7 +5855,6 @@ SUBDIR+=	yaggo
 SUBDIR+=	yakuake
 SUBDIR+=	yamlfmt
 SUBDIR+=	yap
-SUBDIR+=	yasr
 SUBDIR+=	yaupspe
 SUBDIR+=	yder
 SUBDIR+=	yersinia
