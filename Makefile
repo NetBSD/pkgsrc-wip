@@ -1629,7 +1629,6 @@ SUBDIR+=	influxdb
 SUBDIR+=	infraarcana
 SUBDIR+=	inicpp
 SUBDIR+=	initware-git
-SUBDIR+=	inkscape
 SUBDIR+=	innernet
 SUBDIR+=	input-mono-ttf
 SUBDIR+=	intel-gpu-tools
