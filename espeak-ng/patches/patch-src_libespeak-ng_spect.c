@@ -9,7 +9,7 @@ Fix endian.h inclusion on NetBSD
  #include <stdlib.h>
  #include <string.h>
 +
-+#ifdef __NetBSD__
++#ifdef HAVE_SYS_ENDIAN_H
 +#include <sys/endian.h>
 +#else
  #include <endian.h>

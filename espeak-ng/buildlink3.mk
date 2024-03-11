@@ -14,7 +14,7 @@ BUILDLINK_INCDIRS.espeak-ng?=		include/espeak-ng
 
 pkgbase := espeak-ng
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.espeak-ng:Msonic)
+.if ${PKG_BUILD_OPTIONS.espeak-ng:Msonic}
 .  include "../../audio/sonic/buildlink3.mk"
 .endif
 
