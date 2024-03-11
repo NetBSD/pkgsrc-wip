@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	1.51
+DISTNAME=	espeak-ng-1.51
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=espeak-ng/}
-GITHUB_PROJECT=	espeak-ng
 GITHUB_TAG=	refs/tags/1.51
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +10,9 @@ HOMEPAGE=	https://github.com/espeak-ng/espeak-ng/
 COMMENT=	Open source speech synthesizer
 LICENSE=	gnu-gpl-v3 AND apache-2.0 AND 2-clause-bsd AND unicode
 
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+DEPENDS+=	mbrola-[0-9]*:../../audio/mbrola
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
@@ -30,8 +30,6 @@ CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
 
 PKGCONFIG_OVERRIDE+=	espeak-ng.pc.in
 
-DEPENDS+=	mbrola-[0-9]*:../../audio/mbrola
-
 SUBST_CLASSES+=		mbrola
 SUBST_STAGE.mbrola=	pre-configure
 SUBST_FILES.mbrola=	src/libespeak-ng/synth_mbrola.c
@@ -42,6 +40,6 @@ SUBST_MESSAGE.mbrola=	Fixing hardcoded mbrola path.
 pre-configure:
 	set -e; cd ${WRKSRC} && touch AUTHORS NEWS && autoreconf -fi
 
-.include "../../audio/pcaudiolib/buildlink3.mk"
 .include "options.mk"
+.include "../../audio/pcaudiolib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
