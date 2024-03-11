@@ -1,8 +1,9 @@
 ===========================================================================
 $NetBSD$
-$NetBSD: MESSAGE,
 
-To use megacmd features need to generate machine-id.
-Run as root: dbus-uuidgen --ensure
+To use megacmd features you need to generate a machine-id.
+For that, run the following command as root:
+
+	dbus-uuidgen --ensure
 
 ===========================================================================

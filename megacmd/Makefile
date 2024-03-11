@@ -24,18 +24,18 @@ REPLACE_SH=		src/client/mega-*
 CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM -std=c++17
 BUILDLINK_TRANSFORM+=	rm:-std=c++11
 
-CONFIGURE_ARGS=	--disable-examples \
-		--disable-java \
-		--disable-php \
-		--disable-python \
-		--disable-chat \
-		--without-freeimage \
-		--without-termcap \
-		--without-ffmpeg \
-		--without-libraw \
-		--without-libzen \
-		--without-libmediainfo \
-		--enable-gcc-hardening
+CONFIGURE_ARGS+=	--disable-examples
+CONFIGURE_ARGS+=	--disable-java
+CONFIGURE_ARGS+=	--disable-php
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-chat
+CONFIGURE_ARGS+=	--without-freeimage
+CONFIGURE_ARGS+=	--without-termcap
+CONFIGURE_ARGS+=	--without-ffmpeg
+CONFIGURE_ARGS+=	--without-libraw
+CONFIGURE_ARGS+=	--without-libzen
+CONFIGURE_ARGS+=	--without-libmediainfo
+CONFIGURE_ARGS+=	--enable-gcc-hardening
 
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
@@ -45,7 +45,6 @@ pre-configure:
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd_completion.sh \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd
-
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
