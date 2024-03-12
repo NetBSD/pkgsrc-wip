@@ -5777,7 +5777,6 @@ SUBDIR+=	xmim
 SUBDIR+=	xml-light
 SUBDIR+=	xml2tsv
 SUBDIR+=	xml2tsv-git
-SUBDIR+=	xmlada
 SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
