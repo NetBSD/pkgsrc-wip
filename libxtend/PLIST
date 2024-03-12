@@ -111,6 +111,7 @@ man/man3/xt_fopen.3
 man/man3/xt_free_strings.3
 man/man3/xt_gcd.3
 man/man3/xt_get_home_dir.3
+man/man3/xt_get_primary_group_name.3
 man/man3/xt_get_user_name.3
 man/man3/xt_inhale_strings.3
 man/man3/xt_int_cmp.3
