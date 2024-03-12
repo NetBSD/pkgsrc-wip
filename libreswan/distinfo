@@ -1,8 +1,5 @@
 $NetBSD$
 
-BLAKE2s (libreswan-4.13.tar.gz) = a35e41668cfdf79b8806dc231bd180e22230de60748b991b6d08d3dd3561bac3
-SHA512 (libreswan-4.13.tar.gz) = 551bd4e86f6642b2f4c2fae340f73b3fd5c36953a60ce89e37938cd4fcf7131470d3819100577f86baf75214d8b632067a066348620a3fe48d8ed3c26d9897a8
-Size (libreswan-4.13.tar.gz) = 3720846 bytes
-SHA1 (patch-include_ip_index.h) = 1da2e85a193b3fafac600ed3a2baf0faf243808d
-SHA1 (patch-include_ip_info.h) = c69dadb1252c3e2159a1a07a04a348972b32cda9
-SHA1 (patch-lib_libswan_ip_info.c) = 50d5b1a01a3f9ce71d4e6182e93262f1115e6549
+BLAKE2s (libreswan-4.14.tar.gz) = 327f2730fc1dd026c88e9507fc2528b1e077af9e8147acc7dadec80c0855e751
+SHA512 (libreswan-4.14.tar.gz) = fb4c4dc426530614d308a7c4f5d21123a166b1ad652f66393b45d4987a3e2be8e8bc135e7eedfe1c014db962b70f08108757f876e27cd9e7739a79764c6d4f2d
+Size (libreswan-4.14.tar.gz) = 3721106 bytes
