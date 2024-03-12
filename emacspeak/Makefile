@@ -17,6 +17,8 @@ USE_TOOLS=	gmake perl bash pax
 REPLACE_PERL=	etc/*
 REPLACE_BASH=	bash-utils/* etc/*
 
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox
+
 # More than shebang, cant' use REPLACE_INTERPRETER
 SUBST_CLASSES+=			fix-tclsh
 SUBST_STAGE.fix-tclsh=		pre-configure
