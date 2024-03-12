@@ -41,7 +41,7 @@ GITHUB_SUBMODULES+=	alire-project	xmlezout	1fcbd0b9303d044d8f09a8ef652afa8c0400e
 
 GCC_REQD+=	13
 
-.include "../../wip/gprbuild/buildlink3.mk"
+.include "../../devel/gprbuild/buildlink3.mk"
 
 CGPRDIR=	${WRKDIR}
 
