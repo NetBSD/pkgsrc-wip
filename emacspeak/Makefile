@@ -26,12 +26,13 @@ SUBST_MESSAGE.fix-tclsh=	Fixing tclsh path
 SUBST_FILES.fix-tclsh=		servers/*
 SUBST_SED.fix-tclsh=		-e 's,/usr/bin/tclsh,${PREFIX}/bin/tclsh,'
 
-# Just for mac...
+# Fix use of /usr/bin/env
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing dynamic python
-SUBST_FILES.fix-python=		servers/mac
-SUBST_SED.fix-python=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+SUBST_FILES.fix-python=		etc/*streamtheworld.py
+SUBST_FILES.fix-python+=	servers/mac
+SUBST_SED.fix-python=		-e 's,/usr/bin/env python.*,${PYTHONBIN},'
 
 # Fix sox path
 SUBST_CLASSES+=			fix-sox-path
@@ -58,6 +59,7 @@ post-build:
 		${CHMOD} 644 "$$i"; \
 	done; \
 	for i in 	servers/native-espeak/Makefile.orig \
+			lisp/emacspeak-bookshare.el.orig \
 			servers/tts-lib.tcl.orig; do \
 		rm "$$i"; \
 	done
@@ -73,6 +75,5 @@ do-install:
 .include "../../audio/espeak-ng/buildlink3.mk"
 .include "../../audio/sox/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
-# Just for mac...
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
