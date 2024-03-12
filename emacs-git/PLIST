@@ -2224,8 +2224,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gssapi.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gssapi.elc
-share/emacs/${PKGVERSION}/lisp/gnus/legacy-gnus-agent.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/legacy-gnus-agent.elc
 share/emacs/${PKGVERSION}/lisp/gnus/mail-source.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/mail-source.elc
 share/emacs/${PKGVERSION}/lisp/gnus/message.el.gz
