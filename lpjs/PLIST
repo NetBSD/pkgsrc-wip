@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/lpjs
 lib/liblpjs.a
+libexec/lpjs/chaperone
 libexec/lpjs/create-script
 libexec/lpjs/jobs
 libexec/lpjs/menu
@@ -10,7 +11,6 @@ libexec/lpjs/submit
 man/man1/lpjs-nodes.1
 sbin/lpjs-admin
 sbin/lpjs-banner
-sbin/lpjs-chaperone
 sbin/lpjs-reset-queue
 sbin/lpjs-restart
 sbin/lpjs_compd
