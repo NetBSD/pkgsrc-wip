@@ -1292,7 +1292,6 @@ SUBDIR+=	gpak
 SUBDIR+=	gpatch
 SUBDIR+=	gpick
 SUBDIR+=	gplbasic
-SUBDIR+=	gprbuild
 SUBDIR+=	gpsdrive
 SUBDIR+=	gptfdisk
 SUBDIR+=	gpx2shp
