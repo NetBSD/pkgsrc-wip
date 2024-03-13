@@ -26,13 +26,8 @@ SUBST_MESSAGE.fix-tclsh=	Fixing tclsh path
 SUBST_FILES.fix-tclsh=		servers/*
 SUBST_SED.fix-tclsh=		-e 's,/usr/bin/tclsh,${PREFIX}/bin/tclsh,'
 
-# Fix use of /usr/bin/env
-SUBST_CLASSES+=			fix-python
-SUBST_STAGE.fix-python=		pre-configure
-SUBST_MESSAGE.fix-python=	Fixing dynamic python
-SUBST_FILES.fix-python=		etc/*streamtheworld.py
-SUBST_FILES.fix-python+=	servers/mac
-SUBST_SED.fix-python=		-e 's,/usr/bin/env python.*,${PYTHONBIN},'
+REPLACE_PYTHON+=		etc/*streamtheworld.py
+REPLACE_PYTHON+=		servers/mac
 
 # Fix sox path
 SUBST_CLASSES+=			fix-sox-path
@@ -44,7 +39,7 @@ SUBST_SED.fix-sox-path=		-E -e 's,/usr/bin/(sox|play),${PREFIX}/bin/\1,'
 
 USE_LANGUAGES+=	c c++
 
-BUILD_TARGET=	all	espeak
+BUILD_TARGET=	all espeak
 
 post-build:
 	cd ${WRKSRC} && \
@@ -76,4 +71,5 @@ do-install:
 .include "../../audio/sox/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
