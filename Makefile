@@ -695,6 +695,7 @@ SUBDIR+=	docker-cli
 SUBDIR+=	docker-compose
 SUBDIR+=	docker-compose-cli
 SUBDIR+=	docker-machine
+SUBDIR+=	doctest
 SUBDIR+=	docviewer
 SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin

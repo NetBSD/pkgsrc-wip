@@ -1,0 +1,14 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	doctest
+
+.if !defined(DOCTEST_BUILDLINK3_MK)
+DOCTEST_BUILDLINK3_MK:=
+
+BUILDLINK_DEPMETHOD.doctest?=	build
+
+BUILDLINK_API_DEPENDS.doctest+=	doctest>=2.4.11
+BUILDLINK_PKGSRCDIR.doctest?=	../../wip/doctest
+.endif	# DOCTEST_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-doctest
