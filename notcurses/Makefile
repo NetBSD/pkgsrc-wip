@@ -13,6 +13,8 @@ LICENSE=		apache-2.0
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
+CMAKE_ARGS+=		-DUSE_PANDOC=OFF
+
 PKGCONFIG_OVERRIDE+=	tools/notcurses++.pc.in
 PKGCONFIG_OVERRIDE+=	tools/notcurses-core.pc.in
 PKGCONFIG_OVERRIDE+=	tools/notcurses-ffi.pc.in
@@ -26,4 +28,5 @@ PKGCONFIG_OVERRIDE+=	tools/notcurses.pc.in
 #.include "../../graphics/qr-code-generator/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
+.include "../../wip/doctest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
