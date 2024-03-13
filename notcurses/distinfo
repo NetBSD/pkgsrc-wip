@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (notcurses-3.0.9.tar.gz) = e506c30870ab6c81aad711a4fa94a92fedec842364d7d730f5a3f8edc296c5c9
+SHA512 (notcurses-3.0.9.tar.gz) = e867d2436f7c953b4b7feb1464b73709cb792256e82956c933c43981dad802c30526d53d28ebafd8e460a3309ae4895cac4e0d1f6f89e347ab9578546798d19b
+Size (notcurses-3.0.9.tar.gz) = 10148050 bytes
