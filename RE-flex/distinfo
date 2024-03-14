@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (RE-flex-4.1.0.tar.gz) = c12d65f0ce807e2feb97602f12eb313f8024f2b3d75f20fb5c21742bb1401e5b
-SHA512 (RE-flex-4.1.0.tar.gz) = 1c9dc176974c93d892082506222bc4ed8c76572cbd95f86d712a76b6ef6d8793bf290da182762581da13103c7e3603c2660fedbfa844e368f11f57b6945c58cf
-Size (RE-flex-4.1.0.tar.gz) = 6599518 bytes
+BLAKE2s (RE-flex-4.1.1.tar.gz) = 8a1ffaa6146926e1ba24587d55a29607023041ae36f851aec4c6151c297450c9
+SHA512 (RE-flex-4.1.1.tar.gz) = 277540226c251af2c190435e71b77a946ec5eaf256c0798982245179152cfe319f9686c563fa1dca6bd8dc5b8bd052bdb1f0ba8f3a2af96f9135e068bdc19626
+Size (RE-flex-4.1.1.tar.gz) = 6599405 bytes
 SHA1 (patch-examples_Make) = 4b8063bfc0119ec69ffd782a4cb21e1bbbdfe55e
 SHA1 (patch-examples_gz.l) = 09e92adbd4f6aa0b8fa358d6c0fc4778a67209fd
 SHA1 (patch-examples_lua.hpp) = adbd495c9818d4feff9a9454ddc1402a2a6aa859

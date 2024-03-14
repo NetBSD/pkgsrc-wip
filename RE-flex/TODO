@@ -1,1 +1,3 @@
 - fix documentation (investigate doxygen issues)
+- fix examples/braille build (unicode issue?)
+- add tests option?
