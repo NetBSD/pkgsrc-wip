@@ -17,7 +17,6 @@ share/ppsspp/assets/Roboto-Condensed.ttf
 share/ppsspp/assets/asciifont_atlas.meta
 share/ppsspp/assets/asciifont_atlas.zim
 share/ppsspp/assets/compat.ini
-share/ppsspp/assets/compatvr.ini
 share/ppsspp/assets/debugger/.nojekyll
 share/ppsspp/assets/debugger/asset-manifest.json
 share/ppsspp/assets/debugger/favicon.ico
@@ -51,7 +50,6 @@ share/ppsspp/assets/font_atlas.meta
 share/ppsspp/assets/font_atlas.zim
 share/ppsspp/assets/gamecontrollerdb.txt
 share/ppsspp/assets/icon_regular_72.png
-share/ppsspp/assets/knownfuncs.ini
 share/ppsspp/assets/lang/ar_AE.ini
 share/ppsspp/assets/lang/az_AZ.ini
 share/ppsspp/assets/lang/bg_BG.ini
@@ -100,10 +98,8 @@ share/ppsspp/assets/logo.png
 share/ppsspp/assets/ppge_atlas.meta
 share/ppsspp/assets/ppge_atlas.zim
 share/ppsspp/assets/rargray.png
-share/ppsspp/assets/sfx_achievement_unlocked.wav
 share/ppsspp/assets/sfx_back.wav
 share/ppsspp/assets/sfx_confirm.wav
-share/ppsspp/assets/sfx_leaderbord_submitted.wav
 share/ppsspp/assets/sfx_select.wav
 share/ppsspp/assets/sfx_toggle_off.wav
 share/ppsspp/assets/sfx_toggle_on.wav
