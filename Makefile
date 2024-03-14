@@ -2427,7 +2427,6 @@ SUBDIR+=	netx
 SUBDIR+=	newsboat
 SUBDIR+=	newsboat213
 SUBDIR+=	newsboat233
-SUBDIR+=	newsraft
 SUBDIR+=	newt
 SUBDIR+=	nextpnr
 SUBDIR+=	nfcapdu
