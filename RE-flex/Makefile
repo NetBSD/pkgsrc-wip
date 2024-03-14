@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	RE-flex-4.1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,10 +16,12 @@ LICENSE=	modified-bsd
 
 INSTALLATION_DIRS+=	bin lib share/RE-flex include/reflex ${PKGMANDIR}/man1
 
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE
+
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake sed
 USE_LIBTOOL=	yes
 
 do-build:
@@ -38,8 +41,8 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 post-install: post-install-doxygen post-install-examples
-.for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
+.  for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/RE-flex
-.endfor
+.  endfor
 
 .include "../../mk/bsd.pkg.mk"
