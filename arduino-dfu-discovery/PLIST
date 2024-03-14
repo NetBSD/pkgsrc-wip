@@ -1,2 +1,2 @@
 @comment $NetBSD$
-arduino15/packages/builtin/tools/dfu-discovery/0.1.2/dfu-discovery
+arduino15/packages/builtin/tools/dfu-discovery/${PKGVERSION}/dfu-discovery
