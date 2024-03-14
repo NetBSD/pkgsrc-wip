@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	arduino-ctags-${GITHUB_TAG:S/-arduino11//}
+DISTNAME=	arduino-ctags-${GITHUB_TAG:S/-/./}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arduino/}
 GITHUB_PROJECT=	ctags
@@ -12,9 +12,12 @@ COMMENT=	Arduino ctags, based on Exuberant ctags
 LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
 			arduino15/packages/builtin/tools/ctags/${GITHUB_TAG}
+
+PLIST_SUBST+=	GITHUB_TAG=${GITHUB_TAG}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ctags \
