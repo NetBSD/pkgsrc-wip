@@ -2101,7 +2101,6 @@ SUBDIR+=	logrotate-git
 SUBDIR+=	logwatch
 SUBDIR+=	loki
 SUBDIR+=	lorder
-SUBDIR+=	love11
 SUBDIR+=	lpc55-host
 SUBDIR+=	lpdsrv
 SUBDIR+=	lpjs
