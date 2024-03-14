@@ -196,6 +196,7 @@ SUBDIR+=	arduino-builder
 SUBDIR+=	arduino-cli
 SUBDIR+=	arduino-ctags
 SUBDIR+=	arduino-dfu-discovery
+SUBDIR+=	arduino-esp8266
 SUBDIR+=	arduino-mdns-discovery
 SUBDIR+=	arduino-serial-discovery
 SUBDIR+=	arduino-serial-monitor
