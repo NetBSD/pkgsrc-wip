@@ -13,3 +13,5 @@ news/newsraft: Update to 0.23
 - bind scroll down to select-next, bind scroll up to select-prev
 - fix ignoring search query when marking items read/unread
 - fix poor termination after invalid terminal size
+
+https://codeberg.org/newsraft/newsraft/releases/tag/newsraft-0.23
