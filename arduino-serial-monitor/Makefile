@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	arduino-serial-monitor-0.13.0
+DISTNAME=	arduino-serial-monitor-0.14.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arduino/}
 GITHUB_PROJECT=	serial-monitor
