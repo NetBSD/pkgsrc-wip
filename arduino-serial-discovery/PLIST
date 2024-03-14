@@ -1,2 +1,2 @@
 @comment $NetBSD$
-arduino15/packages/builtin/tools/serial-discovery/1.4.0/serial-discovery
+arduino15/packages/builtin/tools/serial-discovery/${PKGVERSION}/serial-discovery
