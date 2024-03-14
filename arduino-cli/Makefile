@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=	arduino-ctags>=5.8:../../wip/arduino-ctags
+DEPENDS+=	arduino-ctags>=5.8.arduino11:../../wip/arduino-ctags
 DEPENDS+=	arduino-dfu-discovery>=0.1.2:../../wip/arduino-dfu-discovery
 DEPENDS+=	arduino-mdns-discovery>=1.0.9:../../wip/arduino-mdns-discovery
 DEPENDS+=	arduino-serial-discovery>=1.4.0:../../wip/arduino-serial-discovery
@@ -21,7 +21,8 @@ DEPENDS+=	arduino-serial-monitor>=0.13.0:../../wip/arduino-serial-monitor
 .endif
 
 pre-build:
-	${SED} -i 's|/usr/pkg|${PREFIX}|g' ${WRKSRC}/commands/instances.go
+	${SED} -i 's|/usr/pkg|${LOCALBASE}|g' ${WRKSRC}/arduino/cores/packagemanager/install_uninstall.go
+	${SED} -i 's|/usr/pkg|${LOCALBASE}|g' ${WRKSRC}/commands/instances.go
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
