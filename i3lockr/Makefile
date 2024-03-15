@@ -24,6 +24,9 @@ DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	scrap-${SCRAP_REV}.tar.gz
 SITES.scrap-${SCRAP_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=owenthewizard/}scrap/archive/${SCRAP_REV}.tar.gz
 
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+
 post-extract:
 	mv ${WRKDIR}/scrap-* ${WRKSRC}
 
