@@ -3,7 +3,7 @@
 .include "${.CURDIR}/../../wip/zabbix64-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-${ZABBIX_DB_TYPE}-/}
-COMMENT=	Zabbix PHP 7.4+ frontend
+COMMENT=	Zabbix PHP 8.0+ frontend
 
 PATCHDIR=       ${.CURDIR}/../../wip/zabbix64-server/patches
 DISTINFO_FILE=  ${.CURDIR}/../../wip/zabbix64-server/distinfo
@@ -28,6 +28,7 @@ PKG_USERS_VARS=		${APACHE_USER}
 PHP_VERSIONS_ACCEPTED=	80 81 82
 
 DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=8.0.0:../../math/php-bcmath
+DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=8.0.0:../../www/php-fpm
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.0.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=8.0.0:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=8.0.0:../../databases/php-ldap
