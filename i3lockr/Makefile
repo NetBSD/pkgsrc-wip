@@ -37,7 +37,4 @@ post-extract:
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/xcb-util/buildlink3.mk"
-.include "../../x11/xcb-util-image/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
