@@ -1596,6 +1596,7 @@ SUBDIR+=	hyperrogue
 SUBDIR+=	hztool
 SUBDIR+=	i2pd
 SUBDIR+=	i2pd-git
+SUBDIR+=	i3lockr
 SUBDIR+=	i3-git
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
