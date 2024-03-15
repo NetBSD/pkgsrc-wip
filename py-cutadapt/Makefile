@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cutadapt-4.6
+DISTNAME=	cutadapt-4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
