@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	i3lockr-1.2.0
+DISTNAME=	i3lockr-1.2.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=owenthewizard/}
-GITHUB_TAG=	b4acd8a87957806681dc57876af01c6d435bd8e3
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/owenthewizard/i3lockr/
@@ -30,7 +30,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 post-extract:
 	mv ${WRKDIR}/scrap-* ${WRKSRC}
 
-#DEPENDS+=	i3lock-[0-9]*:../../x11/i3lock
+DEPENDS+=	i3lock>=2.12:../../x11/i3lock
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/rust/cargo.mk"
