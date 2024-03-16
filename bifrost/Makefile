@@ -22,6 +22,5 @@ USE_TOOLS+=	cmake
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DCOMPILATION_ARCH=${CPUTYPE:UOFF}
 
-# CentOS doesn't have zlib in the base, so uncomment if needed.
-# .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
