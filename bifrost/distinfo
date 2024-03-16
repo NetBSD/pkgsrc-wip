@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (bifrost-1.3.0.tar.gz) = f4675731d2f5d4fc45a82992d8c59903c09266a8ae80d590d2590a3b3b3d0d94
-SHA512 (bifrost-1.3.0.tar.gz) = 43410775936988a6c52a5439e484ba066d9b47b018d6be29746801605cda9eec736571733832f3764d91aeb699d10facee1643a5151ab786b44dc30f7f88d434
-Size (bifrost-1.3.0.tar.gz) = 349405 bytes
+BLAKE2s (bifrost-1.3.5.tar.gz) = c89466cbb4519bdc31709316b0cc784e6b88e3216c5b92f1739be1b41484a2fc
+SHA512 (bifrost-1.3.5.tar.gz) = 5e29b771a665dc93c523e51d2958dcf3bf4874fd9ac1c71b8a65131a00831e1a62b013126d92de112f63bc285dc2250d11a0fbcdcb15c3e54b959d322d49e8fb
+Size (bifrost-1.3.5.tar.gz) = 356701 bytes
 SHA1 (patch-CMakeLists.txt) = b67d3b9da75644d6c414988a1e034f4732d4ab5c
 SHA1 (patch-src_libpopcnt.h) = ebccf4b759d7cbfa25e88f4d1f016791eb87afee
-SHA1 (patch-src_strict__fstream.hpp) = 55e6c740fdcfbe749270953b7dd4ca19ac8b00c1
+SHA1 (patch-src_strict__fstream.hpp) = f10f2675e4fa8791b23e051a8b0e43dfc61bf631

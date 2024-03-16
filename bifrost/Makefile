@@ -5,7 +5,7 @@
 #              Wed Oct 11 07:14:48 CDT 2023               #
 ###########################################################
 
-DISTNAME=	bifrost-1.3.0
+DISTNAME=	bifrost-1.3.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pmelsted/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
