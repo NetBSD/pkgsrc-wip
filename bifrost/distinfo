@@ -5,4 +5,4 @@ SHA512 (bifrost-1.3.5.tar.gz) = 5e29b771a665dc93c523e51d2958dcf3bf4874fd9ac1c71b
 Size (bifrost-1.3.5.tar.gz) = 356701 bytes
 SHA1 (patch-CMakeLists.txt) = b67d3b9da75644d6c414988a1e034f4732d4ab5c
 SHA1 (patch-src_libpopcnt.h) = ebccf4b759d7cbfa25e88f4d1f016791eb87afee
-SHA1 (patch-src_strict__fstream.hpp) = f10f2675e4fa8791b23e051a8b0e43dfc61bf631
+SHA1 (patch-src_strict__fstream.hpp) = d5a215d44bc48030291c7acc5f7550df38821011
