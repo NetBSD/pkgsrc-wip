@@ -3,9 +3,12 @@ $NetBSD$
 BLAKE2s (RE-flex-4.1.1.tar.gz) = 8a1ffaa6146926e1ba24587d55a29607023041ae36f851aec4c6151c297450c9
 SHA512 (RE-flex-4.1.1.tar.gz) = 277540226c251af2c190435e71b77a946ec5eaf256c0798982245179152cfe319f9686c563fa1dca6bd8dc5b8bd052bdb1f0ba8f3a2af96f9135e068bdc19626
 Size (RE-flex-4.1.1.tar.gz) = 6599405 bytes
-SHA1 (patch-examples_Make) = 4b8063bfc0119ec69ffd782a4cb21e1bbbdfe55e
+SHA1 (patch-examples_Make) = 2e7a07f62cf80ef502cb76b8cdb980c7a2d0773b
 SHA1 (patch-examples_gz.l) = 09e92adbd4f6aa0b8fa358d6c0fc4778a67209fd
 SHA1 (patch-examples_lua.hpp) = adbd495c9818d4feff9a9454ddc1402a2a6aa859
 SHA1 (patch-examples_minic.hpp) = bf914d2ca8b9e1bf22dfd339c4be2b5dde1f8852
 SHA1 (patch-lib_Makefile.in) = 88346027298afc3a8f92fca9d44e077297bd5b79
+SHA1 (patch-lib_convert.cpp) = cf5dc968fb89d04bdffbcc195b8c23523859c175
+SHA1 (patch-lib_pattern.cpp) = b76731e862a021d334bc6bb9fbbb696a82f5333d
 SHA1 (patch-src_Makefile.in) = 504f8e3d7532b5dd26ae7793662c309597015527
+SHA1 (patch-src_reflex.cpp) = 53ae6072b3bdda8334e6c6f1a621b8a5b7e45a17

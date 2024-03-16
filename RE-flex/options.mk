@@ -52,6 +52,8 @@ SUBST_CLASSES+=		path
 SUBST_FILES.path=	examples/Make
 SUBST_MESSAGE.path=	Updating paths.
 SUBST_STAGE.path=	pre-install
+SUBST_SED.path+=	-e 's|@CC@|${CC}|g'
+SUBST_SED.path+=	-e 's|@CXX@|${CXX}|g'
 SUBST_SED.path+=	-e 's|@PREFIX@|${PREFIX}|g'
 
 .PHONY: post-install-examples
