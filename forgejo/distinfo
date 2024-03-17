@@ -4296,4 +4296,5 @@ Size (xorm.io_xorm_@v_v1.3.7.mod) = 2214 bytes
 BLAKE2s (xorm.io_xorm_@v_v1.3.7.zip) = 9c8a2a5d4a36f543aeb157ccd5125503392b56563af5d6d3eaf0316642bd0596
 SHA512 (xorm.io_xorm_@v_v1.3.7.zip) = fc7f85cc5f898bef98fb5ced1fa918ee4f17bed175835c34a8aa31575e5c301dd35c4869e34725883e46c78e861874aa83e774c8f5c66731a2066d23d14cdc97
 Size (xorm.io_xorm_@v_v1.3.7.zip) = 335775 bytes
+SHA1 (patch-Makefile) = ec7177c612070f1cc0e20706b5d3b7919d125ca7
 SHA1 (patch-vendor_github.com_sassoftware_go-rpmutils_fileutil_fileutil__unix.go) = d82d4ba8d5f9163e3522edb7c83581dec0576313
