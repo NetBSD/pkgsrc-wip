@@ -5453,6 +5453,7 @@ SUBDIR+=	tkpng
 SUBDIR+=	tktile
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
+SUBDIR+=	tllist
 SUBDIR+=	tme
 SUBDIR+=	tmuni-ttf
 SUBDIR+=	tmux-git
