@@ -2,9 +2,9 @@ $NetBSD$
 
 use libtool
 
---- lib/Makefile.in.orig	2023-11-05 19:06:12.000000000 +0000
+--- lib/Makefile.in.orig	2024-03-17 20:54:34.000000000 +0000
 +++ lib/Makefile.in
-@@ -256,13 +256,14 @@ AUTOCONF = @AUTOCONF@
+@@ -259,13 +259,14 @@ AUTOCONF = @AUTOCONF@
  AUTOHEADER = @AUTOHEADER@
  AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
@@ -18,12 +18,12 @@ use libtool
 -CXX = @CXX@
 +CXXORIG = @CXX@
 +CXX = $(LIBTOOL) --mode=compile @CXX@
- CXXCPP = @CXXCPP@
  CXXDEPMODE = @CXXDEPMODE@
  CXXFLAGS = @CXXFLAGS@
-@@ -434,15 +435,15 @@ uninstall-libLIBRARIES:
- clean-libLIBRARIES:
- 	-test -z "$(lib_LIBRARIES)" || rm -f $(lib_LIBRARIES)
+ CYGPATH_W = @CYGPATH_W@
+@@ -513,15 +514,15 @@ $(top_builddir)/unicode/libreflex_a-comp
+ 	$(top_builddir)/unicode/$(am__dirstamp) \
+ 	$(top_builddir)/unicode/$(DEPDIR)/$(am__dirstamp)
  
 -libreflex.a: $(libreflex_a_OBJECTS) $(libreflex_a_DEPENDENCIES) $(EXTRA_libreflex_a_DEPENDENCIES) 
 -	$(AM_V_at)-rm -f libreflex.a

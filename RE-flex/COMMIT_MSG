@@ -1,4 +1,4 @@
-devel/RE-flex: Update to v4.1.1
+devel/RE-flex: Update to v4.1.2
 
 Dec 10, 2021: 3.1.0 improved buffering mechanism with reduced buffer sizes; faster columno() for long lines; fix CP-1251 table typo.
 Feb 20, 2022: 3.2.0 new %option ctorinit; faster compilation of regular expressions to tables and direct code DFAs; refactored SIMD source code to enable AVX2 and AVX512BW optimizations in multi-version matcher code; updated Windows binary file opening.
@@ -32,3 +32,4 @@ Feb 17, 2024: 4.0.0 faster Matcher::find() with a new DFA cut algorithm to optim
 Feb 23, 2024: 4.0.1 new rawk example to demonstrate awk-like fast search in C++; enable <<EOF>> rules for option find to generate a fast search engine.
 Mar 5, 2024: 4.1.0 improved lazy quantifiers for POSIX regex lazy matching in linear time using an advanced DFA transformation algorithm introduced in RE/flex in 2016.
 Mar 11, 2024: 4.1.1 minor update to correct a DFA construction problem for POSIX regex lazy quantifiers matching too much in some cases.
+Mar 17, 2024: 4.1.2 updated configure scripts; cast negative ctype function arguments (problem detected on NetBSD 10).

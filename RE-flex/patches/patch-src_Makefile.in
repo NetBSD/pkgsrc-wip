@@ -27,10 +27,10 @@ use libtool
 -CXX = @CXX@
 +CXXORIG = @CXX@
 +CXX = $(LIBTOOL) --mode=compile @CXX@
- CXXCPP = @CXXCPP@
  CXXDEPMODE = @CXXDEPMODE@
  CXXFLAGS = @CXXFLAGS@
-@@ -369,9 +370,10 @@ uninstall-binPROGRAMS:
+ CYGPATH_W = @CYGPATH_W@
+@@ -381,9 +381,10 @@ uninstall-binPROGRAMS:
  clean-binPROGRAMS:
  	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
  
