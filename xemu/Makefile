@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2021/11/06 16:40:06 rhialto Exp $
 
-DISTNAME=	xemu-0.0.2023.12.20
+DISTNAME=	xemu-0.0.2024.02.28
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lgblgblgb/}
 GITHUB_PROJECT=	xemu
-GITHUB_TAG=	8aa261c07ec7c2f9820e99f9c8fb1930fd42e86a
+GITHUB_TAG=	968f7e05ab5fbfeeb288487210c83216da34cbf5
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/lgblgblgb/xemu
@@ -42,7 +42,7 @@ SUBST_FILES.destdir+=	./build/Makefile.common
 SUBST_MESSAGE.destdir=	Inserting DESTDIR into INSTALL_BINDIR
 
 do-configure:
-	cd ${WRKSRC}/build/configure && bash ./configure --arch=native
+	cd ${WRKSRC}/build/configure && ./configure --arch=native
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/rom/clcd-u104-parasite.rom ${DESTDIR}${PREFIX}/share/xemu-lgb/
