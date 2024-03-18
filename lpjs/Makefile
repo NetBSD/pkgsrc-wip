@@ -28,6 +28,10 @@ EGDIR=		${PREFIX}/share/examples/lpjs
 OWN_DIRS=	${PKG_SYSCONFDIR}/lpjs
 CONF_FILES=	${EGDIR}/config.sample ${PKG_SYSCONFDIR}/lpjs/config
 
+PKG_GROUPS=		lpjs
+PKG_USERS=		lpjs:lpjs
+PKG_GECOS.slurm=	LPJS daemon
+PKG_SHELL.slurm=	${NOLOGIN}
 RCD_SCRIPTS+=		lpjs_dispatchd lpjs_compd
 
 INSTALLATION_DIRS=	share/examples/lpjs

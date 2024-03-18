@@ -17,7 +17,7 @@ sig_stop="-INT"
 lpjs_start()
 {
     echo "Starting $name..."
-    $command --daemonize
+    $command --daemonize --user lpjs --group lpjs
 }
 
 lpjs_stop()
