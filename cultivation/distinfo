@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (Cultivation_9_UnixSource.tar.gz) = 7164d4acbb397889f39be965777a5b5b3dbbcb54922d17ed4b940cb1ac27c1ed
+SHA512 (Cultivation_9_UnixSource.tar.gz) = 23ac06bee73ed3dce3647ac27c0de05c19907f62688731fb8e713b3f940c61c476914157804833c43a5f4a2be5384dc1836fab52cff6f0c96607b2634ff79a85
+Size (Cultivation_9_UnixSource.tar.gz) = 1280596 bytes
+SHA1 (patch-Makefile.GnuLinux) = b26b3822d413fa063e36ef64d1bdd3ca0bd0b09a
+SHA1 (patch-gameSource_sound_MusicPlayer.cpp) = e2063de9ba1e75bdc70e1ccdef9d44d5592f4b43
+SHA1 (patch-gameSource_sound_SoundEffectsBank.cpp) = 70be67b4dbc979e5bcba822326dca2a510e9ba59
+SHA1 (patch-gameSource_sound_SoundPlayer.cpp) = 6f10031a6aea9ac71372aad381fc06d455058e3b
+SHA1 (patch-gameSource_sound_SoundPlayer.h) = 1cd5509df26e69e82a9aa3fd6d528bafbb30f76c

@@ -583,6 +583,7 @@ SUBDIR+=	cubature
 SUBDIR+=	cuelang
 SUBDIR+=	cufflinks
 SUBDIR+=	cufflinks-2.2.1
+SUBDIR+=	cultivation
 SUBDIR+=	cup
 SUBDIR+=	cut-and-run
 SUBDIR+=	cvc3

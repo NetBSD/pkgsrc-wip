@@ -1,0 +1,21 @@
+$NetBSD$
+
+Use portaudio from pkgsrc.
+
+--- Makefile.GnuLinux.orig	2010-05-25 22:29:56.000000000 +0000
++++ Makefile.GnuLinux
+@@ -15,12 +15,12 @@
+ ##
+ 
+ 
+-PLATFORM_COMPILE_FLAGS = -DLINUX
++PLATFORM_COMPILE_FLAGS = -DLINUX `pkg-config --cflags portaudio-2.0`
+ 
+ 
+ # various GL and X windows  librariesneeded for linux
+ # also need portaudio library (which in turn needs pthreads)
+-PLATFORM_LINK_FLAGS = -L/usr/X11R6/lib -lGL -lglut -lGLU -lX11 ${PORT_AUDIO_PATH}/lib/libportaudio.a -lpthread -lpng
++PLATFORM_LINK_FLAGS = `pkg-config --libs libpng` `pkg-config --libs portaudio-2.0` -L/usr/X11R6/lib -lGL -lglut -lGLU -lX11 -lportaudio -lpthread -lpng
+ 
+ 
+ # All platforms but OSX support g++ and need no linker hacks
