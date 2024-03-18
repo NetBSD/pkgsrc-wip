@@ -2,7 +2,7 @@ $NetBSD$
 
 use libtool
 
---- src/Makefile.in.orig	2023-11-05 19:06:12.000000000 +0000
+--- src/Makefile.in.orig	2024-03-17 20:54:34.000000000 +0000
 +++ src/Makefile.in
 @@ -103,7 +103,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
  PROGRAMS = $(bin_PROGRAMS)
@@ -30,7 +30,7 @@ use libtool
  CXXDEPMODE = @CXXDEPMODE@
  CXXFLAGS = @CXXFLAGS@
  CYGPATH_W = @CYGPATH_W@
-@@ -381,9 +381,10 @@ uninstall-binPROGRAMS:
+@@ -381,9 +382,10 @@ uninstall-binPROGRAMS:
  clean-binPROGRAMS:
  	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
  

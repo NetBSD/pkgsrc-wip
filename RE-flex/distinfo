@@ -8,5 +8,5 @@ SHA1 (patch-examples_Make) = 2e7a07f62cf80ef502cb76b8cdb980c7a2d0773b
 SHA1 (patch-include_reflex_convert.h) = ed9fbae2d615907a0b596ba5ee9080eb3129c9dc
 SHA1 (patch-include_reflex_pattern.h) = 3dee984028b48ecc7c34aa1e6b487bb4de89c079
 SHA1 (patch-lib_Makefile.in) = 470fe61aa837f3321e749096a00062b0a19da007
-SHA1 (patch-src_Makefile.in) = 8b0e6c6e1acf266cce75fa264ad91f89862fbb88
+SHA1 (patch-src_Makefile.in) = ac44cbb6e6c2913a982dfd0d2e7fb1e91f3d54f3
 SHA1 (patch-src_reflex.cpp) = 194f655b8f2fc15e8d09c66618c9981c5d70b6ce

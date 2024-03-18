@@ -40,8 +40,8 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 post-install: post-install-doxygen post-install-examples
-.  for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
+.for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/RE-flex
-.  endfor
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
