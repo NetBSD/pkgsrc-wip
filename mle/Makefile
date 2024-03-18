@@ -18,11 +18,6 @@ MAKE_FLAGS+=	prefix=${PREFIX}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
-PKGCONFIG_OVERRIDE+=	vendor/pcre2/libpcre2-16.pc.in
-PKGCONFIG_OVERRIDE+=	vendor/pcre2/libpcre2-32.pc.in
-PKGCONFIG_OVERRIDE+=	vendor/pcre2/libpcre2-8.pc.in
-PKGCONFIG_OVERRIDE+=	vendor/pcre2/libpcre2-posix.pc.in
-
 SUBST_CLASSES+=		lua
 SUBST_MESSAGE.lua=	rewrite lua directory directives
 SUBST_FILES.lua=	mle.h
