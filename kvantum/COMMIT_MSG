@@ -1,0 +1,16 @@
+graphics/kvantum: update to 1.1.0
+
+V1.1.0
+---------
+ * Made the default compilation be against Qt6. (For Qt5, set "ENABLE_QT5" to "ON", as in `cmake .. -DENABLE_QT5=ON`.)
+ 
+ NOTE: On pkgsrc Qt5 is on by default until LXQt is Qt6 ready and we have a KDE frameworks 6 package.
+ 
+ * Removed the support for qmake (because KF6 doesn't support it).
+ * Made it possible to reduce only the opacity of inactive windows with negative values of the relevant setting (in Kvantum Manager).
+ * Added a workaround for a bug in Qt 6.6, because of which, translucent menus on a non-primary screen might be drawn with their minimum sizes and without contents after being moved.
+ * Ensure an opaque base color for combo popups on toolbars.
+ * Use the standard palette when restoring the text colors on an unstyled toolbar.
+ * Added a workaround for tiny overlaps between tree branch lines with translucent light/dark colors.
+ * Added a toolbar, containing a date-time editor with popup and a progress-bar, below the top toolbars of kvantumpreview.
+ * Added a workaround for a crashing bug in KDE's plasma-settings.
