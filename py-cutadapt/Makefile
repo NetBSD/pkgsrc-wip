@@ -10,7 +10,7 @@ HOMEPAGE=	https://cutadapt.readthedocs.io/en/stable/
 COMMENT=	Find and remove adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # needed for python 3.11 as of cutadapt 3.5 release
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.6.0:../../devel/py-xopen
