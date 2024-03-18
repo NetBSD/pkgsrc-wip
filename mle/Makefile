@@ -3,8 +3,8 @@
 DISTNAME=	mle-1.7.2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adsr/}
-GITHUB_RELEASE=	v1.7.2
 GITHUB_PROJECT=	mle
+GITHUB_RELEASE=	v1.7.2
 
 MAINTAINER=	ktnb@posteo.net
 HOMEPAGE=	https://github.com/adsr/mle/
@@ -29,7 +29,7 @@ SUBST_STAGE.lua=	pre-build
 SUBST_CLASSES+=		makefile
 SUBST_MESSAGE.makefile=	remove -v flag
 SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile=		-e 's,install -v,install,g'
+SUBST_SED.makefile=	-e 's,install -v,install,g'
 SUBST_STAGE.makefile=	pre-build
 
 pre-install:
