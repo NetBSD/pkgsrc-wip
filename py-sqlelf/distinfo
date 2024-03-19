@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sqlelf-0.4.tar.gz) = c43f530626a5fde3214a799efc5d8434d9b5439d274735a0630682fb273af7dc
+SHA512 (sqlelf-0.4.tar.gz) = 038ba58b68fbda2fe9fc36c76aafd10c9d45c6ac3f2d3113ad965f7d60e681af1e3b560f6d7c79f37f5223a5bd045b0b24c70b7967e429612ed39a039ea2f205
+Size (sqlelf-0.4.tar.gz) = 180009 bytes
