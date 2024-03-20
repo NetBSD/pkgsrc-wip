@@ -1,9 +1,9 @@
 $NetBSD$
 
-Remove tests from directory list.
-Add rule to build tests.
+Remove "test" from directory list.
+Add rule to build tests on request.
 
---- Makefile.orig	2024-03-01 13:00:43.000000000 +0000
+--- Makefile.orig	2024-03-18 22:51:05.000000000 +0000
 +++ Makefile
 @@ -16,7 +16,7 @@
  
@@ -18,8 +18,8 @@ Add rule to build tests.
  		(cd $$dir; $(MAKE) $(MFLAGS)) || exit 1;\
  	done
  
-+# [pkgsrc] Build only for "make test"
-+test: makeinclude
++# [pkgsrc] Build tests only on request
++check: makeinclude
 +	echo "=== making test ===";\
 +	(cd test; $(MAKE) $(MFLAGS)) || exit 1;\
 +

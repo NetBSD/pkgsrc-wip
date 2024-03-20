@@ -11,11 +11,9 @@ HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gmake nroff pkg-config
-# Doesn't run tests, only build them (because they are GUI programs)
-TEST_TARGET=		test
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf gmake nroff pkg-config
 
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
@@ -31,6 +29,8 @@ CONFIGURE_ARGS+=	--enable-xrender
 CONFIGURE_ARGS+=	--disable-localjpeg
 CONFIGURE_ARGS+=	--disable-localpng
 CONFIGURE_ARGS+=	--disable-localzlib
+
+TEST_TARGET=	check
 
 .include "options.mk"
 

@@ -5,3 +5,4 @@
     "fltk.list" has entires with 444 permissions, looks like a bug.
 [ ] Check for library suffixes on AIX, HP-UX and macOS
 [ ] Some configurations create the compiler warnings below.
+[X] Build test programs only on request (make test)

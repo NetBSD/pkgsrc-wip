@@ -2,16 +2,16 @@ $NetBSD$
 
 Add note that GUI test programs are not executed automatically.
 
---- test/Makefile.orig	2024-03-01 13:00:43.000000000 +0000
+--- test/Makefile.orig	2024-03-18 22:51:05.000000000 +0000
 +++ test/Makefile
-@@ -242,6 +242,10 @@ GLALL = \
- 	glut_test$(EXEEXT) \
- 	shape$(EXEEXT) \
- 	unittests$(EXEEXT)
-+	echo "-------------------------------------------"
-+	echo 'Test programs were built in $${WRKSRC}/test.'
-+	echo "You have to start them manually."
-+	echo "-------------------------------------------"
- 
- all:	$(ALL) $(GLDEMOS)
+@@ -247,6 +247,10 @@ all:	$(ALL) $(GLDEMOS)
  	for dir in $(FLUIDDIR); do\
+ 	  $(MAKE)  $(MFLAGS) $(ALLFLUID);\
+ 	done
++	echo "------------------------------------------------"
++	echo 'GUI test programs were built in $${WRKSRC}/test.'
++	echo "You have to start them manually."
++	echo "------------------------------------------------"
+ 
+ gldemos:	$(GLALL)
+ 

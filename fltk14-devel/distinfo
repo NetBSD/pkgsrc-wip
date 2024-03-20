@@ -3,6 +3,6 @@ $NetBSD$
 BLAKE2s (fltk-1.4.x-a77f68693c2d2b14fe0d251844ae8f811ec790a3.zip) = 40c2f747b8f7243e079759783163d3dc73f54aa676d3fbda00dfd6c6a2f1e8a5
 SHA512 (fltk-1.4.x-a77f68693c2d2b14fe0d251844ae8f811ec790a3.zip) = 8664d1cc98932e335dd87af5c6be920d0e6b2a82bfd91c467a9dc0a23482932f7675012ffb380bb456f002bbde53761224fc0b4e7ef4f81e9d9fb37baba2067d
 Size (fltk-1.4.x-a77f68693c2d2b14fe0d251844ae8f811ec790a3.zip) = 9337479 bytes
-SHA1 (patch-Makefile) = 6ee1ce87974ccc307c6213ffc7cb5d989cc463d4
-SHA1 (patch-documentation_Makefile) = 2bf2bdcb808ed75bee22d9587a5fc5edb5f22e35
-SHA1 (patch-test_Makefile) = fe53f4571ac0388866e719dd15628a2648319aa9
+SHA1 (patch-Makefile) = d339f6cfe27b0033769b6d24a10307bd1cb5a807
+SHA1 (patch-documentation_Makefile) = 4af65225feb343f8d4bf1af11cfb4929b7fe81c6
+SHA1 (patch-test_Makefile) = 80f1c06321bd586a087ef510cbe2690279eb63f8
