@@ -1,8 +1,10 @@
 [X] Add zlib dependency
 [X] Support for HP-UX
 [ ] Support for AIX
-[ ] Static libraries should not be installed with execute permissions.
+[ ] Static libraries should not be installed with execute permissions
     "fltk.list" has entires with 444 permissions, looks like a bug.
 [ ] Check for library suffixes on AIX, HP-UX and macOS
-[ ] Some configurations create the compiler warnings below.
+[ ] Some configurations create the compiler warnings below
 [X] Build test programs only on request (make test)
+    This was rejected upstream (Issue #940).
+    Disable build of test programs with new option "--disable-test".

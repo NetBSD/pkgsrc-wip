@@ -3,7 +3,7 @@
 DISTNAME=	fltk-1.4.x
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
-GITHUB_TAG=	a77f68693c2d2b14fe0d251844ae8f811ec790a3
+GITHUB_TAG=	2001132f4a1ab2ad02f31c4a7c4cf9a5d803ed54
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
@@ -30,7 +30,8 @@ CONFIGURE_ARGS+=	--disable-localjpeg
 CONFIGURE_ARGS+=	--disable-localpng
 CONFIGURE_ARGS+=	--disable-localzlib
 
-TEST_TARGET=	check
+# Disable build of test programs
+CONFIGURE_ARGS+=	--disable-test
 
 .include "options.mk"
 
