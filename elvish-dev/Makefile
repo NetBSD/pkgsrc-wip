@@ -3,12 +3,14 @@
 DISTNAME=	elvish-0.21.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elves/}
-GITHUB_TAG=	aede17602ed85e6295db0ac9d8232fd0c06fb9a5
+GITHUB_TAG=	490c8da992be49d25bdb54f68a34717988b21c0f
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://elv.sh/
 COMMENT=	Expressive programming language and a versatile interactive shell
 LICENSE=	2-clause-bsd
+
+GO_VERSION_REQD+=	122
 
 INSTALLATION_DIRS=	bin
 PKG_SHELL=		bin/elvish
