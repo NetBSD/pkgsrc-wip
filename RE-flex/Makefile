@@ -15,8 +15,6 @@ LICENSE=	modified-bsd
 
 INSTALLATION_DIRS+=	bin lib share/RE-flex include/reflex ${PKGMANDIR}/man1
 
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE
-
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 

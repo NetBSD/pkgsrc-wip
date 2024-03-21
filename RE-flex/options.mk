@@ -36,15 +36,12 @@ post-install-doxygen:
 	# do nothing
 .endif
 
-# copy example sources to .../share directory
+# install example sources
 PLIST_VARS+=		examples
 .if !empty(PKG_OPTIONS:Mexamples)
 PLIST.examples=		yes
 EXAMPLEDIR=		share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	${EXAMPLEDIR}
-
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.examples
-MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 
 DEPENDS+=		bison-[0-9]*:../../devel/bison
 
