@@ -4470,6 +4470,7 @@ SUBDIR+=	py-sima
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
 SUBDIR+=	py-singer-python
+SUBDIR+=	py-singer-tap-github
 SUBDIR+=	py-singletonify
 SUBDIR+=	py-sip4
 SUBDIR+=	py-sipvicious
