@@ -141,7 +141,6 @@ ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer.html
 ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher-members.html
 ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher.html
 ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher__coll__graph.dot
-${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher__coll__graph.map
 ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher__coll__graph.png
 ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher__inherit__graph.map
 ${PLIST.doxygen}share/doc/RE-flex/html/classreflex_1_1_flex_lexer_1_1_matcher__inherit__graph.md5
