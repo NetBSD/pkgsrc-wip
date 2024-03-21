@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=		sra-tools-3.0.6
+DISTNAME=		sra-tools-3.0.10.133
 CATEGORIES=		biology
-MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=		984f1493e8612cd59a269569bf8c06e25e4e604c
-GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 38972fc ncbi-vdb
+MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
+GITHUB_TAG=		2a26be56758d6d6be3362f8c229f09ced4530873
+GITHUB_SUBMODULES+=	ncbi ncbi-vdb ff143ec1 ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
@@ -27,7 +27,7 @@ SUBST_FILES.etcdir+=	ncbi-vdb/libs/kfg/config.c
 
 SUBST_CLASSES+=		binpath
 SUBST_STAGE.binpath=	pre-configure
-SUBST_SED.binpath+=	-e 's|/usr/local/bin|${PREFIX}/bin|g'
+SUBST_SED.binpath+=	-e 's|/usr/local|${PREFIX}|g'
 SUBST_FILES.binpath+=	tools/external/driver-tool/file-path.posix.cpp
 
 SUBST_CLASSES+=		submoddir
@@ -70,7 +70,7 @@ pre-configure:
 	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
 post-install:
-	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
+	${STRIP} ${DESTDIR}${PREFIX}/bin/*.3.1.0
 	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
 	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
 	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
