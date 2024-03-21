@@ -1,6 +1,5 @@
 $NetBSD$
 
-SHA1 (go-dither-2.2.0.tar.gz) = 4b24df0e6a56a3f82445d7f81fbebbfc82a45d7a
-RMD160 (go-dither-2.2.0.tar.gz) = 3405db3fc73be59daf563f594ec1b19b7220dca5
-SHA512 (go-dither-2.2.0.tar.gz) = 679129dd2aaca0fe63706990f6ce5b47962db17aa40975e27aa8284155e1b8f5ae3664fd2b315bc662dd839d6f9c30d2eedf458aca51aa2eef95c5b54f6701ad
-Size (go-dither-2.2.0.tar.gz) = 2154942 bytes
+BLAKE2s (go-dither-2.4.0.tar.gz) = d60f02c14badcda04a5308ab3bf3c53ed7655ce3df3636c746b72826a545151b
+SHA512 (go-dither-2.4.0.tar.gz) = 90066892d9d70155d8d41e7c0307f350666d6c4f3dfb77f204ddceda1d3f2b8a1a4c0395a72575e761d45eb4f686986997780090435ca2500a51bf989b945af6
+Size (go-dither-2.4.0.tar.gz) = 2161872 bytes
