@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-INSTALLATION_DIRS+=	bin lib share/RE-flex include/reflex ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin lib share/doc/RE-flex include/reflex ${PKGMANDIR}/man1
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -39,7 +39,7 @@ do-install:
 
 post-install: post-install-doxygen post-install-examples
 .for f in README.md LICENSE.txt CONTRIBUTING.md CODE_OF_CONDUCT.md lex.vim
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/RE-flex
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/RE-flex
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

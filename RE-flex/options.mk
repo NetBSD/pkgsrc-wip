@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.RE-flex
 PKG_SUPPORTED_OPTIONS=	cpu-optimization doxygen examples
-PKG_SUGGESTED_OPTIONS=	cpu-optimization examples
+PKG_SUGGESTED_OPTIONS=	doxygen examples
 
 .include "../../mk/bsd.options.mk"
 
