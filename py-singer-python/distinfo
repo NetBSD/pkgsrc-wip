@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (singer-python-6.0.1.tar.gz) = 75a10a1f19b22b093be69363caf8877fff01b305c5cb3153c15301aa68b60f72
+SHA512 (singer-python-6.0.1.tar.gz) = c4c58fcfd5de3772d0e896ba2617ffad19f2d321dcaf72ed9e3d3cb8cf90e0a06a132fa79514db911f76f24711fc800e4044097625ad5508ac1544bd982838aa
+Size (singer-python-6.0.1.tar.gz) = 31277 bytes
+SHA1 (patch-setup.py) = b8b884e7812a242dc66144499879db98f8434cf7
