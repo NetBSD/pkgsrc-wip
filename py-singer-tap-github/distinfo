@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (tap-github-3.0.1.tar.gz) = 2d6a2d3280aa98f6784f426a02977402fd5232b7b08b38c07835f5c653c801b0
+SHA512 (tap-github-3.0.1.tar.gz) = 6c0c03ff38f84a81e522a3c57d9525593df2e8e6effd6729cf0af9c60f18a5b3562203fd9cd3fdfb8834c17617bb369689fb5047a2f382cab6036c42b1ba3d28
+Size (tap-github-3.0.1.tar.gz) = 49736 bytes
+SHA1 (patch-setup.py) = 3f74182644c066a2b679db55afbd409a3accb968

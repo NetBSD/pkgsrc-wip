@@ -1,0 +1,1 @@
+bin/singer-tap-github @PREFIX@/bin/singer-tap-github@PYVERSSUFFIX@
