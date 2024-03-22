@@ -1979,6 +1979,7 @@ SUBDIR+=	libopenshot-audio
 SUBDIR+=	libopensync-dev
 SUBDIR+=	libopensync-plugin-moto
 SUBDIR+=	libopensync-plugin-palm
+SUBDIR+=	liboqs
 SUBDIR+=	libosinfo
 SUBDIR+=	libosmocore
 SUBDIR+=	libostree

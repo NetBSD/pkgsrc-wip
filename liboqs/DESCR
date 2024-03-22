@@ -1,0 +1,5 @@
+liboqs is part of the Open Quantum Safe (OQS) project led by Douglas
+Stebila and Michele Mosca, which aims to develop and integrate into
+applications quantum-safe cryptography to facilitate deployment and
+testing in real world contexts. In particular, OQS provides prototype
+integrations of liboqs into TLS and SSH, through OpenSSL and OpenSSH.
