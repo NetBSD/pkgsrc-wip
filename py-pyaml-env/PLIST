@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pyaml_env/__init__.py
+${PYSITELIB}/pyaml_env/__init__.pyc
+${PYSITELIB}/pyaml_env/__init__.pyo
+${PYSITELIB}/pyaml_env/base_config.py
+${PYSITELIB}/pyaml_env/base_config.pyc
+${PYSITELIB}/pyaml_env/base_config.pyo
+${PYSITELIB}/pyaml_env/parse_config.py
+${PYSITELIB}/pyaml_env/parse_config.pyc
+${PYSITELIB}/pyaml_env/parse_config.pyo

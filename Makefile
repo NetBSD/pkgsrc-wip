@@ -4237,6 +4237,7 @@ SUBDIR+=	py-py4j
 SUBDIR+=	py-pyaiml
 SUBDIR+=	py-pyamf
 SUBDIR+=	py-pyamg
+SUBDIR+=	py-pyaml-env
 SUBDIR+=	py-pybigwig
 SUBDIR+=	py-pybitbucket
 SUBDIR+=	py-pycifrw

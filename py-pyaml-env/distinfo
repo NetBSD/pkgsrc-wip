@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pyaml_env-1.2.1.tar.gz) = 020fa0749963c6d7a3b3868f1af7a00da767ac4e8165a75e456b44f1f23df579
+SHA512 (pyaml_env-1.2.1.tar.gz) = 1ef873fa66660e4949dc1064260405244c8b3a2ee4391831a0a52be30e503e99d0b80b087c78db78683e9fe2fc1fd73f2e30c1eacc4c94a1394000d8526c9d68
+Size (pyaml_env-1.2.1.tar.gz) = 12759 bytes
