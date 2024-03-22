@@ -71,10 +71,6 @@ CONFIGURE_ARGS+=	--disable-wayland
 # Attention: Forcing X11 backend requires X Window system to be installed.
 .if !empty(PKG_OPTIONS:Mx11)
 .  include "../../x11/libX11/buildlink3.mk"
-.  include "../../x11/libXcursor/buildlink3.mk"
-.  include "../../x11/libXext/buildlink3.mk"
-.  include "../../x11/libXfixes/buildlink3.mk"
-.  include "../../x11/libXrender/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-x11
 .else
 CONFIGURE_ARGS+=	--disable-x11

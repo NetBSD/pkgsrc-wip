@@ -42,10 +42,6 @@ pkgbase := fltk
 # For "x11" option
 .if ${PKG_BUILD_OPTIONS.fltk:Mx11}
 .  include "../../x11/libX11/buildlink3.mk"
-.  include "../../x11/libXcursor/buildlink3.mk"
-.  include "../../x11/libXext/buildlink3.mk"
-.  include "../../x11/libXfixes/buildlink3.mk"
-.  include "../../x11/libXrender/buildlink3.mk"
 .endif
 
 # For "xcursor" option
