@@ -3356,6 +3356,7 @@ SUBDIR+=	py-chaospy
 SUBDIR+=	py-chealpy
 SUBDIR+=	py-chebfun
 SUBDIR+=	py-chebpy
+SUBDIR+=	py-check-jsonschema
 SUBDIR+=	py-check-manifest
 SUBDIR+=	py-checkmate
 SUBDIR+=	py-checkov
