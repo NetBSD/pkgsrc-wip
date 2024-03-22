@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.2 2022/07/01 19:35:45 adam Exp $
+# $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ugrep
 PKG_SUPPORTED_OPTIONS=	cpu-optimization boost-libs
-PKG_SUGGESTED_OPTIONS=	cpu-optimization boost-libs
+PKG_SUGGESTED_OPTIONS=	boost-libs
 
 .include "../../mk/bsd.options.mk"
 
-# XXX don't build with cpu optimizations detected during configure
+# don't build with cpu optimizations detected during configure
 .if empty(PKG_OPTIONS:Mcpu-optimization)
 CONFIGURE_ARGS+=	--disable-avx
 CONFIGURE_ARGS+=	--disable-sse2
