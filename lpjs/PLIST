@@ -1,19 +1,19 @@
 @comment $NetBSD$
 bin/lpjs
 lib/liblpjs.a
+libexec/lpjs/admin
+libexec/lpjs/banner
 libexec/lpjs/chaperone
 libexec/lpjs/create-script
 libexec/lpjs/jobs
+libexec/lpjs/log
 libexec/lpjs/menu
 libexec/lpjs/nodes
+libexec/lpjs/reset-queue
+libexec/lpjs/restart
 libexec/lpjs/sim
 libexec/lpjs/submit
 man/man1/lpjs-nodes.1
-sbin/lpjs-admin
-sbin/lpjs-banner
-sbin/lpjs-log
-sbin/lpjs-reset-queue
-sbin/lpjs-restart
 sbin/lpjs_compd
 sbin/lpjs_dispatchd
 share/examples/lpjs/config.sample
