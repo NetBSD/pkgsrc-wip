@@ -1,0 +1,2 @@
+Python bindings to the Rust regress crate, exposing ECMA regular
+expressions.
