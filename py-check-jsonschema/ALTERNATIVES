@@ -1,0 +1,1 @@
+bin/check-jsonschema @PREFIX@/bin/check-jsonschema@PYVERSSUFFIX@

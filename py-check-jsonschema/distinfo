@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.12 2021/10/26 11:06:42 nia Exp $
+
+BLAKE2s (check-jsonschema-0.28.0.tar.gz) = 4c5d6f41f257aa0fcc80dbe60bd0ce22fa397a2d858ccbc84c3b66a294966070
+SHA512 (check-jsonschema-0.28.0.tar.gz) = 93ad41ba9381577064025c23085bc588a713777e427e52b92729122d646794a16a9b49dc00d21d6ec2c19ab1409b917b85faabb5a880653622b12eabd27a6276
+Size (check-jsonschema-0.28.0.tar.gz) = 245274 bytes
+SHA1 (patch-setup.cfg) = cb61d6471fa65b8ed70874ab5927296a70d7f060
