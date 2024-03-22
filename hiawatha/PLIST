@@ -110,15 +110,9 @@ lib/hiawatha/letsencrypt/letsencrypt.php
 lib/hiawatha/letsencrypt/logfile.php
 lib/hiawatha/letsencrypt/openssl.conf
 lib/hiawatha/letsencrypt/rsa.php
-lib/hiawatha/libmbedcrypto.so
-lib/hiawatha/libmbedcrypto.so.15
-lib/hiawatha/libmbedcrypto.so.3.5.0
-lib/hiawatha/libmbedtls.so
-lib/hiawatha/libmbedtls.so.20
-lib/hiawatha/libmbedtls.so.3.5.0
-lib/hiawatha/libmbedx509.so
-lib/hiawatha/libmbedx509.so.3.5.0
-lib/hiawatha/libmbedx509.so.6
+lib/hiawatha/libmbedcrypto.a
+lib/hiawatha/libmbedtls.a
+lib/hiawatha/libmbedx509.a
 man/man1/cgi-wrapper.1
 man/man1/hiawatha.1
 man/man1/lefh.1
@@ -128,7 +122,7 @@ sbin/cgi-wrapper
 sbin/hiawatha
 sbin/lefh
 sbin/wigwam
-var/www/hiawatha/index.html
+var/hiawatha/index.html
 @pkgdir var/run
 @pkgdir var/log/hiawatha
-@pkgdir var/lib/hiawatha
+@pkgdir var/db/hiawatha
