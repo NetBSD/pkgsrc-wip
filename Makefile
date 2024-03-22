@@ -5549,6 +5549,7 @@ SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
 SUBDIR+=	uget
+SUBDIR+=	ugrep
 SUBDIR+=	uhd-git
 SUBDIR+=	ulfius
 SUBDIR+=	umix
