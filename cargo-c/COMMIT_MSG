@@ -1,5 +1,0 @@
-devel/cargo-c: update to 0.9.31
-
- - Match the beaviour of meson regarding relative paths in the install directories
- - cargo 0.78
-
