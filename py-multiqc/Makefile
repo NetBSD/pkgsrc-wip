@@ -5,8 +5,8 @@
 #              Wed Jul 19 15:14:18 CDT 2023               #
 ###########################################################
 
-DISTNAME=	multiqc-1.14
-PKGNAME=	${PYPKGPREFIX}-multiqc-1.14
+DISTNAME=	multiqc-1.21
+PKGNAME=	${PYPKGPREFIX}-multiqc-1.21
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multiqc/}
 
@@ -15,14 +15,20 @@ HOMEPAGE=	https://pypi.python.org/pypi/multiqc
 COMMENT=	Aggregate bioinformatics analysis reports across samples and tools
 LICENSE=	gnu-gpl-v3
 
+# Check requirements
+DEPENDS+=	${PYPKGPREFIX}-kiwisolver-[0-9]*:../../math/py-kiwisolver
+DEPENDS+=	${PYPKGPREFIX}-colormath-[0-9]*:../../math/py-colormath
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=10:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-plotly>=5.1.8:../../wip/py-plotly
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=2.1.1:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-networkx>=2.5.1:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-networkx>0:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-coloredlogs-[0-9]*:../../devel/py-coloredlogs
 DEPENDS+=	${PYPKGPREFIX}-future>0.14.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-yaml>=4:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-pyaml_env[0-9]*:../../wip/py-pyaml-env
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rich>=10:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../devel/py-rich-click
