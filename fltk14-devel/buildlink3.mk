@@ -14,6 +14,11 @@ pkgbase := fltk
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/pkg-build-options.mk"
 
+# For "cairo" option
+.if ${PKG_BUILD_OPTIONS.fltk:Mcairo}
+.  include "../../graphics/cairo/buildlink3.mk"
+.endif
+
 # For "opengl" option
 .if ${PKG_BUILD_OPTIONS.fltk:Mopengl}
 .  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
@@ -29,6 +34,11 @@ pkgbase := fltk
 .  endif
 .endif
 
+# For "wayland" option
+.if ${PKG_BUILD_OPTIONS.fltk:Mwayland}
+.  include "../../devel/wayland/buildlink3.mk"
+.endif
+
 # For "x11" option
 .if ${PKG_BUILD_OPTIONS.fltk:Mx11}
 .  include "../../x11/libX11/buildlink3.mk"
@@ -38,9 +48,18 @@ pkgbase := fltk
 .  include "../../x11/libXrender/buildlink3.mk"
 .endif
 
-# For "xdbe" option
-.if ${PKG_BUILD_OPTIONS.fltk:Mxdbe}
-# No client library required
+# For "xcursor" option
+.if ${PKG_BUILD_OPTIONS.fltk:Mxcursor}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../x11/libXcursor/buildlink3.mk"
+.  endif
+.endif
+
+# For "xfixes" option
+.if ${PKG_BUILD_OPTIONS.fltk:Mxfixes}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../x11/libXfixes/buildlink3.mk"
+.  endif
 .endif
 
 # For "xft2" option
@@ -54,6 +73,13 @@ pkgbase := fltk
 .if ${PKG_BUILD_OPTIONS.fltk:Mxinerama}
 .  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
 .    include "../../x11/libXinerama/buildlink3.mk"
+.  endif
+.endif
+
+# For "xrender" option
+.if ${PKG_BUILD_OPTIONS.fltk:Mxrender}
+.  if ${PKG_BUILD_OPTIONS.fltk:Mx11}
+.    include "../../x11/libXrender/buildlink3.mk"
 .  endif
 .endif
 

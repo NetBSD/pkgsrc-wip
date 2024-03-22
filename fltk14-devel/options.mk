@@ -3,18 +3,29 @@
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk14
-PKG_SUPPORTED_OPTIONS=	opengl pango x11 xdbe xft2 xinerama
+PKG_SUPPORTED_OPTIONS=	cairo opengl pango x11 xcursor xfixes xft2 xinerama xrender
+PKG_SUPPORTED_OPTIONS+=	wayland  # untested
 # FLTK has native backends for macOS and Windows (Cygwin)
 # Enabling the "x11" option forces X11 backend on such systems.
 # Most users want the native backends.
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Cygwin"
-PKG_SUGGESTED_OPTIONS=	opengl pango xdbe xft2 xinerama
+PKG_SUGGESTED_OPTIONS=	opengl
 .else
-PKG_SUGGESTED_OPTIONS=	opengl pango x11 xdbe xft2 xinerama
+PKG_SUGGESTED_OPTIONS=	cairo opengl pango x11 xcursor xfixes xft2 xinerama xrender
 .endif
-PLIST_VARS+=		opengl
+PLIST_VARS+=		cairo opengl
 
 .include "../../mk/bsd.options.mk"
+
+# "cairo" option: Use cairo 2D graphics library
+# Required for Fl_Cairo_Window.
+.if !empty(PKG_OPTIONS:Mcairo)
+.  include "../../graphics/cairo/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-cairo
+PLIST.cairo=		yes
+.else
+CONFIGURE_ARGS+=	--disable-cairo
+.endif
 
 # "opengl" option: Enable support for OpenGL based rendering
 # Disabling this option removes expensive dependencies for X11 backend.
@@ -47,6 +58,14 @@ CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--disable-pango
 .endif
 
+# "wayland" option: Use wayland backend
+.if !empty(PKG_OPTIONS:Mwayland)
+.  include "../../devel/wayland/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-wayland
+.else
+CONFIGURE_ARGS+=	--disable-wayland
+.endif
+
 # "x11" option [X11 backend]: Use X11 backend
 # For some systems there are native backends available, do not use them.
 # Attention: Forcing X11 backend requires X Window system to be installed.
@@ -61,14 +80,24 @@ CONFIGURE_ARGS+=	--enable-x11
 CONFIGURE_ARGS+=	--disable-x11
 .endif
 
-# "xdbe" option [X11 backend]: Use X double buffer extension (DBE)
-# On older systems double buffering can be very slow. Disabling this option can
-# make the GUI more responsive. The drawback is potential flickering, e.g. in
-# a text field while a scrollbar is moved.
-.if !empty(PKG_OPTIONS:Mxdbe)
-CONFIGURE_ARGS+=	--enable-xdbe
+# "xcursor" option [X11 backend]: Use X cursor management library
+.if !empty(PKG_OPTIONS:Mxcursor)
+.  if !empty(PKG_OPTIONS:Mx11)
+.    include "../../x11/libXcursor/buildlink3.mk"
+.  endif
+CONFIGURE_ARGS+=	--enable-xcursor
 .else
-CONFIGURE_ARGS+=	--disable-xdbe
+CONFIGURE_ARGS+=	--disable-xcursor
+.endif
+
+# "xfixes" option [X11 backend]: Use X11 XFIXES extension
+.if !empty(PKG_OPTIONS:Mxfixes)
+.  if !empty(PKG_OPTIONS:Mx11)
+.    include "../../x11/libXfixes/buildlink3.mk"
+.  endif
+CONFIGURE_ARGS+=	--enable-xfixes
+.else
+CONFIGURE_ARGS+=	--disable-xfixes
 .endif
 
 # "xft2" option [X11 backend]: Use X FreeType interface library
@@ -96,4 +125,14 @@ CONFIGURE_ARGS+=	--disable-xft
 CONFIGURE_ARGS+=	--enable-xinerama
 .else
 CONFIGURE_ARGS+=	--disable-xinerama
+.endif
+
+# "xrender" option [X11 backend]: Use X11 RENDER extension
+.if !empty(PKG_OPTIONS:Mxrender)
+.  if !empty(PKG_OPTIONS:Mx11)
+.    include "../../x11/libXrender/buildlink3.mk"
+.  endif
+CONFIGURE_ARGS+=	--enable-xrender
+.else
+CONFIGURE_ARGS+=	--disable-xrender
 .endif

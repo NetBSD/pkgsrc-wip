@@ -3,7 +3,7 @@
 DISTNAME=	fltk-1.4.x
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
-GITHUB_TAG=	2001132f4a1ab2ad02f31c4a7c4cf9a5d803ed54
+GITHUB_TAG=	b3b051240ecf3ab562e73d3d5674d05aff261fc4
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	micha@NetBSD.org
@@ -11,19 +11,20 @@ HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf gmake nroff pkg-config
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c99
+FORCE_C_STD=		c99
+FORCE_CXX_STD=		c++98
+
+USE_TOOLS+=		autoconf gmake nroff pkg-config
+USE_LIBTOOL=		yes
 
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-print
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-threads
-CONFIGURE_ARGS+=	--enable-xcursor
-CONFIGURE_ARGS+=	--enable-xfixes
-CONFIGURE_ARGS+=	--enable-xrender
 
 # Use pkgsrc versions of libraries, not package's bundled versions
 CONFIGURE_ARGS+=	--disable-localjpeg
@@ -48,7 +49,8 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
