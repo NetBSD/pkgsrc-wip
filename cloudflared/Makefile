@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	cloudflared-2024.2.1
+DISTNAME=	cloudflared-2024.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cloudflare/}
 GITHUB_PROJECT=	cloudflared
