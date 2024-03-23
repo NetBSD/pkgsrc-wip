@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/lpjs
 lib/liblpjs.a
+libexec/lpjs/ad-hoc
 libexec/lpjs/admin
 libexec/lpjs/banner
 libexec/lpjs/chaperone
@@ -12,6 +13,8 @@ libexec/lpjs/nodes
 libexec/lpjs/reset-queue
 libexec/lpjs/restart
 libexec/lpjs/sim
+libexec/lpjs/start
+libexec/lpjs/stop
 libexec/lpjs/submit
 man/man1/lpjs-nodes.1
 sbin/lpjs_compd
