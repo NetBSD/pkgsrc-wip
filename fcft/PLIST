@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/fcft/fcft.h
+include/fcft/stride.h
+lib/libfcft.so
+lib/libfcft.so.4
+lib/libfcft.so.4.1.8
+lib/pkgconfig/fcft.pc
