@@ -32,4 +32,5 @@ TEST_TARGET=		run_tests
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
