@@ -4476,6 +4476,7 @@ SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-simulators
 SUBDIR+=	py-singer-python
 SUBDIR+=	py-singer-tap-github
+SUBDIR+=	py-singer-tap-jira
 SUBDIR+=	py-singer-target-csv
 SUBDIR+=	py-singletonify
 SUBDIR+=	py-sip4
