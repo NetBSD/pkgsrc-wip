@@ -1,0 +1,1 @@
+bin/singer-tap-jira @PREFIX@/bin/singer-tap-jira@PYVERSSUFFIX@

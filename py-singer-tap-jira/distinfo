@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (tap-jira-2.2.0.tar.gz) = be17e700bdbba8c8e1eeca50b715545e872fe9a669b27c951c07f3af2c75bb7f
+SHA512 (tap-jira-2.2.0.tar.gz) = 75a6d3a14b08c5686af483c619a910df65e76507fdb9f676ad846d672daa85b18fcecf9663cef2e8f2d9403ebe1ac7812cb7b172568fba64456dfdea65a70e8f
+Size (tap-jira-2.2.0.tar.gz) = 39648 bytes
+SHA1 (patch-setup.py) = b573d2b07b4926cbb1fc0c25410f0f0272d435e5
