@@ -4926,6 +4926,7 @@ SUBDIR+=	rpm5
 SUBDIR+=	rq
 SUBDIR+=	rsem
 SUBDIR+=	rset
+SUBDIR+=	rsftch
 SUBDIR+=	rsget
 SUBDIR+=	rsound
 SUBDIR+=	rsstail
