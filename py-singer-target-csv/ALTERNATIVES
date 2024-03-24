@@ -1,0 +1,1 @@
+bin/singer-target-csv @PREFIX@/bin/singer-target-csv@PYVERSSUFFIX@

@@ -1,0 +1,4 @@
+target-csv works together with any other Singer Tap to move data
+from sources like Braintree, Freshdesk and Hubspot to CSV-for matted
+files. It is commonly used for loading data into tools like Excel
+or simply storing a backup of the source data set.

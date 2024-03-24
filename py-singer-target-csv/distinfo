@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (target-csv-0.3.0.tar.gz) = 9e0d646417b008f3eb06bd674159512d655294a45ad8faf557cc43ed0a4bf633
+SHA512 (target-csv-0.3.0.tar.gz) = 34cd395e74f17d02ff969abf05c02c9f4bdf5639f62b1f7126bc7cb8bb8b1e8742034feab2ee2103acd9f942c17bd727ce550016dd4f5832d23bfe5517418417
+Size (target-csv-0.3.0.tar.gz) = 3965 bytes
+SHA1 (patch-setup.py) = 72919d47e9a16119c4f2bfcab4526e0862bb5ae4
+SHA1 (patch-target__csv.py) = 35ca5614284e1934c047fa85f445a2a36b5957fd
