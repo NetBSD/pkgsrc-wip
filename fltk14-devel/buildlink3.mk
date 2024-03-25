@@ -16,6 +16,7 @@ pkgbase := fltk
 
 # For "cairo" option
 .if ${PKG_BUILD_OPTIONS.fltk:Mcairo}
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.0
 .  include "../../graphics/cairo/buildlink3.mk"
 .endif
 

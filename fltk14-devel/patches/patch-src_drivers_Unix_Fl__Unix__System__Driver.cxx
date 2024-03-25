@@ -1,26 +1,42 @@
 $NetBSD$
 
-Fix mount point detection code for AIX.
+Fix mount point detection code for AIX and NetBSD.
 https://github.com/fltk/fltk/issues/942
+https://github.com/fltk/fltk/issues/944
 
---- src/drivers/Unix/Fl_Unix_System_Driver.cxx.orig	2024-03-20 16:41:08.000000000 +0000
+--- src/drivers/Unix/Fl_Unix_System_Driver.cxx.orig	2024-03-24 07:48:45.000000000 +0000
 +++ src/drivers/Unix/Fl_Unix_System_Driver.cxx
-@@ -278,7 +278,7 @@ int Fl_Unix_System_Driver::file_browser_
-   struct vmount *vp;
+@@ -278,6 +278,8 @@ int Fl_Unix_System_Driver::file_browser_
  
    // We always have the root filesystem
--  add("/", icon);
-+  browser->add("/", icon);
+   browser->add("/", icon);
++  num_files++;
++
    // Get the required buffer size for the vmount structures
    res = mntctl(MCTL_QUERY, sizeof(len), (char *) &len);
    if (!res) {
-@@ -292,7 +292,8 @@ int Fl_Unix_System_Driver::file_browser_
-       if (0 >= res) {
-         res = -1;
-       } else {
--        for (int i = 0, vp = (struct vmount *) list; i < res; ++i) {
-+        vp = (struct vmount *) list;
-+        for (int i = 0; i < res; ++i) {
-           name = (char *) vp + vp->vmt_data[VMT_STUB].vmt_off;
-           strlcpy(filename, name, lname);
-           // Skip the already added root filesystem
+@@ -299,6 +301,7 @@ int Fl_Unix_System_Driver::file_browser_
+           if (strcmp("/", filename) != 0) {
+             strlcat(filename, "/", lname);
+             browser->add(filename, icon);
++            num_files++;
+           }
+           vp = (struct vmount *) ((char *) vp + vp->vmt_length);
+         }
+@@ -317,6 +320,8 @@ int Fl_Unix_System_Driver::file_browser_
+ 
+   // We always have the root filesystem
+   browser->add("/", icon);
++  num_files++;
++
+ #  ifdef HAVE_PTHREAD
+   // Lock mutex for thread safety
+   if (!pthread_mutex_lock(&getvfsstat_mutex)) {
+@@ -330,6 +335,7 @@ int Fl_Unix_System_Driver::file_browser_
+         if (strcmp("/", filename) != 0) {
+           strlcat(filename, "/", lname);
+           browser->add(filename, icon);
++          num_files++;
+         }
+       }
+     } else {
