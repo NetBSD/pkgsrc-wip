@@ -11,8 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 
-EGDIR=	${PREFIX}/share/examples/hiawatha
-
 CMAKE_ARGS+=	-DUSE_SHARED_MBEDTLS_LIBRARY=OFF
 CMAKE_ARGS+=	-DUSE_STATIC_MBEDTLS_LIBRARY=ON
 CMAKE_ARGS+=	-DWEBROOT_DIR="${PREFIX}/var/hiawatha"
@@ -30,8 +28,9 @@ REPLACE_PHP+=	extra/letsencrypt/lefh.in
 # TODO: having issues requiring PHP
 CHECK_INTERPRETER_SKIP+=	sbin/lefh
 
-
+EGDIR=	${PREFIX}/share/examples/hiawatha
 ETCDIR=	${PKG_SYSCONFDIR}/hiawatha
+FILESDIR=	${PKGDIR}/../../wip/hiawatha/files
 
 CONF_FILES+=	${EGDIR}/error.xslt ${ETCDIR}/error.xslt
 CONF_FILES+=	${EGDIR}/hiawatha.conf ${ETCDIR}/hiawatha.conf
@@ -39,7 +38,9 @@ CONF_FILES+=	${EGDIR}/index.xslt ${ETCDIR}/index.xslt
 CONF_FILES+=	${EGDIR}/mimetype.conf ${ETCDIR}/mimetype.conf
 CONF_FILES+=	${EGDIR}/cgi-wrapper.conf ${ETCDIR}/cgi-wrapper.conf
 
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR} ${RCDIR}
+
+RCD_SCRIPTS=	hiawatha
 
 post-install:
 	${MV} ${DESTDIR}${ETCDIR}/hiawatha.conf ${DESTDIR}${EGDIR}

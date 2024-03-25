@@ -122,6 +122,7 @@ share/examples/hiawatha/error.xslt
 share/examples/hiawatha/hiawatha.conf
 share/examples/hiawatha/index.xslt
 share/examples/hiawatha/mimetype.conf
+share/examples/rc.d/hiawatha
 var/hiawatha/index.html
 @pkgdir var/run
 @pkgdir var/log/hiawatha
