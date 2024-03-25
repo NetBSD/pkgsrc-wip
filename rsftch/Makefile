@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rsftch-0.1.8
+DISTNAME=	rsftch-0.2.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/rsftch/
 EXTRACT_SUFX=	.crate
