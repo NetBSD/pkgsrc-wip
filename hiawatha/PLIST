@@ -1,10 +1,5 @@
 @comment $NetBSD$
 bin/ssi-cgi
-etc/hiawatha/cgi-wrapper.conf
-etc/hiawatha/error.xslt
-etc/hiawatha/hiawatha.conf
-etc/hiawatha/index.xslt
-etc/hiawatha/mimetype.conf
 include/mbedtls/aes.h
 include/mbedtls/aria.h
 include/mbedtls/asn1.h
@@ -122,7 +117,13 @@ sbin/cgi-wrapper
 sbin/hiawatha
 sbin/lefh
 sbin/wigwam
+share/examples/hiawatha/cgi-wrapper.conf
+share/examples/hiawatha/error.xslt
+share/examples/hiawatha/hiawatha.conf
+share/examples/hiawatha/index.xslt
+share/examples/hiawatha/mimetype.conf
 var/hiawatha/index.html
 @pkgdir var/run
 @pkgdir var/log/hiawatha
 @pkgdir var/db/hiawatha
+@pkgdir etc/hiawatha
