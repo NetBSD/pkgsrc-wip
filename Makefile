@@ -934,6 +934,7 @@ SUBDIR+=	fogleman-craft
 SUBDIR+=	folly
 SUBDIR+=	fontaine
 SUBDIR+=	fonttosfnt
+SUBDIR+=	foot
 SUBDIR+=	forgejo
 SUBDIR+=	fossil1
 SUBDIR+=	fox
