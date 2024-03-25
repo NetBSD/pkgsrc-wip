@@ -9,6 +9,7 @@ HOMEPAGE=	https://www.hiawatha-webserver.org/files/
 COMMENT=	Advanced and secure webserver for Unix
 LICENSE=	gnu-gpl-v2
 
+
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DUSE_SHARED_MBEDTLS_LIBRARY=OFF
@@ -20,6 +21,8 @@ CMAKE_ARGS+=	-DLOG_DIR="${PREFIX}/var/log/hiawatha"
 CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR="${PREFIX}/man"
 CMAKE_ARGS+=	-DENABLE_XSLT=ON
 CMAKE_ARGS+=	-DPID_DIR="${PREFIX}/var/run"
+
+.include "options.mk"
 
 LDFLAGS+=	"-L${WRKDIR}/hiawatha/mbedtls/library"
 
@@ -42,6 +45,18 @@ INSTALLATION_DIRS+=	${EGDIR} ${RCDIR}
 
 RCD_SCRIPTS=	hiawatha
 
+HIAWATHA_USER?=		hiawatha
+HIAWATHA_GROUP?=	hiawatha
+
+PKG_USERS_VARS+=	HIAWATHA_USER
+PKG_GROUPS_VARS+=	HIAWATHA_GROUP
+PKG_GROUPS=		${HIAWATHA_GROUP}
+PKG_USERS=		${HIAWATHA_USER}:${HIAWATHA_GROUP}
+
+PKG_GECOS.${HIAWATHA_USER}=	HIAWATHA web server user
+PKG_HOME.${HIAWATHA_USER}=	${HIAWATHA_DATADIR}
+PKG_SHELL.${HIAWATHA_USER}=	${NOLOGIN}
+
 post-install:
 	${MV} ${DESTDIR}${ETCDIR}/hiawatha.conf ${DESTDIR}${EGDIR}
 	${MV} ${DESTDIR}${ETCDIR}/mimetype.conf ${DESTDIR}${EGDIR}
@@ -49,8 +64,8 @@ post-install:
 	${MV} ${DESTDIR}${ETCDIR}/error.xslt ${DESTDIR}${EGDIR}
 	${MV} ${DESTDIR}${ETCDIR}/index.xslt ${DESTDIR}${EGDIR}
 
-.include "../../lang/php/replace.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../lang/php/replace.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
