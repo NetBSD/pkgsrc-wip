@@ -1,0 +1,46 @@
+lang/abcl: update to 1.9.2
+
+Prepared by Kevin Bloom in wip.
+
+1.9.1 -> 1.9.2:
+- JNA contrib has been updated to jna-5.13.0
+- Restore most of the speed of the generic function cache
+- The ABCL-STEPPER contrib provides a interpreted implementation of
+  CL:STEP.
+- Re-worked the Gray Stream implementation to fix many issues.
+- Introduced the POSIX-SYSCALLS contrib which allows one to
+  set environment variables in the hosting JVM process.
+- Fix GRAY-STREAMS:STREAM-ELEMENT-TYPE for binary streams.
+- Fix CL:LOG for behavior at zero.
+- Extensive grouting of accumulated bitrot in the ASDF-JAR
+  contrib to enable more complete packaging of non-compilation
+  artifacts as well as systems residing in jar files.
+- EXTENSION:REGISTER-ASDF adds a directory to ASDF by using
+  the configuration API.
+- SYSTEM:ZIP now works with source in jar files.
+
+1.9.0 -> 1.9.1:
+- Avoid NIL in simple LOOP from FORMAT directives.
+- Maven may now be used for building/testing ABCL.
+- The build autoconfigure targets for openjdk17+ now add
+  necessary opens command line switches to enable the successful use
+  of CL+SSL via CFFI on such platforms.
+- ABCL-ASDF:MAKE-LOCAL-MAVEN downloads a version of
+  Maven installed into the local XDG directory location and
+  configures its subsequent use in the current session.  ABCL-ASDF
+  provides a restart to invoke this installation if Maven can't be
+  located at runtime.
+- fix compilation of a few TYPE-ERROR cases
+- Fix SYS:RUN-PROGRAM waiting problems
+- DEFMETHOD now accepts subtypes of MOP:SPECIALIZER as a
+  discriminator.
+- Provide SETF'abl api for inspecting and modifying the underlying
+  JVM context classloader.
+- Implement THREADS:GET-JAVA-THREAD
+
+
+1.8.0 -> 1.9.0:
+
+1.7.1 -> 1.8.0:
+
+https://abcl.org/release-notes.shtml

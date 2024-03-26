@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.13 2021/10/26 10:51:29 nia Exp $
+
+BLAKE2s (abcl-src-1.9.2.tar.gz) = cf646ed25c3b350ef00e15dac7ff273ccc9e23fd141df1ddd1bec382cb3f442f
+SHA512 (abcl-src-1.9.2.tar.gz) = 1b758b26be5dbe00fb75aef0ffca6cdfbbb7982a545c63b6378dbd3d22bed76e15628ee099c5728c3600d67fb74def249195060cc1af1486f6d52fcdb9ce245a
+Size (abcl-src-1.9.2.tar.gz) = 2477992 bytes
+SHA1 (patch-build.xml) = 6def6a61011a94a33a5a1627f8628bd3986e993c
