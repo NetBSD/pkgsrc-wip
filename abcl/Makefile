@@ -9,7 +9,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://abcl.org/
 COMMENT=	Armed Bear Common Lisp
 
-PKG_JVMS_ACCEPTED=	openjdk11 openjdk8 oracle-jdk8 sun-jdk7 jdk16 jdk15 kaffe
+PKG_JVMS_ACCEPTED=	openjdk17 openjdk11 openjdk8 oracle-jdk8 sun-jdk7 jdk16 jdk15 kaffe
 
 TOOL_DEPENDS=	apache-ant>=1.7.1:../../devel/apache-ant
 
