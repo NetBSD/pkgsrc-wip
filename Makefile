@@ -3101,6 +3101,7 @@ SUBDIR+=	portscout
 SUBDIR+=	posh
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postfix-logwatch
+SUBDIR+=	postgresql-pgvector
 SUBDIR+=	postoffice
 SUBDIR+=	pounce
 SUBDIR+=	povray
