@@ -1,6 +1,0 @@
-$NetBSD$
-
-BLAKE2s (yosys-0.33.tar.gz) = 77600fe6839b7ffa2c8655b1b3290bb595e09d63a9b67ee7791d5d8bbdbbde28
-SHA512 (yosys-0.33.tar.gz) = e635df2b5fccf14a45c2f8ec342e7415105a46383333f11b7509907f197adc74a04b7fbb56eadddbb68dc5671619770892a0a93210ba68ef23044bf52d70f616
-Size (yosys-0.33.tar.gz) = 2586120 bytes
-SHA1 (patch-kernel_yosys.cc) = 81e504f0a61baa47eca7cec021ae60d8ed432e3b
