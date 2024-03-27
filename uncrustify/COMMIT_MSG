@@ -38,3 +38,5 @@ Added:
   - sp_qualifier_unnamed_ptr_star
   - sp_qualifier_ptr_star_func
   - mod_add_force_c_closebrace_comment
+
+https://github.com/uncrustify/uncrustify/blob/uncrustify-0.78.1/ChangeLog
