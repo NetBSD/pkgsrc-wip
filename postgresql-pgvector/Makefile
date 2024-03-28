@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 0.6.2 2024/03/26 22:17:34 arai Exp $
+# $NetBSD$
 
 DISTNAME=	pgvector-0.6.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
