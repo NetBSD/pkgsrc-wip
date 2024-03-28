@@ -1,0 +1,14 @@
+shells/fish: update to 3.7.1
+
+Prepared by Kevin Bloom in wip.
+
+- Deleting the last history entry via history delete works again
+- Wildcards (*) will no longer sometimes generate paths that did not
+  exist
+- Fixed crash when trying to run an ELF program with a missing interpreter
+- funced will now always source the file after it has written it,
+  even if the contents did not change.
+- Added completions for: cobra-cli, dmidecode, mycli, ollama, pstree
+- Some improvements to documentation and completions.
+
+https://github.com/fish-shell/fish-shell/releases/tag/3.7.1
