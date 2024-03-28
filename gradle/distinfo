@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.19 2021/10/26 10:14:48 nia Exp $
+
+BLAKE2s (gradle-8.7-bin.zip) = b938473010429331db5f48738362c28bafee32da072e58acd3d88a8cf51be3f1
+SHA512 (gradle-8.7-bin.zip) = ddbd320de140634087904c0d0047b146b9697eb0d054a7eada24d6179b65dbeb2189e1c9def463e4788fa1a7f02a720ab9b7bdcdd9bb529770985283d0e51e1a
+Size (gradle-8.7-bin.zip) = 134184980 bytes
