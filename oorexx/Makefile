@@ -1,40 +1,42 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:46 asau Exp $
+# $NetBSD$
 #
 
-DISTNAME=	ooRexx-3.2.0
-PKGNAME=	${DISTNAME:S/R/r/}
+DISTNAME=	oorexx-5.0.0-12583
+PKGNAME=	${DISTNAME:C/-[0-9]*$//}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oorexx/}
-LICENSE=	gnu-gpl-v2 AND cpl-1.0
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oorexx/oorexx/${PKGVERSION_NOREV}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oorexx.sourceforge.net/
 COMMENT=	Powerful typeless object-oriented scripting language
+LICENSE=	gnu-gpl-v2 AND cpl-1.0
 
 CONFLICTS=	rexx-imc-[0-9]* rexx-regina-[0-9]*
 
-GNU_CONFIGURE=			yes
-USE_LIBTOOL=			yes
-USE_LANGUAGES=			c c++
-
-SUBST_CLASSES+=			fix-mandir
-SUBST_MESSAGE.fix-mandir=	Fixing hard-coded manuals path.
-SUBST_STAGE.fix-mandir=		pre-build
-SUBST_FILES.fix-mandir=		Makefile
-SUBST_SED.fix-mandir=		-e 's|share/man|man|g'
-
-REPLACE_SH+=	platform/unix/rexx.sh
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	sh:run
+MAKE_JOBS_SAFE=	no
 
-REPLACE_INTERPRETER+=	csh
-REPLACE.csh.old=	.*/bin/csh
-REPLACE.csh.new=	/bin/csh
-REPLACE_FILES.csh=	platform/unix/rexx.csh
+WRKSRC=		${WRKDIR}
 
-REPLACE_INTERPRETER+=	rexx
-REPLACE.rexx.old=	.*/bin/rexx
-REPLACE.rexx.new=	${PREFIX}/bin/rexx
-REPLACE_FILES.rexx=	samples/*.rex
+# Runs the built executable bin/rexx during build.
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
 
+CMAKE_ARGS+=	-DORX_SHEBANG=${PREFIX}/bin/rexx
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Subversion:BOOL=TRUE
+
+# Fix up bad permissions.
+post-install:
+	cd ${DESTDIR}${PREFIX} && \
+	    chmod -R g-w . && \
+	    chmod a-x lib/rexx.img && \
+	    find share/ooRexx/samples/api -name '*.rex' -exec chmod -x {} \; && \
+	    find share/ooRexx/samples -name '*.cls' -exec chmod -x {} \;
+
+# We really want ncurses!
+PREFER.curses=	pkgsrc
+
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
