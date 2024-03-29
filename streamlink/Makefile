@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.41 2023/11/07 22:38:02 wiz Exp $
 
-DISTNAME=	streamlink-6.5.0
+DISTNAME=	streamlink-6.7.2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,6 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-country-[0-9]*:../../geography/py-country
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
+DEPENDS+=	${PYPKGPREFIX}-exceptiongroup-[0-9]*:../../devel/py-exceptiongroup
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.5.6:../../net/py-Socks

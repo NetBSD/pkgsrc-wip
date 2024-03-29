@@ -1,6 +1,113 @@
-multimedia/streamlink: update to streamlink-6.5.0
+multimedia/streamlink: update to streamlink-6.7.2
 
 Changelog:
+
+== streamlink 6.7.2 (2024-03-23)
+
+Patch release:
+
+- Build: reverted `trio` version requirement bump
+- Build: fixed incorrect `pytest` version requirement
+
+
+== streamlink 6.7.1 (2024-03-19)
+
+Patch release:
+
+- Fixed: CLI download progress missing the last data chunk
+- Fixed: compatibility with `trio>=0.25`
+- Updated plugins:
+  - tv3cat: fixed plugin and added VODs
+  - vimeo: fixed event streams and embedded player URLs
+- Build: bumped `trio` dependency version requirement to `>=0.25,<1`
+- Build: added `exceptiongroup` dependency
+- Tests: fixed root logger level not being reset
+
+
+== streamlink 6.7.0 (2024-03-09)
+
+Release highlights:
+
+- Added: repeatable `--plugin-dir` CLI argument
+- Deprecated: `--plugin-dirs` CLI argument with comma separated paths
+- Fixed: independent encryption status of HLS initialization sections
+- Fixed: objects of default session options being shared
+  between sessions
+- Updated plugins:
+  - bloomberg: fixed data regex
+  - ltv_lsm_lv: fixed player ID retrieval, removed custom
+                HLS implementation
+  - mangomolo: new plugin
+  - ustvnow: updated matcher
+  - vimeo: fixed optional DASH streams of live events
+
+
+== streamlink 6.6.2 (2024-02-20)
+
+Patch release:
+
+- Fixed: missing plugin override log message in non-editable installs
+- Fixed: incorrect `setuptools` min. version in build requirements
+- Updated plugins:
+  - afreeca: fixed broadcast number regex
+  - afreeca: added support for stream metadata
+  - hiplayer: removed media.gov.kw matcher
+
+
+== streamlink 6.6.1 (2024-02-17)
+
+Patch release:
+
+- Fixed: plugin arguments in `--help` output
+- Docs: removed empty plugin sections in docs and man page
+
+
+== streamlink 6.6.0 (2024-02-16)
+
+Release highlights:
+
+- Implemented: lazy plugins loading
+  Streamlink's built-in plugins will now be loaded on demand when
+  resolving input URLs. This improves initial loading times and
+  reduces total memory consumption.
+- Refactored: Streamlink session module (and related)
+  - Moved: `streamlink.session` into a sub-package
+  - Moved: `streamlink.plugin.api.http_session`
+           to `streamlink.session.http`
+  - Refactored: `Streamlink` class internals
+  - Deprecated: `Streamlink.{get,load}_plugins()` methods
+  - Deprecated: direct imports of `HTTPSession` and imports
+                from `streamlink.plugin.api.http_session`
+- Refactored: `streamlink.utils.args` module
+- Updated plugins:
+  - aloula: fixed missing HTTP headers
+  - foxtr: removed plugin
+  - huya: fixed stream URLs
+  - nowtvtr: new plugin
+  - qq: removed plugin
+  - rtbf: removed plugin
+- Tests: improved overall test execution time
+
+
+== streamlink 6.5.1 (2024-01-16)
+
+Patch release:
+
+- Fixed: file output path log message on py38/py39
+- Improved: warning message when using quoted player paths
+  (in config files)
+- Updated plugins:
+  - artetv: updated API response validation schema
+  - atresplayer: updated API response validation schema
+  - bigo: reimplemented plugin
+  - bilibili: fixed stream resolving issues on channels with
+              custom layouts
+  - huya: added stream CDN availability check
+  - twitch: disabled Chromium headless mode on client-integrity
+            token acquirement
+  - vidio: fixed missing API request cookies
+  - zattoo: fixed audio/video sync issues
+
 
 == streamlink 6.5.0 (2023-12-16)
 
