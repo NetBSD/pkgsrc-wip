@@ -1,5 +1,8 @@
-mail/py-notmuch2: Add notmuch-0.38.2 python bindings
+mail/py-notmuch2: Add notmuch-0.38.3 python bindings
 
-Pythonic bindings for the notmuch mail indexer. This module makes the
-functionality of the notmuch library (https://notmuchmail.org) available
-to python using CFFI.
+Notmuch is a system for indexing, searching, reading, and tagging
+large collections of email messages in maildir or mh format. It uses
+the Xapian library to provide fast, full-text search with a convenient
+search syntax.
+
+This package provides Pythonic bindings using CFFI.
