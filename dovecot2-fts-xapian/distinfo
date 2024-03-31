@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (fts-xapian-1.7.8.tar.gz) = e8f8ab31e7412f1b30350ec792fea79dfec13a8492f8b4024c4d25e9239d4ecc
-SHA512 (fts-xapian-1.7.8.tar.gz) = af69e4627fab0ee9aad9a32e5ab4a747ae1e80b6d87f17f27c73b2a3e6771d1673edab7f00ee0fcb7dcce0c0482ee3dbfce0006b8993d29f8bab7cf3bbb3054a
-Size (fts-xapian-1.7.8.tar.gz) = 36768 bytes
+BLAKE2s (fts-xapian-1.7.10.tar.gz) = 5648990d04ee66dc87c2d14b6cbf7e7988f2e1c685c19a11730ef93fbf77c200
+SHA512 (fts-xapian-1.7.10.tar.gz) = 3844233fd6c0de6d1b7c13e116fc82157324dfc799fcabc766b860c270448a624263533f142566748a4bab2aa1043b3030d7f4795afd4046f10c2a41970cf250
+Size (fts-xapian-1.7.10.tar.gz) = 36886 bytes
