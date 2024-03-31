@@ -2,6 +2,7 @@
 
 DISTNAME=	weewx-4.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://weewx.com/downloads/released_versions/
 
@@ -24,9 +25,8 @@ SUBST_VARS.paths=	PREFIX
 # weewx might work with 27, but it causes pain with pkgsrc deps so just don't
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# This package assumes that pkgsrc is at least 2023Q4.  (Formally, wip
-# requires current anyway.)  In particular, assume that having python
-# implies having sqlite3.
+# weewx uses sqlite3
+.include "../../lang/python/batteries-included.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.0.0:../../devel/py-cheetah3
