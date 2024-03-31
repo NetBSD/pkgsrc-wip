@@ -24,15 +24,9 @@ SUBST_VARS.paths=	PREFIX
 # weewx might work with 27, but it causes pain with pkgsrc deps so just don't
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# These versions are probably higher than necessary, but there is little value
-# in testing with versions older than are in pkgsrc.
-.if exists(../../databases/py-sqlite3/Makefile)
-# \todo After 2024-01-01 (such that 2023Q4 has been out long enough
-# that it is no longer reasonable to be using 2023Q3), drop this.
-# Until then, people using wip with the branch would have failures
-# that are perhaps hard to debug.
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=2.7.16:../../databases/py-sqlite3
-.endif
+# This package assumes that pkgsrc is at least 2023Q4.  (Formally, wip
+# requires current anyway.)  In particular, assume that having python
+# implies having sqlite3.
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cheetah>=3.0.0:../../devel/py-cheetah3
