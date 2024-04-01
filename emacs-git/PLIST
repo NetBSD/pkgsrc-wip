@@ -3751,6 +3751,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/opascal.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/opascal.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/pascal.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/pascal.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/peg.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/peg.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.el.gz
