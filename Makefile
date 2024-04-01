@@ -4461,7 +4461,6 @@ SUBDIR+=	py-selenium-generator
 SUBDIR+=	py-semidbm
 SUBDIR+=	py-semopy
 SUBDIR+=	py-sempy
-SUBDIR+=	py-semver
 SUBDIR+=	py-sentinels
 SUBDIR+=	py-sentry
 SUBDIR+=	py-sep

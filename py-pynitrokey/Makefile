@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-nethsm>=1.0.0:../../wip/py-nethsm
 DEPENDS+=	${PYPKGPREFIX}-nkdfu-[0-9]*:../../sysutils/py-nkdfu
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.17.3:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-semver-[0-9]*:../../wip/py-semver
+DEPENDS+=	${PYPKGPREFIX}-semver-[0-9]*:../../devel/py-semver
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-spsdk>=1.11.0:../../wip/py-spsdk
 DEPENDS+=	${PYPKGPREFIX}-tlv8-[0-9]*:../../devel/py-tlv8
