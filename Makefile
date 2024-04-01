@@ -444,6 +444,7 @@ SUBDIR+=	chromium-depot_tools
 SUBDIR+=	chronograf
 SUBDIR+=	chrsh
 SUBDIR+=	chruby
+SUBDIR+=	cilium-cli
 SUBDIR+=	cinnamon
 SUBDIR+=	cinnamon-control-center
 SUBDIR+=	cinnamon-desktop
