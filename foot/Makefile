@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	foot-1.16.2
+DISTNAME=	foot-1.17.0
 CATEGORIES=	x11
-MASTER_SITES=	https://codeberg.org/dnkl/foot/releases/download/${PKGVERSION_NOREV}
+MASTER_SITES=	https://codeberg.org/dnkl/foot/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://codeberg.org/dnkl/foot/
