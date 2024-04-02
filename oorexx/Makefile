@@ -11,6 +11,10 @@ HOMEPAGE=	http://oorexx.sourceforge.net/
 COMMENT=	Powerful typeless object-oriented scripting language
 LICENSE=	gnu-gpl-v2 AND cpl-1.0
 
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	ooRexx-${PKGVERSION_NOREV}-pdf.zip
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=oorexx/oorexx-docs/${PKGVERSION_NOREV}/}
+
 CONFLICTS=	rexx-imc-[0-9]* rexx-regina-[0-9]*
 
 USE_CMAKE=	yes
@@ -33,6 +37,12 @@ post-install:
 	    chmod a-x lib/rexx.img && \
 	    find share/ooRexx/samples/api -name '*.rex' -exec chmod -x {} \; && \
 	    find share/ooRexx/samples -name '*.cls' -exec chmod -x {} \;
+	cd ${WRKDIR}/ooRexx-${PKGVERSION_NOREV}-pdf && \
+	    ${RM} -f oodguide.pdf oodialog.pdf oorexxbuild.pdf oosqlite.pdf \
+	          winextensions.pdf
+	cd ${WRKDIR} && \
+	    ${MV} ooRexx-${PKGVERSION_NOREV}-pdf  ${DESTDIR}${PREFIX}/share/ooRexx/doc
+
 
 # We really want ncurses!
 PREFER.curses=	pkgsrc

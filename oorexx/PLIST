@@ -51,6 +51,17 @@ man/man1/rexx.1
 man/man1/rexxc.1
 man/man1/rxqueue.1
 man/man1/rxsubcom.1
+share/ooRexx/doc/ootest.pdf
+share/ooRexx/doc/orxncurses.pdf
+share/ooRexx/doc/readme.pdf
+share/ooRexx/doc/rexxapi.pdf
+share/ooRexx/doc/rexxextensions.pdf
+share/ooRexx/doc/rexxpg.pdf
+share/ooRexx/doc/rexxref.pdf
+share/ooRexx/doc/rxftp.pdf
+share/ooRexx/doc/rxmath.pdf
+share/ooRexx/doc/rxsock.pdf
+share/ooRexx/doc/unixextensions.pdf
 share/ooRexx/samples/api/c++/callsample/HelloWorld.rex
 share/ooRexx/samples/api/c++/callsample/Makefile.unix
 share/ooRexx/samples/api/c++/callsample/Makefile.windows
