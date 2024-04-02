@@ -2053,6 +2053,7 @@ SUBDIR+=	libvips
 SUBDIR+=	libvirt
 SUBDIR+=	libvirt-glib
 SUBDIR+=	libvpx-git
+SUBDIR+=	libvterm03
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
 SUBDIR+=	libxdiff
