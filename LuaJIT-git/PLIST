@@ -1,0 +1,36 @@
+@comment $NetBSD$
+bin/luajit
+bin/luajit-${PKGVERSION}
+include/luajit-${PKGVERSION}/lauxlib.h
+include/luajit-${PKGVERSION}/lua.h
+include/luajit-${PKGVERSION}/lua.hpp
+include/luajit-${PKGVERSION}/luaconf.h
+include/luajit-${PKGVERSION}/luajit.h
+include/luajit-${PKGVERSION}/lualib.h
+lib/libluajit-5.1.a
+lib/libluajit-5.1.so
+lib/libluajit-5.1.so.2
+lib/libluajit-5.1.so.${PKGVERSION}
+lib/pkgconfig/luajit.pc
+man/man1/luajit.1
+share/luajit-${PKGVERSION}/jit/bc.lua
+share/luajit-${PKGVERSION}/jit/bcsave.lua
+share/luajit-${PKGVERSION}/jit/dis_arm.lua
+share/luajit-${PKGVERSION}/jit/dis_arm64.lua
+share/luajit-${PKGVERSION}/jit/dis_arm64be.lua
+share/luajit-${PKGVERSION}/jit/dis_mips.lua
+share/luajit-${PKGVERSION}/jit/dis_mips64.lua
+share/luajit-${PKGVERSION}/jit/dis_mips64el.lua
+share/luajit-${PKGVERSION}/jit/dis_mips64r6.lua
+share/luajit-${PKGVERSION}/jit/dis_mips64r6el.lua
+share/luajit-${PKGVERSION}/jit/dis_mipsel.lua
+share/luajit-${PKGVERSION}/jit/dis_ppc.lua
+share/luajit-${PKGVERSION}/jit/dis_x64.lua
+share/luajit-${PKGVERSION}/jit/dis_x86.lua
+share/luajit-${PKGVERSION}/jit/dump.lua
+share/luajit-${PKGVERSION}/jit/p.lua
+share/luajit-${PKGVERSION}/jit/v.lua
+share/luajit-${PKGVERSION}/jit/vmdef.lua
+share/luajit-${PKGVERSION}/jit/zone.lua
+@pkgdir share/lua/5.1
+@pkgdir lib/lua/5.1

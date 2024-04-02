@@ -1,0 +1,38 @@
+$NetBSD$
+
+- fix install paths
+- use stable file names
+
+--- Makefile.orig	2024-04-02 00:18:24.000000000 +0000
++++ Makefile
+@@ -30,7 +30,6 @@ VERSION= $(MMVERSION).$(RELVER)
+ # Change the installation path as needed. This automatically adjusts
+ # the paths in src/luaconf.h, too. Note: PREFIX must be an absolute path!
+ #
+-export PREFIX= /usr/local
+ export MULTILIB= lib
+ ##############################################################################
+ 
+@@ -47,18 +46,18 @@ INSTALL_LMODD= $(INSTALL_SHARE)/lua
+ INSTALL_LMOD= $(INSTALL_LMODD)/$(ABIVER)
+ INSTALL_CMODD= $(INSTALL_LIB)/lua
+ INSTALL_CMOD= $(INSTALL_CMODD)/$(ABIVER)
+-INSTALL_MAN= $(INSTALL_SHARE)/man/man1
++INSTALL_MAN= $(DPREFIX)/$(PKGMANDIR)/man1
+ INSTALL_PKGCONFIG= $(INSTALL_LIB)/pkgconfig
+ 
+-INSTALL_TNAME= luajit-$(VERSION)
++INSTALL_TNAME= luajit-$(MMVERSION)
+ INSTALL_TSYMNAME= luajit
+ INSTALL_ANAME= libluajit-$(ABIVER).a
+ INSTALL_SOSHORT1= libluajit-$(ABIVER).so
+ INSTALL_SOSHORT2= libluajit-$(ABIVER).so.$(MAJVER)
+-INSTALL_SONAME= libluajit-$(ABIVER).so.$(VERSION)
++INSTALL_SONAME= libluajit-$(ABIVER).so.$(MMVERSION)
+ INSTALL_DYLIBSHORT1= libluajit-$(ABIVER).dylib
+ INSTALL_DYLIBSHORT2= libluajit-$(ABIVER).$(MAJVER).dylib
+-INSTALL_DYLIBNAME= libluajit-$(ABIVER).$(VERSION).dylib
++INSTALL_DYLIBNAME= libluajit-$(ABIVER).$(MMVERSION).dylib
+ INSTALL_PCNAME= luajit.pc
+ 
+ INSTALL_STATIC= $(INSTALL_LIB)/$(INSTALL_ANAME)

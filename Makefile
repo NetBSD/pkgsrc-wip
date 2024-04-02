@@ -23,6 +23,7 @@ SUBDIR+=	GenericRepeatFinder
 SUBDIR+=	Geomyidae-git
 SUBDIR+=	HP-1973
 SUBDIR+=	I2util
+SUBDIR+=	LuaJIT-git
 SUBDIR+=	LuaJIT21
 SUBDIR+=	MoleInvasion
 SUBDIR+=	OpenGLUT
