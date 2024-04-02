@@ -15,6 +15,13 @@ CONFLICTS+=	LuaJIT2-[0-9]* LuaJIT21-[0-9]*
 
 USE_TOOLS+=	gmake
 
+ONLY_FOR_PLATFORM+=	*-*-aarch64*
+ONLY_FOR_PLATFORM+=	*-*-*arm*	# ARMv5+, ARM9E+
+ONLY_FOR_PLATFORM+=	*-*-i386	# req SSE2
+ONLY_FOR_PLATFORM+=	*-*-mips*
+ONLY_FOR_PLATFORM+=	*-*-powerpc
+ONLY_FOR_PLATFORM+=	*-*-x86_64
+
 # pkg/47587: lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
