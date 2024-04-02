@@ -16,7 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-path-and-address>=2.0.1:../../wip/py-path-and-address
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.1:../../devel/py-requests
 
-PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+# FIXME: Does this need to be replaced with another dependency?
+# ERROR: markdown unsupported in PYTHON_VERSIONED_DEPENDENCIES
+# PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=	# none
 
