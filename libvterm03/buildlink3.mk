@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/12/15 22:13:50 nikita Exp $
+# $NetBSD$
 
 BUILDLINK_TREE+=	libvterm03
 
@@ -7,7 +7,7 @@ LIBVTERM03_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvterm03+=	libvterm03>=0.0.0
 BUILDLINK_ABI_DEPENDS.libvterm03+=	libvterm03>=0.3
-BUILDLINK_PKGSRCDIR.libvterm03?=	../../devel/libvterm03
+BUILDLINK_PKGSRCDIR.libvterm03?=	../../wip/libvterm03
 BUILDLINK_INCDIRS.libvterm03+=		include/libvterm03
 BUILDLINK_LIBDIRS.libvterm03+=		lib/libvterm03
 

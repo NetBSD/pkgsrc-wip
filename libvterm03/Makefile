@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/12/15 22:13:50 nikita Exp $
+# $NetBSD$
 
-DISTNAME=	libvterm-0.3
-PKGNAME=	${DISTNAME:S/libvterm/libvterm03/g}
+DISTNAME=	libvterm-0.3.3
+PKGNAME=	${DISTNAME:S/libvterm/libvterm03/}
 CATEGORIES=	devel
 MASTER_SITES=	https://www.leonerd.org.uk/code/libvterm/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	https://www.leonerd.org.uk/code/libvterm/
 COMMENT=	Abstract VT220/xterm/ECMA-48 emulation library
 LICENSE=	mit
