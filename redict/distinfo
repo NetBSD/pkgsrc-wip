@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (7.3.0.tar.gz) = a2ae5b1b74a211c35613eb43f3875ffaf04e509727f1ae3b4e5257905aab09a3
+SHA512 (7.3.0.tar.gz) = d33f4dfaf728f5a22abe7a6223f3192c39dc41a32e7bcb0f453caaa859f35b512534979c26ced9f4458c19611debd282f37955e930151c0f827035f349647226
+Size (7.3.0.tar.gz) = 3414514 bytes
+SHA1 (patch-redict.conf) = fc87f130d9ca67f0fcb6293dbb2b3ec5cad069ef
+SHA1 (patch-src_hyperloglog.c) = 27ac35394e1da9d9c7b6d433dd08118a59497c64
+SHA1 (patch-src_object.c) = 30ffaec9c7e6135e3a5576cd1a35d7bcec668299

@@ -1,0 +1,16 @@
+Redict is an advanced key-value store. It is similar to memcached but the
+dataset is not volatile, and values can be strings, exactly like in memcached,
+but also lists, sets, and ordered sets. All these data types can be manipulated
+with atomic operations to push/pop elements, add/remove elements, perform
+server side union, intersection, and difference between sets, and so forth.
+Redict also supports different kinds of sorting.
+
+Redict 7.3.0 is a fork of and is broadly compatible with Redis 7.2.4. The
+following notable changes are included:
+
+ * The name has been updated throughout the software from "redis" to "redict".
+   As a result, for example, redis-server is now redict-server.
+ * The Lua API global has been renamed to "redict". "redis" is an alias for
+   this for backwards compatibility.
+ * The Modules API symbols have been renamed to RedictModule. Modules are
+   binary compatible with Redis Modules targetting Redis 7.2.4.

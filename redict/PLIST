@@ -1,0 +1,12 @@
+@comment $NetBSD$
+bin/redict-benchmark
+bin/redict-check-aof
+bin/redict-check-rdb
+bin/redict-cli
+bin/redict-sentinel
+bin/redict-server
+share/doc/redict/README.md
+share/doc/redict/SECURITY.md
+share/doc/redict/TLS.md
+share/redict/redict.conf
+share/redict/sentinel.conf
