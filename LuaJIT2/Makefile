@@ -1,12 +1,11 @@
 # $NetBSD$
 
-DISTNAME=	LuaJIT-2.0.${TIMESTAMP}
+DISTNAME=	LuaJIT-2.0.1710087801	# see .relver
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
 CATEGORIES=	lang lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LuaJIT/}
 GITHUB_PROJECT=	${DISTNAME:C/-[^-]*$//}
-GITHUB_TAG=	cae36118
-TIMESTAMP=	1710087801	# git show --no-patch --format=%ct
+GITHUB_TAG=	cae361187e7e1e3545353fb560c032cdace32d5f
 
 MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	https://luajit.org/
@@ -14,9 +13,6 @@ COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
-
-pre-configure:
-	${ECHO} ${TIMESTAMP} >${WRKSRC}/.relver
 
 # LuaJIT 2.1 supports mips64 and aarch64.
 ONLY_FOR_PLATFORM+=	*-*-*arm*
