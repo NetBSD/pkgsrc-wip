@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.16 2020/11/06 12:15:53 nia Exp $
-#
+# $NetBSD$
 
-DISTNAME=	LuaJIT-2.0.5
+DISTNAME=	LuaJIT-2.0.${TIMESTAMP}
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
-PKGREVISION=	2
 CATEGORIES=	lang lua
-MASTER_SITES=	http://luajit.org/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LuaJIT/}
+GITHUB_PROJECT=	${DISTNAME:C/-[^-]*$//}
+GITHUB_TAG=	cae36118
+TIMESTAMP=	1710087801	# git show --no-patch --format=%ct
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
 
-# LuaJIT 2.1.0 will support mips64 and aarch64.
+pre-configure:
+	${ECHO} ${TIMESTAMP} >${WRKSRC}/.relver
+
+# LuaJIT 2.1 supports mips64 and aarch64.
 ONLY_FOR_PLATFORM+=	*-*-*arm*
 ONLY_FOR_PLATFORM+=	*-*-i386
 ONLY_FOR_PLATFORM+=	*-*-mipseb
