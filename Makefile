@@ -100,7 +100,6 @@ SUBDIR+=	WEPCrack
 SUBDIR+=	ZMusic
 SUBDIR+=	ZenNode
 SUBDIR+=	a2ps-sharatype
-SUBDIR+=	abcl
 SUBDIR+=	accountsservice
 SUBDIR+=	acl
 SUBDIR+=	acme-client
