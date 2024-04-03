@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile,v 1.2 2017/05/29 21:47:31 alnsn Exp $
+
+Fix building on OS X.
+
+--- src/Makefile.orig	2017-05-01 18:11:00.000000000 +0000
++++ src/Makefile
+@@ -297,9 +297,6 @@ ifeq (,$(shell $(TARGET_CC) -o /dev/null
+   TARGET_XCFLAGS+= -fno-stack-protector
+ endif
+ ifeq (Darwin,$(TARGET_SYS))
+-  ifeq (,$(MACOSX_DEPLOYMENT_TARGET))
+-    export MACOSX_DEPLOYMENT_TARGET=10.4
+-  endif
+   TARGET_STRIP+= -x
+   TARGET_XSHLDFLAGS= -dynamiclib -single_module -undefined dynamic_lookup -fPIC
+   TARGET_DYNXLDOPTS=
