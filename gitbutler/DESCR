@@ -1,0 +1,7 @@
+GitButler is a git client that lets you work on multiple branches at the same
+time. It allows you to quickly organize file changes into separate branches
+while still having them applied to your working directory. You can then push
+branches individually to your remote, or directly create pull requests.
+
+In a nutshell, it's a more flexible version of git add -p and git rebase -i,
+allowing you to efficiently multitask across branches.

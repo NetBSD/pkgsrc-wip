@@ -1180,6 +1180,7 @@ SUBDIR+=	git-spindle
 SUBDIR+=	git-toolbelt
 SUBDIR+=	git-xargs
 SUBDIR+=	gitea-tea
+SUBDIR+=	gitbutler
 SUBDIR+=	gitg
 SUBDIR+=	gitlab
 SUBDIR+=	gitlab-assets

@@ -1,0 +1,20 @@
+$NetBSD$
+
+Hide lint section.
+
+--- Cargo.toml.orig	2024-04-04 07:41:11.447910844 +0000
++++ Cargo.toml
+@@ -1,8 +1,8 @@
+-[lints.clippy]
+-all = "deny"
+-perf = "deny"
+-correctness = "deny"
+-
++#[lints.clippy]
++#all = "deny"
++#perf = "deny"
++#correctness = "deny"
++#
+ [workspace]
+ members = [
+     "crates/gitbutler-core",
