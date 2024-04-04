@@ -3889,7 +3889,6 @@ SUBDIR+=	py-librosa
 SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libvirt
-SUBDIR+=	py-lieer
 SUBDIR+=	py-lifelines
 SUBDIR+=	py-lightgbm
 SUBDIR+=	py-linearalgebra
