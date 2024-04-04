@@ -1,33 +1,33 @@
-# $NetBSD: Makefile,v 1.11 2017/09/16 19:53:51 alnsn Exp $
-#
+# $NetBSD$
 
-DISTNAME=	LuaJIT-2.1.0-beta3
-PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT21/:S/-beta/beta/}
-CATEGORIES=	lang
-MASTER_SITES=	http://luajit.org/download/
+DISTNAME=	LuaJIT-2.1.1710088188	# see .relver
+PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT21/}
+CATEGORIES=	lang lua
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LuaJIT/}
+GITHUB_PROJECT=	${DISTNAME:C/-[^-]*$//}
+GITHUB_TAG=	d06beb0480c5d1eb53b3343e78063950275aa281
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
-CONFLICTS+=	LuaJIT2-[0-9]*
+CONFLICTS+=	LuaJIT2-[0-9]* LuaJIT-git-[0-9]*
 
 USE_TOOLS+=	gmake
 
-NOT_PAX_MPROTECT_SAFE+=	bin/luajit-${PKGVERSION}
+ONLY_FOR_PLATFORM+=	*-*-aarch64*
+ONLY_FOR_PLATFORM+=	*-*-*arm*	# ARMv5+, ARM9E+
+ONLY_FOR_PLATFORM+=	*-*-i386	# req SSE2
+ONLY_FOR_PLATFORM+=	*-*-mips*
+ONLY_FOR_PLATFORM+=	*-*-powerpc
+ONLY_FOR_PLATFORM+=	*-*-x86_64
 
-# Address pkg/47587 lua not linked to pthread causes issues with modules
+# pkg/47587: lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} >= 19
-CFLAGS.Darwin+=		-fno-stack-check
-MAKE_ARGS+=		XCFLAGS=-DLUAJIT_ENABLE_GC64
-.endif
-
 
 # Upstream doesn't support building shared libs on SunOS
 # http://www.freelists.org/post/luajit/LuaJIT-on-solaris-64

@@ -12,9 +12,10 @@ HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
+CONFLICTS+=	LuaJIT21-[0-9]* LuaJIT-git-[0-9]*
+
 USE_TOOLS+=	gmake
 
-# LuaJIT 2.1 supports mips64 and aarch64.
 ONLY_FOR_PLATFORM+=	*-*-*arm*
 ONLY_FOR_PLATFORM+=	*-*-i386
 ONLY_FOR_PLATFORM+=	*-*-mipseb
@@ -22,7 +23,7 @@ ONLY_FOR_PLATFORM+=	*-*-mipsel
 ONLY_FOR_PLATFORM+=	*-*-powerpc
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 
-# Address pkg/47587 lua not linked to pthread causes issues with modules
+# pkg/47587: lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 

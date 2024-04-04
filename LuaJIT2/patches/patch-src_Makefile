@@ -2,14 +2,15 @@ $NetBSD$
 
 Fix building on OS X.
 
---- src/Makefile.orig	2023-08-21 01:06:26.000000000 +0000
+--- src/Makefile.orig	2024-03-10 16:23:21.000000000 +0000
 +++ src/Makefile
-@@ -302,7 +302,7 @@ ifeq (,$(shell $(TARGET_CC) -o /dev/null
+@@ -301,9 +301,6 @@ ifeq (,$(shell $(TARGET_CC) -o /dev/null
+   TARGET_XCFLAGS+= -fno-stack-protector
  endif
  ifeq (Darwin,$(TARGET_SYS))
-   ifeq (,$(MACOSX_DEPLOYMENT_TARGET))
+-  ifeq (,$(MACOSX_DEPLOYMENT_TARGET))
 -    $(error missing: export MACOSX_DEPLOYMENT_TARGET=XX.YY)
-+    export MACOSX_DEPLOYMENT_TARGET=10.4
-   endif
+-  endif
    TARGET_STRIP+= -x
    TARGET_XSHLDFLAGS= -dynamiclib -single_module -undefined dynamic_lookup -fPIC
+   TARGET_DYNXLDOPTS=

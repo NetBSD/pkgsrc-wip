@@ -2,7 +2,7 @@ $NetBSD$
 
 fix building on darwin
 
---- src/Makefile.orig	2024-04-04 18:11:30.456080960 +0000
+--- src/Makefile.orig	2024-04-04 18:49:03.922005656 +0000
 +++ src/Makefile
 @@ -315,9 +315,6 @@ ifeq (,$(shell $(TARGET_CC) -o /dev/null
    TARGET_XCFLAGS+= -fno-stack-protector

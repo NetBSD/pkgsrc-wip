@@ -8,9 +8,9 @@ include/luajit-${PKGVERSION}/luaconf.h
 include/luajit-${PKGVERSION}/luajit.h
 include/luajit-${PKGVERSION}/lualib.h
 lib/libluajit-5.1.a
-lib/libluajit-5.1.so
-lib/libluajit-5.1.so.2
-lib/libluajit-5.1.so.${PKGVERSION}
+${PLIST.shared}lib/libluajit-5.1.so
+${PLIST.shared}lib/libluajit-5.1.so.2
+${PLIST.shared}lib/libluajit-5.1.so.${PKGVERSION}
 lib/pkgconfig/luajit.pc
 man/man1/luajit.1
 share/luajit-${PKGVERSION}/jit/bc.lua

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	LuaJIT-git-2.1
-CATEGORIES=	lang
+CATEGORIES=	lang lua
 
 GIT_REPO=	https://luajit.org/git/luajit.git
 GIT_BRANCH=	v2.1
@@ -25,6 +25,16 @@ ONLY_FOR_PLATFORM+=	*-*-x86_64
 # pkg/47587: lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# Upstream doesn't support building shared libs on SunOS
+# http://www.freelists.org/post/luajit/LuaJIT-on-solaris-64
+PLIST_VARS+=		shared
+.if ${OPSYS} != "SunOS"
+PLIST.shared=		yes
+.endif
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\.so/) {$$0 = "$${PLIST.shared}" $$0;}}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
