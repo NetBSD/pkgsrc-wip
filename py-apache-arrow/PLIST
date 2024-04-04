@@ -12,6 +12,7 @@ ${PYSITELIB}/pyarrow/__init__.pyo
 ${PYSITELIB}/pyarrow/_acero.pxd
 ${PYSITELIB}/pyarrow/_acero.pyx
 ${PYSITELIB}/pyarrow/_acero.so
+${PYSITELIB}/pyarrow/_azurefs.pyx
 ${PYSITELIB}/pyarrow/_compute.pxd
 ${PYSITELIB}/pyarrow/_compute.pyx
 ${PYSITELIB}/pyarrow/_compute.so
@@ -43,8 +44,6 @@ ${PYSITELIB}/pyarrow/_generated_version.py
 ${PYSITELIB}/pyarrow/_generated_version.pyc
 ${PYSITELIB}/pyarrow/_generated_version.pyo
 ${PYSITELIB}/pyarrow/_hdfs.pyx
-${PYSITELIB}/pyarrow/_hdfsio.pyx
-${PYSITELIB}/pyarrow/_hdfsio.so
 ${PYSITELIB}/pyarrow/_json.pxd
 ${PYSITELIB}/pyarrow/_json.pyx
 ${PYSITELIB}/pyarrow/_json.so
@@ -93,9 +92,6 @@ ${PYSITELIB}/pyarrow/error.pxi
 ${PYSITELIB}/pyarrow/feather.py
 ${PYSITELIB}/pyarrow/feather.pyc
 ${PYSITELIB}/pyarrow/feather.pyo
-${PYSITELIB}/pyarrow/filesystem.py
-${PYSITELIB}/pyarrow/filesystem.pyc
-${PYSITELIB}/pyarrow/filesystem.pyo
 ${PYSITELIB}/pyarrow/flight.py
 ${PYSITELIB}/pyarrow/flight.pyc
 ${PYSITELIB}/pyarrow/flight.pyo
@@ -103,9 +99,6 @@ ${PYSITELIB}/pyarrow/fs.py
 ${PYSITELIB}/pyarrow/fs.pyc
 ${PYSITELIB}/pyarrow/fs.pyo
 ${PYSITELIB}/pyarrow/gandiva.pyx
-${PYSITELIB}/pyarrow/hdfs.py
-${PYSITELIB}/pyarrow/hdfs.pyc
-${PYSITELIB}/pyarrow/hdfs.pyo
 ${PYSITELIB}/pyarrow/include/arrow/acero/accumulation_queue.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/aggregate_node.h
 ${PYSITELIB}/pyarrow/include/arrow/acero/api.h
@@ -177,9 +170,6 @@ ${PYSITELIB}/pyarrow/include/arrow/compute/expression.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/function.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/function_options.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/kernel.h
-${PYSITELIB}/pyarrow/include/arrow/compute/key_hash.h
-${PYSITELIB}/pyarrow/include/arrow/compute/key_map.h
-${PYSITELIB}/pyarrow/include/arrow/compute/light_array.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/ordering.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/registry.h
 ${PYSITELIB}/pyarrow/include/arrow/compute/row/grouper.h
@@ -223,6 +213,7 @@ ${PYSITELIB}/pyarrow/include/arrow/extension_type.h
 ${PYSITELIB}/pyarrow/include/arrow/filesystem/api.h
 ${PYSITELIB}/pyarrow/include/arrow/filesystem/azurefs.h
 ${PYSITELIB}/pyarrow/include/arrow/filesystem/filesystem.h
+${PYSITELIB}/pyarrow/include/arrow/filesystem/filesystem_library.h
 ${PYSITELIB}/pyarrow/include/arrow/filesystem/gcsfs.h
 ${PYSITELIB}/pyarrow/include/arrow/filesystem/hdfs.h
 ${PYSITELIB}/pyarrow/include/arrow/filesystem/localfs.h
@@ -610,6 +601,9 @@ ${PYSITELIB}/pyarrow/tests/__init__.pyo
 ${PYSITELIB}/pyarrow/tests/arrow_16597.py
 ${PYSITELIB}/pyarrow/tests/arrow_16597.pyc
 ${PYSITELIB}/pyarrow/tests/arrow_16597.pyo
+${PYSITELIB}/pyarrow/tests/arrow_39313.py
+${PYSITELIB}/pyarrow/tests/arrow_39313.pyc
+${PYSITELIB}/pyarrow/tests/arrow_39313.pyo
 ${PYSITELIB}/pyarrow/tests/arrow_7980.py
 ${PYSITELIB}/pyarrow/tests/arrow_7980.pyc
 ${PYSITELIB}/pyarrow/tests/arrow_7980.pyo
@@ -753,9 +747,6 @@ ${PYSITELIB}/pyarrow/tests/test_extension_type.pyo
 ${PYSITELIB}/pyarrow/tests/test_feather.py
 ${PYSITELIB}/pyarrow/tests/test_feather.pyc
 ${PYSITELIB}/pyarrow/tests/test_feather.pyo
-${PYSITELIB}/pyarrow/tests/test_filesystem.py
-${PYSITELIB}/pyarrow/tests/test_filesystem.pyc
-${PYSITELIB}/pyarrow/tests/test_filesystem.pyo
 ${PYSITELIB}/pyarrow/tests/test_flight.py
 ${PYSITELIB}/pyarrow/tests/test_flight.pyc
 ${PYSITELIB}/pyarrow/tests/test_flight.pyo
@@ -771,9 +762,6 @@ ${PYSITELIB}/pyarrow/tests/test_gandiva.pyo
 ${PYSITELIB}/pyarrow/tests/test_gdb.py
 ${PYSITELIB}/pyarrow/tests/test_gdb.pyc
 ${PYSITELIB}/pyarrow/tests/test_gdb.pyo
-${PYSITELIB}/pyarrow/tests/test_hdfs.py
-${PYSITELIB}/pyarrow/tests/test_hdfs.pyc
-${PYSITELIB}/pyarrow/tests/test_hdfs.pyo
 ${PYSITELIB}/pyarrow/tests/test_io.py
 ${PYSITELIB}/pyarrow/tests/test_io.pyc
 ${PYSITELIB}/pyarrow/tests/test_io.pyo

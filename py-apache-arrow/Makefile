@@ -8,6 +8,7 @@ MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://arrow.apache.org/
 COMMENT=	Python Bindings for Apache-Arrow
 LICENSE=	apache-2.0
+DISTINFO_FILE=	${.CURDIR}/../../wip/apache-arrow/distinfo
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/apache-arrow/options.mk"
