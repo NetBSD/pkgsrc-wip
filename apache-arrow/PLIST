@@ -75,9 +75,6 @@ include/arrow/compute/expression.h
 include/arrow/compute/function.h
 include/arrow/compute/function_options.h
 include/arrow/compute/kernel.h
-include/arrow/compute/key_hash.h
-include/arrow/compute/key_map.h
-include/arrow/compute/light_array.h
 include/arrow/compute/ordering.h
 include/arrow/compute/registry.h
 include/arrow/compute/row/grouper.h
@@ -121,6 +118,7 @@ include/arrow/extension_type.h
 include/arrow/filesystem/api.h
 include/arrow/filesystem/azurefs.h
 include/arrow/filesystem/filesystem.h
+include/arrow/filesystem/filesystem_library.h
 include/arrow/filesystem/gcsfs.h
 include/arrow/filesystem/hdfs.h
 include/arrow/filesystem/localfs.h
@@ -399,8 +397,8 @@ lib/cmake/Arrow/ArrowOptions.cmake
 lib/cmake/Arrow/ArrowTargets-release.cmake
 lib/cmake/Arrow/ArrowTargets.cmake
 lib/cmake/Arrow/FindBrotliAlt.cmake
-lib/cmake/Arrow/FindGLOG.cmake
 lib/cmake/Arrow/FindSnappyAlt.cmake
+lib/cmake/Arrow/FindglogAlt.cmake
 lib/cmake/Arrow/Findlz4Alt.cmake
 lib/cmake/Arrow/Findre2Alt.cmake
 lib/cmake/Arrow/Findutf8proc.cmake
@@ -421,21 +419,21 @@ lib/cmake/Parquet/ParquetTargets-release.cmake
 lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
-lib/libarrow.so.1500
-lib/libarrow.so.1500.0.0
+lib/libarrow.so.1600
+lib/libarrow.so.1600.0.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
-lib/libarrow_acero.so.1500
-lib/libarrow_acero.so.1500.0.0
+lib/libarrow_acero.so.1600
+lib/libarrow_acero.so.1600.0.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
-lib/libarrow_dataset.so.1500
-lib/libarrow_dataset.so.1500.0.0
+lib/libarrow_dataset.so.1600
+lib/libarrow_dataset.so.1600.0.0
 lib/libparquet.a
 lib/libparquet.so
-lib/libparquet.so.1500
-lib/libparquet.so.1500.0.0
+lib/libparquet.so.1600
+lib/libparquet.so.1600.0.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -445,8 +443,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.1500.0.0-gdb.py
+share/arrow/gdb/libarrow.so.1600.0.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20231221/lib
+@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20240420/lib
