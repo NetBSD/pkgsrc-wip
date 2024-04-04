@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	partd-1.4.1
+PKGREVISION=1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/partd/}
@@ -11,7 +12,7 @@ HOMEPAGE=	https://github.com/dask/partd/
 COMMENT=	Key-Value byte store with appendable values
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=  27 38 312
+PYTHON_VERSIONS_INCOMPATIBLE=  27 38
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.41:../../devel/py-wheel

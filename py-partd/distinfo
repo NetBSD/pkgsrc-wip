@@ -3,3 +3,4 @@ $NetBSD$
 BLAKE2s (partd-1.4.1.tar.gz) = 4ba94699e0ddff732221560baef4ade606fd201bc0d6a930062da954dc6924f1
 SHA512 (partd-1.4.1.tar.gz) = 0bf285a33731d3c000e6c2c1958cda0df21c3a2be31694ac31ce0cc45aa2b31b8631f962c25b9ecac3831474abb5872748bd3348f99e13faadee467a1f164492
 Size (partd-1.4.1.tar.gz) = 36272 bytes
+SHA1 (patch-setup.py) = 7a06bb14a8533e7ccdfb8ebed776c0193e1e8a15
