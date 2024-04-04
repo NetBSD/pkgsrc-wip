@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (virtualxt-0.10.1.tar.gz) = 6c5308017c99caf94c7ff4bc12ae7e3f2e521f492a476212a209bbf7764eb93b
-SHA512 (virtualxt-0.10.1.tar.gz) = dc1ae19e92d21542f3643f3e7f9ca9039f877e1c825552b4994ec5cee80c738fb909b5f2edae1e54f0d08c96fcc21868862c47a71713a1ca4c093e1a2a4dd50c
-Size (virtualxt-0.10.1.tar.gz) = 92930994 bytes
+BLAKE2s (virtualxt-0.12.tar.gz) = 75f5aba78b10f4bccbb63ede9e2e74f3655616d144142b5b29657e310229cc8d
+SHA512 (virtualxt-0.12.tar.gz) = 41d111d9636815909af98574354a61d38f432ef8060eec5741f7790d492da6ea2ab4144d5f589b531bffc75afb19b873bf7dad85b75f1134c004f57c8994bd05
+Size (virtualxt-0.12.tar.gz) = 93652372 bytes

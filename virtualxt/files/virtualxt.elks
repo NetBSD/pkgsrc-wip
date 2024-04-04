@@ -5,8 +5,8 @@ DATA=$HERE/../share/virtualxt
 CONFIG=$($HERE/virtualxt --locate)
 
 mkdir -p $CONFIG/boot
-if [ ! -f $CONFIG/boot/elks.img ]; then
-    cp $DATA/boot/elks.img $CONFIG/boot/
+if [ ! -f $CONFIG/boot/elks_hd.img ]; then
+    cp $DATA/boot/elks_hd.img $CONFIG/boot/
 fi
 
-exec "$HERE/virtualxt" -a "$CONFIG/boot/elks.img" "$@"
+exec "$HERE/virtualxt" -a "$CONFIG/boot/elks_hd.img" "$@"

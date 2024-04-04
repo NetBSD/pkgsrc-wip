@@ -7,7 +7,7 @@ share/virtualxt/bios/GLABIOS640.ROM
 share/virtualxt/bios/GLaTICK_0.8.4_AT.ROM
 share/virtualxt/bios/pcxtbios.bin
 share/virtualxt/bios/vxtx.bin
-share/virtualxt/boot/elks.img
+share/virtualxt/boot/elks_hd.img
 share/virtualxt/boot/freedos.img
 share/virtualxt/boot/freedos_hd.img
 share/virtualxt/boot/freedos_web_hd.img

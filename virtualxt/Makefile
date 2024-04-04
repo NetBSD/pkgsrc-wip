@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=	virtualxt-0.10.1
+DISTNAME=	virtualxt-0.12
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andreas-jonsson/}
 
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin share/virtualxt/bios share/virtualxt/boot
 BUILD_TARGET=		sdl2-frontend
-CFLAGS+=		-DVXT_VERSION_RELEASE
+CFLAGS+=		-DVXT_VERSION_RELEASE -Wno-error=char-subscripts
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 post-extract:
@@ -27,7 +27,7 @@ post-extract:
 	${CP} ${FILESDIR}/virtualxt.elks ${WRKSRC}
 
 pre-build:
-	cd ${WRKSRC} && premake5 --static --modules=-network,lua gmake
+	cd ${WRKSRC} && premake5 --static --modules gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/bin/virtualxt ${DESTDIR}${PREFIX}/bin
@@ -43,7 +43,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/boot/freedos.img ${DESTDIR}${PREFIX}/share/virtualxt/boot
 	${INSTALL_DATA} ${WRKSRC}/boot/freedos_hd.img ${DESTDIR}${PREFIX}/share/virtualxt/boot
 	${INSTALL_DATA} ${WRKSRC}/boot/freedos_web_hd.img ${DESTDIR}${PREFIX}/share/virtualxt/boot
-	${INSTALL_DATA} ${WRKSRC}/boot/elks.img ${DESTDIR}${PREFIX}/share/virtualxt/boot
+	${INSTALL_DATA} ${WRKSRC}/boot/elks_hd.img ${DESTDIR}${PREFIX}/share/virtualxt/boot
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
