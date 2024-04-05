@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2023/08/14 05:23:51 wiz Exp $
 
-VERSION=	2.27
+VERSION=	2.28
 DISTNAME=	minimap2-${VERSION}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
