@@ -1,0 +1,34 @@
+gradle: update to 8.7
+
+3 years of active development.
+
+Notable updates between major versions:
+7 -> 8:
+- upgrades the Kotlin DSL's API level to Kotlin 1.8.
+- configuration cache speeds up builds by executing more tasks in
+  parallel.
+- gradle user home can be managed by configuring the retention time of
+  cache directories.
+  - Cache cleanup can also be disabled.
+- many bug fixes and other general improvements.
+
+6 -> 7:
+- enabled file system watching by default to make your incremental
+  builds faster
+- support Java 16
+- adds support for building on Macs using Apple Silicon processors.
+- feature preview for centralized dependency versions
+- enables build validation errors to make your builds more reliable
+- easier to create convention plugins for settings files.
+- many incubating features have been promoted to stable.
+
+Major and minor release notes:
+https://docs.gradle.org/8.7/release-notes.html
+...
+https://docs.gradle.org/8.0/release-notes.html
+
+https://docs.gradle.org/7.6/release-notes.html
+...
+https://docs.gradle.org/7.0/release-notes.html
+
+https://docs.gradle.org/6.9/release-notes.html
