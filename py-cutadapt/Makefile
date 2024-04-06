@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cutadapt.readthedocs.io/en/stable/
 COMMENT=	Find and remove adapter sequences, primers, poly-A tails, etc
 LICENSE=	mit

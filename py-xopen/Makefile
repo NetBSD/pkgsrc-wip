@@ -5,7 +5,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pycompression/xopen
 COMMENT=	Open compressed files transparently
 LICENSE=	mit
