@@ -6,7 +6,7 @@ PKGNAME=	lua-lbn-${LBN_VERSION}
 CATEGORIES=	math
 MASTER_SITES=	http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/${LVER}/
 
-MAINTAINER=	alnsn@yandex.ru
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lbn
 COMMENT=	Arbitrary precision library for Lua based on OpenSSL bn
 LICENSE=	public-domain

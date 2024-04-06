@@ -7,7 +7,7 @@ DISTNAME=	fastbit-ibis${VER}
 CATEGORIES=	databases
 MASTER_SITES=	https://codeforge.lbl.gov/frs/download.php/208/
 
-MAINTAINER=	alnsn@yandex.ru
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sdm.lbl.gov/fastbit/
 COMMENT=	Efficient Compressed Bitmap Index Technology
 LICENSE=	gnu-lgpl-v2.1

@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jessevdk/}
 GITHUB_PROJECT=	go-flags
 
-MAINTAINER=	alnsn@yandex.ru
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jessevdk/go-flags
 COMMENT=	Go command line option parser
 LICENSE=	modified-bsd

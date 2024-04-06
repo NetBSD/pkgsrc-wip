@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=quickfix/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 GITHUB_TAG=	v.${PKGVERSION}
 
-MAINTAINER=	alnsn@yandex.ru
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.quickfixengine.org/
 COMMENT=	FIX engine
 LICENSE=	quickfix

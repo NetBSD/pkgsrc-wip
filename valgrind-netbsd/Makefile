@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://valgrind.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		alnsn@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://valgrind.org/
 COMMENT=		Debugging and profiling tools
 LICENSE=		gnu-gpl-v2

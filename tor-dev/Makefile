@@ -5,7 +5,7 @@ PKGNAME=	${DISTNAME:S/tor/tordev/:S/-alpha//:S/-rc/rc0/}
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.torproject.org/
 COMMENT=	Anonymizing overlay network for TCP
 LICENSE=	modified-bsd

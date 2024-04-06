@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=c-cube/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION}//}
 DIST_SUBDIR=	ocaml-gen
 
-MAINTAINER=	alnsn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/c-cube/gen/
 COMMENT=	Simple, efficient iterators for OCaml
 LICENSE=	2-clause-bsd
