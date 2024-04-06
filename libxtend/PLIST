@@ -138,6 +138,8 @@ man/man3/xt_strblank.3
 man/man3/xt_strisint.3
 man/man3/xt_strisreal.3
 man/man3/xt_strlbasecpy.3
+man/man3/xt_strlcat.3
+man/man3/xt_strlcpy.3
 man/man3/xt_strllower.3
 man/man3/xt_strlower.3
 man/man3/xt_strlupper.3
