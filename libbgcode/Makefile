@@ -4,7 +4,7 @@ DISTNAME=	libbgcode-20231123
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prusa3d/}
 GITHUB_PROJECT=	libbgcode
-GITHUB_TAG=	bc390aab4427589a6402b4c7f65cf4d0a8f987ec
+GITHUB_TAG=	8ae75bd0eea622f0e34cae311b3bd065b55eae9b
 
 MAINTAINER=	stix@stix.id.au
 HOMEPAGE=	https://www.github.com/prusa3d/libbgcode
@@ -18,7 +18,7 @@ USE_CMAKE=	yes
 
 # CMake goes looking for this binary. Make it happy.
 pre-configure:
-	${LN} -s ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
+	${LN} -sf ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
 
 .include "../../mk/bsd.prefs.mk"
 
