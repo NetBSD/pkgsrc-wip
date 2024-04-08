@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	vcsh-2.0.8
+DISTNAME=	vcsh-2.0.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RichiH/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
+EXTRACT_SUFX=	.tar.zst
 
 MAINTAINER=	sasha-pkgsrc@arcocene.org
 HOMEPAGE=	https://github.com/RichiH/vcsh/
