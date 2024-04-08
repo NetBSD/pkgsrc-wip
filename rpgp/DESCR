@@ -1,0 +1,8 @@
+rPGP is the only pure Rust implementation of OpenPGP, following RFC4880 and
+RFC2440. It offers a minimal low-level API and does not prescribe trust schemes
+or key management policies. It fully supports all functionality required by the
+Autocrypt 1.1 e-mail encryption specification.
+
+rPGP is regularly published as the pgp Crate and its RSA implementation lives
+under the collective RustCrypto umbrella. For ECC crypto support we are using
+Curve25519-dalek.
