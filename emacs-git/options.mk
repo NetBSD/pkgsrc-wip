@@ -2,7 +2,7 @@
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson libgccjit libotf libwebp svg tree-sitter xaw3d xml
+PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick libgccjit libotf libwebp svg tree-sitter xaw3d xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -21,7 +21,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # imagemagick is disabled because of stability/security
 # svg is omitted because it is rarely needed and heavyweight due to the rust dependency
 # xaw3d is omitted because it is only valid with xaw
-PKG_SUGGESTED_OPTIONS=	dbus libgccjit gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
+PKG_SUGGESTED_OPTIONS=	dbus libgccjit gnutls gtk3 libotf libwebp tree-sitter xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -33,15 +33,6 @@ PKG_SUGGESTED_OPTIONS=	dbus libgccjit gnutls gtk3 jansson libotf libwebp tree-si
 .  include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-dbus
-.endif
-
-###
-### Support JSON
-###
-.if !empty(PKG_OPTIONS:Mjansson)
-.  include "../../textproc/jansson/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-json
 .endif
 
 ###
