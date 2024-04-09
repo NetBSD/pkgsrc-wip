@@ -248,7 +248,7 @@ TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 .  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
 .    if ${MACHINE_ARCH} != "aarch64" && ${MACHINE_ARCH} != "earmv7hf" && \
         ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "earmv6hf" && \
-        ${MACHINE_ARCH} != "riscv64"
+        ${MACHINE_ARCH} != "riscv64" && ${MACHINE_ARCH} != "aarch64eb"
 DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
 RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
 FORCE_RPATH=
