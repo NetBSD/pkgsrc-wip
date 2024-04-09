@@ -5,10 +5,13 @@ libexec/lpjs/ad-hoc
 libexec/lpjs/admin
 libexec/lpjs/banner
 libexec/lpjs/chaperone
+libexec/lpjs/compd-enable
 libexec/lpjs/create-script
+libexec/lpjs/dispatchd-enable
 libexec/lpjs/jobs
 libexec/lpjs/log
 libexec/lpjs/menu
+libexec/lpjs/munge-enable
 libexec/lpjs/nodes
 libexec/lpjs/reset-queue
 libexec/lpjs/restart
