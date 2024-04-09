@@ -20,6 +20,8 @@ USE_TOOLS+=		pkg-config perl:build
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
+PATCHDIR=		${.CURDIR}/../../emulators/qemu/patches
+
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
 
