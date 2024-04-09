@@ -17,7 +17,8 @@ COMMENT=	Lightweight, Portable Job Scheduler
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS=	realpath>0:../../wip/realpath
-DEPENDS=	auto-admin>0:../../wip/auto-admin
+DEPENDS=	auto-admin>0:../../wip/auto-admin \
+		runas>0:../../sysutils/runas
 
 # Force install with full debug info until release
 CFLAGS+=	-g
