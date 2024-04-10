@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.284 2023/06/19 14:46:47 bsiegert Exp $
 
-DISTNAME=	rustc-1.77.1-src
+DISTNAME=	rustc-1.77.2-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
