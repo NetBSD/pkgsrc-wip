@@ -2,7 +2,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk14
+PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk
 PKG_SUPPORTED_OPTIONS=	cairo opengl pango x11 xcursor xfixes xft2 xinerama xrender
 PKG_SUPPORTED_OPTIONS+=	wayland  # untested
 # FLTK has native backends for macOS and Windows (Cygwin)

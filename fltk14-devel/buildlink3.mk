@@ -10,8 +10,9 @@ BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.4.0
 BUILDLINK_PKGSRCDIR.fltk?=	../../wip/fltk14-devel
 BUILDLINK_FILES.fltk+=		include/Fl/*
 
-pkgbase := fltk
 .include "../../mk/bsd.fast.prefs.mk"
+
+pkgbase := fltk
 .include "../../mk/pkg-build-options.mk"
 
 # For "cairo" option
@@ -85,6 +86,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .endif # FLTK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-fltk

@@ -1,7 +1,6 @@
 $NetBSD$
 
-BLAKE2s (fltk-1.4.x-4742d830beb17bd92fed83eb58cede09bfddd576.zip) = 27fab8115caf7cb1fb6ae9bb7a4fee7ec90ebd77d494de9011d6b9e4f3cfe18d
-SHA512 (fltk-1.4.x-4742d830beb17bd92fed83eb58cede09bfddd576.zip) = 3d87dabf4cc1bb8d14bcdea5261c49ea5e31dfd0951226874b60d13fa9a041dfb8b2fa97f51aa7e521a846b6537b66970fddb3d647a484378d219c5f3b4d3397
-Size (fltk-1.4.x-4742d830beb17bd92fed83eb58cede09bfddd576.zip) = 9338058 bytes
+BLAKE2s (fltk-1.4.x-05a95e146b2429154b360030d098f0dae5555706.zip) = d469e5c7b04267e92647ec97a96bde0bd11b1c00551ce11ee2ed75e29e8c8ec7
+SHA512 (fltk-1.4.x-05a95e146b2429154b360030d098f0dae5555706.zip) = 406063490a69ecad6799cf0b2dc450e8aed48da7a9ef3b204abe34b5716eb21fe0381bdab00a1fae528b3e08cb9e87255bd19556de283514cc4e46852f3a4ef3
+Size (fltk-1.4.x-05a95e146b2429154b360030d098f0dae5555706.zip) = 9340525 bytes
 SHA1 (patch-documentation_Makefile) = 4af65225feb343f8d4bf1af11cfb4929b7fe81c6
-SHA1 (patch-src_drivers_Unix_Fl__Unix__System__Driver.cxx) = f88dbbc696afe375e850555c0579dec67c106ac2
