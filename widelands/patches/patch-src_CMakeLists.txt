@@ -1,10 +1,10 @@
-$NetBSD$
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2020/07/27 15:21:43 nia Exp $
 
 Support NetBSD.
 
---- src/CMakeLists.txt.orig	2021-06-14 09:22:20.000000000 +0000
+--- src/CMakeLists.txt.orig	2024-03-28 10:12:05.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -145,9 +145,11 @@ wl_library(widelands_options
+@@ -165,9 +165,13 @@ wl_library(widelands_options
    USES_SDL2
  )
  
@@ -14,7 +14,9 @@ Support NetBSD.
 +    CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
    target_link_libraries(widelands_ball_of_mud ${EXECINFO_LIBRARY})
 -endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
-+endif ()
++endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR
++       CMAKE_SYSTEM_NAME MATCHES "NetBSD" OR
++       CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
  
  if (WIN32)
    target_link_libraries(widelands_ball_of_mud wsock32)

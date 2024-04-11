@@ -1,11 +1,16 @@
-$NetBSD$
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:30 nia Exp $
 
-RMD160 (widelands-1.0.tar.gz) = fe312c5426e5e4a17af8788f85a6916c11bffdb8
-SHA512 (widelands-1.0.tar.gz) = 1092750944a8669682097dfbd2b578cdb8fab377f32cb81ce8d85b9d9b2e8ae8c4c73500c0a89be649b360fd7e086e19595eba37cecb8d64679e46f7da13e46e
-Size (widelands-1.0.tar.gz) = 792124780 bytes
-SHA1 (patch-CMakeLists.txt) = 9393491b8b9829c06dfbd6d6089e2acd0e97e328
-SHA1 (patch-src_CMakeLists.txt) = dafa0f7e77fc61bc6ac6c9608acfd27629a13f31
-SHA1 (patch-src_base_i18n.cc) = fb0bdc35166b3dac0ee906a4a8f155c190a488df
-SHA1 (patch-src_network_bufferedconnection.h) = c3b8ced8d90a70da88dcb61ed079bf95ac350a23
-SHA1 (patch-src_scripting_lua__globals.cc) = f26d5a1949078b218e1de8cd0112a98996f63e53
-SHA1 (patch-xdg_CMakeLists.txt) = 4fac4da5c8d7d1f528caec5de21a212c03f44932
+BLAKE2s (widelands/v1.2.tar.gz) = ff2be3b1449b2ec987938fd039584861295334cafe3f59312164a886908c4c45
+SHA512 (widelands/v1.2.tar.gz) = 4e0c7c02c4bdb2806d67a07425d7a17b2867416c994e18f8511b45087e80645a3e602ee168f3f8640434b47eff25d9758f12d2a677b454d95855d8173e9dc8c8
+Size (widelands/v1.2.tar.gz) = 457973371 bytes
+SHA1 (patch-CMakeLists.txt) = 594abedec6cd2449382db3e63877f1d2c56df049
+SHA1 (patch-src_CMakeLists.txt) = f833ae4b06e81cc7a147e1e5a03c02fad92370c1
+SHA1 (patch-src_base_i18n.cc) = 785cdfaca59f929de14dde96386f9e9cfca27e21
+SHA1 (patch-src_base_i18n.h) = 4e9617d13a0afa5b17a0609a092d8f71d051e6af
+SHA1 (patch-src_graphic_text_textstream.cc) = ae297b11c8e782cf48f915929e3bc542b9ddbf65
+SHA1 (patch-src_network_bufferedconnection.cc) = b0d33bd578b408e969d5ebc591489825d9744a6c
+SHA1 (patch-src_network_nethost.cc) = b35e2b1d9b776ec5a9113ecf1031627b0933b712
+SHA1 (patch-src_network_network.cc) = 3f2b24533e3657103c6c05d2a425fb7850e35f4f
+SHA1 (patch-src_network_network.h) = 1f4ce455e2de0e91e9760e13df8fbba68a58ab20
+SHA1 (patch-src_network_network__lan__promotion.cc) = 5cea8998d422c3645e032d212847b40c121a21ec
+SHA1 (patch-src_scripting_lua__globals.cc) = 246f1d4425374025fc0a23c81381cff43fd40f4f

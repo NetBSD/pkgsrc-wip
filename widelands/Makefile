@@ -1,8 +1,9 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.36 2023/11/12 13:21:45 wiz Exp $
 
-DISTNAME=	widelands-1.0
+PKGNAME=	widelands-1.2
+DISTNAME=	v${PKGVERSION_NOREV}
 CATEGORIES=	games
-MASTER_SITES=	https://launchpad.net/widelands/1.x/${PKGVERSION_NOREV}/+download/
+MASTER_SITES=	https://codeberg.org/wl/widelands/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.widelands.org/
@@ -12,19 +13,21 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.8
-
-# Disable if build hits the limit for open files
-MAKE_JOBS_SAFE=	yes
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DWL_INSTALL_BASEDIR=${PREFIX}
 CMAKE_ARGS+=	-DWL_INSTALL_DATADIR=${PREFIX}/share/widelands
+CMAKE_ARGS+=	-DWL_INSTALL_BINDIR=${PREFIX}/bin
+CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/boost
+#CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS:STRING=-fsanitize=address
+#CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS:STRING=-g
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=RelWithDebInfo
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=shadow
 
@@ -37,7 +40,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/widelands
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
+DIST_SUBDIR=	widelands
+WRKSRC=		${WRKDIR}/widelands
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,21 +55,17 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 post-install:
-	${MV}	${DESTDIR}${PREFIX}/widelands \
-		${DESTDIR}${PREFIX}/wl_create_spritesheet \
-		${DESTDIR}${PREFIX}/wl_map_object_info \
-		${DESTDIR}${PREFIX}/wl_map_info \
-		${DESTDIR}${PREFIX}/bin
 	${MV}	${DESTDIR}${PREFIX}/VERSION \
 		${DESTDIR}${PREFIX}/ChangeLog \
 		${DESTDIR}${PREFIX}/CREDITS \
 		${DESTDIR}${PREFIX}/COPYING \
 		${DESTDIR}${PREFIX}/share/doc/widelands
 
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -75,6 +75,5 @@ post-install:
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

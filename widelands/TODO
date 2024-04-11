@@ -1,6 +1,0 @@
-[X] Build hits limit for open files
-    https://github.com/widelands/widelands/issues/5005
-[X] Update PLIST
-[ ] FATAL EXCEPTION while loading game data
-    https://github.com/widelands/widelands/issues/5008
-    Works with locale "de_DE.UTF-8", but not with "en_US.UTF-8" on NetBSD 9.
