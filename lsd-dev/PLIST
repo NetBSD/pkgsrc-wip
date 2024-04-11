@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2024/03/23 19:12:02 pin Exp $
+bin/lsd
+man/man1/lsd.1
