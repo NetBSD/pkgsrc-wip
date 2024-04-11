@@ -1,7 +1,9 @@
 # $NetBSD$
 #
+# Update minor version when adding/removing dependencies
+# Update revision for lesser changes
 
-DISTNAME=	rna-seq-1.2.3
+DISTNAME=	rna-seq-1.3.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -19,7 +21,6 @@ DEPENDS+=	rna-star>0:../../wip/rna-star
 DEPENDS+=	samtools>0:../../biology/samtools
 DEPENDS+=	igv>0:../../biology/igv
 DEPENDS+=	fasda>0:../../wip/fasda
-DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
 DEPENDS+=	webbrowser>0:../../wip/webbrowser
 DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	lz4>0:../../archivers/lz4
