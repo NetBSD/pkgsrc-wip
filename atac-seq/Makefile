@@ -1,9 +1,11 @@
 # $NetBSD$
 #
+# Update minor version when adding/removing dependencies
+# Update revision for lesser changes
 
 # Update minor version when adding or removing dependencies
 # Update revision for all other changes
-DISTNAME=	atac-seq-1.4
+DISTNAME=	atac-seq-1.5.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -23,7 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-macs2>0:../../wip/py-macs2
 DEPENDS+=	${PYPKGPREFIX}-macs3>0:../../wip/py-macs3
 DEPENDS+=	fasda>0:../../wip/fasda
 DEPENDS+=	peak-classifier>0:../../wip/peak-classifier
-DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../wip/py-multiqc
 DEPENDS+=	webbrowser>0:../../wip/webbrowser
 DEPENDS+=	curl>0:../../www/curl
 DEPENDS+=	lz4>0:../../archivers/lz4
