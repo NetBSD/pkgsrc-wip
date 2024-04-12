@@ -1,2 +1,2 @@
-while everything compiles, I'm getting this error:
-cupsd: Undefined PLT symbol "__kevent100" (symnum = 296)
+When attempting to print using print/cups, I'm getting a filter
+failed error.
