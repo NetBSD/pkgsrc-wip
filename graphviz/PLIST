@@ -64,9 +64,7 @@ include/graphviz/xdot.h
 lib/graphviz/libgvplugin_core.la
 lib/graphviz/libgvplugin_dot_layout.la
 ${PLIST.gd}lib/graphviz/libgvplugin_gd.la
-${PLIST.gtk}lib/graphviz/libgvplugin_gdk.la
 ${PLIST.ghostscript}${PLIST.x11}lib/graphviz/libgvplugin_gs.la
-${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
 lib/graphviz/libgvplugin_kitty.la
 lib/graphviz/libgvplugin_neato_layout.la
 lib/graphviz/libgvplugin_pango.la
