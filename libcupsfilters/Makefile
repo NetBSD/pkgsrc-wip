@@ -6,10 +6,10 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenPrinting/}
 GITHUB_RELEASE=	2.0.0
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenPrinting/libcupsfilters/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Library for cups-filters
+LICENSE=	apache-2.0
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
