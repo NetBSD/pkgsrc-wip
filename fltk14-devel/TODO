@@ -1,8 +1,10 @@
 [X] Add zlib dependency
 [X] Support for HP-UX
-    Added upstream (Issue #937).
+    Fixed upstream (Issue #937).
 [X] Support for AIX
-    Added pkgsrc patch (Issue #942).
+    Fixed upstream (Issue #942).
+[X] Support for NetBSD
+    Fixed upstream (Issue #944).
 [ ] Static libraries should not be installed with execute permissions
     "fltk.list" has entires with 444 permissions, looks like a bug.
 [ ] Check for library suffixes on AIX, HP-UX and macOS
