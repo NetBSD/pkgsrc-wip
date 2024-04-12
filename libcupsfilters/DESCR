@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# OpenPrinting libcupsfilters v2.0.0 - 2023-09-22
+
+Looking for compile instructions? Read the file "INSTALL"
+instead...
+
+
+## INTRODUCTION
+
+CUPS is a standards-based, open-source printing system used by Apple's
+Mac OS® and other UNIX®-like operating systems, especially also
+Linux. CUPS uses the Internet Printing Protocol ("IPP") and provides
+System V and Berkeley command-line interfaces, a web interface, and a
+C API to manage printers and print jobs.
+
+CUPS 1.0 was released in early 2000 and since then and until CUPS 2.x
+(at least) conversion of the data format of incoming print jobs to the
+format the printer needs was done by external filter executables, each
+taking an input format on stdin and producing an output format on
+stdout. Depending on conversion needs one or more of them were run in
+a chain.
+...

@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# OpenPrinting libppd v2.0.0 - 2023-09-22
+
+Looking for compile instructions? Read the file "INSTALL"
+instead...
+
+
+## INTRODUCTION
+
+CUPS is a standards-based, open-source printing system used by Apple's
+Mac OS® and other UNIX®-like operating systems, especially also
+Linux. CUPS uses the Internet Printing Protocol ("IPP") and provides
+System V and Berkeley command-line interfaces, a web interface, and a
+C API to manage printers and print jobs.
+
+CUPS 1.0 was released in early 2000 and since then and until CUPS 2.x
+PPD (PostScript Printer Description) files were used to describe the
+properties, features and user-settable options of printers. The
+development of PPD files (and also PostScript) was stopped by Adobe
+back in 1984, and Michael Sweet, author of CUPS, deprecated PPD files
+already ~10 years ago, seeking for a more modern alternative.
+...

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libppd-2.0.0.tar.gz) = b1f1f36e710750a099912db5a173d8462c62eb72623a88afb87b4c56a32ee447
+SHA512 (libppd-2.0.0.tar.gz) = 9eff31bcb7088f9957b1bb7933619316d66c2f0fbbc1656afc654ba067aab47f2187a15fd6d99a8037edb553bc73d2abf4d4e07fd781e040bdebbc5f0d103f99
+Size (libppd-2.0.0.tar.gz) = 844183 bytes

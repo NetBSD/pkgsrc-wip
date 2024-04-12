@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (libcupsfilters-2.0.0.tar.gz) = 5ced0d9c4bb881641dd023f565f8a9e8af06f30d103dced4aa7ede2677789b53
+SHA512 (libcupsfilters-2.0.0.tar.gz) = ec0046bd35b593b3c8153fcc85ba0fc3e6dca4f8fcdbbcbd8e0a31dc3e160c1e31d2f3d7951a80adfc5121d00f6ac56129c702bc7a9dc7d9128f5acdfd28a47d
+Size (libcupsfilters-2.0.0.tar.gz) = 1642773 bytes
+SHA1 (patch-cupsfilters_filter.c) = b862412239aea83ec0d1a21a787d1bf6a74c53f2
+SHA1 (patch-cupsfilters_ghostscript.c) = 7a5fd0ffedcea81f8666daf3fb48a417231dfdf0
