@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (cups-browsed-2.0.0.tar.gz) = 65e11b482d2ef4d32bda54188bd83c7521c6e4a9ec6ac00500ffabc4d044b171
+SHA512 (cups-browsed-2.0.0.tar.gz) = e4664f9c04b9f15167373815586db7158aa29987adcbf43b2cb3c5a419ddba5016fd34c57b8baeabbd1b09d43b5d65d88dbb38ee0990de6670e98f4aeee025f0
+Size (cups-browsed-2.0.0.tar.gz) = 613417 bytes

@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# OpenPrinting cups-browsed v2.0.0 - 2023-09-22
+
+Looking for compile instructions?  Read the file "INSTALL"
+instead...
+
+
+## INTRODUCTION
+
+CUPS is a standards-based, open-source printing system used by
+Apple's Mac OS® and other UNIX®-like operating systems,
+especially also Linux. CUPS uses the Internet Printing Protocol
+("IPP") and provides System V and Berkeley command-line
+interfaces, a web interface, and a C API to manage printers and
+print jobs.
+
+This package contains cups-browsed, a helper daemon to browse the
+network for remote CUPS queues and IPP network printers and
+automatically create local queues pointing to them.
+
+cups-browsed has the following functionality:
+...
