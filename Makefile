@@ -948,7 +948,6 @@ SUBDIR+=	fpc
 SUBDIR+=	fprobe
 SUBDIR+=	fractal
 SUBDIR+=	fragrouter
-SUBDIR+=	freebayes
 SUBDIR+=	freebsd-svn
 SUBDIR+=	freecad
 SUBDIR+=	freecell
