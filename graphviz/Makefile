@@ -3,7 +3,7 @@
 DISTNAME=	graphviz-10.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
-EXTRACT_SUFX=	.tar.xz
+#EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
@@ -98,7 +98,7 @@ REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 # Override Xaw type configured by user
 XAW_TYPE=		standard
 
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc")
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
 # Forces link with -lgomp directly instead of via dlopen()
 # so we don't overflow thread-local storage in ld.elf_so
 CFLAGS+=		-fopenmp
