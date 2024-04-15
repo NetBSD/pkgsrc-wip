@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	3ebb8af9252a4437b3b9c4cdd7377f1a401689a4
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
+HOMEPAGE=	https://github.com/outpaddling/fbsd2pkg
 COMMENT=	Convert a FreeBSD port framework to a pkgsrc package
 LICENSE=	2-clause-bsd
 

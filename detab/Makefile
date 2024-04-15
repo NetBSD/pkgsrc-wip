@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
+HOMEPAGE=	https://github.com/outpaddling/detab
 COMMENT=	Replace tabs with spaces in a text file
 LICENSE=	2-clause-bsd
 

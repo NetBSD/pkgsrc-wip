@@ -7,7 +7,7 @@ GITHUB_PROJECT=	SPCM
 GITHUB_TAG=	924bc14e0f2918802e3e38d17ff3396df89a3164
 
 OWNER=		bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/spcm.php
+HOMEPAGE=	https://github.com/outpaddling/SPCM
 COMMENT=	Simple, portable cluster management
 LICENSE=	2-clause-bsd
 

@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	3bb75e957ebe00cf99d3893bc1f2ed9e647112da
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
+HOMEPAGE=	https://github.com/outpaddling/docviewer
 COMMENT=	Generic command to automatically select a document viewer
 LICENSE=	2-clause-bsd
 
