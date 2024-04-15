@@ -1853,6 +1853,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/tq.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tq.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/trace.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/trace.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/track-changes.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/track-changes.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/unsafep.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/unsafep.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/vtable.el.gz
