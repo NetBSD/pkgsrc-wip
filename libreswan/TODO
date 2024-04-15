@@ -9,6 +9,7 @@
 
 - add following entries to pkg-vulnerabilities
 
+libreswan<4.15		denial-of-service	https://libreswan.org/security/CVE-2024-3652/CVE-2024-3652.txt
 libreswan<4.13nb1	denial-of-service	https://libreswan.org/security/CVE-2024-2357/CVE-2024-2357.txt
 libreswan<4.12nb1	denial-of-service	https://libreswan.org/security/CVE-2023-38712/CVE-2023-38712.txt
 libreswan<4.12nb1	denial-of-service	https://libreswan.org/security/CVE-2023-38711/CVE-2023-38711.txt

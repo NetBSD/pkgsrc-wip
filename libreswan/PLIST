@@ -67,6 +67,6 @@ share/examples/libreswan/ipsec.d/policies/portexcludes.conf
 share/examples/libreswan/ipsec.d/policies/private
 share/examples/libreswan/ipsec.d/policies/private-or-clear
 share/examples/libreswan/ipsec.secrets-sample
-share/examples/libreswan/logrotate.d/libreswan
-share/examples/libreswan/pam.d/pluto
-share/examples/libreswan/rc.d/pluto.sh
+share/examples/rc.d/ipsec
+share/examples/logrotate.d/libreswan
+share/examples/pam.d/pluto
