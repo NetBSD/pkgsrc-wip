@@ -1,5 +1,0 @@
-[X] Postponed until already merged NetBSD patches are released ...
-    again with a different major version :-(
-[X] Package should work again with all options disabled
-[X] Test options
-    Option "gtk" removed (see changelog)
