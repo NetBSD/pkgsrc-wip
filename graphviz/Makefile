@@ -132,6 +132,7 @@ DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 .include "../../devel/libltdl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.22.0
 .include "../../devel/pango/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gts/buildlink3.mk"

@@ -13,7 +13,9 @@ BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=10.0.1
 BUILDLINK_PKGSRCDIR.graphviz?=		../../wip/graphviz
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .endif # GRAPHVIZ_BUILDLINK3_MK
 
