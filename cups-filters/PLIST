@@ -37,6 +37,9 @@ libexec/cups/filter/universal
 man/man1/driverless.1
 man/man1/foomatic-rip.1
 share/cups/drv/cupsfilters.drv
+share/cups/mime/cupsfilters-ghostscript.convs
+share/cups/mime/cupsfilters-individual.convs
+share/cups/mime/cupsfilters-poppler.convs
 share/cups/mime/cupsfilters-universal-postscript.convs
 share/cups/mime/cupsfilters-universal.convs
 share/cups/mime/cupsfilters.convs

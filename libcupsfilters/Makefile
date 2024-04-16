@@ -18,6 +18,9 @@ USE_LANGUAGES=	c c++
 
 CONFLICTS=        cups-filters<2.0.0
 
+CONFIGURE_ARGS+=	--disable-mutool
+CONFIGURE_ARGS+=	--with-test_font_path=${PREFIX}/share/fonts/X11/TTF/DejaVuSans.ttf
+
 PKGCONFIG_OVERRIDE+=	libcupsfilters.pc.in
 
 .include "options.mk"

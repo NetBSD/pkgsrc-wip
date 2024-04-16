@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
+CONFIGURE_ARGS+=	--disable-mutool
+
 PKGCONFIG_OVERRIDE+=	libppd.pc.in
 
 .include "../../wip/libcupsfilters/buildlink3.mk"

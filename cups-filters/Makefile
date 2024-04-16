@@ -21,15 +21,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bash:run pkg-config gmake gdbus-codegen
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--disable-braille
-CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--disable-mutool
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-apple-raster-filter=rastertopdf
 CONFIGURE_ARGS+=	--with-gs-path=${PREFIX}/bin/gs
-CONFIGURE_ARGS+=	--with-pdftops-path=${PREFIX}/bin/pdftops
 CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
-CONFIGURE_ARGS+=	--with-test_font_path=${PREFIX}/share/fonts/X11/TTF/DejaVuSans.ttf
 
 LDFLAGS.SunOS+=		-lresolv
 

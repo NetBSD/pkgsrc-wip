@@ -1,0 +1,4 @@
+there is something wrong with the `ppdLoadAttributes` function found
+in `ppd/ppd-ipp.c`. I've yet to be able to figure out what is the
+issue. There is likely another issue a `cfFilterGhostscript`
+somewhere.
