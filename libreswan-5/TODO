@@ -1,0 +1,12 @@
+- platforms other than NetBSD (Linux, and FreeBSD)?
+
+  PFKEYV2 and XFRM are pretty esoteric.
+
+- /etc/ipsec*
+
+  ipsec.conf, ipsec.secrets and ipsec.d/*
+
+- logrotate https://github.com/libreswan/libreswan/issues/767
+
+  It's a weak dependency / suggested package.  If libreswan is
+  using syslog, say, it isn't needed.

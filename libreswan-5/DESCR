@@ -1,0 +1,11 @@
+Libreswan is an Internet Key Exchange (IKE) daemon for managing IPsec.
+
+Libreswan supports IKEv1 and IKEv2 and has support for most of the
+extensions (RFC + IETF drafts) related to IPsec, including IKEv2,
+X.509 Digital Certificates, NAT Traversal, and many others.
+
+On NetBSD and FreeBSD, Libreswan uses the PF_KEY_V2 IPsec stack.  On
+Linux, Libreswan uses the XFRM IPsec stack.
+
+Libreswan was forked from Openswan 2.6.38, which was forked from
+FreeS/WAN 2.04. See the CREDITS files for contributor acknowledgments.
