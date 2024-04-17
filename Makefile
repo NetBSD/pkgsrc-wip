@@ -243,6 +243,7 @@ SUBDIR+=	avidemux-cli
 SUBDIR+=	avidemux-plugins
 SUBDIR+=	avidemux-qt
 SUBDIR+=	avp
+SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gcc13
 SUBDIR+=	avr-gdb
