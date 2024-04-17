@@ -34,9 +34,8 @@ META_PACKAGE=	yes
 
 ## PYTHON
 
-# HA 2023.8 requires Python 3.11
-# Guess that 3.12 is ok.
-PYTHON_VERSIONS_ACCEPTED=311 312
+# HA 2024.4 requires 3.12
+PYTHON_VERSIONS_ACCEPTED=312
 .include "../../lang/python/pyversion.mk"
 
 # Building HA in a venv requires virtualenv
@@ -60,6 +59,9 @@ USE_LANGUAGES+=	fortran77
 ## LIBRARIES needed to build modules that must be installed before HA runs
 
 # mjpeg needs numpy but does not install it
+# \todo Revisit this, as it seems likely no longer true.
+# \todo Sort out cblas vs openblas in terms of what numpy built in the
+# venv will use.
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 # The standard approach for recorder is to use pgsql.  HA uses this,
