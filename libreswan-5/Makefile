@@ -15,13 +15,8 @@
 #
 # libreswan: 5.0 5.0nb1 ...
 
-
-#DISTNAME=      libreswan-5.0pre0.20231114
-DISTNAME=	libreswan-5.0rc2
-GITHUB_PROJECT=	libreswan
-GITHUB_TAG=	v5.0rc2
-MASTER_SITES=	${MASTER_SITE_GITHUB:=${GITHUB_PROJECT}/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+DISTNAME=	libreswan-5.0rc3
+MASTER_SITES=   https://download.libreswan.org/development/
 
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
