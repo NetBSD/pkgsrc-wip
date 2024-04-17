@@ -10,6 +10,9 @@ OWNER=			micha@NetBSD.org
 COMMENT=		GCC for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
+# Required at least on AMD64
+MKPIE_SUPPORTED=	no
+
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 

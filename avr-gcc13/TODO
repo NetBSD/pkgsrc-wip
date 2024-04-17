@@ -1,1 +1,4 @@
-Must be tested.
+Must be tested:
+[X] ATtiny841
+[X] ATmega168PB
+[X] ATmega324PA
