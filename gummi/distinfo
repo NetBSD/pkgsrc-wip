@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:30 nia Exp $
+
+BLAKE2s (gummi-0.8.3.tar.gz) = f367b5cd517e426d094f024738590d2d9dd0964fb763cf7532a47024b1cf24c9
+SHA512 (gummi-0.8.3.tar.gz) = c74a629a67c3dfd04e1b4f9bc2cc7ad22f3d71d1693b315eb449cc6f8bbfd08257faf4e69e02a05a6a8bb250de0184288dcab4931849d9a0a431419d85a2983e
+Size (gummi-0.8.3.tar.gz) = 384794 bytes
+SHA1 (patch-dev_bump__version) = e8018efd27525d92fc6de2d7c4089b03b8c8fc98
