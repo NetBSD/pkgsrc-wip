@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	${PYPKGPREFIX}-homeassistant-0.06
+PKGNAME=	${PYPKGPREFIX}-homeassistant-0.07
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	gdt@NetBSD.org
@@ -31,7 +31,6 @@ META_PACKAGE=	yes
 # of dependencies) and build straightforwardly with "bin/pip install";
 # these are therefore not addressed here.
 
-
 ## PYTHON
 
 # HA 2024.4 requires 3.12
@@ -49,64 +48,59 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 
-RUST_RUNTIME=	yes		# record a dependency
-.include "../../lang/rust/rust.mk"
+# GCC
+# \todo Depend on gcc10, because numpy needs it, and venv build
+# scripts will thus require it.
 
 # FORTRAN
 USE_LANGUAGES+=	fortran77
 .include "../../mk/compiler/gfortran.mk"
 
-## LIBRARIES needed to build modules that must be installed before HA runs
+RUST_RUNTIME=	yes		# record a dependency
+.include "../../lang/rust/rust.mk"
 
-# mjpeg needs numpy but does not install it
-# \todo Revisit this, as it seems likely no longer true.
-# \todo Sort out cblas vs openblas in terms of what numpy built in the
-# venv will use.
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+## LIBRARIES needed to build modules that HA needs
 
 # The standard approach for recorder is to use pgsql.  HA uses this,
 # like all databases, via SQLAlchemy, but it does not install
 # psycopg2, which of course expects pgsql libs.
 .include "../../mk/pgsql.buildlink3.mk"
 
-## LIBRARIES needed when HA first runs
-# These are intended to be in the order that HA tries to install them
-# when started in a venv that more or less only has homeassistant's
-# dependencies installed.
+# Various modules (e.g. mobile_app) need numpy.  numpy needs blas
+# (even though HA probably does not use numpy blas-ish methods), and
+# the build will prefer openblas to cblas.  Thus, if the build system
+# for the venv has openblas, the wheels will later need openblas.
+# Depend on openblas to force this, as a second-class method of
+# controlling dependencies.
+DEPENDS+=	openblas-[0-9]*:../../math/openblas
 
+# HA installs yaml \todo despite it not showing in bin/pip freeze
+# \todo Figure out if this is really needed.
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+# HA will build cryptography, Pillow and nacl, so depend on them to
+# force deps.
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-
-# HA installs Pillow, and it depends on a lot of image libraries.
-# Rather than open-coding that set, just depend on Pillow even if the
-# install is wasted.  Hope that our version and HA's version are close
-# enough.
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 
-# HA builds ha-ffmpeg, likely as a dependency of ha-av.  Ensure ffmpeg
-# libs are present.
+# stream integration needs ha-ffmpeg depends on ffmpeg
 # \todo Reconsider ffmpeg6 vs 4.
 DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
 
-# As with Pillow, just depend on the python module HA will build.
-DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
-
-# ONVIF needs onvif-zeep-async
+# onvif integration needs onvif_zeep_async depends on lxml depends on libxml2 libxslt
 DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 .include "../../mk/bsd.prefs.mk"
 
 ## NEEDED WORKAROUNDS
-# \todo Hoist these somehow to a script or fix upstream.
 # This section describes workarounds to enable the venv to build.
+# \todo Hoist these somehow to a script or fix upstream.
 
 ## ha-av
 #
-# ffmpeg4 installs to /usr/pkg/lib/ffmpeg4, but pkg_alternatives does
-# not provide library links.  A strategy that works is to symlink from
-# /usr/pkg/lib, and a strategy that might work is to set
-# PKG_CONFIG_PATH.
-#
+# ffmpeg4 installs to /usr/pkg/lib/ffmpeg4, and HA expects to just find ffmpeg
 #   export PKG_CONFIG_PATH=/usr/pkg/lib/ffmpeg4/pkgconfig
 #
 # ffmpeg's pkgconfig files have "-Wl,-rpath,/usr/pkg/lib/ffmpeg4/lib",
@@ -115,7 +109,8 @@ DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 # This is a bug in PyAV.  \todo File a fix.
 
 ## cryptography
-# As of 41, the build fails to find openssl on NetBSD 9, likely a bug.
+#
+# As of 41, the build fails to find openssl on NetBSD 9.
 # https://docs.rs/openssl/latest/openssl/#automatic advises
 #   export OPENSSL_DIR=/usr
 
