@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:22 nia Exp $
+
+BLAKE2s (paprefs-1.2.tar.xz) = c7cc7c149650b5f40bdfd462d92c6996abd4c1e969d35a2c9aeb7fa7e9133379
+SHA512 (paprefs-1.2.tar.xz) = 2bc50116528c150060711899c66976179e433f6be36f6b7806f0fd3f66346ce14037875e7f119dc205d2047c3998d78105fa7d7c397dfcf02fb8d3bfec34154c
+Size (paprefs-1.2.tar.xz) = 74820 bytes

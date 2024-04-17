@@ -2885,6 +2885,7 @@ SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pangoterm
 SUBDIR+=	papp
+SUBDIR+=	paprefs
 SUBDIR+=	parafly
 SUBDIR+=	paraview
 SUBDIR+=	parcellite

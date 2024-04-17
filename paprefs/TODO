@@ -1,0 +1,5 @@
+Doesn't start, complaining:
+GLib-GIO-ERROR:
+Settings schema 'org.freedesktop.pulseaudio.module-group' is not installed
+
+but it doesn't install schema files itself.
