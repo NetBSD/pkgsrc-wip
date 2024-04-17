@@ -15,11 +15,9 @@
 #
 # libreswan: 5.0 5.0nb1 ...
 
-
-#DISTNAME=      libreswan-5.0pre0.20231114
-DISTNAME=	libreswan-5.0rc2
+DISTNAME=	libreswan-5.1pre0
 GITHUB_PROJECT=	libreswan
-GITHUB_TAG=	v5.0rc2
+GITHUB_TAG=	ca6cfbe2682dd18200672d05baf09daa75465d70
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${GITHUB_PROJECT}/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
