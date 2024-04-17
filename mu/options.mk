@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mu
 PKG_SUPPORTED_OPTIONS=	mu-emacs guile
-PKG_SUGGESTED_OPTIONS=	mu-emacs guile
+PKG_SUGGESTED_OPTIONS=	mu-emacs
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,12 +15,6 @@ USE_TOOLS+=	makeinfo
 PLIST_SRC+=	PLIST.emacs
 .else
 CONFIGURE_ARGS+= --disable-mu4e
-.endif
-
-# needs gtk3 and webkit-gtk-3
-.if !empty(PKG_OPTIONS:Mgtk)
-.include "../../x11/gtk3/buildlink3.mk"
-.include "../../www/webkit24-gtk/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mguile)

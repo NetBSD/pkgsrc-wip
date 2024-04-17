@@ -1,5 +1,7 @@
 $NetBSD: distinfo,v 1.2 2014/11/02 18:30:40 thomasklausner Exp $
 
-RMD160 (mu-1.4.13.tar.gz) = 2c9d6b8ddb339ce1d15bd9249414e3082ef0dcba
-SHA512 (mu-1.4.13.tar.gz) = 0f8e7f75332257e8cfdecf2c27bc23c83420387e40ecf92089232af6c545700a6c4925665b39fc236cacf8b26fa4b81df71775cdbe04c340fe3455c54c0d1bbc
-Size (mu-1.4.13.tar.gz) = 2309545 bytes
+BLAKE2s (mu-1.12.3.tar.gz) = bb68bcd5bd4c70ca715edf5aba81e6fe93a425b15dae277d674a5efa41d401c8
+SHA512 (mu-1.12.3.tar.gz) = 018a7abb91dd61f27bb4f6d1ce1b52f762f42383a73fd63f0c42264fe3938530dd232b4315d1f599fa2974938a22ead7d0dc2c188b1e45c8acbc1ce21f287d66
+Size (mu-1.12.3.tar.gz) = 958099 bytes
+SHA1 (patch-lib_utils_mu-utils-file.cc) = 3c748d6652b3d141ea40c125fe9fc3363611c84e
+SHA1 (patch-mu_mu-cmd-find.cc) = 1ac5aa68b309a86a47e7284d9ce43b845ceb268a
