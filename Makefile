@@ -1371,7 +1371,6 @@ SUBDIR+=	guile-reader
 SUBDIR+=	guile-sjson
 SUBDIR+=	guile-stis-parser
 SUBDIR+=	gumbo-parser
-SUBDIR+=	gummi
 SUBDIR+=	gunison
 SUBDIR+=	gupnp-ui
 SUBDIR+=	gurlchecker
