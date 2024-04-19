@@ -684,7 +684,7 @@ DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
 TOOL_DEPENDS+= cmake-[0-9]*:../../devel/cmake
-.include "../../devel/cmake/buildlink3.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
