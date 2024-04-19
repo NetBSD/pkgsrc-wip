@@ -617,8 +617,8 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
-	for lib in libLLVM-15.so libcrypto.so.1.1 libcurl.so.4 \
-		   libssl.so.1.1 libz.so.1 libzstd.so.1; do \
+	for lib in libLLVM-16.so libcrypto.so.3 libcurl.so.4 \
+		   libssl.so.3 libz.so.1 libzstd.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
 	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber.so.2 \
