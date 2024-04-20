@@ -44,6 +44,7 @@ pre-configure:
 .include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/catch2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
