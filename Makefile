@@ -1289,7 +1289,6 @@ SUBDIR+=	google-perftools
 SUBDIR+=	googlecl
 SUBDIR+=	gopass-jsonapi
 SUBDIR+=	gopher-validator-git
-SUBDIR+=	goplus
 SUBDIR+=	gorilla-audio
 SUBDIR+=	gosec
 SUBDIR+=	gotify
