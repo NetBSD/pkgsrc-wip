@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (identify-2.5.35.tar.gz) = bd2958d5f2d308103aa3c8b7428afee0c3af0c1c9d86e98c89ab135d046f9f2b
-SHA512 (identify-2.5.35.tar.gz) = 36646b3159e3ce513230d60fb5c96c0123f2dfe9d5d5bfb74b9d45185f40c16fe9008d35ee818f4317d4e6289ad449cd7186ca26ae2883e1c4cd9b84bc8e0dac
-Size (identify-2.5.35.tar.gz) = 99009 bytes
+BLAKE2s (identify-2.5.36.tar.gz) = 2598aa376490add643654f630d89ced49e9612d3bc5105428a56830e095f14b1
+SHA512 (identify-2.5.36.tar.gz) = ff45db60d351116c619b8fd2f873c72206de84612c7a668db08172ff8239689b460516068584aacb0bb7b83abba797bc4c82e4a2ae95a677415a229f9fbc314b
+Size (identify-2.5.36.tar.gz) = 99049 bytes
