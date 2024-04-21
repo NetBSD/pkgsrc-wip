@@ -1,3 +1,7 @@
 @comment $NetBSD$
 bin/cfiles
 man/man1/cfiles.1
+share/cfiles/scripts/clearimg
+share/cfiles/scripts/clearimg_uberzug
+share/cfiles/scripts/displayimg
+share/cfiles/scripts/displayimg_uberzug

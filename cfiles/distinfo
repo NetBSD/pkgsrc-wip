@@ -1,6 +1,6 @@
 $NetBSD$
 
-RMD160 (cfiles/v1.3.tar.gz) = 91b07847eba9e74f37f66a38595474cda8e89167
-SHA512 (cfiles/v1.3.tar.gz) = 0f36f7dca89bd71465e6d25569911fb6322bc139f132a559fda0c31b96caf3f2854d7a071bc8e5d8c0535c72cadc748f9775c4ca5d19f86921a43fc9a3f1136c
-Size (cfiles/v1.3.tar.gz) = 277136 bytes
+BLAKE2s (cfiles/v1.8.tar.gz) = 4e61f41fe5c8be2fb343664ed9da5d70c20f0aef2bd8bc4a99d035ce0e102a1d
+SHA512 (cfiles/v1.8.tar.gz) = 14880c71bcc6dc0b6433be722bdd75d30859556fae30754c668a9dacf8a1b8e4758cca3572de034a1e8fb4e947d38739351969139fe72f59a7af3dcb158aaa86
+Size (cfiles/v1.8.tar.gz) = 237966 bytes
 SHA1 (patch-aa) = 5e5b838261ffdd04c5ac0b4bf9486646b553396b
