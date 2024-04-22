@@ -1864,6 +1864,7 @@ SUBDIR+=	libaio
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
 SUBDIR+=	libavc1394
+SUBDIR+=	libayatana-indicator
 SUBDIR+=	libbfio
 SUBDIR+=	libbgcode
 SUBDIR+=	libbpg

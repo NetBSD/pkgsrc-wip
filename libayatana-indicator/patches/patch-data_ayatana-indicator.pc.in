@@ -1,0 +1,15 @@
+$NetBSD$
+
+Add missing -L argument to Libs.
+
+--- data/ayatana-indicator.pc.in.orig	2024-04-22 21:40:37.935808363 +0000
++++ data/ayatana-indicator.pc.in
+@@ -8,7 +8,7 @@ iconsdir=@CMAKE_INSTALL_FULL_DATADIR@/@P
+ 
+ Cflags: -I${includedir}/libayatana-indicator-0.@API_VERSION@
+ Requires: gtk+-2.0
+-Libs: -layatana-indicator
++Libs: -L${libdir} -layatana-indicator
+ 
+ Name: libayatana-indicator
+ Description: libayatana-indicator.

@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (libayatana-indicator-0.9.4.tar.gz) = 6a0728f1ed7f0153f7aa030f686507c4a2e011ad70eacec7370fb28e37b765ce
+SHA512 (libayatana-indicator-0.9.4.tar.gz) = 56efbe0eb14abf38cb7e270ae093b5fb41dab652eab6fa0d3f7972b09b0f2404e3ec7fbb3059c0b26802fffc628f5ace16a33db306f97a65ae42cf65494a56dc
+Size (libayatana-indicator-0.9.4.tar.gz) = 150030 bytes
+SHA1 (patch-data_ayatana-indicator.pc.in) = da8f7088b3f094e88b08bbfcf4e08ab7d950a5cc
+SHA1 (patch-data_ayatana-indicator3-no-IDO.pc.in) = 57abffb27f8937ecaa159d99dbde602f002dc62f
+SHA1 (patch-data_ayatana-indicator3.pc.in) = 1bca829ae83b2932e28655bda2b397214a132baa
