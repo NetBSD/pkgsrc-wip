@@ -558,6 +558,7 @@ SUBDIR+=	cpm
 SUBDIR+=	cpqarrayd
 SUBDIR+=	cpuminer-multi
 SUBDIR+=	cqlsh
+SUBDIR+=	crchack-git
 SUBDIR+=	creal
 SUBDIR+=	cream
 SUBDIR+=	creduce-git

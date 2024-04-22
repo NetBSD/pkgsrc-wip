@@ -1,0 +1,6 @@
+crchack is a public domain tool to force CRC checksums of input
+messages to arbitrarily chosen values. The main advantage over
+existing CRC alteration tools is the ability to obtain the target
+checksum by changing non-contiguous input bits. Furthermore, crchack
+supports all CRC algorithms including custom CRC parameters. crchack
+is also an arbitrary-precision CRC calculator.
