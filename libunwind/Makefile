@@ -18,10 +18,19 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 SSP_SUPPORTED=		no
+
+.include "../../mk/bsd.prefs.mk"
+
+# Configure fails on Alma8 with "/usr/bin/ld: cannot find -lgcc_s".
+# The pkg works fine with base GCC.
+# The libcxx pkg currently has GCC_REQD=12, while this one is 10.
+.if ${OPSYS} != Linux || !exists(/etc/redhat-release)
 GCC_REQD+=		10	# must be in sync with libcxx
+.endif
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 

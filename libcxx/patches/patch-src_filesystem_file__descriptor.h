@@ -2,10 +2,10 @@ $NetBSD$
 
 Support POSIX file modes.
 
---- src/filesystem/file_descriptor.h.orig	2023-10-17 06:20:52.000000000 +0000
+--- src/filesystem/file_descriptor.h.orig	2024-04-17 00:21:15.000000000 +0000
 +++ src/filesystem/file_descriptor.h
 @@ -41,7 +41,21 @@ namespace detail {
- #if defined(DT_BLK)
+ #  if defined(DT_BLK)
  template <class DirEntT, class = decltype(DirEntT::d_type)>
  file_type get_file_type(DirEntT* ent, int) {
 +#ifdef __sun

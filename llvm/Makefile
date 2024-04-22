@@ -34,9 +34,10 @@ HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=		c c++14
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 GCC_REQD+=		7
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -130,6 +131,11 @@ PLIST_SUBST+=	RELEASE_TYPE=${RELEASE_TYPE}
 
 .if ${OPSYS} == "NetBSD"
 CMAKE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
+.endif
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+TOOL_DEPENDS+=	${PKGNAME}:../../${PKGPATH}
+CMAKE_ARGS+=	-DLLVM_TABLEGEN:STRING=${TOOLBASE:Q}/bin/llvm-tblgen
 .endif
 
 .include "options.mk"

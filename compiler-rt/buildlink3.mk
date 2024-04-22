@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2019/12/29 15:31:21 adam Exp $
+# $NetBSD$
 
 BUILDLINK_TREE+=	compiler-rt
 
 .if !defined(COMPILER_RT_BUILDLINK3_MK)
 COMPILER_RT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.compiler-rt+=	compiler-rt>=9.0.1
+BUILDLINK_API_DEPENDS.compiler-rt+=	compiler-rt>=18.0.0
 BUILDLINK_PKGSRCDIR.compiler-rt?=	../../wip/compiler-rt
 
 .include "../../wip/llvm/buildlink3.mk"

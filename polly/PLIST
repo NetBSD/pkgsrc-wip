@@ -2,7 +2,6 @@
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
-include/polly/CodeGen/CodegenCleanup.h
 include/polly/CodeGen/IRBuilder.h
 include/polly/CodeGen/IslAst.h
 include/polly/CodeGen/IslExprBuilder.h

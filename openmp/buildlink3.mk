@@ -5,8 +5,8 @@ BUILDLINK_TREE+=	openmp
 .if !defined(OPENMP_BUILDLINK3_MK)
 OPENMP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.openmp+=	openmp>=9.0.1
-BUILDLINK_ABI_DEPENDS.openmp?=	openmp>=13.0.1nb1
+BUILDLINK_API_DEPENDS.openmp+=	openmp>=18.0.0
+BUILDLINK_ABI_DEPENDS.openmp+=	openmp>=18.0.0
 BUILDLINK_PKGSRCDIR.openmp?=	../../wip/openmp
 .endif	# OPENMP_BUILDLINK3_MK
 

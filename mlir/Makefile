@@ -11,8 +11,9 @@ HOMEPAGE=	http://mlir.llvm.org/
 COMMENT=	Multi-Level Intermediate Representation
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++14
-USE_TOOLS+=	gmake
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DMLIR_INSTALL_AGGREGATE_OBJECTS=NO

@@ -7,10 +7,10 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2023-11-14 08:22:39.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2024-04-17 00:21:15.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
-@@ -68,6 +68,25 @@ void solaris::Linker::ConstructJob(Compi
-   const bool IsPIE = getPIE(Args, getToolChain());
+@@ -91,6 +91,25 @@ void solaris::Linker::ConstructJob(Compi
+   const bool LinkerIsGnuLd = isLinkerGnuLd(ToolChain, Args);
    ArgStringList CmdArgs;
  
 +  // XXX: assumes pkgsrc layout
@@ -32,40 +32,32 @@ Test removing -Bdynamic for golang.
 +    llvm_unreachable("Unsupported architecture");
 +  }
 +
-   // Demangle C++ names in errors
-   CmdArgs.push_back("-C");
- 
-@@ -85,7 +104,6 @@ void solaris::Linker::ConstructJob(Compi
-     CmdArgs.push_back("-Bstatic");
-     CmdArgs.push_back("-dn");
-   } else {
--    CmdArgs.push_back("-Bdynamic");
-     if (Args.hasArg(options::OPT_shared)) {
-       CmdArgs.push_back("-shared");
-     }
-@@ -107,9 +125,9 @@ void solaris::Linker::ConstructJob(Compi
+   // Demangle C++ names in errors.  GNU ld already defaults to --demangle.
+   if (!LinkerIsGnuLd)
+     CmdArgs.push_back("-C");
+@@ -164,9 +183,9 @@ void solaris::Linker::ConstructJob(Compi
+   if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles,
                     options::OPT_r)) {
      if (!Args.hasArg(options::OPT_shared))
-       CmdArgs.push_back(
--          Args.MakeArgString(getToolChain().GetFilePath("crt1.o")));
-+          Args.MakeArgString(SysPath + "crt1.o"));
+-      CmdArgs.push_back(Args.MakeArgString(ToolChain.GetFilePath("crt1.o")));
++      CmdArgs.push_back(Args.MakeArgString(SysPath + "crt1.o"));
  
--    CmdArgs.push_back(Args.MakeArgString(getToolChain().GetFilePath("crti.o")));
+-    CmdArgs.push_back(Args.MakeArgString(ToolChain.GetFilePath("crti.o")));
 +    CmdArgs.push_back(Args.MakeArgString(SysPath + "crti.o"));
  
      const Arg *Std = Args.getLastArg(options::OPT_std_EQ, options::OPT_ansi);
      bool HaveAnsi = false;
-@@ -124,7 +142,7 @@ void solaris::Linker::ConstructJob(Compi
+@@ -181,7 +200,7 @@ void solaris::Linker::ConstructJob(Compi
      // Use values-Xc.o for -ansi, -std=c*, -std=iso9899:199409.
      if (HaveAnsi || (LangStd && !LangStd->isGNUMode()))
        values_X = "values-Xc.o";
--    CmdArgs.push_back(Args.MakeArgString(getToolChain().GetFilePath(values_X)));
+-    CmdArgs.push_back(Args.MakeArgString(ToolChain.GetFilePath(values_X)));
 +    CmdArgs.push_back(Args.MakeArgString(SysPath + values_X));
  
      const char *values_xpg = "values-xpg6.o";
      // Use values-xpg4.o for -std=c90, -std=gnu90, -std=iso9899:199409.
-@@ -158,13 +176,6 @@ void solaris::Linker::ConstructJob(Compi
-         getToolChain().AddCXXStdlibLibArgs(Args, CmdArgs);
+@@ -229,13 +248,6 @@ void solaris::Linker::ConstructJob(Compi
+       addFortranRuntimeLibs(getToolChain(), Args, CmdArgs);
        CmdArgs.push_back("-lm");
      }
 -    if (Args.hasArg(options::OPT_fstack_protector) ||
@@ -77,46 +69,47 @@ Test removing -Bdynamic for golang.
 -    }
      // LLVM support for atomics on 32-bit SPARC V8+ is incomplete, so
      // forcibly link with libatomic as a workaround.
-     if (getToolChain().getTriple().getArch() == llvm::Triple::sparc) {
-@@ -172,11 +183,13 @@ void solaris::Linker::ConstructJob(Compi
+     if (Arch == llvm::Triple::sparc) {
+@@ -243,13 +255,13 @@ void solaris::Linker::ConstructJob(Compi
        CmdArgs.push_back("-latomic");
-       CmdArgs.push_back(getAsNeededOption(getToolChain(), false));
+       addAsNeededOption(ToolChain, Args, CmdArgs, false);
      }
+-    addAsNeededOption(ToolChain, Args, CmdArgs, true);
 -    CmdArgs.push_back("-lgcc_s");
+-    addAsNeededOption(ToolChain, Args, CmdArgs, false);
 -    CmdArgs.push_back("-lc");
 -    if (!Args.hasArg(options::OPT_shared)) {
 -      CmdArgs.push_back("-lgcc");
 -    }
-+    
++
 +    // This specifically uses -Wl to avoid CMake parsing it and trying to
 +    // feed "-zdefaultextract" back into clang, which doesn't support the
 +    // non-space version.
 +    CmdArgs.push_back("-Wl,-zdefaultextract");
 +    AddRunTimeLibs(getToolChain(), D, CmdArgs, Args);
 +    CmdArgs.push_back(Args.MakeArgString(LibPath + "libunwind.a"));
-     const SanitizerArgs &SA = getToolChain().getSanitizerArgs(Args);
+     const SanitizerArgs &SA = ToolChain.getSanitizerArgs(Args);
      if (NeedsSanitizerDeps) {
-       linkSanitizerRuntimeDeps(getToolChain(), CmdArgs);
-@@ -195,17 +208,7 @@ void solaris::Linker::ConstructJob(Compi
-       CmdArgs.push_back("-znow");
+       linkSanitizerRuntimeDeps(ToolChain, Args, CmdArgs);
+@@ -273,16 +285,7 @@ void solaris::Linker::ConstructJob(Compi
+     }
    }
  
 -  if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nostartfiles,
 -                   options::OPT_r)) {
+-    const char *crtend = nullptr;
 -    if (Args.hasArg(options::OPT_shared) || IsPIE)
--      CmdArgs.push_back(
--          Args.MakeArgString(getToolChain().GetFilePath("crtendS.o")));
+-      crtend = "crtendS.o";
 -    else
--      CmdArgs.push_back(
--          Args.MakeArgString(getToolChain().GetFilePath("crtend.o")));
--    CmdArgs.push_back(
--        Args.MakeArgString(getToolChain().GetFilePath("crtn.o")));
+-      crtend = "crtend.o";
+-    CmdArgs.push_back(Args.MakeArgString(ToolChain.GetFilePath(crtend)));
+-    CmdArgs.push_back(Args.MakeArgString(ToolChain.GetFilePath("crtn.o")));
 -  }
 +  CmdArgs.push_back(Args.MakeArgString(SysPath + "crtn.o"));
  
-   getToolChain().addProfileRTLibs(Args, CmdArgs);
+   ToolChain.addProfileRTLibs(Args, CmdArgs);
  
-@@ -235,26 +238,9 @@ Solaris::Solaris(const Driver &D, const
+@@ -311,26 +314,9 @@ Solaris::Solaris(const Driver &D, const
                   const ArgList &Args)
      : Generic_ELF(D, Triple, Args) {
  
@@ -136,7 +129,7 @@ Test removing -Bdynamic for golang.
 -
 -  // If we are currently running Clang inside of the requested system root,
 -  // add its parent library path to those searched.
--  if (StringRef(D.Dir).startswith(D.SysRoot))
+-  if (StringRef(D.Dir).starts_with(D.SysRoot))
 -    addPathIfExists(D, D.Dir + "/../lib", Paths);
 -
 -  addPathIfExists(D, D.SysRoot + "/usr/lib" + LibSuffix, Paths);
@@ -146,7 +139,7 @@ Test removing -Bdynamic for golang.
  }
  
  SanitizerMask Solaris::getSupportedSanitizers() const {
-@@ -276,6 +262,31 @@ Tool *Solaris::buildAssembler() const {
+@@ -359,6 +345,31 @@ Tool *Solaris::buildAssembler() const {
  
  Tool *Solaris::buildLinker() const { return new tools::solaris::Linker(*this); }
  
@@ -178,7 +171,7 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
-@@ -308,38 +319,20 @@ void Solaris::AddClangSystemIncludeArgs(
+@@ -391,38 +402,20 @@ void Solaris::AddClangSystemIncludeArgs(
      return;
    }
  

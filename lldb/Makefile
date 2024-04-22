@@ -16,7 +16,8 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../wip/clang
 DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_LANGUAGES=		c c++14
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
