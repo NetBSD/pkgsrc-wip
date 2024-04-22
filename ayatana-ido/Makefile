@@ -17,5 +17,7 @@ PKGCONFIG_OVERRIDE+=	data/libayatana-ido3-0.4.pc.in
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
