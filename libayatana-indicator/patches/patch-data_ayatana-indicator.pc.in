@@ -1,6 +1,7 @@
 $NetBSD$
 
 Add missing -L argument to Libs.
+https://github.com/AyatanaIndicators/libayatana-indicator/pull/74
 
 --- data/ayatana-indicator.pc.in.orig	2024-04-22 21:40:37.935808363 +0000
 +++ data/ayatana-indicator.pc.in
