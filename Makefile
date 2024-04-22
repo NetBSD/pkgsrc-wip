@@ -254,6 +254,7 @@ SUBDIR+=	aws-nuke
 SUBDIR+=	axe
 SUBDIR+=	axel
 SUBDIR+=	axpbox-git
+SUBDIR+=	ayatana-ido
 SUBDIR+=	azureus
 SUBDIR+=	backintime
 SUBDIR+=	backplane
