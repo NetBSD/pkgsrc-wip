@@ -5,8 +5,10 @@ libexec/lpjs/ad-hoc
 libexec/lpjs/admin
 libexec/lpjs/banner
 libexec/lpjs/chaperone
+libexec/lpjs/compd-disable
 libexec/lpjs/compd-enable
 libexec/lpjs/create-script
+libexec/lpjs/dispatchd-disable
 libexec/lpjs/dispatchd-enable
 libexec/lpjs/jobs
 libexec/lpjs/log
