@@ -15,7 +15,7 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 MESON_ARGS+=	-Dlispdir=${EMACS_LISPPREFIX}
-MESON_ARGS+=	-Dbuildtype=debug
+MESON_ARGS+=	-Dreadline=enabled
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config autoconf automake ninja
@@ -42,6 +42,7 @@ post-install:
 #.include "../../lang/python/application.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+.include "../../devel/readline/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/gmime3/buildlink3.mk"

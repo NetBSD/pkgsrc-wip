@@ -1,4 +1,3 @@
-- `mu server` starts up and immediately quits
 - more testing
 - add guile option back in
 - probably some issues with PLIST
