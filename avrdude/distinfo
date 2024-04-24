@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (avrdude-7.2.tar.gz) = cfb6f52be99a8411c3f91260fa4a0f4c4787e4785a866926a459a30687ca0356
-SHA512 (avrdude-7.2.tar.gz) = 04d04492458bc1d183ad8ff403cf3d38f65f44bb992df589e8f49d28b5347eb63433568c95f5d575ae651be70d725d3f178175cd1fe6dcd46ec013c3fe3f2ab0
-Size (avrdude-7.2.tar.gz) = 2622520 bytes
+BLAKE2s (avrdude-7.3.tar.gz) = 22df261a8083febd8206917e3fd70482e4e12d208dd31fb968d022a56e5f87ba
+SHA512 (avrdude-7.3.tar.gz) = c8e314847e32f0b43c1a702d0ac95bed44d0eb434ea28b49ecf00310d46f813212910e149561fdd8bcf8d917b44f2f08660b90658c2d4cc73ae1adbb15bec8f4
+Size (avrdude-7.3.tar.gz) = 3260070 bytes
 SHA1 (patch-freebsd__ppi.h) = 45f4fdd5c1469bb0272e26a3ce048640caeb72f5
 SHA1 (patch-ppi.c) = d753445f81da03b1d726f1257fa5161a5b7c8605
 SHA1 (patch-usb__libusb.c) = b92f7f7acfe0951e742e1cc7691400cc81f9f36a

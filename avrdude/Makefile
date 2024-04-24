@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=		avrdude-7.2
+DISTNAME=		avrdude-7.3
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GITHUB:=avrdudes/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

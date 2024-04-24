@@ -42,6 +42,8 @@ ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_38.html
 ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_39.html
 ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_4.html
 ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_40.html
+${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_41.html
+${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_42.html
 ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_5.html
 ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_6.html
 ${PLIST.doc}share/doc/avrdude/avrdude-html/avrdude_7.html

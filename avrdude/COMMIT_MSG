@@ -1,8 +1,162 @@
-cross/avrdude: Update to 7.2
+cross/avrdude: Update to 7.3
 
 - Switch to CMake build system
 - Add bl3 file for shared library
 - Fix "doc" option
+
+Changes in version 7.3:
+
+  * Major changes compared to the previous version:
+
+    - Connect target via -P serialadapter[:sn] and -P usb:vid:pid[:sn] #1498
+    - Add io and sram memory info in lieu of incomplete data memory
+    - New test-avrdude script in tools #1645
+    - Update SerialUPDI protocol #1627
+    - Terminal
+        + Command regfile #1580
+        + Command factory reset #1642
+
+  * New devices supported:
+
+    - AVR16EB14, AVR16EB20, AVR16EB28, AVR16EB32
+    - AVR64DU28, AVR64DU32
+
+  * New programmers supported:
+
+    - ft2232h_jtag, ft232h_jtag
+    - dryboot
+
+  * Issues fixed:
+
+    - Provide sib memory for AVR8X parts #1479
+    - HAS_VTARG_READ not utilized in source code #1469
+    - -c stk500 only works with stk500v2 firmware #1467
+    - Read silicon revision from modern AVRs #1472
+    - Dryrun doesn't overlap XMEGA flash memories #1485
+    - 7e94ed4442b breaks flashing GT2560 boards #1503
+    - Cross-platform support for 1200bps touch #1500
+    - Read ATmega324PB and ATmega328PB serial number #1509
+    - EEPROM file generates error with 7.2 #1508
+    - PGM LED not activated for flash or eeprom write #1514
+    - Adding the Avrdude build version to avrdude.conf #1475
+    - Harmonise WIN32 and POSIX serial comms timeout #1249
+    - Old avrdude.conf can result in a segmentation fault #1544
+    - Support AVR EB series #1546
+    - Programmer in .avrduderc not recognised #1551
+    - JTAG signature write ineffective #1527
+    - Control forced loading of ~/.avrduderc #1548
+    - Warn if avrdude and avrdude.conf versions don't match #1562
+    - Terminal part command could need an update #1558
+    - Proposal: Add memory sram #1559
+    - jtagmkI.c/jtagmkII.c rely on OCDEN being hfuse bit 7 #1537
+    - Certain terminal commands may be confusing #1570
+    - Upload port required for -cdryrun on MacOS #1578
+    - Make programmer -c name checking more forgiving #1591
+    - Query a programmer's current clock speed #1329
+    - Differentiate USB programmers with the same VID/PID #973
+    - Add AVR-DU series latest information #1595
+    - Provide simple way to factory reset a chip #1619
+    - Incorrect SerialUPDI communication for NVM V3, V4 and V5 #1621
+    - SerialUPDI programmer can fail when erasing EEPROM #1622
+    - SerialUPDI - NVMProg key not being accepted immediately
+      after NVM V3+ chip completes boot #1623
+    - USE_STATIC_LIBS builds fail to detect libreadline.so #1624
+    - Writing one-byte files to flash fails #1633
+    - Integrate test-avrdude github action using dryrun #1643
+    - Test script issues #1649
+    - SerialUPDI unable to write USERROW memory on AVR64DU32 #1655
+    - The last write/erase can fail with -c jtag2updi #1661
+    - Improve programmer documentation in avrdude.conf #1437
+
+  * Pull requests:
+
+    - Add JTAG support to avrftdi #1324
+    - Fix probing of the generic -c stk500 programmer #1468
+    - Utilize HAS_VTARG_READ defined in avrdude.conf #1470
+    - Provide sib memory for AVR8X parts #1480
+    - Read chip revision and add IO memory for PDI/UPDI parts #1474
+    - Replace string comparison functions #1482
+    - Fix overlapping XMEGA flash memories for dryrun #1486
+    - Exit if part and programmer are incompatible #1487
+    - Add io memory for classic parts #1488
+    - Add AVR-EB parts #1491
+    - Review calibration read command in avrdude.conf #1495
+    - Provide serialadapter entity in avrdude.conf #1497
+    - Add -P serialadapter[:sn] and -P usb:vid:pid[:sn] #1498
+    - Add -xdelay=n to wiring and improve reset timing #1505
+    - Reduce stk500v2_getsync() timeout #1506
+    - libserialport github action #1512
+    - Support serial port "touch" using libserialport #1507
+    - Read prodsig of classic parts #1510 #1520-21 #1524-26
+    - Adapt stk500 readback values for usbtiny.c #1511
+    - Add LED support for ScratchMonkey programmer #1517
+    - Review and update prodsig memories for U/PDI parts #1518
+    - Add id as comment to avrdude.conf definitions #1519
+    - Model prodsig for -c dryrun #1522
+    - Fix tempsense size, AVR-EB memory offsets and avrdude.conf
+      memory order #1523
+    - Review and update LED support #1528
+    - Fix SerialUPDI with NVM v3 controller #1531
+    - Add bootloader hashes from the Sanguino Arduino repo #1533
+    - Support MinGW cross compiler #1539
+    - Add avrdude_conf_version to grammar #1542 #1547
+    - Change execution order in silicon revision check #1543
+    - Add Arduino avrdude_packing github action for git man #1540
+    - Introduce memory types in lieu of memory name comparisons #1538
+    - Allow UPDI_SIB of AVR_EB in serialupdi #1549
+    - Harmonise WIN32 and POSIX serial comms timeout #1550
+    - Test programmers for prog_modes and type #1557
+    - Remove paged eeprom property from ATtiny43U #1556
+    - Review write_byte() functions #1554
+    - Provide option -N for do not load personal config file #1555
+    - Print warning when avrdude and avrdude.conf versions doesn't match #1564
+    - Always warn if part and programmer are incompatible #1563
+    - Provide -x xtal=... option for STK500 v1 and v2 #1566
+    - Update part cmd #1568
+    - Update src/CMakeLists.txt #1569
+    - Add memory sram and remove memory data #1571
+    - Add GNU readline to mingw github action #1576
+    - Provide libavrude functions to access part config values #1577
+    - Add get_vtarget/varef/fosc/sck_period for programmers #1574
+    - Provide terminal regfile command #1580
+    - Ignore port settings when using -c dryrun #1581
+    - Add more PL2303 compatible USB PIDs #1583
+    - Faster build.sh script with option -j #1586
+    - Terminal sck command improvements #1587
+    - Differentiate USB programmers with the same VID/PID #1588
+    - Provide configuration variable default_baudrate #1590
+    - Increase index entries in avrdude.texi #1592
+    - Suggest programmers using weighted Damerau-Levenshtein #1593
+    - Switch PICkit4 and SNAP avr/pic modes using -xmode #1596
+    - Support AVR64DU28 and AVR64DU32 #1601
+    - Force STK500 EEPROM paged r/w for bootloaders #1602
+    - Provide terminal keep alive code for jtagmkII_updi #1603
+    - Fix Arduino Nano Every EEPROM writing for UPDI parts #1604
+    - Provide and use locate_part_by_signature_pm() #1605
+    - Harden AVRDUDE against pre-C99 libraries #1608
+    - Add MSYS2 ucrt64, clang32 and clang64 to build.yml #1612
+    - Updates to SerialUPDI protocol #1627
+    - Fix upload of one-byte files to flash #1634
+    - Add CH343 USB to serial adapter #1640
+    - Add dryboot programmer #1641
+    - Provide terminal command factory reset #1642
+    - Add tools/test-avrdude #1645
+    - Add test-avrdude using dryrun to github action #1646
+    - Add delay for AVR Dragon and Arduino Nano Every #1647
+    - Make test-avrdude script resilient to old bash #1650
+    - Create test-avrdude temporary files in the script itself #1651
+    - Enable writing of 512-byte page for USERROW #1659
+    - Read signature on -c jtag2updi exit if last op was write #1662
+    - Determine Autoconf package version from cmake's #1663
+    - Add more programmer descriptions #1667
+    - test(1) string comparison uses =, not == #1668
+
+  * Internals:
+
+    - Introduce memory types in lieu of memory name comparisons #1538
+      This will enable to decouple memory names from function
+    - Added a knowledgebase on register files of parts
+
 
 Changes in version 7.2:
 
