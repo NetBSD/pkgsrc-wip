@@ -2262,6 +2262,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/mml2015.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/mml2015.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnagent.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnagent.elc
+share/emacs/${PKGVERSION}/lisp/gnus/nnatom.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/nnatom.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnbabyl.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnbabyl.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nndiary.el.gz
@@ -2274,6 +2276,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/nndraft.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nndraft.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nneething.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nneething.elc
+share/emacs/${PKGVERSION}/lisp/gnus/nnfeed.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/nnfeed.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnfolder.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnfolder.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nngateway.el.gz
