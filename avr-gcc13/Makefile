@@ -4,7 +4,7 @@ DISTNAME=		gcc-13.2.0
 PKGNAME=		${DISTNAME:C/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
-EXTRACT_SUFX=		.tar.xz
+#EXTRACT_SUFX=		.tar.xz
 
 OWNER=			micha@NetBSD.org
 COMMENT=		GCC for Atmel AVR 8-bit RISC microcontrollers
@@ -16,11 +16,15 @@ MKPIE_SUPPORTED=	no
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
-DEPENDS+=		avr-binutils>=2.38:../../cross/avr-binutils
+DEPENDS+=		avr-binutils>=2.42:../../cross/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES=			c c++
+USE_CXX_FEATURES+=		c++11
+# Required for ISL with option "gcc-inplace-math"
+FORCE_CXX_STD=			c++11
+
 USE_LIBTOOL=			yes
 USE_TOOLS+=			bash gmake gsed:run perl
 GNU_CONFIGURE=			yes

@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (gcc-13.2.0.tar.xz) = 89847ac474d00cde32fbcae20154f8aedff9c66158faf95ad7a78cc9a190d4c4
-SHA512 (gcc-13.2.0.tar.xz) = d99e4826a70db04504467e349e9fbaedaa5870766cda7c5cab50cdebedc4be755ebca5b789e1232a34a20be1a0b60097de9280efe47bdb71c73251e30b0862a2
-Size (gcc-13.2.0.tar.xz) = 87858592 bytes
+BLAKE2s (gcc-13.2.0.tar.gz) = ac85decaf0c3e7718a38305b857fdcd5f7a5714563b04b55b8246a961f26e1c0
+SHA512 (gcc-13.2.0.tar.gz) = 41c8c77ac5c3f77de639c2913a8e4ff424d48858c9575fc318861209467828ccb7e6e5fe3618b42bf3d745be8c7ab4b4e50e424155e691816fa99951a2b870b9
+Size (gcc-13.2.0.tar.gz) = 153347847 bytes
 SHA1 (patch-gcc_config_nvptx_gen-opt.sh) = e57ddb20c40929328bbc4da696d60403925cb99d
 SHA1 (patch-gcc_configure) = 7607ef87ef4282909d3c83cc2236f6798ca0e90f
 SHA1 (patch-libgcc_libgcov.h) = 1fe3a2b55bac15ea1332040462675755945f5b05

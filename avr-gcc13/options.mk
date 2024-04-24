@@ -17,8 +17,12 @@ CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-isl=${BUILDLINK_PREFIX.isl}
 CONFIGURE_ARGS+=	--with-mpc=${BUILDLINK_PREFIX.mpcomplex}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
+BUILDLINK_API_DEPENDS.gmp+=		gmp>=4.3.2
 .  include "../../devel/gmp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.isl+=		isl>=0.15
 .  include "../../math/isl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mpcomplex+=	mpcomplex>=1.0.1
 .  include "../../math/mpcomplex/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mpfr+=		mpfr>=3.1.0
 .  include "../../math/mpfr/buildlink3.mk"
 .endif

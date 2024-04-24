@@ -1,4 +1,7 @@
-Must be tested:
+[X] Declare required minimum APIs of dependencies
+[X] Fix option "gcc-inplace-math"
+
+Tested with:
 [X] ATtiny841
 [X] ATmega168PB
 [X] ATmega324PA

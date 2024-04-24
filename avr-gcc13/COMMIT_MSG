@@ -6,6 +6,7 @@ Patch for Darwin/aarch64 removed (as requested in patch comment by tnn@).
 Patches for build system added (nonportable "==" shell syntax).
 Patch for libgcc added (system header file "sys/mman.h" not found).
 Disable PKGSRC_MKPIE (build failed on AMD64).
+Needs a C++11 compiler for bootstrap.
 
 Upstream changelog2:
 <https://gcc.gnu.org/gcc-13/changes.html>
