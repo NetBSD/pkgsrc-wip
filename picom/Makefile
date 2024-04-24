@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2022/09/04 12:12:01 tnn Exp $
 
-DISTNAME=	picom-10.2
+DISTNAME=	picom-11.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -46,4 +46,7 @@ BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=21.3.7
 .include "../../x11/xcb-util-image/buildlink3.mk"
 .include "../../x11/xcb-util-renderutil/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
+.include "../../x11/xcb-util/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
