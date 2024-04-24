@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 1.121 2024/04/06 08:05:35 wiz Exp $
 
-DISTNAME=	openttd-13.4-source
+DISTNAME=	openttd-14.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 MASTER_SITES+=	https://cdn.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
@@ -17,12 +16,12 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-USE_CXX_FEATURES+=	c++17 charconv
+USE_CXX_FEATURES+=	c++20 charconv
 
 BUILD_DEFS+=	VARBASE
 
 # Uses alloca, cannot use standard C++ on NetBSD
-FORCE_CXX_STD=		gnu++17
+FORCE_CXX_STD=		gnu++20
 
 .include "../../mk/bsd.prefs.mk"
 
