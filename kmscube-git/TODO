@@ -1,0 +1,3 @@
+Run-time dependency gbm found: NO (tried pkgconfig)
+
+meson.build:56:10: ERROR: Dependency "gbm" not found, tried pkgconfig

@@ -1802,6 +1802,7 @@ SUBDIR+=	klatexformula
 SUBDIR+=	klayout
 SUBDIR+=	klh10
 SUBDIR+=	kmenuedit
+SUBDIR+=	kmscube-git
 SUBDIR+=	kmymoney-git
 SUBDIR+=	kmymoney4
 SUBDIR+=	kodi
