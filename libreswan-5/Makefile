@@ -15,8 +15,8 @@
 #
 # libreswan: 5.0 5.0nb1 ...
 
-DISTNAME=	libreswan-5.0rc3
-MASTER_SITES=   https://download.libreswan.org/development/
+DISTNAME=	libreswan-5.0
+MASTER_SITES=   https://download.libreswan.org/
 
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
