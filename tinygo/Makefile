@@ -48,10 +48,10 @@ CHECK_INTERPRETER_SKIP+=	tinygo/lib/picolibc/newlib/libc/tinystdio/make-dtoa-dat
 post-extract:
 	mv ${WRKDIR}/llvm-project* ${WRKSRC}/llvm-project
 	rm -rf ${WRKSRC}/lib/musl && mv ${WRKDIR}/musl* ${WRKSRC}/lib/musl
-#	cp ${WRKDIR}/go.bug.st/serial@v1.6.0/serial_openbsd.go		\
-#		${WRKDIR}/go.bug.st/serial@v1.6.0/serial_netbsd.go
-#	cp ${WRKDIR}/go.bug.st/serial@v1.6.0/enumerator/usb_openbsd.go	\
-#		${WRKDIR}/go.bug.st/serial@v1.6.0/enumerator/usb_netbsd.go
+	cp ${WRKDIR}/go.bug.st/serial@v1.6.0/serial_openbsd.go		\
+		${WRKDIR}/go.bug.st/serial@v1.6.0/serial_netbsd.go
+	cp ${WRKDIR}/go.bug.st/serial@v1.6.0/enumerator/usb_openbsd.go	\
+		${WRKDIR}/go.bug.st/serial@v1.6.0/enumerator/usb_netbsd.go
 
 do-build:
 .for t in llvm-build tinygo build/release
