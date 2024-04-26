@@ -1,0 +1,14 @@
+cross/tavrasm: Import Toms AVR assembler 1.22
+
+Version 1.22 - January 2005
+
+- Several updates for ATmega (new devices, extended I/O etc.)
+  Thanks to Dariusz Kowalewski for these updates.
+
+- Fixed problem with .db 00
+  Thanks Mike Hall for reporting this.
+
+- Fixed 'symtab = (new (symbolTableEntry*))[size]' blunder.
+  How that ever slipped by GCC is beyond me :-)
+  Lots of compilers won't even allow it.
+  Thanks to Steven Saunderson for reporting this.

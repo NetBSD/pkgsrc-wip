@@ -1,0 +1,75 @@
+$NetBSD$
+
+Modify for pkgsrc.
+
+--- src/makefile.orig	2004-12-11 23:51:29.000000000 +0000
++++ src/makefile
+@@ -24,29 +24,32 @@ VERSION		= 122
+ 
+ ### Compiler options #########################################################
+ 
+-CC		= gcc
+-CFLAGS          = -O2 -Wall -DAVRLANG=LANGUAGE_$(LANGUAGE)
+-CPPFLAGS	=
+-CCFLAGS         = $(CFLAGS) $(CPPFLAGS)
+-LINK            = -lm -lstdc++
++#CC		= c++
++#CFLAGS		= -O2 -Wall -DAVRLANG=LANGUAGE_$(LANGUAGE)
++#CPPFLAGS	=
++CCFLAGS		= $(CFLAGS) $(CPPFLAGS) -DAVRLANG=LANGUAGE_$(LANGUAGE)
++CCXXFLAGS	= $(CXXFLAGS) $(CPPFLAGS) -DAVRLANG=LANGUAGE_$(LANGUAGE)
++#LINK		= -lm -lstdc++
+ OBJS		= avrparse.o avrlex.o avrasm.o symbol.o semantic.o utils.o
+ 
+ ### Defaul CC files #########################################################
+ 
+-.cc.o:
++.c.o:
+ 		$(CC) -c $(CCFLAGS) $<
++.cc.o:
++		$(CXX) -c $(CCXXFLAGS) $<
+ 
+ ### Executable ##############################################################
+ 
+ $(EXENAME):	$(OBJS)
+-		$(CC) $(CCFLAGS) $(OBJS) $(LINK) -o $@
++		$(CXX) $(CCXXFLAGS) $(OBJS) $(LINK) -o $@
+ 
+ ### Parser file #############################################################
+ 
+ avrparse.cc:	avrparse.y avrasm.hh symbol.hh semantic.hh opcodes.hh
+ 		bison -d -o avrparse avrparse.y
+ 		mv avrparse avrparse.cc
+-		mv avrparse.h avrparse.hh
++		cp avrparse.h avrparse.hh
+ 
+ ### Scanner file ############################################################
+ 
+@@ -56,8 +59,8 @@ avrlex.cc:	avrparse.cc avrlex.l symbol.h
+ 
+ ### Dependencies ############################################################
+ 
+-avrlex.o:	avrlex.l
+-avrparse.o:	avrparse.y
++avrlex.cc:	avrlex.l
++avrparse.cc:	avrparse.y
+ avrasm.o:	avrasm.cc avrasm.hh symbol.hh devices.hh messages.hh
+ symbol.o:	symbol.cc symbol.hh avrasm.hh
+ utils.o:	utils.cc utils.hh avrasm.hh messages.hh msg_us.hh msg_de.hh msg_sp.hh
+@@ -79,6 +82,16 @@ clean:
+ 		rm -rf *.obj
+ 		rm -rf *.out
+ 
++
++### Install #################################################################
++
++install:
++		mkdir -p ${DESTDIR}${PREFIX}/bin
++		cp tavrasm ${DESTDIR}${PREFIX}/bin
++		mkdir -p ${DESTDIR}${PREFIX}/man/man1
++		cp ../tavrasm.1 ${DESTDIR}${PREFIX}/man/man1
++
++
+ ### Distribution ############################################################
+ 
+ dist:		

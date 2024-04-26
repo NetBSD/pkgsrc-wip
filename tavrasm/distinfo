@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (tavrasm-1.22/tavrasm.tar.gz) = 1d6a28fc14101bae789d4fc0cd3b2074651bd47760cc3bc73d523e72833c65a4
+SHA512 (tavrasm-1.22/tavrasm.tar.gz) = 3039250bd92e2061e9590bbd512e1d8513a18e7dfcafe8c464c795516fb95fd283e7444d1aca6d5695f3bab3ce019e72cb424de21741e780b5a59fafa2427bb6
+Size (tavrasm-1.22/tavrasm.tar.gz) = 65692 bytes
+SHA1 (patch-src_avrparse.y) = e59c2622dd8faec1de2b027e928ee6aed834ad22
+SHA1 (patch-src_makefile) = a41a317184d634ad37ca91a2ebc96fb986ee48df

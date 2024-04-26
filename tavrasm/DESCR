@@ -1,0 +1,5 @@
+Toms AVR assembler
+
+Needs LF eol style when compiling source under *NIX.
+
+No longer maintained, but still useful for the old Atmel chips.

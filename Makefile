@@ -5345,6 +5345,7 @@ SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
 SUBDIR+=	task
 SUBDIR+=	tasks
+SUBDIR+=	tavrasm
 SUBDIR+=	tc
 SUBDIR+=	tc-git
 SUBDIR+=	tc-hasida-table
