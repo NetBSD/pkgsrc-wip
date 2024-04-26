@@ -1,8 +1,8 @@
 @comment $NetBSD: PLIST.guile,v 1.1 2015/01/03 09:55:19 thomasklausner Exp $
 info/mu-guile.info
 lib/libguile-mu.la
-share/guile/site/2.2/mu/plot.scm
 share/guile/site/2.2/mu.scm
+share/guile/site/2.2/mu/plot.scm
 share/guile/site/2.2/mu/script.scm
 share/guile/site/2.2/mu/stats.scm
 share/mu/scripts/find-dups.scm
