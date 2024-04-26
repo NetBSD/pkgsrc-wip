@@ -1,14 +1,14 @@
 # $NetBSD: Makefile,v 1.98 2024/02/19 12:47:39 wiz Exp $
 
-DISTNAME=		tortoisehg-6.6.3
-PKGNAME=		${PYPKGPREFIX}-qt6-${DISTNAME}
-CATEGORIES=		devel python
-MASTER_SITES=		https://www.mercurial-scm.org/release/tortoisehg/targz/
+DISTNAME=	tortoisehg-6.6.3
+PKGNAME=	${PYPKGPREFIX}-qt6-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	https://www.mercurial-scm.org/release/tortoisehg/targz/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://tortoisehg.bitbucket.io/
-COMMENT=		GUI for Mercurial
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://tortoisehg.bitbucket.io/
+COMMENT=	GUI for Mercurial
+LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.0.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
@@ -17,7 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-qt6-qscintilla-[0-9]*:../../x11/py-qt6-qscintilla
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
 
-USE_TOOLS+=		pax
+USE_TOOLS+=	pax
+MAKE_ENV+=	THG_QT_API=PyQt6
 
 REPLACE_PYTHON+=	thg
 
@@ -37,10 +38,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} html
-	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
+	${RM} -f ${WRKSRC}/doc/build/html/.buildinfo
 	# conflicts with mercurial
 	# https://foss.heptapod.net/mercurial/tortoisehg/thg/-/issues/4629
-	${RM} ${WRKSRC}/hgext3rd/__init__.py
+	${RM} -f ${WRKSRC}/hgext3rd/__init__.py
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/thg.desktop ${DESTDIR}${PREFIX}/share/applications/thg.desktop
