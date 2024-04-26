@@ -16,34 +16,10 @@ CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 
 .if ${PKG_OPTIONS:Mcurses}
 .include "../../mk/curses.buildlink3.mk"
-
-.  if ${OPSYS} == "NetBSD"
-.    if exists(/usr/include/panel.h)
+.include "../../mk/terminfo.buildlink3.mk"
 CMAKE_ARGS+=	-DLLDB_ENABLE_CURSES=ON
 CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=ON
-.    else
-.include "../../devel/ncurses/buildlink3.mk"
-.      if exists(${BUILDLINK_PREFIX.ncurses}/include/ncurses/panel.h)
-CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=ON
-CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=ON
-.      else
-CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=OFF
-CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
-.      endif
-.    endif
-.  else
-.include "../../devel/ncurses/buildlink3.mk"
-.    if exists(${BUILDLINK_PREFIX.ncurses}/include/ncurses/panel.h)
-CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=ON
-CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=ON
-.    else
-CMAKE_ARGS+=    -DLLDB_ENABLE_CURSES=OFF
-CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
-.    endif
-.  endif
-
 .else
-
 CMAKE_ARGS+=	-DLLDB_ENABLE_CURSES=OFF
 CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 .endif
