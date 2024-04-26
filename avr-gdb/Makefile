@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gdb-12.1
+DISTNAME=	gdb-14.2
 PKGNAME=	${DISTNAME:S/^/avr-/}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
@@ -12,7 +12,10 @@ HOMEPAGE=	https://sourceware.org/gdb/
 COMMENT=	GNU gdb for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD=		c++11
+
 USE_TOOLS+=		bash gmake
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 GNU_CONFIGURE=		yes
@@ -36,7 +39,10 @@ TEST_DEPENDS+=		dejagnu>=1.6.2:../../devel/dejagnu
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${DESTDIR}${PREFIX}/bin/avr-gdb
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=3.1.0
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../textproc/source-highlight/buildlink3.mk"

@@ -1,8 +1,9 @@
-cross/avr-gdb: Update to 12.1
+cross/avr-gdb: Update to 14.2
 
 Homepage added.
-Dependencies GMP and source-highlight added.
-Patch for nonportable shell syntax added.
+Dependencies updated.
 
 Upstream changelog:
+<https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=blob_plain;f=gdb/NEWS;hb=gdb-14.2-release>
+<https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=blob_plain;f=gdb/NEWS;hb=gdb-13.2-release>
 <https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=blob_plain;f=gdb/NEWS;hb=gdb-12.1-release>
