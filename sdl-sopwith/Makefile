@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	sdl-sopwith-2.4.0
+DISTNAME=	sdl-sopwith-2.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fragglet/}
 GITHUB_TAG=	${DISTNAME}
@@ -9,7 +9,7 @@ EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fragglet/sdl-sopwith
-COMMENT=	Classic bi-plane shoot-'em up
+COMMENT=	Classic biplane shoot-'em up
 LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"

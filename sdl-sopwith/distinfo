@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (sdl-sopwith-2.4.0.tar.gz) = 49448cd0f55b67f21d08de2b85c9ce4c4729f146cfabece3ced37059243522de
-SHA512 (sdl-sopwith-2.4.0.tar.gz) = 4f7022704789669230861a236f3fbdd60ee2f78482134183136f95952028fa68489a9ab1a7bc7a866321c6bfa6e14a3a0b9de13a1dbc7b2ca1748194e4bee5e3
-Size (sdl-sopwith-2.4.0.tar.gz) = 904163 bytes
+BLAKE2s (sdl-sopwith-2.5.0.tar.gz) = b4df576366a540db2a82f3585d06841c7020bab2a0191630edbfd23d8f0f527b
+SHA512 (sdl-sopwith-2.5.0.tar.gz) = f892fb662c0d402ebe41c0eceede7ed2a2fd482faf8ba068d9ee9fb234099f1fe614ee92916fd0682eca0b8b21d0daa9b2faea8920397df68e832cb9ce786c49
+Size (sdl-sopwith-2.5.0.tar.gz) = 908617 bytes
