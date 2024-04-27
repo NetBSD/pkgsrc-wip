@@ -4660,7 +4660,6 @@ SUBDIR+=	py-topkapi
 SUBDIR+=	py-torch
 SUBDIR+=	py-toro
 SUBDIR+=	py-toronado
-SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-towncrier
 SUBDIR+=	py-traceInv
