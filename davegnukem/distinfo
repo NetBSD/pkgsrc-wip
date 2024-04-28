@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (davegnukem-1.0.3.tar.gz) = de361dd18ff3f66938ef9d0741d9fd3599213a4a9ad883e25ea8c084fe89e2cc
+SHA512 (davegnukem-1.0.3.tar.gz) = b1b4ce3212ff3e6e4b0a9bf33c04bfe0df9e096e9faa8cd06cb50ac226e79cb0042b7150c0568172e531f3d90c3fb758365edaa8e25de141a8ba837264a7eadf
+Size (davegnukem-1.0.3.tar.gz) = 342109 bytes
+BLAKE2s (davegnukem-data-1.0.3.tar.gz) = 171d612b4374e578eea6b062ba8ff61fb3d7c3a0b0263b74ed94f9bd30b2903c
+SHA512 (davegnukem-data-1.0.3.tar.gz) = fd628974f09de9e6f0e0416dfd48704766e2351a9e1e086cc0fe7fd3ad908d289ccccc5b67f8f8851a9e4a58f8caab1424e506341d928ba564679d3305061bf5
+Size (davegnukem-data-1.0.3.tar.gz) = 20258150 bytes
+SHA1 (patch-Makefile) = e42b4750fb59472278be81d0ddb3c1d3f76b61a5
+SHA1 (patch-src_sdl_djgraph.cpp) = aecc21d65add372d7928b4114ee641196093784a

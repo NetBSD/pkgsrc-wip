@@ -1,0 +1,15 @@
+$NetBSD$
+
+Patches LDFLAGS to set rpath to package dir.
+
+--- Makefile.orig	2024-04-28 15:16:45.341153643 -0400
++++ Makefile	2024-04-28 15:17:57.960908017 -0400
+@@ -25,7 +25,7 @@
+ DATA_DIR = $(PREFIX)/share/games/$(BIN)/# the trailing slash is required for paths in the source
+ 
+ LIBS    = `sdl2-config --libs` -lSDL2_mixer
+-LDFLAGS = $(LIBS)
++LDFLAGS = -Wl,-rpath,$(PREFIX)/lib $(LIBS)
+ 
+ CPPFLAGS = -DDATA_DIR=\"$(DATA_DIR)\" -DVERSION=\"'$(VERSION)'\"
+ 
