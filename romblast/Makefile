@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=  	ROMBlast-0.1.9
-CATEGORIES=	devel	
+CATEGORIES=	emulators	
 MASTER_SITES=	https://sourceforge.net/projects/romblast/files/
 
 MAINTAINER=	goon.mage@yahoo.com
