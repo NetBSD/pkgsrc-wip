@@ -4,7 +4,7 @@
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.3.3
+DISTNAME=	R-4.4.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -149,10 +149,10 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #TOOL_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 #TOOL_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
 
-SUBST_CLASSES+=		rpath
-SUBST_STAGE.rpath=	pre-configure
-SUBST_FILES.rpath=	configure.ac
-SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
+#SUBST_CLASSES+=		rpath
+#SUBST_STAGE.rpath=	pre-configure
+#SUBST_FILES.rpath=	configure.ac
+#SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
