@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (deutex-5.2.2.tar.gz) = 5e3b718356faabc359a8499457ae55b9a441908471a6d65ba9e5067b85a50d34
+SHA512 (deutex-5.2.2.tar.gz) = b64511c8af4d7a0a65fa3951b4ca2d41aac2d6d5d21fe8ec336a684718f7e7940e8cb420201b5d6897690a573d846f22723aa72296bc8cc0dabda680ed5845e3
+Size (deutex-5.2.2.tar.gz) = 124644 bytes
