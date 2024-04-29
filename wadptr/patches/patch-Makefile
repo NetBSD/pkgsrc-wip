@@ -1,0 +1,19 @@
+$NetBSD$
+
+Patches Makefile to not use -D argument to install.
+
+--- Makefile.orig	2024-04-29 11:26:30.346342899 -0400
++++ Makefile	2024-04-29 11:26:49.024153733 -0400
+@@ -34,8 +34,10 @@
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJECTS)
+ 
+ install:
+-	install -D wadptr $(DESTDIR)$(PREFIX)/bin/wadptr
+-	install -D wadptr.1 $(DESTDIR)$(PREFIX)/share/man/man1/wadptr.1
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
++	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
++	install wadptr $(DESTDIR)$(PREFIX)/bin/wadptr
++	install wadptr.1 $(DESTDIR)$(PREFIX)/share/man/man1/wadptr.1
+ 
+ clean:
+ 	$(DELETE) $(EXECUTABLE)

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (wadptr-3.6.tar.gz) = efc45674be6d8d51420d18df20e034b0070b16f9d5d7794fd72c3ff958fa25b5
+SHA512 (wadptr-3.6.tar.gz) = 05261daf9cdaecc6367f4c6751b21fe0b8d5c35b4756ec5f147f3740320615c8fc24fa0ad8cb8f83f8a0f3c42004b4c1a243f7ba47622d6129c26f21c37b37ea
+Size (wadptr-3.6.tar.gz) = 17032146 bytes
+SHA1 (patch-Makefile) = 96fab720173f0c9b4f4f21bc3d7939b5dc266483
