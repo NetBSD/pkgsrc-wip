@@ -1,17 +1,17 @@
 # $NetBSD$
 
-V=1.0.3
-DISTNAME=	davegnukem-${V}
+DISTNAME=	davegnukem-1.0.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=davidjoffe/}
-GITHUB_TAG=	${V}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 GITHUB_PROJECT=	dave_gnukem
 EXTRACT_USING=	bsdtar
 
 # The game data is distributed as a separate file.
-SITES.davegnukem-data-${V}.tar.gz= \
--https://github.com/davidjoffe/gnukem_data/archive/refs/tags/${V}.tar.gz
-DISTFILES=	${DEFAULT_DISTFILES} davegnukem-data-${V}.tar.gz
+DATA_REPOSITORY=https://github.com/davidjoffe/gnukem_data
+SITES.davegnukem-data-${PKGVERSION_NOREV}.tar.gz= \
+    -${DATA_REPOSITORY}/archive/refs/tags/${PKGVERSION_NOREV}.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES} davegnukem-data-${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://djoffe.com/gnukem/
@@ -27,7 +27,7 @@ PLIST.bsd=	yes
 
 # The Makefile install step expects to find the data files in data/
 pre-configure:
-	cd ${WRKSRC} && mv ../gnukem_data-${V} data
+	cd ${WRKSRC} && mv ../gnukem_data-${PKGVERSION_NOREV} data
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure

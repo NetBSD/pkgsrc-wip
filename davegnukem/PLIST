@@ -1,3 +1,4 @@
+@comment $NetBSD$
 games/davegnukem
 share/applications/davegnukem.desktop
 share/doc/davegnukem-data/README.md
