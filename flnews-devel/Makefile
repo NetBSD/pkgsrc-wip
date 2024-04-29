@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 TEST_TARGET=	test
 
 # https://reproducible-builds.org/specs/source-date-epoch/
-CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1654099540
+CONFIGURE_ENV=	SOURCE_DATE_EPOCH=1714225440
 
 # Bug report contact address used for GUI
 FLNEWS_MAINTAINER=	${MAINTAINER}
