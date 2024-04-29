@@ -1310,6 +1310,7 @@ SUBDIR+=	gramscii
 SUBDIR+=	grandr
 SUBDIR+=	granite
 SUBDIR+=	graphmonkey
+SUBDIR+=	graphviz
 SUBDIR+=	grass-Spearfish
 SUBDIR+=	graveman
 SUBDIR+=	grc
