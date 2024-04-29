@@ -1,0 +1,26 @@
+games/libdoom-umapinfo: Import 1.0.0
+
+A standalone parser for Doom UMAPINFO data.
+
+1.0.0  2023-08-27  Release
+--------------------------
+
+Important notes:
+- Namespace prefix changed for new API and ABI
+- Key and value type codes renumbered
+- Value defined for parameter "verbose" of function doom_umi1_create()
+
+Bug fixes:
+- Return value of doom_umi1_i_parser_key_append() fixed
+- Use of const pointers in doom_umi1_i_yyerror() and
+  doom_umi1_i_parser_msg() fixed
+- Function import_data() of CLI utility fixed (code was not C90 conformant)
+- Build directory of library now contains symlinks for internal header files
+  Only required for build with POSIX make
+- Archiver ar is called with combined options ("-rc" instead of "-r -c")
+  System V ar and old versions of GNU ar do not support separation of options
+
+New features and improvements:
+- Meson build system added for shared library
+  Muon can be used with samurai to avoid python dependency
+- Testsuite added
