@@ -1,16 +1,15 @@
 # $NetBSD$
 
-V=		5.2.2
-DISTNAME=	deutex-${V}
+DISTNAME=	deutex-5.2.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Doom-Utils/}
-GITHUB_TAG=	v${V}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	deutex
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Doom-Utils/deutex
-COMMENT=	Command-line tool for building Doom WAD files.
+COMMENT=	Command-line tool for building Doom WAD files
 LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
