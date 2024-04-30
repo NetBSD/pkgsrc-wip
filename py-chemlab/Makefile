@@ -10,9 +10,10 @@ HOMEPAGE=	https://files.pythonhosted.org/packages/source/c/chemlab/
 COMMENT=	The python chemistry library you were waiting for
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.4:../../devel/py-nose
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:build
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
 	# Verify that no fetching is done during build
@@ -21,5 +22,4 @@ pre-configure:
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

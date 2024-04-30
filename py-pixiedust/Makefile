@@ -17,14 +17,14 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.3.3:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-geojson>=2.5.0:../../geography/py-geojson
 DEPENDS+=	${PYPKGPREFIX}-colour>=0.1.5:../../textproc/py-colour
+DEPENDS+=	${PYPKGPREFIX}-markdown>=0:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.2:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-astunparse>=1.6.3:../../devel/py-astunparse
 DEPENDS+=	${PYPKGPREFIX}-mpld3>=0.5.2:../../category/py-mpld3
 
-PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

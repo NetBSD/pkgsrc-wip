@@ -11,11 +11,11 @@ COMMENT=	Thin wrapper for pandoc
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-pip>=0:../../devel/py-pip
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pip
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -12,11 +12,12 @@ COMMENT=	Enterprise scalable realtime graphing platform
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-carbon>=${PKGREVISION_NOREV}:../../wip/py-carbon
+DEPENDS+=	${PYPKGPREFIX}-cairo>=0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-django>=1.3.1:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.3.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
-PYTHON_VERSIONED_DEPENDENCIES+=	cairo
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	${DISTNAME:S/graphite-/graphite_/}
 
@@ -74,5 +75,4 @@ post-install:
 
 .include "../../wip/py-carbon/Makefile.common"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

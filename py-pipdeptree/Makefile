@@ -10,13 +10,14 @@ HOMEPAGE=	https://github.com/naiquevin/pipdeptree
 COMMENT=	Displaying the installed python packages in form of a dependency tree
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	pip
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pipdeptree pipdeptree-${PYVERSSUFFIX}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

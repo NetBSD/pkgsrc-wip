@@ -9,6 +9,7 @@ HOMEPAGE=	https://radicale.org/
 COMMENT=	CalDAV (calendar) and CardDAV (contact) server
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
@@ -18,15 +19,14 @@ DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 
 DEPENDS+=	daemonize>=1.7.8:../../sysutils/daemonize
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 BUILD_DEFS+=			VARBASE
 
 RADICALE_USER?=			radicale
 RADICALE_GROUP?=		radicale
 PKG_GROUPS=			${RADICALE_GROUP}
 PKG_USERS=			${RADICALE_USER}:${RADICALE_GROUP}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 PKG_SYSCONFSUBDIR=	radicale
 
@@ -75,5 +75,4 @@ post-install:
 .endfor
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

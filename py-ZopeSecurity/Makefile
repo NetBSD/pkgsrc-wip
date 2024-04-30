@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.security
 COMMENT=	Zope Security Framework
 LICENSE=        zpl-2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.proxy>=4.3.5:../../www/py-zope.proxy
 
-PYTHON_VERSIONED_DEPENDENCIES+= setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

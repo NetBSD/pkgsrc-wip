@@ -10,11 +10,12 @@ HOMEPAGE=	https://github.com/henriquebastos/python-decouple/
 COMMENT=	Strict separation of settings from code
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-.include "../../lang/python/egg.mk"
 WRKSRC=		${WRKDIR}/python-decouple-3.1
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/versioned_dependencies.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

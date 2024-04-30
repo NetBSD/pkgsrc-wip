@@ -10,10 +10,11 @@ HOMEPAGE=	https://github.com/facelessuser/pymdown-extensions
 COMMENT=	Extension pack for Python Markdown
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

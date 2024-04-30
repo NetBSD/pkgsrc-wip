@@ -23,7 +23,6 @@ WRKSRC=			${WRKDIR}/exabgp-${VERSION}
 # but is not needed to build or to run the software
 #USE_TOOLS+=		perl:run
 
-#PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 REPLACE_PERL+=		etc/exabgp/examples/dynamic-1.pl
@@ -86,5 +85,4 @@ post-install:
 .include "../../wip/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
