@@ -1,2 +1,2 @@
 Needs 'swiften' library, included copy does not work for some reason.
-Possibly report upstream?
+https://github.com/SpectrumIM/spectrum2/issues/493
