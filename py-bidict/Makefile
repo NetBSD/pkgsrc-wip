@@ -21,14 +21,13 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
 TOOL_DEPENDS+= ${PYPKGPREFIX}-test-cov>=2.10.1:../../devel/py-test-cov
 TOOL_DEPENDS+= ${PYPKGPREFIX}-pre-commit>=2.7.1:../../wip/py-pre-commit
 TOOL_DEPENDS+= ${PYPKGPREFIX}-tox>=3.12.1:../../devel/py-tox
+TEST_DEPENDS+= ${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
 
-PYTHON_VERSIONED_DEPENDENCIES=	hypothesis:test
-
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_LANGUAGES=	# none
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
