@@ -1,0 +1,5 @@
+builds and packages fine, but at startup there's a popup that says:
+
+"Amarok could not find any plugins. That indicates an installation problem."
+
+and it quits.
