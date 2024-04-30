@@ -3830,7 +3830,6 @@ SUBDIR+=	py-jabber-idavoll
 SUBDIR+=	py-jabber-palaver
 SUBDIR+=	py-jabber-proxy65
 SUBDIR+=	py-jabber-punjab
-SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-jabberbot
 SUBDIR+=	py-jarowinkler
 SUBDIR+=	py-jbessel
