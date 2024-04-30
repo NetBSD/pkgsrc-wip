@@ -5206,6 +5206,7 @@ SUBDIR+=	sparse
 SUBDIR+=	spatt
 SUBDIR+=	spcm
 SUBDIR+=	spectra
+SUBDIR+=	spectrum2
 SUBDIR+=	speed-dreams
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
