@@ -44,7 +44,7 @@ DEPENDS+=	${PYPKGPREFIX}-mistune>=0.8.4:../../textproc/py-mistune
 DEPENDS+=	${PYPKGPREFIX}-ubjson>=0.16.1:../../wip/py-ubjson
 DEPENDS+=	${PYPKGPREFIX}-trie3>=0.2:../../wip/py-trie3
 DEPENDS+=	${PYPKGPREFIX}-hamcrest>=2.0.2:../../devel/py-hamcrest
-#DEPENDS+=	${PYPKGPREFIX}-u-msgpack>=2.7.1:../../wip/py-u-msgpack
+DEPENDS+=	${PYPKGPREFIX}-u-msgpack>=2.7.1:../../devel/py-u-msgpack
 DEPENDS+=	${PYPKGPREFIX}-snappy>=0.5.3:../../wip/py-snappy
 DEPENDS+=	${PYPKGPREFIX}-zlmdb>=20.8.1:../../wip/py-zlmdb
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=20.1.2:../../www/py-autobahn
