@@ -5,6 +5,7 @@ libexec/lpjs/ad-hoc
 libexec/lpjs/admin
 libexec/lpjs/banner
 libexec/lpjs/chaperone
+libexec/lpjs/clear-queue
 libexec/lpjs/compd-disable
 libexec/lpjs/compd-enable
 libexec/lpjs/create-script
