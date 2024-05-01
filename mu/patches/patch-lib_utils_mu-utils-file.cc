@@ -1,5 +1,7 @@
 $NetBSD$
 
+Must include sys/wait.h for WEXITSTATUS
+
 --- lib/utils/mu-utils-file.cc.orig	2024-04-08 20:22:35.000000000 +0000
 +++ lib/utils/mu-utils-file.cc
 @@ -24,6 +24,10 @@

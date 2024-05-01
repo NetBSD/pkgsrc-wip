@@ -8,23 +8,28 @@ PKG_SUGGESTED_OPTIONS=	mu-emacs
 
 PLIST_SRC=	PLIST
 
+###
+###  Include the Emacs mu frontend, mu4e
+###
 .if !empty(PKG_OPTIONS:Mmu-emacs)
 .include "../../editors/emacs/modules.mk"
 INFO_FILES=	yes
 USE_TOOLS+=	makeinfo
 PLIST_SRC+=	PLIST.emacs
 .else
-# TODO: update for meson
-CONFIGURE_ARGS+= --disable-mu4e
+MESON_ARGS+=	-Demacs=disabled
 .endif
 
+###
+###  Support guile
+###
 .if !empty(PKG_OPTIONS:Mguile)
-.include "../../lang/guile22/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 PLIST_SRC+=	PLIST.guile
 # TODO: update for meson
-CONFIGURE_ENV+= ac_cv_path_GUILE=guile
+# CONFIGURE_ENV+= ac_cv_path_GUILE=guile
 USE_TOOLS+= makeinfo
+MESON_ARGS+=	-Dguile=enabled
 .else
-# TODO: update for meson
-CONFIGURE_ARGS+= --disable-guile
+MESON_ARGS+=	-Dguile=disabled
 .endif

@@ -1,5 +1,4 @@
 @comment $NetBSD$
-bin/mu
 man/man1/mu-add.1
 man/man1/mu-cfind.1
 man/man1/mu-extract.1

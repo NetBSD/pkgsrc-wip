@@ -1,15 +1,8 @@
-mu is a set of utilities to deal with Maildirs, specifically,
-indexing and searching.
+mu is a tool for dealing with e-mail messages stored in the
+Maildir-format.  mu's purpose in life is to help you to quickly
+find the messages you need; in addition, it allows you to view
+messages, extract attachments, create new maildirs, and so on.
 
-- mu-index - recursively scans a collection of email messages, and
-stores information found in a database.
-
-- mu-find - searches for messages based on some search criteria.
-
-- mu-msginfo - gives information (such as subject, sender, message
-body) for a certain message file
-
-- mu-mkmdir - creates a new Maildir
-
-mu uses libgmime2 to parse the message, and SQLite and Xapian to
-store the message data.
+Built on top of mu are some extensions:
+- mu4e: a full-featured e-mail client that runs inside emacs
+- mu-guile: bindings for the Guile/Scheme programming language
