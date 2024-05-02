@@ -1,4 +1,5 @@
 @comment $NetBSD$
+info/mu4e.info
 man/man1/mu-add.1
 man/man1/mu-cfind.1
 man/man1/mu-extract.1
@@ -80,4 +81,3 @@ ${EMACS_LISPPREFIX}/mu4e/mu4e-window.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e-window.elc
 ${EMACS_LISPPREFIX}/mu4e/mu4e.el
 ${EMACS_LISPPREFIX}/mu4e/mu4e.elc
-share/info/mu4e.info
