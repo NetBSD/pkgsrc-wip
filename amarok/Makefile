@@ -30,7 +30,6 @@ post-install:
 
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kconfig/buildlink3.mk"
