@@ -7,21 +7,18 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://amarok.kde.org/
-COMMENT=	KDE4 audio player
+COMMENT=	KDE audio player
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	extra-cmake-modules>=0:../../devel/extra-cmake-modules
+.include "../../meta-pkgs/kde/applications.mk"
+
 DEPENDS+=	phonon-qt5-backend-gstreamer>=4.6.3:../../multimedia/phonon-qt5-backend-gstreamer
 
-
-USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config perl:run
 
 REPLACE_PERL+=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
 
 MYSQL_VERSIONS_ACCEPTED=	mariadb1011 mariadb106 mariadb105 mariadb104
-
-BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 CONF_FILES+=	share/examples/amarok/xdg/amarok_homerc ${PKG_SYSCONFDIR}/xdg/amarok_homerc
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
@@ -34,6 +31,7 @@ post-install:
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kconfig/buildlink3.mk"
 .include "../../devel/kcoreaddons/buildlink3.mk"
@@ -45,6 +43,7 @@ post-install:
 .include "../../devel/knotifications/buildlink3.mk"
 .include "../../devel/kpackage/buildlink3.mk"
 .include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/threadweaver/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/kiconthemes/buildlink3.mk"
@@ -64,5 +63,6 @@ post-install:
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
