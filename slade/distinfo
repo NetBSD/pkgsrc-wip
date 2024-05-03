@@ -1,5 +1,6 @@
 $NetBSD$
 
-BLAKE2s (SLADE-3.2.1.tar.gz) = d611a60ea98fa62e06c039ce38490884e5fbebda87b68bdaf2073f56d66ef75e
-SHA512 (SLADE-3.2.1.tar.gz) = b7d5a91c759c5a68af63aa9a8412452a5b2986e70f7189ca92ee99ce4953ef47381be907c8ce1166e479f24679904bf5f0e0b1a5da846fe7873c5b97f4315449
-Size (SLADE-3.2.1.tar.gz) = 6471666 bytes
+BLAKE2s (slade-3.2.5.tar.gz) = 7460685c42f1d57ca9bdebd0bf2198750a64ff2dc8e3733ecf1472274441c972
+SHA512 (slade-3.2.5.tar.gz) = 7a0185230c03deaff9745f7b038a0e6aedd62986afbd127b8904be91ea13d9d050fe6d03f0039203ee9fa46cdb2e5879e77f769f26d3eb935628785c5ffbf13f
+Size (slade-3.2.5.tar.gz) = 7010771 bytes
+SHA1 (patch-dist_CMakeLists.txt) = eabb1e742facd6f84012409f0a2ce02e9eff341f

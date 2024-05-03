@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	SLADE-3.2.1
+DISTNAME=	slade-3.2.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sirjuddington/}
-GITHUB_TAG=	${DISTNAME:S/SLADE-//}
+GITHUB_TAG=	${DISTNAME:S/slade-//}
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://slade.mancubus.net/
@@ -12,19 +12,21 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../mk/bsd.prefs.mk"
 
-# Needs C++17 std::filesystem
-# GCC needs additional libraries for it before version 9
-GCC_REQD+=	9
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17 filesystem
+
 USE_TOOLS+=	pkg-config zip
-USE_CMAKE=	yes
+
 CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DNO_COTIRE=ON  # CMake has similar functionality since 3.16
 CMAKE_ARGS+=	-DNO_LUA=ON
 CMAKE_ARGS+=	-DNO_WEBVIEW=ON
+CMAKE_ARGS+=	-DBUILD_PK3=ON
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release  # Use "Debug" for development
 
 INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/slade-/SLADE-/}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/applications/net.mancubus.SLADE.desktop \
@@ -37,6 +39,7 @@ post-install:
 BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=1.1.3
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freeimage/buildlink3.mk"
@@ -46,9 +49,6 @@ BUILDLINK_API_DEPENDS.sfml+=		sfml>=2.0
 .include "../../multimedia/sfml/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
-.if ${PKG_BUILD_OPTIONS.wxGTK30:Mgtk2}
-CMAKE_ARGS+=	-DWX_GTK3=OFF
-.endif
+.include "../../wip/wxGTK32/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

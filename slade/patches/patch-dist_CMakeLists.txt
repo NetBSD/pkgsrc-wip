@@ -1,0 +1,20 @@
+$NetBSD$
+
+Fix destination for file "slade.pk3".
+
+/usr/bin/make  -f dist/CMakeFiles/pk3.dir/build.make dist/CMakeFiles/pk3.dir/build
+cd /usr/pkgsrc/work/wip/slade/work/SLADE-3.2.5/dist/res && /usr/pkgsrc/work/wip/slade/work/.tools/bin/zip -X -UN=UTF8 -9 -r /slade.pk3 .
+zip I/O error: Permission denied
+zip error: Could not create output file (/slade.pk3)
+
+--- dist/CMakeLists.txt.orig	2023-12-19 10:25:26.000000000 +0000
++++ dist/CMakeLists.txt
+@@ -13,7 +13,7 @@ elseif(ZIPTOOL_ZIP_EXECUTABLE)
+ 	if(NOT APPLE)
+ 		set(ZIP_COMMAND_CHARSET "-UN=UTF8")
+ 	endif()
+-	set(ZIP_COMMAND "${ZIPTOOL_ZIP_EXECUTABLE}" -X ${ZIP_COMMAND_CHARSET} -9 -r "${PK3_OUTPUT}/slade.pk3" .)
++	set(ZIP_COMMAND "${ZIPTOOL_ZIP_EXECUTABLE}" -X ${ZIP_COMMAND_CHARSET} -9 -r "${PK3_DESTINATION}/slade.pk3" .)
+ else()
+ 	message(STATUS "no zip executable, slade.pk3 won't build")
+ endif()
