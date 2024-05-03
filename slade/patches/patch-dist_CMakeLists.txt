@@ -7,6 +7,9 @@ cd /usr/pkgsrc/work/wip/slade/work/SLADE-3.2.5/dist/res && /usr/pkgsrc/work/wip/
 zip I/O error: Permission denied
 zip error: Could not create output file (/slade.pk3)
 
+https://github.com/sirjuddington/SLADE/pull/1631
+Remove this patch with next update.
+
 --- dist/CMakeLists.txt.orig	2023-12-19 10:25:26.000000000 +0000
 +++ dist/CMakeLists.txt
 @@ -13,7 +13,7 @@ elseif(ZIPTOOL_ZIP_EXECUTABLE)

@@ -3,4 +3,4 @@ $NetBSD$
 BLAKE2s (slade-3.2.5.tar.gz) = 7460685c42f1d57ca9bdebd0bf2198750a64ff2dc8e3733ecf1472274441c972
 SHA512 (slade-3.2.5.tar.gz) = 7a0185230c03deaff9745f7b038a0e6aedd62986afbd127b8904be91ea13d9d050fe6d03f0039203ee9fa46cdb2e5879e77f769f26d3eb935628785c5ffbf13f
 Size (slade-3.2.5.tar.gz) = 7010771 bytes
-SHA1 (patch-dist_CMakeLists.txt) = eabb1e742facd6f84012409f0a2ce02e9eff341f
+SHA1 (patch-dist_CMakeLists.txt) = a2a2281d1e11288f069140952b49024521066a84
