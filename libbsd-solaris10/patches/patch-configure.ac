@@ -1,0 +1,15 @@
+$NetBSD$
+
+Set version to 0.13.0
+
+--- configure.ac.orig	2024-05-04 12:44:45.303011102 +0000
++++ configure.ac
+@@ -1,7 +1,7 @@
+ # Process this file with autoconf to produce a configure script.
+ 
+ AC_PREREQ([2.67])
+-AC_INIT([libbsd], m4_esyscmd([./get-version]), [libbsd@lists.freedesktop.org])
++AC_INIT([libbsd], [0.13.0], [libbsd@lists.freedesktop.org])
+ AC_CONFIG_SRCDIR([src/strlcpy.c])
+ AC_CONFIG_AUX_DIR([build-aux])
+ AC_CONFIG_MACRO_DIR([m4])
