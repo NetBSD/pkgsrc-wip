@@ -4,6 +4,7 @@ lib/liblpjs.a
 libexec/lpjs/ad-hoc
 libexec/lpjs/admin
 libexec/lpjs/banner
+libexec/lpjs/cancel
 libexec/lpjs/chaperone
 libexec/lpjs/clear-queue
 libexec/lpjs/compd-disable
