@@ -48,8 +48,8 @@ post-extract: cargo-vendor-crates
 .PHONY: cargo-vendor-crates
 cargo-vendor-crates:
 	@${STEP_MSG} "Extracting local cargo crates"
-	${RUN}${MKDIR} ${CARGO_WRKSRC}/.cargo
-	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${CARGO_WRKSRC}/.cargo/config
+	${RUN}${MKDIR} ${WRKDIR}/.cargo
+	${RUN}${PRINTF} "[source.crates-io]\nreplace-with = \"vendored-sources\"\n[source.vendored-sources]\ndirectory = \"${CARGO_VENDOR_DIR}\"\n" > ${WRKDIR}/.cargo/config.toml
 	${RUN}${MKDIR} ${CARGO_VENDOR_DIR}
 .for crate in ${CARGO_CRATE_DEPENDS}
 	${RUN}${PRINTF} '{"package":"%s","files":{}}'	\
@@ -78,6 +78,7 @@ CARGO_ARGS?=		build --release ${DEFAULT_CARGO_ARGS}
 CARGO_INSTALL_ARGS?=	install --path . --root ${DESTDIR}${PREFIX} ${DEFAULT_CARGO_ARGS}
 
 MAKE_ENV+=		RUSTFLAGS=${RUSTFLAGS:Q}
+ALL_ENV+=		CARGO_HOME=${WRKDIR}
 
 .if !target(do-build)
 do-build: do-cargo-build
