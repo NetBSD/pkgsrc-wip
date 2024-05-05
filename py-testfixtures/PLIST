@@ -1,10 +1,9 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/testfixtures/__init__.py
 ${PYSITELIB}/testfixtures/__init__.pyc
 ${PYSITELIB}/testfixtures/__init__.pyo
@@ -14,9 +13,6 @@ ${PYSITELIB}/testfixtures/comparison.pyo
 ${PYSITELIB}/testfixtures/compat.py
 ${PYSITELIB}/testfixtures/compat.pyc
 ${PYSITELIB}/testfixtures/compat.pyo
-${PYSITELIB}/testfixtures/components.py
-${PYSITELIB}/testfixtures/components.pyc
-${PYSITELIB}/testfixtures/components.pyo
 ${PYSITELIB}/testfixtures/datetime.py
 ${PYSITELIB}/testfixtures/datetime.pyc
 ${PYSITELIB}/testfixtures/datetime.pyo
@@ -77,9 +73,6 @@ ${PYSITELIB}/testfixtures/tests/test_compare.pyo
 ${PYSITELIB}/testfixtures/tests/test_comparison.py
 ${PYSITELIB}/testfixtures/tests/test_comparison.pyc
 ${PYSITELIB}/testfixtures/tests/test_comparison.pyo
-${PYSITELIB}/testfixtures/tests/test_components.py
-${PYSITELIB}/testfixtures/tests/test_components.pyc
-${PYSITELIB}/testfixtures/tests/test_components.pyo
 ${PYSITELIB}/testfixtures/tests/test_date.py
 ${PYSITELIB}/testfixtures/tests/test_date.pyc
 ${PYSITELIB}/testfixtures/tests/test_date.pyo
