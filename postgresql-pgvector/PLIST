@@ -1,4 +1,6 @@
 @comment $NetBSD$
+include/postgresql/server/extension/vector/halfvec.h
+include/postgresql/server/extension/vector/sparsevec.h
 include/postgresql/server/extension/vector/vector.h
 lib/postgresql/vector.so
 share/postgresql/extension/vector--0.1.0--0.1.1.sql
@@ -28,6 +30,7 @@ share/postgresql/extension/vector--0.4.4--0.5.0.sql
 share/postgresql/extension/vector--0.5.0--0.5.1.sql
 share/postgresql/extension/vector--0.5.1--0.6.0.sql
 share/postgresql/extension/vector--0.6.0--0.6.1.sql
-share/postgresql/extension/vector--0.6.1--${PKGVERSION}.sql
+share/postgresql/extension/vector--0.6.1--0.6.2.sql
+share/postgresql/extension/vector--0.6.2--${PKGVERSION}.sql
 share/postgresql/extension/vector--${PKGVERSION}.sql
 share/postgresql/extension/vector.control
