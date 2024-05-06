@@ -1,26 +1,28 @@
 # $NetBSD$
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dillo
-PKG_SUPPORTED_OPTIONS=	inet6 ssl
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
+PKG_SUPPORTED_OPTIONS=	inet6 tls
+PKG_SUGGESTED_OPTIONS=	inet6 tls
 
 .include "../../mk/bsd.options.mk"
 
+# Support for IPv6 protocol
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-.if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--enable-ssl
+# Support for Transport Layer Security (TLS)
+.if !empty(PKG_OPTIONS:Mtls)
+CONFIGURE_ARGS+=	--enable-tls
+CONFIGURE_ARGS+=	--disable-mbedtls
+CONFIGURE_ARGS+=	--enable-openssl
+CONFIGURE_ARGS+=	--with-ca-certs-dir=${SSLCERTS}
 LIBS+=			-lssl
 .include "../../security/openssl/buildlink3.mk"
-
-SUBST_CLASSES+=		sslcerts
-SUBST_MESSAGE.sslcerts=	Fixing SSL certificate directory.
-SUBST_FILES.sslcerts=	dpi/https.c
-SUBST_STAGE.sslcerts=	post-extract
-SUBST_SED.sslcerts=	-e 's,"/etc/ssl/certs,"${SSLCERTS},'
-
 .else
-CONFIGURE_ARGS+=	--disable-ssl
+CONFIGURE_ARGS+=	--disable-tls
+CONFIGURE_ARGS+=	--disable-mbedtls
+CONFIGURE_ARGS+=	--disable-openssl
 .endif

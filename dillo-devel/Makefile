@@ -1,22 +1,29 @@
 # $NetBSD$
 
-DISTNAME=	dillo-3.0.5
-PKGREVISION=	4
+DISTNAME=	dillo-3.1.0
 CATEGORIES=	www
-MASTER_SITES=	https://www.dillo.org/download/
-EXTRACT_SUFX=	.tar.bz2
+
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://www.dillo.org/
+HOMEPAGE=	https://dillo-browser.github.io/
 COMMENT=	Very small and fast graphical web-browser
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	autoconf automake autoreconf perl:run
+USE_FEATURES+=	snprintf vsnprintf
+
+DEPENDS+=	wget-[0-9]*:../../net/wget
+
+REPLACE_PERL+=	dillo-install-hyphenation
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-
-REPLACE_PERL+=	dpid/dpidc dillo-install-hyphenation
-USE_TOOLS+=	autoconf perl:run wget:run
+CONFIGURE_ARGS+=	--disable-xembed
+CONFIGURE_ARGS+=	--enable-cookies
 
 PKG_SYSCONFSUBDIR=	dillo
 EGDIR=			${PREFIX}/share/examples/dillo
@@ -34,15 +41,12 @@ LIBS.SunOS+=	-liconv
 .include "options.mk"
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/dillo
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${PREFIX}/share/doc/dillo
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../wip/fltk14-devel/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
