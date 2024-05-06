@@ -30,6 +30,9 @@ USE_TOOLS+=		bison flex perl pkg-config
 # separate files.
 USE_TOOLS+=		gmake
 
+# minizip/zip.h shadows zip.h (from libzip)
+BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include/minizip
+
 DEPENDS+=		qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
 TOOL_DEPENDS+=		${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
@@ -75,8 +78,6 @@ DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
-# Useful for package development:
-#CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
 
 PLIST_VARS=	unix
 
@@ -108,8 +109,8 @@ PLIST.unix=	yes
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../x11/qt5-qscintilla/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
+.include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qwt6-qt5/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"

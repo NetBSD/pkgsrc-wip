@@ -1,0 +1,13 @@
+@comment $NetBSD$
+include/qgis/cocoainitializer.h
+include/qgis/qgsmacnative.h
+include/qgis/qgsopenclutils.h
+share/qgis/resources/opencl_programs/aspect.cl
+share/qgis/resources/opencl_programs/aspect_renderer.cl
+share/qgis/resources/opencl_programs/calcfirstder.cl
+share/qgis/resources/opencl_programs/hillshade.cl
+share/qgis/resources/opencl_programs/hillshade_renderer.cl
+share/qgis/resources/opencl_programs/ruggedness.cl
+share/qgis/resources/opencl_programs/slope.cl
+share/qgis/resources/opencl_programs/slope_renderer.cl
+share/qgis/resources/pkcs8.asn

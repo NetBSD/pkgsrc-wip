@@ -1,0 +1,47 @@
+$NetBSD$
+
+Remove legacy protobuf support.
+https://github.com/qgis/QGIS/pull/53962
+
+--- src/core/CMakeLists.txt.orig	2024-04-19 12:01:44.000000000 +0000
++++ src/core/CMakeLists.txt
+@@ -2073,10 +2073,6 @@ else()
+   endif()
+ endif()
+ 
+-# Generate cpp+header file from .proto file using "protoc" tool (to support MVT encoding of vector tiles)
+-protobuf_generate_cpp(VECTOR_TILE_PROTO_SRCS VECTOR_TILE_PROTO_HDRS vectortile/vector_tile.proto)
+-set(QGIS_CORE_SRCS ${QGIS_CORE_SRCS} ${VECTOR_TILE_PROTO_SRCS})
+-set(QGIS_CORE_HDRS ${QGIS_CORE_HDRS} ${VECTOR_TILE_PROTO_HDRS})
+ if (NOT MSVC)
+   # automatically generated file produces warnings (unused-parameter, unused-variable, misleading-indentation)
+   set_source_files_properties(${VECTOR_TILE_PROTO_SRCS} PROPERTIES COMPILE_FLAGS -w)
+@@ -2214,7 +2210,9 @@ set(IMAGE_RCCS ../../images/images.qrc)
+ # qgis_core library
+ include_directories(${CMAKE_CURRENT_BINARY_DIR})
+ 
+-add_library(qgis_core ${LIBRARY_TYPE} ${QGIS_CORE_SRCS} ${QGIS_CORE_HDRS} ${QGIS_CORE_PRIVATE_HDRS} ${IMAGE_RCCS})
++add_library(qgis_core ${LIBRARY_TYPE} ${QGIS_CORE_SRCS} ${QGIS_CORE_HDRS} ${QGIS_CORE_PRIVATE_HDRS} ${IMAGE_RCCS} vectortile/vector_tile.proto)
++# Generate cpp+header file from .proto file using "protoc" tool (to support MVT encoding of vector tiles)
++protobuf_generate(TARGET qgis_core)
+ 
+ 
+ # require c++17
+@@ -2244,7 +2242,7 @@ target_include_directories(qgis_core SYS
+   ${QCA_INCLUDE_DIR}
+   ${QTKEYCHAIN_INCLUDE_DIR}
+   ${${QT_VERSION_BASE}SerialPort_INCLUDE_DIRS}
+-  ${Protobuf_INCLUDE_DIRS}
++  ${CMAKE_CURRENT_BINARY_DIR}/vectortile
+   ${ZLIB_INCLUDE_DIRS}
+   ${EXIV2_INCLUDE_DIR}
+ )
+@@ -2345,7 +2343,7 @@ if(HAVE_OPENCL)
+ endif()
+ 
+ 
+-if(NOT APPLE OR NOT QGIS_MACAPP_FRAMEWORK)
++if(NOT QGIS_MACAPP_FRAMEWORK)
+   install(FILES ${QGIS_CORE_HDRS} DESTINATION ${QGIS_INCLUDE_DIR})
+ else()
+ 
