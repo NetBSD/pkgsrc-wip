@@ -3204,6 +3204,7 @@ SUBDIR+=	py-aerocalc
 SUBDIR+=	py-affine
 SUBDIR+=	py-agaro
 SUBDIR+=	py-agate
+SUBDIR+=	py-agate-dbf
 SUBDIR+=	py-agate-excel
 SUBDIR+=	py-agate-sql
 SUBDIR+=	py-ahoy
