@@ -6,7 +6,7 @@ MASTER_SITES=	https://notabug.org/nuclearkev/ait/archive/
 
 MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://notabug.org/nuclearkev/ait/archive/
-COMMENT=	TODO: Short description of the package
+COMMENT=	small but mighty GNU Emacs style editor
 LICENSE=	modified-bsd
 
 WRKSRC=	${WRKDIR}/ait
