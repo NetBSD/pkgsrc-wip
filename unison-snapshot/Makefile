@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2022/08/17 20:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2024/05/07 23:52:11 gdt Exp $
 
 # 2.53.5 RC1
 DISTNAME=	unison-2.53.4.91

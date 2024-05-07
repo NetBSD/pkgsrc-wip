@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2022/03/13 15:07:13 gdt Exp $
+# $NetBSD: options.mk,v 1.9 2024/05/07 23:52:11 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk
