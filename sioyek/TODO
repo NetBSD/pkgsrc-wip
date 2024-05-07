@@ -1,0 +1,3 @@
+Needs qt5-qt3d, currently unpackaged.
+
+Check if the included mupdf must be used or the pkgsrc one can be used instead.
