@@ -3205,6 +3205,7 @@ SUBDIR+=	py-affine
 SUBDIR+=	py-agaro
 SUBDIR+=	py-agate
 SUBDIR+=	py-agate-excel
+SUBDIR+=	py-agate-sql
 SUBDIR+=	py-ahoy
 SUBDIR+=	py-aikif
 SUBDIR+=	py-aioconsole
