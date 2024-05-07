@@ -26,8 +26,8 @@ bin/elementary_run
 bin/elementary_test
 bin/elm_prefs_cc
 bin/embryo_cc
-${PLIST.tests}bin/emotion_test
-${PLIST.tests}bin/emotion_test-eo
+@comment ${PLIST.tests}bin/emotion_test
+@comment ${PLIST.tests}bin/emotion_test-eo
 bin/eo_debug
 bin/eolian_cxx
 bin/eolian_gen
@@ -118,6 +118,7 @@ include/ecore-con-1/Ecore_Con_Eet.h
 include/ecore-con-1/Ecore_Con_Eet_Eo.h
 include/ecore-con-1/Ecore_Con_Eet_Legacy.h
 include/ecore-con-1/Efl_Net.h
+include/ecore-con-1/ecore_con_api.h
 include/ecore-con-1/ecore_con_eet_base_eo.h
 include/ecore-con-1/ecore_con_eet_base_eo.legacy.h
 include/ecore-con-1/ecore_con_eet_client_obj_eo.h
@@ -582,6 +583,7 @@ include/eina-1/eina/eina_debug_private.h
 include/eina-1/eina/eina_error.h
 include/eina-1/eina/eina_evlog.h
 include/eina-1/eina/eina_file.h
+include/eina-1/eina/eina_fnmatch.h
 include/eina-1/eina/eina_fp.h
 include/eina-1/eina/eina_freeq.h
 include/eina-1/eina/eina_hamster.h
@@ -643,7 +645,7 @@ include/eina-1/eina/eina_rectangle.h
 include/eina-1/eina/eina_refcount.h
 include/eina-1/eina/eina_safepointer.h
 include/eina-1/eina/eina_safety_checks.h
-include/eina-1/eina/eina_sched.h
+include/eina-1/eina/eina_sha.h
 include/eina-1/eina/eina_simple_xml_parser.h
 include/eina-1/eina/eina_slice.h
 include/eina-1/eina/eina_slstr.h
@@ -1347,6 +1349,7 @@ include/elementary-1/elm_widget_hoversel.h
 include/elementary-1/elm_widget_icon.h
 include/elementary-1/elm_widget_index.h
 include/elementary-1/elm_widget_inwin.h
+include/elementary-1/elm_widget_item_container_eo.h
 include/elementary-1/elm_widget_item_container_eo.legacy.h
 include/elementary-1/elm_widget_item_eo.legacy.h
 include/elementary-1/elm_widget_item_static_focus_eo.legacy.h
@@ -1695,6 +1698,7 @@ include/emotion-1/Emotion_Eo.h
 include/emotion-1/Emotion_Legacy.h
 include/emotion-1/efl_canvas_video.eo.h
 include/emotion-1/efl_canvas_video_eo.legacy.h
+include/emotion-1/emotion_api.h
 include/eo-1/Eo.h
 include/eo-1/efl_class.eo.h
 include/eo-1/efl_object.eo.h
@@ -1718,6 +1722,7 @@ include/eo-cxx-1/eo_private.hh
 include/eo-cxx-1/eo_wref.hh
 include/eolian-1/Eolian.h
 include/eolian-1/Eolian_Aux.h
+include/eolian-1/eolian_api.h
 include/eolian-cxx-1/Eolian_Cxx.hh
 include/eolian-cxx-1/address_of.hpp
 include/eolian-cxx-1/alternative.hpp
@@ -1775,6 +1780,7 @@ include/evas-1/Evas_Eo.h
 include/evas-1/Evas_GL.h
 include/evas-1/Evas_Legacy.h
 include/evas-1/Evas_Loader.h
+include/evas-1/evas_api.h
 include/evas-1/canvas/efl_canvas_alpha_animation.eo.h
 include/evas-1/canvas/efl_canvas_animation.eo.h
 include/evas-1/canvas/efl_canvas_animation_types.eot.h
@@ -2052,47 +2058,49 @@ lib/cmake/Evas/EvasConfig.cmake
 lib/cmake/Evas/EvasConfigVersion.cmake
 lib/cmake/EvasCxx/EvasCxxConfig.cmake
 lib/cmake/EvasCxx/EvasCxxConfigVersion.cmake
-${PLIST.linux}lib/ecore/system/systemd/v-1.25/module.so
-lib/ecore/system/upower/v-1.25/module.so
-lib/ecore_con/utils/v-1.25/efl_net_proxy_helper
-lib/ecore_evas/engines/extn/v-1.25/module.so
-lib/ecore_evas/engines/x/v-1.25/module.so
-lib/ecore_imf/modules/scim/v-1.25/module.so
-lib/ecore_imf/modules/xim/v-1.25/module.so
-lib/edje/modules/elm/v-1.25/module.so
-lib/edje/modules/emotion/v-1.25/module.so
-lib/edje/utils/v-1.25/epp
-lib/efreet/v-1.25/efreet_desktop_cache_create
-lib/efreet/v-1.25/efreet_icon_cache_create
-lib/efreet/v-1.25/efreet_mime_cache_create
-lib/elementary/modules/access_output/v-1.25/module.so
-lib/elementary/modules/prefs/v-1.25/module.so
-lib/elementary/modules/test_entry/v-1.25/module.so
-lib/elementary/modules/test_map/v-1.25/module.so
-lib/elementary/modules/web/none/v-1.25/module.so
-lib/emotion/modules/gstreamer1/v-1.25/module.so
-lib/ethumb/modules/emotion/v-1.25/module.so
-lib/ethumb_client/utils/v-1.25/ethumbd_slave
-lib/evas/modules/engines/buffer/v-1.25/module.so
-lib/evas/modules/engines/gl_generic/v-1.25/module.so
-lib/evas/modules/engines/gl_x11/v-1.25/module.so
-lib/evas/modules/engines/software_x11/v-1.25/module.so
-lib/evas/modules/image_loaders/bmp/v-1.25/module.so
-lib/evas/modules/image_loaders/generic/v-1.25/module.so
-lib/evas/modules/image_loaders/gif/v-1.25/module.so
-lib/evas/modules/image_loaders/ico/v-1.25/module.so
-lib/evas/modules/image_loaders/jp2k/v-1.25/module.so
-lib/evas/modules/image_loaders/pmaps/v-1.25/module.so
-lib/evas/modules/image_loaders/psd/v-1.25/module.so
-lib/evas/modules/image_loaders/tga/v-1.25/module.so
-lib/evas/modules/image_loaders/tgv/v-1.25/module.so
-lib/evas/modules/image_loaders/tiff/v-1.25/module.so
-lib/evas/modules/image_loaders/wbmp/v-1.25/module.so
-lib/evas/modules/image_loaders/webp/v-1.25/module.so
-lib/evas/modules/image_loaders/xpm/v-1.25/module.so
-lib/evas/modules/image_savers/tgv/v-1.25/module.so
-lib/evas/modules/image_savers/tiff/v-1.25/module.so
-lib/evas/modules/image_savers/webp/v-1.25/module.so
+@comment ${PLIST.linux}lib/ecore/system/systemd/v-1.25/module.so
+lib/ecore/system/upower/v-1.27/module.so
+lib/ecore_con/utils/v-1.27/efl_net_proxy_helper
+lib/ecore_evas/engines/extn/v-1.27/module.so
+lib/ecore_evas/engines/x/v-1.27/module.so
+lib/ecore_imf/modules/scim/v-1.27/module.so
+lib/ecore_imf/modules/xim/v-1.27/module.so
+lib/edje/modules/elm/v-1.27/module.so
+lib/edje/modules/emotion/v-1.27/module.so
+lib/edje/utils/v-1.27/epp
+lib/efreet/v-1.27/efreet_desktop_cache_create
+lib/efreet/v-1.27/efreet_icon_cache_create
+lib/efreet/v-1.27/efreet_mime_cache_create
+lib/elementary/modules/access_output/v-1.27/module.so
+lib/elementary/modules/prefs/v-1.27/module.so
+lib/elementary/modules/test_entry/v-1.27/module.so
+lib/elementary/modules/test_map/v-1.27/module.so
+lib/elementary/modules/web/none/v-1.27/module.so
+lib/emotion/modules/gstreamer1/v-1.27/module.so
+lib/ethumb/modules/emotion/v-1.27/module.so
+lib/ethumb_client/utils/v-1.27/ethumbd_slave
+lib/evas/modules/engines/buffer/v-1.27/module.so
+lib/evas/modules/engines/gl_generic/v-1.27/module.so
+lib/evas/modules/engines/gl_x11/v-1.27/module.so
+lib/evas/modules/engines/software_x11/v-1.27/module.so
+lib/evas/modules/image_loaders/bmp/v-1.27/module.so
+lib/evas/modules/image_loaders/generic/v-1.27/module.so
+lib/evas/modules/image_loaders/gif/v-1.27/module.so
+lib/evas/modules/image_loaders/ico/v-1.27/module.so
+lib/evas/modules/image_loaders/jp2k/v-1.27/module.so
+lib/evas/modules/image_loaders/pmaps/v-1.27/module.so
+lib/evas/modules/image_loaders/psd/v-1.27/module.so
+lib/evas/modules/image_loaders/qoi/v-1.27/module.so
+lib/evas/modules/image_loaders/tga/v-1.27/module.so
+lib/evas/modules/image_loaders/tgv/v-1.27/module.so
+lib/evas/modules/image_loaders/tiff/v-1.27/module.so
+lib/evas/modules/image_loaders/wbmp/v-1.27/module.so
+lib/evas/modules/image_loaders/webp/v-1.27/module.so
+lib/evas/modules/image_loaders/xpm/v-1.27/module.so
+lib/evas/modules/image_savers/qoi/v-1.27/module.so
+lib/evas/modules/image_savers/tgv/v-1.27/module.so
+lib/evas/modules/image_savers/tiff/v-1.27/module.so
+lib/evas/modules/image_savers/webp/v-1.27/module.so
 lib/evas/utils/evas_generic_pdf_loader.doc
 lib/evas/utils/evas_generic_pdf_loader.docx
 lib/evas/utils/evas_generic_pdf_loader.libreoffice
@@ -2341,10 +2349,17 @@ lib/pkgconfig/ethumb.pc
 lib/pkgconfig/ethumb_client.pc
 lib/pkgconfig/evas-cxx.pc
 lib/pkgconfig/evas.pc
-${PLIST.linux}lib/systemd/user/ethumb.service
+@comment ${PLIST.linux}lib/systemd/user/ethumb.service
 share/applications/elementary_config.desktop
 share/applications/elementary_perf.desktop
 share/applications/elementary_test.desktop
+share/elementary/colors/candy-mint.pal
+share/elementary/colors/default.pal
+share/elementary/colors/ebony-brass.pal
+share/elementary/colors/empty.pal
+share/elementary/colors/light.pal
+share/elementary/colors/mauve-sunset.pal
+share/elementary/colors/white-pill.pal
 share/dbus-1/services/org.enlightenment.Ethumb.service
 share/ecore/checkme
 share/ecore_imf/checkme
@@ -2472,15 +2487,15 @@ share/elementary/objects/test_prefs.edj
 share/elementary/objects/test_prefs.epb
 share/elementary/objects/test_tab_pager.edj
 share/elementary/objects/test_tooltip.edj
-${PLIST.tests}share/elementary/testdiff.diff
-${PLIST.tests}share/elementary/testfile-windows.txt
-${PLIST.tests}share/elementary/testfile-withblanks.txt
-${PLIST.tests}share/elementary/testfile.txt
+@comment ${PLIST.tests}share/elementary/testdiff.diff
+@comment ${PLIST.tests}share/elementary/testfile-windows.txt
+@comment ${PLIST.tests}share/elementary/testfile-withblanks.txt
+@comment ${PLIST.tests}share/elementary/testfile.txt
 share/elementary/themes/default.edj
 share/elua/checkme
 share/embryo/include/default.inc
 share/emotion/checkme
-${PLIST.tests}share/emotion/data/theme.edj
+@comment ${PLIST.tests}share/emotion/data/theme.edj
 share/eo/gdb/eo_gdb.py
 share/eolian/include/ecore-1/efl_accelerate_interpolator.eo
 share/eolian/include/ecore-1/efl_app.eo
@@ -3341,6 +3356,7 @@ share/locale/he/LC_MESSAGES/efl.mo
 share/locale/hu/LC_MESSAGES/efl.mo
 share/locale/it/LC_MESSAGES/efl.mo
 share/locale/ja/LC_MESSAGES/efl.mo
+share/locale/ka/LC_MESSAGES/efl.mo
 share/locale/ko/LC_MESSAGES/efl.mo
 share/locale/ko_KR/LC_MESSAGES/efl.mo
 share/locale/lt/LC_MESSAGES/efl.mo
@@ -3356,4 +3372,5 @@ share/locale/ur/LC_MESSAGES/efl.mo
 share/locale/vi/LC_MESSAGES/efl.mo
 share/locale/yi/LC_MESSAGES/efl.mo
 share/locale/zh_CN/LC_MESSAGES/efl.mo
+share/mime/packages/evas.xml
 share/mime/packages/edje.xml

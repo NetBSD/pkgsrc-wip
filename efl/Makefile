@@ -1,8 +1,7 @@
 # $NetBSD: Makefile,v 0.3 2018/09/07 20:03:10 andyb Exp $
 
-DISTNAME=	efl-1.25.1
+DISTNAME=	efl-1.27.0
 CATEGORIES=	x11
-PKGREVISION=	5
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -61,6 +60,7 @@ PLIST.linux=	yes
 MESON_ARGS+=	-Deeze=false
 MESON_ARGS+=	-Dbuild-examples=false
 MESON_ARGS+=	-Dphysics=true
+MESON_ARGS+=	-Dinput=false
 
 .if ${X11_TYPE} != "modular"
 

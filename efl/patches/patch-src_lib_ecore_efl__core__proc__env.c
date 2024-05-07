@@ -2,7 +2,7 @@ $NetBSD$
 
 * Add NetBSD support
 
---- src/lib/ecore/efl_core_proc_env.c.orig	2020-05-11 11:32:41.000000000 +0000
+--- src/lib/ecore/efl_core_proc_env.c.orig	2023-12-23 15:56:36.000000000 +0000
 +++ src/lib/ecore/efl_core_proc_env.c
 @@ -13,7 +13,7 @@
  
@@ -12,7 +12,7 @@ $NetBSD$
 +#if defined (__FreeBSD__) || defined (__OpenBSD__) || defined (__NetBSD__)
  # include <dlfcn.h>
  static char ***_dl_environ;
- #else
+ #elif !defined(_MSC_VER)
 @@ -42,7 +42,7 @@ _sync(Efl_Core_Env *obj, Efl_Core_Proc_E
          existing_keys = eina_list_append(existing_keys, key);
       }

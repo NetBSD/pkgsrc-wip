@@ -1,10 +1,8 @@
 $NetBSD$
 
-* Add NetBSD support
-
---- src/lib/eina/eina_file.c.orig	2020-09-22 17:54:50.000000000 +0000
-+++ src/lib/eina/eina_file.c
-@@ -1297,6 +1297,16 @@ typedef struct
+--- src/lib/eina/eina_file_posix.c.orig	2023-12-23 15:56:36.000000000 +0000
++++ src/lib/eina/eina_file_posix.c
+@@ -1299,6 +1299,16 @@ typedef struct
     unsigned char  ____pad[4];
     char           d_name[4096];
  } Dirent;
@@ -21,7 +19,7 @@ $NetBSD$
  #elif defined(__linux__)
  # define do_getdents(fd, buf, size) syscall(SYS_getdents64, fd, buf, size)
  // getdents64 added un glibc 2.30 ... so use raw syscall - will work
-@@ -1320,7 +1330,7 @@ eina_file_close_from(int fd, int *except
+@@ -1322,7 +1332,7 @@ eina_file_close_from(int fd, int *except
  #else
  #ifdef HAVE_DIRENT_H
  //# if 0
@@ -29,4 +27,4 @@ $NetBSD$
 +# if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__linux__)
     int dirfd;
     Dirent *d;
-    char buf[4096];
+    char buf[4096 + 128];

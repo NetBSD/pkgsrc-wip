@@ -1,12 +1,13 @@
 $NetBSD$
 
-RMD160 (efl-1.25.1.tar.xz) = 17d63b8587d0a9edf6562132a50efce2a3400c10
-SHA512 (efl-1.25.1.tar.xz) = cd281c2299aa6f74f0204e59a13dc254135e6dc40641e0a437c6f5025efe517d415f0915f69e123123319a9bbddb748aec1948ed0b5eb386e028cf45b244bed8
-Size (efl-1.25.1.tar.xz) = 72306872 bytes
+BLAKE2s (efl-1.27.0.tar.xz) = bf1d1412df20d49a9c2d6c8e13a15042a3a5a9477d09ed35463da12479ca02f6
+SHA512 (efl-1.27.0.tar.xz) = 5dda2f630463a2504d9246be17449579bbc470904e137b02b3b5c44db033dec2688f6c477885de1485944d875ee62619b6e7c5d4d3657225951f6feaf83b4fa4
+Size (efl-1.27.0.tar.xz) = 168543208 bytes
 SHA1 (patch-src_lib_ecore_Ecore.h) = 89e11da7e514bc37beb889466edc6164f47e8f0c
 SHA1 (patch-src_lib_ecore_Efl__Core.h) = 5f6720fbb737a54bc73dc07208280972af6d8dfb
 SHA1 (patch-src_lib_ecore_ecore__exe__posix.c) = 22d8ebb9df3e8b0f59f07bbd238a1cf5b6e02e28
-SHA1 (patch-src_lib_ecore_efl__core__proc__env.c) = 1efcc1a40f5da8990fe489f8120c95566fbbaeb4
+SHA1 (patch-src_lib_ecore_efl__core__proc__env.c) = c98254636d13fa732a66493ad25740740917beb6
 SHA1 (patch-src_lib_ecore_efl__exe.c) = caacd04dd2a9338371c6f4fe778dea7f024c1847
-SHA1 (patch-src_lib_eina_eina__file.c) = 5b77a04f39da9b5ae5ba5eedf7713b18e66ef534
+SHA1 (patch-src_lib_eina_eina__file__posix.c) = 8cf52369ce1480d14318158dc12eb6bc9740aaa7
 SHA1 (patch-src_lib_elementary_Efl__Ui.h) = d319c6242ca420ad788a82dfa80b5c5f03ea29ca
+SHA1 (patch-src_lib_elput_meson.build) = ab1171aeefc0e8d1871d8c808125958d7748e4a2
