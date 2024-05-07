@@ -33,4 +33,7 @@ MAKE_FLAGS+=	LDFLAGS=${LD_FLAGS:Q}
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
