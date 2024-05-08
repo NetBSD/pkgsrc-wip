@@ -1,16 +1,16 @@
 # $NetBSD$
 
 DISTNAME=	ait-1.8-rc4
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	editors
 MASTER_SITES=	https://notabug.org/nuclearkev/ait/archive/
 
 MAINTAINER=	ktnb@NetBSD.org
-HOMEPAGE=	https://notabug.org/nuclearkev/ait/archive/
-COMMENT=	small but mighty GNU Emacs style editor
+HOMEPAGE=	https://notabug.org/nuclearkev/ait/
+COMMENT=	Small but mighty GNU Emacs style editor
 LICENSE=	modified-bsd
 
-WRKSRC=	${WRKDIR}/ait
-
+WRKSRC=		${WRKDIR}/ait
 MAKE_FILE=	makefile
 
 INSTALLATION_DIRS+=	bin man/man1
