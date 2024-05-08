@@ -10,12 +10,16 @@ HOMEPAGE=	https://agate-excel.readthedocs.io/
 COMMENT=	EXCEL read/write support to agate
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-agate-[0-9]*:../../wip/py-agate
+DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
+DEPENDS+=	${PYPKGPREFIX}-openpyxl-[0-9]*:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-xlrd-[0-9]*:../../textproc/py-xlrd
 
 USE_LANGUAGES=	# none
 
-#PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
