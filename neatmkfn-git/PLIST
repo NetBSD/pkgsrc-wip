@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/neatmkfn
+man/man1/neatmkfn.1
+share/neatroff/gen.sh

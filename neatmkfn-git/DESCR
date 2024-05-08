@@ -1,0 +1,7 @@
+Neatroff is a new implementation of the Troff typesetting system written
+in C.  It tries to address, as neatly as possible, some of the
+shortcomings of the original Troff based on the ideas and features
+available in Plan 9 Troff, Heirloom Troff, and Groff.
+
+The Neatmkfn program creates Neatroff font description files from AFM
+(Adobe Font Metrics), TrueType, and OpenType fonts.
