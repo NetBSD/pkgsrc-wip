@@ -5,11 +5,10 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.1.55
+DISTNAME=	lpjs-0.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	ebf3143848ac4054b9dfae1d6c46e175b0ea7373
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -20,6 +19,8 @@ TOOL_DEPENDS=	realpath>0:../../wip/realpath
 DEPENDS=	auto-admin>=0.8.0.31:../../wip/auto-admin \
 		runas>0:../../sysutils/runas
 
+# FIXME: Why is this necessary?
+WRKSRC=		${WRKDIR}/LPJS-${PKGVERSION_NOREV}
 # Force install with full debug info until release
 CFLAGS+=	-g
 MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes
