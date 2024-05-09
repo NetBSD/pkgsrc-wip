@@ -26,13 +26,19 @@ WRKSRC=		${WRKDIR}
 post-extract:
 	${MV} ${WRKDIR}/inweb-* ${WRKDIR}/inweb
 	${MV} ${WRKDIR}/inform-* ${WRKDIR}/inform
+	${LN} -s ${WRKDIR}/inweb ${WRKDIR}/inform/inweb
 	${MKDIR} ${WRKDIR}/inweb/Tangled
 
 do-build: inweb inform
 .PHONY: inweb inform
 inweb:
 	cd ${WRKDIR} && ${BASH} inweb/scripts/first.sh unix
-inform: #inweb
+inform: inweb
 	cd ${WRKDIR}/inform && ${BASH} scripts/first.sh
+
+do-install:
+.for file in inform7
+	${INSTALL_PROGRAM} ${WRKSRC}/inform/${file}/Tangled/${file} ${DESTDIR}${PREFIX}/bin
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
