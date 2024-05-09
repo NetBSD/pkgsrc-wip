@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/neatpost-pdf
+bin/neatpost-ps
+man/man1/neatpost.1

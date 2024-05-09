@@ -2407,6 +2407,7 @@ SUBDIR+=	ncbi-lib
 SUBDIR+=	ncp
 SUBDIR+=	ncrack
 SUBDIR+=	neatmkfn-git
+SUBDIR+=	neatpost-git
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	necat
