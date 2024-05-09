@@ -5071,7 +5071,6 @@ SUBDIR+=	sbc
 SUBDIR+=	sbcl
 SUBDIR+=	sbcl-git
 SUBDIR+=	sblim-sfcc
-SUBDIR+=	scaleway-cli
 SUBDIR+=	scare
 SUBDIR+=	scc
 SUBDIR+=	sccache
