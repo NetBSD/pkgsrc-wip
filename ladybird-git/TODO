@@ -11,3 +11,5 @@ Downloads files during build:
 -- Downloading file IdnaMappingTable.txt from https://www.unicode.org/Public/idna/15.1.0/IdnaMappingTable.txt
 -- Downloading file public_suffix_list.dat from https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
 -- Downloading file commonmark.spec.json from https://spec.commonmark.org/0.30/spec.json
+
+Core dumps when visiting any websites.

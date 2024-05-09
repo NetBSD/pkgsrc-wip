@@ -18,6 +18,8 @@ GCC_REQD+=		12
 CMAKE_ARGS+=		-S Ladybird
 # build broken with make
 CMAKE_GENERATOR=	ninja
+# TODO: this needs fixing
+ALLOW_NETWORK_ACCESS=	1
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/cmake-pkgsrc-build/lib
 
