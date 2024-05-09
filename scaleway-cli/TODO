@@ -15,4 +15,7 @@ Build on NetBSD/amd64 fails with:
          imports github.com/buildpacks/lifecycle/platform
          imports github.com/buildpacks/lifecycle/internal/path: build constraints exclude all Go files in .../pkgsrc/wip/scaleway-cli/work/.gopath/pkg/mod/github.com/buildpacks/lifecycle@v0.18.5/internal/path
 
-Investigate what it is going on.
+The problem is likely due
+github.com/buildpacks/lifecycle/internal/path/defaults_unix.go that is
+actually only for "linux" and "darwin"... Unix-like OS-es are not just
+Linux and macOS!
