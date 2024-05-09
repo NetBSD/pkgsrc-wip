@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (patch-Userland_Libraries_LibCore_CMakeLists.txt) = 9565b8c9ac7656fa7bf4e2f4809ded38ae76ae4e
+SHA1 (patch-Meta_Lagom_CMakeLists.txt) = 2860c0f2e25c6353467ab1ec44b329de6a3365b1
 SHA1 (patch-Userland_Libraries_LibCore_Environment.cpp) = 0a3eedeaf1badb0de422ed679f406db2f6448f6f
+SHA1 (patch-Userland_Libraries_LibCore_System.h) = f8bc69e4f4032f945d2db08d38ceaf21ffe0beca
 SHA1 (patch-Userland_Libraries_LibGfx_EdgeFlagPathRasterizer.h) = 2c3e46cdd49aaea673a99d7a72b8b0ae2fd2380e
 SHA1 (patch-Userland_Libraries_LibJS_Heap_BlockAllocator.cpp) = 1bc0777d64c240d838ce6c504b433602d60bd3a1

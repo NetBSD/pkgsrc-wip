@@ -1,0 +1,16 @@
+$NetBSD$
+
+Fix linking on NetBSD.
+https://github.com/SerenityOS/serenity/issues/23375
+
+--- Meta/Lagom/CMakeLists.txt.orig	2024-05-09 21:15:08.421089885 +0000
++++ Meta/Lagom/CMakeLists.txt
+@@ -360,7 +360,7 @@ add_serenity_subdirectory(Userland/Libra
+ target_link_libraries(LibCore PRIVATE Threads::Threads)
+ if (${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
+     # NetBSD has its shm_open and shm_unlink functions in librt so we need to link that
+-    target_link_libraries(LibCore PRIVATE librt.so)
++    target_link_libraries(LibCoreMinimal PRIVATE rt)
+ endif()
+ if (${CMAKE_SYSTEM_NAME} MATCHES "SunOS")
+     # Solaris has socket and networking related functions in two extra libraries
