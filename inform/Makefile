@@ -5,7 +5,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ganelson/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES} inweb-7.2.0.tar.gz
-# TODO: fix for inweb download
+SITES.inweb-7.2.0.tar.gz= -https://github.com/ganelson/inweb/archive/refs/tags/v7.2.0.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ganelson/inform/
