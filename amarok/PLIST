@@ -35,6 +35,7 @@ qt5/plugins/amarok_importer-rhythmbox.so
 qt5/plugins/amarok_service_ampache.so
 qt5/plugins/amarok_service_magnatunestore.so
 qt5/plugins/amarok_service_opmldirectory.so
+qt5/plugins/amarok_storage-mysqlestorage.so
 qt5/plugins/amarok_storage-mysqlserverstorage.so
 qt5/plugins/kcm_amarok_service_ampache.so
 qt5/plugins/kcm_amarok_service_magnatunestore.so
@@ -1165,6 +1166,7 @@ share/kservices5/amarok_service_ampache.desktop
 share/kservices5/amarok_service_ampache_config.desktop
 share/kservices5/amarok_service_magnatunestore.desktop
 share/kservices5/amarok_service_magnatunestore_config.desktop
+share/kservices5/amarok_storage-mysqlestorage.desktop
 share/kservices5/amarok_storage-mysqlserverstorage.desktop
 share/kservices5/amarokitpc.protocol
 share/kservicetypes5/amarok-contextapplet.desktop
