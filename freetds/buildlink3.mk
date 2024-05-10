@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	freetds
 FREETDS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.freetds+=	freetds>=1.4
-BUILDLINK_PKGSRCDIR.freetds?=	../../databases/freetds
+BUILDLINK_PKGSRCDIR.freetds?=	../../wip/freetds
 
 .include "../../converters/libiconv/buildlink3.mk"
 
