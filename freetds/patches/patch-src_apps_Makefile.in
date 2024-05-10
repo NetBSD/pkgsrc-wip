@@ -1,0 +1,33 @@
+$NetBSD$
+
+Also link libtds
+
+--- src/apps/Makefile.in.orig	2024-04-01 09:55:29.000000000 +0000
++++ src/apps/Makefile.in
+@@ -142,7 +142,7 @@ bsqlodbc_LINK = $(LIBTOOL) $(AM_V_lt) --
+ 	$(bsqlodbc_LDFLAGS) $(LDFLAGS) -o $@
+ am_datacopy_OBJECTS = datacopy.$(OBJEXT)
+ datacopy_OBJECTS = $(am_datacopy_OBJECTS)
+-datacopy_DEPENDENCIES = ../dblib/libsybdb.la \
++datacopy_DEPENDENCIES = ../dblib/libsybdb.la ../tds/libtds.la \
+ 	../replacements/libreplacements.la $(am__DEPENDENCIES_1)
+ defncopy_SOURCES = defncopy.c
+ defncopy_OBJECTS = defncopy.$(OBJEXT)
+@@ -150,7 +150,7 @@ defncopy_DEPENDENCIES = ../dblib/libsybd
+ 	../replacements/libreplacements.la $(am__DEPENDENCIES_1)
+ am_freebcp_OBJECTS = freebcp.$(OBJEXT)
+ freebcp_OBJECTS = $(am_freebcp_OBJECTS)
+-freebcp_DEPENDENCIES = ../dblib/libsybdb.la \
++freebcp_DEPENDENCIES = ../dblib/libsybdb.la  ../tds/libtds.la \
+ 	../replacements/libreplacements.la $(am__DEPENDENCIES_1)
+ tsql_SOURCES = tsql.c
+ tsql_OBJECTS = tsql.$(OBJEXT)
+@@ -470,7 +470,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include 
+ SUBDIRS = fisql . unittests
+ DIST_SUBDIRS = $(SUBDIRS)
+ dist_bin_SCRIPTS = osql
+-freebcp_LDADD = ../dblib/libsybdb.la ../replacements/libreplacements.la $(LTLIBICONV)
++freebcp_LDADD = ../dblib/libsybdb.la ../tds/libtds.la ../replacements/libreplacements.la $(LTLIBICONV)
+ freebcp_SOURCES = freebcp.c freebcp.h
+ tsql_LDADD = ../tds/libtds.la \
+ 		  ../replacements/libreplacements.la \

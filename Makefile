@@ -967,6 +967,7 @@ SUBDIR+=	freeswitch-core
 SUBDIR+=	freeswitch-music
 SUBDIR+=	freesynd
 SUBDIR+=	freetalk
+SUBDIR+=	freetds
 SUBDIR+=	freevrrpd
 SUBDIR+=	fribid
 SUBDIR+=	fricas-svn
