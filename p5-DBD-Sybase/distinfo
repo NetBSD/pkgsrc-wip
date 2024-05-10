@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (DBD-Sybase-1.24.tar.gz) = f7c7d796bcdc246dbe08e97d4ae8e15f6fd701a98d71aa4d0ec015f2afb521a9
+SHA512 (DBD-Sybase-1.24.tar.gz) = 134190ed7077def6ce1cc13395aded543436f5bac5694c4fa38d1a8f212c083251bc21c637b192cf22e993347bf81606397965487a88177355ec4cd213b0f7aa
+Size (DBD-Sybase-1.24.tar.gz) = 197494 bytes

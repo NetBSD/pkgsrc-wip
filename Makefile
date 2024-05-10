@@ -2715,6 +2715,7 @@ SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Config-YAML
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
+SUBDIR+=	p5-DBD-Sybase
 SUBDIR+=	p5-DBIx-Class-ResultSet-RecursiveUpdate
 SUBDIR+=	p5-DBIx-Easy
 SUBDIR+=	p5-Dancer-Plugin-Database
