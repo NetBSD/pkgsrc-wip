@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/28 22:01:19 bartoszkuzma Exp $
-bin/vdesk
-share/doc/vdesk/AUTHORS
-share/doc/vdesk/COPYING
-share/doc/vdesk/README
