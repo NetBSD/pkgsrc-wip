@@ -82,5 +82,5 @@ boringssl/include/openssl/x509v3.h
 boringssl/lib/cmake/OpenSSL/OpenSSLConfig.cmake
 boringssl/lib/cmake/OpenSSL/OpenSSLTargets-noconfig.cmake
 boringssl/lib/cmake/OpenSSL/OpenSSLTargets.cmake
-boringssl/lib/libcrypto.a
-boringssl/lib/libssl.a
+boringssl/lib/libcrypto.so
+boringssl/lib/libssl.so

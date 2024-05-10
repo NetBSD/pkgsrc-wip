@@ -11,15 +11,11 @@ LICENSE=	openssl
 
 WRKSRC=		${WRKDIR}/boringssl
 
-.include "../../lang/go/version.mk"
-
-TOOL_DEPENDS+=	${GO_PACKAGE_DEP}
-
 USE_TOOLS+=		cmake perl
 USE_LANGUAGES+=		c gnu++11
-USE_CMAKE=		yes
 TEST_TARGET=		run_tests
 CMAKE_INSTALL_PREFIX=	${PREFIX}/boringssl
+CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=ON
 
 CFLAGS+=	-D_XOPEN_SOURCE=600 -D_NETBSD_SOURCE
 
@@ -30,7 +26,7 @@ SUBST_STAGE.go=		pre-configure
 SUBST_FILES.go=		CMakeLists.txt
 SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
 
-post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
-
+.include "go-modules.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
