@@ -2121,6 +2121,7 @@ lib/libLLVMDWARFLinker.a
 lib/libLLVMDWARFLinkerClassic.a
 lib/libLLVMDWARFLinkerParallel.a
 lib/libLLVMDWP.a
+${PLIST.DirectX}lib/libLLVMDXILBitWriter.a
 lib/libLLVMDebugInfoBTF.a
 lib/libLLVMDebugInfoCodeView.a
 lib/libLLVMDebugInfoDWARF.a
@@ -2131,6 +2132,10 @@ lib/libLLVMDebugInfoPDB.a
 lib/libLLVMDebuginfod.a
 lib/libLLVMDemangle.a
 lib/libLLVMDiff.a
+${PLIST.DirectX}lib/libLLVMDirectXCodeGen.a
+${PLIST.DirectX}lib/libLLVMDirectXDesc.a
+${PLIST.DirectX}lib/libLLVMDirectXInfo.a
+${PLIST.DirectX}lib/libLLVMDirectXPointerTypeAnalysis.a
 lib/libLLVMDlltoolDriver.a
 lib/libLLVMExecutionEngine.a
 lib/libLLVMExegesis.a
@@ -2170,6 +2175,11 @@ ${PLIST.Lanai}lib/libLLVMLanaiInfo.a
 lib/libLLVMLibDriver.a
 lib/libLLVMLineEditor.a
 lib/libLLVMLinker.a
+${PLIST.LoongArch}lib/libLLVMLoongArchAsmParser.a
+${PLIST.LoongArch}lib/libLLVMLoongArchCodeGen.a
+${PLIST.LoongArch}lib/libLLVMLoongArchDesc.a
+${PLIST.LoongArch}lib/libLLVMLoongArchDisassembler.a
+${PLIST.LoongArch}lib/libLLVMLoongArchInfo.a
 ${PLIST.M68k}lib/libLLVMM68kAsmParser.a
 ${PLIST.M68k}lib/libLLVMM68kCodeGen.a
 ${PLIST.M68k}lib/libLLVMM68kDesc.a
@@ -2218,6 +2228,9 @@ ${PLIST.RISCV}lib/libLLVMRISCVInfo.a
 ${PLIST.RISCV}lib/libLLVMRISCVTargetMCA.a
 lib/libLLVMRemarks.a
 lib/libLLVMRuntimeDyld.a
+${PLIST.SPIRV}lib/libLLVMSPIRVCodeGen.a
+${PLIST.SPIRV}lib/libLLVMSPIRVDesc.a
+${PLIST.SPIRV}lib/libLLVMSPIRVInfo.a
 lib/libLLVMScalarOpts.a
 lib/libLLVMSelectionDAG.a
 ${PLIST.Sparc}lib/libLLVMSparcAsmParser.a
@@ -2265,6 +2278,11 @@ ${PLIST.XCore}lib/libLLVMXCoreDesc.a
 ${PLIST.XCore}lib/libLLVMXCoreDisassembler.a
 ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMXRay.a
+${PLIST.Xtensa}lib/libLLVMXtensaAsmParser.a
+${PLIST.Xtensa}lib/libLLVMXtensaCodeGen.a
+${PLIST.Xtensa}lib/libLLVMXtensaDesc.a
+${PLIST.Xtensa}lib/libLLVMXtensaDisassembler.a
+${PLIST.Xtensa}lib/libLLVMXtensaInfo.a
 lib/libLLVMipo.a
 lib/libLTO.${SOEXT}
 ${PLIST.notdylib}lib/libLTO.${SOEXT}.${LLVM_MAJOR_VERSION}
