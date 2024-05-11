@@ -5332,7 +5332,6 @@ SUBDIR+=	synce-dynamite
 SUBDIR+=	synce-orange
 SUBDIR+=	syncserver-dependencies
 SUBDIR+=	syncstorage-rs
-SUBDIR+=	syncstorage-rs-git
 SUBDIR+=	syncthing-discosrv
 SUBDIR+=	syncthing-inotify
 SUBDIR+=	syncthing-relaysrv
