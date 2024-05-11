@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	syncstorage-rs-0.13.6
+DISTNAME=	syncstorage-rs-0.15.8
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 GIT_REPO=	https://github.com/mozilla-services/syncstorage-rs.git
@@ -29,7 +29,7 @@ CARGO_ARGS+=	build --release ${DEFAULT_CARGO_ARGS} --no-default-features --featu
 .include "cargo-depends.mk"
 
 # Depends on an mozilla-modified version of crate
-DEADPOOL_REV=				deadpool-v0.5.2-issue92
+DEADPOOL_REV=				deadpool-v0.7.0
 DISTFILES=				${DEFAULT_DISTFILES}
 DISTFILES+=				deadpool-${DEADPOOL_REV}.tar.gz
 SITES.deadpool-${DEADPOOL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=mozilla-services/}deadpool/archive/${DEADPOOL_REV}.tar.gz
