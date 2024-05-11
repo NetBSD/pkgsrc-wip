@@ -1087,3 +1087,4 @@ BLAKE2s (superfile-1.1.2.tar.gz) = 96fb2645e77ff034071d7a278289aadac0e4176f45fff
 SHA512 (superfile-1.1.2.tar.gz) = c4455543930aea2dca75f021c84957ac180bb234e21cf9d6a9618f067d93fad8900f38e3f112a92a0ab7d806821ae99454d8b448b940beb5d49c96afc4aaddbe
 Size (superfile-1.1.2.tar.gz) = 5982048 bytes
 SHA1 (patch-.._.._github.com_barasher_go-exiftool@v1.10.0_platform__netbsd.go) = d9f2f45befe5e2968fdc4880902299b5b6294491
+SHA1 (patch-go.mod) = ba5555299669e3d32ab415e8cea2544ce9c5ca08
