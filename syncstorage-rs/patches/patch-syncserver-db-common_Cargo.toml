@@ -1,13 +1,15 @@
 $NetBSD$
 
---- syncserver-db-common/Cargo.toml.orig	2022-12-16 18:15:37.000000000 +0000
+Let pkgsrc provide the file instead of running git to fetch.
+
+--- syncserver-db-common/Cargo.toml.orig	2024-05-11 20:44:58.000000000 +0000
 +++ syncserver-db-common/Cargo.toml
-@@ -10,7 +10,7 @@ chrono = "0.4"
- # Pin to 0.5 for now, to keep it under tokio 0.2 (issue977).
- # Fix for #803 (deadpool#92) points to our fork for now
- #deadpool = "0.5"  # pin to 0.5
--deadpool = { git = "https://github.com/mozilla-services/deadpool", branch = "deadpool-v0.5.2-issue92" }
+@@ -11,7 +11,7 @@ futures.workspace=true
+ http.workspace=true
+ thiserror.workspace=true
+ 
+-deadpool = { git = "https://github.com/mozilla-services/deadpool", tag = "deadpool-v0.7.0" }
 +deadpool = { path = "../../deadpool" }
  diesel = { version = "1.4", features = ["mysql", "r2d2"] }
  diesel_migrations = { version = "1.4.0", features = ["mysql"] }
- # Some versions of OpenSSL 1.1.1 conflict with grpcio's built-in boringssl which can cause
+ syncserver-common = { path = "../syncserver-common" }
