@@ -1,9 +1,1 @@
-geography/qgis: Update to 3.34.3 (new LTR branch)
-
-Packaging changes:
-  - depend on pdal
-  - disable 3D because needed packages are not yet present
-
-Upstream changes:
-
-  - \todo
+geography/qgis:

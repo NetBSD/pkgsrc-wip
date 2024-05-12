@@ -1,6 +1,19 @@
-  - summarize upstream changes
-  - fix build - missing libs
-  - go over upstream's dependency list and cross-check
-  - comment patches, or improve comments
-  - file bugs upstream
-  - test with various data sources on at least NetBSD 10 amd64
+This package is now (mostly?) modifications for building on macOS as
+well as some cleanups.
+
+  - Add comments somehow about the big picture of approach on macOS.
+    (Disabling "unix" on mac, if we are treating mac as unix, does not
+    seem right.)
+
+  - File bugs and/or discuss upstream.  Are we fixing a bug?  Making a
+    fundamentally different choice?  What is the long-term plan?
+
+  - For changes (relative to pkgsrc) not about macOS,
+    patch-comments/upstream-reports.
+
+  - For patches unchanged from pkgsrc, patrol for good enough comments
+    and upstream bugs.
+
+  - COMMIT_MSG
+
+  - Test
