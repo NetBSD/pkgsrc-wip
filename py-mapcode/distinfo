@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (mapcode-2.5.5.0.tar.gz) = e695312c69119fc0f01d94bef85980331e3eba43
+BLAKE2s (mapcode-2.5.5.0.tar.gz) = d8c28cea8b81f00911f54e59773abb39a7922cf6cca5ecdf94754e1e21a8efa0
 SHA512 (mapcode-2.5.5.0.tar.gz) = 30947cec6aef40ca76f30911ea8682e267bdf766bb133fb5133ae7770ca43655671dcb617a1e08769dd9936098d91796955a808abbdf4668c0231681d77c41c8
 Size (mapcode-2.5.5.0.tar.gz) = 488902 bytes
