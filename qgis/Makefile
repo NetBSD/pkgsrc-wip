@@ -15,8 +15,8 @@ HOMEPAGE=	https://www.qgis.org/
 COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
-USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran77
+USE_CXX_FEATURES=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bison flex perl pkg-config
@@ -80,6 +80,10 @@ DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
+# uncomment to tell cmake not to hide build commands (i.e., to show them)
+#CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
+# \todo Hoist this to become a general facility where a variable controls
+# actually showing build output.
 
 PLIST_VARS=	unix
 
