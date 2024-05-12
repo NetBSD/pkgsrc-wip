@@ -56,7 +56,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/tokenserver/*.* ${DESTDIR}${PREFIX}/lib/tokenserver
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/clang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/tool.mk"
