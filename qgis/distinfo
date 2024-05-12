@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2024/01/24 23:22:21 gdt Exp $
+$NetBSD: distinfo,v 1.65 2024/05/12 19:07:37 gdt Exp $
 
 BLAKE2s (qgis-3.34.6.tar.bz2) = 451b2c6aa13be0e4dbe0cd8eff4ee9cee11bc3bf9a379bd98df0f2cdf9a5e473
 SHA512 (qgis-3.34.6.tar.bz2) = 80a30b38f20ae5d8fa43990af941253faed99fe449e58815c8de2b72c3adf54ba7cf1e189bee7cc539fa3c40523347fb5ba4d5cf4c0a7aa60896a37aa18e4ed6

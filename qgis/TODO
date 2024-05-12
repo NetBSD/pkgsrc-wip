@@ -2,17 +2,23 @@ This package is now (mostly?) modifications for building on macOS as
 well as some cleanups.
 
   - Add comments somehow about the big picture of approach on macOS.
-    (Disabling "unix" on mac, if we are treating mac as unix, does not
-    seem right.)
 
-  - File bugs and/or discuss upstream.  Are we fixing a bug?  Making a
-    fundamentally different choice?  What is the long-term plan?
+    + PLIST.unix, and setting that to no on mac, does not make sense,
+      as we are trying to treat mac like the underlying unix that it
+      is.
 
-  - For changes (relative to pkgsrc) not about macOS,
-    patch-comments/upstream-reports.
+    + geography/qgis has partial exorcism of mac bundle, but this
+      removes that and changes to a different approach.  There's no
+      rationale in the commit message.
 
-  - For patches unchanged from pkgsrc, patrol for good enough comments
-    and upstream bugs.
+    + File bugs and/or discuss upstream.  Are we fixing a bug?  Making
+      a fundamentally different choice?  What is the long-term plan?
+
+      It seems obvious that upstream should have cmake args to 1) not
+      build the bundle and 2) build the normal stuff even on mac.
+
+  - For the protobuf change, more clarity as there are enough hints to
+    go figure it out, but it's not immediately clear on reading.
 
   - COMMIT_MSG
 
