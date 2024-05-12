@@ -1,0 +1,4 @@
+# make mdi
+=> Bootstrap dependency digest>=20211023: found digest-20220214
+make: exec(/bin/sh) failed (Argument list too long)
+*** Error code 1
