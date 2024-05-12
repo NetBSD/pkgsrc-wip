@@ -1558,7 +1558,6 @@ SUBDIR+=	hs-pointedlist
 SUBDIR+=	hs-pointedlist03
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
-SUBDIR+=	hs-quickcheck-instances
 SUBDIR+=	hs-readline
 SUBDIR+=	hs-regex-compat
 SUBDIR+=	hs-regional-pointers
