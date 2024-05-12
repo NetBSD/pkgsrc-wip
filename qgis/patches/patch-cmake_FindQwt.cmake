@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_FindQwt.cmake,v 1.4 2022/02/15 12:59:21 gdt Exp $
+$NetBSD: patch-cmake_FindQwt.cmake,v 1.5 2024/05/12 13:47:30 gdt Exp $
 
 Force pkgsrc path only rather than looking in a large number of random
 places.
@@ -6,7 +6,7 @@ places.
 Not yet reported upstream; it's not clear how to merge how we want to
 handle this and upstream's approach.
 
---- cmake/FindQwt.cmake.orig	2024-01-19 12:02:20.000000000 +0000
+--- cmake/FindQwt.cmake.orig	2024-04-19 12:01:44.000000000 +0000
 +++ cmake/FindQwt.cmake
 @@ -17,11 +17,7 @@ set(QWT_LIBRARY_NAMES qwt-${QT_VERSION_B
  find_library(QWT_LIBRARY
