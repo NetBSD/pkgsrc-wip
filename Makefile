@@ -4813,7 +4813,6 @@ SUBDIR+=	py-zenity
 SUBDIR+=	py-zict
 SUBDIR+=	py-zlmdb
 SUBDIR+=	py-zmqrpc
-SUBDIR+=	py-zulip
 SUBDIR+=	py-zulip-term
 SUBDIR+=	py27-libusb1
 SUBDIR+=	py27-virtualenv
