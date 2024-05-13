@@ -10,6 +10,8 @@
 name="munge"
 rcvar=${name}
 command="@PREFIX@/sbin/munged"
+munge_user="munge"
+munge_group="munge"
 
 load_rc_config $name
 run_rc_command "$1"
