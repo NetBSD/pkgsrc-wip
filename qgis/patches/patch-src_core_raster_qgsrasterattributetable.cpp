@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_core_raster_qgsrasterattributetable.cpp,v 1.1 2024/05/12 13:47:30 gdt Exp $
 
 Remediate bare isnan usage.
 
