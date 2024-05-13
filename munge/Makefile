@@ -35,17 +35,17 @@ OWN_DIRS_PERMS+=	${MUNGE_ETC_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
 
 RCD_SCRIPTS+=	munge
 
-SUBST_CLASSES+=		init
-SUBST_STAGE.init=	pre-configure
-SUBST_FILES.init=	src/etc/munge.sysvinit.init.in
-SUBST_SED.init=		-e 's|USER="munge"|USER="daemon"|g'
-SUBST_SED.init+=	-e 's|GROUP="munge"|GROUP="daemon"|g'
+# SUBST_CLASSES+=		init
+# SUBST_STAGE.init=	pre-configure
+# SUBST_FILES.init=	src/etc/munge.sysvinit.init.in
+# SUBST_SED.init=		-e 's|USER="munge"|USER="daemon"|g'
+# SUBST_SED.init+=	-e 's|GROUP="munge"|GROUP="daemon"|g'
 
-SUBST_CLASSES+=		systemd
-SUBST_STAGE.systemd=	pre-configure
-SUBST_FILES.systemd=	src/etc/munge.systemd.service.in
-SUBST_SED.systemd=	-e 's|User=munge|User=daemon|g'
-SUBST_SED.systemd+=	-e 's|Group=munge|Group=daemon|g'
+# SUBST_CLASSES+=		systemd
+# SUBST_STAGE.systemd=	pre-configure
+# SUBST_FILES.systemd=	src/etc/munge.systemd.service.in
+# SUBST_SED.systemd=	-e 's|User=munge|User=daemon|g'
+# SUBST_SED.systemd+=	-e 's|Group=munge|Group=daemon|g'
 
 .include "../../mk/bsd.prefs.mk"
 
