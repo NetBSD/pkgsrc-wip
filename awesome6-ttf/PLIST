@@ -1,0 +1,5 @@
+@comment $NetBSD$
+share/fonts/X11/TTF/fa6-brands-400.ttf
+share/fonts/X11/TTF/fa6-regular-400.ttf
+share/fonts/X11/TTF/fa6-solid-900.ttf
+share/fonts/X11/TTF/fa6-v4compatibility.ttf
