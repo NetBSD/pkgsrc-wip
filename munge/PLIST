@@ -32,3 +32,4 @@ sbin/mungekey
 @pkgdir var/run/munge
 @pkgdir var/log/munge
 @pkgdir var/lib/munge
+@pkgdir etc/munge

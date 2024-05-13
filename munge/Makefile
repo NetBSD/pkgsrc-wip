@@ -14,12 +14,13 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-INSTALLATION_DIRS+=	lib/pkgconfig
 
-MUNGE_DIR?=		${PREFIX}/var/lib/munge
-MUNGE_LOG_DIR?=		${PREFIX}/var/log/munge
-MUNGE_RUN_DIR?=		${PREFIX}/var/run/munge
-MUNGE_ETC_DIR?=		${PREFIX}/etc/munge
+.include "../../mk/bsd.prefs.mk"
+
+MUNGE_DIR?=		var/lib/munge
+MUNGE_LOG_DIR?=		var/log/munge
+MUNGE_RUN_DIR?=		var/run/munge
+MUNGE_ETC_DIR?=		etc/munge
 MUNGE_USER=		munge
 MUNGE_GROUP=		${MUNGE_USER}
 
@@ -35,20 +36,6 @@ OWN_DIRS_PERMS+=	${MUNGE_ETC_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
 
 RCD_SCRIPTS+=	munge
 
-# SUBST_CLASSES+=		init
-# SUBST_STAGE.init=	pre-configure
-# SUBST_FILES.init=	src/etc/munge.sysvinit.init.in
-# SUBST_SED.init=		-e 's|USER="munge"|USER="daemon"|g'
-# SUBST_SED.init+=	-e 's|GROUP="munge"|GROUP="daemon"|g'
-
-# SUBST_CLASSES+=		systemd
-# SUBST_STAGE.systemd=	pre-configure
-# SUBST_FILES.systemd=	src/etc/munge.systemd.service.in
-# SUBST_SED.systemd=	-e 's|User=munge|User=daemon|g'
-# SUBST_SED.systemd+=	-e 's|Group=munge|Group=daemon|g'
-
-.include "../../mk/bsd.prefs.mk"
-
 .if ${OPSYS} == Linux
 EGDIR=			${PREFIX}/share/examples/munge
 # Doesn't work on Lubuntu 23.  Using CONFIGURE_ARGS for now.
@@ -58,6 +45,7 @@ CONF_FILES+=		${EGDIR}/logrotate.conf ${PREFIX}/etc/logrotate.d/munge
 
 INSTALLATION_DIRS+=	${EGDIR} etc/logrotate.d
 CONFIGURE_ARGS+=	--with-sysconfigdir=${PREFIX}/etc/sysconfig
+AUTO_MKDIRS=		yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/logrotate.d/munge \
@@ -68,7 +56,7 @@ post-install:
 
 .if ${OPSYS} == Darwin
 post-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
+	# ${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
 	${INSTALL_DATA} ${FILESDIR}/*.plist \
 		${DESTDIR}${PREFIX}/share/munge/Launchd
 .endif
