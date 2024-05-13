@@ -1,7 +1,6 @@
 $NetBSD: patch-CMakeLists.txt,v 1.5 2024/05/01 12:46:59 adam Exp $
 
 On Darwin, don't build application bundle.
-Use modern protobuf support.
 
 --- CMakeLists.txt.orig	2024-04-19 12:01:44.000000000 +0000
 +++ CMakeLists.txt
