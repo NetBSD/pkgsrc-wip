@@ -39,12 +39,12 @@ RCD_SCRIPTS+=	munge
 .if ${OPSYS} == Linux
 EGDIR=			${PREFIX}/share/examples/munge
 # Doesn't work on Lubuntu 23.  Using CONFIGURE_ARGS for now.
-# PKG_SYSCONFSUBDIR=	sysconfig
+PKG_SYSCONFSUBDIR=	sysconfig
 CONF_FILES=		${EGDIR}/systemd.sysconfig ${PKG_SYSCONFDIR}/munge
 CONF_FILES+=		${EGDIR}/logrotate.conf ${PREFIX}/etc/logrotate.d/munge
 
 INSTALLATION_DIRS+=	${EGDIR} etc/logrotate.d
-CONFIGURE_ARGS+=	--with-sysconfigdir=${PREFIX}/etc/sysconfig
+CONFIGURE_ARGS+=	--with-sysconfigdir=${PKG_SYSCONFDIR}
 AUTO_MKDIRS=		yes
 
 post-install:
