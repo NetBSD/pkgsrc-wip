@@ -7,8 +7,8 @@ EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ice-wm/icewm/releases/download/3.4.7/
-COMMENT=		Small, fast and light-weight window manager
-LICENSE=	gplv2
+COMMENT=	Small, fast and light-weight window manager
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	icewm-imlib-[0-9]*
 
@@ -17,6 +17,9 @@ FILESDIR=	${.CURDIR}/../../wm/icewm/files
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+
+CONFIGURE_ARGS+=	--enable-corefonts
+CONFIGURE_ARGS+=	--enable-i18n
 
 USE_TOOLS+=	pkg-config gmake
 

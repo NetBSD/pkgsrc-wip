@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (icewm-3.4.7.tar.lz) = ecd121af13067430da4e9d2f92e167f37c28f9575bc9e333e4e197681e96f7e4
 SHA512 (icewm-3.4.7.tar.lz) = 6db8186dec7e286515416737ec1796bc9d0c2399ae109f6fb7aebca9938c3ab6c674546b60952b63bf65d0336d3b873f316af175646f873d6c8127c5b1cdceda
 Size (icewm-3.4.7.tar.lz) = 1837566 bytes
-SHA1 (patch-src_udir.cc) = 492e3f1ea3feb76251c05b3bbc1f4c2dafedeffa
-SHA1 (patch-src_ylocale.cc) = cf98ed20c51b257c4ce97d33439044b16738329f
+SHA1 (patch-src_udir.cc) = d9be22dbf29ff5f62d009d3dd1c8177154099f4a
+SHA1 (patch-src_ylocale.cc) = ab3441b72c0864cfa9c3c185809356edf713bc3b

@@ -1,6 +1,8 @@
 $NetBSD$
 
---- src/ylocale.cc.orig	2024-05-11 00:37:57.995111892 +0000
+Upstream bug. Expects a char **
+
+--- src/ylocale.cc.orig	2024-03-25 19:03:14.000000000 +0000
 +++ src/ylocale.cc
 @@ -204,7 +204,7 @@ char* YLocale::localeString(const wchar_
  
