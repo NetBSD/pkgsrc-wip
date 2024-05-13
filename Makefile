@@ -4712,7 +4712,6 @@ SUBDIR+=	py-update-checker
 SUBDIR+=	py-upsilon
 SUBDIR+=	py-uptime
 SUBDIR+=	py-urwid-mitmproxy
-SUBDIR+=	py-urwid_readline
 SUBDIR+=	py-usagestats
 SUBDIR+=	py-user_agent
 SUBDIR+=	py-utilib_common

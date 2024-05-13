@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=2.1:../../time/py-tzlocal
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.2:../../devel/py-urwid
-DEPENDS+=	${PYPKGPREFIX}-urwid_readline>=0.13:../../wip/py-urwid_readline
+DEPENDS+=	${PYPKGPREFIX}-urwid_readline>=0.13:../../devel/py-urwid_readline
 DEPENDS+=	${PYPKGPREFIX}-zulip>=0.8.2:../../wip/py-zulip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
