@@ -1,0 +1,14 @@
+@comment $NetBSD$
+share/neatroff/devutf/Ubuntu-B
+share/neatroff/devutf/Ubuntu-BI
+share/neatroff/devutf/Ubuntu-C
+share/neatroff/devutf/Ubuntu-L
+share/neatroff/devutf/Ubuntu-LI
+share/neatroff/devutf/Ubuntu-M
+share/neatroff/devutf/Ubuntu-MI
+share/neatroff/devutf/Ubuntu-R
+share/neatroff/devutf/Ubuntu-RI
+share/neatroff/devutf/UbuntuMono-B
+share/neatroff/devutf/UbuntuMono-BI
+share/neatroff/devutf/UbuntuMono-R
+share/neatroff/devutf/UbuntuMono-RI
