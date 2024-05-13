@@ -55,6 +55,7 @@ post-install:
 .endif
 
 .if ${OPSYS} == Darwin
+INSTALLATION_DIRS+=	share/munge/Launchd
 post-install:
 	# ${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
 	${INSTALL_DATA} ${FILESDIR}/*.plist \
