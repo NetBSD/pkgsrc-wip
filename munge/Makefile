@@ -17,10 +17,10 @@ USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-MUNGE_DIR?=		var/lib/munge
-MUNGE_LOG_DIR?=		var/log/munge
-MUNGE_RUN_DIR?=		var/run/munge
-MUNGE_ETC_DIR?=		etc/munge
+MUNGE_DIR?=		${PREFIX}/var/lib/munge
+MUNGE_LOG_DIR?=		${PREFIX}/var/log/munge
+MUNGE_RUN_DIR?=		${PREFIX}/var/run/munge
+MUNGE_ETC_DIR?=		${PREFIX}/etc/munge
 MUNGE_USER=		munge
 MUNGE_GROUP=		${MUNGE_USER}
 
