@@ -2408,6 +2408,7 @@ SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncp
 SUBDIR+=	ncrack
+SUBDIR+=	neateqn
 SUBDIR+=	neatmkfn
 SUBDIR+=	neatpost
 SUBDIR+=	neatroff

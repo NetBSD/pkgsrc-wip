@@ -1,0 +1,6 @@
+Neatroff is a new implementation of the Troff typesetting system written
+in C.  It tries to address, as neatly as possible, some of the
+shortcomings of the original Troff based on the ideas and features
+available in Plan 9 Troff, Heirloom Troff, and Groff.
+
+Neatpost is Neatroff's preprocessor for mathematical equations.
