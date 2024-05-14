@@ -21,7 +21,7 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-corefonts
 CONFIGURE_ARGS+=	--enable-i18n
 
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake perl
 
 REPLACE_PERL=	contrib/icewm-menu-xrandr
 
@@ -32,6 +32,8 @@ post-extract:
 
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
