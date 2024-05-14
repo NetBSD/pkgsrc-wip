@@ -54,6 +54,7 @@ post-install:
 .endif
 
 .if ${OPSYS} == Darwin
+# Should not be necessary with AUTO_MKDIRS enabled, but it is
 INSTALLATION_DIRS+=	share/munge/Launchd
 post-install:
 	# ${MKDIR} ${DESTDIR}${PREFIX}/share/munge/Launchd
