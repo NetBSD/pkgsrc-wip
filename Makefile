@@ -2411,6 +2411,7 @@ SUBDIR+=	ncrack
 SUBDIR+=	neateqn
 SUBDIR+=	neatmkfn
 SUBDIR+=	neatpost
+SUBDIR+=	neatrefer
 SUBDIR+=	neatroff
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox

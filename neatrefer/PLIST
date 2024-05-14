@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/neatrefer
+man/man1/neatrefer.1
