@@ -1,6 +1,7 @@
 $NetBSD$
 
 Unsure why the class override of the pointer operator isn't working
+Reported at: https://github.com/bbidulock/icewm/issues/774
 
 --- src/udir.cc.orig	2024-03-25 19:03:14.000000000 +0000
 +++ src/udir.cc

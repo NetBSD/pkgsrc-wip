@@ -1,6 +1,7 @@
 $NetBSD$
 
 Upstream bug. Expects a char **
+Reported at: https://github.com/bbidulock/icewm/issues/775
 
 --- src/ylocale.cc.orig	2024-03-25 19:03:14.000000000 +0000
 +++ src/ylocale.cc
