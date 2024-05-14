@@ -1,43 +1,41 @@
 # $NetBSD$
 
-PKGNAME=	neatroff-git-0
+DISTNAME=	aligrudi-neatroff_make
+PKGNAME=	neatroff-20231125
 CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=aligrudi/}
+GITHUB_PROJECT=	neatroff_make
+GITHUB_TAG=	7cf23e411527a8e85c6fda689523f90b5f03a235
 
 MAINTAINER=	mdehling@gmail.com
-HOMEPAGE=	https://litcave.rudi.ir/
-COMMENT=	Neatroff clone of the Troff typesetting system
+HOMEPAGE=	https://github.com/aligrudi/neatroff
+COMMENT=	Clone of the Troff typesetting system
 LICENSE=	isc AND mit
 
-GIT_REPOSITORIES=	neatroff_make neatroff
-.for repo in ${GIT_REPOSITORIES}
-GIT_REPO.${repo}=	https://github.com/aligrudi/${repo}.git
-GIT_BRANCH.${repo}=	master
-.endfor
-GIT_EXTRACTDIR.neatroff= 						\
-	${GIT_EXTRACTDIR.neatroff_make}/neatroff
+GITHUB_SUBMODULES+=	aligrudi neatroff 42ffa05d4aca7941be9d9b90c5d243b69521dd61 neatroff
 
-WRKSRC=			${WRKDIR}/${GIT_EXTRACTDIR.neatroff_make}
-
-DEPENDS+=		neatpost-git-[0-9]*:../../wip/neatpost-git
+DEPENDS+=		neatpost-[0-9]*:../../wip/neatpost
 DEPENDS+=		urw-fonts-[0-9]*:../../fonts/urw-fonts
-TOOL_DEPENDS+=		neatmkfn-git-[0-9]*:../../wip/neatmkfn-git
+TOOL_DEPENDS+=		neatmkfn-[0-9]*:../../wip/neatmkfn
 
 SUBST_CLASSES=		path
 SUBST_MESSAGE.path=	Updating paths.
 SUBST_STAGE.path=	post-build
-SUBST_FILES.path=	man/neatroff.1
 SUBST_SED.path=		-e 's|/usr/share|${PREFIX}/share|g'
+SUBST_FILES.path=	man/neatroff.1
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/neatroff/tmac share/neatroff/tmac/me
-INSTALLATION_DIRS+=	share/neatroff/devutf
+BUILD_DIRS=		neatroff
 
-do-build:
-	cd ${WRKSRC}/neatroff && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
-		FDIR=${PREFIX}/share/neatroff				\
-		MDIR=${PREFIX}/share/neatroff/tmac
+MAKE_FLAGS+=		FDIR=${PREFIX}/share/neatroff
+MAKE_FLAGS+=		MDIR=${PREFIX}/share/neatroff/tmac
+
+post-build:
 	${PREFIX}/share/neatroff/gen.sh ${PREFIX}/share/fonts/urw	\
 		${WRKSRC}/devutf
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/neatroff/tmac/me
+INSTALLATION_DIRS+=	share/neatroff/devutf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/neatroff/roff			\
@@ -53,5 +51,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/devutf/*				\
 		${DESTDIR}${PREFIX}/share/neatroff/devutf
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
