@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.23 2020/01/18 21:50:41 jperkin Exp $
 
-DISTNAME=	munge-0.5.15
+DISTNAME=	munge-0.5.16
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -34,11 +34,10 @@ OWN_DIRS_PERMS+=	${MUNGE_LOG_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
 OWN_DIRS_PERMS+=	${MUNGE_RUN_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0755
 OWN_DIRS_PERMS+=	${MUNGE_ETC_DIR} ${MUNGE_USER} ${MUNGE_GROUP} 0700
 
-RCD_SCRIPTS+=	munge
+RCD_SCRIPTS+=		munge
 
 .if ${OPSYS} == Linux
 EGDIR=			${PREFIX}/share/examples/munge
-# Doesn't work on Lubuntu 23.  Using CONFIGURE_ARGS for now.
 PKG_SYSCONFSUBDIR=	sysconfig
 CONF_FILES=		${EGDIR}/systemd.sysconfig ${PKG_SYSCONFDIR}/munge
 CONF_FILES+=		${EGDIR}/logrotate.conf ${PREFIX}/etc/logrotate.d/munge

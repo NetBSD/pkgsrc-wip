@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (munge-0.5.15.tar.xz) = c726fcd7a7f457cb8136657721776b0001b661cff175ca9cb9b6f36063957450
-SHA512 (munge-0.5.15.tar.xz) = 266af1cf2df30f6bd7338527bd69736c0cf91e7390e7bbeea9a225af4829d456907be77a1e77ecef4716f2fff634d144d4b3d5cc3d0afc12f5c2d1acfd6974e1
-Size (munge-0.5.15.tar.xz) = 459468 bytes
+BLAKE2s (munge-0.5.16.tar.xz) = c1720fd24852ad31a8aa6d83a24c5935519d0d7a682abdf2fdb535673d6c5885
+SHA512 (munge-0.5.16.tar.xz) = b808deede8e71c96719526182c5fc16250dc09d2129dc9d5cbcb54c5827723e1dbbd47b8c912373328f5f3b8971c75200abb2def5d35ebc896bff1984ab8c305
+Size (munge-0.5.16.tar.xz) = 448120 bytes
 SHA1 (patch-src_etc_Makefile.in) = fbf4e59810c97e4c70353ec435867bebf2bd39bd
