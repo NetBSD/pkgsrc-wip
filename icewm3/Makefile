@@ -2,11 +2,11 @@
 
 DISTNAME=	icewm-3.4.7
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/icewm/releases/download/3.4.7/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/icewm/releases/download/${PKGREVISION_NOREV}/}
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/ice-wm/icewm/releases/download/3.4.7/
+HOMEPAGE=	https://ice-wm.org/
 COMMENT=	Small, fast and light-weight window manager
 LICENSE=	gnu-gpl-v2
 
