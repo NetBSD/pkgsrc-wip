@@ -10,7 +10,7 @@ COMMENT=	A Silverhawk Software smalltalk implementation (LISP code)
 LICENSE=	GPLv2	
 
 WRKSRC=		${WRKDIR}/zephyr-lsmalltalk
-USE_LANGUAGES= 	C	
+USE_LANGUAGES= 	LISP	
 
 INSTALLATION_DIRS=	bin
 
