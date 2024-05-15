@@ -675,7 +675,6 @@ SUBDIR+=	digestif
 SUBDIR+=	digitemp
 SUBDIR+=	dillo-devel
 SUBDIR+=	ding
-SUBDIR+=	dino
 SUBDIR+=	dionysus
 SUBDIR+=	discident-glib
 SUBDIR+=	discordo
