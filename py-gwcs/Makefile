@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-astropy>=5.0:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-asdf>=2.9.2:../../math/py-asdf
 DEPENDS+=	${PYPKGPREFIX}-numpy>0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-asdf_wcs_schemas>0:../../wip/py-asdf_wcs_schemas
+DEPENDS+=	${PYPKGPREFIX}-asdf_wcs_schemas>0:../../math/py-asdf_wcs_schemas
 DEPENDS+=	${PYPKGPREFIX}-asdf_astropy>=0.2.0:../../math/py-asdf_astropy
 
 .include "../../math/py-numpy/buildlink3.mk"
