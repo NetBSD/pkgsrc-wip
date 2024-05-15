@@ -3268,7 +3268,6 @@ SUBDIR+=	py-arxiv-connections
 SUBDIR+=	py-arxiv2bib
 SUBDIR+=	py-arxvier
 SUBDIR+=	py-asciimathml
-SUBDIR+=	py-asdf_astropy
 SUBDIR+=	py-asdf_transform_schemas
 SUBDIR+=	py-asdf_wcs_schemas
 SUBDIR+=	py-ase
