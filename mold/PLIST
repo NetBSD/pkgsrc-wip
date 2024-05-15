@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/15 17:32:22 fcambus Exp $
-bin/ld.mold
-bin/mold
-lib/mold/mold-wrapper.so
-libexec/mold/ld
-man/man1/ld.mold.1
-man/man1/mold.1
-share/doc/mold/LICENSE
-share/doc/mold/LICENSE.third-party
