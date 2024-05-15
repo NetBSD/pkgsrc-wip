@@ -3764,7 +3764,6 @@ SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gtrie
 SUBDIR+=	py-gts
 SUBDIR+=	py-gvar
-SUBDIR+=	py-gwcs
 SUBDIR+=	py-gwsurrogate
 SUBDIR+=	py-hal-cgp
 SUBDIR+=	py-halp

@@ -21,7 +21,7 @@ DEPENDS+=	opencv-[0-9]*:../../graphics/opencv
 DEPENDS+=	${PYPKGPREFIX}-piexif-[0-9]*:../../graphics/py-piexif
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.3.2:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-gwcs-[0-9]*:../../wip/py-gwcs
+DEPENDS+=	${PYPKGPREFIX}-gwcs-[0-9]*:../../math/py-gwcs
 DEPENDS+=	${PYPKGPREFIX}-QtPy>=2.0.1:../../wip/py-qtpy
 #DEPENDS+=	${PYPKGPREFIX}-pyside-[0-9]*:../../wip/py-pyside
 #DEPENDS+=	${PYPKGPREFIX}-gobject-[0-9]*:../../devel/py-gobject
