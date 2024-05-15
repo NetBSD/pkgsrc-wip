@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2023/11/30 10:35:02 nros Exp $
+
+BLAKE2s (dino-0.4.3.tar.gz) = f69a5a53b6519245ab5c55d6a08ce8e84e716f5a9645e9a918234711911b798a
+SHA512 (dino-0.4.3.tar.gz) = c3e5e3ba05d7190206a8a3144002eac94f162525ab229edd420215eff3d5644293d0c8737266f0ed9f112313b2e6e83fb02fcc10d0f568fb5b2295238ebe78ea
+Size (dino-0.4.3.tar.gz) = 883558 bytes
+SHA1 (patch-plugins_gpgme-vala_vapi_gpgme__public.vapi) = e2aa0badf668c1ca1de7e87d5e7c7bd0c997c3fc

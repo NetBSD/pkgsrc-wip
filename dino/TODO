@@ -1,0 +1,3 @@
+failed to add UI from resource /im/dino/Dino/unified_main_content.ui: .:26:1 Invalid object type 'DinoUiConversationSelector'
+
+https://github.com/dino/dino/issues/1585
