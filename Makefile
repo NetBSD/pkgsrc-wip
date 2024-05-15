@@ -245,6 +245,7 @@ SUBDIR+=	avidemux-cli
 SUBDIR+=	avidemux-plugins
 SUBDIR+=	avidemux-qt
 SUBDIR+=	avp
+SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
 SUBDIR+=	avra
 SUBDIR+=	avrdude

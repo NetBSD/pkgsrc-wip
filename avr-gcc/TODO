@@ -1,0 +1,6 @@
+[X] Remove pkgsrc patches that were merged upstream
+[X] Update PLIST
+[X] Test option "gcc-inplace-math"
+[X] Verify whether MKPIE must still be disabled
+
+[ ] Test with real hardware

@@ -1,0 +1,69 @@
+cross/avr-gcc: Update to 14.1.0
+
+Remove pkgsrc patches that were merged upstream.
+
+Full changelog can be found here:
+<https://gcc.gnu.org/gcc-14/changes.html>
+
+Changes for AVR architecture
+============================
+- On AVR64* and AVR128* devices, read-only data is now located in
+  program memory per default and no longer in RAM.
+  - Only a 32 KiB block of program memory can be used to store and
+    access .rodata in that way. Which block is used can be selected by
+    defining the symbol __flmap. As an alternative, the byte address of
+    the block can be specified by the symbol __RODATA_FLASH_START__
+    which takes precedence over __flmap. For example, linking with
+    -Wl,--defsym,__RODATA_FLASH_START__=32k chooses the second 32 KiB
+    block.
+  - The default uses the last 32 KiB block, which is also the hardware
+    default for bit-field NVMCTRL_CTRLB.FLMAP.
+  - When a non-default block is used, then NVMCTRL_CTRLB.FLMAP must be
+    initialized accordingly by hand, or AVR-LibC v2.2 that implements
+    #931 can be used. The latter initializes NVMCTRL_CTRLB.FLMAP in the
+    startup code and according to the value of __flmap or
+    __RODATA_FLASH_START__.
+  - When AVR-LibC with #931 is used, then defining the symbol
+    __flmap_lock to a non-zero value will set bit
+    NVMCTRL_CTRLB.FLMAPLOCK. This will protect NVMCTRL_CTRLB.FLMAP from
+    any further changes � which would be Undefined Behaviour in C/C++.
+    If you prefer to define the symbol in a C/C++ file, an asm statement
+    can be used:
+        __asm (".global __flmap_lock"  "\n\t"
+               "__flmap_lock = 1");
+  - When you do not want the code from #931, then define a global symbol
+    __do_flmap_init and the linker will not pull in that code from
+   libmcu.a any more.
+  - In order to return to the old placement of read-only data in RAM,
+    the new compiler option -mrodata-in-ram can be used. This is
+    required on devices where the hardware revision is affected by a
+    silicon bug concerning the FLMAP functionality.
+  - Read-only data is located in output section .rodata, whereas it is
+    part of .text when located in RAM.
+  - The feature is only available when the compiler is configured with a
+    version of Binutils that implements PR31124, which is the case for
+    Binutils v2.42 and up.
+  - The implementation consists of two parts: 
+        1. Binutils support new emulations avrxmega2_flmap and
+           avrxmega4_flmap. The sole purpose of these emulations is to
+           provide adjusted default linker description files. Apart from
+           that, these emulations behave exactly the same like avrxmega2
+           resp. avrxmega4.
+        2. The compiler uses a device-specs file which links the program
+           with -mavrxmega2_flmap or -mavrxmega2 depending on
+           -m[no-]rodata-in-ram; and similar for -mavrxmega4[_flmap].
+    This means the feature can be used with older compiler or Binutils
+    versions; all what's needed is an adjusted linker script and a custom
+    device-specs file.
+- A new compiler option -m[no-]rodata-in-ram has been added. The default
+  is to locate read-only data in program memory for devices that support
+  it, e.g. for AVR64* and AVR128* devices as explained above, and for
+  devices from the avrxmega3 and avrtiny families. 
+- The new built-in macro __AVR_RODATA_IN_RAM__ is supported on all
+  devices. It's defined to 0 or 1.
+- A new optimization tries to improve code generation for indirect
+  memory accesses on Reduced Tiny devices. It can be controlled by the
+  new compiler option -mfuse-add=level where level may be 0, 1 or 2.
+- On the Reduced Tiny devices, the meaning of register constraint "w"
+  has been changed. It now constrains the registers R24...R31 as is the
+  case for all the other devices.
