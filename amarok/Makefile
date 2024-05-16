@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-DEPENDS+=	phonon-qt5-backend-gstreamer>=4.6.3:../../multimedia/phonon-qt5-backend-gstreamer
-
 USE_TOOLS+=	msgfmt pkg-config perl:run
 
 REPLACE_PERL+=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
