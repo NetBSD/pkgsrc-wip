@@ -1,1 +1,0 @@
-Upgrade candidate for devel/libgit2. Breaks libgit2-sys crate using rust programs.

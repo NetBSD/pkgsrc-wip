@@ -1936,7 +1936,6 @@ SUBDIR+=	libgda4
 SUBDIR+=	libgfbgraph
 SUBDIR+=	libghemical
 SUBDIR+=	libginac
-SUBDIR+=	libgit2
 SUBDIR+=	libglade-java
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgnome-keyring
