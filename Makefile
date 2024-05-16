@@ -143,7 +143,6 @@ SUBDIR+=	alsa-plugins-jack
 SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
 SUBDIR+=	am-utils-git
-SUBDIR+=	amarok
 SUBDIR+=	amavis-logwatch
 SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	analizo
