@@ -10,12 +10,10 @@ HOMEPAGE=	https://github.com/naev/naev
 COMMENT=	2D space trading and combat game
 LICENSE=	gnu-gpl-v3
 
-#USE_TOOLS+=	autoreconf autoconf automake
-USE_TOOLS+=	meson pkg-config
-#GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
 DEPENDS+=	bash-[0-9]*:../../shells/bash
-DEPENDS+=	py311-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 REPLACE_BASH=	naev-confupdate.sh
 
 INSTALL_TARGET=	install install-data-local
@@ -28,9 +26,6 @@ MESON_ARGS+=		-Dndata_path="${INSTALL_GAME_DIR}"
 
 #INSTALL_MAKE_FLAGS+=	INSTALL_GAME_DIR="${INSTALL_GAME_DIR}"
 #INSTALL_MAKE_FLAGS+=	INSTALL_GAME_DATA="${INSTALL_GAME_DATA}"
-
-#pre-configure:
-#	cd ${WRKSRC} && ${SH} autogen.sh
 
 # These scripts are not used once
 # installed, they appear to be for
