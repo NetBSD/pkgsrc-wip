@@ -21,6 +21,13 @@ INSTALL_TARGET=	install install-data-local
 
 MESON_ARGS+=		-Dndata_path="${INSTALL_GAME_DIR}"
 
+SUBST_CLASSES+=		alloca
+SUBST_FILES.alloca+=	meson.build
+SUBST_FILES.alloca+=	src/utf8.c
+SUBST_SED.alloca+=	-e "s,HAVE_ALLOCA_H,NAEV_HAVE_ALLOCA_H,"
+SUBST_STAGE.alloca=	post-extract
+SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
+
 #CONFIGURE_ARGS+=	--enable-debug=no
 #CONFIGURE_ARGS+=	--enable-lua=shared
 #CONFIGURE_ARGS+=	--disable-sdltest
