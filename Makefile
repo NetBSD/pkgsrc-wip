@@ -807,6 +807,7 @@ SUBDIR+=	emerald-themes
 SUBDIR+=	emirror
 SUBDIR+=	emokit
 SUBDIR+=	emovix
+SUBDIR+=	end_of_eden
 SUBDIR+=	engauge-digitizer
 SUBDIR+=	enigma
 SUBDIR+=	enigma2000
