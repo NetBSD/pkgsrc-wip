@@ -1801,6 +1801,7 @@ SUBDIR+=	khotkeys
 SUBDIR+=	kibana
 SUBDIR+=	kind
 SUBDIR+=	kinfocenter
+SUBDIR+=	kismet
 SUBDIR+=	kissme
 SUBDIR+=	kitty
 SUBDIR+=	kivaloo
