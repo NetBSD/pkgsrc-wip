@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:39 agc Exp $
+
+BLAKE2s (input-ttf-1.2.zip) = 8887795539e119189085cecc0663bb4dd589c47dc259d9bf3a1ac72e62d011eb
+SHA512 (input-ttf-1.2.zip) = 34bb2c300b274f843dd95bf6637007f99680bc55ba101554dd373fcedd1d96c23635627fc29b556f00ec821c7574f8cd86ded3a7c29a76c93120631f23dc560c
+Size (input-ttf-1.2.zip) = 10027469 bytes
