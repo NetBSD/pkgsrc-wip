@@ -4,6 +4,7 @@ DISTNAME=	naev-0.11.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_SUBMODULES=	naev naev-artwork-production e2d2edab2317d296eb14a830505b1dc41d02dec1 artwork
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/naev/naev
@@ -31,12 +32,12 @@ MESON_ARGS+=		-Dndata_path="${INSTALL_GAME_DIR}"
 # installed, they appear to be for
 # developer use only -- but meson
 # installs them anyway
-pre-build:
-	${RM} ${WRKSRC}/dat/gfx/metadata_sprite.sh
-	${RM} ${WRKSRC}/dat/gfx/outfit/check.sh
-	${RM} ${WRKSRC}/dat/gfx/planet/check.sh
-	${RM} ${WRKSRC}/dat/gfx/ship/update.sh
-	${RM} ${WRKSRC}/dat/snd/music/checkgain.sh
+#pre-build:
+#	${RM} ${WRKSRC}/dat/gfx/metadata_sprite.sh
+#	${RM} ${WRKSRC}/dat/gfx/outfit/check.sh
+#	${RM} ${WRKSRC}/dat/gfx/planet/check.sh
+#	${RM} ${WRKSRC}/dat/gfx/ship/update.sh
+#	${RM} ${WRKSRC}/dat/snd/music/checkgain.sh
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
