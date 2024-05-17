@@ -27,15 +27,29 @@ CFLAGS+=	-g
 MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes
 LDFLAGS.SunOS=	-lresolv -lsocket -lnsl
 
-EGDIR=		${PREFIX}/share/examples/lpjs
-OWN_DIRS=	${PKG_SYSCONFDIR}/lpjs
-CONF_FILES=	${EGDIR}/config.sample ${PKG_SYSCONFDIR}/lpjs/config
+LPJS_USER=		lpjs
+LPJS_GROUP=		${LPJS_USER}
 
-PKG_GROUPS=		lpjs
-PKG_USERS=		lpjs:lpjs
-PKG_GECOS.slurm=	LPJS daemon
-PKG_SHELL.slurm=	${NOLOGIN}
-RCD_SCRIPTS+=		lpjs_dispatchd lpjs_compd
+LPJS_LOG_DIR?=		${PREFIX}/var/log/lpjs
+LPJS_SPOOL_DIR?=	${PREFIX}/var/spool/lpjs
+LPJS_ETC_DIR?=		${PREFIX}/etc/lpjs
+
+PKG_GROUPS+=		${LPJS_GROUP}
+PKG_USERS+=		${LPJS_USER}:${LPJS_GROUP}
+PKG_GECOS.lpjs=		LPJS daemon
+PKG_SHELL.lpjs=		${NOLOGIN}
+
+OWN_DIRS_PERMS+=	${LPJS_LOG_DIR} ${LPJS_USER} ${LPJS_GROUP} 0755
+OWN_DIRS_PERMS+=	${LPJS_SPOOL_DIR} ${LPJS_USER} ${LPJS_GROUP} 0755
+OWN_DIRS_PERMS+=	${LPJS_ETC_DIR} ${LPJS_USER} ${LPJS_GROUP} 0755
+OWN_DIRS_PERMS+=	${LPJS_ETC_DIR} ${LPJS_USER} ${LPJS_GROUP} 0755
+
+EGDIR=			${PREFIX}/share/examples/lpjs
+
+CONF_FILES_PERMS=	${EGDIR}/config.sample ${PKG_SYSCONFDIR}/lpjs/config ${LPJS_USER} ${LPJS_GROUP} 0644
+
+RCD_SCRIPTS=		lpjs_dispatchd lpjs_compd
+PKG_RCD_SCRIPTS=	yes
 
 INSTALLATION_DIRS=	share/examples/lpjs
 
