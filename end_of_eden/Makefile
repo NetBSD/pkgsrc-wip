@@ -21,6 +21,21 @@ GO_BUILD_PATTERN=	-tags no_audio ./...
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
+INSTALLATION_DIRS+=	libexec/end_of_eden share/end_of_eden
+
+post-build:
+	${ECHO} '#/bin/sh' > ${WRKSRC}/end_of_eden.sh
+	${ECHO} 'cd ${PREFIX}/share/end_of_eden && ${PREFIX}/libexec/end_of_eden/game "$$@"' >> ${WRKSRC}/end_of_eden.sh
+	${CHMOD} 755 ${WRKSRC}/end_of_eden.sh
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} game ../libexec/end_of_eden && \
+		${MV} game_win ../libexec/end_of_eden && \
+		${RM} *
+	${INSTALL_SCRIPT} ${WRKSRC}/end_of_eden.sh ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC} && ${PAX} -pp -rw assets ${DESTDIR}${PREFIX}/share/end_of_eden/
+
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
