@@ -1,4 +1,8 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+bin/definitions
+bin/docs
+bin/fuzzy_tester
+bin/game
+bin/game_ssh
+bin/game_win
+bin/tester

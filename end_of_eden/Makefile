@@ -1,9 +1,11 @@
 # $NetBSD$
 
 DISTNAME=	end_of_eden-0.1.11
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BigJk/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	b17fbf50ab02082eef88b484ec82c965f0a53bcb
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/BigJk/end_of_eden/
@@ -13,6 +15,11 @@ LICENSE=	mit
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	CGO_ENABLED=1
+
+# avoid oto dependency, since 0.7.0 doesn't support NetBSD (2.0+ does)
+GO_BUILD_PATTERN=	-tags no_audio ./...
+
+BUILDLINK_TRANSFORM+=	rm:-ldl
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"

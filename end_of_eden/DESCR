@@ -1,2 +1,8 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+End of Eden...
+
+* is a "Slay the Spire"-like, roguelite deck-builder game running
+  fully in console
+* collect Artifacts that give you new cards or various passive
+  effects
+* clash with strange beings and try to survive as long as possible
+* use the base engine to create your own mods and content
