@@ -15,6 +15,8 @@ USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
+CONFIGURE_ARGS+=	--disable-silent-rules
+
 .include "../../mk/bsd.prefs.mk"
 
 MUNGE_DIR?=		${PREFIX}/var/lib/munge
