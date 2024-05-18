@@ -19,7 +19,6 @@ libexec/lpjs/munge-enable
 libexec/lpjs/nodes
 libexec/lpjs/reset-queue
 libexec/lpjs/restart
-libexec/lpjs/sim
 libexec/lpjs/start
 libexec/lpjs/stop
 libexec/lpjs/submit
@@ -34,4 +33,3 @@ share/lpjs/Systemd/lpjs_compd.service
 share/lpjs/Systemd/lpjs_compd.sysconfig
 share/lpjs/Systemd/lpjs_dispatchd.service
 share/lpjs/Systemd/lpjs_dispatchd.sysconfig
-@pkgdir etc/lpjs
