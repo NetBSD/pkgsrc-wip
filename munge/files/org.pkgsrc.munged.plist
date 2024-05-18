@@ -10,5 +10,7 @@
 	<true/>
 	<key>KeepAlive</key>
 	<true/>
+	<key>UserName</key>
+	<string>munge</string>
     </dict>
 </plist>
