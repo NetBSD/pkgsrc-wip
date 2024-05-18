@@ -30,9 +30,11 @@ share/distbb/distbb.css
 share/distbb/distbb.default.conf
 share/distbb/distbb.ico
 share/distbb/distbb.mk
+share/doc/distbb/LICENSE
 share/doc/distbb/NEWS
 share/doc/distbb/README
 share/doc/distbb/TODO
+share/doc/distbb/TUTORIAL.html
 share/examples/distbb/distbb.conf
 share/examples/distbb/distbb.local.mk
 share/runawk/distbb.awk

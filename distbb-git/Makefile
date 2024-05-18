@@ -39,11 +39,7 @@ DOCDIR=			${PREFIX}/share/doc/distbb
 CONF_FILES=		${EGDIR}/distbb.conf     ${PKG_SYSCONFDIR}/distbb.conf
 CONF_FILES+=		${EGDIR}/distbb.local.mk ${PKG_SYSCONFDIR}/distbb.local.mk
 
-DOCFILES=		README NEWS TODO
-
 MAKE_FLAGS+=		EGDIR=${EGDIR}
-
-INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 .for f in ${DOCFILES}
