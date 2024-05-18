@@ -3,7 +3,6 @@ $NetBSD$
 BLAKE2s (munge-0.5.16.tar.xz) = c1720fd24852ad31a8aa6d83a24c5935519d0d7a682abdf2fdb535673d6c5885
 SHA512 (munge-0.5.16.tar.xz) = b808deede8e71c96719526182c5fc16250dc09d2129dc9d5cbcb54c5827723e1dbbd47b8c912373328f5f3b8971c75200abb2def5d35ebc896bff1984ab8c305
 Size (munge-0.5.16.tar.xz) = 448120 bytes
-SHA1 (patch-_src_munged_path.c) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-configure) = 435da9c3f3400cecd3a370d74c1d662233984a10
 SHA1 (patch-src_etc_Makefile.in) = fbf4e59810c97e4c70353ec435867bebf2bd39bd
 SHA1 (patch-src_libmissing_strlcpy.c) = 1eec6bd0c20d28f9bd3450d27fb76dd25e0c977d
