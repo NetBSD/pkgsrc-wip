@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.23 2024/04/05 10:42:28 wiz Exp $
+
+BLAKE2s (glances-4.0.5.tar.gz) = 209b2cbcc751ff07f40f840cffea7fcb704984b1e1531b205f157f17df571842
+SHA512 (glances-4.0.5.tar.gz) = f8b7f986f86c6a8ada90a3e6dca5d1864e83717f18476a06610cc050dd528c479d3ab6095c9cd6f391d9ad6989d110c1d7f2ddefcbca118744904122cd0bda19
+Size (glances-4.0.5.tar.gz) = 6585328 bytes
+SHA1 (patch-glances_plugins_cpu_____init____.py) = da6661fdf8e9bd2ce02a3dfbc4230204dc14a448
+SHA1 (patch-glances_plugins_quicklook_____init____.py) = 466995d65be96f30711be74e6fc3ab372e37f465
