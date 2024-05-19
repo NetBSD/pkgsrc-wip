@@ -4,9 +4,9 @@ Treat NetBSD like Linux.
 
 Silence wxSizer warnings introduced with 2.6.0rc1.
 
---- src/slic3r/GUI/GUI_App.cpp.orig	2023-06-09 11:34:33.000000000 +0000
+--- src/slic3r/GUI/GUI_App.cpp.orig	2024-04-05 09:25:31.000000000 +0000
 +++ src/slic3r/GUI/GUI_App.cpp
-@@ -395,7 +395,7 @@ private:
+@@ -403,7 +403,7 @@ private:
  };
  
  
@@ -15,7 +15,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
  bool static check_old_linux_datadir(const wxString& app_name) {
      // If we are on Linux and the datadir does not exist yet, look into the old
      // location where the datadir was before version 2.3. If we find it there,
-@@ -972,7 +972,7 @@ void GUI_App::init_app_config()
+@@ -937,7 +937,7 @@ void GUI_App::init_app_config()
  	// Mac : "~/Library/Application Support/Slic3r"
  
      if (data_dir().empty()) {
@@ -24,7 +24,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
              set_data_dir(wxStandardPaths::Get().GetUserDataDir().ToUTF8().data());
          #else
              // Since version 2.3, config dir on Linux is in ${XDG_CONFIG_HOME}.
-@@ -1130,6 +1130,9 @@ bool GUI_App::on_init_inner()
+@@ -1108,6 +1108,9 @@ bool GUI_App::on_init_inner()
      // Set initialization of image handlers before any UI actions - See GH issue #7469
      wxInitAllImageHandlers();
  
@@ -34,7 +34,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
  #if defined(_WIN32) && ! defined(_WIN64)
      // Win32 32bit build.
      if (wxPlatformInfo::Get().GetArchName().substr(0, 2) == "64") {
-@@ -1157,7 +1160,7 @@ bool GUI_App::on_init_inner()
+@@ -1135,7 +1138,7 @@ bool GUI_App::on_init_inner()
      wxCHECK_MSG(wxDirExists(resources_dir), false,
          wxString::Format("Resources path does not exist or is not a directory: %s", resources_dir));
  
@@ -43,7 +43,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
      if (! check_old_linux_datadir(GetAppName())) {
          std::cerr << "Quitting, user chose to move their data to new location." << std::endl;
          return false;
-@@ -1262,7 +1265,7 @@ bool GUI_App::on_init_inner()
+@@ -1240,7 +1243,7 @@ bool GUI_App::on_init_inner()
          if (!default_splashscreen_pos)
              // revert "restore_win_position" value if application wasn't crashed
              get_app_config()->set("restore_win_position", "1");
@@ -52,7 +52,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
          wxYield();
  #endif
          scrn->SetText(_L("Loading configuration")+ dots);
-@@ -1410,7 +1413,7 @@ bool GUI_App::on_init_inner()
+@@ -1393,7 +1396,7 @@ bool GUI_App::on_init_inner()
          // and wxEVT_SET_FOCUS before GUI_App::post_init is called) wasn't called before GUI_App::post_init and OpenGL wasn't initialized.
          // Since issue #9774 Where same problem occured on MacOS Ventura, we decided to have this check on MacOS as well.
  
@@ -61,7 +61,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
          if (!m_post_initialized && m_opengl_initialized) {
  #else
          if (!m_post_initialized) {
-@@ -2053,7 +2056,7 @@ bool GUI_App::switch_language()
+@@ -2096,7 +2099,7 @@ bool GUI_App::switch_language()
      }
  }
  
@@ -70,7 +70,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
  static const wxLanguageInfo* linux_get_existing_locale_language(const wxLanguageInfo* language,
                                                                  const wxLanguageInfo* system_language)
  {
-@@ -2252,7 +2255,7 @@ bool GUI_App::load_language(wxString lan
+@@ -2298,7 +2301,7 @@ bool GUI_App::load_language(wxString lan
  				m_language_info_best = wxLocale::FindLanguageInfo(best_language);
  	        	BOOST_LOG_TRIVIAL(trace) << boost::format("Best translation language detected (may be different from user locales): %1%") % m_language_info_best->CanonicalName.ToUTF8().data();
  			}
@@ -79,7 +79,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
              wxString lc_all;
              if (wxGetEnv("LC_ALL", &lc_all) && ! lc_all.IsEmpty()) {
                  // Best language returned by wxWidgets on Linux apparently does not respect LC_ALL.
-@@ -2305,7 +2308,7 @@ bool GUI_App::load_language(wxString lan
+@@ -2351,7 +2354,7 @@ bool GUI_App::load_language(wxString lan
      } else if (m_language_info_system != nullptr && language_info->CanonicalName.BeforeFirst('_') == m_language_info_system->CanonicalName.BeforeFirst('_'))
          language_info = m_language_info_system;
  
@@ -88,7 +88,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
      // If we can't find this locale , try to use different one for the language
      // instead of just reporting that it is impossible to switch.
      if (! wxLocale::IsAvailable(language_info->Language)) {
-@@ -2425,7 +2428,7 @@ void GUI_App::add_config_menu(wxMenuBar 
+@@ -2471,7 +2474,7 @@ void GUI_App::add_config_menu(wxMenuBar 
          local_menu->Append(config_id_base + ConfigMenuTakeSnapshot, _L("Take Configuration &Snapshot"), _L("Capture a configuration snapshot"));
          local_menu->Append(config_id_base + ConfigMenuUpdateConf, _L("Check for Configuration Updates"), _L("Check for configuration updates"));
          local_menu->Append(config_id_base + ConfigMenuUpdateApp, _L("Check for Application Updates"), _L("Check for new version of application"));
@@ -97,7 +97,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
          //if (DesktopIntegrationDialog::integration_possible())
          local_menu->Append(config_id_base + ConfigMenuDesktopIntegration, _L("Desktop Integration"), _L("Desktop Integration"));    
  #endif //(__linux__) && defined(SLIC3R_DESKTOP_INTEGRATION)        
-@@ -2472,7 +2475,7 @@ void GUI_App::add_config_menu(wxMenuBar 
+@@ -2519,7 +2522,7 @@ void GUI_App::add_config_menu(wxMenuBar 
          case ConfigMenuUpdateApp:
              app_version_check(true);
              break;
@@ -106,7 +106,7 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
          case ConfigMenuDesktopIntegration:
              show_desktop_integration_dialog();
              break;
-@@ -3089,7 +3092,7 @@ bool GUI_App::run_wizard(ConfigWizard::R
+@@ -3149,7 +3152,7 @@ bool GUI_App::run_wizard(ConfigWizard::R
  
  void GUI_App::show_desktop_integration_dialog()
  {
@@ -115,12 +115,12 @@ Silence wxSizer warnings introduced with 2.6.0rc1.
      //wxCHECK_MSG(mainframe != nullptr, false, "Internal error: Main frame not created / null");
      DesktopIntegrationDialog dialog(mainframe);
      dialog.ShowModal();
-@@ -3109,7 +3112,7 @@ void GUI_App::show_downloader_registrati
+@@ -3169,7 +3172,7 @@ void GUI_App::show_downloader_registrati
      if (msg.ShowModal() == wxID_YES) {
          auto downloader_worker = new DownloaderUtils::Worker(nullptr);
          downloader_worker->perform_register(app_config->get("url_downloader_dest"));
--#ifdef __linux__
-+#if defined(__linux__) || defined(__NetBSD__)
+-#if defined(__linux__) && defined(SLIC3R_DESKTOP_INTEGRATION) 
++#if (defined(__linux__) || defined(__NetBSD__)) && defined(SLIC3R_DESKTOP_INTEGRATION) 
          if (downloader_worker->get_perform_registration_linux())
              DesktopIntegrationDialog::perform_downloader_desktop_integration();
- #endif // __linux__
+ #endif //(__linux__) && defined(SLIC3R_DESKTOP_INTEGRATION)

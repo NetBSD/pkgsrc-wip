@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGVERSION=	2.7.2
+PKGVERSION=	2.7.4
 PKGNAME=	prusaslicer-${PKGVERSION}
 DISTNAME=	PrusaSlicer-${PKGVERSION:C/(beta|rc)/-\1/}
 CATEGORIES=	cad
@@ -44,6 +44,7 @@ pre-configure:
 .include "../../devel/at-spi2-atk/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/catch2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
@@ -75,6 +76,7 @@ pre-configure:
 .include "../../wip/occt/buildlink3.mk"
 .include "../../wip/openvdb/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.Xrandr+=  Xrandr>=1.0.2
 .include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
