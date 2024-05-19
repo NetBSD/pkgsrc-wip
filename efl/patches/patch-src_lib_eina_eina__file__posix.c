@@ -1,5 +1,7 @@
 $NetBSD$
 
+Add Dirent / getdents wrapper.
+
 --- src/lib/eina/eina_file_posix.c.orig	2023-12-23 15:56:36.000000000 +0000
 +++ src/lib/eina/eina_file_posix.c
 @@ -1299,6 +1299,16 @@ typedef struct

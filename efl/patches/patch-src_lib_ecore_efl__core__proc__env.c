@@ -9,7 +9,7 @@ $NetBSD$
  #define MY_CLASS EFL_CORE_PROC_ENV_CLASS
  
 -#if defined (__FreeBSD__) || defined (__OpenBSD__)
-+#if defined (__FreeBSD__) || defined (__OpenBSD__) || defined (__NetBSD__)
++#if defined (__FreeBSD__) || defined (__OpenBSD__) || defined(__NetBSD__)
  # include <dlfcn.h>
  static char ***_dl_environ;
  #elif !defined(_MSC_VER)

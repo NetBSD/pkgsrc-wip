@@ -12,6 +12,11 @@ bin/edje_recc
 bin/edje_watch
 bin/eet
 bin/eetpack
+${PLIST.linux}bin/eeze_disk_ls
+${PLIST.linux}bin/eeze_mount
+${PLIST.linux}bin/eeze_scanner
+${PLIST.linux}bin/eeze_scanner_monitor
+${PLIST.linux}bin/eeze_umount
 bin/efl_debug
 bin/efl_debugd
 bin/efreetd
@@ -26,8 +31,8 @@ bin/elementary_run
 bin/elementary_test
 bin/elm_prefs_cc
 bin/embryo_cc
-@comment ${PLIST.tests}bin/emotion_test
-@comment ${PLIST.tests}bin/emotion_test-eo
+${PLIST.tests}bin/emotion_test
+${PLIST.tests}bin/emotion_test-eo
 bin/eo_debug
 bin/eolian_cxx
 bin/eolian_gen
@@ -113,6 +118,7 @@ include/ecore-audio-1/ecore_audio_out_pulse.eo.h
 include/ecore-audio-1/ecore_audio_out_sndfile.eo.h
 include/ecore-audio-1/ecore_audio_out_wasapi.eo.h
 include/ecore-audio-1/ecore_audio_protected.h
+${PLIST.avahi}include/ecore-avahi-1/Ecore_Avahi.h
 include/ecore-con-1/Ecore_Con.h
 include/ecore-con-1/Ecore_Con_Eet.h
 include/ecore-con-1/Ecore_Con_Eet_Eo.h
@@ -313,6 +319,11 @@ include/eet-cxx-1/Eet.hh
 include/eet-cxx-1/eet_composite.hh
 include/eet-cxx-1/eet_register.hh
 include/eet-cxx-1/eet_type.hh
+${PLIST.linux}include/eeze-1/Eeze.h
+${PLIST.linux}include/eeze-1/Eeze_Disk.h
+${PLIST.linux}include/eeze-1/Eeze_Net.h
+${PLIST.linux}include/eeze-1/Eeze_Sensor.h
+${PLIST.linux}include/eeze-1/eeze_scanner.h
 include/efl-1/Efl.h
 include/efl-1/Efl_MVVM_Common.h
 include/efl-1/interfaces/efl_audio_control.eo.h
@@ -1687,6 +1698,7 @@ include/elementary-cxx-1/efl_ui_win_part.eo.impl.hh
 include/elementary-cxx-1/efl_ui_win_socket.eo.hh
 include/elementary-cxx-1/efl_ui_win_socket.eo.impl.hh
 include/elementary-cxx-1/elm_general.eot.hh
+${PLIST.linux}include/elput-1/Elput.h
 include/embryo-1/Embryo.h
 include/emile-1/Emile.h
 include/emile-1/emile_base64.h
@@ -2058,7 +2070,7 @@ lib/cmake/Evas/EvasConfig.cmake
 lib/cmake/Evas/EvasConfigVersion.cmake
 lib/cmake/EvasCxx/EvasCxxConfig.cmake
 lib/cmake/EvasCxx/EvasCxxConfigVersion.cmake
-@comment ${PLIST.linux}lib/ecore/system/systemd/v-1.25/module.so
+${PLIST.linux}lib/ecore/system/systemd/v-1.27/module.so
 lib/ecore/system/upower/v-1.27/module.so
 lib/ecore_con/utils/v-1.27/efl_net_proxy_helper
 lib/ecore_evas/engines/extn/v-1.27/module.so
@@ -2068,6 +2080,8 @@ lib/ecore_imf/modules/xim/v-1.27/module.so
 lib/edje/modules/elm/v-1.27/module.so
 lib/edje/modules/emotion/v-1.27/module.so
 lib/edje/utils/v-1.27/epp
+${PLIST.linux}lib/eeze/modules/sensor/fake/v-1.27/module.so
+${PLIST.linux}lib/eeze/modules/sensor/udev/v-1.27/module.so
 lib/efreet/v-1.27/efreet_desktop_cache_create
 lib/efreet/v-1.27/efreet_icon_cache_create
 lib/efreet/v-1.27/efreet_mime_cache_create
@@ -2207,6 +2221,9 @@ lib/libecore.so.${PKGVERSION}
 lib/libecore_audio.so
 lib/libecore_audio.so.1
 lib/libecore_audio.so.${PKGVERSION}
+${PLIST.avahi}lib/libecore_avahi.so
+${PLIST.avahi}lib/libecore_avahi.so.1
+${PLIST.avahi}lib/libecore_avahi.so.${PKGVERSION}
 lib/libecore_con.so
 lib/libecore_con.so.1
 lib/libecore_con.so.${PKGVERSION}
@@ -2243,6 +2260,9 @@ lib/libedje.so.${PKGVERSION}
 lib/libeet.so
 lib/libeet.so.1
 lib/libeet.so.${PKGVERSION}
+${PLIST.linux}lib/libeeze.so
+${PLIST.linux}lib/libeeze.so.1
+${PLIST.linux}lib/libeeze.so.${PKGVERSION}
 lib/libefl.so
 lib/libefl.so.1
 lib/libefl.so.${PKGVERSION}
@@ -2267,6 +2287,9 @@ lib/libeldbus.so.${PKGVERSION}
 lib/libelementary.so
 lib/libelementary.so.1
 lib/libelementary.so.${PKGVERSION}
+${PLIST.linux}lib/libelput.so
+${PLIST.linux}lib/libelput.so.1
+${PLIST.linux}lib/libelput.so.${PKGVERSION}
 lib/libembryo.so
 lib/libembryo.so.1
 lib/libembryo.so.${PKGVERSION}
@@ -2304,6 +2327,7 @@ lib/libexactness_record.so
 lib/libexactness_record.so.1
 lib/libexactness_record.so.${PKGVERSION}
 lib/pkgconfig/ecore-audio.pc
+${PLIST.avahi}lib/pkgconfig/ecore-avahi.pc
 lib/pkgconfig/ecore-con.pc
 lib/pkgconfig/ecore-cxx.pc
 lib/pkgconfig/ecore-evas.pc
@@ -2320,6 +2344,7 @@ lib/pkgconfig/edje-cxx.pc
 lib/pkgconfig/edje.pc
 lib/pkgconfig/eet-cxx.pc
 lib/pkgconfig/eet.pc
+${PLIST.linux}lib/pkgconfig/eeze.pc
 lib/pkgconfig/efl-core.pc
 lib/pkgconfig/efl-cxx.pc
 lib/pkgconfig/efl-net.pc
@@ -2336,6 +2361,7 @@ lib/pkgconfig/eldbus-cxx.pc
 lib/pkgconfig/eldbus.pc
 lib/pkgconfig/elementary-cxx.pc
 lib/pkgconfig/elementary.pc
+${PLIST.linux}lib/pkgconfig/elput.pc
 lib/pkgconfig/embryo.pc
 lib/pkgconfig/emile.pc
 lib/pkgconfig/emotion.pc
@@ -2349,7 +2375,7 @@ lib/pkgconfig/ethumb.pc
 lib/pkgconfig/ethumb_client.pc
 lib/pkgconfig/evas-cxx.pc
 lib/pkgconfig/evas.pc
-@comment ${PLIST.linux}lib/systemd/user/ethumb.service
+${PLIST.linux}lib/systemd/user/ethumb.service
 share/applications/elementary_config.desktop
 share/applications/elementary_perf.desktop
 share/applications/elementary_test.desktop
@@ -2487,15 +2513,15 @@ share/elementary/objects/test_prefs.edj
 share/elementary/objects/test_prefs.epb
 share/elementary/objects/test_tab_pager.edj
 share/elementary/objects/test_tooltip.edj
-@comment ${PLIST.tests}share/elementary/testdiff.diff
-@comment ${PLIST.tests}share/elementary/testfile-windows.txt
-@comment ${PLIST.tests}share/elementary/testfile-withblanks.txt
-@comment ${PLIST.tests}share/elementary/testfile.txt
+${PLIST.tests}share/elementary/testdiff.diff
+${PLIST.tests}share/elementary/testfile-windows.txt
+${PLIST.tests}share/elementary/testfile-withblanks.txt
+${PLIST.tests}share/elementary/testfile.txt
 share/elementary/themes/default.edj
 share/elua/checkme
 share/embryo/include/default.inc
 share/emotion/checkme
-@comment ${PLIST.tests}share/emotion/data/theme.edj
+${PLIST.tests}share/emotion/data/theme.edj
 share/eo/gdb/eo_gdb.py
 share/eolian/include/ecore-1/efl_accelerate_interpolator.eo
 share/eolian/include/ecore-1/efl_app.eo
