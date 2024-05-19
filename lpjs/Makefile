@@ -5,10 +5,10 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.4
+DISTNAME=	LPJS-${PKGVERSION_NOREV}
+PKGNAME=	lpjs-0.0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_PROJECT=	LPJS
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -19,8 +19,6 @@ TOOL_DEPENDS=	realpath>0:../../wip/realpath
 DEPENDS=	auto-admin>=0.8.0.31:../../wip/auto-admin \
 		runas>0:../../sysutils/runas
 
-# FIXME: WRKSRC is handled differently for releases and tags
-WRKSRC=		${WRKDIR}/LPJS-${PKGVERSION_NOREV}
 # Force install with full debug info until release
 CFLAGS+=	-g
 MAKE_FLAGS+=	INSTALL_UNSTRIPPED=yes
@@ -52,9 +50,6 @@ RCD_SCRIPTS=		lpjs_dispatchd lpjs_compd
 PKG_RCD_SCRIPTS=	yes
 
 INSTALLATION_DIRS=	share/examples/lpjs
-
-pre-build:
-	cd ${WRKSRC} && ${MAKE} depend PREFIX=${PREFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/lpjs/config.sample ${DESTDIR}${EGDIR}

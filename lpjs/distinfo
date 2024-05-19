@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (lpjs-0.0.4.tar.gz) = ddadaf6d3839cd7eaff313c84049f2aa04ce13b8f30a3dba54c2c6e6acc76c3c
-SHA512 (lpjs-0.0.4.tar.gz) = 3750a6492c9ee33c17e1ad09d1159866d336529fe33f461ad1670cee0b1f68eb93d10aaec37b7a512a401b13a1b91763f43f8947c5a4cbc211c3af5d32ee0176
-Size (lpjs-0.0.4.tar.gz) = 218776 bytes
+BLAKE2s (LPJS-0.0.4.tar.gz) = ddadaf6d3839cd7eaff313c84049f2aa04ce13b8f30a3dba54c2c6e6acc76c3c
+SHA512 (LPJS-0.0.4.tar.gz) = 3750a6492c9ee33c17e1ad09d1159866d336529fe33f461ad1670cee0b1f68eb93d10aaec37b7a512a401b13a1b91763f43f8947c5a4cbc211c3af5d32ee0176
+Size (LPJS-0.0.4.tar.gz) = 218776 bytes
