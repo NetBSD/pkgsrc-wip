@@ -1,0 +1,2 @@
+Self tests fail with
+E   ImportError: /usr/pkg/lib/python3.12/site-packages/matplotlib/_path.so: Undefined PLT symbol "_ZN3agg17vpgen_segmentator7move_toEdd" (symnum = 5)
