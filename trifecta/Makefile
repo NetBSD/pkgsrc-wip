@@ -16,8 +16,14 @@ USE_TOOLS+=		cmake pkg-config
 
 CXXFLAGS+=		-I${BUILDLINK_PREFIX.doctest}/include/doctest
 
+INSTALLATION_DIRS+=	bin share/doc/trifecta
+
 do-test:
 	cd ${WRKSRC}/output && ${SETENV} ${MAKE_ENV} ./testrunner
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/output/trifecta ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/trifecta
 
 .include "../../devel/meson/build.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
