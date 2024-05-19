@@ -1,0 +1,11 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: bcryptcpp
+Description: C++ wrapper around bcrypt password hashing 
+URL: https://github.com/hilch/Bcrypt.cpp
+Version: 2.0
+Libs: -Wl,-R${libdir} -L${libdir} -lbcrypt
+Cflags: -I${includedir}

@@ -1,0 +1,4 @@
+This should provide a pkg-config file, otherwise it will not be
+found by trifecta.
+
+https://github.com/berthubert/sqlitewrite/issues/4

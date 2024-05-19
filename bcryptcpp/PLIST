@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/bcrypt.h
+lib/libbcrypt.a
+lib/pkgconfig/bcryptcpp.pc

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (argparse-3.0.tar.gz) = 18d78407339c14302c57eeac2ab31c20c7cd29beffc6c125828ee8abb6de8a25
+SHA512 (argparse-3.0.tar.gz) = a7ed879eb3f71868cd84e513c0db63c4fecff1c9f0b34d6cfbe85d2439e83b80e97f713b497259c9775c9c7c1f639a08b73080045c51756de15e3d8c18b97116
+Size (argparse-3.0.tar.gz) = 116171 bytes

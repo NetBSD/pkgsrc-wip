@@ -1,0 +1,16 @@
+Trifecta is a computer program that delivers you a website/web
+service. Your personal imgur. You can paste or drag images to
+Trifecta. If you upload an image, a post will be created for it
+automatically.
+
+A post can contain multiple images. Each image can have a caption,
+and each post a title.
+
+Posts can be public or not, or have a time limit on their public
+visibility. As owner of a post you can extend or change this limit.
+
+Users can sign in using an temporary email link, and also reset
+their password this way. Users need not have an actual password.
+
+Posts in Trifecta get opengraph tags so you get nice previews on
+social media and in messengers.

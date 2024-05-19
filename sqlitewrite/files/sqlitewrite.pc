@@ -1,0 +1,11 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: sqlitewrite
+Description: CSV-like storage for sqlite
+URL: https://github.com/berthubert/sqlitewrite/
+Version: 0.0.0
+Libs: -Wl,-R${libdir} -L${libdir} -lsqlitewriter
+Cflags: -I${includedir}

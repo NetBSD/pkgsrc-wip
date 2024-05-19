@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/jsonhelper.hh
+include/sqlwriter.hh
+lib/libsqlitewriter.so
+lib/pkgconfig/sqlitewriter.pc

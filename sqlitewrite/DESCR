@@ -1,0 +1,2 @@
+Sqlitewrite provides csv-like storage to sqlite and PostgreSQL.
+Easy to use and type safe.

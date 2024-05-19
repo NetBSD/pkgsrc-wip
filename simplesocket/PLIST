@@ -1,0 +1,6 @@
+@comment $NetBSD$
+include/comboaddress.hh
+include/sclasses.hh
+include/swrappers.hh
+lib/libsimplesockets.so
+lib/pkgconfig/simplesockets.pc
