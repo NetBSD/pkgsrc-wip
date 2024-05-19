@@ -2,7 +2,7 @@
 
 DISTNAME=	icewm-3.4.7
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/icewm/releases/download/${PKGREVISION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/icewm/releases/download/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
