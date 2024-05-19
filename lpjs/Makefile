@@ -6,9 +6,11 @@
 ###########################################################
 
 DISTNAME=	LPJS-${PKGVERSION_NOREV}
-PKGNAME=	lpjs-0.0.4
+PKGNAME=	lpjs-0.0.4.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_PROJECT=	LPJS
+GITHUB_TAG=	2b891a0f6513f9922386504fd1d0a5b13b000f15
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
