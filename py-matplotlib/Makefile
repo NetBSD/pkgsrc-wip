@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.22.0:../../fonts/py-fonttools
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.3.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.3.1:../../devel/py-pyparsing
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
@@ -30,6 +31,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 WHEEL_ARGS+=	-Csetup-args="-Dsystem-freetype=true"
 WHEEL_ARGS+=	-Csetup-args="-Dsystem-qhull=true"
+WHEEL_ARGS+=	-Csetup-args="-Db_lto=false"
 
 # py-pybind11's bl3 defaults to PYTHON_FOR_BUILD_ONLY?=yes as it is primarily
 # used by packages that only have a build dependency on it.  Therefore we need

@@ -1,4 +1,54 @@
-Self tests fail with
-E   ImportError: /usr/pkg/lib/python3.12/site-packages/matplotlib/_path.so: Undefined PLT symbol "_ZN3agg17vpgen_segmentator7move_toEdd" (symnum = 5)
+collected 277 items / 2 errors
 
-https://github.com/matplotlib/matplotlib/issues/28260
+========================================================================================= ERRORS ==========================================================================================
+______________________________________________________________ ERROR collecting work/matplotlib-3.9.0/lib/matplotlib/testing ______________________________________________________________
+/usr/pkg/lib/python3.12/site-packages/_pytest/config/__init__.py:717: in _importconftest
+    mod = import_path(
+/usr/pkg/lib/python3.12/site-packages/_pytest/pathlib.py:614: in import_path
+    raise ImportPathMismatchError(module_name, module_file, path)
+E   _pytest.pathlib.ImportPathMismatchError: ('matplotlib.testing.conftest', '/usr/pkg/lib/python3.12/site-packages/matplotlib/testing/conftest.py', PosixPath('/usr/pkgsrc/wip/py-matplotl
+ib/work/matplotlib-3.9.0/lib/matplotlib/testing/conftest.py'))
+_______________________________________________________________ ERROR collecting work/matplotlib-3.9.0/lib/matplotlib/tests _______________________________________________________________
+/usr/pkg/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1310: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:488: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap>:488: in _call_with_frames_removed
+    ???
+/usr/pkg/lib/python3.12/site-packages/matplotlib/tests/__init__.py:6: in <module>
+    raise OSError(
+E   OSError: The baseline image directory does not exist. This is most likely because the test data is not installed. You may need to install matplotlib from source to get the test data.
+==================================================================================== warnings summary =====================================================================================
+work/matplotlib-3.9.0/galleries/examples/text_labels_and_annotations/usetex_baseline_test.py:25
+  /usr/pkgsrc/wip/py-matplotlib/work/matplotlib-3.9.0/galleries/examples/text_labels_and_annotations/usetex_baseline_test.py:25: UserWarning: FigureCanvasAgg is non-interactive, and thus
+cannot be shown
+    plt.show()
+
+work/matplotlib-3.9.0/galleries/examples/units/evans_test.py:87
+  /usr/pkgsrc/wip/py-matplotlib/work/matplotlib-3.9.0/galleries/examples/units/evans_test.py:87: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    plt.show()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================================================================= short test summary info =================================================================================
+ERROR work/matplotlib-3.9.0/lib/matplotlib/testing - _pytest.pathlib.ImportPathMismatchError: ('matplotlib.testing.conftest', '/usr/pkg/lib/python3.12/site-packages/matplotlib/testing/con
+ftest.py', PosixPath('/usr/pkgsrc/wip/py-matplot...
+ERROR work/matplotlib-3.9.0/lib/matplotlib/tests - OSError: The baseline image directory does not exist. This is most likely because the test data is not installed. You may need to instal
+l matplotlib from source to get the test data.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================== 2 warnings, 2 errors in 0.81s ==============================================================================
