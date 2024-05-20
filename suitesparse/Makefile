@@ -60,7 +60,6 @@ MAKE_FLAGS+=	BLAS_LIBRARIES="${LDFLAGS} ${BLAS_LIBS}" \
 		METIS_PATH="${METIS_PATH}" \
 		SPQR_CONFIG="${CHOLMOD_CONFIG}" \
 		LIB="${LIB}" \
-		CMAKE_C_FLAGS_RELEASE="-DGBNCPUFEAT"
 
 post-patch:
 	${CP} ${FILESDIR}/SuiteSparse_config.mk ${WRKSRC}/SuiteSparse_config
