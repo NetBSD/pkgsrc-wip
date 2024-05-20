@@ -1,13 +1,13 @@
 $NetBSD: distinfo,v 1.21 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (cmake-18.1.5.src.tar.xz) = 59ba2220cbffe02512e579aa2d3cd0354870eec89ecf530b09f29915ac3589c1
-SHA512 (cmake-18.1.5.src.tar.xz) = 5ce7c10d077207e6d3125d3d356b391387e81dcde071673640a455d6ed25f700afa14027e27ef036a2e1d62c8f7c489bfa23f2193bd90c788e818e387483e458
-Size (cmake-18.1.5.src.tar.xz) = 8704 bytes
-BLAKE2s (lld-18.1.5.src.tar.xz) = c1cc89921d204cc55622f83cf91e2dd5d915076064c02ebe4b0eeed67fab0717
-SHA512 (lld-18.1.5.src.tar.xz) = 5241ddc9202a0958824edfcf7e0aeb4311a7f56752cb613721ee4d4e735e454ea33b2bbb37363816ee6e3882b3ec446a604632f30a376ba37c95b42eafb571df
-Size (lld-18.1.5.src.tar.xz) = 1563228 bytes
-BLAKE2s (runtimes-18.1.5.src.tar.xz) = 7ed30ed1c07acdc651ffca061e713a1e6608591f1682009f73ebc79cc17e83b1
-SHA512 (runtimes-18.1.5.src.tar.xz) = 7f9187af6b3c3dae493dfaf1d9830472f509b516c326fd4dc1997d27b7a417b55cb7be21b85967c162ca4b47326f9fc29c822f1c5f212a01e7b00b78c07834ab
-Size (runtimes-18.1.5.src.tar.xz) = 6788 bytes
+BLAKE2s (cmake-18.1.6.src.tar.xz) = 2eccfaea2c4142a0812df9b5b6b049ccbbfc44d468eccafada65fef6e6ca4f1e
+SHA512 (cmake-18.1.6.src.tar.xz) = 1334647f4be280b41858aa272bebc65e935cab772001032f77040396ba7472fbd5eb6a1a0c042ab7156540075705b7f05c8de2f02e2ce9d7ec1ec27be6bef86f
+Size (cmake-18.1.6.src.tar.xz) = 8708 bytes
+BLAKE2s (lld-18.1.6.src.tar.xz) = f60df446d36e0503d747cbb9ead67abe912ab1fed0d2ed3a9a6305c8f7acc00e
+SHA512 (lld-18.1.6.src.tar.xz) = a53da0c796390950f656c71b0c194c741e0112d1661ceb959caec82fbee31e06aaf666e0135a7dd6441c935c5237dd50961450a15c5d9810cab526dd9082610b
+Size (lld-18.1.6.src.tar.xz) = 1563616 bytes
+BLAKE2s (runtimes-18.1.6.src.tar.xz) = 93958d40b8695ac129846f3d403d3667fccada2e363b3079f99774e02b41b3ae
+SHA512 (runtimes-18.1.6.src.tar.xz) = 034f9f257ccef3d36d55d9c21f73b791e38708f6b9640cdb0932439c4f33ef1f67623296642f02520109d55334fdecb2275f452f5996281f2b692bf191da5c07
+Size (runtimes-18.1.6.src.tar.xz) = 6784 bytes
 SHA1 (patch-ELF_Config.h) = 50861ef74c2ff9a9091afcbc8d076e379d9531e5
 SHA1 (patch-ELF_Options.td) = c81907d6e5e099ed2c26de972c6744b7197de3d3
