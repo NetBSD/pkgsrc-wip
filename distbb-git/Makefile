@@ -40,6 +40,7 @@ CONF_FILES=		${EGDIR}/distbb.conf     ${PKG_SYSCONFDIR}/distbb.conf
 CONF_FILES+=		${EGDIR}/distbb.local.mk ${PKG_SYSCONFDIR}/distbb.local.mk
 
 MAKE_FLAGS+=		EGDIR=${EGDIR}
+MAKE_ENV+=		DOC_FILES='README LICENSE NEWS TODO TUTORIAL.pod'
 
 post-install:
 .for f in ${DOCFILES}
