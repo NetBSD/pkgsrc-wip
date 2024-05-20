@@ -1,19 +1,23 @@
 # $NetBSD$
 
-DISTNAME=	translationstring-1.3
+DISTNAME=	translationstring-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/translationstring/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pylonsproject.org
+HOMEPAGE=	https://github.com/Pylons/translationstring
 COMMENT=	Library for i18n relied on by various Repoze and Pyramid
 LICENSE=	modified-bsd
 
-WRKSRC=			${WRKDIR}/translationstring-1.3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-USE_PKGLOCALEDIR=	yes
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
 USE_LANGUAGES=		# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
