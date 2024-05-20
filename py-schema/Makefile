@@ -1,8 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	schema-0.7.4
+DISTNAME=	schema-0.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	category python
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/schema/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
@@ -10,7 +10,12 @@ HOMEPAGE=	https://github.com/keleshev/schema
 COMMENT=	Simple data validation library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-contextlib2>=0.5.5:../../devel/py-contextlib2
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
