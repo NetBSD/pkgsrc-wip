@@ -1,12 +1,15 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/venusian/__init__.py
 ${PYSITELIB}/venusian/__init__.pyc
 ${PYSITELIB}/venusian/__init__.pyo
 ${PYSITELIB}/venusian/advice.py
 ${PYSITELIB}/venusian/advice.pyc
 ${PYSITELIB}/venusian/advice.pyo
+${PYSITELIB}/venusian/compat.py
+${PYSITELIB}/venusian/compat.pyc
+${PYSITELIB}/venusian/compat.pyo
