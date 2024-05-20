@@ -5,12 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	LPJS-${PKGVERSION_NOREV}
-PKGNAME=	lpjs-0.0.4.3
+DISTNAME=	lpjs-0.0.4.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	2b891a0f6513f9922386504fd1d0a5b13b000f15
+GITHUB_TAG=	2e43e7d2e745f3661325881b9958bf6e8f71ed6c
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -52,6 +51,9 @@ RCD_SCRIPTS=		lpjs_dispatchd lpjs_compd
 PKG_RCD_SCRIPTS=	yes
 
 INSTALLATION_DIRS=	share/examples/lpjs
+
+pre-fetch:
+	echo ${GITHUB_PROJECT} ${GITHUB_TAG} ${DISTNAME} ${PKGVERSION_NOREV}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/lpjs/config.sample ${DESTDIR}${EGDIR}
