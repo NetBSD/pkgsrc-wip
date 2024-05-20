@@ -3835,6 +3835,7 @@ SUBDIR+=	py-influxdb
 SUBDIR+=	py-innerscope
 SUBDIR+=	py-inspyred
 SUBDIR+=	py-instant
+SUBDIR+=	py-internetarchive
 SUBDIR+=	py-ioTPy
 SUBDIR+=	py-ionize
 SUBDIR+=	py-iprogress

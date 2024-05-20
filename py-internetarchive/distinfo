@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (internetarchive-4.1.0.tar.gz) = 31e0a8f5e5d6f29ae258b8dd698f8dbb05aa3b0b0aeba60676508c16403c8b3e
+SHA512 (internetarchive-4.1.0.tar.gz) = a3bd751c373c61111474dcc13bc0ae9bfc347b0d7dbb14ebc02dd56214321995ca05c6d781641d409acbcf20cf35e6c9be1486d377ecc70bfa029c433da081f3
+Size (internetarchive-4.1.0.tar.gz) = 104655 bytes
