@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/11/12 03:11:32 outpaddling Exp $
+$NetBSD$
 
-RMD160 (SuiteSparse-4.0.2.tar.gz) = 69b7becaba2cd26edc13d182bf59a8d6ac38b90b
-Size (SuiteSparse-4.0.2.tar.gz) = 22421100 bytes
-SHA1 (patch-SPQR_Source_spqr__factorize.cpp) = bbd599ef35d7c321a13c33bf5bcb49ffed3c5abb
-SHA1 (patch-UFconfig-UFconfig.mk) = e0f1c891f145e13af73331892ce24dea3cd267e9
+BLAKE2s (SuiteSparse-7.7.0.tar.gz) = ea9bc6eb64c7e24f68c1b5e9590b36f5d195a8ec7d0b919b55678f0455a8c980
+SHA512 (SuiteSparse-7.7.0.tar.gz) = aa62dae81ae423ce7162ae83b46e5cf606d95482e6c6bb7ae6d61e15987761119d9418ef3a96648e6ba2327871a2847eef8ace197aa375279d71c80329d6f451
+Size (SuiteSparse-7.7.0.tar.gz) = 85876065 bytes
+SHA1 (patch-GraphBLAS_CMakeLists.txt) = cb237ad5870615abc124ced12758cad4c893d1d1
+SHA1 (patch-SPQR_Source_spqr__factorize.cpp) = 9bb9369f9a7cac2584ea0426c847ade3fa724566

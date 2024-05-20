@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.12 2012/11/28 21:43:05 outpaddling Exp $
 
-DISTNAME=	SuiteSparse-4.0.2
-PKGNAME=	suitesparse-4.0.2
-PKGREVISION=	2
+DISTNAME=	SuiteSparse-7.7.0
+PKGNAME=	suitesparse-7.7.0
 CATEGORIES=	math
-MASTER_SITES=	http://faculty.cse.tamu.edu/davis/SuiteSparse/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=DrTimothyAldenDavis/}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
@@ -32,7 +32,7 @@ USE_TOOLS+=	gmake gsed
 
 USE_LANGUAGES=	c c++ fortran77
 
-WRKSRC=		${WRKDIR}/SuiteSparse
+WRKSRC=		${WRKDIR}/${DISTNAME}
 # Creating shared libs for all platforms is complicated.  Putting this off
 # for now.
 # WRKSRC_SHARED=${WRKSRC}_shared
@@ -50,7 +50,7 @@ AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	include/suitesparse lib
 
 # Non-standard variables used by SuiteSparse Makefiles
-MAKE_FLAGS+=	BLAS="${LDFLAGS} ${BLAS_LIBS}" \
+MAKE_FLAGS+=	BLAS_LIBRARIES="${LDFLAGS} ${BLAS_LIBS}" \
 		CHOLMOD_CONFIG="${CHOLMOD_CONFIG}" \
 		CPLUSPLUS="${CXX}" \
 		CF="${CFLAGS} ${CXXFLAGS}" \
@@ -59,7 +59,8 @@ MAKE_FLAGS+=	BLAS="${LDFLAGS} ${BLAS_LIBS}" \
 		METIS="${METIS}" \
 		METIS_PATH="${METIS_PATH}" \
 		SPQR_CONFIG="${CHOLMOD_CONFIG}" \
-		LIB="${LIB}"
+		LIB="${LIB}" \
+		CMAKE_C_FLAGS_RELEASE="-DGBNCPUFEAT"
 
 post-patch:
 	${CP} ${FILESDIR}/SuiteSparse_config.mk ${WRKSRC}/SuiteSparse_config
@@ -117,4 +118,6 @@ do-install:
 
 .include "../../mk/blas.buildlink3.mk"
 .include "../../math/metis/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+.include "../../math/openblas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

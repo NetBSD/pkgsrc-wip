@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- GraphBLAS/CMakeLists.txt.orig	2024-03-26 21:14:00.000000000 +0000
++++ GraphBLAS/CMakeLists.txt
+@@ -125,7 +125,7 @@ endif ( )
+ # find cpu_features
+ #-------------------------------------------------------------------------------
+ 
+-if ( NOT GBNCPUFEAT )
++if ( NOT GBNCPUFEAT AND NOT CMAKE_SYSTEM_NAME STREQUAL "NetBSD" )
+     # default: enable Google's cpu_features package
+     message ( STATUS "cpu_features (by google.com): enabled " )
+     include_directories ( "cpu_features/include" "cpu_features" "cpu_features/src" "cpu_features/include/internal" )
+@@ -412,7 +412,7 @@ if ( NOT NO_LIBM )
+ endif ( )
+ 
+ # libdl
+-if ( NOT WIN32 )
++if ( NOT WIN32 AND NOT CMAKE_SYSTEM_NAME STREQUAL "NetBSD" )
+     if ( BUILD_SHARED_LIBS )
+         target_link_libraries ( GraphBLAS PRIVATE dl )
+     endif ( )
