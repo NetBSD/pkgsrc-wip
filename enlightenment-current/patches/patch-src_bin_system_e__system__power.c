@@ -1,8 +1,6 @@
 $NetBSD$
 
-* Add NetBSD support
-
---- src/bin/system/e_system_power.c.orig	2020-07-26 16:39:12.083981300 +0000
+--- src/bin/system/e_system_power.c.orig	2023-12-23 16:08:09.000000000 +0000
 +++ src/bin/system/e_system_power.c
 @@ -32,7 +32,7 @@ _cb_power_hibernate(void *data EINA_UNUS
  static void
@@ -39,20 +37,20 @@ $NetBSD$
     //             *:
     //    PATH/sleep.sh
     //    /etc/acpi/sleep.sh force
-@@ -93,6 +96,8 @@ _power_hibernate_init(void)
- #if defined (__FreeBSD__) || defined (__OpenBSD__)
-    if (ecore_file_app_installed("acpiconf"))
-      _cmd_hibernate = strdup("acpiconf -s4");
+@@ -96,6 +99,8 @@ _power_hibernate_init(void)
+ #elif defined (__OpenBSD__)
+    if (ecore_file_app_installed("ZZZ"))
+      _cmd_suspend = strdup("ZZZ");
 +#elif defined (__NetBSD__)
 +     _cmd_hibernate = strdup("sysctl -w hw.acpi.sleep.state=4");
  #else
     if (ecore_file_app_installed("systemctl"))
       _cmd_hibernate = strdup("systemctl hibernate");
-@@ -107,6 +112,7 @@ _power_hibernate_init(void)
- #endif
+@@ -111,6 +116,7 @@ _power_hibernate_init(void)
     // linux systemd: PATH/systemctl hibernate
-    // bsd: acpiconf -s4
-+   //        NetBSD: sysctl
+    // FreeBSD: acpiconf -s4
+    // OpenBSD: ZZZ
++   // Netbsd: sysctl
     // if exist:
     //    PATH/hibernate.sh
     //    /etc/acpi/hibernate.sh force

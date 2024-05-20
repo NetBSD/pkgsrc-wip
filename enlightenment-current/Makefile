@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 0.2 2018/09/06 16:15:10 andyb Exp $
 
-DISTNAME=	enlightenment-0.24.2
+DISTNAME=	enlightenment-0.26.0
 PKGNAME=	${DISTNAME:S/enlightenment/enlightenment-current/}
 CATEGORIES=	wm
-PKGREVISION=	5
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/enlightenment/
 EXTRACT_SUFX=	.tar.xz
 
@@ -12,7 +11,7 @@ HOMEPAGE=	https://www.enlightenment.org/
 COMMENT=	The Enlightenment window manager
 LICENSE=	2-clause-bsd
 
-CONFLICTS=	enlightenment-[0-9]*
+CONFLICTS=	enlightenment-[0-9]* moksha-[0-9]*
 
 USE_TOOLS+=	pkg-config
 
@@ -28,6 +27,9 @@ CONF_FILES+=	${EGDIR}/e-applications.menu \
 
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
+# For src/bin/enlightenment_ckpasswd
+LDFLAGS.NetBSD+=	-lcrypt
+
 INSTALLATION_DIRS=	${EGDIR}
 MAKE_DIRS=		${PKG_SYSCONFDIR}/enlightenment
 MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/menus
@@ -42,11 +44,10 @@ SUBST_VARS.prefix=	PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	cpufreq sysinfo temperature linux
+PLIST_VARS+=	cpufreq temperature linux
 
 .if ${OPSYS} != "NetBSD"
 PLIST.cpufreq=		yes
-PLIST.sysinfo=		yes
 PLIST.temperature=	yes
 .endif
 
@@ -59,12 +60,17 @@ PLIST_SUBST+=	PLATFORM=${LOWER_OPSYS}
 
 .if ${OPSYS} == "NetBSD"
 MESON_ARGS+=		-Dcpufreq=false
-MESON_ARGS+=		-Dsysinfo=false
 MESON_ARGS+=		-Dtemperature=false
 .endif
-MESON_ARGS+=		-Ddevice-udev=false
 .if ${OPSYS} != "Linux"
 MESON_ARGS+=		-Dsystemd=false
+MESON_ARGS+=		-Ddevice-udev=false
+MESON_ARGS+=		-Dmount-udisks=false
+MESON_ARGS+=		-Dmount-eeze=false
+MESON_ARGS+=		-Dbluez5=false
+MESON_ARGS+=		-Delput=false
+MESON_ARGS+=		-Dgesture-recognition=false
+
 .else
 MESON_ARGS+=		-Dsystemdunitdir=${PREFIX}/lib/systemd/user
 .endif
@@ -79,6 +85,7 @@ CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
 
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/efl/buildlink3.mk"
 .include "../../x11/xcb-util-keysyms/buildlink3.mk"

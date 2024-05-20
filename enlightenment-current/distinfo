@@ -1,18 +1,21 @@
 $NetBSD$
 
-RMD160 (enlightenment-0.24.2.tar.xz) = 3a5071ea54bcbffd67da9d416e4d1778457574ef
-SHA512 (enlightenment-0.24.2.tar.xz) = 5d96b17d89e822271048a0a6a8356658fd02680f54da2f15dde7c632752bbf0a396eaf23986164402e61f631e68937b3ba7c29d9dd787ddd470cff4a390abace
-Size (enlightenment-0.24.2.tar.xz) = 28716060 bytes
+BLAKE2s (enlightenment-0.26.0.tar.xz) = fa6d959cd72ff14f34c2f86d2e0bae62853d8d11a84afc7dc630c679ea4afa28
+SHA512 (enlightenment-0.26.0.tar.xz) = 52a656b397348a4f6baa28b9da4b42c81160b06d28dba58c22bdf00bf749aed3a9b194e171a5ac349745a4c11afc8ae8c38f9bf8c31bacbc0d196cfb24b15a1e
+Size (enlightenment-0.26.0.tar.xz) = 409678784 bytes
 SHA1 (patch-data_etc_meson.build) = da003d08faf0634549a264799313be6382956068
 SHA1 (patch-meson.build) = b753950d9ab5aa6d8b596fc7bba0f9dc54a7c197
+SHA1 (patch-src_bin_e__ckpasswd__main.c) = b15d94e48ce9fe377ea8355530f4317ebfa99450
 SHA1 (patch-src_bin_e__sys__main.c) = fd525e5ea548cc5276e7624ba1be1df36cb4451b
+SHA1 (patch-src_bin_e__util__suid.h) = 7a1e0b9ccb45f46dae39cdfcd36ccded66193fb1
 SHA1 (patch-src_bin_system_e__system__main.c) = 9777e50cc4114100b8068112d067d69753c786a4
-SHA1 (patch-src_bin_system_e__system__power.c) = 254d430d50f3a122b64cc70c390c48355cbad3a3
-SHA1 (patch-src_modules_battery_e__mod__main.c) = 024cd540ffc5dee129e662088e7f837820ac7b8a
-SHA1 (patch-src_modules_battery_e__mod__main.h) = b599d39991497faba70e5a62278e4f29b06fcc69
-SHA1 (patch-src_modules_battery_e__mod__sysctl.c) = 1db5e700635cfd428b2599ebb592d71847f23e7f
+SHA1 (patch-src_bin_system_e__system__power.c) = 2f53cf670a6eb0ea8d9dbc275454ad9932f524d9
+SHA1 (patch-src_modules_battery_e__mod__main.c) = 89682076005db945ba4aef0e909186ab7e0dc764
+SHA1 (patch-src_modules_battery_e__mod__main.h) = c32a3708129cdfc6b41951b9e4d5b9cdc6e67a54
 SHA1 (patch-src_modules_battery_e__mod__upower.c) = 5bfe428696fbc165585fbfe3242e402174c5d178
 SHA1 (patch-src_modules_conf__menus_e__int__config__menus.c) = fbc29cfa5e6b809e74c3fe011e21b3b9ac8719cf
+SHA1 (patch-src_modules_procstats_e__mod__main.c) = e9244c32cc8f6d610bb769f9fee63da323190369
+SHA1 (patch-src_modules_procstats_process.c) = ad04d6d675ef6bd788f0d21b03c34a7215842120
 SHA1 (patch-src_modules_wizard_page__011.c) = 4c63aa82af4ab9c94dad926cf6d023fe9410d011
-SHA1 (patch-src_modules_wizard_page__120.c) = 3635cab6a98393eae0353ccdaf83317f0376dc9e
+SHA1 (patch-src_modules_wizard_page__120.c) = 817aeb9d84ce25f71cb150907ac58686b7bedc2d
 SHA1 (patch-src_modules_xkbswitch_e__mod__parse.c) = 68180fe3a4b9f131e7ac033aa324903827566fa2

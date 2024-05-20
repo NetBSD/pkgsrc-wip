@@ -1,14 +1,14 @@
 #### Status
 Build on:
-- NetBSD 9.1_STABLE amd64, pkgsrc-2020Q3
-- Linux 5.9.8-2-MANJARO x86_64, pkgsrc-2020Q3
-
-3rd party binary repository:
-`# echo "https://sourceforge.net/projects/kikadf/files/NetBSD/amd64/All/" >> /usr/pkg/etc/pkgin/repositories.conf`
-`# pkgin -f update`
-`# pkgin install enlightenment-current`
+- NetBSD 10.0_STABLE amd64, pkgsrc-2024Q1
+- Linux 5.10.0-23-amd64 Debian x86_64, pkgsrc-2024Q1
 
 #### Plan
 - Test, optimize dependencies << opengl issue
 - Try to enbale battery with upower << enabled, test
 - Add another OS support
+
+
+### Notes: 2024-05-19 (matthewda)
+- disable glib mainloop on NetBSD - cpu usage decreases.
+- opengl seems to be working on NetBSD
