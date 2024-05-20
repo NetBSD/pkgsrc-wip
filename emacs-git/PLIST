@@ -939,7 +939,14 @@ share/emacs/${PKGVERSION}/etc/schema/dbnotn.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbpool.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbstart.rnc
 share/emacs/${PKGVERSION}/etc/schema/docbook.rnc
+share/emacs/${PKGVERSION}/etc/schema/dotnet-appconfig.rnc
+share/emacs/${PKGVERSION}/etc/schema/dotnet-packages-config.rnc
+share/emacs/${PKGVERSION}/etc/schema/dotnet-packages-props.rnc
+share/emacs/${PKGVERSION}/etc/schema/dotnet-resx.rnc
 share/emacs/${PKGVERSION}/etc/schema/locate.rnc
+share/emacs/${PKGVERSION}/etc/schema/msbuild.rnc
+share/emacs/${PKGVERSION}/etc/schema/nuget.rnc
+share/emacs/${PKGVERSION}/etc/schema/nuspec.rnc
 share/emacs/${PKGVERSION}/etc/schema/od-manifest-schema-v1.2-os.rnc
 share/emacs/${PKGVERSION}/etc/schema/rdfxml.rnc
 share/emacs/${PKGVERSION}/etc/schema/relaxng.rnc
@@ -4291,6 +4298,8 @@ share/emacs/${PKGVERSION}/lisp/widget.el.gz
 share/emacs/${PKGVERSION}/lisp/widget.elc
 share/emacs/${PKGVERSION}/lisp/windmove.el.gz
 share/emacs/${PKGVERSION}/lisp/windmove.elc
+share/emacs/${PKGVERSION}/lisp/window-tool-bar.el.gz
+share/emacs/${PKGVERSION}/lisp/window-tool-bar.elc
 share/emacs/${PKGVERSION}/lisp/window.el.gz
 share/emacs/${PKGVERSION}/lisp/window.elc
 share/emacs/${PKGVERSION}/lisp/winner.el.gz
