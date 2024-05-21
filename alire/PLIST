@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/12 17:53:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/05/09 12:30:00 dkazankov Exp $
 bin/alr
+share/gpr/manifests/alr
+share/gpr/manifests/alr_env

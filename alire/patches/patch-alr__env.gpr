@@ -1,9 +1,10 @@
 $NetBSD: patch-alr__env.gpr,v 1.2 2024/05/02 14:00:00 dkazankov Exp $
 
-Add NetBSD support, change build type to avoid runtime check exceptions
+Add NetBSD support
+Change build type to avoid runtime check exceptions
 
 --- alr_env.gpr.orig	2024-03-21 00:22:58.000000000 +0200
-+++ alr_env.gpr	2024-04-19 19:44:22.676754538 +0300
++++ alr_env.gpr	2024-05-09 22:22:21.844009442 +0300
 @@ -36,13 +36,14 @@
  
     case Alire_Common.Host_Os is
