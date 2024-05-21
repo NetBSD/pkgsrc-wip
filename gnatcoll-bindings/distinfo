@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (gnatcoll-bindings-24.0.0.tar.gz) = b43f5de77742f03c9d485da3f421bdb71e23fdb43db918b542b1f3df12e0962a
+SHA512 (gnatcoll-bindings-24.0.0.tar.gz) = d82f593cd0a2822d0007ba768a05e9870aa80b47232154008ea91af4ec758df1b23b92eb5264a58f2b4bedf775d143ce7119046a9ba8f7d5496ed89f3a4a2118
+Size (gnatcoll-bindings-24.0.0.tar.gz) = 253286 bytes
+SHA1 (patch-Makefile) = cd5df0d7a8231870a933cdf54ad801bb995986be
+SHA1 (patch-version_information) = 27344a8db2fccede1f8a42ba2bd4fb1d690eb9ae
