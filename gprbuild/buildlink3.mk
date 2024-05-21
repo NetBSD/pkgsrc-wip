@@ -1,0 +1,31 @@
+# $NetBSD: buildlink3.mk,v 1.3 2024/05/19 10:30:00 dkazankov Exp $
+
+BUILDLINK_TREE+=	gprbuild
+
+.if !defined(GPRBUILD_BUILDLINK3_MK)
+GPRBUILD_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.gprbuild+=	gprbuild>=24.0.0
+BUILDLINK_PKGSRCDIR.gprbuild=		../../wip/gprbuild
+BUILDLINK_DEPMETHOD.gprbuild?=		build
+
+# GPRbuild does similar things in its own way
+BUILDLINK_AUTO_VARS.gprbuild=	no
+BUILDLINK_AUTO_DIRS.gprbuild=	no
+
+BUILDLINK_FILES.gprbuild=	bin/gpr* libexec/gprbuild/*
+BUILDLINK_FILES.gprbuild+=	share/gpr/_default.gpr share/gpr/manifests/gprbuild
+BUILDLINK_FILES.gprbuild+=	share/gprconfig/*
+
+BUILDLINK_CONTENTS_FILTER.gprbuild=	\
+	${EGREP} '(bin/gpr.*|libexec/gprbuild/gpr.*|share/gpr/.*\.gpr$$|share/gpr/manifests/.*|share/gprconfig/.*)'
+
+# Buildlinked libraries search path
+GPR_PROJECT_PATH?=	${BUILDLINK_DIR}/share/gpr
+
+MAKE_ENV+=	GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+INSTALL_ENV+=	GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+
+.endif
+
+BUILDLINK_TREE+=	-gprbuild
