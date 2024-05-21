@@ -32,6 +32,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 WHEEL_ARGS+=	-Csetup-args="-Dsystem-freetype=true"
 WHEEL_ARGS+=	-Csetup-args="-Dsystem-qhull=true"
 WHEEL_ARGS+=	-Csetup-args="-Db_lto=false"
+# install test data, per
+# https://matplotlib.org/stable/api/prev_api_changes/api_changes_3.9.0.html#build-system-ported-to-meson
+# so that test target can work
+WHEEL_ARGS+=	-Cinstall-args="--tags=data,python-runtime,runtime,tests"
 
 # py-pybind11's bl3 defaults to PYTHON_FOR_BUILD_ONLY?=yes as it is primarily
 # used by packages that only have a build dependency on it.  Therefore we need
