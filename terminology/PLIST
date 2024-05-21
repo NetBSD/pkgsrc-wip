@@ -29,6 +29,7 @@ share/locale/fr/LC_MESSAGES/terminology.mo
 share/locale/he/LC_MESSAGES/terminology.mo
 share/locale/hi/LC_MESSAGES/terminology.mo
 share/locale/hr/LC_MESSAGES/terminology.mo
+share/locale/id/LC_MESSAGES/terminology.mo
 share/locale/it/LC_MESSAGES/terminology.mo
 share/locale/ja/LC_MESSAGES/terminology.mo
 share/locale/ko/LC_MESSAGES/terminology.mo
@@ -49,7 +50,33 @@ share/locale/vi/LC_MESSAGES/terminology.mo
 share/locale/zh_Hans/LC_MESSAGES/terminology.mo
 share/terminology/backgrounds/mystic.png
 share/terminology/backgrounds/texture_background.png
-share/terminology/colorschemes.eet
+share/terminology/colorschemes/Belafonte Day.eet
+share/terminology/colorschemes/Belafonte Night.eet
+share/terminology/colorschemes/Black.eet
+share/terminology/colorschemes/Cobalt2.eet
+share/terminology/colorschemes/Default.eet
+share/terminology/colorschemes/Dracula.eet
+share/terminology/colorschemes/Fahrenheit.eet
+share/terminology/colorschemes/Fir Dark.eet
+share/terminology/colorschemes/Material.eet
+share/terminology/colorschemes/Mild.eet
+share/terminology/colorschemes/Mustang.eet
+share/terminology/colorschemes/Nord.eet
+share/terminology/colorschemes/Ocean Dark.eet
+share/terminology/colorschemes/One Dark.eet
+share/terminology/colorschemes/PaleNight.eet
+share/terminology/colorschemes/PaperColor.eet
+share/terminology/colorschemes/Selenized Black.eet
+share/terminology/colorschemes/Selenized Dark.eet
+share/terminology/colorschemes/Selenized Light.eet
+share/terminology/colorschemes/Selenized White.eet
+share/terminology/colorschemes/Smyck.eet
+share/terminology/colorschemes/Soft Era.eet
+share/terminology/colorschemes/Solarized Light.eet
+share/terminology/colorschemes/Solarized.eet
+share/terminology/colorschemes/Tango Dark.eet
+share/terminology/colorschemes/Tango Light.eet
+share/terminology/colorschemes/Tomorrow Night Burns.eet
 share/terminology/fonts/10x20.pcf
 share/terminology/fonts/4x6.pcf
 share/terminology/fonts/5x7.pcf
@@ -77,5 +104,4 @@ share/terminology/fonts/terminus-20-bold.pcf
 share/terminology/fonts/terminus-20.pcf
 share/terminology/images/terminology.png
 share/terminology/themes/default.edj
-share/terminology/themes/mild.edj
 share/terminology/themes/nyanology.edj

@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 0.2 2018/09/06 16:15:10 andyb Exp $
 
-DISTNAME=	terminology-1.10.0
+DISTNAME=	terminology-1.13.0
 CATEGORIES=	x11
 #PKGREVISION=	1
 MASTER_SITES=	https://download.enlightenment.org/rel/apps/terminology/
