@@ -1,0 +1,11 @@
+$NetBSD$
+
+BLAKE2s (gnatcoll-core-24.0.0.tar.gz) = dfd9779a3aee0a5bccad92fcfb3e6473065a73f6cfb33a2319be6a6e974db191
+SHA512 (gnatcoll-core-24.0.0.tar.gz) = 1f1d470e7b74f238682f0938efe04c303c6bfca5a6b723eb789f5cb4bd33a199a9f2323626b8887758f01709ab1ba4d8045c56ce45f02e535babca4025662d9f
+Size (gnatcoll-core-24.0.0.tar.gz) = 764526 bytes
+SHA1 (patch-Makefile) = 014a48e7dfc9016e28cc11502559b1f26f9b8a88
+SHA1 (patch-executable_path.c) = b0c88ee3d657332a1c879d4807681ea4c8c171b7
+SHA1 (patch-gnatcoll.gpr) = c4e107ce24c56e8bebcab3284f42055b3166c47e
+SHA1 (patch-src_os_unix_libc-wrappers.c) = 6d9750ee1dedce3129a895238da909f3c7967c31
+SHA1 (patch-src_os_unix_process-wrappers.c) = da4b4b0922d7a6b690c2dab2046001d4f48a8855
+SHA1 (patch-version_information) = 27344a8db2fccede1f8a42ba2bd4fb1d690eb9ae

@@ -1,0 +1,31 @@
+$NetBSD: patch-gnatcoll.gpr,v 1.0 2024/05/17 18:00:00 dkazankov Exp $
+
+Fix extra libs on NetBSD
+Fix RELRO options on NetBSD
+
+--- gnatcoll.gpr.orig	2023-09-21 18:57:14.000000000 +0300
++++ gnatcoll.gpr	2024-05-17 18:02:19.343616530 +0300
+@@ -105,7 +105,8 @@
+    end case;
+    case OS is
+       when "unix" =>
+-         Extra_Libs := Extra_Libs & ("-ldl"); --  For gnatcoll.plugins
++         --Extra_Libs := Extra_Libs & ("-ldl"); --  For gnatcoll.plugins
++         null;
+       when others =>
+          null;
+    end case;
+@@ -156,6 +157,13 @@
+ 
+       for Switches ("gnatcoll_support.c") use
+         Extra_Switches & Compiler'Switches ("C");
++      case Library_Type is
++         when "static-pic" | "relocatable" =>
++            for PIC_Option ("Ada") use ("-fPIC");
++            for PIC_Option ("C") use ("-fPIC");
++         when others =>
++            null;
++      end case;
+    end Compiler;
+ 
+    package Binder is
