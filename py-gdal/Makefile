@@ -6,24 +6,38 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 COMMENT=	Translator library for raster geospatial data formats, Python binding
 
+# Beause this package runs cmake for all of gdal, everything that is
+# hard-required must be present, separately from whether it is needed
+# for the python bindings.
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++11
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-WHEEL_NAME=		GDAL-${PKGVERSION_NOREV}
-PYSETUPSUBDIR=		swig/python
-
 .include "../../mk/bsd.prefs.mk"
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
-dont-post-configure:
-	# \todo Figure out why data is here and consider other options for
-	# setuptools to function.
-	#${RM} -rf ${WRKSRC}/swig/python/data
+WHEEL_NAME=		GDAL-${PKGVERSION_NOREV}
+PYSETUPSUBDIR=		build/swig/python
+
+# Upstream's distfile does not have a ready-to-use python module
+# source directory.  Creating it requires cmake, but apparently not
+# building the rest of gdal.
+
+# \todo Consider enhancing cmake support to allow configure-only and
+# not overriding the rest of the targets while allowing use of wheel's
+# build/install targets.
+
+TOOL_DEPENDS+=	cmake>=0:../../devel/cmake
+
+pre-build:
+	cd ${WRKSRC} && mkdir build && cd build && \
+	cmake .. && \
+	cd swig/python && \
+	${MAKE} python_generated_files
 
 .include "../../geography/gdal-lib/buildlink3.mk"
 # \todo Explain why wheel must be before tool (Python.h not found), or fix

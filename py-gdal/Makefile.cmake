@@ -1,5 +1,5 @@
-# The overall plan is to run cmake in the package root, and then just
-# build the bindings.
+# Currently, this can probably be dropped.  But, if we use tool cmake
+# vs bare cmake, it might become necessary.
 
 # The supplied cmakefiles are buggy in that absent spatialite,
 # FindSPATIALITE will find an empty version string and then invoke a
