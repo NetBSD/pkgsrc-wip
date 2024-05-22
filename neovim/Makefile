@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2023/04/25 23:36:19 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2024/04/30 18:30:52 wiz Exp $
 
-DISTNAME=	neovim-0.10.0.fa1baa9
+DISTNAME=	neovim-0.9.5
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
-GITHUB_TAG=	fa1baa9a47cdb3eed17d48b6011a164d4009d2ee
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/neovim/neovim/
@@ -15,8 +16,18 @@ USE_TOOLS+=	pkg-config xgettext
 
 USE_LANGUAGES=	c c++
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	notdarwin
+.if ${SHLIB_TYPE} == "dylib"
+SHLIB_EXT=	dylib
+.else
+SHLIB_EXT=	so
+PLIST.notdarwin=	yes
+.endif
+
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DLIBVTERM_LIBRARY=${BUILDLINK_PREFIX.libvterm03}/lib/libvterm03/libvterm.so
+CMAKE_ARGS+=	-DLIBVTERM_LIBRARY=${BUILDLINK_PREFIX.libvterm03}/lib/libvterm03/libvterm.${SHLIB_EXT}
 CMAKE_ARGS+=	-DLIBVTERM_INCLUDE_DIR=${BUILDLINK_PREFIX.libvterm03}/include/libvterm03
 
 CONFIGURE_DIRS=		${WRKDIR}/build
@@ -28,7 +39,7 @@ LDFLAGS.SunOS+=		-lrt
 LUA_VERSIONS_ACCEPTED=	51
 
 # https://github.com/neovim/neovim/issues/223#issuecomment-374763255
-# FORTIFY_SUPPORTED=	no
+FORTIFY_SUPPORTED=	no
 
 .include "../../lang/lua/luaversion.mk"
 
@@ -38,21 +49,9 @@ DEPENDS+=	${LUA_PKGPREFIX}-luv-[0-9]*:../../devel/lua-luv
 DEPENDS+=	${LUA_PKGPREFIX}-inspect-[0-9]*:../../devel/lua-inspect
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
 DEPENDS+=	${LUA_PKGPREFIX}-BitOp-[0-9]*:../../devel/lua-BitOp
-TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
-
-post-install:
-	# https://github.com/neovim/neovim/issues/23395
-	# lpeg ends up as full path in NEEDED, rpath part
-	# of it is missing.
-	# official fix seems to be to build a vendored lpeg.
-	${PREFIX}/bin/patchelf --replace-needed \
-		"${PREFIX}/lib/lua/5.1/lpeg.so" lpeg.so \
-		${DESTDIR}${PREFIX}/bin/nvim
-	${PREFIX}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
-		--add-rpath ${PREFIX}/lib/lua/5.1
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
