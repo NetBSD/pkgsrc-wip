@@ -3,7 +3,9 @@
 DISTNAME=	internetarchive-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_PYPI:=i/internetarchive/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jjjake/}
+GITHUB_PROJECT=	internetarchive
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	https://github.com/jjjake/internetarchive
@@ -11,6 +13,8 @@ COMMENT=	Interface to the internet archive
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	# none
+
+USE_PYTEST=	no	# XXX: tests require a connection to archive.org
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -27,6 +31,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-schema-[0-9]*:../../wip/py-schema
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
+TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&					\
