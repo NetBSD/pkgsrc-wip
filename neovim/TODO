@@ -1,0 +1,8 @@
+Fails during configure phase with:
+
+  CMake Error at /usr/pkg/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+    Could NOT find Luajit (missing: LUAJIT_INCLUDE_DIR)
+  Call Stack (most recent call first):
+    /usr/pkg/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake:600 (_FPHSA_FAILURE_MESSAGE)
+    cmake/FindLuajit.cmake:14 (find_package_handle_standard_args)
+    src/nvim/CMakeLists.txt:65 (find_package)

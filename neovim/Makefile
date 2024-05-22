@@ -1,7 +1,6 @@
 # $NetBSD: Makefile,v 1.9 2024/04/30 18:30:52 wiz Exp $
 
-DISTNAME=	neovim-0.9.5
-PKGREVISION=	1
+DISTNAME=	neovim-0.10.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -61,6 +60,7 @@ post-extract:
 .endif
 .include "../../devel/libtermkey/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libvterm03+=	libvterm03>=0.3.3
 .include "../../devel/libvterm03/buildlink3.mk"
 .include "../../devel/lua-luv/buildlink3.mk"
 .include "../../devel/msgpack/buildlink3.mk"
