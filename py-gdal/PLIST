@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.6 2024/05/21 18:21:33 gdt Exp $
+${PYSITELIB}/GDAL-0.0.0.dist-info/METADATA
+${PYSITELIB}/GDAL-0.0.0.dist-info/RECORD
+${PYSITELIB}/GDAL-0.0.0.dist-info/WHEEL
+${PYSITELIB}/GDAL-0.0.0.dist-info/top_level.txt
+${PYSITELIB}/osgeo/__init__.py
+${PYSITELIB}/osgeo/__init__.pyc
+${PYSITELIB}/osgeo/__init__.pyo
+${PYSITELIB}/osgeo/gdalnumeric.py
+${PYSITELIB}/osgeo/gdalnumeric.pyc
+${PYSITELIB}/osgeo/gdalnumeric.pyo
