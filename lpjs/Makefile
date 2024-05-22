@@ -5,11 +5,11 @@
 #              Tue Sep 28 11:27:06 CDT 2021               #
 ###########################################################
 
-DISTNAME=	lpjs-0.0.5.5
+DISTNAME=	lpjs-0.0.5.10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	LPJS
-GITHUB_TAG=	23218e649c1221c839f28efcfd0811ae40f957c2
+GITHUB_TAG=	818ac2625106c7699b1957389346dc38f4f41877
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/LPJS/
@@ -56,6 +56,7 @@ INSTALLATION_DIRS=	share/examples/lpjs
 
 pre-fetch:
 	echo ${GITHUB_PROJECT} ${GITHUB_TAG} ${DISTNAME} ${PKGVERSION_NOREV}
+	echo ${GITHUB_TAG_PROVIDED}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/lpjs/config.sample ${DESTDIR}${EGDIR}
