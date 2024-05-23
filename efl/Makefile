@@ -4,7 +4,7 @@ DISTNAME=	efl-1.27.0
 CATEGORIES=	x11
 MASTER_SITES=	https://download.enlightenment.org/rel/libs/efl/
 EXTRACT_SUFX=	.tar.xz
-PKGREVISION=	1
+PKGREVISION=	2
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Enlightenment foundation libraries
@@ -110,6 +110,7 @@ MESON_ARGS+=			-Dopengl=base
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../inputmethod/scim/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
