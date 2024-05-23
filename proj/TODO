@@ -1,7 +1,9 @@
+Convert to cmake :-(
+
 Figure out CDN location/permission issues.  This is likely just an
 upstream doc issue, if any.
 
 Test all proj dependencies in pkgsrc.
 
-Resolve test failures; perhaps testing 8 while 7 is installed does not
-work.
+Run tests and resolve issues.
+
