@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (python-efl-1.26.1.tar.xz) = 7fc4d3e230848fe61f5a451cdeec6d0d13383c350a9c753222d3032e4e62e8f0
+SHA512 (python-efl-1.26.1.tar.xz) = 42b7586885d47fc67bf3692e65325e58cb0566fb772b415255b2f63b05adfdcdc44762f532bc951781ece118833486b33dc5a3f0aa10e0a14d5226ca4dc30f9e
+Size (python-efl-1.26.1.tar.xz) = 9554132 bytes
+SHA1 (patch-setup.py) = 490453307d8f9e9088c5efdc4ff73d2eafd9c387

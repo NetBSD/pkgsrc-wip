@@ -1,0 +1,4 @@
+Python-EFL are the python bindings for the whole EFL stack
+(evas, ecore, edje, emotion, ethumb and elementary).
+
+You can use Python-EFL to build a portable GUI application in minutes.
