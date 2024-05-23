@@ -42,6 +42,7 @@ post-install:
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
+.include "../../devel/libvterm03/buildlink3.mk"
 .include "../../devel/lua-luv/buildlink3.mk"
 .include "../../devel/msgpack/buildlink3.mk"
 .include "../../devel/unibilium/buildlink3.mk"
@@ -55,6 +56,5 @@ post-install:
 CMAKE_CONFIGURE_ARGS+=	-DPREFER_LUA=ON
 .  include "../../lang/lua/buildlink3.mk"
 .endif
-.include "../../wip/libvterm03/buildlink3.mk"		# XXX: req v0.3.3
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
