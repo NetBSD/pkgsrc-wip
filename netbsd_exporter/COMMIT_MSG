@@ -1,4 +1,0 @@
-Update netbsd_exporter to v0.9.4
-
-* the new version fixes an integer overflow occured on 32 bit systems
-* the package was converted to use Github as its primary source
