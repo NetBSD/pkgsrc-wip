@@ -3,7 +3,7 @@
 VERSION=	1.26.1
 DISTNAME=	python-efl-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-efl-${VERSION}
-CATEGORIES=	python enlightenment
+CATEGORIES=	python
 MASTER_SITES=	https://download.enlightenment.org/rel/bindings/python/
 EXTRACT_SUFX=	.tar.xz
 
