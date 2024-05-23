@@ -8,7 +8,8 @@ PKGREVISION=	2
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Enlightenment foundation libraries
-LICENSE=	2-clause-bsd
+# efl/COPYING lists the licenses for each contained library.
+LICENSE=	gnu-lgpl-v2.1
 
 EFL_LIBRARY_PATH=	${WRKSRC}/output/src/lib
 
