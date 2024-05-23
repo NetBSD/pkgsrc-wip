@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 SUBST_CLASSES+=		javapath
 SUBST_STAGE.javapath=	pre-configure
 SUBST_SED.javapath+=	-e 's|%%PREFIX%%|${PREFIX}|g'
+SUBST_SED.javapath+=	-e 's|$$RealBin$$delimiter|${DATADIR}$$delimiter${JAVAJARDIR}/fastqc$$delimiter|g'
+SUBST_SED.javapath+=	-e 's|$$RealBin/|${JAVAJARDIR}/fastqc/|g'
 SUBST_FILES.javapath+=	fastqc
 
 USE_TOOLS+=	perl:run pax
