@@ -52,7 +52,7 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
 # are to allow multiple python versions, and to remove the dependency
 # on numpy and hence the need for blas and fortran from the base gdal
 # package.
-CMAKE_ARGS+=		-DBUILD_PYTHON_BINDINGS=ON
+CMAKE_ARGS+=		-DBUILD_PYTHON_BINDINGS=OFF
 
 # Disable things that we don't want to build, more as documentation
 # than them needing to be forced off.
