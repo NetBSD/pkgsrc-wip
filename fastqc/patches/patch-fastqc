@@ -1,0 +1,17 @@
+$NetBSD$
+
+# Add NetBSD java path
+
+--- fastqc.orig	2024-05-23 13:43:30.804486207 +0000
++++ fastqc
+@@ -66,6 +66,10 @@ elsif (-e "$RealBin/jre/bin/java") {
+ elsif (-e "$RealBin/jre/Contents/Home/bin/java") {
+ 	$java_bin = "$RealBin/jre/Contents/Home/bin/java";
+ }
++# NetBSD
++elsif (-e "%%PREFIX%%/java/openjdk11/bin/java") {
++	$java_bin = "%%PREFIX%%/java/openjdk11/bin/java";
++}
+ 
+ 
+ my @java_args;
