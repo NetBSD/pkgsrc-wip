@@ -8,7 +8,7 @@ CATEGORIES=		geography
 MASTER_SITES=		http://gdal.org/dl/
 LICENSE=		x11 AND mit
 
-MAINTAINER=		mchittur@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://gdal.org/
 COMMENT=		Documentation for GDAL
 
