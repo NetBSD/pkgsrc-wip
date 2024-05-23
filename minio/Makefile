@@ -4,7 +4,7 @@ DISTNAME=	minio-${GITHUB_TAG}
 PKGNAME=	minio-${GITHUB_TAG:S/^RELEASE.//:C/T.*//:S/-//g}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=minio/}
-GITHUB_TAG=	RELEASE.2024-03-21T23-13-43Z
+GITHUB_TAG=	RELEASE.2024-05-10T01-41-38Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://minio.io/
@@ -22,7 +22,7 @@ GO_LDFLAGS+=	-X github.com/minio/minio/cmd.ReleaseTag=DEVELOPMENT.${GITHUB_TAG:S
 GO_BUILD_PATTERN=	--ldflags "${GO_LDFLAGS}"
 
 do-test:
-	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} CC=${CC} CGO_ENABLED=1 \
+	${RUN} cd ${WRKSRC} && ${PKGSRC_SETENV} CC=${CC:Q} CGO_ENABLED=1 \
 	    ${GO} test -v ./...
 
 do-install:
