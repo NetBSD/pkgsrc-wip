@@ -1,0 +1,26 @@
+@comment $NetBSD$
+bin/ecrire
+share/applications/ecrire.desktop
+share/ecrire/AUTHORS
+share/ecrire/COPYING
+share/icons/ecrire.png
+share/icons/ecrire.svg
+share/icons/hicolor/128x128/apps/ecrire.png
+share/icons/hicolor/scalable/apps/ecrire.svg
+share/locale/ca/LC_MESSAGES/ecrire.mo
+share/locale/da/LC_MESSAGES/ecrire.mo
+share/locale/eo/LC_MESSAGES/ecrire.mo
+share/locale/es/LC_MESSAGES/ecrire.mo
+share/locale/fr/LC_MESSAGES/ecrire.mo
+share/locale/gl/LC_MESSAGES/ecrire.mo
+share/locale/he/LC_MESSAGES/ecrire.mo
+share/locale/hu/LC_MESSAGES/ecrire.mo
+share/locale/it/LC_MESSAGES/ecrire.mo
+share/locale/ko_KR/LC_MESSAGES/ecrire.mo
+share/locale/lt/LC_MESSAGES/ecrire.mo
+share/locale/pl/LC_MESSAGES/ecrire.mo
+share/locale/pt/LC_MESSAGES/ecrire.mo
+share/locale/sl/LC_MESSAGES/ecrire.mo
+share/locale/sr/LC_MESSAGES/ecrire.mo
+share/locale/tr/LC_MESSAGES/ecrire.mo
+share/locale/zh_CN/LC_MESSAGES/ecrire.mo
