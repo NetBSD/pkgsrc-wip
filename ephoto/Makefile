@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://download.enlightenment.org/rel/apps/ephoto/
 COMMENT=	Image viewer and editor for the enlightenment desktop
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		pkg-config
