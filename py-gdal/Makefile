@@ -26,19 +26,18 @@ PYSETUPSUBDIR=		build/swig/python
 # Upstream's distfile does not have a ready-to-use python module
 # source directory.  Creating it requires cmake, but apparently not
 # building the rest of gdal.
-
-# \todo Consider enhancing cmake support to allow configure-only and
-# not overriding the rest of the targets while allowing use of wheel's
-# build/install targets.
-
+#   \todo Consider enhancing cmake support to allow configure-only and
+#   not overriding the rest of the targets while allowing use of
+#   wheel's build/install targets.
 TOOL_DEPENDS+=	cmake>=0:../../devel/cmake
-
+TOOL_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
 pre-build:
 	cd ${WRKSRC} && mkdir build && cd build && \
 	cmake .. && \
 	cd swig/python && \
 	${MAKE} python_generated_files
 
+BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=3.9.0
 .include "../../geography/gdal-lib/buildlink3.mk"
 # \todo Explain why wheel must be before tool (Python.h not found), or fix
 # documentation of python/foo.mk.
