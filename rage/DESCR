@@ -1,0 +1,10 @@
+This is a Video + Audio player along the lines of mplayer. It's simple
+yet decent looking. It finds album art for you for music files,
+generates thumbnails for videos so you can select logaction by
+thumbnail and more. It accepts file lists on the cmdline ala:
+
+  rage file1.mp3 file2.mp3 file3.avi file4.mp4 file5.ogg
+  rage dvd:/
+  rage http://www.blah.com/stream
+
+You can also specify subtitle files with -sub:
