@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	matthewd@fastmail.us
 HOMEPAGE=	https://download.enlightenment.org/rel/apps/ecrire/
 COMMENT=	Simple text editor for the enlightenment desktop
-LICENSE=	2-clause-bsd
+LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		pkg-config
