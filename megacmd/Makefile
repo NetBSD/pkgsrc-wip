@@ -1,11 +1,11 @@
 # $NetBSD: Makefile,v 1.1 2024/03/11 07:49:12 wiz Exp $
 
-DISTNAME=	megacmd-1.6.3
+DISTNAME=	megacmd-1.7.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=meganz/}
 GITHUB_PROJECT=	MEGAcmd
 GITHUB_TAG=	${PKGVERSION_NOREV}_Linux
-SDK_VERSION=	v4.17.1d
+SDK_VERSION=	v4.31.0b
 
 GITHUB_SUBMODULES=	meganz sdk ${SDK_VERSION} sdk
 
@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v3 AND 2-clause-bsd
 USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	filesystem
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoreconf autoconf automake
+USE_TOOLS+=		autoreconf autoconf automake gmake
 GNU_CONFIGURE=		yes
 REPLACE_SH=		src/client/mega-*
 CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM -std=c++17
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--without-ffmpeg
 CONFIGURE_ARGS+=	--without-libraw
 CONFIGURE_ARGS+=	--without-libzen
 CONFIGURE_ARGS+=	--without-libmediainfo
+CONFIGURE_ARGS+=	--without-rt
 CONFIGURE_ARGS+=	--enable-gcc-hardening
 
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
@@ -53,5 +54,6 @@ post-install:
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/crypto++/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
