@@ -4846,7 +4846,6 @@ SUBDIR+=	qemu-git
 SUBDIR+=	qemu-guest-agent
 SUBDIR+=	qemu-virtfs-netbsd
 SUBDIR+=	qgis
-SUBDIR+=	qgis-lts
 SUBDIR+=	qico
 SUBDIR+=	qiew
 SUBDIR+=	qira
