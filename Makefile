@@ -3469,7 +3469,6 @@ SUBDIR+=	py-country-converter
 SUBDIR+=	py-coverage-badge
 SUBDIR+=	py-cppimport
 SUBDIR+=	py-cracklib
-SUBDIR+=	py-cramjam
 SUBDIR+=	py-crossbar
 SUBDIR+=	py-cryptoim
 SUBDIR+=	py-csa
