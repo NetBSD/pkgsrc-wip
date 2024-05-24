@@ -33,6 +33,7 @@ share/doc/mk-configure/NEWS
 share/doc/mk-configure/NOTES
 share/doc/mk-configure/README.md
 share/doc/mk-configure/TODO
+share/examples/mk-configure/MKCmakefile
 share/examples/mk-configure/Makefile.inc
 share/examples/mk-configure/RBTREE/Makefile
 share/examples/mk-configure/RBTREE/expect.out
@@ -311,7 +312,6 @@ share/examples/mk-configure/libdeps/progs/foobaz/foobaz.c
 share/examples/mk-configure/libdeps/progs/fooquxfoobar/Makefile
 share/examples/mk-configure/libdeps/progs/fooquxfoobar/fooquxfoobar.c
 share/examples/mk-configure/libdeps/test.mk
-share/examples/mk-configure/makefile
 share/examples/mk-configure/multilibs/Makefile
 share/examples/mk-configure/multilibs/app/Makefile
 share/examples/mk-configure/multilibs/app/app.c

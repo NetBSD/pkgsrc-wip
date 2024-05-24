@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-DISTNAME=	mk-configure-0.38.2
+DISTNAME=	mk-configure-0.39.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/mk-configure
 DEPENDS+=	bmake-[0-9]*:../../devel/bmake
 
 USE_LANGUAGES=		c c++
-USE_TOOLS=		makeinfo
+USE_TOOLS=		makeinfo pax
 
 BUILD_TARGET=		all all-doc
 INSTALL_TARGET=		install install-doc
@@ -42,11 +42,13 @@ TEST_TARGET=		test
 
 #	${INSTALL_DATA} ${WRKSRC}/presentation/*.pdf \
 #		${DESTDIR}${PREFIX}/share/doc/mk-configure
+post-build:
+	set -e; cd ${WRKSRC}/mk; \
+	${FIND} . -name 'mkc_imp.cc_*' -o -name 'mkc_imp.cxx_*' | \
+		${SED} "s;^\([.]/\)*;share/mk-configure/mk/;g" > ${WRKDIR}/PLIST-addon
+
 post-install:
-	${CP} -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
-	${FIND} ${DESTDIR}${PREFIX}/share/mk-configure/mk | \
-		grep -E 'mkc_imp.(cc|cxx)' | \
-		${SED} 's;${DESTDIR}${PREFIX}/;;g' > ${WRKDIR}/PLIST-addon
+	cd ${WRKSRC}/examples && ${PAX} -wr * ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -21,7 +21,7 @@ DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
 TOOL_DEPENDS+=	mk-configure>=0.21:../../devel/mk-configure
 
-WRKSRC=			${WRKDIR}/distbb
+WRKSRC=		${WRKDIR}/distbb
 
 USE_LANGUAGES=		# none
 
@@ -34,7 +34,7 @@ REPLACE_FILES.runawk=	gen_weights.in gen_queue.in pkg_summary2build_deps.in \
 			distbb_grep.in
 
 EGDIR=			${PREFIX}/share/examples/distbb
-DOCDIR=			${PREFIX}/share/doc/distbb
+DOCDIR=		${PREFIX}/share/doc/distbb
 
 CONF_FILES=		${EGDIR}/distbb.conf     ${PKG_SYSCONFDIR}/distbb.conf
 CONF_FILES+=		${EGDIR}/distbb.local.mk ${PKG_SYSCONFDIR}/distbb.local.mk
