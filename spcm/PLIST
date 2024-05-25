@@ -87,7 +87,6 @@ sbin/spcm-set-default-nfs-mounts
 sbin/spcm-setup
 sbin/spcm-shutdown
 sbin/spcm-software-manager
-sbin/spcm-spcm-update-from-wip
 sbin/spcm-ssh-keygen
 sbin/spcm-stay-down
 sbin/spcm-sync-files
@@ -100,6 +99,7 @@ sbin/spcm-sync-user
 sbin/spcm-transfer-pw
 sbin/spcm-unlock-local-pw
 sbin/spcm-unlock-user
+sbin/spcm-update-all-from-wip
 sbin/spcm-update-file-servers
 sbin/spcm-update-from-wip
 sbin/spcm-update-manager

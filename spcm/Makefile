@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	spcm-0.5.9.12
+DISTNAME=	spcm-0.5.9.13
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	d88225e88ce50ba96d4e91adbf896ee39aa5372f
+GITHUB_TAG=	3d3d33100fe8075f5a5215231a4d9d68e37aa41c
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/SPCM
