@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.80 2024/02/08 06:18:00 adam Exp $
+
+BLAKE2s (libsml-1.1.3.tar.gz) = 45b2d9247dbbb713afbb4151b982621dc2a2ebe2d67a574578c0d4e4882afad5
+SHA512 (libsml-1.1.3.tar.gz) = 7a91b16af3c17a47baceb7c38e77ccc5506fbdbbe1810acc9d1507344db59ffff67946d2d47d389141a0db60c7ff7a3e9835b314bc7fa5338a17a16c619c3e6a
+Size (libsml-1.1.3.tar.gz) = 87499 bytes
+SHA1 (patch-Makefile) = 993ab7cdbbca3a2a7f9b72ddfc5e92b71f379a89
+SHA1 (patch-examples_Makefile) = b28938f14dae5817eb818b347efab7788724b536
+SHA1 (patch-sml_Makefile) = df5439d194cf3132505114b670864feac502684a

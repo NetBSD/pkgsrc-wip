@@ -1,0 +1,24 @@
+$NetBSD$
+
+Adjust prefix and take care of RPATH.
+
+--- sml/Makefile.orig	2024-03-29 17:05:36.000000000 +0000
++++ sml/Makefile
+@@ -16,7 +16,7 @@ else
+ SONAME=$(NAME).so.$(SOVERSION)
+ endif
+ 
+-LDFLAGS += -Wl,-soname=$(SONAME) -shared
++LDFLAGS += -Wl,-soname=$(SONAME),-R@PREFIX@/lib -shared
+ 
+ LIB_DIR=./lib
+ INC_DIR=./include
+@@ -25,7 +25,7 @@ DYN_LIB=$(LIB_DIR)/$(SONAME)
+ ST_LIB=$(LIB_DIR)/$(NAME).a
+ 
+ INSTALL = /usr/bin/install
+-prefix = /usr/local
++prefix = @PREFIX@
+ exec_prefix = ${prefix}
+ bindir = ${exec_prefix}/bin
+ libdir = ${exec_prefix}/lib

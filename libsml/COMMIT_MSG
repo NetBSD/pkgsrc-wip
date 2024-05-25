@@ -1,0 +1,15 @@
+libSML is a library which implements the Smart Message Language (SML) protocol
+specified by VDE's Forum Netztechnik/Netzbetrieb (FNN). It can be utilized to
+communicate to FNN specified Smart Meters or Smart Meter components (EDL/MUC).
+
+This pkgsrc package is work in progress. For now, the library builds as well
+as the included example program sml_server. The build time tests are not within
+the initial scope as they appear to not work for cross builds. Limited 
+functional testing was performed like this:
+
+	armv7# cu -l /dev/ttyU0 -s 9600 | sml_sever -
+
+(assuming a Smart Meter is connected via a USB-IEC-Interface on /dev/ttyU0).
+
+sml_server is also capable of handling the serial interface directly. This seems
+to be not working on NetBSD now and needs further understanding / patches.

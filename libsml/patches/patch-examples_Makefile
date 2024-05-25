@@ -1,0 +1,27 @@
+$NetBSD$
+
+Adjust prefix and take care of RPATH.
+
+--- examples/Makefile.orig	2024-03-29 17:05:36.000000000 +0000
++++ examples/Makefile
+@@ -1,9 +1,9 @@
+ UNAME := $(shell uname)
+-CFLAGS += -I../sml/include/ -g -std=c99 -Wall -Wextra -pedantic
++CFLAGS += -I../sml/include/ -g -std=c99 -Wall -Wextra -pedantic -Wl,-R@PREFIX@/lib
+ OBJS = sml_server.o
+ LIBSML = ../sml/lib/libsml.so.1
+ INSTALL = /usr/bin/install
+-prefix = /usr/local
++prefix = @PREFIX@
+ exec_prefix = ${prefix}
+ bindir = ${exec_prefix}/bin
+ libdir = ${exec_prefix}/lib
+@@ -17,7 +17,7 @@ endif
+ all: sml_server
+ 
+ sml_server: $(OBJS) $(LIBSML)
+-	$(CC) $(OBJS) $(LIBSML) $(LIBS) -o sml_server
++	$(CC) $(OBJS) $(LIBSML) $(LIBS) -Wl,-R@PREFIX@/lib -L@PREFIX@/lib -o sml_server
+ 
+ %.o: %.c
+ 	$(CC) $(CFLAGS) -c $^ -o $@

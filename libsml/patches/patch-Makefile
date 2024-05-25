@@ -1,0 +1,21 @@
+$NetBSD$
+
+The tests build a binary test runner which is executed during the build.
+This doesn't work with pkgsrc cross builds. Disable it for now.
+
+--- Makefile.orig	2024-05-25 07:40:58.715033583 +0000
++++ Makefile
+@@ -2,13 +2,11 @@
+ all:
+ 	@$(MAKE) -C sml
+ 	@$(MAKE) -C examples
+-	@$(MAKE) -C test
+ 
+ .PHONY: clean install uninstall
+ clean:
+ 	@$(MAKE) -C sml clean
+ 	@$(MAKE) -C examples clean
+-	@$(MAKE) -C test clean
+ 
+ install: all
+ 	@$(MAKE) -C sml install
