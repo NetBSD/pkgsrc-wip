@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (evisum-0.6.0.tar.xz) = 797601f4c7998d649b6d19f980c3479e72aac84e6cb46b79eae76a8a73713758
+SHA512 (evisum-0.6.0.tar.xz) = f9a8722a5373242a1735ddee49e6fd55772d487ba84ad4a69849011c373b01d67d167fade67f96237b68fc668bb052b10d8127945eeb14fc1c773422072bc324
+Size (evisum-0.6.0.tar.xz) = 2063396 bytes
+SHA1 (patch-src_bin_system_filesystems.c) = d0d22ef3cb8506ce65d7d7a4c715530828ed55cb
+SHA1 (patch-src_bin_system_process.c) = 1db03bb46308c7a6d5f654024d55f163c8e3b524

@@ -1,0 +1,7 @@
+Evisum - System Monitor.
+
+This is a process and system monitor for Linux, OpenBSD, FreeBSD and
+DragonFlyBSD. It is server-client based and includes rudimentary tools for
+process, CPU, memory, network, storage and sensor querying. The current set of
+features aims to reach a common denominator between the three popular and
+viable Unix-like operating systems at this time: Linux, FreeBSD and OpenBSD.
