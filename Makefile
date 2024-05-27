@@ -4867,6 +4867,7 @@ SUBDIR+=	qtaccountsservice
 SUBDIR+=	qtfm
 SUBDIR+=	qtile
 SUBDIR+=	qtractor
+SUBDIR+=	qtxdg-tools
 SUBDIR+=	quantlib
 SUBDIR+=	quarkcoin
 SUBDIR+=	quex
