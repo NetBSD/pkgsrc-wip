@@ -15,9 +15,6 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
 
 PKG_SYSCONFSUBDIR=	xdg
@@ -34,11 +31,9 @@ DEPENDS+=	lxqt-menu-data-[0-9]*:../../wip/lxqt-menu-data
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../wip/lxqt2-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
