@@ -2165,6 +2165,7 @@ SUBDIR+=	lvm2
 SUBDIR+=	lwc
 SUBDIR+=	lwtools
 SUBDIR+=	lxdm
+SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt2-build-tools
 SUBDIR+=	lxqt-menu-data
