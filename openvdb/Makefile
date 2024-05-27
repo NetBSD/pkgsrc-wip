@@ -14,8 +14,7 @@ LICENSE=	mpl-2.0
 
 USE_LANGUAGES=	c c++
 GCC_REQD+=	10	# actually needs 9.3.1, but we don't have that
-USE_TOOLS+=	gmake cmake pkg-config
-USE_CMAKE=	yes
+USE_TOOLS+=	gmake pkg-config
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
@@ -25,6 +24,7 @@ pre-configure:
 .include "../../devel/blosc/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/jemalloc/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
