@@ -1,4 +1,0 @@
-$NetBSD$
-
-SHA1 (patch-src_nvim_api_vim.c) = 1639756cb7d3831af4c049060fd9e9d5f033a12c
-SHA1 (patch-src_nvim_math.c) = 6dc85846a11156e6df419ffe45f7e6356a990712

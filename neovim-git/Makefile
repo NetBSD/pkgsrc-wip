@@ -4,7 +4,7 @@ PKGNAME=	neovim-git-0.10.0
 CATEGORIES=	editors
 
 GIT_REPO=	https://github.com/neovim/neovim.git
-GIT_BRANCH=	master
+GIT_REVISION=	f70af5c3cad098ee9c7f1956bc18991cbd515507
 
 MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	http://neovim.org/
