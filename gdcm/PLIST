@@ -370,7 +370,6 @@ include/gdcm-3.0/gdcmjpeg/jmorecfg.h
 include/gdcm-3.0/gdcmjpeg/jpegint.h
 include/gdcm-3.0/gdcmjpeg/jpeglib.h
 include/gdcm-3.0/gdcmjpeg/jversion.h
-include/gdcm-3.0/socketxx/config.h
 include/gdcm-3.0/socketxx/echo.h
 include/gdcm-3.0/socketxx/fork.h
 include/gdcm-3.0/socketxx/ftp.h
