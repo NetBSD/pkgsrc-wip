@@ -1837,6 +1837,7 @@ SUBDIR+=	kubeval
 SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kustomize
+SUBDIR+=	kvantum
 SUBDIR+=	kwin
 SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon
