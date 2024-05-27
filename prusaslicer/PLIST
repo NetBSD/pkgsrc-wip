@@ -897,7 +897,6 @@ share/PrusaSlicer/profiles/gCreate/gmax15p.svg
 share/PrusaSlicer/profiles/gCreate/gmax15p_bed.stl
 share/PrusaSlicer/profiles/gCreate/gmax2.svg
 share/PrusaSlicer/profiles/gCreate/gmax2_bed.stl
-share/PrusaSlicer/resources
 share/PrusaSlicer/shaders/110/background.fs
 share/PrusaSlicer/shaders/110/background.vs
 share/PrusaSlicer/shaders/110/flat.fs

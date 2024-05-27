@@ -21,8 +21,7 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64 *-*-earmv6 *-*-earmv7 *-*-i386
 GCC_REQD+=		10
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
-USE_TOOLS+=		cmake gmake pkg-config:run
-USE_CMAKE=		yes
+USE_TOOLS+=		gmake pkg-config:run
 ICON_THEMES=		yes
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
@@ -46,6 +45,7 @@ pre-configure:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/catch2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libepoll-shim/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
