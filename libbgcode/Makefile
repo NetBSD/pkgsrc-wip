@@ -12,8 +12,7 @@ COMMENT=	XXX
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	cmake gmake
-USE_CMAKE=	yes
+USE_TOOLS+=	gmake
 #CMAKE_ARGS+=	-DLibBGCode_BUILD_DEPS=on
 
 # CMake goes looking for this binary. Make it happy.
@@ -25,6 +24,7 @@ pre-configure:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/catch2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/heatshrink/buildlink3.mk"
 
