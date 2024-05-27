@@ -163,6 +163,9 @@ ${PYSITELIB}/streamlink/plugins/cnews.pyo
 ${PYSITELIB}/streamlink/plugins/crunchyroll.py
 ${PYSITELIB}/streamlink/plugins/crunchyroll.pyc
 ${PYSITELIB}/streamlink/plugins/crunchyroll.pyo
+${PYSITELIB}/streamlink/plugins/chzzk.py
+${PYSITELIB}/streamlink/plugins/chzzk.pyc
+${PYSITELIB}/streamlink/plugins/chzzk.pyo
 ${PYSITELIB}/streamlink/plugins/dailymotion.py
 ${PYSITELIB}/streamlink/plugins/dailymotion.pyc
 ${PYSITELIB}/streamlink/plugins/dailymotion.pyo
@@ -304,9 +307,6 @@ ${PYSITELIB}/streamlink/plugins/nimotv.pyo
 ${PYSITELIB}/streamlink/plugins/nos.py
 ${PYSITELIB}/streamlink/plugins/nos.pyc
 ${PYSITELIB}/streamlink/plugins/nos.pyo
-${PYSITELIB}/streamlink/plugins/nownews.py
-${PYSITELIB}/streamlink/plugins/nownews.pyc
-${PYSITELIB}/streamlink/plugins/nownews.pyo
 ${PYSITELIB}/streamlink/plugins/nowtvtr.py
 ${PYSITELIB}/streamlink/plugins/nowtvtr.pyc
 ${PYSITELIB}/streamlink/plugins/nowtvtr.pyo
@@ -735,6 +735,9 @@ ${PYSITELIB}/streamlink_cli/console.pyo
 ${PYSITELIB}/streamlink_cli/constants.py
 ${PYSITELIB}/streamlink_cli/constants.pyc
 ${PYSITELIB}/streamlink_cli/constants.pyo
+${PYSITELIB}/streamlink_cli/exceptions.py
+${PYSITELIB}/streamlink_cli/exceptions.pyc
+${PYSITELIB}/streamlink_cli/exceptions.pyo
 ${PYSITELIB}/streamlink_cli/main.py
 ${PYSITELIB}/streamlink_cli/main.pyc
 ${PYSITELIB}/streamlink_cli/main.pyo
