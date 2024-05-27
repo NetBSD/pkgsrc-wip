@@ -11,11 +11,11 @@ HOMEPAGE=	https://github.com/atomicobject/heatshrink
 COMMENT=	Data compression library for embedded/real-time systems
 LICENSE=	isc
 
-USE_CMAKE=		yes
-USE_TOOLS+=		cmake gmake
+USE_TOOLS+=		gmake
 INSTALLATION_DIRS+=	bin include lib
 
 post-extract:
 	${CP} ${FILESDIR}/CMakeLists.txt ${FILESDIR}/Config.cmake.in ${WRKSRC}/
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
