@@ -2023,6 +2023,7 @@ SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libqd
 SUBDIR+=	libquantum
+SUBDIR+=	libqtxdg
 SUBDIR+=	libraw1394
 SUBDIR+=	libre
 SUBDIR+=	librem
