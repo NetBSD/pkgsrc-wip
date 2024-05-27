@@ -15,9 +15,6 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 QTXDG_CONF=		share/lxqt
 PKG_SYSCONFSUBDIR=	xdg
 
@@ -35,9 +32,6 @@ CONF_FILES+=	${QTXDG_CONF}/qtxdg.conf \
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fuse-linker-plugin
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../wip/lxqt2-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
@@ -49,4 +43,5 @@ DEPENDS+=	{xterm,mxterm}-[0-9]*:../../x11/xterm
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
