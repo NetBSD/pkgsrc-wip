@@ -12,7 +12,6 @@ COMMENT=	Simple stupid single-header-file SVG parser
 LICENSE=	zlib
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	cmake
-USE_CMAKE=	yes
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
