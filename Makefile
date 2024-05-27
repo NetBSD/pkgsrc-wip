@@ -1980,6 +1980,7 @@ SUBDIR+=	libjxl
 SUBDIR+=	libkml
 SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
+SUBDIR+=	liblxqt
 SUBDIR+=	libm4ri
 SUBDIR+=	libmapper
 SUBDIR+=	libmirisdr-git
