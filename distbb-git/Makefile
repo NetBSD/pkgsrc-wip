@@ -1,7 +1,8 @@
 # $NetBSD: Makefile,v 1.20 2014/08/03 19:48:22 cheusov Exp $
 #
 
-DISTNAME=	distbb-9
+DISTNAME=	distbb-${_GIT_PKGVERSION}
+PKGREVISION=
 CATEGORIES=	pkgtools
 
 MAINTAINER=	cheusov@NetBSD.org
@@ -41,6 +42,7 @@ CONF_FILES+=		${EGDIR}/distbb.local.mk ${PKG_SYSCONFDIR}/distbb.local.mk
 
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 MAKE_ENV+=		DOC_FILES='README LICENSE NEWS TODO TUTORIAL.pod'
+MAKE_ENV+=		VERSION=${_GIT_PKGVERSION}
 
 post-install:
 .for f in ${DOCFILES}
