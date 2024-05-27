@@ -15,9 +15,6 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 MENU_CONF=		share/examples/menus
 PKG_SYSCONFSUBDIR=	xdg
 MAKE_DIRS=		${PKG_SYSCONFDIR}/menus
@@ -33,12 +30,10 @@ CONF_FILES+=	${MENU_CONF}/lxqt-applications-fm.menu \
 CONF_FILES+=	${MENU_CONF}/lxqt-config.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-config.menu
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../wip/lxqt2-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt6-qtbase>=6.6.0
 .include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
