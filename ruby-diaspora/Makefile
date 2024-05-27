@@ -12,7 +12,7 @@ MASTER_SITES=
 # For now, obtain dependencies only.
 META_PACKAGE=	yes
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://diasporaproject.org/
 #HOMEPAGE=	http://diaspora.github.com/diaspora/
 COMMENT=	Federated privacy-aware social network
