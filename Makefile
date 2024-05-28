@@ -4870,6 +4870,7 @@ SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
 SUBDIR+=	qtaccountsservice
+SUBDIR+=	qtermwidget
 SUBDIR+=	qtfm
 SUBDIR+=	qtile
 SUBDIR+=	qtractor
