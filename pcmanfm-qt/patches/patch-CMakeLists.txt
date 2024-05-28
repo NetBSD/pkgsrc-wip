@@ -1,0 +1,22 @@
+$NetBSD$
+
+Switch-off the use layer-shell-qt for Desktop under Wayland.
+
+--- CMakeLists.txt.orig	2024-05-28 11:15:20.461623912 +0000
++++ CMakeLists.txt
+@@ -17,7 +17,6 @@ set(PCMANFM_QT_VERSION ${PCMANFM_QT_VERS
+ set(LIBFMQT_MINIMUM_VERSION "2.0.0")
+ set(LXQTBT_MINIMUM_VERSION "2.0.0")
+ set(QT_MINIMUM_VERSION "6.6.0")
+-set(SHELLQT_MINIMUM_VERSION "6.0.0")
+ 
+ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
+ 
+@@ -26,7 +25,6 @@ find_package(Qt6LinguistTools ${QT_MINIM
+ find_package(Qt6Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+ find_package(fm-qt6 ${LIBFMQT_MINIMUM_VERSION} REQUIRED)
+ find_package(lxqt2-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
+-find_package(LayerShellQt ${SHELLQT_MINIMUM_VERSION} REQUIRED)
+ 
+ message(STATUS "Building ${PROJECT_NAME} with Qt ${Qt6Core_VERSION}")
+ 
