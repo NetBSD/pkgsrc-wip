@@ -2168,6 +2168,7 @@ SUBDIR+=	lxdm
 SUBDIR+=	lximage-qt
 SUBDIR+=	lxmusic
 SUBDIR+=	lxqt2-build-tools
+SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-menu-data
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
