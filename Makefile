@@ -2171,6 +2171,7 @@ SUBDIR+=	lxqt2-build-tools
 SUBDIR+=	lxqt-about
 SUBDIR+=	lxqt-archiver
 SUBDIR+=	lxqt-menu-data
+SUBDIR+=	lxqt-policykit
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
