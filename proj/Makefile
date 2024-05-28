@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.39 2024/05/23 13:35:58 gdt Exp $
 
-VERSION_BASE=	9.4.0
-# Accomodate testing RCs, whcih have names like 9.0RC1 and unpack to
+VERSION_BASE=	9.4.1
+# Accomodate testing RCs, which have names like 9.0RC1 and unpack to
 # 9.0.
-VERSION_RC=
+VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
@@ -27,7 +27,12 @@ USE_CXX_FEATURES=	c++11
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
+
+TOOL_DEPENDS+=		sqlite3>=3.10.0:../../databases/sqlite3
+
+CMAKE_CONFIGURE_ARGS+=	-DRUN_NETWORK_DEPENDENT_TESTS=OFF
+
+.include "../../devel/cmake/build.mk"
 
 # \todo GC this after resolving test issues.
 #.if ${OPSYS} == "NetBSD"
@@ -38,10 +43,19 @@ GNU_CONFIGURE=		yes
 CXXFLAGS.SunOS+=	-fpermissive
 
 # \todo Debug geodtest failure, after we are up to date.
-TEST_TARGET=		check
+TEST_TARGET=		test
 
+# Dependencies documented by upstream
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+
+# Dependencies not documented by upstream
+#  reported 20240527
+.include "../../devel/googletest/buildlink3.mk"
+#  reported 20240527
+.include "../../textproc/nlohmann-json/buildlink3.mk"
+#  not reported
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
