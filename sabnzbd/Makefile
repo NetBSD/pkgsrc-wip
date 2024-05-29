@@ -22,7 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-guessit>=3.1.1:../../textproc/py-guessit
 DEPENDS+=	${PYPKGPREFIX}-jaraco.classes>=3.3.0:../../devel/py-jaraco.classes
 DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
 DEPENDS+=	${PYPKGPREFIX}-puremagic>=1.11:../../sysutils/py-puremagic
-DEPENDS+=	${PYPKGPREFIX}-sabctools>=8.1.0:../../wip/py-sabctools
+DEPENDS+=	${PYPKGPREFIX}-sabctools>=8.2.0:../../wip/py-sabctools
+DEPENDS+=	${PYPKGPREFIX}-apprise>=1.1.0:../../wip/py-apprise
 # Optional:
 #DEPENDS+=	${PYPKGPREFIX}-dbus>=1.3.2:../../sysutils/py-dbus
 

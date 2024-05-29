@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (sabctools-8.1.0.tar.gz) = 35b6568f427c8afea18e2bf1be1de3dad83f1a7e3a18a6e63d92df19038028f0
-SHA512 (sabctools-8.1.0.tar.gz) = 862c39f2e386622b528f120a431f214e1e2e92b7c5a751e47d0768f40ce06ad2736d867f7ac2e1810d676e980312bbfedd29951cbadeddefe75246cdcf53fcc6
-Size (sabctools-8.1.0.tar.gz) = 8963885 bytes
+BLAKE2s (sabctools-8.2.0.tar.gz) = 8ed48b1cb92288ebfb01bd36ace24460fe229fee5bfe0f2eb4526bfe030f6bde
+SHA512 (sabctools-8.2.0.tar.gz) = 007bf7087927f73de1f00df825d6aabc5ccdb265288794ca0fecadf9c1b7ae00e10782588528b3026d68866d0500c602879e82857da6cf99ad4cfebffbe68bb7
+Size (sabctools-8.2.0.tar.gz) = 8974313 bytes
 SHA1 (patch-setup.py) = e04119159c5765d6ecebd272ffd335aeab988e08
