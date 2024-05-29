@@ -61,7 +61,6 @@ GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.mod
 GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.zip
 GO_MODULE_FILES+=	github.com/zeebo/xxh3/@v/v1.0.2.mod
 GO_MODULE_FILES+=	github.com/zeebo/xxh3/@v/v1.0.2.zip
-GO_MODULE_FILES+=	golang.org/toolchain/@v/v0.0.1-go1.22.3.netbsd-amd64.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20230801115018-d63ba01acd4b.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20230801115018-d63ba01acd4b.zip
 GO_MODULE_FILES+=	golang.org/x/image/@v/v0.0.0-20191009234506-e7c1f5e7dbb8.mod

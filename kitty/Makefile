@@ -12,7 +12,7 @@ HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	go122>=1.22:../../lang/go122
+GO_VERSION_REQD+=	122
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config
@@ -20,7 +20,6 @@ USE_TOOLS+=	gmake pkg-config
 USE_CXX_FEATURES+=	has_include
 
 # go
-MKPIE_SUPPORTED=	no
 CHECK_RELRO_SKIP+=	bin/kitten
 CHECK_WRKREF_SKIP+=	bin/kitten
 
@@ -47,22 +46,19 @@ pre-configure:
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
 
-#do-install:
+do-install:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package \
 	    --prefix ${DESTDIR}${PREFIX}
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/kitty.1 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1 || ${TRUE}
-	${MV} ${DESTDIR}${PREFIX}/share/man/man5/kitty.conf.5 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${TRUE}
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ || ${TRUE}
+	${MV} ${DESTDIR}${PREFIX}/share/man/man5/* \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/ || ${TRUE}
 # pkgsrc framwork only handles optimization level 1 files correctly
 	${FIND} ${DESTDIR} -type f -name *.opt-2.pyc -print0 | ${XARGS} -0 ${RM} -rf
 	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
 
 
 .include "go-modules.mk"
-
-.include "../../lang/go/go-module.mk"
-MAKE_ENV+=	GOTOOLCHAIN=go1.22.3
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -88,6 +84,7 @@ MAKE_ENV+=	GOTOOLCHAIN=go1.22.3
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"

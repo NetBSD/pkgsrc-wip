@@ -1,5 +1,7 @@
 $NetBSD$
 
+Support non-evdev platforms.
+
 --- glfw/wl_client_side_decorations.c.orig	2024-05-25 03:37:36.000000000 +0000
 +++ glfw/wl_client_side_decorations.c
 @@ -12,6 +12,11 @@

@@ -1,0 +1,49 @@
+kitty: update to 0.35.0
+
+Packaging updates:
+- use go122, which is required now
+- removed options.mk since the wayland shared lib is built regardless
+
+Upstream updates:
+0.35.0:
+- kitten @ run: A new remote control command to run a process on the
+  machine kitty is running on and get its output
+- notify_on_cmd_finish: Show the actual command that was finished
+- hints kitten: Allow clicking on matched text to select it in
+  addition to typing the hint
+- Shell integration: Make the currently executing cmdline available
+  as a window variable in kitty
+- paste_actions: Fix replace-newline not working with confirm
+- Graphics: Fix aspect ratio of images not being preserved when only a
+  single dimension of the destination rectangle is specified
+- focus_visible_window: Fix selecting with mouse click leaving
+  keyboard in unusable state
+- Desktop notifications protocol: Add support for specifying urgency
+- Improve rendering of Unicode shade character to avoid Moire patterns
+- kitten @ send-key: Fix some keys being sent in kitty keyboard
+  protocol encoding when not using socket for remote control
+- Don't clear selections on erase in screen commands unless the
+  erased region intersects a selection
+- Allow more types of alignment for placement_strategy
+- Add some more box-drawing characters
+- Linux: Run all child processes in their own systemd scope to
+  prevent the OOM killer from harvesting kitty when a child process
+  misbehaves
+- Mouse reporting: Fix horizontal scroll events inverted
+- Remote control: @ action: Fix some actions being performed on the
+  active window instead of the matched window
+- Scrolling with mouse wheel when a selection is active should update
+  the selection
+- Fix kitten @ set-background-opacity limited to min opacity of 0.1
+  instead of 0
+- launch --hold: Fix hold not working if kernel signals process group
+  with SIGINT
+- macOS: Fix --start-as=fullscreen not working when another window is
+  already fullscreen
+- Add option kitten @ detach-window --stay-in-tab to keep focus in
+  the currently active tab when moving windows
+- macOS: Fix changieg window chrome/colors while in traditional
+  fullscreen causing the titlebar to become visible
+
+To see the rest of the updates:
+https://sw.kovidgoyal.net/kitty/changelog/#detailed-list-of-changes
