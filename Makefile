@@ -2935,6 +2935,7 @@ SUBDIR+=	partio
 SUBDIR+=	partonevolution
 SUBDIR+=	passepartout
 SUBDIR+=	passphrase-git
+SUBDIR+=	pavucontrol-qt
 SUBDIR+=	paxmirabilis
 SUBDIR+=	paxtest
 SUBDIR+=	payara41
