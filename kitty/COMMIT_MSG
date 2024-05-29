@@ -2,7 +2,6 @@ kitty: update to 0.35.0
 
 Packaging updates:
 - use go122, which is required now
-- removed options.mk since the wayland shared lib is built regardless
 
 Upstream updates:
 0.35.0:
