@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.43 2023/08/14 05:25:34 wiz Exp $
 
-DISTNAME=	kitty-0.30.1
+DISTNAME=	kitty-0.35.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -12,7 +12,7 @@ HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	go121>=1.21<1.22:../../lang/go121
+TOOL_DEPENDS+=	go122>=1.22:../../lang/go122
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config
@@ -42,12 +42,12 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
 
 pre-configure:
-	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/go121 go
+	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/go122 go
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
 
-do-install:
+#do-install:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package \
 	    --prefix ${DESTDIR}${PREFIX}
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/kitty.1 \
@@ -57,6 +57,12 @@ do-install:
 # pkgsrc framwork only handles optimization level 1 files correctly
 	${FIND} ${DESTDIR} -type f -name *.opt-2.pyc -print0 | ${XARGS} -0 ${RM} -rf
 	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
+
+
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
+MAKE_ENV+=	GOTOOLCHAIN=go1.22.3
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,6 +75,7 @@ do-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/simde/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
