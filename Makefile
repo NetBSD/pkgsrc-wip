@@ -2175,6 +2175,7 @@ SUBDIR+=	lxqt-globalkeys
 SUBDIR+=	lxqt-menu-data
 SUBDIR+=	lxqt-openssh-askpass
 SUBDIR+=	lxqt-policykit
+SUBDIR+=	lxqt-powermanagement
 SUBDIR+=	lxqt-sudo
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lzs-lkm
