@@ -35,7 +35,7 @@ CONF_FILES=		${EGDIR}/nih.conf \
 			${PKG_SYSCONFDIR}/nih.conf
 
 MAKE_DIRS+=		${VARBASE}/cache/nih/summary ${VARBASE}/cache/nih/src_summary \
-   ${VARBASE}/cache/nih/cache ${VARBASE}/cache/nih/history
+   ${VARBASE}/cache/nih/packages ${VARBASE}/cache/nih/history
 
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
@@ -49,7 +49,6 @@ MAKE_ENV+=		VARDIR=${VARBASE}
 MAKE_ENV+=		REAL_ROOT_USER=${REAL_ROOT_USER}
 MAKE_ENV+=		REAL_ROOT_GROUP=${REAL_ROOT_GROUP}
 MAKE_ENV+=		PKGSRCDIR=${PKGSRCDIR}
-MAKE_ENV+=		PACKAGES=${PACKAGES}
 
 .include "../../mk/bsd.prefs.mk"
 
