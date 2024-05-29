@@ -50,12 +50,10 @@ ${PYSITELIB}/sabnzbd/utils/diskspeed.py
 ${PYSITELIB}/sabnzbd/utils/file_extension.py
 ${PYSITELIB}/sabnzbd/utils/getperformance.py
 ${PYSITELIB}/sabnzbd/utils/kronos.py
-${PYSITELIB}/sabnzbd/utils/pathbrowser.py
 ${PYSITELIB}/sabnzbd/utils/pybonjour.py
 ${PYSITELIB}/sabnzbd/utils/pystone.py
 ${PYSITELIB}/sabnzbd/utils/rarfile.py
 ${PYSITELIB}/sabnzbd/utils/rarvolinfo.py
-${PYSITELIB}/sabnzbd/utils/servertests.py
 ${PYSITELIB}/sabnzbd/utils/sleepless.py
 ${PYSITELIB}/sabnzbd/utils/ssdp.py
 ${PYSITELIB}/sabnzbd/utils/systrayiconthread.py
@@ -184,6 +182,7 @@ share/sabnzbd/po/email/es.po
 share/sabnzbd/po/email/fi.po
 share/sabnzbd/po/email/fr.po
 share/sabnzbd/po/email/he.po
+share/sabnzbd/po/email/it.po
 share/sabnzbd/po/email/nb.po
 share/sabnzbd/po/email/nl.po
 share/sabnzbd/po/email/pl.po
@@ -202,6 +201,7 @@ share/sabnzbd/po/main/es.po
 share/sabnzbd/po/main/fi.po
 share/sabnzbd/po/main/fr.po
 share/sabnzbd/po/main/he.po
+share/sabnzbd/po/main/it.po
 share/sabnzbd/po/main/nb.po
 share/sabnzbd/po/main/nl.po
 share/sabnzbd/po/main/pl.po
@@ -220,6 +220,7 @@ share/sabnzbd/po/nsis/es.po
 share/sabnzbd/po/nsis/fi.po
 share/sabnzbd/po/nsis/fr.po
 share/sabnzbd/po/nsis/he.po
+share/sabnzbd/po/nsis/it.po
 share/sabnzbd/po/nsis/nb.po
 share/sabnzbd/po/nsis/nl.po
 share/sabnzbd/po/nsis/pl.po
