@@ -1,0 +1,3 @@
+x11/lxqt-about: update to 2.0.0
+
+ - Ported to Qt6.

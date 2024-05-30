@@ -1,0 +1,3 @@
+archivers/lxqt-archiver: update to 1.0.0
+
+ - Ported to Qt6.
