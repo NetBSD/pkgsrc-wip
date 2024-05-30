@@ -799,5 +799,3 @@ share/doc/kitty/html/unscroll.html
 share/icons/hicolor/256x256/apps/kitty.png
 share/icons/hicolor/scalable/apps/kitty.svg
 share/terminfo/x/xterm-kitty
-@pkgdir share/man/man5
-@pkgdir share/man/man1
