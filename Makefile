@@ -2573,6 +2573,7 @@ SUBDIR+=	ocaml-sha
 SUBDIR+=	ocamlweb
 SUBDIR+=	occt
 SUBDIR+=	ocserv
+SUBDIR+=	odin
 SUBDIR+=	offset
 SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
