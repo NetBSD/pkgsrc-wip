@@ -25,8 +25,8 @@ configuration project default is
    for Library_Encapsulated_Supported use "true";
    for Library_Encapsulated_Options use ("-shared", "-static-libgcc");
    
-   for Toolchain_Version ("Ada") use "GNAT 13.2.0";
-   for Runtime_Dir       ("Ada") use "@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0";
+   --for Toolchain_Version ("Ada") use "GNAT 13.2.0";
+   --for Runtime_Dir       ("Ada") use "@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0";
 
    package Builder is
       for Executable_Suffix use "";
@@ -69,8 +69,8 @@ configuration project default is
            "   Casing          => %c," &
            "   Dot_Replacement => ""%d"");";
       for Config_File_Unique    ("Ada") use "False";
-      for Leading_Required_Switches ("Ada") use
-        Compiler'Leading_Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+      for Leading_Required_Switches ("Ada") use Compiler'Leading_Required_Switches ("Ada");
+        --& ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
       for PIC_Option ("Ada") use ("-fPIC");
         
       for Leading_Required_Switches   ("C") use
@@ -115,8 +115,8 @@ configuration project default is
       for Objects_Path_File     ("Ada") use "ADA_PRJ_OBJECTS_FILE";
       for Driver         ("Ada") use
           "@WRKDIR@/.buildlink/libexec/gprbuild/gprbind";
-      for Required_Switches ("Ada") use
-        Binder'Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+      for Required_Switches ("Ada") use Binder'Required_Switches ("Ada");
+        --& ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
    end Binder;
    
    package Linker is

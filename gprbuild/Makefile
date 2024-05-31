@@ -3,7 +3,7 @@
 .include "version.mk"
 
 DISTNAME=	gprbuild-${GPRBUILD_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
