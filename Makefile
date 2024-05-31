@@ -3134,6 +3134,7 @@ SUBDIR+=	pmk
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
+SUBDIR+=	podman
 SUBDIR+=	pointtools-git
 SUBDIR+=	poke-git
 SUBDIR+=	polarssl11

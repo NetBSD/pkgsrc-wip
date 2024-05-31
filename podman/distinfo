@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.9 2023/02/20 15:35:46 tnn Exp $
+
+BLAKE2s (podman-5.0.3.tar.gz) = 7afdfd82acc64c7308fbc92294dbcea42d12a92f082dda12d8579195827cfb53
+SHA512 (podman-5.0.3.tar.gz) = c605a52cc5aba43d485796c4986f2d1be704e5c931473bf5ba1cf77f703cdb3d16f41d33da0b25287e8d001077f77caf117d3ea5dbd7c56a744274025d9ab07d
+Size (podman-5.0.3.tar.gz) = 23814179 bytes
+SHA1 (patch-cmd_podman_registry_config.go) = 80b0f940c59f0c0f258c2240bac30af6a0cb21dd
+SHA1 (patch-pkg_machine_ignition__netbsd.go) = f5b4640d77c6152aa51c0c0e68de47fded340869
+SHA1 (patch-pkg_machine_qemu_machine.go) = 2a38d35a29c67960311d8cd154637a22163c423d
+SHA1 (patch-pkg_machine_qemu_options__netbsd.go) = a256dcafceb70f29b4f7a1ed013b52b5d6b0f4ba
+SHA1 (patch-pkg_machine_qemu_options__netbsd__amd64.go) = 012b2416bb6dceb81450a53d9a7bc771fcb6a1e4
+SHA1 (patch-pkg_machine_qemu_options__netbsd__arm64.go) = 1273821aaa1b1fcfa45c16a07d7d3819a660e1e0
+SHA1 (patch-pkg_machine_qemu_stubber.go) = 8060e5e323a7b0115bb7b0812ae03489c2282175
+SHA1 (patch-pkg_machine_vmconfigs_config__common.go) = 3e25fe9b6cce69c67ceed809837ae4e650e2b9a8
+SHA1 (patch-pkg_util_utils__netbsd.go) = dcda52540148e5c77034322198a8ecedcd8c07e7
+SHA1 (patch-vendor_github.com_containers_buildah_copier_hardlink__uint64.go) = 81317fae0c5596960d3b17b7a1724734e3f100ca
+SHA1 (patch-vendor_github.com_containers_buildah_copier_hardlink__unix.go) = 54f1ecacf342c1f61a6a5e63294057add3016e66
+SHA1 (patch-vendor_github.com_containers_buildah_define_mount__unsupported.go) = 75d1a3dfce7806476f04d4a6d67a7858583838ee
+SHA1 (patch-vendor_github.com_containers_buildah_util_util__unix.go) = baf41542f16a9b73cd52a6162fb021a1259d73c6
+SHA1 (patch-vendor_github.com_containers_common_pkg_password_password__supported.go) = 2110467de202a02e428f71761b2261e578744c81
+SHA1 (patch-vendor_github.com_containers_storage_drivers_chroot__unix.go) = 7edf512a4a6c0e0c7cd67b195b53a2d86ac76b14
+SHA1 (patch-vendor_github.com_containers_storage_pkg_archive_archive__bsd.go) = f93fc181d327d2d462068126abb1a17cce969ae9
+SHA1 (patch-vendor_github.com_containers_storage_pkg_directory_directory__unix.go) = a21e2a4053600702e9524a33472e1d8140cd926f
+SHA1 (patch-vendor_github.com_containers_storage_pkg_homedir_homedir__others.go) = 0b8ce4bf45e11dabf97282a755d6f8e692fffb29
+SHA1 (patch-vendor_github.com_containers_storage_pkg_lockfile_lockfile__unix.go) = d8e194149118d62fce9b50183356854b7c10678f
+SHA1 (patch-vendor_github.com_containers_storage_pkg_system_stat__netbsd.go) = 37bae90c1b3d97f8b4166fca2c59d144c41f81f8
+SHA1 (patch-vendor_github.com_containers_storage_pkg_system_syscall__unix.go) = 7acfc6076d0704557e2e1f2c2b7f3467eb2de629
