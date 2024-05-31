@@ -4691,6 +4691,7 @@ SUBDIR+=	py-tils
 SUBDIR+=	py-timeago
 SUBDIR+=	py-timeline
 SUBDIR+=	py-tinyarray
+SUBDIR+=	py-tinygrad
 SUBDIR+=	py-tklsystem
 SUBDIR+=	py-tldr
 SUBDIR+=	py-tmatrix

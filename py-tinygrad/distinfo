@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (tinygrad-0.9.0.tar.gz) = f5767854dcf0c72106e24849f9b0cb0ebbb2b66f2bfba2f6fb2926e672f447f3
+SHA512 (tinygrad-0.9.0.tar.gz) = c9def73f7a56f8744de29f8170f5ece9ce59628d9814bb643817f92f48ee9eb39e8bc5f7143df2b41bd793badff472a7aa0e1a554f38dad4011bca9e13791e52
+Size (tinygrad-0.9.0.tar.gz) = 5227191 bytes
