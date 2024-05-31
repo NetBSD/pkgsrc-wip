@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=	virtualxt-0.12
+DISTNAME=	virtualxt-1.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andreas-jonsson/}
 
