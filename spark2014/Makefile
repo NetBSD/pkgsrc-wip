@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/05/02 14:00:00 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2024/05/31 14:00:00 dkazankov Exp $
 
 .include "version.mk"
 PKGNAME=	spark2014-${SPARK2014_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/spark2014
@@ -29,7 +30,7 @@ GITHUB_SUBMODULES+=	AdaCore	cvc5	98b5fb70e8a94fd258bfc959c4a6fd0cc3537564	cvc5
 GITHUB_SUBMODULES+=	AdaCore	why3	52b6a590ba9bfc64aa0d22b41715358f26124a1f	why3
 GITHUB_SUBMODULES+=	AdaCore	z3	7e79f0deb7c9d43f7637113be5b99391f14fcc2e	z3
 
-GCC_DIST_VERSION=	13.2.0
+GCC_DIST_VERSION=	13.3.0
 GCC_DISTNAME=		gcc-${GCC_DIST_VERSION}
 GCC_EXTRACT_SUFFIX=	.tar.xz
 GCC_DISTFILE=		${GCC_DISTNAME}${GCC_EXTRACT_SUFFIX}
