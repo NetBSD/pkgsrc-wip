@@ -11,8 +11,9 @@ HOMEPAGE=	https://github.com/jhalter/mobius
 COMMENT=	Hotline server
 LICENSE=	mit
 
-GO_SRCPATH=	github.com/jhalter/mobius
-GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
+GO_VERSION_REQD=	122
+GO_SRCPATH=		github.com/jhalter/mobius
+GO_DIST_BASE=		${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
