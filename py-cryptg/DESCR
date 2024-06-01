@@ -1,0 +1,2 @@
+This is a small native extension for Python 3 to help libraries that want
+to work with the Telegram API, which uses the uncommon AES-IGE mode for it.

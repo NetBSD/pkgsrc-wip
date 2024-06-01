@@ -1,0 +1,10 @@
+@comment $NetBSD$
+${PYSITELIB}/cryptg-${PKGVERSION}.0.dist-info/LICENSE.txt
+${PYSITELIB}/cryptg-${PKGVERSION}.0.dist-info/METADATA
+${PYSITELIB}/cryptg-${PKGVERSION}.0.dist-info/RECORD
+${PYSITELIB}/cryptg-${PKGVERSION}.0.dist-info/WHEEL
+${PYSITELIB}/cryptg-${PKGVERSION}.0.dist-info/top_level.txt
+${PYSITELIB}/cryptg/__init__.py
+${PYSITELIB}/cryptg/__init__.pyc
+${PYSITELIB}/cryptg/__init__.pyo
+${PYSITELIB}/cryptg/cryptg.so
