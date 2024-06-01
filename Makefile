@@ -1283,6 +1283,7 @@ SUBDIR+=	go-junit-report
 SUBDIR+=	go-ksuid
 SUBDIR+=	go-makezero
 SUBDIR+=	go-mewn
+SUBDIR+=	go-mobius
 SUBDIR+=	go-mock
 SUBDIR+=	go-python
 SUBDIR+=	go-rice
