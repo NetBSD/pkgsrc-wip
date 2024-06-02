@@ -1,6 +1,8 @@
 $NetBSD$
 
-Add netbsd support (vendor code)
+Add netbsd support (vendor code) - https://github.com/containers/storage/pull/1935
+
+NOT UPSTREAMED:
 For some reason unix.SEEK_SET is not defined in the NetBSD runtime code.
 But SEEK_SET is 0 on every platform, so just use that for now.
 
