@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	go-mobius-0.12.2
+DISTNAME=	go-mobius-0.12.3
 GITHUB_PROJECT=	mobius
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jhalter/}
