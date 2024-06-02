@@ -1,9 +1,8 @@
 # $NetBSD$
 
-
 DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
+MASTER_SITES=	${MASTER_SITE_APACHE:=arrow/arrow-${APACHE_ARROW_VERSION}/}/
 
 
 MAINTAINER=	matthewd@fastmail.us
@@ -16,22 +15,23 @@ LICENSE=	apache-2.0
 # They come from ./cpp/thirdparty/versions.txt
 XSIMD=		9.0.1.tar.gz
 JEMALLOC=	jemalloc-5.3.0.tar.bz2
-
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${XSIMD}
 DISTFILES+=		${JEMALLOC}
+
 SITES.${XSIMD}=		https://github.com/xtensor-stack/xsimd/archive/
 SITES.${JEMALLOC}=	${MASTER_SITE_GITHUB:=jemalloc/jemalloc/releases/download/5.3.0/}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-CONFIGURE_DIRS=	cpp
-BUILD_DIRS=	cpp
+CONFIGURE_DIR=	cpp
 
 USE_LANGUAGES=	c c++
-USE_TOOLS=	cmake gmake
-USE_CMAKE=	yes
+USE_TOOLS=	gmake install
+# Needs gnu install for -v option
+TOOLS_PLATFORM.install=
+
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=	-DARROW_DEPENDENCY_SOURCE=SYSTEM
 # Not yet for Gandiva
@@ -57,19 +57,13 @@ CMAKE_ARGS+=	-DARROW_BUILD_TESTS=OFF
 
 # Fix this version expansion as we have to
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.${APACHE_ARROW_VERSION:C/\..*//g}00.${APACHE_ARROW_VERSION:C/[0-9]*\.[0-9]*\.//1}.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
+	${MV} ${DESTDIR}${PREFIX}/share/gdb/auto-load/${LOCALBASE}/lib/libarrow.so.${APACHE_ARROW_VERSION:C/\./0/1}.0-gdb.py ${DESTDIR}${PREFIX}/share/arrow/gdb/
 
-TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
-# Needs gnu install for -v option
-.if ${OPSYS} == "NetBSD"
-TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
-TOOLS_PATH.install=	${PREFIX}/bin/ginstall
-.endif
 
 .include "../../wip/apache-arrow/version.mk"
 .include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/cmake/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gflags/buildlink3.mk"
 # .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/flatbuffers/buildlink3.mk"

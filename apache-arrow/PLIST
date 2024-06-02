@@ -419,21 +419,21 @@ lib/cmake/Parquet/ParquetTargets-release.cmake
 lib/cmake/Parquet/ParquetTargets.cmake
 lib/libarrow.a
 lib/libarrow.so
-lib/libarrow.so.1600
-lib/libarrow.so.1600.0.0
+lib/libarrow.so.1601
+lib/libarrow.so.1601.0.0
 lib/libarrow_acero.a
 lib/libarrow_acero.so
-lib/libarrow_acero.so.1600
-lib/libarrow_acero.so.1600.0.0
+lib/libarrow_acero.so.1601
+lib/libarrow_acero.so.1601.0.0
 lib/libarrow_bundled_dependencies.a
 lib/libarrow_dataset.a
 lib/libarrow_dataset.so
-lib/libarrow_dataset.so.1600
-lib/libarrow_dataset.so.1600.0.0
+lib/libarrow_dataset.so.1601
+lib/libarrow_dataset.so.1601.0.0
 lib/libparquet.a
 lib/libparquet.so
-lib/libparquet.so.1600
-lib/libparquet.so.1600.0.0
+lib/libparquet.so.1601
+lib/libparquet.so.1601.0.0
 lib/pkgconfig/arrow-acero.pc
 lib/pkgconfig/arrow-compute.pc
 lib/pkgconfig/arrow-csv.pc
@@ -443,8 +443,8 @@ lib/pkgconfig/arrow-json.pc
 lib/pkgconfig/arrow.pc
 lib/pkgconfig/parquet.pc
 share/arrow/gdb/gdb_arrow.py
-share/arrow/gdb/libarrow.so.1600.0.0-gdb.py
+share/arrow/gdb/libarrow.so.1601.0.0-gdb.py
 share/doc/arrow/LICENSE.txt
 share/doc/arrow/NOTICE.txt
 share/doc/arrow/README.md
-@pkgdir share/gdb/auto-load/home/matthew/pkgsrc/install.20240420/lib
+@pkgdir share/gdb/auto-load/usr/pkg/lib
