@@ -9,15 +9,17 @@ HOMEPAGE=	https://arrow.apache.org/
 COMMENT=	Python Bindings for Apache-Arrow
 LICENSE=	apache-2.0
 DISTINFO_FILE=	${.CURDIR}/../../wip/apache-arrow/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/apache-arrow/patches
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/apache-arrow/options.mk"
 .include "../../wip/apache-arrow/version.mk"
 
 USE_LANGUAGES=	c c++
-TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+
+#CONFIGURE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 
 DEPENDS+=	apache-arrow>=${APACHE_ARROW_VERSION}:../../wip/apache-arrow
 
@@ -25,10 +27,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-fixture
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-USE_TOOLS=	cmake gmake pkg-config
+TEST_DEPENDS+=	${PYPKGPREFIX}-pandas>=2.0.0:../../math/py-pandas
+USE_TOOLS=	gmake pkg-config
 
-MAKE_ENV+=	PYARROW_PARALLEL=${_MAKE_JOBS_N}
-WHEELFILE?=	${WRKSRC}/python/dist/pyarrow-${APACHE_ARROW_VERSION}-cp${_PYTHON_VERSION}-cp${_PYTHON_VERSION}-linux_x86_64.whl
+MAKE_ENV+=	PYARROW_PARALLEL=${MAKE_JOBS}
+MAKE_ENV+=	PYARROW_WITH_DATASET=1
+
+WHEELFILE?=	${WRKSRC}/python/dist/*whl
 
 # libarrow_python.so: ORIGIN Doesn't get passed through correclty
 SUBST_CLASSES+=		origin
@@ -36,7 +41,6 @@ SUBST_STAGE.origin=	pre-configure
 SUBST_FILES.origin=	python/CMakeLists.txt
 SUBST_SED.origin=	-e 's|\\$$ORIGIN|${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages/pyarrow|g'
 
-CONFIGURE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
 do-build:
 	${RM} -rf ${WRKSRC}/python/.eggs
