@@ -17,7 +17,6 @@ GIT_REPO.distbb=	https://github.com/cheusov/distbb.git
 DEPENDS+=	pkg_summary-utils>=0.68.0:../../pkgtools/pkg_summary-utils
 DEPENDS+=	paexec>=1.1.5:../../parallel/paexec
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
-DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
 TOOL_DEPENDS+=	mk-configure>=0.21:../../devel/mk-configure
