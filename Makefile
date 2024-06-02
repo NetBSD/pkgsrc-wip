@@ -1585,7 +1585,6 @@ SUBDIR+=	hs-strict-io
 SUBDIR+=	hs-stringable
 SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-system-filepath
-SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-test-framework
 SUBDIR+=	hs-test-framework-hunit
 SUBDIR+=	hs-test-framework-quickcheck2
