@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	nodeenv-1.8.0
+DISTNAME=	nodeenv-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekalinin/}
@@ -14,9 +14,12 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
+REPLACE_PYTHON=	nodeenv.py
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} nodeenv nodeenv-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
