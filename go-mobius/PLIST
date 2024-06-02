@@ -1,3 +1,11 @@
 @comment $NetBSD$
 bin/mobius-hotline-client
 bin/mobius-hotline-server
+share/mobius/config/Agreement.txt
+share/mobius/config/Files/hello.txt
+share/mobius/config/MessageBoard.txt
+share/mobius/config/ThreadedNews.yaml
+share/mobius/config/Users/admin.yaml
+share/mobius/config/Users/guest.yaml
+share/mobius/config/banner.jpg
+share/mobius/config/config.yaml
