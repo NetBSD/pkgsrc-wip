@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	icewm-3.4.7
+DISTNAME=	icewm-3.5.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/icewm/releases/download/${PKGVERSION_NOREV}/}
-EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ice-wm.org/
@@ -21,11 +20,17 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-corefonts
 CONFIGURE_ARGS+=	--enable-i18n
 
-USE_TOOLS+=	pkg-config gmake perl
+TOOL_DEPENDS+=	multimarkdown-[0-9]*:../../textproc/multimarkdown
+
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake perl autoreconf autoconf automake
 
 REPLACE_PERL=	contrib/icewm-menu-xrandr
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fis
 
 post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
