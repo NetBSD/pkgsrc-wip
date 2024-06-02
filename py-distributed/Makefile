@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	distributed-2024.4.2
+DISTNAME=	distributed-2024.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 GITHUB_PROJECT=	distributed
