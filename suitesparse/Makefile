@@ -8,7 +8,7 @@ GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
-COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
+COMMENT=	Set of packages for sparse matrices calculation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,7 +36,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 # Creating shared libs for all platforms is complicated.  Putting this off
 # for now.
 # WRKSRC_SHARED=${WRKSRC}_shared
-SVERSION=	1
+# SVERSION=	1
 
 .if defined (WITH_METIS)
 METIS=		${PREFIX}/lib/libmetis.a
@@ -119,5 +119,7 @@ do-install:
 .include "../../math/metis/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
