@@ -2,7 +2,7 @@
 
 DISTNAME=	icewm-3.5.0
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/icewm/releases/download/${PKGVERSION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ice-wm.org/
