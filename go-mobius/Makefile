@@ -18,7 +18,9 @@ GO_DIST_BASE=		${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	share/mobius/config
 
+# XXX Better to just not build the mobius-hotline-client in the first place.
 post-install:
+	rm -f ${DESTDIR}${PREFIX}/bin/mobius-hotline-client
 	cd ${WRKSRC}/cmd/mobius-hotline-server/mobius/config && \
 		${PAX} -r -w . ${DESTDIR}${PREFIX}/share/mobius/config
 

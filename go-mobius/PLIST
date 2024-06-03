@@ -1,5 +1,4 @@
 @comment $NetBSD$
-bin/mobius-hotline-client
 bin/mobius-hotline-server
 share/mobius/config/Agreement.txt
 share/mobius/config/Files/hello.txt
