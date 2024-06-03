@@ -119,4 +119,5 @@ do-install:
 .include "../../math/metis/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
