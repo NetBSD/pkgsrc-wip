@@ -2047,12 +2047,12 @@ share/emacs/${PKGVERSION}/lisp/eshell/esh-cmd.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-cmd.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-ext.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-ext.elc
-share/emacs/${PKGVERSION}/lisp/eshell/esh-groups.el.gz
-share/emacs/${PKGVERSION}/lisp/eshell/esh-groups.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-io.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-io.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-mode.elc
+share/emacs/${PKGVERSION}/lisp/eshell/esh-module-loaddefs.el.gz
+share/emacs/${PKGVERSION}/lisp/eshell/esh-module-loaddefs.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-module.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-module.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-opt.el.gz
