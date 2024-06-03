@@ -6,4 +6,4 @@ Size (naev-0.11.4.tar.gz) = 20209263 bytes
 BLAKE2s (naev-naev-artwork-production-e2d2edab2317d296eb14a830505b1dc41d02dec1.tar.gz) = b061ac01b8556f1a1959c4620b1e4448ec20e663dd115477ee34fa3fe3e5352e
 SHA512 (naev-naev-artwork-production-e2d2edab2317d296eb14a830505b1dc41d02dec1.tar.gz) = 3ae7cbed2748c1b7b625da2e53af55f7199cd438b036276dc9315a9f141a6bafbc86144c7d2b126db9460c4fa06bf394b1d2cfb5a60e1cb020f90b7b58095a9c
 Size (naev-naev-artwork-production-e2d2edab2317d296eb14a830505b1dc41d02dec1.tar.gz) = 454967410 bytes
-SHA1 (patch-meson.build) = bc9de39c6aedd37bc44a1594144a6aad0b9872c2
+SHA1 (patch-docs_meson.build) = e87ee40e0558ac1e59cacd5db629c66d25971c9e

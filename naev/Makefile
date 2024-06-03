@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.7 2020/11/05 09:08:13 ryoon Exp $
 
-DISTNAME=	naev-0.11.4
-CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=naev/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=		naev-0.11.4
+CATEGORIES=		games
+MASTER_SITES=		${MASTER_SITE_GITHUB:=naev/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 GITHUB_SUBMODULES=	naev naev-artwork-production e2d2edab2317d296eb14a830505b1dc41d02dec1 artwork
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,9 +17,14 @@ DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 REPLACE_BASH=	naev-confupdate.sh
 
-INSTALL_TARGET=	install install-data-local
+CFLAGS+=	-fopenmp
+LDFLAGS+=	-lomp -lcamd
 
-MESON_ARGS+=		-Dndata_path="${INSTALL_GAME_DIR}"
+GAME_DIR=	${PREFIX}/share/naev/
+
+INSTALL_TARGET=	install install-data-local ${GAME_DIR}
+
+MESON_ARGS+=		-Dndata_path="${GAME_DIR}"
 
 SUBST_CLASSES+=		alloca
 SUBST_FILES.alloca+=	meson.build
@@ -28,23 +33,14 @@ SUBST_SED.alloca+=	-e "s,HAVE_ALLOCA_H,NAEV_HAVE_ALLOCA_H,"
 SUBST_STAGE.alloca=	post-extract
 SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 
-#CONFIGURE_ARGS+=	--enable-debug=no
-#CONFIGURE_ARGS+=	--enable-lua=shared
-#CONFIGURE_ARGS+=	--disable-sdltest
-
-#INSTALL_MAKE_FLAGS+=	INSTALL_GAME_DIR="${INSTALL_GAME_DIR}"
-#INSTALL_MAKE_FLAGS+=	INSTALL_GAME_DATA="${INSTALL_GAME_DATA}"
-
-# These scripts are not used once
-# installed, they appear to be for
-# developer use only -- but meson
-# installs them anyway
-#pre-build:
-#	${RM} ${WRKSRC}/dat/gfx/metadata_sprite.sh
-#	${RM} ${WRKSRC}/dat/gfx/outfit/check.sh
-#	${RM} ${WRKSRC}/dat/gfx/planet/check.sh
-#	${RM} ${WRKSRC}/dat/gfx/ship/update.sh
-#	${RM} ${WRKSRC}/dat/snd/music/checkgain.sh
+SUBST_CLASSES+=		bash
+SUBST_FILES.bash+=	artwork/gfx/outfit/check.sh
+SUBST_FILES.bash+=	artwork/gfx/spob/check.sh
+SUBST_FILES.bash+=	artwork/gfx/ship/update.sh
+SUBST_FILES.bash+=	artwork/snd/music/checkgain.sh
+SUBST_SED.bash+=	-e "s,/usr/bin/env ,${PREFIX}/bin/,"
+SUBST_STAGE.bash=	post-extract
+SUBST_MESSAGE.bash=	Use the pkgsrc bash
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
@@ -65,7 +61,9 @@ SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 .include "../../math/glpk/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../net/enet/buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libunibreak/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
