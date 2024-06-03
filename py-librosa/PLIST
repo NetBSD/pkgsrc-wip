@@ -1,20 +1,25 @@
 @comment $NetBSD$
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/librosa/__init__.py
 ${PYSITELIB}/librosa/__init__.pyc
+${PYSITELIB}/librosa/__init__.pyi
 ${PYSITELIB}/librosa/__init__.pyo
 ${PYSITELIB}/librosa/_cache.py
 ${PYSITELIB}/librosa/_cache.pyc
 ${PYSITELIB}/librosa/_cache.pyo
+${PYSITELIB}/librosa/_typing.py
+${PYSITELIB}/librosa/_typing.pyc
+${PYSITELIB}/librosa/_typing.pyo
 ${PYSITELIB}/librosa/beat.py
 ${PYSITELIB}/librosa/beat.pyc
 ${PYSITELIB}/librosa/beat.pyo
 ${PYSITELIB}/librosa/core/__init__.py
 ${PYSITELIB}/librosa/core/__init__.pyc
+${PYSITELIB}/librosa/core/__init__.pyi
 ${PYSITELIB}/librosa/core/__init__.pyo
 ${PYSITELIB}/librosa/core/audio.py
 ${PYSITELIB}/librosa/core/audio.pyc
@@ -31,6 +36,10 @@ ${PYSITELIB}/librosa/core/fft.pyo
 ${PYSITELIB}/librosa/core/harmonic.py
 ${PYSITELIB}/librosa/core/harmonic.pyc
 ${PYSITELIB}/librosa/core/harmonic.pyo
+${PYSITELIB}/librosa/core/intervals.msgpack
+${PYSITELIB}/librosa/core/intervals.py
+${PYSITELIB}/librosa/core/intervals.pyc
+${PYSITELIB}/librosa/core/intervals.pyo
 ${PYSITELIB}/librosa/core/notation.py
 ${PYSITELIB}/librosa/core/notation.pyc
 ${PYSITELIB}/librosa/core/notation.pyo
@@ -51,6 +60,7 @@ ${PYSITELIB}/librosa/effects.pyc
 ${PYSITELIB}/librosa/effects.pyo
 ${PYSITELIB}/librosa/feature/__init__.py
 ${PYSITELIB}/librosa/feature/__init__.pyc
+${PYSITELIB}/librosa/feature/__init__.pyi
 ${PYSITELIB}/librosa/feature/__init__.pyo
 ${PYSITELIB}/librosa/feature/inverse.py
 ${PYSITELIB}/librosa/feature/inverse.pyc
@@ -70,6 +80,7 @@ ${PYSITELIB}/librosa/filters.pyo
 ${PYSITELIB}/librosa/onset.py
 ${PYSITELIB}/librosa/onset.pyc
 ${PYSITELIB}/librosa/onset.pyo
+${PYSITELIB}/librosa/py.typed
 ${PYSITELIB}/librosa/segment.py
 ${PYSITELIB}/librosa/segment.pyc
 ${PYSITELIB}/librosa/segment.pyo
@@ -78,6 +89,7 @@ ${PYSITELIB}/librosa/sequence.pyc
 ${PYSITELIB}/librosa/sequence.pyo
 ${PYSITELIB}/librosa/util/__init__.py
 ${PYSITELIB}/librosa/util/__init__.pyc
+${PYSITELIB}/librosa/util/__init__.pyi
 ${PYSITELIB}/librosa/util/__init__.pyo
 ${PYSITELIB}/librosa/util/_nnls.py
 ${PYSITELIB}/librosa/util/_nnls.pyc
@@ -88,6 +100,9 @@ ${PYSITELIB}/librosa/util/decorators.pyo
 ${PYSITELIB}/librosa/util/deprecation.py
 ${PYSITELIB}/librosa/util/deprecation.pyc
 ${PYSITELIB}/librosa/util/deprecation.pyo
+${PYSITELIB}/librosa/util/example_data/__init__.py
+${PYSITELIB}/librosa/util/example_data/__init__.pyc
+${PYSITELIB}/librosa/util/example_data/__init__.pyo
 ${PYSITELIB}/librosa/util/example_data/index.json
 ${PYSITELIB}/librosa/util/example_data/registry.txt
 ${PYSITELIB}/librosa/util/exceptions.py
