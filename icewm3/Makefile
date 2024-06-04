@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
+CONFIGURE_ENV+=		MARKDOWN=multimarkdown
+
 CONFIGURE_ARGS+=	--enable-corefonts
 CONFIGURE_ARGS+=	--enable-i18n
 
