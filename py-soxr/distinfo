@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (soxr-0.3.7.tar.gz) = 099579cc82b7e833e2c1a9bcecce87571962bad16042d9bf4298fda55a7f94a9
+SHA512 (soxr-0.3.7.tar.gz) = 3ebdee12173c06a41fa09397ba707bacc747ff83cb5095faa0594d3fe489e084a6129d7262df93015cd0cc15e5c136d8c03f391a1864eaad739da104b40a8590
+Size (soxr-0.3.7.tar.gz) = 296432 bytes

@@ -4548,6 +4548,7 @@ SUBDIR+=	py-sode
 SUBDIR+=	py-sofa
 SUBDIR+=	py-solpy
 SUBDIR+=	py-sortedcollections
+SUBDIR+=	py-soxr
 SUBDIR+=	py-spacy
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spams

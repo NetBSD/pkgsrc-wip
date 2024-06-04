@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.LGPL
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/soxr/__init__.pxd
+${PYSITELIB}/soxr/__init__.py
+${PYSITELIB}/soxr/__init__.pyc
+${PYSITELIB}/soxr/__init__.pyo
+${PYSITELIB}/soxr/_csoxr_version.c
+${PYSITELIB}/soxr/_version.py
+${PYSITELIB}/soxr/_version.pyc
+${PYSITELIB}/soxr/_version.pyo
+${PYSITELIB}/soxr/csoxr.pxd
+${PYSITELIB}/soxr/csoxr_version.c
+${PYSITELIB}/soxr/csoxr_version.h
+${PYSITELIB}/soxr/cysoxr.c
+${PYSITELIB}/soxr/cysoxr.pyx
+${PYSITELIB}/soxr/cysoxr.so
+${PYSITELIB}/soxr/soxr-config.h
