@@ -37,6 +37,8 @@ pre-configure:
 post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
+.include "options.mk"
+
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
