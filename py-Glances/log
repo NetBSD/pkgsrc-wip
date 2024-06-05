@@ -1,4 +1,17 @@
 ===============
+Version 4.0.7
+===============
+
+* cpu_hz_current not available on NetBSD #2792
+* SensorType change in REST API breaks compatibility in 4.0.4 #2788
+
+===============
+Version 4.0.6
+===============
+
+*  No GPU info on Web View #2796
+
+===============
 Version 4.0.5
 ===============
 
@@ -141,26 +154,3 @@ CI and documentation:
 * Fix typos and make grammatical and stylistic edits in project documentation #2625
 * MongoDB and CouchDB documentation flipped #2565
 * No module named 'influxdb' on the snap version of glances #1738
-
-Many thinks to the contributors:
-
-* Bharath Vignesh J K
-* Christoph Zimmermann
-* RazCrimson
-* Robin Candau
-* Github GPG acces
-* Continuous Integration
-* Georgiy Timchenko
-* turbocrime
-* Kiskae
-* snyk-bot
-* Alexander Grigoryev
-* Claes Hallström
-* Francois Pires
-* Maarten Kossen (mpkossen)
-* Osama Albahrani
-* csteiner
-* k26pl
-* kdkd
-* monochromec
-* and all the beta testers !
