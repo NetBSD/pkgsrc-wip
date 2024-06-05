@@ -53,5 +53,5 @@ do-install:
 	cd ${WRKSRC} && pax -rw \
 		AmosCmp16Spipeline ChimeraSlayer NAST-iEr TreeChopper WigeoN RESOURCES ${DESTDIR}${PREFIX}/${PORTNAME}
 
-.include "../../wip/cdbfasta/buildlink3.mk"
+#.include "../../wip/cdbfasta/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
