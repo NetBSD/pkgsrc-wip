@@ -280,7 +280,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.4
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/graphite2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../graphics/libgltf/buildlink3.mk"
+#.include "../../graphics/libgltf/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
