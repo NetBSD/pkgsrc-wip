@@ -1,5 +1,12 @@
 $NetBSD$
 
+Add NetBSD and DragonFly support.
+Upstream pull req: https://github.com/meganz/sdk/pull/2663
+
+Add --with-rt=... configure option, syncing  with aio_write
+doesn't work on NetBSD, workaround build without rt support.
+Upstream pull req: https://github.com/meganz/sdk/pull/2665
+
 --- sdk/configure.ac.orig	2024-05-17 14:19:43.000000000 +0000
 +++ sdk/configure.ac
 @@ -208,6 +208,8 @@ WIN32=no

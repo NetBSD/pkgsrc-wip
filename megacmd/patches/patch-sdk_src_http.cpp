@@ -1,5 +1,8 @@
 $NetBSD$
 
+NetBSD and OpenBSD don't support AI_V4MAPPED.
+Upstream pull req: https://github.com/meganz/sdk/pull/2664
+
 --- sdk/src/http.cpp.orig	2024-05-17 14:19:43.000000000 +0000
 +++ sdk/src/http.cpp
 @@ -270,8 +270,12 @@ void HttpIO::getMEGADNSservers(string *d

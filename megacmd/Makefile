@@ -17,12 +17,12 @@ LICENSE=	gnu-gpl-v3 AND 2-clause-bsd
 
 USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	filesystem
+FORCE_CXX_STD=		c++17
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoreconf autoconf automake gmake
 GNU_CONFIGURE=		yes
 REPLACE_SH=		src/client/mega-*
-CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM -std=c++17
-BUILDLINK_TRANSFORM+=	rm:-std=c++11
+CXXFLAGS+=		-DCRYPTOPP_DISABLE_ASM
 
 CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-java

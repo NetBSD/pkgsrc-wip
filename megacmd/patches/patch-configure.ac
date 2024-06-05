@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add NetBSD and DragonFly support to configure script.
+Upstream pull req: https://github.com/meganz/MEGAcmd/pull/949
+
 --- configure.ac.orig	2024-05-20 12:29:43.000000000 +0000
 +++ configure.ac
 @@ -209,6 +209,8 @@ WIN32=no

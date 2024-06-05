@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add support to other BSDs.
+Upstream pull req: https://github.com/meganz/sdk/pull/2662
+
 --- sdk/include/mega/posix/megasys.h.orig	2024-05-17 14:19:43.000000000 +0000
 +++ sdk/include/mega/posix/megasys.h
 @@ -99,7 +99,8 @@

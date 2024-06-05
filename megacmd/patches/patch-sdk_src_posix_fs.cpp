@@ -1,5 +1,7 @@
 $NetBSD$
 
+Fix build on NetBSD, use statvfs
+
 --- sdk/src/posix/fs.cpp.orig	2024-05-17 14:19:43.000000000 +0000
 +++ sdk/src/posix/fs.cpp
 @@ -27,6 +27,9 @@

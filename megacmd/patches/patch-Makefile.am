@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add --tag=CXX libtool flag on NetBSD and Dragonfly.
+Upstream pull req: https://github.com/meganz/MEGAcmd/pull/949
+
 --- Makefile.am.orig	2024-05-20 12:29:43.000000000 +0000
 +++ Makefile.am
 @@ -39,6 +39,14 @@ if LINUX

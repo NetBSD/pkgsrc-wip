@@ -1,5 +1,8 @@
 $NetBSD$
 
+Handle LIBRT_* flags
+Upstream pull req: https://github.com/meganz/sdk/pull/2665
+
 --- sdk/src/include.am.orig	2024-05-17 14:19:43.000000000 +0000
 +++ sdk/src/include.am
 @@ -5,14 +5,14 @@ lib_LTLIBRARIES = src/libmega.la
