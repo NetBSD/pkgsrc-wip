@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1 2022/11/26 15:08:20 gdt Exp $
 
-BLAKE2s (proj-data-1.18RC2.tar.gz) = fe8582cdf27e8b996b64e1da18f4c58dd1e1a181ce8823c7f59733e8132929fd
-SHA512 (proj-data-1.18RC2.tar.gz) = f0da85a136820e849dca9908d0d3c504af4911d33f56738fc369f280b49f01aa694d018fb1a815b3481b3b0f42391e56fda395605a7d0c73c8cfd3e086e7df17
-Size (proj-data-1.18RC2.tar.gz) = 735340021 bytes
+BLAKE2s (proj-data-1.18.tar.gz) = 52d3c1ea6f6f61ebf0f8c787c80af645b70f214f3e03f88930d2e5a482918088
+SHA512 (proj-data-1.18.tar.gz) = 805eadd29665697398f568f5e4f45df8eadea6fc2841ce901c703613fab13f6f064e6f187621e76017b9b67bb1ca0c6dc1dd2be9848c5169d7e6ebaa2aeea950
+Size (proj-data-1.18.tar.gz) = 735652646 bytes

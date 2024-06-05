@@ -1,11 +1,8 @@
 # $NetBSD: Makefile,v 1.1 2022/11/26 15:08:20 gdt Exp $
 
 VERSION_BASE=	1.18
-# Accomodate testing RCs, whcih have names like 1.18RC2 and unpack to
-# 1.18.
-VERSION_RC=	RC2
+#VERSION_RC=	RC2
 VERSION=	${VERSION_BASE}${VERSION_RC}
-#WRKFINAL=	proj-data-${VERSION_BASE}
 DISTNAME=	proj-data-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
