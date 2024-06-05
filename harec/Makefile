@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=		qbe>=1.2:../../lang/qbe
 
+INSTALLATION_DIRS=	bin
+
 do-configure:
 	${RUN} cp ${FILESDIR}/config.mk ${WRKSRC}/config.mk
 
