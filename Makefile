@@ -4467,6 +4467,7 @@ SUBDIR+=	py-sabctools
 SUBDIR+=	py-sabyenc3
 SUBDIR+=	py-safersympify
 SUBDIR+=	py-safety
+SUBDIR+=	py-samplerate
 SUBDIR+=	py-sas7bdat
 SUBDIR+=	py-sasa
 SUBDIR+=	py-sbapp

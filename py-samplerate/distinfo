@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (samplerate-0.2.1.tar.gz) = 28d90eeae185d897f92cf46863167f64138f0a4c06d371d04ed4ce7ab0d1ff92
+SHA512 (samplerate-0.2.1.tar.gz) = b4ad24606d2e33ac7b26b4031f95f322a3dc4f6c229bb0c7377fb45d0628b0ee6e2377e0727320bc0529e4841c838c89d94b68c43664c808f56ef7c072194e6c
+Size (samplerate-0.2.1.tar.gz) = 21494 bytes

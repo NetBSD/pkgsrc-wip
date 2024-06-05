@@ -1,0 +1,2 @@
+- adjust build to use pkgsrc provided pybind11 and libsamplerate instead of
+  trying to download them.

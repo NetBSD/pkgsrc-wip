@@ -1,0 +1,10 @@
+This is a wrapper around Erik de Castro Lopo's libsamplerate (aka Secret
+Rabbit Code) for high-quality sample rate conversion.
+
+It implements all three APIs available in libsamplerate:
+- Simple API: for resampling a large chunk of data with a single library
+  call
+- Full API: for obtaining the resampled signal from successive chunks of
+  data
+- Callback API: like Full API, but input samples are provided by a
+  callback function
