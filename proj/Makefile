@@ -1,9 +1,8 @@
 # $NetBSD: Makefile,v 1.39 2024/05/23 13:35:58 gdt Exp $
 
 VERSION_BASE=	9.4.1
-# Accomodate testing RCs, which have names like 9.0RC1 and unpack to
-# 9.0.
-VERSION_RC=	RC1
+# RCs have names like 9.0RC1 and unpack to 9.0.
+#VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}

@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.18 2022/11/27 13:30:45 gdt Exp $
 
-BLAKE2s (proj-9.4.1RC1.tar.gz) = 1c41c6c5312315df3e51e2daf34d4fbe349880030aa7751d6dd1874f4abe60e4
-SHA512 (proj-9.4.1RC1.tar.gz) = 88cf96dc8d7d205f73370b5415b71710d9833fbf60bd4f1dafaaf491b7b314022596f82a017459e4ce4ddb743750ccb420575a7720b7d50e83b8d81a6dd9d70e
-Size (proj-9.4.1RC1.tar.gz) = 5665258 bytes
+BLAKE2s (proj-9.4.1.tar.gz) = 6a283bfcc15e0da5b41abfbc23a5d5346ad1cdd4cc8d6781143d12bf502313f8
+SHA512 (proj-9.4.1.tar.gz) = e9e4a80125a9481709fa7a16c8ceed7c5480c1d9152fe0c16ff69cd976081b9f41e23783459ee2a50771ec7f6210f46167de5af9ee943ff274bd27a1de4b6305
+Size (proj-9.4.1.tar.gz) = 5665272 bytes
