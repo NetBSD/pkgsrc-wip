@@ -16,6 +16,13 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# Work-around bad use-warning check in GNU ld 2.26
+# Stolen from /usr/pkgsrc/meta-pkgs/kde/Makefile.common
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
+.endif
+
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../devel/qt6-qtwayland/buildlink3.mk"

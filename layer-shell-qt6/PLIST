@@ -1,4 +1,18 @@
 @comment $NetBSD$
-@comment TODO: to fill this file with the file listing:
-@comment TODO: 1. run "/usr/bin/make package"
-@comment TODO: 2. run "/usr/bin/make print-PLIST"
+include/LayerShellQt/Shell
+include/LayerShellQt/Window
+include/LayerShellQt/layershellqt_export.h
+include/LayerShellQt/shell.h
+include/LayerShellQt/window.h
+lib/cmake/LayerShellQt/LayerShellQtConfig.cmake
+lib/cmake/LayerShellQt/LayerShellQtConfigVersion.cmake
+lib/cmake/LayerShellQt/LayerShellQtTargets-noconfig.cmake
+lib/cmake/LayerShellQt/LayerShellQtTargets.cmake
+lib/libLayerShellQtInterface.so
+lib/libLayerShellQtInterface.so.6
+lib/libLayerShellQtInterface.so.${PKGVERSION}
+lib/plugins/wayland-shell-integration/liblayer-shell.so
+lib/qml/org/kde/layershell/LayerShellQtQml.qmltypes
+lib/qml/org/kde/layershell/kde-qmlmodule.version
+lib/qml/org/kde/layershell/libLayerShellQtQml.so
+lib/qml/org/kde/layershell/qmldir
