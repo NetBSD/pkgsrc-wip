@@ -12,4 +12,20 @@ Downloads files during build:
 -- Downloading file public_suffix_list.dat from https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
 -- Downloading file commonmark.spec.json from https://spec.commonmark.org/0.30/spec.json
 
+Currently doesn't build with:
+
+In file included from /scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/SystemTheme.h:17,
+                 from /scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/Palette.h:15,
+                 from /scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibSyntax/Highlighter.h:11,
+                 from /scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibSyntax/Language.cpp:9:
+/scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/Color.h: In member function 'constexpr u8 Gfx::Color::luminosity() const':
+/scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/Color.h:321:28: error: call to non-'constexpr' function 'I AK::Rounding::round_to(float) [with I = unsigned char]'
+  321 |         return round_to<u8>(red() * 0.2126f + green() * 0.7152f + blue() * 0.0722f);
+      |                ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Reported here:
+https://github.com/SerenityOS/serenity/issues/23375
+
 Core dumps when visiting any websites.
+Reported at
+https://github.com/SerenityOS/serenity/issues/23375
