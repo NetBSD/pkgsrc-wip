@@ -24,10 +24,9 @@ HOMEPAGE=	https://github.com/tinygo-org/tinygo/
 COMMENT=	Go compiler for small places
 LICENSE=	modified-bsd AND apache-2.0
 
-DISTFILES=				${DEFAULT_DISTFILES}
-DISTFILES+=				musl-1.2.4.tar.gz
+TINYGO_DISTFILES+=			musl-1.2.4.tar.gz
 SITES.musl-1.2.4.tar.gz=		https://www.musl-libc.org/releases/
-DISTFILES+=				esp-17.0.1_20240419.tar.gz
+TINYGO_DISTFILES+=			esp-17.0.1_20240419.tar.gz
 SITES.esp-17.0.1_20240419.tar.gz=	https://github.com/espressif/llvm-project/archive/refs/tags/
 
 DEPENDS+=	binaryen-[0-9]*:../../devel/binaryen
@@ -42,6 +41,10 @@ USE_TOOLS+=	gmake pax
 CHECK_INTERPRETER_SKIP+=	tinygo/lib/macos-minimal-sdk/generate-stubs.py
 CHECK_INTERPRETER_SKIP+=	tinygo/lib/picolibc/newlib/libc/string/uniset
 CHECK_INTERPRETER_SKIP+=	tinygo/lib/picolibc/newlib/libc/tinystdio/make-dtoa-data
+
+GO_MODULE_EXTRACT=	go.bug.st_serial_@v_v1.6.0.zip
+DISTFILES=		${DEFAULT_DISTFILES} ${TINYGO_DISTFILES}
+EXTRACT_ONLY=		${DEFAULT_DISTFILES} ${TINYGO_DISTFILES} ${GO_MODULE_EXTRACT}
 
 .include "go-modules.mk"
 
