@@ -1854,6 +1854,7 @@ SUBDIR+=	lander
 SUBDIR+=	lanq
 SUBDIR+=	lasi
 SUBDIR+=	layer-shell-qt
+SUBDIR+=	layer-shell-qt6
 SUBDIR+=	lbt
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc

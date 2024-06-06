@@ -1,0 +1,19 @@
+[ 96%] Linking CXX shared module ../../bin/org/kde/layershell/libLayerShellQtQml.so
+cd /usr/pkgsrc/wip/layer-shell-qt6/work/layer-shell-qt-6.0.5/cmake-pkgsrc-build/src/declarative && /usr/pkg/bin/cmake -E cmake_link_script CMakeFiles/LayerShellQtQml.dir/link.txt --verbose=1
+/usr/pkgsrc/wip/layer-shell-qt6/work/.cwrapper/bin/c++ -fPIC -pipe -O2 -I/usr/pkg/include -I/usr/pkg/qt6/include -I/usr/include -I/usr/pkg/include/glib-2.0 -I/usr/pkg/include/gio-unix-2.0 -I/usr/pkg/lib/glib-2.0/include -I/usr/pkg/include/harfbuzz -I/usr/pkg/include/freetype2 -I/usr/X11R7/include -I/usr/X11R7/include/libdrm -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -Wl,--no-undefined -Wl,--fatal-warnings -Wl,-zrelro -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/pkg/qt6/lib -L/usr/pkg/qt6/plugins -Wl,-R/usr/pkg/qt6/lib -Wl,-R/usr/pkg/qt6/plugins -L/usr/lib -Wl,-R/usr/lib -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -L/usr/pkg/qt6/plugins/platforms -L/usr/pkg/qt6/plugins/wayland-decoration-client -L/usr/pkg/qt6/plugins/wayland-graphics-integration-client -L/usr/pkg/qt6/plugins/wayland-graphics-integration-server -L/usr/pkg/qt6/plugins/wayland-shell-integration -Wl,-R/usr/pkg/qt6/plugins/platforms -Wl,-R/usr/pkg/qt6/plugins/wayland-decoration-client -Wl,-R/usr/pkg/qt6/plugins/wayland-graphics-integration-client -Wl,-R/usr/pkg/qt6/plugins/wayland-graphics-integration-server -Wl,-R/usr/pkg/qt6/plugins/wayland-shell-integration -shared  -o ../../bin/org/kde/layershell/libLayerShellQtQml.so CMakeFiles/LayerShellQtQml.dir/LayerShellQtQml_autogen/mocs_compilation.cpp.o CMakeFiles/LayerShellQtQml.dir/layershellqtqml_qmltyperegistrations.cpp.o CMakeFiles/LayerShellQtQml.dir/.qt/rcc/qrc_qmake_org_kde_layershell.cpp.o CMakeFiles/LayerShellQtQml.dir/layershellqtplugin.cpp.o   -L/usr/pkg/lib  ../../bin/libLayerShellQtInterface.so.6.0.5 /usr/pkg/qt6/lib/libQt6Qml.so.6.7.1 /usr/pkg/qt6/lib/libQt6QmlBuiltins.a /usr/pkg/qt6/lib/libQt6Network.so.6.7.1 /usr/pkg/qt6/lib/libQt6Gui.so.6.7.1 /usr/pkg/qt6/lib/libQt6Core.so.6.7.1 -pthread /usr/X11R7/lib/libGL.so
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility login_getpwclass(); include <login_cap.h> for correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility pw_scan(); include <pwd.h> to generate correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility loginx(); include <util.h> to generate correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility parsedate(); include <util.h> for correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility pw_copyx(); include <util.h> to generate correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility pw_getpwconf(); include <pwd.h> to generate correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility login(); include <util.h> to generate correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility setusercontext(); include <login_cap.h> for correct reference
+ld: /usr/lib/libutil.so.7: warning: warning: reference to compatibility pw_copy(); include <util.h> to generate correct reference
+*** [bin/org/kde/layershell/libLayerShellQtQml.so] Error code 1
+
+make[2]: stopped in /usr/pkgsrc/wip/layer-shell-qt6/work/layer-shell-qt-6.0.5/cmake-pkgsrc-build
+make[2]: 1 error
+
+make[2]: stopped in /usr/pkgsrc/wip/layer-shell-qt6/work/layer-shell-qt-6.0.5/cmake-pkgsrc-build
+*** [src/declarative/CMakeFiles/LayerShellQtQml.dir/all] Error code 2
