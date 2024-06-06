@@ -11,14 +11,15 @@ HOMEPAGE=	https://github.com/naev/naev
 COMMENT=	2D space trading and combat game
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config
-
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-REPLACE_BASH=	naev-confupdate.sh
 
-CFLAGS+=	-fopenmp
-LDFLAGS+=	-lomp -lcamd
+USE_TOOLS+=	bash:run pkg-config
+
+REPLACE_BASH+=	naev-confupdate.sh
+REPLACE_BASH+=	artwork/gfx/outfit/check.sh
+REPLACE_BASH+=	artwork/gfx/spob/check.sh
+REPLACE_BASH+=	artwork/gfx/ship/update.sh
+REPLACE_BASH+=	artwork/snd/music/checkgain.sh
 
 GAME_DIR=	${PREFIX}/share/naev/
 
@@ -32,15 +33,6 @@ SUBST_FILES.alloca+=	src/utf8.c
 SUBST_SED.alloca+=	-e "s,HAVE_ALLOCA_H,NAEV_HAVE_ALLOCA_H,"
 SUBST_STAGE.alloca=	post-extract
 SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
-
-SUBST_CLASSES+=		bash
-SUBST_FILES.bash+=	artwork/gfx/outfit/check.sh
-SUBST_FILES.bash+=	artwork/gfx/spob/check.sh
-SUBST_FILES.bash+=	artwork/gfx/ship/update.sh
-SUBST_FILES.bash+=	artwork/snd/music/checkgain.sh
-SUBST_SED.bash+=	-e "s,/usr/bin/env ,${PREFIX}/bin/,"
-SUBST_STAGE.bash=	post-extract
-SUBST_MESSAGE.bash=	Use the pkgsrc bash
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
@@ -61,6 +53,7 @@ SUBST_MESSAGE.bash=	Use the pkgsrc bash
 .include "../../math/glpk/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+# TODO: report this as a bug upstream
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../net/enet/buildlink3.mk"
 .include "../../parallel/openmp/buildlink3.mk"
