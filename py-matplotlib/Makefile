@@ -47,8 +47,14 @@ PYTHON_FOR_BUILD_ONLY=	no
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3.2.0:../../devel/py-importlib-resources
 .endif
 
+# depends on do-install
+# as of 3.9.0
+# 928 failed, 6776 passed, 1785 skipped, 33 xfailed
+# possible additional test dependencies to pass more tests include
+# pikepdf, tex, qt, ghostscript, ...
+# py-test command line comes from https://github.com/matplotlib/matplotlib/issues/28260
 do-test:
-	pytest-${PYVERSSUFFIX} -ra -m 'not network'
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} -ra -m 'not network' --pyargs matplotlib
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
