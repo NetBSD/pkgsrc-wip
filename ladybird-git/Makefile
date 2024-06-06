@@ -13,7 +13,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++20
-GCC_REQD+=		12
+GCC_REQD+=		13
 
 CMAKE_ARGS+=		-S Ladybird
 # build broken with make
