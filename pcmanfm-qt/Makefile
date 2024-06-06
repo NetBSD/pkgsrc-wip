@@ -35,6 +35,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../wip/liblxqt/buildlink3.mk"
 .include "../../wip/libfm-qt/buildlink3.mk"
+.include "../../wip/layer-shell-qt6/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
