@@ -129,3 +129,4 @@ include/megaapi_impl.h
 lib/libmega.la
 lib/pkgconfig/libmega.pc
 share/bash-completion/completions/megacmd
+share/doc/megacmd/README

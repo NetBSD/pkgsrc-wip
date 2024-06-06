@@ -40,12 +40,15 @@ CONFIGURE_ARGS+=	--enable-gcc-hardening
 
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
+INSTALLATION_DIRS+=	share/doc/megacmd
+
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd_completion.sh \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/megacmd
+	${INSTALL_DATA} ${FILESDIR}/README ${DESTDIR}${PREFIX}/share/doc/megacmd
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
