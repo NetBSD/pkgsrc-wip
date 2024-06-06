@@ -30,9 +30,6 @@ lib/liblagom-gemini.so.${PKGVERSION}
 lib/liblagom-gfx.so
 lib/liblagom-gfx.so.0
 lib/liblagom-gfx.so.${PKGVERSION}
-lib/liblagom-gui.so
-lib/liblagom-gui.so.0
-lib/liblagom-gui.so.${PKGVERSION}
 lib/liblagom-http.so
 lib/liblagom-http.so.0
 lib/liblagom-http.so.${PKGVERSION}
@@ -249,6 +246,7 @@ share/Lagom/emoji/U+1F1E8_U+1F1F2.png
 share/Lagom/emoji/U+1F1E8_U+1F1F3.png
 share/Lagom/emoji/U+1F1E8_U+1F1F4.png
 share/Lagom/emoji/U+1F1E8_U+1F1F5.png
+share/Lagom/emoji/U+1F1E8_U+1F1F6.png
 share/Lagom/emoji/U+1F1E8_U+1F1F7.png
 share/Lagom/emoji/U+1F1E8_U+1F1FA.png
 share/Lagom/emoji/U+1F1E8_U+1F1FB.png
@@ -1604,6 +1602,9 @@ share/Lagom/emoji/U+1F939.png
 share/Lagom/emoji/U+1F939_U+200D_U+2640.png
 share/Lagom/emoji/U+1F939_U+200D_U+2642.png
 share/Lagom/emoji/U+1F93A.png
+share/Lagom/emoji/U+1F93D.png
+share/Lagom/emoji/U+1F93D_U+200D_U+2640.png
+share/Lagom/emoji/U+1F93D_U+200D_U+2642.png
 share/Lagom/emoji/U+1F93E.png
 share/Lagom/emoji/U+1F93E_U+200D_U+2640.png
 share/Lagom/emoji/U+1F93E_U+200D_U+2642.png
@@ -1706,6 +1707,7 @@ share/Lagom/emoji/U+1F9A4.png
 share/Lagom/emoji/U+1F9A5.png
 share/Lagom/emoji/U+1F9A6.png
 share/Lagom/emoji/U+1F9A7.png
+share/Lagom/emoji/U+1F9A8.png
 share/Lagom/emoji/U+1F9A9.png
 share/Lagom/emoji/U+1F9AA.png
 share/Lagom/emoji/U+1F9AB.png
@@ -1845,6 +1847,8 @@ share/Lagom/emoji/U+1FA84.png
 share/Lagom/emoji/U+1FA85.png
 share/Lagom/emoji/U+1FA87.png
 share/Lagom/emoji/U+1FA88.png
+share/Lagom/emoji/U+1FA89.png
+share/Lagom/emoji/U+1FA8F.png
 share/Lagom/emoji/U+1FA90.png
 share/Lagom/emoji/U+1FA91.png
 share/Lagom/emoji/U+1FA92.png
@@ -1890,6 +1894,7 @@ share/Lagom/emoji/U+1FABA.png
 share/Lagom/emoji/U+1FABB.png
 share/Lagom/emoji/U+1FABC.png
 share/Lagom/emoji/U+1FABD.png
+share/Lagom/emoji/U+1FABE.png
 share/Lagom/emoji/U+1FABF.png
 share/Lagom/emoji/U+1FAC0.png
 share/Lagom/emoji/U+1FAC1.png
@@ -1897,6 +1902,7 @@ share/Lagom/emoji/U+1FAC2.png
 share/Lagom/emoji/U+1FAC3.png
 share/Lagom/emoji/U+1FAC4.png
 share/Lagom/emoji/U+1FAC5.png
+share/Lagom/emoji/U+1FAC6.png
 share/Lagom/emoji/U+1FACE.png
 share/Lagom/emoji/U+1FACF.png
 share/Lagom/emoji/U+1FAD0.png
@@ -1911,6 +1917,8 @@ share/Lagom/emoji/U+1FAD8.png
 share/Lagom/emoji/U+1FAD9.png
 share/Lagom/emoji/U+1FADA.png
 share/Lagom/emoji/U+1FADB.png
+share/Lagom/emoji/U+1FADC.png
+share/Lagom/emoji/U+1FADF.png
 share/Lagom/emoji/U+1FAE0.png
 share/Lagom/emoji/U+1FAE1.png
 share/Lagom/emoji/U+1FAE2.png
@@ -1920,6 +1928,7 @@ share/Lagom/emoji/U+1FAE5.png
 share/Lagom/emoji/U+1FAE6.png
 share/Lagom/emoji/U+1FAE7.png
 share/Lagom/emoji/U+1FAE8.png
+share/Lagom/emoji/U+1FAE9.png
 share/Lagom/emoji/U+1FAF0.png
 share/Lagom/emoji/U+1FAF1.png
 share/Lagom/emoji/U+1FAF2.png

@@ -12,17 +12,6 @@ Downloads files during build:
 -- Downloading file public_suffix_list.dat from https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
 -- Downloading file commonmark.spec.json from https://spec.commonmark.org/0.30/spec.json
 
-Currently doesn't build with:
-
-In file included from /scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/EdgeFlagPathRasterizer.cpp:12:
-/scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/EdgeFlagPathRasterizer.h:26:2:   in 'constexpr' expansion of '<lambda closure object>Gfx::Detail::<lambda()>().Gfx::Detail::<lambda()>()'
-/scratch/wip/ladybird-git/work/serenity/Userland/Libraries/LibGfx/EdgeFlagPathRasterizer.h:24:40: error: call to non-'constexpr' function 'unsigned int popcount(unsigned int)'
-   24 |         coverage_lut[sample] = popcount(sample);
-      |                                ~~~~~~~~^~~~~~~~
-
-Reported here:
-https://github.com/SerenityOS/serenity/issues/23375
-
-Core dumps when visiting any websites.
+Sometimes core dumps problems when visiting web pages.
 Reported at
 https://github.com/SerenityOS/serenity/issues/23375
