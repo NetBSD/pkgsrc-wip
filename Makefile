@@ -2181,6 +2181,7 @@ SUBDIR+=	lxqt-notificationd
 SUBDIR+=	lxqt-openssh-askpass
 SUBDIR+=	lxqt-policykit
 SUBDIR+=	lxqt-powermanagement
+SUBDIR+=	lxqt-runner
 SUBDIR+=	lxqt-sudo
 SUBDIR+=	lxqt-themes
 SUBDIR+=	lxqt2-build-tools
