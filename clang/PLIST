@@ -1018,10 +1018,10 @@ lib/cmake/clang/ClangConfigVersion.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang-cpp.${SOEXT}
-${PLIST.notdylib}lib/libclang-cpp.so.${PKGVERSION_MAJOR}
+${PLIST.notdylib}lib/libclang-cpp.so.18.1
 lib/libclang.${SOEXT}
-${PLIST.notdylib}lib/libclang.${SOEXT}.${PKGVERSION_MAJOR}
 ${PLIST.notdylib}lib/libclang.${SOEXT}.${PKGVERSION}
+${PLIST.notdylib}lib/libclang.${SOEXT}.18.1
 lib/libclangAPINotes.a
 lib/libclangARCMigrate.a
 lib/libclangAST.a

@@ -1,14 +1,14 @@
 $NetBSD: distinfo,v 1.80 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (clang-18.1.6.src.tar.xz) = 192c81c72add3f37c3a4dae225fd72b539e27f04b1d91806d9d95dac2afa140e
-SHA512 (clang-18.1.6.src.tar.xz) = db9c41ae9cb9dc327ed819667b01ee75df4badbc7c11c1eadaa8d926c917c8e942d9282bed812f090ffa5cb3305b1d0145872530e267d16e2d4ea8c3fbe1b00f
-Size (clang-18.1.6.src.tar.xz) = 22154228 bytes
-BLAKE2s (cmake-18.1.6.src.tar.xz) = 2eccfaea2c4142a0812df9b5b6b049ccbbfc44d468eccafada65fef6e6ca4f1e
-SHA512 (cmake-18.1.6.src.tar.xz) = 1334647f4be280b41858aa272bebc65e935cab772001032f77040396ba7472fbd5eb6a1a0c042ab7156540075705b7f05c8de2f02e2ce9d7ec1ec27be6bef86f
-Size (cmake-18.1.6.src.tar.xz) = 8708 bytes
-BLAKE2s (runtimes-18.1.6.src.tar.xz) = 93958d40b8695ac129846f3d403d3667fccada2e363b3079f99774e02b41b3ae
-SHA512 (runtimes-18.1.6.src.tar.xz) = 034f9f257ccef3d36d55d9c21f73b791e38708f6b9640cdb0932439c4f33ef1f67623296642f02520109d55334fdecb2275f452f5996281f2b692bf191da5c07
-Size (runtimes-18.1.6.src.tar.xz) = 6784 bytes
+BLAKE2s (clang-18.1.7.src.tar.xz) = 2212a16294eb46599fdeff52a67a43443b5945c6178a3f31e973355b2293e8d6
+SHA512 (clang-18.1.7.src.tar.xz) = 5f014ede7d66e45dbb74ae867fb5e90efc67a0fd4bf594c37770466d5b1d6bc5783a8e62132bbec79fbd0860c2ce790cc2b142861750cc11ff0606a97fc33a35
+Size (clang-18.1.7.src.tar.xz) = 22154612 bytes
+BLAKE2s (cmake-18.1.7.src.tar.xz) = 71c825797805e05c755e52ee37790bf7c238fd8531eaefbfa3148896c99d9d91
+SHA512 (cmake-18.1.7.src.tar.xz) = 2d8ec0e2ccf28bc9f64a17ba3f55071a05cf211164facc1516d1631da203e82bdb33bf184e5354fd6c010c116f298264b05b19df8148ea91899b799f789e20b5
+Size (cmake-18.1.7.src.tar.xz) = 8708 bytes
+BLAKE2s (runtimes-18.1.7.src.tar.xz) = 6afb3ce9655a326e4b68b352601b6ce29b916df0debcf48805dfaa1d3c457349
+SHA512 (runtimes-18.1.7.src.tar.xz) = 36b542f894908354c1c2deecb55991e9688af992eeaf6c8281e18a54b25af2e93485e129e2172673461ab7f1d16050256694f4c31ac40cdb180783701198d896
+Size (runtimes-18.1.7.src.tar.xz) = 6792 bytes
 SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 4b511871c8a38d57f3fddc4a6c0e921ff53194cb
 SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
 SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = ff430e567c901f4c55739c91588821441278a651

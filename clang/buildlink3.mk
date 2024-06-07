@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	clang
 CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clang+=	clang>=18.0.0
-BUILDLINK_ABI_DEPENDS.clang?=	clang>=18.0.0
+BUILDLINK_ABI_DEPENDS.clang+=	clang>=18.0.0
 BUILDLINK_PKGSRCDIR.clang?=	../../wip/clang
 
 BUILDLINK_FILES.clang+=		bin/amdgpu-arch

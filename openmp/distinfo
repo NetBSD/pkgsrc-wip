@@ -1,12 +1,12 @@
 $NetBSD: distinfo,v 1.17 2023/01/12 19:32:54 adam Exp $
 
-BLAKE2s (cmake-18.1.6.src.tar.xz) = 2eccfaea2c4142a0812df9b5b6b049ccbbfc44d468eccafada65fef6e6ca4f1e
-SHA512 (cmake-18.1.6.src.tar.xz) = 1334647f4be280b41858aa272bebc65e935cab772001032f77040396ba7472fbd5eb6a1a0c042ab7156540075705b7f05c8de2f02e2ce9d7ec1ec27be6bef86f
-Size (cmake-18.1.6.src.tar.xz) = 8708 bytes
-BLAKE2s (openmp-18.1.6.src.tar.xz) = c8f00b58f5dcee28d87159f9761b9528674d7c53b671354518d7932ce00fe093
-SHA512 (openmp-18.1.6.src.tar.xz) = f96f5fd4c508f1390e53b943237aa7e1db1301ef660f0864305556d581275576d585ef222a82d2359d43ad8ed166096d9ec6c05ab0ee57a01679cff6b4ecba4b
-Size (openmp-18.1.6.src.tar.xz) = 1320476 bytes
-BLAKE2s (runtimes-18.1.6.src.tar.xz) = 93958d40b8695ac129846f3d403d3667fccada2e363b3079f99774e02b41b3ae
-SHA512 (runtimes-18.1.6.src.tar.xz) = 034f9f257ccef3d36d55d9c21f73b791e38708f6b9640cdb0932439c4f33ef1f67623296642f02520109d55334fdecb2275f452f5996281f2b692bf191da5c07
-Size (runtimes-18.1.6.src.tar.xz) = 6784 bytes
+BLAKE2s (cmake-18.1.7.src.tar.xz) = 71c825797805e05c755e52ee37790bf7c238fd8531eaefbfa3148896c99d9d91
+SHA512 (cmake-18.1.7.src.tar.xz) = 2d8ec0e2ccf28bc9f64a17ba3f55071a05cf211164facc1516d1631da203e82bdb33bf184e5354fd6c010c116f298264b05b19df8148ea91899b799f789e20b5
+Size (cmake-18.1.7.src.tar.xz) = 8708 bytes
+BLAKE2s (openmp-18.1.7.src.tar.xz) = ac0aaa55e78fb2aa883fff92dbfbe410e8bced971c9d22dff23ca7066232efc5
+SHA512 (openmp-18.1.7.src.tar.xz) = 5f6da5f4c63515e0332a72b48da60c07da3c0ea5671df29917001df4ea90bf93a9810a203f2cd1d625438aca4a7159823087c8a12d4c9681c2a8b4c455fedd93
+Size (openmp-18.1.7.src.tar.xz) = 1320368 bytes
+BLAKE2s (runtimes-18.1.7.src.tar.xz) = 6afb3ce9655a326e4b68b352601b6ce29b916df0debcf48805dfaa1d3c457349
+SHA512 (runtimes-18.1.7.src.tar.xz) = 36b542f894908354c1c2deecb55991e9688af992eeaf6c8281e18a54b25af2e93485e129e2172673461ab7f1d16050256694f4c31ac40cdb180783701198d896
+Size (runtimes-18.1.7.src.tar.xz) = 6792 bytes
 SHA1 (patch-runtime_src_kmp__os.h) = a5b0e015bf21f284468931fb093956752f93700e

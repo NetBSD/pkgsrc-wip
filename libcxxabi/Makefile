@@ -24,7 +24,7 @@ SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		12	# must be in sync with libcxx
+GCC_REQD+=		13	# must be in sync with libcxx
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # "LIBCXXABI_USE_LLVM_UNWINDER is set to ON, but libunwind is not specified in LLVM_ENABLE_RUNTIMES."
