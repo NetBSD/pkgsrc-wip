@@ -1841,6 +1841,7 @@ SUBDIR+=	kuickshow
 SUBDIR+=	kup
 SUBDIR+=	kustomize
 SUBDIR+=	kvantum
+SUBDIR+=	kwayland-qt6
 SUBDIR+=	kwin
 SUBDIR+=	kwrited
 SUBDIR+=	kyototycoon
