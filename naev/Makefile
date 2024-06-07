@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_TOOLS+=	bash:run pkg-config
 
-REPLACE_BASH+=	naev-confupdate.sh
 REPLACE_BASH+=	artwork/gfx/outfit/check.sh
 REPLACE_BASH+=	artwork/gfx/spob/check.sh
 REPLACE_BASH+=	artwork/gfx/ship/update.sh
