@@ -1986,6 +1986,7 @@ SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
 SUBDIR+=	libjxl
 SUBDIR+=	libkml
+SUBDIR+=	libkscreen-qt6
 SUBDIR+=	liblingoteach
 SUBDIR+=	libltc
 SUBDIR+=	liblxqt
