@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/naev/naev
 COMMENT=	2D space trading and combat game
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_TOOLS+=	bash:run pkg-config
