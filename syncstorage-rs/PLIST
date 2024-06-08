@@ -17,7 +17,7 @@ lib/tokenserver/test_scripts.py
 lib/tokenserver/unassign_node.py
 lib/tokenserver/update_node.py
 lib/tokenserver/util.py
-share/doc/syncstorage-rs/Makefile
 share/doc/syncstorage-rs/README.md
 share/doc/syncstorage-rs/config.md
+share/doc/syncstorage-rs/setup.md
 share/examples/syncstorage-rs/local.example.toml
