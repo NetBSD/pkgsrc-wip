@@ -2135,6 +2135,7 @@ SUBDIR+=	lissac
 SUBDIR+=	litecoin
 SUBDIR+=	lives
 SUBDIR+=	lizardfs
+SUBDIR+=	llama.cpp
 SUBDIR+=	lld
 SUBDIR+=	lldb
 SUBDIR+=	llilc-git
