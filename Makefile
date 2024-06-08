@@ -4885,6 +4885,7 @@ SUBDIR+=	qemu-virtfs-netbsd
 SUBDIR+=	qgis
 SUBDIR+=	qico
 SUBDIR+=	qiew
+SUBDIR+=	qimgv
 SUBDIR+=	qira
 SUBDIR+=	qlcplus
 SUBDIR+=	qmc2

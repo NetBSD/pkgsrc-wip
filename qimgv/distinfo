@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (qimgv-1.0.2.tar.gz) = 1278fad916e1ba7bcc08efd8c5df08a2fe02be2b568b534ab18cd113d1d0f4a8
+SHA512 (qimgv-1.0.2.tar.gz) = 3e10a87f28f7187251c93c92b418ee34e4c2b373b0dd957604fd46305237dc52fd7e17880507b3a0d757c0c3800e8185b6085f15f6f05db6d29cae1e67044b58
+Size (qimgv-1.0.2.tar.gz) = 681034 bytes
