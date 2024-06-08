@@ -138,7 +138,8 @@ CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.13
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.11
 CARGO_CRATE_DEPENDS+=	log-0.4.21
 CARGO_CRATE_DEPENDS+=	lsp-server-0.7.6
-CARGO_CRATE_DEPENDS+=	lsp-types-0.95.1
+#Workaround for unpublished crate in the Makefile
+#CARGO_CRATE_DEPENDS+=	lsp-types-0.95.1
 CARGO_CRATE_DEPENDS+=	matchers-0.1.0
 CARGO_CRATE_DEPENDS+=	matches-0.1.10
 CARGO_CRATE_DEPENDS+=	matchit-0.8.2

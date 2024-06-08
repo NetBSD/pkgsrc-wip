@@ -12,10 +12,12 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
+USE_LANGUAGES=	c c++
+
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
 
--lsp-types=	{ git = "https://github.com/astral-sh/lsp-types.git", rev = "3512a9f", features = ["proposed"] }
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 LSP_TYPES_REV=	3512a9f33eadc5402cfab1b8f7340824c8ca1439
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	lsp-types-${LSP_TYPES_REV}.tar.gz
@@ -26,7 +28,7 @@ MAKE_ENV+=	CARGO_NET_OFFLINE=true
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
-	mv ${WRKDIR}/lsp-types* ${WRKDIR}/lsp-types
+	mv ${WRKDIR}/lsp-types* ${WRKSRC}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
