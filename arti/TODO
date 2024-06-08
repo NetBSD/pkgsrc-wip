@@ -1,6 +1,7 @@
 NetBSD build problem, reported upstream at
 https://gitlab.torproject.org/tpo/core/rust-pwd-grp/-/issues/4
 
+appears in at least 1.2.0, 1.2.3, and 1.2.4
 
 error[E0425]: cannot find value `getresuid` in crate `libc`
    --> /scratch/net/arti/work/vendor/pwd-grp-0.1.1/src/lmockable.rs:82:16
