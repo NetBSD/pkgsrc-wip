@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (testfixtures-8.2.0.tar.gz) = 7f995c4103b0990426d47a03f248c9c0e886982c42b177ffd4a873e2a5837d28
-SHA512 (testfixtures-8.2.0.tar.gz) = a151767ea44a36c244e4c46fc2ce8665ebc64a52159213e5739f78537e684d6760b03a56b393894afabb70a5d777e3b9fbe0aa8acec33c958fc973eda3ec1e5e
-Size (testfixtures-8.2.0.tar.gz) = 136662 bytes
+BLAKE2s (testfixtures-8.3.0.tar.gz) = 3a697cc48ac880afd7d4d49d172f76dc81edd092d7f61c7e025b1d2b90eea050
+SHA512 (testfixtures-8.3.0.tar.gz) = b2c18a35c44b90bce50cc68ca9bf9909ac8f75287c7188eeddfa855aec1db3bd14f3fccb4c5ef0e44b19c683ad4bd6be4876554ce9127698e8e20cbfa4191800
+Size (testfixtures-8.3.0.tar.gz) = 137420 bytes
