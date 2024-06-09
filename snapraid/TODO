@@ -1,0 +1,9 @@
+The provided patch fixes the primary build issue I had with this on 
+NetBSD. There are still a couple of warnings shown during the build.
+I don't recommend this for production use, until they are classified
+/ fixed.
+
+In addition, I am looking for a clean and generic solution to make
+application of this patch conditional based on the OPSYS. 
+
+Patches welcome :-)

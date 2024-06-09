@@ -1,0 +1,20 @@
+SnapRAID is a backup program designed for disk arrays, storing parity
+information for data recovery in the event of up to six disk failures.
+
+Primarily intended for home media centers with large, infrequently
+changing files, SnapRAID offers several features:
+
+ - You can utilize disks already filled with files without the need to
+   reformat them, accessing them as usual.
+ - All your data is hashed to ensure data integrity and prevent silent
+   corruption.
+ - When the number of failed disks exceeds the parity count, data loss
+   is confined to the affected disks; data on other disks remains
+   accessible.
+ - If you accidentally delete files on a disk, recovery is possible.
+ - Disks can have different sizes.
+ - You can add disks at any time.
+ - SnapRAID doesn't lock in your data; you can stop using it anytime
+   without reformatting or moving data.
+ - To access a file, only a single disk needs to spin, saving power
+   and reducing noise.

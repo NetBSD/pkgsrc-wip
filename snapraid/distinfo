@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (snapraid-12.3.tar.gz) = f70dbedfc1c03370a701e52643cef05586ac538f0be0295e4726bdeaa4de18e8
+SHA512 (snapraid-12.3.tar.gz) = fccdbfad13dfa6147b16dde017db826921be082d1d1b5f0c72b462cc47d73738bb75fa0d8bf66216bf919289cc681262bfea635761ed7fe2af0400ce5cbc5616
+Size (snapraid-12.3.tar.gz) = 662164 bytes
+SHA1 (patch-cmdline_unix.c) = c6843de7f8007cf0be8e9a0c5e0d6aa7eacecf68

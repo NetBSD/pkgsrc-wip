@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/snapraid
+man/man1/snapraid.1

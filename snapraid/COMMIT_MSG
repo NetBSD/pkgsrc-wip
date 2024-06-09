@@ -1,0 +1,4 @@
+Import SnapRAID 12.3, a backup program designed for disk arrays, storing
+parity information for data recovery in the event of up to six disk
+failures. Primarily intended for home media centers with large, infrequently
+changing files.
