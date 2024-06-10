@@ -3432,6 +3432,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-datetree.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-datetree.elc
 share/emacs/${PKGVERSION}/lisp/org/org-duration.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-duration.elc
+share/emacs/${PKGVERSION}/lisp/org/org-element-ast.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-element-ast.elc
 share/emacs/${PKGVERSION}/lisp/org/org-element.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-element.elc
 share/emacs/${PKGVERSION}/lisp/org/org-entities.el.gz
