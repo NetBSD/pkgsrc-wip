@@ -249,6 +249,7 @@ SUBDIR+=	avidemux-qt
 SUBDIR+=	avp
 SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
+SUBDIR+=	avr-libc
 SUBDIR+=	avra
 SUBDIR+=	avrdude
 SUBDIR+=	awesome6-otf

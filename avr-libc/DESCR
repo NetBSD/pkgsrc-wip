@@ -1,0 +1,15 @@
+This is avr-libc. It is a C library implementation for use
+with GNU GCC and GNU binutils for development of programs for
+Atmel's AVR microcontrollers.
+
+This library implements a subset of common C library functions, some
+Atmel AVR specific additions (like handling AVR's IO facilities,
+EEPROM etc.), as well as a 32-bit floating point math library (-lm).
+
+Everything is designed and implemented to cooperate with avr-gcc and
+avr-binutils.
+
+For details on installing and using AVR Libc, see the users manual in the
+doc/api directory or online at:
+
+  http://savannah.nongnu.org/projects/avr-libc/
