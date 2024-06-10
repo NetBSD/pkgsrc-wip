@@ -1,4 +1,4 @@
-www/dillo: Update to 3.1
+www/dillo: Update to 3.1.0
 
 - Switch to Github and update homepage
   The host dillo.org is no longer under control of Dillo developers.
