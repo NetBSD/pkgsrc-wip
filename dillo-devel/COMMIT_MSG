@@ -1,4 +1,23 @@
-www/dillo: Update to 3.1.0
+www/dillo: Update to 3.1.1
+
+3.1.1
+=====
+
+* Patches by Rodrigo Arias Mallo:
+  Disable TLSv1.3 in Mbed TLS 3.6.0 until it is supported (fixes build on
+    Alpine Linux).
+  Add workaround for Cygwin and OpenSSL with --disable-threaded-dns.
+  Fix distcheck when HTML tests are enabled.
+  Fix an OpenSSL bug when the server closes the connection prematurely
+    and SSL_get_error() returns SSL_ERROR_ZERO_RETURN.
+* Patches by Matt Jolly:
+  Add HTML tests to the distributed tarball.
+* Patches by dogma:
+  Gracefully handle warnings from PNG images.
+
+
+3.1.0
+=====
 
 - Switch to Github and update homepage
   The host dillo.org is no longer under control of Dillo developers.
