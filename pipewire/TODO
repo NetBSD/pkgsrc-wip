@@ -1,0 +1,14 @@
+meson configuration stops with
+
+src/daemon/meson.build:37:12: ERROR: Automatic wrap-based subproject downloading is disabled
+
+There are four subprojects defined:
+
+# cd ${WRKSRC}
+# ls -1 subprojects
+libcamera.wrap
+media-session.wrap
+webrtc-audio-processing.wrap
+wireplumber.wrap
+
+Investigate if we need to download these or can disable them.

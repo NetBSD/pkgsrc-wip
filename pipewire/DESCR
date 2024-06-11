@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# PipeWire
+
+[PipeWire](https://pipewire.org) is a server and user space API to
+deal with multimedia pipelines. This includes:
+
+  - Making available sources of video (such as from a capture devices or
+    application provided streams) and multiplexing this with
+    clients.
+  - Accessing sources of video for consumption.
+  - Generating graphs for audio and video processing.
+
+Nodes in the graph can be implemented as separate processes,
+communicating with sockets and exchanging multimedia content using fd
+passing.
+
+## Building and installation
+
+The preferred way to install PipeWire is to install it with your
+distribution package system. This ensures PipeWire is integrated
+into the rest of your system for the best experience.
+...

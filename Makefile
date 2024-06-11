@@ -3117,6 +3117,7 @@ SUBDIR+=	pint
 SUBDIR+=	pioneer
 SUBDIR+=	pipe-viewer
 SUBDIR+=	pipes-c
+SUBDIR+=	pipewire
 SUBDIR+=	piranha
 SUBDIR+=	piwik
 SUBDIR+=	pizza

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (pipewire-1.0.7.tar.bz2) = 8dc3f24e2ce5ba87546bf1fbca3b6acf2cbd841b9be0f04de9acf56c1ecd8ea8
+SHA512 (pipewire-1.0.7.tar.bz2) = 3fb46376cdf061b3ea7be55249399d0036c2728bb4deeb6f5c6d708141234e75f563e6a3dc749fbd40dadba72ad2db5fda358b368a480479157731cc67f3303d
+Size (pipewire-1.0.7.tar.bz2) = 1698775 bytes
