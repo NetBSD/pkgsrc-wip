@@ -1,4 +1,5 @@
 @comment $NetBSD$
+@comment -Ddeprecated files are commented
 bin/vips
 bin/vipsedit
 bin/vipsheader
@@ -9,7 +10,7 @@ include/vips/VError8.h
 include/vips/VImage8.h
 include/vips/VInterpolate8.h
 include/vips/VRegion8.h
-include/vips/almostdeprecated.h
+@comment include/vips/almostdeprecated.h
 include/vips/arithmetic.h
 include/vips/basic.h
 include/vips/buf.h
@@ -20,8 +21,8 @@ include/vips/convolution.h
 include/vips/create.h
 include/vips/dbuf.h
 include/vips/debug.h
-include/vips/deprecated.h
-include/vips/dispatch.h
+@comment include/vips/deprecated.h
+@comment include/vips/dispatch.h
 include/vips/draw.h
 include/vips/enumtypes.h
 include/vips/error.h
@@ -34,8 +35,8 @@ include/vips/header.h
 include/vips/histogram.h
 include/vips/image.h
 include/vips/interpolate.h
-include/vips/intl.h
-include/vips/mask.h
+@comment include/vips/intl.h
+@comment include/vips/mask.h
 include/vips/memory.h
 include/vips/morphology.h
 include/vips/mosaicing.h
@@ -54,11 +55,10 @@ include/vips/type.h
 include/vips/util.h
 include/vips/vector.h
 include/vips/version.h
-include/vips/video.h
+@comment include/vips/video.h
 include/vips/vips.h
-include/vips/vips7compat.h
+@comment include/vips/vips7compat.h
 include/vips/vips8
-lib/girepository-1.0/Vips-8.0.typelib
 lib/libvips-cpp.so
 lib/libvips-cpp.so.42
 lib/libvips-cpp.so.42.17.2
@@ -72,6 +72,5 @@ man/man1/vipsedit.1
 man/man1/vipsheader.1
 man/man1/vipsprofile.1
 man/man1/vipsthumbnail.1
-share/gir-1.0/Vips-8.0.gir
 share/locale/de/LC_MESSAGES/vips8.15.mo
 share/locale/en_GB/LC_MESSAGES/vips8.15.mo
