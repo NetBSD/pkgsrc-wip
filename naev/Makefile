@@ -53,7 +53,7 @@ SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 .include "../../math/glpk/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-# TODO: report this as a bug upstream
+# reported at: https://github.com/naev/naev/issues/2570
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../net/enet/buildlink3.mk"
 .include "../../parallel/openmp/buildlink3.mk"
