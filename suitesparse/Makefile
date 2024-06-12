@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-# XXX: file a bug report about this upstream
+# reported at: https://github.com/DrTimothyAldenDavis/SuiteSparse/issues/837
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
