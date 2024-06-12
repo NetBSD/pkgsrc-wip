@@ -21,6 +21,11 @@ PKGCONFIG_OVERRIDE_STAGE=   pre-install
 PKGCONFIG_OVERRIDE+=        output/meson-private/vips-cpp.pc
 PKGCONFIG_OVERRIDE+=        output/meson-private/vips.pc
 
+# disable relro otherwise it'll crash on NetBSD:
+# https://github.com/libvips/libvips/issues/3977 and
+# https://mail-index.netbsd.org/netbsd-bugs/2023/12/26/msg080904.html
+RELRO_SUPPORTED=no
+
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/tool.mk"
