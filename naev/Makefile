@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.7 2020/11/05 09:08:13 ryoon Exp $
 
-DISTNAME=		naev-0.11.4
+DISTNAME=		naev-0.11.5
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=naev/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -52,9 +52,6 @@ SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 .include "../../lang/python/tool.mk"
 .include "../../math/glpk/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
-# reported at: https://github.com/naev/naev/issues/2570
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../net/enet/buildlink3.mk"
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

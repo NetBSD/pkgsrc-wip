@@ -1,8 +1,8 @@
 $NetBSD: distinfo,v 1.1 2019/10/01 12:25:37 nia Exp $
 
-BLAKE2s (naev-0.11.4.tar.gz) = 5b3db98a722bf8bfc02ab238cd584ea3e62c978031063cf79081911d0d2beb71
-SHA512 (naev-0.11.4.tar.gz) = ab5319e650c55956381178eeaf9ce51c08b9f29e3b9543d83f259de2d32ce36afd124edccee2600b7428b9a0ae36c8c8cd273fa873068a6faf9f92dc6d6b6eb8
-Size (naev-0.11.4.tar.gz) = 20209263 bytes
+BLAKE2s (naev-0.11.5.tar.gz) = cb63b143aa79c3d2182a4b7799006b38e7edfa479024b79b13432123d1ae8437
+SHA512 (naev-0.11.5.tar.gz) = e28ae8e302d78ce8a803cf451f6dab430b3814072618f3ce12d312054172279eed130533251cd0c10afb4113acfe458f8f7138054bea2f5f9d0c80fb3777a45b
+Size (naev-0.11.5.tar.gz) = 20213692 bytes
 BLAKE2s (naev-naev-artwork-production-e2d2edab2317d296eb14a830505b1dc41d02dec1.tar.gz) = b061ac01b8556f1a1959c4620b1e4448ec20e663dd115477ee34fa3fe3e5352e
 SHA512 (naev-naev-artwork-production-e2d2edab2317d296eb14a830505b1dc41d02dec1.tar.gz) = 3ae7cbed2748c1b7b625da2e53af55f7199cd438b036276dc9315a9f141a6bafbc86144c7d2b126db9460c4fa06bf394b1d2cfb5a60e1cb020f90b7b58095a9c
 Size (naev-naev-artwork-production-e2d2edab2317d296eb14a830505b1dc41d02dec1.tar.gz) = 454967410 bytes
