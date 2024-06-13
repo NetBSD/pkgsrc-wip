@@ -1,22 +1,5 @@
 @comment $NetBSD$
 bin/syncserver
-lib/tokenserver/__init__.py
-lib/tokenserver/add_node.py
-lib/tokenserver/allocate_user.py
-lib/tokenserver/count_users.py
-lib/tokenserver/database.py
-lib/tokenserver/process_account_events.py
-lib/tokenserver/purge_old_records.py
-lib/tokenserver/remove_node.py
-lib/tokenserver/requirements.txt
-lib/tokenserver/run_tests.py
-lib/tokenserver/test_database.py
-lib/tokenserver/test_process_account_events.py
-lib/tokenserver/test_purge_old_records.py
-lib/tokenserver/test_scripts.py
-lib/tokenserver/unassign_node.py
-lib/tokenserver/update_node.py
-lib/tokenserver/util.py
 share/doc/syncstorage-rs/README.md
 share/doc/syncstorage-rs/config.md
 share/doc/syncstorage-rs/setup.md
