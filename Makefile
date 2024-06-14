@@ -104,6 +104,7 @@ SUBDIR+=	a2ps-sharatype
 SUBDIR+=	accountsservice
 SUBDIR+=	acl
 SUBDIR+=	acme-client
+SUBDIR+=	acme-dns
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
 SUBDIR+=	act
