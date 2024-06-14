@@ -1,6 +1,6 @@
 # $NetBSD$
 
-VERSION=	4.5.0
+VERSION=	5.1.0
 DISTNAME=	reveal.js-${VERSION}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hakimel/}

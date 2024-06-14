@@ -70,6 +70,7 @@ share/${PKGNAME}/dist/theme/solarized.css
 share/${PKGNAME}/dist/theme/white-contrast.css
 share/${PKGNAME}/dist/theme/white.css
 share/${PKGNAME}/dist/theme/white_contrast_compact_verbatim_headers.css
+share/${PKGNAME}/examples/500-slides.html
 share/${PKGNAME}/examples/assets/beeping.txt
 share/${PKGNAME}/examples/assets/beeping.wav
 share/${PKGNAME}/examples/assets/image1.png
@@ -83,6 +84,7 @@ share/${PKGNAME}/examples/markdown.md
 share/${PKGNAME}/examples/math.html
 share/${PKGNAME}/examples/media.html
 share/${PKGNAME}/examples/multiple-presentations.html
+share/${PKGNAME}/examples/scroll.html
 share/${PKGNAME}/examples/transitions.html
 share/${PKGNAME}/gulpfile.js
 share/${PKGNAME}/index.html
@@ -100,8 +102,9 @@ share/${PKGNAME}/js/controllers/notes.js
 share/${PKGNAME}/js/controllers/overview.js
 share/${PKGNAME}/js/controllers/plugins.js
 share/${PKGNAME}/js/controllers/pointer.js
-share/${PKGNAME}/js/controllers/print.js
+share/${PKGNAME}/js/controllers/printview.js
 share/${PKGNAME}/js/controllers/progress.js
+share/${PKGNAME}/js/controllers/scrollview.js
 share/${PKGNAME}/js/controllers/slidecontent.js
 share/${PKGNAME}/js/controllers/slidenumber.js
 share/${PKGNAME}/js/controllers/touch.js
@@ -154,5 +157,6 @@ share/${PKGNAME}/test/test-multiple-instances-es5.html
 share/${PKGNAME}/test/test-multiple-instances.html
 share/${PKGNAME}/test/test-pdf.html
 share/${PKGNAME}/test/test-plugins.html
+share/${PKGNAME}/test/test-scroll.html
 share/${PKGNAME}/test/test-state.html
 share/${PKGNAME}/test/test.html
