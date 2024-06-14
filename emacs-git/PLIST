@@ -3771,6 +3771,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/peg.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/peg.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/php-ts-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/php-ts-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/project.el.gz
