@@ -1,1 +1,26 @@
-Needs libadwaita-1.5rc+ which is an unstable release.
+  --- closeout.o ---
+  In file included from ../intl/libintl.h:20,
+                   from /tmp/t4865-0/gettext/gettext-runtime/gnulib-lib/gettext.h:26,
+                   from /tmp/t4865-0/gettext/gettext-runtime/gnulib-lib/closeout.c:28:
+  ./locale.h:687:11: fatal error: setlocale_null.h: No such file or directory
+    687 | # include "setlocale_null.h"
+        |           ^~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  *** [closeout.o] Error code 1
+
+  make[6]: stopped in /tmp/t4865-0/build/gettext-runtime/gnulib-lib
+
+
+  --- careadlinkat.o ---
+  In file included from ./fcntl.h:79,
+                   from /tmp/t4865-0/gettext/gettext-runtime/gnulib-lib/careadlinkat.h:23,
+                   from /tmp/t4865-0/gettext/gettext-runtime/gnulib-lib/careadlinkat.c:23:
+  ./unistd.h:637:11: fatal error: getopt-pfx-core.h: No such file or directory
+    637 | # include <getopt-pfx-core.h>
+        |           ^~~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  *** [careadlinkat.o] Error code 1
+
+  make[6]: stopped in /tmp/t4865-0/build/gettext-runtime/gnulib-lib
+  --- unistd.o ---
+
