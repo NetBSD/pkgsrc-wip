@@ -16,6 +16,16 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	pkg-config
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/glib2/schemas.mk"
+BUILDLINK_API_DEPENDS.libadwaita+=	libadwaita>=1.5
 .include "../../devel/libadwaita/buildlink3.mk"
+.include "../../devel/libgee/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../x11/gtksourceview5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
