@@ -1,7 +1,7 @@
 ===========================================================================
 $NetBSD$
 Try following after install
-  - rsync -avH ${PREFIX}/share/${PKGNAME}/test/examples  /tmp
+  - rsync -avH ${PREFIX}/share/${PKGNAME}/examples  /tmp
   - open the URL with your browser
-    file:///tmp/examples
+    file:///tmp/examples/layout-helpers.html
 ===========================================================================
