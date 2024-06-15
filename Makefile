@@ -5595,6 +5595,7 @@ SUBDIR+=	ttyload
 SUBDIR+=	ttysnoop
 SUBDIR+=	ttytter
 SUBDIR+=	tuareg-mode
+SUBDIR+=	tuba
 SUBDIR+=	tudu
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci

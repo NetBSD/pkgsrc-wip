@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+<p align="center">
+  <img alt="A tuba in the style of GNOME icons" width="160" src="./data/icons/color.svg">
+</p>
+<h1 align="center">Tuba</h1>
+<h3 align="center">Browse the Fediverse</h3>
+<p align="center">
+  <br />
+    <a href="./CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Code%20of%20Conduct-GNOME-f5c211.svg?style=for-the-badge&labelColor=f9f06b" alt="Contributor Covenant v2.1" /></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/LICENSE-GPL--3.0-f5c211.svg?style=for-the-badge&labelColor=f9f06b" alt="License GPL-3.0" /></a>
+    <a href="https://github.com/GeopJr/Tuba/actions/workflows/build.yml"><img alt="GitHub CI Status" src="https://img.shields.io/github/actions/workflow/status/GeopJr/Tuba/build.yml?branch=main&style=for-the-badge&labelColor=f9f06b"></a>
+    <a href='https://stopthemingmy.app'><img width='193.455' alt='Please do not theme this app' src='https://stopthemingmy.app/badge.svg'/></a>
+</p>
+
+<p align="center">
+    <img alt="Screenshot of the Tuba app in light and mobile view. The current view is the main one on the 'Home' tab. The 'Notifications' tab has the number 15 in an accent-colored bubble. There are 3 posts visible by BASIL, AUBREY and HERO (only the boost tag) showcasing some of Tuba's features: 1. Image attachments, 2. custom emojis, 3. content warnings, 4. reboosts, 5. notification badges, 6.post indicators, 7. post actions." src="https://media.githubusercontent.com/media/GeopJr/Tuba/main/data/screenshots/screenshot-1.png">
+</p>
+
+# Install
+
+## Official
+...
