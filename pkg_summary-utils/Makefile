@@ -1,5 +1,5 @@
 # $NetBSD: Makefile,v 1.70 2015/03/01 14:46:52 cheusov Exp $
-DISTNAME=	pkg_summary-utils-0.68.0
+DISTNAME=	pkg_summary-utils-0.69.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
