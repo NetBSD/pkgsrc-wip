@@ -2,9 +2,9 @@ $NetBSD$
 
 Treat NetBSD like Linux.
 
---- src/slic3r/GUI/wxExtensions.cpp.orig	2023-06-02 13:41:15.000000000 +0000
+--- src/slic3r/GUI/wxExtensions.cpp.orig	2024-06-14 21:54:48.000000000 +0000
 +++ src/slic3r/GUI/wxExtensions.cpp
-@@ -22,7 +22,7 @@
+@@ -28,7 +28,7 @@
  
  #include "libslic3r/Color.hpp"
  
@@ -13,7 +13,7 @@ Treat NetBSD like Linux.
  // msw_menuitem_bitmaps is used for MSW and OSX
  static std::map<int, std::string> msw_menuitem_bitmaps;
  void sys_color_changed_menu(wxMenu* menu)
-@@ -92,7 +92,7 @@ wxMenuItem* append_menu_item(wxMenu* men
+@@ -137,7 +137,7 @@ wxMenuItem* append_menu_item(wxMenu* men
  
      wxBitmapBundle* bmp = icon.empty() ? nullptr : get_bmp_bundle(icon);
  
@@ -22,7 +22,7 @@ Treat NetBSD like Linux.
      if (bmp && bmp->IsOk())
          msw_menuitem_bitmaps[id] = icon;
  #endif /* no __linux__ */
-@@ -110,7 +110,7 @@ wxMenuItem* append_submenu(wxMenu* menu,
+@@ -155,7 +155,7 @@ wxMenuItem* append_submenu(wxMenu* menu,
      if (!icon.empty()) {
          item->SetBitmap(*get_bmp_bundle(icon));
  
@@ -31,15 +31,12 @@ Treat NetBSD like Linux.
          msw_menuitem_bitmaps[id] = icon;
  #endif // no __linux__
      }
-@@ -671,9 +671,9 @@ void ModeButton::focus_button(const bool
-     GetParent()->Refresh(); // force redraw a background of the selected mode button
- #else
-     SetForegroundColour(wxSystemSettings::GetColour(focus ? wxSYS_COLOUR_BTNTEXT : 
--#if defined (__linux__) && defined (__WXGTK3__)
-+#if (defined(__linux__) || defined(__NetBSD__)) && defined (__WXGTK3__)
-         wxSYS_COLOUR_GRAYTEXT
--#elif defined (__linux__) && defined (__WXGTK2__)
-+#elif (defined (__linux__) || defined(__NetBSD__)) && defined (__WXGTK2__)
-         wxSYS_COLOUR_BTNTEXT
- #else 
-         wxSYS_COLOUR_BTNSHADOW
+@@ -218,7 +218,7 @@ wxMenuItem* append_menu_check_item(wxMen
+ void set_menu_item_bitmap(wxMenuItem* item, const std::string& icon_name)
+ {
+     item->SetBitmap(*get_bmp_bundle(icon_name));
+-#ifndef __linux__
++#if !defined(__linux__) && !defined(__NetBSD__)
+     const auto it = msw_menuitem_bitmaps.find(item->GetId());
+     if (it != msw_menuitem_bitmaps.end() && it->second != icon_name)
+         it->second = icon_name;

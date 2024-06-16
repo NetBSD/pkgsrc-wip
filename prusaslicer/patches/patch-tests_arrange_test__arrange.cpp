@@ -3,7 +3,7 @@ $NetBSD$
 Support Catch2 v3.
 Based on https://github.com/prusa3d/PrusaSlicer/issues/11567
 
---- tests/arrange/test_arrange.cpp.orig	2024-02-29 13:03:32.000000000 +0000
+--- tests/arrange/test_arrange.cpp.orig	2024-06-14 21:54:48.000000000 +0000
 +++ tests/arrange/test_arrange.cpp
 @@ -1,4 +1,7 @@
 -#include <catch2/catch.hpp>
@@ -33,7 +33,7 @@ Based on https://github.com/prusa3d/PrusaSlicer/issues/11567
              }
          }
      }
-@@ -1063,7 +1069,7 @@ TEMPLATE_TEST_CASE("Test if allowed item
+@@ -1063,6 +1069,6 @@ TEMPLATE_TEST_CASE("Test if allowed item
      bool packed = pack(strategy, bed, itm);
  
      REQUIRE(packed);
@@ -41,4 +41,3 @@ Based on https://github.com/prusa3d/PrusaSlicer/issues/11567
 +    REQUIRE_THAT(get_rotation(itm), WithinRel(PI));
  }
  
- //TEST_CASE("NFP optimizing test", "[arrange2]") {
