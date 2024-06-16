@@ -323,9 +323,6 @@ ${PYSITELIB}/dask/callbacks.pyo
 ${PYSITELIB}/dask/cli.py
 ${PYSITELIB}/dask/cli.pyc
 ${PYSITELIB}/dask/cli.pyo
-${PYSITELIB}/dask/compatibility.py
-${PYSITELIB}/dask/compatibility.pyc
-${PYSITELIB}/dask/compatibility.pyo
 ${PYSITELIB}/dask/config.py
 ${PYSITELIB}/dask/config.pyc
 ${PYSITELIB}/dask/config.pyo

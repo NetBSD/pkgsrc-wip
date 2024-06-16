@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dask-2024.5.2
+DISTNAME=	dask-2024.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 GITHUB_PROJECT=	dask
@@ -52,9 +52,12 @@ DEPENDS+=	${PYPKGPREFIX}-zict>=2.1.0:../../wip/py-zict
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-rerunfailures
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.6.0:../../devel/py-multipledispatch
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.6.0:../../devel/py-importlib-metadata
+TEST_DEPENDS+=	${PYPKGPREFIX}-tables>=3.9:../../math/py-tables
+TEST_DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.9.0:../../math/py-numexpr
 TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
 # TODO: Get These Working
 # TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9.5:../../www/py-aiohttp
