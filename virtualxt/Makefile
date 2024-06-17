@@ -1,6 +1,5 @@
 # $NetBSD$
 
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 DISTNAME=	virtualxt-1.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andreas-jonsson/}
@@ -9,6 +8,10 @@ MAINTAINER=		mail@andreasjonsson.se
 HOMEPAGE=		https://virtualxt.org/
 COMMENT=		Portable, lightweight Turbo PC/XT emulator written in C
 LICENSE=		zlib
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 USE_LANGUAGES=		c
 USE_CC_FEATURES=	c11
@@ -20,7 +23,6 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin share/virtualxt/bios share/virtualxt/boot
 BUILD_TARGET=		sdl2-frontend
 CFLAGS+=		-DVXT_VERSION_RELEASE -Wno-error=char-subscripts
-WRKSRC=			${WRKDIR}/${DISTNAME}
 
 post-extract:
 	${CP} ${FILESDIR}/virtualxt.freedos ${WRKSRC}
