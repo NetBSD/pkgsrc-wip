@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.147 2022/10/23 13:09:30 he Exp $
+# $NetBSD: Makefile,v 1.148 2023/04/09 07:28:27 wiz Exp $
 
 .include "Makefile.common"
 
 TEST_PROGRAM=		ocamltest
-MAKE_JOBS_SAFE=		no
+#MAKE_JOBS_SAFE=	no
 UNLIMIT_RESOURCES=	stacksize
 
 USE_TOOLS+=		bash
@@ -11,12 +11,8 @@ USE_LANGUAGES+=		c
 USE_LIBTOOL=		yes
 USE_GNU_CONFIGURE_HOST=	no
 
-#USE_GCC_RUNTIME=	yes
-
 .include "options.mk"
 .include "native.mk"
-
-# Options
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 CONFIGURE_ARGS+=	--enable-native-compiler
@@ -27,11 +23,11 @@ BUILD_TARGET=		world
 .endif
 
 # configure: error: fma does not work, enable emulation with --enable-imprecise-c99-float-ops
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-earm*}
 CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && (${OPSYS_VERSION} < 99999)
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} && (${OPSYS_VERSION} < 99999)
 # fma(3) was added for powerpc between 9.99.98 and 9.99.99
 CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 .endif
@@ -54,6 +50,9 @@ EXTRA_RT_LIBS.NetBSD=	-lcurses
 EXTRA_RT_LIBS.*=
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
+PRINT_PLIST_AWK+=	{ if (/\.opt$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/\.cmx$$/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/^bin\/ocamlopt/) $$0 = "$${PLIST.ocaml-opt}" $$0 }
 
 do-test:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} ${TEST_PROGRAM}
@@ -68,6 +67,10 @@ fix-darwin-install-name:
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
 .endif
+.PHONY: fix-man-extension
+post-install: fix-man-extension
+fix-man-extension:
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && for i in *.3o; do mv $$i $${i%%o}; done
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"

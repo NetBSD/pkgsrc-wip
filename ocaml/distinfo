@@ -1,23 +1,5 @@
-$NetBSD: distinfo,v 1.145 2022/05/24 18:25:38 jaapb Exp $
+$NetBSD: distinfo,v 1.146 2023/04/09 07:27:48 wiz Exp $
 
-BLAKE2s (ocaml-5.0.0~beta1.tar.gz) = 4eed36e7838ce27aafb45f4b5199608a098e4daab6528aab9822472c5d2d307f
-SHA512 (ocaml-5.0.0~beta1.tar.gz) = e0a9a1a61e77ab5ef22f0733410f1d3ad9119c14e5507ca26a3584bed9b74bb13ae07369701a521a4926fde65e0b8d202eb4581f998f51dee1bf87db07f97499
-Size (ocaml-5.0.0~beta1.tar.gz) = 5648536 bytes
-SHA1 (patch-Makefile) = 15bb45ef45add0bd082f1b47050bc38456aeb5bd
-SHA1 (patch-Makefile.build_config.in) = cbbe5dfd7ebf3302676cc47e35a7bd5177404108
-SHA1 (patch-api__docgen_ocamldoc_Makefile) = 075419e3534abc0dd06b19be599c42ec18f3bd75
-SHA1 (patch-check-linker-version_sh) = c90242556207242ac58499d7f42519a10aedcca4
-SHA1 (patch-configure) = 36ddb6f19ce7564889dc48ee290904dce00b04ec
-SHA1 (patch-lex_Makefile) = ecfb05c919a12ddf4be30c810b9a245d295eb113
-SHA1 (patch-man_Makefile) = 3d55fe5127758566f81a1b4e55e66c6ae3a848f1
-SHA1 (patch-ocamldoc_Makefile) = 3c2460a03c148789b2f187eee6678858ecb39ead
-SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb5734b
-SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 0a91ea3a5d1b89b9755ea41c29f85c34e4025600
-SHA1 (patch-otherlibs_systhreads_Makefile) = ba4668460e6300b10f1d57fa0e46c0c39b2ff98f
-SHA1 (patch-otherlibs_systhreads_st__stubs.c) = 65adba4249a6ef871c3f44df2fc0252a664d3a15
-SHA1 (patch-otherlibs_unix_Makefile) = 2c58be92b9dfab1abace62a0f4c168da72226c9f
-SHA1 (patch-runtime_floats.c) = 584a30d31c7b7da4f8387dc58b90fa1a8078f723
-SHA1 (patch-runtime_sak.c) = 62a0946419b96033497a4a12105bbd9b4ef3aba6
-SHA1 (patch-testsuite_tests_lib-systhreads_testyield.ml) = 0f6d35e030de168c6f4aeb126055065ed47878aa
-SHA1 (patch-tools_Makefile) = d181dd3ed3f3eb270451fb5bd15317cfb9e6fb11
-SHA1 (patch-tools_ocamlmklib.ml) = dad1d55e0b0cef61a76844b45fcde83277f4a087
+BLAKE2s (ocaml-5.2.0.tar.gz) = 0b463dc4ad141f016f5641826942a64f94362f06a92e7a9f54b0cbbc0dab78c4
+SHA512 (ocaml-5.2.0.tar.gz) = 78115690186c13c1f2480e4812a9fe34cce2c28bf8a89d5c9810bca0391f930cecd9cee2b53daca8a32da1815628b33be68f3948f1ad03fa50b72b14e3ea84f2
+Size (ocaml-5.2.0.tar.gz) = 6047633 bytes

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.64 2022/05/24 18:25:38 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.65 2023/04/09 07:27:48 wiz Exp $
 
 # used by x11/labltk/Makefile
-DISTNAME=	ocaml-5.0.0~beta1
+DISTNAME=	ocaml-5.2.0
 CATEGORIES=	lang
-MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-5.0/
-#EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-5.2/
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://ocaml.org/
@@ -14,6 +13,11 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES+=		c99
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=		INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
+
 #CONFIGURE_ENV+=	BDB_LIBS=${BDB_LINK:Q}
 #CONFIGURE_ENV+=	BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
 #CONFIGURE_ENV+=	LDFLAGS=${LDFLAGS:Q}
@@ -59,3 +63,4 @@ INSTALL_UNSTRIPPED=	yes
 #	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
