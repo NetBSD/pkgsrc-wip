@@ -1129,6 +1129,7 @@ SUBDIR+=	gauche-pib
 SUBDIR+=	gcalcli-git
 SUBDIR+=	gcc10-aux
 SUBDIR+=	gcc10snapshot
+SUBDIR+=	gcc12
 SUBDIR+=	gcc13-gnat
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
