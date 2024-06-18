@@ -1,0 +1,6 @@
+devel/cargo-c: update to 0.10.0
+
+ - cargo 0.80
+ - By default, if not cross-compiling, cargo-c now has the same heuristic to
+   figure out per-platform default directories matching meson (Thank you @amyspark)
+ - Additional improvements in dealing with MSVC (Thank you again @amyspark!)

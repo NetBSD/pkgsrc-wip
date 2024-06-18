@@ -402,6 +402,7 @@ SUBDIR+=	canto-daemon
 SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	carburetta
+SUBDIR+=	cargo-c
 SUBDIR+=	cardpeek
 SUBDIR+=	carla
 SUBDIR+=	cartago
