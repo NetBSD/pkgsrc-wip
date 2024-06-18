@@ -4972,6 +4972,7 @@ SUBDIR+=	rhapsody
 SUBDIR+=	riak
 SUBDIR+=	riak14
 SUBDIR+=	ricochet
+SUBDIR+=	rio
 SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
 SUBDIR+=	ripole
