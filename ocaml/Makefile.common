@@ -3,7 +3,10 @@
 # used by x11/labltk/Makefile
 DISTNAME=	ocaml-5.2.0
 CATEGORIES=	lang
-MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-5.2/
+# unreliable
+#MASTER_SITES=	https://caml.inria.fr/pub/distrib/ocaml-5.2/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://ocaml.org/
