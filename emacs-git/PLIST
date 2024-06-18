@@ -4292,6 +4292,8 @@ share/emacs/${PKGVERSION}/lisp/w32-vars.el.gz
 share/emacs/${PKGVERSION}/lisp/w32-vars.elc
 share/emacs/${PKGVERSION}/lisp/wdired.el.gz
 share/emacs/${PKGVERSION}/lisp/wdired.elc
+share/emacs/${PKGVERSION}/lisp/which-key.el.gz
+share/emacs/${PKGVERSION}/lisp/which-key.elc
 share/emacs/${PKGVERSION}/lisp/whitespace.el.gz
 share/emacs/${PKGVERSION}/lisp/whitespace.elc
 share/emacs/${PKGVERSION}/lisp/wid-browse.el.gz
