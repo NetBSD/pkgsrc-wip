@@ -10,26 +10,14 @@ HOMEPAGE=	https://ocaml.org/
 COMMENT=	The latest implementation of the Caml dialect of ML
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES+=		c99
+USE_LANGUAGES+=		c
+USE_CC_FEATURES+=	c99
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 MAKE_FLAGS+=		INSTALL_DATA=${INSTALL_DATA:Q}
 MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
-
-#CONFIGURE_ENV+=	BDB_LIBS=${BDB_LINK:Q}
-#CONFIGURE_ENV+=	BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
-#CONFIGURE_ENV+=	LDFLAGS=${LDFLAGS:Q}
-#CONFIGURE_ARGS+=	-prefix ${PREFIX}
-#CONFIGURE_ARGS+=	-with-pthread
-#CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
-#CONFIGURE_ARGS+=	-mandir ${PREFIX}/lib/ocaml/${PKGMANDIR}
-#CONFIGURE_ARGS+=	--without-x
-#CPPFLAGS+=		-DDB_DBM_HSEARCH
-
-#DISTINFO_FILE=	${.CURDIR}/../../lang/ocaml/distinfo
-#PATCHDIR=	${.CURDIR}/../../lang/ocaml/patches
 
 # build failure on i386: "../ocamlopt.opt: text relocations"
 MKPIE_SUPPORTED=	no
@@ -40,27 +28,6 @@ MKPIE_SUPPORTED=	no
 INSTALL_UNSTRIPPED=	yes
 .endif
 
-#.if ${OPSYS} == "Darwin"
-#CONFIGURE_ENV+=	CC="${CC} -arch ${MACHINE_ARCH} ${CFLAGS}"
-#CONFIGURE_ENV+=	ASPP="${CC} -arch ${MACHINE_ARCH} -c"
-#CONFIGURE_ENV+=	AS="as -arch ${MACHINE_ARCH}"
-#.else
-#CONFIGURE_ENV+=	CC="${CC} ${CFLAGS}"
-#.endif
-
 .include "../../mk/bdb.buildlink3.mk"
-
-#BDB_LINK=	${BDB_LIBS}
-#.if empty(BDBBASE:M/usr)
-#BDB_LINK+=	-L${BDBBASE}/lib ${COMPILER_RPATH_FLAG}${BDBBASE}/lib
-#.endif
-
-#post-extract: cp-gnu-config
-
-#.PHONY: cp-gnu-config
-#cp-gnu-config:
-#	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config/gnu/
-#	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"

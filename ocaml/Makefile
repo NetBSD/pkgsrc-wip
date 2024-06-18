@@ -3,7 +3,6 @@
 .include "Makefile.common"
 
 TEST_PROGRAM=		ocamltest
-#MAKE_JOBS_SAFE=	no
 UNLIMIT_RESOURCES=	stacksize
 
 USE_TOOLS+=		bash
