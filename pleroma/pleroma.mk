@@ -47,12 +47,10 @@ install: release/.release-done
 	$(INSTALL_DIR) $(PLEROMA_PREFIX)
 	$(INSTALL_DATA) release/OTP_VERSION	$(PLEROMA_PREFIX)
 
+	$(INSTALL_DIR) $(PLEROMA_PREFIX)/etc/pleroma
+
 	$(INSTALL_DIR) release/bin $(TARGET_PREFIX)/bin
 	$(INSTALL_PROGRAM) $(wildcard release/bin/*) $(TARGET_PREFIX)/bin
-
-	$(INSTALL_DIR) $(PLEROMA_PREFIX)/$(ERTS_VERSION)
-	$(INSTALL_DIR) $(PLEROMA_PREFIX)/$(ERTS_VERSION)/bin
-	$(INSTALL_PROGRAM) $(wildcard release/$(ERTS_VERSION)/bin/*) $(PLEROMA_PREFIX)/$(ERTS_VERSION)/bin
 
 	$(INSTALL_DIR) $(PLEROMA_PREFIX)/lib
 	$(PAX) -rw -pp -s ':^release/lib::' release/lib $(PLEROMA_PREFIX)/lib

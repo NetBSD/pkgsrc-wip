@@ -4,3 +4,4 @@ BLAKE2s (pleroma-v2.6.3.tar.gz) = 61404ab883c7e5e5125e98bb315f456f8875b2f135bd39
 SHA512 (pleroma-v2.6.3.tar.gz) = b10fdbf3bb17f69c2754adb7201085880380777a4f363a09a8926bb6d2f4ed60888680f6af053befca06aa0b319083e1111c6471df9c918df3ccaab98fadb83d
 Size (pleroma-v2.6.3.tar.gz) = 28128737 bytes
 SHA1 (patch-mix.exs) = 5c3ba889e716d6e2eee842329c2b50adeafba3c3
+SHA1 (patch-rel_env.sh.eex) = c631221042f4bdf78dac606037d12feabd00f1f0

@@ -1,0 +1,14 @@
+$NetBSD$
+
+# Update runtime config and setup PLEROMA_CONFIG_PATH,
+# which will be replaced later during the build process
+
+--- rel/env.sh.eex.orig	2024-06-19 23:18:46.148902573 +0000
++++ rel/env.sh.eex
+@@ -10,3 +10,6 @@
+ # Set the release to work across nodes
+ export RELEASE_DISTRIBUTION="${RELEASE_DISTRIBUTION:-name}"
+ export RELEASE_NODE="${RELEASE_NODE:-<%= @release.name %>@127.0.0.1}"
++
++export LC_ALL="en_US.UTF-8"
++export PLEROMA_CONFIG_PATH="PLEROMA_CONF_REPLACE_ME"
