@@ -1,0 +1,10 @@
+Pleroma is a microblogging server software that can federate
+(= exchange messages with) other servers that support ActivityPub.
+What that means is that you can host a server for yourself or your
+friends and stay in control of your online identity, but still exchange
+messages with people on larger servers. Pleroma will federate with all
+servers that implement ActivityPub, like Friendica, GNU Social, Hubzilla,
+Mastodon, Misskey, Peertube, and Pixelfed.
+
+Pleroma is written in Elixir and uses PostgresSQL for data storage.
+It's efficient enough to be ran on low-power devices like Raspberry Pi.

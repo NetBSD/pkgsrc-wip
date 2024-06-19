@@ -1,0 +1,7 @@
+# $NetBSD$
+# Pleroma TODO
+
+- Investigate bundling of Erlang: LD_LIBRARY_PATH/LD_PRELOAD_PATH ?
+- Decouple frontend (pleroma's "feature")
+- Add options.mk for nginx and postgresql
+- Add rc.d script
