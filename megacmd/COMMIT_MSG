@@ -1,8 +1,0 @@
-net/megacmd: Update megacmd to 1.7.0
-
-SDK version update to 4.31.0b.
-The patchset has been updated to be build-able on
-DragonFly, Free-, Net- and OpenBSD. Pull request
-is sent to upstream, but hasn't been merged yet.
-
-Changelog not available.
