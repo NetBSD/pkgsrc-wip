@@ -13,6 +13,8 @@ BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.ocaml}/lib/ocaml
 
+.include "../../archivers/zstd/buildlink3.mk"
+
 BUILDLINK_TARGETS+=	ocaml-wrappers
 OCAML_WRAPPERS=		ocamlc ocamlc.opt ocamlcp ocamlmklib ocamlmktop \
 			ocamlopt ocamlopt.opt
