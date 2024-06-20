@@ -2620,7 +2620,6 @@ SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
 SUBDIR+=	opencl-clhpp
 SUBDIR+=	opencl-headers
-SUBDIR+=	openclonk
 SUBDIR+=	opencv
 SUBDIR+=	opencv-contrib-face
 SUBDIR+=	opendbx
