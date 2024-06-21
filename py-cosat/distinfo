@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (pycosat-0.6.1.tar.gz) = e9e83f2e76620095b89fd2801f1b0abbf78b5726
-SHA512 (pycosat-0.6.1.tar.gz) = 735bddc1e20d3823e994ada074c29554458fc13d3520ce0ff133a566540ed106e0be61ecb86f7b1551395f79143a986d634f2d2999f75a21306f8d6baa2a134d
-Size (pycosat-0.6.1.tar.gz) = 59270 bytes
+BLAKE2s (pycosat-0.6.6.tar.gz) = 88c0fe29f7e53f4a4003cb99aa261e66c0ff4f8a158fb6888a0a45e32d88dd5f
+SHA512 (pycosat-0.6.6.tar.gz) = d7bdf493ea6da215711c7a33e14f663a2365e9f258fc8d648c674b87d499be4af6487d30690ef44f6d9b94b84da0179ba758e36e658518ee0e4095ccff2ba7a9
+Size (pycosat-0.6.6.tar.gz) = 71623 bytes
