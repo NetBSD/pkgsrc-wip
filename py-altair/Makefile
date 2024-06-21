@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	altair-5.0.1
+DISTNAME=	altair-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altair/}
@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-black>=20.8:../../textproc/py-black
 TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
+TOOL_DEPENDS+=		${PYPKGPREFIX}-hatchling>=1.24.2:../../devel/py-hatchling
 TOOL_DEPENDS+=		${PYPKGPREFIX}-ipython>=0:../../devel/py-ipython
 TOOL_DEPENDS+=		${PYPKGPREFIX}-flake8>=3.3.0:../../devel/py-flake8
 TOOL_DEPENDS+=		${PYPKGPREFIX}-typing-extensions>=4.0.1:../../devel/py-typing-extensions
