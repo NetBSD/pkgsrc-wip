@@ -5,4 +5,3 @@
 - Decouple frontend (pleroma's "feature")
 - Add options.mk for nginx and postgresql
 - Add rc.d script
-- SUBST or REPLACE_SH for mksh

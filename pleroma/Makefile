@@ -38,7 +38,7 @@ DEPENDS+=	postgresql15-client-[0-9]*:../../databases/postgresql15-client
 # NB: is it really needed?
 #DEPENDS+=	postgresql15-contrib-[0-9]*:../../databases/postgresql15-contrib
 
-USE_TOOLS+=	pax gmake find
+USE_TOOLS+=	pax gmake find sed
 USE_LANGUAGES=	c c++
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
@@ -62,8 +62,12 @@ PKG_SHELL.${PLEROMA_USER}=	${PLEROMA_SHELL}
 
 OWN_DIRS+=		${PLEROMA_PREFIX}
 OWN_DIRS+=		${PREFIX}/etc/pleroma
+OWN_DIRS+=		${PREFIX}/var/pleroma
+OWN_DIRS+=		${PREFIX}/share/examples/pleroma
 OWN_DIRS_PERMS+=	${PLEROMA_PREFIX} ${PLEROMA_USER} ${PLEROMA_GROUP} 0700
 OWN_DIRS_PERMS+=	${PREFIX}/etc/pleroma ${PLEROMA_USER} ${PLEROMA_GROUP} 0700
+OWN_DIRS_PERMS+=	${PREFIX}/var/pleroma ${PLEROMA_USER} ${PLEROMA_GROUP} 0700
+OWN_DIRS_PERMS+=	${PREFIX}/share/examples/pleroma ${PLEROMA_USER} ${PLEROMA_GROUP} 0700
 
 # fix bin script
 SUBST_CLASSES+=		binpath
@@ -88,7 +92,9 @@ MAKE_ENV+=	VIX_COMPILATION_MODE="PLATFORM_PROVIDED_LIBVIPS"
 MAKE_ENV+=	TARGET_PREFIX="${DESTDIR}${PREFIX}"
 MAKE_ENV+=	PLEROMA_USER="${PLEROMA_USER}"
 MAKE_ENV+=	PLEROMA_GROUP="${PLEROMA_GROUP}"
+MAKE_ENV+=	PLEROMA_SHELL="${PLEROMA_SHELL}"
 MAKE_ENV+=	PLEROMA_PREFIX="${DESTDIR}${PLEROMA_PREFIX}"
+MAKE_ENV+=	PLEROMA_VERSION="${PKGVERSION}"
 
 # Elixir seems to be picky if it was compiled on the
 # system with another endianness:

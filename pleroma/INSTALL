@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# $NetBSD$
+
+case ${STAGE} in
+POST-INSTALL)
+    echo "Adjusting pleroma permissions..."
+
+    ${RUN} ${CHOWN} -R pleroma:pleroma ${PKG_PREFIX}/lib/pleroma
+    ${RUN} ${CHOWN} -R pleroma:pleroma ${PKG_PREFIX}/var/pleroma
+    ${RUN} ${CHOWN} -R pleroma:pleroma ${PKG_PREFIX}/share/examples/pleroma
+
+	;;
+esac
