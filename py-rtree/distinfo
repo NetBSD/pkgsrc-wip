@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (Rtree-1.0.1.tar.gz) = 05f42efd98c68a85aabde92e2a64c9ae1038e596b56034be6827636d86ae1ccc
-SHA512 (Rtree-1.0.1.tar.gz) = 1676e7aaaaa60f085a0d45cc4c3a9f1bf04258e692b6ad0e8b46b4f8d3d934308f1ee916967225ed76953d5b68948623a89f5b503b2eee15d9286d987378ae35
-Size (Rtree-1.0.1.tar.gz) = 48912 bytes
+BLAKE2s (Rtree-1.2.0.tar.gz) = cd2145eb4d9911065e0e3a6c203387dba9cb68c6de34391db2291bebcbcbd602
+SHA512 (Rtree-1.2.0.tar.gz) = 3008a0555ea5e354dec1a8d27a2b395ff148e5c12c70e1c57c57d077b9db5f0065e58543de009fdf552c986ccf47ac7b65945b74b9e9716b6f922b9d24e37ee5
+Size (Rtree-1.2.0.tar.gz) = 48431 bytes
