@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	datashader-0.11.1
+DISTNAME=	datashader-0.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/datashader/}
@@ -11,8 +11,9 @@ COMMENT=	Data visualization toolchain based on aggregating into a grid
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dask>=0.18.0:../../wip/py-dask
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.3:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.7.4:../../devel/py-toolz
-DEPENDS+=	${PYPKGPREFIX}-datashape>=0.5.1:../../wip/py-datashape
+DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=1.0.0:../../devel/py-multipledispatch
 DEPENDS+=	${PYPKGPREFIX}-numba>=0.37.0:../../math/py-numba
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.24.1:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=3.1.1:../../graphics/py-Pillow
@@ -32,5 +33,5 @@ USE_LANGUAGES=	# none
 
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.7
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

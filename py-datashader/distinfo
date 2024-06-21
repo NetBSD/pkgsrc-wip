@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (datashader-0.11.1.tar.gz) = 25b401df7ffe62ac6b59a64a7139059e4d036eb2
-SHA512 (datashader-0.11.1.tar.gz) = bbbcee3a208c8f4e0f312d4a8fe2b7d3601570745cdaf223afab36b7b721d57abbb30b142cb333f4e25e43404704451d498b1139fc875c0701f4e21e6d774cf4
-Size (datashader-0.11.1.tar.gz) = 30216200 bytes
+BLAKE2s (datashader-0.16.2.tar.gz) = 930779d9ac1e8202c30f0a87e5c014fabf5e052eac0e396e06f10ca17ad55014
+SHA512 (datashader-0.16.2.tar.gz) = ff5332440ab2563aeb794253ce13b80bba31305d710ab6c82aa45c7426a0718cd3db742ceb36fa57fda3bbaa29418e3626a7b71c77f3f02f33be04d8b355e7ed
+Size (datashader-0.16.2.tar.gz) = 35713921 bytes
