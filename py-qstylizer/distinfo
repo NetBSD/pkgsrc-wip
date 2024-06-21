@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (qstylizer/0.2.2.tar.gz) = e64d98eeffee931f38f98f1e83b278d8a9ace4a8c246ab748c9e9f3088fb2d84
-SHA512 (qstylizer/0.2.2.tar.gz) = 682f10462965a93b36f0e44b75885b9d60b4d3cd03369976b977c9b928afed4e930b6b7ef26850bdb7b40ef2a31db35a9778738582dae8715f54c1f00a957fb3
-Size (qstylizer/0.2.2.tar.gz) = 20752 bytes
+BLAKE2s (qstylizer/0.2.3.tar.gz) = a30e001297d19f316a10e83fde1e493e796119cd8b225adf4661e1d8137b75be
+SHA512 (qstylizer/0.2.3.tar.gz) = ba5188f702d4fbd43d963be206c75d55710bfe63accc84aea3bfd03ad06a0cb484d50b538c2d1d6a7ce21055d0b2eefb2cb35a732b929f5477033a8ddea945c0
+Size (qstylizer/0.2.3.tar.gz) = 20813 bytes
 SHA1 (patch-setup.py) = b7c72ffa2c517547f72922324a48392a9c842046
