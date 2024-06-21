@@ -1,15 +1,12 @@
-This is avr-libc. It is a C library implementation for use
-with GNU GCC and GNU binutils for development of programs for
-Atmel's AVR microcontrollers.
+This is the standard library for Microchip (formerly Atmel) AVR
+devices together with avr-gcc and avr-binutils.
 
-This library implements a subset of common C library functions, some
-Atmel AVR specific additions (like handling AVR's IO facilities,
-EEPROM etc.), as well as a 32-bit floating point math library (-lm).
+The library contains most of the functionality required by the
+ISO C standard, with the notable exception of wchar_t support.
 
-Everything is designed and implemented to cooperate with avr-gcc and
-avr-binutils.
-
-For details on installing and using AVR Libc, see the users manual in the
-doc/api directory or online at:
-
-  http://savannah.nongnu.org/projects/avr-libc/
+It also contains a lot of auxiliary functionality targeted to
+the AVR controller family. Further, it includes customizable
+startup code, tailored to work together with the linker scripts
+provided by the GNU Binutils, so for most AVR applications,
+there is usually no need to provide project-specific files for
+that purpose.
