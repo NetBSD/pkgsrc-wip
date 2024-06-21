@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (QDarkStyle-3.1.tar.gz) = 62a01adcfaeda81dda6dced58bab80b5140ebe05f032b5c856e8fcc4d758475a
-SHA512 (QDarkStyle-3.1.tar.gz) = 275fe333bcf2502f8f1ef61eca3f82d8909e760e8f88a1605157c5043cb1e4cad97bbb8ddb0464ef2125c1b70f318bfa8f0106d2721d6b9862c162b5f716aa4b
-Size (QDarkStyle-3.1.tar.gz) = 698602 bytes
+BLAKE2s (QDarkStyle-3.2.2.tar.gz) = 5b204a75255409034c4dacdc784c3bf95966d727b795b85887e29e47edf172ee
+SHA512 (QDarkStyle-3.2.2.tar.gz) = e0f428565280b453af49f12f2c3298fe1d5d78358acfe350d6cbb4d5780a851ab4d10016d2a5836292218e4d114d0c021ac67d0a3b1b62441c32b779275e66b7
+Size (QDarkStyle-3.2.2.tar.gz) = 698131 bytes
