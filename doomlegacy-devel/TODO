@@ -18,4 +18,10 @@ Part 28: Viewfit setting "Fit_Height" does not work correctly
     => Fixed with SVN revision 1667
 
 
+Part 29: Bossaction problem with enabled MBF21
+==============================================
+[ ] Ultimate Doom map E2M8 does not end after Cyberdemon was killed
+    => Reported in bug ticket  #693
+
+
 EOF
