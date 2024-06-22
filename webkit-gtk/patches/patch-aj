@@ -2,15 +2,14 @@ $NetBSD: patch-aj,v 1.7 2018/10/24 18:31:08 leot Exp $
 
 Add support for NetBSD, OpenBSD and Solaris.
 
---- /tmp/www/webkit-gtk/work/webkitgtk-2.45.3/Source/WTF/wtf/InlineASM.h.orig	2024-05-28 16:43:21.278210900 +0900
-+++ Source/WTF/wtf/InlineASM.h	2024-06-22 16:50:35.581212779 +0900
-@@ -43,7 +43,8 @@
+--- Source/WTF/wtf/InlineASM.h.orig	2017-02-20 16:20:15.000000000 +0000
++++ Source/WTF/wtf/InlineASM.h
+@@ -40,7 +40,7 @@
  #define THUMB_FUNC_PARAM(name)
  #endif
  
--#if (OS(LINUX) || OS(FREEBSD) || OS(QNX)) && CPU(X86_64)
-+#if ((OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(OPENBSD) || OS(SOLARIS)) && CPU(X86_64)) || (OS(SOLARIS) && CPU(X86)) || OS(QNX)) && CPU(X86_64
-+ 
+-#if (OS(LINUX) || OS(FREEBSD)) && CPU(X86_64)
++#if ((OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(OPENBSD) || OS(SOLARIS)) && CPU(X86_64)) || (OS(SOLARIS) && CPU(X86)) 
  #define GLOBAL_REFERENCE(name) #name "@plt"
- #elif OS(LINUX) && CPU(X86) && defined(__PIC__)
- #define GLOBAL_REFERENCE(name) SYMBOL_STRING(name) "@plt"
+ #elif CPU(X86) && COMPILER(MINGW)
+ #define GLOBAL_REFERENCE(name) "@" #name "@4"

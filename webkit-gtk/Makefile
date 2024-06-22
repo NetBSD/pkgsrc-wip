@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.260 2024/05/29 16:34:57 adam Exp $
+# $NetBSD: Makefile,v 1.240 2022/11/23 16:19:06 adam Exp $
 
-DISTNAME=	webkitgtk-2.45.3
+DISTNAME=	webkitgtk-2.38.5
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
@@ -16,14 +16,22 @@ NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 
 TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
 
-# GCC >= 10 10 10 10 10 10 10 10 10 10 is required, it no longer builds with lower versions.
-GCC_REQD+=		10
+# GCC >= 8 is required, it no longer builds with lower versions.
+GCC_REQD+=		8
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
@@ -38,14 +46,13 @@ CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
 CMAKE_ARGS+=		-DENABLE_INTROSPECTION=ON
 CMAKE_ARGS+=		-DENABLE_JOURNALD_LOG=OFF
 CMAKE_ARGS+=		-DENABLE_BUBBLEWRAP_SANDBOX=OFF
+CMAKE_ARGS+=		-DENABLE_DOCUMENTATION=OFF
 CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
 CMAKE_ARGS+=		-DUSE_OPENJPEG=OFF
 CMAKE_ARGS+=		-DUSE_SOUP2=ON
-CMAKE_ARGS+=		-DUSE_GSTREAMER_TRANSCODER=OFF
 
-.include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*}
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
 CMAKE_ARGS+=		-DAVOID_INT128=ON
 .endif
 
@@ -109,12 +116,10 @@ TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 CMAKE_ARGS+=	-DRUBY_EXECUTABLE=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 
 CXXFLAGS.SunOS+=	-fpermissive
-#CXXFLAGS+=		-Iglib-2.0
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -135,7 +140,6 @@ CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
 
 .include "options.mk"
 
-.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -151,8 +155,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../wip/libjxl/buildlink3.mk"
-.include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.png+= png>=1.5.1beta08
@@ -163,8 +165,6 @@ BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
-.include "../../wip/libbacktrace/buildlink3.mk"
-.include "../../wip/libstacktrace/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"

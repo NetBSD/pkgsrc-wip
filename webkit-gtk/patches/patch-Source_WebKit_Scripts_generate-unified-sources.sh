@@ -1,9 +1,9 @@
-$NetBSD$
+$NetBSD: patch-Source_WebKit_Scripts_generate-unified-sources.sh,v 1.1 2019/03/13 20:49:41 leot Exp $
 
-ERROR: [check-portability.awk]
+Avoid unportable `==' test(1) operator.
 
---- Source/WebKit/Scripts/generate-unified-sources.sh.orig	2023-09-18 16:56:46.395086500 +0900
-+++ Source/WebKit/Scripts/generate-unified-sources.sh	2024-06-22 17:00:22.862100529 +0900
+--- Source/WebKit/Scripts/generate-unified-sources.sh.orig	2022-08-31 07:59:56.790522600 +0000
++++ Source/WebKit/Scripts/generate-unified-sources.sh
 @@ -7,7 +7,7 @@ ARGS=("$@")
  cd $SRCROOT
  
