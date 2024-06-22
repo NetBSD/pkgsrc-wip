@@ -1,13 +1,13 @@
 $NetBSD: distinfo,v 1.35 2015/09/11 01:21:57 tnn Exp $
 
-BLAKE2s (cmake-18.1.7.src.tar.xz) = 71c825797805e05c755e52ee37790bf7c238fd8531eaefbfa3148896c99d9d91
-SHA512 (cmake-18.1.7.src.tar.xz) = 2d8ec0e2ccf28bc9f64a17ba3f55071a05cf211164facc1516d1631da203e82bdb33bf184e5354fd6c010c116f298264b05b19df8148ea91899b799f789e20b5
-Size (cmake-18.1.7.src.tar.xz) = 8708 bytes
-BLAKE2s (mlir-18.1.7.src.tar.xz) = 56d676a2b7f537a52f53ea5ec5744ed5ff059109ebfcf63dcb29ea1070f396b5
-SHA512 (mlir-18.1.7.src.tar.xz) = c5e8b4546f03385b4948961979b9f0ed83c1cdcfd36cad8d41d260c989194b91e987dc4ad5519668c14bd07e664b6fd1b5f9d318f15bfcbb92e23889c01f96ab
-Size (mlir-18.1.7.src.tar.xz) = 5898316 bytes
-BLAKE2s (runtimes-18.1.7.src.tar.xz) = 6afb3ce9655a326e4b68b352601b6ce29b916df0debcf48805dfaa1d3c457349
-SHA512 (runtimes-18.1.7.src.tar.xz) = 36b542f894908354c1c2deecb55991e9688af992eeaf6c8281e18a54b25af2e93485e129e2172673461ab7f1d16050256694f4c31ac40cdb180783701198d896
-Size (runtimes-18.1.7.src.tar.xz) = 6792 bytes
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (mlir-18.1.8.src.tar.xz) = 5b76035aa1d485be09dae9d4c1c5211cc64420d21c127c7462725e746f2bdf67
+SHA512 (mlir-18.1.8.src.tar.xz) = 5b183b325a3fc2c69056ad517548a07ba2294ab4e3df35c8a477a0824da75c348c62a5ff5ca06be98d993e92830fb7bc0a52ff7fcd47dd1e995cb2830f4ea9d3
+Size (mlir-18.1.8.src.tar.xz) = 5898700 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
 SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 69c4f32891e21e239f6bafc9305e79440809cf6c
 SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 7b78acbf8a85443f2cc3f13786bbbda25b0b8d74

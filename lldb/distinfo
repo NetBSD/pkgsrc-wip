@@ -1,14 +1,14 @@
 $NetBSD: distinfo,v 1.35 2023/01/12 19:32:53 adam Exp $
 
-BLAKE2s (cmake-18.1.7.src.tar.xz) = 71c825797805e05c755e52ee37790bf7c238fd8531eaefbfa3148896c99d9d91
-SHA512 (cmake-18.1.7.src.tar.xz) = 2d8ec0e2ccf28bc9f64a17ba3f55071a05cf211164facc1516d1631da203e82bdb33bf184e5354fd6c010c116f298264b05b19df8148ea91899b799f789e20b5
-Size (cmake-18.1.7.src.tar.xz) = 8708 bytes
-BLAKE2s (lldb-18.1.7.src.tar.xz) = 826b7ca23cbe74e5a8f966f3a603b1723f0d52ebdc6e0646b01d1f67887b0773
-SHA512 (lldb-18.1.7.src.tar.xz) = aa7d76d9b66521d380a55e80245ee377cbb0b582decb806901b9b9a05f8f8348a4341c1f665a1a6febf9873b60b3a4d508edbb0a98aed3f02f4973e86ae15652
-Size (lldb-18.1.7.src.tar.xz) = 10600648 bytes
-BLAKE2s (runtimes-18.1.7.src.tar.xz) = 6afb3ce9655a326e4b68b352601b6ce29b916df0debcf48805dfaa1d3c457349
-SHA512 (runtimes-18.1.7.src.tar.xz) = 36b542f894908354c1c2deecb55991e9688af992eeaf6c8281e18a54b25af2e93485e129e2172673461ab7f1d16050256694f4c31ac40cdb180783701198d896
-Size (runtimes-18.1.7.src.tar.xz) = 6792 bytes
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (lldb-18.1.8.src.tar.xz) = 767a50b8585d137633b02f0d8dfcd9ef7e665b4b8c66f49810ce9890a11db998
+SHA512 (lldb-18.1.8.src.tar.xz) = f356a657d1aec860aeaaeb3aa3190652735160dd1e86dfbbae0441ace0a21cc774621198b0fc26c37d3e7c34d68d8a5f56806097f0c8d94718f5fc03495b1a3e
+Size (lldb-18.1.8.src.tar.xz) = 10598652 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 773d420c3fd2c9b4af6af9d42c5778e96a1ae52b
 SHA1 (patch-source_API_CMakeLists.txt) = 23a7b24632f937a4541863aff6a7591255cafe40
 SHA1 (patch-source_Host_common_Editline.cpp) = 40d78016a3932b77f7176628bfa60b3c96b80c6a
