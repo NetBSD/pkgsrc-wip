@@ -1,9 +1,9 @@
-$NetBSD: patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh,v 1.1 2019/03/13 20:49:40 leot Exp $
+$NetBSD$
 
-Avoid unportable `==' test(1) operator.
+ERROR: [check-portability.awk]
 
---- Source/JavaScriptCore/Scripts/generate-unified-sources.sh.orig	2022-08-31 07:59:51.490491200 +0000
-+++ Source/JavaScriptCore/Scripts/generate-unified-sources.sh
+--- Source/JavaScriptCore/Scripts/generate-unified-sources.sh.orig	2023-09-18 16:56:43.203176000 +0900
++++ Source/JavaScriptCore/Scripts/generate-unified-sources.sh	2024-06-22 16:55:48.705322278 +0900
 @@ -7,7 +7,7 @@ ARGS=("$@")
  cd $SRCROOT
  

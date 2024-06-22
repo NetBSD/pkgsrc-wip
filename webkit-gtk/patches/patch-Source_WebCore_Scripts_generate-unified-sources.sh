@@ -1,9 +1,7 @@
-$NetBSD: patch-Source_WebCore_Scripts_generate-unified-sources.sh,v 1.2 2020/09/11 14:47:35 leot Exp $
+$NetBSD$
 
-Avoid unportable `==' test(1) operator.
-
---- Source/WebCore/Scripts/generate-unified-sources.sh.orig	2022-08-31 07:59:55.654515700 +0000
-+++ Source/WebCore/Scripts/generate-unified-sources.sh
+--- Source/WebCore/Scripts/generate-unified-sources.sh.orig	2023-09-18 16:56:45.591109000 +0900
++++ Source/WebCore/Scripts/generate-unified-sources.sh	2024-06-22 17:09:39.103668986 +0900
 @@ -7,7 +7,7 @@ ARGS=("$@")
  cd $SRCROOT
  
@@ -16,7 +14,7 @@ Avoid unportable `==' test(1) operator.
 @@ -23,7 +23,7 @@ if [ $# -eq 0 ]; then
  fi
  
- SOURCES="Sources.txt SourcesCocoa.txt"
+ SOURCES="Sources.txt SourcesCocoa.txt platform/SourcesLibWebRTC.txt"
 -if [ "${USE_INTERNAL_SDK}" == "YES" ]; then
 +if [ "${USE_INTERNAL_SDK}" = "YES" ]; then
      SOURCES="${SOURCES} SourcesCocoaInternalSDK.txt"
