@@ -3,9 +3,9 @@ $NetBSD$
 BLAKE2s (RigelEngine/imgui-1.86.tar.gz) = f6736355cd4c35dbfb004db8d957d2772e91de92781c424973c9bf178be6f90e
 SHA512 (RigelEngine/imgui-1.86.tar.gz) = e84fdc0839e96e53dcbe3a5d13bbd0def860c09bafa709b22f8371d5c710f5c90f6957e5f12813156ed0c4d0fa2b56c5e3be701206f7770749ce169818697229
 Size (RigelEngine/imgui-1.86.tar.gz) = 1432629 bytes
-BLAKE2s (RigelEngine/v0.8.5.tar.gz) = 5c6d614de3dca860d05fd3443e6db915205ab4f9c51f9ae3f2ffa2b6ab87801f
-SHA512 (RigelEngine/v0.8.5.tar.gz) = 7a7b199199cd1d4c4ba8ce839a51f2f1d31e35b03159d27fa0f062eae927c00b24366b1b32cefe2ffa6162ab1024d22268283cebe77fbdafff0f52390c3f17f6
-Size (RigelEngine/v0.8.5.tar.gz) = 1014878 bytes
+BLAKE2s (RigelEngine/v0.9.1.tar.gz) = f052990491199d04775d69ed2c0ef4ee334b5c4d5d8472030e526fc9f3eec350
+SHA512 (RigelEngine/v0.9.1.tar.gz) = a700bc2720256898e20e7c6367dfe694065b7a16e08f2fc51cc0b13f53b24035f36747325435d7b55b79018d1155eff9118e5172e4daccf349b805d19cb05e7d
+Size (RigelEngine/v0.9.1.tar.gz) = 1109152 bytes
 SHA1 (patch-3rd__party_CMakeLists.txt) = 039d7d29a6971a15d7e520fc258529270328ab63
 SHA1 (patch-3rd__party_imgui_imgui_backends_imgui__impl__opengl3__loader.h) = 57ea79360b8393e239f9318fe7aa4abe2d22d1b6
 SHA1 (patch-3rd__party_loguru_loguru.cpp) = b581d26ad435056423a2c41d39d1312c01da1279

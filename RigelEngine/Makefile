@@ -1,11 +1,11 @@
 # $NetBSD$
 
-GITHUB_PROJECT=	RigelEngine
-GITHUB_TAG=	v0.8.5
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	RigelEngine-${GITHUB_TAG:S/^v//}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lethal-guitar/}
+GITHUB_PROJECT=	RigelEngine
+GITHUB_TAG=	v0.9.1
 DIST_SUBDIR=	${GITHUB_PROJECT}
 DISTFILES+=	${GITHUB_TAG}.tar.gz
 DISTFILES+=	imgui-1.86.tar.gz
@@ -17,9 +17,11 @@ HOMEPAGE=	https://github.com/lethal-guitar/RigelEngine/
 COMMENT=	Modern re-implementation of the classic DOS game Duke Nukem II
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++17
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_TOOLS+=		pkg-config
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
 INSTALLATION_DIRS+=	bin
 
