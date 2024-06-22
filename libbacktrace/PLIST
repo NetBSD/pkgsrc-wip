@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/backtrace-supported.h
+include/backtrace.h
+lib/libbacktrace.la
