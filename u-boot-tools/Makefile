@@ -27,8 +27,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/mkimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/u-boot-mkimage.1
 
 do-test:
-	${WRKSRC}/tools/dumpimage -h || ${TRUE}
-	${WRKSRC}/tools/mkimage -h || ${TRUE}
+	${WRKSRC}/tools/dumpimage -h
+	${WRKSRC}/tools/mkimage -h
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
