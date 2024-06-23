@@ -28,11 +28,12 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
-#CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS:STRING=-g
+CMAKE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 
-# CMake goes looking for this binary. Make it happy.
+# CMake goes looking for these binaries. Make it happy.
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/heatshrink ${BUILDLINK_DIR}/bin/
 	${LN} -sf ${PREFIX}/bin/bgcode ${BUILDLINK_DIR}/bin/

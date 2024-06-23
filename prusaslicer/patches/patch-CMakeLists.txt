@@ -2,9 +2,11 @@ $NetBSD$
 
 Use GTK3, since that's how we build wxWidgets.
 
---- CMakeLists.txt.orig	2022-04-22 11:01:19.000000000 +0000
+Define additional macro to OpenGL ES builds.
+
+--- CMakeLists.txt.orig	2024-06-14 21:54:48.000000000 +0000
 +++ CMakeLists.txt
-@@ -38,7 +38,7 @@ CMAKE_DEPENDENT_OPTION(SLIC3R_DESKTOP_IN
+@@ -53,7 +53,7 @@ CMAKE_DEPENDENT_OPTION(SLIC3R_DESKTOP_IN
  
  set(OPENVDB_FIND_MODULE_PATH "" CACHE PATH "Path to OpenVDB installation's find modules.")
  
@@ -13,3 +15,11 @@ Use GTK3, since that's how we build wxWidgets.
  
  set(IS_CROSS_COMPILE FALSE)
  
+@@ -112,6 +112,7 @@ endif ()
+ 
+ if (SLIC3R_OPENGL_ES)
+     add_definitions(-DSLIC3R_OPENGL_ES)
++    add_definitions(-DENABLE_OPENGL_ES)
+ endif()
+ 
+ if(SLIC3R_DESKTOP_INTEGRATION)
