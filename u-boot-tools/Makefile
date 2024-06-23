@@ -21,10 +21,10 @@ MAKE_ENV+=	HOSTLDLIBS=-L${PREFIX}/lib
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL} ${WRKSRC}/tools/dumpimage ${DESTDIR}${PREFIX}/bin
-	${INSTALL} ${WRKSRC}/tools/mkimage ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/dumpimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/mkimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL} ${WRKSRC}/tools/dumpimage ${DESTDIR}${PREFIX}/bin/u-boot-dumpimage
+	${INSTALL} ${WRKSRC}/tools/mkimage ${DESTDIR}${PREFIX}/bin/u-boot-mkimage
+	${INSTALL_DATA} ${WRKSRC}/doc/dumpimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/u-boot-dumpimage.1
+	${INSTALL_DATA} ${WRKSRC}/doc/mkimage.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/u-boot-mkimage.1
 
 do-test:
 	${WRKSRC}/tools/dumpimage -h
