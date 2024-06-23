@@ -1,8 +1,8 @@
 $NetBSD$
 
-BLAKE2s (PrusaSlicer-2.8.0-alpha5.tar.gz) = dc9a5bb49396b753d45d48c02f66eef5c647a2afafb1433247fda8a5dc3a148f
-SHA512 (PrusaSlicer-2.8.0-alpha5.tar.gz) = 1fb9749646f08dac750f7ef08194bd7e7e55c81cdfb2c1b5352f1846305c894c05d780f5a4ff164a40f0d46388472431e4ac5c35426eb18e6275c5762329d5e6
-Size (PrusaSlicer-2.8.0-alpha5.tar.gz) = 68915023 bytes
+BLAKE2s (PrusaSlicer-2.8.0-beta1.tar.gz) = 39506ce332f7fc96583f3a54d6a220945828ff0c5ce0771b04b9e6820f47cb4f
+SHA512 (PrusaSlicer-2.8.0-beta1.tar.gz) = ef8b04834cd680bf3d0a1887a94128dc8570f1712c552816aea43bb3a5afa90e8b38b89cccb820fbd37f097296296e1917495b591de8e15b7a6ea0fcb3ed744c
+Size (PrusaSlicer-2.8.0-beta1.tar.gz) = 69024072 bytes
 SHA1 (patch-CMakeLists.txt) = 115d6354b7e5a512c802037ae2794e76be54b083
 SHA1 (patch-cmake_modules_FindOpenVDB.cmake) = 4f2afc423a70fe60617b33ff7f26859b39775faa
 SHA1 (patch-src_CMakeLists_txt) = 1e2d07daef1ed2160f0a5e429efe4d1b01989484
@@ -55,8 +55,7 @@ SHA1 (patch-src_slic3r_GUI_TopBar.cpp) = cf899a96bbf324ee2f2e8e15dccaa32a798d094
 SHA1 (patch-src_slic3r_GUI_UnsavedChangesDialog.cpp) = 1594eb7521f23c42700b0fbed7c039b62e9d4029
 SHA1 (patch-src_slic3r_GUI_UnsavedChangesDialog.hpp) = 0bd01147f0b654d190534959708fbf346cbb364e
 SHA1 (patch-src_slic3r_GUI_UpdateDialogs.cpp) = 7fdcc609e66c619c110db2da18b24ddfd0ffe2a2
-SHA1 (patch-src_slic3r_GUI_UserAccountCommunication.cpp) = bbb1784d6e0aecace2bf3998cecfb6f50089acc1
-SHA1 (patch-src_slic3r_GUI_UserAccountCommunication.hpp) = f3f8a402e6efd64c13677c17b1bb90194d307745
+SHA1 (patch-src_slic3r_GUI_UserAccountCommunication.cpp) = 62a61aa6dfbeb1ee2eeb754027dd94f83f5366a5
 SHA1 (patch-src_slic3r_GUI_WipeTowerDialog.cpp) = fc6fd1bfee7001c268bf50209bcfd1cb96f6a9ad
 SHA1 (patch-src_slic3r_GUI_wxExtensions.cpp) = d6e807f3dd1f18fa9c703798067fa1e808112891
 SHA1 (patch-src_slic3r_GUI_wxExtensions.hpp) = 356da6dbd7ca7f60fa8a73c51533a1c1ad1530c1
@@ -144,7 +143,7 @@ SHA1 (patch-tests_libslic3r_test__surface__mesh.cpp) = 25112b64fbab6a6cf4654af79
 SHA1 (patch-tests_libslic3r_test__timeutils.cpp) = c75d00e97b5413e531a2b509ef4d43682f0ce5fc
 SHA1 (patch-tests_libslic3r_test__triangulation.cpp) = 84a81713f93dfe5f4401a8fe89d9ac6daa53b4e4
 SHA1 (patch-tests_libslic3r_test__utils.cpp) = 48c0600c0c903aa04080a6653d1831bdef54d26a
-SHA1 (patch-tests_libslic3r_test__voronoi.cpp) = b39178892b71d39ea4a48d61da493fb0e7010f62
+SHA1 (patch-tests_libslic3r_test__voronoi.cpp) = 8c26bedf846b1a10f5ba414395feceb3bfd9203c
 SHA1 (patch-tests_sla__print_sla__archive__readwrite__tests.cpp) = 064eefb0d093af63c8a91eb92fe12a0264ae8c46
 SHA1 (patch-tests_sla__print_sla__print__tests.cpp) = fe5a6a602901069088af73da7b5f63d40329f522
 SHA1 (patch-tests_sla__print_sla__raycast__tests.cpp) = 2a78f94de919695e72df0636ea937e89fec2a5d4
