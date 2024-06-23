@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	liboqs-0.9.2
+DISTNAME=	liboqs-0.10.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-quantum-safe/}
 
