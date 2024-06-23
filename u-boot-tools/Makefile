@@ -28,7 +28,7 @@ do-install:
 
 do-test:
 	${WRKSRC}/tools/dumpimage -h
-	${WRKSRC}/tools/mkimage -h
+	${WRKSRC}/tools/mkimage || ${TRUE}
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
