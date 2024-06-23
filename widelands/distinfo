@@ -14,3 +14,4 @@ SHA1 (patch-src_network_network.cc) = 3f2b24533e3657103c6c05d2a425fb7850e35f4f
 SHA1 (patch-src_network_network.h) = 1f4ce455e2de0e91e9760e13df8fbba68a58ab20
 SHA1 (patch-src_network_network__lan__promotion.cc) = 5cea8998d422c3645e032d212847b40c121a21ec
 SHA1 (patch-src_scripting_lua__globals.cc) = 246f1d4425374025fc0a23c81381cff43fd40f4f
+SHA1 (patch-xdg_CMakeLists.txt) = ce08eacbfbf9d32b6c72e411538adb0472d58851
