@@ -4233,6 +4233,7 @@ lib/pleroma/releases/${PKGVERSION}/vm.args
 lib/pleroma/releases/COOKIE
 lib/pleroma/releases/start_erl.data
 share/examples/pleroma/pleroma.rc
+share/examples/pleroma/pleroma.nginx
 @pkgdir lib/pleroma/lib/tzdata-1.0.5/priv/tmp_downloads
 @pkgdir etc/pleroma
 @pkgdir var/pleroma

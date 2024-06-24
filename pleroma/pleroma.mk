@@ -66,6 +66,5 @@ install: release/.release-done
 	$(INSTALL_DIR) $(TARGET_PREFIX)/var/pleroma
 	$(INSTALL_DIR) $(TARGET_PREFIX)/share/examples/pleroma
 
-# only install if nginx option is enabled
-#	$(INSTALL_DATA) installation/pleroma.nginx $(TARGET_PREFIX)/share/examples
+	$(INSTALL_DATA) installation/pleroma.nginx $(TARGET_PREFIX)/share/examples
 	$(INSTALL_DATA) installation/netbsd/rc.d/pleroma $(TARGET_PREFIX)/share/examples/pleroma/pleroma.rc
