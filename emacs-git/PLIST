@@ -118,6 +118,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.26
 share/emacs/${PKGVERSION}/etc/NEWS.27
 share/emacs/${PKGVERSION}/etc/NEWS.28
 share/emacs/${PKGVERSION}/etc/NEWS.29
+share/emacs/${PKGVERSION}/etc/NEWS.30
 share/emacs/${PKGVERSION}/etc/NEWS.unknown
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
@@ -259,6 +260,7 @@ share/emacs/${PKGVERSION}/etc/charsets/VSCII.map
 share/emacs/${PKGVERSION}/etc/charsets/stdenc.map
 share/emacs/${PKGVERSION}/etc/charsets/symbol.map
 share/emacs/${PKGVERSION}/etc/compilation.txt
+share/emacs/${PKGVERSION}/etc/copyright-assign.txt
 share/emacs/${PKGVERSION}/etc/e/README
 share/emacs/${PKGVERSION}/etc/e/eterm-color
 share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
