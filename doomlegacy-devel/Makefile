@@ -2,7 +2,7 @@
 
 VERS=		1.48.14
 #PKGNAME=	doomlegacy-${VERS}
-SVNVERS=	1687
+SVNVERS=	1690
 DISTNAME=	doomlegacy-devel-0r${SVNVERS}
 CATEGORIES=	games
 
@@ -27,7 +27,8 @@ CONFLICTS+=		doomlegacy-[0-9]*
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
-USE_LANGUAGES+=		c99
+USE_CC_FEATURES+=	c99
+
 USE_TOOLS+=		gmake
 # Dependency generation fails with parallel build
 MAKE_JOBS_SAFE=		no
