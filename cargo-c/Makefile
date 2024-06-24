@@ -14,7 +14,7 @@ SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.76.0
+RUST_REQ=	1.77.2
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
