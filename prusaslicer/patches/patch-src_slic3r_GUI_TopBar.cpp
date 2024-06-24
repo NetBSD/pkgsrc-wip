@@ -2,8 +2,19 @@ $NetBSD$
 
 Treat NetBSD like linux.
 
---- src/slic3r/GUI/TopBar.cpp.orig	2024-06-15 08:28:06.304213704 +0000
+Also use the more common down-arrow on NetBSD.
+
+--- src/slic3r/GUI/TopBar.cpp.orig	2024-06-21 20:36:12.000000000 +0000
 +++ src/slic3r/GUI/TopBar.cpp
+@@ -13,7 +13,7 @@ wxDEFINE_EVENT(wxCUSTOMEVT_TOPBAR_SEL_CH
+ 
+ using namespace Slic3r::GUI;
+ 
+-#ifdef __APPLE__
++#if defined(__APPLE__) || defined(__NetBSD__)
+ #define down_arrow L"\u25BC";
+ #else
+ #define down_arrow L"\u23f7";
 @@ -68,7 +68,7 @@ void TopBarItemsCtrl::Button::set_select
                                           wxTransparentColor;
  #endif
@@ -49,7 +60,7 @@ Treat NetBSD like linux.
      if (avatar) {
          if (user_account.is_logged) {
              ScalableBitmap new_logo(this, user_account.avatar_path, wxSize(icon_sz, icon_sz));
-@@ -504,7 +504,7 @@ TopBarItemsCtrl::TopBarItemsCtrl(wxWindo
+@@ -498,7 +498,7 @@ TopBarItemsCtrl::TopBarItemsCtrl(wxWindo
  void TopBarItemsCtrl::UpdateMode()
  {
      wxBitmapBundle bmp = *m_menus->get_workspace_bitmap();
