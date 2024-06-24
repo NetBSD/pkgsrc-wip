@@ -4965,6 +4965,7 @@ SUBDIR+=	retro68
 SUBDIR+=	revealjs
 SUBDIR+=	revelation
 SUBDIR+=	reviewdog
+SUBDIR+=	rex
 SUBDIR+=	rexx-regina
 SUBDIR+=	rhapsody
 SUBDIR+=	riak
