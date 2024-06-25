@@ -1,0 +1,3 @@
+sysutils/ripdrag: update to 0.4.9
+
+ - bugfix: keep file order when dragging selected files

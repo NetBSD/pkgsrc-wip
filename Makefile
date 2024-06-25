@@ -4974,6 +4974,7 @@ SUBDIR+=	riak14
 SUBDIR+=	ricochet
 SUBDIR+=	rio
 SUBDIR+=	ripe-rpsl-objectlibrary
+SUBDIR+=	ripdrag
 SUBDIR+=	ripit
 SUBDIR+=	ripole
 SUBDIR+=	rippled
