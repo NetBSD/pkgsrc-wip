@@ -404,6 +404,7 @@ SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	carburetta
 SUBDIR+=	cargo-c
 SUBDIR+=	cargo-modules
+SUBDIR+=	cargo-release
 SUBDIR+=	cardpeek
 SUBDIR+=	carla
 SUBDIR+=	cartago
