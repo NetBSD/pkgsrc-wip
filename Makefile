@@ -403,6 +403,7 @@ SUBDIR+=	canu
 SUBDIR+=	capicxx-core-runtime
 SUBDIR+=	carburetta
 SUBDIR+=	cargo-c
+SUBDIR+=	cargo-modules
 SUBDIR+=	cardpeek
 SUBDIR+=	carla
 SUBDIR+=	cartago
