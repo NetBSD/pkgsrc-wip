@@ -1,0 +1,17 @@
+editors/tp-note: add version 1.24.4
+
+v1.24.4
+Downgrade some dependencies to comply with rustc 1.77.2, no code changes
+
+v1.24.3
+Enhance the HTML clipboard configuration options
+
+This release extends the `html_to_markup` filter by adding a `default=`
+parameter in case the filter fails, its result is the empty string, or if
+the filter is disabled for a certain markup language with the configuration
+variable `extensions.1`.
+
+The `clipboard` variable is replaced by the variables `txt_clipboard` and
+`html_clipbaord`. They both represent the clipboard's text content. The
+difference is, that the `html_clipboard` carries HTML formatting along the
+text, while `txt_clipboard` holds the plain text only.
