@@ -2565,6 +2565,7 @@ SUBDIR+=	nuget-git
 SUBDIR+=	nullpop
 SUBDIR+=	num-utils
 SUBDIR+=	nuppelvideo
+SUBDIR+=	nushell
 SUBDIR+=	nuttcp
 SUBDIR+=	nuvie
 SUBDIR+=	nvi2-git
