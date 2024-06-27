@@ -21,5 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=17.1:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
