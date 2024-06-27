@@ -1,0 +1,7 @@
+$NetBSD$
+
+BLAKE2s (anywidget-0.9.13.tar.gz) = ce31743c80a42633c76eed332744612038890b0091e0a15ce884432f4bb30497
+SHA512 (anywidget-0.9.13.tar.gz) = 8822a086d7e41006fa1e0d0aebdf56af17c0a98eaf827ab9f8a655bc74f5991491a9c13b50a3359b4d441afbb41cbe3163c5cad5672d5763397117283f1328c8
+Size (anywidget-0.9.13.tar.gz) = 9666998 bytes
+SHA1 (patch-pyproject.toml) = d5777bdfe486e527d91ae9f31c43d6ca4bcc27ae
+SHA1 (patch-tests_test__widget.py) = e2739834c13871ed6041a1252fa35a493e30d1b0
