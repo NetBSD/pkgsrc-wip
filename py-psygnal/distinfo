@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (psygnal-0.11.1.tar.gz) = 2ce679478646ffa461759ca92c4ffc898630f7ae215347064f99ecc5fc2ed6c1
+SHA512 (psygnal-0.11.1.tar.gz) = e4c36ce99be703f94648b6fce1f6fc0efdfb6c2bcc0faba68fb8adff1bb746bf5b95b47c93e8bfcd02aaf04ffffc506a18d47be60843e4f6395c29e55b30f623
+Size (psygnal-0.11.1.tar.gz) = 102103 bytes
