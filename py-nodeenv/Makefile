@@ -13,6 +13,8 @@ COMMENT=	Node.js virtual environment
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
+TOOL_DEPENDS+= 	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 REPLACE_PYTHON=	nodeenv.py
 
