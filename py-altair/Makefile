@@ -2,6 +2,7 @@
 
 DISTNAME=	altair-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altair/}
 
@@ -9,6 +10,8 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://altair-viz.github.io/
 COMMENT=	Altair: A declarative statistical visualization library for Python
 LICENSE=	2-clause-bsd
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-black>=20.8:../../textproc/py-black
 TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
@@ -24,6 +27,8 @@ DEPENDS+=		${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 DEPENDS+=		${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema
 DEPENDS+=		${PYPKGPREFIX}-pandas>=0.18:../../math/py-pandas
 DEPENDS+=		${PYPKGPREFIX}-toolz>=0.10.0:../../devel/py-toolz
+DEPENDS+=		${PYPKGPREFIX}-apache-arrow>=11.0:../../wip/py-apache-arrow
+DEPENDS+=		${PYPKGPREFIX}-anywidget>=0.9.0:../../wip/py-anywidget
 TEST_DEPENDS+=		${PYPKGPREFIX}-test>=4.3.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-vega_datasets>=0.9.0:../../wip/py-vega_datasets
 
