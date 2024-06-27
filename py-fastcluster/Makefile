@@ -13,6 +13,8 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
 TOOL_DEPENDS+= 	${PYPKGPREFIX}-setuptools>=68.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>=1.6:../../math/py-scipy
