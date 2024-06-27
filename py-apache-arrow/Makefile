@@ -1,6 +1,7 @@
 # $NetBSD$
 DISTNAME=	apache-arrow-${APACHE_ARROW_VERSION}
 PKGNAME=	${PYPKGPREFIX}-apache-arrow-${APACHE_ARROW_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://dlcdn.apache.org/arrow/arrow-${APACHE_ARROW_VERSION}/
 
@@ -17,6 +18,7 @@ PATCHDIR=	${.CURDIR}/../../wip/apache-arrow/patches
 
 USE_LANGUAGES=	c c++
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 #CONFIGURE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${APACHE_ARROW_VERSION}
@@ -28,7 +30,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=6.0.0:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.6.3:../../devel/py-test-lazy-fixture
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-pandas>=2.0.0:../../math/py-pandas
-USE_TOOLS=	gmake pkg-config
+USE_TOOLS=	cmake gmake pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 MAKE_ENV+=	PYARROW_PARALLEL=${MAKE_JOBS}
 MAKE_ENV+=	PYARROW_WITH_DATASET=1
@@ -55,8 +59,10 @@ do-test:
 
 MAKE_ENV+=	PYARROW_WITH_DATASET=1
 
+
 .include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/libthrift/buildlink3.mk"
-.include "../../wip/apache-arrow/buildlink3.mk"
+.include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../wip/apache-arrow/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
