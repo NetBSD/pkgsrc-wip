@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=:../../net/py-zmq
 DEPENDS+=	${PYPKGPREFIX}-wurlitzer>=1.0.3:../../wip/py-wurlitzer
 
 USE_LANGUAGES=	# none
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
