@@ -17,6 +17,7 @@ COMMENT=	Python implementation of the parquet format,
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
