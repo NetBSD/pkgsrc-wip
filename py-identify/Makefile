@@ -11,6 +11,8 @@ COMMENT=	File identification library for Python
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
