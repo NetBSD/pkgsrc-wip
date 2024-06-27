@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 USE_LANGUAGES+=	c
 USE_LANGUAGES+=	c++
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
 USE_TOOLS+=	cmake
 USE_TOOLS+=	pkg-config
 
