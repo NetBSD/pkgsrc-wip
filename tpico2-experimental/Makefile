@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=  	tpico-2.0pl9
+DISTNAME=  	tpico-2.0pl9.1
 CATEGORIES=	devel	
 MASTER_SITES=	https://sourceforge.net/projects/tpico2-experimental/files/
 
