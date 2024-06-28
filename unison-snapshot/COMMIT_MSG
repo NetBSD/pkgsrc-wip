@@ -1,13 +1,12 @@
-net/unison: Update to 2.53.5
+net/unison: Update to 2.53.5.70.1
 
 packaging changes:
 
 Upstream NEWS:
 
-## Changes in 2.53.5
+## Changes in 2.53.6
 
 Released 2024-mm-dd
 
-  * Various minor bugfixes.
-  * Recovery from errors during repeat mode (enabled in 2.53.1) is disabled
-    for time being.
+  * Various minor bugfixes and improvements.
+
