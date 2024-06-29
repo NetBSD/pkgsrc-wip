@@ -1,11 +1,11 @@
 @comment $NetBSD$
-bin/bokeh
-${PYSITELIB}/bokeh-0.0.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/bokeh-0.0.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/bokeh-0.0.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/bokeh-0.0.0-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/bokeh-0.0.0-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/bokeh-0.0.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+bin/bokeh-${PYVERSSUFFIX}
+${PYSITELIB}/bokeh-0.0.0.dist-info/LICENSE.txt
+${PYSITELIB}/bokeh-0.0.0.dist-info/METADATA
+${PYSITELIB}/bokeh-0.0.0.dist-info/RECORD
+${PYSITELIB}/bokeh-0.0.0.dist-info/WHEEL
+${PYSITELIB}/bokeh-0.0.0.dist-info/entry_points.txt
+${PYSITELIB}/bokeh-0.0.0.dist-info/top_level.txt
 ${PYSITELIB}/bokeh/LICENSE.txt
 ${PYSITELIB}/bokeh/__init__.py
 ${PYSITELIB}/bokeh/__init__.pyc

@@ -2,6 +2,7 @@
 
 DISTNAME=	bokeh-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bokeh/}
 
@@ -28,8 +29,10 @@ TEST_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} bokeh bokeh-${PYVERSSUFFIX}
 
 BUILDLINK_API_DEPENDS.py-numpy+=        ${PYPKGPREFIX}-numpy>=1.16
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
