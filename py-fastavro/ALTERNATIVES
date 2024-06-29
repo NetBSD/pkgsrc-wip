@@ -1,0 +1,1 @@
+bin/fastavro @PREFIX@/bin/fastavro-@PYVERSSUFFIX@
