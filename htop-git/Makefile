@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	htop-3.3.0.20240205
+DISTNAME=	htop-3.3.0.20240628
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htop-dev/}
 GITHUB_PROJECT=	htop
-GITHUB_TAG=     4abe9f4ce5102d029f65d26e73b03b00005a6096
+GITHUB_TAG=     2b4feef421c35ee4ec892689585a9b0eb8816319
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://htop.dev/
@@ -16,7 +16,7 @@ CONFLICTS=	htop-[0-9]*
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoreconf automake
-#USE_CURSES=	getmouse
+USE_CURSES=	getmouse
 
 .include "options.mk"
 
