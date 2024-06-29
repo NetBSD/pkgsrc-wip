@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	dask-2024.6.0
+DISTNAME=	dask-2024.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 GITHUB_PROJECT=	dask
@@ -22,6 +22,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-cytoolz-[0-9]*:../../devel/py-cytoolz
 DEPENDS+=	${PYPKGPREFIX}-h5py>=2.10:../../devel/py-h5py
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.6.0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-mmh3>=2.5.1:../../devel/py-mmh3
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-snappy>=0.5.4:../../devel/py-snappy
@@ -55,7 +56,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures-[0-9]*:../../devel/py-test-reru
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-multipledispatch>=0.6.0:../../devel/py-multipledispatch
-TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.6.0:../../devel/py-importlib-metadata
 TEST_DEPENDS+=	${PYPKGPREFIX}-tables>=3.9:../../math/py-tables
 TEST_DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.9.0:../../math/py-numexpr
 TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
