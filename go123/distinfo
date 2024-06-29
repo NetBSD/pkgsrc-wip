@@ -1,12 +1,12 @@
 $NetBSD: distinfo,v 1.7 2024/06/13 12:55:15 bsiegert Exp $
 
-BLAKE2s (go1.22.4.src.tar.gz) = 0634d5823abbb1ba4dd5f320f55f33156ca8f8a0482fbdfb5804b28f9aceb38b
-SHA512 (go1.22.4.src.tar.gz) = 4855ba7e277b2eb79eb52e3ad2a52f18b3a4cd3adc20b7a17d29fabae74141265bf31399307b8d3f35110031d11ad7f583016aa903f3e36eeb6d1f64cfc8a5ad
-Size (go1.22.4.src.tar.gz) = 27555503 bytes
-SHA1 (patch-misc_ios_clangwrap.sh) = 0a06403609cb7bce2e6f65444fd322f486761afe
+BLAKE2s (go1.23rc1.src.tar.gz) = 240c8db8e531dd6e1a26ef6e58381a64cbe3e63e8c48ff66aa33a415c9226154
+SHA512 (go1.23rc1.src.tar.gz) = 0beb3681dcd8679dd53674c26296cd097a15b65eb27ed1805424473cf2f3b7d6e764120b78d0424a12b88a5bb826c97550d2140b4aca64cb8a414de99c97318c
+Size (go1.23rc1.src.tar.gz) = 28156320 bytes
+SHA1 (patch-misc_ios_clangwrap.sh) = 28ea4426336155d6720f7e16b43f0207b47a6dd8
 SHA1 (patch-src_cmd_dist_build.go) = cbb9576f832806b0cbef121ea38ba6a54db95bc3
 SHA1 (patch-src_crypto_x509_root__bsd.go) = 0b5dead901450967109303f873a2696c65ccac35
 SHA1 (patch-src_crypto_x509_root__solaris.go) = d636a1599ede225ac339388fba2b6e253112d461
 SHA1 (patch-src_syscall_syscall__solaris.go) = a23052ad13e128578c1c0cf46812f26d2d8ccdd1
-SHA1 (patch-src_syscall_zerrors__solaris__amd64.go) = 9500319cf717106e1b4bb2ba28861358dffc781e
+SHA1 (patch-src_syscall_zerrors__solaris__amd64.go) = d57d20dd3e19e7e0879fbbf5b1717df82c817d85
 SHA1 (patch-src_syscall_zsysnum__solaris__amd64.go) = ec28a0fa37ba9599ec1651c8e9337a2efc48a26b

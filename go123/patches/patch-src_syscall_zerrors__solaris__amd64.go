@@ -1,8 +1,8 @@
-$NetBSD: patch-src_syscall_zerrors__solaris__amd64.go,v 1.2 2024/06/13 12:55:15 bsiegert Exp $
+$NetBSD: patch-src_syscall_zerrors__solaris__amd64.go,v 1.1 2024/04/09 16:57:46 jperkin Exp $
 
 Support O_DIRECT on illumos.
 
---- src/syscall/zerrors_solaris_amd64.go.orig	2024-05-30 19:26:07.000000000 +0000
+--- src/syscall/zerrors_solaris_amd64.go.orig	2024-06-20 19:20:56.000000000 +0000
 +++ src/syscall/zerrors_solaris_amd64.go
 @@ -634,6 +634,7 @@ const (
  	O_APPEND                      = 0x8

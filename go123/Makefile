@@ -1,10 +1,12 @@
 # $NetBSD: Makefile,v 1.1 2024/02/09 20:34:10 bsiegert Exp $
 
+GO123_VERSION=	1.23rc1
+
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	120
 .include "../../lang/go/bootstrap.mk"
 
-GOVERSSUFFIX=	122
+GOVERSSUFFIX=	123
 
 DISTNAME=	go${GO${GOVERSSUFFIX}_VERSION}.src
 PKGNAME=	go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}

@@ -1,13 +1,13 @@
 $NetBSD: patch-misc_ios_clangwrap.sh,v 1.1 2024/02/09 20:34:10 bsiegert Exp $
 
---- misc/ios/clangwrap.sh.orig	2020-12-17 16:09:06.000000000 +0000
+--- misc/ios/clangwrap.sh.orig	2024-06-20 19:20:56.000000000 +0000
 +++ misc/ios/clangwrap.sh
-@@ -2,7 +2,7 @@
- # This uses the latest available iOS SDK, which is recommended.
- # To select a specific SDK, run 'xcodebuild -showsdks'
- # to see the available SDKs and replace iphoneos with one of them.
+@@ -9,7 +9,7 @@
+ SDK=iphonesimulator
+ PLATFORM=ios-simulator
+ 
 -if [ "$GOARCH" == "arm64" ]; then
 +if [ "$GOARCH" = "arm64" ]; then
- 	SDK=iphoneos
- 	PLATFORM=ios
  	CLANGARCH="arm64"
+ else
+ 	CLANGARCH="x86_64"
