@@ -1,11 +1,11 @@
 @comment $NetBSD$
 bin/bokeh-${PYVERSSUFFIX}
-${PYSITELIB}/bokeh-0.0.0.dist-info/LICENSE.txt
-${PYSITELIB}/bokeh-0.0.0.dist-info/METADATA
-${PYSITELIB}/bokeh-0.0.0.dist-info/RECORD
-${PYSITELIB}/bokeh-0.0.0.dist-info/WHEEL
-${PYSITELIB}/bokeh-0.0.0.dist-info/entry_points.txt
-${PYSITELIB}/bokeh-0.0.0.dist-info/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bokeh/LICENSE.txt
 ${PYSITELIB}/bokeh/__init__.py
 ${PYSITELIB}/bokeh/__init__.pyc

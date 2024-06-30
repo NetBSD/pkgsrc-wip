@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
+TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-packaging>=16.8:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=7.1.0:../../graphics/py-Pillow
