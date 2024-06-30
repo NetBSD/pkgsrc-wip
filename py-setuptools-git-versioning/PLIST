@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/setuptools-git-versioning
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/setuptools_git_versioning.py
+${PYSITELIB}/setuptools_git_versioning.pyc
+${PYSITELIB}/setuptools_git_versioning.pyo
