@@ -1,8 +1,7 @@
 # $NetBSD$
 
-DISTNAME=	bokeh-3.4.1
+DISTNAME=	bokeh-3.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bokeh/}
 
@@ -13,6 +12,7 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-git-versioning-[0-9]*:../../wip/py-setuptools-git-versioning
 DEPENDS+=	${PYPKGPREFIX}-packaging>=16.8:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
@@ -21,6 +21,10 @@ DEPENDS+=	${PYPKGPREFIX}-contourpy>=1.2:../../graphics/py-contourpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.2:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
+.endif
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
