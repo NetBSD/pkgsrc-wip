@@ -1,0 +1,15 @@
+$NetBSD$
+
+Don't install directly into etc
+
+--- pyproject.toml.orig	2020-02-02 00:00:00.000000000 +0000
++++ pyproject.toml
+@@ -40,7 +40,7 @@ homepage = "https://github.com/manzt/any
+ [tool.hatch.build.targets.wheel.shared-data]
+ "anywidget/nbextension" = "share/jupyter/nbextensions/anywidget"
+ "anywidget/labextension" = "share/jupyter/labextensions/anywidget"
+-"anywidget.json" = "etc/jupyter/nbconfig/notebook.d/anywidget.json"
++"anywidget.json" = "share/examples/jupyter/nbconfig/notebook.d/anywidget.json"
+ 
+ [tool.hatch.build]
+ exclude = [
