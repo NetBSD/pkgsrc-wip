@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:59:37 nia Exp $
-
-BLAKE2s (xdg-utils-1.2.1.tar.gz) = 7b21ef9af5d162262187a4f673073e55a1ed2bab2290e8c58e62b7f107d2e3e7
-SHA512 (xdg-utils-1.2.1.tar.gz) = c0b882f6e891a74239ad4924bf556074ba96eead059cfa675ceed681ff74c32100db8a6c6b12e866622009cd510d67b1c6dc807b1358ca9a58045d066c080ddc
-Size (xdg-utils-1.2.1.tar.gz) = 307670 bytes

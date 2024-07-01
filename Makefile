@@ -5846,7 +5846,6 @@ SUBDIR+=	xcape
 SUBDIR+=	xcb-util-xrm-git
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdg-desktop-portal
-SUBDIR+=	xdg-utils
 SUBDIR+=	xdiskusage
 SUBDIR+=	xebece
 SUBDIR+=	xemacs-hg
