@@ -1,0 +1,19 @@
+$NetBSD$
+
+We get more useful information from tests if we use the signal method
+
+--- pyproject.toml.orig	2024-06-14 20:42:14.000000000 +0000
++++ pyproject.toml
+@@ -154,10 +154,10 @@ xfail_strict = true
+ # 'thread' kills off the whole test suite. 'signal' only kills the offending test.
+ # However, 'signal' doesn't work on Windows (due to lack of SIGALRM).
+ # The CI script modifies this config file on the fly on Linux and MacOS.
+-timeout_method = "thread"
++timeout_method = "signal"
+ # This should not be reduced; Windows CI has been observed to be occasionally
+ # exceptionally slow.
+-timeout = 300
++timeout = 20
+
+ [tool.mypy]
+ # Silence errors about Python 3.9-style delayed type annotations on Python 3.8
