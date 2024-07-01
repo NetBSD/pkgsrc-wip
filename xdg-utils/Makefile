@@ -2,14 +2,14 @@
 
 DISTNAME=	xdg-utils-1.2.1
 CATEGORIES=	misc
-MASTER_SITES=	https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v1.2.1/
+MASTER_SITES=	https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/wiki/Software/xdg-utils/
 COMMENT=	Tools to assist applications with various desktop integration tasks
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/xdg-utils-v1.2.1-356c380ad6fecc9ce6bea1f6a77986ba67402c80
+WRKSRC=		${WRKDIR}/xdg-utils-v${PKGVERSION_NOREV}-356c380ad6fecc9ce6bea1f6a77986ba67402c80
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 TOOL_DEPENDS+=	w3m-[0-9]*:../../www/w3m
