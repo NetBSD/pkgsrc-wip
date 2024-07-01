@@ -22,5 +22,5 @@ post-install:
 #TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0:../../lang/py-mypy
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
