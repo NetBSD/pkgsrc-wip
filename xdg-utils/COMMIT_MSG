@@ -1,0 +1,27 @@
+xdg-utils: Update to 1.2.1
+
+pkgsrc changes:
+- Switch MASTER_SITES to freedesktop.org GitLab instance: newer releases are
+  published only there.
+
+Changes:
+1.2.1
+-----
+xdg-utils 1.2.1 contains three bugfixes.
+
+1.2.0
+-----
+xdg-utils 1.2.0 contains contributions from over 20 people (thankyou)
+some of the highlights are listed below.
+
+- better support for Plasma6, Deepin, LXQt
+- partial support for WSL / flatpak's
+- Numerous other fixes and improvements
+
+1.1.5
+-----
+Add support for Deepin
+
+1.1.4
+-----
+Better pcmanfm check
