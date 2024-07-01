@@ -1,0 +1,6 @@
+A Python library for manipulating indices of ndarrays.
+
+ndindex is a library that allows representing and
+manipulating objects that can be valid indices to numpy
+arrays, i.e., slices, integers, ellipses, None, integer
+and boolean arrays, and tuples thereof.
