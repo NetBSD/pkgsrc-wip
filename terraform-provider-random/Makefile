@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.13 2021/02/01 16:54:00 tpaul Exp $
 
-DISTNAME=	terraform-provider-random-3.1.0
+DISTNAME=	terraform-provider-random-3.6.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,11 +19,11 @@ TERRAFORM_PROVIDER_TYPE=	random
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
 
-GO_BUILD_PATTERN=	${GO_SRCPATH}/.
-
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/*.sh
 
-.include "../../lang/go/go-package.mk"
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../wip/terraform/provider.mk"
 .include "../../mk/bsd.pkg.mk"
