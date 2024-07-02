@@ -355,8 +355,7 @@ ${EMACS_LISPPREFIX}/w3m/w3m-image.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-image.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-lnum.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-lnum.elc
-${EMACS_LISPPREFIX}/w3m/w3m-load.el.gz
-${EMACS_LISPPREFIX}/w3m/w3m-load.elc
+${EMACS_LISPPREFIX}/w3m/w3m-load.el
 ${EMACS_LISPPREFIX}/w3m/w3m-mail.el.gz
 ${EMACS_LISPPREFIX}/w3m/w3m-mail.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-namazu.el.gz
