@@ -3,7 +3,8 @@
 DISTNAME=	emacs-w3m-1.4.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emacs-w3m/}
-GITHUB_TAG=	329cfcfc0448a45a0779ded7b51332a343d02a18
+GITHUB_TAG=	1da8d4f11cc5f79bce124d0a32be59be18359373
+PKGREVISION=	2	# Upstream stays the same version, this is by upstream
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
