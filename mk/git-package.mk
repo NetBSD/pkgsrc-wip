@@ -85,7 +85,7 @@
 #
 # Keywords: git github
 
-TOOL_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
+USE_TOOLS+=		git
 
 # Defaults for package-settable variables
 DISTFILES?=		# empty
@@ -124,7 +124,7 @@ GIT_EXTRACTDIR.${repo}?= ${GIT_MODULE.${repo}}
 
 USE_TOOLS+=		date gzip pax
 
-_GIT_CMD=		${TOOLBASE}/bin/git
+_GIT_CMD=		${TOOLS_PATH.git}
 _GIT_CHECKOUT_FLAGS=	--quiet
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
