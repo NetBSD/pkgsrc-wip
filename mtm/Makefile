@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/deadpixi/mtm/
 COMMENT=	The Micro Terminal Multiplexer
 LICENSE=	gnu-gpl-v3
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/mtm/terminfo
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncurses}/lib
 LDFLAGS+=	-L${BUILDLINK_PREFIX.ncurses}/lib
@@ -18,6 +18,7 @@ LDFLAGS+=	-L${BUILDLINK_PREFIX.ncurses}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mtm ${DESTDIR}/${PREFIX}/bin && \
 	${INSTALL_MAN} ${WRKSRC}/mtm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/mtm.ti ${DESTDIR}${PREFIX}/share/mtm/terminfo
 
 # needs ncurses: wgetscrreg
 .include "../../devel/ncurses/buildlink3.mk"
