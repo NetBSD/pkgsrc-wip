@@ -12,14 +12,13 @@ LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS=	bin man/man1
 
-LIB=		${PREFIX}/lib
-
-# upstream makefile doesn't use LDFLAGS
-CFLAGS+=	-R${LIB} -L${LIB}
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncurses}/lib
+LDFLAGS+=	-L${BUILDLINK_PREFIX.ncurses}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mtm ${DESTDIR}/${PREFIX}/bin && \
 	${INSTALL_MAN} ${WRKSRC}/mtm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+# needs ncurses: wgetscrreg
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
