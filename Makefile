@@ -456,6 +456,7 @@ SUBDIR+=	chronograf
 SUBDIR+=	chrsh
 SUBDIR+=	chruby
 SUBDIR+=	cilium-cli
+SUBDIR+=	cingg-netbsd
 SUBDIR+=	cinnamon
 SUBDIR+=	cinnamon-control-center
 SUBDIR+=	cinnamon-desktop
