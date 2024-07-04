@@ -24,7 +24,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-recommonmark>=0.6.0:../../wip/py-recommonmark
 DEPENDS+=	${PYPKGPREFIX}-entrypoints>=0.3:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.18:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.10.0:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-apache-arrow>=11.0:../../wip/py-apache-arrow
@@ -36,8 +36,6 @@ USE_LANGUAGES=	# none
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m pytest -s --doctest-modules
 
-.include "../../mk/bsd.prefs.mk"
-BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.0
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
