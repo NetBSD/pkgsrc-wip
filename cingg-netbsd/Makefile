@@ -2,7 +2,7 @@
 DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
 DISTVERSION=		5.1-20240703
 DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-DISTREVISION=		2
+DISTREVISION=		3
 CATEGORIES=		multimedia
 REV=			73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
 MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
@@ -42,9 +42,8 @@ CXXFLAGS+=		-I/usr/X11R7/include
 CXXFLAGS+=		-I/usr/pkg/include/freetype2
 
 CFLAGS+=		-fpermissive
-#LDFLAGS+=		-lpng16
 
-MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
+MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2:/usr/pkg/include/OpenEXR:/usr/pkg/include/Imath  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
 CONFIGURE_ARGS+=	--disable-static-build
 CONFIGURE_ARGS+=	--disable-lame
 CONFIGURE_ARGS+=	--disable-twolame
@@ -53,7 +52,7 @@ CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-firewire
 CONFIGURE_ARGS+=	--without-dv
 CONFIGURE_ARGS+=	--without-dvb
-CONFIGURE_ARGS+=	--without-openexr
+CONFIGURE_ARGS+=	--with-openexr
 CONFIGURE_ARGS+=	--without-video4linux2
 CONFIGURE_ARGS+=	--without-xxf86vm
 CONFIGURE_ARGS+=	--without-ladspa-build
