@@ -1,0 +1,9 @@
+diff-pdf is a tool for visually comparing two PDFs.
+
+It takes two PDF files as arguments. By default, its only output
+is its return code, which is 0 if there are no differences and 1
+if the two PDFs differ. If given the `--output-diff` option, it
+produces a PDF file with visually highlighted differences.
+
+Another option is to compare the two files visually in a simple
+GUI, using the `--view` argument.

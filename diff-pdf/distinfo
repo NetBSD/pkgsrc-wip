@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (diff-pdf-0.5.2.tar.gz) = ccda0e94621e43c15120e68372aa27a40ebf5f11f56f2564ae5ac45b429ba52f
+SHA512 (diff-pdf-0.5.2.tar.gz) = b800ea3ba99a746617e17fa4168866d3ef83e96161d392613a013b11eb87ef1bd520155d210ab40a9c6472e03abde5687fea4f10f4cd74326f54ada4c42c8b5e
+Size (diff-pdf-0.5.2.tar.gz) = 141482 bytes
