@@ -13,6 +13,7 @@ COMMENT=	Fast read/write of AVRO files
 LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} fastavro fastavro-${PYVERSSUFFIX}
