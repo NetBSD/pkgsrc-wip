@@ -1490,5 +1490,5 @@ share/locale/vi/LC_MESSAGES/cin.mo
 share/locale/zh/LC_MESSAGES/cin.mo
 share/pixmaps/cin.svg
 share/pixmaps/cin.xpm
-lib/cin/plugins/picon/cinfinity
-share/cin/lv2
+@ lib/cin/plugins/picon/cinfinity
+@ share/cin/lv2

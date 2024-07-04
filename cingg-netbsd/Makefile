@@ -1,8 +1,8 @@
 # $NetBSD$
 DISTNAME=	cinelerra-gg-${DISTVERSION}-${DISTREVISION}
-DISTVERSION=	5.1-2024110703
+DISTVERSION=	5.1-20240703
 DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-DISTREVISION=	1
+DISTREVISION=	2
 CATEGORIES=	multimedia
 REV=		73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
 MASTER_SITES=	https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
@@ -11,89 +11,69 @@ DISTFILES=	cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Professional video editing and compositing environment
-WWW=		https://www.cinelerra-gg.org/
+HOMEPAGE=	https://www.cinelerra-gg.org/
 
-LICENSE=	gnu-gpl-v2
-LICENSE_FILE=	${BUILD_WRKSRC}/COPYING
-
-ONLY_FOR_ARCHS=	amd64 i386
-ONLY_FOR_ARCHS_REASON=	not designed for other architectures
+ONLY_FOR_PLATFORM=	NetBSD-*-amd64 NetBSD-*-i386
 
 USE_LANGUAGES=		c c++
 
-BUILD_DEPENDS=	bash:../../shells/bash \
+TOOL_DEPENDS=	bash:../../shells/bash \
 		nasm:../../devel/nasm \
 		yasm:../../devel/yasm \
-		libdv*:../../multimedia/libdv \
-		mjpegtools*:../../multimedia/mjpegtools
-DEPENDS=	flac:../../audio/flac \
-		alsa-lib*:../../audio/alsa-lib \
-		ffmpeg6*:../../multimedia/ffmpeg6 \
-		fftw:../../math/fftw \
-		giflib*:../../graphics/giflib \
-		openexr*:../../graphics/openexr \
-		libogg*:../../multimedia/libogg \
-		openjpeg*:../../graphics/openjpeg \
-		libopus*:../../audio/libopus \
-		png-1.6*:../../graphics/png \
-		libsndfile*:../../audio/libsndfile \
-		libtheora*:../../multimedia/libtheora \
-		tiff*:../../graphics/tiff \
-		libvorbis*:../../audio/libvorbis \
-		libvpx*:../../multimedia/libvpx \
-		libwebp*:../../graphics/libwebp \
-		x264*:../../multimedia/x264 \
-		x265*:../../multimedia/x265 \
-		imath*:../../math/imath \
-		mjpegtools*:../../multimedia/mjpegtools \
-		libaom*:../../multimedia/libaom \
-		dav1d*:../../multimedia/dav1d \
-		jbigkit*:../../graphics/jbigkit \
-		libvdpau*:../../multimedia/libvdpau \
-		libva*:../../multimedia/libva \
-		pulseaudio*:../../audio/pulseaudio 
-RUN_DEPENDS=	bash:../../shells/bash
+
+USE_TOOLS+=	bash:run
 
 #EXTRA_PATCHES=	${BUILD_WRKSRC}/blds/bsd.patch:-p1
 
 
 
-USES=		perl5 autoreconf aclocal gettext-runtime gettext-tools gmake iconv:wchar_t \
-		jpeg localbase makeinfo python:3.9,build shebangfix xorg
+#USES=		perl5 autoreconf aclocal gettext-runtime gettext-tools gmake iconv:wchar_t \
+#		jpeg localbase makeinfo python:3.9,build shebangfix xorg
+
 SHEBANG_GLOB=	*.sh *.bld
 SHEBANG_FILES=	cinelerra-5.1/doc/ContextManual.pl
 USE_TOOLS+=	gmake aclocal autoconf automake makeinfo
 GNU_CONFIGURE=	yes
-USE_XORG=	x11 xau xdmcp xext xfixes xft xinerama xv
+
+#USE_XORG=	x11 xau xdmcp xext xfixes xft xinerama xv
 
 #CPPFLAGS+=		-I/usr/X11R7/include
 #CPPFLAGS+=		-I/usr/pkg/include/freetype2
 
-CXXFLAGS+=		-I/usr/X11R7/include
+CXXFLAGS+=		-I/usr/X11R7/include 
 CXXFLAGS+=		-I/usr/pkg/include/freetype2
 
 CFLAGS+=		-fpermissive
-LDFLAGS+=		-lpng16
+#LDFLAGS+=		-lpng16
 
 MAKE_ENV=	C_INCLUDE_PATH=${LOCALBASE}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${LOCALBASE}/include:${LOCALBASE}/include/uuid:${LOCALBASE}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2  LIBRARY_PATH=${LOCALBASE}/lib:/usr/X11R7/lib:${LOCALBASE}/lib/ffmpeg6 BSD=1
-CONFIGURE_ARGS=	--disable-static-build --disable-lame --disable-twolame \
-		--with-oss --without-alsa \
-		--without-firewire --without-dv --without-dvb --without-openexr \
-		--without-video4linux2 --without-xxf86vm --without-ladspa-build \
-		--without-shuttle --without-libdpx --without-shuttle-usb \
-		--without-x10tv --without-wintv --without-lv2 \
-		--without-libzmpeg --without-commercial --without-thirdparty \
-		--with-jobs=4
-#CFLAGS+=	-DFFMPEG3
-BINARY_ALIAS=	make=gmake
-BINARY_ALIAS=	python=python3.9
-
+CONFIGURE_ARGS+=	--disable-static-build 
+CONFIGURE_ARGS+=	--disable-lame 
+CONFIGURE_ARGS+=	--disable-twolame
+CONFIGURE_ARGS+=	--with-oss 
+CONFIGURE_ARGS+=	--without-alsa 
+CONFIGURE_ARGS+=	--without-firewire 
+CONFIGURE_ARGS+=	--without-dv 
+CONFIGURE_ARGS+=	--without-dvb 
+CONFIGURE_ARGS+=	--without-openexr
+CONFIGURE_ARGS+=	--without-video4linux2 
+CONFIGURE_ARGS+=	--without-xxf86vm 
+CONFIGURE_ARGS+=	--without-ladspa-build
+CONFIGURE_ARGS+=	--without-shuttle 
+CONFIGURE_ARGS+=	--without-libdpx 
+CONFIGURE_ARGS+=	--without-shuttle-usb 
+CONFIGURE_ARGS+=	--without-x10tv 
+CONFIGURE_ARGS+=	--without-wintv 
+CONFIGURE_ARGS+=	--without-lv2 
+CONFIGURE_ARGS+=	--without-libzmpeg 
+CONFIGURE_ARGS+=	--without-commercial 
+CONFIGURE_ARGS+=	--without-thirdparty
+CONFIGURE_ARGS+=	--with-jobs=4
 
 WRKSRC=			${WRKDIR}/cinelerra-${REV:C/(.......).*/\1/}
-AUTORECONF_WRKSRC=	${BUILD_WRKSRC}
-CONFIGURE_WRKSRC=	${BUILD_WRKSRC}
-BUILD_WRKSRC=		${WRKSRC}/cinelerra-${DISTVERSION:C/-.*//}
-INSTALL_WRKSRC=		${BUILD_WRKSRC}
+CONFIGURE_DIRS=		${WRKSRC}/cinelerra-5.1
+#BUILD_DIRS=		${WRKSRC}/cinelerra-${DISTVERSION:C/-.*//}
+#INSTALL_DIRS=		${BUILD_WRKSRC}
 
 DATADIR=		${PREFIX}/share/cin
 
@@ -121,28 +101,59 @@ post-patch:
 #	# the patch recommended by the upstream
 #	@cd ${CONFIGURE_WRKSRC}/ffmpeg && \
 #		for f in `grep -lr libfdk_ .`; do ${REINPLACE_CMD} -e 's/libfdk_//' -i '' $$f; done;
-	# fix lipng for lpng16
-	@cd ${CONFIGURE_WRKSRC}/guicast && sed -i -e 's|-lz|-lz -lpng16|' Makefile
+#	# fix lipng for lpng16
+	@cd ${CONFIGURE_DIRS}/guicast && sed -i -e 's|-lz|-lz -lpng16|' Makefile
 	# remove thirdparty/src for more space
-	@rm -rf ${CONFIGURE_WRKSRC}/thirdparty/src/*
+	@rm -rf ${CONFIGURE_DIRS}/thirdparty/src/*
 #	# correct the bash interpreter path
-	@cd ${CONFIGURE_WRKSRC}/cinelerra && sed -i  -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
+	@cd ${CONFIGURE_DIRS}/cinelerra && sed -i  -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
 		../configure.ac bdcreate.C dvdcreate.C shbtnprefs.C
 
 pre-configure:
-	@cd ${CONFIGURE_WRKSRC}  \
+	@cd ${CONFIGURE_DIRS}  \
 	&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash ./autogen.sh
 
-do-configure: # configure needs bash
-	@cd ${CONFIGURE_WRKSRC}  && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash configure ${CONFIGURE_ARGS}
+CONFIG_SHELL=bash
+
+do-configure: # naeed MAKE_ENV esp BSD=1
+	@cd ${CONFIGURE_DIRS}  && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash configure ${CONFIGURE_ARGS}
 	
 do-build:
-	@cd ${CONFIGURE_WRKSRC} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}
+	@cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}
 	
 do-install:
-	@cd ${CONFIGURE_WRKSRC} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
+	@cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
 
+
+.include "../../multimedia/libdv/buildlink3.mk"
+.include "../../multimedia/mjpegtools/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
+.include "../../graphics/giflib/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../audio/libopus/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../multimedia/x264/buildlink3.mk"
+.include "../../multimedia/x265/buildlink3.mk"
+.include "../../math/imath/buildlink3.mk"
+.include "../../multimedia/mjpegtools/buildlink3.mk"
+.include "../../multimedia/libaom/buildlink3.mk"
+.include "../../multimedia/dav1d/buildlink3.mk"
+.include "../../graphics/jbigkit/buildlink3.mk"
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.include "../../multimedia/libva/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../multimedia/libva/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../mk/x11.builtin.mk"
 #.include "../../graphics/openexr/buildlink3.mk"
 #.include "../../graphics/freetype2/buildlink3.mk"
