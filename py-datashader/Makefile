@@ -6,9 +6,11 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/datashader/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://datashader.org
+HOMEPAGE=	http://datashader.org/
 COMMENT=	Data visualization toolchain based on aggregating into a grid
 LICENSE=	modified-bsd
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
 
 DEPENDS+=	${PYPKGPREFIX}-dask>=0.18.0:../../wip/py-dask
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.3:../../devel/py-requests
@@ -31,7 +33,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.8.4:../../devel/py-flake8
 
 USE_LANGUAGES=	# none
 
-BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-numpy+=	${PYPKGPREFIX}-numpy>=1.7
+REPLACE_PYTHON+=	examples/filetimes.py
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} datashader datashader-${PYVERSSUFFIX}
+
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
