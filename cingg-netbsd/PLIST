@@ -862,6 +862,7 @@ lib/cin/plugins/video/boxblur.plugin
 lib/cin/plugins/video/brightness.plugin
 lib/cin/plugins/video/burn.plugin
 lib/cin/plugins/video/chromakey.plugin
+lib/cin/plugins/video/chromakeyavid.plugin
 lib/cin/plugins/video/chromakeyhsv.plugin
 lib/cin/plugins/video/color3way.plugin
 lib/cin/plugins/video/colorbalance.plugin
@@ -933,6 +934,7 @@ lib/cin/plugins/video/spherecam.plugin
 lib/cin/plugins/video/svg.plugin
 lib/cin/plugins/video/swapchannels.plugin
 lib/cin/plugins/video/swapframes.plugin
+lib/cin/plugins/video/swatch.plugin
 lib/cin/plugins/video/threshold.plugin
 lib/cin/plugins/video/timeavg.plugin
 lib/cin/plugins/video/timeblur.plugin
@@ -1046,21 +1048,6 @@ share/cin/doc/zoompanel.png
 share/cin/expanders.es
 share/cin/expanders.fr
 share/cin/expanders.txt
-lib/cin/plugins/video/chromakeyavid.plugin
-lib/cin/plugins/video/swatch.plugin
-share/cin/ffmpeg/audio/dv.dv
-share/cin/ffmpeg/audio/dvd_pcm.dvd
-share/cin/ffmpeg/audio/mp2.dfl
-share/cin/ffmpeg/audio/mp2.mp2
-share/cin/ffmpeg/video/av1_svt.mkv
-share/cin/ffmpeg/video/av1_svt.webm
-share/cin/ffmpeg/video/av1_vaapi.dfl
-share/cin/ffmpeg/video/av1_vaapi.webm
-share/cin/ffmpeg/video/dv.dv
-share/cin/ffmpeg/video/hdr.dfl
-share/cin/ffmpeg/video/hdr.hdr
-share/cin/ffmpeg/video/wbmp.dfl
-share/cin/ffmpeg/video/wbmp.wbmp
 share/cin/ffmpeg/audio/aac256k.pro
 share/cin/ffmpeg/audio/alac.m4a
 share/cin/ffmpeg/audio/alac.mkv
@@ -1075,8 +1062,10 @@ share/cin/ffmpeg/audio/bluray_truehd.m2ts
 share/cin/ffmpeg/audio/dca.qt
 share/cin/ffmpeg/audio/dnxhr_pcm_s16.mov
 share/cin/ffmpeg/audio/dnxhr_pcm_s24.mov
+share/cin/ffmpeg/audio/dv.dv
 share/cin/ffmpeg/audio/dvd.dfl
 share/cin/ffmpeg/audio/dvd.dvd
+share/cin/ffmpeg/audio/dvd_pcm.dvd
 share/cin/ffmpeg/audio/f4v.dfl
 share/cin/ffmpeg/audio/faststart_h264.mp4
 share/cin/ffmpeg/audio/faststart_h264.qt
@@ -1093,6 +1082,8 @@ share/cin/ffmpeg/audio/m4a.dfl
 share/cin/ffmpeg/audio/mkv.dfl
 share/cin/ffmpeg/audio/mov.dfl
 share/cin/ffmpeg/audio/mov.mov
+share/cin/ffmpeg/audio/mp2.dfl
+share/cin/ffmpeg/audio/mp2.mp2
 share/cin/ffmpeg/audio/mp3.dfl
 share/cin/ffmpeg/audio/mp3.f4v
 share/cin/ffmpeg/audio/mp3.flv
@@ -1170,6 +1161,10 @@ share/cin/ffmpeg/video/apng.dfl
 share/cin/ffmpeg/video/asv1.avi
 share/cin/ffmpeg/video/asv2.avi
 share/cin/ffmpeg/video/av1.webm
+share/cin/ffmpeg/video/av1_svt.mkv
+share/cin/ffmpeg/video/av1_svt.webm
+share/cin/ffmpeg/video/av1_vaapi.dfl
+share/cin/ffmpeg/video/av1_vaapi.webm
 share/cin/ffmpeg/video/avc422.m2ts
 share/cin/ffmpeg/video/avi.dfl
 share/cin/ffmpeg/video/avif.avif
@@ -1199,6 +1194,7 @@ share/cin/ffmpeg/video/dnxhr_hqx.mov
 share/cin/ffmpeg/video/dnxhr_lb.mov
 share/cin/ffmpeg/video/dnxhr_sq.mov
 share/cin/ffmpeg/video/dpx.dfl
+share/cin/ffmpeg/video/dv.dv
 share/cin/ffmpeg/video/dv_ntsc.avi
 share/cin/ffmpeg/video/dv_pal.avi
 share/cin/ffmpeg/video/dv_pal.qt
@@ -1239,6 +1235,8 @@ share/cin/ffmpeg/video/h265.mp4
 share/cin/ffmpeg/video/h265_nvenc.mp4
 share/cin/ffmpeg/video/hd.youtube
 share/cin/ffmpeg/video/hd_h264.youtube
+share/cin/ffmpeg/video/hdr.dfl
+share/cin/ffmpeg/video/hdr.hdr
 share/cin/ffmpeg/video/hevc422p10.m2ts
 share/cin/ffmpeg/video/hevc422p8.m2ts
 share/cin/ffmpeg/video/hevc_vaapi.mp4
@@ -1391,6 +1389,8 @@ share/cin/ffmpeg/video/vp9_3840x2160_24or25or30fps.mkv
 share/cin/ffmpeg/video/vp9_3840x2160_24or25or30fps.webm
 share/cin/ffmpeg/video/vp9_3840x2160_50or60fps.mkv
 share/cin/ffmpeg/video/vp9_3840x2160_50or60fps.webm
+share/cin/ffmpeg/video/wbmp.dfl
+share/cin/ffmpeg/video/wbmp.wbmp
 share/cin/ffmpeg/video/webm.dfl
 share/cin/ffmpeg/video/webm.webm
 share/cin/ffmpeg/video/webp.dfl
@@ -1490,5 +1490,3 @@ share/locale/vi/LC_MESSAGES/cin.mo
 share/locale/zh/LC_MESSAGES/cin.mo
 share/pixmaps/cin.svg
 share/pixmaps/cin.xpm
-@ lib/cin/plugins/picon/cinfinity
-@ share/cin/lv2

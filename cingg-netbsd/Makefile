@@ -1,25 +1,23 @@
 # $NetBSD$
-DISTNAME=	cinelerra-gg-${DISTVERSION}-${DISTREVISION}
-DISTVERSION=	5.1-20240703
+DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
+DISTVERSION=		5.1-20240703
 DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-DISTREVISION=	2
-CATEGORIES=	multimedia
-REV=		73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
-MASTER_SITES=	https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
-#MASTER_SITES=	https://www.cinelerra-gg.org/download/pkgs/src/cin_$DISTVERSION-src.tgz
-DISTFILES=	cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz
+DISTREVISION=		2
+CATEGORIES=		multimedia
+REV=			73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
+MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
+#MASTER_SITES=		https://www.cinelerra-gg.org/download/pkgs/src/cin_$DISTVERSION-src.tgz
+DISTFILES=		cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Professional video editing and compositing environment
 HOMEPAGE=	https://www.cinelerra-gg.org/
 
+LICENSE=	gnu-gpl-v2
+
 ONLY_FOR_PLATFORM=	NetBSD-*-amd64 NetBSD-*-i386
 
 USE_LANGUAGES=		c c++
-
-TOOL_DEPENDS=	bash:../../shells/bash \
-		nasm:../../devel/nasm \
-		yasm:../../devel/yasm \
 
 USE_TOOLS+=	bash:run
 
@@ -40,33 +38,33 @@ GNU_CONFIGURE=	yes
 #CPPFLAGS+=		-I/usr/X11R7/include
 #CPPFLAGS+=		-I/usr/pkg/include/freetype2
 
-CXXFLAGS+=		-I/usr/X11R7/include 
+CXXFLAGS+=		-I/usr/X11R7/include
 CXXFLAGS+=		-I/usr/pkg/include/freetype2
 
 CFLAGS+=		-fpermissive
 #LDFLAGS+=		-lpng16
 
-MAKE_ENV=	C_INCLUDE_PATH=${LOCALBASE}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${LOCALBASE}/include:${LOCALBASE}/include/uuid:${LOCALBASE}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2  LIBRARY_PATH=${LOCALBASE}/lib:/usr/X11R7/lib:${LOCALBASE}/lib/ffmpeg6 BSD=1
-CONFIGURE_ARGS+=	--disable-static-build 
-CONFIGURE_ARGS+=	--disable-lame 
+MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
+CONFIGURE_ARGS+=	--disable-static-build
+CONFIGURE_ARGS+=	--disable-lame
 CONFIGURE_ARGS+=	--disable-twolame
-CONFIGURE_ARGS+=	--with-oss 
-CONFIGURE_ARGS+=	--without-alsa 
-CONFIGURE_ARGS+=	--without-firewire 
-CONFIGURE_ARGS+=	--without-dv 
-CONFIGURE_ARGS+=	--without-dvb 
+CONFIGURE_ARGS+=	--with-oss
+CONFIGURE_ARGS+=	--without-alsa
+CONFIGURE_ARGS+=	--without-firewire
+CONFIGURE_ARGS+=	--without-dv
+CONFIGURE_ARGS+=	--without-dvb
 CONFIGURE_ARGS+=	--without-openexr
-CONFIGURE_ARGS+=	--without-video4linux2 
-CONFIGURE_ARGS+=	--without-xxf86vm 
+CONFIGURE_ARGS+=	--without-video4linux2
+CONFIGURE_ARGS+=	--without-xxf86vm
 CONFIGURE_ARGS+=	--without-ladspa-build
-CONFIGURE_ARGS+=	--without-shuttle 
-CONFIGURE_ARGS+=	--without-libdpx 
-CONFIGURE_ARGS+=	--without-shuttle-usb 
-CONFIGURE_ARGS+=	--without-x10tv 
-CONFIGURE_ARGS+=	--without-wintv 
-CONFIGURE_ARGS+=	--without-lv2 
-CONFIGURE_ARGS+=	--without-libzmpeg 
-CONFIGURE_ARGS+=	--without-commercial 
+CONFIGURE_ARGS+=	--without-shuttle
+CONFIGURE_ARGS+=	--without-libdpx
+CONFIGURE_ARGS+=	--without-shuttle-usb
+CONFIGURE_ARGS+=	--without-x10tv
+CONFIGURE_ARGS+=	--without-wintv
+CONFIGURE_ARGS+=	--without-lv2
+CONFIGURE_ARGS+=	--without-libzmpeg
+CONFIGURE_ARGS+=	--without-commercial
 CONFIGURE_ARGS+=	--without-thirdparty
 CONFIGURE_ARGS+=	--with-jobs=4
 
@@ -102,27 +100,27 @@ post-patch:
 #	@cd ${CONFIGURE_WRKSRC}/ffmpeg && \
 #		for f in `grep -lr libfdk_ .`; do ${REINPLACE_CMD} -e 's/libfdk_//' -i '' $$f; done;
 #	# fix lipng for lpng16
-	@cd ${CONFIGURE_DIRS}/guicast && sed -i -e 's|-lz|-lz -lpng16|' Makefile
+	cd ${CONFIGURE_DIRS}/guicast && sed -i -e 's|-lz|-lz -lpng16|' Makefile
 	# remove thirdparty/src for more space
-	@rm -rf ${CONFIGURE_DIRS}/thirdparty/src/*
+	rm -rf ${CONFIGURE_DIRS}/thirdparty/src/*
 #	# correct the bash interpreter path
-	@cd ${CONFIGURE_DIRS}/cinelerra && sed -i  -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
+	cd ${CONFIGURE_DIRS}/cinelerra && sed -i  -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
 		../configure.ac bdcreate.C dvdcreate.C shbtnprefs.C
 
 pre-configure:
-	@cd ${CONFIGURE_DIRS}  \
+	cd ${CONFIGURE_DIRS}  \
 	&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash ./autogen.sh
 
-CONFIG_SHELL=bash
+CONFIG_SHELL=	bash
 
 do-configure: # naeed MAKE_ENV esp BSD=1
-	@cd ${CONFIGURE_DIRS}  && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash configure ${CONFIGURE_ARGS}
-	
+	cd ${CONFIGURE_DIRS}  && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/bash configure ${CONFIGURE_ARGS}
+
 do-build:
-	@cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}
-	
+	cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}
+
 do-install:
-	@cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
+	cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
 
 
 .include "../../multimedia/libdv/buildlink3.mk"
