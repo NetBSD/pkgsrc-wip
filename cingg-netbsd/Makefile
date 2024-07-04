@@ -2,7 +2,7 @@
 DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
 DISTVERSION=		5.1-20240703
 DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-DISTREVISION=		3
+DISTREVISION=		4
 CATEGORIES=		multimedia
 REV=			73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
 MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/

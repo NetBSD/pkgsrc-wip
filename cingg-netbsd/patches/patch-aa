@@ -1,6 +1,6 @@
 $NetBSD$
 
-Hardcoding openexr3.1 for a moment
+Hardcoding openexr3.2 for a moment
 
 --- ./cinelerra-5.1/configure.ac.orig
 +++ ./cinelerra-5.1/configure.ac
@@ -8,7 +8,7 @@ Hardcoding openexr3.1 for a moment
  echo "system_libs += -lpng16"
  echo "system_libs += -lintl"
  echo "system_libs += -lossaudio"
-+echo "system_libs += -lOpenEXR-3_1 -lOpenEXRUtil-3_1 -lOpenEXRCore-3_1 -lIex-3_1 -lIlmThread-3_1 -lImath-3_1"
++echo "system_libs += -lOpenEXR-3_2 -lOpenEXRUtil-3_2 -lOpenEXRCore-3_2 -lIex-3_2 -lIlmThread-3_2 -lImath-3_1"
  echo "CFLAGS += -I/usr/X11R7/include"
  echo "CFLAGS += -I/usr/pkg/include/ffmpeg6"
  echo "CFLAGS += $(pkg-config --cflags xft)"
