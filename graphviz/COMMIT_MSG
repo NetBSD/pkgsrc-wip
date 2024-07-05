@@ -1,4 +1,112 @@
-graphics/graphviz: Update to 11.0.0
+graphics/graphviz: Update to 12.0.0
+
+## [12.0.0] – 2024-07-04
+
+### Added
+
+- Support for building the Graphviz TCL bindings has been integrated into the
+  CMake build system. This is controllable by the `-Denable_tcl={AUTO|ON|OFF}`
+  option.
+- Support for building the SWIG-generated TCL language bindings has been
+  integrated into the CMake build system. This is controllable by the
+  `-Denable_swig={AUTO|ON|OFF}` option.
+- Support for building the SWIG-generated C# language bindings has been
+  integrated into the CMake build system. This is controllable by the
+  `-Denable_sharp={AUTO|ON|OFF}` option.
+
+### Changed
+
+- The Catch2-based test suite in the CMake build system has been ported from
+  Catch2 v2 to Catch2 v3. Support for Catch2 v2 has been removed. #2465
+- The Windows release artifacts are now built on Windows 2022 and Visual Studio
+  2022 17 and toolset v143.
+- The macOS release artifacts are now built on macOS 13 (Ventura).
+- The CMake build system no longer links `dot_builtins` against libsocket.
+- The CMake build system now only compiles `dot_builtins` if building shared
+  libraries (`-DBUILD_SHARED_LIBS=ON`).
+- **Breaking**: the `polygon_t.style` member is now a struct.
+- **Breaking**: the `LEN` and `MAXDOUBLE` constants have been removed.
+- Accuracy in processing compass points has been improved.
+- **Breaking**: the `CMYK_BYTE` member of the `color_type_t` enum and the
+  corresponding `gvolor_t.u.cmyk` field have been removed. The color format this
+  mapped to was neither documented nor implemented correctly.
+- The Windows releases available for download on graphviz.org now only include
+  CMake-produced packages, not MS Build-produced packages. The MS Build packages
+  are available in the
+  [Gitlab package registry](https://gitlab.com/graphviz/graphviz/-/packages) if
+  needed.
+- The CMake build system more pervasively sets rpaths of compiled binaries,
+  libraries, and plugins, which should result in them more reliably finding
+  their supporting components.
+  without `$LD_LIBRARY_PATH`/`$DYLD_LIBRARY_PATH` tricks.
+- **Breaking**: the `Agraph_t.n_id` field is now an opaque pointer.
+- **Breaking**: the libpack functions `putGraphs`, `putRects`, and `shiftGraphs`
+  now operate on floating-point points (`pointf`) instead of integer points
+  (`point`).
+- **Breaking**: the `BF2B` macro has been removed.
+- **Breaking**: the undocumented `-Tmp` output format has been removed.
+- **Breaking**: the arith.h header defines neither `_GNU_SOURCE` nor `sincos`
+  any more. None of the build systems attempt to discover `sincos` any more.
+- The FIG output format (`-Tfig`) supports up to 512 custom colors. The previous
+  limit was 256, after which it would crash (see note in the “Fixed” section).
+- **Breaking**: The TCL binding’s `tcldot_layout` function no longer tries to
+  fallback to the `dot` layout engine if the requested engine is unavailable but
+  instead fails with an error message.
+- The TCL binding’s graph `render` command no longer ignores layout errors.
+- The TCL binding’s graph `write` command now does layout unconditionally,
+  regardless of what output renderer is selected.
+- The CMake build system builds cgraph++ and gvc++ as either shared or static
+  libraries, respecting the `BUILD_SHARED_LIBS` setting.
+- Discovery of the fcntl.h header has been removed from all build systems. This
+  header is now unconditionally assumed to exist.
+- **Breaking**: `obj_state_t.gradient_frac` is now a `double`.
+- **Breaking**: `path.nbox` is now a `size_t`.
+- The change described as “Some `routesplines` miscalculations that led to lost
+  edges and fatal errors have been avoided” in 11.0.0 has been reverted. The fix
+  for this caused other problems.
+- **Breaking**: the `d` and `disc` parameters have been removed from
+  `Dtcompar_f`.
+- CentOS packages are no longer provided.
+- In the CMake build system, the minimum required CMake version has been
+  increased to 3.14.1.
+- **Breaking**: the `disc` parameter has been removed from `Dtfree_f`.
+- Gvedit no longer depends on the getopt library.
+
+### Fixed
+
+- The CMake build system now uses absolute paths to PangoCairo libraries during
+  linking, resolving build problems on macOS.
+- The CMake build system’s path for third-party headers for the DevIL plugin has
+  been corrected.
+- Edges not rendering properly when using ports and the `crow` arrowhead/tail
+  with Windows `Release` builds. #2490
+- A duplicate prototype of `aghtmlstr` has been removed.
+- `agrelabel_node` (or equivalently, `agrename` when operating on a node) no
+  longer corrupts the node-by-id set, causing a crash. This bug was preventing
+  `gxl2gv` from processing inputs that used node `name` attributes. #2300
+- Accuracy improvements have fixed an assertion failure on macOS. #2538
+- The FIG output format (`-Tfig`) no longer crashes when handling more than 256
+  colors.
+- The `scale` operation implemented by the TCL binding’s tclpathplan scales
+  relative to the center of the points being scaled instead of reading
+  uninitialized memory.
+- The xlib plugin sets “close-on-exec” on the file descriptors it creates,
+  preventing them leaking into either web browsers it starts or other processes
+  created by the hosting application.
+- A sign confusion issue in neatogen’s weighting calculations was fixed. This
+  was a regression in Graphviz 11.0.0.
+- The CMake build system no longer attaches `dllimport`/`dllexport` annotations
+  when compiling static libraries on Windows and MinGW.
+- An issue with linking gvpack when building static libraries in the CMake build
+  system was fixed.
+- An sfdp use-after-free issue was fixed. #2556
+- Using `concentrate=true` once again works. This was a regression in Graphviz
+  11.0.0. #2559
+- `overlap="scale"` no longer causes nodes to be placed on top of one another.
+  This was a regression in Graphviz 7.0.5. #2564
+- libpack code now understands a cluster to be indicated by the common rules,
+  including the “cluster” prefix being case insensitive and the `cluster=true`
+  attribute as an alternative. #2187, #2555
 
 ## [11.0.0] – 2024-04-28
 

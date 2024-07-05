@@ -1,9 +1,9 @@
 $NetBSD$
 
-BLAKE2s (graphviz-11.0.0.tar.gz) = 854ea061b8bbce60238ff383bd09d5e193f5ae959354de219e0b718f4609d903
-SHA512 (graphviz-11.0.0.tar.gz) = 624d54b34ce4205452db9a7ee81c93b82e688173679d8080ced46f9e4c62e16ca615b6c298b2ca44a5bfcea99162e8b3c794770fd5d45da8b546ab6d9189f64b
-Size (graphviz-11.0.0.tar.gz) = 27292727 bytes
+BLAKE2s (graphviz-12.0.0.tar.gz) = afcf0e8d7a875387234daaf4ac5f35124a40eaf0be9032092c9a1eb84e97af86
+SHA512 (graphviz-12.0.0.tar.gz) = abce2766f1f57f48e711361113ee496d67ab555d8bb9757377b8b8ad38e7e025f239f48ad8effb869eeca5fe15a095c2468eee81a18c1d72a8be6383a97a59f8
+Size (graphviz-12.0.0.tar.gz) = 27373201 bytes
 SHA1 (patch-config_config__perl.pl) = 430acb7d7ee3e149de0af9832c5a29602884f83e
 SHA1 (patch-configure.ac) = dcb9fd2822d3eb5dddcda5a55746d51114f92d06
-SHA1 (patch-lib_gvc_Makefile.am) = 180b45f810e5bb3948509d50b5be3b159b38a78f
+SHA1 (patch-lib_gvc_Makefile.am) = a8067feb25afcc81ab6048bb6a8f1aa1e93af878
 SHA1 (patch-plugin_gs_gvloadimage__gs.c) = 982ac1db252e3224633069db956c5dc803cd5ea9

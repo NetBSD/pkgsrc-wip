@@ -9,7 +9,7 @@ USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++11 unique_ptr
 
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.26.3
-BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=11.0.0
+BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=12.0.0
 BUILDLINK_PKGSRCDIR.graphviz?=		../../wip/graphviz
 
 .include "../../converters/libiconv/buildlink3.mk"

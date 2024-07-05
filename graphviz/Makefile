@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	graphviz-11.0.0
+DISTNAME=	graphviz-12.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 #EXTRACT_SUFX=	.tar.xz
