@@ -2,6 +2,9 @@
 
 DISTNAME=		tc-2.99.3
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
+MASTER_SITES=   	${MASTER_SITE_GITHUB:=makoto-fujiwara/}
+PKG_REVISION=		1
+
 CATEGORIES=		inputmethod
 
 MAINTAINER=		makoto@ki.nu
@@ -10,7 +13,6 @@ COMMENT=		2-stroke non associative direct input for Kanji
 # tc is in GPL2, kw is unknown for the moment
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/tc
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
 			${EMACS_LISPPREFIX}/${DISTNAME} \
 			share/examples/tc
@@ -27,14 +29,6 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 MAKEFLAGS+=		EMACS=${EMACS_BIN}
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX}
 INFO_FILES=		YES
-
-GIT_REPOSITORIES=	tc
-GIT_REPO.tc=		http://github.com/makoto-fujiwara/tc.git
-# fatal: unable to access 'http://github.com/kanchoku/tc.git/': SSL certificate problem: unable to get local issuer certificate
-# Add "-c http.sslVerify=false" to git command or,
-PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
-## With some condition, it pauses waiting for interaction:
-## Saving file /WRKOBJDIR/wip/tc-git/work/tc/etc/bushu.rev...
 
 MAKE_JOBS_SAFE=		no
 
@@ -91,6 +85,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf	${DESTDIR}${PREFIX}/share/tc
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.tc 	${DESTDIR}${PREFIX}/share/examples/tc
 
-.include "../../wip/emacs-git/modules.mk"
-.include "../../wip/mk/git-package.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
