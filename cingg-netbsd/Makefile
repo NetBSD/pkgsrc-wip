@@ -1,12 +1,11 @@
 # $NetBSD$
 DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
 DISTVERSION=		5.1-20240703
-DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
+#DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
 DISTREVISION=		5
 CATEGORIES=		multimedia
 REV=			73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
 MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
-#MASTER_SITES=		https://www.cinelerra-gg.org/download/pkgs/src/cin_$DISTVERSION-src.tgz
 DISTFILES=		cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,31 +20,16 @@ USE_LANGUAGES=		c c++
 
 USE_TOOLS+=	bash:run
 
-#EXTRA_PATCHES=	${BUILD_WRKSRC}/blds/bsd.patch:-p1
 
-
-
-#USES=		perl5 autoreconf aclocal gettext-runtime gettext-tools gmake iconv:wchar_t \
-#		jpeg localbase makeinfo python:3.9,build shebangfix xorg
-
-SHEBANG_GLOB=	*.sh *.bld
-SHEBANG_FILES=	cinelerra-5.1/doc/ContextManual.pl
-USE_TOOLS+=	gmake aclocal autoconf automake makeinfo
+#SHEBANG_GLOB=	*.sh *.bld
+#SHEBANG_FILES=	cinelerra-5.1/doc/ContextManual.pl
+USE_TOOLS+=	pkg-config gmake aclocal autoconf automake makeinfo
 GNU_CONFIGURE=	yes
 
-#USE_XORG=	x11 xau xdmcp xext xfixes xft xinerama xv
+CFLAGS+=		-fpermissive
 
-#CPPFLAGS+=		-I/usr/X11R7/include
-#CPPFLAGS+=		-I/usr/pkg/include/freetype2
-
-#LDFLAGS+=		 -lgtk-x11-2.0 -lgdk-x11-2.0 -lharfbuzz -lpangocairo-1.0 -L/usr/X11R7/lib -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -Wl,-rpath,/usr/X11R7/lib -lXext -latk-1.0 -lglib-2.0 -lintl -lgobject-2.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfreetype -Wl,-R/usr/pkg/lib -lfontconfig
-
-#CXXFLAGS+=		-I/usr/X11R7/include
-#CXXFLAGS+=		-I/usr/pkg/include/freetype2
-
-CFLAGS+=		-fpermissive -I/usr/pkg/include/suil-0
-
-MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2:/usr/pkg/include/OpenEXR:/usr/pkg/include/Imath:/usr/pkg/include/suil-0  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
+#MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2:/usr/pkg/include/OpenEXR:/usr/pkg/include/Imath:/usr/pkg/include/suil-0  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
+MAKE_ENV=		BSD=1
 CONFIGURE_ARGS+=	--disable-static-build
 CONFIGURE_ARGS+=	--disable-lame
 CONFIGURE_ARGS+=	--disable-twolame
@@ -71,13 +55,8 @@ CONFIGURE_ARGS+=	--with-jobs=4
 
 WRKSRC=			${WRKDIR}/cinelerra-${REV:C/(.......).*/\1/}
 CONFIGURE_DIRS=		${WRKSRC}/cinelerra-5.1
-#BUILD_DIRS=		${WRKSRC}/cinelerra-${DISTVERSION:C/-.*//}
-#INSTALL_DIRS=		${BUILD_WRKSRC}
 
 post-patch:
-#	# the patch recommended by the upstream
-#	@cd ${CONFIGURE_WRKSRC}/ffmpeg && \
-#		for f in `grep -lr libfdk_ .`; do ${REINPLACE_CMD} -e 's/libfdk_//' -i '' $$f; done;
 # fix pkgsrc bugs?
 	rm ${WRKSRC}/../.tools/bin/pkg-config
 	ln -s ${PREFIX}/bin/pkg-config ${WRKSRC}/../.tools/bin/pkg-config
@@ -109,6 +88,7 @@ do-install:
 .include "../../devel/pkgconf/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/libdeflate/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
