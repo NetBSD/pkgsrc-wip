@@ -2,7 +2,7 @@
 DISTNAME=		cinelerra-gg-${DISTVERSION}-${DISTREVISION}
 DISTVERSION=		5.1-20240703
 DISTVERSIONSUFFIX=	-${REV:C/(.......).*/\1/}
-DISTREVISION=		4
+DISTREVISION=		5
 CATEGORIES=		multimedia
 REV=			73eb8f8d040d50f33db883d12adaaf33a2d1520c # git revision
 MASTER_SITES=		https://git.cinelerra-gg.org/git?p=goodguy/cinelerra.git;a=snapshot;h=${REV};sf=tgz;dummy=/
@@ -38,12 +38,14 @@ GNU_CONFIGURE=	yes
 #CPPFLAGS+=		-I/usr/X11R7/include
 #CPPFLAGS+=		-I/usr/pkg/include/freetype2
 
-CXXFLAGS+=		-I/usr/X11R7/include
-CXXFLAGS+=		-I/usr/pkg/include/freetype2
+#LDFLAGS+=		 -lgtk-x11-2.0 -lgdk-x11-2.0 -lharfbuzz -lpangocairo-1.0 -L/usr/X11R7/lib -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lXfixes -lX11 -Wl,-rpath,/usr/X11R7/lib -lXext -latk-1.0 -lglib-2.0 -lintl -lgobject-2.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfreetype -Wl,-R/usr/pkg/lib -lfontconfig
 
-CFLAGS+=		-fpermissive
+#CXXFLAGS+=		-I/usr/X11R7/include
+#CXXFLAGS+=		-I/usr/pkg/include/freetype2
 
-MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2:/usr/pkg/include/OpenEXR:/usr/pkg/include/Imath  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
+CFLAGS+=		-fpermissive -I/usr/pkg/include/suil-0
+
+MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2:/usr/pkg/include/OpenEXR:/usr/pkg/include/Imath:/usr/pkg/include/suil-0  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
 CONFIGURE_ARGS+=	--disable-static-build
 CONFIGURE_ARGS+=	--disable-lame
 CONFIGURE_ARGS+=	--disable-twolame
@@ -54,14 +56,14 @@ CONFIGURE_ARGS+=	--without-dv
 CONFIGURE_ARGS+=	--without-dvb
 CONFIGURE_ARGS+=	--with-openexr
 CONFIGURE_ARGS+=	--without-video4linux2
-CONFIGURE_ARGS+=	--without-xxf86vm
+CONFIGURE_ARGS+=	--with-xxf86vm
 CONFIGURE_ARGS+=	--without-ladspa-build
 CONFIGURE_ARGS+=	--without-shuttle
 CONFIGURE_ARGS+=	--without-libdpx
 CONFIGURE_ARGS+=	--without-shuttle-usb
 CONFIGURE_ARGS+=	--without-x10tv
 CONFIGURE_ARGS+=	--without-wintv
-CONFIGURE_ARGS+=	--without-lv2
+CONFIGURE_ARGS+=	--with-lv2
 CONFIGURE_ARGS+=	--without-libzmpeg
 CONFIGURE_ARGS+=	--without-commercial
 CONFIGURE_ARGS+=	--without-thirdparty
@@ -72,32 +74,13 @@ CONFIGURE_DIRS=		${WRKSRC}/cinelerra-5.1
 #BUILD_DIRS=		${WRKSRC}/cinelerra-${DISTVERSION:C/-.*//}
 #INSTALL_DIRS=		${BUILD_WRKSRC}
 
-DATADIR=		${PREFIX}/share/cin
-
-OPTIONS_DEFINE=		LV2 OPENGL
-OPTIONS_DEFAULT=	LV2 OPENGL
-OPTIONS_SUB=		yes
-
-LV2_DESC=		Use LV2 plugins
-LV2_CONFIGURE_WITH=	lv2
-LV2_USES=		gnome pkg-config
-LV2_USE=		GNOME=atk,cairo,gdkpixbuf2,glib20,gtk20,pango
-LV2_CFLAGS=		-I${LOCALBASE}/include/lilv-0 -I${LOCALBASE}/include/suil-0
-LV2_BUILD_DEPENDS=	lv2>0:audio/lv2
-LV2_LIB_DEPENDS=	liblilv-0.so:audio/lilv \
-			libserd-0.so:devel/serd \
-			libsord-0.so:devel/sord \
-			libsratom-0.so:audio/sratom \
-			libsuil-0.so:audio/suil
-
-OPENGL_CONFIGURE_WITH=	gl
-OPENGL_USES=		gl
-OPENGL_USE=		GL=gl,glu
-
 post-patch:
 #	# the patch recommended by the upstream
 #	@cd ${CONFIGURE_WRKSRC}/ffmpeg && \
 #		for f in `grep -lr libfdk_ .`; do ${REINPLACE_CMD} -e 's/libfdk_//' -i '' $$f; done;
+# fix pkgsrc bugs?
+	rm ${WRKSRC}/../.tools/bin/pkg-config
+	ln -s ${PREFIX}/bin/pkg-config ${WRKSRC}/../.tools/bin/pkg-config
 #	# fix lipng for lpng16
 	cd ${CONFIGURE_DIRS}/guicast && sed -i -e 's|-lz|-lz -lpng16|' Makefile
 	# remove thirdparty/src for more space
@@ -122,10 +105,17 @@ do-install:
 	cd ${CONFIGURE_DIRS} && ${SETENV} ${MAKE_ENV} gmake ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} install
 
 
+.include "../../mk/tools/pkg-config.mk"
+.include "../../devel/pkgconf/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/libdeflate/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../audio/lv2/buildlink3.mk"
+.include "../../audio/lilv/buildlink3.mk"
+.include "../../audio/suil/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
@@ -150,6 +140,7 @@ do-install:
 .include "../../multimedia/libva/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../multimedia/libva/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 #.include "../../graphics/openexr/buildlink3.mk"

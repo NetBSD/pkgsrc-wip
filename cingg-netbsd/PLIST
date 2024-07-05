@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/bdwrite
 bin/cin
+lib/cin/lv2ui
 lib/cin/plugins/audio/audioscope.plugin
 lib/cin/plugins/audio/chorus.plugin
 lib/cin/plugins/audio/compressor.plugin
@@ -1404,6 +1405,7 @@ share/cin/ffmpeg/video/youtube.dfl
 share/cin/ffmpeg/video/yuv.dfl
 share/cin/ffmpeg/video/yuv4.qt
 share/cin/info/plugins.txt
+share/cin/lv2_blacklist.txt
 share/cin/models/amazon01
 share/cin/models/amazon01.xcf.bz2
 share/cin/models/amazon01_body.png
