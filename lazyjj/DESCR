@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# lazyjj
+
+TUI for [Jujutsu/jj](https://github.com/martinvonz/jj). Built in Rust with Ratatui. Interacts with `jj` CLI.
+
+https://github.com/Cretezy/lazyjj/assets/2672503/b5e6b4f1-ebdb-448f-af9e-361e86f0c148
+
+## Features
+
+- Log
+  - Scroll through the jj log and view change details in side panel
+  - Create new changes from selected change with `n`
+  - Edit changes with `e`
+  - Desribe changes with `d`
+  - Abandon changes with `a`
+  - Toggle between color words and git diff with `p`
+  - See different revset with `r`
+  - Set a branch to selected change with `b`
+  - Fetch/push with `f`/`p`
+- Files
+  - View files in current change and diff in side panel
+...

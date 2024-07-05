@@ -1,0 +1,13 @@
+needs unstable rust to build
+https://github.com/Cretezy/lazyjj/issues/41
+
+   Compiling lazyjj v0.2.1 (/scratch/devel/lazyjj/work/lazyjj-0.2.1)
+error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> src/main.rs:1:1
+  |
+1 | #![feature(let_chains)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0554`.
+error: could not compile `lazyjj` (bin "lazyjj") due to 1 previous error
+*** Error code 101

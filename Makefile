@@ -1864,6 +1864,7 @@ SUBDIR+=	lanq
 SUBDIR+=	lasi
 SUBDIR+=	layer-shell-qt
 SUBDIR+=	layer-shell-qt6
+SUBDIR+=	lazyjj
 SUBDIR+=	lbt
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
