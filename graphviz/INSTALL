@@ -1,9 +1,0 @@
-# $NetBSD$
-
-: ${PKG_PREFIX=@PREFIX@}
-
-case ${STAGE} in
-POST-INSTALL)
-	${PKG_PREFIX}/bin/dot -c
-	;;
-esac

@@ -1,9 +1,0 @@
-# $NetBSD$
-
-: ${PKG_PREFIX=@PREFIX@}
-
-case ${STAGE} in
-DEINSTALL)
-	${RM} ${PKG_PREFIX}/lib/graphviz/config6
-	;;
-esac
