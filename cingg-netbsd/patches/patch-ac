@@ -22,7 +22,7 @@ lv2 and openexr fixes
   CHECK_HEADERS([sratom], [sratom headers], [sratom/sratom.h])
   CHECK_LIB([suil], [suil-0], [suil_instance_new])
 - CFLAGS="-I/usr/include/suil-0 -I/usr/local/include/suil-0 `pkg-config --cflags  suil-0 2>/dev/null`"
-+ CFLAGS=" -I/usr/pkg/include/suil-0 -I/usr/local/include/suil-0 `pkg-config --cflags  suil-0 2>/dev/null`"
++ CFLAGS=" -I${PREFIX}/include/suil-0 -I/usr/local/include/suil-0 `pkg-config --cflags  suil-0 2>/dev/null`"
   CHECK_HEADERS([suil], [suil headers], [suil/suil.h])
   CFG_CFLAGS+=" $(pkg-config --cflags lilv-0 2>/dev/null) $(pkg-config --cflags suil-0 2>/dev/null)"
   LIBS="$saved_LIBS"

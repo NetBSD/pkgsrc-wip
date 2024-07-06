@@ -4,4 +4,4 @@ BLAKE2s (cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz) = 98552c0774608721d4adf1c5e6
 SHA512 (cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz) = 410e311544a73061e0042045f20b16d7137d76a306395844fe76b4410dcde92a2f3bf79f373a2dacdcc456bb7d72bd5939c8762b92c4724b3efe5817ee362002
 Size (cinelerra-gg-5.1-20240703-73eb8f8d.tar.gz) = 195630107 bytes
 SHA1 (patch-aa) = c15fb44c81ac2d36af8fd4d4aa0ddcc38812675e
-SHA1 (patch-ac) = cab5d5df661cf7aacc08f2255d41cf81f6e3586f
+SHA1 (patch-ac) = baa34cf5a6315d6612b14e6ff78aa9cd81e1eb73

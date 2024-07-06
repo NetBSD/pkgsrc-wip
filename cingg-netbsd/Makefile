@@ -20,6 +20,11 @@ USE_LANGUAGES=		c c++
 
 USE_TOOLS+=	bash:run
 
+# fix pkgsrc bugs?
+.if exists(/usr/pkg/bin/pkg-config)
+TOOLS_PLATFORM.pkg-config?=	/usr/pkg/bin/pkg-config
+.endif
+
 
 #SHEBANG_GLOB=	*.sh *.bld
 #SHEBANG_FILES=	cinelerra-5.1/doc/ContextManual.pl
@@ -28,7 +33,6 @@ GNU_CONFIGURE=	yes
 
 CFLAGS+=		-fpermissive
 
-#MAKE_ENV=		C_INCLUDE_PATH=${PREFIX}/include:/usr/X11R7/include CPLUS_INCLUDE_PATH=${PREFIX}/include:${PREFIX}/include/uuid:${PREFIX}/include/ffmpeg6:/usr/X11R7/include:/usr/pkg/include/freetype2:/usr/pkg/include/OpenEXR:/usr/pkg/include/Imath:/usr/pkg/include/suil-0  LIBRARY_PATH=${PREFIX}/lib:/usr/X11R7/lib:${PREFIX}/lib/ffmpeg6 BSD=1
 MAKE_ENV=		BSD=1
 CONFIGURE_ARGS+=	--disable-static-build
 CONFIGURE_ARGS+=	--disable-lame
@@ -57,9 +61,7 @@ WRKSRC=			${WRKDIR}/cinelerra-${REV:C/(.......).*/\1/}
 CONFIGURE_DIRS=		${WRKSRC}/cinelerra-5.1
 
 post-patch:
-# fix pkgsrc bugs?
-	rm ${WRKSRC}/../.tools/bin/pkg-config
-	ln -s ${PREFIX}/bin/pkg-config ${WRKSRC}/../.tools/bin/pkg-config
+
 #	# fix lipng for lpng16
 	cd ${CONFIGURE_DIRS}/guicast && sed -i -e 's|-lz|-lz -lpng16|' Makefile
 	# remove thirdparty/src for more space
@@ -123,5 +125,3 @@ do-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../multimedia/libva/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-#.include "../../graphics/openexr/buildlink3.mk"
-#.include "../../graphics/freetype2/buildlink3.mk"
