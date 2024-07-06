@@ -51,6 +51,9 @@ lib/liblagom-locale.so.${PKGVERSION}
 lib/liblagom-markdown.so
 lib/liblagom-markdown.so.0
 lib/liblagom-markdown.so.${PKGVERSION}
+lib/liblagom-media.so
+lib/liblagom-media.so.0
+lib/liblagom-media.so.${PKGVERSION}
 lib/liblagom-protocol.so
 lib/liblagom-protocol.so.0
 lib/liblagom-protocol.so.${PKGVERSION}
@@ -84,9 +87,6 @@ lib/liblagom-unicode.so.${PKGVERSION}
 lib/liblagom-url.so
 lib/liblagom-url.so.0
 lib/liblagom-url.so.${PKGVERSION}
-lib/liblagom-video.so
-lib/liblagom-video.so.0
-lib/liblagom-video.so.${PKGVERSION}
 lib/liblagom-wasm.so
 lib/liblagom-wasm.so.0
 lib/liblagom-wasm.so.${PKGVERSION}

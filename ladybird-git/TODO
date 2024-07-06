@@ -1,3 +1,5 @@
+Needs skia package to build.
+
 Downloads files during build:
 -- Found Python3: /usr/pkg/bin/python3.11 (found version "3.11.8") found components: Interpreter
 -- Removing outdated /scratch/wip/ladybird-git/work/serenity/Ladybird/cmake-pkgsrc-build/Lagom/../caches/CLDR for version 44.1.0
