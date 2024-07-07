@@ -1,4 +1,15 @@
-devel/cargo-c: update to 0.10.0
+devel/cargo-c: update to 0.10.2
+
+0.10.2
+
+ - Avoid spurious rebuilds in certain specific configurations
+
+0.10.1
+
+ - Do not panic if debug information is absent on windows.
+ - Add some more documentation on the new defaults and how to revert back to the previous behavior.
+
+0.10.0
 
  - cargo 0.80
  - By default, if not cross-compiling, cargo-c now has the same heuristic to
