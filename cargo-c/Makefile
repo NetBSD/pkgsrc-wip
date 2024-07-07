@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.18 2024/05/07 07:18:55 wiz Exp $
 
-DISTNAME=	cargo-c-0.10.0
+DISTNAME=	cargo-c-0.10.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
