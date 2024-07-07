@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.4 2020/02/17 20:24:18 jperkin Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.23 2024/04/18 09:29:42 pin Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv[67]hf for NetBSD.

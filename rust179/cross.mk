@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.3 2020/07/16 09:35:37 jperkin Exp $
+# $NetBSD: cross.mk,v 1.11 2023/07/10 12:01:24 he Exp $
 
 # These settings may be used to cross-build rust.
 #

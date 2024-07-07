@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/07/08 14:46:14 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/10/25 05:50:43 pin Exp $
 
 BUILDLINK_TREE+=	rust
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.5 2021/06/09 13:42:30 adam Exp $
+$NetBSD: patch-src_tools_rust-installer_install-template.sh,v 1.14 2024/04/18 09:29:42 pin Exp $
 
 No logging to 'install.log'.
 Do not create 'uninstall.sh'.
