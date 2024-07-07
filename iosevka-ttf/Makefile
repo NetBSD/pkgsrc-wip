@@ -1,6 +1,6 @@
 # $NetBSD$
 
-PKGNAME=	iosevka-ttf-30.3.0
+PKGNAME=	iosevka-ttf-30.3.2
 DISTNAME=	SuperTTC-Iosevka-${PKGVERSION_NOREV}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=be5invis/}
