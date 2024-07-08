@@ -1,26 +1,21 @@
 # $NetBSD$
 
-GIT_REVISION=		8f033a12dcb8a93919734f98d2a6540ae2d05fa8
-PKGNAME=		eureka-devel-0
-GIT_REPO=		https://git.code.sf.net/p/eureka-editor/git
-#GIT_EXTRACTDIR=	eureka-124-source
-
-#DISTNAME=	eureka-124-source
-#PKGNAME=	${DISTNAME:S/eureka/eureka-devel/:S/-source//:S/-1/-1./}
+DISTNAME=	eureka-2.0.1
 CATEGORIES=	games
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eureka-editor/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ioan-chera/}
+GITHUB_PROJECT=	eureka-editor
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/eureka-editor/
+HOMEPAGE=	https://eureka-editor.sourceforge.net/
 COMMENT=	Doom/Heretic/Hexen map editor
 LICENSE=	gnu-gpl-v2
 
-# Makefile declares "-std=c++03"
-USE_LANGUAGES=	c++03
-USE_TOOLS+=	gmake
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c11
+USE_CXX_FEATURES+=	c++17
 
-#WRKSRC=	${WRKDIR}/eureka-1.24-source
-WRKSRC=		${WRKDIR}/git
+CMAKE_ARGS+=		-DENABLE_UNIT_TESTS=off
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
@@ -44,18 +39,13 @@ SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-# FLTK version 1.4 is supported too
-#.include "../../wip/fltk13/buildlink3.mk"
-.include "../../wip/fltk14-devel/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 
-.if empty(PKG_OPTIONS.fltk14:Mopengl) || empty(PKG_OPTIONS:Mopengl)
-SUBST_CLASSES+=		opengl
-SUBST_STAGE.opengl=	do-configure
-SUBST_MESSAGE.opengl=	Preparing Makefile ...
-SUBST_FILES.opengl=	Makefile
-SUBST_SED.opengl=	-e 's,\# CXXFLAGS += -DNO_OPENGL,CXXFLAGS += -DNO_OPENGL,'
-SUBST_SED.opengl+=	-e 's, --use-gl,,'
-.endif
+.include "../../devel/cmake/build.mk"
 
-.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
