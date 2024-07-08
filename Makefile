@@ -846,7 +846,6 @@ SUBDIR+=	etoile
 SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
 SUBDIR+=	etos
-SUBDIR+=	eureka
 SUBDIR+=	eureka-devel
 SUBDIR+=	eventd
 SUBDIR+=	ever-note-mode
