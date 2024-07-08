@@ -1,0 +1,5 @@
+The Eureka 1.x branch was written in C99 and C++03 (in line with FLTK 1.3).
+The Eureka 2.x branch has significantly higher system requirements.
+
+This package in wip is intended for users of older machines.
+Tested to work with FLTK 1.3.9 and without OpenGL.
