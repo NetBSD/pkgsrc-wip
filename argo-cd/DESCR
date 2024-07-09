@@ -1,0 +1,3 @@
+Argo CD is a declarative, GitOps continuous delivery tool for
+Kubernetes.  This package provides the CLI tool for interacting
+with Argo CD

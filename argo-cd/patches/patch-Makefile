@@ -1,0 +1,16 @@
+$NetBSD$
+
+Avoid appending to LDFLAGS because the default pkgsrc LDFLAGS is not understood
+by the Go linker
+
+--- Makefile.orig	2024-07-09 14:31:23.475972688 +0000
++++ Makefile
+@@ -143,7 +143,7 @@ DEV_IMAGE?=false
+ ARGOCD_GPG_ENABLED?=true
+ ARGOCD_E2E_APISERVER_PORT?=8080
+ 
+-override LDFLAGS += \
++LDFLAGS = \
+   -X ${PACKAGE}.version=${VERSION} \
+   -X ${PACKAGE}.buildDate=${BUILD_DATE} \
+   -X ${PACKAGE}.gitCommit=${GIT_COMMIT} \
