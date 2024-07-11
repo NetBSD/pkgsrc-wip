@@ -1,6 +1,44 @@
-multimedia/streamlink: update to streamlink-6.7.4
+multimedia/streamlink: update to streamlink-6.8.2
 
 Changelog:
+
+== streamlink 6.8.2 (2024-07-04)
+
+Patch release:
+
+- Updated plugins:
+  - douyin: new plugin
+  - huya: fixed stream URLs
+  - pluzz: fixed API URL, stream tokens and validation schemas
+  - twitch: added info log messages about ad break durations
+  - twitch: fixed clip URLs
+  - twitch: fixed discontinuity warning spam in certain circumstances
+  - vidio: fixed stream tokens, added metadata
+
+
+== streamlink 6.8.1 (2024-06-18)
+
+Patch release:
+
+- Fixed: failed HTTPAdapter tests on some OpenSSL configurations
+
+
+== streamlink 6.8.0 (2024-06-17)
+
+Release highlights:
+
+- Added: sha256 checksum to log message when side-loading plugins
+- Added: `SSLContextAdapter` to `streamlink.session.http`
+- Deprecated: [old re-exports in `streamlink.plugins` package]
+- Updated plugins:
+  - bilibili: fixed validation schema for offline channels
+  - chzzk: fixed channels without content
+  - cnbce: new plugin
+  - kick: new plugin
+  - tf1: added authentication via `--tf1-email` and `--tf1-password`
+  - tvp: fixed live streams
+  - welt: fixed live streams
+
 
 == streamlink 6.7.4 (2024-05-12)
 

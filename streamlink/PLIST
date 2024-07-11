@@ -157,6 +157,9 @@ ${PYSITELIB}/streamlink/plugins/clubbingtv.pyo
 ${PYSITELIB}/streamlink/plugins/cmmedia.py
 ${PYSITELIB}/streamlink/plugins/cmmedia.pyc
 ${PYSITELIB}/streamlink/plugins/cmmedia.pyo
+${PYSITELIB}/streamlink/plugins/cnbce.py
+${PYSITELIB}/streamlink/plugins/cnbce.pyc
+${PYSITELIB}/streamlink/plugins/cnbce.pyo
 ${PYSITELIB}/streamlink/plugins/cnews.py
 ${PYSITELIB}/streamlink/plugins/cnews.pyc
 ${PYSITELIB}/streamlink/plugins/cnews.pyo
@@ -187,6 +190,9 @@ ${PYSITELIB}/streamlink/plugins/dogan.pyo
 ${PYSITELIB}/streamlink/plugins/dogus.py
 ${PYSITELIB}/streamlink/plugins/dogus.pyc
 ${PYSITELIB}/streamlink/plugins/dogus.pyo
+${PYSITELIB}/streamlink/plugins/douyin.py
+${PYSITELIB}/streamlink/plugins/douyin.pyc
+${PYSITELIB}/streamlink/plugins/douyin.pyo
 ${PYSITELIB}/streamlink/plugins/drdk.py
 ${PYSITELIB}/streamlink/plugins/drdk.pyc
 ${PYSITELIB}/streamlink/plugins/drdk.pyo
@@ -244,6 +250,9 @@ ${PYSITELIB}/streamlink/plugins/indihometv.pyo
 ${PYSITELIB}/streamlink/plugins/invintus.py
 ${PYSITELIB}/streamlink/plugins/invintus.pyc
 ${PYSITELIB}/streamlink/plugins/invintus.pyo
+${PYSITELIB}/streamlink/plugins/kick.py
+${PYSITELIB}/streamlink/plugins/kick.pyc
+${PYSITELIB}/streamlink/plugins/kick.pyo
 ${PYSITELIB}/streamlink/plugins/kugou.py
 ${PYSITELIB}/streamlink/plugins/kugou.pyc
 ${PYSITELIB}/streamlink/plugins/kugou.pyo
