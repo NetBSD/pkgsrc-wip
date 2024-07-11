@@ -4943,7 +4943,6 @@ SUBDIR+=	rakudo-star
 SUBDIR+=	ranmacgen
 SUBDIR+=	rapidxml
 SUBDIR+=	raptor
-SUBDIR+=	raqm
 SUBDIR+=	rar4
 SUBDIR+=	raster3d
 SUBDIR+=	ratpoints

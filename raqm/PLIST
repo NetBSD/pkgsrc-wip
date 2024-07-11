@@ -1,7 +1,0 @@
-@comment $NetBSD$
-include/raqm-version.h
-include/raqm.h
-lib/libraqm.so
-lib/libraqm.so.0
-lib/libraqm.so.${PKGVERSION}
-lib/pkgconfig/raqm.pc
