@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (libraqm/raqm-0.7.1.tar.gz) = ebc0186d9328a31908601e40a8bfcfd07bd68df9
-SHA512 (libraqm/raqm-0.7.1.tar.gz) = cfd401d2f0c45fcae072898bbbf39c988ea3220fb2c135c73ae006c80b7fe038b7632c3105e1a87830dc9001b614a04cb6270def1f949ee8a6791c4e0d5b277e
-Size (libraqm/raqm-0.7.1.tar.gz) = 677743 bytes
+BLAKE2s (raqm-0.10.1.tar.xz) = 8d13d24f0104e009639eb306c195f03a1b3dba39d0452d6cf846add2460fbf71
+SHA512 (raqm-0.10.1.tar.xz) = 7110bb293bd3daa637826b951207de5f9375213cc81caabb834423d7c7267f302d227140ef27084fb02768b16830b0be5107da8f213d6cd5f93fad343e1dff5e
+Size (raqm-0.10.1.tar.xz) = 216576 bytes

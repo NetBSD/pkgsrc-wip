@@ -1,19 +1,7 @@
 @comment $NetBSD$
 include/raqm-version.h
 include/raqm.h
-lib/libraqm.la
+lib/libraqm.so
+lib/libraqm.so.0
+lib/libraqm.so.${PKGVERSION}
 lib/pkgconfig/raqm.pc
-share/gtk-doc/html/raqm/annotation-glossary.html
-share/gtk-doc/html/raqm/api-index-full.html
-share/gtk-doc/html/raqm/ch01.html
-share/gtk-doc/html/raqm/home.png
-share/gtk-doc/html/raqm/index.html
-share/gtk-doc/html/raqm/left-insensitive.png
-share/gtk-doc/html/raqm/left.png
-share/gtk-doc/html/raqm/raqm-Raqm.html
-share/gtk-doc/html/raqm/raqm.devhelp2
-share/gtk-doc/html/raqm/right-insensitive.png
-share/gtk-doc/html/raqm/right.png
-share/gtk-doc/html/raqm/style.css
-share/gtk-doc/html/raqm/up-insensitive.png
-share/gtk-doc/html/raqm/up.png
