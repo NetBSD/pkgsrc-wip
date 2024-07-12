@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/exobasic
+bin/exomizer
+share/exomizer/changelog.txt
+share/exomizer/exo20info.txt
+share/exomizer/exo31info.txt
+share/exomizer/exobasic10b2.txt
+@comment share/exomizer/sfxdecr
+@pkgdir share/doc/exomizer
