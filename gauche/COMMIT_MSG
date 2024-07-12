@@ -1,6 +1,399 @@
-lang/gauche: update to Gauche-0.9.14
+lang/gauche: update to Gauche-0.9.15
 
 Changelog:
+
+2024-04-23  Shiro Kawai  <shiro@acm.org>
+
+	* Release 0.9.15
+
+	* tools/tls/Makefile.in: Downgraded MbedTLS-internal version to
+	  3.5.2, since 3.6.0 has an issue on MinGW.  See
+	  https://github.com/shirok/Gauche/issues/1021
+	* tools/tls/process-config.sh: Need to tweak MinGW i686 build.
+
+	* lib/gauche/configure.scm (cf-call-with-cpp): Added.
+
+	* src/genconfig.in: Add --cpp and --cppflags for C preprocessor
+	  configration.  Useful for 'configure' script.
+
+2024-04-17  Shiro Kawai  <shiro@acm.org>
+
+	* src/libnum.scm (sin etc.): Let them always return inexact numbers.
+	  Previously we had (sin #e0) => #e0 etc., but it's not necessary,
+	  and diverging from real-sin etc. isn't desirable.
+	  (atan): Fix the special case when both args are zero.
+
+2024-04-16  Shiro Kawai  <shiro@acm.org>
+
+	* ext/tls/tls-mbed.c (Scm_Init_rfc__tls__mbed): Add missing
+	  psa_crypto_init() to fix TLS handshake error.
+	  https://github.com/shirok/Gauche/issues/1018
+
+	* tools/tls/Makefile.in (include/mbedtls): Bumped MbedTLS version
+	  to 3.6.0 to fetch with --with-tls=mbedtls-internal.
+
+2024-04-15  Shiro Kawai  <shiro@acm.org>
+
+	* src/system.c (Scm_SysExec),
+	  src/libsys.scm (%sys-escape-windows-command-line): When a BAT file
+	  is run via CreateProcess, Windoes uses different rules to parse
+	  the command line, causing a security risk.  We reject 'unsafe'
+	  characters in the command line arguments if BAT file is the program
+	  to run.  See CVE-2024-3566
+	  https://nvd.nist.gov/vuln/detail/CVE-2024-3566
+
+2024-04-10  Shiro Kawai  <shiro@acm.org>
+
+	* DIST, test/standalone.scm: Run build-standalone with the installed
+	  Gauche during DIST self-host-test.
+	  This can catch the issue like
+	  https://github.com/shirok/Gauche/issues/1013
+
+	* src/gauche.h: Do not include gauche/priv/configP.h, even if it is
+	  #ifdef'ed.  It is simply wrong to include a private header from a
+	  public header.  Instead, it should be included from each
+	  individual source files.
+	  Cf. https://github.com/shirok/Gauche/issues/1013
+
+2024-04-08  Shiro Kawai  <shiro@acm.org>
+
+	* ext/sxml/sxml-tools.scm.in (sxml:sxml->xml): Replace original proc
+	  to handle namespaces.
+
+2024-04-07  Shiro Kawai  <shiro@acm.org>
+
+	* src/libnum.scm (*, +): When used as unary operators on non-number
+	  object, delegate it to object-* or object-+.  For the practical
+	  purposes, they should return the argument as is; their existence
+	  is the assertion that such opeartion is valid.    We used to return
+	  the argument as is, but that may miss errors.  Just in case if
+	  existing code depends on the old behavior, we issue a warning
+	  and return the argument if there's no unary method defined on
+	  the argument's class.
+	  https://github.com/shirok/Gauche/issues/1012
+
+2024-04-05  Shiro Kawai  <shiro@acm.org>
+
+	* src/libbox.scm (unbox, unbox-value): Associate setters.  Now
+	  you can say (set! (unbox <box>) <value>) etc.
+
+	* lib/gauche/cgen/cise.scm (<cise-env>): Use box for decls. Since
+	  a new inner env may be created during recursion, we need an
+	  indirection so that decls pushed into the inner env won't be lost.
+
+2024-04-04  Shiro Kawai  <shiro@acm.org>
+
+	* src/string.c (string_putc): Buffer size too short.
+	  Fix from NIIBE Yutaka.
+
+	* src/gauche/priv/arith.h (SADDOV): Avoid undefined behavior of
+	  signed integer overflow.  Fix from NIIBE Yutaka.
+
+2024-04-03  Shiro Kawai  <shiro@acm.org>
+
+	* src/list.c: Ensure statically allocated ExtendedPairDescriptor
+	  is aligned in 8 byte boundary. It should be treated the same
+	  as ScmClass because of tagged pointer.
+	  Original fix from NIIBE Yutaka.
+
+	* lib/srfi/238.scm: Added.
+
+2024-04-01  Shiro Kawai  <shiro@acm.org>
+
+	* lib/srfi/64.scm: Changed integration to gauche.test.  Instead of
+	  having a specific runner to bridge to gauche.test, we now bridge
+	  regardless of the test runner.  This actually reveled some bugs
+	  that have been overlooked (because it was reported only by the
+	  srfi-64 test runner and not by gauche.test).
+	  https://github.com/shirok/Gauche/issues/1010
+
+	* test/include/srfi-194-zipf-test.scm: Loosened tolerance of
+	  chi^2 test a bit.  It is statistical tests and we need some
+	  more room of statistical deviation.
+
+	* lib/scheme/mapping.scm (%mapping-cmp),
+	  lib/scheme/mapping/hash.scm (%hashmap-cmp): When given mappings
+	  have different comparators, we should return #f, instead of
+	  "cannot compare" error.
+
+	* lib/srfi/235.scm (disjoin): Fix when a predicate created with
+	  disjoin is given no arguments.  It is actually not specified
+	  in SRFI text.  The test in srfi repo returns #t for it.
+
+2024-03-29  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/test/generative.scm: Removed in favor of upcoming srfi-252.
+
+2024-03-27  Shiro Kawai  <shiro@acm.org>
+
+	* src/core.c (Scm_Init): Explicitly start marker threads.  Recent
+	  bdwgc delays marker thread creation until the user creates the
+	  first thread, by default.  See the discussion at
+	  https://sourceforge.net/p/gauche/mailman/gauche-devel/thread/87r0fvd5bl.fsf%40karme.de/
+
+	* ext/sxml/sxml-tools.scm.in: Fix sxml:attr->html and sxml:sxml->html
+	  to handle HTML's diversion from XML properly.  Specifically,
+	  - Do not treat colons in attribute names as namespace prefix
+	  - Do not emit self-closing tag for non-void elements with empty
+	  content.
+	  https://github.com/shirok/Gauche-makiki/issues/11
+
+2024-03-25  Shiro Kawai  <shiro@acm.org>
+
+	* Bumped version number to 0.9.14-p1
+	  We're not quite ready for prerelease of next version (presumably
+	  1.0_pre1), but we have enough changes since the last release
+	  so we want to distinguish HEAD from the offical release.
+
+	* lib/data/random.scm (reals-between$): Fix overflow and precision loss
+	  https://github.com/shirok/Gauche/issues/1000
+
+2024-03-24  Shiro Kawai  <shiro@acm.org>
+
+	* ext/sxml/sxml-tools.scm.in (sxml:attr->xml, sxml:attr->html):
+	  Override to fix shortcomings of the original sxml that attribute
+	  values are not quoted.
+	  Related: https://github.com/shirok/Gauche-makiki/issues/11
+
+2024-03-23  Shiro Kawai  <shiro@acm.org>
+
+	* src/gauche-package.in (compile): Support --c++ option.  This tells
+	  precomp to generate *.cpp file.  Later, we may switch precomp mode
+	  to support C++ specific stuff.
+
+	* lib/gauche/cgen/unit.scm (<cgen-unit>): Add 'language slot;
+	  now it generate *.cpp if the language is 'c++.
+
+	* src/libtype.scm (<Assortment>): Replace <Singleton> and
+	  <Singleton-set> with <Assortment>.  With this word, we can
+	  use the same type for the union of singletons, eliminating
+	  the need to have separate 'set' type.
+	  Cf. https://github.com/shirok/Gauche/issues/906
+
+2024-03-22  Shiro Kawai  <shiro@acm.org>
+
+	* src/gauche.h, src/gauche/float.h: Ensure include complex.h outside
+	  of extern "C" linkage.  OSX clang doesn't like otherwise if
+	  we include gauche.h to C++ source.
+	  https://github.com/shirok/Gauche/1006
+
+2024-03-21  Shiro Kawai  <shiro@acm.org>
+
+	* src/gauche-package.in (compile),
+	  lib/gauche/package/compile.scm (gauche-package-compile):
+	  Add --srcdir option for out-of-tree compilation.
+
+	* libsrc/file/util.scm (build-path): Allow #f in the path components
+	  (interpreted as ".") for the convenience.
+
+2024-03-20  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/cgen/stub.scm (.include): Split .include in stub toplevel
+	  and CiSE .include.  Stub .include is emitted to decl section,
+	  while CiSE .include is emitted in place (body section).
+	  This may be potentially confusing, and good documentation is desired.
+	  See https://github.com/shirok/Gauche/issues/1003 for the background
+	  of this change.
+
+2024-03-19  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/cgen/cise.scm (cise-omit-source-line): Change
+	  the parameter cise-emit-source-line to cise-omit-source-line,
+	  flipping the logic.  This aligns better with the options
+	  (e.g. --no-line of `gauche-package compile`).
+
+	* lib/data/range.scm (%appended-range-index): Bug in binary search.
+	  Patch from @gengar https://github.com/shirok/Gauche/pull/1004
+
+2024-03-18  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/cgen/precomp.scm: Take the default value of
+	  omit-line-directives keyword arg from the parameter
+	  cise-emit-source-info, so that the parameter settings by the
+	  the higher layer (e.g. 'gauche-package compile') is reflected.
+
+2024-03-16  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/listener.scm (listener-read-handler): Fixed a bug revealed
+	  by the last fix.  string-incomplete->complete is used in a
+	  meaningless way.
+
+	* src/string.c (Scm_StringRefCursor): Fix a bug that leaked
+	  #<unbound> to the Scheme world when an incomplete string is given.
+	  It could be exhibited by this:
+	    (let1 z #**"\xe1;"
+	      (string-ref z (string-index->cursor z 0)))
+	  Now it properly raises an error.
+
+2024-03-15  Shiro Kawai  <shiro@acm.org>
+
+	* lib/srfi/215.scm: Supported.  Contribution from Antero Mejr.
+
+2024-03-12  Shiro Kawai  <shiro@acm.org>
+
+	* lib/data/random.scm (reals-power-law$): Added.
+
+2024-03-11  Shiro Kawai  <shiro@acm.org>
+
+	* lib/data/random.scm (finite-flonums$): Added.
+
+2024-03-10  Shiro Kawai  <shiro@acm.org>
+
+	* doc/Makefile.in: Use install-info if it's available, and DESTDIR
+	  is not used. https://github.com/shirok/Gauche/issues/988
+
+2024-03-09  Shiro Kawai  <shiro@acm.org>
+
+	* examples/mqueue-cpp: Update to use modern way (no stub file).
+
+	* ext/windows: Replace *.stub for *.scm.
+
+2024-03-08  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/cgen/cise.scm: Handle C++ new and delete as operators.
+	  (cise-render-identifier): Allow C++ namespace qualified identifiers.
+
+2024-03-05  Shiro Kawai  <shiro@acm.org>
+
+	* src/libnum.scm (greatest-positive-flonum): Add.  Also renamed
+	  flonum-min-normalized and flonum-min-denormalized to
+	  least-positive-normalized-flonum and least-positive-flonum.
+	  They are consistent with {greatest|least}-fixnum.  We added
+	  'positive' for clarity.  We dropped 'denormalized', since
+	  the platform may not support denormalized flonums, and the
+	  procedure returns normalized flonum in that case.
+
+2024-03-04  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/package/compile.scm: Revert the idea of *.scm.c for
+	  generated C files.  It messes up Makefile inference rules
+	  (make thinks foo.scm should be regenerated if foo.scm.o is newer).
+	  For the name conflicts, we can name the stub definition file as
+	  foolib.scm, much like we've done with foolib.stub.  Now we can
+	  do so because we split module definition file from stub definition
+	  file.
+
+	* lib/gauche/cgen/precomp.scm: Add support of in-module form.
+	  For now, this form is valid only for precompilation; normal
+	  compiler ignores it with warning.  It allows to switch modules
+	  during precompilation like select-module, but the module
+	  doesn't need to exist at the moment (it is created implicitly then).
+	  It suppors precompiling sources with stubs separately from
+	  the module definintion file.
+	  Cf. https://github.com/shirok/Gauche/issues/993
+
+2024-03-02  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/package/compile.scm:
+	  When 'gauche-package compile' receives *.scm file, we create
+	  intermediate C file as *.scm.c, instead of *.c, for a module
+	  may already have *.c with the same name.
+
+2024-03-01  Shiro Kawai  <shiro@acm.org>
+
+	* examples/spigot: Update for modern way---no *.stub file, and *.scm
+	  file to be precompiled.
+
+	* lib/gauche/package/compile.scm (gauche-package-compile): Make sure
+	  to pass DSO filename when '*.scm' is compiled with
+	  'gauche-package compile'.  Without this fix, generated '*.sci'
+	  file can't have a proper dynamic-load call.
+
+2024-02-29  Shiro Kawai  <shiro@acm.org>
+
+	* src/compile-1.scm, src/compile-5.scm, src/libcode.scm, src/libtype.scm:
+	  Carry procedure type of closures in $lambda-meta, instead of
+	  pair attribute of the source form---using pair attr was a kludge.
+	  The type is carried as <descriptive-type>.
+	  It is eventually stored in <compiled-code>#signature-info,
+	  and retrieved by compute-procedure-type (which is called from
+	  procedure-type).
+	  This allows argument type information of closures to be reflected
+	  to its procedure-type.
+
+2024-02-27  Shiro Kawai  <shiro@acm.org>
+
+	* src/libtype.scm (type?): Added.
+
+2024-02-25  Shiro Kawai  <shiro@acm.org>
+
+	* lib/lang/asm/regset.scm: Added.
+
+2024-02-20  Shiro Kawai  <shiro@acm.org>
+
+	* src/vm.c, src/libeval.scm: Remove Scm_VMInsnOffsets and
+	  %vm-get-insn-offsets.  Add Scm_VMInsnAddress and %vm-get-insn-address.
+	  This is an undocumented API change.
+
+2024-02-18  Shiro Kawai  <shiro@acm.org>
+
+	* src/libexc.scm (print-additional-error-heading): Split auxiliary
+	  info reporting from print-default-error-heading, so that it can be
+	  used from other error reporters.
+	* src/main.c (error_exit): When we exit during with -l or -e option,
+	  use print-additional-error-heading to print additional information
+	  (but not a stack trace).
+
+2024-02-14  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/vm/insn-core.scm, src/code.c: Add 'obj+native'
+	  instruction type, for JIT support.
+
+2024-02-13  Shiro Kawai  <shiro@acm.org>
+
+	* src/code.c, src/vminsn.scm: Change operand type 'addr' to 'label',
+	  to avoid confusion with the oncoming enhancement.
+	  (This is an API change, though it hasn't been documented).
+
+2024-02-12  Shiro Kawai  <shiro@acm.org>
+
+	* lib/gauche/cgen/cise.scm (asm): Add asm cise macro to generate
+	  gcc inline assembly.
+
+2024-02-10  Shiro Kawai  <shiro@acm.org>
+
+	* lib/srfi/247.scm: Add SRFI-247
+
+2024-02-07  Shiro Kawai  <shiro@acm.org>
+
+	* libsrc/gauche/collection.scm (size-of): Missing size-of method
+	  defintion specialized for hashtables and treemaps, causing
+	  size-of on these objects O(n).
+	  Cf. https://github.com/shirok/Gauche/issues/987
+
+2024-02-04  Shiro Kawai  <shiro@acm.org>
+
+	* lib/rfc/uri.scm (uri-decompose-query, uri-compose-query),
+	  lib/rfc/http.scm (http-compose-query),
+	  lib/www/cgi.scm (cgi-parse-parameters): Provide basic url query
+	  utilities in rfc.uri, and define existing utils on top of them.
+
+	* src/liblist.scm: Change optional argument order of new alist-*
+	  procs.  It is easier to have key= argument first, to handle
+	  variations.
+
+2024-02-03  Shiro Kawai  <shiro@acm.org>
+
+	* src/liblist.scm (alist-merge): Added.
+	  (alist-ref, alist-key, alist-adjoin, alist-update-in): Renamed
+	  assoc-ref, rassoc-ref, assoc-adjoin, and assoc-update-in.
+	  Old names are kept for the backward compatibility.
+	  https://github.com/shirok/Gauche/issues/985
+
+2024-02-02  Shiro Kawai  <shiro@acm.org>
+
+	* libsrc/gauche/collection.scm (group-collection->alist): Added.
+
+2024-01-31  Shiro Kawai  <shiro@acm.org>
+
+	* libsrc/rfc/822.scm (rfc822-header-ref*, rfc822-header-put): Added.
+
+2024-01-29  Shiro Kawai  <shiro@acm.org>
+
+	* src/gauche-package.in: Add 'populate' subcommand.
+
+	* lib/text/multicolumn.scm (layout-multicolumn): Fix the edge case
+	  when the string list is empty.
 
 2024-01-25  Shiro Kawai  <shiro@acm.org>
 
@@ -2561,20 +2954,3 @@ Changelog:
 	  gauche.process.
 	* src/main.c: Process version info output after -ftest path setup,
 	  for we need to be able to load gauche.version-alist.
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch master
-# Your branch is ahead of 'origin/master' by 1 commit.
-#   (use "git push" to publish your local commits)
-#
-# Changes to be committed:
-#	modified:   Makefile
-#	modified:   PLIST
-#	modified:   distinfo
-#	modified:   patches/patch-aa
-#	modified:   patches/patch-af
-#	new file:   patches/patch-doc_Makefile.in
-#	deleted:    patches/patch-ext_tls_axTLS_ssl_os__port.h
-#	new file:   patches/patch-src_Makefile.in
-#

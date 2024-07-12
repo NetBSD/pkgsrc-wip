@@ -39,7 +39,7 @@ lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-package
 lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gosh
 lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libgauche-0.98.so
 lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libgauche-0.98.so.0
-lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libgauche-0.98.so.0.14
+lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libgauche-0.98.so.0.15
 lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libgauche-static-0.98.a
 lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/math--mt-random.so
 lib/gauche-0.98/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/os--windows.so
@@ -124,7 +124,7 @@ lib/gauche-0.98/${PKGVERSION}/include/gc_typed.h
 lib/gauche-0.98/${PKGVERSION}/include/gc_version.h
 lib/libgauche-0.98.so
 lib/libgauche-0.98.so.0
-lib/libgauche-0.98.so.0.14
+lib/libgauche-0.98.so.0.15
 lib/libgauche-static-0.98.a
 man/man1/gauche-cesconv.1
 man/man1/gauche-config.1
@@ -185,7 +185,6 @@ share/gauche-0.98/${PKGVERSION}/lib/gauche/array.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/base.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/bitvector.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/cgen.scm
-share/gauche-0.98/${PKGVERSION}/lib/gauche/cgen/bbb.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/cgen/cbe.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/cgen/cise.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/cgen/literal.scm
@@ -268,7 +267,6 @@ share/gauche-0.98/${PKGVERSION}/lib/gauche/sysutil.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/termios.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/test.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/test/diff.scm
-share/gauche-0.98/${PKGVERSION}/lib/gauche/test/generative.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/test/include.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/test/script.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/time.scm
@@ -294,6 +292,7 @@ share/gauche-0.98/${PKGVERSION}/lib/gauche/validator.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/vecutil.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/version-alist.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/version.scm
+share/gauche-0.98/${PKGVERSION}/lib/gauche/vm/bbb.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/vm/debug-info.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/vm/debugger.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/vm/insn-core.scm
@@ -302,6 +301,7 @@ share/gauche-0.98/${PKGVERSION}/lib/gauche/vm/profiler.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/vm/register-machine.scm
 share/gauche-0.98/${PKGVERSION}/lib/gauche/vport.scm
 share/gauche-0.98/${PKGVERSION}/lib/genstub
+share/gauche-0.98/${PKGVERSION}/lib/lang/asm/regset.scm
 share/gauche-0.98/${PKGVERSION}/lib/lang/asm/x86_64.scm
 share/gauche-0.98/${PKGVERSION}/lib/lang/c/lexer.scm
 share/gauche-0.98/${PKGVERSION}/lib/lang/c/parameter.scm
@@ -483,6 +483,7 @@ share/gauche-0.98/${PKGVERSION}/lib/srfi-2.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-207.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-209.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-210.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi-215.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-216.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-217.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-219.scm
@@ -497,8 +498,10 @@ share/gauche-0.98/${PKGVERSION}/lib/srfi-23.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-232.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-235.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-236.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi-238.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-239.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-244.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi-247.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-25.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-26.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi-27.scm
@@ -624,6 +627,7 @@ share/gauche-0.98/${PKGVERSION}/lib/srfi/207.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/209.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/210.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/214.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi/215.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/216.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/217.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/219.scm
@@ -653,8 +657,11 @@ share/gauche-0.98/${PKGVERSION}/lib/srfi/228.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/229.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/232.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/235.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi/238.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/239.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi/247.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/25.scm
+share/gauche-0.98/${PKGVERSION}/lib/srfi/252.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/27.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/29.scm
 share/gauche-0.98/${PKGVERSION}/lib/srfi/29/bundle.scm
@@ -750,7 +757,7 @@ share/gauche-0.98/${PKGVERSION}/package-templates/configure
 share/gauche-0.98/${PKGVERSION}/package-templates/configure.ac
 share/gauche-0.98/${PKGVERSION}/package-templates/extension.c
 share/gauche-0.98/${PKGVERSION}/package-templates/extension.h
-share/gauche-0.98/${PKGVERSION}/package-templates/extensionlib.stub
+share/gauche-0.98/${PKGVERSION}/package-templates/extensionlib.scm
 share/gauche-0.98/${PKGVERSION}/package-templates/module-pure-scheme.scm
 share/gauche-0.98/${PKGVERSION}/package-templates/module.scm
 share/gauche-0.98/${PKGVERSION}/package-templates/package.scm

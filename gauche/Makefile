@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.76 2021/07/24 14:50:42 yhardy Exp $
 #
 
-DISTNAME=	Gauche-0.9.14
+DISTNAME=	Gauche-0.9.15
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GITHUB:=shirok/Gauche/releases/download/release0_9_14/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=shirok/Gauche/releases/download/release0_9_15/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	enami@NetBSD.org
