@@ -18,18 +18,19 @@ DEPENDS+=		slib-[0-9]*:../../devel/slib
 MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has several configure programs
-CONFIGURE_ARGS+=	--with-slib=${LOCALBASE}/share/slib
+CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
 CONFIGURE_ARGS+=	--enable-threads=pthreads
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 BUILD_MAKE_FLAGS+=	XLIBS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 
-USE_LANGUAGES=	c c99
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake gzip makeinfo
-TEST_TARGET=	check
-INFO_FILES=	yes
-TEXINFO_REQD+=	5.0
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake gzip makeinfo
+TEST_TARGET=		check
+INFO_FILES=		yes
+TEXINFO_REQD+=		5.0
 
 # refer %install in ${WRKSRC}/Gauche.spec
 INSTALL_TARGET=	install-pkg install-doc
