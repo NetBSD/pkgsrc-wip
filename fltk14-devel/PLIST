@@ -74,6 +74,7 @@ include/FL/Fl_Nice_Slider.H
 include/FL/Fl_Object.H
 include/FL/Fl_Output.H
 include/FL/Fl_Overlay_Window.H
+include/FL/Fl_PDF_File_Surface.H
 include/FL/Fl_PNG_Image.H
 include/FL/Fl_PNM_Image.H
 include/FL/Fl_Pack.H
