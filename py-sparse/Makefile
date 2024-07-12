@@ -13,11 +13,12 @@ LICENSE=	2-clause-bsd
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-numba>=0.51.2:../../math/py-numba
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.21:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.2:../../math/py-scipy
 
-BUILDLINK_API_DEPENDS.py-numpy+=     ${PYPKGPREFIX}-numpy>=1.17
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
