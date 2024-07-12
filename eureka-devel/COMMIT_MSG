@@ -1,21 +1,12 @@
-games/eureka: Update to 2.0.1
+games/eureka: Update to 2.0.2
 
-# CHANGES IN Eureka 2.0.1
+# CHANGES IN Eureka 2.0.2
 
-(Since version 2.0.0)
-
-## View
-
-* Corrected the copyright year for my contributions.
+(Since version 2.0.1)
 
 ## Bug fixes
 
-* Fixed a crash happening when selecting neighbor sectors while no-sided
-  linedefs are in the map.
-* Fixed a regression from 1.27b where selected 1-sided lines in 3D view
-  wouldn't change texture unless the side panel texture thumbnail also
-  gets selected.
-
-## Development
-
-* Fixed some compilation errors on Linux.
+* Fixed a crash happening when deleting all things from the map.
+* Fixed a crash happening when deleting a group of linedefs.
+* Fixed a bug where the linedef splitting hint wouldn't show up when
+  in FREE grid mode (introduced by 2.0.0).

@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	opengl xdg-utils
 
 # Add missing include path for FLTK (eureka does not use fltk-config)
 .if empty(PKG_OPTIONS.fltk14-devel:Mcairo)
-CXXFLAGS=-I"${PREFIX}/include/cairo"
+CXXFLAGS=	-I"${PREFIX}/include/cairo"
 .endif
 
 # opengl: Use OpenGL for rendering
