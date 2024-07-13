@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (verilator-5.026.tar.gz) = 643a77169a24748997eb8441051beb0da22c9f1336bf2707a7e4e1000cdc7bc1
+SHA512 (verilator-5.026.tar.gz) = 95660da60c6f5fac9ce3c7298edfc5ee71beeb2aafe2908b31c83802a22bc4529389d687c3a51eb9370cc6bd1ae9e74e11cdab0de69fa278b1da0d664a393a68
+Size (verilator-5.026.tar.gz) = 3931397 bytes

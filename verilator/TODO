@@ -1,0 +1,9 @@
+Fix these
+
+=> Checking for non-existent script interpreters in verilator-5.026
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/tmp/wip/verilator/work/.destdir/usr/pkg/bin/verilator_ccache_report" is not allowed.
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/tmp/wip/verilator/work/.destdir/usr/pkg/bin/verilator_difftree" is not allowed.
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/tmp/wip/verilator/work/.destdir/usr/pkg/bin/verilator_gantt" is not allowed.
+ERROR: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/tmp/wip/verilator/work/.destdir/usr/pkg/bin/verilator_profcfunc" is not allowed.
+*** Error code 1
+
