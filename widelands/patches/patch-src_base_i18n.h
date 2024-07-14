@@ -2,8 +2,6 @@ $NetBSD$
 
 Define gettext_noop if missing.
 
-Use C linking for the *gettext wrappers.
-
 --- src/base/i18n.h.orig	2024-03-28 10:12:05.000000000 +0000
 +++ src/base/i18n.h
 @@ -52,6 +52,10 @@

@@ -4,15 +4,6 @@ Support NetBSD.
 
 --- CMakeLists.txt.orig	2024-03-28 10:12:05.000000000 +0000
 +++ CMakeLists.txt
-@@ -94,7 +94,7 @@ message(STATUS "Picking up default CXX f
-     - CMAKE_CXX_FLAGS_RELEASE='${CMAKE_CXX_FLAGS_RELEASE}'
-     - CMAKE_CXX_FLAGS_DEBUG='${CMAKE_CXX_FLAGS_DEBUG}'")
- 
--SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
-+SET (CMAKE_MODULE_PATH "/home/tmp/pkgwrk/games/widelands/work/.buildlink/cmake-Modules" "/home/tmp/pkgwrk/games/widelands/work/.buildlink/cmake-Modules" "/home/tmp/pkgwrk/games/widelands/work/.buildlink/cmake-Modules" "/home/tmp/pkgwrk/games/widelands/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
- 
- if (WIN32)
-   link_libraries(wsock32 ws2_32 bcrypt)
 @@ -146,6 +146,7 @@ add_definitions(-DASIO_STANDALONE)
  
  if (APPLE OR WIN32 OR
