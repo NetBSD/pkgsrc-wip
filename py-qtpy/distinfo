@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (QtPy-2.2.0.tar.gz) = 357b8e1139c686bc42a14d12303110d8579ad569b826b5212e1e5dba14bad666
-SHA512 (QtPy-2.2.0.tar.gz) = b0e7696c7861942c16749dc5f5ccbfd038f7fc2b1defbf372885223c4100805cada9bbb2f5bdae1f1c642b52d480d6e0048e221d9efd3f3103da54e6e2bfd0ff
-Size (QtPy-2.2.0.tar.gz) = 51573 bytes
+BLAKE2s (QtPy-2.4.1.tar.gz) = 77cfbec8e3edac07092950fa2a21b87e63048fdc367526c63c2a3b5e926eb554
+SHA512 (QtPy-2.4.1.tar.gz) = cb7c65cfec5aba9bdc4942b95108ac0300eac5ca8f0c984e8ea789b77fded3a1817f591d43bc45e9aa4feb3cb3da64c0d42ae67f12121a807cf7c247e7612e7d
+Size (QtPy-2.4.1.tar.gz) = 65492 bytes
