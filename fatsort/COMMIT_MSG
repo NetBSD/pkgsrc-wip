@@ -1,0 +1,5 @@
+sysutils/fatsort: Import fatsort-1.6.5.640 from wip
+
+Sorts file directory entires on FAT12, FAT16, FAT32 and exFAT partitions.
+Useful for e.g. MP3 players and retro gaming flashcarts. Supports long
+filenames.
