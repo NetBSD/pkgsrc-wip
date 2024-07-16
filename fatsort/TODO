@@ -1,0 +1,9 @@
+ - Test on NetBSD
+ - Test on OpenBSD
+ - Test on musl Linux
+ - Test on Illumos
+ - Test on i386
+ - Test on arm
+ - Test on CentOS 7
+ - Upstream man page permissions fix
+ - Upstream SBINDIR respecting PREFIX
