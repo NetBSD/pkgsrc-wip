@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.31 2024/04/06 08:07:13 wiz Exp $
 
-DISTNAME=	qterminal-2.0.0
+DISTNAME=	qterminal-2.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,6 +22,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../wip/qtermwidget/buildlink3.mk"
+.include "../../wip/layer-shell-qt6/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,7 @@
-x11/qtermwidget: update to 2.0.0
+x11/qtermwidget: update to 2.0.1
+
+qtermwidget-2.0.1 / 2024-06-27
+ - Fixed visual artifacts due to a mistake about conversion to std::wstring in Qt6 port.
 
 qtermwidget-2.0.0 (2024-05-17)
  - Ported to Qt6.

@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.12 2023/11/10 17:02:28 gutteridge Exp $
 
-BLAKE2s (qtermwidget-2.0.0.tar.xz) = a8612fc98d1433fdf02491793f184ec8404cd2656080b0f75ea3d9cccbe1399e
-SHA512 (qtermwidget-2.0.0.tar.xz) = 4461737b92a113c3b6a48bc74a1c58296dc52659e8ffec13bf848aea3098c9b05685daea5cd3bf21925ebb28e32524c0accde964451b38c5d0d5b209db046b0b
-Size (qtermwidget-2.0.0.tar.xz) = 191532 bytes
+BLAKE2s (qtermwidget-2.0.1.tar.xz) = fb3970ddf2c99232adfb8e2d81991fea770e2861072a9d62c3f150367f97b692
+SHA512 (qtermwidget-2.0.1.tar.xz) = ba9bc9203428e54137ed1e5865bf9260e1d64bedda8e766a92fe16277179fdc83a95c5b6df42ba3ab82babb00543e50ec48faf26668f7af26716ac98ab6da62e
+Size (qtermwidget-2.0.1.tar.xz) = 191548 bytes

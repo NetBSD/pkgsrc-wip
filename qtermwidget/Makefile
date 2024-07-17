@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.31 2024/04/06 08:07:14 wiz Exp $
 
-DISTNAME=	qtermwidget-2.0.0
+DISTNAME=	qtermwidget-2.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
