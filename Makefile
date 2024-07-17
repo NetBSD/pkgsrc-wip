@@ -5574,7 +5574,6 @@ SUBDIR+=	torrentzip
 SUBDIR+=	torsocks-git
 SUBDIR+=	tortunnel
 SUBDIR+=	toxic-git
-SUBDIR+=	tp-note
 SUBDIR+=	tpdne-dl
 SUBDIR+=	tpico2
 SUBDIR+=	tpico2-experimental
