@@ -2608,7 +2608,6 @@ SUBDIR+=	odin
 SUBDIR+=	offset
 SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
-SUBDIR+=	oh-my-posh
 SUBDIR+=	okteta
 SUBDIR+=	olsrd
 SUBDIR+=	omega

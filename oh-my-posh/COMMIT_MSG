@@ -1,4 +1,0 @@
-shells/oh-my-posh: Add version 21.16.2
-
-Bug Fixes
- - windows: create unique installer (fa879a0)
