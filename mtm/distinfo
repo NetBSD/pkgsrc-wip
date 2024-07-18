@@ -3,5 +3,5 @@ $NetBSD$
 BLAKE2s (mtm-1.2.1.tar.gz) = 916de695bc4f3a810e1492b01f09ff5ed7e8c7746c6e18cc3beb255afad53c6d
 SHA512 (mtm-1.2.1.tar.gz) = 74e5230c6ea65c87d580516b7b62edeb4f273c1a36662bac84af41ca47e4ce252e393132dfe8c700441d6b74c19d6d560fbc503815c12f9d1cbdda2e19a9a9e2
 Size (mtm-1.2.1.tar.gz) = 383409 bytes
-SHA1 (patch-Makefile) = 90bd29f585dcc29c78adef0966bbfc8436a5f6a5
-SHA1 (patch-config.def.h) = 5a07f016163fd8e674eb4602cb51af6e1a068548
+SHA1 (patch-Makefile) = ea0867132594ee7a3b7d32ba5efb2a7fe07c0ec0
+SHA1 (patch-config.def.h) = 2487e1981733a7bc555e4a2808c24960c1829fb6

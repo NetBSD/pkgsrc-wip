@@ -1,6 +1,6 @@
 $NetBSD$
 
-Use LDFLAGS.
+Use LDFLAGS. https://github.com/deadpixi/mtm/pull/35
 
 --- Makefile.orig	2024-07-03 04:33:05.333529850 +0000
 +++ Makefile
