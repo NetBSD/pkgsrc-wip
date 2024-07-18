@@ -3,10 +3,12 @@
 GIT_REPO=	https://github.com/smaeul/u-boot
 GIT_BRANCH=	d1-wip
 
-UBOOT_TARGET=	mangopi-mq-pro
-UBOOT_VERSION=	2024.01
-UBOOT_CONFIG=	mangopi_mq_pro_defconfig
-UBOOT_BIN=	u-boot-sunxi-with-spl.bin
+UBOOT_TARGET=		mangopi-mq-pro
+UBOOT_VERSION=		2024.01
+UBOOT_CONFIG=		mangopi_mq_pro_defconfig
+UBOOT_BIN=		u-boot-sunxi-with-spl.bin
+
+UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 MAKE_ENV+=	OPENSBI=${LOCALBASE}/share/opensbi/sun20i-d1/fw_dynamic.bin
 
