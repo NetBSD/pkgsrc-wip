@@ -1,0 +1,51 @@
+c++      -O2 -c -O2 -g -fstack-clash-protection -I/usr/include  -DNDEBUG -D_REENTRANT -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -fPIC   -o _o/Update.o  ../../UI/Common/Update.cpp
+../../UI/Common/Update.cpp: In function 'LONG Compress(const CUpdateOptions&, bool, CCodecs*, const NUpdateArchive::CActionSet&, const CArc*, CArchivePath&, const CObjectVector<CArcItem>&, Byte*, const CDirItems&, const CDirItem*, CTempFiles&, CUpdateErrorInfo&, IUpdateCallbackUI*, CFinishArchiveStat&)':
+../../UI/Common/Update.cpp:900:65: error: 'AString& AString::operator=(const wchar_t*)' is private within this context
+  900 |         updateCallbackSpec->VolName = archivePath.Prefix + name.bstrVal;
+      |                                                                 ^~~~~~~
+In file included from ../../UI/Common/../../../Common/Wildcard.h:6,
+                 from ../../UI/Common/Update.h:6,
+                 from ../../UI/Common/Update.cpp:7:
+../../UI/Common/../../../Common/MyString.h:244:8: note: declared private here
+  244 |   cls &operator=(const t *); \
+      |        ^~~~~~~~
+../../UI/Common/../../../Common/MyString.h:254:38: note: in expansion of macro 'FORBID_STRING_OPS'
+  254 | #define FORBID_STRING_OPS_AString(t) FORBID_STRING_OPS(AString, t)
+      |                                      ^~~~~~~~~~~~~~~~~
+../../UI/Common/../../../Common/MyString.h:292:3: note: in expansion of macro 'FORBID_STRING_OPS_AString'
+  292 |   FORBID_STRING_OPS_AString(wchar_t)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../UI/Common/Update.cpp:902:72: error: 'AString& AString::operator=(const wchar_t*)' is private within this context
+  902 |         updateCallbackSpec->VolName = archivePath.Prefix + archivePath.Name;
+      |                                                                        ^~~~
+../../UI/Common/../../../Common/MyString.h:244:8: note: declared private here
+  244 |   cls &operator=(const t *); \
+      |        ^~~~~~~~
+../../UI/Common/../../../Common/MyString.h:254:38: note: in expansion of macro 'FORBID_STRING_OPS'
+  254 | #define FORBID_STRING_OPS_AString(t) FORBID_STRING_OPS(AString, t)
+      |                                      ^~~~~~~~~~~~~~~~~
+../../UI/Common/../../../Common/MyString.h:292:3: note: in expansion of macro 'FORBID_STRING_OPS_AString'
+  292 |   FORBID_STRING_OPS_AString(wchar_t)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../UI/Common/Update.cpp:905:39: error: 'FString' {aka 'class AString'} has no member named 'SetFromBstr'; did you mean 'SetFrom'?
+  905 |         updateCallbackSpec->VolPrefix.SetFromBstr(prefix.bstrVal);
+      |                                       ^~~~~~~~~~~
+      |                                       SetFrom
+../../UI/Common/Update.cpp:907:40: error: 'FString' {aka 'class AString'} has no member named 'SetFromBstr'; did you mean 'SetFrom'?
+  907 |         updateCallbackSpec->VolPostfix.SetFromBstr(postfix.bstrVal);
+      |                                        ^~~~~~~~~~~
+      |                                        SetFrom
+../../UI/Common/Update.cpp:909:65: error: 'AString& AString::operator=(const wchar_t*)' is private within this context
+  909 |         updateCallbackSpec->VolExt = UString('.') + archivePath.VolExtension;
+      |                                                                 ^~~~~~~~~~~~
+../../UI/Common/../../../Common/MyString.h:244:8: note: declared private here
+  244 |   cls &operator=(const t *); \
+      |        ^~~~~~~~
+../../UI/Common/../../../Common/MyString.h:254:38: note: in expansion of macro 'FORBID_STRING_OPS'
+  254 | #define FORBID_STRING_OPS_AString(t) FORBID_STRING_OPS(AString, t)
+      |                                      ^~~~~~~~~~~~~~~~~
+../../UI/Common/../../../Common/MyString.h:292:3: note: in expansion of macro 'FORBID_STRING_OPS_AString'
+  292 |   FORBID_STRING_OPS_AString(wchar_t)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+gmake: *** [../../7zip_gcc.mak:827: _o/Update.o] Error 1
+*** Error code 2

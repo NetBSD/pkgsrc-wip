@@ -1,0 +1,11 @@
+$NetBSD$
+
+BLAKE2s (7-Zip-zstd/v22.01-v1.5.5-R3.tar.gz) = b7491ad66292a9308770df785f90ad973ac794e34cf3c25bb9dfd2abed7c7588
+SHA512 (7-Zip-zstd/v22.01-v1.5.5-R3.tar.gz) = 6a3bc56ea8db2e91afbe26a4a2efb62ed081a9fc0b98736c8f2951ba238289862c0a096621758cd792e705be2693b3b9307b2028c613d9931b1e4b9f0ec64bec
+Size (7-Zip-zstd/v22.01-v1.5.5-R3.tar.gz) = 4046736 bytes
+SHA1 (patch-CPP_7zip_Common_CWrappers.h) = 7a6d513f542cc0abaf9c47fa5a5263f3addabc5d
+SHA1 (patch-CPP_7zip_Common_FileStreams.cpp) = 97c5be07c6d055dd40e3e509d16c1b8776b85380
+SHA1 (patch-CPP_7zip_UI_Common_UpdateCallback.cpp) = 75e823100048f8b02606bcbe25908068cb5b3793
+SHA1 (patch-CPP_Common_CommandLineParser.cpp) = de1812bd90bf75698c1e6fff499be33a638fafc8
+SHA1 (patch-CPP_Windows_System.cpp) = c0036f2a4d8ca7e2e2f2eb16b286024e91d674b7
+SHA1 (patch-CPP_Windows_SystemInfo.cpp) = 807658c673cd0a4b31c186aac7d25b0f4afdac01
