@@ -1,0 +1,17 @@
+ibus-tutcode is an implementation of the TUT-Code/T-Code/Try-Code input
+method on the IBus input method framework.  Since TUT-Code is quite
+different from other Japanese input methods, if you haven't heard of
+it, please consult the following Web pages before complaining about
+the differences:
+
+http://ja.wikipedia.org/wiki/%E6%BC%A2%E5%AD%97%E7%9B%B4%E6%8E%A5%E5%85%A5%E5%8A%9B
+http://www.crew.sfc.keio.ac.jp/~chk/intro.html
+http://openlab.jp/tcode/
+
+* How to install
+
+$ ./configure --prefix=/usr
+$ make
+$ sudo make install
+
+...
