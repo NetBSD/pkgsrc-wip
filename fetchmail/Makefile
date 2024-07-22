@@ -1,14 +1,14 @@
 # $NetBSD$
 
-DISTNAME=	fetchmail-7.0alpha10
+DISTNAME=	fetchmail-7.0alpha11
 CATEGORIES=	mail
-MASTER_SITES=	https://gitlab.com/fetchmail/fetchmail/-/archive/9c011ca4/
-SHORT_TAG=	9c011ca4
-LONG_TAG=	9c011ca4f688acd0330c7b2635250b2f8cf29b77
+MASTER_SITES=	https://gitlab.com/fetchmail/fetchmail/-/archive/98215a5e/
+SHORT_TAG=	98215a5e
+LONG_TAG=	98215a5ee7847caf67f85972bdac63b84cbe50c9
 # Remnants of failed attempt at using gitlab.mk; it doesn't
 # end up trying to fetch the right file / url.
 #MASTER_SITES=	${MASTER_SITE_GITLAB:=fetchmail/}
-#GITLAB_TAG=	9c011ca4
+#GITLAB_TAG=	98215a5e
 #GITLAB_TYPE=	tag
 EXTRACT_SUFX=	.tar.gz
 
