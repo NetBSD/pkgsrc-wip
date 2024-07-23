@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.1 2018/12/21 19:00:56 bacon Exp $
 
-DISTNAME=	kallisto-0.50.1
+DISTNAME=	kallisto-0.51.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://pachterlab.github.io/kallisto/
@@ -19,6 +19,7 @@ SUBST_STAGE.test=	pre-configure
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
+WRKSRC=			${WRKDIR}/${DISTNAME}
 CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 # Build fails on 8-core Mac M1
 MAKE_JOBS_SAFE=		no
