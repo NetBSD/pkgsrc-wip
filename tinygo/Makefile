@@ -1,7 +1,7 @@
 # $NetBSD$
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	tinygo-0.31.2
+DISTNAME=	tinygo-0.32.0
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tinygo-org/}
 
@@ -26,14 +26,15 @@ LICENSE=	modified-bsd AND apache-2.0
 
 TINYGO_DISTFILES+=			musl-1.2.4.tar.gz
 SITES.musl-1.2.4.tar.gz=		https://www.musl-libc.org/releases/
-TINYGO_DISTFILES+=			esp-17.0.1_20240419.tar.gz
-SITES.esp-17.0.1_20240419.tar.gz=	https://github.com/espressif/llvm-project/archive/refs/tags/
+
+TINYGO_DISTFILES+=				tinygo_xtensa_release_18.1.2.tar.gz
+SITES.tinygo_xtensa_release_18.1.2.tar.gz=	https://github.com/tinygo-org/llvm-project/archive/refs/heads/
 
 DEPENDS+=	binaryen-[0-9]*:../../devel/binaryen
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-MAKE_ENV+=	GIT_SHA1=6384ecac
+MAKE_ENV+=	GIT_SHA1=dd6fa89a
 MAKE_ENV+=	USE_SYSTEM_BINARYEN=1
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pax
