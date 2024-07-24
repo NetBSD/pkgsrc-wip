@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/mtm
-man/man1/mtm.1
-share/mtm/terminfo/mtm.ti
