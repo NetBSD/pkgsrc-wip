@@ -1839,6 +1839,7 @@ SUBDIR+=	kodi
 SUBDIR+=	koha
 SUBDIR+=	krename
 SUBDIR+=	kronometer
+SUBDIR+=	krusader
 SUBDIR+=	kscreen
 SUBDIR+=	kscreenlocker
 SUBDIR+=	ksshaskpass
