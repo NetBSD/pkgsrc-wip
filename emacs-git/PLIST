@@ -2755,6 +2755,8 @@ share/emacs/${PKGVERSION}/lisp/leim/quail/thai.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/thai.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/tibetan.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/tibetan.elc
+share/emacs/${PKGVERSION}/lisp/leim/quail/tifinagh.el.gz
+share/emacs/${PKGVERSION}/lisp/leim/quail/tifinagh.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/tsang-b5.el.gz
 share/emacs/${PKGVERSION}/lisp/leim/quail/tsang-b5.elc
 share/emacs/${PKGVERSION}/lisp/leim/quail/tsang-cns.el.gz
