@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.4 2014/08/22 09:14:38 thomasklausner Exp $
 
-DISTNAME=		xfs-1.2.1
+DISTNAME=		xfs-1.2.2
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
