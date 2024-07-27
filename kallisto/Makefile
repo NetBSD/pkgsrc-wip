@@ -19,7 +19,6 @@ SUBST_STAGE.test=	pre-configure
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
 CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 # Build fails on 8-core Mac M1
 MAKE_JOBS_SAFE=		no
