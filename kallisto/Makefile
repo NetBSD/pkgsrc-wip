@@ -3,7 +3,7 @@
 DISTNAME=	kallisto-0.51.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
-GITHUB_TAG=	V${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://pachterlab.github.io/kallisto/
