@@ -1,9 +1,14 @@
- - Test on NetBSD
+ x Test on NetBSD
+ x Test on NetBSD/i386
  - Test on OpenBSD
  - Test on musl Linux
  - Test on Illumos
- - Test on i386
- - Test on arm
+ x Test on Debian/arm
  - Test on CentOS 7
+ - Test on macOS
  - Upstream man page permissions fix
  - Upstream SBINDIR respecting PREFIX
+
+NetBSD 10 (i386, amd64) build issues:
+ - Makefile tries to do mount -o
+ - incompatible types for getmntinfo()
