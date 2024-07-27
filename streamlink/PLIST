@@ -430,6 +430,9 @@ ${PYSITELIB}/streamlink/plugins/telemadrid.pyo
 ${PYSITELIB}/streamlink/plugins/tf1.py
 ${PYSITELIB}/streamlink/plugins/tf1.pyc
 ${PYSITELIB}/streamlink/plugins/tf1.pyo
+${PYSITELIB}/streamlink/plugins/tiktok.py
+${PYSITELIB}/streamlink/plugins/tiktok.pyc
+${PYSITELIB}/streamlink/plugins/tiktok.pyo
 ${PYSITELIB}/streamlink/plugins/trovo.py
 ${PYSITELIB}/streamlink/plugins/trovo.pyc
 ${PYSITELIB}/streamlink/plugins/trovo.pyo

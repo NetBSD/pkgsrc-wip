@@ -1,6 +1,15 @@
-multimedia/streamlink: update to streamlink-6.8.2
+multimedia/streamlink: update to streamlink-6.8.3
 
 Changelog:
+
+== streamlink 6.8.3 (2024-07-11)
+
+Patch release:
+
+- Updated plugins:
+  - tiktok: new plugin
+  - twitch: fixed channel names with uppercase characters
+
 
 == streamlink 6.8.2 (2024-07-04)
 
