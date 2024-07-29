@@ -1,10 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	qq-0.1.1-alpha
-PKGNAME=	${DISTNAME:S/-alpha/alpha1/}
+DISTNAME=	qq-0.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JFryy/}
-GITHUB_TAG=	v0.1.1-alpha
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/JFryy/qq/
