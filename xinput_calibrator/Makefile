@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	xinput_calibrator-0.7.5
-PKGREVISION=	1
+DISTNAME=	xinput_calibrator-0.8.0
 CATEGORIES=	x11
-MASTER_SITES=	http://github.com/downloads/tias/xinput_calibrator/
+MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/app/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/wiki/Software/xinput_calibrator/

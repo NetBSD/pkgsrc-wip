@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (xinput_calibrator-0.7.5.tar.gz) = 0565359b07634bbb98812d475d4f5e772362c18e
-SHA512 (xinput_calibrator-0.7.5.tar.gz) = dc022f4de6d7b57912373a571ef0598c7b9d91cdbc3f63bb2b32c6149e43f67eaf820dc0289349d527314381d5195cf8891f6bcb9847110662dd75875f76b9de
-Size (xinput_calibrator-0.7.5.tar.gz) = 355313 bytes
+BLAKE2s (xinput_calibrator-0.8.0.tar.xz) = 0f41578d8825c423075f65d952e75fae2481a247f8c27b21943160ea0549ce6f
+SHA512 (xinput_calibrator-0.8.0.tar.xz) = 38a06c1c181fb4e7c2a9fe6c9df47536065213bb177e74fb864b2aa62f7851c7bbc825771fc53725b6705d2c7b42ca01ae3c084b3229961aeee1c76bb86c6754
+Size (xinput_calibrator-0.8.0.tar.xz) = 277012 bytes
