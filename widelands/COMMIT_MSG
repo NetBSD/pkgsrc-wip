@@ -1,0 +1,47 @@
+Highlights in the Widelands 1.2 release:
+
+- UI Plugins are add-ons that can add more functionality to the user interface
+- Naval Warfare preview: Invade foreign coasts using warships!
+- This is included as a preview feature and needs to be explicitly enabled in the game setup screen.
+- Soldier garrisons for ports and headquarters
+- Balancing changes to the Amazon economy
+- Fifth scenario for the Frisian campaign
+- More settings in the game setup screen, such as configurable durations for timed win conditions
+- Diplomacy handling for the computer players
+- Stick pinned notes onto map fields to mark important points
+- Hyperlinks let you navigate within the encyclopedia and to the online help
+- Easy maps publishing inside the editor
+- High-resolution images for many more units
+- Accessibility enhancements for many user interface components
+- Expose more functionality to the add-ons and scenario scripting interface
+- Fixed many crashes and hangs and enhanced error handling
+
+Widelands 1.2 is translated completely into Catalan, German, Hungarian, Low German, and Russian, and the translations for 8 other languages are more than 2/3 complete.
+
+Highlights in the 1.1 release:
+
+- Three new scenarios: One each for the Atlantean and Frisian campaigns, and a new standalone singleplayer mission
+- An add-ons webserver allows efficient down- and uploading of add-ons as well as interactions such as voting and commenting on add-ons
+- High-resolution images for many units
+- Multithreading provides smoother performance
+- Multiple enhancements to the in-game encyclopedia
+- Diplomacy: Manage your alliances during the game
+- Fastplace: Assign custom shortcuts to buildings to place them with one keystroke
+- In-game loading and restarting of games and scenarios
+- Save and load in-game windows
+- Editor tool history dialog
+- Various AI enhancements
+
+Highlights in the 1.0 release:
+
+- A new tribe: the Amazons
+- An add-on system
+- A third frisians scenario
+- Dynamic tribe loading to speed up game loading
+- Targeting individual map objects for removal
+- Mute/unmute messages by buildings
+- Fully redesigned main menu
+- Configurable keyboard shortcuts
+- Enhanced keyboard and mousewheel support in the UI
+- Long-term stable Lua API for game content designers
+
