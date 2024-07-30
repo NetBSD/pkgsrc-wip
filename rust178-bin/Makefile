@@ -111,10 +111,12 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 NBSUF=
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
+# Just for aarch64, due to workaround for PR#58154
+NB=		-nb1
 RUST_ARCH:=	aarch64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
