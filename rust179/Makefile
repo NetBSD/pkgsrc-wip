@@ -333,10 +333,11 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 
 .endif
 .if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
+NB=				-nb1
 RUST_STAGE0_VER=		1.78.0
 RUST_ARCH=			aarch64-unknown-netbsd
-RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
-RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.xz
+RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}${NB}.tar.xz
+RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}${NB}.tar.xz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 SITES.${RUST_STAGE0}=		${MASTER_SITE_LOCAL:=rust/}
 SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
