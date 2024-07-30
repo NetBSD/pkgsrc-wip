@@ -62,7 +62,7 @@ BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.2
 .include "../../x11/libXmu/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.0
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtksourceview2/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
