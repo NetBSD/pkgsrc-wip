@@ -295,6 +295,7 @@ SUBDIR+=	bifrost
 SUBDIR+=	bigdft
 SUBDIR+=	bijiben
 SUBDIR+=	bindgraph
+SUBDIR+=	binutils
 SUBDIR+=	binutils-git
 SUBDIR+=	binutils-gold-git
 SUBDIR+=	bio-mocha
