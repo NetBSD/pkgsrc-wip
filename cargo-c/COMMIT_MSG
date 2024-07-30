@@ -1,4 +1,8 @@
-devel/cargo-c: update to 0.10.2
+devel/cargo-c: update to 0.10.3
+
+0.10.3
+ - cargo-0.81
+ - Add visionOS support, Thanks @bitxeno !
 
 0.10.2
 
