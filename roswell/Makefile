@@ -1,16 +1,16 @@
 # $NetBSD$
 
-GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=	roswell-21.10.14.111
-CATEGORIES=	lang
+DISTNAME=	roswell-23.10.14.114
+CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=roswell/}
-WRKSRC=		${WRKDIR}/${DISTNAME}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	nebbionegiuseppe@gmail.com
 HOMEPAGE=	https://github.com/roswell/roswell/
-COMMENT=	Lisp implementation installer/manager, launcher, and much more!
+COMMENT=	Common Lisp environemnt setup utility
 LICENSE=	mit
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_TOOLS+=	automake
 GNU_CONFIGURE=	yes
