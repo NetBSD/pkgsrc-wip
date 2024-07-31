@@ -1,0 +1,10 @@
+x11/qt5ct: update to 1.8
+
+Version 1.8 changelog:
+* fixed localization support
+* improved cmake build:
+  - added feature to disable D-Bus support (Nuno Silva)
+  - enabled reproducible build by default
+* fixed parallel build using qmake
+* updated Turkish translation (Yasar Civ)
+* updated French translation (Wallon, David Geiger)
