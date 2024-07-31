@@ -4924,6 +4924,7 @@ SUBDIR+=	qt-openzwave
 SUBDIR+=	qt5-libqtlua
 SUBDIR+=	qt5-qjson
 SUBDIR+=	qt5-qtbase-git
+SUBDIR+=	qt5ct
 SUBDIR+=	qtaccountsservice
 SUBDIR+=	qterminal
 SUBDIR+=	qtermwidget
