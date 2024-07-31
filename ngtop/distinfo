@@ -1,0 +1,23 @@
+$NetBSD$
+
+BLAKE2s (github.com_alecthomas_kong_@v_v0.9.0.mod) = df61f82faeed3187617ae37a6f229f0a36da871ac7ab1c718e7505f0c75c3038
+SHA512 (github.com_alecthomas_kong_@v_v0.9.0.mod) = 82fc13210f9cb26841f3ec81c2938b6f5eb326871887fc1b3513c372b83df6f342d822447e1c2bae0e122e02bfa1cd0c63ef4e1b92defc930cbd721e0fe99faa
+Size (github.com_alecthomas_kong_@v_v0.9.0.mod) = 188 bytes
+BLAKE2s (github.com_alecthomas_kong_@v_v0.9.0.zip) = fb3210cf0a82e81005940c385bbcdc9f60d2f43edee7fb240b7a64ce7296deaf
+SHA512 (github.com_alecthomas_kong_@v_v0.9.0.zip) = 2551b70b2797f480928d3b592f26c910ab16d06ed4fe5e106ac2e70363c76ea2815945d4612ea64c387d0c3992509c30c226027160e790c2d3b68b90d9952383
+Size (github.com_alecthomas_kong_@v_v0.9.0.zip) = 319391 bytes
+BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.22.mod) = 43dafad5024aa20b525e1d870aecbe109455568e917a0a397874d1ddf3652fe0
+SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.22.mod) = 85c89c68a7e6dca731d0d868fa21182d5c181967504bb8d64f3774d39da178fa10a2e436761d9340188e6484ff0d9a72a711876b8c22e60f32666d1aa7217395
+Size (github.com_mattn_go-sqlite3_@v_v1.14.22.mod) = 146 bytes
+BLAKE2s (github.com_mattn_go-sqlite3_@v_v1.14.22.zip) = f8ca6a6b385608d6c652573433986e3ccb92a02635813d10913da8e4feaf6ade
+SHA512 (github.com_mattn_go-sqlite3_@v_v1.14.22.zip) = 1ed53242e65de2bbec65f2c235b19a68462e5afe414f308412cc0eece2d1dca73f977140c0dd2ace08e43cceabb02dd7ee5ae1a933091780881de6e73d66d33b
+Size (github.com_mattn_go-sqlite3_@v_v1.14.22.zip) = 2674679 bytes
+BLAKE2s (github.com_mileusna_useragent_@v_v1.3.4.mod) = 639c1db68d76f307eceb81b1a69613b01f78dfaf9ec1a5f95eae267ce4331461
+SHA512 (github.com_mileusna_useragent_@v_v1.3.4.mod) = 6d4ba77ec6005499f3a0e059d57aa3905dba942636553b2224a10a82d77c698a6d9cca738ed9dd16cc1b0082a2c54c3feb32886b762f14413c771d3366682817
+Size (github.com_mileusna_useragent_@v_v1.3.4.mod) = 46 bytes
+BLAKE2s (github.com_mileusna_useragent_@v_v1.3.4.zip) = 86643426d72ed09d20a9ac74f51d8e37a1f550baf40c7d1a3c7dab132ec71978
+SHA512 (github.com_mileusna_useragent_@v_v1.3.4.zip) = f2487a4b723fb42429e3e0233a9b45964e19ef2da9ebfb50dabc511a7c90a189bab6a5e932117b4a8fd99ad48b91a0fc53690f57346891987c02ab79f4388b64
+Size (github.com_mileusna_useragent_@v_v1.3.4.zip) = 14399 bytes
+BLAKE2s (ngtop-0.4.0.tar.gz) = 15433d59ef741713c23174ae4b30218439c27c0baa5f7eb4996a47dd43dace23
+SHA512 (ngtop-0.4.0.tar.gz) = 41633fdbc304f5855bc553115de9d1cdd9a667eca58a9cb32a0b49f27e1d30fd1966ceaefc78d093d6f668d457492601e523be777b173d4167c880a6764b030f
+Size (ngtop-0.4.0.tar.gz) = 27029 bytes

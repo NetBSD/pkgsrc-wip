@@ -1,0 +1,2 @@
+ngtop is a command-line program to query request counts from nginx's
+access.log files.
