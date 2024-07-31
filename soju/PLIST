@@ -1,4 +1,12 @@
 @comment $NetBSD$
 bin/soju
+bin/soju-casemap-logs.sh
+bin/soju-migrate-db
+bin/soju-migrate-logs
+bin/soju-znc-import
 bin/sojuctl
+bin/sojudb
 man/man1/soju.1
+man/man1/sojuctl.1
+share/examples/soju/config
+share/examples/soju/soju.service
