@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.24 2024/05/01 20:10:29 wiz Exp $
-
-BLAKE2s (Kvantum-1.1.2.tar.gz) = a5b02c2f986e561a8ec3d63fa1fde0205daefabc264fda947c57172273cfcaf8
-SHA512 (Kvantum-1.1.2.tar.gz) = 71c714df902ac4d7ac707e26842e2227eb7eeddad03af0bbd1ab1fcfa132204a9dd0453eafac3000cd3187dcb4ff03d64f01674c442f5a225e0c9b3652277f0e
-Size (Kvantum-1.1.2.tar.gz) = 3041246 bytes
