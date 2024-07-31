@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/09/20 00:00:37 jihbed Exp $
 
-BLAKE2s (gwyddion-2.60.tar.xz) = 4ca158c33665824cff17ce6834e714155093da506a963d4dce444fb656339329
-SHA512 (gwyddion-2.60.tar.xz) = e568df77ef580aaedfcdd1f746a78f3ca93676a07a331fc6e70f997780bb403d1c3967aa93440c7fa1f010bd01f5376700c869a38dacaf1f98b075c4c950cf54
-Size (gwyddion-2.60.tar.xz) = 4973404 bytes
+BLAKE2s (gwyddion-2.66.tar.xz) = a53396ceb0f8d5fc44e2930e978efaf74830b33de6bf2027a6b4033d261aef54
+SHA512 (gwyddion-2.66.tar.xz) = 0f0952c5bcf61c79349f6a99e188a5a83fd0527554adaaf82bc29fd2574e5f1602921d5e0490b0bb7e7f5ab4dd517d42807c6e8878d585a67f0910d84d5ea188
+Size (gwyddion-2.66.tar.xz) = 5390884 bytes

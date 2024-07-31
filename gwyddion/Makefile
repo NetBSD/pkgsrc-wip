@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.5 2014/05/09 07:38:43 thomasklausner Exp $
 
-DISTNAME=	gwyddion-2.60
+DISTNAME=	gwyddion-2.66
 CATEGORIES=	graphics #science
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwyddion/}
 EXTRACT_SUFX=	.tar.xz
