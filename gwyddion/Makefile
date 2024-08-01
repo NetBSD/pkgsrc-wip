@@ -40,6 +40,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 # x11/py-gtk2
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../lang/python/application.mk"
 CONFIGURE_ARGS+=	--enable-pygwy
+PLIST.pygwy=	yes
 .endif
 
 .if !empty (PKG_OPTIONS:Mfftw3)
