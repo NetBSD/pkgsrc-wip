@@ -24,6 +24,7 @@ include/gwyddion/app/logging.h
 include/gwyddion/app/menu.h
 include/gwyddion/app/meta.h
 include/gwyddion/app/param-def.h
+include/gwyddion/app/param-resource.h
 include/gwyddion/app/param-table.h
 include/gwyddion/app/params.h
 include/gwyddion/app/resource-editor.h
@@ -178,26 +179,29 @@ lib/gwyddion/modules/file/hdrimage.la
 lib/gwyddion/modules/file/imgexport.la
 lib/gwyddion/modules/file/jpkscan.la
 lib/gwyddion/modules/file/keyence.la
+lib/gwyddion/modules/file/matfile.la
+lib/gwyddion/modules/file/npyfile.la
 lib/gwyddion/modules/file/nrrdfile.la
 lib/gwyddion/modules/file/oirfile.la
 lib/gwyddion/modules/file/pixmap.la
 lib/gwyddion/modules/file/rhk-sm4.la
 lib/gwyddion/modules/file/spml.la
+lib/gwyddion/modules/file/surffile.la
 lib/gwyddion/modules/graph/graph.la
 lib/gwyddion/modules/layer/layer.la
 lib/gwyddion/modules/plugin-proxy.la
 lib/gwyddion/modules/process/process.la
-lib/gwyddion/modules/pygwy.la
+${PLIST.pygwy}lib/gwyddion/modules/pygwy.la
 lib/gwyddion/modules/tool/tools.la
 lib/gwyddion/modules/volume/volume.la
 lib/gwyddion/modules/xyz/xyz.la
 lib/gwyddion/perl/Gwyddion/dump.pm
-lib/gwyddion/python/Gwyddion/__init__.py
-lib/gwyddion/python/Gwyddion/__init__.pyc
-lib/gwyddion/python/Gwyddion/__init__.pyo
-lib/gwyddion/python/Gwyddion/dump.py
-lib/gwyddion/python/Gwyddion/dump.pyc
-lib/gwyddion/python/Gwyddion/dump.pyo
+${PLIST.pygwy}lib/gwyddion/python/Gwyddion/__init__.py
+${PLIST.pygwy}lib/gwyddion/python/Gwyddion/__init__.pyc
+${PLIST.pygwy}lib/gwyddion/python/Gwyddion/__init__.pyo
+${PLIST.pygwy}lib/gwyddion/python/Gwyddion/dump.py
+${PLIST.pygwy}lib/gwyddion/python/Gwyddion/dump.pyc
+${PLIST.pygwy}lib/gwyddion/python/Gwyddion/dump.pyo
 lib/gwyddion/ruby/gwyddion/dump.rb
 lib/libgwyapp2.la
 lib/libgwyddion2.la
@@ -206,9 +210,7 @@ lib/libgwydraw2.la
 lib/libgwymodule2.la
 lib/libgwyprocess2.la
 lib/pkgconfig/gwyddion.pc
-lib/python2.7/site-packages/gwy.a
-lib/python2.7/site-packages/gwy.la
-lib/python2.7/site-packages/gwy.so
+${PLIST.pygwy}${PYSITELIB}/gwy.la
 man/man1/gwyddion-thumbnailer.1
 man/man1/gwyddion.1
 man/man3/Gwyddion::dump.3pm
@@ -237,6 +239,7 @@ share/doc/gwyddion/plugins/yellow.sh.rgi
 share/gtk-doc/html/libgwyapp/GwyDataChooser.html
 share/gtk-doc/html/libgwyapp/GwyDialog.html
 share/gtk-doc/html/libgwyapp/GwyParamDef.html
+share/gtk-doc/html/libgwyapp/GwyParamResource.html
 share/gtk-doc/html/libgwyapp/GwyParamTable.html
 share/gtk-doc/html/libgwyapp/GwyParams.html
 share/gtk-doc/html/libgwyapp/GwyPlainTool.html
@@ -267,9 +270,14 @@ share/gtk-doc/html/libgwyapp/api-index-2-54.html
 share/gtk-doc/html/libgwyapp/api-index-2-55.html
 share/gtk-doc/html/libgwyapp/api-index-2-59.html
 share/gtk-doc/html/libgwyapp/api-index-2-60.html
+share/gtk-doc/html/libgwyapp/api-index-2-61.html
+share/gtk-doc/html/libgwyapp/api-index-2-62.html
+share/gtk-doc/html/libgwyapp/api-index-2-63.html
+share/gtk-doc/html/libgwyapp/api-index-2-64.html
 share/gtk-doc/html/libgwyapp/api-index-2-7.html
 share/gtk-doc/html/libgwyapp/api-index-2-9.html
 share/gtk-doc/html/libgwyapp/api-index-all.html
+share/gtk-doc/html/libgwyapp/api-index-deprec.html
 share/gtk-doc/html/libgwyapp/home.png
 share/gtk-doc/html/libgwyapp/index.html
 share/gtk-doc/html/libgwyapp/left-insensitive.png
@@ -286,8 +294,10 @@ share/gtk-doc/html/libgwyapp/libgwyapp-funcuse.html
 share/gtk-doc/html/libgwyapp/libgwyapp-help.html
 share/gtk-doc/html/libgwyapp/libgwyapp-log.html
 share/gtk-doc/html/libgwyapp/libgwyapp-logging.html
+share/gtk-doc/html/libgwyapp/libgwyapp-main-app.html
 share/gtk-doc/html/libgwyapp/libgwyapp-menu.html
 share/gtk-doc/html/libgwyapp/libgwyapp-meta.html
+share/gtk-doc/html/libgwyapp/libgwyapp-module-support.html
 share/gtk-doc/html/libgwyapp/libgwyapp-module-utils.html
 share/gtk-doc/html/libgwyapp/libgwyapp-settings.html
 share/gtk-doc/html/libgwyapp/libgwyapp-synth-module-utils.html
@@ -338,6 +348,10 @@ share/gtk-doc/html/libgwyddion/api-index-2-53.html
 share/gtk-doc/html/libgwyddion/api-index-2-54.html
 share/gtk-doc/html/libgwyddion/api-index-2-59.html
 share/gtk-doc/html/libgwyddion/api-index-2-60.html
+share/gtk-doc/html/libgwyddion/api-index-2-61.html
+share/gtk-doc/html/libgwyddion/api-index-2-62.html
+share/gtk-doc/html/libgwyddion/api-index-2-63.html
+share/gtk-doc/html/libgwyddion/api-index-2-64.html
 share/gtk-doc/html/libgwyddion/api-index-2-7.html
 share/gtk-doc/html/libgwyddion/api-index-2-8.html
 share/gtk-doc/html/libgwyddion/api-index-2-9.html
@@ -444,6 +458,10 @@ share/gtk-doc/html/libgwydgets/api-index-2-56.html
 share/gtk-doc/html/libgwydgets/api-index-2-57.html
 share/gtk-doc/html/libgwydgets/api-index-2-59.html
 share/gtk-doc/html/libgwydgets/api-index-2-60.html
+share/gtk-doc/html/libgwydgets/api-index-2-61.html
+share/gtk-doc/html/libgwydgets/api-index-2-62.html
+share/gtk-doc/html/libgwydgets/api-index-2-63.html
+share/gtk-doc/html/libgwydgets/api-index-2-64.html
 share/gtk-doc/html/libgwydgets/api-index-2-7.html
 share/gtk-doc/html/libgwydgets/api-index-2-8.html
 share/gtk-doc/html/libgwydgets/api-index-all.html
@@ -474,6 +492,7 @@ share/gtk-doc/html/libgwydgets/gwy_cwt-24.png
 share/gtk-doc/html/libgwydgets/gwy_data_measure-24.png
 share/gtk-doc/html/libgwydgets/gwy_deconvolve-24.png
 share/gtk-doc/html/libgwydgets/gwy_disconnected-24.png
+share/gtk-doc/html/libgwydgets/gwy_displacement_field-24.png
 share/gtk-doc/html/libgwydgets/gwy_distance-24.png
 share/gtk-doc/html/libgwydgets/gwy_distance_transform-24.png
 share/gtk-doc/html/libgwydgets/gwy_distribution_angle-24.png
@@ -507,8 +526,10 @@ share/gtk-doc/html/libgwydgets/gwy_frequency_split-24.png
 share/gtk-doc/html/libgwydgets/gwy_gl_material-16.png
 share/gtk-doc/html/libgwydgets/gwy_gradient_horizontal-24.png
 share/gtk-doc/html/libgwydgets/gwy_gradient_vertical-24.png
+share/gtk-doc/html/libgwydgets/gwy_grain_bounding_box-24.png
 share/gtk-doc/html/libgwydgets/gwy_grain_correlation-24.png
 share/gtk-doc/html/libgwydgets/gwy_grain_exscribed_circle-24.png
+share/gtk-doc/html/libgwydgets/gwy_grain_inscribed_box-24.png
 share/gtk-doc/html/libgwydgets/gwy_grain_inscribed_circle-24.png
 share/gtk-doc/html/libgwydgets/gwy_grains-24.png
 share/gtk-doc/html/libgwydgets/gwy_grains_edge-24.png
@@ -533,6 +554,7 @@ share/gtk-doc/html/libgwydgets/gwy_graph_halfgauss-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_level-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_measure-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_palette-24.png
+share/gtk-doc/html/libgwydgets/gwy_graph_period_measure-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_pointer-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_ruler-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_statistics-24.png
@@ -543,6 +565,8 @@ share/gtk-doc/html/libgwydgets/gwy_graph_zoom_in-24.png
 share/gtk-doc/html/libgwydgets/gwy_graph_zoom_out-24.png
 share/gtk-doc/html/libgwydgets/gwy_gwyddion-32.png
 share/gtk-doc/html/libgwydgets/gwy_gwyddion-60.png
+share/gtk-doc/html/libgwydgets/gwy_hold_selection_clear-18.png
+share/gtk-doc/html/libgwydgets/gwy_hold_selection_replace-18.png
 share/gtk-doc/html/libgwydgets/gwy_hough-24.png
 share/gtk-doc/html/libgwydgets/gwy_image_relation-24.png
 share/gtk-doc/html/libgwydgets/gwy_immerse-24.png
@@ -583,6 +607,7 @@ share/gtk-doc/html/libgwydgets/gwy_mask_intersect-24.png
 share/gtk-doc/html/libgwydgets/gwy_mask_invert-24.png
 share/gtk-doc/html/libgwydgets/gwy_mask_line-24.png
 share/gtk-doc/html/libgwydgets/gwy_mask_morph-24.png
+share/gtk-doc/html/libgwydgets/gwy_mask_noisify-24.png
 share/gtk-doc/html/libgwydgets/gwy_mask_paint_draw-24.png
 share/gtk-doc/html/libgwydgets/gwy_mask_paint_erase-24.png
 share/gtk-doc/html/libgwydgets/gwy_mask_rect_exclusive-24.png
@@ -610,6 +635,7 @@ share/gtk-doc/html/libgwydgets/gwy_null_offsets-24.png
 share/gtk-doc/html/libgwydgets/gwy_palettes-16.png
 share/gtk-doc/html/libgwydgets/gwy_palettes-24.png
 share/gtk-doc/html/libgwydgets/gwy_path_level-24.png
+share/gtk-doc/html/libgwydgets/gwy_perspective_distort-24.png
 share/gtk-doc/html/libgwydgets/gwy_pointer_measure-24.png
 share/gtk-doc/html/libgwydgets/gwy_poly_distort-24.png
 share/gtk-doc/html/libgwydgets/gwy_polynom-24.png
@@ -653,6 +679,7 @@ share/gtk-doc/html/libgwydgets/gwy_synthetic_columnar-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_diffusion-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_discs-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_domains-24.png
+share/gtk-doc/html/libgwydgets/gwy_synthetic_dunes-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_fibres-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_lattice-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_line_noise-24.png
@@ -662,6 +689,7 @@ share/gtk-doc/html/libgwydgets/gwy_synthetic_particles-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_pattern-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_phases-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_pileup-24.png
+share/gtk-doc/html/libgwydgets/gwy_synthetic_plateaus-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_spectral-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_turing_pattern-24.png
 share/gtk-doc/html/libgwydgets/gwy_synthetic_waves-24.png
@@ -696,6 +724,7 @@ share/gtk-doc/html/libgwydgets/gwy_xy_denoise-24.png
 share/gtk-doc/html/libgwydgets/gwy_xyzize-24.png
 share/gtk-doc/html/libgwydgets/gwy_zero_maximum-24.png
 share/gtk-doc/html/libgwydgets/gwy_zero_mean-24.png
+share/gtk-doc/html/libgwydgets/gwy_zero_under_mask-24.png
 share/gtk-doc/html/libgwydgets/gwy_zoom_1_1-24.png
 share/gtk-doc/html/libgwydgets/gwy_zoom_fit-24.png
 share/gtk-doc/html/libgwydgets/gwy_zoom_in-24.png
@@ -759,6 +788,7 @@ share/gtk-doc/html/libgwymodule/api-index-2-45.html
 share/gtk-doc/html/libgwymodule/api-index-2-48.html
 share/gtk-doc/html/libgwymodule/api-index-2-49.html
 share/gtk-doc/html/libgwymodule/api-index-2-60.html
+share/gtk-doc/html/libgwymodule/api-index-2-65.html
 share/gtk-doc/html/libgwymodule/api-index-all.html
 share/gtk-doc/html/libgwymodule/api-index-deprec.html
 share/gtk-doc/html/libgwymodule/gwymodule-tutorial-beyond.html
@@ -774,6 +804,7 @@ share/gtk-doc/html/libgwymodule/home.png
 share/gtk-doc/html/libgwymodule/index.html
 share/gtk-doc/html/libgwymodule/left-insensitive.png
 share/gtk-doc/html/libgwymodule/left.png
+share/gtk-doc/html/libgwymodule/libgwymodule-gwymodule-cmap.html
 share/gtk-doc/html/libgwymodule/libgwymodule-gwymodule-file.html
 share/gtk-doc/html/libgwymodule/libgwymodule-gwymodule-graph.html
 share/gtk-doc/html/libgwymodule/libgwymodule-gwymodule-layer.html
@@ -847,6 +878,11 @@ share/gtk-doc/html/libgwyprocess/api-index-2-56.html
 share/gtk-doc/html/libgwyprocess/api-index-2-58.html
 share/gtk-doc/html/libgwyprocess/api-index-2-59.html
 share/gtk-doc/html/libgwyprocess/api-index-2-60.html
+share/gtk-doc/html/libgwyprocess/api-index-2-61.html
+share/gtk-doc/html/libgwyprocess/api-index-2-62.html
+share/gtk-doc/html/libgwyprocess/api-index-2-63.html
+share/gtk-doc/html/libgwyprocess/api-index-2-64.html
+share/gtk-doc/html/libgwyprocess/api-index-2-66.html
 share/gtk-doc/html/libgwyprocess/api-index-2-7.html
 share/gtk-doc/html/libgwyprocess/api-index-2-8.html
 share/gtk-doc/html/libgwyprocess/api-index-all.html
@@ -885,7 +921,7 @@ share/gtk-doc/html/libgwyprocess/right.png
 share/gtk-doc/html/libgwyprocess/style.css
 share/gtk-doc/html/libgwyprocess/up-insensitive.png
 share/gtk-doc/html/libgwyprocess/up.png
-share/gtksourceview-2.0/language-specs/pygwy.lang
+${PLIST.pygwy}share/gtksourceview-2.0/language-specs/pygwy.lang
 share/gwyddion/glmaterials/Alien-Alloy
 share/gwyddion/glmaterials/Black-Plastic
 share/gwyddion/glmaterials/Black-Rubber
@@ -947,6 +983,7 @@ share/gwyddion/gradients/MetroPro
 share/gwyddion/gradients/NT-MDT
 share/gwyddion/gradients/Neon
 share/gwyddion/gradients/Olive
+share/gwyddion/gradients/Painbow
 share/gwyddion/gradients/Pink
 share/gwyddion/gradients/Plum
 share/gwyddion/gradients/Pm3d
@@ -1003,6 +1040,7 @@ share/gwyddion/pixmaps/gwy_cwt-24.png
 share/gwyddion/pixmaps/gwy_data_measure-24.png
 share/gwyddion/pixmaps/gwy_deconvolve-24.png
 share/gwyddion/pixmaps/gwy_disconnected-24.png
+share/gwyddion/pixmaps/gwy_displacement_field-24.png
 share/gwyddion/pixmaps/gwy_distance-24.png
 share/gwyddion/pixmaps/gwy_distance_transform-24.png
 share/gwyddion/pixmaps/gwy_distribution_angle-24.png
@@ -1036,8 +1074,10 @@ share/gwyddion/pixmaps/gwy_frequency_split-24.png
 share/gwyddion/pixmaps/gwy_gl_material-16.png
 share/gwyddion/pixmaps/gwy_gradient_horizontal-24.png
 share/gwyddion/pixmaps/gwy_gradient_vertical-24.png
+share/gwyddion/pixmaps/gwy_grain_bounding_box-24.png
 share/gwyddion/pixmaps/gwy_grain_correlation-24.png
 share/gwyddion/pixmaps/gwy_grain_exscribed_circle-24.png
+share/gwyddion/pixmaps/gwy_grain_inscribed_box-24.png
 share/gwyddion/pixmaps/gwy_grain_inscribed_circle-24.png
 share/gwyddion/pixmaps/gwy_grains-24.png
 share/gwyddion/pixmaps/gwy_grains_edge-24.png
@@ -1062,6 +1102,7 @@ share/gwyddion/pixmaps/gwy_graph_halfgauss-24.png
 share/gwyddion/pixmaps/gwy_graph_level-24.png
 share/gwyddion/pixmaps/gwy_graph_measure-24.png
 share/gwyddion/pixmaps/gwy_graph_palette-24.png
+share/gwyddion/pixmaps/gwy_graph_period_measure-24.png
 share/gwyddion/pixmaps/gwy_graph_pointer-24.png
 share/gwyddion/pixmaps/gwy_graph_ruler-24.png
 share/gwyddion/pixmaps/gwy_graph_statistics-24.png
@@ -1072,6 +1113,8 @@ share/gwyddion/pixmaps/gwy_graph_zoom_in-24.png
 share/gwyddion/pixmaps/gwy_graph_zoom_out-24.png
 share/gwyddion/pixmaps/gwy_gwyddion-32.png
 share/gwyddion/pixmaps/gwy_gwyddion-60.png
+share/gwyddion/pixmaps/gwy_hold_selection_clear-18.png
+share/gwyddion/pixmaps/gwy_hold_selection_replace-18.png
 share/gwyddion/pixmaps/gwy_hough-24.png
 share/gwyddion/pixmaps/gwy_image_relation-24.png
 share/gwyddion/pixmaps/gwy_immerse-24.png
@@ -1112,6 +1155,7 @@ share/gwyddion/pixmaps/gwy_mask_intersect-24.png
 share/gwyddion/pixmaps/gwy_mask_invert-24.png
 share/gwyddion/pixmaps/gwy_mask_line-24.png
 share/gwyddion/pixmaps/gwy_mask_morph-24.png
+share/gwyddion/pixmaps/gwy_mask_noisify-24.png
 share/gwyddion/pixmaps/gwy_mask_paint_draw-24.png
 share/gwyddion/pixmaps/gwy_mask_paint_erase-24.png
 share/gwyddion/pixmaps/gwy_mask_rect_exclusive-24.png
@@ -1139,6 +1183,7 @@ share/gwyddion/pixmaps/gwy_null_offsets-24.png
 share/gwyddion/pixmaps/gwy_palettes-16.png
 share/gwyddion/pixmaps/gwy_palettes-24.png
 share/gwyddion/pixmaps/gwy_path_level-24.png
+share/gwyddion/pixmaps/gwy_perspective_distort-24.png
 share/gwyddion/pixmaps/gwy_pointer_measure-24.png
 share/gwyddion/pixmaps/gwy_poly_distort-24.png
 share/gwyddion/pixmaps/gwy_polynom-24.png
@@ -1182,6 +1227,7 @@ share/gwyddion/pixmaps/gwy_synthetic_columnar-24.png
 share/gwyddion/pixmaps/gwy_synthetic_diffusion-24.png
 share/gwyddion/pixmaps/gwy_synthetic_discs-24.png
 share/gwyddion/pixmaps/gwy_synthetic_domains-24.png
+share/gwyddion/pixmaps/gwy_synthetic_dunes-24.png
 share/gwyddion/pixmaps/gwy_synthetic_fibres-24.png
 share/gwyddion/pixmaps/gwy_synthetic_lattice-24.png
 share/gwyddion/pixmaps/gwy_synthetic_line_noise-24.png
@@ -1191,6 +1237,7 @@ share/gwyddion/pixmaps/gwy_synthetic_particles-24.png
 share/gwyddion/pixmaps/gwy_synthetic_pattern-24.png
 share/gwyddion/pixmaps/gwy_synthetic_phases-24.png
 share/gwyddion/pixmaps/gwy_synthetic_pileup-24.png
+share/gwyddion/pixmaps/gwy_synthetic_plateaus-24.png
 share/gwyddion/pixmaps/gwy_synthetic_spectral-24.png
 share/gwyddion/pixmaps/gwy_synthetic_turing_pattern-24.png
 share/gwyddion/pixmaps/gwy_synthetic_waves-24.png
@@ -1225,13 +1272,14 @@ share/gwyddion/pixmaps/gwy_xy_denoise-24.png
 share/gwyddion/pixmaps/gwy_xyzize-24.png
 share/gwyddion/pixmaps/gwy_zero_maximum-24.png
 share/gwyddion/pixmaps/gwy_zero_mean-24.png
+share/gwyddion/pixmaps/gwy_zero_under_mask-24.png
 share/gwyddion/pixmaps/gwy_zoom_1_1-24.png
 share/gwyddion/pixmaps/gwy_zoom_fit-24.png
 share/gwyddion/pixmaps/gwy_zoom_in-24.png
 share/gwyddion/pixmaps/gwy_zoom_out-24.png
 share/gwyddion/pixmaps/gwyddion.ico
 share/gwyddion/pixmaps/splash.png
-share/gwyddion/pygwy/gwyutils.py
+${PLIST.pygwy}share/gwyddion/pygwy/gwyutils.py
 share/gwyddion/ui/toolbox.xml
 share/gwyddion/user-guide-modules
 share/icons/hicolor/48x48/apps/gwyddion.png
