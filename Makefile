@@ -4516,6 +4516,7 @@ SUBDIR+=	py-secretpy
 SUBDIR+=	py-seeds
 SUBDIR+=	py-selection
 SUBDIR+=	py-selectolax
+SUBDIR+=	py-selectors2
 SUBDIR+=	py-selenium-generator
 SUBDIR+=	py-semidbm
 SUBDIR+=	py-semopy
