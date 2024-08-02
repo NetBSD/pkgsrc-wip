@@ -60,12 +60,6 @@ CONFIGURE_ARGS+=	--enable-vendor
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
-# Rust builds some bundled components with strict version requirements, ensure
-# that any conflicting packages pulled in via dependencies are not buildlinked.
-BUILDLINK_FILES_CMD.libssh2=	${TRUE}
-BUILDLINK_FILES_CMD.xz=		${TRUE}
-MAKE_ENV+=			LZMA_API_STATIC=1
-
 # MacOS X 10.7 is the oldest supported version. See
 # ${WRKSRC}/src/bootstrap/lib.rs
 MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
@@ -142,17 +136,9 @@ CONFIGURE_ARGS+=	--set llvm.targets="Mips"
 CONFIGURE_ARGS+=	--set llvm.targets="Mips;X86"
 .endif
 
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/android-sdk.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/debuglink.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/run.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/run-docker.sh
+CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/core/src/unicode/printable.py
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/build-std-detect.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/dox.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/run-docker.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/run.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/style.sh
-
+CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/*.sh
 CHECK_PORTABILITY_SKIP+=	tests/run-make/dump-ice-to-disk/check.sh
 CHECK_PORTABILITY_SKIP+=	vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 
@@ -499,6 +485,13 @@ provide-libgcc-for-bootstrap:
 	cp ${FILESDIR}/libgcc_s.so.1 ${RUST_BOOTSTRAP_PATH}/lib/.
 .  endif
 .endif
+
+# Rust builds some bundled components with strict version requirements, ensure
+# that any conflicting packages pulled in via dependencies are not buildlinked.
+BUILDLINK_FILES_CMD.xz=		${TRUE}
+MAKE_ENV+=			LZMA_API_STATIC=1
+pre-configure:
+	${RM} -rf ${BUILDLINK_DIR}/include/libssh2*
 
 #
 # These are essentially copies of the "all", "test", and "install" Makefile
