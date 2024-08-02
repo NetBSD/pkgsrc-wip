@@ -1,4 +1,0 @@
-devel/lxqt-build-tools: update to 2.0.0
-
- - Ported to Qt6 with the new project name lxqt2-build-tools, such that the
-   Qt5-based version 0.13.0 can be installed alongside it.

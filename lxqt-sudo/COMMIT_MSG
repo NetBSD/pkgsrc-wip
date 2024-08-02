@@ -1,7 +1,0 @@
-security/lxqt-sudo: update to 2.0.0
-
-lxqt-sudo-2.0.0 (2024-04-17)
- - Allow bidirectional communication with launched process.
- - Avoid flushing empty line.
- - Flush everything comming from child and optimize splitting of output.
- - Ported to Qt6.

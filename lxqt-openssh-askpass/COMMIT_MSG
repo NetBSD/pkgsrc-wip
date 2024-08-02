@@ -1,7 +1,0 @@
-security/lxqt-openssh-askpass: update to 2.0.1
-
-lxqt-openssh-askpass-2.0.1 (2024-05-12)
- - Fixed the Focus of the input entry with Qt6.
-
-lxqt-openssh-askpass-2.0.0 (2024-04-17)
- - Ported to Qt6.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2023/04/19 04:54:03 gutteridge Exp $
-
-BLAKE2s (lxqt-build-tools-2.0.0.tar.xz) = b76bab070fc5c0a73b5c6c3921ebde262078e3fbcb63f0fe3a4f852b5ee918d2
-SHA512 (lxqt-build-tools-2.0.0.tar.xz) = 4fe92af82d55bda8fc1b6dc44998ed64b031e33a5c19e9206c1822375b8aa8abbf5f5b94d3c5ebe6d5d318f8821664ee308064b7adb9081e08047a4456cc6a66
-Size (lxqt-build-tools-2.0.0.tar.xz) = 26072 bytes
-SHA1 (patch-cmake_modules_LXQtCompilerSettings.cmake) = d9cb17d788cc255c701463ef5c8e6c933da311e7

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.11 2023/11/14 04:15:38 gutteridge Exp $
-
-BLAKE2s (lxqt-openssh-askpass-2.0.1.tar.xz) = 1028c034be13f033e57190cd323dddf65325d86f451ff9f6edc83dd7b7ce6323
-SHA512 (lxqt-openssh-askpass-2.0.1.tar.xz) = 57f557b4a4a43e9faca68d90239b271f984cd7a5ee6b11be6ba325c2e3a2cb15f5bebba12bbfbe4caf0930a9b26876b689eda6b1188f203f5d8361a0f785acfd
-Size (lxqt-openssh-askpass-2.0.1.tar.xz) = 17856 bytes

@@ -1,7 +1,0 @@
-lxqt-qtplugin-2.0.0 / 2024-04-17
-=================================
- * Ported to Qt6.
- * Check the existence of qApp.
- * Set mouse cursor theme and size.
- * Set hover effect.
- * Added link to libdbusmenu-lxqt in `README.md`.

@@ -1,5 +1,0 @@
-This is the first release of libdbusmenu-lxqt, which is forked from libdbusmenu-qt and ported to Qt6. Also,
-
- - Turned off building of documentation by default.
- - Fixed triggering of menu actions with Qt6.
-

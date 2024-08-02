@@ -1,7 +1,0 @@
-lxqt-session-2.0.0 / 2024-04-17
-================================
- * Made the user inputs stricter in auto-start.
- * Don't allow inputs consisting of only whitespaces, and remove start and end whitespaces from them.
- * Fixed a typo.
- * Ported to Qt6.
- * Used an overlay layer shell for the leaving dialog and centered it under Wayland.

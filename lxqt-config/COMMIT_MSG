@@ -1,5 +1,0 @@
-lxqt-config-2.0.0 / 2024-04-17
-===============================
- * Ported to Qt6.
- * Improved the UI of monitor settings.
- * Corrected tab orders by reordering blocks of UI files.

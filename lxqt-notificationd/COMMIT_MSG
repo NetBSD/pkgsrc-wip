@@ -1,8 +1,0 @@
-lxqt-notificationd-2.0.1 / 2024-05-04
-======================================
- * Prevented a random crash on killing the process with Qt ≥ 6.7.
-
-lxqt-notificationd-2.0.0 / 2024-04-17
-======================================
- * Ported to Qt6.
- * Added full Wayland support by using layer shell.

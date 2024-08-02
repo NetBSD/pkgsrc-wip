@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2023/11/14 03:59:44 gutteridge Exp $
-
-BLAKE2s (lxqt-policykit-2.0.0.tar.xz) = a630cddf3559469440607149f4d44755240b667d0b3d6ac26799979bf5d87f89
-SHA512 (lxqt-policykit-2.0.0.tar.xz) = a4b90d2c67281c09a140505d2757253853c62dcca242b1b2d6a266658840ded992ccbedb282ea9221a81de3099c0db8810082f3cc3ec1741be4906d98013fbb7
-Size (lxqt-policykit-2.0.0.tar.xz) = 39964 bytes
-SHA1 (patch-autostart_CMakeLists.txt) = d55c2e8bff66a8a072762030f8856d646fa9937b

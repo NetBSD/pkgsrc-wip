@@ -1,7 +1,0 @@
-graphics/lxqt-themes: update to 2.0.0
-
- - Compile with lxqt2-build-tools.
- - Added Fancy Menu style to themes.
- - Styled customcommand where necessary.
- - Transparent background color in buttons and clock.
- - Dark color for input background in runner with some themes.

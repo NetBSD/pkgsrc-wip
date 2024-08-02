@@ -1,7 +1,0 @@
-x11/libqtxdg: update to 4.0.0
-
-The library is ported to Qt6, such that the Qt5-based version 3.12.0 can be
-installed alongside it for supporting Qt5-based apps. Also,
-
- - Considered the EV XDG_CURRENT_DESKTOP as a colon-separated list.
- - Fixed an FTBFS with BUILD_DEV_UTILS enabled.
