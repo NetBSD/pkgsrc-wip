@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	markdown-reader-0.1.12
+DISTNAME=	markdown-reader-0.1.13
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joshka/}
 GITHUB_PROJECT=	tui-markdown
-GITHUB_TAG=	markdown-reader-v0.1.12
+GITHUB_TAG=	markdown-reader-v0.1.13
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/joshka/tui-markdown/
