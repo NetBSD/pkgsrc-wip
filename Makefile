@@ -5736,6 +5736,7 @@ SUBDIR+=	vpnc
 SUBDIR+=	vpr
 SUBDIR+=	vsearch
 SUBDIR+=	vulkan-loader
+SUBDIR+=	vym
 SUBDIR+=	w3c-httpd
 SUBDIR+=	wackamole
 SUBDIR+=	wadptr
