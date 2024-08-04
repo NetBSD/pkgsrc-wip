@@ -40,7 +40,7 @@ SUBST_MESSAGE.man_gz=	Fix installing gzipped man page
 SUBST_FILES.man_gz=	CMakeLists.txt
 SUBST_SED.man_gz=	-e 's;doc/vym.1.gz;doc/vym.1;g'
 
-# '-DCMAKE_INSTALL_MANDIR=man/man1' seems to be ignored
+# 'CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=man/man1' seems to be ignored
 SUBST_CLASSES+=			cmake-mandir
 SUBST_STAGE.cmake-mandir=	pre-configure
 SUBST_MESSAGE.cmake-mandir=	Fix man page path
@@ -71,6 +71,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
 CMAKE_ARGS+=		-DCMAKE_INSTALL_DATADIR=share/vym
 CMAKE_ARGS+=		-DCMAKE_INSTALL_DATAROOTDIR=share/vym
 CMAKE_ARGS+=		-DCMAKE_INSTALL_DOCDIR=share/doc/vym
+#CMAKE_ARGS+=		-DCMAKE_INSTALL_MANDIR=man/man1
 
 post-extract:
 	${GZIP_CMD} -d ${WRKSRC}/doc/vym.1.gz
