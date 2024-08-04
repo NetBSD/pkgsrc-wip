@@ -1,8 +1,7 @@
 $NetBSD$
 
-BLAKE2s (vym-2.8.8.tar.bz2) = be24886bfbd49e8060798eef1dafb530e2929b7073f749e6ee794a279ddc62cb
-SHA512 (vym-2.8.8.tar.bz2) = 8179869eecc2a1732e7d645ce5ec1b1bbd3a4c3a3a8df73faf79f7bae46c9724d0af7d6b111197b4b4c8f8638f3f9d00e8cf9b438fd481c1c260a8106526596e
-Size (vym-2.8.8.tar.bz2) = 8142944 bytes
-SHA1 (patch-src_exportoofiledialog.cpp) = efdaef454730d62c6eaff132e2a5ea08501a8bfd
-SHA1 (patch-src_main.cpp) = 448c099b3fb7a0e17741464e22927ab13492d110
-SHA1 (patch-src_mainwindow.cpp) = a29ad65247e90cc81246e66078d33366eea2ddf4
+BLAKE2s (vym-2.9.28-8f4e86ca61801ca8a759baa9c6ffb3441b8e8291.tar.gz) = 46489645211ec1251c88a98110a8a997000ea42737e8ef64bbb1a43297c4a7c7
+SHA512 (vym-2.9.28-8f4e86ca61801ca8a759baa9c6ffb3441b8e8291.tar.gz) = 40ca5d323085dee48f68b913f878516504088896e6f1a40ffc7588a0c7c8bb8c3ce1e0a7058d07276e344e2aa429b6cc0cf32fe6a959a250d8d1118de00624d1
+Size (vym-2.9.28-8f4e86ca61801ca8a759baa9c6ffb3441b8e8291.tar.gz) = 8739943 bytes
+SHA1 (patch-src_main.cpp) = dd6fe34545ccec49a10152da98c250ae411f5062
+SHA1 (patch-src_mainwindow.cpp) = d33e76b358591aace24b7c55ff55ce1ab7601658
