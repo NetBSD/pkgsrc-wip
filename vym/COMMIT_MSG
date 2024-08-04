@@ -2,16 +2,16 @@ $NetBSD$
 
 vym: Update from 2.7.1 to 2.9.28
 
-https://www.insilmaril.de/vym/release-notes-2.8.0.html
 https://github.com/insilmaril/vym/blob/release/release-notes-2.9.md
+https://www.insilmaril.de/vym/release-notes-2.8.0.html
 
 --
 
-Changelog for 2.9.28:
+Changelog from 2.9.27 to 2.9.28:
 
 8f4e86ca Version 2.9.28
 c6c3823b Added Sven Höxter to aboutDialog for his patches
-cba17cc6 Feature: link app icon as a mimetype icon for the hicolor default them$
+cba17cc6 Feature: link app icon as a mimetype icon for the hicolor default theme (#109)
 01aae901 Fix: do not install manpage in doc dir (#107)
 201ca770 Bugfix: Open french documention if required
 97e0e837 Spelling fix: remove duplicate word (#108)
