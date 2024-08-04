@@ -1,0 +1,129 @@
+$NetBSD$
+
+vym: Update from 2.7.1 to 2.8.8
+
+https://www.insilmaril.de/vym/release-notes-2.8.0.html
+
+Release notes View Your Mind - vym 2.8.0
+
+This version provides bugfixes and some new features. The biggest and most
+visible change are the (mostly) reworked and now scalable icons in mind maps.
+
+At least on Linux you now can also connect to JIRA and Confluence and retrieve
+data, but also create or update Confluence pages.
+
+A brandnew feature is the (experimental) support to import and export Firefox
+bookmarks - very handy to sort bigger bookmark collections.
+
+Scripting still is considered as Technology Preview - APIs still might change
+in upcoming versions, when vym will be based on Qt6. Just check out the
+keyboard macros for F01 to F24 or also the example scripts.
+
+The lists below list differences between vym 2.7.0 and 2.8.0.
+
+Feel free to report any bugs or feature requests on
+https://github.com/insilmaril/vym/issues
+
+Thanks for using vym!
+
+Uwe Drechsel - April 2021
+Notes:
+
+    Some function keys have changed, e.g. Shift-F8 for toggling frames to
+include children
+
+    File format has changed within the vym files
+
+    CDATA is no longer used, but <vymtext> and <heading> use attributes now for
+texts. Vym versions below 2.7.566 cannot read newer maps
+    Removed support for Bugzilla
+    Removed support for SUSE FATE tool
+    Removed dependency on 7z on Windows platform
+    Removed setting to edit branch after creating
+    Various optimizations, e.g. when updating map when NoteEditor changes
+    Removed unused windows code
+    Updated code to Qt 5.14
+    Reorganized source code, moved it to github and applied coding style using
+clang-format
+
+Detailed list of features
+
+    Feature: Improved presentation mode and added projector icon
+    Feature: Added recover option (--recover)
+    Feature: Allow cursor positioning during edit of heading
+    Feature: Allow middle mouse for pasting while editing heading
+    Feature: Alternatively pan view using middle mouse button
+    Feature: Basic editing of tasks in TaskEditor
+    Feature: BranchPropertyEditor show sleep time
+    Feature: Initial Confluence support (on Linux)
+        Create new Confluence pages
+        Get Confluence username and use in export (experimental)
+        Native Confluence Agent to retrieve page name
+    Feature: Dialog to enter credentials for Confluence
+    Feature: Drag drop in TaskEditor for repriorization
+    Feature: Editing in TreeEditor
+    Feature: Hide less popular standard flags if not used in a map (Present,
+rose, phone, clock)
+    Feature: Icons for filters in taskeditor
+    Feature: Improved editing in TaskEditor
+    Feature: Improved handling of modifiers
+    Feature: Improved winter mode
+    Feature: Import and export of Firefox bookmarks (experimental)
+    Feature: Internal testsuite prepared
+    Feature: Load default map instead of creating it
+    Feature: More verbose status message for toggling frames when using
+function keys
+    Feature: Most of the flags have been reworked and are scalable vector
+graphics now
+    Feature: Repeat last command in map using F8
+    Feature: Save as default map
+    Feature: Select images using cursor left/right in MapEditor
+    Feature: Set sleep time weeks with 'w'
+    Feature: Setting for margin when scrolling to selection
+    Feature: Shortcut Shift-G to goto linked map
+    Feature: Show Delta Priority in TaskEditor
+    Feature: Show Task modification times
+    Feature: Show file location in properties dialog
+    Feature: Show flags in taskeditor
+
+Bugfixes
+
+    Bugfix: Collapse selected branch using "<"-key
+    Bugfix: Better placement of flags toolbars for new user
+    Bugfix: Comment in map properties no longer saved as HTML
+    Bugfix: Compiler warnings
+    Bugfix: Correctly read task modification time from file
+    Bugfix: Crash when exporting HTML
+    Bugfix: Disable user flags toolbar when image is selected
+    Bugfix: Don't save definitions of unused userflags
+    Bugfix: Edit and actually use the correct path for macros
+    Bugfix: Editing of branch heading in heading editor
+    Bugfix: Editor states related to multiple selection
+    Bugfix: Emtpy lines for hidden branches in ASCII export
+    Bugfix: Flag to search notes in FindResultWidget
+    Bugfix: For non-sleeping tasks display "-" in table as sleep time
+    Bugfix: Function key F4 not executing related macro
+    Bugfix: HTML export for svg- and userflags
+    Bugfix: History of changing RichText notes in editor
+    Bugfix: History of editing notes and headings
+    Bugfix: Inactive NoteEditor in some cases
+    Bugfix: Modifier for modModes is SHIFT, not CTRL.
+    Bugfix: Opening default map, but without existing file
+    Bugfix: Reenable context menu in TaskEditor
+    Bugfix: Removal of temporary files on Windows
+    Bugfix: Repeat toggling target with F8
+    Bugfix: Ruby testsuite
+    Bugfix: Select new tab after creating new map
+    Bugfix: Shortcuts for formats in TextEditor
+    Bugfix: Tests related to changing (named) flags
+    Bugfix: Undo of setting task to sleep
+    Bugfix: Undo/redo toggling flag
+    Bugfix: Update HeadingEditor after reselect and undo/redo
+    Bugfix: Update confluence script
+    Bugfix: Waking up of sleeping tasks is visible again
+    Bugfix: Warning when saving uncompressed map
+    Bugfix: application to open external links
+    Bugfix: libpng warning
+    Bugfix: svg flags not displaying correctly
+    Bugfix: toggling target was not saved
+    Bugfix: use most important shortcuts also in TreeEditor

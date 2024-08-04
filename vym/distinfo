@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:59:36 nia Exp $
+$NetBSD$
 
-BLAKE2s (vym-2.7.1.tar.bz2) = 0b01bc3f4c6830e1f1a525e554808a3a368d5b77c47e33e77d4468e8b9639fac
-SHA512 (vym-2.7.1.tar.bz2) = 985dbf18f743c36b484050ae24e4392eeae701c6c72fca6bd3dc5b70b38a283211946e279804c66253b5a394a642683ca4e3a66a7288400a9193fbcbfd8c9582
-Size (vym-2.7.1.tar.bz2) = 6718924 bytes
-SHA1 (patch-main.cpp) = 0292150eccc272431ff9dc0858bd3f0ce9532b8d
+BLAKE2s (vym-2.8.8.tar.bz2) = be24886bfbd49e8060798eef1dafb530e2929b7073f749e6ee794a279ddc62cb
+SHA512 (vym-2.8.8.tar.bz2) = 8179869eecc2a1732e7d645ce5ec1b1bbd3a4c3a3a8df73faf79f7bae46c9724d0af7d6b111197b4b4c8f8638f3f9d00e8cf9b438fd481c1c260a8106526596e
+Size (vym-2.8.8.tar.bz2) = 8142944 bytes
+SHA1 (patch-src_exportoofiledialog.cpp) = efdaef454730d62c6eaff132e2a5ea08501a8bfd
+SHA1 (patch-src_main.cpp) = 448c099b3fb7a0e17741464e22927ab13492d110
+SHA1 (patch-src_mainwindow.cpp) = a29ad65247e90cc81246e66078d33366eea2ddf4
