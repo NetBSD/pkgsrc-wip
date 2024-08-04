@@ -129,10 +129,11 @@ SITES.${DF}=	${NETBSD_REPO}
 #SITES.${DF}=	${NETBSD_REPO}
 #.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo) || make(makesum) || make(mdi)
+NB:=		-nb1
 RUST_ARCH:=	armv6-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
