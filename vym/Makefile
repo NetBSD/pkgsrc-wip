@@ -75,6 +75,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_DOCDIR=share/doc/vym
 post-extract:
 	${GZIP_CMD} -d ${WRKSRC}/doc/vym.1.gz
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
