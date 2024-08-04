@@ -112,7 +112,7 @@ NBSUF=
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 # Just for aarch64, due to workaround for PR#58154
-NB=		-nb1
+NB:=		-nb1
 RUST_ARCH:=	aarch64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
@@ -137,10 +137,11 @@ DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make(makesum) || make(mdi)
+NB:=		-nb1
 RUST_ARCH:=	armv7-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
@@ -199,6 +200,7 @@ SITES.${DF}=	${NETBSD_REPO}
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
+WRKSRC:=	${WRKSRC:C/-$//}
 # Undo the powerpc netbsd90 thingie...
 WRKSRC:=	${WRKSRC:C/netbsd90/netbsd/}
 
