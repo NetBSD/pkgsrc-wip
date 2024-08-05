@@ -1,14 +1,16 @@
 # $NetBSD: Makefile,v 1.6 2014/06/15 13:29:21 makoto Exp $
 
-DISTNAME=	mu-cite-202011031127
+DISTNAME=	mu-cite-0.20240802
 CATEGORIES=	mail
-MASTER_SITES=	http://www.jpl.org/elips/mu/snapshots/
-PKGREVISION=	1
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cvs-m17n-org/}
+GITHUB_TAG=	62d42d2ef18a89bb109582f3b9466d46f9e7d4a0
 
-MAINTAINER=	packages@ki.nu
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emacs-21.ki.nu/application/mu-cite.html
 COMMENT=	Mail (MUA) companion to cite other's mail
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=	${WRKDIR}/${PKGBASE:tu}-${GITHUB_TAG}
 
 SUBST_CLASSES+=		dest
 SUBST_STAGE.dest=	pre-build
