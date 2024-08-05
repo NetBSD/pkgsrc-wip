@@ -11,8 +11,6 @@ HOMEPAGE=		https://www.insilmaril.de/vym/
 COMMENT=		Generate and manipulate maps which show your thoughts
 LICENSE=		gnu-gpl-v2
 
-EXTRACT_USING=		bsdtar
-
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
