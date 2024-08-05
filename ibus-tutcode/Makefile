@@ -19,4 +19,5 @@ USE_TOOLS+=		autoconf automake
 pre-configure:
 	(cd ${WRKSRC}; ./autogen.sh --prefix ${PREFIX})
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
