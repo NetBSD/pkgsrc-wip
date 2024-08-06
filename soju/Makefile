@@ -57,8 +57,8 @@ do-install:
 post-install:
 	scdoc < ${WRKSRC}/doc/soju.1.scd > ${WRKSRC}/doc/soju.1
 	scdoc < ${WRKSRC}/doc/sojuctl.1.scd > ${WRKSRC}/doc/sojuctl.1
-	${INSTALL_MAN} ${WRKSRC}/doc/soju.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/sojuctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/soju.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/sojuctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/contrib/soju.service ${DESTDIR}${PREFIX}/share/examples/soju/soju.service
 	${INSTALL_DATA} ${WRKSRC}/config.in ${DESTDIR}${PREFIX}/share/examples/soju/config
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
