@@ -14,7 +14,7 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-build
 SUBST_MESSAGE.man=	Fixing /run path in man page
 SUBST_FILES.man=	doc/soju.1.scd
-SUBST_SED.man=		-e 's;/run/soju/admin;${VARBASE}/run/soju.sock;g'
+SUBST_SED.man=		-e 's;/run/soju/admin;${VARBASE}/run/soju/admin;g'
 
 TOOL_DEPENDS+=	scdoc>=0:../../textproc/scdoc
 
@@ -22,16 +22,26 @@ BUILD_DEFS+=	VARBASE
 
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X codeberg.org/emersion/soju/config.DefaultPath=${PKG_SYSCONFDIR}/config \
-			-X codeberg.org/emersion/soju/config.DefaultUnixAdminPath=${VARBASE}/run/soju.sock'
+			-X codeberg.org/emersion/soju/config.DefaultUnixAdminPath=${VARBASE}/run/soju/admin'
 GO_BUILD_PATTERN+=	./cmd/soju ./cmd/sojuctl ./cmd/sojudb \
 			./contrib/migrate-db ./contrib/migrate-logs \
 			./contrib/znc-import
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/examples/soju
 
+SOJU_USER?=		soju
+SOJU_GROUP?=		soju
+PKG_GROUPS=		${SOJU_GROUP}
+PKG_USERS=		${SOJU_USER}:${SOJU_GROUP}
+
+OWN_DIRS_PERMS+=	${VARBASE}/lib/soju ${SOJU_USER} ${SOJU_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/run/soju ${SOJU_USER} ${SOJU_GROUP} 0700
+
 PKG_SYSCONFSUBDIR=	soju
 CONF_FILES=		${PREFIX}/share/examples/soju/config \
 			${PKG_SYSCONFDIR}/config
+
+RCD_SCRIPTS+=		soju
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/soju ${DESTDIR}${PREFIX}/bin
