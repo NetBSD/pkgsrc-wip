@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=			${WRKDIR}/ibus-tutcode-ibus-tutcode-1.0.2
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
-USE_TOOLS+=		autoconf automake
+USE_TOOLS+=		autoconf automake gmake
 
 pre-configure:
 	(cd ${WRKSRC}; ./autogen.sh --prefix ${PREFIX})
