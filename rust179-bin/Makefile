@@ -30,7 +30,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-earmv6hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
-#ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
+ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
 ONLY_FOR_PLATFORM+=	NetBSD-*-riscv64
 
 # Illumos, jperkin@ provided binaries
@@ -169,14 +169,14 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-#.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	mipsel-unknown-netbsd
-#DN:=		${DISTNAME}${NBSUF}
-#EXTRACT_SUFX=	.tar.xz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	${NETBSD_REPO}
-#.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	mipsel-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-riscv64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	riscv64gc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
