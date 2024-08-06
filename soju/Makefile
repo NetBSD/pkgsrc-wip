@@ -21,7 +21,9 @@ GO_BUILD_PATTERN+=	./cmd/soju ./cmd/sojuctl ./cmd/sojudb \
 			./contrib/migrate-db ./contrib/migrate-logs \
 			./contrib/znc-import
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/examples/soju
+DOCDIR=			${PREFIX}/share/doc/soju
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/examples/soju \
+			${DOCDIR} ${DOCDIR}/ext
 
 SOJU_USER?=		soju
 SOJU_GROUP?=		soju
@@ -59,6 +61,21 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/sojuctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/contrib/soju.service ${DESTDIR}${PREFIX}/share/examples/soju/soju.service
 	${INSTALL_DATA} ${WRKSRC}/config.in ${DESTDIR}${PREFIX}/share/examples/soju/config
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/getting-started.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/per-user-ip.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/certbot.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/clients.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/tlstunnel.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/README.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/account-required.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/bouncer-networks.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/filehost.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/no-implicit-names.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/read.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/search.md ${DESTDIR}${DOCDIR}/ext
+	${INSTALL_DATA} ${WRKSRC}/doc/ext/webpush.md ${DESTDIR}${DOCDIR}/ext
 
 .include "go-modules.mk"
 
