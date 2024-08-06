@@ -32,11 +32,11 @@ SUBST_MESSAGE.flags=	Fix path to flags
 SUBST_FILES.flags=	src/main.cpp src/mainwindow.cpp
 SUBST_VARS.flags=	PREFIX
 
-SUBST_CLASSES+=		man_gz
-SUBST_STAGE.man_gz=	pre-configure
-SUBST_MESSAGE.man_gz=	Fix installing gzipped man page
-SUBST_FILES.man_gz=	CMakeLists.txt
-SUBST_SED.man_gz=	-e 's;doc/vym.1.gz;doc/vym.1;g'
+SUBST_CLASSES+=		man-gz
+SUBST_STAGE.man-gz=	pre-configure
+SUBST_MESSAGE.man-gz=	Fix installing gzipped man page
+SUBST_FILES.man-gz=	CMakeLists.txt
+SUBST_SED.man-gz=	-e 's;doc/vym.1.gz;doc/vym.1;g'
 
 # 'CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=man/man1' seems to be ignored
 SUBST_CLASSES+=			cmake-mandir
