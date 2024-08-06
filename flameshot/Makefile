@@ -25,4 +25,6 @@ SUBST_VARS.mandir=	PKGMANDIR
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt5-qttools=	build
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
