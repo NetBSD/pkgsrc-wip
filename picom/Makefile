@@ -24,6 +24,7 @@ INSTALLATION_DIRS+=	share/examples/picom share/examples/picom/xdg/autostart
 
 CONF_FILES+=	share/examples/picom/xdg/autostart/picom.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/picom.desktop
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/picom.sample.conf ${DESTDIR}${PREFIX}/share/examples/picom/picom.sample.conf
