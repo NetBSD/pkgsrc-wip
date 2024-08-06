@@ -64,6 +64,8 @@ CONFIGURE_ENV=	JAVAC="${JAVAC}" JAR="${JAR}" JAVA="${JAVA}" CLASSPATH="${PORT_CL
 
 CONFIGURE_ARGS=	--disable-csharp --prefix=${PREFIX}
 
+CFLAGS.Linux+=	-fPIC
+
 PORTVERSION=	2.7.7
 DOCSDIR=	${PREFIX}/share/doc/antlr
 PORTDOCS=	ANTLRException.gif closure.gif cpp-runtime.html \
