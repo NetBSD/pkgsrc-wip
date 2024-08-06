@@ -16,12 +16,10 @@ USE_LANGUAGES=	c++
 
 PKGCONFIG_OVERRIDE+=	external/Qt-Color-Widgets/QtColorWidgets.pc.in
 
-# Unclear why this subsitution doesn't work.
-# It makes the manpage not get installed at all.
-#SUBST_CLASSES+=	mandir
-#SUBST_STAGE.mandir=	pre-configure
-#SUBST_FILES.mandir=	src/CMakeLists.txt
-#SUBST_SED.mandir+=	-e 's,share/man,${PKGMANDIR}/man,g'
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_FILES.mandir=	src/CMakeLists.txt
+SUBST_VARS.mandir=	PKGMANDIR
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

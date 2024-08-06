@@ -1,5 +1,6 @@
 @comment $NetBSD$
 bin/flameshot
+man/man1/flameshot.1
 share/applications/org.flameshot.Flameshot.desktop
 share/bash-completion/completions/flameshot
 share/dbus-1/interfaces/org.flameshot.Flameshot.xml
@@ -45,6 +46,5 @@ share/icons/hicolor/48x48/apps/flameshot.png
 share/icons/hicolor/48x48/apps/org.flameshot.Flameshot.png
 share/icons/hicolor/scalable/apps/flameshot.svg
 share/icons/hicolor/scalable/apps/org.flameshot.Flameshot.svg
-share/man/man1/flameshot.1
 share/metainfo/org.flameshot.Flameshot.metainfo.xml
 share/zsh/site-functions/_flameshot
