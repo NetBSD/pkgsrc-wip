@@ -11,7 +11,7 @@ COMMENT=	Python wrapper for the GitHub API
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.6.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-jwcrypto>=0.5.0:../../wip/py-jwcrypto
+DEPENDS+=	${PYPKGPREFIX}-jwcrypto>=0.5.0:../../www/py-jwcrypto
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.18:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.0:../../textproc/py-uritemplate
 

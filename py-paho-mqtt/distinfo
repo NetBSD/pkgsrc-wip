@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (paho.mqtt.python/v2.0.0rc2.tar.gz) = af2edba95ee5c45cdb864714eff5a96179d4d04589d8ec750b54b4972dba7e56
-SHA512 (paho.mqtt.python/v2.0.0rc2.tar.gz) = 114f75148f0da570b6dc41bb293b17494810388986dd45366cb6f52a0dcef4da2c4dd82c87d212235cb8da1179a4209ee9bb50ff16a577952122faffd73531d7
-Size (paho.mqtt.python/v2.0.0rc2.tar.gz) = 168139 bytes
