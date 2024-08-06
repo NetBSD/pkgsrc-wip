@@ -10,12 +10,6 @@ HOMEPAGE=	https://soju.im/
 COMMENT=	User friendly IRC bouncer
 LICENSE=	gnu-agpl-v3
 
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-build
-SUBST_MESSAGE.man=	Fixing /run path in man page
-SUBST_FILES.man=	doc/soju.1.scd
-SUBST_SED.man=		-e 's;/run/soju/admin;${VARBASE}/run/soju/admin;g'
-
 TOOL_DEPENDS+=	scdoc>=0:../../textproc/scdoc
 
 BUILD_DEFS+=	VARBASE
@@ -42,6 +36,12 @@ CONF_FILES=		${PREFIX}/share/examples/soju/config \
 			${PKG_SYSCONFDIR}/config
 
 RCD_SCRIPTS+=		soju
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	post-build
+SUBST_MESSAGE.man=	Fixing /run path in man page
+SUBST_FILES.man=	doc/soju.1.scd
+SUBST_SED.man=		-e 's;/run/soju/admin;${VARBASE}/run/soju/admin;g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/soju ${DESTDIR}${PREFIX}/bin
