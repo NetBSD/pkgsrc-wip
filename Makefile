@@ -3451,7 +3451,6 @@ SUBDIR+=	py-clnum
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-cloud-init
 SUBDIR+=	py-cloudlib
-SUBDIR+=	py-cloudpickle
 SUBDIR+=	py-cm
 SUBDIR+=	py-cma
 SUBDIR+=	py-cmd2

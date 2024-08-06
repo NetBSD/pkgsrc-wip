@@ -18,7 +18,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer>=0.28:../../devel/py-versioneer
 
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=2.2.0:../../wip/py-cloudpickle
+DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=2.2.0:../../converters/py-cloudpickle
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-locket>=1.0.0:../../wip/py-locket
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack

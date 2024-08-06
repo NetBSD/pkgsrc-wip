@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/joblib/loky/
 COMMENT=	Robust implementation of concurrent.futures.ProcessPoolExecutor
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=0.2.1:../../wip/py-cloudpickle
+DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=0.2.1:../../converters/py-cloudpickle
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

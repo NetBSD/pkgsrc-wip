@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-jedi>=0.17.2:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-chardet>=2.0.0:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.4.1:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.5:../../devel/py-ipython
-DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=2.2.0:../../wip/py-cloudpickle
+DEPENDS+=	${PYPKGPREFIX}-cloudpickle>=2.2.0:../../converters/py-cloudpickle
 DEPENDS+=	${PYPKGPREFIX}-cookiecutter>=2.1.1:../../devel/py-cookiecutter
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.5.0:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-pyls-spyder>=0.4.0:../../wip/py-pyls-spyder

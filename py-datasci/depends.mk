@@ -77,7 +77,7 @@ DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet  # chardet 4
 DEPENDS+=	charls-[0-9]*:../../graphics/charls  # charls 2.2.0
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer-[0-9]*:../../converters/py-charset-normalizer  # charset-normalizer 2.0.4
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click  # click 8.1.7
-DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../wip/py-cloudpickle  # cloudpickle 2.2.1
+DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../converters/py-cloudpickle  # cloudpickle 2.2.1
 # clyent 1.2.2 is missing
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama  # colorama 0.4.6
 DEPENDS+=	${PYPKGPREFIX}-colorcet-[0-9]*:../../wip/py-colorcet  # colorcet 3.0.1
