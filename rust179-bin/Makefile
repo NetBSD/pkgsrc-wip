@@ -4,7 +4,7 @@ DISTNAME=	rust-1.79.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -17,8 +17,10 @@ CONFLICTS+=	rust-[0-9]*
 ONLY_FOR_PLATFORM+=	Darwin-*-aarch64
 ONLY_FOR_PLATFORM+=	Darwin-*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	Linux-*-aarch64
 ONLY_FOR_PLATFORM+=	Linux-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 # he@NetBSD.org provided binaries
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
@@ -30,10 +32,9 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
 #ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
 ONLY_FOR_PLATFORM+=	NetBSD-*-riscv64
-ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 # Illumos, jperkin@ provided binaries
-#ONLY_FOR_PLATFORM+=	SunOS-*-x86_64
+ONLY_FOR_PLATFORM+=	SunOS-*-x86_64
 
 NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
@@ -42,10 +43,8 @@ CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 CHECK_SHLIBS_SKIP+=	bin/cargo-clippy
 CHECK_SHLIBS_SKIP+=	bin/rustfmt
 
-# Bootstraps built for 9.0.
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv6hf
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-powerpc
+# Bootstraps built for 9.0 or newer, -8 gcc is too old...
+BROKEN_ON_PLATFORM+=	NetBSD-8.*
 
 # Binary distributions aren't built as PIE.
 MKPIE_SUPPORTED=	no
@@ -188,21 +187,19 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 
 # Illumos:
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	x86_64-unknown-illumos
-#DN:=		${DISTNAME}
-#EXTRACT_SUFX=	.tar.gz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
-#.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	x86_64-unknown-illumos
+DN:=		${DISTNAME}
+EXTRACT_SUFX=	.tar.gz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+.endif
 
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
 WRKSRC:=	${WRKSRC:C/-$//}
-# Undo the powerpc netbsd90 thingie...
-WRKSRC:=	${WRKSRC:C/netbsd90/netbsd/}
 
 do-install:
 	cd ${.CURDIR}/files; pax -rw install.sh ${WRKSRC}
@@ -246,26 +243,17 @@ fix-darwin-install-name:
 	done
 .  endfor
 .else
+# Not Darwin:
+
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
-# The llvm utilities may need a specific libstdc++ version from compat80
-.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
-.    if ${MACHINE_ARCH} != "aarch64" && ${MACHINE_ARCH} != "earmv7hf" && \
-        ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "earmv6hf" && \
-        ${MACHINE_ARCH} != "riscv64" && ${MACHINE_ARCH} != "aarch64eb"
-DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
-RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
-FORCE_RPATH=
-.    else
-RUST_LLVM_RPATH=	${PREFIX}/lib
-.    endif
-.  else
-# ld.elf_so in NetBSD 8.x only obeys RPATH, not RUNPATH, so force RPATH there.
 RUST_LLVM_RPATH=	${PREFIX}/lib
 FORCE_RPATH=		--force-rpath
-.  endif
 
+# 32-bit NetBSD ports need libatomic
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
       !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 .    include "../../devel/libatomic/buildlink3.mk"
 .  endif
@@ -273,17 +261,18 @@ FORCE_RPATH=		--force-rpath
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in clippy-driver miri rls rust-analyzer rustc rustdoc
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+.  for bin in bin/clippy-driver bin/miri bin/rls bin/rust-analyzer \
+	bin/rustc bin/rustdoc libexec/rust-analyzer-proc-macro-srv
+	if [ -f ${DESTDIR}${PREFIX}/${bin} ]; then \
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
-		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} ; \
+		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/${bin} ; \
 	fi
 .  endfor
 # Only Linux builds link these binaries against an LLVM library
 .  if ${OPSYS} == "Linux"
 .    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
-	   rust-lld
+	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 	   ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .    endfor
