@@ -2,10 +2,5 @@ Can generally be used, but see [1] for limitations.
 
 [1]: https://github.com/3mdeb/efivar/blob/bsd/BSD_PORTING.md
 
-This uses EFI driver which seem to NOT be included into releases?
-
-The are warnings during build like (not sure if needs to be fixed):
-
-    In file included from ioctl.c:25:0:
-    /usr/include/sys/efiio.h:46:0: note: this is the location of the previous definition
-     #define EFI_VARIABLE_AUTHENTICATED_WRITE_ACCESS   0x00000010
+The EFI driver did make it into NetBSD 10.0, but /dev/efi isn't created
+automatically.  Running `cd /dev && ./MAKEDEF efi` remedies that.

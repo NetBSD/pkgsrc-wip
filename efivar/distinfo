@@ -8,4 +8,5 @@ SHA1 (patch-src_efisec.pc.in) = f5a3ddee2aa3863d4f2b2009ec03bb921a9c28a6
 SHA1 (patch-src_efivar.pc.in) = 7b5f42eab8c6bd71aa69893a8df6e810a65c8f5d
 SHA1 (patch-src_include_defaults.mk) = e79446000ba43eb82ecd6a141de593d9d768d27f
 SHA1 (patch-src_include_efivar_efivar-dp.h) = 8eaeb0a3657a6263e2b19da77c14b29bd7b6f411
+SHA1 (patch-src_include_efivar_efivar-types.h) = efb16792e17e69a3f86db28c61044eeb27a80508
 SHA1 (patch-src_include_gcc.specs) = b63825b96dcedc44404de730683a09f421a07eea
