@@ -1,10 +1,10 @@
 # $NetBSD: Makefile,v 1.1 2021/11/06 16:40:06 rhialto Exp $
 
-DISTNAME=	xemu-0.0.2024.02.28
+DISTNAME=	xemu-0.0.2024.08.07
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lgblgblgb/}
 GITHUB_PROJECT=	xemu
-GITHUB_TAG=	968f7e05ab5fbfeeb288487210c83216da34cbf5
+GITHUB_TAG=	7a9e860ff5ce61dad53de5b9ca18b7100dd2bb8a
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://github.com/lgblgblgb/xemu
@@ -19,6 +19,7 @@ REPLACE_BASH+=	build/configure/configure
 
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 MAKE_ENV+=	SDL2_RPATH=${COMPILER_RPATH_FLAG},${BUILDLINK_PREFIX.SDL2}/lib
+MAKE_FLAGS+=	RELEASE=yes
 
 INSTALLATION_DIRS+=	share/xemu-lgb
 
