@@ -18,6 +18,10 @@ USE_TOOLS+=	gmake pkg-config
 
 USE_CC_FEATURES+=	c11
 LDFLAGS+=		-L${WRKSRC}/lib/x86_64--netbsd/release
+INSTALLATION_DIRS=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/release/xmoji ${DESTDIR}${PREFIX}/bin
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
