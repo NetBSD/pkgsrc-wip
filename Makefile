@@ -5890,6 +5890,7 @@ SUBDIR+=	xmms-skin-nixamp
 SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-volnorm
 SUBDIR+=	xmms2
+SUBDIR+=	xmoji
 SUBDIR+=	xmoto
 SUBDIR+=	xnee
 SUBDIR+=	xonotic
