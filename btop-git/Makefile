@@ -13,7 +13,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-GCC_REQD+=	10 # needs --std=c++20
+
+USE_CXX_FEATURES+=	c++20
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
