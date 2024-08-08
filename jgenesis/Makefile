@@ -21,6 +21,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 
+INSTALLATION_DIRS+=	bin
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jgenesis-cli \
 		${DESTDIR}${PREFIX}/bin
