@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- go.sum.orig	2024-06-16 16:24:36.000000000 +0000
++++ go.sum
+@@ -82,8 +82,8 @@ github.com/stretchr/testify v1.8.4 h1:Cc
+ github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
+ github.com/tinygo-org/tools v0.0.0-20240612102102-36af80766fc9 h1:t8VQNFa68kSA8ze7gi8kSxF22a7/vmr1OtOPLvgO3+8=
+ github.com/tinygo-org/tools v0.0.0-20240612102102-36af80766fc9/go.mod h1:aCwcsjqvq7Yqt6TNyX7QMU2enbQ/Gt0bo6krSeEri+c=
+-go.bug.st/serial v1.6.0 h1:mAbRGN4cKE2J5gMwsMHC2KQisdLRQssO9WSM+rbZJ8A=
+-go.bug.st/serial v1.6.0/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
++github.com/tnn2/go-serial v0.0.0-20240808132751-d345e1ef8d6d h1:ETRP2BUPBgmvJburf5w+IXW5Uj38d6YgK/wKkuJuScM=
++github.com/tnn2/go-serial v0.0.0-20240808132751-d345e1ef8d6d/go.mod h1:nofMJxTeNVny/m6+KaafC6vJGj3miwQZ6vW4BZUGJPI=
+ golang.org/x/mod v0.18.0 h1:5+9lSbEzPSdWkH32vYPBwEpX8KwDbM52Ud9xBUvNlb0=
+ golang.org/x/net v0.26.0 h1:soB7SVo0PWrY4vPW/+ay0jKDNScG2X9wFeYlXIvJsOQ=
+ golang.org/x/net v0.26.0/go.mod h1:5YKkiSynbBIh3p6iOc/vibscux0x38BZDkn8sCUPxHE=

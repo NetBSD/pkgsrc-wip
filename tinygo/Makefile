@@ -43,19 +43,14 @@ CHECK_INTERPRETER_SKIP+=	tinygo/lib/macos-minimal-sdk/generate-stubs.py
 CHECK_INTERPRETER_SKIP+=	tinygo/lib/picolibc/newlib/libc/string/uniset
 CHECK_INTERPRETER_SKIP+=	tinygo/lib/picolibc/newlib/libc/tinystdio/make-dtoa-data
 
-GO_MODULE_EXTRACT=	go.bug.st_serial_@v_v1.6.0.zip
 DISTFILES=		${DEFAULT_DISTFILES} ${TINYGO_DISTFILES}
-EXTRACT_ONLY=		${DEFAULT_DISTFILES} ${TINYGO_DISTFILES} ${_GITHUB_DEFAULT_DISTFILES} ${GO_MODULE_EXTRACT}
+EXTRACT_ONLY=		${DEFAULT_DISTFILES} ${TINYGO_DISTFILES} ${_GITHUB_DEFAULT_DISTFILES}
 
 .include "go-modules.mk"
 
 post-extract:
 	mv ${WRKDIR}/llvm-project* ${WRKSRC}/llvm-project
 	rm -rf ${WRKSRC}/lib/musl && mv ${WRKDIR}/musl* ${WRKSRC}/lib/musl
-	cp ${WRKDIR}/go.bug.st/serial@v1.6.0/serial_openbsd.go		\
-		${WRKDIR}/go.bug.st/serial@v1.6.0/serial_netbsd.go
-	cp ${WRKDIR}/go.bug.st/serial@v1.6.0/enumerator/usb_openbsd.go	\
-		${WRKDIR}/go.bug.st/serial@v1.6.0/enumerator/usb_netbsd.go
 
 do-build:
 .for t in llvm-build tinygo build/release
