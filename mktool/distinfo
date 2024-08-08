@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mktool-0.1.8.tar.gz) = f7a5b42169cb93ee22c81668257c8813cd244aed13fb042855d36e1c9759b255
+SHA512 (mktool-0.1.8.tar.gz) = 8df7dc78b56cb2997b36c398adc373f9b0e8f9c283c6c74f851416d0ea6701733191837a6e0a08de56bb1c192e978a0909b961724db5fe009dce8bda0cf06955
+Size (mktool-0.1.8.tar.gz) = 13267 bytes
