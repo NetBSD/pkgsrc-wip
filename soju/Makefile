@@ -46,7 +46,7 @@ CONF_FILES_PERMS=	/dev/null ${VARBASE}/lib/soju/main.db \
 			${SOJU_USER} ${SOJU_GROUP} 0644
 
 ## Including mk/bsd.prefs.mk before lang/go/go-module.mk
-## results in non-working binaries (cf. pkgtools/pkglint/Makefile):
+## results in non-working binaries:
 ##	soju: text relocations
 ##	soju: Cannot write-enable text segment: Permission denied
 #.include "../../mk/bsd.prefs.mk"
