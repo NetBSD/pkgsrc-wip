@@ -274,10 +274,11 @@ FORCE_RPATH=		--force-rpath
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in clippy-driver miri rls rust-analyzer rustc rustdoc
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+.  for bin in bin/clippy-driver bin/miri bin/rls bin/rust-analyzer \
+	bin/rustc bin/rustdoc libexec/rust-analyzer-proc-macro-srv
+	if [ -f ${DESTDIR}${PREFIX}/${bin} ]; then \
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
-		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} ; \
+		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/${bin} ; \
 	fi
 .  endfor
 # Only Linux builds link these binaries against an LLVM library
