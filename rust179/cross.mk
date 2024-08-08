@@ -13,6 +13,7 @@
 # to do a cross-build.  The wrapper script assumes dest/ and tools/
 # as a result of a cross-build of NetBSD as subdirectories of this root
 #CROSS_ROOT=		/u/evbarm-armv7hf
+#CROSS_ROOT=		/u/evbarm-armv7hf-10.0
 #CROSS_ROOT=		/u/evbarm-armv6hf
 #CROSS_ROOT=		/u/sparc64
 #CROSS_ROOT=		/u/macppc
