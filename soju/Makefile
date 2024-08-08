@@ -29,7 +29,12 @@ SOJU_USER?=		soju
 SOJU_GROUP?=		soju
 PKG_GROUPS=		${SOJU_GROUP}
 PKG_USERS=		${SOJU_USER}:${SOJU_GROUP}
+PKG_GROUPS_VARS+=	SOJU_GROUP
+PKG_USERS_VARS+=	SOJU_USER
 
+FILES_SUBST+=		SOJU_USER=${SOJU_USER}
+
+OWN_DIRS_PERMS+=	${VARBASE}/log/soju ${SOJU_USER} ${SOJU_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/lib/soju ${SOJU_USER} ${SOJU_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/run/soju ${SOJU_USER} ${SOJU_GROUP} 0700
 
@@ -40,6 +45,15 @@ CONF_FILES=		${PREFIX}/share/examples/soju/config \
 CONF_FILES_PERMS=	/dev/null ${VARBASE}/lib/soju/main.db \
 			${SOJU_USER} ${SOJU_GROUP} 0644
 
+## Including mk/bsd.prefs.mk before lang/go/go-module.mk
+## results in non-working binaries (cf. pkgtools/pkglint/Makefile):
+##	soju: text relocations
+##	soju: Cannot write-enable text segment: Permission denied
+#.include "../../mk/bsd.prefs.mk"
+#.if ${INIT_SYSTEM} == "rc.d"
+#DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
+#.endif
+DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
 RCD_SCRIPTS+=		soju
 
 SUBST_CLASSES+=		man

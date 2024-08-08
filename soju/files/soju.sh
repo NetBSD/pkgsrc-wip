@@ -4,23 +4,26 @@
 #
 # PROVIDE: soju
 # REQUIRE: DAEMON
-#
-# The following lines should be added to /etc/rc.conf:
-#
-# soju=YES
-# soju_user="soju"
 
 $_rc_subr_loaded . /etc/rc.subr
 
 name="soju"
-rcvar=$name
-command="/usr/pkg/bin/soju"
-required_files="/usr/pkg/etc/soju/config"
+rcvar=${name}
+pidfile="@VARBASE@/run/${name}.pid"
+procname="@PREFIX@/bin/soju"
+command="@PREFIX@/sbin/daemonize"
+command_args="${command_args} -a"
+command_args="${command_args} -o @VARBASE@/log/soju/stdout.log"
+command_args="${command_args} -e @VARBASE@/log/soju/stderr.log"
+command_args="${command_args} -p ${pidfile}"
+command_args="${command_args} -u @SOJU_USER@"
+command_args="${command_args} ${procname}"
+required_files="@PKG_SYSCONFBASE@/soju/config"
 extra_commands="reload"
 start_precmd=soju_prestart
 
 soju_prestart() {
-	dir="/var/run/soju"
+	dir="@VARBASE@/run/soju"
 	if test ! -d $dir; then
 		/bin/mkdir -p $dir
 		/bin/chmod 0700 $dir
