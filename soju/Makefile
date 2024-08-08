@@ -36,6 +36,9 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/soju ${SOJU_USER} ${SOJU_GROUP} 0700
 PKG_SYSCONFSUBDIR=	soju
 CONF_FILES=		${PREFIX}/share/examples/soju/config \
 			${PKG_SYSCONFDIR}/config
+# Install an empty file so that running sojudb will leave the right perms
+CONF_FILES_PERMS=	/dev/null ${VARBASE}/lib/soju/main.db \
+			${SOJU_USER} ${SOJU_GROUP} 0644
 
 RCD_SCRIPTS+=		soju
 
