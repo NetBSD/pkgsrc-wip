@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/jperkin/mktool/
 COMMENT=	pkgsrc mk helper tool
 #LICENSE=	# TODO: (see mk/license.mk)
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
+
+.include "cargo-depends.mk"
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
