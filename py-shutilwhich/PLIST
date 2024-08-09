@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/10 15:23:39 jihbed Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/shutilwhich.py
-${PYSITELIB}/shutilwhich.pyc
-${PYSITELIB}/shutilwhich.pyo
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/shutilwhich/__init__.py
+${PYSITELIB}/shutilwhich/__init__.pyc
+${PYSITELIB}/shutilwhich/__init__.pyo
+${PYSITELIB}/shutilwhich/lib.py
+${PYSITELIB}/shutilwhich/lib.pyc
+${PYSITELIB}/shutilwhich/lib.pyo
