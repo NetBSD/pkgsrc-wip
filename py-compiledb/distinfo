@@ -1,5 +1,0 @@
-$NetBSD$
-
-BLAKE2s (compiledb-0.10.1.tar.gz) = 0da42cac7783f89b80d4223a461f36a03852abfa69017e45c29148c521487bc0
-SHA512 (compiledb-0.10.1.tar.gz) = 9920042fa99431c54bbc31c5d6e3783d305e7520f0276ab21f86fd78f7dd68acc5381cc18e3fae0b848023798666aa4dd71c3ab7d8588c808bf73a6ad13c2d8e
-Size (compiledb-0.10.1.tar.gz) = 27579 bytes

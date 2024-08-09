@@ -1,1 +1,0 @@
-bin/compiledb @PREFIX@/bin/compiledb-@PYVERSSUFFIX@
