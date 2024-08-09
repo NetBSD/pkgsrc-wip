@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (llama.cpp-b3183.tar.gz) = 3615f832afd058a54b4f9825bccbe44edb8bfd0b0a203036b7b472116e53afbf
-SHA512 (llama.cpp-b3183.tar.gz) = d8540af75320029dfb764fc1c0c461cefe241528d373fa12132733712af80d486ef2774f61cfddfe64efdfd50a36910c40da8986954fbed1f04f00a41edfd9ba
-Size (llama.cpp-b3183.tar.gz) = 20598797 bytes
+BLAKE2s (llama.cpp-b3547.tar.gz) = 85d42530214ee3703d4e8682cc12792c3076d2c4b1bf7dbc37d58510a9422234
+SHA512 (llama.cpp-b3547.tar.gz) = 38714bc499d4bff392e6dc65681e0532bc1a7f99f0682318b9e114bab3aadc5bac88ac559986df8920dddfa1e5688fb58e073274eb52cd82d12e9b7e027e3265
+Size (llama.cpp-b3547.tar.gz) = 19015162 bytes
