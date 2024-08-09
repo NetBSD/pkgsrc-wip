@@ -1,9 +1,9 @@
 $NetBSD$
 
-BLAKE2s (ParaView-v5.11.2.tar.gz) = 969b8234e5fe0c351a1a889fea20f24539c3688b66277450915ab8a26a97f041
-SHA512 (ParaView-v5.11.2.tar.gz) = 1600cd02d15e1d7b1244778f503014f2c02c3ad3e4c81b5ef6f7083fa74fc8a7c4e3c6702a70361ae4e0349bf18c782a4936c5386f59334293e0e53baf03ef77
-Size (ParaView-v5.11.2.tar.gz) = 100660904 bytes
+BLAKE2s (ParaView-v5.12.1.tar.gz) = e61cf9b32a265e0bc274fdb0186e924ba94b2895e0f69333b4107651998e8ba7
+SHA512 (ParaView-v5.12.1.tar.gz) = 730b7a3bef4b70bfbd81c63d96a9cbe85906fbbac52706989d3996c11a2e2fcfefe550c2ca439e009bacf93a9a0e8bfff16a34729f3874f7ac610bc4d38771ab
+Size (ParaView-v5.12.1.tar.gz) = 156847753 bytes
 SHA1 (patch-Qt_Core_pqServerConfiguration.cxx) = 13650d27176d82f812dc92e441f42de02b070462
-SHA1 (patch-VTK_ThirdParty_ioss_vtkioss_Ioss__FileInfo.C) = a7e891cee4647bd8a0d60a0930f2357c09a96489
-SHA1 (patch-VTK_ThirdParty_loguru_vtkloguru_loguru.cpp) = 517533d8dc19f8c00aee9d78932e6b518df1ca16
-SHA1 (patch-VTK_ThirdParty_vtkm_vtkvtkm_vtk-m_vtkm_thirdparty_loguru_vtkmloguru_loguru.cpp) = ef579e8f5baa4262ee1be9d34e890d5880b11f0f
+SHA1 (patch-VTK_ThirdParty_ioss_vtkioss_Ioss__FileInfo.C) = 497085f40d9f181d953e5c753a93b15af91f5ff8
+SHA1 (patch-VTK_ThirdParty_loguru_vtkloguru_loguru.cpp) = 2827711be67aa8210fdb169dd5b6c49a7ed97174
+SHA1 (patch-VTK_ThirdParty_vtkm_vtkvtkm_vtk-m_vtkm_thirdparty_loguru_vtkmloguru_loguru.cpp) = 71191591c70594ed3c8e9e01f221d385675abb5e

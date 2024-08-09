@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	ParaView-v5.11.2
+DISTNAME=	ParaView-v5.12.1
 PKGNAME=	${DISTNAME:S/ParaView-v/paraview-/1}
 CATEGORIES=	math
-MASTER_SITES=	https://www.paraview.org/files/v5.11/
+MASTER_SITES=	https://www.paraview.org/files/v5.12/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.paraview.org/
@@ -61,12 +61,9 @@ PY_PATCHPLIST=	yes
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
-PRINT_PLIST_AWK+=	{gsub(/5.11/, "$${PV_VER}");}
+PRINT_PLIST_AWK+=	{gsub(/5.12/, "$${PV_VER}");}
 
-PLIST_SUBST+=	PV_VER=5.11
-
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/paraview-5.11/vtkvtkm/vtk-m/vtkm/thirdparty/loguru/vtkmloguru/loguru.cpp.orig
+PLIST_SUBST+=	PV_VER=5.12
 
 .include "../../lang/python/extension.mk"
 

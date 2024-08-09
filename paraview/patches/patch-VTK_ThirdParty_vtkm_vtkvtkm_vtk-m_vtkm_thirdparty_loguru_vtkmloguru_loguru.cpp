@@ -2,8 +2,17 @@ $NetBSD$
 
 NetBSD support
 
---- VTK/ThirdParty/vtkm/vtkvtkm/vtk-m/vtkm/thirdparty/loguru/vtkmloguru/loguru.cpp.orig	2022-11-14 01:46:47.000000000 +0000
+--- VTK/ThirdParty/vtkm/vtkvtkm/vtk-m/vtkm/thirdparty/loguru/vtkmloguru/loguru.cpp.orig	2024-05-17 19:18:15.000000000 +0000
 +++ VTK/ThirdParty/vtkm/vtkvtkm/vtk-m/vtkm/thirdparty/loguru/vtkmloguru/loguru.cpp
+@@ -102,7 +102,7 @@
+ 		#include <pthread_np.h>
+ 	#endif
+ 
+-	#ifdef __linux__
++	#if defined(__linux__) || defined(__NetBSD__)
+ 		/* On Linux, the default thread name is the same as the name of the binary.
+ 		   Additionally, all new threads inherit the name of the thread it got forked from.
+ 		   For this reason, Loguru use the pthread Thread Local Storage
 @@ -960,6 +960,8 @@ namespace loguru
  			#elif defined(__FreeBSD__)
  				long thread_id;
