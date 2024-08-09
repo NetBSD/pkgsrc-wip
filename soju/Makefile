@@ -21,6 +21,14 @@ GO_BUILD_PATTERN+=	./cmd/soju ./cmd/sojuctl ./cmd/sojudb \
 			./contrib/migrate-db ./contrib/migrate-logs \
 			./contrib/znc-import
 
+# Including mk/bsd.prefs.mk before lang/go/go-module.mk results in
+# non-working binaries (cf. pkgtools/pkglint/Makefile):
+#	soju: text relocations
+#	soju: Cannot write-enable text segment: Permission denied
+.include "go-modules.mk"
+.include "../../lang/go/go-module.mk"
+.include "../../mk/bsd.prefs.mk"
+
 DOCDIR=			${PREFIX}/share/doc/soju
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/examples/soju \
 			${DOCDIR} ${DOCDIR}/ext
@@ -45,15 +53,10 @@ CONF_FILES=		${PREFIX}/share/examples/soju/config \
 CONF_FILES_PERMS=	/dev/null ${VARBASE}/lib/soju/main.db \
 			${SOJU_USER} ${SOJU_GROUP} 0644
 
-## Including mk/bsd.prefs.mk before lang/go/go-module.mk
-## results in non-working binaries:
-##	soju: text relocations
-##	soju: Cannot write-enable text segment: Permission denied
-#.include "../../mk/bsd.prefs.mk"
-#.if ${INIT_SYSTEM} == "rc.d"
-#DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
-#.endif
+.if ${INIT_SYSTEM} == "rc.d"
 DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
+.endif
+
 RCD_SCRIPTS+=		soju
 
 SUBST_CLASSES+=		man
@@ -62,13 +65,12 @@ SUBST_MESSAGE.man=	Fixing /run path in man page
 SUBST_FILES.man=	doc/soju.1.scd
 SUBST_SED.man=		-e 's;/run/soju/admin;${VARBASE}/run/soju/admin;g'
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/soju ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/sojuctl ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/sojudb ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/migrate-db ${DESTDIR}${PREFIX}/bin/soju-migrate-db
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/migrate-logs ${DESTDIR}${PREFIX}/bin/soju-migrate-logs
-	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/znc-import ${DESTDIR}${PREFIX}/bin/soju-znc-import
+post-build:
+	${MV} ${WRKDIR}/.gopath/bin/migrate-db ${WRKDIR}/.gopath/bin/soju-migrate-db
+	${MV} ${WRKDIR}/.gopath/bin/migrate-logs ${WRKDIR}/.gopath/bin/soju-migrate-logs
+	${MV} ${WRKDIR}/.gopath/bin/znc-import ${WRKDIR}/.gopath/bin/soju-znc-import
+
+pre-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/casemap-logs.sh ${DESTDIR}${PREFIX}/bin/soju-casemap-logs.sh
 
 post-install:
@@ -94,7 +96,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ext/search.md ${DESTDIR}${DOCDIR}/ext
 	${INSTALL_DATA} ${WRKSRC}/doc/ext/webpush.md ${DESTDIR}${DOCDIR}/ext
 
-.include "go-modules.mk"
-
-.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
