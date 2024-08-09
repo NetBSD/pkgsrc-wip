@@ -1,23 +1,2 @@
-Doesn't install:
--- Installing: /scratch/wip/Bear/work/Bear-3.1.2/stage/lib/bear/wrapper
-CMake Error at intercept/cmake_install.cmake:54 (file):
-  file RPATH_CHANGE could not write new RPATH:
-
-    
-
-  to the file:
-
-    /scratch/wip/Bear/work/Bear-3.1.2/stage/lib/bear/wrapper
-
-  The current RPATH is:
-
-    /usr/pkg/lib
-
-  which does not contain:
-
-    /usr/pkg/lib:
-
-  as was expected.
-Call Stack (most recent call first):
-  cmake_install.cmake:47 (include)
-
+Does not compile with fmtlib 11. Reported upstream at
+https://github.com/rizsotto/Bear/issues/592
