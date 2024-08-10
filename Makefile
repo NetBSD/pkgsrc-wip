@@ -5040,7 +5040,6 @@ SUBDIR+=	ruby-kakasi
 SUBDIR+=	ruby-libv8
 SUBDIR+=	ruby-multi_xml
 SUBDIR+=	ruby-mustache-sinatra
-SUBDIR+=	ruby-mustermann2
 SUBDIR+=	ruby-net-http-pipeline
 SUBDIR+=	ruby-octicons
 SUBDIR+=	ruby-passenger
