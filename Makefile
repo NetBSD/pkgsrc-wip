@@ -4769,7 +4769,6 @@ SUBDIR+=	py-validictory
 SUBDIR+=	py-vanguards
 SUBDIR+=	py-vanity
 SUBDIR+=	py-varify
-SUBDIR+=	py-vcrpy
 SUBDIR+=	py-vdirsyncer-git
 SUBDIR+=	py-vega_datasets
 SUBDIR+=	py-vegas
