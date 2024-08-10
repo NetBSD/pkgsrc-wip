@@ -1,0 +1,4 @@
+graphics/nanosvg: Add nanosvg version 20231202
+
+NanoSVG is a simple stupid single-header-file SVG parser. The output of the
+parser is a list of cubic bezier shapes.
