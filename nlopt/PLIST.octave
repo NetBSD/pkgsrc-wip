@@ -1,11 +1,12 @@
 @comment $NetBSD$
-lib/octave/${OCTAVE_VERSION}/site/oct/x86_64--netbsd/nlopt_optimize.oct
+lib/octave/${OCTAVE_VERSION}/site/oct/${MACHINE_ARCH}--netbsd/nlopt_optimize.oct
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_AUGLAG.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_AUGLAG_EQ.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GD_MLSL.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GD_MLSL_LDS.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GD_STOGO.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GD_STOGO_RAND.m
+share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GN_AGS.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GN_CRS2_LM.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GN_DIRECT.m
 share/octave/${OCTAVE_VERSION}/site/m/NLOPT_GN_DIRECT_L.m
