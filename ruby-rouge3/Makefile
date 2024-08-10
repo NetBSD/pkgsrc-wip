@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	rouge-3.3.0
+DISTNAME=	rouge-3.30.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rouge/rouge3/}
 CATEGORIES=	www
 
