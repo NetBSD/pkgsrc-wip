@@ -8,7 +8,7 @@ GITHUB_TAG=	8ae75bd0eea622f0e34cae311b3bd065b55eae9b
 
 MAINTAINER=	stix@stix.id.au
 HOMEPAGE=	https://www.github.com/prusa3d/libbgcode
-COMMENT=	XXX
+COMMENT=	Prusa Block & Binary G-code reader/writer/converter
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c c++
