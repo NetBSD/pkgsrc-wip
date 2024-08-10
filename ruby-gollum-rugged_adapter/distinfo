@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (gollum-rugged_adapter-2.1.0.gem) = 8e0840e4c0151c9a3367d86da17657095e3187863a85acdf7fd739948e486ce2
-SHA512 (gollum-rugged_adapter-2.1.0.gem) = 6b94e75eb728adb4f935a205ba687799def3c1f19b8f05ddc600d4fde9532e8471bc3fb3867488e256a3b6e31c7ba0617dd63e83e3bcf45db1787b3a5d87dc47
-Size (gollum-rugged_adapter-2.1.0.gem) = 13824 bytes
+BLAKE2s (gollum-rugged_adapter-3.0.gem) = a69aac391118fa273690bf20bd08532326dbbf23d3538dd4f937eebdd94aec4c
+SHA512 (gollum-rugged_adapter-3.0.gem) = 22cc748602cada08811b4e4a877a7830009cef1d150e36b5692318b8f813861c050bddbf8e54be0dd8eec7f85052421472f2d4833277070c88d2318ace1c723a
+Size (gollum-rugged_adapter-3.0.gem) = 13824 bytes

@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	gollum-rugged_adapter-2.1.0
+DISTNAME=	gollum-rugged_adapter-3.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
