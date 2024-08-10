@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (octicons-12.1.0.gem) = dfd9a28bd93aba8ed02f3151fd77efd311806eb1f952c7a9e098adbfd78b075e
-SHA512 (octicons-12.1.0.gem) = 0747a2938dce0bfcbebfc8f05fe93c203e7c1fd42a613007a7a66a7b339de69f5816006f284f9902aea997d1f5acd05ed504ef4d3290cd90dc9a64cda0166c62
-Size (octicons-12.1.0.gem) = 139264 bytes
+BLAKE2s (octicons-19.11.0.gem) = f984d5c65d767eb006d5acbe4737afc09d1a706069fa4bb673e86a4c61e16987
+SHA512 (octicons-19.11.0.gem) = f8bd1f5b0bf58cc3cc7a82aba221769637017bfe8c7e3f7e8b853ad530311f75e86780d23858b98b6ff8ea28e88587f15c3808b71749fbb84cad6be17fd3119f
+Size (octicons-19.11.0.gem) = 227840 bytes
