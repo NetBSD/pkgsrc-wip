@@ -5050,7 +5050,6 @@ SUBDIR+=	ruby-prawn-table
 SUBDIR+=	ruby-prawn-templates
 SUBDIR+=	ruby-pusher-client
 SUBDIR+=	ruby-rack-flash3
-SUBDIR+=	ruby-rack-protection2
 SUBDIR+=	ruby-rack-protection4
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-rbpdf
