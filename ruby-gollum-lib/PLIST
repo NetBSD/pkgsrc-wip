@@ -37,10 +37,11 @@ ${GEM_LIBDIR}/lib/gollum-lib/hook.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/all_pages.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/audio.rb
+${GEM_LIBDIR}/lib/gollum-lib/macro/flash.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/global_toc.rb
+${GEM_LIBDIR}/lib/gollum-lib/macro/icon.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/navigation.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/note.rb
-${GEM_LIBDIR}/lib/gollum-lib/macro/octicon.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/series.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/video.rb
 ${GEM_LIBDIR}/lib/gollum-lib/macro/warn.rb
