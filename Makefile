@@ -3055,6 +3055,7 @@ SUBDIR+=	pharo-vm
 SUBDIR+=	pharo-vm10
 SUBDIR+=	pharo10
 SUBDIR+=	pharo11
+SUBDIR+=	pharo12
 SUBDIR+=	pheanstalk
 SUBDIR+=	phonon-backend-xine
 SUBDIR+=	phoronix-test-suite
