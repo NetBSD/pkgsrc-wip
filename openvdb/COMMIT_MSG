@@ -1,3 +1,5 @@
+devel/openvdb: Add openvdb version 11.0.0
+
 OpenVDB is an open source C++ library comprising a novel hierarchical
 data structure and a large suite of tools for the efficient storage and
 manipulation of sparse volumetric data discretized on three-dimensional
