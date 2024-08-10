@@ -1,6 +1,6 @@
 # $NetBSD$
 
-BASERVER=	5.0.8
+BASERVER=	5.1.0
 DISTNAME=	basercms-${BASERVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
@@ -13,7 +13,7 @@ HOMEPAGE=	https://basercms.net/
 COMMENT=	Easy to use Content Management System for Japan/Japanese
 LICENSE=	mit
 
-PHP_VERSIONS_ACCEPTED=	81 82
+PHP_VERSIONS_ACCEPTED=	81 82 83
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.1.0:../../www/php-curl
