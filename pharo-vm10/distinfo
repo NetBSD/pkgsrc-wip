@@ -1,12 +1,15 @@
 $NetBSD$
 
-BLAKE2s (PharoVM-10.1.0-55f077d-Linux-x86_64-c-src.zip) = 97846eb412139efeb7f1f75845dda3b9277bcbaaef266fe637cd4d20e4e87eb9
-SHA512 (PharoVM-10.1.0-55f077d-Linux-x86_64-c-src.zip) = 06dbc388b8a4421c05adb3db53c53a940c22fc7f79a90773c0673c8e110b71565f5bb164ebe6c3ab7618b404e46026f8deebb4aaa24957feacfa8395fdddb945
-Size (PharoVM-10.1.0-55f077d-Linux-x86_64-c-src.zip) = 4129684 bytes
+BLAKE2s (PharoVM-10.3.0-51626b1-Linux-x86_64-c-src.zip) = 28c11be95e77161e363e0293e091eb67aeaf3340bfab5fdb8ae24c2a90da7821
+SHA512 (PharoVM-10.3.0-51626b1-Linux-x86_64-c-src.zip) = 4df8a7e94ee2fde5377bab0ae58e811272ef94b0d529f01aeb3811835d3534c87ebfd0ff3249b2fc14e730f099020574c7971083985ec7b254ab29f5da0eebd4
+Size (PharoVM-10.3.0-51626b1-Linux-x86_64-c-src.zip) = 4105768 bytes
 SHA1 (patch-CMakeLists.txt) = 533049079f0d8db0584c8ba590150436cdc84a95
+SHA1 (patch-cmake_OpenBSD.cmake) = e34312fd124d2cfa5e35e0184c9e8c6a5e6dd2a1
 SHA1 (patch-cmake_importCairo.cmake) = 0e90fbbcdebb4b0aa994be74737fa7d6462e253c
+SHA1 (patch-extracted_vm_src_unix_aio__select.c) = 6b9c83628c97744a4df614dc20d159539e167bec
 SHA1 (patch-include_pharovm_debug.h) = a806f34f443b0d7907983d0d4f20fc121b7dfb65
 SHA1 (patch-packaging_linux_bin_launch.sh.in) = 116b5151e0bd58558a1af3691d1f546437d94eae
 SHA1 (patch-plugins.cmake) = b8eb5ad47d505c0b52a7601f86109cf8f6ccae40
 SHA1 (patch-plugins_UUIDPlugin_common_UUIDPlugin.c) = ebed390cdfd0817c3d2e5fa5f1642d6a7226d10e
 SHA1 (patch-src_debugUnix.c) = 68f2c801cda9ba010134d778f8b32060d2bc9d8a
+SHA1 (patch-tty_tty.c) = 6a2acb31f56de61879b044c0e13f5d4d41fd42ef
