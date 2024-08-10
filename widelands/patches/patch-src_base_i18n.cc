@@ -4,6 +4,8 @@ Include clocale unconditionally.
 
 Undefine any *gettext macros to avoid infinite recursion.
 
+https://github.com/widelands/widelands/issues/6488
+
 --- src/base/i18n.cc.orig	2024-03-28 10:12:05.000000000 +0000
 +++ src/base/i18n.cc
 @@ -20,9 +20,7 @@

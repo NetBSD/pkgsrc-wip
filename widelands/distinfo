@@ -3,9 +3,9 @@ $NetBSD: distinfo,v 1.8 2021/10/26 10:44:30 nia Exp $
 BLAKE2s (widelands/v1.2.tar.gz) = ff2be3b1449b2ec987938fd039584861295334cafe3f59312164a886908c4c45
 SHA512 (widelands/v1.2.tar.gz) = 4e0c7c02c4bdb2806d67a07425d7a17b2867416c994e18f8511b45087e80645a3e602ee168f3f8640434b47eff25d9758f12d2a677b454d95855d8173e9dc8c8
 Size (widelands/v1.2.tar.gz) = 457973371 bytes
-SHA1 (patch-CMakeLists.txt) = e13b1a8f45d4a3c650476ab4cd0ab45c6101394d
-SHA1 (patch-src_CMakeLists.txt) = f833ae4b06e81cc7a147e1e5a03c02fad92370c1
-SHA1 (patch-src_base_i18n.cc) = 785cdfaca59f929de14dde96386f9e9cfca27e21
-SHA1 (patch-src_base_i18n.h) = 687296e3e654e3ed09e648a83571e282ed251bfb
-SHA1 (patch-src_graphic_text_textstream.cc) = d1a06e003bbd8e7d8f843d4877fe81d724d4a481
+SHA1 (patch-CMakeLists.txt) = bfa81b8d23ad60aa660ff5c8e7769e93f47e04a5
+SHA1 (patch-src_CMakeLists.txt) = 4dadeb1dea4363c0d850912c73d7e4e33728daeb
+SHA1 (patch-src_base_i18n.cc) = b8b56f6ab1256c7a35640189785b1972ea1cc3ea
+SHA1 (patch-src_base_i18n.h) = 5b7f6070e014e83d5f0a735105361809ea2b117f
+SHA1 (patch-src_graphic_text_textstream.cc) = 7994c8d7f1aeaa52fb1591aeb5eb7ee8f7ed16a1
 SHA1 (patch-xdg_CMakeLists.txt) = ce08eacbfbf9d32b6c72e411538adb0472d58851

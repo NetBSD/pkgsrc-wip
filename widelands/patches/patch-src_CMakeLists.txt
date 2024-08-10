@@ -2,6 +2,8 @@ $NetBSD: patch-src_CMakeLists.txt,v 1.2 2020/07/27 15:21:43 nia Exp $
 
 Support NetBSD.
 
+https://github.com/widelands/widelands/issues/6488
+
 --- src/CMakeLists.txt.orig	2024-03-28 10:12:05.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -165,9 +165,13 @@ wl_library(widelands_options

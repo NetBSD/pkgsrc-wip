@@ -3,6 +3,8 @@ $NetBSD$
 Cast argument to isspace to unsigned char, as required by POSIX, else this
 breaks with UTF-8 chars on NetBSD.
 
+https://github.com/widelands/widelands/issues/6488
+
 --- src/graphic/text/textstream.cc.orig	2024-03-28 10:12:05.000000000 +0000
 +++ src/graphic/text/textstream.cc
 @@ -49,12 +49,12 @@ void TextStream::consume(size_t cnt) {
