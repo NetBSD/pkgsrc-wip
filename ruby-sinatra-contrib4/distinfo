@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (sinatra-contrib-4.0.0.gem) = 756a58060d5a626fb54574f6c2949a9292205dddfcf8d8ca8d446d5c93475547
+SHA512 (sinatra-contrib-4.0.0.gem) = 2c52a86959e030b26f2e6585945324d4e3759f177844c32877b4e1b9f1d8827eb0292cf58844db9d6fdb58ce508fad62902a7b3c66612bda650ac4a23c0c256c
+Size (sinatra-contrib-4.0.0.gem) = 33792 bytes

@@ -5067,6 +5067,7 @@ SUBDIR+=	ruby-rss
 SUBDIR+=	ruby-sdl2
 SUBDIR+=	ruby-simple-navigation
 SUBDIR+=	ruby-sinatra-contrib2
+SUBDIR+=	ruby-sinatra-contrib4
 SUBDIR+=	ruby-sinatra-simple-navigation
 SUBDIR+=	ruby-sinatra2
 SUBDIR+=	ruby-sinatra4
