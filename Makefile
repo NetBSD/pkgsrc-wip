@@ -5069,6 +5069,7 @@ SUBDIR+=	ruby-simple-navigation
 SUBDIR+=	ruby-sinatra-contrib2
 SUBDIR+=	ruby-sinatra-simple-navigation
 SUBDIR+=	ruby-sinatra2
+SUBDIR+=	ruby-sinatra4
 SUBDIR+=	ruby-sprockets-helpers
 SUBDIR+=	ruby-sprockets3
 SUBDIR+=	ruby-sqlite3
