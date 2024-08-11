@@ -1,8 +1,12 @@
 $NetBSD$
 
---- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2020-07-18 10:06:29.144926214 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/crashpad/crashpad/client/crashpad_client_posix.cc.orig	2024-08-01 14:09:00.857856937 +0000
 +++ third_party/crashpad/crashpad/client/crashpad_client_posix.cc
-@@ -0,0 +1,38 @@
+@@ -0,0 +1,40 @@
 +// Copyright 2017 The Crashpad Authors. All rights reserved.
 +//
 +// Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,6 +24,7 @@ $NetBSD$
 +#include "client/crashpad_client.h"
 +
 +#include "base/logging.h"
++#include "base/notreached.h"
 +
 +namespace crashpad {
 +
@@ -35,7 +40,8 @@ $NetBSD$
 +    const std::map<std::string, std::string>& annotations,
 +    const std::vector<std::string>& arguments,
 +    bool restartable,
-+    bool asynchronous_start) {
++    bool asynchronous_start,   
++    const std::vector<base::FilePath>& attachments) {
 +  NOTREACHED();  // TODO(scottmg): https://crashpad.chromium.org/bug/196
 +  return false;
 +}

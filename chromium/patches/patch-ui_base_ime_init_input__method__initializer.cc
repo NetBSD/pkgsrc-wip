@@ -1,40 +1,35 @@
 $NetBSD$
 
---- ui/base/ime/init/input_method_initializer.cc.orig	2020-07-15 18:56:33.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/base/ime/init/input_method_initializer.cc.orig	2024-07-24 02:45:10.264038600 +0000
 +++ ui/base/ime/init/input_method_initializer.cc
 @@ -10,7 +10,7 @@
+ #include "build/chromeos_buildflags.h"
  
- #if defined(OS_CHROMEOS)
- #include "ui/base/ime/chromeos/ime_bridge.h"
--#elif defined(USE_AURA) && defined(OS_LINUX)
-+#elif defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
- #include "base/check.h"
- // TODO(crbug.com/1085700): Remove nogncheck when we can build both Ozone
- // Wayland and X11 on Linux codesearch-gen bots.
-@@ -22,7 +22,7 @@
+ #if !BUILDFLAG(IS_CHROMEOS_ASH) && defined(USE_AURA) && \
+-    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
++    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+ #include "ui/base/ime/linux/fake_input_method_context.h"
+ #include "ui/base/ime/linux/linux_input_method_context_factory.h"
+ #elif BUILDFLAG(IS_WIN)
+@@ -33,7 +33,7 @@ void ShutdownInputMethod() {
+ }
  
- namespace {
- 
--#if !defined(OS_CHROMEOS) && defined(USE_AURA) && defined(OS_LINUX)
-+#if !defined(OS_CHROMEOS) && defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
- const ui::LinuxInputMethodContextFactory*
-     g_linux_input_method_context_factory_for_testing;
- #endif
-@@ -50,7 +50,7 @@ void ShutdownInputMethod() {
  void InitializeInputMethodForTesting() {
- #if defined(OS_CHROMEOS)
-   IMEBridge::Initialize();
--#elif defined(USE_AURA) && defined(OS_LINUX)
-+#elif defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
-   if (!g_linux_input_method_context_factory_for_testing)
-     g_linux_input_method_context_factory_for_testing =
-         new FakeInputMethodContextFactory();
-@@ -69,7 +69,7 @@ void InitializeInputMethodForTesting() {
+-#if defined(USE_AURA) && BUILDFLAG(IS_LINUX)
++#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+   GetInputMethodContextFactoryForTest() =
+       base::BindRepeating([](LinuxInputMethodContextDelegate* delegate)
+                               -> std::unique_ptr<LinuxInputMethodContext> {
+@@ -46,7 +46,7 @@ void InitializeInputMethodForTesting() {
+ 
  void ShutdownInputMethodForTesting() {
- #if defined(OS_CHROMEOS)
-   IMEBridge::Shutdown();
--#elif defined(USE_AURA) && defined(OS_LINUX)
-+#elif defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
-   const LinuxInputMethodContextFactory* factory =
-       LinuxInputMethodContextFactory::instance();
-   CHECK(!factory || factory == g_linux_input_method_context_factory_for_testing)
+ #if !BUILDFLAG(IS_CHROMEOS_ASH) && defined(USE_AURA) && \
+-    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
++    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+   // The function owns the factory (as a static variable that's returned by
+   // reference), so setting this to an empty factory will free the old one.
+   GetInputMethodContextFactoryForTest() = LinuxInputMethodContextFactory();

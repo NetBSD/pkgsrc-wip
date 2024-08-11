@@ -1,14 +1,22 @@
 $NetBSD$
 
---- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2020-07-15 19:01:32.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/angle/src/gpu_info_util/SystemInfo_internal.h.orig	2024-07-24 02:45:19.668949600 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_internal.h
-@@ -16,6 +18,9 @@ namespace angle
+@@ -15,6 +15,13 @@
+ namespace angle
+ {
  
- // Defined in SystemInfo_libpci when GPU_INFO_USE_LIBPCI is defined.
- bool GetPCIDevicesWithLibPCI(std::vector<GPUDeviceInfo> *devices);
-+#if defined(OS_FREEBSD)
++#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__)
++bool CollectMesaCardInfo(std::vector<GPUDeviceInfo> *devices);                
++#if defined(__FreeBSD__)
 +bool GetPCIDevicesFreeBSD(std::vector<GPUDeviceInfo> *devices);
 +#endif
++#endif
++
+ // Defined in SystemInfo_libpci when GPU_INFO_USE_LIBPCI is defined.
+ bool GetPCIDevicesWithLibPCI(std::vector<GPUDeviceInfo> *devices);
  // Defined in SystemInfo_x11 when GPU_INFO_USE_X11 is defined.
- bool GetNvidiaDriverVersionWithXNVCtrl(std::string *version);
- 

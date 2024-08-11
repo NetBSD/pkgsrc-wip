@@ -1,16 +1,16 @@
 $NetBSD$
 
---- net/dns/address_sorter_posix.cc.orig	2020-07-15 18:56:00.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/dns/address_sorter_posix.cc.orig	2024-07-24 02:44:42.565355800 +0000
 +++ net/dns/address_sorter_posix.cc
-@@ -13,7 +13,11 @@
- #include <sys/socket.h>  // Must be included before ifaddrs.h.
- #include <ifaddrs.h>
- #include <net/if.h>
-+#if defined(OS_FREEBSD)
-+#include <net/if_var.h>
-+#endif
+@@ -32,6 +32,7 @@
+ #include "net/dns/netinet_in_var_ios.h"
+ #else
  #include <netinet/in_var.h>
 +#include <netinet6/in6_var.h>
- #include <string.h>
- #include <sys/ioctl.h>
+ #endif  // BUILDFLAG(IS_IOS)
  #endif
+ #include <vector>

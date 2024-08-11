@@ -1,17 +1,29 @@
 $NetBSD$
 
---- base/synchronization/lock_impl.h.orig	2020-07-08 21:40:31.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/synchronization/lock_impl.h.orig	2024-07-24 02:44:22.675429000 +0000
 +++ base/synchronization/lock_impl.h
-@@ -69,9 +69,12 @@ void LockImpl::Unlock() {
-   ::ReleaseSRWLockExclusive(reinterpret_cast<PSRWLOCK>(&native_handle_));
+@@ -106,6 +106,10 @@ void LockImpl::Unlock() {
  }
- #elif defined(OS_POSIX) || defined(OS_FUCHSIA)
-+//#pragma GCC diagnostic push
-+//#pragma GCC diagnostic ignored "-Wthread-safety-analysis"
- void LockImpl::Unlock() {
-   int rv = pthread_mutex_unlock(&native_handle_);
-   DCHECK_EQ(rv, 0) << ". " << strerror(rv);
-+//#pragma GCC diagnostic pop
+ 
+ #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_FREEBSD)
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wthread-safety-analysis"
++#endif
+ 
+ #if DCHECK_IS_ON()
+ BASE_EXPORT void dcheck_trylock_result(int rv);
+@@ -126,6 +130,9 @@ void LockImpl::Unlock() {
+   dcheck_unlock_result(rv);
+ #endif
  }
++#if BUILDFLAG(IS_FREEBSD)
++#pragma GCC diagnostic pop
++#endif
  #endif
  
+ // This is an implementation used for AutoLock templated on the lock type.

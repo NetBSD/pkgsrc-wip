@@ -1,49 +1,97 @@
 $NetBSD$
 
---- chrome/common/pref_names.h.orig	2020-07-08 21:41:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/common/pref_names.h.orig	2024-07-24 02:44:30.536190500 +0000
 +++ chrome/common/pref_names.h
-@@ -349,7 +349,7 @@ extern const char kHistoryMenuPromoShown
- extern const char kForceGoogleSafeSearch[];
- extern const char kForceYouTubeRestrict[];
- extern const char kAllowedDomainsForApps[];
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
- extern const char kUsesSystemTheme[];
- #endif
- extern const char kCurrentThemePackFilename[];
-@@ -380,7 +380,7 @@ extern const char kDefaultBrowserSetting
- #if defined(OS_MACOSX)
- extern const char kShowUpdatePromotionInfoBar[];
- #endif
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
- extern const char kUseCustomChromeFrame[];
- #endif
- #if BUILDFLAG(ENABLE_PLUGINS)
-@@ -555,7 +555,7 @@ extern const char kDownloadExtensionsToO
- extern const char kDownloadExtensionsToOpenByPolicy[];
- extern const char kDownloadAllowedURLsForOpenByPolicy[];
- extern const char kDownloadDirUpgraded[];
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
- extern const char kOpenPdfDownloadInSystemReader[];
- #endif
- #if defined(OS_ANDROID)
-@@ -775,7 +775,7 @@ extern const char kAllowCrossOriginAuthP
- extern const char kGloballyScopeHTTPAuthCacheEnabled[];
- extern const char kAmbientAuthenticationInPrivateModesEnabled[];
+@@ -1340,7 +1340,7 @@ inline constexpr char kUseAshProxy[] = "
  
--#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_CHROMEOS) || defined(OS_BSD)
- extern const char kAuthNegotiateDelegateByKdcPolicy[];
- #endif  // defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_CHROMEOS)
- 
-@@ -1009,7 +1009,7 @@ extern const char kAutoplayWhitelist[];
- extern const char kBlockAutoplayEnabled[];
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+ // Linux specific preference on whether we should match the system theme.
+ inline constexpr char kSystemTheme[] = "extensions.theme.system_theme";
+ #endif
+@@ -1483,7 +1483,7 @@ inline constexpr char kShowUpdatePromoti
+     "browser.show_update_promotion_info_bar";
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
- extern const char kAllowNativeNotifications[];
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Boolean that is false if we should show window manager decorations.  If
+ // true, we draw a custom chrome frame (thicker title bar and blue border).
+ inline constexpr char kUseCustomChromeFrame[] = "browser.custom_chrome_frame";
+@@ -2088,7 +2088,7 @@ inline constexpr char kDownloadDefaultDi
+ inline constexpr char kDownloadDirUpgraded[] = "download.directory_upgrade";
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ inline constexpr char kOpenPdfDownloadInSystemReader[] =
+     "download.open_pdf_in_system_reader";
+ #endif
+@@ -2528,14 +2528,14 @@ inline constexpr char kMediaStorageIdSal
+ inline constexpr char kMediaCdmOriginData[] = "media.cdm.origin_data";
+ #endif  // BUILDFLAG(IS_WIN)
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // A boolean pref to determine whether or not the network service is running
+ // sandboxed.
+ inline constexpr char kNetworkServiceSandboxEnabled[] =
+     "net.network_service_sandbox";
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Records whether the user has seen an HTTP auth "negotiate" header.
+ inline constexpr char kReceivedHttpAuthNegotiateHeader[] =
+     "net.received_http_auth_negotiate_headers";
+@@ -2613,7 +2613,7 @@ inline constexpr char kAmbientAuthentica
+ inline constexpr char kBasicAuthOverHttpEnabled[] =
+     "auth.basic_over_http_enabled";
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ // Boolean that specifies whether OK-AS-DELEGATE flag from KDC is respected
+ // along with kAuthNegotiateDelegateAllowlist.
+ inline constexpr char kAuthNegotiateDelegateByKdcPolicy[] =
+@@ -3133,7 +3133,7 @@ inline constexpr char kDeviceWeeklySched
+ 
+ #endif  // BUILDFLAG(IS_CHROMEOS)
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ // Defines administrator-set availability of Chrome for Testing.
+ inline constexpr char kChromeForTestingAllowed[] = "chrome_for_testing.allowed";
+ #endif
+@@ -3706,7 +3706,7 @@ inline constexpr char kFileOrDirectoryPi
+ inline constexpr char kSandboxExternalProtocolBlocked[] =
+     "profile.sandbox_external_protocol_blocked";
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Boolean that indicates if system notifications are allowed to be used in
+ // place of Chrome notifications.
+ inline constexpr char kAllowSystemNotifications[] =
+@@ -3755,7 +3755,7 @@ inline constexpr char kCACertificateMana
  #endif
  
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+ inline constexpr char kEnforceLocalAnchorConstraintsEnabled[] =
+     "enforce_local_anchor_constraints_enabled";
+ #endif
+@@ -4063,7 +4063,7 @@ inline constexpr char kPrintingOAuth2Aut
+     "printing.oauth2_authorization_servers";
+ #endif
+ 
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // If this exists and is true, Chrome may run system DNS resolution out of the
+ // network process. If false, Chrome will run system DNS resolution in the
+ // network process. If non-existent, Chrome will decide where to run system DNS

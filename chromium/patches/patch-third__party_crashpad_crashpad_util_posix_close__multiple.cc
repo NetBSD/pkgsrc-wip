@@ -1,22 +1,17 @@
 $NetBSD$
 
---- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2020-07-15 18:56:30.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/crashpad/crashpad/util/posix/close_multiple.cc.orig	2024-07-24 02:45:04.427473300 +0000
 +++ third_party/crashpad/crashpad/util/posix/close_multiple.cc
-@@ -31,7 +31,7 @@
- #include "util/file/directory_reader.h"
- #include "util/misc/implicit_cast.h"
- 
--#if defined(OS_MACOSX)
-+#if defined(OS_MACOSX) || defined(OS_BSD)
- #include <sys/sysctl.h>
- #endif
- 
-@@ -72,7 +72,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
+@@ -73,7 +73,7 @@ void CloseNowOrOnExec(int fd, bool ebadf
  // This is an advantage over looping over all possible file descriptors, because
  // no attempt needs to be made to close file descriptors that are not open.
  bool CloseMultipleNowOrOnExecUsingFDDir(int min_fd, int preserve_fd) {
--#if defined(OS_MACOSX)
-+#if defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_APPLE)
++#if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)
    static constexpr char kFDDir[] = "/dev/fd";
- #elif defined(OS_LINUX) || defined(OS_ANDROID)
+ #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
    static constexpr char kFDDir[] = "/proc/self/fd";

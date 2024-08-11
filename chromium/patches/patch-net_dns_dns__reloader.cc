@@ -1,15 +1,25 @@
 $NetBSD$
 
---- net/dns/dns_reloader.cc.orig	2020-07-15 18:56:00.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/dns/dns_reloader.cc.orig	2024-07-24 02:44:42.569356000 +0000
 +++ net/dns/dns_reloader.cc
-@@ -7,6 +7,10 @@
- #if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_OPENBSD) && \
-     !defined(OS_ANDROID) && !defined(OS_FUCHSIA)
+@@ -10,6 +10,7 @@
+ // - there's not guarantee it exists at all. :(
+ #if BUILDFLAG(IS_POSIX)
  
-+#if defined(OS_BSD)
 +#include <netinet/in.h>
-+#endif
-+
  #include <resolv.h>
  
- #include "base/lazy_instance.h"
+ // This code only works on systems where the C library provides res_ninit(3) and
+@@ -31,7 +32,7 @@
+ // an old musl bug that was fixed by musl c8fdcfe5, but Fuchsia's SDK doesn't
+ // have that change.
+ #if defined(__RES) && __RES >= 19991006 && !BUILDFLAG(IS_APPLE) && \
+-    !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_FUCHSIA)
++    !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_FUCHSIA) && !BUILDFLAG(IS_NETBSD)
+ // We define this so we don't need to restate the complex condition here twice
+ // below - it would be easy for the copies below to get out of sync.
+ #define USE_RES_NINIT

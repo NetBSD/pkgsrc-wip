@@ -1,31 +1,45 @@
 $NetBSD$
 
---- net/base/network_change_notifier.cc.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/base/network_change_notifier.cc.orig	2024-07-24 02:44:42.161316600 +0000
 +++ net/base/network_change_notifier.cc
-@@ -35,7 +35,7 @@
+@@ -42,7 +42,7 @@
  #include "net/base/network_change_notifier_linux.h"
- #elif defined(OS_MACOSX)
- #include "net/base/network_change_notifier_mac.h"
--#elif defined(OS_CHROMEOS) || defined(OS_ANDROID)
-+#elif defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
- #include "net/base/network_change_notifier_posix.h"
- #elif defined(OS_FUCHSIA)
+ #elif BUILDFLAG(IS_APPLE)
+ #include "net/base/network_change_notifier_apple.h"
+-#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
+ #include "net/base/network_change_notifier_passive.h"
+ #elif BUILDFLAG(IS_FUCHSIA)
  #include "net/base/network_change_notifier_fuchsia.h"
-@@ -229,7 +229,7 @@ std::unique_ptr<NetworkChangeNotifier> N
-   // service in a separate process.
-   return std::make_unique<NetworkChangeNotifierPosix>(initial_type,
-                                                       initial_subtype);
--#elif defined(OS_CHROMEOS)
-+#elif defined(OS_CHROMEOS) || defined(OS_BSD)
-   return std::make_unique<NetworkChangeNotifierPosix>(initial_type,
-                                                       initial_subtype);
- #elif defined(OS_LINUX)
-@@ -240,6 +240,8 @@ std::unique_ptr<NetworkChangeNotifier> N
- #elif defined(OS_FUCHSIA)
+@@ -334,6 +334,9 @@ std::unique_ptr<NetworkChangeNotifier> N
+ #elif BUILDFLAG(IS_FUCHSIA)
    return std::make_unique<NetworkChangeNotifierFuchsia>(
-       0 /* required_features */);
-+#elif defined(OS_BSD)
-+  return NULL;
+       /*require_wlan=*/false);
++#elif BUILDFLAG(IS_BSD)
++  return std::make_unique<MockNetworkChangeNotifier>(
++      /*dns_config_notifier*/nullptr);
  #else
    NOTIMPLEMENTED();
-   return NULL;
+   return nullptr;
+@@ -525,7 +528,7 @@ const char* NetworkChangeNotifier::Conne
+   return kConnectionTypeNames[type];
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ // static
+ AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwner() {
+   return g_network_change_notifier
+@@ -879,7 +882,7 @@ NetworkChangeNotifier::NetworkChangeNoti
+   }
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwnerInternal() {
+   return nullptr;
+ }

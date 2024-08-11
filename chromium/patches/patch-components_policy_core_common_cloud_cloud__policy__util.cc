@@ -1,62 +1,61 @@
 $NetBSD$
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2020-07-15 18:55:55.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2024-07-24 02:44:34.784602000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
-@@ -16,7 +16,7 @@
- #include <wincred.h>
+@@ -20,7 +20,7 @@
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS) || defined(OS_MACOSX)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS) || defined(OS_MACOSX)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
+-    BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  #include <pwd.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -31,7 +31,7 @@
+@@ -35,10 +35,15 @@
  #import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  #include <limits.h>  // For HOST_NAME_MAX
  #endif
  
-@@ -62,7 +62,7 @@
- #include "base/system/sys_info.h"
- #endif
++#if BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
++#include <sys/param.h>
++#define HOST_NAME_MAX MAXHOSTNAMELEN
++#endif
++
+ #include <algorithm>
+ #include <utility>
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
- #include "base/system/sys_info.h"
- #endif
+@@ -88,7 +93,7 @@ namespace em = enterprise_management;
  
-@@ -76,6 +76,12 @@ std::string GetMachineName() {
+ std::string GetMachineName() {
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
+-    BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+   char hostname[HOST_NAME_MAX];
    if (gethostname(hostname, HOST_NAME_MAX) == 0)  // Success.
      return hostname;
-   return std::string();
-+#elif defined(OS_NETBSD)
-+  int len = sysconf(_SC_HOST_NAME_MAX);
-+  char hostname[len];
-+  if (gethostname(hostname, _SC_HOST_NAME_MAX) == 0)  // Success.
-+    return hostname;
-+  return std::string();
- #elif defined(OS_MACOSX)
- // TODO(crbug.com/1024115): Find a different replacement for -[NSHost
- // currentHost] on iOS.
-@@ -125,7 +131,7 @@ std::string GetMachineName() {
- }
+@@ -145,7 +150,7 @@ std::string GetMachineName() {
  
  std::string GetOSVersion() {
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \
+-    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    return base::SysInfo::OperatingSystemVersion();
- #elif defined(OS_WIN)
+ #elif BUILDFLAG(IS_WIN)
    base::win::OSInfo::VersionNumber version_number =
-@@ -148,7 +154,7 @@ std::string GetOSArchitecture() {
+@@ -168,7 +173,7 @@ std::string GetOSArchitecture() {
  }
  
  std::string GetOSUsername() {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS) || defined(OS_MACOSX)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS) || defined(OS_MACOSX)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)
    struct passwd* creds = getpwuid(getuid());
    if (!creds || !creds->pw_name)
      return std::string();

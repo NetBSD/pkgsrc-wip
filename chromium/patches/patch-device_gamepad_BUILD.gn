@@ -1,13 +1,17 @@
 $NetBSD$
 
---- device/gamepad/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- device/gamepad/BUILD.gn.orig	2024-07-24 02:44:38.496961600 +0000
 +++ device/gamepad/BUILD.gn
-@@ -111,7 +111,7 @@ component("gamepad") {
-         [ "/wd4267" ]  # conversion from 'size_t' (64 bit) to 'type'(32 bit).
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     if (use_udev) {
-       deps += [ "//device/udev_linux" ]
-     } else {
+@@ -99,7 +99,7 @@ component("gamepad") {
+       "hid_writer_linux.cc",
+       "hid_writer_linux.h",
+     ]
+-    if (use_udev) {
++    if (use_udev && !is_bsd) {
+       sources += [
+         "gamepad_device_linux.cc",
+         "gamepad_device_linux.h",

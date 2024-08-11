@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/views/window/custom_frame_view.cc.orig	2020-07-15 18:56:49.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/views/window/custom_frame_view.cc.orig	2024-07-24 02:45:10.980108000 +0000
 +++ ui/views/window/custom_frame_view.cc
-@@ -283,7 +283,7 @@ int CustomFrameView::NonClientTopBorderH
- int CustomFrameView::CaptionButtonY() const {
-   // Maximized buttons start at window top so that even if their images aren't
+@@ -267,7 +267,7 @@ int CustomFrameView::CaptionButtonY() co
    // drawn flush with the screen edge, they still obey Fitts' Law.
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
    return FrameBorderThickness();
  #else
    return frame_->IsMaximized() ? FrameBorderThickness() : kFrameShadowThickness;

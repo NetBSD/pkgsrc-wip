@@ -1,13 +1,17 @@
 $NetBSD$
 
---- chrome/browser/chrome_content_browser_client.h.orig	2020-07-08 21:41:46.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/chrome_content_browser_client.h.orig	2024-07-24 02:44:26.871835500 +0000
 +++ chrome/browser/chrome_content_browser_client.h
-@@ -381,7 +381,7 @@ class ChromeContentBrowserClient : publi
-   void OverridePageVisibilityState(
-       content::RenderFrameHost* render_frame_host,
-       content::PageVisibilityState* visibility_state) override;
--#if defined(OS_POSIX) && !defined(OS_MACOSX)
-+#if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_BSD)
+@@ -513,7 +513,7 @@ class ChromeContentBrowserClient : publi
+   bool IsPluginAllowedToUseDevChannelAPIs(
+       content::BrowserContext* browser_context,
+       const GURL& url) override;
+-#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_BSD)
    void GetAdditionalMappedFilesForChildProcess(
        const base::CommandLine& command_line,
        int child_process_id,

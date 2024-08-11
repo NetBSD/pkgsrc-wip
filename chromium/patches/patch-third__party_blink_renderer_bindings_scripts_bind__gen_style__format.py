@@ -1,28 +1,17 @@
 $NetBSD$
 
---- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py.orig	2020-07-15 18:56:02.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py.orig	2024-07-24 02:44:45.217612500 +0000
 +++ third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
-@@ -29,6 +29,15 @@ def init(root_src_dir):
-     elif sys.platform.startswith(("cygwin", "win")):
-         platform = "win"
-         exe_suffix = ".exe"
-+    elif sys.platform.startswith("freebsd"):
-+        platform = "freebsd"
-+        exe_suffix = ""
-+    elif sys.platform.startswith("openbsd"):
-+        platform = "openbsd"
-+        exe_suffix = ""
-+    elif sys.platform.startswith("netbsd"):
-+        platform = "netbsd"
-+        exe_suffix = ""
-     else:
-         assert False, "Unknown platform: {}".format(sys.platform)
-     buildtools_platform_dir = os.path.join(root_src_dir, "buildtools",
-@@ -37,6 +46,7 @@ def init(root_src_dir):
-     # //buildtools/<platform>/clang-format
-     _clang_format_command_path = os.path.join(
-         buildtools_platform_dir, "clang-format{}".format(exe_suffix))
-+    _clang_format_command_path = "@PREFIX@/bin/clang-format"
+@@ -30,7 +30,7 @@ def init(root_src_dir, enable_style_form
  
-     # //buildtools/<platform>/gn
-     _gn_command_path = os.path.join(buildtools_platform_dir,
+     # Determine //buildtools/<platform>/ directory
+     new_path_platform_suffix = ""
+-    if sys.platform.startswith("linux"):
++    if sys.platform.startswith(("linux","openbsd","freebsd","netbsd")):
+         platform = "linux64"
+         exe_suffix = ""
+     elif sys.platform.startswith("darwin"):

@@ -1,66 +1,68 @@
 $NetBSD$
 
---- ui/gfx/native_pixmap_handle.cc.orig	2020-07-15 18:56:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/gfx/native_pixmap_handle.cc.orig	2024-07-24 02:45:10.628074000 +0000
 +++ ui/gfx/native_pixmap_handle.cc
-@@ -9,11 +9,15 @@
- #include "base/logging.h"
- #include "build/build_config.h"
+@@ -11,7 +11,7 @@
+ #include "ui/gfx/buffer_format_util.h"
+ #include "ui/gfx/geometry/size.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include <drm_fourcc.h>
- #include "base/posix/eintr_wrapper.h"
+ #include <unistd.h>
+ 
+@@ -23,9 +23,13 @@
+ #include "base/fuchsia/fuchsia_logging.h"
  #endif
  
-+#if defined(OS_BSD)
++#if BUILDFLAG(IS_BSD)
 +#include <unistd.h>
 +#endif
 +
- #if defined(OS_FUCHSIA)
- #include <lib/zx/vmo.h>
- #include "base/fuchsia/fuchsia_logging.h"
-@@ -21,7 +25,7 @@
- 
  namespace gfx {
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  static_assert(NativePixmapHandle::kNoModifier == DRM_FORMAT_MOD_INVALID,
                "gfx::NativePixmapHandle::kNoModifier should be an alias for"
                "DRM_FORMAT_MOD_INVALID");
-@@ -32,7 +36,7 @@ NativePixmapPlane::NativePixmapPlane() :
+@@ -36,7 +40,7 @@ NativePixmapPlane::NativePixmapPlane() :
  NativePixmapPlane::NativePixmapPlane(int stride,
                                       int offset,
                                       uint64_t size
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
                                       ,
                                       base::ScopedFD fd
- #elif defined(OS_FUCHSIA)
-@@ -43,7 +47,7 @@ NativePixmapPlane::NativePixmapPlane(int
+ #elif BUILDFLAG(IS_FUCHSIA)
+@@ -47,7 +51,7 @@ NativePixmapPlane::NativePixmapPlane(int
      : stride(stride),
        offset(offset),
        size(size)
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
        ,
        fd(std::move(fd))
- #elif defined(OS_FUCHSIA)
-@@ -71,7 +75,7 @@ NativePixmapHandle& NativePixmapHandle::
+ #elif BUILDFLAG(IS_FUCHSIA)
+@@ -75,7 +79,7 @@ NativePixmapHandle& NativePixmapHandle::
  NativePixmapHandle CloneHandleForIPC(const NativePixmapHandle& handle) {
    NativePixmapHandle clone;
    for (auto& plane : handle.planes) {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      DCHECK(plane.fd.is_valid());
-     base::ScopedFD fd_dup(HANDLE_EINTR(dup(plane.fd.get())));
-     if (!fd_dup.is_valid()) {
-@@ -97,7 +101,7 @@ NativePixmapHandle CloneHandleForIPC(con
+     // Combining the HANDLE_EINTR and ScopedFD's constructor causes the compiler
+     // to emit some very strange assembly that tends to cause FD ownership
+@@ -113,7 +117,7 @@ NativePixmapHandle CloneHandleForIPC(con
  #endif
    }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    clone.modifier = handle.modifier;
- #endif
- 
+   clone.supports_zero_copy_webgpu_import =
+       handle.supports_zero_copy_webgpu_import;

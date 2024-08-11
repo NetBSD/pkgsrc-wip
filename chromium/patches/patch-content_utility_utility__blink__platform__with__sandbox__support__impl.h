@@ -1,26 +1,17 @@
 $NetBSD$
 
---- content/utility/utility_blink_platform_with_sandbox_support_impl.h.orig	2020-07-08 21:40:43.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/utility/utility_blink_platform_with_sandbox_support_impl.h.orig	2024-07-24 02:44:38.328945400 +0000
 +++ content/utility/utility_blink_platform_with_sandbox_support_impl.h
-@@ -11,7 +11,7 @@
- #include "build/build_config.h"
- #include "third_party/blink/public/platform/platform.h"
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
- #include "components/services/font/public/cpp/font_loader.h"  // nogncheck
- #include "third_party/skia/include/core/SkRefCnt.h"           // nogncheck
- #endif
-@@ -33,10 +33,10 @@ class UtilityBlinkPlatformWithSandboxSup
+@@ -33,7 +33,7 @@ class UtilityBlinkPlatformWithSandboxSup
    blink::WebSandboxSupport* GetSandboxSupport() override;
  
   private:
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    std::unique_ptr<blink::WebSandboxSupport> sandbox_support_;
  #endif
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   sk_sp<font_service::FontLoader> font_loader_;
- #endif
- 
+ };

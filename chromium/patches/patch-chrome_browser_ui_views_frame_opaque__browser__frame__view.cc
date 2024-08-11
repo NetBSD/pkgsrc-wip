@@ -1,31 +1,44 @@
 $NetBSD$
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2020-07-08 21:41:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2024-07-24 02:44:29.788118100 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.cc
-@@ -48,7 +48,7 @@
+@@ -54,7 +54,7 @@
  #include "ui/views/window/vector_icons/vector_icons.h"
  #include "ui/views/window/window_shape.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "ui/views/controls/menu/menu_runner.h"
  #endif
  
-@@ -349,7 +349,7 @@ void OpaqueBrowserFrameView::ButtonPress
-   } else if (sender == close_button_) {
-     frame()->CloseWithReason(views::Widget::ClosedReason::kCloseButtonClicked);
-   } else if (sender == window_icon_) {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-     // TODO(pbos): Figure out / document why this is Linux only. This needs a
-     // comment.
-     views::MenuRunner menu_runner(frame()->GetSystemMenuModel(),
-@@ -478,7 +478,7 @@ bool OpaqueBrowserFrameView::EverHasVisi
- 
- OpaqueBrowserFrameView::FrameButtonStyle
+@@ -564,7 +564,7 @@ OpaqueBrowserFrameView::FrameButtonStyle
  OpaqueBrowserFrameView::GetFrameButtonStyle() const {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
    return FrameButtonStyle::kMdButton;
  #else
    return FrameButtonStyle::kImageButton;
+@@ -583,7 +583,7 @@ bool OpaqueBrowserFrameView::ShouldDrawR
+   return false;
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ bool OpaqueBrowserFrameView::IsTiled() const {
+   return frame()->tiled();
+ }
+@@ -782,7 +782,7 @@ gfx::Rect OpaqueBrowserFrameView::GetIco
+ }
+ 
+ void OpaqueBrowserFrameView::WindowIconPressed() {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Chrome OS doesn't show the window icon, and Windows handles this on its own
+   // due to the hit test being HTSYSMENU.
+   menu_runner_ = std::make_unique<views::MenuRunner>(

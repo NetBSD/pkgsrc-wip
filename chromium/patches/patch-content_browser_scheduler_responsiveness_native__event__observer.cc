@@ -1,13 +1,17 @@
 $NetBSD$
 
---- content/browser/scheduler/responsiveness/native_event_observer.cc.orig	2020-07-08 21:40:42.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/browser/scheduler/responsiveness/native_event_observer.cc.orig	2024-07-24 02:44:37.408856200 +0000
 +++ content/browser/scheduler/responsiveness/native_event_observer.cc
 @@ -15,7 +15,7 @@
  
  #include "ui/events/platform/platform_event_source.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "ui/aura/env.h"
  #include "ui/events/event.h"
  #endif
@@ -15,8 +19,8 @@ $NetBSD$
    DeregisterObserver();
  }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  void NativeEventObserver::RegisterObserver() {
    aura::Env::GetInstance()->AddWindowEventDispatcherObserver(this);
  }

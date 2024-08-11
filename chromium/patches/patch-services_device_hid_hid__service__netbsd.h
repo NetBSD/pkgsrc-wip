@@ -1,8 +1,12 @@
 $NetBSD$
 
---- services/device/hid/hid_service_netbsd.h.orig	2020-07-23 00:21:18.942556354 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/device/hid/hid_service_netbsd.h.orig	2024-08-01 14:09:00.357545802 +0000
 +++ services/device/hid/hid_service_netbsd.h
-@@ -0,0 +1,47 @@
+@@ -0,0 +1,49 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -12,7 +16,6 @@ $NetBSD$
 +
 +#include <string>
 +
-+#include "base/macros.h"
 +#include "base/memory/ref_counted.h"
 +#include "base/memory/weak_ptr.h"
 +#include "base/timer/timer.h"
@@ -24,29 +27,32 @@ $NetBSD$
 +class HidServiceNetBSD : public HidService {
 + public:
 +  HidServiceNetBSD();
++
++  HidServiceNetBSD(const HidServiceNetBSD&) = delete;
++  HidServiceNetBSD& operator=(const HidServiceNetBSD&) = delete;
++
 +  ~HidServiceNetBSD() override;
 +
 +  void Connect(const std::string& device_guid,
++               bool allow_protected_reports,
++	       bool allow_fido_reports,
 +               ConnectCallback connect) override;
 +  base::WeakPtr<HidService> GetWeakPtr() override;
 +
 + private:
 +  struct ConnectParams;
-+  class BlockingTaskHelper;
++  class BlockingTaskRunnerHelper;
 +
 +  static void OpenOnBlockingThread(std::unique_ptr<ConnectParams> params);
 +  static void FinishOpen(std::unique_ptr<ConnectParams> params);
 +
-+  const scoped_refptr<base::SequencedTaskRunner> task_runner_;
 +  const scoped_refptr<base::SequencedTaskRunner> blocking_task_runner_;
 +  // |helper_| lives on the sequence |blocking_task_runner_| posts to and holds
 +  // a weak reference back to the service that owns it.
-+  std::unique_ptr<BlockingTaskHelper> helper_;
-+  base::WeakPtrFactory<HidServiceNetBSD> weak_factory_;
-+
-+  DISALLOW_COPY_AND_ASSIGN(HidServiceNetBSD);
++  std::unique_ptr<BlockingTaskRunnerHelper, base::OnTaskRunnerDeleter> helper_;
++  base::WeakPtrFactory<HidServiceNetBSD> weak_factory_{this};
 +};
 +
 +}  // namespace device
 +
-+#endif  // DEVICE_HID_HID_SERVICE_NETBSD_H_
++#endif  // DEVICE_HID_HID_SERVICE_FREEBSD_H_

@@ -1,13 +1,17 @@
 $NetBSD$
 
---- tools/variations/fieldtrial_to_struct.py.orig	2020-07-15 18:56:33.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- tools/variations/fieldtrial_to_struct.py.orig	2024-07-24 02:45:09.815995200 +0000
 +++ tools/variations/fieldtrial_to_struct.py
-@@ -40,6 +40,9 @@ _platforms = [
+@@ -41,6 +41,9 @@ _platforms = [
      'linux',
      'mac',
      'windows',
-+    'freebsd',
 +    'openbsd',
++    'freebsd',
 +    'netbsd',
  ]
  

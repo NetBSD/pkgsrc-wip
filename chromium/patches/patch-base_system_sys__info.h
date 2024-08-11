@@ -1,22 +1,26 @@
 $NetBSD$
 
---- base/system/sys_info.h.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/system/sys_info.h.orig	2024-07-24 02:44:22.675429000 +0000
 +++ base/system/sys_info.h
-@@ -201,6 +201,8 @@ class BASE_EXPORT SysInfo {
-   // On Desktop this returns true when memory <= 512MB.
-   static bool IsLowEndDevice();
+@@ -325,6 +325,8 @@ class BASE_EXPORT SysInfo {
+   static void ResetCpuSecurityMitigationsEnabledForTesting();
+ #endif
  
 +  static uint64_t MaxSharedMemorySize();
 +
   private:
+   friend class test::ScopedAmountOfPhysicalMemoryOverride;
    FRIEND_TEST_ALL_PREFIXES(SysInfoTest, AmountOfAvailablePhysicalMemory);
-   FRIEND_TEST_ALL_PREFIXES(debug::SystemMetricsTest, ParseMeminfo);
-@@ -210,7 +212,7 @@ class BASE_EXPORT SysInfo {
-   static bool IsLowEndDeviceImpl();
+@@ -337,7 +339,7 @@ class BASE_EXPORT SysInfo {
    static HardwareInfo GetHardwareInfoSync();
  
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_AIX)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_AIX) || defined(OS_BSD)
-   static int64_t AmountOfAvailablePhysicalMemory(
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
+-    BUILDFLAG(IS_AIX)
++    BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
+   static uint64_t AmountOfAvailablePhysicalMemory(
        const SystemMemoryInfoKB& meminfo);
  #endif

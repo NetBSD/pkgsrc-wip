@@ -1,13 +1,17 @@
 $NetBSD$
 
---- extensions/renderer/bindings/api_binding_util.cc.orig	2020-07-08 21:40:43.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- extensions/renderer/bindings/api_binding_util.cc.orig	2024-07-24 02:44:38.957006200 +0000
 +++ extensions/renderer/bindings/api_binding_util.cc
-@@ -130,6 +130,8 @@ std::string GetPlatformString() {
+@@ -132,7 +132,7 @@ std::string GetPlatformString() {
+   return "lacros";
+ #elif BUILDFLAG(IS_CHROMEOS_ASH) && !BUILDFLAG(IS_CHROMEOS_LACROS)
+   return "chromeos";
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return "linux";
+ #elif BUILDFLAG(IS_MAC)
    return "mac";
- #elif defined(OS_WIN)
-   return "win";
-+#elif defined(OS_NETBSD)
-+  return "netbsd";
- #else
-   NOTREACHED();
-   return std::string();

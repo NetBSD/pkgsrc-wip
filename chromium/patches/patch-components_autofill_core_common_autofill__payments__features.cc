@@ -1,13 +1,17 @@
 $NetBSD$
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2020-07-08 21:41:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2024-07-24 02:44:33.320460000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -124,7 +124,7 @@ const base::Feature kAutofillUpstreamAll
- 
+@@ -248,7 +248,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
- #if defined(OS_WIN) || defined(OS_MACOSX) || \
--    (defined(OS_LINUX) && !defined(OS_CHROMEOS))
-+    ((defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS))
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD) || \
+     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
    // The new user consent UI is fully launched on MacOS, Windows and Linux.
    return true;
- #else

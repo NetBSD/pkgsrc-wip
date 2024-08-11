@@ -1,13 +1,18 @@
 $NetBSD$
 
---- third_party/swiftshader/third_party/marl/src/memory.cpp.orig	2020-07-15 19:01:48.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/swiftshader/third_party/marl/src/memory.cpp.orig	2024-07-24 02:45:44.719376000 +0000
 +++ third_party/swiftshader/third_party/marl/src/memory.cpp
-@@ -19,7 +19,7 @@
+@@ -19,7 +19,8 @@
  
  #include <cstring>
  
--#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__)
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__OpenBSD__) || defined(__NetBSD__)
+-#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__EMSCRIPTEN__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__EMSCRIPTEN__) || defined(__OpenBSD__) || \
++      defined(__NetBSD__)
  #include <sys/mman.h>
  #include <unistd.h>
  namespace {

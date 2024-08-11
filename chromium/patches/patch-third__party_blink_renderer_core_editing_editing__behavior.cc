@@ -1,13 +1,17 @@
 $NetBSD$
 
---- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2020-07-15 18:56:02.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2024-07-24 02:44:45.601649800 +0000
 +++ third_party/blink/renderer/core/editing/editing_behavior.cc
-@@ -274,7 +274,7 @@ bool EditingBehavior::ShouldInsertCharac
+@@ -324,7 +324,7 @@ bool EditingBehavior::ShouldInsertCharac
    // unexpected behaviour
    if (ch < ' ')
      return false;
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // According to XKB map no keyboard combinations with ctrl key are mapped to
    // printable characters, however we need the filter as the DomKey/text could
    // contain printable characters.

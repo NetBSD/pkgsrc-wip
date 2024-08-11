@@ -1,27 +1,26 @@
 $NetBSD$
 
---- base/process/internal_linux.h.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/process/internal_linux.h.orig	2024-07-24 02:44:22.635425300 +0000
 +++ base/process/internal_linux.h
-@@ -55,6 +55,14 @@ bool ParseProcStats(const std::string& s
- // If the ordering ever changes, carefully review functions that use these
- // values.
- enum ProcStatsFields {
-+#if defined(OS_BSD)
-+  VM_COMM = 0,         // Command name.
-+  VM_PPID = 2,         // Parent process id.
-+  VM_PGRP = 3,         // Process group id.
-+  VM_STARTTIME = 7,    // The process start time.
-+  VM_UTIME = 8,        // The user time.
-+  VM_STIME = 9,        // The system time
+@@ -140,6 +140,9 @@ TimeDelta ClockTicksToTimeDelta(int64_t 
+ // arguments to the lambda.
+ template <typename Lambda>
+ void ForEachProcessTask(base::ProcessHandle process, Lambda&& lambda) {
++#if BUILDFLAG(IS_BSD)
++  return;
 +#else
-   VM_COMM = 1,         // Filename of executable, without parentheses.
-   VM_STATE = 2,        // Letter indicating the state of the process.
-   VM_PPID = 3,         // PID of the parent.
-@@ -67,6 +75,7 @@ enum ProcStatsFields {
-   VM_STARTTIME = 21,   // The time the process started in clock ticks.
-   VM_VSIZE = 22,       // Virtual memory size in bytes.
-   VM_RSS = 23,         // Resident Set Size in pages.
-+#endif
- };
+   // Iterate through the different threads tracked in /proc/<pid>/task.
+   FilePath fd_path = GetProcPidDir(process).Append("task");
  
- // Reads the |field_num|th field from |proc_stats|. Returns 0 on failure.
+@@ -159,6 +162,7 @@ void ForEachProcessTask(base::ProcessHan
+     FilePath task_path = fd_path.Append(tid_str);
+     lambda(tid, task_path);
+   }
++#endif
+ }
+ 
+ }  // namespace internal

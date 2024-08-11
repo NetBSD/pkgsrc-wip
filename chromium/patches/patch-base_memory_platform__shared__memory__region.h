@@ -1,31 +1,35 @@
 $NetBSD$
 
---- base/memory/platform_shared_memory_region.h.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/memory/platform_shared_memory_region.h.orig	2024-07-24 02:44:22.599421700 +0000
 +++ base/memory/platform_shared_memory_region.h
-@@ -27,7 +27,7 @@
- #include "base/files/scoped_file.h"
- #endif
+@@ -17,7 +17,7 @@
+ #include "base/unguessable_token.h"
+ #include "build/build_config.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  namespace content {
  class SandboxIPCHandler;
  }
-@@ -121,7 +121,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -84,7 +84,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
      kMaxValue = GET_SHMEM_TEMP_DIR_FAILURE
    };
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) | defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Structure to limit access to executable region creation.
    struct ExecutableRegion {
     private:
-@@ -266,7 +266,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -216,7 +216,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
                             CheckPlatformHandlePermissionsCorrespondToMode);
    static PlatformSharedMemoryRegion Create(Mode mode,
                                             size_t size
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
                                             ,
                                             bool executable = false
  #endif

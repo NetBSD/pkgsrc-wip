@@ -1,54 +1,40 @@
 $NetBSD$
 
-https://gn-review.googlesource.com/c/gn/+/9700
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/build/gen.py.orig	2020-06-25 09:40:29.000000000 +0000
+--- tools/gn/build/gen.py.orig	2024-07-24 02:59:26.306955600 +0000
 +++ tools/gn/build/gen.py
-@@ -45,6 +45,8 @@ class Platform(object):
-       self._platform = 'fuchsia'
-     elif self._platform.startswith('freebsd'):
-       self._platform = 'freebsd'
-+    elif self._platform.startswith('netbsd'):
-+      self._platform = 'netbsd'
-     elif self._platform.startswith('openbsd'):
-       self._platform = 'openbsd'
-     elif self._platform.startswith('haiku'):
-@@ -52,7 +54,7 @@ class Platform(object):
+@@ -94,6 +94,12 @@ class Platform(object):
+   def is_solaris(self):
+     return self._platform == 'solaris'
  
-   @staticmethod
-   def known_platforms():
--    return ['linux', 'darwin', 'mingw', 'msvc', 'aix', 'fuchsia', 'freebsd', 'openbsd', 'haiku']
-+    return ['linux', 'darwin', 'mingw', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku']
- 
-   def platform(self):
-     return self._platform
-@@ -78,8 +80,20 @@ class Platform(object):
-   def is_haiku(self):
-     return self._platform == 'haiku'
- 
-+  def is_freebsd(self):
-+    return self._platform == 'freebsd'
-+
-+  def is_netbsd(self):
-+    return self._platform == 'netbsd'
-+
 +  def is_openbsd(self):
 +    return self._platform == 'openbsd'
 +
-+  def is_bsd(self):
-+    return self._platform in ['freebsd', 'openbsd', 'netbsd']
++  def is_freebsd(self):
++    return self._platform == 'freebsd'
 +
    def is_posix(self):
--    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku']
-+    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'netbsd']
+     return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity']
  
- 
- def main(argv):
-@@ -203,6 +217,7 @@ def WriteGenericNinja(path, static_libra
+@@ -304,7 +310,7 @@ def WriteGenericNinja(path, static_libra
+       'linux': 'build_linux.ninja.template',
+       'freebsd': 'build_linux.ninja.template',
        'aix': 'build_aix.ninja.template',
-       'openbsd': 'build_openbsd.ninja.template',
+-      'openbsd': 'build_openbsd.ninja.template',
++      'openbsd': 'build_linux.ninja.template',
        'haiku': 'build_haiku.ninja.template',
-+      'netbsd': 'build_linux.ninja.template',
-   }[platform.platform()])
+       'solaris': 'build_linux.ninja.template',
+       'netbsd': 'build_linux.ninja.template',
+@@ -540,6 +546,9 @@ def WriteGNNinja(path, platform, host, o
+     if platform.is_posix() and not platform.is_haiku():
+       ldflags.append('-pthread')
  
-   with open(template_filename) as f:
++    if platform.is_openbsd():
++      libs.append('-lkvm')
++
+     if platform.is_mingw() or platform.is_msys():
+       cflags.extend(['-DUNICODE',
+                      '-DNOMINMAX',

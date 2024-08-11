@@ -1,31 +1,35 @@
 $NetBSD$
 
---- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2020-07-08 21:40:36.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/ui/task_manager/task_manager_table_model.cc.orig	2024-07-24 02:44:29.676107200 +0000
 +++ chrome/browser/ui/task_manager/task_manager_table_model.cc
-@@ -450,7 +450,7 @@ base::string16 TaskManagerTableModel::Ge
+@@ -454,7 +454,7 @@ std::u16string TaskManagerTableModel::Ge
            ? stringifier_->backgrounded_string()
            : stringifier_->foregrounded_string();
  
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int fd_count = observed_task_manager()->GetOpenFdCount(tasks_[row]);
        return fd_count >= 0 ? base::FormatNumber(fd_count)
-@@ -616,7 +616,7 @@ int TaskManagerTableModel::CompareValues
+@@ -621,7 +621,7 @@ int TaskManagerTableModel::CompareValues
        return BooleanCompare(is_proc1_bg, is_proc2_bg);
      }
  
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN: {
        const int proc1_fd_count =
            observed_task_manager()->GetOpenFdCount(tasks_[row1]);
-@@ -790,7 +790,7 @@ void TaskManagerTableModel::UpdateRefres
+@@ -806,7 +806,7 @@ void TaskManagerTableModel::UpdateRefres
        type = REFRESH_TYPE_KEEPALIVE_COUNT;
        break;
  
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
      case IDS_TASK_MANAGER_OPEN_FD_COUNT_COLUMN:
        type = REFRESH_TYPE_FD_COUNT;
        break;

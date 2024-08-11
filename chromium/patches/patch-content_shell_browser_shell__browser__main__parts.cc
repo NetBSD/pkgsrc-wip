@@ -1,22 +1,53 @@
 $NetBSD$
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2020-07-08 21:40:43.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2024-07-24 02:44:37.772891500 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
-@@ -50,7 +50,7 @@
- #if defined(USE_AURA) && defined(USE_X11)
- #include "ui/events/devices/x11/touch_factory_x11.h"  // nogncheck
+@@ -51,7 +51,7 @@
+ #include "net/base/network_change_notifier.h"
  #endif
--#if !defined(OS_CHROMEOS) && defined(USE_AURA) && defined(OS_LINUX)
-+#if !defined(OS_CHROMEOS) && defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
+ 
+-#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
++#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
  #include "ui/base/ime/init/input_method_initializer.h"
  #endif
- #if defined(OS_CHROMEOS)
-@@ -137,7 +137,7 @@ int ShellBrowserMainParts::PreEarlyIniti
-   if (!features::IsUsingOzonePlatform())
-     ui::SetDefaultX11ErrorHandlers();
+ 
+@@ -68,7 +68,7 @@
+ #include "chromeos/lacros/dbus/lacros_dbus_thread_manager.h"
  #endif
--#if !defined(OS_CHROMEOS) && defined(USE_AURA) && defined(OS_LINUX)
-+#if !defined(OS_CHROMEOS) && defined(USE_AURA) && (defined(OS_LINUX) || defined(OS_BSD))
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "ui/linux/linux_ui.h"          // nogncheck
+ #include "ui/linux/linux_ui_factory.h"  // nogncheck
+ #endif
+@@ -139,7 +139,7 @@ void ShellBrowserMainParts::PostCreateMa
+ }
+ 
+ int ShellBrowserMainParts::PreEarlyInitialization() {
+-#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
++#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
    ui::InitializeInputMethodForTesting();
  #endif
- #if defined(OS_ANDROID)
+ #if BUILDFLAG(IS_ANDROID)
+@@ -168,7 +168,7 @@ void ShellBrowserMainParts::ToolkitIniti
+   if (switches::IsRunWebTestsSwitchPresent())
+     return;
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   ui::LinuxUi::SetInstance(ui::GetDefaultLinuxUi());
+ #endif
+ }
+@@ -215,7 +215,7 @@ void ShellBrowserMainParts::PostMainMess
+   ShellDevToolsManagerDelegate::StopHttpHandler();
+   browser_context_.reset();
+   off_the_record_browser_context_.reset();
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   ui::LinuxUi::SetInstance(nullptr);
+ #endif
+   performance_manager_lifetime_.reset();

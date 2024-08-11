@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/views/window/frame_background.cc.orig	2020-07-15 18:56:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/views/window/frame_background.cc.orig	2024-07-24 02:45:10.980108000 +0000
 +++ ui/views/window/frame_background.cc
-@@ -99,7 +99,7 @@ void FrameBackground::PaintMaximized(gfx
-                                      const View* view) const {
+@@ -110,7 +110,7 @@ void FrameBackground::PaintMaximized(gfx
+                                      int width) const {
  // Fill the top with the frame color first so we have a constant background
  // for areas not covered by the theme image.
--#if defined(OS_LINUX) && BUILDFLAG(ENABLE_DESKTOP_AURA)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && BUILDFLAG(ENABLE_DESKTOP_AURA)
-   auto* native_theme = view->GetNativeTheme();
-   ui::NativeTheme::ExtraParams params;
-   params.frame_top_area.use_custom_frame = use_custom_frame_;
+-#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && \
+     BUILDFLAG(ENABLE_DESKTOP_AURA)
+   ui::NativeTheme::FrameTopAreaExtraParams frame_top_area;
+   frame_top_area.use_custom_frame = use_custom_frame_;

@@ -1,13 +1,17 @@
 $NetBSD$
 
---- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2020-07-08 21:40:35.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2024-07-24 02:44:28.748017300 +0000
 +++ chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc
-@@ -672,7 +672,7 @@ void IncidentReportingService::OnEnviron
-   environment_collection_pending_ = false;
+@@ -694,7 +694,7 @@ void IncidentReportingService::OnEnviron
  
  // Process::Current().CreationTime() is missing on some platforms.
--#if defined(OS_MACOSX) || defined(OS_WIN) || defined(OS_LINUX)
-+#if defined(OS_MACOSX) || defined(OS_WIN) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    base::TimeDelta uptime =
        first_incident_time_ - base::Process::Current().CreationTime();
    environment_data->mutable_process()->set_uptime_msec(uptime.InMilliseconds());

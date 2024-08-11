@@ -1,22 +1,26 @@
 $NetBSD$
 
---- ui/gfx/gpu_memory_buffer.h.orig	2020-07-15 18:56:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/gfx/gpu_memory_buffer.h.orig	2024-07-24 02:45:10.612072200 +0000
 +++ ui/gfx/gpu_memory_buffer.h
 @@ -15,7 +15,7 @@
  #include "ui/gfx/geometry/rect.h"
  #include "ui/gfx/gfx_export.h"
  
--#if defined(USE_OZONE) || defined(OS_LINUX)
-+#if defined(USE_OZONE) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "ui/gfx/native_pixmap_handle.h"
- #elif defined(OS_MACOSX) && !defined(OS_IOS)
+ #elif BUILDFLAG(IS_APPLE)
  #include "ui/gfx/mac/io_surface.h"
-@@ -69,7 +69,7 @@ struct GFX_EXPORT GpuMemoryBufferHandle 
+@@ -76,7 +76,7 @@ struct GFX_EXPORT GpuMemoryBufferHandle 
    base::UnsafeSharedMemoryRegion region;
    uint32_t offset = 0;
-   int32_t stride = 0;
--#if defined(OS_LINUX) || defined(OS_FUCHSIA)
-+#if defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD)
+   uint32_t stride = 0;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    NativePixmapHandle native_pixmap_handle;
- #elif defined(OS_MACOSX) && !defined(OS_IOS)
-   ScopedRefCountedIOSurfaceMachPort mach_port;
+ #elif BUILDFLAG(IS_APPLE)
+   ScopedIOSurface io_surface;

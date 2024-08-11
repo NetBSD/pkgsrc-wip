@@ -1,22 +1,17 @@
 $NetBSD$
 
---- components/feature_engagement/public/event_constants.h.orig	2020-07-08 21:40:39.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/feature_engagement/public/event_constants.h.orig	2024-07-24 02:44:34.032529000 +0000
 +++ components/feature_engagement/public/event_constants.h
 @@ -14,7 +14,7 @@ namespace events {
  
- // Desktop and IOS.
- #if defined(OS_IOS) || defined(OS_WIN) || defined(OS_MACOSX) || \
--    defined(OS_LINUX) || defined(OS_CHROMEOS)
-+    defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+ // Desktop
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  // The user has explicitly opened a new tab via an entry point from inside of
  // Chrome.
  extern const char kNewTabOpened[];
-@@ -23,7 +23,7 @@ extern const char kNewTabOpened[];
- 
- // Desktop
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
- // A new tab was opened when 5 (or more) tabs were already open.
- extern const char kSixthTabOpened[];
- // The user made a new tab group.

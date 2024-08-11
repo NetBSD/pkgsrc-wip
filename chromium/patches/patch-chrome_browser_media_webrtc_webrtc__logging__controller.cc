@@ -1,22 +1,39 @@
 $NetBSD$
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2020-07-08 21:40:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2024-07-24 02:44:27.599906200 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
-@@ -23,7 +23,7 @@
- #include "content/public/browser/browser_context.h"
+@@ -25,10 +25,10 @@
+ #include "components/webrtc_logging/browser/text_log_list.h"
  #include "content/public/browser/render_process_host.h"
  
--#if defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "content/public/browser/child_process_security_policy.h"
  #include "storage/browser/file_system/isolated_context.h"
- #endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
-@@ -272,7 +272,7 @@ void WebRtcLoggingController::StartEvent
+-#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ 
+ using webrtc_event_logging::WebRtcEventLogManager;
+ 
+@@ -288,7 +288,7 @@ void WebRtcLoggingController::StartEvent
        web_app_id, callback);
  }
  
--#if defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  void WebRtcLoggingController::GetLogsDirectory(
-     const LogsDirectoryCallback& callback,
-     const LogsDirectoryErrorCallback& error_callback) {
+     LogsDirectoryCallback callback,
+     LogsDirectoryErrorCallback error_callback) {
+@@ -334,7 +334,7 @@ void WebRtcLoggingController::GrantLogsD
+       FROM_HERE,
+       base::BindOnce(std::move(callback), file_system.id(), registered_name));
+ }
+-#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ 
+ void WebRtcLoggingController::OnRtpPacket(
+     base::HeapArray<uint8_t> packet_header,

@@ -1,12 +1,16 @@
 $NetBSD$
 
---- components/metrics/drive_metrics_provider_linux.cc.orig	2020-07-08 21:40:39.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/metrics/drive_metrics_provider_linux.cc.orig	2024-07-24 02:44:34.288554000 +0000
 +++ components/metrics/drive_metrics_provider_linux.cc
 @@ -4,7 +4,13 @@
  
  #include "components/metrics/drive_metrics_provider.h"
  
-+#if defined(OS_BSD)
++#if BUILDFLAG(IS_BSD)
 +#include <sys/types.h>
 +#define MAJOR(dev) major(dev)
 +#define MINOR(dev) minor(dev)

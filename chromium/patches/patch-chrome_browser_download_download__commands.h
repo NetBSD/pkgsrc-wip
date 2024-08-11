@@ -1,13 +1,17 @@
 $NetBSD$
 
---- chrome/browser/download/download_commands.h.orig	2020-07-08 21:40:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/download/download_commands.h.orig	2024-07-24 02:44:27.051853000 +0000
 +++ chrome/browser/download/download_commands.h
-@@ -48,7 +48,7 @@ class DownloadCommands {
-   bool IsCommandVisible(Command command) const;
+@@ -66,7 +66,7 @@ class DownloadCommands {
    void ExecuteCommand(Command command);
  
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    bool IsDownloadPdf() const;
    bool CanOpenPdfInSystemViewer() const;
    Browser* GetBrowser() const;

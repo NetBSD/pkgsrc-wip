@@ -1,31 +1,26 @@
 $NetBSD$
 
---- extensions/browser/api/messaging/message_service.cc.orig	2020-07-08 21:40:43.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- extensions/browser/api/messaging/message_service.cc.orig	2024-07-24 02:44:38.820993000 +0000
 +++ extensions/browser/api/messaging/message_service.cc
-@@ -61,7 +61,7 @@ namespace {
- 
+@@ -71,7 +71,7 @@ namespace {
  const char kReceivingEndDoesntExistError[] =
      "Could not establish connection. Receiving end does not exist.";
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  const char kMissingPermissionError[] =
      "Access to native messaging requires nativeMessaging permission.";
  const char kProhibitedByPoliciesError[] =
-@@ -391,7 +391,7 @@ void MessageService::OpenChannelToNative
-   if (!opener_port->IsValidPort())
+@@ -541,7 +541,7 @@ void MessageService::OpenChannelToNative
      return;
  
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    bool has_permission = extension->permissions_data()->HasAPIPermission(
-       APIPermission::kNativeMessaging);
+       mojom::APIPermissionID::kNativeMessaging);
    if (!has_permission) {
-@@ -441,7 +441,7 @@ void MessageService::OpenChannelToNative
-   channel->opener->IncrementLazyKeepaliveCount();
- 
-   AddChannel(std::move(channel), receiver_port_id);
--#else  // !(defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX))
-+#else  // !(defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)) || defined(OS_BSD)
-   const char kNativeMessagingNotSupportedError[] =
-       "Native Messaging is not supported on this platform.";
-   opener_port->DispatchOnDisconnect(kNativeMessagingNotSupportedError);

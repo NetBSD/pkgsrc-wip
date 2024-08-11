@@ -1,13 +1,17 @@
 $NetBSD$
 
---- base/process/launch.h.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/process/launch.h.orig	2024-07-24 02:44:22.639425500 +0000
 +++ base/process/launch.h
-@@ -180,7 +180,7 @@ struct BASE_EXPORT LaunchOptions {
+@@ -200,7 +200,7 @@ struct BASE_EXPORT LaunchOptions {
    bool clear_environment = false;
- #endif  // OS_WIN || OS_POSIX || OS_FUCHSIA
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // If non-zero, start the process using clone(), using flags as provided.
    // Unlike in clone, clone_flags may not contain a custom termination signal
    // that is sent to the parent when the child dies. The termination signal will

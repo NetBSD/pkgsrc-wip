@@ -1,27 +1,36 @@
 $NetBSD$
 
---- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2020-07-15 18:55:59.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/capture/video/linux/v4l2_capture_delegate.cc.orig	2024-07-24 02:44:41.057209500 +0000
 +++ media/capture/video/linux/v4l2_capture_delegate.cc
-@@ -4,8 +4,12 @@
- 
+@@ -5,8 +5,10 @@
  #include "media/capture/video/linux/v4l2_capture_delegate.h"
  
-+#if defined(OS_LINUX)
+ #include <fcntl.h>
++#if !BUILDFLAG(IS_BSD)
  #include <linux/version.h>
  #include <linux/videodev2.h>
-+#else
-+#include <sys/videoio.h>
 +#endif
  #include <poll.h>
- #include <sys/fcntl.h>
  #include <sys/ioctl.h>
-@@ -24,10 +28,12 @@
+ #include <sys/mman.h>
+@@ -27,17 +29,19 @@
+ #include "media/capture/video/blob_utils.h"
+ #include "media/capture/video/linux/video_capture_device_linux.h"
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "media/capture/capture_switches.h"
+ #include "media/capture/video/linux/v4l2_capture_delegate_gpu_helper.h"
+ #endif  // BUILDFLAG(IS_LINUX)
  
  using media::mojom::MeteringMode;
  
--#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 6, 0)
-+#if defined(OS_LINUX)
-+#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 6, 0) || defined(OS_BSD)
++#if !BUILDFLAG(IS_BSD)
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(4, 6, 0)
  // 16 bit depth, Realsense F200.
  #define V4L2_PIX_FMT_Z16 v4l2_fourcc('Z', '1', '6', ' ')
  #endif
@@ -29,120 +38,125 @@ $NetBSD$
  
  // TODO(aleksandar.stojiljkovic): Wrap this with kernel version check once the
  // format is introduced to kernel.
-@@ -66,8 +72,10 @@ struct {
-   size_t num_planes;
- } constexpr kSupportedFormatsAndPlanarity[] = {
-     {V4L2_PIX_FMT_YUV420, PIXEL_FORMAT_I420, 1},
-+#if !defined(OS_NETBSD)
-     {V4L2_PIX_FMT_Y16, PIXEL_FORMAT_Y16, 1},
-     {V4L2_PIX_FMT_Z16, PIXEL_FORMAT_Y16, 1},
-+#endif
-     {V4L2_PIX_FMT_INVZ, PIXEL_FORMAT_Y16, 1},
-     {V4L2_PIX_FMT_YUYV, PIXEL_FORMAT_YUY2, 1},
-     {V4L2_PIX_FMT_RGB24, PIXEL_FORMAT_RGB24, 1},
-@@ -86,11 +94,13 @@ struct {
- constexpr int kMaxIOCtrlRetries = 5;
- 
- // Base id and class identifier for Controls to be reset.
-+#if !defined(OS_NETBSD)
- struct {
-   uint32_t control_base;
-   uint32_t class_id;
- } constexpr kControls[] = {{V4L2_CID_USER_BASE, V4L2_CID_USER_CLASS},
-                            {V4L2_CID_CAMERA_CLASS_BASE, V4L2_CID_CAMERA_CLASS}};
-+#endif
- 
- // Fill in |format| with the given parameters.
- void FillV4L2Format(v4l2_format* format,
-@@ -123,9 +133,11 @@ void FillV4L2RequestBuffer(v4l2_requestb
- bool IsSpecialControl(int control_id) {
-   switch (control_id) {
-     case V4L2_CID_AUTO_WHITE_BALANCE:
-+#if !defined(OS_NETBSD)
-     case V4L2_CID_EXPOSURE_AUTO:
-     case V4L2_CID_EXPOSURE_AUTO_PRIORITY:
-     case V4L2_CID_FOCUS_AUTO:
-+#endif
-       return true;
-   }
-   return false;
-@@ -142,6 +154,7 @@ bool IsSpecialControl(int control_id) {
- #define V4L2_CID_PANTILT_CMD (V4L2_CID_CAMERA_CLASS_BASE + 34)
+@@ -47,6 +51,14 @@ using media::mojom::MeteringMode;
+ #define V4L2_PIX_FMT_INVZ v4l2_fourcc('I', 'N', 'V', 'Z')
  #endif
- bool IsBlacklistedControl(int control_id) {
-+#if !defined(OS_NETBSD)
-   switch (control_id) {
-     case V4L2_CID_PAN_RELATIVE:
-     case V4L2_CID_TILT_RELATIVE:
-@@ -157,6 +170,7 @@ bool IsBlacklistedControl(int control_id
-     case V4L2_CID_PANTILT_CMD:
-       return true;
-   }
+ 
++#ifndef V4L2_COLORSPACE_OPRGB
++#define V4L2_COLORSPACE_OPRGB V4L2_COLORSPACE_ADOBERGB
 +#endif
-   return false;
++
++#ifndef V4L2_XFER_FUNC_OPRGB
++#define V4L2_XFER_FUNC_OPRGB V4L2_XFER_FUNC_ADOBERGB
++#endif
++
+ namespace media {
+ 
+ namespace {
+@@ -264,7 +276,7 @@ bool V4L2CaptureDelegate::IsBlockedContr
+ // static
+ bool V4L2CaptureDelegate::IsControllableControl(
+     int control_id,
+-    const base::RepeatingCallback<int(int, void*)>& do_ioctl) {
++    const base::RepeatingCallback<int(unsigned int, void*)>& do_ioctl) {
+   const int special_control_id = GetControllingSpecialControl(control_id);
+   if (!special_control_id) {
+     // The control is not controlled by a special control thus the control is
+@@ -320,7 +332,7 @@ V4L2CaptureDelegate::V4L2CaptureDelegate
+       is_capturing_(false),
+       timeout_count_(0),
+       rotation_(rotation) {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   use_gpu_buffer_ = switches::IsVideoCaptureUseGpuMemoryBufferEnabled();
+ #endif  // BUILDFLAG(IS_LINUX)
+ }
+@@ -447,7 +459,7 @@ void V4L2CaptureDelegate::AllocateAndSta
+ 
+   client_->OnStarted();
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (use_gpu_buffer_) {
+     v4l2_gpu_helper_ = std::make_unique<V4L2CaptureDelegateGpuHelper>(
+         std::move(gmb_support_test_));
+@@ -797,7 +809,7 @@ void V4L2CaptureDelegate::SetGPUEnvironm
+ 
+ V4L2CaptureDelegate::~V4L2CaptureDelegate() = default;
+ 
+-bool V4L2CaptureDelegate::RunIoctl(int request, void* argp) {
++bool V4L2CaptureDelegate::RunIoctl(unsigned int request, void* argp) {
+   int num_retries = 0;
+   for (; DoIoctl(request, argp) < 0 && num_retries < kMaxIOCtrlRetries;
+        ++num_retries) {
+@@ -807,7 +819,7 @@ bool V4L2CaptureDelegate::RunIoctl(int r
+   return num_retries != kMaxIOCtrlRetries;
  }
  
-@@ -335,6 +349,7 @@ void V4L2CaptureDelegate::AllocateAndSta
+-int V4L2CaptureDelegate::DoIoctl(int request, void* argp) {
++int V4L2CaptureDelegate::DoIoctl(unsigned int request, void* argp) {
+   return HANDLE_EINTR(v4l2_->ioctl(device_fd_.get(), request, argp));
+ }
  
-   // Set anti-banding/anti-flicker to 50/60Hz. May fail due to not supported
-   // operation (|errno| == EINVAL in this case) or plain failure.
-+#if !defined(OS_NETBSD)
-   if ((power_line_frequency_ == V4L2_CID_POWER_LINE_FREQUENCY_50HZ) ||
-       (power_line_frequency_ == V4L2_CID_POWER_LINE_FREQUENCY_60HZ) ||
-       (power_line_frequency_ == V4L2_CID_POWER_LINE_FREQUENCY_AUTO)) {
-@@ -345,6 +360,7 @@ void V4L2CaptureDelegate::AllocateAndSta
-     if (retval != 0)
-       DVLOG(1) << "Error setting power line frequency removal";
+@@ -818,6 +830,7 @@ bool V4L2CaptureDelegate::IsControllable
+ }
+ 
+ void V4L2CaptureDelegate::ReplaceControlEventSubscriptions() {
++#if !BUILDFLAG(IS_BSD)
+   constexpr uint32_t kControlIds[] = {V4L2_CID_AUTO_EXPOSURE_BIAS,
+                                       V4L2_CID_AUTO_WHITE_BALANCE,
+                                       V4L2_CID_BRIGHTNESS,
+@@ -845,6 +858,7 @@ void V4L2CaptureDelegate::ReplaceControl
+                   << ", {type = V4L2_EVENT_CTRL, id = " << control_id << "}";
+     }
    }
 +#endif
+ }
  
-   capture_format_.frame_size.SetSize(video_fmt_.fmt.pix.width,
-                                      video_fmt_.fmt.pix.height);
-@@ -384,6 +400,7 @@ void V4L2CaptureDelegate::GetPhotoState(
+ mojom::RangePtr V4L2CaptureDelegate::RetrieveUserControlRange(int control_id) {
+@@ -1025,7 +1039,11 @@ void V4L2CaptureDelegate::DoCapture() {
  
-   mojom::PhotoStatePtr photo_capabilities = mojo::CreateEmptyPhotoState();
- 
-+#if !defined(OS_NETBSD)
-   photo_capabilities->pan = RetrieveUserControlRange(V4L2_CID_PAN_ABSOLUTE);
-   photo_capabilities->tilt = RetrieveUserControlRange(V4L2_CID_TILT_ABSOLUTE);
-   photo_capabilities->zoom = RetrieveUserControlRange(V4L2_CID_ZOOM_ABSOLUTE);
-@@ -481,6 +498,7 @@ void V4L2CaptureDelegate::GetPhotoState(
-   photo_capabilities->saturation =
-       RetrieveUserControlRange(V4L2_CID_SATURATION);
-   photo_capabilities->sharpness = RetrieveUserControlRange(V4L2_CID_SHARPNESS);
+   pollfd device_pfd = {};
+   device_pfd.fd = device_fd_.get();
++#if !BUILDFLAG(IS_BSD)
+   device_pfd.events = POLLIN | POLLPRI;
++#else
++  device_pfd.events = POLLIN;
 +#endif
  
-   std::move(callback).Run(std::move(photo_capabilities));
- }
-@@ -492,6 +510,7 @@ void V4L2CaptureDelegate::SetPhotoOption
-   if (!device_fd_.is_valid() || !is_capturing_)
-     return;
+   const int result =
+       HANDLE_EINTR(v4l2_->poll(&device_pfd, 1, kCaptureTimeoutMs));
+@@ -1063,6 +1081,7 @@ void V4L2CaptureDelegate::DoCapture() {
+     timeout_count_ = 0;
+   }
  
-+#if !defined(OS_NETBSD)
-   if (settings->has_pan) {
-     v4l2_control pan_current = {};
-     pan_current.id = V4L2_CID_PAN_ABSOLUTE;
-@@ -603,6 +622,7 @@ void V4L2CaptureDelegate::SetPhotoOption
-       DoIoctl(VIDIOC_S_CTRL, &set_exposure_time);
++#if !BUILDFLAG(IS_BSD)
+   // Dequeue events if the driver has filled in some.
+   if (device_pfd.revents & POLLPRI) {
+     bool controls_changed = false;
+@@ -1098,6 +1117,7 @@ void V4L2CaptureDelegate::DoCapture() {
+       client_->OnCaptureConfigurationChanged();
      }
    }
 +#endif
  
-   if (settings->has_brightness) {
-     v4l2_control current = {};
-@@ -686,6 +706,7 @@ mojom::RangePtr V4L2CaptureDelegate::Ret
+   // Deenqueue, send and reenqueue a buffer if the driver has filled one in.
+   if (device_pfd.revents & POLLIN) {
+@@ -1151,7 +1171,7 @@ void V4L2CaptureDelegate::DoCapture() {
+       // workable on Linux.
+ 
+       // See http://crbug.com/959919.
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       if (use_gpu_buffer_) {
+         v4l2_gpu_helper_->OnIncomingCapturedData(
+             client_.get(), buffer_tracker->start(),
+@@ -1224,7 +1244,7 @@ void V4L2CaptureDelegate::SetErrorState(
+   client_->OnError(error, from_here, reason);
  }
  
- void V4L2CaptureDelegate::ResetUserAndCameraControlsToDefault() {
-+#if !defined(OS_NETBSD)
-   // Set V4L2_CID_AUTO_WHITE_BALANCE to false first.
-   v4l2_control auto_white_balance = {};
-   auto_white_balance.id = V4L2_CID_AUTO_WHITE_BALANCE;
-@@ -781,6 +802,7 @@ void V4L2CaptureDelegate::ResetUserAndCa
-   ext_controls.controls = special_camera_controls.data();
-   if (DoIoctl(VIDIOC_S_EXT_CTRLS, &ext_controls) < 0)
-     DPLOG(INFO) << "VIDIOC_S_EXT_CTRLS";
-+#endif
- }
- 
- bool V4L2CaptureDelegate::MapAndQueueBuffer(int index) {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ gfx::ColorSpace V4L2CaptureDelegate::BuildColorSpaceFromv4l2() {
+   v4l2_colorspace v4l2_primary = (v4l2_colorspace)video_fmt_.fmt.pix.colorspace;
+   v4l2_quantization v4l2_range =

@@ -1,22 +1,17 @@
 $NetBSD$
 
---- chrome/browser/chrome_browser_main_posix.cc.orig	2020-07-08 21:40:33.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/chrome_browser_main_posix.cc.orig	2024-07-24 02:44:26.863834900 +0000
 +++ chrome/browser/chrome_browser_main_posix.cc
-@@ -70,7 +70,7 @@ void ExitHandler::ExitWhenPossibleOnUITh
-     // ExitHandler takes care of deleting itself.
-     new ExitHandler();
+@@ -79,7 +79,7 @@ void ExitHandler::ExitWhenPossibleOnUITh
    } else {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
      switch (signal) {
        case SIGINT:
        case SIGHUP:
-@@ -166,7 +166,7 @@ void ChromeBrowserMainPartsPosix::PostMa
- void ChromeBrowserMainPartsPosix::ShowMissingLocaleMessageBox() {
- #if defined(OS_CHROMEOS)
-   NOTREACHED();  // Should not ever happen on ChromeOS.
--#elif defined(OS_MACOSX)
-+#elif defined(OS_MACOSX) || defined(OS_BSD)
-   // Not called on Mac because we load the locale files differently.
-   NOTREACHED();
- #elif defined(USE_AURA)

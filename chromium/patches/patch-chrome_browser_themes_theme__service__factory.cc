@@ -1,31 +1,43 @@
 $NetBSD$
 
---- chrome/browser/themes/theme_service_factory.cc.orig	2020-07-08 21:40:35.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/themes/theme_service_factory.cc.orig	2024-07-24 02:44:29.048046400 +0000
 +++ chrome/browser/themes/theme_service_factory.cc
-@@ -22,7 +22,7 @@
- #include "chrome/browser/themes/theme_helper_win.h"
+@@ -27,11 +27,11 @@
+ 
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/themes/theme_service_aura_linux.h"
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS) || defined(OS_BSD)
- #include "chrome/browser/themes/theme_service_aura_linux.h"
- #include "ui/views/linux_ui/linux_ui.h"
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "ui/linux/linux_ui_factory.h"
  #endif
-@@ -77,7 +77,7 @@ ThemeServiceFactory::~ThemeServiceFactor
+ 
+@@ -103,7 +103,7 @@ ThemeServiceFactory::~ThemeServiceFactor
  
  KeyedService* ThemeServiceFactory::BuildServiceInstanceFor(
      content::BrowserContext* profile) const {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    using ThemeService = ThemeServiceAuraLinux;
  #endif
  
-@@ -89,7 +89,7 @@ KeyedService* ThemeServiceFactory::Build
- 
- void ThemeServiceFactory::RegisterProfilePrefs(
+@@ -117,9 +117,9 @@ void ThemeServiceFactory::RegisterProfil
      user_prefs::PrefRegistrySyncable* registry) {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
-   bool default_uses_system_theme = false;
- 
-   const views::LinuxUI* linux_ui = views::LinuxUI::instance();
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+   ui::SystemTheme default_system_theme = ui::SystemTheme::kDefault;
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   default_system_theme = ui::GetDefaultSystemTheme();
+ #endif
+   registry->RegisterIntegerPref(prefs::kSystemTheme,

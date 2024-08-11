@@ -1,13 +1,17 @@
 $NetBSD$
 
---- base/profiler/stack_sampling_profiler_unittest.cc.orig	2020-07-08 21:41:45.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/profiler/stack_sampling_profiler_unittest.cc.orig	2024-07-24 02:44:22.651426800 +0000
 +++ base/profiler/stack_sampling_profiler_unittest.cc
-@@ -41,7 +41,7 @@
+@@ -43,7 +43,7 @@
+ 
  #include <intrin.h>
  #include <malloc.h>
- #include <windows.h>
 -#else
-+#elif defined(OS_LINUX)
++#elif !BUILDFLAG(IS_BSD)
  #include <alloca.h>
  #endif
  

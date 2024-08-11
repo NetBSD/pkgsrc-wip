@@ -1,22 +1,17 @@
 $NetBSD$
 
---- ui/base/resource/resource_bundle.cc.orig	2020-07-15 18:56:49.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/base/resource/resource_bundle.cc.orig	2024-07-24 02:45:10.288040900 +0000
 +++ ui/base/resource/resource_bundle.cc
-@@ -841,7 +841,7 @@ void ResourceBundle::ReloadFonts() {
+@@ -926,7 +926,7 @@ void ResourceBundle::ReloadFonts() {
  }
  
- ScaleFactor ResourceBundle::GetMaxScaleFactor() const {
--#if defined(OS_WIN) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_BSD)
+ ResourceScaleFactor ResourceBundle::GetMaxResourceScaleFactor() const {
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    return max_scale_factor_;
  #else
-   return GetSupportedScaleFactors().back();
-@@ -894,7 +894,7 @@ void ResourceBundle::InitSharedInstance(
-   // On platforms other than iOS, 100P is always a supported scale factor.
-   // For Windows we have a separate case in this function.
-   supported_scale_factors.push_back(SCALE_FACTOR_100P);
--#if defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_WIN)
-+#if defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_WIN) || defined(OS_BSD)
-   supported_scale_factors.push_back(SCALE_FACTOR_200P);
- #endif
- #endif
+   return GetMaxSupportedResourceScaleFactor();

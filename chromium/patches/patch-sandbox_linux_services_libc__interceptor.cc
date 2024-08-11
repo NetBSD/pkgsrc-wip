@@ -1,18 +1,22 @@
 $NetBSD$
 
---- sandbox/linux/services/libc_interceptor.cc.orig	2020-07-15 18:56:01.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- sandbox/linux/services/libc_interceptor.cc.orig	2024-07-24 02:44:43.549450900 +0000
 +++ sandbox/linux/services/libc_interceptor.cc
-@@ -11,7 +11,9 @@
+@@ -12,7 +12,9 @@
  #include <stddef.h>
  #include <stdint.h>
  #include <string.h>
-+#if !defined(OS_BSD)
++#if !BUILDFLAG(IS_BSD)
  #include <sys/prctl.h>
 +#endif
  #include <sys/socket.h>
  #include <sys/types.h>
  #include <time.h>
-@@ -93,7 +95,7 @@ bool ReadTimeStruct(base::PickleIterator
+@@ -168,7 +170,7 @@ bool ReadTimeStruct(base::PickleIterator
    } else {
      base::AutoLock lock(g_timezones_lock.Get());
      auto ret_pair = g_timezones.Get().insert(timezone);

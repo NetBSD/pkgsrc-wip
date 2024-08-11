@@ -1,13 +1,17 @@
 $NetBSD$
 
---- components/flags_ui/flags_state.cc.orig	2020-07-08 21:40:39.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/flags_ui/flags_state.cc.orig	2024-07-24 02:44:34.072533100 +0000
 +++ components/flags_ui/flags_state.cc
-@@ -684,7 +684,7 @@ int FlagsState::GetCurrentPlatform() {
-   return kOsWin;
- #elif defined(OS_CHROMEOS)  // Needs to be before the OS_LINUX check.
+@@ -749,7 +749,7 @@ unsigned short FlagsState::GetCurrentPla
    return kOsCrOS;
--#elif defined(OS_LINUX) || defined(OS_OPENBSD)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+ #elif BUILDFLAG(IS_CHROMEOS_LACROS)
+   return kOsLacros;
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_OPENBSD)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return kOsLinux;
- #elif defined(OS_ANDROID)
+ #elif BUILDFLAG(IS_ANDROID)
    return kOsAndroid;

@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/views/views_delegate.h.orig	2020-07-15 18:56:49.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/views/views_delegate.h.orig	2024-07-24 02:45:10.960106100 +0000
 +++ ui/views/views_delegate.h
-@@ -133,7 +133,7 @@ class VIEWS_EXPORT ViewsDelegate {
-   // Returns true if the window passed in is in the Windows 8 metro
+@@ -146,7 +146,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.
    virtual bool IsWindowInMetro(gfx::NativeWindow window) const;
--#elif defined(OS_LINUX) && BUILDFLAG(ENABLE_DESKTOP_AURA)
-+#elif (defined(OS_LINUX) || defined(OS_BSD)) && BUILDFLAG(ENABLE_DESKTOP_AURA)
+ #elif BUILDFLAG(ENABLE_DESKTOP_AURA) && \
+-    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
++    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD))
    virtual gfx::ImageSkia* GetDefaultWindowIcon() const;
  #endif
  

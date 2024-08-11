@@ -1,34 +1,96 @@
 $NetBSD$
 
-https://gn-review.googlesource.com/c/gn/+/9700
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/src/util/exe_path.cc.orig	2020-06-25 09:40:29.000000000 +0000
+--- tools/gn/src/util/exe_path.cc.orig	2024-07-24 02:59:26.382963000 +0000
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@
  #include <windows.h>
  
  #include "base/win/win_util.h"
--#elif defined(OS_FREEBSD)
-+#elif defined(OS_FREEBSD) || defined(OS_NETBSD)
+-#elif defined(OS_FREEBSD) || defined(OS_NETBSD)
++#elif defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_OPENBSD)
  #include <limits.h>
  #include <sys/sysctl.h>
  #include <sys/types.h>
-@@ -67,6 +67,18 @@ base::FilePath GetExePath() {
-   return base::FilePath(buf);
+@@ -26,6 +26,10 @@
+ #include <stdlib.h>
+ #endif
+ 
++#if defined(OS_OPENBSD)
++#include <kvm.h>
++#endif
++
+ #if defined(OS_MACOSX)
+ 
+ base::FilePath GetExePath() {
+@@ -104,6 +108,67 @@ base::FilePath GetExePath() {
+   return base::FilePath(raw);
  }
  
-+#elif defined(OS_NETBSD)
++#elif defined(OS_OPENBSD)
 +
 +base::FilePath GetExePath() {
-+  int mib[] = {CTL_KERN, KERN_PROC_ARGS, getpid(), KERN_PROC_PATHNAME};
-+  char buf[PATH_MAX];
-+  size_t buf_size = PATH_MAX;
-+  if (sysctl(mib, 4, buf, &buf_size, nullptr, 0) == -1) {
-+    return base::FilePath();
++  struct kinfo_file *files;
++  kvm_t *kd = NULL;
++  char errbuf[_POSIX2_LINE_MAX];
++  char **retvalargs;
++#define MAXTOKENS 2
++  char *tokens[MAXTOKENS];
++  static char retval[PATH_MAX];
++  int cnt;
++  size_t len;
++  struct stat sb;
++  pid_t cpid = getpid();
++
++  int mib[] = { CTL_KERN, KERN_PROC_ARGS, cpid, KERN_PROC_ARGV };
++
++  if (sysctl(mib, 4, NULL, &len, NULL, 0) != -1) {
++    retvalargs = static_cast<char**>(malloc(len));
++    if (!retvalargs)
++      goto out;
++
++    if (sysctl(mib, 4, retvalargs, &len, NULL, 0) < 0)
++      goto out;
++
++    char *cr = strdup(retvalargs[0]);
++    free(retvalargs);
++
++    *tokens = strtok(cr, ":");
++    if (tokens[0] == NULL)
++      goto out;
++
++    if (realpath(tokens[0], retval) == NULL)
++      goto out;
++
++    if (stat(retval, &sb) < 0)
++      goto out;
++
++    if ((kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf)) == NULL)
++      goto out;
++
++    if ((files = kvm_getfiles(kd, KERN_FILE_BYPID, cpid,
++                              sizeof(struct kinfo_file), &cnt)) == NULL) {
++      kvm_close(kd); 
++      goto out;
++    }
++
++    for (int i = 0; i < cnt; i++) {
++      if (files[i].fd_fd == KERN_FILE_TEXT &&
++          files[i].va_fsid == static_cast<uint32_t>(sb.st_dev) &&
++          files[i].va_fileid == sb.st_ino) {
++        kvm_close(kd);
++        return base::FilePath(retval);
++      }
++    }
 +  }
-+  return base::FilePath(buf);
++
++out:
++  return base::FilePath();
 +}
 +
- #elif defined(OS_HAIKU)
+ #elif defined(OS_ZOS)
  
  base::FilePath GetExePath() {

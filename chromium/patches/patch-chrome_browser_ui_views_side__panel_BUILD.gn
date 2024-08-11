@@ -1,0 +1,46 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/ui/views/side_panel/BUILD.gn.orig	2024-07-24 02:44:29.888127800 +0000
++++ chrome/browser/ui/views/side_panel/BUILD.gn
+@@ -172,7 +172,9 @@ static_library("side_panel") {
+     "//chrome/app:generated_resources",
+     "//chrome/app:generated_resources_grit",
+     "//chrome/app/vector_icons",
++    "//chrome/browser/cart:mojo_bindings",
+     "//chrome/browser/companion/core",
++    "//chrome/browser/companion/visual_query",
+     "//chrome/browser/favicon",
+     "//chrome/browser/lens/region_search",
+     "//chrome/browser/profiles",
+@@ -181,8 +183,11 @@ static_library("side_panel") {
+     "//chrome/browser/search_engines",
+     "//chrome/browser/themes",
+     "//chrome/browser/ui:browser_element_identifiers",
++    "//chrome/browser/ui:webui_name_variants",
+     "//chrome/browser/ui/actions",
+     "//chrome/browser/ui/browser_window",
++    "//chrome/browser/ui/webui/side_panel/bookmarks:mojo_bindings",
++    "//chrome/browser/ui/webui/side_panel/reading_list:mojo_bindings",
+     "//chrome/common",
+     "//chrome/common:constants",
+     "//chrome/common/extensions/api",
+@@ -198,6 +203,7 @@ static_library("side_panel") {
+     "//components/lens:features",
+     "//components/omnibox/browser:vector_icons",
+     "//components/optimization_guide/core:features",
++    "//components/page_image_service/mojom:mojo_bindings",
+     "//components/performance_manager",
+     "//components/pref_registry",
+     "//components/search",
+@@ -222,5 +228,7 @@ static_library("side_panel") {
+     "//ui/gfx:color_utils",
+     "//ui/gfx/geometry:geometry_skia",
+     "//ui/webui",
++    "//ui/webui/resources/cr_components/commerce:mojo_bindings",
++    "//ui/webui/resources/cr_components/help_bubble:mojo_bindings",
+   ]
+ }

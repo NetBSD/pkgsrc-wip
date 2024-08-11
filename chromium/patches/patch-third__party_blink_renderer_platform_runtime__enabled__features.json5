@@ -1,0 +1,98 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2024-07-24 02:44:46.921777700 +0000
++++ third_party/blink/renderer/platform/runtime_enabled_features.json5
+@@ -324,7 +324,7 @@
+       name: "AppTitle",
+       status: "experimental",
+       origin_trial_feature_name: "AppTitle",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       base_feature: "WebAppEnableAppTitle",
+     },
+     {
+@@ -1528,7 +1528,7 @@
+       status: "test",
+       base_feature: "none",
+       origin_trial_feature_name: "FedCmContinueOnBundle",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1545,7 +1545,7 @@
+       status: "test",
+       base_feature: "none",
+       origin_trial_feature_name: "FedCmButtonMode",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1590,7 +1590,7 @@
+       base_feature: "none",
+       public: true,
+       origin_trial_feature_name: "FedCmMultipleIdentityProviders",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       origin_trial_allows_third_party: true,
+     },
+     {
+@@ -1928,7 +1928,7 @@
+       base_feature_status: "enabled",
+       copied_from_base_feature_if: "overridden",
+       origin_trial_feature_name: "FullscreenPopupWindows",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+     },
+     {
+       name: "GamepadButtonAxisEvents",
+@@ -3005,7 +3005,7 @@
+       // Tracking bug for the implementation: https://crbug.com/1462930
+       name: "PermissionElement",
+       origin_trial_feature_name: "PermissionElement",
+-      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd", "netbsd"],
+       status: "experimental",
+       public: true,
+       base_feature_status: "enabled",
+@@ -3140,7 +3140,7 @@
+     {
+       name: "PrivateNetworkAccessPermissionPrompt",
+       origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
+-      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd", "netbsd"],
+       status: "stable",
+       public: true,
+       base_feature: "none",
+@@ -4116,7 +4116,7 @@
+       name: "UnrestrictedSharedArrayBuffer",
+       base_feature: "none",
+       origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
+-      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "fuchsia", "chromeos", "openbsd", "freebsd", "netbsd"],
+     },
+     // Enables using policy-controlled feature "usb-unrestricted" to allow
+     // isolated context to access protected USB interface classes and to
+@@ -4285,7 +4285,7 @@
+     {
+       name: "WebAppScopeExtensions",
+       origin_trial_feature_name: "WebAppScopeExtensions",
+-      origin_trial_os: ["win", "mac", "linux", "chromeos"],
++      origin_trial_os: ["win", "mac", "linux", "chromeos", "openbsd", "freebsd", "netbsd"],
+       status: "experimental",
+       base_feature: "none",
+     },
+@@ -4328,7 +4328,7 @@
+       status: "experimental",
+       base_feature: "none",
+       origin_trial_feature_name: "WebAppUrlHandling",
+-      origin_trial_os: ["win", "mac", "linux"],
++      origin_trial_os: ["win", "mac", "linux", "openbsd", "freebsd", "netbsd"],
+     },
+     {
+       // WebAssembly JS Promise Integration,

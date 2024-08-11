@@ -1,6 +1,10 @@
 $NetBSD$
 
---- v8/src/trap-handler/handler-inside-posix.cc.orig	2020-07-15 19:01:44.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- v8/src/trap-handler/handler-inside-posix.cc.orig	2024-07-24 02:47:46.359158300 +0000
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
  
@@ -9,14 +13,31 @@ $NetBSD$
 -#if defined(V8_OS_LINUX) || defined(V8_OS_FREEBSD)
 +#if defined(V8_OS_LINUX) || defined(V8_OS_FREEBSD) || defined(V8_OS_NETBSD)
  #include <ucontext.h>
- #elif V8_OS_MACOSX
+ #elif V8_OS_DARWIN
  #include <sys/ucontext.h>
-@@ -114,6 +114,8 @@ bool TryHandleSignal(int signum, siginfo
-     auto* context_rip = &uc->uc_mcontext->__ss.__rip;
+@@ -61,6 +61,10 @@ namespace trap_handler {
+ #define CONTEXT_REG(reg, REG) &uc->uc_mcontext->__ss.__##reg
  #elif V8_OS_FREEBSD
-     auto* context_rip = &uc->uc_mcontext.mc_rip;
+ #define CONTEXT_REG(reg, REG) &uc->uc_mcontext.mc_##reg
++#elif V8_OS_OPENBSD
++#define CONTEXT_REG(reg, REG) &uc->sc_##reg
 +#elif V8_OS_NETBSD
-+    auto* context_rip = &_UC_MACHINE_PC(uc);
++#define CONTEXT_REG(reg, REG) &uc->uc_mcontext.__gregs[_REG_##REG]
  #else
- #error Unsupported platform
+ #error "Unsupported platform."
  #endif
+@@ -80,8 +84,12 @@ bool IsKernelGeneratedSignal(siginfo_t* 
+   // si_code at its default of 0 for signals that don’t originate in hardware.
+   // The other conditions are only relevant for Linux.
+   return info->si_code > 0 && info->si_code != SI_USER &&
+-         info->si_code != SI_QUEUE && info->si_code != SI_TIMER &&
+-         info->si_code != SI_ASYNCIO && info->si_code != SI_MESGQ;
++         info->si_code != SI_QUEUE && info->si_code != SI_TIMER
++#ifdef V8_OS_OPENBSD
++         ;
++#else
++         && info->si_code != SI_ASYNCIO && info->si_code != SI_MESGQ;
++#endif
+ }
+ 
+ class UnmaskOobSignalScope {

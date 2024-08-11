@@ -1,22 +1,22 @@
 $NetBSD$
 
---- base/posix/can_lower_nice_to.cc.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/posix/can_lower_nice_to.cc.orig	2024-07-24 02:44:22.631425000 +0000
 +++ base/posix/can_lower_nice_to.cc
-@@ -31,6 +31,9 @@ bool CanLowerNiceTo(int nice_value) {
-   if (geteuid() == 0)
-     return true;
+@@ -11,8 +11,12 @@
  
-+#if defined(OS_BSD)
-+  return false;
-+#else
-   // 2. Skip checking the CAP_SYS_NICE permission because it would require
-   // libcap.so.
+ #include "build/build_config.h"
  
-@@ -54,6 +57,7 @@ bool CanLowerNiceTo(int nice_value) {
-   // And lowering niceness to |nice_value| is allowed if it is greater than or
-   // equal to the limit:
-   return nice_value >= lowest_nice_allowed;
++#if BUILDFLAG(IS_FREEBSD)
++#include <sys/param.h>
 +#endif
- }
- 
- }  // namespace internal
++
+ // Not defined on AIX by default.
+-#if BUILDFLAG(IS_AIX)
++#if BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
+ #if defined(RLIMIT_NICE)
+ #error Assumption about OS_AIX is incorrect
+ #endif

@@ -21,13 +21,16 @@ GN_ARGS+=	use_pulseaudio=true
 .if !empty(PKG_OPTIONS:Mdebug)
 BUILDTYPE=		Debug
 GN_ARGS+=		is_debug=true
-# Dynamic link build causes link errors in pkgsrc.
-GN_ARGS+=		is_component_build=false
+GN_ARGS+=		symbol_level=1
 GN_BOOTSTRAP_FLAGS+=	--debug
-GN_VERBOSE=		-v
+GN_VERBOSE=		#-v
+INSTALL_UNSTRIPPED=	yes
 .else
 BUILDTYPE=		Release
-GN_ARGS+=		is_debug=false \
-			symbol_level=0
+GN_ARGS+=		is_official_build=true
+GN_ARGS+=		is_component_build=false
+GN_ARGS+=		is_debug=false
+GN_ARGS+=		blink_symbol_level=0
+GN_ARGS+=		symbol_level=0
 GN_VERBOSE=		# empty
 .endif

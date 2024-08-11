@@ -1,31 +1,71 @@
 $NetBSD$
 
---- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2020-07-15 18:56:01.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2024-07-24 02:44:43.825477800 +0000
 +++ services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc
-@@ -43,7 +43,7 @@ namespace {
- uint32_t CalculatePrivateFootprintKb(const mojom::RawOSMemDump& os_dump,
+@@ -54,7 +54,7 @@ uint32_t CalculatePrivateFootprintKb(con
                                       uint32_t shared_resident_kb) {
    DCHECK(os_dump.platform_private_footprint);
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
+-    BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    uint64_t rss_anon_bytes = os_dump.platform_private_footprint->rss_anon_bytes;
    uint64_t vm_swap_bytes = os_dump.platform_private_footprint->vm_swap_bytes;
    return (rss_anon_bytes + vm_swap_bytes) / 1024;
-@@ -82,7 +82,7 @@ memory_instrumentation::mojom::OSMemDump
+@@ -83,7 +83,7 @@ memory_instrumentation::mojom::OSMemDump
    os_dump->is_peak_rss_resettable = internal_os_dump.is_peak_rss_resettable;
    os_dump->private_footprint_kb =
        CalculatePrivateFootprintKb(internal_os_dump, shared_resident_kb);
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    os_dump->private_footprint_swap_kb =
        internal_os_dump.platform_private_footprint->vm_swap_bytes / 1024;
  #endif
-@@ -243,7 +243,7 @@ void QueuedRequestDispatcher::SetUpAndDi
+@@ -219,7 +219,7 @@ void QueuedRequestDispatcher::SetUpAndDi
  
  // On most platforms each process can dump data about their own process
  // so ask each process to do so Linux is special see below.
--#if !defined(OS_LINUX)
-+#if !defined(OS_LINUX) && !defined(OS_BSD)
+-#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
++#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_BSD)
      request->pending_responses.insert({client_info.pid, ResponseType::kOSDump});
      client->RequestOSMemoryDump(request->memory_map_option(),
                                  {base::kNullProcessId},
+@@ -234,7 +234,7 @@ void QueuedRequestDispatcher::SetUpAndDi
+ 
+ // In some cases, OS stats can only be dumped from a privileged process to
+ // get around to sandboxing/selinux restrictions (see crbug.com/461788).
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   std::vector<base::ProcessId> pids;
+   mojom::ClientProcess* browser_client = nullptr;
+   base::ProcessId browser_client_pid = base::kNullProcessId;
+@@ -280,7 +280,7 @@ void QueuedRequestDispatcher::SetUpAndDi
+     const OsCallback& os_callback) {
+ // On Linux, OS stats can only be dumped from a privileged process to
+ // get around to sandboxing/selinux restrictions (see crbug.com/461788).
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   mojom::ClientProcess* browser_client = nullptr;
+   base::ProcessId browser_client_pid = 0;
+   for (const auto& client_info : clients) {
+@@ -330,7 +330,7 @@ QueuedRequestDispatcher::FinalizeVmRegio
+     // each client process provides 1 OS dump, % the case where the client is
+     // disconnected mid dump.
+     OSMemDumpMap& extra_os_dumps = response.second.os_dumps;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+     for (auto& kv : extra_os_dumps) {
+       auto pid = kv.first == base::kNullProcessId ? original_pid : kv.first;
+       DCHECK(results.find(pid) == results.end());
+@@ -391,7 +391,7 @@ void QueuedRequestDispatcher::Finalize(Q
+     // crash). In the latter case (OS_LINUX) we expect the full map to come
+     // from the browser process response.
+     OSMemDumpMap& extra_os_dumps = response.second.os_dumps;
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+     for (const auto& kv : extra_os_dumps) {
+       auto pid = kv.first == base::kNullProcessId ? original_pid : kv.first;
+       DCHECK_EQ(pid_to_os_dump[pid], nullptr);

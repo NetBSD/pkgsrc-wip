@@ -1,22 +1,35 @@
 $NetBSD$
 
---- services/network/network_service.cc.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/network/network_service.cc.orig	2024-07-24 02:44:43.721467700 +0000
 +++ services/network/network_service.cc
-@@ -67,7 +67,7 @@
+@@ -99,7 +99,7 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS) && !BUILDFLAG(IS_CHROMECAST)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS) && !BUILDFLAG(IS_CHROMECAST)
- #include "components/os_crypt/key_storage_config_linux.h"
- #endif
+-#if (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS)) || \
++#if ((BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS)) || BUILDFLAG(IS_BSD)) || \
+     BUILDFLAG(IS_CHROMEOS_LACROS)
  
-@@ -646,7 +646,7 @@ void NetworkService::OnCertDBChanged() {
-   net::CertDatabase::GetInstance()->NotifyObserversCertDBChanged();
+ #include "components/os_crypt/sync/key_storage_config_linux.h"
+@@ -983,7 +983,7 @@ void NetworkService::SetExplicitlyAllowe
+   net::SetExplicitlyAllowedPorts(ports);
  }
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
- void NetworkService::SetCryptConfig(mojom::CryptConfigPtr crypt_config) {
- #if !BUILDFLAG(IS_CHROMECAST)
-   DCHECK(!os_crypt_config_set_);
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ void NetworkService::SetGssapiLibraryLoadObserver(
+     mojo::PendingRemote<mojom::GssapiLibraryLoadObserver>
+         gssapi_library_load_observer) {
+@@ -1065,7 +1065,7 @@ NetworkService::CreateHttpAuthHandlerFac
+   );
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ void NetworkService::OnBeforeGssapiLibraryLoad() {
+   if (gssapi_library_load_observer_.is_bound()) {
+     gssapi_library_load_observer_->OnBeforeGssapiLibraryLoad();

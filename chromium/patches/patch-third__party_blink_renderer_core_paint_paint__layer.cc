@@ -1,13 +1,17 @@
 $NetBSD$
 
---- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2020-07-15 18:56:48.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2024-07-24 02:44:46.045692700 +0000
 +++ third_party/blink/renderer/core/paint/paint_layer.cc
-@@ -108,7 +108,7 @@ namespace {
- static CompositingQueryMode g_compositing_query_mode =
-     kCompositingQueriesAreOnlyAllowedInCertainDocumentLifecyclePhases;
+@@ -122,7 +122,7 @@ namespace blink {
  
--#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_BSD)
- struct SameSizeAsPaintLayer : DisplayItemClient {
+ namespace {
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ struct SameSizeAsPaintLayer : GarbageCollected<PaintLayer>, DisplayItemClient {
    // The bit fields may fit into the machine word of DisplayItemClient which
    // has only 8-bit data.

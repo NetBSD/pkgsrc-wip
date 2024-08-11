@@ -1,8 +1,13 @@
 To Do:
 
-* No html5 audio (video has no problem)
-* 'Passwords cryptographer error was encountered:' and
-  'Failed to receive encryption key from server.' errors
+1) If pulseaudio not run, chromium can't start it, so no sound:
+VERBOSE1:pulse_util.cc(261)] Failed to connect to the context. Error: Connection refused
+WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
 
-- This package is affected by several vulnerabilities that are not actively
-  tracked here.  Usually upstream resolve them when releasing new version.
+If pulseaudio already started, chromium can join it, and has sound.
+This is the workaround, see the files/chrome launch wrapper.
+
+NOTE: OpenBSD (of course), FreeBSD and DragonFly use sndio as default.
+
+2) HID doesn't work on NetBSD.
+NOTE: For this OpenBSD uses fido and libudev-openbsd, FreeBSD uses devd.

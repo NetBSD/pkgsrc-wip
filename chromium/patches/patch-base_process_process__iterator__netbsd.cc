@@ -1,74 +1,65 @@
 $NetBSD$
 
---- base/process/process_iterator_netbsd.cc.orig	2020-07-09 13:18:47.324483044 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/process/process_iterator_netbsd.cc.orig	2024-08-01 14:08:56.652412756 +0000
 +++ base/process/process_iterator_netbsd.cc
-@@ -0,0 +1,146 @@
-+// Copyright (c) 2013 The Chromium Authors. All rights reserved.
+@@ -0,0 +1,132 @@
++// Copyright 2013 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "base/process/process_iterator.h"
 +
 +#include <errno.h>
-+#include <sys/types.h>
 +#include <stddef.h>
++#include <unistd.h>
++#include <sys/param.h>
++#include <sys/proc.h>
 +#include <sys/sysctl.h>
-+#include <unistd.h>
-+
-+/* getuid() */
-+#include <unistd.h>
-+#include <sys/types.h>
 +
 +#include "base/logging.h"
-+#include "base/macros.h"
 +#include "base/strings/string_split.h"
 +#include "base/strings/string_util.h"
 +
 +namespace base {
 +
 +ProcessIterator::ProcessIterator(const ProcessFilter* filter)
-+  : index_of_kinfo_proc_(),
-+  filter_(filter) {
-+
-+  int mib[6];
-+
-+  printf("%s\n", __PRETTY_FUNCTION__);
-+
-+  mib[0] = CTL_KERN;
-+  mib[1] = KERN_PROC2;
-+  mib[2] = KERN_PROC_UID;
-+  mib[3] = getuid();
-+  mib[4] = sizeof(struct kinfo_proc2);
-+  mib[5] = 0;
++    : filter_(filter) {
++  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_UID, static_cast<int>(getuid()),
++                sizeof(struct kinfo_proc2), 1 };
 +
 +  bool done = false;
 +  int try_num = 1;
 +  const int max_tries = 10;
++  size_t num_of_kinfo_proc;
 +
 +  do {
 +    size_t len = 0;
-+    if (sysctl(mib, 6, NULL, &len, NULL, 0) <0 ){
-+      LOG(ERROR) << "failed to get the size needed for the process list";
++    if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) < 0) {
++      DLOG(ERROR) << "failed to get the size needed for the process list";
 +      kinfo_procs_.resize(0);
 +      done = true;
 +    } else {
-+      size_t num_of_kinfo_proc = len / sizeof(struct kinfo_proc2);
++      num_of_kinfo_proc = len / sizeof(struct kinfo_proc2);
 +      // Leave some spare room for process table growth (more could show up
 +      // between when we check and now)
 +      num_of_kinfo_proc += 16;
 +      kinfo_procs_.resize(num_of_kinfo_proc);
 +      len = num_of_kinfo_proc * sizeof(struct kinfo_proc2);
-+      if (sysctl(mib, 6, &kinfo_procs_[0], &len, NULL, 0) <0) {
++      if (sysctl(mib, std::size(mib), &kinfo_procs_[0], &len, NULL, 0) < 0) {
 +        // If we get a mem error, it just means we need a bigger buffer, so
 +        // loop around again.  Anything else is a real error and give up.
 +        if (errno != ENOMEM) {
-+          LOG(ERROR) << "failed to get the process list";
++          DLOG(ERROR) << "failed to get the process list";
 +          kinfo_procs_.resize(0);
 +          done = true;
 +        }
 +      } else {
 +        // Got the list, just make sure we're sized exactly right
-+        size_t num_of_kinfo_proc = len / sizeof(struct kinfo_proc2);
++        num_of_kinfo_proc = len / sizeof(struct kinfo_proc2);
 +        kinfo_procs_.resize(num_of_kinfo_proc);
 +        done = true;
 +      }
@@ -76,13 +67,12 @@ $NetBSD$
 +  } while (!done && (try_num++ < max_tries));
 +
 +  if (!done) {
-+    LOG(ERROR) << "failed to collect the process list in a few tries";
++    DLOG(ERROR) << "failed to collect the process list in a few tries";
 +    kinfo_procs_.resize(0);
 +  }
 +}
 +
-+ProcessIterator::~ProcessIterator() {
-+}
++ProcessIterator::~ProcessIterator() = default;
 +
 +bool ProcessIterator::CheckForNextProcess() {
 +  std::string data;
@@ -97,13 +87,13 @@ $NetBSD$
 +
 +    // Find out what size buffer we need.
 +    size_t data_len = 0;
-+    if (sysctl(mib, __arraycount(mib), NULL, &data_len, NULL, 0) < 0) {
++    if (sysctl(mib, std::size(mib), NULL, &data_len, NULL, 0) < 0) {
 +      DVPLOG(1) << "failed to figure out the buffer size for a commandline";
 +      continue;
 +    }
 +
 +    data.resize(data_len);
-+    if (sysctl(mib, __arraycount(mib), &data[0], &data_len, NULL, 0) < 0) {
++    if (sysctl(mib, std::size(mib), &data[0], &data_len, NULL, 0) < 0) {
 +      DVPLOG(1) << "failed to fetch a commandline";
 +      continue;
 +    }
@@ -145,7 +135,7 @@ $NetBSD$
 +
 +bool NamedProcessIterator::IncludeEntry() {
 +  return (executable_name_ == entry().exe_file() &&
-+                            ProcessIterator::IncludeEntry());
++          ProcessIterator::IncludeEntry());
 +}
 +
 +}  // namespace base

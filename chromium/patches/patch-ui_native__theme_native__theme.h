@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/native_theme/native_theme.h.orig	2020-07-15 18:56:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/native_theme/native_theme.h.orig	2024-07-24 02:45:10.712082000 +0000
 +++ ui/native_theme/native_theme.h
-@@ -51,7 +51,7 @@ class NATIVE_THEME_EXPORT NativeTheme {
-   // The part to be painted / sized.
-   enum Part {
+@@ -62,7 +62,7 @@ class NATIVE_THEME_EXPORT NativeTheme {
      kCheckbox,
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
+ // of lacros-chrome is complete.
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
      kFrameTopArea,
  #endif
      kInnerSpinButton,

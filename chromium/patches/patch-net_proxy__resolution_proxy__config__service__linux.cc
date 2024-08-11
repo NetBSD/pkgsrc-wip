@@ -1,41 +1,46 @@
 $NetBSD$
 
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2020-07-15 18:56:00.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-07-24 02:44:43.025400200 +0000
 +++ net/proxy_resolution/proxy_config_service_linux.cc
-@@ -6,7 +6,9 @@
+@@ -11,7 +11,9 @@
  
  #include <errno.h>
  #include <limits.h>
-+#if !defined(OS_BSD)
++#if !BUILDFLAG(IS_BSD)
  #include <sys/inotify.h>
 +#endif
  #include <unistd.h>
  
  #include <map>
-@@ -511,6 +513,7 @@ int StringToIntOrDefault(base::StringPie
-   return default_value;
+@@ -510,6 +512,7 @@ bool SettingGetterImplGSettings::CheckVe
  }
+ #endif  // defined(USE_GIO)
  
-+#if !defined(OS_BSD)
- // This is the KDE version that reads kioslaverc and simulates gsettings.
- // Doing this allows the main Delegate code, as well as the unit tests
- // for it, to stay the same - and the settings map fairly well besides.
-@@ -1001,6 +1004,7 @@ class SettingGetterImplKDE : public Prox
- 
-   DISALLOW_COPY_AND_ASSIGN(SettingGetterImplKDE);
++#if !BUILDFLAG(IS_BSD)
+ // Converts |value| from a decimal string to an int. If there was a failure
+ // parsing, returns |default_value|.
+ int StringToIntOrDefault(std::string_view value, int default_value) {
+@@ -1038,6 +1041,7 @@ class SettingGetterImplKDE : public Prox
+   // events on.
+   scoped_refptr<base::SequencedTaskRunner> file_task_runner_;
  };
 +#endif
  
  }  // namespace
  
-@@ -1215,8 +1219,10 @@ ProxyConfigServiceLinux::Delegate::Deleg
-     case base::nix::DESKTOP_ENVIRONMENT_KDE3:
+@@ -1256,9 +1260,11 @@ ProxyConfigServiceLinux::Delegate::Deleg
      case base::nix::DESKTOP_ENVIRONMENT_KDE4:
      case base::nix::DESKTOP_ENVIRONMENT_KDE5:
-+#if !defined(OS_BSD)
-       setting_getter_.reset(new SettingGetterImplKDE(env_var_getter_.get()));
+     case base::nix::DESKTOP_ENVIRONMENT_KDE6:
++#if !BUILDFLAG(IS_BSD)
+       setting_getter_ =
+           std::make_unique<SettingGetterImplKDE>(env_var_getter_.get());
        break;
 +#endif
      case base::nix::DESKTOP_ENVIRONMENT_XFCE:
+     case base::nix::DESKTOP_ENVIRONMENT_LXQT:
      case base::nix::DESKTOP_ENVIRONMENT_OTHER:
-       break;

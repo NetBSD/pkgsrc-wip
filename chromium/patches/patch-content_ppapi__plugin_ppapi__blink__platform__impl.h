@@ -1,27 +1,17 @@
 $NetBSD$
 
---- content/ppapi_plugin/ppapi_blink_platform_impl.h.orig	2020-07-08 21:40:42.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/ppapi_plugin/ppapi_blink_platform_impl.h.orig	2024-07-24 02:44:37.572872200 +0000
 +++ content/ppapi_plugin/ppapi_blink_platform_impl.h
-@@ -13,7 +13,7 @@
- #include "build/build_config.h"
- #include "content/child/blink_platform_impl.h"
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
- #include "components/services/font/public/cpp/font_loader.h"
- #include "third_party/skia/include/core/SkRefCnt.h"
- #endif
-@@ -36,11 +36,11 @@ class PpapiBlinkPlatformImpl : public Bl
-   blink::WebThemeEngine* ThemeEngine() override;
+@@ -36,7 +36,7 @@ class PpapiBlinkPlatformImpl : public Bl
+   blink::WebString DefaultLocale() override;
  
   private:
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    std::unique_ptr<blink::WebSandboxSupport> sandbox_support_;
  #endif
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   sk_sp<font_service::FontLoader> font_loader_;
- #endif
- 
+ };

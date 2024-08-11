@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/clang/BUILD.gn.orig	2024-07-24 02:44:22.891450000 +0000
++++ build/config/clang/BUILD.gn
+@@ -230,7 +230,7 @@ template("clang_lib") {
+ 
+ # Adds a dependency on the Clang runtime library clang_rt.builtins.
+ clang_lib("compiler_builtins") {
+-  if (!toolchain_has_rust) {
++  if (!toolchain_has_rust || is_bsd) {
+     # Since there's no Rust in the toolchain, there's no concern that we'll use
+     # the Rust stdlib's intrinsics here.
+     #

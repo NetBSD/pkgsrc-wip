@@ -1,31 +1,35 @@
 $NetBSD$
 
---- net/base/network_change_notifier.h.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/base/network_change_notifier.h.orig	2024-07-24 02:44:42.161316600 +0000
 +++ net/base/network_change_notifier.h
-@@ -23,7 +23,7 @@ struct NetworkInterface;
- class SystemDnsConfigChangeNotifier;
- typedef std::vector<NetworkInterface> NetworkInterfaceList;
+@@ -18,7 +18,7 @@
+ #include "net/base/net_export.h"
+ #include "net/base/network_handle.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
- namespace internal {
- class AddressTrackerLinux;
- }
-@@ -366,7 +366,7 @@ class NET_EXPORT NetworkChangeNotifier {
-   // Chrome net code.
-   static SystemDnsConfigChangeNotifier* GetSystemDnsConfigNotifier();
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   // Returns the AddressTrackerLinux if present.
-   static const internal::AddressTrackerLinux* GetAddressTracker();
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "net/base/address_map_linux.h"
  #endif
-@@ -513,7 +513,7 @@ class NET_EXPORT NetworkChangeNotifier {
-           NetworkChangeCalculatorParams(),
-       SystemDnsConfigChangeNotifier* system_dns_config_notifier = nullptr);
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+@@ -459,7 +459,7 @@ class NET_EXPORT NetworkChangeNotifier {
+   // packets sent lazily.
+   static bool IsDefaultNetworkActive();
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Returns the AddressTrackerLinux if present.
-   // TODO(szym): Retrieve AddressMap from NetworkState. http://crbug.com/144212
-   virtual const internal::AddressTrackerLinux*
+   static AddressMapOwnerLinux* GetAddressMapOwner();
+ #endif
+@@ -629,7 +629,7 @@ class NET_EXPORT NetworkChangeNotifier {
+       SystemDnsConfigChangeNotifier* system_dns_config_notifier = nullptr,
+       bool omit_observers_in_constructor_for_testing = false);
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   // Returns the AddressMapOwnerLinux if present.
+   virtual AddressMapOwnerLinux* GetAddressMapOwnerInternal();
+ #endif

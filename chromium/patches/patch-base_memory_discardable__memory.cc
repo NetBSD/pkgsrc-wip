@@ -1,40 +1,44 @@
 $NetBSD$
 
---- base/memory/discardable_memory.cc.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/memory/discardable_memory.cc.orig	2024-07-24 02:44:22.595421300 +0000
 +++ base/memory/discardable_memory.cc
-@@ -23,7 +23,7 @@ const base::Feature kMadvFreeDiscardable
-     "MadvFreeDiscardableMemory", base::FEATURE_DISABLED_BY_DEFAULT};
- #endif  // defined(OS_POSIX)
+@@ -26,7 +26,7 @@ BASE_FEATURE(kMadvFreeDiscardableMemory,
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_POSIX)
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
- const base::Feature kDiscardableMemoryBackingTrial{
-     "DiscardableMemoryBackingTrial", base::FEATURE_DISABLED_BY_DEFAULT};
- 
-@@ -47,7 +47,7 @@ const base::FeatureParam<DiscardableMemo
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kDiscardableMemoryBackingTrial,
+              "DiscardableMemoryBackingTrial",
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -52,7 +52,7 @@ const base::FeatureParam<DiscardableMemo
  
  namespace {
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  
  DiscardableMemoryBacking GetBackingForFieldTrial() {
    DiscardableMemoryTrialGroup trial_group =
-@@ -65,7 +65,7 @@ DiscardableMemoryBacking GetBackingForFi
+@@ -71,7 +71,7 @@ DiscardableMemoryBacking GetBackingForFi
  
  }  // namespace
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  
  // Probe capabilities of this device to determine whether we should participate
  // in the discardable memory backing trial.
-@@ -94,7 +94,7 @@ DiscardableMemory::DiscardableMemory() =
+@@ -101,7 +101,7 @@ DiscardableMemory::DiscardableMemory() =
  DiscardableMemory::~DiscardableMemory() = default;
  
  DiscardableMemoryBacking GetDiscardableMemoryBacking() {
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (DiscardableMemoryBackingFieldTrialIsEnabled()) {
      return GetBackingForFieldTrial();
    }

@@ -1,14 +1,19 @@
 $NetBSD$
 
---- services/device/hid/hid_service_netbsd.cc.orig	2020-07-23 00:21:06.085104546 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/device/hid/hid_service_netbsd.cc.orig	2024-08-01 14:09:00.354105137 +0000
 +++ services/device/hid/hid_service_netbsd.cc
-@@ -0,0 +1,382 @@
+@@ -0,0 +1,395 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "services/device/hid/hid_service_netbsd.h"
 +
++#include <dev/usb/usb_ioctl.h>
 +#include <stdint.h>
 +#include <sys/socket.h>
 +#include <sys/un.h>
@@ -17,7 +22,6 @@ $NetBSD$
 +#include <string>
 +#include <vector>
 +
-+#include "base/bind.h"
 +#include "base/files/file_descriptor_watcher_posix.h"
 +#include "base/files/file_enumerator.h"
 +#include "base/files/file_util.h"
@@ -25,16 +29,16 @@ $NetBSD$
 +#include "base/location.h"
 +#include "base/logging.h"
 +#include "base/posix/eintr_wrapper.h"
-+#include "base/single_thread_task_runner.h"
 +#include "base/stl_util.h"
 +#include "base/strings/pattern.h"
 +#include "base/strings/stringprintf.h"
 +#include "base/strings/sys_string_conversions.h"
 +#include "base/strings/string_util.h"
 +#include "base/strings/string_split.h"
-+#include "base/task/post_task.h"
++#include "base/task/single_thread_task_runner.h"
++#include "base/task/thread_pool.h"
 +#include "base/threading/scoped_blocking_call.h"
-+#include "base/threading/thread_task_runner_handle.h"
++#include "base/threading/thread_restrictions.h"
 +#include "components/device_event_log/device_event_log.h"
 +#include "services/device/hid/hid_connection_netbsd.h"
 +
@@ -44,33 +48,42 @@ $NetBSD$
 +
 +struct HidServiceNetBSD::ConnectParams {
 +  ConnectParams(scoped_refptr<HidDeviceInfo> device_info,
++                bool allow_protected_reports,
++		bool allow_fido_reports,
 +                ConnectCallback callback)
 +      : device_info(std::move(device_info)),
++	allow_protected_reports(allow_protected_reports),
++	allow_fido_reports(allow_fido_reports),
 +        callback(std::move(callback)),
-+        task_runner(base::ThreadTaskRunnerHandle::Get()),
++	task_runner(base::SequencedTaskRunner::GetCurrentDefault()),
 +        blocking_task_runner(
-+            base::CreateSequencedTaskRunner(kBlockingTaskTraits)) {}
++            base::ThreadPool::CreateSequencedTaskRunner(kBlockingTaskTraits)) {}
 +  ~ConnectParams() {}
 +
 +  scoped_refptr<HidDeviceInfo> device_info;
++  bool allow_protected_reports;
++  bool allow_fido_reports;
 +  ConnectCallback callback;
 +  scoped_refptr<base::SequencedTaskRunner> task_runner;
 +  scoped_refptr<base::SequencedTaskRunner> blocking_task_runner;
 +  base::ScopedFD fd;
 +};
 +
-+class HidServiceNetBSD::BlockingTaskHelper {
++class HidServiceNetBSD::BlockingTaskRunnerHelper {
 + public:
-+  BlockingTaskHelper(base::WeakPtr<HidServiceNetBSD> service)
++  BlockingTaskRunnerHelper(base::WeakPtr<HidServiceNetBSD> service)
 +      : service_(std::move(service)),
-+        task_runner_(base::ThreadTaskRunnerHandle::Get()) {
++	task_runner_(base::SequencedTaskRunner::GetCurrentDefault()) {
 +    DETACH_FROM_SEQUENCE(sequence_checker_);
 +
 +    timer_.reset(new base::RepeatingTimer());
 +    devd_buffer_ = new net::IOBufferWithSize(1024);
 +  }
 +
-+  ~BlockingTaskHelper() {
++  BlockingTaskRunnerHelper(const BlockingTaskRunnerHelper&) = delete;
++  BlockingTaskRunnerHelper& operator=(const BlockingTaskRunnerHelper&) = delete;
++
++  ~BlockingTaskRunnerHelper() {
 +  }
 +
 +  void Start() {
@@ -94,7 +107,7 @@ $NetBSD$
 +
 +    task_runner_->PostTask(
 +        FROM_HERE,
-+        base::Bind(&HidServiceNetBSD::FirstEnumerationComplete, service_));
++        base::BindOnce(&HidServiceNetBSD::FirstEnumerationComplete, service_));
 +  }
 +
 +  bool HaveReadWritePermissions(std::string device_id) {
@@ -174,7 +187,7 @@ $NetBSD$
 +        report_descriptor,
 +	device_node));
 +
-+    task_runner_->PostTask(FROM_HERE, base::Bind(&HidServiceNetBSD::AddDevice,
++    task_runner_->PostTask(FROM_HERE, base::BindOnce(&HidServiceNetBSD::AddDevice,
 +                                                 service_, device_info));
 +  }
 +
@@ -182,8 +195,8 @@ $NetBSD$
 +    base::ScopedBlockingCall scoped_blocking_call(
 +        FROM_HERE, base::BlockingType::MAY_BLOCK);
 +    task_runner_->PostTask(
-+        FROM_HERE, base::Bind(&HidServiceNetBSD::RemoveDevice, service_,
-+                              device_id));
++        FROM_HERE, base::BindOnce(&HidServiceNetBSD::RemoveDevice, service_,
++                                  device_id));
 +  }
 +
 + private:
@@ -224,16 +237,16 @@ $NetBSD$
 +    struct sockaddr_un sa;
 +
 +    sa.sun_family = AF_UNIX;
-+    strlcpy(sa.sun_path, "/var/run/devd.seqpacket.pipe", sizeof(sa.sun_path));
++    strlcpy(sa.sun_path, "@VARBASE@/run/devd.seqpacket.pipe", sizeof(sa.sun_path));
 +    if (connect(devd_fd, (struct sockaddr *) &sa, sizeof(sa)) < 0) {
 +      close(devd_fd);
 +      return;
-+    } 
++    }
 +
 +    devd_fd_.reset(devd_fd);
 +    file_watcher_ = base::FileDescriptorWatcher::WatchReadable(
-+        devd_fd_.get(), base::Bind(&BlockingTaskHelper::OnDevdMessageCanBeRead,
-+                                   base::Unretained(this)));
++        devd_fd_.get(), base::BindRepeating(&BlockingTaskRunnerHelper::OnDevdMessageCanBeRead,
++                                            base::Unretained(this)));
 +  }
 +
 +  void OnDevdMessageCanBeRead() {
@@ -265,8 +278,8 @@ $NetBSD$
 +          // Do not re-add to checks
 +          if (permissions_checks_attempts_.find(device_name) == permissions_checks_attempts_.end()) {
 +            permissions_checks_attempts_.insert(std::pair<std::string, int>(device_name, kMaxPermissionChecks));
-+            timer_->Start(FROM_HERE, base::TimeDelta::FromSeconds(1),
-+                          this, &BlockingTaskHelper::CheckPendingPermissionChange);
++            timer_->Start(FROM_HERE, base::Seconds(1),
++                          this, &BlockingTaskRunnerHelper::CheckPendingPermissionChange);
 +          }
 +        }
 +      }
@@ -298,19 +311,16 @@ $NetBSD$
 +  base::ScopedFD devd_fd_;
 +  scoped_refptr<net::IOBufferWithSize> devd_buffer_;
 +  std::map<std::string, int> permissions_checks_attempts_;
-+
-+  DISALLOW_COPY_AND_ASSIGN(BlockingTaskHelper);
 +};
 +
 +HidServiceNetBSD::HidServiceNetBSD()
-+    : task_runner_(base::ThreadTaskRunnerHandle::Get()),
-+      blocking_task_runner_(
-+          base::CreateSequencedTaskRunner(kBlockingTaskTraits)),
-+      weak_factory_(this) {
-+  helper_ = std::make_unique<BlockingTaskHelper>(weak_factory_.GetWeakPtr());
++    : blocking_task_runner_(
++          base::ThreadPool::CreateSequencedTaskRunner(kBlockingTaskTraits)),
++      helper_(nullptr, base::OnTaskRunnerDeleter(blocking_task_runner_)) {
++  helper_.reset(new BlockingTaskRunnerHelper(weak_factory_.GetWeakPtr()));
 +  blocking_task_runner_->PostTask(
 +      FROM_HERE,
-+      base::Bind(&BlockingTaskHelper::Start, base::Unretained(helper_.get())));
++      base::BindOnce(&BlockingTaskRunnerHelper::Start, base::Unretained(helper_.get())));
 +}
 +
 +HidServiceNetBSD::~HidServiceNetBSD() {
@@ -347,19 +357,24 @@ $NetBSD$
 +}
 +
 +void HidServiceNetBSD::Connect(const std::string& device_guid,
-+                            ConnectCallback callback) {
++                                bool allow_protected_reports,
++				bool allow_fido_reports,
++                                ConnectCallback callback) {
 +  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 +
 +  const auto& map_entry = devices().find(device_guid);
 +  if (map_entry == devices().end()) {
-+    base::ThreadTaskRunnerHandle::Get()->PostTask(
++    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
 +        FROM_HERE, base::BindOnce(std::move(callback), nullptr));
 +    return;
 +  }
 +
 +  scoped_refptr<HidDeviceInfo> device_info = map_entry->second;
 +
-+  auto params = std::make_unique<ConnectParams>(device_info, std::move(callback));
++  auto params = std::make_unique<ConnectParams>(device_info,
++                                                allow_protected_reports,
++						allow_fido_reports,
++						std::move(callback));
 +  scoped_refptr<base::SequencedTaskRunner> blocking_task_runner =
 +      params->blocking_task_runner;
 +
@@ -380,7 +395,9 @@ $NetBSD$
 +  std::move(params->callback).Run(base::MakeRefCounted<HidConnectionNetBSD>(
 +    std::move(params->device_info),
 +    std::move(params->fd),
-+    std::move(params->blocking_task_runner)
++    std::move(params->blocking_task_runner),
++    params->allow_protected_reports,
++    params->allow_fido_reports
 +  ));
 +}
 +

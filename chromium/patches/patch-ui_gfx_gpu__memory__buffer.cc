@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/gfx/gpu_memory_buffer.cc.orig	2020-07-15 18:56:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/gfx/gpu_memory_buffer.cc.orig	2024-07-24 02:45:10.608072000 +0000
 +++ ui/gfx/gpu_memory_buffer.cc
-@@ -34,7 +34,7 @@ GpuMemoryBufferHandle GpuMemoryBufferHan
+@@ -55,7 +55,7 @@ GpuMemoryBufferHandle GpuMemoryBufferHan
    handle.region = region.Duplicate();
    handle.offset = offset;
    handle.stride = stride;
--#if defined(OS_LINUX) || defined(OS_FUCHSIA)
-+#if defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    handle.native_pixmap_handle = CloneHandleForIPC(native_pixmap_handle);
- #elif defined(OS_MACOSX) && !defined(OS_IOS)
-   NOTIMPLEMENTED();
+ #elif BUILDFLAG(IS_APPLE)
+   handle.io_surface = io_surface;

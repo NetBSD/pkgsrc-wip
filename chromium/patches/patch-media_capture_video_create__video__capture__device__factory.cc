@@ -1,22 +1,26 @@
 $NetBSD$
 
---- media/capture/video/create_video_capture_device_factory.cc.orig	2020-07-08 21:40:45.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/capture/video/create_video_capture_device_factory.cc.orig	2024-07-24 02:44:41.053209300 +0000
 +++ media/capture/video/create_video_capture_device_factory.cc
-@@ -10,7 +10,7 @@
+@@ -13,7 +13,7 @@
  #include "media/capture/video/fake_video_capture_device_factory.h"
  #include "media/capture/video/file_video_capture_device_factory.h"
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
  #include "media/capture/video/linux/video_capture_device_factory_linux.h"
- #elif defined(OS_CHROMEOS)
- #include "media/capture/video/chromeos/camera_app_device_bridge_impl.h"
-@@ -82,7 +82,7 @@ CreateChromeOSVideoCaptureDeviceFactory(
+ #elif BUILDFLAG(IS_CHROMEOS_ASH)
+ #include "media/capture/video/chromeos/public/cros_features.h"
+@@ -56,7 +56,7 @@ CreateFakeVideoCaptureDeviceFactory() {
  std::unique_ptr<VideoCaptureDeviceFactory>
  CreatePlatformSpecificVideoCaptureDeviceFactory(
      scoped_refptr<base::SingleThreadTaskRunner> ui_task_runner) {
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
    return std::make_unique<VideoCaptureDeviceFactoryLinux>(ui_task_runner);
- #elif defined(OS_CHROMEOS)
-   return CreateChromeOSVideoCaptureDeviceFactory(ui_task_runner, {});
+ #elif BUILDFLAG(IS_CHROMEOS_ASH)
+   if (base::SysInfo::IsRunningOnChromeOS())

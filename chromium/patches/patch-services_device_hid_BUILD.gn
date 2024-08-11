@@ -1,16 +1,27 @@
 $NetBSD$
 
---- services/device/hid/BUILD.gn.orig	2020-07-15 18:56:01.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/device/hid/BUILD.gn.orig	2024-07-24 02:44:43.649460800 +0000
 +++ services/device/hid/BUILD.gn
-@@ -51,6 +51,26 @@ source_set("hid") {
-     deps += [ "//device/udev_linux" ]
-   }
+@@ -36,7 +36,35 @@ source_set("hid") {
+     "//services/device/public/mojom",
+   ]
  
-+  if (is_freebsd) {
-+    sources -= [
-+      "hid_connection_linux.cc",
-+      "hid_connection_linux.h",
+-  if ((is_linux || is_chromeos) && use_udev) {
++  if (is_openbsd) {
++    sources += [
++      "hid_connection_fido.cc",
++      "hid_connection_fido.h",
++      "hid_service_fido.cc",
++      "hid_service_fido.h",
 +    ]
++    libs = ["fido2", "cbor", "usbhid", "crypto", "util"]
++  }
++
++  if (is_freebsd) {
 +    sources += [
 +      "hid_connection_freebsd.cc",
 +      "hid_connection_freebsd.h",
@@ -19,13 +30,16 @@ $NetBSD$
 +    ]
 +  }
 +
-+  if (is_netbsd) {
-+    sources -= [
-+      "hid_connection_linux.cc",
-+      "hid_connection_linux.h",
-+    ]
-+  }
++#  if (is_netbsd) {
++#    sources += [
++#      "hid_connection_netbsd.cc",
++#      "hid_connection_netbsd.h",
++#      "hid_service_netbsd.cc",
++#      "hid_service_netbsd.h",
++#    ]
++#  }
 +
-   if (is_chromeos) {
-     deps += [ "//chromeos/dbus/permission_broker" ]
-   }
++  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
+     sources += [
+       "hid_connection_linux.cc",
+       "hid_connection_linux.h",

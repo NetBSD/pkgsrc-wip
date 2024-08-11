@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ipc/ipc_channel_mojo.cc.orig	2020-07-08 21:41:48.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ipc/ipc_channel_mojo.cc.orig	2024-07-24 02:44:40.937198000 +0000
 +++ ipc/ipc_channel_mojo.cc
-@@ -74,7 +74,7 @@ class MojoChannelFactory : public Channe
+@@ -105,7 +105,7 @@ class ThreadSafeChannelProxy : public mo
  };
  
  base::ProcessId GetSelfPID() {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (int global_pid = Channel::GetGlobalPid())
      return global_pid;
- #endif  // OS_LINUX
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

@@ -1,22 +1,28 @@
 $NetBSD$
 
---- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2020-07-15 18:56:30.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2024-07-24 02:45:04.419472500 +0000
 +++ third_party/crashpad/crashpad/util/misc/capture_context.h
-@@ -21,7 +21,7 @@
+@@ -21,7 +21,8 @@
  #include <mach/mach.h>
- #elif defined(OS_WIN)
+ #elif BUILDFLAG(IS_WIN)
  #include <windows.h>
--#elif defined(OS_LINUX) || defined(OS_ANDROID)
-+#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
++      BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
  #include <ucontext.h>
- #elif defined(OS_FUCHSIA)
- #include <signal.h>
-@@ -37,7 +37,7 @@ using NativeCPUContext = arm_unified_thr
+ #endif  // BUILDFLAG(IS_APPLE)
+ 
+@@ -35,7 +36,8 @@ using NativeCPUContext = arm_unified_thr
  #endif
- #elif defined(OS_WIN)
+ #elif BUILDFLAG(IS_WIN)
  using NativeCPUContext = CONTEXT;
--#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_FUCHSIA)
-+#elif defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_FUCHSIA) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
++      BUILDFLAG(IS_BSD)
  using NativeCPUContext = ucontext_t;
- #endif  // OS_MACOSX
+ #endif  // BUILDFLAG(IS_APPLE)
  

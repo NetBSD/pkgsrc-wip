@@ -1,32 +1,64 @@
 $NetBSD$
 
---- content/zygote/zygote_main_linux.cc.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/zygote/zygote_main_linux.cc.orig	2024-07-24 02:44:38.344946900 +0000
 +++ content/zygote/zygote_main_linux.cc
 @@ -11,7 +11,9 @@
  #include <stddef.h>
  #include <stdint.h>
  #include <string.h>
-+#if !defined(OS_BSD)
++#if !BUILDFLAG(IS_BSD)
  #include <sys/prctl.h>
 +#endif
  #include <sys/socket.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -100,6 +102,9 @@ static bool CreateInitProcessReaper(
- // created through the setuid sandbox.
- static bool EnterSuidSandbox(sandbox::SetuidSandboxClient* setuid_sandbox,
-                              base::OnceClosure post_fork_parent_callback) {
-+#if defined(OS_BSD)
-+  return false;
+@@ -41,7 +43,9 @@
+ #include "sandbox/linux/services/thread_helpers.h"
+ #include "sandbox/linux/suid/client/setuid_sandbox_client.h"
+ #include "sandbox/policy/linux/sandbox_debug_handling_linux.h"
++#if !BUILDFLAG(IS_BSD)
+ #include "sandbox/policy/linux/sandbox_linux.h"
++#endif
+ #include "sandbox/policy/sandbox.h"
+ #include "sandbox/policy/switches.h"
+ #include "third_party/icu/source/i18n/unicode/timezone.h"
+@@ -50,11 +54,13 @@ namespace content {
+ 
+ namespace {
+ 
++#if !BUILDFLAG(IS_BSD)
+ void CloseFds(const std::vector<int>& fds) {
+   for (const auto& it : fds) {
+     PCHECK(0 == IGNORE_EINTR(close(it)));
+   }
+ }
++#endif
+ 
+ base::OnceClosure ClosureFromTwoClosures(base::OnceClosure one,
+                                          base::OnceClosure two) {
+@@ -157,9 +163,11 @@ static void EnterLayerOneSandbox(sandbox
+     CHECK(!using_layer1_sandbox);
+   }
+ }
++#endif
+ 
+ bool ZygoteMain(
+     std::vector<std::unique_ptr<ZygoteForkDelegate>> fork_delegates) {
++#if !BUILDFLAG(IS_BSD)
+   sandbox::SetAmZygoteOrRenderer(true, GetSandboxFD());
+ 
+   auto* linux_sandbox = sandbox::policy::SandboxLinux::GetInstance();
+@@ -224,6 +232,9 @@ bool ZygoteMain(
+ 
+   // This function call can return multiple times, once per fork().
+   return zygote.ProcessRequests();
 +#else
-   DCHECK(setuid_sandbox);
-   DCHECK(setuid_sandbox->IsSuidSandboxChild());
- 
-@@ -132,6 +137,7 @@ static bool EnterSuidSandbox(sandbox::Se
- 
-   CHECK(service_manager::SandboxDebugHandling::SetDumpableStatusAndHandlers());
-   return true;
++  return false;
 +#endif
  }
  
- static void DropAllCapabilities(int proc_fd) {
+ }  // namespace content

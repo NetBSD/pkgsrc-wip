@@ -1,22 +1,26 @@
 $NetBSD$
 
---- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2020-07-08 21:40:44.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- gpu/ipc/service/gpu_memory_buffer_factory.cc.orig	2024-07-24 02:44:39.265036000 +0000
 +++ gpu/ipc/service/gpu_memory_buffer_factory.cc
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  #include "gpu/ipc/service/gpu_memory_buffer_factory_io_surface.h"
  #endif
  
--#if defined(OS_LINUX) || defined(OS_FUCHSIA)
-+#if defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
  #include "gpu/ipc/service/gpu_memory_buffer_factory_native_pixmap.h"
  #endif
  
-@@ -34,7 +34,7 @@ GpuMemoryBufferFactory::CreateNativeType
+@@ -36,7 +36,7 @@ GpuMemoryBufferFactory::CreateNativeType
    return std::make_unique<GpuMemoryBufferFactoryIOSurface>();
- #elif defined(OS_ANDROID)
+ #elif BUILDFLAG(IS_ANDROID)
    return std::make_unique<GpuMemoryBufferFactoryAndroidHardwareBuffer>();
--#elif defined(OS_LINUX) || defined(OS_FUCHSIA)
-+#elif defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    return std::make_unique<GpuMemoryBufferFactoryNativePixmap>(
        vulkan_context_provider);
- #elif defined(OS_WIN)
+ #elif BUILDFLAG(IS_WIN)

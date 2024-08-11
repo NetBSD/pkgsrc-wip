@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/service_manager/BUILD.gn.orig	2024-07-24 02:44:43.829478000 +0000
++++ services/service_manager/BUILD.gn
+@@ -66,7 +66,7 @@ source_set("service_manager") {
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     deps += [ "//sandbox/linux:sandbox_services" ]
+   }
+ }

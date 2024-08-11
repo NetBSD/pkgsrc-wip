@@ -1,13 +1,31 @@
 $NetBSD$
 
---- services/network/public/mojom/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/network/public/mojom/BUILD.gn.orig	2024-07-24 02:44:43.761471500 +0000
 +++ services/network/public/mojom/BUILD.gn
-@@ -506,7 +506,7 @@ mojom("mojom") {
- 
-   # This is only needed on desktop linux, but the defines make this difficult
-   # because IS_CHROMECAST is not available in build/build_config.h.
--  if (is_linux && !is_chromeos) {
-+  if ((is_linux || is_bsd) && !is_chromeos) {
-     enabled_features += [ "needs_crypt_config" ]
+@@ -529,11 +529,11 @@ mojom("url_loader_base") {
    }
  
+   enabled_features = []
+-  if (is_android || is_chromeos || is_linux) {
++  if (!is_bsd && (is_android || is_chromeos || is_linux)) {
+     enabled_features += [ "network_change_notifier_in_browser" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     # TODO(crbug.com/40263697): Remove this once is_linux in the mojom IDL does
+     # not include lacros.
+     enabled_features += [ "use_network_interface_change_listener" ]
+@@ -1495,7 +1495,7 @@ mojom("mojom") {
+     }
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     # TODO(crbug.com/40263697): Remove this once is_linux in the mojom IDL does
+     # not include lacros.
+     enabled_features += [ "use_network_interface_change_listener" ]

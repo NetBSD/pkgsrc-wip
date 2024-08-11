@@ -1,21 +1,26 @@
 $NetBSD$
 
---- base/process/process_metrics_posix.cc.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/process/process_metrics_posix.cc.orig	2024-07-24 02:44:22.643426000 +0000
 +++ base/process/process_metrics_posix.cc
-@@ -20,6 +20,7 @@
+@@ -21,6 +21,8 @@
  
- #if defined(OS_MACOSX)
+ #if BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
-+#elif defined(OS_FREEBSD) || defined(OS_NETBSD)
++#elif BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_NETBSD)
++#include <stdlib.h>
  #else
  #include <malloc.h>
  #endif
-@@ -126,7 +127,7 @@ size_t ProcessMetrics::GetMallocUsage() 
- #else
-   return minfo.hblkhd + minfo.arena;
- #endif
--#elif defined(OS_FUCHSIA)
-+#elif defined(OS_FUCHSIA) || defined(OS_BSD)
+@@ -134,7 +136,7 @@ size_t ProcessMetrics::GetMallocUsage() 
+   return stats.size_in_use;
+ #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
+   return GetMallocUsageMallinfo();
+-#elif BUILDFLAG(IS_FUCHSIA)
++#elif BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
    // TODO(fuchsia): Not currently exposed. https://crbug.com/735087.
    return 0;
  #endif

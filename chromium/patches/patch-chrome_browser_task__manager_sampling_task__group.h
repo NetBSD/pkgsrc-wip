@@ -1,40 +1,44 @@
 $NetBSD$
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2020-07-08 21:40:35.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2024-07-24 02:44:29.040045500 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
-@@ -39,7 +39,7 @@ constexpr int kUnsupportedVMRefreshFlags
+@@ -44,7 +44,7 @@ constexpr int kUnsupportedVMRefreshFlags
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |
      REFRESH_TYPE_NACL | REFRESH_TYPE_IDLE_WAKEUPS | REFRESH_TYPE_HANDLES |
      REFRESH_TYPE_START_TIME | REFRESH_TYPE_CPU_TIME | REFRESH_TYPE_PRIORITY |
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
      REFRESH_TYPE_FD_COUNT |
  #endif
      REFRESH_TYPE_HARD_FAULTS;
-@@ -122,7 +122,7 @@ class TaskGroup {
-   int nacl_debug_stub_port() const { return nacl_debug_stub_port_; }
+@@ -152,7 +152,7 @@ class TaskGroup {
+   }
  #endif  // BUILDFLAG(ENABLE_NACL)
  
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    int open_fd_count() const { return open_fd_count_; }
- #endif  // defined(OS_LINUX) || defined(OS_MACOSX)
- 
-@@ -138,7 +138,7 @@ class TaskGroup {
+   void set_open_fd_count(int open_fd_count) { open_fd_count_ = open_fd_count; }
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
+@@ -172,7 +172,7 @@ class TaskGroup {
    void RefreshNaClDebugStubPort(int child_process_unique_id);
    void OnRefreshNaClDebugStubPortDone(int port);
  #endif
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    void OnOpenFdCountRefreshDone(int open_fd_count);
- #endif  // defined(OS_LINUX) || defined(OS_MACOSX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
  
-@@ -209,7 +209,7 @@ class TaskGroup {
+@@ -244,7 +244,7 @@ class TaskGroup {
  #if BUILDFLAG(ENABLE_NACL)
    int nacl_debug_stub_port_;
  #endif  // BUILDFLAG(ENABLE_NACL)
--#if defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    // The number of file descriptors currently open by the process.
    int open_fd_count_;
- #endif  // defined(OS_LINUX) || defined(OS_MACOSX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)

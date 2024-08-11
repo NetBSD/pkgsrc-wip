@@ -1,31 +1,52 @@
 $NetBSD$
 
---- media/gpu/buffer_validation.cc.orig	2020-07-08 21:40:45.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/gpu/buffer_validation.cc.orig	2024-07-24 02:44:41.161219600 +0000
 +++ media/gpu/buffer_validation.cc
-@@ -12,7 +12,7 @@
+@@ -16,7 +16,7 @@
  #include "ui/gfx/geometry/size.h"
  #include "ui/gfx/gpu_memory_buffer.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include <drm_fourcc.h>
  #include <sys/types.h>
  #include <unistd.h>
- #endif  // defined(OS_LINUX)
-@@ -20,7 +20,7 @@
+@@ -29,7 +29,7 @@
  namespace media {
  
+ namespace {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #ifndef I915_FORMAT_MOD_4_TILED_MTL_MC_CCS
+ // TODO(b/271455200): Remove this definition once drm_fourcc.h contains it.
+ /*
+@@ -55,7 +55,7 @@ bool IsIntelMediaCompressedModifier(uint
+ }  // namespace
+ 
  bool GetFileSize(const int fd, size_t* size) {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (fd < 0) {
-     VLOGF(1) << "Invalid file descriptor";
+     VLOG(1) << "Invalid file descriptor";
      return false;
-@@ -56,7 +56,7 @@ bool VerifyGpuMemoryBufferHandle(media::
-     VLOGF(1) << "Unexpected GpuMemoryBufferType: " << gmb_handle.type;
+@@ -109,14 +109,14 @@ bool VerifyGpuMemoryBufferHandle(
+     VLOG(1) << "Unsupported: " << pixel_format;
      return false;
    }
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   const size_t num_planes = media::VideoFrame::NumPlanes(pixel_format);
-   if (num_planes != gmb_handle.native_pixmap_handle.planes.size() ||
-       num_planes == 0) {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   const uint64_t modifier = gmb_handle.native_pixmap_handle.modifier;
+   const bool is_intel_media_compressed_buffer =
+       IsIntelMediaCompressedModifier(modifier);
+   const bool is_intel_media_compression_enabled =
+ #if BUILDFLAG(IS_CHROMEOS)
+       base::FeatureList::IsEnabled(features::kEnableIntelMediaCompression);
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       false;
+ #endif
+ 

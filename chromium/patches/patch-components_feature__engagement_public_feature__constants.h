@@ -1,13 +1,36 @@
 $NetBSD$
 
---- components/feature_engagement/public/feature_constants.h.orig	2020-07-08 21:40:39.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/feature_engagement/public/feature_constants.h.orig	2024-07-24 02:44:34.036529500 +0000
 +++ components/feature_engagement/public/feature_constants.h
-@@ -18,7 +18,7 @@ extern const base::Feature kIPHDemoMode;
- extern const base::Feature kIPHDummyFeature;
+@@ -20,7 +20,7 @@ BASE_DECLARE_FEATURE(kIPHDemoMode);
+ BASE_DECLARE_FEATURE(kIPHDummyFeature);
  
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
- extern const base::Feature kIPHDesktopTabGroupsNewGroupFeature;
- extern const base::Feature kIPHFocusModeFeature;
- extern const base::Feature kIPHGlobalMediaControlsFeature;
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+ BASE_DECLARE_FEATURE(kEsbDownloadRowPromoFeature);
+ BASE_DECLARE_FEATURE(kIPHBatterySaverModeFeature);
+ BASE_DECLARE_FEATURE(kIPHCompanionSidePanelFeature);
+@@ -259,7 +259,8 @@ BASE_DECLARE_FEATURE(kDefaultBrowserTrig
+ #endif  // BUILDFLAG(IS_IOS)
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
++    BUILDFLAG(IS_BSD)
+ BASE_DECLARE_FEATURE(kIPHAutofillCreditCardBenefitFeature);
+ BASE_DECLARE_FEATURE(kIPHAutofillExternalAccountProfileSuggestionFeature);
+ BASE_DECLARE_FEATURE(kIPHAutofillManualFallbackFeature);
+@@ -308,7 +309,7 @@ BASE_DECLARE_FEATURE(kIPHScalableIphHelp
+ BASE_DECLARE_FEATURE(kIPHScalableIphGamingFeature);
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_DECLARE_FEATURE(kIPHDesktopPWAsLinkCapturingLaunch);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 

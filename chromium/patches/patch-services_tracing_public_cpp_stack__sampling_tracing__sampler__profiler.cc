@@ -1,13 +1,17 @@
 $NetBSD$
 
---- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc.orig	2024-07-24 02:44:43.873482500 +0000
 +++ services/tracing/public/cpp/stack_sampling/tracing_sampler_profiler.cc
-@@ -525,7 +525,7 @@ void TracingSamplerProfiler::TracingProf
+@@ -38,7 +38,7 @@
+ #include "third_party/perfetto/protos/perfetto/trace/track_event/process_descriptor.pbzero.h"
+ #include "third_party/perfetto/protos/perfetto/trace/track_event/thread_descriptor.pbzero.h"
  
- // static
- void TracingSamplerProfiler::MangleModuleIDIfNeeded(std::string* module_id) {
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
-   // Linux ELF module IDs are 160bit integers, which we need to mangle
-   // down to 128bit integers to match the id that Breakpad outputs.
-   // Example on version '66.0.3359.170' x64:
+-#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_APPLE)
++#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_BSD)
+ #include "base/profiler/thread_delegate_posix.h"
+ #define INITIALIZE_THREAD_DELEGATE_POSIX 1
+ #else  // BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_APPLE)

@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/gfx/font_util.cc.orig	2020-07-15 18:56:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/gfx/font_util.cc.orig	2024-07-24 02:45:10.596070800 +0000
 +++ ui/gfx/font_util.cc
 @@ -6,7 +6,7 @@
  
  #include "build/build_config.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include <fontconfig/fontconfig.h>
  #include "ui/gfx/linux/fontconfig_util.h"
  #endif
@@ -15,8 +19,8 @@ $NetBSD$
    // background (resources have not yet been granted to cast) since it prevents
    // the long delay the user would have seen on first rendering.
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   // Ensures the config is created on this thread.
-   FcConfig* config = GetGlobalFontConfig();
-   DCHECK(config);
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   // Early initialize FontConfig.
+   InitializeGlobalFontConfigAsync();
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

@@ -1,31 +1,17 @@
 $NetBSD$
 
---- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2020-07-08 21:40:45.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/mojo/mojom/video_frame_mojom_traits.cc.orig	2024-07-24 02:44:41.257228900 +0000
 +++ media/mojo/mojom/video_frame_mojom_traits.cc
-@@ -21,7 +21,7 @@
- #include "ui/gfx/mojom/buffer_types_mojom_traits.h"
+@@ -22,7 +22,7 @@
  #include "ui/gfx/mojom/color_space_mojom_traits.h"
+ #include "ui/gfx/mojom/hdr_metadata_mojom_traits.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "base/posix/eintr_wrapper.h"
- #endif  // defined(OS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -63,7 +63,7 @@ media::mojom::VideoFrameDataPtr MakeVide
-             std::move(offsets)));
-   }
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   if (input->storage_type() == media::VideoFrame::STORAGE_DMABUFS) {
-     std::vector<mojo::PlatformHandle> dmabuf_fds;
- 
-@@ -166,7 +166,7 @@ bool StructTraits<media::mojom::VideoFra
-         shared_buffer_data.TakeFrameData(),
-         shared_buffer_data.frame_data_size(), std::move(offsets),
-         std::move(strides), timestamp);
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   } else if (data.is_dmabuf_data()) {
-     media::mojom::DmabufVideoFrameDataDataView dmabuf_data;
-     data.GetDmabufDataDataView(&dmabuf_data);

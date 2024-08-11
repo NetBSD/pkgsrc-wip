@@ -1,13 +1,17 @@
 $NetBSD$
 
---- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2020-07-15 18:56:02.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/core/inspector/inspector_memory_agent.cc.orig	2024-07-24 02:44:45.837672700 +0000
 +++ third_party/blink/renderer/core/inspector/inspector_memory_agent.cc
-@@ -185,7 +185,7 @@ InspectorMemoryAgent::GetSamplingProfile
+@@ -192,7 +192,7 @@ InspectorMemoryAgent::GetSamplingProfile
  
  Vector<String> InspectorMemoryAgent::Symbolize(
-     const WebVector<void*>& addresses) {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+     const WebVector<const void*>& addresses) {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // TODO(alph): Move symbolization to the client.
-   Vector<void*> addresses_to_symbolize;
-   for (size_t i = 0; i < addresses.size(); i++) {
+   Vector<const void*> addresses_to_symbolize;
+   for (const void* address : addresses) {

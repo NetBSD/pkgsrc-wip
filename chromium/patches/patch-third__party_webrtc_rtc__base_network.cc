@@ -1,8 +1,12 @@
 $NetBSD$
 
---- third_party/webrtc/rtc_base/network.cc.orig	2020-07-15 19:01:42.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/webrtc/rtc_base/network.cc.orig	2024-07-24 02:47:05.755225400 +0000
 +++ third_party/webrtc/rtc_base/network.cc
-@@ -244,7 +244,12 @@ AdapterType GetAdapterTypeFromName(const
+@@ -290,7 +290,12 @@ AdapterType GetAdapterTypeFromName(absl:
    }
  #endif
  
@@ -14,4 +18,4 @@ $NetBSD$
 +#endif
  }
  
- NetworkManager::NetworkManager() {}
+ NetworkManager::EnumerationPermission NetworkManager::enumeration_permission()

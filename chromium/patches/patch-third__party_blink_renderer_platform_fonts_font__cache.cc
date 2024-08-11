@@ -1,22 +1,26 @@
 $NetBSD$
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2020-07-15 18:56:03.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2024-07-24 02:44:46.757761700 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
-@@ -80,7 +80,7 @@ const char kColorEmojiLocale[] = "und-Zs
+@@ -73,7 +73,7 @@ extern const char kNotoColorEmojiCompat[
  
  SkFontMgr* FontCache::static_font_manager_ = nullptr;
  
--#if defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  float FontCache::device_scale_factor_ = 1.0;
  #endif
  
-@@ -120,7 +120,7 @@ FontCache::FontCache()
- FontPlatformData* FontCache::SystemFontPlatformData(
+@@ -124,7 +124,7 @@ const FontPlatformData* FontCache::Syste
      const FontDescription& font_description) {
    const AtomicString& family = FontCache::SystemFontFamily();
--#if defined(OS_LINUX) || defined(OS_FUCHSIA)
-+#if defined(OS_LINUX) || defined(OS_FUCHSIA) || defined(OS_BSD)
-   if (family.IsEmpty() || family == font_family_names::kSystemUi)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || \
+-    BUILDFLAG(IS_IOS)
++    BUILDFLAG(IS_IOS) || BUILDFLAG(IS_BSD)
+   if (family.empty() || family == font_family_names::kSystemUi)
      return nullptr;
  #else

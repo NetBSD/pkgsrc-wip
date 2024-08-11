@@ -1,9 +1,13 @@
 $NetBSD$
 
---- third_party/webrtc/BUILD.gn.orig	2020-06-25 09:34:49.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/webrtc/BUILD.gn.orig	2024-07-24 02:47:04.823135100 +0000
 +++ third_party/webrtc/BUILD.gn
-@@ -172,6 +172,9 @@ config("common_inherited_config") {
-   if (is_linux) {
+@@ -219,6 +219,9 @@ config("common_inherited_config") {
+   if (is_linux || is_chromeos) {
      defines += [ "WEBRTC_LINUX" ]
    }
 +  if (is_bsd) {

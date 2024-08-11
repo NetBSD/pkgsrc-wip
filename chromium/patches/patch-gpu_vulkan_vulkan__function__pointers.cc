@@ -1,22 +1,26 @@
 $NetBSD$
 
---- gpu/vulkan/vulkan_function_pointers.cc.orig	2020-07-08 21:40:44.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-07-24 02:44:39.273036700 +0000
 +++ gpu/vulkan/vulkan_function_pointers.cc
-@@ -862,7 +862,7 @@ bool VulkanFunctionPointers::BindDeviceF
+@@ -1297,7 +1297,7 @@ bool VulkanFunctionPointers::BindDeviceF
+     }
    }
- #endif  // defined(OS_ANDROID)
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (gfx::HasExtension(enabled_extensions,
-                         VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME)) {
-     vkGetSemaphoreFdKHR = reinterpret_cast<PFN_vkGetSemaphoreFdKHR>(
-@@ -906,7 +906,7 @@ bool VulkanFunctionPointers::BindDeviceF
-   }
- #endif  // defined(OS_WIN)
+                         VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME)) {
+     constexpr char kvkGetImageDrmFormatModifierPropertiesEXT[] =
+@@ -1498,7 +1498,7 @@ void VulkanFunctionPointers::ResetForTes
+   vkGetSwapchainImagesKHR = nullptr;
+   vkQueuePresentKHR = nullptr;
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
-   if (gfx::HasExtension(enabled_extensions,
-                         VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME)) {
-     vkGetMemoryFdKHR = reinterpret_cast<PFN_vkGetMemoryFdKHR>(
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   vkGetImageDrmFormatModifierPropertiesEXT = nullptr;
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+ }

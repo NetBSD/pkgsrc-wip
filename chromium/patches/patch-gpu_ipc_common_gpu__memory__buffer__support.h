@@ -1,31 +1,17 @@
 $NetBSD$
 
---- gpu/ipc/common/gpu_memory_buffer_support.h.orig	2020-07-08 21:40:44.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- gpu/ipc/common/gpu_memory_buffer_support.h.orig	2024-07-24 02:44:39.253034800 +0000
 +++ gpu/ipc/common/gpu_memory_buffer_support.h
-@@ -16,7 +16,7 @@
+@@ -21,7 +21,7 @@
  #include "ui/gfx/geometry/size.h"
  #include "ui/gfx/gpu_memory_buffer.h"
  
--#if defined(OS_LINUX) || defined(USE_OZONE)
-+#if defined(OS_LINUX) || defined(USE_OZONE) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
  namespace gfx {
  class ClientNativePixmapFactory;
- }
-@@ -38,7 +38,7 @@ class GPU_EXPORT GpuMemoryBufferSupport 
-   bool IsNativeGpuMemoryBufferConfigurationSupported(gfx::BufferFormat format,
-                                                      gfx::BufferUsage usage);
- 
--#if defined(OS_LINUX) || defined(USE_OZONE)
-+#if defined(OS_LINUX) || defined(USE_OZONE) || defined(OS_BSD)
-   gfx::ClientNativePixmapFactory* client_native_pixmap_factory() {
-     return client_native_pixmap_factory_.get();
-   }
-@@ -62,7 +62,7 @@ class GPU_EXPORT GpuMemoryBufferSupport 
-       GpuMemoryBufferImpl::DestructionCallback callback);
- 
-  private:
--#if defined(OS_LINUX) || defined(USE_OZONE)
-+#if defined(OS_LINUX) || defined(USE_OZONE) || defined(OS_BSD)
-   std::unique_ptr<gfx::ClientNativePixmapFactory> client_native_pixmap_factory_;
- #endif
- 
+ }  // namespace gfx

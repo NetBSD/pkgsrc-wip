@@ -1,0 +1,24 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- sandbox/policy/mojom/sandbox.mojom.orig	2024-07-24 02:44:43.565452600 +0000
++++ sandbox/policy/mojom/sandbox.mojom
+@@ -77,6 +77,15 @@ enum Sandbox {
+   [EnableIf=is_fuchsia]
+   kVideoCapture,
+ 
++  [EnableIf=is_openbsd]
++  kVideoCapture,
++
++  [EnableIf=is_netbsd]
++  kVideoCapture,
++
++  [EnableIf=is_freebsd]
++  kVideoCapture,
++
+   // Allows access to file contents and Windows APIs for parsing icons from PE
+   // files.
+   [EnableIf=is_win]

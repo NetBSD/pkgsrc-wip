@@ -1,10 +1,14 @@
 $NetBSD$
 
---- components/update_client/update_query_params.cc.orig	2020-07-08 21:40:41.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/update_client/update_query_params.cc.orig	2024-07-24 02:44:36.528771000 +0000
 +++ components/update_client/update_query_params.cc
-@@ -39,6 +39,10 @@ const char kOs[] =
+@@ -42,6 +42,10 @@ const char kOs[] =
      "fuchsia";
- #elif defined(OS_OPENBSD)
+ #elif BUILDFLAG(IS_OPENBSD)
      "openbsd";
 +#elif defined(OS_FREEBSD)
 +    "freebsd";

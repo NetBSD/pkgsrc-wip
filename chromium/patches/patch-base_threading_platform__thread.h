@@ -1,13 +1,17 @@
 $NetBSD$
 
---- base/threading/platform_thread.h.orig	2020-06-25 09:31:18.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/threading/platform_thread.h.orig	2024-07-24 02:44:22.767438000 +0000
 +++ base/threading/platform_thread.h
-@@ -221,7 +221,7 @@ class BASE_EXPORT PlatformThread {
- 
-   static ThreadPriority GetCurrentThreadPriority();
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   // Toggles a specific thread's priority at runtime. This can be used to
-   // change the priority of a thread in a different process and will fail
-   // if the calling process does not have proper permissions. The
+@@ -49,6 +49,8 @@ typedef DWORD PlatformThreadId;
+ typedef zx_koid_t PlatformThreadId;
+ #elif BUILDFLAG(IS_APPLE)
+ typedef mach_port_t PlatformThreadId;
++#elif BUILDFLAG(IS_BSD)
++typedef uint64_t PlatformThreadId;
+ #elif BUILDFLAG(IS_POSIX)
+ typedef pid_t PlatformThreadId;
+ #endif

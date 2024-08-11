@@ -1,19 +1,19 @@
 $NetBSD$
 
---- chrome/browser/extensions/BUILD.gn.orig	2020-07-08 21:41:46.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/extensions/BUILD.gn.orig	2024-07-24 02:44:27.151862600 +0000
 +++ chrome/browser/extensions/BUILD.gn
-@@ -1110,7 +1110,13 @@ static_library("extensions") {
-     ]
+@@ -1415,6 +1415,10 @@ source_set("extensions") {
+     deps += [ "//chrome/services/printing/public/mojom" ]
    }
  
--  if (is_linux) {
-+  #if (is_bsd) {
-+  #  deps -= [
-+  #    "api/image_writer_private/removable_storage_provider_linux.cc",
-+  #  ]
-+  #}
++  if (is_bsd) {
++    sources -= [ "api/image_writer_private/removable_storage_provider_linux.cc" ]
++  }
 +
-+  if (is_linux || is_bsd) {
-     deps += [ "//third_party/fontconfig" ]
- 
-     if (use_dbus) {
+   if (enable_service_discovery) {
+     sources += [
+       "api/mdns/mdns_api.cc",

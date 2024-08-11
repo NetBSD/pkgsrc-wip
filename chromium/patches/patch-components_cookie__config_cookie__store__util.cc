@@ -1,13 +1,17 @@
 $NetBSD$
 
---- components/cookie_config/cookie_store_util.cc.orig	2020-07-08 21:40:39.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/cookie_config/cookie_store_util.cc.orig	2024-07-24 02:44:33.624489500 +0000
 +++ components/cookie_config/cookie_store_util.cc
-@@ -11,7 +11,7 @@
- 
+@@ -12,7 +12,7 @@
  namespace cookie_config {
  
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  namespace {
  
  // Use the operating system's mechanisms to encrypt cookies before writing

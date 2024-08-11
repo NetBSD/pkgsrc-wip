@@ -1,46 +1,53 @@
 $NetBSD$
 
---- printing/print_settings.h.orig	2020-07-15 18:56:00.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- printing/print_settings.h.orig	2024-07-24 02:44:43.337430500 +0000
 +++ printing/print_settings.h
-@@ -1,4 +1,4 @@
--// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-+/// Copyright (c) 2012 The Chromium Authors. All rights reserved.
- // Use of this source code is governed by a BSD-style license that can be
- // found in the LICENSE file.
+@@ -25,7 +25,7 @@
+ #include "base/values.h"
+ #endif
  
-@@ -20,7 +20,7 @@
- #include "ui/gfx/geometry/rect.h"
- #include "ui/gfx/geometry/size.h"
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include <map>
  
  #include "base/values.h"
-@@ -69,7 +69,7 @@ class PRINTING_EXPORT PrintSettings {
-     }
+@@ -51,7 +51,7 @@ inline constexpr char kMacSystemPrintDia
+     "print_settings";
+ #endif  // BUILDFLAG(IS_MAC)
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ inline constexpr char kLinuxSystemPrintDialogDataPrinter[] = "printer_name";
+ inline constexpr char kLinuxSystemPrintDialogDataPrintSettings[] =
+     "print_settings";
+@@ -101,7 +101,7 @@ class COMPONENT_EXPORT(PRINTING) PrintSe
+     std::string vendor_id;
    };
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    using AdvancedSettings = std::map<std::string, base::Value>;
- #endif  // defined(OS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -206,7 +206,7 @@ class PRINTING_EXPORT PrintSettings {
+@@ -276,7 +276,7 @@ class COMPONENT_EXPORT(PRINTING) PrintSe
      pages_per_sheet_ = pages_per_sheet;
    }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    AdvancedSettings& advanced_settings() { return advanced_settings_; }
    const AdvancedSettings& advanced_settings() const {
      return advanced_settings_;
-@@ -305,7 +305,7 @@ class PRINTING_EXPORT PrintSettings {
+@@ -429,7 +429,7 @@ class COMPONENT_EXPORT(PRINTING) PrintSe
    // Number of pages per sheet.
    int pages_per_sheet_;
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Advanced settings.
    AdvancedSettings advanced_settings_;
- #endif  // defined(OS_LINUX)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

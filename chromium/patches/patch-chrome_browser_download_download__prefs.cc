@@ -1,67 +1,96 @@
 $NetBSD$
 
---- chrome/browser/download/download_prefs.cc.orig	2020-07-08 21:40:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/download/download_prefs.cc.orig	2024-07-24 02:44:27.055853400 +0000
 +++ chrome/browser/download/download_prefs.cc
-@@ -67,7 +67,7 @@ namespace {
+@@ -11,6 +11,7 @@
+ #include <vector>
+ 
+ #include "base/check.h"
++#include "base/command_line.h"
+ #include "base/feature_list.h"
+ #include "base/files/file_util.h"
+ #include "base/functional/bind.h"
+@@ -64,6 +65,10 @@
+ #include "chrome/browser/flags/android/chrome_feature_list.h"
+ #endif
+ 
++#if BUILDFLAG(IS_BSD)
++#include "sandbox/policy/sandbox.h"
++#endif
++
+ using content::BrowserContext;
+ using content::BrowserThread;
+ using content::DownloadManager;
+@@ -74,7 +79,7 @@ namespace {
  // Consider downloads 'dangerous' if they go to the home directory on Linux and
  // to the desktop on any platform.
  bool DownloadPathIsDangerous(const base::FilePath& download_path) {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    base::FilePath home_dir = base::GetHomeDir();
    if (download_path == home_dir) {
      return true;
-@@ -172,7 +172,7 @@ DownloadPrefs::DownloadPrefs(Profile* pr
-                                 GetDefaultDownloadDirectoryForProfile()));
- #endif  // defined(OS_CHROMEOS)
+@@ -180,7 +185,7 @@ DownloadPrefs::DownloadPrefs(Profile* pr
+ #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
  
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    should_open_pdf_in_system_reader_ =
        prefs->GetBoolean(prefs::kOpenPdfDownloadInSystemReader);
  #endif
-@@ -292,7 +292,7 @@ void DownloadPrefs::RegisterProfilePrefs
-                                  default_download_path);
+@@ -304,7 +309,7 @@ void DownloadPrefs::RegisterProfilePrefs
    registry->RegisterFilePathPref(prefs::kSaveFileDefaultDirectory,
                                   default_download_path);
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    registry->RegisterBooleanPref(prefs::kOpenPdfDownloadInSystemReader, false);
  #endif
- #if defined(OS_ANDROID)
-@@ -400,7 +400,7 @@ bool DownloadPrefs::IsDownloadPathManage
+ #if BUILDFLAG(IS_ANDROID)
+@@ -469,7 +474,7 @@ void DownloadPrefs::DisableAutoOpenByUse
  }
  
- bool DownloadPrefs::IsAutoOpenByUserUsed() const {
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
-   if (ShouldOpenPdfInSystemReader())
-     return true;
- #endif
-@@ -414,7 +414,7 @@ bool DownloadPrefs::IsAutoOpenEnabled(co
-     return false;
-   DCHECK(extension[0] == base::FilePath::kExtensionSeparator);
-   extension.erase(0, 1);
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
-   if (base::FilePath::CompareEqualIgnoreCase(extension,
-                                              FILE_PATH_LITERAL("pdf")) &&
-       ShouldOpenPdfInSystemReader())
-@@ -464,7 +464,7 @@ void DownloadPrefs::DisableAutoOpenByUse
-   SaveAutoOpenState();
- }
- 
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
  void DownloadPrefs::SetShouldOpenPdfInSystemReader(bool should_open) {
    if (should_open_pdf_in_system_reader_ == should_open)
      return;
-@@ -485,7 +485,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
- #endif
+@@ -501,7 +506,7 @@ bool DownloadPrefs::ShouldOpenPdfInSyste
  
  void DownloadPrefs::ResetAutoOpenByUser() {
--#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    SetShouldOpenPdfInSystemReader(false);
  #endif
    auto_open_by_user_.clear();
+@@ -538,7 +543,7 @@ void DownloadPrefs::SaveAutoOpenState() 
+ bool DownloadPrefs::CanPlatformEnableAutoOpenForPdf() const {
+ #if BUILDFLAG(IS_CHROMEOS)
+   return false;  // There is no UI for auto-open on ChromeOS.
+-#elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
++#elif BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+   return ShouldOpenPdfInSystemReader();
+ #else
+   return false;
+@@ -690,7 +695,14 @@ base::FilePath DownloadPrefs::SanitizeDo
+ #else
+   // If the stored download directory is an absolute path, we presume it's
+   // correct; there's not really much more validation we can do here.
++#if BUILDFLAG(IS_OPENBSD)
++  // If unveil(2) is used, force the file dialog directory to something we
++  // know is available.
++  auto* sandbox = sandbox::policy::SandboxLinux::GetInstance();
++  if (!sandbox->unveil_initialized() && path.IsAbsolute())
++#else
+   if (path.IsAbsolute())
++#endif
+     return path;
+ 
+   // When the default download directory is *not* an absolute path, we use the

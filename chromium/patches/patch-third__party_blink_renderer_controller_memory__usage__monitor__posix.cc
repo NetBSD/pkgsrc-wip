@@ -1,13 +1,27 @@
 $NetBSD$
 
---- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2020-07-15 18:56:02.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2024-07-24 02:44:45.381628500 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.cc
-@@ -134,7 +134,7 @@ void MemoryUsageMonitorPosix::SetProcFil
+@@ -128,15 +128,17 @@ void MemoryUsageMonitorPosix::ResetFileD
+ 
+ void MemoryUsageMonitorPosix::SetProcFiles(base::File statm_file,
+                                            base::File status_file) {
++#if !BUILDFLAG(IS_BSD)
+   DCHECK(statm_file.IsValid());
+   DCHECK(status_file.IsValid());
+   DCHECK_EQ(-1, statm_fd_.get());
+   DCHECK_EQ(-1, status_fd_.get());
+   statm_fd_.reset(statm_file.TakePlatformFile());
    status_fd_.reset(status_file.TakePlatformFile());
++#endif
  }
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // static
  void MemoryUsageMonitorPosix::Bind(
      mojo::PendingReceiver<mojom::blink::MemoryUsageMonitorLinux> receiver) {

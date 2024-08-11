@@ -1,39 +1,35 @@
 $NetBSD$
 
---- third_party/angle/BUILD.gn.orig	2020-07-15 19:01:32.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/angle/BUILD.gn.orig	2024-07-24 02:45:19.152899500 +0000
 +++ third_party/angle/BUILD.gn
-@@ -19,7 +19,7 @@ if (angle_has_build) {
+@@ -347,7 +347,6 @@ config("extra_warnings") {
+       "-Wtautological-type-limit-compare",
+       "-Wundefined-reinterpret-cast",
+       "-Wunneeded-internal-declaration",
+-      "-Wunused-but-set-variable",
+       "-Wsuggest-destructor-override",
+       "-Wsuggest-override",
  
- declare_args() {
-   # Use the PCI lib to collect GPU information on Linux.
--  use_libpci = is_linux && (!is_chromecast || is_cast_desktop_build) &&
-+  use_libpci = (is_linux || is_bsd) && (!is_chromecast || is_cast_desktop_build) &&
-                (angle_use_x11 || use_ozone)
+@@ -524,7 +523,7 @@ template("angle_common_lib") {
+       all_dependent_configs = [ ":angle_disable_pool_alloc" ]
+     }
  
-   # Link in system libGL, to work with apitrace.  See doc/DebuggingTips.md.
-@@ -352,7 +352,7 @@ angle_static_library("angle_gpu_info_uti
-     libs += [ "dxgi.lib" ]
-   }
+-    if (is_linux || is_chromeos) {
++    if ((is_linux || is_chromeos) && !is_bsd) {
+       libs = [ "dl" ]
+     }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     sources += libangle_gpu_info_util_linux_sources
- 
-     if (angle_use_x11) {
-@@ -363,6 +363,7 @@ angle_static_library("angle_gpu_info_uti
-         "X11",
+@@ -679,6 +678,9 @@ angle_static_library("angle_gpu_info_uti
          "Xi",
          "Xext",
-+        "GL",
        ]
++      if (is_bsd) {
++        libs += [ "GL" ]
++      }
      }
-   }
-@@ -684,7 +685,7 @@ angle_source_set("libANGLE_base") {
-       sources += libangle_gl_egl_dl_sources
-       sources += libangle_gl_egl_android_sources
-     }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       sources += libangle_gl_egl_sources
-       sources += libangle_gl_egl_dl_sources
-     }
+ 
+     if (angle_use_wayland && angle_has_build) {

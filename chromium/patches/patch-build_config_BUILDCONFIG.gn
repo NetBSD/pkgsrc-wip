@@ -1,75 +1,54 @@
 $NetBSD$
 
---- build/config/BUILDCONFIG.gn.orig	2020-07-15 18:55:48.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/BUILDCONFIG.gn.orig	2024-07-24 02:44:22.883449300 +0000
 +++ build/config/BUILDCONFIG.gn
-@@ -131,10 +131,10 @@ declare_args() {
+@@ -136,7 +136,8 @@ declare_args() {
    is_official_build = false
- 
-   # Whether we're a traditional desktop unix.
--  is_desktop_linux = current_os == "linux"
-+  is_desktop_linux = current_os == "linux" || current_os == "freebsd" || current_os == "netbsd" || current_os == "openbsd"
  
    # Set to true when compiling with the Clang compiler.
 -  is_clang = current_os != "linux" ||
-+  is_clang = (current_os != "linux" && current_os != "netbsd") ||
++  is_clang = current_os != "linux" || current_os == "openbsd" ||
++             current_os == "freebsd" || current_os == "netbsd" ||
               (current_cpu != "s390x" && current_cpu != "s390" &&
                current_cpu != "ppc64" && current_cpu != "ppc" &&
-               current_cpu != "mips" && current_cpu != "mips64")
-@@ -186,8 +186,8 @@ if (host_toolchain == "") {
-   # TODO(dpranke): Add some sort of assert here that verifies that
-   # no toolchain omitted host_toolchain from its toolchain_args().
- 
--  if (host_os == "linux") {
--    if (target_os != "linux") {
-+  if (host_os == "linux" || host_os == "freebsd" || host_os == "openbsd") {
-+    if (target_os != "linux" && target_os != "freebsd" && target_os != "openbsd") {
-       host_toolchain = "//build/toolchain/linux:clang_$host_cpu"
-     } else if (is_clang) {
-       host_toolchain = "//build/toolchain/linux:clang_$host_cpu"
-@@ -213,6 +213,8 @@ if (host_toolchain == "") {
-     }
-   } else if (host_os == "aix") {
+               current_cpu != "mips" && current_cpu != "mips64" &&
+@@ -231,6 +232,12 @@ if (host_toolchain == "") {
      host_toolchain = "//build/toolchain/aix:$host_cpu"
+   } else if (host_os == "zos") {
+     host_toolchain = "//build/toolchain/zos:$host_cpu"
++  } else if (host_os == "openbsd") {
++    host_toolchain = "//build/toolchain/openbsd:clang_$host_cpu"
++  } else if (host_os == "freebsd") {
++    host_toolchain = "//build/toolchain/freebsd:clang_$host_cpu"
 +  } else if (host_os == "netbsd") {
-+    host_toolchain = "//build/toolchain/netbsd:$host_cpu"
++    host_toolchain = "//build/toolchain/netbsd:clang_$host_cpu"
    } else {
      assert(false, "Unsupported host_os: $host_os")
    }
-@@ -224,7 +226,7 @@ if (target_os == "android") {
-   assert(host_os == "linux" || host_os == "mac",
-          "Android builds are only supported on Linux and Mac hosts.")
-   _default_toolchain = "//build/toolchain/android:android_clang_$target_cpu"
--} else if (target_os == "chromeos" || target_os == "linux") {
-+} else if (target_os == "chromeos" || target_os == "linux" || target_os == "freebsd" || target_os == "netbsd" || target_os == "openbsd") {
-   # See comments in build/toolchain/cros/BUILD.gn about board compiles.
-   if (is_clang) {
-     _default_toolchain = "//build/toolchain/linux:clang_$target_cpu"
-@@ -254,6 +256,8 @@ if (target_os == "android") {
-   _default_toolchain = "//build/toolchain/win:uwp_$target_cpu"
- } else if (target_os == "aix") {
+@@ -274,6 +281,8 @@ if (target_os == "android") {
    _default_toolchain = "//build/toolchain/aix:$target_cpu"
-+} else if (target_os == "netbsd") {
-+  _default_toolchain = "//build/toolchain/netbsd:$target_cpu"
+ } else if (target_os == "zos") {
+   _default_toolchain = "//build/toolchain/zos:$target_cpu"
++} else if (target_os == "openbsd" || target_os == "freebsd" || target_os == "netbsd") {
++  _default_toolchain = host_toolchain
  } else {
    assert(false, "Unsupported target_os: $target_os")
  }
-@@ -292,6 +296,10 @@ is_linux = current_os == "chromeos" || c
+@@ -308,7 +317,12 @@ is_android = current_os == "android"
+ is_chromeos = current_os == "chromeos"
+ is_fuchsia = current_os == "fuchsia"
+ is_ios = current_os == "ios"
+-is_linux = current_os == "linux"
++is_linux = current_os == "linux" || current_os == "openbsd" ||
++           current_os == "freebsd" || current_os == "netbsd"
++is_openbsd = current_os == "openbsd"
++is_freebsd = current_os == "freebsd"
++is_netbsd = current_os == "netbsd"
++is_bsd = current_os == "openbsd" || current_os == "freebsd" || current_os == "netbsd"
  is_mac = current_os == "mac"
  is_nacl = current_os == "nacl"
  is_win = current_os == "win" || current_os == "winuwp"
-+is_bsd = current_os == "freebsd" || current_os == "netbsd" || current_os == "openbsd"
-+is_freebsd = current_os == "freebsd"
-+is_netbsd = current_os == "netbsd"
-+is_openbsd = current_os == "openbsd"
- 
- is_posix = !is_win && !is_fuchsia
- 
-@@ -355,7 +363,7 @@ if (!is_ios) {
- if (!is_mac && !is_ios) {
-   sources_assignment_filter += [ "*.mm" ]
- }
--if (!is_linux) {
-+if (!is_linux && !is_bsd) {
-   sources_assignment_filter += [
-     "*_linux.h",
-     "*_linux.cc",

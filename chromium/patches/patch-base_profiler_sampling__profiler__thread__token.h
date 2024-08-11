@@ -1,22 +1,26 @@
 $NetBSD$
 
---- base/profiler/sampling_profiler_thread_token.h.orig	2020-07-08 21:40:31.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/profiler/sampling_profiler_thread_token.h.orig	2024-07-24 02:44:22.651426800 +0000
 +++ base/profiler/sampling_profiler_thread_token.h
-@@ -9,7 +9,7 @@
- #include "base/threading/platform_thread.h"
- #include "build/build_config.h"
+@@ -13,7 +13,7 @@
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_ANDROID)
  #include <pthread.h>
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include <stdint.h>
  #endif
  
-@@ -21,7 +21,7 @@ namespace base {
- // functions used to obtain the stack base address.
- struct SamplingProfilerThreadToken {
+@@ -27,7 +27,7 @@ struct SamplingProfilerThreadToken {
    PlatformThreadId id;
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+ #if BUILDFLAG(IS_ANDROID)
    pthread_t pthread_id;
- #endif
- };
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+   // Due to the sandbox, we can only retrieve the stack base address for the
+   // current thread. We must grab it during
+   // GetSamplingProfilerCurrentThreadToken() and not try to get it later.

@@ -1,13 +1,17 @@
 $NetBSD$
 
---- chrome/browser/defaults.cc.orig	2020-07-08 21:40:34.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/defaults.cc.orig	2024-07-24 02:44:26.991847300 +0000
 +++ chrome/browser/defaults.cc
-@@ -43,7 +43,7 @@ const bool kSyncAutoStarts = true;
- const bool kSyncAutoStarts = false;
+@@ -44,7 +44,7 @@ const bool kShowHelpMenuItemIcon = true;
+ const bool kShowHelpMenuItemIcon = false;
  #endif
  
--#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && !defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  const bool kScrollEventChangesTab = true;
  #else
  const bool kScrollEventChangesTab = false;

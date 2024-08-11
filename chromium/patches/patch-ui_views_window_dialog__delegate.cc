@@ -1,13 +1,17 @@
 $NetBSD$
 
---- ui/views/window/dialog_delegate.cc.orig	2020-07-15 18:56:49.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/views/window/dialog_delegate.cc.orig	2024-07-24 02:45:10.980108000 +0000
 +++ ui/views/window/dialog_delegate.cc
-@@ -62,7 +62,7 @@ Widget* DialogDelegate::CreateDialogWidg
+@@ -109,7 +109,7 @@ Widget* DialogDelegate::CreateDialogWidg
  
  // static
  bool DialogDelegate::CanSupportCustomFrame(gfx::NativeView parent) {
--#if defined(OS_LINUX) && BUILDFLAG(ENABLE_DESKTOP_AURA)
-+#if (defined(OS_LINUX) || defined(OS_BSD)) && BUILDFLAG(ENABLE_DESKTOP_AURA)
+-#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && \
+     BUILDFLAG(ENABLE_DESKTOP_AURA)
    // The new style doesn't support unparented dialogs on Linux desktop.
    return parent != nullptr;
- #else

@@ -1,13 +1,17 @@
 $NetBSD$
 
---- remoting/host/host_details.cc.orig	2020-07-15 18:56:01.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- remoting/host/host_details.cc.orig	2024-07-24 02:44:43.393436000 +0000
 +++ remoting/host/host_details.cc
-@@ -22,7 +22,7 @@ std::string GetHostOperatingSystemName()
+@@ -23,7 +23,7 @@ std::string GetHostOperatingSystemName()
    return "Mac";
- #elif defined(OS_CHROMEOS)
+ #elif BUILDFLAG(IS_CHROMEOS_ASH)
    return "ChromeOS";
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
    return "Linux";
- #elif defined(OS_ANDROID)
+ #elif BUILDFLAG(IS_ANDROID)
    return "Android";

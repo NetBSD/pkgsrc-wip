@@ -1,13 +1,36 @@
 $NetBSD$
 
---- components/feature_engagement/public/feature_constants.cc.orig	2020-07-08 21:40:39.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/feature_engagement/public/feature_constants.cc.orig	2024-07-24 02:44:34.036529500 +0000
 +++ components/feature_engagement/public/feature_constants.cc
-@@ -15,7 +15,7 @@ const base::Feature kIPHDummyFeature{"IP
-                                      base::FEATURE_DISABLED_BY_DEFAULT};
+@@ -18,7 +18,7 @@ BASE_FEATURE(kIPHDemoMode, "IPH_DemoMode
+ BASE_FEATURE(kIPHDummyFeature, "IPH_Dummy", base::FEATURE_DISABLED_BY_DEFAULT);
  
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
--    defined(OS_CHROMEOS)
-+    defined(OS_CHROMEOS) || defined(OS_BSD)
- const base::Feature kIPHDesktopTabGroupsNewGroupFeature{
-     "IPH_DesktopTabGroupsNewGroup", base::FEATURE_DISABLED_BY_DEFAULT};
- const base::Feature kIPHFocusModeFeature{"IPH_FocusMode",
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kEsbDownloadRowPromoFeature,
+              "EsbDownloadRowPromo",
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -626,7 +626,8 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+ #endif  // BUILDFLAG(IS_IOS)
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || \
++    BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kIPHAutofillCreditCardBenefitFeature,
+              "IPH_AutofillCreditCardBenefit",
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -757,7 +758,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // This can be enabled by default, as the DesktopPWAsLinkCapturing
+ // flag is needed for the IPH linked to this feature to work, and
+ // use-cases to show the IPH are guarded by that flag.

@@ -1,31 +1,26 @@
 $NetBSD$
 
---- gpu/config/gpu_control_list.cc.orig	2020-07-08 21:40:44.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- gpu/config/gpu_control_list.cc.orig	2024-07-24 02:44:39.237033400 +0000
 +++ gpu/config/gpu_control_list.cc
-@@ -17,7 +17,7 @@
- #include "base/values.h"
- #include "build/build_config.h"
- #include "gpu/config/gpu_util.h"
--#include "third_party/re2/src/re2/re2.h"
-+#include <re2/re2.h>
- 
- namespace gpu {
- namespace {
-@@ -248,7 +248,7 @@ bool GpuControlList::More::GLVersionInfo
+@@ -276,7 +276,7 @@ bool GpuControlList::More::GLVersionInfo
  GpuControlList::GLType GpuControlList::More::GetDefaultGLType() {
- #if defined(OS_CHROMEOS)
+ #if BUILDFLAG(IS_CHROMEOS)
    return kGLTypeGL;
--#elif defined(OS_LINUX) || defined(OS_OPENBSD)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_OPENBSD)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return kGLTypeGL;
- #elif defined(OS_MACOSX)
+ #elif BUILDFLAG(IS_MAC)
    return kGLTypeGL;
-@@ -754,7 +754,7 @@ GpuControlList::OsType GpuControlList::G
+@@ -810,7 +810,7 @@ GpuControlList::OsType GpuControlList::G
    return kOsAndroid;
- #elif defined(OS_FUCHSIA)
+ #elif BUILDFLAG(IS_FUCHSIA)
    return kOsFuchsia;
--#elif defined(OS_LINUX) || defined(OS_OPENBSD)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_OPENBSD)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return kOsLinux;
- #elif defined(OS_MACOSX)
+ #elif BUILDFLAG(IS_MAC)
    return kOsMacosx;

@@ -1,23 +1,20 @@
 $NetBSD$
 
---- components/policy/tools/generate_policy_source.py.orig	2020-07-08 21:40:40.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/policy/tools/generate_policy_source.py.orig	2024-07-24 02:44:35.108633300 +0000
 +++ components/policy/tools/generate_policy_source.py
-@@ -38,7 +38,8 @@ PLATFORM_STRINGS = {
+@@ -38,9 +38,9 @@ PLATFORM_STRINGS = {
+     'ios': ['ios'],
+     'fuchsia': ['fuchsia'],
      'chrome.win': ['win'],
-     'chrome.linux': ['linux'],
+-    'chrome.linux': ['linux'],
++    'chrome.linux': ['linux', 'openbsd', 'freebsd', 'netbsd'],
      'chrome.mac': ['mac'],
 -    'chrome.*': ['win', 'mac', 'linux'],
-+    'chrome.netbsd': ['netbsd'],
-+    'chrome.*': ['win', 'mac', 'linux', 'netbsd'],
-     'chrome.win7': ['win']
++    'chrome.*': ['win', 'mac', 'linux', 'openbsd', 'freebsd', 'netbsd'],
+     'chrome.win7': ['win'],
  }
  
-@@ -305,7 +306,7 @@ def main():
-       '--target-platform',
-       dest='target_platform',
-       help='the platform the generated code should run on - can be one of'
--      '(win, mac, linux, chromeos, fuchsia)',
-+      '(win, mac, linux, chromeos, fuchsia, netbsd)',
-       metavar='PLATFORM')
-   parser.add_argument(
-       '--policy-templates-file',

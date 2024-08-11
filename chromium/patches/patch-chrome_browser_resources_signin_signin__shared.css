@@ -1,0 +1,17 @@
+$NetBSD$
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/resources/signin/signin_shared.css.orig	2024-07-24 02:44:28.692011800 +0000
++++ chrome/browser/resources/signin/signin_shared.css
+@@ -54,7 +54,7 @@ a {
+   border-radius: var(--scrollbar-width);
+ }
+ 
+-<if expr="is_macosx or is_linux or is_chromeos">
++<if expr="is_macosx or is_posix or is_chromeos">
+ .action-container {
+   flex-flow: row-reverse;
+   justify-content: flex-start;

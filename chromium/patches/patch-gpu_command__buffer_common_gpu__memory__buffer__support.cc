@@ -1,22 +1,26 @@
 $NetBSD$
 
---- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2020-07-08 21:40:44.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-07-24 02:44:39.145024300 +0000
 +++ gpu/command_buffer/common/gpu_memory_buffer_support.cc
-@@ -55,7 +55,7 @@ bool IsImageSizeValidForGpuMemoryBufferF
- uint32_t GetPlatformSpecificTextureTarget() {
- #if defined(OS_MACOSX)
+@@ -182,7 +182,7 @@ uint32_t GetPlatformSpecificTextureTarge
+ #if BUILDFLAG(IS_MAC)
    return macos_specific_texture_target;
--#elif defined(OS_ANDROID) || defined(OS_LINUX)
-+#elif defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+ #elif BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    return GL_TEXTURE_EXTERNAL_OES;
- #elif defined(OS_WIN) || defined(OS_FUCHSIA)
+ #elif BUILDFLAG(IS_IOS)
    return GL_TEXTURE_2D;
-@@ -85,7 +85,7 @@ GPU_EXPORT uint32_t GetBufferTextureTarg
- 
- GPU_EXPORT bool NativeBufferNeedsPlatformSpecificTextureTarget(
-     gfx::BufferFormat format) {
--#if defined(USE_OZONE) || defined(OS_LINUX)
-+#if defined(USE_OZONE) || defined(OS_LINUX) || defined(OS_BSD)
+@@ -209,7 +209,7 @@ GPU_EXPORT bool NativeBufferNeedsPlatfor
+     gfx::BufferFormat format,
+     gfx::BufferPlane plane) {
+ #if BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    // Always use GL_TEXTURE_2D as the target for RGB textures.
    // https://crbug.com/916728
    if (format == gfx::BufferFormat::R_8 || format == gfx::BufferFormat::RG_88 ||

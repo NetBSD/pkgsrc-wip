@@ -1,71 +1,39 @@
 $NetBSD$
 
---- content/browser/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/browser/BUILD.gn.orig	2024-07-24 02:44:36.956812400 +0000
 +++ content/browser/BUILD.gn
-@@ -2042,7 +2042,7 @@ jumbo_source_set("browser") {
-     deps += [ "//ui/events" ]
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     sources += [
-       "font_service.cc",
-       "font_service.h",
-@@ -2058,6 +2058,12 @@ jumbo_source_set("browser") {
+@@ -2375,6 +2375,14 @@ source_set("browser") {
      ]
    }
  
-+  #if (is_bsd) {
-+  #  deps -= [
-+  #    "//services/service_manager/zygote",
-+  #  ]
-+  #}
++  if (is_bsd) {
++    sources += [
++      "file_system_access/file_path_watcher/file_path_watcher_bsd.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_kqueue.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_kqueue.h",
++    ]
++  }
 +
-   if (is_desktop_linux) {
-     sources += [ "speech/tts_linux.cc" ]
-     deps += [ "//third_party/speech-dispatcher" ]
-@@ -2079,7 +2085,7 @@ jumbo_source_set("browser") {
-     ]
-   }
- 
--  if (is_chromecast && is_linux) {
-+  if (is_chromecast && (is_linux || is_bsd)) {
+   if (is_linux || is_chromeos) {
      sources += [
-       "tracing/cast_tracing_agent.cc",
-       "tracing/cast_tracing_agent.h",
-@@ -2315,7 +2321,7 @@ jumbo_source_set("browser") {
-     } else if (use_pangocairo) {
-       sources += [ "renderer_host/pepper/pepper_truetype_font_list_pango.cc" ]
-     }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       deps += [ "//components/services/font:ppapi_fontconfig_matching" ]
-     }
-   }
-@@ -2353,7 +2359,7 @@ jumbo_source_set("browser") {
-     }
+       "child_process_launcher_helper_linux.cc",
+@@ -2413,6 +2421,15 @@ source_set("browser") {
+     deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
    }
  
--  if (is_linux && use_aura) {
-+  if ((is_linux || is_bsd) && use_aura) {
-     deps += [ "//third_party/fontconfig" ]
-   }
- 
-@@ -2651,7 +2657,7 @@ jumbo_source_set("browser") {
-       "renderer_host/render_widget_host_view_event_handler.h",
-     ]
- 
--    if (is_linux && !is_chromeos) {
-+    if ((is_linux || is_bsd) && !is_chromeos) {
-       deps += [ "//ui/base/ime/linux" ]
-     }
-   } else {  # Not aura.
-@@ -2689,7 +2695,7 @@ jumbo_source_set("browser") {
-     ]
-   }
- 
--  if (is_linux && use_dbus) {
-+  if ((is_linux || is_bsd) && use_dbus) {
-     deps += [ "//dbus" ]
-   }
- 
++  if (is_bsd) {
++    sources -= [
++      "file_system_access/file_path_watcher/file_path_watcher_inotify.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_inotify.h",
++      "sandbox_ipc_linux.cc",
++      "sandbox_ipc_linux.h",
++    ]
++  }
++
+   if (is_chromeos) {
+     sources += [
+       "handwriting/handwriting_recognition_service_impl_cros.cc",
