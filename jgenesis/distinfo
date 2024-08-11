@@ -1623,3 +1623,4 @@ Size (zvariant_derive-4.0.3.crate) = 11000 bytes
 BLAKE2s (zvariant_utils-1.1.1.crate) = 066c32e7637dd2c7493f009cfe6e4bfd1b1ae2944a4ac214276301d021f92e5f
 SHA512 (zvariant_utils-1.1.1.crate) = 4ee75536e57aa6f05e9739c1a3bb037ebc276d22206c0a3ddc3c245395aefead5f8197af1e659e33780df968715101831c286ef28513aaf7f2a5e4a43767cdc3
 Size (zvariant_utils-1.1.1.crate) = 6859 bytes
+SHA1 (patch-frontend_jgenesis-gui_Cargo.toml) = ba88dfd7d841c77edecc0baf43bc8b26eeef7800
