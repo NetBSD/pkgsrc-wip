@@ -1390,6 +1390,7 @@ SUBDIR+=	gtkhotkey
 SUBDIR+=	gtkmathview
 SUBDIR+=	gtkmmorse
 SUBDIR+=	gtksourcecompletion
+SUBDIR+=	gtksourceview2
 SUBDIR+=	gts-snapshot
 SUBDIR+=	gtypist
 SUBDIR+=	gucharmap
