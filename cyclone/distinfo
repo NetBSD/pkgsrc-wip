@@ -3,7 +3,7 @@ $NetBSD$
 BLAKE2s (cyclone-0.36.0.tar.gz) = 1777c4452a676b992c0b5ed968cd6b72b358fbd5517e72589dd53c285638437c
 SHA512 (cyclone-0.36.0.tar.gz) = 6dfa3ff80b1a8397608483e6d914c25b1fee521d620991fb70f1bcf77303d290477100cbd82fbd9c939b5f2c91f72240f58711d9ab023721c15c8ad9b15998fd
 Size (cyclone-0.36.0.tar.gz) = 5237987 bytes
-SHA1 (patch-Makefile) = d26a38fed6a46a650841f93b6cdb4eb48489d5dd
+SHA1 (patch-Makefile) = d5e8d8a25d9472601708778ec9e220a987da4128
 SHA1 (patch-Makefile.config) = 1cb1559cbe9779d5fa8bda998db14951af99716a
 SHA1 (patch-cyclone.scm) = e624dd62369d92b88501f8770d3504e78e311321
 SHA1 (patch-include_cyclone_types.h) = caf0f87ec67d42aad59d7041c50de12fac20c932

@@ -8,6 +8,7 @@ include/cyclone/runtime-main.h
 include/cyclone/runtime.h
 include/cyclone/types.h
 lib/libcyclone.a
+share/cyclone/cyclone/concurrent.meta
 share/cyclone/cyclone/concurrent.o
 share/cyclone/cyclone/concurrent.sld
 share/cyclone/cyclone/concurrent.so
@@ -86,9 +87,11 @@ share/cyclone/scheme/eval.so
 share/cyclone/scheme/file.o
 share/cyclone/scheme/file.sld
 share/cyclone/scheme/file.so
+share/cyclone/scheme/inexact.meta
 share/cyclone/scheme/inexact.o
 share/cyclone/scheme/inexact.sld
 share/cyclone/scheme/inexact.so
+share/cyclone/scheme/lazy.meta
 share/cyclone/scheme/lazy.o
 share/cyclone/scheme/lazy.sld
 share/cyclone/scheme/lazy.so
