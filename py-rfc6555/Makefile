@@ -2,7 +2,7 @@
 
 DISTNAME=	rfc6555-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python python
+CATEGORIES=	devel python
 MASTER_SITES=	https://files.pythonhosted.org/packages/f6/4b/24f953c3682c134e4d0f83c7be5ede44c6c653f7d2c0b06ebb3b117f005a/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
