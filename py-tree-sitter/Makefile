@@ -1,16 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	tree_sitter-0.19.0
-PKGNAME=	${PYPKGPREFIX}-tree-sitter-0.19.0
+DISTNAME=	tree-sitter-0.22.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	${MASTER_SITE_PYPI:=t/tree_sitter/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tree-sitter/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://github.com/tree-sitter/py-tree-sitter
 COMMENT=	Python bindings to the Tree-sitter parsing library
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
