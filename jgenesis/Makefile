@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/jsgroth/jgenesis/
 COMMENT=	Sega Genesis - Sega CD - SNES - Master System - Game Gear emulator
 LICENSE=	mit
 
+DEPENDS+=	zenity-[0-9]*:../../x11/zenity
+
 .include "cargo-depends.mk"
 
 #RUST_REQ=	1.79.0
