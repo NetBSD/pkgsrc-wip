@@ -1,0 +1,9 @@
+mail/offlineimap: Add dependency on net/py-rfc6555
+
+OfflineIMAP requires the rfc6555 module, but the package is missing the
+dependency declaration.  Without rfc6555, OfflineIMAP builds but does
+not run; it fails with a stack trace that ends like this:
+
+  File "[...]/offlineimap/imaplibutil.py", line 22, in <module>
+      import rfc6555
+      ImportError: No module named rfc6555

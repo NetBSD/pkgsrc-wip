@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.41 2023/10/23 06:37:48 wiz Exp $
 
 DISTNAME=	offlineimap-7.3.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
 
@@ -15,6 +15,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-rfc6555-[0-9]*:../../wip/py-rfc6555
 
 INSTALLATION_DIRS=	share/examples/offlineimap
 
