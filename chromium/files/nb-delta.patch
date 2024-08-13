@@ -927,7 +927,7 @@ index 6a590b0ef2..4cb5ff43ac 100644
        ozone_platform = "x11"
        ozone_platform_wayland = true
 diff --git a/build/rust/rust_bindgen.gni b/build/rust/rust_bindgen.gni
-index d0ad1ac0bd..2aaafba7c7 100644
+index 8a2fe83e91..2aaafba7c7 100644
 --- a/build/rust/rust_bindgen.gni
 +++ b/build/rust/rust_bindgen.gni
 @@ -11,14 +11,14 @@ if (is_win) {
@@ -942,7 +942,7 @@ index d0ad1ac0bd..2aaafba7c7 100644
  
  # On Windows, the libclang.dll is beside the bindgen.exe, otherwise it is in
  # ../lib.
--_libclang_path = "${LOCALBASE}/llvm${MODCLANG_VERSION}/lib"
+-_libclang_path = "${LOCALBASE}/llvm${MODCLANG_VERSION}"
 +_libclang_path = "@PREFIX@"
  if (host_os == "win") {
    _libclang_path += "/bin"
@@ -1355,6 +1355,31 @@ index 730668b7ee..547d07407d 100644
              {"name": "fuchsia", "description": "Specifies the Fuchsia operating system."}
          ]
        },
+diff --git a/google_apis/google_api_keys-inc.cc b/google_apis/google_api_keys-inc.cc
+index 4d13e697a5..dbb32d43b2 100644
+--- a/google_apis/google_api_keys-inc.cc
++++ b/google_apis/google_api_keys-inc.cc
+@@ -190,14 +190,18 @@ class APIKeyCache {
+         STRINGIZE_NO_EXPANSION(GOOGLE_METRICS_SIGNING_KEY), std::string(),
+         nullptr, std::string(), environment.get(), command_line, gaia_config);
+ 
++    // https://gitlab.archlinux.org/archlinux/packaging/packages/chromium/-/blob/main/use-oauth2-client-switches-as-default.patch?ref_type=heads
++    // Use the --oauth2-client-id= and --oauth2-client-secret= switches for
++    // setting GOOGLE_DEFAULT_CLIENT_ID and GOOGLE_DEFAULT_CLIENT_SECRET at
++    // runtime -- this allows signing into Chromium without baked-in values
+     std::string default_client_id = CalculateKeyValue(
+         GOOGLE_DEFAULT_CLIENT_ID,
+         STRINGIZE_NO_EXPANSION(GOOGLE_DEFAULT_CLIENT_ID), std::string(),
+-        nullptr, std::string(), environment.get(), command_line, gaia_config);
++        ::switches::kOAuth2ClientID, std::string(), environment.get(), command_line, gaia_config);
+     std::string default_client_secret = CalculateKeyValue(
+         GOOGLE_DEFAULT_CLIENT_SECRET,
+         STRINGIZE_NO_EXPANSION(GOOGLE_DEFAULT_CLIENT_SECRET), std::string(),
+-        nullptr, std::string(), environment.get(), command_line, gaia_config);
++        ::switches::kOAuth2ClientSecret, std::string(), environment.get(), command_line, gaia_config);
+ 
+     // We currently only allow overriding the baked-in values for the
+     // default OAuth2 client ID and secret using a command-line
 diff --git a/media/base/media_switches.cc b/media/base/media_switches.cc
 index bf3f36c6be..d1a8093f64 100644
 --- a/media/base/media_switches.cc
@@ -3586,7 +3611,7 @@ index cdbf6cb89a..bb75cb06f5 100644
          exe_suffix = ""
      elif sys.platform.startswith("darwin"):
 diff --git a/third_party/blink/renderer/platform/runtime_enabled_features.json5 b/third_party/blink/renderer/platform/runtime_enabled_features.json5
-index f96abe5df1..b9efc3f326 100644
+index 487d7f7e11..f54c0345f1 100644
 --- a/third_party/blink/renderer/platform/runtime_enabled_features.json5
 +++ b/third_party/blink/renderer/platform/runtime_enabled_features.json5
 @@ -324,7 +324,7 @@
@@ -3598,7 +3623,7 @@ index f96abe5df1..b9efc3f326 100644
        base_feature: "WebAppEnableAppTitle",
      },
      {
-@@ -1528,7 +1528,7 @@
+@@ -1534,7 +1534,7 @@
        status: "test",
        base_feature: "none",
        origin_trial_feature_name: "FedCmContinueOnBundle",
@@ -3607,7 +3632,7 @@ index f96abe5df1..b9efc3f326 100644
        origin_trial_allows_third_party: true,
      },
      {
-@@ -1545,7 +1545,7 @@
+@@ -1551,7 +1551,7 @@
        status: "test",
        base_feature: "none",
        origin_trial_feature_name: "FedCmButtonMode",
@@ -3616,7 +3641,7 @@ index f96abe5df1..b9efc3f326 100644
        origin_trial_allows_third_party: true,
      },
      {
-@@ -1590,7 +1590,7 @@
+@@ -1596,7 +1596,7 @@
        base_feature: "none",
        public: true,
        origin_trial_feature_name: "FedCmMultipleIdentityProviders",
@@ -3625,7 +3650,7 @@ index f96abe5df1..b9efc3f326 100644
        origin_trial_allows_third_party: true,
      },
      {
-@@ -1928,7 +1928,7 @@
+@@ -1934,7 +1934,7 @@
        base_feature_status: "enabled",
        copied_from_base_feature_if: "overridden",
        origin_trial_feature_name: "FullscreenPopupWindows",
@@ -3634,7 +3659,7 @@ index f96abe5df1..b9efc3f326 100644
      },
      {
        name: "GamepadButtonAxisEvents",
-@@ -3005,7 +3005,7 @@
+@@ -3011,7 +3011,7 @@
        // Tracking bug for the implementation: https://crbug.com/1462930
        name: "PermissionElement",
        origin_trial_feature_name: "PermissionElement",
@@ -3643,7 +3668,7 @@ index f96abe5df1..b9efc3f326 100644
        status: "experimental",
        public: true,
        base_feature_status: "enabled",
-@@ -3140,7 +3140,7 @@
+@@ -3146,7 +3146,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
@@ -3652,7 +3677,7 @@ index f96abe5df1..b9efc3f326 100644
        status: "stable",
        public: true,
        base_feature: "none",
-@@ -4116,7 +4116,7 @@
+@@ -4122,7 +4122,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -3661,7 +3686,7 @@ index f96abe5df1..b9efc3f326 100644
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4285,7 +4285,7 @@
+@@ -4291,7 +4291,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -3670,7 +3695,7 @@ index f96abe5df1..b9efc3f326 100644
        status: "experimental",
        base_feature: "none",
      },
-@@ -4328,7 +4328,7 @@
+@@ -4334,7 +4334,7 @@
        status: "experimental",
        base_feature: "none",
        origin_trial_feature_name: "WebAppUrlHandling",
@@ -4571,7 +4596,7 @@ index 186ad4dbe1..01497b9f13 100644
      sources += [
        "src/base/debug/stack_trace_posix.cc",
 diff --git a/v8/include/v8config.h b/v8/include/v8config.h
-index c967e0958c..0d882fac0d 100644
+index e49365aea1..dc0a278358 100644
 --- a/v8/include/v8config.h
 +++ b/v8/include/v8config.h
 @@ -195,6 +195,7 @@ path. Add it with -I<path> to the command line

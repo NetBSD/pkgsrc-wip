@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc.orig	2024-07-24 02:44:35.372659000 +0000
+--- components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc.orig	2024-08-06 19:52:23.605826600 +0000
 +++ components/segmentation_platform/embedder/default_model/cross_device_user_segment.cc
 @@ -148,7 +148,7 @@ void CrossDeviceUserSegment::ExecuteMode
  // Check for current device type and subtract it from the device count

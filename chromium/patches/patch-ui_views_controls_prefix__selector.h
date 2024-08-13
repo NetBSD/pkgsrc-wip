@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/controls/prefix_selector.h.orig	2024-07-24 02:45:10.900100200 +0000
+--- ui/views/controls/prefix_selector.h.orig	2024-08-06 19:52:57.856721400 +0000
 +++ ui/views/controls/prefix_selector.h
 @@ -83,7 +83,7 @@ class VIEWS_EXPORT PrefixSelector : publ
    ukm::SourceId GetClientSourceForMetrics() const override;

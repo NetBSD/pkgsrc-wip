@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.h.orig	2024-07-24 02:44:29.688108400 +0000
+--- chrome/browser/ui/ui_features.h.orig	2024-08-06 19:52:17.321295500 +0000
 +++ chrome/browser/ui/ui_features.h
 @@ -85,7 +85,7 @@ BASE_DECLARE_FEATURE(kAccessCodeCastUI);
  

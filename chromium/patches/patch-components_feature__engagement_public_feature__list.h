@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.h.orig	2024-07-24 02:44:34.036529500 +0000
+--- components/feature_engagement/public/feature_list.h.orig	2024-08-06 19:52:22.265713500 +0000
 +++ components/feature_engagement/public/feature_list.h
 @@ -273,7 +273,7 @@ DEFINE_VARIATION_PARAM(kIPHiOSSavedTabGr
  #endif  // BUILDFLAG(IS_IOS)

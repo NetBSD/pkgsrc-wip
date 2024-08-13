@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc.orig	2024-07-24 02:44:28.800022400 +0000
+--- chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc.orig	2024-08-06 19:52:16.429220000 +0000
 +++ chrome/browser/send_tab_to_self/receiving_ui_handler_registry.cc
 @@ -15,7 +15,7 @@
  #include "components/send_tab_to_self/features.h"

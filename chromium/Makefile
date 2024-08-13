@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			127.0.6533.72
+VERSION=			127.0.6533.99
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -133,7 +133,6 @@ GN_ARGS+=	use_allocator_shim=false
 GN_ARGS+=	use_cups=true
 GN_ARGS+=	use_custom_libcxx=true
 GN_ARGS+=	use_custom_libunwind=true
-#GN_ARGS+=	use_gold=false
 GN_ARGS+=	use_kerberos=false
 GN_ARGS+=	use_lld=false
 GN_ARGS+=	use_partition_alloc=true
@@ -200,14 +199,14 @@ GN_BOOTSTRAP_FLAGS+=	--no-clean --no-rebuild
 # API key and OAuth credential for Google.
 # This is pkgsrc use only.
 GN_ARGS+=	google_api_key=\"AIzaSyAT_3ogzNMKbBMFk3xQ6T35fg52Y9GrFBg\"
+#GN_ARGS+=	google_default_client_id=\"74061691103-faqqnan75j2s8ej3p7lh2k98dhkee816.apps.googleusercontent.com\"
+#GN_ARGS+=	google_default_client_secret=\"3R9TyUv14OXgzJnZi6Ismela\"
 
 NOT_PAX_MPROTECT_SAFE+=	chrome/chrome
 #NOT_PAX_ASLR_SAFE+=	chrome/chrome
 
-#PKGSRC_COMPILER=	ccache clang
 PKG_CC=			clang
 PKG_CXX=		clang++
-#UNLIMIT_RESOURCES=	datasize
 
 post-extract:
 	${CP} ${FILESDIR}/chrome ${WRKSRC}/chrome.sh
@@ -215,8 +214,6 @@ post-extract:
 pre-configure:
 #	${LN} -sf ${PREFIX}/java/openjdk11/bin/java \
 #		${BUILDLINK_DIR}/bin/java
-#	cp -r ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux \
-#		${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/${LOWER_OPSYS}
 	# Prepare internal ffmpeg
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHONBIN} scripts/build_ffmpeg.py \
@@ -232,14 +229,6 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/node \
 		${WRKSRC}/third_party/node/${LOWER_OPSYS}/node-${LOWER_OPSYS}/bin/node
 
-# a wrapper for rpath $ORIGIN removal
-#	echo "#! /bin/sh" > ${WRKSRC}/python
-#	echo "LD_LIBRARY_PATH=./ ${PYTHONBIN} \"\$$@\"" >> ${WRKSRC}/python
-#	chmod 755 ${WRKSRC}/python
-
-# Sadly rpath $ORIGIN/. is needed.
-#	rm -rf ${WRAPPER_DIR}
-
 do-configure:
 	cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./build/linux/unbundle/replace_gn_files.py \
@@ -254,22 +243,6 @@ do-configure:
 		gen --args="${GN_ARGS}" --script-executable="${PYTHONBIN}" ${GN_VERBOSE} out/${BUILDTYPE}
 
 do-build:
-#	cd ${WRKSRC} && \
-#	${SETENV} ${MAKE_ENV} \
-#		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
-#			mksnapshot
-#.if ${OPSYS} == "NetBSD"
-#	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/mksnapshot
-#.endif
-
-#	cd ${WRKSRC} && \
-#	${SETENV} ${MAKE_ENV} \
-#		${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} \
-#			v8_context_snapshot_generator
-#.if ${OPSYS} == "NetBSD"
-#	${TOOLS_PLATFORM.paxctl} +m ${WRKSRC}/out/${BUILDTYPE}/v8_context_snapshot_generator
-#.endif
-
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${MAKE_JOBS:U1} -C out/${BUILDTYPE} ${TARGET}
 
@@ -278,7 +251,6 @@ CHROMIUM=		chrome
 BUILDDIR=		${WRKSRC}/out/${BUILDTYPE}
 INSTALLATION_DIRS+=	${CHROMIUM}
 INSTALLATION_DIRS+=	bin
-#INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PREFIX}/share/applications
 

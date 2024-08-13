@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/settings/accessibility_main_handler.h.orig	2024-07-24 02:44:30.276165200 +0000
+--- chrome/browser/ui/webui/settings/accessibility_main_handler.h.orig	2024-08-06 19:52:17.993352200 +0000
 +++ chrome/browser/ui/webui/settings/accessibility_main_handler.h
 @@ -13,7 +13,7 @@
  #include "chrome/browser/ash/accessibility/accessibility_manager.h"

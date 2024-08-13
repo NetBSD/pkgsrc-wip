@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/public/resolv_reader.cc.orig	2024-07-24 02:44:42.589358000 +0000
+--- net/dns/public/resolv_reader.cc.orig	2024-08-06 19:52:30.578415900 +0000
 +++ net/dns/public/resolv_reader.cc
 @@ -40,7 +40,7 @@ std::optional<std::vector<IPEndPoint>> G
    if (!(res.options & RES_INIT))

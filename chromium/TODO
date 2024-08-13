@@ -11,3 +11,5 @@ NOTE: OpenBSD (of course), FreeBSD and DragonFly use sndio as default.
 
 2) HID doesn't work on NetBSD.
 NOTE: For this OpenBSD uses fido and libudev-openbsd, FreeBSD uses devd.
+
+3) NetBSD changes over the OpenBSD chromium pkg available in files/nb-delta.patch

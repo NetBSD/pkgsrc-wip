@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/message_center/views/message_popup_view.cc.orig	2024-07-24 02:45:10.708081700 +0000
+--- ui/message_center/views/message_popup_view.cc.orig	2024-08-06 19:52:57.660704900 +0000
 +++ ui/message_center/views/message_popup_view.cc
 @@ -137,7 +137,7 @@ void MessagePopupView::Show() {
    params.z_order = ui::ZOrderLevel::kFloatingWindow;

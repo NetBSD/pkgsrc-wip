@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2024-07-24 02:44:45.601649800 +0000
+--- third_party/blink/renderer/core/editing/editing_behavior.cc.orig	2024-08-06 19:52:33.502663100 +0000
 +++ third_party/blink/renderer/core/editing/editing_behavior.cc
 @@ -324,7 +324,7 @@ bool EditingBehavior::ShouldInsertCharac
    // unexpected behaviour

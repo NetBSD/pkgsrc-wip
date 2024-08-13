@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2024-07-24 02:44:45.661655700 +0000
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2024-08-06 19:52:33.562668000 +0000
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -427,7 +427,7 @@ SkFontHinting RendererPreferencesToSkiaH
      const blink::RendererPreferences& prefs) {

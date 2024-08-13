@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/paint_preview/common/proto/paint_preview.proto.orig	2024-07-24 02:44:34.552579600 +0000
+--- components/paint_preview/common/proto/paint_preview.proto.orig	2024-08-06 19:52:22.765755700 +0000
 +++ components/paint_preview/common/proto/paint_preview.proto
 @@ -82,8 +82,8 @@ message PaintPreviewFrameProto {
  // Stores Chrome version.

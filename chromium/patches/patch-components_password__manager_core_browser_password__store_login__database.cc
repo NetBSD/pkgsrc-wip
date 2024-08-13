@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_store/login_database.cc.orig	2024-07-24 02:44:34.604584700 +0000
+--- components/password_manager/core/browser/password_store/login_database.cc.orig	2024-08-06 19:52:22.825760600 +0000
 +++ components/password_manager/core/browser/password_store/login_database.cc
 @@ -1020,7 +1020,7 @@ void RecordShouldDeleteUndecryptablePass
  }

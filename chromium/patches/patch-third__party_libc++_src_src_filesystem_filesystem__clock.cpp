@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libc++/src/src/filesystem/filesystem_clock.cpp.orig	2024-07-24 02:45:27.085668000 +0000
+--- third_party/libc++/src/src/filesystem/filesystem_clock.cpp.orig	2024-08-06 19:53:12.901992800 +0000
 +++ third_party/libc++/src/src/filesystem/filesystem_clock.cpp
 @@ -29,7 +29,8 @@
  #  include <sys/time.h> // for gettimeofday and timeval

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2024-07-24 02:44:23.755533700 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2024-08-06 19:52:11.108770400 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -138,7 +138,7 @@
  #include "components/about_ui/credit_utils.h"

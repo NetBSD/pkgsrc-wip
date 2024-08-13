@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2024-07-24 02:44:46.777763600 +0000
+--- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2024-08-06 19:52:34.602756000 +0000
 +++ third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc
 @@ -65,7 +65,7 @@ AtomicString ToAtomicString(const SkStri
    return AtomicString::FromUTF8(str.c_str(), str.size());

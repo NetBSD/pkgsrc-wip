@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/compiler_specific.h.orig	2024-07-24 02:44:22.539415800 +0000
+--- base/compiler_specific.h.orig	2024-08-06 19:52:09.872666000 +0000
 +++ base/compiler_specific.h
 @@ -316,7 +316,8 @@
  //

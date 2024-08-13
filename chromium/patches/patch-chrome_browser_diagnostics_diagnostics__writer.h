@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/diagnostics/diagnostics_writer.h.orig	2024-07-24 02:44:27.019850000 +0000
+--- chrome/browser/diagnostics/diagnostics_writer.h.orig	2024-08-06 19:52:14.793081800 +0000
 +++ chrome/browser/diagnostics/diagnostics_writer.h
 @@ -14,6 +14,8 @@ namespace diagnostics {
  // Console base class used internally.

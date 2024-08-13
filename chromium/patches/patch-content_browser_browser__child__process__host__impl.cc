@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/browser_child_process_host_impl.cc.orig	2024-07-24 02:44:37.044821000 +0000
+--- content/browser/browser_child_process_host_impl.cc.orig	2024-08-06 19:52:25.069950300 +0000
 +++ content/browser/browser_child_process_host_impl.cc
 @@ -330,6 +330,7 @@ void BrowserChildProcessHostImpl::Launch
        switches::kMojoCoreLibraryPath,

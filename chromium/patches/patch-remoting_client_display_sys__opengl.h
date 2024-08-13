@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/client/display/sys_opengl.h.orig	2024-07-24 02:44:43.361432800 +0000
+--- remoting/client/display/sys_opengl.h.orig	2024-08-06 19:52:31.254473000 +0000
 +++ remoting/client/display/sys_opengl.h
 @@ -9,7 +9,7 @@
  

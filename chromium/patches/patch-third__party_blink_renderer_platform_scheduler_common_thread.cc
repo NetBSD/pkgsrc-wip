@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2024-07-24 02:44:46.925778000 +0000
+--- third_party/blink/renderer/platform/scheduler/common/thread.cc.orig	2024-08-06 19:52:34.750768400 +0000
 +++ third_party/blink/renderer/platform/scheduler/common/thread.cc
 @@ -82,7 +82,7 @@ void Thread::CreateAndSetCompositorThrea
        std::make_unique<scheduler::CompositorThread>(params);

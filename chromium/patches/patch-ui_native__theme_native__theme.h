@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/native_theme.h.orig	2024-07-24 02:45:10.712082000 +0000
+--- ui/native_theme/native_theme.h.orig	2024-08-06 19:52:57.664705000 +0000
 +++ ui/native_theme/native_theme.h
 @@ -62,7 +62,7 @@ class NATIVE_THEME_EXPORT NativeTheme {
      kCheckbox,

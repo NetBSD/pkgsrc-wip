@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h.orig	2024-07-24 02:45:41.783091500 +0000
+--- third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h.orig	2024-08-06 19:53:25.703075000 +0000
 +++ third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h
 @@ -27,7 +27,7 @@
  #define HAVE_XLOCALE 0

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ime/fake_text_input_client.h.orig	2024-07-24 02:45:10.260038100 +0000
+--- ui/base/ime/fake_text_input_client.h.orig	2024-08-06 19:52:57.044652700 +0000
 +++ ui/base/ime/fake_text_input_client.h
 @@ -98,7 +98,7 @@ class FakeTextInputClient : public TextI
    void SetTextEditCommandForNextKeyEvent(TextEditCommand command) override;

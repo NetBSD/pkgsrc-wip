@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.cc.orig	2024-07-24 02:44:37.664881000 +0000
+--- content/public/common/content_switches.cc.orig	2024-08-06 19:52:25.710004300 +0000
 +++ content/public/common/content_switches.cc
 @@ -352,6 +352,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.

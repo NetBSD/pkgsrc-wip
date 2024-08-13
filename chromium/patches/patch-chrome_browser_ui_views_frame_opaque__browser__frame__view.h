@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2024-07-24 02:44:29.788118100 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.h.orig	2024-08-06 19:52:17.421304000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.h
 @@ -115,7 +115,7 @@ class OpaqueBrowserFrameView : public Br
    void UpdateWindowControlsOverlay(

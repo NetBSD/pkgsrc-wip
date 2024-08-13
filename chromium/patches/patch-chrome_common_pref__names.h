@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/pref_names.h.orig	2024-07-24 02:44:30.536190500 +0000
+--- chrome/common/pref_names.h.orig	2024-08-06 19:52:18.257374500 +0000
 +++ chrome/common/pref_names.h
 @@ -1340,7 +1340,7 @@ inline constexpr char kUseAshProxy[] = "
  

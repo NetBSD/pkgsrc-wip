@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.h.orig	2024-07-24 02:44:29.772116400 +0000
+--- chrome/browser/ui/views/frame/browser_frame.h.orig	2024-08-06 19:52:17.405302500 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.h
 @@ -65,7 +65,7 @@ class BrowserFrame : public views::Widge
  

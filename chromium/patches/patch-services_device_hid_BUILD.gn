@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/BUILD.gn.orig	2024-07-24 02:44:43.649460800 +0000
+--- services/device/hid/BUILD.gn.orig	2024-08-06 19:52:31.550498000 +0000
 +++ services/device/hid/BUILD.gn
 @@ -36,7 +36,35 @@ source_set("hid") {
      "//services/device/public/mojom",

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/mojo_core_library_support.cc.orig	2024-07-24 02:44:37.564871300 +0000
+--- content/common/mojo_core_library_support.cc.orig	2024-08-06 19:52:25.613996300 +0000
 +++ content/common/mojo_core_library_support.cc
 @@ -15,7 +15,7 @@ bool IsMojoCoreSharedLibraryEnabled() {
  }

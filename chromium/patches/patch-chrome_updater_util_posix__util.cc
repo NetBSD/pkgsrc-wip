@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/util/posix_util.cc.orig	2024-07-24 02:44:32.320363300 +0000
+--- chrome/updater/util/posix_util.cc.orig	2024-08-06 19:52:20.393555200 +0000
 +++ chrome/updater/util/posix_util.cc
 @@ -20,7 +20,7 @@
  #include "chrome/updater/updater_branding.h"

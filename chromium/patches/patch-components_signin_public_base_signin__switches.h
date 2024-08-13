@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2024-07-24 02:44:35.496671000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2024-08-06 19:52:23.721836300 +0000
 +++ components/signin/public/base/signin_switches.h
 @@ -112,7 +112,7 @@ bool IsExplicitBrowserSigninUIOnDesktopE
  

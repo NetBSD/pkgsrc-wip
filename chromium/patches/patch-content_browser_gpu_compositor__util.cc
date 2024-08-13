@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/compositor_util.cc.orig	2024-07-24 02:44:37.132829400 +0000
+--- content/browser/gpu/compositor_util.cc.orig	2024-08-06 19:52:25.157957800 +0000
 +++ content/browser/gpu/compositor_util.cc
 @@ -154,7 +154,7 @@ std::vector<GpuFeatureData> GetGpuFeatur
        "video_decode",

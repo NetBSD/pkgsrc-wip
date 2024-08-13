@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/tracing/track.cc.orig	2024-07-24 02:46:51.601854300 +0000
+--- third_party/perfetto/src/tracing/track.cc.orig	2024-08-06 19:54:15.055245900 +0000
 +++ third_party/perfetto/src/tracing/track.cc
 @@ -155,7 +155,7 @@ namespace internal {
  namespace {

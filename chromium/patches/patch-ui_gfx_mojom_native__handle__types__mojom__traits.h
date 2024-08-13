@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2024-07-24 02:45:10.628074000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.h.orig	2024-08-06 19:52:57.576697600 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.h
 @@ -16,7 +16,7 @@
  #include "mojo/public/cpp/system/platform_handle.h"

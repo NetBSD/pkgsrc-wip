@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2024-07-24 02:44:36.556773700 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2024-08-06 19:52:24.733922000 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -997,7 +997,7 @@ gfx::Rect HelpBubbleView::GetAnchorRect(
  void HelpBubbleView::OnBeforeBubbleWidgetInit(views::Widget::InitParams* params,

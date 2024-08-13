@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/public/platform/web_vector.h.orig	2024-07-24 02:44:45.117602800 +0000
+--- third_party/blink/public/platform/web_vector.h.orig	2024-08-06 19:52:33.022622600 +0000
 +++ third_party/blink/public/platform/web_vector.h
 @@ -86,7 +86,7 @@ class WebVector {
    // The vector can be populated using reserve() and emplace_back().

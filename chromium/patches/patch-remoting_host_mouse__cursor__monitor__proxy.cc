@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/mouse_cursor_monitor_proxy.cc.orig	2024-07-24 02:44:43.429439300 +0000
+--- remoting/host/mouse_cursor_monitor_proxy.cc.orig	2024-08-06 19:52:31.326479200 +0000
 +++ remoting/host/mouse_cursor_monitor_proxy.cc
 @@ -73,7 +73,7 @@ void MouseCursorMonitorProxy::Core::Crea
  

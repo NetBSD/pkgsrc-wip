@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2024-07-24 02:44:30.420179400 +0000
+--- chrome/browser/web_applications/test/os_integration_test_override_impl.cc.orig	2024-08-06 19:52:18.141364800 +0000
 +++ chrome/browser/web_applications/test/os_integration_test_override_impl.cc
 @@ -46,7 +46,7 @@
  #include "third_party/skia/include/core/SkBitmap.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.cc.orig	2024-07-24 02:44:27.695915500 +0000
+--- chrome/browser/net/system_network_context_manager.cc.orig	2024-08-06 19:52:15.409134000 +0000
 +++ chrome/browser/net/system_network_context_manager.cc
 @@ -97,7 +97,7 @@
  

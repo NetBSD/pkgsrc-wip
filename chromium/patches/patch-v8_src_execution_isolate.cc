@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/execution/isolate.cc.orig	2024-07-24 02:47:46.043127800 +0000
+--- v8/src/execution/isolate.cc.orig	2024-08-06 19:54:58.458914300 +0000
 +++ v8/src/execution/isolate.cc
 @@ -157,6 +157,10 @@
  #include "src/execution/simulator-base.h"

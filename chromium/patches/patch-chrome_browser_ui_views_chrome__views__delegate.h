@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/chrome_views_delegate.h.orig	2024-07-24 02:44:29.728112200 +0000
+--- chrome/browser/ui/views/chrome_views_delegate.h.orig	2024-08-06 19:52:17.361298800 +0000
 +++ chrome/browser/ui/views/chrome_views_delegate.h
 @@ -59,11 +59,11 @@ class ChromeViewsDelegate : public views
                               base::OnceClosure callback) override;

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2024-07-24 02:44:22.467409000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_root.cc.orig	2024-08-06 19:52:09.808660500 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_root.cc
 @@ -48,7 +48,7 @@
  #include "wow64apiset.h"

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2024-07-24 02:44:26.831831700 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2024-08-06 19:52:14.613066700 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -228,7 +228,7 @@
  #include "chrome/browser/ui/profiles/profile_picker.h"

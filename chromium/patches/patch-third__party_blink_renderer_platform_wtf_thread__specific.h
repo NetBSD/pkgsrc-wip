@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-07-24 02:44:47.033788400 +0000
+--- third_party/blink/renderer/platform/wtf/thread_specific.h.orig	2024-08-06 19:52:34.854777300 +0000
 +++ third_party/blink/renderer/platform/wtf/thread_specific.h
 @@ -104,7 +104,8 @@ inline bool ThreadSpecific<T>::IsSet() {
  template <typename T>

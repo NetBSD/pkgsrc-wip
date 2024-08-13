@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-07-24 02:44:29.916130500 +0000
+--- chrome/browser/ui/views/tabs/tab_drag_controller.cc.orig	2024-08-06 19:52:17.553315200 +0000
 +++ chrome/browser/ui/views/tabs/tab_drag_controller.cc
 @@ -95,7 +95,7 @@
  #include "components/remote_cocoa/browser/window.h"

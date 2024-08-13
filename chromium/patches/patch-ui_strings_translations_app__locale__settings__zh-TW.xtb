@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/strings/translations/app_locale_settings_zh-TW.xtb.orig	2024-07-24 02:45:10.812091600 +0000
+--- ui/strings/translations/app_locale_settings_zh-TW.xtb.orig	2024-08-06 19:52:57.764713500 +0000
 +++ ui/strings/translations/app_locale_settings_zh-TW.xtb
 @@ -12,7 +12,7 @@
  <if expr="is_ios">

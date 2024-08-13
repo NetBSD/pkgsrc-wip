@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc.orig	2024-07-24 02:44:47.029788000 +0000
+--- third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc.orig	2024-08-06 19:52:34.854777300 +0000
 +++ third_party/blink/renderer/platform/wtf/text/text_codec_icu.cc
 @@ -610,6 +610,7 @@ static void GbkUrlEscapedEntityCallack(
                                code_point, reason, err);

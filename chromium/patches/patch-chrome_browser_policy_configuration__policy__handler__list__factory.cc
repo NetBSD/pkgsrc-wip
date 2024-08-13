@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2024-07-24 02:44:27.935938600 +0000
+--- chrome/browser/policy/configuration_policy_handler_list_factory.cc.orig	2024-08-06 19:52:15.605150500 +0000
 +++ chrome/browser/policy/configuration_policy_handler_list_factory.cc
 @@ -235,19 +235,19 @@
  #include "components/spellcheck/browser/pref_names.h"

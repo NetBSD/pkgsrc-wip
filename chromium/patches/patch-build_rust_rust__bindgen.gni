@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/rust_bindgen.gni.orig	2024-07-24 02:44:22.931454000 +0000
+--- build/rust/rust_bindgen.gni.orig	2024-08-06 19:52:10.268699400 +0000
 +++ build/rust/rust_bindgen.gni
 @@ -11,14 +11,14 @@ if (is_win) {
    import("//build/toolchain/win/win_toolchain_data.gni")

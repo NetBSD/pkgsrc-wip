@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/headless/headless_mode_util.cc.orig	2024-07-24 02:44:27.443891000 +0000
+--- chrome/browser/headless/headless_mode_util.cc.orig	2024-08-06 19:52:15.185114900 +0000
 +++ chrome/browser/headless/headless_mode_util.cc
 @@ -19,7 +19,7 @@
  #include "chrome/common/chrome_switches.h"

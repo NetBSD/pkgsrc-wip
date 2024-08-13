@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/common/features.cc.orig	2024-07-24 02:44:36.760793400 +0000
+--- components/viz/common/features.cc.orig	2024-08-06 19:52:24.793927000 +0000
 +++ components/viz/common/features.cc
 @@ -263,7 +263,7 @@ BASE_FEATURE(kBufferQueueImageSetPurgeab
               "BufferQueueImageSetPurgeable",

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator.h.orig	2024-07-24 02:44:22.639425500 +0000
+--- base/process/process_iterator.h.orig	2024-08-06 19:52:09.976674800 +0000
 +++ base/process/process_iterator.h
 @@ -24,7 +24,7 @@
  #include <windows.h>

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_features.cc.orig	2024-07-24 02:44:33.320460000 +0000
+--- components/autofill/core/common/autofill_features.cc.orig	2024-08-06 19:52:21.381638500 +0000
 +++ components/autofill/core/common/autofill_features.cc
 @@ -661,7 +661,7 @@ BASE_FEATURE(kAutofillTextAreaChangeEven
  // Enabled by default for Mac and Windows platforms.

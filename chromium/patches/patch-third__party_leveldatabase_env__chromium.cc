@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/leveldatabase/env_chromium.cc.orig	2024-07-24 02:45:05.255553500 +0000
+--- third_party/leveldatabase/env_chromium.cc.orig	2024-08-06 19:52:52.352256000 +0000
 +++ third_party/leveldatabase/env_chromium.cc
 @@ -326,7 +326,8 @@ ChromiumWritableFile::ChromiumWritableFi
  

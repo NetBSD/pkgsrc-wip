@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2024-07-24 02:44:27.427889300 +0000
+--- chrome/browser/flag_descriptions.h.orig	2024-08-06 19:52:15.169113600 +0000
 +++ chrome/browser/flag_descriptions.h
 @@ -1722,7 +1722,7 @@ extern const char kCbdTimeframeRequiredN
  extern const char kCbdTimeframeRequiredDescription[];

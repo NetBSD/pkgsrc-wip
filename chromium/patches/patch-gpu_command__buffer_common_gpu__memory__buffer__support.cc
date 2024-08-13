@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-07-24 02:44:39.145024300 +0000
+--- gpu/command_buffer/common/gpu_memory_buffer_support.cc.orig	2024-08-06 19:52:27.206131000 +0000
 +++ gpu/command_buffer/common/gpu_memory_buffer_support.cc
 @@ -182,7 +182,7 @@ uint32_t GetPlatformSpecificTextureTarge
  #if BUILDFLAG(IS_MAC)

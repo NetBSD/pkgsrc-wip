@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/focus/focus_manager.cc.orig	2024-07-24 02:45:10.928103000 +0000
+--- ui/views/focus/focus_manager.cc.orig	2024-08-06 19:52:57.884723700 +0000
 +++ ui/views/focus/focus_manager.cc
 @@ -582,7 +582,7 @@ bool FocusManager::RedirectAcceleratorTo
  

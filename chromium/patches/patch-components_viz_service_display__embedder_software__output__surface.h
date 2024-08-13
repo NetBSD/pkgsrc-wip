@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.h.orig	2024-07-24 02:44:36.816799000 +0000
+--- components/viz/service/display_embedder/software_output_surface.h.orig	2024-08-06 19:52:24.853932100 +0000
 +++ components/viz/service/display_embedder/software_output_surface.h
 @@ -47,7 +47,7 @@ class VIZ_SERVICE_EXPORT SoftwareOutputS
    gfx::OverlayTransform GetDisplayTransform() override;

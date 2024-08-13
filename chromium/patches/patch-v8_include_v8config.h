@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8config.h.orig	2024-07-24 02:47:45.475072600 +0000
+--- v8/include/v8config.h.orig	2024-08-06 19:54:58.066881000 +0000
 +++ v8/include/v8config.h
 @@ -193,6 +193,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_FUCHSIA) \
@@ -48,3 +48,13 @@ $NetBSD$
  #ifdef V8_OS_MACOS
  # define V8_TARGET_OS_MACOS
  #endif
+@@ -373,7 +394,8 @@ path. Add it with -I<path> to the comman
+ // preserve_most in clang >= 17 (see https://reviews.llvm.org/D143425).
+ #if (defined(_M_X64) || defined(__x86_64__)            /* x64 (everywhere) */  \
+      || ((defined(__AARCH64EL__) || defined(_M_ARM64)) /* arm64, but ... */    \
+-         && !defined(_WIN32)))                         /* not on windows */    \
++         && !defined(_WIN32)                           /* not on windows */    \
++         && !defined(__OpenBSD__)))                    /* not on OpenBSD */    \
+      && !defined(COMPONENT_BUILD)                      /* no component build */\
+      && __clang_major__ >= 17                          /* clang >= 17 */
+ # define V8_HAS_ATTRIBUTE_PRESERVE_MOST (__has_attribute(preserve_most))

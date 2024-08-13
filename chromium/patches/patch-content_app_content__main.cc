@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main.cc.orig	2024-07-24 02:44:36.948811500 +0000
+--- content/app/content_main.cc.orig	2024-08-06 19:52:24.981943000 +0000
 +++ content/app/content_main.cc
 @@ -206,7 +206,7 @@ RunContentProcess(ContentMainParams para
  #endif

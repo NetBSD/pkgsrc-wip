@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-07-24 02:44:30.380175400 +0000
+--- chrome/browser/web_applications/extensions/extension_status_utils.cc.orig	2024-08-06 19:52:18.101361300 +0000
 +++ chrome/browser/web_applications/extensions/extension_status_utils.cc
 @@ -25,7 +25,7 @@ namespace {
  

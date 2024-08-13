@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-07-24 02:44:37.384853800 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-08-06 19:52:25.417979700 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -120,7 +120,7 @@
  #include "ui/gfx/gdi_util.h"
@@ -24,7 +24,7 @@ $NetBSD$
    BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1730,7 +1730,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -1731,7 +1731,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -33,7 +33,7 @@ $NetBSD$
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2558,7 +2558,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -2559,7 +2559,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -42,7 +42,7 @@ $NetBSD$
    return NeedsInputGrab();
  #else
    return false;
-@@ -2742,7 +2742,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -2743,7 +2743,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  

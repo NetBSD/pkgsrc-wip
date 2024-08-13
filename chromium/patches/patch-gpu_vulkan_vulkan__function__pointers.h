@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_function_pointers.h.orig	2024-07-24 02:44:39.273036700 +0000
+--- gpu/vulkan/vulkan_function_pointers.h.orig	2024-08-06 19:52:27.338142200 +0000
 +++ gpu/vulkan/vulkan_function_pointers.h
 @@ -322,7 +322,7 @@ struct COMPONENT_EXPORT(VULKAN) VulkanFu
    VulkanFunction<PFN_vkGetSwapchainImagesKHR> vkGetSwapchainImagesKHR;

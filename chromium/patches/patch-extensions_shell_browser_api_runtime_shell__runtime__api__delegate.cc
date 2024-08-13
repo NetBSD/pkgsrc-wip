@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2024-07-24 02:44:38.989009100 +0000
+--- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2024-08-06 19:52:27.046117300 +0000
 +++ extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc
 @@ -44,7 +44,7 @@ void ShellRuntimeAPIDelegate::OpenURL(co
  bool ShellRuntimeAPIDelegate::GetPlatformInfo(PlatformInfo* info) {

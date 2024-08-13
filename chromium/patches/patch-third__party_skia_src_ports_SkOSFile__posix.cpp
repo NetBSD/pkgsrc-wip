@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2024-07-24 02:45:41.951108000 +0000
+--- third_party/skia/src/ports/SkOSFile_posix.cpp.orig	2024-08-06 19:53:25.851087300 +0000
 +++ third_party/skia/src/ports/SkOSFile_posix.cpp
 @@ -25,7 +25,7 @@
  #endif

@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/BUILD.gn.orig	2024-07-24 02:44:43.557451700 +0000
+--- sandbox/policy/BUILD.gn.orig	2024-08-06 19:52:31.458490400 +0000
 +++ sandbox/policy/BUILD.gn
 @@ -49,7 +49,7 @@ component("policy") {
        "//third_party/jni_zero",

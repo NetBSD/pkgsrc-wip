@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crc32c/BUILD.gn.orig	2024-07-24 02:45:04.439474300 +0000
+--- third_party/crc32c/BUILD.gn.orig	2024-08-06 19:52:51.496183900 +0000
 +++ third_party/crc32c/BUILD.gn
 @@ -46,7 +46,7 @@ config("crc32c_config") {
    }

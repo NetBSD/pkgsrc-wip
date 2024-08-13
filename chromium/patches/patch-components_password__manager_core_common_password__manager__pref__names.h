@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-07-24 02:44:34.624586600 +0000
+--- components/password_manager/core/common/password_manager_pref_names.h.orig	2024-08-06 19:52:22.849762700 +0000
 +++ components/password_manager/core/common/password_manager_pref_names.h
 @@ -358,7 +358,7 @@ inline constexpr char kAutofillableCrede
  inline constexpr char kPasswordSharingEnabled[] =

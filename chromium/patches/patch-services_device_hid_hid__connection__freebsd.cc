@@ -4,7 +4,7 @@ $NetBSD$
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_connection_freebsd.cc.orig	2024-08-01 14:09:00.326470306 +0000
+--- services/device/hid/hid_connection_freebsd.cc.orig	2024-08-11 16:48:06.779388327 +0000
 +++ services/device/hid/hid_connection_freebsd.cc
 @@ -0,0 +1,240 @@
 +// Copyright (c) 2014 The Chromium Authors. All rights reserved.
@@ -92,7 +92,7 @@ $NetBSD$
 +        FROM_HERE, base::BlockingType::MAY_BLOCK);
 +    struct usb_gen_descriptor ugd;
 +    ugd.ugd_report_type = UHID_FEATURE_REPORT;
-+    ugd.ugd_data = buffer->data();
++    ugd.ugd_data = buffer->as_vector().data();
 +    ugd.ugd_maxlen = buffer->size();
 +    int result = HANDLE_EINTR(
 +        ioctl(fd_.get(), USB_GET_REPORT, &ugd));
@@ -115,14 +115,14 @@ $NetBSD$
 +    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 +    struct usb_gen_descriptor ugd;
 +    ugd.ugd_report_type = UHID_FEATURE_REPORT;
-+    ugd.ugd_data = buffer->data();
++    ugd.ugd_data = buffer->as_vector().data();
 +    ugd.ugd_maxlen = buffer->size();
 +    // FreeBSD does not require report id if it's not used
 +    if (buffer->data()[0] == 0) {
-+      ugd.ugd_data = buffer->data() + 1;
++      ugd.ugd_data = buffer->as_vector().data() + 1;
 +      ugd.ugd_maxlen = buffer->size() - 1;
 +    } else {
-+      ugd.ugd_data = buffer->data();
++      ugd.ugd_data = buffer->as_vector().data();
 +      ugd.ugd_maxlen = buffer->size();
 +    }
 +    int result = HANDLE_EINTR(
@@ -142,7 +142,7 @@ $NetBSD$
 +    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 +
 +    scoped_refptr<base::RefCountedBytes> buffer(new base::RefCountedBytes(report_buffer_size_));
-+    unsigned char* data = buffer->data();
++    unsigned char* data = buffer->as_vector().data();
 +    size_t length = report_buffer_size_;
 +    if (!has_report_id_) {
 +      // FreeBSD will not prefix the buffer with a report ID if report IDs are not
@@ -226,7 +226,7 @@ $NetBSD$
 +  scoped_refptr<base::RefCountedBytes> buffer(
 +      new base::RefCountedBytes(device_info()->max_feature_report_size() + 1));
 +  if (report_id != 0)
-+    buffer->data()[0] = report_id;
++    buffer->as_vector().data()[0] = report_id;
 +
 +  blocking_task_runner_->PostTask(
 +      FROM_HERE,
