@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.13 2023/11/02 14:43:05 wiz Exp $
-
-BLAKE2s (mosh-1.4.0.tar.gz) = 2500ffd34e8a1c2d29f52726de9adfbbe9547e858ae269fd9a35ca521ea6c96c
-SHA512 (mosh-1.4.0.tar.gz) = 38c11f52ff1e42965b50a22bf6de80b0fa8ebbff841d825e760abf69c788a2bf5f34e6f7fc047574d595118334eef9edf8da5520b52cdde3ac1a79d7ad70312e
-Size (mosh-1.4.0.tar.gz) = 393465 bytes
