@@ -4448,7 +4448,6 @@ SUBDIR+=	py-resonance
 SUBDIR+=	py-retrying
 SUBDIR+=	py-revolve
 SUBDIR+=	py-rf
-SUBDIR+=	py-rfc6555
 SUBDIR+=	py-riccipy
 SUBDIR+=	py-rigidbodysimulator
 SUBDIR+=	py-rlcompleter2

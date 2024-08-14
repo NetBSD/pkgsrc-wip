@@ -15,7 +15,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-rfc6555-[0-9]*:../../wip/py-rfc6555
+DEPENDS+=	${PYPKGPREFIX}-rfc6555-[0-9]*:../../net/py-rfc6555
 
 INSTALLATION_DIRS=	share/examples/offlineimap
 
