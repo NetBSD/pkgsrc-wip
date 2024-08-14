@@ -1,0 +1,4 @@
+games/wadgadget: Import WadGadget 0.1
+
+WadGadget is a console-based, interactive WAD file editor for
+Doom engine games (and others that reuse the WAD format).

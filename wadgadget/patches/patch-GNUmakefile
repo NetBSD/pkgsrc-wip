@@ -1,0 +1,18 @@
+$NetBSD$
+
+Honor CFLAGS and LDFLAGS.
+
+--- GNUmakefile.orig	2024-08-10 15:22:09.000000000 +0000
++++ GNUmakefile
+@@ -14,9 +14,9 @@ NCURSES_LDFLAGS = \
+     $(shell pkg-config --silence-errors --libs ncurses || echo -lncurses)
+ 
+ REQUIRED_PKGS = sndfile libpng
+-CFLAGS := -g -MMD -Wall -I. -O2 $(shell pkg-config --cflags $(REQUIRED_PKGS)) \
++CFLAGS := $(CFLAGS) -MMD -Wall -I. -O2 $(shell pkg-config --cflags $(REQUIRED_PKGS)) \
+           $(LIBSIXEL_CFLAGS) $(NCURSES_CFLAGS)
+-LDFLAGS := $(shell pkg-config --libs $(REQUIRED_PKGS)) \
++LDFLAGS := $(LDFLAGS) $(shell pkg-config --libs $(REQUIRED_PKGS)) \
+            $(LIBSIXEL_LDFLAGS) $(NCURSES_LDFLAGS)
+ 
+ HELP_FILES =                \

@@ -5727,6 +5727,7 @@ SUBDIR+=	vulkan-loader
 SUBDIR+=	vym
 SUBDIR+=	w3c-httpd
 SUBDIR+=	wackamole
+SUBDIR+=	wadgadget
 SUBDIR+=	wadptr
 SUBDIR+=	waffle
 SUBDIR+=	wakeonlan

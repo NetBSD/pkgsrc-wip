@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (wadgadget-0.1.tar.gz) = c5087bf6af3c9a12c9799e9086fda6e0e2a727b6c8fed72bd4a62d51e9844932
+SHA512 (wadgadget-0.1.tar.gz) = 69daa63d471739c99448765c608e416f48fc261dce3aed550c6ba6e0bf4ac1992561b6799b560693205e631bc0add350075394f51a9da647a388c608fb586973
+Size (wadgadget-0.1.tar.gz) = 402256 bytes
+SHA1 (patch-GNUmakefile) = 43e0fe57ffec847120ef0d952fcf6cb4f02a465c
