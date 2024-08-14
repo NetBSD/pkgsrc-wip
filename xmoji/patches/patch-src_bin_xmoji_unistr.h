@@ -1,5 +1,7 @@
 $NetBSD$
 
+https://github.com/Zirias/xmoji/pull/6
+
 --- src/bin/xmoji/unistr.h.orig	2024-08-02 06:42:32.000000000 +0000
 +++ src/bin/xmoji/unistr.h
 @@ -4,7 +4,11 @@

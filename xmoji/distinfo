@@ -1,9 +1,9 @@
 $NetBSD$
 
-BLAKE2s (xmoji-0.4.tar.xz) = 4503cd5952067d1fae4795955e93fab7d617805a9696ed170183b5c6f8d85110
-SHA512 (xmoji-0.4.tar.xz) = edd6576f5790138b4d4faae8263395928687a1436a82e4c72becac80cc77423b3e086ff353953190f5f2d28d0a7f7911b639fb107844318ac94a2c20909d8a07
-Size (xmoji-0.4.tar.xz) = 266972 bytes
-SHA1 (patch-src_bin_xmoji_filewatcher.c) = e68f3747d65ee902dc43fbedcd59efea4e98df94
-SHA1 (patch-src_bin_xmoji_unistr.h) = 64ccb13c715e9ae66600881eaffb0ccd68effe47
-SHA1 (patch-src_bin_xmoji_unistrbuilder.h) = 4effbe15d5ccc4fa11590b532f41658c45c7db28
-SHA1 (patch-tools_emojigen_src_emojigen.c) = 32d63010fd903d77a8d4e3f769d9878356e9097f
+BLAKE2s (xmoji-0.6.tar.xz) = c2c1034ab8cb0c79e9c4465acf5a80881b3a4973c2ade438cbbd9438cec0bcf3
+SHA512 (xmoji-0.6.tar.xz) = d31ea1021bc9b19649305ba718064fe350b8f5b427ceb9663b736e396b5e2120ea9b3211c7c255aa26543f12e674ed4ecd86b60651a4e8eb6ef67780b152aa93
+Size (xmoji-0.6.tar.xz) = 276164 bytes
+SHA1 (patch-src_bin_xmoji_filewatcher.c) = 3f9c1cff35fd3655d826e2e4dc4251dde5ed9d17
+SHA1 (patch-src_bin_xmoji_unistr.h) = 762d23e74e9e017ea8b6f1a33cfc144273acb43d
+SHA1 (patch-src_bin_xmoji_unistrbuilder.h) = 8daab2e893b12b9ad682a6b63a9d92f8bf0675bf
+SHA1 (patch-tools_emojigen_src_emojigen.c) = 6b3db9bbef5e8621195392459bf2a33133776838
