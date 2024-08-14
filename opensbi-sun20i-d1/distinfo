@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (opensbi/opensbi-1.2.tar.gz) = 23baafea66aeb48470f5c44acfa62d5e2fcd7afa56b3f0c889648046a755093e
+SHA512 (opensbi/opensbi-1.2.tar.gz) = b4e870d99ba3b8d0e1fcb6e5a6c3c8345b36a4107c5f321d5bb59336dd683493734dce741940baf103f067a926a163004232cbdf39d98bf49a2a8e9141197967
+Size (opensbi/opensbi-1.2.tar.gz) = 356905 bytes
