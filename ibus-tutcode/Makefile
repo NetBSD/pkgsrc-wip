@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/deton/ibus-tutcode/
 COMMENT=	Japanese TUT-Code input engine for IBus
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	ibus-[0-9]*:../../inputmethod/ibus
+
 WRKSRC=			${WRKDIR}/ibus-tutcode-ibus-tutcode-1.0.2
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
