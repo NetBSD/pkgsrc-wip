@@ -2296,7 +2296,6 @@ SUBDIR+=	mixmaster
 SUBDIR+=	mk-configure-current
 SUBDIR+=	mkcabal
 SUBDIR+=	mklittlefs
-SUBDIR+=	mktool
 SUBDIR+=	mlir
 SUBDIR+=	mlocate
 SUBDIR+=	mlt
