@@ -3,7 +3,7 @@
 DISTNAME=	alacritty-0.14.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	d021a7b6f871f4078073848cf8744881561eb254
+GITHUB_TAG=	102b89a8d9ee6543f15f248c15383da7a4684c42
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://alacritty.org/
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/alacritty-d021a7b6f871f4078073848cf8744881561eb254
+WRKSRC=			${WRKDIR}/alacritty-102b89a8d9ee6543f15f248c15383da7a4684c42
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
@@ -42,7 +42,6 @@ SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 .endif
 
 # The xcb crate depends on any version of python 3.
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS=	bin share/applications ${PKGMANDIR}/man1 \
