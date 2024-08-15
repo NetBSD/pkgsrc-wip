@@ -1,10 +1,10 @@
 # $NetBSD$
 
-DISTNAME=	sndio-1.8.1
+DISTNAME=	sndio-1.10.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.sndio.org/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	http://www.sndio.org/
 COMMENT=	Small audio and MIDI framework
 LICENSE=	isc

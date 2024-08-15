@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	sndio
 .if !defined(SNDIO_BUILDLINK3_MK)
 SNDIO_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.sndio+=	sndio>=1.8.1
+BUILDLINK_API_DEPENDS.sndio+=	sndio>=1.10.0
 BUILDLINK_PKGSRCDIR.sndio?=	../../wip/sndio
 .endif	# SNDIO_BUILDLINK3_MK
 

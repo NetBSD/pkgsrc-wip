@@ -1,6 +1,6 @@
 $NetBSD$
 
-BLAKE2s (sndio-1.8.1.tar.gz) = 906ef717710f5d7b20b367a49f69a11ef231ebb2c0f8d0146ef608a0056cf087
-SHA512 (sndio-1.8.1.tar.gz) = 4affeac5758768f9ebf7d823b8d2287695ff02bb4a990474412ab96cb8eef3784c19436a130efb4f7a204193ad479c0086f9bff7b3ac69e6077692dffaa62658
-Size (sndio-1.8.1.tar.gz) = 155821 bytes
-SHA1 (patch-configure) = bded644c4bc5b7b38c1526ee01494fa4cda2fe10
+BLAKE2s (sndio-1.10.0.tar.gz) = 39f92241015c931433dad456ee5ca965806c5b86e97950265d8a609ac38525a3
+SHA512 (sndio-1.10.0.tar.gz) = c35462976a1bffd128eacb185165964dac6b03505255e9ab9a933e24be5ed146cd9ac6995fd7af23247cb9133c010cce0876572db53b783ebabeb563fec7a1cf
+Size (sndio-1.10.0.tar.gz) = 162725 bytes
+SHA1 (patch-configure) = ff542abad38ec4148478196abdd04a559840d98f
