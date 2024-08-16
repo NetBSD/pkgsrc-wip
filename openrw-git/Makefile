@@ -7,7 +7,7 @@ PKGNAME=	openrw-0
 CATEGORIES=	games
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openrw.org
+HOMEPAGE=	http://openrw.org/
 COMMENT=	Open Source recreation of Grand Theft Auto III
 LICENSE=	gnu-gpl-v3
 
@@ -16,6 +16,11 @@ WRKSRC=		${WRKDIR}/openrw
 USE_CMAKE=	yes
 
 USE_LANGUAGES=	c c++
+
+
+CMAKE_ARGS+=	-D_FFMPEG_AVCODEC_INCLUDE_DIRS=${PREFIX}/include/ffmpeg6
+CMAKE_ARGS+=	-D_FFMPEG_AVCODEC_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg6
+CMAKE_ARGS+=	-D_FFMPEG_AVFORMAT_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg6
 
 .include "../../wip/mk/git-package.mk"
 .include "../../audio/libmad/buildlink3.mk"
