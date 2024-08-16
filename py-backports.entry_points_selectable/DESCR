@@ -1,4 +1,0 @@
-Compatibility shim to ease adoption of importlib_metadata 3.6. Supplies
-forward-compatibility of "selectable" entry points even on older versions
-of importlib_metadata and importlib.metadata, and avoids usage that
-triggers deprecation warnings.
