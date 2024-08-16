@@ -45,7 +45,7 @@ LICENSE=	mpl-1.1
 #
 # -----------------------------------------------------------------------
 
-WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:C/b.*//}
+WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}
 
 MOZILLA_DIR=	# empty
 
