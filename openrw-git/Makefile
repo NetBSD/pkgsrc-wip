@@ -18,9 +18,9 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 
-CMAKE_ARGS+=	-D_FFMPEG_AVCODEC_INCLUDE_DIRS=${PREFIX}/include/ffmpeg6
-CMAKE_ARGS+=	-D_FFMPEG_AVCODEC_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg6
-CMAKE_ARGS+=	-D_FFMPEG_AVFORMAT_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg6
+CMAKE_ARGS+=	-D_FFMPEG_AVCODEC_INCLUDE_DIRS=${PREFIX}/include/ffmpeg4
+CMAKE_ARGS+=	-D_FFMPEG_AVCODEC_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg4
+CMAKE_ARGS+=	-D_FFMPEG_AVFORMAT_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg4
 
 .include "../../wip/mk/git-package.mk"
 .include "../../audio/libmad/buildlink3.mk"
@@ -33,5 +33,5 @@ CMAKE_ARGS+=	-D_FFMPEG_AVFORMAT_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg6
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
