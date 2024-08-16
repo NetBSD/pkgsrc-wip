@@ -183,6 +183,7 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
 CONFIGURE_ENV+=		CPP=${CPP:Q}
 ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
+ALL_ENV+=		MOZ_APP_NAME=${MOZILLA}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in

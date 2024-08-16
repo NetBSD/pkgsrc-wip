@@ -1,6 +1,6 @@
 # $NetBSD: options.mk,v 1.75 2023/08/17 20:43:43 ryoon Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
+PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox128
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc

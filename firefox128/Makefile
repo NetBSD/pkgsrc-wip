@@ -5,7 +5,7 @@ MOZ_BRANCH=		128.0
 MOZ_BRANCH_MINOR=	.3
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
+PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//:S/firefox-/firefox128-/}
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -68,8 +68,8 @@ LDFLAGS.Linux+=		-lnspr4
 LDFLAGS.SunOS+=		-lm
 
 # Should revisit to complete mprotect support.
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/${MOZILLA}-bin
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections

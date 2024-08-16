@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.272 2024/08/01 15:41:42 ryoon Exp $
 
 FIREFOX_VER=	128.0.3
-PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
+PKGNAME=	firefox128-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
 #MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
@@ -9,17 +9,17 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
-COMMENT=	Language packs for www/firefox
+COMMENT=	Language packs for www/firefox128
 LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 # as of 96.0.3
 
-DEPENDS+=	firefox>=${PKGVERSION_NOREV}:../../www/firefox
+DEPENDS+=	firefox128>=${PKGVERSION_NOREV}:../../wip/firefox128
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${FIREFOX_LOCALES:=.xpi}
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	lib/firefox/distribution/extensions
+INSTALLATION_DIRS=	lib/firefox128/distribution/extensions
 
 FIREFOX_LOCALES= \
 	ach af an ar ast az be bg bn br bs ca-valencia ca cak cs cy	\
@@ -31,7 +31,7 @@ FIREFOX_LOCALES= \
 	pa-IN pl pt-BR pt-PT rm ro ru sc sco si sk skr sl son sq sr	\
 	sv-SE szl ta te th tl tr trs uk ur uz vi xh zh-CN zh-TW
 
-EXTENSIONS_DIR=		${PREFIX}/lib/firefox/distribution/extensions
+EXTENSIONS_DIR=		${PREFIX}/lib/firefox128/distribution/extensions
 
 do-install:
 .for locale in ${FIREFOX_LOCALES}
