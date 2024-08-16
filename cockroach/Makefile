@@ -9,7 +9,8 @@ EXTRACT_SUFX=   .tgz
 MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       https://www.cockroachlabs.com/product/
 COMMENT=        CockroachDB is a cloud-native SQL database for building global, scalable cloud services that survive disasters.
-LICENSE=        apache-2.0
+#LICENSE=        apache-2.0
+# changed to https://www.cockroachlabs.com/cockroachdb-software-license/
 
 USE_LANGUAGES=	c c++
 
