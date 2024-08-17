@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pgvector-0.7.2
+DISTNAME=	pgvector-0.7.4
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pgvector/}
