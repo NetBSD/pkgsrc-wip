@@ -1,1 +1,77 @@
-Doesn't build on NetBSD.
+In file included from /scratch/wip/folly/work/folly-2024.08.19.00/folly/system/ThreadId.cpp:21:
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/system/ThreadId.cpp: In function 'uint64_t folly::detail::getOSThreadIDSlow()':
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/portability/SysSyscall.h:35:26: error: '__NR_gettid' was not declared in this scope
+   35 | #define FOLLY_SYS_gettid __NR_gettid
+      |                          ^~~~~~~~~~~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/system/ThreadId.cpp:55:27: note: in expansion of macro 'FOLLY_SYS_gettid'
+   55 |   return uint64_t(syscall(FOLLY_SYS_gettid));
+      |                           ^~~~~~~~~~~~~~~~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/net/NetOps.cpp:44:27: error: 'int (* recvmmsg)(...)' redeclared as different kind of entity
+   44 | static int (*recvmmsg)(...) = nullptr;
+      |                           ^
+In file included from /usr/include/netinet6/in6.h:73,
+                 from /usr/include/netinet/in.h:377,
+                 from /usr/include/arpa/inet.h:69,
+                 from /scratch/wip/folly/work/folly-2024.08.19.00/folly/net/NetOps.h:94,
+                 from /scratch/wip/folly/work/folly-2024.08.19.00/folly/net/NetOps.cpp:17:
+/usr/include/sys/socket.h:653:9: note: previous declaration 'int recvmmsg(int, mmsghdr*, unsigned int, unsigned int, timespec*)'
+  653 | int     recvmmsg(int, struct mmsghdr *, unsigned int, unsigned int,
+      |         ^~~~~~~~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/net/NetOps.cpp:45:27: error: 'int (* sendmmsg)(...)' redeclared as different kind of entity
+   45 | static int (*sendmmsg)(...) = nullptr;
+      |                           ^
+/usr/include/sys/socket.h:651:9: note: previous declaration 'int sendmmsg(int, mmsghdr*, unsigned int, unsigned int)'
+  651 | int     sendmmsg(int, struct mmsghdr *, unsigned int, unsigned int);
+      |         ^~~~~~~~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/net/NetOps.cpp: In function 'int folly::netops::sendmmsg(folly::NetworkSocket, mmsghdr*, unsigned int, int)':
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/net/NetOps.cpp:547:43: warning: the address of 'int sendmmsg(int, mmsghdr*, unsigned int, unsigned int)' will never be NULL [-Waddress]
+  547 |   if (reinterpret_cast<void*>(::sendmmsg) != nullptr) {
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/usr/include/sys/socket.h:651:9: note: 'int sendmmsg(int, mmsghdr*, unsigned int, unsigned int)' declared here
+  651 | int     sendmmsg(int, struct mmsghdr *, unsigned int, unsigned int);
+      |         ^~~~~~~~
+--- CMakeFiles/folly_base.dir/folly/system/ThreadId.cpp.o ---
+*** [CMakeFiles/folly_base.dir/folly/system/ThreadId.cpp.o] Error code 1
+
+make[2]: stopped making "CMakeFiles/folly_base.dir/build" in /scratch/wip/folly/work/folly-2024.08.19.00/cmake-pkgsrc-build
+--- CMakeFiles/folly_base.dir/folly/net/NetOps.cpp.o ---
+*** [CMakeFiles/folly_base.dir/folly/net/NetOps.cpp.o] Error code 1
+
+make[2]: stopped making "CMakeFiles/folly_base.dir/build" in /scratch/wip/folly/work/folly-2024.08.19.00/cmake-pkgsrc-build
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/debugging/symbolizer/Elf.cpp: In member function 'folly::symbolizer::ElfFile::OpenResult folly::symbolizer::ElfFile::init()':
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/debugging/symbolizer/Elf.cpp:249:27: error: unable to find numeric literal operator 'operator""FOLLY_ELF_NATIVE_CLASS'
+  249 | #define EXPECTED_CLASS P1(ELFCLASS, FOLLY_ELF_NATIVE_CLASS)
+      |                           ^~~~~~~~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/debugging/symbolizer/Elf.cpp:251:18: note: in definition of macro 'P2'
+  251 | #define P2(a, b) a##b
+      |                  ^
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/debugging/symbolizer/Elf.cpp:249:24: note: in expansion of macro 'P1'
+  249 | #define EXPECTED_CLASS P1(ELFCLASS, FOLLY_ELF_NATIVE_CLASS)
+      |                        ^~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/debugging/symbolizer/Elf.cpp:253:38: note: in expansion of macro 'EXPECTED_CLASS'
+  253 |   if (elfHeader.e_ident[EI_CLASS] != EXPECTED_CLASS) {
+      |                                      ^~~~~~~~~~~~~~
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/system/EnvUtil.cpp: In static member function 'static folly::experimental::EnvironmentState folly::experimental::EnvironmentState::fromCurrentEnvironment()':
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/system/EnvUtil.cpp:30:18: error: 'environ' was not declared in this scope; did you mean 'union'?
+   30 |   for (auto it = environ; it && *it; ++it) {
+      |                  ^~~~~~~
+      |                  union
+--- CMakeFiles/folly_base.dir/folly/debugging/symbolizer/Elf.cpp.o ---
+*** [CMakeFiles/folly_base.dir/folly/debugging/symbolizer/Elf.cpp.o] Error code 1
+
+make[2]: stopped making "CMakeFiles/folly_base.dir/build" in /scratch/wip/folly/work/folly-2024.08.19.00/cmake-pkgsrc-build
+--- CMakeFiles/folly_base.dir/folly/system/EnvUtil.cpp.o ---
+*** [CMakeFiles/folly_base.dir/folly/system/EnvUtil.cpp.o] Error code 1
+
+make[2]: stopped making "CMakeFiles/folly_base.dir/build" in /scratch/wip/folly/work/folly-2024.08.19.00/cmake-pkgsrc-build
+In file included from /usr/include/stdio.h:40,
+                 from /scratch/wip/folly/work/.buildlink/include/fmt/base.h:17,
+                 from /scratch/wip/folly/work/.buildlink/include/fmt/format.h:41,
+                 from /scratch/wip/folly/work/.buildlink/include/fmt/core.h:5,
+                 from /scratch/wip/folly/work/folly-2024.08.19.00/folly/io/async/fdsock/AsyncFdSocket.cpp:18:
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/io/async/fdsock/AsyncFdSocket.cpp: In function 'bool folly::{anonymous}::receiveFdsFromCMSG(const cmsghdr&, std::vector<folly::File>*)':
+/scratch/wip/folly/work/folly-2024.08.19.00/folly/io/async/fdsock/AsyncFdSocket.cpp:286:59: error: invalid 'static_cast' from type 'const cmsghdr*' to type 'void*'
+  286 |   const auto* data = reinterpret_cast<const int*>((void *)CMSG_DATA(&cmsg));
+      |                                                           ^~~~~~~~~
+--- CMakeFiles/folly_base.dir/folly/io/async/fdsock/AsyncFdSocket.cpp.o ---
+*** [CMakeFiles/folly_base.dir/folly/io/async/fdsock/AsyncFdSocket.cpp.o] Error code 1

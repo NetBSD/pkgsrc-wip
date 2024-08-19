@@ -1,9 +1,13 @@
 $NetBSD$
 
-BLAKE2s (folly-2023.11.20.00.tar.gz) = 1b75f0452a75aca70e2a97d224bab657eed4b52264c89a2459c270fbedd35a7e
-SHA512 (folly-2023.11.20.00.tar.gz) = 3b2f8a32065c7867a46cd14983029808ad578bc38153e55674ffd965eece84836b4ee58034c33b33cac6f6b966d13331dc309ad45e2b7e9edb5a47c146781043
-Size (folly-2023.11.20.00.tar.gz) = 3945184 bytes
+BLAKE2s (folly-2024.08.19.00.tar.gz) = 375a3ed3030dc26df11daeba2aec4a1b5b3846a321e1d71d60d739e472848448
+SHA512 (folly-2024.08.19.00.tar.gz) = 1637fe98a16b44d2be68357b1b07b3d95f7950dbc807158ac82ec935c79d8423e6ed24ebaeb99cc6a8505f301819d3c77a04ba818528d2df84e92c42309fd5f5
+Size (folly-2024.08.19.00.tar.gz) = 4169912 bytes
 SHA1 (patch-CMake_folly-deps.cmake) = 3b6aad5f0f1b1cd223b9f5c25cee65c7001097dd
-SHA1 (patch-folly_Memory.h) = c5faa5ff1652ab1d206e466841a0ad71818d2b84
+SHA1 (patch-folly_Memory.h) = 5e7ec6c15ec98398b7d30df0319eb0547ae42b21
 SHA1 (patch-folly_Subprocess.cpp) = eade5cb85ecb73ffa1232252ce2a99bc2df44cd2
-SHA1 (patch-folly_experimental_EnvUtil.cpp) = 2017f085ebd8b59148bca3df1418891d4c973af1
+SHA1 (patch-folly_debugging_symbolizer_Elf.cpp) = 218668c477b7860f7dc6a7f6c64d3aa77d7ca3a1
+SHA1 (patch-folly_debugging_symbolizer_SignalHandler.cpp) = 64d425efc14a2ef9a4a99b72042478d2a4e22ee9
+SHA1 (patch-folly_io_async_AsyncUDPSocket.cpp) = 1692003c915c73b2ad8bab97549a5d2574c26d03
+SHA1 (patch-folly_portability_Stdlib.cpp) = 25b8641647217447c646f0dfcbb5fe9fb8f593c1
+SHA1 (patch-folly_system_MemoryMapping.h) = fc823c2e47bd862cbbc988e4fe7a6f60f17e7b95
