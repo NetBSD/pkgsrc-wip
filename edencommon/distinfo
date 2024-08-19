@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (edencommon-2022.11.07.00.tar.gz) = 7c2d2d8e962c40ad52777bdc92d7af6fbabe700dd568024d0cc7e758377af34a
-SHA512 (edencommon-2022.11.07.00.tar.gz) = 4de1bf2fb83cabbdeb3b10ee030978f77638a0a4c423fbe5314ad9fe76d625d3290ea5277bd010ccf1d7c8e0c6e059d00558279616b19961e1c41a67d66856d8
-Size (edencommon-2022.11.07.00.tar.gz) = 143832 bytes
+BLAKE2s (edencommon-2024.08.19.00.tar.gz) = 80c434948b49d0fe1deab8eee2aedb983f18b1bd3c3c7ecea1774f24fdf4f922
+SHA512 (edencommon-2024.08.19.00.tar.gz) = 73abb5b28d0d0ae017a9b6648514732fc2de00aace63ccd29399c668d1e255067802a41bbe4bebac12e55964ce845642ad4ea94436245b0084aa7d1d74850e31
+Size (edencommon-2024.08.19.00.tar.gz) = 306986 bytes

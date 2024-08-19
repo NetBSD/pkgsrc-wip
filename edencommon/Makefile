@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	edencommon-2022.11.07.00
+DISTNAME=	edencommon-2024.08.19.00
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facebookexperimental/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,4 +14,5 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../devel/google-glog/buildlink3.mk"
+.include "../../wip/folly/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
