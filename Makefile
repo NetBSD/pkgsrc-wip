@@ -1455,7 +1455,6 @@ SUBDIR+=	hercules4aethra
 SUBDIR+=	heroes
 SUBDIR+=	herwig
 SUBDIR+=	hey
-SUBDIR+=	hexpatch
 SUBDIR+=	hgsubversion
 SUBDIR+=	hiawatha
 SUBDIR+=	higan
