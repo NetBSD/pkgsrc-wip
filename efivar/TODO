@@ -1,6 +1,0 @@
-Can generally be used, but see [1] for limitations.
-
-[1]: https://github.com/3mdeb/efivar/blob/bsd/BSD_PORTING.md
-
-The EFI driver did make it into NetBSD 10.0, but /dev/efi isn't created
-automatically.  Running `cd /dev && ./MAKEDEF efi` remedies that.
