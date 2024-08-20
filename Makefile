@@ -5485,6 +5485,7 @@ SUBDIR+=	tex-texlive-ja-doc
 SUBDIR+=	tex-uptex-doc
 SUBDIR+=	textile-mode
 SUBDIR+=	tflint
+SUBDIR+=	tfschema
 SUBDIR+=	tftp-hpa
 SUBDIR+=	tg-timer
 SUBDIR+=	tg_owt-git
