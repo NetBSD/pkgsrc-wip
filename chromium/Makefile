@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			127.0.6533.99
+VERSION=			127.0.6533.119
 CATEGORIES=			www
 MASTER_SITES=			http://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX=			.tar.xz
@@ -356,5 +356,4 @@ BUILDLINK_TRANSFORM+=	l:pci:pciutils
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../mk/compiler/ccache.mk"
 .include "../../mk/bsd.pkg.mk"

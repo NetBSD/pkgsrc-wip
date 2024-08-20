@@ -2,7 +2,7 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.chromium
 PKG_OPTIONS_REQUIRED_GROUPS=	audio
-PKG_OPTIONS_GROUP.audio=	alsa pulseaudio
+PKG_OPTIONS_GROUP.audio=	alsa pulseaudio sndio
 PKG_SUPPORTED_OPTIONS+=		debug
 PKG_SUGGESTED_OPTIONS=		pulseaudio
 
@@ -10,12 +10,23 @@ PKG_SUGGESTED_OPTIONS=		pulseaudio
 
 .if !empty(PKG_OPTIONS:Malsa)
 GN_ARGS+=	use_alsa=true
-GN_ARGS+=	use_pulseaudio=false
 .include "../../audio/alsa-lib/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mpulseaudio)
+.else
 GN_ARGS+=	use_alsa=false
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
 GN_ARGS+=	use_pulseaudio=true
 .include "../../audio/pulseaudio/buildlink3.mk"
+.else
+GN_ARGS+=	use_pulseaudio=false
+.endif
+
+.if !empty(PKG_OPTIONS:Msndio)
+GN_ARGS+=	use_sndio=true
+.include "../../wip/sndio/buildlink3.mk"
+.else
+GN_ARGS+=	use_sndio=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
