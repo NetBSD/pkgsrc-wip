@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://argouml-downloads.tigris.org/nonav/argouml-0.34/
 LICENSE=	epl-v1.0
 
-MAINTAINER=	hdp@cs.nmsu.edu
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://argouml.tigris.org/
 COMMENT=	UML design tool environment with cognitive support
 

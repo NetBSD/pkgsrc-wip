@@ -5,7 +5,7 @@ PKGREVISION=		3
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=manatee/}
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://sourceforge.net/projects/manatee/
 COMMENT=		Web-based gene evaluation and genome annotation tool
 

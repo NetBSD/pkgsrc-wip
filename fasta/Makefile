@@ -5,7 +5,7 @@ PKGNAME=		fasta-36.3.5.4 # 4 for "d"
 CATEGORIES=		biology
 MASTER_SITES=		http://faculty.virginia.edu/wrpearson/fasta/fasta36/
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://fasta.bioch.virginia.edu/
 COMMENT=		FASTA sequence comparison programs
 LICENSE=		apache-2.0

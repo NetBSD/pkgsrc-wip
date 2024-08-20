@@ -5,7 +5,7 @@ DISTNAME=		GlimmerM-2.5.1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/GlimmerM/
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tigr.org/software/glimmerm/
 COMMENT=		Gene finder developed specifically for eukaryotes
 
