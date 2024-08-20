@@ -1,11 +1,11 @@
 # $NetBSD$
 
 GITHUB_PROJECT=	spydrnet
-DISTNAME=	spydrnet-1.12.2
+DISTNAME=	spydrnet-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=byuccl/}
-GITHUB_RELEASE=	v1.12.2
+GITHUB_RELEASE=	v1.13.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://byuccl.github.io/spydrnet
