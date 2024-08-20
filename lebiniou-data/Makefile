@@ -5,7 +5,7 @@ PKGNAME=	lebiniou-data-3.66.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gitlab.com/lebiniou/lebiniou-data/-/archive/version-3.66.0/
 
-MAINTAINER=	olivier@biniou.info
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://biniou.net/
 COMMENT=	Datafiles for Le Biniou
 LICENSE=	gnu-gpl-v2

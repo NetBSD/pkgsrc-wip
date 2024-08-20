@@ -5,7 +5,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=babelouest/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	olivier@biniou.info
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/babelouest/ulfius/
 COMMENT=	HTTP Framework for REST Applications in C
 LICENSE=	gnu-lgpl-v2.1

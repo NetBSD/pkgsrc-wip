@@ -5,7 +5,7 @@ PKGNAME=	lebiniou-3.66.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gitlab.com/lebiniou/lebiniou/-/archive/version-3.66.0/
 
-MAINTAINER=	olivier@biniou.info
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://biniou.net/
 COMMENT=	User-friendly, powerful music visualization / VJing tool
 LICENSE=	gnu-gpl-v2
