@@ -1814,7 +1814,6 @@ SUBDIR+=	kde-cli-tools
 SUBDIR+=	kde-gtk-config
 SUBDIR+=	kde-runtime4
 SUBDIR+=	kdecoration
-SUBDIR+=	kdevelop
 SUBDIR+=	kea
 SUBDIR+=	kea-git
 SUBDIR+=	keama-git
