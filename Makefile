@@ -2583,7 +2583,6 @@ SUBDIR+=	odin
 SUBDIR+=	offset
 SUBDIR+=	oggfwd
 SUBDIR+=	ogmrip
-SUBDIR+=	okteta
 SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omnispeak

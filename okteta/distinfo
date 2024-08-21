@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:53 agc Exp $
-
-BLAKE2s (okteta-0.26.12.tar.xz) = 12dfc5a5d47cd071a35a80cea1481fe4d21b8f4595377f9f744d3d02f073a354
-SHA512 (okteta-0.26.12.tar.xz) = 50159269099e08bf95e4d358f9f8fbf3fb87e1f01888d5f78a1bdea83a2b56145e95c42a67eb3c82a7525b1352eb3ea1bf93187e8df0f06f35f6834a54ffa892
-Size (okteta-0.26.12.tar.xz) = 1077320 bytes
