@@ -9,7 +9,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/plasma5.mk"
 
-CMAKE_ARGS+=	-DBUILDLINK_DIR=${BUILDLINK_DIR}
+CMAKE_CONFIGURE_ARGS+=	-DBUILDLINK_DIR=${BUILDLINK_DIR}
 
 DEPENDS+=	kde-cli-tools>=${PLASMAVER}:../../wip/kde-cli-tools
 

@@ -21,7 +21,7 @@ DEPENDS+=	plasma-integration>=${PLASMAVER}:../../wip/plasma-integration
 USE_TOOLS+=	gmake msgmerge pkg-config
 GCC_REQD+=	10	# default member initializers for bit-fields in kcms/lookandfeel/lookandfeelmanager.h
 
-#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
 # generation of ksmserver.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
