@@ -12,15 +12,15 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=		-DBuildJK2SPEngine:BOOL=YES
-CMAKE_ARGS+=		-DBuildJK2SPGame:BOOL=YES
-CMAKE_ARGS+=		-DBuildJK2SPRdVanilla:BOOL=YES
-CMAKE_ARGS+=		-DBuildMPCGame:BOOL=YES
-CMAKE_ARGS+=		-DBuildMPDed:BOOL=YES
-CMAKE_ARGS+=		-DBuildMPEngine:BOOL=YES
-CMAKE_ARGS+=		-DBuildMPGame:BOOL=YES
-CMAKE_ARGS+=		-DBuildMPRdVanilla:BOOL=YES
-CMAKE_ARGS+=		-DBuildMPUI:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildJK2SPEngine:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildJK2SPGame:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildJK2SPRdVanilla:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildMPCGame:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildMPDed:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildMPEngine:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildMPGame:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildMPRdVanilla:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DBuildMPUI:BOOL=YES
 CMAKE_INSTALL_PREFIX=	${PREFIX}/share
 GIT_REPOSITORIES=	OpenJK
 GIT_REPO.OpenJK=	https://github.com/JACoders/OpenJK.git
@@ -41,6 +41,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/openjo_sp ${DESTDIR}${PREFIX}/bin/openjo_sp
 
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
