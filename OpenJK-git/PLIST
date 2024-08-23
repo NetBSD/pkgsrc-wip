@@ -14,6 +14,7 @@ share/JediAcademy/openjk.${MACHINE_ARCH}
 share/JediAcademy/openjk_sp.${MACHINE_ARCH}
 share/JediAcademy/openjkded.${MACHINE_ARCH}
 share/JediAcademy/rd-vanilla_${MACHINE_ARCH}.so
+share/JediAcademy/rd-rend2_${MACHINE_ARCH}.so
 share/JediAcademy/rdsp-vanilla_${MACHINE_ARCH}.so
 share/JediOutcast/OpenJK/jospgame${MACHINE_ARCH}.so
 share/JediOutcast/openjo_sp.${MACHINE_ARCH}
