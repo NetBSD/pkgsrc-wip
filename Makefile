@@ -295,6 +295,7 @@ SUBDIR+=	bicon
 SUBDIR+=	bifrost
 SUBDIR+=	bigdft
 SUBDIR+=	bijiben
+SUBDIR+=	bind920
 SUBDIR+=	bindgraph
 SUBDIR+=	binutils
 SUBDIR+=	binutils-git
