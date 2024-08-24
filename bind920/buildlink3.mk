@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.3 2024/07/22 18:09:01 adam Exp $
+
+BUILDLINK_TREE+=	bind
+
+.if !defined(BIND_BUILDLINK3_MK)
+BIND_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.bind+=	bind>=9.20.0
+BUILDLINK_ABI_DEPENDS.bind+=	bind>=9.20.0
+BUILDLINK_PKGSRCDIR.bind?=	../../wip/bind920
+.endif # BIND_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-bind

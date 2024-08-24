@@ -1,0 +1,8 @@
+A few things remain, mostly related to the patches
+from the net/bind918 package:
+
+ * Re-add support for blocklists / blacklists.
+
+ * Figure out the rest of the diffs, whether they're
+   worthy of "upstreaming" or not.
+

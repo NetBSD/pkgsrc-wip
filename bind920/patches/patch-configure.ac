@@ -1,0 +1,40 @@
+$NetBSD$
+
+Fix to (compat setresuid() is mis-implemented)
+and follow-up fixes to get rid of setresuid() usage:
+ 
+https://gitlab.isc.org/isc-projects/bind9/-/issues/4862
+pulled from
+https://gitlab.isc.org/isc-projects/bind9/-/merge_requests/9363
+
+And ...
+
+support removal of WRKDIR references from config.h
+
+--- configure.ac.orig	2024-07-08 13:09:17.034283885 +0000
++++ configure.ac
+@@ -36,7 +36,10 @@ AC_DEFINE([PACKAGE_DESCRIPTION], [m4_ifn
+ AC_DEFINE([PACKAGE_SRCID], ["][bind_SRCID]["], [A short hash from git])
+ 
+ bind_CONFIGARGS="${ac_configure_args:-default}"
+-AC_DEFINE_UNQUOTED([PACKAGE_CONFIGARGS], ["$bind_CONFIGARGS"], [Either 'defaults' or used ./configure options])
++faked_CONFIGARGS=$(echo ${bind_CONFIGARGS} | \
++	sed -e 's|@TOOLS_DIR@|@PREFIX@|g' -e 's|@BUILDLINK_DIR@|@PREFIX@|g')
++AC_DEFINE_UNQUOTED([PACKAGE_CONFIGARGS], ["$faked_CONFIGARGS"], [Either 'defaul
++ts' or used ./configure options])
+ 
+ AC_DEFINE([PACKAGE_BUILDER], ["make"], [make or Visual Studio])
+ 
+@@ -426,12 +429,6 @@ AS_CASE([$host],
+ 
+ AC_CHECK_FUNCS([sysctlbyname])
+ 
+-#
+-# Check for uid/gid setting variants
+-#
+-AC_CHECK_FUNCS([setresuid setreuid getresuid])
+-AC_CHECK_FUNCS([setresgid setregid getresgid])
+-
+ AC_TYPE_SIZE_T
+ AC_TYPE_SSIZE_T
+ AC_TYPE_UINTPTR_T
