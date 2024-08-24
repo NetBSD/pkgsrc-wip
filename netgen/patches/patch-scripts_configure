@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use = in place of bash specific ==
+
+--- scripts/configure.orig	2024-08-24 16:55:05.656786126 +0000
++++ scripts/configure
+@@ -7769,7 +7769,7 @@ else
+ fi
+ 
+ ${ECHO_N} "Python3:    "
+-if test "${HAVE_PYTHON3}" == "yes"; then
++if test "${HAVE_PYTHON3}" = "yes"; then
+    echo "yes"
+ else
+    echo "no"

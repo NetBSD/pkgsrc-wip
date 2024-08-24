@@ -1,0 +1,12 @@
+NETGEN is a general-purpose netlist management system.  It can read
+and write several netlist formats, including NTK (Caltech, CMU),
+WOMBAT (Berkeley), SIM (Berkeley), ACTEL (Actel Inc., Sunnyvale), and
+SPICE (Berkeley).  In addition, a C-language embedded interface exists
+for specifying netlists directly.  Please see the documentation file
+NETGEN.DOC
+
+NETGEN was intended as an efficient specification language for
+hierarchical systems.  Secondary features, such as testing isomorphism
+between two netlists, have been added over time.  As netgen has
+primarily been used in its capacity as a netlist comparator, this
+has essentially become the primary useful feature of netgen.

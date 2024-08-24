@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/inetcomp
+bin/netcomp
+bin/netgen
+bin/ntk2adl
+bin/ntk2xnf
+lib/netgen/doc/netgen.doc

@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (netgen/1.5.277.tar.gz) = 9d140dadcc9b4d70fb875cd46d34e76eda35f159e1fef4886ec6c5d93c9bf88f
+SHA512 (netgen/1.5.277.tar.gz) = 30f7a0784d585f4e1cbbc0e21f9392cd049d3aba6f96fb2386f4c0cd3f5717aa5ed0cf97552e8a489cd23687c2ff9b8dee1b09f01361187233550afb33a89f1e
+Size (netgen/1.5.277.tar.gz) = 549781 bytes
+SHA1 (patch-scripts_configure) = 738b604c4dc41b525fd4fc3a77e2cf1229111839
