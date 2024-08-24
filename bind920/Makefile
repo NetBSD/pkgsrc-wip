@@ -6,9 +6,9 @@ CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	sekiya@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.isc.org/bind/
-COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.18
+COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.20
 LICENSE=	mpl-2.0
 
 CONFLICTS+=	host-[0-9]*
