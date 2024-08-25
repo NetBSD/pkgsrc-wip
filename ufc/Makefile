@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.15 2014/06/01 12:49:49 thomasklausner Exp $
-#
 
 DISTNAME=	ufc-${MMVERSION}.0
 CATEGORIES=	math
@@ -31,12 +30,6 @@ PKGCONFIG_OVERRIDE+=	cmake/ufc-1.pc.in
 PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 
 MMVERSION=	2.2
-
-SUBST_CLASSES+=		ospath
-SUBST_STAGE.ospath=	post-patch
-SUBST_FILES.ospath=	src/utils/python/ufc_utils/build.py
-SUBST_SED.ospath=	-e 's|os.path.join(os.path.sep, "opt", "local")|os.path.normpath("${PREFIX}")|'
-SUBST_SED.ospath+=	-e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PREFIX}")|'
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
