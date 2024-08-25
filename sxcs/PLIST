@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/sxcs
+man/man1/sxcs.1
+share/zsh/site-functions/_sxcs

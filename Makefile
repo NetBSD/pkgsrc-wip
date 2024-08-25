@@ -5352,6 +5352,7 @@ SUBDIR+=	swift-git
 SUBDIR+=	swig4
 SUBDIR+=	swinehub
 SUBDIR+=	swisseph
+SUBDIR+=	sxcs
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
 SUBDIR+=	sylfilter
