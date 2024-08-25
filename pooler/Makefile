@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ssb22/}
 GITHUB_PROJECT=	PrimerPooler
 GITHUB_TAG=	v1.75
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ssb22.user.srcf.net/pooler/
 COMMENT=	Optimise DNA sequencing primer-set combinations
 LICENSE=	apache-2.0

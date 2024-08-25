@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gmarcais/}
 GITHUB_PROJECT=	yaggo
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gmarcais/yaggo
 COMMENT=	Generate command line parser using getopt_long
 LICENSE=	gnu-gpl-v3

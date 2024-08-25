@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=cmbi/}
 GITHUB_PROJECT=	xssp
 GITHUB_TAG=	${PV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cmbi/xssp
 COMMENT=	Software for creating DSSP and HSSP files
 LICENSE=	gnu-gpl-v3

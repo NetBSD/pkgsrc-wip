@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mcubeg/}
 GITHUB_PROJECT=	packmol
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://m3g.iqm.unicamp.br/packmol/home.shtml
 COMMENT=	Pack molecules in defined regions of space
 LICENSE=	mit

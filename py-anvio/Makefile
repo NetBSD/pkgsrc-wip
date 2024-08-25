@@ -18,7 +18,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=merenlab/}
 GITHUB_PROJECT=	anvio
 GITHUB_TAG=	v${PV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://merenlab.org/software/anvio/
 COMMENT=	Analysis and visualization platform for 'omics data
 LICENSE=	gnu-gpl-v3

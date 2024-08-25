@@ -3,7 +3,7 @@
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command Line Option Parser
 LICENSE=	gnu-gpl-v2
 

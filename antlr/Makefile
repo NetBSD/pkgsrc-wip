@@ -41,7 +41,7 @@ DISTNAME=	antlr-${PORTVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.antlr2.org/download/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.antlr2.org/
 
 COMMENT=	ANother Tool for Language Recognition

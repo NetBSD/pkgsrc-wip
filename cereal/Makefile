@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=USCiLab/}
 GITHUB_PROJECT=	cereal
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/USCiLab/cereal
 COMMENT=	C++11 library for serialization
 LICENSE=	modified-bsd

@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=FelixKrueger/}
 GITHUB_PROJECT=	trimgalore
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/FelixKrueger/TrimGalore
 COMMENT=	Wrapper around Cutadapt and FastQC for adapter and quality trimming
 LICENSE=	gnu-gpl-v3

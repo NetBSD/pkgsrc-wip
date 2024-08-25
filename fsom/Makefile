@@ -9,7 +9,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekg/}
 GITHUB_TAG=	56695e1611d824cda97f08e932d25d08419170cd
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/fsom
 COMMENT=	Tiny C library for managing SOM (Self-Organizing Maps) neural networks
 LICENSE=	gnu-gpl-v3

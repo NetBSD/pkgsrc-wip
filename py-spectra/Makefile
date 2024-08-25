@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-spectra-0.0.11
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/spectra/}
 
-OWNER=		bacon@NetBSD.org
+OWNER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/spectra
 COMMENT=	Color scales and color conversion made easy for Python
 LICENSE=	mit

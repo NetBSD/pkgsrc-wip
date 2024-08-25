@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://launchpad.net/dolfin/${MMVERSION}.x/${MMVERSION}.0/+download/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/dolfin
 COMMENT=	C++/Python interface of FEniCS
 LICENSE=	gnu-lgpl-v3

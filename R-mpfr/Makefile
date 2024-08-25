@@ -3,7 +3,7 @@
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cran.r-project.org/web/packages/gmp/
 COMMENT=	Multiple Precision Floating Point Arithmetic for R
 LICENSE=	gnu-gpl-v2

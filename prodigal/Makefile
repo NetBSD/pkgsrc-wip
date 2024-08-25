@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=hyattpd/}
 GITHUB_PROJECT=	Prodigal
 GITHUB_TAG=	v${PV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compbio.ornl.gov/prodigal/
 COMMENT=	Prokaryotic Dynamic Programming Genefinding Algorithm
 LICENSE=	gnu-gpl-v3

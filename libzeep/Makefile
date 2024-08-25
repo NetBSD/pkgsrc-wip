@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mhekkel/}
 GITHUB_PROJECT=	libzeep
 GITHUB_TAG=	v${PV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mhekkel/libzeep
 COMMENT=	Make it easy to create SOAP servers
 LICENSE=	boost-license

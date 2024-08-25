@@ -7,7 +7,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcftools/}
 GITHUB_TAG=	v${DISTVERSION}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/vcftools/vcftools
 COMMENT=	Tools for working with VCF genomics files
 LICENSE=	gnu-lgpl-v3

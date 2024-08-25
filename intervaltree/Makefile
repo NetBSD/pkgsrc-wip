@@ -9,7 +9,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekg/}
 GITHUB_TAG=	8fc4be91866237995e1105689d84bece619f4663
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/intervaltree
 COMMENT=	Minimal C++ interval tree implementation
 LICENSE=	mit

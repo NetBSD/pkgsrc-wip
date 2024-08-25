@@ -15,7 +15,7 @@ PKGNAME=	p5-IPC-Open3-Simple-${PORTVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/IPC-Open3-Simple
 COMMENT=	Simple alternative to IPC::Open3
 # Check this

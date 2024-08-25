@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jpuritz/}
 GITHUB_PROJECT=	dDocent
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ddocent.com/
 COMMENT=	Bash pipeline for RAD sequencing
 LICENSE=	mit

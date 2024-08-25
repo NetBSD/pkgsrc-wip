@@ -4,7 +4,7 @@ DISTNAME=	ufc-${MMVERSION}.0
 CATEGORIES=	math
 MASTER_SITES=	http://launchpad.net/ufc/${MMVERSION}.x/${MMVERSION}.0/+download/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/ufc
 COMMENT=	Unified framework for finite element assembly
 LICENSE=	public-domain

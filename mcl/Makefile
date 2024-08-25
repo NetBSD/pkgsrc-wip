@@ -10,7 +10,7 @@ PKGNAME=	mcl-${PV}
 CATEGORIES=	math
 MASTER_SITES=	https://www.micans.org/mcl/src/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.micans.org/mcl/index.html?sec_software
 COMMENT=	Fast and scalable unsupervised cluster algorithm for graphs
 LICENSE=	gnu-gpl-v3

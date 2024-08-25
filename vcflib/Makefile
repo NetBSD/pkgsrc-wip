@@ -5,7 +5,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcflib/}
 GITHUB_TAG=	7e3d8066a6c6c0f22191a70d050ead23f9c453b3
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/vcflib/vcflib
 COMMENT=	C++ library and CLI tools for parsing and manipulating VCF files
 LICENSE=	mit

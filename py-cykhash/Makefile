@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cykhash/}
 
-OWNER=		bacon@NetBSD.org
+OWNER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/realead/cykhash
 COMMENT=	Cython equivalent to khash-sets/maps
 LICENSE=	mit

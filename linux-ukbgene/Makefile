@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://biobank.ndph.ox.ac.uk/showcase/util/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://biobank.ndph.ox.ac.uk/showcase/util/
 COMMENT=	Tool for accessing UK Biobank data
 #LICENSE=	# TODO: (see mk/license.mk)

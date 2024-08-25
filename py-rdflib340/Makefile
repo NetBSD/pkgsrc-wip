@@ -10,7 +10,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
 HOMEPAGE=	https://pypi.python.org/pypi/rdflib/
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 COMMENT=	Python library for RDF manipulation
 LICENSE=	modified-bsd

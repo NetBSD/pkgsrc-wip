@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-lzstring-1.0.4
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lzstring/}
 
-OWNER=		bacon@NetBSD.org
+OWNER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/lzstring
 COMMENT=	LZ-based in-memory string compression
 LICENSE=	mit

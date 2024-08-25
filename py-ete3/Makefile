@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-ete3-${PV}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ete3/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/ete3
 COMMENT=	Python Environment for (phylogenetic) Tree Exploration
 LICENSE=	gnu-gpl-v3

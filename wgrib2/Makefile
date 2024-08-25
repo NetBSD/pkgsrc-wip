@@ -10,7 +10,7 @@ CATEGORIES=	wip science
 MASTER_SITES=	http://www.ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/
 DISTFILES=	wgrib2.tgz.v${PORTVERSION}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cpc.noaa.gov/products/wesley/wgrib2/
 COMMENT=	Tools for managing GRIB weather data files
 LICENSE=	gnu-gpl-v2

@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.schedmd.com/slurm/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
 

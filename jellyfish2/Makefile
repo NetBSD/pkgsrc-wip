@@ -8,7 +8,7 @@ DISTNAME=	jellyfish-${PV}
 CATEGORIES=	biology
 # https://github.com/gmarcais/Jellyfish/issues/126
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gmarcais/Jellyfish/releases/download/v2.2.10/}
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.genome.umd.edu/jellyfish.html
 
 COMMENT=	Fast, memory-efficient counting of k-mers in DNA

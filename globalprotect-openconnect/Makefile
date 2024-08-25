@@ -10,7 +10,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yuezk/}
 GITHUB_PROJECT=	GlobalProtect-openconnect
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yuezk/GlobalProtect-openconnect
 COMMENT=	OpenConnect GUI for GlobalProtect protocol
 LICENSE=	gnu-gpl-v3

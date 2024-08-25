@@ -17,7 +17,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://downloads.skewed.de/graph-tool/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://graph-tool.skewed.de/
 COMMENT=	Python module for manipulation and statistical analysis of graphs
 LICENSE=	gnu-gpl-v3

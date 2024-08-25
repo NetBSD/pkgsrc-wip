@@ -4,7 +4,7 @@ DISTNAME=	smithwaterman-0.0.0.20160702
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ekg/}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ekg/smithwaterman
 COMMENT=	Smith-waterman-gotoh alignment algorithm
 LICENSE=	gnu-gpl-v2

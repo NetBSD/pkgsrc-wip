@@ -4,7 +4,7 @@ DISTNAME=	udunits-2.2.26
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.unidata.ucar.edu/pub/udunits/
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for manipulating units of physical quantities
 LICENSE=	modified-bsd
 

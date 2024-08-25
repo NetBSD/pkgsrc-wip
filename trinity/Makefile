@@ -38,7 +38,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=trinityrnaseq/}
 GITHUB_PROJECT=	trinityrnaseq
 GITHUB_TAG=	Trinity-v${PV}
 
-MAINTAINER=	bacon@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://trinityrnaseq.github.io/
 COMMENT=	Assembles transcript sequences from Illumina RNA-Seq data
 LICENSE=	modified-bsd
