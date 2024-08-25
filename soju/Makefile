@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	scdoc>=0:../../textproc/scdoc
 
 BUILD_DEFS+=	VARBASE
 
+.include "options.mk"
+
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X codeberg.org/emersion/soju/config.DefaultPath=${PKG_SYSCONFDIR}/config \
 			-X codeberg.org/emersion/soju/config.DefaultUnixAdminPath=${VARBASE}/run/soju/admin'
