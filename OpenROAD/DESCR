@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# OpenROAD
+
+[![Build Status](https://jenkins.openroad.tools/buildStatus/icon?job=OpenROAD-Public%2Fmaster)](https://jenkins.openroad.tools/job/OpenROAD-Public/job/master/) [![Coverity Scan Status](https://scan.coverity.com/projects/the-openroad-project-openroad/badge.svg)](https://scan.coverity.com/projects/the-openroad-project-openroad) [![Documentation Status](https://readthedocs.org/projects/openroad/badge/?version=latest)](https://openroad.readthedocs.io/en/latest/?badge=latest)
+
+OpenROAD is an integrated chip physical design tool that takes a
+design from synthesized Verilog to routed layout.  
+
+
+An outline of steps used to build a chip using OpenROAD are shown below.
+
+* Initialize floorplan - define the chip size and cell rows
+* Place pins (for designs without pads )
+* Place macro cells (RAMs, embedded macros)
+* Insert substrate tap cells
+* Insert power distribution network
+* Macro Placement of macro cells
+* Global placement of standard cells
+* Repair max slew, max capacitance, and max fanout violations and long wires
+* Clock tree synthesis
+* Optimize setup/hold timing
+...

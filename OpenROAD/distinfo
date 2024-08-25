@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (OpenROAD-2.0.tar.gz) = 4cc2dcbbb1f4935850f9e9994a13fe635ef6db6caa631f3c9c2c97bc97462c83
+SHA512 (OpenROAD-2.0.tar.gz) = 02194e9daa04d89281a6ffff4bbdac0117764dc9032e265e5b7e64ba4cf63f4e0ae1590b217926d75d3e2f807d77aa31f7a31e037b4ee48f2c23fa1baca01621
+Size (OpenROAD-2.0.tar.gz) = 222297114 bytes
+BLAKE2s (The-OpenROAD-Project-OpenSTA-42b994d.tar.gz) = b4a146f09f678da71daaad52beedc9efdb79149748626ef79a5bce20ba95ccca
+SHA512 (The-OpenROAD-Project-OpenSTA-42b994d.tar.gz) = a1d628e6c5884cd27c9cfca91d878ac978f5a142378bc7cee9e332effa9aa5aadce2d3b7f1d1ca2064dc4e08820f71a276c0a75732765aef232b88bdc17671a6
+Size (The-OpenROAD-Project-OpenSTA-42b994d.tar.gz) = 7519111 bytes
