@@ -7,7 +7,7 @@ MASTER_SITES=	https://codeberg.org/emersion/soju/releases/download/v${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://soju.im/
-COMMENT=	User friendly IRC bouncer
+COMMENT=	User-friendly IRC bouncer
 LICENSE=	gnu-agpl-v3
 
 TOOL_DEPENDS+=	scdoc>=0:../../textproc/scdoc
