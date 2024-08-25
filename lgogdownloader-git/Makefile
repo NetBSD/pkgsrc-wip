@@ -13,7 +13,7 @@ TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-CMAKE_ARGS+=	-DPC_JSONCPP_INCLUDEDIRS:PATH=${BUILDLINK_PREFIX.jsoncpp}/include/json
+CMAKE_CONFIGURE_ARGS+=	-DPC_JSONCPP_INCLUDEDIRS:PATH=${BUILDLINK_PREFIX.jsoncpp}/include/json
 
 # https://github.com/Sude-/lgogdownloader/issues/128
 PKGSRC_USE_STACK_CHECK=	no

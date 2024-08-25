@@ -8,19 +8,19 @@ PKG_SUGGESTED_OPTIONS=	iconv wide-curses
 
 .if !empty(PKG_OPTIONS:Miconv)
 .  include "../../converters/libiconv/buildlink3.mk"
-CMAKE_ARGS+=	-DUSE_ICONV=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_ICONV=ON
 .else
-CMAKE_ARGS+=	-DUSE_ICONV=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_ICONV=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mwide-curses)
 .  include "../../mk/curses.buildlink3.mk"
 .  if ${CURSES_TYPE} != "ncurses" # XXX: Why is this necessary!?
-CMAKE_ARGS+=	-DUSE_WIDECHAR=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WIDECHAR=ON
 .  else
-CMAKE_ARGS+=	-DUSE_WIDECHAR=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WIDECHAR=OFF
 .  endif
 .else
 .  include "../../mk/curses.buildlink3.mk"
-CMAKE_ARGS+=	-DUSE_WIDECHAR=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WIDECHAR=OFF
 .endif

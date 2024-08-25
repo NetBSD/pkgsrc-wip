@@ -10,8 +10,8 @@ COMMENT=	Free version of the game Gish
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DINSTALL_FHS:BOOL=ON
-CMAKE_ARGS+=	-DMAN_DIR:PATH=${PREFIX}/${PKGMANDIR}/man6
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_FHS:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DMAN_DIR:PATH=${PREFIX}/${PKGMANDIR}/man6
 
 GIT_REPOSITORIES=	freegish
 GIT_REPO.freegish=	https://github.com/freegish/freegish.git

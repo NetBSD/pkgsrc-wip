@@ -19,8 +19,8 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
-CMAKE_ARGS+=	-DINSTALL_PK3_PATH=share/games/raze
-CMAKE_ARGS+=	-DDYN_OPENAL=Off
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_PK3_PATH=share/games/raze
+CMAKE_CONFIGURE_ARGS+=	-DDYN_OPENAL=Off
 CXXFLAGS+=	-D PKGSRC_RAZE_PATH='"${PREFIX}/share/games/raze"'
 
 .include "../../archivers/bzip2/buildlink3.mk"

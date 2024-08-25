@@ -14,8 +14,8 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:run
 
-CMAKE_ARGS+=		-DUSE_QT=OFF
-CMAKE_ARGS+=		-DUSE_QT5=ON
+CMAKE_CONFIGURE_ARGS+=		-DUSE_QT=OFF
+CMAKE_CONFIGURE_ARGS+=		-DUSE_QT5=ON
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

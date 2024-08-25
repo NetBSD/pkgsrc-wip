@@ -19,7 +19,7 @@ USE_CMAKE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 # Cmake's FindSWIG looks first for swig2.0, then for swig
-CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 # Needed on OS X
 # Not needed on NetBSD

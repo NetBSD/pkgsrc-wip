@@ -10,25 +10,25 @@ PLIST_VARS+=		opengl doc # ptex has no extra PLIST entries
 .if !empty(PKG_OPTIONS:Mopengl)
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-CMAKE_ARGS+=	-DGLEW_LOCATION:PATH=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DGLEW_LOCATION:PATH=${PREFIX}
 PLIST.opengl=	yes
 .else
-CMAKE_ARGS+=	-DNO_OPENGL:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DNO_OPENGL:BOOL=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mptex)
 .include "../../graphics/ptex/buildlink3.mk"
-CMAKE_ARGS+=	-DPTEX_LOCATION:PATH=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DPTEX_LOCATION:PATH=${PREFIX}
 .else
-CMAKE_ARGS+=	-DNO_PTEX:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DNO_PTEX:BOOL=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
 TOOL_DEPENDS+=	doxygen>=1.8.9.1:../../devel/doxygen
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE:PATH=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
+CMAKE_CONFIGURE_ARGS+=	-DRST2HTML_EXECUTABLE:PATH=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 .include "../../lang/python/pyversion.mk"
 PLIST.doc=	yes
 .else
-CMAKE_ARGS+=	-DNO_DOC:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DNO_DOC:BOOL=ON
 .endif

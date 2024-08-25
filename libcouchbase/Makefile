@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
 
 # Prevents CouchbaseMock.jar fetching at build time
-CMAKE_ARGS+=		-DLCB_NO_MOCK=ON
+CMAKE_CONFIGURE_ARGS+=		-DLCB_NO_MOCK=ON
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

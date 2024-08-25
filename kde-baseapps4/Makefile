@@ -20,7 +20,7 @@ REPLACE_FILES.xdg-open=	lib/konq/Templates/Program.desktop
 
 CHECK_INTERPRETER_SKIP=	share/kde/templates/.source/Program.desktop
 
-CMAKE_ARGS+=	-DWITH_Baloo:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_Baloo:BOOL=OFF
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

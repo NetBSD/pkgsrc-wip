@@ -16,7 +16,7 @@ USE_CXX_FEATURES+=	c++20
 GCC_REQD+=		13
 USE_TOOLS+=		pkg-config
 
-#CMAKE_ARGS+=		-S Ladybird
+#CMAKE_CONFIGURE_ARGS+=		-S Ladybird
 # build broken with make
 #CMAKE_GENERATOR=	ninja
 # TODO: this needs fixing

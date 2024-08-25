@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DWITH_LUA53:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LUA53:BOOL=ON
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../lang/lua53/buildlink3.mk"

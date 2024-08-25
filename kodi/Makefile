@@ -26,14 +26,14 @@ USE_LANGUAGES=		c c++
 USE_JAVA=		build
 USE_JAVA2=		yes
 
-CMAKE_ARGS+=		-DJava_JAVA_EXECUTABLE=${JAVA_BINPREFIX}-java
-CMAKE_ARGS+=		-DENABLE_INTERNAL_CROSSGUID=no
+CMAKE_CONFIGURE_ARGS+=		-DJava_JAVA_EXECUTABLE=${JAVA_BINPREFIX}-java
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_INTERNAL_CROSSGUID=no
 
 # internet download, problematic dependency for pkgsrc
-CMAKE_ARGS+=		-DENABLE_DVDCSS=no
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_DVDCSS=no
 
 # XXX does not work?
-CMAKE_ARGS+=		-DKODI_DEPENDSBUILD=0
+CMAKE_CONFIGURE_ARGS+=		-DKODI_DEPENDSBUILD=0
 
 PYTHON_VERSIONS_ACCEPTED=	27 # insists on < 3.0 as of 15.2
 
@@ -52,7 +52,7 @@ post-patch:
 do-build:
 	${MKDIR} ${WRKDIR}/kodi-build
 	cd ${WRKDIR}/kodi-build ; \
-	${CMAKE} ${WRKSRC}/project/cmake ${CMAKE_ARGS} ; \
+	${CMAKE} ${WRKSRC}/project/cmake ${CMAKE_CONFIGURE_ARGS} ; \
 	${GMAKE}
 
 .include "../../archivers/bzip2/buildlink3.mk"

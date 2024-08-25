@@ -14,9 +14,9 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pax
-# We need to set CMake this way to get defined CMAKE_ARGS
+# We need to set CMake this way to get defined CMAKE_CONFIGURE_ARGS
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DCORECLR_SET_RPATH:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCORECLR_SET_RPATH:BOOL=OFF
 
 REPLACE_BASH+=	build.sh src/pal/tests/palsuite/runpaltests.sh
 
@@ -55,7 +55,7 @@ do-configure:
 do-build:
 	${RUN} cd ${WRKSRC} && \
 	${PKGSRC_SETENV} ${MAKE_ENV} PYTHON=${PYTHONBIN:Q} \
-		./build.sh skipmscorlib cmakeargs ${CMAKE_ARGS:Q}
+		./build.sh skipmscorlib cmakeargs ${CMAKE_CONFIGURE_ARGS:Q}
 
 # Currently there is no unix-like install target.
 # Put all produced files under subprefix.

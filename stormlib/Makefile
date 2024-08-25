@@ -15,7 +15,7 @@ EXTRACT_USING=	gtar
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DSTORM_BUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DSTORM_BUILD_TESTS=OFF
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

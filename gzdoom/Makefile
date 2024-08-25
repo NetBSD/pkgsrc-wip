@@ -16,8 +16,8 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/gzdoom-${GITHUB_TAG}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-CMAKE_ARGS+=	-DDL_LDFLAGS="${DL_LDFLAGS}"
-CMAKE_ARGS+=	-DDL_LIBS="${DL_LIBS}"
+CMAKE_CONFIGURE_ARGS+=	-DDL_LDFLAGS="${DL_LDFLAGS}"
+CMAKE_CONFIGURE_ARGS+=	-DDL_LIBS="${DL_LIBS}"
 CXXFLAGS+=	-D PKGSRC_DOOM_PATH='"${PREFIX}/share/games/doom"'
 
 .include "../../archivers/bzip2/buildlink3.mk"

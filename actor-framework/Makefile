@@ -14,7 +14,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-#CMAKE_ARGS+=	-DCAF_ENABLE_TESTING:BOOL=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DCAF_ENABLE_TESTING:BOOL=OFF
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

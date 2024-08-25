@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DAVD_CMDLINE=ON
+CMAKE_CONFIGURE_ARGS+=	-DAVD_CMDLINE=ON
 
 .include "options.mk"
 

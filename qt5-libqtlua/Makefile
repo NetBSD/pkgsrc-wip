@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v3 OR gnu-lgpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DINSTALL_BIN=${QTDIR}/bin
-CMAKE_ARGS+=	-DINSTALL_INC=${QTDIR}/include
-CMAKE_ARGS+=	-DINSTALL_LIB=${QTDIR}/lib
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_BIN=${QTDIR}/bin
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_INC=${QTDIR}/include
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_LIB=${QTDIR}/lib
 
 .include "../../lang/lua51/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

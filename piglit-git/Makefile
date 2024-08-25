@@ -32,7 +32,7 @@ REPLACE_PYTHON=			piglit piglit-*.py
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} &&			\
 			find lib/piglit \( -type f -or -type l \) -print ;
 
-CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/piglit/lib
 

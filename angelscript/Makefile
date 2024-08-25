@@ -15,6 +15,6 @@ WRKSRC=		${WRKDIR}/sdk/angelscript/projects/cmake
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 .include "../../mk/bsd.pkg.mk"

@@ -9,17 +9,17 @@ PKG_SUPPORTED_OPTIONS=	amd umfpack
 #.if !empty(PKG_OPTIONS:Mpulseaudio)
 #.include "../../audio/pulseaudio/buildlink3.mk"
 #.else
-#CMAKE_ARGS+=	-DNO_PULSE_SIMPLE:BOOL=TRUE
+#CMAKE_CONFIGURE_ARGS+=	-DNO_PULSE_SIMPLE:BOOL=TRUE
 #.endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DNO_PULSE_SIMPLE:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DNO_PULSE_SIMPLE:BOOL=TRUE
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DNO_PULSE_SIMPLE:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DNO_PULSE_SIMPLE:BOOL=TRUE
 .endif

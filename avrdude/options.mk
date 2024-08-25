@@ -20,7 +20,7 @@ TOOL_DEPENDS+=		tex-texinfo-[0-9]*:../../print/tex-texinfo
 .  if ${OPSYS} == "DragonFly"
 TOOL_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 .  endif
-CMAKE_ARGS+=		-D BUILD_DOC=1
+CMAKE_CONFIGURE_ARGS+=		-D BUILD_DOC=1
 .else
-CMAKE_ARGS+=		-D BUILD_DOC=0
+CMAKE_CONFIGURE_ARGS+=		-D BUILD_DOC=0
 .endif

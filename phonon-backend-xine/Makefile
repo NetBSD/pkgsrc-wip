@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
-#CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/

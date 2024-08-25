@@ -25,9 +25,9 @@ SHLIB_EXT=	so
 PLIST.notdarwin=	yes
 .endif
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DLIBVTERM_LIBRARY=${BUILDLINK_PREFIX.libvterm03}/lib/libvterm03/libvterm.${SHLIB_EXT}
-CMAKE_ARGS+=	-DLIBVTERM_INCLUDE_DIR=${BUILDLINK_PREFIX.libvterm03}/include/libvterm03
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DLIBVTERM_LIBRARY=${BUILDLINK_PREFIX.libvterm03}/lib/libvterm03/libvterm.${SHLIB_EXT}
+CMAKE_CONFIGURE_ARGS+=	-DLIBVTERM_INCLUDE_DIR=${BUILDLINK_PREFIX.libvterm03}/include/libvterm03
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
@@ -70,7 +70,7 @@ BUILDLINK_API_DEPENDS.libvterm03+=	libvterm03>=0.3.3
 .if ${PLATFORM_SUPPORTS_LUAJIT:tl} == "yes"
 .  include "../../lang/LuaJIT2/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DPREFER_LUA=ON
+CMAKE_CONFIGURE_ARGS+=	-DPREFER_LUA=ON
 .  include "../../lang/lua51/buildlink3.mk"
 .endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++ fortran
 # brlcad uses modified mundled tools and libraries (openNURBS, lemon, ...)
 # tools like adaptagrams (libavoid) are unused code for years and no longer
 # compatible with existing libraries
-CMAKE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBRLCAD_BUNDLED_LIBS=ON
 
 # brlcad must be installed into subprefix as it has conflicting files and it
 # will try overwrite them. brlcad will also blacklist existing libraries in

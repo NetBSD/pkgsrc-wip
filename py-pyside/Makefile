@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/PySide-${VERSION}
 USE_TOOLS+=	gmake cmake pkg-config
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${PREFIX}"
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 
@@ -29,7 +29,7 @@ pre-configure:
 	cd ${WRKSRC} && ${MKDIR} build
 
 do-configure:
-	cd ${WRKSRC}/build && ${SETENV} ${CONFIGURE_ENV} ${CMAKE} ${CMAKE_ARGS} ..
+	cd ${WRKSRC}/build && ${SETENV} ${CONFIGURE_ENV} ${CMAKE} ${CMAKE_CONFIGURE_ARGS} ..
 
 do-build:
 	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}

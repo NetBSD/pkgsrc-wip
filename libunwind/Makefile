@@ -32,7 +32,7 @@ SSP_SUPPORTED=		no
 GCC_REQD+=		10	# must be in sync with libcxx
 .endif
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 INSTALLATION_DIRS=	include
 

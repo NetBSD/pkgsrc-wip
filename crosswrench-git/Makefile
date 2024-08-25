@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 
 USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DEXTERNAL_LIBS:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DEXTERNAL_LIBS:BOOL=ON
 
 .include "../../devel/cxxopts/buildlink3.mk"
 .include "../../devel/pstreams/buildlink3.mk"

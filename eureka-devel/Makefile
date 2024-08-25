@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 USE_CC_FEATURES+=	c11
 USE_CXX_FEATURES+=	c++17
 
-CMAKE_ARGS+=		-DENABLE_UNIT_TESTS=off
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_UNIT_TESTS=off
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom

@@ -13,7 +13,7 @@ LICENSE=		apache-2.0
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-CMAKE_ARGS+=		-DUSE_PANDOC=OFF
+CMAKE_CONFIGURE_ARGS+=		-DUSE_PANDOC=OFF
 
 PKGCONFIG_OVERRIDE+=	tools/notcurses++.pc.in
 PKGCONFIG_OVERRIDE+=	tools/notcurses-core.pc.in

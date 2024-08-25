@@ -20,7 +20,7 @@ ONLY_FOR_PLATFORM=	 *-*-aarch64 *-*-x86_64 *-*-powerpc64 *-*-powerpc64le *-*-ris
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DCOMPILATION_ARCH=${CPUTYPE:UOFF}
+CMAKE_CONFIGURE_ARGS+=	-DCOMPILATION_ARCH=${CPUTYPE:UOFF}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

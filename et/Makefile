@@ -19,8 +19,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
 GCC_REQD+=	9  # uses std::filesystem
 
-CMAKE_ARGS+=	-DDISABLE_VCPKG=ON
-CMAKE_ARGS+=	-DDISABLE_TELEMETRY=ON
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_VCPKG=ON
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_TELEMETRY=ON
 
 PKGCONFIG_OVERRIDE+=	external_imported/Catch2/CMake/catch2.pc.in
 PKGCONFIG_OVERRIDE+=	external_imported/UniversalStacktrace/external/Catch2/CMake/catch2.pc.in

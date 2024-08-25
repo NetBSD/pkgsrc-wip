@@ -25,54 +25,54 @@ GCC_REQD+=	4.9
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Debug"
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Debug"
 
-CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON=${PYTHONBIN}
 
-CMAKE_ARGS+=	-Daudacity_use_expat=system
-CMAKE_ARGS+=	-Daudacity_use_ffmpeg=linked
-CMAKE_ARGS+=	-Daudacity_use_flac=system
-CMAKE_ARGS+=	-Daudacity_use_id3tag=system
-CMAKE_ARGS+=	-Daudacity_use_lame=system
-CMAKE_ARGS+=	-Daudacity_use_lv2=system
-CMAKE_ARGS+=	-Daudacity_use_mad=off
-CMAKE_ARGS+=	-Daudacity_use_midi=local
-CMAKE_ARGS+=	-Daudacity_use_nyquist=local
-CMAKE_ARGS+=	-Daudacity_use_ogg=system
-CMAKE_ARGS+=	-Daudacity_use_portaudio=system
-CMAKE_ARGS+=	-Daudacity_use_portmixer=local
-CMAKE_ARGS+=	-Daudacity_use_portsmf=local
-CMAKE_ARGS+=	-Daudacity_use_sbsms=local
-CMAKE_ARGS+=	-Daudacity_use_sndfile=system
-CMAKE_ARGS+=	-Daudacity_use_soundtouch=system
-CMAKE_ARGS+=	-Daudacity_use_soxr=system
-CMAKE_ARGS+=	-Daudacity_use_twolame=system
-CMAKE_ARGS+=	-Daudacity_use_vamp=system
-CMAKE_ARGS+=	-Daudacity_use_vorbis=system
-CMAKE_ARGS+=	-Daudacity_use_wxwidgets=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_expat=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_ffmpeg=linked
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_flac=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_id3tag=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_lame=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_lv2=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_mad=off
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_midi=local
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_nyquist=local
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_ogg=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_portaudio=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_portmixer=local
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_portsmf=local
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_sbsms=local
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_sndfile=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_soundtouch=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_soxr=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_twolame=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_vamp=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_vorbis=system
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_wxwidgets=system
 # pre-compiled headers don't work well on some systems
-CMAKE_ARGS+=	-Daudacity_use_pch=no
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_pch=no
 
-CMAKE_ARGS+=	-DLIB_avcodec=${PREFIX}/lib/ffmpeg4/libavcodec.so
-CMAKE_ARGS+=	-DLIB_avformat=${PREFIX}/lib/ffmpeg4/libavformat.so
-CMAKE_ARGS+=	-DLIB_avutil=${PREFIX}/lib/ffmpeg4/libavutil.so
+CMAKE_CONFIGURE_ARGS+=	-DLIB_avcodec=${PREFIX}/lib/ffmpeg4/libavcodec.so
+CMAKE_CONFIGURE_ARGS+=	-DLIB_avformat=${PREFIX}/lib/ffmpeg4/libavformat.so
+CMAKE_CONFIGURE_ARGS+=	-DLIB_avutil=${PREFIX}/lib/ffmpeg4/libavutil.so
 
 CFLAGS+=	-DHAVE_VISIBILITY=1 # ???
 
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
-CMAKE_ARGS+=	-Daudacity_use_pa_oss=ON
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_pa_oss=ON
 CFLAGS+=	-DHAVE_SYS_SOUNDCARD_H=1
 .endif
 
 .if ${OPSYS} == "Linux"
-CMAKE_ARGS+=	-Daudacity_use_pa_alsa=ON
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_pa_alsa=ON
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-Daudacity_use_pa_coreaudio=ON
+CMAKE_CONFIGURE_ARGS+=	-Daudacity_use_pa_coreaudio=ON
 .endif
 
 .if ${MACHINE_ARCH} == "i386"

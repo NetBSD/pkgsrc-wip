@@ -18,10 +18,10 @@ USE_LANGUAGES=		c++
 # Pass STUFF to avoid possible API_ID_PUBLISHED_FLOOD errors and
 # building the package similarly to upstream binary packages:
 #  https://github.com/ars3niy/tdlib-purple/issues/95
-CMAKE_ARGS+=	-DSTUFF="AFADBDIyvuCrHF@E@GCC@qAvGus@rIArrGGtIvqC"
-CMAKE_ARGS+=	-DNoWebp=TRUE
-CMAKE_ARGS+=	-DNoLottie=TRUE
-CMAKE_ARGS+=	-DNoVoip=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DSTUFF="AFADBDIyvuCrHF@E@GCC@qAvGus@rIArrGGtIvqC"
+CMAKE_CONFIGURE_ARGS+=	-DNoWebp=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DNoLottie=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DNoVoip=TRUE
 
 PKGCONFIG_OVERRIDE+=	fmt/support/cmake/fmt.pc.in
 PKGCONFIG_OVERRIDE+=	rlottie/rlottie.pc.in

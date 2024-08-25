@@ -11,19 +11,19 @@ PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 PLIST_VARS+=	smb
 .if !empty(PKG_OPTIONS:Msamba)
 .include "../../net/samba/buildlink3.mk"
-#CMAKE_ARGS+=	-DSAMBA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.samba}/include
-#CMAKE_ARGS+=	-DSAMBA_LIBRARIES:FILEPATH=${BUILDLINK_PREFIX.samba}/lib/samba
+#CMAKE_CONFIGURE_ARGS+=	-DSAMBA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.samba}/include
+#CMAKE_CONFIGURE_ARGS+=	-DSAMBA_LIBRARIES:FILEPATH=${BUILDLINK_PREFIX.samba}/lib/samba
 PLIST.smb=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_ALSA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_ALSA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
 .endif

@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=		lua
 ###
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
-CMAKE_ARGS+=	-DWITH_LUA_ENGINE=Lua
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LUA_ENGINE=Lua
 .endif
 
 ###
@@ -21,5 +21,5 @@ CMAKE_ARGS+=	-DWITH_LUA_ENGINE=Lua
 ###
 .if !empty(PKG_OPTIONS:Mluajit)
 .include "../../lang/LuaJIT2/buildlink3.mk"
-CMAKE_ARGS+=	-DWITH_LUA_ENGINE=LuaJIT
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LUA_ENGINE=LuaJIT
 .endif

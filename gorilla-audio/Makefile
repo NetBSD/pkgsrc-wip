@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/gorilla-audio-a3d6dbe5dd99f4ad29affb8d9a2d893ee30f5f3a
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DSYSTEM_LIBRARIES:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DSYSTEM_LIBRARIES:BOOL=TRUE
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

@@ -25,7 +25,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 # DOTNET targets only LLVM
 PKGSRC_COMPILER=	clang
@@ -75,12 +75,12 @@ REPLACE_PYTHON+=	utils/update_llc_test_checks.py
 REPLACE_PYTHON+=	utils/wciia.py
 
 # Try to optimize building LLVM for now.
-CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="X86"
 
 # https://github.com/dotnet/llilc/blob/master/Documentation/Getting-Started-For-Linux-and-OS-X.md
 
-CMAKE_ARGS+=	-DWITH_CORECLR:PATH=${PREFIX}/CoreCLR
-CMAKE_ARGS+=	-DLLVM_OPTIMIZED_TABLEGEN=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CORECLR:PATH=${PREFIX}/CoreCLR
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_OPTIMIZED_TABLEGEN=ON
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build

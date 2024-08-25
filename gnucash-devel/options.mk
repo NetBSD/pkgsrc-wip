@@ -12,24 +12,24 @@ DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibofx)
-CMAKE_ARGS+=	-DWITH_OFX=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OFX=ON
 PLIST_SRC+=	PLIST.ofx
 .include "../../finance/libofx/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_OFX=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OFX=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibdbi)
-CMAKE_ARGS+=	-DWITH_SQL=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SQL=ON
 PLIST_SRC+=	PLIST.dbi
 TOOL_DEPENDS+=	libdbi-driver-sqlite3-[0-9]*:../../databases/libdbi-driver-sqlite3
 .include "../../databases/libdbi/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_SQL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SQL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-CMAKE_ARGS+=			-DWITH_PYTHON=ON
+CMAKE_CONFIGURE_ARGS+=			-DWITH_PYTHON=ON
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		bindings/python/example_scripts/*.py
 REPLACE_PYTHON+=		bindings/python/example_scripts/rest-api/*.py
@@ -43,5 +43,5 @@ DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .else
-CMAKE_ARGS+=			-DWITH_PYTHON=OFF
+CMAKE_CONFIGURE_ARGS+=			-DWITH_PYTHON=OFF
 .endif

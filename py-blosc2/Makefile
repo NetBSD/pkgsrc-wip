@@ -29,16 +29,16 @@ DEPENDS+=	${PYPKGPREFIX}-ndindex>=1.8:../../wip/py-ndindex
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
-CMAKE_ARGS+=	-DUSE_SYSTEM_BLOSC2:BOOl=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_BLOSC2:BOOl=TRUE
 #  work around RPATH error:   file RPATH_CHANGE could not write new RPATH:
-CMAKE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=1
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=1
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
 do-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} \
-		setup.py bdist_wheel ${CMAKE_ARGS}
+		setup.py bdist_wheel ${CMAKE_CONFIGURE_ARGS}
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.8:../../devel/py-msgpack
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test

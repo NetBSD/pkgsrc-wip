@@ -18,7 +18,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-#CMAKE_ARGS+=	-DUSE_EXTERNAL_GLM:BOOL=NO
+#CMAKE_CONFIGURE_ARGS+=	-DUSE_EXTERNAL_GLM:BOOL=NO
 
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

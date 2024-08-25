@@ -17,12 +17,12 @@ USE_CXX_FEATURES+=	c++17 filesystem
 
 USE_TOOLS+=	pkg-config zip
 
-CMAKE_ARGS+=	-Wno-dev
-CMAKE_ARGS+=	-DNO_COTIRE=ON  # CMake has similar functionality since 3.16
-CMAKE_ARGS+=	-DNO_LUA=ON
-CMAKE_ARGS+=	-DNO_WEBVIEW=ON
-CMAKE_ARGS+=	-DBUILD_PK3=ON
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release  # Use "Debug" for development
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DNO_COTIRE=ON  # CMake has similar functionality since 3.16
+CMAKE_CONFIGURE_ARGS+=	-DNO_LUA=ON
+CMAKE_CONFIGURE_ARGS+=	-DNO_WEBVIEW=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PK3=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release  # Use "Debug" for development
 
 INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 

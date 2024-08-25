@@ -10,5 +10,5 @@ PKG_SUPPORTED_OPTIONS=	tests
 BUILDLINK_DEPMETHOD.googletest+=	build
 .include "../../devel/googletest/buildlink3.mk"
 TEST_TARGET=	check
-CMAKE_ARGS+=	-DMSGPACK_BUILD_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DMSGPACK_BUILD_TESTS=ON
 .endif

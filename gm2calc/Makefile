@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=	cmake/gm2calc.pc.in
 # MESSAGE(FATAL_ERROR "GCC 4.6+ is required.")
 GCC_REQD+=	4.6
 
-CMAKE_ARGS+=	-Mathematica=off
+CMAKE_CONFIGURE_ARGS+=	-Mathematica=off
 
 DEPENDS+=	doxygen>=1.8.20:../../devel/doxygen
 

@@ -14,7 +14,7 @@ BUILD_DEFS+=	VARBASE
 USE_LANGUAGES=	c++ c
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
+CMAKE_CONFIGURE_ARGS+=	-DLOCALSTATEDIR:PATH=${VARBASE}
 
 .include "../../wip/openvas-libraries/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

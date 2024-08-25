@@ -14,12 +14,12 @@ PKG_SUGGESTED_OPTIONS=		epoxy sdl2
 ### OpenGL function wrangler
 ###
 .if !empty(PKG_OPTIONS:Mepoxy)
-CMAKE_ARGS+=	-D WITH_OPENGL:STRING=epoxy
+CMAKE_CONFIGURE_ARGS+=	-D WITH_OPENGL:STRING=epoxy
 .include "../../graphics/libepoxy/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mglew)
-CMAKE_ARGS+=	-D WITH_OPENGL:STRING=glew
+CMAKE_CONFIGURE_ARGS+=	-D WITH_OPENGL:STRING=glew
 .include "../../graphics/glew/buildlink3.mk"
 .endif
 
@@ -27,12 +27,12 @@ CMAKE_ARGS+=	-D WITH_OPENGL:STRING=glew
 ### SDL implementation
 ###
 .if !empty(PKG_OPTIONS:Msdl)
-CMAKE_ARGS+=	-D WITH_SDL:INT=1
+CMAKE_CONFIGURE_ARGS+=	-D WITH_SDL:INT=1
 .include "../../devel/SDL/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl2)
-CMAKE_ARGS+=	-D WITH_SDL:INT=2
+CMAKE_CONFIGURE_ARGS+=	-D WITH_SDL:INT=2
 .include "../../devel/SDL2/buildlink3.mk"
 .endif
 

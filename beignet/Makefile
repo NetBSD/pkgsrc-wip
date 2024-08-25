@@ -16,8 +16,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
-CMAKE_ARGS+=	-DOCLICD_COMPAT=0
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DOCLICD_COMPAT=0
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"

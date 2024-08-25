@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	debug
 .include "../../mk/bsd.options.mk"
 
 .if ${PKG_OPTIONS:Mdebug}
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Debug
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Debug
 .else
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 .endif

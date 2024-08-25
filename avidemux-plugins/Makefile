@@ -25,8 +25,8 @@ PLUGIN_UI+=	QT4
 .include "../../wip/avidemux-qt/buildlink3.mk"
 .endif
 
-CMAKE_ARGS+=	-DPLUGIN_UI="${PLUGIN_UI}"
-#CMAKE_ARGS+=	-DCMAKE_FIND_DEBUG_MODE:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_UI="${PLUGIN_UI}"
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_FIND_DEBUG_MODE:BOOL=ON
 
 .include "../../wip/avidemux/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

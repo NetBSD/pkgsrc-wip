@@ -16,7 +16,7 @@ COMMENT=	SDR GUI using GNU Radio
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
-#CMAKE_ARGS+=	-DTRY_SHM_VMCIRCBUF=ON
+#CMAKE_CONFIGURE_ARGS+=	-DTRY_SHM_VMCIRCBUF=ON
 USE_LANGUAGES=	c c++
 
 ## These dependencies are organized according to upstream's README

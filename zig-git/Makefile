@@ -16,11 +16,11 @@ USE_LANGUAGES=	c c++14
 
 .include "options.mk"
 
-CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
+CMAKE_CONFIGURE_ARGS+=	-DDESTDIR=${DESTDIR}
 # avoid full-cu-features available to build host,
 # in other words ensure that we run everywhere
-CMAKE_ARGS+=	-DZIG_TARGET_MCPU=baseline
-CMAKE_ARGS+=	-DZIG_PIE=ON
+CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
+CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
 
 REPLACE_BASH+=	lib/libcxxabi/src/demangle/cp-to-llvm.sh
 

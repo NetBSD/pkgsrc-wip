@@ -13,7 +13,7 @@ LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-#CMAKE_ARGS+=	-DLibBGCode_BUILD_DEPS=on
+#CMAKE_CONFIGURE_ARGS+=	-DLibBGCode_BUILD_DEPS=on
 
 # CMake goes looking for this binary. Make it happy.
 pre-configure:

@@ -14,7 +14,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	perl:build
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DTIDY_ROOT=${PREFIX}/include/tidy
+CMAKE_CONFIGURE_ARGS+=	-DTIDY_ROOT=${PREFIX}/include/tidy
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-patch

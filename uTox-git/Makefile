@@ -18,7 +18,7 @@ USE_CMAKE=	yes
 TEST_TARGET=	test
 
 # Unclear crash in OpenAL on NetBSD
-CMAKE_ARGS+=	-DENABLE_ASAN=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_ASAN=OFF
 
 .include "../../chat/toxcore/buildlink3.mk"
 .include "../../audio/filter_audio/buildlink3.mk"

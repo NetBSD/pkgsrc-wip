@@ -30,8 +30,8 @@ BUILDLINK_TRANSFORM.NetBSD+=	l:libexpat:expat
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-CMAKE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
-CMAKE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
+CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_FHS:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DSLIC3R_PCH:BOOL=FALSE
 
 # CMake goes looking for these binaries. Make it happy.
 pre-configure:

@@ -19,7 +19,7 @@ DEPENDS+=	cmake>=3.17:../../devel/cmake
 DEPENDS+=	protobuf>=3.20.1:../../devel/protobuf
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-B build \
+CMAKE_CONFIGURE_ARGS+=	-B build \
 		-DBUILD_SHARED_LIBS:BOOL=ON \
 		-DBUILD_BINARY:BOOL=ON \
 		-DBUILD_CAFFE2=OFF \

@@ -16,32 +16,32 @@ PKG_SUGGESTED_OPTIONS=		ice40
 PLIST_VARS+=			ice40 generic ecp5
 
 .if !empty(PKG_OPTIONS:Mall)
-CMAKE_ARGS+=			-DARCH=all
+CMAKE_CONFIGURE_ARGS+=			-DARCH=all
 PLIST.ice40=			yes
 PLIST.ecp5=			yes
 PLIST.generic=			yes
 # .elif !empty(PKG_OPTIONS:Mall+alpha)
-# CMAKE_ARGS+=			-DARCH=all+alpha
+# CMAKE_CONFIGURE_ARGS+=			-DARCH=all+alpha
 # PLIST.ice40=			yes
 # PLIST.ecp5=			yes
 # PLIST.generic=		yes
 .elif !empty(PKG_OPTIONS:Mice40)
-CMAKE_ARGS+=			-DARCH=ice40
+CMAKE_CONFIGURE_ARGS+=			-DARCH=ice40
 PLIST.ice40=			yes
 .elif !empty(PKG_OPTIONS:Mecp5)
-CMAKE_ARGS+=			-DARCH=ecp5
+CMAKE_CONFIGURE_ARGS+=			-DARCH=ecp5
 PLIST.ecp5=			yes
 .elif !empty(PKG_OPTIONS:Mgeneric)
-CMAKE_ARGS+=			-DARCH=generic
+CMAKE_CONFIGURE_ARGS+=			-DARCH=generic
 PLIST.generic=			yes
 # .elif !empty(PKG_OPTIONS:Mgowin)
-# CMAKE_ARGS+=			-DARCH=gowin
+# CMAKE_CONFIGURE_ARGS+=			-DARCH=gowin
 # .elif !empty(PKG_OPTIONS:Mfpgainterchange)
-# CMAKE_ARGS+=			-DARCH=fpga_interchange
+# CMAKE_CONFIGURE_ARGS+=			-DARCH=fpga_interchange
 # .elif !empty(PKG_OPTIONS:Mmachxo2)
-# CMAKE_ARGS+=			-DARCH=machxo2
+# CMAKE_CONFIGURE_ARGS+=			-DARCH=machxo2
 # .elif !empty(PKG_OPTIONS:Mmistral)
-# CMAKE_ARGS+=			-DARCH=mistral
+# CMAKE_CONFIGURE_ARGS+=			-DARCH=mistral
 .endif
 
 
@@ -63,6 +63,6 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-prjtrellis-[0-9]*:../../wip/prjtrellis
 ### Build with the QT5 GUI
 ###
 .if !empty(PKG_OPTIONS:Mx11)
-CMAKE_ARGS+=			-DBUILD_GUI=ON
+CMAKE_CONFIGURE_ARGS+=			-DBUILD_GUI=ON
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif

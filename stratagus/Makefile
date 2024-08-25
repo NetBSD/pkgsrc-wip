@@ -16,9 +16,9 @@ USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	tolua++-[0-9]*:../../wip/tolua++
 
-CMAKE_ARGS+=	-DENABLE_DEV=ON
-CMAKE_ARGS+=	-DWANT_METASERVER=OFF
-CMAKE_ARGS+=	-DWITH_RENDERER=NativeSDL
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEV=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_METASERVER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_RENDERER=NativeSDL
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"

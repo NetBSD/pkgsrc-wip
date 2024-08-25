@@ -11,7 +11,7 @@ COMMENT=	Logging library written in C
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DWITH_JOURNALD=off
+CMAKE_CONFIGURE_ARGS+=	-DWITH_JOURNALD=off
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libyder.pc.in

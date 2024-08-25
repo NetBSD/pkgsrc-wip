@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 # or later
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex
 
-CMAKE_ARGS+=	-DBUILD_HDF5_OPCODES=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_HDF5_OPCODES=OFF
 # CMAKE_INSTALL_RPATH doesn't work for some reason, so do it here.
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
 

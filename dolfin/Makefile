@@ -21,7 +21,7 @@ REPLACE_PYTHON+=	scripts/dolfin-plot/dolfin-plot
 REPLACE_PYTHON+=	scripts/dolfin-order/dolfin-order
 REPLACE_PYTHON+=	scripts/dolfin-convert/dolfin-convert
 
-CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 		-DDOLFIN_ENABLE_MPI:BOOL=OFF \
 		-DLOCALBASE=${PREFIX}
 

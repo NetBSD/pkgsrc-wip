@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake
 USE_CMAKE=	yes
 # Requires stubs-32.h on CentOS, not provided by pkgsrc
-CMAKE_ARGS+=	-DSKIP_PORTABILITY_TEST=ON
+CMAKE_CONFIGURE_ARGS+=	-DSKIP_PORTABILITY_TEST=ON
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

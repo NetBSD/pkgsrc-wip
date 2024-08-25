@@ -8,8 +8,8 @@ PKG_SUGGESTED_OPTIONS=	ogg
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mogg)
-CMAKE_ARGS+=	-DOGG=Yes
+CMAKE_CONFIGURE_ARGS+=	-DOGG=Yes
 .include "../../audio/libvorbis/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DOGG=No
+CMAKE_CONFIGURE_ARGS+=	-DOGG=No
 .endif

@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DPIONEER_DATA_DIR=${PREFIX}/share/pioneer/data
-CMAKE_ARGS+=	-DUSE_SYSTEM_LIBGLEW=ON
-CMAKE_ARGS+=	-DUSE_SYSTEM_LIBLUA=ON
+CMAKE_CONFIGURE_ARGS+=	-DPIONEER_DATA_DIR=${PREFIX}/share/pioneer/data
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBGLEW=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBLUA=ON
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

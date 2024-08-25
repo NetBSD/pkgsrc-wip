@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/dotnet/corefx
 COMMENT=	The .NET Core foundational libraries
 LICENSE=	mit
 
-# We need to set CMake this way to get defined CMAKE_ARGS
+# We need to set CMake this way to get defined CMAKE_CONFIGURE_ARGS
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
@@ -25,14 +25,14 @@ PKG_CC=			clang
 PKG_CXX=		clang++
 
 # NetBSD specific for now
-CMAKE_ARGS+=	-DHeimdalGssApi=ON
+CMAKE_CONFIGURE_ARGS+=	-DHeimdalGssApi=ON
 
 do-configure:
 	${RUN} ${ECHO} Skip configure and call CMake via build.sh
 
 do-build:
 	${RUN} cd ${WRKSRC} && \
-	${PKGSRC_SETENV} ${MAKE_ENV} ./build.sh native verbose cmakeargs ${CMAKE_ARGS:Q}
+	${PKGSRC_SETENV} ${MAKE_ENV} ./build.sh native verbose cmakeargs ${CMAKE_CONFIGURE_ARGS:Q}
 
 # NetBSD uses Heimdal from base
 #.include "../../security/mit-krb5/buildlink3.mk"

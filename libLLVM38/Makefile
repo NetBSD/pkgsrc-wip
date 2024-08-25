@@ -27,12 +27,12 @@ PYTHON_FOR_BUILD_ONLY=	yes
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-CMAKE_ARGS+=	-DLLVM_INCLUDE_UTILS=OFF
-CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=OFF
-CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=gcc
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_UTILS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_INSTALL_UTILS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 
 .for tool in 	bugpoint bugpoint_passes dsymutil gold llc lli llvm_ar	\
 	llvm_as llvm_as_fuzzer llvm_bcanalyzer llvm_c_test llvm_cat	\
@@ -45,7 +45,7 @@ CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 	llvm_symbolizer llvm_xray lto msbuild obj2yaml opt sancov	\
 	sanstats verify_uselistorder xcode_toolchain yaml2obj
 
-CMAKE_ARGS+=	-DLLVM_TOOL_${tool:tu}_BUILD=OFF
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_TOOL_${tool:tu}_BUILD=OFF
 .endfor
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm

@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-CMAKE_ARGS+= -DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fPIC"
+CMAKE_CONFIGURE_ARGS+= -DCMAKE_C_FLAGS="${CMAKE_C_FLAGS} -fPIC"
 
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../comms/srtp/buildlink3.mk"

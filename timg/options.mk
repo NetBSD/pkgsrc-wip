@@ -11,29 +11,29 @@ PKG_SUGGESTED_OPTIONS=	ffmpeg graphicsmagick
 ### Use ffmpeg
 ###
 .if !empty(PKG_OPTIONS:Mffmpeg)
-CMAKE_ARGS+= 	-DWITH_VIDEO_DECODING=ON
+CMAKE_CONFIGURE_ARGS+= 	-DWITH_VIDEO_DECODING=ON
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
-CMAKE_ARGS+= 	-DWITH_VIDEO_DECODING=OFF
+CMAKE_CONFIGURE_ARGS+= 	-DWITH_VIDEO_DECODING=OFF
 .endif
 
 ###
 ### Use GraphicsMagick
 ###
 .if !empty(PKG_OPTIONS:Mgraphicsmagick)
-CMAKE_ARGS+= 	-DWITH_GRAPHICSMAGICK=ON
+CMAKE_CONFIGURE_ARGS+= 	-DWITH_GRAPHICSMAGICK=ON
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
 .else
-CMAKE_ARGS+= 	-DWITH_GRAPHICSMAGICK=OFF
+CMAKE_CONFIGURE_ARGS+= 	-DWITH_GRAPHICSMAGICK=OFF
 .endif
 
 ###
 ### Use OpenSlide - Not yet in pkgsrc, so disabled
 ###
 #.if !empty(PKG_OPTIONS:Mopenslide)
-#CMAKE_ARGS+=	-DWITH_OPENSLIDE_SUPPORT=ON
+#CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENSLIDE_SUPPORT=ON
 #.else
-#CMAKE_ARGS+=	-DWITH_OPENSLIDE_SUPPORT=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENSLIDE_SUPPORT=OFF
 #.endif
 
 ###
@@ -41,8 +41,8 @@ CMAKE_ARGS+= 	-DWITH_GRAPHICSMAGICK=OFF
 ### Not enabled by default as it conflicts with graphics/jpeg
 ###
 .if !empty(PKG_OPTIONS:Mjpegturbo)
-CMAKE_ARGS+= 	-DWITH_TURBOJPEG=ON
+CMAKE_CONFIGURE_ARGS+= 	-DWITH_TURBOJPEG=ON
 .include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .else
-CMAKE_ARGS+= 	-DWITH_TURBOJPEG=OFF
+CMAKE_CONFIGURE_ARGS+= 	-DWITH_TURBOJPEG=OFF
 .endif

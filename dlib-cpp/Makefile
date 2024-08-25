@@ -12,7 +12,7 @@ COMMENT=	Machine learning framework written in C++
 LICENSE=	boost-license
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
-CMAKE_ARGS+=	-B ${WRKSRC}/build
+CMAKE_CONFIGURE_ARGS+=	-B ${WRKSRC}/build
 BUILD_DIRS=	build
 
 DOCSDIR=		${PREFIX}/share/doc/dlib

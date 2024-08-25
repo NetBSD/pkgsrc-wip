@@ -18,7 +18,7 @@ CXXFLAGS=	-I"${PREFIX}/include/cairo"
 # If FLTK is compiled with opengl option, disabling it here allows to force
 # usage of the software renderer (recommended without hardware acceleration).
 .if empty(PKG_OPTIONS.fltk14-devel:Mopengl) || empty(PKG_OPTIONS:Mopengl)
-CMAKE_ARGS+=	-DENABLE_OPENGL=off
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_OPENGL=off
 .endif
 # xdg-utils: Create dependency for xdg-utils (Portland project)
 # Can be used by FLTK for fl_open_uri() on X11.

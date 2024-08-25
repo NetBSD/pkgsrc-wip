@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/SuperCollider-Source
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DSYSTEM_BOOST:BOOL=true
+CMAKE_CONFIGURE_ARGS+=	-DSYSTEM_BOOST:BOOL=true
 
 .include "../../mk/dlopen.buildlink3.mk"
 
