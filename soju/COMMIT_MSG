@@ -1,4 +1,4 @@
-chat/soju: Import version 0.8.1
+chat/soju: Import version 0.8.2
 
 soju is a user-friendly IRC bouncer. soju connects to upstream IRC servers
 on behalf of the user to provide extra functionality. soju supports many

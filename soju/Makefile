@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	soju-${VERSION}
-VERSION=	0.8.1
+VERSION=	0.8.2
 CATEGORIES=	chat
 MASTER_SITES=	https://codeberg.org/emersion/soju/releases/download/v${VERSION}/
 
